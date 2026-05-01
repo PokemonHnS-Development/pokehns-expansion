@@ -802,4 +802,5 @@ const u16 gObjectEventPal_TowerBeam_hns[] = INCBIN_U16("graphics/object_events/p
 const u16 gObjectEventPal_Whirlpool_hns[] = INCBIN_U16("graphics/object_events/palettes/whirlpool_hns.gbapal");
 const u16 gObjectEventPal_Whitney_hns[] = INCBIN_U16("graphics/object_events/palettes/whitney_hns.gbapal");
 const u16 gObjectEventPal_Will_hns[] = INCBIN_U16("graphics/object_events/palettes/will_hns.gbapal");
+const u32 gObjectEventPic_NurseChansey_hns[] = INCBIN_U32("graphics/object_events/pics/misc/nurse_chansey_hns.4bpp");
 #endif // IS_HNS

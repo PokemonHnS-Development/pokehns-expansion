@@ -448,6 +448,9 @@ $(OBJEVENTGFXDIR)/misc/train_east_hns.4bpp: %.4bpp: %.png
 $(OBJEVENTGFXDIR)/misc/train_west_hns.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 8 -mheight 8
 
+$(OBJEVENTGFXDIR)/misc/nurse_chansey_hns.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 2 -mheight 4
+
 
 $(OBJEVENTGFXDIR)/people/elite_four/drake.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 4

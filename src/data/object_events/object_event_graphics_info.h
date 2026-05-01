@@ -7475,5 +7475,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TrainWest_hns = {T
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Whirlpool_hns = {TAG_NONE, OBJ_EVENT_PAL_TAG_WHIRLPOOL_HNS, OBJ_EVENT_PAL_TAG_NONE, 2048, 64, 64, 4, SHADOW_SIZE_NONE, FALSE, FALSE, TRACKS_FOOT, &gObjectEventBaseOam_64x64, sOamTables_64x64, sAnimTable_Whirlpool_hns, sPicTable_Whirlpool_hns, gDummySpriteAffineAnimTable};
 
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_NurseChansey_hns = {TAG_NONE, OBJ_EVENT_PAL_TAG_NPC_2_HNS, OBJ_EVENT_PAL_TAG_NONE, 256, 16, 32, 4, SHADOW_SIZE_S, FALSE, FALSE, TRACKS_FOOT, &gObjectEventBaseOam_16x32, sOamTables_16x32, sAnimTable_Standard, sPicTable_NurseChansey_hns, gDummySpriteAffineAnimTable};
+
 #endif // IS_HNS
 

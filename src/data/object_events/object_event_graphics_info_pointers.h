@@ -474,6 +474,7 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MysteryEven
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_NoTailSlowpoke_hns;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Noland_hns;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Nurse_hns;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_NurseChansey_hns;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Officer_hns;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_OldMan2_hns;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_OldMan_hns;
@@ -1041,6 +1042,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_TRAIN_EAST_HNS] = &gObjectEventGraphicsInfo_TrainEast_hns,
     [OBJ_EVENT_GFX_TRAIN_WEST_HNS] = &gObjectEventGraphicsInfo_TrainWest_hns,
     [OBJ_EVENT_GFX_WHIRLPOOL_HNS] = &gObjectEventGraphicsInfo_Whirlpool_hns,
+    [OBJ_EVENT_GFX_NURSE_CHANSEY_HNS] = &gObjectEventGraphicsInfo_NurseChansey_hns,
 #endif // IS_HNS
 };
 
