@@ -15687,6 +15687,56 @@
       "blockdata_filepath": "data/layouts/UnusedContestHall6_hns/map.bin",
       "game_version": "hns",
       "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_ALOLA_ISLAND",
+      "name": "AlolaIsland_Layout",
+      "width": 51,
+      "height": 40,
+      "primary_tileset": "gTileset_AlolaIsland",
+      "secondary_tileset": "gTileset_AlolaIslandSecondary",
+      "border_filepath": "data/layouts/AlolaIsland/border.bin",
+      "blockdata_filepath": "data/layouts/AlolaIsland/map.bin"
+    },
+    {
+      "id": "LAYOUT_ALOLA_ISLAND_MELEMELE",
+      "name": "AlolaIslandMelemele_Layout",
+      "width": 57,
+      "height": 38,
+      "primary_tileset": "gTileset_AlolaIsland",
+      "secondary_tileset": "gTileset_AlolaIslandSecondary",
+      "border_filepath": "data/layouts/AlolaIslandMelemele/border.bin",
+      "blockdata_filepath": "data/layouts/AlolaIslandMelemele/map.bin"
+    },
+    {
+      "id": "LAYOUT_ALOLA_WATER",
+      "name": "AlolaWater_Layout",
+      "width": 36,
+      "height": 28,
+      "primary_tileset": "gTileset_AlolaIsland",
+      "secondary_tileset": "gTileset_AlolaIslandSecondary",
+      "border_filepath": "data/layouts/AlolaWater/border.bin",
+      "blockdata_filepath": "data/layouts/AlolaWater/map.bin"
+    },
+    {
+      "id": "LAYOUT_ALOLA_ISLAND_RIGHT",
+      "name": "AlolaIslandRight_Layout",
+      "width": 90,
+      "height": 83,
+      "primary_tileset": "gTileset_AlolaIsland",
+      "secondary_tileset": "gTileset_AlolaIslandSecondary",
+      "border_filepath": "data/layouts/AlolaIslandRight/border.bin",
+      "blockdata_filepath": "data/layouts/AlolaIslandRight/map.bin"
+    },
+    {
+      "id": "LAYOUT_ALOLA",
+      "name": "Alola_Layout",
+      "width": 90,
+      "height": 58,
+      "primary_tileset": "gTileset_AlolaIsland",
+      "secondary_tileset": "gTileset_AlolaIslandSecondary",
+      "border_filepath": "data/layouts/Alola/border.bin",
+      "blockdata_filepath": "data/layouts/Alola/map.bin"
     }
   ]
 }

@@ -2329,3 +2329,13 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 
 .endif
 
+
+	.include "data/maps/AlolaIsland/scripts.inc"
+
+	.include "data/maps/AlolaIslandMelemele/scripts.inc"
+
+	.include "data/maps/AlolaWater/scripts.inc"
+
+	.include "data/maps/Alola/scripts.inc"
+
+	.include "data/maps/AlolaIslandRight/scripts.inc"

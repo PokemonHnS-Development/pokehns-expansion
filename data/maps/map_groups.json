@@ -174,7 +174,12 @@
     "Route26_hns",
     "Route26North_hns",
     "Route27_hns",
-    "Route28_hns"
+    "Route28_hns",
+    "AlolaIsland",
+    "AlolaIslandRight",
+    "Alola",
+    "AlolaIslandMelemele",
+    "AlolaWater"
   ],
   "gMapGroup_IndoorNewBark_Hns": [
     "NewBarkTown_Lab_hns",

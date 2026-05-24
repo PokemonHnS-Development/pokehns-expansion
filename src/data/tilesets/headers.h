@@ -2623,3 +2623,25 @@ const struct Tileset gTileset_ssaqua_Hns =
 };
 
 #endif // IS_FRLG || IS_HNS
+
+const struct Tileset gTileset_AlolaIsland =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_AlolaIsland,
+    .palettes = gTilesetPalettes_AlolaIsland,
+    .metatiles = gMetatiles_AlolaIsland,
+    .metatileAttributes = gMetatileAttributes_AlolaIsland,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_AlolaIslandSecondary =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_AlolaIslandSecondary,
+    .palettes = gTilesetPalettes_AlolaIslandSecondary,
+    .metatiles = gMetatiles_AlolaIslandSecondary,
+    .metatileAttributes = gMetatileAttributes_AlolaIslandSecondary,
+    .callback = NULL,
+};
