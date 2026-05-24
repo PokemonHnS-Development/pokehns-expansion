@@ -15721,7 +15721,7 @@
     {
       "id": "LAYOUT_ALOLA_ISLAND_RIGHT",
       "name": "AlolaIslandRight_Layout",
-      "width": 90,
+      "width": 52,
       "height": 83,
       "primary_tileset": "gTileset_AlolaIsland",
       "secondary_tileset": "gTileset_AlolaIslandSecondary",
@@ -15737,6 +15737,16 @@
       "secondary_tileset": "gTileset_AlolaIslandSecondary",
       "border_filepath": "data/layouts/Alola/border.bin",
       "blockdata_filepath": "data/layouts/Alola/map.bin"
+    },
+    {
+      "id": "LAYOUT_ALOLA_ISLAND_AKALA",
+      "name": "AlolaIslandAkala_Layout",
+      "width": 51,
+      "height": 83,
+      "primary_tileset": "gTileset_AlolaIsland",
+      "secondary_tileset": "gTileset_AlolaIslandSecondary",
+      "border_filepath": "data/layouts/AlolaIslandAkala/border.bin",
+      "blockdata_filepath": "data/layouts/AlolaIslandAkala/map.bin"
     }
   ]
 }
