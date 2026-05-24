@@ -16,7 +16,7 @@
     {
       "map": "MAP_ROUTE14_HNS",
       "offset": 0,
-      "direction": "left"
+      "direction": "down"
     },
     {
       "map": "MAP_ROUTE12_HNS",
@@ -26,7 +26,7 @@
     {
       "map": "MAP_ROUTE14_HNS",
       "offset": 0,
-      "direction": "left"
+      "direction": "down"
     }
   ],
   "object_events": [
