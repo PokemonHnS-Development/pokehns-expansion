@@ -15687,6 +15687,30 @@
       "blockdata_filepath": "data/layouts/UnusedContestHall6_hns/map.bin",
       "game_version": "hns",
       "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_SNOWSWEPT_CAVERN_HNS",
+      "name": "SnowsweptCavern_hns_Layout",
+      "width": 70,
+      "height": 70,
+      "primary_tileset": "gTileset_Kanto_General_Hns",
+      "secondary_tileset": "gTileset_Cave_Ice_Hns",
+      "border_filepath": "data/layouts/SnowsweptCavern_hns/border.bin",
+      "blockdata_filepath": "data/layouts/SnowsweptCavern_hns/map.bin",
+      "game_version": "hns",
+      "layout_version": "hns"
+    },
+    {
+      "id": "LAYOUT_SNOWSWEPT_CAVERN_BASEMENT_HNS",
+      "name": "SnowsweptCavern_Basement_hns_Layout",
+      "width": 55,
+      "height": 42,
+      "primary_tileset": "gTileset_Johto_General_Hns",
+      "secondary_tileset": "gTileset_Cave_Default_Hns",
+      "border_filepath": "data/layouts/SnowsweptCavern_Basement_hns/border.bin",
+      "blockdata_filepath": "data/layouts/SnowsweptCavern_Basement_hns/map.bin",
+      "game_version": "hns",
+      "layout_version": "hns"
     }
   ]
 }

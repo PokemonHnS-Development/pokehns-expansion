@@ -2443,6 +2443,14 @@
     },
     {
       "height": 1,
+      "id": "MAPSEC_SINJOH",
+      "name": "SINJOH",
+      "width": 1,
+      "x": 20,
+      "y": 4
+    },
+    {
+      "height": 1,
       "id": "MAPSEC_NATIONAL_PARK",
       "name": "NATIONAL PARK",
       "width": 1,

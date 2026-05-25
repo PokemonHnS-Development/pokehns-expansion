@@ -550,7 +550,9 @@
     "RuinsOfAlph_WordsRoom2_hns",
     "RuinsOfAlph_WordsRoom3_hns",
     "RuinsOfAlph_WordsRoom4_hns",
-    "Route19_Cave_hns"
+    "Route19_Cave_hns",
+    "SnowsweptCavern_hns",
+    "SnowsweptCavern_Basement_hns"
   ],
   "gMapGroup_IndoorDynamic_Hns": [
     "UnionRoom_hns"

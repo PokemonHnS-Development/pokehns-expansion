@@ -2248,6 +2248,8 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/RuinsOfAlph_WordsRoom3_hns/scripts.inc"
 	.include "data/maps/RuinsOfAlph_WordsRoom4_hns/scripts.inc"
 	.include "data/maps/Route19_Cave_hns/scripts.inc"
+	.include "data/maps/SnowsweptCavern_hns/scripts.inc"
+	.include "data/maps/SnowsweptCavern_Basement_hns/scripts.inc"
 	.include "data/maps/UnionRoom_hns/scripts.inc"
 	.include "data/maps/SSAqua_1F_hns/scripts.inc"
 	.include "data/maps/SSAqua_B1F_hns/scripts.inc"
