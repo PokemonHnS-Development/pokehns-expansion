@@ -9721,7 +9721,7 @@
       "name": "TestMap2_hns_Layout",
       "width": 80,
       "height": 30,
-      "primary_tileset": "gTileset_Johto_Building_Hns",
+      "primary_tileset": "gTileset_MtSilver_Exp_Hns",
       "secondary_tileset": "gTileset_BlackthornGym_Hns",
       "border_filepath": "data/layouts/TestMap2_hns/border.bin",
       "blockdata_filepath": "data/layouts/TestMap2_hns/map.bin",

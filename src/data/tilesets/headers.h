@@ -2622,4 +2622,18 @@ const struct Tileset gTileset_ssaqua_Hns =
     .callback = NULL,
 };
 
+const struct Tileset gTileset_MtSilver_Exp_Hns =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_MtSilver_Exp_Hns,
+    .palettes = gTilesetPalettes_MtSilver_Exp_Hns,
+    .metatiles = gMetatiles_MtSilver_Exp_Hns,
+    .metatileAttributes = gMetatileAttributes_MtSilver_Exp_Hns,
+    .callback = InitTilesetAnim_JohtoGeneral,
+};
+
+
 #endif // IS_FRLG || IS_HNS
+
+
