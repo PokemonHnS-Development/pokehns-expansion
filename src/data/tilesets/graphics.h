@@ -5038,4 +5038,24 @@ const u16 gTilesetPalettes_MtSilver_Exp_Hns[][16] =
 const u32 gTilesetTiles_MtSilver_Exp_Hns[] = INCBIN_U32("data/tilesets/primary/mt_silver_exp_hns/tiles.4bpp.lz");
 
 
+const u16 gTilesetPalettes_MtSilver_Ancient_Hns[][16] =
+{
+    INCBIN_U16("data/tilesets/secondary/mt_silver_ancient_hns/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/mt_silver_ancient_hns/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/mt_silver_ancient_hns/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/mt_silver_ancient_hns/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/mt_silver_ancient_hns/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/mt_silver_ancient_hns/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/mt_silver_ancient_hns/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/mt_silver_ancient_hns/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/mt_silver_ancient_hns/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/mt_silver_ancient_hns/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/mt_silver_ancient_hns/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/mt_silver_ancient_hns/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/mt_silver_ancient_hns/palettes/12.gbapal"),
+};
+
+const u32 gTilesetTiles_MtSilver_Ancient_Hns[] = INCBIN_U32("data/tilesets/secondary/mt_silver_ancient_hns/tiles.4bpp.lz");
+
+
 #endif // IS_FRLG || IS_HNS

@@ -2634,6 +2634,17 @@ const struct Tileset gTileset_MtSilver_Exp_Hns =
 };
 
 
+
+const struct Tileset gTileset_MtSilver_Ancient_Hns =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_MtSilver_Ancient_Hns,
+    .palettes = gTilesetPalettes_MtSilver_Ancient_Hns,
+    .metatiles = gMetatiles_MtSilver_Ancient_Hns,
+    .metatileAttributes = gMetatileAttributes_MtSilver_Ancient_Hns,
+    .callback = NULL,
+};
 #endif // IS_FRLG || IS_HNS
 
 

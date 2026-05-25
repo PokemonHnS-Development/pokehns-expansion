@@ -705,6 +705,10 @@ const u16 gMetatileAttributes_ssaqua_Hns[] = INCBIN_U16("data/tilesets/secondary
 const u16 gMetatiles_MtSilver_Exp_Hns[] = INCBIN_U16("data/tilesets/primary/mt_silver_exp_hns/metatiles.bin");
 const u16 gMetatileAttributes_MtSilver_Exp_Hns[] = INCBIN_U16("data/tilesets/primary/mt_silver_exp_hns/metatile_attributes.bin");
 
+const u16 gMetatiles_MtSilver_Ancient_Hns[] = INCBIN_U16("data/tilesets/secondary/mt_silver_ancient_hns/metatiles.bin");
+const u16 gMetatileAttributes_MtSilver_Ancient_Hns[] = INCBIN_U16("data/tilesets/secondary/mt_silver_ancient_hns/metatile_attributes.bin");
+
 
 #endif // IS_FRLG || IS_HNS
+
 
