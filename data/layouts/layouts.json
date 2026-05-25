@@ -15689,64 +15689,76 @@
       "layout_version": "emerald"
     },
     {
-      "id": "LAYOUT_ALOLA_ISLAND",
-      "name": "AlolaIsland_Layout",
+      "id": "LAYOUT_ALOLA_ISLAND_HNS",
+      "name": "AlolaIsland_hns_Layout",
       "width": 51,
       "height": 40,
       "primary_tileset": "gTileset_AlolaIsland",
       "secondary_tileset": "gTileset_AlolaIslandSecondary",
       "border_filepath": "data/layouts/AlolaIsland/border.bin",
-      "blockdata_filepath": "data/layouts/AlolaIsland/map.bin"
+      "blockdata_filepath": "data/layouts/AlolaIsland/map.bin",
+      "game_version": "hns",
+      "layout_version": "hns"
     },
     {
-      "id": "LAYOUT_ALOLA_ISLAND_MELEMELE",
-      "name": "AlolaIslandMelemele_Layout",
+      "id": "LAYOUT_ALOLA_ISLAND_MELEMELE_HNS",
+      "name": "AlolaIslandMelemele_hns_Layout",
       "width": 57,
       "height": 38,
       "primary_tileset": "gTileset_AlolaIsland",
       "secondary_tileset": "gTileset_AlolaIslandSecondary",
       "border_filepath": "data/layouts/AlolaIslandMelemele/border.bin",
-      "blockdata_filepath": "data/layouts/AlolaIslandMelemele/map.bin"
+      "blockdata_filepath": "data/layouts/AlolaIslandMelemele/map.bin",
+      "game_version": "hns",
+      "layout_version": "hns"
     },
     {
-      "id": "LAYOUT_ALOLA_WATER",
-      "name": "AlolaWater_Layout",
+      "id": "LAYOUT_ALOLA_WATER_HNS",
+      "name": "AlolaWater_hns_Layout",
       "width": 36,
       "height": 28,
       "primary_tileset": "gTileset_AlolaIsland",
       "secondary_tileset": "gTileset_AlolaIslandSecondary",
       "border_filepath": "data/layouts/AlolaWater/border.bin",
-      "blockdata_filepath": "data/layouts/AlolaWater/map.bin"
+      "blockdata_filepath": "data/layouts/AlolaWater/map.bin",
+      "game_version": "hns",
+      "layout_version": "hns"
     },
     {
-      "id": "LAYOUT_ALOLA_ISLAND_RIGHT",
-      "name": "AlolaIslandRight_Layout",
+      "id": "LAYOUT_ALOLA_ISLAND_RIGHT_HNS",
+      "name": "AlolaIslandRight_hns_Layout",
       "width": 52,
       "height": 83,
       "primary_tileset": "gTileset_AlolaIsland",
       "secondary_tileset": "gTileset_AlolaIslandSecondary",
       "border_filepath": "data/layouts/AlolaIslandRight/border.bin",
-      "blockdata_filepath": "data/layouts/AlolaIslandRight/map.bin"
+      "blockdata_filepath": "data/layouts/AlolaIslandRight/map.bin",
+      "game_version": "hns",
+      "layout_version": "hns"
     },
     {
-      "id": "LAYOUT_ALOLA",
-      "name": "Alola_Layout",
+      "id": "LAYOUT_ALOLA_HNS",
+      "name": "Alola_hns_Layout",
       "width": 90,
       "height": 58,
       "primary_tileset": "gTileset_AlolaIsland",
       "secondary_tileset": "gTileset_AlolaIslandSecondary",
       "border_filepath": "data/layouts/Alola/border.bin",
-      "blockdata_filepath": "data/layouts/Alola/map.bin"
+      "blockdata_filepath": "data/layouts/Alola/map.bin",
+      "game_version": "hns",
+      "layout_version": "hns"
     },
     {
-      "id": "LAYOUT_ALOLA_ISLAND_AKALA",
-      "name": "AlolaIslandAkala_Layout",
+      "id": "LAYOUT_ALOLA_ISLAND_AKALA_HNS",
+      "name": "AlolaIslandAkala_hns_Layout",
       "width": 51,
       "height": 83,
       "primary_tileset": "gTileset_AlolaIsland",
       "secondary_tileset": "gTileset_AlolaIslandSecondary",
       "border_filepath": "data/layouts/AlolaIslandAkala/border.bin",
-      "blockdata_filepath": "data/layouts/AlolaIslandAkala/map.bin"
+      "blockdata_filepath": "data/layouts/AlolaIslandAkala/map.bin",
+      "game_version": "hns",
+      "layout_version": "hns"
     }
   ]
 }

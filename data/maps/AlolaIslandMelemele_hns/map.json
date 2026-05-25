@@ -1,7 +1,7 @@
 {
-  "id": "MAP_ALOLA_ISLAND_MELEMELE",
-  "name": "AlolaIslandMelemele",
-  "layout": "LAYOUT_ALOLA_ISLAND_MELEMELE",
+  "id": "MAP_ALOLA_ISLAND_MELEMELE_HNS",
+  "name": "AlolaIslandMelemele_hns",
+  "layout": "LAYOUT_ALOLA_ISLAND_MELEMELE_HNS",
   "music": "MUS_DUMMY",
   "region_map_section": "MAPSEC_ABANDONED_SHIP",
   "requires_flash": false,
@@ -14,23 +14,33 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "map": "MAP_ALOLA_ISLAND",
+      "map": "MAP_ALOLA_ISLAND_HNS",
       "offset": -30,
       "direction": "down"
     },
     {
-      "map": "MAP_ALOLA_ISLAND_RIGHT",
+      "map": "MAP_ALOLA_ISLAND_RIGHT_HNS",
       "offset": 0,
       "direction": "right"
     },
     {
-      "map": "MAP_ALOLA_WATER",
+      "map": "MAP_ALOLA_WATER_HNS",
       "offset": 21,
       "direction": "down"
     }
   ],
   "object_events": [],
-  "warp_events": [],
+  "warp_events": [
+    {
+      "x": 46,
+      "y": 23,
+      "elevation": 0,
+      "dest_map": "MAP_ALOLA_ISLAND_MELEMELE_HNS",
+      "dest_warp_id": "0"
+    }
+  ],
   "coord_events": [],
-  "bg_events": []
+  "bg_events": [],
+  "game_version": "hns",
+  "region": "REGION_ALOLA"
 }

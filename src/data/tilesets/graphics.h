@@ -5017,8 +5017,6 @@ const u16 gTilesetPalettes_ssaqua_Hns[][16] =
     INCBIN_U16("data/tilesets/secondary/ssaqua_hns/palettes/12.gbapal"),
 };
 
-#endif // IS_FRLG || IS_HNS
-
 const u16 gTilesetPalettes_AlolaIsland[][16] =
 {
     INCBIN_U16("data/tilesets/primary/alola_island/palettes/00.gbapal"),
@@ -5056,3 +5054,6 @@ const u16 gTilesetPalettes_AlolaIslandSecondary[][16] =
 };
 
 const u32 gTilesetTiles_AlolaIslandSecondary[] = INCBIN_U32("data/tilesets/secondary/alola_island_secondary/tiles.4bpp.lz");
+
+
+#endif // IS_FRLG || IS_HNS

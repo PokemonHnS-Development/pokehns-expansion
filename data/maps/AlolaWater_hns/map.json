@@ -1,0 +1,38 @@
+{
+  "id": "MAP_ALOLA_WATER_HNS",
+  "name": "AlolaWater_hns",
+  "layout": "LAYOUT_ALOLA_WATER_HNS",
+  "music": "MUS_DUMMY",
+  "region_map_section": "MAPSEC_ABANDONED_SHIP",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_NONE",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_ALOLA_ISLAND_HNS",
+      "offset": 0,
+      "direction": "left"
+    },
+    {
+      "map": "MAP_ALOLA_ISLAND_MELEMELE_HNS",
+      "offset": -21,
+      "direction": "up"
+    },
+    {
+      "map": "MAP_ALOLA_ISLAND_RIGHT_HNS",
+      "offset": -38,
+      "direction": "right"
+    }
+  ],
+  "object_events": [],
+  "warp_events": [],
+  "coord_events": [],
+  "bg_events": [],
+  "game_version": "hns",
+  "region": "REGION_ALOLA"
+}

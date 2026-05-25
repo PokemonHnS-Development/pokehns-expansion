@@ -2632,7 +2632,7 @@ const struct Tileset gTileset_AlolaIsland =
     .palettes = gTilesetPalettes_AlolaIsland,
     .metatiles = gMetatiles_AlolaIsland,
     .metatileAttributes = gMetatileAttributes_AlolaIsland,
-    .callback = NULL,
+    .callback = InitTilesetAnim_AlolaIslands,
 };
 
 const struct Tileset gTileset_AlolaIslandSecondary =
