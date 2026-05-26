@@ -236,7 +236,7 @@
     },
     {
       "x": 12,
-      "y": 18,
+      "y": 17,
       "elevation": 0,
       "dest_map": "MAP_ROUTE8_TUNNEL_ENTRANCE_HNS",
       "dest_warp_id": "0"
