@@ -228,8 +228,7 @@ Debug_EventScript_Script_5::
 	end
 
 Debug_EventScript_Script_6::
-	setflag FLAG_HIDE_ROUTE14_EUSINE
-	setvar VAR_SUICUNE_ENCOUNTERS, 4
+	setvar VAR_KANTO_ROCKET_STORY_STATE, 3
 	release
 	end
 
