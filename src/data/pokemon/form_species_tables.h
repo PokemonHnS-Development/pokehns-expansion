@@ -167,19 +167,26 @@ static const u16 sClefableFormSpeciesIdTable[] = {
 #if P_FAMILY_VULPIX
 static const u16 sVulpixFormSpeciesIdTable[] = {
     SPECIES_VULPIX,
-#if P_ALOLAN_FORMS
-    SPECIES_VULPIX_ALOLA,
-#endif
     FORM_SPECIES_END,
 };
 
 static const u16 sNinetalesFormSpeciesIdTable[] = {
     SPECIES_NINETALES,
-#if P_ALOLAN_FORMS
-    SPECIES_NINETALES_ALOLA,
-#endif
     FORM_SPECIES_END,
 };
+
+#if P_ALOLAN_FORMS
+static const u16 sVulpixAlolaFormSpeciesIdTable[] = {
+    SPECIES_VULPIX_ALOLA,
+    FORM_SPECIES_END,
+};
+
+static const u16 sNinetalesAlolaFormSpeciesIdTable[] = {
+    SPECIES_NINETALES_ALOLA,
+    FORM_SPECIES_END,
+};
+#endif
+
 #endif //P_FAMILY_VULPIX
 
 #if P_FAMILY_DIGLETT
