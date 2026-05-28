@@ -15,7 +15,7 @@
   "connections": [
     {
       "map": "MAP_VIRIDIAN_CITY_HNS",
-      "offset": -12,
+      "offset": -14,
       "direction": "up"
     },
     {
