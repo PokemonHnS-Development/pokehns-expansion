@@ -379,8 +379,8 @@
     },
     {
       "type": "sign",
-      "x": 21,
-      "y": 39,
+      "x": 27,
+      "y": 40,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "ViridianCity_EventScript_CitySign"

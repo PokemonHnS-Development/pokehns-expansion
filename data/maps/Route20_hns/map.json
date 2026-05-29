@@ -236,7 +236,7 @@
     },
     {
       "local_id": "LOCALID_ROUTE20_DENNIS",
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_MAGIKARP+SPECIES_SHINY_TAG",
+      "graphics_id": "OBJ_EVENT_MON+SPECIES_MAGIKARP+OBJ_EVENT_MON_SHINY",
       "x": 24,
       "y": 8,
       "elevation": 0,
