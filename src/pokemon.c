@@ -935,7 +935,7 @@ static const enum NationalDexOrder sJohtoToNationalOrder[JOHTO_DEX_COUNT] =
     JOHTO_TO_NATIONAL(CELEBI),
 };
 
-#ifdef SEPARATE_OBTAINABLE_DEX
+#if SEPARATE_OBTAINABLE_DEX
 
 static const enum NationalDexOrder sObtainableToNationalOrder[OBTAINABLE_DEX_COUNT] =
 {
@@ -6370,7 +6370,7 @@ enum NationalDexOrder JohtoToNationalOrder(enum JohtoDexOrder johtoNum)
 
 enum ObtainableDexOrder NationalToObtainableOrder(enum NationalDexOrder nationalNum)
 {
-#ifdef SEPARATE_OBTAINABLE_DEX
+#if SEPARATE_OBTAINABLE_DEX
     u16 obtainableNum;
 
     if (!nationalNum)
@@ -6399,7 +6399,7 @@ enum ObtainableDexOrder SpeciesToObtainablePokedexNum(u16 species)
 
 enum NationalDexOrder ObtainableToNationalOrder(enum ObtainableDexOrder obtainableNum)
 {
-#ifdef SEPARATE_OBTAINABLE_DEX
+#if SEPARATE_OBTAINABLE_DEX
     if (!obtainableNum || obtainableNum >= (OBTAINABLE_DEX_COUNT + 1))
         return 0;
 
