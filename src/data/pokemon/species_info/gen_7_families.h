@@ -232,9 +232,17 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FLYING),
         .abilities = { ABILITY_OVERGROW, ABILITY_NONE, ABILITY_SCRAPPY },
         .bodyColor = BODY_COLOR_BROWN,
+#if P_SEPARATE_REGIONAL_FORMS
+        .speciesName = _("Decidueye-H"),
+#else
         .speciesName = _("Decidueye"),
+#endif
         .cryId = CRY_DECIDUEYE,
+#if P_SEPARATE_REGIONAL_FORMS
+        .natDexNum = NATIONAL_DEX_DECIDUEYE_HISUI,
+#else
         .natDexNum = NATIONAL_DEX_DECIDUEYE,
+#endif
         .categoryName = _("Arrow Quill"),
         .height = 16,
         .weight = 370,
@@ -275,7 +283,11 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .isHisuianForm = TRUE,
         .levelUpLearnset = sDecidueyeHisuiLevelUpLearnset,
         .teachableLearnset = sDecidueyeHisuiTeachableLearnset,
+#if P_SEPARATE_REGIONAL_FORMS
+        .formSpeciesIdTable = sDecidueyeHisuiFormSpeciesIdTable,
+#else
         .formSpeciesIdTable = sDecidueyeFormSpeciesIdTable,
+#endif
     },
 #endif //P_HISUIAN_FORMS
 #endif //P_FAMILY_ROWLET

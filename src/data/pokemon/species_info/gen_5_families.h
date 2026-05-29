@@ -812,9 +812,17 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
         .abilities = { ABILITY_TORRENT, ABILITY_NONE, ABILITY_SHARPNESS },
         .bodyColor = BODY_COLOR_BLUE,
+#if P_SEPARATE_REGIONAL_FORMS
+        .speciesName = _("Samurott-H"),
+#else
         .speciesName = _("Samurott"),
+#endif
         .cryId = CRY_SAMUROTT,
+#if P_SEPARATE_REGIONAL_FORMS
+        .natDexNum = NATIONAL_DEX_SAMUROTT_HISUI,
+#else
         .natDexNum = NATIONAL_DEX_SAMUROTT,
+#endif
         .categoryName = _("Formidable"),
         .height = 15,
         .weight = 582,
@@ -855,7 +863,11 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .isHisuianForm = TRUE,
         .levelUpLearnset = sSamurottHisuiLevelUpLearnset,
         .teachableLearnset = sSamurottHisuiTeachableLearnset,
+#if P_SEPARATE_REGIONAL_FORMS
+        .formSpeciesIdTable = sSamurottHisuiFormSpeciesIdTable,
+#else
         .formSpeciesIdTable = sSamurottFormSpeciesIdTable,
+#endif
     },
 #endif //P_HISUIAN_FORMS
 #endif //P_FAMILY_OSHAWOTT
@@ -4447,9 +4459,17 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .abilities = { ABILITY_CHLOROPHYLL, ABILITY_HUSTLE, ABILITY_LEAF_GUARD },
         .bodyColor = BODY_COLOR_GREEN,
         .noFlip = TRUE,
+#if P_SEPARATE_REGIONAL_FORMS
+        .speciesName = _("Lilligant-H"),
+#else
         .speciesName = _("Lilligant"),
+#endif
         .cryId = CRY_LILLIGANT,
+#if P_SEPARATE_REGIONAL_FORMS
+        .natDexNum = NATIONAL_DEX_LILLIGANT_HISUI,
+#else
         .natDexNum = NATIONAL_DEX_LILLIGANT,
+#endif
         .categoryName = _("Spinning"),
         .height = 12,
         .weight = 192,
@@ -4490,7 +4510,11 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .isHisuianForm = TRUE,
         .levelUpLearnset = sLilligantHisuiLevelUpLearnset,
         .teachableLearnset = sLilligantHisuiTeachableLearnset,
+#if P_SEPARATE_REGIONAL_FORMS
+        .formSpeciesIdTable = sLilligantHisuiFormSpeciesIdTable,
+#else
         .formSpeciesIdTable = sLilligantFormSpeciesIdTable,
+#endif
     },
 #endif //P_HISUIAN_FORMS
 #endif //P_FAMILY_PETILIL
@@ -5266,9 +5290,17 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
         .abilities = { ABILITY_HUSTLE, ABILITY_NONE, ABILITY_INNER_FOCUS },
         .bodyColor = BODY_COLOR_WHITE,
+#if P_SEPARATE_REGIONAL_FORMS
+        .speciesName = _("Darumaka-G"),
+#else
         .speciesName = _("Darumaka"),
+#endif
         .cryId = CRY_DARUMAKA,
+#if P_SEPARATE_REGIONAL_FORMS
+        .natDexNum = NATIONAL_DEX_DARUMAKA_GALAR,
+#else
         .natDexNum = NATIONAL_DEX_DARUMAKA,
+#endif
         .categoryName = _("Zen Charm"),
         .height = 7,
         .weight = 400,
@@ -5310,7 +5342,11 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .levelUpLearnset = sDarumakaGalarLevelUpLearnset,
         .teachableLearnset = sDarumakaGalarTeachableLearnset,
         .eggMoveLearnset = sDarumakaGalarEggMoveLearnset,
+#if P_SEPARATE_REGIONAL_FORMS
+        .formSpeciesIdTable = sDarumakaGalarFormSpeciesIdTable,
+#else
         .formSpeciesIdTable = sDarumakaFormSpeciesIdTable,
+#endif
         .evolutions = EVOLUTION({EVO_ITEM, ITEM_ICE_STONE, SPECIES_DARMANITAN_GALAR_STANDARD}),
     },
 
@@ -5333,9 +5369,17 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
         .abilities = { ABILITY_GORILLA_TACTICS, ABILITY_NONE, ABILITY_ZEN_MODE },
         .bodyColor = BODY_COLOR_WHITE,
+#if P_SEPARATE_REGIONAL_FORMS
+        .speciesName = _("Darmanitan-G"),
+#else
         .speciesName = _("Darmanitan"),
+#endif
         .cryId = CRY_DARMANITAN,
+#if P_SEPARATE_REGIONAL_FORMS
+        .natDexNum = NATIONAL_DEX_DARMANITAN_GALAR,
+#else
         .natDexNum = NATIONAL_DEX_DARMANITAN,
+#endif
         .categoryName = _("Zen Charm"),
         .height = 17,
         .weight = 1200,
@@ -5376,7 +5420,11 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .isGalarianForm = TRUE,
         .levelUpLearnset = sDarmanitanGalarLevelUpLearnset,
         .teachableLearnset = sDarmanitanGalarTeachableLearnset,
+#if P_SEPARATE_REGIONAL_FORMS
+        .formSpeciesIdTable = sDarmanitanGalarFormSpeciesIdTable,
+#else
         .formSpeciesIdTable = sDarmanitanFormSpeciesIdTable,
+#endif
         .formChangeTable = sDarmanitanGalarFormChangeTable,
     },
 
@@ -5400,9 +5448,17 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .abilities = { ABILITY_GORILLA_TACTICS, ABILITY_NONE, ABILITY_ZEN_MODE },
         .bodyColor = BODY_COLOR_WHITE,
         .noFlip = TRUE,
+#if P_SEPARATE_REGIONAL_FORMS
+        .speciesName = _("Darmanitan-G"),
+#else
         .speciesName = _("Darmanitan"),
+#endif
         .cryId = CRY_DARMANITAN,
+#if P_SEPARATE_REGIONAL_FORMS
+        .natDexNum = NATIONAL_DEX_DARMANITAN_GALAR,
+#else
         .natDexNum = NATIONAL_DEX_DARMANITAN,
+#endif
         .categoryName = _("Blazing"),
         .height = 17,
         .weight = 1200,
@@ -5434,7 +5490,11 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .isGalarianForm = TRUE,
         .levelUpLearnset = sDarmanitanGalarLevelUpLearnset,
         .teachableLearnset = sDarmanitanGalarTeachableLearnset,
+#if P_SEPARATE_REGIONAL_FORMS
+        .formSpeciesIdTable = sDarmanitanGalarFormSpeciesIdTable,
+#else
         .formSpeciesIdTable = sDarmanitanFormSpeciesIdTable,
+#endif
         .formChangeTable = sDarmanitanGalarFormChangeTable,
     },
 #endif //P_GALARIAN_FORMS
@@ -6108,9 +6168,17 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .abilities = { ABILITY_WANDERING_SPIRIT, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_BLACK,
         .noFlip = TRUE,
+#if P_SEPARATE_REGIONAL_FORMS
+        .speciesName = _("Yamask-G"),
+#else
         .speciesName = _("Yamask"),
+#endif
         .cryId = CRY_YAMASK,
+#if P_SEPARATE_REGIONAL_FORMS
+        .natDexNum = NATIONAL_DEX_YAMASK_GALAR,
+#else
         .natDexNum = NATIONAL_DEX_YAMASK,
+#endif
         .categoryName = _("Spirit"),
         .height = 5,
         .weight = 15,
@@ -6153,7 +6221,11 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .levelUpLearnset = sYamaskGalarLevelUpLearnset,
         .teachableLearnset = sYamaskGalarTeachableLearnset,
         .eggMoveLearnset = sYamaskGalarEggMoveLearnset,
+#if P_SEPARATE_REGIONAL_FORMS
+        .formSpeciesIdTable = sYamaskGalarFormSpeciesIdTable,
+#else
         .formSpeciesIdTable = sYamaskFormSpeciesIdTable,
+#endif
         .evolutions = EVOLUTION({EVO_SCRIPT_TRIGGER, 0, SPECIES_RUNERIGUS, CONDITIONS({IF_CURRENT_DAMAGE_GE, 49})}),
     },
 
@@ -6883,9 +6955,17 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
         .abilities = { ABILITY_ILLUSION, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_GRAY,
+#if P_SEPARATE_REGIONAL_FORMS
+        .speciesName = _("Zorua-H"),
+#else
         .speciesName = _("Zorua"),
+#endif
         .cryId = CRY_ZORUA,
+#if P_SEPARATE_REGIONAL_FORMS
+        .natDexNum = NATIONAL_DEX_ZORUA_HISUI,
+#else
         .natDexNum = NATIONAL_DEX_ZORUA,
+#endif
         .categoryName = _("Spiteful Fox"),
         .height = 7,
         .weight = 125,
@@ -6927,7 +7007,11 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .levelUpLearnset = sZoruaHisuiLevelUpLearnset,
         .teachableLearnset = sZoruaHisuiTeachableLearnset,
         .eggMoveLearnset = sZoruaHisuiEggMoveLearnset,
+#if P_SEPARATE_REGIONAL_FORMS
+        .formSpeciesIdTable = sZoruaHisuiFormSpeciesIdTable,
+#else
         .formSpeciesIdTable = sZoruaFormSpeciesIdTable,
+#endif
         .evolutions = EVOLUTION({EVO_LEVEL, 30, SPECIES_ZOROARK_HISUI}),
     },
 
@@ -6951,9 +7035,17 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .abilities = { ABILITY_ILLUSION, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_GRAY,
         .noFlip = TRUE,
+#if P_SEPARATE_REGIONAL_FORMS
+        .speciesName = _("Zoroark-H"),
+#else
         .speciesName = _("Zoroark"),
+#endif
         .cryId = CRY_ZOROARK,
+#if P_SEPARATE_REGIONAL_FORMS
+        .natDexNum = NATIONAL_DEX_ZOROARK_HISUI,
+#else
         .natDexNum = NATIONAL_DEX_ZOROARK,
+#endif
         .categoryName = _("Baneful Fox"),
         .height = 16,
         .weight = 730,
@@ -6994,7 +7086,11 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .isHisuianForm = TRUE,
         .levelUpLearnset = sZoroarkHisuiLevelUpLearnset,
         .teachableLearnset = sZoroarkHisuiTeachableLearnset,
+#if P_SEPARATE_REGIONAL_FORMS
+        .formSpeciesIdTable = sZoroarkHisuiFormSpeciesIdTable,
+#else
         .formSpeciesIdTable = sZoroarkFormSpeciesIdTable,
+#endif
     },
 #endif //P_HISUIAN_FORMS
 #endif //P_FAMILY_ZORUA
@@ -10950,9 +11046,17 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .abilities = { ABILITY_MIMICRY, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_GREEN,
         .noFlip = TRUE,
+#if P_SEPARATE_REGIONAL_FORMS
+        .speciesName = _("Stunfisk-G"),
+#else
         .speciesName = _("Stunfisk"),
+#endif
         .cryId = CRY_STUNFISK,
+#if P_SEPARATE_REGIONAL_FORMS
+        .natDexNum = NATIONAL_DEX_STUNFISK_GALAR,
+#else
         .natDexNum = NATIONAL_DEX_STUNFISK,
+#endif
         .categoryName = _("Trap"),
         .height = 7,
         .weight = 205,
@@ -10994,7 +11098,11 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .levelUpLearnset = sStunfiskGalarLevelUpLearnset,
         .teachableLearnset = sStunfiskGalarTeachableLearnset,
         .eggMoveLearnset = sStunfiskGalarEggMoveLearnset,
+#if P_SEPARATE_REGIONAL_FORMS
+        .formSpeciesIdTable = sStunfiskGalarFormSpeciesIdTable,
+#else
         .formSpeciesIdTable = sStunfiskFormSpeciesIdTable,
+#endif
     },
 #endif //P_GALARIAN_FORMS
 #endif //P_FAMILY_STUNFISK
@@ -11863,9 +11971,17 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FLYING),
         .abilities = { ABILITY_KEEN_EYE, ABILITY_SHEER_FORCE, ABILITY_TINTED_LENS },
         .bodyColor = BODY_COLOR_WHITE,
+#if P_SEPARATE_REGIONAL_FORMS
+        .speciesName = _("Braviary-H"),
+#else
         .speciesName = _("Braviary"),
+#endif
         .cryId = CRY_BRAVIARY,
+#if P_SEPARATE_REGIONAL_FORMS
+        .natDexNum = NATIONAL_DEX_BRAVIARY_HISUI,
+#else
         .natDexNum = NATIONAL_DEX_BRAVIARY,
+#endif
         .categoryName = _("Battle Cry"),
         .height = 17,
         .weight = 434,
@@ -11906,7 +12022,11 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .isHisuianForm = TRUE,
         .levelUpLearnset = sBraviaryHisuiLevelUpLearnset,
         .teachableLearnset = sBraviaryHisuiTeachableLearnset,
+#if P_SEPARATE_REGIONAL_FORMS
+        .formSpeciesIdTable = sBraviaryHisuiFormSpeciesIdTable,
+#else
         .formSpeciesIdTable = sBraviaryFormSpeciesIdTable,
+#endif
     },
 #endif //P_HISUIAN_FORMS
 #endif //P_FAMILY_RUFFLET
