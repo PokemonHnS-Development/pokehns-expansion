@@ -2002,6 +2002,7 @@ extern const u8 gText_OnlyOnePhrase[];
 extern const u8 gText_YouCannotQuitHere[];
 extern const u8 gText_SectionMustBeCompleted[];
 extern const u8 gText_ThreeQuestionMarks[];
+extern const u8 gText_FourQuestionMarks[];
 extern const u8 gText_Profile[];
 extern const u8 gText_CombineFourWordsOrPhrases[];
 extern const u8 gText_AndMakeYourProfile[];

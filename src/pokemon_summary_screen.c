@@ -3354,7 +3354,7 @@ static void PrintNotEggInfo(void)
 
     if (dexNum != 0xFFFF)
     {
-        u8 digitCount = (NATIONAL_DEX_COUNT > 999 && IsNationalPokedexEnabled()) ? 4 : 3;
+        u8 digitCount = (OBTAINABLE_DEX_COUNT > 999 && IsNationalPokedexEnabled()) ? 4 : 3;
         StringCopy(gStringVar1, &gText_NumberClear01[0]);
         ConvertIntToDecimalStringN(gStringVar2, dexNum, STR_CONV_MODE_LEADING_ZEROS, digitCount);
         StringAppend(gStringVar1, gStringVar2);
@@ -3373,7 +3373,10 @@ static void PrintNotEggInfo(void)
     else
     {
         StringCopy(gStringVar1, &gText_NumberClear01[0]);
-        StringCopy(gStringVar2, &gText_ThreeQuestionMarks[0]);
+        if (OBTAINABLE_DEX_COUNT > 999 && IsNationalPokedexEnabled())
+            StringCopy(gStringVar2, &gText_FourQuestionMarks[0]);
+        else
+            StringCopy(gStringVar2, &gText_ThreeQuestionMarks[0]);
         StringAppend(gStringVar1, gStringVar2);
         if (!IsMonShiny(mon))
         {
