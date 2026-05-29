@@ -6255,7 +6255,7 @@ enum KantoDexOrder NationalToKantoOrder(enum NationalDexOrder nationalNum)
         kantoNum++;
 
     if (kantoNum >= KANTO_DEX_COUNT)
-        return 0xFFFF;
+        return 0;
 
     return kantoNum + 1;
 }
@@ -6273,7 +6273,7 @@ enum HoennDexOrder NationalToHoennOrder(enum NationalDexOrder nationalNum)
         hoennNum++;
 
     if (hoennNum >= HOENN_DEX_COUNT - 1)
-        return 0xFFFF;
+        return 0;
 
     return hoennNum + 1;
 }
@@ -6348,7 +6348,7 @@ enum JohtoDexOrder NationalToJohtoOrder(enum NationalDexOrder nationalNum)
         johtoNum++;
 
     if (johtoNum >= JOHTO_DEX_COUNT)
-        return 0xFFFF;
+        return 0;
 
     return johtoNum + 1;
 }
@@ -6382,7 +6382,7 @@ enum ObtainableDexOrder NationalToObtainableOrder(enum NationalDexOrder national
         obtainableNum++;
 
     if (obtainableNum >= OBTAINABLE_DEX_COUNT)
-        return 0xFFFF;
+        return 0;
 
     return obtainableNum + 1;
 #else

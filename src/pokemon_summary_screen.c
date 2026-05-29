@@ -3352,7 +3352,7 @@ static void PrintNotEggInfo(void)
     struct PokeSummary *summary = &sMonSummaryScreen->summary;
     u16 dexNum = SpeciesToPokedexNum(summary->species);
 
-    if (dexNum != 0xFFFF)
+    if (dexNum != 0xFFFF && dexNum != 0)
     {
         u8 digitCount = (OBTAINABLE_DEX_COUNT > 999 && IsNationalPokedexEnabled()) ? 4 : 3;
         StringCopy(gStringVar1, &gText_NumberClear01[0]);

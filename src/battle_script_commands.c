@@ -10896,7 +10896,7 @@ static bool32 CriticalCapture(u32 odds)
     if (B_CRITICAL_CAPTURE_LOCAL_DEX == TRUE)
         totalDexCount = REGIONAL_DEX_COUNT;
     else
-        totalDexCount = NATIONAL_DEX_COUNT;
+        totalDexCount = OBTAINABLE_DEX_COUNT;
 
     if (CheckBagHasItem(ITEM_CATCHING_CHARM, 1))
         charmBoost = (100 + B_CATCHING_CHARM_BOOST) / 100;

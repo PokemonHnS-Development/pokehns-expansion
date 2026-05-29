@@ -2531,7 +2531,7 @@ static void CreatePokedexList(u8 dexMode, u8 order)
         }
         break;
     case ORDER_HEAVIEST:
-        for (i = OBTAINABLE_DEX_COUNT - 1; i >= 0; i--)
+        for (i = NATIONAL_DEX_COUNT - 1; i >= 0; i--)
         {
             temp_dexNum = gPokedexOrder_Weight[i];
 
@@ -2545,7 +2545,7 @@ static void CreatePokedexList(u8 dexMode, u8 order)
         }
         break;
     case ORDER_LIGHTEST:
-        for (i = 0; i < OBTAINABLE_DEX_COUNT; i++)
+        for (i = 0; i < NATIONAL_DEX_COUNT; i++)
         {
             temp_dexNum = gPokedexOrder_Weight[i];
 
@@ -2559,7 +2559,7 @@ static void CreatePokedexList(u8 dexMode, u8 order)
         }
         break;
     case ORDER_TALLEST:
-        for (i = OBTAINABLE_DEX_COUNT - 1; i >= 0; i--)
+        for (i = NATIONAL_DEX_COUNT - 1; i >= 0; i--)
         {
             temp_dexNum = gPokedexOrder_Height[i];
 
@@ -2573,7 +2573,7 @@ static void CreatePokedexList(u8 dexMode, u8 order)
         }
         break;
     case ORDER_SMALLEST:
-        for (i = 0; i < OBTAINABLE_DEX_COUNT; i++)
+        for (i = 0; i < NATIONAL_DEX_COUNT; i++)
         {
             temp_dexNum = gPokedexOrder_Height[i];
 
@@ -4401,7 +4401,7 @@ static void PrintMonInfo(u32 num, u32 value, u32 owned, u32 newEntry)
     const u8 *name;
     const u8 *category;
     const u8 *description;
-    u8 digitCount = (NATIONAL_DEX_COUNT > 999 && value != 0) ? 4 : 3;
+    u8 digitCount = (OBTAINABLE_DEX_COUNT > 999 && value != 0) ? 4 : 3;
 
     if (value == 0)
         value = NationalToRegionalOrder(num);
