@@ -8604,3 +8604,56 @@ void ChangePokemonNicknameWithCallback(void (*callback)(void))
     GetBoxMonData(boxMon, MON_DATA_NICKNAME, gStringVar2);
     DoNamingScreen(NAMING_SCREEN_NICKNAME, gStringVar2, GetBoxMonData(boxMon, MON_DATA_SPECIES), GetBoxMonGender(boxMon), GetBoxMonData(boxMon, MON_DATA_PERSONALITY), callback);
 }
+
+u16 GetAlolaCatchProgress(void)
+{
+    u16 caught = 0;
+
+    for (enum ObtainableDexOrder i = OBTAINABLE_DEX_RATTATA_ALOLA; i <= OBTAINABLE_DEX_MAROWAK_ALOLA; ++i)
+    {
+        if (GetSetPokedexFlag(ObtainableToNationalOrder(i), FLAG_GET_CAUGHT))
+            ++caught;
+    }
+
+    return caught;
+}
+
+u16 GetGalarCatchProgress(void)
+{
+    u16 caught = 0;
+
+    for (enum ObtainableDexOrder i = OBTAINABLE_DEX_MEOWTH_GALAR; i <= OBTAINABLE_DEX_OBSTAGOON; ++i)
+    {
+        if (GetSetPokedexFlag(ObtainableToNationalOrder(i), FLAG_GET_CAUGHT))
+            ++caught;
+    }
+
+    return caught;
+}
+
+u16 GetHisuiCatchProgress(void)
+{
+    u16 caught = 0;
+
+    for (enum ObtainableDexOrder i = OBTAINABLE_DEX_GROWLITHE_HISUI; i <= OBTAINABLE_DEX_SNEASLER; ++i)
+    {
+        if (GetSetPokedexFlag(ObtainableToNationalOrder(i), FLAG_GET_CAUGHT))
+            ++caught;
+    }
+
+    return caught;
+}
+
+u16 GetPaldeaCatchProgress(void)
+{
+    u16 caught = 0;
+
+    for (enum ObtainableDexOrder i = OBTAINABLE_DEX_TAUROS_PALDEA; i <= OBTAINABLE_DEX_CLODSIRE; ++i)
+    {
+        if (GetSetPokedexFlag(ObtainableToNationalOrder(i), FLAG_GET_CAUGHT))
+            ++caught;
+    }
+
+    return caught;
+}
+
