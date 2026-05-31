@@ -47,6 +47,90 @@ static const u8 *const sBirchDexRatingTexts[BIRCH_DEX_STRINGS] =
     gBirchDexRatingText_DexCompleted,
 };
 
+#if IS_HNS
+
+const u8 *GetPokedexRatingText(u32 count)
+{
+    u32 i, j;
+    u16 maxDex = REGIONAL_DEX_COUNT - 1;
+    // doesNotCountForRegionalPokedex
+    for (i = 0; i < REGIONAL_DEX_COUNT; i++)
+    {
+        j = NationalPokedexNumToSpecies(RegionalToNationalOrder(i + 1));
+        if (gSpeciesInfo[j].isMythical && !gSpeciesInfo[j].dexForceRequired)
+        {
+            if (GetSetPokedexFlag(j, FLAG_GET_CAUGHT))
+                count--;
+            maxDex--;
+        }
+    }
+
+    if (count < 10)
+        return gJohtoDexRatingText_LessThan10;
+
+    if (count < 20)
+        return gJohtoDexRatingText_LessThan20;
+
+    if (count < 35)
+        return gJohtoDexRatingText_LessThan35;
+
+    if (count < 50)
+        return gJohtoDexRatingText_LessThan50;
+
+    if (count < 65)
+        return gJohtoDexRatingText_LessThan65;
+
+    if (count < 80)
+        return gJohtoDexRatingText_LessThan80;
+
+    if (count < 95)
+        return gJohtoDexRatingText_LessThan95;
+
+    if (count < 110)
+        return gJohtoDexRatingText_LessThan110;
+
+    if (count < 125)
+        return gJohtoDexRatingText_LessThan125;
+
+    if (count < 140)
+        return gJohtoDexRatingText_LessThan140;
+
+    if (count < 155)
+        return gJohtoDexRatingText_LessThan155;
+
+    if (count < 170)
+        return gJohtoDexRatingText_LessThan170;
+
+    if (count < 185)
+        return gJohtoDexRatingText_LessThan185;
+
+    if (count < 200)
+        return gJohtoDexRatingText_LessThan200;
+
+    if (count < 215)
+        return gJohtoDexRatingText_LessThan215;
+
+    if (count < 230)
+        return gJohtoDexRatingText_LessThan230;
+
+    if (count < 245)
+        return gJohtoDexRatingText_LessThan245;
+
+    if (count < 260)
+        return gJohtoDexRatingText_LessThan260;
+
+    if (count < 275)
+        return gJohtoDexRatingText_LessThan275;
+
+    if (count < 279)
+        return gJohtoDexRatingText_LessThan279;
+
+    gSpecialVar_Result = TRUE;
+    return gJohtoDexRatingText_Complete;
+}
+
+#else
+
 // This shows your Hoenn Pokédex rating and not your National Dex.
 const u8 *GetPokedexRatingText(u32 count)
 {
@@ -65,6 +149,8 @@ const u8 *GetPokedexRatingText(u32 count)
     }
     return sBirchDexRatingTexts[(count * (BIRCH_DEX_STRINGS - 1)) / maxDex];
 }
+
+#endif // IS_HNS
 
 void ShowPokedexRatingMessage(void)
 {
@@ -164,4 +250,3 @@ void GetProfOaksRatingMessage(void)
 {
     ShowFieldMessage(GetProfOaksRatingMessageByCount(gSpecialVar_0x8004));
 }
-

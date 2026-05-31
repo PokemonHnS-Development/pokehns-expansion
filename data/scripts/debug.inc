@@ -267,6 +267,7 @@ Debug_EventScript_Script_6::
 	end
 
 Debug_EventScript_Script_7::
+	msgbox gJohtoDexRatingText_Complete, MSGBOX_DEFAULT
 	release
 	end
 
