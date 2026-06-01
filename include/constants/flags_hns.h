@@ -938,6 +938,7 @@
 #define FLAG_LANDMARK_BATTLE_FRONTIER               (SYS_FLAGS + 0x41)
 #define FLAG_LANDMARK_TRAINER_HILL                  (SYS_FLAGS + 0x42)
 #define FLAG_RECEIVED_POKEDEX_FROM_BIRCH            (SYS_FLAGS + 0x43)
+#define FLAG_SYS_ACK_COMPLETE_JOHTO_DEX             (SYS_FLAGS + 0x44)
 
 // Battle Frontier symbols
 #define FLAG_SYS_TOWER_SILVER                       (SYS_FLAGS + 0x50)

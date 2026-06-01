@@ -52,9 +52,9 @@ static const u8 *const sBirchDexRatingTexts[BIRCH_DEX_STRINGS] =
 const u8 *GetPokedexRatingText(u32 count)
 {
     u32 i, j;
-    u16 maxDex = REGIONAL_DEX_COUNT - 1;
     // doesNotCountForRegionalPokedex
-    for (i = 0; i < REGIONAL_DEX_COUNT; i++)
+    u16 maxDex = REGIONAL_DEX_COUNT - 1;
+    for (i = 0; i < REGIONAL_DEX_COUNT - 1; i++)
     {
         j = NationalPokedexNumToSpecies(RegionalToNationalOrder(i + 1));
         if (gSpeciesInfo[j].isMythical && !gSpeciesInfo[j].dexForceRequired)
@@ -64,6 +64,14 @@ const u8 *GetPokedexRatingText(u32 count)
             maxDex--;
         }
     }
+
+    if (count >= maxDex)
+    {
+        gSpecialVar_Result = TRUE;
+        return gJohtoDexRatingText_Complete;
+    }
+
+    gSpecialVar_Result = FALSE;
 
     if (count < 10)
         return gJohtoDexRatingText_LessThan10;
@@ -122,11 +130,64 @@ const u8 *GetPokedexRatingText(u32 count)
     if (count < 275)
         return gJohtoDexRatingText_LessThan275;
 
-    if (count < 279)
-        return gJohtoDexRatingText_LessThan279;
+    return gJohtoDexRatingText_LessThanMaxDex;
+}
 
-    gSpecialVar_Result = TRUE;
-    return gJohtoDexRatingText_Complete;
+const u8 *GetNationalPokedexRatingText(u32 count)
+{
+    u32 i, j;
+    // doesNotCountForObtainablePokedex
+    u16 maxDex = OBTAINABLE_DEX_COUNT - 1;
+    for (i = 1; i < OBTAINABLE_DEX_COUNT - 1; i++)
+    {
+        j = NationalPokedexNumToSpecies(ObtainableToNationalOrder(i + 1));
+        if (gSpeciesInfo[j].isMythical && !gSpeciesInfo[j].dexForceRequired)
+        {
+            if (GetSetPokedexFlag(j, FLAG_GET_CAUGHT))
+                count--;
+            maxDex--;
+        }
+    }
+
+    if (count >= maxDex)
+    {
+        gSpecialVar_Result = TRUE;
+        return gNationalDexRatingText_Complete;
+    }
+
+    gSpecialVar_Result = FALSE;
+
+    if (count < 100)
+        return gNationalDexRatingText_LessThan100;
+
+    if (count < 150)
+        return gNationalDexRatingText_LessThan150;
+
+    if (count < 200)
+        return gNationalDexRatingText_LessThan200;
+
+    if (count < 250)
+        return gNationalDexRatingText_LessThan250;
+
+    if (count < 300)
+        return gNationalDexRatingText_LessThan300;
+
+    if (count < 350)
+        return gNationalDexRatingText_LessThan350;
+
+    if (count < 400)
+        return gNationalDexRatingText_LessThan400;
+
+    if (count < 435)
+        return gNationalDexRatingText_LessThan435;
+
+    if (count < 465)
+        return gNationalDexRatingText_LessThan465;
+
+    if (count < 475)
+        return gNationalDexRatingText_LessThan475;
+
+    return gNationalDexRatingText_LessThanMaxDex;
 }
 
 #else
@@ -147,7 +208,12 @@ const u8 *GetPokedexRatingText(u32 count)
             maxDex--;
         }
     }
-    return sBirchDexRatingTexts[(count * (BIRCH_DEX_STRINGS - 1)) / maxDex];
+
+    u32 idx = (count * (BIRCH_DEX_STRINGS - 1)) / maxDex;
+
+    gSpecialVar_Result = idx == (BIRCH_DEX_STRINGS - 1);
+
+    return sBirchDexRatingTexts[idx];
 }
 
 #endif // IS_HNS

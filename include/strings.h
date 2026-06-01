@@ -388,7 +388,7 @@ extern const u8 gBirchDexRatingText_LessThan190[];
 extern const u8 gBirchDexRatingText_LessThan200[];
 extern const u8 gBirchDexRatingText_DexCompleted[];
 
-// elm dex rating text
+// HnS dex rating text
 extern const u8 gJohtoDexRatingText_LessThan10[];
 extern const u8 gJohtoDexRatingText_LessThan20[];
 extern const u8 gJohtoDexRatingText_LessThan35[];
@@ -408,8 +408,21 @@ extern const u8 gJohtoDexRatingText_LessThan230[];
 extern const u8 gJohtoDexRatingText_LessThan245[];
 extern const u8 gJohtoDexRatingText_LessThan260[];
 extern const u8 gJohtoDexRatingText_LessThan275[];
-extern const u8 gJohtoDexRatingText_LessThan279[];
+extern const u8 gJohtoDexRatingText_LessThanMaxDex[];
 extern const u8 gJohtoDexRatingText_Complete[];
+
+extern const u8 gNationalDexRatingText_LessThan100[];
+extern const u8 gNationalDexRatingText_LessThan150[];
+extern const u8 gNationalDexRatingText_LessThan200[];
+extern const u8 gNationalDexRatingText_LessThan250[];
+extern const u8 gNationalDexRatingText_LessThan300[];
+extern const u8 gNationalDexRatingText_LessThan350[];
+extern const u8 gNationalDexRatingText_LessThan400[];
+extern const u8 gNationalDexRatingText_LessThan435[];
+extern const u8 gNationalDexRatingText_LessThan465[];
+extern const u8 gNationalDexRatingText_LessThan475[];
+extern const u8 gNationalDexRatingText_LessThanMaxDex[];
+extern const u8 gNationalDexRatingText_Complete[];
 
 // player PC text
 extern const u8 gText_WhatWouldYouLike[];

@@ -3,6 +3,11 @@ gBirchDexRatingText_AreYouCurious::
 	.string "Are you curious about how your\n"
 	.string "POKéDEX is coming along?$"
 
+gBirchDexRatingText_AreYouCuriousNational::
+	.string "PROF. BIRCH: Ah, {PLAYER}{KUN}!\p"
+	.string "Are you curious about how your\n"
+	.string "National POKéDEX is coming along?$"
+
 gBirchDexRatingText_Cancel::
 	.string "Hm? Oh, you haven't caught enough\n"
 	.string "POKéMON to make it worthwhile.$"
@@ -327,14 +332,76 @@ gJohtoDexRatingText_LessThan275::
 	.string "to become a great POKéMON\p"
 	.string "Professor someday!$"
 
-gJohtoDexRatingText_LessThan279::
+gJohtoDexRatingText_LessThanMaxDex::
 	.string "Your POKéDEX is amazing!\n"
 	.string "You're ready to turn professional!$"
 
 gJohtoDexRatingText_Complete::
 	.string "Wow!\n"
-	.string "That is a complete Johto Pokédex!\p"
+	.string "That is a complete Johto POKéDEX!\p"  
 	.string "Thanks to you, {PLAYER}, the Johto\n"
-	.string "Pokédex is complete!\p"
+	.string "POKéDEX is complete!\p"
 	.string "Wow...\n"
 	.string "You've done an incredible job!$"
+
+gNationalDexRatingText_LessThan100::
+	.string "The goal may be far away, but don't\n"
+	.string "give up yet! Keep going!$"
+
+gNationalDexRatingText_LessThan150::
+	.string "Don't forget, some POKéMON only\n"
+	.string "appear at certain times of the day!$"
+
+gNationalDexRatingText_LessThan200::
+	.string "If you break rocks, some POKéMON\n"
+	.string "that were hiding there might come\p"
+	.string "jumping out!$"
+
+gNationalDexRatingText_LessThan250::
+	.string "That's wonderful you've been able\n"
+	.string "to gather this many POKéMON!\p"
+	.string "The path ahead is long. Keep up the\n"
+	.string "great work!$"
+
+gNationalDexRatingText_LessThan300::
+	.string "If you Headbutt a tree, sometimes\n"
+	.string "a POKéMON might fall out!$"
+
+gNationalDexRatingText_LessThan350::
+	.string "A lot of POKéMON not found in the\n"
+	.string "Johto region like to congregate\p"
+	.string "at the Safari Zone$"
+
+gNationalDexRatingText_LessThan400::
+@	.string "Music on the radio might also\n"
+@	.string "entice POKéMON to leap out$"
+	.string "There are hidden locations all\n"
+	.string "over the world containing rare\p"
+	.string "and unusual POKéMON, try to find\n"
+	.string "them all!$"
+
+gNationalDexRatingText_LessThan435::
+	.string "Wow, you've gotten so far...!\n"
+	.string "I'm actually a little surprised!$"
+
+gNationalDexRatingText_LessThan465::
+	.string "This is a critical moment!\n"
+	.string "You can't become discouraged!$"
+
+gNationalDexRatingText_LessThan475::
+	.string "Just a little more!\n"
+	.string "I've got high expectations for you!$"
+
+gNationalDexRatingText_LessThanMaxDex::
+	.string "I have never before in all my years\n"
+	.string "seen such an incredible Trainer!$"
+
+gNationalDexRatingText_Complete::
+	.string "Excellent! That is an amazing\n"
+	.string "National POKéDEX!\p"
+	.string "Wow...{PAUSE 10}\p"
+	.string "You've lived up to my\n"
+	.string "expectations wonderfully!\p"
+	.string "No, you've exceeded them, {PLAYER}.\n"
+	.string "You've become an amazing Trainer!\p"
+	.string "Thank you, {PLAYER}!$"

@@ -4689,9 +4689,9 @@ bool16 HasAllMons(void)
 {
     u32 i, j;
 
-    for (i = 1; i < NATIONAL_DEX_COUNT + 1; i++)
+    for (i = 1; i < OBTAINABLE_DEX_COUNT + 1; i++)
     {
-        j = NationalPokedexNumToSpecies(i);
+        j = NationalPokedexNumToSpecies(ObtainableToNationalOrder(i));
         if (!(gSpeciesInfo[j].isMythical && !gSpeciesInfo[j].dexForceRequired) && !GetSetPokedexFlag(j, FLAG_GET_CAUGHT))
             return FALSE;
     }
