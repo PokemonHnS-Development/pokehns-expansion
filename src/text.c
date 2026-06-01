@@ -1248,12 +1248,19 @@ bool32 TextPrinterWaitAutoMode(struct TextPrinter *textPrinter)
     }
 }
 
-void SetResultWithButtonPress(bool32 *result)
+void SetResultWithButtonPress(struct TextPrinter *textPrinter, bool32 *result)
 {
-    if (JOY_NEW(A_BUTTON | B_BUTTON))
+    if (textPrinter->delayCounter == 0)
     {
-        *result = TRUE;
-        PlaySE(SE_SELECT);
+        if (JOY_NEW(A_BUTTON | B_BUTTON))
+        {
+            *result = TRUE;
+            PlaySE(SE_SELECT);
+        }
+    }
+    else
+    {
+        textPrinter->delayCounter--;
     }
 }
 
@@ -1265,12 +1272,12 @@ bool32 TextPrinterWaitWithDownArrow(struct TextPrinter *textPrinter)
         result = TextPrinterWaitAutoMode(textPrinter);
 
         if (AUTO_SCROLL_TEXT)
-            SetResultWithButtonPress(&result);
+            SetResultWithButtonPress(textPrinter, &result);
     }
     else
     {
         TextPrinterDrawDownArrow(textPrinter);
-        SetResultWithButtonPress(&result);
+        SetResultWithButtonPress(textPrinter, &result);
     }
     return result;
 }
@@ -1283,11 +1290,11 @@ bool32 TextPrinterWait(struct TextPrinter *textPrinter)
         result = TextPrinterWaitAutoMode(textPrinter);
 
         if (AUTO_SCROLL_TEXT)
-            SetResultWithButtonPress(&result);
+            SetResultWithButtonPress(textPrinter, &result);
     }
     else
     {
-        SetResultWithButtonPress(&result);
+        SetResultWithButtonPress(textPrinter, &result);
     }
     return result;
 }
@@ -1536,10 +1543,12 @@ static u16 RenderText(struct TextPrinter *textPrinter)
             break;
         case CHAR_PROMPT_CLEAR:
             textPrinter->state = RENDER_STATE_CLEAR;
+            textPrinter->delayCounter = 10;
             TextPrinterInitDownArrowCounters(textPrinter);
             return RENDER_UPDATE;
         case CHAR_PROMPT_SCROLL:
             textPrinter->state = RENDER_STATE_SCROLL_START;
+            textPrinter->delayCounter = 10;
             TextPrinterInitDownArrowCounters(textPrinter);
             return RENDER_UPDATE;
         case CHAR_EXTRA_SYMBOL:
