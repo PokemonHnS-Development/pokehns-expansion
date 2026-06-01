@@ -51,13 +51,14 @@ static const u8 *const sBirchDexRatingTexts[BIRCH_DEX_STRINGS] =
 
 const u8 *GetPokedexRatingText(u32 count)
 {
-    u32 i, j;
+    u32 i, j, k;
     // doesNotCountForRegionalPokedex
     u16 maxDex = REGIONAL_DEX_COUNT - 1;
     for (i = 0; i < REGIONAL_DEX_COUNT - 1; i++)
     {
-        j = NationalPokedexNumToSpecies(RegionalToNationalOrder(i + 1));
-        if (gSpeciesInfo[j].isMythical && !gSpeciesInfo[j].dexForceRequired)
+        j = RegionalToNationalOrder(i + 1);
+        k = NationalPokedexNumToSpecies(j);
+        if (gSpeciesInfo[k].isMythical && !gSpeciesInfo[k].dexForceRequired)
         {
             if (GetSetPokedexFlag(j, FLAG_GET_CAUGHT))
                 count--;
@@ -135,13 +136,14 @@ const u8 *GetPokedexRatingText(u32 count)
 
 const u8 *GetNationalPokedexRatingText(u32 count)
 {
-    u32 i, j;
+    u32 i, j, k;
     // doesNotCountForObtainablePokedex
     u16 maxDex = OBTAINABLE_DEX_COUNT - 1;
     for (i = 1; i < OBTAINABLE_DEX_COUNT - 1; i++)
     {
-        j = NationalPokedexNumToSpecies(ObtainableToNationalOrder(i + 1));
-        if (gSpeciesInfo[j].isMythical && !gSpeciesInfo[j].dexForceRequired)
+        j = ObtainableToNationalOrder(i + 1);
+        k = NationalPokedexNumToSpecies(j);
+        if (gSpeciesInfo[k].isMythical && !gSpeciesInfo[k].dexForceRequired)
         {
             if (GetSetPokedexFlag(j, FLAG_GET_CAUGHT))
                 count--;
@@ -195,13 +197,14 @@ const u8 *GetNationalPokedexRatingText(u32 count)
 // This shows your Hoenn Pokédex rating and not your National Dex.
 const u8 *GetPokedexRatingText(u32 count)
 {
-    u32 i, j;
+    u32 i, j, k;
     u16 maxDex = REGIONAL_DEX_COUNT - 1;
     // doesNotCountForRegionalPokedex
     for (i = 0; i < REGIONAL_DEX_COUNT; i++)
     {
-        j = NationalPokedexNumToSpecies(RegionalToNationalOrder(i + 1));
-        if (gSpeciesInfo[j].isMythical && !gSpeciesInfo[j].dexForceRequired)
+        j = RegionalToNationalOrder(i + 1);
+        k = NationalPokedexNumToSpecies(j);
+        if (gSpeciesInfo[k].isMythical && !gSpeciesInfo[k].dexForceRequired)
         {
             if (GetSetPokedexFlag(j, FLAG_GET_CAUGHT))
                 count--;

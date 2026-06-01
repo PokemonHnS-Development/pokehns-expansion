@@ -4647,12 +4647,13 @@ bool16 HasAllRegionalMons(void)
 
 bool16 HasAllHoennMons(void)
 {
-    u32 i, j;
+    u32 i, j, k;
 
     for (i = 0; i < HOENN_DEX_COUNT - 1; i++)
     {
         j = HoennToNationalOrder(i + 1);
-        if (!(gSpeciesInfo[j].isMythical && !gSpeciesInfo[j].dexForceRequired) && !GetSetPokedexFlag(j, FLAG_GET_CAUGHT))
+        k = NationalPokedexNumToSpecies(j);
+        if (!(gSpeciesInfo[k].isMythical && !gSpeciesInfo[k].dexForceRequired) && !GetSetPokedexFlag(j, FLAG_GET_CAUGHT))
             return FALSE;
     }
     return TRUE;
@@ -4660,13 +4661,14 @@ bool16 HasAllHoennMons(void)
 
 bool16 HasAllKantoMons(void)
 {
-    u32 i, j;
+    u32 i, j, k;
 
     // -1 excludes Mew
     for (i = 0; i < KANTO_DEX_COUNT - 1; i++)
     {
         j = KantoToNationalOrder(i + 1);
-        if (!(gSpeciesInfo[j].isMythical && !gSpeciesInfo[j].dexForceRequired) && !GetSetPokedexFlag(j, FLAG_GET_CAUGHT))
+        k = NationalPokedexNumToSpecies(j);
+        if (!(gSpeciesInfo[k].isMythical && !gSpeciesInfo[k].dexForceRequired) && !GetSetPokedexFlag(j, FLAG_GET_CAUGHT))
             return FALSE;
     }
     return TRUE;
@@ -4674,12 +4676,13 @@ bool16 HasAllKantoMons(void)
 
 bool16 HasAllJohotoMons(void)
 {
-    u32 i, j;
+    u32 i, j, k;
 
     for (i = 0; i < JOHTO_DEX_COUNT - 1; i++)
     {
         j = JohtoToNationalOrder(i + 1);
-        if (!(gSpeciesInfo[j].isMythical && !gSpeciesInfo[j].dexForceRequired) && !GetSetPokedexFlag(j, FLAG_GET_CAUGHT))
+        k = NationalPokedexNumToSpecies(j);
+        if (!(gSpeciesInfo[k].isMythical && !gSpeciesInfo[k].dexForceRequired) && !GetSetPokedexFlag(j, FLAG_GET_CAUGHT))
             return FALSE;
     }
     return TRUE;
@@ -4687,12 +4690,13 @@ bool16 HasAllJohotoMons(void)
 
 bool16 HasAllMons(void)
 {
-    u32 i, j;
+    u32 i, j, k;
 
-    for (i = 1; i < OBTAINABLE_DEX_COUNT + 1; i++)
+    for (i = 0; i < OBTAINABLE_DEX_COUNT - 1; i++)
     {
-        j = NationalPokedexNumToSpecies(ObtainableToNationalOrder(i));
-        if (!(gSpeciesInfo[j].isMythical && !gSpeciesInfo[j].dexForceRequired) && !GetSetPokedexFlag(j, FLAG_GET_CAUGHT))
+        j = ObtainableToNationalOrder(i + 1);
+        k = NationalPokedexNumToSpecies(j);
+        if (!(gSpeciesInfo[k].isMythical && !gSpeciesInfo[k].dexForceRequired) && !GetSetPokedexFlag(j, FLAG_GET_CAUGHT))
             return FALSE;
     }
 
