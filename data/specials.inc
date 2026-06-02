@@ -665,4 +665,5 @@ gSpecials::
 	def_special GetHisuiCatchProgress
 	def_special GetPaldeaCatchProgress
 	def_special HasAllJohotoMons
+	def_special HasAllRegionalMons
 

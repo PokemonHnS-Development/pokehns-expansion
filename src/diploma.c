@@ -18,6 +18,7 @@
 
 extern const u8 gText_DexNational[];
 extern const u8 gText_DexHoenn[];
+extern const u8 gText_Johto[];
 extern const u8 gText_PokedexDiploma[];
 
 static void MainCB2(void);
@@ -135,7 +136,11 @@ static void DisplayDiplomaText(void)
     else
     {
         SetGpuReg(REG_OFFSET_BG1HOFS, 0);
+#if IS_HNS
+        StringCopy(gStringVar1, gText_Johto);
+#else
         StringCopy(gStringVar1, gText_DexHoenn);
+#endif
     }
     StringExpandPlaceholders(gStringVar4, gText_PokedexDiploma);
     PrintDiplomaText(gStringVar4, 0, 1);

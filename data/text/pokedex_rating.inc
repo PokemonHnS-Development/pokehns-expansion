@@ -3,11 +3,6 @@ gBirchDexRatingText_AreYouCurious::
 	.string "Are you curious about how your\n"
 	.string "POKéDEX is coming along?$"
 
-gBirchDexRatingText_AreYouCuriousNational::
-	.string "PROF. BIRCH: Ah, {PLAYER}{KUN}!\p"
-	.string "Are you curious about how your\n"
-	.string "National POKéDEX is coming along?$"
-
 gBirchDexRatingText_Cancel::
 	.string "Hm? Oh, you haven't caught enough\n"
 	.string "POKéMON to make it worthwhile.$"
@@ -243,6 +238,16 @@ PokedexRating_Text_LoveSeeingYourPokedex::
 	.string "Let's see…$"
 
 @ HnS (mostly directly copied from HGSS)
+
+gElmDexRatingText_AreYouCurious::
+	.string "PROF. ELM: Ah, {PLAYER}{KUN}!\p"
+	.string "Are you curious about how your\n"
+	.string "POKéDEX is coming along?$"
+
+gElmDexRatingText_AreYouCuriousNational::
+	.string "PROF. ELM: Ah, {PLAYER}{KUN}!\p"
+	.string "Are you curious about how your\n"
+	.string "National POKéDEX is coming along?$"
 
 gJohtoDexRatingText_LessThan10::
 	.string "Look for POKéMON in grassy areas!$"

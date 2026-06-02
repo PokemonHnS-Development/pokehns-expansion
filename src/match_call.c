@@ -1131,7 +1131,8 @@ static const struct MatchCallText *const sMatchCallGeneralTopics[] =
 };
 
 extern const u8 gBirchDexRatingText_AreYouCurious[];
-extern const u8 gBirchDexRatingText_AreYouCuriousNational[];
+extern const u8 gElmDexRatingText_AreYouCurious[];
+extern const u8 gElmDexRatingText_AreYouCuriousNational[];
 extern const u8 gBirchDexRatingText_SoYouveSeenAndCaught[];
 extern const u8 gBirchDexRatingText_OnANationwideBasis[];
 
@@ -2279,8 +2280,13 @@ void BufferPokedexRatingForMatchCall(u8 *destStr)
         numCaught = GetRegionalPokedexCount(FLAG_GET_CAUGHT);
         ConvertIntToDecimalStringN(gStringVar1, numSeen, STR_CONV_MODE_LEFT_ALIGN, 3);
         ConvertIntToDecimalStringN(gStringVar2, numCaught, STR_CONV_MODE_LEFT_ALIGN, 3);
+#if IS_HNS
+        str = StringCopy(buffer, gElmDexRatingText_AreYouCurious);
+        *(str++) = CHAR_PROMPT_CLEAR;
+#else
         str = StringCopy(buffer, gBirchDexRatingText_AreYouCurious);
         *(str++) = CHAR_PROMPT_CLEAR;
+#endif
         str = StringCopy(str, gBirchDexRatingText_SoYouveSeenAndCaught);
         *(str++) = CHAR_PROMPT_CLEAR;
         StringCopy(str, GetPokedexRatingText(numCaught));
@@ -2291,7 +2297,7 @@ void BufferPokedexRatingForMatchCall(u8 *destStr)
             FlagSet(FLAG_SYS_ACK_COMPLETE_JOHTO_DEX);
     }
     else
-        str = StringExpandPlaceholders(destStr, gBirchDexRatingText_AreYouCuriousNational);
+        str = StringExpandPlaceholders(destStr, gElmDexRatingText_AreYouCuriousNational);
 #endif
 
     if (IsNationalPokedexEnabled())
@@ -2302,9 +2308,12 @@ void BufferPokedexRatingForMatchCall(u8 *destStr)
         ConvertIntToDecimalStringN(gStringVar1, numSeen, STR_CONV_MODE_LEFT_ALIGN, 4);
         ConvertIntToDecimalStringN(gStringVar2, numCaught, STR_CONV_MODE_LEFT_ALIGN, 4);
 #if IS_HNS
-        if (hasAckJohtoDex)
+        if (hasAckJohtoDex || HasAllMons())
         {
-            str2 = StringCopy(buffer, gBirchDexRatingText_SoYouveSeenAndCaught);        
+            if (!hasAckJohtoDex)
+                str2 = StringCopy(buffer, gBirchDexRatingText_OnANationwideBasis);
+            else
+                str2 = StringCopy(buffer, gBirchDexRatingText_SoYouveSeenAndCaught);
             *(str2++) = CHAR_PROMPT_CLEAR;
             StringCopy(str2, GetNationalPokedexRatingText(numCaught));
         }

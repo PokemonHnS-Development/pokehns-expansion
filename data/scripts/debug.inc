@@ -272,7 +272,7 @@ Debug_EventScript_Script_7::
 	end
 
 Debug_EventScript_Script_8::
-	special HasAllMons
+	call LilycoveCity_CoveLilyMotel_2F_EventScript_GameDesigner
 	release
 	end
 

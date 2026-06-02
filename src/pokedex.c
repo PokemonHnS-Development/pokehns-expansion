@@ -4602,11 +4602,11 @@ u16 GetKantoPokedexCount(u8 caseID)
         switch (caseID)
         {
         case FLAG_GET_SEEN:
-            if (GetSetPokedexFlag(i + 1, FLAG_GET_SEEN))
+            if (GetSetPokedexFlag(KantoToNationalOrder(i + 1), FLAG_GET_SEEN))
                 count++;
             break;
         case FLAG_GET_CAUGHT:
-            if (GetSetPokedexFlag(i + 1, FLAG_GET_CAUGHT))
+            if (GetSetPokedexFlag(KantoToNationalOrder(i + 1), FLAG_GET_CAUGHT))
                 count++;
             break;
         }
@@ -4624,11 +4624,11 @@ u16 GetJohtoPokedexCount(u8 caseID)
         switch (caseID)
         {
         case FLAG_GET_SEEN:
-            if (GetSetPokedexFlag(i + 1, FLAG_GET_SEEN))
+            if (GetSetPokedexFlag(JohtoToNationalOrder(i + 1), FLAG_GET_SEEN))
                 count++;
             break;
         case FLAG_GET_CAUGHT:
-            if (GetSetPokedexFlag(i + 1, FLAG_GET_CAUGHT))
+            if (GetSetPokedexFlag(JohtoToNationalOrder(i + 1), FLAG_GET_CAUGHT))
                 count++;
             break;
         }

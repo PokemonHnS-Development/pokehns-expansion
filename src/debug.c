@@ -2423,12 +2423,27 @@ static void DebugAction_FlagsVars_SetValue(u8 taskId)
 
 static void DebugAction_FlagsVars_PokedexFlags_All(u8 taskId)
 {
-    u16 i;
-    for (i = 0; i < NATIONAL_DEX_COUNT; i++)
+    u16 i, j;
+    // for (i = 0; i < NATIONAL_DEX_COUNT - 1; i++)
+    // {
+    //     GetSetPokedexFlag(i + 1, FLAG_SET_CAUGHT);
+    //     GetSetPokedexFlag(i + 1, FLAG_SET_SEEN);
+    // }
+
+    // for (i = 0; i < REGIONAL_DEX_COUNT - 1; ++i)
+    // {
+    //     j = RegionalToNationalOrder(i + 1);
+    //     GetSetPokedexFlag(j, FLAG_SET_CAUGHT);
+    //     GetSetPokedexFlag(j, FLAG_SET_SEEN);
+    // }
+    
+    for (i = 0; i < OBTAINABLE_DEX_COUNT - 1; ++i)
     {
-        GetSetPokedexFlag(i + 1, FLAG_SET_CAUGHT);
-        GetSetPokedexFlag(i + 1, FLAG_SET_SEEN);
+        j = ObtainableToNationalOrder(i + 1);
+        GetSetPokedexFlag(j, FLAG_SET_CAUGHT);
+        GetSetPokedexFlag(j, FLAG_SET_SEEN);
     }
+
     Debug_DestroyMenu_Full(taskId);
     ScriptContext_Enable();
 }
