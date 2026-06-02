@@ -174,7 +174,15 @@
     "Route26_hns",
     "Route26North_hns",
     "Route27_hns",
-    "Route28_hns"
+    "Route28_hns",
+    "Route49",
+    "NewSinjoh",
+    "Route50",
+    "SinjohRuins",
+    "RouteGates",
+    "LivedInHomes",
+    "SinjohRuinsMiniCave",
+    "NewSinjohPokemonCenter"
   ],
   "gMapGroup_IndoorNewBark_Hns": [
     "NewBarkTown_Lab_hns",
@@ -552,7 +560,11 @@
     "RuinsOfAlph_WordsRoom4_hns",
     "Route19_Cave_hns",
     "SnowsweptCavern_hns",
-    "SnowsweptCavern_Basement_hns"
+    "SnowsweptCavern_Basement_hns",
+    "SinjohRuinsMainBuilding",
+    "RegirockRoom",
+    "RegiceRoom",
+    "RegisteelRoom"
   ],
   "gMapGroup_IndoorDynamic_Hns": [
     "UnionRoom_hns"

@@ -12,9 +12,24 @@
   "allow_running": true,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": 0,
+  "connections": null,
   "object_events": [],
-  "warp_events": [],
+  "warp_events": [
+    {
+      "x": 50,
+      "y": 19,
+      "elevation": 0,
+      "dest_map": "MAP_SNOWSWEPT_CAVERN_HNS",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 15,
+      "y": 35,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE49",
+      "dest_warp_id": "0"
+    }
+  ],
   "coord_events": [],
   "bg_events": [],
   "game_version": "hns",

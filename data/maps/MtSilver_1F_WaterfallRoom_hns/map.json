@@ -12,7 +12,7 @@
   "allow_running": true,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": 0,
+  "connections": null,
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL_HNS",
@@ -254,7 +254,7 @@
       "x": 43,
       "y": 46,
       "elevation": 0,
-      "dest_map": "MAP_MT_SILVER_OUTSIDE_HNS",
+      "dest_map": "MAP_SNOWSWEPT_CAVERN_HNS",
       "dest_warp_id": "0"
     },
     {
@@ -298,6 +298,13 @@
       "elevation": 0,
       "dest_map": "MAP_MT_SILVER_MOUNTAIN_SIDE_HNS",
       "dest_warp_id": "2"
+    },
+    {
+      "x": 43,
+      "y": 7,
+      "elevation": 0,
+      "dest_map": "MAP_SNOWSWEPT_CAVERN_HNS",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [],

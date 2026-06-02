@@ -1678,6 +1678,28 @@
       "width": 1,
       "height": 1,
       "in_hns": true
+    },
+    {
+      "id": "MAPSEC_SINJOH",
+      "name": "Sinjoh"
+    },
+    {
+      "id": "MAPSEC_ROUTE_29"
+    },
+    {
+      "id": "MAPSEC_NEW_BARK_TOWN"
+    },
+    {
+      "id": "MAPSEC_ROUTE_27"
+    },
+    {
+      "id": "MAPSEC_MT_SILVER"
+    },
+    {
+      "id": "MAPSEC_ROUTE_28"
+    },
+    {
+      "id": "MAPSEC_RUINS_OF_ALPH"
     }
   ],
   "hns_map_sections": [

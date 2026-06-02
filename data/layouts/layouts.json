@@ -15711,6 +15711,126 @@
       "blockdata_filepath": "data/layouts/SnowsweptCavern_Basement_hns/map.bin",
       "game_version": "hns",
       "layout_version": "hns"
+    },
+    {
+      "id": "LAYOUT_ROUTE49",
+      "name": "Route49_Layout",
+      "width": 75,
+      "height": 58,
+      "primary_tileset": "gTileset_MtSilver_Exp_Hns",
+      "secondary_tileset": "gTileset_MtSilver_Ancient_Hns",
+      "border_filepath": "data/layouts/Route49/border.bin",
+      "blockdata_filepath": "data/layouts/Route49/map.bin"
+    },
+    {
+      "id": "LAYOUT_NEW_SINJOH",
+      "name": "NewSinjoh_Layout",
+      "width": 42,
+      "height": 42,
+      "primary_tileset": "gTileset_MtSilver_Exp_Hns",
+      "secondary_tileset": "gTileset_MtSilver_Ancient_Hns",
+      "border_filepath": "data/layouts/NewSinjoh/border.bin",
+      "blockdata_filepath": "data/layouts/NewSinjoh/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE50",
+      "name": "Route50_Layout",
+      "width": 81,
+      "height": 67,
+      "primary_tileset": "gTileset_MtSilver_Exp_Hns",
+      "secondary_tileset": "gTileset_MtSilver_Ancient_Hns",
+      "border_filepath": "data/layouts/Route50/border.bin",
+      "blockdata_filepath": "data/layouts/Route50/map.bin"
+    },
+    {
+      "id": "LAYOUT_SINJOH_RUINS",
+      "name": "SinjohRuins_Layout",
+      "width": 40,
+      "height": 49,
+      "primary_tileset": "gTileset_MtSilver_Exp_Hns",
+      "secondary_tileset": "gTileset_MtSilver_Ancient_Hns",
+      "border_filepath": "data/layouts/SinjohRuins/border.bin",
+      "blockdata_filepath": "data/layouts/SinjohRuins/map.bin"
+    },
+    {
+      "id": "LAYOUT_REGICE_ROOM",
+      "name": "RegiceRoom_Layout",
+      "width": 50,
+      "height": 40,
+      "primary_tileset": "gTileset_MtSilver_Exp_Hns",
+      "secondary_tileset": "gTileset_RuinsOfAlphWriting_Hns",
+      "border_filepath": "data/layouts/RegiceRoom/border.bin",
+      "blockdata_filepath": "data/layouts/RegiceRoom/map.bin"
+    },
+    {
+      "id": "LAYOUT_REGISTEEL_ROOM",
+      "name": "RegisteelRoom_Layout",
+      "width": 60,
+      "height": 60,
+      "primary_tileset": "gTileset_Kanto_Building_Hns",
+      "secondary_tileset": "gTileset_Lab_Frlg",
+      "border_filepath": "data/layouts/RegisteelRoom/border.bin",
+      "blockdata_filepath": "data/layouts/RegisteelRoom/map.bin"
+    },
+    {
+      "id": "LAYOUT_REGIROCK_ROOM",
+      "name": "RegirockRoom_Layout",
+      "width": 25,
+      "height": 31,
+      "primary_tileset": "gTileset_Johto_NorthWest_Hns",
+      "secondary_tileset": "gTileset_RuinsOfAlphWriting_Hns",
+      "border_filepath": "data/layouts/RegirockRoom/border.bin",
+      "blockdata_filepath": "data/layouts/RegirockRoom/map.bin"
+    },
+    {
+      "id": "LAYOUT_SINJOH_RUINS_MAIN_BUILDING",
+      "name": "SinjohRuinsMainBuilding_Layout",
+      "width": 60,
+      "height": 40,
+      "primary_tileset": "gTileset_Kanto_Building_Hns",
+      "secondary_tileset": "gTileset_RuinsOfAlphWriting_Hns",
+      "border_filepath": "data/layouts/SinjohRuinsMainBuilding/border.bin",
+      "blockdata_filepath": "data/layouts/SinjohRuinsMainBuilding/map.bin"
+    },
+    {
+      "id": "LAYOUT_LIVED_IN_HOMES",
+      "name": "LivedInHomes_Layout",
+      "width": 40,
+      "height": 40,
+      "primary_tileset": "gTileset_Johto_Building_Hns",
+      "secondary_tileset": "gTileset_PlayersHouse_Hns",
+      "border_filepath": "data/layouts/LivedInHomes/border.bin",
+      "blockdata_filepath": "data/layouts/LivedInHomes/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE_GATES",
+      "name": "RouteGates_Layout",
+      "width": 40,
+      "height": 60,
+      "primary_tileset": "gTileset_Johto_Building_Hns",
+      "secondary_tileset": "gTileset_Gate_Standard_Hns",
+      "border_filepath": "data/layouts/RouteGates/border.bin",
+      "blockdata_filepath": "data/layouts/RouteGates/map.bin"
+    },
+    {
+      "id": "LAYOUT_SINJOH_RUINS_MINI_CAVE",
+      "name": "SinjohRuinsMiniCave_Layout",
+      "width": 15,
+      "height": 15,
+      "primary_tileset": "gTileset_MtSilver_Exp_Hns",
+      "secondary_tileset": "gTileset_Cave_Ice_Hns",
+      "border_filepath": "data/layouts/SinjohRuinsMiniCave/border.bin",
+      "blockdata_filepath": "data/layouts/SinjohRuinsMiniCave/map.bin"
+    },
+    {
+      "id": "LAYOUT_NEW_SINJOH_POKEMON_CENTER",
+      "name": "NewSinjohPokemonCenter_Layout",
+      "width": 15,
+      "height": 16,
+      "primary_tileset": "gTileset_Johto_Building_Hns",
+      "secondary_tileset": "gTileset_PokemonCenter_White_Hns",
+      "border_filepath": "data/layouts/NewSinjohPokemonCenter/border.bin",
+      "blockdata_filepath": "data/layouts/NewSinjohPokemonCenter/map.bin"
     }
   ]
 }

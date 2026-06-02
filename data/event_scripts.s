@@ -2331,3 +2331,27 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 
 .endif
 
+
+	.include "data/maps/Route49/scripts.inc"
+
+	.include "data/maps/NewSinjoh/scripts.inc"
+
+	.include "data/maps/Route50/scripts.inc"
+
+	.include "data/maps/SinjohRuins/scripts.inc"
+
+	.include "data/maps/SinjohRuinsMainBuilding/scripts.inc"
+
+	.include "data/maps/RegiceRoom/scripts.inc"
+
+	.include "data/maps/RegirockRoom/scripts.inc"
+
+	.include "data/maps/RegisteelRoom/scripts.inc"
+
+	.include "data/maps/RouteGates/scripts.inc"
+
+	.include "data/maps/LivedInHomes/scripts.inc"
+
+	.include "data/maps/SinjohRuinsMiniCave/scripts.inc"
+
+	.include "data/maps/NewSinjohPokemonCenter/scripts.inc"

@@ -1,7 +1,6 @@
 {
   "id": "MAP_DESERT_RUINS",
   "name": "DesertRuins",
-  "game_version": "emerald",
   "layout": "LAYOUT_DESERT_RUINS",
   "music": "MUS_SEALED_CHAMBER",
   "region_map_section": "MAPSEC_DESERT_RUINS",
@@ -78,5 +77,6 @@
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "DesertRuins_EventScript_CaveEntranceSide"
     }
-  ]
+  ],
+  "game_version": "emerald"
 }
