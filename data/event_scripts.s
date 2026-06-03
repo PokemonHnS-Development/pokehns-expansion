@@ -2361,3 +2361,5 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/UlaUla_House_hns/scripts.inc"
 
 	.include "data/maps/Poni_Cave_hns/scripts.inc"
+
+	.include "data/maps/Akala_Forest_hns/scripts.inc"

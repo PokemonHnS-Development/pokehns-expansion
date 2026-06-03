@@ -15876,7 +15876,21 @@
       "primary_tileset": "gTileset_Johto_General_Hns",
       "secondary_tileset": "gTileset_Cave_Default_Hns",
       "border_filepath": "data/layouts/Poni_Cave_hns/border.bin",
-      "blockdata_filepath": "data/layouts/Poni_Cave_hns/map.bin"
+      "blockdata_filepath": "data/layouts/Poni_Cave_hns/map.bin",
+      "game_version": "hns",
+      "layout_version": "hns"
+    },
+    {
+      "id": "LAYOUT_AKALA_FOREST_HNS",
+      "name": "Akala_Forest_hns_Layout",
+      "width": 31,
+      "height": 24,
+      "primary_tileset": "gTileset_AlolaIsland",
+      "secondary_tileset": "gTileset_AlolaIslandSecondary",
+      "border_filepath": "data/layouts/Akala_Forest_hns/border.bin",
+      "blockdata_filepath": "data/layouts/Akala_Forest_hns/map.bin",
+      "game_version": "hns",
+      "layout_version": "hns"
     }
   ]
 }

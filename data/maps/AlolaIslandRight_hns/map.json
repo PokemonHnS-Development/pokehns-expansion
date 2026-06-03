@@ -64,6 +64,41 @@
       "elevation": 0,
       "dest_map": "MAP_AKALA_HOUSE_HNS",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 18,
+      "y": 35,
+      "elevation": 0,
+      "dest_map": "MAP_AKALA_FOREST_HNS",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 19,
+      "y": 35,
+      "elevation": 0,
+      "dest_map": "MAP_AKALA_FOREST_HNS",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 24,
+      "y": 28,
+      "elevation": 0,
+      "dest_map": "MAP_AKALA_FOREST_HNS",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 24,
+      "y": 27,
+      "elevation": 0,
+      "dest_map": "MAP_AKALA_FOREST_HNS",
+      "dest_warp_id": "3"
+    },
+    {
+      "x": 34,
+      "y": 10,
+      "elevation": 0,
+      "dest_map": "MAP_ALOLA_ISLAND_RIGHT_HNS",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [],
