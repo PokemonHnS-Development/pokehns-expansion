@@ -527,9 +527,17 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
         .abilities = { ABILITY_BLAZE, ABILITY_NONE, ABILITY_FRISK },
         .bodyColor = BODY_COLOR_YELLOW,
+#if P_SEPARATE_REGIONAL_FORMS
+        .speciesName = _("Typhlosion-H"),
+#else
         .speciesName = _("Typhlosion"),
+#endif
         .cryId = CRY_TYPHLOSION,
+#if P_SEPARATE_REGIONAL_FORMS
+        .natDexNum = NATIONAL_DEX_TYPHLOSION_HISUI,
+#else
         .natDexNum = NATIONAL_DEX_TYPHLOSION,
+#endif
         .categoryName = _("Ghost Flame"),
         .height = 16,
         .weight = 698,
@@ -570,7 +578,11 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .isHisuianForm = TRUE,
         .levelUpLearnset = sTyphlosionHisuiLevelUpLearnset,
         .teachableLearnset = sTyphlosionHisuiTeachableLearnset,
+#if P_SEPARATE_REGIONAL_FORMS
+        .formSpeciesIdTable = sTyphlosionHisuiFormSpeciesIdTable,
+#else
         .formSpeciesIdTable = sTyphlosionFormSpeciesIdTable,
+#endif
     },
 #endif //P_HISUIAN_FORMS
 #endif //P_FAMILY_CYNDAQUIL
@@ -3614,9 +3626,17 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_WATER_1, EGG_GROUP_FIELD),
         .abilities = { ABILITY_POISON_POINT, ABILITY_WATER_ABSORB, ABILITY_UNAWARE },
         .bodyColor = BODY_COLOR_BROWN,
+#if P_SEPARATE_REGIONAL_FORMS
+        .speciesName = _("Wooper-P"),
+#else
         .speciesName = _("Wooper"),
+#endif
         .cryId = CRY_WOOPER,
+#if P_SEPARATE_REGIONAL_FORMS
+        .natDexNum = NATIONAL_DEX_WOOPER_PALDEA,
+#else
         .natDexNum = NATIONAL_DEX_WOOPER,
+#endif
         .categoryName = _("Poison Fish"),
         .height = 4,
         .weight = 110,
@@ -3658,7 +3678,11 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .levelUpLearnset = sWooperPaldeaLevelUpLearnset,
         .teachableLearnset = sWooperPaldeaTeachableLearnset,
         .eggMoveLearnset = sWooperPaldeaEggMoveLearnset,
+#if P_SEPARATE_REGIONAL_FORMS
+        .formSpeciesIdTable = sWooperPaldeaFormSpeciesIdTable,
+#else
         .formSpeciesIdTable = sWooperFormSpeciesIdTable,
+#endif
         .evolutions = EVOLUTION({EVO_LEVEL, 20, SPECIES_CLODSIRE}),
     },
 
@@ -5225,9 +5249,17 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .abilities = { ABILITY_POISON_POINT, ABILITY_SWIFT_SWIM, ABILITY_INTIMIDATE },
         .bodyColor = BODY_COLOR_BLACK,
         .noFlip = TRUE,
+#if P_SEPARATE_REGIONAL_FORMS
+        .speciesName = _("Qwilfish-H"),
+#else
         .speciesName = _("Qwilfish"),
+#endif
         .cryId = CRY_QWILFISH,
+#if P_SEPARATE_REGIONAL_FORMS
+        .natDexNum = NATIONAL_DEX_QWILFISH_HISUI,
+#else
         .natDexNum = NATIONAL_DEX_QWILFISH,
+#endif
         .categoryName = _("Balloon"),
         .height = 5,
         .weight = 39,
@@ -5270,7 +5302,11 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .levelUpLearnset = sQwilfishHisuiLevelUpLearnset,
         .teachableLearnset = sQwilfishHisuiTeachableLearnset,
         .eggMoveLearnset = sQwilfishHisuiEggMoveLearnset,
+#if P_SEPARATE_REGIONAL_FORMS
+        .formSpeciesIdTable = sQwilfishHisuiFormSpeciesIdTable,
+#else
         .formSpeciesIdTable = sQwilfishFormSpeciesIdTable,
+#endif
         .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_OVERQWIL, CONDITIONS({IF_KNOWS_MOVE, MOVE_BARB_BARRAGE}, {IF_REGION, REGION_HISUI})}),
     },
 
@@ -5777,9 +5813,17 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .abilities = { ABILITY_INNER_FOCUS, ABILITY_KEEN_EYE, ABILITY_PICKPOCKET },
         .bodyColor = BODY_COLOR_GRAY,
         .noFlip = TRUE,
+#if P_SEPARATE_REGIONAL_FORMS
+        .speciesName = _("Sneasel-H"),
+#else
         .speciesName = _("Sneasel"),
+#endif
         .cryId = CRY_SNEASEL,
+#if P_SEPARATE_REGIONAL_FORMS
+        .natDexNum = NATIONAL_DEX_SNEASEL_HISUI,
+#else
         .natDexNum = NATIONAL_DEX_SNEASEL,
+#endif
         .categoryName = _("Sharp Claw"),
         .height = 9,
         .weight = 270,
@@ -5834,7 +5878,11 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .levelUpLearnset = sSneaselHisuiLevelUpLearnset,
         .teachableLearnset = sSneaselHisuiTeachableLearnset,
         .eggMoveLearnset = sSneaselHisuiEggMoveLearnset,
+#if P_SEPARATE_REGIONAL_FORMS
+        .formSpeciesIdTable = sSneaselHisuiFormSpeciesIdTable,
+#else
         .formSpeciesIdTable = sSneaselFormSpeciesIdTable,
+#endif
         .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_SNEASLER, CONDITIONS({IF_NOT_TIME, TIME_NIGHT}, {IF_HOLD_ITEM, ITEM_RAZOR_CLAW})},
                                 {EVO_ITEM, ITEM_RAZOR_CLAW, SPECIES_SNEASLER, CONDITIONS({IF_NOT_TIME, TIME_NIGHT})}),
     },
@@ -6691,9 +6739,17 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_WATER_1, EGG_GROUP_WATER_3),
         .abilities = { ABILITY_WEAK_ARMOR, ABILITY_NONE, ABILITY_CURSED_BODY },
         .bodyColor = BODY_COLOR_WHITE,
+#if P_SEPARATE_REGIONAL_FORMS
+        .speciesName = _("Corsola-G"),
+#else
         .speciesName = _("Corsola"),
+#endif
         .cryId = CRY_CORSOLA,
+#if P_SEPARATE_REGIONAL_FORMS
+        .natDexNum = NATIONAL_DEX_CORSOLA_GALAR,
+#else
         .natDexNum = NATIONAL_DEX_CORSOLA,
+#endif
         .categoryName = _("Coral"),
         .height = 6,
         .weight = 5,
@@ -6735,7 +6791,11 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .levelUpLearnset = sCorsolaGalarLevelUpLearnset,
         .teachableLearnset = sCorsolaGalarTeachableLearnset,
         .eggMoveLearnset = sCorsolaGalarEggMoveLearnset,
+#if P_SEPARATE_REGIONAL_FORMS
+        .formSpeciesIdTable = sCorsolaGalarFormSpeciesIdTable,
+#else
         .formSpeciesIdTable = sCorsolaFormSpeciesIdTable,
+#endif
         .evolutions = EVOLUTION({EVO_LEVEL, 38, SPECIES_CURSOLA}),
     },
 

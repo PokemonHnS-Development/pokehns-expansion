@@ -1131,6 +1131,8 @@ static const struct MatchCallText *const sMatchCallGeneralTopics[] =
 };
 
 extern const u8 gBirchDexRatingText_AreYouCurious[];
+extern const u8 gElmDexRatingText_AreYouCurious[];
+extern const u8 gElmDexRatingText_AreYouCuriousNational[];
 extern const u8 gBirchDexRatingText_SoYouveSeenAndCaught[];
 extern const u8 gBirchDexRatingText_OnANationwideBasis[];
 
@@ -2259,7 +2261,7 @@ static u16 GetFrontierStreakInfo(u16 facilityId, u32 *topicTextId)
 void BufferPokedexRatingForMatchCall(u8 *destStr)
 {
     int numSeen, numCaught;
-    u8 *str;
+    u8 *str, *str2;
 
     u8 *buffer = Alloc(sizeof(gStringVar4));
     if (!buffer)
@@ -2268,16 +2270,35 @@ void BufferPokedexRatingForMatchCall(u8 *destStr)
         return;
     }
 
-    numSeen = GetRegionalPokedexCount(FLAG_GET_SEEN);
-    numCaught = GetRegionalPokedexCount(FLAG_GET_CAUGHT);
-    ConvertIntToDecimalStringN(gStringVar1, numSeen, STR_CONV_MODE_LEFT_ALIGN, 3);
-    ConvertIntToDecimalStringN(gStringVar2, numCaught, STR_CONV_MODE_LEFT_ALIGN, 3);
-    str = StringCopy(buffer, gBirchDexRatingText_AreYouCurious);
-    *(str++) = CHAR_PROMPT_CLEAR;
-    str = StringCopy(str, gBirchDexRatingText_SoYouveSeenAndCaught);
-    *(str++) = CHAR_PROMPT_CLEAR;
-    StringCopy(str, GetPokedexRatingText(numCaught));
-    str = StringExpandPlaceholders(destStr, buffer);
+#if IS_HNS
+    bool8 hasAckJohtoDex = FlagGet(FLAG_SYS_ACK_COMPLETE_JOHTO_DEX);
+    if (!hasAckJohtoDex || !IsNationalPokedexEnabled())
+    {
+#endif
+
+        numSeen = GetRegionalPokedexCount(FLAG_GET_SEEN);
+        numCaught = GetRegionalPokedexCount(FLAG_GET_CAUGHT);
+        ConvertIntToDecimalStringN(gStringVar1, numSeen, STR_CONV_MODE_LEFT_ALIGN, 3);
+        ConvertIntToDecimalStringN(gStringVar2, numCaught, STR_CONV_MODE_LEFT_ALIGN, 3);
+#if IS_HNS
+        str = StringCopy(buffer, gElmDexRatingText_AreYouCurious);
+        *(str++) = CHAR_PROMPT_CLEAR;
+#else
+        str = StringCopy(buffer, gBirchDexRatingText_AreYouCurious);
+        *(str++) = CHAR_PROMPT_CLEAR;
+#endif
+        str = StringCopy(str, gBirchDexRatingText_SoYouveSeenAndCaught);
+        *(str++) = CHAR_PROMPT_CLEAR;
+        StringCopy(str, GetPokedexRatingText(numCaught));
+        str = StringExpandPlaceholders(destStr, buffer);
+
+#if IS_HNS
+        if (gSpecialVar_Result == TRUE)
+            FlagSet(FLAG_SYS_ACK_COMPLETE_JOHTO_DEX);
+    }
+    else
+        str = StringExpandPlaceholders(destStr, gElmDexRatingText_AreYouCuriousNational);
+#endif
 
     if (IsNationalPokedexEnabled())
     {
@@ -2286,7 +2307,22 @@ void BufferPokedexRatingForMatchCall(u8 *destStr)
         numCaught = GetNationalPokedexCount(FLAG_GET_CAUGHT);
         ConvertIntToDecimalStringN(gStringVar1, numSeen, STR_CONV_MODE_LEFT_ALIGN, 4);
         ConvertIntToDecimalStringN(gStringVar2, numCaught, STR_CONV_MODE_LEFT_ALIGN, 4);
-        StringExpandPlaceholders(str, gBirchDexRatingText_OnANationwideBasis);
+#if IS_HNS
+        if (hasAckJohtoDex || HasAllMons())
+        {
+            if (!hasAckJohtoDex)
+                str2 = StringCopy(buffer, gBirchDexRatingText_OnANationwideBasis);
+            else
+                str2 = StringCopy(buffer, gBirchDexRatingText_SoYouveSeenAndCaught);
+            *(str2++) = CHAR_PROMPT_CLEAR;
+            StringCopy(str2, GetNationalPokedexRatingText(numCaught));
+        }
+        else
+            str2 = StringCopy(buffer, gBirchDexRatingText_OnANationwideBasis);
+        StringExpandPlaceholders(str, buffer);
+#else
+    StringExpandPlaceholders(str, gBirchDexRatingText_OnANationwideBasis);
+#endif
     }
 
     Free(buffer);

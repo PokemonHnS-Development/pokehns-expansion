@@ -661,4 +661,10 @@ gSpecials::
 	def_special IsPokecenterChallengeActivated
 	def_special IsOneTypeChallengeActive
 	def_special CheckRadioStation
+	def_special GetAlolaCatchProgress
+	def_special GetGalarCatchProgress
+	def_special GetHisuiCatchProgress
+	def_special GetPaldeaCatchProgress
+	def_special HasAllJohotoMons
+	def_special HasAllRegionalMons
 
