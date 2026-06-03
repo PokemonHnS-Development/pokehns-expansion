@@ -141,6 +141,11 @@ static inline bool32 IsChaosMode(void)
     return gSaveBlock3Ptr->challengeSettings.tx_Random_Chaos;
 }
 
+bool8 IsRandomMovesActivated(void)
+{
+    return gSaveBlock3Ptr->challengeSettings.tx_Random_Moves;
+}
+
 u32 GetRandomizerSeed(void)
 {
     #if RANDOMIZER_SEED_IS_TRAINER_ID

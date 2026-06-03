@@ -4,7 +4,7 @@ BattleFrontier_PokemonCenter_1F_hns_MapScripts::
 	.byte 0
 
 BattleFrontier_PokemonCenter_1F_OnTransition_hns:
-	setrespawn HEAL_LOCATION_BATTLE_FRONTIER_OUTSIDE_EAST
+	setrespawn HEAL_LOCATION_BATTLE_FRONTIER_OUTSIDE_EAST_HNS
 	end
 
 BattleFrontier_PokemonCenter_1F_EventScript_Nurse_hns::

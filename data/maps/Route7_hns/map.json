@@ -15,22 +15,22 @@
   "connections": [
     {
       "map": "MAP_CELADON_CITY_HNS",
-      "offset": 10,
+      "offset": -8,
       "direction": "left"
     },
     {
       "map": "MAP_SAFFRON_CITY_HNS",
-      "offset": 3,
+      "offset": -15,
       "direction": "right"
     }
   ],
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_JIGGLYPUFF",
-      "x": 17,
-      "y": 19,
+      "x": 2,
+      "y": 23,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_RIGHT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -41,7 +41,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
       "x": 16,
-      "y": 35,
+      "y": 17,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_BERRY_TREE_GROWTH",
       "movement_range_x": 0,
@@ -53,10 +53,10 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_RALTS",
-      "x": 11,
-      "y": 14,
+      "x": 5,
+      "y": 23,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_LEFT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -68,14 +68,14 @@
   "warp_events": [
     {
       "x": 15,
-      "y": 30,
+      "y": 12,
       "elevation": 0,
       "dest_map": "MAP_GATE_SAFFRON_CITY_ROUTE7_HNS",
       "dest_warp_id": "1"
     },
     {
       "x": 7,
-      "y": 33,
+      "y": 16,
       "elevation": 0,
       "dest_map": "MAP_ROUTE7_TUNNEL_ENTRANCE_HNS",
       "dest_warp_id": "0"
@@ -85,16 +85,16 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 5,
-      "y": 34,
+      "x": 7,
+      "y": 16,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Route7_EventScript_Sign"
     },
     {
       "type": "sign",
-      "x": 7,
-      "y": 34,
+      "x": 5,
+      "y": 16,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Route7_EventScript_Door"

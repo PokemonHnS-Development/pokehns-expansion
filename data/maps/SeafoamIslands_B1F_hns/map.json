@@ -17,8 +17,8 @@
     {
       "local_id": "LOCALID_SEAFOAM_ARTICUNO",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_ARTICUNO",
-      "x": 33,
-      "y": 11,
+      "x": 31,
+      "y": 31,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_DOWN",
       "movement_range_x": 0,
@@ -30,8 +30,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_PILOSWINE",
-      "x": 44,
-      "y": 26,
+      "x": 49,
+      "y": 38,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 6,
@@ -43,8 +43,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_PILOSWINE",
-      "x": 34,
-      "y": 27,
+      "x": 18,
+      "y": 8,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 6,
@@ -56,8 +56,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_PILOSWINE",
-      "x": 24,
-      "y": 26,
+      "x": 18,
+      "y": 10,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 6,
@@ -81,9 +81,9 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SNORUNT",
-      "x": 18,
-      "y": 8,
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SPHEAL",
+      "x": 15,
+      "y": 22,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 0,
@@ -95,8 +95,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL_HNS",
-      "x": 24,
-      "y": 44,
+      "x": 29,
+      "y": 17,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -109,18 +109,53 @@
   ],
   "warp_events": [
     {
-      "x": 27,
-      "y": 10,
+      "x": 29,
+      "y": 15,
       "elevation": 0,
       "dest_map": "MAP_SEAFOAM_ISLANDS_1F_HNS",
       "dest_warp_id": "2"
     },
     {
-      "x": 34,
-      "y": 47,
+      "x": 20,
+      "y": 27,
       "elevation": 0,
       "dest_map": "MAP_SEAFOAM_ISLANDS_1F_HNS",
       "dest_warp_id": "4"
+    },
+    {
+      "x": 38,
+      "y": 23,
+      "elevation": 0,
+      "dest_map": "MAP_SEAFOAM_ISLANDS_1F_HNS",
+      "dest_warp_id": "5"
+    },
+    {
+      "x": 28,
+      "y": 31,
+      "elevation": 0,
+      "dest_map": "MAP_SEAFOAM_ISLANDS_1F_HNS",
+      "dest_warp_id": "6"
+    },
+    {
+      "x": 29,
+      "y": 39,
+      "elevation": 0,
+      "dest_map": "MAP_SEAFOAM_ISLANDS_1F_HNS",
+      "dest_warp_id": "7"
+    },
+    {
+      "x": 24,
+      "y": 39,
+      "elevation": 0,
+      "dest_map": "MAP_SEAFOAM_ISLANDS_1F_HNS",
+      "dest_warp_id": "8"
+    },
+    {
+      "x": 37,
+      "y": 46,
+      "elevation": 0,
+      "dest_map": "MAP_SEAFOAM_ISLANDS_1F_HNS",
+      "dest_warp_id": "9"
     }
   ],
   "coord_events": [],

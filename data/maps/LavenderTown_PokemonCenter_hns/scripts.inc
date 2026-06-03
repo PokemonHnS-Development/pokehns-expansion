@@ -3,7 +3,7 @@ LavenderTown_PokemonCenter_hns_MapScripts::
 	.byte 0
 
 LavenderTown_PokemonCenter_OnTransition::
-	setrespawn HEAL_LOCATION_LAVENDER_TOWN
+	setrespawn HEAL_LOCATION_LAVENDER_TOWN_HNS
 	end
 
 LavenderTown_PokemonCenter_EventScript_Gent::

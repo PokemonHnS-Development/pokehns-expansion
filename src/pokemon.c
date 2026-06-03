@@ -2132,6 +2132,9 @@ void CalculateMonStats(struct Pokemon *mon)
 
     u8 nature = GetMonData(mon, MON_DATA_HIDDEN_NATURE);
 
+    if (FlagGet(FLAG_LIMIT_TO_50) == TRUE && level > 50)
+        level = 50;
+
     SetMonData(mon, MON_DATA_LEVEL, &level);
 
     u32 equalizedBst = GetBaseStatEqualizerValue();

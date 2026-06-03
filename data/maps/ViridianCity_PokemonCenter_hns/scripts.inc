@@ -3,7 +3,7 @@ ViridianCity_PokemonCenter_hns_MapScripts::
 	.byte 0
 
 ViridianCity_PokemonCenter_OnTransition::
-	setrespawn HEAL_LOCATION_VIRIDIAN_CITY
+	setrespawn HEAL_LOCATION_VIRIDIAN_CITY_HNS
 	end
 
 ViridianCity_PokemonCenter_EventScript_CooltrainerM::

@@ -2011,10 +2011,24 @@ static void GiveBattlePoints(void)
         challengeNum--;
     if (challengeNum >= ARRAY_COUNT(sBattlePointAwards[0][0]))
         challengeNum = ARRAY_COUNT(sBattlePointAwards[0][0]) - 1;
+    if (facility >= NUM_FRONTIER_FACILITIES)
+        facility = NUM_FRONTIER_FACILITIES - 1;
+    if (battleMode >= FRONTIER_MODE_COUNT)
+        battleMode = FRONTIER_MODE_COUNT - 1;
 
     points = sBattlePointAwards[facility][battleMode][challengeNum];
     if (TRAINER_BATTLE_PARAM.opponentA == TRAINER_FRONTIER_BRAIN)
         points += 10;
+    if ((challengeNum > 10) && (challengeNum <= 20))
+        points *= 1.2;
+    else if ((challengeNum > 20) && (challengeNum <= 30))
+        points *= 1.5;
+    else if ((challengeNum > 30) && (challengeNum <= 40))
+        points *= 1.8;
+    else if ((challengeNum > 40) && (challengeNum <= 50))
+        points *= 2.0;
+    else if (challengeNum > 50)
+        points *= 3.0;
     gSaveBlock2Ptr->frontier.battlePoints += points;
     ConvertIntToDecimalStringN(gStringVar1, points, STR_CONV_MODE_LEFT_ALIGN, 2);
     if (gSaveBlock2Ptr->frontier.battlePoints > MAX_BATTLE_FRONTIER_POINTS)

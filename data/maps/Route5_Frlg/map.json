@@ -1,10 +1,8 @@
 {
   "id": "MAP_ROUTE5",
   "name": "Route5_Frlg",
-  "game_version": "frlg",
   "layout": "LAYOUT_ROUTE5",
   "music": "MUS_RG_ROUTE3",
-  "region": "REGION_KANTO",
   "region_map_section": "MAPSEC_ROUTE_5",
   "requires_flash": false,
   "weather": "WEATHER_SUNNY",
@@ -13,7 +11,6 @@
   "allow_escaping": false,
   "allow_running": true,
   "show_map_name": true,
-  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
@@ -68,5 +65,8 @@
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Route5_EventScript_UndergroundPathSign"
     }
-  ]
+  ],
+  "floor_number": 0,
+  "game_version": "frlg",
+  "region": "REGION_KANTO"
 }

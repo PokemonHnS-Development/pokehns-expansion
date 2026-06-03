@@ -4,7 +4,7 @@ FuchsiaCity_PokemonCenter_hns_MapScripts::
 
 FuchsiaCity_PokemonCenter_OnTransition::
 	setflag FLAG_TEMP_1
-	setrespawn HEAL_LOCATION_FUCHSIA_CITY
+	setrespawn HEAL_LOCATION_FUCHSIA_CITY_HNS
 	end
 
 FuchsiaCity_PokemonCenter_EventScript_CooltrainerM::

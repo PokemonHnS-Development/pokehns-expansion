@@ -3,6 +3,7 @@
 #include "battle_pyramid_bag.h"
 #include "event_data.h"
 #include "frontier_util.h"
+#include "pokemon.h"
 #include "battle.h"
 #include "battle_setup.h"
 #include "battle_tower.h"
@@ -1138,6 +1139,12 @@ static void GetCurrentBattlePyramidLocation(void)
 
 static void UpdatePyramidLightRadius(void)
 {
+    s32 j;
+
+    FlagSet(FLAG_LIMIT_TO_50);
+    for (j = 0; j < PARTY_SIZE; j++)
+        CalculateMonStats(&gPlayerParty[j]);
+
     switch (gSpecialVar_0x8006)
     {
     case PYRAMID_LIGHT_SET_RADIUS:
@@ -1185,6 +1192,10 @@ static void ClearPyramidPartyHeldItems(void)
 {
     int i, j;
     enum Item item = ITEM_NONE;
+
+    FlagClear(FLAG_LIMIT_TO_50);
+    for (i = 0; i < PARTY_SIZE; i++)
+        CalculateMonStats(&gPlayerParty[i]);
 
     for (i = 0; i < PARTY_SIZE; i++)
     {

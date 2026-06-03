@@ -702,6 +702,10 @@ const u16 gMetatileAttributes_WhirlIslands_Hns[] = INCBIN_U16("data/tilesets/sec
 const u16 gMetatiles_ssaqua_Hns[] = INCBIN_U16("data/tilesets/secondary/ssaqua_hns/metatiles.bin");
 const u16 gMetatileAttributes_ssaqua_Hns[] = INCBIN_U16("data/tilesets/secondary/ssaqua_hns/metatile_attributes.bin");
 
+const u16 gMetatiles_Route40_Hns[] = INCBIN_U16("data/tilesets/secondary/route_40_hns/metatiles.bin");
+const u16 gMetatileAttributes_Route40_Hns[] = INCBIN_U16("data/tilesets/secondary/route_40_hns/metatile_attributes.bin");
+
+
 const u16 gMetatiles_MtSilver_Exp_Hns[] = INCBIN_U16("data/tilesets/primary/mt_silver_exp_hns/metatiles.bin");
 const u16 gMetatileAttributes_MtSilver_Exp_Hns[] = INCBIN_U16("data/tilesets/primary/mt_silver_exp_hns/metatile_attributes.bin");
 
@@ -710,5 +714,6 @@ const u16 gMetatileAttributes_MtSilver_Ancient_Hns[] = INCBIN_U16("data/tilesets
 
 
 #endif // IS_FRLG || IS_HNS
+
 
 

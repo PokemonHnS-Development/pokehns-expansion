@@ -72,6 +72,7 @@ struct RandomizerGroupSet {
 };
 
 
+bool8 IsRandomMovesActivated(void);
 u32 GetRandomizerSeed(void);
 bool32 RandomizerFeatureEnabled(enum RandomizerFeature feature);
 u16 GetRandomizerOption(enum RandomizerOption option);

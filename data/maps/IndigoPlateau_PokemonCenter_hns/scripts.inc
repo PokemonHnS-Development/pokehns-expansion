@@ -18,7 +18,7 @@ IndigoPlateau_PokemonCenter_Enter::
 	end
 
 IndigoPlateau_Pokecenter_OnTransition::
-	setrespawn HEAL_LOCATION_INDIGO_PLATEAU
+	setrespawn HEAL_LOCATION_INDIGO_PLATEAU_HNS
 	end
 
 

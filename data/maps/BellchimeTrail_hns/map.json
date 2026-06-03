@@ -684,6 +684,7 @@
       "flag": "0"
     },
     {
+      "local_id": "LOCALID_BELLCHIME_MORTY",
       "graphics_id": "OBJ_EVENT_GFX_SMALL_LIGHT_HNS",
       "x": 16,
       "y": 39,
@@ -694,8 +695,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0",
-      "local_id": "LOCALID_BELLCHIME_MORTY"
+      "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SMALL_LIGHT_HNS",

@@ -3,7 +3,7 @@ CeruleanCity_PokemonCenter_hns_MapScripts::
 	.byte 0
 
 CeruleanCity_PokemonCenter_OnTransition::
-	setrespawn HEAL_LOCATION_CERULEAN_CITY
+	setrespawn HEAL_LOCATION_CERULEAN_CITY_HNS
 	end
 
 CeruleanCity_PokemonCenter_EventScript_Nerd::

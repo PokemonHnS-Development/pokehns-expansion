@@ -1149,7 +1149,7 @@ void LoadSpecialPokePicIsEgg(void *dest, s32 species, u32 personality, bool8 isF
     }
     else if (isFrontPic)
     {
-    #if P_GENDER_DIFFERENCES
+    #if P_GENDER_DIFFERENCES && !P_GBA_STYLE_SPECIES_GFX
         if (gSpeciesInfo[species].frontPicFemale != NULL && IsPersonalityFemale(species, personality))
             DecompressDataWithHeaderWram(gSpeciesInfo[species].frontPicFemale, dest);
         else
@@ -1161,7 +1161,7 @@ void LoadSpecialPokePicIsEgg(void *dest, s32 species, u32 personality, bool8 isF
     }
     else
     {
-    #if P_GENDER_DIFFERENCES
+    #if P_GENDER_DIFFERENCES && !P_GBA_STYLE_SPECIES_GFX
         if (gSpeciesInfo[species].backPicFemale != NULL && IsPersonalityFemale(species, personality))
             DecompressDataWithHeaderWram(gSpeciesInfo[species].backPicFemale, dest);
         else

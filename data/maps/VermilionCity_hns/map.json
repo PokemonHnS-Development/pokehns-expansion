@@ -27,11 +27,6 @@
       "map": "MAP_VERMILION_CITY_PORT_OUTSIDE_HNS",
       "offset": 23,
       "direction": "down"
-    },
-    {
-      "map": "MAP_TREES_HNS",
-      "offset": 46,
-      "direction": "up"
     }
   ],
   "object_events": [
@@ -207,8 +202,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK_HNS",
-      "x": 49,
-      "y": 4,
+      "x": 47,
+      "y": 5,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -597,6 +592,19 @@
       "trainer_sight_or_berry_tree_id": "3",
       "script": "NULL",
       "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK_HNS",
+      "x": 49,
+      "y": 4,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_RockSmash",
+      "flag": "FLAG_TEMP_9"
     }
   ],
   "warp_events": [
