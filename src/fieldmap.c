@@ -82,7 +82,7 @@ static inline u16 GetBorderBlockAt(int x, int y)
 // This is the format of the data stored in each data/tilesets/*/*/metatile_attributes.bin file
 static const u32 sMetatileAttrMasks[METATILE_ATTRIBUTE_COUNT] = {
     [METATILE_ATTRIBUTE_BEHAVIOR]       = METATILE_ATTR_BEHAVIOR_MASK_FRLG, // Bits 0-8
-    [METATILE_ATTRIBUTE_TERRAIN]        = 0x00003e00, // Bits 9-13
+    [METATILE_ATTRIBUTE_TERRAIN]        = 0x00000000,
     [METATILE_ATTRIBUTE_2]              = 0x0003c000, // Bits 14-17
     [METATILE_ATTRIBUTE_3]              = 0x00fc0000, // Bits 18-23
     [METATILE_ATTRIBUTE_ENCOUNTER_TYPE] = 0x07000000, // Bits 24-26

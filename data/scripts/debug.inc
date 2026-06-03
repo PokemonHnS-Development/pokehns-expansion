@@ -243,7 +243,20 @@ Debug_EventScript_Script_6_String_Paldean:
 	.string "Paldean$"
 
 Debug_EventScript_Script_6::
-	specialvar VAR_RESULT, GetAlolaCatchProgress
+	lockall
+	setvar VAR_FRONTIER_FACILITY, FRONTIER_FACILITY_TOWER
+	setvar VAR_FRONTIER_BATTLE_MODE, FRONTIER_MODE_SINGLES
+	frontier_settrainers
+	setvar VAR_TRAINER_BATTLE_OPPONENT_A, FRONTIER_TRAINER_LEADER_BROCK_HNS
+	special HealPlayerParty
+	dofacilitytrainerbattle FACILITY_BATTLE_TOWER
+	waitstate
+	special HealPlayerParty
+	releaseall
+	end
+
+Debug_EventScript_Script_7::
+  specialvar VAR_RESULT, GetAlolaCatchProgress
 	bufferstring STR_VAR_1, Debug_EventScript_Script_6_String_Alolan
 	buffernumberstring STR_VAR_2, VAR_RESULT
 	msgbox Debug_EventScript_Script_6_String_0, MSGBOX_DEFAULT
@@ -263,11 +276,6 @@ Debug_EventScript_Script_6::
 	buffernumberstring STR_VAR_2, VAR_RESULT
 	msgbox Debug_EventScript_Script_6_String_0, MSGBOX_DEFAULT
 
-	release
-	end
-
-Debug_EventScript_Script_7::
-	msgbox gNationalDexRatingText_Complete, MSGBOX_POKENAV
 	release
 	end
 

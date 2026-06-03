@@ -78,6 +78,7 @@
       "flag": "0"
     },
     {
+      "local_id": "LOCALID_SAFARIATTENDANT_1",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_LOTAD",
       "x": 11,
       "y": 18,
@@ -88,10 +89,10 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0",
-      "local_id": "LOCALID_SAFARIATTENDANT_1"
+      "flag": "0"
     },
     {
+      "local_id": "LOCALID_SAFARIATTENDANT_3",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_VIBRAVA",
       "x": 10,
       "y": 40,
@@ -102,10 +103,10 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0",
-      "local_id": "LOCALID_SAFARIATTENDANT_3"
+      "flag": "0"
     },
     {
+      "local_id": "LOCALID_SAFARIATTENDANT_4",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_CACNEA",
       "x": 18,
       "y": 18,
@@ -116,10 +117,10 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0",
-      "local_id": "LOCALID_SAFARIATTENDANT_4"
+      "flag": "0"
     },
     {
+      "local_id": "LOCALID_SAFARIATTENDANT_2",
       "graphics_id": "OBJ_EVENT_GFX_ATTENDANT_M_HNS",
       "x": 0,
       "y": 12,
@@ -130,8 +131,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "SafariZoneFuchsia_EventScript_Attendant2",
-      "flag": "0",
-      "local_id": "LOCALID_SAFARIATTENDANT_2"
+      "flag": "0"
     }
   ],
   "warp_events": [

@@ -19,6 +19,7 @@ static const u8 sTileBitAttributes[NUM_METATILE_BEHAVIORS] =
     [MB_NO_RUNNING]                         = TILE_FLAG_UNUSED,
     [MB_INDOOR_ENCOUNTER]                   = TILE_FLAG_UNUSED | TILE_FLAG_HAS_ENCOUNTERS,
     [MB_TALL_GRASS_IMPASSABLE_NORTH]        = TILE_FLAG_UNUSED | TILE_FLAG_HAS_ENCOUNTERS,
+    [MB_CAVE_IMPASSABLE_NORTH]              = TILE_FLAG_UNUSED | TILE_FLAG_HAS_ENCOUNTERS,
     [MB_MOUNTAIN_TOP]                       = TILE_FLAG_UNUSED,
     [MB_BATTLE_PYRAMID_WARP]                = TILE_FLAG_UNUSED,
     [MB_MOSSDEEP_GYM_WARP]                  = TILE_FLAG_UNUSED,
@@ -978,7 +979,8 @@ bool8 MetatileBehavior_IsNorthBlocked(u8 metatileBehavior)
      || metatileBehavior == MB_IMPASSABLE_NORTHEAST
      || metatileBehavior == MB_IMPASSABLE_NORTHWEST
      || metatileBehavior == MB_IMPASSABLE_SOUTH_AND_NORTH
-     || metatileBehavior == MB_TALL_GRASS_IMPASSABLE_NORTH)
+     || metatileBehavior == MB_TALL_GRASS_IMPASSABLE_NORTH
+     || metatileBehavior == MB_CAVE_IMPASSABLE_NORTH)
         return TRUE;
     else
         return FALSE;

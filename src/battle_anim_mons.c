@@ -2128,7 +2128,7 @@ s16 GetBattlerSpriteCoordAttr(enum BattlerId battler, u8 attr)
 
         if (IsOnPlayerSide(battler))
         {
-        #if P_GENDER_DIFFERENCES
+        #if P_GENDER_DIFFERENCES && !P_GBA_STYLE_SPECIES_GFX
             if (gSpeciesInfo[species].backPicFemale != NULL && IsPersonalityFemale(species, personality))
                 size = gSpeciesInfo[species].backPicSizeFemale;
             else
@@ -2139,7 +2139,7 @@ s16 GetBattlerSpriteCoordAttr(enum BattlerId battler, u8 attr)
         }
         else
         {
-        #if P_GENDER_DIFFERENCES
+        #if P_GENDER_DIFFERENCES && !P_GBA_STYLE_SPECIES_GFX
             if (gSpeciesInfo[species].frontPicFemale != NULL && IsPersonalityFemale(species, personality))
                 size = gSpeciesInfo[species].frontPicSizeFemale;
             else

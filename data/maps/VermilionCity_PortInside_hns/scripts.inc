@@ -126,7 +126,7 @@ VermilionPort_EventScript_EnterShip::
 	applymovement LOCALID_VERMILIONMARINA_SAILOR, VermilionPort_Movement_BoatLeave
 	applymovement LOCALID_VERMILIONMARINA_BOAT, VermilionPort_Movement_BoatLeave
 	waitmovement LOCALID_VERMILIONMARINA_BOAT
-	setrespawn HEAL_LOCATION_VERMILION_CITY
+	setrespawn HEAL_LOCATION_VERMILION_CITY_HNS
 	return
 
 VermilionPort_EventScript_Sailor_Refused::

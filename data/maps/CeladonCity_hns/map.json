@@ -15,12 +15,12 @@
   "connections": [
     {
       "map": "MAP_ROUTE7_HNS",
-      "offset": -10,
+      "offset": 8,
       "direction": "right"
     },
     {
       "map": "MAP_ROUTE16_HNS",
-      "offset": 10,
+      "offset": -5,
       "direction": "left"
     }
   ],
@@ -131,8 +131,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_PIDGEY",
-      "x": 33,
-      "y": 18,
+      "x": 37,
+      "y": 16,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
@@ -157,8 +157,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
-      "x": 53,
-      "y": 33,
+      "x": 55,
+      "y": 30,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_BERRY_TREE_GROWTH",
       "movement_range_x": 0,
@@ -170,8 +170,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE_HNS",
-      "x": 52,
-      "y": 22,
+      "x": 53,
+      "y": 21,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -179,12 +179,12 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "EventScript_CutTree",
-      "flag": "FLAG_TEMP_3"
+      "flag": "FLAG_TEMP_5"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE_HNS",
-      "x": 40,
-      "y": 35,
+      "x": 41,
+      "y": 34,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -249,8 +249,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SMALL_LIGHT_HNS",
-      "x": 23,
-      "y": 15,
+      "x": 18,
+      "y": 13,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -262,8 +262,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SMALL_LIGHT_HNS",
-      "x": 39,
-      "y": 15,
+      "x": 43,
+      "y": 17,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -275,8 +275,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SMALL_LIGHT_HNS",
-      "x": 50,
-      "y": 15,
+      "x": 43,
+      "y": 28,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -288,8 +288,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL_HNS",
-      "x": 8,
-      "y": 3,
+      "x": 3,
+      "y": 7,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -298,6 +298,71 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "CeladonCity_EventScript_Item_Recycle",
       "flag": "FLAG_ITEM_CELADON_CITY_TM_RECYCLE"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE_HNS",
+      "x": 42,
+      "y": 34,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_CutTree",
+      "flag": "FLAG_TEMP_3"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE_HNS",
+      "x": 43,
+      "y": 34,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_CutTree",
+      "flag": "FLAG_TEMP_4"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SMALL_LIGHT_HNS",
+      "x": 26,
+      "y": 10,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SMALL_LIGHT_HNS",
+      "x": 8,
+      "y": 13,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_JIGGLYPUFF",
+      "x": 62,
+      "y": 31,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
     }
   ],
   "warp_events": [
@@ -331,7 +396,7 @@
     },
     {
       "x": 35,
-      "y": 21,
+      "y": 19,
       "elevation": 0,
       "dest_map": "MAP_CELADON_CITY_GAME_CORNER_HNS",
       "dest_warp_id": "0"
@@ -344,14 +409,14 @@
       "dest_warp_id": "0"
     },
     {
-      "x": 37,
+      "x": 36,
       "y": 29,
       "elevation": 0,
       "dest_map": "MAP_CELADON_CITY_HOUSE1_HNS",
       "dest_warp_id": "0"
     },
     {
-      "x": 41,
+      "x": 40,
       "y": 29,
       "elevation": 0,
       "dest_map": "MAP_CELADON_CITY_HOUSE2_HNS",
@@ -369,16 +434,16 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 45,
-      "y": 23,
+      "x": 43,
+      "y": 22,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "CeladonCity_EventScript_TrainerTips"
     },
     {
       "type": "sign",
-      "x": 38,
-      "y": 23,
+      "x": 33,
+      "y": 22,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "CeladonCity_EventScript_GameCornerSign"

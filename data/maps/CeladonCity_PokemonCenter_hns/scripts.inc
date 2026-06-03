@@ -3,7 +3,7 @@ CeladonCity_PokemonCenter_hns_MapScripts::
 	.byte 0
 
 CeladonCity_PokemonCenter_OnTransition::
-	setrespawn HEAL_LOCATION_CELADON_CITY
+	setrespawn HEAL_LOCATION_CELADON_CITY_HNS
 	end
 
 CeladonCity_PokemonCenter_EventScript_CooltrainerF::

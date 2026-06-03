@@ -189,8 +189,13 @@ EWRAM_DATA static struct NamingScreenData *sNamingScreen = NULL;
 static const u8 sPCIconOff_Gfx[] = INCBIN_U8("graphics/naming_screen/pc_icon_off.4bpp");
 static const u8 sPCIconOn_Gfx[] = INCBIN_U8("graphics/naming_screen/pc_icon_on.4bpp");
 static const u16 sKeyboard_Pal[] = INCBIN_U16("graphics/naming_screen/keyboard.gbapal");
+#if IS_HNS
+static const u16 sRival_Gfx[] = INCBIN_U16("graphics/naming_screen/silver.4bpp");
+static const u16 sRival_Pal[] = INCBIN_U16("graphics/naming_screen/silver.gbapal");
+#else
 static const u16 sRival_Gfx[] = INCBIN_U16("graphics/naming_screen/rival.4bpp");
 static const u16 sRival_Pal[] = INCBIN_U16("graphics/naming_screen/rival.gbapal");
+#endif
 
 static const u8 *const sTransferredToPCMessages[] =
 {
@@ -1471,7 +1476,11 @@ static void NamingScreen_CreateRivalIcon(void)
     const struct SubspriteTable * tables_p;
     u8 spriteId;
 
+#if IS_HNS
+    CopyObjectGraphicsInfoToSpriteTemplate(OBJ_EVENT_GFX_GOLD_NORMAL_HNS, SpriteCallbackDummy, &template, &tables_p);
+#else
     CopyObjectGraphicsInfoToSpriteTemplate(OBJ_EVENT_GFX_RED_NORMAL, SpriteCallbackDummy, &template, &tables_p);
+#endif
 
     template.tileTag = sheet.tag;
     template.paletteTag = palette.tag;

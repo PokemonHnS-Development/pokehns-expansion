@@ -3,7 +3,7 @@ map_script MAP_SCRIPT_ON_TRANSITION, SaffronCity_PokemonCenter_OnTransition
 	.byte 0
 
 SaffronCity_PokemonCenter_OnTransition::
-	setrespawn HEAL_LOCATION_SAFFRON_CITY
+	setrespawn HEAL_LOCATION_SAFFRON_CITY_HNS
 	end
 
 SaffronCity_PokemonCenter_EventScript_Teacher::

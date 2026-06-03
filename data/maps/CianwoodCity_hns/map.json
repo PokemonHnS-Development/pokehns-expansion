@@ -21,6 +21,7 @@
   ],
   "object_events": [
     {
+      "local_id": "LOCALID_CIANWOOD_SUICUNE",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SUICUNE",
       "x": 17,
       "y": 20,
@@ -31,10 +32,10 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_HIDE_CIANWOOD_SUICUNE",
-      "local_id": "LOCALID_CIANWOOD_SUICUNE"
+      "flag": "FLAG_HIDE_CIANWOOD_SUICUNE"
     },
     {
+      "local_id": "LOCALID_CIANWOOD_EUSINE",
       "graphics_id": "OBJ_EVENT_GFX_EUSINE_HNS",
       "x": 18,
       "y": 29,
@@ -45,8 +46,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_HIDE_CIANWOOD_EUSINE",
-      "local_id": "LOCALID_CIANWOOD_EUSINE"
+      "flag": "FLAG_HIDE_CIANWOOD_EUSINE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_FAT_MAN_HNS",
@@ -88,6 +88,7 @@
       "flag": "0"
     },
     {
+      "local_id": "LOCALID_CIANWOOD_CHUCKSWIFE",
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_3_HNS",
       "x": 18,
       "y": 47,
@@ -98,8 +99,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "CianwoodCity_EventScript_ChucksWife",
-      "flag": "0",
-      "local_id": "LOCALID_CIANWOOD_CHUCKSWIFE"
+      "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_KRABBY",

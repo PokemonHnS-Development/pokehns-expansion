@@ -2,6 +2,7 @@
 #include "battle_pike.h"
 #include "event_data.h"
 #include "frontier_util.h"
+#include "pokemon.h"
 #include "fieldmap.h"
 #include "save.h"
 #include "battle.h"
@@ -1713,6 +1714,11 @@ static void IsPartyFullHealed(void)
 static void SaveMonHeldItems(void)
 {
     u8 i;
+    s32 j;
+
+    FlagSet(FLAG_LIMIT_TO_50);
+    for (j = 0; j < PARTY_SIZE; j++)
+        CalculateMonStats(&gPlayerParty[j]);
 
     for (i = 0; i < FRONTIER_PARTY_SIZE; i++)
     {
@@ -1725,6 +1731,11 @@ static void SaveMonHeldItems(void)
 static void RestoreMonHeldItems(void)
 {
     u8 i;
+    s32 j;
+
+    FlagClear(FLAG_LIMIT_TO_50);
+    for (j = 0; j < PARTY_SIZE; j++)
+        CalculateMonStats(&gPlayerParty[j]);
 
     for (i = 0; i < FRONTIER_PARTY_SIZE; i++)
     {

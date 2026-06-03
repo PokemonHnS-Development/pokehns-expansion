@@ -1838,7 +1838,7 @@ const struct Tileset gTileset_CeruleanCity_Hns =
     .palettes = gTilesetPalettes_CeruleanCity_Hns,
     .metatiles = gMetatiles_CeruleanCity_Hns,
     .metatileAttributes = gMetatileAttributes_CeruleanCity_Hns,
-    .callback = NULL,
+    .callback = InitTilesetAnim_CeruleanCity_Hns,
 };
 
 const struct Tileset gTileset_CeruleanCity_Gym_Hns =
@@ -2622,4 +2622,17 @@ const struct Tileset gTileset_ssaqua_Hns =
     .callback = NULL,
 };
 
+const struct Tileset gTileset_Route40_Hns =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_Route40_Hns,
+    .palettes = gTilesetPalettes_Route40_Hns,
+    .metatiles = gMetatiles_Route40_Hns,
+    .metatileAttributes = gMetatileAttributes_Route40_Hns,
+    .callback = NULL,
+};
+
+
 #endif // IS_FRLG || IS_HNS
+

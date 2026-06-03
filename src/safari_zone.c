@@ -56,6 +56,7 @@ void ResetSafariZoneFlag(void)
 
 void EnterSafariMode(void)
 {
+    FlagClear(FLAG_ADVENTURE_STARTED);//allows multi-catching for nuzlockes
     IncrementGameStat(GAME_STAT_ENTERED_SAFARI_ZONE);
     SetSafariZoneFlag();
     ClearAllPokeblockFeeders();
@@ -73,6 +74,7 @@ void EnterSafariMode(void)
 
 void ExitSafariMode(void)
 {
+    FlagSet(FLAG_ADVENTURE_STARTED);//allows multi-catching for nuzlockes
     TryPutSafariFanClubOnAir(sSafariZoneCaughtMons, sSafariZonePkblkUses);
     ResetSafariZoneFlag();
     ClearAllPokeblockFeeders();

@@ -9,7 +9,7 @@ Route25_MapScript_OnTransition::
 	end
 
 Route25_EventScript_SetSuicuneSceneMid::
-	setobjectxyperm LOCALID_ROUTE25_EUSINE, 65, 9
+	setobjectxyperm LOCALID_ROUTE25_EUSINE, 98, 14
 	end
 
 Route25_EventScript_MistyRematch::
@@ -177,6 +177,17 @@ Route25_EventScript_SuicuneMerge::
 	release
 	end
 	
+Route25_Trigger_SuicuneRightRight::
+	lock
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft1
+	waitmovement 0
+	goto Route25_Trigger_SuicuneRight
+Route25_Trigger_SuicuneLeftLeft::
+	lock
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight1
+	waitmovement 0
+	goto Route25_Trigger_SuicuneLeft
+
 Route25_Text_Eusine1:
 	.string "EUSINE: Puff, puff...\n"
 	.string "I am... no match for you.\p"
@@ -230,7 +241,8 @@ Route25_EventScript_Suicune::
 	fadescreenswapbuffers FADE_FROM_BLACK
 	goto_if_ge VAR_SUICUNE_ENCOUNTERS, 8, Route25_EventScript_SuicunePostGame
 	getplayerxy VAR_TEMP_0, VAR_TEMP_1
-	call_if_eq VAR_TEMP_0, 66, Route25_AdjustPlayer
+	call_if_eq VAR_TEMP_0, 99, Route25_AdjustPlayer
+	call_if_eq VAR_TEMP_0, 100, Route25_AdjustPlayerTwice
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_SOUTH
 	turnobject LOCALID_ROUTE25_EUSINE, DIR_NORTH
 	msgbox Route25_Text_Eusine3, MSGBOX_DEFAULT
@@ -249,6 +261,13 @@ Route25_EventScript_SuicuneRan::
 	end
 
 Route25_AdjustPlayer::
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft1
+	waitmovement 0
+	return
+
+Route25_AdjustPlayerTwice::
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft1
+	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft1
 	waitmovement 0
 	return
@@ -297,8 +316,6 @@ Route25_Movement_WalkToSuicune:
 Route25_Movement_MistyLeave:
 	walk_down
 	walk_down
-	walk_down
-	walk_down
 	walk_left
 	walk_left
 	walk_left
@@ -311,8 +328,7 @@ Route25_Movement_MistyLeave:
 
 Route25_Movement_ManLeaveRight:
 	walk_fast_left
-	walk_fast_down
-	walk_fast_down
+	walk_fast_left
 	walk_fast_down
 	walk_fast_down
 	walk_fast_down
@@ -330,8 +346,7 @@ Route25_Movement_ManLeaveRight:
 	walk_fast_left
 	step_end
 Route25_Movement_ManLeaveLeft:
-	walk_fast_down
-	walk_fast_down
+	walk_fast_left
 	walk_fast_down
 	walk_fast_down
 	walk_fast_down
@@ -350,6 +365,7 @@ Route25_Movement_ManLeaveLeft:
 	step_end
 
 Route25_Movement_MistyWalkToPlayerRight:
+	walk_fast_left
 	walk_left
 	walk_down
 	walk_down
@@ -358,6 +374,7 @@ Route25_Movement_MistyWalkToPlayerRight:
 	face_right
 	step_end
 Route25_Movement_MistyWalkToPlayerLeft:
+	walk_fast_left
 	walk_down
 	walk_down
 	walk_down
