@@ -2328,30 +2328,28 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/BattleFrontier_PokemonCenter_1F_hns/scripts.inc"
 	.include "data/maps/BattleFrontier_PokemonCenter_2F_hns/scripts.inc"
 	.include "data/maps/BattleFrontier_Mart_hns/scripts.inc"
+	.include "data/maps/Route49_hns/scripts.inc"
+	.include "data/maps/NewSinjoh_hns/scripts.inc"
+	.include "data/maps/Route50_hns/scripts.inc"
+	.include "data/maps/SinjohRuins_hns/scripts.inc"
+	.include "data/maps/SinjohRuins_Temple_hns/scripts.inc"
+	.include "data/maps/SinjohRuins_RegiceRoom_hns/scripts.inc"
+	.include "data/maps/SinjohRuins_RegirockRoom_hns/scripts.inc"
+	.include "data/maps/SinjohRuins_RegisteelRoom_hns/scripts.inc"
+	.include "data/maps/Route49_NewSinjoh_Gate_hns/scripts.inc"
+	.include "data/maps/Route49_House1_hns/scripts.inc"
+	.include "data/maps/SinjohRuins_Cave_hns/scripts.inc"
+	.include "data/maps/NewSinjoh_PokemonCenter_hns/scripts.inc"
+	.include "data/maps/SinjohRuins_RegidracoRoom_hns/scripts.inc"
+	.include "data/maps/Route50_House1_hns/scripts.inc"
+	.include "data/maps/SinjohRuins_RegielekiRoom_hns/scripts.inc"
+	.include "data/maps/NewSinjoh_House4_hns/scripts.inc"
+	.include "data/maps/NewSinjoh_House1_hns/scripts.inc"
+	.include "data/maps/NewSinjoh_House3_hns/scripts.inc"
+	.include "data/maps/NewSinjoh_House2_hns/scripts.inc"
+	.include "data/maps/SinjohRuins_RegigigasRoom_hns/scripts.inc"
+	.include "data/maps/Route50_SinjohRuins_Gate_hns/scripts.inc"
+	.include "data/maps/SinjohRuins_House1_hns/scripts.inc"
+	.include "data/maps/SinjohRuins_House2_hns/scripts.inc"
 
 .endif
-
-
-	.include "data/maps/Route49/scripts.inc"
-
-	.include "data/maps/NewSinjoh/scripts.inc"
-
-	.include "data/maps/Route50/scripts.inc"
-
-	.include "data/maps/SinjohRuins/scripts.inc"
-
-	.include "data/maps/SinjohRuinsMainBuilding/scripts.inc"
-
-	.include "data/maps/RegiceRoom/scripts.inc"
-
-	.include "data/maps/RegirockRoom/scripts.inc"
-
-	.include "data/maps/RegisteelRoom/scripts.inc"
-
-	.include "data/maps/RouteGates/scripts.inc"
-
-	.include "data/maps/LivedInHomes/scripts.inc"
-
-	.include "data/maps/SinjohRuinsMiniCave/scripts.inc"
-
-	.include "data/maps/NewSinjohPokemonCenter/scripts.inc"

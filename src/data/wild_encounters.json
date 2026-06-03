@@ -71039,8 +71039,8 @@
           }
         },
         {
-          "map": "MAP_ROUTE49",
-          "base_label": "gRoute49",
+          "map": "MAP_ROUTE49_HNS",
+          "base_label": "gRoute49_hns",
           "land_mons": {
             "encounter_rate": 20,
             "mons": [
@@ -71193,8 +71193,8 @@
           }
         },
         {
-          "map": "MAP_ROUTE50",
-          "base_label": "gRoute50",
+          "map": "MAP_ROUTE50_HNS",
+          "base_label": "gRoute50_hns",
           "land_mons": {
             "encounter_rate": 20,
             "mons": [
@@ -71347,8 +71347,8 @@
           }
         },
         {
-          "map": "MAP_NEW_SINJOH",
-          "base_label": "gNewSinjoh",
+          "map": "MAP_NEW_SINJOH_HNS",
+          "base_label": "gNewSinjoh_hns",
           "land_mons": {
             "encounter_rate": 20,
             "mons": [
@@ -71416,8 +71416,8 @@
           }
         },
         {
-          "map": "MAP_SINJOH_RUINS_MAIN_BUILDING",
-          "base_label": "gSinjohRuinsMainBuilding",
+          "map": "MAP_SINJOH_RUINS_TEMPLE_HNS",
+          "base_label": "gSinjohRuins_Temple_hns",
           "land_mons": {
             "encounter_rate": 20,
             "mons": [
@@ -71485,8 +71485,8 @@
           }
         },
         {
-          "map": "MAP_REGIROCK_ROOM",
-          "base_label": "gRegirockRoom",
+          "map": "MAP_SINJOH_RUINS_REGIROCK_ROOM_HNS",
+          "base_label": "gSinjohRuins_RegirockRoom_hns",
           "land_mons": {
             "encounter_rate": 20,
             "mons": [
@@ -71554,8 +71554,8 @@
           }
         },
         {
-          "map": "MAP_REGICE_ROOM",
-          "base_label": "gRegiceRoom",
+          "map": "MAP_SINJOH_RUINS_REGICE_ROOM_HNS",
+          "base_label": "gSinjohRuins_RegiceRoom_hns",
           "land_mons": {
             "encounter_rate": 20,
             "mons": [
@@ -71623,8 +71623,8 @@
           }
         },
         {
-          "map": "MAP_SINJOH_RUINS",
-          "base_label": "gSinjohRuins",
+          "map": "MAP_SINJOH_RUINS_HNS",
+          "base_label": "gSinjohRuins_hns",
           "land_mons": {
             "encounter_rate": 20,
             "mons": [

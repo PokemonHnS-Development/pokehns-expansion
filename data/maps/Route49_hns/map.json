@@ -1,0 +1,50 @@
+{
+  "id": "MAP_ROUTE49_HNS",
+  "name": "Route49_hns",
+  "layout": "LAYOUT_ROUTE49_HNS",
+  "music": "MUS_HG_SINJOU_RUINS",
+  "region_map_section": "MAPSEC_SINJOH",
+  "requires_flash": false,
+  "weather": "WEATHER_SNOW",
+  "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_NEW_SINJOH_HNS",
+      "offset": -17,
+      "direction": "left"
+    }
+  ],
+  "object_events": [],
+  "warp_events": [
+    {
+      "x": 7,
+      "y": 44,
+      "elevation": 0,
+      "dest_map": "MAP_SNOWSWEPT_CAVERN_BASEMENT_HNS",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 64,
+      "y": 40,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE49_HOUSE1_HNS",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 6,
+      "y": 17,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE49_NEW_SINJOH_GATE_HNS",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [],
+  "bg_events": [],
+  "game_version": "hns",
+  "region": "REGION_JOHTO"
+}

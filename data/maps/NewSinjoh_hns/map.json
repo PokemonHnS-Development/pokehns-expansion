@@ -1,0 +1,83 @@
+{
+  "id": "MAP_NEW_SINJOH_HNS",
+  "name": "NewSinjoh_hns",
+  "layout": "LAYOUT_NEW_SINJOH_HNS",
+  "music": "MUS_HG_BURNED_TOWER",
+  "region_map_section": "MAPSEC_SINJOH",
+  "requires_flash": false,
+  "weather": "WEATHER_SNOW",
+  "map_type": "MAP_TYPE_TOWN",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_ROUTE50_HNS",
+      "offset": 8,
+      "direction": "up"
+    },
+    {
+      "map": "MAP_ROUTE49_HNS",
+      "offset": 17,
+      "direction": "right"
+    }
+  ],
+  "object_events": [],
+  "warp_events": [
+    {
+      "x": 36,
+      "y": 34,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE49_NEW_SINJOH_GATE_HNS",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 22,
+      "y": 16,
+      "elevation": 0,
+      "dest_map": "MAP_NEW_SINJOH_HOUSE2_HNS",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 22,
+      "y": 13,
+      "elevation": 0,
+      "dest_map": "MAP_SINJOH_RUINS_REGISTEEL_ROOM_HNS",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 32,
+      "y": 23,
+      "elevation": 0,
+      "dest_map": "MAP_NEW_SINJOH_POKEMON_CENTER_HNS",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 23,
+      "y": 24,
+      "elevation": 0,
+      "dest_map": "MAP_NEW_SINJOH_HOUSE2_HNS",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 7,
+      "y": 12,
+      "elevation": 0,
+      "dest_map": "MAP_SINJOH_RUINS_REGISTEEL_ROOM_HNS",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 24,
+      "y": 34,
+      "elevation": 0,
+      "dest_map": "MAP_NEW_SINJOH_HOUSE3_HNS",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [],
+  "bg_events": [],
+  "game_version": "hns",
+  "region": "REGION_JOHTO"
+}

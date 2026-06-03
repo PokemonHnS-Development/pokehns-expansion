@@ -1,0 +1,22 @@
+{
+  "id": "MAP_ROUTE50_SINJOH_RUINS_GATE_HNS",
+  "name": "Route50_SinjohRuins_Gate_hns",
+  "layout": "LAYOUT_ROUTE50_SINJOH_RUINS_GATE_HNS",
+  "music": "MUS_HG_ICE_PATH",
+  "region_map_section": "MAPSEC_SINJOH",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_NONE",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": null,
+  "object_events": [],
+  "warp_events": [],
+  "coord_events": [],
+  "bg_events": [],
+  "game_version": "hns",
+  "region": "REGION_JOHTO"
+}

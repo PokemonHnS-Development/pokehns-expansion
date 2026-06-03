@@ -259,6 +259,17 @@ const struct Tileset gTileset_Contest =
     .callback = NULL,
 };
 
+const struct Tileset gTileset_Lab_Frlg =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_Lab_Frlg,
+    .palettes = gTilesetPalettes_Lab_Frlg,
+    .metatiles = gMetatiles_Lab_Frlg,
+    .metatileAttributes = gMetatileAttributes_Lab_Frlg,
+    .callback = NULL,
+};
+
 #if !IS_FRLG && !IS_HNS
 
 const struct Tileset gTileset_Petalburg =
@@ -1053,17 +1064,6 @@ const struct Tileset gTileset_GenericBuilding1 =
     .palettes = gTilesetPalettes_GenericBuilding1,
     .metatiles = gMetatiles_GenericBuilding1,
     .metatileAttributes = gMetatileAttributes_GenericBuilding1,
-    .callback = NULL,
-};
-
-const struct Tileset gTileset_Lab_Frlg =
-{
-    .isCompressed = TRUE,
-    .isSecondary = TRUE,
-    .tiles = gTilesetTiles_Lab_Frlg,
-    .palettes = gTilesetPalettes_Lab_Frlg,
-    .metatiles = gMetatiles_Lab_Frlg,
-    .metatileAttributes = gMetatileAttributes_Lab_Frlg,
     .callback = NULL,
 };
 

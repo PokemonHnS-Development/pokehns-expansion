@@ -26,6 +26,8 @@
     "gMapGroup_IndoorKantoRoutes_Hns",
     "gMapGroup_Dungeons_Hns",
     "gMapGroup_IndoorDynamic_Hns",
+    "gMapGroup_Sinjoh_Hns",
+    "gMapGroup_IndoorSinjoh_Hns",
     "gMapGroup_SpecialArea_Hns",
     "gMapGroup_TownsAndRoutes",
     "gMapGroup_IndoorLittleroot",
@@ -174,15 +176,7 @@
     "Route26_hns",
     "Route26North_hns",
     "Route27_hns",
-    "Route28_hns",
-    "Route49",
-    "NewSinjoh",
-    "Route50",
-    "SinjohRuins",
-    "RouteGates",
-    "LivedInHomes",
-    "SinjohRuinsMiniCave",
-    "NewSinjohPokemonCenter"
+    "Route28_hns"
   ],
   "gMapGroup_IndoorNewBark_Hns": [
     "NewBarkTown_Lab_hns",
@@ -558,16 +552,39 @@
     "RuinsOfAlph_WordsRoom2_hns",
     "RuinsOfAlph_WordsRoom3_hns",
     "RuinsOfAlph_WordsRoom4_hns",
-    "Route19_Cave_hns",
-    "SnowsweptCavern_hns",
-    "SnowsweptCavern_Basement_hns",
-    "SinjohRuinsMainBuilding",
-    "RegirockRoom",
-    "RegiceRoom",
-    "RegisteelRoom"
+    "Route19_Cave_hns"
   ],
   "gMapGroup_IndoorDynamic_Hns": [
     "UnionRoom_hns"
+  ],
+  "gMapGroup_Sinjoh_Hns": [
+    "SnowsweptCavern_hns",
+    "SnowsweptCavern_Basement_hns",
+    "Route49_hns",
+    "Route50_hns",
+    "NewSinjoh_hns",
+    "SinjohRuins_hns"
+  ],
+  "gMapGroup_IndoorSinjoh_Hns": [
+    "Route49_House1_hns",
+    "Route49_NewSinjoh_Gate_hns",
+    "NewSinjoh_PokemonCenter_hns",
+    "SinjohRuins_Temple_hns",
+    "SinjohRuins_RegirockRoom_hns",
+    "SinjohRuins_RegiceRoom_hns",
+    "SinjohRuins_RegisteelRoom_hns",
+    "SinjohRuins_Cave_hns",
+    "SinjohRuins_RegidracoRoom_hns",
+    "SinjohRuins_RegielekiRoom_hns",
+    "SinjohRuins_RegigigasRoom_hns",
+    "NewSinjoh_House1_hns",
+    "NewSinjoh_House2_hns",
+    "NewSinjoh_House3_hns",
+    "NewSinjoh_House4_hns",
+    "Route50_SinjohRuins_Gate_hns",
+    "Route50_House1_hns",
+    "SinjohRuins_House1_hns",
+    "SinjohRuins_House2_hns"
   ],
   "gMapGroup_SpecialArea_Hns": [
     "TrainerHill_Courtyard_hns",

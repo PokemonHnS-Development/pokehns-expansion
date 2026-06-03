@@ -563,14 +563,8 @@
       "y": 46
     },
     {
-      "id": "HEAL_LOCATION_ROUTE49",
-      "map": "MAP_ROUTE49",
-      "x": 36,
-      "y": 30
-    },
-    {
-      "id": "HEAL_LOCATION_ROUTE50",
-      "map": "MAP_ROUTE50",
+      "id": "HEAL_LOCATION_ROUTE50_HNS",
+      "map": "MAP_ROUTE50_HNS",
       "x": 44,
       "y": 46
     }

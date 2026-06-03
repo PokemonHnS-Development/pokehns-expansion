@@ -1,0 +1,22 @@
+{
+  "id": "MAP_SINJOH_RUINS_REGICE_ROOM_HNS",
+  "name": "SinjohRuins_RegiceRoom_hns",
+  "layout": "LAYOUT_SINJOH_RUINS_REGICE_ROOM_HNS",
+  "music": "MUS_HG_SINJOU_RUINS",
+  "region_map_section": "MAPSEC_SINJOH",
+  "requires_flash": false,
+  "weather": "WEATHER_SNOW",
+  "map_type": "MAP_TYPE_NONE",
+  "allow_cycling": false,
+  "allow_escaping": true,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": null,
+  "object_events": [],
+  "warp_events": [],
+  "coord_events": [],
+  "bg_events": [],
+  "game_version": "hns",
+  "region": "REGION_JOHTO"
+}

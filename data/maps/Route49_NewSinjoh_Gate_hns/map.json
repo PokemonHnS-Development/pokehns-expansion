@@ -1,0 +1,37 @@
+{
+  "id": "MAP_ROUTE49_NEW_SINJOH_GATE_HNS",
+  "name": "Route49_NewSinjoh_Gate_hns",
+  "layout": "LAYOUT_ROUTE49_NEW_SINJOH_GATE_HNS",
+  "music": "MUS_HG_ICE_PATH",
+  "region_map_section": "MAPSEC_SINJOH",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_NONE",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": null,
+  "object_events": [],
+  "warp_events": [
+    {
+      "x": 13,
+      "y": 7,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE49_HNS",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 2,
+      "y": 7,
+      "elevation": 0,
+      "dest_map": "MAP_NEW_SINJOH_HNS",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [],
+  "bg_events": [],
+  "game_version": "hns",
+  "region": "REGION_JOHTO"
+}
