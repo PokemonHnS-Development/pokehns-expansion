@@ -25,7 +25,15 @@
     }
   ],
   "object_events": [],
-  "warp_events": [],
+  "warp_events": [
+    {
+      "x": 20,
+      "y": 18,
+      "elevation": 0,
+      "dest_map": "MAP_PONI_CAVE_HNS",
+      "dest_warp_id": "0"
+    }
+  ],
   "coord_events": [],
   "bg_events": [],
   "game_version": "hns",

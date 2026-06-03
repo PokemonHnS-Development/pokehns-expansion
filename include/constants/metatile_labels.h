@@ -1064,6 +1064,7 @@
 #define METATILE_ViridianForest_HugeTreeTopMiddle_Mowed  0x281
 
 // Other
+#define METATILE_Alola_Door_Hns                      0x046
 #define METATILE_AzaleaTown_Door_Hns                 0x2A2
 #define METATILE_Blackthorn_Door_Hns                 0x291
 #define METATILE_CherrygroveCity_Door_Red_Hns        0x2EB

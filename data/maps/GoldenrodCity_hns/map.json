@@ -156,6 +156,7 @@
       "flag": "FLAG_HIDE_GOLDENROD_ROCKETS"
     },
     {
+      "local_id": "LOCALID_GOLDENROD_ROCKET_SCOUT",
       "graphics_id": "OBJ_EVENT_GFX_ROCKET_M_HNS",
       "x": 18,
       "y": 22,
@@ -166,8 +167,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "GoldenrodCity_EventScript_RocketScout",
-      "flag": "FLAG_HIDE_GOLDENROD_ROCKET_SCOUT",
-      "local_id": "LOCALID_GOLDENROD_ROCKET_SCOUT"
+      "flag": "FLAG_HIDE_GOLDENROD_ROCKET_SCOUT"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_FAT_MAN_HNS",

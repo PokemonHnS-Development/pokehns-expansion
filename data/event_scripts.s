@@ -2341,3 +2341,23 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/AlolaIslandRight_hns/scripts.inc"
 
 	.include "data/maps/AlolaIslandAkala_hns/scripts.inc"
+
+	.include "data/maps/Melemele_PlayerHouse_hns/scripts.inc"
+
+	.include "data/maps/Melemele_House_hns/scripts.inc"
+
+	.include "data/maps/Melemele_House_4_hns/scripts.inc"
+
+	.include "data/maps/Melemele_House_2_hns/scripts.inc"
+
+	.include "data/maps/Melemele_House_3_hns/scripts.inc"
+
+	.include "data/maps/Melemele_House_5_hns/scripts.inc"
+
+	.include "data/maps/Melemele_House_6_hns/scripts.inc"
+
+	.include "data/maps/Akala_House_hns/scripts.inc"
+
+	.include "data/maps/UlaUla_House_hns/scripts.inc"
+
+	.include "data/maps/Poni_Cave_hns/scripts.inc"

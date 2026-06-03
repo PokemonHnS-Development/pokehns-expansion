@@ -75,6 +75,7 @@
       "flag": "0"
     },
     {
+      "local_id": "LOCALID_ECRUTEAK_GRAMPS",
       "graphics_id": "OBJ_EVENT_GFX_OLD_MAN_HNS",
       "x": 36,
       "y": 32,
@@ -85,8 +86,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "EcruteakCity_EventScript_Gramps",
-      "flag": "0",
-      "local_id": "LOCALID_ECRUTEAK_GRAMPS"
+      "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SAGE_HNS",
@@ -453,6 +453,7 @@
       "flag": "0"
     },
     {
+      "local_id": "LOCALID_ECRUTEK_SILVER",
       "graphics_id": "OBJ_EVENT_GFX_SILVER_HNS",
       "x": 39,
       "y": 40,
@@ -463,8 +464,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_HIDE_ECRUTEAK_SILVER",
-      "local_id": "LOCALID_ECRUTEK_SILVER"
+      "flag": "FLAG_HIDE_ECRUTEAK_SILVER"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SMALL_LIGHT_HNS",

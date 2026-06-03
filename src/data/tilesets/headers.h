@@ -2622,8 +2622,6 @@ const struct Tileset gTileset_ssaqua_Hns =
     .callback = NULL,
 };
 
-#endif // IS_FRLG || IS_HNS
-
 const struct Tileset gTileset_AlolaIsland =
 {
     .isCompressed = TRUE,
@@ -2645,3 +2643,6 @@ const struct Tileset gTileset_AlolaIslandSecondary =
     .metatileAttributes = gMetatileAttributes_AlolaIslandSecondary,
     .callback = NULL,
 };
+
+
+#endif // IS_FRLG || IS_HNS

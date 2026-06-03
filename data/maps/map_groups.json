@@ -27,6 +27,7 @@
     "gMapGroup_Dungeons_Hns",
     "gMapGroup_IndoorDynamic_Hns",
     "gMapGroup_SpecialArea_Hns",
+    "gMapGroup_IndoorAlola_Hns",
     "gMapGroup_TownsAndRoutes",
     "gMapGroup_IndoorLittleroot",
     "gMapGroup_IndoorOldale",
@@ -662,6 +663,18 @@
     "UnusedContestHall4_hns",
     "UnusedContestHall5_hns",
     "UnusedContestHall6_hns"
+  ],
+  "gMapGroup_IndoorAlola_Hns": [
+    "Melemele_PlayerHouse_hns",
+    "Melemele_House_hns",
+    "Melemele_House_2_hns",
+    "Melemele_House_3_hns",
+    "Melemele_House_4_hns",
+    "Melemele_House_5_hns",
+    "Melemele_House_6_hns",
+    "Akala_House_hns",
+    "UlaUla_House_hns",
+    "Poni_Cave_hns"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
