@@ -538,7 +538,8 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
             TRACKS_FOOT,
             sAnimTable_Following,
             gOverworldPalette_Blaziken,
-            gShinyOverworldPalette_Blaziken
+            gShinyOverworldPalette_Blaziken,
+            gShinyModernOverworldPalette_Blaziken
         )
         OVERWORLD_FEMALE(
             sPicTable_BlazikenF,
@@ -12336,7 +12337,8 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
             TRACKS_FOOT,
             sAnimTable_Following,
             gOverworldPalette_Regice,
-            gShinyOverworldPalette_Regice
+            gShinyOverworldPalette_Regice,
+            gShinyModernOverworldPalette_Regice
         )
         .isSubLegendary = TRUE,
         .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,

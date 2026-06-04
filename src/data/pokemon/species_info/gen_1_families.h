@@ -2811,7 +2811,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             TRACKS_FOOT,
             sAnimTable_Following,
             gOverworldPalette_Pichu,
-            gShinyOverworldPalette_Pichu
+            gShinyOverworldPalette_Pichu,
+            gShinyModernOverworldPalette_Pichu
         )
         .levelUpLearnset = sPichuLevelUpLearnset,
         .teachableLearnset = sPichuTeachableLearnset,
@@ -2972,7 +2973,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             TRACKS_FOOT,
             sAnimTable_Following,
             gOverworldPalette_Pikachu,
-            gShinyOverworldPalette_Pikachu
+            gShinyOverworldPalette_Pikachu,
+            gShinyModernOverworldPalette_Pikachu
         )
         OVERWORLD_FEMALE(
             sPicTable_PikachuF,
@@ -3893,7 +3895,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             TRACKS_FOOT,
             sAnimTable_Following,
             gOverworldPalette_Pikachu,
-            gShinyOverworldPalette_Pikachu
+            gShinyOverworldPalette_Pikachu,
+            gShinyModernOverworldPalette_Pikachu
         )
         .cannotBeTraded = TRUE,
         .perfectIVCount = NUM_STATS,
@@ -3980,7 +3983,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             TRACKS_FOOT,
             sAnimTable_Following,
             gOverworldPalette_Raichu,
-            gShinyOverworldPalette_Raichu
+            gShinyOverworldPalette_Raichu,
+            gShinyModernOverworldPalette_Raichu
         )
         OVERWORLD_FEMALE(
             sPicTable_RaichuF,
@@ -6473,7 +6477,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             TRACKS_BUG,
             sAnimTable_Following,
             gOverworldPalette_Paras,
-            gShinyOverworldPalette_Paras
+            gShinyOverworldPalette_Paras,
+            gShinyModernOverworldPalette_Paras
         )
         .levelUpLearnset = sParasLevelUpLearnset,
         .teachableLearnset = sParasTeachableLearnset,
@@ -9489,7 +9494,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             TRACKS_SPOT,
             sAnimTable_Following,
             gOverworldPalette_Tentacool,
-            gShinyOverworldPalette_Tentacool
+            gShinyOverworldPalette_Tentacool,
+            gShinyModernOverworldPalette_Tentacool
         )
         .levelUpLearnset = sTentacoolLevelUpLearnset,
         .teachableLearnset = sTentacoolTeachableLearnset,
@@ -9562,7 +9568,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             TRACKS_BUG,
             sAnimTable_Following,
             gOverworldPalette_Tentacruel,
-            gShinyOverworldPalette_Tentacruel
+            gShinyOverworldPalette_Tentacruel,
+            gShinyModernOverworldPalette_Tentacruel
         )
         .levelUpLearnset = sTentacruelLevelUpLearnset,
         .teachableLearnset = sTentacruelTeachableLearnset,
@@ -11090,7 +11097,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             TRACKS_NONE,
             sAnimTable_Following_Asym,
             gOverworldPalette_Farfetchd,
-            gShinyOverworldPalette_Farfetchd
+            gShinyOverworldPalette_Farfetchd,
+            gShinyModernOverworldPalette_Farfetchd
         )
         .isSkyBattleBanned = B_SKY_BATTLE_STRICT_ELIGIBILITY,
         .levelUpLearnset = sFarfetchdLevelUpLearnset,
@@ -12144,7 +12152,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             TRACKS_NONE,
             sAnimTable_Following,
             gOverworldPalette_Haunter,
-            gShinyOverworldPalette_Haunter
+            gShinyOverworldPalette_Haunter,
+            gShinyModernOverworldPalette_Haunter
         )
         .levelUpLearnset = sHaunterLevelUpLearnset,
         .teachableLearnset = sHaunterTeachableLearnset,
@@ -12230,7 +12239,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             TRACKS_FOOT,
             sAnimTable_Following,
             gOverworldPalette_Gengar,
-            gShinyOverworldPalette_Gengar
+            gShinyOverworldPalette_Gengar,
+            gShinyModernOverworldPalette_Gengar
         )
         .levelUpLearnset = sGengarLevelUpLearnset,
         .teachableLearnset = sGengarTeachableLearnset,
@@ -13642,7 +13652,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             TRACKS_FOOT,
             sAnimTable_Following_Asym,
             gOverworldPalette_Marowak,
-            gShinyOverworldPalette_Marowak
+            gShinyOverworldPalette_Marowak,
+            gShinyModernOverworldPalette_Marowak
         )
         .levelUpLearnset = sMarowakLevelUpLearnset,
         .teachableLearnset = sMarowakTeachableLearnset,
@@ -16249,7 +16260,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             TRACKS_FOOT,
             sAnimTable_Following,
             gOverworldPalette_Scyther,
-            gShinyOverworldPalette_Scyther
+            gShinyOverworldPalette_Scyther,
+            gShinyModernOverworldPalette_Scyther
         )
         OVERWORLD_FEMALE(
             sPicTable_ScytherF,
@@ -16720,7 +16732,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             TRACKS_FOOT,
             sAnimTable_Following,
             gOverworldPalette_Elekid,
-            gShinyOverworldPalette_Elekid
+            gShinyOverworldPalette_Elekid,
+            gShinyModernOverworldPalette_Elekid
         )
         .levelUpLearnset = sElekidLevelUpLearnset,
         .teachableLearnset = sElekidTeachableLearnset,
@@ -17846,7 +17859,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             TRACKS_SLITHER,
             sAnimTable_Following,
             gOverworldPalette_Lapras,
-            gShinyOverworldPalette_Lapras
+            gShinyOverworldPalette_Lapras,
+            gShinyModernOverworldPalette_Lapras
         )
         .levelUpLearnset = sLaprasLevelUpLearnset,
         .teachableLearnset = sLaprasTeachableLearnset,
@@ -18300,7 +18314,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             TRACKS_FOOT,
             sAnimTable_Following,
             gOverworldPalette_Vaporeon,
-            gShinyOverworldPalette_Vaporeon
+            gShinyOverworldPalette_Vaporeon,
+            gShinyModernOverworldPalette_Vaporeon
         )
         .levelUpLearnset = sVaporeonLevelUpLearnset,
         .teachableLearnset = sVaporeonTeachableLearnset,
@@ -18367,7 +18382,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             TRACKS_FOOT,
             sAnimTable_Following,
             gOverworldPalette_Jolteon,
-            gShinyOverworldPalette_Jolteon
+            gShinyOverworldPalette_Jolteon,
+            gShinyModernOverworldPalette_Jolteon
         )
         .levelUpLearnset = sJolteonLevelUpLearnset,
         .teachableLearnset = sJolteonTeachableLearnset,
@@ -18434,7 +18450,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             TRACKS_FOOT,
             sAnimTable_Following,
             gOverworldPalette_Flareon,
-            gShinyOverworldPalette_Flareon
+            gShinyOverworldPalette_Flareon,
+            gShinyModernOverworldPalette_Flareon
         )
         .levelUpLearnset = sFlareonLevelUpLearnset,
         .teachableLearnset = sFlareonTeachableLearnset,
@@ -19905,7 +19922,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             TRACKS_NONE,
             sAnimTable_Following,
             gOverworldPalette_Zapdos,
-            gShinyOverworldPalette_Zapdos
+            gShinyOverworldPalette_Zapdos,
+            gShinyModernOverworldPalette_Zapdos
         )
         .isSubLegendary = TRUE,
         .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,

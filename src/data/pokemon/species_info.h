@@ -32,9 +32,10 @@
 
 #if OW_POKEMON_OBJECT_EVENTS
 #if OW_PKMN_OBJECTS_SHARE_PALETTES == FALSE
-#define OVERWORLD_PAL(...)                                  \
-    .overworldPalette = DEFAULT(NULL, __VA_ARGS__),         \
-    .overworldShinyPalette = DEFAULT_2(NULL, __VA_ARGS__),
+#define OVERWORLD_PAL(...)                                        \
+    .overworldPalette = DEFAULT(NULL, __VA_ARGS__),               \
+    .overworldShinyPalette = DEFAULT_2(NULL, __VA_ARGS__),        \
+    .overworldShinyPaletteModern = DEFAULT_3(NULL, __VA_ARGS__),
 #if P_GENDER_DIFFERENCES
 #define OVERWORLD_PAL_FEMALE(...)                                 \
     .overworldPaletteFemale = DEFAULT(NULL, __VA_ARGS__),         \

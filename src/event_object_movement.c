@@ -2340,7 +2340,14 @@ static u32 LoadDynamicFollowerPalette(u32 species, bool32 shiny, bool32 female)
     #endif
         {
             if (shiny)
-                spritePalette.data = gSpeciesInfo[species].overworldShinyPalette;
+            {
+                if (gSaveBlock3Ptr != NULL
+                    && gSaveBlock3Ptr->challengeSettings.tx_Features_ShinyColors
+                    && gSpeciesInfo[species].overworldShinyPaletteModern != NULL)
+                    spritePalette.data = gSpeciesInfo[species].overworldShinyPaletteModern;
+                else
+                    spritePalette.data = gSpeciesInfo[species].overworldShinyPalette;
+            }
             else
                 spritePalette.data = gSpeciesInfo[species].overworldPalette;
         }

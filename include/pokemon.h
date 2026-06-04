@@ -518,6 +518,7 @@ struct SpeciesInfo /*0xC4*/
 #if OW_PKMN_OBJECTS_SHARE_PALETTES == FALSE
     const void* overworldPalette;
     const void* overworldShinyPalette;
+    const void* overworldShinyPaletteModern;
 #if P_GENDER_DIFFERENCES
     const void* overworldPaletteFemale;
     const void* overworldShinyPaletteFemale;
