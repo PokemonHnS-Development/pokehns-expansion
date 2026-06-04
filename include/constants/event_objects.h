@@ -581,7 +581,10 @@
 #define OBJ_EVENT_GFX_KRIS_WATERING_HNS          543
 #define OBJ_EVENT_GFX_KRIS_DECORATING_HNS        544
 
-#define NUM_OBJ_EVENT_GFX                        545
+// Alola HNS objects
+#define OBJ_EVENT_GFX_ALOLA_OAK_HNS             545
+
+#define NUM_OBJ_EVENT_GFX                        546
 
 
 // These are dynamic object gfx ids.
@@ -776,6 +779,7 @@
 #define OBJ_EVENT_PAL_TAG_GOLD_REFLECTION_HNS     0x1199
 #define OBJ_EVENT_PAL_TAG_KRIS_HNS                0x119A
 #define OBJ_EVENT_PAL_TAG_KRIS_REFLECTION_HNS     0x119B
+#define OBJ_EVENT_PAL_TAG_ALOLA_OAK_HNS           0x119C
 
 #if OW_FOLLOWERS_POKEBALLS
 // Vanilla

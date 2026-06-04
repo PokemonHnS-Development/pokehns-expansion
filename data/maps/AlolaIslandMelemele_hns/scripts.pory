@@ -1,0 +1,8 @@
+mapscripts AlolaIslandMelemele_hns_MapScripts{}
+
+script Test{
+    lock
+    msgbox("hello testtest test!", MSGBOX_NPC)
+    release
+    end
+}
