@@ -1,7 +1,7 @@
 {
-  "id": "MAP_PONI_CAVE_HNS",
-  "name": "Poni_Cave_hns",
-  "layout": "LAYOUT_PONI_CAVE_HNS",
+  "id": "MAP_AKALA_CAVE_HNS",
+  "name": "Akala_Cave_hns",
+  "layout": "LAYOUT_AKALA_CAVE_HNS",
   "music": "MUS_DUMMY",
   "region_map_section": "MAPSEC_ABANDONED_SHIP",
   "requires_flash": false,
@@ -15,35 +15,9 @@
   "connections": null,
   "object_events": [
     {
-      "graphics_id": "OBJ_EVENT_GFX_SPECIES(RAICHU_ALOLA)",
-      "x": 9,
-      "y": 6,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_DOWN",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_SPECIES(GOLEM_ALOLA)",
-      "x": 22,
-      "y": 5,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_DOWN",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
-    },
-    {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL_HNS",
-      "x": 24,
-      "y": 20,
+      "x": 7,
+      "y": 26,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -55,12 +29,38 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL_HNS",
-      "x": 13,
-      "y": 10,
+      "x": 23,
+      "y": 17,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
       "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(MAROWAK_ALOLA)",
+      "x": 16,
+      "y": 11,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WALK_SEQUENCE_DOWN_RIGHT_UP_LEFT",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(DUGTRIO_ALOLA)",
+      "x": 46,
+      "y": 30,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_DOWN",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
@@ -69,11 +69,25 @@
   ],
   "warp_events": [
     {
-      "x": 15,
-      "y": 22,
+      "x": 22,
+      "y": 36,
       "elevation": 0,
-      "dest_map": "MAP_ALOLA_ISLAND_HNS",
-      "dest_warp_id": "0"
+      "dest_map": "MAP_ALOLA_ISLAND_RIGHT_HNS",
+      "dest_warp_id": "5"
+    },
+    {
+      "x": 7,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_AKALA_CAVE_HNS",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 46,
+      "y": 36,
+      "elevation": 0,
+      "dest_map": "MAP_AKALA_CAVE_HNS",
+      "dest_warp_id": "1"
     }
   ],
   "coord_events": [],

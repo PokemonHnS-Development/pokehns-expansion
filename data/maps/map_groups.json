@@ -675,7 +675,11 @@
     "Akala_House_hns",
     "UlaUla_House_hns",
     "Poni_Cave_hns",
-    "Akala_Forest_hns"
+    "Akala_Forest_hns",
+    "UlaUla_Cave_hns",
+    "UlaUla_Forest_hns",
+    "UlaUla_Cave_2_hns",
+    "Akala_Cave_hns"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",

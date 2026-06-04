@@ -15871,8 +15871,8 @@
     {
       "id": "LAYOUT_PONI_CAVE_HNS",
       "name": "Poni_Cave_hns_Layout",
-      "width": 30,
-      "height": 23,
+      "width": 31,
+      "height": 24,
       "primary_tileset": "gTileset_Johto_General_Hns",
       "secondary_tileset": "gTileset_Cave_Default_Hns",
       "border_filepath": "data/layouts/Poni_Cave_hns/border.bin",
@@ -15889,6 +15889,54 @@
       "secondary_tileset": "gTileset_AlolaIslandSecondary",
       "border_filepath": "data/layouts/Akala_Forest_hns/border.bin",
       "blockdata_filepath": "data/layouts/Akala_Forest_hns/map.bin",
+      "game_version": "hns",
+      "layout_version": "hns"
+    },
+    {
+      "id": "LAYOUT_ULA_ULA_CAVE_HNS",
+      "name": "UlaUla_Cave_hns_Layout",
+      "width": 33,
+      "height": 41,
+      "primary_tileset": "gTileset_Johto_General_Hns",
+      "secondary_tileset": "gTileset_Cave_Ice_Hns",
+      "border_filepath": "data/layouts/UlaUla_Cave_hns/border.bin",
+      "blockdata_filepath": "data/layouts/UlaUla_Cave_hns/map.bin",
+      "game_version": "hns",
+      "layout_version": "hns"
+    },
+    {
+      "id": "LAYOUT_ULA_ULA_FOREST_HNS",
+      "name": "UlaUla_Forest_hns_Layout",
+      "width": 31,
+      "height": 18,
+      "primary_tileset": "gTileset_AlolaIsland",
+      "secondary_tileset": "gTileset_AlolaIslandSecondary",
+      "border_filepath": "data/layouts/UlaUla_Forest_hns/border.bin",
+      "blockdata_filepath": "data/layouts/UlaUla_Forest_hns/map.bin",
+      "game_version": "hns",
+      "layout_version": "hns"
+    },
+    {
+      "id": "LAYOUT_ULA_ULA_CAVE_2_HNS",
+      "name": "UlaUla_Cave_2_hns_Layout",
+      "width": 33,
+      "height": 38,
+      "primary_tileset": "gTileset_Johto_General_Hns",
+      "secondary_tileset": "gTileset_Cave_Green_Hns",
+      "border_filepath": "data/layouts/UlaUla_Cave_2_hns/border.bin",
+      "blockdata_filepath": "data/layouts/UlaUla_Cave_2_hns/map.bin",
+      "game_version": "hns",
+      "layout_version": "hns"
+    },
+    {
+      "id": "LAYOUT_AKALA_CAVE_HNS",
+      "name": "Akala_Cave_hns_Layout",
+      "width": 55,
+      "height": 38,
+      "primary_tileset": "gTileset_Johto_General_Hns",
+      "secondary_tileset": "gTileset_Cave_Gray_Hns",
+      "border_filepath": "data/layouts/Akala_Cave_hns/border.bin",
+      "blockdata_filepath": "data/layouts/Akala_Cave_hns/map.bin",
       "game_version": "hns",
       "layout_version": "hns"
     }

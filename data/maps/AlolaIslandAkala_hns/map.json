@@ -67,6 +67,34 @@
       "elevation": 0,
       "dest_map": "MAP_ULA_ULA_HOUSE_HNS",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 24,
+      "y": 70,
+      "elevation": 0,
+      "dest_map": "MAP_ULA_ULA_CAVE_HNS",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 10,
+      "y": 55,
+      "elevation": 0,
+      "dest_map": "MAP_ULA_ULA_FOREST_HNS",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 11,
+      "y": 55,
+      "elevation": 0,
+      "dest_map": "MAP_ULA_ULA_FOREST_HNS",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 23,
+      "y": 48,
+      "elevation": 0,
+      "dest_map": "MAP_ULA_ULA_CAVE_2_HNS",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [],
