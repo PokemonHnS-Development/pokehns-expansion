@@ -4208,9 +4208,14 @@ static void Cmd_getexp(void)
             }
             else
             {
-                *exp = calculatedExp;
-                gBattleStruct->expShareExpValue = calculatedExp / 2;
-                if (gBattleStruct->expShareExpValue == 0)
+                *exp = SAFE_DIV(calculatedExp * B_EXPALL_PARTICIPANT_NUM,
+                                viaSentIn    * B_EXPALL_PARTICIPANT_DEN);
+                if (*exp == 0)
+                    *exp = 1;
+
+                gBattleStruct->expShareExpValue = SAFE_DIV(calculatedExp * B_EXPALL_NONPARTICIPANT_NUM,
+                                                           B_EXPALL_NONPARTICIPANT_DEN);
+                if (gBattleStruct->expShareExpValue == 0 && calculatedExp != 0)
                     gBattleStruct->expShareExpValue = 1;
             }
 
@@ -10896,7 +10901,7 @@ static bool32 CriticalCapture(u32 odds)
     if (B_CRITICAL_CAPTURE_LOCAL_DEX == TRUE)
         totalDexCount = REGIONAL_DEX_COUNT;
     else
-        totalDexCount = NATIONAL_DEX_COUNT;
+        totalDexCount = OBTAINABLE_DEX_COUNT;
 
     if (CheckBagHasItem(ITEM_CATCHING_CHARM, 1))
         charmBoost = (100 + B_CATCHING_CHARM_BOOST) / 100;

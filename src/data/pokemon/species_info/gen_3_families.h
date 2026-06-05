@@ -538,7 +538,8 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
             TRACKS_FOOT,
             sAnimTable_Following,
             gOverworldPalette_Blaziken,
-            gShinyOverworldPalette_Blaziken
+            gShinyOverworldPalette_Blaziken,
+            gShinyModernOverworldPalette_Blaziken
         )
         OVERWORLD_FEMALE(
             sPicTable_BlazikenF,
@@ -1261,9 +1262,17 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
         .abilities = { ABILITY_PICKUP, ABILITY_GLUTTONY, ABILITY_QUICK_FEET },
         .bodyColor = BODY_COLOR_WHITE,
+#if P_SEPARATE_REGIONAL_FORMS
+        .speciesName = _("Zigzagoon-G"),
+#else
         .speciesName = _("Zigzagoon"),
+#endif
         .cryId = CRY_ZIGZAGOON,
+#if P_SEPARATE_REGIONAL_FORMS
+        .natDexNum = NATIONAL_DEX_ZIGZAGOON_GALAR,
+#else
         .natDexNum = NATIONAL_DEX_ZIGZAGOON,
+#endif
         .categoryName = _("Tiny Raccoon"),
         .height = 4,
         .weight = 175,
@@ -1305,7 +1314,11 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .levelUpLearnset = sZigzagoonGalarLevelUpLearnset,
         .teachableLearnset = sZigzagoonGalarTeachableLearnset,
         .eggMoveLearnset = sZigzagoonGalarEggMoveLearnset,
+#if P_SEPARATE_REGIONAL_FORMS
+        .formSpeciesIdTable = sZigzagoonGalarFormSpeciesIdTable,
+#else
         .formSpeciesIdTable = sZigzagoonFormSpeciesIdTable,
+#endif
         .evolutions = EVOLUTION({EVO_LEVEL, 20, SPECIES_LINOONE_GALAR}),
     },
 
@@ -1328,9 +1341,17 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
         .abilities = { ABILITY_PICKUP, ABILITY_GLUTTONY, ABILITY_QUICK_FEET },
         .bodyColor = BODY_COLOR_WHITE,
+#if P_SEPARATE_REGIONAL_FORMS
+        .speciesName = _("Linoone-G"),
+#else
         .speciesName = _("Linoone"),
+#endif
         .cryId = CRY_LINOONE,
+#if P_SEPARATE_REGIONAL_FORMS
+        .natDexNum = NATIONAL_DEX_LINOONE_GALAR,
+#else
         .natDexNum = NATIONAL_DEX_LINOONE,
+#endif
         .categoryName = _("Rushing"),
         .height = 5,
         .weight = 325,
@@ -1371,7 +1392,11 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .isGalarianForm = TRUE,
         .levelUpLearnset = sLinooneGalarLevelUpLearnset,
         .teachableLearnset = sLinooneGalarTeachableLearnset,
+#if P_SEPARATE_REGIONAL_FORMS
+        .formSpeciesIdTable = sLinooneGalarFormSpeciesIdTable,
+#else
         .formSpeciesIdTable = sLinooneFormSpeciesIdTable,
+#endif
         .evolutions = EVOLUTION({EVO_LEVEL, 35, SPECIES_OBSTAGOON, CONDITIONS({IF_TIME, TIME_NIGHT})}),
     },
 
@@ -12336,7 +12361,8 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
             TRACKS_FOOT,
             sAnimTable_Following,
             gOverworldPalette_Regice,
-            gShinyOverworldPalette_Regice
+            gShinyOverworldPalette_Regice,
+            gShinyModernOverworldPalette_Regice
         )
         .isSubLegendary = TRUE,
         .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,

@@ -1414,6 +1414,8 @@ static void TilesetAnim_AzaleaTownGym(u16);
 static void QueueAnimTiles_AzaleaTownGym_Flower(u16);
 static void TilesetAnim_CeladonCity_Hns(u16);
 static void QueueAnimTiles_CeladonCity_Hns_Fountain(u16);
+static void TilesetAnim_CeruleanCity_Hns(u16);
+static void QueueAnimTiles_CeruleanCity_Hns_Fountain(u16);
 static void TilesetAnim_SilphCo_Hns(u16);
 static void QueueAnimTiles_SilphCo_Hns_Fountain(u16);
 static void TilesetAnim_BlackthornGym(u16);
@@ -1568,6 +1570,22 @@ static const u16 *const sCeladonCityHns_Fountain[] = {
     sCeladonCityHns_Fountain_Frame2,
     sCeladonCityHns_Fountain_Frame3,
     sCeladonCityHns_Fountain_Frame4
+};
+
+// CeruleanCity HnS secondary tileset frame data
+
+static const u16 sCeruleanCityHns_Fountain_Frame0[] = INCBIN_U16("data/tilesets/secondary/cerulean_city_hns/anim/fountain/0.4bpp");
+static const u16 sCeruleanCityHns_Fountain_Frame1[] = INCBIN_U16("data/tilesets/secondary/cerulean_city_hns/anim/fountain/1.4bpp");
+static const u16 sCeruleanCityHns_Fountain_Frame2[] = INCBIN_U16("data/tilesets/secondary/cerulean_city_hns/anim/fountain/2.4bpp");
+static const u16 sCeruleanCityHns_Fountain_Frame3[] = INCBIN_U16("data/tilesets/secondary/cerulean_city_hns/anim/fountain/3.4bpp");
+static const u16 sCeruleanCityHns_Fountain_Frame4[] = INCBIN_U16("data/tilesets/secondary/cerulean_city_hns/anim/fountain/4.4bpp");
+
+static const u16 *const sCeruleanCityHns_Fountain[] = {
+    sCeruleanCityHns_Fountain_Frame0,
+    sCeruleanCityHns_Fountain_Frame1,
+    sCeruleanCityHns_Fountain_Frame2,
+    sCeruleanCityHns_Fountain_Frame3,
+    sCeruleanCityHns_Fountain_Frame4
 };
 
 // SilphCo HnS secondary tileset frame data
@@ -1729,6 +1747,26 @@ static void TilesetAnim_CeladonCity_Hns(u16 timer)
 static void QueueAnimTiles_CeladonCity_Hns_Fountain(u16 timer)
 {
     AppendTilesetAnimToBuffer(sCeladonCityHns_Fountain[timer % ARRAY_COUNT(sCeladonCityHns_Fountain)], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(744)), 8 * TILE_SIZE_4BPP);
+}
+
+// CeruleanCity HnS secondary tileset callbacks
+
+void InitTilesetAnim_CeruleanCity_Hns(void)
+{
+    sSecondaryTilesetAnimCounter = 0;
+    sSecondaryTilesetAnimCounterMax = 120;
+    sSecondaryTilesetAnimCallback = TilesetAnim_CeruleanCity_Hns;
+}
+
+static void TilesetAnim_CeruleanCity_Hns(u16 timer)
+{
+    if (timer % 12 == 0)
+        QueueAnimTiles_CeruleanCity_Hns_Fountain(timer / 12);
+}
+
+static void QueueAnimTiles_CeruleanCity_Hns_Fountain(u16 timer)
+{
+    AppendTilesetAnimToBuffer(sCeruleanCityHns_Fountain[timer % ARRAY_COUNT(sCeruleanCityHns_Fountain)], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(840)), 8 * TILE_SIZE_4BPP);
 }
 
 // SilphCo HnS secondary tileset callbacks

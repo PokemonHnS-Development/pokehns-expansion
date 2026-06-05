@@ -10,6 +10,7 @@
 #include "battle_tower.h"
 #include "battle_transition.h"
 #include "event_data.h"
+#include "pokemon.h"
 #include "frontier_util.h"
 #include "overworld.h"
 #include "script.h"
@@ -31,14 +32,29 @@ COMMON_DATA u16 gFrontierTempParty[MAX_FRONTIER_PARTY_SIZE] = {0};
 
 static void HandleFacilityTrainerBattleEnd(void)
 {
+    s32 i;
     u8 facility = gBattleScripting.specialTrainerBattleType;
-    switch (facility) 
+    switch (facility)
     {
     case FACILITY_BATTLE_TOWER:
     case FACILITY_BATTLE_DOME:
     case FACILITY_BATTLE_PALACE:
     case FACILITY_BATTLE_ARENA:
     case FACILITY_BATTLE_FACTORY:
+        FlagClear(FLAG_LIMIT_TO_50);
+        for (i = 0; i < PARTY_SIZE; i++)
+            CalculateMonStats(&gPlayerParty[i]);
+        if (gSaveBlock2Ptr->frontier.battlesCount < 0xFFFFFF)
+        {
+            gSaveBlock2Ptr->frontier.battlesCount++;
+            if (gSaveBlock2Ptr->frontier.battlesCount % 20 == 0)
+                UpdateGymLeaderRematch();
+        }
+        else
+        {
+            gSaveBlock2Ptr->frontier.battlesCount = 0xFFFFFF;
+        }
+        break;
     case FACILITY_BATTLE_PIKE_SINGLE:
     case FACILITY_BATTLE_PIKE_DOUBLE:
     case FACILITY_BATTLE_PYRAMID:
@@ -73,8 +89,17 @@ static void Task_StartBattleAfterTransition(u8 taskId)
 
 static void DoFacilityTrainerBattleInternal(u8 facility)
 {
+    s32 i;
+
+    if (gSaveBlock2Ptr->frontier.lvlMode == FRONTIER_LVL_50)
+    {
+        FlagSet(FLAG_LIMIT_TO_50);
+        for (i = 0; i < PARTY_SIZE; i++)
+            CalculateMonStats(&gPlayerParty[i]);
+    }
+
     gBattleScripting.specialTrainerBattleType = facility;
-    
+
     switch (facility)
     {
     case FACILITY_BATTLE_TOWER:

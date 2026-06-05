@@ -9,6 +9,7 @@ u16 GetNationalPokedexCount(u8 caseID);
 u32 GetRegionalPokedexCount(u8 caseID);
 u16 GetHoennPokedexCount(u8 caseID);
 u16 GetKantoPokedexCount(u8 caseID);
+u16 GetJohtoPokedexCount(u8 caseID);
 u8 DisplayCaughtMonDexPage(u16 species, bool32 isShiny, u32 personality);
 u32 Pokedex_CreateCaughtMonSprite(u32 species, s32 x, s32 y);
 s8 GetSetPokedexFlag(enum NationalDexOrder nationalDexNo, u8 caseID);
@@ -17,6 +18,7 @@ u16 CreateMonSpriteFromNationalDexNumber(enum NationalDexOrder nationalNum, s16 
 bool16 HasAllRegionalMons(void);
 bool16 HasAllHoennMons(void);
 bool16 HasAllKantoMons(void);
+bool16 HasAllJohotoMons(void);
 void ResetPokedexScrollPositions(void);
 bool16 HasAllMons(void);
 void CB2_OpenPokedex(void);

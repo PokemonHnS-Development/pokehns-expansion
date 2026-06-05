@@ -3373,6 +3373,7 @@ u8 FldEff_UseSurf(void)
 {
     u8 taskId = CreateTask(Task_SurfFieldEffect, 0xff);
     gTasks[taskId].tMonId = gFieldEffectArguments[0];
+    VarSet(VAR_SURF_MON_SLOT, gFieldEffectArguments[0]);
     if (!gSaveblock3.challengeSettings.surfMusic)
     {
         Overworld_ClearSavedMusic();
@@ -3396,6 +3397,7 @@ static void Task_SurfFieldEffect(u8 taskId)
 
 static void SurfFieldEffect_Init(struct Task *task)
 {
+    VarSet(VAR_FREEZE_SURF_BLOB, 1);
     LockPlayerFieldControls();
     FreezeObjectEvents();
     // Put follower into pokeball before using Surf
@@ -3464,6 +3466,7 @@ static void SurfFieldEffect_End(struct Task *task)
         SetSurfBlob_BobState(objectEvent->fieldEffectSpriteId, BOB_PLAYER_AND_MON);
         UnfreezeObjectEvents();
         UnlockPlayerFieldControls();
+   		VarSet(VAR_FREEZE_SURF_BLOB, 0);
         FieldEffectActiveListRemove(FLDEFF_USE_SURF);
         DestroyTask(FindTaskIdByFunc(Task_SurfFieldEffect));
     }

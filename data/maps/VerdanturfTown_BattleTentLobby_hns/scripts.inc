@@ -59,6 +59,7 @@ VerdanturfTown_BattleTentLobby_hns_EventScript_GivePrize::
 	msgbox VerdanturfTown_BattleTentLobby_Text_ReturnFortified, MSGBOX_DEFAULT
 	closemessage
 	setvar VAR_TEMP_CHALLENGE_STATUS, 255
+	givebp 10
 	releaseall
 	end
 

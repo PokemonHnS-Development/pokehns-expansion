@@ -5314,9 +5314,17 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .abilities = { ABILITY_SAP_SIPPER, ABILITY_SHELL_ARMOR, ABILITY_GOOEY },
         .bodyColor = BODY_COLOR_PURPLE,
         .noFlip = TRUE,
+#if P_SEPARATE_REGIONAL_FORMS
+        .speciesName = _("Sliggoo-H"),
+#else
         .speciesName = _("Sliggoo"),
+#endif
         .cryId = CRY_SLIGGOO,
+#if P_SEPARATE_REGIONAL_FORMS
+        .natDexNum = NATIONAL_DEX_SLIGGOO_HISUI,
+#else
         .natDexNum = NATIONAL_DEX_SLIGGOO,
+#endif
         .categoryName = _("Snail"),
         .height = 7,
         .weight = 685,
@@ -5357,7 +5365,11 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .isHisuianForm = TRUE,
         .levelUpLearnset = sSliggooHisuiLevelUpLearnset,
         .teachableLearnset = sSliggooHisuiTeachableLearnset,
+#if P_SEPARATE_REGIONAL_FORMS
+        .formSpeciesIdTable = sSliggooHisuiFormSpeciesIdTable,
+#else
         .formSpeciesIdTable = sSliggooFormSpeciesIdTable,
+#endif
         .evolutions = EVOLUTION({EVO_LEVEL, 50, SPECIES_GOODRA_HISUI, CONDITIONS({IF_WEATHER, WEATHER_RAIN})},
                                 {EVO_LEVEL, 50, SPECIES_GOODRA_HISUI, CONDITIONS({IF_WEATHER, WEATHER_FOG})}),
 
@@ -5382,9 +5394,17 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_DRAGON),
         .abilities = { ABILITY_SAP_SIPPER, ABILITY_SHELL_ARMOR, ABILITY_GOOEY },
         .bodyColor = BODY_COLOR_PURPLE,
+#if P_SEPARATE_REGIONAL_FORMS
+        .speciesName = _("Goodra-H"),
+#else
         .speciesName = _("Goodra"),
+#endif
         .cryId = CRY_GOODRA,
+#if P_SEPARATE_REGIONAL_FORMS
+        .natDexNum = NATIONAL_DEX_GOODRA_HISUI,
+#else
         .natDexNum = NATIONAL_DEX_GOODRA,
+#endif
         .categoryName = _("Shell Bunker"),
         .height = 17,
         .weight = 3341,
@@ -5425,7 +5445,11 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .isHisuianForm = TRUE,
         .levelUpLearnset = sGoodraHisuiLevelUpLearnset,
         .teachableLearnset = sGoodraHisuiTeachableLearnset,
+#if P_SEPARATE_REGIONAL_FORMS
+        .formSpeciesIdTable = sGoodraHisuiFormSpeciesIdTable,
+#else
         .formSpeciesIdTable = sGoodraFormSpeciesIdTable,
+#endif
     },
 #endif //P_HISUIAN_FORMS
 #endif //P_FAMILY_GOOMY
@@ -6349,9 +6373,17 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .eggGroups = BERGMITE_EGG_GROUPS,
         .abilities = { ABILITY_STRONG_JAW, ABILITY_ICE_BODY, ABILITY_STURDY },
         .bodyColor = BODY_COLOR_BLUE,
+#if P_SEPARATE_REGIONAL_FORMS
+        .speciesName = _("Avalugg-H"),
+#else
         .speciesName = _("Avalugg"),
+#endif
         .cryId = CRY_AVALUGG,
+#if P_SEPARATE_REGIONAL_FORMS
+        .natDexNum = NATIONAL_DEX_AVALUGG_HISUI,
+#else
         .natDexNum = NATIONAL_DEX_AVALUGG,
+#endif
         .categoryName = _("Iceberg"),
         .height = 14,
         .weight = 2624,
@@ -6391,7 +6423,11 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .isHisuianForm = TRUE,
         .levelUpLearnset = sAvaluggHisuiLevelUpLearnset,
         .teachableLearnset = sAvaluggHisuiTeachableLearnset,
+#if P_SEPARATE_REGIONAL_FORMS
+        .formSpeciesIdTable = sAvaluggHisuiFormSpeciesIdTable,
+#else
         .formSpeciesIdTable = sAvaluggFormSpeciesIdTable,
+#endif
     },
 #endif //P_HISUIAN_FORMS
 #endif //P_FAMILY_BERGMITE

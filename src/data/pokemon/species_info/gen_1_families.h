@@ -2275,9 +2275,17 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
         .abilities = { ABILITY_GLUTTONY, ABILITY_HUSTLE, ABILITY_THICK_FAT },
         .bodyColor = BODY_COLOR_BLACK,
+#if P_SEPARATE_REGIONAL_FORMS
+        .speciesName = _("Rattata-A"),
+#else
         .speciesName = _("Rattata"),
+#endif
         .cryId = CRY_RATTATA,
+#if P_SEPARATE_REGIONAL_FORMS
+        .natDexNum = NATIONAL_DEX_RATTATA_ALOLA,
+#else
         .natDexNum = NATIONAL_DEX_RATTATA,
+#endif
         .categoryName = _("Mouse"),
         .height = 3,
         .weight = 38,
@@ -2319,7 +2327,11 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .levelUpLearnset = sRattataAlolaLevelUpLearnset,
         .teachableLearnset = sRattataAlolaTeachableLearnset,
         .eggMoveLearnset = sRattataAlolaEggMoveLearnset,
+#if P_SEPARATE_REGIONAL_FORMS
+        .formSpeciesIdTable = sRattataAlolaFormSpeciesIdTable,
+#else
         .formSpeciesIdTable = sRattataFormSpeciesIdTable,
+#endif
         .evolutions = EVOLUTION({EVO_LEVEL, 20, SPECIES_RATICATE_ALOLA, CONDITIONS({IF_TIME, TIME_NIGHT})},
                                 {EVO_NONE, 0, SPECIES_RATICATE_ALOLA_TOTEM}),
     },
@@ -2344,9 +2356,17 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
         .abilities = { ABILITY_GLUTTONY, ABILITY_HUSTLE, ABILITY_THICK_FAT },
         .bodyColor = BODY_COLOR_BLACK,
+#if P_SEPARATE_REGIONAL_FORMS
+        .speciesName = _("Raticate-A"),
+#else
         .speciesName = _("Raticate"),
+#endif
         .cryId = CRY_RATICATE,
+#if P_SEPARATE_REGIONAL_FORMS
+        .natDexNum = NATIONAL_DEX_RATICATE_ALOLA,
+#else
         .natDexNum = NATIONAL_DEX_RATICATE,
+#endif
         .categoryName = _("Mouse"),
         .height = 7,
         .weight = 255,
@@ -2383,7 +2403,11 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .isAlolanForm = TRUE,
         .levelUpLearnset = sRaticateAlolaLevelUpLearnset,
         .teachableLearnset = sRaticateAlolaTeachableLearnset,
+#if P_SEPARATE_REGIONAL_FORMS
+        .formSpeciesIdTable = sRaticateAlolaFormSpeciesIdTable,
+#else
         .formSpeciesIdTable = sRaticateFormSpeciesIdTable,
+#endif
     },
 
     [SPECIES_RATICATE_ALOLA_TOTEM] =
@@ -2406,9 +2430,17 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
         .abilities = { ABILITY_THICK_FAT, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_BLACK,
+#if P_SEPARATE_REGIONAL_FORMS
+        .speciesName = _("Raticate-A"),
+#else
         .speciesName = _("Raticate"),
+#endif
         .cryId = CRY_RATICATE,
+#if P_SEPARATE_REGIONAL_FORMS
+        .natDexNum = NATIONAL_DEX_RATICATE_ALOLA,
+#else
         .natDexNum = NATIONAL_DEX_RATICATE,
+#endif
         .categoryName = _("Mouse"),
         .height = 14,
         .weight = 1050,
@@ -2811,7 +2843,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             TRACKS_FOOT,
             sAnimTable_Following,
             gOverworldPalette_Pichu,
-            gShinyOverworldPalette_Pichu
+            gShinyOverworldPalette_Pichu,
+            gShinyModernOverworldPalette_Pichu
         )
         .levelUpLearnset = sPichuLevelUpLearnset,
         .teachableLearnset = sPichuTeachableLearnset,
@@ -2972,7 +3005,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             TRACKS_FOOT,
             sAnimTable_Following,
             gOverworldPalette_Pikachu,
-            gShinyOverworldPalette_Pikachu
+            gShinyOverworldPalette_Pikachu,
+            gShinyModernOverworldPalette_Pikachu
         )
         OVERWORLD_FEMALE(
             sPicTable_PikachuF,
@@ -3893,7 +3927,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             TRACKS_FOOT,
             sAnimTable_Following,
             gOverworldPalette_Pikachu,
-            gShinyOverworldPalette_Pikachu
+            gShinyOverworldPalette_Pikachu,
+            gShinyModernOverworldPalette_Pikachu
         )
         .cannotBeTraded = TRUE,
         .perfectIVCount = NUM_STATS,
@@ -3980,7 +4015,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             TRACKS_FOOT,
             sAnimTable_Following,
             gOverworldPalette_Raichu,
-            gShinyOverworldPalette_Raichu
+            gShinyOverworldPalette_Raichu,
+            gShinyModernOverworldPalette_Raichu
         )
         OVERWORLD_FEMALE(
             sPicTable_RaichuF,
@@ -4015,9 +4051,17 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD, EGG_GROUP_FAIRY),
         .abilities = { ABILITY_SURGE_SURFER, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_BROWN,
+#if P_SEPARATE_REGIONAL_FORMS
+        .speciesName = _("Raichu-A"),
+#else
         .speciesName = _("Raichu"),
+#endif
         .cryId = CRY_RAICHU,
+#if P_SEPARATE_REGIONAL_FORMS
+        .natDexNum = NATIONAL_DEX_RAICHU_ALOLA,
+#else
         .natDexNum = NATIONAL_DEX_RAICHU,
+#endif
         .categoryName = _("Mouse"),
         .height = 7,
         .weight = 210,
@@ -4059,7 +4103,11 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .isAlolanForm = TRUE,
         .levelUpLearnset = sRaichuAlolaLevelUpLearnset,
         .teachableLearnset = sRaichuAlolaTeachableLearnset,
+#if P_SEPARATE_REGIONAL_FORMS
+        .formSpeciesIdTable = sRaichuAlolaFormSpeciesIdTable,
+#else
         .formSpeciesIdTable = sRaichuFormSpeciesIdTable,
+#endif
     },
 #endif //P_ALOLAN_FORMS
 
@@ -4349,9 +4397,17 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
         .abilities = { ABILITY_SNOW_CLOAK, ABILITY_NONE, ABILITY_SLUSH_RUSH },
         .bodyColor = BODY_COLOR_BLUE,
+#if P_SEPARATE_REGIONAL_FORMS
+        .speciesName = _("Sandshrew-A"),
+#else
         .speciesName = _("Sandshrew"),
+#endif
         .cryId = CRY_SANDSHREW,
+#if P_SEPARATE_REGIONAL_FORMS
+        .natDexNum = NATIONAL_DEX_SANDSHREW_ALOLA,
+#else
         .natDexNum = NATIONAL_DEX_SANDSHREW,
+#endif
         .categoryName = _("Mouse"),
         .height = 7,
         .weight = 400,
@@ -4393,7 +4449,11 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .levelUpLearnset = sSandshrewAlolaLevelUpLearnset,
         .teachableLearnset = sSandshrewAlolaTeachableLearnset,
         .eggMoveLearnset = sSandshrewAlolaEggMoveLearnset,
+#if P_SEPARATE_REGIONAL_FORMS
+        .formSpeciesIdTable = sSandshrewAlolaFormSpeciesIdTable,
+#else
         .formSpeciesIdTable = sSandshrewFormSpeciesIdTable,
+#endif
         .evolutions = EVOLUTION({EVO_ITEM, ITEM_ICE_STONE, SPECIES_SANDSLASH_ALOLA}),
     },
 
@@ -4417,9 +4477,17 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
         .abilities = { ABILITY_SNOW_CLOAK, ABILITY_NONE, ABILITY_SLUSH_RUSH },
         .bodyColor = BODY_COLOR_BLUE,
+#if P_SEPARATE_REGIONAL_FORMS
+        .speciesName = _("Sandslash-A"),
+#else
         .speciesName = _("Sandslash"),
+#endif
         .cryId = CRY_SANDSLASH,
+#if P_SEPARATE_REGIONAL_FORMS
+        .natDexNum = NATIONAL_DEX_SANDSLASH_ALOLA,
+#else
         .natDexNum = NATIONAL_DEX_SANDSLASH,
+#endif
         .categoryName = _("Mouse"),
         .height = 12,
         .weight = 550,
@@ -4460,7 +4528,11 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .isAlolanForm = TRUE,
         .levelUpLearnset = sSandslashAlolaLevelUpLearnset,
         .teachableLearnset = sSandslashAlolaTeachableLearnset,
+#if P_SEPARATE_REGIONAL_FORMS
+        .formSpeciesIdTable = sSandslashAlolaFormSpeciesIdTable,
+#else
         .formSpeciesIdTable = sSandslashFormSpeciesIdTable,
+#endif
     },
 #endif //P_ALOLAN_FORMS
 #endif //P_FAMILY_SANDSHREW
@@ -5392,9 +5464,17 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
         .abilities = { ABILITY_SNOW_CLOAK, ABILITY_NONE, ABILITY_SNOW_WARNING },
         .bodyColor = BODY_COLOR_BLUE,
+#if P_SEPARATE_REGIONAL_FORMS
+        .speciesName = _("Vulpix-A"),
+#else
         .speciesName = _("Vulpix"),
+#endif
         .cryId = CRY_VULPIX,
+#if P_SEPARATE_REGIONAL_FORMS
+        .natDexNum = NATIONAL_DEX_VULPIX_ALOLA,
+#else
         .natDexNum = NATIONAL_DEX_VULPIX,
+#endif
         .categoryName = _("Fox"),
         .height = 6,
         .weight = 99,
@@ -5436,7 +5516,11 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .levelUpLearnset = sVulpixAlolaLevelUpLearnset,
         .teachableLearnset = sVulpixAlolaTeachableLearnset,
         .eggMoveLearnset = sVulpixAlolaEggMoveLearnset,
+#if P_SEPARATE_REGIONAL_FORMS
+        .formSpeciesIdTable = sVulpixAlolaFormSpeciesIdTable,
+#else
         .formSpeciesIdTable = sVulpixFormSpeciesIdTable,
+#endif
         .evolutions = EVOLUTION({EVO_ITEM, ITEM_ICE_STONE, SPECIES_NINETALES_ALOLA}),
     },
 
@@ -5461,9 +5545,17 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
         .abilities = { ABILITY_SNOW_CLOAK, ABILITY_NONE, ABILITY_SNOW_WARNING },
         .bodyColor = BODY_COLOR_BLUE,
+#if P_SEPARATE_REGIONAL_FORMS
+        .speciesName = _("Ninetales-A"),
+#else
         .speciesName = _("Ninetales"),
+#endif
         .cryId = CRY_NINETALES,
+#if P_SEPARATE_REGIONAL_FORMS
+        .natDexNum = NATIONAL_DEX_NINETALES_ALOLA,
+#else
         .natDexNum = NATIONAL_DEX_NINETALES,
+#endif
         .categoryName = _("Fox"),
         .height = 11,
         .weight = 199,
@@ -5504,7 +5596,11 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .isAlolanForm = TRUE,
         .levelUpLearnset = sNinetalesAlolaLevelUpLearnset,
         .teachableLearnset = sNinetalesAlolaTeachableLearnset,
+#if P_SEPARATE_REGIONAL_FORMS
+        .formSpeciesIdTable = sNinetalesAlolaFormSpeciesIdTable,
+#else
         .formSpeciesIdTable = sNinetalesFormSpeciesIdTable,
+#endif
     },
 #endif //P_ALOLAN_FORMS
 #endif //P_FAMILY_VULPIX
@@ -6473,7 +6569,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             TRACKS_BUG,
             sAnimTable_Following,
             gOverworldPalette_Paras,
-            gShinyOverworldPalette_Paras
+            gShinyOverworldPalette_Paras,
+            gShinyModernOverworldPalette_Paras
         )
         .levelUpLearnset = sParasLevelUpLearnset,
         .teachableLearnset = sParasTeachableLearnset,
@@ -6909,9 +7006,17 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
         .abilities = { ABILITY_SAND_VEIL, ABILITY_TANGLING_HAIR, ABILITY_SAND_FORCE },
         .bodyColor = BODY_COLOR_BROWN,
+#if P_SEPARATE_REGIONAL_FORMS
+        .speciesName = _("Diglett-A"),
+#else
         .speciesName = _("Diglett"),
+#endif
         .cryId = CRY_DIGLETT,
+#if P_SEPARATE_REGIONAL_FORMS
+        .natDexNum = NATIONAL_DEX_DIGLETT_ALOLA,
+#else
         .natDexNum = NATIONAL_DEX_DIGLETT,
+#endif
         .categoryName = _("Mole"),
         .height = 2,
         .weight = 10,
@@ -6953,7 +7058,11 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .levelUpLearnset = sDiglettAlolaLevelUpLearnset,
         .teachableLearnset = sDiglettAlolaTeachableLearnset,
         .eggMoveLearnset = sDiglettAlolaEggMoveLearnset,
+#if P_SEPARATE_REGIONAL_FORMS
+        .formSpeciesIdTable = sDiglettAlolaFormSpeciesIdTable,
+#else
         .formSpeciesIdTable = sDiglettFormSpeciesIdTable,
+#endif
         .evolutions = EVOLUTION({EVO_LEVEL, 26, SPECIES_DUGTRIO_ALOLA}),
     },
 
@@ -6978,9 +7087,17 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .abilities = { ABILITY_SAND_VEIL, ABILITY_TANGLING_HAIR, ABILITY_SAND_FORCE },
         .bodyColor = BODY_COLOR_BROWN,
         .noFlip = TRUE,
+#if P_SEPARATE_REGIONAL_FORMS
+        .speciesName = _("Dugtrio-A"),
+#else
         .speciesName = _("Dugtrio"),
+#endif
         .cryId = CRY_DUGTRIO,
+#if P_SEPARATE_REGIONAL_FORMS
+        .natDexNum = NATIONAL_DEX_DUGTRIO_ALOLA,
+#else
         .natDexNum = NATIONAL_DEX_DUGTRIO,
+#endif
         .categoryName = _("Mole"),
         .height = 7,
         .weight = 666,
@@ -7021,7 +7138,11 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .isAlolanForm = TRUE,
         .levelUpLearnset = sDugtrioAlolaLevelUpLearnset,
         .teachableLearnset = sDugtrioAlolaTeachableLearnset,
+#if P_SEPARATE_REGIONAL_FORMS
+        .formSpeciesIdTable = sDugtrioAlolaFormSpeciesIdTable,
+#else
         .formSpeciesIdTable = sDugtrioFormSpeciesIdTable,
+#endif
     },
 #endif //P_ALOLAN_FORMS
 #endif //P_FAMILY_DIGLETT
@@ -7203,9 +7324,17 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
         .abilities = { ABILITY_PICKUP, ABILITY_TECHNICIAN, ABILITY_RATTLED },
         .bodyColor = BODY_COLOR_GRAY,
+#if P_SEPARATE_REGIONAL_FORMS
+        .speciesName = _("Meowth-A"),
+#else
         .speciesName = _("Meowth"),
+#endif
         .cryId = CRY_MEOWTH,
+#if P_SEPARATE_REGIONAL_FORMS
+        .natDexNum = NATIONAL_DEX_MEOWTH_ALOLA,
+#else
         .natDexNum = NATIONAL_DEX_MEOWTH,
+#endif
         .categoryName = _("Scratch Cat"),
         .height = 4,
         .weight = 42,
@@ -7247,7 +7376,11 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .levelUpLearnset = sMeowthAlolaLevelUpLearnset,
         .teachableLearnset = sMeowthAlolaTeachableLearnset,
         .eggMoveLearnset = sMeowthAlolaEggMoveLearnset,
+#if P_SEPARATE_REGIONAL_FORMS
+        .formSpeciesIdTable = sMeowthAlolaFormSpeciesIdTable,
+#else
         .formSpeciesIdTable = sMeowthFormSpeciesIdTable,
+#endif
         .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_PERSIAN_ALOLA, CONDITIONS({IF_MIN_FRIENDSHIP, FRIENDSHIP_EVO_THRESHOLD})}),
     },
 
@@ -7271,9 +7404,17 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
         .abilities = { ABILITY_FUR_COAT, ABILITY_TECHNICIAN, ABILITY_RATTLED },
         .bodyColor = BODY_COLOR_GRAY,
+#if P_SEPARATE_REGIONAL_FORMS
+        .speciesName = _("Persian-A"),
+#else
         .speciesName = _("Persian"),
+#endif
         .cryId = CRY_PERSIAN,
+#if P_SEPARATE_REGIONAL_FORMS
+        .natDexNum = NATIONAL_DEX_PERSIAN_ALOLA,
+#else
         .natDexNum = NATIONAL_DEX_PERSIAN,
+#endif
         .categoryName = _("Classy Cat"),
         .height = 11,
         .weight = 330,
@@ -7314,7 +7455,11 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .isAlolanForm = TRUE,
         .levelUpLearnset = sPersianAlolaLevelUpLearnset,
         .teachableLearnset = sPersianAlolaTeachableLearnset,
+#if P_SEPARATE_REGIONAL_FORMS
+        .formSpeciesIdTable = sPersianAlolaFormSpeciesIdTable,
+#else
         .formSpeciesIdTable = sPersianFormSpeciesIdTable,
+#endif
     },
 #endif //P_ALOLAN_FORMS
 
@@ -7338,9 +7483,17 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
         .abilities = { ABILITY_PICKUP, ABILITY_TOUGH_CLAWS, ABILITY_UNNERVE },
         .bodyColor = BODY_COLOR_BROWN,
+#if P_SEPARATE_REGIONAL_FORMS
+        .speciesName = _("Meowth-G"),
+#else
         .speciesName = _("Meowth"),
+#endif
         .cryId = CRY_MEOWTH,
+#if P_SEPARATE_REGIONAL_FORMS
+        .natDexNum = NATIONAL_DEX_MEOWTH_GALAR,
+#else
         .natDexNum = NATIONAL_DEX_MEOWTH,
+#endif
         .categoryName = _("Scratch Cat"),
         .height = 4,
         .weight = 75,
@@ -7382,7 +7535,11 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .levelUpLearnset = sMeowthGalarLevelUpLearnset,
         .teachableLearnset = sMeowthGalarTeachableLearnset,
         .eggMoveLearnset = sMeowthGalarEggMoveLearnset,
+#if P_SEPARATE_REGIONAL_FORMS
+        .formSpeciesIdTable = sMeowthGalarFormSpeciesIdTable,
+#else
         .formSpeciesIdTable = sMeowthFormSpeciesIdTable,
+#endif
         .evolutions = EVOLUTION({EVO_LEVEL, 28, SPECIES_PERRSERKER}),
     },
 
@@ -8040,9 +8197,17 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
         .abilities = { ABILITY_INTIMIDATE, ABILITY_FLASH_FIRE, ABILITY_ROCK_HEAD },
         .bodyColor = BODY_COLOR_BROWN,
+#if P_SEPARATE_REGIONAL_FORMS
+        .speciesName = _("Growlithe-H"),
+#else
         .speciesName = _("Growlithe"),
+#endif
         .cryId = CRY_GROWLITHE,
+#if P_SEPARATE_REGIONAL_FORMS
+        .natDexNum = NATIONAL_DEX_GROWLITHE_HISUI,
+#else
         .natDexNum = NATIONAL_DEX_GROWLITHE,
+#endif
         .categoryName = _("Scout"),
         .height = 8,
         .weight = 227,
@@ -8084,7 +8249,11 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .levelUpLearnset = sGrowlitheHisuiLevelUpLearnset,
         .teachableLearnset = sGrowlitheHisuiTeachableLearnset,
         .eggMoveLearnset = sGrowlitheHisuiEggMoveLearnset,
+#if P_SEPARATE_REGIONAL_FORMS
+        .formSpeciesIdTable = sGrowlitheHisuiFormSpeciesIdTable,
+#else
         .formSpeciesIdTable = sGrowlitheFormSpeciesIdTable,
+#endif
         .evolutions = EVOLUTION({EVO_ITEM, ITEM_FIRE_STONE, SPECIES_ARCANINE_HISUI}),
     },
 
@@ -8107,9 +8276,17 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
         .abilities = { ABILITY_INTIMIDATE, ABILITY_FLASH_FIRE, ABILITY_ROCK_HEAD },
         .bodyColor = BODY_COLOR_BROWN,
+#if P_SEPARATE_REGIONAL_FORMS
+        .speciesName = _("Arcanine-H"),
+#else
         .speciesName = _("Arcanine"),
+#endif
         .cryId = CRY_ARCANINE,
+#if P_SEPARATE_REGIONAL_FORMS
+        .natDexNum = NATIONAL_DEX_ARCANINE_HISUI,
+#else
         .natDexNum = NATIONAL_DEX_ARCANINE,
+#endif
         .categoryName = _("Legendary"),
         .height = 20,
         .weight = 1680,
@@ -8150,7 +8327,11 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .isHisuianForm = TRUE,
         .levelUpLearnset = sArcanineHisuiLevelUpLearnset,
         .teachableLearnset = sArcanineHisuiTeachableLearnset,
+#if P_SEPARATE_REGIONAL_FORMS
+        .formSpeciesIdTable = sArcanineHisuiFormSpeciesIdTable,
+#else
         .formSpeciesIdTable = sArcanineFormSpeciesIdTable,
+#endif
     },
 #endif //P_HISUIAN_FORMS
 #endif //P_FAMILY_GROWLITHE
@@ -9489,7 +9670,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             TRACKS_SPOT,
             sAnimTable_Following,
             gOverworldPalette_Tentacool,
-            gShinyOverworldPalette_Tentacool
+            gShinyOverworldPalette_Tentacool,
+            gShinyModernOverworldPalette_Tentacool
         )
         .levelUpLearnset = sTentacoolLevelUpLearnset,
         .teachableLearnset = sTentacoolTeachableLearnset,
@@ -9562,7 +9744,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             TRACKS_BUG,
             sAnimTable_Following,
             gOverworldPalette_Tentacruel,
-            gShinyOverworldPalette_Tentacruel
+            gShinyOverworldPalette_Tentacruel,
+            gShinyModernOverworldPalette_Tentacruel
         )
         .levelUpLearnset = sTentacruelLevelUpLearnset,
         .teachableLearnset = sTentacruelTeachableLearnset,
@@ -9821,9 +10004,17 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MINERAL),
         .abilities = { ABILITY_MAGNET_PULL, ABILITY_STURDY, ABILITY_GALVANIZE },
         .bodyColor = BODY_COLOR_BROWN,
+#if P_SEPARATE_REGIONAL_FORMS
+        .speciesName = _("Geodude-A"),
+#else
         .speciesName = _("Geodude"),
+#endif
         .cryId = CRY_GEODUDE,
+#if P_SEPARATE_REGIONAL_FORMS
+        .natDexNum = NATIONAL_DEX_GEODUDE_ALOLA,
+#else
         .natDexNum = NATIONAL_DEX_GEODUDE,
+#endif
         .categoryName = _("Rock"),
         .height = 4,
         .weight = 203,
@@ -9866,7 +10057,11 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .levelUpLearnset = sGeodudeAlolaLevelUpLearnset,
         .teachableLearnset = sGeodudeAlolaTeachableLearnset,
         .eggMoveLearnset = sGeodudeAlolaEggMoveLearnset,
+#if P_SEPARATE_REGIONAL_FORMS
+        .formSpeciesIdTable = sGeodudeAlolaFormSpeciesIdTable,
+#else
         .formSpeciesIdTable = sGeodudeFormSpeciesIdTable,
+#endif
         .evolutions = EVOLUTION({EVO_LEVEL, 25, SPECIES_GRAVELER_ALOLA}),
     },
 
@@ -9890,9 +10085,17 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MINERAL),
         .abilities = { ABILITY_MAGNET_PULL, ABILITY_STURDY, ABILITY_GALVANIZE },
         .bodyColor = BODY_COLOR_BROWN,
+#if P_SEPARATE_REGIONAL_FORMS
+        .speciesName = _("Graveler-A"),
+#else
         .speciesName = _("Graveler"),
+#endif
         .cryId = CRY_GRAVELER,
+#if P_SEPARATE_REGIONAL_FORMS
+        .natDexNum = NATIONAL_DEX_GRAVELER_ALOLA,
+#else
         .natDexNum = NATIONAL_DEX_GRAVELER,
+#endif
         .categoryName = _("Rock"),
         .height = 10,
         .weight = 1100,
@@ -9933,7 +10136,11 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .isAlolanForm = TRUE,
         .levelUpLearnset = sGravelerAlolaLevelUpLearnset,
         .teachableLearnset = sGravelerAlolaTeachableLearnset,
+#if P_SEPARATE_REGIONAL_FORMS
+        .formSpeciesIdTable = sGravelerAlolaFormSpeciesIdTable,
+#else
         .formSpeciesIdTable = sGravelerFormSpeciesIdTable,
+#endif
         .evolutions = EVOLUTION({EVO_TRADE, 0, SPECIES_GOLEM_ALOLA},
                                 {EVO_LEVEL, 38, SPECIES_GOLEM_ALOLA}),
     },
@@ -9958,9 +10165,17 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MINERAL),
         .abilities = { ABILITY_MAGNET_PULL, ABILITY_STURDY, ABILITY_GALVANIZE },
         .bodyColor = BODY_COLOR_BROWN,
+#if P_SEPARATE_REGIONAL_FORMS
+        .speciesName = _("Golem-A"),
+#else
         .speciesName = _("Golem"),
+#endif
         .cryId = CRY_GOLEM,
+#if P_SEPARATE_REGIONAL_FORMS
+        .natDexNum = NATIONAL_DEX_GOLEM_ALOLA,
+#else
         .natDexNum = NATIONAL_DEX_GOLEM,
+#endif
         .categoryName = _("Megaton"),
         .height = 17,
         .weight = 3160,
@@ -10001,7 +10216,11 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .isAlolanForm = TRUE,
         .levelUpLearnset = sGolemAlolaLevelUpLearnset,
         .teachableLearnset = sGolemAlolaTeachableLearnset,
+#if P_SEPARATE_REGIONAL_FORMS
+        .formSpeciesIdTable = sGolemAlolaFormSpeciesIdTable,
+#else
         .formSpeciesIdTable = sGolemFormSpeciesIdTable,
+#endif
     },
 #endif //P_ALOLAN_FORMS
 #endif //P_FAMILY_GEODUDE
@@ -10165,9 +10384,17 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
         .abilities = { ABILITY_RUN_AWAY, ABILITY_PASTEL_VEIL, ABILITY_ANTICIPATION },
         .bodyColor = BODY_COLOR_WHITE,
+#if P_SEPARATE_REGIONAL_FORMS
+        .speciesName = _("Ponyta-G"),
+#else
         .speciesName = _("Ponyta"),
+#endif
         .cryId = CRY_PONYTA,
+#if P_SEPARATE_REGIONAL_FORMS
+        .natDexNum = NATIONAL_DEX_PONYTA_GALAR,
+#else
         .natDexNum = NATIONAL_DEX_PONYTA,
+#endif
         .categoryName = _("Unique Horn"),
         .height = 8,
         .weight = 240,
@@ -10209,7 +10436,11 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .levelUpLearnset = sPonytaGalarLevelUpLearnset,
         .teachableLearnset = sPonytaGalarTeachableLearnset,
         .eggMoveLearnset = sPonytaGalarEggMoveLearnset,
+#if P_SEPARATE_REGIONAL_FORMS
+        .formSpeciesIdTable = sPonytaGalarFormSpeciesIdTable,
+#else
         .formSpeciesIdTable = sPonytaFormSpeciesIdTable,
+#endif
         .evolutions = EVOLUTION({EVO_LEVEL, 40, SPECIES_RAPIDASH_GALAR}),
     },
 
@@ -10232,9 +10463,17 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
         .abilities = { ABILITY_RUN_AWAY, ABILITY_PASTEL_VEIL, ABILITY_ANTICIPATION },
         .bodyColor = BODY_COLOR_WHITE,
+#if P_SEPARATE_REGIONAL_FORMS
+        .speciesName = _("Rapidash-G"),
+#else
         .speciesName = _("Rapidash"),
+#endif
         .cryId = CRY_RAPIDASH,
+#if P_SEPARATE_REGIONAL_FORMS
+        .natDexNum = NATIONAL_DEX_RAPIDASH_GALAR,
+#else
         .natDexNum = NATIONAL_DEX_RAPIDASH,
+#endif
         .categoryName = _("Unique Horn"),
         .height = 17,
         .weight = 800,
@@ -10275,7 +10514,11 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .isGalarianForm = TRUE,
         .levelUpLearnset = sRapidashGalarLevelUpLearnset,
         .teachableLearnset = sRapidashGalarTeachableLearnset,
+#if P_SEPARATE_REGIONAL_FORMS
+        .formSpeciesIdTable = sRapidashGalarFormSpeciesIdTable,
+#else
         .formSpeciesIdTable = sRapidashFormSpeciesIdTable,
+#endif
     },
 #endif //P_GALARIAN_FORMS
 #endif //P_FAMILY_PONYTA
@@ -10588,9 +10831,17 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MONSTER, EGG_GROUP_WATER_1),
         .abilities = { ABILITY_GLUTTONY, ABILITY_OWN_TEMPO, ABILITY_REGENERATOR },
         .bodyColor = BODY_COLOR_PINK,
+#if P_SEPARATE_REGIONAL_FORMS
+        .speciesName = _("Slowpoke-G"),
+#else
         .speciesName = _("Slowpoke"),
+#endif
         .cryId = CRY_SLOWPOKE_GALAR,
+#if P_SEPARATE_REGIONAL_FORMS
+        .natDexNum = NATIONAL_DEX_SLOWPOKE_GALAR,
+#else
         .natDexNum = NATIONAL_DEX_SLOWPOKE,
+#endif
         .categoryName = _("Dopey"),
         .height = 12,
         .weight = 360,
@@ -10632,7 +10883,11 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .levelUpLearnset = sSlowpokeGalarLevelUpLearnset,
         .teachableLearnset = sSlowpokeGalarTeachableLearnset,
         .eggMoveLearnset = sSlowpokeGalarEggMoveLearnset,
+#if P_SEPARATE_REGIONAL_FORMS
+        .formSpeciesIdTable = sSlowpokeGalarFormSpeciesIdTable,
+#else
         .formSpeciesIdTable = sSlowpokeFormSpeciesIdTable,
+#endif
         .evolutions = EVOLUTION({EVO_ITEM, ITEM_GALARICA_CUFF, SPECIES_SLOWBRO_GALAR}
                             #if P_GEN_2_CROSS_EVOS
                                 ,{EVO_ITEM, ITEM_GALARICA_WREATH, SPECIES_SLOWKING_GALAR}
@@ -10661,9 +10916,17 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .abilities = { ABILITY_QUICK_DRAW, ABILITY_OWN_TEMPO, ABILITY_REGENERATOR },
         .bodyColor = BODY_COLOR_PINK,
         .noFlip = TRUE,
+#if P_SEPARATE_REGIONAL_FORMS
+        .speciesName = _("Slowbro-G"),
+#else
         .speciesName = _("Slowbro"),
+#endif
         .cryId = CRY_SLOWBRO,
+#if P_SEPARATE_REGIONAL_FORMS
+        .natDexNum = NATIONAL_DEX_SLOWBRO_GALAR,
+#else
         .natDexNum = NATIONAL_DEX_SLOWBRO,
+#endif
         .categoryName = _("Hermit Crab"),
         .height = 16,
         .weight = 705,
@@ -10704,7 +10967,11 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .isGalarianForm = TRUE,
         .levelUpLearnset = sSlowbroGalarLevelUpLearnset,
         .teachableLearnset = sSlowbroGalarTeachableLearnset,
+#if P_SEPARATE_REGIONAL_FORMS
+        .formSpeciesIdTable = sSlowbroGalarFormSpeciesIdTable,
+#else
         .formSpeciesIdTable = sSlowbroFormSpeciesIdTable,
+#endif
     },
 
 #if P_GEN_2_CROSS_EVOS
@@ -10727,9 +10994,17 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MONSTER, EGG_GROUP_WATER_1),
         .abilities = { ABILITY_CURIOUS_MEDICINE, ABILITY_OWN_TEMPO, ABILITY_REGENERATOR },
         .bodyColor = BODY_COLOR_PINK,
+#if P_SEPARATE_REGIONAL_FORMS
+        .speciesName = _("Slowking-G"),
+#else
         .speciesName = _("Slowking"),
+#endif
         .cryId = CRY_SLOWKING,
+#if P_SEPARATE_REGIONAL_FORMS
+        .natDexNum = NATIONAL_DEX_SLOWKING_GALAR,
+#else
         .natDexNum = NATIONAL_DEX_SLOWKING,
+#endif
         .categoryName = _("Hexpert"),
         .height = 18,
         .weight = 795,
@@ -10770,7 +11045,11 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .isGalarianForm = TRUE,
         .levelUpLearnset = sSlowkingGalarLevelUpLearnset,
         .teachableLearnset = sSlowkingGalarTeachableLearnset,
+#if P_SEPARATE_REGIONAL_FORMS
+        .formSpeciesIdTable = sSlowkingGalarFormSpeciesIdTable,
+#else
         .formSpeciesIdTable = sSlowkingFormSpeciesIdTable,
+#endif
     },
 #endif //P_GEN_2_CROSS_EVOS
 #endif //P_GALARIAN_FORMS
@@ -11090,7 +11369,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             TRACKS_NONE,
             sAnimTable_Following_Asym,
             gOverworldPalette_Farfetchd,
-            gShinyOverworldPalette_Farfetchd
+            gShinyOverworldPalette_Farfetchd,
+            gShinyModernOverworldPalette_Farfetchd
         )
         .isSkyBattleBanned = B_SKY_BATTLE_STRICT_ELIGIBILITY,
         .levelUpLearnset = sFarfetchdLevelUpLearnset,
@@ -11121,9 +11401,17 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .abilities = { ABILITY_STEADFAST, ABILITY_NONE, ABILITY_SCRAPPY },
         .bodyColor = BODY_COLOR_BROWN,
         .noFlip = TRUE,
+#if P_SEPARATE_REGIONAL_FORMS
+        .speciesName = _("Farfetch'd-G"),
+#else
         .speciesName = _("Farfetch'd"),
+#endif
         .cryId = CRY_FARFETCHD,
+#if P_SEPARATE_REGIONAL_FORMS
+        .natDexNum = NATIONAL_DEX_FARFETCHD_GALAR,
+#else
         .natDexNum = NATIONAL_DEX_FARFETCHD,
+#endif
         .categoryName = _("Wild Duck"),
         .height = 8,
         .weight = 420,
@@ -11165,7 +11453,11 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .levelUpLearnset = sFarfetchdGalarLevelUpLearnset,
         .teachableLearnset = sFarfetchdGalarTeachableLearnset,
         .eggMoveLearnset = sFarfetchdGalarEggMoveLearnset,
+#if P_SEPARATE_REGIONAL_FORMS
+        .formSpeciesIdTable = sFarfetchdGalarFormSpeciesIdTable,
+#else
         .formSpeciesIdTable = sFarfetchdFormSpeciesIdTable,
+#endif
         .evolutions = EVOLUTION({EVO_BATTLE_END, 0, SPECIES_SIRFETCHD, CONDITIONS({IF_CRITICAL_HITS_GE, 3})}),
     },
 
@@ -11732,9 +12024,17 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_AMORPHOUS),
         .abilities = { ABILITY_POISON_TOUCH, ABILITY_GLUTTONY, ABILITY_POWER_OF_ALCHEMY },
         .bodyColor = BODY_COLOR_GREEN,
+#if P_SEPARATE_REGIONAL_FORMS
+        .speciesName = _("Grimer-A"),
+#else
         .speciesName = _("Grimer"),
+#endif
         .cryId = CRY_GRIMER,
+#if P_SEPARATE_REGIONAL_FORMS
+        .natDexNum = NATIONAL_DEX_GRIMER_ALOLA,
+#else
         .natDexNum = NATIONAL_DEX_GRIMER,
+#endif
         .categoryName = _("Sludge"),
         .height = 7,
         .weight = 420,
@@ -11776,7 +12076,11 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .levelUpLearnset = sGrimerAlolaLevelUpLearnset,
         .teachableLearnset = sGrimerAlolaTeachableLearnset,
         .eggMoveLearnset = sGrimerAlolaEggMoveLearnset,
+#if P_SEPARATE_REGIONAL_FORMS
+        .formSpeciesIdTable = sGrimerAlolaFormSpeciesIdTable,
+#else
         .formSpeciesIdTable = sGrimerFormSpeciesIdTable,
+#endif
         .evolutions = EVOLUTION({EVO_LEVEL, 38, SPECIES_MUK_ALOLA}),
     },
 
@@ -11802,9 +12106,17 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .abilities = { ABILITY_POISON_TOUCH, ABILITY_GLUTTONY, ABILITY_POWER_OF_ALCHEMY },
         .bodyColor = BODY_COLOR_GREEN,
         .noFlip = TRUE,
+#if P_SEPARATE_REGIONAL_FORMS
+        .speciesName = _("Muk-A"),
+#else
         .speciesName = _("Muk"),
+#endif
         .cryId = CRY_MUK,
+#if P_SEPARATE_REGIONAL_FORMS
+        .natDexNum = NATIONAL_DEX_MUK_ALOLA,
+#else
         .natDexNum = NATIONAL_DEX_MUK,
+#endif
         .categoryName = _("Sludge"),
         .height = 10,
         .weight = 520,
@@ -11845,7 +12157,11 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .isAlolanForm = TRUE,
         .levelUpLearnset = sMukAlolaLevelUpLearnset,
         .teachableLearnset = sMukAlolaTeachableLearnset,
+#if P_SEPARATE_REGIONAL_FORMS
+        .formSpeciesIdTable = sMukAlolaFormSpeciesIdTable,
+#else
         .formSpeciesIdTable = sMukFormSpeciesIdTable,
+#endif
     },
 #endif //P_ALOLAN_FORMS
 #endif //P_FAMILY_GRIMER
@@ -12144,7 +12460,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             TRACKS_NONE,
             sAnimTable_Following,
             gOverworldPalette_Haunter,
-            gShinyOverworldPalette_Haunter
+            gShinyOverworldPalette_Haunter,
+            gShinyModernOverworldPalette_Haunter
         )
         .levelUpLearnset = sHaunterLevelUpLearnset,
         .teachableLearnset = sHaunterTeachableLearnset,
@@ -12230,7 +12547,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             TRACKS_FOOT,
             sAnimTable_Following,
             gOverworldPalette_Gengar,
-            gShinyOverworldPalette_Gengar
+            gShinyOverworldPalette_Gengar,
+            gShinyModernOverworldPalette_Gengar
         )
         .levelUpLearnset = sGengarLevelUpLearnset,
         .teachableLearnset = sGengarTeachableLearnset,
@@ -13149,9 +13467,17 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MINERAL),
         .abilities = { ABILITY_SOUNDPROOF, ABILITY_STATIC, ABILITY_AFTERMATH },
         .bodyColor = BODY_COLOR_RED,
+#if P_SEPARATE_REGIONAL_FORMS
+        .speciesName = _("Voltorb-H"),
+#else
         .speciesName = _("Voltorb"),
+#endif
         .cryId = CRY_VOLTORB,
+#if P_SEPARATE_REGIONAL_FORMS
+        .natDexNum = NATIONAL_DEX_VOLTORB_HISUI,
+#else
         .natDexNum = NATIONAL_DEX_VOLTORB,
+#endif
         .categoryName = _("Sphere"),
         .height = 5,
         .weight = 130,
@@ -13192,7 +13518,11 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .isHisuianForm = TRUE,
         .levelUpLearnset = sVoltorbHisuiLevelUpLearnset,
         .teachableLearnset = sVoltorbHisuiTeachableLearnset,
+#if P_SEPARATE_REGIONAL_FORMS
+        .formSpeciesIdTable = sVoltorbHisuiFormSpeciesIdTable,
+#else
         .formSpeciesIdTable = sVoltorbFormSpeciesIdTable,
+#endif
         .evolutions = EVOLUTION({EVO_ITEM, ITEM_LEAF_STONE, SPECIES_ELECTRODE_HISUI}),
     },
 
@@ -13215,9 +13545,17 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MINERAL),
         .abilities = { ABILITY_SOUNDPROOF, ABILITY_STATIC, ABILITY_AFTERMATH },
         .bodyColor = BODY_COLOR_RED,
+#if P_SEPARATE_REGIONAL_FORMS
+        .speciesName = _("Electrode-H"),
+#else
         .speciesName = _("Electrode"),
+#endif
         .cryId = CRY_ELECTRODE,
+#if P_SEPARATE_REGIONAL_FORMS
+        .natDexNum = NATIONAL_DEX_ELECTRODE_HISUI,
+#else
         .natDexNum = NATIONAL_DEX_ELECTRODE,
+#endif
         .categoryName = _("Sphere"),
         .height = 12,
         .weight = 710,
@@ -13258,7 +13596,11 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .isHisuianForm = TRUE,
         .levelUpLearnset = sElectrodeHisuiLevelUpLearnset,
         .teachableLearnset = sElectrodeHisuiTeachableLearnset,
+#if P_SEPARATE_REGIONAL_FORMS
+        .formSpeciesIdTable = sElectrodeHisuiFormSpeciesIdTable,
+#else
         .formSpeciesIdTable = sElectrodeFormSpeciesIdTable,
+#endif
     },
 #endif //P_HISUIAN_FORMS
 #endif //P_FAMILY_VOLTORB
@@ -13446,9 +13788,17 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .abilities = { ABILITY_FRISK, ABILITY_NONE, ABILITY_HARVEST },
         .bodyColor = BODY_COLOR_YELLOW,
         .noFlip = TRUE,
+#if P_SEPARATE_REGIONAL_FORMS
+        .speciesName = _("Exeggutor-A"),
+#else
         .speciesName = _("Exeggutor"),
+#endif
         .cryId = CRY_EXEGGUTOR,
+#if P_SEPARATE_REGIONAL_FORMS
+        .natDexNum = NATIONAL_DEX_EXEGGUTOR_ALOLA,
+#else
         .natDexNum = NATIONAL_DEX_EXEGGUTOR,
+#endif
         .categoryName = _("Coconut"),
         .height = 109,
         .weight = 4156,
@@ -13489,7 +13839,11 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .isAlolanForm = TRUE,
         .levelUpLearnset = sExeggutorAlolaLevelUpLearnset,
         .teachableLearnset = sExeggutorAlolaTeachableLearnset,
+#if P_SEPARATE_REGIONAL_FORMS
+        .formSpeciesIdTable = sExeggutorAlolaFormSpeciesIdTable,
+#else
         .formSpeciesIdTable = sExeggutorFormSpeciesIdTable,
+#endif
     },
 #endif //P_ALOLAN_FORMS
 #endif //P_FAMILY_EXEGGCUTE
@@ -13642,7 +13996,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             TRACKS_FOOT,
             sAnimTable_Following_Asym,
             gOverworldPalette_Marowak,
-            gShinyOverworldPalette_Marowak
+            gShinyOverworldPalette_Marowak,
+            gShinyModernOverworldPalette_Marowak
         )
         .levelUpLearnset = sMarowakLevelUpLearnset,
         .teachableLearnset = sMarowakTeachableLearnset,
@@ -13671,9 +14026,17 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .abilities = { ABILITY_CURSED_BODY, ABILITY_LIGHTNING_ROD, ABILITY_ROCK_HEAD },
         .bodyColor = BODY_COLOR_PURPLE,
         .noFlip = TRUE,
+#if P_SEPARATE_REGIONAL_FORMS
+        .speciesName = _("Marowak-A"),
+#else
         .speciesName = _("Marowak"),
+#endif
         .cryId = CRY_MAROWAK,
+#if P_SEPARATE_REGIONAL_FORMS
+        .natDexNum = NATIONAL_DEX_MAROWAK_ALOLA,
+#else
         .natDexNum = NATIONAL_DEX_MAROWAK,
+#endif
         .categoryName = _("Bone Keeper"),
         .height = 10,
         .weight = 340,
@@ -13710,7 +14073,11 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .isAlolanForm = TRUE,
         .levelUpLearnset = sMarowakAlolaLevelUpLearnset,
         .teachableLearnset = sMarowakAlolaTeachableLearnset,
+#if P_SEPARATE_REGIONAL_FORMS
+        .formSpeciesIdTable = sMarowakAlolaFormSpeciesIdTable,
+#else
         .formSpeciesIdTable = sMarowakFormSpeciesIdTable,
+#endif
     },
 
     [SPECIES_MAROWAK_ALOLA_TOTEM] =
@@ -13733,9 +14100,17 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MONSTER),
         .abilities = { ABILITY_ROCK_HEAD, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_PURPLE,
+#if P_SEPARATE_REGIONAL_FORMS
+        .speciesName = _("Marowak-A"),
+#else
         .speciesName = _("Marowak"),
+#endif
         .cryId = CRY_MAROWAK,
+#if P_SEPARATE_REGIONAL_FORMS
+        .natDexNum = NATIONAL_DEX_MAROWAK_ALOLA,
+#else
         .natDexNum = NATIONAL_DEX_MAROWAK,
+#endif
         .categoryName = _("Bone Keeper"),
         .height = 17,
         .weight = 980,
@@ -13774,7 +14149,11 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .levelUpLearnset = sMarowakAlolaLevelUpLearnset,
         .teachableLearnset = sMarowakAlolaTeachableLearnset,
+#if P_SEPARATE_REGIONAL_FORMS
+        .formSpeciesIdTable = sMarowakAlolaFormSpeciesIdTable,
+#else
         .formSpeciesIdTable = sMarowakFormSpeciesIdTable,
+#endif
     },
 #endif //P_ALOLAN_FORMS
 #endif //P_FAMILY_CUBONE
@@ -14412,9 +14791,17 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .abilities = { ABILITY_LEVITATE, ABILITY_NEUTRALIZING_GAS, ABILITY_MISTY_SURGE },
         .bodyColor = BODY_COLOR_GRAY,
         .noFlip = TRUE,
+#if P_SEPARATE_REGIONAL_FORMS
+        .speciesName = _("Weezing-G"),
+#else
         .speciesName = _("Weezing"),
+#endif
         .cryId = CRY_WEEZING,
+#if P_SEPARATE_REGIONAL_FORMS
+        .natDexNum = NATIONAL_DEX_WEEZING_GALAR,
+#else
         .natDexNum = NATIONAL_DEX_WEEZING,
+#endif
         .categoryName = _("Poison Gas"),
         .height = 30,
         .weight = 160,
@@ -14456,7 +14843,11 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .isGalarianForm = TRUE,
         .levelUpLearnset = sWeezingGalarLevelUpLearnset,
         .teachableLearnset = sWeezingGalarTeachableLearnset,
+#if P_SEPARATE_REGIONAL_FORMS
+        .formSpeciesIdTable = sWeezingGalarFormSpeciesIdTable,
+#else
         .formSpeciesIdTable = sWeezingFormSpeciesIdTable,
+#endif
     },
 #endif //P_GALARIAN_FORMS
 #endif //P_FAMILY_KOFFING
@@ -16059,9 +16450,17 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_HUMAN_LIKE),
         .abilities = { ABILITY_VITAL_SPIRIT, ABILITY_SCREEN_CLEANER, ABILITY_ICE_BODY },
         .bodyColor = BODY_COLOR_WHITE,
+#if P_SEPARATE_REGIONAL_FORMS
+        .speciesName = _("Mr. Mime-G"),
+#else
         .speciesName = _("Mr. Mime"),
+#endif
         .cryId = CRY_MR_MIME,
+#if P_SEPARATE_REGIONAL_FORMS
+        .natDexNum = NATIONAL_DEX_MR_MIME_GALAR,
+#else
         .natDexNum = NATIONAL_DEX_MR_MIME,
+#endif
         .categoryName = _("Dancing"),
         .height = 14,
         .weight = 568,
@@ -16103,7 +16502,11 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .levelUpLearnset = sMrMimeGalarLevelUpLearnset,
         .teachableLearnset = sMrMimeGalarTeachableLearnset,
         .eggMoveLearnset = sMrMimeGalarEggMoveLearnset,
+#if P_SEPARATE_REGIONAL_FORMS
+        .formSpeciesIdTable = sMrMimeGalarFormSpeciesIdTable,
+#else
         .formSpeciesIdTable = sMrMimeFormSpeciesIdTable,
+#endif
         .evolutions = EVOLUTION({EVO_LEVEL, 42, SPECIES_MR_RIME}),
     },
 
@@ -16249,7 +16652,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             TRACKS_FOOT,
             sAnimTable_Following,
             gOverworldPalette_Scyther,
-            gShinyOverworldPalette_Scyther
+            gShinyOverworldPalette_Scyther,
+            gShinyModernOverworldPalette_Scyther
         )
         OVERWORLD_FEMALE(
             sPicTable_ScytherF,
@@ -16720,7 +17124,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             TRACKS_FOOT,
             sAnimTable_Following,
             gOverworldPalette_Elekid,
-            gShinyOverworldPalette_Elekid
+            gShinyOverworldPalette_Elekid,
+            gShinyModernOverworldPalette_Elekid
         )
         .levelUpLearnset = sElekidLevelUpLearnset,
         .teachableLearnset = sElekidTeachableLearnset,
@@ -17354,9 +17759,17 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
         .abilities = { ABILITY_INTIMIDATE, ABILITY_ANGER_POINT, ABILITY_CUD_CHEW },
         .bodyColor = BODY_COLOR_BLACK,
+#if P_SEPARATE_REGIONAL_FORMS
+        .speciesName = _("Tauros-P"),
+#else
         .speciesName = _("Tauros"),
+#endif
         .cryId = CRY_TAUROS,
+#if P_SEPARATE_REGIONAL_FORMS
+        .natDexNum = NATIONAL_DEX_TAUROS_PALDEA,
+#else
         .natDexNum = NATIONAL_DEX_TAUROS,
+#endif
         .categoryName = _("Wild Bull"),
         .height = 14,
         .weight = 1150,
@@ -17398,7 +17811,11 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .levelUpLearnset = sTaurosPaldeaCombatLevelUpLearnset,
         .teachableLearnset = sTaurosPaldeaCombatTeachableLearnset,
         .eggMoveLearnset = sTaurosPaldeaCombatEggMoveLearnset,
+#if P_SEPARATE_REGIONAL_FORMS
+        .formSpeciesIdTable = sTaurosPaldeaFormSpeciesIdTable,
+#else
         .formSpeciesIdTable = sTaurosFormSpeciesIdTable,
+#endif
     },
 
     [SPECIES_TAUROS_PALDEA_BLAZE] =
@@ -17420,9 +17837,17 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
         .abilities = { ABILITY_INTIMIDATE, ABILITY_ANGER_POINT, ABILITY_CUD_CHEW },
         .bodyColor = BODY_COLOR_BLACK,
+#if P_SEPARATE_REGIONAL_FORMS
+        .speciesName = _("Tauros-P"),
+#else
         .speciesName = _("Tauros"),
+#endif
         .cryId = CRY_TAUROS,
+#if P_SEPARATE_REGIONAL_FORMS
+        .natDexNum = NATIONAL_DEX_TAUROS_PALDEA,
+#else
         .natDexNum = NATIONAL_DEX_TAUROS,
+#endif
         .categoryName = _("Wild Bull"),
         .height = 14,
         .weight = 850,
@@ -17464,7 +17889,11 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .levelUpLearnset = sTaurosPaldeaBlazeLevelUpLearnset,
         .teachableLearnset = sTaurosPaldeaBlazeTeachableLearnset,
         .eggMoveLearnset = sTaurosPaldeaBlazeEggMoveLearnset,
+#if P_SEPARATE_REGIONAL_FORMS
+        .formSpeciesIdTable = sTaurosPaldeaFormSpeciesIdTable,
+#else
         .formSpeciesIdTable = sTaurosFormSpeciesIdTable,
+#endif
     },
 
     [SPECIES_TAUROS_PALDEA_AQUA] =
@@ -17486,9 +17915,17 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
         .abilities = { ABILITY_INTIMIDATE, ABILITY_ANGER_POINT, ABILITY_CUD_CHEW },
         .bodyColor = BODY_COLOR_BLACK,
+#if P_SEPARATE_REGIONAL_FORMS
+        .speciesName = _("Tauros-P"),
+#else
         .speciesName = _("Tauros"),
+#endif
         .cryId = CRY_TAUROS,
+#if P_SEPARATE_REGIONAL_FORMS
+        .natDexNum = NATIONAL_DEX_TAUROS_PALDEA,
+#else
         .natDexNum = NATIONAL_DEX_TAUROS,
+#endif
         .categoryName = _("Wild Bull"),
         .height = 14,
         .weight = 1100,
@@ -17530,7 +17967,11 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .levelUpLearnset = sTaurosPaldeaAquaLevelUpLearnset,
         .teachableLearnset = sTaurosPaldeaAquaTeachableLearnset,
         .eggMoveLearnset = sTaurosPaldeaAquaEggMoveLearnset,
+#if P_SEPARATE_REGIONAL_FORMS
+        .formSpeciesIdTable = sTaurosPaldeaFormSpeciesIdTable,
+#else
         .formSpeciesIdTable = sTaurosFormSpeciesIdTable,
+#endif
     },
 #endif //P_PALDEAN_FORMS
 #endif //P_FAMILY_TAUROS
@@ -17846,7 +18287,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             TRACKS_SLITHER,
             sAnimTable_Following,
             gOverworldPalette_Lapras,
-            gShinyOverworldPalette_Lapras
+            gShinyOverworldPalette_Lapras,
+            gShinyModernOverworldPalette_Lapras
         )
         .levelUpLearnset = sLaprasLevelUpLearnset,
         .teachableLearnset = sLaprasTeachableLearnset,
@@ -18300,7 +18742,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             TRACKS_FOOT,
             sAnimTable_Following,
             gOverworldPalette_Vaporeon,
-            gShinyOverworldPalette_Vaporeon
+            gShinyOverworldPalette_Vaporeon,
+            gShinyModernOverworldPalette_Vaporeon
         )
         .levelUpLearnset = sVaporeonLevelUpLearnset,
         .teachableLearnset = sVaporeonTeachableLearnset,
@@ -18367,7 +18810,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             TRACKS_FOOT,
             sAnimTable_Following,
             gOverworldPalette_Jolteon,
-            gShinyOverworldPalette_Jolteon
+            gShinyOverworldPalette_Jolteon,
+            gShinyModernOverworldPalette_Jolteon
         )
         .levelUpLearnset = sJolteonLevelUpLearnset,
         .teachableLearnset = sJolteonTeachableLearnset,
@@ -18434,7 +18878,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             TRACKS_FOOT,
             sAnimTable_Following,
             gOverworldPalette_Flareon,
-            gShinyOverworldPalette_Flareon
+            gShinyOverworldPalette_Flareon,
+            gShinyModernOverworldPalette_Flareon
         )
         .levelUpLearnset = sFlareonLevelUpLearnset,
         .teachableLearnset = sFlareonTeachableLearnset,
@@ -19780,9 +20225,17 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
         .abilities = { ABILITY_COMPETITIVE, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_PURPLE,
+#if P_SEPARATE_REGIONAL_FORMS
+        .speciesName = _("Articuno-G"),
+#else
         .speciesName = _("Articuno"),
+#endif
         .cryId = CRY_ARTICUNO,
+#if P_SEPARATE_REGIONAL_FORMS
+        .natDexNum = NATIONAL_DEX_ARTICUNO_GALAR,
+#else
         .natDexNum = NATIONAL_DEX_ARTICUNO,
+#endif
         .categoryName = _("Cruel"),
         .height = 17,
         .weight = 509,
@@ -19825,7 +20278,11 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .levelUpLearnset = sArticunoGalarLevelUpLearnset,
         .teachableLearnset = sArticunoGalarTeachableLearnset,
+#if P_SEPARATE_REGIONAL_FORMS
+        .formSpeciesIdTable = sArticunoGalarFormSpeciesIdTable,
+#else
         .formSpeciesIdTable = sArticunoFormSpeciesIdTable,
+#endif
     },
 #endif //P_GALARIAN_FORMS
 #endif //P_FAMILY_ARTICUNO
@@ -19905,7 +20362,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             TRACKS_NONE,
             sAnimTable_Following,
             gOverworldPalette_Zapdos,
-            gShinyOverworldPalette_Zapdos
+            gShinyOverworldPalette_Zapdos,
+            gShinyModernOverworldPalette_Zapdos
         )
         .isSubLegendary = TRUE,
         .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
@@ -19934,9 +20392,17 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
         .abilities = { ABILITY_DEFIANT, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_YELLOW,
+#if P_SEPARATE_REGIONAL_FORMS
+        .speciesName = _("Zapdos-G"),
+#else
         .speciesName = _("Zapdos"),
+#endif
         .cryId = CRY_ZAPDOS,
+#if P_SEPARATE_REGIONAL_FORMS
+        .natDexNum = NATIONAL_DEX_ZAPDOS_GALAR,
+#else
         .natDexNum = NATIONAL_DEX_ZAPDOS,
+#endif
         .categoryName = _("Strong Legs"),
         .height = 16,
         .weight = 582,
@@ -19979,7 +20445,11 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .levelUpLearnset = sZapdosGalarLevelUpLearnset,
         .teachableLearnset = sZapdosGalarTeachableLearnset,
+#if P_SEPARATE_REGIONAL_FORMS
+        .formSpeciesIdTable = sZapdosGalarFormSpeciesIdTable,
+#else
         .formSpeciesIdTable = sZapdosFormSpeciesIdTable,
+#endif
     },
 #endif //P_GALARIAN_FORMS
 #endif //P_FAMILY_ZAPDOS
@@ -20111,9 +20581,17 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
         .abilities = { ABILITY_BERSERK, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_RED,
+#if P_SEPARATE_REGIONAL_FORMS
+        .speciesName = _("Moltres-G"),
+#else
         .speciesName = _("Moltres"),
+#endif
         .cryId = CRY_MOLTRES,
+#if P_SEPARATE_REGIONAL_FORMS
+        .natDexNum = NATIONAL_DEX_MOLTRES_GALAR,
+#else
         .natDexNum = NATIONAL_DEX_MOLTRES,
+#endif
         .categoryName = _("Malevolent"),
         .height = 20,
         .weight = 660,
@@ -20156,7 +20634,11 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .levelUpLearnset = sMoltresGalarLevelUpLearnset,
         .teachableLearnset = sMoltresGalarTeachableLearnset,
+#if P_SEPARATE_REGIONAL_FORMS
+        .formSpeciesIdTable = sMoltresGalarFormSpeciesIdTable,
+#else
         .formSpeciesIdTable = sMoltresFormSpeciesIdTable,
+#endif
     },
 #endif //P_GALARIAN_FORMS
 #endif //P_FAMILY_MOLTRES

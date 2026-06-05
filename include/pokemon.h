@@ -518,6 +518,7 @@ struct SpeciesInfo /*0xC4*/
 #if OW_PKMN_OBJECTS_SHARE_PALETTES == FALSE
     const void* overworldPalette;
     const void* overworldShinyPalette;
+    const void* overworldShinyPaletteModern;
 #if P_GENDER_DIFFERENCES
     const void* overworldPaletteFemale;
     const void* overworldShinyPaletteFemale;
@@ -855,15 +856,18 @@ u32 NationalToRegionalOrder(enum NationalDexOrder nationalNum);
 enum KantoDexOrder NationalToKantoOrder(enum NationalDexOrder nationalNum);
 enum HoennDexOrder NationalToHoennOrder(enum NationalDexOrder nationalNum);
 enum JohtoDexOrder NationalToJohtoOrder(enum NationalDexOrder nationalNum);
+enum ObtainableDexOrder NationalToObtainableOrder(enum NationalDexOrder nationalNum);
 enum NationalDexOrder SpeciesToNationalPokedexNum(u16 species);
 u32 SpeciesToRegionalPokedexNum(u16 species);
 enum KantoDexOrder SpeciesToKantoPokedexNum(u16 species);
 enum HoennDexOrder SpeciesToHoennPokedexNum(u16 species);
 enum JohtoDexOrder SpeciesToJohtoPokedexNum(u16 species);
+enum ObtainableDexOrder SpeciesToObtainablePokedexNum(u16 species);
 enum NationalDexOrder RegionalToNationalOrder(u32 regionNum);
 enum NationalDexOrder KantoToNationalOrder(enum KantoDexOrder kantoNum);
 enum NationalDexOrder HoennToNationalOrder(enum HoennDexOrder hoennNum);
 enum NationalDexOrder JohtoToNationalOrder(enum JohtoDexOrder johtoNum);
+enum NationalDexOrder ObtainableToNationalOrder(enum ObtainableDexOrder johtoNum);
 void DrawSpindaSpots(u32 personality, u8 *dest, bool32 isSecondFrame);
 void EvolutionRenameMon(struct Pokemon *mon, u16 oldSpecies, u16 newSpecies);
 u8 GetPlayerFlankId(void);

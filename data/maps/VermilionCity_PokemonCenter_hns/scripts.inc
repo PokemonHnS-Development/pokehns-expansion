@@ -3,7 +3,7 @@ VermilionCity_PokemonCenter_hns_MapScripts::
 	.byte 0
 
 VermilionCity_PokemonCenter_OnTransition::
-	setrespawn HEAL_LOCATION_VERMILION_CITY
+	setrespawn HEAL_LOCATION_VERMILION_CITY_HNS
 	end
 
 VermilionPokeCenter_EventScript_FishingGuru::

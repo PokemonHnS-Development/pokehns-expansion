@@ -1028,6 +1028,7 @@ const u8 gText_XSentOverY[] = _("{STR_VAR_1} sent over {STR_VAR_3}.");
 const u8 gText_TakeGoodCareOfX[] = _("Take good care of {STR_VAR_3}!");
 
 const u8 gText_ThreeQuestionMarks[] = _("???");
+const u8 gText_FourQuestionMarks[] = _("????");
 const u8 gText_MaxHP[] = _("MAX. HP");
 const u8 gText_Attack[] = _("ATTACK");
 const u8 gText_Defense[] = _("DEFENSE");

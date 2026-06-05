@@ -706,6 +706,11 @@ const u16 gMetatiles_AlolaIsland[] = INCBIN_U16("data/tilesets/primary/alola_isl
 const u16 gMetatileAttributes_AlolaIsland[] = INCBIN_U16("data/tilesets/primary/alola_island/metatile_attributes.bin");
 
 const u16 gMetatiles_AlolaIslandSecondary[] = INCBIN_U16("data/tilesets/secondary/alola_island_secondary/metatiles.bin");
-const u16 gMetatileAttributes_AlolaIslandSecondary[] = INCBIN_U16("data/tilesets/secondary/alola_island_secondary/metatile_attributes.bin")
+const u16 gMetatileAttributes_AlolaIslandSecondary[] = INCBIN_U16("data/tilesets/secondary/alola_island_secondary/metatile_attributes.bin");
+
+const u16 gMetatiles_Route40_Hns[] = INCBIN_U16("data/tilesets/secondary/route_40_hns/metatiles.bin");
+const u16 gMetatileAttributes_Route40_Hns[] = INCBIN_U16("data/tilesets/secondary/route_40_hns/metatile_attributes.bin");
+
+
 #endif // IS_FRLG || IS_HNS
-;
+

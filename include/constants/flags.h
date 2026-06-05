@@ -2449,6 +2449,10 @@
 #define FLAG_RECEIVED_FIRST_BALLS               (ENGINE_FLAGS_START + 2)
 #define FLAG_START_NUZLOCKE                     (ENGINE_FLAGS_START + 3)
 #define FLAG_END_NUZLOCKE                       (ENGINE_FLAGS_START + 4)
+#define FLAG_DISABLE_ENCOUNTERS                 (ENGINE_FLAGS_START + 5)
+#define FLAG_DISABLE_TRAINERS                   (ENGINE_FLAGS_START + 6)
+#define FLAG_LIMIT_TO_50                        (ENGINE_FLAGS_START + 7)
+#define FLAG_EXP_SHARE_ENABLED                  (ENGINE_FLAGS_START + 8)
 #define ENGINE_FLAGS_END                        (ENGINE_FLAGS_START + NUM_ENGINE_FLAGS - 1)
 
 #define FLAGS_COUNT (ENGINE_FLAGS_END + 1)

@@ -73,6 +73,7 @@ SlateportCity_BattleTentLobby_hns_EventScript_EndGivePrize::
 	msgbox SlateportCity_BattleTentLobby_Text_LookForwardToNextVisit, MSGBOX_DEFAULT
 	closemessage
 	setvar VAR_TEMP_CHALLENGE_STATUS, 255
+	givebp 10
 	releaseall
 	end
 

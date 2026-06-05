@@ -62,6 +62,13 @@ enum
 
 #define ENTRIES_PER_PAGE 5
 
+// Credits for Unique Surfing Overworlds:
+// Credit to [slawter666](https://www.pokecommunity.com/members/slawter666.109486/) and
+// [wally-217](https://www.pokecommunity.com/members/wally-217.356904/) for
+// [Unique surfing overworlds](https://www.pokecommunity.com/threads/unique-surfing-overworlds.415063/)
+
+// Category headers
+
 static const u8 sCreditsText_EmptyString[]                    = _("");
 static const u8 sCreditsText_PkmnEmeraldVersion[]             = _("POKéMON EMERALD VERSION");
 static const u8 sCreditsText_Credits[]                        = _("Credits");

@@ -12,7 +12,7 @@
   "allow_running": false,
   "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": 0,
+  "connections": null,
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_MYSTERY_EVENT_DELIVERYMAN_HNS",
@@ -28,6 +28,7 @@
       "flag": "0"
     },
     {
+      "local_id": "LOCALID_SAFARIZONEFUCHSIA_STEVEN",
       "graphics_id": "OBJ_EVENT_GFX_STEVEN_HNS",
       "x": 12,
       "y": 5,
@@ -38,8 +39,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "FuchsiaCity_SafariZoneEntrance_Steven",
-      "flag": "0",
-      "local_id": "LOCALID_SAFARIZONEFUCHSIA_STEVEN"
+      "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_OLD_MAN_2_HNS",

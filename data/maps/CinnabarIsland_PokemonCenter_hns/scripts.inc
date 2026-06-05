@@ -3,7 +3,7 @@ CinnabarIsland_PokemonCenter_hns_MapScripts::
 	.byte 0
 
 CinnabarIsland_PokemonCenter_OnTransition::
-	setrespawn HEAL_LOCATION_CINNABAR_ISLAND
+	setrespawn HEAL_LOCATION_CINNABAR_ISLAND_HNS
 	end
 
 CinnabarIsland_PokemonCenter_EventScript_Cooltrainer::

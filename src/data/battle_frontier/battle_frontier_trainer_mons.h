@@ -5832,3 +5832,24 @@
     FRONTIER_MON_STARMIE_7,     \
     FRONTIER_MON_STARMIE_8,     \
     -1
+
+static const u16 gBattleFrontierTrainerMons_Brock[] = { FRONTIER_MONS_RUIN_MANIAC_4 };
+static const u16 gBattleFrontierTrainerMons_Chuck[] = { FRONTIER_MONS_BLACK_BELT_BATTLE_GIRL_2C };
+static const u16 gBattleFrontierTrainerMons_LtSurge[] = { FRONTIER_MONS_GUITARIST_3A };
+static const u16 gBattleFrontierTrainerMons_Blaine[] = { FRONTIER_MONS_KINDLER_3 };
+static const u16 gBattleFrontierTrainerMons_Whitney[] = { FRONTIER_MONS_PARASOL_LADY_3 };
+static const u16 gBattleFrontierTrainerMons_Falkner[] = { FRONTIER_MONS_BIRD_KEEPER_3 };
+static const u16 gBattleFrontierTrainerMons_Sabrina[] = { FRONTIER_MONS_PSYCHIC_2(LATIOS, ARTICUNO, ZAPDOS, MOLTRES) };
+static const u16 gBattleFrontierTrainerMons_Janine[] = { FRONTIER_MONS_HEX_MANIAC_2C };
+static const u16 gBattleFrontierTrainerMons_Misty[] = { FRONTIER_MONS_SAILOR_3 };
+static const u16 gBattleFrontierTrainerMons_Erika[] = { FRONTIER_MONS_AROMA_LADY_3 };
+static const u16 gBattleFrontierTrainerMons_Morty[] = { FRONTIER_MONS_HEX_MANIAC_2A };
+static const u16 gBattleFrontierTrainerMons_Pryce[] = { FRONTIER_MONS_BEAUTY_2 };
+static const u16 gBattleFrontierTrainerMons_Clair[] = { FRONTIER_MONS_DRAGON_TAMER_2 };
+static const u16 gBattleFrontierTrainerMons_Lance[] = { FRONTIER_MONS_EXPERT_2B(LATIOS) };
+static const u16 gBattleFrontierTrainerMons_Steven[] = { FRONTIER_MONS_EXPERT_2A(TYRANITAR) };
+static const u16 gBattleFrontierTrainerMons_Jasmine[] = { FRONTIER_MONS_POKEMANIAC_2C };
+static const u16 gBattleFrontierTrainerMons_Bugsy[] = { FRONTIER_MONS_BUG_MANIAC_4 };
+static const u16 gBattleFrontierTrainerMons_Red[] = { FRONTIER_MONS_GENTLEMAN_3B };
+static const u16 gBattleFrontierTrainerMons_Leaf[] = { FRONTIER_MONS_GENTLEMAN_3A };
+static const u16 gBattleFrontierTrainerMons_Blue[] = { FRONTIER_MONS_EXPERT_2A(TYRANITAR) };

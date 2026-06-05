@@ -441,8 +441,8 @@
     {
       "id": "HEAL_LOCATION_VIRIDIAN_CITY_HNS",
       "map": "MAP_VIRIDIAN_CITY_HNS",
-      "x": 26,
-      "y": 27,
+      "x": 30,
+      "y": 37,
       "respawn_map": "MAP_VIRIDIAN_CITY_POKEMON_CENTER_HNS",
       "respawn_npc": "0"
     },
@@ -457,8 +457,8 @@
     {
       "id": "HEAL_LOCATION_CERULEAN_CITY_HNS",
       "map": "MAP_CERULEAN_CITY_HNS",
-      "x": 30,
-      "y": 20,
+      "x": 25,
+      "y": 30,
       "respawn_map": "MAP_CERULEAN_CITY_POKEMON_CENTER_HNS",
       "respawn_npc": "0"
     },
@@ -473,8 +473,8 @@
     {
       "id": "HEAL_LOCATION_LAVENDER_TOWN_HNS",
       "map": "MAP_LAVENDER_TOWN_HNS",
-      "x": 10,
-      "y": 6,
+      "x": 9,
+      "y": 7,
       "respawn_map": "MAP_LAVENDER_TOWN_POKEMON_CENTER_HNS",
       "respawn_npc": "0"
     },
@@ -489,7 +489,7 @@
     {
       "id": "HEAL_LOCATION_SAFFRON_CITY_HNS",
       "map": "MAP_SAFFRON_CITY_HNS",
-      "x": 16,
+      "x": 18,
       "y": 39,
       "respawn_map": "MAP_SAFFRON_CITY_POKEMON_CENTER_HNS",
       "respawn_npc": "0"

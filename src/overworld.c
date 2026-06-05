@@ -1,5 +1,6 @@
 #include "global.h"
 #include "overworld.h"
+#include "constants/heal_locations.h"
 #include "battle_pyramid.h"
 #include "battle_setup.h"
 #include "battle_util.h"
@@ -769,6 +770,15 @@ void SetWarpDestinationToLastHealLocation(void)
         SetWhiteoutRespawnWarpAndHealerNPC(&sWarpDestination);
     else
         sWarpDestination = gSaveBlock1Ptr->lastHealLocation;
+
+#if IS_HNS
+    if (sWarpDestination.mapGroup == 0 && sWarpDestination.mapNum == 0)
+    {
+        const struct HealLocation *fallback = GetHealLocation(HEAL_LOCATION_NEW_BARK_TOWN_HNS);
+        if (fallback)
+            SetWarpDestination(fallback->mapGroup, fallback->mapNum, WARP_ID_NONE, fallback->x, fallback->y);
+    }
+#endif
 }
 
 void SetWarpDestinationForTeleport(void)
@@ -1733,6 +1743,20 @@ void UpdateTimeOfDay(void)
         gTimeBlend.weight = gTimeBlend.altWeight = DEFAULT_WEIGHT;
         gTimeBlend.startBlend = gTimeBlend.endBlend = gTimeOfDayBlend[TIME_DAY];
         gTimeOfDay = TIME_DAY;
+    }
+
+    if (IS_HNS)
+    {
+        if (gTimeOfDay == TIME_NIGHT || gTimeOfDay == TIME_EVENING)
+        {
+            FlagClear(FLAG_NIGHT_POKEMON);
+            FlagSet(FLAG_DAY_POKEMON);
+        }
+        else
+        {
+            FlagSet(FLAG_NIGHT_POKEMON);
+            FlagClear(FLAG_DAY_POKEMON);
+        }
     }
 }
 

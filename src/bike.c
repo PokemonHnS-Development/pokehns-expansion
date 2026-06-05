@@ -157,8 +157,28 @@ static const struct BikeHistoryInputInfo sAcroBikeTricksList[] =
 };
 
 // code
+static bool8 ShouldForceCyclingRoadDownward(void)
+{
+    s16 x, y;
+    PlayerGetDestCoords(&x, &y);
+    return MetatileBehavior_IsCyclingRoadPullDownTile(MapGridGetMetatileBehaviorAt(x, y));
+}
+
 void MovePlayerOnBike(enum Direction direction, u16 newKeys, u16 heldKeys)
 {
+    if (ShouldForceCyclingRoadDownward() && heldKeys == 0)
+    {
+        enum Collision collision = GetBikeCollision(DIR_SOUTH);
+
+        if (collision == COLLISION_NONE)
+            PlayerWalkFaster(DIR_SOUTH);
+        else if (collision == COLLISION_LEDGE_JUMP)
+            PlayerJumpLedge(DIR_SOUTH);
+
+        gPlayerAvatar.runningState = MOVING;
+        return;
+    }
+
     if ((gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_MACH_BIKE) && (gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_ACRO_BIKE))
         MovePlayerOnStandardBike(direction, newKeys, heldKeys);
     else if (gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_MACH_BIKE)

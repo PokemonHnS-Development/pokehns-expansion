@@ -12,7 +12,7 @@
   "allow_running": true,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": 0,
+  "connections": null,
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SEEL",
@@ -106,11 +106,11 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SPHEAL",
-      "x": 14,
-      "y": 53,
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SNORUNT",
+      "x": 20,
+      "y": 9,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_UP_AND_RIGHT",
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -135,8 +135,8 @@
       "dest_warp_id": "0"
     },
     {
-      "x": 28,
-      "y": 10,
+      "x": 29,
+      "y": 15,
       "elevation": 0,
       "dest_map": "MAP_SEAFOAM_ISLANDS_B1F_HNS",
       "dest_warp_id": "0"
@@ -149,11 +149,46 @@
       "dest_warp_id": "1"
     },
     {
-      "x": 34,
-      "y": 46,
+      "x": 20,
+      "y": 27,
       "elevation": 0,
       "dest_map": "MAP_SEAFOAM_ISLANDS_B1F_HNS",
       "dest_warp_id": "1"
+    },
+    {
+      "x": 38,
+      "y": 23,
+      "elevation": 0,
+      "dest_map": "MAP_SEAFOAM_ISLANDS_B1F_HNS",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 28,
+      "y": 31,
+      "elevation": 0,
+      "dest_map": "MAP_SEAFOAM_ISLANDS_B1F_HNS",
+      "dest_warp_id": "3"
+    },
+    {
+      "x": 29,
+      "y": 39,
+      "elevation": 0,
+      "dest_map": "MAP_SEAFOAM_ISLANDS_B1F_HNS",
+      "dest_warp_id": "4"
+    },
+    {
+      "x": 24,
+      "y": 39,
+      "elevation": 0,
+      "dest_map": "MAP_SEAFOAM_ISLANDS_B1F_HNS",
+      "dest_warp_id": "5"
+    },
+    {
+      "x": 37,
+      "y": 46,
+      "elevation": 0,
+      "dest_map": "MAP_SEAFOAM_ISLANDS_B1F_HNS",
+      "dest_warp_id": "6"
     }
   ],
   "coord_events": [],

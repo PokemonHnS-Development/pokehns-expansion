@@ -7222,10 +7222,10 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_ALLAN_HNS ===
 Name: ALLAN
-Class: Pokefan Hns
-Pic: Pokefan M
+Class: Camper HnS
+Pic: Camper
 Gender: Male
-Music: Hg Suspicious 2
+Music: Hg Boy 1
 Double Battle: No
 AI: Check Bad Move
 
@@ -7247,7 +7247,7 @@ Level: 48
 - Psychic
 - Psych Up
 - Swift
-- Endeavor
+- Last Resort
 
 
 === TRAINER_SAYO_HNS ===
@@ -7264,7 +7264,7 @@ Level: 48
 - Thunderbolt
 - Double Team
 - Thunder Wave
-- Endeavor
+- Last Resort
 
 
 === TRAINER_ZUKI_HNS ===
@@ -7281,7 +7281,7 @@ Level: 48
 - Dark Pulse
 - Confuse Ray
 - Shadow Ball
-- Endeavor
+- Last Resort
 
 
 === TRAINER_KUNI_HNS ===
@@ -7298,7 +7298,7 @@ Level: 48
 - Surf
 - Quick Attack
 - Aurora Beam
-- Endeavor
+- Last Resort
 
 
 === TRAINER_MIKI_HNS ===
@@ -7315,7 +7315,7 @@ Level: 48
 - Fire Blast
 - Quick Attack
 - Will O Wisp
-- Endeavor
+- Last Resort
 
 
 === TRAINER_AMY_AND_MAY_HNS ===
@@ -7595,49 +7595,49 @@ Noctowl @ Sitrus Berry
 Level: 64
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Psychic
-- Wing Attack
+- Air Slash
 - Hypnosis
 - Dream Eater
 
 Skarmory
 Level: 63
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Spikes
+- Stealth Rock
 - Drill Peck
-- Mud Slap
+- Metal Sound
 - Steel Wing
 
 Swellow @ Focus Band
 Level: 63
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Endure
-- Flail
-- Drill Peck
+- Endeavor
+- Double Team
+- Brave Bird
 - Steel Wing
 
 Honchkrow
 Level: 64
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Drill Peck
-- Faint Attack
-- Haze
-- Icy Wind
+- Mimic
+- Dark Pulse
+- Air Slash
+- Nasty Plot
 
 Pidgeot
 Level: 65
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Sky Attack
+- TailWind
+- Aerial Ace
 - Extreme Speed
-- Double Team
-- Steel Wing
+- Sand Attack
 
 Pelipper
 Level: 68
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Aerial Ace
-- Surf
-- Double Team
+- Roost
+- Brine
 - Steel Wing
+- Hurricane
 
 
 === TRAINER_BUGSY_1_HNS ===
@@ -7688,39 +7688,39 @@ Items: Full Restore / Full Restore
 Ledian @ Focus Band
 Level: 64
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Giga Drain
-- Agility
+- Drain Punch
+- Swords Dance
+- Bug Buzz
 - Baton Pass
-- Light Screen
 
 Forretress
 Level: 63
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Curse
-- Explosion
-- Pin Missile
-- Spike Cannon
+- Iron Defense
+- Rapid Spin
+- Gyro Ball
+- Earthquake
 
 Yanmega @ Berry Juice
 Level: 63
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Aerial Ace
-- Hypnosis
-- Ancient Power
-- Bug Buzz
+- Air Slash
+- Screech
+- U Turn
+- Night Slash
 
 Scizor
 Level: 64
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Metal Claw
-- Twineedle
-- Agility
-- Substitute
+- Bullet Punch
+- X Scissor
+- Iron Head
+- Swords Dance
 
 Shedinja
 Level: 65
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Shadow Claw
+- Phantom Force
 - Bug Buzz
 - Grudge
 - Sand Attack
@@ -7729,9 +7729,9 @@ Scyther @ Scope Lens
 Level: 65
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Slash
-- Cut
-- Wing Attack
-- Swords Dance
+- X Scissor
+- Air Slash
+- Roost
 
 
 === TRAINER_WHITNEY_1_HNS ===
@@ -7782,49 +7782,49 @@ Items: Full Restore / Full Restore
 Clefable
 Level: 63
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Ice Punch
-- Fire Punch
-- Thunder Punch
+- MoonBlast
+- Meteor Mash
+- Healing Wish
 - Encore
 
 Delcatty @ Chesto Berry
 Level: 64
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Yawn
-- Attract
+- Double Edge
 - Fake Out
-- Hyper Voice
+- Attract
+- Play Rough
 
 Blissey
 Level: 63
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Egg Bomb
+- Sing
+- Light Screen
 - Attract
 - Soft Boiled
-- Light Screen
 
 Tauros
 Level: 64
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Thrash
-- Earthquake
+- Work Up
 - Rage
-- Pursuit
+- Giga Impact
 
 Miltank @ Silk Scarf
 Level: 65
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Iron Tail
 - Attract
-- Body Slam
 - Milk Drink
+- Zen Headbutt
 
 Lickilicky @ Silk Scarf
 Level: 65
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Defense Curl
 - Rollout
-- Focus Blast
+- Gyro Ball
 - Supersonic
 
 
@@ -7884,24 +7884,24 @@ Items: Full Restore / Full Restore
 Sableye
 Level: 64
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+- Quash
+- Foul Play
 - Shadow Claw
 - Power Gem
-- Mean Look
-- Detect
 
 Wyrdeer @ Silk Scarf
 Level: 63
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Jump Kick
-- Headbutt
+- Psyshield Bash
 - Hypnosis
-- Psycho Cut
+- Headbutt
 
 Gengar @ Spell Tag
 Level: 64
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Shadow Ball
-- Giga Drain
+- Dark Pulse
 - Sludge Bomb
 - Psychic
 
@@ -7909,7 +7909,7 @@ Mismagius
 Level: 63
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Shadow Ball
-- Mean Look
+- Magical Leaf
 - Pain Split
 - Perish Song
 
@@ -7943,18 +7943,18 @@ Items: Super Potion / Super Potion
 Dewgong
 Level: 31
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Surf
+- Aqua Ring
 - Aurora Beam
 - Rain Dance
-- Rest
+- Aqua Jet
 
 Sneasel
 Level: 32
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Faint Attack
 - Metal Claw
-- Reflect
-- Icy Wind
+- Hone Claws
+- Avalanche
 
 Jynx
 Level: 31
@@ -7969,8 +7969,8 @@ Level: 33
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Headbutt
 - Earthquake
-- Rock Smash
-- Blizzard
+- Ancient Power
+- Ice Fang
 
 
 === TRAINER_PRYCE_2_HNS ===
@@ -7986,7 +7986,7 @@ Items: Full Restore / Full Restore
 Weavile
 Level: 64
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Faint Attack
+- Night Slash
 - Metal Claw
 - Beat Up
 - Blizzard
@@ -7994,10 +7994,10 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 Dewgong @ Sitrus Berry
 Level: 63
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Surf
+- Aqua Tail
 - Ice Beam
 - Rest
-- Encore
+- Aqua Ring
 
 Jynx
 Level: 63
@@ -8011,7 +8011,7 @@ Froslass
 Level: 64
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Shadow Ball
-- Ice Beam
+- Blizzard
 - Will O Wisp
 - Destiny Bond
 
@@ -8020,8 +8020,8 @@ Level: 65
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Strength
 - Earthquake
-- Rock Smash
-- Blizzard
+- Thrash
+- Ice Fang
 
 Glalie
 Level: 65
@@ -8069,7 +8069,7 @@ IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 Dewgong
 Level: 34
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Surf
+- Brine
 - Aurora Beam
 - Snore
 - Rest
@@ -8079,8 +8079,8 @@ Level: 35
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Headbutt
 - Earthquake
-- Rock Smash
-- Blizzard
+- Ancient Power
+- Ice Fang
 
 
 === TRAINER_PRYCE_1_3_HNS ===
@@ -8120,7 +8120,7 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 Dewgong
 Level: 37
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Surf
+- Aqua Tail
 - Aurora Beam
 - Snore
 - Rest
@@ -8128,10 +8128,10 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 Mamoswine @ Sitrus Berry
 Level: 38
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Headbutt
+- Take Down
 - Earthquake
-- Rock Smash
-- Blizzard
+- Ancient Power
+- Ice Fang
 
 
 === TRAINER_JASMINE_1_HNS ===
@@ -8156,7 +8156,7 @@ Corsola
 Level: 35
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Rain Dance
-- Surf
+- Brine
 - Recover
 - Ancient Power
 
@@ -8171,7 +8171,7 @@ IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 Scizor @ Focus Band
 Level: 36
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Twineedle
+- Bullet Punch
 - Metal Claw
 - Agility
 - Swords Dance
@@ -8198,7 +8198,7 @@ Items: Full Restore / Full Restore
 Skarmory
 Level: 63
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Spikes
+- Stealth Rock
 - Drill Peck
 - Swagger
 - Steel Wing
@@ -8216,14 +8216,14 @@ Level: 63
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Rain Dance
 - Surf
-- Recover
-- Ancient Power
+- Aqua Ring
+- Power Gem
 
 Magnezone
 Level: 64
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Double Edge
-- Substitute
+- Gyro Ball
+- Flash Cannon
 - Rain Dance
 - Thunder
 
@@ -8231,7 +8231,7 @@ Aggron @ Hard Stone
 Level: 65
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Rock Slide
-- Iron Tail
+- Metal Burst
 - Swords Dance
 - Earthquake
 
@@ -8266,8 +8266,8 @@ Corsola
 Level: 35
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Rain Dance
-- Surf
-- Recover
+- Brine
+- Aqua Ring
 - Ancient Power
 
 Magneton
@@ -8281,7 +8281,7 @@ IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 Scizor @ Focus Band
 Level: 36
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Twineedle
+- Bullet Punch
 - Metal Claw
 - Agility
 - Swords Dance
@@ -8318,7 +8318,7 @@ Level: 37
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Rain Dance
 - Surf
-- Recover
+- Aqua Ring
 - Ancient Power
 
 Magnezone
@@ -8327,12 +8327,12 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Thunderbolt
 - Tri Attack
 - Rain Dance
-- Thunder
+- Gyro Ball
 
 Scizor @ Focus Band
 Level: 38
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Twineedle
+- X Scissor
 - Metal Claw
 - Agility
 - Swords Dance
@@ -8376,7 +8376,7 @@ Sudowoodo
 Level: 30
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Rock Slide
-- Thunder Punch
+- Wood Hammer
 - Low Kick
 - Faint Attack
 
@@ -8403,7 +8403,7 @@ Hitmonchan @ Scope Lens
 Level: 64
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Fire Punch
-- Ice Punch
+- Sky Uppercut
 - Thunder Punch
 - Mach Punch
 
@@ -8412,16 +8412,16 @@ Level: 63
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Detect
 - Hi Jump Kick
-- Psych Up
-- Reversal
+- Acupressure
+- Zen Headbutt
 
 Annihilape
 Level: 64
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Cross Chop
-- Shadow Punch
+- Rage Fist
 - Rock Slide
-- Meditate
+- Stomping Tantrum
 
 Hitmonlee
 Level: 63
@@ -8435,15 +8435,15 @@ Breloom
 Level: 65
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Mach Punch
-- Bullet Seed
+- Seed Bomb
 - Sky Uppercut
-- Dynamic Punch
+- Drain Punch
 
 Poliwrath @ Sitrus Berry
 Level: 65
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Surf
-- Dynamic Punch
+- Submission
 - Belly Drum
 - Body Slam
 
@@ -8470,7 +8470,7 @@ Sudowoodo
 Level: 35
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Rock Slide
-- Thunder Punch
+- Wood Hammer
 - Low Kick
 - Faint Attack
 
@@ -8480,13 +8480,13 @@ IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Low Kick
 - Karate Chop
 - Ice Punch
-- Rage
+- Rage Fist
 
 Pinsir
 Level: 35
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Rock Smash
-- Twineedle
+- Brick Break
+- X Scissor
 - Vice Grip
 - Harden
 
@@ -8521,7 +8521,7 @@ Sudowoodo
 Level: 37
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Rock Slide
-- Thunder Punch
+- Wood Hammer
 - Low Kick
 - Faint Attack
 
@@ -8531,13 +8531,13 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Shadow Punch
 - Brick Break
 - Ice Punch
-- Rage
+- Rage Fist
 
 Pinsir
 Level: 37
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Submission
-- Twineedle
+- X Scissor
 - Strength
 - Swords Dance
 
@@ -8545,8 +8545,8 @@ Poliwrath @ Black Belt
 Level: 38
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Ice Punch
-- Mind Reader
-- Surf
+- Hypnosis
+- Waterfall
 - Dynamic Punch
 
 
@@ -8566,7 +8566,7 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Thunder Wave
 - Thunderbolt
 - Flamethrower
-- Dragon Pulse
+- Dragon Tail
 
 Gyarados @ Focus Band
 Level: 43
@@ -8574,12 +8574,12 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Bite
 - Waterfall
 - Fly
-- Twister
+- Ice Fang
 
 Lapras @ Chesto Berry
 Level: 43
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Surf
+- Brine
 - Ice Beam
 - Body Slam
 - Rest
@@ -8595,7 +8595,7 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 Kingdra @ Leftovers
 Level: 45
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Smokescreen
+- Agility
 - Surf
 - Hyper Beam
 - Dragon Pulse
@@ -8616,32 +8616,32 @@ Level: 64
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Thunder Wave
 - Thunderbolt
-- Flamethrower
-- Iron Tail
+- Aqua Tail
+- Dragon Rush
 
 Gyarados @ Focus Band
 Level: 63
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Bite
+- Crunch
 - Surf
 - Fly
-- Twister
+- Dragon Dance
 
 Dudunsparce
 Level: 63
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Rest
+- Yawn
 - Glare
 - Poison Jab
-- Skull Bash
+- Hyper Drill
 
 Shelgon @ Sitrus Berry
 Level: 64
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Thunder Wave
-- Thunderbolt
-- Ice Beam
-- Dragon Breath
+- Zen Headbutt
+- Flamethrower
+- Dragon Claw
 
 Dragonite
 Level: 65
@@ -8654,10 +8654,10 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 Kingdra @ Leftovers
 Level: 65
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Agility
+- Dragon Dance
 - Hydro Pump
 - Ice Beam
-- Dragon Breath
+- Dragon Pulse
 
 
 === TRAINER_BROCK_HNS ===
@@ -8674,7 +8674,7 @@ Golem @ Quick Claw
 Level: 66
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Curse
-- Rock Slide
+- Stone Edge
 - Body Slam
 - Earthquake
 
@@ -8684,14 +8684,14 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Ancient Power
 - Sky Attack
 - Earthquake
-- Fire Blast
+- Fire Fang
 
 Kabutops @ Scope Lens
 Level: 66
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Surf
 - Ancient Power
-- Cut
+- Night Slash
 - Swords Dance
 
 Omastar @ Focus Band
@@ -8705,7 +8705,7 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 Relicanth @ Hard Stone
 Level: 66
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Surf
+- Hydro Pump
 - Rock Slide
 - Curse
 - Thunderbolt
@@ -8714,8 +8714,8 @@ Kleavor @ Quick Claw
 Level: 66
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Swords Dance
-- Rock Slide
-- Twineedle
+- Stone Axe
+- X Scissor
 - Agility
 
 
@@ -8732,15 +8732,15 @@ Items: Full Restore / Full Restore
 Golduck
 Level: 62
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Surf
+- Aqua Tail
 - Psychic
-- Hypnosis
+- Wonder Room
 - Cross Chop
 
 Quagsire @ Quick Claw
 Level: 62
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Surf
+- Muddy Water
 - Amnesia
 - Earthquake
 - Rain Dance
@@ -8748,7 +8748,7 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 Vaporeon @ Leftovers
 Level: 61
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Surf
+- Hydro Pump
 - Ice Beam
 - Acid Armor
 - Shadow Ball
@@ -8764,7 +8764,7 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 Lapras @ Never Melt Ice
 Level: 62
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Surf
+- Hydro Pump
 - Ice Beam
 - Rain Dance
 - Reflect
@@ -8807,18 +8807,18 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 Lanturn @ Leftovers
 Level: 58
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Surf
-- Thunderbolt
-- Ice Beam
-- Confuse Ray
+- Ion Deluge
+- Hydro Pump
+- Discharge
+- Confuse ray
 
 Manectric
 Level: 58
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- Wild Charge
 - Charge
-- Thunder
-- Thunder Wave
 - Crunch
+- Electric Terrain
 
 Electivire @ Scope Lens
 Level: 59
@@ -8850,9 +8850,9 @@ Items: Full Restore / Full Restore
 Jumpluff @ Focus Band
 Level: 61
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Giga Drain
+- Acrobatics
+- U Turn
 - Sleep Powder
-- Encore
 - Leech Seed
 
 Roserade
@@ -8866,10 +8866,10 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 Tangrowth
 Level: 60
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Mega Drain
-- Bind
+- Power Whip
+- Wring Out
+- Grassy Terrain
 - Tickle
-- Block
 
 Venusaur @ Leftovers
 Level: 61
@@ -8883,17 +8883,17 @@ Victreebel @ Poison Barb
 Level: 62
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Sludge Bomb
-- Giga Drain
+- Leaf Blade
 - Swords Dance
 - Sleep Powder
 
 Bellossom @ Miracle Seed
 Level: 62
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Sunny Day
-- Synthesis
-- Sleep Powder
-- Solar Beam
+- Petal Blizzard
+- Quiver Dance
+- Stun Spore
+- Attract
 
 
 === TRAINER_SABRINA_HNS ===
@@ -8909,10 +8909,10 @@ Items: Full Restore / Full Restore
 Mr Mime @ Quick Claw
 Level: 65
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- Magical Leaf
 - Psychic
-- Thunder Wave
-- Encore
-- Ice Punch
+- Substitute
+- Reflect
 
 Jynx
 Level: 64
@@ -8920,7 +8920,7 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Psychic
 - Ice Beam
 - Lovely Kiss
-- Bubble Beam
+- Grass Knot
 
 Slowbro @ Chesto Berry
 Level: 64
@@ -8952,7 +8952,7 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Shadow Ball
 - Psychic
 - Recover
-- Thunder Punch
+- Calm Mind
 
 
 === TRAINER_JANINE_HNS ===
@@ -8969,15 +8969,15 @@ Weezing @ Leftovers
 Level: 63
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Sludge Bomb
-- Fire Blast
-- Destiny Bond
+- Flamethrower
+- Belch
 - Amnesia
 
 Muk
 Level: 62
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Minimize
-- Poison Jab
+- Gunk Shot
 - Toxic
 - Acid Armor
 
@@ -8993,23 +8993,23 @@ Nidoqueen @ Quick Claw
 Level: 62
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Earthquake
-- Poison Jab
-- Thunderbolt
-- Submission
+- Cross Poison
+- Thunder
+- Superpower
 
 Crobat
 Level: 63
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Pursuit
-- Sludge Bomb
+- Air Slash
+- Venoshock
 - Toxic
 - Confuse Ray
 
 Venomoth @ Bright Powder
 Level: 64
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Giga Drain
-- Psychic
+- Signal Beam
+- Poison Fang
 - Toxic
 - Double Team
 
@@ -9027,9 +9027,9 @@ Items: Full Restore / Full Restore
 Rapidash @ Quick Claw
 Level: 66
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Double Edge
+- Bounce
 - Sunny Day
-- Fire Blast
+- Flare Blitz
 - Solar Beam
 
 Magmortar @ Sitrus Berry
@@ -9045,15 +9045,15 @@ Level: 66
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Fire Blast
 - Sunny Day
-- Solar Beam
+- Thunder Fang
 - Crunch
 
 Magcargo @ Leftovers
 Level: 65
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Fire Blast
-- Shadow Ball
-- Sunny Day
+- Flamethrower
+- Recover
+- Amnesia
 - Hypnosis
 
 Torkoal @ White Herb
@@ -9086,16 +9086,16 @@ Items: Full Restore / Full Restore
 Rhyperior @ Sitrus Berry
 Level: 69
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Earthquake
-- Rock Slide
+- Drill Run
+- Stone Edge
 - Rest
 - Toxic
 
 Pidgeot @ Sharp Beak
 Level: 68
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Sky Attack
-- Sand Attack
+- Hurricane
+- Giga Impact
 - Air Slash
 - Feather Dance
 
@@ -9105,7 +9105,7 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Cross Chop
 - Rock Slide
 - Earthquake
-- Body Slam
+- Dual Chop
 
 Exeggutor @ Leftovers
 Level: 68
@@ -9113,15 +9113,15 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Leech Seed
 - Trick Room
 - Psychic
-- Giga Drain
+- Seed Bomb
 
 Tyranitar @ Focus Band
 Level: 68
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Dragon Pulse
-- Dark Pulse
-- Focus Blast
-- Hyper Beam
+- Stone Edge
+- Payback
+- Crunch
+- Thunder Fang
 
 Arcanine @ Silk Scarf
 Level: 69
@@ -9203,15 +9203,15 @@ Items: Full Restore / Full Restore
 
 Girafarig
 Level: 48
-- Psychic
-- Rock Smash
+- Zen Headbutt
+- Nasty Plot
 - Agility
 - Baton Pass
 
 Slowking
 Level: 49
 - Amnesia
-- Flamethrower
+- Fire Punch
 - Surf
 - Psychic
 
@@ -9227,11 +9227,11 @@ Level: 49
 - Curse
 - Rock Smash
 - Body Slam
-- Psychic
+- Zen Headbutt
 
 Xatu @ Twisted Spoon
 Level: 50
-- Drill Peck
+- Air Slash
 - Recover
 - Confuse Ray
 - Psychic
@@ -9277,15 +9277,15 @@ Level: 67
 
 Slowbro @ Quick Claw
 Level: 66
-- Flamethrower
+- Fire Punch
 - Curse
 - Earthquake
-- Rock Smash
+- Zen Headbutt
 
 Xatu @ Leftovers
 Level: 68
 - Future Sight
-- Fly
+- Air Slash
 - Confuse Ray
 - Protect
 
@@ -9302,21 +9302,21 @@ Items: Full Restore / Full Restore
 
 Hitmonchan @ Scope Lens
 Level: 53
-- Mach Punch
+- Close Combat
 - Pursuit
 - Dizzy Punch
 - Thunder Punch
 
 Heracross
 Level: 52
-- Cross Chop
+- Close Combat
 - Megahorn
 - Take Down
 - Earthquake
 
 Hitmonlee @ Silk Scarf
 Level: 53
-- Body Slam
+- Blaze Kick
 - Meditate
 - Reversal
 - Hi Jump Kick
@@ -9325,7 +9325,7 @@ Steelix
 Level: 53
 - Crunch
 - Earthquake
-- Rock Slide
+- Stone Edge
 - Iron Tail
 
 Machamp @ Black Belt
@@ -9362,7 +9362,7 @@ Level: 68
 
 Heracross @ Quick Claw
 Level: 67
-- Cross Chop
+- Close Combat
 - Megahorn
 - Reversal
 - Earthquake
@@ -9422,7 +9422,7 @@ Level: 53
 
 Honchkrow @ Sharp Beak
 Level: 53
-- Drill Peck
+- Air Slash
 - Faint Attack
 - Steel Wing
 - Haze
@@ -9454,24 +9454,24 @@ Level: 68
 
 Weavile
 Level: 67
-- Faint Attack
+- Hone Claws
 - Metal Claw
-- Beat Up
-- Blizzard
+- Night Slash
+- Avalanche
 
 Persian @ Scope Lens
 Level: 68
 - Slash
-- Cut
+- Assurance
 - Iron Tail
-- Hypnosis
+- Play Rough
 
 Honchkrow @ Sharp Beak
 Level: 68
-- Sky Attack
-- Pursuit
+- Air Slash
+- Dark Pulse
 - Swagger
-- Psych Up
+- Nasty Plot
 
 Absol @ Leftovers
 Level: 67
@@ -9507,23 +9507,23 @@ Level: 50
 
 Qwilfish
 Level: 51
-- Surf
+- Aqua Tail
 - Toxic
 - Protect
-- Sludge Bomb
+- Poison Jab
 
 Muk @ Leftovers
 Level: 50
 - Minimize
 - Fire Blast
-- Sludge Bomb
+- Gunk Shot
 - Toxic
 
 Venomoth
 Level: 51
 - Leech Life
 - Psychic
-- Sludge Bomb
+- Poison Fang
 - Sleep Powder
 
 Crobat @ Bright Powder
@@ -9548,14 +9548,14 @@ Tentacruel @ Chesto Berry
 Level: 67
 - Waterfall
 - Blizzard
-- Giga Drain
+- Sludge Wave
 - Rest
 
 Muk @ Leftovers
 Level: 67
 - Minimize
 - Fire Blast
-- Sludge Bomb
+- Gunk Shot
 - Toxic
 
 Swalot
@@ -9581,8 +9581,8 @@ Level: 67
 
 Crobat @ Leftovers
 Level: 68
-- Protect
-- Fly
+- Cross Poison
+- Air Slash
 - Toxic
 - Confuse Ray
 
@@ -9599,10 +9599,10 @@ Items: Full Restore / Full Restore
 
 Gyarados @ Leftovers
 Level: 54
-- Surf
-- Rain Dance
+- Waterfall
+- Dragon Dance
 - Hyper Beam
-- Rock Smash
+- Earthquake
 
 Dragonite @ Sitrus Berry
 Level: 55
@@ -9627,7 +9627,7 @@ Level: 55
 
 Aerodactyl @ Silk Scarf
 Level: 54
-- Wing Attack
+- Aerial Ace
 - Rock Slide
 - Hyper Beam
 - Earthquake
@@ -9659,17 +9659,17 @@ Level: 69
 
 Dragonite @ Sitrus Berry
 Level: 68
-- Blizzard
-- Extreme Speed
-- Thunder
-- Hyper Beam
+- Iron Tail
+- Ice Punch
+- Dragon Rush
+- Dragon Dance
 
 Gyarados @ Quick Claw
 Level: 69
-- Hidden Power
+- Waterfall
 - Hyper Beam
-- Hydro Pump
-- Fire Blast
+- Crunch
+- Earthquake
 
 Charizard @ Leftovers
 Level: 68
@@ -9688,9 +9688,9 @@ Level: 69
 Altaria @ Silk Scarf
 Level: 70
 - Dragon Dance
-- Play Rough
-- Safeguard
-- Sky Attack
+- MoonBlast
+- Dragon Pulse
+- Hurricane
 
 
 === TRAINER_LANCE_3_HNS ===
@@ -9705,24 +9705,24 @@ Items: Full Restore / Full Restore
 
 Gyarados @ Quick Claw
 Level: 68
-- Hydro Pump
-- Hyper Beam
-- Hidden Power
-- Fire Blast
+- Waterfall
+- Earthquake
+- Dragon Dance
+- Dragon Rush
 
 Charizard @ Leftovers
 Level: 68
 - Fire Blast
-- Crunch
-- Earthquake
-- Swords Dance
+- Aerial Ace
+- Steel Wing
+- Thunder Punch
 
 Dragonite @ Sitrus Berry
 Level: 75
-- Blizzard
-- Extreme Speed
-- Thunder
-- Hyper Beam
+- Iron Tail
+- Ice Punch
+- Dragon Rush
+- Dragon Dance
 
 === TRAINER_CLAIR_3_HNS ===
 Name: CLAIR
@@ -9836,13 +9836,13 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Bite
 - Confuse Ray
 - Poison Sting
-- Gust
+- Air Cutter
 
 Bayleef
 Level: 24
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Mega Drain
-- Razor Leaf
+- Magical Leaf
 - Tackle
 - Leech Seed
 
@@ -9871,7 +9871,7 @@ IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Flamethrower
 - Iron Tail
 - Bite
-- Double Team
+- Nasty Plot
 
 Octillery
 Level: 38
@@ -9879,20 +9879,21 @@ IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Octazooka
 - Psybeam
 - Aurora Beam
+- Signal Beam
 
 Golbat
 Level: 39
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Toxic
+- Poison Fang
 - Double Team
 - Confuse Ray
-- Wing Attack
+- Air Cutter
 
 Meganium
 Level: 40
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Synthesis
-- Razor Leaf
+- Magical Leaf
 - Sunny Day
 - Body Slam
 
@@ -9918,10 +9919,10 @@ IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 Golbat
 Level: 45
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Toxic
+- Venoshock
+- Aerial Ace
 - Double Team
 - Confuse Ray
-- Wing Attack
 
 Octillery @ Quick Claw
 Level: 46
@@ -9929,7 +9930,7 @@ IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Surf
 - Ice Beam
 - Psybeam
-- Hyper Beam
+- Signal Beam
 
 Houndoom
 Level: 46
@@ -9942,10 +9943,10 @@ IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 Meganium @ Miracle Seed
 Level: 47
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Sunny Day
-- Giga Drain
-- Body Slam
-- Synthesis
+- Play Rough
+- Petal Dance
+- Petal Blizzard
+- Poison Powder
 
 Tyranitar
 Level: 48
@@ -9953,7 +9954,7 @@ IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Crunch
 - Earthquake
 - Rock Slide
-- Fire Punch
+- Fire Fang
 
 
 === TRAINER_RIVAL_CHIKORITA_6_HNS ===
@@ -9968,24 +9969,24 @@ Items: Full Restore / Full Restore
 
 Ursaluna Bloodmoon @ Chesto Berry
 Level: 64
-- Fake Tears
+- Hammer Arm
 - Moonblast
 - Ancient Power
 - Rest
 
 Crobat @ Leftovers
 Level: 64
-- Toxic
-- Double Team
-- Confuse Ray
-- Wing Attack
+- Air Slash
+- Venoshock
+- Dark Pulse
+- Facade
 
 Octillery @ Never Melt Ice
 Level: 64
 - Surf
 - Ice Beam
 - Psybeam
-- Hyper Beam
+- Signal Beam
 
 Houndoom @ Charcoal
 Level: 64
@@ -9996,17 +9997,17 @@ Level: 64
 
 Meganium @ Miracle Seed
 Level: 64
-- Reflect
-- Giga Drain
-- Solar Beam
+- Synthesis
+- MoonBlast
+- Petal Blizzard
 - Body Slam
 
 Tyranitar @ Quick Claw
 Level: 64
 - Crunch
 - Earthquake
-- Rock Slide
-- Fire Blast
+- Stone Edge
+- Fire Fang
 
 
 === TRAINER_RIVAL_CHIKORITA_7_HNS ===
@@ -10021,24 +10022,24 @@ Items: Full Restore / Full Restore
 
 Ursaluna Bloodmoon @ Chesto Berry
 Level: 68
-- Fake Tears
+- Hammer Arm
 - Moonblast
 - Ancient Power
 - Rest
 
 Crobat @ Leftovers
 Level: 68
-- Toxic
-- Double Team
-- Confuse Ray
-- Fly
+- Air Slash
+- Venoshock
+- Dark Pulse
+- Facade
 
 Octillery @ Never Melt Ice
 Level: 68
 - Surf
 - Ice Beam
 - Psybeam
-- Hyper Beam
+- Signal Beam
 
 Houndoom @ Charcoal
 Level: 68
@@ -10058,8 +10059,8 @@ Tyranitar @ Quick Claw
 Level: 68
 - Crunch
 - Earthquake
-- Rock Slide
-- Fire Blast
+- Stone Edge
+- Fire Fang
 
 
 === TRAINER_RIVAL_CYNDAQUIL_1_HNS ===
@@ -10143,7 +10144,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Bite
 - Confuse Ray
 - Poison Sting
-- Gust
+- Air Cutter
 
 Quilava
 Level: 24
@@ -10186,14 +10187,15 @@ IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Octazooka
 - Psybeam
 - Aurora Beam
+- Signal Beam
 
 Golbat
 Level: 39
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Toxic
+- Poison Fang
 - Double Team
 - Confuse Ray
-- Wing Attack
+- Air Cutter
 
 Typhlosion
 Level: 40
@@ -10225,10 +10227,10 @@ IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 Golbat
 Level: 45
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Toxic
+- Venoshock
+- Aerial Ace
 - Double Team
 - Confuse Ray
-- Wing Attack
 
 Octillery @ Quick Claw
 Level: 46
@@ -10236,7 +10238,7 @@ IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Surf
 - Ice Beam
 - Psybeam
-- Hyper Beam
+- Signal Beam
 
 Victreebel
 Level: 46
@@ -10260,7 +10262,7 @@ IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Crunch
 - Earthquake
 - Rock Slide
-- Fire Punch
+- Fire Fang
 
 
 === TRAINER_RIVAL_CYNDAQUIL_6_HNS ===
@@ -10275,24 +10277,24 @@ Items: Full Restore / Full Restore
 
 Ursaluna Bloodmoon @ Chesto Berry
 Level: 64
-- Fake Tears
+- Hammer Arm
 - Moonblast
 - Ancient Power
 - Rest
 
 Crobat @ Leftovers
 Level: 64
-- Toxic
-- Double Team
-- Confuse Ray
-- Wing Attack
+- Air Slash
+- Venoshock
+- Dark Pulse
+- Facade
 
 Octillery @ Never Melt Ice
 Level: 64
 - Surf
 - Ice Beam
 - Psybeam
-- Hyper Beam
+- Signal Beam
 
 Victreebel @ Scope Lens
 Level: 64
@@ -10312,8 +10314,8 @@ Tyranitar @ Quick Claw
 Level: 64
 - Crunch
 - Earthquake
-- Rock Slide
-- Fire Blast
+- Stone Edge
+- Fire Fang
 
 
 === TRAINER_RIVAL_CYNDAQUIL_7_HNS ===
@@ -10328,29 +10330,29 @@ Items: Full Restore / Full Restore
 
 Ursaluna Bloodmoon @ Chesto Berry
 Level: 68
-- Fake Tears
+- Hammer Arm
 - Moonblast
 - Ancient Power
 - Rest
 
 Crobat @ Leftovers
 Level: 68
-- Toxic
-- Double Team
-- Confuse Ray
-- Fly
+- Air Slash
+- Venoshock
+- Dark Pulse
+- Facade
 
 Octillery @ Never Melt Ice
 Level: 68
 - Surf
 - Ice Beam
 - Psybeam
-- Hyper Beam
+- Signal Beam
 
 Victreebel @ Scope Lens
 Level: 68
+- Leaf Blade
 - Sludge Bomb
-- Razor Leaf
 - Sleep Powder
 - Growth
 
@@ -10365,8 +10367,8 @@ Tyranitar @ Quick Claw
 Level: 68
 - Crunch
 - Earthquake
-- Rock Slide
-- Fire Blast
+- Stone Edge
+- Fire Fang
 
 
 === TRAINER_RIVAL_TOTODILE_1_HNS ===
@@ -10450,7 +10452,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Bite
 - Confuse Ray
 - Poison Sting
-- Gust
+- Air Cutter
 
 Croconaw
 Level: 24
@@ -10493,15 +10495,15 @@ IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Flamethrower
 - Iron Tail
 - Bite
-- Double Team
+- Nasty Plot
 
 Golbat
 Level: 39
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Toxic
+- Poison Fang
 - Double Team
 - Confuse Ray
-- Wing Attack
+- Air Cutter
 
 Feraligatr
 Level: 40
@@ -10533,10 +10535,10 @@ IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 Golbat
 Level: 45
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Toxic
+- Venoshock
+- Aerial Ace
 - Double Team
 - Confuse Ray
-- Wing Attack
 
 Victreebel @ Quick Claw
 Level: 46
@@ -10568,7 +10570,7 @@ IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Crunch
 - Earthquake
 - Rock Slide
-- Fire Punch
+- Fire Fang
 
 
 === TRAINER_RIVAL_TOTODILE_6_HNS ===
@@ -10583,17 +10585,17 @@ Items: Full Restore / Full Restore
 
 Ursaluna Bloodmoon @ Chesto Berry
 Level: 64
-- Fake Tears
+- Hammer Arm
 - Moonblast
 - Ancient Power
 - Rest
 
 Crobat @ Leftovers
 Level: 64
-- Toxic
-- Double Team
-- Confuse Ray
-- Wing Attack
+- Air Slash
+- Venoshock
+- Dark Pulse
+- Facade
 
 Victreebel @ Scope Lens
 Level: 64
@@ -10620,8 +10622,8 @@ Tyranitar @ Quick Claw
 Level: 64
 - Crunch
 - Earthquake
-- Rock Slide
-- Fire Blast
+- Stone Edge
+- Fire Fang
 
 
 === TRAINER_RIVAL_TOTODILE_7_HNS ===
@@ -10636,22 +10638,22 @@ Items: Full Restore / Full Restore
 
 Ursaluna Bloodmoon @ Chesto Berry
 Level: 68
-- Fake Tears
+- Hammer Arm
 - Moonblast
 - Ancient Power
 - Rest
 
 Crobat @ Leftovers
 Level: 68
-- Toxic
-- Double Team
-- Confuse Ray
-- Fly
+- Air Slash
+- Venoshock
+- Dark Pulse
+- Facade
 
 Victreebel @ Scope Lens
 Level: 68
+- Leaf Blade
 - Sludge Bomb
-- Razor Leaf
 - Sleep Powder
 - Growth
 
@@ -10673,8 +10675,8 @@ Tyranitar @ Quick Claw
 Level: 68
 - Crunch
 - Earthquake
-- Rock Slide
-- Fire Blast
+- Stone Edge
+- Fire Fang
 
 
 === TRAINER_RED_2_HNS ===
@@ -10696,22 +10698,22 @@ Level: 93
 
 Snorlax @ Leftovers
 Level: 75
-- Amnesia
+- Belly Drum
 - Curse
-- Body Slam
+- Heavy Slam
 - Earthquake
 
 Charizard @ Charcoal
 Level: 77
 - Fire Blast
-- Wing Attack
+- Aerial Ace
 - Outrage
 - Steel Wing
 
 Venusaur @ Miracle Seed
 Level: 77
-- Giga Drain
-- Body Slam
+- Petal Blizzard
+- Double Edge
 - Sleep Powder
 - Leech Seed
 
@@ -10719,7 +10721,7 @@ Blastoise @ Quick Claw
 Level: 77
 - Ice Beam
 - Hydro Pump
-- Body Slam
+- Skull Bash
 - Earthquake
 
 Espeon @ Sitrus Berry
@@ -10792,8 +10794,8 @@ Level: 61
 Nidoqueen
 Level: 61
 - Ice Punch
-- Sludge Bomb
-- Surf
+- Cross Poison
+- Bulldoze
 - Body Slam
 
 Persian
@@ -10805,7 +10807,7 @@ Level: 61
 
 Ursaluna
 Level: 60
-- Earthquake
+- Headlong Rush
 - Sandstorm
 - Play Rough
 - Double Edge
@@ -10852,14 +10854,14 @@ Items: Full Restore / Full Restore
 
 Muk
 Level: 36
-- Sludge Bomb
-- Pound
+- Sludge Wave
+- Mud Bomb
 - Acid Armor
 - Minimize
 
 Nidoqueen
 Level: 37
-- Sludge Bomb
+- Cross Poison
 - Double Kick
 - Thunder Punch
 - Body Slam
@@ -10869,11 +10871,11 @@ Level: 36
 - Sludge Bomb
 - Self Destruct
 - Haze
-- Tackle
+- Gyro Ball
 
 Nidoking
 Level: 37
-- Sludge Bomb
+- Cross Poison
 - Double Kick
 - Ice Punch
 - Thrash
@@ -10881,7 +10883,7 @@ Level: 37
 Rhydon
 Level: 38
 - Earthquake
-- Surf
+- Drill Run
 - Fissure
 - Rock Slide
 
@@ -10906,30 +10908,30 @@ Level: 39
 Tauros
 Level: 38
 - Headbutt
-- Rock Smash
+- Earthquake
 - Pursuit
 - Frustration
 
 Gyarados
 Level: 39
-- Bite
-- Strength
-- Gust
-- Surf
+- Crunch
+- Bounce
+- Twister
+- Aqua Tail
 
 Houndoom
 Level: 38
-- Bite
+- Crunch
 - Smog
 - Roar
 - Flamethrower
 
 Slowbro
 Level: 40
-- Confusion
+- Zen Headbutt
 - Curse
 - Amnesia
-- Surf
+- Waterfall
 
 
 === TRAINER_ARCHER_1_HNS ===
@@ -11075,7 +11077,7 @@ Level: 30
 
 Larvitar
 Level: 30
-- Rock Tomb
+- Rock Slide
 - Screech
 - Bite
 - Thrash
@@ -11084,7 +11086,7 @@ Magcargo
 Level: 30
 - Smog
 - Flamethrower
-- Rock Slide
+- Ancient Power
 - Curse
 
 Cloyster
@@ -11123,7 +11125,7 @@ Magcargo
 Level: 39
 - Smog
 - Flamethrower
-- Rock Slide
+- Ancient Power
 - Curse
 
 Cloyster
@@ -11147,7 +11149,7 @@ Items: Full Restore / Full Restore
 Arbok
 Level: 31
 - Leer
-- Sludge Bomb
+- Poison Fang
 - Bite
 - Wrap
 
@@ -11179,9 +11181,9 @@ Items: Full Restore / Full Restore
 Arbok
 Level: 39
 - Screech
-- Bite
+- Crunch
 - Glare
-- Sludge Bomb
+- Poison Fang
 
 Persian
 Level: 40
@@ -11201,7 +11203,7 @@ Gyarados
 Level: 40
 - Strength
 - Twister
-- Gust
+- Bounce
 - Surf
 
 Murkrow
@@ -11209,7 +11211,7 @@ Level: 40
 - Pursuit
 - Toxic
 - Faint Attack
-- Fly
+- Air Slash
 
 
 === TRAINER_ANABEL_BF_BRAIN_HNS ===

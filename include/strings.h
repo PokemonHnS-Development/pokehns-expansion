@@ -388,6 +388,42 @@ extern const u8 gBirchDexRatingText_LessThan190[];
 extern const u8 gBirchDexRatingText_LessThan200[];
 extern const u8 gBirchDexRatingText_DexCompleted[];
 
+// HnS dex rating text
+extern const u8 gJohtoDexRatingText_LessThan10[];
+extern const u8 gJohtoDexRatingText_LessThan20[];
+extern const u8 gJohtoDexRatingText_LessThan35[];
+extern const u8 gJohtoDexRatingText_LessThan50[];
+extern const u8 gJohtoDexRatingText_LessThan65[];
+extern const u8 gJohtoDexRatingText_LessThan80[];
+extern const u8 gJohtoDexRatingText_LessThan95[];
+extern const u8 gJohtoDexRatingText_LessThan110[];
+extern const u8 gJohtoDexRatingText_LessThan125[];
+extern const u8 gJohtoDexRatingText_LessThan140[];
+extern const u8 gJohtoDexRatingText_LessThan155[];
+extern const u8 gJohtoDexRatingText_LessThan170[];
+extern const u8 gJohtoDexRatingText_LessThan185[];
+extern const u8 gJohtoDexRatingText_LessThan200[];
+extern const u8 gJohtoDexRatingText_LessThan215[];
+extern const u8 gJohtoDexRatingText_LessThan230[];
+extern const u8 gJohtoDexRatingText_LessThan245[];
+extern const u8 gJohtoDexRatingText_LessThan260[];
+extern const u8 gJohtoDexRatingText_LessThan275[];
+extern const u8 gJohtoDexRatingText_LessThanMaxDex[];
+extern const u8 gJohtoDexRatingText_Complete[];
+
+extern const u8 gNationalDexRatingText_LessThan100[];
+extern const u8 gNationalDexRatingText_LessThan150[];
+extern const u8 gNationalDexRatingText_LessThan200[];
+extern const u8 gNationalDexRatingText_LessThan250[];
+extern const u8 gNationalDexRatingText_LessThan300[];
+extern const u8 gNationalDexRatingText_LessThan350[];
+extern const u8 gNationalDexRatingText_LessThan400[];
+extern const u8 gNationalDexRatingText_LessThan435[];
+extern const u8 gNationalDexRatingText_LessThan465[];
+extern const u8 gNationalDexRatingText_LessThan475[];
+extern const u8 gNationalDexRatingText_LessThanMaxDex[];
+extern const u8 gNationalDexRatingText_Complete[];
+
 // player PC text
 extern const u8 gText_WhatWouldYouLike[];
 extern const u8 gText_NoMailHere[];
@@ -2002,6 +2038,7 @@ extern const u8 gText_OnlyOnePhrase[];
 extern const u8 gText_YouCannotQuitHere[];
 extern const u8 gText_SectionMustBeCompleted[];
 extern const u8 gText_ThreeQuestionMarks[];
+extern const u8 gText_FourQuestionMarks[];
 extern const u8 gText_Profile[];
 extern const u8 gText_CombineFourWordsOrPhrases[];
 extern const u8 gText_AndMakeYourProfile[];

@@ -59,6 +59,7 @@ FallarborTown_BattleTentLobby_hns_EventScript_GivePrize::
 	msgbox FallarborTown_BattleTentLobby_Text_AwaitAnotherChallenge2, MSGBOX_DEFAULT
 	closemessage
 	setvar VAR_TEMP_CHALLENGE_STATUS, 255
+	givebp 10
 	releaseall
 	end
 

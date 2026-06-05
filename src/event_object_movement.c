@@ -182,6 +182,7 @@ static void UpdateObjectEventVisibility(struct ObjectEvent *, struct Sprite *);
 static void MakeSpriteTemplateFromObjectEventTemplate(const struct ObjectEventTemplate *, struct SpriteTemplate *, const struct SubspriteTable **);
 static void GetObjectEventMovingCameraOffset(s16 *, s16 *);
 const struct ObjectEventTemplate *GetObjectEventTemplateByLocalIdAndMap(u8 localId, u8 mapNum, u8 mapGroup);
+u8 LoadObjectEventPalette(u16);
 static void RemoveObjectEventIfOutsideView(struct ObjectEvent *);
 static void SpawnObjectEventOnReturnToField(u8, s16, s16);
 static void SetPlayerAvatarObjectEventIdAndObjectId(u8, u8);
@@ -2340,7 +2341,14 @@ static u32 LoadDynamicFollowerPalette(u32 species, bool32 shiny, bool32 female)
     #endif
         {
             if (shiny)
-                spritePalette.data = gSpeciesInfo[species].overworldShinyPalette;
+            {
+                if (gSaveBlock3Ptr != NULL
+                    && gSaveBlock3Ptr->challengeSettings.tx_Features_ShinyColors
+                    && gSpeciesInfo[species].overworldShinyPaletteModern != NULL)
+                    spritePalette.data = gSpeciesInfo[species].overworldShinyPaletteModern;
+                else
+                    spritePalette.data = gSpeciesInfo[species].overworldShinyPalette;
+            }
             else
                 spritePalette.data = gSpeciesInfo[species].overworldPalette;
         }

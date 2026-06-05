@@ -221,6 +221,7 @@
       "flag": "FLAG_ITEM_ROUTE20_SHELL_BELL"
     },
     {
+      "local_id": "LOCALID_ROUTE20_HEADLOCKER",
       "graphics_id": "OBJ_EVENT_GFX_FISHERMAN_HNS",
       "x": 23,
       "y": 8,
@@ -231,11 +232,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route20_EventScript_Headlocker",
-      "flag": "0",
-      "local_id": "LOCALID_ROUTE20_HEADLOCKER"
+      "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_MAGIKARP+SPECIES_SHINY_TAG",
+      "local_id": "LOCALID_ROUTE20_DENNIS",
+      "graphics_id": "OBJ_EVENT_MON+SPECIES_MAGIKARP+OBJ_EVENT_MON_SHINY",
       "x": 24,
       "y": 8,
       "elevation": 0,
@@ -245,8 +246,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route20_EventScript_Dennis",
-      "flag": "0",
-      "local_id": "LOCALID_ROUTE20_DENNIS"
+      "flag": "0"
     }
   ],
   "warp_events": [

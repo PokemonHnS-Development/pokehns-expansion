@@ -3,7 +3,7 @@ PewterCity_PokemonCenter_hns_MapScripts::
 	.byte 0
 
 PewterCity_PokemonCenter_OnTransition::
-	setrespawn HEAL_LOCATION_PEWTER_CITY
+	setrespawn HEAL_LOCATION_PEWTER_CITY_HNS
 	end
 
 PewterCity_PokemonCenter_EventScript_Teacher::
