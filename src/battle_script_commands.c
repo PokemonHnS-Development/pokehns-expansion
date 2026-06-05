@@ -4208,9 +4208,14 @@ static void Cmd_getexp(void)
             }
             else
             {
-                *exp = calculatedExp;
-                gBattleStruct->expShareExpValue = calculatedExp / 2;
-                if (gBattleStruct->expShareExpValue == 0)
+                *exp = SAFE_DIV(calculatedExp * B_EXPALL_PARTICIPANT_NUM,
+                                viaSentIn    * B_EXPALL_PARTICIPANT_DEN);
+                if (*exp == 0)
+                    *exp = 1;
+
+                gBattleStruct->expShareExpValue = SAFE_DIV(calculatedExp * B_EXPALL_NONPARTICIPANT_NUM,
+                                                           B_EXPALL_NONPARTICIPANT_DEN);
+                if (gBattleStruct->expShareExpValue == 0 && calculatedExp != 0)
                     gBattleStruct->expShareExpValue = 1;
             }
 
