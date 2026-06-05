@@ -1,6 +1,50 @@
 Route25_BillsHouse_hns_MapScripts::
 	.byte 0
 
+Route25_BillsHouse_hns_EventScript_TeleporterTest::
+	lockall
+	opendoor 10, 3
+	waitdooranim
+	playse SE_CONTEST_CURTAIN_FALL
+	closedoor 10, 3
+	waitdooranim
+	delay 35
+	playse SE_PIN
+	waitse
+	setvar VAR_0x8004, 0
+	special AnimateTeleporterHousing
+	delay 10
+	call Route25_BillsHouse_hns_BeepSE
+	call Route25_BillsHouse_hns_BeepSE
+	call Route25_BillsHouse_hns_BeepSE
+	call Route25_BillsHouse_hns_BeepSE
+	call Route25_BillsHouse_hns_BeepSE
+	call Route25_BillsHouse_hns_BeepSE
+	call Route25_BillsHouse_hns_BeepSE
+	setvar VAR_0x8004, 1
+	special AnimateTeleporterHousing
+	playse SE_WARP_IN
+	special AnimateTeleporterCable
+	waitse
+	call Route25_BillsHouse_hns_BeepSE
+	call Route25_BillsHouse_hns_BeepSE
+	call Route25_BillsHouse_hns_BeepSE
+	call Route25_BillsHouse_hns_BeepSE
+	call Route25_BillsHouse_hns_BeepSE
+	opendoor 3, 3
+	waitdooranim
+	delay 50
+	playse SE_CONTEST_CURTAIN_FALL
+	closedoor 3, 3
+	waitdooranim
+	releaseall
+	end
+
+Route25_BillsHouse_hns_BeepSE::
+	playse SE_BALL
+	waitse
+	delay 20
+	return
 
 @VAR_BILLS_GRANDPA
 

@@ -198,6 +198,7 @@ static const u8 sDoorAnimTiles_RocketElevator[] = INCBIN_U8("graphics/door_anims
 static const u8 sDoorAnimTiles_SSAqua[] = INCBIN_U8("graphics/door_anims/ssaqua_hns.4bpp");
 static const u8 sDoorAnimTiles_HnsSafariZone[] = INCBIN_U8("graphics/door_anims/safari_zone_hns.4bpp");
 static const u8 sDoorAnimTiles_HnsBirchsLab[] = INCBIN_U8("graphics/door_anims/birchs_lab_hns.4bpp");
+static const u8 sDoorAnimTiles_TeleporterHns[] = INCBIN_U8("graphics/door_anims/teleporter.4bpp");
 
 #endif // IS_HNS
 
@@ -419,6 +420,7 @@ static const u8 sDoorAnimPalettes_DeptStoreHns[] = {8, 8, 8, 8, 8, 8, 8, 8};
 static const u8 sDoorAnimPalettes_RocketElevator[] = {2, 2, 2, 2, 2, 2, 2, 2};
 static const u8 sDoorAnimPalettes_SSAqua[] = {7, 7, 7, 7, 7, 7, 7, 7};
 static const u8 sDoorAnimPalettes_OaksLabHns[] = {10, 10, 10, 10, 10, 10, 10, 10};
+static const u8 sDoorAnimPalettes_TeleporterHns[] = {8, 8, 8, 8, 8, 8, 8, 8};
 
 #endif // IS_HNS
 
@@ -567,6 +569,7 @@ static const struct DoorGraphics sDoorAnimGraphicsTable[] =
     {METATILE_GoldenrodUnderground_Elevator_Hns,               &gTileset_GoldenrodUndergroundTunnel_Hns, DOOR_SOUND_SLIDING, 1, sDoorAnimTiles_RocketElevator, sDoorAnimPalettes_RocketElevator},
     {METATILE_SSAqua_Door_Hns,                                 &gTileset_ssaqua_Hns, DOOR_SOUND_NORMAL,  1, sDoorAnimTiles_SSAqua, sDoorAnimPalettes_SSAqua},
     {METATILE_PalletTown_Door_Green_Hns,                   &gTileset_PalletTown_Hns, DOOR_SOUND_NORMAL,  1, sDoorAnimTiles_HnsBirchsLab, sDoorAnimPalettes_OaksLabHns},
+    {METATILE_SeaCottage_Teleporter_Door,                  &gTileset_SeaCottage_Hns, DOOR_SOUND_SLIDING, 2, sDoorAnimTiles_TeleporterHns, sDoorAnimPalettes_TeleporterHns},
     {METATILE_BattleFrontier_Door_Elevator,                 &gTileset_BattleFrontier, DOOR_SOUND_SLIDING, 1, sDoorAnimTiles_BattleTowerElevator, sDoorAnimPalettes_BattleTowerElevator},
     {METATILE_BattleFrontierOutsideWest_Door_BattleDome,    &gTileset_BattleFrontierOutsideWest, DOOR_SOUND_SLIDING, 1, sDoorAnimTiles_BattleDome, sDoorAnimPalettes_BattleDome},
     {METATILE_BattleFrontierOutsideWest_Door_BattleFactory, &gTileset_BattleFrontierOutsideWest, DOOR_SOUND_SLIDING, 1, sDoorAnimTiles_BattleFactory, sDoorAnimPalettes_BattleFactory},
