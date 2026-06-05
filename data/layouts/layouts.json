@@ -15778,7 +15778,7 @@
       "width": 20,
       "height": 20,
       "primary_tileset": "gTileset_Johto_Building_Hns",
-      "secondary_tileset": "gTileset_House_2_Hns",
+      "secondary_tileset": "gTileset_PokemonCenter_White_Hns",
       "border_filepath": "data/layouts/Melemele_House_hns/border.bin",
       "blockdata_filepath": "data/layouts/Melemele_House_hns/map.bin",
       "game_version": "hns",

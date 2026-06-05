@@ -1671,6 +1671,51 @@
       "name": "NAVEL ROCK"
     },
     {
+      "id": "MAPSEC_MELEMELE_ISLAND",
+      "name": "MELEMELE",
+      "in_hns": true
+    },
+    {
+      "id": "MAPSEC_AKALA_ISLAND",
+      "name": "AKALA",
+      "in_hns": true
+    },
+    {
+      "id": "MAPSEC_ULAULA_ISLAND",
+      "name": "ULA'ULA",
+      "in_hns": true
+    },
+    {
+      "id": "MAPSEC_PONI_ISLAND",
+      "name": "PONI",
+      "in_hns": true
+    },
+    {
+      "id": "MAPSEC_ALOLA_OCEAN",
+      "name": "ALOLA",
+      "in_hns": true
+    },
+    {
+      "id": "MAPSEC_AKALA_CAVE",
+      "name": "AKALA CAVE",
+      "in_hns": true
+    },
+    {
+      "id": "MAPSEC_AKALA_FOREST",
+      "name": "AKALA FOREST",
+      "in_hns": true
+    },
+    {
+      "id": "MAPSEC_PONI_CAVE",
+      "name": "PONI CAVE",
+      "in_hns": true
+    },
+    {
+      "id": "MAPSEC_ULAULA_CAVE",
+      "name": "ULA'ULA CAVE",
+      "in_hns": true
+    },
+    {
       "id": "MAPSEC_TRAINER_HILL",
       "name": "TRAINER HILL",
       "x": 8,
@@ -1744,6 +1789,42 @@
       "width": 1,
       "x": 5,
       "y": 3
+    },
+    {
+      "id": "MAPSEC_MELEMELE_ISLAND",
+      "name": "MELEMELE"
+    },
+    {
+      "id": "MAPSEC_AKALA_ISLAND",
+      "name": "AKALA"
+    },
+    {
+      "id": "MAPSEC_ULAULA_ISLAND",
+      "name": "ULA'ULA"
+    },
+    {
+      "id": "MAPSEC_PONI_ISLAND",
+      "name": "PONI"
+    },
+    {
+      "id": "MAPSEC_ALOLA_OCEAN",
+      "name": "ALOLA"
+    },
+    {
+      "id": "MAPSEC_AKALA_CAVE",
+      "name": "AKALA CAVE"
+    },
+    {
+      "id": "MAPSEC_AKALA_FOREST",
+      "name": "AKALA FOREST"
+    },
+    {
+      "id": "MAPSEC_PONI_CAVE",
+      "name": "PONI CAVE"
+    },
+    {
+      "id": "MAPSEC_ULAULA_CAVE",
+      "name": "ULA'ULA CAVE"
     },
     {
       "height": 1,

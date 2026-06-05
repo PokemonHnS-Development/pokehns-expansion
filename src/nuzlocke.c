@@ -129,6 +129,17 @@ static const u8 sNuzlockeLUT[] =
     [MAPSEC_PEWTER_CITY]      = 0x5D,
     [MAPSEC_LAVENDER_TOWN]    = 0x5E,
     [MAPSEC_BATTLE_FRONTIER]  = 0x5F,
+    // Alola
+    [MAPSEC_MELEMELE_ISLAND] = 0x60,
+    [MAPSEC_AKALA_ISLAND] = 0x61,
+    [MAPSEC_ULAULA_ISLAND] = 0x62,
+    [MAPSEC_PONI_ISLAND] = 0x63,
+    [MAPSEC_ALOLA_OCEAN] = 0x64,
+    [MAPSEC_AKALA_CAVE] = 0x65,
+    [MAPSEC_AKALA_FOREST] = 0x66,
+    [MAPSEC_PONI_CAVE] = 0x67,
+    [MAPSEC_ULAULA_CAVE] = 0x68,
+    
 #else
     // Hoenn Routes
     [MAPSEC_ROUTE_101]        = 0x00,

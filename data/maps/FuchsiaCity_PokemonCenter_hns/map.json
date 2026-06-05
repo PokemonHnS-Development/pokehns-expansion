@@ -12,9 +12,10 @@
   "allow_running": false,
   "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": 0,
+  "connections": null,
   "object_events": [
     {
+      "local_id": "LOCALID_NURSE",
       "graphics_id": "OBJ_EVENT_GFX_NURSE_HNS",
       "x": 7,
       "y": 2,
@@ -25,8 +26,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "OldaleTown_PokemonCenter_1F_EventScript_Nurse",
-      "flag": "0",
-      "local_id": "LOCALID_NURSE"
+      "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_NURSE_CHANSEY_HNS",
@@ -55,6 +55,7 @@
       "flag": "0"
     },
     {
+      "local_id": "LOCALID_FUCHSIAPOKECENTER_JASMINE",
       "graphics_id": "OBJ_EVENT_GFX_JANINE_HNS",
       "x": 9,
       "y": 4,
@@ -65,8 +66,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_TEMP_1",
-      "local_id": "LOCALID_FUCHSIAPOKECENTER_JASMINE"
+      "flag": "FLAG_TEMP_1"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER_HNS",
@@ -82,6 +82,7 @@
       "flag": "0"
     },
     {
+      "local_id": "LOCALID_FUCHSIAPOKECENTER_WOMAN",
       "graphics_id": "OBJ_EVENT_GFX_BATTLE_GIRL_HNS",
       "x": 9,
       "y": 4,
@@ -92,8 +93,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "FuchsiaCity_PokemonCenter_EventScript_JanineClone",
-      "flag": "FLAG_TEMP_2",
-      "local_id": "LOCALID_FUCHSIAPOKECENTER_WOMAN"
+      "flag": "FLAG_TEMP_2"
     }
   ],
   "warp_events": [
