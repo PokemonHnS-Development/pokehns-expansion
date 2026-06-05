@@ -28,6 +28,7 @@
 #include "constants/songs.h"
 #include "constants/trainers.h"
 #include "constants/battle_anim.h"
+#include "rtc.h"
 #include "constants/battle_partner.h"
 #include "rtc.h"
 #include "data/battle_environment.h"
@@ -875,18 +876,18 @@ enum
     BATTLE_TERRAIN_TIME_NIGHT,
 };
 
-// Matches HnS time-of-day cutoffs for battle terrain palettes.
-// 7–17 day, 5–7 and 17–19 twilight (sunrise/sunset), rest night.
 static u32 GetBattleTerrainTimeOfDay(void)
 {
-    RtcCalcLocalTime();
-    s32 hours = gLocalTime.hours;
-    if (hours >= 7 && hours < 17)
+    switch (GetTimeOfDay())
+    {
+    case TIME_DAY:
         return BATTLE_TERRAIN_TIME_DAY;
-    else if ((hours >= 5 && hours < 7) || (hours >= 17 && hours < 19))
+    case TIME_MORNING:
+    case TIME_EVENING:
         return BATTLE_TERRAIN_TIME_TWILIGHT;
-    else
+    default:
         return BATTLE_TERRAIN_TIME_NIGHT;
+    }
 }
 
 static void LoadBattleEnvironmentGfx(u16 environment)

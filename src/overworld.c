@@ -1744,6 +1744,20 @@ void UpdateTimeOfDay(void)
         gTimeBlend.startBlend = gTimeBlend.endBlend = gTimeOfDayBlend[TIME_DAY];
         gTimeOfDay = TIME_DAY;
     }
+
+    if (IS_HNS)
+    {
+        if (gTimeOfDay == TIME_NIGHT || gTimeOfDay == TIME_EVENING)
+        {
+            FlagClear(FLAG_NIGHT_POKEMON);
+            FlagSet(FLAG_DAY_POKEMON);
+        }
+        else
+        {
+            FlagSet(FLAG_NIGHT_POKEMON);
+            FlagClear(FLAG_DAY_POKEMON);
+        }
+    }
 }
 
 #undef MORNING_HOUR_MIDDLE
