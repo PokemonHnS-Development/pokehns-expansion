@@ -1,12 +1,76 @@
 Route25_BillsHouse_hns_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, Route25_BillsHouse_hns_OnTransition
 	.byte 0
+
+Route25_BillsHouse_hns_OnTransition::
+	setflag FLAG_TEMP_1
+	setflag FLAG_TEMP_2
+	end
 
 Route25_BillsHouse_hns_EventScript_TeleporterTest::
 	lockall
+	dynmultichoice 0, 0, FALSE, 4, 0, DYN_MULTICHOICE_CB_NONE, Route25_BillsHouse_hns_Text_Blastoise, Route25_BillsHouse_hns_Text_Pikachu, Route25_BillsHouse_hns_Text_Clefairy, Route25_BillsHouse_hns_Text_Cancel
+	switch VAR_RESULT
+	case 0, Route25_BillsHouse_hns_PickBlastoise
+	case 1, Route25_BillsHouse_hns_PickPikachu
+	case 2, Route25_BillsHouse_hns_PickClefairy
+	case 3, Route25_BillsHouse_hns_EndChoice
+	case 127, Route25_BillsHouse_hns_EndChoice
+	end
+
+Route25_BillsHouse_hns_PickBlastoise::
+	setvar VAR_0x8004, SPECIES_BLASTOISE
+	setvar VAR_TEMP_0, SPECIES_BLASTOISE
+	goto Route25_BillsHouse_hns_CheckParty
+	end
+
+Route25_BillsHouse_hns_PickPikachu::
+	setvar VAR_0x8004, SPECIES_PIKACHU
+	setvar VAR_TEMP_0, SPECIES_PIKACHU
+	goto Route25_BillsHouse_hns_CheckParty
+	end
+
+Route25_BillsHouse_hns_PickClefairy::
+	setvar VAR_0x8004, SPECIES_CLEFAIRY
+	setvar VAR_TEMP_0, SPECIES_CLEFAIRY
+	goto Route25_BillsHouse_hns_CheckParty
+	end
+
+Route25_BillsHouse_hns_EndChoice::
+	releaseall
+	end
+
+Route25_BillsHouse_hns_CheckParty::
+	special CheckPartyForSpecies
+	goto_if_eq VAR_RESULT, FALSE, Route25_BillsHouse_hns_NoPokemon
+	goto Route25_BillsHouse_hns_RunTeleporter
+	end
+
+Route25_BillsHouse_hns_NoPokemon::
+	msgbox Route25_BillsHouse_hns_Text_NotInParty
+	releaseall
+	end
+
+Route25_BillsHouse_hns_RunTeleporter::
+	fadescreen FADE_TO_BLACK
+	delay 60
+	clearflag FLAG_TEMP_1
+	copyvar VAR_OBJ_GFX_ID_0, VAR_TEMP_0
+	addvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_MON_BASE
+	addobject LOCALID_BILLS_GRANDPA_OLD_MON
+	fadescreen FADE_FROM_BLACK
+	special SpawnCameraObject
+	applymovement OBJ_EVENT_ID_CAMERA, Route25_BillsHouse_Movement_CameraPanUp
+	waitmovement 0
 	opendoor 10, 3
 	waitdooranim
+	applymovement LOCALID_BILLS_GRANDPA_OLD_MON, Common_Movement_WalkUp1
+	waitmovement 0
+	turnobject LOCALID_BILLS_GRANDPA_OLD_MON, DIR_SOUTH
 	playse SE_CONTEST_CURTAIN_FALL
 	closedoor 10, 3
+	delay 10
+	removeobject LOCALID_BILLS_GRANDPA_OLD_MON
 	waitdooranim
 	delay 35
 	playse SE_PIN
@@ -31,20 +95,68 @@ Route25_BillsHouse_hns_EventScript_TeleporterTest::
 	call Route25_BillsHouse_hns_BeepSE
 	call Route25_BillsHouse_hns_BeepSE
 	call Route25_BillsHouse_hns_BeepSE
+	special GetRegionalFormSpecies
+	copyvar VAR_TEMP_1, VAR_RESULT
+	clearflag FLAG_TEMP_2
+	copyvar VAR_OBJ_GFX_ID_1, VAR_TEMP_1
+	addvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_MON_BASE
 	opendoor 3, 3
+	delay 10
+	addobject LOCALID_BILLS_GRANDPA_NEW_MON
 	waitdooranim
-	delay 50
+	applymovement LOCALID_BILLS_GRANDPA_NEW_MON, Common_Movement_WalkDown1
+	waitmovement 0
 	playse SE_CONTEST_CURTAIN_FALL
 	closedoor 3, 3
-	waitdooranim
+	delay 10
+	applymovement LOCALID_BILLS_GRANDPA_NEW_MON, Route25_BillsHouse_Movement_MonCelebration
+	waitmovement 0
+	playmoncry VAR_TEMP_0, CRY_MODE_NORMAL
+	waitmoncry
+	applymovement OBJ_EVENT_ID_CAMERA, Route25_BillsHouse_Movement_CameraPanDown
+	waitmovement 0
+	fadescreen FADE_TO_BLACK
+	removeobject LOCALID_BILLS_GRANDPA_NEW_MON
+	removeobject LOCALID_BILLS_GRANDPA_OLD_MON
+	special RemoveCameraObject
+	delay 60
+	fadescreen FADE_FROM_BLACK
 	releaseall
 	end
+
+Route25_BillsHouse_Movement_CameraPanUp:
+	walk_up
+	walk_up
+	walk_up
+	step_end
+
+Route25_BillsHouse_Movement_CameraPanDown:
+	walk_down
+	walk_down
+	walk_down
+	step_end
 
 Route25_BillsHouse_hns_BeepSE::
 	playse SE_BALL
 	waitse
 	delay 20
 	return
+
+Route25_BillsHouse_hns_Text_Blastoise:
+	.string "BLASTOISE$"
+
+Route25_BillsHouse_hns_Text_Pikachu:
+	.string "PIKACHU$"
+
+Route25_BillsHouse_hns_Text_Clefairy:
+	.string "CLEFAIRY$"
+
+Route25_BillsHouse_hns_Text_Cancel:
+	.string "CANCEL$"
+
+Route25_BillsHouse_hns_Text_NotInParty:
+	.string "I don't see that POKéMON\n"
+	.string "in your party.$"
 
 @VAR_BILLS_GRANDPA
 
@@ -191,6 +303,13 @@ Route25_BillsHouse_Test::
 	givemon SPECIES_GROWLITHE, 10
 	givemon SPECIES_PICHU, 10
 	end
+
+Route25_BillsHouse_Movement_MonCelebration:
+	jump_in_place_down
+	jump_in_place_left
+	jump_in_place_right
+	jump_in_place_down
+	step_end
 
 Route25_BillsHouse_Text_GrandpaIntro:
 	.string "Hm? You know BILL? He's my\n"

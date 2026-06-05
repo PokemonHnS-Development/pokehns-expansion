@@ -5876,3 +5876,44 @@ void SwitchMonAbility(void)
         gSpecialVar_Result = FALSE;
     }
 }
+
+void CheckPartyForSpecies(void)
+{
+    u16 species = gSpecialVar_0x8004;
+    u8 i;
+
+    for (i = 0; i < gPlayerPartyCount; i++)
+    {
+        if (GetMonData(&gPlayerParty[i], MON_DATA_SPECIES, NULL) == species)
+        {
+            gSpecialVar_Result = TRUE;
+            return;
+        }
+    }
+    gSpecialVar_Result = FALSE;
+}
+
+static const struct {
+    u16 src;
+    u16 dst;
+} sRegionalFormTable[] = {
+    { SPECIES_BLASTOISE, SPECIES_ZIGZAGOON },
+    { SPECIES_PIKACHU,   SPECIES_ZIGZAGOON },
+    { SPECIES_CLEFAIRY,  SPECIES_ZIGZAGOON },
+};
+
+void GetRegionalFormSpecies(void)
+{
+    u16 species = VarGet(VAR_TEMP_0);
+    u32 i;
+
+    for (i = 0; i < ARRAY_COUNT(sRegionalFormTable); i++)
+    {
+        if (sRegionalFormTable[i].src == species)
+        {
+            gSpecialVar_Result = sRegionalFormTable[i].dst;
+            return;
+        }
+    }
+    gSpecialVar_Result = species;
+}

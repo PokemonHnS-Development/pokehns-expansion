@@ -667,4 +667,6 @@ gSpecials::
 	def_special GetPaldeaCatchProgress
 	def_special HasAllJohotoMons
 	def_special HasAllRegionalMons
+	def_special CheckPartyForSpecies
+	def_special GetRegionalFormSpecies
 
