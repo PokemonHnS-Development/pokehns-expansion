@@ -22,7 +22,7 @@
   "object_events": [],
   "warp_events": [
     {
-      "x": 7,
+      "x": 8,
       "y": 44,
       "elevation": 0,
       "dest_map": "MAP_SNOWSWEPT_CAVERN_BASEMENT_HNS",

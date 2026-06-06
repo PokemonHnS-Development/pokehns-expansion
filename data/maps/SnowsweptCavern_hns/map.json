@@ -8,7 +8,7 @@
   "weather": "WEATHER_FOG_HORIZONTAL",
   "map_type": "MAP_TYPE_UNDERGROUND",
   "allow_cycling": true,
-  "allow_escaping": false,
+  "allow_escaping": true,
   "allow_running": true,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
@@ -252,7 +252,7 @@
   "warp_events": [
     {
       "x": 64,
-      "y": 69,
+      "y": 68,
       "elevation": 0,
       "dest_map": "MAP_MT_SILVER_1F_WATERFALL_ROOM_HNS",
       "dest_warp_id": "7"

@@ -30,15 +30,22 @@
       "x": 18,
       "y": 4,
       "elevation": 0,
-      "dest_map": "MAP_ROUTE49_NEW_SINJOH_GATE_HNS",
-      "dest_warp_id": "2"
+      "dest_map": "MAP_ROUTE50_SINJOH_RUINS_GATE_HNS",
+      "dest_warp_id": "0"
     },
     {
       "x": 19,
       "y": 4,
       "elevation": 0,
-      "dest_map": "MAP_ROUTE49_NEW_SINJOH_GATE_HNS",
-      "dest_warp_id": "3"
+      "dest_map": "MAP_ROUTE50_SINJOH_RUINS_GATE_HNS",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 66,
+      "y": 53,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE50_HOUSE1_HNS",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [],

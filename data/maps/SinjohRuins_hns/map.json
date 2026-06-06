@@ -7,9 +7,9 @@
   "requires_flash": false,
   "weather": "WEATHER_SNOW",
   "map_type": "MAP_TYPE_TOWN",
-  "allow_cycling": false,
+  "allow_cycling": true,
   "allow_escaping": false,
-  "allow_running": false,
+  "allow_running": true,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
@@ -43,11 +43,11 @@
       "dest_warp_id": "0"
     },
     {
-      "x": 28,
-      "y": 28,
+      "x": 33,
+      "y": 29,
       "elevation": 0,
       "dest_map": "MAP_SINJOH_RUINS_TEMPLE_HNS",
-      "dest_warp_id": "2"
+      "dest_warp_id": "1"
     },
     {
       "x": 6,
@@ -67,15 +67,15 @@
       "x": 18,
       "y": 45,
       "elevation": 0,
-      "dest_map": "MAP_ROUTE49_NEW_SINJOH_GATE_HNS",
-      "dest_warp_id": "6"
+      "dest_map": "MAP_ROUTE50_SINJOH_RUINS_GATE_HNS",
+      "dest_warp_id": "4"
     },
     {
       "x": 19,
       "y": 45,
       "elevation": 0,
-      "dest_map": "MAP_ROUTE49_NEW_SINJOH_GATE_HNS",
-      "dest_warp_id": "7"
+      "dest_map": "MAP_ROUTE50_SINJOH_RUINS_GATE_HNS",
+      "dest_warp_id": "5"
     }
   ],
   "coord_events": [],

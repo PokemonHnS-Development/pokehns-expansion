@@ -7,14 +7,57 @@
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_NONE",
-  "allow_cycling": false,
+  "allow_cycling": true,
   "allow_escaping": false,
-  "allow_running": false,
-  "show_map_name": true,
+  "allow_running": true,
+  "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": null,
   "object_events": [],
-  "warp_events": [],
+  "warp_events": [
+    {
+      "x": 5,
+      "y": 10,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE50_HNS",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 6,
+      "y": 10,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE50_HNS",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 8,
+      "y": 9,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE50_SINJOH_RUINS_GATE_HNS",
+      "dest_warp_id": "3"
+    },
+    {
+      "x": 27,
+      "y": 9,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE50_SINJOH_RUINS_GATE_HNS",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 5,
+      "y": 2,
+      "elevation": 0,
+      "dest_map": "MAP_SINJOH_RUINS_HNS",
+      "dest_warp_id": "6"
+    },
+    {
+      "x": 6,
+      "y": 2,
+      "elevation": 0,
+      "dest_map": "MAP_SINJOH_RUINS_HNS",
+      "dest_warp_id": "7"
+    }
+  ],
   "coord_events": [],
   "bg_events": [],
   "game_version": "hns",
