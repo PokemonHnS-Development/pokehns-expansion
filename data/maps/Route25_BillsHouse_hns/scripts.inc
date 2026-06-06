@@ -10,13 +10,65 @@ Route25_BillsHouse_hns_OnTransition::
 
 Route25_BillsHouse_hns_EventScript_TeleporterTest::
 	lockall
-	dynmultichoice 0, 0, FALSE, 4, 0, DYN_MULTICHOICE_CB_NONE, Route25_BillsHouse_hns_Text_Slowking, Route25_BillsHouse_hns_Text_Pikachu, Route25_BillsHouse_hns_Text_Clefairy, Route25_BillsHouse_hns_Text_Cancel
+	goto_if_unset FLAG_TELEPORTER_UNLOCKED, Route25_BillsHouse_hns_EndChoice
+	msgbox Route25_BillsHouse_Text_Teleporter, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, FALSE, Route25_BillsHouse_hns_EndChoice
+	dynmultichoice 0, 0, FALSE, 6, 0, DYN_MULTICHOICE_CB_NONE, Route25_BillsHouse_hns_Text_Meowth, Route25_BillsHouse_hns_Text_Ponyta, Route25_BillsHouse_hns_Text_Rapidash, Route25_BillsHouse_hns_Text_Slowpoke, Route25_BillsHouse_hns_Text_Slowbro, Route25_BillsHouse_hns_Text_Slowking, Route25_BillsHouse_hns_Text_Farfetchd, Route25_BillsHouse_hns_Text_Weezing, Route25_BillsHouse_hns_Text_MrMime, Route25_BillsHouse_hns_Text_Articuno, Route25_BillsHouse_hns_Text_Zapdos, Route25_BillsHouse_hns_Text_Moltres, Route25_BillsHouse_hns_Text_Corsola, Route25_BillsHouse_hns_Text_Zigzagoon, Route25_BillsHouse_hns_Text_Linoone, Route25_BillsHouse_hns_Text_Cancel
 	switch VAR_RESULT
-	case 0, Route25_BillsHouse_hns_PickSlowking
-	case 1, Route25_BillsHouse_hns_PickPikachu
-	case 2, Route25_BillsHouse_hns_PickClefairy
-	case 3, Route25_BillsHouse_hns_EndChoice
+	case 0, Route25_BillsHouse_hns_PickMeowth
+	case 1, Route25_BillsHouse_hns_PickPonyta
+	case 2, Route25_BillsHouse_hns_PickRapidash
+	case 3, Route25_BillsHouse_hns_PickSlowpoke
+	case 4, Route25_BillsHouse_hns_PickSlowbro
+	case 5, Route25_BillsHouse_hns_PickSlowking
+	case 6, Route25_BillsHouse_hns_PickFarfetchd
+	case 7, Route25_BillsHouse_hns_PickWeezing
+	case 8, Route25_BillsHouse_hns_PickMrMime
+	case 9, Route25_BillsHouse_hns_PickArticuno
+	case 10, Route25_BillsHouse_hns_PickZapdos
+	case 11, Route25_BillsHouse_hns_PickMoltres
+	case 12, Route25_BillsHouse_hns_PickCorsola
+	case 13, Route25_BillsHouse_hns_PickZigzagoon
+	case 14, Route25_BillsHouse_hns_PickLinoone
+	case 15, Route25_BillsHouse_hns_EndChoice
 	case 127, Route25_BillsHouse_hns_EndChoice
+	end
+
+Route25_BillsHouse_Text_Teleporter:
+	.string "GALARIAN RECOMBINATOR:\p"
+	.string "THIS MACHINE WILL TRANSFORM\n"
+	.string "A POKéMON INTO ITS GALARIAN FORM\l"
+	.string "THIS PROCESS IS PERMANENT.\l"
+	.string "WOULD YOU LIKE TO PROCEED?$"
+
+Route25_BillsHouse_hns_PickMeowth::
+	setvar VAR_0x8004, SPECIES_MEOWTH
+	setvar VAR_TEMP_0, SPECIES_MEOWTH
+	goto Route25_BillsHouse_hns_CheckParty
+	end
+
+Route25_BillsHouse_hns_PickPonyta::
+	setvar VAR_0x8004, SPECIES_PONYTA
+	setvar VAR_TEMP_0, SPECIES_PONYTA
+	goto Route25_BillsHouse_hns_CheckParty
+	end
+
+Route25_BillsHouse_hns_PickRapidash::
+	setvar VAR_0x8004, SPECIES_RAPIDASH
+	setvar VAR_TEMP_0, SPECIES_RAPIDASH
+	goto Route25_BillsHouse_hns_CheckParty
+	end
+
+Route25_BillsHouse_hns_PickSlowpoke::
+	setvar VAR_0x8004, SPECIES_SLOWPOKE
+	setvar VAR_TEMP_0, SPECIES_SLOWPOKE
+	goto Route25_BillsHouse_hns_CheckParty
+	end
+
+Route25_BillsHouse_hns_PickSlowbro::
+	setvar VAR_0x8004, SPECIES_SLOWBRO
+	setvar VAR_TEMP_0, SPECIES_SLOWBRO
+	goto Route25_BillsHouse_hns_CheckParty
 	end
 
 Route25_BillsHouse_hns_PickSlowking::
@@ -25,30 +77,75 @@ Route25_BillsHouse_hns_PickSlowking::
 	goto Route25_BillsHouse_hns_CheckParty
 	end
 
-Route25_BillsHouse_hns_PickPikachu::
-	setvar VAR_0x8004, SPECIES_PIKACHU
-	setvar VAR_TEMP_0, SPECIES_PIKACHU
+Route25_BillsHouse_hns_PickFarfetchd::
+	setvar VAR_0x8004, SPECIES_FARFETCHD
+	setvar VAR_TEMP_0, SPECIES_FARFETCHD
 	goto Route25_BillsHouse_hns_CheckParty
 	end
 
-Route25_BillsHouse_hns_PickClefairy::
-	setvar VAR_0x8004, SPECIES_CLEFAIRY
-	setvar VAR_TEMP_0, SPECIES_CLEFAIRY
+Route25_BillsHouse_hns_PickWeezing::
+	setvar VAR_0x8004, SPECIES_WEEZING
+	setvar VAR_TEMP_0, SPECIES_WEEZING
+	goto Route25_BillsHouse_hns_CheckParty
+	end
+
+Route25_BillsHouse_hns_PickMrMime::
+	setvar VAR_0x8004, SPECIES_MR_MIME
+	setvar VAR_TEMP_0, SPECIES_MR_MIME
+	goto Route25_BillsHouse_hns_CheckParty
+	end
+
+Route25_BillsHouse_hns_PickArticuno::
+	setvar VAR_0x8004, SPECIES_ARTICUNO
+	setvar VAR_TEMP_0, SPECIES_ARTICUNO
+	goto Route25_BillsHouse_hns_CheckParty
+	end
+
+Route25_BillsHouse_hns_PickZapdos::
+	setvar VAR_0x8004, SPECIES_ZAPDOS
+	setvar VAR_TEMP_0, SPECIES_ZAPDOS
+	goto Route25_BillsHouse_hns_CheckParty
+	end
+
+Route25_BillsHouse_hns_PickMoltres::
+	setvar VAR_0x8004, SPECIES_MOLTRES
+	setvar VAR_TEMP_0, SPECIES_MOLTRES
+	goto Route25_BillsHouse_hns_CheckParty
+	end
+
+Route25_BillsHouse_hns_PickCorsola::
+	setvar VAR_0x8004, SPECIES_CORSOLA
+	setvar VAR_TEMP_0, SPECIES_CORSOLA
+	goto Route25_BillsHouse_hns_CheckParty
+	end
+
+Route25_BillsHouse_hns_PickZigzagoon::
+	setvar VAR_0x8004, SPECIES_ZIGZAGOON
+	setvar VAR_TEMP_0, SPECIES_ZIGZAGOON
+	goto Route25_BillsHouse_hns_CheckParty
+	end
+
+Route25_BillsHouse_hns_PickLinoone::
+	setvar VAR_0x8004, SPECIES_LINOONE
+	setvar VAR_TEMP_0, SPECIES_LINOONE
 	goto Route25_BillsHouse_hns_CheckParty
 	end
 
 Route25_BillsHouse_hns_EndChoice::
+	closemessage
 	releaseall
 	end
 
 Route25_BillsHouse_hns_CheckParty::
 	special CheckPartyForSpecies
 	goto_if_eq VAR_RESULT, FALSE, Route25_BillsHouse_hns_NoPokemon
+	closemessage
 	goto Route25_BillsHouse_hns_CutsceneSetup
 	end
 
 Route25_BillsHouse_hns_NoPokemon::
 	msgbox Route25_BillsHouse_hns_Text_NotInParty
+	closemessage
 	releaseall
 	end
 
@@ -162,10 +259,10 @@ Route25_BillsHouse_hns_CutsceneCleanup::
 	applymovement OBJ_EVENT_ID_PLAYER, Route25_BillsHouse_Movement_ShowPlayer
 	waitmovement 0
 	turnobject LOCALID_BILLS_GRANDPA, DIR_SOUTH
-	callnative UpdateFollowingPokemon
 	special RemoveCameraObject
 	special ConvertToRegionalForm
 	delay 60
+	callnative UpdateFollowingPokemon
 	fadescreen FADE_FROM_BLACK
 	releaseall
 	end
@@ -217,36 +314,71 @@ Route25_BillsHouse_Movement_ShowPlayer:
 	set_visible
 	step_end
 
+Route25_BillsHouse_hns_Text_Meowth:
+	.string "MEOWTH$"
+
+Route25_BillsHouse_hns_Text_Ponyta:
+	.string "PONYTA$"
+
+Route25_BillsHouse_hns_Text_Rapidash:
+	.string "RAPIDASH$"
+
+Route25_BillsHouse_hns_Text_Slowpoke:
+	.string "SLOWPOKE$"
+
+Route25_BillsHouse_hns_Text_Slowbro:
+	.string "SLOWBRO$"
+
 Route25_BillsHouse_hns_Text_Slowking:
 	.string "SLOWKING$"
 
-Route25_BillsHouse_hns_Text_Pikachu:
-	.string "PIKACHU$"
+Route25_BillsHouse_hns_Text_Farfetchd:
+	.string "FARFETCH'D$"
 
-Route25_BillsHouse_hns_Text_Clefairy:
-	.string "CLEFAIRY$"
+Route25_BillsHouse_hns_Text_Weezing:
+	.string "WEEZING$"
+
+Route25_BillsHouse_hns_Text_MrMime:
+	.string "MR. MIME$"
+
+Route25_BillsHouse_hns_Text_Articuno:
+	.string "ARTICUNO$"
+
+Route25_BillsHouse_hns_Text_Zapdos:
+	.string "ZAPDOS$"
+
+Route25_BillsHouse_hns_Text_Moltres:
+	.string "MOLTRES$"
+
+Route25_BillsHouse_hns_Text_Corsola:
+	.string "CORSOLA$"
+
+Route25_BillsHouse_hns_Text_Zigzagoon:
+	.string "ZIGZAGOON$"
+
+Route25_BillsHouse_hns_Text_Linoone:
+	.string "LINOONE$"
 
 Route25_BillsHouse_hns_Text_Cancel:
 	.string "CANCEL$"
 
 Route25_BillsHouse_hns_Text_NotInParty:
-	.string "I don't see that POKéMON\n"
-	.string "in your party.$"
+	.string "POKéMON NOT DETECTED.$"
 
 @VAR_BILLS_GRANDPA
 
 Route25_BillsHouse_EventScript_Gramps::
 	lock
 	faceplayer
-	goto_if_eq VAR_BILLS_GRANDPA, 1, Route25_BillsHouse_EventScript_Gramps_Spinda
-	goto_if_eq VAR_BILLS_GRANDPA, 2, Route25_BillsHouse_EventScript_Gramps_Roselia
-	goto_if_eq VAR_BILLS_GRANDPA, 3, Route25_BillsHouse_EventScript_Gramps_Lotad
-	goto_if_eq VAR_BILLS_GRANDPA, 4, Route25_BillsHouse_EventScript_Gramps_Growlithe
-	goto_if_eq VAR_BILLS_GRANDPA, 5, Route25_BillsHouse_EventScript_Gramps_Pichu
+	goto_if_eq VAR_BILLS_GRANDPA, 1, Route25_BillsHouse_EventScript_Gramps_Meowth
+	goto_if_eq VAR_BILLS_GRANDPA, 2, Route25_BillsHouse_EventScript_Gramps_Zigzagoon
+	goto_if_eq VAR_BILLS_GRANDPA, 3, Route25_BillsHouse_EventScript_Gramps_Ponyta
+	goto_if_eq VAR_BILLS_GRANDPA, 4, Route25_BillsHouse_EventScript_Gramps_Farfetchd
+	goto_if_eq VAR_BILLS_GRANDPA, 5, Route25_BillsHouse_EventScript_Gramps_Slowpoke
 	goto_if_eq VAR_BILLS_GRANDPA, 6, Route25_BillsHouse_EventScript_Gramps_ShownAll
 	msgbox Route25_BillsHouse_Text_GrandpaIntro, MSGBOX_DEFAULT
 	setvar VAR_BILLS_GRANDPA, 1
-	goto Route25_BillsHouse_EventScript_Gramps_Spinda
+	goto Route25_BillsHouse_EventScript_Gramps_Meowth
 
 Route25_BillsHouse_EventScript_Gramps_Declined::
 	msgbox Route25_BillsHouse_Text_YouDontHaveIt, MSGBOX_DEFAULT
@@ -260,28 +392,26 @@ Route25_BillsHouse_EventScript_Gramps_WrongMon::
 	release
 	end
 
-Route25_BillsHouse_EventScript_Gramps_Spinda::
-	msgbox Route25_BillsHouse_Text_Spinda, MSGBOX_DEFAULT
+Route25_BillsHouse_EventScript_Gramps_Meowth::
+	msgbox Route25_BillsHouse_Text_GrampsMeowth, MSGBOX_DEFAULT
 	msgbox Route25_BillsHouse_Text_AskToSeeMon, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, FALSE, Route25_BillsHouse_EventScript_Gramps_Declined
 	msgbox Route25_BillsHouse_Text_ExcitedToSee, MSGBOX_DEFAULT
 	special ChoosePartyMon
 	waitstate
-	@ Store selected slot in VAR_0x800A
 	copyvar VAR_0x800A, VAR_0x8004
 	goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, Route25_BillsHouse_EventScript_Gramps_Declined
-	@ Get the species of the selected Pokémon
 	copyvar VAR_0x8005, VAR_0x800A
 	specialvar VAR_RESULT, GetTradeSpecies
 	copyvar VAR_0x800B, VAR_RESULT
-	@ Check if it's Spinda
-	goto_if_ne VAR_RESULT, SPECIES_SPINDA, Route25_BillsHouse_EventScript_Gramps_WrongMon
-	bufferspeciesname STR_VAR_1, SPECIES_SPINDA
-	setvar VAR_TEMP_0, ITEM_EVERSTONE
+	goto_if_ne VAR_RESULT, SPECIES_MEOWTH, Route25_BillsHouse_EventScript_Gramps_WrongMon
+	bufferspeciesname STR_VAR_1, SPECIES_MEOWTH
+	setvar VAR_TEMP_0, ITEM_EXP_CANDY_L
+	setvar VAR_TEMP_1, 1
 	goto Route25_BillsHouse_EventScript_Gramps_Correctmon
 
-Route25_BillsHouse_EventScript_Gramps_Roselia::
-	msgbox Route25_BillsHouse_Text_Roselia, MSGBOX_DEFAULT
+Route25_BillsHouse_EventScript_Gramps_Zigzagoon::
+	msgbox Route25_BillsHouse_Text_GrampsZigzagoon, MSGBOX_DEFAULT
 	msgbox Route25_BillsHouse_Text_AskToSeeMon, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, FALSE, Route25_BillsHouse_EventScript_Gramps_Declined
 	msgbox Route25_BillsHouse_Text_ExcitedToSee, MSGBOX_DEFAULT
@@ -292,13 +422,14 @@ Route25_BillsHouse_EventScript_Gramps_Roselia::
 	copyvar VAR_0x8005, VAR_0x800A
 	specialvar VAR_RESULT, GetTradeSpecies
 	copyvar VAR_0x800B, VAR_RESULT
-	goto_if_ne VAR_RESULT, SPECIES_ROSELIA, Route25_BillsHouse_EventScript_Gramps_WrongMon
-	bufferspeciesname STR_VAR_1, SPECIES_ROSELIA
-	setvar VAR_TEMP_0, ITEM_LEAF_STONE
+	goto_if_ne VAR_RESULT, SPECIES_ZIGZAGOON, Route25_BillsHouse_EventScript_Gramps_WrongMon
+	bufferspeciesname STR_VAR_1, SPECIES_ZIGZAGOON
+	setvar VAR_TEMP_0, ITEM_EXP_CANDY_L
+	setvar VAR_TEMP_1, 3
 	goto Route25_BillsHouse_EventScript_Gramps_Correctmon
 
-Route25_BillsHouse_EventScript_Gramps_Lotad::
-	msgbox Route25_BillsHouse_Text_Lotad, MSGBOX_DEFAULT
+Route25_BillsHouse_EventScript_Gramps_Ponyta::
+	msgbox Route25_BillsHouse_Text_GrampsPonyta, MSGBOX_DEFAULT
 	msgbox Route25_BillsHouse_Text_AskToSeeMon, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, FALSE, Route25_BillsHouse_EventScript_Gramps_Declined
 	msgbox Route25_BillsHouse_Text_ExcitedToSee, MSGBOX_DEFAULT
@@ -309,13 +440,14 @@ Route25_BillsHouse_EventScript_Gramps_Lotad::
 	copyvar VAR_0x8005, VAR_0x800A
 	specialvar VAR_RESULT, GetTradeSpecies
 	copyvar VAR_0x800B, VAR_RESULT
-	goto_if_ne VAR_RESULT, SPECIES_LOTAD, Route25_BillsHouse_EventScript_Gramps_WrongMon
-	bufferspeciesname STR_VAR_1, SPECIES_LOTAD
-	setvar VAR_TEMP_0, ITEM_DEEP_SEA_TOOTH
+	goto_if_ne VAR_RESULT, SPECIES_PONYTA, Route25_BillsHouse_EventScript_Gramps_WrongMon
+	bufferspeciesname STR_VAR_1, SPECIES_PONYTA
+	setvar VAR_TEMP_0, ITEM_EXP_CANDY_L
+	setvar VAR_TEMP_1, 5
 	goto Route25_BillsHouse_EventScript_Gramps_Correctmon
 
-Route25_BillsHouse_EventScript_Gramps_Growlithe::
-	msgbox Route25_BillsHouse_Text_Growlithe, MSGBOX_DEFAULT
+Route25_BillsHouse_EventScript_Gramps_Farfetchd::
+	msgbox Route25_BillsHouse_Text_GrampsFarfetchd, MSGBOX_DEFAULT
 	msgbox Route25_BillsHouse_Text_AskToSeeMon, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, FALSE, Route25_BillsHouse_EventScript_Gramps_Declined
 	msgbox Route25_BillsHouse_Text_ExcitedToSee, MSGBOX_DEFAULT
@@ -326,13 +458,14 @@ Route25_BillsHouse_EventScript_Gramps_Growlithe::
 	copyvar VAR_0x8005, VAR_0x800A
 	specialvar VAR_RESULT, GetTradeSpecies
 	copyvar VAR_0x800B, VAR_RESULT
-	goto_if_ne VAR_RESULT, SPECIES_GROWLITHE, Route25_BillsHouse_EventScript_Gramps_WrongMon
-	bufferspeciesname STR_VAR_1, SPECIES_GROWLITHE
-	setvar VAR_TEMP_0, ITEM_SUN_STONE
+	goto_if_ne VAR_RESULT, SPECIES_FARFETCHD, Route25_BillsHouse_EventScript_Gramps_WrongMon
+	bufferspeciesname STR_VAR_1, SPECIES_FARFETCHD
+	setvar VAR_TEMP_0, ITEM_EXP_CANDY_L
+	setvar VAR_TEMP_1, 7
 	goto Route25_BillsHouse_EventScript_Gramps_Correctmon
 
-Route25_BillsHouse_EventScript_Gramps_Pichu::
-	msgbox Route25_BillsHouse_Text_Pichu, MSGBOX_DEFAULT
+Route25_BillsHouse_EventScript_Gramps_Slowpoke::
+	msgbox Route25_BillsHouse_Text_GrampsSlowpoke, MSGBOX_DEFAULT
 	msgbox Route25_BillsHouse_Text_AskToSeeMon, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, FALSE, Route25_BillsHouse_EventScript_Gramps_Declined
 	msgbox Route25_BillsHouse_Text_ExcitedToSee, MSGBOX_DEFAULT
@@ -343,10 +476,23 @@ Route25_BillsHouse_EventScript_Gramps_Pichu::
 	copyvar VAR_0x8005, VAR_0x800A
 	specialvar VAR_RESULT, GetTradeSpecies
 	copyvar VAR_0x800B, VAR_RESULT
-	goto_if_ne VAR_RESULT, SPECIES_PICHU, Route25_BillsHouse_EventScript_Gramps_WrongMon
-	bufferspeciesname STR_VAR_1, SPECIES_PICHU
-	setvar VAR_TEMP_0, ITEM_DEEP_SEA_SCALE
-	goto Route25_BillsHouse_EventScript_Gramps_Correctmon
+	goto_if_ne VAR_RESULT, SPECIES_SLOWPOKE, Route25_BillsHouse_EventScript_Gramps_WrongMon
+	bufferspeciesname STR_VAR_1, SPECIES_SLOWPOKE
+	goto Route25_BillsHouse_EventScript_Gramps_SlowpokeReward
+
+Route25_BillsHouse_EventScript_Gramps_SlowpokeReward::
+	msgbox Route25_BillsHouse_Text_ShownPokemon, MSGBOX_DEFAULT
+	msgbox Route25_BillsHouse_Text_Appreciation, MSGBOX_DEFAULT
+	giveitem ITEM_GALARICA_CUFF
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	giveitem ITEM_GALARICA_WREATH
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	msgbox Route25_BillsHouse_Text_TeleporterUnlocked, MSGBOX_DEFAULT
+	setflag FLAG_TELEPORTER_UNLOCKED
+	addvar VAR_BILLS_GRANDPA, 1
+	closemessage
+	release
+	end
 
 Route25_BillsHouse_EventScript_Gramps_ShownAll::
 	msgbox Route25_BillsHouse_Text_ShownAll, MSGBOX_DEFAULT
@@ -357,26 +503,25 @@ Route25_BillsHouse_EventScript_Gramps_ShownAll::
 Route25_BillsHouse_EventScript_Gramps_Correctmon::
 	msgbox Route25_BillsHouse_Text_ShownPokemon, MSGBOX_DEFAULT
 	msgbox Route25_BillsHouse_Text_Appreciation, MSGBOX_DEFAULT
+	setvar VAR_0x8006, 0
+Route25_BillsHouse_EventScript_Gramps_GiveLoop::
 	giveitem VAR_TEMP_0
-	call_if_eq VAR_TEMP_0, ITEM_LEAF_STONE, Route25_BillsHouse_EventScript_Gramps_ExtraLeafStones
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	addvar VAR_0x8006, 1
+	compare VAR_0x8006, VAR_TEMP_1
+	goto_if_lt Route25_BillsHouse_EventScript_Gramps_GiveLoop
 	msgbox Route25_BillsHouse_Text_ComeAgain, MSGBOX_DEFAULT
 	addvar VAR_BILLS_GRANDPA, 1
 	closemessage
 	release
 	end
 
-Route25_BillsHouse_EventScript_Gramps_ExtraLeafStones::
-	additem VAR_TEMP_0
-	additem VAR_TEMP_0
-	return
-
 Route25_BillsHouse_Test::
-	givemon SPECIES_SPINDA, 10
-	givemon SPECIES_LOTAD, 10
-	givemon SPECIES_ROSELIA, 10
-	givemon SPECIES_GROWLITHE, 10
-	givemon SPECIES_PICHU, 10
+	givemon SPECIES_MEOWTH, 10
+	givemon SPECIES_ZIGZAGOON, 10
+	givemon SPECIES_PONYTA, 10
+	givemon SPECIES_FARFETCHD, 10
+	givemon SPECIES_SLOWPOKE, 10
 	end
 
 Route25_BillsHouse_Movement_MonCelebration:
@@ -393,37 +538,46 @@ Route25_BillsHouse_Text_GrandpaIntro:
 	.string "something with PCs, so I'm\l"
 	.string "housesitting.$"
 
-Route25_BillsHouse_Text_Spinda:
+Route25_BillsHouse_Text_GrampsMeowth:
 	.string "My grandson BILL told me about\n"
-	.string "a POKéMON that is covered in\l"
-	.string "a random pattern.$"
+	.string "a POKéMON that has sharp claws,\l"
+	.string "a charm on its head, and is\p"
+	.string "said to bring good fortune.$"
 
-Route25_BillsHouse_Text_Roselia:
-	.string "Ah, my grandson mentioned a\n"
-	.string "green POKéMON that has flowers\l"
-	.string "growing from its wrists.$"
+Route25_BillsHouse_Text_GrampsZigzagoon:
+	.string "BILL mentioned a POKéMON that\n"
+	.string "runs around in a zigzag\l"
+	.string "pattern.\p"
+	.string "It's quite the little\n"
+	.string "scavenger, I hear.$"
 
-Route25_BillsHouse_Text_Lotad:
-	.string "Do you know of a water POKéMON\n"
-	.string "that has a big lily pad on\l"
-	.string "its head?"
-	.string "I heard there are some at the\n"
-	.string "FUCHSIA SAFARI ZONE.\p"
-	.string "I would surely like to see it.$"
+Route25_BillsHouse_Text_GrampsPonyta:
+	.string "Do you know of a POKéMON with\n"
+	.string "a fiery mane?\p"
+	.string "I hear it can run faster than\n"
+	.string "most trains.$"
 
-Route25_BillsHouse_Text_Growlithe:
+Route25_BillsHouse_Text_GrampsFarfetchd:
 	.string "BILL told me about a POKéMON\n"
-	.string "that is\l"
-	.string "very loyal to its trainer.\p"
-	.string "It's supposed to ROAR well.$"
+	.string "that always carries a stalk\l"
+	.string "of leek with it.\p"
+	.string "Quite the peculiar creature.$"
 
-Route25_BillsHouse_Text_Pichu:
-	.string "Do you know that hugely popular\n"
-	.string "POKéMON?\p"
-	.string "The POKéMON that has a yellow\n"
-	.string "body and red cheeks.\p"
-	.string "I would love to see what it\n"
-	.string "looks like before it evolves$"
+Route25_BillsHouse_Text_GrampsSlowpoke:
+	.string "Do you know the POKéMON that\n"
+	.string "is always staring blankly?\p"
+	.string "Its tail is often sold on the\n"
+	.string "black market.$"
+
+Route25_BillsHouse_Text_TeleporterUnlocked:
+	.string "Oh, one more thing!\p"
+	.string "BILL left a note saying that\n"
+	.string "if I found someone who truly\l"
+	.string "appreciates POKéMON, I should\l"
+	.string "let them use his\l"
+	.string "GALARIAN RECOMBINATOR.\p"
+	.string "Feel free to use it anytime!\n"
+	.string "Just use that computer over there.$"
 
 Route25_BillsHouse_Text_AskToSeeMon:
 	.string "If you have that POKéMON, may I\n"
@@ -454,8 +608,9 @@ Route25_BillsHouse_Text_ShownAll:
 	.string "Thanks for showing me so many\n"
 	.string "cute POKéMON.\p"
 	.string "I really enjoyed myself. I'm\n"
-	.string "glad\l"
-	.string "I've lived such a long life.$"
+	.string "glad I've lived such a long life.\p"
+	.string "Feel free to use the GALARIAN\n"
+	.string "RECOMBINATOR whenever you like.$"
 
 Route25_BillsHouse_Text_WrongPokemon:
 	.string "Hm?\p"

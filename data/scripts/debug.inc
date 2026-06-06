@@ -280,7 +280,7 @@ Debug_EventScript_Script_7::
 	end
 
 Debug_EventScript_Script_8::
-	call LilycoveCity_CoveLilyMotel_2F_EventScript_GameDesigner
+	goto Route25_BillsHouse_Test
 	release
 	end
 
