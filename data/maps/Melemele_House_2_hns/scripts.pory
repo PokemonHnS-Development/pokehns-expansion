@@ -1,0 +1,20 @@
+mapscripts Melemele_House_2_hns_MapScripts{}
+
+script Alola_Pokemart_EventScript_Clerk{
+	lock
+	faceplayer
+	message(gText_HowMayIServeYou)
+	waitmessage
+	pokemart(Alola_Pokemart_Pokemart)
+	msgbox(gText_PleaseComeAgain, MSGBOX_DEFAULT)
+	release
+	end
+
+}
+mart Alola_Pokemart_Pokemart{
+    ITEM_BIG_MALASADA 
+    ITEM_FRIEND_BALL
+    ITEM_NET_BALL
+    ITEM_WAVE_INCENSE
+    ITEM_LEMONADE
+}
