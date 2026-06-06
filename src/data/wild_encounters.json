@@ -71335,7 +71335,7 @@
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_COTTONEE"
+                "species": "SPECIES_ORICORIO_BAILE"
               },
               {
                 "min_level": 5,
@@ -71355,7 +71355,7 @@
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_WHIMSICOTT"
+                "species": "SPECIES_COTTONEE"
               },
               {
                 "min_level": 5,
@@ -71390,7 +71390,7 @@
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_TENTACOOL"
+                "species": "SPECIES_GASTRODON_EAST"
               },
               {
                 "min_level": 5,

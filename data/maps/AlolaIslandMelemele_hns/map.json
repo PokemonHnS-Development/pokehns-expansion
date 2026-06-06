@@ -141,7 +141,7 @@
       "x": 23,
       "y": 19,
       "elevation": 0,
-      "dest_map": "MAP_MELEMELE_HOUSE_2_HNS",
+      "dest_map": "MAP_MELEMELE_HOUSE_6_HNS",
       "dest_warp_id": "0"
     },
     {
@@ -169,7 +169,7 @@
       "x": 14,
       "y": 23,
       "elevation": 0,
-      "dest_map": "MAP_MELEMELE_HOUSE_6_HNS",
+      "dest_map": "MAP_MELEMELE_HOUSE_2_HNS",
       "dest_warp_id": "0"
     }
   ],
