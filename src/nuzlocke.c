@@ -139,6 +139,7 @@ static const u8 sNuzlockeLUT[] =
     [MAPSEC_AKALA_FOREST] = 0x66,
     [MAPSEC_PONI_CAVE] = 0x67,
     [MAPSEC_ULAULA_CAVE] = 0x68,
+    [MAPSEC_ULAULA_CAVE_2] = 0x69,
     
 #else
     // Hoenn Routes

@@ -6,3 +6,29 @@ script Test{
     release
     end
 }
+
+script Alola_Melemele_Mailbox{
+    lock
+    msgbox("Samson Oak's Villa")
+    release
+    end
+}
+
+script Alola_Melemele_Melemele_Sign{
+    lock
+    msgbox("Welcome to Melemele Island!")
+    release
+    end
+}
+
+script Alola_Melemele_Pokecenter_Sign{
+    lock
+    msgbox("Welcome to the Melemele Island
+    Pok\emon Center!
+    
+    This is the only Pok\emon Center on the
+    Alola Isles, so be sure to take care of
+    your Pok\emon while you're here!")
+    release
+    end
+}

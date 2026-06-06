@@ -1716,6 +1716,11 @@
       "in_hns": true
     },
     {
+      "id": "MAPSEC_ULAULA_CAVE_2",
+      "name": "ULA'ULA CAVE",
+      "in_hns": true
+    },
+    {
       "id": "MAPSEC_TRAINER_HILL",
       "name": "TRAINER HILL",
       "x": 8,
@@ -1824,6 +1829,10 @@
     },
     {
       "id": "MAPSEC_ULAULA_CAVE",
+      "name": "ULA'ULA CAVE"
+    },
+    {
+      "id": "MAPSEC_ULAULA_CAVE_2",
       "name": "ULA'ULA CAVE"
     },
     {

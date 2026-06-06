@@ -3,7 +3,7 @@
   "name": "Akala_Forest_hns",
   "layout": "LAYOUT_AKALA_FOREST_HNS",
   "music": "MUS_DUMMY",
-  "region_map_section": "MAPSEC_AKALA_ISLAND",
+  "region_map_section": "MAPSEC_AKALA_FOREST",
   "requires_flash": false,
   "weather": "WEATHER_SHADE",
   "map_type": "MAP_TYPE_NONE",

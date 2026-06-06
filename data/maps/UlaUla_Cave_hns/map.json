@@ -3,7 +3,7 @@
   "name": "UlaUla_Cave_hns",
   "layout": "LAYOUT_ULA_ULA_CAVE_HNS",
   "music": "MUS_DUMMY",
-  "region_map_section": "MAPSEC_ULAULA_ISLAND",
+  "region_map_section": "MAPSEC_ULAULA_CAVE",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_NONE",
