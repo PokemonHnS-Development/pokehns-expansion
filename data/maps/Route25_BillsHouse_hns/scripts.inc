@@ -5,6 +5,7 @@ Route25_BillsHouse_hns_MapScripts::
 Route25_BillsHouse_hns_OnTransition::
 	setflag FLAG_TEMP_1
 	setflag FLAG_TEMP_2
+	setflag FLAG_TEMP_3
 	end
 
 Route25_BillsHouse_hns_EventScript_TeleporterTest::
@@ -43,7 +44,7 @@ Route25_BillsHouse_hns_EndChoice::
 Route25_BillsHouse_hns_CheckParty::
 	special CheckPartyForSpecies
 	goto_if_eq VAR_RESULT, FALSE, Route25_BillsHouse_hns_NoPokemon
-	goto Route25_BillsHouse_hns_RunTeleporter
+	goto Route25_BillsHouse_hns_CutsceneSetup
 	end
 
 Route25_BillsHouse_hns_NoPokemon::
@@ -51,27 +52,53 @@ Route25_BillsHouse_hns_NoPokemon::
 	releaseall
 	end
 
-Route25_BillsHouse_hns_RunTeleporter::
+
+Route25_BillsHouse_SetPlayerMale::
+	setvar VAR_OBJ_GFX_ID_2, OBJ_EVENT_GFX_GOLD_NORMAL_HNS
+	return
+
+Route25_BillsHouse_SetPlayerFemale::
+	setvar VAR_OBJ_GFX_ID_2, OBJ_EVENT_GFX_KRIS_NORMAL_HNS
+	return
+
+Route25_BillsHouse_hns_CutsceneSetup::
 	fadescreen FADE_TO_BLACK
-	delay 60
 	clearflag FLAG_TEMP_1
 	copyvar VAR_OBJ_GFX_ID_0, VAR_TEMP_0
 	addvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_MON_BASE
+	checkplayergender
+	call_if_eq VAR_RESULT, MALE, Route25_BillsHouse_SetPlayerMale
+	call_if_eq VAR_RESULT, FEMALE, Route25_BillsHouse_SetPlayerFemale
+	addobject LOCALID_BILLS_GRANDPA_PLAYER
 	addobject LOCALID_BILLS_GRANDPA_OLD_MON
-	fadescreen FADE_FROM_BLACK
+	applymovement OBJ_EVENT_ID_PLAYER, Route25_BillsHouse_Movement_HidePlayer
+	hidefollower
+	turnobject LOCALID_BILLS_GRANDPA, DIR_NORTH
 	special SpawnCameraObject
 	applymovement OBJ_EVENT_ID_CAMERA, Route25_BillsHouse_Movement_CameraPanUp
 	waitmovement 0
+	delay 60
+	fadescreen FADE_FROM_BLACK
+
+Route25_BillsHouse_hns_CutsceneBeforeTeleport::
+	delay 60
 	opendoor 10, 3
 	waitdooranim
+	playmoncry VAR_TEMP_0, CRY_MODE_NORMAL
+	waitmoncry 
 	applymovement LOCALID_BILLS_GRANDPA_OLD_MON, Common_Movement_WalkUp1
 	waitmovement 0
 	turnobject LOCALID_BILLS_GRANDPA_OLD_MON, DIR_SOUTH
+	applymovement LOCALID_BILLS_GRANDPA_PLAYER, Common_Movement_WalkRight1
+	waitmovement 0
+	turnobject LOCALID_BILLS_GRANDPA_PLAYER, DIR_NORTH
 	playse SE_CONTEST_CURTAIN_FALL
 	closedoor 10, 3
 	delay 10
 	removeobject LOCALID_BILLS_GRANDPA_OLD_MON
 	waitdooranim
+
+Route25_BillsHouse_hns_CutsceneTeleport::
 	delay 35
 	playse SE_PIN
 	waitse
@@ -89,6 +116,8 @@ Route25_BillsHouse_hns_RunTeleporter::
 	special AnimateTeleporterHousing
 	playse SE_WARP_IN
 	special AnimateTeleporterCable
+	delay 30
+	applymovement LOCALID_BILLS_GRANDPA_PLAYER, Route25_BillsHouse_Movement_PlayerMoveLeft
 	waitse
 	call Route25_BillsHouse_hns_BeepSE
 	call Route25_BillsHouse_hns_BeepSE
@@ -100,12 +129,20 @@ Route25_BillsHouse_hns_RunTeleporter::
 	clearflag FLAG_TEMP_2
 	copyvar VAR_OBJ_GFX_ID_1, VAR_TEMP_1
 	addvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_MON_BASE
+	
+Route25_BillsHouse_hns_CutsceneAfterTeleport::
 	opendoor 3, 3
 	delay 10
 	addobject LOCALID_BILLS_GRANDPA_NEW_MON
 	waitdooranim
+	applymovement LOCALID_BILLS_GRANDPA_PLAYER, Route25_BillsHouse_Movement_PlayerSlideDown
+	playse SE_LEDGE
 	applymovement LOCALID_BILLS_GRANDPA_NEW_MON, Common_Movement_WalkDown1
 	waitmovement 0
+	waitmovement 0
+	@playse SE_PIN
+	@applymovement LOCALID_BILLS_GRANDPA_PLAYER, Common_Movement_ExclamationMark
+	@delay 60
 	playse SE_CONTEST_CURTAIN_FALL
 	closedoor 3, 3
 	delay 10
@@ -113,11 +150,19 @@ Route25_BillsHouse_hns_RunTeleporter::
 	waitmovement 0
 	playmoncry VAR_TEMP_0, CRY_MODE_NORMAL
 	waitmoncry
+	delay 60
+
+Route25_BillsHouse_hns_CutsceneCleanup::
+	fadescreen FADE_TO_BLACK
 	applymovement OBJ_EVENT_ID_CAMERA, Route25_BillsHouse_Movement_CameraPanDown
 	waitmovement 0
-	fadescreen FADE_TO_BLACK
 	removeobject LOCALID_BILLS_GRANDPA_NEW_MON
 	removeobject LOCALID_BILLS_GRANDPA_OLD_MON
+	removeobject LOCALID_BILLS_GRANDPA_PLAYER
+	applymovement OBJ_EVENT_ID_PLAYER, Route25_BillsHouse_Movement_ShowPlayer
+	waitmovement 0
+	turnobject LOCALID_BILLS_GRANDPA, DIR_SOUTH
+	callnative UpdateFollowingPokemon
 	special RemoveCameraObject
 	special ConvertToRegionalForm
 	delay 60
@@ -129,12 +174,33 @@ Route25_BillsHouse_Movement_CameraPanUp:
 	walk_up
 	walk_up
 	walk_up
+	walk_right
+	walk_right
 	step_end
 
 Route25_BillsHouse_Movement_CameraPanDown:
 	walk_down
 	walk_down
 	walk_down
+	walk_left
+	walk_left
+	step_end
+
+Route25_BillsHouse_Movement_PlayerMoveLeft:
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	face_up
+	step_end
+
+Route25_BillsHouse_Movement_PlayerSlideDown:
+	lock_facing_direction
+	jump_down
+	unlock_facing_direction
 	step_end
 
 Route25_BillsHouse_hns_BeepSE::
@@ -142,6 +208,14 @@ Route25_BillsHouse_hns_BeepSE::
 	waitse
 	delay 20
 	return
+
+Route25_BillsHouse_Movement_HidePlayer:
+	set_invisible
+	step_end
+
+Route25_BillsHouse_Movement_ShowPlayer:
+	set_visible
+	step_end
 
 Route25_BillsHouse_hns_Text_Slowking:
 	.string "SLOWKING$"
