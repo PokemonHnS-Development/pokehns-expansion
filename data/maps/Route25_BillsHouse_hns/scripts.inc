@@ -9,18 +9,18 @@ Route25_BillsHouse_hns_OnTransition::
 
 Route25_BillsHouse_hns_EventScript_TeleporterTest::
 	lockall
-	dynmultichoice 0, 0, FALSE, 4, 0, DYN_MULTICHOICE_CB_NONE, Route25_BillsHouse_hns_Text_Blastoise, Route25_BillsHouse_hns_Text_Pikachu, Route25_BillsHouse_hns_Text_Clefairy, Route25_BillsHouse_hns_Text_Cancel
+	dynmultichoice 0, 0, FALSE, 4, 0, DYN_MULTICHOICE_CB_NONE, Route25_BillsHouse_hns_Text_Slowking, Route25_BillsHouse_hns_Text_Pikachu, Route25_BillsHouse_hns_Text_Clefairy, Route25_BillsHouse_hns_Text_Cancel
 	switch VAR_RESULT
-	case 0, Route25_BillsHouse_hns_PickBlastoise
+	case 0, Route25_BillsHouse_hns_PickSlowking
 	case 1, Route25_BillsHouse_hns_PickPikachu
 	case 2, Route25_BillsHouse_hns_PickClefairy
 	case 3, Route25_BillsHouse_hns_EndChoice
 	case 127, Route25_BillsHouse_hns_EndChoice
 	end
 
-Route25_BillsHouse_hns_PickBlastoise::
-	setvar VAR_0x8004, SPECIES_BLASTOISE
-	setvar VAR_TEMP_0, SPECIES_BLASTOISE
+Route25_BillsHouse_hns_PickSlowking::
+	setvar VAR_0x8004, SPECIES_SLOWKING
+	setvar VAR_TEMP_0, SPECIES_SLOWKING
 	goto Route25_BillsHouse_hns_CheckParty
 	end
 
@@ -119,6 +119,7 @@ Route25_BillsHouse_hns_RunTeleporter::
 	removeobject LOCALID_BILLS_GRANDPA_NEW_MON
 	removeobject LOCALID_BILLS_GRANDPA_OLD_MON
 	special RemoveCameraObject
+	special ConvertToRegionalForm
 	delay 60
 	fadescreen FADE_FROM_BLACK
 	releaseall
@@ -142,8 +143,8 @@ Route25_BillsHouse_hns_BeepSE::
 	delay 20
 	return
 
-Route25_BillsHouse_hns_Text_Blastoise:
-	.string "BLASTOISE$"
+Route25_BillsHouse_hns_Text_Slowking:
+	.string "SLOWKING$"
 
 Route25_BillsHouse_hns_Text_Pikachu:
 	.string "PIKACHU$"

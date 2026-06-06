@@ -669,4 +669,5 @@ gSpecials::
 	def_special HasAllRegionalMons
 	def_special CheckPartyForSpecies
 	def_special GetRegionalFormSpecies
+	def_special ConvertToRegionalForm
 

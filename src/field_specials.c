@@ -5897,7 +5897,7 @@ static const struct {
     u16 src;
     u16 dst;
 } sRegionalFormTable[] = {
-    { SPECIES_BLASTOISE, SPECIES_ZIGZAGOON },
+    { SPECIES_SLOWKING, SPECIES_SLOWKING_GALAR },
     { SPECIES_PIKACHU,   SPECIES_ZIGZAGOON },
     { SPECIES_CLEFAIRY,  SPECIES_ZIGZAGOON },
 };
@@ -5916,4 +5916,26 @@ void GetRegionalFormSpecies(void)
         }
     }
     gSpecialVar_Result = species;
+}
+
+void ConvertToRegionalForm(void)
+{
+    u16 oldSpecies = VarGet(VAR_TEMP_0);
+    u16 newSpecies = VarGet(VAR_TEMP_1);
+    u8 i;
+
+    for (i = 0; i < gPlayerPartyCount; i++)
+    {
+        if (GetMonData(&gPlayerParty[i], MON_DATA_SPECIES, NULL) == oldSpecies)
+        {
+            SetMonData(&gPlayerParty[i], MON_DATA_SPECIES, &newSpecies);
+            CalculateMonStats(&gPlayerParty[i]);
+            EvolutionRenameMon(&gPlayerParty[i], oldSpecies, newSpecies);
+            GetSetPokedexFlag(SpeciesToNationalPokedexNum(newSpecies), FLAG_SET_SEEN);
+            GetSetPokedexFlag(SpeciesToNationalPokedexNum(newSpecies), FLAG_SET_CAUGHT);
+            gSpecialVar_Result = TRUE;
+            return;
+        }
+    }
+    gSpecialVar_Result = FALSE;
 }
