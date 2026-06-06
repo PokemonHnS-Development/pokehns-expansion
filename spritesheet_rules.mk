@@ -6620,6 +6620,9 @@ $(OBJEVENTGFXDIR)/pokemon/surfable/0464_rhyperior_shiny.4bpp: %.4bpp: %.png
 
 $(OBJEVENTGFXDIR)/pokemon/surfable/0493_arceus_shiny.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 8 -mheight 8
+
+# Regional form
+
 $(OBJEVENTGFXDIR)/pokemon/surfable/regional_raichu_alola.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 4 -mheight 4
 
