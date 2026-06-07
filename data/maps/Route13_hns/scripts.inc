@@ -469,7 +469,7 @@ Route13_TravelToAlola_13:
 # 227 "data/maps/Route13_hns/scripts.pory"
 	hideobjectat Route13_Alola_Captain, MAP_ROUTE13_HNS
 # 228 "data/maps/Route13_hns/scripts.pory"
-	applymovement OBJ_EVENT_ID_CAMERA, Route13_TravelToAlola_Movement_2
+	applymovement OBJ_EVENT_ID_CAMERA, Route13_TravelToAlola_Movement_1
 # 229 "data/maps/Route13_hns/scripts.pory"
 	waitmovement 0
 # 230 "data/maps/Route13_hns/scripts.pory"
@@ -483,7 +483,7 @@ Route13_TravelToAlola_13:
 # 234 "data/maps/Route13_hns/scripts.pory"
 	waitse
 # 235 "data/maps/Route13_hns/scripts.pory"
-	applymovement Route13_Alola_Ship, Route13_TravelToAlola_Movement_3
+	applymovement Route13_Alola_Ship, Route13_TravelToAlola_Movement_2
 # 236 "data/maps/Route13_hns/scripts.pory"
 	setvar VAR_ALOLA_TRAVEL, 1
 # 237 "data/maps/Route13_hns/scripts.pory"
@@ -536,7 +536,7 @@ Route13_TravelToAlola_16:
 # 274 "data/maps/Route13_hns/scripts.pory"
 	hideobjectat Route13_Alola_Captain, MAP_ROUTE13_HNS
 # 275 "data/maps/Route13_hns/scripts.pory"
-	applymovement OBJ_EVENT_ID_CAMERA, Route13_TravelToAlola_Movement_2
+	applymovement OBJ_EVENT_ID_CAMERA, Route13_TravelToAlola_Movement_1
 # 276 "data/maps/Route13_hns/scripts.pory"
 	waitmovement 0
 # 277 "data/maps/Route13_hns/scripts.pory"
@@ -550,7 +550,7 @@ Route13_TravelToAlola_16:
 # 281 "data/maps/Route13_hns/scripts.pory"
 	waitse
 # 282 "data/maps/Route13_hns/scripts.pory"
-	applymovement Route13_Alola_Ship, Route13_TravelToAlola_Movement_3
+	applymovement Route13_Alola_Ship, Route13_TravelToAlola_Movement_2
 # 283 "data/maps/Route13_hns/scripts.pory"
 	setvar VAR_ALOLA_TRAVEL, 1
 # 284 "data/maps/Route13_hns/scripts.pory"
@@ -609,17 +609,11 @@ Route13_TravelToAlola_Movement_0:
 # 219 "data/maps/Route13_hns/scripts.pory"
 Route13_TravelToAlola_Movement_1:
 # 219 "data/maps/Route13_hns/scripts.pory"
-	face_down
-	step_end
-
-# 228 "data/maps/Route13_hns/scripts.pory"
-Route13_TravelToAlola_Movement_2:
-# 228 "data/maps/Route13_hns/scripts.pory"
 	walk_down
 	step_end
 
 # 235 "data/maps/Route13_hns/scripts.pory"
-Route13_TravelToAlola_Movement_3:
+Route13_TravelToAlola_Movement_2:
 # 235 "data/maps/Route13_hns/scripts.pory"
 	walk_right
 # 235 "data/maps/Route13_hns/scripts.pory"

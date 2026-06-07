@@ -216,8 +216,8 @@ script Route13_TravelToAlola{
                     applymovement(LOCALID_PLAYER, moves(walk_left, walk_down))
                     waitmovement(0)
                 }
-                applymovement(Route13_Alola_Captain, moves(face_down))
-                applymovement(LOCALID_PLAYER, moves(face_down))
+                applymovement(Route13_Alola_Captain, moves(walk_down))
+                applymovement(LOCALID_PLAYER, moves(walk_down))
                 waitmovement(0)
                 fadescreenswapbuffers(FADE_TO_BLACK)
                 hidefollower
@@ -263,8 +263,8 @@ script Route13_TravelToAlola{
                     applymovement(LOCALID_PLAYER, moves(walk_left, walk_down))
                     waitmovement(0)
                 }
-                applymovement(Route13_Alola_Captain, moves(face_down))
-                applymovement(LOCALID_PLAYER, moves(face_down))
+                applymovement(Route13_Alola_Captain, moves(walk_down))
+                applymovement(LOCALID_PLAYER, moves(walk_down))
                 waitmovement(0)
                 fadescreenswapbuffers(FADE_TO_BLACK)
                 hidefollower
