@@ -18,3 +18,22 @@ mart Alola_Pokemart_Pokemart{
     ITEM_WAVE_INCENSE
     ITEM_LEMONADE
 }
+
+script Alola_Pokemart_Cook{
+	lock
+	faceplayer
+	msgbox("The Malasadas here are delicious.
+	Just like the real ones in Alola!", MSGBOX_AUTOCLOSE)
+	release
+	end
+}
+
+script Alola_Pokemart_BaldMan{
+	lock
+	faceplayer
+	msgbox("I'm looking for some sunscreen!
+	
+	It's a sunnier here on the Isles!", MSGBOX_AUTOCLOSE)
+	release
+	end
+}

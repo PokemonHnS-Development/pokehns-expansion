@@ -1044,12 +1044,12 @@
 #define FLAG_EXTENDED_CONTENT_191                   (HNS_EXTENDED_CONTENT_START + 191)
 #define FLAG_EXTENDED_CONTENT_192                   (HNS_EXTENDED_CONTENT_START + 192)
 #define FLAG_EXTENDED_CONTENT_193                   (HNS_EXTENDED_CONTENT_START + 193)
-#define FLAG_EXTENDED_CONTENT_194                   (HNS_EXTENDED_CONTENT_START + 194)
-#define FLAG_EXTENDED_CONTENT_195                   (HNS_EXTENDED_CONTENT_START + 195)
-#define FLAG_EXTENDED_CONTENT_196                   (HNS_EXTENDED_CONTENT_START + 196)
-#define FLAG_EXTENDED_CONTENT_197                   (HNS_EXTENDED_CONTENT_START + 197)
-#define FLAG_EXTENDED_CONTENT_198                   (HNS_EXTENDED_CONTENT_START + 198)
-#define FLAG_EXTENDED_CONTENT_199                   (HNS_EXTENDED_CONTENT_START + 199)
+#define FLAG_HIDE_PONI_TOTEM                        (HNS_EXTENDED_CONTENT_START + 194) // hide the poni totem mon
+#define FLAG_HIDE_ULAULA_TOTEM                      (HNS_EXTENDED_CONTENT_START + 195) // hide the ula'ula totem mon
+#define FLAG_HIDE_AKALA_TOTEM                       (HNS_EXTENDED_CONTENT_START + 196) // hide the akala totem mon
+#define FLAG_HIDE_MELEMELE_TOTEM                    (HNS_EXTENDED_CONTENT_START + 197) // hide the melemele totem mon
+#define FLAG_CAUGHT_SANDYGAST1                      (HNS_EXTENDED_CONTENT_START + 198) // melemelesandygast flag for if caught or defeated. (if you run the mon should stay)
+#define FLAG_PREVIOUSLY_TRAVELED_TO_ALOLA           (HNS_EXTENDED_CONTENT_START + 199) // track if the player has been to alola before.
 #define HNS_EXTENDED_CONTENT_COUNT                  200
 #define HNS_EXTENDED_CONTENT_END                    (HNS_EXTENDED_CONTENT_START + HNS_EXTENDED_CONTENT_COUNT - 1)
 // 0x432–0x4FF reserved for future trainer registered flag expansion

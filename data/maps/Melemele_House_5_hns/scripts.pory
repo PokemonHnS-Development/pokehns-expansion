@@ -1,0 +1,34 @@
+mapscripts Melemele_House_5_hns_MapScripts {}
+
+script Melemele_House5_Mom{
+    lock
+    faceplayer
+    msgbox("I'm thinking of moving to the Alola
+    Region with my son, Elio.
+    
+    We're just getting a little taste here
+    on the Isles!", MSGBOX_AUTOCLOSE)
+    release
+    end
+}
+
+script Melemele_House5_Son{
+    lockall
+    faceplayer
+    msgbox("Hehe tag is so fun!")
+    playmoncry(SPECIES_MEOWTH, 0)
+    waitmoncry
+    msgbox("Try to catch me meowth!", MSGBOX_AUTOCLOSE)
+    releaseall
+    end
+}
+
+script Melemele_House5_Cat{
+    lock
+    faceplayer
+    playmoncry(SPECIES_MEOWTH, 0)
+    msgbox("Mwaaawwwrrrrrrrr!!!", MSGBOX_AUTOCLOSE)
+    waitmoncry
+    release
+    end
+}

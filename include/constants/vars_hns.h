@@ -141,7 +141,9 @@
 #define VAR_UNUSED_HNS_0x40C8                            0x40C8
 #define VAR_UNUSED_HNS_0x40C9                            0x40C9
 #define VAR_UNUSED_HNS_0x40CA                            0x40CA
-#define VAR_UNUSED_HNS_0x40CB                            0x40CB
+
+// Alola Vars
+#define VAR_ALOLA_TRAVEL                                 0x40CB // var for setting up mapscripts when traveling to and from alola. 
 #define VAR_UNUSED_HNS_0x40CC                            0x40CC
 #define VAR_UNUSED_HNS_0x40CD                            0x40CD
 #define VAR_UNUSED_HNS_0x40D2                            0x40D2

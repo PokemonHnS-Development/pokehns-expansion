@@ -4,3 +4,39 @@ mapscripts Melemele_House_hns_MapScripts{
         end
     }
 }
+
+script Alola_Melemele_Pokecenter_AceTrainer{
+    lock
+    faceplayer
+    msgbox("There are so many unique Pokémon here!
+    I'm gonna catch 'em all!", MSGBOX_AUTOCLOSE)
+    release
+    end
+}
+
+script Alola_Melemele_Pokecenter_BugCatcher{
+    lock
+    faceplayer
+    msgbox("I found some brand new bug Pokémon
+    here on the Isles!
+    
+    Like my new friend Grubbin here!", MSGBOX_AUTOCLOSE)
+    playse(SE_PIN)
+    applymovement(Melemele_PokecenterGrubbin, moves(face_up, emote_exclamation_mark))
+    waitmovement(0)
+    waitse  
+    playmoncry(SPECIES_GRUBBIN, 0)
+    waitmoncry
+    release
+    end
+}
+
+script Alola_Melemele_Pokecenter_Grubbin{
+    lock
+    faceplayer
+    playmoncry(SPECIES_GRUBBIN, 0)
+    msgbox("Grub!", MSGBOX_AUTOCLOSE)
+    waitmoncry
+    release
+    end
+}

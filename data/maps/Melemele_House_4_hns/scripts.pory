@@ -1,0 +1,27 @@
+mapscripts Melemele_House_4_hns_MapScripts{}
+
+script Melemele_House4_Man{
+    lock
+    faceplayer
+    msgbox("We're vacationing on the Alola Isles!
+    
+    It's just like the Alola Region,
+    but closer to Kanto!
+    
+    I saved so much on travel expenses!", MSGBOX_AUTOCLOSE)
+    release
+    end
+}
+
+script Melemele_House4_Woman{
+    lock
+    faceplayer
+    msgbox("My boyfriend told me we were going to
+    Alola\.
+
+    I had assumed it would be the Alola
+    Region, not the small isles off the
+    coast of Kanto.", MSGBOX_AUTOCLOSE)
+    release
+    end
+}

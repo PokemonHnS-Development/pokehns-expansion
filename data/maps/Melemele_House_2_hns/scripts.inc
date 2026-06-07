@@ -34,3 +34,37 @@ Alola_Pokemart_Pokemart:
 # 19 "data/maps/Melemele_House_2_hns/scripts.pory"
 	.2byte ITEM_LEMONADE
 	.2byte ITEM_NONE
+
+Alola_Pokemart_Cook::
+# 23 "data/maps/Melemele_House_2_hns/scripts.pory"
+	lock
+# 24 "data/maps/Melemele_House_2_hns/scripts.pory"
+	faceplayer
+# 25 "data/maps/Melemele_House_2_hns/scripts.pory"
+	msgbox Alola_Pokemart_Cook_Text_0, MSGBOX_AUTOCLOSE
+# 27 "data/maps/Melemele_House_2_hns/scripts.pory"
+	release
+	end
+
+
+Alola_Pokemart_BaldMan::
+# 32 "data/maps/Melemele_House_2_hns/scripts.pory"
+	lock
+# 33 "data/maps/Melemele_House_2_hns/scripts.pory"
+	faceplayer
+# 34 "data/maps/Melemele_House_2_hns/scripts.pory"
+	msgbox Alola_Pokemart_BaldMan_Text_0, MSGBOX_AUTOCLOSE
+# 37 "data/maps/Melemele_House_2_hns/scripts.pory"
+	release
+	end
+
+
+Alola_Pokemart_Cook_Text_0:
+# 25 "data/maps/Melemele_House_2_hns/scripts.pory"
+	.string "The Malasadas here are delicious.\n"
+	.string "Just like the real ones in Alola!$"
+
+Alola_Pokemart_BaldMan_Text_0:
+# 34 "data/maps/Melemele_House_2_hns/scripts.pory"
+	.string "I'm looking for some sunscreen!\p"
+	.string "It's a sunnier here on the Isles!$"

@@ -1,10 +1,79 @@
-mapscripts AlolaIslandMelemele_hns_MapScripts{}
+mapscripts AlolaIslandMelemele_hns_MapScripts{
+        MAP_SCRIPT_ON_TRANSITION{
+        setrespawn(HEAL_LOCATION_ALOLA_ISLAND_MELEMELE_HNS)
+        end
+        }
+        MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE[VAR_ALOLA_TRAVEL, 1 {
+            applymovement(Alola_Melemele_Captain, moves(face_up))
+            applymovement(LOCALID_PLAYER, moves(face_up))
+        }]
+        MAP_SCRIPT_ON_FRAME_TABLE[VAR_ALOLA_TRAVEL, 1: Alola_Melemele_GetOffBoat]
+}
 
-script Test{
+script Alola_Melemele_GetOffBoat{
     lock
-    msgbox("hello testtest test!", MSGBOX_NPC)
+    delay(30)
+    applymovement(Alola_Melemele_Captain, moves(face_right))
+    applymovement(LOCALID_PLAYER, moves(face_left))
+    waitmovement(0)
+    msgbox("Welcome back to the Alola Isles!
+
+    Come back if you'd like to take a trip
+    to mainland Kanto!", MSGBOX_AUTOCLOSE)
+    setvar(VAR_ALOLA_TRAVEL, 2)
     release
     end
+}
+
+script Alola_Melemele_TravelToKanto{
+    lock
+    faceplayer
+    msgbox("Ahoy!
+
+    Would you like to travel to mainland
+    Kanto?", MSGBOX_YESNO)
+    if (var(VAR_RESULT) == YES){
+        msgbox("Ahoy! Let's get you on board!", MSGBOX_AUTOCLOSE)
+        getplayerxy(VAR_TEMP_0, VAR_TEMP_1)
+        if (var(VAR_TEMP_1) == 32){
+            applymovement(LOCALID_PLAYER, moves(walk_right, walk_down))
+            waitmovement(0)
+        }
+        elif (var(VAR_TEMP_0) == 23 && var(VAR_TEMP_1) == 33){
+            applymovement(LOCALID_PLAYER, moves(walk_up, walk_right*2, walk_down))
+            waitmovement(0)
+        }
+        else{}
+        applymovement(Alola_Melemele_Captain, moves(face_down))
+        applymovement(LOCALID_PLAYER, moves(face_down))
+        waitmovement(0)
+        fadescreenswapbuffers(FADE_TO_BLACK)
+        hidefollower
+        playse(SE_EXIT)
+        special(SpawnCameraObject)
+        hideobjectat(LOCALID_PLAYER, MAP_ALOLA_ISLAND_MELEMELE_HNS)
+        hideobjectat(Alola_Melemele_Captain, MAP_ALOLA_ISLAND_MELEMELE_HNS)
+        applymovement(OBJ_EVENT_ID_CAMERA, moves(walk_down))
+        waitmovement(0)
+        waitse
+        delay(30)
+        fadescreenswapbuffers(FADE_FROM_BLACK)
+        playse(SE_RG_SS_ANNE_HORN)
+        waitse
+        applymovement(Alola_Melemele_Ship, moves(walk_left*11))
+        delay(90)
+        fadescreenswapbuffers(FADE_TO_BLACK)
+        special(RemoveCameraObject)
+        warp(MAP_ROUTE13_HNS, 37, 29)
+        waitstate
+        end
+    }
+    else{
+        msgbox("Ahoy!
+        Come back when you'd like to set sail.", MSGBOX_AUTOCLOSE)
+        release
+        end
+    }
 }
 
 script Alola_Melemele_Mailbox{
@@ -29,6 +98,42 @@ script Alola_Melemele_Pokecenter_Sign{
     This is the only Pok\emon Center on the
     Alola Isles, so be sure to take care of
     your Pok\emon while you're here!")
+    release
+    end
+}
+
+script Alola_Melemele_MelemeleMart_Sign{
+    lock
+    msgbox("Melemele Island Mart")
+    release
+    end
+}
+
+script Alola_Melemele_BattleSandygast{
+    lock
+    faceplayer
+    playmoncry(SPECIES_SANDYGAST, 0)
+    msgbox("Gaaah!", MSGBOX_AUTOCLOSE)
+    waitmoncry
+    setwildbattle(SPECIES_SANDYGAST,45)
+    dowildbattle
+    specialvar(VAR_RESULT, GetBattleOutcome)
+    if (var(VAR_RESULT) == B_OUTCOME_CAUGHT){
+        setflag(FLAG_CAUGHT_SANDYGAST1)
+        removeobject(Alola_Melemele_Sandygast)
+        release
+        end
+    }
+    elif (var(VAR_RESULT) == B_OUTCOME_WON){
+        setflag(FLAG_CAUGHT_SANDYGAST1)
+        removeobject(Alola_Melemele_Sandygast)
+        release
+        end
+    }
+    else{
+        release
+        end
+    }
     release
     end
 }
