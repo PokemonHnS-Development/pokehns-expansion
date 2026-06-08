@@ -561,12 +561,6 @@
       "map": "MAP_BATTLE_FRONTIER_OUTSIDE_EAST_HNS",
       "x": 12,
       "y": 46
-    },
-    {
-      "id": "HEAL_LOCATION_ROUTE50_HNS",
-      "map": "MAP_ROUTE50_HNS",
-      "x": 44,
-      "y": 46
     }
   ]
 }
