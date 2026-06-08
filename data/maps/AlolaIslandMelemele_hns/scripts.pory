@@ -146,8 +146,77 @@ script Alola_Melemele_FindItem1{
 
 script Alola_Melemele_SamsonOak_Trigger_Beginning{
     lock
-    fadeoutbgm(10)
-    playbgm(MUS_HG_FOLLOW_ME_1, FALSE)
+    addobject(SamsonOakMelemeleIntro)
+    msgbox("ALOLA!")
+    playse(SE_PIN)
+    applymovement(LOCALID_PLAYER, moves(emote_exclamation_mark, face_up))
+    waitmovement(0)
+    applymovement(SamsonOakMelemeleIntro, moves(walk_down*5))
+    waitmovement(0)
+    msgbox("Welcome to the Alola Isles!", MSGBOX_AUTOCLOSE)
+    applymovement(SamsonOakMelemeleIntro, moves(walk_in_place_down*2))
+    waitmovement(0)
+    msgbox("My name is Samson Oak!
+    I'm a Pok\emon Professor.
 
+    You may know my cousin, Professor Oak,
+    from the Kanto region.
+    
+    Let me show you to town!", MSGBOX_AUTOCLOSE)
+    playbgm(MUS_HG_FOLLOW_ME_1, FALSE)
+    applymovement(SamsonOakMelemeleIntro, moves(delay_16, walk_up*5))
+    applymovement(LOCALID_PLAYER, moves(walk_left, walk_up*5))
+    waitmovement(0)
+    delay(30)
+    applymovement(SamsonOakMelemeleIntro, moves(walk_in_place_down*2))
+    waitmovement(0)
+    msgbox("This is the main town on these Islands.
+
+    It's eerily similar to Hau'oli City in
+    Alola\. {PAUSE 30} And when I think about it\.
+    
+    This whole island reminds me of Melemele
+    Island\.")
+    applymovement(SamsonOakMelemeleIntro, moves(jump_in_place_down*2))
+    playse(SE_LEDGE)
+    waitse
+    playse(SE_LEDGE)
+    waitse
+    msgbox("Well, anyways!
+    
+    I research variations of Pok\emon that 
+    can be found in different regions!
+    
+    On my way back from the Alola region,
+    I stumbled across these isles\.
+    
+    Surprisingly, many of the Pok\emon I saw
+    in Alola were here as well, so I've called
+    this place\. the Alola Isles!", MSGBOX_AUTOCLOSE)
+    applymovement(SamsonOakMelemeleIntro, moves(jump_in_place_down*2))
+    playse(SE_LEDGE)
+    waitse
+    playse(SE_LEDGE)
+    waitse
+    msgbox("Now I haven't completely explored the
+    Isles yet\. {PAUSE 30} I just landed here myself.
+
+    I'd like to know if all of the variants
+    native to Alola are here.
+    
+    If you happen to come across any,
+    please come by my villa on the east side
+    of the Isle and show them to me!
+    
+    Oh. And feel free to explore the Isle
+    while on your way!
+
+    See you there!", MSGBOX_AUTOCLOSE)
+    applymovement(SamsonOakMelemeleIntro, moves(walk_left*8))
+    waitmovement(0)
+    playbgm(MUS_OCEANIC_MUSEUM, TRUE)
+    setvar(VAR_ALOLA_STATE, 1)
+    removeobject(SamsonOakMelemeleIntro)
+    release
     end
 }

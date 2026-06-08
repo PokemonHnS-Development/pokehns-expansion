@@ -2,7 +2,7 @@
   "id": "MAP_ALOLA_WATER_HNS",
   "name": "AlolaWater_hns",
   "layout": "LAYOUT_ALOLA_WATER_HNS",
-  "music": "MUS_DUMMY",
+  "music": "MUS_OCEANIC_MUSEUM",
   "region_map_section": "MAPSEC_ALOLA_OCEAN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

@@ -2,7 +2,7 @@
   "id": "MAP_ULA_ULA_FOREST_HNS",
   "name": "UlaUla_Forest_hns",
   "layout": "LAYOUT_ULA_ULA_FOREST_HNS",
-  "music": "MUS_DUMMY",
+  "music": "MUS_PETALBURG_WOODS",
   "region_map_section": "MAPSEC_ULAULA_ISLAND",
   "requires_flash": false,
   "weather": "WEATHER_SHADE",

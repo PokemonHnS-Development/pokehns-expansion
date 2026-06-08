@@ -38,3 +38,10 @@ script Alola_Ulaula_FindItem2{
     finditem(ITEM_ANTIDOTE, 1)
     end
 }
+
+script Alola_Ulaula_MtLanikalaSign{
+    lock
+    msgbox("Mt. Lanakila")
+    release
+    end
+}

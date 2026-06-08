@@ -2,7 +2,7 @@
   "id": "MAP_ALOLA_ISLAND_AKALA_HNS",
   "name": "AlolaIslandAkala_hns",
   "layout": "LAYOUT_ALOLA_ISLAND_AKALA_HNS",
-  "music": "MUS_HG_VERMILION",
+  "music": "MUS_HG_CINNABAR",
   "region_map_section": "MAPSEC_ULAULA_ISLAND",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -21,7 +21,6 @@
   ],
   "object_events": [
     {
-      "local_id": "Alola_Ulaula_Palossand",
       "graphics_id": "OBJ_EVENT_GFX_LIGHT_HNS",
       "x": 13,
       "y": 30,
@@ -31,8 +30,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Alola_Ulaula_BattlePalossand",
-      "flag": "FLAG_CAUGHT_PALOSSAND"
+      "script": "NULL",
+      "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_LIGHT_HNS",
@@ -61,6 +60,7 @@
       "flag": "0"
     },
     {
+      "local_id": "Alola_Ulaula_Palossand",
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(PALOSSAND)",
       "x": 9,
       "y": 63,
@@ -70,8 +70,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "script": "Alola_Ulaula_BattlePalossand",
+      "flag": "FLAG_CAUGHT_PALOSSAND"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_PICNICKER_HNS",
@@ -210,7 +210,7 @@
       "y": 71,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "Alola_Ulaula_MtLanikalaSign"
     }
   ],
   "game_version": "hns",

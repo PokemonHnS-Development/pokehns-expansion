@@ -240,6 +240,7 @@ script Route13_TravelToAlola{
                 setflag(FLAG_HIDE_AKALA_TOTEM)
                 setflag(FLAG_HIDE_ULAULA_TOTEM)
                 setflag(FLAG_HIDE_PONI_TOTEM)
+                setflag(FLAG_HIDE_SAMSONOAK_INTRO)
                 delay(90)
                 fadescreenswapbuffers(FADE_TO_BLACK)
                 special(RemoveCameraObject)

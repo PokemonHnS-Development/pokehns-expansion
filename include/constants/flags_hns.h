@@ -1033,7 +1033,7 @@
 #define FLAG_EXTENDED_CONTENT_180                   (HNS_EXTENDED_CONTENT_START + 180)
 #define FLAG_EXTENDED_CONTENT_181                   (HNS_EXTENDED_CONTENT_START + 181)
 #define FLAG_EXTENDED_CONTENT_182                   (HNS_EXTENDED_CONTENT_START + 182)
-#define FLAG_EXTENDED_CONTENT_183                   (HNS_EXTENDED_CONTENT_START + 183)
+#define FLAG_HIDE_SAMSONOAK_INTRO                   (HNS_EXTENDED_CONTENT_START + 183) // hides the samson oak intro object
 #define FLAG_CAUGHT_PALOSSAND                       (HNS_EXTENDED_CONTENT_START + 184) // hide palossand if caught or defeated
 #define FLAG_CAUGHT_SANDYGAST2                      (HNS_EXTENDED_CONTENT_START + 185) // hide sandygast if caught or defeated
 #define FLAG_CAUGHT_SANDSLASH_ALOLA                 (HNS_EXTENDED_CONTENT_START + 186) // hide alolan sandslash if caught or defeated

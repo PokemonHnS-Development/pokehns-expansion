@@ -248,9 +248,79 @@ Alola_Melemele_SamsonOak_Trigger_Beginning::
 # 148 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	lock
 # 149 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
-	fadeoutbgm 10
+	addobject SamsonOakMelemeleIntro
 # 150 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	msgbox Alola_Melemele_SamsonOak_Trigger_Beginning_Text_0
+# 151 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	playse SE_PIN
+# 152 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	applymovement LOCALID_PLAYER, Alola_Melemele_SamsonOak_Trigger_Beginning_Movement_0
+# 153 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	waitmovement 0
+# 154 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	applymovement SamsonOakMelemeleIntro, Alola_Melemele_SamsonOak_Trigger_Beginning_Movement_1
+# 155 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	waitmovement 0
+# 156 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	msgbox Alola_Melemele_SamsonOak_Trigger_Beginning_Text_1, MSGBOX_AUTOCLOSE
+# 157 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	applymovement SamsonOakMelemeleIntro, Alola_Melemele_SamsonOak_Trigger_Beginning_Movement_2
+# 158 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	waitmovement 0
+# 159 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	msgbox Alola_Melemele_SamsonOak_Trigger_Beginning_Text_2, MSGBOX_AUTOCLOSE
+# 166 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	playbgm MUS_HG_FOLLOW_ME_1, FALSE
+# 167 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	applymovement SamsonOakMelemeleIntro, Alola_Melemele_SamsonOak_Trigger_Beginning_Movement_3
+# 168 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	applymovement LOCALID_PLAYER, Alola_Melemele_SamsonOak_Trigger_Beginning_Movement_4
+# 169 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	waitmovement 0
+# 170 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	delay 30
+# 171 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	applymovement SamsonOakMelemeleIntro, Alola_Melemele_SamsonOak_Trigger_Beginning_Movement_2
+# 172 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	waitmovement 0
+# 173 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	msgbox Alola_Melemele_SamsonOak_Trigger_Beginning_Text_3
+# 180 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	applymovement SamsonOakMelemeleIntro, Alola_Melemele_SamsonOak_Trigger_Beginning_Movement_5
+# 181 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	playse SE_LEDGE
+# 182 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	waitse
+# 183 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	playse SE_LEDGE
+# 184 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	waitse
+# 185 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	msgbox Alola_Melemele_SamsonOak_Trigger_Beginning_Text_4, MSGBOX_AUTOCLOSE
+# 196 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	applymovement SamsonOakMelemeleIntro, Alola_Melemele_SamsonOak_Trigger_Beginning_Movement_5
+# 197 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	playse SE_LEDGE
+# 198 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	waitse
+# 199 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	playse SE_LEDGE
+# 200 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	waitse
+# 201 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	msgbox Alola_Melemele_SamsonOak_Trigger_Beginning_Text_5, MSGBOX_AUTOCLOSE
+# 215 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	applymovement SamsonOakMelemeleIntro, Alola_Melemele_SamsonOak_Trigger_Beginning_Movement_6
+# 216 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	waitmovement 0
+# 217 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	playbgm MUS_OCEANIC_MUSEUM, TRUE
+# 218 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	setvar VAR_ALOLA_STATE, 1
+# 219 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	removeobject SamsonOakMelemeleIntro
+# 220 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	release
 	end
 
 
@@ -330,6 +400,96 @@ Alola_Melemele_TravelToKanto_Movement_4:
 	walk_left
 	step_end
 
+# 152 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+Alola_Melemele_SamsonOak_Trigger_Beginning_Movement_0:
+# 152 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	emote_exclamation_mark
+# 152 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	face_up
+	step_end
+
+# 154 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+Alola_Melemele_SamsonOak_Trigger_Beginning_Movement_1:
+# 154 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	walk_down
+# 154 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	walk_down
+# 154 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	walk_down
+# 154 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	walk_down
+# 154 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	walk_down
+	step_end
+
+# 157 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+Alola_Melemele_SamsonOak_Trigger_Beginning_Movement_2:
+# 157 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	walk_in_place_down
+# 157 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	walk_in_place_down
+	step_end
+
+# 167 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+Alola_Melemele_SamsonOak_Trigger_Beginning_Movement_3:
+# 167 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	delay_16
+# 167 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	walk_up
+# 167 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	walk_up
+# 167 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	walk_up
+# 167 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	walk_up
+# 167 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	walk_up
+	step_end
+
+# 168 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+Alola_Melemele_SamsonOak_Trigger_Beginning_Movement_4:
+# 168 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	walk_left
+# 168 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	walk_up
+# 168 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	walk_up
+# 168 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	walk_up
+# 168 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	walk_up
+# 168 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	walk_up
+	step_end
+
+# 180 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+Alola_Melemele_SamsonOak_Trigger_Beginning_Movement_5:
+# 180 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	jump_in_place_down
+# 180 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	jump_in_place_down
+	step_end
+
+# 215 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+Alola_Melemele_SamsonOak_Trigger_Beginning_Movement_6:
+# 215 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	walk_left
+# 215 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	walk_left
+# 215 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	walk_left
+# 215 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	walk_left
+# 215 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	walk_left
+# 215 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	walk_left
+# 215 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	walk_left
+# 215 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	walk_left
+	step_end
+
 Alola_Melemele_GetOffBoat_Text_0:
 # 19 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	.string "Welcome back to the Alola Isles!\p"
@@ -374,3 +534,51 @@ Alola_Melemele_MelemeleMart_Sign_Text_0:
 Alola_Melemele_BattleSandygast_Text_0:
 # 117 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	.string "Gaaah!$"
+
+Alola_Melemele_SamsonOak_Trigger_Beginning_Text_0:
+# 150 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	.string "ALOLA!$"
+
+Alola_Melemele_SamsonOak_Trigger_Beginning_Text_1:
+# 156 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	.string "Welcome to the Alola Isles!$"
+
+Alola_Melemele_SamsonOak_Trigger_Beginning_Text_2:
+# 159 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	.string "My name is Samson Oak!\n"
+	.string "I'm a Pokémon Professor.\p"
+	.string "You may know my cousin, Professor Oak,\n"
+	.string "from the Kanto region.\p"
+	.string "Let me show you to town!$"
+
+Alola_Melemele_SamsonOak_Trigger_Beginning_Text_3:
+# 173 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	.string "This is the main town on these Islands.\p"
+	.string "It's eerily similar to Hau'oli City in\n"
+	.string "Alola… {PAUSE 30} And when I think about it…\p"
+	.string "This whole island reminds me of Melemele\n"
+	.string "Island…$"
+
+Alola_Melemele_SamsonOak_Trigger_Beginning_Text_4:
+# 185 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	.string "Well, anyways!\p"
+	.string "I research variations of Pokémon that \n"
+	.string "can be found in different regions!\p"
+	.string "On my way back from the Alola region,\n"
+	.string "I stumbled across these isles…\p"
+	.string "Surprisingly, many of the Pokémon I saw\n"
+	.string "in Alola were here as well, so I've called\l"
+	.string "this place… the Alola Isles!$"
+
+Alola_Melemele_SamsonOak_Trigger_Beginning_Text_5:
+# 201 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	.string "Now I haven't completely explored the\n"
+	.string "Isles yet… {PAUSE 30} I just landed here myself.\p"
+	.string "I'd like to know if all of the variants\n"
+	.string "native to Alola are here.\p"
+	.string "If you happen to come across any,\n"
+	.string "please come by my villa on the east side\l"
+	.string "of the Isle and show them to me!\p"
+	.string "Oh. And feel free to explore the Isle\n"
+	.string "while on your way!\p"
+	.string "See you there!$"

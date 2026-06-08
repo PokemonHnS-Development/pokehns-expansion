@@ -2,7 +2,7 @@
   "id": "MAP_MELEMELE_HOUSE_4_HNS",
   "name": "Melemele_House_4_hns",
   "layout": "LAYOUT_MELEMELE_HOUSE_4_HNS",
-  "music": "MUS_DUMMY",
+  "music": "MUS_OCEANIC_MUSEUM",
   "region_map_section": "MAPSEC_MELEMELE_ISLAND",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
