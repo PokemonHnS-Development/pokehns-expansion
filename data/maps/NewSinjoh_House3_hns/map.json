@@ -2,10 +2,10 @@
   "id": "MAP_NEW_SINJOH_HOUSE3_HNS",
   "name": "NewSinjoh_House3_hns",
   "layout": "LAYOUT_NEW_SINJOH_HOUSE3_HNS",
-  "music": "MUS_HG_CHERRYGROVE",
+  "music": "MUS_RG_POKE_TOWER",
   "region_map_section": "MAPSEC_SINJOH",
   "requires_flash": false,
-  "weather": "WEATHER_NONE",
+  "weather": "WEATHER_FOG_HORIZONTAL",
   "map_type": "MAP_TYPE_NONE",
   "allow_cycling": false,
   "allow_escaping": false,
@@ -23,14 +23,14 @@
       "dest_warp_id": "4"
     },
     {
-      "x": 39,
+      "x": 40,
       "y": 14,
       "elevation": 0,
       "dest_map": "MAP_NEW_SINJOH_HOUSE3_HNS",
       "dest_warp_id": "2"
     },
     {
-      "x": 13,
+      "x": 12,
       "y": 20,
       "elevation": 0,
       "dest_map": "MAP_NEW_SINJOH_HOUSE3_HNS",
@@ -38,7 +38,40 @@
     }
   ],
   "coord_events": [],
-  "bg_events": [],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 45,
+      "y": 8,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "NULL"
+    },
+    {
+      "type": "sign",
+      "x": 46,
+      "y": 8,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "NULL"
+    },
+    {
+      "type": "sign",
+      "x": 49,
+      "y": 8,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "NULL"
+    },
+    {
+      "type": "sign",
+      "x": 50,
+      "y": 8,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "NULL"
+    }
+  ],
   "game_version": "hns",
   "region": "REGION_JOHTO"
 }

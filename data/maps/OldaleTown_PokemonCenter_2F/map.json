@@ -1,7 +1,6 @@
 {
   "id": "MAP_OLDALE_TOWN_POKEMON_CENTER_2F",
   "name": "OldaleTown_PokemonCenter_2F",
-  "game_version": "emerald",
   "layout": "LAYOUT_POKEMON_CENTER_2F",
   "music": "MUS_POKE_CENTER",
   "region_map_section": "MAPSEC_OLDALE_TOWN",
@@ -92,5 +91,6 @@
     }
   ],
   "coord_events": [],
-  "bg_events": []
+  "bg_events": [],
+  "game_version": "emerald"
 }

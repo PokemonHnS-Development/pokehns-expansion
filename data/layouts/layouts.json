@@ -15763,7 +15763,7 @@
     {
       "id": "LAYOUT_SINJOH_RUINS_REGICE_ROOM_HNS",
       "name": "SinjohRuins_RegiceRoom_hns_Layout",
-      "width": 10,
+      "width": 11,
       "height": 15,
       "primary_tileset": "gTileset_MtSilver_Exp_Hns",
       "secondary_tileset": "gTileset_RuinsOfAlphWriting_Hns",
