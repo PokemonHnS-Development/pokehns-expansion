@@ -1,1 +1,11 @@
 mapscripts Akala_Forest_hns_MapScripts {}
+
+script Alola_Akala_Forest_FindItem1{
+    finditem(ITEM_POTION, 1)
+    end
+}
+
+script Alola_Akala_Forest_FindItem2{
+    finditem(ITEM_ANTIDOTE, 1)
+    end
+}

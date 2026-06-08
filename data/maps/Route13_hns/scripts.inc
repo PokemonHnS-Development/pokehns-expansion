@@ -409,23 +409,23 @@ Route13_TravelToAlola::
 # 0 "data/maps/Route13_hns/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_ne Route13_TravelToAlola_1
-# 300 "data/maps/Route13_hns/scripts.pory"
-	msgbox Route13_TravelToAlola_Text_4, MSGBOX_AUTOCLOSE
 # 302 "data/maps/Route13_hns/scripts.pory"
+	msgbox Route13_TravelToAlola_Text_4, MSGBOX_AUTOCLOSE
+# 304 "data/maps/Route13_hns/scripts.pory"
 	release
 	end
 
 Route13_TravelToAlola_1:
 # 204 "data/maps/Route13_hns/scripts.pory"
 	goto_if_unset FLAG_PREVIOUSLY_TRAVELED_TO_ALOLA, Route13_TravelToAlola_4
-# 257 "data/maps/Route13_hns/scripts.pory"
+# 258 "data/maps/Route13_hns/scripts.pory"
 	msgbox Route13_TravelToAlola_Text_3, MSGBOX_YESNO
-# 259 "data/maps/Route13_hns/scripts.pory"
+# 260 "data/maps/Route13_hns/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq Route13_TravelToAlola_10
-# 292 "data/maps/Route13_hns/scripts.pory"
-	msgbox Route13_TravelToAlola_Text_2, MSGBOX_AUTOCLOSE
 # 294 "data/maps/Route13_hns/scripts.pory"
+	msgbox Route13_TravelToAlola_Text_2, MSGBOX_AUTOCLOSE
+# 296 "data/maps/Route13_hns/scripts.pory"
 	release
 	end
 
@@ -435,9 +435,9 @@ Route13_TravelToAlola_4:
 # 212 "data/maps/Route13_hns/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq Route13_TravelToAlola_7
-# 250 "data/maps/Route13_hns/scripts.pory"
+# 251 "data/maps/Route13_hns/scripts.pory"
 	msgbox Route13_TravelToAlola_Text_2, MSGBOX_AUTOCLOSE
-# 252 "data/maps/Route13_hns/scripts.pory"
+# 253 "data/maps/Route13_hns/scripts.pory"
 	release
 	end
 
@@ -483,85 +483,89 @@ Route13_TravelToAlola_13:
 # 234 "data/maps/Route13_hns/scripts.pory"
 	waitse
 # 235 "data/maps/Route13_hns/scripts.pory"
-	applymovement Route13_Alola_Ship, Route13_TravelToAlola_Movement_2
+	playse SE_M_SURF
 # 236 "data/maps/Route13_hns/scripts.pory"
-	setvar VAR_ALOLA_TRAVEL, 1
+	applymovement Route13_Alola_Ship, Route13_TravelToAlola_Movement_2
 # 237 "data/maps/Route13_hns/scripts.pory"
-	setflag FLAG_PREVIOUSLY_TRAVELED_TO_ALOLA
+	setvar VAR_ALOLA_TRAVEL, 1
 # 238 "data/maps/Route13_hns/scripts.pory"
-	setflag FLAG_HIDE_MELEMELE_TOTEM
+	setflag FLAG_PREVIOUSLY_TRAVELED_TO_ALOLA
 # 239 "data/maps/Route13_hns/scripts.pory"
-	setflag FLAG_HIDE_AKALA_TOTEM
+	setflag FLAG_HIDE_MELEMELE_TOTEM
 # 240 "data/maps/Route13_hns/scripts.pory"
-	setflag FLAG_HIDE_ULAULA_TOTEM
+	setflag FLAG_HIDE_AKALA_TOTEM
 # 241 "data/maps/Route13_hns/scripts.pory"
-	setflag FLAG_HIDE_PONI_TOTEM
+	setflag FLAG_HIDE_ULAULA_TOTEM
 # 242 "data/maps/Route13_hns/scripts.pory"
-	delay 90
+	setflag FLAG_HIDE_PONI_TOTEM
 # 243 "data/maps/Route13_hns/scripts.pory"
-	fadescreenswapbuffers FADE_TO_BLACK
+	delay 90
 # 244 "data/maps/Route13_hns/scripts.pory"
-	special RemoveCameraObject
+	fadescreenswapbuffers FADE_TO_BLACK
 # 245 "data/maps/Route13_hns/scripts.pory"
-	warp MAP_ALOLA_ISLAND_MELEMELE_HNS, 25, 33
+	special RemoveCameraObject
 # 246 "data/maps/Route13_hns/scripts.pory"
+	warp MAP_ALOLA_ISLAND_MELEMELE_HNS, 25, 33
+# 247 "data/maps/Route13_hns/scripts.pory"
 	waitstate
 	end
 
 Route13_TravelToAlola_10:
-# 260 "data/maps/Route13_hns/scripts.pory"
-	msgbox Route13_TravelToAlola_Text_1, MSGBOX_AUTOCLOSE
 # 261 "data/maps/Route13_hns/scripts.pory"
-	getplayerxy VAR_TEMP_0, VAR_TEMP_1
+	msgbox Route13_TravelToAlola_Text_1, MSGBOX_AUTOCLOSE
 # 262 "data/maps/Route13_hns/scripts.pory"
+	getplayerxy VAR_TEMP_0, VAR_TEMP_1
+# 263 "data/maps/Route13_hns/scripts.pory"
 	compare VAR_TEMP_1, 28
 	goto_if_eq Route13_TravelToAlola_17
 Route13_TravelToAlola_16:
-# 266 "data/maps/Route13_hns/scripts.pory"
-	applymovement Route13_Alola_Captain, Route13_TravelToAlola_Movement_1
 # 267 "data/maps/Route13_hns/scripts.pory"
-	applymovement LOCALID_PLAYER, Route13_TravelToAlola_Movement_1
+	applymovement Route13_Alola_Captain, Route13_TravelToAlola_Movement_1
 # 268 "data/maps/Route13_hns/scripts.pory"
-	waitmovement 0
+	applymovement LOCALID_PLAYER, Route13_TravelToAlola_Movement_1
 # 269 "data/maps/Route13_hns/scripts.pory"
-	fadescreenswapbuffers FADE_TO_BLACK
-# 270 "data/maps/Route13_hns/scripts.pory"
-	hidefollower
-# 271 "data/maps/Route13_hns/scripts.pory"
-	playse SE_EXIT
-# 272 "data/maps/Route13_hns/scripts.pory"
-	special SpawnCameraObject
-# 273 "data/maps/Route13_hns/scripts.pory"
-	hideobjectat LOCALID_PLAYER, MAP_ROUTE13_HNS
-# 274 "data/maps/Route13_hns/scripts.pory"
-	hideobjectat Route13_Alola_Captain, MAP_ROUTE13_HNS
-# 275 "data/maps/Route13_hns/scripts.pory"
-	applymovement OBJ_EVENT_ID_CAMERA, Route13_TravelToAlola_Movement_1
-# 276 "data/maps/Route13_hns/scripts.pory"
 	waitmovement 0
-# 277 "data/maps/Route13_hns/scripts.pory"
-	waitse
-# 278 "data/maps/Route13_hns/scripts.pory"
-	delay 30
-# 279 "data/maps/Route13_hns/scripts.pory"
-	fadescreenswapbuffers FADE_FROM_BLACK
-# 280 "data/maps/Route13_hns/scripts.pory"
-	playse SE_RG_SS_ANNE_HORN
-# 281 "data/maps/Route13_hns/scripts.pory"
-	waitse
-# 282 "data/maps/Route13_hns/scripts.pory"
-	applymovement Route13_Alola_Ship, Route13_TravelToAlola_Movement_2
-# 283 "data/maps/Route13_hns/scripts.pory"
-	setvar VAR_ALOLA_TRAVEL, 1
-# 284 "data/maps/Route13_hns/scripts.pory"
-	delay 90
-# 285 "data/maps/Route13_hns/scripts.pory"
+# 270 "data/maps/Route13_hns/scripts.pory"
 	fadescreenswapbuffers FADE_TO_BLACK
+# 271 "data/maps/Route13_hns/scripts.pory"
+	hidefollower
+# 272 "data/maps/Route13_hns/scripts.pory"
+	playse SE_EXIT
+# 273 "data/maps/Route13_hns/scripts.pory"
+	special SpawnCameraObject
+# 274 "data/maps/Route13_hns/scripts.pory"
+	hideobjectat LOCALID_PLAYER, MAP_ROUTE13_HNS
+# 275 "data/maps/Route13_hns/scripts.pory"
+	hideobjectat Route13_Alola_Captain, MAP_ROUTE13_HNS
+# 276 "data/maps/Route13_hns/scripts.pory"
+	applymovement OBJ_EVENT_ID_CAMERA, Route13_TravelToAlola_Movement_1
+# 277 "data/maps/Route13_hns/scripts.pory"
+	waitmovement 0
+# 278 "data/maps/Route13_hns/scripts.pory"
+	waitse
+# 279 "data/maps/Route13_hns/scripts.pory"
+	delay 30
+# 280 "data/maps/Route13_hns/scripts.pory"
+	fadescreenswapbuffers FADE_FROM_BLACK
+# 281 "data/maps/Route13_hns/scripts.pory"
+	playse SE_RG_SS_ANNE_HORN
+# 282 "data/maps/Route13_hns/scripts.pory"
+	waitse
+# 283 "data/maps/Route13_hns/scripts.pory"
+	playse SE_M_SURF
+# 284 "data/maps/Route13_hns/scripts.pory"
+	applymovement Route13_Alola_Ship, Route13_TravelToAlola_Movement_2
+# 285 "data/maps/Route13_hns/scripts.pory"
+	setvar VAR_ALOLA_TRAVEL, 1
 # 286 "data/maps/Route13_hns/scripts.pory"
-	special RemoveCameraObject
+	delay 90
 # 287 "data/maps/Route13_hns/scripts.pory"
-	warp MAP_ALOLA_ISLAND_MELEMELE_HNS, 25, 33
+	fadescreenswapbuffers FADE_TO_BLACK
 # 288 "data/maps/Route13_hns/scripts.pory"
+	special RemoveCameraObject
+# 289 "data/maps/Route13_hns/scripts.pory"
+	warp MAP_ALOLA_ISLAND_MELEMELE_HNS, 25, 33
+# 290 "data/maps/Route13_hns/scripts.pory"
 	waitstate
 	end
 
@@ -573,9 +577,9 @@ Route13_TravelToAlola_14:
 	goto Route13_TravelToAlola_13
 
 Route13_TravelToAlola_17:
-# 263 "data/maps/Route13_hns/scripts.pory"
-	applymovement LOCALID_PLAYER, Route13_TravelToAlola_Movement_0
 # 264 "data/maps/Route13_hns/scripts.pory"
+	applymovement LOCALID_PLAYER, Route13_TravelToAlola_Movement_0
+# 265 "data/maps/Route13_hns/scripts.pory"
 	waitmovement 0
 	goto Route13_TravelToAlola_16
 
@@ -612,29 +616,29 @@ Route13_TravelToAlola_Movement_1:
 	walk_down
 	step_end
 
-# 235 "data/maps/Route13_hns/scripts.pory"
+# 236 "data/maps/Route13_hns/scripts.pory"
 Route13_TravelToAlola_Movement_2:
-# 235 "data/maps/Route13_hns/scripts.pory"
+# 236 "data/maps/Route13_hns/scripts.pory"
 	walk_right
-# 235 "data/maps/Route13_hns/scripts.pory"
+# 236 "data/maps/Route13_hns/scripts.pory"
 	walk_right
-# 235 "data/maps/Route13_hns/scripts.pory"
+# 236 "data/maps/Route13_hns/scripts.pory"
 	walk_right
-# 235 "data/maps/Route13_hns/scripts.pory"
+# 236 "data/maps/Route13_hns/scripts.pory"
 	walk_right
-# 235 "data/maps/Route13_hns/scripts.pory"
+# 236 "data/maps/Route13_hns/scripts.pory"
 	walk_right
-# 235 "data/maps/Route13_hns/scripts.pory"
+# 236 "data/maps/Route13_hns/scripts.pory"
 	walk_right
-# 235 "data/maps/Route13_hns/scripts.pory"
+# 236 "data/maps/Route13_hns/scripts.pory"
 	walk_right
-# 235 "data/maps/Route13_hns/scripts.pory"
+# 236 "data/maps/Route13_hns/scripts.pory"
 	walk_right
-# 235 "data/maps/Route13_hns/scripts.pory"
+# 236 "data/maps/Route13_hns/scripts.pory"
 	walk_right
-# 235 "data/maps/Route13_hns/scripts.pory"
+# 236 "data/maps/Route13_hns/scripts.pory"
 	walk_right
-# 235 "data/maps/Route13_hns/scripts.pory"
+# 236 "data/maps/Route13_hns/scripts.pory"
 	walk_right
 	step_end
 
@@ -657,16 +661,16 @@ Route13_TravelToAlola_Text_1:
 	.string "Ahoy! Let's get you on board!$"
 
 Route13_TravelToAlola_Text_2:
-# 250 "data/maps/Route13_hns/scripts.pory"
+# 251 "data/maps/Route13_hns/scripts.pory"
 	.string "Ahoy!\n"
 	.string "Come back when you'd like to set sail.$"
 
 Route13_TravelToAlola_Text_3:
-# 257 "data/maps/Route13_hns/scripts.pory"
+# 258 "data/maps/Route13_hns/scripts.pory"
 	.string "Ah, its you again!\n"
 	.string "Do you want to go to the Alola region?$"
 
 Route13_TravelToAlola_Text_4:
-# 300 "data/maps/Route13_hns/scripts.pory"
+# 302 "data/maps/Route13_hns/scripts.pory"
 	.string "This ship departs for the Alola Isles,\n"
 	.string "but it's for residents only.$"

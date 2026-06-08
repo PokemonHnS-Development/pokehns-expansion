@@ -144,7 +144,7 @@
 
 // Alola Vars
 #define VAR_ALOLA_TRAVEL                                 0x40CB // var for setting up mapscripts when traveling to and from alola. 
-#define VAR_UNUSED_HNS_0x40CC                            0x40CC
+#define VAR_ALOLA_STATE                                  0x40CC // state of the story in alola
 #define VAR_UNUSED_HNS_0x40CD                            0x40CD
 #define VAR_UNUSED_HNS_0x40D2                            0x40D2
 #define VAR_UNUSED_HNS_0x40D3                            0x40D3

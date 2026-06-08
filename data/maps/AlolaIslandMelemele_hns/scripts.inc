@@ -60,9 +60,9 @@ Alola_Melemele_TravelToKanto::
 # 35 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq Alola_Melemele_TravelToKanto_1
-# 72 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 73 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	msgbox Alola_Melemele_TravelToKanto_Text_2, MSGBOX_AUTOCLOSE
-# 74 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 75 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	release
 	end
 
@@ -112,16 +112,18 @@ Alola_Melemele_TravelToKanto_4:
 # 62 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	waitse
 # 63 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
-	applymovement Alola_Melemele_Ship, Alola_Melemele_TravelToKanto_Movement_4
+	playse SE_M_SURF
 # 64 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
-	delay 90
+	applymovement Alola_Melemele_Ship, Alola_Melemele_TravelToKanto_Movement_4
 # 65 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
-	fadescreenswapbuffers FADE_TO_BLACK
+	delay 90
 # 66 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
-	special RemoveCameraObject
+	fadescreenswapbuffers FADE_TO_BLACK
 # 67 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
-	warp MAP_ROUTE13_HNS, 37, 29
+	special RemoveCameraObject
 # 68 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	warp MAP_ROUTE13_HNS, 37, 29
+# 69 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	waitstate
 	end
 
@@ -147,92 +149,108 @@ Alola_Melemele_TravelToKanto_8:
 
 
 Alola_Melemele_Mailbox::
-# 80 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
-	lock
 # 81 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
-	msgbox Alola_Melemele_Mailbox_Text_0
+	lock
 # 82 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	msgbox Alola_Melemele_Mailbox_Text_0
+# 83 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	release
 	end
 
 
 Alola_Melemele_Melemele_Sign::
-# 87 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
-	lock
 # 88 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
-	msgbox Alola_Melemele_Melemele_Sign_Text_0
+	lock
 # 89 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	msgbox Alola_Melemele_Melemele_Sign_Text_0
+# 90 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	release
 	end
 
 
 Alola_Melemele_Pokecenter_Sign::
-# 94 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
-	lock
 # 95 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	lock
+# 96 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	msgbox Alola_Melemele_Pokecenter_Sign_Text_0
-# 101 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 102 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	release
 	end
 
 
 Alola_Melemele_MelemeleMart_Sign::
-# 106 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
-	lock
 # 107 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
-	msgbox Alola_Melemele_MelemeleMart_Sign_Text_0
+	lock
 # 108 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	msgbox Alola_Melemele_MelemeleMart_Sign_Text_0
+# 109 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	release
 	end
 
 
 Alola_Melemele_BattleSandygast::
-# 113 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
-	lock
 # 114 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
-	faceplayer
+	lock
 # 115 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
-	playmoncry SPECIES_SANDYGAST, 0
+	faceplayer
 # 116 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
-	msgbox Alola_Melemele_BattleSandygast_Text_0, MSGBOX_AUTOCLOSE
+	playmoncry SPECIES_SANDYGAST, 0
 # 117 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
-	waitmoncry
+	msgbox Alola_Melemele_BattleSandygast_Text_0, MSGBOX_AUTOCLOSE
 # 118 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
-	setwildbattle SPECIES_SANDYGAST, 45
+	waitmoncry
 # 119 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
-	dowildbattle
+	setwildbattle SPECIES_SANDYGAST, 45
 # 120 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
-	specialvar VAR_RESULT, GetBattleOutcome
+	dowildbattle
 # 121 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	specialvar VAR_RESULT, GetBattleOutcome
+# 122 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	compare VAR_RESULT, B_OUTCOME_CAUGHT
 	goto_if_eq Alola_Melemele_BattleSandygast_2
-# 127 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 128 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	compare VAR_RESULT, B_OUTCOME_WON
 	goto_if_eq Alola_Melemele_BattleSandygast_3
-# 134 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 135 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	release
 	end
 
-# 137 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 138 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	release
 	end
 
 Alola_Melemele_BattleSandygast_2:
-# 122 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
-	setflag FLAG_CAUGHT_SANDYGAST1
 # 123 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
-	removeobject Alola_Melemele_Sandygast
+	setflag FLAG_CAUGHT_SANDYGAST1
 # 124 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	removeobject Alola_Melemele_Sandygast
+# 125 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	release
 	end
 
 Alola_Melemele_BattleSandygast_3:
-# 128 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
-	setflag FLAG_CAUGHT_SANDYGAST1
 # 129 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
-	removeobject Alola_Melemele_Sandygast
+	setflag FLAG_CAUGHT_SANDYGAST1
 # 130 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	removeobject Alola_Melemele_Sandygast
+# 131 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	release
+	end
+
+
+Alola_Melemele_FindItem1::
+# 143 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	finditem ITEM_POTION, 1
+	end
+
+
+Alola_Melemele_SamsonOak_Trigger_Beginning::
+# 148 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	lock
+# 149 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	fadeoutbgm 10
+# 150 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	playbgm MUS_HG_FOLLOW_ME_1, FALSE
 	end
 
 
@@ -286,29 +304,29 @@ Alola_Melemele_TravelToKanto_Movement_3:
 	walk_down
 	step_end
 
-# 63 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 64 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 Alola_Melemele_TravelToKanto_Movement_4:
-# 63 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 64 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	walk_left
-# 63 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 64 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	walk_left
-# 63 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 64 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	walk_left
-# 63 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 64 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	walk_left
-# 63 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 64 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	walk_left
-# 63 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 64 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	walk_left
-# 63 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 64 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	walk_left
-# 63 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 64 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	walk_left
-# 63 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 64 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	walk_left
-# 63 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 64 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	walk_left
-# 63 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 64 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	walk_left
 	step_end
 
@@ -329,20 +347,20 @@ Alola_Melemele_TravelToKanto_Text_1:
 	.string "Ahoy! Let's get you on board!$"
 
 Alola_Melemele_TravelToKanto_Text_2:
-# 72 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 73 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	.string "Ahoy!\n"
 	.string "Come back when you'd like to set sail.$"
 
 Alola_Melemele_Mailbox_Text_0:
-# 81 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 82 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	.string "Samson Oak's Villa$"
 
 Alola_Melemele_Melemele_Sign_Text_0:
-# 88 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 89 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	.string "Welcome to Melemele Island!$"
 
 Alola_Melemele_Pokecenter_Sign_Text_0:
-# 95 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 96 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	.string "Welcome to the Melemele Island\n"
 	.string "Pokémon Center!\p"
 	.string "This is the only Pokémon Center on the\n"
@@ -350,9 +368,9 @@ Alola_Melemele_Pokecenter_Sign_Text_0:
 	.string "your Pokémon while you're here!$"
 
 Alola_Melemele_MelemeleMart_Sign_Text_0:
-# 107 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 108 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	.string "Melemele Island Mart$"
 
 Alola_Melemele_BattleSandygast_Text_0:
-# 116 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 117 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	.string "Gaaah!$"

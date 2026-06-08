@@ -54,6 +54,7 @@
       "flag": "0"
     },
     {
+      "local_id": "Alola_Ulaula_Muk",
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(MUK_ALOLA)",
       "x": 17,
       "y": 6,
@@ -63,8 +64,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "script": "Alola_Ulaula_BattleMuk",
+      "flag": "FLAG_CAUGHT_MUK_ALOLA"
     }
   ],
   "warp_events": [

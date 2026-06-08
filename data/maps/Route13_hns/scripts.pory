@@ -232,6 +232,7 @@ script Route13_TravelToAlola{
                 fadescreenswapbuffers(FADE_FROM_BLACK)
                 playse(SE_RG_SS_ANNE_HORN)
                 waitse
+                playse(SE_M_SURF)
                 applymovement(Route13_Alola_Ship, moves(walk_right*11))
                 setvar(VAR_ALOLA_TRAVEL, 1)
                 setflag(FLAG_PREVIOUSLY_TRAVELED_TO_ALOLA)
@@ -279,6 +280,7 @@ script Route13_TravelToAlola{
                 fadescreenswapbuffers(FADE_FROM_BLACK)
                 playse(SE_RG_SS_ANNE_HORN)
                 waitse
+                playse(SE_M_SURF)
                 applymovement(Route13_Alola_Ship, moves(walk_right*11))
                 setvar(VAR_ALOLA_TRAVEL, 1)
                 delay(90)

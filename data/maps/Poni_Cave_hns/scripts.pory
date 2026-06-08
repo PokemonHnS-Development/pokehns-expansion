@@ -1,23 +1,23 @@
-mapscripts UlaUla_Cave_hns_MapScripts {}
+mapscripts Poni_Cave_hns_MapScripts{}
 
-script Alola_Ulaula_BattleSandslash{
+script Alola_Poni_BattleRaichu{
     lock
     faceplayer
-    playmoncry(SPECIES_SANDSLASH_ALOLA, 0)
+    playmoncry(SPECIES_RAICHU_ALOLA, 0)
     msgbox("Gaaah!", MSGBOX_AUTOCLOSE)
     waitmoncry
-    setwildbattle(SPECIES_SANDSLASH_ALOLA,45)
+    setwildbattle(SPECIES_RAICHU_ALOLA,45)
     dowildbattle
     specialvar(VAR_RESULT, GetBattleOutcome)
     if (var(VAR_RESULT) == B_OUTCOME_CAUGHT){
-        setflag(FLAG_CAUGHT_SANDSLASH_ALOLA)
-        removeobject(Alola_Ulaula_Sandslash)
+        setflag(FLAG_CAUGHT_RAICHU_ALOLA)
+        removeobject(Alola_Poni_Raichu)
         release
         end
     }
     elif (var(VAR_RESULT) == B_OUTCOME_WON){
-        setflag(FLAG_CAUGHT_SANDSLASH_ALOLA)
-        removeobject(Alola_Ulaula_Sandslash)
+        setflag(FLAG_CAUGHT_RAICHU_ALOLA)
+        removeobject(Alola_Poni_Raichu)
         release
         end
     }
@@ -29,24 +29,24 @@ script Alola_Ulaula_BattleSandslash{
     end
 }
 
-script Alola_Ulaula_BattleNinetales{
+script Alola_Poni_BattleGolem{
     lock
     faceplayer
-    playmoncry(SPECIES_NINETALES_ALOLA, 0)
+    playmoncry(SPECIES_GOLEM_ALOLA, 0)
     msgbox("Gaaah!", MSGBOX_AUTOCLOSE)
     waitmoncry
-    setwildbattle(SPECIES_NINETALES_ALOLA,45)
+    setwildbattle(SPECIES_GOLEM_ALOLA,45)
     dowildbattle
     specialvar(VAR_RESULT, GetBattleOutcome)
     if (var(VAR_RESULT) == B_OUTCOME_CAUGHT){
-        setflag(FLAG_CAUGHT_NINETALES_ALOLA)
-        removeobject(Alola_Ulaula_Ninetales)
+        setflag(FLAG_CAUGHT_GOLEM_ALOLA)
+        removeobject(Alola_Poni_Golem)
         release
         end
     }
     elif (var(VAR_RESULT) == B_OUTCOME_WON){
-        setflag(FLAG_CAUGHT_NINETALES_ALOLA)
-        removeobject(Alola_Ulaula_Ninetales)
+        setflag(FLAG_CAUGHT_GOLEM_ALOLA)
+        removeobject(Alola_Poni_Golem)
         release
         end
     }
@@ -58,12 +58,12 @@ script Alola_Ulaula_BattleNinetales{
     end
 }
 
-script Alola_Ulaula_Cave_FindItem1{
+script Alola_Poni_Cave_FindItem1{
     finditem(ITEM_POTION, 1)
     end
 }
 
-script Alola_Ulaula_Cave_FindItem2{
+script Alola_Poni_Cave_FindItem2{
     finditem(ITEM_ANTIDOTE, 1)
     end
 }

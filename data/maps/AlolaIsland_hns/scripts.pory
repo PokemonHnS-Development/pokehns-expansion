@@ -1,0 +1,39 @@
+mapscripts AlolaIsland_hns_MapScripts{
+
+}
+
+script Alola_Poni_BattleExeggutor{
+    lock
+    faceplayer
+    playmoncry(SPECIES_EXEGGUTOR_ALOLA, 0)
+    msgbox("Gaaah!", MSGBOX_AUTOCLOSE)
+    waitmoncry
+    setwildbattle(SPECIES_EXEGGUTOR_ALOLA,45)
+    dowildbattle
+    specialvar(VAR_RESULT, GetBattleOutcome)
+    if (var(VAR_RESULT) == B_OUTCOME_CAUGHT){
+        setflag(FLAG_CAUGHT_EXEGGUTOR_ALOLA)
+        removeobject(Alola_Poni_Exeggutor)
+        release
+        end
+    }
+    elif (var(VAR_RESULT) == B_OUTCOME_WON){
+        setflag(FLAG_CAUGHT_EXEGGUTOR_ALOLA)
+        removeobject(Alola_Poni_Exeggutor)
+        release
+        end
+    }
+    else{
+        release
+        end
+    }
+    release
+    end
+}
+
+script Alola_Poni_Island_Sign{
+    lock
+    msgbox("Poni Island")
+    release
+    end
+}

@@ -15,6 +15,7 @@
   "connections": null,
   "object_events": [
     {
+      "local_id": "Alola_Poni_Raichu",
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(RAICHU_ALOLA)",
       "x": 9,
       "y": 6,
@@ -24,10 +25,11 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "script": "Alola_Poni_BattleRaichu",
+      "flag": "FLAG_CAUGHT_RAICHU_ALOLA"
     },
     {
+      "local_id": "Alola_Poni_Golem",
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(GOLEM_ALOLA)",
       "x": 22,
       "y": 5,
@@ -37,8 +39,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "script": "Alola_Poni_BattleGolem",
+      "flag": "FLAG_CAUGHT_GOLEM_ALOLA"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL_HNS",
@@ -50,7 +52,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "Alola_Poni_Cave_FindItem1",
       "flag": "0"
     },
     {
@@ -63,7 +65,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "Alola_Poni_Cave_FindItem2",
       "flag": "0"
     }
   ],

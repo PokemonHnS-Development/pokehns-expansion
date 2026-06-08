@@ -41,6 +41,7 @@
       "flag": "0"
     },
     {
+      "local_id": "Alola_Melemele_Marowak",
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(MAROWAK_ALOLA)",
       "x": 16,
       "y": 11,
@@ -50,10 +51,11 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "script": "Alola_Melemele_BattleMarowak",
+      "flag": "FLAG_CAUGHT_MAROWAK_ALOLA"
     },
     {
+      "local_id": "Alola_Melemele_Dugtrio",
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(DUGTRIO_ALOLA)",
       "x": 46,
       "y": 30,
@@ -61,6 +63,45 @@
       "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_DOWN",
       "movement_range_x": 1,
       "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Alola_Melemele_BattleDugtrio",
+      "flag": "FLAG_CAUGHT_DUGTRIO_ALOLA"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_CAMPER_HNS",
+      "x": 9,
+      "y": 26,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_PICNICKER_HNS",
+      "x": 25,
+      "y": 25,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN_AND_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_HIKER_HNS",
+      "x": 20,
+      "y": 19,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",

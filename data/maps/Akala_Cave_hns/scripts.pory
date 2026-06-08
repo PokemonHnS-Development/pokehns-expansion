@@ -1,1 +1,70 @@
 mapscripts Akala_Cave_hns_MapScripts {}
+
+script Alola_Melemele_BattleMarowak{
+    lock
+    faceplayer
+    playmoncry(SPECIES_MAROWAK_ALOLA, 0)
+    msgbox("Gaaah!", MSGBOX_AUTOCLOSE)
+    waitmoncry
+    setwildbattle(SPECIES_MAROWAK_ALOLA,45)
+    dowildbattle
+    specialvar(VAR_RESULT, GetBattleOutcome)
+    if (var(VAR_RESULT) == B_OUTCOME_CAUGHT){
+        setflag(FLAG_CAUGHT_MAROWAK_ALOLA)
+        removeobject(Alola_Melemele_Marowak)
+        release
+        end
+    }
+    elif (var(VAR_RESULT) == B_OUTCOME_WON){
+        setflag(FLAG_CAUGHT_MAROWAK_ALOLA)
+        removeobject(Alola_Melemele_Marowak)
+        release
+        end
+    }
+    else{
+        release
+        end
+    }
+    release
+    end
+}
+
+script Alola_Melemele_BattleDugtrio{
+    lock
+    faceplayer
+    playmoncry(SPECIES_DUGTRIO_ALOLA, 0)
+    msgbox("Gaaah!", MSGBOX_AUTOCLOSE)
+    waitmoncry
+    setwildbattle(SPECIES_DUGTRIO_ALOLA,45)
+    dowildbattle
+    specialvar(VAR_RESULT, GetBattleOutcome)
+    if (var(VAR_RESULT) == B_OUTCOME_CAUGHT){
+        setflag(FLAG_CAUGHT_DUGTRIO_ALOLA)
+        removeobject(Alola_Melemele_Dugtrio)
+        release
+        end
+    }
+    elif (var(VAR_RESULT) == B_OUTCOME_WON){
+        setflag(FLAG_CAUGHT_DUGTRIO_ALOLA)
+        removeobject(Alola_Melemele_Dugtrio)
+        release
+        end
+    }
+    else{
+        release
+        end
+    }
+    release
+    end
+}
+
+
+script Alola_Akala_Cave_FindItem1{
+    finditem(ITEM_POTION, 1)
+    end
+}
+
+script Alola_Akala_Cave_FindItem2{
+    finditem(ITEM_ANTIDOTE, 1)
+    end
+}

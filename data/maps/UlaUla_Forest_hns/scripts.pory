@@ -1,1 +1,6 @@
 mapscripts UlaUla_Forest_hns_MapScripts {}
+
+script Alola_Ulaula_Forest_FindItem1{
+    finditem(ITEM_POTION, 1)
+    end
+}
