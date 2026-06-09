@@ -677,6 +677,6 @@ Route13_TravelToAlola_Text_4:
 	.string "Ahoy!\n"
 	.string "This ship is for residents only.\p"
 	.string "All of the residents of these Isles\n"
-	.string "carry some strange souvenirs.\p"
+	.string "carry some… {PAUSE 30}strange souvenirs.\p"
 	.string "It makes them so easy to identify,\n"
 	.string "I don't even need to check tickets!$"

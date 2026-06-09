@@ -304,7 +304,7 @@ script Route13_TravelToAlola{
         This ship is for residents only.
         
         All of the residents of these Isles
-        carry some strange souvenirs.
+        carry some\. {PAUSE 30}strange souvenirs.
         
         It makes them so easy to identify,
         I don't even need to check tickets!", MSGBOX_AUTOCLOSE)
