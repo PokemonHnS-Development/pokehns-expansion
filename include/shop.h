@@ -8,4 +8,10 @@ void CreateDecorationShop1Menu(const u16 *itemsForSale);
 void CreateDecorationShop2Menu(const u16 *itemsForSale);
 void CB2_ExitSellMenu(void);
 
+void CreateBPVitaminShop(void);
+void CreateBPHoldItemShop(void);
+void CreateBPDecorShop1(void);
+void CreateBPDecorShop2(void);
+void CreateBPPokeBallShop(void);
+
 #endif // GUARD_SHOP_H

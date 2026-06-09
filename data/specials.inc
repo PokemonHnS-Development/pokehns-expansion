@@ -480,6 +480,11 @@ gSpecials::
 	def_special GetFrontierBattlePoints
 	def_special ShowFrontierExchangeCornerItemIconWindow
 	def_special CloseFrontierExchangeCornerItemIconWindow
+	def_special CreateBPVitaminShop
+	def_special CreateBPHoldItemShop
+	def_special CreateBPDecorShop1
+	def_special CreateBPDecorShop2
+	def_special CreateBPPokeBallShop
 	def_special DisplayBerryPowderVendorMenu
 	def_special RemoveBerryPowderVendorMenu
 	def_special HasEnoughBerryPowder

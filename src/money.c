@@ -13,8 +13,10 @@
 
 EWRAM_DATA static u8 sMoneyBoxWindowId = 0;
 EWRAM_DATA static u8 sMoneyLabelSpriteId = 0;
+EWRAM_DATA static u8 sBPLabelSpriteId = 0;
 
 #define MONEY_LABEL_TAG 0x2722
+#define BP_LABEL_TAG    0x2723
 
 static const struct OamData sOamData_MoneyLabel =
 {
@@ -63,6 +65,55 @@ static const struct SpritePalette sSpritePalette_MoneyLabel =
 {
     .data = gShopMenu_Pal,
     .tag = MONEY_LABEL_TAG
+};
+
+static const struct OamData sOamData_BPLabel =
+{
+    .y = 0,
+    .affineMode = ST_OAM_AFFINE_OFF,
+    .objMode = ST_OAM_OBJ_NORMAL,
+    .mosaic = FALSE,
+    .bpp = ST_OAM_4BPP,
+    .shape = SPRITE_SHAPE(32x16),
+    .x = 0,
+    .matrixNum = 0,
+    .size = SPRITE_SIZE(32x16),
+    .tileNum = 0,
+    .priority = 0,
+    .paletteNum = 0,
+    .affineParam = 0,
+};
+
+static const union AnimCmd sSpriteAnim_BPLabel[] =
+{
+    ANIMCMD_FRAME(0, 0),
+    ANIMCMD_END
+};
+
+static const union AnimCmd *const sSpriteAnimTable_BPLabel[] =
+{
+    sSpriteAnim_BPLabel,
+};
+
+static const struct SpriteTemplate sSpriteTemplate_BPLabel =
+{
+    .tileTag = BP_LABEL_TAG,
+    .paletteTag = BP_LABEL_TAG,
+    .oam = &sOamData_BPLabel,
+    .anims = sSpriteAnimTable_BPLabel,
+};
+
+static const struct CompressedSpriteSheet sSpriteSheet_BPLabel =
+{
+    .data = gShopMenuBP_Gfx,
+    .size = 256,
+    .tag = BP_LABEL_TAG,
+};
+
+static const struct SpritePalette sSpritePalette_BPLabel =
+{
+    .data = gShopMenu_Pal,
+    .tag = BP_LABEL_TAG
 };
 
 u32 GetMoney(u32 *moneyPtr)
@@ -205,4 +256,16 @@ void AddMoneyLabelObject(u16 x, u16 y)
 void RemoveMoneyLabelObject(void)
 {
     DestroySpriteAndFreeResources(&gSprites[sMoneyLabelSpriteId]);
+}
+
+void AddBPLabelObject(u16 x, u16 y)
+{
+    LoadCompressedSpriteSheet(&sSpriteSheet_BPLabel);
+    LoadSpritePalette(&sSpritePalette_BPLabel);
+    sBPLabelSpriteId = CreateSprite(&sSpriteTemplate_BPLabel, x, y, 0);
+}
+
+void RemoveBPLabelObject(void)
+{
+    DestroySpriteAndFreeResources(&gSprites[sBPLabelSpriteId]);
 }
