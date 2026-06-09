@@ -2632,28 +2632,99 @@ bool8 ScrCmd_showmonpic(struct ScriptContext *ctx)
     u16 species = VarGet(varId);
     u8 x = ScriptReadByte(ctx);
     u8 y = ScriptReadByte(ctx);
+    bool8 shinyStarter = FALSE;
 
     Script_RequestEffects(SCREFF_V1 | SCREFF_HARDWARE);
 
-#if RANDOMIZER_AVAILABLE
-    if (RandomizerFeatureEnabled(RANDOMIZE_STARTER_AND_GIFT_MON) && !FlagGet(FLAG_SYS_POKEMON_GET))
+    // If we have not gotten a pokemon yet, assume this is the starter preview
+    if (!FlagGet(FLAG_SYS_POKEMON_GET))
     {
-        species = RandomizeMon(RANDOMIZER_REASON_STARTER_AND_GIFT_MON, GetRandomizerOption(RANDOMIZER_OPTION_SPECIES_MODE), GetRandomizerSeed() ^ species, species);
-        if (species == SPECIES_TOGEPI)
-            species = SPECIES_CLEFFA;
-        if (varId >= VARS_START)
-            VarSet(varId, species);
-    }
-#endif
+        u8 starter = VarGet(VAR_STARTER_MON);
 
-    if (IsOneTypeChallengeActive() && !FlagGet(FLAG_SYS_POKEMON_GET))
-    {
-        species = GetStarterPokemon(VarGet(VAR_STARTER_MON));
-        if (varId >= VARS_START)
-            VarSet(varId, species);
+        u32 flagPreviewChecked = 0;
+        u32 flagShinyPreview = 0;
+
+        if (starter == 0)
+        {
+            flagPreviewChecked = FLAG_STARTER_PREVIEW_CHECKED_1;
+            flagShinyPreview = FLAG_SHINY_STARTER_1;
+        }
+        else if (starter == 1)
+        {
+            flagPreviewChecked = FLAG_STARTER_PREVIEW_CHECKED_2;
+            flagShinyPreview = FLAG_SHINY_STARTER_2;
+        }
+        else if (starter == 2)
+        {
+            flagPreviewChecked = FLAG_STARTER_PREVIEW_CHECKED_3;
+            flagShinyPreview = FLAG_SHINY_STARTER_3;
+        }
+
+        #ifndef NDEBUG
+            MgbaPrintf(MGBA_LOG_DEBUG, "******** Possible Temp Flags: %x, %x, %x ********", FLAG_TEMP_1, FLAG_TEMP_2, FLAG_TEMP_3);
+            MgbaPrintf(MGBA_LOG_DEBUG, "******** Possible Shiny Starter Flags: %x, %x, %x ********", FLAG_SHINY_STARTER_1, FLAG_SHINY_STARTER_2, FLAG_SHINY_STARTER_3);
+            MgbaPrintf(MGBA_LOG_DEBUG, "******** Actual Temp and Shiny Flags: %x, %x ********", flagPreviewChecked, flagShinyPreview);
+        #endif
+
+        // if FLAG_TEMP_X not set for this starter preview, roll for shininess,
+        // then set FLAG_TEMP_X to prevent re-rolls
+        if (!FlagGet(flagPreviewChecked))
+        {
+            #ifndef NDEBUG
+                MgbaPrintf(MGBA_LOG_DEBUG, "\n******** Rolling Starter Preview Shininess ********");
+                MgbaPrintf(MGBA_LOG_DEBUG, "******** Flag Values Before: %d, %d ********", FlagGet(flagPreviewChecked), FlagGet(flagShinyPreview));
+            #endif
+
+            u32 value = READ_OTID_FROM_SAVE;
+            u32 shinyPersonality = Random32();
+
+            // this is technically unnecessary right now, but will replace GetShinyOdds in terms of implementing user-defined shiny odds
+            u32 totalRerolls = 0;
+            if (CheckBagHasItem(ITEM_SHINY_CHARM, 1))
+                totalRerolls += I_SHINY_CHARM_ADDITIONAL_ROLLS;
+            
+            while (GET_SHINY_VALUE(value, shinyPersonality) >= GetShinyOdds() && totalRerolls > 0)
+            {
+                shinyPersonality = Random32();
+                totalRerolls--;
+            }
+
+            if (GET_SHINY_VALUE(value, shinyPersonality) < GetShinyOdds())
+                FlagSet(flagShinyPreview);
+
+            FlagSet(flagPreviewChecked);
+        }
+
+        shinyStarter = FlagGet(flagShinyPreview);
+
+        #ifndef NDEBUG
+            MgbaPrintf(MGBA_LOG_DEBUG, "******** Flag Values: %d, %d ********", FlagGet(flagPreviewChecked), FlagGet(flagShinyPreview));
+            MgbaPrintf(MGBA_LOG_DEBUG, "******** Preview Should be Shiny: %d ********", shinyStarter);
+        #endif
+
+        #if RANDOMIZER_AVAILABLE
+        if (RandomizerFeatureEnabled(RANDOMIZE_STARTER_AND_GIFT_MON))
+        {
+            species = RandomizeMon(RANDOMIZER_REASON_STARTER_AND_GIFT_MON, GetRandomizerOption(RANDOMIZER_OPTION_SPECIES_MODE), GetRandomizerSeed() ^ species, species);
+            if (species == SPECIES_TOGEPI)
+                species = SPECIES_CLEFFA;
+            if (varId >= VARS_START)
+                VarSet(varId, species);
+        }
+        #endif
+
+        if (IsOneTypeChallengeActive())
+        {
+            species = GetStarterPokemon(VarGet(VAR_STARTER_MON));
+            if (varId >= VARS_START)
+                VarSet(varId, species);
+        }
     }
 
-    ScriptMenu_ShowPokemonPic(species, x, y);
+    if (shinyStarter)
+        ScriptMenu_ShowShinyPokemonPic(species, x, y);
+    else
+        ScriptMenu_ShowPokemonPic(species, x, y);
     return FALSE;
 }
 

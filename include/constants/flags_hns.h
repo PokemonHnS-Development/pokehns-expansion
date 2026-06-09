@@ -1,6 +1,14 @@
 #ifndef GUARD_CONSTANTS_FLAGS_HNS_H
 #define GUARD_CONSTANTS_FLAGS_HNS_H
 
+// Temp Flag Aliases
+#define FLAG_STARTER_PREVIEW_CHECKED_1  FLAG_TEMP_1
+#define FLAG_STARTER_PREVIEW_CHECKED_2  FLAG_TEMP_2
+#define FLAG_STARTER_PREVIEW_CHECKED_3  FLAG_TEMP_3
+#define FLAG_SHINY_STARTER_1    FLAG_TEMP_4
+#define FLAG_SHINY_STARTER_2    FLAG_TEMP_5
+#define FLAG_SHINY_STARTER_3    FLAG_TEMP_6
+
 // Content flags (0x22 – 0x4FF)
 
 // Hide Pokemon
@@ -832,7 +840,7 @@
 #define FLAG_HIDE_ICEPATH_B2F_BOULDER4                              0x2FA
 #define FLAG_LATIOS_OR_LATIAS_ROAMING                              0x2FB
 #define FLAG_HIDE_VERMILION_STEVEN                              0x2FC
-#define FLAG_MOM_HAS_GIFT                              0x2FD
+#define FLAG_MOM_HAS_GIFT                           0x2FD
 #define FLAG_UNUSED_30                              0x2FE
 #define FLAG_UNUSED_31                              0x2FF
 #define FLAG_UNUSED_32                              0x300
