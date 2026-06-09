@@ -1,4 +1,5 @@
 #include "global.h"
+#include "data.h"
 #include "graphics.h"
 #include "mail.h"
 #include "palette.h"
@@ -7,6 +8,14 @@
 #include "sprite.h"
 #include "data.h"
 #include "constants/pokemon_icon.h"
+
+#define POKE_ICON_SPECIES_BASE_PAL_TAG (POKE_ICON_BASE_PAL_TAG + 16)
+#define POKE_ICON_SPECIES_MAX_PAL_TAG (POKE_ICON_SPECIES_BASE_PAL_TAG + NUM_SPECIES + SPECIES_SHINY_TAG)
+
+#define IS_MON_ICON_TAG(x) (((x) >= POKE_ICON_BASE_PAL_TAG && (x) < POKE_ICON_BASE_PAL_TAG + ARRAY_COUNT(gMonIconPaletteTable)) || \
+                            ((x) >= POKE_ICON_SPECIES_BASE_PAL_TAG && (x) < POKE_ICON_SPECIES_MAX_PAL_TAG))
+
+#define INVALID_ICON_SPECIES SPECIES_OLD_UNOWN_J // Oddly specific, used when an icon should be a ?. Any of the 'old unown' would work
 
 struct MonIconSpriteTemplate
 {
@@ -134,14 +143,62 @@ static const u16 sSpriteImageSizes[3][4] =
     },
 };
 
-u8 CreateMonIcon(u16 species, void (*callback)(struct Sprite *), s16 x, s16 y, u8 subpriority, u32 personality)
+const u16 gMonIconPalettesCompressed[][16] =
 {
-    return CreateMonIconIsEgg(species, callback, x, y, subpriority, personality, FALSE);
+    INCBIN_U16("graphics/pokemon/icon_palettes/pal0.gbapal"),
+    INCBIN_U16("graphics/pokemon/icon_palettes/pal1.gbapal"),
+    INCBIN_U16("graphics/pokemon/icon_palettes/pal2.gbapal"),
+    INCBIN_U16("graphics/pokemon/icon_palettes/pal3.gbapal"),
+    INCBIN_U16("graphics/pokemon/icon_palettes/pal4.gbapal"),
+    INCBIN_U16("graphics/pokemon/icon_palettes/pal5.gbapal"),
+};
+
+const u16 * GetIconPalette(u32 species, bool32 isShiny, bool32 female)
+{
+#if P_GENDER_DIFFERENCES
+    if (gSpeciesInfo[species].iconSpriteFemale != NULL && gSpeciesInfo[species].iconPaletteFemale != NULL && female)
+        return (isShiny) ? gSpeciesInfo[species].shinyIconPaletteFemale : gSpeciesInfo[species].iconPaletteFemale;
+    else
+#endif
+    if (gSpeciesInfo[species].iconPalette != NULL)
+        return (isShiny) ? gSpeciesInfo[species].shinyIconPalette : gSpeciesInfo[species].iconPalette;
+    else
+        return gMonIconPalettesCompressed[GetMonIconPaletteIndexFromSpecies(species)];
 }
 
-u8 CreateMonIconIsEgg(u16 species, void (*callback)(struct Sprite *), s16 x, s16 y, u8 subpriority, u32 personality, bool32 isEgg)
+const u32 GetIconPalTag(u32 species, bool32 isShiny)
 {
-    u8 spriteId;
+    u32 tag = POKE_ICON_SPECIES_BASE_PAL_TAG;
+    if (isShiny)
+        tag += NUM_SPECIES;
+    tag += species;
+    return tag;
+}
+
+// Find or allocate a palette slot for a pokemon icon
+// Prefers unused slots with tags in the icon range (IS_MON_ICON_TAG),
+// but if not found, will allocate a new palette slot
+u32 FindFreeIconPaletteSlot(u16 tag) 
+{
+    u32 i;
+    u16 tag2, used;
+    // look for an unused mon icon slot
+    for (i = 0, used = 0; i < MAX_SPRITES; i++) // compute a bitfield of in-use sprite palettes
+        if (gSprites[i].inUse)
+            used |= 1 << gSprites[i].oam.paletteNum;
+    for (i = 0; i < 16; i++) {
+        if (used & (1 << i)) // skip in-use palettes
+            continue;
+        tag2 = GetSpritePaletteTagByPaletteNum(i);
+        if (IS_MON_ICON_TAG(tag2))
+            return i;
+    }
+    // Allocate new slot
+    return AllocSpritePalette(tag);
+}
+
+// Creates mon icon sprite and overwrites its paletteNum
+u8 CreateMonIcon3(u16 species, void (*callback)(struct Sprite *), s16 x, s16 y, u8 subpriority, u32 personality, u8 paletteNum, bool32 isEgg) {
     struct MonIconSpriteTemplate iconTemplate =
     {
         .oam = &sMonIconOamData,
@@ -149,59 +206,64 @@ u8 CreateMonIconIsEgg(u16 species, void (*callback)(struct Sprite *), s16 x, s16
         .anims = sMonIconAnims,
         .affineAnims = sMonIconAffineAnims,
         .callback = callback,
-        .paletteTag = POKE_ICON_BASE_PAL_TAG + gSpeciesInfo[species].iconPalIndex,
+        .paletteTag = TAG_NONE,
     };
-    species = SanitizeSpeciesId(species);
+    u8 spriteId = CreateMonIconSprite(&iconTemplate, x, y, subpriority);
+    struct Sprite *sprite = &gSprites[spriteId];
 
-    if (isEgg)
-    {
-        if (gSpeciesInfo[species].eggId != EGG_ID_NONE)
-            iconTemplate.paletteTag = POKE_ICON_BASE_PAL_TAG + gEggDatas[gSpeciesInfo[species].eggId].eggIconPalIndex;
-        else
-            iconTemplate.paletteTag = POKE_ICON_BASE_PAL_TAG + gSpeciesInfo[SPECIES_EGG].iconPalIndex;
-    }
-    else if (species > NUM_SPECIES)
-    {
-        iconTemplate.paletteTag = POKE_ICON_BASE_PAL_TAG;
-    }
-#if P_GENDER_DIFFERENCES
-    else if (gSpeciesInfo[species].iconSpriteFemale != NULL && IsPersonalityFemale(species, personality))
-    {
-        iconTemplate.paletteTag = POKE_ICON_BASE_PAL_TAG + gSpeciesInfo[species].iconPalIndexFemale;
-    }
-#endif
-
-    spriteId = CreateMonIconSprite(&iconTemplate, x, y, subpriority);
-
-    UpdateMonIconFrame(&gSprites[spriteId]);
-
+    UpdateMonIconFrame(sprite);
+    sprite->oam.paletteNum = paletteNum;
     return spriteId;
 }
 
+// Like CreateMonIcon, but also accepts isShiny
+u8 CreateMonIcon2(u16 species, void (*callback)(struct Sprite *), s16 x, s16 y, u8 subpriority, bool32 isShiny, u32 personality, bool32 isEgg)
+{
+    u32 paletteNum;
+    const u16 *palette = GetIconPalette(species, isShiny, IsPersonalityFemale(species, personality));
+    u16 tag = GetIconPalTag(species, isShiny);
 
+    if ((paletteNum = IndexOfSpritePaletteTag(tag)) >= 16) 
+    {
+        if ((paletteNum = FindFreeIconPaletteSlot(tag)) < 16) 
+        {
+            SetSpritePaletteTagByPaletteNum(paletteNum, tag);
+            LoadPalette(palette, paletteNum*16 + 0x100, 32);
+        }
+    }
+
+    return CreateMonIcon3(species, callback, x, y, subpriority, personality, paletteNum, isEgg);
+}
+
+// Compatible with vanilla
+u8 CreateMonIcon(u16 species, void (*callback)(struct Sprite *), s16 x, s16 y, u8 subpriority, u32 personality) 
+{
+    return CreateMonIconIsEgg(species, callback, x, y, subpriority, personality, FALSE);
+}
+
+u8 CreateMonIconIsEgg(u16 species, void (*callback)(struct Sprite *), s16 x, s16 y, u8 subpriority, u32 personality, bool32 isEgg) 
+{
+    return CreateMonIcon2(species, callback, x, y, subpriority, FALSE, personality, isEgg);
+}
+
+// Load the palette for a pokemon into paletteNum,
+// optionally overwrite `sprite`'s paletteNum
+void SetMonIconPalette(struct Pokemon *mon, struct Sprite *sprite, u8 paletteNum) 
+{
+    if (paletteNum >= 16)
+        return;
+    LoadPalette(GetMonFrontSpritePal(mon), paletteNum*16 + 0x100, 32);
+    if (sprite)
+        sprite->oam.paletteNum = paletteNum;
+}
+
+// Only used with mail and mystery event, which cannot really store a bit for a shiny pokemon,
+// so we just load the palette into the proper slot by species
+// Used by mail/mystery event/other systems which do not store PIDs;
+// we just pass 0 as the personality
 u8 CreateMonIconNoPersonality(u16 species, void (*callback)(struct Sprite *), s16 x, s16 y, u8 subpriority)
 {
-    return CreateMonIconNoPersonalityIsEgg(species, callback, x, y, subpriority, FALSE);
-}
-u8 CreateMonIconNoPersonalityIsEgg(u16 species, void (*callback)(struct Sprite *), s16 x, s16 y, u8 subpriority, bool32 isEgg)
-{
-    u8 spriteId;
-    struct MonIconSpriteTemplate iconTemplate =
-    {
-        .oam = &sMonIconOamData,
-        .image = NULL,
-        .anims = sMonIconAnims,
-        .affineAnims = sMonIconAffineAnims,
-        .callback = callback,
-        .paletteTag = POKE_ICON_BASE_PAL_TAG + gSpeciesInfo[species].iconPalIndex,
-    };
-
-    iconTemplate.image = GetMonIconTilesIsEgg(species, 0, isEgg);
-    spriteId = CreateMonIconSprite(&iconTemplate, x, y, subpriority);
-
-    UpdateMonIconFrame(&gSprites[spriteId]);
-
-    return spriteId;
+    return CreateMonIcon(species, callback, x, y, subpriority, 0);
 }
 
 u16 GetIconSpecies(u16 species, u32 personality)
@@ -229,6 +291,7 @@ u16 GetIconSpeciesNoPersonality(u16 species)
     return GetIconSpecies(species, 0);
 }
 
+// usage in menu.c is unused
 const u8 *GetMonIconPtr(u16 species, u32 personality)
 {
     return GetMonIconPtrIsEgg(species, personality, FALSE);
@@ -251,56 +314,15 @@ void LoadMonIconPalettes(void)
         LoadSpritePalette(&gMonIconPaletteTable[i]);
 }
 
-// unused
-void SafeLoadMonIconPalette(u16 species)
-{
-    u8 palIndex;
-    palIndex = gSpeciesInfo[SanitizeSpeciesId(species)].iconPalIndex;
-    if (IndexOfSpritePaletteTag(gMonIconPaletteTable[palIndex].tag) == 0xFF)
-        LoadSpritePalette(&gMonIconPaletteTable[palIndex]);
-}
-
-void LoadMonIconPalette(u16 species)
-{
-    u8 palIndex = gSpeciesInfo[SanitizeSpeciesId(species)].iconPalIndex;
-    if (IndexOfSpritePaletteTag(gMonIconPaletteTable[palIndex].tag) == 0xFF)
-        LoadSpritePalette(&gMonIconPaletteTable[palIndex]);
-}
-
-void LoadMonIconPalettePersonality(u16 species, u32 personality)
-{
-    u8 palIndex;
-    species = SanitizeSpeciesId(species);
-#if P_GENDER_DIFFERENCES
-    if (gSpeciesInfo[species].iconSpriteFemale != NULL && IsPersonalityFemale(species, personality))
-        palIndex = gSpeciesInfo[species].iconPalIndexFemale;
-    else
-#endif
-        palIndex = gSpeciesInfo[species].iconPalIndex;
-    if (IndexOfSpritePaletteTag(gMonIconPaletteTable[palIndex].tag) == 0xFF)
-        LoadSpritePalette(&gMonIconPaletteTable[palIndex]);
-}
-
 void FreeMonIconPalettes(void)
 {
-    u8 i;
-    for (i = 0; i < ARRAY_COUNT(gMonIconPaletteTable); i++)
-        FreeSpritePaletteByTag(gMonIconPaletteTable[i].tag);
-}
-
-// unused
-void SafeFreeMonIconPalette(u16 species)
-{
-    u8 palIndex;
-    palIndex = gSpeciesInfo[SanitizeSpeciesId(species)].iconPalIndex;
-    FreeSpritePaletteByTag(gMonIconPaletteTable[palIndex].tag);
-}
-
-void FreeMonIconPalette(u16 species)
-{
-    u8 palIndex;
-    palIndex = gSpeciesInfo[SanitizeSpeciesId(species)].iconPalIndex;
-    FreeSpritePaletteByTag(gMonIconPaletteTable[palIndex].tag);
+    u32 i;
+    u16 tag;
+    for (i = 0; i < 16; i++) {
+        tag = GetSpritePaletteTagByPaletteNum(i);
+        if (IS_MON_ICON_TAG(tag))
+            SetSpritePaletteTagByPaletteNum(i, TAG_NONE);
+    }
 }
 
 void SpriteCB_MonIcon(struct Sprite *sprite)
@@ -343,32 +365,29 @@ const u8 *GetMonIconTilesIsEgg(u16 species, u32 personality, bool32 isEgg)
     return iconSprite;
 }
 
+// Loads pokemon icon palettes into the BG palettes, in the PC. Changed to always load an all-white palette.
 void TryLoadAllMonIconPalettesAtOffset(u16 offset)
 {
     s32 i;
+    const struct SpritePalette* monIconPalettePtr;
     if (offset <= BG_PLTT_ID(16 - ARRAY_COUNT(gMonIconPaletteTable)))
     {
-        for (i = 0; i < (int)ARRAY_COUNT(gMonIconPaletteTable); i++)
+        u16 whitePalette[16];
+        for (i = 0; i < 16; i++)
+          whitePalette[i] = 0xFFFF;
+        monIconPalettePtr = gMonIconPaletteTable;
+        for(i = ARRAY_COUNT(gMonIconPaletteTable) - 1; i >= 0; i--)
         {
-            LoadPalette(gMonIconPaletteTable[i].data, offset, PLTT_SIZE_4BPP);
+            LoadPalette(&whitePalette[0], offset, PLTT_SIZE_4BPP);
             offset += 16;
+            monIconPalettePtr++;
         }
     }
-}
-
-u8 GetValidMonIconPalIndex(u16 species)
-{
-    return gSpeciesInfo[SanitizeSpeciesId(species)].iconPalIndex;
 }
 
 u8 GetMonIconPaletteIndexFromSpecies(u16 species)
 {
     return gSpeciesInfo[SanitizeSpeciesId(species)].iconPalIndex;
-}
-
-const u16 *GetValidMonIconPalettePtr(u16 species)
-{
-    return gMonIconPaletteTable[gSpeciesInfo[SanitizeSpeciesId(species)].iconPalIndex].data;
 }
 
 u8 UpdateMonIconFrame(struct Sprite *sprite)
