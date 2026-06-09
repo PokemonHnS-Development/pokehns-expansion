@@ -411,7 +411,7 @@ Route13_TravelToAlola::
 	goto_if_ne Route13_TravelToAlola_1
 # 303 "data/maps/Route13_hns/scripts.pory"
 	msgbox Route13_TravelToAlola_Text_4, MSGBOX_AUTOCLOSE
-# 305 "data/maps/Route13_hns/scripts.pory"
+# 311 "data/maps/Route13_hns/scripts.pory"
 	release
 	end
 
@@ -652,9 +652,9 @@ Route13_GetOffBoat_Text_0:
 
 Route13_TravelToAlola_Text_0:
 # 205 "data/maps/Route13_hns/scripts.pory"
-	.string "Ahoy there!\n"
-	.string "I see your strange souvenir.\p"
-	.string "You must be from the Alola Isles!\p"
+	.string "Ahoy there!\p"
+	.string "That's one strange souvenir.\n"
+	.string "You must be from the Isles!\p"
 	.string "Would you like to take the next ship?\n"
 	.string "It departs shortly!$"
 
@@ -670,9 +670,13 @@ Route13_TravelToAlola_Text_2:
 Route13_TravelToAlola_Text_3:
 # 259 "data/maps/Route13_hns/scripts.pory"
 	.string "Ah, its you again!\n"
-	.string "Do you want to go to the Alola region?$"
+	.string "Do you want to go to the Alola Isles?$"
 
 Route13_TravelToAlola_Text_4:
 # 303 "data/maps/Route13_hns/scripts.pory"
-	.string "This ship departs for the Alola Isles,\n"
-	.string "but it's for residents only.$"
+	.string "Ahoy!\n"
+	.string "This ship is for residents only.\p"
+	.string "All of the residents of these Isles\n"
+	.string "carry some strange souvenirs.\p"
+	.string "It makes them so easy to identify,\n"
+	.string "I don't even need to check tickets!$"

@@ -203,9 +203,9 @@ script Route13_TravelToAlola{
     if (checkitem(ITEM_STRANGE_SOUVENIR)){
         if (!flag(FLAG_PREVIOUSLY_TRAVELED_TO_ALOLA)){
             msgbox("Ahoy there!
-            I see your strange souvenir.
             
-            You must be from the Alola Isles!
+            That's one strange souvenir.
+            You must be from the Isles!
             
             Would you like to take the next ship?
             It departs shortly!", MSGBOX_YESNO)
@@ -257,7 +257,7 @@ script Route13_TravelToAlola{
         }
         else{
             msgbox("Ah, its you again!
-            Do you want to go to the Alola region?", MSGBOX_YESNO)
+            Do you want to go to the Alola Isles?", MSGBOX_YESNO)
             if (var(VAR_RESULT) == YES){
                 msgbox("Ahoy! Let's get you on board!", MSGBOX_AUTOCLOSE)
                 getplayerxy(VAR_TEMP_0, VAR_TEMP_1)
@@ -300,8 +300,14 @@ script Route13_TravelToAlola{
         }
     }
     else{
-        msgbox("This ship departs for the Alola Isles,
-        but it's for residents only.", MSGBOX_AUTOCLOSE)
+        msgbox("Ahoy!
+        This ship is for residents only.
+        
+        All of the residents of these Isles
+        carry some strange souvenirs.
+        
+        It makes them so easy to identify,
+        I don't even need to check tickets!", MSGBOX_AUTOCLOSE)
         release
         end
     }
