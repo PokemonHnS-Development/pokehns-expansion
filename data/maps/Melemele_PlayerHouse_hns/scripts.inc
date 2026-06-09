@@ -51,7 +51,7 @@ Alola_Melemele_SamsonOakVilla_Dialogue::
 # 46 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	msgbox Alola_Melemele_SamsonOakVilla_Dialogue_Text_0
 # 53 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
-	dynmultichoice 20, 6, TRUE, 4, 0, DYN_MULTICHOICE_CB_NONE, Alola_Melemele_SamsonOakVilla_Dialogue_Text_1, Alola_Melemele_SamsonOakVilla_Dialogue_Text_2, Alola_Melemele_SamsonOakVilla_Dialogue_Text_3, Alola_Melemele_SamsonOakVilla_Dialogue_Text_4, Alola_Melemele_SamsonOakVilla_Dialogue_Text_5
+	dynmultichoice 20, 4, TRUE, 4, 0, DYN_MULTICHOICE_CB_NONE, Alola_Melemele_SamsonOakVilla_Dialogue_Text_1, Alola_Melemele_SamsonOakVilla_Dialogue_Text_2, Alola_Melemele_SamsonOakVilla_Dialogue_Text_3, Alola_Melemele_SamsonOakVilla_Dialogue_Text_4, Alola_Melemele_SamsonOakVilla_Dialogue_Text_5
 # 54 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq Alola_Melemele_SamsonOakVilla_Dialogue_1

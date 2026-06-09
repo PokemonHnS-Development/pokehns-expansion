@@ -50,7 +50,7 @@ script Alola_Melemele_SamsonOakVilla_Dialogue{
 
     Would you like to share your progress
     about a specific Isle with me?")
-    dynmultichoice(20, 6, TRUE, 4, 0, DYN_MULTICHOICE_CB_NONE,"Melemele Isle", "Akala Isle", "Ula'ula Isle", "Poni Isle", "Not right now.")
+    dynmultichoice(20, 4, TRUE, 4, 0, DYN_MULTICHOICE_CB_NONE,"Melemele Isle", "Akala Isle", "Ula'ula Isle", "Poni Isle", "Not right now.")
     if (var(VAR_RESULT)==0){
         release
         end
