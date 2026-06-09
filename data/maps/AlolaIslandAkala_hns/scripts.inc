@@ -74,6 +74,16 @@ Alola_Ulaula_MtLanikalaSign::
 	end
 
 
+Alola_Ulaula_UlaulaSign::
+# 50 "data/maps/AlolaIslandAkala_hns/scripts.pory"
+	lock
+# 51 "data/maps/AlolaIslandAkala_hns/scripts.pory"
+	msgbox Alola_Ulaula_UlaulaSign_Text_0
+# 52 "data/maps/AlolaIslandAkala_hns/scripts.pory"
+	release
+	end
+
+
 Alola_Ulaula_BattlePalossand_Text_0:
 # 7 "data/maps/AlolaIslandAkala_hns/scripts.pory"
 	.string "Gaaah!$"
@@ -81,3 +91,7 @@ Alola_Ulaula_BattlePalossand_Text_0:
 Alola_Ulaula_MtLanikalaSign_Text_0:
 # 44 "data/maps/AlolaIslandAkala_hns/scripts.pory"
 	.string "Mt. Lanakila$"
+
+Alola_Ulaula_UlaulaSign_Text_0:
+# 51 "data/maps/AlolaIslandAkala_hns/scripts.pory"
+	.string "Ula'ula Isle$"

@@ -1,2 +1,79 @@
-mapscripts Melemele_PlayerHouse_hns_MapScripts{}
+mapscripts Melemele_PlayerHouse_hns_MapScripts{
+    MAP_SCRIPT_ON_FRAME_TABLE[VAR_ALOLA_STATE, 1: Alola_Melemele_SamsonOakVillaIntro_Trigger]
+}
+
+script Alola_Melemele_SamsonOakVillaIntro_Trigger{
+    lock
+    playse(SE_PIN)
+    applymovement(SamsonOakVilla, moves(emote_exclamation_mark, face_down))
+    waitmovement(0)
+    msgbox("Alola, {PLAYER}!")
+    applymovement(SamsonOakVilla, moves(walk_down, walk_left, face_down))
+    waitmovement(0)
+    msgbox("I'm glad you're here!
+    Welcome to my Villa!
+    
+    I'm staying here while I research the
+    Alola Isles for their similarity to
+    the Alola Region.
+    
+    I'm particularly interested in the
+    phenomenon of \qoRegional Variants\qc.", MSGBOX_AUTOCLOSE)
+    applymovement(SamsonOakVilla, moves(walk_in_place_down*2))
+    waitmovement(0)
+    msgbox("You seem quite capable.
+
+    You'd be perfect to help with my survey
+    of the Alola Isles!
+    
+    Explore all the Isles have to offer,
+    and if you find any familiar Pok\emon
+    that resemble those from Kanto\.
+    come back and show me your Pok\eDex!
+
+    I'll be here patiently waiting to hear
+    about your progress!", MSGBOX_AUTOCLOSE)
+    applymovement(SamsonOakVilla, moves(walk_right, walk_up, face_right))
+    waitmovement(0)
+    setvar(VAR_ALOLA_STATE, 2)
+    release
+    end
+}
+
+script Alola_Melemele_SamsonOakVilla_Dialogue{
+    lock
+    faceplayer
+    msgbox("Hello again, {PLAYER}!
+
+    How's your research on the Alola Isles
+    coming along?
+
+    Would you like to share your progress
+    about a specific Isle with me?")
+    dynmultichoice(20, 6, TRUE, 4, 0, DYN_MULTICHOICE_CB_NONE,"Melemele Isle", "Akala Isle", "Ula'ula Isle", "Poni Isle", "Not right now.")
+    if (var(VAR_RESULT)==0){
+        release
+        end
+    }
+    elif (var(VAR_RESULT)==1){
+        release
+        end
+    }
+    elif (var(VAR_RESULT)==2){
+        release
+        end
+    }
+    elif (var(VAR_RESULT)==3){
+        release
+        end
+    }
+    else{
+        msgbox("No worries, {PLAYER}!
+        
+        Come back when you'd like to share your
+        findings about the Alola Isles!", MSGBOX_AUTOCLOSE)
+        release
+        end
+    }
+}
 

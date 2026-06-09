@@ -86,14 +86,14 @@ script Alola_Melemele_Mailbox{
 
 script Alola_Melemele_Melemele_Sign{
     lock
-    msgbox("Welcome to Melemele Island!")
+    msgbox("Welcome to Melemele Isle!")
     release
     end
 }
 
 script Alola_Melemele_Pokecenter_Sign{
     lock
-    msgbox("Welcome to the Melemele Island
+    msgbox("Welcome to the Melemele Isle
     Pok\emon Center!
     
     This is the only Pok\emon Center on the
@@ -105,7 +105,7 @@ script Alola_Melemele_Pokecenter_Sign{
 
 script Alola_Melemele_MelemeleMart_Sign{
     lock
-    msgbox("Melemele Island Mart")
+    msgbox("Melemele Isle Mart")
     release
     end
 }
@@ -159,6 +159,13 @@ script Alola_Melemele_SamsonOak_Trigger_Beginning{
     msgbox("My name is Samson Oak!
     I'm a Pok\emon Professor.
 
+    What's your name?", MSGBOX_AUTOCLOSE)
+    applymovement(LOCALID_PLAYER, moves(walk_in_place_up*2))
+    waitmovement(0)
+    delay(15)
+    msgbox("Ah, {PLAYER}.
+    A fine name!
+
     You may know my cousin, Professor Oak,
     from the Kanto region.
     
@@ -173,7 +180,7 @@ script Alola_Melemele_SamsonOak_Trigger_Beginning{
     msgbox("This is the main town on these Islands.
 
     It's eerily similar to Hau'oli City in
-    Alola\. {PAUSE 30} And when I think about it\.
+    Alola\. {PAUSE 30}And when I think about it\.
     
     This whole island reminds me of Melemele
     Island\.")
@@ -192,14 +199,14 @@ script Alola_Melemele_SamsonOak_Trigger_Beginning{
     
     Surprisingly, many of the Pok\emon I saw
     in Alola were here as well, so I've called
-    this place\. the Alola Isles!", MSGBOX_AUTOCLOSE)
+    this place\. {PAUSE 30}the Alola Isles!", MSGBOX_AUTOCLOSE)
     applymovement(SamsonOakMelemeleIntro, moves(jump_in_place_down*2))
     playse(SE_LEDGE)
     waitse
     playse(SE_LEDGE)
     waitse
     msgbox("Now I haven't completely explored the
-    Isles yet\. {PAUSE 30} I just landed here myself.
+    Isles yet\. {PAUSE 30}I just landed here myself.
 
     I'd like to know if all of the variants
     native to Alola are here.
@@ -214,9 +221,20 @@ script Alola_Melemele_SamsonOak_Trigger_Beginning{
     See you there!", MSGBOX_AUTOCLOSE)
     applymovement(SamsonOakMelemeleIntro, moves(walk_left*8))
     waitmovement(0)
-    playbgm(MUS_OCEANIC_MUSEUM, TRUE)
+    delay(30)
+    fadedefaultbgm
     setvar(VAR_ALOLA_STATE, 1)
     removeobject(SamsonOakMelemeleIntro)
+    release
+    end
+}
+
+script Alola_Melemele_NeedToTalkToSamsonOak{
+    lock
+    msgbox("Samson is waiting for you at his villa\.
+    {PAUSE 30}best not make him wait too long!", MSGBOX_AUTOCLOSE)
+    applymovement(LOCALID_PLAYER, moves(walk_up))
+    waitmovement(0)
     release
     end
 }

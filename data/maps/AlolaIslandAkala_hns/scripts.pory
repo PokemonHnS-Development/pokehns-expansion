@@ -45,3 +45,10 @@ script Alola_Ulaula_MtLanikalaSign{
     release
     end
 }
+
+script Alola_Ulaula_UlaulaSign{
+    lock
+    msgbox("Ula'ula Isle")
+    release
+    end
+}

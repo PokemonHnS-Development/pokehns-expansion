@@ -1672,22 +1672,22 @@
     },
     {
       "id": "MAPSEC_MELEMELE_ISLAND",
-      "name": "MELEMELE",
+      "name": "MELEMELE ISLE",
       "in_hns": true
     },
     {
       "id": "MAPSEC_AKALA_ISLAND",
-      "name": "AKALA",
+      "name": "AKALA ISLE",
       "in_hns": true
     },
     {
       "id": "MAPSEC_ULAULA_ISLAND",
-      "name": "ULA'ULA",
+      "name": "ULA'ULA ISLE",
       "in_hns": true
     },
     {
       "id": "MAPSEC_PONI_ISLAND",
-      "name": "PONI",
+      "name": "PONI ISLE",
       "in_hns": true
     },
     {
@@ -1712,7 +1712,7 @@
     },
     {
       "id": "MAPSEC_ULAULA_CAVE",
-      "name": "Mt. Lanikala",
+      "name": "MT. LANIKALA",
       "in_hns": true
     },
     {
@@ -1797,23 +1797,23 @@
     },
     {
       "id": "MAPSEC_MELEMELE_ISLAND",
-      "name": "MELEMELE"
+      "name": "MELEMELE ISLE"
     },
     {
       "id": "MAPSEC_AKALA_ISLAND",
-      "name": "AKALA"
+      "name": "AKALA ISLE"
     },
     {
       "id": "MAPSEC_ULAULA_ISLAND",
-      "name": "ULA'ULA"
+      "name": "ULA'ULA ISLE"
     },
     {
       "id": "MAPSEC_PONI_ISLAND",
-      "name": "PONI"
+      "name": "PONI ISLE"
     },
     {
       "id": "MAPSEC_ALOLA_OCEAN",
-      "name": "ALOLA"
+      "name": "MELEMELE SEA"
     },
     {
       "id": "MAPSEC_AKALA_CAVE",
@@ -1829,7 +1829,7 @@
     },
     {
       "id": "MAPSEC_ULAULA_CAVE",
-      "name": "ULA'ULA CAVE"
+      "name": "MT. LANIKALA"
     },
     {
       "id": "MAPSEC_ULAULA_CAVE_2",

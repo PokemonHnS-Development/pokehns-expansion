@@ -238,6 +238,24 @@
       "var": "VAR_ALOLA_STATE",
       "var_value": "0",
       "script": "Alola_Melemele_SamsonOak_Trigger_Beginning"
+    },
+    {
+      "type": "trigger",
+      "x": 45,
+      "y": 27,
+      "elevation": 0,
+      "var": "VAR_ALOLA_STATE",
+      "var_value": "1",
+      "script": "Alola_Melemele_NeedToTalkToSamsonOak"
+    },
+    {
+      "type": "trigger",
+      "x": 46,
+      "y": 27,
+      "elevation": 0,
+      "var": "VAR_ALOLA_STATE",
+      "var_value": "1",
+      "script": "Alola_Melemele_NeedToTalkToSamsonOak"
     }
   ],
   "bg_events": [
