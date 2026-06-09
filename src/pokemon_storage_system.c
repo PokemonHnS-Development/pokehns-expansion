@@ -2146,6 +2146,12 @@ static void SetMonIconTransparency(void)
     SetGpuReg(REG_OFFSET_DISPCNT, DISPCNT_OBJ_ON | DISPCNT_BG_ALL_ON | DISPCNT_OBJ_1D_MAP);
 }
 
+static void SetPokeStorageTask(TaskFunc newFunc)
+{
+    gTasks[sStorage->taskId].func = newFunc;
+    sStorage->state = 0;
+}
+
 // Manages swapping palettes mid draw to make all icon palettes appear
 static void HBlankCB_PokeStorage(void) {
   u8 vCount = REG_VCOUNT;
@@ -2191,12 +2197,6 @@ static void EnableBoxMonDynamicPalette(u8 position, u8 count) {
     if (sPaletteSwapBuffer[i*16] == 0x8000)
       sPaletteSwapBuffer[i*16] = 0x7FFF;
   }
-}
-
-static void SetPokeStorageTask(TaskFunc newFunc)
-{
-    gTasks[sStorage->taskId].func = newFunc;
-    sStorage->state = 0;
 }
 
 static void Task_InitPokeStorage(u8 taskId)
@@ -2339,7 +2339,6 @@ static void Task_ReshowPokeStorage(u8 taskId)
         BeginHardwarePaletteFade(0xFF, 0, 16, 0, TRUE);
         EnableInterrupts(INTR_FLAG_VBLANK | INTR_FLAG_HBLANK);
         SetHBlankCallback(HBlankCB_PokeStorage);
-        BeginNormalPaletteFade(PALETTES_ALL, -1, 0x10, 0, RGB_BLACK);
         sStorage->state++;
         break;
     case 1:
@@ -6796,9 +6795,6 @@ static void SetShiftedMonData(u8 boxId, u8 position)
 
     SetPlacedMonData(boxId, position);
     sStorage->movingMon = sStorage->tempMon;
-    SetDisplayMonData(&sStorage->movingMon, MODE_PARTY);
-    sMovingMonOrigBoxId = boxId;
-    sMovingMonOrigBoxPos = position;
 }
 
 static void SetShiftedMonSprites(u8 boxId, u8 position) {
@@ -8231,7 +8227,7 @@ static void CreateCursorSprites(void)
 
     struct SpritePalette spritePalettes[] =
     {
-        {sHandCursor_Pal, PALTAG_MISC_1},
+        {sWaveform_Pal, PALTAG_MISC_1},
         {}
     };
 
