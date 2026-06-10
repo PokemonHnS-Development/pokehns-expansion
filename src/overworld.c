@@ -1772,8 +1772,7 @@ void UpdateTimeOfDay(void)
         gTimeOfDay = TIME_DAY;
     }
 
-    if (IS_HNS)
-    {
+#if IS_HNS
         if (gTimeOfDay == TIME_NIGHT || gTimeOfDay == TIME_EVENING)
         {
             FlagClear(FLAG_NIGHT_POKEMON);
@@ -1784,7 +1783,7 @@ void UpdateTimeOfDay(void)
             FlagSet(FLAG_NIGHT_POKEMON);
             FlagClear(FLAG_DAY_POKEMON);
         }
-    }
+#endif
 }
 
 #undef MORNING_HOUR_MIDDLE

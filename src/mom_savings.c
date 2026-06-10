@@ -26,6 +26,8 @@
 #include "decoration_inventory.h"
 #include "randomizer.h"
 
+#if IS_HNS
+
 extern const u8 EventScript_MomGiftCall_Item[];
 extern const u8 EventScript_MomGiftCall_Berry[];
 extern const u8 EventScript_MomGiftCall_Decoration[];
@@ -537,3 +539,26 @@ void Special_MomOpenWithdrawInput(void)
 #undef tWindowMoney
 #undef tWindowInput
 #undef tWindowMessage
+
+#else
+
+void Special_MomEnableSaving(void) {}
+
+void Special_MomDisableSaving(void) {}
+
+void Special_MomGetBalance(void) {}
+
+void Special_MomDeposit(void) {}
+
+void Special_MomWithdraw(void) {}
+
+void Special_MomIsSavingEnabled(void) {}
+
+void Special_MomEnsureInitialized(void) {}
+
+void Special_MomOpenDepositInput(void) {}
+
+void Special_MomOpenWithdrawInput(void) {}
+
+
+#endif
