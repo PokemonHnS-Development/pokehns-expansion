@@ -196,7 +196,7 @@
       "local_id": "Phant_Noivern_Outside",
       "graphics_id": "OBJ_EVENT_GFX_SPECIES_SHINY(NOIVERN)",
       "x": 36,
-      "y": 43,
+      "y": 44,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_DOWN",
       "movement_range_x": 0,
