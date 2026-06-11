@@ -214,16 +214,38 @@ Debug_EventScript_Script_2::
 
 Debug_EventScript_Script_3::
 	callnative Script_OpenChallengeMenu
+	setflag FLAG_DEFEATED_ULAULA_TOTEM
+	setflag FLAG_DEFEATED_MELEMELE_TOTEM
+	setflag FLAG_DEFEATED_AKALA_TOTEM
+	setflag FLAG_DEFEATED_PONI_TOTEM
 	release
 	end
 
 Debug_EventScript_Script_4::
 	special InitRoamer
+	givemon SPECIES_RATTATA_ALOLA 5
+	givemon SPECIES_RATICATE_ALOLA 5
+	givemon SPECIES_MEOWTH_ALOLA 5
+	givemon SPECIES_PERSIAN_ALOLA 5
+	givemon SPECIES_GEODUDE_ALOLA 5
+	givemon SPECIES_GRAVELER_ALOLA 5
+	givemon SPECIES_GOLEM_ALOLA 5
+	givemon SPECIES_SANDSHREW_ALOLA 5
+	givemon SPECIES_SANDSLASH_ALOLA 5
+	givemon SPECIES_VULPIX_ALOLA 5
+	givemon SPECIES_NINETALES_ALOLA 5
+	givemon SPECIES_GRIMER_ALOLA 5
+	givemon SPECIES_MUK_ALOLA 5
+	givemon SPECIES_EXEGGUTOR_ALOLA 5
+	givemon SPECIES_MAROWAK_ALOLA 5
+	givemon SPECIES_DIGLETT_ALOLA 5
+	givemon SPECIES_DUGTRIO_ALOLA 5
 	release
 	end
 
 Debug_EventScript_Script_5::
 	special InitKantoRoamers
+	givemon SPECIES_RAICHU_ALOLA 5
 	release
 	end
 

@@ -1,7 +1,6 @@
 mapscripts AlolaIslandMelemele_hns_MapScripts{
         MAP_SCRIPT_ON_TRANSITION{
         setrespawn(HEAL_LOCATION_ALOLA_ISLAND_MELEMELE_HNS)
-        end
         }
         MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE[VAR_ALOLA_TRAVEL, 1 {
             applymovement(Alola_Melemele_Captain, moves(face_up))
@@ -16,7 +15,7 @@ script Alola_Melemele_GetOffBoat{
     applymovement(Alola_Melemele_Captain, moves(face_right))
     applymovement(LOCALID_PLAYER, moves(face_left))
     waitmovement(0)
-    msgbox("Welcome back to the Alola Isles!
+    msgbox("Welcome back to the Isles!
 
     Come back if you'd like to take a trip
     to mainland Kanto!", MSGBOX_AUTOCLOSE)
@@ -235,6 +234,196 @@ script Alola_Melemele_NeedToTalkToSamsonOak{
     {PAUSE 30}best not make him wait too long!", MSGBOX_AUTOCLOSE)
     applymovement(LOCALID_PLAYER, moves(walk_up))
     waitmovement(0)
+    release
+    end
+}
+
+script Alola_Melemele_TotemBattle_Trigger{
+    if(!flag(FLAG_TRIGGERED_MELEMELE_TOTEM))
+    {
+        if(flag(FLAG_CAUGHT_ALL_AKALA) && flag(FLAG_CAUGHT_ALL_ULAULA) && flag(FLAG_CAUGHT_ALL_PONI) && flag(FLAG_CAUGHT_ALL_MELEMELE))
+        {
+            lock
+            delay(30)
+            setvar(VAR_0x8004, 2)
+            setvar(VAR_0x8005, 6)
+            setvar(VAR_0x8006, 4)
+            setvar(VAR_0x8007, 4)
+            special(ShakeCamera)
+            waitstate
+            fadescreenswapbuffers(FADE_TO_BLACK)
+            delay(30)
+            clearflag(FLAG_HIDE_MELEMELE_TOTEM)
+            gettimeofday
+            if ((var(VAR_0x8000)== TIME_MORNING) || (var(VAR_0x8000)== TIME_DAY))
+            {
+                playmoncry(SPECIES_GUMSHOOS,0)
+                setvar(VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_SPECIES(GUMSHOOS))
+                addobject(Melemele_Totem)
+                waitmoncry
+            }
+            else
+            {
+                playmoncry(SPECIES_RATICATE_ALOLA,0)
+                setvar(VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_SPECIES(RATICATE_ALOLA))
+                addobject(Melemele_Totem)
+                waitmoncry
+            }
+            special(DrawWholeMapView)
+            delay(30)
+            fadescreenswapbuffers(FADE_FROM_BLACK)
+            delay(30)
+            gettimeofday
+            if ((var(VAR_0x8000)== TIME_MORNING) || (var(VAR_0x8000)== TIME_DAY))
+            {
+                playmoncry(SPECIES_GUMSHOOS,0)
+                applymovement(Melemele_Totem, moves(walk_in_place_down*2))
+                waitmovement(0)
+                waitmoncry
+            }
+            else
+            {
+                playmoncry(SPECIES_RATICATE_ALOLA,0)
+                applymovement(Melemele_Totem, moves(walk_in_place_down*2))
+                waitmovement(0)
+                waitmoncry
+            }
+            setflag(FLAG_TRIGGERED_MELEMELE_TOTEM)
+            release
+            end
+        }
+        else
+        {
+            end
+        }
+    }
+    else
+    {
+        end
+    }
+}
+
+script Alola_Melemele_TotemBattle{
+    lock
+    faceplayer
+    gettimeofday
+    if ((var(VAR_0x8000)== TIME_MORNING) || (var(VAR_0x8000)== TIME_DAY))
+    {
+        playmoncry(SPECIES_GUMSHOOS,0)
+        msgbox("Thhhh!", MSGBOX_AUTOCLOSE)
+        waitmoncry
+        //setwildbattle species:req, level:req, item=ITEM_NONE, species2=SPECIES_NONE, level2=0, item2=ITEM_NONE
+        setwildbattle(SPECIES_YUNGOOS, 60, ITEM_NONE, SPECIES_GUMSHOOS_TOTEM, 60, ITEM_PECHA_BERRY)
+        settotemboost(B_POSITION_OPPONENT_RIGHT, 0, 1, 0)
+        setflag(FLAG_NO_WILD_CATCHING)
+        setflag(FLAG_NO_WILD_RUNNING)
+        setflag(FLAG_SMART_WILD_AI)
+        dowildbattle
+        specialvar(VAR_RESULT, GetBattleOutcome)
+        if (var(VAR_RESULT) == B_OUTCOME_WON){
+            setflag(FLAG_HIDE_MELEMELE_TOTEM)
+            setflag(FLAG_DEFEATED_MELEMELE_TOTEM)
+            removeobject(Melemele_Totem)
+            msgbox("Totem Gumshoos was defeated!
+            It scampered off somewhere\.", MSGBOX_AUTOCLOSE)
+            clearflag(FLAG_NO_WILD_CATCHING)
+            clearflag(FLAG_NO_WILD_RUNNING)
+            clearflag(FLAG_SMART_WILD_AI)
+            release
+            end
+        }
+        if (var(VAR_RESULT) == B_OUTCOME_LOST){
+            clearflag(FLAG_NO_WILD_CATCHING)
+            clearflag(FLAG_NO_WILD_RUNNING)
+            clearflag(FLAG_SMART_WILD_AI)
+            release
+            end
+        }
+    }
+    else
+    {
+        playmoncry(SPECIES_RATICATE_ALOLA,0)
+        msgbox("Thhhh!", MSGBOX_AUTOCLOSE)
+        waitmoncry
+        setwildbattle(SPECIES_RATTATA_ALOLA, 60, ITEM_NONE, SPECIES_RATICATE_ALOLA_TOTEM, 60, ITEM_PECHA_BERRY)
+        settotemboost(B_POSITION_OPPONENT_RIGHT, 0, 1, 0)
+        setflag(FLAG_NO_WILD_CATCHING)
+        setflag(FLAG_NO_WILD_RUNNING)
+        setflag(FLAG_SMART_WILD_AI)
+        dowildbattle
+        specialvar(VAR_RESULT, GetBattleOutcome)
+        if (var(VAR_RESULT) == B_OUTCOME_WON)
+        {
+            setflag(FLAG_HIDE_MELEMELE_TOTEM)
+            setflag(FLAG_DEFEATED_MELEMELE_TOTEM)
+            removeobject(Melemele_Totem)
+            msgbox("Totem Raticate was defeated!
+            It scampered off somewhere\.", MSGBOX_AUTOCLOSE)
+            clearflag(FLAG_NO_WILD_CATCHING)
+            clearflag(FLAG_NO_WILD_RUNNING)
+            clearflag(FLAG_SMART_WILD_AI)
+            release
+            end
+            }
+
+    }
+}
+
+script Alola_Melemele_Totem_sign{
+    lock
+    msgbox("A strange totem stands here,
+    power is emanating from it\.", MSGBOX_AUTOCLOSE)
+    release
+    end
+}
+
+script Alola_MeleMele_TapuKoko_Flyover{
+    if(flag(FLAG_FLYOVER_TAPU_KOKO))
+    {
+        addobject(Melemele_Flyover_Tapu)
+        playse(SE_M_FLY)
+        applymovement(Melemele_Flyover_Tapu, moves(walk_faster_left*17))
+        waitmovement(0)
+        removeobject(Melemele_Flyover_Tapu)
+        clearflag(FLAG_FLYOVER_TAPU_KOKO)
+        clearflag(FLAG_HIDE_TAPU_KOKO)
+        release
+        end
+
+    }
+    release
+    end
+}
+
+script Alola_Melemele_BattleVsTapuKoko{
+    lock
+    faceplayer
+    playmoncry(SPECIES_TAPU_KOKO, 0)
+    applymovement(Melemele_Tapu, moves(walk_in_place_down*2))
+    msgbox("Graah!")
+    waitmovement(0)
+    waitmoncry
+    setwildbattle(SPECIES_TAPU_KOKO, 60)
+    dowildbattle
+    specialvar(VAR_RESULT, GetBattleOutcome)
+    if (var(VAR_RESULT) == B_OUTCOME_CAUGHT){
+        setflag(FLAG_HIDE_TAPU_KOKO)
+        setflag(FLAG_BATTLED_TAPU_KOKO)
+        removeobject(Melemele_Tapu)
+        release
+        end
+    }
+    elif (var(VAR_RESULT) == B_OUTCOME_WON){
+        setflag(FLAG_HIDE_TAPU_KOKO)
+        setflag(FLAG_BATTLED_TAPU_KOKO)
+        removeobject(Melemele_Tapu)
+        release
+        end
+    }
+    else{
+        release
+        end
+    }
     release
     end
 }

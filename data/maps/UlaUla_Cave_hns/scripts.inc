@@ -8,112 +8,116 @@ Alola_Ulaula_BattleSandslash::
 # 5 "data/maps/UlaUla_Cave_hns/scripts.pory"
 	faceplayer
 # 6 "data/maps/UlaUla_Cave_hns/scripts.pory"
-	playmoncry SPECIES_SANDSLASH_ALOLA, 0
+	setflag FLAG_BATTLED_SANDSLASH
 # 7 "data/maps/UlaUla_Cave_hns/scripts.pory"
-	msgbox Alola_Ulaula_BattleSandslash_Text_0, MSGBOX_AUTOCLOSE
+	playmoncry SPECIES_SANDSLASH_ALOLA, 0
 # 8 "data/maps/UlaUla_Cave_hns/scripts.pory"
-	waitmoncry
+	msgbox Alola_Ulaula_BattleSandslash_Text_0, MSGBOX_AUTOCLOSE
 # 9 "data/maps/UlaUla_Cave_hns/scripts.pory"
-	setwildbattle SPECIES_SANDSLASH_ALOLA, 45
+	waitmoncry
 # 10 "data/maps/UlaUla_Cave_hns/scripts.pory"
-	dowildbattle
+	setwildbattle SPECIES_SANDSLASH_ALOLA, 45
 # 11 "data/maps/UlaUla_Cave_hns/scripts.pory"
-	specialvar VAR_RESULT, GetBattleOutcome
+	dowildbattle
 # 12 "data/maps/UlaUla_Cave_hns/scripts.pory"
+	specialvar VAR_RESULT, GetBattleOutcome
+# 13 "data/maps/UlaUla_Cave_hns/scripts.pory"
 	compare VAR_RESULT, B_OUTCOME_CAUGHT
 	goto_if_eq Alola_Ulaula_BattleSandslash_2
-# 18 "data/maps/UlaUla_Cave_hns/scripts.pory"
+# 19 "data/maps/UlaUla_Cave_hns/scripts.pory"
 	compare VAR_RESULT, B_OUTCOME_WON
 	goto_if_eq Alola_Ulaula_BattleSandslash_3
-# 25 "data/maps/UlaUla_Cave_hns/scripts.pory"
+# 26 "data/maps/UlaUla_Cave_hns/scripts.pory"
 	release
 	end
 
-# 28 "data/maps/UlaUla_Cave_hns/scripts.pory"
+# 29 "data/maps/UlaUla_Cave_hns/scripts.pory"
 	release
 	end
 
 Alola_Ulaula_BattleSandslash_2:
-# 13 "data/maps/UlaUla_Cave_hns/scripts.pory"
-	setflag FLAG_CAUGHT_SANDSLASH_ALOLA
 # 14 "data/maps/UlaUla_Cave_hns/scripts.pory"
-	removeobject Alola_Ulaula_Sandslash
+	setflag FLAG_CAUGHT_SANDSLASH_ALOLA
 # 15 "data/maps/UlaUla_Cave_hns/scripts.pory"
+	removeobject Alola_Ulaula_Sandslash
+# 16 "data/maps/UlaUla_Cave_hns/scripts.pory"
 	release
 	end
 
 Alola_Ulaula_BattleSandslash_3:
-# 19 "data/maps/UlaUla_Cave_hns/scripts.pory"
-	setflag FLAG_CAUGHT_SANDSLASH_ALOLA
 # 20 "data/maps/UlaUla_Cave_hns/scripts.pory"
-	removeobject Alola_Ulaula_Sandslash
+	setflag FLAG_CAUGHT_SANDSLASH_ALOLA
 # 21 "data/maps/UlaUla_Cave_hns/scripts.pory"
+	removeobject Alola_Ulaula_Sandslash
+# 22 "data/maps/UlaUla_Cave_hns/scripts.pory"
 	release
 	end
 
 
 Alola_Ulaula_BattleNinetales::
-# 33 "data/maps/UlaUla_Cave_hns/scripts.pory"
-	lock
 # 34 "data/maps/UlaUla_Cave_hns/scripts.pory"
-	faceplayer
+	lock
 # 35 "data/maps/UlaUla_Cave_hns/scripts.pory"
-	playmoncry SPECIES_NINETALES_ALOLA, 0
+	faceplayer
 # 36 "data/maps/UlaUla_Cave_hns/scripts.pory"
-	msgbox Alola_Ulaula_BattleSandslash_Text_0, MSGBOX_AUTOCLOSE
+	setflag FLAG_BATTLED_NINETALES
 # 37 "data/maps/UlaUla_Cave_hns/scripts.pory"
-	waitmoncry
+	playmoncry SPECIES_NINETALES_ALOLA, 0
 # 38 "data/maps/UlaUla_Cave_hns/scripts.pory"
-	setwildbattle SPECIES_NINETALES_ALOLA, 45
+	msgbox Alola_Ulaula_BattleSandslash_Text_0, MSGBOX_AUTOCLOSE
 # 39 "data/maps/UlaUla_Cave_hns/scripts.pory"
-	dowildbattle
+	waitmoncry
 # 40 "data/maps/UlaUla_Cave_hns/scripts.pory"
-	specialvar VAR_RESULT, GetBattleOutcome
+	setwildbattle SPECIES_NINETALES_ALOLA, 45
 # 41 "data/maps/UlaUla_Cave_hns/scripts.pory"
+	dowildbattle
+# 42 "data/maps/UlaUla_Cave_hns/scripts.pory"
+	specialvar VAR_RESULT, GetBattleOutcome
+# 43 "data/maps/UlaUla_Cave_hns/scripts.pory"
 	compare VAR_RESULT, B_OUTCOME_CAUGHT
 	goto_if_eq Alola_Ulaula_BattleNinetales_2
-# 47 "data/maps/UlaUla_Cave_hns/scripts.pory"
+# 49 "data/maps/UlaUla_Cave_hns/scripts.pory"
 	compare VAR_RESULT, B_OUTCOME_WON
 	goto_if_eq Alola_Ulaula_BattleNinetales_3
-# 54 "data/maps/UlaUla_Cave_hns/scripts.pory"
+# 56 "data/maps/UlaUla_Cave_hns/scripts.pory"
 	release
 	end
 
-# 57 "data/maps/UlaUla_Cave_hns/scripts.pory"
+# 59 "data/maps/UlaUla_Cave_hns/scripts.pory"
 	release
 	end
 
 Alola_Ulaula_BattleNinetales_2:
-# 42 "data/maps/UlaUla_Cave_hns/scripts.pory"
-	setflag FLAG_CAUGHT_NINETALES_ALOLA
-# 43 "data/maps/UlaUla_Cave_hns/scripts.pory"
-	removeobject Alola_Ulaula_Ninetales
 # 44 "data/maps/UlaUla_Cave_hns/scripts.pory"
+	setflag FLAG_CAUGHT_NINETALES_ALOLA
+# 45 "data/maps/UlaUla_Cave_hns/scripts.pory"
+	removeobject Alola_Ulaula_Ninetales
+# 46 "data/maps/UlaUla_Cave_hns/scripts.pory"
 	release
 	end
 
 Alola_Ulaula_BattleNinetales_3:
-# 48 "data/maps/UlaUla_Cave_hns/scripts.pory"
-	setflag FLAG_CAUGHT_NINETALES_ALOLA
-# 49 "data/maps/UlaUla_Cave_hns/scripts.pory"
-	removeobject Alola_Ulaula_Ninetales
 # 50 "data/maps/UlaUla_Cave_hns/scripts.pory"
+	setflag FLAG_CAUGHT_NINETALES_ALOLA
+# 51 "data/maps/UlaUla_Cave_hns/scripts.pory"
+	removeobject Alola_Ulaula_Ninetales
+# 52 "data/maps/UlaUla_Cave_hns/scripts.pory"
 	release
 	end
 
 
 Alola_Ulaula_Cave_FindItem1::
-# 62 "data/maps/UlaUla_Cave_hns/scripts.pory"
+# 64 "data/maps/UlaUla_Cave_hns/scripts.pory"
 	finditem ITEM_POTION, 1
 	end
 
 
 Alola_Ulaula_Cave_FindItem2::
-# 67 "data/maps/UlaUla_Cave_hns/scripts.pory"
+# 69 "data/maps/UlaUla_Cave_hns/scripts.pory"
 	finditem ITEM_ANTIDOTE, 1
 	end
 
 
 Alola_Ulaula_BattleSandslash_Text_0:
-# 7 "data/maps/UlaUla_Cave_hns/scripts.pory"
+# 8 "data/maps/UlaUla_Cave_hns/scripts.pory"
 	.string "Gaaah!$"

@@ -3,6 +3,7 @@ mapscripts Poni_Cave_hns_MapScripts{}
 script Alola_Poni_BattleRaichu{
     lock
     faceplayer
+    setflag(FLAG_BATTLED_RAICHU)
     playmoncry(SPECIES_RAICHU_ALOLA, 0)
     msgbox("Gaaah!", MSGBOX_AUTOCLOSE)
     waitmoncry
@@ -32,6 +33,7 @@ script Alola_Poni_BattleRaichu{
 script Alola_Poni_BattleGolem{
     lock
     faceplayer
+    setflag(FLAG_BATTLED_GOLEM)
     playmoncry(SPECIES_GOLEM_ALOLA, 0)
     msgbox("Gaaah!", MSGBOX_AUTOCLOSE)
     waitmoncry

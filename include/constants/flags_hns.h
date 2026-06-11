@@ -994,45 +994,45 @@
 #define FLAG_EXTENDED_CONTENT_141                   (HNS_EXTENDED_CONTENT_START + 141)
 #define FLAG_EXTENDED_CONTENT_142                   (HNS_EXTENDED_CONTENT_START + 142)
 #define FLAG_EXTENDED_CONTENT_143                   (HNS_EXTENDED_CONTENT_START + 143)
-#define FLAG_EXTENDED_CONTENT_144                   (HNS_EXTENDED_CONTENT_START + 144)
-#define FLAG_EXTENDED_CONTENT_145                   (HNS_EXTENDED_CONTENT_START + 145)
-#define FLAG_EXTENDED_CONTENT_146                   (HNS_EXTENDED_CONTENT_START + 146)
-#define FLAG_EXTENDED_CONTENT_147                   (HNS_EXTENDED_CONTENT_START + 147)
-#define FLAG_EXTENDED_CONTENT_148                   (HNS_EXTENDED_CONTENT_START + 148)
-#define FLAG_EXTENDED_CONTENT_149                   (HNS_EXTENDED_CONTENT_START + 149)
-#define FLAG_EXTENDED_CONTENT_150                   (HNS_EXTENDED_CONTENT_START + 150)
-#define FLAG_EXTENDED_CONTENT_151                   (HNS_EXTENDED_CONTENT_START + 151)
-#define FLAG_EXTENDED_CONTENT_152                   (HNS_EXTENDED_CONTENT_START + 152)
-#define FLAG_EXTENDED_CONTENT_153                   (HNS_EXTENDED_CONTENT_START + 153)
-#define FLAG_EXTENDED_CONTENT_154                   (HNS_EXTENDED_CONTENT_START + 154)
-#define FLAG_EXTENDED_CONTENT_155                   (HNS_EXTENDED_CONTENT_START + 155)
-#define FLAG_EXTENDED_CONTENT_156                   (HNS_EXTENDED_CONTENT_START + 156)
-#define FLAG_EXTENDED_CONTENT_157                   (HNS_EXTENDED_CONTENT_START + 157)
-#define FLAG_EXTENDED_CONTENT_158                   (HNS_EXTENDED_CONTENT_START + 158)
-#define FLAG_EXTENDED_CONTENT_159                   (HNS_EXTENDED_CONTENT_START + 159)
-#define FLAG_EXTENDED_CONTENT_160                   (HNS_EXTENDED_CONTENT_START + 160)
-#define FLAG_EXTENDED_CONTENT_161                   (HNS_EXTENDED_CONTENT_START + 161)
-#define FLAG_EXTENDED_CONTENT_162                   (HNS_EXTENDED_CONTENT_START + 162)
-#define FLAG_EXTENDED_CONTENT_163                   (HNS_EXTENDED_CONTENT_START + 163)
-#define FLAG_EXTENDED_CONTENT_164                   (HNS_EXTENDED_CONTENT_START + 164)
-#define FLAG_EXTENDED_CONTENT_165                   (HNS_EXTENDED_CONTENT_START + 165)
-#define FLAG_EXTENDED_CONTENT_166                   (HNS_EXTENDED_CONTENT_START + 166)
-#define FLAG_EXTENDED_CONTENT_167                   (HNS_EXTENDED_CONTENT_START + 167)
-#define FLAG_EXTENDED_CONTENT_168                   (HNS_EXTENDED_CONTENT_START + 168)
-#define FLAG_EXTENDED_CONTENT_169                   (HNS_EXTENDED_CONTENT_START + 169)
-#define FLAG_EXTENDED_CONTENT_170                   (HNS_EXTENDED_CONTENT_START + 170)
-#define FLAG_EXTENDED_CONTENT_171                   (HNS_EXTENDED_CONTENT_START + 171)
-#define FLAG_EXTENDED_CONTENT_172                   (HNS_EXTENDED_CONTENT_START + 172)
-#define FLAG_EXTENDED_CONTENT_173                   (HNS_EXTENDED_CONTENT_START + 173)
-#define FLAG_EXTENDED_CONTENT_174                   (HNS_EXTENDED_CONTENT_START + 174)
-#define FLAG_EXTENDED_CONTENT_175                   (HNS_EXTENDED_CONTENT_START + 175)
-#define FLAG_EXTENDED_CONTENT_176                   (HNS_EXTENDED_CONTENT_START + 176)
-#define FLAG_EXTENDED_CONTENT_177                   (HNS_EXTENDED_CONTENT_START + 177)
-#define FLAG_EXTENDED_CONTENT_178                   (HNS_EXTENDED_CONTENT_START + 178)
-#define FLAG_EXTENDED_CONTENT_179                   (HNS_EXTENDED_CONTENT_START + 179)
-#define FLAG_EXTENDED_CONTENT_180                   (HNS_EXTENDED_CONTENT_START + 180)
-#define FLAG_EXTENDED_CONTENT_181                   (HNS_EXTENDED_CONTENT_START + 181)
-#define FLAG_EXTENDED_CONTENT_182                   (HNS_EXTENDED_CONTENT_START + 182)
+#define FLAG_HIDE_PHANT_INSIDE                      (HNS_EXTENDED_CONTENT_START + 144) // hide phantonomy inside on ulaula
+#define FLAG_HIDE_PHANT_OUTSIDE                     (HNS_EXTENDED_CONTENT_START + 145) // hide phantonomy outside on ulaula
+#define FLAG_BATTLED_TAPU_FINI                      (HNS_EXTENDED_CONTENT_START + 146) // battled tapu fini
+#define FLAG_BATTLED_TAPU_BULU                      (HNS_EXTENDED_CONTENT_START + 147) // battled tapu bulu
+#define FLAG_BATTLED_TAPU_LELE                      (HNS_EXTENDED_CONTENT_START + 148) // battled tapu lele
+#define FLAG_BATTLED_TAPU_KOKO                      (HNS_EXTENDED_CONTENT_START + 149) // battled tapu koko
+#define FLAG_HIDE_FLYOVER                           (HNS_EXTENDED_CONTENT_START + 150) // hide flyover object
+#define FLAG_HIDE_TAPU_BULU                         (HNS_EXTENDED_CONTENT_START + 151) // hide tapu bulu if caught or defeated
+#define FLAG_HIDE_TAPU_LELE                         (HNS_EXTENDED_CONTENT_START + 152) // hide tapu lele if caught or defeated
+#define FLAG_HIDE_TAPU_FINI                         (HNS_EXTENDED_CONTENT_START + 153) // hide tapu fini if caught or defeated
+#define FLAG_HIDE_TAPU_KOKO                         (HNS_EXTENDED_CONTENT_START + 154) // hide tapu koko if caught or defeated
+#define FLAG_FLYOVER_TAPU_BULU                      (HNS_EXTENDED_CONTENT_START + 155) // flyover tapu bulu in the wild
+#define FLAG_FLYOVER_TAPU_LELE                      (HNS_EXTENDED_CONTENT_START + 156) // flyover tapu lele in the wild
+#define FLAG_FLYOVER_TAPU_FINI                      (HNS_EXTENDED_CONTENT_START + 157) // flyover tapu fini in the wild
+#define FLAG_FLYOVER_TAPU_KOKO                      (HNS_EXTENDED_CONTENT_START + 158) // flyover tapu koko in the wild
+#define FLAG_SMART_WILD_AI                          (HNS_EXTENDED_CONTENT_START + 159) // enable smart wild AI
+#define FLAG_NO_WILD_RUNNING                        (HNS_EXTENDED_CONTENT_START + 160) // disable wild running
+#define FLAG_NO_WILD_CATCHING                       (HNS_EXTENDED_CONTENT_START + 161) // disable wild catching
+#define FLAG_TRIGGERED_PONI_TOTEM                   (HNS_EXTENDED_CONTENT_START + 162) // for use in triggering poni totem anim
+#define FLAG_TRIGGERED_ULAULA_TOTEM                 (HNS_EXTENDED_CONTENT_START + 163) // for use in triggering ulaula totem anim
+#define FLAG_TRIGGERED_AKALA_TOTEM                  (HNS_EXTENDED_CONTENT_START + 164) // for use in triggering akala totem anim
+#define FLAG_TRIGGERED_MELEMELE_TOTEM               (HNS_EXTENDED_CONTENT_START + 165) // for use in triggering melemele totem anim
+#define FLAG_DEFEATED_SAMSON_OAK                    (HNS_EXTENDED_CONTENT_START + 166) // if the player defeated Samson Oak
+#define FLAG_DEFEATED_ULAULA_TOTEM                  (HNS_EXTENDED_CONTENT_START + 167) // if the player defeated the ulaula totem
+#define FLAG_DEFEATED_PONI_TOTEM                    (HNS_EXTENDED_CONTENT_START + 168) // if the player defeated the poni totem
+#define FLAG_DEFEATED_AKALA_TOTEM                   (HNS_EXTENDED_CONTENT_START + 169) // if the player defeated the akala totem
+#define FLAG_DEFEATED_MELEMELE_TOTEM                (HNS_EXTENDED_CONTENT_START + 170) // if the player defeated the melemele totem
+#define FLAG_CAUGHT_ALL_ULAULA                      (HNS_EXTENDED_CONTENT_START + 171) // caught all of ulaulas regional variants
+#define FLAG_CAUGHT_ALL_PONI                        (HNS_EXTENDED_CONTENT_START + 172) // caught all of ponis regional variants
+#define FLAG_CAUGHT_ALL_AKALA                       (HNS_EXTENDED_CONTENT_START + 173) // caught all of akalas regional variants
+#define FLAG_CAUGHT_ALL_MELEMELE                    (HNS_EXTENDED_CONTENT_START + 174) // caught all of melemeles regional variants
+#define FLAG_BATTLED_GOLEM                          (HNS_EXTENDED_CONTENT_START + 175) // used for progression if battled golem at all
+#define FLAG_BATTLED_SANDSLASH                      (HNS_EXTENDED_CONTENT_START + 176) // used for progression if battled sandslash at all
+#define FLAG_BATTLED_NINETALES                      (HNS_EXTENDED_CONTENT_START + 177) // used for progression if battled ninetales at all
+#define FLAG_BATTLED_MUK                            (HNS_EXTENDED_CONTENT_START + 178) // used for progression if battled muk at all
+#define FLAG_BATTLED_DUGTRIO                        (HNS_EXTENDED_CONTENT_START + 179) // used for progression if battled dugtrio at all
+#define FLAG_BATTLED_MAROWAK                        (HNS_EXTENDED_CONTENT_START + 180) // used for progression if battled marowak at all
+#define FLAG_BATTLED_RAICHU                         (HNS_EXTENDED_CONTENT_START + 181) // used for progression if battled raichu at all
+#define FLAG_BATTLED_EXEGGUTOR                      (HNS_EXTENDED_CONTENT_START + 182) // used for progression if battled exeggutor at all
 #define FLAG_HIDE_SAMSONOAK_INTRO                   (HNS_EXTENDED_CONTENT_START + 183) // hides the samson oak intro object
 #define FLAG_CAUGHT_PALOSSAND                       (HNS_EXTENDED_CONTENT_START + 184) // hide palossand if caught or defeated
 #define FLAG_CAUGHT_SANDYGAST2                      (HNS_EXTENDED_CONTENT_START + 185) // hide sandygast if caught or defeated

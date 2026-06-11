@@ -52,3 +52,92 @@ script Alola_Ulaula_UlaulaSign{
     release
     end
 }
+
+script Alola_Ulaula_TapuBulu_Flyover{
+    if(flag(FLAG_FLYOVER_TAPU_BULU))
+    {
+        addobject(Ulaula_Flyover_Tapu)
+        playse(SE_M_FLY)
+        applymovement(Ulaula_Flyover_Tapu, moves(walk_faster_up*14))
+        waitmovement(0)
+        removeobject(Ulaula_Flyover_Tapu)
+        clearflag(FLAG_FLYOVER_TAPU_BULU)
+        clearflag(FLAG_HIDE_TAPU_BULU)
+        release
+        end
+
+    }
+    release
+    end
+}
+
+script Alola_Ulaula_Phant_outside{
+    lock
+    faceplayer
+    hidefollower
+    msgbox("Hello there, {PLAYER}!
+    I'm Phantonomy.
+    
+    I'm the developer who built this
+    section of the postgame!
+    
+    I hope you enjoyed this taste of Alola.
+
+    Look forward to my full demake of
+    the region in my own upcoming project{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.
+
+    Ultra Eclipse!", MSGBOX_AUTOCLOSE)
+    getplayerxy(VAR_TEMP_0, VAR_TEMP_1)
+    if ((var(VAR_TEMP_0) == 35) && (var(VAR_TEMP_1) == 46))
+    {
+        applymovement(Phant_Outside, moves(jump_in_place_left*2))
+    }
+    if ((var(VAR_TEMP_0) == 36) && (var(VAR_TEMP_1) == 47))
+    {
+        applymovement(Phant_Outside, moves(jump_in_place_down*2))
+    }
+    if ((var(VAR_TEMP_0) == 37) && (var(VAR_TEMP_1) == 46))
+    {
+        applymovement(Phant_Outside, moves(jump_in_place_right*2))
+    }
+    if ((var(VAR_TEMP_0) == 36) && (var(VAR_TEMP_1) == 45))
+    {
+        applymovement(Phant_Outside, moves(jump_in_place_up*2))
+    }
+    playse(SE_LEDGE)
+    waitse
+    playse(SE_LEDGE)
+    waitse
+    msgbox("Please come visit me at my house at
+    the top of this Isle for a battle\.
+    I'll make it worth your while!", MSGBOX_AUTOCLOSE)
+    getplayerxy(VAR_TEMP_0, VAR_TEMP_1)
+    if ((var(VAR_TEMP_0) == 35) && (var(VAR_TEMP_1) == 46))
+    {
+        applymovement(Phant_Outside, moves(walk_down, walk_left*8, walk_up*7, walk_left*2))
+        waitmovement(0)
+        playmoncry(SPECIES_NOIVERN, 0)
+        applymovement(Phant_Noivern_Outside, moves(walk_fast_left*8, walk_fast_up*7))
+        waitmovement(0)
+        removeobject(Phant_Noivern_Outside)
+        removeobject(Phant_Outside)
+        setflag(FLAG_HIDE_PHANT_OUTSIDE)
+        clearflag(FLAG_HIDE_PHANT_INSIDE)
+        release
+        end
+    }
+    else
+    {
+        applymovement(Phant_Outside, moves(walk_left*8, walk_up*2))
+        waitmovement(0)
+        playmoncry(SPECIES_NOIVERN, 0)
+        applymovement(Phant_Noivern_Outside, moves(walk_fast_left*8, walk_fast_up*7))
+        waitmovement(0)
+        removeobject(Phant_Noivern_Outside)
+        removeobject(Phant_Outside)
+        setflag(FLAG_HIDE_PHANT_OUTSIDE)
+        clearflag(FLAG_HIDE_PHANT_INSIDE)
+        release
+        end
+    }
+}

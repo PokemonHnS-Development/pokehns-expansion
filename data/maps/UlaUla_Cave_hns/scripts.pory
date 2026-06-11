@@ -3,6 +3,7 @@ mapscripts UlaUla_Cave_hns_MapScripts {}
 script Alola_Ulaula_BattleSandslash{
     lock
     faceplayer
+    setflag(FLAG_BATTLED_SANDSLASH)
     playmoncry(SPECIES_SANDSLASH_ALOLA, 0)
     msgbox("Gaaah!", MSGBOX_AUTOCLOSE)
     waitmoncry
@@ -32,6 +33,7 @@ script Alola_Ulaula_BattleSandslash{
 script Alola_Ulaula_BattleNinetales{
     lock
     faceplayer
+    setflag(FLAG_BATTLED_NINETALES)
     playmoncry(SPECIES_NINETALES_ALOLA, 0)
     msgbox("Gaaah!", MSGBOX_AUTOCLOSE)
     waitmoncry

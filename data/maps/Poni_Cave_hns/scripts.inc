@@ -8,112 +8,116 @@ Alola_Poni_BattleRaichu::
 # 5 "data/maps/Poni_Cave_hns/scripts.pory"
 	faceplayer
 # 6 "data/maps/Poni_Cave_hns/scripts.pory"
-	playmoncry SPECIES_RAICHU_ALOLA, 0
+	setflag FLAG_BATTLED_RAICHU
 # 7 "data/maps/Poni_Cave_hns/scripts.pory"
-	msgbox Alola_Poni_BattleRaichu_Text_0, MSGBOX_AUTOCLOSE
+	playmoncry SPECIES_RAICHU_ALOLA, 0
 # 8 "data/maps/Poni_Cave_hns/scripts.pory"
-	waitmoncry
+	msgbox Alola_Poni_BattleRaichu_Text_0, MSGBOX_AUTOCLOSE
 # 9 "data/maps/Poni_Cave_hns/scripts.pory"
-	setwildbattle SPECIES_RAICHU_ALOLA, 45
+	waitmoncry
 # 10 "data/maps/Poni_Cave_hns/scripts.pory"
-	dowildbattle
+	setwildbattle SPECIES_RAICHU_ALOLA, 45
 # 11 "data/maps/Poni_Cave_hns/scripts.pory"
-	specialvar VAR_RESULT, GetBattleOutcome
+	dowildbattle
 # 12 "data/maps/Poni_Cave_hns/scripts.pory"
+	specialvar VAR_RESULT, GetBattleOutcome
+# 13 "data/maps/Poni_Cave_hns/scripts.pory"
 	compare VAR_RESULT, B_OUTCOME_CAUGHT
 	goto_if_eq Alola_Poni_BattleRaichu_2
-# 18 "data/maps/Poni_Cave_hns/scripts.pory"
+# 19 "data/maps/Poni_Cave_hns/scripts.pory"
 	compare VAR_RESULT, B_OUTCOME_WON
 	goto_if_eq Alola_Poni_BattleRaichu_3
-# 25 "data/maps/Poni_Cave_hns/scripts.pory"
+# 26 "data/maps/Poni_Cave_hns/scripts.pory"
 	release
 	end
 
-# 28 "data/maps/Poni_Cave_hns/scripts.pory"
+# 29 "data/maps/Poni_Cave_hns/scripts.pory"
 	release
 	end
 
 Alola_Poni_BattleRaichu_2:
-# 13 "data/maps/Poni_Cave_hns/scripts.pory"
-	setflag FLAG_CAUGHT_RAICHU_ALOLA
 # 14 "data/maps/Poni_Cave_hns/scripts.pory"
-	removeobject Alola_Poni_Raichu
+	setflag FLAG_CAUGHT_RAICHU_ALOLA
 # 15 "data/maps/Poni_Cave_hns/scripts.pory"
+	removeobject Alola_Poni_Raichu
+# 16 "data/maps/Poni_Cave_hns/scripts.pory"
 	release
 	end
 
 Alola_Poni_BattleRaichu_3:
-# 19 "data/maps/Poni_Cave_hns/scripts.pory"
-	setflag FLAG_CAUGHT_RAICHU_ALOLA
 # 20 "data/maps/Poni_Cave_hns/scripts.pory"
-	removeobject Alola_Poni_Raichu
+	setflag FLAG_CAUGHT_RAICHU_ALOLA
 # 21 "data/maps/Poni_Cave_hns/scripts.pory"
+	removeobject Alola_Poni_Raichu
+# 22 "data/maps/Poni_Cave_hns/scripts.pory"
 	release
 	end
 
 
 Alola_Poni_BattleGolem::
-# 33 "data/maps/Poni_Cave_hns/scripts.pory"
-	lock
 # 34 "data/maps/Poni_Cave_hns/scripts.pory"
-	faceplayer
+	lock
 # 35 "data/maps/Poni_Cave_hns/scripts.pory"
-	playmoncry SPECIES_GOLEM_ALOLA, 0
+	faceplayer
 # 36 "data/maps/Poni_Cave_hns/scripts.pory"
-	msgbox Alola_Poni_BattleRaichu_Text_0, MSGBOX_AUTOCLOSE
+	setflag FLAG_BATTLED_GOLEM
 # 37 "data/maps/Poni_Cave_hns/scripts.pory"
-	waitmoncry
+	playmoncry SPECIES_GOLEM_ALOLA, 0
 # 38 "data/maps/Poni_Cave_hns/scripts.pory"
-	setwildbattle SPECIES_GOLEM_ALOLA, 45
+	msgbox Alola_Poni_BattleRaichu_Text_0, MSGBOX_AUTOCLOSE
 # 39 "data/maps/Poni_Cave_hns/scripts.pory"
-	dowildbattle
+	waitmoncry
 # 40 "data/maps/Poni_Cave_hns/scripts.pory"
-	specialvar VAR_RESULT, GetBattleOutcome
+	setwildbattle SPECIES_GOLEM_ALOLA, 45
 # 41 "data/maps/Poni_Cave_hns/scripts.pory"
+	dowildbattle
+# 42 "data/maps/Poni_Cave_hns/scripts.pory"
+	specialvar VAR_RESULT, GetBattleOutcome
+# 43 "data/maps/Poni_Cave_hns/scripts.pory"
 	compare VAR_RESULT, B_OUTCOME_CAUGHT
 	goto_if_eq Alola_Poni_BattleGolem_2
-# 47 "data/maps/Poni_Cave_hns/scripts.pory"
+# 49 "data/maps/Poni_Cave_hns/scripts.pory"
 	compare VAR_RESULT, B_OUTCOME_WON
 	goto_if_eq Alola_Poni_BattleGolem_3
-# 54 "data/maps/Poni_Cave_hns/scripts.pory"
+# 56 "data/maps/Poni_Cave_hns/scripts.pory"
 	release
 	end
 
-# 57 "data/maps/Poni_Cave_hns/scripts.pory"
+# 59 "data/maps/Poni_Cave_hns/scripts.pory"
 	release
 	end
 
 Alola_Poni_BattleGolem_2:
-# 42 "data/maps/Poni_Cave_hns/scripts.pory"
-	setflag FLAG_CAUGHT_GOLEM_ALOLA
-# 43 "data/maps/Poni_Cave_hns/scripts.pory"
-	removeobject Alola_Poni_Golem
 # 44 "data/maps/Poni_Cave_hns/scripts.pory"
+	setflag FLAG_CAUGHT_GOLEM_ALOLA
+# 45 "data/maps/Poni_Cave_hns/scripts.pory"
+	removeobject Alola_Poni_Golem
+# 46 "data/maps/Poni_Cave_hns/scripts.pory"
 	release
 	end
 
 Alola_Poni_BattleGolem_3:
-# 48 "data/maps/Poni_Cave_hns/scripts.pory"
-	setflag FLAG_CAUGHT_GOLEM_ALOLA
-# 49 "data/maps/Poni_Cave_hns/scripts.pory"
-	removeobject Alola_Poni_Golem
 # 50 "data/maps/Poni_Cave_hns/scripts.pory"
+	setflag FLAG_CAUGHT_GOLEM_ALOLA
+# 51 "data/maps/Poni_Cave_hns/scripts.pory"
+	removeobject Alola_Poni_Golem
+# 52 "data/maps/Poni_Cave_hns/scripts.pory"
 	release
 	end
 
 
 Alola_Poni_Cave_FindItem1::
-# 62 "data/maps/Poni_Cave_hns/scripts.pory"
+# 64 "data/maps/Poni_Cave_hns/scripts.pory"
 	finditem ITEM_POTION, 1
 	end
 
 
 Alola_Poni_Cave_FindItem2::
-# 67 "data/maps/Poni_Cave_hns/scripts.pory"
+# 69 "data/maps/Poni_Cave_hns/scripts.pory"
 	finditem ITEM_ANTIDOTE, 1
 	end
 
 
 Alola_Poni_BattleRaichu_Text_0:
-# 7 "data/maps/Poni_Cave_hns/scripts.pory"
+# 8 "data/maps/Poni_Cave_hns/scripts.pory"
 	.string "Gaaah!$"

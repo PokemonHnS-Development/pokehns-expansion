@@ -1,0 +1,71 @@
+mapscripts UlaUla_House_hns_MapScripts{}
+
+script Alola_Ulaula_House_Phant{
+    lock
+    faceplayer
+    if (var(VAR_ALOLA_STATE) == 4)
+    {
+        msgbox("Welcome, {PLAYER}.
+        
+        Thanks again for playing.
+
+        Are you ready to face me in battle?", MSGBOX_YESNO)
+        if (var(VAR_RESULT) == YES)
+        {
+            msgbox("I hope you're prepared\.
+            good luck.", MSGBOX_AUTOCLOSE)
+            trainerbattle_no_intro(TRAINER_PHANTONOMY_HNS, "Congratulations, {PLAYER}!")
+            special(HealPlayerParty)
+            setvar(VAR_ALOLA_STATE, 5)
+            msgbox("That was an incredible battle.
+            
+            I think you've earned this.", MSGBOX_AUTOCLOSE)
+            giveegg(SPECIES_NOIBAT)
+            playfanfare(MUS_HG_OBTAIN_EGG)
+            msgbox("You received an Egg from Phantonomy!", MSGBOX_AUTOCLOSE)
+            waitfanfare
+            msgbox("That Egg contains my favorite Pokémon.
+            Please, take good care of it\.", MSGBOX_AUTOCLOSE)
+            release
+            end
+        }
+        else
+        {
+            msgbox("No worries, {PLAYER}.
+            Come back when you're ready\.", MSGBOX_AUTOCLOSE)
+            release
+            end
+        }
+    }
+    else
+    {
+        msgbox("I hope you enjoyed this taste of Alola.
+
+        Look forward to my full demake of
+        the region in my own upcoming project{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.
+
+        Ultra Eclipse.", MSGBOX_AUTOCLOSE)
+        release
+        end
+    }
+}
+
+script Alola_Ulaula_House_Noivern{
+    lock
+    faceplayer
+    playmoncry(SPECIES_NOIVERN, 0)
+    msgbox("Scree!", MSGBOX_AUTOCLOSE)
+    waitmoncry
+    release
+    end
+}
+
+script Alola_Ulaula_House_Typholosion{
+    lock
+    faceplayer
+    playmoncry(SPECIES_TYPHLOSION_HISUI, 0)
+    msgbox("Graa!", MSGBOX_AUTOCLOSE)
+    waitmoncry
+    release
+    end
+}
