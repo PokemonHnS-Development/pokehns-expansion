@@ -561,6 +561,12 @@
       "map": "MAP_BATTLE_FRONTIER_OUTSIDE_EAST_HNS",
       "x": 12,
       "y": 46
+    },
+    {
+      "id": "HEAL_LOCATION_NEW_SINJOH_HNS",
+      "map": "MAP_NEW_SINJOH_HNS",
+      "x": 32,
+      "y": 24
     }
   ]
 }

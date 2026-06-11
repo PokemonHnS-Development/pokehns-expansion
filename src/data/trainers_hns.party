@@ -13431,3 +13431,73 @@ Level: 61
 
 Mightyena
 Level: 63
+
+=== TRAINER_MILKMAN_HNS ===
+Name: MILKMAN
+Class: Officer Hns
+Pic: Officer Hns
+Gender: Male
+Music: Hg Boy 2
+Items: MooMoo Milk / MooMoo Milk / MooMoo Milk
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Miltank @ Leftovers
+Level: 70
+Ability: Thick Fat
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 156 HP / 0 Atk / 100 Def / 0 SpA / 252 SpD / 0 Spe
+- Milk Drink
+- Curse
+- Body Press 
+- Protect
+
+Miltank @ Charcoal
+Level: 70
+Ability: Sap Sipper
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 0 Spe
+- Milk Drink
+- Fire Punch
+- Iron Head
+- Stealth Rock
+
+Miltank @ Leftovers
+Level: 70
+Ability: Thick Fat
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 248 HP / 8 Atk / 248 Def / 0 SpA / 4 SpD / 0 Spe
+- Milk Drink
+- Attract
+- Thunder Wave
+- Double-Edge
+
+Miltank @ Hard Stone
+Level: 70
+Ability: Sap Sipper
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+- Milk Drink
+- Defense Curl
+- Body Press 
+- RollOut
+
+Miltank @ Lagging Tail
+Level: 70
+Ability: Scrappy
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 0 Spe
+EVs: 252 HP / 4 Atk / 252 Def / 0 SpA / 0 SpD / 0 Spe
+- Milk Drink
+- Toxic
+- Counter
+- Facade
+
+Miltank @ Silk Scarf
+Level: 80
+Ability: Scrappy
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+- Milk Drink
+- Double-Edge
+- Play Rough 
+- Power-Up Punch

@@ -1209,8 +1209,22 @@ static const struct InGameTrade sIngameTrades[] =
         .sheen = 10,
         .requestedSpecies = SPECIES_POLIWHIRL
     },
-    [INGAME_TRADE_NIDORAN] = 
+    [INGAME_TRADE_GALLADE] = 
     {
+        .nickname = _("Sebastion"),
+        .species = SPECIES_GALLADE,
+        .ivs = {31, 31, 31, 31, 31, 31},
+        .abilityNum = 1,
+        .otId = 36988,
+        .conditions = {5, 30, 5, 5, 5},
+        .personality = 0x498a2e1d,
+        .heldItem = ITEM_LIFE_ORB,
+        .mailNum = MAIL_NONE,
+        .otName = _("JESSICA"),
+        .otGender = FEMALE,
+        .sheen = 10,
+        .requestedSpecies = SPECIES_RELICANTH
+    },
 #if defined(FIRERED)
         .nickname = _("MS. NIDO"),
         .species = SPECIES_NIDORAN_F,
@@ -1376,7 +1390,7 @@ static const u16 sIngameTradeMail[][MAIL_WORDS_COUNT + 1] =
         EC_WORD_WILL,
         EC_WORD_MAKE,
         EC_POKEMON(BAGON),
-        EC_WORD_TOUGH,
+        EC_WORD_TOUG ,
         EC_WORD_PLEASE,
         EC_WORD_TRAIN,
         EC_POKEMON(HORSEA),

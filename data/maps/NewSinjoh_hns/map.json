@@ -31,12 +31,12 @@
       "x": 32,
       "y": 9,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "NewSinjoh_Script_TravelMart",
       "flag": "0"
     },
     {
@@ -45,7 +45,7 @@
       "x": 37,
       "y": 12,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -55,16 +55,16 @@
     },
     {
       "local_id": "Milk Man",
-      "graphics_id": "OBJ_EVENT_GFX_MYSTERY_EVENT_DELIVERYMAN_HNS",
+      "graphics_id": "OBJ_EVENT_GFX_OFFICER_HNS",
       "x": 32,
       "y": 12,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "NewSinjoh_MilkMan_EventScript_Seller",
       "flag": "0"
     },
     {
@@ -73,7 +73,7 @@
       "x": 37,
       "y": 9,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -134,6 +134,7 @@
       "flag": "0"
     },
     {
+      "local_id": "Jessica",
       "graphics_id": "OBJ_EVENT_GFX_BATTLE_GIRL_HNS",
       "x": 17,
       "y": 16,
@@ -143,7 +144,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "NewSinjoh_EventScript_Jessica",
       "flag": "0"
     },
     {
@@ -197,6 +198,19 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
       "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_LITTLE_BOY_HNS",
+      "x": 33,
+      "y": 9,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Script_NewSinjoh_Traveler_Brother",
+      "flag": "0"
     }
   ],
   "warp_events": [
@@ -236,10 +250,10 @@
       "dest_warp_id": "0"
     },
     {
-      "x": 7,
-      "y": 12,
+      "x": 3,
+      "y": 44,
       "elevation": 0,
-      "dest_map": "MAP_SINJOH_RUINS_REGISTEEL_ROOM_HNS",
+      "dest_map": "MAP_NEW_SINJOH_HOUSE4_HNS",
       "dest_warp_id": "0"
     },
     {
@@ -251,7 +265,16 @@
     }
   ],
   "coord_events": [],
-  "bg_events": [],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 1,
+      "y": 44,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "NULL"
+    }
+  ],
   "game_version": "hns",
   "region": "REGION_JOHTO"
 }
