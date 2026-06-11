@@ -4673,18 +4673,19 @@ static u8 GetMonIconPriorityByCursorPos(void)
 }
 
 // Only called when returning from naming, etc while holding a pokemon
-// Its palette is therefore always the same as the displayed pokemon's
 static void CreateMovingMonIcon(void)
 {
     u32 personality = GetMonData(&sStorage->movingMon, MON_DATA_PERSONALITY);
     u16 species = GetMonData(&sStorage->movingMon, MON_DATA_SPECIES);
     u8 priority = GetMonIconPriorityByCursorPos();
     bool32 isEgg = GetMonData(&sStorage->movingMon, MON_DATA_IS_EGG);
+    bool8 isShiny = GetMonData(&sStorage->movingMon, MON_DATA_IS_SHINY);
 
-    // TODO: fix this (how?)
+    LoadSpritePaletteWithTag(GetIconPalette(species, isShiny, IsPersonalityFemale(species, personality)), PALTAG_MOVING_MON);
+    sStorage->movingMonPalOffset = OBJ_PLTT_ID(IndexOfSpritePaletteTag(PALTAG_MOVING_MON));
+
     sStorage->movingMonSprite = CreateMonIconSprite(species, personality, 0, 0, priority, 7, isEgg);
-    // This shouldn't be hardcoded, but the palette tag isn't loaded when this is called :/
-    sStorage->movingMonSprite->oam.paletteNum = 13; // IndexOfSpritePaletteTag(PALTAG_DISPLAY_MON);
+    sStorage->movingMonSprite->oam.paletteNum = IndexOfSpritePaletteTag(PALTAG_MOVING_MON);
     sStorage->movingMonSprite->callback = SpriteCB_HeldMon;
 }
 
