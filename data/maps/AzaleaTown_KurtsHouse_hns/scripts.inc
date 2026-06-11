@@ -290,9 +290,9 @@ KurtsHouse_Text_KurtThatsALetdown:
 
 KurtsHouse_Text_KurtFinishedPlural:
 	.string "KURT: {PLAYER}!\n"
-	.string "Your {STR_VAR_1}S are done. Here!\p"
+	.string "Your {STR_VAR_1}s are done. Here!\p"
 	.string "{PLAYER} obtained\n"
-	.string "{STR_VAR_2} {STR_VAR_1}S!$"
+	.string "{STR_VAR_2} {STR_VAR_1}s!$"
 
 KurtsHouse_Text_KurtFinishedSingular:
 	.string "KURT: {PLAYER}!\n"
