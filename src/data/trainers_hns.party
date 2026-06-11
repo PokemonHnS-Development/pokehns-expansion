@@ -13431,3 +13431,61 @@ Level: 61
 
 Mightyena
 Level: 63
+
+
+=== TRAINER_SAMSON_OAK_HNS ===
+Name: SAMSON OAK
+Class: Professor Hns
+Pic: Samson Oak Hns
+Gender: Male
+Music: Elite Four
+Double Battle: No
+AI: Check Bad Move
+
+Raichu Alola
+Level: 60
+
+Exeggutor Alola
+Level: 65
+
+Toucannon
+Level: 60
+
+Bewear
+Level: 61
+
+Mudsdale
+Level: 63
+
+Lycanroc Midday
+Level: 63
+
+=== TRAINER_PHANTONOMY_HNS ===
+Name: PHANTONOMY
+Class: Scientist Frlg
+Pic: Scientist Frlg
+Gender: Male
+Music: Hg Champion
+Double Battle: No
+AI: Smart Trainer
+
+Typhlosion Hisui
+Level: 70
+
+Golisopod
+Level: 70
+
+Arbok
+Level: 70
+
+Vikavolt
+Level: 70
+
+Lycanroc Dusk
+Level: 70
+
+Noivern
+Level: 70
+EVs: 0 HP / 0 Atk / 0 Def / 255 SpA / 6 SpD / 255 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Shiny: Yes
