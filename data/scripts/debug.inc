@@ -208,7 +208,9 @@ Debug_EventScript_Script_1::
 	end
 
 Debug_EventScript_Script_2::
-	goto Debug_EventScript_Silver_Multi
+	giveitem ITEM_PECHA_BERRY, 20
+	giveitem ITEM_ORAN_BERRY, 20
+	goto AzaleaTown_KurtsHouse_EventScript_Kurt
 	release
 	end
 
