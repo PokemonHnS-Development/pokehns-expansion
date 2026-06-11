@@ -22,7 +22,7 @@ script Alola_Ulaula_House_Phant{
             I think you've earned this.", MSGBOX_AUTOCLOSE)
             giveegg(SPECIES_NOIBAT)
             playfanfare(MUS_HG_OBTAIN_EGG)
-            msgbox("You received an Egg from Phantonomy!", MSGBOX_AUTOCLOSE)
+            msgbox("You received an Egg from Phantonomy!")
             waitfanfare
             msgbox("That Egg contains my favorite Pokémon.
             Please, take good care of it\.", MSGBOX_AUTOCLOSE)
@@ -44,7 +44,7 @@ script Alola_Ulaula_House_Phant{
         Look forward to my full demake of
         the region in my own upcoming project{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.
 
-        Ultra Eclipse.", MSGBOX_AUTOCLOSE)
+        Ultra Eclipse!", MSGBOX_AUTOCLOSE)
         release
         end
     }
@@ -64,7 +64,7 @@ script Alola_Ulaula_House_Typholosion{
     lock
     faceplayer
     playmoncry(SPECIES_TYPHLOSION_HISUI, 0)
-    msgbox("Graa!", MSGBOX_AUTOCLOSE)
+    msgbox("Graa!")
     waitmoncry
     release
     end

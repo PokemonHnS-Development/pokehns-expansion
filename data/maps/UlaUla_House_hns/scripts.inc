@@ -78,7 +78,7 @@ Alola_Ulaula_House_Typholosion::
 # 66 "data/maps/UlaUla_House_hns/scripts.pory"
 	playmoncry SPECIES_TYPHLOSION_HISUI, 0
 # 67 "data/maps/UlaUla_House_hns/scripts.pory"
-	msgbox Alola_Ulaula_House_Typholosion_Text_0, MSGBOX_AUTOCLOSE
+	msgbox Alola_Ulaula_House_Typholosion_Text_0
 # 68 "data/maps/UlaUla_House_hns/scripts.pory"
 	waitmoncry
 # 69 "data/maps/UlaUla_House_hns/scripts.pory"
