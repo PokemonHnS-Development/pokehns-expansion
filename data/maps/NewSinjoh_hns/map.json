@@ -20,7 +20,7 @@
     },
     {
       "map": "MAP_ROUTE49_HNS",
-      "offset": 17,
+      "offset": 18,
       "direction": "right"
     }
   ],
@@ -29,7 +29,7 @@
       "local_id": "Travel Supplier",
       "graphics_id": "OBJ_EVENT_GFX_BATTLE_GIRL_HNS",
       "x": 32,
-      "y": 9,
+      "y": 10,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -43,7 +43,7 @@
       "local_id": "Trader",
       "graphics_id": "OBJ_EVENT_GFX_HIKER_HNS",
       "x": 37,
-      "y": 12,
+      "y": 13,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -57,7 +57,7 @@
       "local_id": "Milk Man",
       "graphics_id": "OBJ_EVENT_GFX_OFFICER_HNS",
       "x": 32,
-      "y": 12,
+      "y": 13,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -71,7 +71,7 @@
       "local_id": "Cookie Lady",
       "graphics_id": "OBJ_EVENT_GFX_OLD_WOMAN_HNS",
       "x": 37,
-      "y": 9,
+      "y": 10,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -84,19 +84,6 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_BEAUTY_HNS",
       "x": 16,
-      "y": 26,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F_HNS",
-      "x": 18,
       "y": 27,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
@@ -104,40 +91,53 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "NewSinjoh_EventScript_Girl1",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F_HNS",
+      "x": 18,
+      "y": 28,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN_LEFT_AND_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NewSinjoh_EventScript_Girl2",
       "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_FAT_MAN_HNS",
       "x": 11,
-      "y": 16,
+      "y": 17,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "NewSinjoh_EventScript_FatMan",
       "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BLACK_BELT_HNS",
       "x": 16,
-      "y": 16,
+      "y": 17,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "NewSinjoh_EventScript_Josh",
       "flag": "0"
     },
     {
       "local_id": "Jessica",
       "graphics_id": "OBJ_EVENT_GFX_BATTLE_GIRL_HNS",
       "x": 17,
-      "y": 16,
+      "y": 17,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -150,20 +150,20 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_HOT_SPRINGS_OLD_WOMAN",
       "x": 11,
-      "y": 26,
+      "y": 27,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "NewSinjoh_EventScript_OldLady",
       "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ZIGZAGOON_1",
       "x": 3,
-      "y": 23,
+      "y": 24,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 0,
@@ -176,7 +176,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
       "x": 5,
-      "y": 36,
+      "y": 37,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -189,7 +189,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
       "x": 45,
-      "y": 28,
+      "y": 29,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -202,7 +202,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_LITTLE_BOY_HNS",
       "x": 33,
-      "y": 9,
+      "y": 10,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -216,51 +216,58 @@
   "warp_events": [
     {
       "x": 36,
-      "y": 34,
+      "y": 35,
       "elevation": 0,
       "dest_map": "MAP_ROUTE49_NEW_SINJOH_GATE_HNS",
       "dest_warp_id": "1"
     },
     {
-      "x": 22,
-      "y": 16,
+      "x": 20,
+      "y": 17,
       "elevation": 0,
       "dest_map": "MAP_NEW_SINJOH_HOUSE2_HNS",
       "dest_warp_id": "0"
     },
     {
       "x": 22,
-      "y": 13,
+      "y": 14,
       "elevation": 0,
       "dest_map": "MAP_NEW_SINJOH_HOUSE2_HNS",
       "dest_warp_id": "1"
     },
     {
       "x": 32,
-      "y": 23,
+      "y": 24,
       "elevation": 0,
       "dest_map": "MAP_NEW_SINJOH_POKEMON_CENTER_HNS",
       "dest_warp_id": "0"
     },
     {
       "x": 23,
-      "y": 24,
+      "y": 25,
       "elevation": 0,
       "dest_map": "MAP_NEW_SINJOH_HOUSE3_HNS",
       "dest_warp_id": "0"
     },
     {
       "x": 3,
-      "y": 44,
+      "y": 45,
       "elevation": 0,
       "dest_map": "MAP_NEW_SINJOH_HOUSE4_HNS",
       "dest_warp_id": "0"
     },
     {
       "x": 24,
-      "y": 34,
+      "y": 35,
       "elevation": 0,
       "dest_map": "MAP_NEW_SINJOH_HOUSE1_HNS",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 22,
+      "y": 17,
+      "elevation": 0,
+      "dest_map": "MAP_NEW_SINJOH_KIMONO_HIDEOUT_HNS",
       "dest_warp_id": "0"
     }
   ],
@@ -269,10 +276,42 @@
     {
       "type": "sign",
       "x": 1,
-      "y": 44,
+      "y": 45,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "Script_NewSinjoh_Resturant_Sign"
+    },
+    {
+      "type": "sign",
+      "x": 36,
+      "y": 32,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Script_NewSinjoh_Welcome_Sign"
+    },
+    {
+      "type": "sign",
+      "x": 26,
+      "y": 25,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Script_NewSinjoh_Abandoned_House_Mailbox"
+    },
+    {
+      "type": "sign",
+      "x": 25,
+      "y": 17,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Script_NewSinjoh_HotSprings_Mailbox"
+    },
+    {
+      "type": "sign",
+      "x": 7,
+      "y": 13,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Script_NewSinjoh_LockedDoor"
     }
   ],
   "game_version": "hns",

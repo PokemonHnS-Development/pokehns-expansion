@@ -12,9 +12,10 @@
   "allow_running": false,
   "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": 0,
+  "connections": null,
   "object_events": [
     {
+      "local_id": "LOCALID_ECRUTEAK_SAYO",
       "graphics_id": "OBJ_EVENT_GFX_KIMONO_HNS",
       "x": 7,
       "y": 2,
@@ -25,10 +26,10 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "EcruteakCity_Theater_EventScript_KimonoGirl",
-      "flag": "FLAG_HIDE_ECRUTEAK_CITY_THEATER_KIMONOS",
-      "local_id": "LOCALID_ECRUTEAK_SAYO"
+      "flag": "FLAG_HIDE_ECRUTEAK_CITY_THEATER_KIMONOS"
     },
     {
+      "local_id": "LOCALID_ECRUTEAK_NAOKO",
       "graphics_id": "OBJ_EVENT_GFX_KIMONO_HNS",
       "x": 5,
       "y": 3,
@@ -39,10 +40,10 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "EcruteakCity_Theater_EventScript_KimonoGirl",
-      "flag": "FLAG_HIDE_ECRUTEAK_CITY_THEATER_KIMONOS",
-      "local_id": "LOCALID_ECRUTEAK_NAOKO"
+      "flag": "FLAG_HIDE_ECRUTEAK_CITY_THEATER_KIMONOS"
     },
     {
+      "local_id": "LOCALID_ECRUTEAK_KUNI",
       "graphics_id": "OBJ_EVENT_GFX_KIMONO_HNS",
       "x": 13,
       "y": 2,
@@ -53,10 +54,10 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "EcruteakCity_Theater_EventScript_KimonoGirl",
-      "flag": "FLAG_HIDE_ECRUTEAK_CITY_THEATER_KIMONOS",
-      "local_id": "LOCALID_ECRUTEAK_KUNI"
+      "flag": "FLAG_HIDE_ECRUTEAK_CITY_THEATER_KIMONOS"
     },
     {
+      "local_id": "LOCALID_ECRUTEAK_MIKI",
       "graphics_id": "OBJ_EVENT_GFX_KIMONO_HNS",
       "x": 15,
       "y": 3,
@@ -67,10 +68,10 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "EcruteakCity_Theater_EventScript_KimonoGirl",
-      "flag": "FLAG_HIDE_ECRUTEAK_CITY_THEATER_KIMONOS",
-      "local_id": "LOCALID_ECRUTEAK_MIKI"
+      "flag": "FLAG_HIDE_ECRUTEAK_CITY_THEATER_KIMONOS"
     },
     {
+      "local_id": "LOCALID_ECRUTEAK_ZUKI",
       "graphics_id": "OBJ_EVENT_GFX_KIMONO_HNS",
       "x": 10,
       "y": 3,
@@ -81,8 +82,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "EcruteakCity_Theater_EventScript_Zuki",
-      "flag": "FLAG_HIDE_ECRUTEAK_CITY_THEATER_ZUKI",
-      "local_id": "LOCALID_ECRUTEAK_ZUKI"
+      "flag": "FLAG_HIDE_ECRUTEAK_CITY_THEATER_ZUKI"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_OLD_WOMAN_HNS",
@@ -98,6 +98,7 @@
       "flag": "FLAG_HIDE_ECRUTEAK_CITY_THEATER_NPCS"
     },
     {
+      "local_id": "LOCALID_SURF_GUY",
       "graphics_id": "OBJ_EVENT_GFX_GENTLEMAN_HNS",
       "x": 13,
       "y": 11,
@@ -108,8 +109,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "EcruteakCity_Theater_EventScript_SurfGuy",
-      "flag": "FLAG_HIDE_ECRUTEAK_CITY_THEATER_NPCS",
-      "local_id": "LOCALID_SURF_GUY"
+      "flag": "FLAG_HIDE_ECRUTEAK_CITY_THEATER_NPCS"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_WORKER_M_HNS",
@@ -151,6 +151,7 @@
       "flag": "FLAG_HIDE_ECRUTEAK_CITY_THEATER_NPCS"
     },
     {
+      "local_id": "LOCALID_ECRUTEAK_SISTER",
       "graphics_id": "OBJ_EVENT_GFX_TWIN_HNS",
       "x": 5,
       "y": 11,
@@ -161,10 +162,10 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "EcruteakCity_Theater_EventScript_Girl",
-      "flag": "FLAG_HIDE_ECRUTEAK_CITY_THEATER_NPCS",
-      "local_id": "LOCALID_ECRUTEAK_SISTER"
+      "flag": "FLAG_HIDE_ECRUTEAK_CITY_THEATER_NPCS"
     },
     {
+      "local_id": "LOCALID_ECRUTEAK_ROCKET",
       "graphics_id": "OBJ_EVENT_GFX_ROCKET_M_HNS",
       "x": 10,
       "y": 4,
@@ -175,8 +176,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "EcruteakCity_Theater_EventScript_Rocket",
-      "flag": "FLAG_HIDE_ECRUTEAK_ROCKET",
-      "local_id": "LOCALID_ECRUTEAK_ROCKET"
+      "flag": "FLAG_HIDE_ECRUTEAK_ROCKET"
     }
   ],
   "warp_events": [

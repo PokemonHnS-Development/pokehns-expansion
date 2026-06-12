@@ -1,2 +1,6 @@
 NewSinjoh_PokemonCenter_hns_MapScripts::
+map_script MAP_SCRIPT_ON_TRANSITION, NewSinjoh_PokemonCenter_On_Transition
 	.byte 0
+
+NewSinjoh_PokemonCenter_On_Transition:
+	setrespawn HEAL_LOCATION_NEW_SINJOH_HNS

@@ -1,5 +1,10 @@
 NewSinjoh_hns_MapScripts::
+map_script MAP_SCRIPT_ON_TRANSITION, NewSinjoh_On_Transition
 	.byte 0
+
+NewSinjoh_On_Transition:
+    setflag FLAG_VISITED_NEWSINJOH
+	end
 
 NewSinjoh_MilkMan_EventScript_Seller::
 	lock
@@ -96,7 +101,7 @@ NewSinjoh_MilkMan_text_Lose:
 NewSinjoh_Script_TravelMart::
 	lock
 	faceplayer
-	message Text_TravelShopGreeting
+	message NewSinjoh_Text_TravelShopGreeting
 	waitmessage
 	pokemart NewSinjoh_Pokemart_TravelShop
 	msgbox NewSinjoh_Text_TravelShopEnd, MSGBOX_DEFAULT
@@ -174,7 +179,7 @@ NewSinjoh_EventScript_Jessica::
 	bufferspeciesname STR_VAR_1, VAR_0x8009
 	msgbox NewSinjoh_Text_MonYouTakeCare, MSGBOX_DEFAULT
 	closemessage
-	setflag FLAG_NewSinjoh_NPC_TRADE_COMPLETED
+	setflag FLAG_NEWSINJOH_NPC_TRADE_COMPLETED
 	release
 	end
 
@@ -212,10 +217,138 @@ NewSinjoh_Text_YouWontTradeMe:
 	.string "You don't want to trade? Aww...$"
 
 NewSinjoh_Text_After:
-	.string "Hi, how's my old ONIX doing?$"
+	.string "Yo, how's my GALLADE doing?$"
 
 NewSinjoh_Text_PokefanM:
 	.string "A POKéMON you get in a trade\n"
 	.string "grows quickly.\p"
 	.string "But if you don't have the right\n"
 	.string "GYM BADGE, they may disobey you.$"
+
+NewSinjoh_EventScript_Josh::
+	lock
+	faceplayer
+	msgbox NewSinjoh_Text_Josh, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
+	NewSinjoh_Text_Josh:
+	.string "We're relaxing after\n"
+	.string "helping dig up that old ruin.\p"
+	.string "Our pure brawn let's us\n"
+	.string "move that rubble real easy!$"
+
+NewSinjoh_EventScript_FatMan::
+	lock
+	faceplayer
+	msgbox NewSinjoh_Text_FatMan, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
+	NewSinjoh_Text_FatMan:
+	.string "Ouughh...\p"
+	.string "This water feels magical on my back.\p"
+	.string "If you have backpain too,\n"
+	.string "you should stay here with me..$"
+
+NewSinjoh_EventScript_OldLady::
+	lock
+	faceplayer
+	msgbox NewSinjoh_Text_OldLady, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
+	NewSinjoh_Text_OldLady:
+	.string "There's nothing like a nice\n"
+	.string "view to invigorate\p"
+	.string "this old soul.$"
+
+NewSinjoh_EventScript_Girl1::
+	lock
+	faceplayer
+	msgbox NewSinjoh_Text_Girl1, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
+	NewSinjoh_Text_Girl1:
+	.string "I'm here on vacation with\n"
+	.string "my girfliend!\p"
+	.string "She really like to explore\n"
+	.string "old ruins, so she begged me\l"
+	.string "if we could visit Sinjoh.\p"
+	.string "And i just couldn't say no to her!$"
+
+NewSinjoh_EventScript_Girl2::
+	lock
+	faceplayer
+	msgbox NewSinjoh_Text_Girl2, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
+	NewSinjoh_Text_Girl2:
+	.string "I'm so happy she agreed to\n"
+	.string "bring me here!\p"
+	.string "We came all the way from\n"
+	.string "Alola to check out Sinjoh!$"
+
+Script_NewSinjoh_Welcome_Sign::
+	lock
+	faceplayer
+	msgbox Text_Welcome_Sign, MSGBOX_DEFAULT
+	release
+	end
+
+Text_Welcome_Sign:
+	.string "New Sinjoh\n"
+	.string "A town of new endings.$"
+
+Script_NewSinjoh_HotSprings_Mailbox::
+	lock
+	faceplayer
+	msgbox Text_HotSprings_Sign, MSGBOX_DEFAULT
+	release
+	end
+
+Text_HotSprings_Sign:
+	.string "A Comforting retreat\n"
+	.string "in the harsh north.\p"
+	.string "-Edward's Hotsprings-.$"
+
+Script_NewSinjoh_Abandoned_House_Mailbox::
+	lock
+	faceplayer
+	msgbox Text_Abandoned_MailBox, MSGBOX_DEFAULT
+	release
+	end
+
+Text_Abandoned_MailBox:
+	.string "DO NOT ENTER.\p"
+	.string "This home is forclosed.$"
+
+Script_NewSinjoh_Resturant_Sign::
+	lock
+	faceplayer
+	msgbox Text_Resturant_Sign, MSGBOX_DEFAULT
+	release
+	end
+
+Text_Resturant_Sign:
+	.string "Welcome to Serana's Cafe!\n"
+	.string "A cozy joint hidden in the brush.$"
+
+Script_NewSinjoh_LockedDoor::
+	lock
+	faceplayer
+	msgbox Text_NewSinjoh_LockedDoor, MSGBOX_DEFAULT
+	release
+	end
+
+Text_NewSinjoh_LockedDoor:
+	.string "This is the hotsprings'\n"
+	.string "changing room...\l"
+	.string"No reason to go in there!$"

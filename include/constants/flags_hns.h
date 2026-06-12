@@ -850,9 +850,9 @@
 // Extended content flags (0x36A – 0x431)
 // 200 slots for new content; 0x432–0x4FF reserved for future trainer registered expansion
 #define HNS_EXTENDED_CONTENT_START                  0x36A
-#define FLAG_NEWSINJOH_NPC_TRADE_COMPLETED                     (HNS_EXTENDED_CONTENT_START + 0)
-#define FLAG_EXTENDED_CONTENT_1                     (HNS_EXTENDED_CONTENT_START + 1)
-#define FLAG_EXTENDED_CONTENT_2                     (HNS_EXTENDED_CONTENT_START + 2)
+#define FLAG_NEWSINJOH_NPC_TRADE_COMPLETED          (HNS_EXTENDED_CONTENT_START + 0)
+#define FLAG_VISITED_NEWSINJOH                      (HNS_EXTENDED_CONTENT_START + 1)
+#define FLAG_VISITED_SINJOHRUINS                    (HNS_EXTENDED_CONTENT_START + 2)
 #define FLAG_EXTENDED_CONTENT_3                     (HNS_EXTENDED_CONTENT_START + 3)
 #define FLAG_EXTENDED_CONTENT_4                     (HNS_EXTENDED_CONTENT_START + 4)
 #define FLAG_EXTENDED_CONTENT_5                     (HNS_EXTENDED_CONTENT_START + 5)
