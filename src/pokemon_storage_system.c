@@ -451,8 +451,6 @@ struct PokemonStorageSystemData
     struct Sprite *nextBoxTitleSprites[2];
     struct Sprite *arrowSprites[2];
     u32 wallpaperPalBits;
-    u16 ALIGNED(4) chooseBoxSwapPal[16]; // Holds dynamic palette to swap into choose box gfx
-    u16 markingsSwapPal[16]; // Used to store dynamic palette to swap into markings combo
     u16 swapInPal[16];
     void *swapInPalDst;
     s8 transferWholePlttFrames; // if >0, number of frames to transfer whole palette buffer
@@ -587,8 +585,9 @@ EWRAM_DATA static bool8 sAutoActionOn = 0;
 EWRAM_DATA static bool8 sJustOpenedBag = 0;
 EWRAM_DATA static bool8 sRefreshDisplayMonGfx = FALSE;
 
-EWRAM_DATA static u16 *sPaletteSwapBuffer = NULL; // dynamically-allocated buffer to hold box palettes
-EWRAM_DATA static u8 allocCount = 0; // Track number of alloc's vs frees
+IWRAM_DATA static u16 ALIGNED(4) sPaletteSwapBuffer[16*30]; // buffer to hold box palettes
+IWRAM_DATA static u16 ALIGNED(4) sMarkingsSwapPal[16];
+IWRAM_DATA static u16 ALIGNED(4) sChooseBoxSwapPal[16];
 
 // Main tasks
 static void Task_InitPokeStorage(u8);
@@ -1805,7 +1804,7 @@ static void LoadChooseBoxMenuGfx(struct ChooseBoxMenu *menu, u16 tileTag, u16 pa
     if (loadPal) // Always false
         LoadSpritePalette(&palette);
 
-    CpuFastCopy(sHandCursor_Pal, sStorage->chooseBoxSwapPal, 32);
+    CpuFastCopy(sHandCursor_Pal, sChooseBoxSwapPal, 32);
 
     LoadSpriteSheets(sheets);
     sChooseBoxMenu = menu;
@@ -1821,7 +1820,7 @@ static void FreeChooseBoxMenu(void)
         FreeSpritePaletteByTag(sChooseBoxMenu->paletteTag);
     FreeSpriteTilesByTag(sChooseBoxMenu->tileTag);
     FreeSpriteTilesByTag(sChooseBoxMenu->tileTag + 1);
-    sStorage->chooseBoxSwapPal[0] = 0; // Stop dynamically loading choose box palette
+    sChooseBoxSwapPal[0] = 0; // Stop dynamically loading choose box palette
 }
 
 static void CreateChooseBoxMenuSprites(u8 curBox)
@@ -2011,18 +2010,18 @@ static void SpriteCB_ChooseBoxArrow(struct Sprite *sprite)
 static void VBlankCB_PokeStorage(void)
 {
     // swap in palette
-    if (sPaletteSwapBuffer && sStorage->swapInPalDst) {
+    if (sStorage->swapInPalDst) {
       CpuFastCopy(&sStorage->swapInPal[0], sStorage->swapInPalDst, 32);
       sStorage->swapInPalDst = NULL;
     }
     LoadOam();
     ProcessSpriteCopyRequests();
     // Instead of transferring the entire palette buffer, transfer bg and non-dynamic palettes
-    if (sPaletteSwapBuffer && !gPaletteFade.bufferTransferDisabled && !gPaletteFade.active && !sStorage->transferWholePlttFrames) 
+    if (!gPaletteFade.bufferTransferDisabled && !gPaletteFade.active && !sStorage->transferWholePlttFrames) 
     {
         DmaCopy16(3, gPlttBufferFaded, (void*)PLTT, 32*17);
         // Skip the 12-1 palettes that are being dynamically swapped anyway
-        DmaCopy16(3, &gPlttBufferFaded[(12+16)*16], (void*) 0x05000380, 32*4);
+        DmaCopy16(3, &gPlttBufferFaded[(12+16)*16], (void*)(PLTT + 0x380), 32*4);
     } 
     else 
     {
@@ -2057,9 +2056,7 @@ static void EnterPokeStorage(u8 boxOption)
     ResetTasks();
     sCurrentBoxOption = boxOption;
     sStorage = Alloc(sizeof(*sStorage));
-    sPaletteSwapBuffer = AllocZeroed(32*30);
-    allocCount++;
-    if (sStorage == NULL || sPaletteSwapBuffer == NULL)
+    if (sStorage == NULL)
     {
         if (boxOption == OPTION_SELECT_MON)
             SetMainCallback2(CB2_ReturnToFieldContinueScript);
@@ -2069,7 +2066,7 @@ static void EnterPokeStorage(u8 boxOption)
     else
     {
         sStorage->transferWholePlttFrames = 0;
-        sStorage->chooseBoxSwapPal[0] = 0;
+        sChooseBoxSwapPal[0] = 0;
         sStorage->boxOption = boxOption;
         sStorage->isReopening = FALSE;
         sMovingItemId = ITEM_NONE;
@@ -2084,9 +2081,7 @@ static void CB2_ReturnToPokeStorage(void)
 {
     ResetTasks();
     sStorage = Alloc(sizeof(*sStorage));
-    sPaletteSwapBuffer = AllocZeroed(32*30);
-    allocCount++;
-    if (sStorage == NULL || sPaletteSwapBuffer == NULL) 
+    if (sStorage == NULL) 
     {
         if (sStorage->boxOption == OPTION_SELECT_MON)
             SetMainCallback2(CB2_ReturnToFieldContinueScript);
@@ -2162,10 +2157,10 @@ static void SetPokeStorageTask(TaskFunc newFunc)
 }
 
 // Manages swapping palettes mid draw to make all icon palettes appear
-static void HBlankCB_PokeStorage(void) {
+ARM_FUNC __attribute__((section(".iwram.code"))) __attribute__((noinline)) __attribute__((optimize("-O3"))) static void HBlankCB_PokeStorage(void) {
   u8 vCount = REG_VCOUNT;
   u32 i;
-  if (vCount >= DISPLAY_HEIGHT || !sPaletteSwapBuffer || (gPaletteFade.active && gPaletteFade.y == 16 && gPaletteFade.mode == 2)) // HARDWARE_FADE
+  if (vCount >= DISPLAY_HEIGHT || (gPaletteFade.active && gPaletteFade.y == 16 && gPaletteFade.mode == 2)) // HARDWARE_FADE
     return;
   // For each row in the pc box
   for (i = 0; i < IN_BOX_ROWS; i++) {
@@ -2182,13 +2177,13 @@ static void HBlankCB_PokeStorage(void) {
       break;
     }
   }
-  if (vCount == 146 && sStorage && sStorage->markingsSwapPal[0]) { // copy markings palette
+  if (vCount == 146 && sStorage && sMarkingsSwapPal[0]) { // copy markings palette
     u16 *dst = (u16*) (OBJ_PLTT + (11+1)*16*2);
-    CpuFastCopy(&sStorage->markingsSwapPal[0], dst, 32);
+    CpuFastCopy(&sMarkingsSwapPal[0], dst, 32);
   }
-  if (vCount == 63 && sStorage && sStorage->chooseBoxSwapPal[0]) { // copy choose box palette
+  if (vCount == 63 && sStorage && sChooseBoxSwapPal[0]) { // copy choose box palette
     u16 *dst = (u16*) (OBJ_PLTT + (0)*16*2);
-    CpuFastCopy(sStorage->chooseBoxSwapPal, dst, 32);
+    CpuFastCopy(sChooseBoxSwapPal, dst, 32);
   }
 }
 
@@ -2351,7 +2346,6 @@ static void Task_ReshowPokeStorage(u8 taskId)
         gPaletteFade.doBldAlpha1Ovrd = TRUE;
         gPaletteFade.doBldAlpha2Ovrd = TRUE;
         EnableInterrupts(INTR_FLAG_VBLANK | INTR_FLAG_HBLANK);
-        SetHBlankCallback(HBlankCB_PokeStorage);
         sStorage->state++;
         break;
     case 1:
@@ -2368,6 +2362,10 @@ static void Task_ReshowPokeStorage(u8 taskId)
                 SetPokeStorageTask(Task_PokeStorageMain);
             }
             SetMonIconTransparency(); // Set transparency after fade-in
+        }
+        else if (gPaletteFade.y == 15)
+        {
+            SetHBlankCallback(HBlankCB_PokeStorage);
         }
         break;
     case 2:
@@ -3720,6 +3718,11 @@ static void Task_JumpBox(u8 taskId)
     }
 }
 
+static void DisableHBlankCallback(void)
+{
+    SetHBlankCallback(NULL); // avoid palette flickering
+}
+
 static void Task_NameBox(u8 taskId)
 {
     switch (sStorage->state)
@@ -3731,6 +3734,7 @@ static void Task_NameBox(u8 taskId)
         gPaletteFade.bldAlpha2Ovrd = BLDALPHA2_VAL;
         gPaletteFade.doBldAlpha1Ovrd = TRUE;
         gPaletteFade.doBldAlpha2Ovrd = TRUE;
+        gPaletteFade.paletteFadeDoneCB = DisableHBlankCallback;
         sStorage->state++;
         break;
     case 1:
@@ -3739,7 +3743,6 @@ static void Task_NameBox(u8 taskId)
         gPaletteFade.bldAlpha1Ovrd = ((16 - gPaletteFade.y) * BLDALPHA1_VAL) / 16;
         if (!UpdatePaletteFade())
         {
-            SetHBlankCallback(NULL); // avoid palette flickering
             sWhichToReshow = SCREEN_CHANGE_NAME_BOX - 1;
             sStorage->screenChangeType = SCREEN_CHANGE_NAME_BOX;
             SetPokeStorageTask(Task_ChangeScreen);
@@ -3759,6 +3762,7 @@ static void Task_ShowMonSummary(u8 taskId)
         gPaletteFade.bldAlpha2Ovrd = BLDALPHA2_VAL;
         gPaletteFade.doBldAlpha1Ovrd = TRUE;
         gPaletteFade.doBldAlpha2Ovrd = TRUE;
+        gPaletteFade.paletteFadeDoneCB = DisableHBlankCallback;
         sStorage->state++;
         break;
     case 1:
@@ -3767,7 +3771,6 @@ static void Task_ShowMonSummary(u8 taskId)
         gPaletteFade.bldAlpha1Ovrd = ((16 - gPaletteFade.y) * BLDALPHA1_VAL) / 16;
         if (!UpdatePaletteFade())
         {
-            SetHBlankCallback(NULL); // avoid palette flickering
             sWhichToReshow = SCREEN_CHANGE_SUMMARY_SCREEN - 1;
             sStorage->screenChangeType = SCREEN_CHANGE_SUMMARY_SCREEN;
             SetPokeStorageTask(Task_ChangeScreen);
@@ -3786,6 +3789,7 @@ static void Task_GiveItemFromBag(u8 taskId)
         gPaletteFade.bldAlpha2Ovrd = BLDALPHA2_VAL;
         gPaletteFade.doBldAlpha1Ovrd = TRUE;
         gPaletteFade.doBldAlpha2Ovrd = TRUE;
+        gPaletteFade.paletteFadeDoneCB = DisableHBlankCallback;
         sStorage->state++;
         break;
     case 1:
@@ -3794,7 +3798,6 @@ static void Task_GiveItemFromBag(u8 taskId)
         gPaletteFade.bldAlpha1Ovrd = ((16 - gPaletteFade.y) * BLDALPHA1_VAL) / 16;
         if (!UpdatePaletteFade())
         {
-            SetHBlankCallback(NULL); // avoid palette flickering
             sWhichToReshow = SCREEN_CHANGE_ITEM_FROM_BAG - 1;
             sStorage->screenChangeType = SCREEN_CHANGE_ITEM_FROM_BAG;
             SetPokeStorageTask(Task_ChangeScreen);
@@ -4022,8 +4025,6 @@ static void FreePokeStorageData(void)
     TilemapUtil_Free();
     MultiMove_Free();
     FREE_AND_SET_NULL(sStorage);
-    FREE_AND_SET_NULL(sPaletteSwapBuffer);
-    allocCount--;
     SetHBlankCallback(NULL);
     FreeAllWindowBuffers();
 }
@@ -4100,7 +4101,7 @@ static void CreateMarkingComboSprite(void)
 {
     sStorage->markingComboSprite = CreateMonMarkingComboSprite(GFXTAG_MARKING_COMBO, PALTAG_MARKING_COMBO, NULL);
     // Free up 1 palette of space by swapping in the marking palette at the last second
-    CpuFastCopy(&gPlttBufferUnfaded[sStorage->markingComboSprite->oam.paletteNum*16+0x100], &sStorage->markingsSwapPal[0], 32);
+    CpuFastCopy(&gPlttBufferUnfaded[sStorage->markingComboSprite->oam.paletteNum*16+0x100], &sMarkingsSwapPal[0], 32);
     FreeSpritePaletteByTag(PALTAG_MARKING_COMBO);
     sStorage->markingComboSprite->oam.paletteNum = IndexOfSpritePaletteTag(PALTAG_MISC_2);
     sStorage->markingComboSprite->oam.priority = 1;
@@ -6549,6 +6550,8 @@ static bool8 DoMonPlaceChange(void)
 
 static bool8 MonPlaceChange_Grab(void)
 {
+    u16 palette[16] = {0};
+
     switch (sStorage->monPlaceChangeState)
     {
     case 0:
@@ -6570,6 +6573,11 @@ static bool8 MonPlaceChange_Grab(void)
             sStorage->monPlaceChangeState++;
         break;
     case 3:
+        if (sCursorArea == CURSOR_AREA_IN_BOX)
+        {
+            palette[0] = 0x8000;
+            SwapInPalNextVBlank(&palette[0], &sPaletteSwapBuffer[(sCursorPosition)*16]);
+        }
         return FALSE;
     }
 
@@ -6709,7 +6717,6 @@ static void MoveMon(void)
     case CURSOR_AREA_IN_BOX:
         if (sStorage->inBoxMovingMode == MOVE_MODE_NORMAL)
         {
-            u16 palette[16] = {0};
             u16 species;
             bool8 isShiny;
             u32 personality;
@@ -6722,10 +6729,7 @@ static void MoveMon(void)
 
             LoadSpritePaletteWithTag(GetIconPalette(species, isShiny, IsPersonalityFemale(species, personality)), PALTAG_MOVING_MON);
             sStorage->movingMonPalOffset = OBJ_PLTT_ID(IndexOfSpritePaletteTag(PALTAG_MOVING_MON));
-
             sStorage->movingMonSprite->oam.paletteNum = IndexOfSpritePaletteTag(PALTAG_MOVING_MON);
-            palette[0] = 0x8000;
-            SwapInPalNextVBlank(&palette[0], &sPaletteSwapBuffer[(sCursorPosition)*16]);
         }
         break;
     default:

@@ -662,6 +662,7 @@ void BeginHardwarePaletteFade(u32 blendCnt, u32 delay, u32 y, u32 targetY, u32 s
     gPaletteFade.hardwareFadeFinishing = FALSE;
     gPaletteFade.bldAlpha1Ovrd = FALSE;
     gPaletteFade.bldAlpha2Ovrd = FALSE;
+    gPaletteFade.paletteFadeDoneCB = NULL;
 
     if (y < targetY)
         gPaletteFade.yDec = 0;
@@ -772,6 +773,8 @@ static void UpdateBlendRegisters(void)
 
     if (gPaletteFade.hardwareFadeFinishing)
     {
+        if (gPaletteFade.paletteFadeDoneCB)
+            gPaletteFade.paletteFadeDoneCB();
         gPaletteFade.hardwareFadeFinishing = FALSE;
         gPaletteFade.mode = 0;
         gPaletteFadeBlendCnt = 0;

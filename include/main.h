@@ -54,6 +54,7 @@ extern bool8 gSoftResetDisabled;
 extern IntrFunc gIntrTable[];
 extern u8 gLinkVSyncDisabled;
 extern s8 gPcmDmaCounter;
+extern u16 vCountAtIsr;
 
 void AgbMain(void);
 void AgbMainLoop(void);
