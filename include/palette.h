@@ -81,6 +81,7 @@ struct PaletteFadeControl
     u8 bldAlpha1Ovrd:4;
     bool8 doBldAlpha2Ovrd:1;
     u8 bldAlpha2Ovrd:4;
+    void (*paletteFadeDoneCB)();
     u32 padding:5;
 };
 
