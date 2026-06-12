@@ -369,20 +369,11 @@ const u8 *GetMonIconTilesIsEgg(u16 species, u32 personality, bool32 isEgg)
 void TryLoadAllMonIconPalettesAtOffset(u16 offset)
 {
     s32 i;
-    const struct SpritePalette* monIconPalettePtr;
-    if (offset <= BG_PLTT_ID(16 - ARRAY_COUNT(gMonIconPaletteTable)))
-    {
-        u16 whitePalette[16];
-        for (i = 0; i < 16; i++)
-          whitePalette[i] = 0xFFFF;
-        monIconPalettePtr = gMonIconPaletteTable;
-        for(i = ARRAY_COUNT(gMonIconPaletteTable) - 1; i >= 0; i--)
-        {
-            LoadPalette(&whitePalette[0], offset, PLTT_SIZE_4BPP);
-            offset += 16;
-            monIconPalettePtr++;
-        }
-    }
+    u16 whitePalette[16];
+    for (i = 0; i < 16; i++)
+        whitePalette[i] = 0xFFFF;
+
+    LoadPalette(&whitePalette[0], offset, PLTT_SIZE_4BPP);
 }
 
 u8 GetMonIconPaletteIndexFromSpecies(u16 species)

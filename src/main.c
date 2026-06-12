@@ -71,7 +71,7 @@ COMMON_DATA IntrFunc gIntrTable[INTR_COUNT] = {0};
 COMMON_DATA u8 gLinkVSyncDisabled = 0;
 COMMON_DATA s8 gPcmDmaCounter = 0;
 COMMON_DATA void *gAgbMainLoop_sp = NULL;
-COMMON_DATA u16 vCountAtIsr = 0;
+COMMON_DATA u16 gVCountAtIsr = 0;
 
 static EWRAM_DATA u16 sTrainerId = 0;
 
