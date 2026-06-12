@@ -503,7 +503,6 @@ struct PokemonStorageSystemData
     u8 newCursorPosition;
     u8 cursorPrevHorizPos;
     u8 cursorFlipTimer;
-    u8 cursorPalNums[2];
     const u16 *displayMonPalette;
     u32 displayMonPersonality;
     u16 displayMonSpecies;
@@ -588,6 +587,7 @@ EWRAM_DATA static bool8 sRefreshDisplayMonGfx = FALSE;
 IWRAM_DATA static u16 ALIGNED(4) sPaletteSwapBuffer[16*30]; // buffer to hold box palettes
 IWRAM_DATA static u16 ALIGNED(4) sMarkingsSwapPal[16];
 IWRAM_DATA static u16 ALIGNED(4) sChooseBoxSwapPal[16];
+IWRAM_DATA static u16 sLastHBlankCopy = 0; 
 
 // Main tasks
 static void Task_InitPokeStorage(u8);
@@ -982,7 +982,6 @@ static const u16 sPartySlotEmpty_Tilemap[]   = INCBIN_U16("graphics/pokemon_stor
 static const u16 sWaveform_Pal[]             = INCBIN_U16("graphics/pokemon_storage/waveform.gbapal");
 static const u32 sWaveform_Gfx[]             = INCBIN_U32("graphics/pokemon_storage/waveform.4bpp");
 static const u16 sUnused_Pal[]               = INCBIN_U16("graphics/pokemon_storage/unused.gbapal");
-static const u16 sTextWindows_Pal[]          = INCBIN_U16("graphics/pokemon_storage/text_windows.gbapal");
 
 static const struct WindowTemplate sWindowTemplates[] =
 {
@@ -1230,7 +1229,7 @@ static const struct OamData sOamData_MonIcon;
 static const struct SpriteTemplate sSpriteTemplate_MonIcon =
 {
     .tileTag = GFXTAG_MON_ICON,
-    .paletteTag = PALTAG_MON_ICON_0,
+    .paletteTag = TAG_NONE,
     .oam = &sOamData_MonIcon,
 };
 
@@ -2133,18 +2132,18 @@ static void InitStartingPosData(void)
     sDepositBoxId = 0;
 }
 
-static u16 GetRequiredBldcnt(void)
+static u16 GetRequiredBldcntForItems(void)
 {
     if (sStorage->boxOption == OPTION_MOVE_ITEMS)
         return BLDCNT_TGT2_ALL | BLDCNT_EFFECT_BLEND;
     return 0;
 }
 
-static void SetMonIconTransparency(void)
+static void SetMonIconTransparencyForItems(void)
 {
     if (sStorage->boxOption == OPTION_MOVE_ITEMS)
     {
-        SetGpuReg(REG_OFFSET_BLDCNT, GetRequiredBldcnt());
+        SetGpuReg(REG_OFFSET_BLDCNT, GetRequiredBldcntForItems());
         SetGpuReg(REG_OFFSET_BLDALPHA, BLDALPHA_BLEND(BLDALPHA1_VAL, BLDALPHA2_VAL));
     }
     SetGpuReg(REG_OFFSET_DISPCNT, DISPCNT_OBJ_ON | DISPCNT_BG_ALL_ON | DISPCNT_OBJ_1D_MAP);
@@ -2158,49 +2157,52 @@ static void SetPokeStorageTask(TaskFunc newFunc)
 
 // Manages swapping palettes mid draw to make all icon palettes appear
 ARM_FUNC __attribute__((section(".iwram.code"))) __attribute__((noinline)) __attribute__((optimize("-O3"))) static void HBlankCB_PokeStorage(void) {
-  u8 vCount = REG_VCOUNT;
-  u32 i;
-  if (vCount >= DISPLAY_HEIGHT || (gPaletteFade.active && gPaletteFade.y == 16 && gPaletteFade.mode == 2)) // HARDWARE_FADE
-    return;
-  // For each row in the pc box
-  for (i = 0; i < IN_BOX_ROWS; i++) {
-    if (vCount == 28-8+24*i) { // -8 is to keep the right palette when being switched
-      u32 position = IN_BOX_COLUMNS*16*i;
-      u16* dst = (u16*) (OBJ_PLTT + (i & 1 ? 7 : 1)*16*2); // Points into Palette RAM directly
-      u32 j;
-      for (j = 0; j < IN_BOX_COLUMNS; j++, position += 16, dst += 16) {
-        // If palette color is empty, skip
-        if (!(sPaletteSwapBuffer[position] & 0x7FFF))
-          continue;
-        CpuFastCopy(&sPaletteSwapBuffer[position], dst, 32);
-      }
-      break;
+    u16 i;
+    if (gVCountAtIsr >= DISPLAY_HEIGHT) {
+        sLastHBlankCopy = 0;
+        return;
     }
-  }
-  if (vCount == 146 && sStorage && sMarkingsSwapPal[0]) { // copy markings palette
-    u16 *dst = (u16*) (OBJ_PLTT + (11+1)*16*2);
-    CpuFastCopy(&sMarkingsSwapPal[0], dst, 32);
-  }
-  if (vCount == 63 && sStorage && sChooseBoxSwapPal[0]) { // copy choose box palette
-    u16 *dst = (u16*) (OBJ_PLTT + (0)*16*2);
-    CpuFastCopy(sChooseBoxSwapPal, dst, 32);
-  }
+    // For each row in the pc box
+    for (i = 0; i < IN_BOX_ROWS; i++) {
+        u16 target = 28-8+24*i;
+        if (gVCountAtIsr >= target && sLastHBlankCopy < target) { // -8 is to keep the right palette when being switched
+            sLastHBlankCopy = target;
+            u32 position = IN_BOX_COLUMNS*16*i;
+            u16* dst = (u16*) (OBJ_PLTT + (i & 1 ? 7 : 1)*16*2); // Points into Palette RAM directly
+            u32 j;
+            for (j = 0; j < IN_BOX_COLUMNS; j++, position += 16, dst += 16) {
+                // If palette color is empty, skip
+                if (!(sPaletteSwapBuffer[position] & 0x7FFF))
+                    continue;
+                CpuFastCopy(&sPaletteSwapBuffer[position], dst, 32);
+            }
+            break;
+        }
+    }
+    if (gVCountAtIsr >= 146 && sLastHBlankCopy < 146 && sMarkingsSwapPal[0]) { // copy markings palette
+        u16 *dst = (u16*) (OBJ_PLTT + (11+1)*16*2);
+        CpuFastCopy(&sMarkingsSwapPal[0], dst, 32);
+    }
+    if (gVCountAtIsr == 63 && sLastHBlankCopy < 63 && sChooseBoxSwapPal[0]) { // copy choose box palette
+        u16 *dst = (u16*) (OBJ_PLTT + (0)*16*2);
+        CpuFastCopy(sChooseBoxSwapPal, dst, 32);
+    }
 }
 
 static void DisableBoxMonDynamicPalette(u8 position, u8 count) {
-  u8 i;
-  for (i = position; i < position+count && i < IN_BOX_COUNT; i++) {
-    if (sPaletteSwapBuffer[i*16] & 0x7FFF)
-      sPaletteSwapBuffer[i*16] = 0x8000;
-  }
+    u8 i;
+    for (i = position; i < position+count && i < IN_BOX_COUNT; i++) {
+        if (sPaletteSwapBuffer[i*16] & 0x7FFF)
+            sPaletteSwapBuffer[i*16] = 0x8000;
+    }
 }
 
 static void EnableBoxMonDynamicPalette(u8 position, u8 count) {
-  u8 i;
-  for (i = position; i < position+count && i < IN_BOX_COUNT; i++) {
-    if (sPaletteSwapBuffer[i*16] == 0x8000)
-      sPaletteSwapBuffer[i*16] = 0x7FFF;
-  }
+    u8 i;
+    for (i = position; i < position+count && i < IN_BOX_COUNT; i++) {
+        if (sPaletteSwapBuffer[i*16] == 0x8000)
+            sPaletteSwapBuffer[i*16] = 0x7FFF;
+    }
 }
 
 static void Task_InitPokeStorage(u8 taskId)
@@ -2244,6 +2246,7 @@ static void Task_InitPokeStorage(u8 taskId)
         ClearWindowTilemap(WIN_MESSAGE);
         CpuFill32(0, (void *)VRAM, 0x200);
         LoadUserWindowBorderGfx(WIN_MESSAGE, 0xB, BG_PLTT_ID(14));
+        LoadPalette(GetTextWindowPalette(3), BG_PLTT_ID(15), PLTT_SIZE_4BPP);
         break;
     case 3:
         ResetAllBgCoords();
@@ -2296,7 +2299,7 @@ static void Task_InitPokeStorage(u8 taskId)
         }
         break;
     case 10:
-        SetMonIconTransparency();
+        SetMonIconTransparencyForItems();
         if (!sStorage->isReopening)
         {
             BlendPalettes(PALETTES_ALL, 16, RGB_BLACK);
@@ -2323,13 +2326,19 @@ static void Task_ShowPokeStorage(u8 taskId)
     case 0:
         PlaySE(SE_PC_LOGIN);
         ComputerScreenOpenEffect(20, 0, 1);
+        SetHBlankCallback(NULL);
         EnableInterrupts(INTR_FLAG_VBLANK | INTR_FLAG_HBLANK);
-        SetHBlankCallback(HBlankCB_PokeStorage);
         sStorage->state++;
         break;
-    case 1:
+    case 5: // Intentinoally wait a few frames to prevent flicker
+        SetHBlankCallback(HBlankCB_PokeStorage);
+        sStorage->state++;
+    case 6:
         if (!IsComputerScreenOpenEffectActive())
             SetPokeStorageTask(Task_PokeStorageMain);
+        break;
+    default:
+        sStorage->state++;
         break;
     }
 }
@@ -2340,7 +2349,7 @@ static void Task_ReshowPokeStorage(u8 taskId)
     {
     case 0:
         BlendPalettes(PALETTES_ALL, 0, RGB_BLACK);
-        BeginHardwarePaletteFade(0xFF | GetRequiredBldcnt(), 0, 16, 0, FALSE);
+        BeginHardwarePaletteFade(0xFF | GetRequiredBldcntForItems(), 0, 16, 0, FALSE);
         gPaletteFade.bldAlpha1Ovrd = 0;
         gPaletteFade.bldAlpha2Ovrd = BLDALPHA2_VAL;
         gPaletteFade.doBldAlpha1Ovrd = TRUE;
@@ -2361,7 +2370,7 @@ static void Task_ReshowPokeStorage(u8 taskId)
             {
                 SetPokeStorageTask(Task_PokeStorageMain);
             }
-            SetMonIconTransparency(); // Set transparency after fade-in
+            SetMonIconTransparencyForItems(); // Set transparency after fade-in
         }
         else if (gPaletteFade.y == 15)
         {
@@ -3729,7 +3738,7 @@ static void Task_NameBox(u8 taskId)
     {
     case 0:
         SaveMovingMon();
-        BeginHardwarePaletteFade(0xFF | GetRequiredBldcnt(), 0, 0, 16, TRUE);
+        BeginHardwarePaletteFade(0xFF | GetRequiredBldcntForItems(), 0, 0, 16, TRUE);
         gPaletteFade.bldAlpha1Ovrd = BLDALPHA1_VAL;
         gPaletteFade.bldAlpha2Ovrd = BLDALPHA2_VAL;
         gPaletteFade.doBldAlpha1Ovrd = TRUE;
@@ -3757,7 +3766,7 @@ static void Task_ShowMonSummary(u8 taskId)
     {
     case 0:
         InitSummaryScreenData();
-        BeginHardwarePaletteFade(0xFF | GetRequiredBldcnt(), 0, 0, 16, TRUE);
+        BeginHardwarePaletteFade(0xFF | GetRequiredBldcntForItems(), 0, 0, 16, TRUE);
         gPaletteFade.bldAlpha1Ovrd = BLDALPHA1_VAL;
         gPaletteFade.bldAlpha2Ovrd = BLDALPHA2_VAL;
         gPaletteFade.doBldAlpha1Ovrd = TRUE;
@@ -3784,7 +3793,7 @@ static void Task_GiveItemFromBag(u8 taskId)
     switch (sStorage->state)
     {
     case 0:
-        BeginHardwarePaletteFade(0xFF | GetRequiredBldcnt(), 0, 0, 16, TRUE);
+        BeginHardwarePaletteFade(0xFF | GetRequiredBldcntForItems(), 0, 0, 16, TRUE);
         gPaletteFade.bldAlpha1Ovrd = BLDALPHA1_VAL;
         gPaletteFade.bldAlpha2Ovrd = BLDALPHA2_VAL;
         gPaletteFade.doBldAlpha1Ovrd = TRUE;
@@ -4084,7 +4093,6 @@ static void InitPalettesAndSprites(void)
 {
     LoadPalette(sInterface_Pal, BG_PLTT_ID(0), sizeof(sInterface_Pal));
     LoadPalette(sPkmnDataGray_Pal, BG_PLTT_ID(2), sizeof(sPkmnDataGray_Pal));
-    LoadPalette(sTextWindows_Pal, BG_PLTT_ID(15), sizeof(sTextWindows_Pal));
     if (sStorage->boxOption != OPTION_MOVE_ITEMS)
         LoadPalette(sScrollingBg_Pal, BG_PLTT_ID(3), sizeof(sScrollingBg_Pal));
     else
@@ -4522,7 +4530,7 @@ static void UpdateBoxToSendMons(void)
 static void InitPokeStorageBg0(void)
 {
     SetGpuReg(REG_OFFSET_BG0CNT, BGCNT_PRIORITY(0) | BGCNT_CHARBASE(0) | BGCNT_SCREENBASE(29));
-    LoadUserWindowBorderGfx(WIN_MESSAGE, 2, BG_PLTT_ID(13));
+    LoadUserWindowBorderGfx(WIN_MESSAGE, 2, BG_PLTT_ID(14));
     FillBgTilemapBufferRect(0, 0, 0, 0, 32, 20, 17);
     CopyBgTilemapBufferToVram(0);
 }
@@ -5043,6 +5051,7 @@ static void DestroyBoxMonIconAtPosition(u8 boxPosition)
     if (sStorage->boxMonsSprites[boxPosition] != NULL)
     {
         DestroyBoxMonIcon(sStorage->boxMonsSprites[boxPosition]);
+        sStorage->boxMonsSprites[boxPosition] = NULL;
         DisableBoxMonDynamicPalette(boxPosition, 1); // blank dynamic palette
     }
 }
@@ -5487,12 +5496,6 @@ static u16 TryLoadMonIconTiles(u16 species, u32 personality, bool32 isEgg)
 {
     u16 i, offset;
 
-#if P_GENDER_DIFFERENCES
-    // Treat female mons as a seperate species as they may have a different icon than males
-    if (gSpeciesInfo[species].iconSpriteFemale != NULL && IsPersonalityFemale(species, personality))
-        species |= (1 << 15);
-#endif
-
     // Treat eggs as a seperate species as they might have unique sprites
     if (isEgg)
         species |= (1 << 14);
@@ -5532,20 +5535,10 @@ static u16 TryLoadMonIconTiles(u16 species, u32 personality, bool32 isEgg)
 static void RemoveSpeciesFromIconList(u16 species)
 {
     u16 i;
-    bool8 hasFemale = FALSE;
 
     for (i = 0; i < MAX_MON_ICONS; i++)
     {
-        if (sStorage->iconSpeciesList[i] == (species | 0x8000))
-        {
-            hasFemale = TRUE;
-            break;
-        }
-    }
-
-    for (i = 0; i < MAX_MON_ICONS; i++)
-    {
-        if (sStorage->iconSpeciesList[i] == species && !hasFemale)
+        if (sStorage->iconSpeciesList[i] == species)
         {
             if (--sStorage->numIconsPerSpecies[i] == 0)
                 sStorage->iconSpeciesList[i] = SPECIES_NONE;
@@ -5561,7 +5554,12 @@ static struct Sprite *CreateMonIconSprite(u16 species, u32 personality, s16 x, s
     struct SpriteTemplate template = sSpriteTemplate_MonIcon;
 
     species = GetIconSpecies(species, personality);
-    template.paletteTag = PALTAG_MON_ICON_0;
+
+#if P_GENDER_DIFFERENCES
+    // Treat female mons as a seperate species as they may have a different icon than males
+    if (gSpeciesInfo[species].iconSpriteFemale != NULL && IsPersonalityFemale(species, personality))
+        species |= (1 << 15);
+#endif
 
     tileNum = TryLoadMonIconTiles(species, personality, isEgg);
     if (tileNum == 0xFFFF)
@@ -8305,7 +8303,7 @@ static void CreateCursorSprites(void)
     static const struct SpriteTemplate sSpriteTemplate_Cursor =
     {
         .tileTag = GFXTAG_CURSOR,
-        .paletteTag = PALTAG_MISC_2,
+        .paletteTag = PALTAG_MISC_1,
         .oam = &sOamData_Cursor,
         .anims = sAnims_Cursor,
     };
@@ -8320,15 +8318,13 @@ static void CreateCursorSprites(void)
 
     LoadSpriteSheets(spriteSheets);
     LoadSpritePalettes(spritePalettes);
-    sStorage->cursorPalNums[0] = IndexOfSpritePaletteTag(PALTAG_MISC_2); // White hand, normal
-    sStorage->cursorPalNums[1] = IndexOfSpritePaletteTag(PALTAG_MISC_1); // Yellow hand, when auto-action is on
 
     GetCursorCoordsByPos(sCursorArea, sCursorPosition, &x, &y);
     spriteId = CreateSprite(&sSpriteTemplate_Cursor, x, y, 6);
     if (spriteId != MAX_SPRITES)
     {
         sStorage->cursorSprite = &gSprites[spriteId];
-        sStorage->cursorSprite->oam.paletteNum = sStorage->cursorPalNums[1];
+        sStorage->cursorSprite->oam.paletteNum = IndexOfSpritePaletteTag(PALTAG_MISC_1);
         sStorage->cursorSprite->oam.priority = 1;
         if (sIsMonBeingMoved)
             StartSpriteAnim(sStorage->cursorSprite, CURSOR_ANIM_FIST);
@@ -8670,10 +8666,15 @@ static bool8 MultiMove_Start(void)
     case 0:
         HideBg(0);
         // Loads icon palettes into BG
-        TryLoadAllMonIconPalettesAtOffset(BG_PLTT_ID(8));
+        TryLoadAllMonIconPalettesAtOffset(BG_PLTT_ID(14));
         sMultiMove->state++;
         break;
     case 1:
+        SetGpuReg(REG_OFFSET_BLDCNT, 0x3E41);
+        SetGpuReg(REG_OFFSET_BLDALPHA, BLDALPHA_BLEND(8, 10));
+        sMultiMove->state++;
+        break;
+    case 2:
         GetCursorBoxColumnAndRow(&sMultiMove->fromColumn, &sMultiMove->fromRow);
         sMultiMove->toColumn = sMultiMove->fromColumn;
         sMultiMove->toRow = sMultiMove->fromRow;
@@ -8691,7 +8692,7 @@ static bool8 MultiMove_Start(void)
         SetGpuRegBits(REG_OFFSET_BG0CNT, BGCNT_256COLOR);
         sMultiMove->state++;
         break;
-    case 2:
+    case 3:
         if (!IsDma3ManagerBusyWithBgCopy())
         {
             ShowBg(0);
@@ -8712,15 +8713,20 @@ static bool8 MultiMove_Cancel(void)
         sMultiMove->state++;
         break;
     case 1:
+        SetGpuReg(REG_OFFSET_BLDCNT, 0);
+        sMultiMove->state++;
+        break;
+    case 2:
         MultiMove_ResetBg();
         StartCursorAnim(CURSOR_ANIM_BOUNCE);
         sMultiMove->state++;
         break;
-    case 2:
+    case 3:
         if (!IsDma3ManagerBusyWithBgCopy())
         {
             SetCursorPriorityTo1();
-            LoadPalette(GetTextWindowPalette(3), BG_PLTT_ID(13), PLTT_SIZE_4BPP);
+            LoadPalette(GetTextWindowPalette(3), BG_PLTT_ID(15), PLTT_SIZE_4BPP);
+            LoadUserWindowBorderPal(BG_PLTT_ID(14));
             ShowBg(0);
             return FALSE;
         }
@@ -8816,6 +8822,10 @@ static bool8 MultiMove_PlaceMons(void)
         }
         break;
     case 2:
+        SetGpuReg(REG_OFFSET_BLDCNT, 0);
+        sMultiMove->state++;
+        break;
+    case 3:
         if (!DoMonPlaceChange())
         {
             StartCursorAnim(CURSOR_ANIM_BOUNCE);
@@ -8823,10 +8833,11 @@ static bool8 MultiMove_PlaceMons(void)
             sMultiMove->state++;
         }
         break;
-    case 3:
+    case 4:
         if (!IsDma3ManagerBusyWithBgCopy())
         {
-            LoadPalette(GetTextWindowPalette(3), BG_PLTT_ID(13), PLTT_SIZE_4BPP);
+            LoadPalette(GetTextWindowPalette(3), BG_PLTT_ID(15), PLTT_SIZE_4BPP);
+            LoadUserWindowBorderPal(BG_PLTT_ID(14));
             SetCursorPriorityTo1();
             ShowBg(0);
             return FALSE;
@@ -8951,7 +8962,7 @@ static void MultiMove_SetIconToBg(u8 x, u8 y)
     if (species != SPECIES_NONE)
     {
         const u8 *iconGfx = GetMonIconPtrIsEgg(species, personality, isEgg);
-        u8 index = 0 + 8;
+        u8 index = 14;
 
         BlitBitmapRectToWindow4BitTo8Bit(sStorage->multiMoveWindowId,
                                          iconGfx,

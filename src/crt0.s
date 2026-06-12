@@ -42,7 +42,7 @@ sp_irq: .word IWRAM_END - 0x60
 IntrMain::
 	mov r3, #REG_BASE
 	ldrh r2, [r3, #OFFSET_REG_VCOUNT]
-	ldr r1, =vCountAtIsr
+	ldr r1, =gVCountAtIsr
 	strh r2, [r1]
 	add r3, r3, #OFFSET_REG_IE
 	ldr r2, [r3]
