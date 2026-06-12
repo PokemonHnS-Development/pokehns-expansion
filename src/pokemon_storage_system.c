@@ -377,6 +377,9 @@ enum {
     WIN_ITEM_DESC,
 };
 
+#define BLDALPHA1_VAL 7
+#define BLDALPHA2_VAL 11
+
 struct Wallpaper
 {
     const u32 *tiles;
@@ -2014,13 +2017,12 @@ static void VBlankCB_PokeStorage(void)
     }
     LoadOam();
     ProcessSpriteCopyRequests();
-    TransferPlttBuffer();
     // Instead of transferring the entire palette buffer, transfer bg and non-dynamic palettes
     if (sPaletteSwapBuffer && !gPaletteFade.bufferTransferDisabled && !gPaletteFade.active && !sStorage->transferWholePlttFrames) 
     {
-        RequestDma3Copy(gPlttBufferFaded, (void*)PLTT, 32*17, 0);
+        DmaCopy16(3, gPlttBufferFaded, (void*)PLTT, 32*17);
         // Skip the 12-1 palettes that are being dynamically swapped anyway
-        RequestDma3Copy(&gPlttBufferFaded[(12+16)*16], (void*) 0x05000380, 32*4, 0);
+        DmaCopy16(3, &gPlttBufferFaded[(12+16)*16], (void*) 0x05000380, 32*4);
     } 
     else 
     {
@@ -2136,12 +2138,19 @@ static void InitStartingPosData(void)
     sDepositBoxId = 0;
 }
 
+static u16 GetRequiredBldcnt(void)
+{
+    if (sStorage->boxOption == OPTION_MOVE_ITEMS)
+        return BLDCNT_TGT2_ALL | BLDCNT_EFFECT_BLEND;
+    return 0;
+}
+
 static void SetMonIconTransparency(void)
 {
     if (sStorage->boxOption == OPTION_MOVE_ITEMS)
     {
-        SetGpuReg(REG_OFFSET_BLDCNT, BLDCNT_TGT2_ALL | BLDCNT_EFFECT_BLEND);
-        SetGpuReg(REG_OFFSET_BLDALPHA, BLDALPHA_BLEND(7, 11));
+        SetGpuReg(REG_OFFSET_BLDCNT, GetRequiredBldcnt());
+        SetGpuReg(REG_OFFSET_BLDALPHA, BLDALPHA_BLEND(BLDALPHA1_VAL, BLDALPHA2_VAL));
     }
     SetGpuReg(REG_OFFSET_DISPCNT, DISPCNT_OBJ_ON | DISPCNT_BG_ALL_ON | DISPCNT_OBJ_1D_MAP);
 }
@@ -2336,12 +2345,17 @@ static void Task_ReshowPokeStorage(u8 taskId)
     {
     case 0:
         BlendPalettes(PALETTES_ALL, 0, RGB_BLACK);
-        BeginHardwarePaletteFade(0xFF, 0, 16, 0, TRUE);
+        BeginHardwarePaletteFade(0xFF | GetRequiredBldcnt(), 0, 16, 0, FALSE);
+        gPaletteFade.bldAlpha1Ovrd = 0;
+        gPaletteFade.bldAlpha2Ovrd = BLDALPHA2_VAL;
+        gPaletteFade.doBldAlpha1Ovrd = TRUE;
+        gPaletteFade.doBldAlpha2Ovrd = TRUE;
         EnableInterrupts(INTR_FLAG_VBLANK | INTR_FLAG_HBLANK);
         SetHBlankCallback(HBlankCB_PokeStorage);
         sStorage->state++;
         break;
     case 1:
+        gPaletteFade.bldAlpha1Ovrd = ((16 - gPaletteFade.y) * BLDALPHA1_VAL) / 16;
         if (!UpdatePaletteFade())
         {
             if (sWhichToReshow == SCREEN_CHANGE_ITEM_FROM_BAG - 1 && gSpecialVar_ItemId != ITEM_NONE)
@@ -3712,12 +3726,17 @@ static void Task_NameBox(u8 taskId)
     {
     case 0:
         SaveMovingMon();
-        BeginHardwarePaletteFade(0xFF, 0, 0, 16, TRUE);
+        BeginHardwarePaletteFade(0xFF | GetRequiredBldcnt(), 0, 0, 16, TRUE);
+        gPaletteFade.bldAlpha1Ovrd = BLDALPHA1_VAL;
+        gPaletteFade.bldAlpha2Ovrd = BLDALPHA2_VAL;
+        gPaletteFade.doBldAlpha1Ovrd = TRUE;
+        gPaletteFade.doBldAlpha2Ovrd = TRUE;
         sStorage->state++;
         break;
     case 1:
         if (gPaletteFade.y == 16) // blend last frame of hardware fade
             BlendPalettes(PALETTES_ALL, 16, RGB_BLACK);
+        gPaletteFade.bldAlpha1Ovrd = ((16 - gPaletteFade.y) * BLDALPHA1_VAL) / 16;
         if (!UpdatePaletteFade())
         {
             SetHBlankCallback(NULL); // avoid palette flickering
@@ -3735,12 +3754,17 @@ static void Task_ShowMonSummary(u8 taskId)
     {
     case 0:
         InitSummaryScreenData();
-        BeginHardwarePaletteFade(0xFF, 0, 0, 16, TRUE);
+        BeginHardwarePaletteFade(0xFF | GetRequiredBldcnt(), 0, 0, 16, TRUE);
+        gPaletteFade.bldAlpha1Ovrd = BLDALPHA1_VAL;
+        gPaletteFade.bldAlpha2Ovrd = BLDALPHA2_VAL;
+        gPaletteFade.doBldAlpha1Ovrd = TRUE;
+        gPaletteFade.doBldAlpha2Ovrd = TRUE;
         sStorage->state++;
         break;
     case 1:
         if (gPaletteFade.y == 16) // blend last frame of hardware fade
             BlendPalettes(PALETTES_ALL, 16, RGB_BLACK);
+        gPaletteFade.bldAlpha1Ovrd = ((16 - gPaletteFade.y) * BLDALPHA1_VAL) / 16;
         if (!UpdatePaletteFade())
         {
             SetHBlankCallback(NULL); // avoid palette flickering
@@ -3757,12 +3781,17 @@ static void Task_GiveItemFromBag(u8 taskId)
     switch (sStorage->state)
     {
     case 0:
-        BeginHardwarePaletteFade(0xFF, 0, 0, 16, TRUE);
+        BeginHardwarePaletteFade(0xFF | GetRequiredBldcnt(), 0, 0, 16, TRUE);
+        gPaletteFade.bldAlpha1Ovrd = BLDALPHA1_VAL;
+        gPaletteFade.bldAlpha2Ovrd = BLDALPHA2_VAL;
+        gPaletteFade.doBldAlpha1Ovrd = TRUE;
+        gPaletteFade.doBldAlpha2Ovrd = TRUE;
         sStorage->state++;
         break;
     case 1:
         if (gPaletteFade.y == 16) // blend last frame of hardware fade
             BlendPalettes(PALETTES_ALL, 16, RGB_BLACK);
+        gPaletteFade.bldAlpha1Ovrd = ((16 - gPaletteFade.y) * BLDALPHA1_VAL) / 16;
         if (!UpdatePaletteFade())
         {
             SetHBlankCallback(NULL); // avoid palette flickering
@@ -4315,16 +4344,6 @@ static void SetUpHidePartyMenu(void)
 {
     sStorage->partyMenuY = 22;
     sStorage->partyMenuMoveTimer = 0;
-
-    if (sStorage->movingMonSprite)
-    {
-        u16 species = GetMonData(&sStorage->movingMon, MON_DATA_SPECIES);
-        bool8 isShiny = GetMonData(&sStorage->movingMon, MON_DATA_IS_SHINY);
-        u32 personality = GetMonData(&sStorage->movingMon, MON_DATA_PERSONALITY);
-        LoadSpritePaletteWithTag(GetIconPalette(species, isShiny, IsPersonalityFemale(species, personality)), PALTAG_MOVING_MON);
-        sStorage->movingMonPalOffset = OBJ_PLTT_ID(IndexOfSpritePaletteTag(PALTAG_MOVING_MON));
-        sStorage->movingMonSprite->oam.paletteNum = IndexOfSpritePaletteTag(PALTAG_MOVING_MON);
-    }
     
     if (sStorage->boxOption == OPTION_MOVE_ITEMS)
         MoveHeldItemWithPartyMenu();
@@ -5320,10 +5339,10 @@ static void SetPlacedMonSprite(u8 boxId, u8 position)
         sStorage->partySprites[position]->oam.priority = 1;
         sStorage->partySprites[position]->subpriority = 12;
 
-        // If currently using displayed mon palette, load party sprite palette into free party palette slot
-        if (sStorage->partySprites[position]->oam.paletteNum == IndexOfSpritePaletteTag(PALTAG_DISPLAY_MON)) {
+        // If currently using moving mon palette, load party sprite palette into free party palette slot
+        if (sStorage->partySprites[position]->oam.paletteNum == IndexOfSpritePaletteTag(PALTAG_MOVING_MON)) {
             paletteNum = FindFreePartyPaletteSlot();
-            LoadPalette(GetMonFrontSpritePal(&gPlayerParty[position]), paletteNum*16 + 0x100, 32);
+            LoadPalette(&gPlttBufferFaded[OBJ_PLTT_ID(IndexOfSpritePaletteTag(PALTAG_MOVING_MON))], paletteNum*16 + 0x100, 32);
             sStorage->partySprites[position]->oam.paletteNum = paletteNum;
         }
     }
@@ -6679,9 +6698,13 @@ static void MoveMon(void)
     switch (sCursorArea)
     {
     case CURSOR_AREA_IN_PARTY:
+        LoadSpritePaletteWithTag(&gPlttBufferFaded[OBJ_PLTT_ID(sStorage->partySprites[sCursorPosition]->oam.paletteNum)], PALTAG_MOVING_MON);
+
         SetMovingMonData(TOTAL_BOXES_COUNT, sCursorPosition);
         SetMovingMonSprite(MODE_PARTY, sCursorPosition);
-        // party pokemon will have their palette updated elsewhere when leaving the party menu
+
+        sStorage->movingMonPalOffset = OBJ_PLTT_ID(IndexOfSpritePaletteTag(PALTAG_MOVING_MON));
+        sStorage->movingMonSprite->oam.paletteNum = IndexOfSpritePaletteTag(PALTAG_MOVING_MON);
         break;
     case CURSOR_AREA_IN_BOX:
         if (sStorage->inBoxMovingMode == MOVE_MODE_NORMAL)
@@ -6803,15 +6826,15 @@ static void SetShiftedMonSprites(u8 boxId, u8 position) {
     if (boxId == TOTAL_BOXES_COUNT) { // party
         u32 paletteNum = FindFreePartyPaletteSlot();
         // Copy display palette into party palette slot
-        CpuFastCopy(&gPlttBufferUnfaded[displayIndex*16+0x100], &gPlttBufferUnfaded[paletteNum*16+0x100], 32);
-        CpuFastCopy(&gPlttBufferFaded[displayIndex*16+0x100], &gPlttBufferFaded[paletteNum*16+0x100], 32);
+        CpuFastCopy(&gPlttBufferUnfaded[OBJ_PLTT_ID(displayIndex)], &gPlttBufferUnfaded[OBJ_PLTT_ID(paletteNum)], 32);
+        CpuFastCopy(&gPlttBufferFaded[OBJ_PLTT_ID(displayIndex)], &gPlttBufferFaded[OBJ_PLTT_ID(paletteNum)], 32);
         sStorage->partySprites[position]->oam.paletteNum = paletteNum;
     } else {
         u8 i = position / 6;
         u8 j = position % 6;
         // Copy display palette into swap buffer (at next vblank)
         // This is necessary because copying it while the screen is being drawn will cause flickering
-        SwapInPalNextVBlank(&gPlttBufferFaded[displayIndex*16+0x100], &sPaletteSwapBuffer[(position)*16]);
+        SwapInPalNextVBlank(&gPlttBufferFaded[OBJ_PLTT_ID(displayIndex)], &sPaletteSwapBuffer[PLTT_ID(position)]);
         sStorage->boxMonsSprites[position]->oam.paletteNum = (i & 1 ? 6 : 0) + j + 1;
     }
 
