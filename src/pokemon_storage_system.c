@@ -584,10 +584,10 @@ EWRAM_DATA static bool8 sAutoActionOn = 0;
 EWRAM_DATA static bool8 sJustOpenedBag = 0;
 EWRAM_DATA static bool8 sRefreshDisplayMonGfx = FALSE;
 
-IWRAM_DATA static u16 ALIGNED(4) sPaletteSwapBuffer[16*30]; // buffer to hold box palettes
+IWRAM_DATA u16 ALIGNED(4) gPaletteSwapBuffer[16*30]; // buffer to hold box palettes
 IWRAM_DATA static u16 ALIGNED(4) sMarkingsSwapPal[16];
 IWRAM_DATA static u16 ALIGNED(4) sChooseBoxSwapPal[16];
-IWRAM_DATA static u16 sLastHBlankCopy = 0; 
+IWRAM_DATA u16 gLastHBlankCopy = 0; 
 
 // Main tasks
 static void Task_InitPokeStorage(u8);
@@ -2161,31 +2161,33 @@ extern void FastUnsafeCopy32(void *, const void *, u32 size);
 ARM_FUNC __attribute__((section(".iwram.code"))) __attribute__((noinline)) __attribute__((optimize("-O3"))) static void HBlankCB_PokeStorage(void) {
     u16 i;
     if (gVCountAtIsr >= DISPLAY_HEIGHT) {
-        sLastHBlankCopy = 0;
+        gLastHBlankCopy = 0;
         return;
     }
     // For each row in the pc box
     for (i = 0; i < IN_BOX_ROWS; i++) {
         u16 target = 28-8+24*i;
-        if (gVCountAtIsr >= target && sLastHBlankCopy < target) { // -8 is to keep the right palette when being switched
-            sLastHBlankCopy = target;
+        if (gVCountAtIsr >= target && gLastHBlankCopy < target) { // -8 is to keep the right palette when being switched
+            gLastHBlankCopy = target;
             u32 position = IN_BOX_COLUMNS*16*i;
             u16* dst = (u16*) (OBJ_PLTT + (i & 1 ? 7 : 1)*16*2); // Points into Palette RAM directly
             u32 j;
             for (j = 0; j < IN_BOX_COLUMNS; j++, position += 16, dst += 16) {
                 // If palette color is empty, skip
-                if (!(sPaletteSwapBuffer[position] & 0x7FFF))
+                if (!(gPaletteSwapBuffer[position] & 0x7FFF))
                     continue;
-                FastUnsafeCopy32(dst, &sPaletteSwapBuffer[position], 32);
+                FastUnsafeCopy32(dst, &gPaletteSwapBuffer[position], 32);
             }
             break;
         }
     }
-    if (gVCountAtIsr >= 146 && sLastHBlankCopy < 146 && sMarkingsSwapPal[0]) { // copy markings palette
+    if (gVCountAtIsr >= 146 && gLastHBlankCopy < 146 && sMarkingsSwapPal[0]) { // copy markings palette
+        gLastHBlankCopy = 146;
         u16 *dst = (u16*) (OBJ_PLTT + (11+1)*16*2);
-        FastUnsafeCopy32(dst, &sMarkingsSwapPal[0], 32);
+        FastUnsafeCopy32(dst, sMarkingsSwapPal, 32);
     }
-    if (gVCountAtIsr == 63 && sLastHBlankCopy < 63 && sChooseBoxSwapPal[0]) { // copy choose box palette
+    if (gVCountAtIsr == 63 && gLastHBlankCopy < 63 && sChooseBoxSwapPal[0]) { // copy choose box palette
+        gLastHBlankCopy = 63;
         u16 *dst = (u16*) (OBJ_PLTT + (0)*16*2);
         FastUnsafeCopy32(dst, sChooseBoxSwapPal, 32);
     }
@@ -2194,16 +2196,16 @@ ARM_FUNC __attribute__((section(".iwram.code"))) __attribute__((noinline)) __att
 static void DisableBoxMonDynamicPalette(u8 position, u8 count) {
     u8 i;
     for (i = position; i < position+count && i < IN_BOX_COUNT; i++) {
-        if (sPaletteSwapBuffer[i*16] & 0x7FFF)
-            sPaletteSwapBuffer[i*16] = 0x8000;
+        if (gPaletteSwapBuffer[i*16] & 0x7FFF)
+            gPaletteSwapBuffer[i*16] = 0x8000;
     }
 }
 
 static void EnableBoxMonDynamicPalette(u8 position, u8 count) {
     u8 i;
     for (i = position; i < position+count && i < IN_BOX_COUNT; i++) {
-        if (sPaletteSwapBuffer[i*16] == 0x8000)
-            sPaletteSwapBuffer[i*16] = 0x7FFF;
+        if (gPaletteSwapBuffer[i*16] == 0x8000)
+            gPaletteSwapBuffer[i*16] = 0x7FFF;
     }
 }
 
@@ -2333,6 +2335,7 @@ static void Task_ShowPokeStorage(u8 taskId)
         sStorage->state++;
         break;
     case 5: // Intentinoally wait a few frames to prevent flicker
+        gLastHBlankCopy = 0;
         SetHBlankCallback(HBlankCB_PokeStorage);
         sStorage->state++;
     case 6:
@@ -2376,6 +2379,7 @@ static void Task_ReshowPokeStorage(u8 taskId)
         }
         else if (gPaletteFade.y == 15)
         {
+            gLastHBlankCopy = 0;
             SetHBlankCallback(HBlankCB_PokeStorage);
         }
         break;
@@ -4732,7 +4736,7 @@ static void SetBoxMonDynamicPalette(u8 boxId, u8 position) {
   u16 species;
   const u16 *palette = _GetMonFrontSpritePal((struct Pokemon *)&gPokemonStoragePtr->boxes[boxId][position], &species);
   // Decompress species palette into swap buffer
-  CpuFastCopy(palette, &sPaletteSwapBuffer[(position)*16], PLTT_SIZE_4BPP);
+  CpuFastCopy(palette, &gPaletteSwapBuffer[(position)*16], PLTT_SIZE_4BPP);
   sStorage->boxMonsSprites[position]->oam.paletteNum = ((position / 6) & 1 ? 6 : 0) + (position % 6) + 1;
 }
 
@@ -6602,7 +6606,7 @@ static bool8 MonPlaceChange_Grab(void)
         if (sCursorArea == CURSOR_AREA_IN_BOX)
         {
             palette[0] = 0x8000;
-            SwapInPalNextVBlank(&palette[0], &sPaletteSwapBuffer[(sCursorPosition)*16]);
+            SwapInPalNextVBlank(&palette[0], &gPaletteSwapBuffer[(sCursorPosition)*16]);
         }
         return FALSE;
     }
@@ -6864,7 +6868,7 @@ static void SetShiftedMonSprites(u8 boxId, u8 position) {
         u8 j = position % 6;
         // Copy display palette into swap buffer (at next vblank)
         // This is necessary because copying it while the screen is being drawn will cause flickering
-        SwapInPalNextVBlank(&gPlttBufferFaded[OBJ_PLTT_ID(displayIndex)], &sPaletteSwapBuffer[PLTT_ID(position)]);
+        SwapInPalNextVBlank(&gPlttBufferFaded[OBJ_PLTT_ID(displayIndex)], &gPaletteSwapBuffer[PLTT_ID(position)]);
         sStorage->boxMonsSprites[position]->oam.paletteNum = (i & 1 ? 6 : 0) + j + 1;
     }
 
