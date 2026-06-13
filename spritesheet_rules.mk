@@ -404,6 +404,8 @@ $(OBJEVENTGFXDIR)/misc/breakable_rock_hns.4bpp: %.4bpp: %.png
 $(OBJEVENTGFXDIR)/misc/cuttable_tree_hns.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 2
 
+$(OBJEVENTGFXDIR)/misc/headbuttable_tree_hns.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 2 -mheight 2
 
 $(OBJEVENTGFXDIR)/misc/no_tail_slowpoke_hns.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 4 -mheight 4

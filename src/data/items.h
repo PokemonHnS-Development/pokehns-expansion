@@ -14245,11 +14245,11 @@ const struct ItemInfo gItemsInfo[] =
         .description = COMPOUND_STRING(
             "A tool used to\n"
             "search out Pokémon\n"
-            "hiding in grass."),
+            "found nearby."),
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
-        .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse, // Todo
+        .type = ITEM_USE_FIELD,
+        .fieldUseFunc = FieldUseFunc_PokeRadar,
         .iconPic = gItemIcon_PokeRadar,
         .iconPalette = gItemIconPalette_PokeRadar,
     },

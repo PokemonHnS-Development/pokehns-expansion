@@ -42,6 +42,8 @@
 #include "task.h"
 #include "text.h"
 #include "vs_seeker.h"
+#include "poke_radar.h"
+#include "wild_encounter.h"
 #include "constants/event_bg.h"
 #include "constants/event_objects.h"
 #include "constants/item_effects.h"
@@ -68,6 +70,7 @@ static void ItemUseOnFieldCB_Berry(u8);
 static void ItemUseOnFieldCB_WailmerPailBerry(u8);
 static void ItemUseOnFieldCB_WailmerPailSudowoodo(u8);
 static bool8 TryToWaterSudowoodo(void);
+static void ItemUseOnFieldCB_PokeRadar(u8);
 static void BootUpSoundTMHM(u8);
 static void Task_ShowTMHMContainedMessage(u8);
 static void UseTMHMYesNo(u8);
@@ -854,6 +857,28 @@ static void ItemUseOnFieldCB_WailmerPailSudowoodo(u8 taskId)
     LockPlayerFieldControls();
     ScriptContext_SetupScript(BattleFrontier_OutsideEast_EventScript_WaterSudowoodo);
     DestroyTask(taskId);
+}
+
+void FieldUseFunc_PokeRadar(u8 taskId)
+{
+    if (!MapHasNoEncounterData())
+    {
+        sItemUseOnFieldCB = ItemUseOnFieldCB_PokeRadar;
+        SetUpItemUseOnFieldCallback(taskId);
+    }
+    else
+        DisplayDadsAdviceCannotUseItemMessage(taskId, gTasks[taskId].tUsingRegisteredKeyItem);
+}
+
+static void ItemUseOnFieldCB_PokeRadar(u8 taskId)
+{
+    OpenPokeRadar();
+    DestroyTask(taskId);
+}
+
+void Task_ItemUse_CloseMessageBoxAndReturnToField_PokeRadar(u8 taskId)
+{
+    Task_CloseCantUseKeyItemMessage(taskId);
 }
 
 void ItemUseOutOfBattle_Medicine(u8 taskId)

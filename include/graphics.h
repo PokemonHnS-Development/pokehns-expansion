@@ -3532,6 +3532,14 @@ extern const u16 gObjectEventPal_Brendan[];
 extern const u16 gObjectEventPal_May[];
 extern const u16 gObjectEventPal_RubySapphireBrendan[];
 extern const u16 gObjectEventPal_RubySapphireMay[];
+extern const u32 gObjectEventPic_BreakableRock_hns[];
+extern const u16 gObjectEventPal_Npc1_hns[];
+extern const u32 gObjectEventPic_HeadbuttableTree_hns[];
+extern const u16 gObjectEventPal_HeadbuttableTree_hns[];
+
+extern const u32 gFieldEffectObjectPic_TallGrass[];
+extern const u32 gFieldEffectObjectPic_Ripple[];
+extern const u16 gFieldEffectObjectPalette1[];
 
 // Mail
 extern const u16 gMailPalette_Orange[];
