@@ -209,6 +209,7 @@ Debug_EventScript_Script_1::
 
 Debug_EventScript_Script_2::
 	setflag FLAG_VISITED_NEW_SINJOH
+	setflag FLAG_LANDMARK_BATTLE_FRONTIER
 	release
 	end
 
