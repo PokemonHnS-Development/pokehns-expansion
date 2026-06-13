@@ -2010,6 +2010,7 @@ static void SpriteCB_ChooseBoxArrow(struct Sprite *sprite)
 
 static void VBlankCB_PokeStorage(void)
 {
+    gLastHBlankCopy = 0;
     // swap in palette
     if (sStorage->swapInPalDst) {
       CpuFastCopy(&sStorage->swapInPal[0], sStorage->swapInPalDst, 32);
@@ -2186,7 +2187,7 @@ ARM_FUNC __attribute__((section(".iwram.code"))) __attribute__((noinline)) __att
         u16 *dst = (u16*) (OBJ_PLTT + (11+1)*16*2);
         FastUnsafeCopy32(dst, sMarkingsSwapPal, 32);
     }
-    if (gVCountAtIsr == 63 && gLastHBlankCopy < 63 && sChooseBoxSwapPal[0]) { // copy choose box palette
+    if (gVCountAtIsr >= 63 && gLastHBlankCopy < 63 && sChooseBoxSwapPal[0]) { // copy choose box palette
         gLastHBlankCopy = 63;
         u16 *dst = (u16*) (OBJ_PLTT + (0)*16*2);
         FastUnsafeCopy32(dst, sChooseBoxSwapPal, 32);
