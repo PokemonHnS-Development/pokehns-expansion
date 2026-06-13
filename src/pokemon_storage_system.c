@@ -3744,7 +3744,7 @@ static void Task_NameBox(u8 taskId)
     {
     case 0:
         SaveMovingMon();
-        BeginHardwarePaletteFade(0xFF | GetRequiredBldcntForItems(), 0, 0, 16, TRUE);
+        BeginHardwarePaletteFade(0xFF | GetRequiredBldcntForItems(), 0, 0, 16, FALSE);
         gPaletteFade.bldAlpha1Ovrd = BLDALPHA1_VAL;
         gPaletteFade.bldAlpha2Ovrd = BLDALPHA2_VAL;
         gPaletteFade.doBldAlpha1Ovrd = TRUE;
@@ -3772,7 +3772,7 @@ static void Task_ShowMonSummary(u8 taskId)
     {
     case 0:
         InitSummaryScreenData();
-        BeginHardwarePaletteFade(0xFF | GetRequiredBldcntForItems(), 0, 0, 16, TRUE);
+        BeginHardwarePaletteFade(0xFF | GetRequiredBldcntForItems(), 0, 0, 16, FALSE);
         gPaletteFade.bldAlpha1Ovrd = BLDALPHA1_VAL;
         gPaletteFade.bldAlpha2Ovrd = BLDALPHA2_VAL;
         gPaletteFade.doBldAlpha1Ovrd = TRUE;
@@ -3799,7 +3799,7 @@ static void Task_GiveItemFromBag(u8 taskId)
     switch (sStorage->state)
     {
     case 0:
-        BeginHardwarePaletteFade(0xFF | GetRequiredBldcntForItems(), 0, 0, 16, TRUE);
+        BeginHardwarePaletteFade(0xFF | GetRequiredBldcntForItems(), 0, 0, 16, FALSE);
         gPaletteFade.bldAlpha1Ovrd = BLDALPHA1_VAL;
         gPaletteFade.bldAlpha2Ovrd = BLDALPHA2_VAL;
         gPaletteFade.doBldAlpha1Ovrd = TRUE;
