@@ -1479,28 +1479,26 @@ static void LoadMonIconGfx(void)
 // TODO: fix these
 static void UpdateTrainerCardMonIcons(void)
 {
-    // u16 species;
-    // u8 i;
-    // u8 x = 40;
+    u16 species;
+    u8 i;
+    u8 x = 40;
 
-    // LoadMonIconPalettes();
-    // for (i = 0; i < gPlayerPartyCount; i++, x += 32)
-    // {
-    //     species = GetMonData(&gPlayerParty[i], MON_DATA_SPECIES);
-    //     sMonIconSpriteIds[i] = CreateMonIcon(species, SpriteCB_MonIcon, x, 124, 1, GetMonData(&gPlayerParty[i], MON_DATA_PERSONALITY));
-    //     gSprites[sMonIconSpriteIds[i]].oam.priority = 0;
-    //     StartSpriteAnim(&gSprites[sMonIconSpriteIds[i]], 4);
-    //     gSprites[sMonIconSpriteIds[i]].oam.paletteNum = GetMonIconPaletteIndexFromSpecies(species);
-    // }
+    for (i = 0; i < gPlayerPartyCount; i++, x += 32)
+    {
+        species = GetMonData(&gPlayerParty[i], MON_DATA_SPECIES);
+        sMonIconSpriteIds[i] = CreateMonIcon2(species, SpriteCB_MonIcon, x, 124, 1, GetMonData(&gPlayerParty[i], MON_DATA_IS_SHINY), GetMonData(&gPlayerParty[i], MON_DATA_PERSONALITY), GetMonData(&gPlayerParty[i], MON_DATA_IS_EGG));
+        gSprites[sMonIconSpriteIds[i]].oam.priority = 0;
+        StartSpriteAnim(&gSprites[sMonIconSpriteIds[i]], 4);
+    }
 }
 
 static void DestroyTrainerCardMonIcons(void)
 {
-    // u8 i;
+    u8 i;
 
-    // for (i = 0; i < gPlayerPartyCount; i++)
-    //     FreeAndDestroyMonIconSprite(&gSprites[sMonIconSpriteIds[i]]);
-    // FreeMonIconPalettes();
+    for (i = 0; i < gPlayerPartyCount; i++)
+        FreeAndDestroyMonIconSprite(&gSprites[sMonIconSpriteIds[i]]);
+    FreeMonIconPalettes();
 }
 
 // TODO: sticker removed?

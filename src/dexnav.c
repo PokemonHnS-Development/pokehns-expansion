@@ -334,7 +334,7 @@ static const union AnimCmd *const sAnimCmdTable_Sight[] =
 static const struct SpriteTemplate sNoDataIconTemplate =
 {
     .tileTag = ICON_GFX_TAG,
-    .paletteTag = ICON_PAL_TAG,
+    .paletteTag = SELECTION_CURSOR_TAG,
     .oam = &sNoDataIconOam,
 };
 
@@ -1687,6 +1687,7 @@ static void CreateSelectionCursor(void)
     LoadCompressedSpriteSheet(&spriteSheet);
 
     LoadPalette(sSelectionCursorPal, OBJ_PLTT_ID(sSelectionCursorOam.paletteNum), PLTT_SIZE_4BPP);
+    SetSpritePaletteTagByPaletteNum(sSelectionCursorOam.paletteNum, SELECTION_CURSOR_TAG);
 
     spriteId = CreateSprite(&sSelectionCursorSpriteTemplate, 12, 32, 0);
     //gSprites[spriteId].data[1] = -1;
@@ -2271,10 +2272,9 @@ static bool8 DexNav_DoGfxSetup(void)
         gMain.state++;
         break;
     case 10:
-        LoadMonIconPalettes();
-        DrawSpeciesIcons();
         CreateSelectionCursor();
         DexNavLoadCapturedAllSymbols();
+        DrawSpeciesIcons();
         gMain.state++;
         break;
     case 11:

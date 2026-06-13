@@ -566,12 +566,14 @@ static void CB2_CreateTradeMenu(void)
         {
             struct Pokemon *mon = &gPlayerParty[i];
             u32 index = LoadSpritePaletteWithTag(GetMonFrontSpritePal(mon), GetMonData(mon, MON_DATA_SPECIES_OR_EGG));
-            sTradeMenu->partySpriteIds[TRADE_PLAYER][i] = CreateMonIcon(GetMonData(mon, MON_DATA_SPECIES_OR_EGG),
+            sTradeMenu->partySpriteIds[TRADE_PLAYER][i] = CreateMonIcon2(GetMonData(mon, MON_DATA_SPECIES_OR_EGG),
                                                          SpriteCB_MonIcon,
                                                          (sTradeMonSpriteCoords[i][0] * 8) + 14,
                                                          (sTradeMonSpriteCoords[i][1] * 8) - 12,
                                                          1,
-                                                         GetMonData(mon, MON_DATA_PERSONALITY));
+                                                         GetMonData(mon, MON_DATA_IS_SHINY),
+                                                         GetMonData(mon, MON_DATA_PERSONALITY),
+                                                         GetMonData(mon, MON_DATA_IS_EGG));
 
             gSprites[sTradeMenu->partySpriteIds[TRADE_PLAYER][i]].oam.paletteNum = index;
         }
@@ -580,12 +582,14 @@ static void CB2_CreateTradeMenu(void)
         {
             struct Pokemon *mon = &gEnemyParty[i];
             u32 index = LoadSpritePaletteWithTag(GetMonFrontSpritePal(mon), GetMonData(mon, MON_DATA_SPECIES_OR_EGG));
-            sTradeMenu->partySpriteIds[TRADE_PARTNER][i] = CreateMonIcon(GetMonData(mon, MON_DATA_SPECIES_OR_EGG),
+            sTradeMenu->partySpriteIds[TRADE_PARTNER][i] = CreateMonIcon2(GetMonData(mon, MON_DATA_SPECIES_OR_EGG),
                                                          SpriteCB_MonIcon,
                                                          (sTradeMonSpriteCoords[i + PARTY_SIZE][0] * 8) + 14,
                                                          (sTradeMonSpriteCoords[i + PARTY_SIZE][1] * 8) - 12,
                                                          1,
-                                                         GetMonData(mon, MON_DATA_PERSONALITY));
+                                                         GetMonData(mon, MON_DATA_IS_SHINY),
+                                                         GetMonData(mon, MON_DATA_PERSONALITY),
+                                                         GetMonData(mon, MON_DATA_IS_EGG));
             gSprites[sTradeMenu->partySpriteIds[TRADE_PARTNER][i]].oam.paletteNum = index;
         }
         gMain.state++;
@@ -760,12 +764,14 @@ static void CB2_ReturnToTradeMenu(void)
         {
             struct Pokemon *mon = &gPlayerParty[i];
             u32 index = LoadSpritePaletteWithTag(GetMonFrontSpritePal(mon), GetMonData(mon, MON_DATA_SPECIES_OR_EGG));
-            sTradeMenu->partySpriteIds[TRADE_PLAYER][i] = CreateMonIcon(GetMonData(mon, MON_DATA_SPECIES_OR_EGG),
+            sTradeMenu->partySpriteIds[TRADE_PLAYER][i] = CreateMonIcon2(GetMonData(mon, MON_DATA_SPECIES_OR_EGG),
                                                          SpriteCB_MonIcon,
                                                          (sTradeMonSpriteCoords[i][0] * 8) + 14,
                                                          (sTradeMonSpriteCoords[i][1] * 8) - 12,
                                                          1,
-                                                         GetMonData(mon, MON_DATA_PERSONALITY));
+                                                         GetMonData(mon, MON_DATA_IS_SHINY),
+                                                         GetMonData(mon, MON_DATA_PERSONALITY),
+                                                         GetMonData(mon, MON_DATA_IS_EGG));
             gSprites[sTradeMenu->partySpriteIds[TRADE_PLAYER][i]].oam.paletteNum = index;
         }
 
@@ -773,12 +779,14 @@ static void CB2_ReturnToTradeMenu(void)
         {
             struct Pokemon *mon = &gEnemyParty[i];
             u32 index = LoadSpritePaletteWithTag(GetMonFrontSpritePal(mon), GetMonData(mon, MON_DATA_SPECIES_OR_EGG));
-            sTradeMenu->partySpriteIds[TRADE_PARTNER][i] = CreateMonIcon(GetMonData(mon, MON_DATA_SPECIES_OR_EGG),
+            sTradeMenu->partySpriteIds[TRADE_PARTNER][i] = CreateMonIcon2(GetMonData(mon, MON_DATA_SPECIES_OR_EGG),
                                                          SpriteCB_MonIcon,
                                                          (sTradeMonSpriteCoords[i + PARTY_SIZE][0] * 8) + 14,
                                                          (sTradeMonSpriteCoords[i + PARTY_SIZE][1] * 8) - 12,
                                                          1,
-                                                         GetMonData(mon, MON_DATA_PERSONALITY));
+                                                         GetMonData(mon, MON_DATA_IS_SHINY),
+                                                         GetMonData(mon, MON_DATA_PERSONALITY),
+                                                         GetMonData(mon, MON_DATA_IS_EGG));
             gSprites[sTradeMenu->partySpriteIds[TRADE_PARTNER][i]].oam.paletteNum = index;
         }
         gMain.state++;
