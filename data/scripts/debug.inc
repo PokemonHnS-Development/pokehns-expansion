@@ -208,7 +208,7 @@ Debug_EventScript_Script_1::
 	end
 
 Debug_EventScript_Script_2::
-	goto Debug_EventScript_Silver_Multi
+	setflag FLAG_VISITED_NEW_SINJOH
 	release
 	end
 

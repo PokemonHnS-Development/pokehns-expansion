@@ -3,7 +3,7 @@
   "name": "SnowsweptCavern_Basement_hns",
   "layout": "LAYOUT_SNOWSWEPT_CAVERN_BASEMENT_HNS",
   "music": "MUS_HG_LIGHTHOUSE",
-  "region_map_section": "MAPSEC_SNOWSWEPT_CAVERN",
+  "region_map_section": "MAPSEC_MT_SILVER",
   "requires_flash": false,
   "weather": "WEATHER_FOG_HORIZONTAL",
   "map_type": "MAP_TYPE_UNDERGROUND",
