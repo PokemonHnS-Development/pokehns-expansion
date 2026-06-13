@@ -889,6 +889,8 @@ void SetMonFormPSS(struct BoxPokemon *boxMon, enum FormChanges method);
 void SetMonFormPSS_ItemHold(struct BoxPokemon *boxMon);
 void UpdateSpeciesSpritePSS(struct BoxPokemon *boxmon);
 
+extern void FastUnsafeCopy32(void *, const void *, u32 size);
+
 static const u8 gText_JustOnePkmn[] = _("There is just one POKéMON with you.");
 static const u8 gText_PartyFull[] = _("Your party is full!");
 static const u8 gText_Box[] = _("BOX");
@@ -2018,9 +2020,9 @@ static void VBlankCB_PokeStorage(void)
     // Instead of transferring the entire palette buffer, transfer bg and non-dynamic palettes
     if (!gPaletteFade.bufferTransferDisabled && !gPaletteFade.active && !sStorage->transferWholePlttFrames) 
     {
-        DmaCopy16(3, gPlttBufferFaded, (void*)PLTT, 32*17);
+        FastUnsafeCopy32((void*)PLTT, gPlttBufferFaded, 32 * 17);
         // Skip the 12-1 palettes that are being dynamically swapped anyway
-        DmaCopy16(3, &gPlttBufferFaded[(12+16)*16], (void*)(PLTT + 0x380), 32*4);
+        FastUnsafeCopy32((void*)(PLTT + 0x380), &gPlttBufferFaded[(12+16)*16], 32 * 4);
     } 
     else 
     {
@@ -2154,8 +2156,6 @@ static void SetPokeStorageTask(TaskFunc newFunc)
     gTasks[sStorage->taskId].func = newFunc;
     sStorage->state = 0;
 }
-
-extern void FastUnsafeCopy32(void *, const void *, u32 size);
 
 // Manages swapping palettes mid draw to make all icon palettes appear
 ARM_FUNC __attribute__((section(".iwram.code"))) __attribute__((noinline)) __attribute__((optimize("-O3"))) static void HBlankCB_PokeStorage(void) {
