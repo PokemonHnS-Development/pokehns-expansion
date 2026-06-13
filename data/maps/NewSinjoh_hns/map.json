@@ -50,7 +50,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "NewSinjoh_EventScript_Hiker",
       "flag": "0"
     },
     {
@@ -68,7 +68,7 @@
       "flag": "0"
     },
     {
-      "local_id": "Cookie Lady",
+      "local_id": "HeatRock Lady",
       "graphics_id": "OBJ_EVENT_GFX_OLD_WOMAN_HNS",
       "x": 37,
       "y": 10,
@@ -78,7 +78,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "Script_NewSinoh_OldLady_Gift",
       "flag": "0"
     },
     {
@@ -175,19 +175,6 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
-      "x": 5,
-      "y": 37,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
       "x": 45,
       "y": 29,
       "elevation": 0,
@@ -211,6 +198,19 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Script_NewSinjoh_Traveler_Brother",
       "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL_HNS",
+      "x": 41,
+      "y": 47,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Script_NewSinjoh_GroundItem_1",
+      "flag": "FLAG_NEWSINJOH_ITEM_DUSKBALL"
     }
   ],
   "warp_events": [
@@ -222,7 +222,7 @@
       "dest_warp_id": "1"
     },
     {
-      "x": 20,
+      "x": 22,
       "y": 17,
       "elevation": 0,
       "dest_map": "MAP_NEW_SINJOH_HOUSE2_HNS",
@@ -264,8 +264,8 @@
       "dest_warp_id": "0"
     },
     {
-      "x": 22,
-      "y": 17,
+      "x": 7,
+      "y": 2,
       "elevation": 0,
       "dest_map": "MAP_NEW_SINJOH_KIMONO_HIDEOUT_HNS",
       "dest_warp_id": "0"
@@ -312,6 +312,38 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Script_NewSinjoh_LockedDoor"
+    },
+    {
+      "type": "hidden_item",
+      "x": 5,
+      "y": 36,
+      "elevation": 0,
+      "item": "ITEM_NUGGET",
+      "flag": "FLAG_HIDDEN_ITEMS_START"
+    },
+    {
+      "type": "hidden_item",
+      "x": 35,
+      "y": 9,
+      "elevation": 0,
+      "item": "ITEM_SNOWBALL",
+      "flag": "FLAG_HIDDEN_ITEMS_START"
+    },
+    {
+      "type": "hidden_item",
+      "x": 1,
+      "y": 43,
+      "elevation": 0,
+      "item": "ITEM_ULTRA_BALL",
+      "flag": "FLAG_HIDDEN_ITEMS_START"
+    },
+    {
+      "type": "hidden_item",
+      "x": 9,
+      "y": 17,
+      "elevation": 0,
+      "item": "ITEM_FIRE_STONE",
+      "flag": "FLAG_HIDDEN_ITEMS_START"
     }
   ],
   "game_version": "hns",

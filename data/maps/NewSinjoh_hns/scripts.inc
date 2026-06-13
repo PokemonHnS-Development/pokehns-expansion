@@ -95,7 +95,7 @@ MilkMan_Battle_text:
 	.string "Special delivery today!$"
 
 NewSinjoh_MilkMan_text_Lose:
-	.string "This world is perfect,\p"
+	.string "This world is perfect.\p"
 	.string "isn't it?$"
 
 NewSinjoh_Script_TravelMart::
@@ -250,7 +250,7 @@ NewSinjoh_EventScript_FatMan::
 	NewSinjoh_Text_FatMan:
 	.string "Ouughh...\p"
 	.string "This water feels magical on my back.\p"
-	.string "If you have backpain too,\n"
+	.string "If you have back pain too,\n"
 	.string "you should stay here with me..$"
 
 NewSinjoh_EventScript_OldLady::
@@ -280,7 +280,7 @@ NewSinjoh_EventScript_Girl1::
 	.string "She really like to explore\n"
 	.string "old ruins, so she begged me\l"
 	.string "if we could visit Sinjoh.\p"
-	.string "And i just couldn't say no to her!$"
+	.string "And I just couldn't say no to her!$"
 
 NewSinjoh_EventScript_Girl2::
 	lock
@@ -352,3 +352,81 @@ Text_NewSinjoh_LockedDoor:
 	.string "This is the hotsprings'\n"
 	.string "changing room...\l"
 	.string"No reason to go in there!$"
+
+Script_NewSinoh_OldLady_Gift::
+	lock
+	faceplayer
+	goto_if_set FLAG_NEWSINJOH_HEATROCK_GOT, NewSinjoh_EventScript_HeatRock_Got
+	msgbox Text_ItemGiveaway, MSGBOX_DEFAULT
+	checkitem ITEM_HEAT_ROCK, 1
+	compare VAR_RESULT, 1
+	goto_if_ge Script_HasHeatRockAlready
+	msgbox Text_GivingRock, MSGBOX_DEFAULT
+	giveitem ITEM_HEAT_ROCK, 1
+	compare VAR_RESULT, 0
+	goto_if_eq Script_BagIsFull
+	setflag FLAG_NEWSINJOH_HEATROCK_GOT
+	release
+	end
+
+Script_HasHeatRockAlready::
+	msgbox Text_HasHeatRockAlready, MSGBOX_DEFAULT
+	release
+	end
+
+Script_BagIsFull::
+	msgbox Text_BagIsFull, MSGBOX_DEFAULT
+	release
+	end
+
+Text_ItemGiveaway:
+	.string "Oh dear... The trip up\n"
+	.string "here must have been so cold.\l"
+	.string "Why don't i give you something.$"
+
+Text_GivingRock:
+	.string "Here you go deary..\n"
+    .string "Take this.$"
+
+Text_HasHeatRockAlready:
+	.string "Oh you already have one?\n"
+	.string "I'll hold onto this for now then..$"
+
+Text_BagIsFull:
+	.string "Your BAG is full hun.\n"
+	.string "why don't you make space and come back hm?$"
+
+NewSinjoh_EventScript_HeatRock_Got::
+    msgbox Text_ItemGiveaway, MSGBOX_DEFAULT 
+	msgbox Text_HasHeatRockAlready, MSGBOX_DEFAULT
+	release
+	end
+
+NewSinjoh_EventScript_Hiker::
+	lock
+	faceplayer
+	msgbox NewSinjoh_Text_Hiker, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
+	NewSinjoh_Text_Hiker:
+	.string "It's so cold here!\p"
+	.string "I think after i finish exploring\n"
+	.string "I'll go somewhere tropical!$"
+
+Script_NewSinjoh_GroundItem_1::
+	lock
+	giveitem ITEM_DUSK_BALL, 1
+	compare VAR_RESULT, 0
+	goto_if_eq Script_Bag1sFull
+	release
+	end
+
+Script_Bag1sFull::
+	msgbox Text_Bag1sFull, MSGBOX_DEFAULT
+	release
+	end
+
+Text_Bag1sFull:
+	.string "Your BAG is full.$"
