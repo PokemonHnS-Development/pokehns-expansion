@@ -3,7 +3,7 @@
   "name": "SinjohRuins_RegidracoRoom_hns",
   "layout": "LAYOUT_SINJOH_RUINS_REGIDRACO_ROOM_HNS",
   "music": "MUS_HG_SINJOU_RUINS",
-  "region_map_section": "MAPSEC_SINJOH",
+  "region_map_section": "MAPSEC_SINJOH_RUINS",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_NONE",

@@ -3,7 +3,7 @@
   "name": "Route50_House1_hns",
   "layout": "LAYOUT_ROUTE50_HOUSE1_HNS",
   "music": "MUS_HG_ICE_PATH",
-  "region_map_section": "MAPSEC_SINJOH",
+  "region_map_section": "MAPSEC_ROUTE_50",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_NONE",

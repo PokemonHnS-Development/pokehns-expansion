@@ -3,7 +3,7 @@
   "name": "NewSinjoh_House1_hns",
   "layout": "LAYOUT_NEW_SINJOH_HOUSE1_HNS",
   "music": "MUS_HG_CHERRYGROVE",
-  "region_map_section": "MAPSEC_SINJOH",
+  "region_map_section": "MAPSEC_NEW_SINJOH",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_NONE",

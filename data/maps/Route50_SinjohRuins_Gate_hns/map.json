@@ -3,7 +3,7 @@
   "name": "Route50_SinjohRuins_Gate_hns",
   "layout": "LAYOUT_ROUTE50_SINJOH_RUINS_GATE_HNS",
   "music": "MUS_HG_ICE_PATH",
-  "region_map_section": "MAPSEC_SINJOH",
+  "region_map_section": "MAPSEC_ROUTE_50",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_NONE",

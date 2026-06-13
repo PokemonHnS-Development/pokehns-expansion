@@ -3,7 +3,7 @@
   "name": "SinjohRuins_ArceusRoom_hns",
   "layout": "LAYOUT_SINJOH_RUINS_ARCEUS_ROOM_HNS",
   "music": "MUS_HG_ECRUTEAK",
-  "region_map_section": "MAPSEC_SINJOH",
+  "region_map_section": "MAPSEC_SINJOH_RUINS",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_NONE",

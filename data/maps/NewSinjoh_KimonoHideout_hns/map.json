@@ -3,7 +3,7 @@
   "name": "NewSinjoh_KimonoHideout_hns",
   "layout": "LAYOUT_NEW_SINJOH_KIMONO_HIDEOUT_HNS",
   "music": "MUS_DUMMY",
-  "region_map_section": "MAPSEC_ABANDONED_SHIP",
+  "region_map_section": "MAPSEC_NEW_SINJOH",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_NONE",

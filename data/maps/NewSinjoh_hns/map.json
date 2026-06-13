@@ -3,7 +3,7 @@
   "name": "NewSinjoh_hns",
   "layout": "LAYOUT_NEW_SINJOH_HNS",
   "music": "MUS_HG_BURNED_TOWER",
-  "region_map_section": "MAPSEC_SINJOH",
+  "region_map_section": "MAPSEC_NEW_SINJOH",
   "requires_flash": false,
   "weather": "WEATHER_SNOW",
   "map_type": "MAP_TYPE_TOWN",
