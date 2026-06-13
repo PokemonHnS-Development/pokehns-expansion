@@ -2657,4 +2657,15 @@ const struct Tileset gTileset_MtSilver_Ancient_Hns =
     .metatileAttributes = gMetatileAttributes_MtSilver_Ancient_Hns,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_ArceusRoom_Hns =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_ArceusRoom_Hns,
+    .palettes = gTilesetPalettes_ArceusRoom_Hns,
+    .metatiles = gMetatiles_ArceusRoom_Hns,
+    .metatileAttributes = gMetatileAttributes_ArceusRoom_Hns,
+    .callback = NULL,
+};
 #endif // IS_FRLG || IS_HNS

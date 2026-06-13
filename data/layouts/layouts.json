@@ -15752,7 +15752,7 @@
       "id": "LAYOUT_SINJOH_RUINS_HNS",
       "name": "SinjohRuins_hns_Layout",
       "width": 40,
-      "height": 49,
+      "height": 79,
       "primary_tileset": "gTileset_MtSilver_Exp_Hns",
       "secondary_tileset": "gTileset_MtSilver_Ancient_Hns",
       "border_filepath": "data/layouts/SinjohRuins_hns/border.bin",
@@ -15989,14 +15989,16 @@
       "layout_version": "hns"
     },
     {
-      "id": "LAYOUT_NEW_SINJOH_KIMONO_GIRLS_HIDEOUT",
-      "name": "NewSinjoh_KimonoGirls_Hideout_Layout",
-      "width": 19,
-      "height": 12,
-      "primary_tileset": "gTileset_Johto_Building_Hns",
-      "secondary_tileset": "gTileset_EcruteakTheater_Hns",
-      "border_filepath": "data/layouts/NewSinjoh_KimonoGirls_Hideout/border.bin",
-      "blockdata_filepath": "data/layouts/NewSinjoh_KimonoGirls_Hideout/map.bin"
+      "id": "LAYOUT_SINJOH_RUINS_ARCEUS_ROOM_HNS",
+      "name": "SinjohRuins_ArceusRoom_hns_Layout",
+      "width": 37,
+      "height": 35,
+      "primary_tileset": "gTileset_MtSilver_Exp_Hns",
+      "secondary_tileset": "gTileset_ArceusRoom_Hns",
+      "border_filepath": "data/layouts/SinjohRuins_ArceusRoom_hns/border.bin",
+      "blockdata_filepath": "data/layouts/SinjohRuins_ArceusRoom_hns/map.bin",
+      "game_version": "hns",
+      "layout_version": "hns"
     },
     {
       "id": "LAYOUT_NEW_SINJOH_KIMONO_HIDEOUT_HNS",
@@ -16006,7 +16008,9 @@
       "primary_tileset": "gTileset_Johto_Building_Hns",
       "secondary_tileset": "gTileset_EcruteakTheater_Hns",
       "border_filepath": "data/layouts/NewSinjoh_KimonoHideout_hns/border.bin",
-      "blockdata_filepath": "data/layouts/NewSinjoh_KimonoHideout_hns/map.bin"
+      "blockdata_filepath": "data/layouts/NewSinjoh_KimonoHideout_hns/map.bin",
+      "game_version": "hns",
+      "layout_version": "hns"
     }
   ]
 }

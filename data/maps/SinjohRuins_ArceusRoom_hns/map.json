@@ -1,0 +1,30 @@
+{
+  "id": "MAP_SINJOH_RUINS_ARCEUS_ROOM_HNS",
+  "name": "SinjohRuins_ArceusRoom_hns",
+  "layout": "LAYOUT_SINJOH_RUINS_ARCEUS_ROOM_HNS",
+  "music": "MUS_HG_ECRUTEAK",
+  "region_map_section": "MAPSEC_SINJOH",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_NONE",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": false,
+  "game_version": "hns",
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "region": "REGION_JOHTO",
+  "connections": null,
+  "object_events": [],
+  "warp_events": [
+    {
+      "x": 18,
+      "y": 33,
+      "elevation": 0,
+      "dest_map": "MAP_SINJOH_RUINS_HNS",
+      "dest_warp_id": "8"
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}

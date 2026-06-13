@@ -2354,6 +2354,8 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 
 .endif
 
-	.include "data/maps/NewSinjoh_KimonoGirls_Hideout/scripts.inc"
+.if IS_HNS
+	.include "data/maps/SinjohRuins_ArceusRoom_hns/scripts.inc"
 
 	.include "data/maps/NewSinjoh_KimonoHideout_hns/scripts.inc"
+.endif

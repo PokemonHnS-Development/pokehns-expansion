@@ -11,7 +11,9 @@
   "allow_escaping": false,
   "allow_running": false,
   "show_map_name": true,
+  "game_version": "hns",
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "region": "REGION_JOHTO",
   "connections": null,
   "object_events": [
     {

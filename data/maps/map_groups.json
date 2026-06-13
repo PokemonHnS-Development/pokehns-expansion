@@ -577,16 +577,16 @@
     "SinjohRuins_RegidracoRoom_hns",
     "SinjohRuins_RegielekiRoom_hns",
     "SinjohRuins_RegigigasRoom_hns",
+    "SinjohRuins_ArceusRoom_hns",
     "NewSinjoh_House1_hns",
     "NewSinjoh_House2_hns",
     "NewSinjoh_House3_hns",
     "NewSinjoh_House4_hns",
+    "NewSinjoh_KimonoHideout_hns",
     "Route50_SinjohRuins_Gate_hns",
     "Route50_House1_hns",
     "SinjohRuins_House1_hns",
-    "SinjohRuins_House2_hns",
-    "NewSinjoh_KimonoGirls_Hideout",
-    "NewSinjoh_KimonoHideout_hns"
+    "SinjohRuins_House2_hns"
   ],
   "gMapGroup_SpecialArea_Hns": [
     "TrainerHill_Courtyard_hns",

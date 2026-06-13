@@ -23,59 +23,73 @@
   "warp_events": [
     {
       "x": 4,
-      "y": 25,
+      "y": 55,
       "elevation": 0,
       "dest_map": "MAP_SINJOH_RUINS_HOUSE1_HNS",
       "dest_warp_id": "0"
     },
     {
       "x": 11,
-      "y": 28,
+      "y": 58,
       "elevation": 0,
       "dest_map": "MAP_SINJOH_RUINS_HOUSE2_HNS",
       "dest_warp_id": "0"
     },
     {
       "x": 18,
-      "y": 18,
+      "y": 48,
       "elevation": 0,
       "dest_map": "MAP_SINJOH_RUINS_TEMPLE_HNS",
       "dest_warp_id": "0"
     },
     {
       "x": 33,
-      "y": 29,
+      "y": 59,
       "elevation": 0,
       "dest_map": "MAP_SINJOH_RUINS_TEMPLE_HNS",
       "dest_warp_id": "1"
     },
     {
       "x": 6,
-      "y": 11,
+      "y": 41,
       "elevation": 0,
       "dest_map": "MAP_SINJOH_RUINS_TEMPLE_HNS",
       "dest_warp_id": "2"
     },
     {
-      "x": 26,
-      "y": 3,
+      "x": 28,
+      "y": 34,
       "elevation": 0,
       "dest_map": "MAP_SINJOH_RUINS_CAVE_HNS",
       "dest_warp_id": "0"
     },
     {
       "x": 18,
-      "y": 45,
+      "y": 75,
       "elevation": 0,
       "dest_map": "MAP_ROUTE50_SINJOH_RUINS_GATE_HNS",
       "dest_warp_id": "4"
     },
     {
       "x": 19,
-      "y": 45,
+      "y": 75,
       "elevation": 0,
       "dest_map": "MAP_ROUTE50_SINJOH_RUINS_GATE_HNS",
       "dest_warp_id": "5"
+    },
+    {
+      "x": 10,
+      "y": 5,
+      "elevation": 0,
+      "dest_map": "MAP_SINJOH_RUINS_ARCEUS_ROOM_HNS",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 11,
+      "y": 5,
+      "elevation": 0,
+      "dest_map": "MAP_SINJOH_RUINS_ARCEUS_ROOM_HNS",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [],
