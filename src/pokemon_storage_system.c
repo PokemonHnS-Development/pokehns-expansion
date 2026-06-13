@@ -2155,6 +2155,8 @@ static void SetPokeStorageTask(TaskFunc newFunc)
     sStorage->state = 0;
 }
 
+extern void FastUnsafeCopy32(void *, const void *, u32 size);
+
 // Manages swapping palettes mid draw to make all icon palettes appear
 ARM_FUNC __attribute__((section(".iwram.code"))) __attribute__((noinline)) __attribute__((optimize("-O3"))) static void HBlankCB_PokeStorage(void) {
     u16 i;
@@ -2174,18 +2176,18 @@ ARM_FUNC __attribute__((section(".iwram.code"))) __attribute__((noinline)) __att
                 // If palette color is empty, skip
                 if (!(sPaletteSwapBuffer[position] & 0x7FFF))
                     continue;
-                CpuFastCopy(&sPaletteSwapBuffer[position], dst, 32);
+                FastUnsafeCopy32(dst, &sPaletteSwapBuffer[position], 32);
             }
             break;
         }
     }
     if (gVCountAtIsr >= 146 && sLastHBlankCopy < 146 && sMarkingsSwapPal[0]) { // copy markings palette
         u16 *dst = (u16*) (OBJ_PLTT + (11+1)*16*2);
-        CpuFastCopy(&sMarkingsSwapPal[0], dst, 32);
+        FastUnsafeCopy32(dst, &sMarkingsSwapPal[0], 32);
     }
     if (gVCountAtIsr == 63 && sLastHBlankCopy < 63 && sChooseBoxSwapPal[0]) { // copy choose box palette
         u16 *dst = (u16*) (OBJ_PLTT + (0)*16*2);
-        CpuFastCopy(sChooseBoxSwapPal, dst, 32);
+        FastUnsafeCopy32(dst, sChooseBoxSwapPal, 32);
     }
 }
 
@@ -5732,7 +5734,8 @@ static bool8 DoWallpaperGfxChange(void)
     switch (sStorage->wallpaperChangeState)
     {
     case 0:
-        BeginNormalPaletteFade(sStorage->wallpaperPalBits, 1, 0, 16, RGB_WHITEALPHA);
+        // BeginNormalPaletteFade(sStorage->wallpaperPalBits, 1, 0, 16, RGB_WHITEALPHA);
+        BeginHardwarePaletteFade(BLDCNT_EFFECT_LIGHTEN | BLDCNT_TGT1_BG2, 1, 0, 16, FALSE);
         sStorage->wallpaperChangeState++;
         break;
     case 1:
@@ -5746,7 +5749,8 @@ static bool8 DoWallpaperGfxChange(void)
     case 2:
         if (WaitForWallpaperGfxLoad() == TRUE)
         {
-            BeginNormalPaletteFade(sStorage->wallpaperPalBits, 1, 16, 0, RGB_WHITEALPHA);
+            // BeginNormalPaletteFade(sStorage->wallpaperPalBits, 1, 16, 0, RGB_WHITEALPHA);
+            BeginHardwarePaletteFade(BLDCNT_EFFECT_LIGHTEN | BLDCNT_TGT1_BG2, 1, 16, 0, TRUE);
             sStorage->wallpaperChangeState++;
         }
         break;
@@ -5786,7 +5790,10 @@ static void LoadWallpaperGfx(u8 boxId, s8 direction)
         if (sStorage->wallpaperLoadDir != 0)
             LoadPalette(wallpaper->palettes, BG_PLTT_ID(4) + BG_PLTT_ID(sStorage->wallpaperOffset * 2), 2 * PLTT_SIZE_4BPP);
         else
-            CpuCopy16(wallpaper->palettes, &gPlttBufferUnfaded[BG_PLTT_ID(4) + BG_PLTT_ID(sStorage->wallpaperOffset * 2)], 2 * PLTT_SIZE_4BPP);
+        {
+            CpuFastCopy(wallpaper->palettes, &gPlttBufferFaded[BG_PLTT_ID(4) + BG_PLTT_ID(sStorage->wallpaperOffset * 2)], 2 * PLTT_SIZE_4BPP);
+            CpuFastCopy(wallpaper->palettes, &gPlttBufferUnfaded[BG_PLTT_ID(4) + BG_PLTT_ID(sStorage->wallpaperOffset * 2)], 2 * PLTT_SIZE_4BPP);
+        }
 
         sStorage->wallpaperTiles = malloc_and_decompress(wallpaper->tiles, &tilesSize);
         LoadBgTiles(2, sStorage->wallpaperTiles, tilesSize, sStorage->wallpaperOffset << 8);
