@@ -137,6 +137,9 @@ EWRAM_DATA static struct DexNavGUI *sDexNavUiDataPtr = NULL;
 EWRAM_DATA static u8 *sBg1TilemapBuffer = NULL;
 EWRAM_DATA u16 gDexNavSpecies = SPECIES_NONE;
 
+extern u16 gPaletteSwapBuffer[16*30];
+extern u16 gLastHBlankCopy;
+
 //// Function Declarations
 //GUI
 static void Task_DexNavWaitFadeIn(u8 taskId);
@@ -401,6 +404,43 @@ static const struct CompressedSpriteSheet sOwnedIconSpriteSheet = {sOwnedIconGfx
 static const struct CompressedSpriteSheet sHiddenMonIconSpriteSheet = {sHiddenMonIconGfx, (8 * 8) / 2, HIDDEN_MON_ICON_TAG};
 
 //// functions
+
+
+extern void FastUnsafeCopy32(void *, const void *, u32 size);
+
+// Manages swapping palettes mid draw to make all icon palettes appear
+ARM_FUNC __attribute__((section(".iwram.code"))) __attribute__((noinline)) __attribute__((optimize("-O3"))) static void HBlankCB_PokeStorage(void) {
+    if (gVCountAtIsr >= DISPLAY_HEIGHT) {
+        gLastHBlankCopy = 0;
+        return;
+    }
+    if (gVCountAtIsr >= 1 && gLastHBlankCopy < 1) {
+        gLastHBlankCopy = 1;
+        u16 *dst = (u16*) (OBJ_PLTT + (0)*16*2);
+        FastUnsafeCopy32(dst, &gPaletteSwapBuffer[0 * 16], 32 * 6);
+    }
+    else if (gVCountAtIsr >= 2 && gLastHBlankCopy < 2) {
+        gLastHBlankCopy = 2;
+        u16 *dst = (u16*) (OBJ_PLTT + (6)*16*2);
+        FastUnsafeCopy32(dst, &gPaletteSwapBuffer[6 * 16], 32 * 6);
+    }
+    else if (gVCountAtIsr >= 52 && gLastHBlankCopy < 52) {
+        gLastHBlankCopy = 52;
+        u16 *dst = (u16*) (OBJ_PLTT + (0)*16*2);
+        FastUnsafeCopy32(dst, &gPaletteSwapBuffer[12 * 16], 32 * 6);
+    }
+    else if (gVCountAtIsr >= 89 && gLastHBlankCopy < 89) {
+        gLastHBlankCopy = 89;
+        u16 *dst = (u16*) (OBJ_PLTT + (6)*16*2);
+        FastUnsafeCopy32(dst, &gPaletteSwapBuffer[18 * 16], 32 * 6);
+    }
+}
+
+static void DisableHBlankCallback(void)
+{
+    SetHBlankCallback(NULL); // avoid palette flickering
+}
+
 ///////////////////////
 //// DEXNAV SEARCH ////
 ///////////////////////
@@ -1578,9 +1618,19 @@ static const struct BgTemplate sDexNavMenuBgTemplates[2] =
 
 static void DexNav_VBlankCB(void)
 {
+    gLastHBlankCopy = 0;
     LoadOam();
     ProcessSpriteCopyRequests();
-    TransferPlttBuffer();
+    // Instead of transferring the entire palette buffer, transfer bg and non-dynamic palettes
+    if (!gPaletteFade.bufferTransferDisabled && !gPaletteFade.active) 
+    {
+        // DmaCopy16(3, &gPlttBufferFaded[(12+16)*16], (void*)(PLTT + 0x380), 32*4);
+        FastUnsafeCopy32((void*)(PLTT + 0x380), &gPlttBufferFaded[(12+16)*16], 32*4);
+    } 
+    else 
+    {
+        TransferPlttBuffer();
+    }
 }
 
 static void DexNav_MainCB(void)
@@ -1850,10 +1900,13 @@ static void CB1_DexNavSearchCallback(void)
 
 static void Task_DexNavExitAndSearch(u8 taskId)
 {
-    DexNavGuiFreeResources();
-    DestroyTask(taskId);
-    SetMainCallback1(CB1_DexNavSearchCallback);
-    SetMainCallback2(CB2_ReturnToField);
+    if (!gPaletteFade.active)
+    {
+        DexNavGuiFreeResources();
+        DestroyTask(taskId);
+        SetMainCallback1(CB1_DexNavSearchCallback);
+        SetMainCallback2(CB2_ReturnToField);
+    }
 }
 
 static void Task_DexNavFadeAndExit(u8 taskId)
@@ -1868,7 +1921,8 @@ static void Task_DexNavFadeAndExit(u8 taskId)
 
 static void DexNavFadeAndExit(void)
 {
-    BeginNormalPaletteFade(0xFFFFFFFF, 0, 0, 16, RGB_BLACK);
+    BeginHardwarePaletteFade(0xFF, 0, 0, 16, FALSE);
+    gPaletteFade.paletteFadeDoneCB = DisableHBlankCallback;
     CreateTask(Task_DexNavFadeAndExit, 0);
     SetVBlankCallback(DexNav_VBlankCB);
     SetMainCallback2(DexNav_MainCB);
@@ -1969,14 +2023,22 @@ static void DexNavLoadEncounterData(void)
     }
 }
 
-static void TryDrawIconInSlot(u16 species, s16 x, s16 y)
+static void TryDrawIconInSlot(u16 species, s16 x, s16 y, u32 position)
 {
-    if (species == SPECIES_NONE || species > NUM_SPECIES)
+    if (species == SPECIES_NONE || (species > NUM_SPECIES && species != 0xFFFF))
         CreateNoDataIcon(x, y);   //'X' in slot
-    else if (!GetSetPokedexFlag(SpeciesToNationalPokedexNum(species), FLAG_GET_SEEN))
-        CreateMonIcon(SPECIES_NONE, SpriteCB_MonIcon, x, y, 0, 0xFFFFFFFF); //question mark
+    else if (species == 0xFFFF || !GetSetPokedexFlag(SpeciesToNationalPokedexNum(species), FLAG_GET_SEEN))
+    {
+        const u16 *pal = GetIconPalette(SPECIES_NONE, FALSE, FALSE);
+        CpuFastCopy(pal, &gPaletteSwapBuffer[position * 16], 32);
+        CreateMonIcon3(SPECIES_NONE, SpriteCB_MonIcon, x, y, 0, 0xFFFFFFFF, ((position / 6) & 1 ? 6 : 0) + (position % 6), FALSE);
+    }
     else
-        CreateMonIcon(species, SpriteCB_MonIcon, x, y, 0, 0xFFFFFFFF);
+    {
+        const u16 *pal = GetIconPalette(species, FALSE, IsPersonalityFemale(species, 0xFFFFFFFF));
+        CpuFastCopy(pal, &gPaletteSwapBuffer[position * 16], 32);
+        CreateMonIcon3(species, SpriteCB_MonIcon, x, y, 0, 0xFFFFFFFF, ((position / 6) & 1 ? 6 : 0) + (position % 6), FALSE);
+    }
 }
 
 static void DrawSpeciesIcons(void)
@@ -1991,7 +2053,7 @@ static void DrawSpeciesIcons(void)
         species = sDexNavUiDataPtr->landSpecies[i];
         x = ROW_LAND_ICON_X + (24 * (i % COL_LAND_COUNT));
         y = ROW_LAND_TOP_ICON_Y + (i > COL_LAND_MAX ? 28 : 0);
-        TryDrawIconInSlot(species, x, y);
+        TryDrawIconInSlot(species, x, y, 6 + i);
     }
 
     for (i = 0; i < WATER_WILD_COUNT; i++)
@@ -1999,7 +2061,7 @@ static void DrawSpeciesIcons(void)
         species = sDexNavUiDataPtr->waterSpecies[i];
         x = ROW_WATER_ICON_X + 24 * i;
         y = ROW_WATER_ICON_Y;
-        TryDrawIconInSlot(species, x, y);
+        TryDrawIconInSlot(species, x, y, i);
     }
 
     for (i = 0; i < HIDDEN_WILD_COUNT; i++)
@@ -2008,11 +2070,11 @@ static void DrawSpeciesIcons(void)
         x = ROW_HIDDEN_ICON_X + 24 * i;
         y = ROW_HIDDEN_ICON_Y;
         if (FlagGet(DN_FLAG_DETECTOR_MODE))
-            TryDrawIconInSlot(species, x, y);
-       else if (species == SPECIES_NONE || species > NUM_SPECIES)
+            TryDrawIconInSlot(species, x, y, 18 + i);
+        else if (species == SPECIES_NONE || species > NUM_SPECIES)
             CreateNoDataIcon(x, y);
         else
-            CreateMonIcon(SPECIES_NONE, SpriteCB_MonIcon, x, y, 0, 0xFFFFFFFF); //question mark if detector mode inactive
+            TryDrawIconInSlot(0xFFFF, x, y, 18 + i); //question mark if detector mode inactive
     }
 }
 
@@ -2278,15 +2340,15 @@ static bool8 DexNav_DoGfxSetup(void)
         gMain.state++;
         break;
     case 11:
-        BlendPalettes(0xFFFFFFFF, 16, RGB_BLACK);
-        gMain.state++;
-        break;
-    case 12:
-        BeginNormalPaletteFade(0xFFFFFFFF, 0, 16, 0, RGB_BLACK);
+        BeginHardwarePaletteFade(0xFF, 0, 16, 0, TRUE);
         gMain.state++;
         break;
     default:
+        UnfadePlttBuffer(0xFFFFFFFF);
+        gLastHBlankCopy = 0;
+        SetHBlankCallback(HBlankCB_PokeStorage);
         SetVBlankCallback(DexNav_VBlankCB);
+        EnableInterrupts(INTR_FLAG_VBLANK | INTR_FLAG_HBLANK);
         SetMainCallback2(DexNav_MainCB);
         return TRUE;
     }
@@ -2346,7 +2408,8 @@ static void Task_DexNavMain(u8 taskId)
     if (JOY_NEW(B_BUTTON))
     {
         PlaySE(SE_POKENAV_OFF);
-        BeginNormalPaletteFade(0xFFFFFFFF, 0, 0, 16, RGB_BLACK);
+        BeginHardwarePaletteFade(0xFF, 0, 0, 16, FALSE);
+        gPaletteFade.paletteFadeDoneCB = DisableHBlankCallback;
         task->func = Task_DexNavFadeAndExit;
     }
     else if (JOY_NEW(DPAD_UP))
@@ -2473,7 +2536,8 @@ static void Task_DexNavMain(u8 taskId)
             gSpecialVar_0x8001 = sDexNavUiDataPtr->environment;
             gSpecialVar_0x8002 = (sDexNavUiDataPtr->cursorRow == ROW_HIDDEN) ? TRUE : FALSE;
             PlaySE(SE_DEX_SEARCH);
-            BeginNormalPaletteFade(0xFFFFFFFF, 0, 0, 16, RGB_BLACK);
+            BeginHardwarePaletteFade(0xFF, 0, 0, 16, FALSE);
+            gPaletteFade.paletteFadeDoneCB = DisableHBlankCallback;
             task->func = Task_DexNavExitAndSearch;
         }
     }
