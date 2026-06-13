@@ -52,6 +52,7 @@ enum {
     TAG_CURSOR,
     TAG_PLAYER_ICON,
     TAG_FLY_ICON,
+    TAG_FLY_ICON_BLUE,
 };
 
 // Window IDs for the fly map
@@ -473,6 +474,7 @@ static const u16 sRegionMapFramePal[] = INCBIN_U16("graphics/pokenav/region_map/
 static const u32 sRegionMapFrameGfxLZ[] = INCBIN_U32("graphics/pokenav/region_map/frame.4bpp.smol");
 static const u32 sRegionMapFrameTilemapLZ[] = INCBIN_U32("graphics/pokenav/region_map/frame.bin.smolTM");
 static const u16 sFlyTargetIcons_Pal[] = INCBIN_U16("graphics/pokenav/region_map/fly_target_icons.gbapal");
+static const u16 sFlyTargetIconsBlue_Pal[] = INCBIN_U16("graphics/pokenav/region_map/fly_target_icons_blue.gbapal");
 static const u32 sFlyTargetIcons_Gfx[] = INCBIN_U32("graphics/pokenav/region_map/fly_target_icons.4bpp.smol");
 
 static const u16 ALIGNED(4) sPokedexAreaMap_Pal[] = INCBIN_U16("graphics/pokedex/region_map.gbapal");
@@ -889,6 +891,12 @@ static const struct SpritePalette sFlyTargetIconsSpritePalette =
     .tag = TAG_FLY_ICON
 };
 
+static const struct SpritePalette sFlyTargetIconsBluePalette =
+{
+    .data = sFlyTargetIconsBlue_Pal,
+    .tag = TAG_FLY_ICON_BLUE
+};
+
 static const mapsec_u16_t sRedOutlineFlyDestinations[][2] =
 {
     {
@@ -972,6 +980,14 @@ static const struct SpriteTemplate sFlyDestIconSpriteTemplate =
 {
     .tileTag = TAG_FLY_ICON,
     .paletteTag = TAG_FLY_ICON,
+    .oam = &sFlyDestIcon_OamData,
+    .anims = sFlyDestIcon_Anims,
+};
+
+static const struct SpriteTemplate sFlyDestIconBlueSpriteTemplate =
+{
+    .tileTag = TAG_FLY_ICON,
+    .paletteTag = TAG_FLY_ICON_BLUE,
     .oam = &sFlyDestIcon_OamData,
     .anims = sFlyDestIcon_Anims,
 };
@@ -2497,6 +2513,7 @@ static void LoadFlyDestIcons(void)
     sheet.tag = TAG_FLY_ICON;
     LoadSpriteSheet(&sheet);
     LoadSpritePalette(&sFlyTargetIconsSpritePalette);
+    LoadSpritePalette(&sFlyTargetIconsBluePalette);
     CreateFlyDestIcons();
     TryCreateRedOutlineFlyDestIcons();
 }
@@ -2803,7 +2820,7 @@ static void TryCreateRedOutlineFlyDestIcons(void)
             GetMapSecDimensions(mapSecId, &x, &y, &width, &height);
             x = (x + MAPCURSOR_X_MIN) * 8;
             y = (y + MAPCURSOR_Y_MIN) * 8;
-            spriteId = CreateSprite(&sFlyDestIconSpriteTemplate, x, y, 10);
+            spriteId = CreateSprite(mapSecId == MAPSEC_NEW_SINJOH ? &sFlyDestIconBlueSpriteTemplate : &sFlyDestIconSpriteTemplate, x, y, 10);
             if (spriteId != MAX_SPRITES)
             {
                 gSprites[spriteId].oam.size = SPRITE_SIZE(16x16);
