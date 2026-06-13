@@ -5734,8 +5734,19 @@ static bool8 DoWallpaperGfxChange(void)
     switch (sStorage->wallpaperChangeState)
     {
     case 0:
-        // BeginNormalPaletteFade(sStorage->wallpaperPalBits, 1, 0, 16, RGB_WHITEALPHA);
-        BeginHardwarePaletteFade(BLDCNT_EFFECT_LIGHTEN | BLDCNT_TGT1_BG2, 1, 0, 16, FALSE);
+        if (sStorage->boxOption != OPTION_MOVE_ITEMS)
+        {
+            BeginHardwarePaletteFade(BLDCNT_EFFECT_LIGHTEN | BLDCNT_TGT1_BG2, 1, 0, 16, FALSE);
+        }
+        else
+        {
+            BeginHardwarePaletteFade(BLDCNT_EFFECT_LIGHTEN | BLDCNT_TGT1_BG2 | BLDCNT_TGT2_BG_ALL, 1, 0, 16, FALSE);
+            gPaletteFade.bldAlpha1Ovrd = BLDALPHA1_VAL;
+            gPaletteFade.bldAlpha2Ovrd = BLDALPHA2_VAL;
+            gPaletteFade.doBldAlpha1Ovrd = TRUE;
+            gPaletteFade.doBldAlpha2Ovrd = TRUE;
+            gPaletteFade.hardwareForceBlankOnWhite = FALSE;
+        }
         sStorage->wallpaperChangeState++;
         break;
     case 1:
@@ -5749,8 +5760,18 @@ static bool8 DoWallpaperGfxChange(void)
     case 2:
         if (WaitForWallpaperGfxLoad() == TRUE)
         {
-            // BeginNormalPaletteFade(sStorage->wallpaperPalBits, 1, 16, 0, RGB_WHITEALPHA);
-            BeginHardwarePaletteFade(BLDCNT_EFFECT_LIGHTEN | BLDCNT_TGT1_BG2, 1, 16, 0, TRUE);
+            if (sStorage->boxOption != OPTION_MOVE_ITEMS)
+            {
+                BeginHardwarePaletteFade(BLDCNT_EFFECT_LIGHTEN | BLDCNT_TGT1_BG2, 1, 16, 0, FALSE);
+            }
+            else
+            {
+                BeginHardwarePaletteFade(BLDCNT_EFFECT_LIGHTEN | BLDCNT_TGT1_BG2 | BLDCNT_TGT2_BG_ALL, 1, 16, 0, TRUE);
+                gPaletteFade.bldAlpha1Ovrd = BLDALPHA1_VAL;
+                gPaletteFade.bldAlpha2Ovrd = BLDALPHA2_VAL;
+                gPaletteFade.doBldAlpha1Ovrd = TRUE;
+                gPaletteFade.doBldAlpha2Ovrd = TRUE;
+            }
             sStorage->wallpaperChangeState++;
         }
         break;

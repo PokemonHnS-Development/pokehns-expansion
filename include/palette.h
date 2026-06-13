@@ -82,7 +82,8 @@ struct PaletteFadeControl
     bool8 doBldAlpha2Ovrd:1;
     u8 bldAlpha2Ovrd:4;
     void (*paletteFadeDoneCB)();
-    u32 padding:5;
+    bool8 hardwareForceBlankOnWhite:1;
+    u32 padding:4;
 };
 
 extern const struct BlendSettings gTimeOfDayBlend[];
