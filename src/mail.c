@@ -740,6 +740,7 @@ static void CB2_ExitMailReadFreeVars(void)
         case ICON_TYPE_BEAD:
         case ICON_TYPE_DREAM:
             FreeAndDestroyMonIconSprite(&gSprites[sMailRead->monIconSpriteId]);
+            FreeMonIconPalettes();
         }
         memset(sMailRead, 0, sizeof(*sMailRead));
         ResetPaletteFade();
