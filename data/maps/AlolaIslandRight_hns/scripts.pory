@@ -242,13 +242,15 @@ script Alola_Akala_TapuLele_Flyover{
 script Alola_Akala_BattleVsTapuLele{
     lock
     faceplayer
-    playmoncry(SPECIES_TAPU_LELE, 0)
+    playmoncry(SPECIES_TAPU_LELE, CRY_MODE_ENCOUNTER)
     applymovement(Akala_Tapu, moves(walk_in_place_down*2))
     msgbox("Le-Lele!")
     waitmovement(0)
     waitmoncry
-    setwildbattle(SPECIES_TAPU_LELE, 60)
-    dowildbattle
+    playbgm(MUS_HG_VS_SUICUNE, FALSE)
+    seteventmon(SPECIES_TAPU_LELE, 60)
+    special(BattleSetup_StartLegendaryBattle)
+    waitstate
     specialvar(VAR_RESULT, GetBattleOutcome)
     if (var(VAR_RESULT) == B_OUTCOME_CAUGHT){
         setflag(FLAG_HIDE_TAPU_LELE)

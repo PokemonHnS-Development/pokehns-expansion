@@ -144,13 +144,15 @@ script Alola_Poni_TapuFini_Flyover{
 script Alola_Poni_BattleVsTapuFini{
     lock
     faceplayer
-    playmoncry(SPECIES_TAPU_FINI, 0)
+    playmoncry(SPECIES_TAPU_FINI, CRY_MODE_ENCOUNTER)
     applymovement(Poni_Tapu, moves(walk_in_place_down*2))
     msgbox("Fiiin!")
     waitmovement(0)
     waitmoncry
-    setwildbattle(SPECIES_TAPU_FINI, 60)
-    dowildbattle
+    playbgm(MUS_HG_VS_SUICUNE, FALSE)
+    seteventmon(SPECIES_TAPU_FINI, 60)
+    special(BattleSetup_StartLegendaryBattle)
+    waitstate
     specialvar(VAR_RESULT, GetBattleOutcome)
     if (var(VAR_RESULT) == B_OUTCOME_CAUGHT){
         setflag(FLAG_HIDE_TAPU_FINI)

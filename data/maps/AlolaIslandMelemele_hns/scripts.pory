@@ -398,13 +398,15 @@ script Alola_MeleMele_TapuKoko_Flyover{
 script Alola_Melemele_BattleVsTapuKoko{
     lock
     faceplayer
-    playmoncry(SPECIES_TAPU_KOKO, 0)
+    playmoncry(SPECIES_TAPU_KOKO, CRY_MODE_ENCOUNTER)
     applymovement(Melemele_Tapu, moves(walk_in_place_down*2))
     msgbox("Ko-Ko-Kooo!")
     waitmovement(0)
     waitmoncry
-    setwildbattle(SPECIES_TAPU_KOKO, 60)
-    dowildbattle
+    playbgm(MUS_HG_VS_SUICUNE, FALSE)
+    seteventmon(SPECIES_TAPU_KOKO, 60)
+    special(BattleSetup_StartLegendaryBattle)
+    waitstate
     specialvar(VAR_RESULT, GetBattleOutcome)
     if (var(VAR_RESULT) == B_OUTCOME_CAUGHT){
         setflag(FLAG_HIDE_TAPU_KOKO)
