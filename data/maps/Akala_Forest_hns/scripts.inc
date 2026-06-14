@@ -4,7 +4,7 @@ Akala_Forest_hns_MapScripts::
 
 Alola_Akala_Forest_FindItem1::
 # 4 "data/maps/Akala_Forest_hns/scripts.pory"
-	finditem ITEM_LINK_CABLE, 1
+	finditem ITEM_FULL_RESTORE, 1
 	end
 
 
