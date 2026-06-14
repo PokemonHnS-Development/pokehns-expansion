@@ -144,7 +144,7 @@ Alola_Ulaula_TotemBattle::
 # 112 "data/maps/UlaUla_Forest_hns/scripts.pory"
 	playmoncry SPECIES_MIMIKYU, 0
 # 113 "data/maps/UlaUla_Forest_hns/scripts.pory"
-	msgbox Alola_Ulaula_TotemBattle_Text_0, MSGBOX_AUTOCLOSE
+	msgbox Alola_Ulaula_TotemBattle_Text_2, MSGBOX_AUTOCLOSE
 # 114 "data/maps/UlaUla_Forest_hns/scripts.pory"
 	waitmoncry
 # 115 "data/maps/UlaUla_Forest_hns/scripts.pory"
@@ -225,7 +225,7 @@ Alola_Ulaula_TotemBattle_10:
 # 126 "data/maps/UlaUla_Forest_hns/scripts.pory"
 	removeobject Ulaula_Totem
 # 127 "data/maps/UlaUla_Forest_hns/scripts.pory"
-	msgbox Alola_Ulaula_TotemBattle_Text_2, MSGBOX_AUTOCLOSE
+	msgbox Alola_Ulaula_TotemBattle_Text_3, MSGBOX_AUTOCLOSE
 # 129 "data/maps/UlaUla_Forest_hns/scripts.pory"
 	clearflag FLAG_NO_WILD_CATCHING
 # 130 "data/maps/UlaUla_Forest_hns/scripts.pory"
@@ -337,7 +337,7 @@ Alola_Ulaula_TotemBattle_Trigger_Movement_0:
 
 Alola_Ulaula_TotemBattle_Text_0:
 # 80 "data/maps/UlaUla_Forest_hns/scripts.pory"
-	.string "Thhhh!$"
+	.string "Bee-beep!$"
 
 Alola_Ulaula_TotemBattle_Text_1:
 # 94 "data/maps/UlaUla_Forest_hns/scripts.pory"
@@ -345,6 +345,10 @@ Alola_Ulaula_TotemBattle_Text_1:
 	.string "It scampered off somewhere…$"
 
 Alola_Ulaula_TotemBattle_Text_2:
+# 113 "data/maps/UlaUla_Forest_hns/scripts.pory"
+	.string "Ssee-mee?!$"
+
+Alola_Ulaula_TotemBattle_Text_3:
 # 127 "data/maps/UlaUla_Forest_hns/scripts.pory"
 	.string "Totem Mimikyu was defeated!\n"
 	.string "It scampered off somewhere…$"

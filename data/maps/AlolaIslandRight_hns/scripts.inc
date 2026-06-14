@@ -254,7 +254,7 @@ Alola_Akala_TotemBattle::
 # 183 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	playmoncry SPECIES_SALAZZLE, 0
 # 184 "data/maps/AlolaIslandRight_hns/scripts.pory"
-	msgbox Alola_Akala_TotemBattle_Text_0, MSGBOX_AUTOCLOSE
+	msgbox Alola_Akala_TotemBattle_Text_2, MSGBOX_AUTOCLOSE
 # 185 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	waitmoncry
 # 186 "data/maps/AlolaIslandRight_hns/scripts.pory"
@@ -332,7 +332,7 @@ Alola_Akala_TotemBattle_9:
 # 197 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	removeobject Akala_Totem
 # 198 "data/maps/AlolaIslandRight_hns/scripts.pory"
-	msgbox Alola_Akala_TotemBattle_Text_2, MSGBOX_AUTOCLOSE
+	msgbox Alola_Akala_TotemBattle_Text_3, MSGBOX_AUTOCLOSE
 # 200 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	clearflag FLAG_NO_WILD_CATCHING
 # 201 "data/maps/AlolaIslandRight_hns/scripts.pory"
@@ -583,7 +583,7 @@ Alola_Akala_OldManOnBench_Text_0:
 
 Alola_Akala_TotemBattle_Text_0:
 # 158 "data/maps/AlolaIslandRight_hns/scripts.pory"
-	.string "Thhhh!$"
+	.string "Wahhhtahhh!$"
 
 Alola_Akala_TotemBattle_Text_1:
 # 172 "data/maps/AlolaIslandRight_hns/scripts.pory"
@@ -591,6 +591,10 @@ Alola_Akala_TotemBattle_Text_1:
 	.string "It scampered off somewhere…$"
 
 Alola_Akala_TotemBattle_Text_2:
+# 184 "data/maps/AlolaIslandRight_hns/scripts.pory"
+	.string "Salaa!$"
+
+Alola_Akala_TotemBattle_Text_3:
 # 198 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	.string "Totem Salazzle was defeated!\n"
 	.string "It scampered off somewhere…$"

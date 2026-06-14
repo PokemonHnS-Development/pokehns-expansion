@@ -379,7 +379,7 @@ Alola_Poni_Island_Sign_Text_0:
 
 Alola_Poni_TotemBattle_Text_0:
 # 87 "data/maps/AlolaIsland_hns/scripts.pory"
-	.string "Thhhh!$"
+	.string "Ko-mo-ko-mo-o!$"
 
 Alola_Poni_TotemBattle_Text_1:
 # 101 "data/maps/AlolaIsland_hns/scripts.pory"
