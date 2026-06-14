@@ -145,6 +145,7 @@ void SetDefaultChallengeSettings(void)
     gSaveblock3.challengeSettings.tx_Mode_InfiniteTMs        = 1;
     gSaveblock3.challengeSettings.tx_Mode_Mints              = 1;
     gSaveblock3.challengeSettings.tx_Mode_PoisonSurvive      = 1;
+    gSaveblock3.challengeSettings.tx_Challenges_OneTypeChallenge = 31;
 
     // Randomizer defaults (shown when Randomizer is ON)
     gSaveblock3.challengeSettings.tx_Random_Similar          = 1;
@@ -249,8 +250,10 @@ void NewGameInitData(void)
     ResetGameStats();
     ClearAllContestWinnerPics();
     ClearPlayerLinkBattleRecords();
+#if !IS_FRLG && !IS_HNS
     InitSeedotSizeRecord();
     InitLotadSizeRecord();
+#endif
     gPlayerPartyCount = 0;
     ZeroPlayerPartyMons();
     ResetPokemonStorageSystem();

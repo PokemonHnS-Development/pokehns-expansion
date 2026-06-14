@@ -91,7 +91,7 @@ struct TrainerCardData
     u16 backTilemap[600];
     u16 bgTilemap[600];
     u8 badgeTiles[0x80 * NUM_BADGES];
-    u8 stickerTiles[0x200];
+    u8 stickerTiles[0x400];
     u8 cardTiles[0x2300];
     u16 cardTilemapBuffer[0x1000];
     u16 bgTilemapBuffer[0x1000];
@@ -213,8 +213,6 @@ static const u16 sKantoTrainerCardBadges_Pal[]   = INCBIN_U16("graphics/trainer_
 static const u16 sTrainerCardStar_Pal[]          = INCBIN_U16("graphics/trainer_card/star.gbapal");
 static const u16 sTrainerCardSticker1_Pal[]      = INCBIN_U16("graphics/trainer_card/frlg/stickers1.gbapal");
 static const u16 sTrainerCardSticker2_Pal[]      = INCBIN_U16("graphics/trainer_card/frlg/stickers2.gbapal");
-static const u16 sTrainerCardSticker3_Pal[]      = INCBIN_U16("graphics/trainer_card/frlg/stickers3.gbapal");
-static const u16 sTrainerCardSticker4_Pal[]      = INCBIN_U16("graphics/trainer_card/frlg/stickers4.gbapal");
 static const u32 sKantoTrainerCardBadges_Gfx[]   = INCBIN_U32("graphics/trainer_card/frlg/badges.4bpp.smol");
 
 static const struct BgTemplate sTrainerCardBgTemplates[4] =
@@ -845,6 +843,16 @@ static void TrainerCard_GenerateCardForPlayer(struct TrainerCard *trainerCard)
         trainerCard->unionRoomClass = gUnionRoomFacilityClasses[(trainerCard->trainerId % NUM_UNION_ROOM_CLASSES) + NUM_UNION_ROOM_CLASSES];
     else
         trainerCard->unionRoomClass = gUnionRoomFacilityClasses[trainerCard->trainerId % NUM_UNION_ROOM_CLASSES];
+
+#if IS_FRLG
+    trainerCard->monSpecies[0] = VarGet(VAR_TRAINER_CARD_MON_ICON_1);
+    trainerCard->monSpecies[1] = VarGet(VAR_TRAINER_CARD_MON_ICON_2);
+    trainerCard->monSpecies[2] = VarGet(VAR_TRAINER_CARD_MON_ICON_3);
+    trainerCard->monSpecies[3] = VarGet(VAR_TRAINER_CARD_MON_ICON_4);
+    trainerCard->monSpecies[4] = VarGet(VAR_TRAINER_CARD_MON_ICON_5);
+    trainerCard->monSpecies[5] = VarGet(VAR_TRAINER_CARD_MON_ICON_6);
+    trainerCard->monIconTint = VarGet(VAR_TRAINER_CARD_MON_ICON_TINT_IDX);
+#endif
 }
 
 void TrainerCard_GenerateCardForLinkPlayer(struct TrainerCard *trainerCard)
@@ -1452,7 +1460,7 @@ static void LoadMonIconGfx(void)
         if (!sData->trainerCard.monSpecies[i])
             continue;
 
-        palette = GetMonSpritePalFromSpeciesAndPersonality(sData->trainerCard.monSpecies[i], FALSE, 0);
+        palette = GetIconPalette(sData->trainerCard.monSpecies[i], FALSE, FALSE);
 
         CpuSet(palette, sData->monIconPal, PLTT_SIZE_4BPP);
 
@@ -1461,7 +1469,7 @@ static void LoadMonIconGfx(void)
         case MON_ICON_TINT_NORMAL:
             break;
         case MON_ICON_TINT_BLACK:
-            TintPalette_CustomTone(sData->monIconPal, 16, 0, 0, 0);
+            TintPalette_CustomTone(sData->monIconPal, 16, 64, 64, 64);
             break;
         case MON_ICON_TINT_PINK:
             TintPalette_CustomTone(sData->monIconPal, 16, 500, 330, 310);
@@ -1476,9 +1484,9 @@ static void LoadMonIconGfx(void)
     }
 }
 
-// TODO: fix these
 static void UpdateTrainerCardMonIcons(void)
 {
+#if IS_HNS
     u16 species;
     u8 i;
     u8 x = 40;
@@ -1490,6 +1498,7 @@ static void UpdateTrainerCardMonIcons(void)
         gSprites[sMonIconSpriteIds[i]].oam.priority = 0;
         StartSpriteAnim(&gSprites[sMonIconSpriteIds[i]], 4);
     }
+#endif
 }
 
 static void DestroyTrainerCardMonIcons(void)
@@ -1501,11 +1510,10 @@ static void DestroyTrainerCardMonIcons(void)
     FreeMonIconPalettes();
 }
 
-// TODO: sticker removed?
 static void PrintStickersOnCard(void)
 {
     u8 i;
-    u8 paletteSlots[4] = {11, 12, 13, 13};
+    u8 paletteSlots[2] = {11, 12};
 
     if (sData->cardType == CARD_TYPE_FRLG && sData->trainerCard.shouldDrawStickers == TRUE)
     {
@@ -1513,7 +1521,7 @@ static void PrintStickersOnCard(void)
         {
             u8 sticker = sData->trainerCard.stickers[i];
             if (sData->trainerCard.stickers[i])
-                WriteSequenceToBgTilemapBuffer(3, i * 4 + 320, i * 3 + 2, 2, 2, 2, paletteSlots[sticker - 1], 1);
+                WriteSequenceToBgTilemapBuffer(3, i * 4 + 320 + ((sticker - 1) % 2) * 16, i * 3 + 2, 2, 2, 2, paletteSlots[(sticker - 1) / 2], 1);
         }
     }
 }
@@ -1522,8 +1530,6 @@ static void LoadStickerGfx(void)
 {
     LoadPalette(sTrainerCardSticker1_Pal, BG_PLTT_ID(11), PLTT_SIZE_4BPP);
     LoadPalette(sTrainerCardSticker2_Pal, BG_PLTT_ID(12), PLTT_SIZE_4BPP);
-    LoadPalette(sTrainerCardSticker3_Pal, BG_PLTT_ID(13), PLTT_SIZE_4BPP);
-    // LoadPalette(sTrainerCardSticker4_Pal, BG_PLTT_ID(14), PLTT_SIZE_4BPP);
     LoadBgTiles(3, sData->stickerTiles, 1024, 128);
 }
 
