@@ -12,9 +12,10 @@
   "allow_running": false,
   "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_LANCE_HNS",
-  "connections": 0,
+  "connections": null,
   "object_events": [
     {
+      "local_id": "LOCALID_LEAGUE_LANCE",
       "graphics_id": "OBJ_EVENT_GFX_LANCE_HNS",
       "x": 6,
       "y": 8,
@@ -25,10 +26,10 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "PokemonLeague_WillsRoom_EventScript_Lance",
-      "flag": "0",
-      "local_id": "LOCALID_LEAGUE_LANCE"
+      "flag": "0"
     },
     {
+      "local_id": "LOCALID_LEAGUE_MARY",
       "graphics_id": "OBJ_EVENT_GFX_GIRL_1_HNS",
       "x": 6,
       "y": 15,
@@ -39,10 +40,10 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_HIDE_INDIGO_PLATEAU_MARY_OAK",
-      "local_id": "LOCALID_LEAGUE_MARY"
+      "flag": "FLAG_HIDE_INDIGO_PLATEAU_MARY_OAK"
     },
     {
+      "local_id": "LOCALID_LEAGUE_OAK",
       "graphics_id": "OBJ_EVENT_GFX_PROF_OAK_HNS",
       "x": 6,
       "y": 16,
@@ -53,8 +54,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_HIDE_INDIGO_PLATEAU_MARY_OAK",
-      "local_id": "LOCALID_LEAGUE_OAK"
+      "flag": "FLAG_HIDE_INDIGO_PLATEAU_MARY_OAK"
     }
   ],
   "warp_events": [

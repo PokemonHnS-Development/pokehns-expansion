@@ -108,13 +108,13 @@ Alola_Poni_BattleGolem_3:
 
 Alola_Poni_Cave_FindItem1::
 # 64 "data/maps/Poni_Cave_hns/scripts.pory"
-	finditem ITEM_POTION, 1
+	finditem ITEM_CALCIUM, 1
 	end
 
 
 Alola_Poni_Cave_FindItem2::
 # 69 "data/maps/Poni_Cave_hns/scripts.pory"
-	finditem ITEM_ANTIDOTE, 1
+	finditem ITEM_THUNDER_STONE, 1
 	end
 
 

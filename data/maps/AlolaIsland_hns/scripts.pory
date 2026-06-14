@@ -173,3 +173,28 @@ script Alola_Poni_BattleVsTapuFini{
     release
     end
 }
+
+script Alola_Poni_TrainerBattleSwimmer1{
+    trainerbattle_single(TRAINER_PONI_SWIMMER_1_HNS, "Warmer water, no problem!", "Gah, I forgot my sunscreen\.")
+    msgbox("I've swam into so many cool Pokémon!
+    It must be something in the water.", MSGBOX_AUTOCLOSE)
+    release
+    end
+}
+
+script Alola_Poni_TrainerBattleSwimmer2{
+    trainerbattle_single(TRAINER_PONI_SWIMMER_2_HNS, "Hey, don't block my current!", "Ugh, fine,\njust let me swim\.")
+    msgbox("The current is great for tubing.
+    I don't think I'll tube anywhere else!", MSGBOX_AUTOCLOSE)
+    release
+    end
+}
+
+script Alola_Poni_NPC_girl{
+    lock
+    faceplayer
+    msgbox("Poni Isle is my favorite.
+    The wilderness just speaks for itself!", MSGBOX_AUTOCLOSE)
+    release
+    end
+}

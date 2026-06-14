@@ -30,12 +30,12 @@ script Alola_Ulaula_BattlePalossand{
 }
 
 script Alola_Ulaula_FindItem1{
-    finditem(ITEM_POTION, 1)
+    finditem(ITEM_FRIEND_BALL, 1)
     end
 }
 
 script Alola_Ulaula_FindItem2{
-    finditem(ITEM_ANTIDOTE, 1)
+    finditem(ITEM_PROTEIN, 1)
     end
 }
 
@@ -140,4 +140,56 @@ script Alola_Ulaula_Phant_outside{
         release
         end
     }
+}
+
+
+script Alola_Ulaula_TrainerBattlePicnicker{
+    trainerbattle_single(TRAINER_ULAULA_PICNICKER_HNS, "Surprise!\nI was in the trees!", "Back into hiding I go\.")
+    msgbox("I thought I saw something red flying
+    through the sky.
+    
+    Could it have been a Pokémon?", MSGBOX_AUTOCLOSE)
+    release
+    end
+}
+
+script Alola_Ulaula_TrainerBattleYoungster{
+    trainerbattle_single(TRAINER_ULAULA_YOUNGSTER_HNS, "Hey, I'm going to be the first to climb\nMt. Lanikala!", "It's not even the real Mt. Lanikala\.")
+    msgbox("My dad never told me the real name of
+    this mountain.
+    
+    We've always just called it Mt. Lanikala.", MSGBOX_AUTOCLOSE)
+    release
+    end
+}
+
+script Alola_Ulaula_TrainerBattleHiker{
+    trainerbattle_single(TRAINER_ULAULA_HIKER_HNS, "You must be tough to handle this\nrough terrain!", "Oof,\nI should've trained harder\.")
+    msgbox("Ula'ula Isle has the best hiking!
+    
+    The locals refer to this mountain as
+    Mt. Lanikala, as it is the tallest on
+    the Alola Isles!", MSGBOX_AUTOCLOSE)
+    release
+    end
+}
+
+script Alola_Ulaula_TrainerBattleCooltrainer{
+    trainerbattle_single(TRAINER_ULAULA_COOLTRAINER_HNS, "This cave smells terrible!\n Let's battle to get my mind off of it!", "Should've brought some air freshener\.")
+    msgbox("You should plug your nose if you plan
+    on going in that cave.", MSGBOX_AUTOCLOSE)
+    release
+    end
+}
+
+script Alola_Ulaula_LassNPC{
+    lock
+    faceplayer
+    msgbox("The sea by the Isles is truly
+    breathtaking.
+    
+    I could sit here all day and just
+    watch the waves.", MSGBOX_AUTOCLOSE)
+    release
+    end
 }

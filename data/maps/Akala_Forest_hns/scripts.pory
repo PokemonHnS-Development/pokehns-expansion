@@ -1,11 +1,31 @@
 mapscripts Akala_Forest_hns_MapScripts {}
 
 script Alola_Akala_Forest_FindItem1{
-    finditem(ITEM_POTION, 1)
+    finditem(ITEM_LINK_CABLE, 1)
     end
 }
 
 script Alola_Akala_Forest_FindItem2{
-    finditem(ITEM_ANTIDOTE, 1)
+    finditem(ITEM_PP_UP, 1)
+    end
+}
+
+script Alola_AkalaForest_TrainerBattleBugCatcher1{
+    trainerbattle_single(TRAINER_AKALA_FOREST_BUGCATCHER_1_HNS, "Look at all the cool bugs here on the \nIsles!", "Ouch, that stung!")
+    msgbox("The Isles are far away from other land,
+    so Bug-type Pokémon here must have
+    adapted to the environment.", MSGBOX_AUTOCLOSE)
+    release
+    end
+}
+
+script Alola_AkalaForest_TrainerBattleBugCatcher2{
+    trainerbattle_single(TRAINER_AKALA_FOREST_BUGCATCHER_2_HNS, "Look at what I caught!", "Awh, that bites!")
+    msgbox("The climate is a bit different on the
+    Alola Isles\.
+    
+    I'm sure that's why there are some
+    unique Bug-type Pokémon here.", MSGBOX_AUTOCLOSE)
+    release
     end
 }

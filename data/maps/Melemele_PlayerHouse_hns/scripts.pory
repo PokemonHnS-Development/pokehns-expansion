@@ -54,8 +54,14 @@ script Alola_Melemele_SamsonOakVilla_Dialogue{
             msgbox("Wow!
             You saw the Guardian Dieties!
             
-            Incredible work, {PLAYER}.
+            Incredible work, {PLAYER}."
+            , MSGBOX_AUTOCLOSE)
+            giveitem(ITEM_BEAST_BALL)
+            msgbox("I found this while wandering about.
 
+            I'm not entirely sure what it's for,
+            but you should take it. 
+            
             The Alola Isles must truly be special if
             the Guardians themselves visited!", MSGBOX_AUTOCLOSE)
             setvar(VAR_ALOLA_STATE, 4)

@@ -62,11 +62,37 @@ script Alola_Melemele_BattleDugtrio{
 
 
 script Alola_Akala_Cave_FindItem1{
-    finditem(ITEM_POTION, 1)
+    finditem(ITEM_CARBOS, 1)
     end
 }
 
 script Alola_Akala_Cave_FindItem2{
-    finditem(ITEM_ANTIDOTE, 1)
+    finditem(ITEM_HP_UP, 1)
+    end
+}
+
+script Alola_AkalaCave_TrainerBattleHiker{
+    trainerbattle_single(TRAINER_AKALA_CAVE_HIKER_HNS, "You must be tough if you made it all the\nway up here!", "Tougher than me!")
+    msgbox("I had to stop climbing because it was
+    getting far too hot.
+    
+    It's like someone's got a fire going
+    up on the peak\.", MSGBOX_AUTOCLOSE)
+    release
+    end
+}
+
+script Alola_AkalaCave_TrainerBattlePicnicker{
+    trainerbattle_single(TRAINER_AKALA_CAVE_PICNICKER_HNS, "I'm tired from all this walking,\nlet's have a battle!", "Well that was refreshing!")
+    msgbox("I'm usually not this tired but
+    the heat in this cave is exhausting!", MSGBOX_AUTOCLOSE)
+    release
+    end
+}
+
+script Alola_AkalaCave_TrainerBattleCamper{
+    trainerbattle_single(TRAINER_AKALA_CAVE_CAMPER_HNS, "Check me out!\nI caught some strong Pokémon!", "Not bad,\nbut not good enough!")
+    msgbox("Is it warm in here or is it just me?", MSGBOX_AUTOCLOSE)
+    release
     end
 }

@@ -54,19 +54,19 @@ Alola_Akala_BattleSandygast_3:
 
 Alola_Akala_Island_FindItem1::
 # 33 "data/maps/AlolaIslandRight_hns/scripts.pory"
-	finditem ITEM_POTION, 1
+	finditem ITEM_PROTEIN, 1
 	end
 
 
 Alola_Akala_Island_FindItem2::
 # 38 "data/maps/AlolaIslandRight_hns/scripts.pory"
-	finditem ITEM_ANTIDOTE, 1
+	finditem ITEM_IRON, 1
 	end
 
 
 Alola_Akala_Island_Finditem3::
 # 43 "data/maps/AlolaIslandRight_hns/scripts.pory"
-	finditem ITEM_ORAN_BERRY, 1
+	finditem ITEM_ZINC, 1
 	end
 
 
@@ -106,381 +106,453 @@ Alola_Akala_Pikipek::
 	end
 
 
-Alola_Akala_TotemBattle_Trigger::
+Alola_Akala_OldManOnBench::
 # 72 "data/maps/AlolaIslandRight_hns/scripts.pory"
+	lock
+# 73 "data/maps/AlolaIslandRight_hns/scripts.pory"
+	faceplayer
+# 74 "data/maps/AlolaIslandRight_hns/scripts.pory"
+	msgbox Alola_Akala_OldManOnBench_Text_0, MSGBOX_AUTOCLOSE
+# 79 "data/maps/AlolaIslandRight_hns/scripts.pory"
+	release
+	end
+
+
+Alola_Akala_TotemBattle_Trigger::
+# 84 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	goto_if_unset FLAG_TRIGGERED_AKALA_TOTEM, Alola_Akala_TotemBattle_Trigger_1
 	end
 
 Alola_Akala_TotemBattle_Trigger_1:
-# 74 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 86 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	goto_if_set FLAG_CAUGHT_ALL_AKALA, Alola_Akala_TotemBattle_Trigger_7
 Alola_Akala_TotemBattle_Trigger_5:
 	end
 
 Alola_Akala_TotemBattle_Trigger_4:
-# 76 "data/maps/AlolaIslandRight_hns/scripts.pory"
-	lock
-# 77 "data/maps/AlolaIslandRight_hns/scripts.pory"
-	delay 30
-# 78 "data/maps/AlolaIslandRight_hns/scripts.pory"
-	setvar VAR_0x8004, 2
-# 79 "data/maps/AlolaIslandRight_hns/scripts.pory"
-	setvar VAR_0x8005, 6
-# 80 "data/maps/AlolaIslandRight_hns/scripts.pory"
-	setvar VAR_0x8006, 4
-# 81 "data/maps/AlolaIslandRight_hns/scripts.pory"
-	setvar VAR_0x8007, 4
-# 82 "data/maps/AlolaIslandRight_hns/scripts.pory"
-	special ShakeCamera
-# 83 "data/maps/AlolaIslandRight_hns/scripts.pory"
-	waitstate
-# 84 "data/maps/AlolaIslandRight_hns/scripts.pory"
-	fadescreenswapbuffers FADE_TO_BLACK
-# 85 "data/maps/AlolaIslandRight_hns/scripts.pory"
-	delay 30
-# 86 "data/maps/AlolaIslandRight_hns/scripts.pory"
-	clearflag FLAG_HIDE_AKALA_TOTEM
-# 87 "data/maps/AlolaIslandRight_hns/scripts.pory"
-	gettimeofday
 # 88 "data/maps/AlolaIslandRight_hns/scripts.pory"
+	lock
+# 89 "data/maps/AlolaIslandRight_hns/scripts.pory"
+	delay 30
+# 90 "data/maps/AlolaIslandRight_hns/scripts.pory"
+	setvar VAR_0x8004, 2
+# 91 "data/maps/AlolaIslandRight_hns/scripts.pory"
+	setvar VAR_0x8005, 6
+# 92 "data/maps/AlolaIslandRight_hns/scripts.pory"
+	setvar VAR_0x8006, 4
+# 93 "data/maps/AlolaIslandRight_hns/scripts.pory"
+	setvar VAR_0x8007, 4
+# 94 "data/maps/AlolaIslandRight_hns/scripts.pory"
+	special ShakeCamera
+# 95 "data/maps/AlolaIslandRight_hns/scripts.pory"
+	waitstate
+# 96 "data/maps/AlolaIslandRight_hns/scripts.pory"
+	fadescreenswapbuffers FADE_TO_BLACK
+# 97 "data/maps/AlolaIslandRight_hns/scripts.pory"
+	delay 30
+# 98 "data/maps/AlolaIslandRight_hns/scripts.pory"
+	clearflag FLAG_HIDE_AKALA_TOTEM
+# 99 "data/maps/AlolaIslandRight_hns/scripts.pory"
+	gettimeofday
+# 100 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	compare VAR_0x8000, TIME_MORNING
 	goto_if_eq Alola_Akala_TotemBattle_Trigger_14
-# 88 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 100 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	compare VAR_0x8000, TIME_DAY
 	goto_if_eq Alola_Akala_TotemBattle_Trigger_14
-# 97 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 109 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	playmoncry SPECIES_SALAZZLE, 0
-# 98 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 110 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_SPECIES ( SALAZZLE )
-# 99 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 111 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	addobject Akala_Totem
-# 100 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 112 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	waitmoncry
 Alola_Akala_TotemBattle_Trigger_13:
-# 102 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 114 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	special DrawWholeMapView
-# 103 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 115 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	delay 30
-# 104 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 116 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	fadescreenswapbuffers FADE_FROM_BLACK
-# 105 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 117 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	delay 30
-# 106 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 118 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	gettimeofday
-# 107 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 119 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	compare VAR_0x8000, TIME_MORNING
 	goto_if_eq Alola_Akala_TotemBattle_Trigger_20
-# 107 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 119 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	compare VAR_0x8000, TIME_DAY
 	goto_if_eq Alola_Akala_TotemBattle_Trigger_20
-# 116 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 128 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	playmoncry SPECIES_SALAZZLE, 0
-# 117 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 129 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	applymovement Akala_Totem, Alola_Akala_TotemBattle_Trigger_Movement_0
-# 118 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 130 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	waitmovement 0
-# 119 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 131 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	waitmoncry
 Alola_Akala_TotemBattle_Trigger_19:
-# 121 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 133 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	setflag FLAG_TRIGGERED_AKALA_TOTEM
-# 122 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 134 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	release
 	end
 
 Alola_Akala_TotemBattle_Trigger_6:
-# 74 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 86 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	goto_if_set FLAG_CAUGHT_ALL_PONI, Alola_Akala_TotemBattle_Trigger_10
 	goto Alola_Akala_TotemBattle_Trigger_5
 
 Alola_Akala_TotemBattle_Trigger_7:
-# 74 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 86 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	goto_if_set FLAG_CAUGHT_ALL_ULAULA, Alola_Akala_TotemBattle_Trigger_6
 	goto Alola_Akala_TotemBattle_Trigger_5
 
 Alola_Akala_TotemBattle_Trigger_10:
-# 74 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 86 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	goto_if_set FLAG_CAUGHT_ALL_MELEMELE, Alola_Akala_TotemBattle_Trigger_4
 	goto Alola_Akala_TotemBattle_Trigger_5
 
 Alola_Akala_TotemBattle_Trigger_14:
-# 90 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 102 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	playmoncry SPECIES_ARAQUANID, 0
-# 91 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 103 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_SPECIES ( ARAQUANID )
-# 92 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 104 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	addobject Akala_Totem
-# 93 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 105 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	waitmoncry
 	goto Alola_Akala_TotemBattle_Trigger_13
 
 Alola_Akala_TotemBattle_Trigger_20:
-# 109 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 121 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	playmoncry SPECIES_ARAQUANID, 0
-# 110 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 122 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	applymovement Akala_Totem, Alola_Akala_TotemBattle_Trigger_Movement_0
-# 111 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 123 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	waitmovement 0
-# 112 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 124 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	waitmoncry
 	goto Alola_Akala_TotemBattle_Trigger_19
 
 
 Alola_Akala_TotemBattle::
-# 137 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 149 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	lock
-# 138 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 150 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	faceplayer
-# 139 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 151 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	gettimeofday
-# 140 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 152 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	compare VAR_0x8000, TIME_MORNING
 	goto_if_eq Alola_Akala_TotemBattle_1
-# 140 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 152 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	compare VAR_0x8000, TIME_DAY
 	goto_if_eq Alola_Akala_TotemBattle_1
-# 168 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 180 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	playmoncry SPECIES_SALAZZLE, 0
-# 169 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 181 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	msgbox Alola_Akala_TotemBattle_Text_0, MSGBOX_AUTOCLOSE
-# 170 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 182 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	waitmoncry
-# 171 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 183 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	setwildbattle SPECIES_SALANDIT, 60, ITEM_NONE, SPECIES_SALAZZLE_TOTEM, 60, ITEM_PETAYA_BERRY
-# 172 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 184 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	settotemboost B_POSITION_OPPONENT_RIGHT, 0, 0, 0, 0, 1
-# 173 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 185 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	setflag FLAG_NO_WILD_CATCHING
-# 174 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 186 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	setflag FLAG_NO_WILD_RUNNING
-# 175 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 187 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	setflag FLAG_SMART_WILD_AI
-# 176 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 188 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	dowildbattle
-# 177 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 189 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	specialvar VAR_RESULT, GetBattleOutcome
-# 178 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 190 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	compare VAR_RESULT, B_OUTCOME_WON
 	goto_if_eq Alola_Akala_TotemBattle_9
-# 191 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 203 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	compare VAR_RESULT, B_OUTCOME_LOST
 	goto_if_eq Alola_Akala_TotemBattle_11
 	return
 
 Alola_Akala_TotemBattle_1:
-# 142 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 154 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	playmoncry SPECIES_ARAQUANID, 0
-# 143 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 155 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	msgbox Alola_Akala_TotemBattle_Text_0, MSGBOX_AUTOCLOSE
-# 144 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 156 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	waitmoncry
-# 146 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 158 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	setwildbattle SPECIES_DEWPIDER, 60, ITEM_NONE, SPECIES_ARAQUANID_TOTEM, 60, ITEM_SITRUS_BERRY
-# 147 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 159 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	settotemboost B_POSITION_OPPONENT_RIGHT, 0, 0, 0, 0, 1
-# 148 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 160 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	setflag FLAG_NO_WILD_CATCHING
-# 149 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 161 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	setflag FLAG_NO_WILD_RUNNING
-# 150 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 162 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	setflag FLAG_SMART_WILD_AI
-# 151 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 163 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	dowildbattle
-# 152 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 164 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	specialvar VAR_RESULT, GetBattleOutcome
-# 153 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 165 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	compare VAR_RESULT, B_OUTCOME_WON
 	goto_if_eq Alola_Akala_TotemBattle_6
 	return
 
 Alola_Akala_TotemBattle_6:
-# 154 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 166 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	setflag FLAG_HIDE_AKALA_TOTEM
-# 155 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 167 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	setflag FLAG_DEFEATED_AKALA_TOTEM
-# 156 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 168 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	removeobject Akala_Totem
-# 157 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 169 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	msgbox Alola_Akala_TotemBattle_Text_1, MSGBOX_AUTOCLOSE
-# 159 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 171 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	clearflag FLAG_NO_WILD_CATCHING
-# 160 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 172 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	clearflag FLAG_NO_WILD_RUNNING
-# 161 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 173 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	clearflag FLAG_SMART_WILD_AI
-# 162 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 174 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	release
 	end
 
 Alola_Akala_TotemBattle_9:
-# 180 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 192 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	setflag FLAG_HIDE_AKALA_TOTEM
-# 181 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 193 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	setflag FLAG_DEFEATED_AKALA_TOTEM
-# 182 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 194 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	removeobject Akala_Totem
-# 183 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 195 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	msgbox Alola_Akala_TotemBattle_Text_2, MSGBOX_AUTOCLOSE
-# 185 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 197 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	clearflag FLAG_NO_WILD_CATCHING
-# 186 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 198 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	clearflag FLAG_NO_WILD_RUNNING
-# 187 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 199 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	clearflag FLAG_SMART_WILD_AI
-# 188 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 200 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	release
 	end
 
 Alola_Akala_TotemBattle_11:
-# 192 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 204 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	clearflag FLAG_NO_WILD_CATCHING
-# 193 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 205 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	clearflag FLAG_NO_WILD_RUNNING
-# 194 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 206 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	clearflag FLAG_SMART_WILD_AI
-# 195 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 207 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	release
 	end
 
 
 Alola_Akala_Totem_sign::
-# 202 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 214 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	lock
-# 203 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 215 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	msgbox Alola_Akala_Totem_sign_Text_0, MSGBOX_AUTOCLOSE
-# 205 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 217 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	release
 	end
 
 
 Alola_Akala_TapuLele_Flyover::
-# 210 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 222 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	goto_if_set FLAG_FLYOVER_TAPU_LELE, Alola_Akala_TapuLele_Flyover_2
-# 223 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 235 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	release
 	end
 
 Alola_Akala_TapuLele_Flyover_2:
-# 212 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 224 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	addobject Akala_Flyover_Tapu
-# 213 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 225 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	playse SE_M_FLY
-# 214 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 226 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	applymovement Akala_Flyover_Tapu, Alola_Akala_TapuLele_Flyover_Movement_0
-# 215 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 227 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	waitmovement 0
-# 216 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 228 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	removeobject Akala_Flyover_Tapu
-# 217 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 229 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	clearflag FLAG_FLYOVER_TAPU_LELE
-# 218 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 230 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	clearflag FLAG_HIDE_TAPU_LELE
-# 219 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 231 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	release
 	end
 
 
 Alola_Akala_BattleVsTapuLele::
-# 228 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 240 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	lock
-# 229 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 241 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	faceplayer
-# 230 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 242 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	playmoncry SPECIES_TAPU_LELE, 0
-# 231 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 243 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	applymovement Akala_Tapu, Alola_Akala_TotemBattle_Trigger_Movement_0
-# 232 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 244 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	msgbox Alola_Akala_BattleVsTapuLele_Text_0
-# 233 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 245 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	waitmovement 0
-# 234 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 246 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	waitmoncry
-# 235 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 247 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	setwildbattle SPECIES_TAPU_LELE, 60
-# 236 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 248 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	dowildbattle
-# 237 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 249 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	specialvar VAR_RESULT, GetBattleOutcome
-# 238 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 250 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	compare VAR_RESULT, B_OUTCOME_CAUGHT
 	goto_if_eq Alola_Akala_BattleVsTapuLele_2
-# 245 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 257 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	compare VAR_RESULT, B_OUTCOME_WON
 	goto_if_eq Alola_Akala_BattleVsTapuLele_3
-# 253 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 265 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	release
 	end
 
-# 256 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 268 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	release
 	end
 
 Alola_Akala_BattleVsTapuLele_2:
-# 239 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 251 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	setflag FLAG_HIDE_TAPU_LELE
-# 240 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 252 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	setflag FLAG_BATTLED_TAPU_LELE
-# 241 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 253 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	removeobject Akala_Tapu
-# 242 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 254 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	release
 	end
 
 Alola_Akala_BattleVsTapuLele_3:
-# 246 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 258 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	setflag FLAG_HIDE_TAPU_LELE
-# 247 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 259 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	setflag FLAG_BATTLED_TAPU_LELE
-# 248 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 260 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	removeobject Akala_Tapu
-# 249 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 261 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	release
 	end
 
 
-# 110 "data/maps/AlolaIslandRight_hns/scripts.pory"
+Alola_Akala_TrainerBattleHiker::
+# 273 "data/maps/AlolaIslandRight_hns/scripts.pory"
+	trainerbattle_single TRAINER_AKALA_HIKER_HNS, Alola_Akala_TrainerBattleHiker_Text_0, Alola_Akala_TrainerBattleHiker_Text_1
+# 274 "data/maps/AlolaIslandRight_hns/scripts.pory"
+	msgbox Alola_Akala_TrainerBattleHiker_Text_2, MSGBOX_AUTOCLOSE
+# 276 "data/maps/AlolaIslandRight_hns/scripts.pory"
+	release
+	end
+
+
+Alola_Akala_TrainerBattlePicnicker::
+# 281 "data/maps/AlolaIslandRight_hns/scripts.pory"
+	trainerbattle_single TRAINER_AKALA_PICNICKER_HNS, Alola_Akala_TrainerBattlePicnicker_Text_0, Alola_Akala_TrainerBattlePicnicker_Text_1
+# 282 "data/maps/AlolaIslandRight_hns/scripts.pory"
+	msgbox Alola_Akala_TrainerBattlePicnicker_Text_2, MSGBOX_AUTOCLOSE
+# 284 "data/maps/AlolaIslandRight_hns/scripts.pory"
+	release
+	end
+
+
+Alola_Akala_TrainerBattleCamper::
+# 289 "data/maps/AlolaIslandRight_hns/scripts.pory"
+	trainerbattle_single TRAINER_AKALA_CAMPER_HNS, Alola_Akala_TrainerBattleCamper_Text_0, Alola_Akala_TrainerBattleCamper_Text_1
+# 290 "data/maps/AlolaIslandRight_hns/scripts.pory"
+	msgbox Alola_Akala_TrainerBattleCamper_Text_2, MSGBOX_AUTOCLOSE
+# 292 "data/maps/AlolaIslandRight_hns/scripts.pory"
+	release
+	end
+
+
+Alola_Akala_TrainerBattleSwimmerLand::
+# 297 "data/maps/AlolaIslandRight_hns/scripts.pory"
+	trainerbattle_single TRAINER_AKALA_SWIMMER_2_HNS, Alola_Akala_TrainerBattleSwimmerLand_Text_0, Alola_Akala_TrainerBattleSwimmerLand_Text_1
+# 298 "data/maps/AlolaIslandRight_hns/scripts.pory"
+	msgbox Alola_Akala_TrainerBattleSwimmerLand_Text_2, MSGBOX_AUTOCLOSE
+# 300 "data/maps/AlolaIslandRight_hns/scripts.pory"
+	release
+	end
+
+
+Alola_Akala_TrainerBattleSwimmerWater::
+# 305 "data/maps/AlolaIslandRight_hns/scripts.pory"
+	trainerbattle_single TRAINER_AKALA_SWIMMER_1_HNS, Alola_Akala_TrainerBattleSwimmerWater_Text_0, Alola_Akala_TrainerBattleSwimmerWater_Text_1
+# 306 "data/maps/AlolaIslandRight_hns/scripts.pory"
+	msgbox Alola_Akala_TrainerBattleSwimmerWater_Text_2, MSGBOX_AUTOCLOSE
+# 308 "data/maps/AlolaIslandRight_hns/scripts.pory"
+	release
+	end
+
+
+Alola_Akala_TrainerBattleSwimmerWaterM::
+# 313 "data/maps/AlolaIslandRight_hns/scripts.pory"
+	trainerbattle_single TRAINER_AKALA_SWIMMER_3_HNS, Alola_Akala_TrainerBattleSwimmerWaterM_Text_0, Alola_Akala_TrainerBattleSwimmerWaterM_Text_1
+# 314 "data/maps/AlolaIslandRight_hns/scripts.pory"
+	msgbox Alola_Akala_TrainerBattleSwimmerWaterM_Text_2, MSGBOX_AUTOCLOSE
+# 317 "data/maps/AlolaIslandRight_hns/scripts.pory"
+	release
+	end
+
+
+# 122 "data/maps/AlolaIslandRight_hns/scripts.pory"
 Alola_Akala_TotemBattle_Trigger_Movement_0:
-# 110 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 122 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	walk_in_place_down
-# 110 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 122 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	walk_in_place_down
 	step_end
 
-# 214 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 226 "data/maps/AlolaIslandRight_hns/scripts.pory"
 Alola_Akala_TapuLele_Flyover_Movement_0:
-# 214 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 226 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	walk_faster_left
-# 214 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 226 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	walk_faster_left
-# 214 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 226 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	walk_faster_left
-# 214 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 226 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	walk_faster_left
-# 214 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 226 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	walk_faster_left
-# 214 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 226 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	walk_faster_left
-# 214 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 226 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	walk_faster_left
-# 214 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 226 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	walk_faster_left
-# 214 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 226 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	walk_faster_left
-# 214 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 226 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	walk_faster_left
-# 214 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 226 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	walk_faster_left
-# 214 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 226 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	walk_faster_left
-# 214 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 226 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	walk_faster_left
-# 214 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 226 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	walk_faster_left
-# 214 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 226 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	walk_faster_left
-# 214 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 226 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	walk_faster_left
-# 214 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 226 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	walk_faster_left
 	step_end
 
@@ -500,25 +572,111 @@ Alola_Akala_Pikipek_Text_0:
 # 65 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	.string "Pek!$"
 
+Alola_Akala_OldManOnBench_Text_0:
+# 74 "data/maps/AlolaIslandRight_hns/scripts.pory"
+	.string "Ah the weather is so nice today,\n"
+	.string "doesn't it?\p"
+	.string "I was just feeding the Pikipek and this\n"
+	.string "one decided to join me on my bench!$"
+
 Alola_Akala_TotemBattle_Text_0:
-# 143 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 155 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	.string "Thhhh!$"
 
 Alola_Akala_TotemBattle_Text_1:
-# 157 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 169 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	.string "Totem Araquanid was defeated!\n"
 	.string "It scampered off somewhere…$"
 
 Alola_Akala_TotemBattle_Text_2:
-# 183 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 195 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	.string "Totem Salazzle was defeated!\n"
 	.string "It scampered off somewhere…$"
 
 Alola_Akala_Totem_sign_Text_0:
-# 203 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 215 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	.string "A strange totem stands here,\n"
 	.string "power is emanating from it…$"
 
 Alola_Akala_BattleVsTapuLele_Text_0:
-# 232 "data/maps/AlolaIslandRight_hns/scripts.pory"
+# 244 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	.string "Graah!$"
+
+Alola_Akala_TrainerBattleHiker_Text_0:
+# 273 "data/maps/AlolaIslandRight_hns/scripts.pory"
+	.string "I came to the Isles to hike the\nmountains!$"
+
+Alola_Akala_TrainerBattleHiker_Text_1:
+# 273 "data/maps/AlolaIslandRight_hns/scripts.pory"
+	.string "And down I tumble…$"
+
+Alola_Akala_TrainerBattleHiker_Text_2:
+# 274 "data/maps/AlolaIslandRight_hns/scripts.pory"
+	.string "Akala Isle has the best hiking!\n"
+	.string "It's got lush forests and rugged trails!$"
+
+Alola_Akala_TrainerBattlePicnicker_Text_0:
+# 281 "data/maps/AlolaIslandRight_hns/scripts.pory"
+	.string "Ha! Didn't see me, did you?$"
+
+Alola_Akala_TrainerBattlePicnicker_Text_1:
+# 281 "data/maps/AlolaIslandRight_hns/scripts.pory"
+	.string "I guess the element of surprise isn't\nalways super effective…$"
+
+Alola_Akala_TrainerBattlePicnicker_Text_2:
+# 282 "data/maps/AlolaIslandRight_hns/scripts.pory"
+	.string "It's so lush on Akala Isle,\n"
+	.string "I can easily hide in the trees!$"
+
+Alola_Akala_TrainerBattleCamper_Text_0:
+# 289 "data/maps/AlolaIslandRight_hns/scripts.pory"
+	.string "I want to be the first to prove myself\nto the Totem Pokémon!$"
+
+Alola_Akala_TrainerBattleCamper_Text_1:
+# 289 "data/maps/AlolaIslandRight_hns/scripts.pory"
+	.string "Drat,\nthat's not going to help my case.$"
+
+Alola_Akala_TrainerBattleCamper_Text_2:
+# 290 "data/maps/AlolaIslandRight_hns/scripts.pory"
+	.string "There's a weird Totem further ahead but\n"
+	.string "I haven't seen a Totem Pokémon.$"
+
+Alola_Akala_TrainerBattleSwimmerLand_Text_0:
+# 297 "data/maps/AlolaIslandRight_hns/scripts.pory"
+	.string "Hey! No shoes on the beach!$"
+
+Alola_Akala_TrainerBattleSwimmerLand_Text_1:
+# 297 "data/maps/AlolaIslandRight_hns/scripts.pory"
+	.string "Ouch,\n where's a lifeguard when you need one…$"
+
+Alola_Akala_TrainerBattleSwimmerLand_Text_2:
+# 298 "data/maps/AlolaIslandRight_hns/scripts.pory"
+	.string "Akala Isle has the best beaches!\n"
+	.string "It's got soft sand and clear waters!$"
+
+Alola_Akala_TrainerBattleSwimmerWater_Text_0:
+# 305 "data/maps/AlolaIslandRight_hns/scripts.pory"
+	.string "Out of my way!\nI'm swimming laps!$"
+
+Alola_Akala_TrainerBattleSwimmerWater_Text_1:
+# 305 "data/maps/AlolaIslandRight_hns/scripts.pory"
+	.string "Not the break I was looking for…$"
+
+Alola_Akala_TrainerBattleSwimmerWater_Text_2:
+# 306 "data/maps/AlolaIslandRight_hns/scripts.pory"
+	.string "Ula'ula Isle has the best beaches!\n"
+	.string "Ignore anyone who says otherwise!$"
+
+Alola_Akala_TrainerBattleSwimmerWaterM_Text_0:
+# 313 "data/maps/AlolaIslandRight_hns/scripts.pory"
+	.string "Hah!\nYou need to ride a Pokémon to surf?$"
+
+Alola_Akala_TrainerBattleSwimmerWaterM_Text_1:
+# 313 "data/maps/AlolaIslandRight_hns/scripts.pory"
+	.string "If I hadn't swam myself\n maybe I would've had the energy to win…$"
+
+Alola_Akala_TrainerBattleSwimmerWaterM_Text_2:
+# 314 "data/maps/AlolaIslandRight_hns/scripts.pory"
+	.string "The current out here is strong!\n"
+	.string "A Pokémon must be really powerful to\l"
+	.string "migrate all the way out to the Isles!$"

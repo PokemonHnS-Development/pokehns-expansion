@@ -74,9 +74,9 @@
       "movement_type": "MOVEMENT_TYPE_WALK_DOWN_AND_UP",
       "movement_range_x": 7,
       "movement_range_y": 7,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "6",
+      "script": "Alola_Poni_TrainerBattleSwimmer2",
       "flag": "0"
     },
     {
@@ -87,9 +87,9 @@
       "movement_type": "MOVEMENT_TYPE_WALK_RIGHT_AND_LEFT",
       "movement_range_x": 9,
       "movement_range_y": 9,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "5",
+      "script": "Alola_Poni_TrainerBattleSwimmer1",
       "flag": "0"
     },
     {
@@ -119,6 +119,19 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Alola_Poni_BattleVsTapuFini",
       "flag": "FLAG_HIDE_TAPU_FINI"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_WOMAN_1_HNS",
+      "x": 34,
+      "y": 16,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Alola_Poni_NPC_girl",
+      "flag": "0"
     }
   ],
   "warp_events": [

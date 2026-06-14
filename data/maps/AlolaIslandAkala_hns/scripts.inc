@@ -54,13 +54,13 @@ Alola_Ulaula_BattlePalossand_3:
 
 Alola_Ulaula_FindItem1::
 # 33 "data/maps/AlolaIslandAkala_hns/scripts.pory"
-	finditem ITEM_POTION, 1
+	finditem ITEM_FRIEND_BALL, 1
 	end
 
 
 Alola_Ulaula_FindItem2::
 # 38 "data/maps/AlolaIslandAkala_hns/scripts.pory"
-	finditem ITEM_ANTIDOTE, 1
+	finditem ITEM_PROTEIN, 1
 	end
 
 
@@ -248,6 +248,58 @@ Alola_Ulaula_Phant_outside_23:
 	compare VAR_TEMP_1, 46
 	goto_if_eq Alola_Ulaula_Phant_outside_21
 	goto Alola_Ulaula_Phant_outside_22
+
+
+Alola_Ulaula_TrainerBattlePicnicker::
+# 147 "data/maps/AlolaIslandAkala_hns/scripts.pory"
+	trainerbattle_single TRAINER_ULAULA_PICNICKER_HNS, Alola_Ulaula_TrainerBattlePicnicker_Text_0, Alola_Ulaula_TrainerBattlePicnicker_Text_1
+# 148 "data/maps/AlolaIslandAkala_hns/scripts.pory"
+	msgbox Alola_Ulaula_TrainerBattlePicnicker_Text_2, MSGBOX_AUTOCLOSE
+# 152 "data/maps/AlolaIslandAkala_hns/scripts.pory"
+	release
+	end
+
+
+Alola_Ulaula_TrainerBattleYoungster::
+# 157 "data/maps/AlolaIslandAkala_hns/scripts.pory"
+	trainerbattle_single TRAINER_ULAULA_YOUNGSTER_HNS, Alola_Ulaula_TrainerBattleYoungster_Text_0, Alola_Ulaula_TrainerBattleYoungster_Text_1
+# 158 "data/maps/AlolaIslandAkala_hns/scripts.pory"
+	msgbox Alola_Ulaula_TrainerBattleYoungster_Text_2, MSGBOX_AUTOCLOSE
+# 162 "data/maps/AlolaIslandAkala_hns/scripts.pory"
+	release
+	end
+
+
+Alola_Ulaula_TrainerBattleHiker::
+# 167 "data/maps/AlolaIslandAkala_hns/scripts.pory"
+	trainerbattle_single TRAINER_ULAULA_HIKER_HNS, Alola_Ulaula_TrainerBattleHiker_Text_0, Alola_Ulaula_TrainerBattleHiker_Text_1
+# 168 "data/maps/AlolaIslandAkala_hns/scripts.pory"
+	msgbox Alola_Ulaula_TrainerBattleHiker_Text_2, MSGBOX_AUTOCLOSE
+# 173 "data/maps/AlolaIslandAkala_hns/scripts.pory"
+	release
+	end
+
+
+Alola_Ulaula_TrainerBattleCooltrainer::
+# 178 "data/maps/AlolaIslandAkala_hns/scripts.pory"
+	trainerbattle_single TRAINER_ULAULA_COOLTRAINER_HNS, Alola_Ulaula_TrainerBattleCooltrainer_Text_0, Alola_Ulaula_TrainerBattleCooltrainer_Text_1
+# 179 "data/maps/AlolaIslandAkala_hns/scripts.pory"
+	msgbox Alola_Ulaula_TrainerBattleCooltrainer_Text_2, MSGBOX_AUTOCLOSE
+# 181 "data/maps/AlolaIslandAkala_hns/scripts.pory"
+	release
+	end
+
+
+Alola_Ulaula_LassNPC::
+# 186 "data/maps/AlolaIslandAkala_hns/scripts.pory"
+	lock
+# 187 "data/maps/AlolaIslandAkala_hns/scripts.pory"
+	faceplayer
+# 188 "data/maps/AlolaIslandAkala_hns/scripts.pory"
+	msgbox Alola_Ulaula_LassNPC_Text_0, MSGBOX_AUTOCLOSE
+# 193 "data/maps/AlolaIslandAkala_hns/scripts.pory"
+	release
+	end
 
 
 # 61 "data/maps/AlolaIslandAkala_hns/scripts.pory"
@@ -440,3 +492,66 @@ Alola_Ulaula_Phant_outside_Text_1:
 	.string "Please come visit me at my house at\n"
 	.string "the top of this Isle for a battle…\l"
 	.string "I'll make it worth your while!$"
+
+Alola_Ulaula_TrainerBattlePicnicker_Text_0:
+# 147 "data/maps/AlolaIslandAkala_hns/scripts.pory"
+	.string "Surprise!\nI was in the trees!$"
+
+Alola_Ulaula_TrainerBattlePicnicker_Text_1:
+# 147 "data/maps/AlolaIslandAkala_hns/scripts.pory"
+	.string "Back into hiding I go…$"
+
+Alola_Ulaula_TrainerBattlePicnicker_Text_2:
+# 148 "data/maps/AlolaIslandAkala_hns/scripts.pory"
+	.string "I thought I saw something red flying\n"
+	.string "through the sky.\p"
+	.string "Could it have been a Pokémon?$"
+
+Alola_Ulaula_TrainerBattleYoungster_Text_0:
+# 157 "data/maps/AlolaIslandAkala_hns/scripts.pory"
+	.string "Hey, I'm going to be the first to climb\nMt. Lanikala!$"
+
+Alola_Ulaula_TrainerBattleYoungster_Text_1:
+# 157 "data/maps/AlolaIslandAkala_hns/scripts.pory"
+	.string "It's not even the real Mt. Lanikala…$"
+
+Alola_Ulaula_TrainerBattleYoungster_Text_2:
+# 158 "data/maps/AlolaIslandAkala_hns/scripts.pory"
+	.string "My dad never told me the real name of\n"
+	.string "this mountain.\p"
+	.string "We've always just called it Mt. Lanikala.$"
+
+Alola_Ulaula_TrainerBattleHiker_Text_0:
+# 167 "data/maps/AlolaIslandAkala_hns/scripts.pory"
+	.string "You must be tough to handle this\nrough terrain!$"
+
+Alola_Ulaula_TrainerBattleHiker_Text_1:
+# 167 "data/maps/AlolaIslandAkala_hns/scripts.pory"
+	.string "Oof,\nI should've trained harder…$"
+
+Alola_Ulaula_TrainerBattleHiker_Text_2:
+# 168 "data/maps/AlolaIslandAkala_hns/scripts.pory"
+	.string "Ula'ula Isle has the best hiking!\p"
+	.string "The locals refer to this mountain as\n"
+	.string "Mt. Lanikala, as it is the tallest on\l"
+	.string "the Alola Isles!$"
+
+Alola_Ulaula_TrainerBattleCooltrainer_Text_0:
+# 178 "data/maps/AlolaIslandAkala_hns/scripts.pory"
+	.string "This cave smells terrible!\n Let's battle to get my mind off of it!$"
+
+Alola_Ulaula_TrainerBattleCooltrainer_Text_1:
+# 178 "data/maps/AlolaIslandAkala_hns/scripts.pory"
+	.string "Should've brought some air freshener…$"
+
+Alola_Ulaula_TrainerBattleCooltrainer_Text_2:
+# 179 "data/maps/AlolaIslandAkala_hns/scripts.pory"
+	.string "You should plug your nose if you plan\n"
+	.string "on going in that cave.$"
+
+Alola_Ulaula_LassNPC_Text_0:
+# 188 "data/maps/AlolaIslandAkala_hns/scripts.pory"
+	.string "The sea by the Isles is truly\n"
+	.string "breathtaking.\p"
+	.string "I could sit here all day and just\n"
+	.string "watch the waves.$"

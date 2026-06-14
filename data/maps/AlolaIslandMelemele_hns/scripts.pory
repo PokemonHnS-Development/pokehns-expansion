@@ -139,7 +139,7 @@ script Alola_Melemele_BattleSandygast{
 }
 
 script Alola_Melemele_FindItem1{
-    finditem(ITEM_POTION, 1)
+    finditem(ITEM_RARE_CANDY, 1)
     end
 }
 
@@ -426,4 +426,45 @@ script Alola_Melemele_BattleVsTapuKoko{
     }
     release
     end
+}
+
+script Alola_Melemele_TrainerBattleSwimmer{
+    trainerbattle_single(TRAINER_MELEMELE_SWIMMER_1_HNS, "The waters are warm here by the Isles!", "Maybe I should dry off on land for\na bit\.")
+    msgbox("There are plenty of neat Pokémon in
+    the water, try all your fishing rods!", MSGBOX_AUTOCLOSE)
+    release
+    end
+}
+
+script Alola_Melemele_Bugcatcher{
+    lock
+    faceplayer
+    msgbox("The bug Pok\emon on the Alola Isles
+    are much bigger than those in Kanto!", MSGBOX_AUTOCLOSE)
+    release
+    end
+
+}
+
+script Alola_Melemele_camper{
+    lock
+    faceplayer
+    msgbox("I traveled all the way from Kanto to see
+    my favorite bird Pok\emon, Pikipek!", MSGBOX_AUTOCLOSE)
+    release
+    end
+
+}
+
+script Alola_Melemele_Picnicker{
+    lock
+    faceplayer
+    msgbox("These Isles are chock full of unique
+    Pokémon!
+    
+    I need to stock up on Poké Balls so I
+    can catch them all!", MSGBOX_AUTOCLOSE)
+    release
+    end
+
 }

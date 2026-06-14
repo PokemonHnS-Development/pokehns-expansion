@@ -4,7 +4,7 @@ UlaUla_Forest_hns_MapScripts::
 
 Alola_Ulaula_Forest_FindItem1::
 # 4 "data/maps/UlaUla_Forest_hns/scripts.pory"
-	finditem ITEM_POTION, 1
+	finditem ITEM_MAX_REVIVE, 1
 	end
 
 

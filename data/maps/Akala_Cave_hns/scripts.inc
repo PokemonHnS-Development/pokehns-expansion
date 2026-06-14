@@ -108,16 +108,86 @@ Alola_Melemele_BattleDugtrio_3:
 
 Alola_Akala_Cave_FindItem1::
 # 65 "data/maps/Akala_Cave_hns/scripts.pory"
-	finditem ITEM_POTION, 1
+	finditem ITEM_CARBOS, 1
 	end
 
 
 Alola_Akala_Cave_FindItem2::
 # 70 "data/maps/Akala_Cave_hns/scripts.pory"
-	finditem ITEM_ANTIDOTE, 1
+	finditem ITEM_HP_UP, 1
+	end
+
+
+Alola_AkalaCave_TrainerBattleHiker::
+# 75 "data/maps/Akala_Cave_hns/scripts.pory"
+	trainerbattle_single TRAINER_AKALA_CAVE_HIKER_HNS, Alola_AkalaCave_TrainerBattleHiker_Text_0, Alola_AkalaCave_TrainerBattleHiker_Text_1
+# 76 "data/maps/Akala_Cave_hns/scripts.pory"
+	msgbox Alola_AkalaCave_TrainerBattleHiker_Text_2, MSGBOX_AUTOCLOSE
+# 81 "data/maps/Akala_Cave_hns/scripts.pory"
+	release
+	end
+
+
+Alola_AkalaCave_TrainerBattlePicnicker::
+# 86 "data/maps/Akala_Cave_hns/scripts.pory"
+	trainerbattle_single TRAINER_AKALA_CAVE_PICNICKER_HNS, Alola_AkalaCave_TrainerBattlePicnicker_Text_0, Alola_AkalaCave_TrainerBattlePicnicker_Text_1
+# 87 "data/maps/Akala_Cave_hns/scripts.pory"
+	msgbox Alola_AkalaCave_TrainerBattlePicnicker_Text_2, MSGBOX_AUTOCLOSE
+# 89 "data/maps/Akala_Cave_hns/scripts.pory"
+	release
+	end
+
+
+Alola_AkalaCave_TrainerBattleCamper::
+# 94 "data/maps/Akala_Cave_hns/scripts.pory"
+	trainerbattle_single TRAINER_AKALA_CAVE_CAMPER_HNS, Alola_AkalaCave_TrainerBattleCamper_Text_0, Alola_AkalaCave_TrainerBattleCamper_Text_1
+# 95 "data/maps/Akala_Cave_hns/scripts.pory"
+	msgbox Alola_AkalaCave_TrainerBattleCamper_Text_2, MSGBOX_AUTOCLOSE
+# 96 "data/maps/Akala_Cave_hns/scripts.pory"
+	release
 	end
 
 
 Alola_Melemele_BattleMarowak_Text_0:
 # 8 "data/maps/Akala_Cave_hns/scripts.pory"
 	.string "Gaaah!$"
+
+Alola_AkalaCave_TrainerBattleHiker_Text_0:
+# 75 "data/maps/Akala_Cave_hns/scripts.pory"
+	.string "You must be tough if you made it all the\nway up here!$"
+
+Alola_AkalaCave_TrainerBattleHiker_Text_1:
+# 75 "data/maps/Akala_Cave_hns/scripts.pory"
+	.string "Tougher than me!$"
+
+Alola_AkalaCave_TrainerBattleHiker_Text_2:
+# 76 "data/maps/Akala_Cave_hns/scripts.pory"
+	.string "I had to stop climbing because it was\n"
+	.string "getting far too hot.\p"
+	.string "It's like someone's got a fire going\n"
+	.string "up on the peak…$"
+
+Alola_AkalaCave_TrainerBattlePicnicker_Text_0:
+# 86 "data/maps/Akala_Cave_hns/scripts.pory"
+	.string "I'm tired from all this walking,\nlet's have a battle!$"
+
+Alola_AkalaCave_TrainerBattlePicnicker_Text_1:
+# 86 "data/maps/Akala_Cave_hns/scripts.pory"
+	.string "Well that was refreshing!$"
+
+Alola_AkalaCave_TrainerBattlePicnicker_Text_2:
+# 87 "data/maps/Akala_Cave_hns/scripts.pory"
+	.string "I'm usually not this tired but\n"
+	.string "the heat in this cave is exhausting!$"
+
+Alola_AkalaCave_TrainerBattleCamper_Text_0:
+# 94 "data/maps/Akala_Cave_hns/scripts.pory"
+	.string "Check me out!\nI caught some strong Pokémon!$"
+
+Alola_AkalaCave_TrainerBattleCamper_Text_1:
+# 94 "data/maps/Akala_Cave_hns/scripts.pory"
+	.string "Not bad,\nbut not good enough!$"
+
+Alola_AkalaCave_TrainerBattleCamper_Text_2:
+# 95 "data/maps/Akala_Cave_hns/scripts.pory"
+	.string "Is it warm in here or is it just me?$"

@@ -53,7 +53,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Alola_Poni_Cave_FindItem1",
-      "flag": "0"
+      "flag": "FLAG_PONI_CAVE_HIDDEN_ITEM_1"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL_HNS",
@@ -66,7 +66,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Alola_Poni_Cave_FindItem2",
-      "flag": "0"
+      "flag": "FLAG_PONI_CAVE_HIDDEN_ITEM_2"
     }
   ],
   "warp_events": [

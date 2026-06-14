@@ -299,6 +299,38 @@ Alola_Poni_BattleVsTapuFini_3:
 	end
 
 
+Alola_Poni_TrainerBattleSwimmer1::
+# 178 "data/maps/AlolaIsland_hns/scripts.pory"
+	trainerbattle_single TRAINER_PONI_SWIMMER_1_HNS, Alola_Poni_TrainerBattleSwimmer1_Text_0, Alola_Poni_TrainerBattleSwimmer1_Text_1
+# 179 "data/maps/AlolaIsland_hns/scripts.pory"
+	msgbox Alola_Poni_TrainerBattleSwimmer1_Text_2, MSGBOX_AUTOCLOSE
+# 181 "data/maps/AlolaIsland_hns/scripts.pory"
+	release
+	end
+
+
+Alola_Poni_TrainerBattleSwimmer2::
+# 186 "data/maps/AlolaIsland_hns/scripts.pory"
+	trainerbattle_single TRAINER_PONI_SWIMMER_2_HNS, Alola_Poni_TrainerBattleSwimmer2_Text_0, Alola_Poni_TrainerBattleSwimmer2_Text_1
+# 187 "data/maps/AlolaIsland_hns/scripts.pory"
+	msgbox Alola_Poni_TrainerBattleSwimmer2_Text_2, MSGBOX_AUTOCLOSE
+# 189 "data/maps/AlolaIsland_hns/scripts.pory"
+	release
+	end
+
+
+Alola_Poni_NPC_girl::
+# 194 "data/maps/AlolaIsland_hns/scripts.pory"
+	lock
+# 195 "data/maps/AlolaIsland_hns/scripts.pory"
+	faceplayer
+# 196 "data/maps/AlolaIsland_hns/scripts.pory"
+	msgbox Alola_Poni_NPC_girl_Text_0, MSGBOX_AUTOCLOSE
+# 198 "data/maps/AlolaIsland_hns/scripts.pory"
+	release
+	end
+
+
 # 65 "data/maps/AlolaIsland_hns/scripts.pory"
 Alola_Poni_TotemBattle_Trigger_Movement_0:
 # 65 "data/maps/AlolaIsland_hns/scripts.pory"
@@ -362,3 +394,34 @@ Alola_Poni_Totem_sign_Text_0:
 Alola_Poni_BattleVsTapuFini_Text_0:
 # 149 "data/maps/AlolaIsland_hns/scripts.pory"
 	.string "Graah!$"
+
+Alola_Poni_TrainerBattleSwimmer1_Text_0:
+# 178 "data/maps/AlolaIsland_hns/scripts.pory"
+	.string "Warmer water, no problem!$"
+
+Alola_Poni_TrainerBattleSwimmer1_Text_1:
+# 178 "data/maps/AlolaIsland_hns/scripts.pory"
+	.string "Gah, I forgot my sunscreen…$"
+
+Alola_Poni_TrainerBattleSwimmer1_Text_2:
+# 179 "data/maps/AlolaIsland_hns/scripts.pory"
+	.string "I've swam into so many cool Pokémon!\n"
+	.string "It must be something in the water.$"
+
+Alola_Poni_TrainerBattleSwimmer2_Text_0:
+# 186 "data/maps/AlolaIsland_hns/scripts.pory"
+	.string "Hey, don't block my current!$"
+
+Alola_Poni_TrainerBattleSwimmer2_Text_1:
+# 186 "data/maps/AlolaIsland_hns/scripts.pory"
+	.string "Ugh, fine,\njust let me swim…$"
+
+Alola_Poni_TrainerBattleSwimmer2_Text_2:
+# 187 "data/maps/AlolaIsland_hns/scripts.pory"
+	.string "The current is great for tubing.\n"
+	.string "I don't think I'll tube anywhere else!$"
+
+Alola_Poni_NPC_girl_Text_0:
+# 196 "data/maps/AlolaIsland_hns/scripts.pory"
+	.string "Poni Isle is my favorite.\n"
+	.string "The wilderness just speaks for itself!$"

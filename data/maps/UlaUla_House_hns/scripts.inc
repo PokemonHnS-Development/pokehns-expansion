@@ -44,7 +44,7 @@ Alola_Ulaula_House_Phant_4:
 # 24 "data/maps/UlaUla_House_hns/scripts.pory"
 	playfanfare MUS_HG_OBTAIN_EGG
 # 25 "data/maps/UlaUla_House_hns/scripts.pory"
-	msgbox Alola_Ulaula_House_Phant_Text_4, MSGBOX_AUTOCLOSE
+	msgbox Alola_Ulaula_House_Phant_Text_4
 # 26 "data/maps/UlaUla_House_hns/scripts.pory"
 	waitfanfare
 # 27 "data/maps/UlaUla_House_hns/scripts.pory"
@@ -125,7 +125,7 @@ Alola_Ulaula_House_Phant_Text_7:
 	.string "I hope you enjoyed this taste of Alola.\p"
 	.string "Look forward to my full demake of\n"
 	.string "the region in my own upcoming project{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.\p"
-	.string "Ultra Eclipse.$"
+	.string "Ultra Eclipse!$"
 
 Alola_Ulaula_House_Noivern_Text_0:
 # 57 "data/maps/UlaUla_House_hns/scripts.pory"

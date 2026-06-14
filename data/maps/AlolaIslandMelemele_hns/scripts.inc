@@ -240,7 +240,7 @@ Alola_Melemele_BattleSandygast_3:
 
 Alola_Melemele_FindItem1::
 # 142 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
-	finditem ITEM_POTION, 1
+	finditem ITEM_RARE_CANDY, 1
 	end
 
 
@@ -680,6 +680,52 @@ Alola_Melemele_BattleVsTapuKoko_3:
 	end
 
 
+Alola_Melemele_TrainerBattleSwimmer::
+# 432 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	trainerbattle_single TRAINER_MELEMELE_SWIMMER_1_HNS, Alola_Melemele_TrainerBattleSwimmer_Text_0, Alola_Melemele_TrainerBattleSwimmer_Text_1
+# 433 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	msgbox Alola_Melemele_TrainerBattleSwimmer_Text_2, MSGBOX_AUTOCLOSE
+# 435 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	release
+	end
+
+
+Alola_Melemele_Bugcatcher::
+# 440 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	lock
+# 441 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	faceplayer
+# 442 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	msgbox Alola_Melemele_Bugcatcher_Text_0, MSGBOX_AUTOCLOSE
+# 444 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	release
+	end
+
+
+Alola_Melemele_camper::
+# 450 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	lock
+# 451 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	faceplayer
+# 452 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	msgbox Alola_Melemele_camper_Text_0, MSGBOX_AUTOCLOSE
+# 454 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	release
+	end
+
+
+Alola_Melemele_Picnicker::
+# 460 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	lock
+# 461 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	faceplayer
+# 462 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	msgbox Alola_Melemele_Picnicker_Text_0, MSGBOX_AUTOCLOSE
+# 467 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	release
+	end
+
+
 # 6 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 AlolaIslandMelemele_hns_MapScripts_MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE_0_Movement_0:
 # 6 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
@@ -1024,3 +1070,33 @@ Alola_Melemele_Totem_sign_Text_0:
 Alola_Melemele_BattleVsTapuKoko_Text_0:
 # 403 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	.string "Graah!$"
+
+Alola_Melemele_TrainerBattleSwimmer_Text_0:
+# 432 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	.string "The waters are warm here by the Isles!$"
+
+Alola_Melemele_TrainerBattleSwimmer_Text_1:
+# 432 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	.string "Maybe I should dry off on land for\na bit…$"
+
+Alola_Melemele_TrainerBattleSwimmer_Text_2:
+# 433 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	.string "There are plenty of neat Pokémon in\n"
+	.string "the water, try all your fishing rods!$"
+
+Alola_Melemele_Bugcatcher_Text_0:
+# 442 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	.string "The bug Pokémon on the Alola Isles\n"
+	.string "are much bigger than those in Kanto!$"
+
+Alola_Melemele_camper_Text_0:
+# 452 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	.string "I traveled all the way from Kanto to see\n"
+	.string "my favorite bird Pokémon, Pikipek!$"
+
+Alola_Melemele_Picnicker_Text_0:
+# 462 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	.string "These Isles are chock full of unique\n"
+	.string "Pokémon!\p"
+	.string "I need to stock up on Poké Balls so I\n"
+	.string "can catch them all!$"

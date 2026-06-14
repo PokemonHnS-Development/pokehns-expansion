@@ -30,17 +30,17 @@ script Alola_Akala_BattleSandygast{
 }
 
 script Alola_Akala_Island_FindItem1{
-    finditem(ITEM_POTION, 1)
+    finditem(ITEM_PROTEIN, 1)
     end
 }
 
 script Alola_Akala_Island_FindItem2{
-    finditem(ITEM_ANTIDOTE, 1)
+    finditem(ITEM_IRON, 1)
     end
 }
 
 script Alola_Akala_Island_Finditem3{
-    finditem(ITEM_ORAN_BERRY, 1)
+    finditem(ITEM_ZINC, 1)
     end
 }
 
@@ -64,6 +64,18 @@ script Alola_Akala_Pikipek{
     playmoncry(SPECIES_PIKIPEK, 0)
     msgbox("Pek!", MSGBOX_AUTOCLOSE)
     waitmoncry
+    release
+    end
+}
+
+script Alola_Akala_OldManOnBench{
+    lock
+    faceplayer
+    msgbox("Ah the weather is so nice today,
+    doesn't it?
+    
+    I was just feeding the Pikipek and this
+    one decided to join me on my bench!", MSGBOX_AUTOCLOSE)
     release
     end
 }
@@ -253,6 +265,55 @@ script Alola_Akala_BattleVsTapuLele{
         release
         end
     }
+    release
+    end
+}
+
+script Alola_Akala_TrainerBattleHiker{
+    trainerbattle_single(TRAINER_AKALA_HIKER_HNS, "I came to the Isles to hike the\nmountains!", "And down I tumble\.")
+    msgbox("Akala Isle has the best hiking!
+    It's got lush forests and rugged trails!", MSGBOX_AUTOCLOSE)
+    release
+    end
+}
+
+script Alola_Akala_TrainerBattlePicnicker{
+    trainerbattle_single(TRAINER_AKALA_PICNICKER_HNS, "Ha! Didn't see me, did you?", "I guess the element of surprise isn't\nalways super effective\.")
+    msgbox("It's so lush on Akala Isle,
+    I can easily hide in the trees!", MSGBOX_AUTOCLOSE)
+    release
+    end
+}
+
+script Alola_Akala_TrainerBattleCamper{
+    trainerbattle_single(TRAINER_AKALA_CAMPER_HNS, "I want to be the first to prove myself\nto the Totem Pokémon!", "Drat,\nthat's not going to help my case.")
+    msgbox("There's a weird Totem further ahead but
+    I haven't seen a Totem Pokémon.", MSGBOX_AUTOCLOSE)
+    release
+    end
+}
+
+script Alola_Akala_TrainerBattleSwimmerLand{
+    trainerbattle_single(TRAINER_AKALA_SWIMMER_2_HNS, "Hey! No shoes on the beach!", "Ouch,\n where's a lifeguard when you need one\.")
+    msgbox("Akala Isle has the best beaches!
+    It's got soft sand and clear waters!", MSGBOX_AUTOCLOSE)
+    release
+    end
+}
+
+script Alola_Akala_TrainerBattleSwimmerWater{
+    trainerbattle_single(TRAINER_AKALA_SWIMMER_1_HNS, "Out of my way!\nI'm swimming laps!", "Not the break I was looking for\.")
+    msgbox("Ula'ula Isle has the best beaches!
+    Ignore anyone who says otherwise!", MSGBOX_AUTOCLOSE)
+    release
+    end
+}
+
+script Alola_Akala_TrainerBattleSwimmerWaterM{
+    trainerbattle_single(TRAINER_AKALA_SWIMMER_3_HNS, "Hah!\nYou need to ride a Pok\emon to surf?", "If I hadn't swam myself\n maybe I would've had the energy to win\.")
+    msgbox("The current out here is strong!
+    A Pok\emon must be really powerful to
+    migrate all the way out to the Isles!", MSGBOX_AUTOCLOSE)
     release
     end
 }

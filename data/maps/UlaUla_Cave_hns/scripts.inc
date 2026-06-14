@@ -108,13 +108,13 @@ Alola_Ulaula_BattleNinetales_3:
 
 Alola_Ulaula_Cave_FindItem1::
 # 64 "data/maps/UlaUla_Cave_hns/scripts.pory"
-	finditem ITEM_POTION, 1
+	finditem ITEM_RARE_CANDY, 1
 	end
 
 
 Alola_Ulaula_Cave_FindItem2::
 # 69 "data/maps/UlaUla_Cave_hns/scripts.pory"
-	finditem ITEM_ANTIDOTE, 1
+	finditem ITEM_ADRENALINE_ORB, 1
 	end
 
 
