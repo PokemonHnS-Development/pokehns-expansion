@@ -19,11 +19,18 @@ script Alola_Ulaula_House_Phant{
             setvar(VAR_ALOLA_STATE, 5)
             msgbox("That was an incredible battle.
             
-            I think you've earned this.", MSGBOX_AUTOCLOSE)
+            I think you've earned this.")
+            applymovement(Phantonomy, moves(walk_in_place_down*2))
+            waitmovement(0)
             giveegg(SPECIES_NOIBAT)
             playfanfare(MUS_HG_OBTAIN_EGG)
             msgbox("You received an Egg from Phantonomy!")
             waitfanfare
+            applymovement(Phantonomy, moves(jump_in_place_down*2))
+            playse(SE_LEDGE)
+            waitse
+            playse(SE_LEDGE)
+            waitse
             msgbox("That Egg contains my favorite Pokémon.
             Please, take good care of it\.", MSGBOX_AUTOCLOSE)
             release

@@ -628,19 +628,19 @@ Alola_Melemele_BattleVsTapuKoko::
 # 400 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	faceplayer
 # 401 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
-	playmoncry SPECIES_TAPU_KOKO, 0
+	playmoncry SPECIES_TAPU_KOKO, CRY_MODE_ENCOUNTER
 # 402 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
-	applymovement Melemele_Tapu, Alola_Melemele_SamsonOak_Trigger_Beginning_Movement_2
-# 403 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	msgbox Alola_Melemele_BattleVsTapuKoko_Text_0
-# 404 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 403 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	waitmovement 0
-# 405 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 404 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	waitmoncry
+# 405 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	seteventmon SPECIES_TAPU_KOKO, 60
 # 406 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
-	setwildbattle SPECIES_TAPU_KOKO, 60
+	special BattleSetup_StartLegendaryBattle
 # 407 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
-	dowildbattle
+	waitstate
 # 408 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	specialvar VAR_RESULT, GetBattleOutcome
 # 409 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
@@ -1068,7 +1068,7 @@ Alola_Melemele_Totem_sign_Text_0:
 	.string "power is emanating from it…$"
 
 Alola_Melemele_BattleVsTapuKoko_Text_0:
-# 403 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 402 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	.string "Ko-Ko-Kooo!$"
 
 Alola_Melemele_TrainerBattleSwimmer_Text_0:

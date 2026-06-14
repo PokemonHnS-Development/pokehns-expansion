@@ -399,11 +399,9 @@ script Alola_Melemele_BattleVsTapuKoko{
     lock
     faceplayer
     playmoncry(SPECIES_TAPU_KOKO, CRY_MODE_ENCOUNTER)
-    applymovement(Melemele_Tapu, moves(walk_in_place_down*2))
     msgbox("Ko-Ko-Kooo!")
     waitmovement(0)
     waitmoncry
-    playbgm(MUS_HG_VS_SUICUNE, FALSE)
     seteventmon(SPECIES_TAPU_KOKO, 60)
     special(BattleSetup_StartLegendaryBattle)
     waitstate

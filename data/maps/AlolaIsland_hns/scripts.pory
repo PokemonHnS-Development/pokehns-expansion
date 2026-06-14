@@ -145,11 +145,8 @@ script Alola_Poni_BattleVsTapuFini{
     lock
     faceplayer
     playmoncry(SPECIES_TAPU_FINI, CRY_MODE_ENCOUNTER)
-    applymovement(Poni_Tapu, moves(walk_in_place_down*2))
     msgbox("Fiiin!")
-    waitmovement(0)
     waitmoncry
-    playbgm(MUS_HG_VS_SUICUNE, FALSE)
     seteventmon(SPECIES_TAPU_FINI, 60)
     special(BattleSetup_StartLegendaryBattle)
     waitstate

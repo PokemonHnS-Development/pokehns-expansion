@@ -10,9 +10,9 @@ Alola_Ulaula_House_Phant::
 # 6 "data/maps/UlaUla_House_hns/scripts.pory"
 	compare VAR_ALOLA_STATE, 4
 	goto_if_eq Alola_Ulaula_House_Phant_1
-# 42 "data/maps/UlaUla_House_hns/scripts.pory"
+# 49 "data/maps/UlaUla_House_hns/scripts.pory"
 	msgbox Alola_Ulaula_House_Phant_Text_7, MSGBOX_AUTOCLOSE
-# 48 "data/maps/UlaUla_House_hns/scripts.pory"
+# 55 "data/maps/UlaUla_House_hns/scripts.pory"
 	release
 	end
 
@@ -22,9 +22,9 @@ Alola_Ulaula_House_Phant_1:
 # 13 "data/maps/UlaUla_House_hns/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq Alola_Ulaula_House_Phant_4
-# 34 "data/maps/UlaUla_House_hns/scripts.pory"
+# 41 "data/maps/UlaUla_House_hns/scripts.pory"
 	msgbox Alola_Ulaula_House_Phant_Text_6, MSGBOX_AUTOCLOSE
-# 36 "data/maps/UlaUla_House_hns/scripts.pory"
+# 43 "data/maps/UlaUla_House_hns/scripts.pory"
 	release
 	end
 
@@ -38,53 +38,83 @@ Alola_Ulaula_House_Phant_4:
 # 19 "data/maps/UlaUla_House_hns/scripts.pory"
 	setvar VAR_ALOLA_STATE, 5
 # 20 "data/maps/UlaUla_House_hns/scripts.pory"
-	msgbox Alola_Ulaula_House_Phant_Text_3, MSGBOX_AUTOCLOSE
+	msgbox Alola_Ulaula_House_Phant_Text_3
 # 23 "data/maps/UlaUla_House_hns/scripts.pory"
-	giveegg SPECIES_NOIBAT
+	applymovement Phantonomy, Alola_Ulaula_House_Phant_Movement_0
 # 24 "data/maps/UlaUla_House_hns/scripts.pory"
-	playfanfare MUS_HG_OBTAIN_EGG
+	waitmovement 0
 # 25 "data/maps/UlaUla_House_hns/scripts.pory"
-	msgbox Alola_Ulaula_House_Phant_Text_4
+	giveegg SPECIES_NOIBAT
 # 26 "data/maps/UlaUla_House_hns/scripts.pory"
-	waitfanfare
+	playfanfare MUS_HG_OBTAIN_EGG
 # 27 "data/maps/UlaUla_House_hns/scripts.pory"
-	msgbox Alola_Ulaula_House_Phant_Text_5, MSGBOX_AUTOCLOSE
+	msgbox Alola_Ulaula_House_Phant_Text_4
+# 28 "data/maps/UlaUla_House_hns/scripts.pory"
+	waitfanfare
 # 29 "data/maps/UlaUla_House_hns/scripts.pory"
+	applymovement Phantonomy, Alola_Ulaula_House_Phant_Movement_1
+# 30 "data/maps/UlaUla_House_hns/scripts.pory"
+	playse SE_LEDGE
+# 31 "data/maps/UlaUla_House_hns/scripts.pory"
+	waitse
+# 32 "data/maps/UlaUla_House_hns/scripts.pory"
+	playse SE_LEDGE
+# 33 "data/maps/UlaUla_House_hns/scripts.pory"
+	waitse
+# 34 "data/maps/UlaUla_House_hns/scripts.pory"
+	msgbox Alola_Ulaula_House_Phant_Text_5, MSGBOX_AUTOCLOSE
+# 36 "data/maps/UlaUla_House_hns/scripts.pory"
 	release
 	end
 
 
 Alola_Ulaula_House_Noivern::
-# 54 "data/maps/UlaUla_House_hns/scripts.pory"
+# 61 "data/maps/UlaUla_House_hns/scripts.pory"
 	lock
-# 55 "data/maps/UlaUla_House_hns/scripts.pory"
+# 62 "data/maps/UlaUla_House_hns/scripts.pory"
 	faceplayer
-# 56 "data/maps/UlaUla_House_hns/scripts.pory"
+# 63 "data/maps/UlaUla_House_hns/scripts.pory"
 	playmoncry SPECIES_NOIVERN, 0
-# 57 "data/maps/UlaUla_House_hns/scripts.pory"
+# 64 "data/maps/UlaUla_House_hns/scripts.pory"
 	msgbox Alola_Ulaula_House_Noivern_Text_0, MSGBOX_AUTOCLOSE
-# 58 "data/maps/UlaUla_House_hns/scripts.pory"
+# 65 "data/maps/UlaUla_House_hns/scripts.pory"
 	waitmoncry
-# 59 "data/maps/UlaUla_House_hns/scripts.pory"
+# 66 "data/maps/UlaUla_House_hns/scripts.pory"
 	release
 	end
 
 
 Alola_Ulaula_House_Typholosion::
-# 64 "data/maps/UlaUla_House_hns/scripts.pory"
+# 71 "data/maps/UlaUla_House_hns/scripts.pory"
 	lock
-# 65 "data/maps/UlaUla_House_hns/scripts.pory"
+# 72 "data/maps/UlaUla_House_hns/scripts.pory"
 	faceplayer
-# 66 "data/maps/UlaUla_House_hns/scripts.pory"
+# 73 "data/maps/UlaUla_House_hns/scripts.pory"
 	playmoncry SPECIES_TYPHLOSION_HISUI, 0
-# 67 "data/maps/UlaUla_House_hns/scripts.pory"
+# 74 "data/maps/UlaUla_House_hns/scripts.pory"
 	msgbox Alola_Ulaula_House_Typholosion_Text_0
-# 68 "data/maps/UlaUla_House_hns/scripts.pory"
+# 75 "data/maps/UlaUla_House_hns/scripts.pory"
 	waitmoncry
-# 69 "data/maps/UlaUla_House_hns/scripts.pory"
+# 76 "data/maps/UlaUla_House_hns/scripts.pory"
 	release
 	end
 
+
+# 23 "data/maps/UlaUla_House_hns/scripts.pory"
+Alola_Ulaula_House_Phant_Movement_0:
+# 23 "data/maps/UlaUla_House_hns/scripts.pory"
+	walk_in_place_down
+# 23 "data/maps/UlaUla_House_hns/scripts.pory"
+	walk_in_place_down
+	step_end
+
+# 29 "data/maps/UlaUla_House_hns/scripts.pory"
+Alola_Ulaula_House_Phant_Movement_1:
+# 29 "data/maps/UlaUla_House_hns/scripts.pory"
+	jump_in_place_down
+# 29 "data/maps/UlaUla_House_hns/scripts.pory"
+	jump_in_place_down
+	step_end
 
 Alola_Ulaula_House_Phant_Text_0:
 # 8 "data/maps/UlaUla_House_hns/scripts.pory"
@@ -107,30 +137,30 @@ Alola_Ulaula_House_Phant_Text_3:
 	.string "I think you've earned this.$"
 
 Alola_Ulaula_House_Phant_Text_4:
-# 25 "data/maps/UlaUla_House_hns/scripts.pory"
+# 27 "data/maps/UlaUla_House_hns/scripts.pory"
 	.string "You received an Egg from Phantonomy!$"
 
 Alola_Ulaula_House_Phant_Text_5:
-# 27 "data/maps/UlaUla_House_hns/scripts.pory"
+# 34 "data/maps/UlaUla_House_hns/scripts.pory"
 	.string "That Egg contains my favorite Pokémon.\n"
 	.string "Please, take good care of it…$"
 
 Alola_Ulaula_House_Phant_Text_6:
-# 34 "data/maps/UlaUla_House_hns/scripts.pory"
+# 41 "data/maps/UlaUla_House_hns/scripts.pory"
 	.string "No worries, {PLAYER}.\n"
 	.string "Come back when you're ready…$"
 
 Alola_Ulaula_House_Phant_Text_7:
-# 42 "data/maps/UlaUla_House_hns/scripts.pory"
+# 49 "data/maps/UlaUla_House_hns/scripts.pory"
 	.string "I hope you enjoyed this taste of Alola.\p"
 	.string "Look forward to my full demake of\n"
 	.string "the region in my own upcoming project{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.\p"
 	.string "Ultra Eclipse!$"
 
 Alola_Ulaula_House_Noivern_Text_0:
-# 57 "data/maps/UlaUla_House_hns/scripts.pory"
+# 64 "data/maps/UlaUla_House_hns/scripts.pory"
 	.string "Scree!$"
 
 Alola_Ulaula_House_Typholosion_Text_0:
-# 67 "data/maps/UlaUla_House_hns/scripts.pory"
+# 74 "data/maps/UlaUla_House_hns/scripts.pory"
 	.string "Graa!$"

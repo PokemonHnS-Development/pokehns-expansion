@@ -243,11 +243,8 @@ script Alola_Akala_BattleVsTapuLele{
     lock
     faceplayer
     playmoncry(SPECIES_TAPU_LELE, CRY_MODE_ENCOUNTER)
-    applymovement(Akala_Tapu, moves(walk_in_place_down*2))
     msgbox("Le-Lele!")
-    waitmovement(0)
     waitmoncry
-    playbgm(MUS_HG_VS_SUICUNE, FALSE)
     seteventmon(SPECIES_TAPU_LELE, 60)
     special(BattleSetup_StartLegendaryBattle)
     waitstate

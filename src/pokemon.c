@@ -8051,13 +8051,13 @@ u16 GetBattleBGM(void)
                 return MUS_VS_TRAINER;
             return MUS_VS_RIVAL;
         case TRAINER_CLASS_ELITE_FOUR:
-        case TRAINER_CLASS_PROFESSOR_HNS:
             return MUS_VS_ELITE_FOUR;
         case TRAINER_CLASS_CHAMPION_FRLG:
         case TRAINER_CLASS_DEVELOPER_HNS:
             return MUS_RG_VS_CHAMPION;
         case TRAINER_CLASS_LEADER_FRLG:
         case TRAINER_CLASS_ELITE_FOUR_FRLG:
+        case TRAINER_CLASS_PROFESSOR_HNS:
             return MUS_RG_VS_GYM_LEADER;
         case TRAINER_CLASS_SALON_MAIDEN:
         case TRAINER_CLASS_DOME_ACE:

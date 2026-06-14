@@ -155,11 +155,8 @@ script Alola_Ulaula_BattleVsTapuBulu{
     lock
     faceplayer
     playmoncry(SPECIES_TAPU_BULU, CRY_MODE_ENCOUNTER)
-    applymovement(Ulaula_Tapu, moves(walk_in_place_down*2))
     msgbox("Bu-Bulu!")
-    waitmovement(0)
     waitmoncry
-    playbgm(MUS_HG_VS_SUICUNE, FALSE)
     seteventmon(SPECIES_TAPU_BULU, 60)
     special(BattleSetup_StartLegendaryBattle)
     waitstate
