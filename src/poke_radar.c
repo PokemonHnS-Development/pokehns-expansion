@@ -109,6 +109,23 @@ struct PokeRadarStruct
     struct PokeRadarEncounterTypeInfo encounterTypesInfo[ENCOUNTER_COUNT];
 };
 
+struct EncounterCoords { u16 species; u8 x; u8 y; };
+
+static const struct EncounterCoords route31EncounterCoords[] =
+{
+    {SPECIES_NONE, 10, 16},
+    {SPECIES_LEDYBA, 10, 16},
+    {SPECIES_BELLSPROUT, 27, 7},
+    {SPECIES_CATERPIE, 10, 16},
+    {SPECIES_MAREEP, 54, 18},
+    {SPECIES_WEEDLE, 10, 16},
+    {SPECIES_PICHU, 20, 7},
+    {SPECIES_SPINARAK, 39, 15},
+    {SPECIES_POLIWAG, 10, 5},
+    {SPECIES_HOOTHOOT, 45, 24},
+    {SPECIES_ZUBAT, 56, 11},
+    {SPECIES_GASTLY, 39, 7},
+};
 
 // static declarations
 static EWRAM_DATA struct PokeRadarStruct *sPokeRadar = NULL;
@@ -217,6 +234,7 @@ static bool32 PokeRadar_Bail(struct Task *task);
 static void GatherMapEncounterInfo(struct Task *task);
 static u32 CreateCapturedAllSprite(struct Task *task, s16 x, s16 y);
 static u32 CreateEncounterTypeSprite(struct Task *task, u8 encounterType, s16 x, s16 y);
+static bool8 IsObjectEventOnScreen(struct ObjectEvent *objectEvent);
 
 enum
 {
@@ -402,8 +420,18 @@ static void GatherMapEncounterInfo(struct Task *task)
                 {
                     // TODO - Prepare Coordinates for all encounters for all maps
                     encounterTypeInfo->encountersInfo[encounterTypeInfo->numEncounters].species = species;
-                    encounterTypeInfo->encountersInfo[encounterTypeInfo->numEncounters].xCoord = 0;
-                    encounterTypeInfo->encountersInfo[encounterTypeInfo->numEncounters].yCoord = 0;
+
+                    encounterTypeInfo->encountersInfo[encounterTypeInfo->numEncounters].xCoord = route31EncounterCoords[0].x;
+                    encounterTypeInfo->encountersInfo[encounterTypeInfo->numEncounters].yCoord = route31EncounterCoords[0].y;
+                    for (u8 i = 1; i < 12; i++)
+                    {
+                        if (species == route31EncounterCoords[i].species)
+                        {
+                            encounterTypeInfo->encountersInfo[encounterTypeInfo->numEncounters].xCoord = route31EncounterCoords[i].x;
+                            encounterTypeInfo->encountersInfo[encounterTypeInfo->numEncounters].yCoord = route31EncounterCoords[i].y;
+                        }
+                    }
+                    
                     encounterTypeInfo->encountersInfo[encounterTypeInfo->numEncounters].seen = GetSetPokedexFlag(SpeciesToNationalPokedexNum(species), FLAG_GET_SEEN);
                     encounterTypeInfo->encountersInfo[encounterTypeInfo->numEncounters].caught = GetSetPokedexFlag(SpeciesToNationalPokedexNum(species), FLAG_GET_CAUGHT);
 
@@ -463,6 +491,7 @@ static bool32 PokeRadar_GetRadarOut(struct Task *task)
 
     ObjectEventClearHeldMovementIfActive(playerObjEvent);
     playerObjEvent->enableAnim = TRUE;
+    HideFollowerForFieldEffect();
     SetPlayerAvatarFieldMove();
     ObjectEventSetHeldMovement(playerObjEvent, MOVEMENT_ACTION_START_ANIM_IN_DIRECTION);
     PlaySE(SE_POKENAV_ON);
@@ -524,20 +553,11 @@ static bool32 PokeRadar_InitDisplay(struct Task *task)
     task->tEncounterTypeSpriteId = CreateEncounterTypeSprite(task, encounterTypeIdx, iconLeftX, iconTopY);
 
     task->tStep = POKE_RADAR_DISPLAY;
-    task->tFrameCounter = 0;
+    task->tFrameCounter = 1;
 
-    // TODO - Warp Camera to focus on relevant OW Mon or Default coords per Encounter Type
-    // SetCameraFocusCoords(0, 0);
-    // gObjectEvents[gPlayerAvatar.objectEventId].trackedByCamera = TRUE;
-    // u8 i = 1;
-    // AddCameraObject(gObjectEvents[i].spriteId);
-    // gObjectEvents[i].trackedByCamera = TRUE;
-    // InitCameraUpdateCallback(gObjectEvents[i].spriteId);
-    // SetCameraFocusCoords(gObjectEvents[i].currentCoords.x, gObjectEvents[i].currentCoords.x);
-    // SetCameraPanningCallback(NULL);
-    // SetCameraPanning(0, 100);
-    // DrawWholeMapView();
-    //LockPlayerFieldControls();
+    SetDynamicWarpWithCoords(0, gSaveBlock1Ptr->location.mapGroup, gSaveBlock1Ptr->location.mapNum, WARP_ID_NONE, gSaveBlock1Ptr->pos.x, gSaveBlock1Ptr->pos.y);
+    FlagSet(FLAG_HIDE_MAP_NAME_POPUP);
+
     return TRUE;
 }
 
@@ -552,7 +572,37 @@ static bool32 PokeRadar_Display(struct Task *task)
     u8 encounterPrev = task->tEncounterIdx;
     struct PokeRadarEncounterTypeInfo *encounterTypeInfo = &(sPokeRadar->encounterTypesInfo[encounterTypePrev]);
 
-    if (task->tEncounterTypeSpriteId == 0) // assume that if 0, Encounter Type Sprite doesn't exist
+    if (task->tFrameCounter == 1)
+    {
+        SetWarpDestination(gSaveBlock1Ptr->location.mapGroup, gSaveBlock1Ptr->location.mapNum, WARP_ID_NONE, encounterTypeInfo->encountersInfo[encounterPrev].xCoord, encounterTypeInfo->encountersInfo[encounterPrev].yCoord);
+        WarpIntoMap();
+        DrawWholeMapView();
+        
+        for (u8 i = 0; i < 16; i++)
+        {
+            if (gObjectEvents[i].active)
+            {
+                MoveObjectEventToMapCoords(&gObjectEvents[i], gObjectEvents[i].currentCoords.x, gObjectEvents[i].currentCoords.y);
+            }
+        }
+
+        TrySpawnObjectEvents(0, 0);
+        task->tFrameCounter++;
+    }
+    else if (task->tFrameCounter > 1)
+    {
+        for (u8 i = 0; i < 16; i++)
+        {
+            if (gObjectEvents[i].active)
+            {
+                if (i != gPlayerAvatar.objectEventId && !IsObjectEventOnScreen(&gObjectEvents[i]))
+                    RemoveObjectEvent(&gObjectEvents[i]);
+            }
+            TrySpawnObjectEvents(0, 0);
+        }
+        task->tFrameCounter = 0;
+    }
+    else if (task->tEncounterTypeSpriteId == 0) // assume that if 0, Encounter Type Sprite doesn't exist
     {
         // Draw the new Encounter Type Sprite with SE, preventing input that could trigger another redraw
         task->tEncounterTypeSpriteId = CreateEncounterTypeSprite(task, encounterTypeIdx, iconLeftX, iconTopY);
@@ -647,6 +697,8 @@ static bool32 PokeRadar_Display(struct Task *task)
         u16 displaySpeciesPrev = seenPrev ? speciesPrev : SPECIES_NONE;
         bool8 caughtPrev = encounterTypeInfo->encountersInfo[encounterPrev].caught;
         bool8 caughtAllTypePrev = encounterTypeInfo->allEncounterTypeCaught;
+        u8 xPrev = encounterTypeInfo->encountersInfo[encounterPrev].xCoord;
+        u8 yPrev = encounterTypeInfo->encountersInfo[encounterPrev].yCoord;
 
         encounterTypeInfo = &(sPokeRadar->encounterTypesInfo[encounterTypeIdx]);
         
@@ -655,6 +707,8 @@ static bool32 PokeRadar_Display(struct Task *task)
         u16 displaySpeciesNext = seenNext ? speciesNext : SPECIES_NONE;
         bool8 caughtNext = encounterTypeInfo->encountersInfo[task->tEncounterIdx].caught;
         bool8 caughtAllTypeNext = encounterTypeInfo->allEncounterTypeCaught;
+        u8 xNext = encounterTypeInfo->encountersInfo[task->tEncounterIdx].xCoord;
+        u8 yNext = encounterTypeInfo->encountersInfo[task->tEncounterIdx].yCoord;
 
         #ifndef NDEBUG
             MgbaPrintf(MGBA_LOG_DEBUG, "Previously Drawn - Species Prev: %d, Display Species Prev: %d\nNext to be Drawn - Species Next: %d, Display Species Next: %d", speciesPrev, displaySpeciesPrev, speciesNext, displaySpeciesNext);
@@ -722,7 +776,10 @@ static bool32 PokeRadar_Display(struct Task *task)
         if (caughtAllTypeNext && !caughtAllTypePrev)
             task->tCaughtAllTypeSpriteId = CreateCapturedAllSprite(task, iconCenterX, iconTopY);
 
-        // TODO - Warp Camera to focus on relevant OW Mon or Default coords per Encounter Type
+        if (xPrev != xNext || yPrev != yNext)
+        {
+            task->tFrameCounter++;
+        }
 
         return FALSE;
     }
@@ -836,6 +893,26 @@ static bool32 PokeRadar_Confirm(struct Task *task)
 // tStep = 5 aka sPokeRadarStateFuncs[5]
 static bool32 PokeRadar_Cancel(struct Task *task)
 {
+    SetWarpDestinationToDynamicWarp(0);
+    WarpIntoMap();
+    DrawWholeMapView();
+
+    for (u8 i = 0; i < 16; i++)
+    {
+        if (gObjectEvents[i].active)
+        {
+            MoveObjectEventToMapCoords(&gObjectEvents[i], gObjectEvents[i].currentCoords.x, gObjectEvents[i].currentCoords.y);
+
+            if (i != gPlayerAvatar.objectEventId && !IsObjectEventOnScreen(&gObjectEvents[i]))
+                RemoveObjectEvent(&gObjectEvents[i]);
+        }
+    }
+
+    TrySpawnObjectEvents(0, 0);
+    UpdateFollowingPokemon();
+
+    FlagClear(FLAG_HIDE_MAP_NAME_POPUP);
+
     Free(sPokeRadar);
 
     FreeMonIconPalettes();
@@ -886,4 +963,22 @@ static bool32 PokeRadar_Bail(struct Task *task)
 bool32 IsPokeRadarEnabled(void)
 {
     return (CheckBagHasItem(ITEM_POKE_RADAR, 1));
+}
+
+static bool8 IsObjectEventOnScreen(struct ObjectEvent *objectEvent)
+{
+    s16 x;
+    s16 y;
+
+    x = gSaveBlock1Ptr->pos.x + MAP_OFFSET;
+    y = gSaveBlock1Ptr->pos.y + MAP_OFFSET;
+
+    if ((  x - 7 <= objectEvent->currentCoords.x
+        && x + 7 >= objectEvent->currentCoords.x
+        && y - 5 <= objectEvent->currentCoords.y
+        && y + 5 >= objectEvent->currentCoords.y) ||
+        (  objectEvent->initialCoords.x == gObjectEvents[gPlayerAvatar.objectEventId].currentCoords.x
+        && objectEvent->initialCoords.x == gObjectEvents[gPlayerAvatar.objectEventId].currentCoords.x))
+        return TRUE;
+    return FALSE;
 }
