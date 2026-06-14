@@ -84,7 +84,7 @@ script Alola_Poni_TotemBattle{
     lock
     faceplayer
     playmoncry(SPECIES_KOMMO_O,0)
-    msgbox("Thhhh!", MSGBOX_AUTOCLOSE)
+    msgbox("Ko-mo-ko-mo-o!", MSGBOX_AUTOCLOSE)
     waitmoncry
     //setwildbattle species:req, level:req, item=ITEM_NONE, species2=SPECIES_NONE, level2=0, item2=ITEM_NONE
     setwildbattle(SPECIES_NOIVERN, 60, ITEM_NONE, SPECIES_KOMMO_O_TOTEM, 60, ITEM_OCCA_BERRY)

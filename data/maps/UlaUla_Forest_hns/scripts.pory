@@ -77,7 +77,7 @@ script Alola_Ulaula_TotemBattle{
     if ((var(VAR_0x8000)== TIME_MORNING) || (var(VAR_0x8000)== TIME_DAY))
     {
         playmoncry(SPECIES_VIKAVOLT,0)
-        msgbox("Thhhh!", MSGBOX_AUTOCLOSE)
+        msgbox("Bee-beep!", MSGBOX_AUTOCLOSE)
         waitmoncry
         //setwildbattle species:req, level:req, item=ITEM_NONE, species2=SPECIES_NONE, level2=0, item2=ITEM_NONE
         setwildbattle(SPECIES_CHARJABUG, 60, ITEM_NONE, SPECIES_VIKAVOLT_TOTEM, 60, ITEM_OCCA_BERRY)
@@ -110,7 +110,7 @@ script Alola_Ulaula_TotemBattle{
     else
     {
         playmoncry(SPECIES_MIMIKYU,0)
-        msgbox("Thhhh!", MSGBOX_AUTOCLOSE)
+        msgbox("Ssee-mee?!", MSGBOX_AUTOCLOSE)
         waitmoncry
         setwildbattle(SPECIES_SKARMORY, 60, ITEM_NONE, SPECIES_MIMIKYU_TOTEM, 60, ITEM_LUM_BERRY)
         settotemboost(B_POSITION_OPPONENT_RIGHT, 1, 1, 1, 1, 1, 1)
