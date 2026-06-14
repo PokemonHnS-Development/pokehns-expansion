@@ -18,7 +18,7 @@ Alola_MelemeleSea_TrainerBattleSwimmer_Text_0:
 
 Alola_MelemeleSea_TrainerBattleSwimmer_Text_1:
 # 4 "data/maps/AlolaWater_hns/scripts.pory"
-	.string "Ouch,\n pulled a hamstring…$"
+	.string "Ouch,\npulled a hamstring…$"
 
 Alola_MelemeleSea_TrainerBattleSwimmer_Text_2:
 # 5 "data/maps/AlolaWater_hns/scripts.pory"

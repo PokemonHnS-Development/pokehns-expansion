@@ -75,7 +75,7 @@ script Alola_Akala_OldManOnBench{
     lock
     faceplayer
     msgbox("Ah the weather is so nice today,
-    doesn't it?
+    isn't it?
     
     I was just feeding the Pikipek and this
     one decided to join me on my bench!", MSGBOX_AUTOCLOSE)
@@ -297,7 +297,7 @@ script Alola_Akala_TrainerBattleCamper{
 }
 
 script Alola_Akala_TrainerBattleSwimmerLand{
-    trainerbattle_single(TRAINER_AKALA_SWIMMER_2_HNS, "Hey! No shoes on the beach!", "Ouch,\n where's a lifeguard when you need one\.")
+    trainerbattle_single(TRAINER_AKALA_SWIMMER_2_HNS, "Hey! No shoes on the beach!", "Ouch,\nwhere's a lifeguard when you need one\.")
     msgbox("Akala Isle has the best beaches!
     It's got soft sand and clear waters!", MSGBOX_AUTOCLOSE)
     release
@@ -313,7 +313,7 @@ script Alola_Akala_TrainerBattleSwimmerWater{
 }
 
 script Alola_Akala_TrainerBattleSwimmerWaterM{
-    trainerbattle_single(TRAINER_AKALA_SWIMMER_3_HNS, "Hah!\nYou need to ride a Pok\emon to surf?", "If I hadn't swam myself\n maybe I would've had the energy to win\.")
+    trainerbattle_single(TRAINER_AKALA_SWIMMER_3_HNS, "Hah!\nYou need to ride a Pok\emon to surf?", "If I hadn't swam myself\nmaybe I would've had the energy to win\.")
     msgbox("The current out here is strong!
     A Pok\emon must be really powerful to
     migrate all the way out to the Isles!", MSGBOX_AUTOCLOSE)

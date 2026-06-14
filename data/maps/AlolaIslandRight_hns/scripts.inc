@@ -577,7 +577,7 @@ Alola_Akala_Pikipek_Text_0:
 Alola_Akala_OldManOnBench_Text_0:
 # 77 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	.string "Ah the weather is so nice today,\n"
-	.string "doesn't it?\p"
+	.string "isn't it?\p"
 	.string "I was just feeding the Pikipek and this\n"
 	.string "one decided to join me on my bench!$"
 
@@ -649,7 +649,7 @@ Alola_Akala_TrainerBattleSwimmerLand_Text_0:
 
 Alola_Akala_TrainerBattleSwimmerLand_Text_1:
 # 300 "data/maps/AlolaIslandRight_hns/scripts.pory"
-	.string "Ouch,\n where's a lifeguard when you need one…$"
+	.string "Ouch,\nwhere's a lifeguard when you need one…$"
 
 Alola_Akala_TrainerBattleSwimmerLand_Text_2:
 # 301 "data/maps/AlolaIslandRight_hns/scripts.pory"
@@ -675,7 +675,7 @@ Alola_Akala_TrainerBattleSwimmerWaterM_Text_0:
 
 Alola_Akala_TrainerBattleSwimmerWaterM_Text_1:
 # 316 "data/maps/AlolaIslandRight_hns/scripts.pory"
-	.string "If I hadn't swam myself\n maybe I would've had the energy to win…$"
+	.string "If I hadn't swam myself\nmaybe I would've had the energy to win…$"
 
 Alola_Akala_TrainerBattleSwimmerWaterM_Text_2:
 # 317 "data/maps/AlolaIslandRight_hns/scripts.pory"
