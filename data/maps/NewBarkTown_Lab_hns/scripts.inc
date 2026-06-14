@@ -416,7 +416,7 @@ NewBarkTown_Lab_EventScript_PoliceYes::
 	clearflag FLAG_HIDE_MOMS_FRIEND2
 	setflag FLAG_ADVENTURE_STARTED
 	setflag FLAG_START_NUZLOCKE
-	setflag FLAG_EXP_SHARE
+	setflag FLAG_EXP_SHARE_ENABLED
 	removeitem ITEM_MYSTERY_EGG
 	end
 

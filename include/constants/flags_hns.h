@@ -667,7 +667,7 @@
 #define FLAG_DAY_POKEMON                            0x25C
 #define FLAG_NIGHT_POKEMON                          0x25D
 #define FLAG_ENABLE_RADIO                           0x25E
-#define FLAG_EXP_SHARE                              0x25F
+#define FLAG_EXP_SHARE                              0x25F //No longer used, instead uses FLAG_EXP_SHARE_ENABLED
 #define FLAG_FINITE_TMS                             0x260
 #define FLAG_KANTO_RADIO_GOT                        0x261
 #define FLAG_MINTS_CLERK                            0x262
