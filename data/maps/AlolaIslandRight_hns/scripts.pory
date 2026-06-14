@@ -53,7 +53,10 @@ script Alola_Akala_Sign{
 
 script Alola_Akala_House_Sign{
     lock
-    msgbox("???'s House")
+    msgbox("The Akala Villa.
+    
+    A place for visitors to stay while
+    on Akala Isle.")
     release
     end
 }
