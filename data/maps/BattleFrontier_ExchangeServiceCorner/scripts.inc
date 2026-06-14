@@ -263,6 +263,15 @@ BattleFrontier_ExchangeServiceCorner_EventScript_HoldItemClerk::
 	goto BattleFrontier_ExchangeServiceCorner_EventScript_ChooseHoldItem
 	end
 
+BattleFrontier_ExchangeServiceCorner_EventScript_PokeBallClerk::
+	lock
+	faceplayer
+	msgbox BattleFrontier_ExchangeServiceCorner_Text_WelcomePleaseChoosePrize, MSGBOX_DEFAULT
+	special CreateBPPokeBallShop
+	waitstate
+	release
+	end
+
 BattleFrontier_ExchangeServiceCorner_EventScript_ChooseHoldItem::
 	setvar VAR_0x8004, SCROLL_MULTI_BF_EXCHANGE_CORNER_HOLD_ITEM_VENDOR
 	special ShowFrontierExchangeCornerItemIconWindow
