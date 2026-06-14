@@ -7,7 +7,7 @@ script Alola_Poni_BattleExeggutor{
     faceplayer
     setflag(FLAG_BATTLED_EXEGGUTOR)
     playmoncry(SPECIES_EXEGGUTOR_ALOLA, 0)
-    msgbox("Gaaah!", MSGBOX_AUTOCLOSE)
+    msgbox("Gaah-aah!", MSGBOX_AUTOCLOSE)
     waitmoncry
     setwildbattle(SPECIES_EXEGGUTOR_ALOLA,45)
     dowildbattle
@@ -146,7 +146,7 @@ script Alola_Poni_BattleVsTapuFini{
     faceplayer
     playmoncry(SPECIES_TAPU_FINI, 0)
     applymovement(Poni_Tapu, moves(walk_in_place_down*2))
-    msgbox("Graah!")
+    msgbox("Fiiin!")
     waitmovement(0)
     waitmoncry
     setwildbattle(SPECIES_TAPU_FINI, 60)

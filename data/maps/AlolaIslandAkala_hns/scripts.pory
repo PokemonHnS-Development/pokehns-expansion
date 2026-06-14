@@ -41,7 +41,13 @@ script Alola_Ulaula_FindItem2{
 
 script Alola_Ulaula_MtLanikalaSign{
     lock
-    msgbox("Mt. Lanakila")
+    msgbox("This mountain is affectionately
+    referred to as Mt. Lanikala by the
+    locals, as it is the tallest mountain
+    on the Alola Isles.
+    
+    The real name of this mountain has been
+    lost to time.")
     release
     end
 }

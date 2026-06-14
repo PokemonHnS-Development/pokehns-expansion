@@ -61,7 +61,7 @@ script Alola_Poni_BattleGolem{
 }
 
 script Alola_Poni_Cave_FindItem1{
-    finditem(ITEM_CALCIUM, 1)
+    finditem(ITEM_LEAF_STONE, 1)
     end
 }
 

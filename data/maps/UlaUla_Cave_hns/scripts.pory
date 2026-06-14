@@ -5,7 +5,7 @@ script Alola_Ulaula_BattleSandslash{
     faceplayer
     setflag(FLAG_BATTLED_SANDSLASH)
     playmoncry(SPECIES_SANDSLASH_ALOLA, 0)
-    msgbox("Gaaah!", MSGBOX_AUTOCLOSE)
+    msgbox("Graah!", MSGBOX_AUTOCLOSE)
     waitmoncry
     setwildbattle(SPECIES_SANDSLASH_ALOLA,45)
     dowildbattle
@@ -35,7 +35,7 @@ script Alola_Ulaula_BattleNinetales{
     faceplayer
     setflag(FLAG_BATTLED_NINETALES)
     playmoncry(SPECIES_NINETALES_ALOLA, 0)
-    msgbox("Gaaah!", MSGBOX_AUTOCLOSE)
+    msgbox("Graah!", MSGBOX_AUTOCLOSE)
     waitmoncry
     setwildbattle(SPECIES_NINETALES_ALOLA,45)
     dowildbattle

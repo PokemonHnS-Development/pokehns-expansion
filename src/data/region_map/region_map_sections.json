@@ -1673,7 +1673,8 @@
     {
       "id": "MAPSEC_MELEMELE_ISLAND",
       "name": "MELEMELE ISLE",
-      "in_hns": true
+      "in_hns": true,
+      "region": "REGION_ALOLA"
     },
     {
       "id": "MAPSEC_AKALA_ISLAND",
@@ -1797,7 +1798,8 @@
     },
     {
       "id": "MAPSEC_MELEMELE_ISLAND",
-      "name": "MELEMELE ISLE"
+      "name": "MELEMELE ISLE",
+      "region": "REGION_ALOLA"
     },
     {
       "id": "MAPSEC_AKALA_ISLAND",

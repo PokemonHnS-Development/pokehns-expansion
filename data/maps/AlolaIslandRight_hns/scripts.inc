@@ -602,7 +602,7 @@ Alola_Akala_Totem_sign_Text_0:
 
 Alola_Akala_BattleVsTapuLele_Text_0:
 # 247 "data/maps/AlolaIslandRight_hns/scripts.pory"
-	.string "Graah!$"
+	.string "Le-Lele!$"
 
 Alola_Akala_TrainerBattleHiker_Text_0:
 # 276 "data/maps/AlolaIslandRight_hns/scripts.pory"

@@ -356,4 +356,4 @@ Alola_Ulaula_Totem_sign_Text_0:
 
 Alola_Ulaula_BattleVsTapuBulu_Text_0:
 # 159 "data/maps/UlaUla_Forest_hns/scripts.pory"
-	.string "Graah!$"
+	.string "Bu-Bulu!$"

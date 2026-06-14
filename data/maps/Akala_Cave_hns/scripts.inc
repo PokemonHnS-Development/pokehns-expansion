@@ -64,7 +64,7 @@ Alola_Melemele_BattleDugtrio::
 # 37 "data/maps/Akala_Cave_hns/scripts.pory"
 	playmoncry SPECIES_DUGTRIO_ALOLA, 0
 # 38 "data/maps/Akala_Cave_hns/scripts.pory"
-	msgbox Alola_Melemele_BattleMarowak_Text_0, MSGBOX_AUTOCLOSE
+	msgbox Alola_Melemele_BattleDugtrio_Text_0, MSGBOX_AUTOCLOSE
 # 39 "data/maps/Akala_Cave_hns/scripts.pory"
 	waitmoncry
 # 40 "data/maps/Akala_Cave_hns/scripts.pory"
@@ -150,7 +150,11 @@ Alola_AkalaCave_TrainerBattleCamper::
 
 Alola_Melemele_BattleMarowak_Text_0:
 # 8 "data/maps/Akala_Cave_hns/scripts.pory"
-	.string "Gaaah!$"
+	.string "Raah!$"
+
+Alola_Melemele_BattleDugtrio_Text_0:
+# 38 "data/maps/Akala_Cave_hns/scripts.pory"
+	.string "Cha-Cha!$"
 
 Alola_AkalaCave_TrainerBattleHiker_Text_0:
 # 75 "data/maps/Akala_Cave_hns/scripts.pory"

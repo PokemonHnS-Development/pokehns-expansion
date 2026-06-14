@@ -2,6 +2,7 @@
   "id": "MAP_ULA_ULA_HOUSE_HNS",
   "name": "UlaUla_House_hns",
   "layout": "LAYOUT_ULA_ULA_HOUSE_HNS",
+  "region": "REGION_ALOLA",
   "music": "MUS_HG_CINNABAR",
   "region_map_section": "MAPSEC_ULAULA_ISLAND",
   "requires_flash": false,
@@ -65,6 +66,5 @@
   ],
   "coord_events": [],
   "bg_events": [],
-  "game_version": "hns",
-  "region": "REGION_ALOLA"
+  "game_version": "hns"
 }

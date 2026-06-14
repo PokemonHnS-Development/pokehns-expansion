@@ -371,7 +371,7 @@ Alola_Poni_TapuFini_Flyover_Movement_0:
 
 Alola_Poni_BattleExeggutor_Text_0:
 # 10 "data/maps/AlolaIsland_hns/scripts.pory"
-	.string "Gaaah!$"
+	.string "Gaah-aah!$"
 
 Alola_Poni_Island_Sign_Text_0:
 # 37 "data/maps/AlolaIsland_hns/scripts.pory"
@@ -393,7 +393,7 @@ Alola_Poni_Totem_sign_Text_0:
 
 Alola_Poni_BattleVsTapuFini_Text_0:
 # 149 "data/maps/AlolaIsland_hns/scripts.pory"
-	.string "Graah!$"
+	.string "Fiiin!$"
 
 Alola_Poni_TrainerBattleSwimmer1_Text_0:
 # 178 "data/maps/AlolaIsland_hns/scripts.pory"

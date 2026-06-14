@@ -400,7 +400,7 @@ script Alola_Melemele_BattleVsTapuKoko{
     faceplayer
     playmoncry(SPECIES_TAPU_KOKO, 0)
     applymovement(Melemele_Tapu, moves(walk_in_place_down*2))
-    msgbox("Graah!")
+    msgbox("Ko-Ko-Kooo!")
     waitmovement(0)
     waitmoncry
     setwildbattle(SPECIES_TAPU_KOKO, 60)

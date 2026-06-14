@@ -120,4 +120,4 @@ Alola_Ulaula_Cave_FindItem2::
 
 Alola_Ulaula_BattleSandslash_Text_0:
 # 8 "data/maps/UlaUla_Cave_hns/scripts.pory"
-	.string "Gaaah!$"
+	.string "Graah!$"

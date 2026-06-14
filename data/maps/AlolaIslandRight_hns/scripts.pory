@@ -244,7 +244,7 @@ script Alola_Akala_BattleVsTapuLele{
     faceplayer
     playmoncry(SPECIES_TAPU_LELE, 0)
     applymovement(Akala_Tapu, moves(walk_in_place_down*2))
-    msgbox("Graah!")
+    msgbox("Le-Lele!")
     waitmovement(0)
     waitmoncry
     setwildbattle(SPECIES_TAPU_LELE, 60)

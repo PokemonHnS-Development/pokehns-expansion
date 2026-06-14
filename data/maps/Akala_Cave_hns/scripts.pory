@@ -5,7 +5,7 @@ script Alola_Melemele_BattleMarowak{
     faceplayer
     setflag(FLAG_BATTLED_MAROWAK)
     playmoncry(SPECIES_MAROWAK_ALOLA, 0)
-    msgbox("Gaaah!", MSGBOX_AUTOCLOSE)
+    msgbox("Raah!", MSGBOX_AUTOCLOSE)
     waitmoncry
     setwildbattle(SPECIES_MAROWAK_ALOLA,45)
     dowildbattle
@@ -35,7 +35,7 @@ script Alola_Melemele_BattleDugtrio{
     faceplayer
     setflag(FLAG_BATTLED_DUGTRIO)
     playmoncry(SPECIES_DUGTRIO_ALOLA, 0)
-    msgbox("Gaaah!", MSGBOX_AUTOCLOSE)
+    msgbox("Cha-Cha!", MSGBOX_AUTOCLOSE)
     waitmoncry
     setwildbattle(SPECIES_DUGTRIO_ALOLA,45)
     dowildbattle

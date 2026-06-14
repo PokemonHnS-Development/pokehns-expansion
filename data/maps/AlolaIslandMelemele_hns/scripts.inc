@@ -1069,7 +1069,7 @@ Alola_Melemele_Totem_sign_Text_0:
 
 Alola_Melemele_BattleVsTapuKoko_Text_0:
 # 403 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
-	.string "Graah!$"
+	.string "Ko-Ko-Kooo!$"
 
 Alola_Melemele_TrainerBattleSwimmer_Text_0:
 # 432 "data/maps/AlolaIslandMelemele_hns/scripts.pory"

@@ -108,7 +108,7 @@ Alola_Poni_BattleGolem_3:
 
 Alola_Poni_Cave_FindItem1::
 # 64 "data/maps/Poni_Cave_hns/scripts.pory"
-	finditem ITEM_CALCIUM, 1
+	finditem ITEM_LEAF_STONE, 1
 	end
 
 
