@@ -4965,11 +4965,12 @@ static u8 CreateBoxMonIconsInColumn(u8 column, u16 distance, s16 speed)
                     sStorage->boxMonsSprites[boxPosition]->sScrollInDestX = xDest;
                     sStorage->boxMonsSprites[boxPosition]->callback = SpriteCB_BoxMonIconScrollIn;
                     SetBoxMonDynamicPalette(sStorage->scrollToBoxId, boxPosition);
+
+                    if (ShouldBoxmonSpriteBeTransparent(sStorage->scrollToBoxId, boxPosition))
+                        sStorage->boxMonsSprites[boxPosition]->oam.objMode = ST_OAM_OBJ_BLEND;
+
                     iconsCreated++;
                 }
-
-                if (ShouldBoxmonSpriteBeTransparent(sStorage->scrollToBoxId, boxPosition))
-                    sStorage->boxMonsSprites[boxPosition]->oam.objMode = ST_OAM_OBJ_BLEND;
             }
             boxPosition += IN_BOX_COLUMNS;
             y += 24;
