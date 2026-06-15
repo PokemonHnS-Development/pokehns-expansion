@@ -595,6 +595,7 @@ static void Task_PlaceMon(u8);
 static void Task_ChangeScreen(u8);
 static void Task_ShowPokeStorage(u8);
 static void Task_OnBPressed(u8);
+static void Task_OnSelectPressed(u8);
 static void Task_HandleBoxOptions(u8);
 static void Task_OnSelectedMon(u8);
 static void Task_OnCloseBoxPressed(u8);
@@ -1724,6 +1725,13 @@ static void CB2_ExitPokeStorage(void)
     SetMainCallback2(CB2_ReturnToField);
 }
 
+static void CB2_ExitPokeStorageContinueScript(void)
+{
+    sPreviousBoxOption = GetCurrentBoxOption();
+    gFieldCallback = FieldTask_ReturnToPcMenu;
+    SetMainCallback2(CB2_ReturnToFieldContinueScript);
+}
+
 static s16 UNUSED StorageSystemGetNextMonIndex(struct BoxPokemon *box, s8 startIdx, u8 stopIdx, u8 mode)
 {
     s16 i;
@@ -2061,7 +2069,7 @@ static void EnterPokeStorage(u8 boxOption)
     if (sStorage == NULL)
     {
         if (boxOption == OPTION_SELECT_MON)
-            SetMainCallback2(CB2_ReturnToFieldContinueScript);
+            SetMainCallback2(CB2_ExitPokeStorageContinueScript);
         else
             SetMainCallback2(CB2_ExitPokeStorage);
     }
@@ -2086,7 +2094,7 @@ static void CB2_ReturnToPokeStorage(void)
     if (sStorage == NULL) 
     {
         if (sStorage->boxOption == OPTION_SELECT_MON)
-            SetMainCallback2(CB2_ReturnToFieldContinueScript);
+            SetMainCallback2(CB2_ExitPokeStorageContinueScript);
         else
             SetMainCallback2(CB2_ExitPokeStorage);
     }
@@ -2137,7 +2145,7 @@ static void InitStartingPosData(void)
 
 static u16 GetRequiredBldcntForItems(void)
 {
-    if (sStorage->boxOption == OPTION_MOVE_ITEMS)
+    if (sStorage->boxOption == OPTION_MOVE_ITEMS || sStorage->boxOption == OPTION_SELECT_MON)
         return BLDCNT_TGT2_ALL | BLDCNT_EFFECT_BLEND;
     return 0;
 }
@@ -2588,6 +2596,25 @@ static void Task_PokeStorageMain(u8 taskId)
             // cursor may not wrap around the edges.
             PlaySE(SE_FAILURE);
             break;
+        case INPUT_SELECT_MON:
+            PlaySE(SE_SELECT);
+            struct BoxPokemon *boxmon = GetCursorBoxMon();
+            if (sInPartyMenu)
+            {
+                gSpecialVar_0x8004 = sCursorPosition;
+            }
+            else
+            {
+                gSpecialVar_0x8004 = PC_MON_CHOSEN;
+                gSpecialVar_MonBoxPos = sCursorPosition;
+                gSpecialVar_MonBoxId = StorageGetCurrentBox();
+            }
+            if (IsBoxMonExcluded(boxmon))
+                gSpecialVar_Result = FALSE;
+            else
+                gSpecialVar_Result = TRUE;
+            SetPokeStorageTask(Task_OnSelectPressed);
+            break;
         }
         break;
     case MSTATE_MOVE_CURSOR:
@@ -2881,7 +2908,7 @@ static void Task_OnSelectedMon(u8 taskId)
             else
                 gSpecialVar_Result = TRUE;
             sStorage->screenChangeType = SCREEN_CHANGE_EXIT_BOX;
-            SetPokeStorageTask(Task_ChangeScreen);
+            SetPokeStorageTask(Task_OnSelectPressed);
             break;
         }
         break;
@@ -3971,6 +3998,28 @@ static void Task_OnBPressed(u8 taskId)
     }
 }
 
+static void Task_OnSelectPressed(u8 taskId)
+{
+    switch (sStorage->state)
+    {
+    case 0:
+        sStorage->transferWholePlttFrames = -1;
+        ComputerScreenCloseEffect(20, 0, 1);
+        sStorage->state++;
+        break;
+    case 1:
+        if (!IsComputerScreenCloseEffectActive())
+        {
+            SetHBlankCallback(NULL); // Need to null callback here to avoid flickering
+            UpdateBoxToSendMons();
+            gPlayerPartyCount = CalculatePlayerPartyCount();
+            sStorage->screenChangeType = SCREEN_CHANGE_EXIT_BOX;
+            SetPokeStorageTask(Task_ChangeScreen);
+        }
+        break;
+    }
+}
+
 static void Task_ChangeScreen(u8 taskId)
 {
     struct BoxPokemon *boxMons;
@@ -3987,7 +4036,7 @@ static void Task_ChangeScreen(u8 taskId)
     case SCREEN_CHANGE_EXIT_BOX:
     default:
         if (sStorage->boxOption == OPTION_SELECT_MON)
-            SetMainCallback2(CB2_ReturnToFieldContinueScript);
+            SetMainCallback2(CB2_ExitPokeStorageContinueScript);
         else
             SetMainCallback2(CB2_ExitPokeStorage);
         FreePokeStorageData();
@@ -4918,6 +4967,9 @@ static u8 CreateBoxMonIconsInColumn(u8 column, u16 distance, s16 speed)
                     SetBoxMonDynamicPalette(sStorage->scrollToBoxId, boxPosition);
                     iconsCreated++;
                 }
+
+                if (ShouldBoxmonSpriteBeTransparent(sStorage->scrollToBoxId, boxPosition))
+                    sStorage->boxMonsSprites[boxPosition]->oam.objMode = ST_OAM_OBJ_BLEND;
             }
             boxPosition += IN_BOX_COLUMNS;
             y += 24;
@@ -5739,7 +5791,7 @@ static bool8 DoWallpaperGfxChange(void)
     switch (sStorage->wallpaperChangeState)
     {
     case 0:
-        if (sStorage->boxOption != OPTION_MOVE_ITEMS)
+        if (sStorage->boxOption != OPTION_MOVE_ITEMS && sStorage->boxOption != OPTION_SELECT_MON)
         {
             BeginHardwarePaletteFade(BLDCNT_EFFECT_LIGHTEN | BLDCNT_TGT1_BG2, 1, 0, 16, FALSE);
         }
@@ -5765,7 +5817,7 @@ static bool8 DoWallpaperGfxChange(void)
     case 2:
         if (WaitForWallpaperGfxLoad() == TRUE)
         {
-            if (sStorage->boxOption != OPTION_MOVE_ITEMS)
+            if (sStorage->boxOption != OPTION_MOVE_ITEMS && sStorage->boxOption != OPTION_SELECT_MON)
             {
                 BeginHardwarePaletteFade(BLDCNT_EFFECT_LIGHTEN | BLDCNT_TGT1_BG2, 1, 16, 0, FALSE);
             }
