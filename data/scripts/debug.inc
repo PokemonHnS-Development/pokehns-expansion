@@ -282,7 +282,7 @@ Debug_EventScript_Script_7::
 	end
 
 Debug_EventScript_Script_8::
-	goto Debug_MomSavings_BigDeposit
+	helpwindow HELP_DEMO_WINDOW
 	release
 	end
 
