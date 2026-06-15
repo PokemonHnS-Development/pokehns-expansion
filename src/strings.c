@@ -546,7 +546,11 @@ const u8 gText_MultiLink[] = _("MULTI-LINK");
 const u8 gText_MenuOptionPokedex[] = _("POKéDEX");
 const u8 gText_MenuOptionPokemon[] = _("POKéMON");
 const u8 gText_MenuOptionBag[] = _("BAG");
+#if IS_HNS
+const u8 gText_MenuOptionPokenav[] = _("POKéGEAR");
+#else
 const u8 gText_MenuOptionPokenav[] = _("POKéNAV");
+#endif
 const u8 gText_Blank[] = _("");
 const u8 gText_MenuOptionSave[] = _("SAVE");
 const u8 gText_MenuOptionOption[] = _("OPTION");
@@ -1012,7 +1016,11 @@ const u8 gText_UpdatedTime[] = _("Updated time"); // Unused
 const u8 gText_MenuPokedex[] = _("POKéDEX");
 const u8 gText_MenuPokemon[] = _("POKéMON");
 const u8 gText_MenuBag[] = _("BAG");
+#if IS_HNS
+const u8 gText_MenuPokenav[] = _("POKéGEAR");
+#else
 const u8 gText_MenuPokenav[] = _("POKéNAV");
+#endif
 const u8 gText_MenuPlayer[] = _("{PLAYER}");
 const u8 gText_MenuSave[] = _("SAVE");
 const u8 gText_MenuOption[] = _("OPTION");
