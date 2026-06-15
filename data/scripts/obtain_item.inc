@@ -277,11 +277,14 @@ Std_PutItemAway::
 
 EventScript_BufferPutAwayPocketName::
 	switch VAR_RESULT
-	case POCKET_ITEMS,       EventScript_BufferPutAwayPocketItems
-	case POCKET_KEY_ITEMS,   EventScript_BufferPutAwayPocketKeyItems
-	case POCKET_POKE_BALLS,  EventScript_BufferPutAwayPocketPokeBalls
-	case POCKET_TM_HM,     EventScript_BufferPutAwayPocketTMCase
-	case POCKET_BERRIES, EventScript_BufferPutAwayPocketBerryPouch
+	case POCKET_MEDICINE, 	  EventScript_BufferPutAwayPocketMedicinePouch,
+	case POCKET_ITEMS,        EventScript_BufferPutAwayPocketItems
+	case POCKET_KEY_ITEMS,    EventScript_BufferPutAwayPocketKeyItems
+	case POCKET_POKE_BALLS,   EventScript_BufferPutAwayPocketPokeBalls
+	case POCKET_TM_HM,     	  EventScript_BufferPutAwayPocketTMCase
+	case POCKET_BERRIES, 	  EventScript_BufferPutAwayPocketBerryPouch
+	case POCKET_TREASURES, 	  EventScript_BufferPutAwayPocketTreasuresPouch
+	case POCKET_BATTLE_ITEMS, EventScript_BufferPutAwayPocketBattleItemsPouch
 	end
 
 EventScript_BufferPutAwayPocketItems::
