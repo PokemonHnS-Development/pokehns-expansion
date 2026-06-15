@@ -285,8 +285,10 @@ EventScript_BufferPutAwayPocketName::
 	case POCKET_POKE_BALLS,   EventScript_BufferPutAwayPocketPokeBalls
 	case POCKET_TM_HM,     	  EventScript_BufferPutAwayPocketTMCase
 	case POCKET_BERRIES, 	  EventScript_BufferPutAwayPocketBerryPouch
+#if !I_COMBINE_BAG_POCKETS
 	case POCKET_TREASURES, 	  EventScript_BufferPutAwayPocketTreasuresPouch
 	case POCKET_BATTLE_ITEMS, EventScript_BufferPutAwayPocketBattleItemsPouch
+#endif
 	end
 
 EventScript_BufferPutAwayPocketItems::
