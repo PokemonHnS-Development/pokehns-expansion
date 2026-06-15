@@ -127,6 +127,7 @@ extern const u8 gText_Toss2[];
 extern const u8 gText_Hoenn[];
 extern const u8 gText_Kanto[];
 extern const u8 gText_Johto[];
+extern const u8 gText_JohtoKanto[];
 extern const u8 gText_Ferry[];
 extern const u8 gText_SecretBase[];
 extern const u8 gText_Hideout[];
