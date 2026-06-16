@@ -1,4 +1,4 @@
-#define DEBUG_MATCH_CALL 1
+#define DEBUG_MATCH_CALL 0
 
 #include "global.h"
 #include "malloc.h"
