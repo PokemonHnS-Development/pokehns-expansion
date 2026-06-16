@@ -24,15 +24,15 @@ script Alola_Ulaula_TotemBattle_Trigger{
             gettimeofday
             if ((var(VAR_0x8000)== TIME_MORNING) || (var(VAR_0x8000)== TIME_DAY))
             {
-                playmoncry(SPECIES_VIKAVOLT,0)
-                setvar(VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_SPECIES(VIKAVOLT))
+                playmoncry(SPECIES_VESPIQUEN,0)
+                setvar(VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_SPECIES(VESPIQUEN))
                 addobject(Ulaula_Totem)
                 waitmoncry
             }
             else
             {
-                playmoncry(SPECIES_MIMIKYU,0)
-                setvar(VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_SPECIES(MIMIKYU))
+                playmoncry(SPECIES_GENGAR,0)
+                setvar(VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_SPECIES(GENGAR))
                 addobject(Ulaula_Totem)
                 waitmoncry
             }
@@ -43,14 +43,14 @@ script Alola_Ulaula_TotemBattle_Trigger{
             gettimeofday
             if ((var(VAR_0x8000)== TIME_MORNING) || (var(VAR_0x8000)== TIME_DAY))
             {
-                playmoncry(SPECIES_VIKAVOLT,0)
+                playmoncry(SPECIES_VESPIQUEN,0)
                 applymovement(Ulaula_Totem, moves(walk_in_place_down*2))
                 waitmovement(0)
                 waitmoncry
             }
             else
             {
-                playmoncry(SPECIES_MIMIKYU,0)
+                playmoncry(SPECIES_GENGAR,0)
                 applymovement(Ulaula_Totem, moves(walk_in_place_down*2))
                 waitmovement(0)
                 waitmoncry
@@ -76,12 +76,12 @@ script Alola_Ulaula_TotemBattle{
     gettimeofday
     if ((var(VAR_0x8000)== TIME_MORNING) || (var(VAR_0x8000)== TIME_DAY))
     {
-        playmoncry(SPECIES_VIKAVOLT,0)
+        playmoncry(SPECIES_VESPIQUEN,0)
         msgbox("Bee-beep!", MSGBOX_AUTOCLOSE)
         waitmoncry
         //setwildbattle species:req, level:req, item=ITEM_NONE, species2=SPECIES_NONE, level2=0, item2=ITEM_NONE
-        setwildbattle(SPECIES_CHARJABUG, 60, ITEM_NONE, SPECIES_VIKAVOLT_TOTEM, 60, ITEM_OCCA_BERRY)
-        settotemboost(B_POSITION_OPPONENT_RIGHT, 1, 1, 1, 1, 1, 1)
+        setwildbattle(SPECIES_COMBEE, 60, ITEM_NONE, SPECIES_VESPIQUEN, 60, ITEM_OCCA_BERRY)
+        settotemboost(B_POSITION_OPPONENT_RIGHT, 3, 3, 3, 3, 3, 3)
         setflag(FLAG_NO_WILD_CATCHING)
         setflag(FLAG_NO_WILD_RUNNING)
         setflag(FLAG_SMART_WILD_AI)
@@ -91,7 +91,7 @@ script Alola_Ulaula_TotemBattle{
             setflag(FLAG_HIDE_ULAULA_TOTEM)
             setflag(FLAG_DEFEATED_ULAULA_TOTEM)
             removeobject(Ulaula_Totem)
-            msgbox("Totem Vikavolt was defeated!
+            msgbox("Totem Vespiquen was defeated!
             It scampered off somewhere\.", MSGBOX_AUTOCLOSE)
             clearflag(FLAG_NO_WILD_CATCHING)
             clearflag(FLAG_NO_WILD_RUNNING)
@@ -109,11 +109,11 @@ script Alola_Ulaula_TotemBattle{
     }
     else
     {
-        playmoncry(SPECIES_MIMIKYU,0)
-        msgbox("Ssee-mee?!", MSGBOX_AUTOCLOSE)
+        playmoncry(SPECIES_GENGAR,0)
+        msgbox("Graah!", MSGBOX_AUTOCLOSE)
         waitmoncry
-        setwildbattle(SPECIES_SKARMORY, 60, ITEM_NONE, SPECIES_MIMIKYU_TOTEM, 60, ITEM_LUM_BERRY)
-        settotemboost(B_POSITION_OPPONENT_RIGHT, 1, 1, 1, 1, 1, 1)
+        setwildbattle(SPECIES_HAUNTER, 60, ITEM_NONE, SPECIES_GENGAR, 60, ITEM_LUM_BERRY)
+        settotemboost(B_POSITION_OPPONENT_RIGHT, 3, 3, 3, 3, 3, 3)
         setflag(FLAG_NO_WILD_CATCHING)
         setflag(FLAG_NO_WILD_RUNNING)
         setflag(FLAG_SMART_WILD_AI)
@@ -124,7 +124,7 @@ script Alola_Ulaula_TotemBattle{
             setflag(FLAG_HIDE_ULAULA_TOTEM)
             setflag(FLAG_DEFEATED_ULAULA_TOTEM)
             removeobject(Ulaula_Totem)
-            msgbox("Totem Mimikyu was defeated!
+            msgbox("Totem Gengar was defeated!
             It scampered off somewhere\.", MSGBOX_AUTOCLOSE)
             clearflag(FLAG_NO_WILD_CATCHING)
             clearflag(FLAG_NO_WILD_RUNNING)

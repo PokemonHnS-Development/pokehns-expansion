@@ -102,15 +102,15 @@ script Alola_Akala_TotemBattle_Trigger{
             gettimeofday
             if ((var(VAR_0x8000)== TIME_MORNING) || (var(VAR_0x8000)== TIME_DAY))
             {
-                playmoncry(SPECIES_ARAQUANID,0)
-                setvar(VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_SPECIES(ARAQUANID))
+                playmoncry(SPECIES_MAGMORTAR,0)
+                setvar(VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_SPECIES(MAGMORTAR))
                 addobject(Akala_Totem)
                 waitmoncry
             }
             else
             {
-                playmoncry(SPECIES_SALAZZLE,0)
-                setvar(VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_SPECIES(SALAZZLE))
+                playmoncry(SPECIES_SALAMENCE,0)
+                setvar(VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_SPECIES(SALAMENCE))
                 addobject(Akala_Totem)
                 waitmoncry
             }
@@ -121,14 +121,14 @@ script Alola_Akala_TotemBattle_Trigger{
             gettimeofday
             if ((var(VAR_0x8000)== TIME_MORNING) || (var(VAR_0x8000)== TIME_DAY))
             {
-                playmoncry(SPECIES_ARAQUANID,0)
+                playmoncry(SPECIES_MAGMORTAR,0)
                 applymovement(Akala_Totem, moves(walk_in_place_down*2))
                 waitmovement(0)
                 waitmoncry
             }
             else
             {
-                playmoncry(SPECIES_SALAZZLE,0)
+                playmoncry(SPECIES_SALAMENCE,0)
                 applymovement(Akala_Totem, moves(walk_in_place_down*2))
                 waitmovement(0)
                 waitmoncry
@@ -154,12 +154,12 @@ script Alola_Akala_TotemBattle{
     gettimeofday
     if ((var(VAR_0x8000)== TIME_MORNING) || (var(VAR_0x8000)== TIME_DAY))
     {
-        playmoncry(SPECIES_ARAQUANID,0)
-        msgbox("Wahhhtahhh!", MSGBOX_AUTOCLOSE)
+        playmoncry(SPECIES_MAGMORTAR,0)
+        msgbox("Mortaar!", MSGBOX_AUTOCLOSE)
         waitmoncry
         //setwildbattle species:req, level:req, item=ITEM_NONE, species2=SPECIES_NONE, level2=0, item2=ITEM_NONE
-        setwildbattle(SPECIES_DEWPIDER, 60, ITEM_NONE, SPECIES_ARAQUANID_TOTEM, 60, ITEM_SITRUS_BERRY)
-        settotemboost(B_POSITION_OPPONENT_RIGHT, 0, 0, 0,0, 1)
+        setwildbattle(SPECIES_MAGMAR, 60, ITEM_NONE, SPECIES_MAGMORTAR, 60, ITEM_SITRUS_BERRY)
+        settotemboost(B_POSITION_OPPONENT_RIGHT, 3, 3, 3,3, 3, 3)
         setflag(FLAG_NO_WILD_CATCHING)
         setflag(FLAG_NO_WILD_RUNNING)
         setflag(FLAG_SMART_WILD_AI)
@@ -169,7 +169,7 @@ script Alola_Akala_TotemBattle{
             setflag(FLAG_HIDE_AKALA_TOTEM)
             setflag(FLAG_DEFEATED_AKALA_TOTEM)
             removeobject(Akala_Totem)
-            msgbox("Totem Araquanid was defeated!
+            msgbox("Totem Magmortar was defeated!
             It scampered off somewhere\.", MSGBOX_AUTOCLOSE)
             clearflag(FLAG_NO_WILD_CATCHING)
             clearflag(FLAG_NO_WILD_RUNNING)
@@ -180,11 +180,11 @@ script Alola_Akala_TotemBattle{
     }
     else
     {
-        playmoncry(SPECIES_SALAZZLE,0)
+        playmoncry(SPECIES_SALAMENCE,0)
         msgbox("Salaa!", MSGBOX_AUTOCLOSE)
         waitmoncry
-        setwildbattle(SPECIES_SALANDIT, 60, ITEM_NONE, SPECIES_SALAZZLE_TOTEM, 60, ITEM_PETAYA_BERRY)
-        settotemboost(B_POSITION_OPPONENT_RIGHT, 0, 0, 0,0, 1)
+        setwildbattle(SPECIES_SHELGON, 60, ITEM_NONE, SPECIES_SALAMENCE, 60, ITEM_PETAYA_BERRY)
+        settotemboost(B_POSITION_OPPONENT_RIGHT, 3, 3, 3, 3, 3, 3)
         setflag(FLAG_NO_WILD_CATCHING)
         setflag(FLAG_NO_WILD_RUNNING)
         setflag(FLAG_SMART_WILD_AI)
@@ -195,7 +195,7 @@ script Alola_Akala_TotemBattle{
             setflag(FLAG_HIDE_AKALA_TOTEM)
             setflag(FLAG_DEFEATED_AKALA_TOTEM)
             removeobject(Akala_Totem)
-            msgbox("Totem Salazzle was defeated!
+            msgbox("Totem Salamence was defeated!
             It scampered off somewhere\.", MSGBOX_AUTOCLOSE)
             clearflag(FLAG_NO_WILD_CATCHING)
             clearflag(FLAG_NO_WILD_RUNNING)

@@ -83,12 +83,12 @@ script Alola_Poni_TotemBattle_Trigger{
 script Alola_Poni_TotemBattle{
     lock
     faceplayer
-    playmoncry(SPECIES_KOMMO_O,0)
-    msgbox("Ko-mo-ko-mo-o!", MSGBOX_AUTOCLOSE)
+    playmoncry(SPECIES_TROPIUS,0)
+    msgbox("Trrro!", MSGBOX_AUTOCLOSE)
     waitmoncry
     //setwildbattle species:req, level:req, item=ITEM_NONE, species2=SPECIES_NONE, level2=0, item2=ITEM_NONE
-    setwildbattle(SPECIES_NOIVERN, 60, ITEM_NONE, SPECIES_KOMMO_O_TOTEM, 60, ITEM_OCCA_BERRY)
-    settotemboost(B_POSITION_OPPONENT_RIGHT, 1, 1, 1, 1, 1, 1)
+    setwildbattle(SPECIES_EXEGGUTOR_ALOLA, 60, ITEM_NONE, SPECIES_TROPIUS, 60, ITEM_OCCA_BERRY)
+    settotemboost(B_POSITION_OPPONENT_RIGHT, 3, 3, 3, 3, 3, 3)
     setflag(FLAG_NO_WILD_CATCHING)
     setflag(FLAG_NO_WILD_RUNNING)
     setflag(FLAG_SMART_WILD_AI)
@@ -98,7 +98,7 @@ script Alola_Poni_TotemBattle{
         setflag(FLAG_HIDE_PONI_TOTEM)
         setflag(FLAG_DEFEATED_PONI_TOTEM)
         removeobject(Poni_Totem)
-        msgbox("Totem Kommo-o was defeated!
+        msgbox("Totem Tropius was defeated!
         It scampered off somewhere\.", MSGBOX_AUTOCLOSE)
         clearflag(FLAG_NO_WILD_CATCHING)
         clearflag(FLAG_NO_WILD_RUNNING)

@@ -51,9 +51,9 @@ Alola_Ulaula_TotemBattle_Trigger_4:
 	compare VAR_0x8000, TIME_DAY
 	goto_if_eq Alola_Ulaula_TotemBattle_Trigger_14
 # 34 "data/maps/UlaUla_Forest_hns/scripts.pory"
-	playmoncry SPECIES_MIMIKYU, 0
+	playmoncry SPECIES_GENGAR, 0
 # 35 "data/maps/UlaUla_Forest_hns/scripts.pory"
-	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_SPECIES ( MIMIKYU )
+	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_SPECIES ( GENGAR )
 # 36 "data/maps/UlaUla_Forest_hns/scripts.pory"
 	addobject Ulaula_Totem
 # 37 "data/maps/UlaUla_Forest_hns/scripts.pory"
@@ -76,7 +76,7 @@ Alola_Ulaula_TotemBattle_Trigger_13:
 	compare VAR_0x8000, TIME_DAY
 	goto_if_eq Alola_Ulaula_TotemBattle_Trigger_20
 # 53 "data/maps/UlaUla_Forest_hns/scripts.pory"
-	playmoncry SPECIES_MIMIKYU, 0
+	playmoncry SPECIES_GENGAR, 0
 # 54 "data/maps/UlaUla_Forest_hns/scripts.pory"
 	applymovement Ulaula_Totem, Alola_Ulaula_TotemBattle_Trigger_Movement_0
 # 55 "data/maps/UlaUla_Forest_hns/scripts.pory"
@@ -107,9 +107,9 @@ Alola_Ulaula_TotemBattle_Trigger_10:
 
 Alola_Ulaula_TotemBattle_Trigger_14:
 # 27 "data/maps/UlaUla_Forest_hns/scripts.pory"
-	playmoncry SPECIES_VIKAVOLT, 0
+	playmoncry SPECIES_VESPIQUEN, 0
 # 28 "data/maps/UlaUla_Forest_hns/scripts.pory"
-	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_SPECIES ( VIKAVOLT )
+	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_SPECIES ( VESPIQUEN )
 # 29 "data/maps/UlaUla_Forest_hns/scripts.pory"
 	addobject Ulaula_Totem
 # 30 "data/maps/UlaUla_Forest_hns/scripts.pory"
@@ -118,7 +118,7 @@ Alola_Ulaula_TotemBattle_Trigger_14:
 
 Alola_Ulaula_TotemBattle_Trigger_20:
 # 46 "data/maps/UlaUla_Forest_hns/scripts.pory"
-	playmoncry SPECIES_VIKAVOLT, 0
+	playmoncry SPECIES_VESPIQUEN, 0
 # 47 "data/maps/UlaUla_Forest_hns/scripts.pory"
 	applymovement Ulaula_Totem, Alola_Ulaula_TotemBattle_Trigger_Movement_0
 # 48 "data/maps/UlaUla_Forest_hns/scripts.pory"
@@ -142,15 +142,15 @@ Alola_Ulaula_TotemBattle::
 	compare VAR_0x8000, TIME_DAY
 	goto_if_eq Alola_Ulaula_TotemBattle_1
 # 112 "data/maps/UlaUla_Forest_hns/scripts.pory"
-	playmoncry SPECIES_MIMIKYU, 0
+	playmoncry SPECIES_GENGAR, 0
 # 113 "data/maps/UlaUla_Forest_hns/scripts.pory"
 	msgbox Alola_Ulaula_TotemBattle_Text_2, MSGBOX_AUTOCLOSE
 # 114 "data/maps/UlaUla_Forest_hns/scripts.pory"
 	waitmoncry
 # 115 "data/maps/UlaUla_Forest_hns/scripts.pory"
-	setwildbattle SPECIES_SKARMORY, 60, ITEM_NONE, SPECIES_MIMIKYU_TOTEM, 60, ITEM_LUM_BERRY
+	setwildbattle SPECIES_HAUNTER, 60, ITEM_NONE, SPECIES_GENGAR, 60, ITEM_LUM_BERRY
 # 116 "data/maps/UlaUla_Forest_hns/scripts.pory"
-	settotemboost B_POSITION_OPPONENT_RIGHT, 1, 1, 1, 1, 1, 1
+	settotemboost B_POSITION_OPPONENT_RIGHT, 3, 3, 3, 3, 3, 3
 # 117 "data/maps/UlaUla_Forest_hns/scripts.pory"
 	setflag FLAG_NO_WILD_CATCHING
 # 118 "data/maps/UlaUla_Forest_hns/scripts.pory"
@@ -171,15 +171,15 @@ Alola_Ulaula_TotemBattle::
 
 Alola_Ulaula_TotemBattle_1:
 # 79 "data/maps/UlaUla_Forest_hns/scripts.pory"
-	playmoncry SPECIES_VIKAVOLT, 0
+	playmoncry SPECIES_VESPIQUEN, 0
 # 80 "data/maps/UlaUla_Forest_hns/scripts.pory"
 	msgbox Alola_Ulaula_TotemBattle_Text_0, MSGBOX_AUTOCLOSE
 # 81 "data/maps/UlaUla_Forest_hns/scripts.pory"
 	waitmoncry
 # 83 "data/maps/UlaUla_Forest_hns/scripts.pory"
-	setwildbattle SPECIES_CHARJABUG, 60, ITEM_NONE, SPECIES_VIKAVOLT_TOTEM, 60, ITEM_OCCA_BERRY
+	setwildbattle SPECIES_COMBEE, 60, ITEM_NONE, SPECIES_VESPIQUEN, 60, ITEM_OCCA_BERRY
 # 84 "data/maps/UlaUla_Forest_hns/scripts.pory"
-	settotemboost B_POSITION_OPPONENT_RIGHT, 1, 1, 1, 1, 1, 1
+	settotemboost B_POSITION_OPPONENT_RIGHT, 3, 3, 3, 3, 3, 3
 # 85 "data/maps/UlaUla_Forest_hns/scripts.pory"
 	setflag FLAG_NO_WILD_CATCHING
 # 86 "data/maps/UlaUla_Forest_hns/scripts.pory"
@@ -406,16 +406,16 @@ Alola_Ulaula_TotemBattle_Text_0:
 
 Alola_Ulaula_TotemBattle_Text_1:
 # 94 "data/maps/UlaUla_Forest_hns/scripts.pory"
-	.string "Totem Vikavolt was defeated!\n"
+	.string "Totem Vespiquen was defeated!\n"
 	.string "It scampered off somewhere…$"
 
 Alola_Ulaula_TotemBattle_Text_2:
 # 113 "data/maps/UlaUla_Forest_hns/scripts.pory"
-	.string "Ssee-mee?!$"
+	.string "Graah!$"
 
 Alola_Ulaula_TotemBattle_Text_3:
 # 127 "data/maps/UlaUla_Forest_hns/scripts.pory"
-	.string "Totem Mimikyu was defeated!\n"
+	.string "Totem Gengar was defeated!\n"
 	.string "It scampered off somewhere…$"
 
 Alola_Ulaula_Totem_sign_Text_0:

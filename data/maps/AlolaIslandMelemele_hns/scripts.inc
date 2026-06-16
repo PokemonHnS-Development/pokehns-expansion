@@ -447,9 +447,9 @@ Alola_Melemele_TotemBattle_Trigger_10:
 
 Alola_Melemele_TotemBattle_Trigger_14:
 # 260 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
-	playmoncry SPECIES_GUMSHOOS, 0
+	playmoncry SPECIES_LEAFEON, 0
 # 261 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
-	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_SPECIES ( GUMSHOOS )
+	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_SPECIES ( LEAFEON )
 # 262 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	addobject Melemele_Totem
 # 263 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
@@ -458,7 +458,7 @@ Alola_Melemele_TotemBattle_Trigger_14:
 
 Alola_Melemele_TotemBattle_Trigger_20:
 # 279 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
-	playmoncry SPECIES_GUMSHOOS, 0
+	playmoncry SPECIES_LEAFEON, 0
 # 280 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	applymovement Melemele_Totem, Alola_Melemele_SamsonOak_Trigger_Beginning_Movement_2
 # 281 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
@@ -484,7 +484,7 @@ Alola_Melemele_TotemBattle::
 # 345 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	playmoncry SPECIES_RATICATE_ALOLA, 0
 # 346 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
-	msgbox Alola_Melemele_TotemBattle_Text_0, MSGBOX_AUTOCLOSE
+	msgbox Alola_Melemele_TotemBattle_Text_2, MSGBOX_AUTOCLOSE
 # 347 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	waitmoncry
 # 348 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
@@ -508,15 +508,15 @@ Alola_Melemele_TotemBattle::
 
 Alola_Melemele_TotemBattle_1:
 # 312 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
-	playmoncry SPECIES_GUMSHOOS, 0
+	playmoncry SPECIES_LEAFEON, 0
 # 313 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	msgbox Alola_Melemele_TotemBattle_Text_0, MSGBOX_AUTOCLOSE
 # 314 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	waitmoncry
 # 316 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
-	setwildbattle SPECIES_YUNGOOS, 60, ITEM_NONE, SPECIES_GUMSHOOS_TOTEM, 60, ITEM_PECHA_BERRY
+	setwildbattle SPECIES_EEVEE, 60, ITEM_NONE, SPECIES_LEAFEON, 60, ITEM_PECHA_BERRY
 # 317 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
-	settotemboost B_POSITION_OPPONENT_RIGHT, 0, 1, 0
+	settotemboost B_POSITION_OPPONENT_RIGHT, 3, 3, 3, 3, 3, 3
 # 318 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	setflag FLAG_NO_WILD_CATCHING
 # 319 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
@@ -562,7 +562,7 @@ Alola_Melemele_TotemBattle_9:
 # 359 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	removeobject Melemele_Totem
 # 360 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
-	msgbox Alola_Melemele_TotemBattle_Text_2, MSGBOX_AUTOCLOSE
+	msgbox Alola_Melemele_TotemBattle_Text_3, MSGBOX_AUTOCLOSE
 # 362 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	clearflag FLAG_NO_WILD_CATCHING
 # 363 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
@@ -1117,14 +1117,18 @@ Alola_Melemele_NeedToTalkToSamsonOak_Text_0:
 
 Alola_Melemele_TotemBattle_Text_0:
 # 313 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
-	.string "Thhhh!$"
+	.string "Leee!$"
 
 Alola_Melemele_TotemBattle_Text_1:
 # 327 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
-	.string "Totem Gumshoos was defeated!\n"
+	.string "Totem Leafeon was defeated!\n"
 	.string "It scampered off somewhere…$"
 
 Alola_Melemele_TotemBattle_Text_2:
+# 346 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	.string "Thhhh!$"
+
+Alola_Melemele_TotemBattle_Text_3:
 # 360 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	.string "Totem Raticate was defeated!\n"
 	.string "It scampered off somewhere…$"

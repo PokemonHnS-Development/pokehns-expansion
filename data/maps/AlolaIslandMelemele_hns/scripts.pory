@@ -257,8 +257,8 @@ script Alola_Melemele_TotemBattle_Trigger{
             gettimeofday
             if ((var(VAR_0x8000)== TIME_MORNING) || (var(VAR_0x8000)== TIME_DAY))
             {
-                playmoncry(SPECIES_GUMSHOOS,0)
-                setvar(VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_SPECIES(GUMSHOOS))
+                playmoncry(SPECIES_LEAFEON,0)
+                setvar(VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_SPECIES(LEAFEON))
                 addobject(Melemele_Totem)
                 waitmoncry
             }
@@ -276,7 +276,7 @@ script Alola_Melemele_TotemBattle_Trigger{
             gettimeofday
             if ((var(VAR_0x8000)== TIME_MORNING) || (var(VAR_0x8000)== TIME_DAY))
             {
-                playmoncry(SPECIES_GUMSHOOS,0)
+                playmoncry(SPECIES_LEAFEON,0)
                 applymovement(Melemele_Totem, moves(walk_in_place_down*2))
                 waitmovement(0)
                 waitmoncry
@@ -309,12 +309,12 @@ script Alola_Melemele_TotemBattle{
     gettimeofday
     if ((var(VAR_0x8000)== TIME_MORNING) || (var(VAR_0x8000)== TIME_DAY))
     {
-        playmoncry(SPECIES_GUMSHOOS,0)
-        msgbox("Thhhh!", MSGBOX_AUTOCLOSE)
+        playmoncry(SPECIES_LEAFEON,0)
+        msgbox("Leee!", MSGBOX_AUTOCLOSE)
         waitmoncry
         //setwildbattle species:req, level:req, item=ITEM_NONE, species2=SPECIES_NONE, level2=0, item2=ITEM_NONE
-        setwildbattle(SPECIES_YUNGOOS, 60, ITEM_NONE, SPECIES_GUMSHOOS_TOTEM, 60, ITEM_PECHA_BERRY)
-        settotemboost(B_POSITION_OPPONENT_RIGHT, 0, 1, 0)
+        setwildbattle(SPECIES_EEVEE, 60, ITEM_NONE, SPECIES_LEAFEON, 60, ITEM_PECHA_BERRY)
+        settotemboost(B_POSITION_OPPONENT_RIGHT, 3, 3, 3, 3, 3, 3)
         setflag(FLAG_NO_WILD_CATCHING)
         setflag(FLAG_NO_WILD_RUNNING)
         setflag(FLAG_SMART_WILD_AI)
@@ -324,7 +324,7 @@ script Alola_Melemele_TotemBattle{
             setflag(FLAG_HIDE_MELEMELE_TOTEM)
             setflag(FLAG_DEFEATED_MELEMELE_TOTEM)
             removeobject(Melemele_Totem)
-            msgbox("Totem Gumshoos was defeated!
+            msgbox("Totem Leafeon was defeated!
             It scampered off somewhere\.", MSGBOX_AUTOCLOSE)
             clearflag(FLAG_NO_WILD_CATCHING)
             clearflag(FLAG_NO_WILD_RUNNING)

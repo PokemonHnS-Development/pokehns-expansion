@@ -161,9 +161,9 @@ Alola_Akala_TotemBattle_Trigger_4:
 	compare VAR_0x8000, TIME_DAY
 	goto_if_eq Alola_Akala_TotemBattle_Trigger_14
 # 112 "data/maps/AlolaIslandRight_hns/scripts.pory"
-	playmoncry SPECIES_SALAZZLE, 0
+	playmoncry SPECIES_SALAMENCE, 0
 # 113 "data/maps/AlolaIslandRight_hns/scripts.pory"
-	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_SPECIES ( SALAZZLE )
+	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_SPECIES ( SALAMENCE )
 # 114 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	addobject Akala_Totem
 # 115 "data/maps/AlolaIslandRight_hns/scripts.pory"
@@ -186,7 +186,7 @@ Alola_Akala_TotemBattle_Trigger_13:
 	compare VAR_0x8000, TIME_DAY
 	goto_if_eq Alola_Akala_TotemBattle_Trigger_20
 # 131 "data/maps/AlolaIslandRight_hns/scripts.pory"
-	playmoncry SPECIES_SALAZZLE, 0
+	playmoncry SPECIES_SALAMENCE, 0
 # 132 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	applymovement Akala_Totem, Alola_Akala_TotemBattle_Trigger_Movement_0
 # 133 "data/maps/AlolaIslandRight_hns/scripts.pory"
@@ -217,9 +217,9 @@ Alola_Akala_TotemBattle_Trigger_10:
 
 Alola_Akala_TotemBattle_Trigger_14:
 # 105 "data/maps/AlolaIslandRight_hns/scripts.pory"
-	playmoncry SPECIES_ARAQUANID, 0
+	playmoncry SPECIES_MAGMORTAR, 0
 # 106 "data/maps/AlolaIslandRight_hns/scripts.pory"
-	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_SPECIES ( ARAQUANID )
+	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_SPECIES ( MAGMORTAR )
 # 107 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	addobject Akala_Totem
 # 108 "data/maps/AlolaIslandRight_hns/scripts.pory"
@@ -228,7 +228,7 @@ Alola_Akala_TotemBattle_Trigger_14:
 
 Alola_Akala_TotemBattle_Trigger_20:
 # 124 "data/maps/AlolaIslandRight_hns/scripts.pory"
-	playmoncry SPECIES_ARAQUANID, 0
+	playmoncry SPECIES_MAGMORTAR, 0
 # 125 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	applymovement Akala_Totem, Alola_Akala_TotemBattle_Trigger_Movement_0
 # 126 "data/maps/AlolaIslandRight_hns/scripts.pory"
@@ -252,15 +252,15 @@ Alola_Akala_TotemBattle::
 	compare VAR_0x8000, TIME_DAY
 	goto_if_eq Alola_Akala_TotemBattle_1
 # 183 "data/maps/AlolaIslandRight_hns/scripts.pory"
-	playmoncry SPECIES_SALAZZLE, 0
+	playmoncry SPECIES_SALAMENCE, 0
 # 184 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	msgbox Alola_Akala_TotemBattle_Text_2, MSGBOX_AUTOCLOSE
 # 185 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	waitmoncry
 # 186 "data/maps/AlolaIslandRight_hns/scripts.pory"
-	setwildbattle SPECIES_SALANDIT, 60, ITEM_NONE, SPECIES_SALAZZLE_TOTEM, 60, ITEM_PETAYA_BERRY
+	setwildbattle SPECIES_SHELGON, 60, ITEM_NONE, SPECIES_SALAMENCE, 60, ITEM_PETAYA_BERRY
 # 187 "data/maps/AlolaIslandRight_hns/scripts.pory"
-	settotemboost B_POSITION_OPPONENT_RIGHT, 0, 0, 0, 0, 1
+	settotemboost B_POSITION_OPPONENT_RIGHT, 3, 3, 3, 3, 3, 3
 # 188 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	setflag FLAG_NO_WILD_CATCHING
 # 189 "data/maps/AlolaIslandRight_hns/scripts.pory"
@@ -281,15 +281,15 @@ Alola_Akala_TotemBattle::
 
 Alola_Akala_TotemBattle_1:
 # 157 "data/maps/AlolaIslandRight_hns/scripts.pory"
-	playmoncry SPECIES_ARAQUANID, 0
+	playmoncry SPECIES_MAGMORTAR, 0
 # 158 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	msgbox Alola_Akala_TotemBattle_Text_0, MSGBOX_AUTOCLOSE
 # 159 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	waitmoncry
 # 161 "data/maps/AlolaIslandRight_hns/scripts.pory"
-	setwildbattle SPECIES_DEWPIDER, 60, ITEM_NONE, SPECIES_ARAQUANID_TOTEM, 60, ITEM_SITRUS_BERRY
+	setwildbattle SPECIES_MAGMAR, 60, ITEM_NONE, SPECIES_MAGMORTAR, 60, ITEM_SITRUS_BERRY
 # 162 "data/maps/AlolaIslandRight_hns/scripts.pory"
-	settotemboost B_POSITION_OPPONENT_RIGHT, 0, 0, 0, 0, 1
+	settotemboost B_POSITION_OPPONENT_RIGHT, 3, 3, 3, 3, 3, 3
 # 163 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	setflag FLAG_NO_WILD_CATCHING
 # 164 "data/maps/AlolaIslandRight_hns/scripts.pory"
@@ -677,11 +677,11 @@ Alola_Akala_OldManOnBench_Text_0:
 
 Alola_Akala_TotemBattle_Text_0:
 # 158 "data/maps/AlolaIslandRight_hns/scripts.pory"
-	.string "Wahhhtahhh!$"
+	.string "Mortaar!$"
 
 Alola_Akala_TotemBattle_Text_1:
 # 172 "data/maps/AlolaIslandRight_hns/scripts.pory"
-	.string "Totem Araquanid was defeated!\n"
+	.string "Totem Magmortar was defeated!\n"
 	.string "It scampered off somewhere…$"
 
 Alola_Akala_TotemBattle_Text_2:
@@ -690,7 +690,7 @@ Alola_Akala_TotemBattle_Text_2:
 
 Alola_Akala_TotemBattle_Text_3:
 # 198 "data/maps/AlolaIslandRight_hns/scripts.pory"
-	.string "Totem Salazzle was defeated!\n"
+	.string "Totem Salamence was defeated!\n"
 	.string "It scampered off somewhere…$"
 
 Alola_Akala_Totem_sign_Text_0:

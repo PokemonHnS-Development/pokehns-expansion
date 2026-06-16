@@ -146,15 +146,15 @@ Alola_Poni_TotemBattle::
 # 85 "data/maps/AlolaIsland_hns/scripts.pory"
 	faceplayer
 # 86 "data/maps/AlolaIsland_hns/scripts.pory"
-	playmoncry SPECIES_KOMMO_O, 0
+	playmoncry SPECIES_TROPIUS, 0
 # 87 "data/maps/AlolaIsland_hns/scripts.pory"
 	msgbox Alola_Poni_TotemBattle_Text_0, MSGBOX_AUTOCLOSE
 # 88 "data/maps/AlolaIsland_hns/scripts.pory"
 	waitmoncry
 # 90 "data/maps/AlolaIsland_hns/scripts.pory"
-	setwildbattle SPECIES_NOIVERN, 60, ITEM_NONE, SPECIES_KOMMO_O_TOTEM, 60, ITEM_OCCA_BERRY
+	setwildbattle SPECIES_EXEGGUTOR_ALOLA, 60, ITEM_NONE, SPECIES_TROPIUS, 60, ITEM_OCCA_BERRY
 # 91 "data/maps/AlolaIsland_hns/scripts.pory"
-	settotemboost B_POSITION_OPPONENT_RIGHT, 1, 1, 1, 1, 1, 1
+	settotemboost B_POSITION_OPPONENT_RIGHT, 3, 3, 3, 3, 3, 3
 # 92 "data/maps/AlolaIsland_hns/scripts.pory"
 	setflag FLAG_NO_WILD_CATCHING
 # 93 "data/maps/AlolaIsland_hns/scripts.pory"
@@ -479,11 +479,11 @@ Alola_Poni_Island_Sign_Text_0:
 
 Alola_Poni_TotemBattle_Text_0:
 # 87 "data/maps/AlolaIsland_hns/scripts.pory"
-	.string "Ko-mo-ko-mo-o!$"
+	.string "Trrro!$"
 
 Alola_Poni_TotemBattle_Text_1:
 # 101 "data/maps/AlolaIsland_hns/scripts.pory"
-	.string "Totem Kommo-o was defeated!\n"
+	.string "Totem Tropius was defeated!\n"
 	.string "It scampered off somewhere…$"
 
 Alola_Poni_Totem_sign_Text_0:
