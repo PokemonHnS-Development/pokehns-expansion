@@ -380,6 +380,9 @@ enum {
 #define BLDALPHA1_VAL 7
 #define BLDALPHA2_VAL 11
 
+#define DIV_RND_UP(numerator, denominator) (((numerator) + (denominator) - 1) / (denominator))
+#define DIV_RND_DN(numerator, denominator) ((numerator) / (denominator))
+
 struct Wallpaper
 {
     const u32 *tiles;
@@ -2365,14 +2368,15 @@ static void Task_ReshowPokeStorage(u8 taskId)
         BlendPalettes(PALETTES_ALL, 0, RGB_BLACK);
         BeginHardwarePaletteFade(0xFF | GetRequiredBldcntForItems(), 0, 16, 0, FALSE);
         gPaletteFade.bldAlpha1Ovrd = 0;
-        gPaletteFade.bldAlpha2Ovrd = BLDALPHA2_VAL;
+        gPaletteFade.bldAlpha2Ovrd = 0;
         gPaletteFade.doBldAlpha1Ovrd = TRUE;
         gPaletteFade.doBldAlpha2Ovrd = TRUE;
         EnableInterrupts(INTR_FLAG_VBLANK | INTR_FLAG_HBLANK);
         sStorage->state++;
         break;
     case 1:
-        gPaletteFade.bldAlpha1Ovrd = ((16 - gPaletteFade.y) * BLDALPHA1_VAL) / 16;
+        gPaletteFade.bldAlpha1Ovrd = DIV_RND_UP((16 - gPaletteFade.y) * (BLDALPHA1_VAL), 16);
+        gPaletteFade.bldAlpha2Ovrd = DIV_RND_UP((16 - gPaletteFade.y) * (BLDALPHA2_VAL), 16);
         if (!UpdatePaletteFade())
         {
             if (sWhichToReshow == SCREEN_CHANGE_ITEM_FROM_BAG - 1 && gSpecialVar_ItemId != ITEM_NONE)
@@ -3783,7 +3787,8 @@ static void Task_NameBox(u8 taskId)
     case 1:
         if (gPaletteFade.y == 16) // blend last frame of hardware fade
             BlendPalettes(PALETTES_ALL, 16, RGB_BLACK);
-        gPaletteFade.bldAlpha1Ovrd = ((16 - gPaletteFade.y) * BLDALPHA1_VAL) / 16;
+        gPaletteFade.bldAlpha1Ovrd = DIV_RND_DN((16 - gPaletteFade.y) * (BLDALPHA1_VAL), 16);
+        gPaletteFade.bldAlpha2Ovrd = DIV_RND_DN((16 - gPaletteFade.y) * (BLDALPHA2_VAL), 16);
         if (!UpdatePaletteFade())
         {
             sWhichToReshow = SCREEN_CHANGE_NAME_BOX - 1;
@@ -3811,7 +3816,8 @@ static void Task_ShowMonSummary(u8 taskId)
     case 1:
         if (gPaletteFade.y == 16) // blend last frame of hardware fade
             BlendPalettes(PALETTES_ALL, 16, RGB_BLACK);
-        gPaletteFade.bldAlpha1Ovrd = ((16 - gPaletteFade.y) * BLDALPHA1_VAL) / 16;
+        gPaletteFade.bldAlpha1Ovrd = DIV_RND_DN((16 - gPaletteFade.y) * (BLDALPHA1_VAL), 16);
+        gPaletteFade.bldAlpha2Ovrd = DIV_RND_DN((16 - gPaletteFade.y) * (BLDALPHA2_VAL), 16);
         if (!UpdatePaletteFade())
         {
             sWhichToReshow = SCREEN_CHANGE_SUMMARY_SCREEN - 1;
@@ -3838,7 +3844,8 @@ static void Task_GiveItemFromBag(u8 taskId)
     case 1:
         if (gPaletteFade.y == 16) // blend last frame of hardware fade
             BlendPalettes(PALETTES_ALL, 16, RGB_BLACK);
-        gPaletteFade.bldAlpha1Ovrd = ((16 - gPaletteFade.y) * BLDALPHA1_VAL) / 16;
+        gPaletteFade.bldAlpha1Ovrd = DIV_RND_DN((16 - gPaletteFade.y) * (BLDALPHA1_VAL), 16);
+        gPaletteFade.bldAlpha2Ovrd = DIV_RND_DN((16 - gPaletteFade.y) * (BLDALPHA2_VAL), 16);
         if (!UpdatePaletteFade())
         {
             sWhichToReshow = SCREEN_CHANGE_ITEM_FROM_BAG - 1;
