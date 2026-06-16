@@ -64,15 +64,15 @@ Alola_Melemele_SamsonOakVilla_Dialogue_14:
 # 312 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	compare VAR_RESULT, 1
 	goto_if_eq Alola_Melemele_SamsonOakVilla_Dialogue_32
-# 421 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+# 426 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_eq Alola_Melemele_SamsonOakVilla_Dialogue_33
-# 542 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+# 553 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_eq Alola_Melemele_SamsonOakVilla_Dialogue_34
-# 660 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+# 677 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	msgbox Alola_Melemele_SamsonOakVilla_Dialogue_Text_34, MSGBOX_AUTOCLOSE
-# 664 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+# 681 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	release
 	end
 
@@ -200,33 +200,33 @@ Alola_Melemele_SamsonOakVilla_Dialogue_32:
 Alola_Melemele_SamsonOakVilla_Dialogue_46:
 # 410 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	msgbox Alola_Melemele_SamsonOakVilla_Dialogue_Text_27, MSGBOX_AUTOCLOSE
-# 418 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+# 423 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	release
 	end
 
 Alola_Melemele_SamsonOakVilla_Dialogue_33:
-# 422 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+# 427 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	getcaughtmon SPECIES_VULPIX_ALOLA
-# 423 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+# 428 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	compare VAR_RESULT, 1
 	goto_if_eq Alola_Melemele_SamsonOakVilla_Dialogue_50
 Alola_Melemele_SamsonOakVilla_Dialogue_49:
-# 531 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+# 536 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	msgbox Alola_Melemele_SamsonOakVilla_Dialogue_Text_30, MSGBOX_AUTOCLOSE
-# 539 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+# 550 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	release
 	end
 
 Alola_Melemele_SamsonOakVilla_Dialogue_34:
-# 543 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+# 554 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	getcaughtmon SPECIES_RAICHU_ALOLA
-# 544 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+# 555 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	compare VAR_RESULT, 1
 	goto_if_eq Alola_Melemele_SamsonOakVilla_Dialogue_53
 Alola_Melemele_SamsonOakVilla_Dialogue_52:
-# 648 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+# 659 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	msgbox Alola_Melemele_SamsonOakVilla_Dialogue_Text_33, MSGBOX_AUTOCLOSE
-# 656 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+# 673 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	release
 	end
 
@@ -254,17 +254,17 @@ Alola_Melemele_SamsonOakVilla_Dialogue_47:
 	goto Alola_Melemele_SamsonOakVilla_Dialogue_46
 
 Alola_Melemele_SamsonOakVilla_Dialogue_50:
-# 425 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+# 430 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	getcaughtmon SPECIES_NINETALES_ALOLA
-# 426 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+# 431 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	compare VAR_RESULT, 1
 	goto_if_eq Alola_Melemele_SamsonOakVilla_Dialogue_62
 	goto Alola_Melemele_SamsonOakVilla_Dialogue_49
 
 Alola_Melemele_SamsonOakVilla_Dialogue_53:
-# 546 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+# 557 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	getcaughtmon SPECIES_GEODUDE_ALOLA
-# 547 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+# 558 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	compare VAR_RESULT, 1
 	goto_if_eq Alola_Melemele_SamsonOakVilla_Dialogue_64
 	goto Alola_Melemele_SamsonOakVilla_Dialogue_52
@@ -317,17 +317,17 @@ Alola_Melemele_SamsonOakVilla_Dialogue_60:
 	goto Alola_Melemele_SamsonOakVilla_Dialogue_46
 
 Alola_Melemele_SamsonOakVilla_Dialogue_62:
-# 428 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+# 433 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	getcaughtmon SPECIES_SANDSHREW_ALOLA
-# 429 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+# 434 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	compare VAR_RESULT, 1
 	goto_if_eq Alola_Melemele_SamsonOakVilla_Dialogue_70
 	goto Alola_Melemele_SamsonOakVilla_Dialogue_49
 
 Alola_Melemele_SamsonOakVilla_Dialogue_64:
-# 549 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+# 560 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	getcaughtmon SPECIES_GRAVELER_ALOLA
-# 550 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+# 561 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	compare VAR_RESULT, 1
 	goto_if_eq Alola_Melemele_SamsonOakVilla_Dialogue_72
 	goto Alola_Melemele_SamsonOakVilla_Dialogue_52
@@ -350,17 +350,17 @@ Alola_Melemele_SamsonOakVilla_Dialogue_68:
 	end
 
 Alola_Melemele_SamsonOakVilla_Dialogue_70:
-# 431 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+# 436 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	getcaughtmon SPECIES_SANDSLASH_ALOLA
-# 432 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+# 437 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	compare VAR_RESULT, 1
 	goto_if_eq Alola_Melemele_SamsonOakVilla_Dialogue_79
 	goto Alola_Melemele_SamsonOakVilla_Dialogue_49
 
 Alola_Melemele_SamsonOakVilla_Dialogue_72:
-# 552 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+# 563 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	getcaughtmon SPECIES_GOLEM_ALOLA
-# 553 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+# 564 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	compare VAR_RESULT, 1
 	goto_if_eq Alola_Melemele_SamsonOakVilla_Dialogue_81
 	goto Alola_Melemele_SamsonOakVilla_Dialogue_52
@@ -406,17 +406,17 @@ Alola_Melemele_SamsonOakVilla_Dialogue_76:
 	end
 
 Alola_Melemele_SamsonOakVilla_Dialogue_79:
-# 434 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+# 439 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	getcaughtmon SPECIES_GRIMER_ALOLA
-# 435 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+# 440 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	compare VAR_RESULT, 1
 	goto_if_eq Alola_Melemele_SamsonOakVilla_Dialogue_93
 	goto Alola_Melemele_SamsonOakVilla_Dialogue_49
 
 Alola_Melemele_SamsonOakVilla_Dialogue_81:
-# 555 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+# 566 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	getcaughtmon SPECIES_EXEGGUTOR_ALOLA
-# 556 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+# 567 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	compare VAR_RESULT, 1
 	goto_if_eq Alola_Melemele_SamsonOakVilla_Dialogue_95
 	goto Alola_Melemele_SamsonOakVilla_Dialogue_52
@@ -481,19 +481,19 @@ Alola_Melemele_SamsonOakVilla_Dialogue_105:
 	end
 
 Alola_Melemele_SamsonOakVilla_Dialogue_93:
-# 437 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+# 442 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	getcaughtmon SPECIES_MUK_ALOLA
-# 438 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+# 443 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	compare VAR_RESULT, 1
 	goto_if_eq Alola_Melemele_SamsonOakVilla_Dialogue_113
 	goto Alola_Melemele_SamsonOakVilla_Dialogue_49
 
 Alola_Melemele_SamsonOakVilla_Dialogue_95:
-# 558 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+# 569 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	goto_if_unset FLAG_CAUGHT_ALL_PONI, Alola_Melemele_SamsonOakVilla_Dialogue_115
-# 633 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+# 644 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	msgbox Alola_Melemele_SamsonOakVilla_Dialogue_Text_32, MSGBOX_AUTOCLOSE
-# 640 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+# 651 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	release
 	end
 
@@ -560,42 +560,42 @@ Alola_Melemele_SamsonOakVilla_Dialogue_110:
 	goto Alola_Melemele_SamsonOakVilla_Dialogue_105
 
 Alola_Melemele_SamsonOakVilla_Dialogue_113:
-# 440 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+# 445 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	goto_if_unset FLAG_CAUGHT_ALL_ULAULA, Alola_Melemele_SamsonOakVilla_Dialogue_127
-# 515 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+# 520 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	msgbox Alola_Melemele_SamsonOakVilla_Dialogue_Text_29, MSGBOX_AUTOCLOSE
-# 522 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+# 527 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	release
 	end
 
 Alola_Melemele_SamsonOakVilla_Dialogue_115:
-# 560 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+# 571 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	goto_if_set FLAG_CAUGHT_ALL_MELEMELE, Alola_Melemele_SamsonOakVilla_Dialogue_130
-# 560 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+# 571 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	goto_if_set FLAG_CAUGHT_ALL_AKALA, Alola_Melemele_SamsonOakVilla_Dialogue_130
-# 560 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+# 571 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	goto_if_set FLAG_CAUGHT_ALL_ULAULA, Alola_Melemele_SamsonOakVilla_Dialogue_130
-# 615 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+# 626 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	setflag FLAG_CAUGHT_ALL_PONI
-# 616 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
-	msgbox Alola_Melemele_SamsonOakVilla_Dialogue_Text_16, MSGBOX_AUTOCLOSE
-# 617 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
-	playse SE_PIN
-# 618 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
-	applymovement SamsonOakVilla, Alola_Melemele_SamsonOakVilla_Dialogue_Movement_0
-# 619 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
-	waitmovement 0
-# 620 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
-	msgbox Alola_Melemele_SamsonOakVilla_Dialogue_Text_17
-# 621 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
-	playfanfare MUS_HG_OBTAIN_EGG
-# 622 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
-	msgbox Alola_Melemele_SamsonOakVilla_Dialogue_Text_31
-# 624 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
-	waitfanfare
-# 625 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
-	msgbox Alola_Melemele_SamsonOakVilla_Dialogue_Text_21, MSGBOX_AUTOCLOSE
 # 627 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+	msgbox Alola_Melemele_SamsonOakVilla_Dialogue_Text_16, MSGBOX_AUTOCLOSE
+# 628 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+	playse SE_PIN
+# 629 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+	applymovement SamsonOakVilla, Alola_Melemele_SamsonOakVilla_Dialogue_Movement_0
+# 630 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+	waitmovement 0
+# 631 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+	msgbox Alola_Melemele_SamsonOakVilla_Dialogue_Text_17
+# 632 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+	playfanfare MUS_HG_OBTAIN_EGG
+# 633 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+	msgbox Alola_Melemele_SamsonOakVilla_Dialogue_Text_31
+# 635 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+	waitfanfare
+# 636 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+	msgbox Alola_Melemele_SamsonOakVilla_Dialogue_Text_21, MSGBOX_AUTOCLOSE
+# 638 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	release
 	end
 
@@ -634,157 +634,157 @@ Alola_Melemele_SamsonOakVilla_Dialogue_124:
 	goto Alola_Melemele_SamsonOakVilla_Dialogue_119
 
 Alola_Melemele_SamsonOakVilla_Dialogue_127:
-# 442 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+# 447 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	goto_if_set FLAG_CAUGHT_ALL_MELEMELE, Alola_Melemele_SamsonOakVilla_Dialogue_137
-# 442 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+# 447 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	goto_if_set FLAG_CAUGHT_ALL_AKALA, Alola_Melemele_SamsonOakVilla_Dialogue_137
-# 442 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+# 447 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	goto_if_set FLAG_CAUGHT_ALL_PONI, Alola_Melemele_SamsonOakVilla_Dialogue_137
-# 497 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
-	setflag FLAG_CAUGHT_ALL_ULAULA
-# 498 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
-	msgbox Alola_Melemele_SamsonOakVilla_Dialogue_Text_16, MSGBOX_AUTOCLOSE
-# 499 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
-	playse SE_PIN
-# 500 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
-	applymovement SamsonOakVilla, Alola_Melemele_SamsonOakVilla_Dialogue_Movement_0
-# 501 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
-	waitmovement 0
 # 502 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
-	msgbox Alola_Melemele_SamsonOakVilla_Dialogue_Text_17
+	setflag FLAG_CAUGHT_ALL_ULAULA
 # 503 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
-	playfanfare MUS_HG_OBTAIN_EGG
+	msgbox Alola_Melemele_SamsonOakVilla_Dialogue_Text_16, MSGBOX_AUTOCLOSE
 # 504 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
-	msgbox Alola_Melemele_SamsonOakVilla_Dialogue_Text_28
+	playse SE_PIN
+# 505 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+	applymovement SamsonOakVilla, Alola_Melemele_SamsonOakVilla_Dialogue_Movement_0
 # 506 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
-	waitfanfare
+	waitmovement 0
 # 507 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
-	msgbox Alola_Melemele_SamsonOakVilla_Dialogue_Text_21, MSGBOX_AUTOCLOSE
+	msgbox Alola_Melemele_SamsonOakVilla_Dialogue_Text_17
+# 508 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+	playfanfare MUS_HG_OBTAIN_EGG
 # 509 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+	msgbox Alola_Melemele_SamsonOakVilla_Dialogue_Text_28
+# 511 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+	waitfanfare
+# 512 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+	msgbox Alola_Melemele_SamsonOakVilla_Dialogue_Text_21, MSGBOX_AUTOCLOSE
+# 514 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	release
 	end
 
 Alola_Melemele_SamsonOakVilla_Dialogue_130:
-# 562 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+# 573 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	setflag FLAG_CAUGHT_ALL_PONI
-# 563 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+# 574 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	msgbox Alola_Melemele_SamsonOakVilla_Dialogue_Text_16, MSGBOX_AUTOCLOSE
-# 564 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+# 575 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	playse SE_PIN
-# 565 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+# 576 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	applymovement SamsonOakVilla, Alola_Melemele_SamsonOakVilla_Dialogue_Movement_0
-# 566 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+# 577 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	waitmovement 0
-# 567 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+# 578 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	msgbox Alola_Melemele_SamsonOakVilla_Dialogue_Text_17
-# 568 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+# 579 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	playfanfare MUS_HG_OBTAIN_EGG
-# 569 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+# 580 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	msgbox Alola_Melemele_SamsonOakVilla_Dialogue_Text_31
-# 571 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+# 582 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	waitfanfare
-# 572 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+# 583 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	goto_if_set FLAG_CAUGHT_ALL_AKALA, Alola_Melemele_SamsonOakVilla_Dialogue_147
 Alola_Melemele_SamsonOakVilla_Dialogue_145:
-# 607 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+# 618 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	msgbox Alola_Melemele_SamsonOakVilla_Dialogue_Text_21, MSGBOX_AUTOCLOSE
-# 609 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+# 620 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	release
 	end
 
 Alola_Melemele_SamsonOakVilla_Dialogue_137:
-# 444 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
-	setflag FLAG_CAUGHT_ALL_ULAULA
-# 445 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
-	msgbox Alola_Melemele_SamsonOakVilla_Dialogue_Text_16, MSGBOX_AUTOCLOSE
-# 446 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
-	playse SE_PIN
-# 447 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
-	applymovement SamsonOakVilla, Alola_Melemele_SamsonOakVilla_Dialogue_Movement_0
-# 448 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
-	waitmovement 0
 # 449 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
-	msgbox Alola_Melemele_SamsonOakVilla_Dialogue_Text_17
+	setflag FLAG_CAUGHT_ALL_ULAULA
 # 450 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
-	playfanfare MUS_HG_OBTAIN_EGG
+	msgbox Alola_Melemele_SamsonOakVilla_Dialogue_Text_16, MSGBOX_AUTOCLOSE
 # 451 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
-	msgbox Alola_Melemele_SamsonOakVilla_Dialogue_Text_28
+	playse SE_PIN
+# 452 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+	applymovement SamsonOakVilla, Alola_Melemele_SamsonOakVilla_Dialogue_Movement_0
 # 453 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
-	waitfanfare
+	waitmovement 0
 # 454 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+	msgbox Alola_Melemele_SamsonOakVilla_Dialogue_Text_17
+# 455 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+	playfanfare MUS_HG_OBTAIN_EGG
+# 456 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+	msgbox Alola_Melemele_SamsonOakVilla_Dialogue_Text_28
+# 458 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+	waitfanfare
+# 459 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	goto_if_set FLAG_CAUGHT_ALL_AKALA, Alola_Melemele_SamsonOakVilla_Dialogue_156
 Alola_Melemele_SamsonOakVilla_Dialogue_154:
-# 489 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+# 494 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	msgbox Alola_Melemele_SamsonOakVilla_Dialogue_Text_21, MSGBOX_AUTOCLOSE
-# 491 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+# 496 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	release
 	end
 
 Alola_Melemele_SamsonOakVilla_Dialogue_144:
-# 574 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
-	playfanfare MUS_HG_BUG_CONTEST_1ST_PLACE
-# 575 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
-	msgbox Alola_Melemele_SamsonOakVilla_Dialogue_Text_19, MSGBOX_AUTOCLOSE
-# 581 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
-	waitfanfare
-# 582 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
-	playse SE_PIN
-# 583 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
-	applymovement SamsonOakVilla, Alola_Melemele_SamsonOakVilla_Dialogue_Movement_0
-# 584 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
-	waitmovement 0
 # 585 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+	playfanfare MUS_HG_BUG_CONTEST_1ST_PLACE
+# 586 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+	msgbox Alola_Melemele_SamsonOakVilla_Dialogue_Text_19, MSGBOX_AUTOCLOSE
+# 592 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+	waitfanfare
+# 593 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+	playse SE_PIN
+# 594 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+	applymovement SamsonOakVilla, Alola_Melemele_SamsonOakVilla_Dialogue_Movement_0
+# 595 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+	waitmovement 0
+# 596 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	msgbox Alola_Melemele_SamsonOakVilla_Dialogue_Text_25, MSGBOX_AUTOCLOSE
-# 602 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+# 613 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	release
 	end
 
 Alola_Melemele_SamsonOakVilla_Dialogue_146:
-# 572 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+# 583 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	goto_if_set FLAG_CAUGHT_ALL_PONI, Alola_Melemele_SamsonOakVilla_Dialogue_150
 	goto Alola_Melemele_SamsonOakVilla_Dialogue_145
 
 Alola_Melemele_SamsonOakVilla_Dialogue_147:
-# 572 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+# 583 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	goto_if_set FLAG_CAUGHT_ALL_ULAULA, Alola_Melemele_SamsonOakVilla_Dialogue_146
 	goto Alola_Melemele_SamsonOakVilla_Dialogue_145
 
 Alola_Melemele_SamsonOakVilla_Dialogue_150:
-# 572 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+# 583 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	goto_if_set FLAG_CAUGHT_ALL_MELEMELE, Alola_Melemele_SamsonOakVilla_Dialogue_144
 	goto Alola_Melemele_SamsonOakVilla_Dialogue_145
 
 Alola_Melemele_SamsonOakVilla_Dialogue_153:
-# 456 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+# 461 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	playfanfare MUS_HG_BUG_CONTEST_1ST_PLACE
-# 457 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+# 462 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	msgbox Alola_Melemele_SamsonOakVilla_Dialogue_Text_19, MSGBOX_AUTOCLOSE
-# 463 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+# 468 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	waitfanfare
-# 464 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+# 469 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	playse SE_PIN
-# 465 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+# 470 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	applymovement SamsonOakVilla, Alola_Melemele_SamsonOakVilla_Dialogue_Movement_0
-# 466 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+# 471 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	waitmovement 0
-# 467 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+# 472 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	msgbox Alola_Melemele_SamsonOakVilla_Dialogue_Text_25, MSGBOX_AUTOCLOSE
-# 484 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+# 489 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	release
 	end
 
 Alola_Melemele_SamsonOakVilla_Dialogue_155:
-# 454 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+# 459 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	goto_if_set FLAG_CAUGHT_ALL_PONI, Alola_Melemele_SamsonOakVilla_Dialogue_159
 	goto Alola_Melemele_SamsonOakVilla_Dialogue_154
 
 Alola_Melemele_SamsonOakVilla_Dialogue_156:
-# 454 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+# 459 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	goto_if_set FLAG_CAUGHT_ALL_ULAULA, Alola_Melemele_SamsonOakVilla_Dialogue_155
 	goto Alola_Melemele_SamsonOakVilla_Dialogue_154
 
 Alola_Melemele_SamsonOakVilla_Dialogue_159:
-# 454 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+# 459 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	goto_if_set FLAG_CAUGHT_ALL_MELEMELE, Alola_Melemele_SamsonOakVilla_Dialogue_153
 	goto Alola_Melemele_SamsonOakVilla_Dialogue_154
 
@@ -1061,16 +1061,19 @@ Alola_Melemele_SamsonOakVilla_Dialogue_Text_27:
 	.string "It seems you haven't quite found all of\n"
 	.string "the Alolan variants on Akala Isle\l"
 	.string "just yet.\p"
+	.string "I believe Akala Isle has {COLOR RED}3 {COLOR DARK_GRAY}Alolan\n"
+	.string "variants for you to find…\p"
+	.string "{COLOR RED}Marowak{COLOR DARK_GRAY}, {COLOR RED}Diglett{COLOR DARK_GRAY}, and {COLOR RED}Dugtrio{COLOR DARK_GRAY}.\p"
 	.string "Keep on searching and come back when\n"
 	.string "you've caught them all!$"
 
 Alola_Melemele_SamsonOakVilla_Dialogue_Text_28:
-# 451 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+# 456 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	.string "You found all the Alolan variants living\n"
 	.string "on Ula'ula Isle!$"
 
 Alola_Melemele_SamsonOakVilla_Dialogue_Text_29:
-# 515 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+# 520 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	.string "It seems you've already found all the\n"
 	.string "Alolan variants on Ula'ula Isle!\p"
 	.string "Great job!\p"
@@ -1078,21 +1081,25 @@ Alola_Melemele_SamsonOakVilla_Dialogue_Text_29:
 	.string "report your progress to me!$"
 
 Alola_Melemele_SamsonOakVilla_Dialogue_Text_30:
-# 531 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+# 536 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	.string "Let me take a look at your Pokédex{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.\p"
 	.string "It seems you haven't quite found all of\n"
 	.string "the Alolan variants on Ula'ula Isle\l"
 	.string "just yet.\p"
+	.string "I believe Ula'ula Isle has {COLOR RED}6 {COLOR DARK_GRAY}Alolan\n"
+	.string "variants for you to find…\p"
+	.string "{COLOR RED}Vulpix{COLOR DARK_GRAY}, {COLOR RED}Ninetales{COLOR DARK_GRAY}, {COLOR RED}Sandshrew{COLOR DARK_GRAY}, {COLOR RED}Sandslash{COLOR DARK_GRAY},\n"
+	.string "{COLOR RED}Grimer{COLOR DARK_GRAY}, and {COLOR RED}Muk{COLOR DARK_GRAY}.\p"
 	.string "Keep on searching and come back when\n"
 	.string "you've caught them all!$"
 
 Alola_Melemele_SamsonOakVilla_Dialogue_Text_31:
-# 569 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+# 580 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	.string "You found all the Alolan variants living\n"
 	.string "on Poni Isle!$"
 
 Alola_Melemele_SamsonOakVilla_Dialogue_Text_32:
-# 633 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+# 644 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	.string "It seems you've already found all the\n"
 	.string "Alolan variants on Poni Isle!\p"
 	.string "Great job!\p"
@@ -1100,16 +1107,20 @@ Alola_Melemele_SamsonOakVilla_Dialogue_Text_32:
 	.string "report your progress to me!$"
 
 Alola_Melemele_SamsonOakVilla_Dialogue_Text_33:
-# 648 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+# 659 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	.string "Let me take a look at your Pokédex{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.\p"
 	.string "It seems you haven't quite found all of\n"
 	.string "the Alolan variants on Poni Isle\l"
 	.string "just yet.\p"
+	.string "I believe Poni Isle has {COLOR RED}5 {COLOR DARK_GRAY}Alolan\n"
+	.string "variants for you to find…\p"
+	.string "{COLOR RED}Raichu{COLOR DARK_GRAY}, {COLOR RED}Geodude{COLOR DARK_GRAY}, {COLOR RED}Graveler{COLOR DARK_GRAY}, {COLOR RED}Golem{COLOR DARK_GRAY},\n"
+	.string "and {COLOR RED}Exeggutor{COLOR DARK_GRAY}.\p"
 	.string "Keep on searching and come back when\n"
 	.string "you've caught them all!$"
 
 Alola_Melemele_SamsonOakVilla_Dialogue_Text_34:
-# 660 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
+# 677 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	.string "No worries, {PLAYER}!\p"
 	.string "Come back when you'd like to share your\n"
 	.string "findings about the Alola Isles!$"
