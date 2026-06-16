@@ -23,6 +23,7 @@ bool16 RunTextPrintersRetIsActive(u8 textPrinterId);
 void DoYesNoFuncWithChoice(u8 taskId, const struct YesNoFuncTable *data);
 void CreateYesNoMenuWithCallbacks(u8 taskId, const struct WindowTemplate *template, u8 unused1, u8 unused2, u8 unused3, u16 tileStart, u8 palette, const struct YesNoFuncTable *yesNo);
 bool8 AdjustQuantityAccordingToDPadInput(s16 *quantity, u16 max);
+bool8 AdjustQuantityAccordingToDPadInput_MomVersion(u32 *quantity, u32 max);
 u8 GetLRKeysPressed(void);
 u8 GetLRKeysPressedAndHeld(void);
 bool8 IsHoldingItemAllowed(enum Item itemId);

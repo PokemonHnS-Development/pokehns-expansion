@@ -1094,7 +1094,11 @@ static mapsec_u8_t (*const sMatchCallGetMapSecFuncs[])(match_call_t) = {
     MatchCall_GetMapSec_Trainer,
     MatchCall_GetMapSec_Wally,
     MatchCall_GetMapSec_Rival,
+#if IS_HNS
+    MatchCall_GetMapSec_NPC
+#else
     MatchCall_GetMapSec_Birch
+#endif
 };
 
 static bool32 (*const sMatchCall_IsRematchableFunctions[])(match_call_t) = {

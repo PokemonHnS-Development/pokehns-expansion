@@ -106,8 +106,8 @@
 #define VAR_ROUTE_STEP_COUNTER_HNS                       0x40A1
 #define VAR_ROAMER_POKEMON_HNS                           0x40A2
 #define VAR_VERMILION_CITY_STEVEN                        0x40A3
-#define VAR_UNUSED_HNS_0x40A5                            0x40A5
-#define VAR_UNUSED_HNS_0x40A6                            0x40A6
+#define VAR_MOM_GIFT_QUANTITY                            0x40A5
+#define VAR_MOM_GIFT_ITEM                               0x40A6
 #define VAR_UNUSED_HNS_0x40A7                            0x40A7
 #define VAR_UNUSED_HNS_0x40A8                            0x40A8
 #define VAR_UNUSED_HNS_0x40A9                            0x40A9

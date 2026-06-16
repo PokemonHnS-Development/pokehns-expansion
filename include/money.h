@@ -28,6 +28,8 @@ void DrawMoneyBox(int amount, u8 x, u8 y);
 void HideMoneyBox(void);
 void AddMoneyLabelObject(u16 x, u16 y);
 void RemoveMoneyLabelObject(void);
+void AddBPLabelObject(u16 x, u16 y);
+void RemoveBPLabelObject(void);
 u32 CalculateMoneyTextHorizontalPosition(u32 amount);
 
 #endif // GUARD_MONEY_H

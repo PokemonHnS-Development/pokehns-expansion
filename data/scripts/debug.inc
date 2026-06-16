@@ -203,12 +203,14 @@ Debug_EventScript_Text_DefensiveIVs:
 	.string "HP IVs: {STR_VAR_1}, DEF IVs: {STR_VAR_2}, SPDEF IVs: {STR_VAR_3}$"
 
 Debug_EventScript_Script_1::
-	goto Debug_EventScript_Lance_Multi
+	special CreateBPVitaminShop
 	release
 	end
 
 Debug_EventScript_Script_2::
-	goto Debug_EventScript_Silver_Multi
+	giveitem ITEM_PECHA_BERRY, 20
+	giveitem ITEM_ORAN_BERRY, 20
+	goto AzaleaTown_KurtsHouse_EventScript_Kurt
 	release
 	end
 
@@ -302,7 +304,7 @@ Debug_EventScript_Script_7::
 	end
 
 Debug_EventScript_Script_8::
-	call LilycoveCity_CoveLilyMotel_2F_EventScript_GameDesigner
+	goto Debug_MomSavings_BigDeposit
 	release
 	end
 
@@ -993,3 +995,21 @@ Debug_EventScript_TellTheTime_Text_0:
 
 DebugEventScript_PrintWeekday_Text_0:
 	.string "Time of day: {STR_VAR_1}$"
+
+@ Mom Savings debug: enables saving + force-deposits 50000
+Debug_MomSavings_BigDeposit::
+	lockall
+	special Special_MomEnsureInitialized
+	special Special_MomEnableSaving
+	setvar VAR_0x8000, 50000
+	special Special_MomDeposit
+	special Special_MomGetBalance
+	msgbox Debug_MomSavings_Text_Deposited, MSGBOX_DEFAULT
+	releaseall
+	end
+
+Debug_MomSavings_Text_Deposited:
+	.string "Mom savings enabled.\n"
+	.string "Deposited ¥50000.\p"
+	.string "Balance: {STR_VAR_2}\n"
+	.string "Walk outside for gift call.$"

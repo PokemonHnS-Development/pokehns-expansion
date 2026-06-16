@@ -2673,6 +2673,35 @@
 #define FLAG_UNUSED_0x933                           0
 #define FLAG_DAILY_APPRENTICE_LEAVES                0
 
+// HnS visited flags
+
+#define FLAG_VISITED_NEWBARK_TOWN                   0
+#define FLAG_VISITED_CHERRYGROVE_CITY               0
+#define FLAG_VISITED_VIOLET_CITY                    0
+#define FLAG_VISITED_AZALEA_TOWN                    0
+#define FLAG_VISITED_GOLDENROD_CITY                 0
+#define FLAG_VISITED_ECRUTEAK_CITY                  0
+#define FLAG_VISITED_OLIVINE_CITY                   0
+#define FLAG_VISITED_CIANWOOD_CITY                  0
+#define FLAG_VISITED_MAHOGANY_TOWN                  0
+#define FLAG_VISITED_LAKE_OF_RAGE                   0
+#define FLAG_VISITED_BLACKTHORN_CITY                0
+#define FLAG_VISITED_INDIGO_PLATEAU                 0
+#define FLAG_VISITED_MT_SILVER                      0
+#define FLAG_VISITED_RECEPTION_GATE                 0
+#define FLAG_VISITED_SAFARI_ZONE_GATE               0
+#define FLAG_VISITED_KANTO                          0
+#define FLAG_VISITED_PALLET_TOWN                    0
+#define FLAG_VISITED_VIRIDIAN_CITY                  0
+#define FLAG_VISITED_PEWTER_CITY                    0
+#define FLAG_VISITED_CERULEAN_CITY                  0
+#define FLAG_VISITED_VERMILION_CITY                 0
+#define FLAG_VISITED_LAVENDER_TOWN                  0
+#define FLAG_VISITED_CELADON_CITY                   0
+#define FLAG_VISITED_SAFFRON_CITY                   0
+#define FLAG_VISITED_FUCHSIA_CITY                   0
+#define FLAG_VISITED_CINNABAR_ISLAND                0
+
 // Special Flags (Stored in EWRAM (sSpecialFlags), not in the SaveBlock)
 #define SPECIAL_FLAGS_START                     0x4000
 #define FLAG_HIDE_MAP_NAME_POPUP                (SPECIAL_FLAGS_START + 0x0)

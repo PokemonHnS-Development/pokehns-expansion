@@ -1,6 +1,14 @@
 #ifndef GUARD_CONSTANTS_FLAGS_HNS_H
 #define GUARD_CONSTANTS_FLAGS_HNS_H
 
+// Temp Flag Aliases
+#define FLAG_STARTER_PREVIEW_CHECKED_1  FLAG_TEMP_1
+#define FLAG_STARTER_PREVIEW_CHECKED_2  FLAG_TEMP_2
+#define FLAG_STARTER_PREVIEW_CHECKED_3  FLAG_TEMP_3
+#define FLAG_SHINY_STARTER_1    FLAG_TEMP_4
+#define FLAG_SHINY_STARTER_2    FLAG_TEMP_5
+#define FLAG_SHINY_STARTER_3    FLAG_TEMP_6
+
 // Content flags (0x22 – 0x4FF)
 
 // Hide Pokemon
@@ -659,7 +667,7 @@
 #define FLAG_DAY_POKEMON                            0x25C
 #define FLAG_NIGHT_POKEMON                          0x25D
 #define FLAG_ENABLE_RADIO                           0x25E
-#define FLAG_EXP_SHARE                              0x25F
+#define FLAG_EXP_SHARE                              0x25F //No longer used, instead uses FLAG_EXP_SHARE_ENABLED
 #define FLAG_FINITE_TMS                             0x260
 #define FLAG_KANTO_RADIO_GOT                        0x261
 #define FLAG_MINTS_CLERK                            0x262
@@ -803,7 +811,7 @@
 
 // Unused general-purpose
 #define HNS_UNUSED_START                            0x2E0
-#define FLAG_UNUSED_1                               0x2E0
+#define FLAG_TELEPORTER_UNLOCKED                    0x2E0
 #define FLAG_COLLISION                              0x2E1
 #define FLAG_UNUSED_3                               0x2E2
 #define FLAG_MAP_SCRIPT_CHECKED_DEOXYS              0x2E3
@@ -832,7 +840,7 @@
 #define FLAG_HIDE_ICEPATH_B2F_BOULDER4                              0x2FA
 #define FLAG_LATIOS_OR_LATIAS_ROAMING                              0x2FB
 #define FLAG_HIDE_VERMILION_STEVEN                              0x2FC
-#define FLAG_UNUSED_29                              0x2FD
+#define FLAG_MOM_HAS_GIFT                           0x2FD
 #define FLAG_UNUSED_30                              0x2FE
 #define FLAG_UNUSED_31                              0x2FF
 #define FLAG_UNUSED_32                              0x300

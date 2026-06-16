@@ -133,6 +133,7 @@ RuinsOfAlph_PuzzleAndRewardChambers_MapScript_KabutoSuccess::
 	playse SE_FALL
 	delay 60
 	warphole MAP_RUINS_OF_ALPH_B1F_HNS
+	waitstate
 	release
 	end
 
@@ -178,6 +179,7 @@ RuinsOfAlph_PuzzleAndRewardChambers_MapScript_OmanyteSuccess::
 	playse SE_FALL
 	delay 60
 	warphole MAP_RUINS_OF_ALPH_B1F_HNS
+	waitstate
 	release
 	end
 
@@ -217,6 +219,7 @@ RuinsOfAlph_PuzzleAndRewardChambers_MapScript_AerodactylSuccess::
 	playse SE_FALL
 	delay 60
 	warphole MAP_RUINS_OF_ALPH_B1F_HNS
+	waitstate
 	release
 	end
 
@@ -256,6 +259,7 @@ RuinsOfAlph_PuzzleAndRewardChambers_MapScript_HoohSuccess::
 	playse SE_FALL
 	delay 60
 	warphole MAP_RUINS_OF_ALPH_B1F_HNS
+	waitstate
 	release
 	end
 

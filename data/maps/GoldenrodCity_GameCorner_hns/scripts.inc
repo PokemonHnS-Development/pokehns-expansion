@@ -618,3 +618,247 @@ GoldenrodCity_GameCorner_Text_MoveTutorInside:
 GoldenrodCity_GameCorner_Text_LeftTheirDrink:
     .string "Someone left their drink.\p"
     .string "It smells sweet.$"
+
+@ ========================================
+@ VOLTORB FLIP GAME IMPLEMENTATION
+@ ========================================
+
+GoldenrodCity_GameCorner_EventScript_VoltorbFlip::
+	lockall
+	checkitem ITEM_COIN_CASE
+	goto_if_eq VAR_RESULT, FALSE, GoldenrodCity_GameCorner_EventScript_VF_NoCoinCase
+	message GoldenrodCity_GameCorner_Text_VF_Welcome
+	waitmessage
+	playbgm MUS_RG_OAK, FALSE
+	setvar VAR_TEMP_4, 0
+
+GoldenrodCity_GameCorner_EventScript_VF_CheckCoinCap::
+	checkcoins VAR_RESULT
+	goto_if_lt VAR_RESULT, MAX_COINS, GoldenrodCity_GameCorner_EventScript_VF_ShowMenu
+	msgbox GoldenrodCity_GameCorner_Text_VF_CoinCap, MSGBOX_DEFAULT
+	setvar VAR_TEMP_4, 0
+	setvar VAR_TEMP_7, 0
+	hidecoinsbox 0, 5
+	savebgm MUS_DUMMY
+	fadedefaultbgm
+	releaseall
+	end
+
+GoldenrodCity_GameCorner_EventScript_VF_ShowMenu::
+	showcoinsbox 1, 1
+	copyvar VAR_TEMP_A, VAR_TEMP_4
+	addvar VAR_TEMP_A, 1
+	buffernumberstring STR_VAR_1, VAR_TEMP_A
+	message GoldenrodCity_GameCorner_Text_VF_PlayLevel
+	waitmessage
+	dynmultichoice 19, 6, FALSE, 3, 0, DYN_MULTICHOICE_CB_NONE, GoldenrodCity_GameCorner_Text_VF_OptPlay, GoldenrodCity_GameCorner_Text_VF_OptGameInfo, GoldenrodCity_GameCorner_Text_VF_OptQuit
+	goto_if_eq VAR_RESULT, 0, GoldenrodCity_GameCorner_EventScript_VF_Play
+	goto_if_eq VAR_RESULT, 1, GoldenrodCity_GameCorner_EventScript_VF_GameInfo
+	@ Quit or B-press
+	setvar VAR_TEMP_4, 0
+	setvar VAR_TEMP_7, 0
+	closemessage
+	hidecoinsbox 0, 5
+	savebgm MUS_DUMMY
+	fadedefaultbgm
+	releaseall
+	end
+
+GoldenrodCity_GameCorner_EventScript_VF_GameInfo::
+	message GoldenrodCity_GameCorner_Text_VF_WhichInfo
+	waitmessage
+	dynmultichoice 19, 4, FALSE, 4, 0, DYN_MULTICHOICE_CB_NONE, GoldenrodCity_GameCorner_Text_VF_OptHowToPlay, GoldenrodCity_GameCorner_Text_VF_OptHint, GoldenrodCity_GameCorner_Text_VF_OptAboutNotes, GoldenrodCity_GameCorner_Text_VF_OptReturn
+	goto_if_eq VAR_RESULT, 0, GoldenrodCity_GameCorner_EventScript_VF_HowToPlay
+	goto_if_eq VAR_RESULT, 1, GoldenrodCity_GameCorner_EventScript_VF_Hint
+	goto_if_eq VAR_RESULT, 2, GoldenrodCity_GameCorner_EventScript_VF_AboutNotes
+	goto GoldenrodCity_GameCorner_EventScript_VF_ShowMenu
+
+GoldenrodCity_GameCorner_EventScript_VF_HowToPlay::
+	msgbox GoldenrodCity_GameCorner_Text_VF_HowToPlay, MSGBOX_DEFAULT
+	goto GoldenrodCity_GameCorner_EventScript_VF_GameInfo
+
+GoldenrodCity_GameCorner_EventScript_VF_Hint::
+	msgbox GoldenrodCity_GameCorner_Text_VF_HintText, MSGBOX_DEFAULT
+	goto GoldenrodCity_GameCorner_EventScript_VF_GameInfo
+
+GoldenrodCity_GameCorner_EventScript_VF_AboutNotes::
+	msgbox GoldenrodCity_GameCorner_Text_VF_AboutNotes, MSGBOX_DEFAULT
+	goto GoldenrodCity_GameCorner_EventScript_VF_GameInfo
+
+GoldenrodCity_GameCorner_EventScript_VF_Play::
+	closemessage
+	copyvar VAR_TEMP_6, VAR_TEMP_4
+	setvar VAR_TEMP_5, 0
+	hidecoinsbox 0, 5
+	special Special_ViewVoltorbFlip
+	waitstate
+	goto_if_eq VAR_RESULT, 0, GoldenrodCity_GameCorner_EventScript_VF_HandleLoss
+	goto_if_eq VAR_RESULT, 1, GoldenrodCity_GameCorner_EventScript_VF_HandleWin
+	goto GoldenrodCity_GameCorner_EventScript_VF_HandleQuit
+	end
+
+GoldenrodCity_GameCorner_EventScript_VF_HandleWin::
+	msgbox GoldenrodCity_GameCorner_Text_VF_GameClear, MSGBOX_DEFAULT
+	copyvar VAR_TEMP_1, VAR_TEMP_5
+	showcoinsbox 1, 1
+	buffernumberstring STR_VAR_1, VAR_TEMP_1
+	msgbox GoldenrodCity_GameCorner_Text_VF_ReceivedCoins, MSGBOX_DEFAULT
+	addcoins VAR_TEMP_5
+	setvar VAR_TEMP_5, 0
+	updatecoinsbox 1, 1
+	goto_if_le VAR_TEMP_4, VAR_TEMP_6, GoldenrodCity_GameCorner_EventScript_VF_CheckCoinCap
+	copyvar VAR_TEMP_A, VAR_TEMP_4
+	addvar VAR_TEMP_A, 1
+	buffernumberstring STR_VAR_1, VAR_TEMP_A
+	msgbox GoldenrodCity_GameCorner_Text_VF_Advanced, MSGBOX_DEFAULT
+	goto GoldenrodCity_GameCorner_EventScript_VF_CheckCoinCap
+
+GoldenrodCity_GameCorner_EventScript_VF_HandleLoss::
+	msgbox GoldenrodCity_GameCorner_Text_VF_OhNo, MSGBOX_DEFAULT
+	goto_if_ge VAR_TEMP_4, VAR_TEMP_6, GoldenrodCity_GameCorner_EventScript_VF_ShowMenu
+	copyvar VAR_TEMP_A, VAR_TEMP_4
+	addvar VAR_TEMP_A, 1
+	buffernumberstring STR_VAR_1, VAR_TEMP_A
+	msgbox GoldenrodCity_GameCorner_Text_VF_Dropped, MSGBOX_DEFAULT
+	goto GoldenrodCity_GameCorner_EventScript_VF_ShowMenu
+
+GoldenrodCity_GameCorner_EventScript_VF_HandleQuit::
+	goto_if_eq VAR_TEMP_5, 0, GoldenrodCity_GameCorner_EventScript_VF_QuitNoCoins
+	copyvar VAR_TEMP_1, VAR_TEMP_5
+	showcoinsbox 1, 1
+	buffernumberstring STR_VAR_1, VAR_TEMP_1
+	msgbox GoldenrodCity_GameCorner_Text_VF_ReceivedCoins, MSGBOX_DEFAULT
+	addcoins VAR_TEMP_5
+	setvar VAR_TEMP_5, 0
+	updatecoinsbox 1, 1
+
+GoldenrodCity_GameCorner_EventScript_VF_QuitNoCoins::
+	goto_if_ge VAR_TEMP_4, VAR_TEMP_6, GoldenrodCity_GameCorner_EventScript_VF_CheckCoinCap
+	copyvar VAR_TEMP_A, VAR_TEMP_4
+	addvar VAR_TEMP_A, 1
+	buffernumberstring STR_VAR_1, VAR_TEMP_A
+	msgbox GoldenrodCity_GameCorner_Text_VF_Dropped, MSGBOX_DEFAULT
+	goto GoldenrodCity_GameCorner_EventScript_VF_CheckCoinCap
+
+GoldenrodCity_GameCorner_EventScript_VF_NoCoinCase::
+	msgbox GoldenrodCity_GameCorner_Text_VF_NeedCoinCase, MSGBOX_DEFAULT
+	releaseall
+	end
+
+GoldenrodCity_GameCorner_EventScript_VFAttendant1::
+	lock
+	faceplayer
+	msgbox GoldenrodCity_GameCorner_Text_VFAttendant1, MSGBOX_DEFAULT
+	applymovement VAR_LAST_TALKED, Common_Movement_FaceDown
+	waitmovement 0
+	release
+	end
+
+GoldenrodCity_GameCorner_EventScript_VFAttendant2::
+	lock
+	faceplayer
+	msgbox GoldenrodCity_GameCorner_Text_VFAttendant2, MSGBOX_DEFAULT
+	applymovement VAR_LAST_TALKED, Common_Movement_FaceDown
+	waitmovement 0
+	release
+	end
+
+@ Voltorb Flip Menu Option Strings
+GoldenrodCity_GameCorner_Text_VF_OptPlay:
+	.string "PLAY$"
+
+GoldenrodCity_GameCorner_Text_VF_OptGameInfo:
+	.string "GAME INFO$"
+
+GoldenrodCity_GameCorner_Text_VF_OptQuit:
+	.string "QUIT$"
+
+GoldenrodCity_GameCorner_Text_VF_OptHowToPlay:
+	.string "HOW TO PLAY$"
+
+GoldenrodCity_GameCorner_Text_VF_OptHint:
+	.string "HINT$"
+
+GoldenrodCity_GameCorner_Text_VF_OptAboutNotes:
+	.string "ABOUT NOTES$"
+
+GoldenrodCity_GameCorner_Text_VF_OptReturn:
+	.string "RETURN$"
+
+@ Voltorb Flip Dialogue Strings
+GoldenrodCity_GameCorner_Text_VF_Welcome:
+	.string "Welcome to VOLTORB FLIP!\p$"
+
+GoldenrodCity_GameCorner_Text_VF_PlayLevel:
+	.string "Play VOLTORB Flip Lv. {STR_VAR_1}?$"
+
+GoldenrodCity_GameCorner_Text_VF_GameClear:
+	.string "Game clear!\p"
+	.string "You've found all the hidden\n"
+	.string "x2 and x3 cards!$"
+
+GoldenrodCity_GameCorner_Text_VF_ReceivedCoins:
+	.string "You have received\n"
+	.string "{STR_VAR_1} Coin(s)!$"
+
+GoldenrodCity_GameCorner_Text_VF_Advanced:
+	.string "Advanced to Game Lv. {STR_VAR_1}!$"
+
+GoldenrodCity_GameCorner_Text_VF_OhNo:
+	.string "Oh no! You get 0 Coins!$"
+
+GoldenrodCity_GameCorner_Text_VF_Dropped:
+	.string "Dropped to Game Lv. {STR_VAR_1}.$"
+
+GoldenrodCity_GameCorner_Text_VF_CoinCap:
+	.string "You've gathered 9,999 COINS.\n"
+	.string "You cannot gather any more.$"
+
+GoldenrodCity_GameCorner_Text_VF_WhichInfo:
+	.string "Which set of info?$"
+
+GoldenrodCity_GameCorner_Text_VF_HowToPlay:
+	.string "VOLTORB FLIP is a game in which you flip\n"
+	.string "cards to find numbers hidden beneath.\p"
+	.string "The cards hide the numbers 1 through 3,\n"
+	.string "and VOLTORB as well.\p"
+	.string "The first number you flip gives\n"
+	.string "you that many Coins.\p"
+	.string "Each new number multiplies your total.\n"
+	.string "A 2 by x2 and a 3 by x3.\p"
+	.string "But if you flip a VOLTORB, it's game over.\n"
+	.string "You lose all Coins collected that round!\p"
+	.string "QUIT the game at any time to keep\n"
+	.string "the Coins you've found so far.\p"
+	.string "Find all hidden x2 and x3 cards to clear\n"
+	.string "the game and advance to the next level!$"
+
+GoldenrodCity_GameCorner_Text_VF_HintText:
+	.string "The numbers on the sides of the board\n"
+	.string "are hints about the numbers…\p"
+	.string "hidden in that row or column.\p"
+	.string "The larger the number, the more high-\n"
+	.string "value cards are in that row or column.\p"
+	.string "The VOLTORB count tells you how\n"
+	.string "many VOLTORBs lurk there.\p"
+	.string "Use both totals to figure out\n"
+	.string "which cards are safe to flip!$"
+
+GoldenrodCity_GameCorner_Text_VF_AboutNotes:
+	.string "Use the notes mode ({L_BUTTON} & {R_BUTTON}) to mark\n"
+	.string "cards with numbers 1-3 or a VOLTORB.\p"
+	.string "Mark a card you think you know,\n"
+	.string "then flip it when you're sure.\p"
+	.string "Apply a note again to remove it.$"
+
+GoldenrodCity_GameCorner_Text_VF_NeedCoinCase:
+	.string "Oh? You don't have a COIN CASE.$"
+
+GoldenrodCity_GameCorner_Text_VFAttendant1:
+	.string "You want to play VOLTORB FLIP?\p"
+	.string "You need to be on the other\n"
+	.string "side of the table.$"
+
+GoldenrodCity_GameCorner_Text_VFAttendant2:
+	.string "Try the other side of\n"
+	.string "the table, pal.$"

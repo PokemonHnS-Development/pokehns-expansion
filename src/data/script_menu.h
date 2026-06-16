@@ -1207,6 +1207,15 @@ static const struct MenuAction MultichoiceList_HoennStarters[] =
     {gText_BlueStone},
 };
 
+static const struct MenuAction MultichoiceList_MomMenu[] =
+{
+    {gText_MomMenuCheckSavings},
+    {gText_MomMenuDeposit},
+    {gText_MomMenuWithdraw},
+    {gText_MomMenuToggleSaving},
+    {gText_MomMenuExit},
+};
+
 static const struct MenuAction MultichoiceList_Exit[] =
 {
     {gText_Exit},
@@ -1393,6 +1402,7 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_ELDERQUIIZ5]                 = MULTICHOICE(MultichoiceList_ElderQuiz5),
     [MULTI_HOENN_STARTERS]              = MULTICHOICE(MultichoiceList_HoennStarters),
     [MULTI_5FLOORS]                    = MULTICHOICE(MultichoiceList_5Floors),
+    [MULTI_MOM_MENU]                   = MULTICHOICE(MultichoiceList_MomMenu),
 
 };
 
@@ -1437,6 +1447,9 @@ const u8 *const gStdStrings[] =
     [STDSTRING_VOLCANO_BADGE]    = gText_Volcanobadge,
     [STDSTRING_EARTH_BADGE]      = gText_Earthbadge,
     [STDSTRING_COINS]            = COMPOUND_STRING("COINS"),
+    [STDSTRING_MEDICINE]         = gText_Medicine,
+    [STDSTRING_BATTLE_ITEMS]     = gText_BattleItems,
+    [STDSTRING_TREASURES]        = gText_Treasures,
 };
 
 static const u8 sLinkServicesMultichoiceIds[] =

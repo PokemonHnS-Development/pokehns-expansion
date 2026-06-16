@@ -246,6 +246,63 @@ bool8 AdjustQuantityAccordingToDPadInput(s16 *quantity, u16 max)
     return FALSE;
 }
 
+bool8 AdjustQuantityAccordingToDPadInput_MomVersion(u32 *quantity, u32 max)
+{
+    u32 valBefore = *quantity;
+
+    if (JOY_REPEAT(DPAD_ANY) == DPAD_UP)
+    {
+        (*quantity)++;
+        if (*quantity > max)
+            *quantity = 1;
+
+        if (*quantity == valBefore)
+            return FALSE;
+
+        PlaySE(SE_SELECT);
+        return TRUE;
+    }
+    else if (JOY_REPEAT(DPAD_ANY) == DPAD_DOWN)
+    {
+        if (*quantity <= 1)
+            *quantity = max + 1;
+        (*quantity)--;
+
+        if (*quantity == valBefore)
+            return FALSE;
+
+        PlaySE(SE_SELECT);
+        return TRUE;
+    }
+    else if (JOY_REPEAT(DPAD_ANY) == DPAD_RIGHT)
+    {
+        *quantity += 100;
+        if (*quantity > max)
+            *quantity = max;
+
+        if (*quantity == valBefore)
+            return FALSE;
+
+        PlaySE(SE_SELECT);
+        return TRUE;
+    }
+    else if (JOY_REPEAT(DPAD_ANY) == DPAD_LEFT)
+    {
+        if (*quantity <= 100)
+            *quantity = 1;
+        else
+            *quantity -= 100;
+
+        if (*quantity == valBefore)
+            return FALSE;
+
+        PlaySE(SE_SELECT);
+        return TRUE;
+    }
+
+    return FALSE;
+}
+
 u8 GetLRKeysPressed(void)
 {
     if (gSaveBlock2Ptr->optionsButtonMode == OPTIONS_BUTTON_MODE_LR)

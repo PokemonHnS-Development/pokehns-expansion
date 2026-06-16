@@ -1,0 +1,6 @@
+{
+    "base_game_version": "pokeemerald",
+    "custom_identifiers": {
+        "key_region_map_sections": "hns_map_sections"
+    }
+}

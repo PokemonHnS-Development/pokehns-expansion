@@ -82,7 +82,7 @@ extern u16 gSpecialVar_ItemId;
 
 static const u32 sShinyOddsTable[] = { 8, 16, 32, 64, 128 };
 
-static u32 GetShinyOdds(void)
+u32 GetShinyOdds(void)
 {
     if (gSaveBlock3Ptr != NULL)
     {

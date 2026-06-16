@@ -8,6 +8,7 @@
 #include "daycare.h"
 #include "decoration.h"
 #include "diploma.h"
+#include "voltorb_flip.h"
 #include "event_data.h"
 #include "event_object_movement.h"
 #include "fieldmap.h"
@@ -198,6 +199,13 @@ void Special_ViewWallClock(void)
 {
     gMain.savedCallback = CB2_ReturnToField;
     SetMainCallback2(CB2_ViewWallClock);
+    LockPlayerFieldControls();
+}
+
+void Special_ViewVoltorbFlip(void)
+{
+    gMain.savedCallback = CB2_ReturnToField;
+    SetMainCallback2(CB2_ShowVoltorbFlip);
     LockPlayerFieldControls();
 }
 
@@ -5875,4 +5883,79 @@ void SwitchMonAbility(void)
     {
         gSpecialVar_Result = FALSE;
     }
+}
+
+void CheckPartyForSpecies(void)
+{
+    u16 species = gSpecialVar_0x8004;
+    u8 i;
+
+    for (i = 0; i < gPlayerPartyCount; i++)
+    {
+        if (GetMonData(&gPlayerParty[i], MON_DATA_SPECIES, NULL) == species)
+        {
+            gSpecialVar_Result = TRUE;
+            return;
+        }
+    }
+    gSpecialVar_Result = FALSE;
+}
+
+static const struct {
+    u16 src;
+    u16 dst;
+} sRegionalFormTable[] = {
+    { SPECIES_MEOWTH,     SPECIES_MEOWTH_GALAR },
+    { SPECIES_PONYTA,     SPECIES_PONYTA_GALAR },
+    { SPECIES_RAPIDASH,   SPECIES_RAPIDASH_GALAR },
+    { SPECIES_SLOWPOKE,   SPECIES_SLOWPOKE_GALAR },
+    { SPECIES_SLOWBRO,    SPECIES_SLOWBRO_GALAR },
+    { SPECIES_SLOWKING,   SPECIES_SLOWKING_GALAR },
+    { SPECIES_FARFETCHD,  SPECIES_FARFETCHD_GALAR },
+    { SPECIES_WEEZING,    SPECIES_WEEZING_GALAR },
+    { SPECIES_MR_MIME,    SPECIES_MR_MIME_GALAR },
+    { SPECIES_ARTICUNO,   SPECIES_ARTICUNO_GALAR },
+    { SPECIES_ZAPDOS,     SPECIES_ZAPDOS_GALAR },
+    { SPECIES_MOLTRES,    SPECIES_MOLTRES_GALAR },
+    { SPECIES_CORSOLA,    SPECIES_CORSOLA_GALAR },
+    { SPECIES_ZIGZAGOON,  SPECIES_ZIGZAGOON_GALAR },
+    { SPECIES_LINOONE,    SPECIES_LINOONE_GALAR },
+};
+
+void GetRegionalFormSpecies(void)
+{
+    u16 species = VarGet(VAR_TEMP_0);
+    u32 i;
+
+    for (i = 0; i < ARRAY_COUNT(sRegionalFormTable); i++)
+    {
+        if (sRegionalFormTable[i].src == species)
+        {
+            gSpecialVar_Result = sRegionalFormTable[i].dst;
+            return;
+        }
+    }
+    gSpecialVar_Result = species;
+}
+
+void ConvertToRegionalForm(void)
+{
+    u16 oldSpecies = VarGet(VAR_TEMP_0);
+    u16 newSpecies = VarGet(VAR_TEMP_1);
+    u8 i;
+
+    for (i = 0; i < gPlayerPartyCount; i++)
+    {
+        if (GetMonData(&gPlayerParty[i], MON_DATA_SPECIES, NULL) == oldSpecies)
+        {
+            SetMonData(&gPlayerParty[i], MON_DATA_SPECIES, &newSpecies);
+            CalculateMonStats(&gPlayerParty[i]);
+            EvolutionRenameMon(&gPlayerParty[i], oldSpecies, newSpecies);
+            GetSetPokedexFlag(SpeciesToNationalPokedexNum(newSpecies), FLAG_SET_SEEN);
+            GetSetPokedexFlag(SpeciesToNationalPokedexNum(newSpecies), FLAG_SET_CAUGHT);
+            gSpecialVar_Result = TRUE;
+            return;
+        }
+    }
+    gSpecialVar_Result = FALSE;
 }

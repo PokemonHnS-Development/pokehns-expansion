@@ -18,6 +18,7 @@
 #include "easy_chat.h"
 #include "event_data.h"
 #include "money.h"
+#include "mom_savings.h"
 #include "trainer_hill.h"
 #include "trainer_tower.h"
 #include "tv.h"
@@ -296,6 +297,7 @@ void NewGameInitData(void)
 
 #if IS_HNS
     StringCopy(gSaveBlock2Ptr->rivalName, gText_ExpandedPlaceholder_Silver);
+    InitMomSavings();
 #endif
 }
 

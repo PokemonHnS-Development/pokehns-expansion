@@ -26,6 +26,7 @@
 #include "main.h"
 #include "palette.h"
 #include "money.h"
+#include "mom_savings.h"
 #include "malloc.h"
 #include "bg.h"
 #include "string_util.h"
@@ -4208,8 +4209,16 @@ static void Cmd_getexp(void)
             }
             else
             {
-                *exp = SAFE_DIV(calculatedExp * B_EXPALL_PARTICIPANT_NUM,
-                                viaSentIn    * B_EXPALL_PARTICIPANT_DEN);
+                if (viaSentIn == 1 && viaExpShare <= 1)
+                {
+                    // Solo party member gets full exp — no sharing penalty.
+                    *exp = SAFE_DIV(calculatedExp, viaSentIn);
+                }
+                else
+                {
+                    *exp = SAFE_DIV(calculatedExp * B_EXPALL_PARTICIPANT_NUM,
+                                    viaSentIn    * B_EXPALL_PARTICIPANT_DEN);
+                }
                 if (*exp == 0)
                     *exp = 1;
 
@@ -6224,6 +6233,14 @@ static void Cmd_getmoneyreward(void)
         if (gBattleTypeFlags & BATTLE_TYPE_TWO_OPPONENTS)
             money += GetTrainerMoneyToGive(TRAINER_BATTLE_PARAM.opponentB);
         AddMoney(&gSaveBlock1Ptr->money, money);
+#if IS_HNS
+        if (Mom_IsSavingEnabled())
+        {
+            u32 depositAmount = money / 4;
+            if (depositAmount > 0)
+                Mom_AutoDepositFromBattle(depositAmount);
+        }
+#endif
     }
     else
     {

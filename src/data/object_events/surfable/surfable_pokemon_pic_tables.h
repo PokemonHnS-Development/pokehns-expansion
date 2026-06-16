@@ -4123,6 +4123,7 @@ const struct SpriteFrameImage gSurfingOverlayShinyPicTable_Arceus[] = {
     overworld_frame(gSurfableShinyPokemonPic_Arceus, 8, 8, 10),
     overworld_frame(gSurfableShinyPokemonPic_Arceus, 8, 8, 11),
 };
+
 // Regional Form Surfables
 const struct SpriteFrameImage gSurfingOverworldPicTable_RaichuAlola[] = {
     overworld_frame(gSurfablePokemonPic_RaichuAlola, 4, 4, 0),
@@ -4663,4 +4664,3 @@ const struct SpriteFrameImage gSurfingOverlayShinyPicTable_Clodsire[] = {
     overworld_frame(gSurfableShinyPokemonPic_Clodsire, 4, 4, 10),
     overworld_frame(gSurfableShinyPokemonPic_Clodsire, 4, 4, 11),
 };
-

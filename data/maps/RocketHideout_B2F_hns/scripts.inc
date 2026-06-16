@@ -299,18 +299,19 @@ RocketHideout_B2F_EventScript_ChoosePartyForMultiBattle::
 	goto RocketHideout_B2F_EventScript_ReadyForBattlePrompt
 
 RocketHideout_B2F_EventScript_DoLanceMultiBattle::
-	special ReducePlayerPartyToSelectedMons
-	frontier_set FRONTIER_DATA_SELECTED_MON_ORDER
-	setvar VAR_0x8004, SPECIAL_BATTLE_LANCE
-	setvar VAR_0x8005, 0
+	@ special ReducePlayerPartyToSelectedMons
+	@ frontier_set FRONTIER_DATA_SELECTED_MON_ORDER
+	@ setvar VAR_0x8004, SPECIAL_BATTLE_LANCE
+	@ setvar VAR_0x8005, 0
 	applymovement LOCALID_ROCKETHIDEOUT2_ARIANA, Common_Movement_WalkUp1
 	applymovement LOCALID_ROCKETHIDEOUT2_GRUNT, Common_Movement_WalkUp1
 	waitmovement 0
 	turnobject LOCALID_ROCKETHIDEOUT2_GRUNT, DIR_WEST
-	special DoSpecialTrainerBattle
-	waitstate
-	frontier_saveparty
-	special LoadPlayerParty
+	multi_2_vs_2 TRAINER_ARIANA_1_HNS, Debug_Text_ArianaDefeat, TRAINER_GRUNT_23_HNS, Debug_Text_Grunt23Defeat, PARTNER_LANCE_HNS
+	@ special DoSpecialTrainerBattle
+	@ waitstate
+	@ frontier_saveparty
+	@ special LoadPlayerParty
 	switch VAR_RESULT
 	case 1, RocketHideout_B2F_EventScript_DefeatedAriana
 	fadescreen FADE_TO_BLACK

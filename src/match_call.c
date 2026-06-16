@@ -1390,8 +1390,13 @@ static const u8 sMatchCallWindow_Gfx[] = INCBIN_U8("graphics/pokenav/hns/match_c
 static const u16 sMatchCallWindow_Pal[] = INCBIN_U16("graphics/pokenav/match_call/window.gbapal");
 static const u8 sMatchCallWindow_Gfx[] = INCBIN_U8("graphics/pokenav/match_call/window.4bpp");
 #endif
+#if IS_HNS
+static const u16 sPokenavIcon_Pal[] = INCBIN_U16("graphics/pokenav/hns/match_call/nav_icon.gbapal");
+static const u32 sPokenavIcon_Gfx[] = INCBIN_U32("graphics/pokenav/hns/match_call/nav_icon.4bpp.smol");
+#else
 static const u16 sPokenavIcon_Pal[] = INCBIN_U16("graphics/pokenav/match_call/nav_icon.gbapal");
 static const u32 sPokenavIcon_Gfx[] = INCBIN_U32("graphics/pokenav/match_call/nav_icon.4bpp.smol");
+#endif
 
 static const u8 sText_PokenavCallEllipsis[] = _("………………\p");
 
@@ -1565,6 +1570,7 @@ static bool32 MatchCall_EndCall(u8 taskId)
     u8 playerObjectId;
     if (!IsDma3ManagerBusyWithBgCopy() && !IsSEPlaying())
     {
+        DestroyNamebox();
         ChangeBgY(0, 0, BG_COORD_SET);
         if (!sMatchCallState.triggeredFromScript)
         {

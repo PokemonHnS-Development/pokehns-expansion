@@ -17,6 +17,8 @@
 #include "malloc.h"
 #include "util.h"
 #include "item_icon.h"
+#include "sprite.h"
+#include "decompress.h"
 #include "constants/field_specials.h"
 #include "constants/items.h"
 #include "constants/script_menu.h"
@@ -24,6 +26,51 @@
 #include "constants/songs.h"
 
 #include "data/script_menu.h"
+
+// Shiny star indicator graphics and tags
+#define GFXTAG_SHINY_STAR_PREVIEW 5000
+#define PALTAG_SHINY_STAR_PREVIEW 5000
+
+static const u32 sShinyStarTiles[] = INCBIN_U32("graphics/summary_screen/shiny_icon.4bpp.lz");
+static const u16 sShinyStarPal[] = INCBIN_U16("graphics/summary_screen/heart.gbapal");
+
+static const struct OamData sOam_ShinyStarIcon =
+{
+    .y = 0,
+    .affineMode = ST_OAM_AFFINE_OFF,
+    .objMode = ST_OAM_OBJ_NORMAL,
+    .mosaic = FALSE,
+    .bpp = ST_OAM_4BPP,
+    .shape = SPRITE_SHAPE(8x8),
+    .x = 0,
+    .matrixNum = 0,
+    .size = SPRITE_SIZE(8x8),
+    .tileNum = 0,
+    .priority = 0,
+    .paletteNum = 0,
+};
+
+static const union AnimCmd sAnim_ShinyStarIcon[] =
+{
+    ANIMCMD_FRAME(0, 0),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd *const sAnims_ShinyStarIcon[] =
+{
+    sAnim_ShinyStarIcon
+};
+
+static const struct SpriteTemplate sSpriteTemplate_ShinyStarIcon =
+{
+    .tileTag = GFXTAG_SHINY_STAR_PREVIEW,
+    .paletteTag = PALTAG_SHINY_STAR_PREVIEW,
+    .oam = &sOam_ShinyStarIcon,
+    .anims = sAnims_ShinyStarIcon,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = SpriteCallbackDummy
+};
 
 struct DynamicListMenuEventArgs
 {
@@ -944,6 +991,7 @@ void GetLilycoveSSTidalSelection(void)
 #define tWindowX     data[3]
 #define tWindowY     data[4]
 #define tWindowId    data[5]
+#define tShinyStarSpriteId data[6]
 
 static void Task_PokemonPicWindow(u8 taskId)
 {
@@ -959,6 +1007,13 @@ static void Task_PokemonPicWindow(u8 taskId)
         break;
     case 2:
         FreeResourcesAndDestroySprite(&gSprites[task->tMonSpriteId], task->tMonSpriteId);
+        // Destroy shiny star sprite if it exists
+        if (task->tShinyStarSpriteId != 0xFF)
+        {
+            DestroySprite(&gSprites[task->tShinyStarSpriteId]);
+            FreeSpriteTilesByTag(GFXTAG_SHINY_STAR_PREVIEW);
+            FreeSpritePaletteByTag(PALTAG_SHINY_STAR_PREVIEW);
+        }
         task->tState++;
         break;
     case 3:
@@ -985,8 +1040,71 @@ bool8 ScriptMenu_ShowPokemonPic(u16 species, u8 x, u8 y)
         gTasks[taskId].tState = 0;
         gTasks[taskId].tMonSpecies = species;
         gTasks[taskId].tMonSpriteId = spriteId;
+        gTasks[taskId].tShinyStarSpriteId = 0xFF; // No shiny star for normal pokemon
         gSprites[spriteId].callback = SpriteCallbackDummy;
         gSprites[spriteId].oam.priority = 0;
+        SetStandardWindowBorderStyle(gTasks[taskId].tWindowId, TRUE);
+        ScheduleBgCopyTilemapToVram(0);
+        return TRUE;
+    }
+}
+
+bool8 ScriptMenu_ShowShinyPokemonPic(u16 species, u8 x, u8 y)
+{
+    u8 taskId;
+    u8 spriteId;
+    u8 shinyStarSpriteId;
+    void *gfxBuffer;
+    struct SpriteSheet sheet;
+    struct SpritePalette pal;
+
+    if (FindTaskIdByFunc(Task_PokemonPicWindow) != TASK_NONE)
+    {
+        return FALSE;
+    }
+    else
+    {
+        spriteId = CreateShinyMonSprite_PicBox(species, x * 8 + 40, y * 8 + 40, 0);
+        taskId = CreateTask(Task_PokemonPicWindow, 0x50);
+        gTasks[taskId].tWindowId = CreateWindowFromRect(x, y, 8, 8);
+        gTasks[taskId].tState = 0;
+        gTasks[taskId].tMonSpecies = species;
+        gTasks[taskId].tMonSpriteId = spriteId;
+        gSprites[spriteId].callback = SpriteCallbackDummy;
+        gSprites[spriteId].oam.priority = 0;
+
+        // Load and create shiny star sprite
+        gfxBuffer = Alloc(0x20 * 2);
+        if (gfxBuffer != NULL)
+        {
+            LZ77UnCompWram(sShinyStarTiles, gfxBuffer);
+            
+            sheet.data = gfxBuffer;
+            sheet.size = 0x20 * 2;
+            sheet.tag = GFXTAG_SHINY_STAR_PREVIEW;
+            
+            pal.data = sShinyStarPal;
+            pal.tag = PALTAG_SHINY_STAR_PREVIEW;
+            
+            LoadSpriteSheet(&sheet);
+            LoadSpritePalette(&pal);
+            Free(gfxBuffer);
+            
+            // Position shiny star at upper right corner of window
+            // Window is at (x, y) in tiles, each tile is 8 pixels
+            // Window is 8 tiles wide (64 pixels), so upper right is at x + 64 - 4 (center of 8px star)
+            shinyStarSpriteId = CreateSprite(&sSpriteTemplate_ShinyStarIcon, 
+                                            (x * 8) + 69,  // Upper right corner (64 - 4 for sprite center)
+                                            (y * 8) + 12,   // Top edge + 4 for sprite center
+                                            0);
+            gSprites[shinyStarSpriteId].oam.priority = 0;
+            gTasks[taskId].tShinyStarSpriteId = shinyStarSpriteId;
+        }
+        else
+        {
+            gTasks[taskId].tShinyStarSpriteId = 0xFF; // Failed to allocate
+        }
+
         SetStandardWindowBorderStyle(gTasks[taskId].tWindowId, TRUE);
         ScheduleBgCopyTilemapToVram(0);
         return TRUE;
