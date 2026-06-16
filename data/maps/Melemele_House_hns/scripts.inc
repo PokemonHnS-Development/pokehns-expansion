@@ -37,7 +37,7 @@ Alola_Melemele_Pokecenter_BugCatcher::
 # 27 "data/maps/Melemele_House_hns/scripts.pory"
 	waitse
 # 28 "data/maps/Melemele_House_hns/scripts.pory"
-	playmoncry SPECIES_GRUBBIN, 0
+	playmoncry SPECIES_AIPOM, 0
 # 29 "data/maps/Melemele_House_hns/scripts.pory"
 	waitmoncry
 # 30 "data/maps/Melemele_House_hns/scripts.pory"
@@ -51,7 +51,7 @@ Alola_Melemele_Pokecenter_Grubbin::
 # 36 "data/maps/Melemele_House_hns/scripts.pory"
 	faceplayer
 # 37 "data/maps/Melemele_House_hns/scripts.pory"
-	playmoncry SPECIES_GRUBBIN, 0
+	playmoncry SPECIES_AIPOM, 0
 # 38 "data/maps/Melemele_House_hns/scripts.pory"
 	msgbox Alola_Melemele_Pokecenter_Grubbin_Text_0, MSGBOX_AUTOCLOSE
 # 39 "data/maps/Melemele_House_hns/scripts.pory"
@@ -78,8 +78,8 @@ Alola_Melemele_Pokecenter_BugCatcher_Text_0:
 # 20 "data/maps/Melemele_House_hns/scripts.pory"
 	.string "I found some brand new bug Pokémon\n"
 	.string "here on the Isles!\p"
-	.string "Like my new friend Grubbin here!$"
+	.string "Like my new friend Aipom here!$"
 
 Alola_Melemele_Pokecenter_Grubbin_Text_0:
 # 38 "data/maps/Melemele_House_hns/scripts.pory"
-	.string "Grub!$"
+	.string "Aiip!$"

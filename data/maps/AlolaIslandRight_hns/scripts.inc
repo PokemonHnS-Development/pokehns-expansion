@@ -8,13 +8,13 @@ Alola_Akala_BattleSandygast::
 # 5 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	faceplayer
 # 6 "data/maps/AlolaIslandRight_hns/scripts.pory"
-	playmoncry SPECIES_SANDYGAST, 0
+	playmoncry SPECIES_CORSOLA, 0
 # 7 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	msgbox Alola_Akala_BattleSandygast_Text_0, MSGBOX_AUTOCLOSE
 # 8 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	waitmoncry
 # 9 "data/maps/AlolaIslandRight_hns/scripts.pory"
-	setwildbattle SPECIES_SANDYGAST, 45
+	setwildbattle SPECIES_CORSOLA, 45
 # 10 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	dowildbattle
 # 11 "data/maps/AlolaIslandRight_hns/scripts.pory"
@@ -96,7 +96,7 @@ Alola_Akala_Pikipek::
 # 66 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	faceplayer
 # 67 "data/maps/AlolaIslandRight_hns/scripts.pory"
-	playmoncry SPECIES_PIKIPEK, 0
+	playmoncry SPECIES_CHATOT, 0
 # 68 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	msgbox Alola_Akala_Pikipek_Text_0, MSGBOX_AUTOCLOSE
 # 69 "data/maps/AlolaIslandRight_hns/scripts.pory"
@@ -652,7 +652,7 @@ Alola_Akala_TapuLele_Flyover_Movement_0:
 
 Alola_Akala_BattleSandygast_Text_0:
 # 7 "data/maps/AlolaIslandRight_hns/scripts.pory"
-	.string "Gaaah!$"
+	.string "Coorr!$"
 
 Alola_Akala_Sign_Text_0:
 # 49 "data/maps/AlolaIslandRight_hns/scripts.pory"
@@ -666,13 +666,13 @@ Alola_Akala_House_Sign_Text_0:
 
 Alola_Akala_Pikipek_Text_0:
 # 68 "data/maps/AlolaIslandRight_hns/scripts.pory"
-	.string "Pek!$"
+	.string "Chaaatot!$"
 
 Alola_Akala_OldManOnBench_Text_0:
 # 77 "data/maps/AlolaIslandRight_hns/scripts.pory"
 	.string "Ah the weather is so nice today,\n"
 	.string "isn't it?\p"
-	.string "I was just feeding the Pikipek and this\n"
+	.string "I was just feeding the Chatot and this\n"
 	.string "one decided to join me on my bench!$"
 
 Alola_Akala_TotemBattle_Text_0:

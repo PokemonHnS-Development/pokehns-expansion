@@ -194,13 +194,13 @@ Alola_Melemele_BattleSandygast::
 # 114 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	faceplayer
 # 115 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
-	playmoncry SPECIES_SANDYGAST, 0
+	playmoncry SPECIES_CORSOLA, 0
 # 116 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	msgbox Alola_Melemele_BattleSandygast_Text_0, MSGBOX_AUTOCLOSE
 # 117 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	waitmoncry
 # 118 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
-	setwildbattle SPECIES_SANDYGAST, 45
+	setwildbattle SPECIES_CORSOLA, 45
 # 119 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	dowildbattle
 # 120 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
@@ -1054,7 +1054,7 @@ Alola_Melemele_MelemeleMart_Sign_Text_0:
 
 Alola_Melemele_BattleSandygast_Text_0:
 # 116 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
-	.string "Gaaah!$"
+	.string "Coorr!$"
 
 Alola_Melemele_SamsonOak_Trigger_Beginning_Text_0:
 # 149 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
@@ -1186,7 +1186,7 @@ Alola_Melemele_Bugcatcher_Text_0:
 Alola_Melemele_camper_Text_0:
 # 494 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	.string "I traveled all the way from Kanto to see\n"
-	.string "my favorite bird Pokémon, Pikipek!$"
+	.string "my favorite bird Pokémon, Chatot!$"
 
 Alola_Melemele_Picnicker_Text_0:
 # 504 "data/maps/AlolaIslandMelemele_hns/scripts.pory"

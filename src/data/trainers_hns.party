@@ -13448,17 +13448,17 @@ Level: 60
 Exeggutor Alola
 Level: 65
 
-Toucannon
-Level: 60
-
-Bewear
-Level: 61
-
-Mudsdale
+Nintales Alola
 Level: 63
 
-Lycanroc Midday
-Level: 63
+Golem Alola
+Level: 65
+
+Muk Alola
+Level: 65
+
+Tropius
+Level: 67
 
 === TRAINER_PHANTONOMY_HNS ===
 Name: PHANTONOMY
@@ -13469,19 +13469,19 @@ Music: Hg Champion
 Double Battle: No
 AI: Smart Trainer
 
-Typhlosion Hisui @ Focus Sash
+Flygon @ Assault Vest
 Level: 70
 
-Golisopod @ Assault Vest
+Typhlosion Hisui @ Focus Sash
 Level: 70
 
 Arbok
 Level: 70
 
-Vikavolt
+Aggron
 Level: 70
 
-Lycanroc Dusk
+Sharpedo
 Level: 70
 
 Noivern @ Choice Specs
@@ -13502,7 +13502,7 @@ AI: Check Bad Move
 Mantine
 Level: 55
 
-Bruxish
+Politoed
 Level: 55
 
 Luvdisc
@@ -13520,10 +13520,10 @@ AI: Check Bad Move
 Pelipper
 Level: 55
 
-Wishiwashi
+Poliwrath
 Level: 55
 
-Toxapex
+Huntail
 Level: 55
 
 === TRAINER_AKALA_SWIMMER_1_HNS ===
@@ -13553,13 +13553,13 @@ Music: Hg Girl 2
 Double Battle: No
 AI: Check Bad Move
 
-Palossand
+Corsola
 Level: 55
 
-Pyukumuku
+Octillery
 Level: 55
 
-Toxapex
+Bibarel
 Level: 55
 
 === TRAINER_AKALA_SWIMMER_3_HNS ===
@@ -13574,10 +13574,10 @@ AI: Check Bad Move
 Gyarados
 Level: 55
 
-Wishiwashi
+Tentacruel
 Level: 55
 
-Golisopod
+Floatzel
 Level: 55
 
 === TRAINER_PONI_SWIMMER_1_HNS ===
@@ -13589,13 +13589,13 @@ Music: Hg Girl 2
 Double Battle: No
 AI: Check Bad Move
 
-Tentacruel
+Gorebyss
 Level: 55
 
-Wishiwashi
+Lumineon
 Level: 55
 
-Bruxish
+Milotic
 Level: 55
 
 === TRAINER_PONI_SWIMMER_2_HNS ===
@@ -13626,13 +13626,13 @@ Music: Hg Suspicious 2
 Double Battle: No
 AI: Check Bad Move
 
-Mudsdale
+Solrock
 Level: 55
 
-Lycanroc Midnight
+Lunatone
 Level: 55
 
-Turtonator
+Magmar
 Level: 55
 
 === TRAINER_AKALA_PICNICKER_HNS ===
@@ -13644,13 +13644,13 @@ Music: Hg Girl 1
 Double Battle: No
 AI: Check Bad Move
 
-Tsareena
+Cherrim
 Level: 55
 
-Oricorio Pau
+Vespiquen
 Level: 55
 
-Shiinotic
+Ludicolo
 Level: 55
 
 === TRAINER_AKALA_CAMPER_HNS ===
@@ -13662,13 +13662,13 @@ Music: Hg Boy 1
 Double Battle: No
 AI: Check Bad Move
 
-Toucannon
+Swellow
 Level: 55
 
-Lurantis
+Roserade
 Level: 55
 
-Comfey
+Dustox
 Level: 55
 
 === TRAINER_AKALA_FOREST_BUGCATCHER_1_HNS ===
@@ -13680,10 +13680,10 @@ Music: Hg Boy 1
 Double Battle: No
 AI: Check Bad Move
 
-Araquanid
+Pinsir
 Level: 57
 
-Vikavolt
+Scyther
 Level: 57
 
 
@@ -13696,10 +13696,10 @@ Music: Hg Boy 1
 Double Battle: No
 AI: Check Bad Move
 
-Golisopod
+Shuckle
 Level: 57
 
-Ribombee
+Heracross
 Level: 57
 
 === TRAINER_AKALA_CAVE_PICNICKER_HNS ===
@@ -13711,13 +13711,13 @@ Music: Hg Girl 1
 Double Battle: No
 AI: Check Bad Move
 
-Oranguru
+Aipom
 Level: 55
 
-Dhelmise
+Tangrowth
 Level: 55
 
-Komala
+Tropius
 Level: 55
 
 === TRAINER_AKALA_CAVE_CAMPER_HNS ===
@@ -13729,13 +13729,13 @@ Music: Hg Boy 1
 Double Battle: No
 AI: Check Bad Move
 
-Passimian
+Primeape
 Level: 55
 
-Crabominable
+Hariyama
 Level: 55
 
-Lycanroc Midday
+Machoke
 Level: 55
 
 === TRAINER_AKALA_CAVE_HIKER_HNS ===
@@ -13747,13 +13747,13 @@ Music: Hg Suspicious 2
 Double Battle: No
 AI: Check Bad Move
 
-Lycanroc Midnight
+Bronzong
 Level: 55
 
-Mudsdale
+Lunatone
 Level: 55
 
-Turtonator
+Solrock
 Level: 55
 
 === TRAINER_ULAULA_PICNICKER_HNS ===
@@ -13765,13 +13765,13 @@ Music: Hg Girl 1
 Double Battle: No
 AI: Check Bad Move
 
-Tsareena
+Swellow
 Level: 55
 
-Comfey
+Cherrim
 Level: 55
 
-Oricorio Baile
+Vespiquen
 Level: 55
 
 === TRAINER_ULAULA_YOUNGSTER_HNS ===
@@ -13783,13 +13783,13 @@ Music: Hg Boy 1
 Double Battle: No
 AI: Check Bad Move
 
-Bewear
+Scizor
 Level: 55
 
-Togedemaru
+Leafeon
 Level: 55
 
-Gumshoos
+
 Level: 55
 
 === TRAINER_ULAULA_HIKER_HNS ===
@@ -13801,13 +13801,13 @@ Music: Hg Suspicious 2
 Double Battle: No
 AI: Check Bad Move
 
-Drampa
+Magmar
 Level: 55
 
-Crabominable
+Electabuzz
 Level: 55
 
-Mudsdale
+Mawile
 Level: 55
 
 === TRAINER_ULAULA_COOLTRAINER_HNS ===
@@ -13819,11 +13819,11 @@ Music: Hg Girl 2
 Double Battle: No
 AI: Check Bad Move
 
-Mimikyu
+Milotic
 Level: 55
 
-Ribombee
+Ambipom
 Level: 55
 
-Kommo O
+Salamence
 Level: 55

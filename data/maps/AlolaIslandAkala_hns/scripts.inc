@@ -8,13 +8,13 @@ Alola_Ulaula_BattlePalossand::
 # 5 "data/maps/AlolaIslandAkala_hns/scripts.pory"
 	faceplayer
 # 6 "data/maps/AlolaIslandAkala_hns/scripts.pory"
-	playmoncry SPECIES_PALOSSAND, 0
+	playmoncry SPECIES_SHUCKLE, 0
 # 7 "data/maps/AlolaIslandAkala_hns/scripts.pory"
 	msgbox Alola_Ulaula_BattlePalossand_Text_0, MSGBOX_AUTOCLOSE
 # 8 "data/maps/AlolaIslandAkala_hns/scripts.pory"
 	waitmoncry
 # 9 "data/maps/AlolaIslandAkala_hns/scripts.pory"
-	setwildbattle SPECIES_PALOSSAND, 45
+	setwildbattle SPECIES_SHUCKLE, 45
 # 10 "data/maps/AlolaIslandAkala_hns/scripts.pory"
 	dowildbattle
 # 11 "data/maps/AlolaIslandAkala_hns/scripts.pory"
@@ -495,7 +495,7 @@ Alola_Ulaula_Phant_outside_Movement_6:
 
 Alola_Ulaula_BattlePalossand_Text_0:
 # 7 "data/maps/AlolaIslandAkala_hns/scripts.pory"
-	.string "Gaaah!$"
+	.string "Shuck!$"
 
 Alola_Ulaula_MtLanikalaSign_Text_0:
 # 44 "data/maps/AlolaIslandAkala_hns/scripts.pory"
