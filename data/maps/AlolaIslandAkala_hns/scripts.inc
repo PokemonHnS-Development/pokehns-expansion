@@ -302,6 +302,35 @@ Alola_Ulaula_LassNPC::
 	end
 
 
+Alola_Ulaula_Bench_Heal::
+# 204 "data/maps/AlolaIslandAkala_hns/scripts.pory"
+	lock
+# 205 "data/maps/AlolaIslandAkala_hns/scripts.pory"
+	faceplayer
+# 206 "data/maps/AlolaIslandAkala_hns/scripts.pory"
+	msgbox Alola_Ulaula_Bench_Heal_Text_0, MSGBOX_YESNO
+# 208 "data/maps/AlolaIslandAkala_hns/scripts.pory"
+	compare VAR_RESULT, YES
+	goto_if_eq Alola_Ulaula_Bench_Heal_2
+Alola_Ulaula_Bench_Heal_1:
+# 215 "data/maps/AlolaIslandAkala_hns/scripts.pory"
+	release
+	end
+
+Alola_Ulaula_Bench_Heal_2:
+# 209 "data/maps/AlolaIslandAkala_hns/scripts.pory"
+	fadescreenswapbuffers FADE_TO_BLACK
+# 210 "data/maps/AlolaIslandAkala_hns/scripts.pory"
+	special HealPlayerParty
+# 211 "data/maps/AlolaIslandAkala_hns/scripts.pory"
+	playfanfare MUS_HEAL
+# 212 "data/maps/AlolaIslandAkala_hns/scripts.pory"
+	waitfanfare
+# 213 "data/maps/AlolaIslandAkala_hns/scripts.pory"
+	fadescreenswapbuffers FADE_FROM_BLACK
+	goto Alola_Ulaula_Bench_Heal_1
+
+
 # 67 "data/maps/AlolaIslandAkala_hns/scripts.pory"
 Alola_Ulaula_TapuBulu_Flyover_Movement_0:
 # 67 "data/maps/AlolaIslandAkala_hns/scripts.pory"
@@ -560,3 +589,8 @@ Alola_Ulaula_LassNPC_Text_0:
 	.string "breathtaking.\p"
 	.string "I could sit here all day and just\n"
 	.string "watch the waves.$"
+
+Alola_Ulaula_Bench_Heal_Text_0:
+# 206 "data/maps/AlolaIslandAkala_hns/scripts.pory"
+	.string "Would you like to take a rest on this\n"
+	.string "bench?$"

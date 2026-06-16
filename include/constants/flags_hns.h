@@ -784,7 +784,7 @@
 #define FLAG_UNUSED_HIDDEN_ITEM_102                 (HNS_ITEMS_2_START + 102)
 #define FLAG_UNUSED_HIDDEN_ITEM_103                 (HNS_ITEMS_2_START + 103)
 #define FLAG_UNUSED_HIDDEN_ITEM_104                 (HNS_ITEMS_2_START + 104)
-#define FLAG_UNUSED_HIDDEN_ITEM_105                 (HNS_ITEMS_2_START + 105)
+#define FLAG_PONI_HIDDEN_ITEM_1                     (HNS_ITEMS_2_START + 105)
 #define FLAG_ULAULA_CAVE_HIDDEN_ITEM_2              (HNS_ITEMS_2_START + 106)
 #define FLAG_ULAULA_CAVE_HIDDEN_ITEM_1              (HNS_ITEMS_2_START + 107)
 #define FLAG_ULAULA_HIDDEN_ITEM_2                   (HNS_ITEMS_2_START + 108)
@@ -993,7 +993,7 @@
 #define FLAG_EXTENDED_CONTENT_140                   (HNS_EXTENDED_CONTENT_START + 140)
 #define FLAG_EXTENDED_CONTENT_141                   (HNS_EXTENDED_CONTENT_START + 141)
 #define FLAG_EXTENDED_CONTENT_142                   (HNS_EXTENDED_CONTENT_START + 142)
-#define FLAG_EXTENDED_CONTENT_143                   (HNS_EXTENDED_CONTENT_START + 143)
+#define FLAG_HANDLE_BOAT                            (HNS_EXTENDED_CONTENT_START + 143) // for proper handling of mapscripts if the boat was used then flew back
 #define FLAG_HIDE_PHANT_INSIDE                      (HNS_EXTENDED_CONTENT_START + 144) // hide phantonomy inside on ulaula
 #define FLAG_HIDE_PHANT_OUTSIDE                     (HNS_EXTENDED_CONTENT_START + 145) // hide phantonomy outside on ulaula
 #define FLAG_BATTLED_TAPU_FINI                      (HNS_EXTENDED_CONTENT_START + 146) // battled tapu fini

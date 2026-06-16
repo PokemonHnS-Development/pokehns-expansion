@@ -145,8 +145,50 @@ script Alola_Ulaula_TotemBattle{
 
 script Alola_Ulaula_Totem_sign{
     lock
-    msgbox("A strange totem stands here,
-    power is emanating from it\.", MSGBOX_AUTOCLOSE)
+    if(flag(FLAG_BATTLED_TAPU_FINI) && flag(FLAG_BATTLED_TAPU_KOKO) && flag(FLAG_BATTLED_TAPU_BULU) && flag(FLAG_BATTLED_TAPU_LELE))
+    {
+        msgbox("The totem is emanating a strong
+        energy\.
+        
+        Touch the totem to teleport to another
+        Isle?")
+        dynmultichoice(20, 4, FALSE, 4, 0, DYN_MULTICHOICE_CB_NONE,"Melemele Isle", "Akala Isle", "Ula'ula Isle", "Poni Isle", "Cancel")
+        if (var(VAR_RESULT) == 0)
+        {
+            warp(MAP_ALOLA_ISLAND_MELEMELE_HNS, 34, 26)
+            waitstate
+            end
+        }
+        if (var(VAR_RESULT) == 1)
+        {
+            warp(MAP_ALOLA_ISLAND_RIGHT_HNS, 9, 10)
+            waitstate
+            end
+        }
+        if (var(VAR_RESULT) == 2)
+        {
+            warp(MAP_ULA_ULA_FOREST_HNS, 16, 5)
+            waitstate
+            end
+        }
+        if (var(VAR_RESULT) == 3)
+        {
+            warp(MAP_ALOLA_ISLAND_HNS, 13, 8)
+            waitstate
+            end
+        }
+        else
+        {
+            release
+            end
+        }
+
+    }
+    else
+    {
+        msgbox("A strange totem stands here,
+        power is emanating from it\.", MSGBOX_AUTOCLOSE)
+    }
     release
     end
 }

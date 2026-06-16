@@ -199,3 +199,19 @@ script Alola_Ulaula_LassNPC{
     release
     end
 }
+
+script Alola_Ulaula_Bench_Heal{
+    lock
+    faceplayer
+    msgbox("Would you like to take a rest on this
+    bench?", MSGBOX_YESNO)
+    if (var(VAR_RESULT) == YES) {
+        fadescreenswapbuffers(FADE_TO_BLACK)
+        special(HealPlayerParty)
+        playfanfare(MUS_HEAL)
+        waitfanfare
+        fadescreenswapbuffers(FADE_FROM_BLACK)
+    }
+    release
+    end
+}

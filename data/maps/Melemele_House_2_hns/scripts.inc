@@ -67,4 +67,4 @@ Alola_Pokemart_Cook_Text_0:
 Alola_Pokemart_BaldMan_Text_0:
 # 34 "data/maps/Melemele_House_2_hns/scripts.pory"
 	.string "I'm looking for some sunscreen!\p"
-	.string "It's a sunnier here on the Isles!$"
+	.string "It's sunnier here on the Isles!$"

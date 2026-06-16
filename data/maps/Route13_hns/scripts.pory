@@ -1,8 +1,4 @@
 mapscripts Route13_hns_MapScripts{
-        MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE[VAR_ALOLA_TRAVEL, 2 {
-            applymovement(Route13_Alola_Captain, moves(face_up))
-            applymovement(LOCALID_PLAYER, moves(face_up))}
-            ]
         MAP_SCRIPT_ON_FRAME_TABLE[VAR_ALOLA_TRAVEL, 2: Route13_GetOffBoat]
         MAP_SCRIPT_ON_TRANSITION{call(Route13_OnTransition)}
         MAP_SCRIPT_ON_RESUME{call(SetTimeEncounters)}
@@ -184,6 +180,12 @@ Route13_Text_DirectionsSign:
 
 script Route13_GetOffBoat{
     lock
+    getplayerxy(VAR_TEMP_0, VAR_TEMP_1)
+    if (var(VAR_TEMP_0) != 37 || var(VAR_TEMP_1) != 29){
+        setvar(VAR_ALOLA_TRAVEL, 0)
+        release
+        end
+    }
     delay(30)
     applymovement(Route13_Alola_Captain, moves(face_left))
     applymovement(LOCALID_PLAYER, moves(face_right))

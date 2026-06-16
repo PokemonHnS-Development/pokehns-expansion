@@ -20,8 +20,22 @@ script Alola_Ulaula_House_Phant{
             msgbox("That was an incredible battle.
             
             I think you've earned this.")
-            applymovement(Phantonomy, moves(walk_in_place_down*2))
-            waitmovement(0)
+            getplayerxy(VAR_TEMP_1, VAR_TEMP_2)
+            if ((var(VAR_TEMP_1) == 8) && (var(VAR_TEMP_2) == 10))
+            {
+                applymovement(Phantonomy, moves(walk_in_place_down*2))
+                waitmovement(0)
+            }
+            if ((var(VAR_TEMP_1) == 9) && (var(VAR_TEMP_2) == 9))
+            {
+                applymovement(Phantonomy, moves(walk_in_place_right*2))
+                waitmovement(0)
+            }
+            if ((var(VAR_TEMP_1) == 8) && (var(VAR_TEMP_2) == 8))
+            {
+                applymovement(Phantonomy, moves(walk_in_place_up*2))
+                waitmovement(0)
+            }
             giveegg(SPECIES_NOIBAT)
             playfanfare(MUS_HG_OBTAIN_EGG)
             msgbox("You received an Egg from Phantonomy!")

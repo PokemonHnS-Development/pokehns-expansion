@@ -29,7 +29,7 @@ script Alola_Melemele_SamsonOakVillaIntro_Trigger{
     Explore all the Isles have to offer,
     and if you find any familiar Pok\emon
     that resemble those from Kanto\.
-    come back and show me your Pok\eDex!
+    come back and show me your Pok\edex!
 
     I'll be here patiently waiting to hear
     about your progress!", MSGBOX_AUTOCLOSE)
@@ -54,15 +54,14 @@ script Alola_Melemele_SamsonOakVilla_Dialogue{
             msgbox("Wow!
             You saw the Guardian Dieties!
             
-            Incredible work, {PLAYER}."
-            , MSGBOX_AUTOCLOSE)
-            giveitem(ITEM_BEAST_BALL)
-            msgbox("I found this while wandering about.
+            Incredible work, {PLAYER}.
+
+            I found this while wandering about.
 
             I'm not entirely sure what it's for,
-            but you should take it. 
-            
-            The Alola Isles must truly be special if
+            but you should take it.", MSGBOX_AUTOCLOSE)
+            giveitem(ITEM_BEAST_BALL)
+            msgbox("The Alola Isles must truly be special if
             the Guardians themselves visited!", MSGBOX_AUTOCLOSE)
             setvar(VAR_ALOLA_STATE, 4)
             clearflag(FLAG_HIDE_PHANT_OUTSIDE)
@@ -190,7 +189,7 @@ script Alola_Melemele_SamsonOakVilla_Dialogue{
 
         Would you like to share your progress
         about a specific Isle with me?")
-        dynmultichoice(20, 4, TRUE, 4, 0, DYN_MULTICHOICE_CB_NONE,"Melemele Isle", "Akala Isle", "Ula'ula Isle", "Poni Isle", "Not right now.")
+        dynmultichoice(20, 4, FALSE, 4, 0, DYN_MULTICHOICE_CB_NONE,"Melemele Isle", "Akala Isle", "Ula'ula Isle", "Poni Isle", "Not right now.")
         if (var(VAR_RESULT)==0)
         {
             getcaughtmon(SPECIES_MEOWTH_ALOLA)
@@ -210,7 +209,7 @@ script Alola_Melemele_SamsonOakVilla_Dialogue{
                                 if(flag(FLAG_CAUGHT_ALL_AKALA) || flag(FLAG_CAUGHT_ALL_ULAULA) || flag(FLAG_CAUGHT_ALL_PONI))
                                 {
                                     setflag(FLAG_CAUGHT_ALL_MELEMELE)
-                                    msgbox("Let me take a look at your Pok\eDex{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.",MSGBOX_AUTOCLOSE)
+                                    msgbox("Let me take a look at your Pok\edex{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.",MSGBOX_AUTOCLOSE)
                                     playse(SE_PIN)
                                     applymovement(SamsonOakVilla, moves(emote_exclamation_mark))
                                     waitmovement(0)
@@ -232,9 +231,9 @@ script Alola_Melemele_SamsonOakVilla_Dialogue{
                                         playse(SE_PIN)
                                         applymovement(SamsonOakVilla, moves(emote_exclamation_mark))
                                         waitmovement(0)
-                                        msgbox("Now that you've helped me validate that
-                                        all of the Alolan variants are present
-                                        on the Alola Isles.
+                                        msgbox("You've helped me validate that all
+                                        of the Alolan variants are present on
+                                        the Alola Isles!
 
                                         I'd like you to help me with one more
                                         thing\.
@@ -263,7 +262,7 @@ script Alola_Melemele_SamsonOakVilla_Dialogue{
                                 else
                                 {
                                     setflag(FLAG_CAUGHT_ALL_MELEMELE)
-                                    msgbox("Let me take a look at your Pok\eDex{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.",MSGBOX_AUTOCLOSE)
+                                    msgbox("Let me take a look at your Pok\edex{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.",MSGBOX_AUTOCLOSE)
                                     playse(SE_PIN)
                                     applymovement(SamsonOakVilla, moves(emote_exclamation_mark))
                                     waitmovement(0)
@@ -294,12 +293,17 @@ script Alola_Melemele_SamsonOakVilla_Dialogue{
                     }
                 }
             }
-            msgbox("Let me take a look at your Pok\eDex{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.
+            msgbox("Let me take a look at your Pok\edex{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.
             
             It seems you haven't quite found all of
             the Alolan variants on Melemele Isle
             just yet.
             
+            I believe Melemele Isle has {COLOR RED}4 {COLOR DARK_GRAY}Alolan
+            variants for you to find\.
+
+            {COLOR RED}Rattata{COLOR DARK_GRAY}, {COLOR RED}Raticate{COLOR DARK_GRAY}, {COLOR RED}Meowth{COLOR DARK_GRAY}, and {COLOR RED}Persian{COLOR DARK_GRAY}.
+
             Keep on searching and come back when
             you've caught them all!",MSGBOX_AUTOCLOSE)
             release
@@ -320,7 +324,7 @@ script Alola_Melemele_SamsonOakVilla_Dialogue{
                             if(flag(FLAG_CAUGHT_ALL_MELEMELE) || flag(FLAG_CAUGHT_ALL_ULAULA) || flag(FLAG_CAUGHT_ALL_PONI))
                             {
                                 setflag(FLAG_CAUGHT_ALL_AKALA)
-                                msgbox("Let me take a look at your Pok\eDex{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.",MSGBOX_AUTOCLOSE)
+                                msgbox("Let me take a look at your Pok\edex{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.",MSGBOX_AUTOCLOSE)
                                 playse(SE_PIN)
                                 applymovement(SamsonOakVilla, moves(emote_exclamation_mark))
                                 waitmovement(0)
@@ -373,7 +377,7 @@ script Alola_Melemele_SamsonOakVilla_Dialogue{
                             else
                             {
                                 setflag(FLAG_CAUGHT_ALL_AKALA)
-                                msgbox("Let me take a look at your Pok\eDex{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.",MSGBOX_AUTOCLOSE)
+                                msgbox("Let me take a look at your Pok\edex{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.",MSGBOX_AUTOCLOSE)
                                 playse(SE_PIN)
                                 applymovement(SamsonOakVilla, moves(emote_exclamation_mark))
                                 waitmovement(0)
@@ -403,7 +407,7 @@ script Alola_Melemele_SamsonOakVilla_Dialogue{
                     }
                 }
             }  
-            msgbox("Let me take a look at your Pok\eDex{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.
+            msgbox("Let me take a look at your Pok\edex{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.
             
             It seems you haven't quite found all of
             the Alolan variants on Akala Isle
@@ -438,7 +442,7 @@ script Alola_Melemele_SamsonOakVilla_Dialogue{
                                         if(flag(FLAG_CAUGHT_ALL_MELEMELE) || flag(FLAG_CAUGHT_ALL_AKALA) || flag(FLAG_CAUGHT_ALL_PONI))
                                         {
                                             setflag(FLAG_CAUGHT_ALL_ULAULA)
-                                            msgbox("Let me take a look at your Pok\eDex{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.",MSGBOX_AUTOCLOSE)
+                                            msgbox("Let me take a look at your Pok\edex{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.",MSGBOX_AUTOCLOSE)
                                             playse(SE_PIN)
                                             applymovement(SamsonOakVilla, moves(emote_exclamation_mark))
                                             waitmovement(0)
@@ -491,7 +495,7 @@ script Alola_Melemele_SamsonOakVilla_Dialogue{
                                         else
                                         {
                                             setflag(FLAG_CAUGHT_ALL_ULAULA)
-                                            msgbox("Let me take a look at your Pok\eDex{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.",MSGBOX_AUTOCLOSE)
+                                            msgbox("Let me take a look at your Pok\edex{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.",MSGBOX_AUTOCLOSE)
                                             playse(SE_PIN)
                                             applymovement(SamsonOakVilla, moves(emote_exclamation_mark))
                                             waitmovement(0)
@@ -524,7 +528,7 @@ script Alola_Melemele_SamsonOakVilla_Dialogue{
                     }
                 }
             }
-            msgbox("Let me take a look at your Pok\eDex{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.
+            msgbox("Let me take a look at your Pok\edex{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.
             
             It seems you haven't quite found all of
             the Alolan variants on Ula'ula Isle
@@ -556,7 +560,7 @@ script Alola_Melemele_SamsonOakVilla_Dialogue{
                                     if(flag(FLAG_CAUGHT_ALL_MELEMELE) || flag(FLAG_CAUGHT_ALL_AKALA) || flag(FLAG_CAUGHT_ALL_ULAULA))
                                     {
                                         setflag(FLAG_CAUGHT_ALL_PONI)
-                                        msgbox("Let me take a look at your Pok\eDex{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.",MSGBOX_AUTOCLOSE)
+                                        msgbox("Let me take a look at your Pok\edex{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.",MSGBOX_AUTOCLOSE)
                                         playse(SE_PIN)
                                         applymovement(SamsonOakVilla, moves(emote_exclamation_mark))
                                         waitmovement(0)
@@ -609,7 +613,7 @@ script Alola_Melemele_SamsonOakVilla_Dialogue{
                                     else
                                     {
                                         setflag(FLAG_CAUGHT_ALL_PONI)
-                                        msgbox("Let me take a look at your Pok\eDex{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.",MSGBOX_AUTOCLOSE)
+                                        msgbox("Let me take a look at your Pok\edex{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.",MSGBOX_AUTOCLOSE)
                                         playse(SE_PIN)
                                         applymovement(SamsonOakVilla, moves(emote_exclamation_mark))
                                         waitmovement(0)
@@ -641,7 +645,7 @@ script Alola_Melemele_SamsonOakVilla_Dialogue{
                     }
                 }
             }
-            msgbox("Let me take a look at your Pok\eDex{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.
+            msgbox("Let me take a look at your Pok\edex{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.
             
             It seems you haven't quite found all of
             the Alolan variants on Poni Isle

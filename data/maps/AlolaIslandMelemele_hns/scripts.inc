@@ -589,139 +589,206 @@ Alola_Melemele_Totem_sign::
 # 373 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	lock
 # 374 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
-	msgbox Alola_Melemele_Totem_sign_Text_0, MSGBOX_AUTOCLOSE
-# 376 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	goto_if_set FLAG_BATTLED_TAPU_FINI, Alola_Melemele_Totem_sign_5
+Alola_Melemele_Totem_sign_3:
+# 415 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	msgbox Alola_Melemele_Totem_sign_Text_6, MSGBOX_AUTOCLOSE
+# 418 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	release
+	end
+
+Alola_Melemele_Totem_sign_2:
+# 376 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	msgbox Alola_Melemele_Totem_sign_Text_0
+# 381 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	dynmultichoice 20, 4, FALSE, 4, 0, DYN_MULTICHOICE_CB_NONE, Alola_Melemele_Totem_sign_Text_1, Alola_Melemele_Totem_sign_Text_2, Alola_Melemele_Totem_sign_Text_3, Alola_Melemele_Totem_sign_Text_4, Alola_Melemele_Totem_sign_Text_5
+# 382 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_eq Alola_Melemele_Totem_sign_12
+# 388 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	compare VAR_RESULT, 1
+	goto_if_eq Alola_Melemele_Totem_sign_15
+# 394 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	compare VAR_RESULT, 2
+	goto_if_eq Alola_Melemele_Totem_sign_18
+# 400 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	compare VAR_RESULT, 3
+	goto_if_eq Alola_Melemele_Totem_sign_20
+# 408 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	release
+	end
+
+Alola_Melemele_Totem_sign_4:
+# 374 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	goto_if_set FLAG_BATTLED_TAPU_BULU, Alola_Melemele_Totem_sign_8
+	goto Alola_Melemele_Totem_sign_3
+
+Alola_Melemele_Totem_sign_5:
+# 374 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	goto_if_set FLAG_BATTLED_TAPU_KOKO, Alola_Melemele_Totem_sign_4
+	goto Alola_Melemele_Totem_sign_3
+
+Alola_Melemele_Totem_sign_8:
+# 374 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	goto_if_set FLAG_BATTLED_TAPU_LELE, Alola_Melemele_Totem_sign_2
+	goto Alola_Melemele_Totem_sign_3
+
+Alola_Melemele_Totem_sign_12:
+# 384 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	warp MAP_ALOLA_ISLAND_MELEMELE_HNS, 34, 26
+# 385 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	waitstate
+	end
+
+Alola_Melemele_Totem_sign_15:
+# 390 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	warp MAP_ALOLA_ISLAND_RIGHT_HNS, 9, 10
+# 391 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	waitstate
+	end
+
+Alola_Melemele_Totem_sign_18:
+# 396 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	warp MAP_ULA_ULA_FOREST_HNS, 16, 5
+# 397 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	waitstate
+	end
+
+Alola_Melemele_Totem_sign_20:
+# 402 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	warp MAP_ALOLA_ISLAND_HNS, 13, 8
+# 403 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	waitstate
 	end
 
 
 Alola_MeleMele_TapuKoko_Flyover::
-# 381 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 423 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	goto_if_set FLAG_FLYOVER_TAPU_KOKO, Alola_MeleMele_TapuKoko_Flyover_2
-# 394 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 436 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	release
 	end
 
 Alola_MeleMele_TapuKoko_Flyover_2:
-# 383 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 425 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	addobject Melemele_Flyover_Tapu
-# 384 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 426 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	playse SE_M_FLY
-# 385 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 427 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	applymovement Melemele_Flyover_Tapu, Alola_MeleMele_TapuKoko_Flyover_Movement_0
-# 386 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 428 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	waitmovement 0
-# 387 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 429 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	removeobject Melemele_Flyover_Tapu
-# 388 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 430 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	clearflag FLAG_FLYOVER_TAPU_KOKO
-# 389 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 431 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	clearflag FLAG_HIDE_TAPU_KOKO
-# 390 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 432 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	release
 	end
 
 
 Alola_Melemele_BattleVsTapuKoko::
-# 399 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 441 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	lock
-# 400 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 442 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	faceplayer
-# 401 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 443 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	playmoncry SPECIES_TAPU_KOKO, CRY_MODE_ENCOUNTER
-# 402 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 444 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	msgbox Alola_Melemele_BattleVsTapuKoko_Text_0
-# 403 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 445 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	waitmovement 0
-# 404 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 446 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	waitmoncry
-# 405 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 447 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	seteventmon SPECIES_TAPU_KOKO, 60
-# 406 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 448 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	special BattleSetup_StartLegendaryBattle
-# 407 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 449 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	waitstate
-# 408 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 450 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	specialvar VAR_RESULT, GetBattleOutcome
-# 409 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 451 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	compare VAR_RESULT, B_OUTCOME_CAUGHT
 	goto_if_eq Alola_Melemele_BattleVsTapuKoko_2
-# 416 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 458 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	compare VAR_RESULT, B_OUTCOME_WON
 	goto_if_eq Alola_Melemele_BattleVsTapuKoko_3
-# 424 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 466 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	release
 	end
 
-# 427 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 469 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	release
 	end
 
 Alola_Melemele_BattleVsTapuKoko_2:
-# 410 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 452 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	setflag FLAG_HIDE_TAPU_KOKO
-# 411 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 453 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	setflag FLAG_BATTLED_TAPU_KOKO
-# 412 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 454 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	removeobject Melemele_Tapu
-# 413 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 455 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	release
 	end
 
 Alola_Melemele_BattleVsTapuKoko_3:
-# 417 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 459 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	setflag FLAG_HIDE_TAPU_KOKO
-# 418 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 460 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	setflag FLAG_BATTLED_TAPU_KOKO
-# 419 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 461 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	removeobject Melemele_Tapu
-# 420 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 462 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	release
 	end
 
 
 Alola_Melemele_TrainerBattleSwimmer::
-# 432 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 474 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	trainerbattle_single TRAINER_MELEMELE_SWIMMER_1_HNS, Alola_Melemele_TrainerBattleSwimmer_Text_0, Alola_Melemele_TrainerBattleSwimmer_Text_1
-# 433 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 475 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	msgbox Alola_Melemele_TrainerBattleSwimmer_Text_2, MSGBOX_AUTOCLOSE
-# 435 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 477 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	release
 	end
 
 
 Alola_Melemele_Bugcatcher::
-# 440 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 482 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	lock
-# 441 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 483 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	faceplayer
-# 442 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 484 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	msgbox Alola_Melemele_Bugcatcher_Text_0, MSGBOX_AUTOCLOSE
-# 444 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 486 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	release
 	end
 
 
 Alola_Melemele_camper::
-# 450 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 492 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	lock
-# 451 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 493 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	faceplayer
-# 452 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 494 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	msgbox Alola_Melemele_camper_Text_0, MSGBOX_AUTOCLOSE
-# 454 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 496 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	release
 	end
 
 
 Alola_Melemele_Picnicker::
-# 460 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 502 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	lock
-# 461 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 503 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	faceplayer
-# 462 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 504 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	msgbox Alola_Melemele_Picnicker_Text_0, MSGBOX_AUTOCLOSE
-# 467 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 509 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	release
 	end
 
@@ -906,41 +973,41 @@ Alola_Melemele_NeedToTalkToSamsonOak_Movement_0:
 	walk_up
 	step_end
 
-# 385 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 427 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 Alola_MeleMele_TapuKoko_Flyover_Movement_0:
-# 385 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 427 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	walk_faster_left
-# 385 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 427 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	walk_faster_left
-# 385 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 427 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	walk_faster_left
-# 385 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 427 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	walk_faster_left
-# 385 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 427 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	walk_faster_left
-# 385 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 427 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	walk_faster_left
-# 385 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 427 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	walk_faster_left
-# 385 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 427 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	walk_faster_left
-# 385 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 427 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	walk_faster_left
-# 385 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 427 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	walk_faster_left
-# 385 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 427 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	walk_faster_left
-# 385 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 427 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	walk_faster_left
-# 385 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 427 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	walk_faster_left
-# 385 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 427 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	walk_faster_left
-# 385 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 427 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	walk_faster_left
-# 385 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 427 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	walk_faster_left
-# 385 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 427 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	walk_faster_left
 	step_end
 
@@ -978,8 +1045,8 @@ Alola_Melemele_Pokecenter_Sign_Text_0:
 	.string "Welcome to the Melemele Isle\n"
 	.string "Pokémon Center!\p"
 	.string "This is the only Pokémon Center on the\n"
-	.string "Alola Isles, so be sure to take care of\l"
-	.string "your Pokémon while you're here!$"
+	.string "Alola Isles but you can rest on benches\l"
+	.string "around the Isles.$"
 
 Alola_Melemele_MelemeleMart_Sign_Text_0:
 # 107 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
@@ -1063,39 +1130,66 @@ Alola_Melemele_TotemBattle_Text_2:
 	.string "It scampered off somewhere…$"
 
 Alola_Melemele_Totem_sign_Text_0:
-# 374 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 376 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	.string "The totem is emanating a strong\n"
+	.string "energy…\p"
+	.string "Touch the totem to teleport to another\n"
+	.string "Isle?$"
+
+Alola_Melemele_Totem_sign_Text_1:
+# 381 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	.string "Melemele Isle$"
+
+Alola_Melemele_Totem_sign_Text_2:
+# 381 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	.string "Akala Isle$"
+
+Alola_Melemele_Totem_sign_Text_3:
+# 381 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	.string "Ula'ula Isle$"
+
+Alola_Melemele_Totem_sign_Text_4:
+# 381 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	.string "Poni Isle$"
+
+Alola_Melemele_Totem_sign_Text_5:
+# 381 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+	.string "Cancel$"
+
+Alola_Melemele_Totem_sign_Text_6:
+# 415 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	.string "A strange totem stands here,\n"
 	.string "power is emanating from it…$"
 
 Alola_Melemele_BattleVsTapuKoko_Text_0:
-# 402 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 444 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	.string "Ko-Ko-Kooo!$"
 
 Alola_Melemele_TrainerBattleSwimmer_Text_0:
-# 432 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 474 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	.string "The waters are warm here by the Isles!$"
 
 Alola_Melemele_TrainerBattleSwimmer_Text_1:
-# 432 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 474 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	.string "Maybe I should dry off on land for\na bit…$"
 
 Alola_Melemele_TrainerBattleSwimmer_Text_2:
-# 433 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 475 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	.string "There are plenty of neat Pokémon in\n"
 	.string "the water, try all your fishing rods!$"
 
 Alola_Melemele_Bugcatcher_Text_0:
-# 442 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 484 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	.string "The bug Pokémon on the Alola Isles\n"
 	.string "are much bigger than those in Kanto!$"
 
 Alola_Melemele_camper_Text_0:
-# 452 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 494 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	.string "I traveled all the way from Kanto to see\n"
 	.string "my favorite bird Pokémon, Pikipek!$"
 
 Alola_Melemele_Picnicker_Text_0:
-# 462 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
+# 504 "data/maps/AlolaIslandMelemele_hns/scripts.pory"
 	.string "These Isles are chock full of unique\n"
 	.string "Pokémon!\p"
 	.string "I need to stock up on Poké Balls so I\n"

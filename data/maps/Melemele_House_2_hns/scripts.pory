@@ -33,7 +33,7 @@ script Alola_Pokemart_BaldMan{
 	faceplayer
 	msgbox("I'm looking for some sunscreen!
 	
-	It's a sunnier here on the Isles!", MSGBOX_AUTOCLOSE)
+	It's sunnier here on the Isles!", MSGBOX_AUTOCLOSE)
 	release
 	end
 }

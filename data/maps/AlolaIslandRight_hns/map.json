@@ -371,6 +371,22 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Alola_Akala_Totem_sign"
+    },
+    {
+      "type": "sign",
+      "x": 27,
+      "y": 26,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Alola_Akala_Bench_Heal"
+    },
+    {
+      "type": "sign",
+      "x": 28,
+      "y": 26,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Alola_Akala_Bench_Heal"
     }
   ],
   "game_version": "hns",

@@ -70764,7 +70764,12 @@
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_GRUBBIN"
+                "species": "SPECIES_RATTATA_ALOLA"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_MEOWTH_ALOLA"
               },
               {
                 "min_level": 5,
@@ -70774,12 +70779,7 @@
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_RATTATA_ALOLA"
-              },
-              {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_MEOWTH_ALOLA"
+                "species": "SPECIES_GRUBBIN"
               },
               {
                 "min_level": 5,
@@ -70799,7 +70799,7 @@
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_RATTATA_ALOLA"
+                "species": "SPECIES_RATICATE_ALOLA"
               },
               {
                 "min_level": 5,

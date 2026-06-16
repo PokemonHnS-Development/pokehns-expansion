@@ -208,124 +208,226 @@ Alola_Poni_Totem_sign::
 # 119 "data/maps/AlolaIsland_hns/scripts.pory"
 	lock
 # 120 "data/maps/AlolaIsland_hns/scripts.pory"
-	msgbox Alola_Poni_Totem_sign_Text_0, MSGBOX_AUTOCLOSE
-# 122 "data/maps/AlolaIsland_hns/scripts.pory"
+	goto_if_set FLAG_BATTLED_TAPU_FINI, Alola_Poni_Totem_sign_5
+Alola_Poni_Totem_sign_3:
+# 161 "data/maps/AlolaIsland_hns/scripts.pory"
+	msgbox Alola_Poni_Totem_sign_Text_5, MSGBOX_AUTOCLOSE
+# 164 "data/maps/AlolaIsland_hns/scripts.pory"
 	release
+	end
+
+Alola_Poni_Totem_sign_2:
+# 122 "data/maps/AlolaIsland_hns/scripts.pory"
+	msgbox Alola_Poni_Totem_sign_Text_0
+# 127 "data/maps/AlolaIsland_hns/scripts.pory"
+	dynmultichoice 20, 4, FALSE, 4, 0, DYN_MULTICHOICE_CB_NONE, Alola_Poni_Totem_sign_Text_1, Alola_Poni_Totem_sign_Text_2, Alola_Poni_Totem_sign_Text_3, Alola_Poni_Island_Sign_Text_0, Alola_Poni_Totem_sign_Text_4
+# 128 "data/maps/AlolaIsland_hns/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_eq Alola_Poni_Totem_sign_12
+# 134 "data/maps/AlolaIsland_hns/scripts.pory"
+	compare VAR_RESULT, 1
+	goto_if_eq Alola_Poni_Totem_sign_15
+# 140 "data/maps/AlolaIsland_hns/scripts.pory"
+	compare VAR_RESULT, 2
+	goto_if_eq Alola_Poni_Totem_sign_18
+# 146 "data/maps/AlolaIsland_hns/scripts.pory"
+	compare VAR_RESULT, 3
+	goto_if_eq Alola_Poni_Totem_sign_20
+# 154 "data/maps/AlolaIsland_hns/scripts.pory"
+	release
+	end
+
+Alola_Poni_Totem_sign_4:
+# 120 "data/maps/AlolaIsland_hns/scripts.pory"
+	goto_if_set FLAG_BATTLED_TAPU_BULU, Alola_Poni_Totem_sign_8
+	goto Alola_Poni_Totem_sign_3
+
+Alola_Poni_Totem_sign_5:
+# 120 "data/maps/AlolaIsland_hns/scripts.pory"
+	goto_if_set FLAG_BATTLED_TAPU_KOKO, Alola_Poni_Totem_sign_4
+	goto Alola_Poni_Totem_sign_3
+
+Alola_Poni_Totem_sign_8:
+# 120 "data/maps/AlolaIsland_hns/scripts.pory"
+	goto_if_set FLAG_BATTLED_TAPU_LELE, Alola_Poni_Totem_sign_2
+	goto Alola_Poni_Totem_sign_3
+
+Alola_Poni_Totem_sign_12:
+# 130 "data/maps/AlolaIsland_hns/scripts.pory"
+	warp MAP_ALOLA_ISLAND_MELEMELE_HNS, 34, 26
+# 131 "data/maps/AlolaIsland_hns/scripts.pory"
+	waitstate
+	end
+
+Alola_Poni_Totem_sign_15:
+# 136 "data/maps/AlolaIsland_hns/scripts.pory"
+	warp MAP_ALOLA_ISLAND_RIGHT_HNS, 9, 10
+# 137 "data/maps/AlolaIsland_hns/scripts.pory"
+	waitstate
+	end
+
+Alola_Poni_Totem_sign_18:
+# 142 "data/maps/AlolaIsland_hns/scripts.pory"
+	warp MAP_ULA_ULA_FOREST_HNS, 16, 5
+# 143 "data/maps/AlolaIsland_hns/scripts.pory"
+	waitstate
+	end
+
+Alola_Poni_Totem_sign_20:
+# 148 "data/maps/AlolaIsland_hns/scripts.pory"
+	warp MAP_ALOLA_ISLAND_HNS, 13, 8
+# 149 "data/maps/AlolaIsland_hns/scripts.pory"
+	waitstate
 	end
 
 
 Alola_Poni_TapuFini_Flyover::
-# 127 "data/maps/AlolaIsland_hns/scripts.pory"
+# 169 "data/maps/AlolaIsland_hns/scripts.pory"
 	goto_if_set FLAG_FLYOVER_TAPU_FINI, Alola_Poni_TapuFini_Flyover_2
-# 140 "data/maps/AlolaIsland_hns/scripts.pory"
+# 182 "data/maps/AlolaIsland_hns/scripts.pory"
 	release
 	end
 
 Alola_Poni_TapuFini_Flyover_2:
-# 129 "data/maps/AlolaIsland_hns/scripts.pory"
+# 171 "data/maps/AlolaIsland_hns/scripts.pory"
 	addobject Poni_Flyover_Tapu
-# 130 "data/maps/AlolaIsland_hns/scripts.pory"
+# 172 "data/maps/AlolaIsland_hns/scripts.pory"
 	playse SE_M_FLY
-# 131 "data/maps/AlolaIsland_hns/scripts.pory"
+# 173 "data/maps/AlolaIsland_hns/scripts.pory"
 	applymovement Poni_Flyover_Tapu, Alola_Poni_TapuFini_Flyover_Movement_0
-# 132 "data/maps/AlolaIsland_hns/scripts.pory"
+# 174 "data/maps/AlolaIsland_hns/scripts.pory"
 	waitmovement 0
-# 133 "data/maps/AlolaIsland_hns/scripts.pory"
+# 175 "data/maps/AlolaIsland_hns/scripts.pory"
 	removeobject Poni_Flyover_Tapu
-# 134 "data/maps/AlolaIsland_hns/scripts.pory"
+# 176 "data/maps/AlolaIsland_hns/scripts.pory"
 	clearflag FLAG_FLYOVER_TAPU_FINI
-# 135 "data/maps/AlolaIsland_hns/scripts.pory"
+# 177 "data/maps/AlolaIsland_hns/scripts.pory"
 	clearflag FLAG_HIDE_TAPU_FINI
-# 136 "data/maps/AlolaIsland_hns/scripts.pory"
+# 178 "data/maps/AlolaIsland_hns/scripts.pory"
 	release
 	end
 
 
 Alola_Poni_BattleVsTapuFini::
-# 145 "data/maps/AlolaIsland_hns/scripts.pory"
+# 187 "data/maps/AlolaIsland_hns/scripts.pory"
 	lock
-# 146 "data/maps/AlolaIsland_hns/scripts.pory"
+# 188 "data/maps/AlolaIsland_hns/scripts.pory"
 	faceplayer
-# 147 "data/maps/AlolaIsland_hns/scripts.pory"
+# 189 "data/maps/AlolaIsland_hns/scripts.pory"
 	playmoncry SPECIES_TAPU_FINI, CRY_MODE_ENCOUNTER
-# 148 "data/maps/AlolaIsland_hns/scripts.pory"
+# 190 "data/maps/AlolaIsland_hns/scripts.pory"
 	msgbox Alola_Poni_BattleVsTapuFini_Text_0
-# 149 "data/maps/AlolaIsland_hns/scripts.pory"
+# 191 "data/maps/AlolaIsland_hns/scripts.pory"
 	waitmoncry
-# 150 "data/maps/AlolaIsland_hns/scripts.pory"
+# 192 "data/maps/AlolaIsland_hns/scripts.pory"
 	seteventmon SPECIES_TAPU_FINI, 60
-# 151 "data/maps/AlolaIsland_hns/scripts.pory"
+# 193 "data/maps/AlolaIsland_hns/scripts.pory"
 	special BattleSetup_StartLegendaryBattle
-# 152 "data/maps/AlolaIsland_hns/scripts.pory"
+# 194 "data/maps/AlolaIsland_hns/scripts.pory"
 	waitstate
-# 153 "data/maps/AlolaIsland_hns/scripts.pory"
+# 195 "data/maps/AlolaIsland_hns/scripts.pory"
 	specialvar VAR_RESULT, GetBattleOutcome
-# 154 "data/maps/AlolaIsland_hns/scripts.pory"
+# 196 "data/maps/AlolaIsland_hns/scripts.pory"
 	compare VAR_RESULT, B_OUTCOME_CAUGHT
 	goto_if_eq Alola_Poni_BattleVsTapuFini_2
-# 161 "data/maps/AlolaIsland_hns/scripts.pory"
+# 203 "data/maps/AlolaIsland_hns/scripts.pory"
 	compare VAR_RESULT, B_OUTCOME_WON
 	goto_if_eq Alola_Poni_BattleVsTapuFini_3
-# 169 "data/maps/AlolaIsland_hns/scripts.pory"
+# 211 "data/maps/AlolaIsland_hns/scripts.pory"
 	release
 	end
 
-# 172 "data/maps/AlolaIsland_hns/scripts.pory"
+# 214 "data/maps/AlolaIsland_hns/scripts.pory"
 	release
 	end
 
 Alola_Poni_BattleVsTapuFini_2:
-# 155 "data/maps/AlolaIsland_hns/scripts.pory"
+# 197 "data/maps/AlolaIsland_hns/scripts.pory"
 	setflag FLAG_HIDE_TAPU_FINI
-# 156 "data/maps/AlolaIsland_hns/scripts.pory"
+# 198 "data/maps/AlolaIsland_hns/scripts.pory"
 	setflag FLAG_BATTLED_TAPU_FINI
-# 157 "data/maps/AlolaIsland_hns/scripts.pory"
+# 199 "data/maps/AlolaIsland_hns/scripts.pory"
 	removeobject Poni_Tapu
-# 158 "data/maps/AlolaIsland_hns/scripts.pory"
+# 200 "data/maps/AlolaIsland_hns/scripts.pory"
 	release
 	end
 
 Alola_Poni_BattleVsTapuFini_3:
-# 162 "data/maps/AlolaIsland_hns/scripts.pory"
+# 204 "data/maps/AlolaIsland_hns/scripts.pory"
 	setflag FLAG_HIDE_TAPU_FINI
-# 163 "data/maps/AlolaIsland_hns/scripts.pory"
+# 205 "data/maps/AlolaIsland_hns/scripts.pory"
 	setflag FLAG_BATTLED_TAPU_FINI
-# 164 "data/maps/AlolaIsland_hns/scripts.pory"
+# 206 "data/maps/AlolaIsland_hns/scripts.pory"
 	removeobject Poni_Tapu
-# 165 "data/maps/AlolaIsland_hns/scripts.pory"
+# 207 "data/maps/AlolaIsland_hns/scripts.pory"
 	release
 	end
 
 
 Alola_Poni_TrainerBattleSwimmer1::
-# 177 "data/maps/AlolaIsland_hns/scripts.pory"
+# 219 "data/maps/AlolaIsland_hns/scripts.pory"
 	trainerbattle_single TRAINER_PONI_SWIMMER_1_HNS, Alola_Poni_TrainerBattleSwimmer1_Text_0, Alola_Poni_TrainerBattleSwimmer1_Text_1
-# 178 "data/maps/AlolaIsland_hns/scripts.pory"
+# 220 "data/maps/AlolaIsland_hns/scripts.pory"
 	msgbox Alola_Poni_TrainerBattleSwimmer1_Text_2, MSGBOX_AUTOCLOSE
-# 180 "data/maps/AlolaIsland_hns/scripts.pory"
+# 222 "data/maps/AlolaIsland_hns/scripts.pory"
 	release
 	end
 
 
 Alola_Poni_TrainerBattleSwimmer2::
-# 185 "data/maps/AlolaIsland_hns/scripts.pory"
+# 227 "data/maps/AlolaIsland_hns/scripts.pory"
 	trainerbattle_single TRAINER_PONI_SWIMMER_2_HNS, Alola_Poni_TrainerBattleSwimmer2_Text_0, Alola_Poni_TrainerBattleSwimmer2_Text_1
-# 186 "data/maps/AlolaIsland_hns/scripts.pory"
+# 228 "data/maps/AlolaIsland_hns/scripts.pory"
 	msgbox Alola_Poni_TrainerBattleSwimmer2_Text_2, MSGBOX_AUTOCLOSE
-# 188 "data/maps/AlolaIsland_hns/scripts.pory"
+# 230 "data/maps/AlolaIsland_hns/scripts.pory"
 	release
 	end
 
 
 Alola_Poni_NPC_girl::
-# 193 "data/maps/AlolaIsland_hns/scripts.pory"
+# 235 "data/maps/AlolaIsland_hns/scripts.pory"
 	lock
-# 194 "data/maps/AlolaIsland_hns/scripts.pory"
+# 236 "data/maps/AlolaIsland_hns/scripts.pory"
 	faceplayer
-# 195 "data/maps/AlolaIsland_hns/scripts.pory"
+# 237 "data/maps/AlolaIsland_hns/scripts.pory"
 	msgbox Alola_Poni_NPC_girl_Text_0, MSGBOX_AUTOCLOSE
-# 197 "data/maps/AlolaIsland_hns/scripts.pory"
+# 239 "data/maps/AlolaIsland_hns/scripts.pory"
 	release
+	end
+
+
+Alola_Poni_Bench_Heal::
+# 244 "data/maps/AlolaIsland_hns/scripts.pory"
+	lock
+# 245 "data/maps/AlolaIsland_hns/scripts.pory"
+	faceplayer
+# 246 "data/maps/AlolaIsland_hns/scripts.pory"
+	msgbox Alola_Poni_Bench_Heal_Text_0, MSGBOX_YESNO
+# 248 "data/maps/AlolaIsland_hns/scripts.pory"
+	compare VAR_RESULT, YES
+	goto_if_eq Alola_Poni_Bench_Heal_2
+Alola_Poni_Bench_Heal_1:
+# 255 "data/maps/AlolaIsland_hns/scripts.pory"
+	release
+	end
+
+Alola_Poni_Bench_Heal_2:
+# 249 "data/maps/AlolaIsland_hns/scripts.pory"
+	fadescreenswapbuffers FADE_TO_BLACK
+# 250 "data/maps/AlolaIsland_hns/scripts.pory"
+	special HealPlayerParty
+# 251 "data/maps/AlolaIsland_hns/scripts.pory"
+	playfanfare MUS_HEAL
+# 252 "data/maps/AlolaIsland_hns/scripts.pory"
+	waitfanfare
+# 253 "data/maps/AlolaIsland_hns/scripts.pory"
+	fadescreenswapbuffers FADE_FROM_BLACK
+	goto Alola_Poni_Bench_Heal_1
+
+
+Alola_Poni_FindItem1::
+# 260 "data/maps/AlolaIsland_hns/scripts.pory"
+	finditem ITEM_ICE_STONE, 1
 	end
 
 
@@ -337,33 +439,33 @@ Alola_Poni_TotemBattle_Trigger_Movement_0:
 	walk_in_place_down
 	step_end
 
-# 131 "data/maps/AlolaIsland_hns/scripts.pory"
+# 173 "data/maps/AlolaIsland_hns/scripts.pory"
 Alola_Poni_TapuFini_Flyover_Movement_0:
-# 131 "data/maps/AlolaIsland_hns/scripts.pory"
+# 173 "data/maps/AlolaIsland_hns/scripts.pory"
 	walk_faster_up
-# 131 "data/maps/AlolaIsland_hns/scripts.pory"
+# 173 "data/maps/AlolaIsland_hns/scripts.pory"
 	walk_faster_up
-# 131 "data/maps/AlolaIsland_hns/scripts.pory"
+# 173 "data/maps/AlolaIsland_hns/scripts.pory"
 	walk_faster_up
-# 131 "data/maps/AlolaIsland_hns/scripts.pory"
+# 173 "data/maps/AlolaIsland_hns/scripts.pory"
 	walk_faster_up
-# 131 "data/maps/AlolaIsland_hns/scripts.pory"
+# 173 "data/maps/AlolaIsland_hns/scripts.pory"
 	walk_faster_up
-# 131 "data/maps/AlolaIsland_hns/scripts.pory"
+# 173 "data/maps/AlolaIsland_hns/scripts.pory"
 	walk_faster_up
-# 131 "data/maps/AlolaIsland_hns/scripts.pory"
+# 173 "data/maps/AlolaIsland_hns/scripts.pory"
 	walk_faster_up
-# 131 "data/maps/AlolaIsland_hns/scripts.pory"
+# 173 "data/maps/AlolaIsland_hns/scripts.pory"
 	walk_faster_up
-# 131 "data/maps/AlolaIsland_hns/scripts.pory"
+# 173 "data/maps/AlolaIsland_hns/scripts.pory"
 	walk_faster_up
-# 131 "data/maps/AlolaIsland_hns/scripts.pory"
+# 173 "data/maps/AlolaIsland_hns/scripts.pory"
 	walk_faster_up
-# 131 "data/maps/AlolaIsland_hns/scripts.pory"
+# 173 "data/maps/AlolaIsland_hns/scripts.pory"
 	walk_faster_up
-# 131 "data/maps/AlolaIsland_hns/scripts.pory"
+# 173 "data/maps/AlolaIsland_hns/scripts.pory"
 	walk_faster_up
-# 131 "data/maps/AlolaIsland_hns/scripts.pory"
+# 173 "data/maps/AlolaIsland_hns/scripts.pory"
 	walk_faster_up
 	step_end
 
@@ -385,41 +487,69 @@ Alola_Poni_TotemBattle_Text_1:
 	.string "It scampered off somewhere…$"
 
 Alola_Poni_Totem_sign_Text_0:
-# 120 "data/maps/AlolaIsland_hns/scripts.pory"
+# 122 "data/maps/AlolaIsland_hns/scripts.pory"
+	.string "The totem is emanating a strong\n"
+	.string "energy…\p"
+	.string "Touch the totem to teleport to another\n"
+	.string "Isle?$"
+
+Alola_Poni_Totem_sign_Text_1:
+# 127 "data/maps/AlolaIsland_hns/scripts.pory"
+	.string "Melemele Isle$"
+
+Alola_Poni_Totem_sign_Text_2:
+# 127 "data/maps/AlolaIsland_hns/scripts.pory"
+	.string "Akala Isle$"
+
+Alola_Poni_Totem_sign_Text_3:
+# 127 "data/maps/AlolaIsland_hns/scripts.pory"
+	.string "Ula'ula Isle$"
+
+Alola_Poni_Totem_sign_Text_4:
+# 127 "data/maps/AlolaIsland_hns/scripts.pory"
+	.string "Cancel$"
+
+Alola_Poni_Totem_sign_Text_5:
+# 161 "data/maps/AlolaIsland_hns/scripts.pory"
 	.string "A strange totem stands here,\n"
 	.string "power is emanating from it…$"
 
 Alola_Poni_BattleVsTapuFini_Text_0:
-# 148 "data/maps/AlolaIsland_hns/scripts.pory"
+# 190 "data/maps/AlolaIsland_hns/scripts.pory"
 	.string "Fiiin!$"
 
 Alola_Poni_TrainerBattleSwimmer1_Text_0:
-# 177 "data/maps/AlolaIsland_hns/scripts.pory"
+# 219 "data/maps/AlolaIsland_hns/scripts.pory"
 	.string "Warmer water, no problem!$"
 
 Alola_Poni_TrainerBattleSwimmer1_Text_1:
-# 177 "data/maps/AlolaIsland_hns/scripts.pory"
+# 219 "data/maps/AlolaIsland_hns/scripts.pory"
 	.string "Gah, I forgot my sunscreen…$"
 
 Alola_Poni_TrainerBattleSwimmer1_Text_2:
-# 178 "data/maps/AlolaIsland_hns/scripts.pory"
+# 220 "data/maps/AlolaIsland_hns/scripts.pory"
 	.string "I've swam into so many cool Pokémon!\n"
 	.string "It must be something in the water.$"
 
 Alola_Poni_TrainerBattleSwimmer2_Text_0:
-# 185 "data/maps/AlolaIsland_hns/scripts.pory"
+# 227 "data/maps/AlolaIsland_hns/scripts.pory"
 	.string "Hey, don't block my current!$"
 
 Alola_Poni_TrainerBattleSwimmer2_Text_1:
-# 185 "data/maps/AlolaIsland_hns/scripts.pory"
+# 227 "data/maps/AlolaIsland_hns/scripts.pory"
 	.string "Ugh, fine,\njust let me swim…$"
 
 Alola_Poni_TrainerBattleSwimmer2_Text_2:
-# 186 "data/maps/AlolaIsland_hns/scripts.pory"
+# 228 "data/maps/AlolaIsland_hns/scripts.pory"
 	.string "The current is great for tubing.\n"
 	.string "I don't think I'll tube anywhere else!$"
 
 Alola_Poni_NPC_girl_Text_0:
-# 195 "data/maps/AlolaIsland_hns/scripts.pory"
+# 237 "data/maps/AlolaIsland_hns/scripts.pory"
 	.string "Poni Isle is my favorite.\n"
 	.string "The wilderness just speaks for itself!$"
+
+Alola_Poni_Bench_Heal_Text_0:
+# 246 "data/maps/AlolaIsland_hns/scripts.pory"
+	.string "Would you like to take a rest on this\n"
+	.string "bench?$"

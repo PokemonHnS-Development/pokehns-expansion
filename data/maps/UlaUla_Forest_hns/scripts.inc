@@ -263,64 +263,131 @@ Alola_Ulaula_Totem_sign::
 # 147 "data/maps/UlaUla_Forest_hns/scripts.pory"
 	lock
 # 148 "data/maps/UlaUla_Forest_hns/scripts.pory"
-	msgbox Alola_Ulaula_Totem_sign_Text_0, MSGBOX_AUTOCLOSE
+	goto_if_set FLAG_BATTLED_TAPU_FINI, Alola_Ulaula_Totem_sign_5
+Alola_Ulaula_Totem_sign_3:
+# 189 "data/maps/UlaUla_Forest_hns/scripts.pory"
+	msgbox Alola_Ulaula_Totem_sign_Text_6, MSGBOX_AUTOCLOSE
+# 192 "data/maps/UlaUla_Forest_hns/scripts.pory"
+	release
+	end
+
+Alola_Ulaula_Totem_sign_2:
 # 150 "data/maps/UlaUla_Forest_hns/scripts.pory"
-	release
-	end
-
-
-Alola_Ulaula_BattleVsTapuBulu::
+	msgbox Alola_Ulaula_Totem_sign_Text_0
 # 155 "data/maps/UlaUla_Forest_hns/scripts.pory"
-	lock
+	dynmultichoice 20, 4, FALSE, 4, 0, DYN_MULTICHOICE_CB_NONE, Alola_Ulaula_Totem_sign_Text_1, Alola_Ulaula_Totem_sign_Text_2, Alola_Ulaula_Totem_sign_Text_3, Alola_Ulaula_Totem_sign_Text_4, Alola_Ulaula_Totem_sign_Text_5
 # 156 "data/maps/UlaUla_Forest_hns/scripts.pory"
-	faceplayer
-# 157 "data/maps/UlaUla_Forest_hns/scripts.pory"
-	playmoncry SPECIES_TAPU_BULU, CRY_MODE_ENCOUNTER
-# 158 "data/maps/UlaUla_Forest_hns/scripts.pory"
-	msgbox Alola_Ulaula_BattleVsTapuBulu_Text_0
-# 159 "data/maps/UlaUla_Forest_hns/scripts.pory"
-	waitmoncry
-# 160 "data/maps/UlaUla_Forest_hns/scripts.pory"
-	seteventmon SPECIES_TAPU_BULU, 60
-# 161 "data/maps/UlaUla_Forest_hns/scripts.pory"
-	special BattleSetup_StartLegendaryBattle
+	compare VAR_RESULT, 0
+	goto_if_eq Alola_Ulaula_Totem_sign_12
 # 162 "data/maps/UlaUla_Forest_hns/scripts.pory"
-	waitstate
-# 163 "data/maps/UlaUla_Forest_hns/scripts.pory"
-	specialvar VAR_RESULT, GetBattleOutcome
-# 164 "data/maps/UlaUla_Forest_hns/scripts.pory"
-	compare VAR_RESULT, B_OUTCOME_CAUGHT
-	goto_if_eq Alola_Ulaula_BattleVsTapuBulu_2
-# 171 "data/maps/UlaUla_Forest_hns/scripts.pory"
-	compare VAR_RESULT, B_OUTCOME_WON
-	goto_if_eq Alola_Ulaula_BattleVsTapuBulu_3
-# 179 "data/maps/UlaUla_Forest_hns/scripts.pory"
-	release
-	end
-
+	compare VAR_RESULT, 1
+	goto_if_eq Alola_Ulaula_Totem_sign_15
+# 168 "data/maps/UlaUla_Forest_hns/scripts.pory"
+	compare VAR_RESULT, 2
+	goto_if_eq Alola_Ulaula_Totem_sign_18
+# 174 "data/maps/UlaUla_Forest_hns/scripts.pory"
+	compare VAR_RESULT, 3
+	goto_if_eq Alola_Ulaula_Totem_sign_20
 # 182 "data/maps/UlaUla_Forest_hns/scripts.pory"
 	release
 	end
 
-Alola_Ulaula_BattleVsTapuBulu_2:
+Alola_Ulaula_Totem_sign_4:
+# 148 "data/maps/UlaUla_Forest_hns/scripts.pory"
+	goto_if_set FLAG_BATTLED_TAPU_BULU, Alola_Ulaula_Totem_sign_8
+	goto Alola_Ulaula_Totem_sign_3
+
+Alola_Ulaula_Totem_sign_5:
+# 148 "data/maps/UlaUla_Forest_hns/scripts.pory"
+	goto_if_set FLAG_BATTLED_TAPU_KOKO, Alola_Ulaula_Totem_sign_4
+	goto Alola_Ulaula_Totem_sign_3
+
+Alola_Ulaula_Totem_sign_8:
+# 148 "data/maps/UlaUla_Forest_hns/scripts.pory"
+	goto_if_set FLAG_BATTLED_TAPU_LELE, Alola_Ulaula_Totem_sign_2
+	goto Alola_Ulaula_Totem_sign_3
+
+Alola_Ulaula_Totem_sign_12:
+# 158 "data/maps/UlaUla_Forest_hns/scripts.pory"
+	warp MAP_ALOLA_ISLAND_MELEMELE_HNS, 34, 26
+# 159 "data/maps/UlaUla_Forest_hns/scripts.pory"
+	waitstate
+	end
+
+Alola_Ulaula_Totem_sign_15:
+# 164 "data/maps/UlaUla_Forest_hns/scripts.pory"
+	warp MAP_ALOLA_ISLAND_RIGHT_HNS, 9, 10
 # 165 "data/maps/UlaUla_Forest_hns/scripts.pory"
+	waitstate
+	end
+
+Alola_Ulaula_Totem_sign_18:
+# 170 "data/maps/UlaUla_Forest_hns/scripts.pory"
+	warp MAP_ULA_ULA_FOREST_HNS, 16, 5
+# 171 "data/maps/UlaUla_Forest_hns/scripts.pory"
+	waitstate
+	end
+
+Alola_Ulaula_Totem_sign_20:
+# 176 "data/maps/UlaUla_Forest_hns/scripts.pory"
+	warp MAP_ALOLA_ISLAND_HNS, 13, 8
+# 177 "data/maps/UlaUla_Forest_hns/scripts.pory"
+	waitstate
+	end
+
+
+Alola_Ulaula_BattleVsTapuBulu::
+# 197 "data/maps/UlaUla_Forest_hns/scripts.pory"
+	lock
+# 198 "data/maps/UlaUla_Forest_hns/scripts.pory"
+	faceplayer
+# 199 "data/maps/UlaUla_Forest_hns/scripts.pory"
+	playmoncry SPECIES_TAPU_BULU, CRY_MODE_ENCOUNTER
+# 200 "data/maps/UlaUla_Forest_hns/scripts.pory"
+	msgbox Alola_Ulaula_BattleVsTapuBulu_Text_0
+# 201 "data/maps/UlaUla_Forest_hns/scripts.pory"
+	waitmoncry
+# 202 "data/maps/UlaUla_Forest_hns/scripts.pory"
+	seteventmon SPECIES_TAPU_BULU, 60
+# 203 "data/maps/UlaUla_Forest_hns/scripts.pory"
+	special BattleSetup_StartLegendaryBattle
+# 204 "data/maps/UlaUla_Forest_hns/scripts.pory"
+	waitstate
+# 205 "data/maps/UlaUla_Forest_hns/scripts.pory"
+	specialvar VAR_RESULT, GetBattleOutcome
+# 206 "data/maps/UlaUla_Forest_hns/scripts.pory"
+	compare VAR_RESULT, B_OUTCOME_CAUGHT
+	goto_if_eq Alola_Ulaula_BattleVsTapuBulu_2
+# 213 "data/maps/UlaUla_Forest_hns/scripts.pory"
+	compare VAR_RESULT, B_OUTCOME_WON
+	goto_if_eq Alola_Ulaula_BattleVsTapuBulu_3
+# 221 "data/maps/UlaUla_Forest_hns/scripts.pory"
+	release
+	end
+
+# 224 "data/maps/UlaUla_Forest_hns/scripts.pory"
+	release
+	end
+
+Alola_Ulaula_BattleVsTapuBulu_2:
+# 207 "data/maps/UlaUla_Forest_hns/scripts.pory"
 	setflag FLAG_HIDE_TAPU_BULU
-# 166 "data/maps/UlaUla_Forest_hns/scripts.pory"
+# 208 "data/maps/UlaUla_Forest_hns/scripts.pory"
 	setflag FLAG_BATTLED_TAPU_BULU
-# 167 "data/maps/UlaUla_Forest_hns/scripts.pory"
+# 209 "data/maps/UlaUla_Forest_hns/scripts.pory"
 	removeobject Ulaula_Tapu
-# 168 "data/maps/UlaUla_Forest_hns/scripts.pory"
+# 210 "data/maps/UlaUla_Forest_hns/scripts.pory"
 	release
 	end
 
 Alola_Ulaula_BattleVsTapuBulu_3:
-# 172 "data/maps/UlaUla_Forest_hns/scripts.pory"
+# 214 "data/maps/UlaUla_Forest_hns/scripts.pory"
 	setflag FLAG_HIDE_TAPU_BULU
-# 173 "data/maps/UlaUla_Forest_hns/scripts.pory"
+# 215 "data/maps/UlaUla_Forest_hns/scripts.pory"
 	setflag FLAG_BATTLED_TAPU_BULU
-# 174 "data/maps/UlaUla_Forest_hns/scripts.pory"
+# 216 "data/maps/UlaUla_Forest_hns/scripts.pory"
 	removeobject Ulaula_Tapu
-# 175 "data/maps/UlaUla_Forest_hns/scripts.pory"
+# 217 "data/maps/UlaUla_Forest_hns/scripts.pory"
 	release
 	end
 
@@ -352,10 +419,37 @@ Alola_Ulaula_TotemBattle_Text_3:
 	.string "It scampered off somewhere…$"
 
 Alola_Ulaula_Totem_sign_Text_0:
-# 148 "data/maps/UlaUla_Forest_hns/scripts.pory"
+# 150 "data/maps/UlaUla_Forest_hns/scripts.pory"
+	.string "The totem is emanating a strong\n"
+	.string "energy…\p"
+	.string "Touch the totem to teleport to another\n"
+	.string "Isle?$"
+
+Alola_Ulaula_Totem_sign_Text_1:
+# 155 "data/maps/UlaUla_Forest_hns/scripts.pory"
+	.string "Melemele Isle$"
+
+Alola_Ulaula_Totem_sign_Text_2:
+# 155 "data/maps/UlaUla_Forest_hns/scripts.pory"
+	.string "Akala Isle$"
+
+Alola_Ulaula_Totem_sign_Text_3:
+# 155 "data/maps/UlaUla_Forest_hns/scripts.pory"
+	.string "Ula'ula Isle$"
+
+Alola_Ulaula_Totem_sign_Text_4:
+# 155 "data/maps/UlaUla_Forest_hns/scripts.pory"
+	.string "Poni Isle$"
+
+Alola_Ulaula_Totem_sign_Text_5:
+# 155 "data/maps/UlaUla_Forest_hns/scripts.pory"
+	.string "Cancel$"
+
+Alola_Ulaula_Totem_sign_Text_6:
+# 189 "data/maps/UlaUla_Forest_hns/scripts.pory"
 	.string "A strange totem stands here,\n"
 	.string "power is emanating from it…$"
 
 Alola_Ulaula_BattleVsTapuBulu_Text_0:
-# 158 "data/maps/UlaUla_Forest_hns/scripts.pory"
+# 200 "data/maps/UlaUla_Forest_hns/scripts.pory"
 	.string "Bu-Bulu!$"
