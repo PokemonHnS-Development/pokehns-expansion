@@ -3,10 +3,10 @@ mapscripts AlolaIslandAkala_hns_MapScripts{}
 script Alola_Ulaula_BattlePalossand{
     lock
     faceplayer
-    playmoncry(SPECIES_PALOSSAND, 0)
-    msgbox("Gaaah!", MSGBOX_AUTOCLOSE)
+    playmoncry(SPECIES_SHUCKLE, 0)
+    msgbox("Shuck!", MSGBOX_AUTOCLOSE)
     waitmoncry
-    setwildbattle(SPECIES_PALOSSAND,45)
+    setwildbattle(SPECIES_SHUCKLE,45)
     dowildbattle
     specialvar(VAR_RESULT, GetBattleOutcome)
     if (var(VAR_RESULT) == B_OUTCOME_CAUGHT){

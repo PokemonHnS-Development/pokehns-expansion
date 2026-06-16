@@ -134,7 +134,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_SPECIES(JANGMO_O)",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(SKARMORY)",
       "x": 13,
       "y": 18,
       "elevation": 0,
@@ -147,7 +147,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_SPECIES(JANGMO_O)",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(RIOLU)",
       "x": 12,
       "y": 15,
       "elevation": 0,
@@ -161,8 +161,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL_HNS",
-      "x": 28,
-      "y": 19,
+      "x": 24,
+      "y": 17,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -171,6 +171,19 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Alola_Poni_FindItem1",
       "flag": "FLAG_PONI_HIDDEN_ITEM_1"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(SLOWPOKE)",
+      "x": 28,
+      "y": 17,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WALK_SEQUENCE_DOWN_UP_LEFT_RIGHT",
+      "movement_range_x": 1,
+      "movement_range_y": 2,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
     }
   ],
   "warp_events": [

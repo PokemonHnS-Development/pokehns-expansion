@@ -3,10 +3,10 @@ mapscripts AlolaIslandRight_hns_MapScripts{}
 script Alola_Akala_BattleSandygast{
     lock
     faceplayer
-    playmoncry(SPECIES_SANDYGAST, 0)
-    msgbox("Gaaah!", MSGBOX_AUTOCLOSE)
+    playmoncry(SPECIES_CORSOLA, 0)
+    msgbox("Coorr!", MSGBOX_AUTOCLOSE)
     waitmoncry
-    setwildbattle(SPECIES_SANDYGAST,45)
+    setwildbattle(SPECIES_CORSOLA,45)
     dowildbattle
     specialvar(VAR_RESULT, GetBattleOutcome)
     if (var(VAR_RESULT) == B_OUTCOME_CAUGHT){
@@ -64,8 +64,8 @@ script Alola_Akala_House_Sign{
 script Alola_Akala_Pikipek{
     lock
     faceplayer
-    playmoncry(SPECIES_PIKIPEK, 0)
-    msgbox("Pek!", MSGBOX_AUTOCLOSE)
+    playmoncry(SPECIES_CHATOT, 0)
+    msgbox("Chaaatot!", MSGBOX_AUTOCLOSE)
     waitmoncry
     release
     end
@@ -77,7 +77,7 @@ script Alola_Akala_OldManOnBench{
     msgbox("Ah the weather is so nice today,
     isn't it?
     
-    I was just feeding the Pikipek and this
+    I was just feeding the Chatot and this
     one decided to join me on my bench!", MSGBOX_AUTOCLOSE)
     release
     end

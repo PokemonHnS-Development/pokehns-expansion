@@ -20,12 +20,12 @@ script Alola_Melemele_Pokecenter_BugCatcher{
     msgbox("I found some brand new bug Pokémon
     here on the Isles!
     
-    Like my new friend Grubbin here!", MSGBOX_AUTOCLOSE)
+    Like my new friend Aipom here!", MSGBOX_AUTOCLOSE)
     playse(SE_PIN)
     applymovement(Melemele_PokecenterGrubbin, moves(face_up, emote_exclamation_mark))
     waitmovement(0)
     waitse  
-    playmoncry(SPECIES_GRUBBIN, 0)
+    playmoncry(SPECIES_AIPOM, 0)
     waitmoncry
     release
     end
@@ -34,8 +34,8 @@ script Alola_Melemele_Pokecenter_BugCatcher{
 script Alola_Melemele_Pokecenter_Grubbin{
     lock
     faceplayer
-    playmoncry(SPECIES_GRUBBIN, 0)
-    msgbox("Grub!", MSGBOX_AUTOCLOSE)
+    playmoncry(SPECIES_AIPOM, 0)
+    msgbox("Aiip!", MSGBOX_AUTOCLOSE)
     waitmoncry
     release
     end

@@ -112,10 +112,10 @@ script Alola_Melemele_MelemeleMart_Sign{
 script Alola_Melemele_BattleSandygast{
     lock
     faceplayer
-    playmoncry(SPECIES_SANDYGAST, 0)
-    msgbox("Gaaah!", MSGBOX_AUTOCLOSE)
+    playmoncry(SPECIES_CORSOLA, 0)
+    msgbox("Coorr!", MSGBOX_AUTOCLOSE)
     waitmoncry
-    setwildbattle(SPECIES_SANDYGAST,45)
+    setwildbattle(SPECIES_CORSOLA,45)
     dowildbattle
     specialvar(VAR_RESULT, GetBattleOutcome)
     if (var(VAR_RESULT) == B_OUTCOME_CAUGHT){
@@ -492,7 +492,7 @@ script Alola_Melemele_camper{
     lock
     faceplayer
     msgbox("I traveled all the way from Kanto to see
-    my favorite bird Pok\emon, Pikipek!", MSGBOX_AUTOCLOSE)
+    my favorite bird Pok\emon, Chatot!", MSGBOX_AUTOCLOSE)
     release
     end
 

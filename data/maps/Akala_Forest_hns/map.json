@@ -67,7 +67,7 @@
       "flag": "FLAG_AKALA_FOREST_HIDDEN_ITEM_1"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_SPECIES(BOUNSWEET)",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(CHERUBI)",
       "x": 10,
       "y": 12,
       "elevation": 0,
@@ -80,7 +80,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_SPECIES(FOMANTIS)",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(COMBEE)",
       "x": 25,
       "y": 9,
       "elevation": 0,

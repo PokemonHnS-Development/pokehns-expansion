@@ -4,7 +4,7 @@ script Alola_Akala_House_OldWoman{
     lock
     faceplayer
     msgbox("I tell my husband everyday not to feed
-    the Pikipek, but he never listens!
+    the Chatot, but he never listens!
     
     One day he'll bring one of those darn
     things home, I just know it!", MSGBOX_AUTOCLOSE)
