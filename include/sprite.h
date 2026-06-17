@@ -315,6 +315,8 @@ void FreeSpriteTileRanges(void);
 u16 GetSpriteTileStartByTag(u16 tag);
 u16 GetSpriteTileTagByTileStart(u16 start);
 void FreeAllSpritePalettes(void);
+void BackupAndFreeSpritePalettes(void);
+void RestoreSpritePalettesBackup(void);
 u32 LoadSpritePalette(const struct SpritePalette *palette);
 u32 LoadSpritePaletteWithTag(const u16 *pal, u16 tag);
 u8 LoadSpritePaletteInSlot(const struct SpritePalette *palette, u8 paletteNum);

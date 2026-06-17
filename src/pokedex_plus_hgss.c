@@ -6048,6 +6048,7 @@ static void Task_LoadEvolutionScreen(u8 taskId)
                 r2 |= DISPCNT_BG1_ON;
             ResetOtherVideoRegisters(r2);
             gMain.state = 1;
+            BackupAndFreeSpritePalettes();
         }
         break;
     case 1:
@@ -6922,6 +6923,8 @@ static void Task_SwitchScreensFromEvolutionScreen(u8 taskId)
         }
         FreeAndDestroyMonPicSprite(gTasks[taskId].tMonSpriteId);
 
+        RestoreSpritePalettesBackup();
+
         switch (sPokedexView->screenSwitchState)
         {
         case 1:
@@ -6955,6 +6958,8 @@ static void Task_ExitEvolutionScreen(u8 taskId)
 
         FreeInfoScreenWindowAndBgBuffers();
         DestroyTask(taskId);
+
+        RestoreSpritePalettesBackup();
     }
 }
 
@@ -6985,6 +6990,8 @@ static void Task_LoadFormsScreen(u8 taskId)
                 r2 |= DISPCNT_BG1_ON;
             ResetOtherVideoRegisters(r2);
             gMain.state = 1;
+
+            BackupAndFreeSpritePalettes();
         }
         break;
     case 1:
@@ -7229,6 +7236,8 @@ static void Task_SwitchScreensFromFormsScreen(u8 taskId)
         }
         FreeAndDestroyMonPicSprite(gTasks[taskId].tMonSpriteId);
 
+        RestoreSpritePalettesBackup();
+
         switch (sPokedexView->screenSwitchState)
         {
         case 1:
@@ -7256,6 +7265,8 @@ static void Task_ExitFormsScreen(u8 taskId)
 
         FreeInfoScreenWindowAndBgBuffers();
         DestroyTask(taskId);
+
+        RestoreSpritePalettesBackup();
     }
 }
 

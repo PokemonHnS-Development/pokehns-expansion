@@ -4,6 +4,7 @@
 #include "palette.h"
 #include "string_util.h"
 #include "text.h"
+#include "malloc.h"
 
 #define MAX_SPRITE_COPY_REQUESTS 64
 
@@ -251,6 +252,9 @@ static u16 sSpriteTileRanges[MAX_SPRITES * 2];
 static struct AffineAnimState sAffineAnimStates[OAM_MATRIX_COUNT];
 static u16 sSpritePaletteTags[16];
 
+EWRAM_DATA static u16 sSpritePaletteTagsBackup[16];
+EWRAM_DATA u8 gReservedSpritePaletteCountBackup = 0;
+
 // iwram common
 COMMON_DATA u32 gOamMatrixAllocBitmap = 0;
 COMMON_DATA u8 gReservedSpritePaletteCount = 0;
@@ -268,6 +272,7 @@ EWRAM_DATA s16 gSpriteCoordOffsetX = 0;
 EWRAM_DATA s16 gSpriteCoordOffsetY = 0;
 EWRAM_DATA struct OamMatrix gOamMatrices[OAM_MATRIX_COUNT] = {0};
 EWRAM_DATA bool8 gAffineAnimsDisabled = FALSE;
+EWRAM_DATA u8 *sPaletteBackup = NULL;
 
 void ResetSpriteData(void)
 {
@@ -1608,6 +1613,49 @@ void FreeAllSpritePalettes(void)
     gReservedSpritePaletteCount = 0;
     for (i = 0; i < 16; i++)
         sSpritePaletteTags[i] = TAG_NONE;
+}
+
+void BackupAndFreeSpritePalettes(void)
+{
+    u32 i;
+
+    assertf(sPaletteBackup == NULL)
+    {
+        return;
+    }
+
+    sPaletteBackup = AllocZeroed(OBJ_PLTT_SIZE * 2);
+
+    memcpy(sPaletteBackup, gPlttBufferUnfaded, OBJ_PLTT_SIZE);
+    memcpy(sPaletteBackup + OBJ_PLTT_SIZE, gPlttBufferFaded, OBJ_PLTT_SIZE);
+
+    gReservedSpritePaletteCountBackup = gReservedSpritePaletteCount;
+    gReservedSpritePaletteCount = 0;
+    for (i = 0; i < 16; i++) {
+        sSpritePaletteTagsBackup[i] =  sSpritePaletteTags[i];
+        sSpritePaletteTags[i] = TAG_NONE;
+    }
+}
+
+void RestoreSpritePalettesBackup(void)
+{
+    u32 i;
+
+    assertf(sPaletteBackup != NULL)
+    {
+        return;
+    }
+
+    memcpy(gPlttBufferUnfaded, sPaletteBackup, OBJ_PLTT_SIZE);
+    memcpy(gPlttBufferFaded, sPaletteBackup + OBJ_PLTT_SIZE, OBJ_PLTT_SIZE);
+
+    gReservedSpritePaletteCount = gReservedSpritePaletteCountBackup;
+    for (i = 0; i < 16; i++) {
+        sSpritePaletteTags[i] =  sSpritePaletteTagsBackup[i];
+    }
+
+    Free(sPaletteBackup);
+    sPaletteBackup = NULL;
 }
 
 u32 LoadSpritePalette(const struct SpritePalette *palette)
