@@ -47,19 +47,16 @@ script Alola_Ulaula_House_Phant{
             {
                 applymovement(Phantonomy, moves(jump_in_place_down*2))
                 waitmovement(0)
-                delay(30)
             }
             if ((var(VAR_TEMP_1) == 9) && (var(VAR_TEMP_2) == 9))
             {
                 applymovement(Phantonomy, moves(jump_in_place_right*2))
                 waitmovement(0)
-                delay(30)
             }
             if ((var(VAR_TEMP_1) == 8) && (var(VAR_TEMP_2) == 8))
             {
                 applymovement(Phantonomy, moves(jump_in_place_up*2))
                 waitmovement(0)
-                delay(30)
             }
             playse(SE_LEDGE)
             waitse
