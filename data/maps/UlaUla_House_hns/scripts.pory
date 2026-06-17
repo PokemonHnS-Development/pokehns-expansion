@@ -17,10 +17,26 @@ script Alola_Ulaula_House_Phant{
             trainerbattle_no_intro(TRAINER_PHANTONOMY_HNS, "Congratulations, {PLAYER}!")
             special(HealPlayerParty)
             setvar(VAR_ALOLA_STATE, 5)
+            getplayerxy(VAR_TEMP_1, VAR_TEMP_2)
+            if ((var(VAR_TEMP_1) == 8) && (var(VAR_TEMP_2) == 10))
+            {
+                applymovement(Phantonomy, moves(jump_in_place_down*2))
+            }
+            if ((var(VAR_TEMP_1) == 9) && (var(VAR_TEMP_2) == 9))
+            {
+                applymovement(Phantonomy, moves(jump_in_place_right*2))
+            }
+            if ((var(VAR_TEMP_1) == 8) && (var(VAR_TEMP_2) == 8))
+            {
+                applymovement(Phantonomy, moves(jump_in_place_up*2))
+            }
+            playse(SE_LEDGE)
+            waitse
+            playse(SE_LEDGE)
+            waitse
             msgbox("That was an incredible battle.
             
             I think you've earned this.")
-            getplayerxy(VAR_TEMP_1, VAR_TEMP_2)
             if ((var(VAR_TEMP_1) == 8) && (var(VAR_TEMP_2) == 10))
             {
                 applymovement(Phantonomy, moves(walk_in_place_down*2))
@@ -43,23 +59,8 @@ script Alola_Ulaula_House_Phant{
             playfanfare(MUS_HG_OBTAIN_EGG)
             msgbox("You received an Egg from Phantonomy!")
             waitfanfare
-            if ((var(VAR_TEMP_1) == 8) && (var(VAR_TEMP_2) == 10))
-            {
-                applymovement(Phantonomy, moves(jump_in_place_down*2))
-            }
-            if ((var(VAR_TEMP_1) == 9) && (var(VAR_TEMP_2) == 9))
-            {
-                applymovement(Phantonomy, moves(jump_in_place_right*2))
-            }
-            if ((var(VAR_TEMP_1) == 8) && (var(VAR_TEMP_2) == 8))
-            {
-                applymovement(Phantonomy, moves(jump_in_place_up*2))
-            }
-            playse(SE_LEDGE)
-            waitse
-            playse(SE_LEDGE)
-            waitse
             msgbox("That Egg contains my favorite Pokémon.
+
             Please, take good care of it\.", MSGBOX_AUTOCLOSE)
             release
             end
