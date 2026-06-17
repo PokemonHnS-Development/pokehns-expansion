@@ -294,7 +294,7 @@
       "x": 37,
       "y": 46,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
+      "var": "VAR_TEMP_4",
       "var_value": "0",
       "script": "Alola_Ulaula_Bench_Heal"
     },
@@ -303,7 +303,7 @@
       "x": 36,
       "y": 46,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
+      "var": "VAR_TEMP_4",
       "var_value": "0",
       "script": "Alola_Ulaula_Bench_Heal"
     }
