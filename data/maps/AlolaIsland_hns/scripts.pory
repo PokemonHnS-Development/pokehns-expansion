@@ -88,7 +88,7 @@ script Alola_Poni_TotemBattle{
     waitmoncry
     //setwildbattle species:req, level:req, item=ITEM_NONE, species2=SPECIES_NONE, level2=0, item2=ITEM_NONE
     setwildbattle(SPECIES_EXEGGUTOR_ALOLA, 60, ITEM_NONE, SPECIES_TROPIUS, 60, ITEM_OCCA_BERRY)
-    settotemboost(B_POSITION_OPPONENT_RIGHT, 3, 3, 3, 3, 3, 3)
+    settotemboost(B_POSITION_OPPONENT_RIGHT, 1, 1, 1, 1, 1, 1)
     setflag(FLAG_NO_WILD_CATCHING)
     setflag(FLAG_NO_WILD_RUNNING)
     setflag(FLAG_SMART_WILD_AI)
@@ -248,8 +248,11 @@ script Alola_Poni_Bench_Heal{
     if (var(VAR_RESULT) == YES) {
         fadescreenswapbuffers(FADE_TO_BLACK)
         special(HealPlayerParty)
+        closemessage
         playfanfare(MUS_HEAL)
         waitfanfare
+        applymovement(LOCALID_PLAYER, moves(face_down))
+        waitmovement(0)
         fadescreenswapbuffers(FADE_FROM_BLACK)
     }
     release

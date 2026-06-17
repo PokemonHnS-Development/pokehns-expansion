@@ -838,12 +838,12 @@ Alola_Melemele_SamsonOakVillaIntro_Trigger_Text_0:
 Alola_Melemele_SamsonOakVillaIntro_Trigger_Text_1:
 # 13 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	.string "I'm glad you're here!\n"
-	.string "Welcome to my Villa!\p"
+	.string "Welcome to my villa!\p"
 	.string "I'm staying here while I research the\n"
 	.string "Alola Isles for their similarity to\l"
 	.string "the Alola Region.\p"
 	.string "I'm particularly interested in the\n"
-	.string "phenomenon of “Regional Variants”.$"
+	.string "phenomenon of “regional variants”.$"
 
 Alola_Melemele_SamsonOakVillaIntro_Trigger_Text_2:
 # 24 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
@@ -905,14 +905,14 @@ Alola_Melemele_SamsonOakVilla_Dialogue_Text_6:
 	.string "Wow, {PLAYER}!\n"
 	.string "You really are a powerful Trainer!\p"
 	.string "You've proven worthy of a secret\n"
-	.string "I've been keeping about these Isles…\p"
+	.string "I've been keeping about these isles…\p"
 	.string "I'm not the only one who's noticed a\n"
 	.string "striking resemblance between the Alola\l"
 	.string "Isles and the Alola Region…\p"
 	.string "It seems the Tapu Guardians themselves\n"
 	.string "have been visiting the Isles.\p"
 	.string "If you see them fly over the Isles, head\n"
-	.string "to the Totem Pillars… They may be there \l"
+	.string "to the totems… They may be there \l"
 	.string "waiting for you!$"
 
 Alola_Melemele_SamsonOakVilla_Dialogue_Text_7:
@@ -934,7 +934,7 @@ Alola_Melemele_SamsonOakVilla_Dialogue_Text_9:
 	.string "on the Isles, but have you defeated all\l"
 	.string "the Totem Pokémon yet?\p"
 	.string "You should look for a strange pillar on\n"
-	.string "each Isle, the Totem Pokémon will be\l"
+	.string "each isle, the Totem Pokémon will be\l"
 	.string "guarding it!$"
 
 Alola_Melemele_SamsonOakVilla_Dialogue_Text_10:
@@ -943,7 +943,7 @@ Alola_Melemele_SamsonOakVilla_Dialogue_Text_10:
 	.string "How's your research on the Alola Isles\n"
 	.string "coming along?\p"
 	.string "Would you like to share your progress\n"
-	.string "about a specific Isle with me?$"
+	.string "about a specific isle with me?$"
 
 Alola_Melemele_SamsonOakVilla_Dialogue_Text_11:
 # 192 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
@@ -981,7 +981,7 @@ Alola_Melemele_SamsonOakVilla_Dialogue_Text_18:
 Alola_Melemele_SamsonOakVilla_Dialogue_Text_19:
 # 224 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
 	.string "And it looks like you've found all the\n"
-	.string "Alolan variants on the other Isles too!\p"
+	.string "Alolan variants on the other isles too!\p"
 	.string "That's amazing, {PLAYER}!\p"
 	.string "You should be very proud of yourself!$"
 
@@ -994,7 +994,7 @@ Alola_Melemele_SamsonOakVilla_Dialogue_Text_20:
 	.string "thing…\p"
 	.string "Could you help me investigate the Totem\n"
 	.string "Pokémon that are said to be guarding\l"
-	.string "the Totem Pillars on each Isle?\p"
+	.string "the totems on each isle?\p"
 	.string "But beware! These Totem Pokémon are\n"
 	.string "said to be much stronger than their\l"
 	.string "normal counterparts…\p"
@@ -1003,7 +1003,7 @@ Alola_Melemele_SamsonOakVilla_Dialogue_Text_20:
 
 Alola_Melemele_SamsonOakVilla_Dialogue_Text_21:
 # 256 "data/maps/Melemele_PlayerHouse_hns/scripts.pory"
-	.string "Keep exploring the other Isles and\n"
+	.string "Keep exploring the other isles and\n"
 	.string "report your progress to me!$"
 
 Alola_Melemele_SamsonOakVilla_Dialogue_Text_22:
@@ -1011,7 +1011,7 @@ Alola_Melemele_SamsonOakVilla_Dialogue_Text_22:
 	.string "It seems you've already found all the\n"
 	.string "Alolan variants on Melemele Isle!\p"
 	.string "Great job!\p"
-	.string "Keep exploring the other Isles and\n"
+	.string "Keep exploring the other isles and\n"
 	.string "report your progress to me!$"
 
 Alola_Melemele_SamsonOakVilla_Dialogue_Text_23:
@@ -1020,7 +1020,7 @@ Alola_Melemele_SamsonOakVilla_Dialogue_Text_23:
 	.string "It seems you haven't quite found all of\n"
 	.string "the Alolan variants on Melemele Isle\l"
 	.string "just yet.\p"
-	.string "I believe Melemele Isle has {COLOR RED}4 {COLOR DARK_GRAY}Alolan\n"
+	.string "I've heard Melemele Isle has {COLOR RED}4 {COLOR DARK_GRAY}Alolan\n"
 	.string "variants for you to find…\p"
 	.string "{COLOR RED}Rattata{COLOR DARK_GRAY}, {COLOR RED}Raticate{COLOR DARK_GRAY}, {COLOR RED}Meowth{COLOR DARK_GRAY}, and {COLOR RED}Persian{COLOR DARK_GRAY}.\p"
 	.string "Keep on searching and come back when\n"
@@ -1040,7 +1040,7 @@ Alola_Melemele_SamsonOakVilla_Dialogue_Text_25:
 	.string "thing…\p"
 	.string "Could you help me investigate the Totem\n"
 	.string "Pokémon that are said to be guarding\l"
-	.string "the Totem Pillars on each Isle?\p"
+	.string "the totems on each isle?\p"
 	.string "But beware! These Totem Pokémon are\n"
 	.string "said to be much stronger than their\l"
 	.string "normal counterparts…\p"
@@ -1052,7 +1052,7 @@ Alola_Melemele_SamsonOakVilla_Dialogue_Text_26:
 	.string "It seems you've already found all the\n"
 	.string "Alolan variants on Akala Isle!\p"
 	.string "Great job!\p"
-	.string "Keep exploring the other Isles and\n"
+	.string "Keep exploring the other isles and\n"
 	.string "report your progress to me!$"
 
 Alola_Melemele_SamsonOakVilla_Dialogue_Text_27:
@@ -1061,7 +1061,7 @@ Alola_Melemele_SamsonOakVilla_Dialogue_Text_27:
 	.string "It seems you haven't quite found all of\n"
 	.string "the Alolan variants on Akala Isle\l"
 	.string "just yet.\p"
-	.string "I believe Akala Isle has {COLOR RED}3 {COLOR DARK_GRAY}Alolan\n"
+	.string "I've heard Akala Isle has {COLOR RED}3 {COLOR DARK_GRAY}Alolan\n"
 	.string "variants for you to find…\p"
 	.string "{COLOR RED}Marowak{COLOR DARK_GRAY}, {COLOR RED}Diglett{COLOR DARK_GRAY}, and {COLOR RED}Dugtrio{COLOR DARK_GRAY}.\p"
 	.string "Keep on searching and come back when\n"
@@ -1077,7 +1077,7 @@ Alola_Melemele_SamsonOakVilla_Dialogue_Text_29:
 	.string "It seems you've already found all the\n"
 	.string "Alolan variants on Ula'ula Isle!\p"
 	.string "Great job!\p"
-	.string "Keep exploring the other Isles and\n"
+	.string "Keep exploring the other isles and\n"
 	.string "report your progress to me!$"
 
 Alola_Melemele_SamsonOakVilla_Dialogue_Text_30:
@@ -1086,7 +1086,7 @@ Alola_Melemele_SamsonOakVilla_Dialogue_Text_30:
 	.string "It seems you haven't quite found all of\n"
 	.string "the Alolan variants on Ula'ula Isle\l"
 	.string "just yet.\p"
-	.string "I believe Ula'ula Isle has {COLOR RED}6 {COLOR DARK_GRAY}Alolan\n"
+	.string "I've heard Ula'ula Isle has {COLOR RED}6 {COLOR DARK_GRAY}Alolan\n"
 	.string "variants for you to find…\p"
 	.string "{COLOR RED}Vulpix{COLOR DARK_GRAY}, {COLOR RED}Ninetales{COLOR DARK_GRAY}, {COLOR RED}Sandshrew{COLOR DARK_GRAY}, {COLOR RED}Sandslash{COLOR DARK_GRAY},\n"
 	.string "{COLOR RED}Grimer{COLOR DARK_GRAY}, and {COLOR RED}Muk{COLOR DARK_GRAY}.\p"
@@ -1103,7 +1103,7 @@ Alola_Melemele_SamsonOakVilla_Dialogue_Text_32:
 	.string "It seems you've already found all the\n"
 	.string "Alolan variants on Poni Isle!\p"
 	.string "Great job!\p"
-	.string "Keep exploring the other Isles and\n"
+	.string "Keep exploring the other isles and\n"
 	.string "report your progress to me!$"
 
 Alola_Melemele_SamsonOakVilla_Dialogue_Text_33:
@@ -1112,7 +1112,7 @@ Alola_Melemele_SamsonOakVilla_Dialogue_Text_33:
 	.string "It seems you haven't quite found all of\n"
 	.string "the Alolan variants on Poni Isle\l"
 	.string "just yet.\p"
-	.string "I believe Poni Isle has {COLOR RED}5 {COLOR DARK_GRAY}Alolan\n"
+	.string "I've heard Poni Isle has {COLOR RED}5 {COLOR DARK_GRAY}Alolan\n"
 	.string "variants for you to find…\p"
 	.string "{COLOR RED}Raichu{COLOR DARK_GRAY}, {COLOR RED}Geodude{COLOR DARK_GRAY}, {COLOR RED}Graveler{COLOR DARK_GRAY}, {COLOR RED}Golem{COLOR DARK_GRAY},\n"
 	.string "and {COLOR RED}Exeggutor{COLOR DARK_GRAY}.\p"

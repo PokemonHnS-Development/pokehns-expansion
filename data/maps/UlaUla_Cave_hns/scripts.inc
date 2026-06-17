@@ -108,7 +108,7 @@ Alola_Ulaula_BattleNinetales_3:
 
 Alola_Ulaula_Cave_FindItem1::
 # 64 "data/maps/UlaUla_Cave_hns/scripts.pory"
-	finditem ITEM_RARE_CANDY, 1
+	finditem ITEM_ICE_STONE, 1
 	end
 
 

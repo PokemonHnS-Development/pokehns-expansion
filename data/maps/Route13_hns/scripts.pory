@@ -2,6 +2,10 @@ mapscripts Route13_hns_MapScripts{
         MAP_SCRIPT_ON_FRAME_TABLE[VAR_ALOLA_TRAVEL, 2: Route13_GetOffBoat]
         MAP_SCRIPT_ON_TRANSITION{call(Route13_OnTransition)}
         MAP_SCRIPT_ON_RESUME{call(SetTimeEncounters)}
+        MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE[VAR_ALOLA_TRAVEL, 2 {
+            applymovement(Route13_Alola_Captain, moves(face_up))
+            applymovement(LOCALID_PLAYER, moves(face_up))
+        }]
 }
 
 raw `
@@ -195,6 +199,8 @@ script Route13_GetOffBoat{
     Come back if you'd like to take a trip
     to the Alola Isles!", MSGBOX_AUTOCLOSE)
     setvar(VAR_ALOLA_TRAVEL, 0)
+    applymovement(LOCALID_PLAYER, moves(face_up))
+    waitmovement(0)
     release
     end
 }

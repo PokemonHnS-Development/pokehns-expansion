@@ -154,7 +154,7 @@ Alola_Poni_TotemBattle::
 # 90 "data/maps/AlolaIsland_hns/scripts.pory"
 	setwildbattle SPECIES_EXEGGUTOR_ALOLA, 60, ITEM_NONE, SPECIES_TROPIUS, 60, ITEM_OCCA_BERRY
 # 91 "data/maps/AlolaIsland_hns/scripts.pory"
-	settotemboost B_POSITION_OPPONENT_RIGHT, 3, 3, 3, 3, 3, 3
+	settotemboost B_POSITION_OPPONENT_RIGHT, 1, 1, 1, 1, 1, 1
 # 92 "data/maps/AlolaIsland_hns/scripts.pory"
 	setflag FLAG_NO_WILD_CATCHING
 # 93 "data/maps/AlolaIsland_hns/scripts.pory"
@@ -407,7 +407,7 @@ Alola_Poni_Bench_Heal::
 	compare VAR_RESULT, YES
 	goto_if_eq Alola_Poni_Bench_Heal_2
 Alola_Poni_Bench_Heal_1:
-# 255 "data/maps/AlolaIsland_hns/scripts.pory"
+# 258 "data/maps/AlolaIsland_hns/scripts.pory"
 	release
 	end
 
@@ -417,16 +417,22 @@ Alola_Poni_Bench_Heal_2:
 # 250 "data/maps/AlolaIsland_hns/scripts.pory"
 	special HealPlayerParty
 # 251 "data/maps/AlolaIsland_hns/scripts.pory"
-	playfanfare MUS_HEAL
+	closemessage
 # 252 "data/maps/AlolaIsland_hns/scripts.pory"
-	waitfanfare
+	playfanfare MUS_HEAL
 # 253 "data/maps/AlolaIsland_hns/scripts.pory"
+	waitfanfare
+# 254 "data/maps/AlolaIsland_hns/scripts.pory"
+	applymovement LOCALID_PLAYER, Alola_Poni_Bench_Heal_Movement_0
+# 255 "data/maps/AlolaIsland_hns/scripts.pory"
+	waitmovement 0
+# 256 "data/maps/AlolaIsland_hns/scripts.pory"
 	fadescreenswapbuffers FADE_FROM_BLACK
 	goto Alola_Poni_Bench_Heal_1
 
 
 Alola_Poni_FindItem1::
-# 260 "data/maps/AlolaIsland_hns/scripts.pory"
+# 263 "data/maps/AlolaIsland_hns/scripts.pory"
 	finditem ITEM_ICE_STONE, 1
 	end
 
@@ -467,6 +473,12 @@ Alola_Poni_TapuFini_Flyover_Movement_0:
 	walk_faster_up
 # 173 "data/maps/AlolaIsland_hns/scripts.pory"
 	walk_faster_up
+	step_end
+
+# 254 "data/maps/AlolaIsland_hns/scripts.pory"
+Alola_Poni_Bench_Heal_Movement_0:
+# 254 "data/maps/AlolaIsland_hns/scripts.pory"
+	face_down
 	step_end
 
 Alola_Poni_BattleExeggutor_Text_0:

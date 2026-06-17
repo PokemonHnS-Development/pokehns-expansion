@@ -1,4 +1,18 @@
-mapscripts UlaUla_Forest_hns_MapScripts {}
+mapscripts UlaUla_Forest_hns_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION{
+        gettimeofday
+        if ((var(VAR_0x8000)== TIME_MORNING) || (var(VAR_0x8000)== TIME_DAY))
+        {
+            setvar(VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_SPECIES(VESPIQUEN))
+            setflag(FLAG_ULAULA_TOTEM_DAY)
+        }
+        else
+        {
+            setvar(VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_SPECIES(GENGAR))
+            clearflag(FLAG_ULAULA_TOTEM_DAY)
+        }
+    }
+}
 
 script Alola_Ulaula_Forest_FindItem1{
     finditem(ITEM_MAX_REVIVE, 1)
@@ -26,6 +40,7 @@ script Alola_Ulaula_TotemBattle_Trigger{
             {
                 playmoncry(SPECIES_VESPIQUEN,0)
                 setvar(VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_SPECIES(VESPIQUEN))
+                setflag(FLAG_ULAULA_TOTEM_DAY)
                 addobject(Ulaula_Totem)
                 waitmoncry
             }
@@ -33,6 +48,7 @@ script Alola_Ulaula_TotemBattle_Trigger{
             {
                 playmoncry(SPECIES_GENGAR,0)
                 setvar(VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_SPECIES(GENGAR))
+                clearflag(FLAG_ULAULA_TOTEM_DAY)
                 addobject(Ulaula_Totem)
                 waitmoncry
             }
@@ -73,15 +89,14 @@ script Alola_Ulaula_TotemBattle_Trigger{
 script Alola_Ulaula_TotemBattle{
     lock
     faceplayer
-    gettimeofday
-    if ((var(VAR_0x8000)== TIME_MORNING) || (var(VAR_0x8000)== TIME_DAY))
+    if (flag(FLAG_ULAULA_TOTEM_DAY))
     {
         playmoncry(SPECIES_VESPIQUEN,0)
         msgbox("Bee-beep!", MSGBOX_AUTOCLOSE)
         waitmoncry
         //setwildbattle species:req, level:req, item=ITEM_NONE, species2=SPECIES_NONE, level2=0, item2=ITEM_NONE
         setwildbattle(SPECIES_COMBEE, 60, ITEM_NONE, SPECIES_VESPIQUEN, 60, ITEM_OCCA_BERRY)
-        settotemboost(B_POSITION_OPPONENT_RIGHT, 3, 3, 3, 3, 3, 3)
+        settotemboost(B_POSITION_OPPONENT_RIGHT, 1, 1, 1, 1, 1, 1)
         setflag(FLAG_NO_WILD_CATCHING)
         setflag(FLAG_NO_WILD_RUNNING)
         setflag(FLAG_SMART_WILD_AI)
@@ -113,7 +128,7 @@ script Alola_Ulaula_TotemBattle{
         msgbox("Graah!", MSGBOX_AUTOCLOSE)
         waitmoncry
         setwildbattle(SPECIES_HAUNTER, 60, ITEM_NONE, SPECIES_GENGAR, 60, ITEM_LUM_BERRY)
-        settotemboost(B_POSITION_OPPONENT_RIGHT, 3, 3, 3, 3, 3, 3)
+        settotemboost(B_POSITION_OPPONENT_RIGHT, 1, 1, 1, 1, 1, 1)
         setflag(FLAG_NO_WILD_CATCHING)
         setflag(FLAG_NO_WILD_RUNNING)
         setflag(FLAG_SMART_WILD_AI)

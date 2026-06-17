@@ -11,14 +11,14 @@ script Alola_Melemele_SamsonOakVillaIntro_Trigger{
     applymovement(SamsonOakVilla, moves(walk_down, walk_left, face_down))
     waitmovement(0)
     msgbox("I'm glad you're here!
-    Welcome to my Villa!
+    Welcome to my villa!
     
     I'm staying here while I research the
     Alola Isles for their similarity to
     the Alola Region.
     
     I'm particularly interested in the
-    phenomenon of \qoRegional Variants\qc.", MSGBOX_AUTOCLOSE)
+    phenomenon of \qoregional variants\qc.", MSGBOX_AUTOCLOSE)
     applymovement(SamsonOakVilla, moves(walk_in_place_down*2))
     waitmovement(0)
     msgbox("You seem quite capable.
@@ -132,7 +132,7 @@ script Alola_Melemele_SamsonOakVilla_Dialogue{
                     You really are a powerful Trainer!
 
                     You've proven worthy of a secret
-                    I've been keeping about these Isles\.
+                    I've been keeping about these isles\.
 
                     I'm not the only one who's noticed a
                     striking resemblance between the Alola
@@ -142,7 +142,7 @@ script Alola_Melemele_SamsonOakVilla_Dialogue{
                     have been visiting the Isles.
 
                     If you see them fly over the Isles, head
-                    to the Totem Pillars\. They may be there 
+                    to the totems\. They may be there 
                     waiting for you!", MSGBOX_AUTOCLOSE)
                     playse(SE_PIN)
                     applymovement(SamsonOakVilla, moves(emote_exclamation_mark))
@@ -174,7 +174,7 @@ script Alola_Melemele_SamsonOakVilla_Dialogue{
             the Totem Pok\emon yet?
 
             You should look for a strange pillar on
-            each Isle, the Totem Pok\emon will be
+            each isle, the Totem Pok\emon will be
             guarding it!", MSGBOX_AUTOCLOSE)
             release
             end
@@ -188,7 +188,7 @@ script Alola_Melemele_SamsonOakVilla_Dialogue{
         coming along?
 
         Would you like to share your progress
-        about a specific Isle with me?")
+        about a specific isle with me?")
         dynmultichoice(20, 4, FALSE, 4, 0, DYN_MULTICHOICE_CB_NONE,"Melemele Isle", "Akala Isle", "Ula'ula Isle", "Poni Isle", "Not right now.")
         if (var(VAR_RESULT)==0)
         {
@@ -222,7 +222,7 @@ script Alola_Melemele_SamsonOakVilla_Dialogue{
                                     {
                                         playfanfare(MUS_HG_BUG_CONTEST_1ST_PLACE)
                                         msgbox("And it looks like you've found all the
-                                        Alolan variants on the other Isles too!
+                                        Alolan variants on the other isles too!
                                         
                                         That's amazing, {PLAYER}!
                                         
@@ -240,7 +240,7 @@ script Alola_Melemele_SamsonOakVilla_Dialogue{
 
                                         Could you help me investigate the Totem
                                         Pok\emon that are said to be guarding
-                                        the Totem Pillars on each Isle?
+                                        the totems on each isle?
                                         
                                         But beware! These Totem Pok\emon are
                                         said to be much stronger than their
@@ -253,7 +253,7 @@ script Alola_Melemele_SamsonOakVilla_Dialogue{
                                     }
                                     else
                                     {
-                                        msgbox("Keep exploring the other Isles and
+                                        msgbox("Keep exploring the other isles and
                                         report your progress to me!", MSGBOX_AUTOCLOSE)
                                         release
                                         end
@@ -271,7 +271,7 @@ script Alola_Melemele_SamsonOakVilla_Dialogue{
                                     msgbox("You found all the Alolan variants living
                                     on Melemele Isle!")
                                     waitfanfare
-                                    msgbox("Keep exploring the other Isles and
+                                    msgbox("Keep exploring the other isles and
                                     report your progress to me!", MSGBOX_AUTOCLOSE)
                                     release
                                     end
@@ -284,7 +284,7 @@ script Alola_Melemele_SamsonOakVilla_Dialogue{
                                 
                                 Great job!
 
-                                Keep exploring the other Isles and
+                                Keep exploring the other isles and
                                 report your progress to me!", MSGBOX_AUTOCLOSE)
                                 release
                                 end
@@ -299,7 +299,7 @@ script Alola_Melemele_SamsonOakVilla_Dialogue{
             the Alolan variants on Melemele Isle
             just yet.
             
-            I believe Melemele Isle has {COLOR RED}4 {COLOR DARK_GRAY}Alolan
+            I've heard Melemele Isle has {COLOR RED}4 {COLOR DARK_GRAY}Alolan
             variants for you to find\.
 
             {COLOR RED}Rattata{COLOR DARK_GRAY}, {COLOR RED}Raticate{COLOR DARK_GRAY}, {COLOR RED}Meowth{COLOR DARK_GRAY}, and {COLOR RED}Persian{COLOR DARK_GRAY}.
@@ -337,7 +337,7 @@ script Alola_Melemele_SamsonOakVilla_Dialogue{
                                 {
                                     playfanfare(MUS_HG_BUG_CONTEST_1ST_PLACE)
                                     msgbox("And it looks like you've found all the
-                                    Alolan variants on the other Isles too!
+                                    Alolan variants on the other isles too!
                                     
                                     That's amazing, {PLAYER}!
                                     
@@ -355,7 +355,7 @@ script Alola_Melemele_SamsonOakVilla_Dialogue{
 
                                     Could you help me investigate the Totem
                                     Pok\emon that are said to be guarding
-                                    the Totem Pillars on each Isle?
+                                    the totems on each isle?
                                     
                                     But beware! These Totem Pok\emon are
                                     said to be much stronger than their
@@ -368,7 +368,7 @@ script Alola_Melemele_SamsonOakVilla_Dialogue{
                                 }
                                 else
                                 {
-                                    msgbox("Keep exploring the other Isles and
+                                    msgbox("Keep exploring the other isles and
                                     report your progress to me!")
                                     release
                                     end
@@ -386,7 +386,7 @@ script Alola_Melemele_SamsonOakVilla_Dialogue{
                                 msgbox("You found all the Alolan variants living
                                 on Akala Isle!")
                                 waitfanfare
-                                msgbox("Keep exploring the other Isles and
+                                msgbox("Keep exploring the other isles and
                                 report your progress to me!")
                                 release
                                 end
@@ -399,7 +399,7 @@ script Alola_Melemele_SamsonOakVilla_Dialogue{
                             
                             Great job!
 
-                            Keep exploring the other Isles and
+                            Keep exploring the other isles and
                             report your progress to me!", MSGBOX_AUTOCLOSE)
                             release
                             end
@@ -413,7 +413,7 @@ script Alola_Melemele_SamsonOakVilla_Dialogue{
             the Alolan variants on Akala Isle
             just yet.
             
-            I believe Akala Isle has {COLOR RED}3 {COLOR DARK_GRAY}Alolan
+            I've heard Akala Isle has {COLOR RED}3 {COLOR DARK_GRAY}Alolan
             variants for you to find\.
 
             {COLOR RED}Marowak{COLOR DARK_GRAY}, {COLOR RED}Diglett{COLOR DARK_GRAY}, and {COLOR RED}Dugtrio{COLOR DARK_GRAY}.
@@ -460,7 +460,7 @@ script Alola_Melemele_SamsonOakVilla_Dialogue{
                                             {
                                                 playfanfare(MUS_HG_BUG_CONTEST_1ST_PLACE)
                                                 msgbox("And it looks like you've found all the
-                                                Alolan variants on the other Isles too!
+                                                Alolan variants on the other isles too!
                                                 
                                                 That's amazing, {PLAYER}!
                                                 
@@ -478,7 +478,7 @@ script Alola_Melemele_SamsonOakVilla_Dialogue{
 
                                                 Could you help me investigate the Totem
                                                 Pok\emon that are said to be guarding
-                                                the Totem Pillars on each Isle?
+                                                the totems on each isle?
                                                 
                                                 But beware! These Totem Pok\emon are
                                                 said to be much stronger than their
@@ -491,7 +491,7 @@ script Alola_Melemele_SamsonOakVilla_Dialogue{
                                             }
                                             else
                                             {
-                                                msgbox("Keep exploring the other Isles and
+                                                msgbox("Keep exploring the other isles and
                                                 report your progress to me!", MSGBOX_AUTOCLOSE)
                                                 release
                                                 end
@@ -509,7 +509,7 @@ script Alola_Melemele_SamsonOakVilla_Dialogue{
                                             msgbox("You found all the Alolan variants living
                                             on Ula'ula Isle!")
                                             waitfanfare
-                                            msgbox("Keep exploring the other Isles and
+                                            msgbox("Keep exploring the other isles and
                                             report your progress to me!", MSGBOX_AUTOCLOSE)
                                             release
                                             end
@@ -522,7 +522,7 @@ script Alola_Melemele_SamsonOakVilla_Dialogue{
                                     
                                     Great job!
 
-                                    Keep exploring the other Isles and
+                                    Keep exploring the other isles and
                                     report your progress to me!", MSGBOX_AUTOCLOSE)
                                     release
                                     end
@@ -539,7 +539,7 @@ script Alola_Melemele_SamsonOakVilla_Dialogue{
             the Alolan variants on Ula'ula Isle
             just yet.
 
-            I believe Ula'ula Isle has {COLOR RED}6 {COLOR DARK_GRAY}Alolan
+            I've heard Ula'ula Isle has {COLOR RED}6 {COLOR DARK_GRAY}Alolan
             variants for you to find\.
 
             {COLOR RED}Vulpix{COLOR DARK_GRAY}, {COLOR RED}Ninetales{COLOR DARK_GRAY}, {COLOR RED}Sandshrew{COLOR DARK_GRAY}, {COLOR RED}Sandslash{COLOR DARK_GRAY},
@@ -584,7 +584,7 @@ script Alola_Melemele_SamsonOakVilla_Dialogue{
                                         {
                                             playfanfare(MUS_HG_BUG_CONTEST_1ST_PLACE)
                                             msgbox("And it looks like you've found all the
-                                            Alolan variants on the other Isles too!
+                                            Alolan variants on the other isles too!
                                             
                                             That's amazing, {PLAYER}!
                                             
@@ -602,7 +602,7 @@ script Alola_Melemele_SamsonOakVilla_Dialogue{
 
                                             Could you help me investigate the Totem
                                             Pok\emon that are said to be guarding
-                                            the Totem Pillars on each Isle?
+                                            the totems on each isle?
                                             
                                             But beware! These Totem Pok\emon are
                                             said to be much stronger than their
@@ -615,7 +615,7 @@ script Alola_Melemele_SamsonOakVilla_Dialogue{
                                         }
                                         else
                                         {
-                                            msgbox("Keep exploring the other Isles and
+                                            msgbox("Keep exploring the other isles and
                                             report your progress to me!", MSGBOX_AUTOCLOSE)
                                             release
                                             end
@@ -633,7 +633,7 @@ script Alola_Melemele_SamsonOakVilla_Dialogue{
                                         msgbox("You found all the Alolan variants living
                                         on Poni Isle!")
                                         waitfanfare
-                                        msgbox("Keep exploring the other Isles and
+                                        msgbox("Keep exploring the other isles and
                                         report your progress to me!", MSGBOX_AUTOCLOSE)
                                         release
                                         end
@@ -646,7 +646,7 @@ script Alola_Melemele_SamsonOakVilla_Dialogue{
                                 
                                 Great job!
 
-                                Keep exploring the other Isles and
+                                Keep exploring the other isles and
                                 report your progress to me!", MSGBOX_AUTOCLOSE)
                                 release
                                 end
@@ -662,7 +662,7 @@ script Alola_Melemele_SamsonOakVilla_Dialogue{
             the Alolan variants on Poni Isle
             just yet.
 
-            I believe Poni Isle has {COLOR RED}5 {COLOR DARK_GRAY}Alolan
+            I've heard Poni Isle has {COLOR RED}5 {COLOR DARK_GRAY}Alolan
             variants for you to find\.
 
             {COLOR RED}Raichu{COLOR DARK_GRAY}, {COLOR RED}Geodude{COLOR DARK_GRAY}, {COLOR RED}Graveler{COLOR DARK_GRAY}, {COLOR RED}Golem{COLOR DARK_GRAY},

@@ -313,7 +313,7 @@ Alola_Ulaula_Bench_Heal::
 	compare VAR_RESULT, YES
 	goto_if_eq Alola_Ulaula_Bench_Heal_2
 Alola_Ulaula_Bench_Heal_1:
-# 215 "data/maps/AlolaIslandAkala_hns/scripts.pory"
+# 218 "data/maps/AlolaIslandAkala_hns/scripts.pory"
 	release
 	end
 
@@ -323,10 +323,16 @@ Alola_Ulaula_Bench_Heal_2:
 # 210 "data/maps/AlolaIslandAkala_hns/scripts.pory"
 	special HealPlayerParty
 # 211 "data/maps/AlolaIslandAkala_hns/scripts.pory"
-	playfanfare MUS_HEAL
+	closemessage
 # 212 "data/maps/AlolaIslandAkala_hns/scripts.pory"
-	waitfanfare
+	playfanfare MUS_HEAL
 # 213 "data/maps/AlolaIslandAkala_hns/scripts.pory"
+	waitfanfare
+# 214 "data/maps/AlolaIslandAkala_hns/scripts.pory"
+	applymovement LOCALID_PLAYER, Alola_Ulaula_Bench_Heal_Movement_0
+# 215 "data/maps/AlolaIslandAkala_hns/scripts.pory"
+	waitmovement 0
+# 216 "data/maps/AlolaIslandAkala_hns/scripts.pory"
 	fadescreenswapbuffers FADE_FROM_BLACK
 	goto Alola_Ulaula_Bench_Heal_1
 
@@ -493,6 +499,12 @@ Alola_Ulaula_Phant_outside_Movement_6:
 	walk_up
 	step_end
 
+# 214 "data/maps/AlolaIslandAkala_hns/scripts.pory"
+Alola_Ulaula_Bench_Heal_Movement_0:
+# 214 "data/maps/AlolaIslandAkala_hns/scripts.pory"
+	face_down
+	step_end
+
 Alola_Ulaula_BattlePalossand_Text_0:
 # 7 "data/maps/AlolaIslandAkala_hns/scripts.pory"
 	.string "Shuck!$"
@@ -524,7 +536,7 @@ Alola_Ulaula_Phant_outside_Text_0:
 Alola_Ulaula_Phant_outside_Text_1:
 # 117 "data/maps/AlolaIslandAkala_hns/scripts.pory"
 	.string "Please come visit me at my house at\n"
-	.string "the top of this Isle for a battle…\l"
+	.string "the top of this isle for a battle…\l"
 	.string "I'll make it worth your while!$"
 
 Alola_Ulaula_TrainerBattlePicnicker_Text_0:

@@ -17,7 +17,7 @@ script Alola_Melemele_Pokecenter_AceTrainer{
 script Alola_Melemele_Pokecenter_BugCatcher{
     lock
     faceplayer
-    msgbox("I found some brand new bug Pokémon
+    msgbox("I found some brand new Pokémon
     here on the Isles!
     
     Like my new friend Aipom here!", MSGBOX_AUTOCLOSE)

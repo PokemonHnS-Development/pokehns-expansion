@@ -1,6 +1,17 @@
 mapscripts AlolaIslandMelemele_hns_MapScripts{
         MAP_SCRIPT_ON_TRANSITION{
-        setrespawn(HEAL_LOCATION_ALOLA_ISLAND_MELEMELE_HNS)
+            setrespawn(HEAL_LOCATION_ALOLA_ISLAND_MELEMELE_HNS)
+            gettimeofday
+            if ((var(VAR_0x8000)== TIME_MORNING) || (var(VAR_0x8000)== TIME_DAY))
+            {
+                setvar(VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_SPECIES(LEAFEON))
+                setflag(FLAG_MELEMELE_TOTEM_DAY)
+            }
+            else
+            {
+                setvar(VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_SPECIES(RATICATE_ALOLA))
+                clearflag(FLAG_MELEMELE_TOTEM_DAY)
+            }
         }
         MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE[VAR_ALOLA_TRAVEL, 1 {
             applymovement(Alola_Melemele_Captain, moves(face_up))
@@ -20,6 +31,8 @@ script Alola_Melemele_GetOffBoat{
     Come back if you'd like to take a trip
     to mainland Kanto!", MSGBOX_AUTOCLOSE)
     setvar(VAR_ALOLA_TRAVEL, 2)
+    applymovement(LOCALID_PLAYER, moves(face_up))
+    waitmovement(0)
     release
     end
 }
@@ -259,6 +272,7 @@ script Alola_Melemele_TotemBattle_Trigger{
             {
                 playmoncry(SPECIES_LEAFEON,0)
                 setvar(VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_SPECIES(LEAFEON))
+                setflag(FLAG_MELEMELE_TOTEM_DAY)
                 addobject(Melemele_Totem)
                 waitmoncry
             }
@@ -266,6 +280,7 @@ script Alola_Melemele_TotemBattle_Trigger{
             {
                 playmoncry(SPECIES_RATICATE_ALOLA,0)
                 setvar(VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_SPECIES(RATICATE_ALOLA))
+                clearflag(FLAG_MELEMELE_TOTEM_DAY)
                 addobject(Melemele_Totem)
                 waitmoncry
             }
@@ -306,15 +321,14 @@ script Alola_Melemele_TotemBattle_Trigger{
 script Alola_Melemele_TotemBattle{
     lock
     faceplayer
-    gettimeofday
-    if ((var(VAR_0x8000)== TIME_MORNING) || (var(VAR_0x8000)== TIME_DAY))
+    if (flag(FLAG_MELEMELE_TOTEM_DAY))
     {
         playmoncry(SPECIES_LEAFEON,0)
         msgbox("Leee!", MSGBOX_AUTOCLOSE)
         waitmoncry
         //setwildbattle species:req, level:req, item=ITEM_NONE, species2=SPECIES_NONE, level2=0, item2=ITEM_NONE
         setwildbattle(SPECIES_EEVEE, 60, ITEM_NONE, SPECIES_LEAFEON, 60, ITEM_PECHA_BERRY)
-        settotemboost(B_POSITION_OPPONENT_RIGHT, 3, 3, 3, 3, 3, 3)
+        settotemboost(B_POSITION_OPPONENT_RIGHT, 1, 1, 1, 1, 1, 1)
         setflag(FLAG_NO_WILD_CATCHING)
         setflag(FLAG_NO_WILD_RUNNING)
         setflag(FLAG_SMART_WILD_AI)

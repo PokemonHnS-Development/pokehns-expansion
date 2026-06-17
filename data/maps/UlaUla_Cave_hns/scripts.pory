@@ -61,7 +61,7 @@ script Alola_Ulaula_BattleNinetales{
 }
 
 script Alola_Ulaula_Cave_FindItem1{
-    finditem(ITEM_RARE_CANDY, 1)
+    finditem(ITEM_ICE_STONE, 1)
     end
 }
 

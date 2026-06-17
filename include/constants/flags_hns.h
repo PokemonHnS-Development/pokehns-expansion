@@ -999,9 +999,9 @@
 #define FLAG_EXTENDED_CONTENT_138                   (HNS_EXTENDED_CONTENT_START + 138)
 #define FLAG_EXTENDED_CONTENT_139                   (HNS_EXTENDED_CONTENT_START + 139)
 #define FLAG_EXTENDED_CONTENT_140                   (HNS_EXTENDED_CONTENT_START + 140)
-#define FLAG_EXTENDED_CONTENT_141                   (HNS_EXTENDED_CONTENT_START + 141)
-#define FLAG_EXTENDED_CONTENT_142                   (HNS_EXTENDED_CONTENT_START + 142)
-#define FLAG_HANDLE_BOAT                            (HNS_EXTENDED_CONTENT_START + 143) // for proper handling of mapscripts if the boat was used then flew back
+#define FLAG_AKALA_TOTEM_DAY                        (HNS_EXTENDED_CONTENT_START + 141) // sets totem to day variant on akala
+#define FLAG_ULAULA_TOTEM_DAY                       (HNS_EXTENDED_CONTENT_START + 142) // sets totem to day variant on ulaula
+#define FLAG_MELEMELE_TOTEM_DAY                     (HNS_EXTENDED_CONTENT_START + 143) // sets totem to day variant on melemele
 #define FLAG_HIDE_PHANT_INSIDE                      (HNS_EXTENDED_CONTENT_START + 144) // hide phantonomy inside on ulaula
 #define FLAG_HIDE_PHANT_OUTSIDE                     (HNS_EXTENDED_CONTENT_START + 145) // hide phantonomy outside on ulaula
 #define FLAG_BATTLED_TAPU_FINI                      (HNS_EXTENDED_CONTENT_START + 146) // battled tapu fini

@@ -76,7 +76,7 @@ Alola_Melemele_Pokecenter_AceTrainer_Text_0:
 
 Alola_Melemele_Pokecenter_BugCatcher_Text_0:
 # 20 "data/maps/Melemele_House_hns/scripts.pory"
-	.string "I found some brand new bug Pokémon\n"
+	.string "I found some brand new Pokémon\n"
 	.string "here on the Isles!\p"
 	.string "Like my new friend Aipom here!$"
 

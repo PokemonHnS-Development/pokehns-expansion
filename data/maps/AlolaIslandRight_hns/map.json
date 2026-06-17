@@ -345,6 +345,24 @@
       "var": "VAR_TEMP_0",
       "var_value": "0",
       "script": "Alola_Akala_TapuLele_Flyover"
+    },
+    {
+      "type": "trigger",
+      "x": 28,
+      "y": 26,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Alola_Akala_Bench_Heal"
+    },
+    {
+      "type": "trigger",
+      "x": 27,
+      "y": 26,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Alola_Akala_Bench_Heal"
     }
   ],
   "bg_events": [
@@ -371,22 +389,6 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Alola_Akala_Totem_sign"
-    },
-    {
-      "type": "sign",
-      "x": 27,
-      "y": 26,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "Alola_Akala_Bench_Heal"
-    },
-    {
-      "type": "sign",
-      "x": 28,
-      "y": 26,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "Alola_Akala_Bench_Heal"
     }
   ],
   "game_version": "hns",

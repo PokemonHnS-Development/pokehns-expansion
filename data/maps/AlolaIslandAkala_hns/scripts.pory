@@ -115,7 +115,7 @@ script Alola_Ulaula_Phant_outside{
     playse(SE_LEDGE)
     waitse
     msgbox("Please come visit me at my house at
-    the top of this Isle for a battle\.
+    the top of this isle for a battle\.
     I'll make it worth your while!", MSGBOX_AUTOCLOSE)
     getplayerxy(VAR_TEMP_0, VAR_TEMP_1)
     if ((var(VAR_TEMP_0) == 35) && (var(VAR_TEMP_1) == 46))
@@ -208,8 +208,11 @@ script Alola_Ulaula_Bench_Heal{
     if (var(VAR_RESULT) == YES) {
         fadescreenswapbuffers(FADE_TO_BLACK)
         special(HealPlayerParty)
+        closemessage
         playfanfare(MUS_HEAL)
         waitfanfare
+        applymovement(LOCALID_PLAYER, moves(face_down))
+        waitmovement(0)
         fadescreenswapbuffers(FADE_FROM_BLACK)
     }
     release
