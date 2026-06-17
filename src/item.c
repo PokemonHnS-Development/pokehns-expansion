@@ -98,8 +98,10 @@ struct ItemSlot NONNULL BagPocket_GetSlotData(struct BagPocket *pocket, u32 pock
     case POCKET_TM_HM:
     case POCKET_BERRIES:
     case POCKET_MEDICINE:
+#if !I_COMBINE_BAG_POCKETS
     case POCKET_BATTLE_ITEMS:
     case POCKET_TREASURES:
+#endif
         return BagPocket_GetSlotDataGeneric(pocket, pocketPos);
     case POCKET_DUMMY:
         return BagPocket_GetSlotDataPC(pocket, pocketPos);
@@ -124,8 +126,10 @@ void NONNULL BagPocket_SetSlotData(struct BagPocket *pocket, u32 pocketPos, stru
     case POCKET_TM_HM:
     case POCKET_BERRIES:
     case POCKET_MEDICINE:
+#if !I_COMBINE_BAG_POCKETS
     case POCKET_BATTLE_ITEMS:
     case POCKET_TREASURES:
+#endif
         BagPocket_SetSlotDataGeneric(pocket, pocketPos, newSlot);
         break;
     case POCKET_DUMMY:
@@ -171,6 +175,7 @@ void SetBagItemsPointers(void)
     gBagPockets[POCKET_MEDICINE].capacity = BAG_MEDICINE_COUNT;
     gBagPockets[POCKET_MEDICINE].id = POCKET_MEDICINE;
 
+#if !I_COMBINE_BAG_POCKETS
     gBagPockets[POCKET_TREASURES].itemSlots = gSaveBlock1Ptr->bag.treasures;
     gBagPockets[POCKET_TREASURES].capacity = BAG_TREASURES_COUNT;
     gBagPockets[POCKET_TREASURES].id = POCKET_TREASURES;
@@ -178,6 +183,7 @@ void SetBagItemsPointers(void)
     gBagPockets[POCKET_BATTLE_ITEMS].itemSlots = gSaveBlock1Ptr->bag.battleItems;
     gBagPockets[POCKET_BATTLE_ITEMS].capacity = BAG_BATTLE_ITEMS_COUNT;
     gBagPockets[POCKET_BATTLE_ITEMS].id = POCKET_BATTLE_ITEMS;
+#endif
 }
 
 u8 *CopyItemName(enum Item itemId, u8 *dst)

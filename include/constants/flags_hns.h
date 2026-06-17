@@ -71,7 +71,7 @@
 #define FLAG_HIDE_CHERRYGROVE_GUIDE_GENT_HOUSE      0x052
 #define FLAG_HIDE_GUIDE_GENT_CHERRYGROVE            0x053
 #define FLAG_HIDE_VIOLET_CITY_AIDE                  0x054
-#define FLAG_HIDE_VIOLET_CITY_EARL                   0x055
+#define FLAG_HIDE_VIOLET_CITY_EARL                  0x055
 #define FLAG_HIDE_VIOLET_CITY_KIMONO_GIRL           0x056
 #define FLAG_HIDE_TRAINER_SCHOOL_EARL               0x057
 #define FLAG_HIDE_SPROUT_TOWER_SILVER               0x058
@@ -316,7 +316,7 @@
 #define FLAG_ITEM_WHIRL_ISLANDS_B2F_ESCAPE_ROPE     (HNS_ITEM_BALL_START + 85)
 #define FLAG_ITEM_WHIRL_ISLANDS_B2F_FULL_RESTORE    (HNS_ITEM_BALL_START + 86)
 #define FLAG_ITEM_MTMORTAR1_ELIXIR                  (HNS_ITEM_BALL_START + 87)
-#define FLAG_ITEM_MTMORTAR1_TM_AERIAL_ACE                  (HNS_ITEM_BALL_START + 88)
+#define FLAG_ITEM_MTMORTAR1_TM_AERIAL_ACE           (HNS_ITEM_BALL_START + 88)
 #define FLAG_ITEM_MTMORTAR2_ESCAPE_ROPE             (HNS_ITEM_BALL_START + 89)
 #define FLAG_ITEM_MTMORTAR2_KINGS_ROCK              (HNS_ITEM_BALL_START + 90)
 #define FLAG_ITEM_MTMORTAR2_MAX_POTION              (HNS_ITEM_BALL_START + 91)
@@ -527,15 +527,15 @@
 #define FLAG_GOT_FRUSTRATION                        0x206
 #define FLAG_GOT_HIDDEN_POWER                       0x207
 #define FLAG_GOT_RETURN                             0x208
-#define FLAG_GOT_SUNNY_DAY                         0x209
+#define FLAG_GOT_SUNNY_DAY                          0x209
 #define FLAG_GOT_TM_FROM_MAHOGANY_COP               0x20A
 #define FLAG_GOT_TM_PSYCHIC                         0x20B
-#define FLAG_GOT_TM_SLEEP_TALK                            0x20C
+#define FLAG_GOT_TM_SLEEP_TALK                      0x20C
 #define FLAG_GOT_TM_SANDSTORM                       0x20D
 #define FLAG_GOT_TM_SNATCH                          0x20E
 #define FLAG_GOT_TM_STEEL_WING                      0x20F
 #define FLAG_GOT_ROUTE_14_AERIAL_ACE                0x210
-#define FLAG_GOT_VIRIDIAN_TM_DREAM_EATER           0x211
+#define FLAG_GOT_VIRIDIAN_TM_DREAM_EATER            0x211
 #define FLAG_GOT_BERRY_ROUTE_30_HOUSE               0x212
 #define FLAG_GOT_BLACK_BELT                         0x213
 #define FLAG_GOT_BLACK_GLASSES                      0x214
@@ -705,9 +705,9 @@
 #define FLAG_ITEM_ROUTE9_TM_FLASH_CANNON            (HNS_ITEMS_2_START + 15)
 #define FLAG_ITEM_GOLDENROD_DEPT_STORE_TM_FACADE    (HNS_ITEMS_2_START + 16)
 #define FLAG_ITEM_SAFFRON_GYM_TM_SKILL_SWAP         (HNS_ITEMS_2_START + 17)
-#define FLAG_ITEM_UNDERGROUND_PATH_TM_EXPLOSION      (HNS_ITEMS_2_START + 18)
-#define FLAG_ITEM_OLIVINE_TM_SWAGGER                  (HNS_ITEMS_2_START + 19)
-#define FLAG_ITEM_SOUTHER_ISLAND_SOUL_DEW                  (HNS_ITEMS_2_START + 20)
+#define FLAG_ITEM_UNDERGROUND_PATH_TM_EXPLOSION     (HNS_ITEMS_2_START + 18)
+#define FLAG_ITEM_OLIVINE_TM_SWAGGER                (HNS_ITEMS_2_START + 19)
+#define FLAG_ITEM_SOUTHER_ISLAND_SOUL_DEW           (HNS_ITEMS_2_START + 20)
 #define FLAG_UNUSED_HIDDEN_ITEM_21                  (HNS_ITEMS_2_START + 21)
 #define FLAG_UNUSED_HIDDEN_ITEM_22                  (HNS_ITEMS_2_START + 22)
 #define FLAG_UNUSED_HIDDEN_ITEM_23                  (HNS_ITEMS_2_START + 23)
@@ -830,16 +830,16 @@
 #define FLAG_BEVERLY_HAS_ITEM_HNS                   0x2F0
 #define FLAG_JOSE_HAS_ITEM_HNS                      0x2F1
 #define FLAG_KENJI_HAS_ITEM_HNS                     0x2F2
-#define FLAG_HIDE_ICEPATH_B1F_BOULDER1                              0x2F3
-#define FLAG_HIDE_ICEPATH_B1F_BOULDER2                              0x2F4
-#define FLAG_HIDE_ICEPATH_B1F_BOULDER3                              0x2F5
-#define FLAG_HIDE_ICEPATH_B1F_BOULDER4                              0x2F6
-#define FLAG_HIDE_ICEPATH_B2F_BOULDER1                              0x2F7
-#define FLAG_HIDE_ICEPATH_B2F_BOULDER2                              0x2F8
-#define FLAG_HIDE_ICEPATH_B2F_BOULDER3                              0x2F9
-#define FLAG_HIDE_ICEPATH_B2F_BOULDER4                              0x2FA
-#define FLAG_LATIOS_OR_LATIAS_ROAMING                              0x2FB
-#define FLAG_HIDE_VERMILION_STEVEN                              0x2FC
+#define FLAG_HIDE_ICEPATH_B1F_BOULDER1              0x2F3
+#define FLAG_HIDE_ICEPATH_B1F_BOULDER2              0x2F4
+#define FLAG_HIDE_ICEPATH_B1F_BOULDER3              0x2F5
+#define FLAG_HIDE_ICEPATH_B1F_BOULDER4              0x2F6
+#define FLAG_HIDE_ICEPATH_B2F_BOULDER1              0x2F7
+#define FLAG_HIDE_ICEPATH_B2F_BOULDER2              0x2F8
+#define FLAG_HIDE_ICEPATH_B2F_BOULDER3              0x2F9
+#define FLAG_HIDE_ICEPATH_B2F_BOULDER4              0x2FA
+#define FLAG_LATIOS_OR_LATIAS_ROAMING               0x2FB
+#define FLAG_HIDE_VERMILION_STEVEN                  0x2FC
 #define FLAG_MOM_HAS_GIFT                           0x2FD
 #define FLAG_UNUSED_30                              0x2FE
 #define FLAG_UNUSED_31                              0x2FF
@@ -858,20 +858,20 @@
 // Extended content flags (0x36A – 0x431)
 // 200 slots for new content; 0x432–0x4FF reserved for future trainer registered expansion
 #define HNS_EXTENDED_CONTENT_START                  0x36A
-#define FLAG_EXTENDED_CONTENT_0                     (HNS_EXTENDED_CONTENT_START + 0)
-#define FLAG_EXTENDED_CONTENT_1                     (HNS_EXTENDED_CONTENT_START + 1)
-#define FLAG_EXTENDED_CONTENT_2                     (HNS_EXTENDED_CONTENT_START + 2)
-#define FLAG_EXTENDED_CONTENT_3                     (HNS_EXTENDED_CONTENT_START + 3)
-#define FLAG_EXTENDED_CONTENT_4                     (HNS_EXTENDED_CONTENT_START + 4)
-#define FLAG_EXTENDED_CONTENT_5                     (HNS_EXTENDED_CONTENT_START + 5)
-#define FLAG_EXTENDED_CONTENT_6                     (HNS_EXTENDED_CONTENT_START + 6)
-#define FLAG_EXTENDED_CONTENT_7                     (HNS_EXTENDED_CONTENT_START + 7)
-#define FLAG_EXTENDED_CONTENT_8                     (HNS_EXTENDED_CONTENT_START + 8)
-#define FLAG_EXTENDED_CONTENT_9                     (HNS_EXTENDED_CONTENT_START + 9)
-#define FLAG_EXTENDED_CONTENT_10                    (HNS_EXTENDED_CONTENT_START + 10)
-#define FLAG_EXTENDED_CONTENT_11                    (HNS_EXTENDED_CONTENT_START + 11)
-#define FLAG_EXTENDED_CONTENT_12                    (HNS_EXTENDED_CONTENT_START + 12)
-#define FLAG_EXTENDED_CONTENT_13                    (HNS_EXTENDED_CONTENT_START + 13)
+#define FLAG_DECORATION_1                           (HNS_EXTENDED_CONTENT_START + 0)
+#define FLAG_DECORATION_2                           (HNS_EXTENDED_CONTENT_START + 1)
+#define FLAG_DECORATION_3                           (HNS_EXTENDED_CONTENT_START + 2)
+#define FLAG_DECORATION_4                           (HNS_EXTENDED_CONTENT_START + 3)
+#define FLAG_DECORATION_5                           (HNS_EXTENDED_CONTENT_START + 4)
+#define FLAG_DECORATION_6                           (HNS_EXTENDED_CONTENT_START + 5)
+#define FLAG_DECORATION_7                           (HNS_EXTENDED_CONTENT_START + 6)
+#define FLAG_DECORATION_8                           (HNS_EXTENDED_CONTENT_START + 7)
+#define FLAG_DECORATION_9                           (HNS_EXTENDED_CONTENT_START + 8)
+#define FLAG_DECORATION_10                          (HNS_EXTENDED_CONTENT_START + 9)
+#define FLAG_DECORATION_11                          (HNS_EXTENDED_CONTENT_START + 10)
+#define FLAG_DECORATION_12                          (HNS_EXTENDED_CONTENT_START + 11)
+#define FLAG_DECORATION_13                          (HNS_EXTENDED_CONTENT_START + 12)
+#define FLAG_DECORATION_14                          (HNS_EXTENDED_CONTENT_START + 13)
 #define FLAG_EXTENDED_CONTENT_14                    (HNS_EXTENDED_CONTENT_START + 14)
 #define FLAG_EXTENDED_CONTENT_15                    (HNS_EXTENDED_CONTENT_START + 15)
 #define FLAG_EXTENDED_CONTENT_16                    (HNS_EXTENDED_CONTENT_START + 16)
@@ -1305,20 +1305,6 @@
 #define FLAG_RECEIVED_TM_WATER_PULSE                0
 #define FLAG_HIDE_SECRET_BASE_TRAINER               0
 #define FLAG_HIDE_CONTEST_POKE_BALL                 0
-#define FLAG_DECORATION_1                           0
-#define FLAG_DECORATION_2                           0
-#define FLAG_DECORATION_3                           0
-#define FLAG_DECORATION_4                           0
-#define FLAG_DECORATION_5                           0
-#define FLAG_DECORATION_6                           0
-#define FLAG_DECORATION_7                           0
-#define FLAG_DECORATION_8                           0
-#define FLAG_DECORATION_9                           0
-#define FLAG_DECORATION_10                          0
-#define FLAG_DECORATION_11                          0
-#define FLAG_DECORATION_12                          0
-#define FLAG_DECORATION_13                          0
-#define FLAG_DECORATION_14                          0
 #define FLAG_DELIVERED_STEVEN_LETTER                0
 #define FLAG_DEFEATED_WALLY_MAUVILLE               0
 #define FLAG_DEFEATED_GRUNT_SPACE_CENTER_1F         0

@@ -58,6 +58,49 @@ static const struct OamData sBagOamData =
     .affineParam = 0
 };
 
+#if I_COMBINE_BAG_POCKETS
+static const union AnimCmd sSpriteAnim_Bag_Closed[] =
+{
+    ANIMCMD_FRAME(0, 4),
+    ANIMCMD_END
+};
+
+static const union AnimCmd sSpriteAnim_Bag_Items[] =
+{
+    ANIMCMD_FRAME(192, 4),
+    ANIMCMD_END
+};
+
+static const union AnimCmd sSpriteAnim_Bag_KeyItems[] =
+{
+    ANIMCMD_FRAME(192, 4),
+    ANIMCMD_END
+};
+
+static const union AnimCmd sSpriteAnim_Bag_Pokeballs[] =
+{
+    ANIMCMD_FRAME(128, 4),
+    ANIMCMD_END
+};
+
+static const union AnimCmd sSpriteAnim_Bag_TMsHMs[] =
+{
+    ANIMCMD_FRAME(256, 4),
+    ANIMCMD_END
+};
+
+static const union AnimCmd sSpriteAnim_Bag_Berries[] =
+{
+    ANIMCMD_FRAME(320, 4),
+    ANIMCMD_END
+};
+
+static const union AnimCmd sSpriteAnim_Bag_Medicine[] =
+{
+    ANIMCMD_FRAME(64, 4),
+    ANIMCMD_END
+};
+#else
 static const union AnimCmd sSpriteAnim_Bag_Closed[] =
 {
     ANIMCMD_FRAME(0, 4),
@@ -111,6 +154,7 @@ static const union AnimCmd sSpriteAnim_Bag_Treasures[] =
     ANIMCMD_FRAME(128, 4),
     ANIMCMD_END
 };
+#endif
 
 static const union AnimCmd *const sBagSpriteAnimTable[] =
 {
@@ -120,8 +164,10 @@ static const union AnimCmd *const sBagSpriteAnimTable[] =
     [POCKET_BERRIES]      = sSpriteAnim_Bag_Berries,
     [POCKET_KEY_ITEMS]    = sSpriteAnim_Bag_KeyItems,
     [POCKET_MEDICINE]     = sSpriteAnim_Bag_Medicine,
+#if !I_COMBINE_BAG_POCKETS
     [POCKET_BATTLE_ITEMS] = sSpriteAnim_Bag_BattleItems,   
     [POCKET_TREASURES]    = sSpriteAnim_Bag_Treasures,
+#endif
     [POCKET_DUMMY]        = sSpriteAnim_Bag_Closed,
 };
 

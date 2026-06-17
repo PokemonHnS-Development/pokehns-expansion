@@ -1249,6 +1249,10 @@ static bool8 CheckConditions(u8 tab, u8 itemIndex)
         case ITEM_MODE_GAMEMODE:
         case ITEM_MODE_NEXT:
             return TRUE;
+        case ITEM_MODE_FAIRY_TYPES:
+            // Lock Fairy Type enabled if Fairy One Type Challenge enabled, otherwise fall through
+            if (*GetSelectionPtr(TAB_CHALLENGES, ITEM_CHALLENGES_ONE_TYPE) == (TYPE_FAIRY - 2))
+                return FALSE;
         default:
             return *GetSelectionPtr(TAB_MODE, ITEM_MODE_GAMEMODE) == 1; // CUSTOM
         }
@@ -1752,6 +1756,12 @@ static void ProcessLeftRight(void)
             *GetSelectionPtr(TAB_NUZLOCKE, ITEM_NUZLOCKE_RARE_CANDY)     = 1; // OFF
         }
 
+        // If Fairy monotype challenge set, force "Add Fairy Type" on
+        if (sMenu->currentTab == TAB_CHALLENGES && itemIndex == ITEM_CHALLENGES_ONE_TYPE
+            && *sel == (TYPE_FAIRY - 2))
+        {
+            *GetSelectionPtr(TAB_MODE, ITEM_MODE_FAIRY_TYPES) = 1; // ON
+        }
 
         PlaySE(SE_SELECT);
         RedrawListMenu(sMenu->listTaskId);
@@ -1955,6 +1965,10 @@ static void Task_Save(u8 taskId)
     cs->tx_Challenges_BaseStatEqualizer = *GetSelectionPtr(TAB_CHALLENGES, ITEM_CHALLENGES_BST_EQUALIZER);
     cs->tx_Challenges_Mirror          = *GetSelectionPtr(TAB_CHALLENGES, ITEM_CHALLENGES_MIRROR);
     cs->tx_Challenges_Mirror_Thief    = *GetSelectionPtr(TAB_CHALLENGES, ITEM_CHALLENGES_MIRROR_THIEF);
+
+    // If Fairy monotype challenge set, force "Add Fairy Type" on
+    if (!cs->tx_Mode_Fairy_Types)    
+        cs->tx_Mode_Fairy_Types = cs->tx_Challenges_OneTypeChallenge == TYPE_FAIRY;
 
     BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
     gTasks[taskId].func = Task_FadeOut;
@@ -2189,6 +2203,7 @@ bool32 HMsOverwriteOptionActive(void)
 {
     struct ChallengeSettings *cs = &gSaveBlock3Ptr->challengeSettings;
     return (cs->tx_Challenges_Nuzlocke
+            || cs->tx_Nuzlocke_EasyMode
             || cs->tx_Challenges_Mirror
             || cs->tx_Random_Moves
             || cs->tx_Challenges_OneTypeChallenge != ONE_TYPE_OFF);

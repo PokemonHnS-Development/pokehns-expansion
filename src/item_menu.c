@@ -345,6 +345,7 @@ static const u8 sContextMenuItems_MedicinePocket[] = {
     ACTION_TOSS,        ACTION_CANCEL
 };
 
+#if !I_COMBINE_BAG_POCKETS
 static const u8 sContextMenuItems_BattleItemsPocket[] = {
     ACTION_USE,         ACTION_GIVE,
     ACTION_TOSS,        ACTION_CANCEL
@@ -354,6 +355,7 @@ static const u8 sContextMenuItems_TreasuresPocket[] = {
     ACTION_GIVE,        ACTION_DUMMY,
     ACTION_TOSS,        ACTION_CANCEL
 };
+#endif
 
 static const u8 sContextMenuItems_BattleUse[] = {
     ACTION_BATTLE_USE,  ACTION_CANCEL
@@ -1500,10 +1502,17 @@ static void DrawItemListBgRow(u8 y)
 
 static void DrawPocketIndicatorSquare(u8 x, bool8 isCurrentPocket)
 {
+#if I_COMBINE_BAG_POCKETS
+    if (!isCurrentPocket)
+        FillBgTilemapBufferRect_Palette0(2, 0x1017, x + 5, 3, 1, 1);
+    else
+        FillBgTilemapBufferRect_Palette0(2, 0x102B, x + 5, 3, 1, 1);
+#else
     if (!isCurrentPocket)
         FillBgTilemapBufferRect_Palette0(2, 0x1017, x + 4, 3, 1, 1);
     else
         FillBgTilemapBufferRect_Palette0(2, 0x102B, x + 4, 3, 1, 1);
+#endif
     ScheduleBgCopyTilemapToVram(2);
 }
 
@@ -1735,6 +1744,7 @@ static void OpenContextMenu(u8 taskId)
                 gBagMenu->contextMenuItemsPtr = sContextMenuItems_MedicinePocket;
                 gBagMenu->contextMenuNumItems = ARRAY_COUNT(sContextMenuItems_MedicinePocket);
                 break;
+#if !I_COMBINE_BAG_POCKETS
             case POCKET_BATTLE_ITEMS:
                 gBagMenu->contextMenuItemsPtr = sContextMenuItems_BattleItemsPocket;
                 gBagMenu->contextMenuNumItems = ARRAY_COUNT(sContextMenuItems_BattleItemsPocket);
@@ -1743,6 +1753,7 @@ static void OpenContextMenu(u8 taskId)
                 gBagMenu->contextMenuItemsPtr = sContextMenuItems_TreasuresPocket;
                 gBagMenu->contextMenuNumItems = ARRAY_COUNT(sContextMenuItems_TreasuresPocket);
                 break;
+#endif
             }
         }
     }

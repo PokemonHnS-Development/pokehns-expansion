@@ -229,6 +229,7 @@ void NewGameInitData(void)
     ClearFrontierRecord();
     ClearSav1();
     ClearSav3();
+    gSaveBlock1Ptr->saveVersion = 1;
     SetDefaultChallengeSettings();
     gSaveBlock3Ptr->challengeSettings = savedChallenge;
     ClearAllMail();

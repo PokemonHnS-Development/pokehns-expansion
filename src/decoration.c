@@ -118,7 +118,11 @@ EWRAM_DATA static u8 sPlayerRoomItemsIndicesBuffer[DECOR_MAX_PLAYERS_HOUSE] = {}
 EWRAM_DATA static u16 sDecorationsCursorPos = 0;
 EWRAM_DATA static u16 sDecorationsScrollOffset = 0;
 EWRAM_DATA u8 gCurDecorationIndex = 0;
+#if IS_HNS
+EWRAM_DATA static u8 sCurDecorationCategory = DECORCAT_DOLL;
+#else
 EWRAM_DATA static u8 sCurDecorationCategory = DECORCAT_DESK;
+#endif
 EWRAM_DATA static struct DecorationPCContext sDecorationContext = {};
 EWRAM_DATA static u8 sDecorMenuWindowIds[WINDOW_COUNT] = {};
 EWRAM_DATA static struct DecorationItemsMenu *sDecorationItemsMenu = NULL;
@@ -216,6 +220,9 @@ static void TossDecoration(u8 taskId);
 
 static const u8 *const sDecorationCategoryNames[] =
 {
+    #if IS_HNS
+    gText_Doll
+    #else
     gText_Desk,
     gText_Chair,
     gText_Plant,
@@ -224,6 +231,7 @@ static const u8 *const sDecorationCategoryNames[] =
     gText_Poster,
     gText_Doll,
     gText_Cushion
+    #endif
 };
 
 static const struct MenuAction sDecorationMainMenuActions[] =

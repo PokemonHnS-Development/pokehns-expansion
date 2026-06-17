@@ -1,7 +1,20 @@
 NewBarkTown_PlayersHouse_2F_hns_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, NewBarkTown_PlayersHouse_2F_OnTransition
+	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, NewBarkTown_PlayersHouse_2F_OnWarp
 	.byte 0
 
+NewBarkTown_PlayersHouse_2F_OnTransition::
+	call SecretBase_EventScript_SetDecorationFlags
+	setvar VAR_SECRET_BASE_INITIALIZED, 0
+	end
 
+NewBarkTown_PlayersHouse_2F_OnWarp::
+	map_script_2 VAR_SECRET_BASE_INITIALIZED, 0, NewBarkTown_PlayersHouse_2F_OnWarp_SetDecoration
+	.2byte 0
+
+NewBarkTown_PlayersHouse_2F_OnWarp_SetDecoration::
+	call SecretBase_EventScript_InitDecorations
+	end
 
 NewBarkTown_PlayersHouse_2F_Script_ClockSetupTrigger1::
     lock

@@ -236,8 +236,10 @@
 #define STDSTRING_EARTH_BADGE      37
 #define STDSTRING_COINS            38
 #define STDSTRING_MEDICINE         39
+#if !I_COMBINE_BAG_POCKETS
 #define STDSTRING_BATTLE_ITEMS     40
 #define STDSTRING_TREASURES        41
+#endif
 
 // Dynamic Multichoice Callbacks
 

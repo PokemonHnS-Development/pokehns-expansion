@@ -160,6 +160,23 @@ MoveTutor_EventScript_ExplosionTaught::
 	release
 	end
 
+IlexForest_EventScript_HeadbuttMoveTutor::
+	lock
+	faceplayer
+	move_tutor MOVE_HEADBUTT, MoveTutor_Text_HeadbuttTeach, MoveTutor_Text_HeadbuttWhichMon, MoveTutor_EventScript_HeadbuttDeclined, MoveTutor_EventScript_HeadbuttTaught, FLAG_MOVE_TUTOR_TAUGHT_HEADBUTT
+	end
+
+MoveTutor_EventScript_HeadbuttDeclined::
+	msgbox MoveTutor_Text_HeadbuttDeclined, MSGBOX_DEFAULT
+	release
+	end
+
+MoveTutor_EventScript_HeadbuttTaught::
+	setflag FLAG_GET_HEADBUTT
+	msgbox MoveTutor_Text_HeadbuttTaught, MSGBOX_DEFAULT
+	release
+	end
+
 MoveTutor_EventScript_OpenPartyMenu::
 	special ChooseMonForMoveTutor
 	waitstate

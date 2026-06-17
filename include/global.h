@@ -1172,13 +1172,17 @@ struct ExternalEventFlags
 struct Bag
 {
     struct ItemSlot items[BAG_ITEMS_COUNT];
+#if !I_COMBINE_BAG_POCKETS
+    struct ItemSlot treasures[BAG_TREASURES_COUNT];
+#endif
     struct ItemSlot keyItems[BAG_KEYITEMS_COUNT];
     struct ItemSlot pokeBalls[BAG_POKEBALLS_COUNT];
     struct ItemSlot TMsHMs[BAG_TMHM_COUNT];
     struct ItemSlot berries[BAG_BERRIES_COUNT];
     struct ItemSlot medicine[BAG_MEDICINE_COUNT];
+#if !I_COMBINE_BAG_POCKETS
     struct ItemSlot battleItems[BAG_BATTLE_ITEMS_COUNT];
-    struct ItemSlot treasures[BAG_TREASURES_COUNT];
+#endif
 };
 
 struct MomSavingsData
@@ -1191,6 +1195,7 @@ struct MomSavingsData
 
 struct SaveBlock1
 {
+             u16 saveVersion;
     /*0x00*/ struct Coords16 pos;
     /*0x04*/ struct WarpData location;
     /*0x0C*/ struct WarpData continueGameWarp;

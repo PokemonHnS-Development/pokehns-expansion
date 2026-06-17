@@ -1448,8 +1448,10 @@ const u8 *const gStdStrings[] =
     [STDSTRING_EARTH_BADGE]      = gText_Earthbadge,
     [STDSTRING_COINS]            = COMPOUND_STRING("COINS"),
     [STDSTRING_MEDICINE]         = gText_Medicine,
+#if !I_COMBINE_BAG_POCKETS
     [STDSTRING_BATTLE_ITEMS]     = gText_BattleItems,
     [STDSTRING_TREASURES]        = gText_Treasures,
+#endif
 };
 
 static const u8 sLinkServicesMultichoiceIds[] =
