@@ -1952,6 +1952,24 @@ const struct SpriteFrameImage gSurfingOverlayPicTable_Rayquaza[] = {
     overworld_frame(gSurfablePokemonPic_Rayquaza, 8, 8, 11),
 };
 
+const struct SpriteFrameImage gSurfingOverworldPicTable_Bibarel[] = {
+    overworld_frame(gSurfablePokemonPic_Bibarel, 4, 4, 0),
+    overworld_frame(gSurfablePokemonPic_Bibarel, 4, 4, 1),
+    overworld_frame(gSurfablePokemonPic_Bibarel, 4, 4, 2),
+    overworld_frame(gSurfablePokemonPic_Bibarel, 4, 4, 3),
+    overworld_frame(gSurfablePokemonPic_Bibarel, 4, 4, 4),
+    overworld_frame(gSurfablePokemonPic_Bibarel, 4, 4, 5),
+};
+
+const struct SpriteFrameImage gSurfingOverlayPicTable_Bibarel[] = {
+    overworld_frame(gSurfablePokemonPic_Bibarel, 4, 4, 6),
+    overworld_frame(gSurfablePokemonPic_Bibarel, 4, 4, 7),
+    overworld_frame(gSurfablePokemonPic_Bibarel, 4, 4, 8),
+    overworld_frame(gSurfablePokemonPic_Bibarel, 4, 4, 9),
+    overworld_frame(gSurfablePokemonPic_Bibarel, 4, 4, 10),
+    overworld_frame(gSurfablePokemonPic_Bibarel, 4, 4, 11),
+};
+
 const struct SpriteFrameImage gSurfingOverworldPicTable_Munchlax[] = {
     overworld_frame(gSurfablePokemonPic_Munchlax, 4, 4, 0),
     overworld_frame(gSurfablePokemonPic_Munchlax, 4, 4, 1),
@@ -4014,6 +4032,24 @@ const struct SpriteFrameImage gSurfingOverlayShinyPicTable_Rayquaza[] = {
     overworld_frame(gSurfableShinyPokemonPic_Rayquaza, 8, 8, 9),
     overworld_frame(gSurfableShinyPokemonPic_Rayquaza, 8, 8, 10),
     overworld_frame(gSurfableShinyPokemonPic_Rayquaza, 8, 8, 11),
+};
+
+const struct SpriteFrameImage gSurfingOverworldShinyPicTable_Bibarel[] = {
+    overworld_frame(gSurfableShinyPokemonPic_Bibarel, 4, 4, 0),
+    overworld_frame(gSurfableShinyPokemonPic_Bibarel, 4, 4, 1),
+    overworld_frame(gSurfableShinyPokemonPic_Bibarel, 4, 4, 2),
+    overworld_frame(gSurfableShinyPokemonPic_Bibarel, 4, 4, 3),
+    overworld_frame(gSurfableShinyPokemonPic_Bibarel, 4, 4, 4),
+    overworld_frame(gSurfableShinyPokemonPic_Bibarel, 4, 4, 5),
+};
+
+const struct SpriteFrameImage gSurfingOverlayShinyPicTable_Bibarel[] = {
+    overworld_frame(gSurfableShinyPokemonPic_Bibarel, 4, 4, 6),
+    overworld_frame(gSurfableShinyPokemonPic_Bibarel, 4, 4, 7),
+    overworld_frame(gSurfableShinyPokemonPic_Bibarel, 4, 4, 8),
+    overworld_frame(gSurfableShinyPokemonPic_Bibarel, 4, 4, 9),
+    overworld_frame(gSurfableShinyPokemonPic_Bibarel, 4, 4, 10),
+    overworld_frame(gSurfableShinyPokemonPic_Bibarel, 4, 4, 11),
 };
 
 const struct SpriteFrameImage gSurfingOverworldShinyPicTable_Munchlax[] = {

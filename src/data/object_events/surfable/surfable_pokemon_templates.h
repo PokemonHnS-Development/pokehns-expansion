@@ -112,6 +112,13 @@ enum
     PAL_TAG_KYOGRE_SURF,
     PAL_TAG_RAYQUAZA_SURF,
 // Gen IV+ Pokemon
+    PAL_TAG_BIBAREL_SURF,
+    PAL_TAG_BUIZEL,
+    PAL_TAG_FLOATZEL,
+    PAL_TAG_SHELLOS_EAST_SURF,
+    PAL_TAG_SHELLOS_WEST_SURF,
+    PAL_TAG_GASTRODON_EAST_SURF,
+    PAL_TAG_GASTRODON_WEST_SURF,
     PAL_TAG_MUNCHLAX_SURF,
     PAL_TAG_MANTYKE_SURF,
     PAL_TAG_WEAVILE_SURF,
@@ -249,6 +256,7 @@ const struct SpritePalette sSurfablePokemonPalettes[] = {
     {gSurfablePokemonPalette_Kyogre,    PAL_TAG_KYOGRE_SURF},
     {gSurfablePokemonPalette_Rayquaza,  PAL_TAG_RAYQUAZA_SURF},
 /// Gen IV+ Pokemon
+    {gSurfablePokemonPalette_Bibarel,  PAL_TAG_BIBAREL_SURF},
     {gSurfablePokemonPalette_Munchlax,  PAL_TAG_MUNCHLAX_SURF},
     {gSurfablePokemonPalette_Mantyke,   PAL_TAG_MANTYKE_SURF},
     {gSurfablePokemonPalette_Weavile,   PAL_TAG_WEAVILE_SURF},
@@ -386,6 +394,7 @@ const struct SpritePalette sSurfablePokemonShinyPalettes[] = {
     {gSurfablePokemonShinyPalette_Kyogre,    PAL_TAG_KYOGRE_SURF},
     {gSurfablePokemonShinyPalette_Rayquaza,  PAL_TAG_RAYQUAZA_SURF},
 /// Gen IV+ Pokemon
+    {gSurfablePokemonShinyPalette_Bibarel,  PAL_TAG_BIBAREL_SURF},
     {gSurfablePokemonShinyPalette_Munchlax,  PAL_TAG_MUNCHLAX_SURF},
     {gSurfablePokemonShinyPalette_Mantyke,   PAL_TAG_MANTYKE_SURF},
     {gSurfablePokemonShinyPalette_Weavile,   PAL_TAG_WEAVILE_SURF},
@@ -523,6 +532,7 @@ const struct SpritePalette sSurfablePokemonShinyModernPalettes[] = {
     {gSurfablePokemonShinyPalette_Kyogre,    PAL_TAG_KYOGRE_SURF},
     {gSurfablePokemonShinyPalette_Rayquaza,  PAL_TAG_RAYQUAZA_SURF},
 /// Gen IV+ Pokemon
+    {gSurfablePokemonShinyPalette_Bibarel,  PAL_TAG_BIBAREL_SURF},
     {gSurfablePokemonShinyPalette_Munchlax,  PAL_TAG_MUNCHLAX_SURF},
     {gSurfablePokemonShinyPalette_Mantyke,   PAL_TAG_MANTYKE_SURF},
     {gSurfablePokemonShinyPalette_Weavile,   PAL_TAG_WEAVILE_SURF},
@@ -711,6 +721,7 @@ const struct SpriteTemplate gSurfablePokemonOverworldSprites[] =
     {0xFFFF, PAL_TAG_LATIOS_SURF,    &gObjectEventBaseOam_32x32, gSurfablePokemonAnimTable, gSurfingOverworldPicTable_Latios,    gDummySpriteAffineAnimTable, UpdateSurfBlobFieldEffect},
     {0xFFFF, PAL_TAG_KYOGRE_SURF,    &gObjectEventBaseOam_64x64, gSurfablePokemonAnimTable, gSurfingOverworldPicTable_Kyogre,    gDummySpriteAffineAnimTable, UpdateSurfBlobFieldEffect},
     {0xFFFF, PAL_TAG_RAYQUAZA_SURF,  &gObjectEventBaseOam_64x64, gSurfablePokemonAnimTable, gSurfingOverworldPicTable_Rayquaza,  gDummySpriteAffineAnimTable, UpdateSurfBlobFieldEffect},
+    {0xFFFF, PAL_TAG_BIBAREL_SURF,   &gObjectEventBaseOam_32x32, gSurfablePokemonAnimTable, gSurfingOverworldPicTable_Bibarel,   gDummySpriteAffineAnimTable, UpdateSurfBlobFieldEffect},
     {0xFFFF, PAL_TAG_MUNCHLAX_SURF,  &gObjectEventBaseOam_32x32, gSurfablePokemonAnimTable, gSurfingOverworldPicTable_Munchlax,  gDummySpriteAffineAnimTable, UpdateSurfBlobFieldEffect},
     {0xFFFF, PAL_TAG_MANTYKE_SURF,   &gObjectEventBaseOam_32x32, gSurfablePokemonAnimTable, gSurfingOverworldPicTable_Mantyke,   gDummySpriteAffineAnimTable, UpdateSurfBlobFieldEffect},
     {0xFFFF, PAL_TAG_WEAVILE_SURF,   &gObjectEventBaseOam_32x32, gSurfablePokemonAnimTable, gSurfingOverworldPicTable_Weavile,   gDummySpriteAffineAnimTable, UpdateSurfBlobFieldEffect},
@@ -849,6 +860,7 @@ const struct SpriteTemplate gSurfablePokemonOverlaySprites[] =
     {0xFFFF, PAL_TAG_LATIOS_SURF,    &gObjectEventBaseOam_32x32, gSurfablePokemonAnimTable, gSurfingOverlayPicTable_Latios,    gDummySpriteAffineAnimTable, UpdateSurfMonOverlay},
     NO_OVERLAY, // Kyogre
     {0xFFFF, PAL_TAG_RAYQUAZA_SURF,  &gObjectEventBaseOam_64x64, gSurfablePokemonAnimTable, gSurfingOverlayPicTable_Rayquaza,  gDummySpriteAffineAnimTable, UpdateSurfMonOverlay},
+    {0xFFFF, PAL_TAG_BIBAREL_SURF,   &gObjectEventBaseOam_32x32, gSurfablePokemonAnimTable, gSurfingOverlayPicTable_Bibarel,   gDummySpriteAffineAnimTable, UpdateSurfMonOverlay},    
     {0xFFFF, PAL_TAG_MUNCHLAX_SURF,  &gObjectEventBaseOam_32x32, gSurfablePokemonAnimTable, gSurfingOverlayPicTable_Munchlax,  gDummySpriteAffineAnimTable, UpdateSurfMonOverlay},    
     {0xFFFF, PAL_TAG_MANTYKE_SURF,   &gObjectEventBaseOam_32x32, gSurfablePokemonAnimTable, gSurfingOverlayPicTable_Mantyke,   gDummySpriteAffineAnimTable, UpdateSurfMonOverlay},
     {0xFFFF, PAL_TAG_WEAVILE_SURF,   &gObjectEventBaseOam_32x32, gSurfablePokemonAnimTable, gSurfingOverlayPicTable_Weavile,   gDummySpriteAffineAnimTable, UpdateSurfMonOverlay},
@@ -986,6 +998,7 @@ const struct SpriteTemplate gSurfablePokemonOverworldShinySprites[] =
     {0xFFFF, PAL_TAG_LATIOS_SURF,    &gObjectEventBaseOam_32x32, gSurfablePokemonAnimTable, gSurfingOverworldShinyPicTable_Latios,    gDummySpriteAffineAnimTable, UpdateSurfBlobFieldEffect},
     {0xFFFF, PAL_TAG_KYOGRE_SURF,    &gObjectEventBaseOam_64x64, gSurfablePokemonAnimTable, gSurfingOverworldShinyPicTable_Kyogre,    gDummySpriteAffineAnimTable, UpdateSurfBlobFieldEffect},
     {0xFFFF, PAL_TAG_RAYQUAZA_SURF,  &gObjectEventBaseOam_64x64, gSurfablePokemonAnimTable, gSurfingOverworldShinyPicTable_Rayquaza,  gDummySpriteAffineAnimTable, UpdateSurfBlobFieldEffect},
+    {0xFFFF, PAL_TAG_BIBAREL_SURF,   &gObjectEventBaseOam_32x32, gSurfablePokemonAnimTable, gSurfingOverworldShinyPicTable_Bibarel,   gDummySpriteAffineAnimTable, UpdateSurfBlobFieldEffect},
     {0xFFFF, PAL_TAG_MUNCHLAX_SURF,  &gObjectEventBaseOam_32x32, gSurfablePokemonAnimTable, gSurfingOverworldShinyPicTable_Munchlax,  gDummySpriteAffineAnimTable, UpdateSurfBlobFieldEffect},
     {0xFFFF, PAL_TAG_MANTYKE_SURF,   &gObjectEventBaseOam_32x32, gSurfablePokemonAnimTable, gSurfingOverworldShinyPicTable_Mantyke,   gDummySpriteAffineAnimTable, UpdateSurfBlobFieldEffect},
     {0xFFFF, PAL_TAG_WEAVILE_SURF,   &gObjectEventBaseOam_32x32, gSurfablePokemonAnimTable, gSurfingOverworldShinyPicTable_Weavile,   gDummySpriteAffineAnimTable, UpdateSurfBlobFieldEffect},
@@ -1124,6 +1137,7 @@ const struct SpriteTemplate gSurfablePokemonOverlayShinySprites[] =
     {0xFFFF, PAL_TAG_LATIOS_SURF,    &gObjectEventBaseOam_32x32, gSurfablePokemonAnimTable, gSurfingOverlayShinyPicTable_Latios,    gDummySpriteAffineAnimTable, UpdateSurfMonOverlay},
     NO_OVERLAY, // Kyogre
     {0xFFFF, PAL_TAG_RAYQUAZA_SURF,  &gObjectEventBaseOam_64x64, gSurfablePokemonAnimTable, gSurfingOverlayShinyPicTable_Rayquaza,  gDummySpriteAffineAnimTable, UpdateSurfMonOverlay},
+    {0xFFFF, PAL_TAG_BIBAREL_SURF,   &gObjectEventBaseOam_32x32, gSurfablePokemonAnimTable, gSurfingOverlayShinyPicTable_Bibarel,   gDummySpriteAffineAnimTable, UpdateSurfMonOverlay},    
     {0xFFFF, PAL_TAG_MUNCHLAX_SURF,  &gObjectEventBaseOam_32x32, gSurfablePokemonAnimTable, gSurfingOverlayShinyPicTable_Munchlax,  gDummySpriteAffineAnimTable, UpdateSurfMonOverlay},    
     {0xFFFF, PAL_TAG_MANTYKE_SURF,   &gObjectEventBaseOam_32x32, gSurfablePokemonAnimTable, gSurfingOverlayShinyPicTable_Mantyke,   gDummySpriteAffineAnimTable, UpdateSurfMonOverlay},
     {0xFFFF, PAL_TAG_WEAVILE_SURF,   &gObjectEventBaseOam_32x32, gSurfablePokemonAnimTable, gSurfingOverlayShinyPicTable_Weavile,   gDummySpriteAffineAnimTable, UpdateSurfMonOverlay},
