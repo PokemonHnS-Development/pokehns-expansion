@@ -561,6 +561,11 @@ const u32 gSurfableShinyPokemonPic_Bibarel[] = INCBIN_U32("graphics/object_event
 const u16 gSurfablePokemonPalette_Bibarel[] = INCBIN_U16("graphics/object_events/pics/pokemon/surfable/0400_bibarel.gbapal");
 const u16 gSurfablePokemonShinyPalette_Bibarel[] = INCBIN_U16("graphics/object_events/pics/pokemon/surfable/0400_bibarel_shiny.gbapal");
 
+const u32 gSurfablePokemonPic_ShellosEast[] = INCBIN_U32("graphics/object_events/pics/pokemon/surfable/0422_shellos_east.4bpp");
+const u32 gSurfableShinyPokemonPic_ShellosEast[] = INCBIN_U32("graphics/object_events/pics/pokemon/surfable/0422_shellos_east_shiny.4bpp");
+const u16 gSurfablePokemonPalette_ShellosEast[] = INCBIN_U16("graphics/object_events/pics/pokemon/surfable/0422_shellos_east.gbapal");
+const u16 gSurfablePokemonShinyPalette_ShellosEast[] = INCBIN_U16("graphics/object_events/pics/pokemon/surfable/0422_shellos_east_shiny.gbapal");
+ 
 const u32 gSurfablePokemonPic_Munchlax[] = INCBIN_U32("graphics/object_events/pics/pokemon/surfable/0446_munchlax.4bpp");
 const u32 gSurfableShinyPokemonPic_Munchlax[] = INCBIN_U32("graphics/object_events/pics/pokemon/surfable/0446_munchlax_shiny.4bpp");
 const u16 gSurfablePokemonPalette_Munchlax[] = INCBIN_U16("graphics/object_events/pics/pokemon/surfable/0446_munchlax.gbapal");
