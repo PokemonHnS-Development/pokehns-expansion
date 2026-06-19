@@ -1242,9 +1242,32 @@ static bool16 IsInfiltratedSpaceCenter(struct WarpData *warp)
     return FALSE;
 }
 
+#define IS_MAP(mapGroupId, mapNumId) \
+    (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(mapGroupId) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(mapNumId))
+
+static bool16 IsRocketTakeover(struct WarpData *warp)
+{
+    // Inject Rocket Takeover override logic
+    if (VarGet(VAR_MAHOGANY_TOWN_STATE) == 16)
+    {
+        if (IS_MAP(MAP_GOLDENROD_CITY_HNS, MAP_GOLDENROD_CITY_HNS) ||
+            IS_MAP(MAP_GOLDENROD_CITY_RADIO_TOWER_1F_HNS, MAP_GOLDENROD_CITY_RADIO_TOWER_1F_HNS) ||
+            IS_MAP(MAP_GOLDENROD_CITY_RADIO_TOWER_2F_HNS, MAP_GOLDENROD_CITY_RADIO_TOWER_2F_HNS) ||
+            IS_MAP(MAP_GOLDENROD_CITY_RADIO_TOWER_3F_HNS, MAP_GOLDENROD_CITY_RADIO_TOWER_3F_HNS) ||
+            IS_MAP(MAP_GOLDENROD_CITY_RADIO_TOWER_4F_HNS, MAP_GOLDENROD_CITY_RADIO_TOWER_4F_HNS) ||
+            IS_MAP(MAP_GOLDENROD_CITY_RADIO_TOWER_5F_HNS, MAP_GOLDENROD_CITY_RADIO_TOWER_5F_HNS) ||
+            IS_MAP(MAP_GOLDENROD_CITY_UNDERGROUND_ENTRANCE_HNS, MAP_GOLDENROD_CITY_UNDERGROUND_ENTRANCE_HNS) ||
+            IS_MAP(MAP_GOLDENROD_CITY_UNDERGROUND_TUNNEL_HNS, MAP_GOLDENROD_CITY_UNDERGROUND_TUNNEL_HNS))
+            return TRUE;
+    }
+    return FALSE;
+}
+
 u16 GetLocationMusic(struct WarpData *warp)
 {
-    if (NoMusicInSootopolisWithLegendaries(warp) == TRUE)
+    if (IsRocketTakeover(warp) == TRUE)
+        return MUS_HG_ROCKET_TAKEOVER;
+    else if (NoMusicInSootopolisWithLegendaries(warp) == TRUE)
         return MUS_NONE;
     else if (ShouldLegendaryMusicPlayAtLocation(warp) == TRUE)
         return MUS_ABNORMAL_WEATHER;
@@ -1403,7 +1426,7 @@ void TryFadeOutOldMapMusic(void)
     u16 warpMusic = GetWarpDestinationMusic();
     if (FlagGet(FLAG_DONT_TRANSITION_MUSIC) != TRUE && warpMusic != GetCurrentMapMusic())
     {
-        if (currentMusic == MUS_SURF
+        if ((currentMusic == MUS_SURF
             && VarGet(VAR_SKY_PILLAR_STATE) == 2
             && gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_SOOTOPOLIS_CITY)
             && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_SOOTOPOLIS_CITY)
@@ -1411,6 +1434,10 @@ void TryFadeOutOldMapMusic(void)
             && sWarpDestination.mapNum == MAP_NUM(MAP_SOOTOPOLIS_CITY)
             && sWarpDestination.x == 29
             && sWarpDestination.y == 53)
+            || (currentMusic == MUS_HG_ROCKET_TAKEOVER
+            && sWarpDestination.mapGroup == MAP_GROUP(MAP_GOLDENROD_CITY_UNDERGROUND_TUNNEL_HNS)
+            && sWarpDestination.mapNum == MAP_NUM(MAP_GOLDENROD_CITY_UNDERGROUND_TUNNEL_HNS)
+            && sWarpDestination.warpId == 2))
             return;
         FadeOutMapMusic(GetMapMusicFadeoutSpeed());
     }
