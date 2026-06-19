@@ -399,7 +399,9 @@ NewBarkTown_Lab_EventScript_PoliceYes::
 	applymovement OBJ_EVENT_ID_PLAYER, NewBarkTown_Lab_Movement_PlayerStepsToElm
 	waitmovement 0
 	msgbox NewBarkTown_Lab_Text_ElmAfterTheft1, MSGBOX_DEFAULT
+	playfanfare MUS_LEVEL_UP
 	msgbox NewBarkTown_Lab_Text_ElmAfterTheft2, MSGBOX_DEFAULT
+	wait fanfare
 	closemessage
 	applymovement LOCALID_ELM, NewBarkTown_Lab_Movement_ElmStepBack
 	waitmovement 0
