@@ -129,6 +129,7 @@ Route39_EventScript_BaobaIntro::
 	waitmovement 0
 	setflag FLAG_ENABLE_BAOBA_MATCH_CALL
 	removeobject LOCALID_R39_BAOBA
+	call_if_eq VAR_MAHOGANY_TOWN_STATE, 18, Mahoganytown_EventScript_RocketTrigger
 	release
 	end
 
