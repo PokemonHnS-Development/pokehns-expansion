@@ -30,7 +30,7 @@ GoldenrodCity_UndergroundSwitches_EventScript_AntiSoftLock::
 	end
 
 GoldenrodCity_UndergroundSwitches_EventScript_AntiSoftLock_TP::
-	warp MAP_GOLDENROD_CITY_UNDERGROUND_SWITCHES, 2, 25, 5
+	warp MAP_GOLDENROD_CITY_UNDERGROUND_SWITCHES_HNS, 2, 25, 5
 	release
 	end
 

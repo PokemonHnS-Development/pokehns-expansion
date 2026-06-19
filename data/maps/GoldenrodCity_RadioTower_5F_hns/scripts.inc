@@ -88,6 +88,12 @@ GoldenrodCity_RadioTower_5F_EventScript_DirectorDone::
 	release
 	end
 
+GoldenrodCity_RadioTower_5F_EventScript_DirectorWest::
+	msgbox GoldenrodCity_RadioTower_5F_Text_DirectorWest, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
 GoldenrodCity_RadioTower_5F_Movement_Spin:
 	face_right
 	delay_8
