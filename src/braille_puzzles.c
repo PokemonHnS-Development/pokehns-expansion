@@ -374,10 +374,17 @@ bool8 CheckOmanyte(void)
 
 bool8 CheckTogepi(void)
 {
-    if (GetMonData(&gPlayerParty[0], MON_DATA_SPECIES_OR_EGG, 0) == SPECIES_TOGEPI
-     || GetMonData(&gPlayerParty[0], MON_DATA_SPECIES_OR_EGG, 0) == SPECIES_TOGETIC
-     || GetMonData(&gPlayerParty[0], MON_DATA_SPECIES_OR_EGG, 0) == SPECIES_TOGEKISS)
-        return TRUE;
+    // Elm doesn't check Togepi until the egg has been received.
+    // After that, even if it's not hatched, if you somehow got a Togepi or its evolutions, Elm's script will trigger
+    if (FlagGet(FLAG_RECEIVED_TOGEPI_EGG) == TRUE)
+    {
+        if (   GetMonData(&gPlayerParty[0], MON_DATA_SPECIES_OR_EGG, 0) == SPECIES_TOGEPI
+            || GetMonData(&gPlayerParty[0], MON_DATA_SPECIES_OR_EGG, 0) == SPECIES_TOGETIC
+            || GetMonData(&gPlayerParty[0], MON_DATA_SPECIES_OR_EGG, 0) == SPECIES_TOGEKISS)
+        {
+            return TRUE;
+        }
+    }
     return FALSE;
 }
 

@@ -2706,8 +2706,6 @@ bool8 ScrCmd_showmonpic(struct ScriptContext *ctx)
         if (RandomizerFeatureEnabled(RANDOMIZE_STARTER_AND_GIFT_MON))
         {
             species = RandomizeMon(RANDOMIZER_REASON_STARTER_AND_GIFT_MON, GetRandomizerOption(RANDOMIZER_OPTION_SPECIES_MODE), GetRandomizerSeed() ^ species, species);
-            if (species == SPECIES_TOGEPI)
-                species = SPECIES_CLEFFA;
             if (varId >= VARS_START)
                 VarSet(varId, species);
         }
