@@ -277,6 +277,14 @@ static const u32 sNextFloorMapNum[NUM_TRAINER_HILL_FLOORS] =
     [TRAINER_HILL_3F - 1] = MAP_NUM(MAP_TRAINER_HILL_4F),
     [TRAINER_HILL_4F - 1] = MAP_NUM(MAP_TRAINER_HILL_ROOF)
 };
+
+static const u32 sNextFloorMapNum_Hns[NUM_TRAINER_HILL_FLOORS] =
+{
+    [TRAINER_HILL_1F - 1] = MAP_NUM(MAP_TRAINER_HILL_2F_HNS),
+    [TRAINER_HILL_2F - 1] = MAP_NUM(MAP_TRAINER_HILL_3F_HNS),
+    [TRAINER_HILL_3F - 1] = MAP_NUM(MAP_TRAINER_HILL_4F_HNS),
+    [TRAINER_HILL_4F - 1] = MAP_NUM(MAP_TRAINER_HILL_ROOF_HNS)
+};
 static const u8 sTrainerPartySlots[HILL_TRAINERS_PER_FLOOR][PARTY_SIZE / 2] =
 {
     {0, 1, 2},
@@ -822,7 +830,9 @@ static bool32 UNUSED OnTrainerHillRoof(void)
 
 const struct WarpEvent* SetWarpDestinationTrainerHill4F(void)
 {
-    const struct MapHeader *header = Overworld_GetMapHeaderByGroupAndId(MAP_GROUP(MAP_TRAINER_HILL_4F), MAP_NUM(MAP_TRAINER_HILL_4F));
+    const struct MapHeader *header = Overworld_GetMapHeaderByGroupAndId(
+        IS_HNS ? MAP_GROUP(MAP_TRAINER_HILL_4F_HNS) : MAP_GROUP(MAP_TRAINER_HILL_4F),
+        IS_HNS ? MAP_NUM(MAP_TRAINER_HILL_4F_HNS)   : MAP_NUM(MAP_TRAINER_HILL_4F));
 
     return &header->events->warps[1];
 }
@@ -841,7 +851,9 @@ const struct WarpEvent* SetWarpDestinationTrainerHillFinalFloor(u8 warpEventId)
     if (numFloors == 0 || numFloors > NUM_TRAINER_HILL_FLOORS)
         numFloors = NUM_TRAINER_HILL_FLOORS;
 
-    header = Overworld_GetMapHeaderByGroupAndId(MAP_GROUP(MAP_TRAINER_HILL_4F), sNextFloorMapNum[numFloors - 1]);
+    header = Overworld_GetMapHeaderByGroupAndId(
+        IS_HNS ? MAP_GROUP(MAP_TRAINER_HILL_4F_HNS) : MAP_GROUP(MAP_TRAINER_HILL_4F),
+        IS_HNS ? sNextFloorMapNum_Hns[numFloors - 1] : sNextFloorMapNum[numFloors - 1]);
     return &header->events->warps[0];
 }
 
