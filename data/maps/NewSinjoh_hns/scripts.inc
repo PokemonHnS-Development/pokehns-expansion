@@ -430,3 +430,4 @@ Script_Bag1sFull::
 
 Text_Bag1sFull:
 	.string "Your BAG is full.$"
+
