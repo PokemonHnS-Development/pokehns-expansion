@@ -265,6 +265,7 @@ OlivineCity_Gym_EventScript_Jasmine_Battle3::
 	goto OlivineCity_Gym_EventScript_JasmineVictory
 
 OlivineCity_Gym_EventScript_Jasmine_Defeated::
+	goto_if_unset FLAG_HIDE_DOJO_JASMINE, OlivineCity_Gym_EventScript_Jasmine_Trade
 	msgbox OlivineCity_Gym_Text_JasmineGoodLuck, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -337,3 +338,52 @@ OlivineCity_Gym_Text_GymStatueCertified:
 	.string "OLIVINE CITY POKéMON GYM\p"
 	.string "JASMINE'S CERTIFIED TRAINERS:\n"
 	.string "{PLAYER}$"
+
+OlivineCity_Gym_EventScript_Jasmine_Trade::
+	goto_if_set FLAG_OLIVINE_GYM_NPC_TRADE_COMPLETED, OlivineCity_Gym_EventScript_JasmineTradeCompleted
+	setvar VAR_0x8005, INGAME_TRADE_STEELIX
+	specialvar VAR_0x8009, GetInGameTradeSpeciesInfo
+	msgbox OlivineCity_Gym_Text_JasmineWantToTrade, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, OlivineCity_Gym_EventScript_JasmineDeclineTrade
+	chooseboxmon SELECT_PC_MON_TRADE
+	waitstate
+	goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, OlivineCity_Gym_EventScript_JasmineDeclineTrade
+	special CreateInGameTradePokemon
+	special DoInGameTradeScene
+	waitstate
+	msgbox OlivineCity_Gym_Text_JasmineTakeCare, MSGBOX_DEFAULT
+	setflag FLAG_OLIVINE_GYM_NPC_TRADE_COMPLETED
+	release
+	end
+
+OlivineCity_Gym_EventScript_JasmineDeclineTrade::
+	msgbox OlivineCity_Gym_Text_JasmineDeclineTrade, MSGBOX_DEFAULT
+	release
+	end
+
+OlivineCity_Gym_EventScript_JasmineTradeCompleted::
+	msgbox OlivineCity_Gym_Text_JasmineTradeCompleted, MSGBOX_DEFAULT
+	release
+	end
+
+OlivineCity_Gym_Text_JasmineWantToTrade:
+	.string "…Um, {PLAYER}…\n"
+	.string "I have something to ask you.\p"
+	.string "I've raised this STEELIX since it\n"
+	.string "was a little ONIX.\p"
+	.string "But I think RUSTY would be happier\n"
+	.string "with a trainer like you.\p"
+	.string "Would you trade any of your\n"
+	.string "POKéMON for my RUSTY?$"
+
+OlivineCity_Gym_Text_JasmineTakeCare:
+	.string "…Thank you.\n"
+	.string "Please be kind to RUSTY…$"
+
+OlivineCity_Gym_Text_JasmineDeclineTrade:
+	.string "…Oh… That's okay.\n"
+	.string "I understand…$"
+
+OlivineCity_Gym_Text_JasmineTradeCompleted:
+	.string "…How is RUSTY doing?\n"
+	.string "I hope you're taking good care…$"

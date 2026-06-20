@@ -74,6 +74,8 @@ static u32 CanRelearnMoves(struct BoxPokemon *boxmon)
 
 static u32 IsMatchingSpecies(struct BoxPokemon *boxmon)
 {
+    if (gSpecialVar_0x8009 == SPECIES_NONE)
+        return VALID_MON;
     if (GetBoxMonData(boxmon, MON_DATA_SPECIES_OR_EGG) == gSpecialVar_0x8009)
         return VALID_MON;
     return INVALID_MON;

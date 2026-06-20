@@ -841,11 +841,11 @@
 #define FLAG_LATIOS_OR_LATIAS_ROAMING               0x2FB
 #define FLAG_HIDE_VERMILION_STEVEN                  0x2FC
 #define FLAG_MOM_HAS_GIFT                           0x2FD
-#define FLAG_UNUSED_30                              0x2FE
-#define FLAG_UNUSED_31                              0x2FF
-#define FLAG_UNUSED_32                              0x300
-#define FLAG_UNUSED_33                              0x301
-#define FLAG_UNUSED_34                              0x302
+#define FLAG_PEWTER_NPC_TRADE_COMPLETED             0x2FE
+#define FLAG_POWERPLANT_NPC_TRADE_COMPLETED          0x2FF
+#define FLAG_FUCHSIA_SAFARI_NPC_TRADE_COMPLETED      0x300
+#define FLAG_PEWTER_GYM_NPC_TRADE_COMPLETED          0x301
+#define FLAG_OLIVINE_GYM_NPC_TRADE_COMPLETED         0x302
 #define FLAG_UNUSED_35                              0x303
 #define FLAG_UNUSED_36                              0x304
 #define FLAG_UNUSED_37                              0x305

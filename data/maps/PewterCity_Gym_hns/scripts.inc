@@ -30,6 +30,7 @@ PewterCity_Gym_EventScript_Brock::
 	end
 
 PewterCity_Gym_EventScript_Brock_Defeated::
+	goto_if_unset FLAG_HIDE_DOJO_BROCK, PewterCity_Gym_EventScript_Brock_Trade
 	msgbox PewterCity_Gym_Text_Brock_FightDone, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -131,4 +132,50 @@ PewterCity_Gym_Text_GymStatuePlayerWon::
     .string "WINNING TRAINERS:\n"
 	.string "BLUE, RED, {PLAYER}$"
 
+PewterCity_Gym_EventScript_Brock_Trade::
+	goto_if_set FLAG_PEWTER_GYM_NPC_TRADE_COMPLETED, PewterCity_Gym_EventScript_BrockTradeCompleted
+	ingame_trade INGAME_TRADE_BONSLY, PewterCity_Gym_Text_BrockWantToTrade, PewterCity_Gym_EventScript_BrockDeclineTrade, PewterCity_Gym_EventScript_BrockNotRequestedMon, PewterCity_Gym_Text_BrockTakeCare
+	setflag FLAG_PEWTER_GYM_NPC_TRADE_COMPLETED
+	release
+	end
 
+PewterCity_Gym_EventScript_BrockDeclineTrade::
+	msgbox PewterCity_Gym_Text_BrockDeclineTrade, MSGBOX_DEFAULT
+	release
+	end
+
+PewterCity_Gym_EventScript_BrockNotRequestedMon::
+	bufferspeciesname STR_VAR_1, VAR_0x8009
+	msgbox PewterCity_Gym_Text_BrockNotRequestedMon, MSGBOX_DEFAULT
+	release
+	end
+
+PewterCity_Gym_EventScript_BrockTradeCompleted::
+	msgbox PewterCity_Gym_Text_BrockTradeCompleted, MSGBOX_DEFAULT
+	release
+	end
+
+PewterCity_Gym_Text_BrockWantToTrade:
+	.string "BROCK: Hey, {PLAYER}. I found this\n"
+	.string "little BONSLY while training in the\l"
+	.string "mountains.\p"
+	.string "It's cute, but I think it needs\n"
+	.string "a different kind of trainer.\p"
+	.string "Would you trade a {STR_VAR_1}\n"
+	.string "for my {STR_VAR_2}?$"
+
+PewterCity_Gym_Text_BrockTakeCare:
+	.string "BROCK: Thanks! Take good care of\n"
+	.string "WOODY for me!$"
+
+PewterCity_Gym_Text_BrockDeclineTrade:
+	.string "BROCK: No? That's okay.\n"
+	.string "WOODY and I will keep training.$"
+
+PewterCity_Gym_Text_BrockNotRequestedMon:
+	.string "BROCK: That's not a {STR_VAR_1}.\n"
+	.string "That's not what I'm after.$"
+
+PewterCity_Gym_Text_BrockTradeCompleted:
+	.string "BROCK: How's WOODY doing?\n"
+	.string "BONSLY are tougher than they look!$"
