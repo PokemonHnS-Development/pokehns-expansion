@@ -27,6 +27,21 @@ static const struct BPShopEntry sBPHoldItemShopEntries[] = {
     { ITEM_NONE,           0 },
 };
 
+#if IS_HNS
+static const struct BPShopEntry sBPDecor1ShopEntries[] = {
+    { DECOR_KISS_POSTER,    48 },
+    { DECOR_KISS_CUSHION,   48 },
+    { DECOR_SMOOCHUM_DOLL,  48 },
+    { DECOR_TOGEPI_DOLL,    48 },
+    { DECOR_MEOWTH_DOLL,    48 },
+    { DECOR_CLEFAIRY_DOLL,  48 },
+    { DECOR_DITTO_DOLL,     48 },
+    { DECOR_CYNDAQUIL_DOLL, 80 },
+    { DECOR_CHIKORITA_DOLL, 80 },
+    { DECOR_TOTODILE_DOLL,  80 },
+    { ITEM_NONE,              0 },
+};
+#else
 static const struct BPShopEntry sBPDecor1ShopEntries[] = {
     { DECOR_TREECKO_DOLL,   48 },
     { DECOR_TORCHIC_DOLL,   48 },
@@ -40,6 +55,7 @@ static const struct BPShopEntry sBPDecor1ShopEntries[] = {
     { DECOR_TOTODILE_DOLL,  80 },
     { ITEM_NONE,              0 },
 };
+#endif
 
 static const struct BPShopEntry sBPDecor2ShopEntries[] = {
     { DECOR_LAPRAS_DOLL,    128 },

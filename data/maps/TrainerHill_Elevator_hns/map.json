@@ -1,47 +1,47 @@
 {
-  "id": "MAP_TRAINER_HILL_ROOF_HNS",
-  "name": "TrainerHill_Roof_hns",
+  "id": "MAP_TRAINER_HILL_ELEVATOR_HNS",
+  "name": "TrainerHill_Elevator_hns",
   "game_version": "hns",
-  "layout": "LAYOUT_TRAINER_HILL_ROOF_HNS",
-  "music": "MUS_HG_POKEATHLON_WINNER",
+  "layout": "LAYOUT_BATTLE_ELEVATOR_HNS",
+  "music": "MUS_HG_POKEATHLON_LOBBY",
   "region_map_section": "MAPSEC_TRAINER_HILL",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_INDOOR",
   "allow_cycling": false,
   "allow_escaping": false,
-  "allow_running": true,
+  "allow_running": false,
   "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": null,
   "object_events": [
     {
-      "graphics_id": "OBJ_EVENT_GFX_GENTLEMAN_HNS",
-      "x": 12,
-      "y": 7,
+      "graphics_id": "OBJ_EVENT_GFX_WORKER_F_HNS",
+      "x": 0,
+      "y": 6,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "TrainerHill_Roof_hns_EventScript_Owner",
+      "script": "TrainerHill_Elevator_hns_EventScript_Attendant",
       "flag": "0"
     }
   ],
   "warp_events": [
     {
-      "x": 9,
-      "y": 5,
+      "x": 2,
+      "y": 6,
       "elevation": 3,
-      "dest_map": "MAP_TRAINER_HILL_4F_HNS",
+      "dest_map": "MAP_TRAINER_HILL_ROOF_HNS",
       "dest_warp_id": "1"
     },
     {
-      "x": 15,
-      "y": 5,
-      "elevation": 0,
-      "dest_map": "MAP_TRAINER_HILL_ELEVATOR_HNS",
+      "x": 3,
+      "y": 6,
+      "elevation": 3,
+      "dest_map": "MAP_TRAINER_HILL_ROOF_HNS",
       "dest_warp_id": "1"
     }
   ],
