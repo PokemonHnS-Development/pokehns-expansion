@@ -122,5 +122,6 @@ void DisplayItemMessageOnField(u8 taskId, const u8 *string, TaskFunc callback);
 void CloseItemMessage(u8 taskId);
 void ItemMenu_RotomCatalog(u8 taskId);
 void SortItemsInBag(struct BagPocket *pocket, enum BagSortOptions type);
+s32 RegisteredItemIndex(u16 item);
 
 #endif //GUARD_ITEM_MENU_H
