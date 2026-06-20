@@ -1916,6 +1916,21 @@ void BufferSaveMenuText(u8 textId, u8 *dest, u8 color)
         GetMapNameGeneric(string, gMapHeader.regionMapSectionId);
         break;
     case SAVE_MENU_BADGES:
+#if IS_HNS
+    {
+        u8 badgeCount = 0;
+
+        for (curFlag = FLAG_BADGE01_GET; curFlag < FLAG_BADGE01_GET + NUM_BADGES; curFlag++)
+        {
+            if (FlagGet(curFlag))
+                badgeCount++;
+        }
+
+        string = ConvertIntToDecimalStringN(string, badgeCount, STR_CONV_MODE_LEADING_ZEROS, 2);
+        *string = EOS;
+        break;
+    }
+#else
         for (curFlag = FLAG_BADGE01_GET, flagCount = 0, endOfString = string + 1; curFlag < FLAG_BADGE01_GET + NUM_BADGES; curFlag++)
         {
             if (FlagGet(curFlag))
@@ -1924,6 +1939,7 @@ void BufferSaveMenuText(u8 textId, u8 *dest, u8 color)
         *string = flagCount + CHAR_0;
         *endOfString = EOS;
         break;
+#endif
     }
 }
 

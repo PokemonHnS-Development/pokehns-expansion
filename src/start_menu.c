@@ -1141,7 +1141,11 @@ static u8 SaveFileExistsCallback(void)
     }
     else
     {
+#if IS_HNS
+        sSaveDialogCallback = SaveSavingMessageCallback;
+#else
         ShowSaveMessage(gText_AlreadySavedFile, SaveConfirmOverwriteCallback);
+#endif
     }
 
     return SAVE_IN_PROGRESS;
@@ -1454,7 +1458,11 @@ static void ShowSaveInfoWindow(void)
 
     // Print region name
     yOffset = 1;
+#if IS_HNS
+    BufferSaveMenuText(SAVE_MENU_LOCATION, gStringVar4, TEXT_COLOR_DARK_GRAY);
+#else
     BufferSaveMenuText(SAVE_MENU_LOCATION, gStringVar4, TEXT_COLOR_GREEN);
+#endif
     AddTextPrinterParameterized(sSaveInfoWindowId, FONT_NORMAL, gStringVar4, 0, yOffset, TEXT_SKIP_DRAW, NULL);
 
     // Print player name
