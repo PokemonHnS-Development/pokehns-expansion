@@ -7,6 +7,7 @@
 #include "main.h"
 #include "malloc.h"
 #include "menu.h"
+#include "menu_helpers.h"
 #include "palette.h"
 #include "scanline_effect.h"
 #include "sound.h"
@@ -233,6 +234,7 @@ enum {
     WIN_TOPBAR,
     WIN_OPTIONS,
     WIN_DESCRIPTION,
+    WIN_CONFIRM_MSG,
 };
 
 static const struct WindowTemplate sWinTemplates[] = {
@@ -262,6 +264,15 @@ static const struct WindowTemplate sWinTemplates[] = {
         .height = 4,
         .paletteNum = 1,
         .baseBlock = 500,
+    },
+    [WIN_CONFIRM_MSG] = {
+        .bg = 1,
+        .tilemapLeft = 2,
+        .tilemapTop = 15,
+        .width = 20,
+        .height = 4,
+        .paletteNum = 1,
+        .baseBlock = 604,
     },
     DUMMY_WIN_TEMPLATE,
 };
@@ -342,6 +353,7 @@ static const u8 *const sChoices_OriginalModern[] = {
 
 static const u8 sText_TopBar_Left[]   = _("{L_BUTTON}PREVIOUS");
 static const u8 sText_TopBar_Right[]  = _("{R_BUTTON}NEXT");
+static const u8 sText_TopBar_Save[]   = _("{R_BUTTON}SAVE");
 static const u8 sText_TopBar_Cancel[] = _("{B_BUTTON}CANCEL");
 
 // =============================================================================
@@ -490,6 +502,7 @@ static const struct ChallengeMenuItem sTabItems_Mode[] = {
 };
 
 static const u8 *const sDesc_SaveExit[] = { COMPOUND_STRING("Save choices and continue...") };
+static const u8 sText_ConfirmSave[] = COMPOUND_STRING("Challenges can't be changed\nmid-game. Proceed?");
 
 // =============================================================================
 // Choice strings — shared across tabs
@@ -1192,12 +1205,15 @@ static void VBlankCB(void);
 static void Task_FadeIn(u8 taskId);
 static void Task_ProcessInput(u8 taskId);
 static void Task_Save(u8 taskId);
+static void Task_ConfirmSaveYes(u8 taskId);
+static void Task_ConfirmSaveNo(u8 taskId);
 static void Task_FadeOut(u8 taskId);
 static void InitListMenu(void);
 static void DestroyCurrentListMenu(void);
 static void DrawTopBar(void);
 static void DrawDescription(void);
 static void DrawBgFrames(void);
+static void DrawConfirmWindowFrame(void);
 static void ChallengeMenu_MoveCursorFunc(s32 itemIndex, bool8 onInit, struct ListMenu *list);
 static void ChallengeMenu_ItemPrintFunc(u8 windowId, u32 itemId, u8 y);
 
@@ -1611,6 +1627,8 @@ static void DrawTopBar(void)
         AddTextPrinterParameterized3(WIN_TOPBAR, FONT_SMALL, 5, 1, color, 0, sText_TopBar_Left);
     if (sMenu->currentTab < TAB_COUNT - 1)
         AddTextPrinterParameterized3(WIN_TOPBAR, FONT_SMALL, right, 1, color, 0, sText_TopBar_Right);
+    else if (sMenu->currentTab == TAB_COUNT - 1)
+        AddTextPrinterParameterized3(WIN_TOPBAR, FONT_SMALL, right, 1, color, 0, sText_TopBar_Save);
     if (!sIsInitialSetup)
     {
         int cancelX = (120 + width + right) / 2 - GetStringWidth(FONT_SMALL, sText_TopBar_Cancel, 0) / 2;
@@ -1672,16 +1690,48 @@ static void DrawBgFrames(void)
     CopyBgTilemapBufferToVram(1);
 }
 
+static void DrawConfirmWindowFrame(void)
+{
+    //                     bg, tile,              x, y, width, height, palNum
+    // Options box (same as DrawBgWindowFrames)
+    FillBgTilemapBufferRect(1, TILE_TOP_CORNER_L,  1,  2,  1,  1,  7);
+    FillBgTilemapBufferRect(1, TILE_TOP_EDGE,      2,  2, 26,  1,  7);
+    FillBgTilemapBufferRect(1, TILE_TOP_CORNER_R, 28,  2,  1,  1,  7);
+    FillBgTilemapBufferRect(1, TILE_LEFT_EDGE,     1,  3,  1, 10,  7);
+    FillBgTilemapBufferRect(1, TILE_RIGHT_EDGE,   28,  3,  1, 10,  7);
+    FillBgTilemapBufferRect(1, TILE_BOT_CORNER_L,  1, 13,  1,  1,  7);
+    FillBgTilemapBufferRect(1, TILE_BOT_EDGE,      2, 13, 26,  1,  7);
+    FillBgTilemapBufferRect(1, TILE_BOT_CORNER_R, 28, 13,  1,  1,  7);
+
+    // Confirm message box border (cols 1-22, leaves cols 23-28 for yes/no border)
+    FillBgTilemapBufferRect(1, TILE_TOP_CORNER_L,  1, 14,  1,  1,  7);
+    FillBgTilemapBufferRect(1, TILE_TOP_EDGE,      2, 14, 21,  1,  7);
+    FillBgTilemapBufferRect(1, TILE_TOP_CORNER_R, 22, 14,  1,  1,  7);
+    FillBgTilemapBufferRect(1, TILE_LEFT_EDGE,     1, 15,  1,  4,  7);
+    FillBgTilemapBufferRect(1, TILE_RIGHT_EDGE,   22, 15,  1,  4,  7);
+    FillBgTilemapBufferRect(1, TILE_BOT_CORNER_L,  1, 19,  1,  1,  7);
+    FillBgTilemapBufferRect(1, TILE_BOT_EDGE,      2, 19, 21,  1,  7);
+    FillBgTilemapBufferRect(1, TILE_BOT_CORNER_R, 22, 19,  1,  1,  7);
+
+    CopyBgTilemapBufferToVram(1);
+}
+
 // =============================================================================
 // Tab switching
 // =============================================================================
 
-static void SwitchTab(s8 direction)
+static void SwitchTab(u8 taskId, s8 direction)
 {
     s8 newTab = sMenu->currentTab + direction;
 
-    if (newTab < 0 || newTab >= TAB_COUNT)
+    if (newTab < 0 || newTab > TAB_COUNT)
         return;
+    else if (newTab == TAB_COUNT)
+    {
+        JumpListMenuToBottom(sMenu->listTaskId);
+        gTasks[taskId].func = Task_Save;
+        return;
+    }
 
     DestroyCurrentListMenu();
     FillWindowPixelBuffer(WIN_OPTIONS, PIXEL_FILL(1));
@@ -1791,13 +1841,13 @@ static void Task_ProcessInput(u8 taskId)
 
     if (JOY_NEW(L_BUTTON))
     {
-        SwitchTab(-1);
+        SwitchTab(taskId, -1);
         return;
     }
 
     if (JOY_NEW(R_BUTTON))
     {
-        SwitchTab(+1);
+        SwitchTab(taskId, +1);
         return;
     }
 
@@ -1827,11 +1877,52 @@ static void Task_ProcessInput(u8 taskId)
         && items[input].numChoices == 0
         && sMenu->currentTab < TAB_COUNT - 1)
     {
-        SwitchTab(+1);
+        SwitchTab(taskId, +1);
     }
 }
 
+static const struct WindowTemplate sConfirmSaveYesNoTemplate =
+{
+    .bg          = 1,
+    .tilemapLeft = 24,
+    .tilemapTop  = 15,
+    .width       = 4,
+    .height      = 4,
+    .paletteNum  = 1,
+    .baseBlock   = 688,
+};
+
+static const struct YesNoFuncTable sConfirmSaveYesNoFuncs =
+{
+    Task_ConfirmSaveYes,
+    Task_ConfirmSaveNo,
+};
+
 static void Task_Save(u8 taskId)
+{
+    u8 color_gray[3];
+    color_gray[0] = TEXT_COLOR_TRANSPARENT;
+    color_gray[1] = TEXT_COLOR_OPTIONS_GRAY_FG;
+    color_gray[2] = TEXT_COLOR_OPTIONS_GRAY_SHADOW;
+
+    // Blank description tile data so its tiles appear empty before confirm renders
+    FillWindowPixelBuffer(WIN_DESCRIPTION, PIXEL_FILL(1));
+    CopyWindowToVram(WIN_DESCRIPTION, COPYWIN_GFX);
+
+    // Write confirm text char data
+    FillWindowPixelBuffer(WIN_CONFIRM_MSG, PIXEL_FILL(1));
+    AddTextPrinterParameterized4(WIN_CONFIRM_MSG, FONT_NORMAL, 8, 1, 0, 0, color_gray, TEXT_SKIP_DRAW, sText_ConfirmSave);
+    PutWindowTilemap(WIN_CONFIRM_MSG);
+    CopyWindowToVram(WIN_CONFIRM_MSG, COPYWIN_GFX);
+
+    // Yes/no draws its own border at cols 23-28 and flushes tilemap
+    CreateYesNoMenuWithCallbacks(taskId, &sConfirmSaveYesNoTemplate, 1, 0, 0, 0x1A2, 7, &sConfirmSaveYesNoFuncs);
+
+    // Draw confirm box border AFTER yes/no so its tiles aren't overwritten, flush tilemap
+    DrawConfirmWindowFrame();
+}
+
+static void Task_ConfirmSaveYes(u8 taskId)
 {
     struct ChallengeSettings *cs = &gSaveBlock3Ptr->challengeSettings;
 
@@ -1972,6 +2063,14 @@ static void Task_Save(u8 taskId)
 
     BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
     gTasks[taskId].func = Task_FadeOut;
+}
+
+static void Task_ConfirmSaveNo(u8 taskId)
+{
+    PutWindowTilemap(WIN_DESCRIPTION);
+    DrawDescription();
+    DrawBgFrames();
+    gTasks[taskId].func = Task_ProcessInput;
 }
 
 static void Task_FadeOut(u8 taskId)

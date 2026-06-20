@@ -154,5 +154,6 @@ bool8 ListMenuChangeSelection(struct ListMenu *list, bool8 updateCursorAndCallCa
 bool8 ListMenuChangeSelectionLoop(struct ListMenu *list, bool8 updateCursorAndCallCallback, bool8 movingDown);
 bool8 ListMenuChangeSelectionFull(struct ListMenu *list, bool32 updateCursor, bool32 callCallback, u8 count, bool8 movingDown);
 bool8 ListMenuChangeSelectionFullLoop(struct ListMenu *list, bool32 updateCursor, bool32 callCallback, bool8 movingDown);
+void JumpListMenuToBottom(u8 listTaskId);
 
 #endif //GUARD_LIST_MENU_H
