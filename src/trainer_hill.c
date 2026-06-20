@@ -13,6 +13,7 @@
 #include "item.h"
 #include "main.h"
 #include "menu.h"
+#include "money.h"
 #include "overworld.h"
 #include "palette.h"
 #include "pokemon.h"
@@ -146,6 +147,29 @@ struct
     {TRAINER_CLASS_SCHOOL_KID, TRAINER_ENCOUNTER_MUSIC_MALE},
 };
 
+#if IS_HNS
+static const u16 sPrizeListRareCandy1[]  = {ITEM_RARE_CANDY,       ITEM_ETHER, ITEM_MAX_POTION, ITEM_REVIVE, ITEM_FLUFFY_TAIL, ITEM_GREAT_BALL};
+static const u16 sPrizeListLuxuryBall1[] = {ITEM_LUXURY_BALL,      ITEM_ETHER, ITEM_MAX_POTION, ITEM_REVIVE, ITEM_FLUFFY_TAIL, ITEM_GREAT_BALL};
+static const u16 sPrizeListMaxRevive1[]  = {ITEM_MAX_REVIVE,       ITEM_ETHER, ITEM_MAX_POTION, ITEM_REVIVE, ITEM_FLUFFY_TAIL, ITEM_GREAT_BALL};
+static const u16 sPrizeListMaxEther1[]   = {ITEM_MAX_ETHER,        ITEM_ETHER, ITEM_MAX_POTION, ITEM_REVIVE, ITEM_FLUFFY_TAIL, ITEM_GREAT_BALL};
+static const u16 sPrizeListElixir1[]     = {ITEM_PETAYA_BERRY,     ITEM_MAX_ETHER, ITEM_BIG_NUGGET, ITEM_MAX_REVIVE, ITEM_MAX_POTION, ITEM_LUXURY_BALL};
+static const u16 sPrizeListRoar[]        = {ITEM_LUXURY_BALL,      ITEM_ETHER, ITEM_MAX_POTION, ITEM_REVIVE, ITEM_FLUFFY_TAIL, ITEM_GREAT_BALL};
+static const u16 sPrizeListSludgeBomb[]  = {ITEM_GREEN_SHARD,      ITEM_ETHER, ITEM_MAX_POTION, ITEM_REVIVE, ITEM_FLUFFY_TAIL, ITEM_GREAT_BALL};
+static const u16 sPrizeListToxic[]       = {ITEM_RED_SHARD,        ITEM_ETHER, ITEM_MAX_POTION, ITEM_REVIVE, ITEM_FLUFFY_TAIL, ITEM_GREAT_BALL};
+static const u16 sPrizeListSunnyDay[]    = {ITEM_APICOT_BERRY,     ITEM_MAX_ETHER, ITEM_BIG_NUGGET, ITEM_MAX_REVIVE, ITEM_MAX_POTION, ITEM_LUXURY_BALL};
+static const u16 sPrizeListEarthQuake[]  = {ITEM_YELLOW_SHARD,     ITEM_ETHER, ITEM_MAX_POTION, ITEM_REVIVE, ITEM_FLUFFY_TAIL, ITEM_GREAT_BALL};
+
+static const u16 sPrizeListRareCandy2[]  = {ITEM_RARE_CANDY,       ITEM_ETHER, ITEM_MAX_POTION, ITEM_REVIVE, ITEM_FLUFFY_TAIL, ITEM_GREAT_BALL};
+static const u16 sPrizeListLuxuryBall2[] = {ITEM_LUXURY_BALL,      ITEM_ETHER, ITEM_MAX_POTION, ITEM_REVIVE, ITEM_FLUFFY_TAIL, ITEM_GREAT_BALL};
+static const u16 sPrizeListMaxRevive2[]  = {ITEM_MAX_REVIVE,       ITEM_ETHER, ITEM_MAX_POTION, ITEM_REVIVE, ITEM_FLUFFY_TAIL, ITEM_GREAT_BALL};
+static const u16 sPrizeListMaxEther2[]   = {ITEM_MAX_ETHER,        ITEM_ETHER, ITEM_MAX_POTION, ITEM_REVIVE, ITEM_FLUFFY_TAIL, ITEM_GREAT_BALL};
+static const u16 sPrizeListElixir2[]     = {ITEM_PETAYA_BERRY,     ITEM_MAX_ETHER, ITEM_BIG_NUGGET, ITEM_MAX_REVIVE, ITEM_MAX_POTION, ITEM_LUXURY_BALL};
+static const u16 sPrizeListBrickBreak[]  = {ITEM_GANLON_BERRY,     ITEM_MAX_ETHER, ITEM_BIG_NUGGET, ITEM_MAX_REVIVE, ITEM_MAX_POTION, ITEM_LUXURY_BALL};
+static const u16 sPrizeListTorment[]     = {ITEM_SUN_STONE,        ITEM_ETHER, ITEM_MAX_POTION, ITEM_REVIVE, ITEM_FLUFFY_TAIL, ITEM_GREAT_BALL};
+static const u16 sPrizeListSkillSwap[]   = {ITEM_RED_SHARD,        ITEM_ETHER, ITEM_MAX_POTION, ITEM_REVIVE, ITEM_FLUFFY_TAIL, ITEM_GREAT_BALL};
+static const u16 sPrizeListGigaDrain[]   = {ITEM_SALAC_BERRY,      ITEM_MAX_ETHER, ITEM_BIG_NUGGET, ITEM_MAX_REVIVE, ITEM_MAX_POTION, ITEM_LUXURY_BALL};
+static const u16 sPrizeListAttract[]     = {ITEM_BLUE_SHARD,       ITEM_ETHER, ITEM_MAX_POTION, ITEM_REVIVE, ITEM_FLUFFY_TAIL, ITEM_GREAT_BALL};
+#else
 static const u16 sPrizeListRareCandy1[]  = {ITEM_RARE_CANDY,       ITEM_ETHER, ITEM_MAX_POTION, ITEM_REVIVE, ITEM_FLUFFY_TAIL, ITEM_GREAT_BALL};
 static const u16 sPrizeListLuxuryBall1[] = {ITEM_LUXURY_BALL,      ITEM_ETHER, ITEM_MAX_POTION, ITEM_REVIVE, ITEM_FLUFFY_TAIL, ITEM_GREAT_BALL};
 static const u16 sPrizeListMaxRevive1[]  = {ITEM_MAX_REVIVE,       ITEM_ETHER, ITEM_MAX_POTION, ITEM_REVIVE, ITEM_FLUFFY_TAIL, ITEM_GREAT_BALL};
@@ -167,6 +191,7 @@ static const u16 sPrizeListTorment[]     = {ITEM_TM_TORMENT,       ITEM_ETHER, I
 static const u16 sPrizeListSkillSwap[]   = {ITEM_TM_SKILL_SWAP,    ITEM_ETHER, ITEM_MAX_POTION, ITEM_REVIVE, ITEM_FLUFFY_TAIL, ITEM_GREAT_BALL};
 static const u16 sPrizeListGigaDrain[]   = {ITEM_TM_GIGA_DRAIN,    ITEM_ETHER, ITEM_MAX_POTION, ITEM_REVIVE, ITEM_FLUFFY_TAIL, ITEM_GREAT_BALL};
 static const u16 sPrizeListAttract[]     = {ITEM_TM_ATTRACT,       ITEM_ETHER, ITEM_MAX_POTION, ITEM_REVIVE, ITEM_FLUFFY_TAIL, ITEM_GREAT_BALL};
+#endif
 
 static const u16 *const sPrizeLists1[NUM_TRAINER_HILL_PRIZE_LISTS] =
 {
@@ -1129,6 +1154,43 @@ static u16 GetPrizeItemId(void)
     // entering the Hall of Fame, there would be 1 additional prize possibility (ITEM_MAX_ETHER)
     // as Normal / Unique modes would use sPrizeListSets[0][3] / sPrizeListSets[1][3] respectively.
     minutes = (signed)(gSaveBlock1Ptr->trainerHill.timer) / (60 * 60);
+#if IS_HNS
+    if (minutes < 10)
+    {
+        AddMoney(&gSaveBlock1Ptr->money, 1000000);
+        id = 0;
+    }
+    else if (minutes < 12)
+    {
+        AddMoney(&gSaveBlock1Ptr->money, 250000);
+        id = 0;
+    }
+    else if (minutes < 13)
+    {
+        AddMoney(&gSaveBlock1Ptr->money, 100000);
+        id = 1;
+    }
+    else if (minutes < 14)
+    {
+        AddMoney(&gSaveBlock1Ptr->money, 50000);
+        id = 2;
+    }
+    else if (minutes < 16)
+    {
+        AddMoney(&gSaveBlock1Ptr->money, 10000);
+        id = 3;
+    }
+    else if (minutes < 18)
+    {
+        AddMoney(&gSaveBlock1Ptr->money, 5000);
+        id = 4;
+    }
+    else
+    {
+        AddMoney(&gSaveBlock1Ptr->money, 2500);
+        id = 5;
+    }
+#else
     if (minutes < 12)
         id = 0; // Depends on list
     else if (minutes < 13)
@@ -1141,6 +1203,7 @@ static u16 GetPrizeItemId(void)
         id = 4; // ITEM_FLUFFY_TAIL
     else
         id = 5; // ITEM_GREAT_BALL
+#endif
 
     return prizeList[id];
 }
