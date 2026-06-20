@@ -340,7 +340,11 @@ void ResetTrainerHillResults(void)
 
 static u8 GetFloorId(void)
 {
+#if IS_HNS
+    return gMapHeader.mapLayoutId - LAYOUT_TRAINER_HILL_1F_HNS;
+#else
     return gMapHeader.mapLayoutId - LAYOUT_TRAINER_HILL_1F;
+#endif
 }
 
 enum TrainerClassID GetTrainerHillOpponentClass(u16 trainerId)
@@ -402,7 +406,11 @@ static void SetUpDataStruct(void)
     if (sHillData != NULL) return;
 
     sHillData = AllocZeroed(sizeof(*sHillData));
+#if IS_HNS
+    sHillData->floorId = gMapHeader.mapLayoutId - LAYOUT_TRAINER_HILL_1F_HNS;
+#else
     sHillData->floorId = gMapHeader.mapLayoutId - LAYOUT_TRAINER_HILL_1F;
+#endif
 
     CpuCopy32(sChallengeData[gSaveBlock1Ptr->trainerHill.mode], &sHillData->challenge, sizeof(sHillData->challenge));
     CpuCopy32(sFloorData[gSaveBlock1Ptr->trainerHill.mode], &sHillData->floors, sizeof(sHillData->floors));
@@ -748,7 +756,7 @@ static u16 GetMapDataForFloor(u8 floorId, u32 x, u32 y, u32 floorWidth) // floor
     u16 elevation;
 
     impassable = (sHillData->floors[floorId].map.collisionData[y] >> (15 - x) & 1);
-    metatileId = sHillData->floors[floorId].map.metatileData[floorWidth * y + x] + NUM_METATILES_IN_PRIMARY;
+    metatileId = sHillData->floors[floorId].map.metatileData[floorWidth * y + x] + GetNumMetatilesInPrimary(gMapHeader.mapLayout);
     elevation = PACK_ELEVATION(ELEVATION_DEFAULT);
 
     return PACK_COLLISION(impassable) | elevation | PACK_METATILE(metatileId);
@@ -808,10 +816,17 @@ bool32 InTrainerHill(void)
 {
     bool32 ret;
 
+#if IS_HNS
+    if (gMapHeader.mapLayoutId == LAYOUT_TRAINER_HILL_1F_HNS
+        || gMapHeader.mapLayoutId == LAYOUT_TRAINER_HILL_2F_HNS
+        || gMapHeader.mapLayoutId == LAYOUT_TRAINER_HILL_3F_HNS
+        || gMapHeader.mapLayoutId == LAYOUT_TRAINER_HILL_4F_HNS)
+#else
     if (gMapHeader.mapLayoutId == LAYOUT_TRAINER_HILL_1F
         || gMapHeader.mapLayoutId == LAYOUT_TRAINER_HILL_2F
         || gMapHeader.mapLayoutId == LAYOUT_TRAINER_HILL_3F
         || gMapHeader.mapLayoutId == LAYOUT_TRAINER_HILL_4F)
+#endif
         ret = TRUE;
     else
         ret = FALSE;
@@ -823,6 +838,20 @@ u8 GetCurrentTrainerHillMapId(void)
 {
     u8 mapId;
 
+#if IS_HNS
+    if (gMapHeader.mapLayoutId == LAYOUT_TRAINER_HILL_1F_HNS)
+        mapId = TRAINER_HILL_1F;
+    else if (gMapHeader.mapLayoutId == LAYOUT_TRAINER_HILL_2F_HNS)
+        mapId = TRAINER_HILL_2F;
+    else if (gMapHeader.mapLayoutId == LAYOUT_TRAINER_HILL_3F_HNS)
+        mapId = TRAINER_HILL_3F;
+    else if (gMapHeader.mapLayoutId == LAYOUT_TRAINER_HILL_4F_HNS)
+        mapId = TRAINER_HILL_4F;
+    else if (gMapHeader.mapLayoutId == LAYOUT_TRAINER_HILL_ROOF_HNS)
+        mapId = TRAINER_HILL_ROOF;
+    else if (gMapHeader.mapLayoutId == LAYOUT_TRAINER_HILL_ENTRANCE_HNS)
+        mapId = TRAINER_HILL_ENTRANCE;
+#else
     if (gMapHeader.mapLayoutId == LAYOUT_TRAINER_HILL_1F)
         mapId = TRAINER_HILL_1F;
     else if (gMapHeader.mapLayoutId == LAYOUT_TRAINER_HILL_2F)
@@ -835,6 +864,7 @@ u8 GetCurrentTrainerHillMapId(void)
         mapId = TRAINER_HILL_ROOF;
     else if (gMapHeader.mapLayoutId == LAYOUT_TRAINER_HILL_ENTRANCE)
         mapId = TRAINER_HILL_ENTRANCE;
+#endif
     else
         mapId = 0;
 
@@ -845,7 +875,11 @@ static bool32 UNUSED OnTrainerHillRoof(void)
 {
     bool32 onRoof;
 
+#if IS_HNS
+    if (gMapHeader.mapLayoutId == LAYOUT_TRAINER_HILL_ROOF_HNS)
+#else
     if (gMapHeader.mapLayoutId == LAYOUT_TRAINER_HILL_ROOF)
+#endif
         onRoof = TRUE;
     else
         onRoof = FALSE;

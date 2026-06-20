@@ -106,16 +106,16 @@ BattleTowerOutsideText_Closed:
 
 
 TrainerHill_Courtyard_EventScript_LeftMoveTutor::
-TrainerHill_Courtyard_EventScript_RightMoveTutor::
-TrainerHill_Courtyard_EventScript_ElementalMoveTutor::
-	lock
-	faceplayer
-	msgbox TrainerHill_Courtyard_Text_TutorStubbed, MSGBOX_DEFAULT
-	release
+	goto BattleFrontier_Lounge7_EventScript_LeftMoveTutor_hns
 	end
 
-TrainerHill_Courtyard_Text_TutorStubbed:
-	.string "…$"
+TrainerHill_Courtyard_EventScript_RightMoveTutor::
+	goto BattleFrontier_Lounge7_EventScript_RightMoveTutor_hns
+	end
+
+TrainerHill_Courtyard_EventScript_ElementalMoveTutor::
+	goto BattleFrontier_Lounge7_EventScript_ElementalMoveTutor
+	end
 
 TrainerHill_Courtyard_ExchangeServiceCorner_EventScript_DecorClerk1::
 	lock
