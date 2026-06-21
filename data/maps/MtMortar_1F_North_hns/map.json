@@ -63,8 +63,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "MtMortar_1F_North_EventScript_Item_Nugget",
-      "flag": "FLAG_ITEM_MTMORTAR2_NUGGET"
+      "script": "MtMortar_1F_North_EventScript_Item_Protector",
+      "flag": "FLAG_ITEM_MTMORTAR2_PROTECTOR"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
@@ -288,7 +288,24 @@
     }
   ],
   "coord_events": [],
-  "bg_events": [],
+  "bg_events": [
+    {
+      "type": "hidden_item",
+      "x": 11,
+      "y": 16,
+      "elevation": 0,
+      "item": "ITEM_NUGGET",
+      "flag": "FLAG_HIDDEN_ITEM_MTMORTAR_1F_NORTH_NUGGET"
+    },
+    {
+      "type": "hidden_item",
+      "x": 41,
+      "y": 45,
+      "elevation": 0,
+      "item": "ITEM_IRON_BALL",
+      "flag": "FLAG_HIDDEN_ITEM_MTMORTAR_1F_NORTH_IRON_BALL"
+    }
+  ],
   "game_version": "hns",
   "region": "REGION_JOHTO"
 }

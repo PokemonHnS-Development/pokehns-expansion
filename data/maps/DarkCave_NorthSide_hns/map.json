@@ -162,7 +162,24 @@
     }
   ],
   "coord_events": [],
-  "bg_events": [],
+  "bg_events": [
+    {
+      "type": "hidden_item",
+      "x": 31,
+      "y": 16,
+      "elevation": 0,
+      "item": "ITEM_BIG_MUSHROOM",
+      "flag": "FLAG_HIDDEN_ITEM_DARKCAVE_NORTHSIDE_BIG_MUSHROOM"
+    },
+    {
+      "type": "hidden_item",
+      "x": 7,
+      "y": 21,
+      "elevation": 0,
+      "item": "ITEM_REVIVE",
+      "flag": "FLAG_HIDDEN_ITEM_DARKCAVE_NORTHSIDE_REVIVE"
+    }
+  ],
   "game_version": "hns",
   "region": "REGION_JOHTO"
 }

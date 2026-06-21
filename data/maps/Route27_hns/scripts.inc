@@ -75,8 +75,8 @@ Route27_EventScript_Item_DragonClaw::
     finditem ITEM_TM_DRAGON_CLAW
     end
 
-Route27_EventScript_Item_Revive::
-    finditem ITEM_REVIVE
+Route27_EventScript_Item_Destiny_Knot::
+    finditem ITEM_DESTINY_KNOT
     end
 
 Route27_EventScript_Fatman::
