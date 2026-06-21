@@ -12,7 +12,7 @@
   "allow_running": true,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": 0,
+  "connections": null,
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
@@ -80,9 +80,10 @@
       "flag": "0"
     },
     {
+      "local_id": "LOCALID_UNION_CAVE_LAPRAS",
       "graphics_id": "OBJ_EVENT_GFX_SWIMMING_LAPRAS_HNS",
       "x": 15,
-      "y": 35,
+      "y": 38,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 0,
@@ -90,8 +91,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "UnionCave_B2F_EventScript_Lapras",
-      "flag": "FLAG_HIDE_UNION_CAVE_LAPRAS",
-      "local_id": "LOCALID_UNION_CAVE_LAPRAS"
+      "flag": "FLAG_HIDE_UNION_CAVE_LAPRAS"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_RATICATE",
@@ -182,7 +182,16 @@
     }
   ],
   "coord_events": [],
-  "bg_events": [],
+  "bg_events": [
+    {
+      "type": "hidden_item",
+      "x": 4,
+      "y": 34,
+      "elevation": 0,
+      "item": "ITEM_CALCIUM",
+      "flag": "FLAG_HIDDEN_ITEM_UNIONCAVEB2F_CALCIUM"
+    }
+  ],
   "game_version": "hns",
   "region": "REGION_JOHTO"
 }

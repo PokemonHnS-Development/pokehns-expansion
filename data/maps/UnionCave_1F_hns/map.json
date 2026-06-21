@@ -12,7 +12,7 @@
   "allow_running": true,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": 0,
+  "connections": null,
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
@@ -381,7 +381,16 @@
       "script": "UnionCave_1F_Trigger_Monview"
     }
   ],
-  "bg_events": [],
+  "bg_events": [
+    {
+      "type": "hidden_item",
+      "x": 15,
+      "y": 25,
+      "elevation": 0,
+      "item": "ITEM_PARALYZE_HEAL",
+      "flag": "FLAG_HIDDEN_ITEM_UNIONCAVE1F_PARALYZE_HEAL"
+    }
+  ],
   "game_version": "hns",
   "region": "REGION_JOHTO"
 }

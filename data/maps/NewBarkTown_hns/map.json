@@ -299,6 +299,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "NewBarkTown_EventScript_LabSign"
+    },
+    {
+      "type": "hidden_item",
+      "x": 7,
+      "y": 7,
+      "elevation": 0,
+      "item": "ITEM_POTION",
+      "flag": "FLAG_HIDDEN_ITEM_NEWBARKTOWN_POTION"
     }
   ],
   "game_version": "hns",
