@@ -1475,7 +1475,24 @@
       "script": "WhirlIslands_B1F_Trigger_Rain"
     }
   ],
-  "bg_events": [],
+  "bg_events": [
+    {
+      "type": "hidden_item",
+      "x": 77,
+      "y": 21,
+      "elevation": 0,
+      "item": "ITEM_PEARL",
+      "flag": "FLAG_HIDDEN_ITEM_WHIRLISLANDS_PEARL"
+    },
+    {
+      "type": "hidden_item",
+      "x": 34,
+      "y": 58,
+      "elevation": 0,
+      "item": "ITEM_FULL_RESTORE",
+      "flag": "FLAG_HIDDEN_ITEM_WHIRLISLANDS_FULL_RESTORE"
+    }
+  ],
   "game_version": "hns",
   "region": "REGION_JOHTO"
 }

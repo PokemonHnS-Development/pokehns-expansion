@@ -939,7 +939,24 @@
     }
   ],
   "coord_events": [],
-  "bg_events": [],
+  "bg_events": [
+    {
+      "type": "hidden_item",
+      "x": 28,
+      "y": 79,
+      "elevation": 0,
+      "item": "ITEM_STARDUST",
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE41_STARDUST_1"
+    },
+    {
+      "type": "hidden_item",
+      "x": 30,
+      "y": 50,
+      "elevation": 0,
+      "item": "ITEM_STARDUST",
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE41_STARDUST_2"
+    }
+  ],
   "game_version": "hns",
   "region": "REGION_JOHTO"
 }

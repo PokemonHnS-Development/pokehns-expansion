@@ -617,8 +617,8 @@
     },
     {
       "type": "hidden_item",
-      "x": 10,
-      "y": 44,
+      "x": 42,
+      "y": 50,
       "elevation": 0,
       "item": "ITEM_PROTEIN",
       "flag": "FLAG_HIDDEN_ITEM_OLIVINE_PROTEIN"
