@@ -112,8 +112,8 @@
 #define VAR_NEWSINJOH_HAUNTEDHOUSE_WESTGRAVE             0x40A8
 #define VAR_NEWSINJOH_HAUNTEDHOUSE_EASTGRAVE             0x40A9
 #define VAR_NEWSINJOH_HAUNTEDHOUSE_SOUTHGRAVE            0x40AA
-#define VAR_UNUSED_HNS_0x40AB                            0x40AB
-#define VAR_UNUSED_HNS_0x40AC                            0x40AC
+#define VAR_NEWSINJOH_HAUNTEDHOUSE_PUZZLE                0x40AB
+#define VAR_NEWSINJOH_HAUNTEDHOUSE_GRAVESTONES           0x40AC
 #define VAR_UNUSED_HNS_0x40AD                            0x40AD
 #define VAR_UNUSED_HNS_0x40AE                            0x40AE
 #define VAR_UNUSED_HNS_0x40AF                            0x40AF

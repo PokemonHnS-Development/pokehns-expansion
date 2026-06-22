@@ -323,6 +323,16 @@
 #define METATILE_InsideShip_IntactDoor_Bottom_Locked    0x233
 #define METATILE_InsideShip_IntactDoor_Bottom_Unlocked  0x22B
 
+// gTileset_Johto_Building_Hns
+#define METATILE_Johto_Building_Hns_DARK_FLOOR            0x009
+#define METATILE_Johto_Building_Hns_STAIRS_BACK           0x005
+#define METATILE_Johto_Building_Hns_STAIRS_BOTTOM_CARPET  0x00F
+#define METATILE_Johto_Building_Hns_STAIRS_CORNER         0x00D
+#define METATILE_Johto_Building_Hns_STAIRS_FRONT          0x006
+#define METATILE_Johto_Building_Hns_STAIRS_RAIL           0x00E
+#define METATILE_Johto_Building_Hns_STAIRS_TOP_CARPET     0x007
+#define METATILE_Johto_Building_Hns_STAIRS_WALL           0x015
+
 // gTileset_Lavaridge
 #define METATILE_Lavaridge_AshGrass             0x207
 #define METATILE_Lavaridge_CaveEntrance_Bottom  0x25E
