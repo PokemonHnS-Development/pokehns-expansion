@@ -184,7 +184,16 @@
   ],
   "warp_events": [],
   "coord_events": [],
-  "bg_events": [],
+  "bg_events": [
+    {
+      "type": "hidden_item",
+      "x": 44,
+      "y": 54,
+      "elevation": 0,
+      "item": "ITEM_LIGHT_CLAY",
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE9_LIGHT_CLAY"
+    }
+  ],
   "game_version": "hns",
   "region": "REGION_KANTO"
 }
