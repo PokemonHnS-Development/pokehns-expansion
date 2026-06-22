@@ -27,8 +27,8 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER_HNS",
-      "x": 17,
-      "y": 9,
+      "x": 12,
+      "y": 5,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 7,
@@ -159,6 +159,14 @@
   "warp_events": [],
   "coord_events": [],
   "bg_events": [
+    {
+      "type": "hidden_item",
+      "x": 22,
+      "y": 9,
+      "elevation": 0,
+      "item": "ITEM_STARDUST",
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE3_STARDUST"
+    },
     {
       "type": "sign",
       "x": 72,

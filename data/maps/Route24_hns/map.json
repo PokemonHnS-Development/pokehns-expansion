@@ -170,7 +170,7 @@
       "y": 20,
       "elevation": 0,
       "item": "ITEM_PECHA_BERRY",
-      "flag": "FLAG_HIDDEN_ITEM_ROUTE24_PECHA_BERRY"
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE24_PECHA_BERRY_HNS"
     }
   ],
   "game_version": "hns",
