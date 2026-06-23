@@ -153,6 +153,24 @@ TrainerHill_Courtyard_ExchangeServiceCorner_EventScript_HoldItemClerk::
 	release
 	end
 
+TrainerHill_Courtyard_ExchangeServiceCorner_EventScript_HoldItemClerk2::
+	lock
+	faceplayer
+	msgbox TrainerHill_Courtyard_ExchangeServiceCorner_Text_WelcomePleaseChoosePrize, MSGBOX_DEFAULT
+	special CreateBPHoldItemShop2
+	waitstate
+	release
+	end
+
+TrainerHill_Courtyard_ExchangeServiceCorner_EventScript_PowerClerk::
+	lock
+	faceplayer
+	msgbox TrainerHill_Courtyard_ExchangeServiceCorner_Text_WelcomePleaseChoosePrize, MSGBOX_DEFAULT
+	special CreateBPPowerShop
+	waitstate
+	release
+	end
+
 TrainerHill_Courtyard_ExchangeServiceCorner_EventScript_Man::
 	msgbox TrainerHill_Courtyard_ExchangeServiceCorner_Text_GoGetYourOwnDoll, MSGBOX_NPC
 	end

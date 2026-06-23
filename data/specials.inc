@@ -485,6 +485,8 @@ gSpecials::
 	def_special CreateBPDecorShop1
 	def_special CreateBPDecorShop2
 	def_special CreateBPPokeBallShop
+	def_special CreateBPHoldItemShop2
+	def_special CreateBPPowerShop
 	def_special CreateKurtBallShop
 	def_special DisplayBerryPowderVendorMenu
 	def_special RemoveBerryPowderVendorMenu

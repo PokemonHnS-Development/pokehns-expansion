@@ -231,9 +231,7 @@ Debug_Text_HMsUnlocked:
 	.string "All HM flags set!$"
 
 Debug_EventScript_Script_2::
-	giveitem ITEM_PECHA_BERRY, 20
-	giveitem ITEM_ORAN_BERRY, 20
-	goto AzaleaTown_KurtsHouse_EventScript_Kurt
+	setvar VAR_MAHOGANY_TOWN_STATE, 14
 	release
 	end
 
