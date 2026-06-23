@@ -1069,6 +1069,11 @@ enum BattleTransition GetTrainerBattleTransition(void)
     if (DoesTrainerHaveMugshot(trainerId))
         return B_TRANSITION_MUGSHOT;
 
+#if IS_HNS
+    if (trainerClass == TRAINER_CLASS_PKMN_TRAINER_1_HNS)
+        return B_TRANSITION_BIG_POKEBALL;
+#endif
+
     if (trainerClass == TRAINER_CLASS_TEAM_MAGMA
         || trainerClass == TRAINER_CLASS_MAGMA_LEADER
         || trainerClass == TRAINER_CLASS_MAGMA_ADMIN)
