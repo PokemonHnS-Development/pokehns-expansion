@@ -24,6 +24,7 @@ ViridianCity_Gym_EventScript_Blue::
 	setflag FLAG_HIDE_CERULEANCAVE_GUARD
 	setflag FLAG_HIDE_SEAFOAM_BLAINE
 	clearflag FLAG_HIDE_CINNABAR_BLAINE
+	setvar VAR_OAK_MT_SILVER_CALL, 1
 	release
 	end
 

@@ -231,7 +231,9 @@ Debug_Text_HMsUnlocked:
 	.string "All HM flags set!$"
 
 Debug_EventScript_Script_2::
-	setvar VAR_MAHOGANY_TOWN_STATE, 14
+	@setvar VAR_OAK_MT_SILVER_CALL, 1
+	setvar VAR_NUM_BADGES, 16
+	setflag FLAG_IS_KANTO_CHAMPION
 	release
 	end
 
