@@ -711,7 +711,7 @@ void TryShowRoamerFlash(void)
     if (spriteId == MAX_SPRITES)
         return;
 
-    if (OW_GFX_COMPRESS && gSprites[spriteId].sheetTileStart == TAG_NONE)
+    if (OW_GFX_COMPRESS == OGC_SMALL && gSprites[spriteId].sheetTileStart == TAG_NONE)
     {
         DestroyRoamerFlashSprite(&gSprites[spriteId]);
         return;

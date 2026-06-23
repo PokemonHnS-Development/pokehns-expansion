@@ -233,7 +233,9 @@ struct Sprite
              u16 usingSheet:1;              //0x40
              u16 anchored:1;                //0x80
 
-    /*0x40*/ u16 sheetTileStart;
+    /*0x40*/ u16 sheetTileStart:10;
+             bool16 compressedFast:1;
+             u16 _unused1:5;
 
     /*0x42*/ u8 subspriteTableNum:6;
              u8 subspriteMode:2;
@@ -332,7 +334,7 @@ u8 SpriteTileAllocBitmapOp(u16 bit, u8 op);
 void ClearSpriteCopyRequests(void);
 void ResetAffineAnimData(void);
 u32 GetSpanPerImage(u32 shape, u32 size);
-void RequestSpriteFrameImageCopy(u16 index, u16 tileNum, const struct SpriteFrameImage *images);
+void RequestSpriteFrameImageCopy(u16 index, u16 tileNum, const struct SpriteFrameImage *images, bool8 compressed);
 void SetSpriteOamFlipBits(struct Sprite *sprite, u8 hFlip, u8 vFlip);
 u8 IndexOfSpriteTileTag(u16 tag);
 void FillSpriteRectColor(u32 spriteId, u32 left, u32 top, u32 width, u32 height, u32 color);

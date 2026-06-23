@@ -314,7 +314,7 @@ static const struct SpriteTemplate sSpriteTemplate_HofConfetti =
 };
 
 #if IS_HNS
-static const u16 sHallOfFame_Pal[] = INCBIN_U16("graphics/misc/japanese_hof_hns.gbapal");
+static const u16 sHallOfFame_Pal[] = INCBIN_U16("graphics/misc/japanese_hof.gbapal");
 #else
 static const u16 sHallOfFame_Pal[] = INCBIN_U16("graphics/misc/japanese_hof.gbapal");
 #endif

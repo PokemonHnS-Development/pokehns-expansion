@@ -43,13 +43,13 @@
 #define _(x)        {x}
 #define __(x)       {x}
 #define INCBIN(...) {0}
-#define INCBIN_U8   INCBIN
-#define INCBIN_U16  INCBIN
-#define INCBIN_U32  INCBIN
-#define INCBIN_S8   INCBIN
-#define INCBIN_S16  INCBIN
-#define INCBIN_S32  INCBIN
-#define INCBIN_COMP INCBIN
+#define INCBIN_U8     INCBIN
+#define INCBIN_U16    INCBIN
+#define INCBIN_U32    INCBIN
+#define INCBIN_S8     INCBIN
+#define INCBIN_S16    INCBIN
+#define INCBIN_S32    INCBIN
+#define INCBIN_COMP   INCBIN
 #endif // IDE support
 
 #define ARRAY_COUNT(array) (size_t)(sizeof(array) / sizeof((array)[0]))

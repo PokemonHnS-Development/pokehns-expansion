@@ -305,7 +305,22 @@ Debug_EventScript_Script_7::
 	end
 
 Debug_EventScript_Script_8::
-	helpwindow HELP_DEMO_WINDOW
+	clearflag FLAG_HIDE_DOJO_FALKNER
+	clearflag FLAG_HIDE_DOJO_BUGSY
+	clearflag FLAG_HIDE_DOJO_WHITNEY
+	clearflag FLAG_HIDE_DOJO_MORTY
+	clearflag FLAG_HIDE_DOJO_CHUCK
+	clearflag FLAG_HIDE_DOJO_JASMINE
+	clearflag FLAG_HIDE_DOJO_PRYCE
+	clearflag FLAG_HIDE_DOJO_CLAIR
+	clearflag FLAG_HIDE_DOJO_BROCK
+	clearflag FLAG_HIDE_DOJO_MISTY
+	clearflag FLAG_HIDE_DOJO_SURGE
+	clearflag FLAG_HIDE_DOJO_ERIKA
+	clearflag FLAG_HIDE_DOJO_JANINE
+	clearflag FLAG_HIDE_DOJO_SABRINA
+	clearflag FLAG_HIDE_DOJO_BLAINE
+	clearflag FLAG_HIDE_DOJO_BLUE
 	release
 	end
 

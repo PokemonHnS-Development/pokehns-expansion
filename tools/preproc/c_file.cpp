@@ -31,6 +31,7 @@
 #include "utf8.h"
 #include "string_parser.h"
 #include "io.h"
+#include "../../include/config/overworld.h"
 
 CFile::CFile(const char * filenameCStr, bool isStdin)
 {
@@ -353,7 +354,13 @@ void CFile::TryConvertIncbin()
 
         // INCBIN_COMP; include *compressed* version of file
         if (incbinType == 7)
+        {
+#if OW_GFX_COMPRESS == OGC_FAST
+            path = path.append(".rlfast");
+#elif OW_GFX_COMPRESS == OGC_SMALL
             path = path.append(".smol");
+#endif
+        }
 
         m_pos++;
 

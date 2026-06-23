@@ -19,6 +19,7 @@
 // THE SOFTWARE.
 
 #include "c_file.h"
+#include "../../include/config/overworld.h"
 
 CFile::CFile(std::string path)
 {
@@ -257,7 +258,13 @@ void CFile::CheckIncbin()
 
         // INCBIN_COMP; include *compressed* version of file
         if (incbinType == 6)
+        {
+#if OW_GFX_COMPRESS == OGC_FAST
+            path = path.append(".rlfast");
+#elif OW_GFX_COMPRESS == OGC_SMALL
             path = path.append(".smol");
+#endif
+        }
 
         SkipWhitespace();
 
