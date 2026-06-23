@@ -217,6 +217,8 @@ MahoganyTown_Pokemart:
 	.2byte ITEM_DUSK_STONE
 	.2byte ITEM_DAWN_STONE
 	.2byte ITEM_SHINY_STONE
+	.2byte ITEM_BLACK_AUGURITE
+	.2byte ITEM_PEAT_BLOCK
 	.2byte ITEM_NONE
 	release
 	end
