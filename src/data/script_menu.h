@@ -1216,6 +1216,20 @@ static const struct MenuAction MultichoiceList_MomMenu[] =
     {gText_MomMenuExit},
 };
 
+static const struct MenuAction MultichoiceList_LinkServicesHns[] =
+{
+    {COMPOUND_STRING("TRADE")},
+    {COMPOUND_STRING("BATTLE")},
+    {gText_Exit},
+};
+
+static const struct MenuAction MultichoiceList_BattleModeHns[] =
+{
+    {COMPOUND_STRING("SINGLE BATTLE")},
+    {COMPOUND_STRING("DOUBLE BATTLE")},
+    {gText_Exit},
+};
+
 static const struct MenuAction MultichoiceList_Exit[] =
 {
     {gText_Exit},
@@ -1403,6 +1417,8 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_HOENN_STARTERS]              = MULTICHOICE(MultichoiceList_HoennStarters),
     [MULTI_5FLOORS]                    = MULTICHOICE(MultichoiceList_5Floors),
     [MULTI_MOM_MENU]                   = MULTICHOICE(MultichoiceList_MomMenu),
+    [MULTI_LINK_SERVICES_HNS]          = MULTICHOICE(MultichoiceList_LinkServicesHns),
+    [MULTI_BATTLE_MODE_HNS]            = MULTICHOICE(MultichoiceList_BattleModeHns),
 
 };
 

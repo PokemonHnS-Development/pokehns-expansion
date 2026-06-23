@@ -2343,6 +2343,8 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/BattleFrontier_PokemonCenter_1F_hns/scripts.inc"
 	.include "data/maps/BattleFrontier_PokemonCenter_2F_hns/scripts.inc"
 	.include "data/maps/BattleFrontier_Mart_hns/scripts.inc"
+	.include "data/maps/TradeCenter_hns/scripts.inc"
+	.include "data/maps/BattleColosseum_2P_hns/scripts.inc"
 
 .endif
 

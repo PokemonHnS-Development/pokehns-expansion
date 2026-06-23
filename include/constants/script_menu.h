@@ -182,6 +182,8 @@
 #define MULTI_HOENN_STARTERS               171
 #define MULTI_5FLOORS                      172
 #define MULTI_MOM_MENU                     173
+#define MULTI_LINK_SERVICES_HNS            174
+#define MULTI_BATTLE_MODE_HNS              175
 
 #define MULTI_NONE 255
 

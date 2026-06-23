@@ -259,6 +259,17 @@ const struct Tileset gTileset_Contest =
     .callback = NULL,
 };
 
+const struct Tileset gTileset_CableClub =
+{
+    .isCompressed = FALSE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_CableClub,
+    .palettes = gTilesetPalettes_CableClub,
+    .metatiles = gMetatiles_CableClub,
+    .metatileAttributes = gMetatileAttributes_CableClub,
+    .callback = NULL,
+};
+
 #if !IS_FRLG && !IS_HNS
 
 const struct Tileset gTileset_Petalburg =
@@ -434,17 +445,6 @@ const struct Tileset gTileset_OceanicMuseum =
     .palettes = gTilesetPalettes_OceanicMuseum,
     .metatiles = gMetatiles_OceanicMuseum,
     .metatileAttributes = gMetatileAttributes_OceanicMuseum,
-    .callback = NULL,
-};
-
-const struct Tileset gTileset_CableClub =
-{
-    .isCompressed = FALSE,
-    .isSecondary = TRUE,
-    .tiles = gTilesetTiles_CableClub,
-    .palettes = gTilesetPalettes_CableClub,
-    .metatiles = gMetatiles_CableClub,
-    .metatileAttributes = gMetatileAttributes_CableClub,
     .callback = NULL,
 };
 

@@ -656,7 +656,9 @@
     "UnusedContestHall3_hns",
     "UnusedContestHall4_hns",
     "UnusedContestHall5_hns",
-    "UnusedContestHall6_hns"
+    "UnusedContestHall6_hns",
+    "TradeCenter_hns",
+    "BattleColosseum_2P_hns"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",

@@ -2444,6 +2444,30 @@
       "layout_version": "emerald"
     },
     {
+      "id": "LAYOUT_TRADE_CENTER_HNS",
+      "name": "TradeCenter_hns_Layout",
+      "width": 12,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_CableClub",
+      "border_filepath": "data/layouts/TradeCenter_hns/border.bin",
+      "blockdata_filepath": "data/layouts/TradeCenter_hns/map.bin",
+      "game_version": "hns",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_BATTLE_COLOSSEUM_2P_HNS",
+      "name": "BattleColosseum_2P_hns_Layout",
+      "width": 14,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_CableClub",
+      "border_filepath": "data/layouts/BattleColosseum_2P_hns/border.bin",
+      "blockdata_filepath": "data/layouts/BattleColosseum_2P_hns/map.bin",
+      "game_version": "hns",
+      "layout_version": "emerald"
+    },
+    {
       "id": "LAYOUT_RECORD_CORNER",
       "name": "RecordCorner_Layout",
       "width": 20,
