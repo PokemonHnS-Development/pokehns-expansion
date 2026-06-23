@@ -137,15 +137,23 @@ GoldenrodCity_PokemonCenter_EventScript_LinkNpc_End::
 	end
 
 GoldenrodCity_PokemonCenter_LinkNpc_Text_Intro:
-	.string "Welcome to the LINK CORNER!\p"
-	.string "What would you like to do?$"
+	.string "LINK CORNER\p"
+	.string "SELECT LINK TYPE.$"
 
 GoldenrodCity_PokemonCenter_LinkNpc_Text_BattleMode:
-	.string "What kind of battle would\n"
-	.string "you like?$"
+	.string "SELECT BATTLE TYPE.$"
 
 GoldenrodCity_PokemonCenter_LinkNpc_Text_Goodbye:
-	.string "Come back anytime!$"
+	.string "GOODBYE.$"
+
+GoldenrodCity_PokemonCenter_EventScript_LinkExplainerNpc::
+	msgbox GoldenrodCity_PokemonCenter_Text_LinkExplainer, MSGBOX_NPC
+	end
+
+GoldenrodCity_PokemonCenter_Text_LinkExplainer:
+	.string "You can use this machine to trade\n"
+	.string "or battle with other local players.\p"
+	.string "Isn't technology wonderful?$"
 
 GoldenrodCity_PokemonCenter_EventScript_GbaKid1::
 	lock
