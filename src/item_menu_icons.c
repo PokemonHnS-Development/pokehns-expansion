@@ -164,7 +164,7 @@ static const union AnimCmd *const sBagSpriteAnimTable[] =
     [POCKET_BERRIES]      = sSpriteAnim_Bag_Berries,
     [POCKET_KEY_ITEMS]    = sSpriteAnim_Bag_KeyItems,
     [POCKET_MEDICINE]     = sSpriteAnim_Bag_Medicine,
-#if !I_COMBINE_BAG_POCKETS
+#if I_COMBINE_BAG_POCKETS == FALSE
     [POCKET_BATTLE_ITEMS] = sSpriteAnim_Bag_BattleItems,   
     [POCKET_TREASURES]    = sSpriteAnim_Bag_Treasures,
 #endif

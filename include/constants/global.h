@@ -118,7 +118,7 @@ enum Language
 #endif
 
 // Bag constants
-#if I_COMBINE_BAG_POCKETS
+#if I_COMBINE_BAG_POCKETS == TRUE
 #define BAG_ITEMS_COUNT (200 + 36)
 #define BAG_KEYITEMS_COUNT 60
 #define BAG_POKEBALLS_COUNT 39 // 29 + padding

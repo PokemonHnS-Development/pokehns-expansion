@@ -24,7 +24,7 @@ EventScript_BufferPocketNameAndTryFanfare::
     case POCKET_ITEMS EventScript_BufferItemsPocket,
     case POCKET_TM_HM EventScript_BufferTMHMsPocket,
     case POCKET_KEY_ITEMS EventScript_BufferKeyItemsPocket,
-#if !I_COMBINE_BAG_POCKETS
+#if I_COMBINE_BAG_POCKETS == FALSE
     case POCKET_TREASURES EventScript_BufferTreasuresPocket,
     case POCKET_BATTLE_ITEMS EventScript_BufferBattleItemsPocket,
 #endif
@@ -285,7 +285,7 @@ EventScript_BufferPutAwayPocketName::
 	case POCKET_POKE_BALLS,   EventScript_BufferPutAwayPocketPokeBalls
 	case POCKET_TM_HM,     	  EventScript_BufferPutAwayPocketTMCase
 	case POCKET_BERRIES, 	  EventScript_BufferPutAwayPocketBerryPouch
-#if !I_COMBINE_BAG_POCKETS
+#if I_COMBINE_BAG_POCKETS == FALSE
 	case POCKET_TREASURES, 	  EventScript_BufferPutAwayPocketTreasuresPouch
 	case POCKET_BATTLE_ITEMS, EventScript_BufferPutAwayPocketBattleItemsPouch
 #endif

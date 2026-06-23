@@ -358,7 +358,7 @@ static const u8 sContextMenuItems_MedicinePocket[] = {
     ACTION_TOSS,        ACTION_CANCEL
 };
 
-#if !I_COMBINE_BAG_POCKETS
+#if I_COMBINE_BAG_POCKETS == FALSE
 static const u8 sContextMenuItems_BattleItemsPocket[] = {
     ACTION_USE,         ACTION_GIVE,
     ACTION_TOSS,        ACTION_CANCEL
@@ -1761,7 +1761,7 @@ static void OpenContextMenu(u8 taskId)
                 gBagMenu->contextMenuItemsPtr = sContextMenuItems_MedicinePocket;
                 gBagMenu->contextMenuNumItems = ARRAY_COUNT(sContextMenuItems_MedicinePocket);
                 break;
-#if !I_COMBINE_BAG_POCKETS
+#if I_COMBINE_BAG_POCKETS == FALSE
             case POCKET_BATTLE_ITEMS:
                 gBagMenu->contextMenuItemsPtr = sContextMenuItems_BattleItemsPocket;
                 gBagMenu->contextMenuNumItems = ARRAY_COUNT(sContextMenuItems_BattleItemsPocket);
