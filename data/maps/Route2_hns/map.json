@@ -271,6 +271,14 @@
   "coord_events": [],
   "bg_events": [
     {
+      "type": "hidden_item",
+      "x": 13,
+      "y": 4,
+      "elevation": 0,
+      "item": "ITEM_REVIVE",
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE2_REVIVE"
+    },
+    {
       "type": "sign",
       "x": 14,
       "y": 12,

@@ -301,7 +301,16 @@
     }
   ],
   "coord_events": [],
-  "bg_events": [],
+  "bg_events": [
+    {
+      "type": "hidden_item",
+      "x": 28,
+      "y": 28,
+      "elevation": 0,
+      "item": "ITEM_EXPERT_BELT",
+      "flag": "FLAG_HIDDEN_ITEM_MT_SILVER_1F_WATERFALL_ROOM_EXPERT_BELT"
+    }
+  ],
   "game_version": "hns",
   "region": "REGION_JOHTO"
 }

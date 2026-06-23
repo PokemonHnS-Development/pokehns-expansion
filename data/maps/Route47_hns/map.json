@@ -496,6 +496,30 @@
       "elevation": 0,
       "item": "ITEM_LUCKY_EGG",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE47_LUCKY_EGG"
+    },
+    {
+      "type": "hidden_item",
+      "x": 86,
+      "y": 48,
+      "elevation": 0,
+      "item": "ITEM_WAVE_INCENSE",
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE47_WAVE_INCENSE"
+    },
+    {
+      "type": "hidden_item",
+      "x": 53,
+      "y": 9,
+      "elevation": 0,
+      "item": "ITEM_LAGGING_TAIL",
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE47_LAGGING_TAIL"
+    },
+    {
+      "type": "hidden_item",
+      "x": 67,
+      "y": 55,
+      "elevation": 0,
+      "item": "ITEM_PEARL",
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE47_PEARL"
     }
   ],
   "game_version": "hns",

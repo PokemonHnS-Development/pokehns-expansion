@@ -334,7 +334,16 @@
     }
   ],
   "coord_events": [],
-  "bg_events": [],
+  "bg_events": [
+    {
+      "type": "hidden_item",
+      "x": 26,
+      "y": 21,
+      "elevation": 0,
+      "item": "ITEM_SEA_INCENSE",
+      "flag": "FLAG_HIDDEN_ITEM_CERULEAN_CAVE_1F_SEA_INCENSE"
+    }
+  ],
   "game_version": "hns",
   "region": "REGION_KANTO"
 }

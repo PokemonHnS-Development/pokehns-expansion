@@ -236,7 +236,16 @@
   ],
   "warp_events": [],
   "coord_events": [],
-  "bg_events": [],
+  "bg_events": [
+    {
+      "type": "hidden_item",
+      "x": 42,
+      "y": 5,
+      "elevation": 0,
+      "item": "ITEM_REVIVE",
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE11_REVIVE"
+    }
+  ],
   "game_version": "hns",
   "region": "REGION_KANTO"
 }

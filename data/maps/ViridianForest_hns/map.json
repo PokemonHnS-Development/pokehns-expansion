@@ -503,6 +503,38 @@
       "elevation": 0,
       "item": "ITEM_REVIVE",
       "flag": "FLAG_ITEM_VIRIDIANFOREST_REVIVE"
+    },
+    {
+      "type": "hidden_item",
+      "x": 57,
+      "y": 66,
+      "elevation": 0,
+      "item": "ITEM_BLUE_FLUTE",
+      "flag": "FLAG_HIDDEN_ITEM_VIRIDIAN_FOREST_BLUE_FLUTE"
+    },
+    {
+      "type": "hidden_item",
+      "x": 55,
+      "y": 41,
+      "elevation": 0,
+      "item": "ITEM_BIG_MUSHROOM",
+      "flag": "FLAG_HIDDEN_ITEM_VIRIDIAN_FOREST_BIG_MUSHROOM_1"
+    },
+    {
+      "type": "hidden_item",
+      "x": 30,
+      "y": 15,
+      "elevation": 0,
+      "item": "ITEM_BIG_MUSHROOM",
+      "flag": "FLAG_HIDDEN_ITEM_VIRIDIAN_FOREST_BIG_MUSHROOM_2"
+    },
+    {
+      "type": "hidden_item",
+      "x": 42,
+      "y": 13,
+      "elevation": 0,
+      "item": "ITEM_LEAF_STONE",
+      "flag": "FLAG_HIDDEN_ITEM_VIRIDIAN_FOREST_LEAF_STONE"
     }
   ],
   "game_version": "hns",

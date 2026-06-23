@@ -159,7 +159,32 @@
     }
   ],
   "coord_events": [],
-  "bg_events": [],
+  "bg_events": [
+    {
+      "type": "hidden_item",
+      "x": 35,
+      "y": 48,
+      "elevation": 0,
+      "item": "ITEM_WATER_STONE",
+      "flag": "FLAG_HIDDEN_ITEM_SEAFOAM_ISLANDS_B1F_WATER_STONE"
+    },
+    {
+      "type": "hidden_item",
+      "x": 36,
+      "y": 23,
+      "elevation": 0,
+      "item": "ITEM_GRIP_CLAW",
+      "flag": "FLAG_HIDDEN_ITEM_SEAFOAM_ISLANDS_B1F_GRIP_CLAW"
+    },
+    {
+      "type": "hidden_item",
+      "x": 18,
+      "y": 26,
+      "elevation": 0,
+      "item": "ITEM_MAX_REVIVE",
+      "flag": "FLAG_HIDDEN_ITEM_SEAFOAM_ISLANDS_B1F_MAX_REVIVE"
+    }
+  ],
   "game_version": "hns",
   "region": "REGION_KANTO"
 }

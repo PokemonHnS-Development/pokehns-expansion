@@ -212,6 +212,14 @@
   "coord_events": [],
   "bg_events": [
     {
+      "type": "hidden_item",
+      "x": 72,
+      "y": 0,
+      "elevation": 0,
+      "item": "ITEM_CALCIUM",
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE13_CALCIUM"
+    },
+    {
       "type": "sign",
       "x": 70,
       "y": 16,
