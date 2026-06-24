@@ -26,8 +26,6 @@
 #include "script.h"
 #include "challenge_menu.h"
 
-// Pokemon HeartGold/SoulSilver uses this file name pattern from HnS.
-// However, this is a clean rewrite using expansion's ListMenu infrastructure.
 
 // =============================================================================
 // Submenu (tab) definitions
@@ -502,7 +500,7 @@ static const struct ChallengeMenuItem sTabItems_Mode[] = {
 };
 
 static const u8 *const sDesc_SaveExit[] = { COMPOUND_STRING("Save choices and continue...") };
-static const u8 sText_ConfirmSave[] = COMPOUND_STRING("Challenges can't be changed\nmid-game. Proceed?");
+static const u8 sText_ConfirmSave[] = COMPOUND_STRING("Confirm your choices?");
 
 // =============================================================================
 // Choice strings — shared across tabs

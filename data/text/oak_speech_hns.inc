@@ -38,7 +38,7 @@ gText_Oak_WhatChallenge::
 
 gText_Oak_ChallengeSelected::
 	.string "That sounds like the right\n"
-	.string "level of CHALLENGE to me!$" 
+	.string "level of challenge to me!$" 
 
 gText_Oak_WhatsYourName::
 	.string "And what's your name?$"
