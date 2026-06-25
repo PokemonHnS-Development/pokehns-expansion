@@ -31,6 +31,8 @@ const u8 gWeatherRainTiles[] = INCBIN_U8("graphics/weather/rain.4bpp");
 const u8 gWeatherSandstormTiles[] = INCBIN_U8("graphics/weather/sandstorm.4bpp");
 const u8 gWeatherLeafTiles[] = INCBIN_U8("graphics/weather/leaves.4bpp");
 const u16 gLeavesWeatherPalette[] = INCBIN_U16("graphics/weather/leaves.gbapal");
+const u16 gLeavesOrangeWeatherPalette[] = INCBIN_U16("graphics/weather/leaves_orange.gbapal");
+const u16 gLeavesYellowWeatherPalette[] = INCBIN_U16("graphics/weather/leaves_yellow.gbapal");
 
 //------------------------------------------------------------------------------
 // WEATHER_SUNNY_CLOUDS
@@ -2656,7 +2658,14 @@ static const struct SpriteSheet sLeavesSpriteSheet =
     .tag = GFXTAG_LEAVES,
 };
 
-static const struct SpritePalette sLeavesSpritePalette = {gLeavesWeatherPalette, GFXTAG_LEAVES};
+static const struct SpritePalette sLeavesSpritePalettes[] =
+{
+    {gLeavesWeatherPalette, GFXTAG_LEAVES},
+    {gLeavesOrangeWeatherPalette, GFXTAG_LEAVES_ORANGE},
+    {gLeavesYellowWeatherPalette, GFXTAG_LEAVES_YELLOW},
+};
+
+#define NUM_LEAF_COLORS ARRAY_COUNT(sLeavesSpritePalettes)
 
 void Leaves_InitVars(void)
 {
@@ -2664,7 +2673,7 @@ void Leaves_InitVars(void)
     gWeatherPtr->weatherGfxLoaded = FALSE;
     gWeatherPtr->targetColorMapIndex = 0;
     gWeatherPtr->colorMapStepDelay = 20;
-    gWeatherPtr->targetLeafSpriteCount = 12;
+    gWeatherPtr->targetLeafSpriteCount = 24;
     gWeatherPtr->leafVisibleCounter = 0;
     Weather_SetBlendCoeffs(8, 12);
     gWeatherPtr->noShadows = FALSE;
@@ -2683,7 +2692,8 @@ void Leaves_InitAll(void)
 
     Leaves_InitVars();
     LoadSpriteSheet(&sLeavesSpriteSheet);
-    LoadSpritePalette(&sLeavesSpritePalette);
+    for (i = 0; i < NUM_LEAF_COLORS; i++)
+        LoadSpritePalette(&sLeavesSpritePalettes[i]);
 
     while (gWeatherPtr->weatherGfxLoaded == FALSE)
     {
@@ -2834,8 +2844,9 @@ static bool8 CreateLeafSprite(void)
         return FALSE;
 
     gSprites[spriteId].tLeafId = gWeatherPtr->leafSpriteCount;
+    gSprites[spriteId].oam.paletteNum = IndexOfSpritePaletteTag(sLeavesSpritePalettes[Random() % NUM_LEAF_COLORS].tag);
     InitLeafSpriteMovement(&gSprites[spriteId]);
-    gSprites[spriteId].coordOffsetEnabled = TRUE;
+    gSprites[spriteId].coordOffsetEnabled = FALSE;
     gWeatherPtr->sprites.s1.rainSprites[gWeatherPtr->leafSpriteCount++] = &gSprites[spriteId];
     return TRUE;
 }
@@ -2857,8 +2868,8 @@ static void InitLeafSpriteMovement(struct Sprite *sprite)
     u16 rand;
     u16 x = ((sprite->tLeafId * 5) & 7) * 30 + (Random() % 30);
 
-    sprite->y = -3 - (gSpriteCoordOffsetY + sprite->centerToCornerVecY);
-    sprite->x = x - (gSpriteCoordOffsetX + sprite->centerToCornerVecX);
+    sprite->y = -(20 + (Random() % 16));
+    sprite->x = x;
     sprite->tPosY = sprite->y * 128;
     sprite->x2 = 0;
     rand = Random();
@@ -2906,14 +2917,17 @@ static void UpdateLeafSprite(struct Sprite *sprite)
         sprite->x += -1;
     }
 
-    x = (sprite->x + sprite->centerToCornerVecX + gSpriteCoordOffsetX) & 0x1FF;
+    x = sprite->x & 0x1FF;
     if (x & 0x100)
         x |= -0x100;
 
-    if (x < -12)
-        sprite->x = 242 - (gSpriteCoordOffsetX + sprite->centerToCornerVecX);
-    else if (x > 242)
-        sprite->x = -12 - (gSpriteCoordOffsetX + sprite->centerToCornerVecX);
+    if (x < -16)
+        sprite->x = 248;
+    else if (x > 248)
+        sprite->x = -16;
+
+    if (sprite->y > 168)
+        InitLeafSpriteMovement(sprite);
 }
 
 #undef tPosY
