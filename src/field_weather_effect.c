@@ -2673,7 +2673,7 @@ void Leaves_InitVars(void)
     gWeatherPtr->weatherGfxLoaded = FALSE;
     gWeatherPtr->targetColorMapIndex = 0;
     gWeatherPtr->colorMapStepDelay = 20;
-    gWeatherPtr->targetLeafSpriteCount = 24;
+    gWeatherPtr->targetLeafSpriteCount = 12;
     gWeatherPtr->leafVisibleCounter = 0;
     Weather_SetBlendCoeffs(8, BASE_SHADOW_INTENSITY);
     gWeatherPtr->noShadows = FALSE;
@@ -2837,7 +2837,9 @@ static bool8 CreateLeafSprite(void)
         return FALSE;
 
     gSprites[spriteId].tLeafId = gWeatherPtr->leafSpriteCount;
-    gSprites[spriteId].oam.paletteNum = IndexOfSpritePaletteTag(sLeavesSpritePalettes[Random() % NUM_LEAF_COLORS].tag);
+    u16 colorRoll = Random() % 10;
+    u8 colorIndex = (colorRoll < 2) ? 0 : (colorRoll < 8) ? 1 : 2;
+    gSprites[spriteId].oam.paletteNum = IndexOfSpritePaletteTag(sLeavesSpritePalettes[colorIndex].tag);
     InitLeafSpriteMovement(&gSprites[spriteId]);
     gSprites[spriteId].coordOffsetEnabled = FALSE;
     gWeatherPtr->sprites.s1.rainSprites[gWeatherPtr->leafSpriteCount++] = &gSprites[spriteId];
