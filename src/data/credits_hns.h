@@ -138,6 +138,7 @@ static const u8 sCreditsText_Ekat99[]                          = _("Ekat99");
 static const u8 sCreditsText_TheDeadHeroAlistair[]             = _("TheDeadHeroAlistair");
 static const u8 sCreditsText_JohtoRedrawn[]                    =_("Johto Redrawn Team");
 static const u8 sCreditsText_Zatavares852[]                    = _("zatavares852");
+static const u8 sCreditsText_lbsbezerra[]                      = _("lbsbezerra");
 
 static const u8 sCreditsText_Gameplay[]                        = _("Gameplay");
 static const u8 sCreditsText_TheSmithPlaysGameplay[]           = _("Crystal Legacy - TSP");
@@ -390,6 +391,7 @@ static const struct CreditsEntry sCreditsEntry_Ekat99                           
 static const struct CreditsEntry sCreditsEntry_TheDeadHeroAlistair             = {11, FALSE, sCreditsText_TheDeadHeroAlistair};
 static const struct CreditsEntry sCreditsEntry_JohtoRedrawn                    = {11, FALSE, sCreditsText_JohtoRedrawn};
 static const struct CreditsEntry sCreditsEntry_Zatavares852                    = {11, FALSE, sCreditsText_Zatavares852};
+static const struct CreditsEntry sCreditsEntry_lbsbezerra                      = {11, FALSE, sCreditsText_lbsbezerra};
 // Gameplay
 static const struct CreditsEntry sCreditsEntry_Gameplay                         = {8,  TRUE, sCreditsText_Gameplay};
 static const struct CreditsEntry sCreditsEntry_TheSmithPlaysGameplay            = {11, FALSE, sCreditsText_TheSmithPlaysGameplay};
@@ -657,7 +659,7 @@ static const struct CreditsEntry *const sCreditsEntryPointerTable[PAGE_COUNT][EN
         &sCreditsEntry_Tilesets,
         &sCreditsEntry_JohtoRedrawn,
         &sCreditsEntry_Zatavares852,
-        _,
+        &sCreditsEntry_lbsbezerra,
     },
     [PAGE_HNS_MAPS] = {
         &sCreditsEntry_Assets,
