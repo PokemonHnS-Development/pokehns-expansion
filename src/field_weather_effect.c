@@ -2841,7 +2841,7 @@ static bool8 CreateLeafSprite(void)
     u8 colorIndex = (colorRoll < 2) ? 0 : (colorRoll < 8) ? 1 : 2;
     gSprites[spriteId].oam.paletteNum = IndexOfSpritePaletteTag(sLeavesSpritePalettes[colorIndex].tag);
     InitLeafSpriteMovement(&gSprites[spriteId]);
-    gSprites[spriteId].coordOffsetEnabled = FALSE;
+    gSprites[spriteId].coordOffsetEnabled = TRUE;
     gWeatherPtr->sprites.s1.rainSprites[gWeatherPtr->leafSpriteCount++] = &gSprites[spriteId];
     return TRUE;
 }
@@ -2863,9 +2863,9 @@ static void InitLeafSpriteMovement(struct Sprite *sprite)
     u16 rand;
     u16 x = ((sprite->tLeafId * 5) & 7) * 30 + (Random() % 30);
 
-    sprite->y = -(20 + (Random() % 16));
-    sprite->x = x;
-    sprite->tPosY = sprite->y * 128;
+    sprite->y = -(20 + (Random() % 16)) - (gSpriteCoordOffsetY + sprite->centerToCornerVecY);
+    sprite->x = x - (gSpriteCoordOffsetX + sprite->centerToCornerVecX);
+    sprite->tPosY = 0;
     sprite->x2 = 0;
     rand = Random();
     sprite->tDeltaY = (rand & 3) * 5 + 64;
@@ -2882,7 +2882,8 @@ static void UpdateLeafSprite(struct Sprite *sprite)
     s16 x;
 
     sprite->tPosY += sprite->tDeltaY;
-    sprite->y = sprite->tPosY >> 7;
+    sprite->y += sprite->tPosY >> 7;
+    sprite->tPosY &= 0x7F;
     sprite->tWaveIndex += sprite->tWaveDelta;
     sprite->tWaveIndex &= 0xFF;
     sprite->x2 = gSineTable[sprite->tWaveIndex] / 64;
@@ -2912,16 +2913,16 @@ static void UpdateLeafSprite(struct Sprite *sprite)
         sprite->x += -1;
     }
 
-    x = sprite->x & 0x1FF;
+    x = (sprite->x + sprite->centerToCornerVecX + gSpriteCoordOffsetX) & 0x1FF;
     if (x & 0x100)
         x |= -0x100;
 
     if (x < -16)
-        sprite->x = 248;
+        sprite->x = 248 - (gSpriteCoordOffsetX + sprite->centerToCornerVecX);
     else if (x > 248)
-        sprite->x = -16;
+        sprite->x = -16 - (gSpriteCoordOffsetX + sprite->centerToCornerVecX);
 
-    if (sprite->y > 168)
+    if ((sprite->y + sprite->centerToCornerVecY + gSpriteCoordOffsetY) > 168)
         InitLeafSpriteMovement(sprite);
 }
 
