@@ -2675,15 +2675,8 @@ void Leaves_InitVars(void)
     gWeatherPtr->colorMapStepDelay = 20;
     gWeatherPtr->targetLeafSpriteCount = 24;
     gWeatherPtr->leafVisibleCounter = 0;
-    Weather_SetBlendCoeffs(8, 12);
+    Weather_SetBlendCoeffs(8, BASE_SHADOW_INTENSITY);
     gWeatherPtr->noShadows = FALSE;
-    SetGpuReg(REG_OFFSET_BLDALPHA, BLDALPHA_BLEND(16, 12));
-    SetGpuReg(REG_OFFSET_BLDCNT, BLDCNT_TGT1_OBJ
-                                | BLDCNT_TGT2_BG0
-                                | BLDCNT_TGT2_BG1
-                                | BLDCNT_TGT2_BG2
-                                | BLDCNT_TGT2_BG3
-                                | BLDCNT_EFFECT_BLEND);
 }
 
 void Leaves_InitAll(void)
@@ -2754,7 +2747,7 @@ static const struct OamData sLeafSpriteOamData =
 {
     .y = 0,
     .affineMode = ST_OAM_AFFINE_OFF,
-    .objMode = ST_OAM_OBJ_BLEND,
+    .objMode = ST_OAM_OBJ_NORMAL,
     .mosaic = FALSE,
     .bpp = ST_OAM_4BPP,
     .shape = SPRITE_SHAPE(16x16),

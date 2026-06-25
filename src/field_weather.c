@@ -1190,8 +1190,7 @@ bool32 IsWeatherAlphaBlend(void)
     return (gWeatherPtr->currWeather == WEATHER_FOG_HORIZONTAL
          || gWeatherPtr->currWeather == WEATHER_FOG_DIAGONAL
          || gWeatherPtr->currWeather == WEATHER_UNDERWATER_BUBBLES
-         || gWeatherPtr->currWeather == WEATHER_UNDERWATER
-         || gWeatherPtr->currWeather == WEATHER_LEAVES);
+         || gWeatherPtr->currWeather == WEATHER_UNDERWATER);
 }
 
 static const u8 sWeatherNames[WEATHER_COUNT][24] = {
