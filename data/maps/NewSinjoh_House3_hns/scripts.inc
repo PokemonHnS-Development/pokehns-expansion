@@ -9,6 +9,7 @@ NewSinjoh_House3_hns_OnFrame::
 
 NewSinjoh_House3_hns_OnLoad::
     goto_if_set FLAG_NEWSINJOH_HAUNTEDHOUSE_STAIRS, NewSinjoh_House3_FogAndStairs
+	goto_if_set FLAG_NEWSINJOH_HAUNTEDHOUSE_FROSLASS, NewSinjoh_House3_RemoveFroslass
 	goto_if_set FLAG_NEWSINJOH_HAUNTEDHOUSE_FROSLASS_CAUGHT, NewSinjoh_House3_BoxPurge
     end
 
@@ -18,14 +19,19 @@ NewSinjoh_House3_FogAndStairs::
 	doweather
 	end
 
+NewSinjoh_House3_RemoveFroslass::
+    removeobject LOCALID_HAUNTED_HOUSE_FROSLASS
+	end
+
 NewSinjoh_House3_hns_SpookyBox::
+    goto_if_set FLAG_NEWSINJOH_HAUNTEDHOUSE_FROSLASS_CAUGHT, NewSinjoh_House3_BoxPurge
     lock
 	hidefollower
 	applymovement LOCALID_PLAYER, NewSinjoh_House3_Movement_WALK_In
 	waitmovement 0
 	playse SE_CLICK
     waitse
-	delay 15
+	delay 10
 	fadescreen FADE_TO_BLACK
 	delay 15
 	addobject LOCALID_NEWSINJOH_SPOOKY_BOX
@@ -33,7 +39,7 @@ NewSinjoh_House3_hns_SpookyBox::
 	delay 10
     playse SE_PIN
 	applymovement LOCALID_PLAYER, Common_Movement_ExclamationMark
-	delay 30
+	delay 20
     applymovement LOCALID_PLAYER, NewSinjoh_House3_Movement_AfterExclamation
     waitmovement 0
 	msgbox Text_NewSinjoh_TheDoor_IsLocked
@@ -206,7 +212,7 @@ Text_NewSinjoh_House3_Notyet:
 
 Text_NewSinjoh_House3_GhostlyPresence:
     .string "You feel a ghostly chill roll down\n"
-	.string "your spine!$"
+	.string "your back!$"
 
 Text_NewSinjoh_House3_YouFound_A_Book:
     .string "Something about this journal\n"
@@ -234,12 +240,14 @@ NewSinjoh_House3_Stove::
 	goto_if_set FLAG_NEWSINJOH_HAUNTEDHOUSE_STAIRS, NewSinjoh_House3_AlreadyPurified
     msgbox Text_NewSinjoh_House3_Purify_Spirits, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, FALSE, NewSinjoh_House3_NotYet
+	closemessage
 	playse SE_M_EMBER
 	playse SE_REPEL
-	delay 90
+	delay 60
 	setweather WEATHER_FOG_HORIZONTAL
 	doweather
 	msgbox Text_NewSinjoh_House3_Filled_WithFog
+	closemessage
     setvar VAR_0x8004, 1  @ vertical pan
     setvar VAR_0x8005, 1  @ horizontal pan
     setvar VAR_0x8006, 20  @ num shakes
@@ -265,11 +273,11 @@ NewSinjoh_House3_BetterKeepLooking::
 
 
 NewSinjoh_House3_Stairs::
-	setmetatile 38, 13, 0x015, FALSE
-	setmetatile 38, 14, 0x005, FALSE
-	setmetatile 38, 15, 0x00D, FALSE
-	setmetatile 39, 14, 0x006, FALSE
-	setmetatile 39, 15, 0x00E, FALSE
+	setmetatile 38, 13, 0x015, TRUE
+	setmetatile 38, 14, 0x005, TRUE
+	setmetatile 38, 15, 0x00D, TRUE
+	setmetatile 39, 14, 0x006, TRUE
+	setmetatile 39, 15, 0x00E, TRUE
 	setmetatile 40, 14, 0x007, FALSE
 	setmetatile 40, 15, 0x00F, FALSE
 	return
@@ -280,15 +288,17 @@ Text_NewSinjoh_House3_BetterKeepLooking:
 
 
 Text_NewSinjoh_House3_Purify_Spirits:
-    .string "This is a Purification test.$"
+    .string "Would you like to burn some incense?$"
 
 
 Text_NewSinjoh_House3_Filled_WithFog:
-    .string "This is a Fog test.$"
+    .string "The building filled with\n"
+	.string "smoke from the incense!$"
 	
 
 Text_NewSinjoh_House3_StairsAppears:
-    .string "This is a Stair test.$"
+    .string "You hear a loud crash to\n"
+	.string "the south..$"
 	
 NewSinjoh_House3_AlreadyPurified::
     msgbox Text_NewSinjoh_House3_Already_Purified
@@ -303,15 +313,15 @@ Text_NewSinjoh_House3_Already_Purified:
 
 NewSinjoh_House3_hns_Gravestone_North::
     lock
+	goto_if_set FLAG_NEWSINJOH_HAUNTEDHOUSE_FROSLASS_CAUGHT, NewSinjoh_House3_Gastly_Gone
 	goto_if_set FLAG_NEWSINJOH_HAUNTEDHOUSE_GRAVELIGHT_NORTH, NewSinjoh_House3_Already_Shining
 	playse SE_THUNDER
-    waitse
-	delay 10
 	fadescreen FADE_TO_WHITE
 	delay 15
 	addobject LOCALID_NEWSINJOH_NORTHLIGHT
 	fadescreen FADE_FROM_WHITE
-	delay 10
+	playmoncry SPECIES_GASTLY, 0
+	delay 20
 	msgbox Text_NewSinjoh_House3_Stone_Light
 	addvar VAR_NEWSINJOH_HAUNTEDHOUSE_GRAVESTONES, 1
 	setflag FLAG_NEWSINJOH_HAUNTEDHOUSE_GRAVELIGHT_NORTH
@@ -320,15 +330,15 @@ NewSinjoh_House3_hns_Gravestone_North::
 
 NewSinjoh_House3_hns_Gravestone_West::
     lock
+	goto_if_set FLAG_NEWSINJOH_HAUNTEDHOUSE_FROSLASS_CAUGHT, NewSinjoh_House3_Gastly_Gone
 	goto_if_set FLAG_NEWSINJOH_HAUNTEDHOUSE_GRAVELIGHT_WEST, NewSinjoh_House3_Already_Shining
 	playse SE_THUNDER
-    waitse
-	delay 10
 	fadescreen FADE_TO_WHITE
 	delay 15
 	addobject LOCALID_NEWSINJOH_WESTLIGHT
 	fadescreen FADE_FROM_WHITE
-	delay 10
+	playmoncry SPECIES_GASTLY, 0
+	delay 20
 	msgbox Text_NewSinjoh_House3_Stone_Light
 	addvar VAR_NEWSINJOH_HAUNTEDHOUSE_GRAVESTONES, 1
 	setflag FLAG_NEWSINJOH_HAUNTEDHOUSE_GRAVELIGHT_WEST
@@ -337,15 +347,15 @@ NewSinjoh_House3_hns_Gravestone_West::
 
 NewSinjoh_House3_hns_Gravestone_East::
     lock
+	goto_if_set FLAG_NEWSINJOH_HAUNTEDHOUSE_FROSLASS_CAUGHT, NewSinjoh_House3_Gastly_Gone
 	goto_if_set FLAG_NEWSINJOH_HAUNTEDHOUSE_GRAVELIGHT_EAST, NewSinjoh_House3_Already_Shining
 	playse SE_THUNDER
-    waitse
-	delay 10
 	fadescreen FADE_TO_WHITE
 	delay 15
 	addobject LOCALID_NEWSINJOH_EASTLIGHT
 	fadescreen FADE_FROM_WHITE
-	delay 10
+	playmoncry SPECIES_GASTLY, 0
+	delay 20
 	msgbox Text_NewSinjoh_House3_Stone_Light
 	addvar VAR_NEWSINJOH_HAUNTEDHOUSE_GRAVESTONES, 1
 	setflag FLAG_NEWSINJOH_HAUNTEDHOUSE_GRAVELIGHT_EAST
@@ -354,15 +364,15 @@ NewSinjoh_House3_hns_Gravestone_East::
 
 NewSinjoh_House3_hns_Gravestone_South::
     lock
+	goto_if_set FLAG_NEWSINJOH_HAUNTEDHOUSE_FROSLASS_CAUGHT, NewSinjoh_House3_Gastly_Gone
 	goto_if_set FLAG_NEWSINJOH_HAUNTEDHOUSE_GRAVELIGHT_SOUTH, NewSinjoh_House3_Already_Shining
 	playse SE_THUNDER
-    waitse
-	delay 10
 	fadescreen FADE_TO_WHITE
 	delay 15
 	addobject LOCALID_NEWSINJOH_SOUTHLIGHT
 	fadescreen FADE_FROM_WHITE
-	delay 10
+	playmoncry SPECIES_GASTLY, 0
+	delay 20
 	msgbox Text_NewSinjoh_House3_Stone_Light
 	addvar VAR_NEWSINJOH_HAUNTEDHOUSE_GRAVESTONES, 1
 	setflag FLAG_NEWSINJOH_HAUNTEDHOUSE_GRAVELIGHT_SOUTH
@@ -375,12 +385,12 @@ NewSinjoh_House3_Already_Shining::
 	end
 
 Text_NewSinjoh_House3_Already_Shining:
-    .string "The owner of this grave has already departed..\p"
-	.string "Better keep looking around.$"
+    .string "Gastly is ready to help you!\p"
+	.string "Better not keep it waiting...$"
 
 Text_NewSinjoh_House3_Stone_Light:
-    .string "You feel a warm in your chest\n"
-	.string "from the light of this grave.\p"
+    .string "A wild GASTLY came out from\n"
+	.string "the grave to help!\p"
 	.string "Better keep moving..$"
 
 NewSinjoh_House3_Summoning_Circle::
@@ -391,17 +401,27 @@ NewSinjoh_House3_Summoning_Circle::
 	goto_if_set FLAG_NEWSINJOH_HAUNTEDHOUSE_FROSLASS_CAUGHT, NewSinjoh_House3_Already_Caught
     msgbox Text_NewSinjoh_House3_Activate_Circle, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, FALSE, NewSinjoh_House3_NotYet
+	closemessage
+	playse MUS_HG_DANCE_THEATER
+	applymovement LOCALID_NEWSINJOH_NORTHLIGHT, NewSinjoh_House3_Gastly_Movement_North
+	waitmovement 20
+	delay 90
+	applymovement LOCALID_NEWSINJOH_WESTLIGHT, NewSinjoh_House3_Gastly_Movement_West
+	waitmovement 20
+	delay 90
+	applymovement LOCALID_NEWSINJOH_EASTLIGHT, NewSinjoh_House3_Gastly_Movement_East
+	waitmovement 20
+	delay 90
+	applymovement LOCALID_NEWSINJOH_SOUTHLIGHT, NewSinjoh_House3_Gastly_Movement_South
+	waitmovement 20
+	delay 90
 	fadescreen FADE_TO_WHITE
 	playse SE_THUNDER
-    waitse
-	delay 10
-	fadescreen FADE_FROM_WHITE
-	fadescreen FADE_TO_WHITE
-	playse SE_THUNDER
-    waitse
-	delay 10
-	fadescreen FADE_FROM_WHITE
-	fadescreen FADE_TO_WHITE
+	removeobject LOCALID_NEWSINJOH_NORTHLIGHT
+	removeobject LOCALID_NEWSINJOH_WESTLIGHT
+	removeobject LOCALID_NEWSINJOH_EASTLIGHT
+	removeobject LOCALID_NEWSINJOH_SOUTHLIGHT
+	delay 20
 	playse SE_THUNDER
     waitse
 	delay 10
@@ -414,6 +434,9 @@ NewSinjoh_House3_Summoning_Circle::
 	waitmoncry
 	setwildbattleshiny SPECIES_FROSLASS, 70
 	dowildbattle
+	fadescreen FADE_TO_BLACK
+	removeobject LOCALID_HAUNTED_HOUSE_FROSLASS
+	fadescreen FADE_FROM_BLACK
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_eq VAR_RESULT, B_OUTCOME_WON, NewSinjoh_EventScript_Defeated_Froslass
 	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, NewSinjoh_EventScript_Ran_Froslass
@@ -421,18 +444,17 @@ NewSinjoh_House3_Summoning_Circle::
 NewSinjoh_EventScript_Defeated_Froslass::
 	setflag FLAG_NEWSINJOH_HAUNTEDHOUSE_FROSLASS
 	clearflag FLAG_TEMP_1
-	fadescreen FADE_TO_BLACK
-	removeobject LOCALID_HAUNTED_HOUSE_FROSLASS
-	fadescreen FADE_FROM_BLACK
 	setflag FLAG_NEWSINJOH_HAUNTEDHOUSE_FROSLASS_CAUGHT
 	subvar VAR_NEWSINJOH_HAUNTEDHOUSE_FRONTDOOR, 1
+	subvar VAR_NEWSINJOH_HAUNTEDHOUSE_STAIRS, 1
 	removeobject LOCALID_NEWSINJOH_SPOOKY_BOX
+	msgbox Text_NewSinjoh_House3_Sprits_Gone
 	release
 	end
 
 NewSinjoh_EventScript_Ran_Froslass::
-    removeobject LOCALID_NEWSINJOH_SPOOKY_BOX
 	setflag FLAG_NEWSINJOH_HAUNTEDHOUSE_FROSLASS_CAUGHT
+	msgbox Text_NewSinjoh_House3_Sprits_Gone
 	release
 	end
 
@@ -454,7 +476,54 @@ Text_NewSinjoh_AlreadyBattled:
     .string "You remember the battle fought here...\p"
     .string "Better to keep moving forwards.$"
 
+Text_NewSinjoh_House3_Sprits_Gone:
+    .string "It seems like the spirits trapped here\n"
+	.string "are now gone..\l"
+	.string "Perhaps it's now possible to leave?$"
+
 NewSinjoh_House3_BoxPurge::
     removeobject LOCALID_NEWSINJOH_SPOOKY_BOX
 	subvar VAR_NEWSINJOH_HAUNTEDHOUSE_FRONTDOOR, 1
 	end
+
+NewSinjoh_House3_Gastly_Movement_North:
+    walk_down
+	walk_down
+	walk_left
+	walk_down
+	step_end
+
+NewSinjoh_House3_Gastly_Movement_West:
+    walk_right
+	walk_right
+	walk_down
+	walk_right
+	walk_right
+	step_end
+
+NewSinjoh_House3_Gastly_Movement_East:
+	walk_left
+	walk_left
+	walk_up
+	face_down
+	face_right
+	face_left
+	walk_left
+	walk_left
+	step_end
+
+NewSinjoh_House3_Gastly_Movement_South:
+    walk_up
+	walk_up
+	walk_right
+	walk_up
+	step_end
+
+NewSinjoh_House3_Gastly_Gone::
+    msgbox Text_GastlyGone
+	release
+	end
+
+Text_GastlyGone:
+    .string "The Gastly that helped you\n"
+	.string "is no longer here...$"

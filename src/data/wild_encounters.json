@@ -70764,17 +70764,17 @@
               {
                 "min_level": 50,
                 "max_level": 60,
+                "species": "SPECIES_MEDITITE"
+              },
+              {
+                "min_level": 50,
+                "max_level": 60,
                 "species": "SPECIES_MEDICHAM"
               },
               {
                 "min_level": 50,
                 "max_level": 60,
-                "species": "SPECIES_GRAVELER"
-              },
-              {
-                "min_level": 50,
-                "max_level": 60,
-                "species": "SPECIES_GOLBAT"
+                "species": "SPECIES_ARON"
               },
               {
                 "min_level": 50,
@@ -70809,7 +70809,7 @@
               {
                 "min_level": 50,
                 "max_level": 69,
-                "species": "SPECIES_JYNX"
+                "species": "SPECIES_MEDICHAM"
               },
               {
                 "min_level": 50,

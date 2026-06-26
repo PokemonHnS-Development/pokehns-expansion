@@ -29,58 +29,6 @@
       "flag": "FLAG_NEWSINJOH_HAUNTEDHOUSE_FROSLASS"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MOVING_BOX",
-      "x": 44,
-      "y": 12,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "NewSinjoh_House3_FakeBox",
-      "flag": "0"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_MOVING_BOX",
-      "x": 47,
-      "y": 11,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "NewSinjoh_House3_FakeBox",
-      "flag": "0"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_MOVING_BOX",
-      "x": 41,
-      "y": 9,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "NewSinjoh_House3_Key3_Filter",
-      "flag": "0"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_MOVING_BOX",
-      "x": 51,
-      "y": 12,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "NewSinjoh_House3_Key1_Filter",
-      "flag": "0"
-    },
-    {
       "local_id": "LOCALID_NEWSINJOH_SPOOKY_BOX",
       "graphics_id": "OBJ_EVENT_GFX_MOVING_BOX",
       "x": 49,
@@ -109,11 +57,11 @@
     },
     {
       "local_id": "LOCALID_NEWSINJOH_WESTLIGHT",
-      "graphics_id": "OBJ_EVENT_GFX_SMALL_LIGHT_HNS",
-      "x": 0,
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_GASTLY",
+      "x": 2,
       "y": 17,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_RIGHT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -123,11 +71,11 @@
     },
     {
       "local_id": "LOCALID_NEWSINJOH_SOUTHLIGHT",
-      "graphics_id": "OBJ_EVENT_GFX_SMALL_LIGHT_HNS",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_GASTLY",
       "x": 7,
       "y": 21,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_UP",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -137,11 +85,11 @@
     },
     {
       "local_id": "LOCALID_NEWSINJOH_NORTHLIGHT",
-      "graphics_id": "OBJ_EVENT_GFX_SMALL_LIGHT_HNS",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_GASTLY",
       "x": 7,
       "y": 13,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_DOWN",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -151,11 +99,11 @@
     },
     {
       "local_id": "LOCALID_NEWSINJOH_EASTLIGHT",
-      "graphics_id": "OBJ_EVENT_GFX_SMALL_LIGHT_HNS",
-      "x": 14,
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_GASTLY",
+      "x": 12,
       "y": 17,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_LEFT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -180,7 +128,7 @@
       "dest_warp_id": "2"
     },
     {
-      "x": 12,
+      "x": 10,
       "y": 20,
       "elevation": 0,
       "dest_map": "MAP_NEW_SINJOH_HOUSE3_HNS",
@@ -379,7 +327,7 @@
     },
     {
       "type": "sign",
-      "x": 0,
+      "x": 2,
       "y": 17,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
@@ -395,7 +343,7 @@
     },
     {
       "type": "sign",
-      "x": 14,
+      "x": 12,
       "y": 17,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
@@ -424,6 +372,46 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "NewSinjoh_House3_Summoning_Circle"
+    },
+    {
+      "type": "sign",
+      "x": 51,
+      "y": 12,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "NewSinjoh_House3_Key1_Filter"
+    },
+    {
+      "type": "sign",
+      "x": 44,
+      "y": 12,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "NewSinjoh_House3_FakeBox"
+    },
+    {
+      "type": "sign",
+      "x": 41,
+      "y": 9,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "NewSinjoh_House3_Key3_Filter"
+    },
+    {
+      "type": "sign",
+      "x": 47,
+      "y": 11,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "NewSinjoh_House3_FakeBox"
+    },
+    {
+      "type": "sign",
+      "x": 50,
+      "y": 15,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "NewSinjoh_House3_FakeBox"
     }
   ],
   "game_version": "hns",

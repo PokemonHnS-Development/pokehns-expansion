@@ -593,8 +593,15 @@
 #define TRAINER_CHARLES_2_HNS                          585
 #define TRAINER_CHARLES_3_HNS                          586
 #define TRAINER_MILKMAN_HNS                            587
+#define TRAINER_RUBERT_HNS                             588
+#define TRAINER_NICHOLAS_HNS                           589
+#define TRAINER_MAKAYLA_HNS                            590
+#define TRAINER_NIA_HNS                                591
+#define TRAINER_JOHN_1_HNS                               592
+#define TRAINER_SNAPE_HNS                              593
+#define TRAINER_TERRY_HNS                              594
 
-#define TRAINERS_COUNT_HNS                       588
+#define TRAINERS_COUNT_HNS                       595
 #define MAX_TRAINERS_COUNT_HNS                   864
 
 #endif  // GUARD_CONSTANTS_OPPONENTS_HNS_H

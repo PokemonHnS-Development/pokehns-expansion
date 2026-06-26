@@ -13501,3 +13501,254 @@ EVs: 4 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
 - Double-Edge
 - Play Rough 
 - Power-Up Punch
+
+=== TRAINER_RUBERT_HNS ===
+Name: RUBERT
+Class: Gentleman Hns
+Pic: Gentleman FRLG
+Gender: Male
+Music: Hg Boy 2
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Arcanine_Hisui @ Life Orb
+Level: 60
+Ability: Rock Head
+IVs: 0 HP / 31 Atk / 0 Def / 0 SpA / 0 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+- Head Smash
+- Flare Blitz
+- Psychic Fangs
+- Leer
+
+Bibarel
+Level: 60
+Ability: Simple
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 0 Spe
+- Curse
+- Aqua Tail
+- Quick Attack
+- Super Fang
+
+Gallade @ Sitrus Berry
+Level: 60
+Ability: Sharpness
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+- Aqua Cutter
+- Psycho Cut
+- Bulk Up
+- Taunt
+
+=== TRAINER_NICHOLAS_HNS ===
+Name: RUBERT
+Class: Hiker Hns
+Pic: Hiker FRLG
+Gender: Male
+Music: Hg Boy 2
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Tyranitar @ King's Rock  
+Level: 56
+Ability: Sand Stream  
+EVs: 120 Atk / 128 Def / 128 SpD / 72 Spe  
+Adamant Nature  
+- Aqua Tail  
+- Rock Blast  
+- Rock Polish  
+- Heavy Slam  
+
+Golem @ Iron Ball  
+Ability: Sand Veil  
+Level: 58
+EVs: 4 HP / 252 Atk / 252 SpD  
+Brave Nature  
+IVs: 0 Spe  
+- Gyro Ball  
+- Defense Curl  
+- Rollout  
+- Explosion  
+
+Onix @ Eviolite  
+Level: 60
+Ability: Sturdy
+EVs: 252 HP / 252 SpD  
+Careful Nature  
+- Dragon Dance  
+- Earthquake  
+- Rock Blast  
+- Sandstorm  
+
+Ursaring  
+Level: 60
+Ability: Quick Feet  
+EVs: 248 HP / 252 Atk / 8 SpD  
+Adamant Nature  
+- Body Slam  
+- Hammer Arm  
+- Roar  
+- Hone Claws  
+
+Forretress @ Choice Band  
+Level: 57
+Ability: Overcoat  
+EVs: 252 Atk / 252 SpD  
+Adamant Nature  
+- Explosion  
+
+=== TRAINER_MAKAYLA_HNS ===
+Name: MAKAYLA
+Class: Swimmer F Hns
+Pic: Swimmer F FRLG
+Gender: female
+Music: Hg Boy 2
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Azumarill @ Leftovers  
+Level: 54
+Ability: Sap Sipper     
+EVs: 252 HP / 176 SpA  
+Modest Nature  
+IVs: 0 Atk  
+- Alluring Voice  
+- Hydro Pump  
+- Draining Kiss  
+- Aqua Ring  
+
+Gastrodon
+Level: 56  
+Ability: Storm Drain  
+EVs: 252 HP / 4 Atk / 252 SpD  
+Sassy Nature  
+- Clear Smog  
+- Earthquake  
+- Liquidation  
+- Substitute  
+
+Gorebyss  
+Level: 56  
+Ability: Swift Swim   
+EVs: 4 HP / 252 SpA / 252 Spe  
+Modest Nature    
+- Hyper Beam
+- Psychic  
+- Shell Smash  
+- Scald  
+
+=== TRAINER_NIA_HNS ===
+Name: NIA
+Class: Cooltrainer Hns
+Pic: Cooltrainer F FRLG
+Gender: Female
+Music: Hg Boy 2
+Items: Hyper Potion
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Kleavor  
+Ability: Sharpness  
+Level: 60   
+Jolly Nature  
+- Stone Axe  
+- X-Scissor  
+- Acrobatics  
+- Double Team  
+
+Dragonair  
+Ability: Marvel Scale  
+Level: 60  
+EVs: 252 Atk / 4 SpA / 252 Spe  
+Lonely Nature  
+- Aqua Tail  
+- Dragon Dance  
+- Thunderbolt  
+- Draco Meteor  
+
+Electivire  
+Ability: Motor Drive  
+Level: 56     
+Adamant Nature  
+- Power-Up Punch  
+- Supercell Slam  
+- Reflect  
+- Taunt  
+
+Pidgeot  
+Ability: Tangled Feet  
+Level: 58 
+EVs:  252 Spe  
+Jolly Nature  
+- Brave Bird  
+- Roost  
+- U-turn  
+- Feather Dance  
+
+=== TRAINER_JOHN_1_HNS ===
+Name: JOHN
+Class: Cooltrainer Hns
+Pic: Cooltrainer M FRLG
+Gender: Male
+Music: Hg Boy 2
+Items: Hyper Potion
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Medicham
+Ability: Pure Power
+Level: 54
+
+Skarmory
+Level: 54
+
+Magmortar
+Level: 57
+
+Salamence
+Ability: Intimidate
+Level: 60
+
+=== TRAINER_SNAPE_HNS ===
+Name: SNAPE
+Class: Hiker Hns
+Pic: Hiker FRLG
+Gender: Male
+Music: Hg Boy 2
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Steelix
+Level: 57
+
+Arbok
+Ability: Intimidate
+Level: 57
+
+Dudunsparce
+Level: 60
+
+Seviper
+Level: 60
+
+=== TRAINER_TERRY_HNS ===
+Name: TERRY
+Class: Black Belt Hns
+Pic: Black Belt FRLG
+Gender: Male
+Music: Hg Boy 2
+Items: Max Mushrooms
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Machamp @ Flame Orb  
+Ability: Guts  
+Level: 64   
+EVs: 124 Atk / 144 Def / 112 SpD / 68 Spe  
+Adamant Nature  
+- Cross Chop  
+- Fire Punch  
+- Detect  
+- Focus Energy  
+
