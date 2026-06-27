@@ -13742,13 +13742,55 @@ Items: Max Mushrooms
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 
-Machamp @ Flame Orb  
+Machamp @ Flame Orb 
 Ability: Guts  
-Level: 64   
-EVs: 124 Atk / 144 Def / 112 SpD / 68 Spe  
+Level: 75 
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 68 HP / 124 Atk / 144 Def / 112 SpD
 Adamant Nature  
 - Cross Chop  
 - Fire Punch  
 - Detect  
-- Focus Energy  
+- Bullet Punch  
+
+=== TRAINER_RAPHAEL_HNS ===
+Name: RAPHAEL
+Class: Psychic Hns
+Pic: Psychic F FRLG
+Gender: Female
+Music: Hg Boy 2
+Items: X Special
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Farigiraf @ Sitrus Berry  
+Ability: Cud Chew
+Level: 60
+EVs: 148 HP / 172 Def / 188 SpD  
+IVs: 0 Atk  
+- Expanding Force  
+- Reflect  
+- Hyper Voice  
+- Nasty Plot  
+
+Grumpig  
+Ability: Thick Fat
+Level: 60
+EVs: 252 HP / 192 Def / 64 SpD  
+Modest Nature  
+IVs: 0 Atk  
+- Power Gem  
+- Energy Ball  
+- Teeter Dance  
+- Endeavor  
+
+Slowking @ Charcoal  
+Ability: Oblivious
+Level: 63
+EVs: 252 HP / 252 Def / 4 SpD  
+IVs: 0 Atk  
+- Fire Blast  
+- Calm Mind  
+- Scald  
+- Slack Off  
 

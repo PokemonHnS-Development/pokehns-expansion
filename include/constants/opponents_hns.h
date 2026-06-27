@@ -597,11 +597,12 @@
 #define TRAINER_NICHOLAS_HNS                           589
 #define TRAINER_MAKAYLA_HNS                            590
 #define TRAINER_NIA_HNS                                591
-#define TRAINER_JOHN_1_HNS                               592
+#define TRAINER_JOHN_1_HNS                             592
 #define TRAINER_SNAPE_HNS                              593
 #define TRAINER_TERRY_HNS                              594
+#define TRAINER_RAPHAEL_HNS                            595
 
-#define TRAINERS_COUNT_HNS                       595
+#define TRAINERS_COUNT_HNS                       596
 #define MAX_TRAINERS_COUNT_HNS                   864
 
 #endif  // GUARD_CONSTANTS_OPPONENTS_HNS_H

@@ -11,6 +11,7 @@ SnowsweptCavern_hns_OnTransition::
     setflag FLAG_NEWSINJOH_HAUNTEDHOUSE_FROSLASS
     end
 
+
 Snowswept_EventScript_GentlemanRubert::
     trainerbattle_single TRAINER_RUBERT_HNS, Snowswept_Text_GentlemanRubert_Seen, Snowswept_Text_GentlemanRubert_Beaten
     msgbox Snowswept_Text_GentlemanRubert_After, MSGBOX_AUTOCLOSE
@@ -113,7 +114,7 @@ Snowswept_EventScript_HikerSnape::
 
 
 Snowswept_Text_HikerSnape_Seen:
-    .string "You'll make a great Sssnack\n"
+    .string "You'll make a great sssnack\n"
     .string "for my team!$"
 
 Snowswept_Text_HikerSnape_Beaten:
@@ -128,20 +129,21 @@ Snowswept_Text_HikerSnape_After:
 Snowswept_EventScript_BlackBelt_Terry::
     lock
     faceplayer
-    compare VAR_SNOWSWEPT_TERRY_BOULDER, 1
-	goto_if_eq Snowswept_Terry_PostHelp
+	goto_if_eq VAR_SNOWSWEPT_TERRY_BOULDER, 1, Snowswept_Terry_PostHelp
     msgbox Snowswept_Text_Terry_Challenge, MSGBOX_YESNO
-    goto_if_eq VAR_RESULT, FALSE, Snowswept_Eventscript_Terry_NotYet
+    goto_if_eq VAR_RESULT, FALSE, Snowswept_Text_Terry_NotYet
     trainerbattle_no_intro TRAINER_TERRY_HNS, Snowswept_Text_BlackBelt_Terry_Beaten
     goto Snowswept_Terry_AfterBattle
 
 Snowswept_Terry_AfterBattle::
     applymovement LOCALID_TERRY, Snowswept_Terry_Movement
+    waitmovement
     msgbox Snowswept_Text_TerryMachamp_Command
     delay 25
     applymovement LOCALID_TERRY_MACHAMP, Snowswept_Machamp_Movement
+    waitmovement
     playmoncry SPECIES_MACHAMP, 0
-    msgbox Snowswept_Text_Machamp_Cry
+    msgbox Snowswept_Text_Machamp_Cry MSGBOX_DEFAULT
     waitmoncry
     closemessage
         setvar VAR_0x8004, 1  @ vertical pan
@@ -151,9 +153,12 @@ Snowswept_Terry_AfterBattle::
     special ShakeCamera
     waitstate
     applymovement LOCALID_BOULDER, Snowswept_Boulder_Movement
+    waitmovement
     delay 10
-    msgbox Snowswept_Text_Terry_GoodToGo
+    faceplayer
+    msgbox Snowswept_Text_Terry_GoodToGo MSGBOX_DEFAULT
     setvar VAR_SNOWSWEPT_TERRY_BOULDER, 1
+    setobjectxyperm LOCALID_BOULDER, 52, 56
     release
     end
 
@@ -172,7 +177,7 @@ Snowswept_Text_Terry_Challenge:
     .string "and we'll help you across.\l"
     .string "Sound like a deal?$"
 
-Snowswept_Eventscript_Terry_NotYet:
+Snowswept_Text_Terry_NotYet:
     .string "Need some time to think\n"
     .string "about it huh?\p"
     .string "Fine by me.$"
@@ -214,11 +219,81 @@ Snowswept_Boulder_Movement:
     step_end
 
 Snowswept_Text_Terry_GoodToGo:
-    .string "Good job MACHAMP!\n"
-    .string "You should be able to cross\l"
+    .string "You should be able to cross\n"
     .string "safely now!\p"
     .string "Don't be a stranger you hear?!$"
 
 Snowswept_Text_Terry_HelloAgain:
     .string "It's nice to see you again {PLAYER}!\p"
     .string "How have you been?$"
+
+Snowswept_EventScript_BattleGirl::
+    lock
+    faceplayer
+    msgbox Snowswept_Text_BattleGirl, MSGBOX_DEFAULT
+    release
+    end
+
+Snowswept_Text_BattleGirl:
+    .string "This cave is perfect\n"
+    .string "for endurance training!\p"
+    .string "The cold keeps me from sweating\n"
+    .string "and there's plenty of rocks\l"
+    .string "to lift and smash!!$"
+
+Snowswept_EventScript_BoulderPlacer::
+    goto_if_eq VAR_SNOWSWEPT_TERRY_BOULDER, 1, Snowswept_EventScript_Boulder
+    end
+
+Snowswept_EventScript_Boulder:;
+    setobjectxyperm LOCALID_BOULDER, 52, 56
+    end
+
+Snowswept_EventScript_Camper::
+    lock
+    faceplayer
+    msgbox Snowswept_Text_Camper
+    closemessage
+    face_right
+    release
+    end
+
+Snowswept_Text_Camper:
+    .string "SHH!!\p"
+    .string "I'm trying to watch the wild\n"
+    .string "POKEMON train over there!$"
+
+Snowswept_EventScript_Sign::
+    lock
+    msgbox Snowswept_Text_Sign
+    release
+    end
+
+Snowswept_Text_Sign:
+    .string "CAUTION!\p"
+    .string "Slippery surfaces ahead!\n"
+    .string "Please put your POKEMON away\l"
+    .string "in their ball for both\l"
+    .string "their safetly and yours.$"
+
+Snowswept_EventScript_VibingMachamp::
+    lock
+	faceplayer
+	playmoncry SPECIES_MACHAMP, 0
+	msgbox Snowswept_Text_Machamp_Cry2, MSGBOX_DEFAULT
+	waitmoncry
+    closemessage
+	release
+	end
+
+Snowswept_Text_Machamp_Cry2:
+    .string "Mahh!!$"
+
+Snowswept_EventScript_Item_NeverMeltIce::
+    finditem ITEM_NEVER_MELT_ICE
+    end
+
+Snowswept_EventScript_Item_UltraBall::
+    finditem ITEM_ULTRA_BALL
+    end
+

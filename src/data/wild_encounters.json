@@ -70868,7 +70868,7 @@
               {
                 "min_level": 45,
                 "max_level": 60,
-                "species": "SPECIES_NUMEL"
+                "species": "SPECIES_RHYHORN"
               },
               {
                 "min_level": 45,
@@ -70913,12 +70913,12 @@
               {
                 "min_level": 45,
                 "max_level": 70,
-                "species": "SPECIES_MAGMORTAR"
+                "species": "SPECIES_MAGMAR"
               },
               {
                 "min_level": 45,
                 "max_level": 50,
-                "species": "SPECIES_RHYPERIOR"
+                "species": "SPECIES_RHYDON"
               }
             ]
           },

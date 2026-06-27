@@ -12,9 +12,10 @@
   "allow_running": false,
   "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": 0,
+  "connections": null,
   "object_events": [
     {
+      "local_id": "LOCALID_GOLDENROD_BOULDER1",
       "graphics_id": "OBJ_EVENT_GFX_PUSHABLE_BOULDER_HNS",
       "x": 4,
       "y": 11,
@@ -25,10 +26,10 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0",
-      "local_id": "LOCALID_GOLDENROD_BOULDER1"
+      "flag": "0"
     },
     {
+      "local_id": "LOCALID_GOLDENROD_BOULDER2",
       "graphics_id": "OBJ_EVENT_GFX_PUSHABLE_BOULDER_HNS",
       "x": 13,
       "y": 11,
@@ -39,10 +40,10 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0",
-      "local_id": "LOCALID_GOLDENROD_BOULDER2"
+      "flag": "0"
     },
     {
+      "local_id": "LOCALID_GOLDENROD_BOULDER3",
       "graphics_id": "OBJ_EVENT_GFX_PUSHABLE_BOULDER_HNS",
       "x": 13,
       "y": 16,
@@ -53,8 +54,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0",
-      "local_id": "LOCALID_GOLDENROD_BOULDER3"
+      "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
@@ -148,6 +148,7 @@
       "flag": "0"
     },
     {
+      "local_id": "LOCALID_GOLDENROD_MACHOKE1",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_MACHOKE",
       "x": 5,
       "y": 11,
@@ -158,10 +159,10 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "GoldenrodCity_DepartmentStoreBasement_EventScript_Machoke",
-      "flag": "0",
-      "local_id": "LOCALID_GOLDENROD_MACHOKE1"
+      "flag": "0"
     },
     {
+      "local_id": "LOCALID_GOLDENROD_MACHOKE2",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_MACHOKE",
       "x": 14,
       "y": 11,
@@ -172,10 +173,10 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "GoldenrodCity_DepartmentStoreBasement_EventScript_Machoke",
-      "flag": "0",
-      "local_id": "LOCALID_GOLDENROD_MACHOKE2"
+      "flag": "0"
     },
     {
+      "local_id": "LOCALID_GOLDENROD_MACHOKE3",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_MACHOKE",
       "x": 12,
       "y": 16,
@@ -186,8 +187,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "GoldenrodCity_DepartmentStoreBasement_EventScript_Machoke",
-      "flag": "0",
-      "local_id": "LOCALID_GOLDENROD_MACHOKE3"
+      "flag": "0"
     }
   ],
   "warp_events": [
