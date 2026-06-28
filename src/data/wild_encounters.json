@@ -70878,7 +70878,7 @@
               {
                 "min_level": 45,
                 "max_level": 60,
-                "species": "SPECIES_GOLBAT"
+                "species": "SPECIES_SHELLOS_WEST"
               },
               {
                 "min_level": 45,
@@ -70917,7 +70917,7 @@
               },
               {
                 "min_level": 45,
-                "max_level": 50,
+                "max_level": 70,
                 "species": "SPECIES_RHYDON"
               }
             ]
@@ -70928,12 +70928,12 @@
               {
                 "min_level": 45,
                 "max_level": 50,
-                "species": "SPECIES_MAGIKARP"
+                "species": "SPECIES_SHELLOS_EAST"
               },
               {
                 "min_level": 45,
                 "max_level": 50,
-                "species": "SPECIES_GOLBAT"
+                "species": "SPECIES_GASTRODON_EAST"
               },
               {
                 "min_level": 45,

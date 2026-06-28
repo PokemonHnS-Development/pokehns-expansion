@@ -13794,3 +13794,249 @@ IVs: 0 Atk
 - Scald  
 - Slack Off  
 
+=== TRAINER_MAURA_HNS ===
+Name: MAURA
+Class: Swimmer F Hns
+Pic: Swimmer F FRLG
+Gender: Female
+Music: Hg Boy 2
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Tentacruel @ Leftovers  
+Ability: Rain Dish
+Level: 60
+EVs: 252 HP / 252 Def / 4 SpD  
+IVs: 0 Atk  
+- Giga Drain  
+- Aqua Ring  
+- Hydro Pump  
+- Toxic  
+
+Vaporeon
+Ability: Water Absorb
+Level: 64
+IVs: 0 Atk  
+
+Swampert
+Ability: Torrent 
+
+=== TRAINER_MASOTO_HNS ===
+Name: MASOTO
+Class: Swimmer M Hns
+Pic: Swimmer M FRLG
+Gender: Male
+Music: Hg Boy 2
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Feraligatr
+Level: 62 
+
+Sharpedo  
+Ability: Speed Boost
+Level: 60
+EVs: 252 Atk / 252 Spe  
+Adamant Nature  
+- Crunch  
+- Liquidation  
+- Protect  
+- Flip Turn  
+
+Starmie @ Life Orb  
+Ability: Analytic
+Level: 66
+EVs: 252 Atk  
+Adamant Nature  
+- Curse  
+- Avalanche 
+- Psycho Cut 
+- Liquidation
+
+
+=== TRAINER_JOSHUA2_HNS ===
+Name: JOSHUA
+Class: Biker Hns
+Pic: Biker Hns
+Gender: Male
+Music: Hg Boy 2
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Sneasler  
+Ability: Poison Touch  
+Level: 61   
+- Dire Claw  
+- Bulk Up  
+- Night Slash  
+- Rock Slide  
+
+Jolteon  
+Ability: Volt Absorb  
+Level: 60   
+EVs: 252 HP / 4 SpA / 252 Spe   
+- Electro Ball  
+- Shadow Ball  
+- Baby-Doll Eyes  
+- Flash  
+
+Ambipom @ King's Rock  
+Ability: Skill Link  
+Level: 60  
+- Tail Slap  
+- Fake Out  
+- Triple Axel  
+- Iron Tail  
+
+Ninjask @ Bright Powder  
+Ability: Speed Boost  
+Level: 65  
+- Acrobatics  
+- Leech Life  
+- Swords Dance  
+- Double Team  
+
+=== TRAINER_DENNIS2_HNS ===
+Name: DENNIS
+Class: Camper Hns
+Pic: Camper FRLG
+Gender: Male
+Music: Hg Boy 2
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Raichu  
+Ability: Static  
+Level: 60
+
+Sudowoodo @ Assault Vest  
+Ability: Sturdy  
+Level: 60  
+EVs: 252 HP / 4 Def / 252 SpD  
+Careful Nature  
+- Foul Play  
+- Body Press  
+- Seismic Toss  
+- Sucker Punch  
+
+Ariados @ Scope Lens  
+Ability: Sniper  
+Level: 64   
+EVs: 252 HP / 120 Def / 136 SpD  
+Relaxed Nature  
+- Cross Poison  
+- Lunge  
+- Electroweb  
+- Shadow Sneak  
+
+=== TRAINER_NIKOLAS_HNS ===
+Name: NIKOLAS
+Class: Engineer FRLG
+Pic: Engineer FRLG
+Gender: Male
+Music: Hg Boy 2
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Donphan  
+Ability: Sturdy  
+Level: 60
+IVs: 0 Atk  
+
+Machoke  
+Ability: No Guard  
+Level: 60 
+EVs: 252 HP / 96 Atk / 4 SpD  
+Adamant Nature  
+- Dynamic Punch  
+- Detect  
+- Thunder Punch  
+- Strength  
+
+Magneton @ Eviolite  
+Ability: Analytic  
+Level: 65 
+EVs: 32 HP / 48 Def / 176 SpA / 252 SpD  
+Quiet Nature  
+IVs: 0 Spe  
+- Magnet Rise  
+- Discharge  
+- Tri Attack  
+- Gyro Ball  
+
+Magcargo
+Level: 60
+
+=== TRAINER_REBECCA4_HNS ===
+Name: REBECCA
+Class: Beauty FRLG
+Pic: Beauty FRLG
+Gender: Female
+Music: Hg Boy 2
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Beautifly (F) @ Bright Powder  
+Ability: Swarm  
+Level: 60  
+Shiny: Yes
+EVs: 4 HP / 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Attract  
+- Quiver Dance  
+- Signal Beam  
+- Psychic  
+
+Milotic  
+Ability: Cute Charm  
+Level: 63  
+EVs: 248 HP / 160 Def / 96 SpD  
+Bold Nature  
+IVs: 0 Atk  
+- Alluring Voice  
+- Recover  
+- Blizzard  
+- Hydro Pump  
+
+Gardevoir  
+Ability: Synchronize  
+Level: 65
+IVs: 0 Atk  
+
+=== TRAINER_JUSTIN4_HNS ===
+Name:   justin
+Class: Juggler FRLG
+Pic: Juggler FRLG
+Gender: Male
+Music: Hg Boy 2
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Weavile @ Big Nugget  
+Ability: Pickpocket  
+Level: 65  
+- Fling  
+- Fake Out  
+- Icicle Crash
+
+Ambipom @ Toxic Orb  
+Ability: Pickup  
+Level: 65 
+Happiness: 255
+EVs: 252 Atk / 4 SpA / 252 Spe  
+Hasty Nature  
+- Fling  
+- Return 
+- Protect  
+
+Grumpig @ Life Orb  
+Ability: Thick Fat  
+Level: 65    
+EVs: 252 HP / 120 Def / 136 SpD  
+Calm Nature  
+- Fling  
+- Recycle  
+- Taunt  
+- Confuse Ray  
+

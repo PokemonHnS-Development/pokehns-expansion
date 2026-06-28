@@ -601,8 +601,15 @@
 #define TRAINER_SNAPE_HNS                              593
 #define TRAINER_TERRY_HNS                              594
 #define TRAINER_RAPHAEL_HNS                            595
+#define TRAINER_MAURA_HNS                              596
+#define TRAINER_MASOTO_HNS                             597
+#define TRAINER_JOSHUA2_HNS                            598
+#define TRAINER_DENNIS2_HNS                            599
+#define TRAINER_NIKOLAS_HNS                            600
+#define TRAINER_REBECCA4_HNS                           601
+#define TRAINER_JUSTIN4_HNS                            602
 
-#define TRAINERS_COUNT_HNS                       596
+#define TRAINERS_COUNT_HNS                       603
 #define MAX_TRAINERS_COUNT_HNS                   864
 
 #endif  // GUARD_CONSTANTS_OPPONENTS_HNS_H
