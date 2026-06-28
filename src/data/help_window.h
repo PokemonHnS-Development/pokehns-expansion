@@ -13,5 +13,18 @@ const struct HelpWindow gHelpWindowInfo[] =
         .headerFont = FONT_NORMAL,
         .descFont = FONT_NORMAL
     },
+    [HELP_TRADE_WINDOW] =
+    {
+        .header = COMPOUND_STRING("WARNING: COMPATIBILITY"),
+        .desc = COMPOUND_STRING("Attempting to link with a game\n"
+                                "that is not Heart & Soul may result\n"
+                                "in permanent damage to your save file.\n"
+                                "Only continue if you are linking with\n"
+                                "a copy of Heart & Soul that is on the\n"
+                                "same version as your current copy."
+                            ),
+        .headerFont = FONT_NORMAL,
+        .descFont = FONT_NORMAL
+    },
     // Add more entries
 };

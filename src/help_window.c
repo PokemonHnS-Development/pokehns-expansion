@@ -27,7 +27,7 @@ void ShowHelpInfoWindow(struct ScriptContext *ctx)
     u32 yOffset;
     yOffset = 1;
     xOffset = 0;
-    u8 headerColor[3] = {0, 8, 3};
+    u8 headerColor[3] = {0, 4, 5};
     u8 headerFont = FONT_NORMAL;
     u8 descFont = FONT_SMALL;
 
