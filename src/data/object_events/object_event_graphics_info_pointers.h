@@ -507,6 +507,8 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SleepingSno
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Spenser_hns;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SsAqua_hns;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Steven_hns;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SkierF_hns;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SkierM_hns;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SuperNerd_hns;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Surge_hns;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SwimmerFLand_hns;
@@ -991,6 +993,8 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_SCIENTIST_M_HNS] = &gObjectEventGraphicsInfo_ScientistM_hns,
     [OBJ_EVENT_GFX_SCOTT_HNS] = &gObjectEventGraphicsInfo_Scott_hns,
     [OBJ_EVENT_GFX_STEVEN_HNS] = &gObjectEventGraphicsInfo_Steven_hns,
+    [OBJ_EVENT_GFX_SKIER_F_HNS] = &gObjectEventGraphicsInfo_SkierF_hns,
+    [OBJ_EVENT_GFX_SKIER_M_HNS] = &gObjectEventGraphicsInfo_SkierM_hns,
     [OBJ_EVENT_GFX_SUPER_NERD_HNS] = &gObjectEventGraphicsInfo_SuperNerd_hns,
     [OBJ_EVENT_GFX_SWIMMER_F_HNS] = &gObjectEventGraphicsInfo_SwimmerF_hns,
     [OBJ_EVENT_GFX_SWIMMER_F_LAND_HNS] = &gObjectEventGraphicsInfo_SwimmerFLand_hns,

@@ -7323,6 +7323,10 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ScientistF_hns = {
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ScientistM_hns = {TAG_NONE, OBJ_EVENT_PAL_TAG_NPC_1_HNS, OBJ_EVENT_PAL_TAG_NONE, 256, 16, 32, 4, SHADOW_SIZE_M, FALSE, FALSE, TRACKS_FOOT, &gObjectEventBaseOam_16x32, sOamTables_16x32, sAnimTable_Standard, sPicTable_ScientistM_hns, gDummySpriteAffineAnimTable};
 
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SkierF_hns = {TAG_NONE, OBJ_EVENT_PAL_TAG_NPC_2_HNS, OBJ_EVENT_PAL_TAG_NONE, 512, 32, 32, 3, SHADOW_SIZE_M, FALSE, FALSE, TRACKS_FOOT, &gObjectEventBaseOam_32x32, sOamTables_32x32, sAnimTable_Standard, sPicTable_SkierF_hns, gDummySpriteAffineAnimTable};
+
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SkierM_hns = {TAG_NONE, OBJ_EVENT_PAL_TAG_NPC_3_HNS, OBJ_EVENT_PAL_TAG_NONE, 512, 32, 32, 5, SHADOW_SIZE_M, FALSE, FALSE, TRACKS_FOOT, &gObjectEventBaseOam_32x32, sOamTables_32x32, sAnimTable_Standard, sPicTable_SkierM_hns, gDummySpriteAffineAnimTable};
+
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SuperNerd_hns = {TAG_NONE, OBJ_EVENT_PAL_TAG_NPC_2_HNS, OBJ_EVENT_PAL_TAG_NONE, 256, 16, 32, 5, SHADOW_SIZE_M, FALSE, FALSE, TRACKS_FOOT, &gObjectEventBaseOam_16x32, sOamTables_16x32, sAnimTable_Standard, sPicTable_SuperNerd_hns, gDummySpriteAffineAnimTable};
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SwimmerF_hns = {TAG_NONE, OBJ_EVENT_PAL_TAG_NPC_4_HNS, OBJ_EVENT_PAL_TAG_NONE, 256, 16, 32, 3, SHADOW_SIZE_M, FALSE, FALSE, TRACKS_FOOT, &gObjectEventBaseOam_16x32, sOamTables_16x32, sAnimTable_Standard, sPicTable_SwimmerF_hns, gDummySpriteAffineAnimTable};

@@ -614,6 +614,12 @@ const u16 gTrainerPalette_SageLeaderHns[] = INCBIN_U16("graphics/trainers/palett
 const u32 gTrainerFrontPic_SilverHns[] = INCBIN_U32("graphics/trainers/front_pics/silver_hns.4bpp.smol");
 const u16 gTrainerPalette_SilverHns[] = INCBIN_U16("graphics/trainers/palettes/silver_hns.gbapal");
 
+const u32 gTrainerFrontPic_SkierFHns[] = INCBIN_U32("graphics/trainers/front_pics/skier_f_hns.4bpp.smol");
+const u16 gTrainerPalette_SkierFHns[] = INCBIN_U16("graphics/trainers/palettes/skier_f_hns.gbapal");
+
+const u32 gTrainerFrontPic_SkierMHns[] = INCBIN_U32("graphics/trainers/front_pics/skier_m_hns.4bpp.smol");
+const u16 gTrainerPalette_SkierMHns[] = INCBIN_U16("graphics/trainers/palettes/skier_m_hns.gbapal");
+
 const u32 gTrainerFrontPic_SuperNerdHns[] = INCBIN_U32("graphics/trainers/front_pics/super_nerd_hns.4bpp.smol");
 const u16 gTrainerPalette_SuperNerdHns[] = INCBIN_U16("graphics/trainers/palettes/super_nerd_hns.gbapal");
 
@@ -870,6 +876,8 @@ const struct TrainerSprite gTrainerSprites[] =
     TRAINER_SPRITE(TRAINER_PIC_FRONT_SAGE_HNS, gTrainerFrontPic_SageHns, gTrainerPalette_SageHns),
     TRAINER_SPRITE(TRAINER_PIC_FRONT_SAGE_LEADER_HNS, gTrainerFrontPic_SageLeaderHns, gTrainerPalette_SageLeaderHns),
     TRAINER_SPRITE(TRAINER_PIC_FRONT_SILVER_HNS, gTrainerFrontPic_SilverHns, gTrainerPalette_SilverHns),
+    TRAINER_SPRITE(TRAINER_PIC_FRONT_SKIER_F_HNS, gTrainerFrontPic_SkierFHns, gTrainerPalette_SkierFHns),
+    TRAINER_SPRITE(TRAINER_PIC_FRONT_SKIER_M_HNS, gTrainerFrontPic_SkierMHns, gTrainerPalette_SkierMHns),
     TRAINER_SPRITE(TRAINER_PIC_FRONT_SUPER_NERD_HNS, gTrainerFrontPic_SuperNerdHns, gTrainerPalette_SuperNerdHns),
     TRAINER_SPRITE(TRAINER_PIC_FRONT_TWINS_HNS, gTrainerFrontPic_TwinsHns, gTrainerPalette_TwinsHns),
     TRAINER_SPRITE(TRAINER_PIC_FRONT_YOUNGSTER_HNS, gTrainerFrontPic_YoungsterHns, gTrainerPalette_YoungsterHns),

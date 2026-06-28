@@ -122,6 +122,7 @@ static const u8 sCreditsText_PurpleZaffre[]                    = _("PurpleZaffre
 static const u8 sCreditsText_Cesare_CBass[]                   = _("Cesare CBass");
 static const u8 sCreditsText_Batima[]                          = _("BatimaTheBat");
 static const u8 sCreditsText_ShinyDragonHunter[]               = _("ShinyDragonHunter");
+static const u8 sCreditsText_TamamushiErika[]                  = _("Tamamushi Erika");
 
 static const u8 sCreditsText_Engine[]                          = _("Engine");
 static const u8 sCreditsText_Pret[]                            = _("pokeemerald - Pret");
@@ -374,6 +375,7 @@ static const struct CreditsEntry sCreditsEntry_PurpleZaffre                     
 static const struct CreditsEntry sCreditsEntry_Cesare_CBass                    = {11, FALSE, sCreditsText_Cesare_CBass};
 static const struct CreditsEntry sCreditsEntry_Batima                 = {11, FALSE, sCreditsText_Batima};
 static const struct CreditsEntry sCreditsEntry_ShinyDragonHunter                ={11, FALSE, sCreditsText_ShinyDragonHunter};
+static const struct CreditsEntry sCreditsEntry_TamamushiErika                   ={11, FALSE, sCreditsText_TamamushiErika};
 // Engine
 static const struct CreditsEntry sCreditsEntry_Engine                           = {8,  TRUE, sCreditsText_Engine};
 static const struct CreditsEntry sCreditsEntry_Pret                             = {11, FALSE, sCreditsText_Pret};
@@ -648,7 +650,7 @@ static const struct CreditsEntry *const sCreditsEntryPointerTable[PAGE_COUNT][EN
         &sCreditsEntry_Sprites,
         &sCreditsEntry_Batima,
         &sCreditsEntry_ShinyDragonHunter,
-        _,
+        &sCreditsEntry_TamamushiErika,
     },
     [PAGE_HNS_TILESETS_1] = {
         &sCreditsEntry_Assets,

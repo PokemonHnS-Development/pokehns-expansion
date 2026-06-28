@@ -224,6 +224,12 @@ $(OBJEVENTGFXDIR)/people/scientist_m_hns.4bpp: %.4bpp: %.png
 $(OBJEVENTGFXDIR)/people/super_nerd_hns.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 4
 
+$(OBJEVENTGFXDIR)/people/skier_f_hns.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 4 -mheight 4
+
+$(OBJEVENTGFXDIR)/people/skier_m_hns.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 4 -mheight 4
+
 $(OBJEVENTGFXDIR)/people/swimmer_f_hns.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 4
 
