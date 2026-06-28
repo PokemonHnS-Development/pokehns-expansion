@@ -46,6 +46,24 @@ BattleFrontier_ExchangeServiceCorner_EventScript_PokeBallClerk_hns::
 	release
 	end
 
+BattleFrontier_ExchangeServiceCorner_EventScript_HoldItemClerk2_hns::
+	lock
+	faceplayer
+	msgbox BattleFrontier_ExchangeServiceCorner_Text_WelcomePleaseChoosePrize_hns, MSGBOX_DEFAULT
+	special CreateBPHoldItemShop2
+	waitstate
+	release
+	end
+
+BattleFrontier_ExchangeServiceCorner_EventScript_PowerClerk_hns::
+	lock
+	faceplayer
+	msgbox BattleFrontier_ExchangeServiceCorner_Text_WelcomePleaseChoosePrize_hns, MSGBOX_DEFAULT
+	special CreateBPPowerShop
+	waitstate
+	release
+	end
+
 BattleFrontier_ExchangeServiceCorner_EventScript_Man_hns::
 	msgbox BattleFrontier_ExchangeServiceCorner_Text_GoGetYourOwnDoll_hns, MSGBOX_NPC
 	end

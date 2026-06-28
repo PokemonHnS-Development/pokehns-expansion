@@ -45,7 +45,7 @@ SaffronCity_Gym_EventScript_Sabrina::
 	setflag FLAG_DEFEATED_SAFFRON_GYM
 	addvar VAR_NUM_BADGES, 1
 	setvar VAR_0x8008, 13
-	call Common_EventScript_SetGymTrainers
+	call Common_EventScript_SetGymTrainers_hns
 	closemessage
 	clearflag FLAG_HIDE_OLIVINE_SABRINA
 	release

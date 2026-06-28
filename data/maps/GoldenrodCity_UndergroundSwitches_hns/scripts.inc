@@ -19,6 +19,24 @@ GoldenrodUnderground1_ClearTheWay::
 	call GoldenrodCity_UndergroundSwitches_EventScript_CreateWall6
 	return
 
+@ Added an antisoft lock, using wall panels
+
+GoldenrodCity_UndergroundSwitches_EventScript_AntiSoftLock::
+	lock
+	msgbox GoldenrodCity_UndergroundSwitches_EventScript_AntiSoftLock_Text, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, TRUE, GoldenrodCity_UndergroundSwitches_EventScript_AntiSoftLock_TP
+	closemessage
+	release
+	end
+
+GoldenrodCity_UndergroundSwitches_EventScript_AntiSoftLock_TP::
+	warp MAP_GOLDENROD_CITY_UNDERGROUND_SWITCHES_HNS, 2, 25, 5
+	release
+	end
+
+GoldenrodCity_UndergroundSwitches_EventScript_AntiSoftLock_Text::
+	.string "Go back to the entrance\n"
+	.string "and reset switches?$"
 
 @ 3->2->1
 

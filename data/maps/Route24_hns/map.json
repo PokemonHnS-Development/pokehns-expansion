@@ -163,7 +163,16 @@
       "script": "Route24_Trigger_GruntScene"
     }
   ],
-  "bg_events": [],
+  "bg_events": [
+    {
+      "type": "hidden_item",
+      "x": 24,
+      "y": 20,
+      "elevation": 0,
+      "item": "ITEM_PECHA_BERRY",
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE24_PECHA_BERRY_HNS"
+    }
+  ],
   "game_version": "hns",
   "region": "REGION_KANTO"
 }

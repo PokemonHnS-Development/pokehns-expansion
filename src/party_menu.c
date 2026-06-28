@@ -116,6 +116,7 @@ enum {
     MENU_CATALOG_MOWER,
     MENU_CHANGE_FORM,
     MENU_CHANGE_ABILITY,
+    MENU_PKMN_FOLLOWER,
     MENU_FIELD_MOVES
 };
 
@@ -493,6 +494,7 @@ static void CursorCb_CatalogFan(u8);
 static void CursorCb_CatalogMower(u8);
 static void CursorCb_ChangeForm(u8);
 static void CursorCb_ChangeAbility(u8);
+static void CursorCb_PkmnFollower(u8);
 void TryItemHoldFormChange(struct Pokemon *mon, s8 slotId);
 static void ShowMoveSelectWindow(u8 slot);
 static void Task_HandleWhichMoveInput(u8 taskId);
@@ -2800,6 +2802,8 @@ static u8 DisplaySelectionWindow(u8 windowType)
             fontColorsId = 4;
         if (sPartyMenuInternal->actions[i] >= MENU_LEVEL_UP_MOVES && sPartyMenuInternal->actions[i] <= MENU_SUB_MOVES)
             fontColorsId = 6;
+        if (sPartyMenuInternal->actions[i] == MENU_PKMN_FOLLOWER)
+            fontColorsId = (gSaveBlock3Ptr->challengeSettings.followerEnable) ? 0 : 4; // Blue if enabled, Gray if disabled
 
         if (sPartyMenuInternal->actions[i] >= MENU_FIELD_MOVES)
             text = GetMoveName(FieldMove_GetMoveId(sPartyMenuInternal->actions[i] - MENU_FIELD_MOVES));
@@ -2838,6 +2842,19 @@ static void RemoveLevelUpStatsWindow(void)
 {
     ClearWindowTilemap(sPartyMenuInternal->windowId[0]);
     PartyMenuRemoveWindow(&sPartyMenuInternal->windowId[0]);
+}
+
+// Returns the party index of the first alive, non-egg Pokemon (the one that follows the player)
+// Returns PARTY_SIZE if no valid follower exists
+static u8 GetFirstLiveMonIndex(void)
+{
+    u32 i;
+    for (i = 0; i < PARTY_SIZE; i++)
+    {
+        if (gPlayerParty[i].hp > 0 && !(gPlayerParty[i].box.isEgg || gPlayerParty[i].box.isBadEgg))
+            return i;
+    }
+    return PARTY_SIZE; // No valid follower
 }
 
 static void SetPartyMonSelectionActions(struct Pokemon *mons, u8 slotId, u8 action)
@@ -2928,6 +2945,13 @@ static void SetPartyMonFieldSelectionActions(struct Pokemon *mons, u8 slotId)
         else
             AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, MENU_ITEM);
     }
+    
+    // Show follower option on whichever Pokemon is actually following the player
+    if (slotId == GetFirstLiveMonIndex())
+    {
+        AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, MENU_PKMN_FOLLOWER);
+    }
+
     AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, MENU_CANCEL1);
 }
 
@@ -6939,6 +6963,46 @@ void TryItemHoldFormChange(struct Pokemon *mon, s8 slotId)
 #undef tTargetSpecies
 #undef tAnimWait
 #undef tNextFunc
+
+static void CursorCb_PkmnFollower(u8 taskId)
+{
+    u8 cursorPos;
+    u8 cursorDimension;
+    u8 letterSpacing;
+    u8 i;
+    u8 fontColorsId;
+    
+    PlaySE(SE_SELECT);
+    // Save current cursor position
+    cursorPos = Menu_GetCursorPos();
+    // Toggle the follower setting (0 = enabled, 1 = disabled)
+    gSaveBlock3Ptr->challengeSettings.followerEnable ^= 1;
+    
+    // Find which menu index contains the follower option
+    for (i = 0; i < sPartyMenuInternal->numActions; i++)
+    {
+        if (sPartyMenuInternal->actions[i] == MENU_PKMN_FOLLOWER)
+        {
+            // Only redraw this one text line with the new color
+            cursorDimension = GetMenuCursorDimensionByFont(FONT_NORMAL, 0);
+            letterSpacing = GetFontAttribute(FONT_NORMAL, FONTATTR_LETTER_SPACING);
+            fontColorsId = (gSaveBlock3Ptr->challengeSettings.followerEnable) ? 0 : 4; // Blue if enabled, Gray if disabled
+            
+            // Clear just the text area for this menu item with white background (color 1)
+            FillWindowPixelRect(sPartyMenuInternal->windowId[0], PIXEL_FILL(1), cursorDimension, (i * 16) + 1, 80 - cursorDimension, 16);
+            
+            // Redraw only this text with the new color
+            AddTextPrinterParameterized4(sPartyMenuInternal->windowId[0], FONT_NORMAL, cursorDimension, (i * 16) + 1, letterSpacing, 0, sFontColorTable[fontColorsId], 0, sCursorOptions[MENU_PKMN_FOLLOWER].text);
+            
+            // Copy the updated portion to VRAM immediately
+            CopyWindowToVram(sPartyMenuInternal->windowId[0], COPYWIN_GFX);
+            break;
+        }
+    }
+    
+    gTasks[taskId].data[0] = cursorPos;
+    gTasks[taskId].func = Task_HandleSelectionMenuInput;
+}
 
 enum ItemEffectType GetItemEffectType(enum Item item)
 {

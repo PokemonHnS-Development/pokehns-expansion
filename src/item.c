@@ -98,7 +98,7 @@ struct ItemSlot NONNULL BagPocket_GetSlotData(struct BagPocket *pocket, u32 pock
     case POCKET_TM_HM:
     case POCKET_BERRIES:
     case POCKET_MEDICINE:
-#if !I_COMBINE_BAG_POCKETS
+#if I_COMBINE_BAG_POCKETS == FALSE
     case POCKET_BATTLE_ITEMS:
     case POCKET_TREASURES:
 #endif
@@ -126,7 +126,7 @@ void NONNULL BagPocket_SetSlotData(struct BagPocket *pocket, u32 pocketPos, stru
     case POCKET_TM_HM:
     case POCKET_BERRIES:
     case POCKET_MEDICINE:
-#if !I_COMBINE_BAG_POCKETS
+#if I_COMBINE_BAG_POCKETS == FALSE
     case POCKET_BATTLE_ITEMS:
     case POCKET_TREASURES:
 #endif
@@ -175,7 +175,7 @@ void SetBagItemsPointers(void)
     gBagPockets[POCKET_MEDICINE].capacity = BAG_MEDICINE_COUNT;
     gBagPockets[POCKET_MEDICINE].id = POCKET_MEDICINE;
 
-#if !I_COMBINE_BAG_POCKETS
+#if I_COMBINE_BAG_POCKETS == FALSE
     gBagPockets[POCKET_TREASURES].itemSlots = gSaveBlock1Ptr->bag.treasures;
     gBagPockets[POCKET_TREASURES].capacity = BAG_TREASURES_COUNT;
     gBagPockets[POCKET_TREASURES].id = POCKET_TREASURES;
@@ -537,6 +537,15 @@ void SwapRegisteredBike(void)
         gSaveBlock1Ptr->registeredItem = ITEM_MACH_BIKE;
         break;
     }
+    switch (gSaveBlock3Ptr->registeredItemHold)
+    {
+    case ITEM_MACH_BIKE:
+        gSaveBlock3Ptr->registeredItemHold = ITEM_ACRO_BIKE;
+        break;
+    case ITEM_ACRO_BIKE:
+        gSaveBlock3Ptr->registeredItemHold = ITEM_MACH_BIKE;
+        break;
+    }
 }
 
 void CompactItemsInBagPocket(enum Pocket pocketId)
@@ -878,6 +887,7 @@ u8 GetItemConsumability(enum Item itemId)
 
 enum Pocket GetItemPocket(enum Item itemId)
 {
+    MgbaPrintf(MGBA_LOG_ERROR, "%d %d %d\n", itemId, SanitizeItemId(itemId), gItemsInfo[SanitizeItemId(itemId)].pocket);
     return gItemsInfo[SanitizeItemId(itemId)].pocket;
 }
 

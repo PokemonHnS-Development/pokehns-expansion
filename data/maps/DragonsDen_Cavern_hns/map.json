@@ -12,7 +12,7 @@
   "allow_running": true,
   "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": 0,
+  "connections": null,
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_COOLTRAINER_M_HNS",
@@ -67,6 +67,7 @@
       "flag": "0"
     },
     {
+      "local_id": "LOCALID_DRAGONSDEN2_CLAIR",
       "graphics_id": "OBJ_EVENT_GFX_CLAIR_HNS",
       "x": 29,
       "y": 14,
@@ -77,8 +78,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_HIDE_DRAGONS_DEN_CAVERN_CLAIR",
-      "local_id": "LOCALID_DRAGONSDEN2_CLAIR"
+      "flag": "FLAG_HIDE_DRAGONS_DEN_CAVERN_CLAIR"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
@@ -458,6 +458,7 @@
       "flag": "FLAG_HIDE_DRAGONS_DEN_CAVERN_LANCE"
     },
     {
+      "local_id": "LOCALID_DEN_CLAIR",
       "graphics_id": "OBJ_EVENT_GFX_CLAIR_HNS",
       "x": 31,
       "y": 19,
@@ -468,8 +469,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "DragonsDen_EventScript_ClairRematch",
-      "flag": "FLAG_HIDE_DEN_CLAIR",
-      "local_id": "LOCALID_DEN_CLAIR"
+      "flag": "FLAG_HIDE_DEN_CLAIR"
     }
   ],
   "warp_events": [
@@ -565,6 +565,22 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "RuinsOfAlph_PuzzleAndRewardChambers_MapScript_StatueDescription"
+    },
+    {
+      "type": "hidden_item",
+      "x": 15,
+      "y": 16,
+      "elevation": 0,
+      "item": "ITEM_MAX_ELIXIR",
+      "flag": "FLAG_HIDDEN_ITEM_DRAGONSDEN_CAVERN_MAX_ELIXIR"
+    },
+    {
+      "type": "hidden_item",
+      "x": 42,
+      "y": 16,
+      "elevation": 0,
+      "item": "ITEM_MAX_POTION",
+      "flag": "FLAG_HIDDEN_ITEM_DRAGONSDEN_CAVERN_MAX_POTION"
     }
   ],
   "game_version": "hns",

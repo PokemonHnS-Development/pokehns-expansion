@@ -36,6 +36,10 @@ gText_Oak_WhatChallenge::
 	.string "What challenge are you\n"
 	.string "expecting?$"
 
+gText_Oak_ChallengeSelected::
+	.string "That sounds like the right\n"
+	.string "level of challenge to me!$" 
+
 gText_Oak_WhatsYourName::
 	.string "And what's your name?$"
 

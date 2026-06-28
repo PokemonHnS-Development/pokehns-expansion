@@ -268,6 +268,22 @@
   "coord_events": [],
   "bg_events": [
     {
+      "type": "hidden_item",
+      "x": 25,
+      "y": 6,
+      "elevation": 0,
+      "item": "ITEM_DEEP_SEA_TOOTH",
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE20_DEEP_SEA_TOOTH"
+    },
+    {
+      "type": "hidden_item",
+      "x": 23,
+      "y": 6,
+      "elevation": 0,
+      "item": "ITEM_DEEP_SEA_SCALE",
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE20_DEEP_SEA_SCALE"
+    },
+    {
       "type": "sign",
       "x": 68,
       "y": 14,

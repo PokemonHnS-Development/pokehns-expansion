@@ -203,14 +203,35 @@ Debug_EventScript_Text_DefensiveIVs:
 	.string "HP IVs: {STR_VAR_1}, DEF IVs: {STR_VAR_2}, SPDEF IVs: {STR_VAR_3}$"
 
 Debug_EventScript_Script_1::
-	special CreateBPVitaminShop
+	@ Unlock all HMs
+	setflag FLAG_BADGE01_GET
+	setflag FLAG_BADGE02_GET
+	setflag FLAG_BADGE03_GET
+	setflag FLAG_BADGE04_GET
+	setflag FLAG_BADGE05_GET
+	setflag FLAG_BADGE06_GET
+	setflag FLAG_BADGE07_GET
+	setflag FLAG_BADGE08_GET
+	setflag FLAG_RECEIVED_HM_CUT
+	setflag FLAG_RECEIVED_HM_ROCK_SMASH
+	setflag FLAG_GET_HEADBUTT
+	giveitem ITEM_HM01
+	giveitem ITEM_HM02
+	giveitem ITEM_HM03
+	giveitem ITEM_HM04
+	giveitem ITEM_HM05
+	giveitem ITEM_HM06
+	giveitem ITEM_HM07
+	giveitem ITEM_HM08
+	msgbox Debug_Text_HMsUnlocked, MSGBOX_DEFAULT
 	release
 	end
 
+Debug_Text_HMsUnlocked:
+	.string "All HM flags set!$"
+
 Debug_EventScript_Script_2::
-	giveitem ITEM_PECHA_BERRY, 20
-	giveitem ITEM_ORAN_BERRY, 20
-	goto AzaleaTown_KurtsHouse_EventScript_Kurt
+	goto LilycoveCity_CoveLilyMotel_2F_EventScript_GameDesigner
 	release
 	end
 
@@ -304,7 +325,7 @@ Debug_EventScript_Script_7::
 	end
 
 Debug_EventScript_Script_8::
-	goto Debug_MomSavings_BigDeposit
+	helpwindow HELP_DEMO_WINDOW
 	release
 	end
 

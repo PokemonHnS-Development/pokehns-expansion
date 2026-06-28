@@ -614,6 +614,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "OlivineCity_EventScript_CafeSign"
+    },
+    {
+      "type": "hidden_item",
+      "x": 42,
+      "y": 50,
+      "elevation": 0,
+      "item": "ITEM_PROTEIN",
+      "flag": "FLAG_HIDDEN_ITEM_OLIVINE_PROTEIN"
     }
   ],
   "game_version": "hns",

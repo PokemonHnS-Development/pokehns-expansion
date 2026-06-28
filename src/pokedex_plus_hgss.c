@@ -3994,6 +3994,7 @@ void OpenPokedexInfoScreen(u16 species, void (*returnCallback)(void))
     
     sPokedexView->currentPage = PAGE_INFO;
     sPokedexView->selectedScreen = INFO_SCREEN;
+    sPokedexView->dexMode = gSaveBlock2Ptr->pokedex.mode;
 
     m4aMPlayVolumeControl(&gMPlayInfo_BGM, TRACKS_ALL, 0x80);
     

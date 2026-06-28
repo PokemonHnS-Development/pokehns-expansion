@@ -425,8 +425,8 @@ RuinsOfAlph_PuzzleAndRewardChambers_Text_Hooh:
 
 @==========================================================================================================================================================
 @ Hooh
-RuinsOfAlph_EventScript_Item_LumBerry1::
-	finditem ITEM_LUM_BERRY
+RuinsOfAlph_EventScript_Item_LifeOrb::
+	finditem ITEM_LIFE_ORB
 	end
 
 RuinsOfAlph_EventScript_Item_Charcoal::

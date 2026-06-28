@@ -389,6 +389,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "AzaleaTown_EventScript_AzaleaSign"
+    },
+    {
+      "type": "hidden_item",
+      "x": 26,
+      "y": 14,
+      "elevation": 0,
+      "item": "ITEM_FULL_HEAL",
+      "flag": "FLAG_HIDDEN_ITEM_AZALEA_FULL_HEAL"
     }
   ],
   "game_version": "hns",

@@ -1233,7 +1233,7 @@ bool8 FldEff_HallOfFameRecord(void)
     task = &gTasks[CreateTask(Task_HallOfFameRecord, 0xff)];
     task->tNumMons = nPokemon;
     task->tFirstBallX = 117;
-    task->tFirstBallY = (IS_FRLG || IS_HNS) ? 60 : 52;
+    task->tFirstBallY = (gMapHeader.mapLayout->layoutVersion != LAYOUT_VERSION_EMERALD) ? 60 : 52;
     return FALSE;
 }
 
@@ -1433,7 +1433,12 @@ static u8 CreatePokecenterMonitorSprite(s16 x, s16 y)
 {
     u8 spriteId;
     struct Sprite *sprite;
-    if (IS_FRLG || IS_HNS)
+    if (gMapHeader.mapLayout->layoutVersion == LAYOUT_VERSION_EMERALD)
+    {
+        spriteId = CreateSpriteAtEnd(&sSpriteTemplate_PokecenterMonitor, x, y, 0);
+        SetSubspriteTables(&gSprites[spriteId], &sSubspriteTable_PokecenterMonitor);
+    }
+    else if (IS_FRLG || IS_HNS)
     {
         spriteId = CreateSpriteAtEnd(&sSpriteTemplate_PokecenterMonitor_FrLg, x + 4, y, 0);
     }

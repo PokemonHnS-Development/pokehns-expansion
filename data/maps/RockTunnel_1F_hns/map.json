@@ -254,7 +254,16 @@
     }
   ],
   "coord_events": [],
-  "bg_events": [],
+  "bg_events": [
+    {
+      "type": "hidden_item",
+      "x": 5,
+      "y": 45,
+      "elevation": 0,
+      "item": "ITEM_IRON",
+      "flag": "FLAG_HIDDEN_ITEM_ROCKTUNNEL_1F_IRON"
+    }
+  ],
   "game_version": "hns",
   "region": "REGION_KANTO"
 }

@@ -163,6 +163,56 @@ Route10_PowerPlantEntrance_Text_Engineer4MagnetTrainConsumesElectricity:
 	.string "It can't move if the new\n"
 	.string "generator isn't operating.$"
 
+Route10_PowerPlantEntrance_EventScript_Lorenzo::
+	lock
+	faceplayer
+	goto_if_set FLAG_POWERPLANT_NPC_TRADE_COMPLETED, Route10_PowerPlantEntrance_EventScript_TradeCompleted
+	ingame_trade INGAME_TRADE_MAGNETON, Route10_PowerPlantEntrance_Text_WantToTrade, Route10_PowerPlantEntrance_EventScript_DeclineTrade, Route10_PowerPlantEntrance_EventScript_NotRequestedMon, Route10_PowerPlantEntrance_Text_TakeCare
+	setflag FLAG_POWERPLANT_NPC_TRADE_COMPLETED
+	release
+	end
+
+Route10_PowerPlantEntrance_EventScript_DeclineTrade::
+	msgbox Route10_PowerPlantEntrance_Text_DeclineTrade, MSGBOX_DEFAULT
+	release
+	end
+
+Route10_PowerPlantEntrance_EventScript_NotRequestedMon::
+	bufferspeciesname STR_VAR_1, VAR_0x8009
+	msgbox Route10_PowerPlantEntrance_Text_NotRequestedMon, MSGBOX_DEFAULT
+	release
+	end
+
+Route10_PowerPlantEntrance_EventScript_TradeCompleted::
+	msgbox Route10_PowerPlantEntrance_Text_TradeCompleted, MSGBOX_DEFAULT
+	release
+	end
+
+Route10_PowerPlantEntrance_Text_WantToTrade:
+	.string "I work here at the POWER PLANT.\n"
+	.string "My MAGNETON's been my partner\l"
+	.string "for years.\p"
+	.string "But I've always wanted a\n"
+	.string "{STR_VAR_1}.\p"
+	.string "Would you trade one for my\n"
+	.string "{STR_VAR_2}?$"
+
+Route10_PowerPlantEntrance_Text_TakeCare:
+	.string "Thanks! Take good care of\n"
+	.string "MAGGIE for me!$"
+
+Route10_PowerPlantEntrance_Text_DeclineTrade:
+	.string "No? That's a shame.\n"
+	.string "My MAGNETON's a hard worker.$"
+
+Route10_PowerPlantEntrance_Text_NotRequestedMon:
+	.string "Hmm, that's not a {STR_VAR_1}.\n"
+	.string "That's not what I had in mind.$"
+
+Route10_PowerPlantEntrance_Text_TradeCompleted:
+	.string "How's MAGGIE doing?\n"
+	.string "She loves magnetic fields!$"
+
 Route10_PowerPlantEntrance_Text_Engineer4WeCanGetMagnetTrainRunning:
 	.string "All right! We can finally get the\n"
 	.string "MAGNET TRAIN running again.$"

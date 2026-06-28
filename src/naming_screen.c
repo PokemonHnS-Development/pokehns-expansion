@@ -701,8 +701,10 @@ static bool8 MainState_Exit(void)
 {
     if (!gPaletteFade.active)
     {
+#if !IS_HNS
         if (sNamingScreen->templateNum == NAMING_SCREEN_PLAYER)
             SeedRngAndSetTrainerId();
+#endif
         if (sNamingScreen->templateNum == NAMING_SCREEN_CAUGHT_MON
          && CalculatePlayerPartyCount() < PARTY_SIZE)
             SetMainCallback2(BattleMainCB2);

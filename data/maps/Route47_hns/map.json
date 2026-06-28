@@ -139,8 +139,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL_HNS",
-      "x": 83,
-      "y": 14,
+      "x": 82,
+      "y": 11,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
@@ -152,8 +152,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL_HNS",
-      "x": 31,
-      "y": 13,
+      "x": 30,
+      "y": 16,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
@@ -438,7 +438,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL_HNS",
-      "x": 32,
+      "x": 33,
       "y": 10,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -488,7 +488,40 @@
     }
   ],
   "coord_events": [],
-  "bg_events": [],
+  "bg_events": [
+    {
+      "type": "hidden_item",
+      "x": 31,
+      "y": 13,
+      "elevation": 0,
+      "item": "ITEM_LUCKY_EGG",
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE47_LUCKY_EGG"
+    },
+    {
+      "type": "hidden_item",
+      "x": 86,
+      "y": 48,
+      "elevation": 0,
+      "item": "ITEM_WAVE_INCENSE",
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE47_WAVE_INCENSE"
+    },
+    {
+      "type": "hidden_item",
+      "x": 53,
+      "y": 9,
+      "elevation": 0,
+      "item": "ITEM_LAGGING_TAIL",
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE47_LAGGING_TAIL"
+    },
+    {
+      "type": "hidden_item",
+      "x": 67,
+      "y": 55,
+      "elevation": 0,
+      "item": "ITEM_PEARL",
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE47_PEARL"
+    }
+  ],
   "game_version": "hns",
   "region": "REGION_JOHTO"
 }

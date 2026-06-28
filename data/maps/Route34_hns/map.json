@@ -555,6 +555,42 @@
       "var": "VAR_GOLDENROD_CITY_STATE",
       "var_value": "0",
       "script": "GoldenrodCity_EventScript_Trigger"
+    },
+    {
+      "type": "trigger",
+      "x": 28,
+      "y": 0,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "GoldenrodCity_Trigger_Music2"
+    },
+    {
+      "type": "trigger",
+      "x": 27,
+      "y": 0,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "GoldenrodCity_Trigger_Music2"
+    },
+    {
+      "type": "trigger",
+      "x": 26,
+      "y": 0,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "GoldenrodCity_Trigger_Music2"
+    },
+    {
+      "type": "trigger",
+      "x": 25,
+      "y": 0,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "GoldenrodCity_Trigger_Music2"
     }
   ],
   "bg_events": [
@@ -597,6 +633,14 @@
       "elevation": 0,
       "item": "ITEM_SUPER_POTION",
       "flag": "FLAG_ITEM_ROUTE34_SUPERPOTION"
+    },
+    {
+      "type": "hidden_item",
+      "x": 17,
+      "y": 17,
+      "elevation": 0,
+      "item": "ITEM_RARE_CANDY",
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE34_RARE_CANDY"
     }
   ],
   "game_version": "hns",

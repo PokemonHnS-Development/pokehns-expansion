@@ -167,3 +167,118 @@ EventScript_SetViridianGymTrainers::
 	settrainerflag TRAINER_COOLTRAINER_YUJI
 	settrainerflag TRAINER_COOLTRAINER_WARREN
 	return
+
+Common_EventScript_SetGymTrainers_hns::
+	switch VAR_0x8008
+	case 1, VioletCity_Gym_SetGymTrainers_hns
+	case 2, AzaleaTown_Gym_SetGymTrainers_hns
+	case 3, GoldenrodCity_Gym_SetGymTrainers_hns
+	case 4, EcruteakCity_Gym_SetGymTrainers_hns
+	case 5, CianwoodCity_Gym_SetGymTrainers_hns
+	case 6, OlivineCity_Gym_SetGymTrainers_hns
+	case 7, MahoganyTown_Gym_SetGymTrainers_hns
+	case 8, BlackthornCity_Gym_SetGymTrainers_hns
+	case 9, PewterCity_Gym_SetGymTrainers_hns
+	case 10, CeruleanCity_Gym_SetGymTrainers_hns
+	case 11, VermilionCity_Gym_SetGymTrainers_hns
+	case 12, CeladonCity_Gym_SetGymTrainers_hns
+	case 13, SaffronCity_Gym_SetGymTrainers_hns
+	case 14, FuchsiaCity_Gym_SetGymTrainers_hns
+	case 15, CinnabarIsland_Gym_SetGymTrainers_hns
+	case 16, ViridianCity_Gym_SetGymTrainers_hns
+	end
+
+VioletCity_Gym_SetGymTrainers_hns::
+	settrainerflag TRAINER_ROD_HNS
+	settrainerflag TRAINER_ABE_HNS
+	return
+
+AzaleaTown_Gym_SetGymTrainers_hns::
+	settrainerflag TRAINER_BENNY_HNS
+	settrainerflag TRAINER_AL_HNS
+	settrainerflag TRAINER_JOSH_HNS
+	settrainerflag TRAINER_AMY_AND_MAY_HNS
+	return
+
+GoldenrodCity_Gym_SetGymTrainers_hns::
+	settrainerflag TRAINER_CARRIE_HNS
+	settrainerflag TRAINER_BRIDGET_HNS
+	settrainerflag TRAINER_VICTORIA_HNS
+	settrainerflag TRAINER_SAMANTHA_HNS
+	return
+
+EcruteakCity_Gym_SetGymTrainers_hns::
+	settrainerflag TRAINER_JEFFREY_HNS
+	settrainerflag TRAINER_PING_HNS
+	settrainerflag TRAINER_MARTHA_HNS
+	settrainerflag TRAINER_GRACE_HNS
+	return
+
+CianwoodCity_Gym_SetGymTrainers_hns::
+	settrainerflag TRAINER_YOSHI_HNS
+	settrainerflag TRAINER_LAO_HNS
+	settrainerflag TRAINER_NOB_HNS
+	settrainerflag TRAINER_LUNG_HNS
+	return
+
+OlivineCity_Gym_SetGymTrainers_hns::
+	return
+
+MahoganyTown_Gym_SetGymTrainers_hns::
+	settrainerflag TRAINER_ROXANNE_HNS
+	settrainerflag TRAINER_RONALD_HNS
+	settrainerflag TRAINER_CLARISSA_HNS
+	settrainerflag TRAINER_BRAD_HNS
+	settrainerflag TRAINER_DOUGLAS_HNS
+	return
+
+BlackthornCity_Gym_SetGymTrainers_hns::
+	settrainerflag TRAINER_MIKE_HNS
+	settrainerflag TRAINER_PAUL_HNS
+	settrainerflag TRAINER_LOLA_HNS
+	settrainerflag TRAINER_CODY_HNS
+	settrainerflag TRAINER_FRAN_HNS
+	return
+
+PewterCity_Gym_SetGymTrainers_hns::
+	settrainerflag TRAINER_JERRY_HNS
+	return
+
+CeruleanCity_Gym_SetGymTrainers_hns::
+	settrainerflag TRAINER_DIANA_HNS
+	settrainerflag TRAINER_BRIANA_HNS
+	settrainerflag TRAINER_PARKER_HNS
+	return
+
+VermilionCity_Gym_SetGymTrainers_hns::
+	settrainerflag TRAINER_GREGORY_HNS
+	settrainerflag TRAINER_VINCENT_HNS
+	settrainerflag TRAINER_HORTON_HNS
+	return
+
+CeladonCity_Gym_SetGymTrainers_hns::
+	settrainerflag TRAINER_MICHELLE_HNS
+	settrainerflag TRAINER_TANYA_HNS
+	settrainerflag TRAINER_JULIA_HNS
+	settrainerflag TRAINER_JO_AND_ZOE_HNS
+	return
+
+SaffronCity_Gym_SetGymTrainers_hns::
+	settrainerflag TRAINER_REBECCA_HNS
+	settrainerflag TRAINER_FRANKLIN_HNS
+	settrainerflag TRAINER_DORIS_HNS
+	settrainerflag TRAINER_JARED_HNS
+	return
+
+FuchsiaCity_Gym_SetGymTrainers_hns::
+	settrainerflag TRAINER_ALICE_HNS
+	settrainerflag TRAINER_LINDA_HNS
+	settrainerflag TRAINER_CINDY_HNS
+	settrainerflag TRAINER_BARRY_HNS
+	return
+
+CinnabarIsland_Gym_SetGymTrainers_hns::
+	return
+
+ViridianCity_Gym_SetGymTrainers_hns::
+	return

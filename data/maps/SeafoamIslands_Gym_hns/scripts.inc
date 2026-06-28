@@ -22,7 +22,7 @@ SeafoamIslands_Gym_EventScript_Blaine::
 	addvar VAR_NUM_BADGES, 1
 	setvar VAR_0x8008, 15
 	clearflag FLAG_HIDE_SEAFOAM_GYMGUY
-	call Common_EventScript_SetGymTrainers
+	call Common_EventScript_SetGymTrainers_hns
 	closemessage
 	release
 	end

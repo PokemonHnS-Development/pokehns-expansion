@@ -12,7 +12,7 @@
   "allow_running": true,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": 0,
+  "connections": null,
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK_HNS",
@@ -346,7 +346,16 @@
     }
   ],
   "coord_events": [],
-  "bg_events": [],
+  "bg_events": [
+    {
+      "type": "hidden_item",
+      "x": 6,
+      "y": 4,
+      "elevation": 0,
+      "item": "ITEM_ODD_INCENSE",
+      "flag": "FLAG_HIDDEN_ITEM_CERULEAN_CAVE_B1F_ODD_INCENSE"
+    }
+  ],
   "game_version": "hns",
   "region": "REGION_KANTO"
 }

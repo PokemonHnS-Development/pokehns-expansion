@@ -2706,8 +2706,6 @@ bool8 ScrCmd_showmonpic(struct ScriptContext *ctx)
         if (RandomizerFeatureEnabled(RANDOMIZE_STARTER_AND_GIFT_MON))
         {
             species = RandomizeMon(RANDOMIZER_REASON_STARTER_AND_GIFT_MON, GetRandomizerOption(RANDOMIZER_OPTION_SPECIES_MODE), GetRandomizerSeed() ^ species, species);
-            if (species == SPECIES_TOGEPI)
-                species = SPECIES_CLEFFA;
             if (varId >= VARS_START)
                 VarSet(varId, species);
         }
@@ -3049,6 +3047,25 @@ bool8 ScrCmd_checkfieldmove(struct ScriptContext *ctx)
             break;
         }
     }
+    if (gSpecialVar_Result == GetMaxPartySize())
+    {
+        u16 itemId = GetTMHMItemIdFromMoveId(move);
+        if (itemId != ITEM_NONE && CheckBagHasItem(itemId, 1))
+        {
+            for (u32 i = 0; i < GetMaxPartySize(); i++)
+            {
+                u16 species = GetMonData(&gPlayerParty[i], MON_DATA_SPECIES);
+                if (!species)
+                    break;
+                if (!GetMonData(&gPlayerParty[i], MON_DATA_IS_EGG) && CanLearnTeachableMove(species, move))
+                {
+                    gSpecialVar_Result = i;
+                    gSpecialVar_0x8004 = species;
+                    break;
+                }
+            }
+        }
+    }
 
     return FALSE;
 }
@@ -3070,10 +3087,40 @@ bool8 ScrCmd_checkpartymove(struct ScriptContext *ctx)
             break;
         }
     }
-    // TODO: HnS has two additional fallbacks here:
-    // 1. Tutor fallback — if no mon knows the move, check if any can *learn* it via MoveIdToTutorIndex/CanLearnTutorMove
-    // 2. HM overwrite fallback — if HMsOverwriteOptionActive(), check bag for the HM item via MoveToHM/BattleMoveIdToItemId
-    // These require porting the helper functions from pokemonHnS/src/scrcmd.c:1996-2046
+    if (gSpecialVar_Result == GetMaxPartySize())
+    {
+        for (u32 i = 0; i < GetMaxPartySize(); i++)
+        {
+            u16 species = GetMonData(&gPlayerParty[i], MON_DATA_SPECIES);
+            if (!species)
+                break;
+            if (!GetMonData(&gPlayerParty[i], MON_DATA_IS_EGG) && CanLearnTeachableMove(species, moveId))
+            {
+                gSpecialVar_Result = i;
+                gSpecialVar_0x8004 = species;
+                break;
+            }
+        }
+    }
+    if (gSpecialVar_Result == GetMaxPartySize() && HMsOverwriteOptionActive())
+    {
+        u16 itemId = GetTMHMItemIdFromMoveId(moveId);
+        if (itemId != ITEM_NONE && CheckBagHasItem(itemId, 1))
+        {
+            for (u32 i = 0; i < GetMaxPartySize(); i++)
+            {
+                u16 species = GetMonData(&gPlayerParty[i], MON_DATA_SPECIES);
+                if (!species)
+                    break;
+                if (!GetMonData(&gPlayerParty[i], MON_DATA_IS_EGG) && CanLearnTeachableMove(species, moveId))
+                {
+                    gSpecialVar_Result = i;
+                    gSpecialVar_0x8004 = species;
+                    break;
+                }
+            }
+        }
+    }
     return FALSE;
 }
 

@@ -41,6 +41,7 @@
 #include "constants/item.h"
 #include "constants/items.h"
 #include "constants/heal_locations.h"
+#include "constants/help_window.h"
 #include "constants/layouts.h"
 #include "constants/lilycove_lady.h"
 #include "constants/map_scripts.h"
@@ -1466,6 +1467,10 @@ gText_SelectWithoutRegisteredItem::
 	.string "An item in the BAG can be\n"
 	.string "registered to SELECT for easy use.$"
 
+gText_SelectWithoutRegisteredHoldItem::
+	.string "A KEY ITEM can be registered\n"
+	.string "to holding SELECT for easy use.$"
+
 gText_PokemonTrainerSchoolEmail::
 	.string "There's an e-mail from POKéMON TRAINER\n"
 	.string "SCHOOL.\p"
@@ -1644,6 +1649,10 @@ EventScript_DoInGameTrade::
 
 EventScript_SelectWithoutRegisteredItem::
 	msgbox gText_SelectWithoutRegisteredItem, MSGBOX_SIGN
+	end
+
+EventScript_SelectWithoutRegisteredHoldItem::
+	msgbox gText_SelectWithoutRegisteredHoldItem, MSGBOX_SIGN
 	end
 
 	.include "data/scripts/field_poison.inc"
@@ -2114,6 +2123,7 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/TrainerHill_3F_hns/scripts.inc"
 	.include "data/maps/TrainerHill_4F_hns/scripts.inc"
 	.include "data/maps/TrainerHill_Roof_hns/scripts.inc"
+	.include "data/maps/TrainerHill_Elevator_hns/scripts.inc"
 	.include "data/maps/SlateportCity_BattleTentLobby_hns/scripts.inc"
 	.include "data/maps/SlateportCity_BattleTentCorridor_hns/scripts.inc"
 	.include "data/maps/SlateportCity_BattleTentBattleRoom_hns/scripts.inc"
@@ -2333,6 +2343,8 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/BattleFrontier_PokemonCenter_1F_hns/scripts.inc"
 	.include "data/maps/BattleFrontier_PokemonCenter_2F_hns/scripts.inc"
 	.include "data/maps/BattleFrontier_Mart_hns/scripts.inc"
+	.include "data/maps/TradeCenter_hns/scripts.inc"
+	.include "data/maps/BattleColosseum_2P_hns/scripts.inc"
 
 .endif
 

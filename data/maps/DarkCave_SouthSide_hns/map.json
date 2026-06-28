@@ -12,7 +12,7 @@
   "allow_running": true,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": 0,
+  "connections": null,
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
@@ -234,7 +234,24 @@
     }
   ],
   "coord_events": [],
-  "bg_events": [],
+  "bg_events": [
+    {
+      "type": "hidden_item",
+      "x": 60,
+      "y": 18,
+      "elevation": 0,
+      "item": "ITEM_MAX_ETHER",
+      "flag": "FLAG_HIDDEN_ITEM_DARKCAVE_SS_MAX_ETHER"
+    },
+    {
+      "type": "hidden_item",
+      "x": 33,
+      "y": 20,
+      "elevation": 0,
+      "item": "ITEM_BLACK_FLUTE",
+      "flag": "FLAG_HIDDEN_ITEM_DARKCAVE_SS_BLACK_FLUTE"
+    }
+  ],
   "game_version": "hns",
   "region": "REGION_JOHTO"
 }

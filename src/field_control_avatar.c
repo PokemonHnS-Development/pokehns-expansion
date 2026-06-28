@@ -46,6 +46,7 @@
 
 static EWRAM_DATA u8 sWildEncounterImmunitySteps = 0;
 static EWRAM_DATA u16 sPrevMetatileBehavior = 0;
+static EWRAM_DATA u8 sPlayerSelectHoldFrames = 0;
 
 COMMON_DATA u8 gSelectedObjectEvent = 0;
 
@@ -100,6 +101,8 @@ void FieldClearPlayerInput(struct FieldInput *input)
     input->input_field_1_1 = FALSE;
     input->input_field_1_2 = FALSE;
     input->input_field_1_3 = FALSE;
+    input->tappedSelectButton = FALSE;
+    input->heldSelectButton = FALSE;
     input->dpadDirection = 0;
 }
 
@@ -117,6 +120,16 @@ void FieldGetPlayerInput(struct FieldInput *input, u16 newKeys, u16 heldKeys)
                 input->pressedStartButton = TRUE;
             if (newKeys & SELECT_BUTTON)
                 input->pressedSelectButton = TRUE;
+            if (sPlayerSelectHoldFrames == 60)
+                input->heldSelectButton = TRUE;
+            if (heldKeys & SELECT_BUTTON)
+                sPlayerSelectHoldFrames = sPlayerSelectHoldFrames < 0xFF ? sPlayerSelectHoldFrames + 1 : 0xFF;
+            else if (sPlayerSelectHoldFrames != 0)
+            {
+                if (sPlayerSelectHoldFrames < 60)
+                    input->tappedSelectButton = TRUE;
+                sPlayerSelectHoldFrames = 0;
+            }
             if (newKeys & A_BUTTON)
                 input->pressedAButton = TRUE;
             if (newKeys & B_BUTTON)
@@ -234,7 +247,10 @@ int ProcessPlayerFieldInput(struct FieldInput *input)
     if (input->tookStep && TryFindHiddenPokemon())
         return TRUE;
 
-    if (input->pressedSelectButton && UseRegisteredKeyItemOnField() == TRUE)
+    if (input->tappedSelectButton && UseRegisteredKeyItemOnField(FALSE) == TRUE)
+        return TRUE;
+
+    if (input->heldSelectButton && UseRegisteredKeyItemOnField(TRUE) == TRUE)
         return TRUE;
 
     if (input->pressedRButton && TryStartDexNavSearch())
@@ -485,6 +501,8 @@ static const u8 *GetInteractedMetatileScript(struct MapPosition *position, u8 me
     }
     if (MetatileBehavior_IsPC(metatileBehavior) == TRUE)
         return EventScript_PC;
+    if (IS_HNS && MetatileBehavior_IsHeadbuttTree(metatileBehavior) == TRUE)
+        return EventScript_Headbutt;
     if (MetatileBehavior_IsClosedSootopolisDoor(metatileBehavior) == TRUE)
         return EventScript_ClosedSootopolisDoor;
     if (MetatileBehavior_IsSkyPillarClosedDoor(metatileBehavior) == TRUE)

@@ -511,6 +511,58 @@ const struct BattleEnvironment gBattleEnvironmentInfo[BATTLE_ENVIRONMENT_COUNT] 
         .battleIntroSlide = BUILDING_BATTLE_INTRO_SLIDE,
     },
 
+    [BATTLE_ENVIRONMENT_ROCK_SNOW] =
+    {
+        .name = _("Rock Snow"),
+    #if B_NATURE_POWER_MOVES >= GEN_6
+        .naturePower = MOVE_EARTH_POWER,
+    #elif B_NATURE_POWER_MOVES >= GEN_5
+        .naturePower = MOVE_EARTHQUAKE,
+    #else
+        .naturePower = MOVE_ROCK_SLIDE,
+    #endif
+        .secretPowerAnimation = B_SECRET_POWER_ANIMATION >= GEN_5 ? gBattleAnimMove_MudSlap : gBattleAnimMove_RockThrow,
+    #if B_SECRET_POWER_EFFECT >= GEN_5
+        .secretPowerEffect = MOVE_EFFECT_ACC_MINUS_1,
+    #elif B_SECRET_POWER_EFFECT == GEN_4
+        .secretPowerEffect = MOVE_EFFECT_FLINCH,
+    #else
+        .secretPowerEffect = MOVE_EFFECT_CONFUSION,
+    #endif
+        .camouflageType = B_CAMOUFLAGE_TYPES >= GEN_5 ? TYPE_GROUND : TYPE_ROCK,
+        .camouflageBlend = RGB(22, 16, 10),
+        .entry = ENVIRONMENT_ENTRY(RockSnow),
+        .background = ENVIRONMENT_BACKGROUND(RockSnow),
+        .palette = gBattleEnvironmentPalette_RockSnow,
+        .battleIntroSlide = BattleIntroSlide1,
+    },
+
+    [BATTLE_ENVIRONMENT_MOUNTAIN_SNOW] =
+    {
+        .name = _("Mountain Snow"),
+    #if B_NATURE_POWER_MOVES >= GEN_6
+        .naturePower = MOVE_EARTH_POWER,
+    #elif B_NATURE_POWER_MOVES >= GEN_5
+        .naturePower = MOVE_EARTHQUAKE,
+    #else
+        .naturePower = MOVE_ROCK_SLIDE,
+    #endif
+        .secretPowerAnimation = B_SECRET_POWER_ANIMATION >= GEN_5 ? gBattleAnimMove_MudSlap : gBattleAnimMove_RockThrow,
+    #if B_SECRET_POWER_EFFECT >= GEN_5
+        .secretPowerEffect = MOVE_EFFECT_ACC_MINUS_1,
+    #elif B_SECRET_POWER_EFFECT == GEN_4
+        .secretPowerEffect = MOVE_EFFECT_FLINCH,
+    #else
+        .secretPowerEffect = MOVE_EFFECT_CONFUSION,
+    #endif
+        .camouflageType = B_CAMOUFLAGE_TYPES >= GEN_5 ? TYPE_GROUND : TYPE_ROCK,
+        .camouflageBlend = RGB(22, 16, 10),
+        .entry = ENVIRONMENT_ENTRY(MountainSnow),
+        .background = ENVIRONMENT_BACKGROUND(MountainSnow),
+        .palette = gBattleEnvironmentPalette_MountainSnow,
+        .battleIntroSlide = BattleIntroSlide1,
+    },
+
     [BATTLE_ENVIRONMENT_SOARING] =
     {
         .name = _("Soaring"),
@@ -865,5 +917,21 @@ static const struct ModernBattleGfx sModernBattleGfx[BATTLE_ENVIRONMENT_COUNT] =
         .background = MODERN_BACKGROUND(StadiumModern),
         .entry = MODERN_ENTRY(BuildingModern),
         .palette = gBattleEnvironmentPalette_StadiumKaren,
+    },
+    [BATTLE_ENVIRONMENT_ROCK_SNOW] =
+    {
+        .background = MODERN_BACKGROUND(RockSnowModern),
+        .entry = MODERN_ENTRY(RockSnowModern),
+        .palette = gBattleEnvironmentPalette_RockSnowModern,
+        .paletteTwilight = gBattleEnvironmentPalette_RockSnowModernMorning,
+        .paletteNight = gBattleEnvironmentPalette_RockSnowModernNight,
+    },
+    [BATTLE_ENVIRONMENT_MOUNTAIN_SNOW] =
+    {
+        .background = MODERN_BACKGROUND(MountainSnowModern),
+        .entry = MODERN_ENTRY(MountainSnowModern),
+        .palette = gBattleEnvironmentPalette_MountainSnowModern,
+        .paletteTwilight = gBattleEnvironmentPalette_MountainSnowModernMorning,
+        .paletteNight = gBattleEnvironmentPalette_MountainSnowModernNight,
     },
 };

@@ -356,6 +356,7 @@ struct SaveBlock3
     u8 apricornTrees[NUM_APRICORN_TREE_BYTES];
 #endif
     struct ChallengeSettings challengeSettings;
+    u16 registeredItemHold;
 }; /* max size 1624 bytes */
 
 extern struct SaveBlock3 *gSaveBlock3Ptr;
@@ -1172,7 +1173,7 @@ struct ExternalEventFlags
 struct Bag
 {
     struct ItemSlot items[BAG_ITEMS_COUNT];
-#if !I_COMBINE_BAG_POCKETS
+#if I_COMBINE_BAG_POCKETS == FALSE
     struct ItemSlot treasures[BAG_TREASURES_COUNT];
 #endif
     struct ItemSlot keyItems[BAG_KEYITEMS_COUNT];
@@ -1180,7 +1181,7 @@ struct Bag
     struct ItemSlot TMsHMs[BAG_TMHM_COUNT];
     struct ItemSlot berries[BAG_BERRIES_COUNT];
     struct ItemSlot medicine[BAG_MEDICINE_COUNT];
-#if !I_COMBINE_BAG_POCKETS
+#if I_COMBINE_BAG_POCKETS == FALSE
     struct ItemSlot battleItems[BAG_BATTLE_ITEMS_COUNT];
 #endif
 };

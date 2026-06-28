@@ -12,7 +12,7 @@
   "allow_running": true,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": 0,
+  "connections": null,
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL_HNS",
@@ -106,6 +106,7 @@
       "flag": "FLAG_TEMP_5"
     },
     {
+      "local_id": "LOCALID_CERULEANCAVE_MEWTWO",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_MEWTWO",
       "x": 8,
       "y": 14,
@@ -116,8 +117,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "CeruleanCave3_EventScript_MewtwoNew",
-      "flag": "FLAG_HIDE_MEWTWO",
-      "local_id": "LOCALID_CERULEANCAVE_MEWTWO"
+      "flag": "FLAG_HIDE_MEWTWO"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_ANNIHILAPE",
@@ -221,7 +221,32 @@
     }
   ],
   "coord_events": [],
-  "bg_events": [],
+  "bg_events": [
+    {
+      "type": "hidden_item",
+      "x": 31,
+      "y": 16,
+      "elevation": 0,
+      "item": "ITEM_DUSK_STONE",
+      "flag": "FLAG_HIDDEN_ITEM_CERULEAN_CAVE_B2F_DUSK_STONE"
+    },
+    {
+      "type": "hidden_item",
+      "x": 39,
+      "y": 7,
+      "elevation": 0,
+      "item": "ITEM_ELECTIRIZER",
+      "flag": "FLAG_HIDDEN_ITEM_CERULEAN_CAVE_B2F_ELECTIRIZER"
+    },
+    {
+      "type": "hidden_item",
+      "x": 19,
+      "y": 17,
+      "elevation": 0,
+      "item": "ITEM_BLACK_SLUDGE",
+      "flag": "FLAG_HIDDEN_ITEM_CERULEAN_CAVE_B2F_BLACK_SLUDGE"
+    }
+  ],
   "game_version": "hns",
   "region": "REGION_KANTO"
 }

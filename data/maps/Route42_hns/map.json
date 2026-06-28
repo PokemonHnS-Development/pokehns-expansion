@@ -399,6 +399,22 @@
       "elevation": 0,
       "item": "ITEM_MODEST_MINT",
       "flag": "FLAG_ITEM_ROUTE42_MODEST_MINT"
+    },
+    {
+      "type": "hidden_item",
+      "x": 63,
+      "y": 6,
+      "elevation": 0,
+      "item": "ITEM_DUBIOUS_DISC",
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE42_DUBIOUS_DISC"
+    },
+    {
+      "type": "hidden_item",
+      "x": 48,
+      "y": 20,
+      "elevation": 0,
+      "item": "ITEM_MAX_POTION",
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE42_MAX_POTION"
     }
   ],
   "game_version": "hns",

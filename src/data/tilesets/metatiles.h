@@ -56,6 +56,9 @@ const u16 gMetatileAttributes_BattleFrontier[] = INCBIN_U16("data/tilesets/secon
 const u16 gMetatiles_Contest[] = INCBIN_U16("data/tilesets/secondary/contest/metatiles.bin");
 const u16 gMetatileAttributes_Contest[] = INCBIN_U16("data/tilesets/secondary/contest/metatile_attributes.bin");
 
+const u16 gMetatiles_CableClub[] = INCBIN_U16("data/tilesets/secondary/cable_club/metatiles.bin");
+const u16 gMetatileAttributes_CableClub[] = INCBIN_U16("data/tilesets/secondary/cable_club/metatile_attributes.bin");
+
 #if !IS_FRLG && !IS_HNS
 
 const u16 gMetatiles_Petalburg[] = INCBIN_U16("data/tilesets/secondary/petalburg/metatiles.bin");
@@ -109,9 +112,6 @@ const u16 gMetatileAttributes_MeteorFalls[] = INCBIN_U16("data/tilesets/secondar
 
 const u16 gMetatiles_OceanicMuseum[] = INCBIN_U16("data/tilesets/secondary/oceanic_museum/metatiles.bin");
 const u16 gMetatileAttributes_OceanicMuseum[] = INCBIN_U16("data/tilesets/secondary/oceanic_museum/metatile_attributes.bin");
-
-const u16 gMetatiles_CableClub[] = INCBIN_U16("data/tilesets/secondary/cable_club/metatiles.bin");
-const u16 gMetatileAttributes_CableClub[] = INCBIN_U16("data/tilesets/secondary/cable_club/metatile_attributes.bin");
 
 const u16 gMetatiles_SeashoreHouse[] = INCBIN_U16("data/tilesets/secondary/seashore_house/metatiles.bin");
 const u16 gMetatileAttributes_SeashoreHouse[] = INCBIN_U16("data/tilesets/secondary/seashore_house/metatile_attributes.bin");

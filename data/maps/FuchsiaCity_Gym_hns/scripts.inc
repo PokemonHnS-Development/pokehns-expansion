@@ -56,7 +56,7 @@ FuchsiaCity_Gym_EventScript_Janine::
 	setflag FLAG_DEFEATED_FUCHSIA_GYM
 	addvar VAR_NUM_BADGES, 1
 	setvar VAR_0x8008, 14
-	call Common_EventScript_SetGymTrainers
+	call Common_EventScript_SetGymTrainers_hns
 	removeobject LOCALID_FUCHSIAGYM_ALICE_J
 	removeobject LOCALID_FUCHSIAGYM_CINDY_J
 	removeobject LOCALID_FUCHSIAGYM_LINDA_J

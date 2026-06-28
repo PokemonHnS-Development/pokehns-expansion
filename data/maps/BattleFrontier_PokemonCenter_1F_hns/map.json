@@ -1,7 +1,7 @@
 {
   "id": "MAP_BATTLE_FRONTIER_POKEMON_CENTER_1F_HNS",
   "name": "BattleFrontier_PokemonCenter_1F_hns",
-  "layout": "LAYOUT_POKEMON_CENTER_1F_HNS",
+  "layout": "LAYOUT_CELADON_CITY_POKEMON_CENTER_HNS",
   "music": "MUS_POKE_CENTER",
   "region_map_section": "MAPSEC_BATTLE_FRONTIER",
   "requires_flash": false,
@@ -109,7 +109,7 @@
       "dest_warp_id": "11"
     },
     {
-      "x": 1,
+      "x": -1,
       "y": 6,
       "elevation": 4,
       "dest_map": "MAP_BATTLE_FRONTIER_POKEMON_CENTER_2F_HNS",
@@ -117,6 +117,15 @@
     }
   ],
   "coord_events": [],
-  "bg_events": [],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 3,
+      "y": 1,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "LittlerootTown_BrendansHouse_2F_EventScript_WallClock"
+    }
+  ],
   "game_version": "hns"
 }

@@ -2444,6 +2444,30 @@
       "layout_version": "emerald"
     },
     {
+      "id": "LAYOUT_TRADE_CENTER_HNS",
+      "name": "TradeCenter_hns_Layout",
+      "width": 12,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_CableClub",
+      "border_filepath": "data/layouts/TradeCenter_hns/border.bin",
+      "blockdata_filepath": "data/layouts/TradeCenter_hns/map.bin",
+      "game_version": "hns",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_BATTLE_COLOSSEUM_2P_HNS",
+      "name": "BattleColosseum_2P_hns_Layout",
+      "width": 14,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_CableClub",
+      "border_filepath": "data/layouts/BattleColosseum_2P_hns/border.bin",
+      "blockdata_filepath": "data/layouts/BattleColosseum_2P_hns/map.bin",
+      "game_version": "hns",
+      "layout_version": "emerald"
+    },
+    {
       "id": "LAYOUT_RECORD_CORNER",
       "name": "RecordCorner_Layout",
       "width": 20,
@@ -11135,8 +11159,8 @@
     {
       "id": "LAYOUT_GOLDENROD_CITY_POKEMON_CENTER_HNS",
       "name": "GoldenrodCity_PokemonCenter_hns_Layout",
-      "width": 16,
-      "height": 10,
+      "width": 19,
+      "height": 11,
       "primary_tileset": "gTileset_Johto_Building_Hns",
       "secondary_tileset": "gTileset_Kanto_PokemonCenter_Hns",
       "border_filepath": "data/layouts/GoldenrodCity_PokemonCenter_hns/border.bin",

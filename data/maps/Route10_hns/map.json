@@ -324,6 +324,14 @@
       "elevation": 0,
       "item": "ITEM_ULTRA_BALL",
       "flag": "FLAG_ITEM_ROUTE10_ULTRABALL"
+    },
+    {
+      "type": "hidden_item",
+      "x": 1,
+      "y": 12,
+      "elevation": 0,
+      "item": "ITEM_TM_ROCK_POLISH",
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE10_TM_ROCK_POLISH"
     }
   ],
   "game_version": "hns",

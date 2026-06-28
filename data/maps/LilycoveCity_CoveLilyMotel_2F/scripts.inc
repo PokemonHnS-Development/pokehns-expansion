@@ -26,10 +26,35 @@ LilycoveCity_CoveLilyMotel_2F_EventScript_ShowDiploma::
 	message LilycoveCity_CoveLilyMotel_2F_Text_FilledPokedexGiveYouThis
 	waitmessage
 	call Common_EventScript_PlayGymBadgeFanfare
+	specialvar VAR_RESULT, HasAllMons
+	call_if_eq VAR_RESULT, TRUE, LilycoveCity_CoveLilyMotel_2F_EventScript_TryGiveShinyCharm
+	specialvar VAR_RESULT, HasAllRegionalMons
+	call_if_eq VAR_RESULT, TRUE, LilycoveCity_CoveLilyMotel_2F_EventScript_TryGiveOvalCharm
 	special Special_ShowDiploma
 	waitstate
+
 	release
 	end
+
+LilycoveCity_CoveLilyMotel_2F_EventScript_TryGiveOvalCharm::
+	checkitem ITEM_OVAL_CHARM
+	call_if_eq VAR_RESULT, FALSE, LilycoveCity_CoveLilyMotel_2F_EventScript_GiveOvalCharm
+	return
+
+LilycoveCity_CoveLilyMotel_2F_EventScript_GiveOvalCharm::
+	giveitem ITEM_OVAL_CHARM
+	return
+
+LilycoveCity_CoveLilyMotel_2F_EventScript_TryGiveShinyCharm::
+	checkitem ITEM_SHINY_CHARM
+	call_if_eq VAR_RESULT, FALSE, LilycoveCity_CoveLilyMotel_2F_EventScript_GiveShinyCharm
+	checkitem ITEM_OVAL_CHARM
+	call_if_eq VAR_RESULT, FALSE, LilycoveCity_CoveLilyMotel_2F_EventScript_GiveOvalCharm
+	return
+
+LilycoveCity_CoveLilyMotel_2F_EventScript_GiveShinyCharm::
+	giveitem ITEM_SHINY_CHARM
+	return
 
 LilycoveCity_CoveLilyMotel_2F_EventScript_Programmer::
 	msgbox LilycoveCity_CoveLilyMotel_2F_Text_ImTheProgrammer, MSGBOX_NPC

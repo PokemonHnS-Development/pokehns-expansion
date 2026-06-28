@@ -22,6 +22,7 @@
 #define TAG_MAY     1003
 #define TAG_FLYGON_LATIOS  1004
 #define TAG_FLYGON_LATIAS  1005
+#define TAG_SUICUNE        1006
 
 // Used for the Clouds/Trees/Houses sprites that pass by in the background
 #define TAG_MOVING_SCENERY 2000
@@ -63,6 +64,10 @@ static const u32 sHouseSilhouette_Gfx[]   = INCBIN_U32("graphics/intro/scene_2/h
 static const u16 sBrendanCredits_Pal[]    = INCBIN_U16("graphics/intro/scene_2/brendan_credits.gbapal");
 static const u32 sBrendanCredits_Gfx[]    = INCBIN_U32("graphics/intro/scene_2/brendan_credits.4bpp.smol");
 static const u16 sMayCredits_Pal[]        = INCBIN_U16("graphics/intro/scene_2/may_credits.gbapal");
+#if IS_HNS
+static const u16 sSuicuneCredits_Pal[]    = INCBIN_U16("graphics/intro/scene_2/suicune_credits.gbapal");
+static const u32 sSuicuneCredits_Gfx[]    = INCBIN_U32("graphics/intro/scene_2/suicune_credits.4bpp.smol");
+#endif
 static const u16 sUnused[0xF0]            = {0};
 static const u32 sMayCredits_Gfx[]        = INCBIN_U32("graphics/intro/scene_2/may_credits.4bpp.smol");
 static const u32 sBicycle_Gfx[]           = INCBIN_U32("graphics/intro/scene_2/bicycle.4bpp.smol");
@@ -499,6 +504,17 @@ static const union AnimCmd *const sAnims_Bicycle[] =
     sAnim_Bicycle
 };
 
+#if IS_HNS
+static const struct SpriteTemplate sSpriteTemplate_Suicune =
+{
+    .tileTag = TAG_SUICUNE,
+    .paletteTag = TAG_SUICUNE,
+    .oam = &sOamData_Player,
+    .anims = sAnims_Player,
+    .callback = SpriteCB_Player
+};
+#endif
+
 static const struct SpriteTemplate sSpriteTemplate_BrendanBicycle =
 {
     .tileTag = TAG_BICYCLE,
@@ -701,6 +717,25 @@ const struct CompressedSpriteSheet gSpriteSheet_CreditsRivalMay[] =
     },
     {}
 };
+
+#if IS_HNS
+const struct CompressedSpriteSheet gSpriteSheet_CreditsSuicune[] =
+{
+    {
+        .data = sSuicuneCredits_Gfx,
+        .size = 0x3800,
+        .tag = TAG_SUICUNE
+    },
+    {}
+};
+
+const struct SpritePalette gSpritePalettes_CreditsHnS[] =
+{
+    { .data = sSuicuneCredits_Pal, .tag = TAG_SUICUNE },
+    { .data = sMayCredits_Pal,     .tag = TAG_MAY },
+    {}
+};
+#endif
 
 EWRAM_DATA u16 gIntroCredits_MovingSceneryVBase = 0;
 EWRAM_DATA s16 gIntroCredits_MovingSceneryVOffset = 0;
@@ -1115,6 +1150,13 @@ u8 CreateIntroMaySprite(s16 x, s16 y)
     gSprites[bicycleSpriteId].sPlayerSpriteId = playerSpriteId;
     return playerSpriteId;
 }
+
+#if IS_HNS
+u8 CreateCreditsSuicuneSprite(s16 x, s16 y)
+{
+    return CreateSprite(&sSpriteTemplate_Suicune, x, y, 2);
+}
+#endif
 
 #undef sPlayerSpriteId
 

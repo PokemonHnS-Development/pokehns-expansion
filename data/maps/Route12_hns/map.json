@@ -225,6 +225,22 @@
   "coord_events": [],
   "bg_events": [
     {
+      "type": "hidden_item",
+      "x": 20,
+      "y": 26,
+      "elevation": 0,
+      "item": "ITEM_YELLOW_FLUTE",
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE12_YELLOW_FLUTE"
+    },
+    {
+      "type": "hidden_item",
+      "x": 9,
+      "y": 13,
+      "elevation": 0,
+      "item": "ITEM_CALCIUM",
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE12_CALCIUM"
+    },
+    {
       "type": "sign",
       "x": 6,
       "y": 43,

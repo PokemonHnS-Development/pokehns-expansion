@@ -59,7 +59,7 @@ extern const u8 gText_TMs_Hms[];
 extern const u8 gText_Berries2[];
 
 extern const u8 gText_Medicine[];
-#if !I_COMBINE_BAG_POCKETS
+#if I_COMBINE_BAG_POCKETS == FALSE
 extern const u8 gText_BattleItems[];
 extern const u8 gText_Treasures[];
 #endif

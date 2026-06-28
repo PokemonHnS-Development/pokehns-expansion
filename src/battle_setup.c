@@ -790,7 +790,6 @@ static const struct {
     {MAP_MAHOGANYTOWN_HNS,                       BATTLE_ENVIRONMENT_MOUNTAIN},
     {MAP_MT_SILVER_OUTSIDE_HNS,                  BATTLE_ENVIRONMENT_MOUNTAIN},
     {MAP_MT_SILVER_MOUNTAIN_SIDE_HNS,            BATTLE_ENVIRONMENT_MOUNTAIN},
-    {MAP_MT_SILVER_SNOW_HNS,                     BATTLE_ENVIRONMENT_MOUNTAIN},
     {MAP_ROUTE3_HNS,                             BATTLE_ENVIRONMENT_MOUNTAIN},
     {MAP_ROUTE4_HNS,                             BATTLE_ENVIRONMENT_MOUNTAIN},
     {MAP_ROUTE9_HNS,                             BATTLE_ENVIRONMENT_MOUNTAIN},
@@ -879,6 +878,11 @@ static const struct {
     {MAP_VIRIDIAN_CITY_GYM_HNS,                   BATTLE_ENVIRONMENT_BLUE_BUILDING},
     {MAP_CERULEAN_CITY_GYM_HNS,                   BATTLE_ENVIRONMENT_BLUE_BUILDING},
     {MAP_SAFFRON_CITY_GYM_HNS,                    BATTLE_ENVIRONMENT_BLUE_BUILDING},
+    // ROCK_SNOW (1 map)
+    {MAP_MT_SILVER_SNOW_HNS,                     BATTLE_ENVIRONMENT_ROCK_SNOW},
+    // MOUNTAIN_SNOW (2 maps)
+    {MAP_MT_SILVER_SUMMIT_DAY_HNS,               BATTLE_ENVIRONMENT_MOUNTAIN_SNOW},
+    {MAP_MT_SILVER_SUMMIT_NIGHT_HNS,             BATTLE_ENVIRONMENT_MOUNTAIN_SNOW},
 };
 
 static s32 GetMapDefaultEnvironment(u16 mapId)
@@ -1077,6 +1081,11 @@ enum BattleTransition GetTrainerBattleTransition(void)
 
     if (DoesTrainerHaveMugshot(trainerId))
         return B_TRANSITION_MUGSHOT;
+
+#if IS_HNS
+    if (trainerClass == TRAINER_CLASS_PKMN_TRAINER_1_HNS)
+        return B_TRANSITION_BIG_POKEBALL;
+#endif
 
     if (trainerClass == TRAINER_CLASS_TEAM_MAGMA
         || trainerClass == TRAINER_CLASS_MAGMA_LEADER

@@ -409,6 +409,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Route39_EventScript_Sign2"
+    },
+    {
+      "type": "hidden_item",
+      "x": 29,
+      "y": 45,
+      "elevation": 0,
+      "item": "ITEM_PP_UP",
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE39_PP_UP"
     }
   ],
   "game_version": "hns",

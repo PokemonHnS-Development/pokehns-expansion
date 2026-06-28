@@ -12,7 +12,7 @@
   "allow_running": false,
   "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": 0,
+  "connections": null,
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_ROCKET_M_HNS",
@@ -93,6 +93,7 @@
       "flag": "FLAG_HIDE_GOLDENROD_ROCKETS"
     },
     {
+      "local_id": "LOCALID_GOLDENROD_UNDERGROUND_SILVER",
       "graphics_id": "OBJ_EVENT_GFX_SILVER_HNS",
       "x": 35,
       "y": 2,
@@ -103,8 +104,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_HIDE_GOLDENROD_UNDERGROUND_SILVER",
-      "local_id": "LOCALID_GOLDENROD_UNDERGROUND_SILVER"
+      "flag": "FLAG_HIDE_GOLDENROD_UNDERGROUND_SILVER"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
@@ -206,6 +206,46 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "GoldenrodCity_UndergroundSwitches_EventScript_Panel3"
+    },
+    {
+      "type": "sign",
+      "x": 9,
+      "y": 8,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "GoldenrodCity_UndergroundSwitches_EventScript_AntiSoftLock"
+    },
+    {
+      "type": "sign",
+      "x": 12,
+      "y": 8,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "GoldenrodCity_UndergroundSwitches_EventScript_AntiSoftLock"
+    },
+    {
+      "type": "sign",
+      "x": 1,
+      "y": 12,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "GoldenrodCity_UndergroundSwitches_EventScript_AntiSoftLock"
+    },
+    {
+      "type": "sign",
+      "x": 30,
+      "y": 9,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "GoldenrodCity_UndergroundSwitches_EventScript_AntiSoftLock"
+    },
+    {
+      "type": "sign",
+      "x": 22,
+      "y": 8,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "GoldenrodCity_UndergroundSwitches_EventScript_AntiSoftLock"
     }
   ],
   "game_version": "hns",

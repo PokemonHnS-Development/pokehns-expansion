@@ -258,7 +258,16 @@
     }
   ],
   "coord_events": [],
-  "bg_events": [],
+  "bg_events": [
+    {
+      "type": "hidden_item",
+      "x": 3,
+      "y": 53,
+      "elevation": 0,
+      "item": "ITEM_TINY_MUSHROOM",
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE26_TINY_MUSHROOM"
+    }
+  ],
   "game_version": "hns",
   "region": "REGION_JOHTO"
 }

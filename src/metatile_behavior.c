@@ -515,6 +515,14 @@ bool8 MetatileBehavior_IsPC(u8 metatileBehavior)
         return FALSE;
 }
 
+bool8 MetatileBehavior_IsHeadbuttTree(u8 metatileBehavior)
+{
+    if (metatileBehavior == MB_HEADBUTT_TREE)
+        return TRUE;
+    else
+        return FALSE;
+}
+
 bool8 MetatileBehavior_IsCableBoxResults1(u8 metatileBehavior)
 {
     if (metatileBehavior == MB_CABLE_BOX_RESULTS_1)

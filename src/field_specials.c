@@ -1160,7 +1160,8 @@ static void PCTurnOnEffect_SetMetatile(s16 isScreenOn, s8 dx, s8 dy)
         else if (gSpecialVar_0x8004 == PC_LOCATION_PLAYER_HOUSE_FRLG)
             metatileId = METATILE_GenericBuilding1_PlayersPCOff;
         else if (gSpecialVar_0x8004 == PC_LOCATION_HNS)
-            metatileId = METATILE_JohtoBuildingHns_PC_Off;
+            metatileId = (gMapHeader.mapLayout->layoutVersion == LAYOUT_VERSION_EMERALD)
+                ? METATILE_Building_PC_Off : METATILE_JohtoBuildingHns_PC_Off;
         else if (gSpecialVar_0x8004 == PC_LOCATION_PLAYER_HOUSE_HNS)
             metatileId = METATILE_PlayersHouseHns_PC_Off;
     }
@@ -1176,7 +1177,8 @@ static void PCTurnOnEffect_SetMetatile(s16 isScreenOn, s8 dx, s8 dy)
         else if (gSpecialVar_0x8004 == PC_LOCATION_PLAYER_HOUSE_FRLG)
             metatileId = METATILE_GenericBuilding1_PlayersPCOn;
         else if (gSpecialVar_0x8004 == PC_LOCATION_HNS)
-            metatileId = METATILE_JohtoBuildingHns_PC_On;
+            metatileId = (gMapHeader.mapLayout->layoutVersion == LAYOUT_VERSION_EMERALD)
+                ? METATILE_Building_PC_On : METATILE_JohtoBuildingHns_PC_On;
         else if (gSpecialVar_0x8004 == PC_LOCATION_PLAYER_HOUSE_HNS)
             metatileId = METATILE_PlayersHouseHns_PC_On;
     }
@@ -1227,7 +1229,8 @@ static void PCTurnOffEffect(void)
     else if (gSpecialVar_0x8004 == PC_LOCATION_PLAYER_HOUSE_FRLG)
         metatileId = METATILE_GenericBuilding1_PlayersPCOff;
     else if (gSpecialVar_0x8004 == PC_LOCATION_HNS)
-        metatileId = METATILE_JohtoBuildingHns_PC_Off;
+        metatileId = (gMapHeader.mapLayout->layoutVersion == LAYOUT_VERSION_EMERALD)
+            ? METATILE_Building_PC_Off : METATILE_JohtoBuildingHns_PC_Off;
     else if (gSpecialVar_0x8004 == PC_LOCATION_PLAYER_HOUSE_HNS)
         metatileId = METATILE_PlayersHouseHns_PC_Off;
 

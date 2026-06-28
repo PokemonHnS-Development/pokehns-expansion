@@ -1,6 +1,8 @@
 #include "global.h"
 #include "main.h"
 #include "bike.h"
+#include "challenge_menu.h"
+#include "item.h"
 #include "event_data.h"
 #include "event_object_movement.h"
 #include "field_camera.h"
@@ -1673,6 +1675,17 @@ bool8 PartyHasMonWithSurf(void)
                 break;
             if (MonKnowsMove(&gPlayerParty[i], MOVE_SURF))
                 return TRUE;
+        }
+        if (CheckBagHasItem(ITEM_HM03, 1))
+        {
+            for (i = 0; i < PARTY_SIZE; i++)
+            {
+                u16 species = GetMonData(&gPlayerParty[i], MON_DATA_SPECIES);
+                if (!species)
+                    break;
+                if (!GetMonData(&gPlayerParty[i], MON_DATA_IS_EGG) && CanLearnTeachableMove(species, MOVE_SURF))
+                    return TRUE;
+            }
         }
     }
     return FALSE;

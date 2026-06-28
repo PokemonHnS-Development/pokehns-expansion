@@ -1,7 +1,9 @@
 #ifndef GUARD_ITEM_CONSTANTS_H
 #define GUARD_ITEM_CONSTANTS_H
 
-#if I_COMBINE_BAG_POCKETS
+#include "config/item.h"
+
+#if I_COMBINE_BAG_POCKETS == TRUE
 enum Pocket
 {
     POCKET_MEDICINE,
