@@ -1,5 +1,20 @@
 ViridianForest_hns_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, ViridianForest_hns_OnTransition
 	.byte 0
+
+ViridianForest_hns_OnTransition::
+	goto_if_ge VAR_VIRIDIAN_FOREST_PICHU, 1, ViridianForest_hns_NoOp
+	specialvar VAR_RESULT, CheckCelebi
+	goto_if_eq VAR_RESULT, TRUE, ViridianForest_EventScript_SetPichu
+	end
+
+ViridianForest_hns_NoOp::
+	end
+
+ViridianForest_EventScript_SetPichu::
+	clearflag FLAG_HIDE_VIRIDIAN_FOREST_SPIKY_EARED_PICHU1
+	setvar VAR_VIRIDIAN_FOREST_PICHU, 1
+	end
 
 ViridianForest_EventScript_Bugsy::
 	lock
