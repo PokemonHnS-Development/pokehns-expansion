@@ -12,6 +12,7 @@ struct HelpWindow
     const u8 *desc;
     u8 headerFont;
     u8 descFont;
+    u8 headerColor[3];
 };
 
 extern const struct HelpWindow gHelpWindowInfo[];

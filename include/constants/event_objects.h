@@ -580,11 +580,10 @@
 #define OBJ_EVENT_GFX_KRIS_FISHING_HNS           542
 #define OBJ_EVENT_GFX_KRIS_WATERING_HNS          543
 #define OBJ_EVENT_GFX_KRIS_DECORATING_HNS        544
-
-// Alola HNS objects
-#define OBJ_EVENT_GFX_ALOLA_OAK_HNS             545
-
-#define NUM_OBJ_EVENT_GFX                        546
+#define OBJ_EVENT_GFX_SKIER_F_HNS               545
+#define OBJ_EVENT_GFX_SKIER_M_HNS               546
+#define OBJ_EVENT_GFX_ALOLA_OAK_HNS             547
+#define NUM_OBJ_EVENT_GFX                        548
 
 
 // These are dynamic object gfx ids.

@@ -11,6 +11,7 @@ Route25_BillsHouse_hns_OnTransition::
 Route25_BillsHouse_hns_EventScript_TeleporterTest::
 	lockall
 	goto_if_unset FLAG_TELEPORTER_UNLOCKED, Route25_BillsHouse_hns_EndChoice
+	helpwindow HELP_TELEPORTER_WINDOW
 	msgbox Route25_BillsHouse_Text_Teleporter, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, FALSE, Route25_BillsHouse_hns_EndChoice
 	dynmultichoice 0, 0, FALSE, 6, 0, DYN_MULTICHOICE_CB_NONE, Route25_BillsHouse_hns_Text_Meowth, Route25_BillsHouse_hns_Text_Ponyta, Route25_BillsHouse_hns_Text_Rapidash, Route25_BillsHouse_hns_Text_Slowpoke, Route25_BillsHouse_hns_Text_Slowbro, Route25_BillsHouse_hns_Text_Slowking, Route25_BillsHouse_hns_Text_Farfetchd, Route25_BillsHouse_hns_Text_Weezing, Route25_BillsHouse_hns_Text_MrMime, Route25_BillsHouse_hns_Text_Articuno, Route25_BillsHouse_hns_Text_Zapdos, Route25_BillsHouse_hns_Text_Moltres, Route25_BillsHouse_hns_Text_Corsola, Route25_BillsHouse_hns_Text_Zigzagoon, Route25_BillsHouse_hns_Text_Linoone, Route25_BillsHouse_hns_Text_Cancel
@@ -35,7 +36,6 @@ Route25_BillsHouse_hns_EventScript_TeleporterTest::
 	end
 
 Route25_BillsHouse_Text_Teleporter:
-	.string "GALARIAN RECOMBINATOR:\p"
 	.string "THIS MACHINE WILL TRANSFORM\n"
 	.string "A POKéMON INTO ITS GALARIAN FORM\l"
 	.string "THIS PROCESS IS PERMANENT.\l"
@@ -574,8 +574,7 @@ Route25_BillsHouse_Text_TeleporterUnlocked:
 	.string "BILL left a note saying that\n"
 	.string "if I found someone who truly\l"
 	.string "appreciates POKéMON, I should\l"
-	.string "let them use his\l"
-	.string "GALARIAN RECOMBINATOR.\p"
+	.string "let them use his machine.\p"
 	.string "Feel free to use it anytime!\n"
 	.string "Just use that computer over there.$"
 

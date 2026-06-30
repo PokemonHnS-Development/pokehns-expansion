@@ -45,6 +45,8 @@ GoldenrodCity_PokemonCenter_EventScript_LinkNpc::
 	end
 
 GoldenrodCity_PokemonCenter_EventScript_ChooseTrade::
+	helpwindow HELP_TRADE_WINDOW
+	delay 30
 	call CableClub_EventScript_CheckPartyTradeRequirements
 	goto_if_eq VAR_RESULT, 0, GoldenrodCity_PokemonCenter_EventScript_LinkNpc_End
 	call Common_EventScript_SaveGame
