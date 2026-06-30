@@ -1,4 +1,4 @@
-AlolaIslandAkala_hns_MapScripts::
+UlaulaIsle_hns_MapScripts::
 	.byte 0
 
 

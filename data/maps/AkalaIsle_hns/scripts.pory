@@ -1,4 +1,4 @@
-mapscripts AlolaIslandRight_hns_MapScripts{
+mapscripts AkalaIsle_hns_MapScripts{
     MAP_SCRIPT_ON_TRANSITION{
         gettimeofday
         if ((var(VAR_0x8000)== TIME_MORNING) || (var(VAR_0x8000)== TIME_DAY))
@@ -240,13 +240,13 @@ script Alola_Akala_Totem_sign{
         dynmultichoice(20, 4, FALSE, 4, 0, DYN_MULTICHOICE_CB_NONE,"Melemele Isle", "Akala Isle", "Ula'ula Isle", "Poni Isle", "Cancel")
         if (var(VAR_RESULT) == 0)
         {
-            warp(MAP_ALOLA_ISLAND_MELEMELE_HNS, 34, 26)
+            warp(MAP_MELEMELE_ISLE_HNS, 34, 26)
             waitstate
             end
         }
         if (var(VAR_RESULT) == 1)
         {
-            warp(MAP_ALOLA_ISLAND_RIGHT_HNS, 9, 10)
+            warp(MAP_AKALA_ISLE_HNS, 9, 10)
             waitstate
             end
         }
@@ -258,7 +258,7 @@ script Alola_Akala_Totem_sign{
         }
         if (var(VAR_RESULT) == 3)
         {
-            warp(MAP_ALOLA_ISLAND_HNS, 13, 8)
+            warp(MAP_PONI_ISLE_HNS, 13, 8)
             waitstate
             end
         }

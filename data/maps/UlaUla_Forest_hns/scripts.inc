@@ -210,12 +210,12 @@ Alola_Ulaula_Totem_sign_8:
 	goto Alola_Ulaula_Totem_sign_3
 
 Alola_Ulaula_Totem_sign_12:
-	warp MAP_ALOLA_ISLAND_MELEMELE_HNS, 34, 26
+	warp MAP_MELEMELE_ISLE_HNS, 34, 26
 	waitstate
 	end
 
 Alola_Ulaula_Totem_sign_15:
-	warp MAP_ALOLA_ISLAND_RIGHT_HNS, 9, 10
+	warp MAP_AKALA_ISLE_HNS, 9, 10
 	waitstate
 	end
 
@@ -225,7 +225,7 @@ Alola_Ulaula_Totem_sign_18:
 	end
 
 Alola_Ulaula_Totem_sign_20:
-	warp MAP_ALOLA_ISLAND_HNS, 13, 8
+	warp MAP_PONI_ISLE_HNS, 13, 8
 	waitstate
 	end
 

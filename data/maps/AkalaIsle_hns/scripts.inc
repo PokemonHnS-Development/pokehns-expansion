@@ -1,18 +1,18 @@
-AlolaIslandRight_hns_MapScripts::
-	map_script MAP_SCRIPT_ON_TRANSITION, AlolaIslandRight_hns_MapScripts_MAP_SCRIPT_ON_TRANSITION
+AkalaIsle_hns_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, AkalaIsle_hns_MapScripts_MAP_SCRIPT_ON_TRANSITION
 	.byte 0
 
-AlolaIslandRight_hns_MapScripts_MAP_SCRIPT_ON_TRANSITION:
+AkalaIsle_hns_MapScripts_MAP_SCRIPT_ON_TRANSITION:
 	gettimeofday
 	compare VAR_0x8000, TIME_MORNING
-	goto_if_eq AlolaIslandRight_hns_MapScripts_MAP_SCRIPT_ON_TRANSITION_1
+	goto_if_eq AkalaIsle_hns_MapScripts_MAP_SCRIPT_ON_TRANSITION_1
 	compare VAR_0x8000, TIME_DAY
-	goto_if_eq AlolaIslandRight_hns_MapScripts_MAP_SCRIPT_ON_TRANSITION_1
+	goto_if_eq AkalaIsle_hns_MapScripts_MAP_SCRIPT_ON_TRANSITION_1
 	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_SPECIES ( SALAMENCE )
 	clearflag FLAG_AKALA_TOTEM_DAY
 	return
 
-AlolaIslandRight_hns_MapScripts_MAP_SCRIPT_ON_TRANSITION_1:
+AkalaIsle_hns_MapScripts_MAP_SCRIPT_ON_TRANSITION_1:
 	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_SPECIES ( MAGMORTAR )
 	setflag FLAG_AKALA_TOTEM_DAY
 	return
@@ -275,12 +275,12 @@ Alola_Akala_Totem_sign_8:
 	goto Alola_Akala_Totem_sign_3
 
 Alola_Akala_Totem_sign_12:
-	warp MAP_ALOLA_ISLAND_MELEMELE_HNS, 34, 26
+	warp MAP_MELEMELE_ISLE_HNS, 34, 26
 	waitstate
 	end
 
 Alola_Akala_Totem_sign_15:
-	warp MAP_ALOLA_ISLAND_RIGHT_HNS, 9, 10
+	warp MAP_AKALA_ISLE_HNS, 9, 10
 	waitstate
 	end
 
@@ -290,7 +290,7 @@ Alola_Akala_Totem_sign_18:
 	end
 
 Alola_Akala_Totem_sign_20:
-	warp MAP_ALOLA_ISLAND_HNS, 13, 8
+	warp MAP_PONI_ISLE_HNS, 13, 8
 	waitstate
 	end
 

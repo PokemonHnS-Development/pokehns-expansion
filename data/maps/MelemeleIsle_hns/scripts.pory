@@ -1,6 +1,6 @@
-mapscripts AlolaIslandMelemele_hns_MapScripts{
+mapscripts MelemeleIsle_hns_MapScripts{
         MAP_SCRIPT_ON_TRANSITION{
-            setrespawn(HEAL_LOCATION_ALOLA_ISLAND_MELEMELE_HNS)
+            setrespawn(HEAL_LOCATION_MELEMELE_ISLE_HNS)
             gettimeofday
             if ((var(VAR_0x8000)== TIME_MORNING) || (var(VAR_0x8000)== TIME_DAY))
             {
@@ -63,8 +63,8 @@ script Alola_Melemele_TravelToKanto{
         hidefollower
         playse(SE_EXIT)
         special(SpawnCameraObject)
-        hideobjectat(LOCALID_PLAYER, MAP_ALOLA_ISLAND_MELEMELE_HNS)
-        hideobjectat(Alola_Melemele_Captain, MAP_ALOLA_ISLAND_MELEMELE_HNS)
+        hideobjectat(LOCALID_PLAYER, MAP_MELEMELE_ISLE_HNS)
+        hideobjectat(Alola_Melemele_Captain, MAP_MELEMELE_ISLE_HNS)
         applymovement(OBJ_EVENT_ID_CAMERA, moves(walk_down))
         waitmovement(0)
         waitse
@@ -395,13 +395,13 @@ script Alola_Melemele_Totem_sign{
         dynmultichoice(20, 4, FALSE, 4, 0, DYN_MULTICHOICE_CB_NONE,"Melemele Isle", "Akala Isle", "Ula'ula Isle", "Poni Isle", "Cancel")
         if (var(VAR_RESULT) == 0)
         {
-            warp(MAP_ALOLA_ISLAND_MELEMELE_HNS, 34, 26)
+            warp(MAP_MELEMELE_ISLE_HNS, 34, 26)
             waitstate
             end
         }
         if (var(VAR_RESULT) == 1)
         {
-            warp(MAP_ALOLA_ISLAND_RIGHT_HNS, 9, 10)
+            warp(MAP_AKALA_ISLE_HNS, 9, 10)
             waitstate
             end
         }
@@ -413,7 +413,7 @@ script Alola_Melemele_Totem_sign{
         }
         if (var(VAR_RESULT) == 3)
         {
-            warp(MAP_ALOLA_ISLAND_HNS, 13, 8)
+            warp(MAP_PONI_ISLE_HNS, 13, 8)
             waitstate
             end
         }

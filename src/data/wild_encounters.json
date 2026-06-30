@@ -70756,8 +70756,8 @@
           }
         },
         {
-          "map": "MAP_ALOLA_ISLAND_MELEMELE_HNS",
-          "base_label": "gAlolaIslandMelemele_hns",
+          "map": "MAP_MELEMELE_ISLE_HNS",
+          "base_label": "gMelemeleIsle_hns",
           "land_mons": {
             "encounter_rate": 20,
             "mons": [
@@ -70910,8 +70910,8 @@
           }
         },
         {
-          "map": "MAP_ALOLA_ISLAND_HNS",
-          "base_label": "gAlolaIsland_hns",
+          "map": "MAP_PONI_ISLE_HNS",
+          "base_label": "gPoniIsle_hns",
           "land_mons": {
             "encounter_rate": 20,
             "mons": [
@@ -71307,8 +71307,8 @@
           }
         },
         {
-          "map": "MAP_ALOLA_ISLAND_AKALA_HNS",
-          "base_label": "gAlolaIslandAkala_hns",
+          "map": "MAP_ULAULA_ISLE_HNS",
+          "base_label": "gUlaulaIsle_hns",
           "land_mons": {
             "encounter_rate": 20,
             "mons": [
@@ -71461,8 +71461,8 @@
           }
         },
         {
-          "map": "MAP_ALOLA_ISLAND_RIGHT_HNS",
-          "base_label": "gAlolaIslandRight_hns",
+          "map": "MAP_AKALA_ISLE_HNS",
+          "base_label": "gAkalaIsle_hns",
           "land_mons": {
             "encounter_rate": 20,
             "mons": [

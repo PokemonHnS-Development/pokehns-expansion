@@ -98,28 +98,28 @@
       "x": 2,
       "y": 22,
       "elevation": 0,
-      "dest_map": "MAP_ALOLA_ISLAND_RIGHT_HNS",
+      "dest_map": "MAP_AKALA_ISLE_HNS",
       "dest_warp_id": "1"
     },
     {
       "x": 3,
       "y": 22,
       "elevation": 0,
-      "dest_map": "MAP_ALOLA_ISLAND_RIGHT_HNS",
+      "dest_map": "MAP_AKALA_ISLE_HNS",
       "dest_warp_id": "2"
     },
     {
       "x": 29,
       "y": 3,
       "elevation": 0,
-      "dest_map": "MAP_ALOLA_ISLAND_RIGHT_HNS",
+      "dest_map": "MAP_AKALA_ISLE_HNS",
       "dest_warp_id": "4"
     },
     {
       "x": 29,
       "y": 4,
       "elevation": 0,
-      "dest_map": "MAP_ALOLA_ISLAND_RIGHT_HNS",
+      "dest_map": "MAP_AKALA_ISLE_HNS",
       "dest_warp_id": "3"
     }
   ],

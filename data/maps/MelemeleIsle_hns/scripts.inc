@@ -1,35 +1,35 @@
-AlolaIslandMelemele_hns_MapScripts::
-	map_script MAP_SCRIPT_ON_TRANSITION, AlolaIslandMelemele_hns_MapScripts_MAP_SCRIPT_ON_TRANSITION
-	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, AlolaIslandMelemele_hns_MapScripts_MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE
-	map_script MAP_SCRIPT_ON_FRAME_TABLE, AlolaIslandMelemele_hns_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE
+MelemeleIsle_hns_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, MelemeleIsle_hns_MapScripts_MAP_SCRIPT_ON_TRANSITION
+	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, MelemeleIsle_hns_MapScripts_MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, MelemeleIsle_hns_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE
 	.byte 0
 
-AlolaIslandMelemele_hns_MapScripts_MAP_SCRIPT_ON_TRANSITION:
-	setrespawn HEAL_LOCATION_ALOLA_ISLAND_MELEMELE_HNS
+MelemeleIsle_hns_MapScripts_MAP_SCRIPT_ON_TRANSITION:
+	setrespawn HEAL_LOCATION_MELEMELE_ISLE_HNS
 	gettimeofday
 	compare VAR_0x8000, TIME_MORNING
-	goto_if_eq AlolaIslandMelemele_hns_MapScripts_MAP_SCRIPT_ON_TRANSITION_1
+	goto_if_eq MelemeleIsle_hns_MapScripts_MAP_SCRIPT_ON_TRANSITION_1
 	compare VAR_0x8000, TIME_DAY
-	goto_if_eq AlolaIslandMelemele_hns_MapScripts_MAP_SCRIPT_ON_TRANSITION_1
+	goto_if_eq MelemeleIsle_hns_MapScripts_MAP_SCRIPT_ON_TRANSITION_1
 	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_SPECIES ( RATICATE_ALOLA )
 	clearflag FLAG_MELEMELE_TOTEM_DAY
 	return
 
-AlolaIslandMelemele_hns_MapScripts_MAP_SCRIPT_ON_TRANSITION_1:
+MelemeleIsle_hns_MapScripts_MAP_SCRIPT_ON_TRANSITION_1:
 	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_SPECIES ( LEAFEON )
 	setflag FLAG_MELEMELE_TOTEM_DAY
 	return
 
-AlolaIslandMelemele_hns_MapScripts_MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE:
-	map_script_2 VAR_ALOLA_TRAVEL, 1, AlolaIslandMelemele_hns_MapScripts_MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE_0
+MelemeleIsle_hns_MapScripts_MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE:
+	map_script_2 VAR_ALOLA_TRAVEL, 1, MelemeleIsle_hns_MapScripts_MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE_0
 	.2byte 0
 
-AlolaIslandMelemele_hns_MapScripts_MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE_0:
-	applymovement Alola_Melemele_Captain, AlolaIslandMelemele_hns_MapScripts_MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE_0_Movement_0
-	applymovement LOCALID_PLAYER, AlolaIslandMelemele_hns_MapScripts_MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE_0_Movement_0
+MelemeleIsle_hns_MapScripts_MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE_0:
+	applymovement Alola_Melemele_Captain, MelemeleIsle_hns_MapScripts_MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE_0_Movement_0
+	applymovement LOCALID_PLAYER, MelemeleIsle_hns_MapScripts_MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE_0_Movement_0
 	return
 
-AlolaIslandMelemele_hns_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE:
+MelemeleIsle_hns_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE:
 	map_script_2 VAR_ALOLA_TRAVEL, 1, Alola_Melemele_GetOffBoat
 	.2byte 0
 
@@ -42,7 +42,7 @@ Alola_Melemele_GetOffBoat::
 	waitmovement 0
 	msgbox Alola_Melemele_GetOffBoat_Text_0, MSGBOX_AUTOCLOSE
 	setvar VAR_ALOLA_TRAVEL, 2
-	applymovement LOCALID_PLAYER, AlolaIslandMelemele_hns_MapScripts_MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE_0_Movement_0
+	applymovement LOCALID_PLAYER, MelemeleIsle_hns_MapScripts_MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE_0_Movement_0
 	waitmovement 0
 	release
 	end
@@ -74,8 +74,8 @@ Alola_Melemele_TravelToKanto_4:
 	hidefollower
 	playse SE_EXIT
 	special SpawnCameraObject
-	hideobjectat LOCALID_PLAYER, MAP_ALOLA_ISLAND_MELEMELE_HNS
-	hideobjectat Alola_Melemele_Captain, MAP_ALOLA_ISLAND_MELEMELE_HNS
+	hideobjectat LOCALID_PLAYER, MAP_MELEMELE_ISLE_HNS
+	hideobjectat Alola_Melemele_Captain, MAP_MELEMELE_ISLE_HNS
 	applymovement OBJ_EVENT_ID_CAMERA, Alola_Melemele_TravelToKanto_Movement_3
 	waitmovement 0
 	waitse
@@ -408,12 +408,12 @@ Alola_Melemele_Totem_sign_8:
 	goto Alola_Melemele_Totem_sign_3
 
 Alola_Melemele_Totem_sign_12:
-	warp MAP_ALOLA_ISLAND_MELEMELE_HNS, 34, 26
+	warp MAP_MELEMELE_ISLE_HNS, 34, 26
 	waitstate
 	end
 
 Alola_Melemele_Totem_sign_15:
-	warp MAP_ALOLA_ISLAND_RIGHT_HNS, 9, 10
+	warp MAP_AKALA_ISLE_HNS, 9, 10
 	waitstate
 	end
 
@@ -423,7 +423,7 @@ Alola_Melemele_Totem_sign_18:
 	end
 
 Alola_Melemele_Totem_sign_20:
-	warp MAP_ALOLA_ISLAND_HNS, 13, 8
+	warp MAP_PONI_ISLE_HNS, 13, 8
 	waitstate
 	end
 
@@ -512,7 +512,7 @@ Alola_Melemele_Picnicker::
 	end
 
 
-AlolaIslandMelemele_hns_MapScripts_MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE_0_Movement_0:
+MelemeleIsle_hns_MapScripts_MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE_0_Movement_0:
 	face_up
 	step_end
 

@@ -1,4 +1,4 @@
-mapscripts AlolaIslandAkala_hns_MapScripts{}
+mapscripts UlaulaIsle_hns_MapScripts{}
 
 script Alola_Ulaula_BattlePalossand{
     lock

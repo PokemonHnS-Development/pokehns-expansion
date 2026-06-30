@@ -290,7 +290,7 @@ Route13_TravelToAlola_13:
 	delay 90
 	fadescreenswapbuffers FADE_TO_BLACK
 	special RemoveCameraObject
-	warp MAP_ALOLA_ISLAND_MELEMELE_HNS, 25, 33
+	warp MAP_MELEMELE_ISLE_HNS, 25, 33
 	waitstate
 	end
 
@@ -322,7 +322,7 @@ Route13_TravelToAlola_16:
 	delay 90
 	fadescreenswapbuffers FADE_TO_BLACK
 	special RemoveCameraObject
-	warp MAP_ALOLA_ISLAND_MELEMELE_HNS, 25, 33
+	warp MAP_MELEMELE_ISLE_HNS, 25, 33
 	waitstate
 	end
 

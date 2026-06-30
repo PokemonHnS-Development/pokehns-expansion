@@ -61,14 +61,14 @@
       "x": 12,
       "y": 16,
       "elevation": 0,
-      "dest_map": "MAP_ALOLA_ISLAND_AKALA_HNS",
+      "dest_map": "MAP_ULAULA_ISLE_HNS",
       "dest_warp_id": "2"
     },
     {
       "x": 13,
       "y": 16,
       "elevation": 0,
-      "dest_map": "MAP_ALOLA_ISLAND_AKALA_HNS",
+      "dest_map": "MAP_ULAULA_ISLE_HNS",
       "dest_warp_id": "3"
     }
   ],

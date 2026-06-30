@@ -3,7 +3,7 @@ Melemele_House_hns_MapScripts::
 	.byte 0
 
 Melemele_House_hns_MapScripts_MAP_SCRIPT_ON_TRANSITION:
-	setrespawn HEAL_LOCATION_ALOLA_ISLAND_MELEMELE_HNS
+	setrespawn HEAL_LOCATION_MELEMELE_ISLE_HNS
 	end
 
 

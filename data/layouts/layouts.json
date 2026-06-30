@@ -15713,8 +15713,8 @@
       "layout_version": "emerald"
     },
     {
-      "id": "LAYOUT_ALOLA_ISLAND_HNS",
-      "name": "AlolaIsland_hns_Layout",
+      "id": "LAYOUT_PONI_ISLE_HNS",
+      "name": "PoniIsle_hns_Layout",
       "width": 51,
       "height": 40,
       "primary_tileset": "gTileset_AlolaIsland",
@@ -15725,8 +15725,8 @@
       "layout_version": "hns"
     },
     {
-      "id": "LAYOUT_ALOLA_ISLAND_MELEMELE_HNS",
-      "name": "AlolaIslandMelemele_hns_Layout",
+      "id": "LAYOUT_MELEMELE_ISLE_HNS",
+      "name": "MelemeleIsle_hns_Layout",
       "width": 57,
       "height": 38,
       "primary_tileset": "gTileset_AlolaIsland",
@@ -15749,8 +15749,8 @@
       "layout_version": "hns"
     },
     {
-      "id": "LAYOUT_ALOLA_ISLAND_RIGHT_HNS",
-      "name": "AlolaIslandRight_hns_Layout",
+      "id": "LAYOUT_AKALA_ISLE_HNS",
+      "name": "AkalaIsle_hns_Layout",
       "width": 52,
       "height": 83,
       "primary_tileset": "gTileset_AlolaIsland",
@@ -15773,8 +15773,8 @@
       "layout_version": "hns"
     },
     {
-      "id": "LAYOUT_ALOLA_ISLAND_AKALA_HNS",
-      "name": "AlolaIslandAkala_hns_Layout",
+      "id": "LAYOUT_ULAULA_ISLE_HNS",
+      "name": "UlaulaIsle_hns_Layout",
       "width": 51,
       "height": 83,
       "primary_tileset": "gTileset_AlolaIsland",

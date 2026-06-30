@@ -14,17 +14,17 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "map": "MAP_ALOLA_ISLAND_HNS",
+      "map": "MAP_PONI_ISLE_HNS",
       "offset": 0,
       "direction": "left"
     },
     {
-      "map": "MAP_ALOLA_ISLAND_MELEMELE_HNS",
+      "map": "MAP_MELEMELE_ISLE_HNS",
       "offset": -21,
       "direction": "up"
     },
     {
-      "map": "MAP_ALOLA_ISLAND_RIGHT_HNS",
+      "map": "MAP_AKALA_ISLE_HNS",
       "offset": -38,
       "direction": "right"
     }

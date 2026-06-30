@@ -1,7 +1,7 @@
 {
-  "id": "MAP_ALOLA_ISLAND_AKALA_HNS",
-  "name": "AlolaIslandAkala_hns",
-  "layout": "LAYOUT_ALOLA_ISLAND_AKALA_HNS",
+  "id": "MAP_ULAULA_ISLE_HNS",
+  "name": "UlaulaIsle_hns",
+  "layout": "LAYOUT_ULAULA_ISLE_HNS",
   "music": "MUS_HG_CINNABAR",
   "region_map_section": "MAPSEC_ULAULA_ISLAND",
   "requires_flash": false,
@@ -14,7 +14,7 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "map": "MAP_ALOLA_ISLAND_RIGHT_HNS",
+      "map": "MAP_AKALA_ISLE_HNS",
       "offset": 0,
       "direction": "left"
     }
