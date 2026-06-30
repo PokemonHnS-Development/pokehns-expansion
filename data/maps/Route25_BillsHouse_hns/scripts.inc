@@ -574,8 +574,7 @@ Route25_BillsHouse_Text_TeleporterUnlocked:
 	.string "BILL left a note saying that\n"
 	.string "if I found someone who truly\l"
 	.string "appreciates POKéMON, I should\l"
-	.string "let them use his\l"
-	.string "GALARIAN RECOMBINATOR.\p"
+	.string "let them use his machine.\p"
 	.string "Feel free to use it anytime!\n"
 	.string "Just use that computer over there.$"
 

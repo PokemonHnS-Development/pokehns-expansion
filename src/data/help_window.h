@@ -30,7 +30,7 @@ const struct HelpWindow gHelpWindowInfo[] =
     },
     [HELP_TELEPORTER_WINDOW] =
     {
-        .header = COMPOUND_STRING("OPTIONAL BONUS CONTENT:"),
+        .header = COMPOUND_STRING("OPTIONAL BONUS CONTENT: 1/3"),
         .desc = COMPOUND_STRING("This machine can PERMANENTLY change\n"
                                 "POKéMON into their GALARIAN forms.\n"
                                 "GALARIAN forms are NOT required\n"
@@ -43,7 +43,7 @@ const struct HelpWindow gHelpWindowInfo[] =
     },
     [HELP_SINJOH_WINDOW] =
     {
-        .header = COMPOUND_STRING("OPTIONAL BONUS CONTENT:"),
+        .header = COMPOUND_STRING("OPTIONAL BONUS CONTENT: 3/3"),
         .desc = COMPOUND_STRING("This NPC grants access to optional\n"
                                 "bonus content: SINJOH.\n"
                                 "It is NOT required for story\n"
@@ -56,7 +56,7 @@ const struct HelpWindow gHelpWindowInfo[] =
     },
     [HELP_ALOLA_WINDOW] =
     {
-        .header = COMPOUND_STRING("OPTIONAL BONUS CONTENT:"),
+        .header = COMPOUND_STRING("OPTIONAL BONUS CONTENT: 2/3"),
         .desc = COMPOUND_STRING("This NPC grants access to optional\n"
                                 "bonus content: ALOLA ISLES.\n"
                                 "It is NOT required for story\n"
