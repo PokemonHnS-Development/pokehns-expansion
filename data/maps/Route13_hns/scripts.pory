@@ -209,7 +209,7 @@ script Route13_TravelToAlola{
     lock
     faceplayer
     if (checkitem(ITEM_STRANGE_SOUVENIR)){
-        if (!flag(FLAG_PREVIOUSLY_TRAVELED_TO_ALOLA)){
+        if (!flag(FLAG_VISITED_ALOLA)){
             msgbox("Ahoy there!
             
             That's one strange souvenir.
@@ -243,7 +243,7 @@ script Route13_TravelToAlola{
                 playse(SE_M_SURF)
                 applymovement(Route13_Alola_Ship, moves(walk_right*11))
                 setvar(VAR_ALOLA_TRAVEL, 1)
-                setflag(FLAG_PREVIOUSLY_TRAVELED_TO_ALOLA)
+                setflag(FLAG_VISITED_ALOLA)
                 setflag(FLAG_HIDE_MELEMELE_TOTEM)
                 setflag(FLAG_HIDE_AKALA_TOTEM)
                 setflag(FLAG_HIDE_ULAULA_TOTEM)

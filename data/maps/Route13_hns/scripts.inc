@@ -234,7 +234,7 @@ Route13_TravelToAlola::
 	end
 
 Route13_TravelToAlola_1:
-	goto_if_unset FLAG_PREVIOUSLY_TRAVELED_TO_ALOLA, Route13_TravelToAlola_4
+	goto_if_unset FLAG_VISITED_ALOLA, Route13_TravelToAlola_4
 	msgbox Route13_TravelToAlola_Text_3, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq Route13_TravelToAlola_10
@@ -275,7 +275,6 @@ Route13_TravelToAlola_13:
 	playse SE_M_SURF
 	applymovement Route13_Alola_Ship, Route13_TravelToAlola_Movement_2
 	setvar VAR_ALOLA_TRAVEL, 1
-	setflag FLAG_PREVIOUSLY_TRAVELED_TO_ALOLA
 	setflag FLAG_HIDE_MELEMELE_TOTEM
 	setflag FLAG_HIDE_AKALA_TOTEM
 	setflag FLAG_HIDE_ULAULA_TOTEM
