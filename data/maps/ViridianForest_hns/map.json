@@ -55,8 +55,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL_HNS",
-      "x": 22,
-      "y": 45,
+      "x": 20,
+      "y": 46,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
@@ -419,14 +419,56 @@
       "flag": "0"
     },
     {
-      "local_id": "LOCALID_VIRIDIAN_FOREST_PICHU",
+      "local_id": "LOCALID_VIRIDIAN_FOREST_PICHU1",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_PICHU_SPIKY_EARED",
-      "x": 20,
-      "y": 44,
+      "x": 22,
+      "y": 45,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_WALK_SEQUENCE_RIGHT_DOWN_LEFT_UP",
+      "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_DOWN",
       "movement_range_x": 5,
       "movement_range_y": 2,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_VIRIDIAN_FOREST_SPIKY_EARED_PICHU1"
+    },
+    {
+      "local_id": "LOCALID_VIRIDIAN_FOREST_PICHU2",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_PICHU_SPIKY_EARED",
+      "x": 53,
+      "y": 49,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_VIRIDIAN_FOREST_SPIKY_EARED_PICHU2"
+    },
+    {
+      "local_id": "LOCALID_VIRIDIAN_FOREST_PICHU3",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_PICHU_SPIKY_EARED",
+      "x": 41,
+      "y": 6,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_VIRIDIAN_FOREST_SPIKY_EARED_PICHU3"
+    },
+    {
+      "local_id": "LOCALID_VIRIDIAN_FOREST_PICHU",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_PICHU_SPIKY_EARED",
+      "x": 58,
+      "y": 49,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "ViridianForest_EventScript_SpikyEaredPichu",
@@ -484,7 +526,134 @@
       "dest_warp_id": "1"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 21,
+      "y": 42,
+      "elevation": 0,
+      "var": "VAR_VIRIDIAN_FOREST_PICHU",
+      "var_value": "1",
+      "script": "ViridianForest_TriggerScript_Pichu1"
+    },
+    {
+      "type": "trigger",
+      "x": 22,
+      "y": 42,
+      "elevation": 0,
+      "var": "VAR_VIRIDIAN_FOREST_PICHU",
+      "var_value": "1",
+      "script": "ViridianForest_TriggerScript_Pichu1"
+    },
+    {
+      "type": "trigger",
+      "x": 50,
+      "y": 49,
+      "elevation": 0,
+      "var": "VAR_VIRIDIAN_FOREST_PICHU",
+      "var_value": "2",
+      "script": "ViridianForest_TriggerScript_Pichu2_West"
+    },
+    {
+      "type": "trigger",
+      "x": 52,
+      "y": 46,
+      "elevation": 0,
+      "var": "VAR_VIRIDIAN_FOREST_PICHU",
+      "var_value": "2",
+      "script": "ViridianForest_TriggerScript_Pichu2_North"
+    },
+    {
+      "type": "trigger",
+      "x": 53,
+      "y": 46,
+      "elevation": 0,
+      "var": "VAR_VIRIDIAN_FOREST_PICHU",
+      "var_value": "2",
+      "script": "ViridianForest_TriggerScript_Pichu2_North"
+    },
+    {
+      "type": "trigger",
+      "x": 51,
+      "y": 51,
+      "elevation": 0,
+      "var": "VAR_VIRIDIAN_FOREST_PICHU",
+      "var_value": "2",
+      "script": "ViridianForest_TriggerScript_Pichu2_South"
+    },
+    {
+      "type": "trigger",
+      "x": 52,
+      "y": 51,
+      "elevation": 0,
+      "var": "VAR_VIRIDIAN_FOREST_PICHU",
+      "var_value": "2",
+      "script": "ViridianForest_TriggerScript_Pichu2_South"
+    },
+    {
+      "type": "trigger",
+      "x": 53,
+      "y": 51,
+      "elevation": 0,
+      "var": "VAR_VIRIDIAN_FOREST_PICHU",
+      "var_value": "2",
+      "script": "ViridianForest_TriggerScript_Pichu2_South"
+    },
+    {
+      "type": "trigger",
+      "x": 38,
+      "y": 5,
+      "elevation": 0,
+      "var": "VAR_VIRIDIAN_FOREST_PICHU",
+      "var_value": "3",
+      "script": "ViridianForest_TriggerScript_Pichu3_West"
+    },
+    {
+      "type": "trigger",
+      "x": 38,
+      "y": 6,
+      "elevation": 0,
+      "var": "VAR_VIRIDIAN_FOREST_PICHU",
+      "var_value": "3",
+      "script": "ViridianForest_TriggerScript_Pichu3_West"
+    },
+    {
+      "type": "trigger",
+      "x": 38,
+      "y": 7,
+      "elevation": 0,
+      "var": "VAR_VIRIDIAN_FOREST_PICHU",
+      "var_value": "3",
+      "script": "ViridianForest_TriggerScript_Pichu3_West"
+    },
+    {
+      "type": "trigger",
+      "x": 43,
+      "y": 5,
+      "elevation": 0,
+      "var": "VAR_VIRIDIAN_FOREST_PICHU",
+      "var_value": "3",
+      "script": "ViridianForest_TriggerScript_Pichu3_East"
+    },
+    {
+      "type": "trigger",
+      "x": 43,
+      "y": 6,
+      "elevation": 0,
+      "var": "VAR_VIRIDIAN_FOREST_PICHU",
+      "var_value": "3",
+      "script": "ViridianForest_TriggerScript_Pichu3_East"
+    },
+    {
+      "type": "trigger",
+      "x": 43,
+      "y": 7,
+      "elevation": 0,
+      "var": "VAR_VIRIDIAN_FOREST_PICHU",
+      "var_value": "3",
+      "script": "ViridianForest_TriggerScript_Pichu3_East"
+    }
+  ],
   "bg_events": [
     {
       "type": "hidden_item",

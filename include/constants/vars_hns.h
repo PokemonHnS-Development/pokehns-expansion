@@ -109,7 +109,7 @@
 #define VAR_MOM_GIFT_QUANTITY                            0x40A5
 #define VAR_MOM_GIFT_ITEM                               0x40A6
 #define VAR_OAK_MT_SILVER_CALL                            0x40A7
-#define VAR_UNUSED_HNS_0x40A8                            0x40A8
+#define VAR_VIRIDIAN_FOREST_PICHU                            0x40A8
 #define VAR_UNUSED_HNS_0x40A9                            0x40A9
 #define VAR_UNUSED_HNS_0x40AA                            0x40AA
 #define VAR_UNUSED_HNS_0x40AB                            0x40AB

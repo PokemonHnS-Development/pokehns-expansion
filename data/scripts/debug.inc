@@ -231,8 +231,11 @@ Debug_Text_HMsUnlocked:
 	.string "All HM flags set!$"
 
 Debug_EventScript_Script_2::
-	setflag FLAG_TELEPORTER_UNLOCKED
-	goto Route25_BillsHouse_hns_EventScript_TeleporterTest
+	setflag FLAG_HIDE_VIRIDIAN_FOREST_SPIKY_EARED_PICHU
+	setflag FLAG_HIDE_VIRIDIAN_FOREST_SPIKY_EARED_PICHU2
+	setflag FLAG_HIDE_VIRIDIAN_FOREST_SPIKY_EARED_PICHU3
+	setflag FLAG_HIDE_VIRIDIAN_FOREST_SPIKY_EARED_PICHU4
+	setvar VAR_VIRIDIAN_FOREST_PICHU, 1
 	release
 	end
 

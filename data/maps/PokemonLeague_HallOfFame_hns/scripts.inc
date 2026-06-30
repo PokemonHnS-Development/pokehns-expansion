@@ -84,12 +84,17 @@ PokemonLeague_HallOfFame_EventScript_SetGameClearFlags::
 	call PokemonLeague_HallOfFame_EventScript_SpawnRoamers
 	call_if_ge VAR_SUICUNE_ENCOUNTERS, 8, PokemonLeague_HallOfFame_EventScript_SpawnSuicune
 	call_if_set FLAG_CAUGHT_CELEBI, PokemonLeague_HallOfFame_EventScript_SpawnSecondCelebi
+	call_if_ge VAR_VIRIDIAN_FOREST_PICHU, 4, PokemonLeague_HallOfFame_EventScript_SpawnPichu
 	clearflag FLAG_DEFEATED_MEW
 	clearflag FLAG_CAUGHT_MEW
 	clearflag FLAG_BATTLED_DEOXYS
 	clearflag FLAG_DEFEATED_DEOXYS
 	clearflag FLAG_SUMMONED_MTMOON_JIRACHI
 	setvar VAR_LEAGUE_STATE, 1
+	return
+
+PokemonLeague_HallOfFame_EventScript_SpawnPichu::
+	clearflag FLAG_HIDE_VIRIDIAN_FOREST_SPIKY_EARED_PICHU
 	return
 
 PokemonLeague_HallOfFame_EventScript_SpawnRoamers::
