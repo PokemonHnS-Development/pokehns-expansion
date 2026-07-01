@@ -136,38 +136,6 @@ Alola_Melemele_MelemeleMart_Sign::
 	end
 
 
-Alola_Melemele_BattleSandygast::
-	lock
-	faceplayer
-	playmoncry SPECIES_CORSOLA, 0
-	msgbox Alola_Melemele_BattleSandygast_Text_0, MSGBOX_AUTOCLOSE
-	waitmoncry
-	setwildbattle SPECIES_CORSOLA, 45
-	dowildbattle
-	specialvar VAR_RESULT, GetBattleOutcome
-	compare VAR_RESULT, B_OUTCOME_CAUGHT
-	goto_if_eq Alola_Melemele_BattleSandygast_2
-	compare VAR_RESULT, B_OUTCOME_WON
-	goto_if_eq Alola_Melemele_BattleSandygast_3
-	release
-	end
-
-	release
-	end
-
-Alola_Melemele_BattleSandygast_2:
-	setflag FLAG_CAUGHT_SANDYGAST1
-	removeobject Alola_Melemele_Sandygast
-	release
-	end
-
-Alola_Melemele_BattleSandygast_3:
-	setflag FLAG_CAUGHT_SANDYGAST1
-	removeobject Alola_Melemele_Sandygast
-	release
-	end
-
-
 Alola_Melemele_FindItem1::
 	finditem ITEM_RARE_CANDY, 1
 	end

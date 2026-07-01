@@ -71,18 +71,17 @@
       "flag": "FLAG_HIDE_AKALA_TOTEM"
     },
     {
-      "local_id": "Alola_Akala_Sandygast",
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(CORSOLA)",
-      "x": 41,
-      "y": 29,
+      "x": 45,
+      "y": 41,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Alola_Akala_BattleSandygast",
-      "flag": "FLAG_CAUGHT_SANDYGAST2"
+      "script": "NULL",
+      "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_OLD_MAN_HNS",
@@ -102,7 +101,7 @@
       "x": 9,
       "y": 26,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN_AND_RIGHT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",

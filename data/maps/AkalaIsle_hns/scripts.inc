@@ -18,38 +18,6 @@ AkalaIsle_hns_MapScripts_MAP_SCRIPT_ON_TRANSITION_1:
 	return
 
 
-Alola_Akala_BattleSandygast::
-	lock
-	faceplayer
-	playmoncry SPECIES_CORSOLA, 0
-	msgbox Alola_Akala_BattleSandygast_Text_0, MSGBOX_AUTOCLOSE
-	waitmoncry
-	setwildbattle SPECIES_CORSOLA, 45
-	dowildbattle
-	specialvar VAR_RESULT, GetBattleOutcome
-	compare VAR_RESULT, B_OUTCOME_CAUGHT
-	goto_if_eq Alola_Akala_BattleSandygast_2
-	compare VAR_RESULT, B_OUTCOME_WON
-	goto_if_eq Alola_Akala_BattleSandygast_3
-	release
-	end
-
-	release
-	end
-
-Alola_Akala_BattleSandygast_2:
-	setflag FLAG_CAUGHT_SANDYGAST2
-	removeobject Alola_Akala_Sandygast
-	release
-	end
-
-Alola_Akala_BattleSandygast_3:
-	setflag FLAG_CAUGHT_SANDYGAST2
-	removeobject Alola_Akala_Sandygast
-	release
-	end
-
-
 Alola_Akala_Island_FindItem1::
 	finditem ITEM_PROTEIN, 1
 	end
@@ -79,11 +47,11 @@ Alola_Akala_House_Sign::
 	end
 
 
-Alola_Akala_Pikipek::
+Alola_Akala_Chatot::
 	lock
 	faceplayer
 	playmoncry SPECIES_CHATOT, 0
-	msgbox Alola_Akala_Pikipek_Text_0, MSGBOX_AUTOCLOSE
+	msgbox Alola_Akala_Chatot_Text_0, MSGBOX_AUTOCLOSE
 	waitmoncry
 	release
 	end
@@ -451,7 +419,7 @@ Alola_Akala_House_Sign_Text_0:
 	.string "A place for visitors to stay while\n"
 	.string "on Akala Isle.$"
 
-Alola_Akala_Pikipek_Text_0:
+Alola_Akala_Chatot_Text_0:
 	.string "Chaaatot!$"
 
 Alola_Akala_OldManOnBench_Text_0:

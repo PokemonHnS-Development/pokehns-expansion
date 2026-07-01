@@ -1128,7 +1128,7 @@
 #define FLAG_BATTLED_EXEGGUTOR                          (HNS_EXTENDED_CONTENT_START + 267) // used for progression if battled exeggutor at all
 #define FLAG_HIDE_SAMSONOAK_INTRO                       (HNS_EXTENDED_CONTENT_START + 268) // hides the samson oak intro object
 #define FLAG_CAUGHT_PALOSSAND                           (HNS_EXTENDED_CONTENT_START + 269) // hide palossand if caught or defeated
-#define FLAG_CAUGHT_SANDYGAST2                          (HNS_EXTENDED_CONTENT_START + 270) // hide sandygast if caught or defeated
+#define FLAG_EXTENDED_CONTENT_270                          (HNS_EXTENDED_CONTENT_START + 270)
 #define FLAG_CAUGHT_SANDSLASH_ALOLA                     (HNS_EXTENDED_CONTENT_START + 271) // hide alolan sandslash if caught or defeated
 #define FLAG_CAUGHT_NINETALES_ALOLA                     (HNS_EXTENDED_CONTENT_START + 272) // hide alolan ninetales if caught or defeated
 #define FLAG_CAUGHT_MUK_ALOLA                           (HNS_EXTENDED_CONTENT_START + 273) // hide alolan muk if caught or defeated
@@ -1141,7 +1141,7 @@
 #define FLAG_HIDE_ULAULA_TOTEM                          (HNS_EXTENDED_CONTENT_START + 280) // hide the ula'ula totem mon
 #define FLAG_HIDE_AKALA_TOTEM                           (HNS_EXTENDED_CONTENT_START + 281) // hide the akala totem mon
 #define FLAG_HIDE_MELEMELE_TOTEM                        (HNS_EXTENDED_CONTENT_START + 282) // hide the melemele totem mon
-#define FLAG_CAUGHT_SANDYGAST1                          (HNS_EXTENDED_CONTENT_START + 283) // melemelesandygast flag for if caught or defeated. (if you run the mon should stay)
+#define FLAG_EXTENDED_CONTENT_283                          (HNS_EXTENDED_CONTENT_START + 283) 
 #define FLAG_VISITED_ALOLA                              (HNS_EXTENDED_CONTENT_START + 284) // track if the player has been to alola before.
 #define FLAG_PONI_HIDDEN_ITEM_1                     (HNS_EXTENDED_CONTENT_START + 285)
 #define FLAG_ULAULA_CAVE_HIDDEN_ITEM_2              (HNS_EXTENDED_CONTENT_START + 286)
