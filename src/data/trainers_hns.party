@@ -13500,13 +13500,13 @@ Double Battle: No
 AI: Check Bad Move
 
 Mantine
-Level: 55
+Level: 52
 
 Politoed
-Level: 55
+Level: 54
 
 Luvdisc
-Level: 55
+Level: 50
 
 === TRAINER_MELEMELE_SWIMMER_2_HNS ===
 Name: JIMMY
@@ -13518,13 +13518,13 @@ Double Battle: No
 AI: Check Bad Move
 
 Pelipper
-Level: 55
+Level: 53
 
 Poliwrath
 Level: 55
 
 Huntail
-Level: 55
+Level: 51
 
 === TRAINER_AKALA_SWIMMER_1_HNS ===
 Name: KELSIE
@@ -13536,13 +13536,13 @@ Double Battle: No
 AI: Check Bad Move
 
 Starmie
-Level: 55
+Level: 54
 
 Seaking
-Level: 55
+Level: 52
 
 Golduck
-Level: 55
+Level: 53
 
 === TRAINER_AKALA_SWIMMER_2_HNS ===
 Name: PORTIA
@@ -13554,13 +13554,13 @@ Double Battle: No
 AI: Check Bad Move
 
 Corsola
-Level: 55
+Level: 50
 
 Octillery
-Level: 55
+Level: 53
 
 Bibarel
-Level: 55
+Level: 51
 
 === TRAINER_AKALA_SWIMMER_3_HNS ===
 Name: GEOFF
@@ -13572,13 +13572,13 @@ Double Battle: No
 AI: Check Bad Move
 
 Gyarados
-Level: 55
+Level: 56
 
 Tentacruel
-Level: 55
+Level: 54
 
 Floatzel
-Level: 55
+Level: 52
 
 === TRAINER_PONI_SWIMMER_1_HNS ===
 Name: JADE
@@ -13590,13 +13590,13 @@ Double Battle: No
 AI: Check Bad Move
 
 Gorebyss
-Level: 55
+Level: 53
 
 Lumineon
-Level: 55
+Level: 51
 
 Milotic
-Level: 55
+Level: 56
 
 === TRAINER_PONI_SWIMMER_2_HNS ===
 Name: RODDY
@@ -13608,13 +13608,13 @@ Double Battle: No
 AI: Check Bad Move
 
 Corsola
-Level: 55
+Level: 50
 
 Mantine
-Level: 55
+Level: 52
 
 Politoed
-Level: 55
+Level: 54
 
 
 === TRAINER_AKALA_HIKER_HNS ===
@@ -13627,13 +13627,13 @@ Double Battle: No
 AI: Check Bad Move
 
 Solrock
-Level: 55
+Level: 53
 
 Lunatone
-Level: 55
+Level: 53
 
 Magmar
-Level: 55
+Level: 56
 
 === TRAINER_AKALA_PICNICKER_HNS ===
 Name: TATIANA
@@ -13645,10 +13645,10 @@ Double Battle: No
 AI: Check Bad Move
 
 Cherrim
-Level: 55
+Level: 52
 
 Vespiquen
-Level: 55
+Level: 54
 
 Ludicolo
 Level: 55
@@ -13663,13 +13663,13 @@ Double Battle: No
 AI: Check Bad Move
 
 Swellow
-Level: 55
+Level: 54
 
 Roserade
-Level: 55
+Level: 56
 
 Dustox
-Level: 55
+Level: 51
 
 === TRAINER_AKALA_FOREST_BUGCATCHER_1_HNS ===
 Name: STANLEY
@@ -13681,7 +13681,7 @@ Double Battle: No
 AI: Check Bad Move
 
 Pinsir
-Level: 57
+Level: 55
 
 Scyther
 Level: 57
@@ -13697,10 +13697,10 @@ Double Battle: No
 AI: Check Bad Move
 
 Shuckle
-Level: 57
+Level: 54
 
 Heracross
-Level: 57
+Level: 58
 
 === TRAINER_AKALA_CAVE_PICNICKER_HNS ===
 Name: MELISSA
@@ -13712,13 +13712,13 @@ Double Battle: No
 AI: Check Bad Move
 
 Aipom
-Level: 55
+Level: 51
 
 Tangrowth
 Level: 55
 
 Tropius
-Level: 55
+Level: 53
 
 === TRAINER_AKALA_CAVE_CAMPER_HNS ===
 Name: RONNY
@@ -13730,13 +13730,13 @@ Double Battle: No
 AI: Check Bad Move
 
 Primeape
-Level: 55
+Level: 54
 
 Hariyama
-Level: 55
+Level: 56
 
 Machoke
-Level: 55
+Level: 52
 
 === TRAINER_AKALA_CAVE_HIKER_HNS ===
 Name: FRANK
@@ -13748,13 +13748,13 @@ Double Battle: No
 AI: Check Bad Move
 
 Bronzong
-Level: 55
+Level: 56
 
 Lunatone
-Level: 55
+Level: 52
 
 Solrock
-Level: 55
+Level: 52
 
 === TRAINER_ULAULA_PICNICKER_HNS ===
 Name: MELISSA
@@ -13766,10 +13766,10 @@ Double Battle: No
 AI: Check Bad Move
 
 Swellow
-Level: 55
+Level: 53
 
 Cherrim
-Level: 55
+Level: 50
 
 Vespiquen
 Level: 55
@@ -13784,13 +13784,13 @@ Double Battle: No
 AI: Check Bad Move
 
 Scizor
-Level: 55
+Level: 57
 
 Leafeon
-Level: 55
+Level: 54
 
 Bibarel
-Level: 55
+Level: 51
 
 === TRAINER_ULAULA_HIKER_HNS ===
 Name: FRANK
@@ -13808,7 +13808,7 @@ Electabuzz
 Level: 55
 
 Mawile
-Level: 55
+Level: 53
 
 === TRAINER_ULAULA_COOLTRAINER_HNS ===
 Name: LOIS
@@ -13820,10 +13820,10 @@ Double Battle: No
 AI: Check Bad Move
 
 Milotic
-Level: 55
+Level: 57
 
 Ambipom
-Level: 55
+Level: 54
 
 Salamence
-Level: 55
+Level: 60
