@@ -335,18 +335,16 @@ Alola_Ulaula_UlaulaSign_Text_0:
 	.string "Ula'ula Isle$"
 
 Alola_Ulaula_Phant_outside_Text_0:
-	.string "Hello there, {PLAYER}!\n"
-	.string "I'm Phantonomy.\p"
+	.string "Hello there, {PLAYER}!\p"
 	.string "I'm the developer who built this\n"
-	.string "section of the postgame!\p"
+	.string "section of the game!\p"
 	.string "I hope you enjoyed this taste of Alola.\p"
-	.string "Look forward to my full demake of\n"
-	.string "the region in my own upcoming project{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.\p"
-	.string "Ultra Eclipse!$"
+	.string "I'm working on a full demake of the\n"
+	.string "region called ULTRA ECLIPSE.$"
 
 Alola_Ulaula_Phant_outside_Text_1:
 	.string "Please come visit me at my house at\n"
-	.string "the top of this isle for a battle…\l"
+	.string "the top of this isle.\l"
 	.string "I'll make it worth your while!$"
 
 Alola_Ulaula_TrainerBattlePicnicker_Text_0:

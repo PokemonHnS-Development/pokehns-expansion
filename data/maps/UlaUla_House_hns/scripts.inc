@@ -12,17 +12,7 @@ Alola_Ulaula_House_Phant::
 	end
 
 Alola_Ulaula_House_Phant_1:
-	msgbox Alola_Ulaula_House_Phant_Text_0, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq Alola_Ulaula_House_Phant_4
-	msgbox Alola_Ulaula_House_Phant_Text_6, MSGBOX_AUTOCLOSE
-	release
-	end
-
-Alola_Ulaula_House_Phant_4:
-	msgbox Alola_Ulaula_House_Phant_Text_1, MSGBOX_AUTOCLOSE
-	trainerbattle_no_intro TRAINER_PHANTONOMY_HNS, Alola_Ulaula_House_Phant_Text_2
-	special HealPlayerParty
+	msgbox Alola_Ulaula_House_Phant_Text_0, MSGBOX_AUTOCLOSE
 	setvar VAR_ALOLA_STATE, 5
 	getplayerxy VAR_TEMP_1, VAR_TEMP_2
 	compare VAR_TEMP_1, 8
@@ -169,8 +159,7 @@ Alola_Ulaula_House_Phant_Movement_5:
 
 Alola_Ulaula_House_Phant_Text_0:
 	.string "Welcome, {PLAYER}.\p"
-	.string "Thanks again for playing.\p"
-	.string "Are you ready to face me in battle?$"
+	.string "Thanks again for playing!$"
 
 Alola_Ulaula_House_Phant_Text_1:
 	.string "I hope you're prepared…\n"
@@ -180,11 +169,10 @@ Alola_Ulaula_House_Phant_Text_2:
 	.string "Congratulations, {PLAYER}!$"
 
 Alola_Ulaula_House_Phant_Text_3:
-	.string "That was an incredible battle.\p"
 	.string "I think you've earned this.$"
 
 Alola_Ulaula_House_Phant_Text_4:
-	.string "You received an Egg from Phantonomy!$"
+	.string "You received an Egg from PHANTONOMY!$"
 
 Alola_Ulaula_House_Phant_Text_5:
 	.string "That Egg contains my favorite Pokémon.\p"
@@ -196,9 +184,8 @@ Alola_Ulaula_House_Phant_Text_6:
 
 Alola_Ulaula_House_Phant_Text_7:
 	.string "I hope you enjoyed this taste of Alola.\p"
-	.string "Look forward to my full demake of\n"
-	.string "the region in my own upcoming project{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.\p"
-	.string "Ultra Eclipse!$"
+	.string "I'm working on a full demake of the\n"
+	.string "region called ULTRA ECLIPSE.$"
 
 Alola_Ulaula_House_Noivern_Text_0:
 	.string "Scree!$"

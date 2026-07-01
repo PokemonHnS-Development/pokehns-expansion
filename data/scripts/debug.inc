@@ -345,11 +345,7 @@ Debug_EventScript_Script_2::
 	end
 
 Debug_EventScript_Script_3::
-	callnative Script_OpenChallengeMenu
-	setflag FLAG_DEFEATED_ULAULA_TOTEM
-	setflag FLAG_DEFEATED_MELEMELE_TOTEM
-	setflag FLAG_DEFEATED_AKALA_TOTEM
-	setflag FLAG_DEFEATED_PONI_TOTEM
+	goto Alola_Melemele_SamsonOakVilla_Dialogue_10
 	release
 	end
 
