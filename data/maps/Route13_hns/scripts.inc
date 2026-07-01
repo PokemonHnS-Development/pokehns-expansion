@@ -27,10 +27,17 @@ Route13_hns_MapScripts_MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE_0:
 	return
 
 
-
 Route13_OnTransition:
+	getplayerxy VAR_TEMP_0, VAR_TEMP_1
+	call_if_eq VAR_TEMP_0, 77, Route13_OnTransitionBoat
 	callnative SetTimeBasedEncounters
 	end
+
+Route13_OnTransitionBoat::
+	@addobject LOCALID_ROUTE13_BOAT
+	clearflag FLAG_HIDE_ROUTE13_BOAT
+	setobjectxyperm LOCALID_ROUTE13_BOAT, 78, 28
+	return
 
 Route13_EventScript_Alex::
 	trainerbattle_single TRAINER_ALEX_HNS, Route13_Text_PokefanmAlexSeen, Route13_Text_PokefanmAlexBeaten, Route13_EventScript_RegisterAlex
@@ -202,9 +209,9 @@ Route13_Text_DirectionsSign:
 Route13_GetOffBoat::
 	lock
 	getplayerxy VAR_TEMP_0, VAR_TEMP_1
-	compare VAR_TEMP_0, 37
+	compare VAR_TEMP_0, 77
 	goto_if_ne Route13_GetOffBoat_2
-	compare VAR_TEMP_1, 29
+	compare VAR_TEMP_1, 26
 	goto_if_ne Route13_GetOffBoat_2
 	delay 30
 	applymovement Route13_Alola_Captain, Route13_GetOffBoat_Movement_0
@@ -212,6 +219,10 @@ Route13_GetOffBoat::
 	waitmovement 0
 	msgbox Route13_GetOffBoat_Text_0, MSGBOX_AUTOCLOSE
 	setvar VAR_ALOLA_TRAVEL, 0
+	applymovement LOCALID_ROUTE13_BOAT, Route13_TravelToAlola_Movement_2
+	waitmovement 0
+	setobjectxyperm LOCALID_ROUTE13_BOAT, 89, 28
+	removeobject LOCALID_ROUTE13_BOAT
 	applymovement LOCALID_PLAYER, Route13_hns_MapScripts_MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE_0_Movement_0
 	waitmovement 0
 	release
@@ -243,7 +254,10 @@ Route13_TravelToAlola_1:
 	end
 
 Route13_TravelToAlola_4:
-	msgbox Route13_TravelToAlola_Text_0, MSGBOX_YESNO
+	msgbox Route13_TravelToAlola_Text_0, MSGBOX_DEFAULT
+	closemessage
+	helpwindow HELP_ALOLA_WINDOW
+	msgbox Route13_TravelToAlola_Text_0_5, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq Route13_TravelToAlola_7
 	msgbox Route13_TravelToAlola_Text_2, MSGBOX_AUTOCLOSE
@@ -252,10 +266,12 @@ Route13_TravelToAlola_4:
 
 Route13_TravelToAlola_7:
 	msgbox Route13_TravelToAlola_Text_1, MSGBOX_AUTOCLOSE
-	getplayerxy VAR_TEMP_0, VAR_TEMP_1
-	compare VAR_TEMP_1, 28
-	goto_if_eq Route13_TravelToAlola_14
+	goto_if_eq VAR_FACING, DIR_SOUTH, Route13_TravelToAlola_14
 Route13_TravelToAlola_13:
+	addobject LOCALID_ROUTE13_BOAT
+	clearflag FLAG_HIDE_ROUTE13_BOAT
+	applymovement LOCALID_ROUTE13_BOAT, Route13_Movement_BoatArrive
+	waitmovement 0
 	applymovement Route13_Alola_Captain, Route13_TravelToAlola_Movement_1
 	applymovement LOCALID_PLAYER, Route13_TravelToAlola_Movement_1
 	waitmovement 0
@@ -271,9 +287,9 @@ Route13_TravelToAlola_13:
 	delay 30
 	fadescreenswapbuffers FADE_FROM_BLACK
 	playse SE_RG_SS_ANNE_HORN
-	waitse
+
 	playse SE_M_SURF
-	applymovement Route13_Alola_Ship, Route13_TravelToAlola_Movement_2
+	applymovement LOCALID_ROUTE13_BOAT, Route13_TravelToAlola_Movement_2
 	setvar VAR_ALOLA_TRAVEL, 1
 	setflag FLAG_HIDE_MELEMELE_TOTEM
 	setflag FLAG_HIDE_AKALA_TOTEM
@@ -289,6 +305,7 @@ Route13_TravelToAlola_13:
 	setflag FLAG_HIDE_PHANT_INSIDE
 	delay 90
 	fadescreenswapbuffers FADE_TO_BLACK
+	removeobject LOCALID_ROUTE13_BOAT
 	special RemoveCameraObject
 	warp MAP_MELEMELE_ISLE_HNS, 25, 33
 	waitstate
@@ -296,9 +313,7 @@ Route13_TravelToAlola_13:
 
 Route13_TravelToAlola_10:
 	msgbox Route13_TravelToAlola_Text_1, MSGBOX_AUTOCLOSE
-	getplayerxy VAR_TEMP_0, VAR_TEMP_1
-	compare VAR_TEMP_1, 28
-	goto_if_eq Route13_TravelToAlola_17
+	goto_if_eq VAR_FACING, DIR_SOUTH, Route13_TravelToAlola_17
 Route13_TravelToAlola_16:
 	applymovement Route13_Alola_Captain, Route13_TravelToAlola_Movement_1
 	applymovement LOCALID_PLAYER, Route13_TravelToAlola_Movement_1
@@ -317,10 +332,11 @@ Route13_TravelToAlola_16:
 	playse SE_RG_SS_ANNE_HORN
 	waitse
 	playse SE_M_SURF
-	applymovement Route13_Alola_Ship, Route13_TravelToAlola_Movement_2
+	applymovement LOCALID_ROUTE13_BOAT, Route13_TravelToAlola_Movement_2
 	setvar VAR_ALOLA_TRAVEL, 1
 	delay 90
 	fadescreenswapbuffers FADE_TO_BLACK
+	removeobject LOCALID_ROUTE13_BOAT
 	special RemoveCameraObject
 	warp MAP_MELEMELE_ISLE_HNS, 25, 33
 	waitstate
@@ -372,6 +388,20 @@ Route13_TravelToAlola_Movement_2:
 	walk_right
 	step_end
 
+Route13_Movement_BoatArrive:
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	step_end
+
 Route13_GetOffBoat_Text_0:
 	.string "Welcome back to mainland Kanto!\p"
 	.string "Come back if you'd like to take a trip\n"
@@ -380,7 +410,8 @@ Route13_GetOffBoat_Text_0:
 Route13_TravelToAlola_Text_0:
 	.string "Ahoy there!\p"
 	.string "That's one strange souvenir.\n"
-	.string "You must be from the Isles!\p"
+	.string "You must be from the Isles!$"
+Route13_TravelToAlola_Text_0_5:
 	.string "Would you like to take the next ship?\n"
 	.string "It departs shortly!$"
 

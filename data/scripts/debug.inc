@@ -231,8 +231,6 @@ Debug_Text_HMsUnlocked:
 	.string "All HM flags set!$"
 
 Debug_EventScript_Script_2::
-	
-	@Kanto FLAGHEAP
 	setflag FLAG_HIDE_COPYCAT_CLEFAIRY_DOLL
 	setflag FLAG_HIDE_CERULEAN_GYM_TRAINERS
 	setflag FLAG_HIDE_CERULEAN_CAPE_ROCKET
@@ -251,6 +249,7 @@ Debug_EventScript_Script_2::
 	setflag FLAG_HIDE_VIRIDIAN_FOREST_SPIKY_EARED_PICHU2
 	setflag FLAG_HIDE_VIRIDIAN_FOREST_SPIKY_EARED_PICHU3
 	setflag FLAG_HIDE_VIRIDIAN_FOREST_SPIKY_EARED_PICHU4
+	setflag FLAG_HIDE_ROUTE13_BOAT
 	
 	clearflag FLAG_BADGE09_GET
 	clearflag FLAG_BADGE10_GET
@@ -342,8 +341,6 @@ Debug_EventScript_Script_2::
 	setflag FLAG_HIDE_DOJO_SABRINA
 	setflag FLAG_HIDE_DOJO_BLAINE
 	setflag FLAG_HIDE_DOJO_BLUE
-	@end flagheap
-	setvar VAR_SSAQUA_STATE, 7
 	release
 	end
 

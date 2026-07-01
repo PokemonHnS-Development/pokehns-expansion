@@ -1102,7 +1102,7 @@
 #define FLAG_FLYOVER_TAPU_LELE                          (HNS_EXTENDED_CONTENT_START + 241) // flyover tapu lele in the wild
 #define FLAG_FLYOVER_TAPU_FINI                          (HNS_EXTENDED_CONTENT_START + 242) // flyover tapu fini in the wild
 #define FLAG_FLYOVER_TAPU_KOKO                          (HNS_EXTENDED_CONTENT_START + 243) // flyover tapu koko in the wild
-#define FLAG_EXTENDED_CONTENT_244                       (HNS_EXTENDED_CONTENT_START + 244) 
+#define FLAG_HIDE_ROUTE13_BOAT                       (HNS_EXTENDED_CONTENT_START + 244) 
 #define FLAG_EXTENDED_CONTENT_245                       (HNS_EXTENDED_CONTENT_START + 245) 
 #define FLAG_EXTENDED_CONTENT_246                        (HNS_EXTENDED_CONTENT_START + 246) 
 #define FLAG_TRIGGERED_PONI_TOTEM                       (HNS_EXTENDED_CONTENT_START + 247) // for use in triggering poni totem anim
