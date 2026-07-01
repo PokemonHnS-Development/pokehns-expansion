@@ -1,9 +1,0 @@
-mapscripts AlolaWater_hns_MapScripts {}
-
-script Alola_MelemeleSea_TrainerBattleSwimmer{
-    trainerbattle_single(TRAINER_MELEMELE_SWIMMER_2_HNS, "So much open water here!", "Ouch,\npulled a hamstring\.")
-    msgbox("There are some strong currents here.
-    I think it attracts strong Pokémon!", MSGBOX_AUTOCLOSE)
-    release
-    end
-}
