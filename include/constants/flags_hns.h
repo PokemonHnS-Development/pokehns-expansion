@@ -1102,9 +1102,9 @@
 #define FLAG_FLYOVER_TAPU_LELE                          (HNS_EXTENDED_CONTENT_START + 241) // flyover tapu lele in the wild
 #define FLAG_FLYOVER_TAPU_FINI                          (HNS_EXTENDED_CONTENT_START + 242) // flyover tapu fini in the wild
 #define FLAG_FLYOVER_TAPU_KOKO                          (HNS_EXTENDED_CONTENT_START + 243) // flyover tapu koko in the wild
-#define FLAG_SMART_WILD_AI                              (HNS_EXTENDED_CONTENT_START + 244) // enable smart wild AI
-#define FLAG_NO_WILD_RUNNING                            (HNS_EXTENDED_CONTENT_START + 245) // disable wild running
-#define FLAG_NO_WILD_CATCHING                           (HNS_EXTENDED_CONTENT_START + 246) // disable wild catching
+#define FLAG_EXTENDED_CONTENT_244                       (HNS_EXTENDED_CONTENT_START + 244) 
+#define FLAG_EXTENDED_CONTENT_245                       (HNS_EXTENDED_CONTENT_START + 245) 
+#define FLAG_EXTENDED_CONTENT_246                        (HNS_EXTENDED_CONTENT_START + 246) 
 #define FLAG_TRIGGERED_PONI_TOTEM                       (HNS_EXTENDED_CONTENT_START + 247) // for use in triggering poni totem anim
 #define FLAG_TRIGGERED_ULAULA_TOTEM                     (HNS_EXTENDED_CONTENT_START + 248) // for use in triggering ulaula totem anim
 #define FLAG_TRIGGERED_AKALA_TOTEM                      (HNS_EXTENDED_CONTENT_START + 249) // for use in triggering akala totem anim
@@ -1207,7 +1207,7 @@
 #define FLAG_SYS_USE_STRENGTH                       (SYS_FLAGS + 0x4)
 #define FLAG_SYS_USE_FLASH                          (SYS_FLAGS + 0x5)
 #define FLAG_SYS_CTRL_OBJ_DELETE                    (SYS_FLAGS + 0x6)
-#define FLAG_SYS_NO_CATCHING                        (SYS_FLAGS + 0x7)
+#define FLAG_SYS_UNUSED                        (SYS_FLAGS + 0x7)
 #define FLAG_SYS_LAKE_OF_RAGE_TIDE                  (SYS_FLAGS + 0x8)
 
 // Badges

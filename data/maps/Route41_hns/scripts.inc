@@ -198,12 +198,12 @@ Route41_EventScript_Tentacruel1::
 Route41_EventScript_TentacruelAttack1::
 	msgbox Route41_Text_TentacruelAttack, MSGBOX_DEFAULT
 	waitmessage
-	setflag FLAG_SYS_NO_CATCHING
+	setflag FLAG_NO_WILD_CATCHING
 	setflag FLAG_NO_SHINY
 	setwildbattle SPECIES_TENTACRUEL, 100, ITEM_NONE
 	dowildbattle
 	closemessage
-	clearflag FLAG_SYS_NO_CATCHING
+	clearflag FLAG_NO_WILD_CATCHING
 	clearflag FLAG_NO_SHINY
 	playse SE_USE_ITEM
 	msgbox Route41_Text_TentacruelHeal, MSGBOX_DEFAULT
