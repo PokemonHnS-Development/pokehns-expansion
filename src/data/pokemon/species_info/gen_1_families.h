@@ -2324,6 +2324,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             gShinyOverworldPalette_RattataAlola
         )
         .isAlolanForm = TRUE,
+        .dexNotRequired = TRUE,
         .levelUpLearnset = sRattataAlolaLevelUpLearnset,
         .teachableLearnset = sRattataAlolaTeachableLearnset,
         .eggMoveLearnset = sRattataAlolaEggMoveLearnset,
@@ -2401,6 +2402,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             gShinyOverworldPalette_RaticateAlola
         )
         .isAlolanForm = TRUE,
+        .dexNotRequired = TRUE,
         .levelUpLearnset = sRaticateAlolaLevelUpLearnset,
         .teachableLearnset = sRaticateAlolaTeachableLearnset,
 #if P_SEPARATE_REGIONAL_FORMS
@@ -2476,6 +2478,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         )
         .isTotem = TRUE,
         .isAlolanForm = TRUE,
+        .dexNotRequired = TRUE,
         .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .levelUpLearnset = sRaticateAlolaLevelUpLearnset,
         .teachableLearnset = sRaticateAlolaTeachableLearnset,
@@ -4339,6 +4342,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             gShinyOverworldPalette_RaichuAlola
         )
         .isAlolanForm = TRUE,
+        .dexNotRequired = TRUE,
         .levelUpLearnset = sRaichuAlolaLevelUpLearnset,
         .teachableLearnset = sRaichuAlolaTeachableLearnset,
 #if P_SEPARATE_REGIONAL_FORMS
@@ -4684,6 +4688,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             gShinyOverworldPalette_SandshrewAlola
         )
         .isAlolanForm = TRUE,
+        .dexNotRequired = TRUE,
         .levelUpLearnset = sSandshrewAlolaLevelUpLearnset,
         .teachableLearnset = sSandshrewAlolaTeachableLearnset,
         .eggMoveLearnset = sSandshrewAlolaEggMoveLearnset,
@@ -4764,6 +4769,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             gShinyOverworldPalette_SandslashAlola
         )
         .isAlolanForm = TRUE,
+        .dexNotRequired = TRUE,
         .levelUpLearnset = sSandslashAlolaLevelUpLearnset,
         .teachableLearnset = sSandslashAlolaTeachableLearnset,
 #if P_SEPARATE_REGIONAL_FORMS
@@ -5751,6 +5757,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             gShinyOverworldPalette_VulpixAlola
         )
         .isAlolanForm = TRUE,
+        .dexNotRequired = TRUE,
         .levelUpLearnset = sVulpixAlolaLevelUpLearnset,
         .teachableLearnset = sVulpixAlolaTeachableLearnset,
         .eggMoveLearnset = sVulpixAlolaEggMoveLearnset,
@@ -5832,6 +5839,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             gShinyOverworldPalette_NinetalesAlola
         )
         .isAlolanForm = TRUE,
+        .dexNotRequired = TRUE,
         .levelUpLearnset = sNinetalesAlolaLevelUpLearnset,
         .teachableLearnset = sNinetalesAlolaTeachableLearnset,
 #if P_SEPARATE_REGIONAL_FORMS
@@ -7293,6 +7301,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             gShinyOverworldPalette_DiglettAlola
         )
         .isAlolanForm = TRUE,
+        .dexNotRequired = TRUE,
         .levelUpLearnset = sDiglettAlolaLevelUpLearnset,
         .teachableLearnset = sDiglettAlolaTeachableLearnset,
         .eggMoveLearnset = sDiglettAlolaEggMoveLearnset,
@@ -7374,6 +7383,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             gShinyOverworldPalette_DugtrioAlola
         )
         .isAlolanForm = TRUE,
+        .dexNotRequired = TRUE,
         .levelUpLearnset = sDugtrioAlolaLevelUpLearnset,
         .teachableLearnset = sDugtrioAlolaTeachableLearnset,
 #if P_SEPARATE_REGIONAL_FORMS
@@ -7611,6 +7621,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             gShinyOverworldPalette_MeowthAlola
         )
         .isAlolanForm = TRUE,
+        .dexNotRequired = TRUE,
         .levelUpLearnset = sMeowthAlolaLevelUpLearnset,
         .teachableLearnset = sMeowthAlolaTeachableLearnset,
         .eggMoveLearnset = sMeowthAlolaEggMoveLearnset,
@@ -7691,6 +7702,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             gShinyOverworldPalette_PersianAlola
         )
         .isAlolanForm = TRUE,
+        .dexNotRequired = TRUE,
         .levelUpLearnset = sPersianAlolaLevelUpLearnset,
         .teachableLearnset = sPersianAlolaTeachableLearnset,
 #if P_SEPARATE_REGIONAL_FORMS
@@ -7770,6 +7782,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             gShinyOverworldPalette_MeowthGalar
         )
         .isGalarianForm = TRUE,
+        .dexNotRequired = TRUE,
         .levelUpLearnset = sMeowthGalarLevelUpLearnset,
         .teachableLearnset = sMeowthGalarTeachableLearnset,
         .eggMoveLearnset = sMeowthGalarEggMoveLearnset,
@@ -7783,6 +7796,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
 
     [SPECIES_PERRSERKER] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 70,
         .baseAttack    = 110,
         .baseDefense   = 100,
@@ -8484,6 +8498,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             gShinyOverworldPalette_GrowlitheHisui
         )
         .isHisuianForm = TRUE,
+        .dexNotRequired = TRUE,
         .levelUpLearnset = sGrowlitheHisuiLevelUpLearnset,
         .teachableLearnset = sGrowlitheHisuiTeachableLearnset,
         .eggMoveLearnset = sGrowlitheHisuiEggMoveLearnset,
@@ -8563,6 +8578,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             gShinyOverworldPalette_ArcanineHisui
         )
         .isHisuianForm = TRUE,
+        .dexNotRequired = TRUE,
         .levelUpLearnset = sArcanineHisuiLevelUpLearnset,
         .teachableLearnset = sArcanineHisuiTeachableLearnset,
 #if P_SEPARATE_REGIONAL_FORMS
@@ -10292,6 +10308,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             gShinyOverworldPalette_GeodudeAlola
         )
         .isAlolanForm = TRUE,
+        .dexNotRequired = TRUE,
         .levelUpLearnset = sGeodudeAlolaLevelUpLearnset,
         .teachableLearnset = sGeodudeAlolaTeachableLearnset,
         .eggMoveLearnset = sGeodudeAlolaEggMoveLearnset,
@@ -10372,6 +10389,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             gShinyOverworldPalette_GravelerAlola
         )
         .isAlolanForm = TRUE,
+        .dexNotRequired = TRUE,
         .levelUpLearnset = sGravelerAlolaLevelUpLearnset,
         .teachableLearnset = sGravelerAlolaTeachableLearnset,
 #if P_SEPARATE_REGIONAL_FORMS
@@ -10452,6 +10470,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             gShinyOverworldPalette_GolemAlola
         )
         .isAlolanForm = TRUE,
+        .dexNotRequired = TRUE,
         .levelUpLearnset = sGolemAlolaLevelUpLearnset,
         .teachableLearnset = sGolemAlolaTeachableLearnset,
 #if P_SEPARATE_REGIONAL_FORMS
@@ -10671,6 +10690,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             gShinyOverworldPalette_PonytaGalar
         )
         .isGalarianForm = TRUE,
+        .dexNotRequired = TRUE,
         .levelUpLearnset = sPonytaGalarLevelUpLearnset,
         .teachableLearnset = sPonytaGalarTeachableLearnset,
         .eggMoveLearnset = sPonytaGalarEggMoveLearnset,
@@ -10750,6 +10770,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             gShinyOverworldPalette_RapidashGalar
         )
         .isGalarianForm = TRUE,
+        .dexNotRequired = TRUE,
         .levelUpLearnset = sRapidashGalarLevelUpLearnset,
         .teachableLearnset = sRapidashGalarTeachableLearnset,
 #if P_SEPARATE_REGIONAL_FORMS
@@ -11118,6 +11139,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             gShinyOverworldPalette_SlowpokeGalar
         )
         .isGalarianForm = TRUE,
+        .dexNotRequired = TRUE,
         .levelUpLearnset = sSlowpokeGalarLevelUpLearnset,
         .teachableLearnset = sSlowpokeGalarTeachableLearnset,
         .eggMoveLearnset = sSlowpokeGalarEggMoveLearnset,
@@ -11203,6 +11225,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             gShinyOverworldPalette_SlowbroGalar
         )
         .isGalarianForm = TRUE,
+        .dexNotRequired = TRUE,
         .levelUpLearnset = sSlowbroGalarLevelUpLearnset,
         .teachableLearnset = sSlowbroGalarTeachableLearnset,
 #if P_SEPARATE_REGIONAL_FORMS
@@ -11281,6 +11304,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             gShinyOverworldPalette_SlowkingGalar
         )
         .isGalarianForm = TRUE,
+        .dexNotRequired = TRUE,
         .levelUpLearnset = sSlowkingGalarLevelUpLearnset,
         .teachableLearnset = sSlowkingGalarTeachableLearnset,
 #if P_SEPARATE_REGIONAL_FORMS
@@ -11688,6 +11712,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             gShinyOverworldPalette_FarfetchdGalar
         )
         .isGalarianForm = TRUE,
+        .dexNotRequired = TRUE,
         .levelUpLearnset = sFarfetchdGalarLevelUpLearnset,
         .teachableLearnset = sFarfetchdGalarTeachableLearnset,
         .eggMoveLearnset = sFarfetchdGalarEggMoveLearnset,
@@ -11701,6 +11726,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
 
     [SPECIES_SIRFETCHD] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 62,
         .baseAttack    = 135,
         .baseDefense   = 95,
@@ -12311,6 +12337,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             gShinyOverworldPalette_GrimerAlola
         )
         .isAlolanForm = TRUE,
+        .dexNotRequired = TRUE,
         .levelUpLearnset = sGrimerAlolaLevelUpLearnset,
         .teachableLearnset = sGrimerAlolaTeachableLearnset,
         .eggMoveLearnset = sGrimerAlolaEggMoveLearnset,
@@ -12393,6 +12420,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             gShinyOverworldPalette_MukAlola
         )
         .isAlolanForm = TRUE,
+        .dexNotRequired = TRUE,
         .levelUpLearnset = sMukAlolaLevelUpLearnset,
         .teachableLearnset = sMukAlolaTeachableLearnset,
 #if P_SEPARATE_REGIONAL_FORMS
@@ -13754,6 +13782,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             gShinyOverworldPalette_VoltorbHisui
         )
         .isHisuianForm = TRUE,
+        .dexNotRequired = TRUE,
         .levelUpLearnset = sVoltorbHisuiLevelUpLearnset,
         .teachableLearnset = sVoltorbHisuiTeachableLearnset,
 #if P_SEPARATE_REGIONAL_FORMS
@@ -13832,6 +13861,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             gShinyOverworldPalette_ElectrodeHisui
         )
         .isHisuianForm = TRUE,
+        .dexNotRequired = TRUE,
         .levelUpLearnset = sElectrodeHisuiLevelUpLearnset,
         .teachableLearnset = sElectrodeHisuiTeachableLearnset,
 #if P_SEPARATE_REGIONAL_FORMS
@@ -14075,6 +14105,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             gShinyOverworldPalette_ExeggutorAlola
         )
         .isAlolanForm = TRUE,
+        .dexNotRequired = TRUE,
         .levelUpLearnset = sExeggutorAlolaLevelUpLearnset,
         .teachableLearnset = sExeggutorAlolaTeachableLearnset,
 #if P_SEPARATE_REGIONAL_FORMS
@@ -14309,6 +14340,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             gShinyOverworldPalette_MarowakAlola
         )
         .isAlolanForm = TRUE,
+        .dexNotRequired = TRUE,
         .levelUpLearnset = sMarowakAlolaLevelUpLearnset,
         .teachableLearnset = sMarowakAlolaTeachableLearnset,
 #if P_SEPARATE_REGIONAL_FORMS
@@ -14384,6 +14416,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         )
         .isTotem = TRUE,
         .isAlolanForm = TRUE,
+        .dexNotRequired = TRUE,
         .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .levelUpLearnset = sMarowakAlolaLevelUpLearnset,
         .teachableLearnset = sMarowakAlolaTeachableLearnset,
@@ -15079,6 +15112,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             gShinyOverworldPalette_WeezingGalar
         )
         .isGalarianForm = TRUE,
+        .dexNotRequired = TRUE,
         .levelUpLearnset = sWeezingGalarLevelUpLearnset,
         .teachableLearnset = sWeezingGalarTeachableLearnset,
 #if P_SEPARATE_REGIONAL_FORMS
@@ -16737,6 +16771,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             gShinyOverworldPalette_MrMimeGalar
         )
         .isGalarianForm = TRUE,
+        .dexNotRequired = TRUE,
         .levelUpLearnset = sMrMimeGalarLevelUpLearnset,
         .teachableLearnset = sMrMimeGalarTeachableLearnset,
         .eggMoveLearnset = sMrMimeGalarEggMoveLearnset,
@@ -16750,6 +16785,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
 
     [SPECIES_MR_RIME] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 80,
         .baseAttack    = 85,
         .baseDefense   = 75,
@@ -18046,6 +18082,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             gShinyOverworldPalette_TaurosPaldeaCombat
         )
         .isPaldeanForm = TRUE,
+        .dexNotRequired = TRUE,
         .levelUpLearnset = sTaurosPaldeaCombatLevelUpLearnset,
         .teachableLearnset = sTaurosPaldeaCombatTeachableLearnset,
         .eggMoveLearnset = sTaurosPaldeaCombatEggMoveLearnset,
@@ -18124,6 +18161,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             gShinyOverworldPalette_TaurosPaldeaBlaze
         )
         .isPaldeanForm = TRUE,
+        .dexNotRequired = TRUE,
         .levelUpLearnset = sTaurosPaldeaBlazeLevelUpLearnset,
         .teachableLearnset = sTaurosPaldeaBlazeTeachableLearnset,
         .eggMoveLearnset = sTaurosPaldeaBlazeEggMoveLearnset,
@@ -18202,6 +18240,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             gShinyOverworldPalette_TaurosPaldeaAqua
         )
         .isPaldeanForm = TRUE,
+        .dexNotRequired = TRUE,
         .levelUpLearnset = sTaurosPaldeaAquaLevelUpLearnset,
         .teachableLearnset = sTaurosPaldeaAquaTeachableLearnset,
         .eggMoveLearnset = sTaurosPaldeaAquaEggMoveLearnset,
@@ -20513,6 +20552,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         )
         .isSubLegendary = TRUE,
         .isGalarianForm = TRUE,
+        .dexNotRequired = TRUE,
         .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .levelUpLearnset = sArticunoGalarLevelUpLearnset,
         .teachableLearnset = sArticunoGalarTeachableLearnset,
@@ -20680,6 +20720,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         )
         .isSubLegendary = TRUE,
         .isGalarianForm = TRUE,
+        .dexNotRequired = TRUE,
         .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .levelUpLearnset = sZapdosGalarLevelUpLearnset,
         .teachableLearnset = sZapdosGalarTeachableLearnset,
@@ -20869,6 +20910,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         )
         .isSubLegendary = TRUE,
         .isGalarianForm = TRUE,
+        .dexNotRequired = TRUE,
         .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .levelUpLearnset = sMoltresGalarLevelUpLearnset,
         .teachableLearnset = sMoltresGalarTeachableLearnset,

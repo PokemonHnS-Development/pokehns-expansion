@@ -576,6 +576,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
             gShinyOverworldPalette_TyphlosionHisui
         )
         .isHisuianForm = TRUE,
+        .dexNotRequired = TRUE,
         .levelUpLearnset = sTyphlosionHisuiLevelUpLearnset,
         .teachableLearnset = sTyphlosionHisuiTeachableLearnset,
 #if P_SEPARATE_REGIONAL_FORMS
@@ -3678,6 +3679,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
             gShinyOverworldPalette_WooperPaldea
         )
         .isPaldeanForm = TRUE,
+        .dexNotRequired = TRUE,
         .levelUpLearnset = sWooperPaldeaLevelUpLearnset,
         .teachableLearnset = sWooperPaldeaTeachableLearnset,
         .eggMoveLearnset = sWooperPaldeaEggMoveLearnset,
@@ -3691,6 +3693,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
 
     [SPECIES_CLODSIRE] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 130,
         .baseAttack    = 75,
         .baseDefense   = 60,
@@ -5300,6 +5303,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
             gShinyOverworldPalette_QwilfishHisui
         )
         .isHisuianForm = TRUE,
+        .dexNotRequired = TRUE,
         .levelUpLearnset = sQwilfishHisuiLevelUpLearnset,
         .teachableLearnset = sQwilfishHisuiTeachableLearnset,
         .eggMoveLearnset = sQwilfishHisuiEggMoveLearnset,
@@ -5313,6 +5317,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
 
     [SPECIES_OVERQWIL] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 85,
         .baseAttack    = 115,
         .baseDefense   = 95,
@@ -5877,6 +5882,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
             sAnimTable_Following
         )
         .isHisuianForm = TRUE,
+        .dexNotRequired = TRUE,
         .levelUpLearnset = sSneaselHisuiLevelUpLearnset,
         .teachableLearnset = sSneaselHisuiTeachableLearnset,
         .eggMoveLearnset = sSneaselHisuiEggMoveLearnset,
@@ -5891,6 +5897,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
 
     [SPECIES_SNEASLER] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 80,
         .baseAttack    = 130,
         .baseDefense   = 60,
@@ -6799,6 +6806,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
             gShinyOverworldPalette_CorsolaGalar
         )
         .isGalarianForm = TRUE,
+        .dexNotRequired = TRUE,
         .levelUpLearnset = sCorsolaGalarLevelUpLearnset,
         .teachableLearnset = sCorsolaGalarTeachableLearnset,
         .eggMoveLearnset = sCorsolaGalarEggMoveLearnset,
@@ -6812,6 +6820,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
 
     [SPECIES_CURSOLA] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 60,
         .baseAttack    = 95,
         .baseDefense   = 50,

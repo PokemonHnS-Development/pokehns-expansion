@@ -861,6 +861,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
             gShinyOverworldPalette_SamurottHisui
         )
         .isHisuianForm = TRUE,
+        .dexNotRequired = TRUE,
         .levelUpLearnset = sSamurottHisuiLevelUpLearnset,
         .teachableLearnset = sSamurottHisuiTeachableLearnset,
 #if P_SEPARATE_REGIONAL_FORMS
@@ -4508,6 +4509,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
             gShinyOverworldPalette_LilligantHisui
         )
         .isHisuianForm = TRUE,
+        .dexNotRequired = TRUE,
         .levelUpLearnset = sLilligantHisuiLevelUpLearnset,
         .teachableLearnset = sLilligantHisuiTeachableLearnset,
 #if P_SEPARATE_REGIONAL_FORMS
@@ -5339,6 +5341,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
             gShinyOverworldPalette_DarumakaGalar
         )
         .isGalarianForm = TRUE,
+        .dexNotRequired = TRUE,
         .levelUpLearnset = sDarumakaGalarLevelUpLearnset,
         .teachableLearnset = sDarumakaGalarTeachableLearnset,
         .eggMoveLearnset = sDarumakaGalarEggMoveLearnset,
@@ -5418,6 +5421,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
             gShinyOverworldPalette_DarmanitanGalarStandard
         )
         .isGalarianForm = TRUE,
+        .dexNotRequired = TRUE,
         .levelUpLearnset = sDarmanitanGalarLevelUpLearnset,
         .teachableLearnset = sDarmanitanGalarTeachableLearnset,
 #if P_SEPARATE_REGIONAL_FORMS
@@ -5488,6 +5492,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         SHADOW(0, 11, SHADOW_SIZE_S)
         FOOTPRINT(Darmanitan)
         .isGalarianForm = TRUE,
+        .dexNotRequired = TRUE,
         .levelUpLearnset = sDarmanitanGalarLevelUpLearnset,
         .teachableLearnset = sDarmanitanGalarTeachableLearnset,
 #if P_SEPARATE_REGIONAL_FORMS
@@ -6218,6 +6223,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
             gShinyOverworldPalette_YamaskGalar
         )
         .isGalarianForm = TRUE,
+        .dexNotRequired = TRUE,
         .levelUpLearnset = sYamaskGalarLevelUpLearnset,
         .teachableLearnset = sYamaskGalarTeachableLearnset,
         .eggMoveLearnset = sYamaskGalarEggMoveLearnset,
@@ -7004,6 +7010,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
             gShinyOverworldPalette_ZoruaHisui
         )
         .isHisuianForm = TRUE,
+        .dexNotRequired = TRUE,
         .levelUpLearnset = sZoruaHisuiLevelUpLearnset,
         .teachableLearnset = sZoruaHisuiTeachableLearnset,
         .eggMoveLearnset = sZoruaHisuiEggMoveLearnset,
@@ -7084,6 +7091,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
             gShinyOverworldPalette_ZoroarkHisui
         )
         .isHisuianForm = TRUE,
+        .dexNotRequired = TRUE,
         .levelUpLearnset = sZoroarkHisuiLevelUpLearnset,
         .teachableLearnset = sZoroarkHisuiTeachableLearnset,
 #if P_SEPARATE_REGIONAL_FORMS
@@ -11095,6 +11103,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
             gShinyOverworldPalette_StunfiskGalar
         )
         .isGalarianForm = TRUE,
+        .dexNotRequired = TRUE,
         .levelUpLearnset = sStunfiskGalarLevelUpLearnset,
         .teachableLearnset = sStunfiskGalarTeachableLearnset,
         .eggMoveLearnset = sStunfiskGalarEggMoveLearnset,
@@ -12020,6 +12029,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
             gShinyOverworldPalette_BraviaryHisui
         )
         .isHisuianForm = TRUE,
+        .dexNotRequired = TRUE,
         .levelUpLearnset = sBraviaryHisuiLevelUpLearnset,
         .teachableLearnset = sBraviaryHisuiTeachableLearnset,
 #if P_SEPARATE_REGIONAL_FORMS
