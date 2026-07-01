@@ -23,13 +23,13 @@ Alola_Poni_BattleExeggutor::
 	end
 
 Alola_Poni_BattleExeggutor_2:
-	setflag FLAG_CAUGHT_EXEGGUTOR_ALOLA
+	setflag FLAG_HIDE_EXEGGUTOR_ALOLA
 	removeobject Alola_Poni_Exeggutor
 	release
 	end
 
 Alola_Poni_BattleExeggutor_3:
-	setflag FLAG_CAUGHT_EXEGGUTOR_ALOLA
+	setflag FLAG_HIDE_EXEGGUTOR_ALOLA
 	removeobject Alola_Poni_Exeggutor
 	release
 	end

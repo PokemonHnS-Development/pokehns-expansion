@@ -23,13 +23,13 @@ Alola_Melemele_BattleMarowak::
 	end
 
 Alola_Melemele_BattleMarowak_2:
-	setflag FLAG_CAUGHT_MAROWAK_ALOLA
+	setflag FLAG_HIDE_MAROWAK_ALOLA
 	removeobject Alola_Melemele_Marowak
 	release
 	end
 
 Alola_Melemele_BattleMarowak_3:
-	setflag FLAG_CAUGHT_MAROWAK_ALOLA
+	setflag FLAG_HIDE_MAROWAK_ALOLA
 	removeobject Alola_Melemele_Marowak
 	release
 	end
@@ -56,13 +56,13 @@ Alola_Melemele_BattleDugtrio::
 	end
 
 Alola_Melemele_BattleDugtrio_2:
-	setflag FLAG_CAUGHT_DUGTRIO_ALOLA
+	setflag FLAG_HIDE_DUGTRIO_ALOLA
 	removeobject Alola_Melemele_Dugtrio
 	release
 	end
 
 Alola_Melemele_BattleDugtrio_3:
-	setflag FLAG_CAUGHT_DUGTRIO_ALOLA
+	setflag FLAG_HIDE_DUGTRIO_ALOLA
 	removeobject Alola_Melemele_Dugtrio
 	release
 	end

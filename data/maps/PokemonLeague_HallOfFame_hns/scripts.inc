@@ -85,12 +85,28 @@ PokemonLeague_HallOfFame_EventScript_SetGameClearFlags::
 	call_if_ge VAR_SUICUNE_ENCOUNTERS, 8, PokemonLeague_HallOfFame_EventScript_SpawnSuicune
 	call_if_set FLAG_CAUGHT_CELEBI, PokemonLeague_HallOfFame_EventScript_SpawnSecondCelebi
 	call_if_ge VAR_VIRIDIAN_FOREST_PICHU, 4, PokemonLeague_HallOfFame_EventScript_SpawnPichu
+	call_if_ge VAR_ALOLA_STATE, 4, PokemonLeague_HallOfFame_EventScript_SpawnAlolaMons
 	clearflag FLAG_DEFEATED_MEW
 	clearflag FLAG_CAUGHT_MEW
 	clearflag FLAG_BATTLED_DEOXYS
 	clearflag FLAG_DEFEATED_DEOXYS
 	clearflag FLAG_SUMMONED_MTMOON_JIRACHI
 	setvar VAR_LEAGUE_STATE, 1
+	return
+
+PokemonLeague_HallOfFame_EventScript_SpawnAlolaMons::
+	clearflag FLAG_HIDE_TAPU_BULU
+	clearflag FLAG_HIDE_TAPU_FINI
+	clearflag FLAG_HIDE_TAPU_KOKO
+	clearflag FLAG_HIDE_TAPU_LELE
+	clearflag FLAG_HIDE_DUGTRIO_ALOLA
+	clearflag FLAG_HIDE_MAROWAK_ALOLA
+	clearflag FLAG_HIDE_EXEGGUTOR_ALOLA
+	clearflag FLAG_HIDE_SANDSLASH_ALOLA
+	clearflag FLAG_HIDE_NINETALES_ALOLA
+	clearflag FLAG_HIDE_MUK_ALOLA
+	clearflag FLAG_HIDE_RAICHU_ALOLA
+	clearflag FLAG_HIDE_GOLEM_ALOLA
 	return
 
 PokemonLeague_HallOfFame_EventScript_SpawnPichu::

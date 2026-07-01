@@ -23,13 +23,13 @@ Alola_Poni_BattleRaichu::
 	end
 
 Alola_Poni_BattleRaichu_2:
-	setflag FLAG_CAUGHT_RAICHU_ALOLA
+	setflag FLAG_HIDE_RAICHU_ALOLA
 	removeobject Alola_Poni_Raichu
 	release
 	end
 
 Alola_Poni_BattleRaichu_3:
-	setflag FLAG_CAUGHT_RAICHU_ALOLA
+	setflag FLAG_HIDE_RAICHU_ALOLA
 	removeobject Alola_Poni_Raichu
 	release
 	end
@@ -56,13 +56,13 @@ Alola_Poni_BattleGolem::
 	end
 
 Alola_Poni_BattleGolem_2:
-	setflag FLAG_CAUGHT_GOLEM_ALOLA
+	setflag FLAG_HIDE_GOLEM_ALOLA
 	removeobject Alola_Poni_Golem
 	release
 	end
 
 Alola_Poni_BattleGolem_3:
-	setflag FLAG_CAUGHT_GOLEM_ALOLA
+	setflag FLAG_HIDE_GOLEM_ALOLA
 	removeobject Alola_Poni_Golem
 	release
 	end

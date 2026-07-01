@@ -52,7 +52,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Alola_Melemele_BattleMarowak",
-      "flag": "FLAG_CAUGHT_MAROWAK_ALOLA"
+      "flag": "FLAG_HIDE_MAROWAK_ALOLA"
     },
     {
       "local_id": "Alola_Melemele_Dugtrio",
@@ -66,7 +66,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Alola_Melemele_BattleDugtrio",
-      "flag": "FLAG_CAUGHT_DUGTRIO_ALOLA"
+      "flag": "FLAG_HIDE_DUGTRIO_ALOLA"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_CAMPER_HNS",

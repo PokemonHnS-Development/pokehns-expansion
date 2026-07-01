@@ -1129,14 +1129,14 @@
 #define FLAG_HIDE_SAMSONOAK_INTRO                       (HNS_EXTENDED_CONTENT_START + 268) // hides the samson oak intro object
 #define FLAG_CAUGHT_PALOSSAND                           (HNS_EXTENDED_CONTENT_START + 269) // hide palossand if caught or defeated
 #define FLAG_EXTENDED_CONTENT_270                          (HNS_EXTENDED_CONTENT_START + 270)
-#define FLAG_CAUGHT_SANDSLASH_ALOLA                     (HNS_EXTENDED_CONTENT_START + 271) // hide alolan sandslash if caught or defeated
-#define FLAG_CAUGHT_NINETALES_ALOLA                     (HNS_EXTENDED_CONTENT_START + 272) // hide alolan ninetales if caught or defeated
-#define FLAG_CAUGHT_MUK_ALOLA                           (HNS_EXTENDED_CONTENT_START + 273) // hide alolan muk if caught or defeated
-#define FLAG_CAUGHT_DUGTRIO_ALOLA                       (HNS_EXTENDED_CONTENT_START + 274) // hide alolan dugtrio if caught or defeated
-#define FLAG_CAUGHT_MAROWAK_ALOLA                       (HNS_EXTENDED_CONTENT_START + 275) // hide alolan marowak if caught or defeated
-#define FLAG_CAUGHT_RAICHU_ALOLA                        (HNS_EXTENDED_CONTENT_START + 276) // hide alolan raichu if caught or defeated
-#define FLAG_CAUGHT_GOLEM_ALOLA                         (HNS_EXTENDED_CONTENT_START + 277) // hide alolan golem if caught or defeated
-#define FLAG_CAUGHT_EXEGGUTOR_ALOLA                     (HNS_EXTENDED_CONTENT_START + 278) // hide alolan exceggutor if caught or defeated
+#define FLAG_HIDE_SANDSLASH_ALOLA                     (HNS_EXTENDED_CONTENT_START + 271) // hide alolan sandslash if caught or defeated
+#define FLAG_HIDE_NINETALES_ALOLA                     (HNS_EXTENDED_CONTENT_START + 272) // hide alolan ninetales if caught or defeated
+#define FLAG_HIDE_MUK_ALOLA                           (HNS_EXTENDED_CONTENT_START + 273) // hide alolan muk if caught or defeated
+#define FLAG_HIDE_DUGTRIO_ALOLA                       (HNS_EXTENDED_CONTENT_START + 274) // hide alolan dugtrio if caught or defeated
+#define FLAG_HIDE_MAROWAK_ALOLA                       (HNS_EXTENDED_CONTENT_START + 275) // hide alolan marowak if caught or defeated
+#define FLAG_HIDE_RAICHU_ALOLA                        (HNS_EXTENDED_CONTENT_START + 276) // hide alolan raichu if caught or defeated
+#define FLAG_HIDE_GOLEM_ALOLA                         (HNS_EXTENDED_CONTENT_START + 277) // hide alolan golem if caught or defeated
+#define FLAG_HIDE_EXEGGUTOR_ALOLA                     (HNS_EXTENDED_CONTENT_START + 278) // hide alolan exceggutor if caught or defeated
 #define FLAG_HIDE_PONI_TOTEM                            (HNS_EXTENDED_CONTENT_START + 279) // hide the poni totem mon
 #define FLAG_HIDE_ULAULA_TOTEM                          (HNS_EXTENDED_CONTENT_START + 280) // hide the ula'ula totem mon
 #define FLAG_HIDE_AKALA_TOTEM                           (HNS_EXTENDED_CONTENT_START + 281) // hide the akala totem mon

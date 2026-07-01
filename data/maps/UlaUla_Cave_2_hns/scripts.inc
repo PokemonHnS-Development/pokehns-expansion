@@ -22,13 +22,13 @@ Alola_Ulaula_BattleMuk::
 	end
 
 Alola_Ulaula_BattleMuk_2:
-	setflag FLAG_CAUGHT_MUK_ALOLA
+	setflag FLAG_HIDE_MUK_ALOLA
 	removeobject Alola_Ulaula_Muk
 	release
 	end
 
 Alola_Ulaula_BattleMuk_3:
-	setflag FLAG_CAUGHT_MUK_ALOLA
+	setflag FLAG_HIDE_MUK_ALOLA
 	removeobject Alola_Ulaula_Muk
 	release
 	end

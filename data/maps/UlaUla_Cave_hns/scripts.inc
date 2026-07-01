@@ -23,13 +23,13 @@ Alola_Ulaula_BattleSandslash::
 	end
 
 Alola_Ulaula_BattleSandslash_2:
-	setflag FLAG_CAUGHT_SANDSLASH_ALOLA
+	setflag FLAG_HIDE_SANDSLASH_ALOLA
 	removeobject Alola_Ulaula_Sandslash
 	release
 	end
 
 Alola_Ulaula_BattleSandslash_3:
-	setflag FLAG_CAUGHT_SANDSLASH_ALOLA
+	setflag FLAG_HIDE_SANDSLASH_ALOLA
 	removeobject Alola_Ulaula_Sandslash
 	release
 	end
@@ -56,13 +56,13 @@ Alola_Ulaula_BattleNinetales::
 	end
 
 Alola_Ulaula_BattleNinetales_2:
-	setflag FLAG_CAUGHT_NINETALES_ALOLA
+	setflag FLAG_HIDE_NINETALES_ALOLA
 	removeobject Alola_Ulaula_Ninetales
 	release
 	end
 
 Alola_Ulaula_BattleNinetales_3:
-	setflag FLAG_CAUGHT_NINETALES_ALOLA
+	setflag FLAG_HIDE_NINETALES_ALOLA
 	removeobject Alola_Ulaula_Ninetales
 	release
 	end
