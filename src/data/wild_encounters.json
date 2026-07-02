@@ -70774,12 +70774,12 @@
               {
                 "min_level": 43,
                 "max_level": 45,
-                "species": "SPECIES_TAILLOW"
+                "species": "SPECIES_RATICATE_ALOLA"
               },
               {
                 "min_level": 43,
                 "max_level": 45,
-                "species": "SPECIES_TAILLOW"
+                "species": "SPECIES_PIDGEY"
               },
               {
                 "min_level": 43,
@@ -70789,17 +70789,17 @@
               {
                 "min_level": 43,
                 "max_level": 45,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 43,
+                "max_level": 45,
                 "species": "SPECIES_LEAFEON"
               },
               {
                 "min_level": 43,
                 "max_level": 45,
-                "species": "SPECIES_RATICATE_ALOLA"
-              },
-              {
-                "min_level": 43,
-                "max_level": 45,
-                "species": "SPECIES_RATICATE_ALOLA"
+                "species": "SPECIES_TAILLOW"
               },
               {
                 "min_level": 43,
@@ -70839,7 +70839,7 @@
               {
                 "min_level": 43,
                 "max_level": 45,
-                "species": "SPECIES_FINNEON"
+                "species": "SPECIES_WINGULL"
               },
               {
                 "min_level": 43,
@@ -70874,7 +70874,7 @@
               {
                 "min_level": 43,
                 "max_level": 45,
-                "species": "SPECIES_CLAMPERL"
+                "species": "SPECIES_STARYU"
               },
               {
                 "min_level": 43,
@@ -70894,17 +70894,17 @@
               {
                 "min_level": 43,
                 "max_level": 45,
-                "species": "SPECIES_GOREBYSS"
+                "species": "SPECIES_SEADRA"
               },
               {
                 "min_level": 43,
                 "max_level": 45,
-                "species": "SPECIES_HUNTAIL"
+                "species": "SPECIES_CLAMPERL"
               },
               {
                 "min_level": 43,
                 "max_level": 45,
-                "species": "SPECIES_HUNTAIL"
+                "species": "SPECIES_CLAMPERL"
               }
             ]
           }
