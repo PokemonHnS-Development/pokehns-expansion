@@ -645,6 +645,8 @@ enum BattleEnvironments
     BATTLE_ENVIRONMENT_KAREN_HNS,
     BATTLE_ENVIRONMENT_ROCK_SNOW,
     BATTLE_ENVIRONMENT_MOUNTAIN_SNOW,
+    BATTLE_ENVIRONMENT_VOLCANO_CAVE,
+    BATTLE_ENVIRONMENT_SNOW_CAVE,
     // New battle environments are used for Secret Power and Nature Power but not fully implemented.
     BATTLE_ENVIRONMENT_SOARING,
     BATTLE_ENVIRONMENT_SKY_PILLAR,

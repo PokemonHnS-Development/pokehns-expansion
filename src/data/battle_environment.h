@@ -563,6 +563,34 @@ const struct BattleEnvironment gBattleEnvironmentInfo[BATTLE_ENVIRONMENT_COUNT] 
         .battleIntroSlide = BattleIntroSlide1,
     },
 
+    [BATTLE_ENVIRONMENT_VOLCANO_CAVE] =
+    {
+        .name = _("Volcano Cave"),
+        .naturePower = CAVE_NATURE_POWER,
+        .secretPowerAnimation = CAVE_SECRET_POWER_ANIMATION,
+        .secretPowerEffect = CAVE_SECRET_POWER_EFFECT,
+        .camouflageType = CAVE_CAMOUFLAGE_TYPE,
+        .camouflageBlend = CAVE_CAMOUFLAGE_BLEND,
+        .entry = ENVIRONMENT_ENTRY(Volcano),
+        .background = ENVIRONMENT_BACKGROUND(Volcano),
+        .palette = gBattleEnvironmentPalette_Volcano,
+        .battleIntroSlide = CAVE_BATTLE_INTRO_SLIDE,
+    },
+
+    [BATTLE_ENVIRONMENT_SNOW_CAVE] =
+    {
+        .name = _("Snow Cave"),
+        .naturePower = CAVE_NATURE_POWER,
+        .secretPowerAnimation = CAVE_SECRET_POWER_ANIMATION,
+        .secretPowerEffect = CAVE_SECRET_POWER_EFFECT,
+        .camouflageType = CAVE_CAMOUFLAGE_TYPE,
+        .camouflageBlend = CAVE_CAMOUFLAGE_BLEND,
+        .entry = ENVIRONMENT_ENTRY(SnowCave),
+        .background = ENVIRONMENT_BACKGROUND(SnowCave),
+        .palette = gBattleEnvironmentPalette_SnowCave,
+        .battleIntroSlide = CAVE_BATTLE_INTRO_SLIDE,
+    },
+
     [BATTLE_ENVIRONMENT_SOARING] =
     {
         .name = _("Soaring"),
@@ -933,5 +961,17 @@ static const struct ModernBattleGfx sModernBattleGfx[BATTLE_ENVIRONMENT_COUNT] =
         .palette = gBattleEnvironmentPalette_MountainSnowModern,
         .paletteTwilight = gBattleEnvironmentPalette_MountainSnowModernMorning,
         .paletteNight = gBattleEnvironmentPalette_MountainSnowModernNight,
+    },
+    [BATTLE_ENVIRONMENT_VOLCANO_CAVE] =
+    {
+        .background = MODERN_BACKGROUND(VolcanoModern),
+        .entry = MODERN_ENTRY(VolcanoModern),
+        .palette = gBattleEnvironmentPalette_VolcanoModern,
+    },
+    [BATTLE_ENVIRONMENT_SNOW_CAVE] =
+    {
+        .background = MODERN_BACKGROUND(SnowCaveModern),
+        .entry = MODERN_ENTRY(SnowCaveModern),
+        .palette = gBattleEnvironmentPalette_SnowCaveModern,
     },
 };
