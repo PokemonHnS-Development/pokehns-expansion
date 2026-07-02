@@ -593,7 +593,7 @@
 #define TRAINER_CHARLES_2_HNS                          585
 #define TRAINER_CHARLES_3_HNS                          586
 #define TRAINER_SAMSON_OAK_HNS                         587
-#define TRAINER_PHANTONOMY_HNS                         588
+#define TRAINER_PHANTONOMY_UNUSED_HNS                         588
 #define TRAINER_MELEMELE_SWIMMER_1_HNS                 589
 #define TRAINER_MELEMELE_SWIMMER_2_HNS                 590
 #define TRAINER_AKALA_SWIMMER_1_HNS                    591

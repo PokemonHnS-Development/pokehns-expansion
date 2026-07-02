@@ -13460,7 +13460,7 @@ Level: 65
 Tropius
 Level: 67
 
-=== TRAINER_PHANTONOMY_HNS ===
+=== TRAINER_PHANTONOMY_UNUSED_HNS ===
 Name: PHANTONOMY
 Class: Developer Hns
 Pic: Scientist Frlg
@@ -13559,7 +13559,7 @@ Level: 50
 Octillery
 Level: 53
 
-Bibarel
+Raticate Alola
 Level: 51
 
 === TRAINER_AKALA_SWIMMER_3_HNS ===
@@ -13577,7 +13577,7 @@ Level: 56
 Tentacruel
 Level: 54
 
-Floatzel
+Persian Alola
 Level: 52
 
 === TRAINER_PONI_SWIMMER_1_HNS ===
@@ -13592,7 +13592,7 @@ AI: Check Bad Move
 Gorebyss
 Level: 53
 
-Lumineon
+Luvdisc
 Level: 51
 
 Milotic
@@ -13644,10 +13644,10 @@ Music: Hg Girl 1
 Double Battle: No
 AI: Check Bad Move
 
-Cherrim
+Dustox
 Level: 52
 
-Vespiquen
+Pinsir
 Level: 54
 
 Ludicolo
@@ -13665,7 +13665,7 @@ AI: Check Bad Move
 Swellow
 Level: 54
 
-Roserade
+Beedrill
 Level: 56
 
 Dustox
@@ -13696,7 +13696,7 @@ Music: Hg Boy 1
 Double Battle: No
 AI: Check Bad Move
 
-Shuckle
+Butterfree
 Level: 54
 
 Heracross
@@ -13711,7 +13711,7 @@ Music: Hg Girl 1
 Double Battle: No
 AI: Check Bad Move
 
-Aipom
+Mankey
 Level: 51
 
 Tangrowth
@@ -13747,7 +13747,7 @@ Music: Hg Suspicious 2
 Double Battle: No
 AI: Check Bad Move
 
-Bronzong
+Kangaskhan
 Level: 56
 
 Lunatone
@@ -13768,10 +13768,10 @@ AI: Check Bad Move
 Swellow
 Level: 53
 
-Cherrim
+Tangela
 Level: 50
 
-Vespiquen
+Miltank
 Level: 55
 
 === TRAINER_ULAULA_YOUNGSTER_HNS ===
@@ -13789,7 +13789,7 @@ Level: 57
 Leafeon
 Level: 54
 
-Bibarel
+Raticate Alola
 Level: 51
 
 === TRAINER_ULAULA_HIKER_HNS ===
@@ -13819,11 +13819,11 @@ Music: Hg Girl 2
 Double Battle: No
 AI: Check Bad Move
 
-Milotic
+Skarmory
 Level: 57
 
-Ambipom
+Primeape
 Level: 54
 
-Salamence
+Tauros
 Level: 60
