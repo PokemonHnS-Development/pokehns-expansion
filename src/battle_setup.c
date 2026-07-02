@@ -884,6 +884,10 @@ static const struct {
     // MOUNTAIN_SNOW (2 maps)
     {MAP_MT_SILVER_SUMMIT_DAY_HNS,               BATTLE_ENVIRONMENT_MOUNTAIN_SNOW},
     {MAP_MT_SILVER_SUMMIT_NIGHT_HNS,             BATTLE_ENVIRONMENT_MOUNTAIN_SNOW},
+    // VOLCANO_CAVE
+    {MAP_AKALA_CAVE_HNS,                         BATTLE_ENVIRONMENT_VOLCANO_CAVE},
+    // SNOW_CAVE
+    {MAP_ULA_ULA_CAVE_HNS,                       BATTLE_ENVIRONMENT_SNOW_CAVE},
 };
 
 static s32 GetMapDefaultEnvironment(u16 mapId)
