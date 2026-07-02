@@ -41,6 +41,9 @@ sp_irq: .word IWRAM_END - 0x60
 	.align 2, 0
 IntrMain::
 	mov r3, #REG_BASE
+	ldrh r2, [r3, #OFFSET_REG_VCOUNT]
+	ldr r1, =gVCountAtIsr
+	strh r2, [r1]
 	add r3, r3, #OFFSET_REG_IE
 	ldr r2, [r3]
 	ldrh r1, [r3, #OFFSET_REG_IME - 0x200]

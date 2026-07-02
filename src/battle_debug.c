@@ -821,7 +821,6 @@ static void Task_ShowAiPoints(u8 taskId)
         }
         data->battlerId = data->aiBattlerId;
 
-        LoadMonIconPalettes();
         for (count = 0, i = 0; i < MAX_BATTLERS_COUNT; i++)
         {
             if (i != data->aiBattlerId && IsBattlerAlive(i))
@@ -1001,7 +1000,6 @@ static void Task_ShowAiKnowledge(u8 taskId)
                 data->aiBattlerId = 0;
         }
 
-        LoadMonIconPalettes();
         for (count = 0, i = 0; i < MAX_BATTLERS_COUNT; i++)
         {
             if (IsOnPlayerSide(i) && IsBattlerAlive(i))
@@ -1063,7 +1061,6 @@ static void Task_ShowAiParty(u8 taskId)
         HideBg(0);
         ShowBg(1);
 
-        LoadMonIconPalettes();
         LoadPartyMenuAilmentGfx();
         data->aiBattlerId = data->battlerId;
         aiMons = gAiPartyData->mons[GetBattlerSide(data->aiBattlerId)];
