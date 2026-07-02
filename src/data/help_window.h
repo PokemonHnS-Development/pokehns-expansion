@@ -57,9 +57,9 @@ const struct HelpWindow gHelpWindowInfo[] =
     },
     [HELP_ALOLA_WINDOW] =
     {
-        .header = COMPOUND_STRING("OPTIONAL BONUS CONTENT: ALOLA ISLES"),
+        .header = COMPOUND_STRING("OPTIONAL BONUS CONTENT: ISLES"),
         .desc = COMPOUND_STRING("This NPC grants access to optional\n"
-                                "bonus content: ALOLA ISLES.\n"
+                                "bonus content: ISLES.\n"
                                 "It is NOT required for story\n"
                                 "or NATIONAL POKéDEX completion.\n"
                                 "\n"
