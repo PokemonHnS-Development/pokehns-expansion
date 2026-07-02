@@ -62,8 +62,8 @@
     {
       "local_id": "Alola_Ulaula_Palossand",
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(SHUCKLE)",
-      "x": 9,
-      "y": 63,
+      "x": 2,
+      "y": 67,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
