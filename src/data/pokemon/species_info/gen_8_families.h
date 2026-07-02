@@ -7658,6 +7658,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
 #if P_FAMILY_REGIELEKI
     [SPECIES_REGIELEKI] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 80,
         .baseAttack    = 100,
         .baseDefense   = 50,
@@ -7726,6 +7727,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
 #if P_FAMILY_REGIDRAGO
     [SPECIES_REGIDRAGO] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 200,
         .baseAttack    = 100,
         .baseDefense   = 50,

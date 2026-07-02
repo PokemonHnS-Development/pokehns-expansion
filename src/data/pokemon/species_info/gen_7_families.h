@@ -281,6 +281,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
             gShinyOverworldPalette_DecidueyeHisui
         )
         .isHisuianForm = TRUE,
+        .dexNotRequired = TRUE,
         .levelUpLearnset = sDecidueyeHisuiLevelUpLearnset,
         .teachableLearnset = sDecidueyeHisuiTeachableLearnset,
 #if P_SEPARATE_REGIONAL_FORMS
@@ -5750,6 +5751,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
 #if P_FAMILY_TAPU_KOKO
     [SPECIES_TAPU_KOKO] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 70,
         .baseAttack    = 115,
         .baseDefense   = 85,
@@ -5826,6 +5828,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
 #if P_FAMILY_TAPU_LELE
     [SPECIES_TAPU_LELE] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 70,
         .baseAttack    = 85,
         .baseDefense   = 75,
@@ -5898,6 +5901,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
 #if P_FAMILY_TAPU_BULU
     [SPECIES_TAPU_BULU] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 70,
         .baseAttack    = 130,
         .baseDefense   = 115,
@@ -5972,6 +5976,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
 #if P_FAMILY_TAPU_FINI
     [SPECIES_TAPU_FINI] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 70,
         .baseAttack    = 75,
         .baseDefense   = 115,
