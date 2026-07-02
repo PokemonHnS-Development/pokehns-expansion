@@ -8,7 +8,7 @@ AkalaIsle_hns_MapScripts_MAP_SCRIPT_ON_TRANSITION:
 	goto_if_eq AkalaIsle_hns_MapScripts_MAP_SCRIPT_ON_TRANSITION_1
 	compare VAR_0x8000, TIME_DAY
 	goto_if_eq AkalaIsle_hns_MapScripts_MAP_SCRIPT_ON_TRANSITION_1
-	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_SPECIES ( SALAMENCE )
+	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_SPECIES ( PROBOPASS )
 	clearflag FLAG_AKALA_TOTEM_DAY
 	return
 
@@ -47,11 +47,11 @@ Alola_Akala_House_Sign::
 	end
 
 
-Alola_Akala_Chatot::
+Alola_Akala_Natu::
 	lock
 	faceplayer
-	playmoncry SPECIES_CHATOT, 0
-	msgbox Alola_Akala_Chatot_Text_0, MSGBOX_AUTOCLOSE
+	playmoncry SPECIES_NATU, 0
+	msgbox Alola_Akala_Natu_Text_0, MSGBOX_AUTOCLOSE
 	waitmoncry
 	release
 	end
@@ -91,8 +91,8 @@ Alola_Akala_TotemBattle_Trigger_4:
 	goto_if_eq Alola_Akala_TotemBattle_Trigger_14
 	compare VAR_0x8000, TIME_DAY
 	goto_if_eq Alola_Akala_TotemBattle_Trigger_14
-	playmoncry SPECIES_SALAMENCE, 0
-	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_SPECIES ( SALAMENCE )
+	playmoncry SPECIES_PROBOPASS, 0
+	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_SPECIES ( PROBOPASS )
 	clearflag FLAG_AKALA_TOTEM_DAY
 	addobject Akala_Totem
 	waitmoncry
@@ -106,7 +106,7 @@ Alola_Akala_TotemBattle_Trigger_13:
 	goto_if_eq Alola_Akala_TotemBattle_Trigger_20
 	compare VAR_0x8000, TIME_DAY
 	goto_if_eq Alola_Akala_TotemBattle_Trigger_20
-	playmoncry SPECIES_SALAMENCE, 0
+	playmoncry SPECIES_PROBOPASS, 0
 	applymovement Akala_Totem, Alola_Akala_TotemBattle_Trigger_Movement_0
 	waitmovement 0
 	waitmoncry
@@ -147,10 +147,10 @@ Alola_Akala_TotemBattle::
 	lock
 	faceplayer
 	goto_if_set FLAG_AKALA_TOTEM_DAY, Alola_Akala_TotemBattle_1
-	playmoncry SPECIES_SALAMENCE, 0
+	playmoncry SPECIES_PROBOPASS, 0
 	msgbox Alola_Akala_TotemBattle_Text_2, MSGBOX_AUTOCLOSE
 	waitmoncry
-	setwildbattle SPECIES_SHELGON, 60, ITEM_NONE, SPECIES_SALAMENCE, 60, ITEM_PETAYA_BERRY
+	setwildbattle SPECIES_NOSEPASS, 60, ITEM_NONE, SPECIES_PROBOPASS, 60, ITEM_PETAYA_BERRY
 	settotemboost B_POSITION_OPPONENT_RIGHT, 1, 1, 1, 1, 1, 1
 	setflag FLAG_NO_WILD_CATCHING
 	setflag FLAG_NO_WILD_RUNNING
@@ -419,13 +419,13 @@ Alola_Akala_House_Sign_Text_0:
 	.string "A place for visitors to stay while\n"
 	.string "on Akala Isle.$"
 
-Alola_Akala_Chatot_Text_0:
-	.string "Chaaatot!$"
+Alola_Akala_Natu_Text_0:
+	.string "NATU: TUUUUU!$"
 
 Alola_Akala_OldManOnBench_Text_0:
 	.string "Ah the weather is so nice today,\n"
 	.string "isn't it?\p"
-	.string "I was just feeding the Chatot and this\n"
+	.string "I was just feeding the NATU and this\n"
 	.string "one decided to join me on my bench!$"
 
 Alola_Akala_TotemBattle_Text_0:
@@ -439,7 +439,7 @@ Alola_Akala_TotemBattle_Text_2:
 	.string "Salaa!$"
 
 Alola_Akala_TotemBattle_Text_3:
-	.string "Totem Salamence was defeated!\n"
+	.string "Totem Probopass was defeated!\n"
 	.string "It scampered off somewhere…$"
 
 Alola_Akala_Totem_sign_Text_0:

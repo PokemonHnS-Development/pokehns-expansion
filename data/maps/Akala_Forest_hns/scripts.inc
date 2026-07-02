@@ -26,6 +26,39 @@ Alola_AkalaForest_TrainerBattleBugCatcher2::
 	end
 
 
+Alola_Akala_BattleRaichu::
+	lock
+	faceplayer
+	setflag FLAG_BATTLED_RAICHU
+	playmoncry SPECIES_RAICHU_ALOLA, 0
+	msgbox Alola_Akala_BattleRaichu_Text_0, MSGBOX_AUTOCLOSE
+	waitmoncry
+	setwildbattle SPECIES_RAICHU_ALOLA, 45
+	dowildbattle
+	specialvar VAR_RESULT, GetBattleOutcome
+	compare VAR_RESULT, B_OUTCOME_CAUGHT
+	goto_if_eq Alola_Akala_BattleRaichu_2
+	compare VAR_RESULT, B_OUTCOME_WON
+	goto_if_eq Alola_Akala_BattleRaichu_3
+	release
+	end
+
+	release
+	end
+
+Alola_Akala_BattleRaichu_2:
+	setflag FLAG_HIDE_RAICHU_ALOLA
+	removeobject LOCALID_AKALA_RAICHU
+	release
+	end
+
+Alola_Akala_BattleRaichu_3:
+	setflag FLAG_HIDE_RAICHU_ALOLA
+	removeobject LOCALID_AKALA_RAICHU
+	release
+	end
+
+
 Alola_AkalaForest_TrainerBattleBugCatcher1_Text_0:
 	.string "Look at all the cool bugs here on the \nIsles!$"
 
@@ -48,3 +81,8 @@ Alola_AkalaForest_TrainerBattleBugCatcher2_Text_2:
 	.string "Alola Isles…\p"
 	.string "I'm sure that's why there are some\n"
 	.string "unique Bug-type Pokémon here.$"
+
+
+Alola_Akala_BattleRaichu_Text_0:
+	.string "Gaaah!$"
+

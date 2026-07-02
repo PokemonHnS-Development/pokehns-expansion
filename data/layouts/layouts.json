@@ -15958,7 +15958,7 @@
       "width": 55,
       "height": 38,
       "primary_tileset": "gTileset_Johto_General_Hns",
-      "secondary_tileset": "gTileset_Cave_Gray_Hns",
+      "secondary_tileset": "gTileset_BlackthornGym_Hns",
       "border_filepath": "data/layouts/Akala_Cave_hns/border.bin",
       "blockdata_filepath": "data/layouts/Akala_Cave_hns/map.bin",
       "game_version": "hns",

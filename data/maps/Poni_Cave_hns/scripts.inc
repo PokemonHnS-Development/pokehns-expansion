@@ -1,46 +1,12 @@
 Poni_Cave_hns_MapScripts::
 	.byte 0
 
-
-Alola_Poni_BattleRaichu::
-	lock
-	faceplayer
-	setflag FLAG_BATTLED_RAICHU
-	playmoncry SPECIES_RAICHU_ALOLA, 0
-	msgbox Alola_Poni_BattleRaichu_Text_0, MSGBOX_AUTOCLOSE
-	waitmoncry
-	setwildbattle SPECIES_RAICHU_ALOLA, 45
-	dowildbattle
-	specialvar VAR_RESULT, GetBattleOutcome
-	compare VAR_RESULT, B_OUTCOME_CAUGHT
-	goto_if_eq Alola_Poni_BattleRaichu_2
-	compare VAR_RESULT, B_OUTCOME_WON
-	goto_if_eq Alola_Poni_BattleRaichu_3
-	release
-	end
-
-	release
-	end
-
-Alola_Poni_BattleRaichu_2:
-	setflag FLAG_HIDE_RAICHU_ALOLA
-	removeobject Alola_Poni_Raichu
-	release
-	end
-
-Alola_Poni_BattleRaichu_3:
-	setflag FLAG_HIDE_RAICHU_ALOLA
-	removeobject Alola_Poni_Raichu
-	release
-	end
-
-
 Alola_Poni_BattleGolem::
 	lock
 	faceplayer
 	setflag FLAG_BATTLED_GOLEM
 	playmoncry SPECIES_GOLEM_ALOLA, 0
-	msgbox Alola_Poni_BattleRaichu_Text_0, MSGBOX_AUTOCLOSE
+	msgbox Alola_Poni_BattleGolem_Text_0, MSGBOX_AUTOCLOSE
 	waitmoncry
 	setwildbattle SPECIES_GOLEM_ALOLA, 45
 	dowildbattle
@@ -78,5 +44,5 @@ Alola_Poni_Cave_FindItem2::
 	end
 
 
-Alola_Poni_BattleRaichu_Text_0:
+Alola_Poni_BattleGolem_Text_0:
 	.string "Gaaah!$"
