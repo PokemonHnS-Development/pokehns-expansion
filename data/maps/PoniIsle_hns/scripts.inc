@@ -63,13 +63,13 @@ Alola_Poni_TotemBattle_Trigger_4:
 	fadescreenswapbuffers FADE_TO_BLACK
 	delay 30
 	clearflag FLAG_HIDE_PONI_TOTEM
-	playmoncry SPECIES_KOMMO_O, 0
+	playmoncry SPECIES_ELECTIVIRE, 0
 	addobject Poni_Totem
 	waitmoncry
 	delay 30
 	fadescreenswapbuffers FADE_FROM_BLACK
 	delay 30
-	playmoncry SPECIES_KOMMO_O, 0
+	playmoncry SPECIES_ELECTIVIRE, 0
 	applymovement Poni_Totem, Alola_Poni_TotemBattle_Trigger_Movement_0
 	waitmovement 0
 	waitmoncry
@@ -93,10 +93,10 @@ Alola_Poni_TotemBattle_Trigger_10:
 Alola_Poni_TotemBattle::
 	lock
 	faceplayer
-	playmoncry SPECIES_TROPIUS, 0
+	playmoncry SPECIES_ELECTIVIRE, 0
 	msgbox Alola_Poni_TotemBattle_Text_0, MSGBOX_AUTOCLOSE
 	waitmoncry
-	setwildbattle SPECIES_EXEGGUTOR_ALOLA, 60, ITEM_NONE, SPECIES_TROPIUS, 60, ITEM_OCCA_BERRY
+	setwildbattle SPECIES_ELECTABUZZ, 60, ITEM_NONE, SPECIES_ELECTIVIRE, 60, ITEM_OCCA_BERRY
 	settotemboost B_POSITION_OPPONENT_RIGHT, 1, 1, 1, 1, 1, 1
 	setflag FLAG_NO_WILD_CATCHING
 	setflag FLAG_NO_WILD_RUNNING
@@ -316,7 +316,7 @@ Alola_Poni_Island_Sign_Text_0:
 	.string "Poni Isle$"
 
 Alola_Poni_TotemBattle_Text_0:
-	.string "Trrro!$"
+	.string "Buzz!!$"
 
 Alola_Poni_TotemBattle_Text_1:
 	.string "Totem Tropius was defeated!\n"

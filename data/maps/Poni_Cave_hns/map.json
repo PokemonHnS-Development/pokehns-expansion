@@ -53,6 +53,58 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Alola_Poni_Cave_FindItem2",
       "flag": "FLAG_PONI_CAVE_HIDDEN_ITEM_2"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(GEODUDE_ALOLA)",
+      "x": 11,
+      "y": 18,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WALK_SEQUENCE_RIGHT_UP_LEFT_DOWN",
+      "movement_range_x": 1,
+      "movement_range_y": 4,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Alola_Poni_BattleGolem",
+      "flag": "FLAG_HIDE_GOLEM_ALOLA"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(GRAVELER_ALOLA)",
+      "x": 11,
+      "y": 14,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WALK_SEQUENCE_DOWN_RIGHT_UP_LEFT",
+      "movement_range_x": 1,
+      "movement_range_y": 4,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Alola_Poni_BattleGolem",
+      "flag": "FLAG_HIDE_GOLEM_ALOLA"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(ELECTABUZZ)",
+      "x": 5,
+      "y": 4,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 4,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Alola_Poni_BattleGolem",
+      "flag": "FLAG_HIDE_GOLEM_ALOLA"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(ELECTRIKE)",
+      "x": 30,
+      "y": 23,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT",
+      "movement_range_x": 4,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Alola_Poni_BattleGolem",
+      "flag": "FLAG_HIDE_GOLEM_ALOLA"
     }
   ],
   "warp_events": [
