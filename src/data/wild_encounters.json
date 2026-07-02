@@ -71236,7 +71236,7 @@
               {
                 "min_level": 43,
                 "max_level": 45,
-                "species": "SPECIES_FINNEON"
+                "species": "SPECIES_MANTYKE"
               },
               {
                 "min_level": 43,
@@ -71271,7 +71271,7 @@
               {
                 "min_level": 43,
                 "max_level": 45,
-                "species": "SPECIES_CLAMPERL"
+                "species": "SPECIES_STARYU"
               },
               {
                 "min_level": 43,
@@ -71281,7 +71281,7 @@
               {
                 "min_level": 43,
                 "max_level": 45,
-                "species": "SPECIES_STARMIE"
+                "species": "SPECIES_STARYU"
               },
               {
                 "min_level": 43,
@@ -71291,17 +71291,17 @@
               {
                 "min_level": 43,
                 "max_level": 45,
-                "species": "SPECIES_GOREBYSS"
+                "species": "SPECIES_SEADRA"
               },
               {
                 "min_level": 43,
                 "max_level": 45,
-                "species": "SPECIES_HUNTAIL"
+                "species": "SPECIES_CLAMPERL"
               },
               {
                 "min_level": 43,
                 "max_level": 45,
-                "species": "SPECIES_HUNTAIL"
+                "species": "SPECIES_CLAMPERL"
               }
             ]
           }
