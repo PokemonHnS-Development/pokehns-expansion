@@ -1,39 +1,6 @@
 UlaulaIsle_hns_MapScripts::
 	.byte 0
 
-
-Alola_Ulaula_BattlePalossand::
-	lock
-	faceplayer
-	playmoncry SPECIES_SHUCKLE, 0
-	msgbox Alola_Ulaula_BattlePalossand_Text_0, MSGBOX_AUTOCLOSE
-	waitmoncry
-	setwildbattle SPECIES_SHUCKLE, 45
-	dowildbattle
-	specialvar VAR_RESULT, GetBattleOutcome
-	compare VAR_RESULT, B_OUTCOME_CAUGHT
-	goto_if_eq Alola_Ulaula_BattlePalossand_2
-	compare VAR_RESULT, B_OUTCOME_WON
-	goto_if_eq Alola_Ulaula_BattlePalossand_3
-	release
-	end
-
-	release
-	end
-
-Alola_Ulaula_BattlePalossand_2:
-	setflag FLAG_CAUGHT_PALOSSAND
-	removeobject Alola_Ulaula_Palossand
-	release
-	end
-
-Alola_Ulaula_BattlePalossand_3:
-	setflag FLAG_CAUGHT_PALOSSAND
-	removeobject Alola_Ulaula_Palossand
-	release
-	end
-
-
 Alola_Ulaula_FindItem1::
 	finditem ITEM_FRIEND_BALL, 1
 	end

@@ -15944,7 +15944,7 @@
       "id": "LAYOUT_ULA_ULA_CAVE_2_HNS",
       "name": "UlaUla_Cave_2_hns_Layout",
       "width": 33,
-      "height": 38,
+      "height": 20,
       "primary_tileset": "gTileset_Johto_General_Hns",
       "secondary_tileset": "gTileset_Cave_Green_Hns",
       "border_filepath": "data/layouts/UlaUla_Cave_2_hns/border.bin",

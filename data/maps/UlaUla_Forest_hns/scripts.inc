@@ -8,12 +8,12 @@ UlaUla_Forest_hns_MapScripts_MAP_SCRIPT_ON_TRANSITION:
 	goto_if_eq UlaUla_Forest_hns_MapScripts_MAP_SCRIPT_ON_TRANSITION_1
 	compare VAR_0x8000, TIME_DAY
 	goto_if_eq UlaUla_Forest_hns_MapScripts_MAP_SCRIPT_ON_TRANSITION_1
-	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_SPECIES ( GENGAR )
+	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_SPECIES ( PRIMEAPE )
 	clearflag FLAG_ULAULA_TOTEM_DAY
 	return
 
 UlaUla_Forest_hns_MapScripts_MAP_SCRIPT_ON_TRANSITION_1:
-	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_SPECIES ( VESPIQUEN )
+	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_SPECIES ( TANGROWTH )
 	setflag FLAG_ULAULA_TOTEM_DAY
 	return
 
@@ -49,8 +49,8 @@ Alola_Ulaula_TotemBattle_Trigger_4:
 	goto_if_eq Alola_Ulaula_TotemBattle_Trigger_14
 	compare VAR_0x8000, TIME_DAY
 	goto_if_eq Alola_Ulaula_TotemBattle_Trigger_14
-	playmoncry SPECIES_GENGAR, 0
-	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_SPECIES ( GENGAR )
+	playmoncry SPECIES_PRIMEAPE, 0
+	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_SPECIES ( PRIMEAPE )
 	clearflag FLAG_ULAULA_TOTEM_DAY
 	addobject Ulaula_Totem
 	waitmoncry
@@ -64,7 +64,7 @@ Alola_Ulaula_TotemBattle_Trigger_13:
 	goto_if_eq Alola_Ulaula_TotemBattle_Trigger_20
 	compare VAR_0x8000, TIME_DAY
 	goto_if_eq Alola_Ulaula_TotemBattle_Trigger_20
-	playmoncry SPECIES_GENGAR, 0
+	playmoncry SPECIES_PRIMEAPE, 0
 	applymovement Ulaula_Totem, Alola_Ulaula_TotemBattle_Trigger_Movement_0
 	waitmovement 0
 	waitmoncry
@@ -86,15 +86,15 @@ Alola_Ulaula_TotemBattle_Trigger_10:
 	goto Alola_Ulaula_TotemBattle_Trigger_5
 
 Alola_Ulaula_TotemBattle_Trigger_14:
-	playmoncry SPECIES_VESPIQUEN, 0
-	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_SPECIES ( VESPIQUEN )
+	playmoncry SPECIES_TANGROWTH, 0
+	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_SPECIES ( TANGROWTH )
 	setflag FLAG_ULAULA_TOTEM_DAY
 	addobject Ulaula_Totem
 	waitmoncry
 	goto Alola_Ulaula_TotemBattle_Trigger_13
 
 Alola_Ulaula_TotemBattle_Trigger_20:
-	playmoncry SPECIES_VESPIQUEN, 0
+	playmoncry SPECIES_TANGROWTH, 0
 	applymovement Ulaula_Totem, Alola_Ulaula_TotemBattle_Trigger_Movement_0
 	waitmovement 0
 	waitmoncry
@@ -105,10 +105,10 @@ Alola_Ulaula_TotemBattle::
 	lock
 	faceplayer
 	goto_if_set FLAG_ULAULA_TOTEM_DAY, Alola_Ulaula_TotemBattle_1
-	playmoncry SPECIES_GENGAR, 0
+	playmoncry SPECIES_PRIMEAPE, 0
 	msgbox Alola_Ulaula_TotemBattle_Text_2, MSGBOX_AUTOCLOSE
 	waitmoncry
-	setwildbattle SPECIES_HAUNTER, 60, ITEM_NONE, SPECIES_GENGAR, 60, ITEM_LUM_BERRY
+	setwildbattle SPECIES_MANKEY, 60, ITEM_NONE, SPECIES_PRIMEAPE, 60, ITEM_LUM_BERRY
 	settotemboost B_POSITION_OPPONENT_RIGHT, 1, 1, 1, 1, 1, 1
 	setflag FLAG_NO_WILD_CATCHING
 	setflag FLAG_NO_WILD_RUNNING
@@ -122,10 +122,10 @@ Alola_Ulaula_TotemBattle::
 	return
 
 Alola_Ulaula_TotemBattle_1:
-	playmoncry SPECIES_VESPIQUEN, 0
+	playmoncry SPECIES_TANGROWTH, 0
 	msgbox Alola_Ulaula_TotemBattle_Text_0, MSGBOX_AUTOCLOSE
 	waitmoncry
-	setwildbattle SPECIES_COMBEE, 60, ITEM_NONE, SPECIES_VESPIQUEN, 60, ITEM_OCCA_BERRY
+	setwildbattle SPECIES_TANGELA, 60, ITEM_NONE, SPECIES_TANGROWTH, 60, ITEM_OCCA_BERRY
 	settotemboost B_POSITION_OPPONENT_RIGHT, 1, 1, 1, 1, 1, 1
 	setflag FLAG_NO_WILD_CATCHING
 	setflag FLAG_NO_WILD_RUNNING
@@ -271,17 +271,17 @@ Alola_Ulaula_TotemBattle_Trigger_Movement_0:
 	step_end
 
 Alola_Ulaula_TotemBattle_Text_0:
-	.string "Bee-beep!$"
+	.string "Graah!$"
 
 Alola_Ulaula_TotemBattle_Text_1:
-	.string "Totem Vespiquen was defeated!\n"
+	.string "Totem Tangrowth was defeated!\n"
 	.string "It scampered off somewhere…$"
 
 Alola_Ulaula_TotemBattle_Text_2:
 	.string "Graah!$"
 
 Alola_Ulaula_TotemBattle_Text_3:
-	.string "Totem Gengar was defeated!\n"
+	.string "Totem Primeape was defeated!\n"
 	.string "It scampered off somewhere…$"
 
 Alola_Ulaula_Totem_sign_Text_0:

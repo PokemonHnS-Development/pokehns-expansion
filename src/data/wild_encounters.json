@@ -71340,12 +71340,12 @@
               {
                 "min_level": 43,
                 "max_level": 45,
-                "species": "SPECIES_MAKUHITA"
+                "species": "SPECIES_MANKEY"
               },
               {
                 "min_level": 43,
                 "max_level": 45,
-                "species": "SPECIES_MANKEY"
+                "species": "SPECIES_MAKUHITA"
               },
               {
                 "min_level": 43,
@@ -71370,7 +71370,7 @@
               {
                 "min_level": 43,
                 "max_level": 45,
-                "species": "SPECIES_PRIMEAPE"
+                "species": "SPECIES_MANKEY"
               }
             ]
           },
@@ -71380,7 +71380,7 @@
               {
                 "min_level": 43,
                 "max_level": 45,
-                "species": "SPECIES_BIBAREL"
+                "species": "SPECIES_WINGULL"
               },
               {
                 "min_level": 43,
@@ -71390,17 +71390,17 @@
               {
                 "min_level": 43,
                 "max_level": 45,
-                "species": "SPECIES_GASTRODON_EAST"
+                "species": "SPECIES_KINGLER"
               },
               {
                 "min_level": 43,
                 "max_level": 45,
-                "species": "SPECIES_SHELLOS_EAST"
+                "species": "SPECIES_KRABBY"
               },
               {
                 "min_level": 43,
                 "max_level": 45,
-                "species": "SPECIES_SHELLOS_EAST"
+                "species": "SPECIES_KRABBY"
               }
             ]
           },
@@ -71425,7 +71425,7 @@
               {
                 "min_level": 43,
                 "max_level": 45,
-                "species": "SPECIES_CLAMPERL"
+                "species": "SPECIES_REMORAID"
               },
               {
                 "min_level": 43,
@@ -71445,17 +71445,17 @@
               {
                 "min_level": 43,
                 "max_level": 45,
-                "species": "SPECIES_GOREBYSS"
+                "species": "SPECIES_CLOYSTER"
               },
               {
                 "min_level": 43,
                 "max_level": 45,
-                "species": "SPECIES_HUNTAIL"
+                "species": "SPECIES_CLAMPERL"
               },
               {
                 "min_level": 43,
                 "max_level": 45,
-                "species": "SPECIES_MILOTIC"
+                "species": "SPECIES_CLAMPERL"
               }
             ]
           }
@@ -71771,7 +71771,17 @@
               {
                 "min_level": 43,
                 "max_level": 45,
-                "species": "SPECIES_SNORUNT"
+                "species": "SPECIES_SANDSHREW_ALOLA"
+              },
+              {
+                "min_level": 43,
+                "max_level": 45,
+                "species": "SPECIES_VULPIX_ALOLA"
+              },
+              {
+                "min_level": 43,
+                "max_level": 45,
+                "species": "SPECIES_DELIBIRD"
               },
               {
                 "min_level": 43,
@@ -71781,42 +71791,32 @@
               {
                 "min_level": 43,
                 "max_level": 45,
+                "species": "SPECIES_SANDSLASH_ALOLA"
+              },
+              {
+                "min_level": 43,
+                "max_level": 45,
+                "species": "SPECIES_NINETALES_ALOLA"
+              },
+              {
+                "min_level": 43,
+                "max_level": 45,
+                "species": "SPECIES_SNORUNT"
+              },
+              {
+                "min_level": 43,
+                "max_level": 45,
                 "species": "SPECIES_LOUDRED"
               },
               {
                 "min_level": 43,
                 "max_level": 45,
-                "species": "SPECIES_SANDSHREW_ALOLA"
+                "species": "SPECIES_SNORUNT"
               },
               {
                 "min_level": 43,
                 "max_level": 45,
-                "species": "SPECIES_ABSOL"
-              },
-              {
-                "min_level": 43,
-                "max_level": 45,
-                "species": "SPECIES_VULPIX_ALOLA"
-              },
-              {
-                "min_level": 43,
-                "max_level": 45,
-                "species": "SPECIES_VULPIX_ALOLA"
-              },
-              {
-                "min_level": 43,
-                "max_level": 45,
-                "species": "SPECIES_ABSOL"
-              },
-              {
-                "min_level": 43,
-                "max_level": 45,
-                "species": "SPECIES_ABSOL"
-              },
-              {
-                "min_level": 43,
-                "max_level": 45,
-                "species": "SPECIES_ABSOL"
+                "species": "SPECIES_LOUDRED"
               }
             ]
           }
