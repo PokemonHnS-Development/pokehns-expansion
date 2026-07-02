@@ -2622,6 +2622,27 @@ const struct Tileset gTileset_ssaqua_Hns =
     .callback = NULL,
 };
 
+const struct Tileset gTileset_AlolaIsland =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_AlolaIsland,
+    .palettes = gTilesetPalettes_AlolaIsland,
+    .metatiles = gMetatiles_AlolaIsland,
+    .metatileAttributes = gMetatileAttributes_AlolaIsland,
+    .callback = InitTilesetAnim_AlolaIslands,
+};
+
+const struct Tileset gTileset_AlolaIslandSecondary =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_AlolaIslandSecondary,
+    .palettes = gTilesetPalettes_AlolaIslandSecondary,
+    .metatiles = gMetatiles_AlolaIslandSecondary,
+    .metatileAttributes = gMetatileAttributes_AlolaIslandSecondary,
+    .callback = NULL,
+};
 const struct Tileset gTileset_Route40_Hns =
 {
     .isCompressed = TRUE,

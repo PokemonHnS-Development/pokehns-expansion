@@ -2482,6 +2482,9 @@
 #define FLAG_DISABLE_TRAINERS                   (ENGINE_FLAGS_START + 6)
 #define FLAG_LIMIT_TO_50                        (ENGINE_FLAGS_START + 7)
 #define FLAG_EXP_SHARE_ENABLED                  (ENGINE_FLAGS_START + 8)
+#define FLAG_SMART_WILD_AI                      (ENGINE_FLAGS_START + 9)
+#define FLAG_NO_WILD_RUNNING                      (ENGINE_FLAGS_START + 10)
+#define FLAG_NO_WILD_CATCHING                      (ENGINE_FLAGS_START + 11)
 #define ENGINE_FLAGS_END                        (ENGINE_FLAGS_START + NUM_ENGINE_FLAGS - 1)
 
 #define FLAGS_COUNT (ENGINE_FLAGS_END + 1)

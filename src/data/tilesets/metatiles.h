@@ -702,6 +702,12 @@ const u16 gMetatileAttributes_WhirlIslands_Hns[] = INCBIN_U16("data/tilesets/sec
 const u16 gMetatiles_ssaqua_Hns[] = INCBIN_U16("data/tilesets/secondary/ssaqua_hns/metatiles.bin");
 const u16 gMetatileAttributes_ssaqua_Hns[] = INCBIN_U16("data/tilesets/secondary/ssaqua_hns/metatile_attributes.bin");
 
+const u16 gMetatiles_AlolaIsland[] = INCBIN_U16("data/tilesets/primary/alola_island/metatiles.bin");
+const u16 gMetatileAttributes_AlolaIsland[] = INCBIN_U16("data/tilesets/primary/alola_island/metatile_attributes.bin");
+
+const u16 gMetatiles_AlolaIslandSecondary[] = INCBIN_U16("data/tilesets/secondary/alola_island_secondary/metatiles.bin");
+const u16 gMetatileAttributes_AlolaIslandSecondary[] = INCBIN_U16("data/tilesets/secondary/alola_island_secondary/metatile_attributes.bin");
+
 const u16 gMetatiles_Route40_Hns[] = INCBIN_U16("data/tilesets/secondary/route_40_hns/metatiles.bin");
 const u16 gMetatileAttributes_Route40_Hns[] = INCBIN_U16("data/tilesets/secondary/route_40_hns/metatile_attributes.bin");
 

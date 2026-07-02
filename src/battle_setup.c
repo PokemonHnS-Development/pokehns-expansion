@@ -610,6 +610,12 @@ void BattleSetup_StartLegendaryBattle(void)
 
     switch (GetMonData(&gEnemyParty[0], MON_DATA_SPECIES))
     {
+    case SPECIES_TAPU_KOKO:
+    case SPECIES_TAPU_LELE:
+    case SPECIES_TAPU_BULU:
+    case SPECIES_TAPU_FINI:
+        CreateBattleStartTask(B_TRANSITION_BLUR, MUS_HG_VS_RAIKOU);
+        break;
     case SPECIES_GROUDON:
     case SPECIES_GROUDON_PRIMAL:
         CreateBattleStartTask(B_TRANSITION_GROUDON, MUS_VS_KYOGRE_GROUDON);
@@ -847,6 +853,9 @@ static const struct {
     {MAP_SAFARI_ZONE_LOW_RIGHT_HNS,              BATTLE_ENVIRONMENT_GRAY_CAVE},
     {MAP_FUCHSIA_CITY_SAFARI_ZONE_CAVE_HNS,      BATTLE_ENVIRONMENT_GRAY_CAVE},
     {MAP_RUINS_OF_ALPH_B1F_HNS,                  BATTLE_ENVIRONMENT_GRAY_CAVE},
+    {MAP_ULA_ULA_CAVE_HNS,                       BATTLE_ENVIRONMENT_GRAY_CAVE},
+    {MAP_ULA_ULA_CAVE_2_HNS,                     BATTLE_ENVIRONMENT_GRAY_CAVE},
+    {MAP_AKALA_CAVE_HNS,                         BATTLE_ENVIRONMENT_GRAY_CAVE},
     // BLUE_BUILDING (22 maps)
     {MAP_ROCKET_HIDEOUT_B1F_HNS,                  BATTLE_ENVIRONMENT_BLUE_BUILDING},
     {MAP_ROCKET_HIDEOUT_B2F_HNS,                  BATTLE_ENVIRONMENT_BLUE_BUILDING},
@@ -875,6 +884,10 @@ static const struct {
     // MOUNTAIN_SNOW (2 maps)
     {MAP_MT_SILVER_SUMMIT_DAY_HNS,               BATTLE_ENVIRONMENT_MOUNTAIN_SNOW},
     {MAP_MT_SILVER_SUMMIT_NIGHT_HNS,             BATTLE_ENVIRONMENT_MOUNTAIN_SNOW},
+    // VOLCANO_CAVE
+    {MAP_AKALA_CAVE_HNS,                         BATTLE_ENVIRONMENT_VOLCANO_CAVE},
+    // SNOW_CAVE
+    {MAP_ULA_ULA_CAVE_HNS,                       BATTLE_ENVIRONMENT_SNOW_CAVE},
 };
 
 static s32 GetMapDefaultEnvironment(u16 mapId)

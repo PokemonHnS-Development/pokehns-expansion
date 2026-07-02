@@ -592,8 +592,29 @@
 #define TRAINER_JOEL_3_HNS                             584
 #define TRAINER_CHARLES_2_HNS                          585
 #define TRAINER_CHARLES_3_HNS                          586
+#define TRAINER_SAMSON_OAK_HNS                         587
+#define TRAINER_PHANTONOMY_UNUSED_HNS                         588
+#define TRAINER_MELEMELE_SWIMMER_1_HNS                 589
+#define TRAINER_MELEMELE_SWIMMER_2_HNS                 590
+#define TRAINER_AKALA_SWIMMER_1_HNS                    591
+#define TRAINER_AKALA_SWIMMER_2_HNS                    592
+#define TRAINER_PONI_SWIMMER_1_HNS                     593
+#define TRAINER_PONI_SWIMMER_2_HNS                     594
+#define TRAINER_AKALA_HIKER_HNS                        595
+#define TRAINER_AKALA_PICNICKER_HNS                    596
+#define TRAINER_AKALA_CAMPER_HNS                       597
+#define TRAINER_AKALA_FOREST_BUGCATCHER_1_HNS          598
+#define TRAINER_AKALA_FOREST_BUGCATCHER_2_HNS          599
+#define TRAINER_AKALA_CAVE_PICNICKER_HNS               600
+#define TRAINER_AKALA_CAVE_CAMPER_HNS                  601
+#define TRAINER_AKALA_CAVE_HIKER_HNS                   602
+#define TRAINER_ULAULA_PICNICKER_HNS                   603
+#define TRAINER_ULAULA_YOUNGSTER_HNS                   604
+#define TRAINER_ULAULA_HIKER_HNS                       605
+#define TRAINER_ULAULA_COOLTRAINER_HNS                 606
+#define TRAINER_AKALA_SWIMMER_3_HNS                    607
 
-#define TRAINERS_COUNT_HNS                       587
+#define TRAINERS_COUNT_HNS                       608
 #define MAX_TRAINERS_COUNT_HNS                   864
 
 #endif  // GUARD_CONSTANTS_OPPONENTS_HNS_H

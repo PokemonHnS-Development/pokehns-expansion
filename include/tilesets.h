@@ -145,6 +145,7 @@ extern const struct Tileset gTileset_ViridianCity_Gym_Hns;
 extern const struct Tileset gTileset_ViridianForest;
 extern const struct Tileset gTileset_WhirlIslands_Hns;
 extern const struct Tileset gTileset_ssaqua_Hns;
+extern const struct Tileset gTileset_AlolaIsland;
 
 
 // HnS tileset declarations

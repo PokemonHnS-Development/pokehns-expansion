@@ -12,9 +12,10 @@
   "allow_running": true,
   "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": 0,
+  "connections": null,
   "object_events": [
     {
+      "local_id": "LOCALID_MOM",
       "graphics_id": "OBJ_EVENT_GFX_MOM_HNS",
       "x": 2,
       "y": 2,
@@ -25,10 +26,10 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NewBarkTown_PlayersHouse_1F_EventScript_Mom",
-      "flag": "0",
-      "local_id": "LOCALID_MOM"
+      "flag": "0"
     },
     {
+      "local_id": "LOCALID_MOMS_FRIEND",
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_2_HNS",
       "x": 5,
       "y": 4,
@@ -39,8 +40,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NewBarkTown_PlayersHouse_1F_EventScript_MomsFriend",
-      "flag": "FLAG_HIDE_MOMS_FRIEND",
-      "local_id": "LOCALID_MOMS_FRIEND"
+      "flag": "FLAG_HIDE_MOMS_FRIEND"
     }
   ],
   "warp_events": [

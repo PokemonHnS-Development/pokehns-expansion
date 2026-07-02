@@ -1671,6 +1671,57 @@
       "name": "NAVEL ROCK"
     },
     {
+      "id": "MAPSEC_MELEMELE_ISLAND",
+      "name": "MELEMELE ISLE",
+      "in_hns": true,
+      "region": "REGION_ALOLA"
+    },
+    {
+      "id": "MAPSEC_AKALA_ISLAND",
+      "name": "AKALA ISLE",
+      "in_hns": true
+    },
+    {
+      "id": "MAPSEC_ULAULA_ISLAND",
+      "name": "ULA'ULA ISLE",
+      "in_hns": true
+    },
+    {
+      "id": "MAPSEC_PONI_ISLAND",
+      "name": "PONI ISLE",
+      "in_hns": true
+    },
+    {
+      "id": "MAPSEC_ALOLA_OCEAN",
+      "name": "MELMELE SEA",
+      "in_hns": true
+    },
+    {
+      "id": "MAPSEC_AKALA_CAVE",
+      "name": "AKALA CAVE",
+      "in_hns": true
+    },
+    {
+      "id": "MAPSEC_AKALA_FOREST",
+      "name": "AKALA FOREST",
+      "in_hns": true
+    },
+    {
+      "id": "MAPSEC_PONI_CAVE",
+      "name": "PONI CAVE",
+      "in_hns": true
+    },
+    {
+      "id": "MAPSEC_ULAULA_CAVE",
+      "name": "MT. LANIKALA",
+      "in_hns": true
+    },
+    {
+      "id": "MAPSEC_ULAULA_CAVE_2",
+      "name": "ULA'ULA CAVE",
+      "in_hns": true
+    },
+    {
       "id": "MAPSEC_TRAINER_HILL",
       "name": "TRAINER HILL",
       "x": 8,
@@ -1744,6 +1795,47 @@
       "width": 1,
       "x": 5,
       "y": 3
+    },
+    {
+      "id": "MAPSEC_MELEMELE_ISLAND",
+      "name": "MELEMELE ISLE",
+      "region": "REGION_ALOLA"
+    },
+    {
+      "id": "MAPSEC_AKALA_ISLAND",
+      "name": "AKALA ISLE"
+    },
+    {
+      "id": "MAPSEC_ULAULA_ISLAND",
+      "name": "ULA'ULA ISLE"
+    },
+    {
+      "id": "MAPSEC_PONI_ISLAND",
+      "name": "PONI ISLE"
+    },
+    {
+      "id": "MAPSEC_ALOLA_OCEAN",
+      "name": "MELEMELE SEA"
+    },
+    {
+      "id": "MAPSEC_AKALA_CAVE",
+      "name": "AKALA CAVE"
+    },
+    {
+      "id": "MAPSEC_AKALA_FOREST",
+      "name": "AKALA FOREST"
+    },
+    {
+      "id": "MAPSEC_PONI_CAVE",
+      "name": "PONI CAVE"
+    },
+    {
+      "id": "MAPSEC_ULAULA_CAVE",
+      "name": "MT. LANIKALA"
+    },
+    {
+      "id": "MAPSEC_ULAULA_CAVE_2",
+      "name": "ULA'ULA CAVE"
     },
     {
       "height": 1,

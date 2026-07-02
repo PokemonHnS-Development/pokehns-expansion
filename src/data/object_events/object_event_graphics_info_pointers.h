@@ -551,6 +551,7 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_KrisFieldMo
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_KrisFishing_hns;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_KrisWatering_hns;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_KrisDecorating_hns;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AlolaOak_hns;
 
 const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM_OBJ_EVENT_GFX] = {
     [OBJ_EVENT_GFX_BRENDAN_NORMAL] =           &gObjectEventGraphicsInfo_BrendanNormal,
@@ -1074,6 +1075,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_MART_LIGHT_HNS] =        &gObjectEventGraphicsInfo_MartLight_Hns,
     [OBJ_EVENT_GFX_POKE_CENTER_LIGHT_HNS] = &gObjectEventGraphicsInfo_PokeCenterLight_Hns,
     [OBJ_EVENT_GFX_SMALL_LIGHT_HNS] =       &gObjectEventGraphicsInfo_SmallLight_Hns,
+    [OBJ_EVENT_GFX_ALOLA_OAK_HNS] =         &gObjectEventGraphicsInfo_AlolaOak_hns,
     // HnS protagonists
     [OBJ_EVENT_GFX_GOLD_NORMAL_HNS] =       &gObjectEventGraphicsInfo_GoldNormal_hns,
     [OBJ_EVENT_GFX_GOLD_MACH_BIKE_HNS] =    &gObjectEventGraphicsInfo_GoldMachBike_hns,

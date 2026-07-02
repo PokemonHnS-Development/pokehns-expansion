@@ -1063,7 +1063,7 @@ gStdScripts_End::
 EventScript_WhiteOut::
 	call EverGrandeCity_HallOfFame_EventScript_ResetEliteFour
 .if IS_HNS
-	clearflag FLAG_SYS_NO_CATCHING
+	clearflag FLAG_NO_WILD_CATCHING
 	clearflag FLAG_NO_SHINY
 .endif
 	goto EventScript_ResetMrBriney
@@ -2348,3 +2348,45 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 
 .endif
 
+
+	.include "data/maps/PoniIsle_hns/scripts.inc"
+
+	.include "data/maps/MelemeleIsle_hns/scripts.inc"
+
+	.include "data/maps/AlolaWater_hns/scripts.inc"
+
+	.include "data/maps/Alola_hns/scripts.inc"
+
+	.include "data/maps/AkalaIsle_hns/scripts.inc"
+
+	.include "data/maps/UlaulaIsle_hns/scripts.inc"
+
+	.include "data/maps/Melemele_PlayerHouse_hns/scripts.inc"
+
+	.include "data/maps/Melemele_House_hns/scripts.inc"
+
+	.include "data/maps/Melemele_House_4_hns/scripts.inc"
+
+	.include "data/maps/Melemele_House_2_hns/scripts.inc"
+
+	.include "data/maps/Melemele_House_3_hns/scripts.inc"
+
+	.include "data/maps/Melemele_House_5_hns/scripts.inc"
+
+	.include "data/maps/Melemele_House_6_hns/scripts.inc"
+
+	.include "data/maps/Akala_House_hns/scripts.inc"
+
+	.include "data/maps/UlaUla_House_hns/scripts.inc"
+
+	.include "data/maps/Poni_Cave_hns/scripts.inc"
+
+	.include "data/maps/Akala_Forest_hns/scripts.inc"
+
+	.include "data/maps/UlaUla_Cave_hns/scripts.inc"
+
+	.include "data/maps/UlaUla_Forest_hns/scripts.inc"
+
+	.include "data/maps/UlaUla_Cave_2_hns/scripts.inc"
+
+	.include "data/maps/Akala_Cave_hns/scripts.inc"

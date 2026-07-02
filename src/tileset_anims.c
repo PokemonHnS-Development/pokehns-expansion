@@ -1809,5 +1809,101 @@ static void QueueAnimTiles_BlackthornGym_Lava(u16 timer)
     u16 i = timer % ARRAY_COUNT(gTilesetAnims_Lavaridge_Cave_Lava);
     AppendTilesetAnimToBuffer(gTilesetAnims_Lavaridge_Cave_Lava[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(sSecondaryTilesetBaseTile + 321)), 4 * TILE_SIZE_4BPP);
 }
+// Alola Islands primary tileset anims
+
+static void TilesetAnim_AlolaIslands(u16);
+
+static void QueueAnimTiles_AlolaIslands_Flower(u16);
+static void QueueAnimTiles_AlolaIslands_Water(u16);
+static void QueueAnimTiles_AlolaIslands_SandWaterEdge(u16);
+
+const u16 gTilesetAnims_AlolaIslands_Flower_Frame1[] = INCBIN_U16("data/tilesets/primary/alola_island/anim/flower/1.4bpp");
+const u16 gTilesetAnims_AlolaIslands_Flower_Frame0[] = INCBIN_U16("data/tilesets/primary/alola_island/anim/flower/0.4bpp");
+const u16 gTilesetAnims_AlolaIslands_Flower_Frame2[] = INCBIN_U16("data/tilesets/primary/alola_island/anim/flower/2.4bpp");
+const u16 gTilesetAnims_AlolaIslands_Flower_Frame3[] = INCBIN_U16("data/tilesets/primary/alola_island/anim/flower/3.4bpp");
+const u16 gTilesetAnims_AlolaIslands_Flower_Frame4[] = INCBIN_U16("data/tilesets/primary/alola_island/anim/flower/4.4bpp");
+
+const u16 *const gTilesetAnims_AlolaIslands_Flower[] = {
+    gTilesetAnims_AlolaIslands_Flower_Frame0,
+    gTilesetAnims_AlolaIslands_Flower_Frame1,
+    gTilesetAnims_AlolaIslands_Flower_Frame2,
+    gTilesetAnims_AlolaIslands_Flower_Frame3,
+    gTilesetAnims_AlolaIslands_Flower_Frame4,
+};
+
+const u16 gTilesetAnims_AlolaIslands_Water_Frame0[] = INCBIN_U16("data/tilesets/primary/alola_island/anim/water_current_landwatersedge/0.4bpp");
+const u16 gTilesetAnims_AlolaIslands_Water_Frame1[] = INCBIN_U16("data/tilesets/primary/alola_island/anim/water_current_landwatersedge/1.4bpp");
+const u16 gTilesetAnims_AlolaIslands_Water_Frame2[] = INCBIN_U16("data/tilesets/primary/alola_island/anim/water_current_landwatersedge/2.4bpp");
+const u16 gTilesetAnims_AlolaIslands_Water_Frame3[] = INCBIN_U16("data/tilesets/primary/alola_island/anim/water_current_landwatersedge/3.4bpp");
+const u16 gTilesetAnims_AlolaIslands_Water_Frame4[] = INCBIN_U16("data/tilesets/primary/alola_island/anim/water_current_landwatersedge/4.4bpp");
+const u16 gTilesetAnims_AlolaIslands_Water_Frame5[] = INCBIN_U16("data/tilesets/primary/alola_island/anim/water_current_landwatersedge/5.4bpp");
+const u16 gTilesetAnims_AlolaIslands_Water_Frame6[] = INCBIN_U16("data/tilesets/primary/alola_island/anim/water_current_landwatersedge/6.4bpp");
+const u16 gTilesetAnims_AlolaIslands_Water_Frame7[] = INCBIN_U16("data/tilesets/primary/alola_island/anim/water_current_landwatersedge/7.4bpp");
+
+const u16 *const gTilesetAnims_AlolaIslands_Water[] = {
+    gTilesetAnims_AlolaIslands_Water_Frame0,
+    gTilesetAnims_AlolaIslands_Water_Frame1,
+    gTilesetAnims_AlolaIslands_Water_Frame2,
+    gTilesetAnims_AlolaIslands_Water_Frame3,
+    gTilesetAnims_AlolaIslands_Water_Frame4,
+    gTilesetAnims_AlolaIslands_Water_Frame5,
+    gTilesetAnims_AlolaIslands_Water_Frame6,
+    gTilesetAnims_AlolaIslands_Water_Frame7
+};
+
+const u16 gTilesetAnims_AlolaIslands_SandWaterEdge_Frame0[] = INCBIN_U16("data/tilesets/primary/alola_island/anim/sandwatersedge/0.4bpp");
+const u16 gTilesetAnims_AlolaIslands_SandWaterEdge_Frame1[] = INCBIN_U16("data/tilesets/primary/alola_island/anim/sandwatersedge/1.4bpp");
+const u16 gTilesetAnims_AlolaIslands_SandWaterEdge_Frame2[] = INCBIN_U16("data/tilesets/primary/alola_island/anim/sandwatersedge/2.4bpp");
+const u16 gTilesetAnims_AlolaIslands_SandWaterEdge_Frame3[] = INCBIN_U16("data/tilesets/primary/alola_island/anim/sandwatersedge/3.4bpp");
+const u16 gTilesetAnims_AlolaIslands_SandWaterEdge_Frame4[] = INCBIN_U16("data/tilesets/primary/alola_island/anim/sandwatersedge/4.4bpp");
+const u16 gTilesetAnims_AlolaIslands_SandWaterEdge_Frame5[] = INCBIN_U16("data/tilesets/primary/alola_island/anim/sandwatersedge/5.4bpp");
+const u16 gTilesetAnims_AlolaIslands_SandWaterEdge_Frame6[] = INCBIN_U16("data/tilesets/primary/alola_island/anim/sandwatersedge/6.4bpp");
+const u16 gTilesetAnims_AlolaIslands_SandWaterEdge_Frame7[] = INCBIN_U16("data/tilesets/primary/alola_island/anim/sandwatersedge/7.4bpp");
+
+const u16 *const gTilesetAnims_AlolaIslands_SandWaterEdge[] = {
+    gTilesetAnims_AlolaIslands_SandWaterEdge_Frame0,
+    gTilesetAnims_AlolaIslands_SandWaterEdge_Frame1,
+    gTilesetAnims_AlolaIslands_SandWaterEdge_Frame2,
+    gTilesetAnims_AlolaIslands_SandWaterEdge_Frame3,
+    gTilesetAnims_AlolaIslands_SandWaterEdge_Frame4,
+    gTilesetAnims_AlolaIslands_SandWaterEdge_Frame5,
+    gTilesetAnims_AlolaIslands_SandWaterEdge_Frame6,
+    gTilesetAnims_AlolaIslands_SandWaterEdge_Frame7,
+};
+
+void InitTilesetAnim_AlolaIslands(void)
+{
+    sPrimaryTilesetAnimCounter = 0;
+    sPrimaryTilesetAnimCounterMax = 256;
+    sPrimaryTilesetAnimCallback = TilesetAnim_AlolaIslands;
+}
+
+static void TilesetAnim_AlolaIslands(u16 timer)
+{
+    if (timer % 16 == 0)
+        QueueAnimTiles_AlolaIslands_Flower(timer / 16);
+    if (timer % 16 == 1)
+        QueueAnimTiles_AlolaIslands_Water(timer / 16);
+    if (timer % 16 == 2)
+        QueueAnimTiles_AlolaIslands_SandWaterEdge(timer / 16);
+}
+
+static void QueueAnimTiles_AlolaIslands_Flower(u16 timer)
+{
+    u16 i = timer % ARRAY_COUNT(gTilesetAnims_AlolaIslands_Flower);
+    AppendTilesetAnimToBuffer(gTilesetAnims_AlolaIslands_Flower[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(508)), 4 * TILE_SIZE_4BPP);
+}
+
+static void QueueAnimTiles_AlolaIslands_Water(u16 timer)
+{
+    u8 i = timer % ARRAY_COUNT(gTilesetAnims_AlolaIslands_Water);
+    AppendTilesetAnimToBuffer(gTilesetAnims_AlolaIslands_Water[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(416)), 48 * TILE_SIZE_4BPP); //30
+}
+
+static void QueueAnimTiles_AlolaIslands_SandWaterEdge(u16 timer)
+{
+    u16 i = timer % ARRAY_COUNT(gTilesetAnims_AlolaIslands_SandWaterEdge);
+    AppendTilesetAnimToBuffer(gTilesetAnims_AlolaIslands_SandWaterEdge[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(464)), 10 * TILE_SIZE_4BPP);
+}
 
 #endif // IS_HNS

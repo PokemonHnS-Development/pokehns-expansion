@@ -561,6 +561,12 @@
       "map": "MAP_BATTLE_FRONTIER_OUTSIDE_EAST_HNS",
       "x": 12,
       "y": 46
+    },
+    {
+      "id": "HEAL_LOCATION_MELEMELE_ISLE_HNS",
+      "map": "MAP_MELEMELE_ISLE_HNS",
+      "x": 28,
+      "y": 7
     }
   ]
 }

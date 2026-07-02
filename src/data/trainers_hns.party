@@ -13431,3 +13431,399 @@ Level: 61
 
 Mightyena
 Level: 63
+
+
+=== TRAINER_SAMSON_OAK_HNS ===
+Name: SAMSON OAK
+Class: Professor Hns
+Pic: Samson Oak Hns
+Gender: Male
+Music: Elite Four
+Double Battle: No
+AI: Check Bad Move
+
+Raichu Alola
+Level: 60
+
+Exeggutor Alola
+Level: 65
+
+Ninetales Alola
+Level: 63
+
+Golem Alola
+Level: 65
+
+Muk Alola
+Level: 65
+
+Tropius
+Level: 67
+
+=== TRAINER_PHANTONOMY_UNUSED_HNS ===
+Name: PHANTONOMY
+Class: Developer Hns
+Pic: Scientist Frlg
+Gender: Male
+Music: Hg Champion
+Double Battle: No
+AI: Smart Trainer
+
+Flygon @ Assault Vest
+Level: 70
+
+Typhlosion Hisui @ Focus Sash
+Level: 70
+
+Arbok
+Level: 70
+
+Aggron
+Level: 70
+
+Sharpedo
+Level: 70
+
+Noivern @ Choice Specs
+Level: 70
+EVs: 0 HP / 0 Atk / 0 Def / 255 SpA / 6 SpD / 255 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Shiny: Yes
+
+=== TRAINER_MELEMELE_SWIMMER_1_HNS ===
+Name: MIA
+Class: Swimmer F Hns
+Pic: Swimmer F
+Gender: Female
+Music: Hg Girl 2
+Double Battle: No
+AI: Check Bad Move
+
+Mantine
+Level: 52
+
+Politoed
+Level: 54
+
+Luvdisc
+Level: 50
+
+=== TRAINER_MELEMELE_SWIMMER_2_HNS ===
+Name: JIMMY
+Class: Swimmer M Hns
+Pic: Swimmer M
+Gender: Male
+Music: Hg Boy 2
+Double Battle: No
+AI: Check Bad Move
+
+Pelipper
+Level: 53
+
+Poliwrath
+Level: 55
+
+Huntail
+Level: 51
+
+=== TRAINER_AKALA_SWIMMER_1_HNS ===
+Name: KELSIE
+Class: Swimmer F Hns
+Pic: Swimmer F
+Gender: Female
+Music: Hg Girl 2
+Double Battle: No
+AI: Check Bad Move
+
+Starmie
+Level: 54
+
+Seaking
+Level: 52
+
+Golduck
+Level: 53
+
+=== TRAINER_AKALA_SWIMMER_2_HNS ===
+Name: PORTIA
+Class: Swimmer F Hns
+Pic: Swimmer F
+Gender: Female
+Music: Hg Girl 2
+Double Battle: No
+AI: Check Bad Move
+
+Corsola
+Level: 50
+
+Octillery
+Level: 53
+
+Raticate Alola
+Level: 51
+
+=== TRAINER_AKALA_SWIMMER_3_HNS ===
+Name: GEOFF
+Class: Swimmer M Hns
+Pic: Swimmer M
+Gender: Male
+Music: Hg Boy 2
+Double Battle: No
+AI: Check Bad Move
+
+Gyarados
+Level: 56
+
+Tentacruel
+Level: 54
+
+Persian Alola
+Level: 52
+
+=== TRAINER_PONI_SWIMMER_1_HNS ===
+Name: JADE
+Class: Swimmer F Hns
+Pic: Swimmer F
+Gender: Female
+Music: Hg Girl 2
+Double Battle: No
+AI: Check Bad Move
+
+Gorebyss
+Level: 53
+
+Luvdisc
+Level: 51
+
+Milotic
+Level: 56
+
+=== TRAINER_PONI_SWIMMER_2_HNS ===
+Name: RODDY
+Class: Tuber M
+Pic: Tuber M
+Gender: Male
+Music: Hg Boy 2
+Double Battle: No
+AI: Check Bad Move
+
+Corsola
+Level: 50
+
+Mantine
+Level: 52
+
+Politoed
+Level: 54
+
+
+=== TRAINER_AKALA_HIKER_HNS ===
+Name: IAN
+Class: Hiker Hns
+Pic: Hiker
+Gender: Male
+Music: Hg Suspicious 2
+Double Battle: No
+AI: Check Bad Move
+
+Solrock
+Level: 53
+
+Lunatone
+Level: 53
+
+Magmar
+Level: 56
+
+=== TRAINER_AKALA_PICNICKER_HNS ===
+Name: TATIANA
+Class: Picnicker Hns
+Pic: Picnicker
+Gender: Female
+Music: Hg Girl 1
+Double Battle: No
+AI: Check Bad Move
+
+Dustox
+Level: 52
+
+Pinsir
+Level: 54
+
+Ludicolo
+Level: 55
+
+=== TRAINER_AKALA_CAMPER_HNS ===
+Name: OLIVER
+Class: Camper Hns
+Pic: Camper
+Gender: Male
+Music: Hg Boy 1
+Double Battle: No
+AI: Check Bad Move
+
+Swellow
+Level: 54
+
+Beedrill
+Level: 56
+
+Dustox
+Level: 51
+
+=== TRAINER_AKALA_FOREST_BUGCATCHER_1_HNS ===
+Name: STANLEY
+Class: Bug Catcher Hns
+Pic: Bug Catcher
+Gender: Male
+Music: Hg Boy 1
+Double Battle: No
+AI: Check Bad Move
+
+Pinsir
+Level: 55
+
+Scyther
+Level: 57
+
+
+=== TRAINER_AKALA_FOREST_BUGCATCHER_2_HNS ===
+Name: SCOTTY
+Class: Bug Catcher Hns
+Pic: Bug Catcher
+Gender: Male
+Music: Hg Boy 1
+Double Battle: No
+AI: Check Bad Move
+
+Butterfree
+Level: 54
+
+Heracross
+Level: 58
+
+=== TRAINER_AKALA_CAVE_PICNICKER_HNS ===
+Name: MELISSA
+Class: Picnicker Hns
+Pic: Picnicker
+Gender: Female
+Music: Hg Girl 1
+Double Battle: No
+AI: Check Bad Move
+
+Mankey
+Level: 51
+
+Tangrowth
+Level: 55
+
+Tropius
+Level: 53
+
+=== TRAINER_AKALA_CAVE_CAMPER_HNS ===
+Name: RONNY
+Class: Camper Hns
+Pic: Camper
+Gender: Male
+Music: Hg Boy 1
+Double Battle: No
+AI: Check Bad Move
+
+Primeape
+Level: 54
+
+Hariyama
+Level: 56
+
+Machoke
+Level: 52
+
+=== TRAINER_AKALA_CAVE_HIKER_HNS ===
+Name: FRANK
+Class: Hiker Hns
+Pic: Hiker
+Gender: Male
+Music: Hg Suspicious 2
+Double Battle: No
+AI: Check Bad Move
+
+Kangaskhan
+Level: 56
+
+Lunatone
+Level: 52
+
+Solrock
+Level: 52
+
+=== TRAINER_ULAULA_PICNICKER_HNS ===
+Name: MELISSA
+Class: Picnicker Hns
+Pic: Picnicker
+Gender: Female
+Music: Hg Girl 1
+Double Battle: No
+AI: Check Bad Move
+
+Swellow
+Level: 53
+
+Tangela
+Level: 50
+
+Miltank
+Level: 55
+
+=== TRAINER_ULAULA_YOUNGSTER_HNS ===
+Name: JOEY
+Class: Youngster Hns
+Pic: Youngster Hns
+Gender: Male
+Music: Hg Boy 1
+Double Battle: No
+AI: Check Bad Move
+
+Scizor
+Level: 57
+
+Leafeon
+Level: 54
+
+Raticate Alola
+Level: 51
+
+=== TRAINER_ULAULA_HIKER_HNS ===
+Name: FRANK
+Class: Hiker Hns
+Pic: Hiker
+Gender: Male
+Music: Hg Suspicious 2
+Double Battle: No
+AI: Check Bad Move
+
+Magmar
+Level: 55
+
+Electabuzz
+Level: 55
+
+Mawile
+Level: 53
+
+=== TRAINER_ULAULA_COOLTRAINER_HNS ===
+Name: LOIS
+Class: Cooltrainer Hns
+Pic: Cooltrainer F
+Gender: Female
+Music: Hg Girl 2
+Double Battle: No
+AI: Check Bad Move
+
+Skarmory
+Level: 57
+
+Primeape
+Level: 54
+
+Tauros
+Level: 60

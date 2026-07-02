@@ -25,6 +25,8 @@
     "gMapGroup_IndoorJohtoRoutes_Hns",
     "gMapGroup_IndoorKantoRoutes_Hns",
     "gMapGroup_Dungeons_Hns",
+    "gMapGrouop_OutdoorAlola_Hns",
+    "gMapGroup_IndoorAlola_Hns",
     "gMapGroup_IndoorDynamic_Hns",
     "gMapGroup_SpecialArea_Hns",
     "gMapGroup_TownsAndRoutes",
@@ -551,6 +553,31 @@
     "RuinsOfAlph_WordsRoom3_hns",
     "RuinsOfAlph_WordsRoom4_hns",
     "Route19_Cave_hns"
+  ],
+  "gMapGrouop_OutdoorAlola_Hns": [
+    "PoniIsle_hns",
+    "AkalaIsle_hns",
+    "Alola_hns",
+    "MelemeleIsle_hns",
+    "AlolaWater_hns",
+    "UlaulaIsle_hns"
+  ],
+  "gMapGroup_IndoorAlola_Hns": [
+    "Melemele_PlayerHouse_hns",
+    "Melemele_House_hns",
+    "Melemele_House_2_hns",
+    "Melemele_House_3_hns",
+    "Melemele_House_4_hns",
+    "Melemele_House_5_hns",
+    "Melemele_House_6_hns",
+    "Akala_House_hns",
+    "UlaUla_House_hns",
+    "Poni_Cave_hns",
+    "Akala_Forest_hns",
+    "UlaUla_Cave_hns",
+    "UlaUla_Forest_hns",
+    "UlaUla_Cave_2_hns",
+    "Akala_Cave_hns"
   ],
   "gMapGroup_IndoorDynamic_Hns": [
     "UnionRoom_hns"

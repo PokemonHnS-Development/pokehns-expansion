@@ -8053,9 +8053,11 @@ u16 GetBattleBGM(void)
         case TRAINER_CLASS_ELITE_FOUR:
             return MUS_VS_ELITE_FOUR;
         case TRAINER_CLASS_CHAMPION_FRLG:
+        case TRAINER_CLASS_DEVELOPER_HNS:
             return MUS_RG_VS_CHAMPION;
         case TRAINER_CLASS_LEADER_FRLG:
         case TRAINER_CLASS_ELITE_FOUR_FRLG:
+        case TRAINER_CLASS_PROFESSOR_HNS:
             return MUS_RG_VS_GYM_LEADER;
         case TRAINER_CLASS_SALON_MAIDEN:
         case TRAINER_CLASS_DOME_ACE:
@@ -8071,6 +8073,8 @@ u16 GetBattleBGM(void)
                 return MUS_HG_VS_TRAINER;
             else if (GetCurrentRegion() == REGION_KANTO)
                 return MUS_HG_VS_TRAINER_KANTO;
+            else if (GetCurrentRegion() == REGION_ALOLA)
+                return MUS_HG_VS_TRAINER_KANTO;  // Alola trainer battles
             else
                 return MUS_VS_TRAINER;
         #else
@@ -8088,6 +8092,8 @@ u16 GetBattleBGM(void)
             return MUS_HG_VS_WILD;
         else if (GetCurrentRegion() == REGION_KANTO)
             return MUS_HG_VS_WILD_KANTO;
+        else if (GetCurrentRegion() == REGION_ALOLA)
+            return MUS_HG_VS_WILD_KANTO;  // Alola wild battles
         else
             return MUS_VS_WILD;
     #else

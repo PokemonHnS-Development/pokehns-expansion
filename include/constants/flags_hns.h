@@ -999,65 +999,65 @@
 #define FLAG_EXTENDED_CONTENT_138                   (HNS_EXTENDED_CONTENT_START + 138)
 #define FLAG_EXTENDED_CONTENT_139                   (HNS_EXTENDED_CONTENT_START + 139)
 #define FLAG_EXTENDED_CONTENT_140                   (HNS_EXTENDED_CONTENT_START + 140)
-#define FLAG_EXTENDED_CONTENT_141                   (HNS_EXTENDED_CONTENT_START + 141)
-#define FLAG_EXTENDED_CONTENT_142                   (HNS_EXTENDED_CONTENT_START + 142)
-#define FLAG_EXTENDED_CONTENT_143                   (HNS_EXTENDED_CONTENT_START + 143)
-#define FLAG_EXTENDED_CONTENT_144                   (HNS_EXTENDED_CONTENT_START + 144)
-#define FLAG_EXTENDED_CONTENT_145                   (HNS_EXTENDED_CONTENT_START + 145)
-#define FLAG_EXTENDED_CONTENT_146                   (HNS_EXTENDED_CONTENT_START + 146)
-#define FLAG_EXTENDED_CONTENT_147                   (HNS_EXTENDED_CONTENT_START + 147)
-#define FLAG_EXTENDED_CONTENT_148                   (HNS_EXTENDED_CONTENT_START + 148)
-#define FLAG_EXTENDED_CONTENT_149                   (HNS_EXTENDED_CONTENT_START + 149)
-#define FLAG_EXTENDED_CONTENT_150                   (HNS_EXTENDED_CONTENT_START + 150)
-#define FLAG_EXTENDED_CONTENT_151                   (HNS_EXTENDED_CONTENT_START + 151)
-#define FLAG_EXTENDED_CONTENT_152                   (HNS_EXTENDED_CONTENT_START + 152)
-#define FLAG_EXTENDED_CONTENT_153                   (HNS_EXTENDED_CONTENT_START + 153)
-#define FLAG_EXTENDED_CONTENT_154                   (HNS_EXTENDED_CONTENT_START + 154)
-#define FLAG_EXTENDED_CONTENT_155                   (HNS_EXTENDED_CONTENT_START + 155)
-#define FLAG_EXTENDED_CONTENT_156                   (HNS_EXTENDED_CONTENT_START + 156)
-#define FLAG_EXTENDED_CONTENT_157                   (HNS_EXTENDED_CONTENT_START + 157)
-#define FLAG_EXTENDED_CONTENT_158                   (HNS_EXTENDED_CONTENT_START + 158)
-#define FLAG_EXTENDED_CONTENT_159                   (HNS_EXTENDED_CONTENT_START + 159)
-#define FLAG_EXTENDED_CONTENT_160                   (HNS_EXTENDED_CONTENT_START + 160)
-#define FLAG_EXTENDED_CONTENT_161                   (HNS_EXTENDED_CONTENT_START + 161)
-#define FLAG_EXTENDED_CONTENT_162                   (HNS_EXTENDED_CONTENT_START + 162)
-#define FLAG_EXTENDED_CONTENT_163                   (HNS_EXTENDED_CONTENT_START + 163)
-#define FLAG_EXTENDED_CONTENT_164                   (HNS_EXTENDED_CONTENT_START + 164)
-#define FLAG_EXTENDED_CONTENT_165                   (HNS_EXTENDED_CONTENT_START + 165)
-#define FLAG_EXTENDED_CONTENT_166                   (HNS_EXTENDED_CONTENT_START + 166)
-#define FLAG_EXTENDED_CONTENT_167                   (HNS_EXTENDED_CONTENT_START + 167)
-#define FLAG_EXTENDED_CONTENT_168                   (HNS_EXTENDED_CONTENT_START + 168)
-#define FLAG_EXTENDED_CONTENT_169                   (HNS_EXTENDED_CONTENT_START + 169)
-#define FLAG_EXTENDED_CONTENT_170                   (HNS_EXTENDED_CONTENT_START + 170)
-#define FLAG_EXTENDED_CONTENT_171                   (HNS_EXTENDED_CONTENT_START + 171)
-#define FLAG_EXTENDED_CONTENT_172                   (HNS_EXTENDED_CONTENT_START + 172)
-#define FLAG_EXTENDED_CONTENT_173                   (HNS_EXTENDED_CONTENT_START + 173)
-#define FLAG_EXTENDED_CONTENT_174                   (HNS_EXTENDED_CONTENT_START + 174)
-#define FLAG_EXTENDED_CONTENT_175                   (HNS_EXTENDED_CONTENT_START + 175)
-#define FLAG_EXTENDED_CONTENT_176                   (HNS_EXTENDED_CONTENT_START + 176)
-#define FLAG_EXTENDED_CONTENT_177                   (HNS_EXTENDED_CONTENT_START + 177)
-#define FLAG_EXTENDED_CONTENT_178                   (HNS_EXTENDED_CONTENT_START + 178)
-#define FLAG_EXTENDED_CONTENT_179                   (HNS_EXTENDED_CONTENT_START + 179)
-#define FLAG_EXTENDED_CONTENT_180                   (HNS_EXTENDED_CONTENT_START + 180)
-#define FLAG_EXTENDED_CONTENT_181                   (HNS_EXTENDED_CONTENT_START + 181)
-#define FLAG_EXTENDED_CONTENT_182                   (HNS_EXTENDED_CONTENT_START + 182)
-#define FLAG_EXTENDED_CONTENT_183                   (HNS_EXTENDED_CONTENT_START + 183)
-#define FLAG_EXTENDED_CONTENT_184                   (HNS_EXTENDED_CONTENT_START + 184)
-#define FLAG_EXTENDED_CONTENT_185                   (HNS_EXTENDED_CONTENT_START + 185)
-#define FLAG_EXTENDED_CONTENT_186                   (HNS_EXTENDED_CONTENT_START + 186)
-#define FLAG_EXTENDED_CONTENT_187                   (HNS_EXTENDED_CONTENT_START + 187)
-#define FLAG_EXTENDED_CONTENT_188                   (HNS_EXTENDED_CONTENT_START + 188)
-#define FLAG_EXTENDED_CONTENT_189                   (HNS_EXTENDED_CONTENT_START + 189)
-#define FLAG_EXTENDED_CONTENT_190                   (HNS_EXTENDED_CONTENT_START + 190)
-#define FLAG_EXTENDED_CONTENT_191                   (HNS_EXTENDED_CONTENT_START + 191)
-#define FLAG_EXTENDED_CONTENT_192                   (HNS_EXTENDED_CONTENT_START + 192)
-#define FLAG_EXTENDED_CONTENT_193                   (HNS_EXTENDED_CONTENT_START + 193)
-#define FLAG_EXTENDED_CONTENT_194                   (HNS_EXTENDED_CONTENT_START + 194)
-#define FLAG_EXTENDED_CONTENT_195                   (HNS_EXTENDED_CONTENT_START + 195)
-#define FLAG_EXTENDED_CONTENT_196                   (HNS_EXTENDED_CONTENT_START + 196)
-#define FLAG_EXTENDED_CONTENT_197                   (HNS_EXTENDED_CONTENT_START + 197)
-#define FLAG_EXTENDED_CONTENT_198                   (HNS_EXTENDED_CONTENT_START + 198)
-#define FLAG_EXTENDED_CONTENT_199                   (HNS_EXTENDED_CONTENT_START + 199)
+#define FLAG_EXTENDED_CONTENT_141                  (HNS_EXTENDED_CONTENT_START + 141)
+#define FLAG_EXTENDED_CONTENT_142                  (HNS_EXTENDED_CONTENT_START + 142)
+#define FLAG_EXTENDED_CONTENT_143                  (HNS_EXTENDED_CONTENT_START + 143)
+#define FLAG_EXTENDED_CONTENT_144                  (HNS_EXTENDED_CONTENT_START + 144)
+#define FLAG_EXTENDED_CONTENT_145                  (HNS_EXTENDED_CONTENT_START + 145)
+#define FLAG_EXTENDED_CONTENT_146                  (HNS_EXTENDED_CONTENT_START + 146)
+#define FLAG_EXTENDED_CONTENT_147                  (HNS_EXTENDED_CONTENT_START + 147)
+#define FLAG_EXTENDED_CONTENT_148                  (HNS_EXTENDED_CONTENT_START + 148)
+#define FLAG_EXTENDED_CONTENT_149                  (HNS_EXTENDED_CONTENT_START + 149)
+#define FLAG_EXTENDED_CONTENT_150                  (HNS_EXTENDED_CONTENT_START + 150)
+#define FLAG_EXTENDED_CONTENT_151                  (HNS_EXTENDED_CONTENT_START + 151)
+#define FLAG_EXTENDED_CONTENT_152                  (HNS_EXTENDED_CONTENT_START + 152)
+#define FLAG_EXTENDED_CONTENT_153                  (HNS_EXTENDED_CONTENT_START + 153)
+#define FLAG_EXTENDED_CONTENT_154                  (HNS_EXTENDED_CONTENT_START + 154)
+#define FLAG_EXTENDED_CONTENT_155                  (HNS_EXTENDED_CONTENT_START + 155)
+#define FLAG_EXTENDED_CONTENT_156                  (HNS_EXTENDED_CONTENT_START + 156)
+#define FLAG_EXTENDED_CONTENT_157                  (HNS_EXTENDED_CONTENT_START + 157)
+#define FLAG_EXTENDED_CONTENT_158                  (HNS_EXTENDED_CONTENT_START + 158)
+#define FLAG_EXTENDED_CONTENT_159                  (HNS_EXTENDED_CONTENT_START + 159)
+#define FLAG_EXTENDED_CONTENT_160                  (HNS_EXTENDED_CONTENT_START + 160)
+#define FLAG_EXTENDED_CONTENT_161                  (HNS_EXTENDED_CONTENT_START + 161)
+#define FLAG_EXTENDED_CONTENT_162                  (HNS_EXTENDED_CONTENT_START + 162)
+#define FLAG_EXTENDED_CONTENT_163                  (HNS_EXTENDED_CONTENT_START + 163)
+#define FLAG_EXTENDED_CONTENT_164                  (HNS_EXTENDED_CONTENT_START + 164)
+#define FLAG_EXTENDED_CONTENT_165                  (HNS_EXTENDED_CONTENT_START + 165)
+#define FLAG_EXTENDED_CONTENT_166                  (HNS_EXTENDED_CONTENT_START + 166)
+#define FLAG_EXTENDED_CONTENT_167                  (HNS_EXTENDED_CONTENT_START + 167)
+#define FLAG_EXTENDED_CONTENT_168                  (HNS_EXTENDED_CONTENT_START + 168)
+#define FLAG_EXTENDED_CONTENT_169                  (HNS_EXTENDED_CONTENT_START + 169)
+#define FLAG_EXTENDED_CONTENT_170                  (HNS_EXTENDED_CONTENT_START + 170)
+#define FLAG_EXTENDED_CONTENT_171                  (HNS_EXTENDED_CONTENT_START + 171)
+#define FLAG_EXTENDED_CONTENT_172                  (HNS_EXTENDED_CONTENT_START + 172)
+#define FLAG_EXTENDED_CONTENT_173                  (HNS_EXTENDED_CONTENT_START + 173)
+#define FLAG_EXTENDED_CONTENT_174                  (HNS_EXTENDED_CONTENT_START + 174)
+#define FLAG_EXTENDED_CONTENT_175                  (HNS_EXTENDED_CONTENT_START + 175)
+#define FLAG_EXTENDED_CONTENT_176                  (HNS_EXTENDED_CONTENT_START + 176)
+#define FLAG_EXTENDED_CONTENT_177                  (HNS_EXTENDED_CONTENT_START + 177)
+#define FLAG_EXTENDED_CONTENT_178                  (HNS_EXTENDED_CONTENT_START + 178)
+#define FLAG_EXTENDED_CONTENT_179                  (HNS_EXTENDED_CONTENT_START + 179)
+#define FLAG_EXTENDED_CONTENT_180                  (HNS_EXTENDED_CONTENT_START + 180)
+#define FLAG_EXTENDED_CONTENT_181                  (HNS_EXTENDED_CONTENT_START + 181)
+#define FLAG_EXTENDED_CONTENT_182                  (HNS_EXTENDED_CONTENT_START + 182)
+#define FLAG_EXTENDED_CONTENT_183                  (HNS_EXTENDED_CONTENT_START + 183)
+#define FLAG_EXTENDED_CONTENT_184                  (HNS_EXTENDED_CONTENT_START + 184)
+#define FLAG_EXTENDED_CONTENT_185                  (HNS_EXTENDED_CONTENT_START + 185)
+#define FLAG_EXTENDED_CONTENT_186                  (HNS_EXTENDED_CONTENT_START + 186)
+#define FLAG_EXTENDED_CONTENT_187                  (HNS_EXTENDED_CONTENT_START + 187)
+#define FLAG_EXTENDED_CONTENT_188                  (HNS_EXTENDED_CONTENT_START + 188)
+#define FLAG_EXTENDED_CONTENT_189                  (HNS_EXTENDED_CONTENT_START + 189)
+#define FLAG_EXTENDED_CONTENT_190                  (HNS_EXTENDED_CONTENT_START + 190)
+#define FLAG_EXTENDED_CONTENT_191                  (HNS_EXTENDED_CONTENT_START + 191)
+#define FLAG_EXTENDED_CONTENT_192                  (HNS_EXTENDED_CONTENT_START + 192)
+#define FLAG_EXTENDED_CONTENT_193                  (HNS_EXTENDED_CONTENT_START + 193)
+#define FLAG_EXTENDED_CONTENT_194                  (HNS_EXTENDED_CONTENT_START + 194)
+#define FLAG_EXTENDED_CONTENT_195                  (HNS_EXTENDED_CONTENT_START + 195)
+#define FLAG_EXTENDED_CONTENT_196                  (HNS_EXTENDED_CONTENT_START + 196)
+#define FLAG_EXTENDED_CONTENT_197                  (HNS_EXTENDED_CONTENT_START + 197)
+#define FLAG_EXTENDED_CONTENT_198                  (HNS_EXTENDED_CONTENT_START + 198)
+#define FLAG_EXTENDED_CONTENT_199                  (HNS_EXTENDED_CONTENT_START + 199)
 #define FLAG_EXTENDED_CONTENT_200                   (HNS_EXTENDED_CONTENT_START + 200)
 #define FLAG_HIDDEN_ITEM_ROUTE21_STARDUST_3         (HNS_EXTENDED_CONTENT_START + 201)
 #define FLAG_HIDDEN_ITEM_MT_SILVER_OUTSIDE_REAPER_CLOTH (HNS_EXTENDED_CONTENT_START + 202)
@@ -1084,80 +1084,80 @@
 #define FLAG_EXTENDED_CONTENT_223                   (HNS_EXTENDED_CONTENT_START + 223)
 #define FLAG_EXTENDED_CONTENT_224                   (HNS_EXTENDED_CONTENT_START + 224)
 #define FLAG_EXTENDED_CONTENT_225                   (HNS_EXTENDED_CONTENT_START + 225)
-#define FLAG_EXTENDED_CONTENT_226                   (HNS_EXTENDED_CONTENT_START + 226)
-#define FLAG_EXTENDED_CONTENT_227                   (HNS_EXTENDED_CONTENT_START + 227)
-#define FLAG_EXTENDED_CONTENT_228                   (HNS_EXTENDED_CONTENT_START + 228)
-#define FLAG_EXTENDED_CONTENT_229                   (HNS_EXTENDED_CONTENT_START + 229)
-#define FLAG_EXTENDED_CONTENT_230                   (HNS_EXTENDED_CONTENT_START + 230)
-#define FLAG_EXTENDED_CONTENT_231                   (HNS_EXTENDED_CONTENT_START + 231)
-#define FLAG_EXTENDED_CONTENT_232                   (HNS_EXTENDED_CONTENT_START + 232)
-#define FLAG_EXTENDED_CONTENT_233                   (HNS_EXTENDED_CONTENT_START + 233)
-#define FLAG_EXTENDED_CONTENT_234                   (HNS_EXTENDED_CONTENT_START + 234)
-#define FLAG_EXTENDED_CONTENT_235                   (HNS_EXTENDED_CONTENT_START + 235)
-#define FLAG_EXTENDED_CONTENT_236                   (HNS_EXTENDED_CONTENT_START + 236)
-#define FLAG_EXTENDED_CONTENT_237                   (HNS_EXTENDED_CONTENT_START + 237)
-#define FLAG_EXTENDED_CONTENT_238                   (HNS_EXTENDED_CONTENT_START + 238)
-#define FLAG_EXTENDED_CONTENT_239                   (HNS_EXTENDED_CONTENT_START + 239)
-#define FLAG_EXTENDED_CONTENT_240                   (HNS_EXTENDED_CONTENT_START + 240)
-#define FLAG_EXTENDED_CONTENT_241                   (HNS_EXTENDED_CONTENT_START + 241)
-#define FLAG_EXTENDED_CONTENT_242                   (HNS_EXTENDED_CONTENT_START + 242)
-#define FLAG_EXTENDED_CONTENT_243                   (HNS_EXTENDED_CONTENT_START + 243)
-#define FLAG_EXTENDED_CONTENT_244                   (HNS_EXTENDED_CONTENT_START + 244)
-#define FLAG_EXTENDED_CONTENT_245                   (HNS_EXTENDED_CONTENT_START + 245)
-#define FLAG_EXTENDED_CONTENT_246                   (HNS_EXTENDED_CONTENT_START + 246)
-#define FLAG_EXTENDED_CONTENT_247                   (HNS_EXTENDED_CONTENT_START + 247)
-#define FLAG_EXTENDED_CONTENT_248                   (HNS_EXTENDED_CONTENT_START + 248)
-#define FLAG_EXTENDED_CONTENT_249                   (HNS_EXTENDED_CONTENT_START + 249)
-#define FLAG_EXTENDED_CONTENT_250                   (HNS_EXTENDED_CONTENT_START + 250)
-#define FLAG_EXTENDED_CONTENT_251                   (HNS_EXTENDED_CONTENT_START + 251)
-#define FLAG_EXTENDED_CONTENT_252                   (HNS_EXTENDED_CONTENT_START + 252)
-#define FLAG_EXTENDED_CONTENT_253                   (HNS_EXTENDED_CONTENT_START + 253)
-#define FLAG_EXTENDED_CONTENT_254                   (HNS_EXTENDED_CONTENT_START + 254)
-#define FLAG_EXTENDED_CONTENT_255                   (HNS_EXTENDED_CONTENT_START + 255)
-#define FLAG_EXTENDED_CONTENT_256                   (HNS_EXTENDED_CONTENT_START + 256)
-#define FLAG_EXTENDED_CONTENT_257                   (HNS_EXTENDED_CONTENT_START + 257)
-#define FLAG_EXTENDED_CONTENT_258                   (HNS_EXTENDED_CONTENT_START + 258)
-#define FLAG_EXTENDED_CONTENT_259                   (HNS_EXTENDED_CONTENT_START + 259)
-#define FLAG_EXTENDED_CONTENT_260                   (HNS_EXTENDED_CONTENT_START + 260)
-#define FLAG_EXTENDED_CONTENT_261                   (HNS_EXTENDED_CONTENT_START + 261)
-#define FLAG_EXTENDED_CONTENT_262                   (HNS_EXTENDED_CONTENT_START + 262)
-#define FLAG_EXTENDED_CONTENT_263                   (HNS_EXTENDED_CONTENT_START + 263)
-#define FLAG_EXTENDED_CONTENT_264                   (HNS_EXTENDED_CONTENT_START + 264)
-#define FLAG_EXTENDED_CONTENT_265                   (HNS_EXTENDED_CONTENT_START + 265)
-#define FLAG_EXTENDED_CONTENT_266                   (HNS_EXTENDED_CONTENT_START + 266)
-#define FLAG_EXTENDED_CONTENT_267                   (HNS_EXTENDED_CONTENT_START + 267)
-#define FLAG_EXTENDED_CONTENT_268                   (HNS_EXTENDED_CONTENT_START + 268)
-#define FLAG_EXTENDED_CONTENT_269                   (HNS_EXTENDED_CONTENT_START + 269)
-#define FLAG_EXTENDED_CONTENT_270                   (HNS_EXTENDED_CONTENT_START + 270)
-#define FLAG_EXTENDED_CONTENT_271                   (HNS_EXTENDED_CONTENT_START + 271)
-#define FLAG_EXTENDED_CONTENT_272                   (HNS_EXTENDED_CONTENT_START + 272)
-#define FLAG_EXTENDED_CONTENT_273                   (HNS_EXTENDED_CONTENT_START + 273)
-#define FLAG_EXTENDED_CONTENT_274                   (HNS_EXTENDED_CONTENT_START + 274)
-#define FLAG_EXTENDED_CONTENT_275                   (HNS_EXTENDED_CONTENT_START + 275)
-#define FLAG_EXTENDED_CONTENT_276                   (HNS_EXTENDED_CONTENT_START + 276)
-#define FLAG_EXTENDED_CONTENT_277                   (HNS_EXTENDED_CONTENT_START + 277)
-#define FLAG_EXTENDED_CONTENT_278                   (HNS_EXTENDED_CONTENT_START + 278)
-#define FLAG_EXTENDED_CONTENT_279                   (HNS_EXTENDED_CONTENT_START + 279)
-#define FLAG_EXTENDED_CONTENT_280                   (HNS_EXTENDED_CONTENT_START + 280)
-#define FLAG_EXTENDED_CONTENT_281                   (HNS_EXTENDED_CONTENT_START + 281)
-#define FLAG_EXTENDED_CONTENT_282                   (HNS_EXTENDED_CONTENT_START + 282)
-#define FLAG_EXTENDED_CONTENT_283                   (HNS_EXTENDED_CONTENT_START + 283)
-#define FLAG_EXTENDED_CONTENT_284                   (HNS_EXTENDED_CONTENT_START + 284)
-#define FLAG_EXTENDED_CONTENT_285                   (HNS_EXTENDED_CONTENT_START + 285)
-#define FLAG_EXTENDED_CONTENT_286                   (HNS_EXTENDED_CONTENT_START + 286)
-#define FLAG_EXTENDED_CONTENT_287                   (HNS_EXTENDED_CONTENT_START + 287)
-#define FLAG_EXTENDED_CONTENT_288                   (HNS_EXTENDED_CONTENT_START + 288)
-#define FLAG_EXTENDED_CONTENT_289                   (HNS_EXTENDED_CONTENT_START + 289)
-#define FLAG_EXTENDED_CONTENT_290                   (HNS_EXTENDED_CONTENT_START + 290)
-#define FLAG_EXTENDED_CONTENT_291                   (HNS_EXTENDED_CONTENT_START + 291)
-#define FLAG_EXTENDED_CONTENT_292                   (HNS_EXTENDED_CONTENT_START + 292)
-#define FLAG_EXTENDED_CONTENT_293                   (HNS_EXTENDED_CONTENT_START + 293)
-#define FLAG_EXTENDED_CONTENT_294                   (HNS_EXTENDED_CONTENT_START + 294)
-#define FLAG_EXTENDED_CONTENT_295                   (HNS_EXTENDED_CONTENT_START + 295)
-#define FLAG_EXTENDED_CONTENT_296                   (HNS_EXTENDED_CONTENT_START + 296)
-#define FLAG_EXTENDED_CONTENT_297                   (HNS_EXTENDED_CONTENT_START + 297)
-#define FLAG_EXTENDED_CONTENT_298                   (HNS_EXTENDED_CONTENT_START + 298)
-#define FLAG_EXTENDED_CONTENT_299                   (HNS_EXTENDED_CONTENT_START + 299)
+#define FLAG_AKALA_TOTEM_DAY                            (HNS_EXTENDED_CONTENT_START + 226) // sets totem to day variant on akala
+#define FLAG_ULAULA_TOTEM_DAY                           (HNS_EXTENDED_CONTENT_START + 227) // sets totem to day variant on ulaula
+#define FLAG_MELEMELE_TOTEM_DAY                         (HNS_EXTENDED_CONTENT_START + 228) // sets totem to day variant on melemele
+#define FLAG_HIDE_PHANT_INSIDE                          (HNS_EXTENDED_CONTENT_START + 229) // hide phantonomy inside on ulaula
+#define FLAG_HIDE_PHANT_OUTSIDE                         (HNS_EXTENDED_CONTENT_START + 230) // hide phantonomy outside on ulaula
+#define FLAG_BATTLED_TAPU_FINI                          (HNS_EXTENDED_CONTENT_START + 231) // battled tapu fini
+#define FLAG_BATTLED_TAPU_BULU                          (HNS_EXTENDED_CONTENT_START + 232) // battled tapu bulu
+#define FLAG_BATTLED_TAPU_LELE                          (HNS_EXTENDED_CONTENT_START + 233) // battled tapu lele
+#define FLAG_BATTLED_TAPU_KOKO                          (HNS_EXTENDED_CONTENT_START + 234) // battled tapu koko
+#define FLAG_HIDE_FLYOVER                               (HNS_EXTENDED_CONTENT_START + 235) // hide flyover object
+#define FLAG_HIDE_TAPU_BULU                             (HNS_EXTENDED_CONTENT_START + 236) // hide tapu bulu if caught or defeated
+#define FLAG_HIDE_TAPU_LELE                             (HNS_EXTENDED_CONTENT_START + 237) // hide tapu lele if caught or defeated
+#define FLAG_HIDE_TAPU_FINI                             (HNS_EXTENDED_CONTENT_START + 238) // hide tapu fini if caught or defeated
+#define FLAG_HIDE_TAPU_KOKO                             (HNS_EXTENDED_CONTENT_START + 239) // hide tapu koko if caught or defeated
+#define FLAG_FLYOVER_TAPU_BULU                          (HNS_EXTENDED_CONTENT_START + 240) // flyover tapu bulu in the wild
+#define FLAG_FLYOVER_TAPU_LELE                          (HNS_EXTENDED_CONTENT_START + 241) // flyover tapu lele in the wild
+#define FLAG_FLYOVER_TAPU_FINI                          (HNS_EXTENDED_CONTENT_START + 242) // flyover tapu fini in the wild
+#define FLAG_FLYOVER_TAPU_KOKO                          (HNS_EXTENDED_CONTENT_START + 243) // flyover tapu koko in the wild
+#define FLAG_HIDE_ROUTE13_BOAT                       (HNS_EXTENDED_CONTENT_START + 244) 
+#define FLAG_EXTENDED_CONTENT_245                       (HNS_EXTENDED_CONTENT_START + 245) 
+#define FLAG_EXTENDED_CONTENT_246                        (HNS_EXTENDED_CONTENT_START + 246) 
+#define FLAG_TRIGGERED_PONI_TOTEM                       (HNS_EXTENDED_CONTENT_START + 247) // for use in triggering poni totem anim
+#define FLAG_TRIGGERED_ULAULA_TOTEM                     (HNS_EXTENDED_CONTENT_START + 248) // for use in triggering ulaula totem anim
+#define FLAG_TRIGGERED_AKALA_TOTEM                      (HNS_EXTENDED_CONTENT_START + 249) // for use in triggering akala totem anim
+#define FLAG_TRIGGERED_MELEMELE_TOTEM                   (HNS_EXTENDED_CONTENT_START + 250) // for use in triggering melemele totem anim
+#define FLAG_DEFEATED_SAMSON_OAK                        (HNS_EXTENDED_CONTENT_START + 251) // if the player defeated Samson Oak
+#define FLAG_DEFEATED_ULAULA_TOTEM                      (HNS_EXTENDED_CONTENT_START + 252) // if the player defeated the ulaula totem
+#define FLAG_DEFEATED_PONI_TOTEM                        (HNS_EXTENDED_CONTENT_START + 253) // if the player defeated the poni totem
+#define FLAG_DEFEATED_AKALA_TOTEM                       (HNS_EXTENDED_CONTENT_START + 254) // if the player defeated the akala totem
+#define FLAG_DEFEATED_MELEMELE_TOTEM                    (HNS_EXTENDED_CONTENT_START + 255) // if the player defeated the melemele totem
+#define FLAG_CAUGHT_ALL_ULAULA                          (HNS_EXTENDED_CONTENT_START + 256) // caught all of ulaulas regional variants
+#define FLAG_CAUGHT_ALL_PONI                            (HNS_EXTENDED_CONTENT_START + 257) // caught all of ponis regional variants
+#define FLAG_CAUGHT_ALL_AKALA                           (HNS_EXTENDED_CONTENT_START + 258) // caught all of akalas regional variants
+#define FLAG_CAUGHT_ALL_MELEMELE                        (HNS_EXTENDED_CONTENT_START + 259) // caught all of melemeles regional variants
+#define FLAG_BATTLED_GOLEM                              (HNS_EXTENDED_CONTENT_START + 260) // used for progression if battled golem at all
+#define FLAG_BATTLED_SANDSLASH                          (HNS_EXTENDED_CONTENT_START + 261) // used for progression if battled sandslash at all
+#define FLAG_BATTLED_NINETALES                          (HNS_EXTENDED_CONTENT_START + 262) // used for progression if battled ninetales at all
+#define FLAG_BATTLED_MUK                                (HNS_EXTENDED_CONTENT_START + 263) // used for progression if battled muk at all
+#define FLAG_BATTLED_DUGTRIO                            (HNS_EXTENDED_CONTENT_START + 264) // used for progression if battled dugtrio at all
+#define FLAG_BATTLED_MAROWAK                            (HNS_EXTENDED_CONTENT_START + 265) // used for progression if battled marowak at all
+#define FLAG_BATTLED_RAICHU                             (HNS_EXTENDED_CONTENT_START + 266) // used for progression if battled raichu at all
+#define FLAG_BATTLED_EXEGGUTOR                          (HNS_EXTENDED_CONTENT_START + 267) // used for progression if battled exeggutor at all
+#define FLAG_HIDE_SAMSONOAK_INTRO                       (HNS_EXTENDED_CONTENT_START + 268) // hides the samson oak intro object
+#define FLAG_CAUGHT_PALOSSAND                           (HNS_EXTENDED_CONTENT_START + 269) // hide palossand if caught or defeated
+#define FLAG_EXTENDED_CONTENT_270                          (HNS_EXTENDED_CONTENT_START + 270)
+#define FLAG_HIDE_SANDSLASH_ALOLA                     (HNS_EXTENDED_CONTENT_START + 271) // hide alolan sandslash if caught or defeated
+#define FLAG_HIDE_NINETALES_ALOLA                     (HNS_EXTENDED_CONTENT_START + 272) // hide alolan ninetales if caught or defeated
+#define FLAG_HIDE_MUK_ALOLA                           (HNS_EXTENDED_CONTENT_START + 273) // hide alolan muk if caught or defeated
+#define FLAG_HIDE_DUGTRIO_ALOLA                       (HNS_EXTENDED_CONTENT_START + 274) // hide alolan dugtrio if caught or defeated
+#define FLAG_HIDE_MAROWAK_ALOLA                       (HNS_EXTENDED_CONTENT_START + 275) // hide alolan marowak if caught or defeated
+#define FLAG_HIDE_RAICHU_ALOLA                        (HNS_EXTENDED_CONTENT_START + 276) // hide alolan raichu if caught or defeated
+#define FLAG_HIDE_GOLEM_ALOLA                         (HNS_EXTENDED_CONTENT_START + 277) // hide alolan golem if caught or defeated
+#define FLAG_HIDE_EXEGGUTOR_ALOLA                     (HNS_EXTENDED_CONTENT_START + 278) // hide alolan exceggutor if caught or defeated
+#define FLAG_HIDE_PONI_TOTEM                            (HNS_EXTENDED_CONTENT_START + 279) // hide the poni totem mon
+#define FLAG_HIDE_ULAULA_TOTEM                          (HNS_EXTENDED_CONTENT_START + 280) // hide the ula'ula totem mon
+#define FLAG_HIDE_AKALA_TOTEM                           (HNS_EXTENDED_CONTENT_START + 281) // hide the akala totem mon
+#define FLAG_HIDE_MELEMELE_TOTEM                        (HNS_EXTENDED_CONTENT_START + 282) // hide the melemele totem mon
+#define FLAG_EXTENDED_CONTENT_283                          (HNS_EXTENDED_CONTENT_START + 283) 
+#define FLAG_VISITED_ALOLA                              (HNS_EXTENDED_CONTENT_START + 284) // track if the player has been to alola before.
+#define FLAG_PONI_HIDDEN_ITEM_1                     (HNS_EXTENDED_CONTENT_START + 285)
+#define FLAG_ULAULA_CAVE_HIDDEN_ITEM_2              (HNS_EXTENDED_CONTENT_START + 286)
+#define FLAG_ULAULA_CAVE_HIDDEN_ITEM_1              (HNS_EXTENDED_CONTENT_START + 287)
+#define FLAG_ULAULA_HIDDEN_ITEM_2                   (HNS_EXTENDED_CONTENT_START + 288)
+#define FLAG_ULAULA_HIDDEN_ITEM_1                   (HNS_EXTENDED_CONTENT_START + 289)
+#define FLAG_AKALA_CAVE_HIDDEN_ITEM_2               (HNS_EXTENDED_CONTENT_START + 290)
+#define FLAG_AKALA_CAVE_HIDDEN_ITEM_1               (HNS_EXTENDED_CONTENT_START + 291)
+#define FLAG_AKALA_FOREST_HIDDEN_ITEM_2             (HNS_EXTENDED_CONTENT_START + 292)
+#define FLAG_AKALA_FOREST_HIDDEN_ITEM_1             (HNS_EXTENDED_CONTENT_START + 293)
+#define FLAG_AKALA_HIDDEN_ITEM_3                    (HNS_EXTENDED_CONTENT_START + 294)
+#define FLAG_AKALA_HIDDEN_ITEM_2                    (HNS_EXTENDED_CONTENT_START + 295)
+#define FLAG_AKALA_HIDDEN_ITEM_1                    (HNS_EXTENDED_CONTENT_START + 296)
+#define FLAG_PONI_CAVE_HIDDEN_ITEM_2                (HNS_EXTENDED_CONTENT_START + 297)
+#define FLAG_PONI_CAVE_HIDDEN_ITEM_1                (HNS_EXTENDED_CONTENT_START + 298)
+#define FLAG_MELEMELE_HIDDEN_ITEM                   (HNS_EXTENDED_CONTENT_START + 299)
 #define HNS_EXTENDED_CONTENT_COUNT                  300
 #define HNS_EXTENDED_CONTENT_END                    (HNS_EXTENDED_CONTENT_START + HNS_EXTENDED_CONTENT_COUNT - 1)
 // 0x496–0x4FF remaining reserved for future expansion
@@ -1207,7 +1207,7 @@
 #define FLAG_SYS_USE_STRENGTH                       (SYS_FLAGS + 0x4)
 #define FLAG_SYS_USE_FLASH                          (SYS_FLAGS + 0x5)
 #define FLAG_SYS_CTRL_OBJ_DELETE                    (SYS_FLAGS + 0x6)
-#define FLAG_SYS_NO_CATCHING                        (SYS_FLAGS + 0x7)
+#define FLAG_SYS_UNUSED                        (SYS_FLAGS + 0x7)
 #define FLAG_SYS_LAKE_OF_RAGE_TIDE                  (SYS_FLAGS + 0x8)
 
 // Badges

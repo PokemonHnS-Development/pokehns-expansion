@@ -30,7 +30,7 @@ const struct HelpWindow gHelpWindowInfo[] =
     },
     [HELP_TELEPORTER_WINDOW] =
     {
-        .header = COMPOUND_STRING("OPTIONAL BONUS CONTENT: 1/3"),
+        .header = COMPOUND_STRING("OPTIONAL BONUS CONTENT: MACHINE"),
         .desc = COMPOUND_STRING("This machine can PERMANENTLY change\n"
                                 "POKéMON into their GALARIAN forms.\n"
                                 "GALARIAN forms are NOT required\n"
@@ -43,12 +43,13 @@ const struct HelpWindow gHelpWindowInfo[] =
     },
     [HELP_SINJOH_WINDOW] =
     {
-        .header = COMPOUND_STRING("OPTIONAL BONUS CONTENT: 3/3"),
+        .header = COMPOUND_STRING("OPTIONAL BONUS CONTENT: SINJOH"),
         .desc = COMPOUND_STRING("This NPC grants access to optional\n"
                                 "bonus content: SINJOH.\n"
                                 "It is NOT required for story\n"
-                                "progress, and it is NOT required\n"
-                                "for POKéDEX completion.\n"
+                                "or NATIONAL POKéDEX completion.\n"
+                                "\n"
+                                "It's just a bonus. If you want it."
                             ),
         .headerFont = FONT_NORMAL,
         .descFont = FONT_NORMAL,
@@ -56,12 +57,13 @@ const struct HelpWindow gHelpWindowInfo[] =
     },
     [HELP_ALOLA_WINDOW] =
     {
-        .header = COMPOUND_STRING("OPTIONAL BONUS CONTENT: 2/3"),
+        .header = COMPOUND_STRING("OPTIONAL BONUS CONTENT: ISLES"),
         .desc = COMPOUND_STRING("This NPC grants access to optional\n"
-                                "bonus content: ALOLA ISLES.\n"
+                                "bonus content: ISLES.\n"
                                 "It is NOT required for story\n"
-                                "progress, and it is NOT required\n"
-                                "for NATIONAL POKéDEX completion.\n"
+                                "or NATIONAL POKéDEX completion.\n"
+                                "\n"
+                                "It's just a bonus. If you want it."
                             ),
         .headerFont = FONT_NORMAL,
         .descFont = FONT_NORMAL,

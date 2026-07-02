@@ -49,5 +49,6 @@ void InitTilesetAnim_CeladonCity_Hns(void);
 void InitTilesetAnim_CeruleanCity_Hns(void);
 void InitTilesetAnim_SilphCo_Hns(void);
 void InitTilesetAnim_BlackthornGym(void);
+void InitTilesetAnim_AlolaIslands(void);
 
 #endif // GUARD_TILESET_ANIMS_H
