@@ -14005,7 +14005,7 @@ Level: 65
 IVs: 0 Atk  
 
 === TRAINER_JUSTIN4_HNS ===
-Name:   justin
+Name: JUSTIN
 Class: Juggler FRLG
 Pic: Juggler FRLG
 Gender: Male
@@ -14039,4 +14039,83 @@ Calm Nature
 - Recycle  
 - Taunt  
 - Confuse Ray  
+
+=== TRAINER_GENJI_HNS ===
+Name: GENJI
+Class: Cooltrainer
+Pic: Cooltrainer M FRLG
+Gender: Male
+Music: Hg Boy 2
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Ninjask (M)  
+Ability: Speed Boost  
+Level: 60
+EVs: 252 Atk / 252 Spe  
+Adamant Nature  
+- Acrobatics  
+- Leech Life  
+- Substitute  
+- Toxic  
+
+Weavile @ Razor Claw  
+Ability: Pressure  
+Level: 60 
+EVs: 252 Spe  
+Jolly Nature  
+- Triple Axel  
+- Night Slash  
+- Protect  
+- Low Kick  
+
+Crobat @ Big Root  
+Ability: Infiltrator  
+Level: 60   
+EVs: 252 HP / 252 Spe  
+Jolly Nature  
+- Super Fang  
+- Haze  
+- Leech Life  
+- Poison Fang  
+
+Shiftry  
+Ability: Chlorophyll  
+Level: 60
+
+=== TRAINER_ISSAC4_HNS ===
+Name: ISSAC
+Class: Camper Hns
+Pic: Camper FRLG
+Gender: Male
+Music: Hg Boy 2
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Breloom @ Miracle Seed  
+Ability: Technician  
+Level: 61
+EVs: 252 HP / 168 Def / 88 SpD  
+Adamant Nature  
+- Bullet Seed  
+- Mach Punch  
+- Bulk Up  
+- Bulldoze  
+
+Abomasnow  
+Ability: Soundproof  
+Level: 63
+
+Annihilape  
+Ability: Defiant  
+Level: 66
+EVs: 252 HP / 144 Def / 112 SpD  
+- Rage Fist  
+- Drain Punch  
+- Leer  
+- Taunt  
+
+Ursaring  
+Ability: Guts  
+Level: 65
 

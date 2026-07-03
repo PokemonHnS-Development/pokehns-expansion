@@ -12,9 +12,10 @@
   "allow_running": true,
   "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": 0,
+  "connections": null,
   "object_events": [
     {
+      "local_id": "LOCALID_ICEPATH4_ICYWIND_DELIBIRD",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_DELIBIRD",
       "x": 22,
       "y": 21,
@@ -25,10 +26,10 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "IcePath_B3F_EventScript_Delibird",
-      "flag": "FLAG_NIGHT_POKEMON",
-      "local_id": "LOCALID_ICEPATH4_ICYWIND_DELIBIRD"
+      "flag": "FLAG_NIGHT_POKEMON"
     },
     {
+      "local_id": "LOCALID_ICEPATH4_ICYWIND_SWINUB",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SWINUB",
       "x": 22,
       "y": 21,
@@ -39,8 +40,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "IcePath_B3F_EventScript_Swinub",
-      "flag": "FLAG_DAY_POKEMON",
-      "local_id": "LOCALID_ICEPATH4_ICYWIND_SWINUB"
+      "flag": "FLAG_DAY_POKEMON"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_GOLBAT",
@@ -56,6 +56,7 @@
       "flag": "0"
     },
     {
+      "local_id": "LOCALID_ICEPATH4_STUCK_SWINUB",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SWINUB",
       "x": 3,
       "y": 21,
@@ -66,8 +67,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_DAY_POKEMON",
-      "local_id": "LOCALID_ICEPATH4_STUCK_SWINUB"
+      "flag": "FLAG_DAY_POKEMON"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SWINUB",

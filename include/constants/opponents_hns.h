@@ -608,8 +608,10 @@
 #define TRAINER_NIKOLAS_HNS                            600
 #define TRAINER_REBECCA4_HNS                           601
 #define TRAINER_JUSTIN4_HNS                            602
+#define TRAINER_GENJI_HNS                              603
+#define TRAINER_ISSAC4_HNS                             604
 
-#define TRAINERS_COUNT_HNS                       603
+#define TRAINERS_COUNT_HNS                       605
 #define MAX_TRAINERS_COUNT_HNS                   864
 
 #endif  // GUARD_CONSTANTS_OPPONENTS_HNS_H

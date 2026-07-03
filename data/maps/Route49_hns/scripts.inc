@@ -8,9 +8,9 @@ Route49_hns_OnFrame::
 	.2byte 0
 
 Route49_EventScripts_KimonoGirl::
-    delay 15
+    delay 10
     lock
-	playse MUS_HG_DANCE_THEATER
+	playbgm MUS_HG_DANCE_THEATER, FALSE
 	delay 10
 	playse SE_PIN
 	applymovement LOCALID_ROUTE49_KIMONOGIRL, Common_Movement_ExclamationMark
@@ -25,7 +25,7 @@ Route49_EventScripts_KimonoGirl::
 	setflag FLAG_ROUTE_49_KIMONOGIRL
 	addvar VAR_ROUTE49_HNS_KIMONOGIRL, 1
 	removeobject LOCALID_ROUTE49_KIMONOGIRL
-	playse MUS_HG_SINJOU_RUINS
+	fadedefaultbgm
 	release
 	end
 
@@ -118,3 +118,114 @@ Route49_Text_JugglerJustin_After:
     .string "Do you even know just how\n"
     .string "expensive those are?!\p"
     .string "You better help me find them!$"
+
+Route49_EventScript_NinjaGenji::
+    trainerbattle_single TRAINER_GENJI_HNS, Route49_Text_NinjaGenji_Seen, Route49_Text_NinjaGenji_Beaten
+    msgbox Route49_Text_NinjaGenji_After, MSGBOX_AUTOCLOSE
+    end
+
+
+Route49_Text_NinjaGenji_Seen:
+    .string "I'm training to be a ninja!$"
+
+Route49_Text_NinjaGenji_Beaten:
+    .string "Clearly I have more training to do..\n"
+    .string "Thank you for this match!!$"
+
+Route49_Text_NinjaGenji_After:
+    .string "I'll keep practicing until\n"
+	.string "Master Koga takes me on!$"
+
+Route49_EventScript_CamperIssac::
+    trainerbattle_single TRAINER_ISSAC4_HNS, Route49_Text_CamperIssac_Seen, Route49_Text_CamperIssac_Beaten
+    msgbox Route49_Text_CamperIssac_After, MSGBOX_AUTOCLOSE
+    end
+
+
+Route49_Text_CamperIssac_Seen:
+    .string "I've been exploring these woods\n"
+    .string "for decades!$"
+
+Route49_Text_CamperIssac_Beaten:
+    .string "How old are you?!\n"
+    .string "Your team is so experienced!$"
+
+Route49_Text_CamperIssac_After:
+    .string "I'm not trying to catch them all.\p"
+	.string "I'm aiming for every scout badge!$"
+
+Route49_EventScript_Mom::
+    lock
+    faceplayer
+    msgbox Route49_Text_Mom MSGBOX_DEFAULT
+    closemessage
+    release
+    end
+
+Route49_Text_Mom:
+    .string "Look at my adorable babies go!\p"
+    .string "I'm so glad the town set up\n"
+    .string "this ice rink so the\l"
+    .string "little ones can play safely!$"
+
+Route49_EventScript_Dad::
+    lock
+    faceplayer
+    msgbox Route49_Text_Dad MSGBOX_DEFAULT
+    closemessage
+    release
+    end
+
+Route49_Text_Dad:
+    .string "Hey kid, mind leaving me alone?\n"
+    .string "I'm trying to focus on filming my kids.$"
+
+Route49_EventScript_Sister::
+    lock
+    faceplayer
+    msgbox Route49_Text_Sister MSGBOX_DEFAULT
+    closemessage
+    release
+    end
+
+Route49_Text_Sister:
+    .string "Wheeeeee!!\p"
+    .string "Look Mommy!\n"
+    .string "No hands!$"
+
+Route49_EventScript_Son::
+    lock
+    faceplayer
+    msgbox Route49_Text_Son MSGBOX_DEFAULT
+    closemessage
+    release
+    end
+
+Route49_Text_Son:
+    .string "Siiis!\p"
+    .string "Slow down, You're going to crash!$"
+
+Route49_EventScript_Item_GrassPlate::
+    finditem ITEM_MEADOW_PLATE
+    end
+
+Route49_EventScript_Item_StarDust::
+    finditem ITEM_STARDUST
+    end
+
+Route49_EventScript_Item_Lure::
+    finditem ITEM_LURE
+    end
+
+Route49_EventScript_PetWyrdeer::
+    lock
+	faceplayer
+	playmoncry SPECIES_WYRDEER, 0
+	msgbox Route49_Text_Wyrdeer_Cry2, MSGBOX_DEFAULT
+	waitmoncry
+    closemessage
+	release
+	end
+
+Route49_Text_Wyrdeer_Cry2:
+    .string "Wyrrr!$"

@@ -71052,7 +71052,7 @@
               {
                 "min_level": 45,
                 "max_level": 60,
-                "species": "SPECIES_SNEASEL_HISUI"
+                "species": "SPECIES_ABOMASNOW"
               },
               {
                 "min_level": 45,
@@ -71067,7 +71067,7 @@
               {
                 "min_level": 45,
                 "max_level": 60,
-                "species": "SPECIES_MEDICHAM"
+                "species": "SPECIES_ABOMASNOW"
               },
               {
                 "min_level": 45,
@@ -71082,12 +71082,12 @@
               {
                 "min_level": 45,
                 "max_level": 60,
-                "species": "SPECIES_GROWLITHE_HISUI"
+                "species": "SPECIES_SNEASEL_HISUI"
               },
               {
                 "min_level": 45,
                 "max_level": 60,
-                "species": "SPECIES_ABOMASNOW"
+                "species": "SPECIES_SNEASEL_HISUI"
               },
               {
                 "min_level": 45,
@@ -71097,12 +71097,12 @@
               {
                 "min_level": 45,
                 "max_level": 70,
-                "species": "SPECIES_FROSLASS"
+                "species": "SPECIES_SNEASLER"
               },
               {
                 "min_level": 45,
                 "max_level": 70,
-                "species": "SPECIES_MAMOSWINE"
+                "species": "SPECIES_WYRDEER"
               }
             ]
           },
@@ -71206,7 +71206,7 @@
               {
                 "min_level": 45,
                 "max_level": 60,
-                "species": "SPECIES_SNEASEL_HISUI"
+                "species": "SPECIES_GROWLITHE_HISUI"
               },
               {
                 "min_level": 45,
@@ -71221,7 +71221,7 @@
               {
                 "min_level": 45,
                 "max_level": 60,
-                "species": "SPECIES_MEDICHAM"
+                "species": "SPECIES_ABOMASNOW"
               },
               {
                 "min_level": 45,
@@ -71236,12 +71236,12 @@
               {
                 "min_level": 45,
                 "max_level": 60,
-                "species": "SPECIES_ABOMASNOW"
+                "species": "SPECIES_GROWLITHE_HISUI"
               },
               {
                 "min_level": 45,
                 "max_level": 60,
-                "species": "SPECIES_GROWLITHE_HISUI"
+                "species": "SPECIES_ABOMASNOW"
               },
               {
                 "min_level": 45,
@@ -71251,12 +71251,12 @@
               {
                 "min_level": 45,
                 "max_level": 70,
-                "species": "SPECIES_FROSLASS"
+                "species": "SPECIES_ARCANINE_HISUI"
               },
               {
                 "min_level": 45,
                 "max_level": 70,
-                "species": "SPECIES_MAMOSWINE"
+                "species": "SPECIES_WYRDEER"
               }
             ]
           },

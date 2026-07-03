@@ -115,10 +115,10 @@
 #define VAR_NEWSINJOH_HAUNTEDHOUSE_PUZZLE                0x40AB
 #define VAR_NEWSINJOH_HAUNTEDHOUSE_GRAVESTONES           0x40AC
 #define VAR_SNOWSWEPT_TERRY_BOULDER                      0x40AD
-#define VAR_ROUTE49_HNS_KIMONOGIRL                            0x40AE
-#define VAR_UNUSED_HNS_0x40AF                            0x40AF
-#define VAR_UNUSED_HNS_0x40B0                            0x40B0
-#define VAR_UNUSED_HNS_0x40B1                            0x40B1
+#define VAR_ROUTE49_HNS_KIMONOGIRL                       0x40AE
+#define VAR_SINJOHRUINS_STEVENMET                        0x40AF
+#define VAR_STEVEN_GROUP_INTRODUCTION                    0x40B0
+#define VAR_REGICOUNTER                                  0x40B1
 #define VAR_UNUSED_HNS_0x40B2                            0x40B2
 #define VAR_UNUSED_HNS_0x40B3                            0x40B3
 #define VAR_UNUSED_HNS_0x40B4                            0x40B4
