@@ -2933,6 +2933,25 @@
 	call EventScript_BrailleCursorWaitButton
 	.endm
 
+	.macro setwildbossbattle species:req, level:req, item=ITEM_NONE, move1_1=MOVE_NONE, move1_2=MOVE_NONE, move1_3=MOVE_NONE, move1_4=MOVE_NONE, species2=SPECIES_NONE, level2=0, item2=ITEM_NONE, move2_1=MOVE_NONE, move2_2=MOVE_NONE, move2_3=MOVE_NONE, move2_4=MOVE_NONE 
+	callnative ScrCmd_setwildbossbattle
+	.2byte \species
+	.byte  \level
+	.2byte \item
+	.2byte \move1_1
+	.2byte \move1_2
+	.2byte \move1_3
+	.2byte \move1_4
+
+	.2byte \species2
+	.byte  \level2
+	.2byte \item2
+	.2byte \move2_1
+	.2byte \move2_2
+	.2byte \move2_3
+	.2byte \move2_4
+	.endm
+
 	@ Checks if any Pokemon in the player's party knows the given move.
 	@ Sets VAR_RESULT to the (zero-indexed) slot number, or PARTY_SIZE if none.
 	.macro checkpartymove move:req

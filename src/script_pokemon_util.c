@@ -3,6 +3,9 @@
 #include "battle_gfx_sfx_util.h"
 #include "berry.h"
 #include "caps.h"
+#include "constants/battle.h"
+#include "constants/global.h"
+#include "constants/moves.h"
 #include "data.h"
 #include "daycare.h"
 #include "decompress.h"
@@ -188,6 +191,94 @@ void CreateShinyScriptedMon(u16 species, u8 level, enum Item item)
         SetMonData(&gEnemyParty[0], MON_DATA_HELD_ITEM, heldItem);
     }
     SetNuzlockeChecks();
+}
+
+void CreateScriptedWildBossMon(u16 species, u8 level, enum Item item, enum Move moves[MAX_MON_MOVES])
+{
+    u8 heldItem[2];
+
+    ZeroEnemyPartyMons();
+    u32 personality = GetMonPersonality(species, GetSynchronizedGender(STATIC_WILDMON_ORIGIN, species),
+                                        GetSynchronizedNature(STATIC_WILDMON_ORIGIN, species), RANDOM_UNOWN_LETTER);
+
+    struct Pokemon *mon = &gEnemyParty[0];
+
+    CreateMonWithIVs(mon, species, level, personality, OTID_STRUCT_PLAYER_ID, USE_RANDOM_IVS);
+
+    if (moves[0] == MOVE_NONE) {
+        GiveBoxMonInitialMoveset(&mon->box);
+    }
+    else {
+
+        for (u32 i = 0; i < MAX_MON_MOVES; i++) {
+            SetBoxMonData(&mon->box, MON_DATA_MOVE1 + i, &moves[i]);
+            u32 pp = GetMovePP(moves[i]);
+            SetBoxMonData(&mon->box, MON_DATA_PP1 + i, &pp);
+        }
+    }
+    if (item) {
+        heldItem[0] = item;
+        heldItem[1] = item >> 8;
+        SetMonData(&gEnemyParty[0], MON_DATA_HELD_ITEM, heldItem);
+    }
+}
+
+void CreateScriptedDoubleWildBossMon(u16 species1, u8 level1, enum Item item1, enum Move moves1[MAX_MON_MOVES],
+                                     u16 species2, u8 level2, enum Item item2, enum Move moves2[MAX_MON_MOVES])
+{
+    u8 heldItem1[2];
+    u8 heldItem2[2];
+    struct Pokemon *mon;
+    u32 personality;
+    ZeroEnemyPartyMons();
+
+    personality = GetMonPersonality(species1, GetSynchronizedGender(STATIC_WILDMON_ORIGIN, species1),
+                                    GetSynchronizedNature(STATIC_WILDMON_ORIGIN, species1), RANDOM_UNOWN_LETTER);
+
+    mon = &gEnemyParty[0];
+    CreateMonWithIVs(mon, species1, level1, personality, OTID_STRUCT_PLAYER_ID, USE_RANDOM_IVS);
+
+    if (moves1[0] == MOVE_NONE) {
+        GiveBoxMonInitialMoveset(&mon->box);
+    }
+    else {
+
+        for (u32 i = 0; i < MAX_MON_MOVES; i++) {
+            SetBoxMonData(&mon->box, MON_DATA_MOVE1 + i, &moves1[i]);
+            u32 pp = GetMovePP(moves1[i]);
+            SetBoxMonData(&mon->box, MON_DATA_PP1 + i, &pp);
+        }
+    }
+
+    if (item1) {
+        heldItem1[0] = item1;
+        heldItem1[1] = item1 >> 8;
+        SetMonData(mon, MON_DATA_HELD_ITEM, heldItem1);
+    }
+
+    personality = GetMonPersonality(species2, GetSynchronizedGender(STATIC_WILDMON_ORIGIN, species2),
+                                    GetSynchronizedNature(STATIC_WILDMON_ORIGIN, species2), RANDOM_UNOWN_LETTER);
+
+    mon = &gEnemyParty[1];
+    CreateMonWithIVs(mon, species2, level2, personality, OTID_STRUCT_PLAYER_ID, USE_RANDOM_IVS);
+
+    if (moves2[0] == MOVE_NONE) {
+        GiveBoxMonInitialMoveset(&mon->box);
+    }
+    else {
+
+        for (u32 i = 0; i < MAX_MON_MOVES; i++) {
+            SetBoxMonData(&mon->box, MON_DATA_MOVE1 + i, &moves2[i]);
+            u32 pp = GetMovePP(moves2[i]);
+            SetBoxMonData(&mon->box, MON_DATA_PP1 + i, &pp);
+        }
+    }
+
+    if (item2) {
+        heldItem2[0] = item2;
+        heldItem2[1] = item2 >> 8;
+        SetMonData(mon, MON_DATA_HELD_ITEM, heldItem2);
+    }
 }
 
 void CreateScriptedDoubleWildMon(u16 species1, u8 level1, enum Item item1, u16 species2, u8 level2, enum Item item2)

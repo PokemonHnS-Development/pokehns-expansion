@@ -3210,6 +3210,38 @@ bool8 ScrCmd_setwildbattle(struct ScriptContext *ctx)
     return FALSE;
 }
 
+bool8 ScrCmd_setwildbossbattle(struct ScriptContext* ctx)
+{
+    u16 species = ScriptReadHalfword(ctx);
+    u8 level = ScriptReadByte(ctx);
+    enum Item item = ScriptReadHalfword(ctx);
+    enum Move moves[MAX_MON_MOVES];
+    for (u32 i = 0; i < MAX_MON_MOVES; i++)
+        moves[i] = ScriptReadHalfword(ctx);
+
+    u16 species2 = ScriptReadHalfword(ctx);
+    u8 level2 = ScriptReadByte(ctx);
+    enum Item item2 = ScriptReadHalfword(ctx);
+    enum Move moves2[MAX_MON_MOVES];
+    for (u32 i = 0; i < MAX_MON_MOVES; i++)
+        moves2[i] = ScriptReadHalfword(ctx);
+
+    Script_RequestEffects(SCREFF_V1);
+
+    if (species2 == SPECIES_NONE)
+    {
+        CreateScriptedWildBossMon(species, level, item, moves);
+        sIsScriptedWildDouble = FALSE;
+    }
+    else
+    {
+        CreateScriptedDoubleWildBossMon(species, level, item, moves, species2, level2, item2, moves2);
+        sIsScriptedWildDouble = TRUE;
+    }
+
+    return FALSE;
+}
+
 bool8 ScrCmd_dowildbattle(struct ScriptContext *ctx)
 {
     Script_RequestEffects(SCREFF_V1 | SCREFF_HARDWARE);
