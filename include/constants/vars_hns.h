@@ -119,8 +119,8 @@
 #define VAR_SINJOHRUINS_STEVENMET                        0x40AF
 #define VAR_STEVEN_GROUP_INTRODUCTION                    0x40B0
 #define VAR_REGICOUNTER                                  0x40B1
-#define VAR_UNUSED_HNS_0x40B2                            0x40B2
-#define VAR_UNUSED_HNS_0x40B3                            0x40B3
+#define VAR_PLATECOUNTER                            0x40B2
+#define VAR_NOBLECOUNTER                            0x40B3
 #define VAR_UNUSED_HNS_0x40B4                            0x40B4
 #define VAR_UNUSED_HNS_0x40B5                            0x40B5
 #define VAR_UNUSED_HNS_0x40B6                            0x40B6

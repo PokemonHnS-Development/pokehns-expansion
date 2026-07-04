@@ -207,6 +207,7 @@ Route49_Text_Son:
 
 Route49_EventScript_Item_GrassPlate::
     finditem ITEM_MEADOW_PLATE
+    addvar VAR_PLATECOUNTER, 1
     end
 
 Route49_EventScript_Item_StarDust::

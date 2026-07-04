@@ -98,6 +98,7 @@ SnowsweptB_Text_CamperDennis_After:
 
 Snowswept_EventScript_Item_SPLASHPLATE::
     finditem ITEM_SPLASH_PLATE
+    addvar VAR_PLATECOUNTER, 1
     end
 
 Snowswept_EventScript_Item_MaxRevive::

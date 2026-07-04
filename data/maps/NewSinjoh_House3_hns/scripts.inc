@@ -449,12 +449,22 @@ NewSinjoh_EventScript_Defeated_Froslass::
 	subvar VAR_NEWSINJOH_HAUNTEDHOUSE_STAIRS, 1
 	removeobject LOCALID_NEWSINJOH_SPOOKY_BOX
 	msgbox Text_NewSinjoh_House3_Sprits_Gone
+	playse SE_PIN
+	applymovement LOCALID_PLAYER, Common_Movement_QuestionMark
+	msgbox NewSinjoh_House3_Text_SpookyPlate
+	giveitem ITEM_SPOOKY_PLATE, 1
+	addvar VAR_PLATECOUNTER, 1
 	release
 	end
 
 NewSinjoh_EventScript_Ran_Froslass::
 	setflag FLAG_NEWSINJOH_HAUNTEDHOUSE_FROSLASS_CAUGHT
 	msgbox Text_NewSinjoh_House3_Sprits_Gone
+	playse SE_PIN
+	applymovement LOCALID_PLAYER, Common_Movement_QuestionMark
+	msgbox NewSinjoh_House3_Text_SpookyPlate
+	giveitem ITEM_SPOOKY_PLATE, 1
+	addvar VAR_PLATECOUNTER, 1
 	release
 	end
 
@@ -480,6 +490,10 @@ Text_NewSinjoh_House3_Sprits_Gone:
     .string "It seems like the spirits trapped here\n"
 	.string "are now gone..\l"
 	.string "Perhaps it's now possible to leave?$"
+
+NewSinjoh_House3_Text_SpookyPlate:
+    .string "It seems the FROSLASS left\n"
+	.string "something important behind..$"
 
 NewSinjoh_House3_BoxPurge::
     removeobject LOCALID_NEWSINJOH_SPOOKY_BOX
