@@ -15715,7 +15715,7 @@
     {
       "id": "LAYOUT_ROUTE49_HNS",
       "name": "Route49_hns_Layout",
-      "width": 75,
+      "width": 76,
       "height": 58,
       "primary_tileset": "gTileset_MtSilver_Exp_Hns",
       "secondary_tileset": "gTileset_MtSilver_Ancient_Hns",
@@ -15739,7 +15739,7 @@
     {
       "id": "LAYOUT_ROUTE50_HNS",
       "name": "Route50_hns_Layout",
-      "width": 81,
+      "width": 82,
       "height": 67,
       "primary_tileset": "gTileset_MtSilver_Exp_Hns",
       "secondary_tileset": "gTileset_MtSilver_Ancient_Hns",

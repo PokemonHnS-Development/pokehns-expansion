@@ -16,6 +16,7 @@ SinjohRuins_EventScript_AddingSteven::
 
 SinjohRuins_House1_EventScripts_Steven_Intro_Yapping::
     lock
+	setflag FLAG_NOBLES_UNLOCKED
 	applymovement LOCALID_HOUSE1_STEVENSTONE, SinjohRuins_Steven_Movement_FinishesWalk
 	applymovement LOCALID_PLAYER, SinjohRuins_Player_Movement_FinishesWalk
 	waitmovement 0

@@ -306,6 +306,20 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
       "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_NOBLE_ELECTRODE",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_ELECTRODE_HISUI",
+      "x": 68,
+      "y": 4,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WALK_SEQUENCE_RIGHT_DOWN_LEFT_UP",
+      "movement_range_x": 5,
+      "movement_range_y": 5,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route49_EventScript_Electrode",
+      "flag": "FLAG_FOUGHT_NOBLE_ELECTRODE"
     }
   ],
   "warp_events": [

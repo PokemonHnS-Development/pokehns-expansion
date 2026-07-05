@@ -121,9 +121,9 @@
 #define VAR_REGICOUNTER                                  0x40B1
 #define VAR_PLATECOUNTER                            0x40B2
 #define VAR_NOBLECOUNTER                            0x40B3
-#define VAR_UNUSED_HNS_0x40B4                            0x40B4
-#define VAR_UNUSED_HNS_0x40B5                            0x40B5
-#define VAR_UNUSED_HNS_0x40B6                            0x40B6
+#define VAR_NOBLE_ARCANINE_TRIGGER                           0x40B4
+#define VAR_NOBLE_KLEAVOR_TRIGGER                            0x40B5
+#define VAR_NOBLE_SNEASLER_TRIGGER                            0x40B6
 #define VAR_UNUSED_HNS_0x40B7                            0x40B7
 #define VAR_UNUSED_HNS_0x40B8                            0x40B8
 #define VAR_UNUSED_HNS_0x40B9                            0x40B9

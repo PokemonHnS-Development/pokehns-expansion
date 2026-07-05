@@ -230,3 +230,73 @@ Route49_EventScript_PetWyrdeer::
 
 Route49_Text_Wyrdeer_Cry2:
     .string "Wyrrr!$"
+
+
+Route49_EventScript_Electrode::
+	lock
+	faceplayer
+	setwildbossbattle species=SPECIES_ELECTRODE_HISUI, level=80, item=ITEM_ZAP_PLATE, move1_1=MOVE_ELECTRO_BALL, move1_2=MOVE_ENERGY_BALL, move1_3=MOVE_STUN_SPORE move1_4=MOVE_CHARGE
+	waitse
+	playmoncry SPECIES_ELECTRODE, CRY_MODE_ENCOUNTER
+	msgbox Route49_Text_Bzzzt MSGBOX_DEFAULT
+	waitmessage
+	waitmoncry
+	delay 10
+    setweather WEATHER_RAIN_THUNDERSTORM
+    doweather
+    delay 10
+    playse SE_THUNDER
+    fadescreen FADE_TO_WHITE
+    fadescreen FADE_FROM_WHITE
+	waitbuttonpress
+	setflag FLAG_SYS_CTRL_OBJ_DELETE
+	special BattleSetup_StartLegendaryBattle
+	settotemboost B_POSITION_OPPONENT_LEFT, 0, 0, 3, 2, 0, 0
+	playbgm MUS_HG_VS_SUICUNE, 0
+	waitstate
+	clearflag FLAG_SYS_CTRL_OBJ_DELETE
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, Route49_EventScript_DefeatedElectrode
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, Route49_EventScript_RanFromElectrode
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, Route49_EventScript_RanFromElectrode
+	setflag FLAG_FOUGHT_NOBLE_ELECTRODE
+	fadescreen FADE_TO_BLACK
+	removeobject LOCALID_NOBLE_ELECTRODE
+    setweather WEATHER_SNOW
+    doweather
+	fadescreen FADE_FROM_BLACK
+    DELAY 30
+	playse SE_PIN
+	applymovement LOCALID_PLAYER, Common_Movement_QuestionMark
+	msgbox Route49_Text_ZapPlate
+	giveitem ITEM_ZAP_PLATE, 1
+	addvar VAR_PLATECOUNTER, 1
+	addvar VAR_NOBLECOUNTER, 1
+	release
+	end
+
+Route49_EventScript_DefeatedElectrode::
+	setflag FLAG_FOUGHT_NOBLE_ELECTRODE
+	fadescreen FADE_TO_BLACK
+	removeobject LOCALID_NOBLE_ELECTRODE
+    setweather WEATHER_SNOW
+    doweather
+	fadescreen FADE_FROM_BLACK
+    delay 30
+	playse SE_PIN
+	applymovement LOCALID_PLAYER, Common_Movement_QuestionMark
+	msgbox Route49_Text_ZapPlate
+	giveitem ITEM_ZAP_PLATE, 1
+	addvar VAR_PLATECOUNTER, 1
+	addvar VAR_NOBLECOUNTER, 1
+	end
+
+Route49_EventScript_RanFromElectrode::
+	setvar VAR_0x8004, SPECIES_ELECTRODE_HISUI
+	end
+
+Route49_Text_Bzzzt:
+    .string "Bzzz Bzzzt!!$"
+
+Route49_Text_ZapPlate:
+    .string "It seems ELECTRODE left something behind..$"

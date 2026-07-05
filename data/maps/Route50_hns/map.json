@@ -24,7 +24,36 @@
       "direction": "up"
     }
   ],
-  "object_events": [],
+  "object_events": [
+    {
+      "local_id": "LOCALID_NOBLE_KLEAVOR",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_KLEAVOR",
+      "x": 78,
+      "y": 7,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_FOUGHT_NOBLE_KLEAVOR"
+    },
+    {
+      "local_id": "LOCALID_NOBLE_SNEASLER",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SNEASLER",
+      "x": 28,
+      "y": 3,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_FOUGHT_NOBLE_SNEASLER"
+    }
+  ],
   "warp_events": [
     {
       "x": 18,
@@ -48,7 +77,26 @@
       "dest_warp_id": "0"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 76,
+      "y": 14,
+      "elevation": 0,
+      "var": "VAR_NOBLE_KLEAVOR_TRIGGER",
+      "var_value": "0",
+      "script": "Route50_EventScript_Noble_Kleavor_Trigger"
+    },
+    {
+      "type": "trigger",
+      "x": 28,
+      "y": 9,
+      "elevation": 0,
+      "var": "VAR_NOBLE_SNEASLER_TRIGGER",
+      "var_value": "0",
+      "script": "Route50_EventScript_Noble_Sneasler_Trigger"
+    }
+  ],
   "bg_events": [],
   "game_version": "hns",
   "region": "REGION_JOHTO"

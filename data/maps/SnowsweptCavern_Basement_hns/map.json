@@ -207,7 +207,21 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_FOUGHT_NOBLE_ARCANINE"
+    },
+    {
+      "local_id": "LOCALID_NOBLE_ARCANINE",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_ARCANINE_HISUI",
+      "x": 25,
+      "y": 8,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_FOUGHT_NOBLE_ARCANINE"
     }
   ],
   "warp_events": [
@@ -226,7 +240,26 @@
       "dest_warp_id": "0"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 29,
+      "y": 14,
+      "elevation": 0,
+      "var": "VAR_NOBLE_ARCANINE_TRIGGER",
+      "var_value": "0",
+      "script": "Snowswept_Caverns_Noble_Arcanine_Right"
+    },
+    {
+      "type": "trigger",
+      "x": 28,
+      "y": 14,
+      "elevation": 0,
+      "var": "VAR_NOBLE_ARCANINE_TRIGGER",
+      "var_value": "0",
+      "script": "Snowswept_Caverns_Noble_Arcanine_Left"
+    }
+  ],
   "bg_events": [
     {
       "type": "sign",
