@@ -146,6 +146,10 @@
 #define BERRY_BLENDER_THROW_ALL_BERRIES_AT_ONCE TRUE        // This is a small little addition, that basically speeds up the animation where all players' berries are thrown into the blender. Self-explanatory I hope!
 
 // Trainer Rematches
+#if IS_HNS
+#define OW_REMATCH_BADGE_COUNT      4 // After Morty (Ecruteak City)
+#else
 #define OW_REMATCH_BADGE_COUNT      5 // Number of badges necessary before the match call or vs seeker features allow rematches
+#endif
 
 #endif // GUARD_CONFIG_OVERWORLD_H

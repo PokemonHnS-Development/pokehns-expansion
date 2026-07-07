@@ -1,4 +1,3 @@
-#define DEBUG_MATCH_CALL 0
 
 #include "global.h"
 #include "malloc.h"
@@ -8,6 +7,7 @@
 #include "birch_pc.h"
 #include "data.h"
 #include "event_data.h"
+#include "fake_rtc.h"
 #include "event_object_movement.h"
 #include "field_player_avatar.h"
 #include "main.h"
@@ -1217,7 +1217,12 @@ static bool32 UpdateMatchCallMinutesCounter(void)
     int curMinutes;
     RtcCalcLocalTime();
     curMinutes = GetCurrentTotalMinutes(&gLocalTime);
+#if IS_HNS
+    if (sMatchCallState.minutes > curMinutes
+     || curMinutes - sMatchCallState.minutes > (UseFakeRtc() ? 179 : 9))
+#else
     if (sMatchCallState.minutes > curMinutes || curMinutes - sMatchCallState.minutes > 9)
+#endif
     {
         sMatchCallState.minutes = curMinutes;
         return TRUE;
@@ -1258,7 +1263,11 @@ static bool32 MapAllowsMatchCall(void)
 
 static bool32 UpdateMatchCallStepCounter(void)
 {
+#if IS_HNS
+    if (++sMatchCallState.stepCounter >= 30)
+#else
     if (++sMatchCallState.stepCounter >= 10)
+#endif
     {
         sMatchCallState.stepCounter = 0;
         return TRUE;
@@ -1338,9 +1347,12 @@ bool32 TryStartMatchCall(void)
     if (gSaveBlock3Ptr->challengeSettings.disableMatchCall)
         return FALSE;
 
-#if IS_HNS && DEBUG_MATCH_CALL
+#if IS_HNS
     if (FlagGet(FLAG_HAS_MATCH_CALL)
+        && HasEnoughBadgesForRematch()
         && UpdateMatchCallStepCounter()
+        && UpdateMatchCallMinutesCounter()
+        && CheckMatchCallChance()
         && SelectMatchCallTrainer())
 #else
     if (FlagGet(FLAG_HAS_MATCH_CALL)
