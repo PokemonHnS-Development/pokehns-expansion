@@ -7,6 +7,7 @@ enum
     PAGE_HNS_DEVS_3,
     PAGE_HNS_SPRITES_1,
     PAGE_HNS_SPRITES_2,
+    PAGE_HNS_SPRITES_3,
     PAGE_HNS_TILESETS_1,
     PAGE_HNS_TILESETS_2,
     PAGE_HNS_TILESETS_3,
@@ -123,6 +124,8 @@ static const u8 sCreditsText_Cesare_CBass[]                   = _("Cesare CBass"
 static const u8 sCreditsText_Batima[]                          = _("BatimaTheBat");
 static const u8 sCreditsText_ShinyDragonHunter[]               = _("ShinyDragonHunter");
 static const u8 sCreditsText_TamamushiErika[]                  = _("Tamamushi Erika");
+static const u8 sCreditsText_Beliot419[]                       = _("Beliot419");
+static const u8 sCreditsText_shiningstar5022[]                 = _("shiningstar5022");
 
 static const u8 sCreditsText_Engine[]                          = _("Engine");
 static const u8 sCreditsText_Pret[]                            = _("pokeemerald - Pret");
@@ -142,6 +145,7 @@ static const u8 sCreditsText_JohtoRedrawn[]                    =_("Johto Redrawn
 static const u8 sCreditsText_Zatavares852[]                    = _("zatavares852");
 static const u8 sCreditsText_lbsbezerra[]                      = _("lbsbezerra");
 static const u8 sCreditsText_WesleyFG[]                        = _("WesleyFG");
+static const u8 sCreditsText_Kalarie[]                         = _("Kalarie");
 
 static const u8 sCreditsText_Gameplay[]                        = _("Gameplay");
 static const u8 sCreditsText_TheSmithPlaysGameplay[]           = _("Crystal Legacy - TSP");
@@ -376,6 +380,8 @@ static const struct CreditsEntry sCreditsEntry_Cesare_CBass                    =
 static const struct CreditsEntry sCreditsEntry_Batima                 = {11, FALSE, sCreditsText_Batima};
 static const struct CreditsEntry sCreditsEntry_ShinyDragonHunter                ={11, FALSE, sCreditsText_ShinyDragonHunter};
 static const struct CreditsEntry sCreditsEntry_TamamushiErika                   ={11, FALSE, sCreditsText_TamamushiErika};
+static const struct CreditsEntry sCreditsEntry_Beliot419                        = {11, FALSE, sCreditsText_Beliot419};
+static const struct CreditsEntry sCreditsEntry_shiningstar5022                  = {11, FALSE, sCreditsText_shiningstar5022};
 // Engine
 static const struct CreditsEntry sCreditsEntry_Engine                           = {8,  TRUE, sCreditsText_Engine};
 static const struct CreditsEntry sCreditsEntry_Pret                             = {11, FALSE, sCreditsText_Pret};
@@ -397,6 +403,7 @@ static const struct CreditsEntry sCreditsEntry_JohtoRedrawn                    =
 static const struct CreditsEntry sCreditsEntry_Zatavares852                    = {11, FALSE, sCreditsText_Zatavares852};
 static const struct CreditsEntry sCreditsEntry_lbsbezerra                      = {11, FALSE, sCreditsText_lbsbezerra};
 static const struct CreditsEntry sCreditsEntry_WesleyFG                        = {11, FALSE, sCreditsText_WesleyFG};
+static const struct CreditsEntry sCreditsEntry_Kalarie                         = {11, FALSE, sCreditsText_Kalarie};
 // Gameplay
 static const struct CreditsEntry sCreditsEntry_Gameplay                         = {8,  TRUE, sCreditsText_Gameplay};
 static const struct CreditsEntry sCreditsEntry_TheSmithPlaysGameplay            = {11, FALSE, sCreditsText_TheSmithPlaysGameplay};
@@ -652,6 +659,13 @@ static const struct CreditsEntry *const sCreditsEntryPointerTable[PAGE_COUNT][EN
         &sCreditsEntry_ShinyDragonHunter,
         &sCreditsEntry_TamamushiErika,
     },
+    [PAGE_HNS_SPRITES_3] = {
+        &sCreditsEntry_Assets,
+        &sCreditsEntry_Sprites,
+        &sCreditsEntry_Beliot419,
+        &sCreditsEntry_shiningstar5022,
+        _,
+    },
     [PAGE_HNS_TILESETS_1] = {
         &sCreditsEntry_Assets,
         &sCreditsEntry_Tilesets,
@@ -670,7 +684,7 @@ static const struct CreditsEntry *const sCreditsEntryPointerTable[PAGE_COUNT][EN
         &sCreditsEntry_Assets,
         &sCreditsEntry_Tilesets,
         &sCreditsEntry_WesleyFG,
-        _,
+        &sCreditsEntry_Kalarie,
         _,
     },
     [PAGE_HNS_MAPS] = {
