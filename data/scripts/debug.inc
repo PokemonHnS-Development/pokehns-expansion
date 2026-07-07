@@ -345,7 +345,8 @@ Debug_EventScript_Script_2::
 	end
 
 Debug_EventScript_Script_3::
-	goto Alola_Melemele_SamsonOakVilla_Dialogue_10
+	additem ITEM_PASS
+	setflag FLAG_RETURNED_MACHINE_PART
 	release
 	end
 
