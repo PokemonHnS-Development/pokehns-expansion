@@ -37,6 +37,7 @@ void ItemUseOutOfBattle_ZygardeCube(u8 taskId);
 void ItemUseOutOfBattle_Fusion(u8 taskId);
 void ItemUseOutOfBattle_Honey(u8 taskId);
 void ItemUseOutOfBattle_InfiniteRareCandies(u8 taskId);
+void ItemUseOutOfBattle_PokeBall(u8 taskId);
 void ItemUseOutOfBattle_CannotUse(u8 taskId);
 void ItemUseOutOfBattle_GBPlayer(u8 taskId);
 void ItemUseOutOfBattle_ExpShare(u8 taskId);

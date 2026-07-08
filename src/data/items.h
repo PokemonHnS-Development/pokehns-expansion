@@ -201,7 +201,8 @@ const struct ItemInfo gItemsInfo[] =
             "catching wild\n"
             "Pokémon."),
         .pocket = POCKET_POKE_BALLS,
-        .type = ITEM_USE_BAG_MENU,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_PokeBall,
         .battleUsage = EFFECT_ITEM_THROW_BALL,
         .secondaryId = BALL_POKE,
         .iconPic = gItemIcon_PokeBall,
@@ -217,7 +218,8 @@ const struct ItemInfo gItemsInfo[] =
             "higher catch rate\n"
             "than a Poké Ball."),
         .pocket = POCKET_POKE_BALLS,
-        .type = ITEM_USE_BAG_MENU,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_PokeBall,
         .battleUsage = EFFECT_ITEM_THROW_BALL,
         .secondaryId = BALL_GREAT,
         .iconPic = gItemIcon_GreatBall,
@@ -233,7 +235,8 @@ const struct ItemInfo gItemsInfo[] =
             "a higher catch rate\n"
             "than a Great Ball."),
         .pocket = POCKET_POKE_BALLS,
-        .type = ITEM_USE_BAG_MENU,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_PokeBall,
         .battleUsage = EFFECT_ITEM_THROW_BALL,
         .secondaryId = BALL_ULTRA,
         .iconPic = gItemIcon_UltraBall,
@@ -249,7 +252,8 @@ const struct ItemInfo gItemsInfo[] =
             "catches a Pokémon\n"
             "without fail."),
         .pocket = POCKET_POKE_BALLS,
-        .type = ITEM_USE_BAG_MENU,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_PokeBall,
         .battleUsage = EFFECT_ITEM_THROW_BALL,
         .secondaryId = BALL_MASTER,
         .iconPic = gItemIcon_MasterBall,
@@ -265,7 +269,8 @@ const struct ItemInfo gItemsInfo[] =
             "in commemoration\n"
             "of some event."),
         .pocket = POCKET_POKE_BALLS,
-        .type = ITEM_USE_BAG_MENU,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_PokeBall,
         .battleUsage = EFFECT_ITEM_THROW_BALL,
         .secondaryId = BALL_PREMIER,
         .iconPic = gItemIcon_PremierBall,
@@ -281,7 +286,8 @@ const struct ItemInfo gItemsInfo[] =
             "that restores\n"
             "caught Pokémon."),
         .pocket = POCKET_POKE_BALLS,
-        .type = ITEM_USE_BAG_MENU,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_PokeBall,
         .battleUsage = EFFECT_ITEM_THROW_BALL,
         .secondaryId = BALL_HEAL,
         .iconPic = gItemIcon_HealBall,
@@ -297,7 +303,8 @@ const struct ItemInfo gItemsInfo[] =
             "well on Water- and\n"
             "Bug-type Pokémon."),
         .pocket = POCKET_POKE_BALLS,
-        .type = ITEM_USE_BAG_MENU,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_PokeBall,
         .battleUsage = EFFECT_ITEM_THROW_BALL,
         .secondaryId = BALL_NET,
         .iconPic = gItemIcon_NetBall,
@@ -313,7 +320,8 @@ const struct ItemInfo gItemsInfo[] =
             "better on weaker\n"
             "Pokémon."),
         .pocket = POCKET_POKE_BALLS,
-        .type = ITEM_USE_BAG_MENU,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_PokeBall,
         .battleUsage = EFFECT_ITEM_THROW_BALL,
         .secondaryId = BALL_NEST,
         .iconPic = gItemIcon_NestBall,
@@ -329,7 +337,8 @@ const struct ItemInfo gItemsInfo[] =
             "better on Pokémon\n"
             "on the ocean floor."),
         .pocket = POCKET_POKE_BALLS,
-        .type = ITEM_USE_BAG_MENU,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_PokeBall,
         .battleUsage = EFFECT_ITEM_THROW_BALL,
         .secondaryId = BALL_DIVE,
         .iconPic = gItemIcon_DiveBall,
@@ -345,7 +354,8 @@ const struct ItemInfo gItemsInfo[] =
             "used in a\n"
             "dark place."),
         .pocket = POCKET_POKE_BALLS,
-        .type = ITEM_USE_BAG_MENU,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_PokeBall,
         .battleUsage = EFFECT_ITEM_THROW_BALL,
         .secondaryId = BALL_DUSK,
         .iconPic = gItemIcon_DuskBall,
@@ -361,7 +371,8 @@ const struct ItemInfo gItemsInfo[] =
             "power in battles\n"
             "taking many turns."),
         .pocket = POCKET_POKE_BALLS,
-        .type = ITEM_USE_BAG_MENU,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_PokeBall,
         .battleUsage = EFFECT_ITEM_THROW_BALL,
         .secondaryId = BALL_TIMER,
         .iconPic = gItemIcon_TimerBall,
@@ -377,7 +388,8 @@ const struct ItemInfo gItemsInfo[] =
             "used on the\n"
             "first turn."),
         .pocket = POCKET_POKE_BALLS,
-        .type = ITEM_USE_BAG_MENU,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_PokeBall,
         .battleUsage = EFFECT_ITEM_THROW_BALL,
         .secondaryId = BALL_QUICK,
         .iconPic = gItemIcon_QuickBall,
@@ -393,7 +405,8 @@ const struct ItemInfo gItemsInfo[] =
             "better on Pokémon\n"
             "caught before."),
         .pocket = POCKET_POKE_BALLS,
-        .type = ITEM_USE_BAG_MENU,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_PokeBall,
         .battleUsage = EFFECT_ITEM_THROW_BALL,
         .secondaryId = BALL_REPEAT,
         .iconPic = gItemIcon_RepeatBall,
@@ -409,7 +422,8 @@ const struct ItemInfo gItemsInfo[] =
             "makes Pokémon\n"
             "more friendly."),
         .pocket = POCKET_POKE_BALLS,
-        .type = ITEM_USE_BAG_MENU,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_PokeBall,
         .battleUsage = EFFECT_ITEM_THROW_BALL,
         .secondaryId = BALL_LUXURY,
         .iconPic = gItemIcon_LuxuryBall,
@@ -425,7 +439,8 @@ const struct ItemInfo gItemsInfo[] =
             "well on lower\n"
             "level Pokémon."),
         .pocket = POCKET_POKE_BALLS,
-        .type = ITEM_USE_BAG_MENU,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_PokeBall,
         .battleUsage = EFFECT_ITEM_THROW_BALL,
         .secondaryId = BALL_LEVEL,
         .iconPic = gItemIcon_LevelBall,
@@ -441,7 +456,8 @@ const struct ItemInfo gItemsInfo[] =
             "well on fished\n"
             "up Pokémon."),
         .pocket = POCKET_POKE_BALLS,
-        .type = ITEM_USE_BAG_MENU,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_PokeBall,
         .battleUsage = EFFECT_ITEM_THROW_BALL,
         .secondaryId = BALL_LURE,
         .iconPic = gItemIcon_LureBall,
@@ -457,7 +473,8 @@ const struct ItemInfo gItemsInfo[] =
             "well on Moon\n"
             "Stone users."),
         .pocket = POCKET_POKE_BALLS,
-        .type = ITEM_USE_BAG_MENU,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_PokeBall,
         .battleUsage = EFFECT_ITEM_THROW_BALL,
         .secondaryId = BALL_MOON,
         .iconPic = gItemIcon_MoonBall,
@@ -473,7 +490,8 @@ const struct ItemInfo gItemsInfo[] =
             "a Pokémon friendly\n"
             "when caught."),
         .pocket = POCKET_POKE_BALLS,
-        .type = ITEM_USE_BAG_MENU,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_PokeBall,
         .battleUsage = EFFECT_ITEM_THROW_BALL,
         .secondaryId = BALL_FRIEND,
         .iconPic = gItemIcon_FriendBall,
@@ -489,7 +507,8 @@ const struct ItemInfo gItemsInfo[] =
             "Pokémon of the\n"
             "opposite gender."),
         .pocket = POCKET_POKE_BALLS,
-        .type = ITEM_USE_BAG_MENU,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_PokeBall,
         .battleUsage = EFFECT_ITEM_THROW_BALL,
         .secondaryId = BALL_LOVE,
         .iconPic = gItemIcon_LoveBall,
@@ -505,7 +524,8 @@ const struct ItemInfo gItemsInfo[] =
             "very fast\n"
             "Pokémon."),
         .pocket = POCKET_POKE_BALLS,
-        .type = ITEM_USE_BAG_MENU,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_PokeBall,
         .battleUsage = EFFECT_ITEM_THROW_BALL,
         .secondaryId = BALL_FAST,
         .iconPic = gItemIcon_FastBall,
@@ -521,7 +541,8 @@ const struct ItemInfo gItemsInfo[] =
             "very heavy\n"
             "Pokémon."),
         .pocket = POCKET_POKE_BALLS,
-        .type = ITEM_USE_BAG_MENU,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_PokeBall,
         .battleUsage = EFFECT_ITEM_THROW_BALL,
         .secondaryId = BALL_HEAVY,
         .iconPic = gItemIcon_HeavyBall,
@@ -542,7 +563,8 @@ const struct ItemInfo gItemsInfo[] =
             "the Entree Forest."),
         #endif
         .pocket = POCKET_POKE_BALLS,
-        .type = ITEM_USE_BAG_MENU,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_PokeBall,
         .battleUsage = EFFECT_ITEM_THROW_BALL,
         .secondaryId = BALL_DREAM,
         .iconPic = gItemIcon_DreamBall,
@@ -558,7 +580,8 @@ const struct ItemInfo gItemsInfo[] =
             "is used only in the\n"
             "Safari Zone."),
         .pocket = POCKET_POKE_BALLS,
-        .type = ITEM_USE_BAG_MENU,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_PokeBall,
         .battleUsage = EFFECT_ITEM_THROW_BALL,
         .secondaryId = BALL_SAFARI,
         .iconPic = gItemIcon_SafariBall,
@@ -574,7 +597,8 @@ const struct ItemInfo gItemsInfo[] =
             "used in the Bug-\n"
             "Catching Contest."),
         .pocket = POCKET_POKE_BALLS,
-        .type = ITEM_USE_BAG_MENU,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_PokeBall,
         .battleUsage = EFFECT_ITEM_THROW_BALL,
         .secondaryId = BALL_SPORT,
         .iconPic = gItemIcon_SportBall,
@@ -589,7 +613,8 @@ const struct ItemInfo gItemsInfo[] =
             "A special Ball for\n"
             "the Pal Park."),
         .pocket = POCKET_POKE_BALLS,
-        .type = ITEM_USE_BAG_MENU,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_PokeBall,
         .battleUsage = EFFECT_ITEM_THROW_BALL,
         .secondaryId = BALL_PARK,
         .iconPic = gItemIcon_ParkBall,
@@ -604,7 +629,8 @@ const struct ItemInfo gItemsInfo[] =
             "A Ball designed to\n"
             "catch Ultra Beasts."),
         .pocket = POCKET_POKE_BALLS,
-        .type = ITEM_USE_BAG_MENU,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_PokeBall,
         .battleUsage = EFFECT_ITEM_THROW_BALL,
         .secondaryId = BALL_BEAST,
         .iconPic = gItemIcon_BeastBall,
@@ -620,7 +646,8 @@ const struct ItemInfo gItemsInfo[] =
             "in commemoration\n"
             "of some event."),
         .pocket = POCKET_POKE_BALLS,
-        .type = ITEM_USE_BAG_MENU,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_PokeBall,
         .battleUsage = EFFECT_ITEM_THROW_BALL,
         .secondaryId = BALL_CHERISH,
         .iconPic = gItemIcon_CherishBall,
