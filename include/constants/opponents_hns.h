@@ -613,8 +613,9 @@
 #define TRAINER_MIHARU_HNS                             605
 #define TRAINER_YOUKO_HNS                              606
 #define TRAINER_SHIZUKO_HNS                            607
+#define TRAINER_REX4_HNS                               608
 
-#define TRAINERS_COUNT_HNS                       608
+#define TRAINERS_COUNT_HNS                       609
 #define MAX_TRAINERS_COUNT_HNS                   864
 
 #endif  // GUARD_CONSTANTS_OPPONENTS_HNS_H

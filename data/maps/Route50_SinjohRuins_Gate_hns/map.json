@@ -64,7 +64,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "Route50_Gate_EventScript_Rex",
       "flag": "0"
     },
     {
@@ -81,6 +81,7 @@
       "flag": "0"
     },
     {
+      "local_id": "LOCALID_HERACROSS",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_HERACROSS",
       "x": 21,
       "y": 3,

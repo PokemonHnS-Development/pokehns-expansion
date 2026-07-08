@@ -14179,3 +14179,71 @@ Adamant Nature
 - Curse  
 - Sing  
 
+=== TRAINER_REX4_HNS ===
+Name: REX
+Class: Black Belt Hns
+Pic: Black Belt FRLG
+Gender: Male
+Music: Hg Boy 2
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Hitmontop  
+Ability: Technician  
+Level: 62 
+EVs: 180 HP / 116 Atk / 76 Def / 136 SpD  
+Careful Nature  
+- Ice Spinner  
+- Earthquake  
+- Bullet Punch  
+- Counter  
+
+Hitmonchan @ Punching Glove  
+Ability: Iron Fist  
+Level: 62    
+EVs: 252 Atk / 4 Def / 252 SpD  
+Impish Nature  
+- Drain Punch  
+- Bulk Up  
+- Fire Punch  
+- Bullet Punch  
+
+Hariyama @ Leftovers  
+Ability: Thick Fat  
+Level: 64   
+EVs: 252 HP / 128 Def / 128 SpD  
+- Cross Chop  
+- Power-Up Punch  
+- Payback  
+- Detect  
+
+Sneasler @ Life Orb  
+Ability: Poison Touch  
+Level: 64  
+EVs: 252 Atk / 252 Spe  
+Adamant Nature  
+- Dire Claw  
+- Close Combat  
+- Night Slash  
+- Fake Out  
+
+Gallade @ Scope Lens  
+Ability: Sharpness  
+Level: 64
+EVs: 252 Atk / 80 Def / 176 SpD  
+Adamant Nature  
+- Aqua Cutter  
+- Sacred Sword  
+- Leaf Blade  
+- Bulk Up  
+
+Heracross @ Loaded Dice  
+Ability: Moxie  
+Level: 64
+EVs: 192 HP / 128 Atk / 44 Def / 144 SpD  
+Adamant Nature  
+- Megahorn  
+- Iron Defense  
+- Trailblaze  
+- Arm Thrust  
+
