@@ -95,6 +95,87 @@
       "var": "VAR_NOBLE_SNEASLER_TRIGGER",
       "var_value": "0",
       "script": "Route50_EventScript_Noble_Sneasler_Trigger"
+    },
+    {
+      "type": "trigger",
+      "x": 19,
+      "y": 6,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Route50_Hide_Noble"
+    },
+    {
+      "type": "trigger",
+      "x": 20,
+      "y": 5,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Route50_Hide_Noble"
+    },
+    {
+      "type": "trigger",
+      "x": 18,
+      "y": 6,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Route50_Hide_Noble"
+    },
+    {
+      "type": "trigger",
+      "x": 17,
+      "y": 5,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Route50_Hide_Noble"
+    },
+    {
+      "type": "trigger",
+      "x": 13,
+      "y": 54,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Route50_Hide_Noble"
+    },
+    {
+      "type": "trigger",
+      "x": 14,
+      "y": 54,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Route50_Hide_Noble"
+    },
+    {
+      "type": "trigger",
+      "x": 69,
+      "y": 3,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Route50_Hide_Noble"
+    },
+    {
+      "type": "trigger",
+      "x": 69,
+      "y": 2,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Route50_Hide_Noble"
+    },
+    {
+      "type": "trigger",
+      "x": 69,
+      "y": 1,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Route50_Hide_Noble"
     }
   ],
   "bg_events": [],

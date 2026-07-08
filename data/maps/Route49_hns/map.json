@@ -21,6 +21,7 @@
   ],
   "object_events": [
     {
+      "local_id": "LOCALID_NOBLE_ELECTRODE",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SNORUNT",
       "x": 4,
       "y": 32,
@@ -213,8 +214,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Route49_EventScript_Item_GrassPlate",
-      "flag": "FLAG_ROUTE_49_GRASSPLATE"
+      "script": "Route49_EventScript_Item_MindPlate",
+      "flag": "FLAG_ROUTE_49_MINDPLATE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ENGINEER_HNS",
@@ -345,7 +346,26 @@
       "dest_warp_id": "0"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 61,
+      "y": 19,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Route49_EventScripts_HideNoble_Trigger"
+    },
+    {
+      "type": "trigger",
+      "x": 61,
+      "y": 20,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Route49_EventScripts_HideNoble_Trigger"
+    }
+  ],
   "bg_events": [
     {
       "type": "sign",

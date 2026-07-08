@@ -9,6 +9,7 @@ Route50_hns_OnTransition::
 Route50_Hide_Noble::
     removeobject LOCALID_NOBLE_KLEAVOR
 	removeobject LOCALID_NOBLE_SNEASLER
+	release
 	end
 
 
@@ -26,6 +27,8 @@ Route50_EventScript_Kleavor::
 	lock
 	addobject LOCALID_NOBLE_KLEAVOR
 	applymovement LOCALID_NOBLE_KLEAVOR, Route50_Kleavor_Movement
+	delay 110
+	playse SE_BIKE_HOP
 	waitmovement
 	setwildbossbattle species=SPECIES_KLEAVOR, level=80, item=ITEM_SCOPE_LENS, move1_1=MOVE_STONE_AXE, move1_2=MOVE_CROSS_POISON, move1_3=MOVE_LUNGE move1_4=MOVE_FOCUS_ENERGY
 	waitse
@@ -37,7 +40,7 @@ Route50_EventScript_Kleavor::
 	waitbuttonpress
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
-	settotemboost B_POSITION_OPPONENT_LEFT, 1, 0, 2, 0, 0, 0
+	settotemboost B_POSITION_OPPONENT_LEFT, 1, 2, 0, 0, 2, 0
 	playbgm MUS_HG_VS_SUICUNE, 0
 	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
@@ -104,6 +107,8 @@ Route50_EventScript_Sneasler::
 	lock
 	addobject LOCALID_NOBLE_SNEASLER
 	applymovement LOCALID_NOBLE_SNEASLER, Route50_Sneasler_Movement
+	delay 60
+	playse SE_BIKE_HOP
 	waitmovement
 	setwildbossbattle species=SPECIES_SNEASLER, level=80, item=ITEM_RAZOR_CLAW, move1_1=MOVE_DIRE_CLAW, move1_2=MOVE_ROCK_SLIDE, move1_3=MOVE_BRICK_BREAK move1_4=MOVE_LASH_OUT
 	waitse

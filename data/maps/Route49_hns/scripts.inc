@@ -7,6 +7,16 @@ Route49_hns_OnFrame::
     map_script_2 VAR_ROUTE49_HNS_KIMONOGIRL, 0, Route49_EventScripts_KimonoGirl
 	.2byte 0
 
+Route49_EventScripts_HideNoble_Trigger::
+    goto_if_unset FLAG_NOBLES_UNLOCKED, Route49_EventScript_HideNobles
+    release
+    end
+
+Route49_EventScript_HideNobles::
+    removeobject LOCALID_NOBLE_ELECTRODE
+    release
+    end
+
 Route49_EventScripts_KimonoGirl::
     delay 10
     lock
@@ -205,8 +215,8 @@ Route49_Text_Son:
     .string "Siiis!\p"
     .string "Slow down, You're going to crash!$"
 
-Route49_EventScript_Item_GrassPlate::
-    finditem ITEM_MEADOW_PLATE
+Route49_EventScript_Item_MindPlate::
+    finditem ITEM_MIND_PLATE
     addvar VAR_PLATECOUNTER, 1
     end
 

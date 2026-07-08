@@ -1678,6 +1678,30 @@
       "width": 1,
       "height": 1,
       "in_hns": true
+    },
+    {
+      "id": "MAPSEC_NEW_SINJOH"
+    },
+    {
+      "id": "MAPSEC_ROUTE_50"
+    },
+    {
+      "id": "MAPSEC_ROUTE_32"
+    },
+    {
+      "id": "MAPSEC_SINJOH_RUINS"
+    },
+    {
+      "id": "MAPSEC_ROUTE_43"
+    },
+    {
+      "id": "MAPSEC_ROUTE_49"
+    },
+    {
+      "id": "MAPSEC_ROUTE_36"
+    },
+    {
+      "id": "MAPSEC_ROUTE_42"
     }
   ],
   "hns_map_sections": [

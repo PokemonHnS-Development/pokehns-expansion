@@ -12,9 +12,10 @@
   "allow_running": true,
   "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": 0,
+  "connections": null,
   "object_events": [
     {
+      "local_id": "LOCALID_INDIGOJUNCTION_POLICEMAN",
       "graphics_id": "OBJ_EVENT_GFX_OFFICER_HNS",
       "x": 9,
       "y": 14,
@@ -25,8 +26,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "ReceptionGate_EventScript_Officer",
-      "flag": "0",
-      "local_id": "LOCALID_INDIGOJUNCTION_POLICEMAN"
+      "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BLACK_BELT_HNS",
@@ -55,6 +55,7 @@
       "flag": "FLAG_INDIGOJUNCTION_HIDE_KANTO_GUARD"
     },
     {
+      "local_id": "LOCALID_INDIGOJUNCTION_JANINE",
       "graphics_id": "OBJ_EVENT_GFX_JANINE_HNS",
       "x": 11,
       "y": 6,
@@ -65,8 +66,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "ReceptionGate_EventScript_Janine",
-      "flag": "FLAG_HIDE_ROUTE22_JANINE",
-      "local_id": "LOCALID_INDIGOJUNCTION_JANINE"
+      "flag": "FLAG_HIDE_ROUTE22_JANINE"
     }
   ],
   "warp_events": [

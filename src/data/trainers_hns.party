@@ -14119,3 +14119,63 @@ Ursaring
 Ability: Guts  
 Level: 65
 
+=== TRAINER_MIHARU_HNS ===
+Name: MIHARU
+Class: Kimono Girl Hns
+Pic: Kimono Girl Hns
+Gender: Male
+Music: Female 
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+
+Leafeon @ Meadow Plate  
+Ability: Chlorophyll  
+Level: 70
+EVs: 4 HP / 252 Atk / 252 Def  
+Adamant Nature  
+- Leaf Blade  
+- Synthesis  
+- Iron Tail  
+- Yawn  
+
+=== TRAINER_YOUKO_HNS ===
+Name: YOUKO
+Class: Kimono Girl Hns
+Pic: Kimono Girl Hns
+Gender: Male
+Music: Female
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Glaceon @ Icicle Plate  
+Ability: Ice Body  
+Level: 70
+EVs: 252 HP / 252 SpA / 4 SpD  
+Modest Nature  
+IVs: 0 Atk  
+- Synchronoise
+- Blizzard  
+- Chilling Water  
+- Shadow Ball 
+
+=== TRAINER_SHIZUKO_HNS ===
+Name: SHIZUKO
+Class: Kimono Girl Hns
+Pic: Kimono Girl Hns
+Gender: Male
+Music: Female
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Sylveon @ Pixie Plate  
+Ability: Pixilate  
+Level: 70
+Happiness: 254   
+EVs: 124 HP / 252 Atk / 132 Def  
+Adamant Nature  
+- Skull Bash  
+- Iron Tail  
+- Curse  
+- Sing  
+

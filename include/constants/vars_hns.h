@@ -124,7 +124,7 @@
 #define VAR_NOBLE_ARCANINE_TRIGGER                           0x40B4
 #define VAR_NOBLE_KLEAVOR_TRIGGER                            0x40B5
 #define VAR_NOBLE_SNEASLER_TRIGGER                            0x40B6
-#define VAR_UNUSED_HNS_0x40B7                            0x40B7
+#define VAR_NEWSINOH_KIMONO_TRACKER                            0x40B7
 #define VAR_UNUSED_HNS_0x40B8                            0x40B8
 #define VAR_UNUSED_HNS_0x40B9                            0x40B9
 #define VAR_UNUSED_HNS_0x40BA                            0x40BA

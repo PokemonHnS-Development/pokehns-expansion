@@ -2,11 +2,11 @@
   "id": "MAP_NEW_SINJOH_KIMONO_HIDEOUT_HNS",
   "name": "NewSinjoh_KimonoHideout_hns",
   "layout": "LAYOUT_NEW_SINJOH_KIMONO_HIDEOUT_HNS",
-  "music": "MUS_DUMMY",
+  "music": "MUS_HG_KIMONO_GIRL",
   "region_map_section": "MAPSEC_NEW_SINJOH",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
-  "map_type": "MAP_TYPE_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
   "allow_cycling": false,
   "allow_escaping": false,
   "allow_running": false,
@@ -15,6 +15,7 @@
   "connections": null,
   "object_events": [
     {
+      "local_id": "LOCALID_SHIZUKO",
       "graphics_id": "OBJ_EVENT_GFX_KIMONO_HNS",
       "x": 9,
       "y": 3,
@@ -24,10 +25,11 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "NewSinjoh_Kimono_EventScript_Shizuko1",
       "flag": "0"
     },
     {
+      "local_id": "LOCALID_YOUKO",
       "graphics_id": "OBJ_EVENT_GFX_KIMONO_HNS",
       "x": 13,
       "y": 3,
@@ -37,10 +39,11 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "NewSinjoh_Kimono_EventScript_Youko",
       "flag": "0"
     },
     {
+      "local_id": "LOCALID_MIHARU",
       "graphics_id": "OBJ_EVENT_GFX_KIMONO_HNS",
       "x": 5,
       "y": 3,
@@ -50,7 +53,20 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "NewSinjoh_Kimono_EventScript_Miharu",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_OLD_MAN_2_HNS",
+      "x": 11,
+      "y": 7,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NewSinjoh_KimonoHideout_EventScript_OldMan",
       "flag": "0"
     }
   ],
