@@ -34,6 +34,7 @@ Route50_Gate_AfterBattle::
 	compare VAR_RESULT, 0
 	goto_if_eq Route50_Gate_EventScript_BagIsFull
 	addvar VAR_PLATECOUNTER, 1
+	closemessage
 	applymovement LOCALID_PLAYER, Route50_Gate_PlayerSteps_Asaide_Movement
 	delay 30
 	applymovement LOCALID_FIST_PLATE, Route50_Gate_RexLeaves_Movement
@@ -143,3 +144,56 @@ Route50_Rex_BagIsFull_Text:
 	.string "Why don't you make some space\n"
 	.string "in your BAG and come back?\p"
 	.string "I'll be waiting!$"
+
+
+Route50_Gate_Scientist_Male::
+    lock
+	faceplayer
+	msgbox Route50_Gate_Scientist_M_Text MSGBOX_DEFAULT
+	release
+	end
+
+Route50_Gate_Scientist_M_Text:
+    .string "It's crazy to think that this\n"
+	.string "whole area was dozens of feet under\l"
+	.string "the snow for hundreds of yerars!$"
+
+
+Route50_Gate_Scientist_Female::
+    lock
+	msgbox Route50_Gate_Scientist_F_Text MSGBOX_DEFAULT
+	release
+	end
+
+Route50_Gate_Scientist_F_Text:
+    .string "We've made quite a lot\n"
+	.string "progress in the last few months.\p"
+	.string "I think that soon no\n"
+	.string "secrects shall remain in the past.$"
+
+Route50_Gate_EventScript_Machamp::
+	lock
+	faceplayer
+	playmoncry SPECIES_MACHAMP, 0
+	msgbox Route50_Gate_MachampCry MSGBOX_DEFAULT
+	waitmoncry
+        closemessage
+	release
+	end
+
+Route50_Gate_MachampCry:
+	.string "Cha Champ?$"
+
+
+Route50_Gate_EventScript_Heracross::
+	lock
+	faceplayer
+	playmoncry SPECIES_HERACROSS, 0
+	msgbox Route50_Gate_HeracrossCry MSGBOX_DEFAULT
+	waitmoncry
+        closemessage
+	release
+	end
+
+Route50_Gate_HeracrossCry:
+	.string "Hera! Hera!$"

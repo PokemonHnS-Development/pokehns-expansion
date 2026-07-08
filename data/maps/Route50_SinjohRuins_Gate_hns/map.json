@@ -24,7 +24,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "Route50_Gate_Scientist_Female",
       "flag": "0"
     },
     {
@@ -37,7 +37,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "Route50_Gate_Scientist_Male",
       "flag": "0"
     },
     {
@@ -45,12 +45,12 @@
       "x": 22,
       "y": 8,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "Route50_Gate_EventScript_Machamp",
       "flag": "0"
     },
     {
@@ -59,13 +59,13 @@
       "x": 20,
       "y": 3,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route50_Gate_EventScript_Rex",
-      "flag": "0"
+      "flag": "FLAF_REMOVE_REX_AND_HERACROSS"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_OFFICER_HNS",
@@ -91,8 +91,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "script": "Route50_Gate_EventScript_Heracross",
+      "flag": "FLAF_REMOVE_REX_AND_HERACROSS"
     }
   ],
   "warp_events": [
