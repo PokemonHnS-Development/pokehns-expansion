@@ -1411,6 +1411,29 @@ static void ExitEasyChatScreen(MainCallback callback)
     SetMainCallback2(callback);
 }
 
+// HnS: Odd Egg interview passwords — 4 Easy Chat words → species index 1..7
+static const u16 sInterviewPasswords[7][4] = {
+    { EC_WORD_BABE, EC_WORD_POKEMON, EC_WORD_CUTE, EC_WORD_STATIC },
+    { EC_WORD_BABE, EC_WORD_POKEMON, EC_WORD_CUTE, EC_WORD_CUTE_CHARM },
+    { EC_WORD_BABE, EC_WORD_POKEMON, EC_WORD_SONG, EC_WORD_CUTE_CHARM },
+    { EC_WORD_BABE, EC_WORD_POKEMON, EC_WORD_FIGHTING, EC_WORD_GUTS },
+    { EC_WORD_BABE, EC_WORD_POKEMON, EC_WORD_ICE, EC_WORD_OBLIVIOUS },
+    { EC_WORD_BABE, EC_WORD_POKEMON, EC_WORD_ELECTRIC, EC_WORD_STATIC },
+    { EC_WORD_BABE, EC_WORD_POKEMON, EC_WORD_FIRE, EC_WORD_FLAME_BODY },
+};
+
+static u16 EvaluateInterviewPassword(const u16 *w)
+{
+    for (int i = 0; i < 7; i++) {
+        bool8 ok = TRUE;
+        for (int k = 0; k < 4; k++) {
+            if (w[k] != sInterviewPasswords[i][k]) { ok = FALSE; break; }
+        }
+        if (ok) return (u16)(i + 1);
+    }
+    return 0;
+}
+
 void ShowEasyChatScreen(void)
 {
     int i;
@@ -1950,7 +1973,9 @@ static u16 HandleEasyChatInput_ConfirmWordsYesNo(void)
         return ECFUNC_CLOSE_PROMPT;
     case 0: // Yes
         SetSpecialEasyChatResult();
-        gSpecialVar_Result = GetEasyChatCompleted();
+        gSpecialVar_Result = (sEasyChatScreen->type == EASY_CHAT_TYPE_INTERVIEW)
+                        ? gSpecialVar_0x8004
+                        : GetEasyChatCompleted();
         SaveCurrentPhrase();
         return ECFUNC_EXIT;
     default:
@@ -2924,6 +2949,9 @@ static void SetSpecialEasyChatResult(void)
 {
     switch (sEasyChatScreen->type)
     {
+    case EASY_CHAT_TYPE_INTERVIEW:
+        gSpecialVar_0x8004 = EvaluateInterviewPassword(sEasyChatScreen->currentPhrase);
+        break;
     case EASY_CHAT_TYPE_PROFILE:
         FlagSet(FLAG_SYS_CHAT_USED);
         break;

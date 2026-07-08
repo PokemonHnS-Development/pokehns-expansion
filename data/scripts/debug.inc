@@ -345,8 +345,7 @@ Debug_EventScript_Script_2::
 	end
 
 Debug_EventScript_Script_3::
-	additem ITEM_PASS
-	setflag FLAG_RETURNED_MACHINE_PART
+	clearflag FLAG_RECEIVED_ODD_EGG
 	release
 	end
 
