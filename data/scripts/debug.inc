@@ -345,10 +345,7 @@ Debug_EventScript_Script_2::
 	end
 
 Debug_EventScript_Script_3::
-	additem ITEM_LEVEL_BALL, 20
-	additem ITEM_POKE_BALL, 20
-	additem ITEM_MASTER_BALL, 20
-	additem ITEM_LUXURY_BALL, 20
+	clearflag FLAG_RECEIVED_ODD_EGG
 	release
 	end
 

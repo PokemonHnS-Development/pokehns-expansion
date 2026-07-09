@@ -69,5 +69,65 @@ const struct HelpWindow gHelpWindowInfo[] =
         .descFont = FONT_NORMAL,
         .headerColor = {0, 8, 3},
     },
+    [HELP_DAYCARE1_WINDOW] =
+    {
+        .header = COMPOUND_STRING("BABY POKéMON ABILITIES"),
+        .desc = COMPOUND_STRING("PICHU's ability is STATIC.\n"
+                                "CLEFFA's ability is CUTE CHARM.\n"
+                                "IGGLYBUFF's ability is CUTE CHARM.\n"
+                                "TYROGUE's ability is GUTS.\n"
+                                "SMOOCHUM's ability is OBLIVIOUS.\n"
+                                "ELEKID's ability is STATIC.\n"
+                                "MAGBY's ability is FLAME BODY."
+                            ),
+        .headerFont = FONT_NORMAL,
+        .descFont = FONT_SMALL,
+        .headerColor = {0, 8, 3},
+    },
+    [HELP_DAYCARE2_WINDOW] =
+    {
+        .header = COMPOUND_STRING("BABY POKéMON TYPES"),
+        .desc = COMPOUND_STRING("PICHU is ELECTRIC type.\n"
+                                "CLEFFA is NORMAL type.\n"
+                                "IGGLYBUFF is NORMAL type.\n"
+                                "TYROGUE is FIGHTING type.\n"
+                                "SMOOCHUM is ICE type.\n"
+                                "ELEKID is ELECTRIC type.\n"
+                                "MAGBY is FIRE type."
+                            ),
+        .headerFont = FONT_NORMAL,
+        .descFont = FONT_SMALL,
+        .headerColor = {0, 8, 3},
+    },
+    [HELP_DAYCARE3_WINDOW] =
+    {
+        .header = COMPOUND_STRING("BABY POKéMON CRIES"),
+        .desc = COMPOUND_STRING("PICHU says WAAAH.\n"
+                                "CLEFFA says EEK.\n"
+                                "IGGLYBUFF says LALALA.\n"
+                                "TYROGUE says HIYAH.\n"
+                                "SMOOCHUM says EHEHE.\n"
+                                "ELEKID says OI, OI, OI.\n"
+                                "MAGBY says TCH."
+                            ),
+        .headerFont = FONT_NORMAL,
+        .descFont = FONT_SMALL,
+        .headerColor = {0, 8, 3},
+    },
+    [HELP_DAYCARE4_WINDOW] =
+    {
+        .header = COMPOUND_STRING("BABY POKéMON ACTIONS"),
+        .desc = COMPOUND_STRING("PICHU likes to PLAY all day.\n"
+                                "CLEFFA LOOKS at the moon.\n"
+                                "IGGLYBUFF puts them to SLEEP.\n"
+                                "TYROGUE TRAINS constantly.\n"
+                                "SMOOCHUM likes to SHOW off.\n"
+                                "ELEKID STORES up charge.\n"
+                                "MAGBY often ANGERS."
+                            ),
+        .headerFont = FONT_NORMAL,
+        .descFont = FONT_SMALL,
+        .headerColor = {0, 8, 3},
+    },
     // Add more entries
 };

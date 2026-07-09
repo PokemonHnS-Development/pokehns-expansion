@@ -2,62 +2,48 @@ Route34_DayCare_hns_MapScripts::
 	.byte 0
 
 Route34_DayCare_Bookshelf1::
-	msgbox Route34_DayCare_Text_Bookshelf1, MSGBOX_SIGN
+	lock
+	msgbox Route34_DayCare_Text_Bookshelf1, MSGBOX_AUTOCLOSE
+	helpwindow HELP_DAYCARE1_WINDOW
+	release
 	end
 
 Route34_DayCare_Bookshelf2::
-	msgbox Route34_DayCare_Text_Bookshelf2, MSGBOX_SIGN
+	lock
+	msgbox Route34_DayCare_Text_Bookshelf2, MSGBOX_AUTOCLOSE
+	helpwindow HELP_DAYCARE2_WINDOW
+	release
 	end
 
 Route34_DayCare_Bookshelf3::
-	msgbox Route34_DayCare_Text_Bookshelf3, MSGBOX_SIGN
+	lock
+	msgbox Route34_DayCare_Text_Bookshelf3, MSGBOX_AUTOCLOSE
+	helpwindow HELP_DAYCARE3_WINDOW
+	release
 	end
 
 Route34_DayCare_Bookshelf4::
-	msgbox Route34_DayCare_Text_Bookshelf4, MSGBOX_SIGN
+	lock
+	msgbox Route34_DayCare_Text_Bookshelf4, MSGBOX_AUTOCLOSE
+	helpwindow HELP_DAYCARE4_WINDOW
+	release
 	end
 
 Route34_DayCare_Text_Bookshelf1:
-	.string "A dictionary!\p"
-	.string "{PLAYER} opened the dictionary to\n"
-	.string "a random page.\p"
-	.string "'BABE'\n"
-	.string "A noun, meaning infant or baby.\p"
-	.string "{PLAYER} put away the dictionary.$"
+	.string "A BABY POKéMON encyclopedia!\p"
+	.string "VOLUME 1: ALL ABOUT ABILITIES$"
 
 Route34_DayCare_Text_Bookshelf2:
-	.string "A book about POKéMON!\p"
-	.string "{PLAYER} flipped through\n"
-	.string "the book.\p"
-	.string "It must have the word\n"
-	.string "POKéMON written on every page.\p"
-	.string "{PLAYER} put away the book.$"
+	.string "A BABY POKéMON encyclopedia!\p"
+	.string "VOLUME 2: TYPICAL TYPES$"
 
 Route34_DayCare_Text_Bookshelf3:
-	.string "A book of word assocations!\p"
-	.string "{PLAYER} flipped through\n"
-	.string "the book.\p"
-	.string "PICHU -> CUTE\l"
-	.string "CLEFFA -> CUTE\l"
-	.string "IGGLYBUFF -> SONG\l"
-	.string "TYROGUE -> FIGHTING\l"
-	.string "SMOOCHUM -> ICE\l"
-	.string "ELEKID -> ELECTRIC\l"
-	.string "MAGBY -> FIRE\p"
-	.string "{PLAYER} put away the book.$"
+	.string "A BABY POKéMON encyclopedia!\p"
+	.string "VOLUME 3: BABIES' CRIES$"
 
 Route34_DayCare_Text_Bookshelf4:
-	.string "A book of POKéMON abilities!\p"
-	.string "{PLAYER} flipped through\n"
-	.string "the book.\p"
-	.string "PICHU -> STATIC\l"
-	.string "CLEFFA -> CUTE CHARM\l"
-	.string "IGGLYBUFF -> CUTE CHARM\l"
-	.string "TYROGUE -> GUTS\l"
-	.string "SMOOCHUM -> OBLIVIOUS\l"
-	.string "ELEKID -> STATIC\l"
-	.string "MAGBY -> FLAME BODY\p"
-	.string "{PLAYER} put away the book.$"
+	.string "A BABY POKéMON encyclopedia!\p"
+	.string "VOLUME 4: ADORABLE ACTIONS$"
 
 Route34_DayCare_EventScript_Clerk::
 	lock
@@ -165,7 +151,7 @@ Route34_DayCare_Text_Rejection:
 	.string "It would be irresponsible of me to\n"
 	.string "give out a precious EGG like this\l"
 	.string "to someone who isn't as well-read\l"
-	.string "on the subject of Pokémon breeding!$"
+	.string "on the subject of baby POKéMON!$"
 
 Route34_DayCare_Text_ReceivedOddEgg:
 	.string "{PLAYER} Received the ODD EGG.$"
