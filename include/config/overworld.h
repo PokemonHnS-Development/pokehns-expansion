@@ -147,7 +147,7 @@
 
 // Trainer Rematches
 #if IS_HNS
-#define OW_REMATCH_BADGE_COUNT      4 // After Morty (Ecruteak City)
+#define OW_REMATCH_BADGE_COUNT      3 // After Whitney
 #else
 #define OW_REMATCH_BADGE_COUNT      5 // Number of badges necessary before the match call or vs seeker features allow rematches
 #endif
