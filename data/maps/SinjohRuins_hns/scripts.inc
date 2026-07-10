@@ -1,10 +1,15 @@
 SinjohRuins_hns_MapScripts::
     map_script 	MAP_SCRIPT_ON_TRANSITION, SinjohRuins_hns_OnTransition
+	map_script MAP_SCRIPT_ON_LOAD, SinjohRuins_hns_OnLoad
 	.byte 0
 
 SinjohRuins_hns_OnTransition::
     setflag FLAG_SINJOHRUINS_STEVENSTONE
 	end
+
+SinjohRuins_hns_OnLoad::
+   call_if_set FLAG_SINJOHRUINS_ARCEUS_STAIRS, SinjohRuins_Arceus_Stairs
+   end
 
 
 SinjohRuins_EventScripts_StevenStone_WalksYou_Top::
@@ -58,6 +63,16 @@ SinjohRuins_EventScripts_StevenStone_WalksYou_Top::
 	warp MAP_SINJOH_RUINS_HOUSE1_HNS, WARP_ID_SINJOH_LAB
 	waitstate
 	releaseall
+	end
+
+
+SinjohRuins_EventScript_AddSteven_Arceus::
+    compare VAR_PLATECOUNTER, 17
+	goto_if_eq SinjohRuins_AddSteven 
+	end
+
+SinjohRuins_AddSteven::
+    addobject LOCALID_STEVENSTONE_2
 	end
 
 SinjohRuins_EventScripts_StevenStone_WalksYou_Bottom::
@@ -235,3 +250,105 @@ SinjohRuins_Text_StevenContinues:
 	.string "Come with me, there is much to\n"
 	.string "discuss, but let's do it\l"
 	.string "somewhere a bit warmer.$"
+
+SinjohRuins_EventScript_StevenToArceus_Left::
+    lock
+    faceplayer
+	msgbox SinjohRuins_StevenAsksIfReady_Text MSGBOX_DEFAULT
+	applymovement LOCALID_PLAYER, SinjohRuins_PlayerWaddles_Movement
+	waitmovement 0
+	msgbox SinjohRuins_Steven_TellsPlayerToGoAhead_Text MSGBOX_DEFAULT
+	closemessage
+	playse SE_THUNDER
+	delay 40
+	setvar VAR_0x8004, 1  @ vertical pan
+    setvar VAR_0x8005, 1  @ horizontal pan
+    setvar VAR_0x8006, 15  @ num shakes
+    setvar VAR_0x8007, 6  @ shake delay
+    special ShakeCamera
+    waitstate
+	fadescreen FADE_TO_WHITE
+	call_if_unset FLAG_SINJOHRUINS_ARCEUS_STAIRS, SinjohRuins_Arceus_Stairs
+    fadescreen FADE_FROM_WHITE
+	delay 30
+	playse SE_PIN
+	applymovement LOCALID_STEVENSTONE_2, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement LOCALID_STEVENSTONE_2, SinjohRuins_Steven2_RunsUp_Left_Movement
+	waitmovement 0
+	msgbox SinjohRuins_StevenSeesStairs_Text MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_STEVENSTONE_2, SinjohRuins_StevenStairs_Left
+	waitmovement 0
+	removeobject LOCALID_STEVENSTONE_2
+	setflag FLAG_SINJOHRUINS_ARCEUS_STAIRS
+	addvar VAR_SINJOHRUINS_ARCEUS_STAIRS, 1
+	release
+	end
+
+
+
+SinjohRuins_PlayerWaddles_Movement:
+    walk_in_place_down
+	step_end
+
+SinjohRuins_Steven2_RunsUp_Left_Movement:
+    jump_in_place_up
+	delay_8
+	walk_fast_left
+	walk_up
+	step_end
+
+
+SinjohRuins_StevenStairs_Left:
+    jump_up
+	jump_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+    step_end
+
+SinjohRuins_PlayerFacesSteven_Movement:
+    face_down
+	step_end
+
+SinjohRuins_StevenAsksIfReady_Text:
+    .string "{PLAYER}, now that we've collected\n"
+	.string "all of the nessisary plates..\l"
+	.string "I belive it's time for us\l"
+	.string "to end this shared adventure\l"
+	.string "of ours, don't you agree?$"
+
+SinjohRuins_Steven_TellsPlayerToGoAhead_Text:
+    .string "Alright then, it's time for the\n"
+	.string "fun to begin!\p"
+	.string "Give that flute you've been carrying\n"
+	.string "a good play for the both of us!$"
+
+SinjohRuins_StevenSeesStairs_Text:
+    .string "Did you see that {PLAYER}?!\p"
+    .string "What ever is up there must be\n"
+	.string "inviting us to join them.\p"
+	.string "I'll head up first to make sure\n"
+	.string "it's safe, you follow when ready.$"
+
+SinjohRuins_EventScript_ApplyStairs::
+    call_if_set FLAG_SINJOHRUINS_ARCEUS_STAIRS, SinjohRuins_Arceus_Stairs
+	end
+
+SinjohRuins_Arceus_Stairs::
+	setmetatile 10, 37, 0x089, FALSE
+	setmetatile 10, 38, 0x089, FALSE
+	setmetatile 10, 39, 0x089, FALSE
+	setmetatile 10, 40, 0x089, FALSE
+	setmetatile 10, 41, 0x089, FALSE
+	setmetatile 10, 42, 0x089, FALSE
+	setmetatile 11, 37, 0x091, FALSE
+	setmetatile 11, 38, 0x091, FALSE
+	setmetatile 11, 39, 0x091, FALSE
+	setmetatile 11, 40, 0x091, FALSE
+	setmetatile 11, 41, 0x091, FALSE
+	setmetatile 11, 42, 0x091, FALSE
+	return

@@ -2,7 +2,7 @@
   "id": "MAP_SINJOH_RUINS_ARCEUS_ROOM_HNS",
   "name": "SinjohRuins_ArceusRoom_hns",
   "layout": "LAYOUT_SINJOH_RUINS_ARCEUS_ROOM_HNS",
-  "music": "MUS_HG_ECRUTEAK",
+  "music": "MUS_HG_RADIO_UNOWN",
   "region_map_section": "MAPSEC_SINJOH_RUINS",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -13,7 +13,21 @@
   "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": null,
-  "object_events": [],
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_ARCEUS",
+      "x": 18,
+      "y": 18,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    }
+  ],
   "warp_events": [
     {
       "x": 18,

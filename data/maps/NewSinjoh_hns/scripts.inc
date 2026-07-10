@@ -83,10 +83,10 @@ NewSinjoh_Text_GotMilk:
 	.string "{PLAYER} got MOOMOO MILK.$"
 
 MilkMan_EventScript_Battle:: 
-msgbox MilkMan_Battle_text
-Trainerbattle_no_intro TRAINER_MILKMAN_HNS, NewSinjoh_MilkMan_text_Lose
-end
-release
+    msgbox MilkMan_Battle_text
+    Trainerbattle_no_intro TRAINER_MILKMAN_HNS, NewSinjoh_MilkMan_text_Lose
+    release
+    end
 
 
 MilkMan_Battle_text:
@@ -233,7 +233,7 @@ NewSinjoh_EventScript_Josh::
 	release
 	end
 
-	NewSinjoh_Text_Josh:
+NewSinjoh_Text_Josh:
 	.string "We're relaxing after\n"
 	.string "helping dig up that old ruin.\p"
 	.string "Our pure brawn let's us\n"
@@ -247,7 +247,7 @@ NewSinjoh_EventScript_FatMan::
 	release
 	end
 
-	NewSinjoh_Text_FatMan:
+NewSinjoh_Text_FatMan:
 	.string "Ouughh...\p"
 	.string "This water feels magical on my back.\p"
 	.string "If you have back pain too,\n"
@@ -261,7 +261,7 @@ NewSinjoh_EventScript_OldLady::
 	release
 	end
 
-	NewSinjoh_Text_OldLady:
+NewSinjoh_Text_OldLady:
 	.string "There's nothing like a nice\n"
 	.string "view to invigorate\p"
 	.string "this old soul.$"
@@ -274,7 +274,7 @@ NewSinjoh_EventScript_Girl1::
 	release
 	end
 
-	NewSinjoh_Text_Girl1:
+NewSinjoh_Text_Girl1:
 	.string "I'm here on vacation with\n"
 	.string "my girfliend!\p"
 	.string "She really like to explore\n"
@@ -290,7 +290,7 @@ NewSinjoh_EventScript_Girl2::
 	release
 	end
 
-	NewSinjoh_Text_Girl2:
+NewSinjoh_Text_Girl2:
 	.string "I'm so happy she agreed to\n"
 	.string "bring me here!\p"
 	.string "We came all the way from\n"
@@ -416,12 +416,8 @@ NewSinjoh_EventScript_Hiker::
 	.string "I'll go somewhere tropical!$"
 
 Script_NewSinjoh_GroundItem_1::
-	lock
-	giveitem ITEM_DUSK_BALL, 1
-	compare VAR_RESULT, 0
-	goto_if_eq Script_Bag1sFull
-	release
-	end
+	finditem ITEM_DUSK_BALL
+    end
 
 Script_Bag1sFull::
 	msgbox Text_Bag1sFull, MSGBOX_DEFAULT
@@ -431,3 +427,6 @@ Script_Bag1sFull::
 Text_Bag1sFull:
 	.string "Your BAG is full.$"
 
+Script_NewSinjoh_GroundItem_2::
+	finditem ITEM_REVIVE
+    end

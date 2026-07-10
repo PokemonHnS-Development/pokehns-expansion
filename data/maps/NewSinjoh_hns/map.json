@@ -174,7 +174,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL_HNS",
       "x": 45,
       "y": 29,
       "elevation": 0,
@@ -183,8 +183,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "script": "Script_NewSinjoh_GroundItem_2",
+      "flag": "FLAG_NEWSINJOH_ITEMBALL2"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_LITTLE_BOY_HNS",
@@ -210,7 +210,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Script_NewSinjoh_GroundItem_1",
-      "flag": "FLAG_TEMP_1"
+      "flag": "FLAG_NEWSINJOH_ITEM_DUSKBALL"
     }
   ],
   "warp_events": [
@@ -319,7 +319,7 @@
       "y": 36,
       "elevation": 0,
       "item": "ITEM_NUGGET",
-      "flag": "FLAG_HIDDEN_ITEMS_START"
+      "flag": "FLAG_NEWSINJOH_HIDDENITEM1"
     },
     {
       "type": "hidden_item",
@@ -327,7 +327,7 @@
       "y": 9,
       "elevation": 0,
       "item": "ITEM_SNOWBALL",
-      "flag": "FLAG_HIDDEN_ITEMS_START"
+      "flag": "FLAG_NEWSINJOH_HIDDENITEM2"
     },
     {
       "type": "hidden_item",
@@ -343,7 +343,7 @@
       "y": 17,
       "elevation": 0,
       "item": "ITEM_FIRE_STONE",
-      "flag": "FLAG_HIDDEN_ITEMS_START"
+      "flag": "FLAG_NEWSINJOH_HIDDENITEM3"
     }
   ],
   "game_version": "hns",

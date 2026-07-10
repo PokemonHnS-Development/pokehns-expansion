@@ -59,8 +59,8 @@ NewSinjoh_EventScript_BaldingMan::
 	NewSinjoh_Text_BaldingMan:
 	.string "I heard that Serana moved her\n"
 	.string "cafe into this brush to hide from\l"
-	.string "tourists.\l"
-	.string "Her little sister still isn't used\l"
+	.string "tourists.\p"
+	.string "Her little sister still isn't used\n"
 	.string "to serving people yet..\p"
 	.string "So by having only regulars\n"
 	.string "show up, she could learn at\l"
@@ -76,7 +76,6 @@ NewSinjoh_EventScript_FemDoctor::
 	end
 
 	NewSinjoh_Text_FemDoctor:
-	.string "Hello~.\p"
 	.string "This drink is so goood~!\n"
 	.string ".......\p"
 	.string "Actually...you look a little\l"
@@ -91,9 +90,9 @@ NewSinjoh_EventScript_Girl::
 	end
 
 	NewSinjoh_Text_Girl:
-	.string "Please forgive my older Sister..\p"
+	.string "Please forgive my older sister..\p"
 	.string "Outside of Nurse Joy she's our\n"
-	.string "town's only Doctor.\l"
+	.string "town's only doctor.\l"
 	.string "As you can imagine, she doesn't\l"
 	.string "get to relax very often..$"
 

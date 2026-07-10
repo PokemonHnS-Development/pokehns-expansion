@@ -14247,3 +14247,243 @@ Adamant Nature
 - Trailblaze  
 - Arm Thrust  
 
+=== TRAINER_YOUMU_HNS ===
+Name: YOUMU
+Class: Channeler FRLG
+Pic: Channeler FRLG
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Absol @ Razor Claw  
+Ability: Super Luck  
+Level: 68 
+EVs: 252 Atk / 252 Spe  
+Jolly Nature  
+- Night Slash  
+- Play Rough  
+- Stone Edge  
+- Will-O-Wisp  
+
+=== TRAINER_RONAN_HNS ===
+Name: RONAN
+Class: Psychic M Hns
+Pic: Psychic M Hns
+Gender: Male
+Music: Hg Boy 2
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Slowbro  
+Ability: Oblivious  
+Level: 65   
+
+Bronzong  
+Ability: Levitate  
+Level: 65 
+
+Wyrdeer  
+Ability: Intimidate  
+Level: 65 
+
+Lunatone  
+Ability: Levitate  
+Level: 65  
+EVs: 252 HP / 252 SpA  
+Modest Nature  
+IVs: 0 Atk  
+- Meteor Beam  
+- Moonblast  
+- Moonlight  
+- Cosmic Power  
+
+=== TRAINER_MAXWELL2_HNS ===
+Name: RONAN
+Class: Super Nerd Hns
+Pic: Super Nerd Hns
+Gender: Male
+Music: Hg Boy 2
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Magnezone  
+Ability: Magnet Pull  
+Level: 64
+
+Electrode @ Magnet  
+Ability: Soundproof  
+Level: 64
+EVs: 252 Atk / 252 Spe  
+Adamant Nature  
+- Supercell Slam  
+- Explosion  
+- Sucker Punch  
+- Flash  
+
+Porygon-Z  
+Ability: Adaptability  
+Level: 64 
+IVs: 0 Atk  
+- Hyper Beam  
+- Nasty Plot  
+- Psyshock  
+- Signal Beam  
+
+=== TRAINER_EDWIN2_HNS ===
+Name: EDWIN
+Class: FireBreather Hns
+Pic: FireBreather Hns
+Gender: Male
+Music: Hg Boy 2
+Double Battle: Yes
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Magmortar  
+Ability: Flame Body  
+Level: 65 
+IVs: 0 Atk  
+- Solar Beam  
+- Scorching Sands  
+- Heat Wave  
+- Acid Spray  
+
+Ninetales @ Heat Rock  
+Ability: Drought  
+Level: 65
+IVs: 0 Atk  
+- Weather Ball  
+- Energy Ball  
+- Reflect  
+- Calm Mind  
+
+Magcargo  
+Ability: Flame Body  
+Level: 65  
+IVs: 0 Atk  
+
+Blaziken  
+Ability: Speed Boost  
+Level: 65  
+IVs: 0 Atk  
+
+=== TRAINER_BRAM_HNS ===
+Name: BRAM
+Class: Biker Hns
+Pic: Biker Hns
+Gender: Male
+Music: Hg Boy 2
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Houndoom  
+Ability: Unnerve  
+Level: 66 
+EVs: 252 SpA / 252 Spe  
+Modest Nature  
+IVs: 0 Atk  
+- Smog  
+- Fire Blast  
+- Nasty Plot  
+- Super Fang  
+
+Nidoking  
+Ability: Poison Point  
+Level: 66  
+EVs: 160 HP / 216 Atk / 96 Def / 36 SpD  
+Adamant Nature  
+- Poison Jab  
+- Avalanche  
+- Drill Run  
+- Taunt  
+
+Overqwil  
+Ability: Poison Point  
+Level: 65
+- Barb Barrage  
+- Aqua Jet  
+- Lash Out  
+- Toxic Spikes  
+
+Obstagoon  
+Ability: Reckless  
+Level: 65 
+EVs: 252 Atk / 252 Spe  
+Jolly Nature  
+- Double-Edge  
+- Close Combat  
+- Hone Claws  
+- Throat Chop  
+
+=== TRAINER_KYLE9_HNS ===
+Name: KYLE
+Class: Biker Hns
+Pic: Biker Hns
+Gender: Male
+Music: Hg Boy 2
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Perrserker @ Assault Vest  
+Ability: Steely Spirit  
+Level: 66 
+EVs: 128 HP / 252 Def / 128 SpD  
+- Iron Tail  
+- Play Rough  
+- Throat Chop  
+- Brick Break  
+
+Arcanine-Hisui  
+Ability: Rock Head  
+Level: 65
+
+Seviper  
+Ability: Shed Skin  
+Level: 65  
+
+Skarmory  
+Ability: Keen Eye  
+Level: 66  
+
+=== TRAINER_DAWN9_HNS ===
+Name: DAWN
+Class: Picnicker Hns
+Pic: Picnicker FRLG
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Yanmega  
+Ability: Speed Boost  
+Level: 66
+
+Pikachu (F) @ Light Ball  
+Ability: Lightning Rod  
+Level: 65
+EVs: 252 Atk / 252 Spe  
+Hasty Nature  
+- Play Rough  
+- Nuzzle  
+- Attract  
+- Volt Tackle  
+
+Vigoroth @ Eviolite  
+Ability: Vital Spirit  
+Level: 65
+EVs: 252 Atk / 252 Spe  
+Jolly Nature  
+- Drain Punch  
+- Double-Edge  
+- Slack Off  
+- Ice Punch  
+
+Ledian @ Assault Vest  
+Ability: Iron Fist  
+Level: 66
+EVs: 252 HP / 252 SpD  
+- Drain Punch  
+- Power-Up Punch  
+- Mach Punch  
+- Comet Punch  
+

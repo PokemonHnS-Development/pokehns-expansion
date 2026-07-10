@@ -167,9 +167,9 @@ Route50_Gate_Scientist_Female::
 
 Route50_Gate_Scientist_F_Text:
     .string "We've made quite a lot\n"
-	.string "progress in the last few months.\p"
-	.string "I think that soon no\n"
-	.string "secrects shall remain in the past.$"
+	.string "of progress in the last few months!/p"
+	.string "I belive that soon, we shall/n"
+	.string "know all the secrets of the past!$"
 
 Route50_Gate_EventScript_Machamp::
 	lock
@@ -197,3 +197,29 @@ Route50_Gate_EventScript_Heracross::
 
 Route50_Gate_HeracrossCry:
 	.string "Hera! Hera!$"
+
+
+Route50_Gate_EventScript_BookShelf::
+    lock
+	msgbox Route50_Gate_BookShelf_Text MSGBOX_DEFAULT
+	release
+	end
+
+Route50_Gate_BookShelf_Text:
+    .string "It's a bookshelf full of...\n"
+	.string "science articles and\l"
+	.string "historical refrences..?\p"
+	.string "Welp! Time to go!$"
+
+PlateTestNPC::
+    lock
+	faceplayer
+	msgbox Route50_SettingVar_Text MSGBOX_DEFAULT
+	setvar VAR_PLATECOUNTER, 17
+	release
+	end
+
+Route50_SettingVar_Text:
+    .string "For the sake of testing..\n"
+	.string "I'm setting your plate\l"
+	.string "plate counter to 17.$"

@@ -450,6 +450,10 @@
 // gTileset_MtEmber
 #define METATILE_MtEmber_CaveEntrance  0x346
 
+// gTileset_MtSilver_Exp_Hns
+#define METATILE_MtSilver_Exp_Hns_STAIRS_LEFT   0x089
+#define METATILE_MtSilver_Exp_Hns_STAIRS_RIGHT  0x091
+
 // gTileset_Pacifidlog
 #define METATILE_Pacifidlog_Door                               0x21A
 #define METATILE_Pacifidlog_FloatingLogs_HorizontalLeft        0x250
