@@ -14020,14 +14020,14 @@ const struct ItemInfo gItemsInfo[] =
         .name = ITEM_NAME("BIKE"),
         .price = 0,
         .description = COMPOUND_STRING(
-            "A folding bicycle\n"
-            "that is faster than\n"
-            "the Running Shoes."),
+            "A folding bicycle.\n"
+            "Press R while still\n"
+            "to change speeds."),
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_FIELD,
         .fieldUseFunc = ItemUseOutOfBattle_Bike,
-        .secondaryId = STANDARD_BIKE,
+        .secondaryId = IS_HNS ? ACRO_BIKE : STANDARD_BIKE,
         .iconPic = gItemIcon_Bicycle,
         .iconPalette = gItemIconPalette_Bicycle,
     },

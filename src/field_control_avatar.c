@@ -253,8 +253,27 @@ int ProcessPlayerFieldInput(struct FieldInput *input)
     if (input->heldSelectButton && UseRegisteredKeyItemOnField(TRUE) == TRUE)
         return TRUE;
 
+#if IS_HNS
+    if (input->pressedRButton && TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_MACH_BIKE | PLAYER_AVATAR_FLAG_ACRO_BIKE))
+    {
+        if (gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_MACH_BIKE)
+        {
+            gPlayerAvatar.flags &= ~PLAYER_AVATAR_FLAG_MACH_BIKE;
+            gPlayerAvatar.flags |= PLAYER_AVATAR_FLAG_ACRO_BIKE;
+            SetPlayerAvatarTransitionFlags(PLAYER_AVATAR_FLAG_ACRO_BIKE);
+        }
+        else
+        {
+            gPlayerAvatar.flags &= ~PLAYER_AVATAR_FLAG_ACRO_BIKE;
+            gPlayerAvatar.flags |= PLAYER_AVATAR_FLAG_MACH_BIKE;
+            SetPlayerAvatarTransitionFlags(PLAYER_AVATAR_FLAG_MACH_BIKE);
+        }
+        PlaySE(SE_BIKE_BELL);
+    }
+#else
     if (input->pressedRButton && TryStartDexNavSearch())
         return TRUE;
+#endif
 
     if (input->input_field_1_2 && DEBUG_OVERWORLD_MENU && !DEBUG_OVERWORLD_IN_MENU)
     {
