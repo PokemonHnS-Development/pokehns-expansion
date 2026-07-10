@@ -1412,7 +1412,7 @@ static void ExitEasyChatScreen(MainCallback callback)
 }
 
 // HnS: Odd Egg interview passwords — 4 Easy Chat words → species index 1..7
-static const u16 sInterviewPasswords[7][4] = {
+static const u16 sInterviewPasswords[11][4] = {
     { EC_WORD_STATIC, EC_WORD_ELECTRIC, EC_WORD_WAAAH, EC_WORD_PLAY },
     { EC_WORD_CUTE_CHARM, EC_WORD_NORMAL, EC_WORD_EEK, EC_WORD_LOOKS },
     { EC_WORD_CUTE_CHARM, EC_WORD_NORMAL, EC_WORD_LALALA, EC_WORD_SLEEP },
@@ -1420,11 +1420,15 @@ static const u16 sInterviewPasswords[7][4] = {
     { EC_WORD_OBLIVIOUS, EC_WORD_ICE, EC_WORD_EHEHE, EC_WORD_SHOW },
     { EC_WORD_STATIC, EC_WORD_ELECTRIC, EC_WORD_OI_OI_OI, EC_WORD_STORES },
     { EC_WORD_FLAME_BODY, EC_WORD_FIRE, EC_WORD_TCH, EC_WORD_ANGERS },
+    { EC_WORD_SWIFT_SWIM, EC_WORD_WATER, EC_WORD_WAAAH, EC_WORD_SINK },
+    { EC_WORD_STURDY, EC_WORD_ROCK, EC_WORD_URGH, EC_WORD_PRETEND },
+    { EC_WORD_NATURAL_CURE, EC_WORD_NORMAL, EC_WORD_SIGH, EC_WORD_TRUST },
+    { EC_WORD_SOUNDPROOF, EC_WORD_PSYCHIC, EC_WORD_HMM, EC_WORD_WORRY },
 };
 
 static u16 EvaluateInterviewPassword(const u16 *w)
 {
-    for (int i = 0; i < 7; i++) {
+    for (int i = 0; i < ARRAY_COUNT(sInterviewPasswords); i++) {
         bool8 ok = TRUE;
         for (int k = 0; k < 4; k++) {
             if (w[k] != sInterviewPasswords[i][k]) { ok = FALSE; break; }

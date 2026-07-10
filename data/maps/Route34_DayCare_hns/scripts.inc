@@ -68,6 +68,10 @@ Route34_DayCare_EventScript_Clerk::
 	case 5, Route34_DayCare_EventScript_GiveSmoochum
 	case 6, Route34_DayCare_EventScript_GiveElekid
 	case 7, Route34_DayCare_EventScript_GiveMagby
+	case 8, Route34_DayCare_EventScript_GiveMantyke
+	case 9, Route34_DayCare_EventScript_GiveBonsly
+	case 10, Route34_DayCare_EventScript_GiveHappiny
+	case 11, Route34_DayCare_EventScript_GiveMimeJr
 	closemessage
 	release
 	end
@@ -98,6 +102,22 @@ Route34_DayCare_EventScript_GiveElekid::
 
 Route34_DayCare_EventScript_GiveMagby::
 	giveoddegg 7
+	goto Route34_DayCare_EventScript_Clerk_GaveEgg
+
+Route34_DayCare_EventScript_GiveMantyke::
+	giveoddegg 8
+	goto Route34_DayCare_EventScript_Clerk_GaveEgg
+
+Route34_DayCare_EventScript_GiveBonsly::
+	giveoddegg 9
+	goto Route34_DayCare_EventScript_Clerk_GaveEgg
+
+Route34_DayCare_EventScript_GiveHappiny::
+	giveoddegg 10
+	goto Route34_DayCare_EventScript_Clerk_GaveEgg
+
+Route34_DayCare_EventScript_GiveMimeJr::
+	giveoddegg 11
 	goto Route34_DayCare_EventScript_Clerk_GaveEgg
 
 Route34_DayCare_EventScript_Clerk_GaveEgg::
