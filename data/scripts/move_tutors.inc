@@ -163,7 +163,7 @@ MoveTutor_EventScript_ExplosionTaught::
 IlexForest_EventScript_HeadbuttMoveTutor::
 	lock
 	faceplayer
-	move_tutor MOVE_HEADBUTT, MoveTutor_Text_HeadbuttTeach, MoveTutor_Text_HeadbuttWhichMon, MoveTutor_EventScript_HeadbuttDeclined, MoveTutor_EventScript_HeadbuttTaught, FLAG_MOVE_TUTOR_TAUGHT_HEADBUTT
+	move_tutor MOVE_HEADBUTT, MoveTutor_Text_HeadbuttTeach, MoveTutor_Text_HeadbuttWhichMon, MoveTutor_EventScript_HeadbuttDeclined, MoveTutor_EventScript_HeadbuttTaught
 	end
 
 MoveTutor_EventScript_HeadbuttDeclined::
