@@ -669,6 +669,9 @@ gSpecials::
 	def_special IsPokecenterChallengeActivated
 	def_special IsOneTypeChallengeActive
 	def_special CheckRadioStation
+	def_special Special_BuenaPasswordShowMultichoice
+	def_special Special_BuenaCheckAnswer
+	def_special Special_BuenaRollReward
 	def_special GetAlolaCatchProgress
 	def_special GetGalarCatchProgress
 	def_special GetHisuiCatchProgress

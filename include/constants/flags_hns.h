@@ -1313,7 +1313,8 @@
 #define FLAG_DAILY_APPRENTICE_LEAVES                (DAILY_FLAGS_START + 6)
 #define FLAG_DAILY_BUENAS_PASSWORD                  (DAILY_FLAGS_START + 7)
 #define FLAG_DAILY_LUCKY_NUMBER_SET                 (DAILY_FLAGS_START + 8)
-#define DAILY_FLAGS_END                             0x917
+#define FLAG_DAILY_BUENAS_PASSWORD_GUESSED          (DAILY_FLAGS_START + 9)
+#define DAILY_FLAGS_END                             (DAILY_FLAGS_START + 9)
 #define NUM_DAILY_FLAGS                             (DAILY_FLAGS_END - DAILY_FLAGS_START + 1)
 #define BUILD_FLAGS_END                             DAILY_FLAGS_END
 

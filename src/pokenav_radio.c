@@ -19,6 +19,7 @@
 #include "pokemon.h"
 #include "item.h"
 #include "move.h"
+#include "script_menu.h"
 #include "strings.h"
 #include "wild_encounter.h"
 #include "overworld.h"
@@ -1393,6 +1394,99 @@ void CheckRadioStation(void)
     else
         gSpecialVar_Result = 0;
 }
+
+// ========================================
+// Buena's Password Show — NPC specials
+// ========================================
+
+static EWRAM_DATA u8 sBuenaPasswordStrBuf[3][20] = {};
+static EWRAM_DATA u8 sBuenaCorrectChoice = 0;
+
+static const struct MenuAction sBuenaChoiceActions[] =
+{
+    { sBuenaPasswordStrBuf[0] },
+    { sBuenaPasswordStrBuf[1] },
+    { sBuenaPasswordStrBuf[2] },
+};
+
+void Special_BuenaPasswordShowMultichoice(void)
+{
+    u32 stored, category, correctWord, i, j;
+    u8 order[3];
+
+    stored = VarGet(VAR_RADIO_BUENAS_PASSWORD);
+    category = stored >> 4;
+    correctWord = stored & 0xF;
+
+    order[0] = 0;
+    order[1] = 1;
+    order[2] = 2;
+
+    for (i = 2; i > 0; i--)
+    {
+        u8 temp;
+        j = Random() % (i + 1);
+        temp = order[i];
+        order[i] = order[j];
+        order[j] = temp;
+    }
+
+    for (i = 0; i < 3; i++)
+    {
+        GetBuenaPasswordString(sBuenaPasswordStrBuf[i], category, order[i]);
+        if (order[i] == correctWord)
+            sBuenaCorrectChoice = i;
+    }
+
+    DrawMultichoiceMenuInternal(0, 0, 0, FALSE, 0, sBuenaChoiceActions, 3);
+}
+
+void Special_BuenaCheckAnswer(void)
+{
+    gSpecialVar_Result = (gSpecialVar_Result == sBuenaCorrectChoice);
+}
+
+static const struct {
+    u16 item;
+    u8 weight;
+} sBuenaRewardTable[] =
+{
+    { ITEM_GREAT_BALL,    25 },
+    { ITEM_ULTRA_BALL,    15 },
+    { ITEM_FULL_RESTORE,  10 },
+    { ITEM_PP_UP,         10 },
+    { ITEM_HP_UP,          5 },
+    { ITEM_PROTEIN,        5 },
+    { ITEM_IRON,           5 },
+    { ITEM_CALCIUM,        5 },
+    { ITEM_CARBOS,         5 },
+    { ITEM_NUGGET,         5 },
+    { ITEM_RARE_CANDY,     9 },
+    { ITEM_MASTER_BALL,    1 },
+};
+
+void Special_BuenaRollReward(void)
+{
+    u32 roll, i, cumulative;
+
+    roll = Random() % 100;
+    cumulative = 0;
+
+    for (i = 0; i < ARRAY_COUNT(sBuenaRewardTable); i++)
+    {
+        cumulative += sBuenaRewardTable[i].weight;
+        if (roll < cumulative)
+        {
+            gSpecialVar_Result = sBuenaRewardTable[i].item;
+            CopyItemName(sBuenaRewardTable[i].item, gStringVar1);
+            return;
+        }
+    }
+
+    gSpecialVar_Result = ITEM_GREAT_BALL;
+    CopyItemName(ITEM_GREAT_BALL, gStringVar1);
+}
+
 #else // !IS_HNS
 
 #include "event_data.h"
