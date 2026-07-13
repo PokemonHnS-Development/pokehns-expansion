@@ -345,7 +345,7 @@ Debug_EventScript_Script_2::
 	end
 
 Debug_EventScript_Script_3::
-	clearflag FLAG_RECEIVED_ODD_EGG
+	setvar VAR_KENYA, 0
 	release
 	end
 

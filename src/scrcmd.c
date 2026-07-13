@@ -1445,49 +1445,54 @@ bool8 ScrCmd_givenamedmon(struct ScriptContext *ctx)
     heldItem[0] = item & 0xFF;
     heldItem[1] = item >> 8;
 
+    for (u8 i = 0; i < PARTY_SIZE; i++)
     {
-        struct Pokemon tempMon;
-        mon = &tempMon;
-        ZeroMonData(mon);
-        CreateBoxMon(&mon->box, species, level, personality, OTID_STRUCT_PRESET(otId));
-        SetBoxMonIVs(&mon->box, USE_RANDOM_IVS);
-        GiveBoxMonInitialMoveset(&mon->box);
-
-        if (nickname != NULL)
-            SetMonData(mon, MON_DATA_NICKNAME, nickname);
-        SetMonData(mon, MON_DATA_OT_NAME, otName);
-        SetMonData(mon, MON_DATA_HELD_ITEM, heldItem);
-
-        if (giftId == 1)
+        if (GetMonData(&gPlayerParty[i], MON_DATA_SPECIES) == SPECIES_NONE)
         {
-            struct Mail *mailPtr = &gSaveBlock1Ptr->mail[mailIndex];
-            memset(mailPtr, 0, sizeof(*mailPtr));
-            memcpy(mailPtr->words, sKenyaMailWords, sizeof(sKenyaMailWords));
-            StringCopy(mailPtr->playerName, sKenyaOtName);
-            mailPtr->trainerId[0] = (otId >> 0) & 0xFF;
-            mailPtr->trainerId[1] = (otId >> 8) & 0xFF;
-            mailPtr->trainerId[2] = (otId >> 16) & 0xFF;
-            mailPtr->trainerId[3] = (otId >> 24) & 0xFF;
-            mailPtr->species = species;
-            mailPtr->itemId = item;
-            SetMonData(mon, MON_DATA_MAIL, &mailIndex);
+            mon = &gPlayerParty[i];
+            ZeroMonData(mon);
+            CreateBoxMon(&mon->box, species, level, personality, OTID_STRUCT_PRESET(otId));
+            SetBoxMonIVs(&mon->box, USE_RANDOM_IVS);
+            GiveBoxMonInitialMoveset(&mon->box);
+
+            if (nickname != NULL)
+                SetMonData(mon, MON_DATA_NICKNAME, nickname);
+            SetMonData(mon, MON_DATA_OT_NAME, otName);
+            SetMonData(mon, MON_DATA_HELD_ITEM, heldItem);
+
+            if (giftId == 1)
+            {
+                struct Mail *mailPtr = &gSaveBlock1Ptr->mail[mailIndex];
+                memset(mailPtr, 0, sizeof(*mailPtr));
+                memcpy(mailPtr->words, sKenyaMailWords, sizeof(sKenyaMailWords));
+                StringCopy(mailPtr->playerName, sKenyaOtName);
+                mailPtr->trainerId[0] = (otId >> 0) & 0xFF;
+                mailPtr->trainerId[1] = (otId >> 8) & 0xFF;
+                mailPtr->trainerId[2] = (otId >> 16) & 0xFF;
+                mailPtr->trainerId[3] = (otId >> 24) & 0xFF;
+                mailPtr->species = species;
+                mailPtr->itemId = item;
+                SetMonData(mon, MON_DATA_MAIL, &mailIndex);
+            }
+            if (giftId == 4)
+            {
+                u16 move = MOVE_EXTREME_SPEED;
+                SetMonData(mon, MON_DATA_MOVE1, &move);
+                SetMonData(mon, MON_DATA_PP1, &gMovesInfo[move].pp);
+            }
+
+            CalculateMonStats(mon);
+
+            u16 dexNum = SpeciesToNationalPokedexNum(species);
+            HandleSetPokedexFlag(dexNum, FLAG_SET_SEEN, personality);
+            HandleSetPokedexFlag(dexNum, FLAG_SET_CAUGHT, personality);
+
+            gSpecialVar_Result = MON_GIVEN_TO_PARTY;
+            return FALSE;
         }
-        if (giftId == 4)
-        {
-            u16 move = MOVE_EXTREME_SPEED;
-            SetMonData(mon, MON_DATA_MOVE1, &move);
-            SetMonData(mon, MON_DATA_PP1, &gMovesInfo[move].pp);
-        }
-
-        CalculateMonStats(mon);
-
-        u16 dexNum = SpeciesToNationalPokedexNum(species);
-        HandleSetPokedexFlag(dexNum, FLAG_SET_SEEN, personality);
-        HandleSetPokedexFlag(dexNum, FLAG_SET_CAUGHT, personality);
-
-        gSpecialVar_Result = GiveScriptedMonToPlayer(mon, PARTY_SIZE);
     }
 
+    gSpecialVar_Result = MON_CANT_GIVE;
     return FALSE;
 }
 
