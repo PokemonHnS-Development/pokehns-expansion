@@ -4130,7 +4130,8 @@ static void Cmd_getexp(void)
     case 0: // check if should receive exp at all
         if (IsOnPlayerSide(gBattlerFainted)
             || IsAiVsAiBattle()
-            || !BattleTypeAllowsExp())
+            || !BattleTypeAllowsExp()
+            || FlagGet(FLAG_DISABLE_EXP_GAIN))
         {
             gBattleScripting.getexpState = 6; // goto last case
         }
