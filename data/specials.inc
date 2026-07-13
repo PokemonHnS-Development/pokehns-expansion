@@ -660,7 +660,7 @@ gSpecials::
 	def_special ExitBugContestMode
 	def_special TransferBugContestMon
 	def_special JudgeBugContestMon
-	def_special RemoveSafariBalls
+	def_special RemoveSportBalls
 	def_special ShowBugContestChosenMon
 	def_special SwitchMonAbility
 	def_special NameRival

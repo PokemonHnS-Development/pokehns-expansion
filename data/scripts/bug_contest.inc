@@ -110,7 +110,7 @@ BugContest_EventScript_End::
 	special ExitBugContestMode
 	clearflag FLAG_DISABLE_EXP_GAIN
 	setvar VAR_BUG_CONTEST_STATE, 0
-	special RemoveSafariBalls
+	special RemoveSportBalls
 	goto_if_eq VAR_TEMP_1, 1, BugContest_EventScript_SideEnd
 	warp MAP_GATE_NATIONAL_PARK_HNS, 7, 2
 	waitstate

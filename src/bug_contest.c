@@ -183,12 +183,12 @@ void CB2_EndBugContestBattle(void)
     }
 }
 
-bool8 RemoveSafariBalls(void)
+bool8 RemoveSportBalls(void)
 {
-    u16 count = CountTotalItemQuantityInBag(ITEM_SAFARI_BALL);
+    u16 count = CountTotalItemQuantityInBag(ITEM_SPORT_BALL);
 
     if (count > 0)
-        RemoveBagItem(ITEM_SAFARI_BALL, count);
+        RemoveBagItem(ITEM_SPORT_BALL, count);
 
     return FALSE;
 }
@@ -225,7 +225,7 @@ void EnterBugContestMode(void) {}
 void ExitBugContestMode(void) {}
 bool8 TransferBugContestMon(void) { return FALSE; }
 bool8 JudgeBugContestMon(void) { return FALSE; }
-bool8 RemoveSafariBalls(void) { return FALSE; }
+bool8 RemoveSportBalls(void) { return FALSE; }
 bool8 ShowBugContestChosenMon(void) { return FALSE; }
 bool32 GetBugContestFlag(void) { return FALSE; }
 void CB2_EndBugContestBattle(void) {}

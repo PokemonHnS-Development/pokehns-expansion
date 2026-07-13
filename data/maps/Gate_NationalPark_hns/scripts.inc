@@ -25,9 +25,9 @@ Gate_NationalPark_EventScript_AttendantStart::
 	message Route35NationalParkGate_Text_MonLeftWithHelper
 	waitfanfare
 	closemessage
-	msgbox Route35NationalParkGate_Text_OfficerGiveParkBalls, MSGBOX_DEFAULT
+	msgbox Route35NationalParkGate_Text_OfficerGiveSportBalls, MSGBOX_DEFAULT
 	closemessage
-	giveitem ITEM_SAFARI_BALL, 30
+	giveitem ITEM_SPORT_BALL, 30
 	closemessage
 	msgbox Route35NationalParkGate_Text_OfficerExplainRules, MSGBOX_DEFAULT
 	closemessage
@@ -44,9 +44,9 @@ Gate_NationalPark_EventScript_AttendantStart::
 
 Gate_NationalPark_EventScript_OnlyOneMon::
 	special SavePlayerParty
-	msgbox Route35NationalParkGate_Text_OfficerGiveParkBalls, MSGBOX_DEFAULT
+	msgbox Route35NationalParkGate_Text_OfficerGiveSportBalls, MSGBOX_DEFAULT
 	closemessage
-	giveitem ITEM_SAFARI_BALL, 30
+	giveitem ITEM_SPORT_BALL, 30
 	closemessage
 	msgbox Route35NationalParkGate_Text_OfficerExplainRules, MSGBOX_DEFAULT
 	closemessage
@@ -132,9 +132,9 @@ Gate_NationalPark_EventScript_BAttendantStart::
 	message Route35NationalParkGate_Text_MonLeftWithHelper
 	waitfanfare
 	closemessage
-	msgbox Route35NationalParkGate_Text_OfficerGiveParkBalls, MSGBOX_DEFAULT
+	msgbox Route35NationalParkGate_Text_OfficerGiveSportBalls, MSGBOX_DEFAULT
 	closemessage
-	giveitem ITEM_SAFARI_BALL, 30
+	giveitem ITEM_SPORT_BALL, 30
 	closemessage
 	msgbox Route35NationalParkGate_Text_OfficerExplainRules, MSGBOX_DEFAULT
 	closemessage
@@ -151,9 +151,9 @@ Gate_NationalPark_EventScript_BAttendantStart::
 
 Gate_NationalPark_EventScript_OnlyOneMonB::
 	special SavePlayerParty
-	msgbox Route35NationalParkGate_Text_OfficerGiveParkBalls, MSGBOX_DEFAULT
+	msgbox Route35NationalParkGate_Text_OfficerGiveSportBalls, MSGBOX_DEFAULT
 	closemessage
-	giveitem ITEM_SAFARI_BALL, 30
+	giveitem ITEM_SPORT_BALL, 30
 	closemessage
 	msgbox Route35NationalParkGate_Text_OfficerExplainRules, MSGBOX_DEFAULT
 	closemessage
@@ -210,20 +210,20 @@ Route35NationalParkGate_Text_OfficerAskToParticipate:
 	.string "bug POKéMON to be judged.\p"
 	.string "Would you like to give it a try?$"
 
-Route35NationalParkGate_Text_OfficerGiveParkBalls:
+Route35NationalParkGate_Text_OfficerGiveSportBalls:
 	.string "Any EXP your POKéMON gains during\n"
 	.string "the contest will be reverted when\l"
 	.string "you leave.\p"
-	.string "Here are the SAFARI BALLS for the\n"
+	.string "Here are the SPORT BALLS for the\n"
 	.string "Contest.$"
 
-Route35NationalParkGate_Text_ReceivedParkBalls:
-	.string "{PLAYER} received SAFARI BALLS.$"
+Route35NationalParkGate_Text_ReceivedSportBalls:
+	.string "{PLAYER} received SPORT BALLS.$"
 
 Route35NationalParkGate_Text_OfficerExplainRules:
 	.string "The person who gets the strongest\n"
 	.string "bug POKéMON is the winner.\p"
-	.string "If you run out of SAFARI BALLS,\n"
+	.string "If you run out of SPORT BALLS,\n"
 	.string "you're done.\p"
 	.string "You can catch up to 5 POKéMON. The\n"
 	.string "last one caught will be the only\l"
