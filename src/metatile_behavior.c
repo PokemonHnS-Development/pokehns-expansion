@@ -139,6 +139,7 @@ static const u8 sTileBitAttributes[NUM_METATILE_BEHAVIORS] =
     [MB_CYCLING_ROAD_PULL_DOWN_GRASS]       = TILE_FLAG_UNUSED | TILE_FLAG_HAS_ENCOUNTERS,
     [MB_FAST_WATER]                         = TILE_FLAG_UNUSED | TILE_FLAG_SURFABLE,
     [MB_CYCLING_ROAD_WATER]                 = TILE_FLAG_UNUSED | TILE_FLAG_SURFABLE,
+    [MB_WATER_NORTH_ARROW_WARP]             = TILE_FLAG_UNUSED | TILE_FLAG_SURFABLE,
 };
 
 bool8 MetatileBehavior_IsATile(u8 metatileBehavior)
@@ -318,6 +319,7 @@ bool8 MetatileBehavior_IsWestArrowWarp(u8 metatileBehavior)
 bool8 MetatileBehavior_IsNorthArrowWarp(u8 metatileBehavior)
 {
     if (metatileBehavior == MB_NORTH_ARROW_WARP
+     || metatileBehavior == MB_WATER_NORTH_ARROW_WARP
      || metatileBehavior == MB_STAIRS_OUTSIDE_ABANDONED_SHIP)
         return TRUE;
     else
