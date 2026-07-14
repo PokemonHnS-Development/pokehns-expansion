@@ -1756,6 +1756,8 @@ static void FreeSummaryScreen(void)
 
 static bool8 CanShowPokedexForCurrentMon(void)
 {
+    if (sMonSummaryScreen->mode == SUMMARY_MODE_LOCK_MOVES)
+        return FALSE;
     return !sMonSummaryScreen->summary.isEgg && FlagGet(FLAG_SYS_POKEDEX_GET) == TRUE;
 }
 
