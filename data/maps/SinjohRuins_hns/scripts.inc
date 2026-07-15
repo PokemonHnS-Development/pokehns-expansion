@@ -244,7 +244,7 @@ SinjohRuins_Text_StevenContinues:
 	.string "somewhere a bit warmer.$"
 
 SinjohRuins_EventScript_StevenToArceus_Left::
-   lock
+    lock
     addobject LOCALID_STEVENSTONE_2
 	applymovement LOCALID_STEVENSTONE_2, SinjohRuins_StevenWalksUpCliff_Movement_Left
 	waitmovement 0
@@ -263,9 +263,9 @@ SinjohRuins_EventScript_StevenToArceus_Left::
     setvar VAR_0x8007, 6  @ shake delay
     special ShakeCamera
     waitstate
-	fadescreen FADE_TO_WHITE
+	fadescreenswapbuffers FADE_TO_WHITE
 	call_if_unset FLAG_SINJOHRUINS_ARCEUS_STAIRS, SinjohRuins_Arceus_Stairs
-    fadescreen FADE_FROM_WHITE
+    fadescreenswapbuffers FADE_FROM_WHITE
 	delay 30
 	playse SE_PIN
 	applymovement LOCALID_STEVENSTONE_2, Common_Movement_ExclamationMark
@@ -311,9 +311,9 @@ SinjohRuins_EventScript_StevenToArceus_Right::
     setvar VAR_0x8007, 6  @ shake delay
     special ShakeCamera
     waitstate
-	fadescreen FADE_TO_WHITE
+	fadescreenswapbuffers FADE_TO_WHITE
 	call_if_unset FLAG_SINJOHRUINS_ARCEUS_STAIRS, SinjohRuins_Arceus_Stairs
-    fadescreen FADE_FROM_WHITE
+    fadescreenswapbuffers FADE_FROM_WHITE
 	delay 30
 	playse SE_PIN
 	applymovement LOCALID_STEVENSTONE_2, Common_Movement_ExclamationMark

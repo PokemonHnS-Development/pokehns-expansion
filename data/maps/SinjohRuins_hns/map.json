@@ -268,7 +268,7 @@
       "y": 59,
       "elevation": 0,
       "var": "VAR_PLATECOUNTER",
-      "var_value": "17",
+      "var_value": "16",
       "script": "SinjohRuins_EventScript_StevenToArceus_Left"
     },
     {
@@ -277,7 +277,7 @@
       "y": 59,
       "elevation": 0,
       "var": "VAR_PLATECOUNTER",
-      "var_value": "17",
+      "var_value": "16",
       "script": "SinjohRuins_EventScript_StevenToArceus_Right"
     }
   ],

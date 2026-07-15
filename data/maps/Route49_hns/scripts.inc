@@ -8,12 +8,12 @@ Route49_hns_OnFrame::
 	.2byte 0
 
 Route49_EventScripts_HideNoble_Trigger::
-    goto_if_unset FLAG_NOBLES_UNLOCKED, Route49_EventScript_HideNobles
+    goto_if_set FLAG_NOBLES_UNLOCKED, Route49_EventScript_AddNobles
     release
     end
 
-Route49_EventScript_HideNobles::
-    removeobject LOCALID_NOBLE_ELECTRODE
+Route49_EventScript_AddNobles::
+    addobject LOCALID_NOBLE_ELECTRODE
     release
     end
 
@@ -269,7 +269,6 @@ Route49_EventScript_Electrode::
 	goto_if_eq VAR_RESULT, B_OUTCOME_WON, Route49_EventScript_DefeatedElectrode
 	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, Route49_EventScript_RanFromElectrode
 	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, Route49_EventScript_RanFromElectrode
-	setflag FLAG_FOUGHT_NOBLE_ELECTRODE
 	fadescreen FADE_TO_BLACK
 	removeobject LOCALID_NOBLE_ELECTRODE
     setweather WEATHER_SNOW

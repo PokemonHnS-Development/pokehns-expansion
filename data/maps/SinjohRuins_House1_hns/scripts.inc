@@ -279,3 +279,124 @@ SinjohRuins_Text_Rosalyne_BeforeCompletion:
 	.string "Please make sure to take\n"
 	.string "breaks while helping my husband..$"
 
+SinjohRuins_EventScript_Notes1::
+    lock
+	msgbox SinjohRuins_Notes1_Text MSGBOX_DEFAULT
+	release
+	end
+
+SinjohRuins_EventScript_Notes2::
+    lock
+	msgbox SinjohRuins_Notes2_Text MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, FALSE, SinjohRuins_EventScript_BetterStop
+	msgbox SinjohRuins_Notes2_Part2_Text MSGBOX_DEFAULT
+	release
+	end
+
+SinjohRuins_EventScript_Notes3::
+    lock
+	msgbox SinjohRuins_Notes3_Text MSGBOX_DEFAULT
+	release
+	end
+
+SinjohRuins_EventScript_Notes4::
+    lock
+	msgbox SinjohRuins_Notes4_Text MSGBOX_DEFAULT
+	release
+	end
+
+SinjohRuins_EventScript_Notes5::
+    lock
+	msgbox SinjohRuins_Notes5_Text MSGBOX_DEFAULT
+	release
+	end
+
+SinjohRuins_EventScript_Notes6::
+    lock
+	msgbox SinjohRuins_Notes6_Text MSGBOX_DEFAULT
+	release
+	end
+
+SinjohRuins_EventScript_Notes7::
+    lock
+	msgbox SinjohRuins_Notes7_Text MSGBOX_DEFAULT
+	release
+	end
+
+SinjohRuins_Notes1_Text:
+    .string "Research Log 1: Discovery Day.\p"
+	.string "We've received reports of\n"
+	.string "a large structure deep under\l"
+	.string "the snow north of Mt.Silver.\p"
+	.string "Once we obtain clearence\n"
+	.string "from the league, I am hopeful\l"
+	.string "that the excavation team\l"
+	.string "will be allowed through\l"
+	.string "the mountain..$"
+
+SinjohRuins_Notes2_Text:
+    .string "Research Log 2: Too much ice.\p"
+	.string "It's been 1 week since the\n"
+	.string "group of muscle men we've hired\l"
+	.string "started digging...and they've\l"
+	.string "already hit a major issue.\p"
+	.string "Ice. And a lot of it.\n"
+	.string "This doesn't seem to be\l"
+	.string "normal ice either, not even\l"
+	.string "a MACHAMP was able to break it.\p"
+	.string ".........\n"
+	.string "Keep reading?$"
+
+SinjohRuins_Notes2_Part2_Text:
+    .string "Research Log 2.5: A Toasty Solution.\p"
+	.string "I've got it! If brute force\n"
+	.string "can't shatter the ice,\l"
+	.string "then what if we slowly melt it down?\p"
+	.string "The Boss' family raises exclusively\n"
+	.string "FIRE type POKEMON, if I could convice\l"
+	.string "them to lend me a couple dozen\l"
+	.string "diffrent species then maybe...\p"
+	.string "........\n"
+	.string "It seems the author didn't finish\l"
+	.string "writing this log...$"
+
+SinjohRuins_EventScript_BetterStop::
+    msgbox SinjohRuins_BetterStop_Text MSGBOX_DEFAULT
+	release
+	end
+
+SinjohRuins_BetterStop_Text:
+    .string "Seems like the author keeps\n"
+	.string "going for awhile...\l"
+	.string "Better take a break and come\l"
+	.string "back later.$"
+
+SinjohRuins_Notes3_Text:
+    .string "Research Log 3: A Resounding Success!\p"
+	.string "After a very inense call I somehow\n"
+	.string "managed to convice them to transfer\l"
+	.string "30 specimens from the HOENN\l"
+	.string "and SINNOH reigons to help deal\l"
+	.string "with our big issue,\p"
+	.string "I Will update once I figure\l"
+	.string "out how to get them this far north..$"
+
+
+SinjohRuins_Notes4_Text:
+    .string "Research Log 4: A Major Discovery!\p"
+	.string "Things have been so busy I forgot\n"
+	.string "all about these!\p"
+	.string "After we melted and pumped out\n"
+	.string "most of the ice, several diffrent\l"
+	.string "structures revealed themselves!\p"
+	.string "My first observation of the\n"
+	.string "main structure is that it shares\l"
+	.string "a lot of arcitectual cues from\l"
+	.string "the ancient Celestica peoples...\p"
+	.string "Once we confirm the stability of the\n"
+	.string "building, Boss wants to\l"
+	.string "opeen it up...$"
+
+
+SinjohRuins_Notes5_Text:
+    .string 

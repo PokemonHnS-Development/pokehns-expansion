@@ -15,6 +15,7 @@
   "connections": null,
   "object_events": [
     {
+      "local_id": "LOCALID_ARCEUS",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_ARCEUS",
       "x": 18,
       "y": 18,
@@ -24,7 +25,21 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "SinjohRuins_EventScript_Arceus",
+      "flag": "FLAG_SINJOHRUINS_ARCEUS"
+    },
+    {
+      "local_id": "LOCALID_STEVENSTONEBATTLE",
+      "graphics_id": "OBJ_EVENT_GFX_STEVEN_HNS",
+      "x": 18,
+      "y": 32,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SinjohRuins_Arceus_EventScript_BattleStevenStone",
       "flag": "0"
     }
   ],

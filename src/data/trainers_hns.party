@@ -14487,3 +14487,76 @@ EVs: 252 HP / 252 SpD
 - Mach Punch  
 - Comet Punch  
 
+=== TRAINER_STEVENSTONE_HNS ===
+Name: STEVEN
+Class: Champion
+Pic: Steven
+Music: Hg Champion
+Gender: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+Items: Full Restore / Full Restore
+
+
+Skarmory @ Covert Cloak  
+Ability: Sturdy  
+Level: 77 
+EVs: 8 HP / 252 Atk / 248 Def  
+Adamant Nature  
+- Autotomize  
+- Brave Bird  
+- Iron Head  
+- Spikes  
+
+Omastar @ Sitrus Berry  
+Ability: Shell Armor  
+Level: 77 
+EVs: 128 Def / 40 SpA / 252 SpD  
+Relaxed Nature  
+IVs: 0 Atk  
+- Hydro Pump  
+- Meteor Beam  
+- Brine  
+- Toxic Spikes  
+
+Claydol @ Light Clay  
+Ability: Levitate  
+Level: 77
+EVs: 248 HP / 252 SpA / 8 SpD  
+Modest Nature  
+IVs: 0 Atk  
+- Light Screen  
+- Reflect  
+- Expanding Force  
+- Earth Power  
+
+Aggron @ Rocky Helmet  
+Ability: Heavy Metal  
+Level: 77 
+EVs: 4 HP / 248 Atk / 252 Def / 4 SpD  
+Adamant Nature  
+- Heavy Slam  
+- Body Press  
+- Curse  
+- Rock Slide  
+
+Kleavor @ Scope Lens  
+Ability: Sharpness  
+Level: 77  
+EVs: 124 Atk / 132 Def / 252 Spe  
+Adamant Nature  
+- Stone Axe  
+- X-Scissor  
+- Cross Poison  
+- Double Team  
+
+Metagross @ Metal Coat  
+Ability: Clear Body  
+Level: 79   
+EVs: 128 HP / 120 Atk / 4 Def / 252 SpD  
+Brave Nature  
+- Bullet Punch  
+- Meteor Mash  
+- Psychic Fangs  
+- Cosmic Power 
+

@@ -126,7 +126,7 @@
 #define VAR_NOBLE_SNEASLER_TRIGGER                            0x40B6
 #define VAR_NEWSINOH_KIMONO_TRACKER                            0x40B7
 #define VAR_SINJOHRUINS_ARCEUS_STAIRS                            0x40B8
-#define VAR_UNUSED_HNS_0x40B9                            0x40B9
+#define VAR_STEVENSTONE_PART1                            0x40B9
 #define VAR_UNUSED_HNS_0x40BA                            0x40BA
 #define VAR_UNUSED_HNS_0x40BB                            0x40BB
 #define VAR_UNUSED_HNS_0x40BD                            0x40BD

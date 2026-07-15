@@ -4,7 +4,7 @@ SinjohRuins_Cave_hns_MapScripts::
 SinjohRuins_Cave_EventScript_Ursaluna::
 	lock
 	faceplayer
-	setwildbossbattle species=SPECIES_URSALUNA, level=80, item=ITEM_LEFTOVERS, move1_1=MOVE_EARTHQUAKE, move1_2=MOVE_AVALANCHE, move1_3=MOVE_BULK_UP move1_4=MOVE_SLACK_OFF
+	setwildbossbattle species=SPECIES_URSALUNA, level=80, item=ITEM_EARTH_PLATE, move1_1=MOVE_EARTHQUAKE, move1_2=MOVE_AVALANCHE, move1_3=MOVE_BULK_UP move1_4=MOVE_GIGA_IMPACT
 	waitse
 	playmoncry SPECIES_URSALUNA, CRY_MODE_ENCOUNTER
 	msgbox SinjohRuins_Cave_Text_Grrwowl MSGBOX_DEFAULT
@@ -14,7 +14,7 @@ SinjohRuins_Cave_EventScript_Ursaluna::
 	waitbuttonpress
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
-	settotemboost B_POSITION_OPPONENT_LEFT, 0, 2, 0, 0, 3, 0
+	settotemboost B_POSITION_OPPONENT_LEFT, 0, 0, 0, 0, 2, 0, 0
 	playbgm MUS_HG_VS_SUICUNE, 0
 	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE

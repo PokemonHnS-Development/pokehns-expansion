@@ -21,7 +21,6 @@
   ],
   "object_events": [
     {
-      "local_id": "LOCALID_NOBLE_ELECTRODE",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SNORUNT",
       "x": 4,
       "y": 32,
