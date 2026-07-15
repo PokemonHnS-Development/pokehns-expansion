@@ -137,6 +137,7 @@ OlivinePort_EventScript_ChoseVermilion::
 	goto_if_eq VAR_RESULT, FALSE, OlivinePort_EventScript_Sailor_NoCredentials
 	call OlivinePort_EventScript_EnterShip
 	warpsilent MAP_VERMILION_CITY_PORT_INSIDE_HNS, 8, 9
+	waitstate
 	release
 	end
 
@@ -148,6 +149,7 @@ OlivinePort_EventScript_ChoseSouthernIsland::
 	goto_if_eq VAR_RESULT, FALSE, OlivinePort_EventScript_Sailor_NoCredentials
 	call OlivinePort_EventScript_EnterShip
 	warpsilent MAP_SOUTHERN_ISLAND_EXTERIOR_HNS, 13, 22
+	waitstate
 	release
 	end
 
@@ -159,6 +161,7 @@ OlivinePort_EventScript_ChoseBirthIsland::
 	goto_if_eq VAR_RESULT, FALSE, OlivinePort_EventScript_Sailor_NoCredentials
 	call OlivinePort_EventScript_EnterShip
 	warpsilent MAP_BIRTH_ISLAND_EXTERIOR_HNS, 13, 23
+	waitstate
 	release
 	end
 
@@ -170,6 +173,7 @@ OlivinePort_EventScript_ChoseFarawayIsland::
 	goto_if_eq VAR_RESULT, FALSE, OlivinePort_EventScript_Sailor_NoCredentials
 	call OlivinePort_EventScript_EnterShip
 	warpsilent MAP_FARAWAY_ISLAND_ENTRANCE_HNS, 13, 38
+	waitstate
 	release
 	end	
 
@@ -178,6 +182,7 @@ OlivinePort_EventScript_ChoseBattleFrontier::
 	delay 20
 	call OlivinePort_EventScript_EnterShip
 	warpsilent MAP_BATTLE_FRONTIER_OUTSIDE_WEST, 20, 67
+	waitstate
 	release
 	end	
 
@@ -192,6 +197,7 @@ OlivinePort_EventScript_Sailor_MaidenVoyage::
 	clearflag FLAG_HIDE_SSAQUA_CAPTAINS_ROOM_GRANDDAUGHTER
 
 	warpsilent MAP_SSAQUA_1F_HNS, 29, 3
+	waitstate
 	release
 	end
 

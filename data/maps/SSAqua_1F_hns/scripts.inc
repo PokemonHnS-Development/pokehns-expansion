@@ -152,6 +152,7 @@ SSAqua_1F_EventScript_LeaveBoat::
 	@end flagheap
 	setvar VAR_SSAQUA_STATE, 7
 	warp MAP_VERMILION_CITY_PORT_INSIDE_HNS, 8, 9
+	waitstate
 	release
 	end
 
