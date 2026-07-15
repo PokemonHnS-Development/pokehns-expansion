@@ -558,6 +558,7 @@ static const struct DoorGraphics sDoorAnimGraphicsTable[] =
     {METATILE_PewterCity_Door_Hns,                         &gTileset_PewterCity_Hns, DOOR_SOUND_NORMAL,  1, sDoorAnimTiles_HnsPewter, sDoorAnimPalettes_PewterHns},
     {METATILE_CeruleanCity_Door_Hns,                       &gTileset_CeruleanCity_Hns, DOOR_SOUND_NORMAL,  1, sDoorAnimTiles_HnsCerulean, sDoorAnimPalettes_CeruleanHns},
     {METATILE_OlivineCity_Door_Vermilion_Hns,                  &gTileset_OlivineCity_Hns, DOOR_SOUND_NORMAL,  1, sDoorAnimTiles_HnsVermilion, sDoorAnimPalettes_VermilionHns},
+    {METATILE_VermilionCity_Door_Hns,                          &gTileset_Vermilion_Hns, DOOR_SOUND_NORMAL,  1, sDoorAnimTiles_HnsVermilion, sDoorAnimPalettes_VermilionHns},
     {METATILE_LavenderTown_Door_Hns,                       &gTileset_LavenderTown_Hns, DOOR_SOUND_NORMAL,  1, sDoorAnimTiles_HnsLavender, sDoorAnimPalettes_LavenderHns},
     {METATILE_Goldenrod_Door_Saffron_Hns,                      &gTileset_SaffronCity_Hns, DOOR_SOUND_NORMAL,  1, sDoorAnimTiles_HnsSaffron, sDoorAnimPalettes_SaffronHns},
     {METATILE_Fuchsia_Door_Hns,                                &gTileset_Fuchsia_Hns, DOOR_SOUND_NORMAL,  1, sDoorAnimTiles_HnsFuchsia, sDoorAnimPalettes_FuchsiaHns},
