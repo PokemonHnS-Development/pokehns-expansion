@@ -461,6 +461,7 @@
 // gTileset_PalletTown
 #define METATILE_PalletTown_Door            0x2A3
 #define METATILE_PalletTown_Door_Green_Hns  0x2AC
+#define METATILE_PalletTown_Door_Red_Hns    0x2BD
 #define METATILE_PalletTown_OaksLabDoor     0x2AC
 
 // gTileset_Petalburg
