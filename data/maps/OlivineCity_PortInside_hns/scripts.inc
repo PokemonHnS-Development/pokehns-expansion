@@ -181,7 +181,7 @@ OlivinePort_EventScript_ChoseBattleFrontier::
 	closemessage
 	delay 20
 	call OlivinePort_EventScript_EnterShip
-	warpsilent MAP_BATTLE_FRONTIER_OUTSIDE_WEST, 20, 67
+	warpsilent MAP_BATTLE_FRONTIER_OUTSIDE_WEST_HNS, 20, 67
 	waitstate
 	release
 	end	
