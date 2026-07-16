@@ -68,7 +68,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_MAGMAR",
-      "x": 39,
+      "x": 38,
       "y": 33,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
@@ -81,7 +81,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_MAGMAR",
-      "x": 40,
+      "x": 39,
       "y": 37,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
@@ -226,7 +226,7 @@
   ],
   "warp_events": [
     {
-      "x": 50,
+      "x": 48,
       "y": 18,
       "elevation": 0,
       "dest_map": "MAP_SNOWSWEPT_CAVERN_HNS",
