@@ -1729,7 +1729,9 @@
       "width": 1,
       "height": 1,
       "in_hns": true
-   
+    },
+    {
+      "id": "MAPSEC_MT_SILVER"
     }
   ],
   "hns_map_sections": [
