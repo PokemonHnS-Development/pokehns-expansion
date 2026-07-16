@@ -43,7 +43,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_CAMPER_HNS",
       "x": 14,
-      "y": 10,
+      "y": 8,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -56,7 +56,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_ARTIST",
       "x": 11,
-      "y": 14,
+      "y": 10,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
@@ -69,7 +69,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_COOLTRAINER_F_HNS",
       "x": 9,
-      "y": 10,
+      "y": 8,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
@@ -82,7 +82,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_GAMEBOY_KID_HNS",
       "x": 2,
-      "y": 4,
+      "y": 5,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN_AND_LEFT",
       "movement_range_x": 0,
@@ -95,7 +95,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_GAMEBOY_KID_HNS",
       "x": 1,
-      "y": 4,
+      "y": 5,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN_AND_RIGHT",
       "movement_range_x": 0,
@@ -107,7 +107,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_CHARIZARD",
-      "x": 11,
+      "x": 12,
       "y": 5,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
@@ -121,7 +121,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_JUGGLER_HNS",
       "x": 1,
-      "y": 12,
+      "y": 8,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
@@ -135,7 +135,7 @@
   "warp_events": [
     {
       "x": 7,
-      "y": 14,
+      "y": 10,
       "elevation": 0,
       "dest_map": "MAP_NEW_SINJOH_HNS",
       "dest_warp_id": "3"

@@ -42,7 +42,7 @@ SinjohRuins_Cave_EventScript_DefeatedUrsaluna::
 	fadescreen FADE_FROM_BLACK
 	playse SE_PIN
 	applymovement LOCALID_PLAYER, Common_Movement_QuestionMark
-	msgbox SinjohRuins_Cave_Text_EarthPlate
+	msgbox SinjohRuins_Cave_Text_EarthPlate MSGBOX_DEFAULT
 	giveitem ITEM_EARTH_PLATE, 1
 	addvar VAR_PLATECOUNTER, 1
 	addvar VAR_NOBLECOUNTER, 1
@@ -57,3 +57,4 @@ SinjohRuins_Cave_Text_Grrwowl:
 
 SinjohRuins_Cave_Text_EarthPlate:
     .string "It seems URSALUNA left something behind..$"
+

@@ -123,7 +123,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_BIKER_HNS",
       "x": 70,
-      "y": 48,
+      "y": 49,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WALK_UP_AND_DOWN",
       "movement_range_x": 0,
@@ -136,7 +136,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_BIKER_HNS",
       "x": 71,
-      "y": 38,
+      "y": 37,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WALK_DOWN_AND_UP",
       "movement_range_x": 0,

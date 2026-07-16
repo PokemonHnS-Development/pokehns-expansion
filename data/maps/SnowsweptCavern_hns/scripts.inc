@@ -15,6 +15,7 @@ SnowsweptCavern_hns_OnTransition::
     setflag FLAG_FOUGHT_NOBLE_KLEAVOR
     setflag FLAG_FOUGHT_NOBLE_URSALUNA 
     setvar VAR_PLATECOUNTER, 0
+    setvar VAR_SNOWSWEPT_FINALBRIDGE, 0
     end
 
 
@@ -303,3 +304,104 @@ Snowswept_EventScript_Item_UltraBall::
     finditem ITEM_ULTRA_BALL
     end
 
+Snowswept_EventScript_SuperNerdBoss_Edward::
+    lock
+    faceplayer
+    msgbox Snowswept_Text_EdwardChallenge, MSGBOX_DEFAULT
+    trainerbattle_no_intro TRAINER_SECRETEDWARD_HNS, Snowswept_Text_SuperNerd_Edward_Beaten
+    goto Snowswept_Edward_AfterBattle
+
+Snowswept_Edward_AfterBattle::
+    msgbox Snowswept_Edward_PostBattle_Text MSGBOX_AUTOCLOSE
+    delay 30
+    playse SE_M_DETECT
+	dofieldeffectsparkle 10, 6, 0
+	waitfieldeffect FLDEFF_SPARKLE
+    msgbox Snowsept_Edward_Teleporter_Text MSGBOX_DEFAULT
+    delay 20
+    playse SE_THUNDER
+    fadescreen FADE_TO_WHITE
+    setflag FLAG_SNOWSWEPT_EDWARD 
+    removeobject LOCALID_EDWARD
+    fadescreen FADE_FROM_WHITE
+    delay 30
+    playse SE_PIN
+    applymovement LOCALID_PLAYER, Common_Movement_ExclamationMark
+    waitmovement
+    msgbox Snowswept_HesGone_Text MSGBOX_DEFAULT
+    release
+    end
+
+
+Snowswept_Text_EdwardChallenge:
+    .string "You....\n"
+    .string "I know that look on your face...\l"
+    .string "You've read them haven't you?\p"
+    .string "You've read my logs...\n"
+    .string "You must be here to bring me in..!\p"
+    .string "I'm not gonna let some kid\n"
+    .string "grab me that easy...!$"
+
+Snowswept_Text_SuperNerd_Edward_Beaten:
+    .string "Your POKEMON...That energy..!$"
+
+Snowswept_Edward_PostBattle_Text:
+    .string "I see now....\n"
+    .string "So that's what happened after\l"
+    .string "I left..\p"
+    .string "To think those ruins would lead\n"
+    .string "to the Original One...\l"
+    .string "All those plates you're carrying are\l"
+    .string "actually the physical manifestation\l"
+    .string "of it's greaT power y'know?\p"
+    .string "After being near you for this long,\n"
+    .string "it seems my experimental teleporter\l"
+    .string "has finally finished charging.\p"
+    .string "You didn't come here to arrest\n"
+    .string "me, did you?\p"
+    .string "You don't have to say anything..\n"
+    .string "Thank you..and goodbye forever..$"
+
+Snowsept_Edward_Teleporter_Text:
+    .string "EDWARD activated his teleporter!$"
+
+Snowswept_HesGone_Text:
+    .string "EDWARD dissapeared!\p"
+    .string "You hope he finds peace wherever\n"
+    .string "he ends up...$"
+
+Snowswept_EventScript_EngieBridgeBlocker::
+    lock
+    faceplayer
+    goto_if_eq VAR_PLATECOUNTER, 17, Snowswept_EventScript_EngieBridgePasser
+    msgbox Snowswept_Engie_SaysNo_Text MSGBOX_DEFAULT
+    applymovement LOCALID_PLAYER, Snowswept_PlayerWalksDown_Movement
+    release
+    end
+
+Snowswept_PlayerWalksDown_Movement:
+   walk_down
+   walk_down
+   step_end
+
+Snowswept_Engie_SaysNo_Text:
+   .string "Ehh, sorry there kid.\n"
+   .string "I can't let anybody through\l"
+   .string "right now, orders from my boss.$"
+
+Snowswept_EventScript_EngieBridgePasser::
+    msgbox Snowswept_Engie_SaysYes_Text MSGBOX_DEFAULT
+    addvar VAR_SNOWSWEPT_FINALBRIDGE, 1
+    release
+    end
+
+Snowswept_Engie_SaysYes_Text:
+    .string "Hey there Champ!\n"
+    .string "My Boss told me all about\l"
+    .string "what you did for us at the ruins.\p"
+    .string "He actually had me stationed here\n"
+    .string "to watch over an old coworker of ours.\l"
+    .string "He made a big mistake awhile back and\l"
+    .string "sorta went a little crazy since then.\p"
+    .string "If you're going to visit him,\n"
+    .string "be gentle okay?$"

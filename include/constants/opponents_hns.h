@@ -622,8 +622,9 @@
 #define TRAINER_KYLE9_HNS                              614
 #define TRAINER_DAWN9_HNS                              615
 #define TRAINER_STEVENSTONE_HNS                        616
+#define TRAINER_SECRETEDWARD_HNS                       617
 
-#define TRAINERS_COUNT_HNS                       617
+#define TRAINERS_COUNT_HNS                       618
 #define MAX_TRAINERS_COUNT_HNS                   864
 
 #endif  // GUARD_CONSTANTS_OPPONENTS_HNS_H

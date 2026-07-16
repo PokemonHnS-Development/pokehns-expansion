@@ -431,6 +431,33 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
+      "script": "Snowswept_EventScript_EngieBridgeBlocker",
+      "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_EDWARD",
+      "graphics_id": "OBJ_EVENT_GFX_SUPER_NERD_HNS",
+      "x": 10,
+      "y": 6,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_SNOWSWEPT_EDWARD"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_MAWILE",
+      "x": 22,
+      "y": 40,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 3,
+      "movement_range_y": 3,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
       "flag": "0"
     }
@@ -449,6 +476,20 @@
       "elevation": 0,
       "dest_map": "MAP_SNOWSWEPT_CAVERN_BASEMENT_HNS",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 22,
+      "y": 28,
+      "elevation": 0,
+      "dest_map": "MAP_SNOWSWEPT_CAVERN_HNS",
+      "dest_warp_id": "3"
+    },
+    {
+      "x": 10,
+      "y": 11,
+      "elevation": 0,
+      "dest_map": "MAP_SNOWSWEPT_CAVERN_HNS",
+      "dest_warp_id": "2"
     }
   ],
   "coord_events": [
@@ -493,18 +534,36 @@
       "x": 31,
       "y": 47,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "NULL"
+      "var": "VAR_SNOWSWEPT_FINALBRIDGE",
+      "var_value": "1",
+      "script": "Snowswept_EventScript_EngieBridgeBlocker"
     },
     {
       "type": "trigger",
-      "x": 33,
-      "y": 47,
+      "x": 22,
+      "y": 30,
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
-      "script": "NULL"
+      "script": "Snowswept_EventScript_BoulderPlacer"
+    },
+    {
+      "type": "trigger",
+      "x": 21,
+      "y": 29,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Snowswept_EventScript_BoulderPlacer"
+    },
+    {
+      "type": "trigger",
+      "x": 23,
+      "y": 29,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Snowswept_EventScript_BoulderPlacer"
     }
   ],
   "bg_events": [

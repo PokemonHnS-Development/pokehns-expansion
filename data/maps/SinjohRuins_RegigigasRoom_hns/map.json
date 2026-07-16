@@ -24,11 +24,19 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "SinjohRuins_EventScript_Regigigas",
       "flag": "0"
     }
   ],
-  "warp_events": [],
+  "warp_events": [
+    {
+      "x": 1,
+      "y": 14,
+      "elevation": 0,
+      "dest_map": "MAP_SINJOH_RUINS_TEMPLE_HNS",
+      "dest_warp_id": "8"
+    }
+  ],
   "coord_events": [],
   "bg_events": [],
   "game_version": "hns",

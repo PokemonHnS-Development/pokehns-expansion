@@ -35,6 +35,55 @@
       "elevation": 0,
       "dest_map": "MAP_SINJOH_RUINS_HNS",
       "dest_warp_id": "4"
+    },
+    {
+      "x": 5,
+      "y": 29,
+      "elevation": 0,
+      "dest_map": "MAP_SINJOH_RUINS_REGIROCK_ROOM_HNS",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 14,
+      "y": 29,
+      "elevation": 0,
+      "dest_map": "MAP_SINJOH_RUINS_REGICE_ROOM_HNS",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 23,
+      "y": 29,
+      "elevation": 0,
+      "dest_map": "MAP_SINJOH_RUINS_REGISTEEL_ROOM_HNS",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 41,
+      "y": 34,
+      "elevation": 0,
+      "dest_map": "MAP_SINJOH_RUINS_REGIDRACO_ROOM_HNS",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 41,
+      "y": 19,
+      "elevation": 0,
+      "dest_map": "MAP_SINJOH_RUINS_REGIELEKI_ROOM_HNS",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 18,
+      "y": 33,
+      "elevation": 0,
+      "dest_map": "MAP_SINJOH_RUINS_REGIGIGAS_ROOM_HNS",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 19,
+      "y": 33,
+      "elevation": 0,
+      "dest_map": "MAP_SINJOH_RUINS_TEMPLE_HNS",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [],

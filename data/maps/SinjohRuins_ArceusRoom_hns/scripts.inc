@@ -159,6 +159,8 @@ SinjohRuins_EventScript_RanFromArceus::
 	end
 
 SinjohRuins_EventScript_DefeatedArceus2::
+    setflag FLAG_SINJOHRUINS_ARCEUS_DEFEATED
+	addvar VAR_SNOWSWEPT_FINALBRIDGE, 1
     fadedefaultbgm
     fadescreen FADE_TO_BLACK
 	removeobject LOCALID_ARCEUS
@@ -351,3 +353,4 @@ PleaseMakeRoom_Text:
     .string "Ah! Your BAG seems to be full.\p"
 	.string "Please make some space so\n"
 	.string "I can give this to you.$"
+

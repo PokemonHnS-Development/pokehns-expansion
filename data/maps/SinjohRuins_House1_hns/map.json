@@ -82,15 +82,15 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_NURSE_HNS",
-      "x": 25,
+      "x": 15,
       "y": 7,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "SinjohRuins_EventScript_NurseJoy",
       "flag": "0"
     },
     {
@@ -116,7 +116,7 @@
       "movement_range_y": 6,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "SinjohRuins_House1_Typhlosion_Hisui",
       "flag": "0"
     },
     {
@@ -144,7 +144,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "SinjohRuins_EventScript_StevenPlateChecker",
       "flag": "FLAG_SINJOHRUINS_HOUSE1_STEVEN2"
     },
     {
@@ -183,7 +183,7 @@
       "movement_range_y": 7,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "SinjohRuins_House1_Gengar",
       "flag": "0"
     }
   ],
@@ -337,80 +337,80 @@
       "x": 8,
       "y": 17,
       "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "SinjohRuins_EventScript_DisplayCase"
     },
     {
       "type": "sign",
       "x": 9,
       "y": 17,
       "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "SinjohRuins_EventScript_DisplayCase"
     },
     {
       "type": "sign",
       "x": 6,
       "y": 22,
       "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "SinjohRuins_EventScript_DisplayCase"
     },
     {
       "type": "sign",
       "x": 7,
       "y": 22,
       "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "SinjohRuins_EventScript_DisplayCase"
     },
     {
       "type": "sign",
       "x": 6,
       "y": 25,
       "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "SinjohRuins_EventScript_DisplayCase"
     },
     {
       "type": "sign",
       "x": 7,
       "y": 25,
       "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "SinjohRuins_EventScript_DisplayCase"
     },
     {
       "type": "sign",
       "x": 3,
       "y": 21,
       "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "SinjohRuins_EventScript_DisplayCase"
     },
     {
       "type": "sign",
       "x": 2,
       "y": 21,
       "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "SinjohRuins_EventScript_DisplayCase"
     },
     {
       "type": "sign",
       "x": 2,
       "y": 24,
       "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "SinjohRuins_EventScript_DisplayCase"
     },
     {
       "type": "sign",
       "x": 3,
       "y": 24,
       "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "SinjohRuins_EventScript_DisplayCase"
     },
     {
       "type": "sign",
@@ -425,40 +425,56 @@
       "x": 26,
       "y": 6,
       "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "SinjohRuins_EventScript_DisplayCase"
     },
     {
       "type": "sign",
       "x": 24,
       "y": 6,
       "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "SinjohRuins_EventScript_DisplayCase"
     },
     {
       "type": "sign",
       "x": 23,
       "y": 6,
       "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "SinjohRuins_EventScript_DisplayCase"
     },
     {
       "type": "sign",
       "x": 25,
       "y": 1,
       "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "SinjohRuins_EventScript_DisplayCase"
     },
     {
       "type": "sign",
       "x": 24,
       "y": 1,
       "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "SinjohRuins_EventScript_DisplayCase"
+    },
+    {
+      "type": "sign",
+      "x": 20,
+      "y": 17,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "SinjohRuins_EventScript_WallSign"
+    },
+    {
+      "type": "sign",
+      "x": 17,
+      "y": 17,
+      "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "SinjohRuins_EventScript_Artifact"
     }
   ],
   "game_version": "hns",

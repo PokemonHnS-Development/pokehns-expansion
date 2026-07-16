@@ -186,24 +186,24 @@
       "x": 49,
       "y": 8,
       "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "NewSinjoh_House3_EventScript_LogBook2"
     },
     {
       "type": "sign",
       "x": 50,
       "y": 8,
       "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "NewSinjoh_House3_EventScript_LogBook3"
     },
     {
       "type": "sign",
       "x": 38,
       "y": 8,
       "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "NewSinjoh_House3_EventScript_Drawer"
     },
     {
       "type": "sign",

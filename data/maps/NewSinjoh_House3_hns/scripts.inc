@@ -220,7 +220,17 @@ Text_NewSinjoh_House3_YouFound_A_Book:
 	.string "Give it a read?$"
 
 Text_Tale_Of_A_Broken_Heart:
-    .string "This is a test for a lore book.$"
+    .string "Personal Log 1: My New Life.\p"
+	.string "After arriving in town, I discovered\n"
+	.string "this abandoned home...\p"
+	.string "It seems a family used to live here,\n"
+	.string "but at some point they must have left.\p"
+	.string "They seemed to have left in a rush,\n"
+	.string "as all their personal effects are\l"
+	.string "still here and very unorganized\l"
+	.string "I might add!\p"
+	.string "I shall stay here for the time being\n"
+	.string "and look deeper into what happened here..$"
 
 NewSinjoh_House3_Destroyed_Object::
     msgbox Text_NewSinjoh_House3_Already_Destroyed
@@ -541,3 +551,87 @@ NewSinjoh_House3_Gastly_Gone::
 Text_GastlyGone:
     .string "The Gastly that helped you\n"
 	.string "is no longer here...$"
+
+NewSinjoh_House3_EventScript_LogBook2::
+    lock
+	msgbox Text_Tale_Of_A_Broken_Heart2 MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, FALSE, NewSinjoh_EventScript_BetterStop
+    msgbox Text_Tale_Of_A_Broken_Heart2_Part2 MSGBOX_DEFAULT
+	release
+	end
+
+NewSinjoh_EventScript_BetterStop::
+    msgbox NewSinjoh_BetterStop_Text MSGBOX_DEFAULT
+	release
+	end
+
+NewSinjoh_BetterStop_Text:
+    .string "Seems like the author keeps\n"
+	.string "going for awhile...\l"
+	.string "Better take a break and come\l"
+	.string "back later.$"
+
+Text_Tale_Of_A_Broken_Heart2:
+    .string "Personal Log 2: They're Locked With Me.\p"
+	.string "It seems that a force beyond my control has\n"
+	.string "trapped me in here against my will...\p"
+	.string "little do they know that I, Edward,\n"
+	.string "have no life outside this building!\p"
+	.string "There seems to be spirits of some\n"
+	.string "sort bound to this place..\l"
+	.string "For what reason i do not know,\l"
+	.string "but I shall find the truth...\p"
+	.string "..........\n"
+	.string "Keep reading...?$"
+
+Text_Tale_Of_A_Broken_Heart2_Part2:
+    .string "Personal Log 2.5: A Miscalculation.\p"
+	.string "I've gone through every box here\n"
+	.string "looking for food, if there ever was any\l"
+	.string "it has surely withered away by now.\p"
+	.string "I have decided to break free from\n"
+	.string "my captures....but how?$"
+
+NewSinjoh_House3_EventScript_LogBook3::
+    lock
+	msgbox Text_Tale_Of_A_Broken_Heart3 MSGBOX_DEFAULT
+	release
+	end
+
+Text_Tale_Of_A_Broken_Heart3:
+    .string "Personal Log 3: My Devilish Plan.\p"
+	.string "When i left my previous life,\n"
+	.string "I just so happened to take a few\l"
+	.string "artifacts with me...\p"
+	.string "If I use these and some sage..\n"
+	.string "Yeah..yeah! That should work...$"
+
+
+NewSinjoh_House3_EventScript_Drawer::
+    lock
+	msgbox NewSinjoh_OpenTheDrawer_Text MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, FALSE, NewSinjoh_House3_NotYet
+    msgbox Text_Tale_Of_A_Broken_Heart4 MSGBOX_DEFAULT
+	release
+	end
+
+Text_Tale_Of_A_Broken_Heart4:
+    .string "{PLAYER} pulled out a piece of paper..\p"
+    .string "Personal Log 4: My Final Chapter.\p"
+	.string "The plan worked...!\n"
+	.string "After i hide the object arounf the room\l"
+	.string "and burned that sage, the spirits\l"
+	.string "in this room have vanished!\p"
+	.string "At least, that's my hypothosis,\n"
+	.string "as the heavy box blocking the exit\l"
+	.string "has vanished right before my eyes!\p"
+	.string "Now that freedom has been revealed\n"
+	.string "to me, I am going to move\l"
+	.string "into the local cave systems..\p"
+	.string "they must be watched and protected..\n"
+	.string "if anyone is reading this,\l"
+	.string "may we meet at the end of it all.$"
+
+NewSinjoh_OpenTheDrawer_Text:
+    .string "The drawer is unlocked...\n"
+	.string "Open it..?$"

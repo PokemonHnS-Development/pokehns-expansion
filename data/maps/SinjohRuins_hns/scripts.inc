@@ -687,3 +687,4 @@ SinjohRuins_StevenGoesUp_Movement:
 	walk_up
 	walk_up
 	step_end
+

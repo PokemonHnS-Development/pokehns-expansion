@@ -14560,3 +14560,75 @@ Brave Nature
 - Psychic Fangs  
 - Cosmic Power 
 
+=== TRAINER_SECRETEDWARD_HNS ===
+Name: EDWARD
+Class: Super Nerd Hns
+Pic: Super Nerd Hns
+Music: Hg Boy 2
+Gender: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+Items: Full Restore / Full Restore
+
+Magnezone @ Magnet
+Ability: Analytic
+Level: 70
+EVs: 92 HP / 144 Def / 20 SpA / 252 SpD
+Sassy Nature
+IVs: 0 Spe
+- Gyro Ball
+- Discharge
+- Charge
+- Magnet Rise
+
+Porygon2 @ Eviolite
+Ability: Analytic
+Level: 70
+EVs: 168 HP / 88 Def / 252 SpA
+Bold Nature
+- Blizzard
+- Thunderbolt
+- Recover
+- Tri Attack
+
+Bronzong @ Rocky Helmet
+Ability: Levitate
+Level: 70
+EVs: 4 HP / 252 Def / 252 SpD
+Relaxed Nature
+IVs: 0 Spe
+- Body Press
+- Gyro Ball
+- Iron Defense
+- Psychic Noise
+
+Torkoal @ Assault Vest
+Ability: Drought
+Level: 70
+EVs: 108 HP / 148 SpA / 252 SpD
+Modest Nature
+IVs: 0 Atk
+- Solar Beam
+- Earth Power
+- Weather Ball
+- Ancient Power
+
+Aerodactyl @ King's Rock
+Ability: Rock Head
+Level: 70
+EVs: 8 HP / 248 Atk / 248 Spe
+Adamant Nature
+- Rock Blast
+- Dragon Dance
+- Dual Wingbeat
+- Detect
+
+Relicanth @ Quick Claw
+Ability: Rock Head
+Level: 70
+EVs: 252 HP / 212 Atk / 44 Def
+Adamant Nature
+- Head Smash
+- Liquidation
+- Rock Polish
+- Yawn
