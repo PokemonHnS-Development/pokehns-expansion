@@ -2437,6 +2437,35 @@
 #define FLAG_WORLD_MAP_SEVEN_ISLAND_SEVAULT_CANYON_TANOBY_KEY       0
 #define FLAG_WORLD_MAP_BIRTH_ISLAND_EXTERIOR                        0
 
+// HnS visited flags
+
+#define FLAG_VISITED_NEWBARK_TOWN                   0
+#define FLAG_VISITED_CHERRYGROVE_CITY               0
+#define FLAG_VISITED_VIOLET_CITY                    0
+#define FLAG_VISITED_AZALEA_TOWN                    0
+#define FLAG_VISITED_GOLDENROD_CITY                 0
+#define FLAG_VISITED_ECRUTEAK_CITY                  0
+#define FLAG_VISITED_OLIVINE_CITY                   0
+#define FLAG_VISITED_CIANWOOD_CITY                  0
+#define FLAG_VISITED_MAHOGANY_TOWN                  0
+#define FLAG_VISITED_LAKE_OF_RAGE                   0
+#define FLAG_VISITED_BLACKTHORN_CITY                0
+#define FLAG_VISITED_INDIGO_PLATEAU                 0
+#define FLAG_VISITED_MT_SILVER                      0
+#define FLAG_VISITED_RECEPTION_GATE                 0
+#define FLAG_VISITED_SAFARI_ZONE_GATE               0
+#define FLAG_VISITED_KANTO                          0
+#define FLAG_VISITED_PALLET_TOWN                    0
+#define FLAG_VISITED_VIRIDIAN_CITY                  0
+#define FLAG_VISITED_PEWTER_CITY                    0
+#define FLAG_VISITED_CERULEAN_CITY                  0
+#define FLAG_VISITED_VERMILION_CITY                 0
+#define FLAG_VISITED_LAVENDER_TOWN                  0
+#define FLAG_VISITED_CELADON_CITY                   0
+#define FLAG_VISITED_SAFFRON_CITY                   0
+#define FLAG_VISITED_FUCHSIA_CITY                   0
+#define FLAG_VISITED_CINNABAR_ISLAND                0
+
 #endif
 
 // Engine-wide flags for options/challenge settings (shared across all builds).
@@ -2452,6 +2481,11 @@
 #define FLAG_DISABLE_ENCOUNTERS                 (ENGINE_FLAGS_START + 5)
 #define FLAG_DISABLE_TRAINERS                   (ENGINE_FLAGS_START + 6)
 #define FLAG_LIMIT_TO_50                        (ENGINE_FLAGS_START + 7)
+#define FLAG_EXP_SHARE_ENABLED                  (ENGINE_FLAGS_START + 8)
+#define FLAG_SMART_WILD_AI                      (ENGINE_FLAGS_START + 9)
+#define FLAG_NO_WILD_RUNNING                      (ENGINE_FLAGS_START + 10)
+#define FLAG_NO_WILD_CATCHING                      (ENGINE_FLAGS_START + 11)
+#define FLAG_DISABLE_EXP_GAIN                      (ENGINE_FLAGS_START + 12)
 #define ENGINE_FLAGS_END                        (ENGINE_FLAGS_START + NUM_ENGINE_FLAGS - 1)
 
 #define FLAGS_COUNT (ENGINE_FLAGS_END + 1)

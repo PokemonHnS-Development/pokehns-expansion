@@ -1,7 +1,6 @@
 {
   "id": "MAP_BATTLE_FRONTIER_EXCHANGE_SERVICE_CORNER_HNS",
   "name": "BattleFrontier_ExchangeServiceCorner_hns",
-  "game_version": "hns",
   "layout": "LAYOUT_BATTLE_FRONTIER_EXCHANGE_SERVICE_CORNER_HNS",
   "music": "MUS_B_TOWER_RS",
   "region_map_section": "MAPSEC_BATTLE_FRONTIER",
@@ -95,6 +94,19 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_WORKER_F_HNS",
+      "x": 7,
+      "y": 5,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "BattleFrontier_ExchangeServiceCorner_EventScript_PokeBallClerk_hns",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_WORKER_F_HNS",
       "x": 9,
       "y": 5,
       "elevation": 0,
@@ -131,6 +143,32 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "BattleFrontier_ExchangeServiceCorner_EventScript_Girl_hns",
       "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_WORKER_F_HNS",
+      "x": 10,
+      "y": 2,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "BattleFrontier_ExchangeServiceCorner_EventScript_HoldItemClerk2_hns",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_WORKER_F_HNS",
+      "x": 4,
+      "y": 2,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "BattleFrontier_ExchangeServiceCorner_EventScript_PowerClerk_hns",
+      "flag": "0"
     }
   ],
   "warp_events": [
@@ -157,5 +195,6 @@
     }
   ],
   "coord_events": [],
-  "bg_events": []
+  "bg_events": [],
+  "game_version": "hns"
 }

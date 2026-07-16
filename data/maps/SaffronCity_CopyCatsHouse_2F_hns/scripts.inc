@@ -57,6 +57,7 @@ SaffronCity_CopyCatsHouse_2F_EventScript_Copycat1_Male::
 	waitmovement 0
 	msgbox Copycat_Text_QuickMimicking, MSGBOX_NPC
 	closemessage
+	release
 	end
 
 SaffronCity_CopyCatsHouse_2F_EventScript_Copycat1_Female::
@@ -81,6 +82,7 @@ SaffronCity_CopyCatsHouse_2F_EventScript_Copycat1_Female::
 	waitmovement 0
 	msgbox Copycat_Text_QuickMimicking, MSGBOX_NPC
 	closemessage
+	release
 	end
 
 SaffronCity_CopyCatsHouse_2F_EventScript_CopycatReturnedMachinePart::

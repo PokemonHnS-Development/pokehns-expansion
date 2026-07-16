@@ -358,6 +358,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Route36_EventScript_Sign2"
+    },
+    {
+      "type": "hidden_item",
+      "x": 59,
+      "y": 17,
+      "elevation": 0,
+      "item": "ITEM_AWAKENING",
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE36_AWAKENING"
     }
   ],
   "game_version": "hns",

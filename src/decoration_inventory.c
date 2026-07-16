@@ -12,6 +12,9 @@ EWRAM_DATA struct DecorationInventory gDecorationInventories[DECORCAT_COUNT] = {
 
 void SetDecorationInventoriesPointers(void)
 {
+    #if IS_HNS
+    SET_DECOR_INV(DECORCAT_DOLL, gSaveBlock1Ptr->decorationDolls);
+    #else
     SET_DECOR_INV(DECORCAT_DESK, gSaveBlock1Ptr->decorationDesks);
     SET_DECOR_INV(DECORCAT_CHAIR, gSaveBlock1Ptr->decorationChairs);
     SET_DECOR_INV(DECORCAT_PLANT, gSaveBlock1Ptr->decorationPlants);
@@ -20,6 +23,7 @@ void SetDecorationInventoriesPointers(void)
     SET_DECOR_INV(DECORCAT_POSTER, gSaveBlock1Ptr->decorationPosters);
     SET_DECOR_INV(DECORCAT_DOLL, gSaveBlock1Ptr->decorationDolls);
     SET_DECOR_INV(DECORCAT_CUSHION, gSaveBlock1Ptr->decorationCushions);
+    #endif
     InitDecorationContextItems();
 }
 

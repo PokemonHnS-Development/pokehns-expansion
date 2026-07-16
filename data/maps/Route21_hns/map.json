@@ -119,7 +119,32 @@
   ],
   "warp_events": [],
   "coord_events": [],
-  "bg_events": [],
+  "bg_events": [
+    {
+      "type": "hidden_item",
+      "x": 8,
+      "y": 73,
+      "elevation": 0,
+      "item": "ITEM_STARDUST",
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE21_STARDUST_1"
+    },
+    {
+      "type": "hidden_item",
+      "x": 17,
+      "y": 43,
+      "elevation": 0,
+      "item": "ITEM_STARDUST",
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE21_STARDUST_2"
+    },
+    {
+      "type": "hidden_item",
+      "x": 7,
+      "y": 29,
+      "elevation": 0,
+      "item": "ITEM_STARDUST",
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE21_STARDUST_3"
+    }
+  ],
   "game_version": "hns",
   "region": "REGION_KANTO"
 }

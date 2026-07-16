@@ -172,7 +172,11 @@ const u8 gText_Var1CantBeHeld[] = _("The {STR_VAR_1} can't be held.");
 const u8 gText_TossHowManyVar1s[] = _("Toss out how many\n{STR_VAR_1}?");
 const u8 gText_ThrewAwayVar2Var1s[] = _("Threw away {STR_VAR_2}\n{STR_VAR_1}.");
 const u8 gText_ConfirmTossItems[] = _("Is it okay to\nthrow away {STR_VAR_2}\n{STR_VAR_1}?");
-const u8 gText_DadsAdvice[] = _("DAD's advice…\n{PLAYER}, there's a time and place for\leverything!{PAUSE_UNTIL_PRESS}");
+#if IS_HNS
+    const u8 gText_DadsAdvice[] = _("ELM's advice…\n{PLAYER}, there's a time and place for\leverything!{PAUSE_UNTIL_PRESS}");
+#else
+    const u8 gText_DadsAdvice[] = _("DAD's advice…\n{PLAYER}, there's a time and place for\leverything!{PAUSE_UNTIL_PRESS}");
+#endif
 const u8 gText_PlayerUsedVar2[] = _("{PLAYER} used the\n{STR_VAR_2}.{PAUSE_UNTIL_PRESS}");
 const u8 gText_RepelEffectsLingered[] = _("But the effects of a REPEL\nlingered from earlier.{PAUSE_UNTIL_PRESS}");
 const u8 gText_LureEffectsLingered[] = _("But the effects of a Lure\nlingered from earlier.{PAUSE_UNTIL_PRESS}");
@@ -212,11 +216,16 @@ const u8 gText_ReturnToVar1[] = _("Return to\n{STR_VAR_1}.");
 
 const u8 *const gPocketNamesStringsTable[] =
 {
-    [POCKET_ITEMS] =        COMPOUND_STRING("ITEMS"),
+    [POCKET_ITEMS] =        COMPOUND_STRING("OTHER"),
     [POCKET_POKE_BALLS] =   COMPOUND_STRING("POKé BALLS"),
     [POCKET_TM_HM]  =       COMPOUND_STRING("TMs & HMs"),
     [POCKET_BERRIES] =      COMPOUND_STRING("BERRIES"),
-    [POCKET_KEY_ITEMS] =    COMPOUND_STRING("KEY ITEMS")
+    [POCKET_KEY_ITEMS] =    COMPOUND_STRING("KEY ITEMS"),
+    [POCKET_MEDICINE] =     COMPOUND_STRING("MEDICINE"),
+#if I_COMBINE_BAG_POCKETS == FALSE
+    [POCKET_BATTLE_ITEMS] = COMPOUND_STRING("BATTLE"),
+    [POCKET_TREASURES] =    COMPOUND_STRING("TREASURES"),
+#endif
 };
 
 const u8 gText_NumberItem_TMBerry[] = _("{NO}{STR_VAR_1}{CLEAR 0x03}{STR_VAR_2}");
@@ -232,12 +241,22 @@ const u8 gText_QuitShopping[] = _("Quit shopping.");
 const u8 gText_Var1CertainlyHowMany[] = _("{STR_VAR_1}? Certainly.\nHow many would you like?");
 const u8 gText_Var1CertainlyHowMany2[] = _("{STR_VAR_1}? Certainly.\nHow many would you like?");
 const u8 gText_Var1AndYouWantedVar2[] = _("{STR_VAR_1}? And you wanted {STR_VAR_2}?\nThat will be ¥{STR_VAR_3}.");
+const u8 gText_Var1AndYouWantedVar2BP[] = _("{STR_VAR_1}? And you wanted {STR_VAR_2}?\nThat will be {STR_VAR_3}BP.");
 const u8 gText_Var1IsItThatllBeVar2[] = _("{STR_VAR_1}, is it?\nThat'll be ¥{STR_VAR_2}. Do you want it?");
 const u8 gText_YouWantedVar1ThatllBeVar2[] = _("You wanted {STR_VAR_1}?\nThat'll be ¥{STR_VAR_2}. Will that be okay?");
+const u8 gText_YouWantedVar1ThatllBeVar2BP[] = _("You wanted {STR_VAR_1}?\nThat'll be {STR_VAR_2}BP. Will that be okay?");
 const u8 gText_HereYouGoThankYou[] = _("Here you go!\nThank you very much.");
 const u8 gText_ThankYouIllSendItHome[] = _("Thank you!\nI'll send it to your home PC.");
 const u8 gText_ThanksIllSendItHome[] = _("Thanks!\nI'll send it to your PC at home.");
 const u8 gText_YouDontHaveMoney[] = _("You don't have enough money.{PAUSE_UNTIL_PRESS}");
+const u8 gText_YouDontHaveEnoughBP[] = _("You don't have enough\nBP.{PAUSE_UNTIL_PRESS}");
+const u8 gText_DontHaveEnoughVar1[] = _("You don't have enough\n{STR_VAR_1}s.{PAUSE_UNTIL_PRESS}");
+const u8 gText_Var1SureHowMany[] = _("{STR_VAR_1}s? Sure.\nHow many would you like?");
+const u8 gText_xOne[] = _("x1");
+const u8 gText_KurtVar1AndYouWantedVar2Plural[] = _("And you wanted {STR_VAR_2} of 'em?\nThat will be {STR_VAR_3} berries.");
+const u8 gText_KurtVar1AndYouWantedVar2Singular[] = _("And you wanted {STR_VAR_2} of 'em?\nThat will be {STR_VAR_3} berry.");
+const u8 gText_KurtGettingStarted[] = _("KURT: I'll get started right now!");
+const u8 gText_ExitMenu[] = _("EXIT MENU");
 const u8 gText_NoMoreRoomForThis[] = _("You have no more room for this\nitem.{PAUSE_UNTIL_PRESS}");
 const u8 gText_SpaceForVar1Full[] = _("The space for {STR_VAR_1} is full.{PAUSE_UNTIL_PRESS}");
 const u8 gText_AnythingElseICanHelp[] = _("Is there anything else I can help\nyou with?");
@@ -466,6 +485,15 @@ const u8 gText_BagIsFull[] = _("The BAG is full.{PAUSE_UNTIL_PRESS}");
 const u8 gText_MailToBagMessageErased[] = _("The MAIL was returned to the BAG\nwith its message erased.{PAUSE_UNTIL_PRESS}");
 const u8 gText_Dad[] = _("DAD");
 const u8 gText_Mom[] = _("MOM");
+const u8 gText_MomHowMuchDeposit[] = _("How much would you like to\ndeposit with your MOM?");
+const u8 gText_MomHowMuchWithdraw[] = _("How much would you like to\nwithdraw from your MOM?");
+const u8 gText_MomMatchCallDesc[] = _("CALM & KIND");
+const u8 gText_MomMatchCallName[] = _("MOM");
+const u8 gText_MomMenuCheckSavings[] = _("CHECK SAVINGS");
+const u8 gText_MomMenuDeposit[] = _("DEPOSIT");
+const u8 gText_MomMenuWithdraw[] = _("WITHDRAW");
+const u8 gText_MomMenuToggleSaving[] = _("SAVING");
+const u8 gText_MomMenuExit[] = _("EXIT");
 const u8 gText_Info2[] = _("INFO");
 const u8 gText_CoolnessContest[] = _("COOLNESS CONTEST");
 const u8 gText_BeautyContest[] = _("BEAUTY CONTEST");
@@ -499,11 +527,16 @@ const u8 gText_Beauty2[] = _("BEAUTY");
 const u8 gText_Cute2[] = _("CUTE");
 const u8 gText_Smart2[] = _("SMART");
 const u8 gText_Tough2[] = _("TOUGH");
-const u8 gText_Items[] = _("ITEMS");
+const u8 gText_Items[] = _("OTHER ITEMS");
 const u8 gText_Key_Items[] = _("KEY ITEMS");
 const u8 gText_Poke_Balls[] = _("POKé BALLS");
 const u8 gText_TMs_Hms[] = _("TMs & HMs");
 const u8 gText_Berries2[] = _("BERRIES");
+const u8 gText_Medicine[] = _("MEDICINE");
+#if I_COMBINE_BAG_POCKETS == FALSE
+const u8 gText_BattleItems[] = _("BATTLE ITEMS");
+const u8 gText_Treasures[] = _("TREASURES");
+#endif
 const u8 gText_SomeonesPC[] = _("SOMEONE'S PC");
 const u8 gText_LanettesPC[] = _("LANETTE'S PC");
 const u8 gText_BillsPc[] = _("BILL'S PC");
@@ -521,7 +554,11 @@ const u8 gText_MultiLink[] = _("MULTI-LINK");
 const u8 gText_MenuOptionPokedex[] = _("POKéDEX");
 const u8 gText_MenuOptionPokemon[] = _("POKéMON");
 const u8 gText_MenuOptionBag[] = _("BAG");
+#if IS_HNS
+const u8 gText_MenuOptionPokenav[] = _("POKéGEAR");
+#else
 const u8 gText_MenuOptionPokenav[] = _("POKéNAV");
+#endif
 const u8 gText_Blank[] = _("");
 const u8 gText_MenuOptionSave[] = _("SAVE");
 const u8 gText_MenuOptionOption[] = _("OPTION");
@@ -987,7 +1024,11 @@ const u8 gText_UpdatedTime[] = _("Updated time"); // Unused
 const u8 gText_MenuPokedex[] = _("POKéDEX");
 const u8 gText_MenuPokemon[] = _("POKéMON");
 const u8 gText_MenuBag[] = _("BAG");
+#if IS_HNS
+const u8 gText_MenuPokenav[] = _("{POKE}GEAR");
+#else
 const u8 gText_MenuPokenav[] = _("POKéNAV");
+#endif
 const u8 gText_MenuPlayer[] = _("{PLAYER}");
 const u8 gText_MenuSave[] = _("SAVE");
 const u8 gText_MenuOption[] = _("OPTION");
@@ -1022,12 +1063,14 @@ const u8 gText_DiplomaEmpty[] = _("{COLOR RED}{SHADOW LIGHT_RED}"); // Unused
 const u8 gText_Hoenn[] = _("HOENN");
 const u8 gText_Kanto[] = _("KANTO");
 const u8 gText_Johto[] = _("JOHTO");
+const u8 gText_JohtoKanto[] = _("JOHTO & KANTO");
 const u8 gText_XWillBeSentToY[] = _("{STR_VAR_2} will be\nsent to {STR_VAR_1}.");
 const u8 gText_ByeByeVar1[] = _("Bye-bye, {STR_VAR_2}!");
 const u8 gText_XSentOverY[] = _("{STR_VAR_1} sent over {STR_VAR_3}.");
 const u8 gText_TakeGoodCareOfX[] = _("Take good care of {STR_VAR_3}!");
 
 const u8 gText_ThreeQuestionMarks[] = _("???");
+const u8 gText_FourQuestionMarks[] = _("????");
 const u8 gText_MaxHP[] = _("MAX. HP");
 const u8 gText_Attack[] = _("ATTACK");
 const u8 gText_Defense[] = _("DEFENSE");

@@ -283,8 +283,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Route27_EventScript_Item_Revive",
-      "flag": "FLAG_ITEM_ROUTE27_REVIVE"
+      "script": "Route27_EventScript_Item_Destiny_Knot",
+      "flag": "FLAG_ITEM_ROUTE27_DESTINY_KNOT"
     }
   ],
   "warp_events": [
@@ -364,6 +364,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Route27_EventScript_TohjoFallsSign"
+    },
+    {
+      "type": "hidden_item",
+      "x": 119,
+      "y": 15,
+      "elevation": 0,
+      "item": "ITEM_REVIVE",
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE27_REVIVE"
     }
   ],
   "game_version": "hns",

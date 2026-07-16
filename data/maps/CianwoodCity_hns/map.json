@@ -391,6 +391,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "CianwoodCity_EventScript_CaveSign"
+    },
+    {
+      "type": "hidden_item",
+      "x": 30,
+      "y": 50,
+      "elevation": 0,
+      "item": "ITEM_HEART_SCALE",
+      "flag": "FLAG_HIDDEN_ITEM_CIANWOOD_HEART_SCALE"
     }
   ],
   "game_version": "hns",

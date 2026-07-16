@@ -3,6 +3,7 @@
 #include "text.h"
 #include "strings.h"
 #include "union_room_chat.h"
+#include "event_data.h"
 
 EWRAM_DATA u8 gStringVar1[0x100] = {0};
 EWRAM_DATA u8 gStringVar2[0x100] = {0};
@@ -530,7 +531,9 @@ static const u8 *ExpandPlaceholder_Groudon(void)
 
 static const u8 *ExpandPlaceholder_Region(void)
 {
-    if (IS_FRLG)
+    if (IS_HNS)
+        return FlagGet(FLAG_VISITED_KANTO) ? gText_JohtoKanto : gText_Johto;
+    else if (IS_FRLG)
         return gText_Kanto;
     else
         return gText_Hoenn;

@@ -1563,6 +1563,12 @@ void ItemUseOutOfBattle_InfiniteRareCandies(u8 taskId)
     }
 }
 
+void ItemUseOutOfBattle_PokeBall(u8 taskId)
+{
+    gItemUseCB = ItemUseCB_PokeBall;
+    SetUpItemUseCallback(taskId);
+}
+
 void ItemUseOutOfBattle_CannotUse(u8 taskId)
 {
     DisplayDadsAdviceCannotUseItemMessage(taskId, gTasks[taskId].tUsingRegisteredKeyItem);

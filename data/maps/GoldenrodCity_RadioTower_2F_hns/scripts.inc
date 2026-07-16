@@ -51,16 +51,64 @@ GoldenrodCity_RadioTower_2F_EventScript_Policeman::
 GoldenrodCity_RadioTower_2F_EventScript_Buena::
 	lock
 	faceplayer
-	goto_if_eq VAR_GOLDENROD_CITY_STATE, 6, GoldenrodCity_RadioTower_2F_EventScript_Buena2
-	goto_if_eq VAR_GOLDENROD_CITY_STATE, 7, GoldenrodCity_RadioTower_2F_EventScript_Buena2
-	goto_if_eq VAR_GOLDENROD_CITY_STATE, 8, GoldenrodCity_RadioTower_2F_EventScript_Buena2
-	goto_if_eq VAR_GOLDENROD_CITY_STATE, 9, GoldenrodCity_RadioTower_2F_EventScript_Buena2
+	goto_if_eq VAR_GOLDENROD_CITY_STATE, 6, GoldenrodCity_RadioTower_2F_EventScript_BuenaRocket
+	goto_if_eq VAR_GOLDENROD_CITY_STATE, 7, GoldenrodCity_RadioTower_2F_EventScript_BuenaRocket
+	goto_if_eq VAR_GOLDENROD_CITY_STATE, 8, GoldenrodCity_RadioTower_2F_EventScript_BuenaRocket
+	goto_if_eq VAR_GOLDENROD_CITY_STATE, 9, GoldenrodCity_RadioTower_2F_EventScript_BuenaRocket
+	goto_if_set FLAG_DAILY_BUENAS_PASSWORD_GUESSED, GoldenrodCity_RadioTower_2F_EventScript_BuenaAlreadyPlayed
+	goto_if_unset FLAG_DAILY_BUENAS_PASSWORD, GoldenrodCity_RadioTower_2F_EventScript_BuenaNoShow
+	msgbox GoldenrodCity_RadioTower_2F_Text_BuenaAskPassword, MSGBOX_DEFAULT
+	special Special_BuenaPasswordShowMultichoice
+	waitstate
+	compare VAR_RESULT, 127
+	goto_if_eq GoldenrodCity_RadioTower_2F_EventScript_BuenaCancelled
+	special Special_BuenaCheckAnswer
+	compare VAR_RESULT, TRUE
+	goto_if_eq GoldenrodCity_RadioTower_2F_EventScript_BuenaCorrect
+	setflag FLAG_DAILY_BUENAS_PASSWORD_GUESSED
+	msgbox GoldenrodCity_RadioTower_2F_Text_BuenaWrong, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
+GoldenrodCity_RadioTower_2F_EventScript_BuenaCorrect::
+	special Special_BuenaRollReward
+	copyvar VAR_0x8004, VAR_RESULT
+	checkitemspace VAR_0x8004, 1
+	compare VAR_RESULT, FALSE
+	goto_if_eq GoldenrodCity_RadioTower_2F_EventScript_BuenaBagFull
+	giveitem VAR_0x8004, 1
+	setflag FLAG_DAILY_BUENAS_PASSWORD_GUESSED
+	msgbox GoldenrodCity_RadioTower_2F_Text_BuenaCorrect, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
+GoldenrodCity_RadioTower_2F_EventScript_BuenaBagFull::
+	msgbox GoldenrodCity_RadioTower_2F_Text_BuenaBagFull, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
+GoldenrodCity_RadioTower_2F_EventScript_BuenaCancelled::
+	msgbox GoldenrodCity_RadioTower_2F_Text_BuenaComeBack, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
+GoldenrodCity_RadioTower_2F_EventScript_BuenaAlreadyPlayed::
+	msgbox GoldenrodCity_RadioTower_2F_Text_BuenaAlreadyPlayed, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
+GoldenrodCity_RadioTower_2F_EventScript_BuenaNoShow::
 	msgbox GoldenrodCity_RadioTower_2F_Text_BuenaShowPromo, MSGBOX_DEFAULT
 	closemessage
 	release
 	end
 
-GoldenrodCity_RadioTower_2F_EventScript_Buena2::
+GoldenrodCity_RadioTower_2F_EventScript_BuenaRocket::
 	msgbox RadioTower2FBuenaPasswordIsHelpText, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -181,7 +229,39 @@ GoldenrodCity_RadioTower_2F_Text_GruntF2After:
 
 GoldenrodCity_RadioTower_2F_Text_BuenaShowPromo:
 	.string "BUENA: Tune in to my PASSWORD\n"
-	.string "SHOW!$"
+	.string "SHOW!\p"
+	.string "Listen to find out today's\n"
+	.string "password!$"
+
+GoldenrodCity_RadioTower_2F_Text_BuenaAskPassword:
+	.string "BUENA: Hi there!\p"
+	.string "So, do you know today's\n"
+	.string "password?\p"
+	.string "OK! Which one is it?$"
+
+GoldenrodCity_RadioTower_2F_Text_BuenaCorrect:
+	.string "BUENA: You got it!\p"
+	.string "Here, take this {STR_VAR_1}\n"
+	.string "as your prize!$"
+
+GoldenrodCity_RadioTower_2F_Text_BuenaWrong:
+	.string "BUENA: Bzzt! Too bad!\p"
+	.string "Try again tomorrow!$"
+
+GoldenrodCity_RadioTower_2F_Text_BuenaComeBack:
+	.string "BUENA: No guess?\n"
+	.string "Come back when you're ready!$"
+
+GoldenrodCity_RadioTower_2F_Text_BuenaAlreadyPlayed:
+	.string "BUENA: You already guessed\n"
+	.string "today's password!\p"
+	.string "Tune in again tomorrow!$"
+
+GoldenrodCity_RadioTower_2F_Text_BuenaBagFull:
+	.string "BUENA: You got it right, but\n"
+	.string "your BAG is full!\p"
+	.string "Make some room and come\n"
+	.string "talk to me again!$"
 
 GoldenrodCity_RadioTower_2F_Text_SalesSign:
 	.string "2F SALES$"

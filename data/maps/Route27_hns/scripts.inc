@@ -8,12 +8,16 @@ Route27_OnTransition:
 	end
 
 Route27_EventScript_BaobaCall::
+	setspeaker Route27_Text_BaobaName
 	pokenavcall BlackthornCity_Text_BaobaCall
 	waitmessage
 	delay 30
 	setflag FLAG_SAFARI_ZONE_WEST_EXPANSION
     setvar VAR_ROUTE27_BAOBA_CALL, 1
 	end
+
+Route27_Text_BaobaName:
+	.string "BAOBA$"
 
 Route27_EventScript_FirstSteps::
     lock
@@ -75,8 +79,8 @@ Route27_EventScript_Item_DragonClaw::
     finditem ITEM_TM_DRAGON_CLAW
     end
 
-Route27_EventScript_Item_Revive::
-    finditem ITEM_REVIVE
+Route27_EventScript_Item_Destiny_Knot::
+    finditem ITEM_DESTINY_KNOT
     end
 
 Route27_EventScript_Fatman::

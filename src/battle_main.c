@@ -470,6 +470,7 @@ const struct TrainerClass gTrainerClasses[TRAINER_CLASS_COUNT] =
     [TRAINER_CLASS_SAILOR_HNS] =           { _("SAILOR"), 8 },
     [TRAINER_CLASS_SALON_MAIDEN_HNS] =     { _("SALON MAIDEN"), 5, BALL_ULTRA },
     [TRAINER_CLASS_SCHOOL_KID_HNS] =       { _("SCHOOL KID") },
+    [TRAINER_CLASS_SKIER_HNS] =            { _("SKIER"), 10 },
     [TRAINER_CLASS_SUPER_NERD_HNS] =       { _("SUPER NERD"), 8 },
     [TRAINER_CLASS_SWIMMER_F_HNS] =        { _("SWIMMER♀"), 2, BALL_DIVE },
     [TRAINER_CLASS_SWIMMER_M_HNS] =        { _("SWIMMER♂"), 2, BALL_DIVE },
@@ -477,6 +478,8 @@ const struct TrainerClass gTrainerClasses[TRAINER_CLASS_COUNT] =
     [TRAINER_CLASS_TWINS_HNS] =            { _("TWINS"), 3 },
     [TRAINER_CLASS_YOUNG_COUPLE_HNS] =     { _("YOUNG COUPLE"), 8 },
     [TRAINER_CLASS_YOUNGSTER_HNS] =        { _("YOUNGSTER"), 4 },
+    [TRAINER_CLASS_PROFESSOR_HNS] =         { _("{PKMN} PROF."), 25, BALL_FRIEND},
+    [TRAINER_CLASS_DEVELOPER_HNS] =           { _("DEVELOPER"), 50, BALL_MASTER},
 };
 
 static void (*const sTurnActionsFuncsTable[])(void) =
@@ -2037,7 +2040,9 @@ u8 CreateNPCTrainerPartyFromTrainer(struct Pokemon *party, const struct Trainer 
                 personalityValue = 0x88; // Use personality more likely to result in a male Pokémon
 
             personalityValue += personalityHash << 8;
-            if (partyData[monIndex].gender == TRAINER_MON_MALE)
+            if (trainer->trainerName == COMPOUND_STRING("SABRINA") && partyData[monIndex].species == SPECIES_MR_MIME)
+                personalityValue = (personalityValue & 0xFFFFFF00) | GeneratePersonalityForGender(MON_FEMALE, partyData[monIndex].species);
+            else if (partyData[monIndex].gender == TRAINER_MON_MALE)
                 personalityValue = (personalityValue & 0xFFFFFF00) | GeneratePersonalityForGender(MON_MALE, partyData[monIndex].species);
             else if (partyData[monIndex].gender == TRAINER_MON_FEMALE)
                 personalityValue = (personalityValue & 0xFFFFFF00) | GeneratePersonalityForGender(MON_FEMALE, partyData[monIndex].species);
@@ -5770,7 +5775,8 @@ static void HandleEndTurn_FinishBattle(void)
                                         | BATTLE_TYPE_INGAME_PARTNER
                                         | BATTLE_TYPE_TOWER_LINK_MULTI
                                         | BATTLE_TYPE_RECORDED_LINK
-                                        | BATTLE_TYPE_FRONTIER)))
+                                        | BATTLE_TYPE_FRONTIER
+                                        | BATTLE_TYPE_TRAINER_HILL)))
                 NuzlockeDeleteFaintedPartyPokemon();
         }
         if (IsNuzlockeActive())
@@ -5782,7 +5788,8 @@ static void HandleEndTurn_FinishBattle(void)
                                         | BATTLE_TYPE_INGAME_PARTNER
                                         | BATTLE_TYPE_TOWER_LINK_MULTI
                                         | BATTLE_TYPE_RECORDED_LINK
-                                        | BATTLE_TYPE_FRONTIER)))
+                                        | BATTLE_TYPE_FRONTIER
+                                        | BATTLE_TYPE_TRAINER_HILL)))
                 NuzlockeDeleteFaintedPartyPokemon();
             if (!(gBattleTypeFlags & (BATTLE_TYPE_DOUBLE
                                         | BATTLE_TYPE_LINK

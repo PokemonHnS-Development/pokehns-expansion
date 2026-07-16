@@ -739,7 +739,8 @@ const u8 gHealthboxElementsGfxTableGen4[][32] = INCBIN_U8("graphics/battle_inter
                                                   "graphics/battle_interface/gen4/status3.4bpp",
                                                   "graphics/battle_interface/gen4/status4.4bpp",
                                                   "graphics/battle_interface/gen4/healthbox_doubles_frameend.4bpp",
-                                                  "graphics/battle_interface/gen4/healthbox_doubles_frameend_bar.4bpp");
+                                                  "graphics/battle_interface/gen4/healthbox_doubles_frameend_bar.4bpp",
+                                                  "graphics/battle_interface/gen4/shiny_icon.4bpp");
 
 // Gen 3 healthbox elements — per-game
 #if IS_HNS
@@ -755,7 +756,8 @@ const u8 gHealthboxElementsGfxTableGen3[][32] = INCBIN_U8("graphics/battle_inter
                                                   "graphics/battle_interface/hns/status3.4bpp",
                                                   "graphics/battle_interface/hns/status4.4bpp",
                                                   "graphics/battle_interface/hns/healthbox_doubles_frameend.4bpp",
-                                                  "graphics/battle_interface/hns/healthbox_doubles_frameend_bar.4bpp");
+                                                  "graphics/battle_interface/hns/healthbox_doubles_frameend_bar.4bpp",
+                                                  "graphics/battle_interface/shiny_icon.4bpp");
 #else
 const u8 gHealthboxElementsGfxTableGen3[][32] = INCBIN_U8("graphics/battle_interface/hpbar.4bpp",
                                                   "graphics/battle_interface/expbar.4bpp",
@@ -1831,7 +1833,11 @@ const u16 gBagScreenFemale_Pal[] = INCBIN_U16("graphics/bag/menu_female.gbapal")
 #endif
 
 const u32 gBagScreen_Gfx[] = INCBIN_U32("graphics/bag/menu.4bpp.smol");
-const u32 gBagScreen_GfxTileMap[] = INCBIN_U32("graphics/bag/menu.bin.smolTM");
+#if I_COMBINE_BAG_POCKETS == TRUE
+const u32 gBagScreen_GfxTileMap[] = INCBIN_U32("graphics/bag/menu_6.bin.smolTM");
+#else
+const u32 gBagScreen_GfxTileMap[] = INCBIN_U32("graphics/bag/menu_8.bin.smolTM");
+#endif
 
 const u32 gBattlePyramidBag_Gfx[]          = INCBIN_U32("graphics/bag/bag_pyramid.4bpp.smol");
 const u16 gBattlePyramidBag_Pal[]          = INCBIN_U16("graphics/bag/bag_pyramid.gbapal"); // female palette is first and male is second.
@@ -1845,6 +1851,7 @@ const u32 gShopMenu_Gfx[] = INCBIN_U32("graphics/shop/menu.4bpp.smol");
 const u16 gShopMenu_Pal[] = INCBIN_U16("graphics/shop/menu.gbapal");
 const u32 gShopMenu_Tilemap[] = INCBIN_U32("graphics/shop/menu.bin.smolTM");
 const u32 gShopMenuMoney_Gfx[] = INCBIN_U32("graphics/shop/money.4bpp.smol");
+const u32 gShopMenuBP_Gfx[] = INCBIN_U32("graphics/shop/bp.4bpp.smol");
 
 // Pokeblock
 
@@ -1998,7 +2005,11 @@ const u32 gPokenavHeader_Gfx[] = INCBIN_U32("graphics/pokenav/header.4bpp.smol")
 const u32 gPokenavHeader_Tilemap[] = INCBIN_U32("graphics/pokenav/header.bin.smolTM");
 #endif
 
+#if IS_HNS
+const u16 gPokenavLeftHeader_Pal[] = INCBIN_U16("graphics/pokenav/hns/left_headers/palette.gbapal");
+#else
 const u16 gPokenavLeftHeader_Pal[] = INCBIN_U16("graphics/pokenav/left_headers/palette.gbapal");
+#endif
 const u32 gPokenavLeftHeaderBeauty_Gfx[] = INCBIN_U32("graphics/pokenav/left_headers/beauty.4bpp.smol");
 const u32 gPokenavLeftHeaderSmart_Gfx[] = INCBIN_U32("graphics/pokenav/left_headers/smart.4bpp.smol");
 const u32 gPokenavLeftHeaderCondition_Gfx[] = INCBIN_U32("graphics/pokenav/left_headers/condition.4bpp.smol");
@@ -2020,8 +2031,13 @@ const u32 gPokenavLeftHeaderTough_Gfx[] = INCBIN_U32("graphics/pokenav/left_head
 const u32 gPokenavLeftHeaderCool_Gfx[] = INCBIN_U32("graphics/pokenav/left_headers/cool.4bpp.smol");
 const u32 gPokenavLeftHeaderParty_Gfx[] = INCBIN_U32("graphics/pokenav/left_headers/party.4bpp.smol");
 
+#if IS_HNS
+const u16 gPokenavMessageBox_Pal[] = INCBIN_U16("graphics/pokenav/hns/message.gbapal");
+const u32 gPokenavMessageBox_Gfx[] = INCBIN_U32("graphics/pokenav/hns/message.4bpp.smol");
+#else
 const u16 gPokenavMessageBox_Pal[] = INCBIN_U16("graphics/pokenav/message.gbapal");
 const u32 gPokenavMessageBox_Gfx[] = INCBIN_U32("graphics/pokenav/message.4bpp.smol");
+#endif
 const u32 gPokenavMessageBox_Tilemap[] = INCBIN_U32("graphics/pokenav/message.bin.smolTM");
 
 const u16 gRegionMapCityZoomTiles_Pal[] = INCBIN_U16("graphics/pokenav/region_map/zoom_tiles.gbapal");

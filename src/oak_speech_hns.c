@@ -42,6 +42,7 @@ extern const u8 gText_Oak_MainSpeech[];
 extern const u8 gText_Oak_AndYouAre[];
 extern const u8 gText_Oak_BoyOrGirl[];
 extern const u8 gText_Oak_WhatChallenge[];
+extern const u8 gText_Oak_ChallengeSelected[];
 extern const u8 gText_Oak_WhatsYourName[];
 extern const u8 gText_Oak_SoItsPlayer[];
 extern const u8 gText_Oak_YourePlayer[];
@@ -89,6 +90,7 @@ static void CB2_NewGameHnsSpeech_ReturnFromNamingScreen(void);
 static void CB2_NewGameHnsSpeech_ReturnFromChallengeMenu(void);
 static void Task_NewGameHnsSpeech_FadeOutToChallengeMenu(u8);
 static void Task_NewGameHnsSpeech_ReturnFromChallengeMenuShowTextbox(u8);
+static void Task_NewGameHnsSpeech_WaitForTextAfterChallengeMenu(u8);
 static void Task_NewGameHnsSpeech_ReturnFromNamingScreenShowTextbox(u8);
 static void Task_NewGameHnsSpeech_SoItsPlayerName(u8);
 static void Task_NewGameHnsSpeech_CreateNameYesNo(u8);
@@ -505,13 +507,13 @@ static void Task_NewGameHnsSpeech_ChooseGender(u8 taskId)
         PlaySE(SE_SELECT);
         gSaveBlock2Ptr->playerGender = gender;
         NewGameHnsSpeech_ClearGenderWindow(1, 1);
-        gTasks[taskId].func = Task_NewGameHnsSpeech_ChallengeDisclaimer;
+        gTasks[taskId].func = Task_NewGameHnsSpeech_WhatsYourName;
         break;
     case FEMALE:
         PlaySE(SE_SELECT);
         gSaveBlock2Ptr->playerGender = gender;
         NewGameHnsSpeech_ClearGenderWindow(1, 1);
-        gTasks[taskId].func = Task_NewGameHnsSpeech_ChallengeDisclaimer;
+        gTasks[taskId].func = Task_NewGameHnsSpeech_WhatsYourName;
         break;
     default:
         break;
@@ -571,7 +573,7 @@ static void Task_NewGameHnsSpeech_SlideInNewGenderSprite(u8 taskId)
 
 static void Task_NewGameHnsSpeech_ChallengeDisclaimer(u8 taskId)
 {
-    static const u8 sText_Disclaimer[] = _("What challenge are you\n expecting?\p{COLOR RED}The following settings can be changed\nfrom the PC once you start the game.\lHowever, after starting the game, the\lnuzlocke, randomizer, difficulty and\lchallenge settings can only be made\leasier, not harder.");
+    static const u8 sText_Disclaimer[] = _("What challenge are you\nexpecting?\p{COLOR RED}The following settings can be changed\nfrom the PC once you start the game.\lHowever, after starting the game, the\lnuzlocke, randomizer, difficulty and\lchallenge settings can only be made\leasier, not harder.");
     NewGameHnsSpeech_ClearWindow(0);
     StringCopy(gStringVar4, sText_Disclaimer);
     AddTextPrinterWithCustomSpeedForMessage(FALSE, 2);
@@ -655,7 +657,7 @@ static void Task_NewGameHnsSpeech_StartNamingScreen(u8 taskId)
         FreeAndDestroyMonPicSprite(gTasks[taskId].tMonSpriteId);
         NewGameHnsSpeech_SetDefaultPlayerName(Random() % NUM_PRESET_NAMES);
         DestroyTask(taskId);
-        DoNamingScreen(NAMING_SCREEN_PLAYER, gSaveBlock2Ptr->playerName, gSaveBlock2Ptr->playerGender, 0, 0, CB2_NewGameHnsSpeech_ReturnFromNamingScreen);
+        DoNamingScreen(NAMING_SCREEN_PLAYER, gSaveBlock2Ptr->playerName, gSaveBlock2Ptr->playerGender, 0, 0, 0, CB2_NewGameHnsSpeech_ReturnFromNamingScreen);
     }
 }
 
@@ -682,10 +684,7 @@ static void Task_NewGameHnsSpeech_ProcessNameYesNoMenu(u8 taskId)
     {
     case 0:
         PlaySE(SE_SELECT);
-        gSprites[gTasks[taskId].tPlayerSpriteId].oam.objMode = ST_OAM_OBJ_BLEND;
-        NewGameHnsSpeech_StartFadeOutTarget1InTarget2(taskId, 2);
-        NewGameHnsSpeech_StartFadePlatformIn(taskId, 1);
-        gTasks[taskId].func = Task_NewGameHnsSpeech_SlidePlatformAway2;
+        gTasks[taskId].func = Task_NewGameHnsSpeech_ChallengeDisclaimer;
         break;
     case MENU_B_PRESSED:
     case 1:
@@ -995,7 +994,20 @@ static void Task_NewGameHnsSpeech_ReturnFromChallengeMenuShowTextbox(u8 taskId)
     if (gTasks[taskId].tTimer-- <= 0)
     {
         DrawDialogFrameWithCustomTile(0, TRUE, HNS_DLG_BASE_TILE_NUM);
-        gTasks[taskId].func = Task_NewGameHnsSpeech_WhatsYourName;
+        StringExpandPlaceholders(gStringVar4, gText_Oak_ChallengeSelected);
+        AddTextPrinterForMessage(TRUE);
+        gTasks[taskId].func = Task_NewGameHnsSpeech_WaitForTextAfterChallengeMenu;
+    }
+}
+
+static void Task_NewGameHnsSpeech_WaitForTextAfterChallengeMenu(u8 taskId)
+{
+    if (!RunTextPrintersAndIsPrinter0Active() && ((JOY_NEW(A_BUTTON)) || (JOY_NEW(B_BUTTON))))
+    {
+        gSprites[gTasks[taskId].tPlayerSpriteId].oam.objMode = ST_OAM_OBJ_BLEND;
+        NewGameHnsSpeech_StartFadeOutTarget1InTarget2(taskId, 2);
+        NewGameHnsSpeech_StartFadePlatformIn(taskId, 1);
+        gTasks[taskId].func = Task_NewGameHnsSpeech_SlidePlatformAway2;
     }
 }
 

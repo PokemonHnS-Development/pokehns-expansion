@@ -496,7 +496,8 @@ struct SpeciesInfo /*0xC4*/
     u32 isFrontierBanned:1; // This species is not allowed to participate in Battle Frontier facilities.
     u32 isSkyBattleBanned:1;
     u32 randomizerMode:2;
-    u32 padding4:7;
+    u32 dexNotRequired:1;
+    u32 padding4:6;
     // Shadow settings
     s8 enemyShadowXOffset; // This determines the X-offset for an enemy Pokémon's shadow during battle; negative values point left, positive values point right.
     s8 enemyShadowYOffset; // This determines the Y-offset for an enemy Pokémon's shadow during battle; negative values point up, positive values point down.
@@ -518,6 +519,7 @@ struct SpeciesInfo /*0xC4*/
 #if OW_PKMN_OBJECTS_SHARE_PALETTES == FALSE
     const void* overworldPalette;
     const void* overworldShinyPalette;
+    const void* overworldShinyPaletteModern;
 #if P_GENDER_DIFFERENCES
     const void* overworldPaletteFemale;
     const void* overworldShinyPaletteFemale;
@@ -735,6 +737,7 @@ extern const u32 sExpCandyExperienceTable[];
 extern const struct AbilityInfo gAbilitiesInfo[];
 extern const struct NatureInfo gNaturesInfo[];
 
+u32 GetShinyOdds(void);
 void ZeroBoxMonData(struct BoxPokemon *boxMon);
 void ZeroMonData(struct Pokemon *mon);
 void ZeroPlayerPartyMons(void);
@@ -855,15 +858,18 @@ u32 NationalToRegionalOrder(enum NationalDexOrder nationalNum);
 enum KantoDexOrder NationalToKantoOrder(enum NationalDexOrder nationalNum);
 enum HoennDexOrder NationalToHoennOrder(enum NationalDexOrder nationalNum);
 enum JohtoDexOrder NationalToJohtoOrder(enum NationalDexOrder nationalNum);
+enum ObtainableDexOrder NationalToObtainableOrder(enum NationalDexOrder nationalNum);
 enum NationalDexOrder SpeciesToNationalPokedexNum(u16 species);
 u32 SpeciesToRegionalPokedexNum(u16 species);
 enum KantoDexOrder SpeciesToKantoPokedexNum(u16 species);
 enum HoennDexOrder SpeciesToHoennPokedexNum(u16 species);
 enum JohtoDexOrder SpeciesToJohtoPokedexNum(u16 species);
+enum ObtainableDexOrder SpeciesToObtainablePokedexNum(u16 species);
 enum NationalDexOrder RegionalToNationalOrder(u32 regionNum);
 enum NationalDexOrder KantoToNationalOrder(enum KantoDexOrder kantoNum);
 enum NationalDexOrder HoennToNationalOrder(enum HoennDexOrder hoennNum);
 enum NationalDexOrder JohtoToNationalOrder(enum JohtoDexOrder johtoNum);
+enum NationalDexOrder ObtainableToNationalOrder(enum ObtainableDexOrder johtoNum);
 void DrawSpindaSpots(u32 personality, u8 *dest, bool32 isSecondFrame);
 void EvolutionRenameMon(struct Pokemon *mon, u16 oldSpecies, u16 newSpecies);
 u8 GetPlayerFlankId(void);

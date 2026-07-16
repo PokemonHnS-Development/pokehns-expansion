@@ -32,6 +32,10 @@ extern const struct CompressedSpriteSheet gSpriteSheet_CreditsBicycle[];
 extern const struct CompressedSpriteSheet gSpriteSheet_CreditsRivalBrendan[];
 extern const struct CompressedSpriteSheet gSpriteSheet_CreditsRivalMay[];
 extern const struct SpritePalette gSpritePalettes_Credits[];
+#if IS_HNS
+extern const struct CompressedSpriteSheet gSpriteSheet_CreditsSuicune[];
+extern const struct SpritePalette gSpritePalettes_CreditsHnS[];
+#endif
 
 void LoadIntroPart2Graphics(u8 scenery);
 void SetIntroPart2BgCnt(u8 scenery);
@@ -42,5 +46,8 @@ void CycleSceneryPalette(u8 mode);
 u8 CreateIntroBrendanSprite(s16 x, s16 y);
 u8 CreateIntroMaySprite(s16 x, s16 y);
 u8 CreateIntroFlygonSprite(s16 x, s16 y);
+#if IS_HNS
+u8 CreateCreditsSuicuneSprite(s16 x, s16 y);
+#endif
 
 #endif // GUARD_INTRO_CREDITS_GRAPHICS_H

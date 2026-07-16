@@ -11,12 +11,16 @@ FuchsiaCity_EventScript_CityEnter::
 	end
 
 FuchsiaCity_EventScript_BaobaCall::
+	setspeaker FuchsiaCity_Text_BaobaName
 	pokenavcall FuchsiaCity_Text_Baoba
 	waitmessage
 	delay 30
 	setvar VAR_BAOBA_QUEST_STATE, 1
 	setvar VAR_FUCHSIA_CITY_STATE, 1
 	end
+
+FuchsiaCity_Text_BaobaName:
+	.string "BAOBA$"
 
 FuchsiaCity_Text_Baoba:
 	.string "WARDEN BAOBA: {PLAYER}!\p"

@@ -51,6 +51,7 @@
 #include "constants/battle_frontier.h"
 #include "constants/rgb.h"
 #include "constants/songs.h"
+#include "rtc.h"
 
 // Menu actions
 enum
@@ -87,6 +88,7 @@ COMMON_DATA bool8 (*gMenuCallback)(void) = NULL;
 
 // EWRAM
 EWRAM_DATA static u8 sSafariBallsWindowId = 0;
+EWRAM_DATA static u8 sStartClockWindowId = 0;
 EWRAM_DATA static u8 sBattlePyramidFloorWindowId = 0;
 EWRAM_DATA static u8 sStartMenuCursorPos = 0;
 EWRAM_DATA static u8 sNumStartMenuActions = 0;
@@ -151,11 +153,21 @@ static bool8 FieldCB_ReturnToFieldStartMenu(void);
 static const struct WindowTemplate sWindowTemplate_SafariBalls = {
     .bg = 0,
     .tilemapLeft = 1,
-    .tilemapTop = 1,
+    .tilemapTop = 5,
     .width = 9,
     .height = 4,
     .paletteNum = 15,
     .baseBlock = 0x8
+};
+
+static const struct WindowTemplate sWindowTemplate_StartClock = {
+    .bg = 0,
+    .tilemapLeft = 1,
+    .tilemapTop = 1,
+    .width = 13,
+    .height = 2,
+    .paletteNum = 15,
+    .baseBlock = 0x30
 };
 
 static const u8 *const sPyramidFloorNames[FRONTIER_STAGES_PER_CHALLENGE + 1] =
@@ -173,7 +185,7 @@ static const u8 *const sPyramidFloorNames[FRONTIER_STAGES_PER_CHALLENGE + 1] =
 static const struct WindowTemplate sWindowTemplate_PyramidFloor = {
     .bg = 0,
     .tilemapLeft = 1,
-    .tilemapTop = 1,
+    .tilemapTop = 5,
     .width = 10,
     .height = 4,
     .paletteNum = 15,
@@ -183,7 +195,7 @@ static const struct WindowTemplate sWindowTemplate_PyramidFloor = {
 static const struct WindowTemplate sWindowTemplate_PyramidPeak = {
     .bg = 0,
     .tilemapLeft = 1,
-    .tilemapTop = 1,
+    .tilemapTop = 5,
     .width = 12,
     .height = 4,
     .paletteNum = 15,
@@ -284,6 +296,7 @@ static void ShowSaveInfoWindow(void);
 static void RemoveSaveInfoWindow(void);
 static void HideStartMenuWindow(void);
 static void HideStartMenuDebug(void);
+static void ShowTimeWindow(void);
 
 void SetDexPokemonPokenavFlags(void) // unused
 {
@@ -481,19 +494,81 @@ static void ShowPyramidFloorWindow(void)
     CopyWindowToVram(sBattlePyramidFloorWindowId, COPYWIN_GFX);
 }
 
+#define CLOCK_WINDOW_WIDTH 104
+
+static const u8 sText_Saturday[] = _("Saturday,");
+static const u8 sText_Sunday[] = _("Sunday,");
+static const u8 sText_Monday[] = _("Monday,");
+static const u8 sText_Tuesday[] = _("Tuesday,");
+static const u8 sText_Wednesday[] = _("Wednesday,");
+static const u8 sText_Thursday[] = _("Thursday,");
+static const u8 sText_Friday[] = _("Friday,");
+static const u8 sText_AM[] = _("AM");
+static const u8 sText_PM[] = _("PM");
+
+static const u8 *const sDayNameStringsTable[7] = {
+    sText_Saturday,
+    sText_Sunday,
+    sText_Monday,
+    sText_Tuesday,
+    sText_Wednesday,
+    sText_Thursday,
+    sText_Friday,
+};
+
+static void ShowTimeWindow(void)
+{
+    const u8 *suffix;
+    u8 *ptr;
+    u8 convertedHours;
+
+    sStartClockWindowId = AddWindow(&sWindowTemplate_StartClock);
+    PutWindowTilemap(sStartClockWindowId);
+    DrawStdWindowFrame(sStartClockWindowId, FALSE);
+
+    if (gLocalTime.hours < 12)
+    {
+        convertedHours = (gLocalTime.hours == 0) ? 12 : gLocalTime.hours;
+        suffix = sText_AM;
+    }
+    else
+    {
+        convertedHours = (gLocalTime.hours == 12) ? 12 : gLocalTime.hours - 12;
+        suffix = sText_PM;
+    }
+
+    StringExpandPlaceholders(gStringVar4, sDayNameStringsTable[((gLocalTime.days % 7) + 7) % 7]);
+    AddTextPrinterParameterized(sStartClockWindowId, FONT_NORMAL, gStringVar4, 0, 1, 0xFF, NULL);
+
+    ptr = ConvertIntToDecimalStringN(gStringVar4, convertedHours, STR_CONV_MODE_LEFT_ALIGN, 3);
+    *ptr = 0xF0;
+    ConvertIntToDecimalStringN(ptr + 1, gLocalTime.minutes, STR_CONV_MODE_LEADING_ZEROS, 2);
+    AddTextPrinterParameterized(sStartClockWindowId, FONT_NORMAL, gStringVar4,
+        GetStringRightAlignXOffset(FONT_NORMAL, suffix, CLOCK_WINDOW_WIDTH)
+            - (CLOCK_WINDOW_WIDTH - GetStringRightAlignXOffset(FONT_NORMAL, gStringVar4, CLOCK_WINDOW_WIDTH) + 3),
+        1, 0xFF, NULL);
+
+    AddTextPrinterParameterized(sStartClockWindowId, FONT_NORMAL, suffix,
+        GetStringRightAlignXOffset(FONT_NORMAL, suffix, CLOCK_WINDOW_WIDTH), 1, 0xFF, NULL);
+
+    CopyWindowToVram(sStartClockWindowId, COPYWIN_GFX);
+}
+
 static void RemoveExtraStartMenuWindows(void)
 {
     if (GetSafariZoneFlag())
     {
         ClearStdWindowAndFrameToTransparent(sSafariBallsWindowId, FALSE);
-        CopyWindowToVram(sSafariBallsWindowId, COPYWIN_GFX);
         RemoveWindow(sSafariBallsWindowId);
     }
-    if (CurrentBattlePyramidLocation() != PYRAMID_LOCATION_NONE)
+    else if (CurrentBattlePyramidLocation() != PYRAMID_LOCATION_NONE)
     {
         ClearStdWindowAndFrameToTransparent(sBattlePyramidFloorWindowId, FALSE);
         RemoveWindow(sBattlePyramidFloorWindowId);
     }
+
+    ClearStdWindowAndFrameToTransparent(sStartClockWindowId, FALSE);
+    RemoveWindow(sStartClockWindowId);
 }
 
 static bool32 PrintStartMenuActions(s8 *pIndex, u32 count)
@@ -549,15 +624,19 @@ static bool32 InitStartMenuStep(void)
     case 3:
         if (GetSafariZoneFlag())
             ShowSafariBallsWindow();
-        if (CurrentBattlePyramidLocation() != PYRAMID_LOCATION_NONE)
+        else if (CurrentBattlePyramidLocation() != PYRAMID_LOCATION_NONE)
             ShowPyramidFloorWindow();
         sInitStartMenuData[0]++;
         break;
     case 4:
+        ShowTimeWindow();
+        sInitStartMenuData[0]++;
+        break;
+    case 5:
         if (PrintStartMenuActions(&sInitStartMenuData[1], 2))
             sInitStartMenuData[0]++;
         break;
-    case 5:
+    case 6:
         sStartMenuCursorPos = InitMenuNormal(GetStartMenuWindowId(), FONT_NORMAL, 0, 9, 16, sNumStartMenuActions, sStartMenuCursorPos);
         CopyWindowToVram(GetStartMenuWindowId(), COPYWIN_MAP);
         return TRUE;
@@ -688,6 +767,8 @@ static bool8 HandleStartMenuInput(void)
         return TRUE;
     }
 
+    RemoveExtraStartMenuWindows();
+    ShowTimeWindow();
     return FALSE;
 }
 
@@ -714,9 +795,16 @@ static bool8 StartMenuPokemonCallback(void)
         PlayRainStoppingSoundEffect();
         RemoveExtraStartMenuWindows();
         CleanupOverworldWindowsAndTilemaps();
-        SetMainCallback2(CB2_PartyMenuFromStartMenu); // Display party menu
+        SetMainCallback2(CB2_PartyMenuFromStartMenu);
 
         return TRUE;
+    }
+
+    if (!GetSafariZoneFlag() && CurrentBattlePyramidLocation() == PYRAMID_LOCATION_NONE
+        && gSaveBlock2Ptr->playTimeSeconds == 0)
+    {
+        RemoveExtraStartMenuWindows();
+        ShowTimeWindow();
     }
 
     return FALSE;
@@ -1141,7 +1229,11 @@ static u8 SaveFileExistsCallback(void)
     }
     else
     {
+#if IS_HNS
+        sSaveDialogCallback = SaveSavingMessageCallback;
+#else
         ShowSaveMessage(gText_AlreadySavedFile, SaveConfirmOverwriteCallback);
+#endif
     }
 
     return SAVE_IN_PROGRESS;
@@ -1454,7 +1546,11 @@ static void ShowSaveInfoWindow(void)
 
     // Print region name
     yOffset = 1;
+#if IS_HNS
+    BufferSaveMenuText(SAVE_MENU_LOCATION, gStringVar4, TEXT_COLOR_DARK_GRAY);
+#else
     BufferSaveMenuText(SAVE_MENU_LOCATION, gStringVar4, TEXT_COLOR_GREEN);
+#endif
     AddTextPrinterParameterized(sSaveInfoWindowId, FONT_NORMAL, gStringVar4, 0, yOffset, TEXT_SKIP_DRAW, NULL);
 
     // Print player name

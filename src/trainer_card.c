@@ -15,6 +15,7 @@
 #include "event_data.h"
 #include "easy_chat.h"
 #include "money.h"
+#include "mom_savings.h"
 #include "strings.h"
 #include "string_util.h"
 #include "trainer_card.h"
@@ -1118,7 +1119,17 @@ static void PrintMoneyOnCard(void)
         AddTextPrinterParameterized3(WIN_CARD_TEXT, FONT_NORMAL, 16, 57, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_TrainerCardMoney);
 
     ConvertIntToDecimalStringN(gStringVar1, sData->trainerCard.money, STR_CONV_MODE_LEFT_ALIGN, MAX_MONEY_DIGITS);
+#if IS_HNS
+    {
+        u8 *ptr = gStringVar4;
+        ptr = StringExpandPlaceholders(ptr, gText_PokedollarVar1);
+        *ptr++ = CHAR_SLASH;
+        ConvertIntToDecimalStringN(gStringVar2, Mom_GetBalance(), STR_CONV_MODE_LEFT_ALIGN, 6);
+        StringCopy(ptr, gStringVar2);
+    }
+#else
     StringExpandPlaceholders(gStringVar4, gText_PokedollarVar1);
+#endif
     if (!sData->isHoenn)
     {
         xOffset = GetStringRightAlignXOffset(FONT_NORMAL, gStringVar4, 144);

@@ -1072,6 +1072,16 @@ u8 CreateMonSprite_PicBox(u16 species, s16 x, s16 y, u8 subpriority)
         return spriteId;
 }
 
+u8 CreateShinyMonSprite_PicBox(u16 species, s16 x, s16 y, u8 subpriority)
+{
+    s32 spriteId = CreateMonPicSprite(species, TRUE, 0x8000, TRUE, x, y, 0, species);
+    PreservePaletteInWeather(IndexOfSpritePaletteTag(species) + 0x10);
+    if (spriteId == 0xFFFF)
+        return MAX_SPRITES;
+    else
+        return spriteId;
+}
+
 u8 CreateMonSprite_FieldMove(u16 species, bool8 isShiny, u32 personality, s16 x, s16 y, u8 subpriority)
 {
     u16 spriteId = CreateMonPicSprite(species, isShiny, personality, TRUE, x, y, 0, species);
@@ -1223,7 +1233,7 @@ bool8 FldEff_HallOfFameRecord(void)
     task = &gTasks[CreateTask(Task_HallOfFameRecord, 0xff)];
     task->tNumMons = nPokemon;
     task->tFirstBallX = 117;
-    task->tFirstBallY = (IS_FRLG || IS_HNS) ? 60 : 52;
+    task->tFirstBallY = (gMapHeader.mapLayout->layoutVersion != LAYOUT_VERSION_EMERALD) ? 60 : 52;
     return FALSE;
 }
 
@@ -1423,7 +1433,12 @@ static u8 CreatePokecenterMonitorSprite(s16 x, s16 y)
 {
     u8 spriteId;
     struct Sprite *sprite;
-    if (IS_FRLG || IS_HNS)
+    if (gMapHeader.mapLayout->layoutVersion == LAYOUT_VERSION_EMERALD)
+    {
+        spriteId = CreateSpriteAtEnd(&sSpriteTemplate_PokecenterMonitor, x, y, 0);
+        SetSubspriteTables(&gSprites[spriteId], &sSubspriteTable_PokecenterMonitor);
+    }
+    else if (IS_FRLG || IS_HNS)
     {
         spriteId = CreateSpriteAtEnd(&sSpriteTemplate_PokecenterMonitor_FrLg, x + 4, y, 0);
     }
@@ -3373,6 +3388,7 @@ u8 FldEff_UseSurf(void)
 {
     u8 taskId = CreateTask(Task_SurfFieldEffect, 0xff);
     gTasks[taskId].tMonId = gFieldEffectArguments[0];
+    VarSet(VAR_SURF_MON_SLOT, gFieldEffectArguments[0]);
     if (!gSaveblock3.challengeSettings.surfMusic)
     {
         Overworld_ClearSavedMusic();
@@ -3396,6 +3412,7 @@ static void Task_SurfFieldEffect(u8 taskId)
 
 static void SurfFieldEffect_Init(struct Task *task)
 {
+    VarSet(VAR_FREEZE_SURF_BLOB, 1);
     LockPlayerFieldControls();
     FreezeObjectEvents();
     // Put follower into pokeball before using Surf
@@ -3464,6 +3481,7 @@ static void SurfFieldEffect_End(struct Task *task)
         SetSurfBlob_BobState(objectEvent->fieldEffectSpriteId, BOB_PLAYER_AND_MON);
         UnfreezeObjectEvents();
         UnlockPlayerFieldControls();
+   		VarSet(VAR_FREEZE_SURF_BLOB, 0);
         FieldEffectActiveListRemove(FLDEFF_USE_SURF);
         DestroyTask(FindTaskIdByFunc(Task_SurfFieldEffect));
     }

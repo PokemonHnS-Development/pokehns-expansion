@@ -1,4 +1,3 @@
-#define DEBUG_MATCH_CALL 0
 
 #include "global.h"
 #include "malloc.h"
@@ -8,6 +7,7 @@
 #include "birch_pc.h"
 #include "data.h"
 #include "event_data.h"
+#include "fake_rtc.h"
 #include "event_object_movement.h"
 #include "field_player_avatar.h"
 #include "main.h"
@@ -1131,6 +1131,8 @@ static const struct MatchCallText *const sMatchCallGeneralTopics[] =
 };
 
 extern const u8 gBirchDexRatingText_AreYouCurious[];
+extern const u8 gElmDexRatingText_AreYouCurious[];
+extern const u8 gElmDexRatingText_AreYouCuriousNational[];
 extern const u8 gBirchDexRatingText_SoYouveSeenAndCaught[];
 extern const u8 gBirchDexRatingText_OnANationwideBasis[];
 
@@ -1215,7 +1217,12 @@ static bool32 UpdateMatchCallMinutesCounter(void)
     int curMinutes;
     RtcCalcLocalTime();
     curMinutes = GetCurrentTotalMinutes(&gLocalTime);
+#if IS_HNS
+    if (sMatchCallState.minutes > curMinutes
+     || curMinutes - sMatchCallState.minutes > (UseFakeRtc() ? 179 : 9))
+#else
     if (sMatchCallState.minutes > curMinutes || curMinutes - sMatchCallState.minutes > 9)
+#endif
     {
         sMatchCallState.minutes = curMinutes;
         return TRUE;
@@ -1256,7 +1263,11 @@ static bool32 MapAllowsMatchCall(void)
 
 static bool32 UpdateMatchCallStepCounter(void)
 {
+#if IS_HNS
+    if (++sMatchCallState.stepCounter >= 30)
+#else
     if (++sMatchCallState.stepCounter >= 10)
+#endif
     {
         sMatchCallState.stepCounter = 0;
         return TRUE;
@@ -1336,9 +1347,12 @@ bool32 TryStartMatchCall(void)
     if (gSaveBlock3Ptr->challengeSettings.disableMatchCall)
         return FALSE;
 
-#if IS_HNS && DEBUG_MATCH_CALL
+#if IS_HNS
     if (FlagGet(FLAG_HAS_MATCH_CALL)
+        && HasEnoughBadgesForRematch()
         && UpdateMatchCallStepCounter()
+        && UpdateMatchCallMinutesCounter()
+        && CheckMatchCallChance()
         && SelectMatchCallTrainer())
 #else
     if (FlagGet(FLAG_HAS_MATCH_CALL)
@@ -1388,8 +1402,13 @@ static const u8 sMatchCallWindow_Gfx[] = INCBIN_U8("graphics/pokenav/hns/match_c
 static const u16 sMatchCallWindow_Pal[] = INCBIN_U16("graphics/pokenav/match_call/window.gbapal");
 static const u8 sMatchCallWindow_Gfx[] = INCBIN_U8("graphics/pokenav/match_call/window.4bpp");
 #endif
+#if IS_HNS
+static const u16 sPokenavIcon_Pal[] = INCBIN_U16("graphics/pokenav/hns/match_call/nav_icon.gbapal");
+static const u32 sPokenavIcon_Gfx[] = INCBIN_U32("graphics/pokenav/hns/match_call/nav_icon.4bpp.smol");
+#else
 static const u16 sPokenavIcon_Pal[] = INCBIN_U16("graphics/pokenav/match_call/nav_icon.gbapal");
 static const u32 sPokenavIcon_Gfx[] = INCBIN_U32("graphics/pokenav/match_call/nav_icon.4bpp.smol");
+#endif
 
 static const u8 sText_PokenavCallEllipsis[] = _("………………\p");
 
@@ -1563,6 +1582,7 @@ static bool32 MatchCall_EndCall(u8 taskId)
     u8 playerObjectId;
     if (!IsDma3ManagerBusyWithBgCopy() && !IsSEPlaying())
     {
+        DestroyNamebox();
         ChangeBgY(0, 0, BG_COORD_SET);
         if (!sMatchCallState.triggeredFromScript)
         {
@@ -2259,7 +2279,7 @@ static u16 GetFrontierStreakInfo(u16 facilityId, u32 *topicTextId)
 void BufferPokedexRatingForMatchCall(u8 *destStr)
 {
     int numSeen, numCaught;
-    u8 *str;
+    u8 *str, *str2;
 
     u8 *buffer = Alloc(sizeof(gStringVar4));
     if (!buffer)
@@ -2268,16 +2288,35 @@ void BufferPokedexRatingForMatchCall(u8 *destStr)
         return;
     }
 
-    numSeen = GetRegionalPokedexCount(FLAG_GET_SEEN);
-    numCaught = GetRegionalPokedexCount(FLAG_GET_CAUGHT);
-    ConvertIntToDecimalStringN(gStringVar1, numSeen, STR_CONV_MODE_LEFT_ALIGN, 3);
-    ConvertIntToDecimalStringN(gStringVar2, numCaught, STR_CONV_MODE_LEFT_ALIGN, 3);
-    str = StringCopy(buffer, gBirchDexRatingText_AreYouCurious);
-    *(str++) = CHAR_PROMPT_CLEAR;
-    str = StringCopy(str, gBirchDexRatingText_SoYouveSeenAndCaught);
-    *(str++) = CHAR_PROMPT_CLEAR;
-    StringCopy(str, GetPokedexRatingText(numCaught));
-    str = StringExpandPlaceholders(destStr, buffer);
+#if IS_HNS
+    bool8 hasAckJohtoDex = FlagGet(FLAG_SYS_ACK_COMPLETE_JOHTO_DEX);
+    if (!hasAckJohtoDex || !IsNationalPokedexEnabled())
+    {
+#endif
+
+        numSeen = GetRegionalPokedexCount(FLAG_GET_SEEN);
+        numCaught = GetRegionalPokedexCount(FLAG_GET_CAUGHT);
+        ConvertIntToDecimalStringN(gStringVar1, numSeen, STR_CONV_MODE_LEFT_ALIGN, 3);
+        ConvertIntToDecimalStringN(gStringVar2, numCaught, STR_CONV_MODE_LEFT_ALIGN, 3);
+#if IS_HNS
+        str = StringCopy(buffer, gElmDexRatingText_AreYouCurious);
+        *(str++) = CHAR_PROMPT_CLEAR;
+#else
+        str = StringCopy(buffer, gBirchDexRatingText_AreYouCurious);
+        *(str++) = CHAR_PROMPT_CLEAR;
+#endif
+        str = StringCopy(str, gBirchDexRatingText_SoYouveSeenAndCaught);
+        *(str++) = CHAR_PROMPT_CLEAR;
+        StringCopy(str, GetPokedexRatingText(numCaught));
+        str = StringExpandPlaceholders(destStr, buffer);
+
+#if IS_HNS
+        if (gSpecialVar_Result == TRUE)
+            FlagSet(FLAG_SYS_ACK_COMPLETE_JOHTO_DEX);
+    }
+    else
+        str = StringExpandPlaceholders(destStr, gElmDexRatingText_AreYouCuriousNational);
+#endif
 
     if (IsNationalPokedexEnabled())
     {
@@ -2286,7 +2325,22 @@ void BufferPokedexRatingForMatchCall(u8 *destStr)
         numCaught = GetNationalPokedexCount(FLAG_GET_CAUGHT);
         ConvertIntToDecimalStringN(gStringVar1, numSeen, STR_CONV_MODE_LEFT_ALIGN, 4);
         ConvertIntToDecimalStringN(gStringVar2, numCaught, STR_CONV_MODE_LEFT_ALIGN, 4);
-        StringExpandPlaceholders(str, gBirchDexRatingText_OnANationwideBasis);
+#if IS_HNS
+        if (hasAckJohtoDex || HasAllMons())
+        {
+            if (!hasAckJohtoDex)
+                str2 = StringCopy(buffer, gBirchDexRatingText_OnANationwideBasis);
+            else
+                str2 = StringCopy(buffer, gBirchDexRatingText_SoYouveSeenAndCaught);
+            *(str2++) = CHAR_PROMPT_CLEAR;
+            StringCopy(str2, GetNationalPokedexRatingText(numCaught));
+        }
+        else
+            str2 = StringCopy(buffer, gBirchDexRatingText_OnANationwideBasis);
+        StringExpandPlaceholders(str, buffer);
+#else
+    StringExpandPlaceholders(str, gBirchDexRatingText_OnANationwideBasis);
+#endif
     }
 
     Free(buffer);

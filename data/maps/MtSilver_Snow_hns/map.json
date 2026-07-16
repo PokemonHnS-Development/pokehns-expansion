@@ -249,7 +249,24 @@
     }
   ],
   "coord_events": [],
-  "bg_events": [],
+  "bg_events": [
+    {
+      "type": "hidden_item",
+      "x": 14,
+      "y": 52,
+      "elevation": 0,
+      "item": "ITEM_PURE_INCENSE",
+      "flag": "FLAG_HIDDEN_ITEM_MT_SILVER_SNOW_PURE_INCENSE"
+    },
+    {
+      "type": "hidden_item",
+      "x": 28,
+      "y": 41,
+      "elevation": 0,
+      "item": "ITEM_DAWN_STONE",
+      "flag": "FLAG_HIDDEN_ITEM_MT_SILVER_SNOW_DAWN_STONE"
+    }
+  ],
   "game_version": "hns",
   "region": "REGION_JOHTO"
 }

@@ -84,6 +84,7 @@ Route30_EventScript_Bugcatcher_Don::
 
 Route30_EventScript_ElmCall_Trigger::
 	lock
+	setspeaker Route30_Text_ElmName
 	pokenavcall Route30_Text_Elm_Disaster
 	waitmessage
 	delay 30
@@ -237,6 +238,9 @@ Route30_Text_YoungsterJoeyGiveHPUp:
 	.string "Use it to get even tougher,\n"
 	.string "OK?\p"
 	.string "I'm going to get tougher too.$"
+
+Route30_Text_ElmName:
+	.string "PROF.ELM$"
 
 Route30_Text_Elm_Disaster:
 	.string "PROF.ELM: H-hello? {PLAYER}? It's\n"

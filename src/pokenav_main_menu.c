@@ -54,8 +54,13 @@ static void DrawHelpBar(u32);
 static void SpriteCB_SpinningPokenav(struct Sprite *);
 static u32 LoopedTask_InitPokenavMenu(s32);
 
+#if IS_HNS
+static const u16 sSpinningPokenav_Pal[] = INCBIN_U16("graphics/pokenav/hns/nav_icon.gbapal");
+static const u32 sSpinningPokenav_Gfx[] = INCBIN_U32("graphics/pokenav/hns/nav_icon.4bpp.smol");
+#else
 static const u16 sSpinningPokenav_Pal[] = INCBIN_U16("graphics/pokenav/nav_icon.gbapal");
 static const u32 sSpinningPokenav_Gfx[] = INCBIN_U32("graphics/pokenav/nav_icon.4bpp.smol");
+#endif
 static const u32 sBlueLightCopy[] = INCBIN_U32("graphics/pokenav/blue_light.4bpp.smol"); // Unused copy of sMatchCallBlueLightTiles
 
 const struct BgTemplate gPokenavMainMenuBgTemplates[] =
@@ -88,10 +93,17 @@ static const struct WindowTemplate sHelpBarWindowTemplate[] =
 static const u8 *const sHelpBarTexts[HELPBAR_COUNT] =
 {
     [HELPBAR_NONE]                  = COMPOUND_STRING("{CLEAR 0x80}"),
+#if IS_HNS
+    [HELPBAR_MAP_ZOOMED_OUT]        = COMPOUND_STRING("{B_BUTTON}CANCEL"),
+    [HELPBAR_MAP_ZOOMED_IN]         = COMPOUND_STRING("{B_BUTTON}CANCEL"),
+    [HELPBAR_MAP_ZOOMED_OUT_CANFLY] = COMPOUND_STRING("{B_BUTTON}CANCEL {R_BUTTON}FLY"),
+    [HELPBAR_MAP_ZOOMED_IN_CANFLY]  = COMPOUND_STRING("{B_BUTTON}CANCEL {R_BUTTON}FLY"),
+#else
     [HELPBAR_MAP_ZOOMED_OUT]        = COMPOUND_STRING("{A_BUTTON}ZOOM {B_BUTTON}CANCEL"),
     [HELPBAR_MAP_ZOOMED_IN]         = COMPOUND_STRING("{A_BUTTON}FULL {B_BUTTON}CANCEL"),
     [HELPBAR_MAP_ZOOMED_OUT_CANFLY] = COMPOUND_STRING("{A_BUTTON}ZOOM {B_BUTTON}CANCEL {R_BUTTON}FLY"),
     [HELPBAR_MAP_ZOOMED_IN_CANFLY]  = COMPOUND_STRING("{A_BUTTON}FULL {B_BUTTON}CANCEL {R_BUTTON}FLY"),
+#endif
     [HELPBAR_CONDITION_MON_LIST]    = COMPOUND_STRING("{A_BUTTON}CONDITION {B_BUTTON}CANCEL"),
     [HELPBAR_CONDITION_MON_STATUS]  = COMPOUND_STRING("{A_BUTTON}MARKINGS {B_BUTTON}CANCEL"),
     [HELPBAR_CONDITION_MARKINGS]    = COMPOUND_STRING("{A_BUTTON}SELECT MARK {B_BUTTON}CANCEL"),

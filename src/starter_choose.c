@@ -388,8 +388,6 @@ static u16 PickOneTypeChallengeStarter(u8 starterId)
             continue;
         if (!IsBaseStageSpecies(i))
             continue;
-        if (i == SPECIES_TOGEPI)
-            continue;
         u16 j;
         bool8 duplicate = FALSE;
         for (j = 0; j < STARTER_MON_COUNT; j++)

@@ -74,7 +74,7 @@ FuchsiaCity_SafariZoneEntrance_Steven::
 	lock
 	faceplayer
 	checkitem ITEM_EON_TICKET
-	goto_if_eq VAR_RESULT, TRUE, FuchsiaCity_SafariZoneEntrance_StevenAfter
+	goto_if_eq VAR_RESULT, TRUE, FuchsiaCity_SafariZoneEntrance_EventScript_Steven_Trade
 	goto_if_set FLAG_IS_KANTO_CHAMPION, FuchsiaCity_SafariZoneEntrance_StevenChamp
 	msgbox FuchsiaCity_SafariZoneEntrance_Text_Steven, MSGBOX_NPC
 	release
@@ -84,11 +84,6 @@ FuchsiaCity_SafariZoneEntrance_StevenChamp::
 	msgbox FuchsiaCity_SafariZoneEntrance_Text_StevenChamp, MSGBOX_DEFAULT
 	giveitem ITEM_EON_TICKET
 	closemessage
-	release
-	end
-
-FuchsiaCity_SafariZoneEntrance_StevenAfter::
-	msgbox FuchsiaCity_SafariZoneEntrance_Text_Steven, MSGBOX_NPC
 	release
 	end
 
@@ -326,6 +321,58 @@ FuchsiaCity_SafariZoneEntrance_Text_UpgradeGuyDeclined:
 FuchsiaCity_SafariZoneEntrance_Text_UpgradeGuyAccepted:
 	.string "Enjoy the premium SAFARI ZONE\n"
 	.string "experience!$"
+
+FuchsiaCity_SafariZoneEntrance_EventScript_Steven_Trade::
+	goto_if_set FLAG_FUCHSIA_SAFARI_NPC_TRADE_COMPLETED, FuchsiaCity_SafariZoneEntrance_EventScript_StevenTradeCompleted
+	ingame_trade INGAME_TRADE_BELDUM, FuchsiaCity_SafariZoneEntrance_Text_StevenWantToTrade, FuchsiaCity_SafariZoneEntrance_EventScript_StevenDeclineTrade, FuchsiaCity_SafariZoneEntrance_EventScript_StevenNotRequestedMon, FuchsiaCity_SafariZoneEntrance_Text_StevenTakeCare
+	setflag FLAG_FUCHSIA_SAFARI_NPC_TRADE_COMPLETED
+	release
+	end
+
+FuchsiaCity_SafariZoneEntrance_EventScript_StevenDeclineTrade::
+	msgbox FuchsiaCity_SafariZoneEntrance_Text_StevenDeclineTrade, MSGBOX_DEFAULT
+	release
+	end
+
+FuchsiaCity_SafariZoneEntrance_EventScript_StevenNotRequestedMon::
+	bufferspeciesname STR_VAR_1, VAR_0x8009
+	msgbox FuchsiaCity_SafariZoneEntrance_Text_StevenNotRequestedMon, MSGBOX_DEFAULT
+	release
+	end
+
+FuchsiaCity_SafariZoneEntrance_EventScript_StevenTradeCompleted::
+	msgbox FuchsiaCity_SafariZoneEntrance_Text_StevenTradeCompleted, MSGBOX_DEFAULT
+	release
+	end
+
+FuchsiaCity_SafariZoneEntrance_Text_StevenWantToTrade:
+	.string "Say, {PLAYER}…\n"
+	.string "I've been raising this BELDUM\l"
+	.string "for a while now.\p"
+	.string "But I think it would do better\n"
+	.string "with a trainer like you.\p"
+	.string "Would you trade me a {STR_VAR_1}\n"
+	.string "for my {STR_VAR_2}?$"
+
+FuchsiaCity_SafariZoneEntrance_Text_StevenTakeCare:
+	.string "Excellent!\n"
+	.string "Please take good care of IRON.$"
+
+FuchsiaCity_SafariZoneEntrance_Text_StevenDeclineTrade:
+	.string "That's all right.\n"
+	.string "The offer stands if you change\l"
+	.string "your mind.$"
+
+FuchsiaCity_SafariZoneEntrance_Text_StevenNotRequestedMon:
+	.string "Hmm, that's not a {STR_VAR_1}.\n"
+	.string "That's not quite what I had\l"
+	.string "in mind.$"
+
+FuchsiaCity_SafariZoneEntrance_Text_StevenTradeCompleted:
+	.string "How is IRON doing?\n"
+	.string "BELDUM are fascinating POKéMON.\p"
+	.string "They communicate with each other\n"
+	.string "using magnetic pulses.$"
 
 FuchsiaCity_SafariZoneEntrance_Text_MaxLevel:
 	.string "Hello {PLAYER}, thank you for\n"

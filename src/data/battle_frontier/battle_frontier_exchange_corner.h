@@ -1,3 +1,121 @@
+struct BPShopEntry
+{
+    u16 item;
+    u16 bpCost;
+};
+
+static const struct BPShopEntry sBPVitaminShopEntries[] = {
+    { ITEM_PROTEIN, 1 },
+    { ITEM_CALCIUM, 1 },
+    { ITEM_IRON,    1 },
+    { ITEM_ZINC,    1 },
+    { ITEM_CARBOS,  1 },
+    { ITEM_HP_UP,   1 },
+    { ITEM_ABILITY_CAPSULE,   32 },
+    { ITEM_ABILITY_PATCH,   64 },
+    { ITEM_NONE,    0 },
+};
+
+static const struct BPShopEntry sBPPowerShopEntries[] = {
+    { ITEM_MACHO_BRACE, 64 },
+    { ITEM_POWER_WEIGHT, 64 },
+    { ITEM_POWER_BRACER, 64 },
+    { ITEM_POWER_BELT, 64 },
+    { ITEM_POWER_LENS, 64 },
+    { ITEM_POWER_BAND, 64 },
+    { ITEM_POWER_ANKLET, 64 },
+    { ITEM_NONE,    0 },
+};
+
+static const struct BPShopEntry sBPHoldItemShopEntries[] = {
+    { ITEM_LEFTOVERS,     48 },
+    { ITEM_WHITE_HERB,    48 },
+    { ITEM_QUICK_CLAW,    48 },
+    { ITEM_MENTAL_HERB,   48 },
+    { ITEM_BRIGHT_POWDER, 64 },
+    { ITEM_CHOICE_BAND,   64 },
+    { ITEM_KINGS_ROCK,    64 },
+    { ITEM_FOCUS_BAND,    64 },
+    { ITEM_SCOPE_LENS,    64 },
+    { ITEM_MUSCLE_BAND,    64 },
+    { ITEM_WISE_GLASSES,    64 },
+    { ITEM_LIFE_ORB,    64 },
+    { ITEM_CHOICE_SPECS,    64 },
+    { ITEM_CHOICE_SCARF,    64 },
+    { ITEM_FOCUS_SASH,    64 },
+    { ITEM_ASSAULT_VEST,    64 },
+    { ITEM_NONE,           0 },
+};
+
+static const struct BPShopEntry sBPHoldItemShopEntries2[] = {
+   { ITEM_EVIOLITE,    64 },
+    { ITEM_EXPERT_BELT,    64 },
+    { ITEM_ROCKY_HELMET,    64 },
+    { ITEM_HEAVY_DUTY_BOOTS,    64 },
+    { ITEM_WEAKNESS_POLICY,    64 },
+    { ITEM_AIR_BALLOON,    64 },
+    { ITEM_RED_CARD,    64 },
+    { ITEM_EJECT_BUTTON,    64 },
+    { ITEM_METRONOME,    64 },
+    { ITEM_FLAME_ORB,    64 },
+    { ITEM_TOXIC_ORB,    64 },
+    { ITEM_LUCKY_EGG,    64 },
+    { ITEM_WIDE_LENS,    64 },
+    { ITEM_ZOOM_LENS,    64 },
+    { ITEM_MACHO_BRACE,    64 },
+    { ITEM_WHITE_HERB,    64 },
+    { ITEM_MENTAL_HERB,    64 },
+    { ITEM_NONE,           0 },
+};
+
+#if IS_HNS
+static const struct BPShopEntry sBPDecor1ShopEntries[] = {
+    { DECOR_KISS_POSTER,    48 },
+    { DECOR_KISS_CUSHION,   48 },
+    { DECOR_SMOOCHUM_DOLL,  48 },
+    { DECOR_TOGEPI_DOLL,    48 },
+    { DECOR_MEOWTH_DOLL,    48 },
+    { DECOR_CLEFAIRY_DOLL,  48 },
+    { DECOR_DITTO_DOLL,     48 },
+    { DECOR_CYNDAQUIL_DOLL, 80 },
+    { DECOR_CHIKORITA_DOLL, 80 },
+    { DECOR_TOTODILE_DOLL,  80 },
+    { ITEM_NONE,              0 },
+};
+#else
+static const struct BPShopEntry sBPDecor1ShopEntries[] = {
+    { DECOR_TREECKO_DOLL,   48 },
+    { DECOR_TORCHIC_DOLL,   48 },
+    { DECOR_MUDKIP_DOLL,    48 },
+    { DECOR_TOGEPI_DOLL,    48 },
+    { DECOR_MEOWTH_DOLL,    48 },
+    { DECOR_CLEFAIRY_DOLL,  48 },
+    { DECOR_DITTO_DOLL,     48 },
+    { DECOR_CYNDAQUIL_DOLL, 80 },
+    { DECOR_CHIKORITA_DOLL, 80 },
+    { DECOR_TOTODILE_DOLL,  80 },
+    { ITEM_NONE,              0 },
+};
+#endif
+
+static const struct BPShopEntry sBPDecor2ShopEntries[] = {
+    { DECOR_LAPRAS_DOLL,    128 },
+    { DECOR_VENUSAUR_DOLL,  256 },
+    { DECOR_CHARIZARD_DOLL, 256 },
+    { DECOR_BLASTOISE_DOLL, 256 },
+    { ITEM_NONE,              0 },
+};
+
+static const struct BPShopEntry sBPPokeBallShopEntries[] = {
+    { ITEM_NET_BALL,     1 },
+    { ITEM_DIVE_BALL,    1 },
+    { ITEM_NEST_BALL,    1 },
+    { ITEM_REPEAT_BALL,  1 },
+    { ITEM_TIMER_BALL,   1 },
+    { ITEM_LUXURY_BALL,  1 },
+    { ITEM_NONE,         0 },
+};
+
 static const u16 sFrontierExchangeCorner_Decor1[] =
 {
     DECOR_KISS_POSTER,

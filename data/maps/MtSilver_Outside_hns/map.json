@@ -209,6 +209,22 @@
   "coord_events": [],
   "bg_events": [
     {
+      "type": "hidden_item",
+      "x": 8,
+      "y": 29,
+      "elevation": 0,
+      "item": "ITEM_REAPER_CLOTH",
+      "flag": "FLAG_HIDDEN_ITEM_MT_SILVER_OUTSIDE_REAPER_CLOTH"
+    },
+    {
+      "type": "hidden_item",
+      "x": 16,
+      "y": 22,
+      "elevation": 0,
+      "item": "ITEM_FULL_RESTORE",
+      "flag": "FLAG_HIDDEN_ITEM_MT_SILVER_OUTSIDE_FULL_RESTORE"
+    },
+    {
       "type": "sign",
       "x": 15,
       "y": 9,

@@ -24,7 +24,7 @@
 #include "event_data.h"
 #include "random.h"
 
-#if !IS_FRLG
+#if !IS_FRLG && !IS_HNS
 
 #define COLOR_DARK_GREEN RGB(7, 11, 6)
 #define COLOR_LIGHT_GREEN RGB(13, 20, 12)
@@ -1624,4 +1624,4 @@ static void DeterminePokemonToShow(void)
     sCreditsData->numMonToShow = NUM_MON_SLIDES;
 }
 
-#endif // !IS_FRLG
+#endif // !IS_FRLG && !IS_HNS

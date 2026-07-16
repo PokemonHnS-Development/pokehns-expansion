@@ -480,6 +480,14 @@ gSpecials::
 	def_special GetFrontierBattlePoints
 	def_special ShowFrontierExchangeCornerItemIconWindow
 	def_special CloseFrontierExchangeCornerItemIconWindow
+	def_special CreateBPVitaminShop
+	def_special CreateBPHoldItemShop
+	def_special CreateBPDecorShop1
+	def_special CreateBPDecorShop2
+	def_special CreateBPPokeBallShop
+	def_special CreateBPHoldItemShop2
+	def_special CreateBPPowerShop
+	def_special CreateKurtBallShop
 	def_special DisplayBerryPowderVendorMenu
 	def_special RemoveBerryPowderVendorMenu
 	def_special HasEnoughBerryPowder
@@ -652,7 +660,7 @@ gSpecials::
 	def_special ExitBugContestMode
 	def_special TransferBugContestMon
 	def_special JudgeBugContestMon
-	def_special RemoveSafariBalls
+	def_special RemoveSportBalls
 	def_special ShowBugContestChosenMon
 	def_special SwitchMonAbility
 	def_special NameRival
@@ -661,4 +669,26 @@ gSpecials::
 	def_special IsPokecenterChallengeActivated
 	def_special IsOneTypeChallengeActive
 	def_special CheckRadioStation
+	def_special Special_BuenaPasswordShowMultichoice
+	def_special Special_BuenaCheckAnswer
+	def_special Special_BuenaRollReward
+	def_special GetAlolaCatchProgress
+	def_special GetGalarCatchProgress
+	def_special GetHisuiCatchProgress
+	def_special GetPaldeaCatchProgress
+	def_special HasAllJohotoMons
+	def_special HasAllRegionalMons
+	def_special CheckPartyForSpecies
+	def_special GetRegionalFormSpecies
+	def_special ConvertToRegionalForm
+	def_special Special_ViewVoltorbFlip
+	def_special Special_MomEnableSaving
+	def_special Special_MomDisableSaving
+	def_special Special_MomGetBalance
+	def_special Special_MomDeposit
+	def_special Special_MomWithdraw
+	def_special Special_MomIsSavingEnabled
+	def_special Special_MomEnsureInitialized
+	def_special Special_MomOpenDepositInput
+	def_special Special_MomOpenWithdrawInput
 

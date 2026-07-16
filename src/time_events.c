@@ -85,9 +85,19 @@ void UpdateShoalTideFlag(void)
     {
         RtcCalcLocalTime();
         if (tide[gLocalTime.hours])
+        {
             FlagSet(FLAG_SYS_SHOAL_TIDE);
+#if IS_HNS
+            FlagSet(FLAG_SYS_LAKE_OF_RAGE_TIDE);
+#endif
+        }
         else
+        {
             FlagClear(FLAG_SYS_SHOAL_TIDE);
+#if IS_HNS
+            FlagClear(FLAG_SYS_LAKE_OF_RAGE_TIDE);
+#endif
+        }
     }
 }
 

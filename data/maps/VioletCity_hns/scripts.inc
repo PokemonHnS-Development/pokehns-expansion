@@ -177,6 +177,7 @@ VioletCity_EventScript_Rattata::
 
 VioletCity_EventScript_ElmCall_Trigger::
 	lock
+	setspeaker VioletCity_Text_ElmName
 	pokenavcall VioletCity_Text_Elm_Call
 	waitmessage
 	delay 30
@@ -462,6 +463,9 @@ VioletCity_Text_Bellsprout:
 
 VioletCity_Text_Rattata:
 	.string "RATTATA: RATTATARATTA!$"
+
+VioletCity_Text_ElmName:
+	.string "PROF.ELM$"
 
 VioletCity_Text_Elm_Call:
 	.string "PROF.ELM: Hello, {PLAYER}? We\n"

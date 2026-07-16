@@ -110,195 +110,41 @@ AzaleaTown_KurtsHouse_EventScript_Kurt::
 	closemessage
 	call_if_unset FLAG_CAUGHT_CELEBI, AzaleaTown_KurtsHouse_EventScript_KurtCheckGSBall
 AzaleaTown_KurtsHouse_EventScript_Kurt2::
-	multichoice 20, 0, MULTI_KURT_BALLS, FALSE
-	switch VAR_RESULT
-	case 0, AzaleaTown_KurtsHouse_EventScript_Kurt_Love
-	case 1, AzaleaTown_KurtsHouse_EventScript_Kurt_Lure
-	case 2, AzaleaTown_KurtsHouse_EventScript_Kurt_Friend
-	case 3, AzaleaTown_KurtsHouse_EventScript_Kurt_Heavy
-	case 4, AzaleaTown_KurtsHouse_EventScript_Kurt_Moon
-	case 5, AzaleaTown_KurtsHouse_EventScript_Kurt_Fast
-	case 6, AzaleaTown_KurtsHouse_EventScript_Kurt_Level
-	case 7, AzaleaTown_KurtsHouse_EventScript_KurtCancel
-	case MULTI_B_PRESSED, AzaleaTown_KurtsHouse_EventScript_KurtCancel
-	closemessage
-
-AzaleaTown_KurtsHouse_EventScript_Kurt_Love::
-	closemessage
-	bufferitemname STR_VAR_1, ITEM_PECHA_BERRY
-	checkitem ITEM_PECHA_BERRY, 5
-	goto_if_eq VAR_RESULT, FALSE, AzaleaTown_KurtsHouse_EventScript_DontHaveBerry
-	msgbox KurtsHouse_Text_KurtGetStarted, MSGBOX_DEFAULT
-	closemessage
+	special CreateKurtBallShop
+	waitstate
+	goto_if_eq VAR_RESULT, FALSE, AzaleaTown_KurtsHouse_EventScript_KurtCancel
 	playse SE_BANG
 	applymovement LOCALID_AZALEA_TOWN_KURT, AzaleaTownKurt_Movement_Making_Ball
 	waitmovement 0
 	playse SE_BANG
 	applymovement LOCALID_AZALEA_TOWN_KURT, AzaleaTownKurt_Movement_Making_Ball
 	waitmovement 0
-	faceplayer
-	msgbox KurtsHouse_Text_KurtJustFinishedYourBall, MSGBOX_DEFAULT
-	waitmessage
-	giveitem ITEM_LOVE_BALL, 5
-	removeitem ITEM_PECHA_BERRY, 5
-	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
-	msgbox KurtsHouse_Text_KurtTurnedOutGreat, MSGBOX_DEFAULT
-	closemessage
-	turnobject LOCALID_AZALEA_TOWN_KURT, DIR_NORTH
-	release
-	end
-AzaleaTown_KurtsHouse_EventScript_Kurt_Lure::
-	closemessage
-	bufferitemname STR_VAR_1, ITEM_RAWST_BERRY
-	checkitem ITEM_RAWST_BERRY, 5
-	goto_if_eq VAR_RESULT, FALSE, AzaleaTown_KurtsHouse_EventScript_DontHaveBerry
-	msgbox KurtsHouse_Text_KurtGetStarted, MSGBOX_DEFAULT
-	closemessage
-	playse SE_BANG
-	applymovement LOCALID_AZALEA_TOWN_KURT, AzaleaTownKurt_Movement_Making_Ball
-	waitmovement 0
-	playse SE_BANG
-	applymovement LOCALID_AZALEA_TOWN_KURT, AzaleaTownKurt_Movement_Making_Ball
-	waitmovement 0
-	faceplayer
-	msgbox KurtsHouse_Text_KurtJustFinishedYourBall, MSGBOX_DEFAULT
-	waitmessage
-	giveitem ITEM_LURE_BALL, 5
-	removeitem ITEM_RAWST_BERRY, 5
-	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
-	msgbox KurtsHouse_Text_KurtTurnedOutGreat, MSGBOX_DEFAULT
-	closemessage
-	turnobject LOCALID_AZALEA_TOWN_KURT, DIR_NORTH
-	release
-	end
-AzaleaTown_KurtsHouse_EventScript_Kurt_Friend::
-	closemessage
-	bufferitemname STR_VAR_1, ITEM_CHERI_BERRY
-	checkitem ITEM_CHERI_BERRY, 5
-	goto_if_eq VAR_RESULT, FALSE, AzaleaTown_KurtsHouse_EventScript_DontHaveBerry
-	msgbox KurtsHouse_Text_KurtGetStarted, MSGBOX_DEFAULT
-	closemessage
-	playse SE_BANG
-	applymovement LOCALID_AZALEA_TOWN_KURT, AzaleaTownKurt_Movement_Making_Ball
-	waitmovement 0
-	playse SE_BANG
-	applymovement LOCALID_AZALEA_TOWN_KURT, AzaleaTownKurt_Movement_Making_Ball
-	waitmovement 0
-	faceplayer
-	msgbox KurtsHouse_Text_KurtJustFinishedYourBall, MSGBOX_DEFAULT
-	waitmessage
-	giveitem ITEM_FRIEND_BALL, 5
-	removeitem ITEM_CHERI_BERRY, 5
-	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
-	msgbox KurtsHouse_Text_KurtTurnedOutGreat, MSGBOX_DEFAULT
-	closemessage
-	turnobject LOCALID_AZALEA_TOWN_KURT, DIR_NORTH
-	release
-	end
-AzaleaTown_KurtsHouse_EventScript_Kurt_Heavy::
-	closemessage
-	bufferitemname STR_VAR_1, ITEM_ORAN_BERRY
-	checkitem ITEM_ORAN_BERRY, 5
-	goto_if_eq VAR_RESULT, FALSE, AzaleaTown_KurtsHouse_EventScript_DontHaveBerry
-	msgbox KurtsHouse_Text_KurtGetStarted, MSGBOX_DEFAULT
-	closemessage
-	playse SE_BANG
-	applymovement LOCALID_AZALEA_TOWN_KURT, AzaleaTownKurt_Movement_Making_Ball
-	waitmovement 0
-	playse SE_BANG
-	applymovement LOCALID_AZALEA_TOWN_KURT, AzaleaTownKurt_Movement_Making_Ball
-	waitmovement 0
-	faceplayer
-	msgbox KurtsHouse_Text_KurtJustFinishedYourBall, MSGBOX_DEFAULT
-	waitmessage
-	giveitem ITEM_HEAVY_BALL, 5
-	removeitem ITEM_ORAN_BERRY, 5
-	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
-	msgbox KurtsHouse_Text_KurtTurnedOutGreat, MSGBOX_DEFAULT
-	closemessage
-	turnobject LOCALID_AZALEA_TOWN_KURT, DIR_NORTH
-	release
-	end
-AzaleaTown_KurtsHouse_EventScript_Kurt_Moon::
-	closemessage
-	bufferitemname STR_VAR_1, ITEM_CHESTO_BERRY
-	checkitem ITEM_CHESTO_BERRY, 5
-	goto_if_eq VAR_RESULT, FALSE, AzaleaTown_KurtsHouse_EventScript_DontHaveBerry
-	msgbox KurtsHouse_Text_KurtGetStarted, MSGBOX_DEFAULT
-	closemessage
-	playse SE_BANG
-	applymovement LOCALID_AZALEA_TOWN_KURT, AzaleaTownKurt_Movement_Making_Ball
-	waitmovement 0
-	playse SE_BANG
-	applymovement LOCALID_AZALEA_TOWN_KURT, AzaleaTownKurt_Movement_Making_Ball
-	waitmovement 0
-	faceplayer
-	msgbox KurtsHouse_Text_KurtJustFinishedYourBall, MSGBOX_DEFAULT
-	waitmessage
-	giveitem ITEM_MOON_BALL, 5
-	removeitem ITEM_CHESTO_BERRY, 5
-	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
-	msgbox KurtsHouse_Text_KurtTurnedOutGreat, MSGBOX_DEFAULT
-	closemessage
-	turnobject LOCALID_AZALEA_TOWN_KURT, DIR_NORTH
-	release
-	end
-AzaleaTown_KurtsHouse_EventScript_Kurt_Fast::
-	closemessage
-	bufferitemname STR_VAR_1, ITEM_ASPEAR_BERRY
-	checkitem ITEM_ASPEAR_BERRY, 5
-	goto_if_eq VAR_RESULT, FALSE, AzaleaTown_KurtsHouse_EventScript_DontHaveBerry
-	msgbox KurtsHouse_Text_KurtGetStarted, MSGBOX_DEFAULT
-	closemessage
-	playse SE_BANG
-	applymovement LOCALID_AZALEA_TOWN_KURT, AzaleaTownKurt_Movement_Making_Ball
-	waitmovement 0
-	playse SE_BANG
-	applymovement LOCALID_AZALEA_TOWN_KURT, AzaleaTownKurt_Movement_Making_Ball
-	waitmovement 0
-	faceplayer
-	msgbox KurtsHouse_Text_KurtJustFinishedYourBall, MSGBOX_DEFAULT
-	waitmessage
-	giveitem ITEM_FAST_BALL, 5
-	removeitem ITEM_ASPEAR_BERRY, 5
-	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
-	msgbox KurtsHouse_Text_KurtTurnedOutGreat, MSGBOX_DEFAULT
-	closemessage
-	turnobject LOCALID_AZALEA_TOWN_KURT, DIR_NORTH
-	release
-	end
-AzaleaTown_KurtsHouse_EventScript_Kurt_Level::
-	closemessage
-	bufferitemname STR_VAR_1, ITEM_PERSIM_BERRY
-	checkitem ITEM_PERSIM_BERRY, 5
-	goto_if_eq VAR_RESULT, FALSE, AzaleaTown_KurtsHouse_EventScript_DontHaveBerry
-	msgbox KurtsHouse_Text_KurtGetStarted, MSGBOX_DEFAULT
-	closemessage
-	playse SE_BANG
-	applymovement LOCALID_AZALEA_TOWN_KURT, AzaleaTownKurt_Movement_Making_Ball
-	waitmovement 0
-	playse SE_BANG
-	applymovement LOCALID_AZALEA_TOWN_KURT, AzaleaTownKurt_Movement_Making_Ball
-	waitmovement 0
-	faceplayer
-	msgbox KurtsHouse_Text_KurtJustFinishedYourBall, MSGBOX_DEFAULT
-	waitmessage
-	giveitem ITEM_LEVEL_BALL, 5
-	removeitem ITEM_PERSIM_BERRY, 5
-	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
+	turnobject LOCALID_AZALEA_TOWN_KURT, DIR_SOUTH
+	goto_if_eq VAR_0x8005, 1, AzaleaTown_KurtsHouse_EventScript_SingularBall
+	bufferitemname STR_VAR_1, VAR_0x8004
+	buffernumberstring STR_VAR_2, VAR_0x8005
+	playfanfare MUS_OBTAIN_ITEM
+	msgbox KurtsHouse_Text_KurtFinishedPlural, MSGBOX_DEFAULT
+	waitfanfare
+	additem VAR_0x8004, VAR_0x8005
 	msgbox KurtsHouse_Text_KurtTurnedOutGreat, MSGBOX_DEFAULT
 	closemessage
 	turnobject LOCALID_AZALEA_TOWN_KURT, DIR_NORTH
 	release
 	end
 
-AzaleaTown_KurtsHouse_EventScript_DontHaveBerry::
-	msgbox KurtsHouse_Text_KurtThatsALetdown, MSGBOX_DEFAULT
+AzaleaTown_KurtsHouse_EventScript_SingularBall::
+	bufferitemname STR_VAR_1, VAR_0x8004
+	playfanfare MUS_OBTAIN_ITEM
+	msgbox KurtsHouse_Text_KurtFinishedSingular, MSGBOX_DEFAULT
+	waitfanfare
+	additem VAR_0x8004, VAR_0x8005
+	msgbox KurtsHouse_Text_KurtTurnedOutGreat, MSGBOX_DEFAULT
 	closemessage
-	goto AzaleaTown_KurtsHouse_EventScript_Kurt2
+	turnobject LOCALID_AZALEA_TOWN_KURT, DIR_NORTH
 	release
 	end
-	
+
 AzaleaTown_KurtsHouse_EventScript_KurtCancel::
 	closemessage
 	turnobject LOCALID_AZALEA_TOWN_KURT, DIR_NORTH
@@ -432,19 +278,27 @@ KurtsHouse_Text_KurtHonoredToMakeBalls:
 KurtsHouse_Text_KurtBallsFromApricorns:
 	.string "KURT: I make BALLS from BERRIES.\p"
 	.string "Collect them from trees and bring\n"
-	.string "'em to me in batches of 5.\p"
-	.string "I'll make BALLS out of them.$"
+	.string "'em to me.\p"
+	.string "I'll make POKé BALLS out of them.$"
 
 KurtsHouse_Text_KurtAskYouHaveAnApricorn:
-	.string "KURT: You have 5 BERRIES for me?\p"
-	.string "Fine! I'll turn them into BALLS.$"
+	.string "KURT: You have BERRIES for me?\p"
+	.string "Fine! I'll turn them into POKé BALLS.$"
 
 KurtsHouse_Text_KurtThatsALetdown:
-	.string "KURT: I don't see 5 {STR_VAR_1}s!$"
+	.string "KURT: I don't see any {STR_VAR_1}s!$"
 
-KurtsHouse_Text_KurtJustFinishedYourBall:
-	.string "KURT: Ah, {PLAYER}! \p"
-	.string "I just finished your BALL. Here!$"
+KurtsHouse_Text_KurtFinishedPlural:
+	.string "KURT: {PLAYER}!\n"
+	.string "Your {STR_VAR_1}s are done. Here!\p"
+	.string "{PLAYER} obtained\n"
+	.string "{STR_VAR_2} {STR_VAR_1}s!$"
+
+KurtsHouse_Text_KurtFinishedSingular:
+	.string "KURT: {PLAYER}!\n"
+	.string "Your {STR_VAR_1} is done. Here!\p"
+	.string "{PLAYER} obtained\n"
+	.string "the {STR_VAR_1}!$"
 
 KurtsHouse_Text_KurtTurnedOutGreat:
 	.string "KURT: That turned out great.\p"

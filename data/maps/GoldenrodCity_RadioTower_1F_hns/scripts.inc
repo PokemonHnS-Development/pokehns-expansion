@@ -278,11 +278,7 @@ GoldenrodCity_RadioTower_1F_EventScript_LotteryClerk::
 	applymovement 4, Common_Movement_WalkInPlaceFasterRight
 	waitmovement 0
 	playse SE_PC_ON
-	@special DoLotteryCornerComputerEffect
 	special PickLotteryCornerTicket
-	delay 220
-	@special EndLotteryCornerComputerEffect
-	delay 10
 	applymovement 4, Common_Movement_FacePlayer
 	waitmovement 0
 	goto_if_eq VAR_0x8004, 0, GoldenrodCity_RadioTower_1F_EventScript_NoMatch

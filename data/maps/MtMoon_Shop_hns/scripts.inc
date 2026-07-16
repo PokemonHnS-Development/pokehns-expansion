@@ -23,6 +23,7 @@ MtMoon_Shop_Pokemart:
 	.2byte ITEM_SODA_POP
 	.2byte ITEM_LEMONADE
 	.2byte ITEM_REPEL
+	.2byte ITEM_STRANGE_SOUVENIR
 	.2byte ITEM_NONE
 	release
 	end

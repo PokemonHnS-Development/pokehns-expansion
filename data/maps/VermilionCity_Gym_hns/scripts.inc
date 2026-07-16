@@ -262,7 +262,7 @@ VermilionCity_Gym_EventScript_Surge::
 	setflag FLAG_DEFEATED_VERMILION_GYM
 	addvar VAR_NUM_BADGES, 1
 	setvar VAR_0x8008, 11
-	call Common_EventScript_SetGymTrainers
+	call Common_EventScript_SetGymTrainers_hns
 	checkitem ITEM_TM_SHOCK_WAVE
 	call_if_eq VAR_RESULT, TRUE, VermilionCity_Gym_EventScript_GiveThunderstone
 	call_if_eq VAR_RESULT, FALSE, VermilionCity_Gym_EventScript_GiveTM

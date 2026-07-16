@@ -61,7 +61,7 @@ CianwoodGym_EventScript_ChuckVictory::
 	setflag FLAG_DEFEATED_CIANWOOD_GYM
 	addvar VAR_NUM_BADGES, 1
 	setvar VAR_0x8008, 5
-	call Common_EventScript_SetGymTrainers
+	call Common_EventScript_SetGymTrainers_hns
 	giveitem ITEM_TM_FOCUS_PUNCH
 	msgbox CianwoodGym_Text_ChuckTMSpeech, MSGBOX_DEFAULT
 	setvar VAR_GETFLY, 1

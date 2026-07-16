@@ -206,8 +206,9 @@ BlackthornGym_EventScript_Clair::
 	msgbox BlackthornGym_Text_ClairIntroText, MSGBOX_DEFAULT
 	trainerbattle_no_intro TRAINER_CLAIR_1_HNS, BlackthornGym_Text_ClairWinText
 	msgbox BlackthornGym_Text_ClairText_GoToDragonsDen, MSGBOX_DEFAULT
+	setflag FLAG_DEFEATED_BLACKTHORN_GYM
 	setvar VAR_0x8008, 8
-	call Common_EventScript_SetGymTrainers
+	call Common_EventScript_SetGymTrainers_hns
 	setvar VAR_BLACKTHORN_CITY_STATE, 2
 	closemessage
 	release
@@ -369,13 +370,19 @@ BlackthornGym_Text_CooltrainerfLolaAfterBattleText:
 BlackthornGym_EventScript_GymGuy::
 	lock
 	faceplayer
-	goto_if_set FLAG_DEFEATED_BLACKTHORN_GYM, EcruteakCity_Gym_EventScript_GymGuy2
+	goto_if_set FLAG_DEFEATED_BLACKTHORN_GYM, BlackthornGym_EventScript_GymGuy2
 	msgbox BlackthornGym_Text_GuideText, MSGBOX_DEFAULT
 	closemessage
 	release
 	end
 	
 BlackthornGym_EventScript_GymGuy2::
+	goto_if_set FLAG_BADGE08_GET, BlackthornGym_EventScript_GymGuy3
+	msgbox BlackthornGym_Text_GuideGotoDragonsDen, MSGBOX_DEFAULT
+	release
+	end
+
+BlackthornGym_EventScript_GymGuy3::
 	msgbox BlackthornGym_Text_GuideWinText, MSGBOX_DEFAULT
 	release
 	end	
@@ -396,6 +403,13 @@ BlackthornGym_Text_GuideText:
     .string "you want to win.$"
     .string "You got this!$"
 
+BlackthornGym_Text_GuideGotoDragonsDen:
+	.string "You were great to beat CLAIR!\p"
+    .string "She can be a bit of a sore loser,\n"
+	.string "though\p"
+    .string "Sounds like you need to head to the\n"
+    .string "DRAGON'S DEN if you want that GYM BADGE!$"
+
 BlackthornGym_Text_GuideWinText:
     .string "You were great to beat CLAIR!\p"
     .string "All that's left is the POKéMON\n"
@@ -406,7 +420,7 @@ BlackthornGym_Text_GuideWinText:
 
 BlackthornGym_EventScript_Statue::
 	lock
-	goto_if_set FLAG_DEFEATED_BLACKTHORN_GYM, BlackthornGym_EventScript_Statue2
+	goto_if_set FLAG_BADGE08_GET, BlackthornGym_EventScript_Statue2
 	msgbox BlackthornGym_Text_GymStatue, MSGBOX_DEFAULT
 	closemessage
 	release

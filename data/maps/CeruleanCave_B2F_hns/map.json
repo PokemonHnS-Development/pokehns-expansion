@@ -221,7 +221,32 @@
     }
   ],
   "coord_events": [],
-  "bg_events": [],
+  "bg_events": [
+    {
+      "type": "hidden_item",
+      "x": 31,
+      "y": 16,
+      "elevation": 0,
+      "item": "ITEM_DUSK_STONE",
+      "flag": "FLAG_HIDDEN_ITEM_CERULEAN_CAVE_B2F_DUSK_STONE"
+    },
+    {
+      "type": "hidden_item",
+      "x": 39,
+      "y": 7,
+      "elevation": 0,
+      "item": "ITEM_ELECTIRIZER",
+      "flag": "FLAG_HIDDEN_ITEM_CERULEAN_CAVE_B2F_ELECTIRIZER"
+    },
+    {
+      "type": "hidden_item",
+      "x": 19,
+      "y": 17,
+      "elevation": 0,
+      "item": "ITEM_BLACK_SLUDGE",
+      "flag": "FLAG_HIDDEN_ITEM_CERULEAN_CAVE_B2F_BLACK_SLUDGE"
+    }
+  ],
   "game_version": "hns",
   "region": "REGION_KANTO"
 }

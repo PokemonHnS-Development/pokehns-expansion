@@ -42,7 +42,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_QUAGSIRE",
-      "x": 19,
+      "x": 18,
       "y": 26,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",

@@ -479,6 +479,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "CeladonCity_EventScript_CitySign"
+    },
+    {
+      "type": "hidden_item",
+      "x": 25,
+      "y": 7,
+      "elevation": 0,
+      "item": "ITEM_PP_UP",
+      "flag": "FLAG_HIDDEN_ITEM_CELADON_CITY_PP_UP_HNS"
     }
   ],
   "game_version": "hns",

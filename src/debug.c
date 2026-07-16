@@ -1161,6 +1161,32 @@ static const u16 sLocationFlags[] =
     FLAG_WORLD_MAP_SIX_ISLAND,
     FLAG_WORLD_MAP_ROUTE4_POKEMON_CENTER_1F,
     FLAG_WORLD_MAP_ROUTE10_POKEMON_CENTER_1F,
+    FLAG_VISITED_NEWBARK_TOWN,
+    FLAG_VISITED_CHERRYGROVE_CITY,
+    FLAG_VISITED_VIOLET_CITY,
+    FLAG_VISITED_AZALEA_TOWN,
+    FLAG_VISITED_GOLDENROD_CITY,
+    FLAG_VISITED_ECRUTEAK_CITY,
+    FLAG_VISITED_OLIVINE_CITY,
+    FLAG_VISITED_CIANWOOD_CITY,
+    FLAG_VISITED_MAHOGANY_TOWN,
+    FLAG_VISITED_LAKE_OF_RAGE,
+    FLAG_VISITED_BLACKTHORN_CITY,
+    FLAG_VISITED_INDIGO_PLATEAU,
+    FLAG_VISITED_MT_SILVER,
+    FLAG_VISITED_RECEPTION_GATE,
+    FLAG_VISITED_SAFARI_ZONE_GATE,
+    FLAG_VISITED_KANTO,
+    FLAG_VISITED_PALLET_TOWN,
+    FLAG_VISITED_VIRIDIAN_CITY,
+    FLAG_VISITED_PEWTER_CITY,
+    FLAG_VISITED_CERULEAN_CITY,
+    FLAG_VISITED_VERMILION_CITY,
+    FLAG_VISITED_LAVENDER_TOWN,
+    FLAG_VISITED_CELADON_CITY,
+    FLAG_VISITED_SAFFRON_CITY,
+    FLAG_VISITED_FUCHSIA_CITY,
+    FLAG_VISITED_CINNABAR_ISLAND,
 };
 
 static u32 Debug_CheckToggleFlags(u8 id)
@@ -1752,7 +1778,7 @@ static void DebugAction_Util_WatchCredits(u8 taskId)
 
 static void DebugAction_Player_Name(u8 taskId)
 {
-    DoNamingScreen(NAMING_SCREEN_PLAYER, gSaveBlock2Ptr->playerName, gSaveBlock2Ptr->playerGender, 0, 0, CB2_ReturnToFieldContinueScript);
+    DoNamingScreen(NAMING_SCREEN_PLAYER, gSaveBlock2Ptr->playerName, gSaveBlock2Ptr->playerGender, 0, 0, 0, CB2_ReturnToFieldContinueScript);
 }
 
 static void DebugAction_Player_Gender(u8 taskId)
@@ -2423,12 +2449,28 @@ static void DebugAction_FlagsVars_SetValue(u8 taskId)
 
 static void DebugAction_FlagsVars_PokedexFlags_All(u8 taskId)
 {
-    u16 i;
-    for (i = 0; i < NATIONAL_DEX_COUNT; i++)
+    u16 i, j;
+    // for (i = 0; i < NATIONAL_DEX_COUNT - 1; i++)
+    // {
+    //     GetSetPokedexFlag(i + 1, FLAG_SET_CAUGHT);
+    //     GetSetPokedexFlag(i + 1, FLAG_SET_SEEN);
+    // }
+/*
+    for (i = 0; i < REGIONAL_DEX_COUNT - 1; ++i)
     {
-        GetSetPokedexFlag(i + 1, FLAG_SET_CAUGHT);
-        GetSetPokedexFlag(i + 1, FLAG_SET_SEEN);
+         j = RegionalToNationalOrder(i + 1);
+         GetSetPokedexFlag(j, FLAG_SET_CAUGHT);
+         GetSetPokedexFlag(j, FLAG_SET_SEEN);
+     }
+         */
+
+    for (i = 0; i < OBTAINABLE_DEX_COUNT - 1; ++i)
+    {
+        j = ObtainableToNationalOrder(i + 1);
+        GetSetPokedexFlag(j, FLAG_SET_CAUGHT);
+        GetSetPokedexFlag(j, FLAG_SET_SEEN);
     }
+
     Debug_DestroyMenu_Full(taskId);
     ScriptContext_Enable();
 }

@@ -305,6 +305,14 @@
   "coord_events": [],
   "bg_events": [
     {
+      "type": "hidden_item",
+      "x": 77,
+      "y": 8,
+      "elevation": 0,
+      "item": "ITEM_ROSE_INCENSE",
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE15_ROSE_INCENSE"
+    },
+    {
       "type": "sign",
       "x": 37,
       "y": 13,

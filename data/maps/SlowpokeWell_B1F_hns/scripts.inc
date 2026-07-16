@@ -68,7 +68,7 @@ SlowpokeWell_B1F_EventScript_Proton::
 	clearflag FLAG_HIDE_AZALEA_TOWN_SLOWPOKE
 	setvar VAR_AZALEA_TOWN_STATE, 3
 	warp MAP_AZALEA_TOWN_KURTS_HOUSE_HNS, 15, 4
-	release
+	waitstate
 	end
 
 SlowpokeWell_B1F_Movement_Kurt:

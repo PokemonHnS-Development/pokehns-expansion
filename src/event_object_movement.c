@@ -182,6 +182,7 @@ static void UpdateObjectEventVisibility(struct ObjectEvent *, struct Sprite *);
 static void MakeSpriteTemplateFromObjectEventTemplate(const struct ObjectEventTemplate *, struct SpriteTemplate *, const struct SubspriteTable **);
 static void GetObjectEventMovingCameraOffset(s16 *, s16 *);
 const struct ObjectEventTemplate *GetObjectEventTemplateByLocalIdAndMap(u8 localId, u8 mapNum, u8 mapGroup);
+u8 LoadObjectEventPalette(u16);
 static void RemoveObjectEventIfOutsideView(struct ObjectEvent *);
 static void SpawnObjectEventOnReturnToField(u8, s16, s16);
 static void SetPlayerAvatarObjectEventIdAndObjectId(u8, u8);
@@ -583,6 +584,7 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_GoldReflection_hns, OBJ_EVENT_PAL_TAG_GOLD_REFLECTION_HNS},
     {gObjectEventPal_Kris_hns, OBJ_EVENT_PAL_TAG_KRIS_HNS},
     {gObjectEventPal_KrisReflection_hns, OBJ_EVENT_PAL_TAG_KRIS_REFLECTION_HNS},
+    {gObjectEventPal_AlolaOak_hns, OBJ_EVENT_PAL_TAG_ALOLA_OAK_HNS},
 #endif // IS_HNS
 #if OW_FOLLOWERS_POKEBALLS
     {gObjectEventPal_MasterBall,            OBJ_EVENT_PAL_TAG_BALL_MASTER},
@@ -2043,6 +2045,15 @@ u8 TrySpawnObjectEventTemplate(const struct ObjectEventTemplate *objectEventTemp
     if (subspriteTables)
         SetSubspriteTables(&gSprites[gObjectEvents[objectEventId].spriteId], subspriteTables);
 
+#if IS_HNS
+    // Whirlpool sprites render below the player's surf sprite
+    if (graphicsId == OBJ_EVENT_GFX_WHIRLPOOL_HNS)
+    {
+        gObjectEvents[objectEventId].fixedPriority = TRUE;
+        gSprites[gObjectEvents[objectEventId].spriteId].subpriority = 182;
+    }
+#endif
+
     return objectEventId;
 }
 
@@ -2339,7 +2350,14 @@ static u32 LoadDynamicFollowerPalette(u32 species, bool32 shiny, bool32 female)
     #endif
         {
             if (shiny)
-                spritePalette.data = gSpeciesInfo[species].overworldShinyPalette;
+            {
+                if (gSaveBlock3Ptr != NULL
+                    && gSaveBlock3Ptr->challengeSettings.tx_Features_ShinyColors
+                    && gSpeciesInfo[species].overworldShinyPaletteModern != NULL)
+                    spritePalette.data = gSpeciesInfo[species].overworldShinyPaletteModern;
+                else
+                    spritePalette.data = gSpeciesInfo[species].overworldShinyPalette;
+            }
             else
                 spritePalette.data = gSpeciesInfo[species].overworldPalette;
         }
@@ -3244,6 +3262,13 @@ static void SpawnObjectEventOnReturnToField(u8 objectEventId, s16 x, s16 y)
 
         ResetObjectEventFldEffData(objectEvent);
         SetObjectSubpriorityByElevation(objectEvent->previousElevation, sprite, 1);
+#if IS_HNS
+        if (objectEvent->graphicsId == OBJ_EVENT_GFX_WHIRLPOOL_HNS)
+        {
+            objectEvent->fixedPriority = TRUE;
+            sprite->subpriority = 182;
+        }
+#endif
     }
 }
 
@@ -10729,7 +10754,7 @@ static void DoFlaggedGroundEffects(struct ObjectEvent *objEvent, struct Sprite *
     for (i = 0; i < ARRAY_COUNT(sGroundEffectFuncs); i++, flags >>= 1)
         if (flags & 1)
             sGroundEffectFuncs[i](objEvent, sprite);
-    if (!OW_OBJECT_VANILLA_SHADOWS && CurrentMapHasShadows() && !(gWeatherPtr->noShadows || objEvent->inHotSprings || objEvent->inSandPile || MetatileBehavior_IsPuddle(objEvent->currentMetatileBehavior)))
+    if (!OW_OBJECT_VANILLA_SHADOWS && !(gWeatherPtr->noShadows || objEvent->inHotSprings || objEvent->inSandPile || MetatileBehavior_IsPuddle(objEvent->currentMetatileBehavior)))
     {
         SetUpShadow(objEvent);
     }

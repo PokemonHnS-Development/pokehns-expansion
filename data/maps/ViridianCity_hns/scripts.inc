@@ -1,10 +1,34 @@
 ViridianCity_hns_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, ViridianCity_EventScript_CityEnter
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, ViridianCity_OnFrame
 	.byte 0
 
 ViridianCity_EventScript_CityEnter::
 	setflag FLAG_VISITED_VIRIDIAN_CITY
 	end
+
+ViridianCity_OnFrame::
+	map_script_2 VAR_OAK_MT_SILVER_CALL, 1, ViridianCity_EventScript_OakCall
+	.2byte 0
+
+ViridianCity_EventScript_OakCall::
+	lock
+	setspeaker ViridianCity_Text_OakName
+	pokenavcall ViridianCity_Text_OakCall
+	waitmessage
+	delay 30
+	setvar VAR_OAK_MT_SILVER_CALL, 2
+	release
+	end
+
+ViridianCity_Text_OakName:
+	.string "OAK$"
+
+ViridianCity_Text_OakCall:
+	.string "OAK: Ah, {PLAYER}!\p"
+	.string "Come and see my at my\n"
+	.string "LAB in PALLET TOWN\l"
+	.string "when you get the chance.$"
 
 ViridianCity_EventScript_Gramps::
 	lock

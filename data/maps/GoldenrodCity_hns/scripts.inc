@@ -49,16 +49,27 @@ GoldenrodCity_EventScript_Trigger:: @flagheap
 GoldenrodCity_Trigger_Music::
 	goto_if_lt VAR_GOLDENROD_CITY_STATE, 6, GoldenrodCity_Trigger_MusicNotYet
 	goto_if_ge VAR_GOLDENROD_CITY_STATE, 11, GoldenrodCity_Trigger_MusicNotYet
-	playbgm MUS_HG_ROCKET_TAKEOVER, TRUE
+	fadenewbgm MUS_HG_ROCKET_TAKEOVER
+	special ShowMapNamePopup
 	setvar VAR_TEMP_0, 1 
 	end
 
+GoldenrodCity_Trigger_Music2::
+	goto_if_lt VAR_GOLDENROD_CITY_STATE, 6, GoldenrodCity_Trigger_MusicNotYet
+	goto_if_ge VAR_GOLDENROD_CITY_STATE, 11, GoldenrodCity_Trigger_MusicNotYet
+	fadedefaultbgm
+	special ShowMapNamePopup
+	setvar VAR_TEMP_0, 1
+	end
+
 GoldenrodCity_Trigger_MusicNotYet::
+	special ShowMapNamePopup
 	setvar VAR_TEMP_0, 1
 	end
 
 GoldenrodCity_Elm_Togepi_Call::
 	lock
+	setspeaker GoldenrodCity_Text_ElmName
 	pokenavcall GoldenrodCity_Text_ElmCall
 	waitmessage
 	delay 30
@@ -302,6 +313,9 @@ GoldenrodCity_Text_Snubbull:
 
 GoldenrodCity_Text_MrMime:
 	.string "............................$"
+
+GoldenrodCity_Text_ElmName:
+	.string "PROF.ELM$"
 
 GoldenrodCity_Text_ElmCall:
 	.string "PROF.ELM: Hello, {PLAYER}?\n"

@@ -233,7 +233,16 @@
       "script": "Route14_TriggerSuicune_1"
     }
   ],
-  "bg_events": [],
+  "bg_events": [
+    {
+      "type": "hidden_item",
+      "x": 21,
+      "y": 22,
+      "elevation": 0,
+      "item": "ITEM_LUCKY_PUNCH",
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE14_LUCKY_PUNCH"
+    }
+  ],
   "game_version": "hns",
   "region": "REGION_KANTO"
 }

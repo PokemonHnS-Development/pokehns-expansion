@@ -12,10 +12,10 @@
   "allow_running": false,
   "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": 0,
+  "connections": null,
   "object_events": [
     {
-      "graphics_id": "OBJ_EVENT_GFX_OLD_WOMAN_HNS",
+      "graphics_id": "OBJ_EVENT_GFX_SKIER_F_HNS",
       "x": 8,
       "y": 3,
       "elevation": 0,
@@ -28,7 +28,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_OLD_MAN_2_HNS",
+      "graphics_id": "OBJ_EVENT_GFX_SKIER_M_HNS",
       "x": 17,
       "y": 9,
       "elevation": 0,
@@ -41,7 +41,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_GENTLEMAN_HNS",
+      "graphics_id": "OBJ_EVENT_GFX_SKIER_M_HNS",
       "x": 17,
       "y": 23,
       "elevation": 0,
@@ -54,7 +54,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_OLD_MAN_HNS",
+      "graphics_id": "OBJ_EVENT_GFX_SKIER_M_HNS",
       "x": 5,
       "y": 8,
       "elevation": 0,
@@ -67,7 +67,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_OLD_WOMAN_HNS",
+      "graphics_id": "OBJ_EVENT_GFX_SKIER_F_HNS",
       "x": 12,
       "y": 11,
       "elevation": 0,

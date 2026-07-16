@@ -24,6 +24,15 @@ extern const u8 gText_Lv50[];
 extern const u8 gText_OpenLevel[];
 
 extern const u8 gText_Mom[];
+extern const u8 gText_MomHowMuchDeposit[];
+extern const u8 gText_MomHowMuchWithdraw[];
+extern const u8 gText_MomMatchCallDesc[];
+extern const u8 gText_MomMatchCallName[];
+extern const u8 gText_MomMenuCheckSavings[];
+extern const u8 gText_MomMenuDeposit[];
+extern const u8 gText_MomMenuWithdraw[];
+extern const u8 gText_MomMenuToggleSaving[];
+extern const u8 gText_MomMenuExit[];
 extern const u8 gText_Dad[];
 
 extern const u8 gText_Cool[];
@@ -48,6 +57,12 @@ extern const u8 gText_Key_Items[];
 extern const u8 gText_Poke_Balls[];
 extern const u8 gText_TMs_Hms[];
 extern const u8 gText_Berries2[];
+
+extern const u8 gText_Medicine[];
+#if I_COMBINE_BAG_POCKETS == FALSE
+extern const u8 gText_BattleItems[];
+extern const u8 gText_Treasures[];
+#endif
 
 extern const u8 gText_Single2[];
 extern const u8 gText_Double2[];
@@ -114,6 +129,7 @@ extern const u8 gText_Toss2[];
 extern const u8 gText_Hoenn[];
 extern const u8 gText_Kanto[];
 extern const u8 gText_Johto[];
+extern const u8 gText_JohtoKanto[];
 extern const u8 gText_Ferry[];
 extern const u8 gText_SecretBase[];
 extern const u8 gText_Hideout[];
@@ -387,6 +403,42 @@ extern const u8 gBirchDexRatingText_LessThan180[];
 extern const u8 gBirchDexRatingText_LessThan190[];
 extern const u8 gBirchDexRatingText_LessThan200[];
 extern const u8 gBirchDexRatingText_DexCompleted[];
+
+// HnS dex rating text
+extern const u8 gJohtoDexRatingText_LessThan10[];
+extern const u8 gJohtoDexRatingText_LessThan20[];
+extern const u8 gJohtoDexRatingText_LessThan35[];
+extern const u8 gJohtoDexRatingText_LessThan50[];
+extern const u8 gJohtoDexRatingText_LessThan65[];
+extern const u8 gJohtoDexRatingText_LessThan80[];
+extern const u8 gJohtoDexRatingText_LessThan95[];
+extern const u8 gJohtoDexRatingText_LessThan110[];
+extern const u8 gJohtoDexRatingText_LessThan125[];
+extern const u8 gJohtoDexRatingText_LessThan140[];
+extern const u8 gJohtoDexRatingText_LessThan155[];
+extern const u8 gJohtoDexRatingText_LessThan170[];
+extern const u8 gJohtoDexRatingText_LessThan185[];
+extern const u8 gJohtoDexRatingText_LessThan200[];
+extern const u8 gJohtoDexRatingText_LessThan215[];
+extern const u8 gJohtoDexRatingText_LessThan230[];
+extern const u8 gJohtoDexRatingText_LessThan245[];
+extern const u8 gJohtoDexRatingText_LessThan260[];
+extern const u8 gJohtoDexRatingText_LessThan275[];
+extern const u8 gJohtoDexRatingText_LessThanMaxDex[];
+extern const u8 gJohtoDexRatingText_Complete[];
+
+extern const u8 gNationalDexRatingText_LessThan100[];
+extern const u8 gNationalDexRatingText_LessThan150[];
+extern const u8 gNationalDexRatingText_LessThan200[];
+extern const u8 gNationalDexRatingText_LessThan250[];
+extern const u8 gNationalDexRatingText_LessThan300[];
+extern const u8 gNationalDexRatingText_LessThan350[];
+extern const u8 gNationalDexRatingText_LessThan400[];
+extern const u8 gNationalDexRatingText_LessThan435[];
+extern const u8 gNationalDexRatingText_LessThan465[];
+extern const u8 gNationalDexRatingText_LessThan475[];
+extern const u8 gNationalDexRatingText_LessThanMaxDex[];
+extern const u8 gNationalDexRatingText_Complete[];
 
 // player PC text
 extern const u8 gText_WhatWouldYouLike[];
@@ -676,12 +728,22 @@ extern const u8 gText_AnythingElseICanHelp[];
 extern const u8 gText_QuitShopping[];
 extern const u8 gText_PokedollarVar1[];
 extern const u8 gText_YouDontHaveMoney[];
+extern const u8 gText_YouDontHaveEnoughBP[];
+extern const u8 gText_DontHaveEnoughVar1[];
+extern const u8 gText_Var1SureHowMany[];
+extern const u8 gText_xOne[];
+extern const u8 gText_KurtVar1AndYouWantedVar2Plural[];
+extern const u8 gText_KurtVar1AndYouWantedVar2Singular[];
+extern const u8 gText_KurtGettingStarted[];
+extern const u8 gText_ExitMenu[];
 extern const u8 gText_Var1CertainlyHowMany2[];
 extern const u8 gText_Var1CertainlyHowMany[];
 extern const u8 gText_Var1IsItThatllBeVar2[];
 extern const u8 gText_YouWantedVar1ThatllBeVar2[];
+extern const u8 gText_YouWantedVar1ThatllBeVar2BP[];
 extern const u8 gText_InBagVar1[];
 extern const u8 gText_Var1AndYouWantedVar2[];
+extern const u8 gText_Var1AndYouWantedVar2BP[];
 extern const u8 gText_HereYouGoThankYou[];
 extern const u8 gText_NoMoreRoomForThis[];
 extern const u8 gText_ThankYouIllSendItHome[];
@@ -2002,6 +2064,7 @@ extern const u8 gText_OnlyOnePhrase[];
 extern const u8 gText_YouCannotQuitHere[];
 extern const u8 gText_SectionMustBeCompleted[];
 extern const u8 gText_ThreeQuestionMarks[];
+extern const u8 gText_FourQuestionMarks[];
 extern const u8 gText_Profile[];
 extern const u8 gText_CombineFourWordsOrPhrases[];
 extern const u8 gText_AndMakeYourProfile[];

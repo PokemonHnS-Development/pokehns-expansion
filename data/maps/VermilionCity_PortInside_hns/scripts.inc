@@ -58,6 +58,7 @@ VermilionPort_EventScript_ChoseOlivine::
 	goto_if_eq VAR_RESULT, FALSE, VermilionPort_EventScript_Sailor_NoCredentials
 	call VermilionPort_EventScript_EnterShip
 	warpsilent MAP_OLIVINE_CITY_PORT_INSIDE_HNS, 8, 16
+	waitstate
 	release
 	end
 
@@ -69,6 +70,7 @@ VermilionPort_EventScript_ChoseSouthernIsland::
 	goto_if_eq VAR_RESULT, FALSE, VermilionPort_EventScript_Sailor_NoCredentials
 	call VermilionPort_EventScript_EnterShip
 	warpsilent MAP_SOUTHERN_ISLAND_EXTERIOR_HNS, 13, 22
+	waitstate
 	release
 	end
 
@@ -80,6 +82,7 @@ VermilionPort_EventScript_ChoseBirthIsland::
 	goto_if_eq VAR_RESULT, FALSE, VermilionPort_EventScript_Sailor_NoCredentials
 	call VermilionPort_EventScript_EnterShip
 	warpsilent MAP_BIRTH_ISLAND_EXTERIOR_HNS, 13, 23
+	waitstate
 	release
 	end
 
@@ -91,6 +94,7 @@ VermilionPort_EventScript_ChoseFarawayIsland::
 	goto_if_eq VAR_RESULT, FALSE, VermilionPort_EventScript_Sailor_NoCredentials
 	call VermilionPort_EventScript_EnterShip
 	warpsilent MAP_FARAWAY_ISLAND_ENTRANCE_HNS, 13, 38
+	waitstate
 	release
 	end	
 
@@ -98,7 +102,8 @@ VermilionPort_EventScript_ChoseBattleFrontier::
 	closemessage
 	delay 20
 	call VermilionPort_EventScript_EnterShip
-	warpsilent MAP_BATTLE_FRONTIER_OUTSIDE_WEST, 20, 67
+	warpsilent MAP_BATTLE_FRONTIER_OUTSIDE_WEST_HNS, 20, 67
+	waitstate
 	release
 	end	
 
@@ -107,6 +112,7 @@ VermilionPort_EventScript_Sailor_MaidenVoyage::
 	call VermilionPort_EventScript_EnterShip
 	setvar VAR_SSAQUA_STATE, 1
 	warpsilent MAP_SSAQUA_1F_HNS, 29, 3
+	waitstate
 	release
 	end
 

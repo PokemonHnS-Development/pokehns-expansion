@@ -403,6 +403,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Route44_EventScript_Sign2"
+    },
+    {
+      "type": "hidden_item",
+      "x": 51,
+      "y": 7,
+      "elevation": 0,
+      "item": "ITEM_ELIXIR",
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE44_ELIXIR"
     }
   ],
   "game_version": "hns",

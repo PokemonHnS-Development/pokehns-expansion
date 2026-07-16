@@ -191,7 +191,7 @@ CeruleanCity_Gym_EventScript_Misty::
 	setflag FLAG_DEFEATED_CERULEAN_GYM
 	addvar VAR_NUM_BADGES, 1
 	setvar VAR_0x8008, 10
-	call Common_EventScript_SetGymTrainers
+	call Common_EventScript_SetGymTrainers_hns
 	msgbox CeruleanGym_Text_MistyTm, MSGBOX_DEFAULT
 	giveitem ITEM_TM_WATER_PULSE
 	clearflag FLAG_HIDE_CAPE_MISTY

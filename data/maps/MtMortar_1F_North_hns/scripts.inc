@@ -19,8 +19,8 @@ MtMortar_1F_North_EventScript_Item_MaxPotion::
     finditem ITEM_MAX_POTION
     end
 
-MtMortar_1F_North_EventScript_Item_Nugget::
-    finditem ITEM_NUGGET
+MtMortar_1F_North_EventScript_Item_Protector::
+    finditem ITEM_PROTECTOR
     end
 
 MtMortar_1F_North_EventScript_Item_UltraBall::

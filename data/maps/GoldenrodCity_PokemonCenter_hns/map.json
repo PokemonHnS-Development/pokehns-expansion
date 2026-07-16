@@ -12,11 +12,12 @@
   "allow_running": true,
   "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": 0,
+  "connections": null,
   "object_events": [
     {
+      "local_id": "LOCALID_NURSE",
       "graphics_id": "OBJ_EVENT_GFX_NURSE_HNS",
-      "x": 7,
+      "x": 5,
       "y": 2,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
@@ -25,12 +26,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "OldaleTown_PokemonCenter_1F_EventScript_Nurse",
-      "flag": "0",
-      "local_id": "LOCALID_NURSE"
+      "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_NURSE_CHANSEY_HNS",
-      "x": 8,
+      "x": 6,
       "y": 2,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
@@ -43,10 +43,10 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_LASS_HNS",
-      "x": 11,
-      "y": 5,
+      "x": 15,
+      "y": 9,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -57,7 +57,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_GAMEBOY_KID_HNS",
       "x": 2,
-      "y": 5,
+      "y": 7,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 1,
@@ -69,8 +69,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_OLD_WOMAN_HNS",
-      "x": 14,
-      "y": 6,
+      "x": 5,
+      "y": 8,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
@@ -82,8 +82,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_GAMEBOY_KID_HNS",
-      "x": 1,
-      "y": 5,
+      "x": 3,
+      "y": 7,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 1,
@@ -92,12 +92,51 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "GoldenrodCity_PokemonCenter_EventScript_GbaKid2",
       "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_LINK_RECEPTIONIST_HNS",
+      "x": 14,
+      "y": 5,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_INVISIBLE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "GoldenrodCity_PokemonCenter_EventScript_LinkNpc",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_LINK_RECEPTIONIST_HNS",
+      "x": 15,
+      "y": 5,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_INVISIBLE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "GoldenrodCity_PokemonCenter_EventScript_LinkNpc",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_LINK_RECEPTIONIST_HNS",
+      "x": 16,
+      "y": 6,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "GoldenrodCity_PokemonCenter_EventScript_LinkExplainerNpc",
+      "flag": "0"
     }
   ],
   "warp_events": [
     {
-      "x": 7,
-      "y": 8,
+      "x": 9,
+      "y": 9,
       "elevation": 0,
       "dest_map": "MAP_GOLDENROD_CITY_HNS",
       "dest_warp_id": "12"
@@ -107,7 +146,7 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 3,
+      "x": 1,
       "y": 1,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
@@ -115,16 +154,16 @@
     },
     {
       "type": "sign",
-      "x": 2,
-      "y": 1,
+      "x": 1,
+      "y": -1,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "EventScript_BookShelf"
     },
     {
       "type": "sign",
-      "x": 1,
-      "y": 1,
+      "x": 0,
+      "y": -1,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "EventScript_BookShelf"

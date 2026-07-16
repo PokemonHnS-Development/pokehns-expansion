@@ -26,6 +26,7 @@
 #include "main.h"
 #include "palette.h"
 #include "money.h"
+#include "mom_savings.h"
 #include "malloc.h"
 #include "bg.h"
 #include "string_util.h"
@@ -4129,7 +4130,8 @@ static void Cmd_getexp(void)
     case 0: // check if should receive exp at all
         if (IsOnPlayerSide(gBattlerFainted)
             || IsAiVsAiBattle()
-            || !BattleTypeAllowsExp())
+            || !BattleTypeAllowsExp()
+            || FlagGet(FLAG_DISABLE_EXP_GAIN))
         {
             gBattleScripting.getexpState = 6; // goto last case
         }
@@ -4208,9 +4210,22 @@ static void Cmd_getexp(void)
             }
             else
             {
-                *exp = calculatedExp;
-                gBattleStruct->expShareExpValue = calculatedExp / 2;
-                if (gBattleStruct->expShareExpValue == 0)
+                if (viaSentIn == 1 && viaExpShare <= 1)
+                {
+                    // Solo party member gets full exp — no sharing penalty.
+                    *exp = SAFE_DIV(calculatedExp, viaSentIn);
+                }
+                else
+                {
+                    *exp = SAFE_DIV(calculatedExp * B_EXPALL_PARTICIPANT_NUM,
+                                    viaSentIn    * B_EXPALL_PARTICIPANT_DEN);
+                }
+                if (*exp == 0)
+                    *exp = 1;
+
+                gBattleStruct->expShareExpValue = SAFE_DIV(calculatedExp * B_EXPALL_NONPARTICIPANT_NUM,
+                                                           B_EXPALL_NONPARTICIPANT_DEN);
+                if (gBattleStruct->expShareExpValue == 0 && calculatedExp != 0)
                     gBattleStruct->expShareExpValue = 1;
             }
 
@@ -6219,6 +6234,14 @@ static void Cmd_getmoneyreward(void)
         if (gBattleTypeFlags & BATTLE_TYPE_TWO_OPPONENTS)
             money += GetTrainerMoneyToGive(TRAINER_BATTLE_PARAM.opponentB);
         AddMoney(&gSaveBlock1Ptr->money, money);
+#if IS_HNS
+        if (Mom_IsSavingEnabled())
+        {
+            u32 depositAmount = money / 4;
+            if (depositAmount > 0)
+                Mom_AutoDepositFromBattle(depositAmount);
+        }
+#endif
     }
     else
     {
@@ -10896,7 +10919,7 @@ static bool32 CriticalCapture(u32 odds)
     if (B_CRITICAL_CAPTURE_LOCAL_DEX == TRUE)
         totalDexCount = REGIONAL_DEX_COUNT;
     else
-        totalDexCount = NATIONAL_DEX_COUNT;
+        totalDexCount = OBTAINABLE_DEX_COUNT;
 
     if (CheckBagHasItem(ITEM_CATCHING_CHARM, 1))
         charmBoost = (100 + B_CATCHING_CHARM_BOOST) / 100;
@@ -11403,6 +11426,7 @@ static void Cmd_trygivecaughtmonnick(void)
                            GetMonData(caughtMon, MON_DATA_SPECIES),
                            GetMonGender(caughtMon),
                            GetMonData(caughtMon, MON_DATA_PERSONALITY),
+                           GetMonData(caughtMon, MON_DATA_IS_SHINY),
                            callback);
 
             gBattleCommunication[MULTIUSE_STATE]++;

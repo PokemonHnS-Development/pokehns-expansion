@@ -18,6 +18,7 @@
 #include "easy_chat.h"
 #include "event_data.h"
 #include "money.h"
+#include "mom_savings.h"
 #include "trainer_hill.h"
 #include "trainer_tower.h"
 #include "tv.h"
@@ -228,6 +229,7 @@ void NewGameInitData(void)
     ClearFrontierRecord();
     ClearSav1();
     ClearSav3();
+    gSaveBlock1Ptr->saveVersion = 1;
     SetDefaultChallengeSettings();
     gSaveBlock3Ptr->challengeSettings = savedChallenge;
     ClearAllMail();
@@ -254,6 +256,7 @@ void NewGameInitData(void)
     ResetPokemonStorageSystem();
     DeactivateAllRoamers();
     gSaveBlock1Ptr->registeredItem = ITEM_NONE;
+    gSaveBlock3Ptr->registeredItemHold = ITEM_NONE;
     ClearBag();
     NewGameInitPCItems();
     ClearPokeblocks();
@@ -296,6 +299,7 @@ void NewGameInitData(void)
 
 #if IS_HNS
     StringCopy(gSaveBlock2Ptr->rivalName, gText_ExpandedPlaceholder_Silver);
+    InitMomSavings();
 #endif
 }
 

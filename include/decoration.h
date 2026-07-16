@@ -35,10 +35,22 @@ enum DecorationCategory
     DECORCAT_ORNAMENT,
     DECORCAT_MAT,
     DECORCAT_POSTER,
+    #if IS_HNS
+    DECORCAT_CUSHION
+    #else
     DECORCAT_DOLL,
     DECORCAT_CUSHION,
     DECORCAT_COUNT,
+    #endif
 };
+
+#if IS_HNS
+enum DecorationCategory_HnS
+{
+    DECORCAT_DOLL,
+    DECORCAT_COUNT,
+};
+#endif
 
 struct Decoration
 {

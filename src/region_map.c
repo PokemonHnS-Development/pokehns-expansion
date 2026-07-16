@@ -53,6 +53,7 @@ enum {
     TAG_PLAYER_ICON,
     TAG_FLY_ICON,
     TAG_FLY_ICON_BLUE,
+    TAG_FLY_ICON_GREEN,
 };
 
 // Window IDs for the fly map
@@ -263,6 +264,16 @@ static const struct RegionMapLocation sRegionMapEntries_Johto[] = {
     [MAPSEC_EMBEDDED_TOWER]    = { 1,  10, 1, 1, COMPOUND_STRING("EMBEDDED TOWER") },
     [MAPSEC_OLIVINE_LIGHTHOUSE] = { 3, 6,  1, 1, COMPOUND_STRING("LIGHTHOUSE") },
     [MAPSEC_TRAINER_HILL]      = { 2,  5,  1, 1, COMPOUND_STRING("TRAINER HILL") },
+    [MAPSEC_MELEMELE_ISLAND]   = { 26, 13, 1, 1, COMPOUND_STRING("MELEMELE ISLAND") },
+    [MAPSEC_AKALA_ISLAND]     = { 27, 12, 1, 1, COMPOUND_STRING("AKALA ISLAND") },
+    [MAPSEC_ULAULA_ISLAND]    = { 27, 13, 1, 1, COMPOUND_STRING("ULA'ULA ISLAND") },
+    [MAPSEC_PONI_ISLAND]      = { 25, 13, 1, 1, COMPOUND_STRING("PONI ISLAND") },
+    [MAPSEC_ALOLA_OCEAN]      = { 25, 12, 1, 1, COMPOUND_STRING("ALOLA OCEAN") },
+    [MAPSEC_AKALA_CAVE]       = { 27, 14, 1, 1, COMPOUND_STRING("AKALA CAVE") },
+    [MAPSEC_AKALA_FOREST]     = { 27, 11, 1, 1, COMPOUND_STRING("AKALA FOREST") },
+    [MAPSEC_PONI_CAVE]        = { 25, 14, 1, 1, COMPOUND_STRING("PONI CAVE") },
+    [MAPSEC_ULAULA_CAVE]     = { 26, 14, 1, 1, COMPOUND_STRING("ULA'ULA CAVE") },
+    [MAPSEC_ULAULA_CAVE_2]   = { 26, 12, 1, 1, COMPOUND_STRING("ULA'ULA CAVE") },
 };
 #endif
 
@@ -475,6 +486,7 @@ static const u32 sRegionMapFrameGfxLZ[] = INCBIN_U32("graphics/pokenav/region_ma
 static const u32 sRegionMapFrameTilemapLZ[] = INCBIN_U32("graphics/pokenav/region_map/frame.bin.smolTM");
 static const u16 sFlyTargetIcons_Pal[] = INCBIN_U16("graphics/pokenav/region_map/fly_target_icons.gbapal");
 static const u16 sFlyTargetIconsBlue_Pal[] = INCBIN_U16("graphics/pokenav/region_map/fly_target_icons_blue.gbapal");
+static const u16 sFlyTargetIconsGreen_Pal[] = INCBIN_U16("graphics/pokenav/region_map/fly_target_icons_green.gbapal");
 static const u32 sFlyTargetIcons_Gfx[] = INCBIN_U32("graphics/pokenav/region_map/fly_target_icons.4bpp.smol");
 
 static const u16 ALIGNED(4) sPokedexAreaMap_Pal[] = INCBIN_U16("graphics/pokedex/region_map.gbapal");
@@ -807,6 +819,8 @@ static const u8 sMapHealLocations[][3] =
     [MAPSEC_SAFFRON_CITY] = {MAP_GROUP(MAP_SAFFRON_CITY_HNS), MAP_NUM(MAP_SAFFRON_CITY_HNS), HEAL_LOCATION_SAFFRON_CITY_HNS},
     [MAPSEC_FUCHSIA_CITY] = {MAP_GROUP(MAP_FUCHSIA_CITY_HNS), MAP_NUM(MAP_FUCHSIA_CITY_HNS), HEAL_LOCATION_FUCHSIA_CITY_HNS},
     [MAPSEC_CINNABAR_ISLAND] = {MAP_GROUP(MAP_CINNABAR_ISLAND_HNS), MAP_NUM(MAP_CINNABAR_ISLAND_HNS), HEAL_LOCATION_CINNABAR_ISLAND_HNS},
+    [MAPSEC_MELEMELE_ISLAND] = {MAP_GROUP(MAP_MELEMELE_ISLE_HNS), MAP_NUM(MAP_MELEMELE_ISLE_HNS), HEAL_LOCATION_MELEMELE_ISLE_HNS},
+
 #endif
 };
 
@@ -897,6 +911,12 @@ static const struct SpritePalette sFlyTargetIconsBluePalette =
     .tag = TAG_FLY_ICON_BLUE
 };
 
+static const struct SpritePalette sFlyTargetIconsGreenPalette =
+{
+    .data = sFlyTargetIconsGreen_Pal,
+    .tag = TAG_FLY_ICON_GREEN
+};
+
 static const mapsec_u16_t sRedOutlineFlyDestinations[][2] =
 {
     {
@@ -907,6 +927,10 @@ static const mapsec_u16_t sRedOutlineFlyDestinations[][2] =
     {
         FLAG_VISITED_NEW_SINJOH,
         MAPSEC_NEW_SINJOH
+    },
+    {
+        FLAG_VISITED_ALOLA,
+        MAPSEC_MELEMELE_ISLAND
     },
 #endif
     {
@@ -988,6 +1012,14 @@ static const struct SpriteTemplate sFlyDestIconBlueSpriteTemplate =
 {
     .tileTag = TAG_FLY_ICON,
     .paletteTag = TAG_FLY_ICON_BLUE,
+    .oam = &sFlyDestIcon_OamData,
+    .anims = sFlyDestIcon_Anims,
+};
+
+static const struct SpriteTemplate sFlyDestIconGreenSpriteTemplate =
+{
+    .tileTag = TAG_FLY_ICON,
+    .paletteTag = TAG_FLY_ICON_GREEN,
     .oam = &sFlyDestIcon_OamData,
     .anims = sFlyDestIcon_Anims,
 };
@@ -1775,6 +1807,18 @@ static u8 GetMapsecType(mapsec_u16_t mapSecId)
     case MAPSEC_ROUTE_50:
     case MAPSEC_SINJOH_RUINS:
         return FlagGet(FLAG_VISITED_NEW_SINJOH) ? MAPSECTYPE_ROUTE : MAPSECTYPE_NONE;
+    case MAPSEC_MELEMELE_ISLAND:
+        return FlagGet(FLAG_VISITED_ALOLA) ? MAPSECTYPE_BATTLE_FRONTIER : MAPSECTYPE_NONE;
+    case MAPSEC_AKALA_ISLAND:
+    case MAPSEC_ULAULA_ISLAND:
+    case MAPSEC_PONI_ISLAND:
+    case MAPSEC_ALOLA_OCEAN:
+    case MAPSEC_AKALA_CAVE:
+    case MAPSEC_AKALA_FOREST:
+    case MAPSEC_PONI_CAVE:
+    case MAPSEC_ULAULA_CAVE:
+    case MAPSEC_ULAULA_CAVE_2:
+        return FlagGet(FLAG_VISITED_ALOLA) ? MAPSECTYPE_ROUTE : MAPSECTYPE_NONE;
 #endif
     case MAPSEC_SOUTHERN_ISLAND:
         return FlagGet(FLAG_LANDMARK_SOUTHERN_ISLAND) ? MAPSECTYPE_ROUTE : MAPSECTYPE_NONE;
@@ -2514,6 +2558,7 @@ static void LoadFlyDestIcons(void)
     LoadSpriteSheet(&sheet);
     LoadSpritePalette(&sFlyTargetIconsSpritePalette);
     LoadSpritePalette(&sFlyTargetIconsBluePalette);
+    LoadSpritePalette(&sFlyTargetIconsGreenPalette);
     CreateFlyDestIcons();
     TryCreateRedOutlineFlyDestIcons();
 }
@@ -2820,7 +2865,7 @@ static void TryCreateRedOutlineFlyDestIcons(void)
             GetMapSecDimensions(mapSecId, &x, &y, &width, &height);
             x = (x + MAPCURSOR_X_MIN) * 8;
             y = (y + MAPCURSOR_Y_MIN) * 8;
-            spriteId = CreateSprite(mapSecId == MAPSEC_NEW_SINJOH ? &sFlyDestIconBlueSpriteTemplate : &sFlyDestIconSpriteTemplate, x, y, 10);
+            spriteId = CreateSprite(mapSecId == MAPSEC_NEW_SINJOH ? &sFlyDestIconBlueSpriteTemplate : mapSecId == MAPSEC_MELEMELE_ISLAND ? &sFlyDestIconGreenSpriteTemplate : &sFlyDestIconSpriteTemplate, x, y, 10);
             if (spriteId != MAX_SPRITES)
             {
                 gSprites[spriteId].oam.size = SPRITE_SIZE(16x16);

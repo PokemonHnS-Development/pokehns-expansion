@@ -6,6 +6,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 #if P_FAMILY_TURTWIG
     [SPECIES_TURTWIG] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 55,
         .baseAttack    = 68,
         .baseDefense   = 64,
@@ -23,7 +24,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MONSTER, EGG_GROUP_GRASS),
         .abilities = { ABILITY_OVERGROW, ABILITY_NONE, ABILITY_SHELL_ARMOR },
         .bodyColor = BODY_COLOR_GREEN,
-        .speciesName = _("Turtwig"),
+        .speciesName = _("TURTWIG"),
         .cryId = CRY_TURTWIG,
         .natDexNum = NATIONAL_DEX_TURTWIG,
         .categoryName = _("Tiny Leaf"),
@@ -75,6 +76,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_GROTLE] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 75,
         .baseAttack    = 89,
         .baseDefense   = 85,
@@ -93,7 +95,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MONSTER, EGG_GROUP_GRASS),
         .abilities = { ABILITY_OVERGROW, ABILITY_NONE, ABILITY_SHELL_ARMOR },
         .bodyColor = BODY_COLOR_GREEN,
-        .speciesName = _("Grotle"),
+        .speciesName = _("GROTLE"),
         .cryId = CRY_GROTLE,
         .natDexNum = NATIONAL_DEX_GROTLE,
         .categoryName = _("Grove"),
@@ -144,6 +146,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_TORTERRA] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 95,
         .baseAttack    = 109,
         .baseDefense   = 105,
@@ -169,7 +172,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .abilities = { ABILITY_OVERGROW, ABILITY_NONE, ABILITY_SHELL_ARMOR },
         .bodyColor = BODY_COLOR_GREEN,
         .noFlip = TRUE,
-        .speciesName = _("Torterra"),
+        .speciesName = _("TORTERRA"),
         .cryId = CRY_TORTERRA,
         .natDexNum = NATIONAL_DEX_TORTERRA,
         .categoryName = _("Continent"),
@@ -220,6 +223,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 #if P_FAMILY_CHIMCHAR
     [SPECIES_CHIMCHAR] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 44,
         .baseAttack    = 58,
         .baseDefense   = 44,
@@ -238,7 +242,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .abilities = { ABILITY_BLAZE, ABILITY_NONE, ABILITY_IRON_FIST },
         .bodyColor = BODY_COLOR_BROWN,
         .noFlip = TRUE,
-        .speciesName = _("Chimchar"),
+        .speciesName = _("CHIMCHAR"),
         .cryId = CRY_CHIMCHAR,
         .natDexNum = NATIONAL_DEX_CHIMCHAR,
         .categoryName = _("Chimp"),
@@ -293,6 +297,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_MONFERNO] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 64,
         .baseAttack    = 78,
         .baseDefense   = 52,
@@ -312,7 +317,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .abilities = { ABILITY_BLAZE, ABILITY_NONE, ABILITY_IRON_FIST },
         .bodyColor = BODY_COLOR_BROWN,
         .noFlip = TRUE,
-        .speciesName = _("Monferno"),
+        .speciesName = _("MONFERNO"),
         .cryId = CRY_MONFERNO,
         .natDexNum = NATIONAL_DEX_MONFERNO,
         .categoryName = _("Playful"),
@@ -365,6 +370,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_INFERNAPE] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 76,
         .baseAttack    = 104,
         .baseDefense   = 71,
@@ -390,7 +396,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD, EGG_GROUP_HUMAN_LIKE),
         .abilities = { ABILITY_BLAZE, ABILITY_NONE, ABILITY_IRON_FIST },
         .bodyColor = BODY_COLOR_BROWN,
-        .speciesName = _("Infernape"),
+        .speciesName = _("INFERNAPE"),
         .cryId = CRY_INFERNAPE,
         .natDexNum = NATIONAL_DEX_INFERNAPE,
         .categoryName = _("Flame"),
@@ -442,6 +448,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 #if P_FAMILY_PIPLUP
     [SPECIES_PIPLUP] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 53,
         .baseAttack    = 51,
         .baseDefense   = 53,
@@ -463,7 +470,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .abilities = { ABILITY_TORRENT, ABILITY_NONE, ABILITY_DEFIANT },
     #endif
         .bodyColor = BODY_COLOR_BLUE,
-        .speciesName = _("Piplup"),
+        .speciesName = _("PIPLUP"),
         .cryId = CRY_PIPLUP,
         .natDexNum = NATIONAL_DEX_PIPLUP,
         .categoryName = _("Penguin"),
@@ -515,6 +522,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_PRINPLUP] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 64,
         .baseAttack    = 66,
         .baseDefense   = 68,
@@ -536,7 +544,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .abilities = { ABILITY_TORRENT, ABILITY_NONE, ABILITY_DEFIANT },
     #endif
         .bodyColor = BODY_COLOR_BLUE,
-        .speciesName = _("Prinplup"),
+        .speciesName = _("PRINPLUP"),
         .cryId = CRY_PRINPLUP,
         .natDexNum = NATIONAL_DEX_PRINPLUP,
         .categoryName = _("Penguin"),
@@ -593,6 +601,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_EMPOLEON] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 84,
         .baseAttack    = 86,
         .baseDefense   = 88,
@@ -620,7 +629,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .abilities = { ABILITY_TORRENT, ABILITY_NONE, ABILITY_DEFIANT },
     #endif
         .bodyColor = BODY_COLOR_BLUE,
-        .speciesName = _("Empoleon"),
+        .speciesName = _("EMPOLEON"),
         .cryId = CRY_EMPOLEON,
         .natDexNum = NATIONAL_DEX_EMPOLEON,
         .categoryName = _("Emperor"),
@@ -672,6 +681,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 #if P_FAMILY_STARLY
     [SPECIES_STARLY] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 40,
         .baseAttack    = 55,
         .baseDefense   = 30,
@@ -693,7 +703,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .abilities = { ABILITY_KEEN_EYE, ABILITY_NONE, ABILITY_NONE },
     #endif
         .bodyColor = BODY_COLOR_BROWN,
-        .speciesName = _("Starly"),
+        .speciesName = _("STARLY"),
         .cryId = CRY_STARLY,
         .natDexNum = NATIONAL_DEX_STARLY,
         .categoryName = _("Starling"),
@@ -761,6 +771,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_STARAVIA] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 55,
         .baseAttack    = 75,
         .baseDefense   = 50,
@@ -778,7 +789,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FLYING),
         .abilities = { ABILITY_INTIMIDATE, ABILITY_NONE, ABILITY_RECKLESS },
         .bodyColor = BODY_COLOR_BROWN,
-        .speciesName = _("Staravia"),
+        .speciesName = _("STARAVIA"),
         .cryId = CRY_STARAVIA,
         .natDexNum = NATIONAL_DEX_STARAVIA,
         .categoryName = _("Starling"),
@@ -841,6 +852,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_STARAPTOR] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 85,
         .baseAttack    = 120,
         .baseDefense   = 70,
@@ -866,7 +878,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FLYING),
         .abilities = { ABILITY_INTIMIDATE, ABILITY_NONE, ABILITY_RECKLESS },
         .bodyColor = BODY_COLOR_BROWN,
-        .speciesName = _("Staraptor"),
+        .speciesName = _("STARAPTOR"),
         .cryId = CRY_STARAPTOR,
         .natDexNum = NATIONAL_DEX_STARAPTOR,
         .categoryName = _("Predator"),
@@ -929,6 +941,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 #if P_GEN_9_MEGA_EVOLUTIONS
     [SPECIES_STARAPTOR_MEGA] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 85,
         .baseAttack    = 140,
         .baseDefense   = 100,
@@ -954,7 +967,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FLYING),
         .abilities = { ABILITY_INTIMIDATE, ABILITY_NONE, ABILITY_RECKLESS },
         .bodyColor = BODY_COLOR_BROWN,
-        .speciesName = _("Staraptor"),
+        .speciesName = _("STARAPTOR"),
     #if P_MODIFIED_MEGA_CRIES
         .cryId = CRY_STARAPTOR_MEGA,
     #else
@@ -997,6 +1010,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 #if P_FAMILY_BIDOOF
     [SPECIES_BIDOOF] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 59,
         .baseAttack    = 45,
         .baseDefense   = 40,
@@ -1014,7 +1028,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_WATER_1, EGG_GROUP_FIELD),
         .abilities = { ABILITY_SIMPLE, ABILITY_UNAWARE, ABILITY_MOODY },
         .bodyColor = BODY_COLOR_BROWN,
-        .speciesName = _("Bidoof"),
+        .speciesName = _("BIDOOF"),
         .cryId = CRY_BIDOOF,
         .natDexNum = NATIONAL_DEX_BIDOOF,
         .categoryName = _("Plump Mouse"),
@@ -1083,6 +1097,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_BIBAREL] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 79,
         .baseAttack    = 85,
         .baseDefense   = 60,
@@ -1100,7 +1115,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_WATER_1, EGG_GROUP_FIELD),
         .abilities = { ABILITY_SIMPLE, ABILITY_UNAWARE, ABILITY_MOODY },
         .bodyColor = BODY_COLOR_BROWN,
-        .speciesName = _("Bibarel"),
+        .speciesName = _("BIBAREL"),
         .cryId = CRY_BIBAREL,
         .natDexNum = NATIONAL_DEX_BIBAREL,
         .categoryName = _("Beaver"),
@@ -1165,6 +1180,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 #if P_FAMILY_KRICKETOT
     [SPECIES_KRICKETOT] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 37,
         .baseAttack    = 25,
         .baseDefense   = 41,
@@ -1183,7 +1199,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_BUG),
         .abilities = { ABILITY_SHED_SKIN, ABILITY_NONE, ABILITY_RUN_AWAY },
         .bodyColor = BODY_COLOR_RED,
-        .speciesName = _("Kricketot"),
+        .speciesName = _("KRICKETOT"),
         .cryId = CRY_KRICKETOT,
         .natDexNum = NATIONAL_DEX_KRICKETOT,
         .categoryName = _("Cricket"),
@@ -1261,6 +1277,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_KRICKETUNE] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 77,
         .baseAttack    = 85,
         .baseDefense   = 51,
@@ -1279,7 +1296,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_BUG),
         .abilities = { ABILITY_SWARM, ABILITY_NONE, ABILITY_TECHNICIAN },
         .bodyColor = BODY_COLOR_RED,
-        .speciesName = _("Kricketune"),
+        .speciesName = _("KRICKETUNE"),
         .cryId = CRY_KRICKETUNE,
         .natDexNum = NATIONAL_DEX_KRICKETUNE,
         .categoryName = _("Cricket"),
@@ -1348,6 +1365,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 #if P_FAMILY_SHINX
     [SPECIES_SHINX] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 45,
         .baseAttack    = 65,
         .baseDefense   = 34,
@@ -1365,7 +1383,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
         .abilities = { ABILITY_RIVALRY, ABILITY_INTIMIDATE, ABILITY_GUTS },
         .bodyColor = BODY_COLOR_BLUE,
-        .speciesName = _("Shinx"),
+        .speciesName = _("SHINX"),
         .cryId = CRY_SHINX,
         .natDexNum = NATIONAL_DEX_SHINX,
         .categoryName = _("Flash"),
@@ -1430,6 +1448,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_LUXIO] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 60,
         .baseAttack    = 85,
         .baseDefense   = 49,
@@ -1447,7 +1466,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
         .abilities = { ABILITY_RIVALRY, ABILITY_INTIMIDATE, ABILITY_GUTS },
         .bodyColor = BODY_COLOR_BLUE,
-        .speciesName = _("Luxio"),
+        .speciesName = _("LUXIO"),
         .cryId = CRY_LUXIO,
         .natDexNum = NATIONAL_DEX_LUXIO,
         .categoryName = _("Spark"),
@@ -1510,6 +1529,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_LUXRAY] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 80,
         .baseAttack    = 120,
         .baseDefense   = 79,
@@ -1533,7 +1553,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
         .abilities = { ABILITY_RIVALRY, ABILITY_INTIMIDATE, ABILITY_GUTS },
         .bodyColor = BODY_COLOR_BLUE,
-        .speciesName = _("Luxray"),
+        .speciesName = _("LUXRAY"),
         .cryId = CRY_LUXRAY,
         .natDexNum = NATIONAL_DEX_LUXRAY,
         .categoryName = _("Gleam Eyes"),
@@ -1600,6 +1620,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 #if P_FAMILY_CRANIDOS
     [SPECIES_CRANIDOS] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 67,
         .baseAttack    = 125,
         .baseDefense   = 40,
@@ -1617,7 +1638,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MONSTER),
         .abilities = { ABILITY_MOLD_BREAKER, ABILITY_NONE, ABILITY_SHEER_FORCE },
         .bodyColor = BODY_COLOR_BLUE,
-        .speciesName = _("Cranidos"),
+        .speciesName = _("CRANIDOS"),
         .cryId = CRY_CRANIDOS,
         .natDexNum = NATIONAL_DEX_CRANIDOS,
         .categoryName = _("Head Butt"),
@@ -1668,6 +1689,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_RAMPARDOS] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 97,
         .baseAttack    = 165,
         .baseDefense   = 60,
@@ -1685,7 +1707,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MONSTER),
         .abilities = { ABILITY_MOLD_BREAKER, ABILITY_NONE, ABILITY_SHEER_FORCE },
         .bodyColor = BODY_COLOR_BLUE,
-        .speciesName = _("Rampardos"),
+        .speciesName = _("RAMPARDOS"),
         .cryId = CRY_RAMPARDOS,
         .natDexNum = NATIONAL_DEX_RAMPARDOS,
         .categoryName = _("Head Butt"),
@@ -1739,6 +1761,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 #if P_FAMILY_SHIELDON
     [SPECIES_SHIELDON] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 30,
         .baseAttack    = 42,
         .baseDefense   = 118,
@@ -1756,7 +1779,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MONSTER),
         .abilities = { ABILITY_STURDY, ABILITY_NONE, ABILITY_SOUNDPROOF },
         .bodyColor = BODY_COLOR_GRAY,
-        .speciesName = _("Shieldon"),
+        .speciesName = _("SHIELDON"),
         .cryId = CRY_SHIELDON,
         .natDexNum = NATIONAL_DEX_SHIELDON,
         .categoryName = _("Shield"),
@@ -1808,6 +1831,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_BASTIODON] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 60,
         .baseAttack    = 52,
         .baseDefense   = 168,
@@ -1825,7 +1849,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MONSTER),
         .abilities = { ABILITY_STURDY, ABILITY_NONE, ABILITY_SOUNDPROOF },
         .bodyColor = BODY_COLOR_GRAY,
-        .speciesName = _("Bastiodon"),
+        .speciesName = _("BASTIODON"),
         .cryId = CRY_BASTIODON,
         .natDexNum = NATIONAL_DEX_BASTIODON,
         .categoryName = _("Shield"),
@@ -1877,6 +1901,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 #if P_FAMILY_BURMY
     [SPECIES_BURMY_PLANT] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 40,
         .baseAttack    = 29,
         .baseDefense   = 45,
@@ -1894,7 +1919,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_BUG),
         .abilities = { ABILITY_SHED_SKIN, ABILITY_NONE, ABILITY_OVERCOAT },
         .bodyColor = BODY_COLOR_GREEN,
-        .speciesName = _("Burmy"),
+        .speciesName = _("BURMY"),
         .cryId = CRY_BURMY,
         .natDexNum = NATIONAL_DEX_BURMY,
         .categoryName = _("Bagworm"),
@@ -1946,6 +1971,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_BURMY_SANDY] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 40,
         .baseAttack    = 29,
         .baseDefense   = 45,
@@ -1963,7 +1989,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_BUG),
         .abilities = { ABILITY_SHED_SKIN, ABILITY_NONE, ABILITY_OVERCOAT },
         .bodyColor = BODY_COLOR_BROWN,
-        .speciesName = _("Burmy"),
+        .speciesName = _("BURMY"),
         .cryId = CRY_BURMY,
         .natDexNum = NATIONAL_DEX_BURMY,
         .categoryName = _("Bagworm"),
@@ -2015,6 +2041,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_BURMY_TRASH] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 40,
         .baseAttack    = 29,
         .baseDefense   = 45,
@@ -2032,7 +2059,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_BUG),
         .abilities = { ABILITY_SHED_SKIN, ABILITY_NONE, ABILITY_OVERCOAT },
         .bodyColor = BODY_COLOR_RED,
-        .speciesName = _("Burmy"),
+        .speciesName = _("BURMY"),
         .cryId = CRY_BURMY,
         .natDexNum = NATIONAL_DEX_BURMY,
         .categoryName = _("Bagworm"),
@@ -2084,6 +2111,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_WORMADAM_PLANT] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 60,
         .baseAttack    = 59,
         .baseDefense   = 85,
@@ -2102,7 +2130,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_BUG),
         .abilities = { ABILITY_ANTICIPATION, ABILITY_NONE, ABILITY_OVERCOAT },
         .bodyColor = BODY_COLOR_GREEN,
-        .speciesName = _("Wormadam"),
+        .speciesName = _("WORMADAM"),
         .cryId = CRY_WORMADAM,
         .natDexNum = NATIONAL_DEX_WORMADAM,
         .categoryName = _("Bagworm"),
@@ -2150,6 +2178,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_WORMADAM_SANDY] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 60,
         .baseAttack    = 79,
         .baseDefense   = 105,
@@ -2168,7 +2197,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_BUG),
         .abilities = { ABILITY_ANTICIPATION, ABILITY_NONE, ABILITY_OVERCOAT },
         .bodyColor = BODY_COLOR_BROWN,
-        .speciesName = _("Wormadam"),
+        .speciesName = _("WORMADAM"),
         .cryId = CRY_WORMADAM,
         .natDexNum = NATIONAL_DEX_WORMADAM,
         .categoryName = _("Bagworm"),
@@ -2216,6 +2245,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_WORMADAM_TRASH] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 60,
         .baseAttack    = 69,
         .baseDefense   = 95,
@@ -2235,7 +2265,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_BUG),
         .abilities = { ABILITY_ANTICIPATION, ABILITY_NONE, ABILITY_OVERCOAT },
         .bodyColor = BODY_COLOR_RED,
-        .speciesName = _("Wormadam"),
+        .speciesName = _("WORMADAM"),
         .cryId = CRY_WORMADAM,
         .natDexNum = NATIONAL_DEX_WORMADAM,
         .categoryName = _("Bagworm"),
@@ -2302,7 +2332,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_BUG),                         \
         .abilities = { ABILITY_SWARM, ABILITY_NONE, ABILITY_TINTED_LENS },  \
         .bodyColor = BODY_COLOR_YELLOW,                                     \
-        .speciesName = _("Mothim"),                                         \
+        .speciesName = _("MOTHIM"),                                         \
         .cryId = CRY_MOTHIM,                                                \
         .natDexNum = NATIONAL_DEX_MOTHIM,                                   \
         .categoryName = _("Moth"),                                          \
@@ -2341,6 +2371,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         )                                                                   \
         .levelUpLearnset = sMothimLevelUpLearnset,                          \
         .teachableLearnset = sMothimTeachableLearnset,                      \
+        .dexNotRequired = TRUE,                                              \
         .formSpeciesIdTable = sMothimFormSpeciesIdTable,                    \
     }
 
@@ -2352,6 +2383,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 #if P_FAMILY_COMBEE
     [SPECIES_COMBEE] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 30,
         .baseAttack    = 30,
         .baseDefense   = 42,
@@ -2370,7 +2402,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_BUG),
         .abilities = { ABILITY_HONEY_GATHER, ABILITY_NONE, ABILITY_HUSTLE },
         .bodyColor = BODY_COLOR_YELLOW,
-        .speciesName = _("Combee"),
+        .speciesName = _("COMBEE"),
         .cryId = CRY_COMBEE,
         .natDexNum = NATIONAL_DEX_COMBEE,
         .categoryName = _("Tiny Bee"),
@@ -2438,6 +2470,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_VESPIQUEN] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 70,
         .baseAttack    = 80,
         .baseDefense   = 102,
@@ -2457,7 +2490,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_BUG),
         .abilities = { ABILITY_PRESSURE, ABILITY_NONE, ABILITY_UNNERVE },
         .bodyColor = BODY_COLOR_YELLOW,
-        .speciesName = _("Vespiquen"),
+        .speciesName = _("VESPIQUEN"),
         .cryId = CRY_VESPIQUEN,
         .natDexNum = NATIONAL_DEX_VESPIQUEN,
         .categoryName = _("Beehive"),
@@ -2516,6 +2549,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 #if P_FAMILY_PACHIRISU
     [SPECIES_PACHIRISU] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 60,
         .baseAttack    = 45,
         .baseDefense   = 70,
@@ -2533,7 +2567,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD, EGG_GROUP_FAIRY),
         .abilities = { ABILITY_RUN_AWAY, ABILITY_PICKUP, ABILITY_VOLT_ABSORB },
         .bodyColor = BODY_COLOR_WHITE,
-        .speciesName = _("Pachirisu"),
+        .speciesName = _("PACHIRISU"),
         .cryId = CRY_PACHIRISU,
         .natDexNum = NATIONAL_DEX_PACHIRISU,
         .categoryName = _("EleSquirrel"),
@@ -2603,6 +2637,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 #if P_FAMILY_BUIZEL
     [SPECIES_BUIZEL] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 55,
         .baseAttack    = 65,
         .baseDefense   = 35,
@@ -2620,7 +2655,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_WATER_1, EGG_GROUP_FIELD),
         .abilities = { ABILITY_SWIFT_SWIM, ABILITY_NONE, ABILITY_WATER_VEIL },
         .bodyColor = BODY_COLOR_BROWN,
-        .speciesName = _("Buizel"),
+        .speciesName = _("BUIZEL"),
         .cryId = CRY_BUIZEL,
         .natDexNum = NATIONAL_DEX_BUIZEL,
         .categoryName = _("Sea Weasel"),
@@ -2683,6 +2718,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_FLOATZEL] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 85,
         .baseAttack    = 105,
         .baseDefense   = 55,
@@ -2700,7 +2736,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_WATER_1, EGG_GROUP_FIELD),
         .abilities = { ABILITY_SWIFT_SWIM, ABILITY_NONE, ABILITY_WATER_VEIL },
         .bodyColor = BODY_COLOR_BROWN,
-        .speciesName = _("Floatzel"),
+        .speciesName = _("FLOATZEL"),
         .cryId = CRY_FLOATZEL,
         .natDexNum = NATIONAL_DEX_FLOATZEL,
         .categoryName = _("Sea Weasel"),
@@ -2766,6 +2802,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 #if P_FAMILY_CHERUBI
     [SPECIES_CHERUBI] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 45,
         .baseAttack    = 35,
         .baseDefense   = 45,
@@ -2785,7 +2822,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .abilities = { ABILITY_CHLOROPHYLL, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_PINK,
         .noFlip = TRUE,
-        .speciesName = _("Cherubi"),
+        .speciesName = _("CHERUBI"),
         .cryId = CRY_CHERUBI,
         .natDexNum = NATIONAL_DEX_CHERUBI,
         .categoryName = _("Cherry"),
@@ -2843,6 +2880,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_CHERRIM_OVERCAST] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 70,
         .baseAttack    = 60,
         .baseDefense   = 70,
@@ -2862,7 +2900,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .abilities = { ABILITY_FLOWER_GIFT, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_PURPLE,
         .noFlip = TRUE,
-        .speciesName = _("Cherrim"),
+        .speciesName = _("CHERRIM"),
         .cryId = CRY_CHERRIM,
         .natDexNum = NATIONAL_DEX_CHERRIM,
         .categoryName = _("Blossom"),
@@ -2916,6 +2954,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_CHERRIM_SUNSHINE] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 70,
         .baseAttack    = 60,
         .baseDefense   = 70,
@@ -2934,7 +2973,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FAIRY, EGG_GROUP_GRASS),
         .abilities = { ABILITY_FLOWER_GIFT, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_PINK,
-        .speciesName = _("Cherrim"),
+        .speciesName = _("CHERRIM"),
         .cryId = CRY_CHERRIM,
         .natDexNum = NATIONAL_DEX_CHERRIM,
         .categoryName = _("Blossom"),
@@ -2991,6 +3030,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 #if P_FAMILY_SHELLOS
     [SPECIES_SHELLOS_WEST] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 76,
         .baseAttack    = 48,
         .baseDefense   = 48,
@@ -3008,7 +3048,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_WATER_1, EGG_GROUP_AMORPHOUS),
         .abilities = { ABILITY_STICKY_HOLD, ABILITY_STORM_DRAIN, ABILITY_SAND_FORCE },
         .bodyColor = BODY_COLOR_PURPLE,
-        .speciesName = _("Shellos"),
+        .speciesName = _("SHELLOS"),
         .cryId = CRY_SHELLOS,
         .natDexNum = NATIONAL_DEX_SHELLOS,
         .categoryName = _("Sea Slug"),
@@ -3057,6 +3097,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_SHELLOS_EAST] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 76,
         .baseAttack    = 48,
         .baseDefense   = 48,
@@ -3074,7 +3115,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_WATER_1, EGG_GROUP_AMORPHOUS),
         .abilities = { ABILITY_STICKY_HOLD, ABILITY_STORM_DRAIN, ABILITY_SAND_FORCE },
         .bodyColor = BODY_COLOR_BLUE,
-        .speciesName = _("Shellos"),
+        .speciesName = _("SHELLOS"),
         .cryId = CRY_SHELLOS,
         .natDexNum = NATIONAL_DEX_SHELLOS,
         .categoryName = _("Sea Slug"),
@@ -3123,6 +3164,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_GASTRODON_WEST] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 111,
         .baseAttack    = 83,
         .baseDefense   = 68,
@@ -3140,7 +3182,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_WATER_1, EGG_GROUP_AMORPHOUS),
         .abilities = { ABILITY_STICKY_HOLD, ABILITY_STORM_DRAIN, ABILITY_SAND_FORCE },
         .bodyColor = BODY_COLOR_PURPLE,
-        .speciesName = _("Gastrodon"),
+        .speciesName = _("GASTRODON"),
         .cryId = CRY_GASTRODON,
         .natDexNum = NATIONAL_DEX_GASTRODON,
         .categoryName = _("Sea Slug"),
@@ -3187,6 +3229,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_GASTRODON_EAST] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 111,
         .baseAttack    = 83,
         .baseDefense   = 68,
@@ -3204,7 +3247,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_WATER_1, EGG_GROUP_AMORPHOUS),
         .abilities = { ABILITY_STICKY_HOLD, ABILITY_STORM_DRAIN, ABILITY_SAND_FORCE },
         .bodyColor = BODY_COLOR_BLUE,
-        .speciesName = _("Gastrodon"),
+        .speciesName = _("GASTRODON"),
         .cryId = CRY_GASTRODON,
         .natDexNum = NATIONAL_DEX_GASTRODON,
         .categoryName = _("Sea Slug"),
@@ -3253,6 +3296,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 #if P_FAMILY_DRIFLOON
     [SPECIES_DRIFLOON] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 90,
         .baseAttack    = 50,
         .baseDefense   = 34,
@@ -3271,7 +3315,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .abilities = { ABILITY_AFTERMATH, ABILITY_UNBURDEN, ABILITY_FLARE_BOOST },
         .bodyColor = BODY_COLOR_PURPLE,
         .noFlip = TRUE,
-        .speciesName = _("Drifloon"),
+        .speciesName = _("DRIFLOON"),
         .cryId = CRY_DRIFLOON,
         .natDexNum = NATIONAL_DEX_DRIFLOON,
         .categoryName = _("Balloon"),
@@ -3325,6 +3369,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_DRIFBLIM] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 150,
         .baseAttack    = 80,
         .baseDefense   = 44,
@@ -3343,7 +3388,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .abilities = { ABILITY_AFTERMATH, ABILITY_UNBURDEN, ABILITY_FLARE_BOOST },
         .bodyColor = BODY_COLOR_PURPLE,
         .noFlip = TRUE,
-        .speciesName = _("Drifblim"),
+        .speciesName = _("DRIFBLIM"),
         .cryId = CRY_DRIFBLIM,
         .natDexNum = NATIONAL_DEX_DRIFBLIM,
         .categoryName = _("Blimp"),
@@ -3399,6 +3444,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 #if P_FAMILY_BUNEARY
     [SPECIES_BUNEARY] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 55,
         .baseAttack    = 66,
         .baseDefense   = 44,
@@ -3416,7 +3462,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD, EGG_GROUP_HUMAN_LIKE),
         .abilities = { ABILITY_RUN_AWAY, ABILITY_KLUTZ, ABILITY_LIMBER },
         .bodyColor = BODY_COLOR_BROWN,
-        .speciesName = _("Buneary"),
+        .speciesName = _("BUNEARY"),
         .cryId = CRY_BUNEARY,
         .natDexNum = NATIONAL_DEX_BUNEARY,
         .categoryName = _("Rabbit"),
@@ -3467,6 +3513,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_LOPUNNY] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 65,
         .baseAttack    = 76,
         .baseDefense   = 84,
@@ -3484,7 +3531,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD, EGG_GROUP_HUMAN_LIKE),
         .abilities = { ABILITY_CUTE_CHARM, ABILITY_KLUTZ, ABILITY_LIMBER },
         .bodyColor = BODY_COLOR_BROWN,
-        .speciesName = _("Lopunny"),
+        .speciesName = _("LOPUNNY"),
         .cryId = CRY_LOPUNNY,
         .natDexNum = NATIONAL_DEX_LOPUNNY,
         .categoryName = _("Rabbit"),
@@ -3537,6 +3584,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 #if P_MEGA_EVOLUTIONS
     [SPECIES_LOPUNNY_MEGA] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 65,
         .baseAttack    = 136,
         .baseDefense   = 94,
@@ -3554,7 +3602,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD, EGG_GROUP_HUMAN_LIKE),
         .abilities = { ABILITY_SCRAPPY, ABILITY_SCRAPPY, ABILITY_SCRAPPY },
         .bodyColor = BODY_COLOR_BROWN,
-        .speciesName = _("Lopunny"),
+        .speciesName = _("LOPUNNY"),
     #if P_MODIFIED_MEGA_CRIES
         .cryId = CRY_LOPUNNY_MEGA,
     #else
@@ -3612,6 +3660,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 #if P_FAMILY_GLAMEOW
     [SPECIES_GLAMEOW] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 49,
         .baseAttack    = 55,
         .baseDefense   = 42,
@@ -3629,7 +3678,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
         .abilities = { ABILITY_LIMBER, ABILITY_OWN_TEMPO, ABILITY_KEEN_EYE },
         .bodyColor = BODY_COLOR_GRAY,
-        .speciesName = _("Glameow"),
+        .speciesName = _("GLAMEOW"),
         .cryId = CRY_GLAMEOW,
         .natDexNum = NATIONAL_DEX_GLAMEOW,
         .categoryName = _("Catty"),
@@ -3681,6 +3730,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_PURUGLY] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 71,
         .baseAttack    = 82,
         .baseDefense   = 64,
@@ -3698,7 +3748,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
         .abilities = { ABILITY_THICK_FAT, ABILITY_OWN_TEMPO, ABILITY_DEFIANT },
         .bodyColor = BODY_COLOR_GRAY,
-        .speciesName = _("Purugly"),
+        .speciesName = _("PURUGLY"),
         .cryId = CRY_PURUGLY,
         .natDexNum = NATIONAL_DEX_PURUGLY,
         .categoryName = _("Tiger Cat"),
@@ -3754,6 +3804,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 #if P_FAMILY_STUNKY
     [SPECIES_STUNKY] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 63,
         .baseAttack    = 63,
         .baseDefense   = 47,
@@ -3771,7 +3822,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
         .abilities = { ABILITY_STENCH, ABILITY_AFTERMATH, ABILITY_KEEN_EYE },
         .bodyColor = BODY_COLOR_PURPLE,
-        .speciesName = _("Stunky"),
+        .speciesName = _("STUNKY"),
         .cryId = CRY_STUNKY,
         .natDexNum = NATIONAL_DEX_STUNKY,
         .categoryName = _("Skunk"),
@@ -3825,6 +3876,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_SKUNTANK] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 103,
         .baseAttack    = 93,
         .baseDefense   = 67,
@@ -3842,7 +3894,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
         .abilities = { ABILITY_STENCH, ABILITY_AFTERMATH, ABILITY_KEEN_EYE },
         .bodyColor = BODY_COLOR_PURPLE,
-        .speciesName = _("Skuntank"),
+        .speciesName = _("SKUNTANK"),
         .cryId = CRY_SKUNTANK,
         .natDexNum = NATIONAL_DEX_SKUNTANK,
         .categoryName = _("Skunk"),
@@ -3894,6 +3946,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 #if P_FAMILY_BRONZOR
     [SPECIES_BRONZOR] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 57,
         .baseAttack    = 24,
         .baseDefense   = 86,
@@ -3912,7 +3965,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MINERAL),
         .abilities = { ABILITY_LEVITATE, ABILITY_HEATPROOF, ABILITY_HEAVY_METAL },
         .bodyColor = BODY_COLOR_GREEN,
-        .speciesName = _("Bronzor"),
+        .speciesName = _("BRONZOR"),
         .cryId = CRY_BRONZOR,
         .natDexNum = NATIONAL_DEX_BRONZOR,
         .categoryName = _("Bronze"),
@@ -3971,6 +4024,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_BRONZONG] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 67,
         .baseAttack    = 89,
         .baseDefense   = 116,
@@ -3990,7 +4044,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MINERAL),
         .abilities = { ABILITY_LEVITATE, ABILITY_HEATPROOF, ABILITY_HEAVY_METAL },
         .bodyColor = BODY_COLOR_GREEN,
-        .speciesName = _("Bronzong"),
+        .speciesName = _("BRONZONG"),
         .cryId = CRY_BRONZONG,
         .natDexNum = NATIONAL_DEX_BRONZONG,
         .categoryName = _("Bronze Bell"),
@@ -4045,6 +4099,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 #if P_FAMILY_CHATOT
     [SPECIES_CHATOT] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 76,
         .baseAttack    = 65,
         .baseDefense   = 45,
@@ -4063,7 +4118,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FLYING),
         .abilities = { ABILITY_KEEN_EYE, ABILITY_TANGLED_FEET, ABILITY_BIG_PECKS },
         .bodyColor = BODY_COLOR_BLACK,
-        .speciesName = _("Chatot"),
+        .speciesName = _("CHATOT"),
         .cryId = CRY_CHATOT,
         .natDexNum = NATIONAL_DEX_CHATOT,
         .categoryName = _("Music Note"),
@@ -4130,6 +4185,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 #if P_FAMILY_SPIRITOMB
     [SPECIES_SPIRITOMB] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 50,
         .baseAttack    = 92,
         .baseDefense   = 108,
@@ -4149,7 +4205,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .abilities = { ABILITY_PRESSURE, ABILITY_NONE, ABILITY_INFILTRATOR },
         .bodyColor = BODY_COLOR_PURPLE,
         .noFlip = TRUE,
-        .speciesName = _("Spiritomb"),
+        .speciesName = _("SPIRITOMB"),
         .cryId = CRY_SPIRITOMB,
         .natDexNum = NATIONAL_DEX_SPIRITOMB,
         .categoryName = _("Forbidden"),
@@ -4201,6 +4257,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 #if P_FAMILY_GIBLE
     [SPECIES_GIBLE] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 58,
         .baseAttack    = 70,
         .baseDefense   = 45,
@@ -4218,7 +4275,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MONSTER, EGG_GROUP_DRAGON),
         .abilities = { ABILITY_SAND_VEIL, ABILITY_NONE, ABILITY_ROUGH_SKIN },
         .bodyColor = BODY_COLOR_BLUE,
-        .speciesName = _("Gible"),
+        .speciesName = _("GIBLE"),
         .cryId = CRY_GIBLE,
         .natDexNum = NATIONAL_DEX_GIBLE,
         .categoryName = _("Land Shark"),
@@ -4283,6 +4340,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_GABITE] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 68,
         .baseAttack    = 90,
         .baseDefense   = 65,
@@ -4300,7 +4358,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MONSTER, EGG_GROUP_DRAGON),
         .abilities = { ABILITY_SAND_VEIL, ABILITY_NONE, ABILITY_ROUGH_SKIN },
         .bodyColor = BODY_COLOR_BLUE,
-        .speciesName = _("Gabite"),
+        .speciesName = _("GABITE"),
         .cryId = CRY_GABITE,
         .natDexNum = NATIONAL_DEX_GABITE,
         .categoryName = _("Cave"),
@@ -4363,6 +4421,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_GARCHOMP] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 108,
         .baseAttack    = 130,
         .baseDefense   = 95,
@@ -4386,7 +4445,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MONSTER, EGG_GROUP_DRAGON),
         .abilities = { ABILITY_SAND_VEIL, ABILITY_NONE, ABILITY_ROUGH_SKIN },
         .bodyColor = BODY_COLOR_BLUE,
-        .speciesName = _("Garchomp"),
+        .speciesName = _("GARCHOMP"),
         .cryId = CRY_GARCHOMP,
         .natDexNum = NATIONAL_DEX_GARCHOMP,
         .categoryName = _("Mach"),
@@ -4453,6 +4512,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 #if P_MEGA_EVOLUTIONS
     [SPECIES_GARCHOMP_MEGA] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 108,
         .baseAttack    = 170,
         .baseDefense   = 115,
@@ -4470,7 +4530,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MONSTER, EGG_GROUP_DRAGON),
         .abilities = { ABILITY_SAND_FORCE, ABILITY_SAND_FORCE, ABILITY_SAND_FORCE },
         .bodyColor = BODY_COLOR_BLUE,
-        .speciesName = _("Garchomp"),
+        .speciesName = _("GARCHOMP"),
     #if P_MODIFIED_MEGA_CRIES
         .cryId = CRY_GARCHOMP_MEGA,
     #else
@@ -4527,6 +4587,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 #if P_GEN_9_MEGA_EVOLUTIONS
     [SPECIES_GARCHOMP_MEGA_Z] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 108,
         .baseAttack    = 130,
         .baseDefense   = 85,
@@ -4550,7 +4611,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MONSTER, EGG_GROUP_DRAGON),
         .abilities = { ABILITY_SAND_VEIL, ABILITY_NONE, ABILITY_ROUGH_SKIN },
         .bodyColor = BODY_COLOR_BLUE,
-        .speciesName = _("Garchomp"),
+        .speciesName = _("GARCHOMP"),
     #if P_MODIFIED_MEGA_CRIES
         .cryId = CRY_GARCHOMP, //CRY_GARCHOMP_MEGA_Z (unreleased)
     #else
@@ -4593,6 +4654,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 #if P_FAMILY_RIOLU
     [SPECIES_RIOLU] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 40,
         .baseAttack    = 70,
         .baseDefense   = 40,
@@ -4610,7 +4672,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
         .abilities = { ABILITY_STEADFAST, ABILITY_INNER_FOCUS, ABILITY_PRANKSTER },
         .bodyColor = BODY_COLOR_BLUE,
-        .speciesName = _("Riolu"),
+        .speciesName = _("RIOLU"),
         .cryId = CRY_RIOLU,
         .natDexNum = NATIONAL_DEX_RIOLU,
         .categoryName = _("Emanation"),
@@ -4663,6 +4725,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_LUCARIO] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 70,
         .baseAttack    = 110,
         .baseDefense   = 70,
@@ -4681,7 +4744,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD, EGG_GROUP_HUMAN_LIKE),
         .abilities = { ABILITY_STEADFAST, ABILITY_INNER_FOCUS, ABILITY_JUSTIFIED },
         .bodyColor = BODY_COLOR_BLUE,
-        .speciesName = _("Lucario"),
+        .speciesName = _("LUCARIO"),
         .cryId = CRY_LUCARIO,
         .natDexNum = NATIONAL_DEX_LUCARIO,
         .categoryName = _("Aura"),
@@ -4733,6 +4796,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 #if P_MEGA_EVOLUTIONS
     [SPECIES_LUCARIO_MEGA] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 70,
         .baseAttack    = 145,
         .baseDefense   = 88,
@@ -4751,7 +4815,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD, EGG_GROUP_HUMAN_LIKE),
         .abilities = { ABILITY_ADAPTABILITY, ABILITY_ADAPTABILITY, ABILITY_ADAPTABILITY },
         .bodyColor = BODY_COLOR_BLUE,
-        .speciesName = _("Lucario"),
+        .speciesName = _("LUCARIO"),
     #if P_MODIFIED_MEGA_CRIES
         .cryId = CRY_LUCARIO_MEGA,
     #else
@@ -4808,6 +4872,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 #if P_GEN_9_MEGA_EVOLUTIONS
     [SPECIES_LUCARIO_MEGA_Z] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 70,
         .baseAttack    = 100,
         .baseDefense   = 70,
@@ -4826,7 +4891,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD, EGG_GROUP_HUMAN_LIKE),
         .abilities = { ABILITY_STEADFAST, ABILITY_INNER_FOCUS, ABILITY_JUSTIFIED },
         .bodyColor = BODY_COLOR_BLUE,
-        .speciesName = _("Lucario"),
+        .speciesName = _("LUCARIO"),
     #if P_MODIFIED_MEGA_CRIES
         .cryId = CRY_LUCARIO_MEGA_Z,
     #else
@@ -4869,6 +4934,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 #if P_FAMILY_HIPPOPOTAS
     [SPECIES_HIPPOPOTAS] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 68,
         .baseAttack    = 72,
         .baseDefense   = 78,
@@ -4886,7 +4952,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
         .abilities = { ABILITY_SAND_STREAM, ABILITY_NONE, ABILITY_SAND_FORCE },
         .bodyColor = BODY_COLOR_BROWN,
-        .speciesName = _("Hippopotas"),
+        .speciesName = _("HIPPOPOTAS"),
         .cryId = CRY_HIPPOPOTAS,
         .natDexNum = NATIONAL_DEX_HIPPOPOTAS,
         .categoryName = _("Hippo"),
@@ -4953,6 +5019,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_HIPPOWDON] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 108,
         .baseAttack    = 112,
         .baseDefense   = 118,
@@ -4970,7 +5037,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
         .abilities = { ABILITY_SAND_STREAM, ABILITY_NONE, ABILITY_SAND_FORCE },
         .bodyColor = BODY_COLOR_BROWN,
-        .speciesName = _("Hippowdon"),
+        .speciesName = _("HIPPOWDON"),
         .cryId = CRY_HIPPOWDON,
         .natDexNum = NATIONAL_DEX_HIPPOWDON,
         .categoryName = _("Heavyweight"),
@@ -5033,6 +5100,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 #if P_FAMILY_SKORUPI
     [SPECIES_SKORUPI] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 40,
         .baseAttack    = 50,
         .baseDefense   = 90,
@@ -5051,7 +5119,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_BUG, EGG_GROUP_WATER_3),
         .abilities = { ABILITY_BATTLE_ARMOR, ABILITY_SNIPER, ABILITY_KEEN_EYE },
         .bodyColor = BODY_COLOR_PURPLE,
-        .speciesName = _("Skorupi"),
+        .speciesName = _("SKORUPI"),
         .cryId = CRY_SKORUPI,
         .natDexNum = NATIONAL_DEX_SKORUPI,
         .categoryName = _("Scorpion"),
@@ -5116,6 +5184,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_DRAPION] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 70,
         .baseAttack    = 90,
         .baseDefense   = 110,
@@ -5134,7 +5203,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_BUG, EGG_GROUP_WATER_3),
         .abilities = { ABILITY_BATTLE_ARMOR, ABILITY_SNIPER, ABILITY_KEEN_EYE },
         .bodyColor = BODY_COLOR_PURPLE,
-        .speciesName = _("Drapion"),
+        .speciesName = _("DRAPION"),
         .cryId = CRY_DRAPION,
         .natDexNum = NATIONAL_DEX_DRAPION,
         .categoryName = _("Ogre Scorp"),
@@ -5192,6 +5261,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 #if P_FAMILY_CROAGUNK
     [SPECIES_CROAGUNK] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 48,
         .baseAttack    = 61,
         .baseDefense   = 40,
@@ -5210,7 +5280,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_HUMAN_LIKE),
         .abilities = { ABILITY_ANTICIPATION, ABILITY_DRY_SKIN, ABILITY_POISON_TOUCH },
         .bodyColor = BODY_COLOR_BLUE,
-        .speciesName = _("Croagunk"),
+        .speciesName = _("CROAGUNK"),
         .cryId = CRY_CROAGUNK,
         .natDexNum = NATIONAL_DEX_CROAGUNK,
         .categoryName = _("Toxic Mouth"),
@@ -5276,6 +5346,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_TOXICROAK] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 83,
         .baseAttack    = 106,
         .baseDefense   = 65,
@@ -5294,7 +5365,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_HUMAN_LIKE),
         .abilities = { ABILITY_ANTICIPATION, ABILITY_DRY_SKIN, ABILITY_POISON_TOUCH },
         .bodyColor = BODY_COLOR_BLUE,
-        .speciesName = _("Toxicroak"),
+        .speciesName = _("TOXICROAK"),
         .cryId = CRY_TOXICROAK,
         .natDexNum = NATIONAL_DEX_TOXICROAK,
         .categoryName = _("Toxic Mouth"),
@@ -5361,6 +5432,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 #if P_FAMILY_CARNIVINE
     [SPECIES_CARNIVINE] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 74,
         .baseAttack    = 100,
         .baseDefense   = 72,
@@ -5379,7 +5451,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .abilities = { ABILITY_LEVITATE, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_GREEN,
         .noFlip = TRUE,
-        .speciesName = _("Carnivine"),
+        .speciesName = _("CARNIVINE"),
         .cryId = CRY_CARNIVINE,
         .natDexNum = NATIONAL_DEX_CARNIVINE,
         .categoryName = _("Bug Catcher"),
@@ -5442,6 +5514,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 #if P_FAMILY_FINNEON
     [SPECIES_FINNEON] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 49,
         .baseAttack    = 49,
         .baseDefense   = 56,
@@ -5459,7 +5532,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_WATER_2),
         .abilities = { ABILITY_SWIFT_SWIM, ABILITY_STORM_DRAIN, ABILITY_WATER_VEIL },
         .bodyColor = BODY_COLOR_BLUE,
-        .speciesName = _("Finneon"),
+        .speciesName = _("FINNEON"),
         .cryId = CRY_FINNEON,
         .natDexNum = NATIONAL_DEX_FINNEON,
         .categoryName = _("Wing Fish"),
@@ -5529,6 +5602,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_LUMINEON] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 69,
         .baseAttack    = 69,
         .baseDefense   = 76,
@@ -5546,7 +5620,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_WATER_2),
         .abilities = { ABILITY_SWIFT_SWIM, ABILITY_STORM_DRAIN, ABILITY_WATER_VEIL },
         .bodyColor = BODY_COLOR_BLUE,
-        .speciesName = _("Lumineon"),
+        .speciesName = _("LUMINEON"),
         .cryId = CRY_LUMINEON,
         .natDexNum = NATIONAL_DEX_LUMINEON,
         .categoryName = _("Neon"),
@@ -5614,6 +5688,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 #if P_FAMILY_SNOVER
     [SPECIES_SNOVER] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 60,
         .baseAttack    = 62,
         .baseDefense   = 50,
@@ -5632,7 +5707,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MONSTER, EGG_GROUP_GRASS),
         .abilities = { ABILITY_SNOW_WARNING, ABILITY_NONE, ABILITY_SOUNDPROOF },
         .bodyColor = BODY_COLOR_WHITE,
-        .speciesName = _("Snover"),
+        .speciesName = _("SNOVER"),
         .cryId = CRY_SNOVER,
         .natDexNum = NATIONAL_DEX_SNOVER,
         .categoryName = _("Frost Tree"),
@@ -5697,6 +5772,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_ABOMASNOW] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 90,
         .baseAttack    = 92,
         .baseDefense   = 75,
@@ -5716,7 +5792,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MONSTER, EGG_GROUP_GRASS),
         .abilities = { ABILITY_SNOW_WARNING, ABILITY_NONE, ABILITY_SOUNDPROOF },
         .bodyColor = BODY_COLOR_WHITE,
-        .speciesName = _("Abomasnow"),
+        .speciesName = _("ABOMASNOW"),
         .cryId = CRY_ABOMASNOW,
         .natDexNum = NATIONAL_DEX_ABOMASNOW,
         .categoryName = _("Frost Tree"),
@@ -5780,6 +5856,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 #if P_MEGA_EVOLUTIONS
     [SPECIES_ABOMASNOW_MEGA] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 90,
         .baseAttack    = 132,
         .baseDefense   = 105,
@@ -5799,7 +5876,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MONSTER, EGG_GROUP_GRASS),
         .abilities = { ABILITY_SNOW_WARNING, ABILITY_SNOW_WARNING, ABILITY_SNOW_WARNING },
         .bodyColor = BODY_COLOR_WHITE,
-        .speciesName = _("Abomasnow"),
+        .speciesName = _("ABOMASNOW"),
     #if P_MODIFIED_MEGA_CRIES
         .cryId = CRY_ABOMASNOW_MEGA,
     #else
@@ -5859,6 +5936,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_ROTOM] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 50,
         .baseAttack    = 50,
         .baseDefense   = 77,
@@ -5877,7 +5955,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_AMORPHOUS),
         .abilities = { ABILITY_LEVITATE, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_RED,
-        .speciesName = _("Rotom"),
+        .speciesName = _("ROTOM"),
         .cryId = CRY_ROTOM,
         .natDexNum = NATIONAL_DEX_ROTOM,
         .categoryName = _("Plasma"),
@@ -5940,6 +6018,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_ROTOM_HEAT] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 50,
         .baseAttack    = 65,
         .baseDefense   = 107,
@@ -5962,7 +6041,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_AMORPHOUS),
         .abilities = { ABILITY_LEVITATE, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_RED,
-        .speciesName = _("Rotom"),
+        .speciesName = _("ROTOM"),
         .cryId = CRY_ROTOM,
         .natDexNum = NATIONAL_DEX_ROTOM,
         .categoryName = _("Plasma"),
@@ -6015,6 +6094,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_ROTOM_WASH] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 50,
         .baseAttack    = 65,
         .baseDefense   = 107,
@@ -6038,7 +6118,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .abilities = { ABILITY_LEVITATE, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_RED,
         .noFlip = TRUE,
-        .speciesName = _("Rotom"),
+        .speciesName = _("ROTOM"),
         .cryId = CRY_ROTOM,
         .natDexNum = NATIONAL_DEX_ROTOM,
         .categoryName = _("Plasma"),
@@ -6091,6 +6171,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_ROTOM_FROST] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 50,
         .baseAttack    = 65,
         .baseDefense   = 107,
@@ -6113,7 +6194,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_AMORPHOUS),
         .abilities = { ABILITY_LEVITATE, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_RED,
-        .speciesName = _("Rotom"),
+        .speciesName = _("ROTOM"),
         .cryId = CRY_ROTOM,
         .natDexNum = NATIONAL_DEX_ROTOM,
         .categoryName = _("Plasma"),
@@ -6165,6 +6246,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_ROTOM_FAN] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 50,
         .baseAttack    = 65,
         .baseDefense   = 107,
@@ -6187,7 +6269,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_AMORPHOUS),
         .abilities = { ABILITY_LEVITATE, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_RED,
-        .speciesName = _("Rotom"),
+        .speciesName = _("ROTOM"),
         .cryId = CRY_ROTOM,
         .natDexNum = NATIONAL_DEX_ROTOM,
         .categoryName = _("Plasma"),
@@ -6264,6 +6346,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_ROTOM_MOW] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 50,
         .baseAttack    = 65,
         .baseDefense   = 107,
@@ -6286,7 +6369,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_AMORPHOUS),
         .abilities = { ABILITY_LEVITATE, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_RED,
-        .speciesName = _("Rotom"),
+        .speciesName = _("ROTOM"),
         .cryId = CRY_ROTOM,
         .natDexNum = NATIONAL_DEX_ROTOM,
         .categoryName = _("Plasma"),
@@ -6343,6 +6426,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 #if P_FAMILY_UXIE
     [SPECIES_UXIE] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 75,
         .baseAttack    = 75,
         .baseDefense   = 130,
@@ -6367,7 +6451,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
         .abilities = { ABILITY_LEVITATE, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_YELLOW,
-        .speciesName = _("Uxie"),
+        .speciesName = _("UXIE"),
         .cryId = CRY_UXIE,
         .natDexNum = NATIONAL_DEX_UXIE,
         .categoryName = _("Knowledge"),
@@ -6422,6 +6506,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 #if P_FAMILY_MESPRIT
     [SPECIES_MESPRIT] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 80,
         .baseAttack    = 105,
         .baseDefense   = 105,
@@ -6447,7 +6532,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
         .abilities = { ABILITY_LEVITATE, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_PINK,
-        .speciesName = _("Mesprit"),
+        .speciesName = _("MESPRIT"),
         .cryId = CRY_MESPRIT,
         .natDexNum = NATIONAL_DEX_MESPRIT,
         .categoryName = _("Emotion"),
@@ -6507,6 +6592,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 #if P_FAMILY_AZELF
     [SPECIES_AZELF] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 75,
         .baseAttack    = 125,
         .baseDefense   = 70,
@@ -6531,7 +6617,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
         .abilities = { ABILITY_LEVITATE, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_BLUE,
-        .speciesName = _("Azelf"),
+        .speciesName = _("AZELF"),
         .cryId = CRY_AZELF,
         .natDexNum = NATIONAL_DEX_AZELF,
         .categoryName = _("Willpower"),
@@ -6586,6 +6672,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 #if P_FAMILY_DIALGA
     [SPECIES_DIALGA] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 100,
         .baseAttack    = 120,
         .baseDefense   = 120,
@@ -6609,7 +6696,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
         .abilities = { ABILITY_PRESSURE, ABILITY_NONE, ABILITY_TELEPATHY },
         .bodyColor = BODY_COLOR_WHITE,
-        .speciesName = _("Dialga"),
+        .speciesName = _("DIALGA"),
         .cryId = CRY_DIALGA,
         .natDexNum = NATIONAL_DEX_DIALGA,
         .categoryName = _("Temporal"),
@@ -6663,6 +6750,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_DIALGA_ORIGIN] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 100,
         .baseAttack    = 100,
         .baseDefense   = 120,
@@ -6680,7 +6768,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
         .abilities = { ABILITY_PRESSURE, ABILITY_NONE, ABILITY_TELEPATHY },
         .bodyColor = BODY_COLOR_WHITE,
-        .speciesName = _("Dialga"),
+        .speciesName = _("DIALGA"),
         .cryId = CRY_DIALGA,
         .natDexNum = NATIONAL_DEX_DIALGA,
         .categoryName = _("Temporal"),
@@ -6733,6 +6821,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 #if P_FAMILY_PALKIA
     [SPECIES_PALKIA] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 90,
         .baseAttack    = 120,
         .baseDefense   = 100,
@@ -6756,7 +6845,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
         .abilities = { ABILITY_PRESSURE, ABILITY_NONE, ABILITY_TELEPATHY },
         .bodyColor = BODY_COLOR_PURPLE,
-        .speciesName = _("Palkia"),
+        .speciesName = _("PALKIA"),
         .cryId = CRY_PALKIA,
         .natDexNum = NATIONAL_DEX_PALKIA,
         .categoryName = _("Spatial"),
@@ -6810,6 +6899,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_PALKIA_ORIGIN] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 90,
         .baseAttack    = 100,
         .baseDefense   = 100,
@@ -6827,7 +6917,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
         .abilities = { ABILITY_PRESSURE, ABILITY_NONE, ABILITY_TELEPATHY },
         .bodyColor = BODY_COLOR_PURPLE,
-        .speciesName = _("Palkia"),
+        .speciesName = _("PALKIA"),
         .cryId = CRY_PALKIA,
         .natDexNum = NATIONAL_DEX_PALKIA,
         .categoryName = _("Spatial"),
@@ -6880,6 +6970,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 #if P_FAMILY_HEATRAN
     [SPECIES_HEATRAN] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 91,
         .baseAttack    = 90,
         .baseDefense   = 106,
@@ -6903,7 +6994,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
         .abilities = { ABILITY_FLASH_FIRE, ABILITY_NONE, ABILITY_FLAME_BODY },
         .bodyColor = BODY_COLOR_BROWN,
-        .speciesName = _("Heatran"),
+        .speciesName = _("HEATRAN"),
         .cryId = CRY_HEATRAN,
         .natDexNum = NATIONAL_DEX_HEATRAN,
         .categoryName = _("Lava Dome"),
@@ -6958,6 +7049,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 #if P_GEN_9_MEGA_EVOLUTIONS
     [SPECIES_HEATRAN_MEGA] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 91,
         .baseAttack    = 120,
         .baseDefense   = 106,
@@ -6981,7 +7073,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
         .abilities = { ABILITY_FLASH_FIRE, ABILITY_NONE, ABILITY_FLAME_BODY },
         .bodyColor = BODY_COLOR_BROWN,
-        .speciesName = _("Heatran"),
+        .speciesName = _("HEATRAN"),
     #if P_MODIFIED_MEGA_CRIES
         .cryId = CRY_HEATRAN_MEGA,
     #else
@@ -7026,6 +7118,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 #if P_FAMILY_REGIGIGAS
     [SPECIES_REGIGIGAS] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 110,
         .baseAttack    = 160,
         .baseDefense   = 110,
@@ -7049,7 +7142,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
         .abilities = { ABILITY_SLOW_START, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_WHITE,
-        .speciesName = _("Regigigas"),
+        .speciesName = _("REGIGIGAS"),
         .cryId = CRY_REGIGIGAS,
         .natDexNum = NATIONAL_DEX_REGIGIGAS,
         .categoryName = _("Colossal"),
@@ -7110,6 +7203,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_GIRATINA_ALTERED] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 150,
         .baseAttack    = 100,
         .baseDefense   = 120,
@@ -7127,7 +7221,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
         .abilities = { ABILITY_PRESSURE, ABILITY_NONE, ABILITY_TELEPATHY },
         .bodyColor = BODY_COLOR_BLACK,
-        .speciesName = _("Giratina"),
+        .speciesName = _("GIRATINA"),
         .cryId = CRY_GIRATINA,
         .natDexNum = NATIONAL_DEX_GIRATINA,
         .categoryName = _("Renegade"),
@@ -7182,6 +7276,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_GIRATINA_ORIGIN] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 150,
         .baseAttack    = 120,
         .baseDefense   = 100,
@@ -7199,7 +7294,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
         .abilities = { ABILITY_LEVITATE, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_BLACK,
-        .speciesName = _("Giratina"),
+        .speciesName = _("GIRATINA"),
         .cryId = CRY_GIRATINA,
         .natDexNum = NATIONAL_DEX_GIRATINA,
         .categoryName = _("Renegade"),
@@ -7259,6 +7354,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 #if P_FAMILY_CRESSELIA
     [SPECIES_CRESSELIA] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 120,
         .baseAttack    = 70,
         .baseDefense   = P_UPDATED_STATS >= GEN_9 ? 110 : 120,
@@ -7284,7 +7380,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
         .abilities = { ABILITY_LEVITATE, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_YELLOW,
-        .speciesName = _("Cresselia"),
+        .speciesName = _("CRESSELIA"),
         .cryId = CRY_CRESSELIA,
         .natDexNum = NATIONAL_DEX_CRESSELIA,
         .categoryName = _("Lunar"),
@@ -7342,6 +7438,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 #if P_FAMILY_MANAPHY
     [SPECIES_PHIONE] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 80,
         .baseAttack    = 80,
         .baseDefense   = 80,
@@ -7365,7 +7462,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_WATER_1, EGG_GROUP_FAIRY),
         .abilities = { ABILITY_HYDRATION, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_BLUE,
-        .speciesName = _("Phione"),
+        .speciesName = _("PHIONE"),
         .cryId = CRY_PHIONE,
         .natDexNum = NATIONAL_DEX_PHIONE,
         .categoryName = _("Sea Drifter"),
@@ -7419,6 +7516,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_MANAPHY] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 100,
         .baseAttack    = 100,
         .baseDefense   = 100,
@@ -7442,7 +7540,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_WATER_1, EGG_GROUP_FAIRY),
         .abilities = { ABILITY_HYDRATION, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_BLUE,
-        .speciesName = _("Manaphy"),
+        .speciesName = _("MANAPHY"),
         .cryId = CRY_MANAPHY,
         .natDexNum = NATIONAL_DEX_MANAPHY,
         .categoryName = _("Seafaring"),
@@ -7499,6 +7597,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 #if P_FAMILY_DARKRAI
     [SPECIES_DARKRAI] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 70,
         .baseAttack    = 90,
         .baseDefense   = 90,
@@ -7524,7 +7623,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .abilities = { ABILITY_BAD_DREAMS, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_BLACK,
         .noFlip = TRUE,
-        .speciesName = _("Darkrai"),
+        .speciesName = _("DARKRAI"),
         .cryId = CRY_DARKRAI,
         .natDexNum = NATIONAL_DEX_DARKRAI,
         .categoryName = _("Pitch-Black"),
@@ -7581,6 +7680,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 #if P_GEN_9_MEGA_EVOLUTIONS
     [SPECIES_DARKRAI_MEGA] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 70,
         .baseAttack    = 120,
         .baseDefense   = 130,
@@ -7605,7 +7705,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
         .abilities = { ABILITY_BAD_DREAMS, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_BLACK,
-        .speciesName = _("Darkrai"),
+        .speciesName = _("DARKRAI"),
     #if P_MODIFIED_MEGA_CRIES
         .cryId = CRY_DARKRAI_MEGA,
     #else
@@ -7660,6 +7760,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_SHAYMIN_LAND] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 100,
         .baseAttack    = 100,
         .baseDefense   = 100,
@@ -7679,7 +7780,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
         .abilities = { ABILITY_NATURAL_CURE, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_GREEN,
-        .speciesName = _("Shaymin"),
+        .speciesName = _("SHAYMIN"),
         .cryId = CRY_SHAYMIN_LAND,
         .natDexNum = NATIONAL_DEX_SHAYMIN,
         .categoryName = _("Gratitude"),
@@ -7734,6 +7835,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_SHAYMIN_SKY] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 100,
         .baseAttack    = 103,
         .baseDefense   = 75,
@@ -7758,7 +7860,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .abilities = { ABILITY_SERENE_GRACE, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_GREEN,
         .noFlip = TRUE,
-        .speciesName = _("Shaymin"),
+        .speciesName = _("SHAYMIN"),
         .cryId = CRY_SHAYMIN_SKY,
         .natDexNum = NATIONAL_DEX_SHAYMIN,
         .categoryName = _("Gratitude"),
@@ -7850,7 +7952,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),                  \
         .abilities = { ABILITY_MULTITYPE, ABILITY_NONE, ABILITY_NONE },             \
         .bodyColor = BODY_COLOR_WHITE,                                              \
-        .speciesName = _("Arceus"),                                                 \
+        .speciesName = _("ARCEUS"),                                                 \
         .cryId = CRY_ARCEUS,                                                        \
         .natDexNum = NATIONAL_DEX_ARCEUS,                                           \
         .categoryName = _("Alpha"),                                                 \
@@ -7891,6 +7993,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .formChangeTable = sArceusFormChangeTable,                                  \
         .isMythical = TRUE,                                                         \
         .isFrontierBanned = TRUE,                                                   \
+        .dexNotRequired = TRUE,                                                     \
         .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT, \
     }
 

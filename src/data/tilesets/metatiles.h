@@ -56,6 +56,9 @@ const u16 gMetatileAttributes_BattleFrontier[] = INCBIN_U16("data/tilesets/secon
 const u16 gMetatiles_Contest[] = INCBIN_U16("data/tilesets/secondary/contest/metatiles.bin");
 const u16 gMetatileAttributes_Contest[] = INCBIN_U16("data/tilesets/secondary/contest/metatile_attributes.bin");
 
+const u16 gMetatiles_CableClub[] = INCBIN_U16("data/tilesets/secondary/cable_club/metatiles.bin");
+const u16 gMetatileAttributes_CableClub[] = INCBIN_U16("data/tilesets/secondary/cable_club/metatile_attributes.bin");
+
 const u16 gMetatiles_Lab_Frlg[] = INCBIN_U16("data/tilesets/secondary/lab_frlg/metatiles.bin");
 const u16 gMetatileAttributes_Lab_Frlg[] = INCBIN_U16("data/tilesets/secondary/lab_frlg/metatile_attributes.bin");
 
@@ -112,9 +115,6 @@ const u16 gMetatileAttributes_MeteorFalls[] = INCBIN_U16("data/tilesets/secondar
 
 const u16 gMetatiles_OceanicMuseum[] = INCBIN_U16("data/tilesets/secondary/oceanic_museum/metatiles.bin");
 const u16 gMetatileAttributes_OceanicMuseum[] = INCBIN_U16("data/tilesets/secondary/oceanic_museum/metatile_attributes.bin");
-
-const u16 gMetatiles_CableClub[] = INCBIN_U16("data/tilesets/secondary/cable_club/metatiles.bin");
-const u16 gMetatileAttributes_CableClub[] = INCBIN_U16("data/tilesets/secondary/cable_club/metatile_attributes.bin");
 
 const u16 gMetatiles_SeashoreHouse[] = INCBIN_U16("data/tilesets/secondary/seashore_house/metatiles.bin");
 const u16 gMetatileAttributes_SeashoreHouse[] = INCBIN_U16("data/tilesets/secondary/seashore_house/metatile_attributes.bin");
@@ -702,6 +702,12 @@ const u16 gMetatileAttributes_WhirlIslands_Hns[] = INCBIN_U16("data/tilesets/sec
 
 const u16 gMetatiles_ssaqua_Hns[] = INCBIN_U16("data/tilesets/secondary/ssaqua_hns/metatiles.bin");
 const u16 gMetatileAttributes_ssaqua_Hns[] = INCBIN_U16("data/tilesets/secondary/ssaqua_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_AlolaIsland[] = INCBIN_U16("data/tilesets/primary/alola_island/metatiles.bin");
+const u16 gMetatileAttributes_AlolaIsland[] = INCBIN_U16("data/tilesets/primary/alola_island/metatile_attributes.bin");
+
+const u16 gMetatiles_AlolaIslandSecondary[] = INCBIN_U16("data/tilesets/secondary/alola_island_secondary/metatiles.bin");
+const u16 gMetatileAttributes_AlolaIslandSecondary[] = INCBIN_U16("data/tilesets/secondary/alola_island_secondary/metatile_attributes.bin");
 
 const u16 gMetatiles_Route40_Hns[] = INCBIN_U16("data/tilesets/secondary/route_40_hns/metatiles.bin");
 const u16 gMetatileAttributes_Route40_Hns[] = INCBIN_U16("data/tilesets/secondary/route_40_hns/metatile_attributes.bin");

@@ -541,6 +541,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "CeruleanCity_EventScript_CapeSign"
+    },
+    {
+      "type": "hidden_item",
+      "x": 17,
+      "y": 10,
+      "elevation": 0,
+      "item": "ITEM_NUGGET",
+      "flag": "FLAG_HIDDEN_ITEM_CERULEAN_CITY_NUGGET"
     }
   ],
   "game_version": "hns",

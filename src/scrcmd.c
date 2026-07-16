@@ -1445,48 +1445,54 @@ bool8 ScrCmd_givenamedmon(struct ScriptContext *ctx)
     heldItem[0] = item & 0xFF;
     heldItem[1] = item >> 8;
 
+    for (u8 i = 0; i < PARTY_SIZE; i++)
     {
-        struct Pokemon tempMon;
-        mon = &tempMon;
-        ZeroMonData(mon);
-        CreateBoxMon(&mon->box, species, level, personality, OTID_STRUCT_PRESET(otId));
-        SetBoxMonIVs(&mon->box, USE_RANDOM_IVS);
-
-        if (nickname != NULL)
-            SetMonData(mon, MON_DATA_NICKNAME, nickname);
-        SetMonData(mon, MON_DATA_OT_NAME, otName);
-        SetMonData(mon, MON_DATA_HELD_ITEM, heldItem);
-
-        if (giftId == 1)
+        if (GetMonData(&gPlayerParty[i], MON_DATA_SPECIES) == SPECIES_NONE)
         {
-            struct Mail *mailPtr = &gSaveBlock1Ptr->mail[mailIndex];
-            memset(mailPtr, 0, sizeof(*mailPtr));
-            memcpy(mailPtr->words, sKenyaMailWords, sizeof(sKenyaMailWords));
-            StringCopy(mailPtr->playerName, sKenyaOtName);
-            mailPtr->trainerId[0] = (otId >> 0) & 0xFF;
-            mailPtr->trainerId[1] = (otId >> 8) & 0xFF;
-            mailPtr->trainerId[2] = (otId >> 16) & 0xFF;
-            mailPtr->trainerId[3] = (otId >> 24) & 0xFF;
-            mailPtr->species = species;
-            mailPtr->itemId = item;
-            SetMonData(mon, MON_DATA_MAIL, &mailIndex);
+            mon = &gPlayerParty[i];
+            ZeroMonData(mon);
+            CreateBoxMon(&mon->box, species, level, personality, OTID_STRUCT_PRESET(otId));
+            SetBoxMonIVs(&mon->box, USE_RANDOM_IVS);
+            GiveBoxMonInitialMoveset(&mon->box);
+
+            if (nickname != NULL)
+                SetMonData(mon, MON_DATA_NICKNAME, nickname);
+            SetMonData(mon, MON_DATA_OT_NAME, otName);
+            SetMonData(mon, MON_DATA_HELD_ITEM, heldItem);
+
+            if (giftId == 1)
+            {
+                struct Mail *mailPtr = &gSaveBlock1Ptr->mail[mailIndex];
+                memset(mailPtr, 0, sizeof(*mailPtr));
+                memcpy(mailPtr->words, sKenyaMailWords, sizeof(sKenyaMailWords));
+                StringCopy(mailPtr->playerName, sKenyaOtName);
+                mailPtr->trainerId[0] = (otId >> 0) & 0xFF;
+                mailPtr->trainerId[1] = (otId >> 8) & 0xFF;
+                mailPtr->trainerId[2] = (otId >> 16) & 0xFF;
+                mailPtr->trainerId[3] = (otId >> 24) & 0xFF;
+                mailPtr->species = species;
+                mailPtr->itemId = item;
+                SetMonData(mon, MON_DATA_MAIL, &mailIndex);
+            }
+            if (giftId == 4)
+            {
+                u16 move = MOVE_EXTREME_SPEED;
+                SetMonData(mon, MON_DATA_MOVE1, &move);
+                SetMonData(mon, MON_DATA_PP1, &gMovesInfo[move].pp);
+            }
+
+            CalculateMonStats(mon);
+
+            u16 dexNum = SpeciesToNationalPokedexNum(species);
+            HandleSetPokedexFlag(dexNum, FLAG_SET_SEEN, personality);
+            HandleSetPokedexFlag(dexNum, FLAG_SET_CAUGHT, personality);
+
+            gSpecialVar_Result = MON_GIVEN_TO_PARTY;
+            return FALSE;
         }
-        if (giftId == 4)
-        {
-            u16 move = MOVE_EXTREME_SPEED;
-            SetMonData(mon, MON_DATA_MOVE1, &move);
-            SetMonData(mon, MON_DATA_PP1, &gMovesInfo[move].pp);
-        }
-
-        CalculateMonStats(mon);
-
-        u16 dexNum = SpeciesToNationalPokedexNum(species);
-        HandleSetPokedexFlag(dexNum, FLAG_SET_SEEN, personality);
-        HandleSetPokedexFlag(dexNum, FLAG_SET_CAUGHT, personality);
-
-        gSpecialVar_Result = GiveScriptedMonToPlayer(mon, PARTY_SIZE);
     }
 
+    gSpecialVar_Result = MON_CANT_GIVE;
     return FALSE;
 }
 
@@ -1732,7 +1738,7 @@ bool8 ScrCmd_removegenericmon(struct ScriptContext *ctx)
     return FALSE;
 }
 
-static const u16 sOddEggSpecies[8] = {
+static const u16 sOddEggSpecies[12] = {
     SPECIES_NONE,        // [0] unused
     SPECIES_PICHU,       // 1
     SPECIES_CLEFFA,      // 2
@@ -1740,7 +1746,11 @@ static const u16 sOddEggSpecies[8] = {
     SPECIES_TYROGUE,     // 4
     SPECIES_SMOOCHUM,    // 5
     SPECIES_ELEKID,      // 6
-    SPECIES_MAGBY        // 7
+    SPECIES_MAGBY,       // 7
+    SPECIES_MANTYKE,     // 8
+    SPECIES_BONSLY,      // 9
+    SPECIES_HAPPINY,     // 10
+    SPECIES_MIME_JR,     // 11
 };
 
 static const u8 sOddEggShinyNameList[][PLAYER_NAME_LENGTH + 1] = {
@@ -1840,6 +1850,7 @@ static bool8 GiveOddEgg_Internal(u16 species, bool8 forceShiny, bool8 allow14Per
 
             CreateBoxMon(&mon->box, species, 5, pid, OTID_STRUCT_PLAYER_ID);
             SetBoxMonIVs(&mon->box, USE_RANDOM_IVS);
+            GiveBoxMonInitialMoveset(&mon->box);
 
             {
                 bool8 isEgg = TRUE;
@@ -2632,28 +2643,97 @@ bool8 ScrCmd_showmonpic(struct ScriptContext *ctx)
     u16 species = VarGet(varId);
     u8 x = ScriptReadByte(ctx);
     u8 y = ScriptReadByte(ctx);
+    bool8 shinyStarter = FALSE;
 
     Script_RequestEffects(SCREFF_V1 | SCREFF_HARDWARE);
 
-#if RANDOMIZER_AVAILABLE
-    if (RandomizerFeatureEnabled(RANDOMIZE_STARTER_AND_GIFT_MON) && !FlagGet(FLAG_SYS_POKEMON_GET))
+    // If we have not gotten a pokemon yet, assume this is the starter preview
+    if (!FlagGet(FLAG_SYS_POKEMON_GET))
     {
-        species = RandomizeMon(RANDOMIZER_REASON_STARTER_AND_GIFT_MON, GetRandomizerOption(RANDOMIZER_OPTION_SPECIES_MODE), GetRandomizerSeed() ^ species, species);
-        if (species == SPECIES_TOGEPI)
-            species = SPECIES_CLEFFA;
-        if (varId >= VARS_START)
-            VarSet(varId, species);
-    }
-#endif
+        u8 starter = VarGet(VAR_STARTER_MON);
 
-    if (IsOneTypeChallengeActive() && !FlagGet(FLAG_SYS_POKEMON_GET))
-    {
-        species = GetStarterPokemon(VarGet(VAR_STARTER_MON));
-        if (varId >= VARS_START)
-            VarSet(varId, species);
+        u32 flagPreviewChecked = 0;
+        u32 flagShinyPreview = 0;
+
+        if (starter == 0)
+        {
+            flagPreviewChecked = FLAG_STARTER_PREVIEW_CHECKED_1;
+            flagShinyPreview = FLAG_SHINY_STARTER_1;
+        }
+        else if (starter == 1)
+        {
+            flagPreviewChecked = FLAG_STARTER_PREVIEW_CHECKED_2;
+            flagShinyPreview = FLAG_SHINY_STARTER_2;
+        }
+        else if (starter == 2)
+        {
+            flagPreviewChecked = FLAG_STARTER_PREVIEW_CHECKED_3;
+            flagShinyPreview = FLAG_SHINY_STARTER_3;
+        }
+
+        #ifndef NDEBUG
+            MgbaPrintf(MGBA_LOG_DEBUG, "******** Possible Temp Flags: %x, %x, %x ********", FLAG_TEMP_1, FLAG_TEMP_2, FLAG_TEMP_3);
+            MgbaPrintf(MGBA_LOG_DEBUG, "******** Possible Shiny Starter Flags: %x, %x, %x ********", FLAG_SHINY_STARTER_1, FLAG_SHINY_STARTER_2, FLAG_SHINY_STARTER_3);
+            MgbaPrintf(MGBA_LOG_DEBUG, "******** Actual Temp and Shiny Flags: %x, %x ********", flagPreviewChecked, flagShinyPreview);
+        #endif
+
+        // if FLAG_TEMP_X not set for this starter preview, roll for shininess,
+        // then set FLAG_TEMP_X to prevent re-rolls
+        if (!FlagGet(flagPreviewChecked))
+        {
+            #ifndef NDEBUG
+                MgbaPrintf(MGBA_LOG_DEBUG, "\n******** Rolling Starter Preview Shininess ********");
+                MgbaPrintf(MGBA_LOG_DEBUG, "******** Flag Values Before: %d, %d ********", FlagGet(flagPreviewChecked), FlagGet(flagShinyPreview));
+            #endif
+
+            u32 value = READ_OTID_FROM_SAVE;
+            u32 shinyPersonality = Random32();
+
+            // this is technically unnecessary right now, but will replace GetShinyOdds in terms of implementing user-defined shiny odds
+            u32 totalRerolls = 0;
+            if (CheckBagHasItem(ITEM_SHINY_CHARM, 1))
+                totalRerolls += I_SHINY_CHARM_ADDITIONAL_ROLLS;
+            
+            while (GET_SHINY_VALUE(value, shinyPersonality) >= GetShinyOdds() && totalRerolls > 0)
+            {
+                shinyPersonality = Random32();
+                totalRerolls--;
+            }
+
+            if (GET_SHINY_VALUE(value, shinyPersonality) < GetShinyOdds())
+                FlagSet(flagShinyPreview);
+
+            FlagSet(flagPreviewChecked);
+        }
+
+        shinyStarter = FlagGet(flagShinyPreview);
+
+        #ifndef NDEBUG
+            MgbaPrintf(MGBA_LOG_DEBUG, "******** Flag Values: %d, %d ********", FlagGet(flagPreviewChecked), FlagGet(flagShinyPreview));
+            MgbaPrintf(MGBA_LOG_DEBUG, "******** Preview Should be Shiny: %d ********", shinyStarter);
+        #endif
+
+        #if RANDOMIZER_AVAILABLE
+        if (RandomizerFeatureEnabled(RANDOMIZE_STARTER_AND_GIFT_MON))
+        {
+            species = RandomizeMon(RANDOMIZER_REASON_STARTER_AND_GIFT_MON, GetRandomizerOption(RANDOMIZER_OPTION_SPECIES_MODE), GetRandomizerSeed() ^ species, species);
+            if (varId >= VARS_START)
+                VarSet(varId, species);
+        }
+        #endif
+
+        if (IsOneTypeChallengeActive())
+        {
+            species = GetStarterPokemon(VarGet(VAR_STARTER_MON));
+            if (varId >= VARS_START)
+                VarSet(varId, species);
+        }
     }
 
-    ScriptMenu_ShowPokemonPic(species, x, y);
+    if (shinyStarter)
+        ScriptMenu_ShowShinyPokemonPic(species, x, y);
+    else
+        ScriptMenu_ShowPokemonPic(species, x, y);
     return FALSE;
 }
 
@@ -2978,6 +3058,25 @@ bool8 ScrCmd_checkfieldmove(struct ScriptContext *ctx)
             break;
         }
     }
+    if (gSpecialVar_Result == GetMaxPartySize())
+    {
+        u16 itemId = GetTMHMItemIdFromMoveId(move);
+        if (itemId != ITEM_NONE && CheckBagHasItem(itemId, 1))
+        {
+            for (u32 i = 0; i < GetMaxPartySize(); i++)
+            {
+                u16 species = GetMonData(&gPlayerParty[i], MON_DATA_SPECIES);
+                if (!species)
+                    break;
+                if (!GetMonData(&gPlayerParty[i], MON_DATA_IS_EGG) && CanLearnTeachableMove(species, move))
+                {
+                    gSpecialVar_Result = i;
+                    gSpecialVar_0x8004 = species;
+                    break;
+                }
+            }
+        }
+    }
 
     return FALSE;
 }
@@ -2999,10 +3098,40 @@ bool8 ScrCmd_checkpartymove(struct ScriptContext *ctx)
             break;
         }
     }
-    // TODO: HnS has two additional fallbacks here:
-    // 1. Tutor fallback — if no mon knows the move, check if any can *learn* it via MoveIdToTutorIndex/CanLearnTutorMove
-    // 2. HM overwrite fallback — if HMsOverwriteOptionActive(), check bag for the HM item via MoveToHM/BattleMoveIdToItemId
-    // These require porting the helper functions from pokemonHnS/src/scrcmd.c:1996-2046
+    if (gSpecialVar_Result == GetMaxPartySize())
+    {
+        for (u32 i = 0; i < GetMaxPartySize(); i++)
+        {
+            u16 species = GetMonData(&gPlayerParty[i], MON_DATA_SPECIES);
+            if (!species)
+                break;
+            if (!GetMonData(&gPlayerParty[i], MON_DATA_IS_EGG) && CanLearnTeachableMove(species, moveId))
+            {
+                gSpecialVar_Result = i;
+                gSpecialVar_0x8004 = species;
+                break;
+            }
+        }
+    }
+    if (gSpecialVar_Result == GetMaxPartySize() && HMsOverwriteOptionActive())
+    {
+        u16 itemId = GetTMHMItemIdFromMoveId(moveId);
+        if (itemId != ITEM_NONE && CheckBagHasItem(itemId, 1))
+        {
+            for (u32 i = 0; i < GetMaxPartySize(); i++)
+            {
+                u16 species = GetMonData(&gPlayerParty[i], MON_DATA_SPECIES);
+                if (!species)
+                    break;
+                if (!GetMonData(&gPlayerParty[i], MON_DATA_IS_EGG) && CanLearnTeachableMove(species, moveId))
+                {
+                    gSpecialVar_Result = i;
+                    gSpecialVar_0x8004 = species;
+                    break;
+                }
+            }
+        }
+    }
     return FALSE;
 }
 
@@ -3266,6 +3395,7 @@ bool8 ScrCmd_pokemart(struct ScriptContext *ctx)
     ScriptContext_Stop();
     return TRUE;
 }
+
 
 bool8 ScrCmd_pokemartdecoration(struct ScriptContext *ctx)
 {

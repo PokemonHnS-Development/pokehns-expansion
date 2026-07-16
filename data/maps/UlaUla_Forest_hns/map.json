@@ -1,0 +1,143 @@
+{
+  "id": "MAP_ULA_ULA_FOREST_HNS",
+  "name": "UlaUla_Forest_hns",
+  "layout": "LAYOUT_ULA_ULA_FOREST_HNS",
+  "music": "MUS_PETALBURG_WOODS",
+  "region_map_section": "MAPSEC_ULAULA_ISLAND",
+  "requires_flash": false,
+  "weather": "WEATHER_SHADE",
+  "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": null,
+  "object_events": [
+    {
+      "local_id": "Ulaula_Totem",
+      "graphics_id": "OBJ_EVENT_GFX_VAR_1",
+      "x": 16,
+      "y": 5,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Alola_Ulaula_TotemBattle",
+      "flag": "FLAG_HIDE_ULAULA_TOTEM"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL_HNS",
+      "x": 19,
+      "y": 3,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_INVISIBLE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Alola_Ulaula_Forest_FindItem1",
+      "flag": "0"
+    },
+    {
+      "local_id": "Ulaula_Tapu",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(TAPU_BULU)",
+      "x": 16,
+      "y": 5,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Alola_Ulaula_BattleVsTapuBulu",
+      "flag": "FLAG_HIDE_TAPU_BULU"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 12,
+      "y": 16,
+      "elevation": 0,
+      "dest_map": "MAP_ULAULA_ISLE_HNS",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 13,
+      "y": 16,
+      "elevation": 0,
+      "dest_map": "MAP_ULAULA_ISLE_HNS",
+      "dest_warp_id": "3"
+    }
+  ],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 16,
+      "y": 7,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Alola_Ulaula_TotemBattle_Trigger"
+    },
+    {
+      "type": "trigger",
+      "x": 18,
+      "y": 7,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Alola_Ulaula_TotemBattle_Trigger"
+    },
+    {
+      "type": "trigger",
+      "x": 15,
+      "y": 7,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Alola_Ulaula_TotemBattle_Trigger"
+    },
+    {
+      "type": "trigger",
+      "x": 14,
+      "y": 7,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Alola_Ulaula_TotemBattle_Trigger"
+    },
+    {
+      "type": "trigger",
+      "x": 13,
+      "y": 7,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Alola_Ulaula_TotemBattle_Trigger"
+    },
+    {
+      "type": "trigger",
+      "x": 17,
+      "y": 7,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Alola_Ulaula_TotemBattle_Trigger"
+    }
+  ],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 16,
+      "y": 4,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Alola_Ulaula_Totem_sign"
+    }
+  ],
+  "game_version": "hns",
+  "region": "REGION_ALOLA"
+}

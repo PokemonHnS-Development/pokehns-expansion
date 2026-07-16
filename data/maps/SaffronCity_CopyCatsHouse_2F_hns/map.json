@@ -12,9 +12,10 @@
   "allow_running": false,
   "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": 0,
+  "connections": null,
   "object_events": [
     {
+      "local_id": "LOCALID_COPYCAT",
       "graphics_id": "OBJ_EVENT_GFX_TWIN_HNS",
       "x": 3,
       "y": 4,
@@ -25,8 +26,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "SaffronCity_CopyCatsHouse_2F_EventScript_Copycat",
-      "flag": "FLAG_TEMP_1",
-      "local_id": "LOCALID_COPYCAT"
+      "flag": "FLAG_TEMP_1"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_DITTO_DOLL",
@@ -55,6 +55,7 @@
       "flag": "0"
     },
     {
+      "local_id": "LOCALID_COPYCAT_CLEFAIRY",
       "graphics_id": "OBJ_EVENT_GFX_CLEFAIRY_DOLL",
       "x": 3,
       "y": 2,
@@ -65,8 +66,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "SaffronCity_CopyCatsHouse_2F_EventScript_Dolls",
-      "flag": "FLAG_HIDE_COPYCAT_CLEFAIRY_DOLL",
-      "local_id": "LOCALID_COPYCAT_CLEFAIRY"
+      "flag": "FLAG_HIDE_COPYCAT_CLEFAIRY_DOLL"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_DODRIO",
@@ -82,7 +82,8 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MAY_NORMAL",
+      "local_id": "LOCALID_KRIS",
+      "graphics_id": "OBJ_EVENT_GFX_KRIS_NORMAL_HNS",
       "x": 3,
       "y": 4,
       "elevation": 0,
@@ -92,11 +93,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_TEMP_2",
-      "local_id": "LOCALID_KRIS"
+      "flag": "FLAG_TEMP_2"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_BRENDAN_NORMAL",
+      "local_id": "LOCALID_GOLD",
+      "graphics_id": "OBJ_EVENT_GFX_GOLD_NORMAL_HNS",
       "x": 3,
       "y": 4,
       "elevation": 0,
@@ -106,8 +107,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_TEMP_3",
-      "local_id": "LOCALID_GOLD"
+      "flag": "FLAG_TEMP_3"
     }
   ],
   "warp_events": [

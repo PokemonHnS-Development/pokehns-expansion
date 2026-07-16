@@ -42,6 +42,7 @@ void UpdateBubblesFieldEffect(struct Sprite *sprite);
 void UpdateSparkleFieldEffect(struct Sprite *sprite);
 void SetSpriteInvisible(u8 spriteId);
 void ShowWarpArrowSprite(u8 spriteId, enum Direction direction, s16 x, s16 y);
+void UpdateBobbingEffect(struct ObjectEvent *, struct Sprite *, struct Sprite *);
 
 u32 FldEff_TallGrass(void);
 

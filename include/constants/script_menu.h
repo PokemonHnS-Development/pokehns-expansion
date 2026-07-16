@@ -181,6 +181,9 @@
 #define MULTI_VERMILION_HARBOR             170
 #define MULTI_HOENN_STARTERS               171
 #define MULTI_5FLOORS                      172
+#define MULTI_MOM_MENU                     173
+#define MULTI_LINK_SERVICES_HNS            174
+#define MULTI_BATTLE_MODE_HNS              175
 
 #define MULTI_NONE 255
 
@@ -234,6 +237,11 @@
 #define STDSTRING_VOLCANO_BADGE    36
 #define STDSTRING_EARTH_BADGE      37
 #define STDSTRING_COINS            38
+#define STDSTRING_MEDICINE         39
+#if I_COMBINE_BAG_POCKETS == FALSE
+#define STDSTRING_BATTLE_ITEMS     40
+#define STDSTRING_TREASURES        41
+#endif
 
 // Dynamic Multichoice Callbacks
 

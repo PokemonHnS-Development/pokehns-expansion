@@ -26,6 +26,7 @@ BlackthornCity_EventScript_CityEnter::
 
 BlackthornCity_EventScript_Call::
 	lock
+	setspeaker BlackthornCity_Text_ElmName
 	pokenavcall BlackthornCity_Text_ElmCall
 	waitmessage
 	delay 30
@@ -33,6 +34,9 @@ BlackthornCity_EventScript_Call::
 	setvar VAR_NEWBARKTOWN_LABSTATE, 7
 	release
 	end
+
+BlackthornCity_Text_ElmName:
+	.string "PROF.ELM$"
 
 BlackthornCity_Text_BaobaCall:
 	.string "WARDEN BAOBA: {PLAYER}!\p"

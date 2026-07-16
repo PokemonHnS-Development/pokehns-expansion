@@ -166,7 +166,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route35_EventScript_Item_Payback",
-      "flag": "FLAG_ITEM_ROUTE35_ROCK_TOMB"
+      "flag": "FLAG_ITEM_ROUTE35_PAYBACK"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",

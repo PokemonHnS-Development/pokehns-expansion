@@ -18,12 +18,13 @@ ViridianCity_Gym_EventScript_Blue::
 	setflag FLAG_DEFEATED_VIRIDIAN_GYM
 	addvar VAR_NUM_BADGES, 1
 	setvar VAR_0x8008, 16
-	call Common_EventScript_SetGymTrainers
+	call Common_EventScript_SetGymTrainers_hns
 	closemessage
 	setflag FLAG_HIDE_LEAGUE_BLACKBELT
 	setflag FLAG_HIDE_CERULEANCAVE_GUARD
 	setflag FLAG_HIDE_SEAFOAM_BLAINE
 	clearflag FLAG_HIDE_CINNABAR_BLAINE
+	setvar VAR_OAK_MT_SILVER_CALL, 1
 	release
 	end
 

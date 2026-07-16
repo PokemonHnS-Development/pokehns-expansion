@@ -126,6 +126,7 @@ IndigoPlateau_EventScript_PsychicTeleport::
 	waitmovement 0
 	fadescreen FADE_TO_WHITE
 	warpteleport MAP_NEW_BARK_TOWN_HNS, 20, 12
+	waitstate
 	release
 	end
 	

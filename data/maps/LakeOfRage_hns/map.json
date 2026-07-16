@@ -288,6 +288,38 @@
       "elevation": 0,
       "item": "ITEM_MAX_REVIVE",
       "flag": "FLAG_ITEM_LAKEOFRAGE_MAX_REVIVE"
+    },
+    {
+      "type": "hidden_item",
+      "x": 24,
+      "y": 6,
+      "elevation": 0,
+      "item": "ITEM_RARE_CANDY",
+      "flag": "FLAG_HIDDEN_ITEM_LAKEOFRAGE_RARE_CANDY"
+    },
+    {
+      "type": "hidden_item",
+      "x": 34,
+      "y": 7,
+      "elevation": 0,
+      "item": "ITEM_MAX_POTION",
+      "flag": "FLAG_HIDDEN_ITEM_LAKEOFRAGE_MAX_POTION"
+    },
+    {
+      "type": "hidden_item",
+      "x": 20,
+      "y": 19,
+      "elevation": 0,
+      "item": "ITEM_CHOICE_SPECS",
+      "flag": "FLAG_HIDDEN_ITEM_LAKEOFRAGE_CHOICE_SPECS"
+    },
+    {
+      "type": "hidden_item",
+      "x": 5,
+      "y": 6,
+      "elevation": 0,
+      "item": "ITEM_FULL_HEAL",
+      "flag": "FLAG_HIDDEN_ITEM_LAKEOFRAGE_FULL_HEAL"
     }
   ],
   "game_version": "hns",

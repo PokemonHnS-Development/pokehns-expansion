@@ -563,6 +563,12 @@
       "y": 46
     },
     {
+      "id": "HEAL_LOCATION_MELEMELE_ISLE_HNS",
+      "map": "MAP_MELEMELE_ISLE_HNS",
+      "x": 28,
+      "y": 7
+    },
+    {
       "id": "HEAL_LOCATION_NEW_SINJOH_HNS",
       "map": "MAP_NEW_SINJOH_HNS",
       "x": 32,

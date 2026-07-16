@@ -327,7 +327,24 @@
   ],
   "warp_events": [],
   "coord_events": [],
-  "bg_events": [],
+  "bg_events": [
+    {
+      "type": "hidden_item",
+      "x": 16,
+      "y": 156,
+      "elevation": 0,
+      "item": "ITEM_MAX_ETHER",
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE17_MAX_ETHER_HNS"
+    },
+    {
+      "type": "hidden_item",
+      "x": 22,
+      "y": 157,
+      "elevation": 0,
+      "item": "ITEM_MAX_ELIXIR",
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE17_MAX_ELIXIR_HNS"
+    }
+  ],
   "game_version": "hns",
   "region": "REGION_KANTO"
 }

@@ -13,6 +13,7 @@
 #include "item.h"
 #include "main.h"
 #include "menu.h"
+#include "money.h"
 #include "overworld.h"
 #include "palette.h"
 #include "pokemon.h"
@@ -146,6 +147,29 @@ struct
     {TRAINER_CLASS_SCHOOL_KID, TRAINER_ENCOUNTER_MUSIC_MALE},
 };
 
+#if IS_HNS
+static const u16 sPrizeListRareCandy1[]  = {ITEM_RARE_CANDY,       ITEM_ETHER, ITEM_MAX_POTION, ITEM_REVIVE, ITEM_FLUFFY_TAIL, ITEM_GREAT_BALL};
+static const u16 sPrizeListLuxuryBall1[] = {ITEM_LUXURY_BALL,      ITEM_ETHER, ITEM_MAX_POTION, ITEM_REVIVE, ITEM_FLUFFY_TAIL, ITEM_GREAT_BALL};
+static const u16 sPrizeListMaxRevive1[]  = {ITEM_MAX_REVIVE,       ITEM_ETHER, ITEM_MAX_POTION, ITEM_REVIVE, ITEM_FLUFFY_TAIL, ITEM_GREAT_BALL};
+static const u16 sPrizeListMaxEther1[]   = {ITEM_MAX_ETHER,        ITEM_ETHER, ITEM_MAX_POTION, ITEM_REVIVE, ITEM_FLUFFY_TAIL, ITEM_GREAT_BALL};
+static const u16 sPrizeListElixir1[]     = {ITEM_PETAYA_BERRY,     ITEM_MAX_ETHER, ITEM_BIG_NUGGET, ITEM_MAX_REVIVE, ITEM_MAX_POTION, ITEM_LUXURY_BALL};
+static const u16 sPrizeListRoar[]        = {ITEM_LUXURY_BALL,      ITEM_ETHER, ITEM_MAX_POTION, ITEM_REVIVE, ITEM_FLUFFY_TAIL, ITEM_GREAT_BALL};
+static const u16 sPrizeListSludgeBomb[]  = {ITEM_GREEN_SHARD,      ITEM_ETHER, ITEM_MAX_POTION, ITEM_REVIVE, ITEM_FLUFFY_TAIL, ITEM_GREAT_BALL};
+static const u16 sPrizeListToxic[]       = {ITEM_RED_SHARD,        ITEM_ETHER, ITEM_MAX_POTION, ITEM_REVIVE, ITEM_FLUFFY_TAIL, ITEM_GREAT_BALL};
+static const u16 sPrizeListSunnyDay[]    = {ITEM_APICOT_BERRY,     ITEM_MAX_ETHER, ITEM_BIG_NUGGET, ITEM_MAX_REVIVE, ITEM_MAX_POTION, ITEM_LUXURY_BALL};
+static const u16 sPrizeListEarthQuake[]  = {ITEM_YELLOW_SHARD,     ITEM_ETHER, ITEM_MAX_POTION, ITEM_REVIVE, ITEM_FLUFFY_TAIL, ITEM_GREAT_BALL};
+
+static const u16 sPrizeListRareCandy2[]  = {ITEM_RARE_CANDY,       ITEM_ETHER, ITEM_MAX_POTION, ITEM_REVIVE, ITEM_FLUFFY_TAIL, ITEM_GREAT_BALL};
+static const u16 sPrizeListLuxuryBall2[] = {ITEM_LUXURY_BALL,      ITEM_ETHER, ITEM_MAX_POTION, ITEM_REVIVE, ITEM_FLUFFY_TAIL, ITEM_GREAT_BALL};
+static const u16 sPrizeListMaxRevive2[]  = {ITEM_MAX_REVIVE,       ITEM_ETHER, ITEM_MAX_POTION, ITEM_REVIVE, ITEM_FLUFFY_TAIL, ITEM_GREAT_BALL};
+static const u16 sPrizeListMaxEther2[]   = {ITEM_MAX_ETHER,        ITEM_ETHER, ITEM_MAX_POTION, ITEM_REVIVE, ITEM_FLUFFY_TAIL, ITEM_GREAT_BALL};
+static const u16 sPrizeListElixir2[]     = {ITEM_PETAYA_BERRY,     ITEM_MAX_ETHER, ITEM_BIG_NUGGET, ITEM_MAX_REVIVE, ITEM_MAX_POTION, ITEM_LUXURY_BALL};
+static const u16 sPrizeListBrickBreak[]  = {ITEM_GANLON_BERRY,     ITEM_MAX_ETHER, ITEM_BIG_NUGGET, ITEM_MAX_REVIVE, ITEM_MAX_POTION, ITEM_LUXURY_BALL};
+static const u16 sPrizeListTorment[]     = {ITEM_SUN_STONE,        ITEM_ETHER, ITEM_MAX_POTION, ITEM_REVIVE, ITEM_FLUFFY_TAIL, ITEM_GREAT_BALL};
+static const u16 sPrizeListSkillSwap[]   = {ITEM_RED_SHARD,        ITEM_ETHER, ITEM_MAX_POTION, ITEM_REVIVE, ITEM_FLUFFY_TAIL, ITEM_GREAT_BALL};
+static const u16 sPrizeListGigaDrain[]   = {ITEM_SALAC_BERRY,      ITEM_MAX_ETHER, ITEM_BIG_NUGGET, ITEM_MAX_REVIVE, ITEM_MAX_POTION, ITEM_LUXURY_BALL};
+static const u16 sPrizeListAttract[]     = {ITEM_BLUE_SHARD,       ITEM_ETHER, ITEM_MAX_POTION, ITEM_REVIVE, ITEM_FLUFFY_TAIL, ITEM_GREAT_BALL};
+#else
 static const u16 sPrizeListRareCandy1[]  = {ITEM_RARE_CANDY,       ITEM_ETHER, ITEM_MAX_POTION, ITEM_REVIVE, ITEM_FLUFFY_TAIL, ITEM_GREAT_BALL};
 static const u16 sPrizeListLuxuryBall1[] = {ITEM_LUXURY_BALL,      ITEM_ETHER, ITEM_MAX_POTION, ITEM_REVIVE, ITEM_FLUFFY_TAIL, ITEM_GREAT_BALL};
 static const u16 sPrizeListMaxRevive1[]  = {ITEM_MAX_REVIVE,       ITEM_ETHER, ITEM_MAX_POTION, ITEM_REVIVE, ITEM_FLUFFY_TAIL, ITEM_GREAT_BALL};
@@ -167,6 +191,7 @@ static const u16 sPrizeListTorment[]     = {ITEM_TM_TORMENT,       ITEM_ETHER, I
 static const u16 sPrizeListSkillSwap[]   = {ITEM_TM_SKILL_SWAP,    ITEM_ETHER, ITEM_MAX_POTION, ITEM_REVIVE, ITEM_FLUFFY_TAIL, ITEM_GREAT_BALL};
 static const u16 sPrizeListGigaDrain[]   = {ITEM_TM_GIGA_DRAIN,    ITEM_ETHER, ITEM_MAX_POTION, ITEM_REVIVE, ITEM_FLUFFY_TAIL, ITEM_GREAT_BALL};
 static const u16 sPrizeListAttract[]     = {ITEM_TM_ATTRACT,       ITEM_ETHER, ITEM_MAX_POTION, ITEM_REVIVE, ITEM_FLUFFY_TAIL, ITEM_GREAT_BALL};
+#endif
 
 static const u16 *const sPrizeLists1[NUM_TRAINER_HILL_PRIZE_LISTS] =
 {
@@ -277,6 +302,14 @@ static const u32 sNextFloorMapNum[NUM_TRAINER_HILL_FLOORS] =
     [TRAINER_HILL_3F - 1] = MAP_NUM(MAP_TRAINER_HILL_4F),
     [TRAINER_HILL_4F - 1] = MAP_NUM(MAP_TRAINER_HILL_ROOF)
 };
+
+static const u32 sNextFloorMapNum_Hns[NUM_TRAINER_HILL_FLOORS] =
+{
+    [TRAINER_HILL_1F - 1] = MAP_NUM(MAP_TRAINER_HILL_2F_HNS),
+    [TRAINER_HILL_2F - 1] = MAP_NUM(MAP_TRAINER_HILL_3F_HNS),
+    [TRAINER_HILL_3F - 1] = MAP_NUM(MAP_TRAINER_HILL_4F_HNS),
+    [TRAINER_HILL_4F - 1] = MAP_NUM(MAP_TRAINER_HILL_ROOF_HNS)
+};
 static const u8 sTrainerPartySlots[HILL_TRAINERS_PER_FLOOR][PARTY_SIZE / 2] =
 {
     {0, 1, 2},
@@ -307,7 +340,11 @@ void ResetTrainerHillResults(void)
 
 static u8 GetFloorId(void)
 {
+#if IS_HNS
+    return gMapHeader.mapLayoutId - LAYOUT_TRAINER_HILL_1F_HNS;
+#else
     return gMapHeader.mapLayoutId - LAYOUT_TRAINER_HILL_1F;
+#endif
 }
 
 enum TrainerClassID GetTrainerHillOpponentClass(u16 trainerId)
@@ -369,7 +406,11 @@ static void SetUpDataStruct(void)
     if (sHillData != NULL) return;
 
     sHillData = AllocZeroed(sizeof(*sHillData));
+#if IS_HNS
+    sHillData->floorId = gMapHeader.mapLayoutId - LAYOUT_TRAINER_HILL_1F_HNS;
+#else
     sHillData->floorId = gMapHeader.mapLayoutId - LAYOUT_TRAINER_HILL_1F;
+#endif
 
     CpuCopy32(sChallengeData[gSaveBlock1Ptr->trainerHill.mode], &sHillData->challenge, sizeof(sHillData->challenge));
     CpuCopy32(sFloorData[gSaveBlock1Ptr->trainerHill.mode], &sHillData->floors, sizeof(sHillData->floors));
@@ -715,7 +756,7 @@ static u16 GetMapDataForFloor(u8 floorId, u32 x, u32 y, u32 floorWidth) // floor
     u16 elevation;
 
     impassable = (sHillData->floors[floorId].map.collisionData[y] >> (15 - x) & 1);
-    metatileId = sHillData->floors[floorId].map.metatileData[floorWidth * y + x] + NUM_METATILES_IN_PRIMARY;
+    metatileId = sHillData->floors[floorId].map.metatileData[floorWidth * y + x] + GetNumMetatilesInPrimary(gMapHeader.mapLayout);
     elevation = PACK_ELEVATION(ELEVATION_DEFAULT);
 
     return PACK_COLLISION(impassable) | elevation | PACK_METATILE(metatileId);
@@ -775,10 +816,17 @@ bool32 InTrainerHill(void)
 {
     bool32 ret;
 
+#if IS_HNS
+    if (gMapHeader.mapLayoutId == LAYOUT_TRAINER_HILL_1F_HNS
+        || gMapHeader.mapLayoutId == LAYOUT_TRAINER_HILL_2F_HNS
+        || gMapHeader.mapLayoutId == LAYOUT_TRAINER_HILL_3F_HNS
+        || gMapHeader.mapLayoutId == LAYOUT_TRAINER_HILL_4F_HNS)
+#else
     if (gMapHeader.mapLayoutId == LAYOUT_TRAINER_HILL_1F
         || gMapHeader.mapLayoutId == LAYOUT_TRAINER_HILL_2F
         || gMapHeader.mapLayoutId == LAYOUT_TRAINER_HILL_3F
         || gMapHeader.mapLayoutId == LAYOUT_TRAINER_HILL_4F)
+#endif
         ret = TRUE;
     else
         ret = FALSE;
@@ -790,6 +838,20 @@ u8 GetCurrentTrainerHillMapId(void)
 {
     u8 mapId;
 
+#if IS_HNS
+    if (gMapHeader.mapLayoutId == LAYOUT_TRAINER_HILL_1F_HNS)
+        mapId = TRAINER_HILL_1F;
+    else if (gMapHeader.mapLayoutId == LAYOUT_TRAINER_HILL_2F_HNS)
+        mapId = TRAINER_HILL_2F;
+    else if (gMapHeader.mapLayoutId == LAYOUT_TRAINER_HILL_3F_HNS)
+        mapId = TRAINER_HILL_3F;
+    else if (gMapHeader.mapLayoutId == LAYOUT_TRAINER_HILL_4F_HNS)
+        mapId = TRAINER_HILL_4F;
+    else if (gMapHeader.mapLayoutId == LAYOUT_TRAINER_HILL_ROOF_HNS)
+        mapId = TRAINER_HILL_ROOF;
+    else if (gMapHeader.mapLayoutId == LAYOUT_TRAINER_HILL_ENTRANCE_HNS)
+        mapId = TRAINER_HILL_ENTRANCE;
+#else
     if (gMapHeader.mapLayoutId == LAYOUT_TRAINER_HILL_1F)
         mapId = TRAINER_HILL_1F;
     else if (gMapHeader.mapLayoutId == LAYOUT_TRAINER_HILL_2F)
@@ -802,6 +864,7 @@ u8 GetCurrentTrainerHillMapId(void)
         mapId = TRAINER_HILL_ROOF;
     else if (gMapHeader.mapLayoutId == LAYOUT_TRAINER_HILL_ENTRANCE)
         mapId = TRAINER_HILL_ENTRANCE;
+#endif
     else
         mapId = 0;
 
@@ -812,7 +875,11 @@ static bool32 UNUSED OnTrainerHillRoof(void)
 {
     bool32 onRoof;
 
+#if IS_HNS
+    if (gMapHeader.mapLayoutId == LAYOUT_TRAINER_HILL_ROOF_HNS)
+#else
     if (gMapHeader.mapLayoutId == LAYOUT_TRAINER_HILL_ROOF)
+#endif
         onRoof = TRUE;
     else
         onRoof = FALSE;
@@ -822,7 +889,9 @@ static bool32 UNUSED OnTrainerHillRoof(void)
 
 const struct WarpEvent* SetWarpDestinationTrainerHill4F(void)
 {
-    const struct MapHeader *header = Overworld_GetMapHeaderByGroupAndId(MAP_GROUP(MAP_TRAINER_HILL_4F), MAP_NUM(MAP_TRAINER_HILL_4F));
+    const struct MapHeader *header = Overworld_GetMapHeaderByGroupAndId(
+        IS_HNS ? MAP_GROUP(MAP_TRAINER_HILL_4F_HNS) : MAP_GROUP(MAP_TRAINER_HILL_4F),
+        IS_HNS ? MAP_NUM(MAP_TRAINER_HILL_4F_HNS)   : MAP_NUM(MAP_TRAINER_HILL_4F));
 
     return &header->events->warps[1];
 }
@@ -841,7 +910,9 @@ const struct WarpEvent* SetWarpDestinationTrainerHillFinalFloor(u8 warpEventId)
     if (numFloors == 0 || numFloors > NUM_TRAINER_HILL_FLOORS)
         numFloors = NUM_TRAINER_HILL_FLOORS;
 
-    header = Overworld_GetMapHeaderByGroupAndId(MAP_GROUP(MAP_TRAINER_HILL_4F), sNextFloorMapNum[numFloors - 1]);
+    header = Overworld_GetMapHeaderByGroupAndId(
+        IS_HNS ? MAP_GROUP(MAP_TRAINER_HILL_4F_HNS) : MAP_GROUP(MAP_TRAINER_HILL_4F),
+        IS_HNS ? sNextFloorMapNum_Hns[numFloors - 1] : sNextFloorMapNum[numFloors - 1]);
     return &header->events->warps[0];
 }
 
@@ -1117,6 +1188,43 @@ static u16 GetPrizeItemId(void)
     // entering the Hall of Fame, there would be 1 additional prize possibility (ITEM_MAX_ETHER)
     // as Normal / Unique modes would use sPrizeListSets[0][3] / sPrizeListSets[1][3] respectively.
     minutes = (signed)(gSaveBlock1Ptr->trainerHill.timer) / (60 * 60);
+#if IS_HNS
+    if (minutes < 10)
+    {
+        AddMoney(&gSaveBlock1Ptr->money, 1000000);
+        id = 0;
+    }
+    else if (minutes < 12)
+    {
+        AddMoney(&gSaveBlock1Ptr->money, 250000);
+        id = 0;
+    }
+    else if (minutes < 13)
+    {
+        AddMoney(&gSaveBlock1Ptr->money, 100000);
+        id = 1;
+    }
+    else if (minutes < 14)
+    {
+        AddMoney(&gSaveBlock1Ptr->money, 50000);
+        id = 2;
+    }
+    else if (minutes < 16)
+    {
+        AddMoney(&gSaveBlock1Ptr->money, 10000);
+        id = 3;
+    }
+    else if (minutes < 18)
+    {
+        AddMoney(&gSaveBlock1Ptr->money, 5000);
+        id = 4;
+    }
+    else
+    {
+        AddMoney(&gSaveBlock1Ptr->money, 2500);
+        id = 5;
+    }
+#else
     if (minutes < 12)
         id = 0; // Depends on list
     else if (minutes < 13)
@@ -1129,6 +1237,7 @@ static u16 GetPrizeItemId(void)
         id = 4; // ITEM_FLUFFY_TAIL
     else
         id = 5; // ITEM_GREAT_BALL
+#endif
 
     return prizeList[id];
 }

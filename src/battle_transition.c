@@ -869,6 +869,9 @@ static const u16 sMugshotPal_Green[]  = INCBIN_U16("graphics/battle_transitions/
 static const u16 sMugshotPal_Pink[]   = INCBIN_U16("graphics/battle_transitions/pink_bg.gbapal");
 static const u16 sMugshotPal_Blue[]   = INCBIN_U16("graphics/battle_transitions/blue_bg.gbapal");
 static const u16 sMugshotPal_Yellow[] = INCBIN_U16("graphics/battle_transitions/yellow_bg.gbapal");
+static const u16 sMugshotPal_DarkRed[] = INCBIN_U16("graphics/battle_transitions/dark_red_bg.gbapal");
+static const u16 sMugshotPal_Orange[] = INCBIN_U16("graphics/battle_transitions/orange_bg.gbapal");
+static const u16 sMugshotPal_LightBlue[] = INCBIN_U16("graphics/battle_transitions/light_blue_bg.gbapal");
 static const u16 sMugshotPal_Brendan[] = INCBIN_U16("graphics/battle_transitions/brendan_bg.gbapal");
 static const u16 sMugshotPal_May[] = INCBIN_U16("graphics/battle_transitions/may_bg.gbapal");
 
@@ -878,7 +881,10 @@ static const u16 *const sOpponentMugshotsPals[MUGSHOT_COLOR_COUNT] =
     [MUGSHOT_COLOR_GREEN]  = sMugshotPal_Green,
     [MUGSHOT_COLOR_PINK]   = sMugshotPal_Pink,
     [MUGSHOT_COLOR_BLUE]   = sMugshotPal_Blue,
-    [MUGSHOT_COLOR_YELLOW] = sMugshotPal_Yellow
+    [MUGSHOT_COLOR_YELLOW] = sMugshotPal_Yellow,
+    [MUGSHOT_COLOR_DARK_RED] = sMugshotPal_DarkRed,
+    [MUGSHOT_COLOR_ORANGE] = sMugshotPal_Orange,
+    [MUGSHOT_COLOR_LIGHT_BLUE] = sMugshotPal_LightBlue
 };
 
 static const u16 *const sPlayerMugshotsPals[GENDER_COUNT] =

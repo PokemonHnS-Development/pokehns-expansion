@@ -19,12 +19,16 @@ OlivineCity_OnFrame::
 
 OlivineCity_EventScript_BaobaCall::
 	lock
+	setspeaker OlivineCity_Text_BaobaName
 	pokenavcall OlivineCity_Text_Baoba
 	waitmessage
 	delay 30
 	setvar VAR_SAFARI_ZONE_GATE_STATE, 2
 	release
 	end
+
+OlivineCity_Text_BaobaName:
+	.string "BAOBA$"
 
 OlivineCity_Text_Baoba:
 	.string "{PLAYER}!\p"

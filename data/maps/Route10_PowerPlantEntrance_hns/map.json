@@ -12,9 +12,10 @@
   "allow_running": true,
   "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": 0,
+  "connections": null,
   "object_events": [
     {
+      "local_id": "LOCALID_POWERPLANT_COP",
       "graphics_id": "OBJ_EVENT_GFX_OFFICER_HNS",
       "x": 3,
       "y": 18,
@@ -25,10 +26,10 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route10_PowerPlantEntrance_EventScript_Cop",
-      "flag": "0",
-      "local_id": "LOCALID_POWERPLANT_COP"
+      "flag": "0"
     },
     {
+      "local_id": "LOCALID_POWERPLANT_ENGINEER",
       "graphics_id": "OBJ_EVENT_GFX_ENGINEER_HNS",
       "x": 7,
       "y": 14,
@@ -39,8 +40,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route10_PowerPlantEntrance_EventScript_Engineer1",
-      "flag": "0",
-      "local_id": "LOCALID_POWERPLANT_ENGINEER"
+      "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ENGINEER_HNS",
@@ -79,6 +79,19 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route10_PowerPlantEntrance_EventScript_Cop2",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ENGINEER_HNS",
+      "x": 18,
+      "y": 16,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route10_PowerPlantEntrance_EventScript_Lorenzo",
       "flag": "0"
     }
   ],

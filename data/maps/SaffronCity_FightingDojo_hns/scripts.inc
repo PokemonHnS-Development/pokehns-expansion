@@ -36,11 +36,11 @@ SaffronCity_FightingDojo_EventScript_Lickilicky_EV_HP::
 	msgbox SaffronCity_FightingDojo_Text_WouldYouLikeToBattle, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, FALSE, SaffronCity_FightingDojo_EventScript_Refused
 SaffronCity_FightingDojo_EventScript_BattleLickilicky_EV_HP::
-	setflag FLAG_SYS_NO_CATCHING
+	setflag FLAG_NO_WILD_CATCHING
 	setflag FLAG_NO_SHINY
 	setwildbattle SPECIES_LICKILICKY, 1, ITEM_NONE
 	dowildbattle
-	clearflag FLAG_SYS_NO_CATCHING
+	clearflag FLAG_NO_WILD_CATCHING
 	clearflag FLAG_NO_SHINY
 	setflag FLAG_TEMP_1
 	release
@@ -64,11 +64,11 @@ SaffronCity_FightingDojo_EventScript_Machamp_EV_Attack::
 	msgbox SaffronCity_FightingDojo_Text_WouldYouLikeToBattle, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, FALSE, SaffronCity_FightingDojo_EventScript_Refused
 SaffronCity_FightingDojo_EventScript_BattleMachamp_EV_Attack::
-	setflag FLAG_SYS_NO_CATCHING
+	setflag FLAG_NO_WILD_CATCHING
 	setflag FLAG_NO_SHINY
 	setwildbattle SPECIES_MACHAMP, 1, ITEM_NONE
 	dowildbattle
-	clearflag FLAG_SYS_NO_CATCHING
+	clearflag FLAG_NO_WILD_CATCHING
 	clearflag FLAG_NO_SHINY
 	setflag FLAG_TEMP_2
 	release
@@ -92,11 +92,11 @@ SaffronCity_FightingDojo_EventScript_Steelix_EV_Defense::
 	msgbox SaffronCity_FightingDojo_Text_WouldYouLikeToBattle, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, FALSE, SaffronCity_FightingDojo_EventScript_Refused
 SaffronCity_FightingDojo_EventScript_BattleSteelix_EV_Defense::
-	setflag FLAG_SYS_NO_CATCHING
+	setflag FLAG_NO_WILD_CATCHING
 	setflag FLAG_NO_SHINY
 	setwildbattle SPECIES_STEELIX, 1, ITEM_NONE
 	dowildbattle
-	clearflag FLAG_SYS_NO_CATCHING
+	clearflag FLAG_NO_WILD_CATCHING
 	clearflag FLAG_NO_SHINY
 	setflag FLAG_TEMP_3
 	release
@@ -120,11 +120,11 @@ SaffronCity_FightingDojo_EventScript_Alakazam_EV_SpecialAttack::
 	msgbox SaffronCity_FightingDojo_Text_WouldYouLikeToBattle, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, FALSE, SaffronCity_FightingDojo_EventScript_Refused
 SaffronCity_FightingDojo_EventScript_BattleAlakazam_EV_SpecialAttack::
-	setflag FLAG_SYS_NO_CATCHING
+	setflag FLAG_NO_WILD_CATCHING
 	setflag FLAG_NO_SHINY
 	setwildbattle SPECIES_ALAKAZAM, 1, ITEM_NONE
 	dowildbattle
-	clearflag FLAG_SYS_NO_CATCHING
+	clearflag FLAG_NO_WILD_CATCHING
 	clearflag FLAG_NO_SHINY
 	setflag FLAG_TEMP_4
 	release
@@ -148,11 +148,11 @@ SaffronCity_FightingDojo_EventScript_Slowking_EV_SpecialDefense::
 	msgbox SaffronCity_FightingDojo_Text_WouldYouLikeToBattle, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, FALSE, SaffronCity_FightingDojo_EventScript_Refused
 SaffronCity_FightingDojo_EventScript_BattleSlowking_EV_SpecialDefense::
-	setflag FLAG_SYS_NO_CATCHING
+	setflag FLAG_NO_WILD_CATCHING
 	setflag FLAG_NO_SHINY
 	setwildbattle SPECIES_SLOWKING, 1, ITEM_NONE
 	dowildbattle
-	clearflag FLAG_SYS_NO_CATCHING
+	clearflag FLAG_NO_WILD_CATCHING
 	clearflag FLAG_NO_SHINY
 	setflag FLAG_TEMP_5
 	release
@@ -176,11 +176,11 @@ SaffronCity_FightingDojo_EventScript_Pidgeot_EV_Speed::
 	msgbox SaffronCity_FightingDojo_Text_WouldYouLikeToBattle, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, FALSE, SaffronCity_FightingDojo_EventScript_Refused
 SaffronCity_FightingDojo_EventScript_BattlePidgeot_EV_Speed::
-	setflag FLAG_SYS_NO_CATCHING
+	setflag FLAG_NO_WILD_CATCHING
 	setflag FLAG_NO_SHINY
 	setwildbattle SPECIES_PIDGEOT, 1, ITEM_NONE
 	dowildbattle
-	clearflag FLAG_SYS_NO_CATCHING
+	clearflag FLAG_NO_WILD_CATCHING
 	clearflag FLAG_NO_SHINY
 	setflag FLAG_TEMP_6
 	release

@@ -382,6 +382,22 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Route45_EventScript_Sign"
+    },
+    {
+      "type": "hidden_item",
+      "x": 30,
+      "y": 87,
+      "elevation": 0,
+      "item": "ITEM_PP_UP",
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE45_PP_UP"
+    },
+    {
+      "type": "hidden_item",
+      "x": 28,
+      "y": 65,
+      "elevation": 0,
+      "item": "ITEM_FULL_HEAL",
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE45_FULL_HEAL"
     }
   ],
   "game_version": "hns",

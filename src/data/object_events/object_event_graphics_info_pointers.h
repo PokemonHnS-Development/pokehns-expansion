@@ -507,6 +507,8 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SleepingSno
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Spenser_hns;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SsAqua_hns;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Steven_hns;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SkierF_hns;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SkierM_hns;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SuperNerd_hns;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Surge_hns;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SwimmerFLand_hns;
@@ -549,6 +551,7 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_KrisFieldMo
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_KrisFishing_hns;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_KrisWatering_hns;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_KrisDecorating_hns;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AlolaOak_hns;
 
 const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM_OBJ_EVENT_GFX] = {
     [OBJ_EVENT_GFX_BRENDAN_NORMAL] =           &gObjectEventGraphicsInfo_BrendanNormal,
@@ -991,6 +994,8 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_SCIENTIST_M_HNS] = &gObjectEventGraphicsInfo_ScientistM_hns,
     [OBJ_EVENT_GFX_SCOTT_HNS] = &gObjectEventGraphicsInfo_Scott_hns,
     [OBJ_EVENT_GFX_STEVEN_HNS] = &gObjectEventGraphicsInfo_Steven_hns,
+    [OBJ_EVENT_GFX_SKIER_F_HNS] = &gObjectEventGraphicsInfo_SkierF_hns,
+    [OBJ_EVENT_GFX_SKIER_M_HNS] = &gObjectEventGraphicsInfo_SkierM_hns,
     [OBJ_EVENT_GFX_SUPER_NERD_HNS] = &gObjectEventGraphicsInfo_SuperNerd_hns,
     [OBJ_EVENT_GFX_SWIMMER_F_HNS] = &gObjectEventGraphicsInfo_SwimmerF_hns,
     [OBJ_EVENT_GFX_SWIMMER_F_LAND_HNS] = &gObjectEventGraphicsInfo_SwimmerFLand_hns,
@@ -1070,6 +1075,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_MART_LIGHT_HNS] =        &gObjectEventGraphicsInfo_MartLight_Hns,
     [OBJ_EVENT_GFX_POKE_CENTER_LIGHT_HNS] = &gObjectEventGraphicsInfo_PokeCenterLight_Hns,
     [OBJ_EVENT_GFX_SMALL_LIGHT_HNS] =       &gObjectEventGraphicsInfo_SmallLight_Hns,
+    [OBJ_EVENT_GFX_ALOLA_OAK_HNS] =         &gObjectEventGraphicsInfo_AlolaOak_hns,
     // HnS protagonists
     [OBJ_EVENT_GFX_GOLD_NORMAL_HNS] =       &gObjectEventGraphicsInfo_GoldNormal_hns,
     [OBJ_EVENT_GFX_GOLD_MACH_BIKE_HNS] =    &gObjectEventGraphicsInfo_GoldMachBike_hns,

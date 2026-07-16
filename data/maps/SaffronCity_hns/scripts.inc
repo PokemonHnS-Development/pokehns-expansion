@@ -11,12 +11,16 @@ SaffronCity_EventScript_CityEnter::
 	end
 
 SaffronCity_EventScript_BaobaCall::
+	setspeaker SaffronCity_Text_BaobaName
 	pokenavcall SaffronCity_Text_Baoba
 	waitmessage
 	delay 30
 	setflag FLAG_SAFARI_ZONE_EAST_EXPANSION
 	setvar VAR_SAFFRON_CITY_STATE, 1
 	end
+
+SaffronCity_Text_BaobaName:
+	.string "BAOBA$"
 
 SaffronCity_Text_Baoba:
 	.string "WARDEN BAOBA: {PLAYER}!\p"

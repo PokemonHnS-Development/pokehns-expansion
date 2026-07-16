@@ -30,6 +30,7 @@ BugContest_EventScript_TimesUp::
 	goto_if_eq VAR_0x8004, 0, BugContest_EventScript_WrongChoiceMon
 	fadescreen FADE_TO_BLACK
 	warp MAP_NATIONAL_PARK_BUG_CONTEST_HNS, 5
+	waitstate
 	delay 90
 	end
 
@@ -107,15 +108,18 @@ BugContest_EventScript_End::
 	special HealPlayerParty
 	special LoadPlayerParty
 	special ExitBugContestMode
+	clearflag FLAG_DISABLE_EXP_GAIN
 	setvar VAR_BUG_CONTEST_STATE, 0
-	special RemoveSafariBalls
+	special RemoveSportBalls
 	goto_if_eq VAR_TEMP_1, 1, BugContest_EventScript_SideEnd
 	warp MAP_GATE_NATIONAL_PARK_HNS, 7, 2
+	waitstate
 	releaseall
 	end
 
 BugContest_EventScript_SideEnd::
 	warp MAP_GATE_NATIONAL_PARK_HNS, 35, 7
+	waitstate
 	releaseall
 	end
 

@@ -41,6 +41,7 @@
 #include "constants/item.h"
 #include "constants/items.h"
 #include "constants/heal_locations.h"
+#include "constants/help_window.h"
 #include "constants/layouts.h"
 #include "constants/lilycove_lady.h"
 #include "constants/map_scripts.h"
@@ -1062,7 +1063,7 @@ gStdScripts_End::
 EventScript_WhiteOut::
 	call EverGrandeCity_HallOfFame_EventScript_ResetEliteFour
 .if IS_HNS
-	clearflag FLAG_SYS_NO_CATCHING
+	clearflag FLAG_NO_WILD_CATCHING
 	clearflag FLAG_NO_SHINY
 .endif
 	goto EventScript_ResetMrBriney
@@ -1466,6 +1467,10 @@ gText_SelectWithoutRegisteredItem::
 	.string "An item in the BAG can be\n"
 	.string "registered to SELECT for easy use.$"
 
+gText_SelectWithoutRegisteredHoldItem::
+	.string "A KEY ITEM can be registered\n"
+	.string "to holding SELECT for easy use.$"
+
 gText_PokemonTrainerSchoolEmail::
 	.string "There's an e-mail from POKéMON TRAINER\n"
 	.string "SCHOOL.\p"
@@ -1531,9 +1536,15 @@ gText_MomExplainHPGetPotions::
 	.string "Make me proud, honey!\p"
 	.string "Take care!$"
 
+#if IS_HNS
+gText_RegisteredTrainerinPokeNav::
+	.string "Registered {STR_VAR_1} {STR_VAR_2}\n"
+	.string "in the POKéGEAR.$"
+#else
 gText_RegisteredTrainerinPokeNav::
 	.string "Registered {STR_VAR_1} {STR_VAR_2}\n"
 	.string "in the POKéNAV.$"
+#endif
 
 gText_ComeBackWithSecretPower::
 	.string "Do you know the TM SECRET POWER?\p"
@@ -1638,6 +1649,10 @@ EventScript_DoInGameTrade::
 
 EventScript_SelectWithoutRegisteredItem::
 	msgbox gText_SelectWithoutRegisteredItem, MSGBOX_SIGN
+	end
+
+EventScript_SelectWithoutRegisteredHoldItem::
+	msgbox gText_SelectWithoutRegisteredHoldItem, MSGBOX_SIGN
 	end
 
 	.include "data/scripts/field_poison.inc"
@@ -1815,6 +1830,7 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/scripts/lilycove_lady.inc"
 	.include "data/text/match_call.inc"
 	.include "data/text/match_call_hns.inc"
+	.include "data/scripts/mom_savings.inc"
 	.include "data/scripts/apprentice.inc"
 	.include "data/text/apprentice.inc"
 	.include "data/scripts/battle_pike.inc"
@@ -2107,6 +2123,7 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/TrainerHill_3F_hns/scripts.inc"
 	.include "data/maps/TrainerHill_4F_hns/scripts.inc"
 	.include "data/maps/TrainerHill_Roof_hns/scripts.inc"
+	.include "data/maps/TrainerHill_Elevator_hns/scripts.inc"
 	.include "data/maps/SlateportCity_BattleTentLobby_hns/scripts.inc"
 	.include "data/maps/SlateportCity_BattleTentCorridor_hns/scripts.inc"
 	.include "data/maps/SlateportCity_BattleTentBattleRoom_hns/scripts.inc"
@@ -2328,6 +2345,8 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/BattleFrontier_PokemonCenter_1F_hns/scripts.inc"
 	.include "data/maps/BattleFrontier_PokemonCenter_2F_hns/scripts.inc"
 	.include "data/maps/BattleFrontier_Mart_hns/scripts.inc"
+	.include "data/maps/TradeCenter_hns/scripts.inc"
+	.include "data/maps/BattleColosseum_2P_hns/scripts.inc"
 	.include "data/maps/Route49_hns/scripts.inc"
 	.include "data/maps/NewSinjoh_hns/scripts.inc"
 	.include "data/maps/Route50_hns/scripts.inc"
@@ -2351,11 +2370,30 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/Route50_SinjohRuins_Gate_hns/scripts.inc"
 	.include "data/maps/SinjohRuins_House1_hns/scripts.inc"
 	.include "data/maps/SinjohRuins_House2_hns/scripts.inc"
-
-.endif
-
-.if IS_HNS
 	.include "data/maps/SinjohRuins_ArceusRoom_hns/scripts.inc"
-
 	.include "data/maps/NewSinjoh_KimonoHideout_hns/scripts.inc"
+	.include "data/maps/PoniIsle_hns/scripts.inc"
+	.include "data/maps/MelemeleIsle_hns/scripts.inc"
+	.include "data/maps/AlolaWater_hns/scripts.inc"
+	.include "data/maps/Alola_hns/scripts.inc"
+	.include "data/maps/AkalaIsle_hns/scripts.inc"
+	.include "data/maps/UlaulaIsle_hns/scripts.inc"
+	.include "data/maps/Melemele_PlayerHouse_hns/scripts.inc"
+	.include "data/maps/Melemele_House_hns/scripts.inc"
+	.include "data/maps/Melemele_House_4_hns/scripts.inc"
+	.include "data/maps/Melemele_House_2_hns/scripts.inc"
+	.include "data/maps/Melemele_House_3_hns/scripts.inc"
+	.include "data/maps/Melemele_House_5_hns/scripts.inc"
+	.include "data/maps/Melemele_House_6_hns/scripts.inc"
+	.include "data/maps/Akala_House_hns/scripts.inc"
+	.include "data/maps/UlaUla_House_hns/scripts.inc"
+	.include "data/maps/Poni_Cave_hns/scripts.inc"
+	.include "data/maps/Akala_Forest_hns/scripts.inc"
+	.include "data/maps/UlaUla_Cave_hns/scripts.inc"
+	.include "data/maps/UlaUla_Forest_hns/scripts.inc"
+	.include "data/maps/UlaUla_Cave_2_hns/scripts.inc"
+	.include "data/maps/Akala_Cave_hns/scripts.inc"
+
 .endif
+
+

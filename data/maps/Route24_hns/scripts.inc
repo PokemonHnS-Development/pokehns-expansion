@@ -9,8 +9,8 @@ Route24_OnTransition:
 	end
 
 Route24_MapScript_SetRocketScene:
-	setobjectxyperm LOCALID_ROUTE24_GRUNT, 10, 28
-	setobjectxyperm LOCALID_ROUTE24_WOMAN, 10, 29
+	setobjectxyperm LOCALID_ROUTE24_GRUNT, 16, 8
+	setobjectxyperm LOCALID_ROUTE24_WOMAN, 16, 9
 	setobjectmovementtype LOCALID_ROUTE24_GRUNT, MOVEMENT_TYPE_FACE_LEFT
 	setobjectmovementtype LOCALID_ROUTE24_WOMAN, MOVEMENT_TYPE_FACE_UP
 	setobjectmovementtype LOCALID_ROUTE24_MAN, MOVEMENT_TYPE_FACE_DOWN

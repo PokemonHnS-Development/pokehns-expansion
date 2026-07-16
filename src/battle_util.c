@@ -7161,7 +7161,7 @@ static inline u32 CalcAttackStat(struct BattleContext *ctx)
     switch (ctx->holdEffectAtk)
     {
     case HOLD_EFFECT_THICK_CLUB:
-        if ((atkBaseSpeciesId == SPECIES_CUBONE || atkBaseSpeciesId == SPECIES_MAROWAK) && IsBattleMovePhysical(move))
+        if ((atkBaseSpeciesId == SPECIES_CUBONE || atkBaseSpeciesId == SPECIES_MAROWAK || atkBaseSpeciesId == SPECIES_MAROWAK_ALOLA) && IsBattleMovePhysical(move))
             modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(2.0));
         break;
     case HOLD_EFFECT_DEEP_SEA_TOOTH:
@@ -7992,6 +7992,7 @@ static inline u32 IsBattlerLeekAffected(enum BattlerId battler, enum HoldEffect 
     if (holdEffect == HOLD_EFFECT_LEEK)
     {
         return GET_BASE_SPECIES_ID(gBattleMons[battler].species) == SPECIES_FARFETCHD
+            || GET_BASE_SPECIES_ID(gBattleMons[battler].species) == SPECIES_FARFETCHD_GALAR
             || gBattleMons[battler].species == SPECIES_SIRFETCHD;
     }
     return FALSE;

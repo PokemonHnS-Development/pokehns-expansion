@@ -192,7 +192,32 @@
     }
   ],
   "coord_events": [],
-  "bg_events": [],
+  "bg_events": [
+    {
+      "type": "hidden_item",
+      "x": 45,
+      "y": 11,
+      "elevation": 0,
+      "item": "ITEM_ULTRA_BALL",
+      "flag": "FLAG_HIDDEN_ITEM_SEAFOAM_ISLANDS_1F_ULTRA_BALL"
+    },
+    {
+      "type": "hidden_item",
+      "x": 31,
+      "y": 14,
+      "elevation": 0,
+      "item": "ITEM_ICE_HEAL",
+      "flag": "FLAG_HIDDEN_ITEM_SEAFOAM_ISLANDS_1F_ICE_HEAL"
+    },
+    {
+      "type": "hidden_item",
+      "x": 32,
+      "y": 32,
+      "elevation": 0,
+      "item": "ITEM_RARE_CANDY",
+      "flag": "FLAG_HIDDEN_ITEM_SEAFOAM_ISLANDS_1F_RARE_CANDY"
+    }
+  ],
   "game_version": "hns",
   "region": "REGION_KANTO"
 }

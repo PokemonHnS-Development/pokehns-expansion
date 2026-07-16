@@ -729,6 +729,8 @@ const u32 gObjectEventPic_SageElder_hns[] = INCBIN_U32("graphics/object_events/p
 const u32 gObjectEventPic_Sailor_hns[] = INCBIN_U32("graphics/object_events/pics/people/sailor_hns.4bpp");
 const u32 gObjectEventPic_ScientistF_hns[] = INCBIN_U32("graphics/object_events/pics/people/scientist_f_hns.4bpp");
 const u32 gObjectEventPic_ScientistM_hns[] = INCBIN_U32("graphics/object_events/pics/people/scientist_m_hns.4bpp");
+const u32 gObjectEventPic_SkierF_hns[] = INCBIN_U32("graphics/object_events/pics/people/skier_f_hns.4bpp");
+const u32 gObjectEventPic_SkierM_hns[] = INCBIN_U32("graphics/object_events/pics/people/skier_m_hns.4bpp");
 const u32 gObjectEventPic_SuperNerd_hns[] = INCBIN_U32("graphics/object_events/pics/people/super_nerd_hns.4bpp");
 const u32 gObjectEventPic_SwimmerF_hns[] = INCBIN_U32("graphics/object_events/pics/people/swimmer_f_hns.4bpp");
 const u32 gObjectEventPic_SwimmerFLand_hns[] = INCBIN_U32("graphics/object_events/pics/people/swimmer_f_land_hns.4bpp");
@@ -804,6 +806,7 @@ const u32 gObjectEventPic_TowerBeam_hns[] = INCBIN_U32("graphics/object_events/p
 const u32 gObjectEventPic_TrainEast_hns[] = INCBIN_U32("graphics/object_events/pics/misc/train_east_hns.4bpp");
 const u32 gObjectEventPic_TrainWest_hns[] = INCBIN_U32("graphics/object_events/pics/misc/train_west_hns.4bpp");
 const u32 gObjectEventPic_Whirlpool_hns[] = INCBIN_U32("graphics/object_events/pics/misc/whirlpool_hns.4bpp");
+const u32 gObjectEventPic_AlolaOak_hns[] = INCBIN_U32("graphics/object_events/pics/people/alola_oak_hns.4bpp");
 
 // HnS palette data
 const u16 gObjectEventPal_BirthIslandStone_hns[] = INCBIN_U16("graphics/object_events/palettes/birth_island_stone_hns.gbapal");
@@ -845,6 +848,8 @@ const u16 gObjectEventPal_Whirlpool_hns[] = INCBIN_U16("graphics/object_events/p
 const u16 gObjectEventPal_Whitney_hns[] = INCBIN_U16("graphics/object_events/palettes/whitney_hns.gbapal");
 const u16 gObjectEventPal_Will_hns[] = INCBIN_U16("graphics/object_events/palettes/will_hns.gbapal");
 const u32 gObjectEventPic_NurseChansey_hns[] = INCBIN_U32("graphics/object_events/pics/misc/nurse_chansey_hns.4bpp");
+const u16 gObjectEventPal_AlolaOak_hns[] = INCBIN_U16("graphics/object_events/palettes/alola_oak_hns.gbapal");
+
 // HnS protagonist sprite data
 const u32 gObjectEventPic_GoldNormalRunning_hns[] = INCBIN_U32("graphics/object_events/pics/people/gold/walking_hns.4bpp", "graphics/object_events/pics/people/gold/running_hns.4bpp");
 const u16 gObjectEventPal_Gold_hns[] = INCBIN_U16("graphics/object_events/palettes/gold_hns.gbapal");

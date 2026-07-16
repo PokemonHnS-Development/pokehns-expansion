@@ -50,7 +50,7 @@ u16 TryBufferWaldaPhrase(void)
 void DoWaldaNamingScreen(void)
 {
     StringCopy(gStringVar2, GetWaldaPhrasePtr());
-    DoNamingScreen(NAMING_SCREEN_WALDA, gStringVar2, 0, 0, 0, CB2_HandleGivenWaldaPhrase);
+    DoNamingScreen(NAMING_SCREEN_WALDA, gStringVar2, 0, 0, 0, 0, CB2_HandleGivenWaldaPhrase);
 }
 
 static void CB2_HandleGivenWaldaPhrase(void)

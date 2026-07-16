@@ -173,6 +173,7 @@ enum
     HEALTHBOX_GFX_123,
     HEALTHBOX_GFX_FRAME_END,
     HEALTHBOX_GFX_FRAME_END_BAR,
+    HEALTHBOX_GFX_SHINY_ICON,
 };
 
 static const u8 *GetHealthboxElementGfxPtr(u8);
@@ -1848,7 +1849,7 @@ void UpdateNickInHealthbox(u8 healthboxSpriteId, struct Pokemon *mon)
 void TryAddPokeballIconToHealthbox(u8 healthboxSpriteId, bool8 noStatus)
 {
     enum BattlerId battler;
-    u8 healthBarSpriteId;
+    u8 healthBarSpriteId, shinyIconOffset;
 
     if (gBattleTypeFlags & BATTLE_TYPE_CATCH_TUTORIAL)
         return;
@@ -1861,6 +1862,15 @@ void TryAddPokeballIconToHealthbox(u8 healthboxSpriteId, bool8 noStatus)
     if (GetBattlerSide(battler) == B_SIDE_OPPONENT && IsGhostBattleWithoutScope())
         return;
     healthBarSpriteId = gSprites[healthboxSpriteId].hMain_HealthBarSpriteId;
+
+    if (IsMonShiny(GetBattlerMon(battler)) && noStatus)
+    {
+        if (GetSetPokedexFlag(SpeciesToNationalPokedexNum(GetMonData(GetBattlerMon(battler), MON_DATA_SPECIES)), FLAG_GET_CAUGHT) || (IsNuzlockeActive() && !(NuzlockeIsSpeciesClauseActive || OneTypeChallengeCaptureBlocked || NuzlockeIsCaptureBlocked)))
+            shinyIconOffset = 18;
+        else
+            shinyIconOffset = 17;
+        CpuCopy32(GetHealthboxElementGfxPtr(HEALTHBOX_GFX_SHINY_ICON), (void *)(OBJ_VRAM0 + (gSprites[healthboxSpriteId].oam.tileNum + shinyIconOffset) * TILE_SIZE_4BPP), 32);
+    }
 
     if (!GetSetPokedexFlag(SpeciesToNationalPokedexNum(GetMonData(GetBattlerMon(battler), MON_DATA_SPECIES)), FLAG_GET_CAUGHT))
     {

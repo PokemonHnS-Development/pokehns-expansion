@@ -1863,6 +1863,9 @@ const u16 gItemIconPalette_PowderJar[] = INCBIN_U16("graphics/items/icon_palette
 const u32 gItemIcon_WailmerPail[] = INCBIN_U32("graphics/items/icons/wailmer_pail.4bpp.smol");
 const u16 gItemIconPalette_WailmerPail[] = INCBIN_U16("graphics/items/icon_palettes/wailmer_pail.gbapal");
 
+const u32 gItemIcon_SquirtBottle[] = INCBIN_U32("graphics/items/icons/squirt_bottle.4bpp.smol");
+const u16 gItemIconPalette_SquirtBottle[] = INCBIN_U16("graphics/items/icon_palettes/squirt_bottle.gbapal");
+
 const u32 gItemIcon_PokeRadar[] = INCBIN_U32("graphics/items/icons/poke_radar.4bpp.smol");
 const u16 gItemIconPalette_PokeRadar[] = INCBIN_U16("graphics/items/icon_palettes/poke_radar.gbapal");
 
@@ -2155,3 +2158,6 @@ const u32 gItemIcon_Room1Key[] = INCBIN_U32("graphics/items/icons/room1_key.4bpp
 const u32 gItemIcon_Room2Key[] = INCBIN_U32("graphics/items/icons/room2_key.4bpp.smol");
 const u32 gItemIcon_Room4Key[] = INCBIN_U32("graphics/items/icons/room4_key.4bpp.smol");
 const u32 gItemIcon_Room6Key[] = INCBIN_U32("graphics/items/icons/room6_key.4bpp.smol");
+
+const u32 gItemIcon_GBPlayer[] = INCBIN_U32("graphics/items/icons/gb_player.4bpp.smol");
+const u16 gItemIconPalette_GBPlayer[] = INCBIN_U16("graphics/items/icon_palettes/gb_player.gbapal");

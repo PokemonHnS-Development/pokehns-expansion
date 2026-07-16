@@ -296,6 +296,9 @@ graphics/pokenav/region_map/map.8bpp: %.8bpp: %.png
 $(MISCGFXDIR)/japanese_hof.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 29 -Wnum_tiles
 
+$(MISCGFXDIR)/japanese_hof_hns.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 29 -Wnum_tiles
+
 $(MISCGFXDIR)/mirage_tower.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 73 -Wnum_tiles
 
@@ -669,6 +672,9 @@ $(PKNAVGFXDIR)/hns/header.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 53 -Wnum_tiles
 
 $(PKNAVGFXDIR)/device_outline.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 53 -Wnum_tiles
+
+$(PKNAVGFXDIR)/hns/device_outline.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 53 -Wnum_tiles
 
 $(PKNAVGFXDIR)/match_call/ui.4bpp: %.4bpp: %.png

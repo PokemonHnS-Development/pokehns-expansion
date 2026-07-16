@@ -25,6 +25,7 @@
 #include "link.h"
 #include "match_call.h"
 #include "metatile_behavior.h"
+#include "mom_savings.h"
 #include "overworld.h"
 #include "pokemon.h"
 #include "safari_zone.h"
@@ -45,6 +46,7 @@
 
 static EWRAM_DATA u8 sWildEncounterImmunitySteps = 0;
 static EWRAM_DATA u16 sPrevMetatileBehavior = 0;
+static EWRAM_DATA u8 sPlayerSelectHoldFrames = 0;
 
 COMMON_DATA u8 gSelectedObjectEvent = 0;
 
@@ -99,6 +101,8 @@ void FieldClearPlayerInput(struct FieldInput *input)
     input->input_field_1_1 = FALSE;
     input->input_field_1_2 = FALSE;
     input->input_field_1_3 = FALSE;
+    input->tappedSelectButton = FALSE;
+    input->heldSelectButton = FALSE;
     input->dpadDirection = 0;
 }
 
@@ -116,6 +120,16 @@ void FieldGetPlayerInput(struct FieldInput *input, u16 newKeys, u16 heldKeys)
                 input->pressedStartButton = TRUE;
             if (newKeys & SELECT_BUTTON)
                 input->pressedSelectButton = TRUE;
+            if (sPlayerSelectHoldFrames == 60)
+                input->heldSelectButton = TRUE;
+            if (heldKeys & SELECT_BUTTON)
+                sPlayerSelectHoldFrames = sPlayerSelectHoldFrames < 0xFF ? sPlayerSelectHoldFrames + 1 : 0xFF;
+            else if (sPlayerSelectHoldFrames != 0)
+            {
+                if (sPlayerSelectHoldFrames < 60)
+                    input->tappedSelectButton = TRUE;
+                sPlayerSelectHoldFrames = 0;
+            }
             if (newKeys & A_BUTTON)
                 input->pressedAButton = TRUE;
             if (newKeys & B_BUTTON)
@@ -233,11 +247,33 @@ int ProcessPlayerFieldInput(struct FieldInput *input)
     if (input->tookStep && TryFindHiddenPokemon())
         return TRUE;
 
-    if (input->pressedSelectButton && UseRegisteredKeyItemOnField() == TRUE)
+    if (input->tappedSelectButton && UseRegisteredKeyItemOnField(FALSE) == TRUE)
         return TRUE;
 
+    if (input->heldSelectButton && UseRegisteredKeyItemOnField(TRUE) == TRUE)
+        return TRUE;
+
+#if IS_HNS
+    if (input->pressedRButton && TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_MACH_BIKE | PLAYER_AVATAR_FLAG_ACRO_BIKE))
+    {
+        if (gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_MACH_BIKE)
+        {
+            gPlayerAvatar.flags &= ~PLAYER_AVATAR_FLAG_MACH_BIKE;
+            gPlayerAvatar.flags |= PLAYER_AVATAR_FLAG_ACRO_BIKE;
+            SetPlayerAvatarTransitionFlags(PLAYER_AVATAR_FLAG_ACRO_BIKE);
+        }
+        else
+        {
+            gPlayerAvatar.flags &= ~PLAYER_AVATAR_FLAG_ACRO_BIKE;
+            gPlayerAvatar.flags |= PLAYER_AVATAR_FLAG_MACH_BIKE;
+            SetPlayerAvatarTransitionFlags(PLAYER_AVATAR_FLAG_MACH_BIKE);
+        }
+        PlaySE(SE_BIKE_BELL);
+    }
+#else
     if (input->pressedRButton && TryStartDexNavSearch())
         return TRUE;
+#endif
 
     if (input->input_field_1_2 && DEBUG_OVERWORLD_MENU && !DEBUG_OVERWORLD_IN_MENU)
     {
@@ -297,7 +333,8 @@ static bool8 TryStartInteractionScript(struct MapPosition *position, u16 metatil
      && script != SecretBase_EventScript_RecordMixingPC
      && script != SecretBase_EventScript_DollInteract
      && script != SecretBase_EventScript_CushionInteract
-     && script != EventScript_PC)
+     && script != EventScript_PC
+     && script != GoldenrodCity_RadioTower_5F_EventScript_Petrel)
         PlaySE(SE_SELECT);
 
     ScriptContext_SetupScript(script);
@@ -483,6 +520,8 @@ static const u8 *GetInteractedMetatileScript(struct MapPosition *position, u8 me
     }
     if (MetatileBehavior_IsPC(metatileBehavior) == TRUE)
         return EventScript_PC;
+    if (IS_HNS && MetatileBehavior_IsHeadbuttTree(metatileBehavior) == TRUE)
+        return EventScript_Headbutt;
     if (MetatileBehavior_IsClosedSootopolisDoor(metatileBehavior) == TRUE)
         return EventScript_ClosedSootopolisDoor;
     if (MetatileBehavior_IsSkyPillarClosedDoor(metatileBehavior) == TRUE)
@@ -689,6 +728,10 @@ static bool8 TryStartStepBasedScript(struct MapPosition *position, u16 metatileB
         return TRUE;
     if (TryStartStepCountScript(metatileBehavior) == TRUE)
         return TRUE;
+#if IS_HNS
+    if (Mom_TryTriggerGiftCall() == TRUE)
+        return TRUE;
+#endif
     if (!(gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_FORCED_MOVE) && !MetatileBehavior_IsForcedMovementTile(metatileBehavior) && UpdateRepelCounter() == TRUE)
         return TRUE;
     if (OnStep_DexNavSearch())
