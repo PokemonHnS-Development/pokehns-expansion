@@ -41,33 +41,33 @@ Route49_EventScripts_KimonoGirl::
 
 
 Route49_KimonoGirl_Movement1:
-    walk_slow_left
-	walk_slow_left
-	walk_slow_left
-	walk_slow_left
-	walk_slow_left
-	walk_slow_left
+    walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
 	step_end
 
 Route49_KimonoGitl_Movement2:
-    walk_slow_right
-	walk_slow_right
-	walk_slow_right
-	walk_slow_right
-	walk_slow_right
-	walk_slow_right
-	walk_slow_right
-	walk_slow_right
-	walk_slow_right
-	walk_slow_right
-	walk_slow_right
+    walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
 	step_end
 
 Route49_Text_KimonoGirl:
     .string "You....\p"
 	.string "You must be {PLAYER}, correct?\n"
     .string "I've heard all about you and\l"
-	.string "your deeds from my cousins\l"
+	.string "your deeds from my sisters\l"
 	.string "in Ecruteak City.\p"
 	.string "My older sister wishes to meet with you.\l"
 	.string "If you find the time, please\n"
@@ -309,3 +309,11 @@ Route49_Text_Bzzzt:
 
 Route49_Text_ZapPlate:
     .string "It seems ELECTRODE left something behind..$"
+
+Route49_EventScript_Sign::
+    msgbox Route49_Text_Sign, MSGBOX_SIGN
+    end
+
+Route49_Text_Sign:
+    .string "The sign is faded.\n"
+    .string "ROUTE 49$"
