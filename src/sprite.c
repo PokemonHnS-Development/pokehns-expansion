@@ -4,6 +4,7 @@
 #include "palette.h"
 #include "string_util.h"
 #include "text.h"
+#include "malloc.h"
 
 #define MAX_SPRITE_COPY_REQUESTS 64
 
@@ -251,6 +252,9 @@ static u16 sSpriteTileRanges[MAX_SPRITES * 2];
 static struct AffineAnimState sAffineAnimStates[OAM_MATRIX_COUNT];
 static u16 sSpritePaletteTags[16];
 
+EWRAM_DATA static u16 sSpritePaletteTagsBackup[16];
+EWRAM_DATA u8 gReservedSpritePaletteCountBackup = 0;
+
 // iwram common
 COMMON_DATA u32 gOamMatrixAllocBitmap = 0;
 COMMON_DATA u8 gReservedSpritePaletteCount = 0;
@@ -268,6 +272,7 @@ EWRAM_DATA s16 gSpriteCoordOffsetX = 0;
 EWRAM_DATA s16 gSpriteCoordOffsetY = 0;
 EWRAM_DATA struct OamMatrix gOamMatrices[OAM_MATRIX_COUNT] = {0};
 EWRAM_DATA bool8 gAffineAnimsDisabled = FALSE;
+EWRAM_DATA u8 *sPaletteBackup = NULL;
 
 void ResetSpriteData(void)
 {
@@ -446,7 +451,14 @@ u32 CreateSpriteUnchecked(const struct SpriteTemplate *template, s16 x, s16 y, u
 
 u32 CreateSpriteAtEnd(const struct SpriteTemplate *template, s16 x, s16 y, u32 subpriority)
 {
-    return CreateSpriteAtEndUnchecked(template, x, y, subpriority);
+    u32 spriteId = CreateSpriteAtEndUnchecked(template, x, y, subpriority);
+
+#if DEBUG
+    if (spriteId >= MAX_SPRITES)
+        MgbaPrintf(MGBA_LOG_ERROR, "Out of sprite slots");
+#endif
+
+    return spriteId;
 }
 
 u32 CreateSpriteAtEndUnchecked(const struct SpriteTemplate *template, s16 x, s16 y, u32 subpriority)
@@ -1603,6 +1615,49 @@ void FreeAllSpritePalettes(void)
         sSpritePaletteTags[i] = TAG_NONE;
 }
 
+void BackupAndFreeSpritePalettes(void)
+{
+    u32 i;
+
+    assertf(sPaletteBackup == NULL)
+    {
+        return;
+    }
+
+    sPaletteBackup = AllocZeroed(OBJ_PLTT_SIZE * 2);
+
+    memcpy(sPaletteBackup, gPlttBufferUnfaded, OBJ_PLTT_SIZE);
+    memcpy(sPaletteBackup + OBJ_PLTT_SIZE, gPlttBufferFaded, OBJ_PLTT_SIZE);
+
+    gReservedSpritePaletteCountBackup = gReservedSpritePaletteCount;
+    gReservedSpritePaletteCount = 0;
+    for (i = 0; i < 16; i++) {
+        sSpritePaletteTagsBackup[i] =  sSpritePaletteTags[i];
+        sSpritePaletteTags[i] = TAG_NONE;
+    }
+}
+
+void RestoreSpritePalettesBackup(void)
+{
+    u32 i;
+
+    assertf(sPaletteBackup != NULL)
+    {
+        return;
+    }
+
+    memcpy(gPlttBufferUnfaded, sPaletteBackup, OBJ_PLTT_SIZE);
+    memcpy(gPlttBufferFaded, sPaletteBackup + OBJ_PLTT_SIZE, OBJ_PLTT_SIZE);
+
+    gReservedSpritePaletteCount = gReservedSpritePaletteCountBackup;
+    for (i = 0; i < 16; i++) {
+        sSpritePaletteTags[i] =  sSpritePaletteTagsBackup[i];
+    }
+
+    Free(sPaletteBackup);
+    sPaletteBackup = NULL;
+}
+
 u32 LoadSpritePalette(const struct SpritePalette *palette)
 {
     u32 index = IndexOfSpritePaletteTag(palette->tag);
@@ -1680,6 +1735,16 @@ u32 IndexOfSpritePaletteTag(u16 tag)
 u16 GetSpritePaletteTagByPaletteNum(u8 paletteNum)
 {
     return sSpritePaletteTags[paletteNum];
+}
+
+u16 SetSpritePaletteTagByPaletteNum(u8 paletteNum, u16 tag) {
+    u16 oldTag = sSpritePaletteTags[paletteNum];
+    sSpritePaletteTags[paletteNum] = tag;
+    #if DEBUG
+    if (tag == TAG_NONE)
+        FillPalette(0, paletteNum * 16 + 0x100, 32);
+    #endif
+    return oldTag;
 }
 
 void FreeSpritePaletteByTag(u16 tag)
