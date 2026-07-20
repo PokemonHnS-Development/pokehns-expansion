@@ -140,6 +140,7 @@ static const u8 sTileBitAttributes[NUM_METATILE_BEHAVIORS] =
     [MB_FAST_WATER]                         = TILE_FLAG_UNUSED | TILE_FLAG_SURFABLE,
     [MB_CYCLING_ROAD_WATER]                 = TILE_FLAG_UNUSED | TILE_FLAG_SURFABLE,
     [MB_WATER_NORTH_ARROW_WARP]             = TILE_FLAG_UNUSED | TILE_FLAG_SURFABLE,
+    [MB_BRIDGE_OVER_ICE]                    = TILE_FLAG_UNUSED,
 };
 
 bool8 MetatileBehavior_IsATile(u8 metatileBehavior)
@@ -228,8 +229,10 @@ bool8 MetatileBehavior_IsIce(u8 metatileBehavior)
 {
     if (metatileBehavior == MB_ICE)
         return TRUE;
-    else
-        return FALSE;
+    if (metatileBehavior == MB_BRIDGE_OVER_ICE
+     && gObjectEvents[gPlayerAvatar.objectEventId].currentElevation <= 3)
+        return TRUE;
+    return FALSE;
 }
 
 bool8 MetatileBehavior_IsWarpDoor(u8 metatileBehavior)
@@ -375,8 +378,10 @@ bool8 MetatileBehavior_IsIce_2(u8 metatileBehavior)
 {
     if (metatileBehavior == MB_ICE)
         return TRUE;
-    else
-        return FALSE;
+    if (metatileBehavior == MB_BRIDGE_OVER_ICE
+     && gObjectEvents[gPlayerAvatar.objectEventId].currentElevation <= 3)
+        return TRUE;
+    return FALSE;
 }
 
 bool8 MetatileBehavior_IsTrickHouseSlipperyFloor(u8 metatileBehavior)
