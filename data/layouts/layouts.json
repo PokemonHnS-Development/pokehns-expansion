@@ -15969,7 +15969,7 @@
       "name": "SnowsweptCavern_hns_Layout",
       "width": 70,
       "height": 70,
-      "primary_tileset": "gTileset_Kanto_General_Hns",
+      "primary_tileset": "gTileset_MtSilver_Exp_Hns",
       "secondary_tileset": "gTileset_Cave_Ice_Hns",
       "border_filepath": "data/layouts/SnowsweptCavern_hns/border.bin",
       "blockdata_filepath": "data/layouts/SnowsweptCavern_hns/map.bin",

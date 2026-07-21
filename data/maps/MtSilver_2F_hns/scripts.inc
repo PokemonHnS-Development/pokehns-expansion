@@ -6,3 +6,7 @@ MtSilver_2F_hns_MapScripts::
 MtSilver_2F_OnTransition: 
 	callnative SetTimeBasedEncounters
 	end
+
+MtSilver_2F_Item_AzureFlue::
+	finditem ITEM_AZURE_FLUTE
+	end

@@ -17,33 +17,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK_HNS",
       "x": 38,
-      "y": 67,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "EventScript_RockSmash",
-      "flag": "FLAG_TEMP_1"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK_HNS",
-      "x": 42,
-      "y": 68,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "EventScript_RockSmash",
-      "flag": "FLAG_TEMP_2"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK_HNS",
-      "x": 34,
-      "y": 53,
+      "y": 66,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -55,8 +29,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK_HNS",
-      "x": 40,
-      "y": 50,
+      "x": 41,
+      "y": 67,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -93,48 +67,21 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_GENTLEMAN_HNS",
-      "x": 39,
-      "y": 25,
-      "elevation": 4,
-      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
-      "movement_range_x": 3,
-      "movement_range_y": 3,
-      "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "3",
-      "script": "Snowswept_EventScript_GentlemanRubert",
-      "flag": "0"
-    },
-    {
-      "local_id": "LOCALID_TERRY",
-      "graphics_id": "OBJ_EVENT_GFX_BLACK_BELT_HNS",
-      "x": 50,
-      "y": 52,
-      "elevation": 4,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "Snowswept_EventScript_BlackBelt_Terry",
-      "flag": "0"
-    },
-    {
-      "local_id": "LOCALID_TERRY_MACHAMP",
+      "local_id": "LOCALID_SNOWSWEPT_CAVERN_MACHAMP",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_MACHAMP",
-      "x": 51,
-      "y": 52,
+      "x": 52,
+      "y": 49,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_JOG_IN_PLACE_UP",
+      "movement_type": "MOVEMENT_TYPE_JOG_IN_PLACE_DOWN",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "Snowswept_Cavern_Eventscript_Machamp",
       "flag": "0"
     },
     {
-      "local_id": "LOCALID_BOULDER",
+      "local_id": "LOCALID_SNOWSWEPT_CAVERN_BOULDER",
       "graphics_id": "OBJ_EVENT_GFX_PUSHABLE_BOULDER_HNS",
       "x": 52,
       "y": 50,
@@ -145,97 +92,6 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_COOLTRAINER_F_HNS",
-      "x": 44,
-      "y": 45,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_UP_AND_RIGHT",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "6",
-      "script": "Snowswept_EventScript_CoolNia",
-      "flag": "0"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_COOLTRAINER_M_HNS",
-      "x": 54,
-      "y": 40,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN_AND_LEFT",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "3",
-      "script": "Snowswept_EventScript_CoolJohn",
-      "flag": "0"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F_LAND_HNS",
-      "x": 37,
-      "y": 4,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "1",
-      "script": "Snowswept_EventScript_SwimmerMakayla",
-      "flag": "0"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_BATTLE_GIRL_HNS",
-      "x": 23,
-      "y": 65,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "Snowswept_EventScript_BattleGirl",
-      "flag": "0"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_MACHAMP",
-      "x": 34,
-      "y": 67,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_JOG_IN_PLACE_RIGHT",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "Snowswept_EventScript_VibingMachamp",
-      "flag": "0"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_HIKER_HNS",
-      "x": 48,
-      "y": 9,
-      "elevation": 4,
-      "movement_type": "MOVEMENT_TYPE_ROTATE_CLOCKWISE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "1",
-      "script": "Snowswept_EventScript_HikerNicholas",
-      "flag": "0"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_HIKER_HNS",
-      "x": 34,
-      "y": 62,
-      "elevation": 4,
-      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
-      "movement_range_x": 2,
-      "movement_range_y": 2,
-      "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "2",
-      "script": "Snowswept_EventScript_HikerSnape",
       "flag": "0"
     },
     {
@@ -315,19 +171,6 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_CAMPER_HNS",
-      "x": 63,
-      "y": 14,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "Snowswept_EventScript_Camper",
       "flag": "0"
     },
     {
@@ -418,35 +261,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Snowswept_EventScript_Item_NeverMeltIce",
-      "flag": "FLAG_SNOWSWEPT_ITEM_NEVERMELTICE"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_ENGINEER_HNS",
-      "x": 32,
-      "y": 47,
-      "elevation": 4,
-      "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "Snowswept_EventScript_EngieBridgeBlocker",
-      "flag": "0"
-    },
-    {
-      "local_id": "LOCALID_EDWARD",
-      "graphics_id": "OBJ_EVENT_GFX_SUPER_NERD_HNS",
-      "x": 10,
-      "y": 6,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_UP",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "Snowswept_EventScript_SuperNerdBoss_Edward",
-      "flag": "FLAG_SNOWSWEPT_EDWARD"
+      "script": "Snowswept_EventScript_Item_IcyRock",
+      "flag": "FLAG_SNOWSWEPT_HIDDEN_ICYROCK"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_MAWILE",
@@ -460,6 +276,32 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
       "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK_HNS",
+      "x": 42,
+      "y": 68,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_RockSmash",
+      "flag": "FLAG_TEMP_2"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK_HNS",
+      "x": 39,
+      "y": 67,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_RockSmash",
+      "flag": "FLAG_TEMP_1"
     }
   ],
   "warp_events": [
@@ -474,7 +316,7 @@
       "x": 63,
       "y": 3,
       "elevation": 0,
-      "dest_map": "MAP_SNOWSWEPT_CAVERN_BASEMENT_HNS",
+      "dest_map": "MAP_ROUTE49_HNS",
       "dest_warp_id": "0"
     },
     {
@@ -492,96 +334,15 @@
       "dest_warp_id": "2"
     }
   ],
-  "coord_events": [
-    {
-      "type": "trigger",
-      "x": 62,
-      "y": 4,
-      "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "Snowswept_EventScript_BoulderPlacer"
-    },
-    {
-      "type": "trigger",
-      "x": 64,
-      "y": 67,
-      "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "Snowswept_EventScript_BoulderPlacer"
-    },
-    {
-      "type": "trigger",
-      "x": 63,
-      "y": 68,
-      "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "Snowswept_EventScript_BoulderPlacer"
-    },
-    {
-      "type": "trigger",
-      "x": 63,
-      "y": 5,
-      "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "Snowswept_EventScript_BoulderPlacer"
-    },
-    {
-      "type": "trigger",
-      "x": 31,
-      "y": 47,
-      "elevation": 0,
-      "var": "VAR_SNOWSWEPT_FINALBRIDGE",
-      "var_value": "1",
-      "script": "Snowswept_EventScript_EngieBridgeBlocker"
-    },
-    {
-      "type": "trigger",
-      "x": 22,
-      "y": 30,
-      "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "Snowswept_EventScript_BoulderPlacer"
-    },
-    {
-      "type": "trigger",
-      "x": 21,
-      "y": 29,
-      "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "Snowswept_EventScript_BoulderPlacer"
-    },
-    {
-      "type": "trigger",
-      "x": 23,
-      "y": 29,
-      "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "Snowswept_EventScript_BoulderPlacer"
-    }
-  ],
+  "coord_events": [],
   "bg_events": [
     {
-      "type": "sign",
-      "x": 64,
-      "y": 64,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
-      "script": "Snowswept_EventScript_Sign"
-    },
-    {
       "type": "hidden_item",
-      "x": 46,
-      "y": 68,
+      "x": 59,
+      "y": 46,
       "elevation": 0,
-      "item": "ITEM_ICY_ROCK",
-      "flag": "FLAG_SNOWSWEPT_HIDDEN_ICYROCK"
+      "item": "ITEM_NEVER_MELT_ICE",
+      "flag": "FLAG_SNOWSWEPT_ITEM_NEVERMELTICE"
     }
   ],
   "game_version": "hns",

@@ -170,7 +170,7 @@
 #define VAR_STEVENSTONE_PART1                            0x40E1
 #define VAR_SNOWSWEPT_FINALBRIDGE                        0x40E2
 
-#define VAR_UNUSED_HNS_0x40E3                            0x40E3
+#define VAR_SINJOH_STORYLINE                            0x40E3
 #define VAR_UNUSED_HNS_0x40E4                            0x40E4
 #define VAR_UNUSED_HNS_0x40E5                            0x40E5
 #define VAR_UNUSED_HNS_0x40E6                            0x40E6
