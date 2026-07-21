@@ -1079,6 +1079,7 @@ enum __attribute__((packed)) Item
     ITEM_UNUSED_BERRY_1,
     ITEM_UNUSED_BERRY_2,
     ITEM_UNUSED_BERRY_3,
+    ITEM_AZURE_FLUTE,
 
     ITEMS_COUNT,
     ITEM_FIELD_ARROW = ITEMS_COUNT,

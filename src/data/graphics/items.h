@@ -2159,5 +2159,8 @@ const u32 gItemIcon_Room2Key[] = INCBIN_U32("graphics/items/icons/room2_key.4bpp
 const u32 gItemIcon_Room4Key[] = INCBIN_U32("graphics/items/icons/room4_key.4bpp.smol");
 const u32 gItemIcon_Room6Key[] = INCBIN_U32("graphics/items/icons/room6_key.4bpp.smol");
 
+const u32 gItemIcon_AzureFlute[] = INCBIN_U32("graphics/items/icons/azure_flute.4bpp.smol");
+const u16 gItemIconPalette_AzureFlute[] = INCBIN_U16("graphics/items/icon_palettes/azure_flute.gbapal");
+
 const u32 gItemIcon_GBPlayer[] = INCBIN_U32("graphics/items/icons/gb_player.4bpp.smol");
 const u16 gItemIconPalette_GBPlayer[] = INCBIN_U16("graphics/items/icon_palettes/gb_player.gbapal");
