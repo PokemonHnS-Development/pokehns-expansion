@@ -15967,7 +15967,7 @@
     {
       "id": "LAYOUT_SNOWSWEPT_CAVERN_HNS",
       "name": "SnowsweptCavern_hns_Layout",
-      "width": 70,
+      "width": 59,
       "height": 70,
       "primary_tileset": "gTileset_MtSilver_Exp_Hns",
       "secondary_tileset": "gTileset_Cave_Ice_Hns",

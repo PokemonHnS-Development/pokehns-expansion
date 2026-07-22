@@ -71899,32 +71899,32 @@
               {
                 "min_level": 50,
                 "max_level": 60,
-                "species": "SPECIES_MEDITITE"
+                "species": "SPECIES_SNEASEL_HISUI"
               },
               {
                 "min_level": 50,
                 "max_level": 60,
-                "species": "SPECIES_MEDICHAM"
+                "species": "SPECIES_PILOSWINE"
               },
               {
                 "min_level": 50,
                 "max_level": 60,
-                "species": "SPECIES_ARON"
+                "species": "SPECIES_SMOOCHUM"
               },
               {
                 "min_level": 50,
                 "max_level": 60,
-                "species": "SPECIES_ARON"
+                "species": "SPECIES_JYNX"
               },
               {
                 "min_level": 50,
                 "max_level": 60,
-                "species": "SPECIES_LAIRON"
+                "species": "SPECIES_GOLBAT"
               },
               {
                 "min_level": 50,
                 "max_level": 60,
-                "species": "SPECIES_LOUDRED"
+                "species": "SPECIES_SNEASEL_HISUI"
               },
               {
                 "min_level": 50,
@@ -71934,12 +71934,12 @@
               {
                 "min_level": 50,
                 "max_level": 70,
-                "species": "SPECIES_MAWILE"
+                "species": "SPECIES_MEDITITE"
               },
               {
                 "min_level": 50,
                 "max_level": 70,
-                "species": "SPECIES_EXPLOUD"
+                "species": "SPECIES_SNEASLER"
               },
               {
                 "min_level": 50,
@@ -71949,12 +71949,12 @@
               {
                 "min_level": 50,
                 "max_level": 70,
-                "species": "SPECIES_GLACEON"
+                "species": "SPECIES_MEDICHAM"
               },
               {
                 "min_level": 50,
                 "max_level": 70,
-                "species": "SPECIES_AGGRON"
+                "species": "SPECIES_SNEASLER"
               }
             ]
           },
@@ -71962,29 +71962,29 @@
             "encounter_rate": 60,
             "mons": [
               {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_NONE"
+                "min_level": 50,
+                "max_level": 60,
+                "species": "SPECIES_GRAVELER"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 50,
+                "max_level": 60,
                 "species": "SPECIES_GEODUDE"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_NONE"
+                "min_level": 50,
+                "max_level": 60,
+                "species": "SPECIES_NOSEPASS"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_NONE"
+                "min_level": 50,
+                "max_level": 60,
+                "species": "SPECIES_ARON"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_GOLEM"
+                "min_level": 50,
+                "max_level": 60,
+                "species": "SPECIES_ARON"
               }
             ]
           }

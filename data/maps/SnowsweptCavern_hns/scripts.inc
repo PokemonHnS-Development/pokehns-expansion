@@ -7,7 +7,7 @@ SnowsweptCavern_hns_OnTransition::
     end
 
 SnowsweptCavern_hns_SetBoulderLocation::
-    setobjectxyperm LOCALID_SNOWSWEPT_CAVERN_BOULDER, 52, 56
+    setobjectxyperm LOCALID_SNOWSWEPT_CAVERN_BOULDER, 38, 56
     end
 
 Snowswept_Cavern_Eventscript_Machamp::
@@ -46,7 +46,7 @@ Snowswept_Cavern_Eventscript_Machamp::
     waitmovement 0
     playse SE_BANG
 
-    setobjectxyperm LOCALID_SNOWSWEPT_CAVERN_BOULDER, 52, 56
+    setobjectxyperm LOCALID_SNOWSWEPT_CAVERN_BOULDER, 38, 56
     setvar VAR_SINJOH_STORYLINE, 3
 	release
 	end
