@@ -72182,12 +72182,7 @@
               {
                 "min_level": 45,
                 "max_level": 60,
-                "species": "SPECIES_SNORUNT"
-              },
-              {
-                "min_level": 45,
-                "max_level": 60,
-                "species": "SPECIES_ABOMASNOW"
+                "species": "SPECIES_STANTLER"
               },
               {
                 "min_level": 45,
@@ -72197,37 +72192,42 @@
               {
                 "min_level": 45,
                 "max_level": 60,
-                "species": "SPECIES_SNOVER"
+                "species": "SPECIES_STANTLER"
               },
               {
                 "min_level": 45,
                 "max_level": 60,
-                "species": "SPECIES_ABOMASNOW"
+                "species": "SPECIES_PILOSWINE"
+              },
+              {
+                "min_level": 45,
+                "max_level": 60,
+                "species": "SPECIES_MR_MIME"
+              },
+              {
+                "min_level": 45,
+                "max_level": 60,
+                "species": "SPECIES_PILOSWINE"
+              },
+              {
+                "min_level": 45,
+                "max_level": 60,
+                "species": "SPECIES_SNEASEL_HISUI"
+              },
+              {
+                "min_level": 45,
+                "max_level": 60,
+                "species": "SPECIES_SNEASEL_HISUI"
+              },
+              {
+                "min_level": 45,
+                "max_level": 60,
+                "species": "SPECIES_SNEASEL_HISUI"
               },
               {
                 "min_level": 45,
                 "max_level": 60,
                 "species": "SPECIES_WYRDEER"
-              },
-              {
-                "min_level": 45,
-                "max_level": 60,
-                "species": "SPECIES_GLALIE"
-              },
-              {
-                "min_level": 45,
-                "max_level": 60,
-                "species": "SPECIES_SNEASEL_HISUI"
-              },
-              {
-                "min_level": 45,
-                "max_level": 60,
-                "species": "SPECIES_SNEASEL_HISUI"
-              },
-              {
-                "min_level": 45,
-                "max_level": 60,
-                "species": "SPECIES_CASTFORM"
               },
               {
                 "min_level": 45,
@@ -72247,27 +72247,27 @@
               {
                 "min_level": 45,
                 "max_level": 60,
-                "species": "SPECIES_BIDOOF"
+                "species": "SPECIES_GYARADOS"
               },
               {
                 "min_level": 45,
                 "max_level": 60,
-                "species": "SPECIES_SPHEAL"
+                "species": "SPECIES_QWILFISH_HISUI"
               },
               {
                 "min_level": 45,
                 "max_level": 60,
-                "species": "SPECIES_SEALEO"
+                "species": "SPECIES_OVERQWIL"
               },
               {
                 "min_level": 45,
                 "max_level": 60,
-                "species": "SPECIES_BIBAREL"
+                "species": "SPECIES_RELICANTH"
               },
               {
                 "min_level": 45,
                 "max_level": 60,
-                "species": "SPECIES_WALREIN"
+                "species": "SPECIES_RELICANTH"
               }
             ]
           },
@@ -72287,17 +72287,17 @@
               {
                 "min_level": 30,
                 "max_level": 30,
-                "species": "SPECIES_SHELLDER"
+                "species": "SPECIES_RELICANTH"
               },
               {
                 "min_level": 30,
                 "max_level": 30,
-                "species": "SPECIES_QWILFISH"
+                "species": "SPECIES_QWILFISH_HISUI"
               },
               {
                 "min_level": 30,
                 "max_level": 30,
-                "species": "SPECIES_CLAMPERL"
+                "species": "SPECIES_QWILFISH_HISUI"
               },
               {
                 "min_level": 45,
@@ -72307,17 +72307,17 @@
               {
                 "min_level": 45,
                 "max_level": 50,
-                "species": "SPECIES_HUNTAIL"
-              },
-              {
-                "min_level": 45,
-                "max_level": 50,
-                "species": "SPECIES_CLOYSTER"
-              },
-              {
-                "min_level": 45,
-                "max_level": 50,
                 "species": "SPECIES_QWILFISH_HISUI"
+              },
+              {
+                "min_level": 45,
+                "max_level": 50,
+                "species": "SPECIES_RELICANTH"
+              },
+              {
+                "min_level": 45,
+                "max_level": 50,
+                "species": "SPECIES_OVERQWIL"
               },
               {
                 "min_level": 45,
