@@ -11,7 +11,7 @@ SnosweptCaverns_Basement_Hide_Noble::
     end
 
 SnowsweptB_EventScript_PsychicRaphael::
-    trainerbattle_single TRAINER_RAPHAEL_HNS, SnowsweptB_Text_PsychicRaphael_Seen, SnowsweptB_Text_PsychicRaphael_Beaten
+    @trainerbattle_single TRAINER_RAPHAEL_HNS, SnowsweptB_Text_PsychicRaphael_Seen, SnowsweptB_Text_PsychicRaphael_Beaten
     msgbox SnowsweptB_Text_PsychicRaphael_After, MSGBOX_AUTOCLOSE
     end
 
@@ -30,7 +30,7 @@ SnowsweptB_Text_PsychicRaphael_After:
     .string "were wrong...$"
 
 SnowsweptB_EventScript_SwimmerMaura::
-    trainerbattle_single TRAINER_MAURA_HNS, SnowsweptB_Text_SwimmerMaura_Seen, SnowsweptB_Text_SwimmerMaura_Beaten
+    @trainerbattle_single TRAINER_MAURA_HNS, SnowsweptB_Text_SwimmerMaura_Seen, SnowsweptB_Text_SwimmerMaura_Beaten
     msgbox SnowsweptB_Text_SwimmerMaura_After, MSGBOX_AUTOCLOSE
     end
 
@@ -48,7 +48,7 @@ SnowsweptB_Text_SwimmerMaura_After:
     .string "to train and enjoy the local eats.$"
 
 SnowsweptB_EventScript_SwimmerMasoto::
-    trainerbattle_single TRAINER_MASOTO_HNS, SnowsweptB_Text_SwimmerMasoto_Seen, SnowsweptB_Text_SwimmerMasoto_Beaten
+    @trainerbattle_single TRAINER_MASOTO_HNS, SnowsweptB_Text_SwimmerMasoto_Seen, SnowsweptB_Text_SwimmerMasoto_Beaten
     msgbox SnowsweptB_Text_SwimmerMasoto_After, MSGBOX_AUTOCLOSE
     end
 
@@ -69,7 +69,7 @@ SnowsweptB_Text_SwimmerMasoto_After:
 
 SnowsweptB_EventScript_TriatheleteJoshua::
     faceplayer
-    trainerbattle_single TRAINER_JOSHUA2_HNS, SnowsweptB_Text_TriatheleteJoshua_Seen, SnowsweptB_Text_TriatheleteJoshua_Beaten
+    @trainerbattle_single TRAINER_JOSHUA2_HNS, SnowsweptB_Text_TriatheleteJoshua_Seen, SnowsweptB_Text_TriatheleteJoshua_Beaten
     msgbox SnowsweptB_Text_TriatheleteJoshua_After, MSGBOX_AUTOCLOSE
     end
 
@@ -87,7 +87,7 @@ SnowsweptB_Text_TriatheleteJoshua_After:
     .string "some more nitro fuel..$"
 
 SnowsweptB_EventScript_CamperDennis::
-    trainerbattle_single TRAINER_DENNIS2_HNS, SnowsweptB_Text_CamperDennis_Seen, SnowsweptB_Text_CamperDennis_Beaten
+    @trainerbattle_single TRAINER_DENNIS2_HNS, SnowsweptB_Text_CamperDennis_Seen, SnowsweptB_Text_CamperDennis_Beaten
     msgbox SnowsweptB_Text_CamperDennis_After, MSGBOX_AUTOCLOSE
     end
 

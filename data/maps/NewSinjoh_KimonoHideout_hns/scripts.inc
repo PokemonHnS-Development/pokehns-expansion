@@ -14,7 +14,7 @@ NewSinjoh_Kimono_EventScript_Miharu::
 	applymovement LOCALID_MIHARU, NewSinjoh_Kimono_Dance_Movement
 	waitmovement
 	settotemboost B_POSITION_OPPONENT_LEFT, 1, 2,1, 0, 2, 3, 0
-    trainerbattle_no_intro TRAINER_MIHARU_HNS, NewSinjoh_KimonoHideout_Miharu_Beaten
+    @trainerbattle_no_intro TRAINER_MIHARU_HNS, NewSinjoh_KimonoHideout_Miharu_Beaten
     goto NewSinjoh_Kimono_Miharu_AfterBattle
 
 
@@ -75,7 +75,7 @@ NewSinjoh_Kimono_EventScript_Youko::
 	applymovement LOCALID_YOUKO, NewSinjoh_Kimono_Dance_Movement
 	waitmovement
 	settotemboost B_POSITION_OPPONENT_LEFT, 0, 2,0, 1, 2, 3, 0
-    trainerbattle_no_intro TRAINER_YOUKO_HNS, NewSinjoh_KimonoHideout_Youko_Beaten
+    @trainerbattle_no_intro TRAINER_YOUKO_HNS, NewSinjoh_KimonoHideout_Youko_Beaten
     goto NewSinjoh_Kimono_Youko_AfterBattle
 
 
@@ -138,7 +138,7 @@ NewSinjoh_Kimono_EventScript_Shizuko2::
 	applymovement LOCALID_SHIZUKO, NewSinjoh_Kimono_Dance_Movement
 	waitmovement
 	settotemboost B_POSITION_OPPONENT_LEFT, 2, 2,0, 0, 2, 2, 0
-    trainerbattle_no_intro TRAINER_SHIZUKO_HNS, NewSinjoh_KimonoHideout_Shizuko_Beaten
+    @trainerbattle_no_intro TRAINER_SHIZUKO_HNS, NewSinjoh_KimonoHideout_Shizuko_Beaten
     goto NewSinjoh_Kimono_Shizuko_AfterBattle
 
 

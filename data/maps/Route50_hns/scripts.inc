@@ -267,7 +267,7 @@ Route50_Text_CryAbsol:
 	.string "Grrr!$"
 
 Route50_EventScript_PsychicRonan::
-    trainerbattle_single TRAINER_RONAN_HNS, Route50_Text_PsychicRonan_Seen, Route50_Text_PsychicRonan_Beaten
+    @trainerbattle_single TRAINER_RONAN_HNS, Route50_Text_PsychicRonan_Seen, Route50_Text_PsychicRonan_Beaten
     msgbox Route50_Text_PsychicRonan_After, MSGBOX_AUTOCLOSE
     end
 
@@ -285,7 +285,7 @@ Route50_Text_PsychicRonan_After:
 
 
 Route50_EventScript_NerdMaxwell::
-    trainerbattle_single TRAINER_MAXWELL2_HNS, Route50_Text_NerdMaxwell_Seen, Route50_Text_NerdMaxwell_Beaten
+    @trainerbattle_single TRAINER_MAXWELL2_HNS, Route50_Text_NerdMaxwell_Seen, Route50_Text_NerdMaxwell_Beaten
     msgbox Route50_Text_NerdMaxell_After, MSGBOX_AUTOCLOSE
     end
 
@@ -327,7 +327,7 @@ Route50_Text_FireBreather_Edwin_NotEnoughMons:
 	.string "out your PARTY some more eh?$"
 
 Route50_EventScript_BikerBram::
-    trainerbattle_single TRAINER_BRAM_HNS, Route50_Text_BikerBram_Seen, Route50_Text_BikerBram_Beaten
+    @trainerbattle_single TRAINER_BRAM_HNS, Route50_Text_BikerBram_Seen, Route50_Text_BikerBram_Beaten
     msgbox Route50_Text_BikerBram_After, MSGBOX_AUTOCLOSE
     end
 
@@ -346,7 +346,7 @@ Route50_Text_BikerBram_After:
 
 
 Route50_EventScript_BikerKyle::
-    trainerbattle_single TRAINER_KYLE9_HNS, Route50_Text_BikerKyle_Seen, Route50_Text_BikerKyle_Beaten
+    @trainerbattle_single TRAINER_KYLE9_HNS, Route50_Text_BikerKyle_Seen, Route50_Text_BikerKyle_Beaten
     msgbox Route50_Text_BikerKyle_After, MSGBOX_AUTOCLOSE
     end
 
@@ -377,7 +377,7 @@ Route50_Fisherman_ImStandingHereToAnnoyThePlayer_Text:
 	.string "to stand to take in the views!$"
 
 Route50_EventScript_PicknickerDawn::
-    trainerbattle_single TRAINER_DAWN9_HNS, Route50_Text_PicknickerDawn_Seen, Route50_Text_PicknickerDawn_Beaten
+    @trainerbattle_single TRAINER_DAWN9_HNS, Route50_Text_PicknickerDawn_Seen, Route50_Text_PicknickerDawn_Beaten
     msgbox Route50_Text_PicknickerDawn_After, MSGBOX_AUTOCLOSE
     end
 

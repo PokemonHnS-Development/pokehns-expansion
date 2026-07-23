@@ -24,7 +24,7 @@ SinjohRuins_ArceusRoom_EventScript_StevenStone_PreFight::
 	playbgm MUS_ENCOUNTER_CHAMPION, FALSE
 	msgbox StevenChallengesPlayer_Text MSGBOX_DEFAULT
     setflag FLAG_SINJOHRUINS_STEVENSTONE_PART2
-	trainerbattle_no_intro TRAINER_STEVENSTONE_HNS, SinjohRuins_ArceusRoom_Steven_Beaten
+	@trainerbattle_no_intro TRAINER_STEVENSTONE_HNS, SinjohRuins_ArceusRoom_Steven_Beaten
 	playbgm MUS_VS_CHAMPION, 0
     goto SinjohRuins_ArceusRoom_Steven_AfterBattle
 
