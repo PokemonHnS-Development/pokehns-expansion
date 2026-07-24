@@ -719,6 +719,9 @@ const u16 gMetatileAttributes_MtSilver_Exp_Hns[] = INCBIN_U16("data/tilesets/pri
 const u16 gMetatiles_MtSilver_Ancient_Hns[] = INCBIN_U16("data/tilesets/secondary/mt_silver_ancient_hns/metatiles.bin");
 const u16 gMetatileAttributes_MtSilver_Ancient_Hns[] = INCBIN_U16("data/tilesets/secondary/mt_silver_ancient_hns/metatile_attributes.bin");
 
+const u16 gMetatiles_MtSilver_NewSinjoh_Hns[] = INCBIN_U16("data/tilesets/secondary/mt_silver_newsinjoh_hns/metatiles.bin");
+const u16 gMetatileAttributes_MtSilver_NewSinjoh_Hns[] = INCBIN_U16("data/tilesets/secondary/mt_silver_newsinjoh_hns/metatile_attributes.bin");
+
 const u16 gMetatiles_ArceusRoom_Hns[] = INCBIN_U16("data/tilesets/secondary/arceus_room_hns/metatiles.bin");
 const u16 gMetatileAttributes_ArceusRoom_Hns[] = INCBIN_U16("data/tilesets/secondary/arceus_room_hns/metatile_attributes.bin");
 

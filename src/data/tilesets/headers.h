@@ -2679,6 +2679,17 @@ const struct Tileset gTileset_MtSilver_Ancient_Hns =
     .callback = NULL,
 };
 
+const struct Tileset gTileset_MtSilver_NewSinjoh_Hns =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_MtSilver_NewSinjoh_Hns,
+    .palettes = gTilesetPalettes_MtSilver_NewSinjoh_Hns,
+    .metatiles = gMetatiles_MtSilver_NewSinjoh_Hns,
+    .metatileAttributes = gMetatileAttributes_MtSilver_NewSinjoh_Hns,
+    .callback = NULL,
+};
+
 const struct Tileset gTileset_ArceusRoom_Hns =
 {
     .isCompressed = TRUE,

@@ -454,6 +454,9 @@
 #define METATILE_MtSilver_Exp_Hns_STAIRS_LEFT   0x089
 #define METATILE_MtSilver_Exp_Hns_STAIRS_RIGHT  0x091
 
+// gTileset_MtSilver_NewSinjoh_Hns
+#define METATILE_MtSilver_NewSinjoh_Hns_METATILE_MtSilverNewSinjoh_Door_Hns  0x32B
+
 // gTileset_Pacifidlog
 #define METATILE_Pacifidlog_Door                               0x21A
 #define METATILE_Pacifidlog_FloatingLogs_HorizontalLeft        0x250
@@ -1111,6 +1114,7 @@
 #define METATILE_Johto_General_Door_Gym_Hns          0x15B
 #define METATILE_Johto_General_Door_Hns              0x03D
 #define METATILE_Johto_General_Door_Sliding_Hns      0x062
+#define METATILE_MtSilverNewSinjoh_Door_Hns          0x32B
 #define METATILE_NewBarkTown_Door_Blue_Hns           0x2CB
 #define METATILE_NewBarkTown_Door_Red_Hns            0x2BD
 #define METATILE_NewBarkTown_Door_Yellow_Hns         0x309

@@ -15,7 +15,7 @@
   "connections": [
     {
       "map": "MAP_NEW_SINJOH_HNS",
-      "offset": 0,
+      "offset": -10,
       "direction": "up"
     }
   ],
