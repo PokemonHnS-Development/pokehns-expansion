@@ -9,14 +9,13 @@ NewSinjoh_House2_EventScripts_DeskLady::
 	end
 
 NewSinjoh_House2_DeskLady_Text::
-    .string "Hello little one..\n"
-	.string "Welcome to New Sinjoh's\l"
-	.string "famous hotsprings..!\p"
-	.string "Entry is free and the bathes are mixed,\n"
-	.string "just make sure to not track in any\l"
-	.string "gunk into the springs and you'll\l"
-	.string "be good.$"
-
+    .string "Hello little one..\p"
+	.string "Welcome to New Sinjoh's...\n"
+	.string "Well, you might call it a library.\p"
+	.string "Really, this is where we keep all\n"
+	.string "the records of our town's history,\l"
+	.string "as well as any literature we\l"
+	.string "import from other regions..$"
 
 NewSinjoh_House2_EventScript_Torkoal::
 	lock
@@ -24,13 +23,12 @@ NewSinjoh_House2_EventScript_Torkoal::
 	playmoncry SPECIES_TORKOAL, 0
 	msgbox NewSinjoh_Hosue2_Text_CryTorkoal, MSGBOX_DEFAULT
 	waitmoncry
-        closemessage
+    closemessage
 	release
 	end
 
 NewSinjoh_Hosue2_Text_CryTorkoal:
 	.string "Tooor?$"
-
 
 NewSinjoh_House2_EventScript_BookShelf_North::
     lock
@@ -39,10 +37,9 @@ NewSinjoh_House2_EventScript_BookShelf_North::
 	end
 
 NewSinjoh_House2_Text_Bookshelf_North:
-    .string "This shelf is lined side to side\n"
-	.string "in all the latest travel magazines\l"
-	.string "and resturant review guides!$"
-
+    .string "It's crammed full of ancient\n"
+	.string "leather-bound books.\p"
+	.string "The language is unrecognizeable.$"
 
 NewSinjoh_House2_EventScript_BookShelf_South::
     lock
@@ -51,6 +48,6 @@ NewSinjoh_House2_EventScript_BookShelf_South::
 	end
 
 NewSinjoh_House2_Text_Bookshelf_South:
-    .string "This shelf is lined side to side\n"
-	.string "with books of all sorts\l"
-	.string "of diffrent genres and authors!$"
+    .string "It's crammed full of POKéMON\n"
+	.string "books.\p"
+	.string "These look newer and more familiar.$"

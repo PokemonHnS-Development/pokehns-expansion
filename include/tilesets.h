@@ -114,6 +114,7 @@ extern const struct Tileset gTileset_Lavaridge;
 extern const struct Tileset gTileset_Lighthouse_Hns;
 extern const struct Tileset gTileset_MahoganyTown_Hns;
 extern const struct Tileset gTileset_MtSilver_Exp_Hns;
+extern const struct Tileset gTileset_MtSilver_NewSinjoh_Hns;
 extern const struct Tileset gTileset_MtSilverSnow_Hns;
 extern const struct Tileset gTileset_Museum;
 extern const struct Tileset gTileset_NationalPark_Hns;

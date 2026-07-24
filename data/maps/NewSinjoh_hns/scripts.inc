@@ -6,12 +6,24 @@ NewSinjoh_On_Transition:
     setflag FLAG_VISITED_NEWSINJOH
 	end
 
+NewSinjoh_EventScript_PetStantler::
+    lock
+	faceplayer
+	playmoncry SPECIES_STANTLER, 0
+	msgbox NewSinjoh_Text_Stantler_Cry, MSGBOX_DEFAULT
+	waitmoncry
+    closemessage
+	release
+	end
+
+NewSinjoh_Text_Stantler_Cry:
+    .string "Lerrrrr!$"
+
 NewSinjoh_MilkMan_EventScript_Seller::
 	lock
 	faceplayer
 	checkitem ITEM_MOOMOO_MILK, 99
-	compare VAR_RESULT, 1
-	goto_if_eq MilkMan_EventScript_Battle
+	goto_if_eq VAR_RESULT, 1, MilkMan_EventScript_Battle
 	showmoneybox 0, 0
 	msgbox NewSinjoh_MilkMan_text_BuyMilk, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, TRUE, NewSinjoh_EventScript_MilkMan_BuyMilk
@@ -30,7 +42,6 @@ NewSinjoh_EventScript_MilkMan_BuyMilk::
 	msgbox NewSinjoh_MilkMan_Text_WouldYouLikeAnother, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, TRUE, NewSinjoh_EventScript_MilkMan_BuyMilk
 
-	
 	msgbox NewSinjoh_MilkMan_GotMilk, MSGBOX_DEFAULT
 	closemessage
 	playse MUS_OBTAIN_ITEM
@@ -39,7 +50,6 @@ NewSinjoh_EventScript_MilkMan_BuyMilk::
 	hidemoneybox
 	release
 	end
-
 
 NewSinjoh_MilkMan_BagFull::
 	msgbox NewSinjoh_MilkMan_NoRoom, MSGBOX_DEFAULT
@@ -55,7 +65,7 @@ NewSinjoh_MilkMan_NotEnough::
 	release
 	end
 
-    NewSinjoh_MilkMan_text_BuyMilk:
+NewSinjoh_MilkMan_text_BuyMilk:
 	.string "I am the Milkman.\p"
 	.string "My milk is delicious.\p"
 	.string "If you would like some today, it'll be\n"
@@ -88,7 +98,6 @@ MilkMan_EventScript_Battle::
     release
     end
 
-
 MilkMan_Battle_text:
 	.string "I am the MilkMan,\p"
 	.string "My milk is delicious.\p"
@@ -116,7 +125,6 @@ NewSinjoh_Pokemart_TravelShop:
 	.2byte ITEM_ELIXER
 	.2byte ITEM_MAX_REPEL
 	.2byte ITEM_MAX_LURE
-	.2byte ITEM_MAX_MUSHROOMS
 	.2byte ITEM_GREAT_BALL
 	.2byte ITEM_ULTRA_BALL
 	.2byte ITEM_NONE
@@ -145,288 +153,147 @@ NewSinjoh_Text_TravelBrother_Greeting:
 	.string "won't open a location\l"
 	.string "this far out from a major town.$"
 
-NewSinjoh_EventScript_Kyle::
-	lock
-	faceplayer
-	msgbox NewSinjoh_Text_PokefanM, MSGBOX_DEFAULT
-	closemessage
-	release
-	end
-
-NewSinjoh_EventScript_Jessica::
-	lock
-	faceplayer
-	goto_if_set FLAG_NEWSINJOH_NPC_TRADE_COMPLETED, NewSinjoh_EventScript_TradeCompleted
-	setvar VAR_0x8008, INGAME_TRADE_GALLADE
-	copyvar VAR_0x8004, VAR_0x8008
-	specialvar VAR_RESULT, GetInGameTradeSpeciesInfo
-	copyvar VAR_0x8009, VAR_RESULT
-	msgbox NewSinjoh_Text_YouWillTradeWontYou, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, NewSinjoh_EventScript_DeclineTrade
-	special ChoosePartyMon
-	waitstate
-	copyvar VAR_0x800A, VAR_0x8004
-	goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, NewSinjoh_EventScript_DeclineTrade
-	copyvar VAR_0x8005, VAR_0x800A
-	specialvar VAR_RESULT, GetTradeSpecies
-	copyvar VAR_0x800B, VAR_RESULT
-	goto_if_ne VAR_RESULT, VAR_0x8009, NewSinjoh_EventScript_NotRequestedMon
-	copyvar VAR_0x8004, VAR_0x8008
-	copyvar VAR_0x8005, VAR_0x800A
-	special CreateInGameTradePokemon
-	special DoInGameTradeScene
-	waitstate
-	bufferspeciesname STR_VAR_1, VAR_0x8009
-	msgbox NewSinjoh_Text_MonYouTakeCare, MSGBOX_DEFAULT
-	closemessage
-	setflag FLAG_NEWSINJOH_NPC_TRADE_COMPLETED
-	release
-	end
-
-NewSinjoh_EventScript_DeclineTrade::
-	msgbox NewSinjoh_Text_YouWontTradeMe, MSGBOX_DEFAULT
-	release
-	end
-
-NewSinjoh_EventScript_NotRequestedMon::
-	bufferspeciesname STR_VAR_1, VAR_0x8009
-	msgbox NewSinjoh_Text_ThisIsntAMon, MSGBOX_DEFAULT
-	release
-	end
-
-NewSinjoh_EventScript_TradeCompleted::
-	msgbox NewSinjoh_Text_After, MSGBOX_DEFAULT
-	release
-	end
-
-NewSinjoh_Text_YouWillTradeWontYou:
-	.string "I collect POKéMON!\n"
-	.string "Do you have a {STR_VAR_1}?\p"
-	.string "Want to trade it for my\n"
-	.string "{STR_VAR_2}?$"
-
-NewSinjoh_Text_MonYouTakeCare:
-	.string "Yay! I got myself {STR_VAR_1}!\p"
-	.string "{STR_VAR_2}, you take care!$"
-
-NewSinjoh_Text_ThisIsntAMon:
-	.string "Uh, no, I don't think so.\n"
-	.string "That isn't a {STR_VAR_1}.$"
-
-NewSinjoh_Text_YouWontTradeMe:
-	.string "You don't want to trade? Aww...$"
-
-NewSinjoh_Text_After:
-	.string "Yo, how's my GALLADE doing?$"
-
-NewSinjoh_Text_PokefanM:
-	.string "A POKéMON you get in a trade\n"
-	.string "grows quickly.\p"
-	.string "But if you don't have the right\n"
-	.string "GYM BADGE, they may disobey you.$"
-
 NewSinjoh_EventScript_Josh::
-	lock
-	faceplayer
-	msgbox NewSinjoh_Text_Josh, MSGBOX_DEFAULT
-	closemessage
-	release
+	msgbox NewSinjoh_Text_Josh, MSGBOX_NPC
 	end
 
 NewSinjoh_Text_Josh:
-	.string "We're relaxing after\n"
-	.string "helping dig up that old ruin.\p"
-	.string "Our pure brawn let's us\n"
-	.string "move that rubble real easy!$"
+	.string "This place is sick!\p"
+	.string "Hiding these hot springs\n"
+	.string "from the world is a travesty.\p"
+	.string "I'm gonna tell all my friends!$"
 
-NewSinjoh_EventScript_FatMan::
-	lock
-	faceplayer
-	msgbox NewSinjoh_Text_FatMan, MSGBOX_DEFAULT
-	closemessage
-	release
+NewSinjoh_EventScript_Janice::
+	msgbox NewSinjoh_Text_Janice, MSGBOX_NPC
 	end
 
-NewSinjoh_Text_FatMan:
+NewSinjoh_Text_Janice:
+	.string "These springs are magical,\n"
+	.string "but I feel like the locals\l"
+	.string "are giving us dirty looks.$"
+
+NewSinjoh_EventScript_CreepyMan::
+	msgbox NewSinjoh_Text_CreepyMan, MSGBOX_NPC
+	end
+
+NewSinjoh_Text_CreepyMan:
 	.string "Ouughh...\p"
 	.string "This water feels magical on my back.\p"
 	.string "If you have back pain too,\n"
 	.string "you should stay here with me..$"
 
-NewSinjoh_EventScript_OldLady::
-	lock
-	faceplayer
-	msgbox NewSinjoh_Text_OldLady, MSGBOX_DEFAULT
-	closemessage
-	release
+NewSinjoh_EventScript_OldLady1::
+	msgbox NewSinjoh_Text_OldLady1, MSGBOX_NPC
 	end
 
-NewSinjoh_Text_OldLady:
+NewSinjoh_Text_OldLady1:
 	.string "There's nothing like a nice\n"
-	.string "view to invigorate\p"
+	.string "view to invigorate\l"
 	.string "this old soul.$"
 
-NewSinjoh_EventScript_Girl1::
+NewSinjoh_EventScript_OldLady2::
+	msgbox NewSinjoh_Text_OldLady2, MSGBOX_NPC
+	end
+
+NewSinjoh_Text_OldLady2:
+	.string "Great, now these tourists\n"
+	.string "are hogging our hot springs!\p"
+	.string "It's been one bad thing after\n"
+	.string "another lately!$"
+
+NewSinjoh_EventScript_OldLady3::
+	msgbox NewSinjoh_Text_OldLady3, MSGBOX_NPC
+	end
+
+NewSinjoh_Text_OldLady3:
+	.string "How can that woman\n"
+	.string "be so rude to our guests?\p"
+	.string "She needs to take a dip\n"
+	.string "in the springs.$"
+
+
+NewSinjoh_EventScript_SpringsSage::
+	msgbox NewSinjoh_Text_SpringsSage, MSGBOX_NPC
+	end
+
+NewSinjoh_Text_SpringsSage:
+	.string "There has been much division\n"
+	.string "and strife in our community\l"
+	.string "since the newcomers arrived.\p"
+	.string "Regardless of your perspective,\n"
+	.string "it is clear that the balance has\l"
+	.string "been disturbed.\p"
+	.string "Please be kind to locals and\n"
+	.string "tourists alike.$"
+
+NewSinjoh_EventScript_Sage2::
+	msgbox NewSinjoh_Text_Sage2, MSGBOX_NPC
+	end
+
+NewSinjoh_Text_Sage2:
+	.string "Times change, but the stantler\n"
+	.string "still gather. For that, we can\l"
+	.string "be thankful.$"
+
+NewSinjoh_EventScript_Daughter::
+	msgbox NewSinjoh_Text_Daughter, MSGBOX_NPC
+	end
+
+NewSinjoh_Text_Daughter:
+    .string "Wheeeeee!!\p"
+    .string "Look Mommy!\n"
+    .string "No hands!\p"
+	.string "Just like the snowboarders!$"
+
+NewSinjoh_EventScript_Mother::
 	lock
 	faceplayer
-	msgbox NewSinjoh_Text_Girl1, MSGBOX_DEFAULT
-	closemessage
+	msgbox NewSinjoh_Text_Mother, MSGBOX_AUTOCLOSE
+	turnobject LOCALID_NEWSINJOH_MOTHER, DIR_EAST
 	release
 	end
 
-NewSinjoh_Text_Girl1:
-	.string "I'm here on vacation with\n"
-	.string "my girfliend!\p"
-	.string "She really like to explore\n"
-	.string "old ruins, so she begged me\l"
-	.string "if we could visit Sinjoh.\p"
-	.string "And I just couldn't say no to her!$"
+NewSinjoh_Text_Mother:
+    .string "Look at my adorable baby go!\p"
+    .string "This rink has been here\n"
+	.string "for generations, but the children\l"
+	.string "never used it until the newcomers\l"
+	.string "arrived.$"
 
-NewSinjoh_EventScript_Girl2::
-	lock
-	faceplayer
-	msgbox NewSinjoh_Text_Girl2, MSGBOX_DEFAULT
-	closemessage
-	release
+
+NewSinjoh_EventScript_Welcome_Sign::
+	msgbox NewSinjoh_Text_Welcome_Sign, MSGBOX_SIGN
 	end
 
-NewSinjoh_Text_Girl2:
-	.string "I'm so happy she agreed to\n"
-	.string "bring me here!\p"
-	.string "We came all the way from\n"
-	.string "Alola to check out Sinjoh!$"
+NewSinjoh_Text_Welcome_Sign:
+	.string "New Sinjoh$"
 
-Script_NewSinjoh_Welcome_Sign::
-	lock
-	faceplayer
-	msgbox Text_Welcome_Sign, MSGBOX_DEFAULT
-	release
+NewSinjoh_EventScript_Resturant_Sign::
+	msgbox NewSinjoh_Text_Resturant_Sign, MSGBOX_SIGN
 	end
 
-Text_Welcome_Sign:
-	.string "New Sinjoh\n"
-	.string "A town of new endings.$"
-
-Script_NewSinjoh_HotSprings_Mailbox::
-	lock
-	faceplayer
-	msgbox Text_HotSprings_Sign, MSGBOX_DEFAULT
-	release
-	end
-
-Text_HotSprings_Sign:
-	.string "A Comforting retreat\n"
-	.string "in the harsh north.\p"
-	.string "-Edward's Hotsprings-.$"
-
-Script_NewSinjoh_Abandoned_House_Mailbox::
-	lock
-	faceplayer
-	msgbox Text_Abandoned_MailBox, MSGBOX_DEFAULT
-	release
-	end
-
-Text_Abandoned_MailBox:
-	.string "DO NOT ENTER.\p"
-	.string "This home is forclosed.$"
-
-Script_NewSinjoh_Resturant_Sign::
-	lock
-	faceplayer
-	msgbox Text_Resturant_Sign, MSGBOX_DEFAULT
-	release
-	end
-
-Text_Resturant_Sign:
-	.string "Welcome to Serana's Cafe!\n"
-	.string "A cozy joint hidden in the brush.$"
-
-Script_NewSinjoh_LockedDoor::
-	lock
-	faceplayer
-	msgbox Text_NewSinjoh_LockedDoor, MSGBOX_DEFAULT
-	release
-	end
-
-Text_NewSinjoh_LockedDoor:
-	.string "This is the hotsprings'\n"
-	.string "changing room...\l"
-	.string"No reason to go in there!$"
-
-Script_NewSinoh_OldLady_Gift::
-	lock
-	faceplayer
-	goto_if_set FLAG_NEWSINJOH_HEATROCK_GOT, NewSinjoh_EventScript_HeatRock_Got
-	msgbox Text_ItemGiveaway, MSGBOX_DEFAULT
-	checkitem ITEM_HEAT_ROCK, 1
-	compare VAR_RESULT, 1
-	goto_if_ge Script_HasHeatRockAlready
-	msgbox Text_GivingRock, MSGBOX_DEFAULT
-	giveitem ITEM_HEAT_ROCK, 1
-	compare VAR_RESULT, 0
-	goto_if_eq Script_BagIsFull
-	setflag FLAG_NEWSINJOH_HEATROCK_GOT
-	release
-	end
-
-Script_HasHeatRockAlready::
-	msgbox Text_HasHeatRockAlready, MSGBOX_DEFAULT
-	release
-	end
-
-Script_BagIsFull::
-	msgbox Text_BagIsFull, MSGBOX_DEFAULT
-	release
-	end
-
-Text_ItemGiveaway:
-	.string "Oh dear... The trip up\n"
-	.string "here must have been so cold.\l"
-	.string "Why don't i give you something.$"
-
-Text_GivingRock:
-	.string "Here you go deary..\n"
-    .string "Take this.$"
-
-Text_HasHeatRockAlready:
-	.string "Oh you already have one?\n"
-	.string "I'll hold onto this for now then..$"
-
-Text_BagIsFull:
-	.string "Your BAG is full hun.\n"
-	.string "why don't you make space and come back hm?$"
-
-NewSinjoh_EventScript_HeatRock_Got::
-    msgbox Text_ItemGiveaway, MSGBOX_DEFAULT 
-	msgbox Text_HasHeatRockAlready, MSGBOX_DEFAULT
-	release
-	end
+NewSinjoh_Text_Resturant_Sign:
+	.string "FAMILY CAFE$"
 
 NewSinjoh_EventScript_Hiker::
-	lock
-	faceplayer
-	msgbox NewSinjoh_Text_Hiker, MSGBOX_DEFAULT
-	closemessage
-	release
+	msgbox NewSinjoh_Text_Hiker, MSGBOX_NPC
 	end
 
-	NewSinjoh_Text_Hiker:
-	.string "It's so cold here!\p"
-	.string "I think after i finish exploring\n"
-	.string "I'll go somewhere tropical!$"
+NewSinjoh_Text_Hiker:
+	.string "Business is booming!\n"
+	.string "But prices have gone up since\l"
+	.string "the city folk became interested\l"
+	.string "in our little town.$"
 
-Script_NewSinjoh_GroundItem_1::
+NewSinjoh_EventScript_OldLady4::
+	msgbox NewSinjoh_Text_OldLady4, MSGBOX_NPC
+	end
+
+NewSinjoh_Text_OldLady4:
+	.string "I only sell to locals!$"
+
+NewSinjoh_EventScript_Item_DuskBall::
 	finditem ITEM_DUSK_BALL
     end
 
-Script_Bag1sFull::
-	msgbox Text_Bag1sFull, MSGBOX_DEFAULT
-	release
-	end
 
-Text_Bag1sFull:
-	.string "Your BAG is full.$"
-
-Script_NewSinjoh_GroundItem_2::
-	finditem ITEM_REVIVE
-    end

@@ -1,18 +1,18 @@
 NewSinjoh_House4_hns_MapScripts::
 	.byte 0
 
-NewSinjoh_Script_Resturant::
+NewSinjoh_Cafe_Script_Sister::
 	lock
 	faceplayer
-	message NewSinjoh_Text_ResturantGreeting
+	message NewSinjoh_Cafe_Text_ResturantGreeting
 	waitmessage
-	pokemart NewSinjoh_Pokemart_Resturant
-	msgbox NewSinjoh_Text_ResturantEnd, MSGBOX_DEFAULT
+	pokemart NewSinjoh_Cafe_Pokemart_Resturant
+	msgbox NewSinjoh_Cafe_Text_ResturantEnd, MSGBOX_DEFAULT
 	release
 	end
 
 	.align 2
-NewSinjoh_Pokemart_Resturant:
+NewSinjoh_Cafe_Pokemart_Resturant:
 	.2byte ITEM_YACHE_BERRY
     .2byte ITEM_LANSAT_BERRY
     .2byte ITEM_ROWAP_BERRY
@@ -22,116 +22,72 @@ NewSinjoh_Pokemart_Resturant:
 	.2byte ITEM_HEAL_POWDER
 	.2byte ITEM_LEEK
 	.2byte ITEM_BIG_ROOT
-	.2byte ITEM_LEFTOVERS
 	.2byte ITEM_NONE
 	release
 	end
 
-NewSinjoh_Text_ResturantGreeting:
+NewSinjoh_Cafe_Text_ResturantGreeting:
 	.string "H-hello! Welcome to our Cafe!\n"
 	.string "How can I help you today?$"
 
-NewSinjoh_Text_ResturantEnd:
+NewSinjoh_Cafe_Text_ResturantEnd:
 	.string "Please come again!$"
 
-NewSinjoh_EventScript_ENGIE::
-	lock
-	faceplayer
-	msgbox NewSinjoh_Text_ENGIE, MSGBOX_DEFAULT
-	closemessage
-	release
-    face_right
+NewSinjoh_Cafe_EventScript_BaldingMan::
+	msgbox NewSinjoh_Cafe_Text_BaldingMan, MSGBOX_NPC
 	end
 
-	NewSinjoh_Text_ENGIE:
-	.string "This food hits the spot after\n"
-	.string "a hard days work!$"
+NewSinjoh_Cafe_Text_BaldingMan:
+	.string "A local family has run this\n"
+	.string "cafe for as long as anyone\l"
+	.string "can remember.\p"
+	.string "Their youngest girl over there\n"
+	.string "isn't used to serving so many\l"
+	.string "strangers.$"
 
-NewSinjoh_EventScript_BaldingMan::
-	lock
-	faceplayer
-	msgbox NewSinjoh_Text_BaldingMan, MSGBOX_DEFAULT
-	closemessage
-	release
-    face_right
+NewSinjoh_Cafe_EventScript_ScientistF::
+	msgbox NewSinjoh_Cafe_Text_ScientistF, MSGBOX_NPC
 	end
 
-	NewSinjoh_Text_BaldingMan:
-	.string "I heard that Serana moved her\n"
-	.string "cafe into this brush to hide from\l"
-	.string "tourists.\p"
-	.string "Her little sister still isn't used\n"
-	.string "to serving people yet..\p"
-	.string "So by having only regulars\n"
-	.string "show up, she could learn at\l"
-	.string "her own pace!$"
-
-NewSinjoh_EventScript_FemDoctor::
-	lock
-	faceplayer
-	msgbox NewSinjoh_Text_FemDoctor, MSGBOX_DEFAULT
-	closemessage
-	release
-    face_right
-	end
-
-	NewSinjoh_Text_FemDoctor:
+NewSinjoh_Cafe_Text_ScientistF:
 	.string "This drink is so goood~!\n"
-	.string ".......\p"
-	.string "Actually...you look a little\l"
-	.string "to young..$"
+	.string ".......$"
 
-NewSinjoh_EventScript_Girl::
+NewSinjoh_Cafe_EventScript_ScientistM::
 	lock
 	faceplayer
-	msgbox NewSinjoh_Text_Girl, MSGBOX_DEFAULT
+	msgbox NewSinjoh_Cafe_Text_ScientistM, MSGBOX_DEFAULT
 	closemessage
 	release
 	end
 
-	NewSinjoh_Text_Girl:
-	.string "Please forgive my older sister..\p"
-	.string "Outside of Nurse Joy she's our\n"
-	.string "town's only doctor.\l"
-	.string "As you can imagine, she doesn't\l"
-	.string "get to relax very often..$"
+NewSinjoh_Cafe_Text_ScientistM:
+	.string "Please forgive my colleague...\p"
+	.string "The drinks here are stronger than\n"
+	.string "what we're used to in HOENN.\p"
+	.string "I tried to warn her, but she said\n"
+	.string "she needed to unwind.\p"
+	.string "This research expedition has been\n"
+	.string "hard on us all.$"
 
-NewSinjoh_EventScript_Gentleman::
+NewSinjoh_Cafe_EventScript_Gentleman::
+	msgbox NewSinjoh_Cafe_Text_Gentleman, MSGBOX_NPC
+	end
+
+NewSinjoh_Cafe_Text_Gentleman:
+	.string "What are you staring at, kid?\p"
+	.string "Nothin' wrong with a man and his\n"
+	.string "POKéMON eating at the same table.$"
+
+NewSinjoh_EventScript_Scyther::
 	lock
 	faceplayer
-	msgbox NewSinjoh_Text_Gentleman, MSGBOX_DEFAULT
-	closemessage
-	release
-    face_right
-	end
-
-	NewSinjoh_Text_Gentleman:
-	.string "There you go SCIZOR..\n"
-	.string "Enjoy your food, you've earned it.$"
-
-Script_Scizor::
-	lock
-	playmoncry SPECIES_SCIZOR, 0
-	msgbox Text_CryScizor, MSGBOX_DEFAULT
+	playmoncry SPECIES_SCYTHER, 0
+	msgbox NewSinjoh_Text_Scyther, MSGBOX_DEFAULT
 	waitmoncry
-        closemessage
+    closemessage
 	release
 	end
 
-Text_CryScizor:
-	.string "Shraah!$"
-
-Script_Raichu::
-	lock
-	faceplayer
-	playmoncry SPECIES_RAICHU, 0
-	msgbox Text_CryRaichu, MSGBOX_DEFAULT
-	waitmoncry
-        closemessage
-	release
-	face_right
-	end
-
-Text_CryRaichu:
-	.string "Rhaai! Rhaii!$"
-
+NewSinjoh_Text_Scyther:
+	.string "Scyyy!$"

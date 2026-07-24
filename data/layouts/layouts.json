@@ -15799,8 +15799,8 @@
     {
       "id": "LAYOUT_MELEMELE_HOUSE_HNS",
       "name": "Melemele_House_hns_Layout",
-      "width": 20,
-      "height": 20,
+      "width": 16,
+      "height": 15,
       "primary_tileset": "gTileset_Johto_Building_Hns",
       "secondary_tileset": "gTileset_PokemonCenter_White_Hns",
       "border_filepath": "data/layouts/Melemele_House_hns/border.bin",
@@ -16207,8 +16207,8 @@
     {
       "id": "LAYOUT_NEW_SINJOH_HOUSE1_HNS",
       "name": "NewSinjoh_House1_hns_Layout",
-      "width": 40,
-      "height": 13,
+      "width": 15,
+      "height": 12,
       "primary_tileset": "gTileset_Johto_Building_Hns",
       "secondary_tileset": "gTileset_PlayersHouse_Hns",
       "border_filepath": "data/layouts/NewSinjoh_House1_hns/border.bin",

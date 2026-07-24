@@ -72,19 +72,6 @@ Route49_EventScript_Item_Lure::
     finditem ITEM_LURE
     end
 
-Route49_EventScript_PetStantler::
-    lock
-	faceplayer
-	playmoncry SPECIES_STANTLER, 0
-	msgbox Route49_Text_Stantler_Cry, MSGBOX_DEFAULT
-	waitmoncry
-    closemessage
-	release
-	end
-
-Route49_Text_Stantler_Cry:
-    .string "Lerrrrr!$"
-
 Route49_EventScript_Electrode::
 	lock
 	faceplayer

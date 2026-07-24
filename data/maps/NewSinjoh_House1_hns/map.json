@@ -17,21 +17,21 @@
     {
       "local_id": "LOCALID_NEWSINJOH_HOUSE1_ELIZABETH",
       "graphics_id": "OBJ_EVENT_GFX_HEX_MANIAC",
-      "x": 13,
-      "y": 7,
+      "x": 3,
+      "y": 2,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NewSinjoh__House1_EventScripts_Elizabeth_2ndEncounter",
+      "script": "NewSinjoh__House1_EventScripts_Elizabeth",
       "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_PICHU_DOLL",
-      "x": 26,
-      "y": 6,
+      "x": 6,
+      "y": 0,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -43,8 +43,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BIG_LAPRAS_DOLL",
-      "x": 34,
-      "y": 8,
+      "x": 4,
+      "y": 5,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -56,8 +56,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_CLEFAIRY_DOLL",
-      "x": 27,
-      "y": 9,
+      "x": 7,
+      "y": 0,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -68,22 +68,9 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL_HNS",
-      "x": 37,
-      "y": 2,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "Snowswept_EventScript_Item_SKYPLATE",
-      "flag": "FLAG_NEWSINJOH_HOUSE1_SKYPLATE"
-    },
-    {
       "graphics_id": "OBJ_EVENT_GFX_BIG_WAILMER_DOLL",
       "x": 2,
-      "y": 4,
+      "y": 5,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -95,8 +82,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_EEVEE",
-      "x": 6,
-      "y": 4,
+      "x": 5,
+      "y": 7,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 6,
@@ -109,56 +96,25 @@
   ],
   "warp_events": [
     {
-      "x": 2,
-      "y": 10,
+      "x": 11,
+      "y": 8,
       "elevation": 0,
       "dest_map": "MAP_NEW_SINJOH_HNS",
-      "dest_warp_id": "6"
+      "dest_warp_id": "4"
     },
     {
-      "x": 10,
+      "x": -16,
       "y": 3,
       "elevation": 0,
       "dest_map": "MAP_NEW_SINJOH_HOUSE1_HNS",
       "dest_warp_id": "2"
-    },
-    {
-      "x": 28,
-      "y": 2,
-      "elevation": 0,
-      "dest_map": "MAP_NEW_SINJOH_HOUSE1_HNS",
-      "dest_warp_id": "1"
     }
   ],
   "coord_events": [],
   "bg_events": [
     {
       "type": "sign",
-      "x": 11,
-      "y": 7,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
-    },
-    {
-      "type": "sign",
-      "x": 10,
-      "y": 6,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
-      "script": "NewSinjoh_House1_Bookshelf"
-    },
-    {
-      "type": "sign",
-      "x": 35,
-      "y": 1,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
-    },
-    {
-      "type": "sign",
-      "x": 30,
+      "x": 6,
       "y": 1,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
@@ -166,7 +122,7 @@
     },
     {
       "type": "sign",
-      "x": 31,
+      "x": 7,
       "y": 1,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",

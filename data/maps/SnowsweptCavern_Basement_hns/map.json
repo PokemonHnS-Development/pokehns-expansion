@@ -229,8 +229,8 @@
       "x": 48,
       "y": 18,
       "elevation": 0,
-      "dest_map": "MAP_SNOWSWEPT_CAVERN_HNS",
-      "dest_warp_id": "1"
+      "dest_map": "MAP_NEW_SINJOH_HNS",
+      "dest_warp_id": "6"
     },
     {
       "x": 15,
@@ -240,26 +240,7 @@
       "dest_warp_id": "0"
     }
   ],
-  "coord_events": [
-    {
-      "type": "trigger",
-      "x": 29,
-      "y": 14,
-      "elevation": 0,
-      "var": "VAR_NOBLE_ARCANINE_TRIGGER",
-      "var_value": "0",
-      "script": "Snowswept_Caverns_Noble_Arcanine_Right"
-    },
-    {
-      "type": "trigger",
-      "x": 28,
-      "y": 14,
-      "elevation": 0,
-      "var": "VAR_NOBLE_ARCANINE_TRIGGER",
-      "var_value": "0",
-      "script": "Snowswept_Caverns_Noble_Arcanine_Left"
-    }
-  ],
+  "coord_events": [],
   "bg_events": [
     {
       "type": "sign",
