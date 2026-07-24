@@ -142,7 +142,15 @@ static const u8 sNuzlockeLUT[] =
     [MAPSEC_PONI_CAVE] = 0x68,
     [MAPSEC_ULAULA_CAVE] = 0x69,
     [MAPSEC_ULAULA_CAVE_2] = 0x6A,
-    
+    // Sinjoh
+    [MAPSEC_SNOWSWEPT_CAVERN] = 0x6B,
+    [MAPSEC_ROUTE_49] = 0x6C,
+    [MAPSEC_ROUTE_50] = 0x6D,
+    [MAPSEC_NEW_SINJOH] = 0x6E,
+    [MAPSEC_SINJOH_RUINS] = 0x6F,
+    // Max bit index: 0x6F (112 bits). nuzlockeEncounterFlags[16] supports up to 0x7F (128 bits).
+    // If you exceed 0x7F, grow nuzlockeEncounterFlags in include/global.h.
+
 #else
     // Hoenn Routes
     [MAPSEC_ROUTE_101]        = 0x00,
