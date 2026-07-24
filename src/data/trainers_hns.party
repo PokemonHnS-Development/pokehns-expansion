@@ -15027,3 +15027,272 @@ Adamant Nature
 - Liquidation
 - Rock Polish
 - Yawn
+
+
+=== TRAINER_FINLEY_HNS ===
+Name: FINLEY
+Class: Super Nerd Hns
+Pic: Super Nerd Hns
+Music: Hg Boy 2
+Gender: Male
+Double Battle: Yes
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Espeon @ Mind Plate  
+Ability: Magic Bounce  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Expanding Force  
+- Calm Mind  
+- Morning Sun  
+- Power Gem  
+
+Slowking @ Terrain Extender  
+Ability: Oblivious  
+Level: 70    
+EVs: 92 HP / 164 Def / 252 SpD  
+Bold Nature  
+IVs: 0 Atk  
+- Psychic Terrain  
+- Reflect  
+- Light Screen  
+- Signal Beam  
+
+Gardevoir @ Charcoal  
+Ability: Trace  
+Level: 70 
+EVs: 4 HP / 252 Def / 252 SpA  
+Bold Nature  
+IVs: 0 Atk  
+- Psychic Terrain  
+- Psychic Noise  
+- Alluring Voice  
+- Mystical Fire  
+
+Xatu @ Leftovers  
+Ability: Early Bird  
+Level: 70
+EVs: 4 HP / 252 Def / 252 SpD  
+Bold Nature  
+IVs: 0 Atk  
+- Future Sight  
+- Rest  
+- Calm Mind  
+- Dazzling Gleam  
+
+Gallade @ Razor Claw  
+Ability: Sharpness  
+Level: 70  
+EVs: 180 Atk / 164 Def / 136 SpD  
+Careful Nature  
+- Aqua Cutter  
+- Psycho Cut  
+- Drain Punch  
+- Bulk Up  
+
+Wyrdeer @ Assault Vest  
+Ability: Intimidate  
+Level: 70
+EVs: 252 HP / 4 Def / 252 SpD  
+Sassy Nature  
+- Expanding Force  
+- Earth Power  
+- Psyshield Bash  
+- Lunge  
+
+=== TRAINER_MUALANI_HNS ===
+Name: MUALANI
+Class: Swimmer F Hns
+Pic: Swimmer F FRLG
+Gender: female
+Music: Hg Boy 2
+Double Battle: Yes
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Politoed @ Damp Rock  
+Ability: Drizzle  
+Level: 70
+EVs: 116 HP / 140 SpA / 252 SpD  
+Sassy Nature  
+IVs: 0 Atk  
+- Weather Ball  
+- Earth Power  
+- Seismic Toss  
+- Ice Beam  
+
+Gastrodon @ Black Sludge  
+Ability: Storm Drain  
+Level: 70 
+EVs: 252 HP / 92 Def / 72 SpA / 92 SpD  
+Quiet Nature  
+IVs: 0 Atk  
+- Clear Smog  
+- Scald  
+- Sludge Bomb  
+- Recover  
+
+Lanturn @ Assault Vest  
+Ability: Volt Absorb  
+Level: 70
+EVs: 252 HP / 4 SpA / 252 SpD  
+Sassy Nature  
+IVs: 0 Atk  
+- Discharge  
+- Signal Beam  
+- Volt Switch  
+- Dazzling Gleam  
+
+Blastoise (M) @ Leftovers  
+Ability: Rain Dish  
+Level: 70
+EVs: 36 HP / 252 Def / 220 SpD  
+Bold Nature  
+IVs: 0 Atk  
+- Aqua Ring  
+- Rain Dance  
+- Ice Beam  
+- Hydro Cannon  
+
+Huntail @ Shell Bell
+Ability: Swift Swim  
+Level: 70    
+EVs: 252 Atk / 252 Spe  
+Jolly Nature  
+- Aqua Tail  
+- Shell Smash  
+- Crunch  
+- Ice Fang  
+
+Pelipper @ Splash Plate  
+Ability: Drizzle  
+Level: 70  
+EVs: 192 HP / 64 SpA / 252 SpD  
+Modest Nature  
+IVs: 0 Atk  
+- Hurricane  
+- Hydro Pump  
+- Tailwind  
+- Feather Dance  
+
+=== TRAINER_WESSEL_HNS ===
+Name: WESSEL
+Class: Gentleman Hns
+Pic: Gentleman
+Gender: Male
+Music: Hg Boy 1
+Double Battle: No
+AI: Check Bad Move
+
+Dugtrio-Alola @ Focus Sash  
+Ability: Sand Force  
+Level: 70  
+EVs: 252 Atk / 252 Spe  
+- Earthquake  
+- Iron Head  
+- Stealth Rock  
+- Swords Dance  
+
+Steelix @ Assault Vest  
+Ability: Rock Head  
+Level: 70  
+EVs: 252 HP / 252 SpD  
+Sassy Nature  
+IVs: 0 Spe  
+- Head Smash  
+- Gyro Ball  
+- Psychic Fangs  
+- Fire Fang  
+
+Scizor @ Covert Cloak  
+Ability: Technician  
+Level: 70  
+Tera Type: Bug  
+EVs: 172 HP / 124 Atk / 88 Def / 124 SpD  
+Adamant Nature  
+- Pounce  
+- Dual Wingbeat  
+- Iron Head  
+- Curse  
+
+Bronzong @ Loaded Dice  
+Ability: Heavy Metal  
+Level: 70   
+EVs: 108 HP / 252 Atk / 28 Def / 120 SpD  
+Relaxed Nature  
+- Heavy Slam  
+- Body Press  
+- Iron Defense  
+- Rock Blast  
+
+Perrserker @ Iron Plate  
+Ability: Steely Spirit  
+Level: 70 
+EVs: 248 HP / 252 Atk / 8 SpD  
+Adamant Nature  
+- Iron Tail  
+- Hone Claws  
+- Play Rough  
+- Trailblaze  
+
+=== TRAINER_SKYLAR_HNS ===
+Name: SKYLAR
+Class: Skier Hns
+Pic: Skier F Hns
+Gender: Female
+Music: Hg Boy 1
+Double Battle: No
+AI: Check Bad Move
+
+Scyther @ King's Rock  
+Ability: Technician  
+Level: 70
+EVs: 4 HP / 252 Atk / 252 Spe  
+Hasty Nature  
+- Dual Wingbeat  
+- Close Combat  
+- Lunge  
+- Psycho Cut  
+
+Gliscor @ Toxic Orb  
+Ability: Poison Heal  
+Level: 70 
+EVs: 124 Atk / 252 Def / 132 SpD  
+Adamant Nature  
+- Tailwind  
+- Fling  
+- Acrobatics  
+- Earthquake  
+
+Crobat @ Big Root  
+Ability: Inner Focus  
+Level: 70 
+EVs: 252 HP / 252 Atk / 4 SpD  
+Adamant Nature  
+- Cross Poison  
+- Brave Bird  
+- Roost  
+- Leech Life  
+
+Swellow @ Flame Orb  
+Ability: Guts  
+Level: 70  
+EVs: 252 Atk / 252 Spe  
+Adamant Nature  
+- Facade  
+- Roost  
+- Steel Wing  
+- Tailwind  
+
+Fearow @ Scope Lens  
+Ability: Sniper  
+Level: 70  
+EVs: 252 Atk / 252 Spe  
+Naive Nature  
+- Drill Run  
+- Focus Energy  
+- Drill Peck  
+- Double-Edge  
+
+
+
