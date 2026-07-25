@@ -5481,7 +5481,12 @@ bool8 MoveNextDirectionInSequence(struct ObjectEvent *objectEvent, struct Sprite
         collision = GetCollisionInDirection(objectEvent, objectEvent->movementDirection);
     }
 
-    if (collision)
+    if (collision == COLLISION_LEDGE_JUMP)
+    {
+        PlaySE(SE_LEDGE);
+        movementActionId = GetJump2MovementAction(objectEvent->movementDirection);
+    }
+    else if (collision)
         movementActionId = GetWalkInPlaceNormalMovementAction(objectEvent->facingDirection);
 
     ObjectEventSetSingleMovement(objectEvent, sprite, movementActionId);
@@ -6744,7 +6749,10 @@ u8 GetCollisionInDirection(struct ObjectEvent *objectEvent, enum Direction direc
     s16 x = objectEvent->currentCoords.x;
     s16 y = objectEvent->currentCoords.y;
     MoveCoords(direction, &x, &y);
-    return GetCollisionAtCoords(objectEvent, x, y, direction);
+    u8 collision = GetCollisionAtCoords(objectEvent, x, y, direction);
+    if (collision && GetLedgeJumpDirection(x, y, direction) != DIR_NONE)
+        return COLLISION_LEDGE_JUMP;
+    return collision;
 }
 
 enum Collision GetSidewaysStairsCollision(struct ObjectEvent *objectEvent, enum Direction dir, u8 currentBehavior, u8 nextBehavior, enum Collision collision)
