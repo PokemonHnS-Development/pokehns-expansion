@@ -3,7 +3,7 @@ map_script MAP_SCRIPT_ON_TRANSITION, NewSinjoh_On_Transition
 	.byte 0
 
 NewSinjoh_On_Transition:
-    setflag FLAG_VISITED_NEWSINJOH
+    setflag FLAG_VISITED_NEW_SINJOH
 	end
 
 NewSinjoh_EventScript_PetStantler::
@@ -172,16 +172,6 @@ NewSinjoh_Text_Janice:
 	.string "but I feel like the locals\l"
 	.string "are giving us dirty looks.$"
 
-NewSinjoh_EventScript_CreepyMan::
-	msgbox NewSinjoh_Text_CreepyMan, MSGBOX_NPC
-	end
-
-NewSinjoh_Text_CreepyMan:
-	.string "Ouughh...\p"
-	.string "This water feels magical on my back.\p"
-	.string "If you have back pain too,\n"
-	.string "you should stay here with me..$"
-
 NewSinjoh_EventScript_OldLady1::
 	msgbox NewSinjoh_Text_OldLady1, MSGBOX_NPC
 	end
@@ -209,7 +199,9 @@ NewSinjoh_Text_OldLady3:
 	.string "How can that woman\n"
 	.string "be so rude to our guests?\p"
 	.string "She needs to take a dip\n"
-	.string "in the springs.$"
+	.string "in the springs. \p"
+	.string "There is plenty of space\n"
+	.string "for everyone.$"
 
 
 NewSinjoh_EventScript_SpringsSage::

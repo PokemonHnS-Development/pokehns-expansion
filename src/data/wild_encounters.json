@@ -71990,8 +71990,8 @@
           }
         },
         {
-          "map": "MAP_SNOWSWEPT_CAVERN_BASEMENT_HNS",
-          "base_label": "gSnowsweptCavern_Basement_hns",
+          "map": "MAP_NEWSINJOH_HOTSPRINGS_HNS",
+          "base_label": "gNewSinjoh_HotSprings_hns",
           "land_mons": {
             "encounter_rate": 20,
             "mons": [

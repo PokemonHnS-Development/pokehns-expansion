@@ -50,7 +50,10 @@ NewSinjoh_Cafe_EventScript_ScientistF::
 	end
 
 NewSinjoh_Cafe_Text_ScientistF:
-	.string "This drink is so goood~!\n"
+	.string "This drink is so goo--ood!\n"
+	.string ".......\p"
+	.string ".......\p"
+	.string "Hahaha\p"
 	.string ".......$"
 
 NewSinjoh_Cafe_EventScript_ScientistM::
