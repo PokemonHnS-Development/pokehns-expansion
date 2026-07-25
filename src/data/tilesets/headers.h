@@ -2700,4 +2700,15 @@ const struct Tileset gTileset_ArceusRoom_Hns =
     .metatileAttributes = gMetatileAttributes_ArceusRoom_Hns,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_MtEmber_Hns =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_MtEmber_Hns,
+    .palettes = gTilesetPalettes_MtEmber_Hns,
+    .metatiles = gMetatiles_MtEmber_Hns,
+    .metatileAttributes = gMetatileAttributes_MtEmber_Hns,
+    .callback = InitTilesetAnim_MtEmber_Hns,
+};
 #endif // IS_FRLG || IS_HNS
