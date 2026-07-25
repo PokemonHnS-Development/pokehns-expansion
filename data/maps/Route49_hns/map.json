@@ -286,11 +286,11 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_SKIER_F_HNS",
       "x": 29,
-      "y": 5,
+      "y": 4,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_WALK_SEQUENCE_LEFT_DOWN_RIGHT_UP",
-      "movement_range_x": 7,
-      "movement_range_y": 3,
+      "movement_type": "MOVEMENT_TYPE_WALK_SEQUENCE_RIGHT_DOWN_LEFT_UP",
+      "movement_range_x": 12,
+      "movement_range_y": 2,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
@@ -298,8 +298,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SKIER_M_HNS",
-      "x": 40,
-      "y": 19,
+      "x": 39,
+      "y": 18,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WALK_SEQUENCE_DOWN_RIGHT_UP_LEFT",
       "movement_range_x": 4,
@@ -331,8 +331,8 @@
     },
     {
       "type": "hidden_item",
-      "x": 33,
-      "y": 5,
+      "x": 32,
+      "y": 16,
       "elevation": 0,
       "item": "ITEM_ULTRA_BALL",
       "flag": "FLAG_ROUTE_49_HIDDENITEM_ULTRABALL"
