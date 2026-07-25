@@ -2,7 +2,7 @@
   "id": "MAP_NEWSINJOH_HOTSPRINGS_HNS",
   "name": "NewSinjoh_HotSprings_hns",
   "layout": "LAYOUT_NEWSINJOH_HOTSPRINGS_HNS",
-  "music": "MUS_HG_SPROUT_TOWER",
+  "music": "MUS_HG_BURNED_TOWER",
   "region_map_section": "MAPSEC_NEW_SINJOH",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -15,13 +15,13 @@
   "connections": null,
   "object_events": [
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_RHYDON",
-      "x": 24,
-      "y": 2,
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_RHYHORN",
+      "x": 50,
+      "y": 3,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
+      "movement_range_x": 6,
+      "movement_range_y": 6,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
@@ -42,8 +42,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_MAGMAR",
-      "x": 38,
-      "y": 33,
+      "x": 41,
+      "y": 23,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
@@ -56,11 +56,11 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_MAGMAR",
       "x": 39,
-      "y": 37,
+      "y": 29,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
+      "movement_range_x": 4,
+      "movement_range_y": 4,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
@@ -77,7 +77,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NewSinjoh_HotSprings_EventScript_Item_MaxRevive",
-      "flag": "FLAG_SNOWSWEPTB_ITEM_MAXREVIVE"
+      "flag": "FLAG_NEWSINJOH_HOTSPRINGS_ITEM_MAXREVIVE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL_HNS",
@@ -90,20 +90,20 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NewSinjoh_HotSprings_EventScript_Item_LavaCookie",
-      "flag": "FLAG_SNOWSWEPTB_ITEM_LAVACOOKIE"
+      "flag": "FLAG_NEWSINJOH_HOTSPRINGS_ITEM_LAVACOOKIE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_TORKOAL",
       "x": 33,
       "y": 13,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 3,
+      "movement_range_y": 3,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_FOUGHT_NOBLE_ARCANINE"
+      "flag": "0"
     },
     {
       "local_id": "LOCALID_NOBLE_ARCANINE",
@@ -120,7 +120,7 @@
       "flag": "FLAG_FOUGHT_NOBLE_ARCANINE"
     },
     {
-      "local_id": "LOCALID_NOBLE_ARCANINE",
+      "local_id": "LOCALID_NOBLE_URSALUNA",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_URSALUNA",
       "x": 52,
       "y": 29,
@@ -135,8 +135,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_OLD_MAN_HNS",
-      "x": 42,
-      "y": 20,
+      "x": 18,
+      "y": 22,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN_LEFT_AND_RIGHT",
       "movement_range_x": 0,
@@ -144,6 +144,110 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NewSinjoh_HotSprings_EventScript_CreepyMan",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_HOT_SPRINGS_OLD_WOMAN",
+      "x": 13,
+      "y": 21,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 4,
+      "movement_range_y": 4,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NewSinjoh_HotSprings_EventScript_OldLady",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SKIER_F_HNS",
+      "x": 21,
+      "y": 8,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 4,
+      "movement_range_y": 4,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NewSinjoh_HotSprings_EventScript_SkierF",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SKIER_M_HNS",
+      "x": 11,
+      "y": 11,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 4,
+      "movement_range_y": 4,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NewSinjoh_HotSprings_EventScript_SkierM",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_RHYDON",
+      "x": 43,
+      "y": 2,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 6,
+      "movement_range_y": 6,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_GROWLITHE_HISUI",
+      "x": 38,
+      "y": 33,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WALK_DOWN_AND_UP",
+      "movement_range_x": 3,
+      "movement_range_y": 6,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_GROWLITHE_HISUI",
+      "x": 2,
+      "y": 21,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WALK_DOWN_AND_UP",
+      "movement_range_x": 3,
+      "movement_range_y": 12,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_GROWLITHE_HISUI",
+      "x": 50,
+      "y": 19,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WALK_LEFT_AND_RIGHT",
+      "movement_range_x": 3,
+      "movement_range_y": 6,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F_HNS",
+      "x": 40,
+      "y": 20,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WALK_SEQUENCE_DOWN_RIGHT_UP_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
       "flag": "0"
     }
   ],
@@ -182,19 +286,19 @@
     },
     {
       "type": "hidden_item",
-      "x": 7,
-      "y": 13,
+      "x": 28,
+      "y": 37,
       "elevation": 0,
       "item": "ITEM_DAWN_STONE",
-      "flag": "FLAG_SNOWSWEPTB_HIDDEN_ITEM1"
+      "flag": "FLAG_NEWSINJOH_HOTSPRINGS_HIDDEN_ITEM1"
     },
     {
       "type": "hidden_item",
-      "x": 9,
-      "y": 39,
+      "x": 31,
+      "y": 19,
       "elevation": 0,
       "item": "ITEM_NUGGET",
-      "flag": "FLAG_SNOWSWEPTB_HIDDEN_ITEM2"
+      "flag": "FLAG_NEWSINJOH_HOTSPRINGS_HIDDEN_ITEM2"
     },
     {
       "type": "sign",

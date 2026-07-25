@@ -71998,7 +71998,7 @@
               {
                 "min_level": 45,
                 "max_level": 60,
-                "species": "SPECIES_SLUGMA"
+                "species": "SPECIES_GROWLITHE_HISUI"
               },
               {
                 "min_level": 45,
@@ -72008,22 +72008,7 @@
               {
                 "min_level": 45,
                 "max_level": 54,
-                "species": "SPECIES_SHELLOS_WEST"
-              },
-              {
-                "min_level": 45,
-                "max_level": 60,
-                "species": "SPECIES_SHELLOS_WEST"
-              },
-              {
-                "min_level": 45,
-                "max_level": 60,
-                "species": "SPECIES_GASTRODON_WEST"
-              },
-              {
-                "min_level": 45,
-                "max_level": 60,
-                "species": "SPECIES_MAGMAR"
+                "species": "SPECIES_GROWLITHE_HISUI"
               },
               {
                 "min_level": 45,
@@ -72033,142 +72018,42 @@
               {
                 "min_level": 45,
                 "max_level": 60,
-                "species": "SPECIES_TORKOAL"
-              },
-              {
-                "min_level": 45,
-                "max_level": 60,
-                "species": "SPECIES_SHELLOS_EAST"
-              },
-              {
-                "min_level": 45,
-                "max_level": 60,
-                "species": "SPECIES_GASTRODON_EAST"
-              },
-              {
-                "min_level": 45,
-                "max_level": 70,
                 "species": "SPECIES_MAGMAR"
               },
               {
                 "min_level": 45,
-                "max_level": 70,
+                "max_level": 60,
+                "species": "SPECIES_MAGMAR"
+              },
+              {
+                "min_level": 45,
+                "max_level": 60,
                 "species": "SPECIES_RHYDON"
-              }
-            ]
-          },
-          "water_mons": {
-            "encounter_rate": 7,
-            "mons": [
-              {
-                "min_level": 45,
-                "max_level": 50,
-                "species": "SPECIES_SHELLOS_EAST"
-              },
-              {
-                "min_level": 45,
-                "max_level": 50,
-                "species": "SPECIES_GASTRODON_EAST"
-              },
-              {
-                "min_level": 45,
-                "max_level": 50,
-                "species": "SPECIES_CORPHISH"
-              },
-              {
-                "min_level": 45,
-                "max_level": 50,
-                "species": "SPECIES_CRAWDAUNT"
               },
               {
                 "min_level": 45,
                 "max_level": 60,
-                "species": "SPECIES_KABUTOPS"
-              }
-            ]
-          },
-          "rock_smash_mons": {
-            "encounter_rate": 60,
-            "mons": [
-              {
-                "min_level": 40,
-                "max_level": 50,
-                "species": "SPECIES_GEODUDE"
+                "species": "SPECIES_URSALUNA"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_NONE"
-              },
-              {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_NONE"
-              },
-              {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_NONE"
-              },
-              {
-                "min_level": 40,
-                "max_level": 50,
+                "min_level": 45,
+                "max_level": 60,
                 "species": "SPECIES_TORKOAL"
-              }
-            ]
-          },
-          "fishing_mons": {
-            "encounter_rate": 30,
-            "mons": [
-              {
-                "min_level": 5,
-                "max_level": 10,
-                "species": "SPECIES_MAGIKARP"
               },
               {
-                "min_level": 5,
-                "max_level": 10,
-                "species": "SPECIES_MAGIKARP"
-              },
-              {
-                "min_level": 20,
-                "max_level": 30,
-                "species": "SPECIES_MAGIKARP"
-              },
-              {
-                "min_level": 20,
-                "max_level": 30,
-                "species": "SPECIES_CORPHISH"
-              },
-              {
-                "min_level": 20,
-                "max_level": 40,
-                "species": "SPECIES_CORSOLA"
-              },
-              {
-                "min_level": 50,
-                "max_level": 50,
-                "species": "SPECIES_CORSOLA"
-              },
-              {
-                "min_level": 50,
+                "min_level": 45,
                 "max_level": 60,
-                "species": "SPECIES_CRAWDAUNT"
+                "species": "SPECIES_ARCANINE_HISUI"
               },
               {
-                "min_level": 50,
-                "max_level": 60,
-                "species": "SPECIES_KABUTO"
+                "min_level": 45,
+                "max_level": 70,
+                "species": "SPECIES_TORKOAL"
               },
               {
-                "min_level": 50,
-                "max_level": 60,
-                "species": "SPECIES_OMANYTE"
-              },
-              {
-                "min_level": 50,
-                "max_level": 60,
-                "species": "SPECIES_RELICANTH"
+                "min_level": 45,
+                "max_level": 70,
+                "species": "SPECIES_ARCANINE_HISUI"
               }
             ]
           }

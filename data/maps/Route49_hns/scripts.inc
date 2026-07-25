@@ -7,6 +7,15 @@ Route49_hns_OnFrame::
     map_script_2 VAR_SINJOH_STORYLINE, 3, Route49_EventScripts_KimonoGirl
 	.2byte 0
 
+Route49_EventScript_SkierM::
+	msgbox Route49_Text_SkierM, MSGBOX_NPC
+	end
+
+Route49_Text_SkierM::
+	.string "Hey, watch out for my board!\p"
+	.string "What? You want to battle?\n"
+	.string "No way, these slopes are too wicked!$"
+
 Route49_EventScripts_KimonoGirl::
     delay 10
     lock
@@ -28,7 +37,6 @@ Route49_EventScripts_KimonoGirl::
 	fadedefaultbgm
 	release
 	end
-
 
 Route49_KimonoGirl_Movement1:
     walk_left
@@ -57,7 +65,7 @@ Route49_Text_KimonoGirl:
     .string "You....\p"
 	.string "You must be {PLAYER}, correct?\n"
     .string "I've heard all about you and\l"
-	.string "your deeds from my sisters\l"
+	.string "your deeds from my cousins\l"
 	.string "in Ecruteak City.\p"
 	.string "My older sister wishes to meet with you.\l"
 	.string "If you find the time, please\n"

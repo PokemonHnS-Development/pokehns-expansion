@@ -15031,9 +15031,9 @@ Adamant Nature
 
 === TRAINER_FINLEY_HNS ===
 Name: FINLEY
-Class: Super Nerd Hns
-Pic: Super Nerd Hns
-Music: Hg Boy 2
+Class: Sage Hns
+Pic: Sage Hns
+Music: Hg Sage
 Gender: Male
 Double Battle: Yes
 AI: Check Bad Move / Try To Faint / Check Viability
@@ -15104,9 +15104,9 @@ Sassy Nature
 === TRAINER_MUALANI_HNS ===
 Name: MUALANI
 Class: Swimmer F Hns
-Pic: Swimmer F FRLG
+Pic: Swimmer F
 Gender: female
-Music: Hg Boy 2
+Music: Hg Girl 2
 Double Battle: Yes
 AI: Check Bad Move / Try To Faint / Check Viability
 
@@ -15177,10 +15177,10 @@ IVs: 0 Atk
 
 === TRAINER_WESSEL_HNS ===
 Name: WESSEL
-Class: Gentleman Hns
-Pic: Gentleman
+Class: Super Nerd Hns
+Pic: Super Nerd Hns
 Gender: Male
-Music: Hg Boy 1
+Music: Hg Suspicious 1
 Double Battle: No
 AI: Check Bad Move
 
@@ -15240,7 +15240,7 @@ Name: SKYLAR
 Class: Skier Hns
 Pic: Skier F Hns
 Gender: Female
-Music: Hg Boy 1
+Music: Hg Girl 2
 Double Battle: No
 AI: Check Bad Move
 
