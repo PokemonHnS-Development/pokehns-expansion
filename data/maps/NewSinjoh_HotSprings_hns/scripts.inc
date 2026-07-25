@@ -9,6 +9,20 @@ NewSinjoh_HotSprings_EventScript_Item_LavaCookie::
     finditem ITEM_LAVA_COOKIE
     end
 
+NewSinjoh_HotSprings_EventScript_Mualani::
+    msgbox NewSinjoh_HotSprings_Text_MualaniBefore, MSGBOX_NPC
+    end
+
+NewSinjoh_HotSprings_Text_MualaniBefore:
+	.string "Am I a local or a visitor?\n"
+    .string "What a rude question!\p"
+    .string "If you must know, I'm a local.\p"
+    .string "My family was among the first to\n"
+    .string "enjoy these springs.\p"
+    .string "See, I even have this SPLASH PLATE\n"
+    .string "to prove it.$"
+
+
 NewSinjoh_HotSprings_EventScript_Sign1::
     msgbox NewSinjoh_HotSprings_Text_Sign1, MSGBOX_SIGN
     end

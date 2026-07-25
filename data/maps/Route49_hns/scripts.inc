@@ -2,10 +2,21 @@ Route49_hns_MapScripts::
     map_script MAP_SCRIPT_ON_FRAME_TABLE, Route49_hns_OnFrame
 	.byte 0
 
-
 Route49_hns_OnFrame::
     map_script_2 VAR_SINJOH_STORYLINE, 3, Route49_EventScripts_KimonoGirl
 	.2byte 0
+
+Route49_EventScript_Skylar::
+	msgbox Route49_Text_SkylarBefore, MSGBOX_NPC
+	end
+
+Route49_Text_SkylarBefore::
+	.string "When I was hitting the slopes, my\n"
+	.string "skis snagged on something.\p"
+	.string "It was this strange PLATE, cold\n"
+	.string "as ICE.\p"
+	.string "I think I'll hold onto it as a\n"
+	.string "souvenir!$"
 
 Route49_EventScript_SkierM::
 	msgbox Route49_Text_SkierM, MSGBOX_NPC
