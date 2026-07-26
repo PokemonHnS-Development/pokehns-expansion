@@ -16016,7 +16016,7 @@
       "id": "LAYOUT_ROUTE50_HNS",
       "name": "Route50_hns_Layout",
       "width": 82,
-      "height": 67,
+      "height": 63,
       "primary_tileset": "gTileset_MtSilver_Exp_Hns",
       "secondary_tileset": "gTileset_MtSilver_Ancient_Hns",
       "border_filepath": "data/layouts/Route50_hns/border.bin",
