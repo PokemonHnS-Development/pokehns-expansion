@@ -15038,68 +15038,46 @@ Gender: Male
 Double Battle: Yes
 AI: Check Bad Move / Try To Faint / Check Viability
 
-Espeon @ Mind Plate  
-Ability: Magic Bounce  
-EVs: 4 HP / 252 SpA / 252 Spe  
-Timid Nature  
-IVs: 0 Atk  
-- Expanding Force  
-- Calm Mind  
-- Morning Sun  
-- Power Gem  
-
-Slowking @ Terrain Extender  
-Ability: Oblivious  
-Level: 70    
-EVs: 92 HP / 164 Def / 252 SpD  
-Bold Nature  
-IVs: 0 Atk  
-- Psychic Terrain  
-- Reflect  
-- Light Screen  
-- Signal Beam  
-
-Gardevoir @ Charcoal  
-Ability: Trace  
+Flygon @ Focus Sash  
+Ability: Levitate  
 Level: 70 
-EVs: 4 HP / 252 Def / 252 SpA  
-Bold Nature  
+EVs: 252 SpA / 252 Spe  
+Modest Nature  
 IVs: 0 Atk  
-- Psychic Terrain  
-- Psychic Noise  
+- Dragon Cheer  
 - Alluring Voice  
-- Mystical Fire  
+- Heat Wave  
+- Scorching Sands  
 
-Xatu @ Leftovers  
-Ability: Early Bird  
-Level: 70
-EVs: 4 HP / 252 Def / 252 SpD  
-Bold Nature  
-IVs: 0 Atk  
-- Future Sight  
-- Rest  
-- Calm Mind  
-- Dazzling Gleam  
-
-Gallade @ Razor Claw  
-Ability: Sharpness  
-Level: 70  
-EVs: 180 Atk / 164 Def / 136 SpD  
-Careful Nature  
-- Aqua Cutter  
-- Psycho Cut  
-- Drain Punch  
-- Bulk Up  
-
-Wyrdeer @ Assault Vest  
+Salamence @ Draco Plate
 Ability: Intimidate  
-Level: 70
-EVs: 252 HP / 4 Def / 252 SpD  
-Sassy Nature  
-- Expanding Force  
-- Earth Power  
-- Psyshield Bash  
-- Lunge  
+Level: 70  
+EVs: 252 Atk / 248 Spe  
+Adamant Nature  
+- Dragon Dance  
+- Dragon Rush  
+- Crunch  
+- Temper Flare  
+
+Kingdra @ Scope Lens  
+Ability: Sniper  
+EVs: 148 Def / 252 SpA / 108 SpD  
+Modest Nature  
+IVs: 0 Atk  
+- Flash Cannon  
+- Muddy Water  
+- Whirlpool  
+- Agility  
+
+Exeggutor-Alola @ White Herb  
+Ability: Frisk  
+Level: 70 
+- Light Screen  
+- Draco Meteor  
+- Outrage  
+- Seed Bomb  
+
+
 
 === TRAINER_MUALANI_HNS ===
 Name: MUALANI
