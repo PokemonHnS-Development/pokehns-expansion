@@ -593,14 +593,11 @@
     "SinjohRuins_hns"
   ],
   "gMapGroup_IndoorSinjoh_Hns": [
-    "Route49_House1_hns",
-    "Route49_NewSinjoh_Gate_hns",
     "NewSinjoh_PokemonCenter_hns",
     "SinjohRuins_Temple_hns",
     "SinjohRuins_RegirockRoom_hns",
     "SinjohRuins_RegiceRoom_hns",
     "SinjohRuins_RegisteelRoom_hns",
-    "SinjohRuins_Cave_hns",
     "SinjohRuins_RegidracoRoom_hns",
     "SinjohRuins_RegielekiRoom_hns",
     "SinjohRuins_RegigigasRoom_hns",
@@ -610,10 +607,7 @@
     "NewSinjoh_House3_hns",
     "NewSinjoh_House4_hns",
     "NewSinjoh_KimonoHideout_hns",
-    "Route50_SinjohRuins_Gate_hns",
-    "Route50_House1_hns",
-    "SinjohRuins_House1_hns",
-    "SinjohRuins_House2_hns"
+    "SinjohRuins_House1_hns"
   ],
   "gMapGroup_SpecialArea_Hns": [
     "TrainerHill_Courtyard_hns",

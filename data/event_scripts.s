@@ -2355,21 +2355,15 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/SinjohRuins_RegiceRoom_hns/scripts.inc"
 	.include "data/maps/SinjohRuins_RegirockRoom_hns/scripts.inc"
 	.include "data/maps/SinjohRuins_RegisteelRoom_hns/scripts.inc"
-	.include "data/maps/Route49_NewSinjoh_Gate_hns/scripts.inc"
-	.include "data/maps/Route49_House1_hns/scripts.inc"
-	.include "data/maps/SinjohRuins_Cave_hns/scripts.inc"
 	.include "data/maps/NewSinjoh_PokemonCenter_hns/scripts.inc"
 	.include "data/maps/SinjohRuins_RegidracoRoom_hns/scripts.inc"
-	.include "data/maps/Route50_House1_hns/scripts.inc"
 	.include "data/maps/SinjohRuins_RegielekiRoom_hns/scripts.inc"
 	.include "data/maps/NewSinjoh_House4_hns/scripts.inc"
 	.include "data/maps/NewSinjoh_House1_hns/scripts.inc"
 	.include "data/maps/NewSinjoh_House3_hns/scripts.inc"
 	.include "data/maps/NewSinjoh_House2_hns/scripts.inc"
 	.include "data/maps/SinjohRuins_RegigigasRoom_hns/scripts.inc"
-	.include "data/maps/Route50_SinjohRuins_Gate_hns/scripts.inc"
 	.include "data/maps/SinjohRuins_House1_hns/scripts.inc"
-	.include "data/maps/SinjohRuins_House2_hns/scripts.inc"
 	.include "data/maps/SinjohRuins_ArceusRoom_hns/scripts.inc"
 	.include "data/maps/NewSinjoh_KimonoHideout_hns/scripts.inc"
 	.include "data/maps/PoniIsle_hns/scripts.inc"
@@ -2395,5 +2389,3 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/Akala_Cave_hns/scripts.inc"
 
 .endif
-
-

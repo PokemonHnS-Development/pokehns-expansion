@@ -16085,42 +16085,6 @@
       "layout_version": "hns"
     },
     {
-      "id": "LAYOUT_ROUTE49_HOUSE1_HNS",
-      "name": "Route49_House1_hns_Layout",
-      "width": 12,
-      "height": 11,
-      "primary_tileset": "gTileset_Johto_Building_Hns",
-      "secondary_tileset": "gTileset_PlayersHouse_Hns",
-      "border_filepath": "data/layouts/Route49_House1_hns/border.bin",
-      "blockdata_filepath": "data/layouts/Route49_House1_hns/map.bin",
-      "game_version": "hns",
-      "layout_version": "hns"
-    },
-    {
-      "id": "LAYOUT_ROUTE49_NEW_SINJOH_GATE_HNS",
-      "name": "Route49_NewSinjoh_Gate_hns_Layout",
-      "width": 16,
-      "height": 12,
-      "primary_tileset": "gTileset_Johto_Building_Hns",
-      "secondary_tileset": "gTileset_Gate_Standard_Hns",
-      "border_filepath": "data/layouts/Route49_NewSinjoh_Gate_hns/border.bin",
-      "blockdata_filepath": "data/layouts/Route49_NewSinjoh_Gate_hns/map.bin",
-      "game_version": "hns",
-      "layout_version": "hns"
-    },
-    {
-      "id": "LAYOUT_SINJOH_RUINS_CAVE_HNS",
-      "name": "SinjohRuins_Cave_hns_Layout",
-      "width": 15,
-      "height": 15,
-      "primary_tileset": "gTileset_MtSilver_Exp_Hns",
-      "secondary_tileset": "gTileset_Cave_Ice_Hns",
-      "border_filepath": "data/layouts/SinjohRuins_Cave_hns/border.bin",
-      "blockdata_filepath": "data/layouts/SinjohRuins_Cave_hns/map.bin",
-      "game_version": "hns",
-      "layout_version": "hns"
-    },
-    {
       "id": "LAYOUT_NEW_SINJOH_POKEMON_CENTER_HNS",
       "name": "NewSinjoh_PokemonCenter_hns_Layout",
       "width": 15,
@@ -16145,18 +16109,6 @@
       "layout_version": "hns"
     },
     {
-      "id": "LAYOUT_ROUTE50_HOUSE1_HNS",
-      "name": "Route50_House1_hns_Layout",
-      "width": 15,
-      "height": 13,
-      "primary_tileset": "gTileset_Johto_Building_Hns",
-      "secondary_tileset": "gTileset_PlayersHouse_Hns",
-      "border_filepath": "data/layouts/Route50_House1_hns/border.bin",
-      "blockdata_filepath": "data/layouts/Route50_House1_hns/map.bin",
-      "game_version": "hns",
-      "layout_version": "hns"
-    },
-    {
       "id": "LAYOUT_NEW_SINJOH_HOUSE3_HNS",
       "name": "NewSinjoh_House3_hns_Layout",
       "width": 54,
@@ -16177,18 +16129,6 @@
       "secondary_tileset": "gTileset_Cafe_Hns",
       "border_filepath": "data/layouts/NewSinjoh_House4_hns/border.bin",
       "blockdata_filepath": "data/layouts/NewSinjoh_House4_hns/map.bin",
-      "game_version": "hns",
-      "layout_version": "hns"
-    },
-    {
-      "id": "LAYOUT_ROUTE50_SINJOH_RUINS_GATE_HNS",
-      "name": "Route50_SinjohRuins_Gate_hns_Layout",
-      "width": 30,
-      "height": 12,
-      "primary_tileset": "gTileset_Johto_Building_Hns",
-      "secondary_tileset": "gTileset_Gate_Standard_Hns",
-      "border_filepath": "data/layouts/Route50_SinjohRuins_Gate_hns/border.bin",
-      "blockdata_filepath": "data/layouts/Route50_SinjohRuins_Gate_hns/map.bin",
       "game_version": "hns",
       "layout_version": "hns"
     },
@@ -16249,18 +16189,6 @@
       "secondary_tileset": "gTileset_Lab_Frlg",
       "border_filepath": "data/layouts/SinjohRuins_House1_hns/border.bin",
       "blockdata_filepath": "data/layouts/SinjohRuins_House1_hns/map.bin",
-      "game_version": "hns",
-      "layout_version": "hns"
-    },
-    {
-      "id": "LAYOUT_SINJOH_RUINS_HOUSE2_HNS",
-      "name": "SinjohRuins_House2_hns_Layout",
-      "width": 14,
-      "height": 11,
-      "primary_tileset": "gTileset_Johto_Building_Hns",
-      "secondary_tileset": "gTileset_PlayersHouse_Hns",
-      "border_filepath": "data/layouts/SinjohRuins_House2_hns/border.bin",
-      "blockdata_filepath": "data/layouts/SinjohRuins_House2_hns/map.bin",
       "game_version": "hns",
       "layout_version": "hns"
     },
