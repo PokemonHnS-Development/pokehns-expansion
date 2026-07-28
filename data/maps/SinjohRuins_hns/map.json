@@ -23,8 +23,8 @@
     {
       "local_id": "LOCALID_SINJOH_STEVENSTONE",
       "graphics_id": "OBJ_EVENT_GFX_STEVEN_HNS",
-      "x": 17,
-      "y": 58,
+      "x": 0,
+      "y": 19,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -32,255 +32,213 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_SINJOHRUINS_STEVENSTONE"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_QWILFISH_HISUI",
-      "x": 11,
-      "y": 62,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
-      "movement_range_x": 2,
-      "movement_range_y": 2,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK_HNS",
-      "x": 19,
-      "y": 44,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "EventScript_RockSmash",
-      "flag": "0"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK_HNS",
-      "x": 14,
-      "y": 45,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "EventScript_RockSmashHeartscale",
-      "flag": "0"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK_HNS",
-      "x": 19,
-      "y": 46,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "EventScript_RockSmash",
-      "flag": "0"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK_HNS",
-      "x": 42,
-      "y": 54,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "EventScript_RockSmashBlueShard",
-      "flag": "0"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK_FRLG",
-      "x": 35,
-      "y": 60,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "EventScript_RockSmash",
-      "flag": "0"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK_HNS",
-      "x": 10,
-      "y": 43,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "EventScript_RockSmash",
-      "flag": "0"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK_HNS",
-      "x": 29,
-      "y": 63,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "EventScript_RockSmash",
       "flag": "0"
     },
     {
       "local_id": "LOCALID_STEVENSTONE_2",
       "graphics_id": "OBJ_EVENT_GFX_STEVEN_HNS",
-      "x": 15,
-      "y": 62,
+      "x": 0,
+      "y": 20,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SinjohRuins_EventScript_StevenToArceus_Left",
-      "flag": "FLAG_SINJOHRUINS_STEVENSTONE2"
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SMALL_LIGHT_HNS",
+      "x": 21,
+      "y": 59,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SMALL_LIGHT_HNS",
+      "x": 22,
+      "y": 68,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SMALL_LIGHT_HNS",
+      "x": 27,
+      "y": 69,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SMALL_LIGHT_HNS",
+      "x": 27,
+      "y": 59,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SMALL_LIGHT_HNS",
+      "x": 17,
+      "y": 52,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SMALL_LIGHT_HNS",
+      "x": 22,
+      "y": 42,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SMALL_LIGHT_HNS",
+      "x": 26,
+      "y": 42,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SMALL_LIGHT_HNS",
+      "x": 21,
+      "y": 7,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SMALL_LIGHT_HNS",
+      "x": 27,
+      "y": 7,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
     }
   ],
   "warp_events": [
     {
-      "x": 10,
-      "y": 54,
+      "x": 14,
+      "y": 52,
       "elevation": 0,
       "dest_map": "MAP_SINJOH_RUINS_HOUSE1_HNS",
       "dest_warp_id": "0"
     },
     {
-      "x": 17,
-      "y": 58,
+      "x": 24,
+      "y": 40,
       "elevation": 0,
-      "dest_map": "MAP_SINJOH_RUINS_HOUSE2_HNS",
+      "dest_map": "MAP_SINJOH_RUINS_TEMPLE_HNS",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 23,
+      "y": 5,
+      "elevation": 0,
+      "dest_map": "MAP_SINJOH_RUINS_ARCEUS_ROOM_HNS",
       "dest_warp_id": "0"
     },
     {
       "x": 24,
+      "y": 5,
+      "elevation": 0,
+      "dest_map": "MAP_SINJOH_RUINS_ARCEUS_ROOM_HNS",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 25,
+      "y": 5,
+      "elevation": 0,
+      "dest_map": "MAP_SINJOH_RUINS_ARCEUS_ROOM_HNS",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 9,
+      "y": 44,
+      "elevation": 0,
+      "dest_map": "MAP_SINJOH_RUINS_REGIROCK_ROOM_HNS",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 7,
       "y": 48,
       "elevation": 0,
-      "dest_map": "MAP_SINJOH_RUINS_TEMPLE_HNS",
+      "dest_map": "MAP_SINJOH_RUINS_REGICE_ROOM_HNS",
       "dest_warp_id": "0"
     },
     {
-      "x": 39,
-      "y": 59,
+      "x": 8,
+      "y": 54,
       "elevation": 0,
-      "dest_map": "MAP_SINJOH_RUINS_TEMPLE_HNS",
-      "dest_warp_id": "1"
-    },
-    {
-      "x": 12,
-      "y": 41,
-      "elevation": 0,
-      "dest_map": "MAP_SINJOH_RUINS_TEMPLE_HNS",
-      "dest_warp_id": "2"
-    },
-    {
-      "x": 34,
-      "y": 34,
-      "elevation": 0,
-      "dest_map": "MAP_SINJOH_RUINS_CAVE_HNS",
+      "dest_map": "MAP_SINJOH_RUINS_REGISTEEL_ROOM_HNS",
       "dest_warp_id": "0"
     },
     {
-      "x": 24,
-      "y": 75,
+      "x": 38,
+      "y": 44,
       "elevation": 0,
-      "dest_map": "MAP_ROUTE50_SINJOH_RUINS_GATE_HNS",
-      "dest_warp_id": "4"
-    },
-    {
-      "x": 25,
-      "y": 75,
-      "elevation": 0,
-      "dest_map": "MAP_ROUTE50_SINJOH_RUINS_GATE_HNS",
-      "dest_warp_id": "5"
-    },
-    {
-      "x": 25,
-      "y": 5,
-      "elevation": 0,
-      "dest_map": "MAP_SINJOH_RUINS_ARCEUS_ROOM_HNS",
+      "dest_map": "MAP_SINJOH_RUINS_REGIELEKI_ROOM_HNS",
       "dest_warp_id": "0"
     },
     {
-      "x": 27,
-      "y": 5,
+      "x": 37,
+      "y": 49,
       "elevation": 0,
-      "dest_map": "MAP_SINJOH_RUINS_ARCEUS_ROOM_HNS",
+      "dest_map": "MAP_SINJOH_RUINS_REGIDRACO_ROOM_HNS",
       "dest_warp_id": "0"
     }
   ],
-  "coord_events": [
-    {
-      "type": "trigger",
-      "x": 20,
-      "y": 63,
-      "elevation": 0,
-      "var": "VAR_SINJOHRUINS_STEVENMET",
-      "var_value": "0",
-      "script": "SinjohRuins_EventScripts_StevenStone_WalksYou_Bottom"
-    },
-    {
-      "type": "trigger",
-      "x": 20,
-      "y": 62,
-      "elevation": 0,
-      "var": "VAR_SINJOHRUINS_STEVENMET",
-      "var_value": "0",
-      "script": "SinjohRuins_EventScripts_StevenStone_WalksYou_Top"
-    },
-    {
-      "type": "trigger",
-      "x": 17,
-      "y": 31,
-      "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "SinjohRuins_EventScript_ApplyStairs"
-    },
-    {
-      "type": "trigger",
-      "x": 16,
-      "y": 31,
-      "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "SinjohRuins_EventScript_ApplyStairs"
-    },
-    {
-      "type": "trigger",
-      "x": 24,
-      "y": 59,
-      "elevation": 0,
-      "var": "VAR_PLATECOUNTER",
-      "var_value": "16",
-      "script": "SinjohRuins_EventScript_StevenToArceus_Left"
-    },
-    {
-      "type": "trigger",
-      "x": 25,
-      "y": 59,
-      "elevation": 0,
-      "var": "VAR_PLATECOUNTER",
-      "var_value": "16",
-      "script": "SinjohRuins_EventScript_StevenToArceus_Right"
-    }
-  ],
+  "coord_events": [],
   "bg_events": [],
   "game_version": "hns",
   "region": "REGION_JOHTO"

@@ -16,73 +16,17 @@
   "object_events": [],
   "warp_events": [
     {
-      "x": 14,
-      "y": 38,
+      "x": 18,
+      "y": 18,
       "elevation": 0,
       "dest_map": "MAP_SINJOH_RUINS_HNS",
-      "dest_warp_id": "2"
-    },
-    {
-      "x": 41,
-      "y": 38,
-      "elevation": 0,
-      "dest_map": "MAP_SINJOH_RUINS_HNS",
-      "dest_warp_id": "3"
-    },
-    {
-      "x": 41,
-      "y": 23,
-      "elevation": 0,
-      "dest_map": "MAP_SINJOH_RUINS_HNS",
-      "dest_warp_id": "4"
-    },
-    {
-      "x": 5,
-      "y": 29,
-      "elevation": 0,
-      "dest_map": "MAP_SINJOH_RUINS_REGIROCK_ROOM_HNS",
-      "dest_warp_id": "0"
-    },
-    {
-      "x": 14,
-      "y": 29,
-      "elevation": 0,
-      "dest_map": "MAP_SINJOH_RUINS_REGICE_ROOM_HNS",
-      "dest_warp_id": "0"
-    },
-    {
-      "x": 23,
-      "y": 29,
-      "elevation": 0,
-      "dest_map": "MAP_SINJOH_RUINS_REGISTEEL_ROOM_HNS",
-      "dest_warp_id": "0"
-    },
-    {
-      "x": 41,
-      "y": 34,
-      "elevation": 0,
-      "dest_map": "MAP_SINJOH_RUINS_REGIDRACO_ROOM_HNS",
-      "dest_warp_id": "0"
-    },
-    {
-      "x": 41,
-      "y": 19,
-      "elevation": 0,
-      "dest_map": "MAP_SINJOH_RUINS_REGIELEKI_ROOM_HNS",
-      "dest_warp_id": "0"
+      "dest_warp_id": "1"
     },
     {
       "x": 18,
-      "y": 33,
+      "y": 7,
       "elevation": 0,
       "dest_map": "MAP_SINJOH_RUINS_REGIGIGAS_ROOM_HNS",
-      "dest_warp_id": "0"
-    },
-    {
-      "x": 19,
-      "y": 33,
-      "elevation": 0,
-      "dest_map": "MAP_SINJOH_RUINS_TEMPLE_HNS",
       "dest_warp_id": "0"
     }
   ],
@@ -90,8 +34,16 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 5,
-      "y": 28,
+      "x": 10,
+      "y": 7,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "NULL"
+    },
+    {
+      "type": "sign",
+      "x": 12,
+      "y": 7,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "NULL"
@@ -99,103 +51,23 @@
     {
       "type": "sign",
       "x": 14,
-      "y": 28,
+      "y": 7,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "NULL"
     },
     {
       "type": "sign",
-      "x": 18,
-      "y": 32,
+      "x": 22,
+      "y": 7,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "NULL"
     },
     {
       "type": "sign",
-      "x": 23,
-      "y": 28,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
-    },
-    {
-      "type": "sign",
-      "x": 19,
-      "y": 32,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
-    },
-    {
-      "type": "sign",
-      "x": 27,
-      "y": 32,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
-    },
-    {
-      "type": "sign",
-      "x": 26,
-      "y": 36,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
-    },
-    {
-      "type": "sign",
-      "x": 27,
-      "y": 36,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
-    },
-    {
-      "type": "sign",
-      "x": 9,
-      "y": 37,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
-    },
-    {
-      "type": "sign",
-      "x": 4,
-      "y": 37,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
-    },
-    {
-      "type": "sign",
-      "x": 9,
-      "y": 34,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
-    },
-    {
-      "type": "sign",
-      "x": 4,
-      "y": 34,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
-    },
-    {
-      "type": "sign",
-      "x": 41,
-      "y": 33,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
-    },
-    {
-      "type": "sign",
-      "x": 41,
-      "y": 18,
+      "x": 25,
+      "y": 7,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "NULL"
