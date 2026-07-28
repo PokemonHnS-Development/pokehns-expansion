@@ -16244,7 +16244,7 @@
       "id": "LAYOUT_SINJOH_RUINS_HOUSE1_HNS",
       "name": "SinjohRuins_House1_hns_Layout",
       "width": 30,
-      "height": 30,
+      "height": 13,
       "primary_tileset": "gTileset_Johto_Building_Hns",
       "secondary_tileset": "gTileset_Lab_Frlg",
       "border_filepath": "data/layouts/SinjohRuins_House1_hns/border.bin",
