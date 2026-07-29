@@ -15,8 +15,9 @@
   "connections": null,
   "object_events": [
     {
+      "local_id": "LOCALID_NEWSINJOH_LAB_LINGUIST",
       "graphics_id": "OBJ_EVENT_GFX_SCIENTIST_F_HNS",
-      "x": 10,
+      "x": 20,
       "y": 3,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
@@ -24,7 +25,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SinjohRuins_Lab_EventScript_Scientist_Female1",
+      "script": "SinjohRuins_Lab_EventScript_Linguist",
       "flag": "0"
     },
     {
@@ -37,7 +38,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SinjohRuins_Lab_EventScript_Scientist_Male2",
+      "script": "SinjohRuins_Lab_EventScript_Biologist",
       "flag": "0"
     },
     {
@@ -50,7 +51,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SinjohRuins_Lab_EventScript_Scientist_Male1",
+      "script": "SinjohRuins_Lab_EventScript_GeoScientist",
       "flag": "0"
     },
     {
@@ -63,20 +64,20 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SinjohRuins_Lab_EventScript_Scientist_Female2",
+      "script": "SinjohRuins_Lab_EventScript_Archaeologist",
       "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_HIKER_HNS",
       "x": 20,
-      "y": 10,
+      "y": 11,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "SinjohRuins_Lab_EventScript_Hiker",
       "flag": "0"
     },
     {
@@ -106,6 +107,7 @@
       "flag": "0"
     },
     {
+      "local_id": "LOCALID_SINJOHRUINS_LAB_STEVEN",
       "graphics_id": "OBJ_EVENT_GFX_STEVEN_HNS",
       "x": 15,
       "y": 10,
@@ -115,7 +117,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "SinjohRuins_Lab_EventScript_Steven",
       "flag": "0"
     }
   ],
@@ -129,7 +131,35 @@
       "dest_warp_id": "0"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 14,
+      "y": 6,
+      "elevation": 0,
+      "var": "VAR_SINJOH_STORYLINE",
+      "var_value": "5",
+      "script": "SinjohRuins_Lab_EventScript_TriggerIntroTop"
+    },
+    {
+      "type": "trigger",
+      "x": 14,
+      "y": 7,
+      "elevation": 0,
+      "var": "VAR_SINJOH_STORYLINE",
+      "var_value": "5",
+      "script": "SinjohRuins_Lab_EventScript_TriggerIntroMid"
+    },
+    {
+      "type": "trigger",
+      "x": 14,
+      "y": 8,
+      "elevation": 0,
+      "var": "VAR_SINJOH_STORYLINE",
+      "var_value": "5",
+      "script": "SinjohRuins_Lab_EventScript_TriggerIntroBot"
+    }
+  ],
   "bg_events": [
     {
       "type": "sign",

@@ -37,7 +37,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_FOUGHT_NOBLE_KLEAVOR"
+      "flag": "FLAG_HIDE_ROUTE50_NOBLE_KLEAVOR"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_CASTFORM_SNOWY",
@@ -324,7 +324,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_FOUGHT_NOBLE_ELECTRODE"
+      "flag": "FLAG_HIDE_ROUTE50_NOBLE_ELECTRODE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SAGE_HNS",

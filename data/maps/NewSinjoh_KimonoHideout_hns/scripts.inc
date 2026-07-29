@@ -175,7 +175,7 @@ NewSinjoh_KimonoHideout_EventScript_OldMan::
 NewSinjoh_KimonoHideout_Text_OldMan:
     .string "The KIMONO GIRLS have watched\n"
 	.string "over our village since its founding.\p"
-	.string "They have sacrifice much.\p"
+	.string "They have sacrificed much.\p"
 	.string "Blessed by the Gods themselves,\n"
 	.string "they have powers beyond that\l"
 	.string "of any normal trainer!\p"

@@ -1,43 +1,295 @@
 SinjohRuins_House1_hns_MapScripts::
 	.byte 0
 
+@==========================Cutscene SCRIPTS================================================================================
 
-SinjohRuins_Lab_EventScript_Scientist_Male1::
-	msgbox SinjohRuins_Lab_Text_MS1 MSGBOX_NPC
+SinjohRuins_Lab_EventScript_TriggerIntroTop::
+	lock
+	playse SE_PIN
+	applymovement2 LOCALID_SINJOHRUINS_LAB_STEVEN, Common_Movement_ExclamationMark
+	delay 60
+	msgbox SinjohRuins_Lab_Text_StevenIntroCutscene1, MSGBOX_AUTOCLOSE
+	applymovement2 LOCALID_PLAYER, Common_Movement_WalkDown1
+	applymovement2 LOCALID_SINJOHRUINS_LAB_STEVEN, SinjohRuins_Lab_Movement_StevenMeetPlayer
+	waitmovement 0
+	waitmovement LOCALID_SINJOHRUINS_LAB_STEVEN
+	goto SinjohRuins_Lab_EventScript_TriggerIntro
+
+SinjohRuins_Lab_EventScript_TriggerIntroMid::
+	lock
+	playse SE_PIN
+	applymovement2 LOCALID_SINJOHRUINS_LAB_STEVEN, Common_Movement_ExclamationMark
+	delay 60
+	msgbox SinjohRuins_Lab_Text_StevenIntroCutscene1, MSGBOX_AUTOCLOSE
+	applymovement2 LOCALID_SINJOHRUINS_LAB_STEVEN, SinjohRuins_Lab_Movement_StevenMeetPlayer
+	waitmovement LOCALID_SINJOHRUINS_LAB_STEVEN
+	goto SinjohRuins_Lab_EventScript_TriggerIntro
+
+SinjohRuins_Lab_EventScript_TriggerIntroBot::
+	lock
+	playse SE_PIN
+	applymovement2 LOCALID_SINJOHRUINS_LAB_STEVEN, Common_Movement_ExclamationMark
+	delay 60
+	msgbox SinjohRuins_Lab_Text_StevenIntroCutscene1, MSGBOX_AUTOCLOSE
+	applymovement2 LOCALID_PLAYER, Common_Movement_WalkUp1
+	applymovement2 LOCALID_SINJOHRUINS_LAB_STEVEN, SinjohRuins_Lab_Movement_StevenMeetPlayer
+	waitmovement 0
+	waitmovement LOCALID_SINJOHRUINS_LAB_STEVEN
+	goto SinjohRuins_Lab_EventScript_TriggerIntro
+
+SinjohRuins_Lab_EventScript_TriggerIntro::
+	turnobject LOCALID_PLAYER, DIR_EAST
+	msgbox SinjohRuins_Lab_Text_StevenIntroCutscene2, MSGBOX_AUTOCLOSE
+	applymovement2 LOCALID_SINJOHRUINS_LAB_STEVEN, SinjohRuins_Lab_Movement_StevenSitsDown
+	delay 10
+	applymovement LOCALID_PLAYER, SinjohRuins_Lab_Movement_PlayerGoesToTable
+	delay 40
+	applymovement2 LOCALID_NEWSINJOH_LAB_LINGUIST, SinjohRuins_Lab_Movement_LinguistWalkDown
+	waitmovement 0
+	waitmovement LOCALID_SINJOHRUINS_LAB_STEVEN
+	waitmovement LOCALID_NEWSINJOH_LAB_LINGUIST
+	applymovement2 LOCALID_SINJOHRUINS_LAB_STEVEN, Common_Movement_WalkInPlaceRight
+	waitmovement 0
+	msgbox SinjohRuins_Lab_Text_StevenIntroCutscene3, MSGBOX_AUTOCLOSE
+	delay 10
+	waitmovement 0
+	applymovement2 LOCALID_NEWSINJOH_LAB_LINGUIST, Common_Movement_WalkInPlaceDown
+	waitmovement 0
+	msgbox SinjohRuins_Lab_Text_StevenIntroCutscene4, MSGBOX_AUTOCLOSE
+	delay 10
+	applymovement LOCALID_NEWSINJOH_LAB_LINGUIST, SinjohRuins_Lab_Movement_LinguistWalkUp
+	applymovement2 LOCALID_SINJOHRUINS_LAB_STEVEN, Common_Movement_WalkInPlaceRight
+	waitmovement 0
+	msgbox SinjohRuins_Lab_Text_StevenIntroCutscene5, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, TRUE, SinjohRuins_Lab_EventScript_IntroChoseYes
+SinjohRuins_Lab_EventScript_IntroChoice::
+	msgbox SinjohRuins_Lab_Text_StevenIntroCutsceneRefused, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, TRUE, SinjohRuins_Lab_EventScript_IntroChoseYes
+	goto SinjohRuins_Lab_EventScript_IntroChoice
+
+SinjohRuins_Lab_EventScript_IntroChoseYes::
+	msgbox SinjohRuins_Lab_Text_StevenIntroCutscene6, MSGBOX_AUTOCLOSE
+	setvar VAR_SINJOH_STORYLINE, 6
+	clearflag FLAG_HIDE_SNOWSWEPT_NOBLE_SNEASLER
+	clearflag FLAG_HIDE_ROUTE49_NOBLE_WYRDEER
+	clearflag FLAG_HIDE_ROUTE49_NOBLE_OVERQWIL
+	clearflag FLAG_HIDE_HOTSPRINGS_NOBLE_ARCANINE
+	clearflag FLAG_HIDE_HOTSPRINGS_NOBLE_URSALUNA
+	clearflag FLAG_HIDE_ROUTE50_NOBLE_ELECTRODE
+	clearflag FLAG_HIDE_ROUTE50_NOBLE_KLEAVOR
+	release
 	end
 
-SinjohRuins_Lab_Text_MS1:
-    .string "I'm currently working on mapping\n"
-	.string "the ruins with GPR and my partner!\l"
-	.string "So far we've discovered\n"
-	.string "6 subterrainian chambers!$"
+SinjohRuins_Lab_Movement_StevenMeetPlayer:
+	walk_up
+	walk_up
+	walk_up
+	face_left
+	step_end
 
-SinjohRuins_Lab_EventScript_Scientist_Female1::
-    msgbox SinjohRuins_Lab_Text_FS1 MSGBOX_NPC
+SinjohRuins_Lab_Movement_StevenSitsDown:
+	walk_down
+	walk_down
+	walk_down
+	face_right
+	step_end
+
+SinjohRuins_Lab_Movement_PlayerGoesToTable:
+	walk_right
+	walk_right
+	walk_right
+	walk_down
+	walk_right
+	walk_right
+	walk_down
+	walk_down
+	walk_right
+	face_left
+	step_end
+
+SinjohRuins_Lab_Movement_LinguistWalkDown:
+	walk_down
+	walk_left
+	walk_left
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	face_down
+	step_end
+
+SinjohRuins_Lab_Movement_LinguistWalkUp:
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_right
+	walk_right
+	walk_up
+	step_end
+
+
+SinjohRuins_Lab_Text_StevenIntroCutscene1:
+   	.string "STEVEN: Hm?$"
+
+SinjohRuins_Lab_Text_StevenIntroCutscene2:
+	.string "STEVEN: {PLAYER}!\p"
+	.string "I'd recognize those eyes anywhere.\p"
+	.string "What brings you this far north?\p"
+	.string ".............\p"
+	.string "I see, the KIMONO GIRLS of NEW SINJOH\n"
+	.string "have sent you to aid our\l"
+	.string "investigation.\p"
+	.string "In that case, allow me to bring you\n"
+	.string "up to speed.$"
+
+SinjohRuins_Lab_Text_StevenIntroCutscene3:
+	.string "STEVEN: Ever since I got word of\n"
+	.string "these ruins, I instantly knew the\l"
+	.string "area would be ripe for discovery.\p"
+	.string "Just imagine what secrets of history,\n"
+	.string "biology, and geology we may discover!\p"
+	.string "So, I assembled DEVON CORP's\n"
+	.string "brightest minds and set off on this\l"
+	.string "research expedition.\p"
+	.string "It is our goal to solve the mystery\n"
+	.string "of the ruins.\p"
+	.string "And we are making swift progress.$"
+
+SinjohRuins_Lab_Text_StevenIntroCutscene4:
+	.string "LINGUIST: While the full translation\n"
+	.string "of the glyphs found around the ruins\l"
+	.string "still eludes me, I've been able\l"
+	.string "to make out some aspects.\p"
+	.string "There are 17 peculiar PLATES.\p"
+	.string "They have some significance\n"
+	.string "to the ruins, but we've only\l"
+	.string "found 1 so far.\p"
+	.string "The rest are said to be guarded\n"
+	.string "by POKéMON and trainers of\l"
+	.string "awesome power.$"
+
+SinjohRuins_Lab_Text_StevenIntroCutscene5:
+	.string "STEVEN: That's the story, {PLAYER}.\p"
+	.string "None of my associates\n"
+	.string "are quite up to the task of\l"
+	.string "dealing with the 'NOBLE POKéMON\l"
+	.string "that protect the other 16\l"
+	.string "PLATES.\p"
+	.string "And I must stay here to oversee\n"
+	.string "the research.\p"
+	.string "Will you help us find the other\n"
+	.string "16 PLATES and solve the mystery\l"
+	.string "of the ruins?$"
+
+SinjohRuins_Lab_Text_StevenIntroCutscene6:
+	.string "Excellent. It's settled.\p"
+	.string "Like the glphys say, you will\n"
+	.string "find the 16 PLATES in the\l"
+	.string "posession of NOBLE POKéMON\l"
+	.string "and powerful trainers around\l"
+	.string "SINJOH.\p"
+	.string "I will call your POKéGEAR\n"
+	.string "with any developments.\p"
+	.string "Thank you for your help,\n"
+	.string "{PLAYER}.$"
+
+SinjohRuins_Lab_Text_StevenIntroCutsceneRefused:
+	.string "Are you sure?\p"
+	.string "Imagine the possibilities!\p"
+	.string "Surely you will help us?$"
+
+@==========================NPC SCRIPTS================================================================================
+
+SinjohRuins_Lab_EventScript_Steven::
+	lock
+	faceplayer
+	goto_if_ge VAR_PLATECOUNTER, 3, SinjohRuins_Lab_EventScript_StevenAfter3Plates
+	goto_if_ge VAR_PLATECOUNTER, 6, SinjohRuins_Lab_EventScript_StevenAfter6Plates
+	goto_if_ge VAR_PLATECOUNTER, 9, SinjohRuins_Lab_EventScript_StevenAfter9Plates
+	goto_if_ge VAR_PLATECOUNTER, 12, SinjohRuins_Lab_EventScript_StevenAfter12Plates
+	goto_if_ge VAR_PLATECOUNTER, 15, SinjohRuins_Lab_EventScript_StevenAfter15Plates
+	buffernumberstring STR_VAR_1, VAR_PLATECOUNTER
+	msgbox SinjohRuins_Lab_Text_StevenFindPlates, MSGBOX_AUTOCLOSE
+	release
 	end
 
-SinjohRuins_Lab_Text_FS1:
+SinjohRuins_Lab_EventScript_StevenAfter3Plates::
+	msgbox SinjohRuins_Lab_Text_StevenFindPlates, MSGBOX_AUTOCLOSE
+	release
+	end
+
+SinjohRuins_Lab_EventScript_StevenAfter6Plates::
+	msgbox SinjohRuins_Lab_Text_StevenFindPlates, MSGBOX_AUTOCLOSE
+	release
+	end
+
+SinjohRuins_Lab_EventScript_StevenAfter9Plates::
+	msgbox SinjohRuins_Lab_Text_StevenFindPlates, MSGBOX_AUTOCLOSE
+	release
+	end
+
+SinjohRuins_Lab_EventScript_StevenAfter12Plates::
+	msgbox SinjohRuins_Lab_Text_StevenFindPlates, MSGBOX_AUTOCLOSE
+	release
+	end
+
+SinjohRuins_Lab_EventScript_StevenAfter15Plates::
+	msgbox SinjohRuins_Lab_Text_StevenFindPlates, MSGBOX_AUTOCLOSE
+	release
+	end
+
+SinjohRuins_Lab_Text_StevenFindPlates:
+	.string "How is the search going?.\p"
+	.string "Looks like you've found {STR_VAR_1} PLATES\n"
+	.string "so far.\p"
+	.string "Like the glphys say, you will\n"
+	.string "find the 16 PLATES in the\l"
+	.string "posession of NOBLE POKéMON\l"
+	.string "and powerful trainers around\l"
+	.string "SINJOH.\p"
+	.string "I will call your POKéGEAR\n"
+	.string "with any developments.\p"
+	.string "Thank you for your help,\n"
+	.string "{PLAYER}.$"
+
+SinjohRuins_Lab_EventScript_GeoScientist::
+	msgbox SinjohRuins_Lab_Text_GeoScientist MSGBOX_NPC
+	end
+
+SinjohRuins_Lab_Text_GeoScientist:
+    .string "Ground-penetrating radar shows\n"
+	.string "6 subterranean chambers in this\l"
+	.string "valley.\p"
+	.string "5 of them appear to be closer\n"
+	.string "to the surface level, with 1\l"
+	.string "buried even deeper.$"
+
+SinjohRuins_Lab_EventScript_Linguist::
+    msgbox SinjohRuins_Lab_Text_Linguist MSGBOX_NPC
+	end
+
+SinjohRuins_Lab_Text_Linguist:
     .string "Ugh....\n"
-	.string "There's so many gliphs\l"
-	.string "to translate..\p"
-	.string "But it'll be worth it in the\n"
-	.string "end if something amazing happens!$"
+	.string "There's so many glyphs to\l"
+	.string "translate..\p"
+	.string "We don't have anything like this\n"
+	.string "in the HOENN region.$"
 
-SinjohRuins_Lab_EventScript_Scientist_Female2::
-    msgbox SinjohRuins_Lab_Text_FS2 MSGBOX_NPC
+SinjohRuins_Lab_EventScript_Archaeologist::
+    msgbox SinjohRuins_Lab_Text_Archaeologist MSGBOX_NPC
 	end
 
-SinjohRuins_Lab_Text_FS2:
-    .string "That flute you're carrying...\n"
-	.string "It's known as the Azure Flute.\p"
-	.string "There is a legend that states when\n"
-	.string "it is played with all 18 plates\l"
-	.string "nearby, a stairway that pierces\l"
-	.string "the sky shall appear.\p"
-	.string "If you have such a thing...\n"
-	.string "maybe it was a good thing boss\l"
-	.string "sent that request for help\l"
-	.string "from Mr.Steven Stone.$"
+SinjohRuins_Lab_Text_Archaeologist:
+	.string "The existence of a civilization\n"
+    .string "in this area changes our whole\l"
+	.string "understanding of history.\p"
+	.string "Many of the artifacts we've found\n"
+	.string "are over a thousand years old.\p"
+	.string "The carbon dating lines up with\n"
+	.string "artifacts found in the SINNOH region.\p"
+	.string "Although, that flute you found...\n"
+	.string "It seems far older.$"
 
 SinjohRuins_Lab_EventScript_Growlithe_Hisui::
     lock
@@ -58,19 +310,50 @@ SinjohRuins_Lab_EventScript_GrowlithePokeball::
 
 SinjohRuins_Lab_Text_GrowlitheBall:
     .string "This appears to be Growlithe's ball..\n"
-	.string "I better leave it alone.$"
+	.string "Better leave it alone.$"
 
-SinjohRuins_Lab_EventScript_Scientist_Male2::
-	msgbox SinjohRuins_Lab_Text_MS2 MSGBOX_NPC
+SinjohRuins_Lab_EventScript_Biologist::
+	msgbox SinjohRuins_Lab_Text_Biologist MSGBOX_NPC
 	release
 	end
 
-SinjohRuins_Lab_Text_MS2:
-    .string "Look at this wonderful specimen!\n"
-	.string "Isn't he just the goodest boy?$"
+SinjohRuins_Lab_Text_Biologist:
+    .string "Look at this wonderful specimen!\p"
+	.string "This species of GROWLITHE is unlike\n"
+	.string "those found anywhere else in the\l"
+	.string "world.\p"
+	.string "DNA analysis reveals that it shares\n"
+	.string "a common ancestor with GROWLITHE\l"
+	.string "that can be found in other regions.\p"
+	.string "Yet, its temperament and typing\n"
+	.string "differ significantly.\p"
+	.string "Descriptions of GROWLITHE found in\n"
+	.string "ancient SINNOH records seem to match.\p"
+	.string "Perhaps this species once occupied\n"
+	.string "a much larger territory, stretching\l"
+	.string "north through ancient SINNOH.$"
 
+SinjohRuins_Lab_EventScript_Hiker::
+	msgbox SinjohRuins_Lab_Text_Hiker MSGBOX_NPC
+	release
+	end
 
-
+SinjohRuins_Lab_Text_Hiker:
+   	.string "For ten years, I've hiked these\n"
+	.string "wilds.\p"
+	.string "No, make that twenty years.\p"
+	.string "Until one day I found those big\n"
+	.string "stone pillars and that ominous\l"
+	.string "temple.\p"
+	.string "That's the SINJOH RUINS.\n"
+	.string "Or so I've heard.\p"
+	.string "I didn't know about the town then.\p"
+	.string "All I did was tell a few of my\n"
+	.string "pals. But word travels fast.\p"
+	.string "I never thought it would bring\n"
+	.string "so much attention to the area.\p"
+	.string "Makes me feel kinda funny.\n"
+	.string "Y'know?$"
 
 @ENVIRONMENT
 SinjohRuins_EventScript_Notes1::

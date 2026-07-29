@@ -117,7 +117,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_FOUGHT_NOBLE_ARCANINE"
+      "flag": "FLAG_HIDE_HOTSPRINGS_NOBLE_ARCANINE"
     },
     {
       "local_id": "LOCALID_NOBLE_URSALUNA",
@@ -131,7 +131,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_FOUGHT_NOBLE_URSALUNA"
+      "flag": "FLAG_HIDE_HOTSPRINGS_NOBLE_URSALUNA"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_OLD_MAN_HNS",

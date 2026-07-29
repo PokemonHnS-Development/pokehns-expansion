@@ -134,7 +134,6 @@ Route49_EventScript_Electrode::
 	end
 
 Route49_EventScript_DefeatedElectrode::
-	setflag FLAG_FOUGHT_NOBLE_ELECTRODE
 	fadescreen FADE_TO_BLACK
 	@removeobject LOCALID_NOBLE_ELECTRODE
     setweather WEATHER_SNOW
