@@ -628,7 +628,35 @@
       "dest_warp_id": "0"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 32,
+      "y": 6,
+      "elevation": 0,
+      "var": "VAR_SINJOH_STORYLINE",
+      "var_value": "4",
+      "script": "NewSinjoh_EventScript_TriggerNorthGate"
+    },
+    {
+      "type": "trigger",
+      "x": 33,
+      "y": 6,
+      "elevation": 0,
+      "var": "VAR_SINJOH_STORYLINE",
+      "var_value": "4",
+      "script": "NewSinjoh_EventScript_TriggerNorthGate"
+    },
+    {
+      "type": "trigger",
+      "x": 34,
+      "y": 6,
+      "elevation": 0,
+      "var": "VAR_SINJOH_STORYLINE",
+      "var_value": "4",
+      "script": "NewSinjoh_EventScript_TriggerNorthGate"
+    }
+  ],
   "bg_events": [
     {
       "type": "sign",
@@ -664,5 +692,5 @@
     }
   ],
   "game_version": "hns",
-  "region": "REGION_JOHTO"
+  "region": "REGION_HISUI"
 }

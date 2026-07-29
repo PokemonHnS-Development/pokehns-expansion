@@ -6,6 +6,18 @@ NewSinjoh_On_Transition:
     setflag FLAG_VISITED_NEW_SINJOH
 	end
 
+NewSinjoh_EventScript_TriggerNorthGate::
+	lock
+	msgbox NewSinjoh_Text_TriggerNorthGate, MSGBOX_AUTOCLOSE
+	applymovement LOCALID_PLAYER, Common_Movement_WalkDown1
+	waitmovement 0
+	release
+	end
+
+NewSinjoh_Text_TriggerNorthGate:
+	.string "Better not leave the Kimono\n"
+	.string "girls waiting.$"
+
 NewSinjoh_EventScript_PetStantler::
     lock
 	faceplayer

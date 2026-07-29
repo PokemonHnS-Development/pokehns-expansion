@@ -78,7 +78,7 @@ Route49_Text_KimonoGirl:
     .string "I've heard all about you and\l"
 	.string "your deeds from my cousins\l"
 	.string "in Ecruteak City.\p"
-	.string "My older sister wishes to meet with you.\l"
+	.string "My sisters wish to meet with you.\l"
 	.string "If you find the time, please\n"
 	.string "seek us out in the town\l"
 	.string "up ahead.$"
@@ -129,7 +129,7 @@ Route49_EventScript_Electrode::
 	msgbox Route49_Text_ZapPlate
 	giveitem ITEM_ZAP_PLATE, 1
 	addvar VAR_PLATECOUNTER, 1
-	addvar VAR_NOBLECOUNTER, 1
+	@addvar VAR_NOBLECOUNTER, 1
 	release
 	end
 
@@ -146,7 +146,7 @@ Route49_EventScript_DefeatedElectrode::
 	msgbox Route49_Text_ZapPlate
 	giveitem ITEM_ZAP_PLATE, 1
 	addvar VAR_PLATECOUNTER, 1
-	addvar VAR_NOBLECOUNTER, 1
+	@addvar VAR_NOBLECOUNTER, 1
 	end
 
 Route49_EventScript_RanFromElectrode::

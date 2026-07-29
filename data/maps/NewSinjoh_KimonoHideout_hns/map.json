@@ -10,12 +10,12 @@
   "allow_cycling": false,
   "allow_escaping": false,
   "allow_running": false,
-  "show_map_name": true,
+  "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": null,
   "object_events": [
     {
-      "local_id": "LOCALID_SHIZUKO",
+      "local_id": "LOCALID_NEWSINJOH_KIMONOHIDEOUT_SHIZUKO",
       "graphics_id": "OBJ_EVENT_GFX_KIMONO_HNS",
       "x": 9,
       "y": 3,
@@ -25,11 +25,11 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NewSinjoh_Kimono_EventScript_Shizuko1",
+      "script": "NewSinjoh_KimonoHideout_EventScript_Shizuko",
       "flag": "0"
     },
     {
-      "local_id": "LOCALID_YOUKO",
+      "local_id": "LOCALID_NEWSINJOH_KIMONOHIDEOUT_YOUKO",
       "graphics_id": "OBJ_EVENT_GFX_KIMONO_HNS",
       "x": 13,
       "y": 3,
@@ -39,11 +39,11 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NewSinjoh_Kimono_EventScript_Youko",
+      "script": "NewSinjoh_KimonoHideout_EventScript_Youko",
       "flag": "0"
     },
     {
-      "local_id": "LOCALID_MIHARU",
+      "local_id": "LOCALID_NEWSINJOH_KIMONOHIDEOUT_MIHARU",
       "graphics_id": "OBJ_EVENT_GFX_KIMONO_HNS",
       "x": 5,
       "y": 3,
@@ -53,12 +53,12 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NewSinjoh_Kimono_EventScript_Miharu",
+      "script": "NewSinjoh_KimonoHideout_EventScript_Miharu",
       "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_OLD_MAN_2_HNS",
-      "x": 11,
+      "x": 5,
       "y": 7,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
@@ -72,7 +72,7 @@
   ],
   "warp_events": [
     {
-      "x": 4,
+      "x": 9,
       "y": 11,
       "elevation": 0,
       "dest_map": "MAP_NEW_SINJOH_HNS",
@@ -82,5 +82,5 @@
   "coord_events": [],
   "bg_events": [],
   "game_version": "hns",
-  "region": "REGION_JOHTO"
+  "region": "REGION_HISUI"
 }

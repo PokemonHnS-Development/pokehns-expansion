@@ -203,17 +203,17 @@ Debug_EventScript_Text_DefensiveIVs:
 	.string "HP IVs: {STR_VAR_1}, DEF IVs: {STR_VAR_2}, SPDEF IVs: {STR_VAR_3}$"
 
 Debug_EventScript_Script_1::
-	setvar VAR_SINJOH_STORYLINE, 3
+	setvar VAR_SINJOH_STORYLINE, 4
 	release
 	end
 
 Debug_EventScript_Script_2::
-	removeitem ITEM_AZURE_FLUTE
+	setvar VAR_PLATECOUNTER, 10
 	release
 	end
 
 Debug_EventScript_Script_3::
-	callnative Script_OpenChallengeMenu
+	setvar VAR_PLATECOUNTER, 18
 	release
 	end
 
