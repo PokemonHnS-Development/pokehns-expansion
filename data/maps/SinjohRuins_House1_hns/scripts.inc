@@ -1,6 +1,63 @@
 SinjohRuins_House1_hns_MapScripts::
 	.byte 0
 
+SinjohRuins_Lab_EventScript_NoOp::
+	release
+	end
+
+SinjohRuins_Lab_Text_PlayFlute:
+	.string "The AZURE FLUTE is reacting.\n"
+	.string "Play the flute?$"
+
+SinjohRuins_Lab_Text_DropedItem:
+	.string "The NOBLE {STR_VAR_1} dropped\n"
+	.string "an item...$"
+
+SinjohRuins_Lab_Text_StevenName:
+	.string "STEVEN$"
+
+SinjohRuins_Lab_EventScript_3Plates::
+	setspeaker SinjohRuins_Lab_Text_StevenName
+	pokenavcall SinjohRuins_Lab_Text_StevenCall3Plates
+	return
+SinjohRuins_Lab_EventScript_6Plates::
+	setspeaker SinjohRuins_Lab_Text_StevenName
+	pokenavcall SinjohRuins_Lab_Text_StevenCall6Plates
+	return
+SinjohRuins_Lab_EventScript_9Plates::
+	setspeaker SinjohRuins_Lab_Text_StevenName
+	pokenavcall SinjohRuins_Lab_Text_StevenCall9Plates
+	return
+SinjohRuins_Lab_EventScript_12Plates::
+	setspeaker SinjohRuins_Lab_Text_StevenName
+	pokenavcall SinjohRuins_Lab_Text_StevenCall12Plates
+	return
+SinjohRuins_Lab_EventScript_15Plates::
+	setspeaker SinjohRuins_Lab_Text_StevenName
+	pokenavcall SinjohRuins_Lab_Text_StevenCall15Plates
+	return
+SinjohRuins_Lab_EventScript_16Plates::
+	setspeaker SinjohRuins_Lab_Text_StevenName
+	pokenavcall SinjohRuins_Lab_Text_StevenCall16Plates
+	return
+
+SinjohRuins_Lab_Text_StevenCall3Plates:
+	.string "Placeholder$"
+
+SinjohRuins_Lab_Text_StevenCall6Plates:
+	.string "Placeholder$"
+
+SinjohRuins_Lab_Text_StevenCall9Plates:
+	.string "Placeholder$"
+
+SinjohRuins_Lab_Text_StevenCall12Plates:
+	.string "Placeholder$"
+
+SinjohRuins_Lab_Text_StevenCall15Plates:
+	.string "Placeholder$"
+
+SinjohRuins_Lab_Text_StevenCall16Plates:
+	.string "Placeholder$"
 @==========================Cutscene SCRIPTS================================================================================
 
 SinjohRuins_Lab_EventScript_TriggerIntroTop::
@@ -70,13 +127,13 @@ SinjohRuins_Lab_EventScript_IntroChoice::
 SinjohRuins_Lab_EventScript_IntroChoseYes::
 	msgbox SinjohRuins_Lab_Text_StevenIntroCutscene6, MSGBOX_AUTOCLOSE
 	setvar VAR_SINJOH_STORYLINE, 6
-	clearflag FLAG_HIDE_SNOWSWEPT_NOBLE_SNEASLER
-	clearflag FLAG_HIDE_ROUTE49_NOBLE_WYRDEER
-	clearflag FLAG_HIDE_ROUTE49_NOBLE_OVERQWIL
-	clearflag FLAG_HIDE_HOTSPRINGS_NOBLE_ARCANINE
-	clearflag FLAG_HIDE_HOTSPRINGS_NOBLE_URSALUNA
-	clearflag FLAG_HIDE_ROUTE50_NOBLE_ELECTRODE
-	clearflag FLAG_HIDE_ROUTE50_NOBLE_KLEAVOR
+	setvar VAR_NOBLE_SNEASLER, 1
+	setvar VAR_NOBLE_OVERQWIL, 1
+	setvar VAR_NOBLE_WYRDEER, 1
+	setvar VAR_NOBLE_ARCANINE, 1
+	setvar VAR_NOBLE_URSALUNA, 1
+	setvar VAR_NOBLE_KLEAVOR, 1
+	setvar VAR_NOBLE_ELECTRODE, 1
 	release
 	end
 
