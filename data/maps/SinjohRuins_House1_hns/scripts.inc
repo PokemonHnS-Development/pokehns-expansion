@@ -60,10 +60,10 @@ SinjohRuins_Lab_Text_StevenCall6Plates:
 	.string "We had another tremor here.\n"
 	.string "A second chamber opened up\l"
 	.string "this time.\p"
-	.string "I've asked our geoscientist to keep\n"
+	.string "I've asked our geologist to keep\n"
 	.string "his instruments ready in case it\l"
 	.string "happens again.\p"
-	.string "The deeper we dig, the more\n"
+	.string "The deeper we dig... The more\n"
 	.string "questions we find.$"
 
 SinjohRuins_Lab_Text_StevenCall9Plates:
@@ -74,7 +74,7 @@ SinjohRuins_Lab_Text_StevenCall9Plates:
 	.string "Some kind of energy built up\n"
 	.string "underground and cracked the\l"
 	.string "rock open from the inside.\p"
-	.string "What could cause that…\n"
+	.string "What could cause that...\n"
 	.string "I honestly don't know.$"
 
 SinjohRuins_Lab_Text_StevenCall12Plates:
@@ -83,7 +83,7 @@ SinjohRuins_Lab_Text_StevenCall12Plates:
 	.string "opening up.\p"
 	.string "We still can't figure out the\n"
 	.string "pattern behind the timing.\p"
-	.string "Say, {PLAYER}… you're not\n"
+	.string "Say, {PLAYER}... you're not\n"
 	.string "doing something to cause all\l"
 	.string "this, are you?\p"
 	.string "No, that can't be right.$"
@@ -94,16 +94,19 @@ SinjohRuins_Lab_Text_StevenCall15Plates:
 	.string ".................\p"
 	.string "Of course.\p"
 	.string "The legendary POKéMON lying\n"
-	.string "in these ruins… they're responding\l"
+	.string "in these ruins... they're responding\l"
 	.string "to you, aren't they?\p"
 	.string "As if they want to be found.\p"
-	.string "I should have known better than\n"
+	.string "My predictions usually come true.\n"
+	.string "I should have known better than\l"
 	.string "to doubt you.$"
 
 SinjohRuins_Lab_Text_StevenCall16Plates:
 	.string "STEVEN: {PLAYER}.\p"
-	.string "We're very close now. You should\n"
-	.string "come see this for yourself.$"
+	.string "We're very close now. I can feel it.\p"
+	.string "..................\p"
+	.string "You should come see this for\n"
+	.string "yourself.$"
 
 @==========================Cutscene SCRIPTS================================================================================
 
@@ -251,11 +254,11 @@ SinjohRuins_Lab_Text_StevenIntroCutscene3:
 	.string "STEVEN: When I first heard about\n"
 	.string "these ruins, I had to come see\l"
 	.string "them for myself.\p"
-	.string "Just imagine what secrets of history,\n"
-	.string "biology, and geology we may discover!\p"
 	.string "I assembled a team from DEVON CORP.\n"
 	.string "and we set off on a research\l"
 	.string "expedition.\p"
+	.string "Who knows what we'll find buried\n"
+	.string "here.\p"
 	.string "We've learned quite a lot\n"
 	.string "already.$"
 
@@ -279,7 +282,7 @@ SinjohRuins_Lab_Text_StevenIntroCutscene5:
 	.string "for my team, I'm afraid.\p"
 	.string "And I need to stay here to oversee\n"
 	.string "the research.\p"
-	.string "But I believe you could do it.\n"
+	.string "But I think you could do it.\n"
 	.string "Will you help us?$"
 
 SinjohRuins_Lab_Text_StevenIntroCutscene6:
@@ -293,8 +296,9 @@ SinjohRuins_Lab_Text_StevenIntroCutscene6:
 
 SinjohRuins_Lab_Text_StevenIntroCutsceneRefused:
 	.string "Are you sure?\p"
-	.string "Imagine the possibilities!\p"
-	.string "Surely you will help us?$"
+	.string "Who knows what we'll find buried\n"
+	.string "here.\p"
+	.string "Won't you reconsider?$"
 
 @==========================NPC SCRIPTS================================================================================
 
@@ -343,13 +347,13 @@ SinjohRuins_Lab_Text_StevenFindPlates:
 	.string "I have to admit, I'm curious\n"
 	.string "what will happen once they're\l"
 	.string "all gathered.\p"
-	.string "Let me know if you need anything.$"
+	.string "Well, let's see what you find.$"
 
-SinjohRuins_Lab_EventScript_GeoScientist::
-	msgbox SinjohRuins_Lab_Text_GeoScientist MSGBOX_NPC
+SinjohRuins_Lab_EventScript_Geologist::
+	msgbox SinjohRuins_Lab_Text_Geologist MSGBOX_NPC
 	end
 
-SinjohRuins_Lab_Text_GeoScientist:
+SinjohRuins_Lab_Text_Geologist:
     .string "Ground-penetrating radar shows\n"
 	.string "6 subterranean chambers in this\l"
 	.string "valley.\p"
