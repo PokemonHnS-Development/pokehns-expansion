@@ -42,22 +42,75 @@ SinjohRuins_Lab_EventScript_16Plates::
 	return
 
 SinjohRuins_Lab_Text_StevenCall3Plates:
-	.string "Placeholder$"
+	.string "STEVEN: {PLAYER}. \p"
+	.string "There seems to have been something\n"
+	.string "like an earthquake here at the ruins.\p"
+	.string "Don't worry, the research team is\n"
+	.string "safe, as are the artifacts we've\l"
+	.string "collected so far.\p"
+	.string "Strangely, one of the subterranean\n"
+	.string "chambers beneath the ruins has\l"
+	.string "sprung open.\p"
+	.string "It bares markings strikingly similar\n"
+	.string "to that of a HOENN legendary POKéMON\p"
+	.string "Care to investigate?$"
 
 SinjohRuins_Lab_Text_StevenCall6Plates:
-	.string "Placeholder$"
+	.string "STEVEN: {PLAYER}. \p"
+	.string "How goes the plate collecting?\p"
+	.string "We've had another earthquake here at\n"
+	.string "the ruins.\p"
+	.string "I've instructed our geoscientist to\n"
+	.string "prepare his instruments in case this\l"
+	.string "happens again.\p"
+	.string "And of course another chamber has\n"
+	.string "burst open.\p"
+	.string "The mystery continues to deepen.$"
 
 SinjohRuins_Lab_Text_StevenCall9Plates:
-	.string "Placeholder$"
+	.string "STEVEN: {PLAYER}. \p"
+	.string "Another earthquake here at the\n"
+	.string "ruins.\p"
+	.string "But this time, it wasn't really an\n"
+	.string "earthquake at all.\p"
+	.string "The data suggests that a colossal\n"
+	.string "energy build-up from one of the\l"
+	.string "subterranean chambers was suddenly\l"
+	.string "released, splitting open the rock,\l"
+	.string "and producing the tremor we felt.\p"
+	.string "As for what caused it, to release,\n"
+	.string "we're still not certain.$"
 
 SinjohRuins_Lab_Text_StevenCall12Plates:
-	.string "Placeholder$"
+	.string "STEVEN: {PLAYER}. \p"
+	.string "Another subterranean tremor, and\n"
+	.string "more data collected.\p"
+	.string "Similar to the others, it has resulted\n"
+	.string "in the opening of another new chamber.\p"
+	.string "We still cannot find a pattern behind\n"
+	.string "the timing of these events.\p"
+	.string "Say, you're not doing something to\n"
+	.string "cause this phenomenon, are you?\p"
+	.string "No, no... That would be absurd.$"
 
 SinjohRuins_Lab_Text_StevenCall15Plates:
-	.string "Placeholder$"
+	.string "STEVEN: {PLAYER}, \n"
+	.string "Did you just obtain another PLATE?\p"
+	.string ".................\p"
+	.string "Of course!\p"
+	.string "Somehow, the legendary POKéMON lying\n"
+	.string "within the ruins are responding to your\l"
+	.string "actions!\p"
+	.string "Like they are trying to reveal\n"
+	.string "themselves to you.\p"
+	.string "I know better than to underestimate you now.$"
 
 SinjohRuins_Lab_Text_StevenCall16Plates:
-	.string "Placeholder$"
+	.string "STEVEN: {PLAYER}. \n"
+	.string "We are very close to solving the\n"
+	.string "mystery of the ruins.\p"
+	.string "You should see this.$"
+
 @==========================Cutscene SCRIPTS================================================================================
 
 SinjohRuins_Lab_EventScript_TriggerIntroTop::
