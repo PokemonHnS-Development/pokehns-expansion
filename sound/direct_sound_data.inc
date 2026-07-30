@@ -9685,3 +9685,11 @@ DirectSoundWaveData_dp_062sleigh::
 	.incbin "sound/direct_sound_samples/dp_062sleigh.bin"
 DirectSoundWaveData_dp_093snare::
 	.incbin "sound/direct_sound_samples/dp_093snare.bin"
+
+	.align 2
+DirectSoundWaveData_pl_musicbox62::
+	.incbin "sound/direct_sound_samples/pl_musicbox62.bin"
+
+	.align 2
+DirectSoundWaveData_pl_musicbox79::
+	.incbin "sound/direct_sound_samples/pl_musicbox79.bin"

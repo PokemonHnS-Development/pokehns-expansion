@@ -744,6 +744,9 @@ gSongTable::
 	song mus_hg_obtain_b_points, MUSIC_PLAYER_SE2, 2
 	song mus_hg_win_minigame, MUSIC_PLAYER_SE2, 2
 
+	@ DP music
+	song mus_dp_azure_flute, MUSIC_PLAYER_BGM, 0
+
 	@ Phoneme songs (bard NPC)
 	song ph_trap_blend, MUSIC_PLAYER_SE2, 2
 	song ph_trap_held, MUSIC_PLAYER_SE2, 2
@@ -1109,5 +1112,5 @@ gGBSSongTable:: @ "gbs_hg_" tracks are new tracks that were transcribed from HGS
 
 	@ ----------------------------------------------------------------------------------------
 
-	
+
 	.4byte 0xFFFFFFFF

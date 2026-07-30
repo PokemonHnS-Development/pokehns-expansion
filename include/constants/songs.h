@@ -671,7 +671,13 @@
 #define MUS_HG_WIN_MINIGAME          (HG_MUSIC_START + 0xAF)  // Cleared Wobbuffet Pop!
 
 #define HG_MUSIC_END                 MUS_HG_WIN_MINIGAME
-#define END_MUS                      HG_MUSIC_END
+
+// DPPt music
+#define DP_MUSIC_START               (HG_MUSIC_END + 1)
+#define MUS_DP_AZURE_FLUTE           (DP_MUSIC_START + 0x00)  // Azure Flute
+#define DP_MUSIC_END                 MUS_DP_AZURE_FLUTE
+
+#define END_MUS                      DP_MUSIC_END
 
 // Phoneme sounds used by the "bard" NPC (see src/bard_music.c and src/mauville_old_man.c).
 // Each comes in a triplet of PH_*_BLEND, PH_*_HELD, and PH_*_SOLO.
