@@ -1,114 +1,17 @@
 SinjohRuins_House1_hns_MapScripts::
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, SinjohRuins_Lab_OnFrame
+	map_script 	MAP_SCRIPT_ON_TRANSITION, SinjohRuins_Lab_OnTransition
 	.byte 0
 
-SinjohRuins_Lab_EventScript_NoOp::
-	release
+SinjohRuins_Lab_OnTransition::
+	call_if_eq VAR_PLATECOUNTER, 16, SinjohRuins_Lab_SetupFinalPlateScene
 	end
 
-SinjohRuins_Lab_Text_PlayFlute:
-	.string "The AZURE FLUTE is reacting.\n"
-	.string "Play the flute?$"
+SinjohRuins_Lab_OnFrame::
+	map_script_2 VAR_PLATECOUNTER, 16, SinjohRuins_Lab_FinalPlateScene
+	.2byte 0
 
-SinjohRuins_Lab_Text_DropedItem:
-	.string "The NOBLE {STR_VAR_1} dropped\n"
-	.string "an item...$"
-
-SinjohRuins_Lab_Text_StevenName:
-	.string "STEVEN$"
-
-SinjohRuins_Lab_EventScript_3Plates::
-	setspeaker SinjohRuins_Lab_Text_StevenName
-	pokenavcall SinjohRuins_Lab_Text_StevenCall3Plates
-	return
-SinjohRuins_Lab_EventScript_6Plates::
-	setspeaker SinjohRuins_Lab_Text_StevenName
-	pokenavcall SinjohRuins_Lab_Text_StevenCall6Plates
-	return
-SinjohRuins_Lab_EventScript_9Plates::
-	setspeaker SinjohRuins_Lab_Text_StevenName
-	pokenavcall SinjohRuins_Lab_Text_StevenCall9Plates
-	return
-SinjohRuins_Lab_EventScript_12Plates::
-	setspeaker SinjohRuins_Lab_Text_StevenName
-	pokenavcall SinjohRuins_Lab_Text_StevenCall12Plates
-	return
-SinjohRuins_Lab_EventScript_15Plates::
-	setspeaker SinjohRuins_Lab_Text_StevenName
-	pokenavcall SinjohRuins_Lab_Text_StevenCall15Plates
-	return
-SinjohRuins_Lab_EventScript_16Plates::
-	setspeaker SinjohRuins_Lab_Text_StevenName
-	pokenavcall SinjohRuins_Lab_Text_StevenCall16Plates
-	return
-
-SinjohRuins_Lab_Text_StevenCall3Plates:
-	.string "STEVEN: {PLAYER}.\p"
-	.string "We felt a tremor at the ruins\n"
-	.string "just now.\p"
-	.string "Everyone's fine, don't worry.\p"
-	.string "It's quite intriguing, one of the\n"
-	.string "subterranean chambers beneath the\l"
-	.string "ruins has sprung open.\p"
-	.string "The markings inside remind\n"
-	.string "me of something from HOENN.\p"
-	.string "You should come take a look\n"
-	.string "when you can.$"
-
-SinjohRuins_Lab_Text_StevenCall6Plates:
-	.string "STEVEN: {PLAYER}.\p"
-	.string "How's the search going?\p"
-	.string "We had another tremor here.\n"
-	.string "A second chamber opened up\l"
-	.string "this time.\p"
-	.string "I've asked our geologist to keep\n"
-	.string "his instruments ready in case it\l"
-	.string "happens again.\p"
-	.string "The deeper we dig... The more\n"
-	.string "questions we find.$"
-
-SinjohRuins_Lab_Text_StevenCall9Plates:
-	.string "STEVEN: {PLAYER}.\p"
-	.string "Another tremor here at the ruins.\p"
-	.string "The data paints an intriguing picture.\n"
-	.string "It wasn't an earthquake at all.\p"
-	.string "Some kind of energy built up\n"
-	.string "underground and cracked the\l"
-	.string "rock open from the inside.\p"
-	.string "What could cause that...\n"
-	.string "I honestly don't know.$"
-
-SinjohRuins_Lab_Text_StevenCall12Plates:
-	.string "STEVEN: {PLAYER}.\p"
-	.string "Another tremor. Another chamber\n"
-	.string "opening up.\p"
-	.string "We still can't figure out the\n"
-	.string "pattern behind the timing.\p"
-	.string "Say, {PLAYER}... you're not\n"
-	.string "doing something to cause all\l"
-	.string "this, are you?\p"
-	.string "No, that can't be right.$"
-
-SinjohRuins_Lab_Text_StevenCall15Plates:
-	.string "STEVEN: {PLAYER}.\p"
-	.string "Did you just find another PLATE?\p"
-	.string ".................\p"
-	.string "Of course.\p"
-	.string "The legendary POKéMON lying\n"
-	.string "in these ruins... they're responding\l"
-	.string "to you, aren't they?\p"
-	.string "As if they want to be found.\p"
-	.string "My predictions usually come true.\n"
-	.string "I should have known better than\l"
-	.string "to doubt you.$"
-
-SinjohRuins_Lab_Text_StevenCall16Plates:
-	.string "STEVEN: {PLAYER}.\p"
-	.string "We're very close now. I can feel it.\p"
-	.string "..................\p"
-	.string "You should come see this for\n"
-	.string "yourself.$"
-
-@==========================Cutscene SCRIPTS================================================================================
+@==========================Intro Cutscene SCRIPTS================================================================================
 
 SinjohRuins_Lab_EventScript_TriggerIntroTop::
 	lock
@@ -300,6 +203,78 @@ SinjohRuins_Lab_Text_StevenIntroCutsceneRefused:
 	.string "here.\p"
 	.string "Won't you reconsider?$"
 
+@==========================Final plate Cutscene SCRIPTS================================================================================
+
+SinjohRuins_Lab_SetupFinalPlateScene::
+	setobjectxyperm LOCALID_SINJOHRUINS_LAB_STEVEN, 4, 7
+	setobjectmovementtype LOCALID_SINJOHRUINS_LAB_STEVEN, MOVEMENT_TYPE_FACE_RIGHT
+	setobjectxyperm LOCALID_NEWSINJOH_LAB_LINGUIST, 5, 7
+	setobjectmovementtype LOCALID_NEWSINJOH_LAB_LINGUIST, MOVEMENT_TYPE_FACE_LEFT
+	return
+
+SinjohRuins_Lab_FinalPlateScene::
+	lock
+	playse SE_PIN
+	applymovement LOCALID_SINJOHRUINS_LAB_STEVEN, Common_Movement_ExclamationMark
+	delay 60
+	turnobject LOCALID_SINJOHRUINS_LAB_STEVEN, DIR_SOUTH
+	delay 30
+	applymovement LOCALID_SINJOHRUINS_LAB_STEVEN, Common_Movement_WalkDown1
+	turnobject LOCALID_NEWSINJOH_LAB_LINGUIST, DIR_SOUTH
+	delay 30
+	applymovement LOCALID_PLAYER, Common_Movement_WalkUp1
+	waitmovement 0
+	applymovement LOCALID_PLAYER, Common_Movement_WalkUp1
+	waitmovement 0
+	msgbox SinjohRuins_Lab_Text_FinalPlateScene1, MSGBOX_AUTOCLOSE
+	dofieldeffectsparkle 3, 8, 0
+	waitfieldeffect FLDEFF_SPARKLE
+	setvar VAR_RESULT, 1
+	playfanfare MUS_AWAKEN_LEGEND
+	playse SE_ORB
+	special DoOrbEffect
+	delay 120
+	setvar VAR_0x8004, 2  @ vertical pan
+	setvar VAR_0x8005, 2  @ horizontal pan
+	setvar VAR_0x8006, 40  @ num shakes
+	setvar VAR_0x8007, 3  @ shake delay
+	special ShakeCamera
+	waitstate
+	msgbox SinjohRuins_Lab_Text_FinalPlateScene2, MSGBOX_AUTOCLOSE
+	applymovement LOCALID_PLAYER, SinjohRuins_Lab_Movement_PlayerLeaveLab
+	applymovement LOCALID_SINJOHRUINS_LAB_STEVEN, SinjohRuins_Lab_Movement_StevenLeaveLab
+	waitmovement 0
+	waitmovement 0
+	setvar VAR_SINJOH_STORYLINE, 7
+	warp MAP_SINJOH_RUINS_HNS, 0
+	waitstate
+	end
+
+SinjohRuins_Lab_Text_FinalPlateScene1:
+	.string "STEVEN: {PLAYER}!\p"
+	.string "I think I know what's going to\n"
+	.string "happen we bring together all 17 of\l"
+	.string "the PLATES.\p"
+	.string "I feel...\l"
+	.string ".....................$"
+
+SinjohRuins_Lab_Text_FinalPlateScene2:
+	.string "STEVEN: I need to see this for\n"
+	.string "myself!\p"
+	.string "Outside, {PLAYER}!$" 
+
+SinjohRuins_Lab_Movement_PlayerLeaveLab:
+	walk_fast_down
+	walk_fast_down
+	walk_in_place_fast_down
+	step_end
+
+SinjohRuins_Lab_Movement_StevenLeaveLab:
+	walk_fast_down
+	walk_fast_down
+	walk_in_place_fast_down
+	step_end
+
 @==========================NPC SCRIPTS================================================================================
 
 SinjohRuins_Lab_EventScript_Steven::
@@ -310,33 +285,39 @@ SinjohRuins_Lab_EventScript_Steven::
 	goto_if_ge VAR_PLATECOUNTER, 9, SinjohRuins_Lab_EventScript_StevenAfter9Plates
 	goto_if_ge VAR_PLATECOUNTER, 12, SinjohRuins_Lab_EventScript_StevenAfter12Plates
 	goto_if_ge VAR_PLATECOUNTER, 15, SinjohRuins_Lab_EventScript_StevenAfter15Plates
+	goto_if_ge VAR_PLATECOUNTER, 17, SinjohRuins_Lab_EventScript_StevenAfterAllPlates
 	buffernumberstring STR_VAR_1, VAR_PLATECOUNTER
 	msgbox SinjohRuins_Lab_Text_StevenFindPlates, MSGBOX_AUTOCLOSE
 	release
 	end
 
 SinjohRuins_Lab_EventScript_StevenAfter3Plates::
-	msgbox SinjohRuins_Lab_Text_StevenFindPlates, MSGBOX_AUTOCLOSE
+	msgbox SinjohRuins_Lab_Text_StevenFindPlates3, MSGBOX_AUTOCLOSE
 	release
 	end
 
 SinjohRuins_Lab_EventScript_StevenAfter6Plates::
-	msgbox SinjohRuins_Lab_Text_StevenFindPlates, MSGBOX_AUTOCLOSE
+	msgbox SinjohRuins_Lab_Text_StevenFindPlates3, MSGBOX_AUTOCLOSE
 	release
 	end
 
 SinjohRuins_Lab_EventScript_StevenAfter9Plates::
-	msgbox SinjohRuins_Lab_Text_StevenFindPlates, MSGBOX_AUTOCLOSE
+	msgbox SinjohRuins_Lab_Text_StevenFindPlates9, MSGBOX_AUTOCLOSE
 	release
 	end
 
 SinjohRuins_Lab_EventScript_StevenAfter12Plates::
-	msgbox SinjohRuins_Lab_Text_StevenFindPlates, MSGBOX_AUTOCLOSE
+	msgbox SinjohRuins_Lab_Text_StevenFindPlates9, MSGBOX_AUTOCLOSE
 	release
 	end
 
 SinjohRuins_Lab_EventScript_StevenAfter15Plates::
-	msgbox SinjohRuins_Lab_Text_StevenFindPlates, MSGBOX_AUTOCLOSE
+	msgbox SinjohRuins_Lab_Text_StevenFindPlates9, MSGBOX_AUTOCLOSE
+	release
+	end
+
+SinjohRuins_Lab_EventScript_StevenAfterAllPlates::
+	msgbox SinjohRuins_Lab_Text_StevenAfterAll, MSGBOX_AUTOCLOSE
 	release
 	end
 
@@ -348,6 +329,43 @@ SinjohRuins_Lab_Text_StevenFindPlates:
 	.string "what will happen once they're\l"
 	.string "all gathered.\p"
 	.string "Well, let's see what you find.$"
+
+SinjohRuins_Lab_Text_StevenFindPlates3:
+	.string "Ah, {PLAYER}.\p"
+	.string "{STR_VAR_1} PLATES so far.\n"
+	.string "Not bad at all.\p"
+	.string "Have you investigated that\n"
+	.string "chamber yet?\l"
+	.string "It's all quite mysterious.$"
+
+SinjohRuins_Lab_Text_StevenFindPlates9:
+	.string "Ah, {PLAYER}.\p"
+	.string "{STR_VAR_1} PLATES so far.\n"
+	.string "Making great progress.\p"
+	.string "The chambers that have opened\n"
+	.string "up bear a striking similarity\l"
+	.string "to a series of chambers\l"
+	.string "in the HOENN region.\p"
+	.string "Each of those was also home to a\n"
+	.string "legendary POKéMON.\p"
+	.string "But in HOENN, only 3 were ever\n"
+	.string "discovered.\p"
+	.string "And here, there are at least 6.\p"
+	.string "Who knows what we'll find next.$"
+
+SinjohRuins_Lab_Text_StevenAfterAll:
+	.string "{PLAYER}!\p"
+	.string "This expedition has been the\n"
+	.string "experience of a lifetime.\p"
+	.string "Ever since I heard about these ruins,\n"
+	.string "I had this feeling.\p"
+	.string "I thought we would discover something\n"
+	.string "amazing.\p"
+	.string "And my predictions usually come true.\p"
+	.string "Thank you for all your help,\n"
+	.string "Champion.\p"
+	.string "Where will you go from here?\p"
+	.string "I hope we can meet again somewhere.$"
 
 SinjohRuins_Lab_EventScript_Geologist::
 	msgbox SinjohRuins_Lab_Text_Geologist MSGBOX_NPC
@@ -675,4 +693,114 @@ SinjohRuins_EventScript_Artifact::
 SinjohRuins_Artifact_Text:
    .string "It's an artifact found from\n"
    .string "inside the ruins!$"
+
+
+@==========================Unified other map SCRIPTS================================================================================
+
+SinjohRuins_Lab_EventScript_NoOp::
+	release
+	end
+
+SinjohRuins_Lab_Text_PlayFlute:
+	.string "The AZURE FLUTE is reacting.\n"
+	.string "Play the flute?$"
+
+SinjohRuins_Lab_Text_DropedItem:
+	.string "The NOBLE {STR_VAR_1} dropped\n"
+	.string "an item...$"
+
+SinjohRuins_Lab_Text_StevenName:
+	.string "STEVEN$"
+
+SinjohRuins_Lab_EventScript_3Plates::
+	setspeaker SinjohRuins_Lab_Text_StevenName
+	pokenavcall SinjohRuins_Lab_Text_StevenCall3Plates
+	return
+SinjohRuins_Lab_EventScript_6Plates::
+	setspeaker SinjohRuins_Lab_Text_StevenName
+	pokenavcall SinjohRuins_Lab_Text_StevenCall6Plates
+	return
+SinjohRuins_Lab_EventScript_9Plates::
+	setspeaker SinjohRuins_Lab_Text_StevenName
+	pokenavcall SinjohRuins_Lab_Text_StevenCall9Plates
+	return
+SinjohRuins_Lab_EventScript_12Plates::
+	setspeaker SinjohRuins_Lab_Text_StevenName
+	pokenavcall SinjohRuins_Lab_Text_StevenCall12Plates
+	return
+SinjohRuins_Lab_EventScript_15Plates::
+	setspeaker SinjohRuins_Lab_Text_StevenName
+	pokenavcall SinjohRuins_Lab_Text_StevenCall15Plates
+	return
+SinjohRuins_Lab_EventScript_16Plates::
+	setspeaker SinjohRuins_Lab_Text_StevenName
+	pokenavcall SinjohRuins_Lab_Text_StevenCall16Plates
+	return
+
+SinjohRuins_Lab_Text_StevenCall3Plates:
+	.string "STEVEN: {PLAYER}.\p"
+	.string "We felt a tremor at the ruins\n"
+	.string "just now.\p"
+	.string "Everyone's fine, don't worry.\p"
+	.string "It's quite intriguing, one of the\n"
+	.string "subterranean chambers beneath the\l"
+	.string "ruins has sprung open.\p"
+	.string "The markings inside remind\n"
+	.string "me of something from HOENN.\p"
+	.string "You should come take a look\n"
+	.string "when you can.$"
+
+SinjohRuins_Lab_Text_StevenCall6Plates:
+	.string "STEVEN: {PLAYER}.\p"
+	.string "How's the search going?\p"
+	.string "We had another tremor here.\n"
+	.string "A second chamber opened up\l"
+	.string "this time.\p"
+	.string "I've asked our geologist to keep\n"
+	.string "his instruments ready in case it\l"
+	.string "happens again.\p"
+	.string "The deeper we dig... The more\n"
+	.string "questions we find.$"
+
+SinjohRuins_Lab_Text_StevenCall9Plates:
+	.string "STEVEN: {PLAYER}.\p"
+	.string "Another tremor here at the ruins.\p"
+	.string "The data paints an intriguing picture.\n"
+	.string "It wasn't an earthquake at all.\p"
+	.string "Some kind of energy built up\n"
+	.string "underground and cracked the\l"
+	.string "rock open from the inside.\p"
+	.string "What could cause that...\n"
+	.string "I honestly don't know.$"
+
+SinjohRuins_Lab_Text_StevenCall12Plates:
+	.string "STEVEN: {PLAYER}.\p"
+	.string "Another tremor. Another chamber\n"
+	.string "opening up.\p"
+	.string "We still can't figure out the\n"
+	.string "pattern behind the timing.\p"
+	.string "Say, {PLAYER}... you're not\n"
+	.string "doing something to cause all\l"
+	.string "this, are you?\p"
+	.string "No, that can't be right.$"
+
+SinjohRuins_Lab_Text_StevenCall15Plates:
+	.string "STEVEN: {PLAYER}.\p"
+	.string "Did you just find another PLATE?\p"
+	.string ".................\p"
+	.string "Of course.\p"
+	.string "The legendary POKéMON lying\n"
+	.string "in these ruins... they're responding\l"
+	.string "to you, aren't they?\p"
+	.string "As if they want to be found.\p"
+	.string "My predictions usually come true.\n"
+	.string "I should have known better than\l"
+	.string "to doubt you.$"
+
+SinjohRuins_Lab_Text_StevenCall16Plates:
+	.string "STEVEN: {PLAYER}.\p"
+	.string "We're very close now. I can feel it.\p"
+	.string "..................\p"
+	.string "You should come see this for\n"
+	.string "yourself.$"
 
