@@ -1146,15 +1146,24 @@ void DoSpinExitWarp(void)
     CreateTask(Task_SpinExitWarp, 10);
 }
 
-static void LoadOrbEffectPalette(bool8 blueOrb)
+static void LoadOrbEffectPalette(u8 orbColor)
 {
     int i;
     u16 color[1];
 
-    if (!blueOrb)
+    switch (orbColor)
+    {
+    default:
+    case 0:
         color[0] = RGB_RED;
-    else
+        break;
+    case 1:
         color[0] = RGB_BLUE;
+        break;
+    case 2:
+        color[0] = RGB_YELLOW;
+        break;
+    }
 
     for (i = 0; i < 16; i++)
         LoadPalette(color, BG_PLTT_ID(15) + i, PLTT_SIZEOF(1));
@@ -1184,7 +1193,7 @@ static bool8 UpdateOrbEffectBlend(u16 shakeDir)
         return FALSE;
 }
 
-#define tBlueOrb     data[1]
+#define tOrbColor    data[1]
 #define tCenterX     data[2]
 #define tCenterY     data[3]
 #define tShakeDelay  data[4]
@@ -1222,7 +1231,7 @@ static void Task_OrbEffect(u8 taskId)
         break;
     case 1:
         BgDmaFill(0, PIXEL_FILL(1), 0, 1);
-        LoadOrbEffectPalette(tBlueOrb);
+        LoadOrbEffectPalette(tOrbColor);
         StartUpdateOrbFlashEffect(tCenterX, tCenterY, 1, 160, 1, 2);
         tState = 2;
         break;
@@ -1294,22 +1303,27 @@ void DoOrbEffect(void)
 
     if (gSpecialVar_Result == 0)
     {
-        tBlueOrb = FALSE;
+        tOrbColor = 0;
         tCenterX = 104;
     }
     else if (gSpecialVar_Result == 1)
     {
-        tBlueOrb = TRUE;
+        tOrbColor = 1;
         tCenterX = 136;
     }
     else if (gSpecialVar_Result == 2)
     {
-        tBlueOrb = FALSE;
+        tOrbColor = 0;
+        tCenterX = 120;
+    }
+    else if (gSpecialVar_Result == 3)
+    {
+        tOrbColor = 2;
         tCenterX = 120;
     }
     else
     {
-        tBlueOrb = TRUE;
+        tOrbColor = 1;
         tCenterX = 120;
     }
 
@@ -1322,7 +1336,7 @@ void FadeOutOrbEffect(void)
     gTasks[taskId].tState = 6;
 }
 
-#undef tBlueOrb
+#undef tOrbColor
 #undef tCenterX
 #undef tCenterY
 #undef tShakeDelay

@@ -14882,9 +14882,9 @@ EVs: 252 HP / 252 SpD
 - Mach Punch  
 - Comet Punch  
 
-=== TRAINER_STEVENSTONE_HNS ===
+=== TRAINER_STEVEN_HNS ===
 Name: STEVEN
-Class: Champion
+Class: Pkmn Trainer 1 Hns
 Pic: Steven
 Music: Hg Champion
 Gender: Male

@@ -643,7 +643,7 @@
 #define TRAINER_BRAM_HNS                               634
 #define TRAINER_KYLE9_HNS                              635
 #define TRAINER_DAWN9_HNS                              636
-#define TRAINER_STEVENSTONE_HNS                        637
+#define TRAINER_STEVEN_HNS                        637
 #define TRAINER_SECRETEDWARD_HNS                       638
 #define TRAINER_FINLEY_HNS                             639
 #define TRAINER_MUALANI_HNS                            640

@@ -4,11 +4,11 @@ SinjohRuins_House1_hns_MapScripts::
 	.byte 0
 
 SinjohRuins_Lab_OnTransition::
-	call_if_eq VAR_PLATECOUNTER, 16, SinjohRuins_Lab_SetupFinalPlateScene
+	call_if_eq VAR_SINJOH_STORYLINE, 7, SinjohRuins_Lab_SetupFinalPlateScene
 	end
 
 SinjohRuins_Lab_OnFrame::
-	map_script_2 VAR_PLATECOUNTER, 16, SinjohRuins_Lab_FinalPlateScene
+	map_script_2 VAR_SINJOH_STORYLINE, 7, SinjohRuins_Lab_FinalPlateScene
 	.2byte 0
 
 @==========================Intro Cutscene SCRIPTS================================================================================
@@ -214,6 +214,10 @@ SinjohRuins_Lab_SetupFinalPlateScene::
 
 SinjohRuins_Lab_FinalPlateScene::
 	lock
+	applymovement LOCALID_PLAYER, Common_Movement_WalkUp1
+	waitmovement 0
+	applymovement LOCALID_PLAYER, Common_Movement_WalkUp1
+	waitmovement 0
 	playse SE_PIN
 	applymovement LOCALID_SINJOHRUINS_LAB_STEVEN, Common_Movement_ExclamationMark
 	delay 60
@@ -222,18 +226,16 @@ SinjohRuins_Lab_FinalPlateScene::
 	applymovement LOCALID_SINJOHRUINS_LAB_STEVEN, Common_Movement_WalkDown1
 	turnobject LOCALID_NEWSINJOH_LAB_LINGUIST, DIR_SOUTH
 	delay 30
-	applymovement LOCALID_PLAYER, Common_Movement_WalkUp1
-	waitmovement 0
-	applymovement LOCALID_PLAYER, Common_Movement_WalkUp1
-	waitmovement 0
 	msgbox SinjohRuins_Lab_Text_FinalPlateScene1, MSGBOX_AUTOCLOSE
 	dofieldeffectsparkle 3, 8, 0
 	waitfieldeffect FLDEFF_SPARKLE
-	setvar VAR_RESULT, 1
+	setvar VAR_RESULT, 3
 	playfanfare MUS_AWAKEN_LEGEND
 	playse SE_ORB
 	special DoOrbEffect
-	delay 120
+	delay 200
+	special FadeOutOrbEffect
+	waitstate
 	setvar VAR_0x8004, 2  @ vertical pan
 	setvar VAR_0x8005, 2  @ horizontal pan
 	setvar VAR_0x8006, 40  @ num shakes
@@ -245,7 +247,7 @@ SinjohRuins_Lab_FinalPlateScene::
 	applymovement LOCALID_SINJOHRUINS_LAB_STEVEN, SinjohRuins_Lab_Movement_StevenLeaveLab
 	waitmovement 0
 	waitmovement 0
-	setvar VAR_SINJOH_STORYLINE, 7
+	setvar VAR_SINJOH_STORYLINE, 8
 	warp MAP_SINJOH_RUINS_HNS, 0
 	waitstate
 	end
@@ -280,13 +282,13 @@ SinjohRuins_Lab_Movement_StevenLeaveLab:
 SinjohRuins_Lab_EventScript_Steven::
 	lock
 	faceplayer
-	goto_if_ge VAR_PLATECOUNTER, 3, SinjohRuins_Lab_EventScript_StevenAfter3Plates
-	goto_if_ge VAR_PLATECOUNTER, 6, SinjohRuins_Lab_EventScript_StevenAfter6Plates
-	goto_if_ge VAR_PLATECOUNTER, 9, SinjohRuins_Lab_EventScript_StevenAfter9Plates
-	goto_if_ge VAR_PLATECOUNTER, 12, SinjohRuins_Lab_EventScript_StevenAfter12Plates
-	goto_if_ge VAR_PLATECOUNTER, 15, SinjohRuins_Lab_EventScript_StevenAfter15Plates
-	goto_if_ge VAR_PLATECOUNTER, 17, SinjohRuins_Lab_EventScript_StevenAfterAllPlates
 	buffernumberstring STR_VAR_1, VAR_PLATECOUNTER
+	goto_if_ge VAR_PLATECOUNTER, 17, SinjohRuins_Lab_EventScript_StevenAfterAllPlates
+	goto_if_ge VAR_PLATECOUNTER, 15, SinjohRuins_Lab_EventScript_StevenAfter15Plates
+	goto_if_ge VAR_PLATECOUNTER, 12, SinjohRuins_Lab_EventScript_StevenAfter12Plates
+	goto_if_ge VAR_PLATECOUNTER, 9, SinjohRuins_Lab_EventScript_StevenAfter9Plates
+	goto_if_ge VAR_PLATECOUNTER, 6, SinjohRuins_Lab_EventScript_StevenAfter6Plates
+	goto_if_ge VAR_PLATECOUNTER, 3, SinjohRuins_Lab_EventScript_StevenAfter3Plates
 	msgbox SinjohRuins_Lab_Text_StevenFindPlates, MSGBOX_AUTOCLOSE
 	release
 	end
@@ -322,7 +324,7 @@ SinjohRuins_Lab_EventScript_StevenAfterAllPlates::
 	end
 
 SinjohRuins_Lab_Text_StevenFindPlates:
-	.string "Ah, {PLAYER}.\p"
+	.string "STEVEN: Ah, {PLAYER}.\p"
 	.string "{STR_VAR_1} PLATES so far.\n"
 	.string "Not bad at all.\p"
 	.string "I have to admit, I'm curious\n"
@@ -331,7 +333,7 @@ SinjohRuins_Lab_Text_StevenFindPlates:
 	.string "Well, let's see what you find.$"
 
 SinjohRuins_Lab_Text_StevenFindPlates3:
-	.string "Ah, {PLAYER}.\p"
+	.string "STEVEN: Ah, {PLAYER}.\p"
 	.string "{STR_VAR_1} PLATES so far.\n"
 	.string "Not bad at all.\p"
 	.string "Have you investigated that\n"
@@ -339,7 +341,7 @@ SinjohRuins_Lab_Text_StevenFindPlates3:
 	.string "It's all quite mysterious.$"
 
 SinjohRuins_Lab_Text_StevenFindPlates9:
-	.string "Ah, {PLAYER}.\p"
+	.string "STEVEN: Ah, {PLAYER}.\p"
 	.string "{STR_VAR_1} PLATES so far.\n"
 	.string "Making great progress.\p"
 	.string "The chambers that have opened\n"
@@ -354,7 +356,7 @@ SinjohRuins_Lab_Text_StevenFindPlates9:
 	.string "Who knows what we'll find next.$"
 
 SinjohRuins_Lab_Text_StevenAfterAll:
-	.string "{PLAYER}!\p"
+	.string "STEVEN: {PLAYER}!\p"
 	.string "This expedition has been the\n"
 	.string "experience of a lifetime.\p"
 	.string "Ever since I heard about these ruins,\n"
@@ -368,7 +370,15 @@ SinjohRuins_Lab_Text_StevenAfterAll:
 	.string "I hope we can meet again somewhere.$"
 
 SinjohRuins_Lab_EventScript_Geologist::
+	goto_if_eq VAR_SINJOH_STORYLINE, 9, SinjohRuins_Lab_EventScript_GeologistDuringEvent
+	goto_if_ge VAR_SINJOH_STORYLINE, 10, SinjohRuins_Lab_EventScript_GeologistAfterEvent
 	msgbox SinjohRuins_Lab_Text_Geologist MSGBOX_NPC
+	end
+SinjohRuins_Lab_EventScript_GeologistDuringEvent::
+	msgbox SinjohRuins_Lab_Text_GeologistDuring, MSGBOX_NPC
+	end
+SinjohRuins_Lab_EventScript_GeologistAfterEvent::
+	msgbox SinjohRuins_Lab_Text_GeologistAfter, MSGBOX_NPC
 	end
 
 SinjohRuins_Lab_Text_Geologist:
@@ -378,9 +388,27 @@ SinjohRuins_Lab_Text_Geologist:
 	.string "5 of them appear to be closer\n"
 	.string "to the surface level, with 1\l"
 	.string "buried even deeper.$"
+SinjohRuins_Lab_Text_GeologistDuring:
+	.string "All this time I've directed my\n"
+	.string "equipment downward to image\l"
+	.string "the underground.\p"
+	.string "When clearly I should've pointed\n"
+	.string "it up!$"
+SinjohRuins_Lab_Text_GeologistAfter:
+	.string "Those PLATES were related to the\n"
+	.string "most powerful POKéMON??\p"
+	.string "I wish I had more time to study them.$"
 
 SinjohRuins_Lab_EventScript_Linguist::
-    msgbox SinjohRuins_Lab_Text_Linguist MSGBOX_NPC
+	goto_if_eq VAR_SINJOH_STORYLINE, 9, SinjohRuins_Lab_EventScript_LinguistDuringEvent
+	goto_if_ge VAR_SINJOH_STORYLINE, 10, SinjohRuins_Lab_EventScript_LinguistAfterEvent
+	msgbox SinjohRuins_Lab_Text_Linguist MSGBOX_NPC
+	end
+SinjohRuins_Lab_EventScript_LinguistDuringEvent::
+	msgbox SinjohRuins_Lab_Text_LinguistDuring, MSGBOX_NPC
+	end
+SinjohRuins_Lab_EventScript_LinguistAfterEvent::
+	msgbox SinjohRuins_Lab_Text_LinguistAfter, MSGBOX_NPC
 	end
 
 SinjohRuins_Lab_Text_Linguist:
@@ -389,9 +417,30 @@ SinjohRuins_Lab_Text_Linguist:
 	.string "translate..\p"
 	.string "We don't have anything like this\n"
 	.string "in the HOENN region.$"
+SinjohRuins_Lab_Text_LinguistDuring:
+    .string "Imagine my surprise as I\n"
+	.string "translated the glyph!\p"
+	.string "I triple and quadruple checked\n"
+	.string "it before telling STEVEN!\p"
+	.string "I mean, really, the God of\n"
+	.string "POKéMON?\p"
+	.string "It's incredible.$"
+SinjohRuins_Lab_Text_LinguistAfter:
+    .string "This expedition has been a\n"
+	.string "joy, {PLAYER}.\p"
+	.string "Thanks for taking care of all\n"
+	.string "the field-work.\p"
 
 SinjohRuins_Lab_EventScript_Archaeologist::
-    msgbox SinjohRuins_Lab_Text_Archaeologist MSGBOX_NPC
+	goto_if_eq VAR_SINJOH_STORYLINE, 9, SinjohRuins_Lab_EventScript_ArchaeologistDuringEvent
+	goto_if_ge VAR_SINJOH_STORYLINE, 10, SinjohRuins_Lab_EventScript_ArchaeologistAfterEvent
+	msgbox SinjohRuins_Lab_Text_Archaeologist MSGBOX_NPC
+	end
+SinjohRuins_Lab_EventScript_ArchaeologistDuringEvent::
+	msgbox SinjohRuins_Lab_Text_ArchaeologistDuring, MSGBOX_NPC
+	end
+SinjohRuins_Lab_EventScript_ArchaeologistAfterEvent::
+	msgbox SinjohRuins_Lab_Text_ArchaeologistAfter, MSGBOX_NPC
 	end
 
 SinjohRuins_Lab_Text_Archaeologist:
@@ -404,6 +453,18 @@ SinjohRuins_Lab_Text_Archaeologist:
 	.string "artifacts found in the SINNOH region.\p"
 	.string "Although, that flute you found...\n"
 	.string "It seems far older.$"
+SinjohRuins_Lab_Text_ArchaeologistDuring:
+	.string "Those plates...\n"
+	.string "The connection to the SINNOH\l"
+	.string "region...\l"
+	.string "That flute....\l"
+	.string "It's all starting to make sense.$"
+SinjohRuins_Lab_Text_ArchaeologistAfter:
+	.string "The historical value of what\n"
+	.string "you've helped us unearth here\l"
+	.string "cannot be overstated, \l"
+	.string "{PLAYER}.\p"
+	.string "Truly, thank you.$"
 
 SinjohRuins_Lab_EventScript_Growlithe_Hisui::
     lock
@@ -427,8 +488,15 @@ SinjohRuins_Lab_Text_GrowlitheBall:
 	.string "Better leave it alone.$"
 
 SinjohRuins_Lab_EventScript_Biologist::
+	goto_if_eq VAR_SINJOH_STORYLINE, 9, SinjohRuins_Lab_EventScript_BiologistDuringEvent
+	goto_if_ge VAR_SINJOH_STORYLINE, 10, SinjohRuins_Lab_EventScript_BiologistAfterEvent
 	msgbox SinjohRuins_Lab_Text_Biologist MSGBOX_NPC
-	release
+	end
+SinjohRuins_Lab_EventScript_BiologistDuringEvent::
+	msgbox SinjohRuins_Lab_Text_BiologistDuring, MSGBOX_NPC
+	end
+SinjohRuins_Lab_EventScript_BiologistAfterEvent::
+	msgbox SinjohRuins_Lab_Text_BiologistAfter, MSGBOX_NPC
 	end
 
 SinjohRuins_Lab_Text_Biologist:
@@ -446,12 +514,25 @@ SinjohRuins_Lab_Text_Biologist:
 	.string "Perhaps this species once occupied\n"
 	.string "a much larger territory, stretching\l"
 	.string "north through ancient SINNOH.$"
+SinjohRuins_Lab_Text_BiologistDuring:
+	.string "If the creature at the top of\n"
+	.string "those stairs really is the God\l"
+	.string "of all POKéMON, does that mean\l"
+	.string "it is the first common ancestor?$"
+SinjohRuins_Lab_Text_BiologistAfter:
+	.string "I've been able to gather so much\n"
+	.string "data on regional forms and\l"
+	.string "divergent evolution from this\l"
+	.string "expedition. Thank you,\l"
+	.string "{PLAYER}.$"
 
 SinjohRuins_Lab_EventScript_Hiker::
+	goto_if_ge VAR_SINJOH_STORYLINE, 9, SinjohRuins_Lab_EventScript_HikerDuringAfter
 	msgbox SinjohRuins_Lab_Text_Hiker MSGBOX_NPC
-	release
 	end
-
+SinjohRuins_Lab_EventScript_HikerDuringAfter::
+	msgbox SinjohRuins_Lab_Text_HikerDuringAfter, MSGBOX_NPC
+	end
 SinjohRuins_Lab_Text_Hiker:
    	.string "For ten years, I've hiked these\n"
 	.string "wilds.\p"
@@ -468,6 +549,16 @@ SinjohRuins_Lab_Text_Hiker:
 	.string "so much attention to the area.\p"
 	.string "Makes me feel kinda funny.\n"
 	.string "Y'know?$"
+SinjohRuins_Lab_Text_HikerDuringAfter:
+   	.string "Don't tell anyone, {PLAYER},\n"
+	.string "But I saw that temple on\l"
+	.string "the mountaintop when I first\l"
+	.string "discovered this place.\p"
+	.string "I kept it to myself.\p"
+	.string "I've blabbed enough about\n"
+	.string "these ruins.\p"
+	.string "It seems like everything worked\n"
+	.string "out, at least.$"
 
 @ENVIRONMENT
 SinjohRuins_EventScript_Notes1::
@@ -735,6 +826,7 @@ SinjohRuins_Lab_EventScript_15Plates::
 SinjohRuins_Lab_EventScript_16Plates::
 	setspeaker SinjohRuins_Lab_Text_StevenName
 	pokenavcall SinjohRuins_Lab_Text_StevenCall16Plates
+	setvar VAR_SINJOH_STORYLINE, 7
 	return
 
 SinjohRuins_Lab_Text_StevenCall3Plates:

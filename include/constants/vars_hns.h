@@ -147,7 +147,7 @@
 #define VAR_ALOLA_STATE                                  0x40CC // state of the story in alola
 
 // Sinjoh Vars
-#define VAR_SINJOH_STORYLINE                            0x40CD 
+#define VAR_SINJOH_STORYLINE                            0x40CD  //6: Free roam. 7: return to steven with plates. 9: stairs opened, battle with steven. 10: meet arceus. 11: done.
 #define VAR_PLATECOUNTER                                0x40CE
 #define VAR_REGIS_SCANNED                           0x40CF
 #define VAR_NOBLE_SNEASLER                           0x40D0
