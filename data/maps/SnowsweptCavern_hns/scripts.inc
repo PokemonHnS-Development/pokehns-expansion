@@ -14,12 +14,17 @@ Snowswept_Cavern_EventScript_ActivateSneasler::
     lock
     setobjectmovementtype LOCALID_SNOWSWEPT_CAVERN_SNEASLER, MOVEMENT_TYPE_WALK_IN_PLACE_DOWN
     setobjectxyperm LOCALID_SNOWSWEPT_CAVERN_SNEASLER, 6, 24
+    playse SE_M_DETECT
+	dofieldeffectsparkle 10, 28, 0
+	waitfieldeffect FLDEFF_SPARKLE
     playse SE_PIN
     applymovement2 LOCALID_PLAYER, Common_Movement_ExclamationMark
     delay 60
     msgbox SinjohRuins_Lab_Text_PlayFlute, MSGBOX_YESNO
     goto_if_eq VAR_RESULT, FALSE, SinjohRuins_Lab_EventScript_NoOp
-
+    playbgm MUS_DP_AZURE_FLUTE, FALSE
+    delay 200
+    fadedefaultbgm
     addobject LOCALID_SNOWSWEPT_CAVERN_SNEASLER
     clearflag FLAG_HIDE_SNOWSWEPT_NOBLE_SNEASLER
     
@@ -44,7 +49,7 @@ Snowswept_Cavern_EventScript_ActivateSneasler::
     waitmovement 0
     
     setobjectxyperm LOCALID_SNOWSWEPT_CAVERN_SNEASLER, 5, 26
-    
+
     setvar VAR_NOBLE_SNEASLER, 2
     release
     end
