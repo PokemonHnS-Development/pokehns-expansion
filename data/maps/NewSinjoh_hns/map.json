@@ -2,7 +2,7 @@
   "id": "MAP_NEW_SINJOH_HNS",
   "name": "NewSinjoh_hns",
   "layout": "LAYOUT_NEW_SINJOH_HNS",
-  "music": "MUS_HG_BURNED_TOWER",
+  "music": "MUS_DP_SNOWPOINT_DAY",
   "region_map_section": "MAPSEC_NEW_SINJOH",
   "requires_flash": false,
   "weather": "WEATHER_SNOW",

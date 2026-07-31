@@ -2,7 +2,7 @@
   "id": "MAP_SINJOH_RUINS_TEMPLE_HNS",
   "name": "SinjohRuins_Temple_hns",
   "layout": "LAYOUT_SINJOH_RUINS_TEMPLE_HNS",
-  "music": "MUS_HG_SINJOU_RUINS",
+  "music": "MUS_DP_HALL_OF_ORIGIN",
   "region_map_section": "MAPSEC_SINJOH_RUINS",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
