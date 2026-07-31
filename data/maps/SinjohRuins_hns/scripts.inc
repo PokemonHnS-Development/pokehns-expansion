@@ -13,6 +13,7 @@ SinjohRuins_hns_OnTransition::
     call_if_eq VAR_SINJOH_STORYLINE, 10, SinjohRuins_StevenLanding
     call_if_eq VAR_SINJOH_STORYLINE, 11, SinjohRuins_StevenLanding
     call_if_eq VAR_SINJOH_STORYLINE, 12, SinjohRuins_StevenLanding
+    callnative SetTimeBasedEncounters
 	end
 
 SinjohRuins_StevenLanding::

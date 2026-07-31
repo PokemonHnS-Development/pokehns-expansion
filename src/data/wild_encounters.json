@@ -72685,6 +72685,105 @@
               }
             ]
           }
+        },
+        {
+          "map": "MAP_SINJOH_RUINS_HNS",
+          "base_label": "gSinjohRuins_hns_Night",
+          "land_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 45,
+                "max_level": 60,
+                "species": "SPECIES_HOUNDOUR"
+              },
+              {
+                "min_level": 45,
+                "max_level": 60,
+                "species": "SPECIES_STANTLER"
+              },
+              {
+                "min_level": 45,
+                "max_level": 60,
+                "species": "SPECIES_MISDREAVUS"
+              },
+              {
+                "min_level": 45,
+                "max_level": 66,
+                "species": "SPECIES_MISMAGIUS"
+              },
+              {
+                "min_level": 45,
+                "max_level": 60,
+                "species": "SPECIES_HAUNTER"
+              },
+              {
+                "min_level": 45,
+                "max_level": 60,
+                "species": "SPECIES_URSARING"
+              },
+              {
+                "min_level": 45,
+                "max_level": 60,
+                "species": "SPECIES_DUSKULL"
+              },
+              {
+                "min_level": 45,
+                "max_level": 60,
+                "species": "SPECIES_SHUPPET"
+              },
+              {
+                "min_level": 45,
+                "max_level": 60,
+                "species": "SPECIES_CHIMECHO"
+              },
+              {
+                "min_level": 45,
+                "max_level": 60,
+                "species": "SPECIES_HOUNDOOM"
+              },
+              {
+                "min_level": 45,
+                "max_level": 70,
+                "species": "SPECIES_CHIMECHO"
+              },
+              {
+                "min_level": 45,
+                "max_level": 70,
+                "species": "SPECIES_HOUNDOOM"
+              }
+            ]
+          },
+          "rock_smash_mons": {
+            "encounter_rate": 60,
+            "mons": [
+              {
+                "min_level": 45,
+                "max_level": 50,
+                "species": "SPECIES_GEODUDE"
+              },
+              {
+                "min_level": 45,
+                "max_level": 50,
+                "species": "SPECIES_GRAVELER"
+              },
+              {
+                "min_level": 45,
+                "max_level": 50,
+                "species": "SPECIES_NOSEPASS"
+              },
+              {
+                "min_level": 45,
+                "max_level": 50,
+                "species": "SPECIES_BALTOY"
+              },
+              {
+                "min_level": 45,
+                "max_level": 50,
+                "species": "SPECIES_BALTOY"
+              }
+            ]
+          }
         }
       ]
     },
