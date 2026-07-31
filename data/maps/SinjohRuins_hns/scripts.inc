@@ -10,6 +10,9 @@ SinjohRuins_OnFrame::
 
 SinjohRuins_hns_OnTransition::
     call_if_eq VAR_SINJOH_STORYLINE, 9, SinjohRuins_StevenLanding
+    call_if_eq VAR_SINJOH_STORYLINE, 10, SinjohRuins_StevenLanding
+    call_if_eq VAR_SINJOH_STORYLINE, 11, SinjohRuins_StevenLanding
+    call_if_eq VAR_SINJOH_STORYLINE, 12, SinjohRuins_StevenLanding
 	end
 
 SinjohRuins_StevenLanding::
@@ -246,11 +249,7 @@ SinjohRuins_EventScript_TriggerStevenBattleRight::
     msgbox SinjohRuins_Text_StevenReadytoBattle, MSGBOX_YESNO
     goto_if_eq VAR_RESULT, FALSE, SinjohRuins_EventScript_TriggerPlayerLeaveRight
     call SinjohRuins_EventScript_StevenBattle
-    applymovement LOCALID_SINJOHRUINS_STEVEN, SinjohRuins_Movement_StevenLeaveRight
-    waitmovement 0
-    removeobject LOCALID_SINJOHRUINS_STEVEN
     setvar VAR_SINJOH_STORYLINE, 10
-    clearflag FLAG_HIDE_SINJOHRUINS_LAB_STEVEN
     release
     end
 SinjohRuins_EventScript_TriggerPlayerLeaveRight::
@@ -265,11 +264,7 @@ SinjohRuins_EventScript_TriggerStevenBattleLeft::
     msgbox SinjohRuins_Text_StevenReadytoBattle, MSGBOX_YESNO
     goto_if_eq VAR_RESULT, FALSE, SinjohRuins_EventScript_TriggerPlayerLeaveLeft
     call SinjohRuins_EventScript_StevenBattle
-    applymovement LOCALID_SINJOHRUINS_STEVEN, SinjohRuins_Movement_StevenLeaveLeft
-    waitmovement 0
-    removeobject LOCALID_SINJOHRUINS_STEVEN
     setvar VAR_SINJOH_STORYLINE, 10
-    clearflag FLAG_HIDE_SINJOHRUINS_LAB_STEVEN
     release
     end
 SinjohRuins_EventScript_TriggerPlayerLeaveLeft::
@@ -318,13 +313,12 @@ SinjohRuins_EventScript_StevenBattle::
     return
 
 SinjohRuins_Text_StevenAfterPlate:
-    .string "Good luck, {PLAYER}\p"
-    .string "I'll keep an eye on things\n"
-    .string "at the lab.$"
+    .string "STEVEN: Good luck, {PLAYER}\p"
+    .string "Go on, I'm right behind you.$"
 
 SinjohRuins_Text_StevenAfterBattle:
-	.string "To think, another trainer would\n"
-	.string "defeat me like this.\p"
+	.string "STEVEN: To think, another trainer \n"
+	.string "would defeat me like this.\p"
     .string "Incredible.\p"
 	.string "Take this, it's the final plate.$"
 
@@ -344,6 +338,10 @@ SinjohRuins_Text_ChallengeSteven:
 SinjohRuins_Text_StevenDefeat:
 	.string "You...\n"
 	.string "You are ready.$"
+
+SinjohRuins_EventScript_Steven::
+    msgbox SinjohRuins_Text_StevenAfterPlate, MSGBOX_NPC
+    end
 
 SinjohRuins_EventScript_Sign::
     msgbox SinjohRuins_Text_Sign, MSGBOX_SIGN

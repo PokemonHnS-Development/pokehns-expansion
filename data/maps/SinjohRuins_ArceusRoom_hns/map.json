@@ -25,8 +25,22 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "SinjohRuins_ArceusRoom_EventScript_Arceus",
       "flag": "FLAG_HIDE_SINJOHRUINS_ARCEUSROOM_ARCEUS"
+    },
+    {
+      "local_id": "LOCALID_SINJOHRUINS_ARCEUSROOM_STEVEN",
+      "graphics_id": "OBJ_EVENT_GFX_STEVEN_HNS",
+      "x": 18,
+      "y": 33,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_SINJOHRUINS_ARCEUSROOM_STEVEN"
     }
   ],
   "warp_events": [
@@ -46,7 +60,7 @@
       "elevation": 0,
       "var": "VAR_SINJOH_STORYLINE",
       "var_value": "10",
-      "script": "SinjohRuins_ArceusRoom_Trigger"
+      "script": "SinjohRuins_ArceusRoom_TriggerLeft"
     },
     {
       "type": "trigger",
@@ -55,7 +69,7 @@
       "elevation": 0,
       "var": "VAR_SINJOH_STORYLINE",
       "var_value": "10",
-      "script": "SinjohRuins_ArceusRoom_Trigger"
+      "script": "SinjohRuins_ArceusRoom_TriggerMid"
     },
     {
       "type": "trigger",
@@ -64,7 +78,16 @@
       "elevation": 0,
       "var": "VAR_SINJOH_STORYLINE",
       "var_value": "10",
-      "script": "SinjohRuins_ArceusRoom_Trigger"
+      "script": "SinjohRuins_ArceusRoom_TriggerRight"
+    },
+    {
+      "type": "trigger",
+      "x": 18,
+      "y": 27,
+      "elevation": 0,
+      "var": "VAR_SINJOH_STORYLINE",
+      "var_value": "12",
+      "script": "SinjohRuins_ArceusRoom_TriggerSteven"
     }
   ],
   "bg_events": [],

@@ -31,6 +31,15 @@ NewSinjoh_EventScript_PetStantler::
 NewSinjoh_Text_Stantler_Cry:
     .string "Lerrrrr!$"
 
+NewSinjoh_EventScript_Steven::
+	msgbox NewSinjoh_Text_Steven, MSGBOX_AUTOCLOSE
+	end
+
+NewSinjoh_Text_Steven:
+	.string "STEVEN: Ma'am, may I help you to\n"
+	.string "the spring over there?\p"
+	.string "It seems there is plenty of room.$"
+
 NewSinjoh_MilkMan_EventScript_Seller::
 	lock
 	faceplayer
@@ -176,13 +185,21 @@ NewSinjoh_Text_Josh:
 	.string "I'm gonna tell all my friends!$"
 
 NewSinjoh_EventScript_Janice::
+	goto_if_ge VAR_SINJOH_STORYLINE, 13, NewSinjoh_EventScript_JaniceAfter
 	msgbox NewSinjoh_Text_Janice, MSGBOX_NPC
+	end
+NewSinjoh_EventScript_JaniceAfter::
+	msgbox NewSinjoh_Text_JaniceAfter, MSGBOX_NPC
 	end
 
 NewSinjoh_Text_Janice:
 	.string "These springs are magical,\n"
 	.string "but I feel like the locals\l"
 	.string "are giving us dirty looks.$"
+NewSinjoh_Text_JaniceAfter:
+	.string "These springs are magical,\n"
+	.string "and the locals are so kind\l"
+	.string "when you get to know them!$"
 
 NewSinjoh_EventScript_OldLady1::
 	msgbox NewSinjoh_Text_OldLady1, MSGBOX_NPC
@@ -194,7 +211,11 @@ NewSinjoh_Text_OldLady1:
 	.string "this old soul.$"
 
 NewSinjoh_EventScript_OldLady2::
+	goto_if_ge VAR_SINJOH_STORYLINE, 13, NewSinjoh_EventScript_OldLady2Steven
 	msgbox NewSinjoh_Text_OldLady2, MSGBOX_NPC
+	end
+NewSinjoh_EventScript_OldLady2Steven::
+	msgbox NewSinjoh_Text_OldLady2Steven, MSGBOX_NPC
 	end
 
 NewSinjoh_Text_OldLady2:
@@ -202,9 +223,17 @@ NewSinjoh_Text_OldLady2:
 	.string "are hogging our hot springs!\p"
 	.string "It's been one bad thing after\n"
 	.string "another lately!$"
+NewSinjoh_Text_OldLady2Steven:
+	.string "What a handsome young man!\p"
+	.string "Maybe these tourists aren't\n"
+	.string "so bad after all.$"
 
 NewSinjoh_EventScript_OldLady3::
+	goto_if_ge VAR_SINJOH_STORYLINE, 13, NewSinjoh_EventScript_OldLady3After
 	msgbox NewSinjoh_Text_OldLady3, MSGBOX_NPC
+	end
+NewSinjoh_EventScript_OldLady3After::
+	msgbox NewSinjoh_Text_OldLady3After, MSGBOX_NPC
 	end
 
 NewSinjoh_Text_OldLady3:
@@ -214,10 +243,17 @@ NewSinjoh_Text_OldLady3:
 	.string "in the springs. \p"
 	.string "There is plenty of space\n"
 	.string "for everyone.$"
-
+NewSinjoh_Text_OldLady3After:
+	.string "It seems everybody is getting\n"
+	.string "used to each other around here.\p"
+	.string "Good!$"
 
 NewSinjoh_EventScript_SpringsSage::
+	goto_if_ge VAR_SINJOH_STORYLINE, 13, NewSinjoh_EventScript_SpringsSageAfter
 	msgbox NewSinjoh_Text_SpringsSage, MSGBOX_NPC
+	end
+NewSinjoh_EventScript_SpringsSageAfter::
+	msgbox NewSinjoh_Text_SpringsSageAfter, MSGBOX_NPC
 	end
 
 NewSinjoh_Text_SpringsSage:
@@ -229,6 +265,10 @@ NewSinjoh_Text_SpringsSage:
 	.string "been disturbed.\p"
 	.string "Please be kind to locals and\n"
 	.string "tourists alike.$"
+NewSinjoh_Text_SpringsSageAfter:
+	.string "Things have been better since\n"
+	.string "the legendary POKéMON were quelled.\p"
+	.string "Balance has returned to SINJOH.$"
 
 NewSinjoh_EventScript_Sage2::
 	msgbox NewSinjoh_Text_Sage2, MSGBOX_NPC
@@ -264,7 +304,6 @@ NewSinjoh_Text_Mother:
 	.string "never used it until the newcomers\l"
 	.string "arrived.$"
 
-
 NewSinjoh_EventScript_Welcome_Sign::
 	msgbox NewSinjoh_Text_Welcome_Sign, MSGBOX_SIGN
 	end
@@ -280,7 +319,11 @@ NewSinjoh_Text_Resturant_Sign:
 	.string "FAMILY CAFE$"
 
 NewSinjoh_EventScript_Hiker::
+	goto_if_ge VAR_SINJOH_STORYLINE, 13, NewSinjoh_EventScript_HikerAfter
 	msgbox NewSinjoh_Text_Hiker, MSGBOX_NPC
+	end
+NewSinjoh_EventScript_HikerAfter::
+	msgbox NewSinjoh_Text_HikerAfter, MSGBOX_NPC
 	end
 
 NewSinjoh_Text_Hiker:
@@ -288,13 +331,23 @@ NewSinjoh_Text_Hiker:
 	.string "But prices have gone up since\l"
 	.string "the city folk became interested\l"
 	.string "in our little town.$"
+NewSinjoh_Text_HikerAfter:
+	.string "Business is booming!\p"
+	.string "And with how much that silver haried\n"
+	.string "guy tips, prices have come down!$"
 
 NewSinjoh_EventScript_OldLady4::
+	goto_if_ge VAR_SINJOH_STORYLINE, 13, NewSinjoh_EventScript_OldLady4After
 	msgbox NewSinjoh_Text_OldLady4, MSGBOX_NPC
+	end
+NewSinjoh_EventScript_OldLady4After::
+	msgbox NewSinjoh_Text_OldLady4After, MSGBOX_NPC
 	end
 
 NewSinjoh_Text_OldLady4:
 	.string "I only sell to locals!$"
+NewSinjoh_Text_OldLady4After:
+	.string "I STILL only sell to locals!$"
 
 NewSinjoh_EventScript_Item_DuskBall::
 	finditem ITEM_DUSK_BALL
