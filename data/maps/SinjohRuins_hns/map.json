@@ -243,7 +243,7 @@
       "flag": "FLAG_NIGHT_POKEMON"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_HOUNOOM",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_HOUNDOOM",
       "x": 43,
       "y": 37,
       "elevation": 0,

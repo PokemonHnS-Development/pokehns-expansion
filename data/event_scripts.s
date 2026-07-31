@@ -1064,6 +1064,8 @@ EventScript_WhiteOut::
 	call EverGrandeCity_HallOfFame_EventScript_ResetEliteFour
 .if IS_HNS
 	clearflag FLAG_NO_WILD_CATCHING
+	clearflag FLAG_NO_WILD_RUNNING
+	clearflag FLAG_SMART_WILD_AI
 	clearflag FLAG_NO_SHINY
 .endif
 	goto EventScript_ResetMrBriney

@@ -155,6 +155,7 @@ Alola_Akala_TotemBattle::
 	setflag FLAG_NO_WILD_CATCHING
 	setflag FLAG_NO_WILD_RUNNING
 	setflag FLAG_SMART_WILD_AI
+	setflag FLAG_NO_SHINY
 	dowildbattle
 	specialvar VAR_RESULT, GetBattleOutcome
 	compare VAR_RESULT, B_OUTCOME_WON
@@ -172,6 +173,7 @@ Alola_Akala_TotemBattle_1:
 	setflag FLAG_NO_WILD_CATCHING
 	setflag FLAG_NO_WILD_RUNNING
 	setflag FLAG_SMART_WILD_AI
+	setflag FLAG_NO_SHINY
 	dowildbattle
 	specialvar VAR_RESULT, GetBattleOutcome
 	compare VAR_RESULT, B_OUTCOME_WON
@@ -186,6 +188,7 @@ Alola_Akala_TotemBattle_4:
 	clearflag FLAG_NO_WILD_CATCHING
 	clearflag FLAG_NO_WILD_RUNNING
 	clearflag FLAG_SMART_WILD_AI
+	clearflag FLAG_NO_SHINY
 	release
 	end
 
@@ -197,6 +200,7 @@ Alola_Akala_TotemBattle_7:
 	clearflag FLAG_NO_WILD_CATCHING
 	clearflag FLAG_NO_WILD_RUNNING
 	clearflag FLAG_SMART_WILD_AI
+	clearflag FLAG_NO_SHINY
 	release
 	end
 
@@ -204,6 +208,7 @@ Alola_Akala_TotemBattle_9:
 	clearflag FLAG_NO_WILD_CATCHING
 	clearflag FLAG_NO_WILD_RUNNING
 	clearflag FLAG_SMART_WILD_AI
+	clearflag FLAG_NO_SHINY
 	release
 	end
 

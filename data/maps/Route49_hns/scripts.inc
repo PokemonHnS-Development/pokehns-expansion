@@ -91,73 +91,6 @@ Route49_EventScript_Item_Lure::
     finditem ITEM_LURE
     end
 
-Route49_EventScript_Electrode::
-	lock
-	faceplayer
-	setwildbossbattle species=SPECIES_ELECTRODE_HISUI, level=80, item=ITEM_ZAP_PLATE, move1_1=MOVE_ELECTRO_BALL, move1_2=MOVE_ENERGY_BALL, move1_3=MOVE_STUN_SPORE move1_4=MOVE_CHARGE
-	waitse
-	playmoncry SPECIES_ELECTRODE, CRY_MODE_ENCOUNTER
-	msgbox Route49_Text_Bzzzt MSGBOX_DEFAULT
-	waitmessage
-	waitmoncry
-	delay 10
-    setweather WEATHER_RAIN_THUNDERSTORM
-    doweather
-    delay 10
-    playse SE_THUNDER
-    fadescreen FADE_TO_WHITE
-    fadescreen FADE_FROM_WHITE
-	waitbuttonpress
-	setflag FLAG_SYS_CTRL_OBJ_DELETE
-	special BattleSetup_StartLegendaryBattle
-	settotemboost B_POSITION_OPPONENT_LEFT, 0, 0, 3, 2, 0, 0
-	playbgm MUS_HG_VS_SUICUNE, 0
-	waitstate
-	clearflag FLAG_SYS_CTRL_OBJ_DELETE
-	specialvar VAR_RESULT, GetBattleOutcome
-	goto_if_eq VAR_RESULT, B_OUTCOME_WON, Route49_EventScript_DefeatedElectrode
-	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, Route49_EventScript_RanFromElectrode
-	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, Route49_EventScript_RanFromElectrode
-	fadescreen FADE_TO_BLACK
-	@removeobject LOCALID_NOBLE_ELECTRODE
-    setweather WEATHER_SNOW
-    doweather
-	fadescreen FADE_FROM_BLACK
-    DELAY 30
-	playse SE_PIN
-	applymovement LOCALID_PLAYER, Common_Movement_QuestionMark
-	msgbox Route49_Text_ZapPlate
-	giveitem ITEM_ZAP_PLATE, 1
-	addvar VAR_PLATECOUNTER, 1
-	@addvar VAR_NOBLECOUNTER, 1
-	release
-	end
-
-Route49_EventScript_DefeatedElectrode::
-	fadescreen FADE_TO_BLACK
-	@removeobject LOCALID_NOBLE_ELECTRODE
-    setweather WEATHER_SNOW
-    doweather
-	fadescreen FADE_FROM_BLACK
-    delay 30
-	playse SE_PIN
-	applymovement LOCALID_PLAYER, Common_Movement_QuestionMark
-	msgbox Route49_Text_ZapPlate
-	giveitem ITEM_ZAP_PLATE, 1
-	addvar VAR_PLATECOUNTER, 1
-	@addvar VAR_NOBLECOUNTER, 1
-	end
-
-Route49_EventScript_RanFromElectrode::
-	setvar VAR_0x8004, SPECIES_ELECTRODE_HISUI
-	end
-
-Route49_Text_Bzzzt:
-    .string "Bzzz Bzzzt!!$"
-
-Route49_Text_ZapPlate:
-    .string "It seems ELECTRODE left something behind..$"
-
 Route49_EventScript_Sign::
     msgbox Route49_Text_Sign, MSGBOX_SIGN
     end
@@ -165,3 +98,102 @@ Route49_EventScript_Sign::
 Route49_Text_Sign:
     .string "The sign is faded.\n"
     .string "ROUTE 49$"
+
+Route49_EventScript_ActivateOverqwil::
+    lock
+    setobjectxyperm LOCALID_ROUTE49_NOBLE_OVERQWIL, 48, 42
+    playse SE_M_DETECT
+	getplayerxy VAR_TEMP_1, VAR_TEMP_2
+	dofieldeffectsparkle VAR_TEMP_1, VAR_TEMP_2, 0
+	waitfieldeffect FLDEFF_SPARKLE
+    playse SE_PIN
+    applymovement2 LOCALID_PLAYER, Common_Movement_ExclamationMark
+    delay 60
+    msgbox SinjohRuins_Lab_Text_PlayFlute, MSGBOX_YESNO
+    goto_if_eq VAR_RESULT, FALSE, SinjohRuins_Lab_EventScript_NoOp
+    playbgm MUS_DP_AZURE_FLUTE, FALSE
+    delay 200
+    fadedefaultbgm
+    addobject LOCALID_ROUTE49_NOBLE_OVERQWIL
+    clearflag FLAG_HIDE_ROUTE49_NOBLE_OVERQWIL
+    applymovement2 LOCALID_ROUTE49_NOBLE_OVERQWIL, Route49_Movement_OverqwilEntrance1
+    delay 10
+    playmoncry SPECIES_WEAVILE, CRY_MODE_NORMAL
+    waitmoncry
+    playmoncry SPECIES_WEAVILE, CRY_MODE_NORMAL
+    waitmoncry
+    waitmovement 0
+    applymovement2 LOCALID_ROUTE49_NOBLE_OVERQWIL, Route49_Movement_OverqwilEntrance2
+    delay 10
+    playse SE_LEDGE
+    delay 20
+	waitmovement 0
+    setvar VAR_0x8004, 1  @ vertical pan
+	setvar VAR_0x8005, 1  @ horizontal pan
+	setvar VAR_0x8006, 5  @ num shakes
+	setvar VAR_0x8007, 2  @ shake delay
+	special ShakeCamera
+    setobjectxyperm LOCALID_ROUTE49_NOBLE_OVERQWIL, 48, 44
+    setvar VAR_NOBLE_OVERQWIL, 2
+    release
+    end
+
+Route49_Movement_OverqwilEntrance1:
+    walk_in_place_fast_down
+    jump_in_place_down
+    jump_in_place_down
+    jump_in_place_down
+    jump_in_place_down
+	step_end
+
+Route49_Movement_OverqwilEntrance2:
+	walk_slow_down
+	walk_slow_down
+    walk_in_place_slow_down
+	walk_in_place_slow_down
+	jump_in_place_down
+	step_end
+
+
+Route49_EventScript_Overqwil::
+	lock
+	faceplayer
+	playmoncry SPECIES_OVERQWIL, CRY_MODE_ENCOUNTER
+	waitmoncry
+	setwildbossbattle species=SPECIES_OVERQWIL, level=80, item=ITEM_BLACK_SLUDGE, move1_1=MOVE_BARB_BARRAGE, move1_2=MOVE_LIQUIDATION, move1_3=MOVE_TOXIC_SPIKES move1_4=MOVE_CURSE
+	settotemboost B_POSITION_OPPONENT_LEFT, 0, 2, 0, 0, 3, 0
+	setflag FLAG_NO_WILD_CATCHING
+	setflag FLAG_NO_WILD_RUNNING
+	setflag FLAG_SMART_WILD_AI
+	setflag FLAG_NO_SHINY
+    dowildbattle
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, Route49_EventScript_OverqwilRan
+    bufferspeciesname STR_VAR_1, SPECIES_OVERQWIL
+    msgbox SinjohRuins_Lab_Text_DropedItem, MSGBOX_DEFAULT
+    giveitem ITEM_DREAD_PLATE
+    addvar VAR_PLATECOUNTER, 1
+	fadescreenswapbuffers FADE_TO_BLACK
+	removeobject LOCALID_ROUTE49_NOBLE_OVERQWIL
+	setflag FLAG_HIDE_ROUTE49_NOBLE_OVERQWIL
+	fadescreenswapbuffers FADE_FROM_BLACK
+    call_if_eq VAR_PLATECOUNTER, 3, SinjohRuins_Lab_EventScript_3Plates
+    call_if_eq VAR_PLATECOUNTER, 6, SinjohRuins_Lab_EventScript_6Plates
+    call_if_eq VAR_PLATECOUNTER, 9, SinjohRuins_Lab_EventScript_9Plates
+    call_if_eq VAR_PLATECOUNTER, 12, SinjohRuins_Lab_EventScript_12Plates
+    call_if_eq VAR_PLATECOUNTER, 15, SinjohRuins_Lab_EventScript_15Plates
+    call_if_eq VAR_PLATECOUNTER, 16, SinjohRuins_Lab_EventScript_16Plates
+	clearflag FLAG_NO_WILD_CATCHING
+	clearflag FLAG_NO_WILD_RUNNING
+	clearflag FLAG_SMART_WILD_AI
+	clearflag FLAG_NO_SHINY
+	release
+	end
+
+Route49_EventScript_OverqwilRan::
+	clearflag FLAG_NO_WILD_CATCHING
+	clearflag FLAG_NO_WILD_RUNNING
+	clearflag FLAG_SMART_WILD_AI
+	clearflag FLAG_NO_SHINY
+	release
+	end

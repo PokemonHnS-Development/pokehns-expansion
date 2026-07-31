@@ -75,6 +75,10 @@ Snowswept_Cavern_EventScript_Sneasler::
 	waitmoncry
 	setwildbossbattle species=SPECIES_SNEASLER, level=80, item=ITEM_RAZOR_CLAW, move1_1=MOVE_DIRE_CLAW, move1_2=MOVE_ROCK_SLIDE, move1_3=MOVE_BRICK_BREAK move1_4=MOVE_LASH_OUT
 	settotemboost B_POSITION_OPPONENT_LEFT, 1, 0, 2, 0, 0, 0
+	setflag FLAG_NO_WILD_CATCHING
+	setflag FLAG_NO_WILD_RUNNING
+	setflag FLAG_SMART_WILD_AI
+	setflag FLAG_NO_SHINY
     dowildbattle
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, Snowswept_Cavern_EventScript_SneaslerRan
@@ -92,10 +96,18 @@ Snowswept_Cavern_EventScript_Sneasler::
     call_if_eq VAR_PLATECOUNTER, 12, SinjohRuins_Lab_EventScript_12Plates
     call_if_eq VAR_PLATECOUNTER, 15, SinjohRuins_Lab_EventScript_15Plates
     call_if_eq VAR_PLATECOUNTER, 16, SinjohRuins_Lab_EventScript_16Plates
+	clearflag FLAG_NO_WILD_CATCHING
+	clearflag FLAG_NO_WILD_RUNNING
+	clearflag FLAG_SMART_WILD_AI
+	clearflag FLAG_NO_SHINY
 	release
 	end
 
 Snowswept_Cavern_EventScript_SneaslerRan::
+	clearflag FLAG_NO_WILD_CATCHING
+	clearflag FLAG_NO_WILD_RUNNING
+	clearflag FLAG_SMART_WILD_AI
+	clearflag FLAG_NO_SHINY
 	release
 	end
 
