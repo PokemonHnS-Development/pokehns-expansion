@@ -611,13 +611,15 @@ SinjohRuins_EventScript_Notes7::
 
 SinjohRuins_Notes1_Text:
     .string "Research Log 1: Discovery Day.\p"
-	.string "We've received reports of\n"
-	.string "a large structure deep under\l"
-	.string "the snow, north of Mt.Silver.\p"
-	.string "Once we obtain clearence\n"
-	.string "from the league, I am hopeful\l"
-	.string "that the excavation team\l"
-	.string "will be allowed through the mountain..$"
+	.string "We've arrive at the location\n"
+	.string "of the ruins.\p"
+	.string "The harsh cold of Mt.Silver\n"
+	.string "can be felt from all the way\l"
+	.string "down here...\p"
+	.string "Soon the main excavation team\n"
+	.string "will make it through the mountain..\l"
+	.string "I cannot wait to see what waits for us\l"
+	.string "underneath our feet!$"
 
 SinjohRuins_Notes2_Text:
     .string "Research Log 2: Too Much Ice.\p"
@@ -652,8 +654,8 @@ SinjohRuins_EventScript_BetterStop::
 
 SinjohRuins_BetterStop_Text:
     .string "Seems like the author keeps\n"
-	.string "going for awhile...\l"
-	.string "Better take a break and come\l"
+	.string "going for awhile...\p"
+	.string "Better take a break and come\n"
 	.string "back later.$"
 
 SinjohRuins_Notes3_Text:
@@ -663,8 +665,8 @@ SinjohRuins_Notes3_Text:
 	.string "30 specimens from the HOENN\l"
 	.string "and SINNOH reigons to help deal\l"
 	.string "with our big issue...\p"
-	.string "I will update once I figure\n"
-	.string "out how to get them this far north..$"
+	.string "I will update once I figure out\n"
+	.string "how to get them transfered over..$"
 
 
 SinjohRuins_Notes4_Text:
@@ -680,7 +682,7 @@ SinjohRuins_Notes4_Text:
 	.string "the ancient Celestica peoples...\p"
 	.string "Once we confirm the stability of the\n"
 	.string "building, Boss wants to\l"
-	.string "open it up...$"
+	.string "open it up as soon as possible...$"
 
 
 SinjohRuins_Notes5_Text:
@@ -740,7 +742,7 @@ SinjohRuins_Notes7_Text:
 	.string "Nightmare and My Failure.\p"
 	.string "It's all over, my carrier and my life.\n"
 	.string "I accidently let nearly all of them out\l"
-	.string "into the wild near Mt.Silver..\p"
+	.string "into the wild near New Sinjoh..\p"
 	.string "I tried to catch them all before it\n"
 	.string "was too late but they completely\l"
 	.string "swept my team!\p"
@@ -748,9 +750,12 @@ SinjohRuins_Notes7_Text:
 	.string "for causing damage to the local\l"
 	.string "ecosystem...\p"
 	.string "Tonight I'm making my\n"
-	.string "escape to the village\l"
-	.string "in the south, to my fellow\l"
-	.string "collegues, I am deeply sorry...$"
+	.string "escape to New Sinjoh....\l"
+	.string "I hear there's an abandoned home\l"
+	.string "in the area...\l"
+	.string "I'll take shelter there..\p"
+	.string "To my fellow collegues,\n"
+	.string "I am deeply sorry...$"
 
 
 SinjohRuins_EventScript_DisplayCase::
