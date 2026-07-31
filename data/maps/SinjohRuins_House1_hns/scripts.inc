@@ -561,57 +561,34 @@ SinjohRuins_Lab_Text_HikerDuringAfter:
 	.string "out, at least.$"
 
 @ENVIRONMENT
-SinjohRuins_EventScript_Notes1::
-    lock
-	msgbox SinjohRuins_Notes1_Text MSGBOX_DEFAULT
-	release
+SinjohRuins_Lab_EventScript_Notes1::
+	msgbox SinjohRuins_Lab_Text_Note1 MSGBOX_SIGN
+	end
+SinjohRuins_Lab_EventScript_Notes2::
+	msgbox SinjohRuins_Lab_Text_Note2 MSGBOX_SIGN
+	end
+SinjohRuins_Lab_EventScript_Notes3::
+	msgbox SinjohRuins_Lab_Text_Note3 MSGBOX_SIGN
+	end
+SinjohRuins_Lab_EventScript_Notes4::
+	msgbox SinjohRuins_Lab_Text_Note4 MSGBOX_SIGN
+	end
+SinjohRuins_Lab_EventScript_Notes5::
+	msgbox SinjohRuins_Lab_Text_Note5 MSGBOX_SIGN
+	end
+SinjohRuins_Lab_EventScript_Notes6::
+	msgbox SinjohRuins_Lab_Text_Note6 MSGBOX_SIGN
+	end
+SinjohRuins_Lab_EventScript_Notes7::
+	msgbox SinjohRuins_Lab_Text_Note7 MSGBOX_SIGN
+	end
+SinjohRuins_Lab_EventScript_Notes8::
+	msgbox SinjohRuins_Lab_Text_Note8 MSGBOX_SIGN
 	end
 
-SinjohRuins_EventScript_Notes2::
-    lock
-	msgbox SinjohRuins_Notes2_Text MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, FALSE, SinjohRuins_EventScript_BetterStop
-	msgbox SinjohRuins_Notes2_Part2_Text MSGBOX_DEFAULT
-	release
-	end
-
-SinjohRuins_EventScript_Notes3::
-    lock
-	msgbox SinjohRuins_Notes3_Text MSGBOX_DEFAULT
-	release
-	end
-
-SinjohRuins_EventScript_Notes4::
-    lock
-	msgbox SinjohRuins_Notes4_Text MSGBOX_DEFAULT
-	release
-	end
-
-SinjohRuins_EventScript_Notes5::
-    lock
-	msgbox SinjohRuins_Notes5_Text MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, FALSE, SinjohRuins_EventScript_BetterStop
-	msgbox SinjohRuins_Notes5_Part2_Text MSGBOX_DEFAULT
-	release
-	end
-
-SinjohRuins_EventScript_Notes6::
-    lock
-	msgbox SinjohRuins_Notes6_Text MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, FALSE, SinjohRuins_EventScript_BetterStop
-	msgbox SinjohRuins_Notes6_Part2_Text MSGBOX_DEFAULT
-	release
-	end
-
-SinjohRuins_EventScript_Notes7::
-    lock
-	msgbox SinjohRuins_Notes7_Text MSGBOX_DEFAULT
-	release
-	end
-
-SinjohRuins_Notes1_Text:
-    .string "Research Log 1: Discovery Day.\p"
-	.string "We've arrive at the location\n"
+SinjohRuins_Lab_Text_Note1:
+    .string "Research Log 1: May 3, 1965\p"
+	.string "We've arrived at the location\n"
 	.string "of the ruins.\p"
 	.string "The harsh cold of Mt.Silver\n"
 	.string "can be felt from all the way\l"
@@ -621,149 +598,127 @@ SinjohRuins_Notes1_Text:
 	.string "I cannot wait to see what waits for us\l"
 	.string "underneath our feet!$"
 
-SinjohRuins_Notes2_Text:
-    .string "Research Log 2: Too Much Ice.\p"
-	.string "It's been one week since the\n"
-	.string "group of muscle men we've hired\l"
-	.string "started digging...and they've\l"
-	.string "already hit a major issue.\p"
-	.string "Ice. And a lot of it.\n"
-	.string "This doesn't seem to be\l"
-	.string "normal ice either, not even\l"
-	.string "a MACHAMP was able to break it.\p"
-	.string ".........\n"
-	.string "Keep reading?$"
+SinjohRuins_Lab_Text_Note2:
+    .string "Research Log 2:  May 10, 1965\p"
+	.string "A week of digging has yielded\n"
+	.string "no result whatsoever.\p"
+	.string "The ice here is impossibly thick,\n"
+	.string "and the rock just breaks our\l"
+	.string "equipment entirely.\p"
+	.string "Not even MACHAMP was able to\n"
+	.string "make a dent.\p"
+	.string "What is this place?\p"
+	.string "We must find out.$"
 
-SinjohRuins_Notes2_Part2_Text:
-    .string "Research Log 2.5: A Toasty Solution.\p"
-	.string "I've got it! If brute force\n"
-	.string "can't shatter the ice,\l"
-	.string "then what if we slowly melt it down?\p"
-	.string "The Boss' family exclusively raises\n"
-	.string "FIRE type POKEMON, if I could convice\l"
-	.string "them to lend me a couple dozen\l"
-	.string "diffrent species then maybe...\p"
-	.string "........\n"
-	.string "It seems the author didn't finish\l"
-	.string "writing this log...$"
+SinjohRuins_Lab_Text_Note3:
+    .string "Research Log 3:  May 14, 1965\p"
+	.string "You don't get ahead in life by\n"
+	.string "standing by and doing nothing.\p"
+	.string "I'm just a worker.\p"
+	.string "But I had an idea of how we could\n"
+	.string "break through the ice.\p"
+	.string "Or rather, melt through it.\p"
+	.string "We need FIRE-TYPE POKéMON and\n"
+	.string "lots of them.\p"
+	.string "But how will we get them here\n"
+	.string "all the way from SINNOH?$"
 
-SinjohRuins_EventScript_BetterStop::
-    msgbox SinjohRuins_BetterStop_Text MSGBOX_DEFAULT
-	release
-	end
-
-SinjohRuins_BetterStop_Text:
-    .string "Seems like the author keeps\n"
-	.string "going for awhile...\p"
-	.string "Better take a break and come\n"
-	.string "back later.$"
-
-SinjohRuins_Notes3_Text:
-    .string "Research Log 3: A Resounding Success!\p"
-	.string "After a very inense call, I somehow\n"
-	.string "managed to convice them to transfer\l"
-	.string "30 specimens from the HOENN\l"
-	.string "and SINNOH reigons to help deal\l"
-	.string "with our big issue...\p"
-	.string "I will update once I figure out\n"
-	.string "how to get them transfered over..$"
-
-
-SinjohRuins_Notes4_Text:
-    .string "Research Log 4: A Major Discovery!\p"
-	.string "Things have been so busy I forgot\n"
-	.string "all about these!\p"
-	.string "After we melted and pumped out\n"
-	.string "most of the ice, several diffrent\l"
-	.string "structures revealed themselves!\p"
-	.string "My first observation of the\n"
-	.string "main structure is that it shares\l"
-	.string "a lot of arcitectual cues from\l"
+SinjohRuins_Lab_Text_Note4:
+    .string "Research Log 4:  May 21, 1965\p"
+	.string "We've been busy.\p"
+	.string "My idea worked to get us through\n"
+	.string "the ice. Only we didn't get the\l"
+	.string "FIRE-TYPEs from back home.\p"
+	.string "The boss insisted we get them locally.\p"
+	.string "We found a hot spring by a nearby\n"
+	.string "village....\p"
+	.string "And we took what we needed...\p"
+	.string "I'm not proud of it. But sacrifices\n"
+	.string "are sometimes required for progress.\p"
+	.string "So, the ice is gone.\p"
+	.string "There are 6 chambers, and a sealed\n"
+	.string "temple in the center.\p"
+	.string "The architecture of the main \n"
+	.string "structure indicates it may be of the\l"
 	.string "the ancient Celestica peoples...\p"
-	.string "Once we confirm the stability of the\n"
-	.string "building, Boss wants to\l"
-	.string "open it up as soon as possible...$"
+	.string "Our ancestors. Before they moved north.\p"
+	.string "The boss wants that temple open as\n"
+	.string "soon as possible...$"
 
+SinjohRuins_Lab_Text_Note5:
+    .string "Research Log 5:  June 2, 1965\p"
+	.string "We managed to get it open...\p"
+	.string "I thought I'd be overjoyed, but...\p"
+	.string "But we lost good men in the blast\n"
+	.string "of energy that sprung from the\l"
+	.string "temple.\p"
+	.string "Not to mention the POKéMON that\n"
+	.string "helped us get it open.\l"
+	.string "God rest their souls...\p"
+	.string "........................\p"
+	.string "Regardless.\p"
+	.string "The temple is open, but we are\n"
+	.string "only left with more questions.\p"
+	.string "There is no legendary POKéMON\n"
+	.string "inside. No treasure.\p"
+	.string "Our funding is starting to run\n"
+	.string "out and we have nothing to show\l"
+	.string "for our efforts...$"
 
-SinjohRuins_Notes5_Text:
-    .string "Research Log 5: The Big Burst.\p"
-	.string "After several attempts, Boss\n"
-	.string "managed to crack the entrance open!\p"
-	.string "However, once he did..a huge wave\n"
-	.string "of energy errupted out from the main\l"
-	.string "hall, not only that but tall\l"
-	.string "beacons of pure light shot up from\l"
-	.string "the ground all over the\l"
-	.string "surrounding areas!\p"
-    .string ".........\n"
-	.string "Keep reading?$"
+SinjohRuins_Lab_Text_Note6:
+  	.string "Research Log 6:  June 10, 1965\p"
+    .string "The expedition is done.\n"
+	.string "The rest of the men are packing up.\p"
+	.string "But I can't.\p"
+	.string "I can't abandon this mission.\n"
+	.string "Not after what we've lost.\p"
+	.string "I'm going to stay behind.$"
 
-SinjohRuins_Notes5_Part2_Text:
-    .string "Research Log 5.5: A Stroke of Luck!\p"
-    .string "A member of our team happened\n"
-	.string "to be conducting an aerial\l"
-	.string "archeological study of the ruins\l"
-	.string "while everything went down!\p"
-	.string "His report he notes that a\n"
-	.string "total of 17 pillars of energy\l"
-	.string "appeared through the local areas...\p"
-	.string "Tomorrow the Boss is going to hold\n"
-	.string "a stratagy meeting on how to\l"
-	.string "procced from here...$"
+SinjohRuins_Lab_Text_Note7:
+  	.string "Research Log 7:  September 10, 1965\p"
+	.string "It's been months since we got\n"
+	.string "here. Since I got here.\p"
+	.string "The rest of the men are gone.\p"
+	.string "Now it's just me and the\n"
+	.string "POKéMON we captured to help us\l"
+	.string "with the work.\p"
+	.string "I've been training them to get\n"
+	.string "stronger.\p"
+	.string "We must find out what's beneath\n"
+	.string "the temple.$"
 
-SinjohRuins_Notes6_Text:
-    .string "Research Log 6: A Frustrating Decision.\p"
-	.string "During the meeting, it was\n"
-	.string "decided that I, Edward, will\l"
-	.string "have to stay back and raise\l"
-	.string "all the fire type POKEMON living\l"
-	.string "with us....\p"
-	.string "The Boss said that since it was\n"
-	.string "my idea to have them brought\l"
-	.string "here, I need to take ownership\l"
-	.string "of them all!\p"
-	.string ".........\n"
-	.string "Keep reading...?$"
-
-SinjohRuins_Notes6_Part2_Text:
-    .string "How utterly preposterous!\p"
-	.string "I did not spend 20 years of my life\n"
-	.string "studying under several diffrent\l"
-	.string "schools just to be downgraded\l"
-	.string "to a daycare worker!!\p"
-	.string "Alas, there is nothing I can do...\p"
-	.string "If I want to see what lies\n"
-	.string "beneath these great halls,\l"
-	.string "I must stick with this work..$"
-
-
-SinjohRuins_Notes7_Text:
-    .string "Research Log 7: An Eceological\n"
-	.string "Nightmare and My Failure.\p"
-	.string "It's all over, my carrier and my life.\n"
-	.string "I accidently let nearly all of them out\l"
-	.string "into the wild near New Sinjoh..\p"
-	.string "I tried to catch them all before it\n"
-	.string "was too late but they completely\l"
-	.string "swept my team!\p"
-	.string "I think tomorrow I might be arrested\n"
-	.string "for causing damage to the local\l"
-	.string "ecosystem...\p"
-	.string "Tonight I'm making my\n"
-	.string "escape to New Sinjoh....\l"
-	.string "I hear there's an abandoned home\l"
-	.string "in the area...\l"
-	.string "I'll take shelter there..\p"
-	.string "To my fellow collegues,\n"
-	.string "I am deeply sorry...$"
-
+SinjohRuins_Lab_Text_Note8:
+  	.string "Research Log 8:  September 15, 1965\p"
+	.string "Failure.\p"
+	.string "......................\p"
+	.string "My POKéMON....\p"
+	.string "Together, all 6 of my POKéMON\n"
+	.string "were able to smash through\n"
+	.string "A false wall in the temple.\p"
+	.string "But it was waiting for us...\p"
+	.string "Something like a giant titan...\p"
+	.string "The energy it released was just\n"
+	.string "like what happened before.\p"
+	.string "They were all destroyed...\p"
+	.string "And worst of all, that beast\n"
+	.string "sealed the wall back up.\p"
+	.string "I can't go home.\n"
+	.string "They won't recognize me anymore...\p"
+	.string "This place has changed me...\p"
+	.string "I'm going to talk with the\n"
+	.string "villagers.\p"
+	.string "They don't know what I've done.\p"
+	.string "Since the other men are long\n"
+	.string "gone, they'll think I'm just a\l"
+	.string "lost hiker.\p"
+	.string "There is no place left for me\n"
+	.string "but here.$"
 
 SinjohRuins_EventScript_DisplayCase::
     lock
 	msgbox SinjohRuins_DisplayCase_Text MSGBOX_DEFAULT
 	release
 	end
-
 
 SinjohRuins_DisplayCase_Text:
     .string "It's a display case neatly\n"
