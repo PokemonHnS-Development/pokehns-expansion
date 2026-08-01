@@ -118,7 +118,8 @@ Snowswept_Cavern_Eventscript_Machamp::
 	faceplayer
 	playmoncry SPECIES_MACHAMP, CRY_MODE_ENCOUNTER
     msgbox Snowswept_Text_Machamp_Cry, MSGBOX_AUTOCLOSE
-	waitmoncry
+	waitmoncry 
+    goto_if_eq VAR_SINJOH_STORYLINE, 6, Snowswept_Cavern_EventScript_MachampDuringQuest
     goto_if_ge VAR_SINJOH_STORYLINE, 3, Snowswept_Cavern_Eventscript_Machamp_AfterBoulder
 	setwildbattle SPECIES_MACHAMP, 60
     setflag FLAG_NO_WILD_CATCHING
@@ -128,7 +129,6 @@ Snowswept_Cavern_Eventscript_Machamp::
 	clearflag FLAG_NO_SHINY
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, Snowswept_Cavern_Eventscript_Machamp_Ran
-
     playmoncry SPECIES_MACHAMP, CRY_MODE_ENCOUNTER
 	applymovement2 LOCALID_SNOWSWEPT_CAVERN_MACHAMP, Snowswept_Machamp_Movement
     waitmovement 0
@@ -163,6 +163,22 @@ Snowswept_Cavern_Eventscript_Machamp_AfterBoulder::
     turnobject LOCALID_SNOWSWEPT_CAVERN_MACHAMP, DIR_SOUTH
 	release
 	end
+
+Snowswept_Cavern_EventScript_MachampDuringQuest::
+    goto_if_unset FLAG_GOT_FIST_PLATE, Snowswept_Cavern_EventScript_MachampGivePlate
+    turnobject LOCALID_SNOWSWEPT_CAVERN_MACHAMP, DIR_SOUTH
+	release
+	end
+Snowswept_Cavern_EventScript_MachampGivePlate:: 
+    bufferspeciesname STR_VAR_1, SPECIES_MACHOKE 
+    msgbox SinjohRuins_Lab_Text_DropedItem, MSGBOX_DEFAULT
+    giveitem ITEM_FIST_PLATE
+    addvar VAR_PLATECOUNTER, 1
+    setflag FLAG_GOT_FIST_PLATE
+    turnobject LOCALID_SNOWSWEPT_CAVERN_MACHAMP, DIR_SOUTH
+	release
+	end
+    
 
 Snowswept_Text_Machamp_Cry:
     .string "Mahh!!$"

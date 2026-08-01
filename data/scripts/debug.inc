@@ -203,7 +203,8 @@ Debug_EventScript_Text_DefensiveIVs:
 	.string "HP IVs: {STR_VAR_1}, DEF IVs: {STR_VAR_2}, SPDEF IVs: {STR_VAR_3}$"
 
 Debug_EventScript_Script_1::
-	setflag FLAG_HIDE_SINJOHRUINS_ARCEUSROOM_STEVEN
+	clearflag FLAG_GOT_FIST_PLATE
+	setvar VAR_SINJOH_STORYLINE, 6
 	release
 	end
 
