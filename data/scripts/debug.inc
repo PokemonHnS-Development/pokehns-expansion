@@ -208,12 +208,12 @@ Debug_EventScript_Script_1::
 	end
 
 Debug_EventScript_Script_2::
-	setvar VAR_NOBLE_OVERQWIL, 1
+	setvar VAR_SINJOH_STORYLINE, 6
 	release
 	end
 
 Debug_EventScript_Script_3::
-	setvar VAR_PLATECOUNTER, 18
+	setvar VAR_SINJOH_STORYLINE, 10
 	release
 	end
 

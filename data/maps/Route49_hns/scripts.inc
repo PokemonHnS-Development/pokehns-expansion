@@ -7,10 +7,52 @@ Route49_hns_OnFrame::
 	.2byte 0
 
 Route49_EventScript_Skylar::
+	goto_if_defeated TRAINER_SKYLAR_HNS, Route49_EventScript_SkylarAfter
 	msgbox Route49_Text_SkylarBefore, MSGBOX_NPC
+	goto_if_not_defeated TRAINER_SKYLAR_HNS, Route49_EventScript_TrySkylarBattle
+	end
+Route49_EventScript_TrySkylarBattle::
+	goto_if_eq VAR_SINJOH_STORYLINE, 6, Route49_EventScript_SkylarBattle
+	end
+Route49_EventScript_SkylarBattle::
+	lock
+	msgbox Route49_Text_SkylarBeforeBattle, MSGBOX_AUTOCLOSE
+	trainerbattle_no_intro TRAINER_SKYLAR_HNS, Route49_Text_SkylarDefeat
+	giveitem ITEM_ICICLE_PLATE
+	addvar VAR_PLATECOUNTER, 1
+	msgbox Route49_Text_SkylarAfter, MSGBOX_AUTOCLOSE
+	call_if_eq VAR_PLATECOUNTER, 3, SinjohRuins_Lab_EventScript_3Plates
+    call_if_eq VAR_PLATECOUNTER, 6, SinjohRuins_Lab_EventScript_6Plates
+    call_if_eq VAR_PLATECOUNTER, 9, SinjohRuins_Lab_EventScript_9Plates
+    call_if_eq VAR_PLATECOUNTER, 12, SinjohRuins_Lab_EventScript_12Plates
+    call_if_eq VAR_PLATECOUNTER, 15, SinjohRuins_Lab_EventScript_15Plates
+    call_if_eq VAR_PLATECOUNTER, 16, SinjohRuins_Lab_EventScript_16Plates
+	release
+	end
+Route49_EventScript_SkylarAfter::
+	msgbox Route49_Text_SkylarAfter, MSGBOX_NPC
 	end
 
-Route49_Text_SkylarBefore::
+Route49_Text_SkylarDefeat:
+	.string "OKAY, you can have the PLATE.$"
+
+Route49_Text_SkylarAfter:
+	.string "As cool as that PLATE is,\n"
+	.string "you earned it fair and square.\p"
+	.string "I'll just buy something at the gift\n"
+	.string "shop instead.$"
+
+Route49_Text_SkylarBeforeBattle:
+	.string "What?\p"
+	.string "You want the PLATE?\n"
+	.string "It's an artifact imbued with an\l"
+	.string "ancient power with a connection\l"
+	.string "to the legendary POKéMON?!\p"
+	.string "Well now I'm definitely keeping it.\p"
+	.string "Fine.\p"
+	.string "You'll just have to battle me for it.$"
+
+Route49_Text_SkylarBefore:
 	.string "When I was hitting the slopes, my\n"
 	.string "skis snagged on something.\p"
 	.string "It was this strange PLATE, cold\n"
