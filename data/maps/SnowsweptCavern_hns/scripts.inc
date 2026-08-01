@@ -21,6 +21,7 @@ Snowswept_Cavern_EventScript_ActivateSneasler::
     applymovement2 LOCALID_PLAYER, Common_Movement_ExclamationMark
     delay 60
     msgbox SinjohRuins_Lab_Text_PlayFlute, MSGBOX_YESNO
+    closemessage
     goto_if_eq VAR_RESULT, FALSE, SinjohRuins_Lab_EventScript_NoOp
     playbgm MUS_DP_AZURE_FLUTE, FALSE
     delay 200

@@ -208,7 +208,7 @@ Debug_EventScript_Script_1::
 	end
 
 Debug_EventScript_Script_2::
-	setvar VAR_SINJOH_STORYLINE, 6
+	setvar VAR_NOBLE_WYRDEER, 1
 	release
 	end
 

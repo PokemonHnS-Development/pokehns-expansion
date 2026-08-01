@@ -176,7 +176,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "Route49_EventScript_Wyrdeer",
       "flag": "FLAG_HIDE_ROUTE49_NOBLE_WYRDEER"
     },
     {
@@ -364,6 +364,42 @@
       "var": "VAR_NOBLE_OVERQWIL",
       "var_value": "1",
       "script": "Route49_EventScript_ActivateOverqwil"
+    },
+    {
+      "type": "trigger",
+      "x": 58,
+      "y": 9,
+      "elevation": 0,
+      "var": "VAR_NOBLE_WYRDEER",
+      "var_value": "1",
+      "script": "Route49_EventScript_ActivateWyrdeerLeft"
+    },
+    {
+      "type": "trigger",
+      "x": 59,
+      "y": 9,
+      "elevation": 0,
+      "var": "VAR_NOBLE_WYRDEER",
+      "var_value": "1",
+      "script": "Route49_EventScript_ActivateWyrdeerLeft"
+    },
+    {
+      "type": "trigger",
+      "x": 64,
+      "y": 8,
+      "elevation": 0,
+      "var": "VAR_NOBLE_WYRDEER",
+      "var_value": "1",
+      "script": "Route49_EventScript_ActivateWyrdeerRight"
+    },
+    {
+      "type": "trigger",
+      "x": 65,
+      "y": 8,
+      "elevation": 0,
+      "var": "VAR_NOBLE_WYRDEER",
+      "var_value": "1",
+      "script": "Route49_EventScript_ActivateWyrdeerRight"
     }
   ],
   "bg_events": [

@@ -152,6 +152,7 @@ Route49_EventScript_ActivateOverqwil::
     applymovement2 LOCALID_PLAYER, Common_Movement_ExclamationMark
     delay 60
     msgbox SinjohRuins_Lab_Text_PlayFlute, MSGBOX_YESNO
+	closemessage
     goto_if_eq VAR_RESULT, FALSE, SinjohRuins_Lab_EventScript_NoOp
     playbgm MUS_DP_AZURE_FLUTE, FALSE
     delay 200
@@ -160,9 +161,9 @@ Route49_EventScript_ActivateOverqwil::
     clearflag FLAG_HIDE_ROUTE49_NOBLE_OVERQWIL
     applymovement2 LOCALID_ROUTE49_NOBLE_OVERQWIL, Route49_Movement_OverqwilEntrance1
     delay 10
-    playmoncry SPECIES_WEAVILE, CRY_MODE_NORMAL
+    playmoncry SPECIES_OVERQWIL, CRY_MODE_NORMAL
     waitmoncry
-    playmoncry SPECIES_WEAVILE, CRY_MODE_NORMAL
+    playmoncry SPECIES_OVERQWIL, CRY_MODE_NORMAL
     waitmoncry
     waitmovement 0
     applymovement2 LOCALID_ROUTE49_NOBLE_OVERQWIL, Route49_Movement_OverqwilEntrance2
@@ -233,6 +234,167 @@ Route49_EventScript_Overqwil::
 	end
 
 Route49_EventScript_OverqwilRan::
+	clearflag FLAG_NO_WILD_CATCHING
+	clearflag FLAG_NO_WILD_RUNNING
+	clearflag FLAG_SMART_WILD_AI
+	clearflag FLAG_NO_SHINY
+	release
+	end
+
+
+Route49_Movement_PlayerWyrdeerRight:
+	walk_left
+	walk_left
+	walk_left
+	walk_up
+	walk_up
+	step_end
+
+Route49_Movement_PlayerWyrdeerLeft:
+	walk_right
+	walk_up
+	walk_right
+	walk_up
+	walk_up
+	step_end
+
+Route49_EventScript_ActivateWyrdeerLeft::
+    lock
+    setobjectxyperm LOCALID_ROUTE49_NOBLE_WYRDEER, 59, 2
+    playse SE_M_DETECT
+	getplayerxy VAR_TEMP_1, VAR_TEMP_2
+	dofieldeffectsparkle VAR_TEMP_1, VAR_TEMP_2, 0
+	waitfieldeffect FLDEFF_SPARKLE
+    playse SE_PIN
+    applymovement2 LOCALID_PLAYER, Common_Movement_ExclamationMark
+    delay 60
+    msgbox SinjohRuins_Lab_Text_PlayFlute, MSGBOX_YESNO
+	closemessage
+    goto_if_eq VAR_RESULT, FALSE, SinjohRuins_Lab_EventScript_NoOp
+    playbgm MUS_DP_AZURE_FLUTE, FALSE
+	applymovement2 LOCALID_PLAYER, Route49_Movement_PlayerWyrdeerLeft
+    delay 200
+	waitmovement 0
+    fadedefaultbgm
+    addobject LOCALID_ROUTE49_NOBLE_WYRDEER
+    clearflag FLAG_HIDE_ROUTE49_NOBLE_WYRDEER
+    applymovement2 LOCALID_ROUTE49_NOBLE_WYRDEER, Route49_Movement_WyrdeerEntrance1
+    delay 10
+    playmoncry SPECIES_WYRDEER, CRY_MODE_NORMAL
+    waitmoncry
+    playmoncry SPECIES_WYRDEER, CRY_MODE_NORMAL
+    waitmoncry
+    waitmovement 0
+    applymovement2 LOCALID_ROUTE49_NOBLE_WYRDEER, Route49_Movement_WyrdeerEntrance2
+    delay 10
+    playse SE_LEDGE
+    delay 20
+	waitmovement 0
+    setvar VAR_0x8004, 1  @ vertical pan
+	setvar VAR_0x8005, 1  @ horizontal pan
+	setvar VAR_0x8006, 5  @ num shakes
+	setvar VAR_0x8007, 2  @ shake delay
+	special ShakeCamera
+    setobjectxyperm LOCALID_ROUTE49_NOBLE_WYRDEER, 59, 7
+    setvar VAR_NOBLE_WYRDEER, 2
+    release
+    end
+Route49_EventScript_ActivateWyrdeerRight::
+    lock
+    setobjectxyperm LOCALID_ROUTE49_NOBLE_WYRDEER, 59, 2
+    playse SE_M_DETECT
+	getplayerxy VAR_TEMP_1, VAR_TEMP_2
+	dofieldeffectsparkle VAR_TEMP_1, VAR_TEMP_2, 0
+	waitfieldeffect FLDEFF_SPARKLE
+    playse SE_PIN
+    applymovement2 LOCALID_PLAYER, Common_Movement_ExclamationMark
+    delay 60
+    msgbox SinjohRuins_Lab_Text_PlayFlute, MSGBOX_YESNO
+	closemessage
+    goto_if_eq VAR_RESULT, FALSE, SinjohRuins_Lab_EventScript_NoOp
+	applymovement2 LOCALID_PLAYER, Route49_Movement_PlayerWyrdeerRight
+    delay 200
+	waitmovement 0
+    fadedefaultbgm
+    addobject LOCALID_ROUTE49_NOBLE_WYRDEER
+    clearflag FLAG_HIDE_ROUTE49_NOBLE_WYRDEER
+    applymovement2 LOCALID_ROUTE49_NOBLE_WYRDEER, Route49_Movement_WyrdeerEntrance1
+    delay 10
+    playmoncry SPECIES_WYRDEER, CRY_MODE_NORMAL
+    waitmoncry
+    playmoncry SPECIES_WYRDEER, CRY_MODE_NORMAL
+    waitmoncry
+    waitmovement 0
+    applymovement2 LOCALID_ROUTE49_NOBLE_WYRDEER, Route49_Movement_WyrdeerEntrance2
+    delay 10
+    playse SE_LEDGE
+    delay 20
+	waitmovement 0
+    setvar VAR_0x8004, 1  @ vertical pan
+	setvar VAR_0x8005, 1  @ horizontal pan
+	setvar VAR_0x8006, 5  @ num shakes
+	setvar VAR_0x8007, 2  @ shake delay
+	special ShakeCamera
+    setobjectxyperm LOCALID_ROUTE49_NOBLE_WYRDEER, 59, 7
+    setvar VAR_NOBLE_WYRDEER, 2
+    release
+    end
+
+Route49_Movement_WyrdeerEntrance1:
+	walk_down
+    walk_in_place_fast_down
+    jump_in_place_down
+    jump_in_place_down
+    jump_in_place_down
+    jump_in_place_down
+	step_end
+
+Route49_Movement_WyrdeerEntrance2:
+	walk_slow_down
+	walk_slow_down
+	jump_2_down
+    walk_in_place_slow_down
+	walk_in_place_slow_down
+	jump_in_place_down
+	step_end
+
+
+Route49_EventScript_Wyrdeer::
+	lock
+	faceplayer
+	playmoncry SPECIES_WYRDEER, CRY_MODE_ENCOUNTER
+	waitmoncry
+	setwildbossbattle species=SPECIES_WYRDEER, level=80, item=ITEM_CLEAR_AMULET, move1_1=MOVE_PSYSHIELD_BASH, move1_2=MOVE_LUNGE, move1_3=MOVE_CALM_MIND move1_4=MOVE_THUNDERBOLT
+	settotemboost B_POSITION_OPPONENT_LEFT, 0, 1, 2, 0, 1, 0
+	setflag FLAG_NO_WILD_CATCHING
+	setflag FLAG_NO_WILD_RUNNING
+	setflag FLAG_SMART_WILD_AI
+	setflag FLAG_NO_SHINY
+    dowildbattle
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, Route49_EventScript_WyrdeerRan
+    bufferspeciesname STR_VAR_1, SPECIES_WYRDEER
+    msgbox SinjohRuins_Lab_Text_DropedItem, MSGBOX_DEFAULT
+    giveitem ITEM_MIND_PLATE
+    addvar VAR_PLATECOUNTER, 1
+	fadescreenswapbuffers FADE_TO_BLACK
+	removeobject LOCALID_ROUTE49_NOBLE_WYRDEER
+	setflag FLAG_HIDE_ROUTE49_NOBLE_WYRDEER
+	fadescreenswapbuffers FADE_FROM_BLACK
+    call_if_eq VAR_PLATECOUNTER, 3, SinjohRuins_Lab_EventScript_3Plates
+    call_if_eq VAR_PLATECOUNTER, 6, SinjohRuins_Lab_EventScript_6Plates
+    call_if_eq VAR_PLATECOUNTER, 9, SinjohRuins_Lab_EventScript_9Plates
+    call_if_eq VAR_PLATECOUNTER, 12, SinjohRuins_Lab_EventScript_12Plates
+    call_if_eq VAR_PLATECOUNTER, 15, SinjohRuins_Lab_EventScript_15Plates
+    call_if_eq VAR_PLATECOUNTER, 16, SinjohRuins_Lab_EventScript_16Plates
+	clearflag FLAG_NO_WILD_CATCHING
+	clearflag FLAG_NO_WILD_RUNNING
+	clearflag FLAG_SMART_WILD_AI
+	clearflag FLAG_NO_SHINY
+	release
+	end
+
+Route49_EventScript_WyrdeerRan::
 	clearflag FLAG_NO_WILD_CATCHING
 	clearflag FLAG_NO_WILD_RUNNING
 	clearflag FLAG_SMART_WILD_AI
