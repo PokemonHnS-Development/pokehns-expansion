@@ -14518,7 +14518,7 @@ Level: 65
 Name: MIHARU
 Class: Kimono Girl Hns
 Pic: Kimono Girl Hns
-Gender: Male
+Gender: Female
 Music: Female 
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
@@ -14538,7 +14538,7 @@ Adamant Nature
 Name: YOUKO
 Class: Kimono Girl Hns
 Pic: Kimono Girl Hns
-Gender: Male
+Gender: Female
 Music: Female
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
@@ -14558,7 +14558,7 @@ IVs: 0 Atk
 Name: SHIZUKO
 Class: Kimono Girl Hns
 Pic: Kimono Girl Hns
-Gender: Male
+Gender: Female
 Music: Female
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability

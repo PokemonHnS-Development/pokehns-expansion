@@ -129,42 +129,147 @@ NewSinjoh_KimonoHideout_Text_PlayerMeetsYouko:
 @ ============KIMONO GIRL NPCs=====================================================================================
 
 NewSinjoh_KimonoHideout_EventScript_Miharu::
+	goto_if_ge VAR_SINJOH_STORYLINE, 13, NewSinjoh_KimonoHideout_EventScript_MiharuFinal
+	goto_if_defeated TRAINER_MIHARU_HNS, NewSinjoh_KimonoHideout_EventScript_MiharuAfter
+	msgbox NewSinjoh_KimonoHideout_Text_MiharuBefore, MSGBOX_NPC
+	goto_if_not_defeated TRAINER_MIHARU_HNS, NewSinjoh_KimonoHideout_EventScript_TryMiharuBattle
+	end
+NewSinjoh_KimonoHideout_EventScript_TryMiharuBattle::
+	goto_if_eq VAR_SINJOH_STORYLINE, 6, NewSinjoh_KimonoHideout_EventScript_MiharuBattle
+	end
+NewSinjoh_KimonoHideout_EventScript_MiharuBattle::
 	lock
-	faceplayer
-	goto_if_eq VAR_SINJOH_STORYLINE, 5, NewSinjoh_KimonoHideout_EventScript_MiharuBeforePlateQuest
+	msgbox NewSinjoh_KimonoHideout_Text_MiharuBeforeBattle, MSGBOX_AUTOCLOSE
+	trainerbattle_no_intro TRAINER_MIHARU_HNS, NewSinjoh_KimonoHideout_Text_MiharuDefeat
+	giveitem ITEM_MEADOW_PLATE
+	addvar VAR_PLATECOUNTER, 1
+	msgbox NewSinjoh_KimonoHideout_Text_MiharuAfter, MSGBOX_AUTOCLOSE
+	call_if_eq VAR_PLATECOUNTER, 3, SinjohRuins_Lab_EventScript_3Plates
+	call_if_eq VAR_PLATECOUNTER, 6, SinjohRuins_Lab_EventScript_6Plates
+	call_if_eq VAR_PLATECOUNTER, 9, SinjohRuins_Lab_EventScript_9Plates
+	call_if_eq VAR_PLATECOUNTER, 12, SinjohRuins_Lab_EventScript_12Plates
+	call_if_eq VAR_PLATECOUNTER, 15, SinjohRuins_Lab_EventScript_15Plates
+	call_if_eq VAR_PLATECOUNTER, 16, SinjohRuins_Lab_EventScript_16Plates
 	release
+	end
+NewSinjoh_KimonoHideout_EventScript_MiharuAfter::
+	msgbox NewSinjoh_KimonoHideout_Text_MiharuAfter, MSGBOX_NPC
 	end
 
-NewSinjoh_KimonoHideout_EventScript_MiharuBeforePlateQuest::
-	msgbox NewSinjoh_KimonoHideout_Text_PlayerMeetsMiharu, MSGBOX_AUTOCLOSE
-	release
+NewSinjoh_KimonoHideout_Text_MiharuBefore:
+	.string "MIHARU: TODO$"
+
+NewSinjoh_KimonoHideout_Text_MiharuBeforeBattle:
+	.string "MIHARU: TODO$"
+
+NewSinjoh_KimonoHideout_Text_MiharuDefeat:
+	.string "MIHARU: TODO$"
+
+NewSinjoh_KimonoHideout_Text_MiharuAfter:
+	.string "MIHARU: TODO$"
+
+NewSinjoh_KimonoHideout_EventScript_MiharuFinal::
+	msgbox NewSinjoh_KimonoHideout_Text_MiharuFinal, MSGBOX_NPC
 	end
+
+NewSinjoh_KimonoHideout_Text_MiharuFinal:
+	.string "MIHARU: TODO$"
 
 
 NewSinjoh_KimonoHideout_EventScript_Youko::
+	goto_if_ge VAR_SINJOH_STORYLINE, 13, NewSinjoh_KimonoHideout_EventScript_YoukoFinal
+	goto_if_defeated TRAINER_YOUKO_HNS, NewSinjoh_KimonoHideout_EventScript_YoukoAfter
+	msgbox NewSinjoh_KimonoHideout_Text_YoukoBefore, MSGBOX_NPC
+	goto_if_not_defeated TRAINER_YOUKO_HNS, NewSinjoh_KimonoHideout_EventScript_TryYoukoBattle
+	end
+NewSinjoh_KimonoHideout_EventScript_TryYoukoBattle::
+	goto_if_eq VAR_SINJOH_STORYLINE, 6, NewSinjoh_KimonoHideout_EventScript_YoukoBattle
+	end
+NewSinjoh_KimonoHideout_EventScript_YoukoBattle::
 	lock
-	faceplayer
-	goto_if_eq VAR_SINJOH_STORYLINE, 5, NewSinjoh_KimonoHideout_EventScript_YoukoBeforePlateQuest
+	msgbox NewSinjoh_KimonoHideout_Text_YoukoBeforeBattle, MSGBOX_AUTOCLOSE
+	trainerbattle_no_intro TRAINER_YOUKO_HNS, NewSinjoh_KimonoHideout_Text_YoukoDefeat
+	giveitem ITEM_ICICLE_PLATE
+	addvar VAR_PLATECOUNTER, 1
+	msgbox NewSinjoh_KimonoHideout_Text_YoukoAfter, MSGBOX_AUTOCLOSE
+	call_if_eq VAR_PLATECOUNTER, 3, SinjohRuins_Lab_EventScript_3Plates
+	call_if_eq VAR_PLATECOUNTER, 6, SinjohRuins_Lab_EventScript_6Plates
+	call_if_eq VAR_PLATECOUNTER, 9, SinjohRuins_Lab_EventScript_9Plates
+	call_if_eq VAR_PLATECOUNTER, 12, SinjohRuins_Lab_EventScript_12Plates
+	call_if_eq VAR_PLATECOUNTER, 15, SinjohRuins_Lab_EventScript_15Plates
+	call_if_eq VAR_PLATECOUNTER, 16, SinjohRuins_Lab_EventScript_16Plates
 	release
 	end
-	
-NewSinjoh_KimonoHideout_EventScript_YoukoBeforePlateQuest::
-	msgbox NewSinjoh_KimonoHideout_Text_PlayerMeetsYouko, MSGBOX_AUTOCLOSE
-	release
+NewSinjoh_KimonoHideout_EventScript_YoukoAfter::
+	msgbox NewSinjoh_KimonoHideout_Text_YoukoAfter, MSGBOX_NPC
 	end
+
+NewSinjoh_KimonoHideout_Text_YoukoBefore:
+	.string "YOUKO: TODO$"
+
+NewSinjoh_KimonoHideout_Text_YoukoBeforeBattle:
+	.string "YOUKO: TODO$"
+
+NewSinjoh_KimonoHideout_Text_YoukoDefeat:
+	.string "YOUKO: TODO$"
+
+NewSinjoh_KimonoHideout_Text_YoukoAfter:
+	.string "YOUKO: TODO$"
+
+NewSinjoh_KimonoHideout_EventScript_YoukoFinal::
+	msgbox NewSinjoh_KimonoHideout_Text_YoukoFinal, MSGBOX_NPC
+	end
+
+NewSinjoh_KimonoHideout_Text_YoukoFinal:
+	.string "YOUKO: TODO$"
 
 
 NewSinjoh_KimonoHideout_EventScript_Shizuko::
+	goto_if_ge VAR_SINJOH_STORYLINE, 13, NewSinjoh_KimonoHideout_EventScript_ShizukoFinal
+	goto_if_defeated TRAINER_SHIZUKO_HNS, NewSinjoh_KimonoHideout_EventScript_ShizukoAfter
+	msgbox NewSinjoh_KimonoHideout_Text_ShizukoBefore, MSGBOX_NPC
+	goto_if_not_defeated TRAINER_SHIZUKO_HNS, NewSinjoh_KimonoHideout_EventScript_TryShizukoBattle
+	end
+NewSinjoh_KimonoHideout_EventScript_TryShizukoBattle::
+	goto_if_eq VAR_SINJOH_STORYLINE, 6, NewSinjoh_KimonoHideout_EventScript_ShizukoBattle
+	end
+NewSinjoh_KimonoHideout_EventScript_ShizukoBattle::
 	lock
-	faceplayer
-	goto_if_eq VAR_SINJOH_STORYLINE, 5, NewSinjoh_KimonoHideout_EventScript_ShizukoBeforePlateQuest
+	msgbox NewSinjoh_KimonoHideout_Text_ShizukoBeforeBattle, MSGBOX_AUTOCLOSE
+	trainerbattle_no_intro TRAINER_SHIZUKO_HNS, NewSinjoh_KimonoHideout_Text_ShizukoDefeat
+	giveitem ITEM_PIXIE_PLATE
+	addvar VAR_PLATECOUNTER, 1
+	msgbox NewSinjoh_KimonoHideout_Text_ShizukoAfter, MSGBOX_AUTOCLOSE
+	call_if_eq VAR_PLATECOUNTER, 3, SinjohRuins_Lab_EventScript_3Plates
+	call_if_eq VAR_PLATECOUNTER, 6, SinjohRuins_Lab_EventScript_6Plates
+	call_if_eq VAR_PLATECOUNTER, 9, SinjohRuins_Lab_EventScript_9Plates
+	call_if_eq VAR_PLATECOUNTER, 12, SinjohRuins_Lab_EventScript_12Plates
+	call_if_eq VAR_PLATECOUNTER, 15, SinjohRuins_Lab_EventScript_15Plates
+	call_if_eq VAR_PLATECOUNTER, 16, SinjohRuins_Lab_EventScript_16Plates
 	release
 	end
-	
-NewSinjoh_KimonoHideout_EventScript_ShizukoBeforePlateQuest::
-	msgbox NewSinjoh_KimonoHideout_Text_PlayerMeetsShizuko, MSGBOX_AUTOCLOSE
-	release
+NewSinjoh_KimonoHideout_EventScript_ShizukoAfter::
+	msgbox NewSinjoh_KimonoHideout_Text_ShizukoAfter, MSGBOX_NPC
 	end
+
+NewSinjoh_KimonoHideout_Text_ShizukoBefore:
+	.string "SHIZUKO: TODO$"
+
+NewSinjoh_KimonoHideout_Text_ShizukoBeforeBattle:
+	.string "SHIZUKO: TODO$"
+
+NewSinjoh_KimonoHideout_Text_ShizukoDefeat:
+	.string "SHIZUKO: TODO$"
+
+NewSinjoh_KimonoHideout_Text_ShizukoAfter:
+	.string "SHIZUKO: TODO$"
+
+NewSinjoh_KimonoHideout_EventScript_ShizukoFinal::
+	msgbox NewSinjoh_KimonoHideout_Text_ShizukoFinal, MSGBOX_NPC
+	end
+
+NewSinjoh_KimonoHideout_Text_ShizukoFinal:
+	.string "SHIZUKO: TODO$"
 
 @ =================================================================================================
 

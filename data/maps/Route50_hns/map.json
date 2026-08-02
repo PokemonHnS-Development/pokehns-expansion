@@ -36,7 +36,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "Route50_EventScript_Kleavor",
       "flag": "FLAG_HIDE_ROUTE50_NOBLE_KLEAVOR"
     },
     {
@@ -313,20 +313,6 @@
       "flag": "0"
     },
     {
-      "local_id": "LOCALID_ROUTE50_NOBLE_ELECTRODE",
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_ELECTRODE_HISUI",
-      "x": 14,
-      "y": 22,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_WALK_SEQUENCE_DOWN_RIGHT_UP_LEFT",
-      "movement_range_x": 7,
-      "movement_range_y": 9,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "FLAG_HIDE_ROUTE50_NOBLE_ELECTRODE"
-    },
-    {
       "graphics_id": "OBJ_EVENT_GFX_SAGE_HNS",
       "x": 52,
       "y": 28,
@@ -403,10 +389,79 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route50_EventScript_BlackBelt2",
       "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_ROUTE50_NOBLE_ELECTRODE",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_ELECTRODE_HISUI",
+      "x": 14,
+      "y": 31,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WALK_SEQUENCE_UP_RIGHT_DOWN_LEFT",
+      "movement_range_x": 7,
+      "movement_range_y": 9,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route50_EventScript_Electrode",
+      "flag": "FLAG_HIDE_ROUTE50_NOBLE_ELECTRODE"
     }
   ],
   "warp_events": [],
-  "coord_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 74,
+      "y": 15,
+      "elevation": 0,
+      "var": "VAR_NOBLE_KLEAVOR",
+      "var_value": "1",
+      "script": "Route50_EventScript_ActivateKleavor"
+    },
+    {
+      "type": "trigger",
+      "x": 75,
+      "y": 15,
+      "elevation": 0,
+      "var": "VAR_NOBLE_KLEAVOR",
+      "var_value": "1",
+      "script": "Route50_EventScript_ActivateKleavor"
+    },
+    {
+      "type": "trigger",
+      "x": 20,
+      "y": 22,
+      "elevation": 0,
+      "var": "VAR_NOBLE_ELECTRODE",
+      "var_value": "1",
+      "script": "Route50_EventScript_ActivateElectrode"
+    },
+    {
+      "type": "trigger",
+      "x": 21,
+      "y": 22,
+      "elevation": 0,
+      "var": "VAR_NOBLE_ELECTRODE",
+      "var_value": "1",
+      "script": "Route50_EventScript_ActivateElectrode"
+    },
+    {
+      "type": "trigger",
+      "x": 22,
+      "y": 22,
+      "elevation": 0,
+      "var": "VAR_NOBLE_ELECTRODE",
+      "var_value": "1",
+      "script": "Route50_EventScript_ActivateElectrode"
+    },
+    {
+      "type": "trigger",
+      "x": 23,
+      "y": 22,
+      "elevation": 0,
+      "var": "VAR_NOBLE_ELECTRODE",
+      "var_value": "1",
+      "script": "Route50_EventScript_ActivateElectrode"
+    }
+  ],
   "bg_events": [
     {
       "type": "hidden_item",

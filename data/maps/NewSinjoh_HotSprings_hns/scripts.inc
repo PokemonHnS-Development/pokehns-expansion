@@ -10,8 +10,31 @@ NewSinjoh_HotSprings_EventScript_Item_LavaCookie::
     end
 
 NewSinjoh_HotSprings_EventScript_Mualani::
-    msgbox NewSinjoh_HotSprings_Text_MualaniBefore, MSGBOX_NPC
-    end
+	goto_if_defeated TRAINER_MUALANI_HNS, NewSinjoh_HotSprings_EventScript_MualaniAfter
+	msgbox NewSinjoh_HotSprings_Text_MualaniBefore, MSGBOX_NPC
+	goto_if_not_defeated TRAINER_MUALANI_HNS, NewSinjoh_HotSprings_EventScript_TryMualaniBattle
+	end
+NewSinjoh_HotSprings_EventScript_TryMualaniBattle::
+	goto_if_eq VAR_SINJOH_STORYLINE, 6, NewSinjoh_HotSprings_EventScript_MualaniBattle
+	end
+NewSinjoh_HotSprings_EventScript_MualaniBattle::
+	lock
+	msgbox NewSinjoh_HotSprings_Text_MualaniBeforeBattle, MSGBOX_AUTOCLOSE
+	trainerbattle_no_intro TRAINER_MUALANI_HNS, NewSinjoh_HotSprings_Text_MualaniDefeat
+	giveitem ITEM_SPLASH_PLATE
+	addvar VAR_PLATECOUNTER, 1
+	msgbox NewSinjoh_HotSprings_Text_MualaniAfter, MSGBOX_AUTOCLOSE
+	call_if_eq VAR_PLATECOUNTER, 3, SinjohRuins_Lab_EventScript_3Plates
+	call_if_eq VAR_PLATECOUNTER, 6, SinjohRuins_Lab_EventScript_6Plates
+	call_if_eq VAR_PLATECOUNTER, 9, SinjohRuins_Lab_EventScript_9Plates
+	call_if_eq VAR_PLATECOUNTER, 12, SinjohRuins_Lab_EventScript_12Plates
+	call_if_eq VAR_PLATECOUNTER, 15, SinjohRuins_Lab_EventScript_15Plates
+	call_if_eq VAR_PLATECOUNTER, 16, SinjohRuins_Lab_EventScript_16Plates
+	release
+	end
+NewSinjoh_HotSprings_EventScript_MualaniAfter::
+	msgbox NewSinjoh_HotSprings_Text_MualaniAfter, MSGBOX_NPC
+	end
 
 NewSinjoh_HotSprings_Text_MualaniBefore:
 	.string "Am I a local or a visitor?\n"
@@ -21,6 +44,15 @@ NewSinjoh_HotSprings_Text_MualaniBefore:
     .string "enjoy these springs.\p"
     .string "See, I even have this SPLASH PLATE\n"
     .string "to prove it.$"
+
+NewSinjoh_HotSprings_Text_MualaniBeforeBattle:
+	.string "MUALANI: TODO$"
+
+NewSinjoh_HotSprings_Text_MualaniDefeat:
+	.string "MUALANI: TODO$"
+
+NewSinjoh_HotSprings_Text_MualaniAfter:
+	.string "MUALANI: TODO$"
 
 
 NewSinjoh_HotSprings_EventScript_Sign1::
@@ -262,3 +294,205 @@ NewSinjoh_HotSprings_Text_PLAMove_PowerShift:
 
 NewSinjoh_HotSprings_Text_PLAMove_Cancel:
 	.string "CANCEL$"
+
+
+NewSinjoh_HotSprings_EventScript_ActivateArcanine::
+    lock
+    setobjectxyperm LOCALID_HOTSPRINGS_NOBLE_ARCANINE, 16, 4
+    playse SE_M_DETECT
+	getplayerxy VAR_TEMP_1, VAR_TEMP_2
+	dofieldeffectsparkle VAR_TEMP_1, VAR_TEMP_2, 0
+	waitfieldeffect FLDEFF_SPARKLE
+    playse SE_PIN
+    applymovement2 LOCALID_PLAYER, Common_Movement_ExclamationMark
+    delay 60
+    msgbox SinjohRuins_Lab_Text_PlayFlute, MSGBOX_YESNO
+	closemessage
+    goto_if_eq VAR_RESULT, FALSE, SinjohRuins_Lab_EventScript_NoOp
+    playbgm MUS_DP_AZURE_FLUTE, FALSE
+    delay 200
+    fadedefaultbgm
+    addobject LOCALID_HOTSPRINGS_NOBLE_ARCANINE
+    clearflag FLAG_HIDE_HOTSPRINGS_NOBLE_ARCANINE
+    applymovement2 LOCALID_HOTSPRINGS_NOBLE_ARCANINE, NewSinjoh_HotSprings_Movement_ArcanineEntrance1
+    delay 10
+	playse SE_LEDGE
+    playmoncry SPECIES_ARCANINE_HISUI, CRY_MODE_NORMAL
+    waitmoncry
+    waitmovement 0
+    applymovement2 LOCALID_HOTSPRINGS_NOBLE_ARCANINE, NewSinjoh_HotSprings_Movement_ArcanineEntrance2
+    delay 10
+	playmoncry SPECIES_ARCANINE_HISUI, CRY_MODE_NORMAL
+    waitmoncry
+    playse SE_LEDGE
+    delay 20
+	waitmovement LOCALID_HOTSPRINGS_NOBLE_ARCANINE
+    setvar VAR_0x8004, 1  @ vertical pan
+	setvar VAR_0x8005, 1  @ horizontal pan
+	setvar VAR_0x8006, 5  @ num shakes
+	setvar VAR_0x8007, 2  @ shake delay
+	special ShakeCamera
+    setobjectxyperm LOCALID_HOTSPRINGS_NOBLE_ARCANINE, 16, 8
+    setvar VAR_NOBLE_ARCANINE, 2
+    release
+    end
+
+NewSinjoh_HotSprings_Movement_ArcanineEntrance1:
+    slide_down
+	slide_down
+	slide_down
+	slide_down
+	step_end
+
+NewSinjoh_HotSprings_Movement_ArcanineEntrance2:
+    walk_in_place_slow_down
+	walk_in_place_slow_down
+	jump_in_place_down
+	step_end
+
+
+NewSinjoh_HotSprings_EventScript_Arcanine::
+	lock
+	faceplayer
+	playmoncry SPECIES_ARCANINE_HISUI, CRY_MODE_ENCOUNTER
+	waitmoncry
+    setwildbossbattle species=SPECIES_ARCANINE_HISUI, level=80, item=ITEM_LOADED_DICE, move1_1=MOVE_ROCK_BLAST, move1_2=MOVE_WILD_CHARGE, move1_3=MOVE_RAGING_FURY move1_4=MOVE_PROTECT
+	settotemboost B_POSITION_OPPONENT_LEFT, 1, 0, 2, 0, 0, 0
+	setflag FLAG_NO_WILD_CATCHING
+	setflag FLAG_NO_WILD_RUNNING
+	setflag FLAG_SMART_WILD_AI
+	setflag FLAG_NO_SHINY
+    dowildbattle
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, NewSinjoh_HotSprings_EventScript_ArcanineRan
+    bufferspeciesname STR_VAR_1, SPECIES_ARCANINE_HISUI
+    msgbox SinjohRuins_Lab_Text_DropedItem, MSGBOX_DEFAULT
+    giveitem ITEM_FLAME_PLATE
+    addvar VAR_PLATECOUNTER, 1
+	fadescreenswapbuffers FADE_TO_BLACK
+	removeobject LOCALID_HOTSPRINGS_NOBLE_ARCANINE
+	setflag FLAG_HIDE_HOTSPRINGS_NOBLE_ARCANINE
+	fadescreenswapbuffers FADE_FROM_BLACK
+    call_if_eq VAR_PLATECOUNTER, 3, SinjohRuins_Lab_EventScript_3Plates
+    call_if_eq VAR_PLATECOUNTER, 6, SinjohRuins_Lab_EventScript_6Plates
+    call_if_eq VAR_PLATECOUNTER, 9, SinjohRuins_Lab_EventScript_9Plates
+    call_if_eq VAR_PLATECOUNTER, 12, SinjohRuins_Lab_EventScript_12Plates
+    call_if_eq VAR_PLATECOUNTER, 15, SinjohRuins_Lab_EventScript_15Plates
+    call_if_eq VAR_PLATECOUNTER, 16, SinjohRuins_Lab_EventScript_16Plates
+	clearflag FLAG_NO_WILD_CATCHING
+	clearflag FLAG_NO_WILD_RUNNING
+	clearflag FLAG_SMART_WILD_AI
+	clearflag FLAG_NO_SHINY
+	release
+	end
+
+NewSinjoh_HotSprings_EventScript_ArcanineRan::
+	clearflag FLAG_NO_WILD_CATCHING
+	clearflag FLAG_NO_WILD_RUNNING
+	clearflag FLAG_SMART_WILD_AI
+	clearflag FLAG_NO_SHINY
+	release
+	end
+
+
+
+
+
+
+NewSinjoh_HotSprings_EventScript_ActivateUrsaluna::
+    lock
+    setobjectxyperm LOCALID_HOTSPRINGS_NOBLE_URSALUNA, 52, 26
+    playse SE_M_DETECT
+	getplayerxy VAR_TEMP_1, VAR_TEMP_2
+	dofieldeffectsparkle VAR_TEMP_1, VAR_TEMP_2, 0
+	waitfieldeffect FLDEFF_SPARKLE
+    playse SE_PIN
+    applymovement2 LOCALID_PLAYER, Common_Movement_ExclamationMark
+    delay 60
+    msgbox SinjohRuins_Lab_Text_PlayFlute, MSGBOX_YESNO
+	closemessage
+    goto_if_eq VAR_RESULT, FALSE, SinjohRuins_Lab_EventScript_NoOp
+    playbgm MUS_DP_AZURE_FLUTE, FALSE
+    delay 200
+    fadedefaultbgm
+    addobject LOCALID_HOTSPRINGS_NOBLE_URSALUNA
+    clearflag FLAG_HIDE_HOTSPRINGS_NOBLE_URSALUNA
+    applymovement2 LOCALID_HOTSPRINGS_NOBLE_URSALUNA, NewSinjoh_HotSprings_Movement_UrsalunaEntrance1
+    delay 10
+	playse SE_LEDGE
+    playmoncry SPECIES_URSALUNA, CRY_MODE_NORMAL
+    waitmoncry
+    waitmovement 0
+    applymovement2 LOCALID_HOTSPRINGS_NOBLE_URSALUNA, NewSinjoh_HotSprings_Movement_UrsalunaEntrance2
+    delay 10
+	playmoncry SPECIES_URSALUNA, CRY_MODE_NORMAL
+    waitmoncry
+    playse SE_LEDGE
+    delay 20
+	waitmovement LOCALID_HOTSPRINGS_NOBLE_URSALUNA
+    setvar VAR_0x8004, 1  @ vertical pan
+	setvar VAR_0x8005, 1  @ horizontal pan
+	setvar VAR_0x8006, 5  @ num shakes
+	setvar VAR_0x8007, 2  @ shake delay
+	special ShakeCamera
+    setobjectxyperm LOCALID_HOTSPRINGS_NOBLE_URSALUNA, 52, 28
+    setvar VAR_NOBLE_URSALUNA, 2
+    release
+    end
+
+NewSinjoh_HotSprings_Movement_UrsalunaEntrance1:
+    jump_in_place_down
+    walk_in_place_fast_down
+    walk_in_place_fast_down
+	step_end
+
+NewSinjoh_HotSprings_Movement_UrsalunaEntrance2:
+	jump_2_down
+    walk_in_place_slow_down
+	walk_in_place_slow_down
+	jump_in_place_down
+	step_end
+
+
+NewSinjoh_HotSprings_EventScript_Ursaluna::
+	lock
+	faceplayer
+	playmoncry SPECIES_URSALUNA, CRY_MODE_ENCOUNTER
+	waitmoncry
+	setwildbossbattle species=SPECIES_URSALUNA, level=80, item=ITEM_EARTH_PLATE, move1_1=MOVE_EARTHQUAKE, move1_2=MOVE_AVALANCHE, move1_3=MOVE_BULK_UP move1_4=MOVE_GIGA_IMPACT
+	settotemboost B_POSITION_OPPONENT_LEFT, 1, 0, 2, 0, 0, 0
+	setflag FLAG_NO_WILD_CATCHING
+	setflag FLAG_NO_WILD_RUNNING
+	setflag FLAG_SMART_WILD_AI
+	setflag FLAG_NO_SHINY
+    dowildbattle
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, NewSinjoh_HotSprings_EventScript_UrsalunaRan
+    bufferspeciesname STR_VAR_1, SPECIES_URSALUNA
+    msgbox SinjohRuins_Lab_Text_DropedItem, MSGBOX_DEFAULT
+    giveitem ITEM_EARTH_PLATE
+    addvar VAR_PLATECOUNTER, 1
+	fadescreenswapbuffers FADE_TO_BLACK
+	removeobject LOCALID_HOTSPRINGS_NOBLE_URSALUNA
+	setflag FLAG_HIDE_HOTSPRINGS_NOBLE_URSALUNA
+	fadescreenswapbuffers FADE_FROM_BLACK
+    call_if_eq VAR_PLATECOUNTER, 3, SinjohRuins_Lab_EventScript_3Plates
+    call_if_eq VAR_PLATECOUNTER, 6, SinjohRuins_Lab_EventScript_6Plates
+    call_if_eq VAR_PLATECOUNTER, 9, SinjohRuins_Lab_EventScript_9Plates
+    call_if_eq VAR_PLATECOUNTER, 12, SinjohRuins_Lab_EventScript_12Plates
+    call_if_eq VAR_PLATECOUNTER, 15, SinjohRuins_Lab_EventScript_15Plates
+    call_if_eq VAR_PLATECOUNTER, 16, SinjohRuins_Lab_EventScript_16Plates
+	clearflag FLAG_NO_WILD_CATCHING
+	clearflag FLAG_NO_WILD_RUNNING
+	clearflag FLAG_SMART_WILD_AI
+	clearflag FLAG_NO_SHINY
+	release
+	end
+
+NewSinjoh_HotSprings_EventScript_UrsalunaRan::
+	clearflag FLAG_NO_WILD_CATCHING
+	clearflag FLAG_NO_WILD_RUNNING
+	clearflag FLAG_SMART_WILD_AI
+	clearflag FLAG_NO_SHINY
+	release
+	end

@@ -106,7 +106,7 @@
       "flag": "0"
     },
     {
-      "local_id": "LOCALID_NOBLE_ARCANINE",
+      "local_id": "LOCALID_HOTSPRINGS_NOBLE_ARCANINE",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_ARCANINE_HISUI",
       "x": 16,
       "y": 8,
@@ -116,21 +116,21 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "NewSinjoh_HotSprings_EventScript_Arcanine",
       "flag": "FLAG_HIDE_HOTSPRINGS_NOBLE_ARCANINE"
     },
     {
-      "local_id": "LOCALID_NOBLE_URSALUNA",
+      "local_id": "LOCALID_HOTSPRINGS_NOBLE_URSALUNA",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_URSALUNA",
       "x": 52,
-      "y": 29,
+      "y": 28,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "NewSinjoh_HotSprings_EventScript_Ursaluna",
       "flag": "FLAG_HIDE_HOTSPRINGS_NOBLE_URSALUNA"
     },
     {
@@ -287,7 +287,26 @@
       "dest_warp_id": "1"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 16,
+      "y": 10,
+      "elevation": 0,
+      "var": "VAR_NOBLE_ARCANINE",
+      "var_value": "1",
+      "script": "NewSinjoh_HotSprings_EventScript_ActivateArcanine"
+    },
+    {
+      "type": "trigger",
+      "x": 52,
+      "y": 30,
+      "elevation": 0,
+      "var": "VAR_NOBLE_URSALUNA",
+      "var_value": "1",
+      "script": "NewSinjoh_HotSprings_EventScript_ActivateUrsaluna"
+    }
+  ],
   "bg_events": [
     {
       "type": "sign",

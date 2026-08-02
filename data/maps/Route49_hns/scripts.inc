@@ -18,7 +18,7 @@ Route49_EventScript_SkylarBattle::
 	lock
 	msgbox Route49_Text_SkylarBeforeBattle, MSGBOX_AUTOCLOSE
 	trainerbattle_no_intro TRAINER_SKYLAR_HNS, Route49_Text_SkylarDefeat
-	giveitem ITEM_ICICLE_PLATE
+	giveitem ITEM_SKY_PLATE
 	addvar VAR_PLATECOUNTER, 1
 	msgbox Route49_Text_SkylarAfter, MSGBOX_AUTOCLOSE
 	call_if_eq VAR_PLATECOUNTER, 3, SinjohRuins_Lab_EventScript_3Plates
@@ -55,8 +55,7 @@ Route49_Text_SkylarBeforeBattle:
 Route49_Text_SkylarBefore:
 	.string "When I was hitting the slopes, my\n"
 	.string "skis snagged on something.\p"
-	.string "It was this strange PLATE, cold\n"
-	.string "as ICE.\p"
+	.string "It was this strange SKY-blue PLATE.\p"
 	.string "I think I'll hold onto it as a\n"
 	.string "souvenir!$"
 
@@ -170,7 +169,7 @@ Route49_EventScript_ActivateOverqwil::
     delay 10
     playse SE_LEDGE
     delay 20
-	waitmovement 0
+	waitmovement LOCALID_ROUTE49_NOBLE_OVERQWIL
     setvar VAR_0x8004, 1  @ vertical pan
 	setvar VAR_0x8005, 1  @ horizontal pan
 	setvar VAR_0x8006, 5  @ num shakes
@@ -289,7 +288,7 @@ Route49_EventScript_ActivateWyrdeerLeft::
     delay 10
     playse SE_LEDGE
     delay 20
-	waitmovement 0
+	waitmovement LOCALID_ROUTE49_NOBLE_WYRDEER
     setvar VAR_0x8004, 1  @ vertical pan
 	setvar VAR_0x8005, 1  @ horizontal pan
 	setvar VAR_0x8006, 5  @ num shakes
@@ -329,7 +328,7 @@ Route49_EventScript_ActivateWyrdeerRight::
     delay 10
     playse SE_LEDGE
     delay 20
-	waitmovement 0
+	waitmovement LOCALID_ROUTE49_NOBLE_WYRDEER
     setvar VAR_0x8004, 1  @ vertical pan
 	setvar VAR_0x8005, 1  @ horizontal pan
 	setvar VAR_0x8006, 5  @ num shakes
