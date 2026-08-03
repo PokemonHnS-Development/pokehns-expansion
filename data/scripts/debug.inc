@@ -203,13 +203,21 @@ Debug_EventScript_Text_DefensiveIVs:
 	.string "HP IVs: {STR_VAR_1}, DEF IVs: {STR_VAR_2}, SPDEF IVs: {STR_VAR_3}$"
 
 Debug_EventScript_Script_1::
+	setvar VAR_SINJOH_STORYLINE, 6
+	setvar VAR_NOBLE_TYPHLOSION, 1
 	setvar VAR_NOBLE_ELECTRODE, 1
 	setvar VAR_NOBLE_KLEAVOR, 1
+	setflag FLAG_HIDE_NEWSINJOH_HOUSE3_NOBLE_TYPHLOSION
 	release
 	end
 
 Debug_EventScript_Script_2::
-	setvar VAR_NOBLE_WYRDEER, 1
+	givemon SPECIES_REGICE, 100
+	givemon SPECIES_REGIROCK, 100
+	givemon SPECIES_REGISTEEL, 100
+	givemon SPECIES_REGIDRAGO, 100
+	givemon SPECIES_REGIELEKI, 100
+	setvar VAR_REGIS_SCANNED, 0
 	release
 	end
 

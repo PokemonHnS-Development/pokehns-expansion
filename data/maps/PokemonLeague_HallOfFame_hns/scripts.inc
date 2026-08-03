@@ -86,6 +86,8 @@ PokemonLeague_HallOfFame_EventScript_SetGameClearFlags::
 	call_if_set FLAG_CAUGHT_CELEBI, PokemonLeague_HallOfFame_EventScript_SpawnSecondCelebi
 	call_if_ge VAR_VIRIDIAN_FOREST_PICHU, 4, PokemonLeague_HallOfFame_EventScript_SpawnPichu
 	call_if_ge VAR_ALOLA_STATE, 4, PokemonLeague_HallOfFame_EventScript_SpawnAlolaMons
+	call PokemonLeague_HallOfFame_EventScript_SpawnSinjohMons
+	call_if_ge VAR_SINJOH_STORYLINE, 13 PokemonLeague_HallOfFame_EventScript_SpawnArceus
 	clearflag FLAG_DEFEATED_MEW
 	clearflag FLAG_CAUGHT_MEW
 	clearflag FLAG_BATTLED_DEOXYS
@@ -107,6 +109,19 @@ PokemonLeague_HallOfFame_EventScript_SpawnAlolaMons::
 	clearflag FLAG_HIDE_MUK_ALOLA
 	clearflag FLAG_HIDE_RAICHU_ALOLA
 	clearflag FLAG_HIDE_GOLEM_ALOLA
+	return
+
+PokemonLeague_HallOfFame_EventScript_SpawnSinjohMons::
+	clearflag FLAG_HIDE_SINJOHRUINS_REGIROCK
+	clearflag FLAG_HIDE_SINJOHRUINS_REGICE
+	clearflag FLAG_HIDE_SINJOHRUINS_REGISTEEL
+	clearflag FLAG_HIDE_SINJOHRUINS_REGIELEKI
+	clearflag FLAG_HIDE_SINJOHRUINS_REGIDRAGO
+	clearflag FLAG_HIDE_SINJOHRUINS_REGIGIGAS
+	return
+
+PokemonLeague_HallOfFame_EventScript_SpawnArceus::
+	clearflag FLAG_HIDE_SINJOHRUINS_ARCEUSROOM_ARCEUS
 	return
 
 PokemonLeague_HallOfFame_EventScript_SpawnPichu::

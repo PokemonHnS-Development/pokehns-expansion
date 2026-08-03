@@ -33,7 +33,7 @@ Route50_EventScript_WesselBattle::
 	lock
 	msgbox Route50_Text_WesselBeforeBattle, MSGBOX_AUTOCLOSE
 	trainerbattle_no_intro TRAINER_WESSEL_HNS, Route50_Text_WesselDefeat
-	giveitem ITEM_ICICLE_PLATE
+	giveitem ITEM_IRON_PLATE
 	addvar VAR_PLATECOUNTER, 1
 	msgbox Route50_Text_WesselAfter, MSGBOX_AUTOCLOSE
 	call_if_eq VAR_PLATECOUNTER, 3, SinjohRuins_Lab_EventScript_3Plates
@@ -81,7 +81,7 @@ Route50_EventScript_FinleyBattle::
 	lock
 	msgbox Route50_Text_FinleyBeforeBattle, MSGBOX_AUTOCLOSE
 	trainerbattle_no_intro TRAINER_FINLEY_HNS, Route50_Text_FinleyDefeat
-	giveitem ITEM_ICICLE_PLATE
+	giveitem ITEM_DRACO_PLATE
 	addvar VAR_PLATECOUNTER, 1
 	msgbox Route50_Text_FinleyAfter, MSGBOX_AUTOCLOSE
 	call_if_eq VAR_PLATECOUNTER, 3, SinjohRuins_Lab_EventScript_3Plates

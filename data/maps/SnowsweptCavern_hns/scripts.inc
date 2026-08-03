@@ -121,6 +121,9 @@ Snowswept_Cavern_Eventscript_Machamp::
 	waitmoncry 
     goto_if_eq VAR_SINJOH_STORYLINE, 6, Snowswept_Cavern_EventScript_MachampDuringQuest
     goto_if_ge VAR_SINJOH_STORYLINE, 3, Snowswept_Cavern_Eventscript_Machamp_AfterBoulder
+    msgbox Snowswept_Text_Machamp_Plate, MSGBOX_YESNO
+    closemessage
+    goto_if_eq VAR_RESULT, FALSE, Snowswept_Cavern_Eventscript_Machamp_Ran
 	setwildbattle SPECIES_MACHAMP, 60
     setflag FLAG_NO_WILD_CATCHING
 	setflag FLAG_NO_SHINY
@@ -130,6 +133,7 @@ Snowswept_Cavern_Eventscript_Machamp::
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, Snowswept_Cavern_Eventscript_Machamp_Ran
     playmoncry SPECIES_MACHAMP, CRY_MODE_ENCOUNTER
+
 	applymovement2 LOCALID_SNOWSWEPT_CAVERN_MACHAMP, Snowswept_Machamp_Movement
     waitmovement 0
     
@@ -182,6 +186,11 @@ Snowswept_Cavern_EventScript_MachampGivePlate::
 
 Snowswept_Text_Machamp_Cry:
     .string "Mahh!!$"
+
+Snowswept_Text_Machamp_Plate:
+    .string "The MACHAMP seems to be holding\n"
+    .string "a plate in one of its hands.\p"
+    .string "Battle it?$"
 
 Snowswept_Machamp_Movement:
     jump_in_place_down

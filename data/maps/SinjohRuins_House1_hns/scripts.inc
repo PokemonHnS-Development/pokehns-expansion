@@ -87,6 +87,7 @@ SinjohRuins_Lab_EventScript_IntroChoseYes::
 	setvar VAR_NOBLE_URSALUNA, 1
 	setvar VAR_NOBLE_KLEAVOR, 1
 	setvar VAR_NOBLE_ELECTRODE, 1
+	setvar VAR_NOBLE_TYPHLOSION, 1
 	release
 	end
 
@@ -587,7 +588,7 @@ SinjohRuins_Lab_EventScript_Notes8::
 	end
 
 SinjohRuins_Lab_Text_Note1:
-    .string "Research Log 1: May 3, 1965\p"
+    .string "Research Log 1: May 3, 1975\p"
 	.string "We've arrived at the location\n"
 	.string "of the ruins.\p"
 	.string "The harsh cold of Mt.Silver\n"
@@ -599,7 +600,7 @@ SinjohRuins_Lab_Text_Note1:
 	.string "underneath our feet!$"
 
 SinjohRuins_Lab_Text_Note2:
-    .string "Research Log 2:  May 10, 1965\p"
+    .string "Research Log 2:  May 10, 1975\p"
 	.string "A week of digging has yielded\n"
 	.string "no result whatsoever.\p"
 	.string "The ice here is impossibly thick,\n"
@@ -611,7 +612,7 @@ SinjohRuins_Lab_Text_Note2:
 	.string "We must find out.$"
 
 SinjohRuins_Lab_Text_Note3:
-    .string "Research Log 3:  May 14, 1965\p"
+    .string "Research Log 3:  May 14, 1975\p"
 	.string "You don't get ahead in life by\n"
 	.string "standing by and doing nothing.\p"
 	.string "I'm just a worker.\p"
@@ -624,7 +625,7 @@ SinjohRuins_Lab_Text_Note3:
 	.string "all the way from SINNOH?$"
 
 SinjohRuins_Lab_Text_Note4:
-    .string "Research Log 4:  May 21, 1965\p"
+    .string "Research Log 4:  May 21, 1975\p"
 	.string "We've been busy.\p"
 	.string "My idea worked to get us through\n"
 	.string "the ice. Only we didn't get the\l"
@@ -646,9 +647,9 @@ SinjohRuins_Lab_Text_Note4:
 	.string "soon as possible...$"
 
 SinjohRuins_Lab_Text_Note5:
-    .string "Research Log 5:  June 2, 1965\p"
+    .string "Research Log 5:  June 2, 1975\p"
 	.string "We managed to get it open...\p"
-	.string "I thought I'd be overjoyed, but...\p"
+	.string "I thought I'd be overjoyed...\p"
 	.string "But we lost good men in the blast\n"
 	.string "of energy that sprung from the\l"
 	.string "temple.\p"
@@ -661,12 +662,12 @@ SinjohRuins_Lab_Text_Note5:
 	.string "only left with more questions.\p"
 	.string "There is no legendary POKéMON\n"
 	.string "inside. No treasure.\p"
-	.string "Our funding is starting to run\n"
+	.string "Our supplies are starting to run\n"
 	.string "out and we have nothing to show\l"
 	.string "for our efforts...$"
 
 SinjohRuins_Lab_Text_Note6:
-  	.string "Research Log 6:  June 10, 1965\p"
+  	.string "Research Log 6:  June 10, 1975\p"
     .string "The expedition is done.\n"
 	.string "The rest of the men are packing up.\p"
 	.string "But I can't.\p"
@@ -675,7 +676,7 @@ SinjohRuins_Lab_Text_Note6:
 	.string "I'm going to stay behind.$"
 
 SinjohRuins_Lab_Text_Note7:
-  	.string "Research Log 7:  September 10, 1965\p"
+  	.string "Research Log 7:  September 10, 1975\p"
 	.string "It's been months since we got\n"
 	.string "here. Since I got here.\p"
 	.string "The rest of the men are gone.\p"
@@ -684,11 +685,12 @@ SinjohRuins_Lab_Text_Note7:
 	.string "with the work.\p"
 	.string "I've been training them to get\n"
 	.string "stronger.\p"
+	.string "My TYPHLOSION, most of all.\p"
 	.string "We must find out what's beneath\n"
 	.string "the temple.$"
 
 SinjohRuins_Lab_Text_Note8:
-  	.string "Research Log 8:  September 15, 1965\p"
+  	.string "Research Log 8:  September 15, 1975\p"
 	.string "Failure.\p"
 	.string "......................\p"
 	.string "My POKéMON....\p"

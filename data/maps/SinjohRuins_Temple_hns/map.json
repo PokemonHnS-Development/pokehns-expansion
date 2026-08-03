@@ -34,19 +34,19 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 10,
-      "y": 7,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
-    },
-    {
-      "type": "sign",
       "x": 12,
       "y": 7,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "SinjohRuins_Temple_EventScript_RegiceScanner"
+    },
+    {
+      "type": "sign",
+      "x": 10,
+      "y": 7,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "SinjohRuins_Temple_EventScript_RegirockScanner"
     },
     {
       "type": "sign",
@@ -54,7 +54,7 @@
       "y": 7,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "SinjohRuins_Temple_EventScript_RegisteelScanner"
     },
     {
       "type": "sign",
@@ -62,7 +62,7 @@
       "y": 7,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "SinjohRuins_Temple_EventScript_RegielekiScanner"
     },
     {
       "type": "sign",
@@ -70,7 +70,7 @@
       "y": 7,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "SinjohRuins_Temple_EventScript_RegidragoScanner"
     }
   ],
   "game_version": "hns",

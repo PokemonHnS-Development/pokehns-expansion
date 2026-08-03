@@ -157,7 +157,7 @@
 #define VAR_NOBLE_URSALUNA                           0x40D4
 #define VAR_NOBLE_KLEAVOR                           0x40D5
 #define VAR_NOBLE_ELECTRODE                           0x40D6
-#define VAR_UNUSED_HNS_0x40D7                           0x40D7
+#define VAR_NOBLE_TYPHLOSION                           0x40D7
 #define VAR_UNUSED_HNS_0x40D8                           0x40D8
 #define VAR_UNUSED_HNS_0x40D9                           0x40D9
 #define VAR_UNUSED_HNS_0x40DA                           0x40DA
