@@ -371,8 +371,8 @@ SinjohRuins_Lab_Text_StevenAfterAll:
 	.string "I hope we can meet again somewhere.$"
 
 SinjohRuins_Lab_EventScript_Geologist::
-	goto_if_eq VAR_SINJOH_STORYLINE, 9, SinjohRuins_Lab_EventScript_GeologistDuringEvent
-	goto_if_ge VAR_SINJOH_STORYLINE, 10, SinjohRuins_Lab_EventScript_GeologistAfterEvent
+	goto_if_ge VAR_SINJOH_STORYLINE, 13, SinjohRuins_Lab_EventScript_GeologistAfterEvent
+	goto_if_ge VAR_SINJOH_STORYLINE, 9, SinjohRuins_Lab_EventScript_GeologistDuringEvent
 	msgbox SinjohRuins_Lab_Text_Geologist MSGBOX_NPC
 	end
 SinjohRuins_Lab_EventScript_GeologistDuringEvent::
@@ -401,8 +401,8 @@ SinjohRuins_Lab_Text_GeologistAfter:
 	.string "I wish I had more time to study them.$"
 
 SinjohRuins_Lab_EventScript_Linguist::
-	goto_if_eq VAR_SINJOH_STORYLINE, 9, SinjohRuins_Lab_EventScript_LinguistDuringEvent
-	goto_if_ge VAR_SINJOH_STORYLINE, 10, SinjohRuins_Lab_EventScript_LinguistAfterEvent
+	goto_if_ge VAR_SINJOH_STORYLINE, 13, SinjohRuins_Lab_EventScript_LinguistAfterEvent
+	goto_if_ge VAR_SINJOH_STORYLINE, 9, SinjohRuins_Lab_EventScript_LinguistDuringEvent
 	msgbox SinjohRuins_Lab_Text_Linguist MSGBOX_NPC
 	end
 SinjohRuins_Lab_EventScript_LinguistDuringEvent::
@@ -430,11 +430,11 @@ SinjohRuins_Lab_Text_LinguistAfter:
     .string "This expedition has been a\n"
 	.string "joy, {PLAYER}.\p"
 	.string "Thanks for taking care of all\n"
-	.string "the field-work.\p"
+	.string "the field-work.$"
 
 SinjohRuins_Lab_EventScript_Archaeologist::
-	goto_if_eq VAR_SINJOH_STORYLINE, 9, SinjohRuins_Lab_EventScript_ArchaeologistDuringEvent
-	goto_if_ge VAR_SINJOH_STORYLINE, 10, SinjohRuins_Lab_EventScript_ArchaeologistAfterEvent
+	goto_if_ge VAR_SINJOH_STORYLINE, 13, SinjohRuins_Lab_EventScript_ArchaeologistAfterEvent
+	goto_if_ge VAR_SINJOH_STORYLINE, 9, SinjohRuins_Lab_EventScript_ArchaeologistDuringEvent
 	msgbox SinjohRuins_Lab_Text_Archaeologist MSGBOX_NPC
 	end
 SinjohRuins_Lab_EventScript_ArchaeologistDuringEvent::
@@ -489,8 +489,8 @@ SinjohRuins_Lab_Text_GrowlitheBall:
 	.string "Better leave it alone.$"
 
 SinjohRuins_Lab_EventScript_Biologist::
-	goto_if_eq VAR_SINJOH_STORYLINE, 9, SinjohRuins_Lab_EventScript_BiologistDuringEvent
-	goto_if_ge VAR_SINJOH_STORYLINE, 10, SinjohRuins_Lab_EventScript_BiologistAfterEvent
+	goto_if_ge VAR_SINJOH_STORYLINE, 13, SinjohRuins_Lab_EventScript_BiologistAfterEvent
+	goto_if_ge VAR_SINJOH_STORYLINE, 9, SinjohRuins_Lab_EventScript_BiologistDuringEvent
 	msgbox SinjohRuins_Lab_Text_Biologist MSGBOX_NPC
 	end
 SinjohRuins_Lab_EventScript_BiologistDuringEvent::
@@ -768,26 +768,38 @@ SinjohRuins_Lab_Text_StevenName:
 SinjohRuins_Lab_EventScript_3Plates::
 	setspeaker SinjohRuins_Lab_Text_StevenName
 	pokenavcall SinjohRuins_Lab_Text_StevenCall3Plates
+	waitmessage
+	delay 30
 	return
 SinjohRuins_Lab_EventScript_6Plates::
 	setspeaker SinjohRuins_Lab_Text_StevenName
 	pokenavcall SinjohRuins_Lab_Text_StevenCall6Plates
+	waitmessage
+	delay 30
 	return
 SinjohRuins_Lab_EventScript_9Plates::
 	setspeaker SinjohRuins_Lab_Text_StevenName
 	pokenavcall SinjohRuins_Lab_Text_StevenCall9Plates
+	waitmessage
+	delay 30
 	return
 SinjohRuins_Lab_EventScript_12Plates::
 	setspeaker SinjohRuins_Lab_Text_StevenName
 	pokenavcall SinjohRuins_Lab_Text_StevenCall12Plates
+	waitmessage
+	delay 30
 	return
 SinjohRuins_Lab_EventScript_15Plates::
 	setspeaker SinjohRuins_Lab_Text_StevenName
 	pokenavcall SinjohRuins_Lab_Text_StevenCall15Plates
+	waitmessage
+	delay 30
 	return
 SinjohRuins_Lab_EventScript_16Plates::
 	setspeaker SinjohRuins_Lab_Text_StevenName
 	pokenavcall SinjohRuins_Lab_Text_StevenCall16Plates
+	waitmessage
+	delay 30
 	setvar VAR_SINJOH_STORYLINE, 7
 	return
 
@@ -819,7 +831,8 @@ SinjohRuins_Lab_Text_StevenCall6Plates:
 SinjohRuins_Lab_Text_StevenCall9Plates:
 	.string "STEVEN: {PLAYER}.\p"
 	.string "Another tremor here at the ruins.\p"
-	.string "The data paints an intriguing picture.\n"
+	.string "The data paints an intriguing\n"
+	.string "picture.\p"
 	.string "It wasn't an earthquake at all.\p"
 	.string "Some kind of energy built up\n"
 	.string "underground and cracked the\l"

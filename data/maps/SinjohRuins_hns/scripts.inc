@@ -307,7 +307,7 @@ SinjohRuins_Movement_StevenLeaveLeft:
 
 SinjohRuins_EventScript_StevenBattle::
     msgbox SinjohRuins_Text_ChallengeSteven, MSGBOX_AUTOCLOSE
-    @trainerbattle_no_intro TRAINER_STEVEN_HNS, SinjohRuins_Text_StevenDefeat
+    trainerbattle_no_intro TRAINER_STEVEN_HNS, SinjohRuins_Text_StevenDefeat
     msgbox SinjohRuins_Text_StevenAfterBattle, MSGBOX_AUTOCLOSE
     giveitem ITEM_STONE_PLATE
     msgbox SinjohRuins_Text_StevenAfterPlate, MSGBOX_AUTOCLOSE

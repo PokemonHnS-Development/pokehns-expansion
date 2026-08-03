@@ -60,14 +60,16 @@ Route50_Text_WesselBefore:
     .string "I must collect more data!$"
 
 Route50_Text_WesselBeforeBattle:
-	.string "WESSEL: TODO$"
+	.string "You want this PLATE?\n"
+	.string "But I haven't analyzed it yet!\p"
+	.string "Fine, we will battle for it.$"
 
 Route50_Text_WesselDefeat:
-	.string "WESSEL: TODO$"
+	.string "My hypothesis was wrong...$"
 
 Route50_Text_WesselAfter:
-	.string "WESSEL: TODO$"
-
+	.string "Take it the PLATE. I don't want to\n"
+	.string "talk about it.$"
 
 Route50_EventScript_Finley::
 	goto_if_defeated TRAINER_FINLEY_HNS, Route50_EventScript_FinleyAfter
@@ -112,13 +114,17 @@ Route50_Text_FinleyBefore:
     .string "DRACO PLATE.$"
 
 Route50_Text_FinleyBeforeBattle:
-	.string "FINLEY: TODO$"
+	.string "I know the KIMONO's have sent you\n"
+	.string "to collect these PLATES.\p"
+	.string "They say you are worthy...\n"
+	.string "But can you conquer my dragons?$"
 
 Route50_Text_FinleyDefeat:
-	.string "FINLEY: TODO$"
+	.string "My dragons fought well.$"
 
 Route50_Text_FinleyAfter:
-	.string "FINLEY: TODO$"
+	.string "Perhaps you are even strong enough\n"
+	.string "to beat LANCE...$"
 
 Route50_EventScript_Item_ULtraBall::
     finditem ITEM_ULTRA_BALL

@@ -222,12 +222,13 @@ Debug_EventScript_Script_2::
 	end
 
 Debug_EventScript_Script_3::
-	setvar VAR_SINJOH_STORYLINE, 10
+	pokenavcall SinjohRuins_Lab_Text_StevenCall6Plates
 	release
 	end
 
 Debug_EventScript_Script_4::
-	special InitRoamer
+	msgbox SinjohRuins_Lab_Text_StevenCall3Plates, MSGBOX_DEFAULT
+	pokenavcall SinjohRuins_Lab_Text_StevenCall6Plates
 	release
 	end
 

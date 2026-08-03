@@ -7238,7 +7238,7 @@ Name: NAOKO
 Class: Kimono Girl Hns
 Pic: Kimono Girl Hns
 Gender: Male
-Music: Female
+Music: Hg Girl 2
 Double Battle: No
 AI: Basic Trainer
 
@@ -7255,7 +7255,7 @@ Name: SAYO
 Class: Kimono Girl Hns
 Pic: Kimono Girl Hns
 Gender: Male
-Music: Female
+Music: Hg Girl 2
 Double Battle: No
 AI: Basic Trainer
 
@@ -7272,7 +7272,7 @@ Name: ZUKI
 Class: Kimono Girl Hns
 Pic: Kimono Girl Hns
 Gender: Male
-Music: Female
+Music: Hg Girl 2
 Double Battle: No
 AI: Basic Trainer
 
@@ -7289,7 +7289,7 @@ Name: KUNI
 Class: Kimono Girl Hns
 Pic: Kimono Girl Hns
 Gender: Male
-Music: Female
+Music: Hg Girl 2
 Double Battle: No
 AI: Basic Trainer
 
@@ -7306,7 +7306,7 @@ Name: MIKI
 Class: Kimono Girl Hns
 Pic: Kimono Girl Hns
 Gender: Male
-Music: Female
+Music: Hg Girl 2
 Double Battle: No
 AI: Basic Trainer
 
@@ -14519,7 +14519,7 @@ Name: MIHARU
 Class: Kimono Girl Hns
 Pic: Kimono Girl Hns
 Gender: Female
-Music: Female 
+Music: Hg Girl 2 
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 
@@ -14539,7 +14539,7 @@ Name: YOUKO
 Class: Kimono Girl Hns
 Pic: Kimono Girl Hns
 Gender: Female
-Music: Female
+Music: Hg Girl 2
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 
@@ -14559,7 +14559,7 @@ Name: SHIZUKO
 Class: Kimono Girl Hns
 Pic: Kimono Girl Hns
 Gender: Female
-Music: Female
+Music: Hg Girl 2
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 
@@ -14647,7 +14647,7 @@ Name: YOUMU
 Class: Channeler FRLG
 Pic: Channeler FRLG
 Gender: Female
-Music: Female
+Music: Hg Girl 2
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 
@@ -14845,7 +14845,7 @@ Name: DAWN
 Class: Picnicker Hns
 Pic: Picnicker FRLG
 Gender: Female
-Music: Female
+Music: Hg Girl 2
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 
@@ -15061,6 +15061,7 @@ Adamant Nature
 
 Kingdra @ Scope Lens  
 Ability: Sniper  
+Level: 70  
 EVs: 148 Def / 252 SpA / 108 SpD  
 Modest Nature  
 IVs: 0 Atk  
@@ -15099,15 +15100,14 @@ IVs: 0 Atk
 - Seismic Toss  
 - Ice Beam  
 
-Gastrodon @ Black Sludge  
-Ability: Storm Drain  
+Whiscash @ Black Sludge    
 Level: 70 
 EVs: 252 HP / 92 Def / 72 SpA / 92 SpD  
 Quiet Nature  
 IVs: 0 Atk  
 - Clear Smog  
 - Scald  
-- Sludge Bomb  
+- Earth Power
 - Recover  
 
 Lanturn @ Assault Vest  
@@ -15193,7 +15193,7 @@ Adamant Nature
 - Iron Head  
 - Curse  
 
-Bronzong @ Loaded Dice  
+Aggron @ Loaded Dice  
 Ability: Heavy Metal  
 Level: 70   
 EVs: 108 HP / 252 Atk / 28 Def / 120 SpD  

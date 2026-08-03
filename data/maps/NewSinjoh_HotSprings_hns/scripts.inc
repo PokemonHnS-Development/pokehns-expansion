@@ -46,13 +46,24 @@ NewSinjoh_HotSprings_Text_MualaniBefore:
     .string "to prove it.$"
 
 NewSinjoh_HotSprings_Text_MualaniBeforeBattle:
-	.string "MUALANI: TODO$"
+	.string "Wait...\p"
+	.string "You need the SPLASH PLATE\n"
+	.string "to tame the legendary POKéMON?\p"
+	.string "If the KIMONO GIRLS think you\n"
+	.string "are worthy, then so do I.\p"
+	.string "But you'll still need to earn\n"
+	.string "it.$"
 
 NewSinjoh_HotSprings_Text_MualaniDefeat:
-	.string "MUALANI: TODO$"
+	.string "Well earned.$"
 
 NewSinjoh_HotSprings_Text_MualaniAfter:
-	.string "MUALANI: TODO$"
+	.string "It is hard for me to let that\n"
+	.string "plate go.\p"
+	.string "But when the situation changes,\n"
+	.string "it is important for us to change\l"
+	.string "too.\p"
+	.string "The plate is yours.$"
 
 
 NewSinjoh_HotSprings_EventScript_Sign1::

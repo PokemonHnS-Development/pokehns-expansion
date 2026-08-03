@@ -129,21 +129,26 @@ NewSinjoh_KimonoHideout_Text_PlayerMeetsYouko:
 @ ============KIMONO GIRL NPCs=====================================================================================
 
 NewSinjoh_KimonoHideout_EventScript_Miharu::
+	lock
+	faceplayer
 	goto_if_ge VAR_SINJOH_STORYLINE, 13, NewSinjoh_KimonoHideout_EventScript_MiharuFinal
 	goto_if_defeated TRAINER_MIHARU_HNS, NewSinjoh_KimonoHideout_EventScript_MiharuAfter
-	msgbox NewSinjoh_KimonoHideout_Text_MiharuBefore, MSGBOX_NPC
+	msgbox NewSinjoh_KimonoHideout_Text_PlayerMeetsMiharu, MSGBOX_AUTOCLOSE
 	goto_if_not_defeated TRAINER_MIHARU_HNS, NewSinjoh_KimonoHideout_EventScript_TryMiharuBattle
+	release
 	end
 NewSinjoh_KimonoHideout_EventScript_TryMiharuBattle::
 	goto_if_eq VAR_SINJOH_STORYLINE, 6, NewSinjoh_KimonoHideout_EventScript_MiharuBattle
+	release
 	end
 NewSinjoh_KimonoHideout_EventScript_MiharuBattle::
-	lock
-	msgbox NewSinjoh_KimonoHideout_Text_MiharuBeforeBattle, MSGBOX_AUTOCLOSE
-	trainerbattle_no_intro TRAINER_MIHARU_HNS, NewSinjoh_KimonoHideout_Text_MiharuDefeat
+	msgbox NewSinjoh_KimonoHideout_Text_MiharuBeforeBattle, MSGBOX_DEFAULT
+	closemessage
+	trainerbattle_no_intro TRAINER_MIHARU_HNS, EcruteakCity_Theater_Text_KimonoGirlBeaten
 	giveitem ITEM_MEADOW_PLATE
 	addvar VAR_PLATECOUNTER, 1
-	msgbox NewSinjoh_KimonoHideout_Text_MiharuAfter, MSGBOX_AUTOCLOSE
+	msgbox NewSinjoh_KimonoHideout_Text_MiharuAfter, MSGBOX_DEFAULT
+	closemessage
 	call_if_eq VAR_PLATECOUNTER, 3, SinjohRuins_Lab_EventScript_3Plates
 	call_if_eq VAR_PLATECOUNTER, 6, SinjohRuins_Lab_EventScript_6Plates
 	call_if_eq VAR_PLATECOUNTER, 9, SinjohRuins_Lab_EventScript_9Plates
@@ -153,45 +158,52 @@ NewSinjoh_KimonoHideout_EventScript_MiharuBattle::
 	release
 	end
 NewSinjoh_KimonoHideout_EventScript_MiharuAfter::
-	msgbox NewSinjoh_KimonoHideout_Text_MiharuAfter, MSGBOX_NPC
+	msgbox NewSinjoh_KimonoHideout_Text_MiharuAfter, MSGBOX_AUTOCLOSE
+	release
 	end
 
-NewSinjoh_KimonoHideout_Text_MiharuBefore:
-	.string "MIHARU: TODO$"
-
 NewSinjoh_KimonoHideout_Text_MiharuBeforeBattle:
-	.string "MIHARU: TODO$"
-
-NewSinjoh_KimonoHideout_Text_MiharuDefeat:
-	.string "MIHARU: TODO$"
+	.string "MIHARU: Just as we predicted.\p"
+	.string "The champion of stone sent you\n"
+	.string "to collect the PLATES.\p"
+	.string "Our order has guarded these\n"
+	.string "PLATES for centuries.\p"
+	.string "We will not part with them\n"
+	.string "readily.$"
 
 NewSinjoh_KimonoHideout_Text_MiharuAfter:
-	.string "MIHARU: TODO$"
+	.string "MIHARU: You are worthy.$"
 
 NewSinjoh_KimonoHideout_EventScript_MiharuFinal::
-	msgbox NewSinjoh_KimonoHideout_Text_MiharuFinal, MSGBOX_NPC
+	msgbox NewSinjoh_KimonoHideout_Text_MiharuFinal, MSGBOX_AUTOCLOSE
 	end
 
 NewSinjoh_KimonoHideout_Text_MiharuFinal:
-	.string "MIHARU: TODO$"
-
+	.string "MIHARU: You have done our village\n"
+	.string "a great service, {PLAYER}.\p"
+	.string "We will not forget this.$"
 
 NewSinjoh_KimonoHideout_EventScript_Youko::
+	lock
+	faceplayer
 	goto_if_ge VAR_SINJOH_STORYLINE, 13, NewSinjoh_KimonoHideout_EventScript_YoukoFinal
 	goto_if_defeated TRAINER_YOUKO_HNS, NewSinjoh_KimonoHideout_EventScript_YoukoAfter
-	msgbox NewSinjoh_KimonoHideout_Text_YoukoBefore, MSGBOX_NPC
+	msgbox NewSinjoh_KimonoHideout_Text_PlayerMeetsYouko, MSGBOX_AUTOCLOSE
 	goto_if_not_defeated TRAINER_YOUKO_HNS, NewSinjoh_KimonoHideout_EventScript_TryYoukoBattle
+	release
 	end
 NewSinjoh_KimonoHideout_EventScript_TryYoukoBattle::
 	goto_if_eq VAR_SINJOH_STORYLINE, 6, NewSinjoh_KimonoHideout_EventScript_YoukoBattle
+	release
 	end
 NewSinjoh_KimonoHideout_EventScript_YoukoBattle::
-	lock
-	msgbox NewSinjoh_KimonoHideout_Text_YoukoBeforeBattle, MSGBOX_AUTOCLOSE
-	trainerbattle_no_intro TRAINER_YOUKO_HNS, NewSinjoh_KimonoHideout_Text_YoukoDefeat
+	msgbox NewSinjoh_KimonoHideout_Text_YoukoBeforeBattle, MSGBOX_DEFAULT
+	closemessage
+	trainerbattle_no_intro TRAINER_YOUKO_HNS, EcruteakCity_Theater_Text_KimonoGirlBeaten
 	giveitem ITEM_ICICLE_PLATE
 	addvar VAR_PLATECOUNTER, 1
-	msgbox NewSinjoh_KimonoHideout_Text_YoukoAfter, MSGBOX_AUTOCLOSE
+	msgbox NewSinjoh_KimonoHideout_Text_YoukoAfter, MSGBOX_DEFAULT
+	closemessage
 	call_if_eq VAR_PLATECOUNTER, 3, SinjohRuins_Lab_EventScript_3Plates
 	call_if_eq VAR_PLATECOUNTER, 6, SinjohRuins_Lab_EventScript_6Plates
 	call_if_eq VAR_PLATECOUNTER, 9, SinjohRuins_Lab_EventScript_9Plates
@@ -201,45 +213,50 @@ NewSinjoh_KimonoHideout_EventScript_YoukoBattle::
 	release
 	end
 NewSinjoh_KimonoHideout_EventScript_YoukoAfter::
-	msgbox NewSinjoh_KimonoHideout_Text_YoukoAfter, MSGBOX_NPC
+	msgbox NewSinjoh_KimonoHideout_Text_YoukoAfter, MSGBOX_AUTOCLOSE
+	release
 	end
 
-NewSinjoh_KimonoHideout_Text_YoukoBefore:
-	.string "YOUKO: TODO$"
-
 NewSinjoh_KimonoHideout_Text_YoukoBeforeBattle:
-	.string "YOUKO: TODO$"
-
-NewSinjoh_KimonoHideout_Text_YoukoDefeat:
-	.string "YOUKO: TODO$"
+	.string "YOUKO: Our cousins speak so\n"
+	.string "highly of you.\p"
+	.string "Is it true?\p"
+	.string "I will find out.$"
 
 NewSinjoh_KimonoHideout_Text_YoukoAfter:
-	.string "YOUKO: TODO$"
+	.string "YOUKO: Our cousins were right\n"
+	.string "about you.$"
 
 NewSinjoh_KimonoHideout_EventScript_YoukoFinal::
-	msgbox NewSinjoh_KimonoHideout_Text_YoukoFinal, MSGBOX_NPC
+	msgbox NewSinjoh_KimonoHideout_Text_YoukoFinal, MSGBOX_AUTOCLOSE
 	end
 
 NewSinjoh_KimonoHideout_Text_YoukoFinal:
-	.string "YOUKO: TODO$"
-
+	.string "YOUKO: I had my doubts, at first.\p"
+	.string "But after what you've done, it\l"
+	.string "cannot be denied.$"
 
 NewSinjoh_KimonoHideout_EventScript_Shizuko::
+	lock
+	faceplayer
 	goto_if_ge VAR_SINJOH_STORYLINE, 13, NewSinjoh_KimonoHideout_EventScript_ShizukoFinal
 	goto_if_defeated TRAINER_SHIZUKO_HNS, NewSinjoh_KimonoHideout_EventScript_ShizukoAfter
-	msgbox NewSinjoh_KimonoHideout_Text_ShizukoBefore, MSGBOX_NPC
+	msgbox NewSinjoh_KimonoHideout_Text_PlayerMeetsShizuko, MSGBOX_AUTOCLOSE
 	goto_if_not_defeated TRAINER_SHIZUKO_HNS, NewSinjoh_KimonoHideout_EventScript_TryShizukoBattle
+	release
 	end
 NewSinjoh_KimonoHideout_EventScript_TryShizukoBattle::
 	goto_if_eq VAR_SINJOH_STORYLINE, 6, NewSinjoh_KimonoHideout_EventScript_ShizukoBattle
+	release
 	end
 NewSinjoh_KimonoHideout_EventScript_ShizukoBattle::
-	lock
-	msgbox NewSinjoh_KimonoHideout_Text_ShizukoBeforeBattle, MSGBOX_AUTOCLOSE
-	trainerbattle_no_intro TRAINER_SHIZUKO_HNS, NewSinjoh_KimonoHideout_Text_ShizukoDefeat
+	msgbox NewSinjoh_KimonoHideout_Text_ShizukoBeforeBattle, MSGBOX_DEFAULT
+	closemessage
+	trainerbattle_no_intro TRAINER_SHIZUKO_HNS, EcruteakCity_Theater_Text_KimonoGirlBeaten
 	giveitem ITEM_PIXIE_PLATE
 	addvar VAR_PLATECOUNTER, 1
-	msgbox NewSinjoh_KimonoHideout_Text_ShizukoAfter, MSGBOX_AUTOCLOSE
+	msgbox NewSinjoh_KimonoHideout_Text_ShizukoAfter, MSGBOX_DEFAULT
+	closemessage
 	call_if_eq VAR_PLATECOUNTER, 3, SinjohRuins_Lab_EventScript_3Plates
 	call_if_eq VAR_PLATECOUNTER, 6, SinjohRuins_Lab_EventScript_6Plates
 	call_if_eq VAR_PLATECOUNTER, 9, SinjohRuins_Lab_EventScript_9Plates
@@ -249,27 +266,30 @@ NewSinjoh_KimonoHideout_EventScript_ShizukoBattle::
 	release
 	end
 NewSinjoh_KimonoHideout_EventScript_ShizukoAfter::
-	msgbox NewSinjoh_KimonoHideout_Text_ShizukoAfter, MSGBOX_NPC
+	msgbox NewSinjoh_KimonoHideout_Text_ShizukoAfter, MSGBOX_AUTOCLOSE
+	release
 	end
 
-NewSinjoh_KimonoHideout_Text_ShizukoBefore:
-	.string "SHIZUKO: TODO$"
-
 NewSinjoh_KimonoHideout_Text_ShizukoBeforeBattle:
-	.string "SHIZUKO: TODO$"
-
-NewSinjoh_KimonoHideout_Text_ShizukoDefeat:
-	.string "SHIZUKO: TODO$"
+	.string "SHIZUKO: We are trained in\n"
+	.string "battle as well as dance.\p"
+	.string "Obtaining the PLATEs will\n"
+	.string "require strength and determination.$"
 
 NewSinjoh_KimonoHideout_Text_ShizukoAfter:
-	.string "SHIZUKO: TODO$"
+	.string "SHIZUKO: The bond you share\n"
+	.string "with your POKéMON is quite strong.\p"
+	.string "You have earned this PLATE.\p"
 
 NewSinjoh_KimonoHideout_EventScript_ShizukoFinal::
-	msgbox NewSinjoh_KimonoHideout_Text_ShizukoFinal, MSGBOX_NPC
+	msgbox NewSinjoh_KimonoHideout_Text_ShizukoFinal, MSGBOX_AUTOCLOSE
 	end
 
 NewSinjoh_KimonoHideout_Text_ShizukoFinal:
-	.string "SHIZUKO: TODO$"
+	.string "SHIZUKO: Few trainers in all\n"
+	.string "of SINJOH's storied history have\l"
+	.string "managed what you've just done.\p"
+	.string "Quite impressive, {PLAYER}.$"
 
 @ =================================================================================================
 

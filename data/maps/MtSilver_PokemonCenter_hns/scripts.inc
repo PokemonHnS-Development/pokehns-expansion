@@ -39,7 +39,8 @@ MtSilver_PokemonCenter_EventScript_Meara_BonusContentPrompt::
 	setflag FLAG_HIDE_SINJOHRUINS_ARCEUSROOM_STEVEN
 	setflag FLAG_HIDE_NEWSINJOH_STEVEN
 	setvar VAR_SINJOH_STORYLINE, 1
-
+	setvar VAR_PLATECOUNTER, 0
+	setvar VAR_REGIS_SCANNED, 0
 	warp MAP_MT_SILVER_1F_WATERFALL_ROOM_HNS, 43, 9
 	waitstate
 	end

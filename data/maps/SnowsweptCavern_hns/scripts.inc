@@ -178,6 +178,12 @@ Snowswept_Cavern_EventScript_MachampGivePlate::
     msgbox SinjohRuins_Lab_Text_DropedItem, MSGBOX_DEFAULT
     giveitem ITEM_FIST_PLATE
     addvar VAR_PLATECOUNTER, 1
+    call_if_eq VAR_PLATECOUNTER, 3, SinjohRuins_Lab_EventScript_3Plates
+    call_if_eq VAR_PLATECOUNTER, 6, SinjohRuins_Lab_EventScript_6Plates
+    call_if_eq VAR_PLATECOUNTER, 9, SinjohRuins_Lab_EventScript_9Plates
+    call_if_eq VAR_PLATECOUNTER, 12, SinjohRuins_Lab_EventScript_12Plates
+    call_if_eq VAR_PLATECOUNTER, 15, SinjohRuins_Lab_EventScript_15Plates
+    call_if_eq VAR_PLATECOUNTER, 16, SinjohRuins_Lab_EventScript_16Plates
     setflag FLAG_GOT_FIST_PLATE
     turnobject LOCALID_SNOWSWEPT_CAVERN_MACHAMP, DIR_SOUTH
 	release
@@ -189,7 +195,7 @@ Snowswept_Text_Machamp_Cry:
 
 Snowswept_Text_Machamp_Plate:
     .string "The MACHAMP seems to be holding\n"
-    .string "a plate in one of its hands.\p"
+    .string "a PLATE in one of its hands.\p"
     .string "Battle it?$"
 
 Snowswept_Machamp_Movement:

@@ -322,6 +322,7 @@ SinjohRuins_ArceusRoom_TriggerSteven::
 	waitmovement 0
 	removeobject LOCALID_SINJOHRUINS_ARCEUSROOM_STEVEN
 	playse SE_EXIT
+	setflag FLAG_HIDE_SINJOHRUINS_STEVEN
 	clearflag FLAG_HIDE_NEWSINJOH_STEVEN
 	setvar VAR_SINJOH_STORYLINE, 13	
 	release
@@ -350,8 +351,8 @@ SinjohRuins_ArceusRoom_Text_StevenCongrats:
 	.string "Seeing your power made me realize.\p"
 	.string "The KIMONO GIRLS didn't send you\n"
 	.string "to help our research.\p"
-	.string "I think they sent you because they\n"
-	.string "knew you were the only one worthy of\l"
+	.string "I think they sent you because\n"
+	.string "you were the only one worthy of\l"
 	.string "taming the legendary POKéMON.\p"
 	.string "They didn't trust my team and I\n"
 	.string "to handle it.\p"
