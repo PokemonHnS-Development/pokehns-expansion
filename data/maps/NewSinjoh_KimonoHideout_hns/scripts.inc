@@ -279,7 +279,7 @@ NewSinjoh_KimonoHideout_Text_ShizukoBeforeBattle:
 NewSinjoh_KimonoHideout_Text_ShizukoAfter:
 	.string "SHIZUKO: The bond you share\n"
 	.string "with your POKéMON is quite strong.\p"
-	.string "You have earned this PLATE.\p"
+	.string "You have earned this PLATE.$"
 
 NewSinjoh_KimonoHideout_EventScript_ShizukoFinal::
 	msgbox NewSinjoh_KimonoHideout_Text_ShizukoFinal, MSGBOX_AUTOCLOSE
