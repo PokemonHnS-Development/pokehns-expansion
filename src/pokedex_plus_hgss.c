@@ -3950,6 +3950,16 @@ static void Task_LoadInfoScreenWaitForFade(u8 taskId)
     }
 }
 
+static void Task_LoadInfoScreenWaitForFadeFromEvoForms(u8 taskId)
+{
+    if (!gPaletteFade.active)
+    {
+        FreeAndDestroyMonPicSprite(gTasks[taskId].tMonSpriteId);
+        RestoreSpritePalettesBackup();
+        gTasks[taskId].func = Task_LoadInfoScreen;
+    }
+}
+
 static void Task_ExitInfoScreen(u8 taskId)
 {
     if (!gPaletteFade.active)
@@ -6213,7 +6223,7 @@ static void Task_HandleEvolutionScreenInput(u8 taskId)
             sPokedexView->sEvoScreenData.fromEvoPage = TRUE;
             PlaySE(SE_PIN);
             BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
-            gTasks[taskId].func = Task_LoadInfoScreenWaitForFade;
+            gTasks[taskId].func = Task_LoadInfoScreenWaitForFadeFromEvoForms;
         }
     }
 
@@ -7159,7 +7169,7 @@ static void Task_HandleFormsScreenInput(u8 taskId)
             sPokedexView->sFormScreenData.inSubmenu = FALSE;
             PlaySE(SE_PIN);
             BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
-            gTasks[taskId].func = Task_LoadInfoScreenWaitForFade;
+            gTasks[taskId].func = Task_LoadInfoScreenWaitForFadeFromEvoForms;
         }
 
         if (JOY_NEW(B_BUTTON))
