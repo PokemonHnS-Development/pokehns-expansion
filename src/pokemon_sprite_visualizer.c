@@ -1266,7 +1266,6 @@ void CB2_Pokemon_Sprite_Visualizer(void)
         AllocateMonSpritesGfx();
 
         LoadPalette(sBgColor, BG_PLTT_ID(0), 2);
-        LoadMonIconPalette(SPECIES_BULBASAUR);
 
         SetGpuReg(REG_OFFSET_DISPCNT, DISPCNT_OBJ_ON | DISPCNT_OBJ_1D_MAP);
         ShowBg(0);
@@ -1308,12 +1307,12 @@ void CB2_Pokemon_Sprite_Visualizer(void)
         SetMultiuseSpriteTemplateToPokemon(species, 2);
         offset_y = gSpeciesInfo[species].backPicYOffset;
         data->backspriteId = CreateSprite(&gMultiuseSpriteTemplate, VISUALIZER_MON_BACK_X, VISUALIZER_MON_BACK_Y + offset_y, 0);
-        gSprites[data->backspriteId].oam.paletteNum = 5;
+        gSprites[data->backspriteId].oam.paletteNum = 1;
         gSprites[data->backspriteId].callback = SpriteCallbackDummy;
         gSprites[data->backspriteId].oam.priority = 0;
 
         //Icon Sprite
-        data->iconspriteId = CreateMonIcon(species, SpriteCB_MonIcon, VISUALIZER_ICON_X, VISUALIZER_ICON_Y, 4, (data->isFemale ? FEMALE_PERSONALITY : MALE_PERSONALITY));
+        data->iconspriteId = CreateMonIcon2(species, SpriteCB_MonIcon, VISUALIZER_ICON_X, VISUALIZER_ICON_Y, 4, data->isShiny, (data->isFemale ? FEMALE_PERSONALITY : MALE_PERSONALITY), FALSE);
         gSprites[data->iconspriteId].oam.priority = 0;
 
         //Follower Sprite
@@ -2024,7 +2023,6 @@ static void ReloadPokemonSprites(struct PokemonSpriteVisualizer *data)
     FreeMonIconPalettes();
 
     AllocateMonSpritesGfx();
-    LoadMonIconPalettePersonality(species, (data->isFemale ? FEMALE_PERSONALITY : MALE_PERSONALITY));
 
     //Update instructions
     PrintInstructionsOnWindow(data);
@@ -2039,7 +2037,7 @@ static void ReloadPokemonSprites(struct PokemonSpriteVisualizer *data)
     gMultiuseSpriteTemplate.paletteTag = species;
     front_y = GetBattlerSpriteFinal_YCustom(species, 0, 0);
     data->frontspriteId = CreateSprite(&gMultiuseSpriteTemplate, front_x, front_y, 0);
-    gSprites[data->frontspriteId].oam.paletteNum = 1;
+    gSprites[data->frontspriteId].oam.paletteNum = 5;
     gSprites[data->frontspriteId].callback = SpriteCallbackDummy;
     gSprites[data->frontspriteId].oam.priority = 0;
     //Front Shadow
@@ -2056,7 +2054,7 @@ static void ReloadPokemonSprites(struct PokemonSpriteVisualizer *data)
     gSprites[data->backspriteId].oam.priority = 0;
 
     //Icon Sprite
-    data->iconspriteId = CreateMonIcon(species, SpriteCB_MonIcon, VISUALIZER_ICON_X, VISUALIZER_ICON_Y, 4, (data->isFemale ? FEMALE_PERSONALITY : MALE_PERSONALITY));
+    data->iconspriteId = CreateMonIcon2(species, SpriteCB_MonIcon, VISUALIZER_ICON_X, VISUALIZER_ICON_Y, 4, data->isShiny, (data->isFemale ? FEMALE_PERSONALITY : MALE_PERSONALITY), FALSE);
     gSprites[data->iconspriteId].oam.priority = 0;
 
     //Follower Sprite

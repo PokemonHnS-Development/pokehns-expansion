@@ -71,6 +71,7 @@ COMMON_DATA IntrFunc gIntrTable[INTR_COUNT] = {0};
 COMMON_DATA u8 gLinkVSyncDisabled = 0;
 COMMON_DATA s8 gPcmDmaCounter = 0;
 COMMON_DATA void *gAgbMainLoop_sp = NULL;
+COMMON_DATA u16 gVCountAtIsr = 0;
 
 static EWRAM_DATA u16 sTrainerId = 0;
 
@@ -393,7 +394,7 @@ void InitFlashTimer(void)
     SetFlashTimerIntr(2, gIntrTable + 0x7);
 }
 
-static void HBlankIntr(void)
+ARM_FUNC __attribute__((section(".iwram.code"))) __attribute__((noinline)) __attribute__((optimize("-O3"))) static void HBlankIntr(void)
 {
     if (gMain.hblankCallback)
         gMain.hblankCallback();

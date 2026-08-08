@@ -1111,12 +1111,16 @@ static void LoadAllContestMonIcons(u8 srcOffset, bool8 useDmaNow)
 
 static void LoadAllContestMonIconPalettes(void)
 {
-    int i, species;
+    int i;
+    u32 species, personality;
+    bool32 isShiny;
 
     for (i = 0; i < CONTESTANT_COUNT; i++)
     {
         species = gContestMons[i].species;
-        LoadPalette(gMonIconPalettes[gSpeciesInfo[GetIconSpecies(species, 0)].iconPalIndex], BG_PLTT_ID(10 + i), PLTT_SIZE_4BPP);
+        isShiny = gContestMons[i].isShiny;
+        personality = gContestMons[i].personality;
+        LoadPalette(GetIconPalette(species, isShiny, IsPersonalityFemale(species, personality)), BG_PLTT_ID(10 + i), PLTT_SIZE_4BPP);
     }
 }
 

@@ -1,4 +1,5 @@
 #include "global.h"
+#include "decompress.h"
 #include "scanline_effect.h"
 #include "palette.h"
 #include "task.h"
@@ -90,7 +91,7 @@ struct TrainerCardData
     u16 backTilemap[600];
     u16 bgTilemap[600];
     u8 badgeTiles[0x80 * NUM_BADGES];
-    u8 stickerTiles[0x200];
+    u8 stickerTiles[0x400];
     u8 cardTiles[0x2300];
     u16 cardTilemapBuffer[0x1000];
     u16 bgTilemapBuffer[0x1000];
@@ -212,8 +213,6 @@ static const u16 sKantoTrainerCardBadges_Pal[]   = INCBIN_U16("graphics/trainer_
 static const u16 sTrainerCardStar_Pal[]          = INCBIN_U16("graphics/trainer_card/star.gbapal");
 static const u16 sTrainerCardSticker1_Pal[]      = INCBIN_U16("graphics/trainer_card/frlg/stickers1.gbapal");
 static const u16 sTrainerCardSticker2_Pal[]      = INCBIN_U16("graphics/trainer_card/frlg/stickers2.gbapal");
-static const u16 sTrainerCardSticker3_Pal[]      = INCBIN_U16("graphics/trainer_card/frlg/stickers3.gbapal");
-static const u16 sTrainerCardSticker4_Pal[]      = INCBIN_U16("graphics/trainer_card/frlg/stickers4.gbapal");
 static const u32 sKantoTrainerCardBadges_Gfx[]   = INCBIN_U32("graphics/trainer_card/frlg/badges.4bpp.smol");
 
 static const struct BgTemplate sTrainerCardBgTemplates[4] =
@@ -844,6 +843,16 @@ static void TrainerCard_GenerateCardForPlayer(struct TrainerCard *trainerCard)
         trainerCard->unionRoomClass = gUnionRoomFacilityClasses[(trainerCard->trainerId % NUM_UNION_ROOM_CLASSES) + NUM_UNION_ROOM_CLASSES];
     else
         trainerCard->unionRoomClass = gUnionRoomFacilityClasses[trainerCard->trainerId % NUM_UNION_ROOM_CLASSES];
+
+#if IS_FRLG
+    trainerCard->monSpecies[0] = VarGet(VAR_TRAINER_CARD_MON_ICON_1);
+    trainerCard->monSpecies[1] = VarGet(VAR_TRAINER_CARD_MON_ICON_2);
+    trainerCard->monSpecies[2] = VarGet(VAR_TRAINER_CARD_MON_ICON_3);
+    trainerCard->monSpecies[3] = VarGet(VAR_TRAINER_CARD_MON_ICON_4);
+    trainerCard->monSpecies[4] = VarGet(VAR_TRAINER_CARD_MON_ICON_5);
+    trainerCard->monSpecies[5] = VarGet(VAR_TRAINER_CARD_MON_ICON_6);
+    trainerCard->monIconTint = VarGet(VAR_TRAINER_CARD_MON_ICON_TINT_IDX);
+#endif
 }
 
 void TrainerCard_GenerateCardForLinkPlayer(struct TrainerCard *trainerCard)
@@ -1426,7 +1435,7 @@ static void PrintBattleFacilityStringOnCard(void)
 static void PrintPokemonIconsOnCard(void)
 {
     u8 i;
-    u8 paletteSlots[PARTY_SIZE] = {5, 6, 7, 8, 9, 10};
+    u8 paletteSlots[PARTY_SIZE] = {5, 6, 7, 14, 9, 10};
     u8 xOffsets[PARTY_SIZE] = {0, 4, 8, 12, 16, 20};
 
     if (sData->cardType == CARD_TYPE_FRLG)
@@ -1435,8 +1444,7 @@ static void PrintPokemonIconsOnCard(void)
         {
             if (sData->trainerCard.monSpecies[i])
             {
-                u8 monSpecies = GetMonIconPaletteIndexFromSpecies(sData->trainerCard.monSpecies[i]);
-                WriteSequenceToBgTilemapBuffer(3, 16 * i + 224, xOffsets[i] + 3, 15, 4, 4, paletteSlots[monSpecies], 1);
+                WriteSequenceToBgTilemapBuffer(3, 16 * i + 224, xOffsets[i] + 3, 15, 4, 4, paletteSlots[i], 1);
             }
         }
     }
@@ -1444,47 +1452,53 @@ static void PrintPokemonIconsOnCard(void)
 
 static void LoadMonIconGfx(void)
 {
-    u8 i;
+    u32 i;
+    u32 paletteStart = 5;
 
-    CpuSet(gMonIconPalettes, sData->monIconPal, 0x60);
-    switch (sData->trainerCard.monIconTint)
-    {
-    case MON_ICON_TINT_NORMAL:
-        break;
-    case MON_ICON_TINT_BLACK:
-        TintPalette_CustomTone(sData->monIconPal, 96, 0, 0, 0);
-        break;
-    case MON_ICON_TINT_PINK:
-        TintPalette_CustomTone(sData->monIconPal, 96, 500, 330, 310);
-        break;
-    case MON_ICON_TINT_SEPIA:
-        TintPalette_SepiaTone(sData->monIconPal, 96);
-        break;
-    }
-    LoadPalette(sData->monIconPal, BG_PLTT_ID(5), 6 * PLTT_SIZE_4BPP);
+    for (i = 0; i < PARTY_SIZE; i++) {
+        const u16 *palette;
+        if (!sData->trainerCard.monSpecies[i])
+            continue;
 
-    for (i = 0; i < PARTY_SIZE; i++)
-    {
-        if (sData->trainerCard.monSpecies[i])
-            LoadBgTiles(3, GetMonIconTiles(sData->trainerCard.monSpecies[i], 0), 512, 16 * i + 32);
+        palette = GetIconPalette(sData->trainerCard.monSpecies[i], FALSE, FALSE);
+
+        CpuSet(palette, sData->monIconPal, PLTT_SIZE_4BPP);
+
+        switch (sData->trainerCard.monIconTint)
+        {
+        case MON_ICON_TINT_NORMAL:
+            break;
+        case MON_ICON_TINT_BLACK:
+            TintPalette_CustomTone(sData->monIconPal, 16, 64, 64, 64);
+            break;
+        case MON_ICON_TINT_PINK:
+            TintPalette_CustomTone(sData->monIconPal, 16, 500, 330, 310);
+            break;
+        case MON_ICON_TINT_SEPIA:
+            TintPalette_SepiaTone(sData->monIconPal, 16);
+            break;
+        }
+
+        LoadPalette(sData->monIconPal, i == 3 ? (14*16) : (i+paletteStart)*16, PLTT_SIZE_4BPP);
+        LoadBgTiles(3, GetMonIconTiles(sData->trainerCard.monSpecies[i], 0), 512, 16 * i + 32);
     }
 }
 
 static void UpdateTrainerCardMonIcons(void)
 {
+#if IS_HNS
     u16 species;
     u8 i;
     u8 x = 40;
 
-    LoadMonIconPalettes();
     for (i = 0; i < gPlayerPartyCount; i++, x += 32)
     {
         species = GetMonData(&gPlayerParty[i], MON_DATA_SPECIES);
-        sMonIconSpriteIds[i] = CreateMonIcon(species, SpriteCB_MonIcon, x, 124, 1, GetMonData(&gPlayerParty[i], MON_DATA_PERSONALITY));
+        sMonIconSpriteIds[i] = CreateMonIcon2(species, SpriteCB_MonIcon, x, 124, 1, GetMonData(&gPlayerParty[i], MON_DATA_IS_SHINY), GetMonData(&gPlayerParty[i], MON_DATA_PERSONALITY), GetMonData(&gPlayerParty[i], MON_DATA_IS_EGG));
         gSprites[sMonIconSpriteIds[i]].oam.priority = 0;
         StartSpriteAnim(&gSprites[sMonIconSpriteIds[i]], 4);
-        gSprites[sMonIconSpriteIds[i]].oam.paletteNum = GetMonIconPaletteIndexFromSpecies(species);
     }
+#endif
 }
 
 static void DestroyTrainerCardMonIcons(void)
@@ -1499,7 +1513,7 @@ static void DestroyTrainerCardMonIcons(void)
 static void PrintStickersOnCard(void)
 {
     u8 i;
-    u8 paletteSlots[4] = {11, 12, 13, 14};
+    u8 paletteSlots[2] = {11, 12};
 
     if (sData->cardType == CARD_TYPE_FRLG && sData->trainerCard.shouldDrawStickers == TRUE)
     {
@@ -1507,7 +1521,7 @@ static void PrintStickersOnCard(void)
         {
             u8 sticker = sData->trainerCard.stickers[i];
             if (sData->trainerCard.stickers[i])
-                WriteSequenceToBgTilemapBuffer(3, i * 4 + 320, i * 3 + 2, 2, 2, 2, paletteSlots[sticker - 1], 1);
+                WriteSequenceToBgTilemapBuffer(3, i * 4 + 320 + ((sticker - 1) % 2) * 16, i * 3 + 2, 2, 2, 2, paletteSlots[(sticker - 1) / 2], 1);
         }
     }
 }
@@ -1516,8 +1530,6 @@ static void LoadStickerGfx(void)
 {
     LoadPalette(sTrainerCardSticker1_Pal, BG_PLTT_ID(11), PLTT_SIZE_4BPP);
     LoadPalette(sTrainerCardSticker2_Pal, BG_PLTT_ID(12), PLTT_SIZE_4BPP);
-    LoadPalette(sTrainerCardSticker3_Pal, BG_PLTT_ID(13), PLTT_SIZE_4BPP);
-    LoadPalette(sTrainerCardSticker4_Pal, BG_PLTT_ID(14), PLTT_SIZE_4BPP);
     LoadBgTiles(3, sData->stickerTiles, 1024, 128);
 }
 

@@ -1,3 +1,4 @@
+#if IS_HNS
 EventScript_MomGiftCall_Item::
 	lockall
 	pokenavcall Mom_Text_GiftCall_Item
@@ -45,3 +46,4 @@ Mom_Text_GiftCall_Decoration:
 	.string "for your room!\p"
 	.string "Check your DECORATIONS when you\n"
 	.string "come home. Take care!$"
+#endif

@@ -660,6 +660,10 @@ void BeginHardwarePaletteFade(u32 blendCnt, u32 delay, u32 y, u32 targetY, u32 s
     gPaletteFade.mode = HARDWARE_FADE;
     gPaletteFade.shouldResetBlendRegisters = shouldResetBlendRegisters & 1;
     gPaletteFade.hardwareFadeFinishing = FALSE;
+    gPaletteFade.bldAlpha1Ovrd = FALSE;
+    gPaletteFade.bldAlpha2Ovrd = FALSE;
+    gPaletteFade.paletteFadeDoneCB = NULL;
+    gPaletteFade.hardwareForceBlankOnWhite = TRUE;
 
     if (y < targetY)
         gPaletteFade.yDec = 0;
@@ -739,8 +743,8 @@ static void UpdateBlendRegisters(void)
             SetGpuReg(
                 REG_OFFSET_BLDALPHA,
                 BLDALPHA_BLEND(
-                    min(++tgt1, gWeatherPtr->currBlendEVA),
-                    min(++tgt2, gWeatherPtr->currBlendEVB)
+                    gPaletteFade.doBldAlpha1Ovrd ? gPaletteFade.bldAlpha1Ovrd : min(++tgt1, gWeatherPtr->currBlendEVA),
+                    gPaletteFade.doBldAlpha2Ovrd ? gPaletteFade.bldAlpha2Ovrd : min(++tgt2, gWeatherPtr->currBlendEVB)
                 )
             );
             break;
@@ -748,7 +752,7 @@ static void UpdateBlendRegisters(void)
             bldAlpha = BLDALPHA_TGT1(max(0, 16 - gPaletteFade.y));
             SetGpuReg(
                 REG_OFFSET_BLDALPHA,
-                BLDALPHA_BLEND(min(tgt1, bldAlpha), min(tgt2, bldAlpha))
+                BLDALPHA_BLEND(gPaletteFade.doBldAlpha1Ovrd ? gPaletteFade.bldAlpha1Ovrd : min(tgt1, bldAlpha), gPaletteFade.doBldAlpha2Ovrd ? gPaletteFade.bldAlpha2Ovrd : min(tgt2, bldAlpha))
             );
             break;
         // Not handled; blend sprites will pop in,
@@ -758,11 +762,11 @@ static void UpdateBlendRegisters(void)
         case FADE_TO_WHITE:
             SetGpuReg(
                 REG_OFFSET_BLDALPHA,
-                BLDALPHA_BLEND(min(++tgt1, 31), min(++tgt2, 31))
+                BLDALPHA_BLEND(gPaletteFade.doBldAlpha1Ovrd ? gPaletteFade.bldAlpha1Ovrd : min(++tgt1, 31), gPaletteFade.doBldAlpha2Ovrd ? gPaletteFade.bldAlpha2Ovrd : min(++tgt2, 31))
             );
             // cause display to show white when finished
             // (otherwise blend-mode sprites will still be visible)
-            if (gPaletteFade.hardwareFadeFinishing && gPaletteFade.y >= 16)
+            if (gPaletteFade.hardwareForceBlankOnWhite && gPaletteFade.hardwareFadeFinishing && gPaletteFade.y >= 16)
                 SetGpuRegBits(REG_OFFSET_DISPCNT, DISPCNT_FORCED_BLANK);
             break;
         }
@@ -770,6 +774,8 @@ static void UpdateBlendRegisters(void)
 
     if (gPaletteFade.hardwareFadeFinishing)
     {
+        if (gPaletteFade.paletteFadeDoneCB)
+            gPaletteFade.paletteFadeDoneCB();
         gPaletteFade.hardwareFadeFinishing = FALSE;
         gPaletteFade.mode = 0;
         gPaletteFadeBlendCnt = 0;
