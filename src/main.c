@@ -23,6 +23,7 @@
 #include "intro.h"
 #include "main.h"
 #include "trainer_hill.h"
+#include "emulator_check.h"
 #include "test_runner.h"
 #include "constants/rgb.h"
 
@@ -112,6 +113,10 @@ void AgbMain(void)
     ResetBgs();
     SetDefaultFontsPointer();
     InitHeap(gHeap, HEAP_SIZE);
+
+    // run emulator accuracy check to block inaccurate emulators from running your hack
+    if (IsInaccurateEmulator())
+        RunEmulatorCheckUI(CB2_InitCopyrightScreenAfterBootup);
 
     gSoftResetDisabled = FALSE;
 
