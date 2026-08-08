@@ -3069,6 +3069,9 @@ static void SpawnLightSprite(s16 x, s16 y, s16 camX, s16 camY, u32 lightType)
         sprite->y += 28 + sprite->centerToCornerVecY;
         break;
     }
+
+    if (sprite->callback == UpdateLightSprite)
+        UpdateLightSprite(sprite);
 }
 
 #undef sLightType
