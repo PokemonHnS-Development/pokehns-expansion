@@ -2,7 +2,7 @@
   "id": "MAP_NATIONAL_PARK_BUG_CONTEST_HNS",
   "name": "NationalPark_BugContest_hns",
   "layout": "LAYOUT_NATIONAL_PARK_BUG_CONTEST_HNS",
-  "music": "MUS_HG_NATIONAL_PARK",
+  "music": "MUS_HG_BUG_CATCHING_CONTEST",
   "region_map_section": "MAPSEC_NATIONAL_PARK",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

@@ -200,7 +200,7 @@ GoldenrodCity_RadioTower_5F_EventScript_Archer::
 	clearflag FLAG_HIDE_GOLDENROD_RADIOTOWER_DIRECTOR
 	removeobject LOCALID_PETREL_OFFICE
 	addobject LOCALID_DIRECTOR_STUDIO
-	playbgm MUS_HG_GOLDENROD, TRUE
+	playbgm MUS_HG_GOLDENROD, FALSE
 	delay 120
 	fadescreen FADE_FROM_BLACK
 	goto_if_eq VAR_FACING, DIR_SOUTH, GoldenrodCity_RadioTower_5F_EventScript_WingTop

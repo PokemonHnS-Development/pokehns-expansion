@@ -49,7 +49,7 @@ RadioTower1F_Text_Whitney1::
 	.string "WHITNEY: Hi!\p"
 	.string "My name is WHITNEY!\p"
 	.string "I heard about the QUIZ to win a\n"
-	.string "RADIO, so I came here to get\l"
+	.string "RADIO CARD, so I came here to get\l"
 	.string "one...\p"
 	.string "But this QUIZ is so hard!$"
 
@@ -122,7 +122,7 @@ RadioTower1F_EventScript_ReceptionGiveRadio::
 	msgbox RadioTower1F_Text_QuizWin, MSGBOX_DEFAULT
 	closemessage
 	playfanfare MUS_OBTAIN_ITEM
-	giveitem ITEM_RADIO
+	msgbox RadioTower1F_Text_PokegearRadio, MSGBOX_AUTOCLOSE
 	waitfanfare
 	msgbox RadioTower1F_Text_TuneIn, MSGBOX_DEFAULT
 	closemessage
@@ -173,7 +173,7 @@ RadioTower1F_Text_RadioCardWomanOfferQuiz:
     .string "We have a special QUIZ campaign on\n"
     .string "right now.\p"
     .string "Answer five questions correctly to\n"
-    .string "win a RADIO.\p"
+    .string "win a POKéGEAR RADIO CARD.\p"
     .string "You and your POKéMON can use it to\n"
     .string "play music anytime, anywhere.\p"
     .string "Would you like to take the QUIZ?$"
@@ -210,7 +210,7 @@ RadioTower1F_Text_QuizQuestion5:
 RadioTower1F_Text_QuizWin:
     .string "Bingo! You got it!\n"
     .string "Congratulations!\p"
-    .string "Here's your prize, a RADIO!$"
+    .string "Here's your prize, a RADIO CARD!$"
 
 RadioTower1F_Text_PokegearRadio:
     .string "{PLAYER}'s POKéGEAR can now double as\n"
@@ -259,6 +259,9 @@ RadioTower1F_Text_Directory:
     .string "4F PRODUCTION\p"
     .string "5F DIRECTOR'S OFFICE$"
 
+RadioTower1F_Text_GotRadio:
+	.string "{PLAYER} got the RADIO CARD\n"
+	.string "for the POKéGEAR!$"
 
 GoldenrodCity_RadioTower_1F_EventScript_LotteryClerk::
 	lock

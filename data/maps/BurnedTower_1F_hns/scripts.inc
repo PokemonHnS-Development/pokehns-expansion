@@ -110,7 +110,7 @@ BurnedTower_1F_EventScript_Silver::
 	call_if_eq VAR_STARTER_MON, 0, BurnedTower_1F_Silver_Battle_Cyndaquil
 	call_if_eq VAR_STARTER_MON, 1, BurnedTower_1F_Silver_Battle_Totodile
 	call_if_eq VAR_STARTER_MON, 2, BurnedTower_1F_Silver_Battle_Chikorita
-	playbgm MUS_HG_RIVAL_EXIT, TRUE
+	playbgm MUS_HG_RIVAL_EXIT, FALSE
 	msgbox BurnedTowerSilver_AfterText1, MSGBOX_DEFAULT
 	closemessage
 	setvar VAR_0x8004, 1  @ vertical pan

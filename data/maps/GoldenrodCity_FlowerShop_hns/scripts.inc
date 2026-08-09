@@ -145,3 +145,25 @@ GoldenrodCity_FlowerShop_Text_FloriaYouBeatWhitney:
 
 GoldenrodCity_FlowerShop_Text_FloriaItWasAMon:
     .string "So it really was a POKéMON!$"
+
+
+GoldenrodCity_FlowerShop_EventScript_RandomBerryGirl::
+	lock
+	faceplayer
+	dotimebasedevents
+	goto_if_set FLAG_DAILY_FLOWER_SHOP_RECEIVED_BERRY_HNS, GoldenrodCity_FlowerShop_EventScript_AlreadyReceivedBerry
+	msgbox Route104_PrettyPetalFlowerShop_Text_ImGrowingFlowers, MSGBOX_DEFAULT
+	random 8
+	addvar VAR_RESULT, FIRST_BERRY_INDEX
+	giveitem VAR_RESULT
+	goto_if_eq VAR_RESULT, 0, Common_EventScript_ShowBagIsFull
+	setflag FLAG_DAILY_FLOWER_SHOP_RECEIVED_BERRY_HNS
+	msgbox Route104_PrettyPetalFlowerShop_Text_MachineMixesBerries, MSGBOX_DEFAULT
+	release
+	end
+
+GoldenrodCity_FlowerShop_EventScript_AlreadyReceivedBerry::
+	msgbox Route104_PrettyPetalFlowerShop_Text_MachineMixesBerries, MSGBOX_DEFAULT
+	release
+	end
+

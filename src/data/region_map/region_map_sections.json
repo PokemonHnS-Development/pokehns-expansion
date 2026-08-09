@@ -2527,6 +2527,14 @@
     },
     {
       "height": 1,
+      "id": "MAPSEC_ROCKET_HIDEOUT_HNS",
+      "name": "ROCKET HIDEOUT",
+      "width": 1,
+      "x": 15,
+      "y": 2
+    },
+    {
+      "height": 1,
       "id": "MAPSEC_MT_SILVER",
       "name": "MT. SILVER",
       "width": 1,

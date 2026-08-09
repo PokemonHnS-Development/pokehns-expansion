@@ -189,7 +189,7 @@ VioletCity_EventScript_ElmCall_Trigger::
 
 VioletCity_EventScript_Kimono_Girl::
 	lock
-	playbgm MUS_HG_KIMONO_GIRL, TRUE
+	playbgm MUS_HG_KIMONO_GIRL, FALSE
 	playse SE_PIN
 	applymovement LOCALID_VIOLET_KIMONO, Common_Movement_ExclamationMark
 	delay 60

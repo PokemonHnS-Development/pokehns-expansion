@@ -920,6 +920,11 @@ u8 LoadGameSave(u8 saveType)
         gSaveBlock1Ptr->saveVersion = 0;
         gSaveBlock1Ptr->saveVersionMagic = SAVE_VERSION_MAGIC;
     }
+    if (gSaveBlock1Ptr->saveVersion < 1)
+    {
+        FlagSet(FLAG_ENABLE_CONDITION);
+        gSaveBlock1Ptr->saveVersion = 1;
+    }
 
     // Add version migration steps here:
     // if (gSaveBlock1Ptr->saveVersion < 1)

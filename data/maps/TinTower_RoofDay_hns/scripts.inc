@@ -35,7 +35,7 @@ TinTower_RoofDay_MapScript_HoohPostStoryEncounter::
 
 TinTower_RoofDay_EventScript_TalkToKimono::
 	lockall
-	playbgm MUS_HG_KIMONO_GIRL_DANCE, TRUE
+	playbgm MUS_HG_KIMONO_GIRL_DANCE, FALSE
 	msgbox TinTower_RoofDay_Text_Kimono_Opening, MSGBOX_DEFAULT
 	closemessage
 

@@ -38,8 +38,10 @@ static const u8 sLastCursorPositions[] =
     [POKENAV_MENU_TYPE_UNLOCK_MC]         = 3,
     [POKENAV_MENU_TYPE_UNLOCK_MC_RIBBONS] = 4,
 #if IS_HNS
-    [POKENAV_MENU_TYPE_UNLOCK_MC_RADIO]          = 4,
-    [POKENAV_MENU_TYPE_UNLOCK_MC_RIBBONS_RADIO]  = 5,
+    [POKENAV_MENU_TYPE_UNLOCK_MC_RADIO]                = 4,
+    [POKENAV_MENU_TYPE_UNLOCK_MC_RIBBONS_RADIO]        = 5,
+    [POKENAV_MENU_TYPE_DEFAULT_NO_COND]                = 1,
+    [POKENAV_MENU_TYPE_UNLOCK_MC_NO_COND]              = 2,
 #endif
     [POKENAV_MENU_TYPE_CONDITION]         = 2,
     [POKENAV_MENU_TYPE_CONDITION_SEARCH]  = 5
@@ -86,6 +88,17 @@ static const u8 sMenuItems[][MAX_POKENAV_MENUITEMS] =
         POKENAV_MENUITEM_RIBBONS,
         POKENAV_MENUITEM_SWITCH_OFF
     },
+    [POKENAV_MENU_TYPE_DEFAULT_NO_COND] =
+    {
+        POKENAV_MENUITEM_MAP,
+        [1 ... MAX_POKENAV_MENUITEMS - 1] = POKENAV_MENUITEM_SWITCH_OFF
+    },
+    [POKENAV_MENU_TYPE_UNLOCK_MC_NO_COND] =
+    {
+        POKENAV_MENUITEM_MAP,
+        POKENAV_MENUITEM_MATCH_CALL,
+        [2 ... MAX_POKENAV_MENUITEMS - 1] = POKENAV_MENUITEM_SWITCH_OFF
+    },
 #endif
     [POKENAV_MENU_TYPE_CONDITION] =
     {
@@ -124,6 +137,14 @@ static u8 GetPokenavMainMenuType(void)
             menuType = POKENAV_MENU_TYPE_UNLOCK_MC_RADIO;
         else if (menuType == POKENAV_MENU_TYPE_UNLOCK_MC_RIBBONS)
             menuType = POKENAV_MENU_TYPE_UNLOCK_MC_RIBBONS_RADIO;
+    }
+
+    if (!FlagGet(FLAG_ENABLE_CONDITION))
+    {
+        if (menuType == POKENAV_MENU_TYPE_DEFAULT)
+            menuType = POKENAV_MENU_TYPE_DEFAULT_NO_COND;
+        else if (menuType == POKENAV_MENU_TYPE_UNLOCK_MC)
+            menuType = POKENAV_MENU_TYPE_UNLOCK_MC_NO_COND;
     }
 #endif
 
@@ -211,6 +232,8 @@ static void SetMenuInputHandler(struct Pokenav_Menu *menu)
 #if IS_HNS
     case POKENAV_MENU_TYPE_UNLOCK_MC_RADIO:
     case POKENAV_MENU_TYPE_UNLOCK_MC_RIBBONS_RADIO:
+    case POKENAV_MENU_TYPE_DEFAULT_NO_COND:
+    case POKENAV_MENU_TYPE_UNLOCK_MC_NO_COND:
 #endif
         menu->callback = GetMainMenuInputHandler();
         break;

@@ -75,7 +75,7 @@ Route22_EventScript_Scene::
 	addobject LOCALID_ROUTE22_GIOVANNI
 	addobject LOCALID_ROUTE22_SILVER
 	waitse
-	playbgm MUS_RG_ROUTE3, TRUE
+	playbgm MUS_RG_ROUTE3, FALSE
 	fadescreenswapbuffers FADE_FROM_WHITE
 	delay 50
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
@@ -123,7 +123,7 @@ Route22_EventScript_Scene::
 	msgbox Route22_Text_Silver5, MSGBOX_DEFAULT
 	closemessage
 	delay 20
-	playbgm MUS_HG_ENCOUNTER_RIVAL, TRUE
+	playbgm MUS_HG_ENCOUNTER_RIVAL, FALSE
 	applymovement2 LOCALID_ROUTE22_SILVER, Route22_Movement_SilverStartLeave
 	applymovement2 OBJ_EVENT_ID_CAMERA, Route22_Movement_CameraPanRight
 	waitmovement LOCALID_ROUTE22_SILVER

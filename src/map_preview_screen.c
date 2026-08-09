@@ -151,7 +151,7 @@ static const struct MapPreviewScreen sMapPreviewScreenData[MPS_COUNT] = {
         .palptr = sPokemonMansionMapPreviewPalette
     },
     [MPS_ROCKET_HIDEOUT] = {
-        .mapsec = MAPSEC_ROCKET_HIDEOUT,
+        .mapsec = MAPSEC_ROCKET_HIDEOUT_HNS,
         .type = MPS_TYPE_FOREST,
         .flagId = FLAG_WORLD_MAP_ROCKET_HIDEOUT_B1F,
         .tilesptr = sRocketHideoutMapPreviewTiles,

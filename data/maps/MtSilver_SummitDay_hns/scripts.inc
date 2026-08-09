@@ -35,6 +35,7 @@ MtSilver_SummitDay_EventScript_Red::
 	playse SE_M_BLIZZARD
 	setrespawn HEAL_LOCATION_NEW_BARK_TOWN_HNS
 	msgbox MtSilver_SummitDay_Text_Red, MSGBOX_DEFAULT
+	special GivePartyMonLandRibbon
 	closemessage
 	fadescreenswapbuffers FADE_TO_BLACK
 	setflag FLAG_HIDE_MTSILVER_RED

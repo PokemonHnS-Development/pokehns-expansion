@@ -25,7 +25,7 @@ MrPokemonHouse_EventScript_GiveEgg::
 	turnobject LOCALID_ROUTE30_OAK, DIR_WEST
 	msgbox MrPokemonHouse_Text_Intro5, MSGBOX_DEFAULT
 	closemessage
-	playbgm MUS_HG_OAK, TRUE
+	playbgm MUS_HG_OAK, FALSE
 	applymovement LOCALID_ROUTE30_OAK, MrPokemonHouse_Movement_OakToPlayer
 	waitmovement 0 
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_EAST

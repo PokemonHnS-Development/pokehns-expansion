@@ -25,7 +25,7 @@ WhirlIslands_LugiaChamber_MapScript_LugiaPostStoryEncounter::
 
 WhirlIslands_LugiaChamber_EventScript_TalkToKimono::
 	lockall
-	playbgm MUS_HG_KIMONO_GIRL_DANCE, TRUE
+	playbgm MUS_HG_KIMONO_GIRL_DANCE, FALSE
 	msgbox WhirlIslands_LugiaChamber_Text_Kimono_Opening, MSGBOX_DEFAULT
 	closemessage
 

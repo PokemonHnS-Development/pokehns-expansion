@@ -38,7 +38,7 @@ SinjohRuins_ArceusRoom_TriggerScene::
 	closemessage
     goto_if_eq VAR_RESULT, FALSE, SinjohRuins_Lab_EventScript_NoOp
 
-	playbgm MUS_DP_AZURE_FLUTE, TRUE
+	playbgm MUS_DP_AZURE_FLUTE, FALSE
 	applymovement2 LOCALID_PLAYER, SinjohRuins_ArceusRoom_Movement_WalkSlowUp
 	waitmovement 0
 	setvar VAR_RESULT, 3
@@ -305,6 +305,7 @@ SinjohRuins_ArceusRoom_EventScript_ArceusPhase2::
 	fadescreenswapbuffers FADE_TO_BLACK
 	removeobject LOCALID_SINJOHRUINS_ARCEUSROOM_ARCEUS
 	setflag FLAG_HIDE_SINJOHRUINS_ARCEUSROOM_ARCEUS
+	special GivePartyMonSkyRibbon
 	fadescreenswapbuffers FADE_FROM_BLACK
 	release
 	end

@@ -4,7 +4,7 @@ OlivineCity_PortInside_hns_MapScripts::
 
 OlivineCity_PortInside_EventScript_Oak::
 	lock
-	playbgm MUS_HG_OAK, TRUE
+	playbgm MUS_HG_OAK, FALSE
 	playse SE_PIN
 	applymovement2 LOCALID_OLIVINEPORT_OAK, Common_Movement_ExclamationMark
 	delay 60

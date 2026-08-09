@@ -15,6 +15,7 @@ PokemonLeague_HallOfFame_EventScript_Cutscene::
 	waitmovement LOCALID_HALLOFFAME_LANCE
 	msgbox PokemonLeague_HallOfFame_LanceText, MSGBOX_DEFAULT
 	closemessage
+	special GivePartyMonChampionRibbon
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
 	delay 20
@@ -37,6 +38,7 @@ PokemonLeague_HallOfFame_EventScript_CutsceneKantoChamp::
 	waitmovement LOCALID_HALLOFFAME_LANCE
 	msgbox PokemonLeague_HallOfFame_Rematch_LanceText, MSGBOX_DEFAULT
 	closemessage
+	special GivePartyMonChampionRibbon
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
 	delay 20

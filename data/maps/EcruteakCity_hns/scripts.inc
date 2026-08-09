@@ -65,7 +65,7 @@ EcruteakCity_Trigger_Silver::
 	delay 10
 	clearflag FLAG_HIDE_ECRUTEAK_SILVER
 	addobject LOCALID_ECRUTEK_SILVER
-	playbgm MUS_HG_ENCOUNTER_RIVAL, TRUE
+	playbgm MUS_HG_ENCOUNTER_RIVAL, FALSE
 	playse SE_BANG
 	applymovement LOCALID_ECRUTEK_SILVER, EcruteakCity_Movement_Silver1
 	applymovement OBJ_EVENT_ID_PLAYER, EcruteakCity_Movement_Silver1

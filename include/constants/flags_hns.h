@@ -674,7 +674,7 @@
 #define FLAG_MINTS_ENABLED                          0x263
 #define FLAG_NO_SHINY                               0x264
 
-#define HNS_FEATURE_COUNT                           9
+#define HNS_FEATURE_COUNT                           10
 
 // Misc
 #define HNS_MISC_START                              0x265
@@ -846,7 +846,7 @@
 #define FLAG_FUCHSIA_SAFARI_NPC_TRADE_COMPLETED      0x300
 #define FLAG_PEWTER_GYM_NPC_TRADE_COMPLETED          0x301
 #define FLAG_OLIVINE_GYM_NPC_TRADE_COMPLETED         0x302
-#define FLAG_UNUSED_35                              0x303
+#define FLAG_ENABLE_CONDITION                       0x303
 #define FLAG_UNUSED_36                              0x304
 #define FLAG_UNUSED_37                              0x305
 #define FLAG_UNUSED_38                              0x306
@@ -1326,7 +1326,8 @@
 #define FLAG_DAILY_BUENAS_PASSWORD                  (DAILY_FLAGS_START + 7)
 #define FLAG_DAILY_LUCKY_NUMBER_SET                 (DAILY_FLAGS_START + 8)
 #define FLAG_DAILY_BUENAS_PASSWORD_GUESSED          (DAILY_FLAGS_START + 9)
-#define DAILY_FLAGS_END                             (DAILY_FLAGS_START + 9)
+#define FLAG_DAILY_FLOWER_SHOP_RECEIVED_BERRY_HNS   (DAILY_FLAGS_START +10)
+#define DAILY_FLAGS_END                             (DAILY_FLAGS_START +10)
 #define NUM_DAILY_FLAGS                             (DAILY_FLAGS_END - DAILY_FLAGS_START + 1)
 #define BUILD_FLAGS_END                             DAILY_FLAGS_END
 

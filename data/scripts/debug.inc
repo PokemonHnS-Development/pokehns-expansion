@@ -203,9 +203,13 @@ Debug_EventScript_Text_DefensiveIVs:
 	.string "HP IVs: {STR_VAR_1}, DEF IVs: {STR_VAR_2}, SPDEF IVs: {STR_VAR_3}$"
 
 Debug_EventScript_Script_1::
-	setvar VAR_SINJOH_STORYLINE, 10
+	clearflag FLAG_DAILY_FLOWER_SHOP_RECEIVED_BERRY_HNS
 	release
 	end
+
+Debug_Text_1:
+	.string "{STR_VAR_1}$"
+
 
 Debug_EventScript_Script_2::
 	givemon SPECIES_REGICE, 100

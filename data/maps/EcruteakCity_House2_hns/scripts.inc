@@ -16,7 +16,7 @@ Ecruteak_Text_ItemfinderTrueSpirit:
 Ecruteak_Text_ItemfinderExplanation:
 	.string "There are many items lying about\n"
 	.string "that aren't obvious.\p"
-	.string "Use ITEMFINDER to check if there\n"
+	.string "Use DOWSING MACHINE to check if there\n"
 	.string "is an item on the ground near you.\p"
 	.string "It doesn't show the exact spot,\n"
 	.string "so you'll have to look yourself.\p"

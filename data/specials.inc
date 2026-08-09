@@ -691,4 +691,19 @@ gSpecials::
 	def_special Special_MomEnsureInitialized
 	def_special Special_MomOpenDepositInput
 	def_special Special_MomOpenWithdrawInput
-
+    def_special PartyMonHasSkyRibbon
+	def_special GivePartyMonSkyRibbon
+    def_special PartyMonHasLandRibbon
+	def_special GivePartyMonLandRibbon
+	def_special PartyMonHasMarineRibbon
+	def_special GivePartyMonMarineRibbon
+	def_special PartyMonHasChampionRibbon
+	def_special GivePartyMonChampionRibbon
+	def_special PartyMonHasEarthRibbon
+	def_special GivePartyMonEarthRibbon
+	def_special PartyMonHasWorldRibbon
+	def_special GivePartyMonWorldRibbon
+	def_special PartyMonHasArtistRibbon
+	def_special GivePartyMonArtistRibbon
+	def_special PartyMonHasNationalRibbon
+	def_special GivePartyMonNationalRibbon

@@ -284,3 +284,4 @@ NewBarkTown_Text_PlayersHouse:
 
 NewBarkTown_Text_ElmsHouse:
 	.string "PROF.ELM'S HOUSE$"
+

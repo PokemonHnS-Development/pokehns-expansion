@@ -87,7 +87,7 @@ TohjoFalls_EventScript_GiovanniScene::
 	clearflag FLAG_HIDE_TOHJO_GIOVANNI
 	addobject LOCALID_TOHJOFALLS_GIOVANNI
 	waitse
-	playbgm MUS_HG_RADIO_ROCKET, TRUE
+	playbgm MUS_HG_RADIO_ROCKET, FALSE
 	fadescreen FADE_FROM_WHITE
 	delay 50
 	turnobject  OBJ_EVENT_ID_PLAYER, DIR_NORTH
@@ -106,7 +106,7 @@ TohjoFalls_EventScript_GiovanniScene::
 	waitmovement 0
 	msgbox TohjoFalls_GiovanniRoom_Text_GiovanniBeforeBattle, MSGBOX_DEFAULT
 	trainerbattle_no_intro TRAINER_GIOVANNI_HNS, TohjoFalls_GiovanniRoom_Text_GiovanniDefeat
-	playbgm MUS_HG_RADIO_ROCKET, TRUE
+	playbgm MUS_HG_RADIO_ROCKET, FALSE
 	applymovement2 LOCALID_TOHJOFALLS_GIOVANNI, TohjoFalls_Movement_GiovanniTakenAback
 	waitmovement 0
 	msgbox TohjoFalls_GiovanniRoom_Text_GiovanniAfter, MSGBOX_DEFAULT

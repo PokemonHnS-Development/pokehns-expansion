@@ -8,7 +8,7 @@ GoldenrodCity_UndergroundTunnel_OnLoad::
 	
 GoldenrodCity_UndergroundTunnel_EventScript_KimonoTriggerBot::
 	lock
-	playbgm MUS_HG_KIMONO_GIRL, TRUE
+	playbgm MUS_HG_KIMONO_GIRL, FALSE
 	applymovement LOCALID_GOLDENROD_UNDERGROUND_KIMONO, GoldenrodCity_UndergroundTunnel_Movement_Kimono_WalkToPlayerBot
 	waitmovement 0
 	msgbox GoldenrodCity_UndergroundTunnel_Text_Kimono1, MSGBOX_DEFAULT
@@ -36,7 +36,7 @@ GoldenrodCity_UndergroundTunnel_EventScript_KimonoTriggerBot::
 
 GoldenrodCity_UndergroundTunnel_EventScript_KimonoTriggerTop::
 	lock
-	playbgm MUS_HG_KIMONO_GIRL, TRUE
+	playbgm MUS_HG_KIMONO_GIRL, FALSE
 	applymovement LOCALID_GOLDENROD_UNDERGROUND_KIMONO, GoldenrodCity_UndergroundTunnel_Movement_Kimono_WalkToPlayerTop
 	waitmovement 0
 	msgbox GoldenrodCity_UndergroundTunnel_Text_Kimono1, MSGBOX_DEFAULT

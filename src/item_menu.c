@@ -310,10 +310,10 @@ static const struct MenuAction sItemMenuActions[] = {
     [ACTION_SHOW]              = {COMPOUND_STRING("SHOW"),      {ItemMenu_Show}},
     [ACTION_GIVE_FAVOR_LADY]   = {gMenuText_Give2,              {ItemMenu_GiveFavorLady}},
     [ACTION_CONFIRM_QUIZ_LADY] = {gMenuText_Confirm,            {ItemMenu_ConfirmQuizLady}},
-    [ACTION_BY_NAME]           = {COMPOUND_STRING("Name"),      {ItemMenu_SortByName}},
-    [ACTION_BY_TYPE]           = {COMPOUND_STRING("Type"),      {ItemMenu_SortByType}},
-    [ACTION_BY_AMOUNT]         = {COMPOUND_STRING("Amount"),    {ItemMenu_SortByAmount}},
-    [ACTION_BY_INDEX]          = {COMPOUND_STRING("Index"),     {ItemMenu_SortByIndex}},
+    [ACTION_BY_NAME]           = {COMPOUND_STRING("NAME"),      {ItemMenu_SortByName}},
+    [ACTION_BY_TYPE]           = {COMPOUND_STRING("TYPE"),      {ItemMenu_SortByType}},
+    [ACTION_BY_AMOUNT]         = {COMPOUND_STRING("AMOUNT"),    {ItemMenu_SortByAmount}},
+    [ACTION_BY_INDEX]          = {COMPOUND_STRING("INDEX"),     {ItemMenu_SortByIndex}},
     [ACTION_REGISTER_TAP]      = {COMPOUND_STRING("TAP"),      {ItemMenu_Register}},
     [ACTION_REGISTER_HOLD]     = {COMPOUND_STRING("HOLD"),     {ItemMenu_RegisterHold}},
     [ACTION_DUMMY]             = {gText_EmptyString2, {NULL}}
@@ -2846,10 +2846,10 @@ static const u8 sText_SortItemsHow[] = _("Sort items how?");
 static const u8 sText_ItemsSorted[] = _("Items sorted by {STR_VAR_1}!");
 static const u8 *const sSortTypeStrings[] =
 {
-    [SORT_ALPHABETICALLY] = COMPOUND_STRING("name"),
-    [SORT_BY_TYPE] = COMPOUND_STRING("type"),
-    [SORT_BY_AMOUNT] = COMPOUND_STRING("amount"),
-    [SORT_BY_INDEX] = COMPOUND_STRING("index")
+    [SORT_ALPHABETICALLY] = COMPOUND_STRING("NAME"),
+    [SORT_BY_TYPE] = COMPOUND_STRING("TYPE"),
+    [SORT_BY_AMOUNT] = COMPOUND_STRING("AMOUNT"),
+    [SORT_BY_INDEX] = COMPOUND_STRING("INDEX")
 };
 
 static const u8 sBagMenuSortItems[] =
