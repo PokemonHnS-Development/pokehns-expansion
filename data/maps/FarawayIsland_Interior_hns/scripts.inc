@@ -53,7 +53,7 @@ FarawayIsland_Interior_hns_EventScript_FindMew::
 	lockall
 	playse SE_PIN
 	applymovement LOCALID_FARAWAY_ISLAND_INTERIOR_HNS_MEW, Common_Movement_ExclamationMark
-	waitmovement 0
+	waitmovement LOCALID_FARAWAY_ISLAND_INTERIOR_HNS_MEW
 	applymovement LOCALID_FARAWAY_ISLAND_INTERIOR_HNS_MEW, Common_Movement_Delay48
 	waitmovement 0
 	applymovement LOCALID_FARAWAY_ISLAND_INTERIOR_HNS_MEW, FarawayIsland_Interior_hns_Movement_MewMoveAndHide

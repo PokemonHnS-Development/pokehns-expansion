@@ -908,6 +908,7 @@ static void Zigzag(struct Sprite *sprite)
         if (sZigzagData[sprite->data[3]][2] == 0)
         {
             sprite->callback = WaitAnimEnd;
+            sprite->x2 = 0;
         }
         else
         {
@@ -919,6 +920,7 @@ static void Zigzag(struct Sprite *sprite)
     if (sZigzagData[sprite->data[3]][2] == 0)
     {
         sprite->callback = WaitAnimEnd;
+        sprite->x2 = 0;
     }
     else
     {
@@ -1889,6 +1891,7 @@ static void BackFlipBig_2(struct Sprite *sprite)
     {
         ResetSpriteAfterAnim(sprite);
         sprite->callback = WaitAnimEnd;
+        sprite->x2 = 0;
     }
 
     TryFlipX(sprite);
@@ -2019,6 +2022,7 @@ static void TumblingFrontFlip(struct Sprite *sprite)
             {
                 ResetSpriteAfterAnim(sprite);
                 sprite->callback = WaitAnimEnd;
+                sprite->x2 = 0;
             }
         }
 
@@ -2746,6 +2750,7 @@ static void TipAndShake_3(struct Sprite *sprite)
         sprite->data[7] = 0;
         ResetSpriteAfterAnim(sprite);
         sprite->callback = WaitAnimEnd;
+        sprite->x2 = 0;
     }
     else
     {
@@ -3165,6 +3170,7 @@ static void Anim_RapidHorizontalHops(struct Sprite *sprite)
     if (sprite->data[2] > 2048)
     {
         sprite->callback = WaitAnimEnd;
+        sprite->x2 = 0;
         sprite->data[6] = 0;
     }
     else
@@ -3505,6 +3511,7 @@ static void Anim_VerticalShakeHorizontalSlide_Slow(struct Sprite *sprite)
     if (sprite->data[2] > 2048)
     {
         sprite->callback = WaitAnimEnd;
+        sprite->x2 = 0;
         sprite->data[6] = 0;
     }
     else
@@ -3862,6 +3869,7 @@ static void Anim_VerticalShakeHorizontalSlide(struct Sprite *sprite)
     if (sprite->data[2] > 2048)
     {
         sprite->callback = WaitAnimEnd;
+        sprite->x2 = 0;
         sprite->data[6] = 0;
     }
     else
@@ -3896,6 +3904,7 @@ static void Anim_VerticalShakeHorizontalSlide_Fast(struct Sprite *sprite)
     if (sprite->data[2] > 2048)
     {
         sprite->callback = WaitAnimEnd;
+        sprite->x2 = 0;
         sprite->data[6] = 0;
     }
     else
@@ -3948,7 +3957,10 @@ static void TriangleDown(struct Sprite *sprite)
     if (sTriangleDownData[sprite->data[3]][2] / sprite->data[5] == 0)
     {
         if (--sprite->data[6] == 0)
+        {
             sprite->callback = WaitAnimEnd;
+            sprite->x2 = 0;
+        }
         else
             sprite->data[2] = 0;
     }
@@ -4915,6 +4927,7 @@ static void ShakeGlow_Blend(struct Sprite *sprite)
     if (sprite->data[2] > 127)
     {
         BlendPalette(sprite->data[7], 16, 0, RGB_RED);
+        sprite->x2 = 0;
         sprite->callback = WaitAnimEnd;
     }
     else

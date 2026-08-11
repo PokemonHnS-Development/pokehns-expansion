@@ -45,7 +45,7 @@ FuchsiaCity_SafariZoneEntrance_EventScript_MeetSteven::
 	lock
 	playse SE_PIN
 	applymovement LOCALID_SAFARIZONEFUCHSIA_STEVEN, Common_Movement_ExclamationMark
-	delay 60
+	waitmovement LOCALID_SAFARIZONEFUCHSIA_STEVEN
 	applymovement LOCALID_SAFARIZONEFUCHSIA_STEVEN, FuchsiaCity_SafariZoneEntrance_Movement_WalkToPlayer
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp1
 	waitmovement LOCALID_SAFARIZONEFUCHSIA_STEVEN

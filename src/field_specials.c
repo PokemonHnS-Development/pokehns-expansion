@@ -5962,3 +5962,195 @@ void ConvertToRegionalForm(void)
     }
     gSpecialVar_Result = FALSE;
 }
+
+bool8 PartyMonHasSkyRibbon(void)
+{
+    return GetMonData(&gPlayerParty[GetLeadMonIndex()], MON_DATA_SKY_RIBBON);
+}
+
+void GivePartyMonSkyRibbon(void)
+{
+    bool8 ribbonSet = TRUE;
+    u8 i;
+    struct Pokemon *mon;
+
+    IncrementGameStat(GAME_STAT_RECEIVED_RIBBONS);
+    FlagSet(FLAG_SYS_RIBBON_GET);
+    for (i = 0; i < gPlayerPartyCount; i++)
+    {
+        mon = &gPlayerParty[i];
+        if (GetMonData(mon, MON_DATA_SPECIES, NULL) == SPECIES_NONE)
+            continue;
+        SetMonData(mon, MON_DATA_SKY_RIBBON, &ribbonSet);
+        if (GetRibbonCount(mon) > NUM_CUTIES_RIBBONS)
+            TryPutSpotTheCutiesOnAir(mon, MON_DATA_SKY_RIBBON);
+    }
+}
+
+bool8 PartyMonHasLandRibbon(void)
+{
+    return GetMonData(&gPlayerParty[GetLeadMonIndex()], MON_DATA_LAND_RIBBON);
+}
+
+void GivePartyMonLandRibbon(void)
+{
+    bool8 ribbonSet = TRUE;
+    u8 i;
+    struct Pokemon *mon;
+
+    IncrementGameStat(GAME_STAT_RECEIVED_RIBBONS);
+    FlagSet(FLAG_SYS_RIBBON_GET);
+    for (i = 0; i < gPlayerPartyCount; i++)
+    {
+        mon = &gPlayerParty[i];
+        if (GetMonData(mon, MON_DATA_SPECIES, NULL) == SPECIES_NONE)
+            continue;
+        SetMonData(mon, MON_DATA_LAND_RIBBON, &ribbonSet);
+        if (GetRibbonCount(mon) > NUM_CUTIES_RIBBONS)
+            TryPutSpotTheCutiesOnAir(mon, MON_DATA_LAND_RIBBON);
+    }
+}
+
+bool8 PartyMonHasMarineRibbon(void)
+{
+    return GetMonData(&gPlayerParty[GetLeadMonIndex()], MON_DATA_MARINE_RIBBON);
+}
+
+void GivePartyMonMarineRibbon(void)
+{
+    bool8 ribbonSet = TRUE;
+    u8 i;
+    struct Pokemon *mon;
+
+    IncrementGameStat(GAME_STAT_RECEIVED_RIBBONS);
+    FlagSet(FLAG_SYS_RIBBON_GET);
+    for (i = 0; i < gPlayerPartyCount; i++)
+    {
+        mon = &gPlayerParty[i];
+        if (GetMonData(mon, MON_DATA_SPECIES, NULL) == SPECIES_NONE)
+            continue;
+        SetMonData(mon, MON_DATA_MARINE_RIBBON, &ribbonSet);
+        if (GetRibbonCount(mon) > NUM_CUTIES_RIBBONS)
+            TryPutSpotTheCutiesOnAir(mon, MON_DATA_MARINE_RIBBON);
+    }
+}
+
+bool8 PartyMonHasChampionRibbon(void)
+{
+    return GetMonData(&gPlayerParty[GetLeadMonIndex()], MON_DATA_CHAMPION_RIBBON);
+}
+
+void GivePartyMonChampionRibbon(void)
+{
+    bool8 ribbonSet = TRUE;
+    u8 i;
+    struct Pokemon *mon;
+
+    IncrementGameStat(GAME_STAT_RECEIVED_RIBBONS);
+    FlagSet(FLAG_SYS_RIBBON_GET);
+    for (i = 0; i < gPlayerPartyCount; i++)
+    {
+        mon = &gPlayerParty[i];
+        if (GetMonData(mon, MON_DATA_SPECIES, NULL) == SPECIES_NONE)
+            continue;
+        SetMonData(mon, MON_DATA_CHAMPION_RIBBON, &ribbonSet);
+        if (GetRibbonCount(mon) > NUM_CUTIES_RIBBONS)
+            TryPutSpotTheCutiesOnAir(mon, MON_DATA_CHAMPION_RIBBON);
+    }
+}
+
+bool8 PartyMonHasEarthRibbon(void)
+{
+    return GetMonData(&gPlayerParty[GetLeadMonIndex()], MON_DATA_EARTH_RIBBON);
+}
+
+void GivePartyMonEarthRibbon(void)
+{
+    bool8 ribbonSet = TRUE;
+    u8 i;
+    struct Pokemon *mon;
+
+    IncrementGameStat(GAME_STAT_RECEIVED_RIBBONS);
+    FlagSet(FLAG_SYS_RIBBON_GET);
+    for (i = 0; i < gPlayerPartyCount; i++)
+    {
+        mon = &gPlayerParty[i];
+        if (GetMonData(mon, MON_DATA_SPECIES, NULL) == SPECIES_NONE)
+            continue;
+        SetMonData(mon, MON_DATA_EARTH_RIBBON, &ribbonSet);
+        if (GetRibbonCount(mon) > NUM_CUTIES_RIBBONS)
+            TryPutSpotTheCutiesOnAir(mon, MON_DATA_EARTH_RIBBON);
+    }
+}
+
+bool8 PartyMonHasWorldRibbon(void)
+{
+    return GetMonData(&gPlayerParty[GetLeadMonIndex()], MON_DATA_WORLD_RIBBON);
+}
+
+void GivePartyMonWorldRibbon(void)
+{
+    bool8 ribbonSet = TRUE;
+    u8 i;
+    struct Pokemon *mon;
+
+    IncrementGameStat(GAME_STAT_RECEIVED_RIBBONS);
+    FlagSet(FLAG_SYS_RIBBON_GET);
+    for (i = 0; i < gPlayerPartyCount; i++)
+    {
+        mon = &gPlayerParty[i];
+        if (GetMonData(mon, MON_DATA_SPECIES, NULL) == SPECIES_NONE)
+            continue;
+        SetMonData(mon, MON_DATA_WORLD_RIBBON, &ribbonSet);
+        if (GetRibbonCount(mon) > NUM_CUTIES_RIBBONS)
+            TryPutSpotTheCutiesOnAir(mon, MON_DATA_WORLD_RIBBON);
+    }
+}
+
+bool8 PartyMonHasArtistRibbon(void)
+{
+    return GetMonData(&gPlayerParty[GetLeadMonIndex()], MON_DATA_ARTIST_RIBBON);
+}
+
+void GivePartyMonArtistRibbon(void)
+{
+    bool8 ribbonSet = TRUE;
+    u8 i;
+    struct Pokemon *mon;
+
+    IncrementGameStat(GAME_STAT_RECEIVED_RIBBONS);
+    FlagSet(FLAG_SYS_RIBBON_GET);
+    for (i = 0; i < gPlayerPartyCount; i++)
+    {
+        mon = &gPlayerParty[i];
+        if (GetMonData(mon, MON_DATA_SPECIES, NULL) == SPECIES_NONE)
+            continue;
+        SetMonData(mon, MON_DATA_ARTIST_RIBBON, &ribbonSet);
+        if (GetRibbonCount(mon) > NUM_CUTIES_RIBBONS)
+            TryPutSpotTheCutiesOnAir(mon, MON_DATA_ARTIST_RIBBON);
+    }
+}
+
+bool8 PartyMonHasNationalRibbon(void)
+{
+    return GetMonData(&gPlayerParty[GetLeadMonIndex()], MON_DATA_NATIONAL_RIBBON);
+}
+
+void GivePartyMonNationalRibbon(void)
+{
+    bool8 ribbonSet = TRUE;
+    u8 i;
+    struct Pokemon *mon;
+
+    IncrementGameStat(GAME_STAT_RECEIVED_RIBBONS);
+    FlagSet(FLAG_SYS_RIBBON_GET);
+    for (i = 0; i < gPlayerPartyCount; i++)
+    {
+        mon = &gPlayerParty[i];
+        if (GetMonData(mon, MON_DATA_SPECIES, NULL) == SPECIES_NONE)
+            continue;
+        SetMonData(mon, MON_DATA_NATIONAL_RIBBON, &ribbonSet);
+        if (GetRibbonCount(mon) > NUM_CUTIES_RIBBONS)
+            TryPutSpotTheCutiesOnAir(mon, MON_DATA_NATIONAL_RIBBON);
+    }
+}

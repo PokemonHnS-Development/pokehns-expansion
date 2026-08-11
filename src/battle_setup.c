@@ -634,8 +634,12 @@ void BattleSetup_StartLegendaryBattle(void)
     case SPECIES_DEOXYS_SPEED:
         CreateBattleStartTask(B_TRANSITION_BLUR, MUS_RG_VS_DEOXYS);
         break;
-    case SPECIES_LUGIA:
     case SPECIES_HO_OH:
+        CreateBattleStartTask(B_TRANSITION_BLUR, MUS_HG_VS_HO_OH);
+        break;
+    case SPECIES_LUGIA:
+        CreateBattleStartTask(B_TRANSITION_BLUR, MUS_HG_VS_LUGIA);
+        break;
     default:
         CreateBattleStartTask(B_TRANSITION_BLUR, MUS_RG_VS_LEGEND);
         break;
@@ -820,7 +824,13 @@ static const struct {
     {MAP_FUCHSIA_CITY_SAFARI_ZONE_BEACH_HNS,    BATTLE_ENVIRONMENT_SAND},
     {MAP_CINNABAR_ISLAND_HNS,                    BATTLE_ENVIRONMENT_SAND},
     {MAP_SAFARI_ZONE_TOP_RIGHT_HNS,             BATTLE_ENVIRONMENT_SAND},
-    // GRAY_CAVE 
+    // CAVE_WATER (brown cave, pond bg even on land)
+    {MAP_ROUTE19_CAVE_HNS,                       BATTLE_ENVIRONMENT_CAVE_WATER},
+    {MAP_EMBEDDED_TOWER_HNS,                     BATTLE_ENVIRONMENT_CAVE},
+    // RAYQUAZA (sky bg)
+    {MAP_TIN_TOWER_ROOF_DAY_HNS,                 BATTLE_ENVIRONMENT_RAYQUAZA},
+    {MAP_TIN_TOWER_ROOF_NIGHT_HNS,               BATTLE_ENVIRONMENT_RAYQUAZA},
+    // GRAY_CAVE
     {MAP_CERULEAN_CAVE_1F_HNS,                   BATTLE_ENVIRONMENT_GRAY_CAVE},
     {MAP_CERULEAN_CAVE_B1F_HNS,                  BATTLE_ENVIRONMENT_GRAY_CAVE},
     {MAP_CERULEAN_CAVE_B2F_HNS,                  BATTLE_ENVIRONMENT_GRAY_CAVE},

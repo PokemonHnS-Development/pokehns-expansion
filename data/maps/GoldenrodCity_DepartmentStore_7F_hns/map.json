@@ -6,15 +6,16 @@
   "region_map_section": "MAPSEC_GOLDENROD_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
-  "map_type": "MAP_TYPE_INDOOR",
+  "map_type": "MAP_TYPE_CITY",
   "allow_cycling": false,
   "allow_escaping": false,
   "allow_running": false,
   "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": 0,
+  "connections": null,
   "object_events": [
     {
+      "local_id": "LOCALID_GOLDENROD_ROOF_NERD",
       "graphics_id": "OBJ_EVENT_GFX_SUPER_NERD_HNS",
       "x": 22,
       "y": 11,
@@ -25,8 +26,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "GoldenrodDeptStore7_EventScript_Nerd",
-      "flag": "0",
-      "local_id": "LOCALID_GOLDENROD_ROOF_NERD"
+      "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_2_HNS",

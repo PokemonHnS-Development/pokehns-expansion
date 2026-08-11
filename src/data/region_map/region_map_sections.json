@@ -2527,6 +2527,22 @@
     },
     {
       "height": 1,
+      "id": "MAPSEC_ROCKET_HIDEOUT_HNS",
+      "name": "ROCKET HIDEOUT",
+      "width": 1,
+      "x": 15,
+      "y": 2
+    },
+    {
+      "height": 4,
+      "id": "MAPSEC_VICTORY_ROAD_HNS",
+      "name": "VICTORY ROAD",
+      "width": 1,
+      "x": 16,
+      "y": 4
+    },
+    {
+      "height": 1,
       "id": "MAPSEC_MT_SILVER",
       "name": "MT. SILVER",
       "width": 1,

@@ -18,7 +18,7 @@ Route27_House_EventScript_WomanBeforeGiven::
 	applymovement OBJ_EVENT_ID_FOLLOWER FollowerLookAway
 	waitmovement OBJ_EVENT_ID_FOLLOWER
 	applymovement OBJ_EVENT_ID_FOLLOWER Common_Movement_QuestionMark
-	waitmovement 0
+	waitmovement OBJ_EVENT_ID_FOLLOWER
 	msgbox SandstormHouse_Text_DisloyalMon, MSGBOX_DEFAULT
 	closemessage
 	release

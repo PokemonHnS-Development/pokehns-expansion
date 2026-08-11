@@ -3,7 +3,7 @@
   "name": "VictoryRoadKanto_B2F_hns",
   "layout": "LAYOUT_VICTORY_ROAD_KANTO_B2F_HNS",
   "music": "MUS_HG_VICTORY_ROAD",
-  "region_map_section": "MAPSEC_VICTORY_ROAD",
+  "region_map_section": "MAPSEC_VICTORY_ROAD_HNS",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_UNDERGROUND",

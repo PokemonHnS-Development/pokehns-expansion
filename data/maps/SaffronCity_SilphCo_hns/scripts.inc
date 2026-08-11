@@ -10,7 +10,7 @@ SaffronCity_SilphCo_EventScript_Steven::
 	delay 20
 	playse SE_PIN
 	applymovement LOCALID_SILPHCO_STEVEN, Common_Movement_ExclamationMark
-	delay 60
+	waitmovement LOCALID_SILPHCO_STEVEN
 SaffronCity_SilphCo_EventScript_StevenChooseStone::
 	message SaffronCity_SilphCo_Text_Steven2
 	waitmessage

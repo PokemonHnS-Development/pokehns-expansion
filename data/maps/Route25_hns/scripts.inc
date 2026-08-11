@@ -97,7 +97,7 @@ Route25_Trigger_MistyRight::
 	turnobject LOCALID_ROUTE25_MAN, DIR_SOUTH
 	playse SE_PIN
 	applymovement2 LOCALID_ROUTE25_MAN, Common_Movement_ExclamationMark
-	delay 60
+	waitmovement LOCALID_ROUTE25_MAN
 	applymovement2 LOCALID_ROUTE25_MAN, Route25_Movement_ManLeaveRight
 	waitmovement 0
 	applymovement2 LOCALID_ROUTE25_MISTY, Route25_Movement_MistyWalkToPlayerRight
@@ -111,7 +111,7 @@ Route25_Trigger_MistyLeft::
 	turnobject LOCALID_ROUTE25_MAN, DIR_SOUTH
 	playse SE_PIN
 	applymovement2 LOCALID_ROUTE25_MAN, Common_Movement_ExclamationMark
-	delay 60
+	waitmovement LOCALID_ROUTE25_MAN
 	applymovement2 LOCALID_ROUTE25_MAN, Route25_Movement_ManLeaveLeft
 	waitmovement 0
 	applymovement2 LOCALID_ROUTE25_MISTY, Route25_Movement_MistyWalkToPlayerLeft
@@ -136,7 +136,7 @@ Route25_Trigger_SuicuneLeft::
 	lock
 	playse SE_PIN
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
-	delay 60
+	waitmovement OBJ_EVENT_ID_PLAYER
 	playmoncry SPECIES_SUICUNE, CRY_MODE_NORMAL
 	applymovement LOCALID_ROUTE25_SUICUNE, Route25_Movement_Suicune1
 	playse SE_LEDGE
@@ -151,7 +151,7 @@ Route25_Trigger_SuicuneRight::
 	lock
 	playse SE_PIN
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
-	delay 60
+	waitmovement OBJ_EVENT_ID_PLAYER
 	playmoncry SPECIES_SUICUNE, CRY_MODE_NORMAL
 	applymovement LOCALID_ROUTE25_SUICUNE, Route25_Movement_Suicune1
 	playse SE_LEDGE

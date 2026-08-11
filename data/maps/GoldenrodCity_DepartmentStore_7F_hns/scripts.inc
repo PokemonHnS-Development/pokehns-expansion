@@ -46,7 +46,7 @@ GoldenrodDeptStore7_EventScript_Nerd::
 	closemessage
 	PLAYSE SE_PIN
 	applymovement LOCALID_GOLDENROD_ROOF_NERD, Common_Movement_ExclamationMark
-	delay 20
+	waitmovement LOCALID_GOLDENROD_ROOF_NERD
 	faceplayer
 	msgbox GoldenrodDeptStore_Text_RoofSuperNerdQuitBotheringMe, MSGBOX_DEFAULT
 	closemessage

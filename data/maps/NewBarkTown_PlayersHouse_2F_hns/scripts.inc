@@ -20,7 +20,7 @@ NewBarkTown_PlayersHouse_2F_Script_ClockSetupTrigger1::
     lock
 	playse SE_PIN
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
-	waitmovement 0
+	waitmovement OBJ_EVENT_ID_PLAYER
 	delay 60
     applymovement OBJ_EVENT_ID_PLAYER, NewBarkTown_PlayersHouse_2F_Movement_PlayerWalkToClock1
 	waitmovement 0
@@ -37,7 +37,7 @@ NewBarkTown_PlayersHouse_2F_Script_ClockSetupTrigger2::
     lock
 	playse SE_PIN
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
-	waitmovement 0
+	waitmovement OBJ_EVENT_ID_PLAYER
 	delay 60
     applymovement OBJ_EVENT_ID_PLAYER, NewBarkTown_PlayersHouse_2F_Movement_PlayerWalkToClock2
     msgbox PlayersHouse_2F_Text_ClockIsStopped, MSGBOX_DEFAULT

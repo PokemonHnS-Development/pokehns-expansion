@@ -2470,8 +2470,18 @@
 
 // Engine-wide flags for options/challenge settings (shared across all builds).
 // Fixed 32-flag block; not cleared by ClearDailyFlags or ClearTempFieldEventData.
-// Each build defines BUILD_FLAGS_END as its highest saveable flag.
-#define ENGINE_FLAGS_START                      (BUILD_FLAGS_END + 1)
+//
+// This address is PINNED and must never change. It used to be (BUILD_FLAGS_END + 1),
+// which meant every daily flag added to any build slid this whole block up by one and
+// silently renumbered it. Flag IDs are absolute bit indices baked into save files, so
+// that renumbering re-pointed live save data at the wrong flags (e.g. a save's
+// "Exp. Share on" bit became FLAG_LIMIT_TO_50, capping the party at level 50).
+//
+// Every build's flags must stay below this address. Current headroom below 0x960:
+// HnS ends at 0x91A (69 free), FRLG at 0x8FF (96 free), Emerald at 0x95F (0 free).
+// If a build ever needs to grow past it, raise the pin AND bump SAVE_VERSION with a
+// migration - do not let it float again.
+#define ENGINE_FLAGS_START                      0x960
 #define NUM_ENGINE_FLAGS                        32
 #define FLAG_EVEN_FASTER_JOY                    (ENGINE_FLAGS_START + 0)
 #define FLAG_MINTS_DISABLED                     (ENGINE_FLAGS_START + 1)

@@ -7075,7 +7075,7 @@ static bool32 IsSpeciesAlreadyEvolved(u32 species)
         int k;
         for (k = 0; evos[k].method != EVOLUTIONS_END; k++)
         {
-            if (SanitizeSpeciesId(evos[k].targetSpecies) == species)
+            if (IsSpeciesEnabled(evos[k].targetSpecies) && SanitizeSpeciesId(evos[k].targetSpecies) == species)
                 return TRUE;
         }
     }
@@ -7719,7 +7719,6 @@ void AdjustFriendship(struct Pokemon *mon, u8 event)
     {
         u8 friendshipLevel = 0;
         s32 friendship = GetMonData(mon, MON_DATA_FRIENDSHIP, 0);
-        enum TrainerClassID opponentTrainerClass = GetTrainerClassFromId(TRAINER_BATTLE_PARAM.opponentA);
 
         if (friendship > 99)
             friendshipLevel++;
@@ -7737,6 +7736,11 @@ void AdjustFriendship(struct Pokemon *mon, u8 event)
             // Only if it's a trainer battle with league progression significance
             if (!(gBattleTypeFlags & BATTLE_TYPE_TRAINER))
                 return;
+            
+            if (IsSpecialTrainer(TRAINER_BATTLE_PARAM.opponentA))
+                return;
+
+            enum TrainerClassID opponentTrainerClass = GetTrainerClassFromId(TRAINER_BATTLE_PARAM.opponentA);
             if (!(opponentTrainerClass == TRAINER_CLASS_LEADER
                 || opponentTrainerClass == TRAINER_CLASS_ELITE_FOUR
                 || opponentTrainerClass == TRAINER_CLASS_CHAMPION))
@@ -8053,6 +8057,12 @@ u16 GetBattleBGM(void)
             if (!StringCompare(GetTrainerNameFromId(TRAINER_BATTLE_PARAM.opponentA), gText_BattleWallyName))
                 return MUS_VS_TRAINER;
             return MUS_VS_RIVAL;
+        case TRAINER_CLASS_RIVAL_HNS:
+            return MUS_HG_VS_RIVAL;
+        case TRAINER_CLASS_ROCKET_ADMIN_HNS:
+            return MUS_HG_VS_ROCKET;
+        case TRAINER_CLASS_TEAM_ROCKET_HNS:
+            return MUS_HG_VS_ROCKET;
         case TRAINER_CLASS_ELITE_FOUR:
             return MUS_VS_ELITE_FOUR;
         case TRAINER_CLASS_CHAMPION_FRLG:
@@ -9335,7 +9345,12 @@ bool32 TryBoxMonFormChange(struct BoxPokemon *boxMon, enum FormChanges method)
 
 u16 SanitizeSpeciesId(u16 species)
 {
-    assertf(species <= NUM_SPECIES && (species == SPECIES_NONE || IsSpeciesEnabled(species)), "invalid species: %d", species)
+    assertf(species <= NUM_SPECIES, "invalid species: %d", species)
+    {
+        return SPECIES_NONE;
+    }
+
+    assertf(species == SPECIES_NONE || IsSpeciesEnabled(species), "disabled species: %d", species)
     {
         return SPECIES_NONE;
     }

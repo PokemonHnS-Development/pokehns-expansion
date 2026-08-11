@@ -34,7 +34,7 @@ CianwoodCity_EventScript_Flytrigger::
 	lock
 	playse SE_PIN
 	applymovement LOCALID_CIANWOOD_CHUCKSWIFE, Common_Movement_ExclamationMark
-	delay 60
+	waitmovement LOCALID_CIANWOOD_CHUCKSWIFE
 	applymovement LOCALID_CIANWOOD_CHUCKSWIFE, CianwoodCity_Movement_ChucksWife
 	waitmovement 0
 	msgbox CianwoodCity_Text_ChucksWifeGiveHM, MSGBOX_DEFAULT
@@ -165,7 +165,7 @@ CianwoodCity_EventScript_SuicuneTrigger::
 	waitmoncry
 	playse SE_PIN
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
-	delay 60
+	waitmovement OBJ_EVENT_ID_PLAYER
 	applymovement LOCALID_CIANWOOD_SUICUNE, CianwoodCity_Movement_Suicune2
 	playse SE_LEDGE
 	delay 30
@@ -190,7 +190,7 @@ CianwoodCity_EventScript_SuicuneTrigger::
 	delay 30
 	waitmovement 0
 	delay 30
-	playbgm MUS_HG_EUSINE, TRUE
+	playbgm MUS_HG_EUSINE, FALSE
 	clearflag FLAG_HIDE_CIANWOOD_EUSINE
 	addobject LOCALID_CIANWOOD_EUSINE
 	applymovement LOCALID_CIANWOOD_EUSINE, CianwoodCity_Movement_Eusine1
@@ -200,7 +200,7 @@ CianwoodCity_EventScript_SuicuneTrigger::
 	waitmovement 0 
 	msgbox CianwoodCity_Text_EusineSuicune, MSGBOX_DEFAULT
 	trainerbattle_no_intro TRAINER_EUSINE_HNS, CianwoodCity_Text_EusineBeaten
-	playbgm MUS_HG_EUSINE, TRUE
+	playbgm MUS_HG_EUSINE, FALSE
 	msgbox CianwoodCity_Text_EusineAfter, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_CIANWOOD_EUSINE, CianwoodCity_Movement_Eusine3

@@ -182,7 +182,7 @@ NationalPark_Normal_Text_SchoolboyJack1_Beaten:
 NationalPark_Normal_Text_SchoolboyJack_After:
 	.string "There is a lot to learn.\p"
 	.string "For example…\p"
-	.string "There are 50 kinds of TMs.\p"
+	.string "There are 90 kinds of TMs.\p"
 	.string "Traded POKéMON level up faster.$"
 
 NationalPark_Normal_Text_JackRegister:

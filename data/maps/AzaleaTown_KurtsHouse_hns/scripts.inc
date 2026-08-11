@@ -123,8 +123,10 @@ AzaleaTown_KurtsHouse_EventScript_Kurt2::
 	goto_if_eq VAR_0x8005, 1, AzaleaTown_KurtsHouse_EventScript_SingularBall
 	bufferitemname STR_VAR_1, VAR_0x8004
 	buffernumberstring STR_VAR_2, VAR_0x8005
-	playfanfare MUS_OBTAIN_ITEM
 	msgbox KurtsHouse_Text_KurtFinishedPlural, MSGBOX_DEFAULT
+	message KurtsHouse_Text_KurtObtainedPlural
+	waitmessage
+	playfanfare MUS_OBTAIN_ITEM
 	waitfanfare
 	additem VAR_0x8004, VAR_0x8005
 	msgbox KurtsHouse_Text_KurtTurnedOutGreat, MSGBOX_DEFAULT
@@ -135,8 +137,10 @@ AzaleaTown_KurtsHouse_EventScript_Kurt2::
 
 AzaleaTown_KurtsHouse_EventScript_SingularBall::
 	bufferitemname STR_VAR_1, VAR_0x8004
-	playfanfare MUS_OBTAIN_ITEM
 	msgbox KurtsHouse_Text_KurtFinishedSingular, MSGBOX_DEFAULT
+	message KurtsHouse_Text_KurtObtainedSingular
+	waitmessage
+	playfanfare MUS_OBTAIN_ITEM
 	waitfanfare
 	additem VAR_0x8004, VAR_0x8005
 	msgbox KurtsHouse_Text_KurtTurnedOutGreat, MSGBOX_DEFAULT
@@ -169,7 +173,7 @@ AzaleaTown_KurtsHouse_EventScript_KurtGsBall::
 	playse SE_PIN
 	applymovement LOCALID_AZALEA_TOWN_KURT, Common_Movement_ExclamationMark
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
-	delay 60
+	waitmovement OBJ_EVENT_ID_PLAYER
 	waitse
 	playse SE_M_PETAL_DANCE
 	waitse
@@ -290,13 +294,17 @@ KurtsHouse_Text_KurtThatsALetdown:
 
 KurtsHouse_Text_KurtFinishedPlural:
 	.string "KURT: {PLAYER}!\n"
-	.string "Your {STR_VAR_1}s are done. Here!\p"
+	.string "Your {STR_VAR_1}s are done. Here!$"
+
+KurtsHouse_Text_KurtObtainedPlural:
 	.string "{PLAYER} obtained\n"
 	.string "{STR_VAR_2} {STR_VAR_1}s!$"
 
 KurtsHouse_Text_KurtFinishedSingular:
 	.string "KURT: {PLAYER}!\n"
-	.string "Your {STR_VAR_1} is done. Here!\p"
+	.string "Your {STR_VAR_1} is done. Here!$"
+
+KurtsHouse_Text_KurtObtainedSingular:
 	.string "{PLAYER} obtained\n"
 	.string "the {STR_VAR_1}!$"
 

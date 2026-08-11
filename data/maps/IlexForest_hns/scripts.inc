@@ -253,6 +253,7 @@ waitstate
 	fadescreenswapbuffers FADE_TO_BLACK
 	removeobject LOCALID_ILEX_FOREST_CELEBI
 	setflag FLAG_HIDE_CELEBI
+	special GivePartyMonNationalRibbon
 	fadescreenswapbuffers FADE_FROM_BLACK
 IlexForest_EventScript_Kurt::
 	clearflag FLAG_HIDE_ILEX_FOREST_KURT
@@ -295,6 +296,7 @@ waitstate
 	removeobject LOCALID_ILEX_FOREST_SECOND_CELEBI
 	setflag FLAG_HIDE_ILEX_FOREST_SECOND_CELEBI
 	fadescreenswapbuffers FADE_FROM_BLACK
+	special GivePartyMonNationalRibbon
 	release
 	end
 
@@ -312,11 +314,11 @@ IlexForest_EventScript_Sign::
 
 IlexForest_EventScript_Kimono::
 	lock
-	playbgm MUS_HG_KIMONO_GIRL, TRUE
+	playbgm MUS_HG_KIMONO_GIRL, FALSE
 	playse SE_PIN
 	turnobject OBJ_EVENT_ID_FOLLOWER, DIR_NORTH
 	applymovement2 LOCALID_ILEX_FOREST_KIMONO, Common_Movement_ExclamationMark
-	delay 60
+	waitmovement LOCALID_ILEX_FOREST_KIMONO
 	applymovement2 LOCALID_ILEX_FOREST_KIMONO, IlexForest_Movement_Kimono_Girl1
 	waitmovement 0
 	msgbox IlexForest_Text_Kimono_Girl1, MSGBOX_DEFAULT

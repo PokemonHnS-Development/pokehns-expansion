@@ -963,12 +963,14 @@ static u8 GetBattleEnvironmentOverride(void)
     {
         switch (GetMonData(&gEnemyParty[0], MON_DATA_SPECIES))
         {
+    #if !IS_HNS
         case SPECIES_GROUDON:
             return BATTLE_ENVIRONMENT_GROUDON;
         case SPECIES_KYOGRE:
             return BATTLE_ENVIRONMENT_KYOGRE;
         case SPECIES_RAYQUAZA:
             return BATTLE_ENVIRONMENT_RAYQUAZA;
+    #endif
         default:
             return gBattleEnvironment;
         }

@@ -100,7 +100,7 @@ Route32_EventScript_SlowpokeTail_TriggerLeft::
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_WEST
 	playse SE_PIN
 	applymovement LOCALID_SLOWPOKETAIL_MAN, Common_Movement_ExclamationMark
-	delay 60
+	waitmovement LOCALID_SLOWPOKETAIL_MAN
 	applymovement LOCALID_SLOWPOKETAIL_MAN, Route32_Movement_SlowpokeLeft
 	waitmovement 0
 	goto Route32_EventScript_SlowpokeTail_Trigger
@@ -111,7 +111,7 @@ Route32_EventScript_SlowpokeTail_TriggerMid::
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_WEST
 	playse SE_PIN
 	applymovement LOCALID_SLOWPOKETAIL_MAN, Common_Movement_ExclamationMark
-	delay 60
+	waitmovement LOCALID_SLOWPOKETAIL_MAN
 	applymovement LOCALID_SLOWPOKETAIL_MAN, Route32_Movement_SlowpokeMid
 	waitmovement 0
 	goto Route32_EventScript_SlowpokeTail_Trigger
@@ -122,7 +122,7 @@ Route32_EventScript_SlowpokeTail_TriggerRight::
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_WEST
 	playse SE_PIN
 	applymovement LOCALID_SLOWPOKETAIL_MAN, Common_Movement_ExclamationMark
-	delay 60
+	waitmovement LOCALID_SLOWPOKETAIL_MAN
 	applymovement LOCALID_SLOWPOKETAIL_MAN, Route32_Movement_SlowpokeRight
 	waitmovement 0
 	goto Route32_EventScript_SlowpokeTail_Trigger
@@ -232,7 +232,7 @@ Route32_EventScript_BaldingManTriggerLeft::
 	lock
 	playse SE_PIN
 	applymovement LOCALID_ROUTE32_BALDINGMAN, Common_Movement_ExclamationMark
-	delay 60
+	waitmovement LOCALID_ROUTE32_BALDINGMAN
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_WEST
 	goto Route32_EventScript_BaldingManCheck
 	end
@@ -240,7 +240,7 @@ Route32_EventScript_BaldingManTriggerMid::
 	lock
 	playse SE_PIN
 	applymovement LOCALID_ROUTE32_BALDINGMAN, Common_Movement_ExclamationMark
-	delay 60
+	waitmovement LOCALID_ROUTE32_BALDINGMAN
 	applymovement OBJ_EVENT_ID_PLAYER, Route32_Movement_StartMid
 	waitmovement 0
 	goto Route32_EventScript_BaldingManCheck
@@ -249,7 +249,7 @@ Route32_EventScript_BaldingManTriggerRight::
 	lock
 	playse SE_PIN
 	applymovement LOCALID_ROUTE32_BALDINGMAN, Common_Movement_ExclamationMark
-	delay 60
+	waitmovement LOCALID_ROUTE32_BALDINGMAN
 	applymovement OBJ_EVENT_ID_PLAYER, Route32_Movment_StartRight
 	waitmovement 0
 	goto Route32_EventScript_BaldingManCheck

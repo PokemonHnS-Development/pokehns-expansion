@@ -30,7 +30,7 @@ RocketHideout_B3F_EventScript_LancePassword::
 	delay 55
 	playse SE_PIN
 	applymovement LOCALID_ROCKETHIDEOUT3_LANCE, Common_Movement_ExclamationMark
-	delay 20
+	waitmovement LOCALID_ROCKETHIDEOUT3_LANCE
 	applymovement LOCALID_ROCKETHIDEOUT3_LANCE, Common_Movement_WalkRight1
 	msgbox RocketHideout_B3F_Text_LanceGetPassword, MSGBOX_DEFAULT
 	closemessage
@@ -145,7 +145,7 @@ RocketHideout_B3F_Trigger_Silver::
 	lock
 	clearflag FLAG_HIDE_ROCKETHIDEOUT3_SILVER
 	addobject LOCALID_ROCKETHIDEOUT3_SILVER
-	playbgm MUS_HG_ENCOUNTER_RIVAL, TRUE
+	playbgm MUS_HG_ENCOUNTER_RIVAL, FALSE
 	applymovement LOCALID_ROCKETHIDEOUT3_SILVER, RocketHideout_B3F_Movement_SilverEnter
 	waitmovement 0
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_WEST
@@ -305,7 +305,7 @@ RocketHideout_B3F_EventScript_Giovanni::
 	msgbox RocketHideout_B3F_Text_PetrelIntro, MSGBOX_DEFAULT
 	playse SE_PIN
 	applymovement LOCALID_ROCKETHIDEOUT3_GIOVANNI, Common_Movement_QuestionMark
-	delay 60
+	waitmovement LOCALID_ROCKETHIDEOUT3_GIOVANNI
 	msgbox RocketHideout_B3F_Text_PetrelDisbelief, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_ROCKETHIDEOUT3_GIOVANNI, RocketHideout_B3F_Movement_Spin

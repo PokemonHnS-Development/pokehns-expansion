@@ -74,7 +74,7 @@ PokemonLeague_WillsRoom_EventScript_LanceOnDefeatJohto::
 	special DrawWholeMapView
 	playse SE_PIN
 	applymovement LOCALID_LEAGUE_LANCE, Common_Movement_ExclamationMark
-	delay 40
+	waitmovement LOCALID_LEAGUE_LANCE
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_SOUTH
 	applymovement OBJ_EVENT_ID_PLAYER, PokemonLeague_ChampionsRoom_Movement_PlayerMoveToCenter
 	applymovement LOCALID_LEAGUE_LANCE, PokemonLeague_ChampionsRoom_Movement_LanceMoveOver
@@ -117,7 +117,7 @@ PokemonLeague_WillsRoom_EventScript_LanceOnDefeatJohto::
 	waitmovement 0
 	playse SE_PIN
 	applymovement LOCALID_LEAGUE_MARY, Common_Movement_ExclamationMark
-	delay 60
+	waitmovement LOCALID_LEAGUE_MARY
 	msgbox PokemonLeague_ChampionsRoom_Text_MaryNoInterview, MSGBOX_DEFAULT
 	closemessage
 	setvar VAR_LEAGUE_STATE, 6
@@ -142,7 +142,7 @@ PokemonLeague_WillsRoom_EventScript_LanceOnDefeatKanto::
 	special DrawWholeMapView
 	playse SE_PIN
 	applymovement LOCALID_LEAGUE_LANCE, Common_Movement_ExclamationMark
-	delay 40
+	waitmovement LOCALID_LEAGUE_LANCE
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_SOUTH
 	applymovement OBJ_EVENT_ID_PLAYER, PokemonLeague_ChampionsRoom_Movement_PlayerMoveToCenter
 	applymovement LOCALID_LEAGUE_LANCE, PokemonLeague_ChampionsRoom_Movement_LanceMoveOver
@@ -185,7 +185,7 @@ PokemonLeague_WillsRoom_EventScript_LanceOnDefeatKanto::
 	waitmovement 0
 	playse SE_PIN
 	applymovement LOCALID_LEAGUE_MARY, Common_Movement_ExclamationMark
-	delay 60
+	waitmovement LOCALID_LEAGUE_MARY
 	msgbox PokemonLeague_ChampionsRoom_Text_RematchMaryNoInterview, MSGBOX_DEFAULT
 	closemessage
 	setvar VAR_LEAGUE_STATE, 6

@@ -187,6 +187,7 @@ Alola_Melemele_SamsonOakVilla_Dialogue_53:
 Alola_Melemele_SamsonOakVilla_Dialogue_55:
 	msgbox Alola_Melemele_SamsonOakVilla_Dialogue_Text_4
 	trainerbattle_no_intro TRAINER_SAMSON_OAK_HNS, Alola_Melemele_SamsonOakVilla_Dialogue_Text_5
+	special GivePartyMonMarineRibbon
 	special HealPlayerParty
 	setflag FLAG_DEFEATED_SAMSON_OAK
 	setflag FLAG_FLYOVER_TAPU_KOKO

@@ -68,7 +68,13 @@ void ClearTempFieldEventData(void)
 
 void ClearDailyFlags(void)
 {
+#if IS_HNS
+    u16 i;
+    for (i = DAILY_FLAGS_START; i <= DAILY_FLAGS_END; i++)
+        FlagClear(i);
+#else
     memset(&gSaveBlock1Ptr->flags[DAILY_FLAGS_START / 8], 0, DAILY_FLAGS_SIZE);
+#endif
 }
 
 void DisableNationalPokedex(void)

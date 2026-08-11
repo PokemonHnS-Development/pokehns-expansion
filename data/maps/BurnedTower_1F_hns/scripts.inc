@@ -25,7 +25,7 @@ BurnedTower_1F_EventScript_MeetEusine::
 	lock
 	playse SE_PIN
 	applymovement LOCALID_BURNED_TOWER_EUSINE, Common_Movement_ExclamationMark
-	delay 60
+	waitmovement LOCALID_BURNED_TOWER_EUSINE
 	applymovement LOCALID_BURNED_TOWER_EUSINE, BurnedTower_Movement_Eusine1
 	waitmovement 0
 	msgbox BurnedTower_1FEusineIntroText, MSGBOX_DEFAULT
@@ -101,7 +101,7 @@ BurnedTower_1F_EventScript_Silver::
 	lock
 	playse SE_PIN
 	applymovement LOCALID_BURNED_TOWER_SILVER, Common_Movement_ExclamationMark
-	delay 60
+	waitmovement LOCALID_BURNED_TOWER_SILVER
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight1
 	applymovement LOCALID_BURNED_TOWER_SILVER, Common_Movement_WalkLeft1
 	waitmovement 0
@@ -110,7 +110,7 @@ BurnedTower_1F_EventScript_Silver::
 	call_if_eq VAR_STARTER_MON, 0, BurnedTower_1F_Silver_Battle_Cyndaquil
 	call_if_eq VAR_STARTER_MON, 1, BurnedTower_1F_Silver_Battle_Totodile
 	call_if_eq VAR_STARTER_MON, 2, BurnedTower_1F_Silver_Battle_Chikorita
-	playbgm MUS_HG_RIVAL_EXIT, TRUE
+	playbgm MUS_HG_RIVAL_EXIT, FALSE
 	msgbox BurnedTowerSilver_AfterText1, MSGBOX_DEFAULT
 	closemessage
 	setvar VAR_0x8004, 1  @ vertical pan

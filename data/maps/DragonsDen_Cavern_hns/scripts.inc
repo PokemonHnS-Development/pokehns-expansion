@@ -30,7 +30,7 @@ DragonsDen_Cavern_Trigger_ClairLeft::
 	setflag FLAG_TEMP_HIDE_FOLLOWER 
 	playse SE_PIN
 	applymovement2 LOCALID_DRAGONSDEN2_CLAIR, Common_Movement_ExclamationMark
-	delay 60
+	waitmovement LOCALID_DRAGONSDEN2_CLAIR
 	call DragonsDen_Cavern_EventScript_Clair
 	applymovement OBJ_EVENT_ID_PLAYER, DragonsDen_Cavern_Movement_ClairLeaveLeftPLAYER
 	waitmovement 0
@@ -48,7 +48,7 @@ DragonsDen_Cavern_Trigger_ClairMid::
 	lock 
 	playse SE_PIN
 	applymovement2 LOCALID_DRAGONSDEN2_CLAIR, Common_Movement_ExclamationMark
-	delay 60
+	waitmovement LOCALID_DRAGONSDEN2_CLAIR
 	applymovement2 LOCALID_DRAGONSDEN2_CLAIR, Common_Movement_WalkRight1
 	call DragonsDen_Cavern_EventScript_Clair
 	applymovement2 LOCALID_DRAGONSDEN2_CLAIR, DragonsDen_Cavern_Movement_ClairLeaveMid
@@ -64,7 +64,7 @@ DragonsDen_Cavern_Trigger_ClairRight::
 	lock 
 	playse SE_PIN
 	applymovement2 LOCALID_DRAGONSDEN2_CLAIR, Common_Movement_ExclamationMark
-	delay 60
+	waitmovement LOCALID_DRAGONSDEN2_CLAIR
 	applymovement2 LOCALID_DRAGONSDEN2_CLAIR, Common_Movement_WalkRight1
 	waitmovement 0
 	applymovement2 LOCALID_DRAGONSDEN2_CLAIR, Common_Movement_WalkRight1

@@ -602,10 +602,31 @@ static void Task_NewGameHnsSpeech_FadeOutToChallengeMenu(u8 taskId)
 {
     if (!gPaletteFade.active)
     {
+        struct ChallengeSettings savedOptions;
         FreeAllWindowBuffers();
         DestroyTask(taskId);
+        savedOptions = gSaveBlock3Ptr->challengeSettings;
         memset(&gSaveBlock3Ptr->challengeSettings, 0, sizeof(struct ChallengeSettings));
         SetDefaultChallengeSettings();
+        // Restore options-menu fields so pre-new-game changes survive
+        gSaveBlock3Ptr->challengeSettings.followerEnable     = savedOptions.followerEnable;
+        gSaveBlock3Ptr->challengeSettings.followerLargeEnable= savedOptions.followerLargeEnable;
+        gSaveBlock3Ptr->challengeSettings.autoRun            = savedOptions.autoRun;
+        gSaveBlock3Ptr->challengeSettings.autorunSurf        = savedOptions.autorunSurf;
+        gSaveBlock3Ptr->challengeSettings.fishing            = savedOptions.fishing;
+        gSaveBlock3Ptr->challengeSettings.evenFasterJoy      = savedOptions.evenFasterJoy;
+        gSaveBlock3Ptr->challengeSettings.unitSystem         = savedOptions.unitSystem;
+        gSaveBlock3Ptr->challengeSettings.disableMatchCall   = savedOptions.disableMatchCall;
+        gSaveBlock3Ptr->challengeSettings.fastIntro          = savedOptions.fastIntro;
+        gSaveBlock3Ptr->challengeSettings.fastBattle         = savedOptions.fastBattle;
+        gSaveBlock3Ptr->challengeSettings.newBackgrounds     = savedOptions.newBackgrounds;
+        gSaveBlock3Ptr->challengeSettings.newBattleUI        = savedOptions.newBattleUI;
+        gSaveBlock3Ptr->challengeSettings.ballPrompt         = savedOptions.ballPrompt;
+        gSaveBlock3Ptr->challengeSettings.lrToRun            = savedOptions.lrToRun;
+        gSaveBlock3Ptr->challengeSettings.runType            = savedOptions.runType;
+        gSaveBlock3Ptr->challengeSettings.musicOnOff         = savedOptions.musicOnOff;
+        gSaveBlock3Ptr->challengeSettings.bikeMusic          = savedOptions.bikeMusic;
+        gSaveBlock3Ptr->challengeSettings.surfMusic          = savedOptions.surfMusic;
         ChallengeMenu_SetInitialSetup(TRUE);
         gMain.savedCallback = CB2_NewGameHnsSpeech_ReturnFromChallengeMenu;
         SetMainCallback2(CB2_InitChallengeMenu);

@@ -15,7 +15,7 @@ SaffronCity_Tunnel_NS_EventScript_BaldingMan::
 SaffronCity_Tunnel_NS_EventScript_BaldingManDetected::
 	playse SE_PIN
 	applymovement LOCALID_SAFFRONTUNNEL_UNCLE_RAGE, Common_Movement_ExclamationMark
-	delay 60
+	waitmovement LOCALID_SAFFRONTUNNEL_UNCLE_RAGE
 	msgbox SaffronCity_Tunnel_NS_Text_BaldingManCandybarDetected, MSGBOX_DEFAULT
 	removeitem ITEM_RAGE_CANDY_BAR
 	msgbox SaffronCity_Tunnel_NS_Text_BaldingManGaveCandybar, MSGBOX_DEFAULT

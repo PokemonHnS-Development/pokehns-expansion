@@ -13,11 +13,11 @@ VictoryRoadKanto_EventScript_Item_Dark_Pulse::
 
 VictoryRoadKanto_1F_Trigger::
 	lock
-	playbgm MUS_HG_ENCOUNTER_RIVAL, TRUE
+	playbgm MUS_HG_ENCOUNTER_RIVAL, FALSE
 	delay 5
 	playse SE_PIN
 	applymovement2 OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
-	delay 60
+	waitmovement OBJ_EVENT_ID_PLAYER
 	addobject LOCALID_VICTORYROAD_SILVER
 	getplayerxy VAR_TEMP_0, VAR_TEMP_1
 	call_if_eq VAR_TEMP_0, 27, VictoryRoadKanto_1F_EventScript_SilverEnterLeft
@@ -27,7 +27,7 @@ VictoryRoadKanto_1F_Trigger::
 	call_if_eq VAR_STARTER_MON, 0, VictoryRoadKanto_1F_Silver_Battle_Cyndaquil
 	call_if_eq VAR_STARTER_MON, 1, VictoryRoadKanto_1F_Silver_Battle_Totodile
 	call_if_eq VAR_STARTER_MON, 2, VictoryRoadKanto_1F_Silver_Battle_Chikorita
-	playbgm MUS_HG_RIVAL_EXIT, TRUE
+	playbgm MUS_HG_RIVAL_EXIT, FALSE
 	msgbox VictoryRoad_Text_RivalAfter, MSGBOX_DEFAULT
 	closemessage
 	applymovement2 LOCALID_VICTORYROAD_SILVER, VictoryRoadKanto_1F_Movement_SilverLeave

@@ -33,12 +33,12 @@ SinjohRuins_ArceusRoom_TriggerScene::
 
 	playse SE_PIN
     applymovement2 LOCALID_PLAYER, Common_Movement_ExclamationMark
-    delay 60
+    waitmovement LOCALID_PLAYER
     msgbox SinjohRuins_Lab_Text_PlayFlute, MSGBOX_YESNO
 	closemessage
     goto_if_eq VAR_RESULT, FALSE, SinjohRuins_Lab_EventScript_NoOp
 
-	playbgm MUS_DP_AZURE_FLUTE, TRUE
+	playbgm MUS_DP_AZURE_FLUTE, FALSE
 	applymovement2 LOCALID_PLAYER, SinjohRuins_ArceusRoom_Movement_WalkSlowUp
 	waitmovement 0
 	setvar VAR_RESULT, 3
@@ -86,7 +86,7 @@ SinjohRuins_ArceusRoom_TriggerScene::
 	delay 8
 	playse SE_PIN
 	applymovement LOCALID_PLAYER, Common_Movement_ExclamationMark
-	waitmovement 0
+	waitmovement LOCALID_PLAYER
 	setweather WEATHER_NONE
 	doweather
 	applymovement2 LOCALID_SINJOHRUINS_ARCEUSROOM_ARCEUS, SinjohRuins_ArceusRoom_Movement_ArceusLooksAround
@@ -279,7 +279,7 @@ SinjohRuins_ArceusRoom_EventScript_Arceus::
 	setflag FLAG_SMART_WILD_AI
 	setflag FLAG_NO_SHINY
 	setwildbossbattle species=SPECIES_ARCEUS_STEEL, level=100, item=ITEM_IRON_PLATE, move1_1=MOVE_JUDGMENT, move1_2=MOVE_HYDRO_PUMP, move1_3=MOVE_RECOVER move1_4=MOVE_DAZZLING_GLEAM
-	settotemboost B_POSITION_OPPONENT_LEFT, 1, 0, 2, 0, 0, 0
+	settotemboost B_POSITION_OPPONENT_LEFT, 2, 2, 2, 2, 2, 2
 	special BattleSetup_StartLegendaryBattle
 	playbgm MUS_HG_VS_ARCEUS, 0
 	waitstate
@@ -305,6 +305,7 @@ SinjohRuins_ArceusRoom_EventScript_ArceusPhase2::
 	fadescreenswapbuffers FADE_TO_BLACK
 	removeobject LOCALID_SINJOHRUINS_ARCEUSROOM_ARCEUS
 	setflag FLAG_HIDE_SINJOHRUINS_ARCEUSROOM_ARCEUS
+	special GivePartyMonSkyRibbon
 	fadescreenswapbuffers FADE_FROM_BLACK
 	release
 	end

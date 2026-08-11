@@ -62,7 +62,7 @@ NewBarkTown_EventScript_Lass::
 NewBarkTown_EventScript_LassState2::
 	playse SE_PIN
 	applymovement LOCALID_LASS, Common_Movement_ExclamationMark
-	waitmovement 0
+	waitmovement LOCALID_LASS
 	faceplayer
 	waitmovement 0
 	msgbox NewBarkTown_Text_LassState2, MSGBOX_DEFAULT
@@ -79,7 +79,7 @@ NewBarkTown_EventScript_LassState3::
 NewBarkTown_EventScript_LassState4::
 	playse SE_PIN
 	applymovement LOCALID_LASS, Common_Movement_ExclamationMark
-	waitmovement 0
+	waitmovement LOCALID_LASS
 	faceplayer
 	waitmovement 0
 	msgbox NewBarkTown_Text_LassState4, MSGBOX_DEFAULT
@@ -109,7 +109,7 @@ NewBarkTown_EventScript_LeaveTrigger::
 NewBarkTown_EventScript_LeaveTriggersState2::
 	playse SE_PIN
 	applymovement LOCALID_LASS, Common_Movement_ExclamationMark
-	waitmovement 0
+	waitmovement LOCALID_LASS
 	applymovement LOCALID_LASS, NewBarkTown_Movement_FaceDown
 	waitmovement 0
 	msgbox NewBarkTown_Text_LassState2, MSGBOX_DEFAULT
@@ -119,7 +119,7 @@ NewBarkTown_EventScript_LeaveTriggersState2::
 NewBarkTown_EventScript_LeaveTriggersState4::
 	playse SE_PIN
 	applymovement LOCALID_LASS, Common_Movement_ExclamationMark
-	waitmovement 0
+	waitmovement LOCALID_LASS
 	applymovement LOCALID_LASS, NewBarkTown_Movement_FaceDown
 	waitmovement 0
 	msgbox NewBarkTown_Text_LassState4, MSGBOX_DEFAULT
@@ -284,3 +284,4 @@ NewBarkTown_Text_PlayersHouse:
 
 NewBarkTown_Text_ElmsHouse:
 	.string "PROF.ELM'S HOUSE$"
+

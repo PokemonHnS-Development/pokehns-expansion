@@ -672,9 +672,6 @@ AzaleaTown_Gym_Text_BugsyIntro:
 	.string "to bug POKéMON.\p"
 	.string "My research is going to make me the\n"
 	.string "authority on bug POKéMON!\p"
-	.string "For example, did you know\n"
-	.string "that the move CUT is\l"
-	.string "actually a BUG-type move?\p"
 	.string "Let me demonstrate all I've\n"
 	.string "learned from my studies.$"
 

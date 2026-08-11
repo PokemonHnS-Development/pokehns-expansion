@@ -2037,6 +2037,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .formChangeTable = sBurmyFormChangeTable,
         .evolutions = EVOLUTION({EVO_LEVEL, 20, SPECIES_WORMADAM_SANDY, CONDITIONS({IF_GENDER, MON_FEMALE})},
                                 {EVO_LEVEL, 20, SPECIES_MOTHIM_SANDY, CONDITIONS({IF_GENDER, MON_MALE})}),
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 
     [SPECIES_BURMY_TRASH] =
@@ -2107,6 +2108,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .formChangeTable = sBurmyFormChangeTable,
         .evolutions = EVOLUTION({EVO_LEVEL, 20, SPECIES_WORMADAM_TRASH, CONDITIONS({IF_GENDER, MON_FEMALE})},
                                 {EVO_LEVEL, 20, SPECIES_MOTHIM_TRASH, CONDITIONS({IF_GENDER, MON_MALE})}),
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 
     [SPECIES_WORMADAM_PLANT] =
@@ -2174,6 +2176,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .levelUpLearnset = sWormadamPlantLevelUpLearnset,
         .teachableLearnset = sWormadamPlantTeachableLearnset,
         .formSpeciesIdTable = sWormadamFormSpeciesIdTable,
+        .randomizerMode = MON_RANDOMIZER_RANDOM_FORM,
     },
 
     [SPECIES_WORMADAM_SANDY] =
@@ -2241,6 +2244,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .levelUpLearnset = sWormadamSandyLevelUpLearnset,
         .teachableLearnset = sWormadamSandyTeachableLearnset,
         .formSpeciesIdTable = sWormadamFormSpeciesIdTable,
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 
     [SPECIES_WORMADAM_TRASH] =
@@ -2309,9 +2313,10 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .levelUpLearnset = sWormadamTrashLevelUpLearnset,
         .teachableLearnset = sWormadamTrashTeachableLearnset,
         .formSpeciesIdTable = sWormadamFormSpeciesIdTable,
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 
-#define MOTHIM_SPECIES_INFO                                                 \
+#define MOTHIM_SPECIES_INFO(rzMode)                                         \
     {                                                                       \
         .baseHP        = 70,                                                \
         .baseAttack    = 94,                                                \
@@ -2371,13 +2376,14 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         )                                                                   \
         .levelUpLearnset = sMothimLevelUpLearnset,                          \
         .teachableLearnset = sMothimTeachableLearnset,                      \
-        .dexNotRequired = TRUE,                                              \
+        .dexNotRequired = TRUE,                                             \
         .formSpeciesIdTable = sMothimFormSpeciesIdTable,                    \
+        .randomizerMode = rzMode                                            \
     }
 
-    [SPECIES_MOTHIM_PLANT] = MOTHIM_SPECIES_INFO,
-    [SPECIES_MOTHIM_SANDY] = MOTHIM_SPECIES_INFO,
-    [SPECIES_MOTHIM_TRASH] = MOTHIM_SPECIES_INFO,
+    [SPECIES_MOTHIM_PLANT] = MOTHIM_SPECIES_INFO(MON_RANDOMIZER_RANDOM_FORM),
+    [SPECIES_MOTHIM_SANDY] = MOTHIM_SPECIES_INFO(MON_RANDOMIZER_INVALID),
+    [SPECIES_MOTHIM_TRASH] = MOTHIM_SPECIES_INFO(MON_RANDOMIZER_INVALID),
 #endif //P_FAMILY_BURMY
 
 #if P_FAMILY_COMBEE
@@ -3024,6 +3030,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .teachableLearnset = sCherrimTeachableLearnset,
         .formSpeciesIdTable = sCherrimFormSpeciesIdTable,
         .formChangeTable = sCherrimFormChangeTable,
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 #endif //P_FAMILY_CHERUBI
 
@@ -3093,6 +3100,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggMoveLearnset = sShellosEggMoveLearnset,
         .formSpeciesIdTable = sShellosFormSpeciesIdTable,
         .evolutions = EVOLUTION({EVO_LEVEL, 30, SPECIES_GASTRODON_WEST}),
+        .randomizerMode = MON_RANDOMIZER_RANDOM_FORM,
     },
 
     [SPECIES_SHELLOS_EAST] =
@@ -3160,6 +3168,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .eggMoveLearnset = sShellosEggMoveLearnset,
         .formSpeciesIdTable = sShellosFormSpeciesIdTable,
         .evolutions = EVOLUTION({EVO_LEVEL, 30, SPECIES_GASTRODON_EAST}),
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 
     [SPECIES_GASTRODON_WEST] =
@@ -3225,6 +3234,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .levelUpLearnset = sGastrodonLevelUpLearnset,
         .teachableLearnset = sGastrodonTeachableLearnset,
         .formSpeciesIdTable = sGastrodonFormSpeciesIdTable,
+        .randomizerMode = MON_RANDOMIZER_RANDOM_FORM,
     },
 
     [SPECIES_GASTRODON_EAST] =
@@ -3290,6 +3300,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .levelUpLearnset = sGastrodonLevelUpLearnset,
         .teachableLearnset = sGastrodonTeachableLearnset,
         .formSpeciesIdTable = sGastrodonFormSpeciesIdTable,
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 #endif //P_FAMILY_SHELLOS
 
@@ -3653,6 +3664,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .teachableLearnset = sLopunnyTeachableLearnset,
         .formSpeciesIdTable = sLopunnyFormSpeciesIdTable,
         .formChangeTable = sLopunnyFormChangeTable,
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 #endif //P_MEGA_EVOLUTIONS
 #endif //P_FAMILY_BUNEARY
@@ -4581,6 +4593,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .teachableLearnset = sGarchompTeachableLearnset,
         .formSpeciesIdTable = sGarchompFormSpeciesIdTable,
         .formChangeTable = sGarchompFormChangeTable,
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 #endif //P_MEGA_EVOLUTIONS
 
@@ -4866,6 +4879,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .teachableLearnset = sLucarioTeachableLearnset,
         .formSpeciesIdTable = sLucarioFormSpeciesIdTable,
         .formChangeTable = sLucarioFormChangeTable,
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 #endif //P_MEGA_EVOLUTIONS
 
@@ -5927,6 +5941,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .teachableLearnset = sAbomasnowTeachableLearnset,
         .formSpeciesIdTable = sAbomasnowFormSpeciesIdTable,
         .formChangeTable = sAbomasnowFormChangeTable,
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 #endif //P_MEGA_EVOLUTIONS
 #endif //P_FAMILY_SNOVER
@@ -6090,6 +6105,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .teachableLearnset = sRotomTeachableLearnset,
         .formSpeciesIdTable = sRotomFormSpeciesIdTable,
         .formChangeTable = sRotomFormChangeTable,
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 
     [SPECIES_ROTOM_WASH] =
@@ -6167,6 +6183,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .teachableLearnset = sRotomTeachableLearnset,
         .formSpeciesIdTable = sRotomFormSpeciesIdTable,
         .formChangeTable = sRotomFormChangeTable,
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 
     [SPECIES_ROTOM_FROST] =
@@ -6242,6 +6259,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .teachableLearnset = sRotomTeachableLearnset,
         .formSpeciesIdTable = sRotomFormSpeciesIdTable,
         .formChangeTable = sRotomFormChangeTable,
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 
     [SPECIES_ROTOM_FAN] =
@@ -6342,6 +6360,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .teachableLearnset = sRotomTeachableLearnset,
         .formSpeciesIdTable = sRotomFormSpeciesIdTable,
         .formChangeTable = sRotomFormChangeTable,
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 
     [SPECIES_ROTOM_MOW] =
@@ -6420,6 +6439,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .teachableLearnset = sRotomTeachableLearnset,
         .formSpeciesIdTable = sRotomFormSpeciesIdTable,
         .formChangeTable = sRotomFormChangeTable,
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 #endif //P_FAMILY_ROTOM
 
@@ -6815,6 +6835,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .teachableLearnset = sDialgaTeachableLearnset,
         .formSpeciesIdTable = sDialgaFormSpeciesIdTable,
         .formChangeTable = sDialgaFormChangeTable,
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 #endif //P_FAMILY_DIALGA
 
@@ -6964,6 +6985,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .teachableLearnset = sPalkiaTeachableLearnset,
         .formSpeciesIdTable = sPalkiaFormSpeciesIdTable,
         .formChangeTable = sPalkiaFormChangeTable,
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 #endif //P_FAMILY_PALKIA
 
@@ -7348,6 +7370,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .teachableLearnset = sGiratinaTeachableLearnset,
         .formSpeciesIdTable = sGiratinaFormSpeciesIdTable,
         .formChangeTable = sGiratinaFormChangeTable,
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 #endif //P_FAMILY_GIRATINA
 
@@ -7912,6 +7935,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .teachableLearnset = sShayminSkyTeachableLearnset,
         .formSpeciesIdTable = sShayminFormSpeciesIdTable,
         .formChangeTable = sShayminFormChangeTable,
+        .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 #endif //P_FAMILY_SHAYMIN
 
@@ -7933,7 +7957,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .iconPalIndex = 1,
 #endif
 
-#define ARCEUS_SPECIES_INFO(type, typeName, iconPal)                                \
+#define ARCEUS_SPECIES_INFO(type, typeName, iconPal, rzMode)                        \
     {                                                                               \
         .baseHP        = 120,                                                       \
         .baseAttack    = 120,                                                       \
@@ -7994,27 +8018,28 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .isMythical = TRUE,                                                         \
         .isFrontierBanned = TRUE,                                                   \
         .dexNotRequired = TRUE,                                                     \
-        .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT, \
+        .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,                               \
+        .randomizerMode = rzMode,                                                   \
     }
 
-    [SPECIES_ARCEUS_NORMAL]   = ARCEUS_SPECIES_INFO(TYPE_NORMAL,   Normal,   1),
-    [SPECIES_ARCEUS_FIGHTING] = ARCEUS_SPECIES_INFO(TYPE_FIGHTING, Fighting, 1),
-    [SPECIES_ARCEUS_FLYING]   = ARCEUS_SPECIES_INFO(TYPE_FLYING,   Flying,   2),
-    [SPECIES_ARCEUS_POISON]   = ARCEUS_SPECIES_INFO(TYPE_POISON,   Poison,   2),
-    [SPECIES_ARCEUS_GROUND]   = ARCEUS_SPECIES_INFO(TYPE_GROUND,   Ground,   1),
-    [SPECIES_ARCEUS_ROCK]     = ARCEUS_SPECIES_INFO(TYPE_ROCK,     Rock,     2),
-    [SPECIES_ARCEUS_BUG]      = ARCEUS_SPECIES_INFO(TYPE_BUG,      Bug,      1),
-    [SPECIES_ARCEUS_GHOST]    = ARCEUS_SPECIES_INFO(TYPE_GHOST,    Ghost,    2),
-    [SPECIES_ARCEUS_STEEL]    = ARCEUS_SPECIES_INFO(TYPE_STEEL,    Steel,    0),
-    [SPECIES_ARCEUS_FIRE]     = ARCEUS_SPECIES_INFO(TYPE_FIRE,     Fire,     0),
-    [SPECIES_ARCEUS_WATER]    = ARCEUS_SPECIES_INFO(TYPE_WATER,    Water,    0),
-    [SPECIES_ARCEUS_GRASS]    = ARCEUS_SPECIES_INFO(TYPE_GRASS,    Grass,    1),
-    [SPECIES_ARCEUS_ELECTRIC] = ARCEUS_SPECIES_INFO(TYPE_ELECTRIC, Electric, 3),
-    [SPECIES_ARCEUS_PSYCHIC]  = ARCEUS_SPECIES_INFO(TYPE_PSYCHIC,  Psychic,  1),
-    [SPECIES_ARCEUS_ICE]      = ARCEUS_SPECIES_INFO(TYPE_ICE,      Ice,      0),
-    [SPECIES_ARCEUS_DRAGON]   = ARCEUS_SPECIES_INFO(TYPE_DRAGON,   Dragon,   0),
-    [SPECIES_ARCEUS_DARK]     = ARCEUS_SPECIES_INFO(TYPE_DARK,     Dark,     0),
-    [SPECIES_ARCEUS_FAIRY]    = ARCEUS_SPECIES_INFO(TYPE_FAIRY,    Fairy,    0),
+    [SPECIES_ARCEUS_NORMAL]   = ARCEUS_SPECIES_INFO(TYPE_NORMAL,   Normal,   1, MON_RANDOMIZER_NORMAL),
+    [SPECIES_ARCEUS_FIGHTING] = ARCEUS_SPECIES_INFO(TYPE_FIGHTING, Fighting, 1, MON_RANDOMIZER_INVALID),
+    [SPECIES_ARCEUS_FLYING]   = ARCEUS_SPECIES_INFO(TYPE_FLYING,   Flying,   2, MON_RANDOMIZER_INVALID),
+    [SPECIES_ARCEUS_POISON]   = ARCEUS_SPECIES_INFO(TYPE_POISON,   Poison,   2, MON_RANDOMIZER_INVALID),
+    [SPECIES_ARCEUS_GROUND]   = ARCEUS_SPECIES_INFO(TYPE_GROUND,   Ground,   1, MON_RANDOMIZER_INVALID),
+    [SPECIES_ARCEUS_ROCK]     = ARCEUS_SPECIES_INFO(TYPE_ROCK,     Rock,     2, MON_RANDOMIZER_INVALID),
+    [SPECIES_ARCEUS_BUG]      = ARCEUS_SPECIES_INFO(TYPE_BUG,      Bug,      1, MON_RANDOMIZER_INVALID),
+    [SPECIES_ARCEUS_GHOST]    = ARCEUS_SPECIES_INFO(TYPE_GHOST,    Ghost,    2, MON_RANDOMIZER_INVALID),
+    [SPECIES_ARCEUS_STEEL]    = ARCEUS_SPECIES_INFO(TYPE_STEEL,    Steel,    0, MON_RANDOMIZER_INVALID),
+    [SPECIES_ARCEUS_FIRE]     = ARCEUS_SPECIES_INFO(TYPE_FIRE,     Fire,     0, MON_RANDOMIZER_INVALID),
+    [SPECIES_ARCEUS_WATER]    = ARCEUS_SPECIES_INFO(TYPE_WATER,    Water,    0, MON_RANDOMIZER_INVALID),
+    [SPECIES_ARCEUS_GRASS]    = ARCEUS_SPECIES_INFO(TYPE_GRASS,    Grass,    1, MON_RANDOMIZER_INVALID),
+    [SPECIES_ARCEUS_ELECTRIC] = ARCEUS_SPECIES_INFO(TYPE_ELECTRIC, Electric, 3, MON_RANDOMIZER_INVALID),
+    [SPECIES_ARCEUS_PSYCHIC]  = ARCEUS_SPECIES_INFO(TYPE_PSYCHIC,  Psychic,  1, MON_RANDOMIZER_INVALID),
+    [SPECIES_ARCEUS_ICE]      = ARCEUS_SPECIES_INFO(TYPE_ICE,      Ice,      0, MON_RANDOMIZER_INVALID),
+    [SPECIES_ARCEUS_DRAGON]   = ARCEUS_SPECIES_INFO(TYPE_DRAGON,   Dragon,   0, MON_RANDOMIZER_INVALID),
+    [SPECIES_ARCEUS_DARK]     = ARCEUS_SPECIES_INFO(TYPE_DARK,     Dark,     0, MON_RANDOMIZER_INVALID),
+    [SPECIES_ARCEUS_FAIRY]    = ARCEUS_SPECIES_INFO(TYPE_FAIRY,    Fairy,    0, MON_RANDOMIZER_INVALID),
 #endif //P_FAMILY_ARCEUS
 
 #ifdef __INTELLISENSE__

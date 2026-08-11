@@ -195,7 +195,7 @@ BattleFrontier_BattleTowerBattleRoom_EventScript_SecondAttendantEnter_hns::
 	waitmovement 0
 	playse SE_PIN
 	applymovement LOCALID_TOWER_BATTLE_ATTENDANT_1, Common_Movement_ExclamationMark
-	waitmovement 0
+	waitmovement LOCALID_TOWER_BATTLE_ATTENDANT_1
 	applymovement LOCALID_TOWER_BATTLE_ATTENDANT_1, Common_Movement_Delay48
 	waitmovement 0
 	applymovement LOCALID_TOWER_BATTLE_ATTENDANT_2, BattleFrontier_BattleTowerBattleRoom_Movement_SecondAttendantDelay_hns

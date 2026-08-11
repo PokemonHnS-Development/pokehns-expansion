@@ -117,7 +117,7 @@ NewBarkTown_Lab_EventScript_ElmAccepted::
 	waitse
 	playse SE_PIN
 	applymovement LOCALID_ELM, Common_Movement_QuestionMark
-	delay 60
+	waitmovement LOCALID_ELM
 	applymovement LOCALID_ELM, NewBarkTown_Lab_Movement_CheckEmail
 	applymovement OBJ_EVENT_ID_PLAYER, NewBarkTown_Lab_Movement_Look_Left
 	waitmovement 0
@@ -299,6 +299,7 @@ NewBarkTown_Lab_EventScript_MrPokemon::
 	clearflag FLAG_RECEIVED_FIRST_BALLS
 	clearflag FLAG_RECEIVED_FIRST_POTION
 	setvar VAR_NEWBARK_TOWN_STATE, 3
+	setflag FLAG_ENABLE_CONDITION
 	release
 	end
 
@@ -441,7 +442,7 @@ NewBarkTown_Lab_EventScript_ElmMasterBall::
 	delay 20
 	playse SE_PIN
 	applymovement LOCALID_ELM, Common_Movement_ExclamationMark
-	delay 60
+	waitmovement LOCALID_ELM
 	msgbox NewBarkTown_Lab_Text_KimonoGirls, MSGBOX_DEFAULT
 	closemessage
 	setvar VAR_NEWBARKTOWN_LABSTATE, 8

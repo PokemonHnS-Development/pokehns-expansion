@@ -131,7 +131,7 @@ GoldenrodCity_EventScript_RocketScout::
 	closemessage
 	PLAYSE SE_PIN
 	applymovement LOCALID_GOLDENROD_ROCKET_SCOUT, Common_Movement_ExclamationMark
-	delay 20
+	waitmovement LOCALID_GOLDENROD_ROCKET_SCOUT
 	faceplayer
 	msgbox GoldenrodCity_Text_RocketScout2, MSGBOX_DEFAULT
 	closemessage

@@ -11,7 +11,7 @@ IcePath_B3F_Trigger_Swinub_Jump::
 	goto_if_set FLAG_DAY_POKEMON, IcePath_B3F_Trigger_Night
 	playse SE_PIN
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
-	delay 60
+	waitmovement OBJ_EVENT_ID_PLAYER
 	waitse
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_WEST
 	playmoncry SPECIES_SWINUB, CRY_MODE_NORMAL

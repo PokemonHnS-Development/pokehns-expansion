@@ -3,7 +3,7 @@
   "name": "RocketHideout_B2F_hns",
   "layout": "LAYOUT_ROCKET_HIDEOUT_B2F_HNS",
   "music": "MUS_HG_TEAM_ROCKET_HQ",
-  "region_map_section": "MAPSEC_ROCKET_HIDEOUT",
+  "region_map_section": "MAPSEC_ROCKET_HIDEOUT_HNS",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_INDOOR",

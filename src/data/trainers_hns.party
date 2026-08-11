@@ -2932,8 +2932,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_HILLARY_HNS ===
 Name: HILLARY
-Class: Expert Hns
-Pic: Expert F
+Class: Lass Hns
+Pic: Lass
 Gender: Female
 Music: Hg Girl 2
 Double Battle: No
@@ -6858,6 +6858,7 @@ Gender: Male
 Music: Hg Girl 2
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Pink
 
 Espeon
 Level: 48
@@ -6874,6 +6875,7 @@ Gender: Male
 Music: Hg Girl 2
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Yellow
 
 Jolteon
 Level: 48
@@ -6890,6 +6892,7 @@ Gender: Male
 Music: Hg Girl 2
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Purple
 
 Umbreon
 Level: 48
@@ -6906,6 +6909,7 @@ Gender: Male
 Music: Hg Girl 2
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Light Blue
 
 Vaporeon
 Level: 48
@@ -6922,6 +6926,7 @@ Gender: Male
 Music: Hg Girl 2
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Dark Red
 
 Flareon
 Level: 48
@@ -7163,6 +7168,7 @@ Gender: Male
 Music: Hg Boy 1
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Light Blue
 
 Pidgey
 Level: 8
@@ -7186,6 +7192,7 @@ Gender: Male
 Music: Hg Boy 1
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Light Blue
 Items: Full Restore / Full Restore
 
 Noctowl @ Sitrus Berry
@@ -7244,6 +7251,7 @@ Gender: Male
 Music: Hg Boy 1
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Green
 Items: Potion / Potion
 
 Pineco
@@ -7278,6 +7286,7 @@ Gender: Male
 Music: Hg Boy 1
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Green
 Items: Full Restore / Full Restore
 
 Ledian @ Focus Band
@@ -7336,6 +7345,7 @@ Gender: Male
 Music: Hg Boy 1
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Pink
 Items: Super Potion / Potion
 
 Clefairy
@@ -7370,6 +7380,7 @@ Gender: Male
 Music: Hg Boy 1
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Pink
 Items: Full Restore / Full Restore
 
 Clefable
@@ -7428,6 +7439,7 @@ Gender: Male
 Music: Hg Boy 1
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Purple
 Items: Super Potion / Super Potion
 
 Haunter
@@ -7470,6 +7482,7 @@ Gender: Male
 Music: Hg Boy 1
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Purple
 Items: Full Restore / Full Restore
 
 Sableye
@@ -7528,6 +7541,7 @@ Gender: Male
 Music: Hg Boy 1
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Light Blue
 Items: Super Potion / Super Potion
 
 Dewgong
@@ -7570,6 +7584,7 @@ Gender: Male
 Music: Hg Boy 1
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Light Blue
 Items: Full Restore / Full Restore
 
 Weavile
@@ -7628,6 +7643,7 @@ Gender: Male
 Music: Hg Boy 1
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Light Blue
 Items: Full Restore / Full Restore
 
 Cloyster
@@ -7678,6 +7694,7 @@ Gender: Male
 Music: Hg Boy 1
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Light Blue
 Items: Full Restore / Full Restore
 
 Cloyster
@@ -7728,6 +7745,7 @@ Gender: Male
 Music: Hg Boy 1
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Yellow
 Items: Super Potion / Super Potion
 
 Skarmory
@@ -7778,6 +7796,7 @@ Gender: Male
 Music: Hg Boy 1
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Yellow
 Items: Full Restore / Full Restore
 
 Skarmory
@@ -7836,6 +7855,7 @@ Gender: Male
 Music: Hg Boy 1
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Yellow
 Items: Full Restore / Full Restore
 
 Skarmory
@@ -7886,6 +7906,7 @@ Gender: Male
 Music: Hg Boy 1
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Yellow
 Items: Full Restore / Full Restore
 
 Skarmory
@@ -7936,6 +7957,7 @@ Gender: Male
 Music: Hg Boy 1
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Orange
 Items: Super Potion / Super Potion
 
 Hitmontop
@@ -7978,6 +8000,7 @@ Gender: Male
 Music: Hg Boy 1
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Orange
 Items: Full Restore / Full Restore
 
 Hitmonchan @ Scope Lens
@@ -8036,6 +8059,7 @@ Gender: Male
 Music: Hg Boy 1
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Orange
 Items: Full Restore / Full Restore
 
 Hitmontop
@@ -8086,6 +8110,7 @@ Gender: Male
 Music: Hg Boy 1
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Orange
 Items: Full Restore / Full Restore
 
 Hitmontop
@@ -8136,6 +8161,7 @@ Gender: Male
 Music: Hg Boy 1
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Blue
 Items: Full Restore / Full Restore
 
 Dragonair
@@ -8186,6 +8212,7 @@ Gender: Male
 Music: Hg Boy 1
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Blue
 Items: Full Restore / Full Restore
 
 Dragonair @ Metal Coat
@@ -8244,6 +8271,7 @@ Gender: Male
 Music: Hg Boy 1
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Orange
 Items: Full Restore / Full Restore
 
 Golem @ Quick Claw
@@ -8302,6 +8330,7 @@ Gender: Male
 Music: Hg Boy 1
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Light Blue
 Items: Full Restore / Full Restore
 
 Golduck
@@ -8361,6 +8390,7 @@ Music: Hg Boy 1
 Double Battle: No
 AI: Basic Trainer
 Items: Full Restore / Full Restore
+Mugshot: Yellow
 
 Electrode @ Focus Band
 Level: 57
@@ -8418,6 +8448,7 @@ Gender: Male
 Music: Hg Boy 1
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Green
 Items: Full Restore / Full Restore
 
 Jumpluff @ Focus Band
@@ -8476,6 +8507,7 @@ Gender: Male
 Music: Hg Boy 1
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Pink
 Items: Full Restore / Full Restore
 
 Mr Mime @ Quick Claw
@@ -8534,6 +8566,7 @@ Gender: Male
 Music: Hg Boy 1
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Purple
 Items: Full Restore / Full Restore
 
 Weezing @ Leftovers
@@ -8592,6 +8625,7 @@ Gender: Male
 Music: Hg Boy 1
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Dark Red
 Items: Full Restore / Full Restore
 
 Rapidash @ Quick Claw
@@ -8650,6 +8684,7 @@ Gender: Male
 Music: Hg Boy 1
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Blue
 Items: Full Restore / Full Restore
 
 Rhyperior @ Sitrus Berry
@@ -8708,6 +8743,7 @@ Gender: Male
 Music: Hg Boy 1
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Blue
 Items: Full Restore / Full Restore
 
 Articuno @ Sitrus Berry
@@ -8766,6 +8802,7 @@ Gender: Male
 Music: Elite Four
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Pink
 Items: Full Restore / Full Restore
 
 Girafarig
@@ -8811,6 +8848,7 @@ Gender: Male
 Music: Elite Four
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Pink
 Items: Full Restore / Full Restore
 
 Gardevoir
@@ -8863,6 +8901,7 @@ Gender: Male
 Music: Elite Four
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Orange
 Items: Full Restore / Full Restore
 
 Hitmonchan @ Scope Lens
@@ -8908,6 +8947,7 @@ Gender: Male
 Music: Elite Four
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Orange
 Items: Full Restore / Full Restore
 
 Steelix @ Quick Claw
@@ -8960,6 +9000,7 @@ Gender: Male
 Music: Elite Four
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Yellow
 Items: Full Restore / Full Restore
 
 Umbreon @ Sitrus Berry
@@ -9005,6 +9046,7 @@ Gender: Male
 Music: Elite Four
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Yellow
 Items: Full Restore / Full Restore
 
 Umbreon @ Sitrus Berry
@@ -9057,6 +9099,7 @@ Gender: Male
 Music: Elite Four
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Purple
 Items: Full Restore / Full Restore
 
 Ariados @ Kings Rock
@@ -9102,6 +9145,7 @@ Gender: Male
 Music: Elite Four
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Purple
 Items: Full Restore / Full Restore
 
 Tentacruel @ Chesto Berry
@@ -9155,6 +9199,7 @@ Music: Hg Champion
 Double Battle: No
 AI: Basic Trainer
 Items: Full Restore / Full Restore
+Mugshot: Blue
 
 Gyarados @ Leftovers
 Level: 54
@@ -9207,6 +9252,7 @@ Music: Hg Champion
 Double Battle: No
 AI: Basic Trainer
 Items: Full Restore / Full Restore
+Mugshot: Blue
 
 Salamence
 Level: 69
@@ -9259,6 +9305,7 @@ Music: Hg Champion
 Double Battle: No
 AI: Basic Trainer
 Items: Full Restore / Full Restore
+Mugshot: Blue
 
 Gyarados @ Quick Claw
 Level: 68
@@ -9289,6 +9336,7 @@ Gender: Male
 Music: Hg Boy 1
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Blue
 Items: Full Restore / Full Restore
 
 Dragonair @ Metal Coat
@@ -9320,6 +9368,7 @@ Gender: Male
 Music: Silver
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Dark Red
 
 Chikorita
 Level: 5
@@ -9333,6 +9382,7 @@ Gender: Male
 Music: Silver
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Dark Red
 Items: Potion
 
 Zubat
@@ -9367,6 +9417,7 @@ Gender: Male
 Music: Silver
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Dark Red
 Items: Super Potion
 
 Larvitar
@@ -9409,6 +9460,7 @@ Gender: Male
 Music: Silver
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Dark Red
 Items: Hyper Potion
 
 Pupitar
@@ -9459,6 +9511,7 @@ Gender: Male
 Music: Silver
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Dark Red
 Items: Hyper Potion
 
 Ursaring @ Chesto Berry
@@ -9517,6 +9570,7 @@ Gender: Male
 Music: Silver
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Dark Red
 Items: Full Restore / Full Restore
 
 Ursaluna Bloodmoon @ Chesto Berry
@@ -9569,6 +9623,7 @@ Gender: Male
 Music: Silver
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Dark Red
 Items: Full Restore / Full Restore
 
 Ursaluna Bloodmoon @ Chesto Berry
@@ -9621,6 +9676,7 @@ Gender: Male
 Music: Silver
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Dark Red
 
 Cyndaquil
 Level: 5
@@ -9634,6 +9690,7 @@ Gender: Male
 Music: Silver
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Dark Red
 Items: Potion
 
 Zubat
@@ -9668,6 +9725,7 @@ Gender: Male
 Music: Silver
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Dark Red
 Items: Super Potion
 
 Larvitar
@@ -9710,6 +9768,7 @@ Gender: Male
 Music: Silver
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Dark Red
 Items: Super Potion
 
 Pupitar
@@ -9760,6 +9819,7 @@ Gender: Male
 Music: Silver
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Dark Red
 Items: Hyper Potion
 
 Ursaring @ Chesto Berry
@@ -9818,6 +9878,7 @@ Gender: Male
 Music: Silver
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Dark Red
 Items: Full Restore / Full Restore
 
 Ursaluna Bloodmoon @ Chesto Berry
@@ -9870,6 +9931,7 @@ Gender: Male
 Music: Silver
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Dark Red
 Items: Full Restore / Full Restore
 
 Ursaluna Bloodmoon @ Chesto Berry
@@ -9922,6 +9984,7 @@ Gender: Male
 Music: Silver
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Dark Red
 
 Totodile
 Level: 5
@@ -9935,6 +9998,7 @@ Gender: Male
 Music: Silver
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Dark Red
 Items: Potion
 
 Zubat
@@ -9969,6 +10033,7 @@ Gender: Male
 Music: Silver
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Dark Red
 Items: Super Potion
 
 Larvitar
@@ -10011,6 +10076,7 @@ Gender: Male
 Music: Silver
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Dark Red
 Items: Super Potion
 
 Pupitar
@@ -10061,6 +10127,7 @@ Gender: Male
 Music: Silver
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Dark Red
 Items: Hyper Potion
 
 Ursaring @ Chesto Berry
@@ -10119,6 +10186,7 @@ Gender: Male
 Music: Silver
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Dark Red
 Items: Full Restore / Full Restore
 
 Ursaluna Bloodmoon @ Chesto Berry
@@ -10171,6 +10239,7 @@ Gender: Male
 Music: Silver
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Dark Red
 Items: Full Restore / Full Restore
 
 Ursaluna Bloodmoon @ Chesto Berry
@@ -10275,6 +10344,7 @@ Gender: Male
 Music: Hg Boy 1
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Yellow
 Items: Full Restore / Full Restore
 
 Politoed
@@ -10309,6 +10379,7 @@ Gender: Male
 Music: Hg Boy 1
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Dark Red
 Items: Full Restore / Full Restore
 
 Kangaskhan
@@ -10361,6 +10432,7 @@ Gender: Male
 Music: Rocket
 Double Battle: No
 AI: Check Bad Move
+Mugshot: Dark Red
 
 Koffing
 Level: 12
@@ -10382,6 +10454,7 @@ Gender: Male
 Music: Rocket
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Dark Red
 Items: Full Restore / Full Restore
 
 Muk
@@ -10427,6 +10500,7 @@ Gender: Male
 Music: Rocket
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Dark Red
 Items: Full Restore / Full Restore
 
 Porygon Z
@@ -10472,6 +10546,7 @@ Gender: Male
 Music: Rocket
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Dark Red
 Items: Full Restore / Full Restore
 
 Weezing
@@ -10503,6 +10578,7 @@ Gender: Male
 Music: Rocket
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Dark Red
 Items: Full Restore / Full Restore
 
 Porygon Z
@@ -10548,6 +10624,7 @@ Gender: Male
 Music: Rocket
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Dark Red
 Items: Full Restore / Full Restore
 
 Porygon Z
@@ -10593,6 +10670,7 @@ Gender: Male
 Music: Rocket
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Dark Red
 Items: Full Restore / Full Restore
 
 Pineco
@@ -10631,6 +10709,7 @@ Gender: Male
 Music: Rocket
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Dark Red
 Items: Full Restore / Full Restore
 
 Forretress
@@ -10669,6 +10748,7 @@ Gender: Male
 Music: Rocket
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Dark Red
 Items: Full Restore / Full Restore
 
 Arbok
@@ -10700,6 +10780,7 @@ Gender: Male
 Music: Rocket
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Dark Red
 Items: Full Restore / Full Restore
 
 Arbok
@@ -11533,7 +11614,7 @@ Level: 44
 Name: DANA
 Class: Lass Hns
 Pic: Lass
-Gender: Male
+Gender: Female
 Music: Hg Girl 1
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
@@ -12661,8 +12742,8 @@ Level: 65
 
 === TRAINER_HILLARY_2_HNS ===
 Name: HILLARY
-Class: Expert Hns
-Pic: Expert F
+Class: Lass Hns
+Pic: Lass
 Gender: Male
 Music: Hg Girl 2
 Double Battle: No
@@ -12679,8 +12760,8 @@ Level: 62
 
 === TRAINER_HILLARY_3_HNS ===
 Name: HILLARY
-Class: Expert Hns
-Pic: Expert F
+Class: Lass Hns
+Pic: Lass
 Gender: Male
 Music: Hg Girl 2
 Double Battle: No
@@ -12958,6 +13039,7 @@ Gender: Male
 Music: Elite Four
 Double Battle: No
 AI: Check Bad Move
+Mugshot: Green
 
 Raichu Alola
 Level: 60
@@ -13418,9 +13500,10 @@ Name: MIHARU
 Class: Kimono Girl Hns
 Pic: Kimono Girl Hns
 Gender: Female
-Music: Hg Girl 2 
+Music: Hg Girl 2
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
+Mugshot: Green
 
 Leafeon @ Meadow Plate  
 Ability: Chlorophyll  
@@ -13440,6 +13523,7 @@ Gender: Female
 Music: Hg Girl 2
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
+Mugshot: Light Blue
 
 Glaceon @ Icicle Plate  
 Ability: Ice Body  
@@ -13460,6 +13544,7 @@ Gender: Female
 Music: Hg Girl 2
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
+Mugshot: Pink
 
 Sylveon @ Pixie Plate  
 Ability: Pixilate  
@@ -13481,6 +13566,7 @@ Gender: Male
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 Items: Full Restore / Full Restore
+Mugshot: Orange
 
 Skarmory @ Covert Cloak  
 Ability: Sturdy  

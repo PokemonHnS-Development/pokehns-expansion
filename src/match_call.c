@@ -1765,6 +1765,7 @@ bool32 SelectMatchCallMessage(int trainerId, u8 *str)
         {
             bool32 canGiveItem = sHnsMatchCallTrainers[i].itemFlag != 0;
             bool32 canRematch = rematchIdx >= 0
+                             && HasEnoughBadgesForRematch()
                              && HasTrainerBeenFought(gRematchTable[rematchIdx].trainerIds[0]);
             u8 roll;
 

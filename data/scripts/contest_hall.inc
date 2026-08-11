@@ -4,11 +4,14 @@ LilycoveCity_ContestLobby_EventScript_SpeakToContestReceptionist::
 	faceplayer
 #if IS_HNS
 	goto_if_ne VAR_CONTEST_PRIZE_PICKUP_HNS, 0, LilycoveCity_ContestLobby_EventScript_PickUpPrize
+	checkitem ITEM_POKEBLOCK_CASE
+	call_if_eq VAR_RESULT, TRUE, LilycoveCity_ContestLobby_EventScript_ReceptionWelcome
+	call_if_eq VAR_RESULT, FALSE, LilycoveCity_ContestLobby_EventScript_GivePokeblockCase
 #else
 	goto_if_ne VAR_CONTEST_PRIZE_PICKUP_EM, 0, LilycoveCity_ContestLobby_EventScript_PickUpPrize
-#endif
 	call_if_set FLAG_RECEIVED_POKEBLOCK_CASE, LilycoveCity_ContestLobby_EventScript_ReceptionWelcome
 	call_if_unset FLAG_RECEIVED_POKEBLOCK_CASE, LilycoveCity_ContestLobby_EventScript_GivePokeblockCase
+#endif
 	goto LilycoveCity_ContestLobby_EventScript_AskEnterContest
 	end
 
@@ -20,7 +23,9 @@ LilycoveCity_ContestLobby_EventScript_GivePokeblockCase::
 	msgbox LilycoveCity_ContestLobby_Text_ReceptionDontHavePokeblockCase, MSGBOX_DEFAULT
 	giveitem ITEM_POKEBLOCK_CASE
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+#if !IS_HNS
 	setflag FLAG_RECEIVED_POKEBLOCK_CASE
+#endif
 	msgbox LilycoveCity_ContestLobby_Text_NowThatWeveClearedThatUp, MSGBOX_DEFAULT
 	return
 

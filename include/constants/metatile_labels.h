@@ -1135,5 +1135,6 @@
 #define METATILE_SSAqua_Door_Hns                     0x281
 #define METATILE_SafariZoneJohto_Door_Hns            0x2D2
 #define METATILE_VioletCity_Dojo_Door_Hns            0x32B
+#define METATILE_DragonDen_Shrine_Door_Hns           0x2FF
 
 #endif // GUARD_METATILE_LABELS_H

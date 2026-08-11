@@ -13,7 +13,7 @@ CherryGroveCity_EventScript_TriggerGent_Top::
 	setflag FLAG_HIDE_CHERRYGROVE_GUIDE_GENT_HOUSE
 	playse SE_PIN
 	applymovement LOCALID_GUIDE_GENT, Common_Movement_ExclamationMark
-	delay 60
+	waitmovement LOCALID_GUIDE_GENT
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
 	msgbox CherrygroveCity_Text_GuideGentIntro, MSGBOX_YESNO
 	waitmessage
@@ -34,7 +34,7 @@ CherryGroveCity_EventScript_TriggerGent_Mid::
 	setflag FLAG_HIDE_CHERRYGROVE_GUIDE_GENT_HOUSE
 	playse SE_PIN
 	applymovement LOCALID_GUIDE_GENT, Common_Movement_ExclamationMark
-	delay 60
+	waitmovement LOCALID_GUIDE_GENT
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
 	msgbox CherrygroveCity_Text_GuideGentIntro, MSGBOX_YESNO
 	waitmessage
@@ -54,7 +54,7 @@ CherryGroveCity_EventScript_TriggerGent_Bottom::
 	setflag FLAG_HIDE_CHERRYGROVE_GUIDE_GENT_HOUSE
 	playse SE_PIN
 	applymovement LOCALID_GUIDE_GENT, Common_Movement_ExclamationMark
-	delay 60
+	waitmovement LOCALID_GUIDE_GENT
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
 	msgbox CherrygroveCity_Text_GuideGentIntro, MSGBOX_YESNO
 	waitmessage
@@ -222,7 +222,7 @@ CherryGroveCity_EventScript_TriggerSilver_Bottom::
 
 CherryGroveCity_EventScript_TriggerSilver::
 	lock
-	playbgm MUS_HG_ENCOUNTER_RIVAL, TRUE
+	playbgm MUS_HG_ENCOUNTER_RIVAL, FALSE
 	applymovement LOCALID_CHERRYGROVE_SILVER, CherryGroveCity_Movement_Silver_Enter
 	waitmovement 0
 	msgbox CherrygroveCity_Text_RivalSeen, MSGBOX_DEFAULT
@@ -246,7 +246,7 @@ CherryGroveCity_Silver_Battle_Chikorita::
 	goto CherryGroveCity_Silver_AfterBattle
 
 CherryGroveCity_Silver_AfterBattle::
-	playbgm MUS_HG_RIVAL_EXIT, TRUE
+	playbgm MUS_HG_RIVAL_EXIT, FALSE
 	msgbox CherrygroveCity_Text_RivalAfter, MSGBOX_DEFAULT
 	closemessage
 	applymovement OBJ_EVENT_ID_PLAYER, CherryGroveCity_Movement_Silver_Leave1Player
@@ -255,7 +255,7 @@ CherryGroveCity_Silver_AfterBattle::
 	waitmovement 0
 	playse SE_PIN
 	applymovement LOCALID_CHERRYGROVE_SILVER, Common_Movement_ExclamationMark
-	delay 60
+	waitmovement LOCALID_CHERRYGROVE_SILVER
 	turnobject LOCALID_CHERRYGROVE_SILVER, DIR_EAST
 	delay 60
 	turnobject LOCALID_CHERRYGROVE_SILVER, DIR_SOUTH

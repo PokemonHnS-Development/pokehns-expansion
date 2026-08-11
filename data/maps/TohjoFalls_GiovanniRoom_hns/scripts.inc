@@ -61,12 +61,12 @@ TohjoFalls_EventScript_GiovanniScene::
 	waitmovement 0
 	playse SE_PIN
 	applymovement2 OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
-	delay 60
+	waitmovement OBJ_EVENT_ID_PLAYER
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_SOUTH
 	delay 20
 	playse SE_PIN
 	applymovement2 OBJ_EVENT_ID_PLAYER, Common_Movement_QuestionMark
-	delay 60
+	waitmovement OBJ_EVENT_ID_PLAYER
 	applymovement2 OBJ_EVENT_ID_FOLLOWER, TohjoFalls_Movement_CelebiSpin
 	playse SE_LEDGE
 	waitse
@@ -87,7 +87,7 @@ TohjoFalls_EventScript_GiovanniScene::
 	clearflag FLAG_HIDE_TOHJO_GIOVANNI
 	addobject LOCALID_TOHJOFALLS_GIOVANNI
 	waitse
-	playbgm MUS_HG_RADIO_ROCKET, TRUE
+	playbgm MUS_HG_RADIO_ROCKET, FALSE
 	fadescreen FADE_FROM_WHITE
 	delay 50
 	turnobject  OBJ_EVENT_ID_PLAYER, DIR_NORTH
@@ -99,14 +99,14 @@ TohjoFalls_EventScript_GiovanniScene::
 	waitmovement OBJ_EVENT_ID_FOLLOWER
 	playse SE_PIN
 	applymovement2 LOCALID_TOHJOFALLS_GIOVANNI, Common_Movement_ExclamationMark
-	delay 60
+	waitmovement LOCALID_TOHJOFALLS_GIOVANNI
 	turnobject LOCALID_TOHJOFALLS_GIOVANNI, DIR_SOUTH
 	msgbox TohjoFalls_GiovanniRoom_Text_GiovanniIntro, MSGBOX_DEFAULT
 	applymovement2 LOCALID_TOHJOFALLS_GIOVANNI, Common_Movement_WalkDown1
 	waitmovement 0
 	msgbox TohjoFalls_GiovanniRoom_Text_GiovanniBeforeBattle, MSGBOX_DEFAULT
 	trainerbattle_no_intro TRAINER_GIOVANNI_HNS, TohjoFalls_GiovanniRoom_Text_GiovanniDefeat
-	playbgm MUS_HG_RADIO_ROCKET, TRUE
+	playbgm MUS_HG_RADIO_ROCKET, FALSE
 	applymovement2 LOCALID_TOHJOFALLS_GIOVANNI, TohjoFalls_Movement_GiovanniTakenAback
 	waitmovement 0
 	msgbox TohjoFalls_GiovanniRoom_Text_GiovanniAfter, MSGBOX_DEFAULT
@@ -127,12 +127,12 @@ TohjoFalls_EventScript_GiovanniScene::
 	waitmovement 0
 	playse SE_PIN
 	applymovement2 OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
-	delay 60
+	waitmovement OBJ_EVENT_ID_PLAYER
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_SOUTH
 	delay 20
 	playse SE_PIN
 	applymovement2 OBJ_EVENT_ID_PLAYER, Common_Movement_QuestionMark
-	delay 60
+	waitmovement OBJ_EVENT_ID_PLAYER
 	applymovement2 OBJ_EVENT_ID_FOLLOWER, TohjoFalls_Movement_CelebiSpin
 	playse SE_LEDGE
 	waitse

@@ -43,7 +43,7 @@ Route30_EventScript_Youngster_Joey_Fighting::
 	waitmessage
 	playse SE_PIN
 	applymovement LOCALID_ROUTE_30_JOEY, Common_Movement_QuestionMark
-	delay 30
+	waitmovement LOCALID_ROUTE_30_JOEY
 	faceplayer
 	msgbox Route30_Text_ThisIsABigBattle, MSGBOX_AUTOCLOSE
 	waitmessage

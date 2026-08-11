@@ -92,7 +92,7 @@ static const u8 sNuzlockeLUT[] =
     [MAPSEC_SAFARI_ZONE_GATE] = 0x3B,
     [MAPSEC_DRAGONS_DEN]      = 0x3C,
     [MAPSEC_CLIFF_CAVE]       = 0x3D,
-    [MAPSEC_ROCKET_HIDEOUT]   = 0x3E,
+    [MAPSEC_ROCKET_HIDEOUT_HNS] = 0x3E,
     [MAPSEC_TIN_TOWER]        = 0x3F,
     [MAPSEC_MT_MORTAR]        = 0x40,
     [MAPSEC_WHIRL_ISLANDS]    = 0x41,
@@ -104,7 +104,7 @@ static const u8 sNuzlockeLUT[] =
     [MAPSEC_VIRIDIAN_FOREST]  = 0x46,
     [MAPSEC_MT_MOON]          = 0x47,
     [MAPSEC_DIGLETTS_CAVE]    = 0x48,
-    [MAPSEC_VICTORY_ROAD]     = 0x49,
+    [MAPSEC_VICTORY_ROAD_HNS] = 0x49,
     [MAPSEC_CERULEAN_CAVE]    = 0x4A,
     // Cities/Towns: Johto
     [MAPSEC_OLIVINE_CITY]     = 0x4B,

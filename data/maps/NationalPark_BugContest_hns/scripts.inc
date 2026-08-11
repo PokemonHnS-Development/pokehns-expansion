@@ -6,7 +6,7 @@ NationalPark_BugContest_hns_MapScripts::
 NationalPark_BugContest_OnTransition::
 	goto_if_eq VAR_BUG_CONTEST_STATE, 3, NationalPark_BugContest_EventScript_JudgeScene
 	end
-	
+
 NationalPark_BugContest_OnFrame::
 	map_script_2 VAR_BUG_CONTEST_STATE, 1, NationalPark_BugContest_EventScript_Enter
 	map_script_2 VAR_BUG_CONTEST_STATE, 5, NationalPark_BugContest_EventScript_EnterSide
@@ -88,7 +88,6 @@ NationalPark_BugContest_EventScript_JudgeScene::
 	setobjectxyperm LOCALID_BUGCONTEST_BOY, 16, 28
 	setobjectxyperm LOCALID_BUGCONTEST_ATTENDANT, 20, 26
 
-	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
 	setobjectmovementtype LOCALID_BUGCONTEST_GIRL, MOVEMENT_TYPE_FACE_UP
 	setobjectmovementtype LOCALID_BUGCONTEST_BC1, MOVEMENT_TYPE_FACE_UP
 	setobjectmovementtype LOCALID_BUGCONTEST_BC2, MOVEMENT_TYPE_FACE_UP

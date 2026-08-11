@@ -214,6 +214,8 @@ static void SpriteCB_LastUsedBall(struct Sprite *);
 static void SpriteCB_LastUsedBallWin(struct Sprite *);
 static void SpriteCB_MoveInfoWin(struct Sprite *sprite);
 
+static void FreeAbilityPopUpPal();
+
 static const struct OamData sOamData_64x32 =
 {
     .y = 0,
@@ -2592,7 +2594,7 @@ static void SafariTextIntoHealthboxObject(void *dest, u8 *windowTileData, u32 wi
  * FG = ForeGround
  * SH = SHadow
  */
-#define ABILITY_POP_UP_BATTLER_BG_TXTCLR 2
+#define ABILITY_POP_UP_BATTLER_BG_TXTCLR 5
 #define ABILITY_POP_UP_BATTLER_FG_TXTCLR 7
 #define ABILITY_POP_UP_BATTLER_SH_TXTCLR 1
 
@@ -2638,12 +2640,17 @@ static const struct SpriteSheet sSpriteSheet_AbilityPopUp =
     sAbilityPopUpGfx, sizeof(sAbilityPopUpGfx), TAG_ABILITY_POP_UP
 };
 
-static struct SpritePalette GetAbilityPopUpSpritePal(void)
+static const u16 *GetAbilityPopUpPal(void)
 {
     if (UseGen4BattleUI())
-        return (struct SpritePalette){ sAbilityPopUpPaletteGen4, TAG_ABILITY_POP_UP };
+        return sAbilityPopUpPaletteGen4;
     else
-        return (struct SpritePalette){ sAbilityPopUpPaletteGen3, TAG_ABILITY_POP_UP };
+        return sAbilityPopUpPaletteGen3;
+}
+
+static struct SpritePalette GetAbilityPopUpSpritePal(void)
+{
+    return (struct SpritePalette){ GetAbilityPopUpPal(), TAG_ABILITY_POP_UP };
 }
 
 static const struct OamData sOamData_AbilityPopUp =
@@ -2955,7 +2962,7 @@ static void Task_FreeAbilityPopUpGfx(u8 taskId)
             if (IndexOfSpriteTileTag(TAG_ABILITY_POP_UP_PLAYER1 + battler) != 0xFF)
                 FreeSpriteTilesByTag(TAG_ABILITY_POP_UP_PLAYER1 + battler);
         }
-        FreeSpritePaletteByTag(TAG_ABILITY_POP_UP);
+        FreeAbilityPopUpPal();
         DestroyTask(taskId);
     }
 }
@@ -3148,8 +3155,7 @@ void TryAddLastUsedBallItemSprites(void)
 static void DestroyLastUsedBallWinGfx(struct Sprite *sprite)
 {
     FreeSpriteTilesByTag(TAG_LAST_BALL_WINDOW);
-    if (GetSpriteTileStartByTag(MOVE_INFO_WINDOW_TAG) == 0xFFFF)
-        FreeSpritePaletteByTag(TAG_ABILITY_POP_UP);
+    FreeAbilityPopUpPal();
     DestroySprite(sprite);
     gBattleStruct->ballSpriteIds[1] = MAX_SPRITES;
 }
@@ -3189,8 +3195,7 @@ void TryToHideMoveInfoWindow(void)
 static void DestroyMoveInfoWinGfx(struct Sprite *sprite)
 {
     FreeSpriteTilesByTag(MOVE_INFO_WINDOW_TAG);
-    if (GetSpriteTileStartByTag(TAG_LAST_BALL_WINDOW) == 0xFFFF)
-        FreeSpritePaletteByTag(TAG_ABILITY_POP_UP);
+    FreeAbilityPopUpPal();
     DestroySprite(sprite);
     gBattleStruct->moveInfoSpriteId = MAX_SPRITES;
 }
@@ -3349,6 +3354,7 @@ static void Task_BounceBall(u8 taskId)
             gBattleStruct->ballSpriteIds[0] = AddItemIconSprite(102, 102, gBallToDisplay);
             gSprites[gBattleStruct->ballSpriteIds[0]].x = LAST_USED_BALL_X_F;
             gSprites[gBattleStruct->ballSpriteIds[0]].y = LAST_USED_BALL_Y_BNC;
+            sprite = &gSprites[gBattleStruct->ballSpriteIds[0]];
             task->sState++;
         }  // Fallthrough
     case 3: // Bounce Down
@@ -3393,11 +3399,11 @@ void ArrowsChangeColorLastBallCycle(bool32 showArrows)
     if (gBattleStruct->ballSpriteIds[1] == MAX_SPRITES)
         return;
     paletteNum *= 16;
-    pltArrow = (struct PlttData *)&gPlttBufferFaded[paletteNum + 9];  // Arrow color is in idx 9
-    pltOutline = (struct PlttData *)&gPlttBufferFaded[paletteNum + 8];  // Arrow outline is in idx 8
+    pltArrow = (struct PlttData *)&gPlttBufferFaded[paletteNum + 11];  // Arrow color is in idx 11
+    pltOutline = (struct PlttData *)&gPlttBufferFaded[paletteNum + 10];  // Arrow outline is in idx 10
     if (!showArrows) //Make invisible
     {
-        defaultPlttArrow = (struct PlttData *)&gPlttBufferFaded[paletteNum + 13];  // Background color is idx 13
+        defaultPlttArrow = (struct PlttData *)&GetAbilityPopUpPal()[13];  // Background color is idx 13
         pltArrow->r = defaultPlttArrow->r;
         pltArrow->g = defaultPlttArrow->g;
         pltArrow->b = defaultPlttArrow->b;
@@ -3407,8 +3413,8 @@ void ArrowsChangeColorLastBallCycle(bool32 showArrows)
     }
     else // Make gray
     {
-        defaultPlttArrow = (struct PlttData *)&gPlttBufferFaded[paletteNum + 11];  // Grey color is idx 11
-        defaultPlttOutline = (struct PlttData *)&gPlttBufferFaded[paletteNum + 10];  //Light grey color for outline is idx 10
+        defaultPlttArrow = (struct PlttData *)&GetAbilityPopUpPal()[11];  // Grey color is idx 11
+        defaultPlttOutline = (struct PlttData *)&GetAbilityPopUpPal()[10];  //Light grey color for outline is idx 10
         pltArrow->r = defaultPlttArrow->r;
         pltArrow->g = defaultPlttArrow->g;
         pltArrow->b = defaultPlttArrow->b;
@@ -3423,4 +3429,10 @@ void CategoryIcons_LoadSpritesGfx(void)
 {
     LoadCompressedSpriteSheet(&gSpriteSheet_CategoryIcons);
     LoadSpritePalette(&gSpritePal_CategoryIcons);
+}
+
+static void FreeAbilityPopUpPal()
+{
+    if (GetSpriteTileStartByTag(TAG_LAST_BALL_WINDOW) == 0xFFFF && GetSpriteTileStartByTag(MOVE_INFO_WINDOW_TAG) == 0xFFFF && !IsAnyAbilityPopUpActive())
+        FreeSpritePaletteByTag(TAG_ABILITY_POP_UP);
 }

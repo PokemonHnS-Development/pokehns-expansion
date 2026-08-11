@@ -366,11 +366,7 @@ const u8 *MapHeaderCheckScriptTable(u8 tag)
 
         // Run map script if vars are equal
         if (VarGet(varIndex1) == VarGet(varIndex2))
-        {
-            const u8 *mapScript = T2_READ_PTR(ptr);
-            if (!Script_HasNoEffect(mapScript))
-                return mapScript;
-        }
+            return T2_READ_PTR(ptr);
 
         ptr += 4;
     }

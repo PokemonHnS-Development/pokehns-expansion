@@ -70,7 +70,7 @@ LilycoveCity_ContestLobby_EventScript_ReceivedArtistRibbon_hns::
 	waitmovement 0
 	playse SE_PIN
 	applymovement LOCALID_CONTEST_LOBBY_ARTIST, Common_Movement_ExclamationMark
-	waitmovement 0
+	waitmovement LOCALID_CONTEST_LOBBY_ARTIST
 	applymovement LOCALID_CONTEST_LOBBY_ARTIST, LilycoveCity_ContestLobby_Movement_ArtistReturnToPlayer_hns
 	waitmovement 0
 	msgbox LilycoveCity_ContestLobby_Text_TakeMementoOfPainting_hns, MSGBOX_DEFAULT
@@ -239,7 +239,7 @@ LilycoveCity_ContestLobby_EventScript_ReceivedLinkArtistRibbon_hns::
 	waitmovement 0
 	playse SE_PIN
 	applymovement LOCALID_CONTEST_LOBBY_LINK_ARTIST, Common_Movement_ExclamationMark
-	waitmovement 0
+	waitmovement LOCALID_CONTEST_LOBBY_LINK_ARTIST
 	applymovement LOCALID_CONTEST_LOBBY_LINK_ARTIST, LilycoveCity_ContestLobby_Movement_LinkArtistReturnToPlayer_hns
 	waitmovement 0
 	msgbox LilycoveCity_ContestLobby_Text_TakeMementoOfPainting_hns, MSGBOX_DEFAULT

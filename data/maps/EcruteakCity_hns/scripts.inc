@@ -65,7 +65,7 @@ EcruteakCity_Trigger_Silver::
 	delay 10
 	clearflag FLAG_HIDE_ECRUTEAK_SILVER
 	addobject LOCALID_ECRUTEK_SILVER
-	playbgm MUS_HG_ENCOUNTER_RIVAL, TRUE
+	playbgm MUS_HG_ENCOUNTER_RIVAL, FALSE
 	playse SE_BANG
 	applymovement LOCALID_ECRUTEK_SILVER, EcruteakCity_Movement_Silver1
 	applymovement OBJ_EVENT_ID_PLAYER, EcruteakCity_Movement_Silver1
@@ -80,7 +80,7 @@ EcruteakCity_Trigger_Silver::
 	closemessage
 	playse SE_PIN
 	applymovement LOCALID_ECRUTEK_SILVER, Common_Movement_ExclamationMark
-	delay 60
+	waitmovement LOCALID_ECRUTEK_SILVER
 	turnobject LOCALID_ECRUTEK_SILVER, DIR_SOUTH
 	msgbox EcruteakCity_Text_Silver3, MSGBOX_DEFAULT
 	closemessage

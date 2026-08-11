@@ -23,7 +23,7 @@ VermilionCity_TriggerSuicuneNorth_Left::
 	lock
 	playse SE_PIN
 	applymovement2 OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
-	delay 60
+	waitmovement OBJ_EVENT_ID_PLAYER
 	applymovement2 OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight1
 	waitmovement 0
 	applymovement2 OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight1
@@ -33,7 +33,7 @@ VermilionCity_TriggerSuicuneNorth_Mid::
 	lock
 	playse SE_PIN
 	applymovement2 OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
-	delay 60
+	waitmovement OBJ_EVENT_ID_PLAYER
 	applymovement2 OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight1
 	waitmovement 0
 	goto VermilionCity_TriggerSuicuneNorth_Merge
@@ -41,7 +41,7 @@ VermilionCity_TriggerSuicuneNorth_Right::
 	lock
 	playse SE_PIN
 	applymovement2 OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
-	delay 60
+	waitmovement OBJ_EVENT_ID_PLAYER
 	goto VermilionCity_TriggerSuicuneNorth_Merge
 VermilionCity_TriggerSuicuneNorth_Merge::
 	applymovement OBJ_EVENT_ID_PLAYER, VermilionCity_Movement_NorthSuicune_PlayerWalkDown
@@ -74,7 +74,7 @@ VermilionCity_TriggerSuicuneTop::
 	lock
 	playse SE_PIN
 	applymovement2 OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
-	delay 60
+	waitmovement OBJ_EVENT_ID_PLAYER
 	playmoncry SPECIES_SUICUNE, CRY_MODE_NORMAL
 	applymovement2 LOCALID_VERMILION_SUICUNE, VermilionCity_Movement_Suicune1
 	playse SE_LEDGE
@@ -94,7 +94,7 @@ VermilionCity_TriggerSuicuneMid::
 	lock
 	playse SE_PIN
 	applymovement2 OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
-	delay 60
+	waitmovement OBJ_EVENT_ID_PLAYER
 	playmoncry SPECIES_SUICUNE, CRY_MODE_NORMAL
 	applymovement2 LOCALID_VERMILION_SUICUNE, VermilionCity_Movement_Suicune1
 	playse SE_LEDGE
@@ -114,7 +114,7 @@ VermilionCity_TriggerSuicuneBot::
 	lock
 	playse SE_PIN
 	applymovement2 OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
-	delay 60
+	waitmovement OBJ_EVENT_ID_PLAYER
 	playmoncry SPECIES_SUICUNE, CRY_MODE_NORMAL
 	applymovement2 LOCALID_VERMILION_SUICUNE, VermilionCity_Movement_Suicune1
 	waitmovement 0
@@ -187,7 +187,7 @@ VermilionCity_EventScript_Snorlax::
 	end
 
 VermilionCity_EventScript_SnorlaxWakeUp::
-    playbgm MUS_HG_RADIO_POKE_FLUTE, TRUE
+    playbgm MUS_HG_RADIO_POKE_FLUTE, FALSE
     msgbox VermilionCity_Text_RadioNearSnorlax, MSGBOX_DEFAULT
     playmoncry SPECIES_SNORLAX, CRY_MODE_ENCOUNTER
     delay 40
@@ -421,7 +421,7 @@ VermilionCity_EventScript_TriggerStevenLeft::
 	lock
 	playse SE_PIN
 	applymovement2 LOCALID_PLAYER, Common_Movement_ExclamationMark
-	delay 60
+	waitmovement LOCALID_PLAYER
 	applymovement2 LOCALID_VERMILIONCITY_STEVEN, Common_Movement_WalkLeft1
 	waitmovement 0
 	call VermilionCity_EventScript_LatiChoice
@@ -440,7 +440,7 @@ VermilionCity_EventScript_TriggerStevenMiddle::
 	lock
 	playse SE_PIN
 	applymovement2 LOCALID_PLAYER, Common_Movement_ExclamationMark
-	delay 60
+	waitmovement LOCALID_PLAYER
 	call VermilionCity_EventScript_LatiChoice
 	applymovement2 LOCALID_VERMILIONCITY_STEVEN, Common_Movement_WalkLeft1
 	waitmovement 0
@@ -457,7 +457,7 @@ VermilionCity_EventScript_TriggerStevenRight::
 	lock
 	playse SE_PIN
 	applymovement2 LOCALID_PLAYER, Common_Movement_ExclamationMark
-	delay 60
+	waitmovement LOCALID_PLAYER
 	applymovement2 LOCALID_VERMILIONCITY_STEVEN, Common_Movement_WalkRight1
 	waitmovement 0
 	call VermilionCity_EventScript_LatiChoice

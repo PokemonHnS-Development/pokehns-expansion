@@ -42,7 +42,7 @@ MtMoon_Outside_EventScript_WhiteRockSpawnJirachi::
 	closemessage
 	playse SE_PIN
 	applymovement2 OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
-	delay 60
+	waitmovement OBJ_EVENT_ID_PLAYER
 	playse SE_M_GUST
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_EAST
 	delay 30
@@ -50,7 +50,7 @@ MtMoon_Outside_EventScript_WhiteRockSpawnJirachi::
 	delay 60
 	playse SE_PIN
 	applymovement2 OBJ_EVENT_ID_PLAYER, Common_Movement_QuestionMark
-	delay 30
+	waitmovement OBJ_EVENT_ID_PLAYER
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_SOUTH
 	delay 30
 	setvar VAR_0x8004, 1  @ vertical pan

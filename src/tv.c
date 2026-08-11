@@ -3351,6 +3351,8 @@ u8 CheckForPlayersHouseNews(void)
     return PLAYERS_HOUSE_TV_LATI;
 }
 
+// References to gText_Dad_ all removed for HnS due to lack of a "Dad" character in the game.
+// The code is left in place for potential future use if a "Dad" character is added or Hoenn version created
 void GetMomOrDadStringForTVMessage(void)
 {
     // If the player is checking the TV in their house it will only refer to their Mom.
@@ -3379,7 +3381,8 @@ void GetMomOrDadStringForTVMessage(void)
     }
     else if (VarGet(VAR_TEMP_3) == 2)
     {
-        StringCopy(gStringVar1, gText_Dad);
+        StringCopy(gStringVar1, gText_Mom); // Added for Hns
+//        StringCopy(gStringVar1, gText_Dad); // Removed for HnS
     }
     else if (VarGet(VAR_TEMP_3) > 2)
     {
@@ -3387,7 +3390,8 @@ void GetMomOrDadStringForTVMessage(void)
         if (VarGet(VAR_TEMP_3) % 2 == 0)
             StringCopy(gStringVar1, gText_Mom);
         else
-            StringCopy(gStringVar1, gText_Dad);
+            StringCopy(gStringVar1, gText_Mom); // Added for Hns
+//        StringCopy(gStringVar1, gText_Dad); // Removed for HnS
     }
     else
     {
@@ -3401,7 +3405,8 @@ void GetMomOrDadStringForTVMessage(void)
         }
         else
         {
-            StringCopy(gStringVar1, gText_Dad);
+            StringCopy(gStringVar1, gText_Mom); // Added for Hns
+//            StringCopy(gStringVar1, gText_Dad); // Removed for HnS
             VarSet(VAR_TEMP_3, 2);
         }
     }

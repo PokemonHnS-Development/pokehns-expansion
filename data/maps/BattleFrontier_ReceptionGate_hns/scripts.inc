@@ -16,7 +16,7 @@ BattleFrontier_ReceptionGate_EventScript_FirstTimeEntering_hns::
 	setvar VAR_HAS_ENTERED_BATTLE_FRONTIER, 1
 	playse SE_PIN
 	applymovement LOCALID_FRONTIER_RECEPTION_GREETER, Common_Movement_ExclamationMark
-	waitmovement 0
+	waitmovement LOCALID_FRONTIER_RECEPTION_GREETER
 	applymovement LOCALID_FRONTIER_RECEPTION_GREETER, Common_Movement_Delay48
 	waitmovement 0
 	msgbox BattleFrontier_ReceptionGate_Text_FirstTimeHereThisWay_hns, MSGBOX_DEFAULT
@@ -46,7 +46,7 @@ BattleFrontier_ReceptionGate_EventScript_ScottScene_hns::
 	applymovement LOCALID_FRONTIER_RECEPTION_GREETER, Common_Movement_ExclamationMark
 	applymovement LOCALID_FRONTIER_RECEPTION_GUIDE, Common_Movement_ExclamationMark
 	applymovement LOCALID_PLAYER, Common_Movement_ExclamationMark
-	waitmovement 0
+	waitmovement LOCALID_PLAYER
 	msgbox BattleFrontier_ReceptionGate_Text_OhMrScottGoodDay_hns, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_FRONTIER_RECEPTION_GREETER, BattleFrontier_ReceptionGate_Movement_GreeterFaceScott_hns

@@ -704,6 +704,7 @@ extern const u8 gText_PeculiarEggNicePlace[];
 extern const u8 gText_PeculiarEggTrade[];
 extern const u8 gText_EggFromTraveler[];
 extern const u8 gText_EggFromHotSprings[];
+extern const u8 gText_OddEggFromDaycare[];
 extern const u8 gText_OddEggFoundByCouple[];
 extern const u8 gText_None[];
 extern const u8 gText_RibbonsVar1[];

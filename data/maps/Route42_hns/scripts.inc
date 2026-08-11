@@ -24,7 +24,7 @@ Route42_EventScript_Suicune_Trigger::
 	waitmoncry
 	playse SE_PIN
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
-	delay 60
+	waitmovement OBJ_EVENT_ID_PLAYER
 	applymovement LOCALID_ROUTE42_SUICUNE, Route42_Movement_Suicune2
 	playse SE_LEDGE
 	delay 30

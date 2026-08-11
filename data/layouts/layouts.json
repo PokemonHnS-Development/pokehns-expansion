@@ -13765,7 +13765,7 @@
       "name": "VermilionCity_PortOutside_hns_Layout",
       "width": 52,
       "height": 23,
-      "primary_tileset": "gTileset_Johto_General_Hns",
+      "primary_tileset": "gTileset_Kanto_General_Hns",
       "secondary_tileset": "gTileset_PortIndoor_Hns",
       "border_filepath": "data/layouts/VermilionCity_PortOutside_hns/border.bin",
       "blockdata_filepath": "data/layouts/VermilionCity_PortOutside_hns/map.bin",
@@ -15757,18 +15757,6 @@
       "secondary_tileset": "gTileset_AlolaIslandSecondary",
       "border_filepath": "data/layouts/AlolaIslandRight/border.bin",
       "blockdata_filepath": "data/layouts/AlolaIslandRight/map.bin",
-      "game_version": "hns",
-      "layout_version": "hns"
-    },
-    {
-      "id": "LAYOUT_ALOLA_HNS",
-      "name": "Alola_hns_Layout",
-      "width": 90,
-      "height": 58,
-      "primary_tileset": "gTileset_AlolaIsland",
-      "secondary_tileset": "gTileset_AlolaIslandSecondary",
-      "border_filepath": "data/layouts/Alola/border.bin",
-      "blockdata_filepath": "data/layouts/Alola/map.bin",
       "game_version": "hns",
       "layout_version": "hns"
     },
