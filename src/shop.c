@@ -1721,7 +1721,7 @@ static void Task_BuyMenu(u8 taskId)
 
                 if (berryCount < 1)
                 {
-                    CopyItemName(berryItem, gStringVar1);
+                    CopyItemNameHandlePlural(berryItem, gStringVar1, 0);
                     BuyMenuDisplayMessage(taskId, gText_DontHaveEnoughVar1, BuyMenuReturnToItemList);
                 }
                 else
@@ -1888,15 +1888,10 @@ static void Task_BuyHowManyDialogueHandleInput(u8 taskId)
             if (sMartInfo.martType == MART_TYPE_KURT)
             {
                 u16 berryId = GetBerryFromBall(tItemId);
-                CopyItemName(berryId, gStringVar4);
-                gStringVar4[StringLength(gStringVar4) - 6] = EOS;
+                CopyItemNameHandlePlural(berryId, gStringVar4, tItemCount);
                 StringAppend(gStringVar3, gText_Space);
                 StringAppend(gStringVar3, gStringVar4);
-
-                if (tItemCount == 1)
-                    BuyMenuDisplayMessage(taskId, gText_KurtVar1AndYouWantedVar2Singular, BuyMenuConfirmPurchase);
-                else
-                    BuyMenuDisplayMessage(taskId, gText_KurtVar1AndYouWantedVar2Plural, BuyMenuConfirmPurchase);
+                BuyMenuDisplayMessage(taskId, gText_KurtVar1AndYouWantedVar2, BuyMenuConfirmPurchase);
             }
             else if (sMartInfo.martType == MART_TYPE_BP)
                 BuyMenuDisplayMessage(taskId, gText_Var1AndYouWantedVar2BP, BuyMenuConfirmPurchase);
