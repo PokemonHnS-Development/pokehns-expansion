@@ -1314,6 +1314,7 @@ void GetOnOffBike(u8 transitionFlags)
 {
     if (gPlayerAvatar.flags & (PLAYER_AVATAR_FLAG_MACH_BIKE | PLAYER_AVATAR_FLAG_ACRO_BIKE))
     {
+        PlaySE(SE_BIKE_BELL);
         SetPlayerAvatarTransitionFlags(PLAYER_AVATAR_FLAG_ON_FOOT);
         if (!gSaveblock3.challengeSettings.bikeMusic)
         {
@@ -1323,6 +1324,7 @@ void GetOnOffBike(u8 transitionFlags)
     }
     else
     {
+        PlaySE(SE_BIKE_BELL);
         EndORASDowsing();
         SetPlayerAvatarTransitionFlags(transitionFlags);
         if (!gSaveblock3.challengeSettings.bikeMusic)
