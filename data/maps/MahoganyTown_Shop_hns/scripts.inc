@@ -1,6 +1,7 @@
 MahoganyTown_Shop_hns_MapScripts::
 	map_script MAP_SCRIPT_ON_LOAD, MahoganyTown_Shop_OnLoad
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, MahoganyTown_Shop_OnFrame
+	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, MahoganyTown_Shop_OnWarp
 	.byte 0
 
 MahoganyTown_Shop_OnLoad:
@@ -14,6 +15,20 @@ MahoganyTown_Shop_SetStairs::
 MahoganyTown_Shop_OnFrame::
 	map_script_2 VAR_MAHOGANY_TOWN_STATE, 4, MahoganyTown_Shop_EventScript_Raid
 	.2byte 0
+
+MahoganyTown_Shop_OnWarp::
+	map_script_2 VAR_TEMP_1, 0, MahoganyTown_Shop_TryStairs
+	.2byte 0
+
+MahoganyTown_Shop_TryStairs::
+	setvar VAR_TEMP_1, 1
+	goto_if_lt VAR_MAHOGANY_TOWN_STATE, 5, MahoganyTown_Shop_SkipStairs
+	getplayerxy VAR_0x8004, VAR_0x8005
+	goto_if_ne VAR_0x8004, 8, MahoganyTown_Shop_SkipStairs
+	goto_if_ne VAR_0x8005, 4, MahoganyTown_Shop_SkipStairs
+	applymovement LOCALID_PLAYER, Common_Movement_WalkLeft1
+MahoganyTown_Shop_SkipStairs:
+	end
 
 MahoganyTown_Shop_EventScript_Raid::
 	playbgm MUS_HG_TEAM_ROCKET_HQ, FALSE
