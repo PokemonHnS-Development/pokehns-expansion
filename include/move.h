@@ -152,7 +152,8 @@ struct MoveInfo
     bool32 dampBanned:1;
     //Other
     bool32 validApprenticeMove:1;
-    u32 padding2:17;
+    bool32 randomizerInvalid:1;
+    u32 padding2:16;
     // end of word
 
     union {
@@ -794,6 +795,11 @@ static inline const u8 *GetMoveBattleScript(enum Move moveId)
         return gBattleMoveEffects[EFFECT_PLACEHOLDER].battleScript;
     }
     return gBattleMoveEffects[GetMoveEffect(moveId)].battleScript;
+}
+
+static inline const bool32 GetMoveRandomizerInvalid(enum Move moveId)
+{
+    return gMovesInfo[SanitizeMoveId(moveId)].randomizerInvalid;
 }
 
 #endif // GUARD_MOVES_H
