@@ -1001,7 +1001,7 @@ u16 RandomizeMove(u16 move, u16 species)
     do
     {
         result = RandomizerNextRange(&state, MOVES_COUNT - 1) + 1;
-    } while (result >= MOVES_COUNT || (result >= MOVE_BLAZING_TORQUE && result <= MOVE_MAGICAL_TORQUE));
+    } while (result >= MOVES_COUNT);
 
     return result;
 }
