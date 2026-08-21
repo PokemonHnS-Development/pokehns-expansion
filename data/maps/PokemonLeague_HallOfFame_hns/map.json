@@ -2,7 +2,7 @@
   "id": "MAP_POKEMON_LEAGUE_HALL_OF_FAME_HNS",
   "name": "PokemonLeague_HallOfFame_hns",
   "layout": "LAYOUT_POKEMON_LEAGUE_HALL_OF_FAME_HNS",
-  "music": "MUS_RG_HALL_OF_FAME",
+  "music": "MUS_HG_HALL_OF_FAME",
   "region_map_section": "MAPSEC_INDIGO_PLATEAU",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
