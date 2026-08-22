@@ -1005,12 +1005,21 @@ gGBSSongTable:: @ "gbs_hg_" tracks are new tracks that were transcribed from HGS
 	song_gbs MUS_HG_RADIO_UNOWN, gbs_ruinsofalphradio_Header, 0, 0	@ Used by the Radio
 	song_gbs MUS_HG_RADIO_POKE_FLUTE, gbs_pokeflutechannel_Header, 0, 0	@ Used by the Radio & Snorlax wake up event in Vermilion
 	song_gbs MUS_HG_RADIO_OAK, gbs_profoakspokemontalk_Header, 0, 0	@ Used by the Radio
-	@song_gbs MUS_HG_RADIO_BUENA, gbs_buenaspassword_Header, 0, 0	@ Unused in HnS - TODO: Skeletonkey36 will implement
-	@song_gbs MUS_HG_RADIO_JINGLE, gbs_pokemonchannel_Header, 0, 0	@ Unused in HnS - TODO: Skeletonkey36 will implement
-	@song_gbs MUS_HG_RADIO_LULLABY, gbs_pokemonlullaby_Header, 0, 0	@ Unused in HnS - TODO: Skeletonkey36 will implement
-	@song_gbs MUS_HG_RADIO_MARCH, gbs_pokemonmarch_Header, 0, 0	@ Unused in HnS - TODO: Skeletonkey36 will implement
-	@song_gbs MUS_HG_RADIO_ROUTE101, 0, 0 @ Unused in HnS - TODO: GBS CONVERSION
-	@song_gbs MUS_HG_RADIO_ROUTE201, 0, 0 @ Unused in HnS - TODO: GBS CONVERSION
+	song_gbs MUS_HG_RADIO_BUENA, gbs_buenaspassword_Header, 0, 0	@ Used by the Radio (Buena's Password station)
+	song_gbs MUS_HG_RADIO_JINGLE, gbs_pokemonchannel_Header, 0, 0	@ Used by the Radio (Lucky Channel station)
+	song_gbs MUS_HG_RADIO_LULLABY, gbs_pokemonlullaby_Header, 0, 0	@ Used by the Radio (Let's All Sing station, odd days)
+	song_gbs MUS_HG_RADIO_MARCH, gbs_pokemonmarch_Header, 0, 0	@ Used by the Radio (Pokémon Music station; also Let's All Sing on even days)
+	@song_gbs MUS_HG_RADIO_ROUTE101, gbs_TODO:_Header, 0, 0	@ Used by the Radio (Hoenn Sound station) TODO: GBS CONVERSION
+	@ Tuning to Hoenn Sound then plays one of these seven Emerald route tracks at random
+	@ (sHoennSoundSongs in src/pokenav_radio.c), so the whole station falls back without them.
+	@song_gbs MUS_ROUTE101, gbs_TODO:_Header, 0, 0	@ Used by the Radio (Hoenn Sound station) TODO: GBS CONVERSION
+	@song_gbs MUS_ROUTE104, gbs_TODO:_Header, 0, 0	@ Used by the Radio (Hoenn Sound station) TODO: GBS CONVERSION
+	@song_gbs MUS_ROUTE110, gbs_TODO:_Header, 0, 0	@ Used by the Radio (Hoenn Sound station) TODO: GBS CONVERSION
+	@song_gbs MUS_ROUTE113, gbs_TODO:_Header, 0, 0	@ Used by the Radio (Hoenn Sound station) TODO: GBS CONVERSION
+	@song_gbs MUS_ROUTE119, gbs_TODO:_Header, 0, 0	@ Used by the Radio (Hoenn Sound station) TODO: GBS CONVERSION
+	@song_gbs MUS_ROUTE120, gbs_TODO:_Header, 0, 0	@ Used by the Radio (Hoenn Sound station) TODO: GBS CONVERSION
+	@song_gbs MUS_ROUTE122, gbs_TODO:_Header, 0, 0	@ Used by the Radio (Hoenn Sound station) TODO: GBS CONVERSION
+	@song_gbs MUS_HG_RADIO_ROUTE201, 0, 0 @ Unused in HnS - TODO: GBS CONVERSION (Sinjoh)
 	@song_gbs MUS_HG_RADIO_TRAINER, 0, 0 @ Unused in HnS - TODO: GBS CONVERSION
 	@song_gbs MUS_HG_RADIO_VARIETY, 0, 0 @ Unused in HnS - TODO: GBS CONVERSION
 
@@ -1106,14 +1115,14 @@ gGBSSongTable:: @ "gbs_hg_" tracks are new tracks that were transcribed from HGS
 	
 	song_gbs MUS_EVOLUTION_INTRO, gbs_sfx_evolutionintro_Header, 2, 2	@ Evolution/Hatching Intro
 	song_gbs MUS_EVOLUTION, gbs_evolution_Header, 0, 0	@ Evolution/Hatching/Trading BGM
-	song_gbs MUS_HG_CAUGHT, gbs_successfulcapture_Header 0, 0 @ Unused in HnS (possible mapping?)
+	song_gbs MUS_HG_CAUGHT, gbs_successfulcapture_Header 0, 0
 	@ TODO: song_gbs MUS_HG_EVOLUTION, gbs_evolution_Header, 0, 0 @ Unused in HnS (possible mapping?)
 	@ TODO: song_gbs MUS_HG_EVOLUTION_NO_INTRO, 0, 0 @ Unused in HnS
 	
 	
 	@ Misc
 	song_gbs MUS_HG_MOVE_DELETED, gbs_sfx_movedeleted_Header, 2, 2	@ Move Deleter - Blackthorn
-	song_gbs MUS_HG_CYCLING, gbs_bicycle_Header, 0, 0	@ Route 17 (Kanto Bike Path) (Cycling music was cut in favor of having location/map music play.) TODO: Test
+	song_gbs MUS_HG_CYCLING, gbs_bicycle_Header, 0, 0	@ Route 17 (Kanto Bike Path)
 	song_gbs MUS_HG_SURF, gbs_surf_Header, 0, 0
 
 
