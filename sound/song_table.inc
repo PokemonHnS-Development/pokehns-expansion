@@ -1050,7 +1050,7 @@ gGBSSongTable:: @ "gbs_hg_" tracks are new tracks that were transcribed from HGS
 	song_gbs MUS_HG_VS_GYM_LEADER_KANTO, gbs_kantogymbattle_Header, 0, 0	@ BGM during battles with Kanto Gym Leaders
 	song_gbs MUS_HG_VS_RIVAL, gbs_rivalbattle_Header, 0, 0	@ BGM during battles with the player's Rival
 	song_gbs MUS_HG_VS_CHAMPION, gbs_championbattle_Header, 0, 0	@ BGM during battles with Champion Lance & Red (TRAINER_CLASS_CHAMPION & TRAINER_CLASS_PKMN_TRAINER_1)
-	song_gbs MUS_HG_VS_FRONTIER_BRAIN, gbs_championbattle_Header, 0, 0	@ BGM during battles with Frontier Brains @ TODO: GBS CONVERSION
+	@song_gbs MUS_HG_VS_FRONTIER_BRAIN, gbs_TODO:_Header, 0, 0	@ Unused in HnS - If other facility could be implemented.
 	
 	@ ---------------------------------- @
 
@@ -1061,7 +1061,7 @@ gGBSSongTable:: @ "gbs_hg_" tracks are new tracks that were transcribed from HGS
 	song_gbs MUS_HG_VS_HO_OH, gbs_suicunebattle_Header, 0, 0	@ BGM during static Ho-oh encounter  TODO: GBS CONVERSION
 	song_gbs MUS_HG_VS_LUGIA, gbs_suicunebattle_Header, 0, 0	@ BGM during static Lugia encounter TODO: GBS CONVERSION
 	song_gbs MUS_HG_VS_KYOGRE_GROUDON, gbs_suicunebattle_Header, 0, 0	@ BGM for static encounter with Rayquaza  TODO: GBS CONVERSION
-	song_gbs MUS_VS_REGI, gbs_suicunebattle_Header, 0, 0	@ Wild and static encounters with Regi Pokémon (Static Encounter not in HnS but setup) (Do new regis trigger this?) TODO: GBS CONVERSION
+	song_gbs MUS_VS_REGI, gbs_suicunebattle_Header, 0, 0	@ Wild and static encounters with Regi Pokémon TODO: GBS CONVERSION
 	song_gbs MUS_VS_KYOGRE_GROUDON, gbs_suicunebattle_Header, 0, 0	@ Wild (not static) encounters with Kyogre and Groudon TODO: GBS CONVERSION
 	song_gbs MUS_VS_MEW, gbs_suicunebattle_Header, 0, 0	@ BGM for static Mew Encounter TODO: GBS CONVERSION
 	song_gbs MUS_RG_VS_DEOXYS, gbs_suicunebattle_Header, 0, 0	@ BGM for Static Deoxys Encounter TODO: GBS CONVERSION
