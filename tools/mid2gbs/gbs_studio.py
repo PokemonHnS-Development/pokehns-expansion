@@ -32,7 +32,7 @@ except ImportError:
     sys.exit("mido is required:  pip install -r requirements.txt")
 
 try:
-    from PySide6.QtCore import Qt, QRectF, Signal, QTimer
+    from PySide6.QtCore import Qt, QRectF, Signal, QTimer, QSettings
     from PySide6.QtGui import (QColor, QPainter, QBrush, QPen, QFont, QTransform,
                            QFontDatabase)
     from PySide6.QtWidgets import (
@@ -71,30 +71,22 @@ CHANNELS = [
 UNASSIGNED = "-"
 
 
-def merge_channel(note_lists, unit):
+def merge_channel(note_lists, unit, priority=False):
     """
-    Collapse tracks onto one monophonic GB channel exactly as the conversion will.
+    Fit these tracks onto one monophonic GB channel.
 
-    Returns (kept, dropped). Durations are quantised to `unit` FIRST, because
-    midi_to_gbs quantises before emitting and rounding up can push a note into the
-    one after it - overlaps that do not exist in the raw MIDI. Counting on raw
-    durations under-reports what the conversion actually drops.
+    Both policies are imported from midi_to_gbs rather than reimplemented, so the
+    counts shown here and the audio you hear are produced by the same code that
+    writes the .s file.
+
+      priority=False  first-come: earliest note wins, order breaks only exact ties
+      priority=True   --priority-merge: list order is a ranking
+
+    Returns (kept, dropped, trimmed).
     """
-    events = []
-    for notes in note_lists:
-        events.extend(notes)
-    events.sort(key=lambda n: n[0])
-
-    kept, dropped = [], []
-    busy_until = -1
-    for start, dur, pitch, vel in events:
-        if start < busy_until:
-            dropped.append((start, dur, pitch, vel))
-            continue
-        q_ticks = conv.quantise(dur, unit) * unit
-        busy_until = start + q_ticks
-        kept.append((start, q_ticks, pitch, vel))
-    return kept, dropped
+    if priority:
+        return conv.resolve_priority(note_lists, unit)
+    return conv.merge_first_come(note_lists, unit)
 
 
 class TrackTable(QTableWidget):
@@ -133,6 +125,9 @@ class PianoRoll(QGraphicsView):
     transform at 1.0, so nothing about the view can alter the pitch axis.
     """
 
+    # Emitted with a scene x when the roll is clicked (not dragged).
+    seekRequested = Signal(float)
+
     PX_PER_TICK = 0.06
     MIN_SCALE, MAX_SCALE = 0.05, 200.0
     V_MARGIN = 10               # scene units left above and below the notes
@@ -154,6 +149,7 @@ class PianoRoll(QGraphicsView):
         self._sx = 1.0
         self._playhead = None       # recreated after every scene.clear()
         self._last = None           # last render_tracks args, for redraw on resize
+        self._press_pos = None      # to tell a seek click from a pan drag
 
     # -- zoom (time axis only) ----------------------------------------------
     # The vertical transform is always 1.0. Note height is chosen in SCENE units when
@@ -205,6 +201,21 @@ class PianoRoll(QGraphicsView):
             bar = self.horizontalScrollBar()
             bar.setValue(bar.value() - dy)
 
+    def mousePressEvent(self, event):
+        self._press_pos = event.position().toPoint()
+        super().mousePressEvent(event)
+
+    def mouseReleaseEvent(self, event):
+        super().mouseReleaseEvent(event)
+        # ScrollHandDrag owns the left button for panning, so a seek is only a click
+        # that did not move: anything past a few pixels was a drag and is left alone.
+        if self._press_pos is not None and event.button() == Qt.LeftButton:
+            moved = (event.position().toPoint() - self._press_pos).manhattanLength()
+            if moved <= 4:
+                x = self.mapToScene(event.position().toPoint()).x()
+                self.seekRequested.emit(max(0.0, x))
+        self._press_pos = None
+
     def keyPressEvent(self, event):
         key, mods = event.key(), event.modifiers()
         if mods & Qt.ControlModifier and key in (Qt.Key_Plus, Qt.Key_Equal):
@@ -245,6 +256,9 @@ class PianoRoll(QGraphicsView):
 
     def time_to_scene_x(self, seconds, sec_per_tick):
         return (seconds / sec_per_tick) * self.PX_PER_TICK if sec_per_tick else 0.0
+
+    def scene_x_to_time(self, scene_x, sec_per_tick):
+        return (scene_x / self.PX_PER_TICK) * sec_per_tick if sec_per_tick else 0.0
 
     # -- drawing ------------------------------------------------------------
     def render_tracks(self, tracks, assignment, dropped_by_channel,
@@ -424,6 +438,7 @@ class Studio(QMainWindow):
         self._play_started = None   # monotonic clock captured at sd.play()
         self._play_length = 0.0
         self._sec_per_tick = 0.0
+        self._audio = None          # cached render; cleared whenever settings change
         # Preview-only mute. Deliberately does NOT affect the drop counts or the
         # exported .s - those describe the conversion, which does not care what
         # you happen to be auditioning.
@@ -433,6 +448,12 @@ class Studio(QMainWindow):
         # hear is what gets written. Defaults match the converter's own argparse.
         self.tone = {"duty1": 2, "duty2": 2, "vibrato": 1, "fade": 3,
                      "ch1_shift": 0, "ch2_shift": 0, "ch3_shift": 0, "ch2_vol": 0}
+
+        # Two independent remembered folders. MIDIs are usually read from a decomp
+        # or a scratch folder while .s files are written somewhere else entirely, so
+        # sharing one "last directory" would send you to the wrong place every time.
+        self.settings = QSettings("mid2gbs", "GBS Studio")
+        self.priority_merge = False # --priority-merge; A/B it against first-come
 
         root = QWidget()
         self.setCentralWidget(root)
@@ -450,6 +471,14 @@ class Studio(QMainWindow):
         self.stop_btn = QPushButton("Stop")
         self.stop_btn.clicked.connect(self.stop)
         self.stop_btn.setEnabled(False)
+        self.priority_chk = QCheckBox("Priority merge")
+        self.priority_chk.setToolTip(
+            "Off: earliest note wins (order only breaks exact ties).\n"
+            "On:  channel track order is a ranking - the first-listed track\n"
+            "     keeps its notes even where a later one started sooner.\n"
+            "Toggle while playing to compare the two by ear.")
+        self.priority_chk.toggled.connect(self.set_priority_merge)
+        self.priority_chk.setEnabled(False)
         self.tone_btn = QPushButton("Tone...")
         self.tone_btn.setToolTip("Duty, vibrato, fade and pitch shifts.\nApplies to both the preview and the export.")
         self.tone_btn.clicked.connect(self.edit_tone)
@@ -471,6 +500,7 @@ class Studio(QMainWindow):
         bar.addWidget(self.auto_btn)
         bar.addWidget(self.play_btn)
         bar.addWidget(self.stop_btn)
+        bar.addWidget(self.priority_chk)
         bar.addWidget(self.tone_btn)
         bar.addWidget(self.solo_btn)
         bar.addWidget(self.unmute_btn)
@@ -498,6 +528,7 @@ class Studio(QMainWindow):
         roll_lay.setContentsMargins(0, 0, 0, 0)
         roll_lay.setSpacing(2)
         self.roll = PianoRoll()
+        self.roll.seekRequested.connect(self.seek_to)
         roll_lay.addWidget(self.roll, 1)
 
         zoom_bar = QHBoxLayout()
@@ -515,7 +546,7 @@ class Studio(QMainWindow):
             zoom_bar.addWidget(b)
 
         hint = QLabel("wheel: move along the song   ctrl+wheel: zoom   drag: pan   "
-                      "F: fit whole song   click a row to highlight, again to clear")
+                      "F: fit whole song   click the roll to seek")
         hint.setStyleSheet("color:#8b949e")
         zoom_bar.addWidget(hint, 1)
         roll_lay.addLayout(zoom_bar)
@@ -542,10 +573,22 @@ class Studio(QMainWindow):
         if path:
             self.load(path)
 
+    # ── remembered folders ───────────────────────────────────────────────────
+    def _recall_dir(self, key):
+        """Last folder used for `key`, or the cwd if it has gone away."""
+        path = self.settings.value(f"dirs/{key}", "", type=str)
+        return path if path and os.path.isdir(path) else ""
+
+    def _remember_dir(self, key, path):
+        folder = os.path.dirname(os.path.abspath(path))
+        if os.path.isdir(folder):
+            self.settings.setValue(f"dirs/{key}", folder)
+
     # ── loading ──────────────────────────────────────────────────────────────
     def pick_file(self):
         path, _ = QFileDialog.getOpenFileName(
-            self, "Open MIDI", "", "MIDI files (*.mid *.midi);;All files (*)")
+            self, "Open MIDI", self._recall_dir("open"),
+            "MIDI files (*.mid *.midi);;All files (*)")
         if path:
             self.load(path)
 
@@ -557,6 +600,7 @@ class Studio(QMainWindow):
             return
 
         self.midi_path = path
+        self._remember_dir("open", path)
         self.tracks = []
 
         # parse_midi_track is imported rather than reimplemented so the note data here
@@ -583,6 +627,7 @@ class Studio(QMainWindow):
         self.auto_btn.setEnabled(True)
         self.play_btn.setEnabled(AUDIO_OK)
         self.export_btn.setEnabled(True)
+        self.priority_chk.setEnabled(True)
         self.tone_btn.setEnabled(True)
         self.solo_btn.setEnabled(True)
         self.unmute_btn.setEnabled(True)
@@ -621,6 +666,13 @@ class Studio(QMainWindow):
         """MIDI ticks per GBS unit - what midi_to_gbs --note-unit defaults to."""
         tpb = self.midi.ticks_per_beat
         return 12 if tpb == 48 else max(1, tpb // 4)
+
+    def set_priority_merge(self, on):
+        self.priority_merge = bool(on)
+        self.recompute()
+        self.log("Merge policy: "
+                 + ("priority - channel track order ranks them"
+                    if on else "first-come - earliest note wins"))
 
     def edit_tone(self):
         """Adjust the tone options and hear them: the preview honours them too."""
@@ -763,16 +815,20 @@ class Studio(QMainWindow):
         """Recount dropped notes per channel and redraw. Runs on every assignment."""
         by_channel = {}
         dropped_by_channel = {}
+        trimmed_by_channel = {}
         for name, _, _ in CHANNELS:
             members = [t for t in self.tracks
                        if self.assignment.get(t["index"]) == name]
             by_channel[name] = members
             if members:
-                _kept, dropped = merge_channel(
-                    [m["notes"] for m in members], self.note_unit())
+                _kept, dropped, trimmed = merge_channel(
+                    [m["notes"] for m in members], self.note_unit(),
+                    self.priority_merge)
                 dropped_by_channel[name] = dropped
+                trimmed_by_channel[name] = trimmed
             else:
                 dropped_by_channel[name] = []
+                trimmed_by_channel[name] = []
 
         lines = []
         for name, desc, _ in CHANNELS:
@@ -783,10 +839,16 @@ class Studio(QMainWindow):
             idxs = ",".join(str(m["index"]) for m in members)
             total = sum(len(m["notes"]) for m in members)
             lost = len(dropped_by_channel[name])
+            cut = len(trimmed_by_channel[name])
             note = f"{name} ({desc}): tracks {idxs}, {total} notes"
-            if lost:
+            if lost or cut:
                 pct = 100.0 * lost / total if total else 0
-                note += f"   >>> {lost} notes dropped ({pct:.1f}%) - GB channels are monophonic"
+                bits = []
+                if lost:
+                    bits.append(f"{lost} dropped ({pct:.1f}%)")
+                if cut:
+                    bits.append(f"{cut} shortened")
+                note += f"   >>> {', '.join(bits)} - GB channels are monophonic"
             lines.append(note)
 
         muted = self.muted_tracks()
@@ -799,6 +861,7 @@ class Studio(QMainWindow):
         lines.append(self.command_line())
         self.status.setPlainText("\n".join(lines))
         self._dropped = dropped_by_channel
+        self._audio = None          # assignment/mute/tone changed - re-render on next play
         self.roll.render_tracks(self.tracks, self.assignment, dropped_by_channel,
                                 self._selected_track, self.muted_tracks())
         if self._needs_fit:
@@ -830,7 +893,8 @@ class Studio(QMainWindow):
             if not members:
                 continue
 
-            kept, _dropped = merge_channel([m["notes"] for m in members], unit)
+            kept, _dropped, _trimmed = merge_channel(
+                [m["notes"] for m in members], unit, self.priority_merge)
 
             # Shifts and the Ch2 volume offset change the notes themselves, so they
             # belong here rather than in the synth; duty/vibrato/fade are timbre and
@@ -852,27 +916,53 @@ class Studio(QMainWindow):
         return events
 
     def play(self):
+        self._start_playback(0.0)
+
+    def seek_to(self, scene_x):
+        """Jump to the clicked point on the roll and play from there."""
+        if not self.midi:
+            return
+        if self._sec_per_tick <= 0:
+            self.channel_events()          # populates _sec_per_tick
+        secs = self.roll.scene_x_to_time(scene_x, self._sec_per_tick)
+        self._start_playback(secs)
+
+    def _start_playback(self, offset=0.0):
         if not (self.midi and AUDIO_OK):
             return
-        events = self.channel_events()
-        if not events:
-            self.log("Nothing assigned to a channel yet.")
-            return
+        if self._audio is None:
+            events = self.channel_events()
+            if not events:
+                self.log("Nothing assigned to a channel yet.")
+                return
+            try:
+                self._audio = gbs_synth.render(events, tone=self.tone)
+            except Exception as exc:
+                self.log(f"Render failed: {exc}")
+                return
+
+        audio = self._audio
+        total = len(audio) / gbs_synth.SAMPLE_RATE
+        offset = min(max(0.0, offset), max(0.0, total - 0.05))
+        start = int(offset * gbs_synth.SAMPLE_RATE)
+
         try:
-            audio = gbs_synth.render(events, tone=self.tone)
             sd.stop()
-            sd.play(audio, gbs_synth.SAMPLE_RATE)
+            sd.play(audio[start:], gbs_synth.SAMPLE_RATE)
         except Exception as exc:
             self.log(f"Playback failed: {exc}")
             return
-        self.stop_btn.setEnabled(True)
-        secs = len(audio) / gbs_synth.SAMPLE_RATE
-        self.log(f"Playing GBS preview - {secs:.1f}s, "
-                 f"{sum(len(v) for v in events.values())} notes after conversion.")
 
-        self._play_length = secs
-        self._play_started = time.monotonic()
+        self.stop_btn.setEnabled(True)
+        self._play_length = total
+        # Offset the clock rather than the playhead, so _tick_playhead stays a plain
+        # "elapsed since the start of the song" calculation.
+        self._play_started = time.monotonic() - offset
         self._play_timer.start()
+        self.roll.set_playhead(
+            self.roll.time_to_scene_x(offset, self._sec_per_tick), follow=False)
+        where = f" from {offset:.1f}s" if offset else ""
+        self.log(f"Playing GBS preview{where} - {total:.1f}s total.")
 
     def stop(self):
         if AUDIO_OK:
@@ -934,6 +1024,8 @@ class Studio(QMainWindow):
         unit = self.note_unit()
         if unit != 12:
             argv += ["--note-unit", str(unit)]
+        if self.priority_merge:
+            argv += ["--priority-merge"]
         argv += extra or []
         if out_path:
             argv += ["--out", out_path]
@@ -963,10 +1055,12 @@ class Studio(QMainWindow):
 
         symbol = dlg.name.text().strip() or self.default_symbol()
         out_path, _ = QFileDialog.getSaveFileName(
-            self, "Save GBS assembly", f"{symbol}.s",
+            self, "Save GBS assembly",
+            os.path.join(self._recall_dir("save"), f"{symbol}.s"),
             "GBS assembly (*.s);;All files (*)")
         if not out_path:
             return
+        self._remember_dir("save", out_path)
 
         argv = self.build_argv(symbol, out_path, dlg.flags())
         script = os.path.join(os.path.dirname(os.path.abspath(__file__)),
@@ -1002,6 +1096,8 @@ class Studio(QMainWindow):
 
 def main():
     app = QApplication(sys.argv)
+    app.setOrganizationName("mid2gbs")
+    app.setApplicationName("GBS Studio")
     app.setStyle("Fusion")
     win = Studio(sys.argv[1] if len(sys.argv) > 1 else None)
     win.show()

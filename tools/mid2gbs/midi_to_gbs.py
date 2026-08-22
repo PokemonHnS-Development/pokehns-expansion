@@ -2,8 +2,9 @@
 """
 midi_to_gbs.py  –  Convert a MIDI .mid file to a GBS .s assembly file for pokemonHnS.
 
-All MIDI files in sound/songs/midi/hgss_midi_for_gbs/ have TPB=48, so
---note-unit 12 is correct for all of them (1 GBS unit = 12 MIDI ticks = 1/16th note).
+One GBS unit is one 16th note. --note-unit defaults to the file's ticks-per-beat / 4,
+so it is right whatever the source uses - sound/songs/midi/ mixes TPB 24, 48 and 960.
+Pass --note-unit only to force a different grid.
 
 Usage:
     python3 tools/midi_to_gbs.py <file.mid> --name <symbol> [options] --out <output.s>
@@ -144,6 +145,96 @@ def get_track_program(track):
 def quantise(ticks, unit):
     """Round ticks to nearest unit, minimum 1 unit."""
     return max(1, round(ticks / unit))
+
+
+# ── channel merging ───────────────────────────────────────────────────────────
+# Two policies for fitting several MIDI tracks onto one monophonic GB channel. Both
+# live here, beside emit_notes, so the GUI preview can import them and cannot drift
+# from what actually gets written.
+
+def merge_first_come(track_note_lists, unit):
+    """
+    Default policy, mirroring the inline trimming in emit_notes.
+
+    Notes are ordered by start tick and the earliest holds the channel. One starting
+    while another sounds is trimmed to what is left; a note with nothing left is lost.
+    Track order only decides exact ties - the sort is stable, so the track listed
+    first in --chN a,b wins those.
+
+    Returns (kept, dropped, trimmed); kept is quantised to `unit`, all in ticks.
+    """
+    events = []
+    for notes in track_note_lists:
+        events.extend(notes)
+    events.sort(key=lambda n: n[0])
+
+    kept, dropped, trimmed = [], [], []
+    cursor = 0
+    for start, dur, pitch, vel in events:
+        q_start = round(start / unit)
+        q_dur = max(1, round(dur / unit))
+        if q_start < cursor:
+            q_dur = max(0, q_dur - (cursor - q_start))
+            q_start = cursor
+            if q_dur == 0:
+                dropped.append((start, dur, pitch, vel))
+                continue
+            trimmed.append((start, dur, pitch, vel))
+        kept.append((q_start * unit, q_dur * unit, pitch, vel))
+        cursor = q_start + q_dur
+    return kept, dropped, trimmed
+
+
+def _free_pieces(start, end, occupied):
+    """Sub-spans of [start, end) not already claimed."""
+    pieces = [(start, end)]
+    for o_start, o_end in occupied:
+        nxt = []
+        for p_start, p_end in pieces:
+            if o_end <= p_start or o_start >= p_end:
+                nxt.append((p_start, p_end))
+                continue
+            if p_start < o_start:
+                nxt.append((p_start, o_start))
+            if o_end < p_end:
+                nxt.append((o_end, p_end))
+        pieces = nxt
+    return pieces
+
+
+def resolve_priority(track_note_lists, unit):
+    """
+    Priority policy (--priority-merge): the order of --chN a,b,c is a ranking.
+
+    Tracks claim the channel in listed order, so a melody listed first keeps its notes
+    even where a lower-ranked track got there sooner. Lower-ranked notes then fill
+    whatever gaps remain, trimmed to fit, and are lost only where nothing is left.
+
+    Same (kept, dropped, trimmed) shape as merge_first_come.
+    """
+    occupied = []
+    kept, dropped, trimmed = [], [], []
+
+    for notes in track_note_lists:                 # highest priority first
+        for start, dur, pitch, vel in sorted(notes, key=lambda n: n[0]):
+            q_start = round(start / unit)
+            q_end = q_start + max(1, round(dur / unit))
+
+            pieces = _free_pieces(q_start, q_end, occupied)
+            if not pieces:
+                dropped.append((start, dur, pitch, vel))
+                continue
+
+            # Keep the earliest surviving piece: preserves the attack where possible.
+            p_start, p_end = pieces[0]
+            if (p_start, p_end) != (q_start, q_end):
+                trimmed.append((start, dur, pitch, vel))
+            kept.append((p_start * unit, (p_end - p_start) * unit, pitch, vel))
+            occupied.append((p_start, p_end))
+            occupied.sort()
+
+    kept.sort(key=lambda n: n[0])
+    return kept, dropped, trimmed
 
 
 # ── GBS assembly emitter ──────────────────────────────────────────────────────
@@ -425,12 +516,19 @@ def main():
     ap.add_argument('--ch2',  default=None, help='Track index or comma-separated indices for Ch2 (Square 2)')
     ap.add_argument('--ch3',  default=None, help='Track index or comma-separated indices for Ch3 (Wave)')
     ap.add_argument('--ch4',  default=None, help='Comma-separated track indices for noise')
+    ap.add_argument('--priority-merge', action='store_true', dest='priority_merge',
+                    help='Treat the order of --chN a,b,c as a priority ranking: the '
+                         'first-listed track keeps its notes even where a later one '
+                         'started sooner. Default is first-come, where the earliest '
+                         'note always wins and order only breaks exact ties.')
     ap.add_argument('--note-unit-len', type=int, default=12, dest='note_unit_len',
                     help="GB frames per GBS unit - note_type's first argument. "
                          "Leave at 12 to match the hand-transcribed songs; this is "
                          "NOT --note-unit, which counts MIDI ticks.")
-    ap.add_argument('--note-unit', type=int, default=12, dest='note_unit',
-                    help='MIDI ticks per GBS unit (default 12)')
+    ap.add_argument('--note-unit', type=int, default=None, dest='note_unit',
+                    help='MIDI ticks per GBS unit. Defaults to the file\'s '
+                         'ticks-per-beat / 4, i.e. one unit = one 16th note, which is '
+                         'correct for any TPB. Only override to use a different grid.')
     ap.add_argument('--duty1', type=int, default=2,
                     help='Duty cycle for Ch1 square wave (0-3, default 2 = 50%%)')
     ap.add_argument('--duty2', type=int, default=2,
@@ -508,7 +606,13 @@ def main():
     ch4_idxs = ([int(x) for x in args.ch4.split(',')] if args.ch4
                 else auto_ch4)
 
-    unit = args.note_unit
+    # One GBS unit = one 16th note. Hardcoding 12 only suited TPB=48 sources, which
+    # are 3 of the 716 files in sound/songs/midi - everything else got a grid that was
+    # far too coarse or far too fine, and the tempo compensated in the wrong direction.
+    if args.note_unit:
+        unit = args.note_unit
+    else:
+        unit = max(1, mid.ticks_per_beat // 4)
 
     print(f'\nChannel assignment:')
     print(f'  Ch1 (Square1) → track {ch1_idx}')
@@ -528,11 +632,19 @@ def main():
         if idx is None:
             return [], 0
         if isinstance(idx, list):
-            merged, max_t = [], 0
+            per_track, max_t = [], 0
             for i in idx:
                 n, mt = parse_midi_track(mid.tracks[i], tpb)
-                merged.extend((start, dur, pitch, vel, i) for start, dur, pitch, vel in n)
+                per_track.append([(start, dur, pitch, vel, i)
+                                  for start, dur, pitch, vel in n])
                 max_t = max(max_t, mt)
+            if args.priority_merge:
+                # List order is the ranking. Resolve the overlaps up front so the
+                # inline trimming in emit_notes has nothing left to do.
+                lists = [[(a, b, c, d) for a, b, c, d, _ in t] for t in per_track]
+                kept, _dropped, _trimmed = resolve_priority(lists, unit)
+                return kept, max_t
+            merged = [n for t in per_track for n in t]
             merged.sort(key=lambda n: n[0])
             return merged, max_t
         notes, max_tick = parse_midi_track(mid.tracks[idx], tpb)
