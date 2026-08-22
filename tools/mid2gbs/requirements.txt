@@ -1,0 +1,5 @@
+# gbs_studio.py / midi_to_gbs.py
+mido>=1.3
+numpy>=1.24
+PySide6>=6.5
+sounddevice>=0.4   # not used yet; for the GBS audio preview

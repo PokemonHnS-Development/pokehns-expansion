@@ -148,10 +148,33 @@ def quantise(ticks, unit):
 
 # ── GBS assembly emitter ──────────────────────────────────────────────────────
 class GBSEmitter:
-    def __init__(self, name, note_unit=12):
+    def __init__(self, name, note_unit=12, note_unit_len=12, tpb=48, bpm=120.0):
         self.name = name
-        self.note_unit = note_unit
+        self.note_unit = note_unit          # MIDI ticks per GBS unit (--note-unit)
+        self.note_unit_len = note_unit_len  # GB FRAMES per unit (note_type arg 1)
+        self.tpb = tpb
+        self.bpm = bpm
         self.lines = []
+
+    def gbs_tempo(self):
+        """
+        The `tempo` value that makes one GBS unit last as long as the MIDI ticks it
+        stands for.
+
+        Equate the two sides:
+            MIDI  seconds/unit = note_unit * 60 / (bpm * tpb)
+            GBS   seconds/unit = (note_unit_len * tempo) / (256 * 60)
+                                 - from CalculateNoteLength in src/gbs.c, where
+                                   noteLength >> 8 counts 60Hz frames
+        giving tempo = 921600 * note_unit / (bpm * tpb * note_unit_len),
+        with 921600 = 256 * 60 * 60.
+
+        This replaces a hardcoded 19074/bpm, which silently assumed both
+        note_unit == tpb/4 and note_unit_len == 12. When those did not hold the two
+        errors stopped cancelling and the song played at the wrong speed.
+        """
+        return max(1, round(921600 * self.note_unit
+                            / (self.bpm * self.tpb * self.note_unit_len)))
 
     def _w(self, text):
         self.lines.append(text)
@@ -164,7 +187,7 @@ class GBSEmitter:
         self._w(f'')
         self._w(f'@ Converted from {midi_filename}')
         self._w(f'@ BPM: {bpm_hint:.0f}  |  MIDI ticks/beat: {tpb}  |  GBS unit: {self.note_unit} ticks')
-        self._w(f'@ Tick grid: 1 GBS unit = {self.note_unit} MIDI ticks')
+        self._w(f'@ Tick grid: 1 GBS unit = {self.note_unit} MIDI ticks = {self.note_unit_len} frames (tempo {self.gbs_tempo()})')
         self._w(f'')
 
     def channel_header(self, ch, gbs_switch, bpm=120, is_noise=False,
@@ -176,7 +199,7 @@ class GBSEmitter:
         self._w(f'{self.name}_Ch{ch+1}:')
         self._w(f'\tgbs_switch {gbs_switch}')
         if ch == 0:
-            self._w(f'\ttempo {round(19074 / bpm)}')
+            self._w(f'\ttempo {self.gbs_tempo()}')
             self._w(f'\tvolume 7, 7')
         if not is_noise:
             if ch <= 1:
@@ -187,7 +210,10 @@ class GBSEmitter:
                 self._w(f'\tstereo_panning TRUE, FALSE')
             if ch <= 1:
                 self._w(f'\tvibrato 16, {vibrato_extent}, 4')
-            self._w(f'\tnote_type {self.note_unit}, {initial_vol}, {initial_fade}')
+            # note_type's first argument is the GB's noteUnitLength in frames -
+            # unrelated to --note-unit, which counts MIDI ticks. They are both 12
+            # for TPB=48 sources, which is why the mix-up went unnoticed.
+            self._w(f'\tnote_type {self.note_unit_len}, {initial_vol}, {initial_fade}')
         else:
             self._w(f'\ttoggle_noise 0')
         self._w(f'')
@@ -399,6 +425,10 @@ def main():
     ap.add_argument('--ch2',  default=None, help='Track index or comma-separated indices for Ch2 (Square 2)')
     ap.add_argument('--ch3',  default=None, help='Track index or comma-separated indices for Ch3 (Wave)')
     ap.add_argument('--ch4',  default=None, help='Comma-separated track indices for noise')
+    ap.add_argument('--note-unit-len', type=int, default=12, dest='note_unit_len',
+                    help="GB frames per GBS unit - note_type's first argument. "
+                         "Leave at 12 to match the hand-transcribed songs; this is "
+                         "NOT --note-unit, which counts MIDI ticks.")
     ap.add_argument('--note-unit', type=int, default=12, dest='note_unit',
                     help='MIDI ticks per GBS unit (default 12)')
     ap.add_argument('--duty1', type=int, default=2,
@@ -487,7 +517,9 @@ def main():
     print(f'  Ch4 (Noise)   → tracks {ch4_idxs}')
     print(f'  GBS unit = {unit} ticks')
 
-    emitter = GBSEmitter(args.name, note_unit=unit)
+    emitter = GBSEmitter(args.name, note_unit=unit,
+                         note_unit_len=args.note_unit_len,
+                         tpb=mid.ticks_per_beat, bpm=bpm)
     midi_basename = os.path.basename(args.midi)
     emitter.header(midi_basename, tpb, bpm)
 
@@ -574,7 +606,7 @@ def main():
 def emit_noise_channel_inline(emitter, hit_slots, total_units, name):
     MAX_LEN = 15
     ch = 4
-    emitter._w(f'\tdrum_speed {emitter.note_unit}')
+    emitter._w(f'\tdrum_speed {emitter.note_unit_len}')
     i = 0
     while i < total_units:
         if i in hit_slots:
