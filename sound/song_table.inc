@@ -912,8 +912,6 @@ gGBSSongTable:: @ "gbs_hg_" tracks are new tracks that were transcribed from HGS
 	song_gbs MUS_B_PIKE, gbs_battletowertheme_Header, 0, 0	@ Battle Pike BGM (All Rooms) TODO: GBS CONVERSION
 	song_gbs MUS_B_FACTORY, gbs_battletowertheme_Header, 0, 0	@ Battle Factory BGM (All Rooms) TODO: GBS CONVERSION
 	song_gbs MUS_B_TOWER, gbs_battletowertheme_Header, 0, 0	@ BF Battle Tower Lobby, Corridor, Elevator, Battle & Multi Rooms BGM (the song the HnS Tower maps actually use) TODO: GBS CONVERSION
-	song_gbs MUS_HG_B_TOWER, gbs_battletowertheme_Header, 0, 0	@ BF Battle Tower Battle Rooms & Corridor BGM
-	song_gbs MUS_HG_B_TOWER_RECEPTION, gbs_battletowerlobby_Header, 0, 0	@ BF Battle Tower Lobby & Elevator BGM
 
 	@ Emerald songs the BF maps still request. GetBattleBGM sends every Frontier battle here:
 	@ MAPSEC_BATTLE_FRONTIER sits outside the Johto/Kanto/Alola/Hisui mapsec ranges, so
@@ -922,6 +920,30 @@ gGBSSongTable:: @ "gbs_hg_" tracks are new tracks that were transcribed from HGS
 	song_gbs MUS_POKE_CENTER, gbs_pokemoncenter_Header, 0, 0	@ BF Pokémon Center 1F & 2F BGM (HnS uses MUS_HG_POKE_CENTER everywhere else) TODO: GBS CONVERSION
 	song_gbs MUS_POKE_MART, gbs_hg_poke_mart_Header, 0, 0	@ BF Mart BGM (HnS uses MUS_HG_POKE_MART everywhere else) TODO: GBS CONVERSION
 	
+	@ ---------------------------------- @
+
+	@ Alola & Sinjoh
+	@ HnS-only regions. Battle music is already covered - GetBattleBGM sends Alola to the
+	@ Kanto themes and Sinjoh to the Johto ones, all four of which are mapped. Everything
+	@ below is map BGM with no GBS entry yet, so these locations fall back to the non-GBS
+	@ track.
+
+	@ Alola
+	@song_gbs MUS_OCEANIC_MUSEUM, gbs_TODO:_Header, 0, 0	@ Melemele Isle, Alola Water, Melemele Player House & Houses 3-6 TODO: GBS CONVERSION
+	@song_gbs MUS_PETALBURG_WOODS, gbs_TODO:_Header, 0, 0	@ UlaUla Forest (Artisan Cave) TODO: GBS CONVERSION
+	@song_gbs MUS_SOOTOPOLIS, gbs_TODO:_Header, 0, 0	@ Poni Isle (shared: Sootopolis City & its houses) TODO: GBS CONVERSION
+
+	@ Sinjoh
+	@ The MUS_DP_* tracks are Sinnoh songs with no Crystal-era counterpart, so these need a
+	@ substitute picking rather than a straight conversion.
+	@song_gbs MUS_HG_SINJOU_RUINS, gbs_TODO:_Header, 0, 0	@ Route 49, Route 50, Sinjoh Ruins & the five Regi rooms TODO: GBS CONVERSION
+	@song_gbs MUS_DP_SNOWPOINT_DAY, gbs_TODO:_Header, 0, 0	@ New Sinjoh & New Sinjoh House 4 TODO: GBS CONVERSION
+	@song_gbs MUS_DP_HALL_OF_ORIGIN, gbs_TODO:_Header, 0, 0	@ Sinjoh Ruins Temple & Regigigas Room TODO: GBS CONVERSION
+	@song_gbs MUS_DP_MT_CORONET, gbs_TODO:_Header, 0, 0	@ Snowswept Cavern TODO: GBS CONVERSION
+	@song_gbs MUS_DP_SPEAR_PILLAR, gbs_TODO:_Header, 0, 0	@ Sinjoh Ruins Arceus Room TODO: GBS CONVERSION
+	@song_gbs MUS_HG_WIFI_PLAZA, gbs_TODO:_Header, 0, 0	@ Sinjoh Ruins House 1 TODO: GBS CONVERSION
+	@song_gbs MUS_RG_POKE_TOWER, gbs_TODO:_Header, 0, 0	@ New Sinjoh House 3 TODO: GBS CONVERSION
+
 	@ ---------------------------------- @
 
 	@ Pokéathlon
@@ -1096,6 +1118,10 @@ gGBSSongTable:: @ "gbs_hg_" tracks are new tracks that were transcribed from HGS
 
 
 	@ Unused Music
+	@ The BF Battle Tower maps all request MUS_B_TOWER (mapped above), not these HG songs, so
+	@ nothing in HnS ever plays them. Headers kept in case the maps are ever switched over.
+	@song_gbs MUS_HG_B_TOWER, gbs_battletowertheme_Header, 0, 0 @ Unused in HnS - BF Battle Tower Battle Rooms & Corridor BGM
+	@song_gbs MUS_HG_B_TOWER_RECEPTION, gbs_battletowerlobby_Header, 0, 0 @ Unused in HnS - BF Battle Tower Lobby & Elevator BGM
 	@song_gbs MUS_HG_DEX_RATING_1, 2, 2 @ Unused in HnS - TODO: Implement
 	@song_gbs MUS_HG_DEX_RATING_2, 2, 2 @ Unused in HnS - TODO: Implement
 	@song_gbs MUS_HG_DEX_RATING_3, 2, 2 @ Unused in HnS - TODO: Implement
@@ -1109,7 +1135,6 @@ gGBSSongTable:: @ "gbs_hg_" tracks are new tracks that were transcribed from HGS
 	@song_gbs MUS_HG_HO_OH_APPEARS, 0, 0 @ Unused in HnS - TODO: Implement?
 	@song_gbs MUS_HG_LUGIA_APPEARS, 0, 0 @ Unused in HnS - TODO: Implement?
 	@song_gbs MUS_HG_SPIKY_EARED_PICHU, 0, 0 @ Unused in HnS - TODO: Implement Spiky Eared Pichu Event
-	@song_gbs MUS_HG_SINJOU_RUINS, 0, 0 @ Unused in HnS - TODO: Implement Sinjoh Ruins
 	@song_gbs MUS_HG_POKEWALKER, 0, 0 @ Unused in HnS
 	@song_gbs MUS_HG_ETHAN, 0, 0 @ Unused in HnS
 	@song_gbs MUS_HG_LYRA, 0, 0 @ Unused in HnS
@@ -1119,7 +1144,6 @@ gGBSSongTable:: @ "gbs_hg_" tracks are new tracks that were transcribed from HGS
 	@song_gbs MUS_HG_WIN_MINIGAME, 2, 2 @ Unused in HnS
 	@song_gbs MUS_HG_MYSTERY_GIFT, 0, 0 @ Unused in HnS
 	@song_gbs MUS_HG_WFC, 0, 0 @ Unused in HnS - Multiplayer?
-	@song_gbs MUS_HG_WIFI_PLAZA, 0, 0 @ Unused in HnS - Multiplayer?
 	@song_gbs MUS_HG_WIFI_MINIGAMES, 0, 0 @ Unused in HnS - Multiplayer?
 	@song_gbs MUS_HG_WIFI_PARADE, 0, 0 @ Unused in HnS - Multiplayer?
 	@song_gbs MUS_HG_GLOBAL_TERMINAL, 0, 0 @ Unused in HnS - Multiplayer?
