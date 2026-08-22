@@ -471,8 +471,10 @@ static const u8 sDebugText_PokemonShiny[] =             _("Shiny:{CLEAR_TO 90}\n
 static const u8 sDebugText_IVs[] =                      _("IV {STR_VAR_1}:{CLEAR_TO 90}\n    {STR_VAR_3}{CLEAR_TO 90}\n{CLEAR_TO 90}\n{STR_VAR_2}{CLEAR_TO 90}");
 static const u8 sDebugText_EVs[] =                      _("EV {STR_VAR_1}:{CLEAR_TO 90}\n    {STR_VAR_3}{CLEAR_TO 90}\n{CLEAR_TO 90}\n{STR_VAR_2}{CLEAR_TO 90}");
 // Sound Menu
-static const u8 sDebugText_Sound_SFX_ID[] =             _("SFX ID: {STR_VAR_3}   {START_BUTTON} Stop\n{STR_VAR_1}    \n{STR_VAR_2}");
-static const u8 sDebugText_Sound_Music_ID[] =           _("Music ID: {STR_VAR_3}   {START_BUTTON} Stop\n{STR_VAR_1}    \n{STR_VAR_2}");
+static const u8 sDebugText_Sound_SFX_ID[] =             _("SFX ID: {STR_VAR_3}   {START_BUTTON} Stop\n{STR_VAR_1}    \n{STR_VAR_2}  {SELECT_BUTTON} GBS Off");
+static const u8 sDebugText_Sound_SFX_ID_Gbs[] =         _("SFX ID: {STR_VAR_3}   {START_BUTTON} Stop\n{STR_VAR_1}    \n{STR_VAR_2}  {SELECT_BUTTON} GBS On");
+static const u8 sDebugText_Sound_Music_ID[] =           _("Music ID: {STR_VAR_3}   {START_BUTTON} Stop\n{STR_VAR_1}    \n{STR_VAR_2}  {SELECT_BUTTON} GBS Off");
+static const u8 sDebugText_Sound_Music_ID_Gbs[] =       _("Music ID: {STR_VAR_3}   {START_BUTTON} Stop\n{STR_VAR_1}    \n{STR_VAR_2}  {SELECT_BUTTON} GBS On");
 
 const u8 *const gText_DigitIndicator[] =
 {
@@ -3948,6 +3950,58 @@ static const u8 *const sSENames[END_SE + 1];
 
 #define tCurrentSong  data[5]
 
+static void Debug_Sound_Redraw_SE(u8 taskId, u8 windowId)
+{
+    const u8 *seName = sSENames[gTasks[taskId].tInput - 1];
+
+    if (seName == NULL)
+        seName = sDebugText_Dashes;
+    // Clear first: the GBS indicator shrinks from "Off" to "On", so a plain
+    // reprint would leave the old trailing glyph on screen.
+    FillWindowPixelBuffer(windowId, PIXEL_FILL(1));
+    StringCopy(gStringVar2, gText_DigitIndicator[gTasks[taskId].tDigit]);
+    StringCopyPadded(gStringVar1, seName, CHAR_SPACE, 35);
+    ConvertIntToDecimalStringN(gStringVar3, gTasks[taskId].tInput, STR_CONV_MODE_LEADING_ZEROS, DEBUG_NUMBER_DIGITS_ITEMS);
+    StringExpandPlaceholders(gStringVar4, FlagGet(FLAG_SYS_GBS_ENABLED) ? sDebugText_Sound_SFX_ID_Gbs : sDebugText_Sound_SFX_ID);
+    AddTextPrinterParameterized(windowId, DEBUG_MENU_FONT, gStringVar4, 0, 0, 0, NULL);
+}
+
+static void Debug_Sound_Redraw_MUS(u8 taskId, u8 windowId)
+{
+    const u8 *bgmName = sBGMNames[gTasks[taskId].tInput - START_MUS];
+
+    if (bgmName == NULL)
+        bgmName = sDebugText_Dashes;
+    // Clear first: the GBS indicator shrinks from "Off" to "On", so a plain
+    // reprint would leave the old trailing glyph on screen.
+    FillWindowPixelBuffer(windowId, PIXEL_FILL(1));
+    StringCopy(gStringVar2, gText_DigitIndicator[gTasks[taskId].tDigit]);
+    StringCopyPadded(gStringVar1, bgmName, CHAR_SPACE, 35);
+    ConvertIntToDecimalStringN(gStringVar3, gTasks[taskId].tInput, STR_CONV_MODE_LEADING_ZEROS, DEBUG_NUMBER_DIGITS_ITEMS);
+    StringExpandPlaceholders(gStringVar4, FlagGet(FLAG_SYS_GBS_ENABLED) ? sDebugText_Sound_Music_ID_Gbs : sDebugText_Sound_Music_ID);
+    AddTextPrinterParameterized(windowId, DEBUG_MENU_FONT, gStringVar4, 0, 0, 0, NULL);
+}
+
+// SELECT toggles the GB Player from inside the sound test so tracks can be A/B'd.
+// Mirrors Task_UseGBPlayer in src/item_use.c: wait for any SE to finish, flip the
+// flag, then reset the BGM player through the map-music state machine. The item
+// follows that with Overworld_PlaySpecialMapMusic() to restore the map's track;
+// here we stop instead, since the sound test deliberately silences map music so
+// the selected song can be heard on its own.
+static void Debug_Sound_ToggleGBS(void)
+{
+    if (IsSEPlaying())
+        return;
+
+    if (FlagGet(FLAG_SYS_GBS_ENABLED))
+        FlagClear(FLAG_SYS_GBS_ENABLED);
+    else
+        FlagSet(FLAG_SYS_GBS_ENABLED);
+
+    PlayNewMapMusic(MUS_DUMMY);
+    StopMapMusic();
+}
+
 static void DebugAction_Sound_SE(u8 taskId)
 {
     u8 windowId;
@@ -3966,7 +4020,7 @@ static void DebugAction_Sound_SE(u8 taskId)
     StringCopy(gStringVar2, gText_DigitIndicator[0]);
     ConvertIntToDecimalStringN(gStringVar3, 1, STR_CONV_MODE_LEADING_ZEROS, DEBUG_NUMBER_DIGITS_ITEMS);
     StringCopyPadded(gStringVar1, sSENames[0], CHAR_SPACE, 35);
-    StringExpandPlaceholders(gStringVar4, sDebugText_Sound_SFX_ID);
+    StringExpandPlaceholders(gStringVar4, FlagGet(FLAG_SYS_GBS_ENABLED) ? sDebugText_Sound_SFX_ID_Gbs : sDebugText_Sound_SFX_ID);
     AddTextPrinterParameterized(windowId, DEBUG_MENU_FONT, gStringVar4, 0, 0, 0, NULL);
 
     StopMapMusic(); //Stop map music to better hear sounds
@@ -3982,17 +4036,8 @@ static void DebugAction_Sound_SE_SelectId(u8 taskId)
 {
     if (JOY_NEW(DPAD_ANY))
     {
-        const u8 *seName;
         Debug_HandleInput_Numeric(taskId, 1, END_SE, DEBUG_NUMBER_DIGITS_ITEMS);
-
-        StringCopy(gStringVar2, gText_DigitIndicator[gTasks[taskId].tDigit]);
-        seName = sSENames[gTasks[taskId].tInput - 1];
-        if (seName == NULL)
-            seName = sDebugText_Dashes;
-        StringCopyPadded(gStringVar1, seName, CHAR_SPACE, 35);
-        ConvertIntToDecimalStringN(gStringVar3, gTasks[taskId].tInput, STR_CONV_MODE_LEADING_ZEROS, DEBUG_NUMBER_DIGITS_ITEMS);
-        StringExpandPlaceholders(gStringVar4, sDebugText_Sound_SFX_ID);
-        AddTextPrinterParameterized(gTasks[taskId].tSubWindowId, DEBUG_MENU_FONT, gStringVar4, 0, 0, 0, NULL);
+        Debug_Sound_Redraw_SE(taskId, gTasks[taskId].tSubWindowId);
     }
 
     if (JOY_NEW(A_BUTTON))
@@ -4010,6 +4055,11 @@ static void DebugAction_Sound_SE_SelectId(u8 taskId)
     else if (JOY_NEW(START_BUTTON))
     {
         m4aSongNumStop(gTasks[taskId].tCurrentSong, FlagGet(FLAG_SYS_GBS_ENABLED));
+    }
+    else if (JOY_NEW(SELECT_BUTTON))
+    {
+        Debug_Sound_ToggleGBS();
+        Debug_Sound_Redraw_SE(taskId, gTasks[taskId].tSubWindowId);
     }
 }
 
@@ -4031,7 +4081,7 @@ static void DebugAction_Sound_MUS(u8 taskId)
     StringCopy(gStringVar2, gText_DigitIndicator[0]);
     ConvertIntToDecimalStringN(gStringVar3, START_MUS, STR_CONV_MODE_LEADING_ZEROS, DEBUG_NUMBER_DIGITS_ITEMS);
     StringCopyPadded(gStringVar1, sBGMNames[0], CHAR_SPACE, 35);
-    StringExpandPlaceholders(gStringVar4, sDebugText_Sound_Music_ID);
+    StringExpandPlaceholders(gStringVar4, FlagGet(FLAG_SYS_GBS_ENABLED) ? sDebugText_Sound_Music_ID_Gbs : sDebugText_Sound_Music_ID);
     AddTextPrinterParameterized(windowId, DEBUG_MENU_FONT, gStringVar4, 0, 0, 0, NULL);
 
     StopMapMusic(); //Stop map music to better hear new music
@@ -4047,17 +4097,8 @@ static void DebugAction_Sound_MUS_SelectId(u8 taskId)
 {
     if (JOY_NEW(DPAD_ANY))
     {
-        const u8 *bgmName;
         Debug_HandleInput_Numeric(taskId, START_MUS, END_MUS, DEBUG_NUMBER_DIGITS_ITEMS);
-
-        StringCopy(gStringVar2, gText_DigitIndicator[gTasks[taskId].tDigit]);
-        bgmName = sBGMNames[gTasks[taskId].tInput - START_MUS];
-        if (bgmName == NULL)
-            bgmName = sDebugText_Dashes;
-        StringCopyPadded(gStringVar1, bgmName, CHAR_SPACE, 35);
-        ConvertIntToDecimalStringN(gStringVar3, gTasks[taskId].tInput, STR_CONV_MODE_LEADING_ZEROS, DEBUG_NUMBER_DIGITS_ITEMS);
-        StringExpandPlaceholders(gStringVar4, sDebugText_Sound_Music_ID);
-        AddTextPrinterParameterized(gTasks[taskId].tSubWindowId, DEBUG_MENU_FONT, gStringVar4, 0, 0, 0, NULL);
+        Debug_Sound_Redraw_MUS(taskId, gTasks[taskId].tSubWindowId);
     }
 
     if (JOY_NEW(A_BUTTON))
@@ -4075,6 +4116,11 @@ static void DebugAction_Sound_MUS_SelectId(u8 taskId)
     else if (JOY_NEW(START_BUTTON))
     {
         m4aSongNumStop(gTasks[taskId].tCurrentSong, FlagGet(FLAG_SYS_GBS_ENABLED));
+    }
+    else if (JOY_NEW(SELECT_BUTTON))
+    {
+        Debug_Sound_ToggleGBS();
+        Debug_Sound_Redraw_MUS(taskId, gTasks[taskId].tSubWindowId);
     }
 }
 
