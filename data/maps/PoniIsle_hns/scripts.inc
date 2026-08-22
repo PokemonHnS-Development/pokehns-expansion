@@ -1,5 +1,37 @@
 PoniIsle_hns_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, PoniIsle_hns_MapScripts_MAP_SCRIPT_ON_TRANSITION
+	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, PoniIsle_hns_MapScripts_MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE
 	.byte 0
+
+PoniIsle_hns_MapScripts_MAP_SCRIPT_ON_TRANSITION:
+	call PoniIsle_hns_SetTotemSignWarpFacing
+	return
+
+PoniIsle_hns_MapScripts_MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE:
+	map_script_2 VAR_TEMP_C, 0, PoniIsle_hns_EventScript_FacePlayerUpAfterTotemWarp
+	.2byte 0
+
+PoniIsle_hns_SetTotemSignWarpFacing:
+	setvar VAR_TEMP_C, 1
+	getplayerxy VAR_TEMP_A, VAR_TEMP_B
+	compare VAR_TEMP_A, 13
+	goto_if_ne PoniIsle_hns_SetTotemSignWarpFacing_End
+	compare VAR_TEMP_B, 8
+	goto_if_eq PoniIsle_hns_SetTotemSignWarpFacing_Set
+	compare VAR_TEMP_B, 9
+	goto_if_eq PoniIsle_hns_SetTotemSignWarpFacing_Set
+	goto PoniIsle_hns_SetTotemSignWarpFacing_End
+
+PoniIsle_hns_SetTotemSignWarpFacing_Set:
+	setvar VAR_TEMP_C, 0
+
+PoniIsle_hns_SetTotemSignWarpFacing_End:
+	return
+
+PoniIsle_hns_EventScript_FacePlayerUpAfterTotemWarp::
+	setvar VAR_TEMP_C, 1
+	applymovement LOCALID_PLAYER, PoniIsle_hns_Movement_FacePlayerUpAfterTotemWarp
+	return
 
 
 Alola_Poni_BattleExeggutor::
@@ -9,7 +41,7 @@ Alola_Poni_BattleExeggutor::
 	playmoncry SPECIES_EXEGGUTOR_ALOLA, 0
 	msgbox Alola_Poni_BattleExeggutor_Text_0, MSGBOX_AUTOCLOSE
 	waitmoncry
-	setwildbattle SPECIES_EXEGGUTOR_ALOLA, 45
+	setwildbattle SPECIES_EXEGGUTOR_ALOLA, 60
 	dowildbattle
 	specialvar VAR_RESULT, GetBattleOutcome
 	compare VAR_RESULT, B_OUTCOME_CAUGHT
@@ -166,22 +198,46 @@ Alola_Poni_Totem_sign_8:
 	goto Alola_Poni_Totem_sign_3
 
 Alola_Poni_Totem_sign_12:
+	goto_if_unset FLAG_HIDE_TAPU_KOKO, Alola_Poni_Totem_sign_12_Lower
 	warp MAP_MELEMELE_ISLE_HNS, 34, 26
 	waitstate
 	end
 
+Alola_Poni_Totem_sign_12_Lower:
+	warp MAP_MELEMELE_ISLE_HNS, 34, 27
+	waitstate
+	end
+
 Alola_Poni_Totem_sign_15:
+	goto_if_unset FLAG_HIDE_TAPU_LELE, Alola_Poni_Totem_sign_15_Lower
 	warp MAP_AKALA_ISLE_HNS, 9, 11
 	waitstate
 	end
 
+Alola_Poni_Totem_sign_15_Lower:
+	warp MAP_AKALA_ISLE_HNS, 9, 12
+	waitstate
+	end
+
 Alola_Poni_Totem_sign_18:
+	goto_if_unset FLAG_HIDE_TAPU_BULU, Alola_Poni_Totem_sign_18_Lower
 	warp MAP_ULA_ULA_FOREST_HNS, 16, 5
 	waitstate
 	end
 
+Alola_Poni_Totem_sign_18_Lower:
+	warp MAP_ULA_ULA_FOREST_HNS, 16, 6
+	waitstate
+	end
+
 Alola_Poni_Totem_sign_20:
+	goto_if_unset FLAG_HIDE_TAPU_FINI, Alola_Poni_Totem_sign_20_Lower
 	warp MAP_PONI_ISLE_HNS, 13, 8
+	waitstate
+	end
+
+Alola_Poni_Totem_sign_20_Lower:
+	warp MAP_PONI_ISLE_HNS, 13, 9
 	waitstate
 	end
 
@@ -340,6 +396,11 @@ Alola_Poni_TotemBattle_Text_0:
 Alola_Poni_TotemBattle_Text_1:
 	.string "Totem ELECTIVIRE was defeated!\n"
 	.string "It scampered off somewhere…$"
+
+PoniIsle_hns_Movement_FacePlayerUpAfterTotemWarp:
+	face_up
+	step_end
+
 
 Alola_Poni_Totem_sign_Text_0:
 	.string "The totem is emanating a strong\n"

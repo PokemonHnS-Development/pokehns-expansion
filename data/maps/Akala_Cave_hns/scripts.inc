@@ -9,7 +9,7 @@ Alola_Melemele_BattleMarowak::
 	playmoncry SPECIES_MAROWAK_ALOLA, 0
 	msgbox Alola_Melemele_BattleMarowak_Text_0, MSGBOX_AUTOCLOSE
 	waitmoncry
-	setwildbattle SPECIES_MAROWAK_ALOLA, 45
+	setwildbattle SPECIES_MAROWAK_ALOLA, 60
 	dowildbattle
 	specialvar VAR_RESULT, GetBattleOutcome
 	compare VAR_RESULT, B_OUTCOME_CAUGHT
@@ -42,7 +42,7 @@ Alola_Melemele_BattleDugtrio::
 	playmoncry SPECIES_DUGTRIO_ALOLA, 0
 	msgbox Alola_Melemele_BattleDugtrio_Text_0, MSGBOX_AUTOCLOSE
 	waitmoncry
-	setwildbattle SPECIES_DUGTRIO_ALOLA, 45
+	setwildbattle SPECIES_DUGTRIO_ALOLA, 60
 	dowildbattle
 	specialvar VAR_RESULT, GetBattleOutcome
 	compare VAR_RESULT, B_OUTCOME_CAUGHT

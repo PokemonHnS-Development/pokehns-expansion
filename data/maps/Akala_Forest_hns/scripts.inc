@@ -33,7 +33,7 @@ Alola_Akala_BattleRaichu::
 	playmoncry SPECIES_RAICHU_ALOLA, 0
 	msgbox Alola_Akala_BattleRaichu_Text_0, MSGBOX_AUTOCLOSE
 	waitmoncry
-	setwildbattle SPECIES_RAICHU_ALOLA, 45
+	setwildbattle SPECIES_RAICHU_ALOLA, 60
 	dowildbattle
 	specialvar VAR_RESULT, GetBattleOutcome
 	compare VAR_RESULT, B_OUTCOME_CAUGHT

@@ -13204,26 +13204,72 @@ Pic: Samson Oak Hns
 Gender: Male
 Music: Elite Four
 Double Battle: No
-AI: Check Bad Move
+AI: Smart Trainer
 Mugshot: Green
 
 Raichu Alola
-Level: 60
+Level: 70
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Nasty Plot
+- Thunderbolt
+- Psychic
+- Substitute
 
-Exeggutor Alola
-Level: 65
+Exeggutor Alola @ Choice Specs
+Level: 70
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Modest Nature
+- Draco Meteor
+- Leaf Storm
+- Flamethrower
+- Giga Drain
 
-Ninetales Alola
-Level: 63
 
-Golem Alola
-Level: 65
+Ninetales Alola @ Light Clay
+Level: 70
+Ability: Snow Warning
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 0 Def / 4 SpA / 0 SpD / 252 Spe
+Timid Nature
+- Freeze Dry
+- Hypnosis
+- Hail
+- Aurora Veil
 
-Muk Alola
-Level: 65
+Golem Alola @ Choice Band
+Level: 70
+Ability: Magnet Pull
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 4 SpA / 0 SpD / 252 Spe
+Adamant Nature
+- Stone Edge
+- Fire Punch
+- Earthquake
+- Volt Switch
 
-Tropius
-Level: 67
+Muk Alola @ Assault Vest
+Level: 70
+Ability: Poison Touch
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 Atk / 0 Def / 0 SpA / 252 SpD / 0 Spe
+Adamant Nature
+- Pursuit
+- Gunk Shot
+- Knock Off
+- Fire Punch
+
+
+Tropius @ Sitrus Berry
+Level: 70
+Ability: Harvest
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 248 HP / 0 Atk / 252 Def / 0 SpA / 8 SpD / 0 Spe
+Bold Nature
+- Leech Seed
+- Substitute
+- Air Slash
+- Toxic
 
 === TRAINER_PHANTONOMY_UNUSED_HNS ===
 Name: PHANTONOMY
@@ -13264,14 +13310,38 @@ Music: Hg Girl 2
 Double Battle: No
 AI: Check Bad Move
 
-Mantine
-Level: 52
+Politoed @ Damp Rock  
+Ability: Drizzle  
+Level: 63   
+Bold Nature  
+IVs: 0 Atk  
+- Weather Ball  
+- Icy Wind  
+- Whirlpool  
+- Perish Song  
 
-Politoed
-Level: 54
+Mantine @ Leftovers  
+Ability: Swift Swim  
+Level: 63    
+Modest Nature  
+IVs: 0 Atk  
+- Hurricane  
+- Water Pulse  
+- Signal Beam  
+- Aqua Ring  
 
-Luvdisc
-Level: 50
+Luvdisc (F) @ Big Root  
+Ability: Swift Swim  
+Level: 64  
+EVs: 248 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Attract  
+- Draining Kiss  
+- Scald  
+- Sweet Kiss  
+
+
 
 === TRAINER_MELEMELE_SWIMMER_2_HNS ===
 Name: JIMMY
@@ -13282,14 +13352,34 @@ Music: Hg Boy 2
 Double Battle: No
 AI: Check Bad Move
 
-Pelipper
-Level: 53
+Pelipper  
+Ability: Keen Eye  
+Level: 63  
+Tera Type: Water  
+IVs: 0 Atk  
+- Surf  
+- Ice Beam  
+- Feather Dance  
+- Shock Wave  
 
-Poliwrath
-Level: 55
+Poliwrath @ Life Orb  
+Ability: Water Absorb  
+Level: 63  
+Tera Type: Water  
+- Darkest Lariat  
+- Drain Punch  
+- Liquidation  
+- Power-Up Punch  
 
-Huntail
-Level: 51
+Huntail @ White Herb  
+Ability: Water Veil  
+Level: 68  
+Tera Type: Water  
+- Shell Smash  
+- Super Fang  
+- Waterfall  
+- Scary Face  
+
 
 === TRAINER_AKALA_SWIMMER_1_HNS ===
 Name: KELSIE
@@ -13300,14 +13390,34 @@ Music: Hg Girl 2
 Double Battle: No
 AI: Check Bad Move
 
-Starmie
-Level: 54
+Starmie @ Lagging Tail  
+Ability: Analytic  
+Level: 66    
+EVs: 140 HP / 204 Atk / 104 Def / 60 SpD  
+Adamant Nature  
+- Dive  
+- Avalanche  
+- Curse  
+- Recover  
 
-Seaking
-Level: 52
+Seaking @ King's Rock  
+Ability: Lightning Rod  
+Level: 67    
+- Drill Run  
+- Acupressure  
+- Scale Shot  
+- Tail Whip  
 
-Golduck
-Level: 53
+Golduck @ Scope Lens  
+Ability: Cloud Nine  
+Level: 60     
+Jolly Nature  
+- Cross Chop  
+- Aqua Jet  
+- Shadow Claw  
+- Yawn  
+
+
 
 === TRAINER_AKALA_SWIMMER_2_HNS ===
 Name: PORTIA
@@ -13318,14 +13428,32 @@ Music: Hg Girl 2
 Double Battle: No
 AI: Check Bad Move
 
-Corsola
-Level: 50
+Corsola @ Zoom Lens  
+Ability: Hustle  
+Level: 65   
+Brave Nature  
+IVs: 0 Spe  
+- Liquidation  
+- Head Smash  
+- Recover  
+- Sucker Punch  
 
-Octillery
-Level: 53
+Octillery @ Leftovers  
+Ability: Moody  
+Level: 65  
+- Protect  
+- Octazooka  
+- Gunk Shot  
+- Rock Blast  
 
-Raticate Alola
-Level: 51
+Mantine @ Assault Vest  
+Ability: Water Absorb  
+Level: 66      
+Careful Nature  
+- Mirror Coat  
+- Seed Bomb  
+- Aqua Tail  
+- Rock Blast  
 
 === TRAINER_AKALA_SWIMMER_3_HNS ===
 Name: GEOFF
@@ -13336,14 +13464,32 @@ Music: Hg Boy 2
 Double Battle: No
 AI: Check Bad Move
 
-Gyarados
-Level: 56
+Tentacruel  
+Ability: Liquid Ooze  
+Level: 64
+- Gunk Shot  
+- Flip Turn  
+- Toxic Spikes  
+- Rapid Spin  
 
-Tentacruel
-Level: 54
+Gyarados  
+Ability: Moxie  
+Level: 64 
+- Crunch  
+- Earthquake  
+- Rage  
+- Scary Face  
 
-Huntail
-Level: 52
+Kingdra @ Scope Lens  
+Ability: Sniper  
+Level: 64 
+IVs: 0 Atk  
+- Dragon Pulse  
+- Smokescreen  
+- Brine  
+- Focus Energy  
+
+
 
 === TRAINER_PONI_SWIMMER_1_HNS ===
 Name: JADE
@@ -13354,14 +13500,37 @@ Music: Hg Girl 2
 Double Battle: No
 AI: Check Bad Move
 
-Gorebyss
-Level: 53
+Gorebyss  
+Ability: Hydration  
+Level: 63   
+EVs: 252 Def / 248 Spe  
+Timid Nature  
+- Scald  
+- Draining Kiss  
+- Bind  
+- Confuse Ray  
 
-Luvdisc
-Level: 51
+Luvdisc  
+Ability: Swift Swim  
+Level: 63
+EVs: 252 Spe  
+Jolly Nature  
+- Charm  
+- Captivate  
+- Flip Turn  
+- Wish  
 
-Milotic
-Level: 56
+Milotic (F)  
+Ability: Cute Charm  
+Level: 66
+EVs: 248 Atk / 248 SpD  
+Adamant Nature  
+- Tickle  
+- Avalanche  
+- Aqua Tail  
+- Coil  
+
+
 
 === TRAINER_PONI_SWIMMER_2_HNS ===
 Name: RODDY
@@ -13372,14 +13541,36 @@ Music: Hg Boy 2
 Double Battle: No
 AI: Check Bad Move
 
-Corsola
-Level: 50
+Lanturn  
+Ability: Volt Absorb  
+Level: 61 
+EVs: 252 HP / 252 SpA  
+IVs: 0 Atk  
+- Discharge  
+- Ice Beam  
+- Charge  
+- Flash  
 
-Mantine
-Level: 52
+Wailord @ Sitrus Berry  
+Ability: Pressure  
+Level: 61 
+EVs: 252 HP / 116 Def / 140 SpD  
+IVs: 0 Atk  
+- Water Spout  
+- Aqua Ring  
+- Noble Roar  
+- Ice Beam  
 
-Politoed
-Level: 54
+Kingler @ Life Orb  
+Ability: Sheer Force  
+Level: 65 
+EVs: 8 HP / 248 Atk / 252 SpD  
+- Crabhammer  
+- Hone Claws  
+- Dig  
+- Guillotine  
+
+
 
 === TRAINER_AKALA_HIKER_HNS ===
 Name: IAN
@@ -13390,14 +13581,33 @@ Music: Hg Suspicious 2
 Double Battle: No
 AI: Check Bad Move
 
-Solrock
-Level: 53
+Lunatone @ Clear Amulet  
+Ability: Levitate  
+Level: 63   
+IVs: 0 Atk  
+- Cosmic Power  
+- Stored Power  
+- Calm Mind  
+- Power Gem  
 
-Lunatone
-Level: 53
+Solrock @ Heat Rock  
+Ability: Levitate  
+Level: 63   
+IVs: 0 Atk  
+- Sunny Day  
+- Weather Ball  
+- Morning Sun  
+- Solar Beam  
 
-Magmar
-Level: 56
+Magmar @ Eviolite  
+Ability: Flame Body  
+Level: 65 
+- Flame Charge  
+- Substitute  
+- Focus Punch  
+- Double Team  
+
+
 
 === TRAINER_AKALA_PICNICKER_HNS ===
 Name: TATIANA
@@ -13408,14 +13618,32 @@ Music: Hg Girl 1
 Double Battle: No
 AI: Check Bad Move
 
-Dustox
-Level: 52
+Dustox @ Focus Sash  
+Ability: Compound Eyes  
+Level: 64   
+IVs: 0 Atk  
+- Venoshock  
+- Toxic  
+- Iron Defense  
+- Quiver Dance  
 
-Pinsir
-Level: 54
+Pinsir @ Life Orb  
+Ability: Moxie  
+Level: 61 
+- Storm Throw  
+- X-Scissor  
+- Guillotine  
+- Curse  
 
-Ludicolo
-Level: 55
+Ludicolo  
+Ability: Rain Dish  
+Level: 63
+- Teeter Dance  
+- Scald  
+- Trailblaze  
+- Encore  
+
+
 
 === TRAINER_AKALA_CAMPER_HNS ===
 Name: OLIVER
@@ -13426,14 +13654,32 @@ Music: Hg Boy 1
 Double Battle: No
 AI: Check Bad Move
 
-Swellow
-Level: 54
+Swellow  
+Ability: Scrappy  
+Level: 63  
+- Boomburst  
+- Brave Bird  
+- Roost  
+- Tailwind  
 
-Beedrill
-Level: 56
+Beedrill @ Scope Lens  
+Ability: Sniper  
+Level: 65  
+- Poison Jab  
+- Drill Run  
+- Outrage  
+- Fell Stinger  
 
-Dustox
-Level: 51
+Dustox  
+Ability: Shield Dust  
+Level: 66  
+IVs: 0 Atk  
+- Bug Buzz  
+- String Shot  
+- Shadow Ball  
+- Energy Ball  
+
+
 
 === TRAINER_AKALA_FOREST_BUGCATCHER_1_HNS ===
 Name: STANLEY
@@ -13444,11 +13690,23 @@ Music: Hg Boy 1
 Double Battle: No
 AI: Check Bad Move
 
-Pinsir
-Level: 55
+Pinsir @ Life Orb  
+Ability: Hyper Cutter  
+Level: 61  
+- Close Combat  
+- Double-Edge  
+- Outrage  
+- Rock Slide  
 
-Scyther
-Level: 57
+Scyther @ Eviolite  
+Ability: Technician  
+Level: 63 
+- Psycho Cut  
+- Steel Wing  
+- Roost  
+- Bug Bite  
+
+
 
 === TRAINER_AKALA_FOREST_BUGCATCHER_2_HNS ===
 Name: SCOTTY
@@ -13459,11 +13717,24 @@ Music: Hg Boy 1
 Double Battle: No
 AI: Check Bad Move
 
-Butterfree
-Level: 54
+Butterfree @ Bright Powder  
+Ability: Compound Eyes  
+Level: 64   
+IVs: 0 Atk  
+- Hurricane  
+- Quiver Dance  
+- Signal Beam  
+- Sleep Powder  
 
-Heracross
-Level: 58
+Heracross @ Flame Orb  
+Ability: Guts  
+Level: 61  
+- Facade  
+- Close Combat  
+- Throat Chop  
+- Megahorn  
+
+
 
 === TRAINER_AKALA_CAVE_PICNICKER_HNS ===
 Name: MELISSA
@@ -13474,14 +13745,31 @@ Music: Hg Girl 1
 Double Battle: No
 AI: Check Bad Move
 
-Mankey
-Level: 51
+Mankey @ Flying Gem  
+Ability: Vital Spirit  
+Level: 63   
+- Acrobatics  
+- Close Combat  
+- Taunt  
+- U-turn  
 
-Tangrowth
-Level: 55
+Tangrowth @ Leftovers  
+Ability: Leaf Guard  
+Level: 61  
+- Ingrain  
+- Power Whip  
+- Leech Seed  
+- Protect  
 
-Tropius
-Level: 53
+Tropius  
+Ability: Harvest  
+Level: 62   
+- Dragon Dance  
+- Dragon Hammer  
+- Petal Blizzard  
+- Safeguard  
+
+
 
 === TRAINER_AKALA_CAVE_CAMPER_HNS ===
 Name: RONNY
@@ -13492,14 +13780,31 @@ Music: Hg Boy 1
 Double Battle: No
 AI: Check Bad Move
 
-Primeape
-Level: 54
+Primeape  
+Ability: Anger Point  
+Level: 61  
+- Cross Chop  
+- Curse  
+- Rage Fist  
+- Ice Punch  
 
-Hariyama
-Level: 56
+Hariyama @ Loaded Dice  
+Ability: Thick Fat  
+Level: 61   
+- Earthquake  
+- Arm Thrust  
+- Bulk Up  
+- Knock Off  
 
-Machoke
-Level: 52
+Machoke  
+Ability: No Guard  
+Level: 61  
+- Dynamic Punch  
+- Bullet Punch  
+- Bulk Up  
+- Dual Chop  
+
+
 
 === TRAINER_AKALA_CAVE_HIKER_HNS ===
 Name: FRANK
@@ -13510,14 +13815,30 @@ Music: Hg Suspicious 2
 Double Battle: No
 AI: Check Bad Move
 
-Kangaskhan
-Level: 56
+Kangaskhan  
+Ability: Scrappy  
+Level: 62  
+Happiness: 254  
+- Return  
+- Power-Up Punch  
+- Beat Up  
+- Disable  
 
-Lunatone
-Level: 52
+Solrock  
+Ability: Levitate  
+Level: 64  
+- Ancient Power  
+- Acrobatics  
+- Flamethrower  
+- Reflect  
 
-Solrock
-Level: 52
+Lunatone @ Normal Gem  
+Ability: Levitate  
+Level: 64  
+Tera Type: Rock  
+- Explosion  
+
+
 
 === TRAINER_ULAULA_PICNICKER_HNS ===
 Name: MELISSA
@@ -13528,14 +13849,33 @@ Music: Hg Girl 1
 Double Battle: No
 AI: Check Bad Move
 
-Swellow
-Level: 53
+Swellow  
+Ability: Scrappy  
+Level: 61  
+IVs: 0 Atk  
+- Heat Wave  
+- Air Cutter  
+- Feather Dance  
+- Supersonic  
 
-Tangela
-Level: 50
+Tangela @ Eviolite  
+Ability: Chlorophyll  
+Level: 63    
+IVs: 0 Atk  
+- Giga Drain  
+- Toxic  
+- Substitute  
+- Sludge Bomb  
 
-Miltank
-Level: 55
+Miltank  
+Ability: Thick Fat  
+Level: 61  
+- Retaliate  
+- Earthquake  
+- Heal Bell  
+- Milk Drink  
+
+
 
 === TRAINER_ULAULA_YOUNGSTER_HNS ===
 Name: JOEY
@@ -13546,14 +13886,31 @@ Music: Hg Boy 1
 Double Battle: No
 AI: Check Bad Move
 
-Scizor
-Level: 57
+Raticate-Alola  
+Ability: Hustle  
+Level: 61 
+- Crunch  
+- Bulk Up  
+- Last Resort  
+- Quick Attack  
 
-Leafeon
-Level: 54
+Scizor  
+Ability: Technician  
+Level: 61 
+- Brutal Swing  
+- Bullet Punch  
+- Swords Dance  
+- Sand Tomb  
 
-Raticate Alola
-Level: 51
+Leafeon @ Sitrus Berry  
+Ability: Leaf Guard  
+Level: 63  
+- Leaf Blade  
+- Iron Tail  
+- Wish  
+- Detect  
+
+
 
 === TRAINER_ULAULA_HIKER_HNS ===
 Name: FRANK
@@ -13564,14 +13921,33 @@ Music: Hg Suspicious 2
 Double Battle: No
 AI: Check Bad Move
 
-Magmar
-Level: 55
+Mawile  
+Ability: Intimidate  
+Level: 62  
+- Ice Fang  
+- Play Rough  
+- Stealth Rock  
+- Psychic Fangs  
 
-Electabuzz
-Level: 55
+Magmar @ Sitrus Berry  
+Ability: Flame Body  
+Level: 63   
+- Fire Punch  
+- Belly Drum  
+- Mach Punch  
+- Dual Chop  
 
-Mawile
-Level: 53
+Electivire @ Zoom Lens  
+Ability: Motor Drive  
+Level: 60 
+Brave Nature  
+IVs: 0 Spe  
+- Thunder Punch  
+- Dynamic Punch  
+- Charge  
+- Barrier  
+
+
 
 === TRAINER_ULAULA_COOLTRAINER_HNS ===
 Name: LOIS
@@ -13582,14 +13958,32 @@ Music: Hg Girl 2
 Double Battle: No
 AI: Check Bad Move
 
-Skarmory
-Level: 57
+Skarmory  
+Ability: Keen Eye  
+Level: 61 
+- Iron Defense  
+- Autotomize  
+- Drill Peck  
+- Rock Slide  
 
-Primeape
-Level: 54
+Primeape  
+Ability: Anger Point  
+Level: 64  
+Happiness: 0  
+- Frustration  
+- Close Combat  
+- Lash Out  
+- Taunt  
 
-Tauros
-Level: 60
+Tauros @ Life Orb  
+Ability: Sheer Force  
+Level: 63 
+- Wild Charge  
+- Bulldoze  
+- Raging Bull  
+- Focus Energy  
+
+
 
 === TRAINER_MILKMAN_HNS ===
 Name: MILKMAN

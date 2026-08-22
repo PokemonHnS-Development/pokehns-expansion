@@ -4,12 +4,12 @@ MtSilver_SummitDay_hns_MapScripts::
 	.byte 0
 
 MtSilver_SummitDay_OnFrame::
-	map_script_2 VAR_TEMP_0, 0 MtSilver_SummitDay_Blizzard
+	map_script_2 VAR_TEMP_MTSILVER_RESUME_BLIZZARD_SE, 0, MtSilver_SummitDay_Blizzard
 	.2byte 0
 
 MtSilver_SummitDay_Blizzard::
 	playse SE_M_BLIZZARD
-	setvar VAR_TEMP_0, 1
+	setvar VAR_TEMP_MTSILVER_RESUME_BLIZZARD_SE, 1
 	end
 
 MtSilver_SummitDay_OnTransition:

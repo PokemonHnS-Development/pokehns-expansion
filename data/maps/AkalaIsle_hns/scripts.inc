@@ -1,5 +1,6 @@
 AkalaIsle_hns_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, AkalaIsle_hns_MapScripts_MAP_SCRIPT_ON_TRANSITION
+	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, AkalaIsle_hns_MapScripts_MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE
 	.byte 0
 
 AkalaIsle_hns_MapScripts_MAP_SCRIPT_ON_TRANSITION:
@@ -10,11 +11,39 @@ AkalaIsle_hns_MapScripts_MAP_SCRIPT_ON_TRANSITION:
 	goto_if_eq AkalaIsle_hns_MapScripts_MAP_SCRIPT_ON_TRANSITION_1
 	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_SPECIES ( PROBOPASS )
 	clearflag FLAG_AKALA_TOTEM_DAY
+	call AkalaIsle_hns_SetTotemSignWarpFacing
 	return
 
 AkalaIsle_hns_MapScripts_MAP_SCRIPT_ON_TRANSITION_1:
 	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_SPECIES ( MAGMORTAR )
 	setflag FLAG_AKALA_TOTEM_DAY
+	call AkalaIsle_hns_SetTotemSignWarpFacing
+	return
+
+AkalaIsle_hns_MapScripts_MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE:
+	map_script_2 VAR_TEMP_C, 0, AkalaIsle_hns_EventScript_FacePlayerUpAfterTotemWarp
+	.2byte 0
+
+AkalaIsle_hns_SetTotemSignWarpFacing:
+	setvar VAR_TEMP_C, 1
+	getplayerxy VAR_TEMP_A, VAR_TEMP_B
+	compare VAR_TEMP_A, 9
+	goto_if_ne AkalaIsle_hns_SetTotemSignWarpFacing_End
+	compare VAR_TEMP_B, 11
+	goto_if_eq AkalaIsle_hns_SetTotemSignWarpFacing_Set
+	compare VAR_TEMP_B, 12
+	goto_if_eq AkalaIsle_hns_SetTotemSignWarpFacing_Set
+	goto AkalaIsle_hns_SetTotemSignWarpFacing_End
+
+AkalaIsle_hns_SetTotemSignWarpFacing_Set:
+	setvar VAR_TEMP_C, 0
+
+AkalaIsle_hns_SetTotemSignWarpFacing_End:
+	return
+
+AkalaIsle_hns_EventScript_FacePlayerUpAfterTotemWarp::
+	setvar VAR_TEMP_C, 1
+	applymovement LOCALID_PLAYER, AkalaIsle_hns_Movement_FacePlayerUpAfterTotemWarp
 	return
 
 
@@ -245,22 +274,46 @@ Alola_Akala_Totem_sign_8:
 	goto Alola_Akala_Totem_sign_3
 
 Alola_Akala_Totem_sign_12:
+	goto_if_unset FLAG_HIDE_TAPU_KOKO, Alola_Akala_Totem_sign_12_Lower
 	warp MAP_MELEMELE_ISLE_HNS, 34, 26
 	waitstate
 	end
 
+Alola_Akala_Totem_sign_12_Lower:
+	warp MAP_MELEMELE_ISLE_HNS, 34, 27
+	waitstate
+	end
+
 Alola_Akala_Totem_sign_15:
+	goto_if_unset FLAG_HIDE_TAPU_LELE, Alola_Akala_Totem_sign_15_Lower
 	warp MAP_AKALA_ISLE_HNS, 9, 11
 	waitstate
 	end
 
+Alola_Akala_Totem_sign_15_Lower:
+	warp MAP_AKALA_ISLE_HNS, 9, 12
+	waitstate
+	end
+
 Alola_Akala_Totem_sign_18:
+	goto_if_unset FLAG_HIDE_TAPU_BULU, Alola_Akala_Totem_sign_18_Lower
 	warp MAP_ULA_ULA_FOREST_HNS, 16, 5
 	waitstate
 	end
 
+Alola_Akala_Totem_sign_18_Lower:
+	warp MAP_ULA_ULA_FOREST_HNS, 16, 6
+	waitstate
+	end
+
 Alola_Akala_Totem_sign_20:
+	goto_if_unset FLAG_HIDE_TAPU_FINI, Alola_Akala_Totem_sign_20_Lower
 	warp MAP_PONI_ISLE_HNS, 13, 8
+	waitstate
+	end
+
+Alola_Akala_Totem_sign_20_Lower:
+	warp MAP_PONI_ISLE_HNS, 13, 9
 	waitstate
 	end
 
@@ -428,6 +481,11 @@ Alola_Akala_Bench_Heal_Movement_0:
 
 Alola_Akala_BattleSandygast_Text_0:
 	.string "Coorr!$"
+
+AkalaIsle_hns_Movement_FacePlayerUpAfterTotemWarp:
+	face_up
+	step_end
+
 
 Alola_Akala_Sign_Text_0:
 	.string "AKALA ISLE$"

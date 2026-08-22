@@ -501,6 +501,7 @@ static void Task_LoadInfoScreen(u8);
 static void Task_HandleInfoScreenInput(u8);
 static void Task_SwitchScreensFromInfoScreen(u8);
 static void Task_LoadInfoScreenWaitForFade(u8);
+static void Task_WaitForFadeFromEvoFormsScreen(u8);
 static void Task_ExitInfoScreen(u8);
 static void Task_LoadAreaScreen(u8 taskId);
 static void Task_ReloadAreaScreen(u8 taskId);
@@ -3950,6 +3951,24 @@ static void Task_LoadInfoScreenWaitForFade(u8 taskId)
     }
 }
 
+// Like Task_LoadInfoScreenWaitForFade, but the source screen was the evo/forms
+// screen, where data[4]/data[5..] hold mon icon sprites
+static void Task_WaitForFadeFromEvoFormsScreen(u8 taskId)
+{
+    if (!gPaletteFade.active)
+    {
+        u8 i;
+        FreeMonIconPalettes();
+        FreeAndDestroyMonIconSprite(&gSprites[gTasks[taskId].data[4]]);
+        for (i = 1; i <= gTasks[taskId].data[3]; i++)
+        {
+            FreeAndDestroyMonIconSprite(&gSprites[gTasks[taskId].data[4+i]]);
+        }
+        FreeAndDestroyMonPicSprite(gTasks[taskId].tMonSpriteId);
+        gTasks[taskId].func = Task_LoadInfoScreen;
+    }
+}
+
 static void Task_ExitInfoScreen(u8 taskId)
 {
     if (!gPaletteFade.active)
@@ -6094,7 +6113,7 @@ static void Task_LoadEvolutionScreen(u8 taskId)
         u32 totalLines = sPokedexView->numPreEvolutions;
         u16 baseSpecies = NationalPokedexNumToSpeciesHGSS(sPokedexListItem->dexNum);
         //Print evo info and icons
-        gTasks[taskId].data[3] = 0;
+        gTasks[taskId].data[3] = sPokedexView->numPreEvolutions;
         PrintEvolutionTargetSpeciesAndMethod(taskId, baseSpecies, 0, &depth, alreadyPrintedIcons, &iconDepth, 0, &totalLines, baseSpecies);
         LoadSpritePalette(&gSpritePalette_Arrow);
         TryLoadDarkModeArrowPalette();
@@ -6216,7 +6235,7 @@ static void Task_HandleEvolutionScreenInput(u8 taskId)
             sPokedexView->sEvoScreenData.fromEvoPage = TRUE;
             PlaySE(SE_PIN);
             BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
-            gTasks[taskId].func = Task_LoadInfoScreenWaitForFade;
+            gTasks[taskId].func = Task_WaitForFadeFromEvoFormsScreen;
         }
     }
 
@@ -6275,10 +6294,10 @@ static void HandleTargetSpeciesPrintIcon(u8 taskId, u16 targetSpecies, u8 base_i
 #else
     if (iterations > 6) // Print icons closer to each other if there are many evolutions
 #endif
-        gTasks[taskId].data[4+base_i] = CreateMonIcon(targetSpecies, SpriteCB_MonIcon, 45 + 26*base_i, 31, 4, personality);
+        gTasks[taskId].data[5+base_i] = CreateMonIcon(targetSpecies, SpriteCB_MonIcon, 45 + 26*base_i, 31, 4, personality);
     else
-        gTasks[taskId].data[4+base_i] = CreateMonIcon(targetSpecies, SpriteCB_MonIcon, 50 + 32*base_i, 31, 4, personality);
-    gSprites[gTasks[taskId].data[4+base_i]].oam.priority = 0;
+        gTasks[taskId].data[5+base_i] = CreateMonIcon(targetSpecies, SpriteCB_MonIcon, 50 + 32*base_i, 31, 4, personality);
+    gSprites[gTasks[taskId].data[5+base_i]].oam.priority = 0;
 }
 
 static void CreateCaughtBallEvolutionScreen(u16 targetSpecies, u8 x, u8 y, u16 unused)
@@ -6319,8 +6338,8 @@ static void HandlePreEvolutionSpeciesPrint(u8 taskId, u16 preSpecies, u16 specie
     {
         u32 personality = GetPokedexMonPersonality(preSpecies);
         LoadMonIconPalettePersonality(preSpecies, personality); //Loads pallete for current mon
-        gTasks[taskId].data[4+base_i] = CreateMonIcon(preSpecies, SpriteCB_MonIcon, 18 + 32*base_i, 31, 4, personality); //Create pokemon sprite
-        gSprites[gTasks[taskId].data[4+base_i]].oam.priority = 0;
+        gTasks[taskId].data[5+base_i] = CreateMonIcon(preSpecies, SpriteCB_MonIcon, 18 + 32*base_i, 31, 4, personality); //Create pokemon sprite
+        gSprites[gTasks[taskId].data[5+base_i]].oam.priority = 0;
     }
 }
 
@@ -7174,7 +7193,7 @@ static void Task_HandleFormsScreenInput(u8 taskId)
             sPokedexView->sFormScreenData.inSubmenu = FALSE;
             PlaySE(SE_PIN);
             BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
-            gTasks[taskId].func = Task_LoadInfoScreenWaitForFade;
+            gTasks[taskId].func = Task_WaitForFadeFromEvoFormsScreen;
         }
 
         if (JOY_NEW(B_BUTTON))

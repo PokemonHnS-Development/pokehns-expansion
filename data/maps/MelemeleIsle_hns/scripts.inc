@@ -13,16 +13,41 @@ MelemeleIsle_hns_MapScripts_MAP_SCRIPT_ON_TRANSITION:
 	goto_if_eq MelemeleIsle_hns_MapScripts_MAP_SCRIPT_ON_TRANSITION_1
 	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_SPECIES ( RATICATE_ALOLA )
 	clearflag FLAG_MELEMELE_TOTEM_DAY
+	call MelemeleIsle_hns_SetTotemSignWarpFacing
 	return
 
 MelemeleIsle_hns_MapScripts_MAP_SCRIPT_ON_TRANSITION_1:
 	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_SPECIES ( LEAFEON )
 	setflag FLAG_MELEMELE_TOTEM_DAY
+	call MelemeleIsle_hns_SetTotemSignWarpFacing
 	return
 
 MelemeleIsle_hns_MapScripts_MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE:
+	map_script_2 VAR_TEMP_C, 0, MelemeleIsle_hns_EventScript_FacePlayerUpAfterTotemWarp
 	map_script_2 VAR_ALOLA_TRAVEL, 1, MelemeleIsle_hns_MapScripts_MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE_0
 	.2byte 0
+
+MelemeleIsle_hns_SetTotemSignWarpFacing:
+	setvar VAR_TEMP_C, 1
+	getplayerxy VAR_TEMP_A, VAR_TEMP_B
+	compare VAR_TEMP_A, 34
+	goto_if_ne MelemeleIsle_hns_SetTotemSignWarpFacing_End
+	compare VAR_TEMP_B, 26
+	goto_if_eq MelemeleIsle_hns_SetTotemSignWarpFacing_Set
+	compare VAR_TEMP_B, 27
+	goto_if_eq MelemeleIsle_hns_SetTotemSignWarpFacing_Set
+	goto MelemeleIsle_hns_SetTotemSignWarpFacing_End
+
+MelemeleIsle_hns_SetTotemSignWarpFacing_Set:
+	setvar VAR_TEMP_C, 0
+
+MelemeleIsle_hns_SetTotemSignWarpFacing_End:
+	return
+
+MelemeleIsle_hns_EventScript_FacePlayerUpAfterTotemWarp::
+	setvar VAR_TEMP_C, 1
+	applymovement LOCALID_PLAYER, MelemeleIsle_hns_Movement_FacePlayerUpAfterTotemWarp
+	return
 
 MelemeleIsle_hns_MapScripts_MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE_0:
 	applymovement Alola_Melemele_Captain, MelemeleIsle_hns_MapScripts_MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE_0_Movement_0
@@ -381,22 +406,46 @@ Alola_Melemele_Totem_sign_8:
 	goto Alola_Melemele_Totem_sign_3
 
 Alola_Melemele_Totem_sign_12:
+	goto_if_unset FLAG_HIDE_TAPU_KOKO, Alola_Melemele_Totem_sign_12_Lower
 	warp MAP_MELEMELE_ISLE_HNS, 34, 26
 	waitstate
 	end
 
+Alola_Melemele_Totem_sign_12_Lower:
+	warp MAP_MELEMELE_ISLE_HNS, 34, 27
+	waitstate
+	end
+
 Alola_Melemele_Totem_sign_15:
+	goto_if_unset FLAG_HIDE_TAPU_LELE, Alola_Melemele_Totem_sign_15_Lower
 	warp MAP_AKALA_ISLE_HNS, 9, 11
 	waitstate
 	end
 
+Alola_Melemele_Totem_sign_15_Lower:
+	warp MAP_AKALA_ISLE_HNS, 9, 12
+	waitstate
+	end
+
 Alola_Melemele_Totem_sign_18:
+	goto_if_unset FLAG_HIDE_TAPU_BULU, Alola_Melemele_Totem_sign_18_Lower
 	warp MAP_ULA_ULA_FOREST_HNS, 16, 5
 	waitstate
 	end
 
+Alola_Melemele_Totem_sign_18_Lower:
+	warp MAP_ULA_ULA_FOREST_HNS, 16, 6
+	waitstate
+	end
+
 Alola_Melemele_Totem_sign_20:
+	goto_if_unset FLAG_HIDE_TAPU_FINI, Alola_Melemele_Totem_sign_20_Lower
 	warp MAP_PONI_ISLE_HNS, 13, 8
+	waitstate
+	end
+
+Alola_Melemele_Totem_sign_20_Lower:
+	warp MAP_PONI_ISLE_HNS, 13, 9
 	waitstate
 	end
 
@@ -712,6 +761,11 @@ Alola_Melemele_TotemBattle_Text_2:
 Alola_Melemele_TotemBattle_Text_3:
 	.string "Totem RATICATE was defeated!\n"
 	.string "It scampered off somewhere…$"
+
+MelemeleIsle_hns_Movement_FacePlayerUpAfterTotemWarp:
+	face_up
+	step_end
+
 
 Alola_Melemele_Totem_sign_Text_0:
 	.string "The totem is emanating a strong\n"

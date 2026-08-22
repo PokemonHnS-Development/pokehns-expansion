@@ -254,4 +254,7 @@
 #define VAR_TEMP_TRANSFERRED_SPECIES  VAR_TEMP_1
 #define VAR_TEMP_RADIO_MUSIC          VAR_TEMP_F
 
+// VAR_TEMP_A used due to limited use elsewhere.
+#define VAR_TEMP_MTSILVER_RESUME_BLIZZARD_SE  VAR_TEMP_B
+
 #endif // GUARD_CONSTANTS_VARS_HNS_H

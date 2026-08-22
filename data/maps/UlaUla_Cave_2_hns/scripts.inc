@@ -8,7 +8,7 @@ Alola_Ulaula_BattleMuk::
 	playmoncry SPECIES_MUK_ALOLA, 0
 	msgbox Alola_Ulaula_BattleMuk_Text_0, MSGBOX_AUTOCLOSE
 	waitmoncry
-	setwildbattle SPECIES_MUK_ALOLA, 45
+	setwildbattle SPECIES_MUK_ALOLA, 60
 	dowildbattle
 	specialvar VAR_RESULT, GetBattleOutcome
 	compare VAR_RESULT, B_OUTCOME_CAUGHT
