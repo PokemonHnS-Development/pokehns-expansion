@@ -900,6 +900,7 @@ gGBSSongTable:: @ "gbs_hg_" tracks are new tracks that were transcribed from HGS
 
 	@ Battle Frontier
 	@song_gbs MUS_LILYCOVE_MUSEUM, gbs_TODO:_Header, 0, 0	@ Location - Battle Frontier Ranking Hall TODO: GBS CONVERSION
+	@song_gbs MUS_VS_FRONTIER_BRAIN, gbs_TODO:_Header, 0, 0	@ BGM during Frontier Brain battles TODO: GBS CONVERSION
 	song_gbs MUS_B_TOWER_RS, gbs_battletowerlobby_Header, 0, 0	@ Battle Frontier Lounges, Exchange, Reception, Scotts House BGM TODO: GBS CONVERSION
 	song_gbs MUS_B_FRONTIER, gbs_battletowertheme_Header, 0, 0 @ Battle Frontier Outside East/West BGM TODO: GBS CONVERSION
 	song_gbs MUS_B_ARENA, gbs_battletowertheme_Header, 0, 0	@ Battle Arena BGM TODO: GBS CONVERSION
@@ -910,8 +911,16 @@ gGBSSongTable:: @ "gbs_hg_" tracks are new tracks that were transcribed from HGS
 	song_gbs MUS_B_DOME, gbs_battletowertheme_Header, 0, 0	@ Battle Dome Battle & Pre-Battle Rooms BGM TODO: GBS CONVERSION
 	song_gbs MUS_B_PIKE, gbs_battletowertheme_Header, 0, 0	@ Battle Pike BGM (All Rooms) TODO: GBS CONVERSION
 	song_gbs MUS_B_FACTORY, gbs_battletowertheme_Header, 0, 0	@ Battle Factory BGM (All Rooms) TODO: GBS CONVERSION
+	song_gbs MUS_B_TOWER, gbs_battletowertheme_Header, 0, 0	@ BF Battle Tower Lobby, Corridor, Elevator, Battle & Multi Rooms BGM (the song the HnS Tower maps actually use) TODO: GBS CONVERSION
 	song_gbs MUS_HG_B_TOWER, gbs_battletowertheme_Header, 0, 0	@ BF Battle Tower Battle Rooms & Corridor BGM
 	song_gbs MUS_HG_B_TOWER_RECEPTION, gbs_battletowerlobby_Header, 0, 0	@ BF Battle Tower Lobby & Elevator BGM
+
+	@ Emerald songs the BF maps still request. GetBattleBGM sends every Frontier battle here:
+	@ MAPSEC_BATTLE_FRONTIER sits outside the Johto/Kanto/Alola/Hisui mapsec ranges, so
+	@ GetCurrentRegion() returns REGION_HOENN and the HnS trainer branches never match.
+	song_gbs MUS_VS_TRAINER, gbs_johtotrainerbattle_Header, 0, 0	@ BGM during Battle Frontier & link battles TODO: GBS CONVERSION
+	song_gbs MUS_POKE_CENTER, gbs_pokemoncenter_Header, 0, 0	@ BF Pokémon Center 1F & 2F BGM (HnS uses MUS_HG_POKE_CENTER everywhere else) TODO: GBS CONVERSION
+	song_gbs MUS_POKE_MART, gbs_hg_poke_mart_Header, 0, 0	@ BF Mart BGM (HnS uses MUS_HG_POKE_MART everywhere else) TODO: GBS CONVERSION
 	
 	@ ---------------------------------- @
 
