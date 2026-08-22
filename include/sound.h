@@ -47,5 +47,6 @@ bool8 IsSEPlaying(void);
 bool8 IsBGMPlaying(void);
 bool8 IsSpecialSEPlaying(void);
 void Task_DuckBGMForPokemonCry(u8 taskId);
+void RestorePSGMasterVolume(void);
 
 #endif // GUARD_SOUND_H

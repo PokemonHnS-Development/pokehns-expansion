@@ -1590,6 +1590,8 @@ static void Task_UseGBPlayer(u8 taskId)
         if (FlagGet(FLAG_SYS_GBS_ENABLED))
         {
             FlagClear(FLAG_SYS_GBS_ENABLED);
+            // GBS leaves NR50 turned down; nothing else ever puts it back.
+            RestorePSGMasterVolume();
             text = gText_GBPlayerOff;
         }
         else

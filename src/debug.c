@@ -3994,9 +3994,15 @@ static void Debug_Sound_ToggleGBS(void)
         return;
 
     if (FlagGet(FLAG_SYS_GBS_ENABLED))
+    {
         FlagClear(FLAG_SYS_GBS_ENABLED);
+        // Same as the GB Player item: GBS leaves NR50 turned down behind it.
+        RestorePSGMasterVolume();
+    }
     else
+    {
         FlagSet(FLAG_SYS_GBS_ENABLED);
+    }
 
     PlayNewMapMusic(MUS_DUMMY);
     StopMapMusic();

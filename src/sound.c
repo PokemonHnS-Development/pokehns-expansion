@@ -612,6 +612,17 @@ static void RestoreBGMVolumeAfterPokemonCry(void)
         CreateTask(Task_DuckBGMForPokemonCry, 80);
 }
 
+// GBSMain writes NR50 (the PSG master volume) every frame a GBS track runs, at a
+// level two steps below full. m4a sets NR50 = 0x77 exactly once, during sound init,
+// and never again - so when GBS stops driving it the register simply keeps whatever
+// GBS left there, and every CGB-voiced sound stays quiet until the game is rebooted.
+// Worse, stopping mid-fade can strand it at 0x00. Call this whenever the GB Player is
+// switched off. Switching it on needs nothing: GBSMain overwrites NR50 next frame.
+void RestorePSGMasterVolume(void)
+{
+    REG_NR50 = 0x77;
+}
+
 void PlayBGM(u16 songNum)
 {
     if (gDisableMusic)
