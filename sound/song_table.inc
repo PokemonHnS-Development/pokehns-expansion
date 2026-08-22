@@ -909,7 +909,7 @@ gGBSSongTable:: @ "gbs_hg_" tracks are new tracks that were transcribed from HGS
 	@ ---------------------------------- @
 
 	@ Battle Frontier
-	@song_gbs MUS_LILYCOVE_MUSEUM, gbs_TODO:_Header, 0, 0	@ Location - Battle Frontier Ranking Hall TODO: GBS CONVERSION
+	song_gbs MUS_LILYCOVE_MUSEUM, gbs_mus_lilycove_museum_Header, 0, 0	@ Location - Battle Frontier Ranking Hall TODO: GBS CONVERSION
 	@song_gbs MUS_VS_FRONTIER_BRAIN, gbs_TODO:_Header, 0, 0	@ BGM during Frontier Brain battles TODO: GBS CONVERSION
 	song_gbs MUS_B_TOWER_RS, gbs_battletowerlobby_Header, 0, 0	@ Battle Frontier Lounges, Exchange, Reception, Scotts House BGM TODO: GBS CONVERSION
 	song_gbs MUS_B_FRONTIER, gbs_battletowertheme_Header, 0, 0 @ Battle Frontier Outside East/West BGM TODO: GBS CONVERSION
