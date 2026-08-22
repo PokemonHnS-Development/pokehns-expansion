@@ -310,6 +310,18 @@ void FadeInNewBGM(u16 songNum, u8 speed)
         songNum = 0;
     if (gSaveblock3.challengeSettings.musicOnOff)
         songNum = 0;
+
+    // GBS drives master volume through NR50, which is only 3 bits per side, so a
+    // fade-in there steps audibly through about six levels instead of ramping,
+    // and the bottom third of the range rounds down to silence. Hard-start the
+    // track instead - the caller's fade-out is unaffected, and m4a playback keeps
+    // the smooth fade below. See GetMasterVolumeFromFade in src/gbs.c.
+    if (isGBSEnabled)
+    {
+        m4aSongNumStart(songNum, TRUE);
+        return;
+    }
+
     m4aSongNumStart(songNum, isGBSEnabled);
     m4aMPlayImmInit(&gMPlayInfo_BGM);
     m4aMPlayVolumeControl(&gMPlayInfo_BGM, TRACKS_ALL, 0);

@@ -780,7 +780,7 @@ bool32 GBSMain(struct MusicPlayerInfo *info, struct MusicPlayerTrack *track)
         masterVolume = gbsTrack->channelVolume;
         gbsTrack->volumeChange = FALSE;
     }
-    // Shift GBS master output down by 1 volume step (each nibble = one SO channel, 0-7)
+    // Shift GBS master output down by 2 volume steps (each nibble = one SO channel, 0-7)
     {
         u32 left  = (masterVolume >> 4) & 0x7;
         u32 right = masterVolume & 0x7;
@@ -802,10 +802,18 @@ void ply_gbs_switch(struct MusicPlayerInfo *mplayInfo, struct MusicPlayerTrack *
     if (gbChannel < 8)
     {
         struct GBSTrack *gbsTrack = (struct GBSTrack *)track;
+        // volX is m4a's fade scalar, written by FadeOutBody / m4aMPlayVolumeControl
+        // and read back in GBSMain. GBSTrack mirrors MusicPlayerTrack's layout so
+        // both engines share this byte; it has to survive the wipe below, or the
+        // fade state is lost and GetMasterVolumeFromFade cannot tell "faded out"
+        // from "uninitialised".
+        u8 volXBackup = track->volX;
+
         // Clear out all m4a data.
         memset(gbsTrack, 0, sizeof(*gbsTrack));
 
         // Set up track with new GBS data (and restore some important info).
+        gbsTrack->volX = volXBackup;
         gbsTrack->channelID = (gbChannel % 4) + 1;
         if (gbChannel >= 4)
         {
@@ -856,18 +864,13 @@ static inline bool32 IsM4AUsingCGBChannel(int channel)
     return !!(soundInfo->cgbChans[channel].statusFlags & SOUND_CHANNEL_SF_ON);
 }
 
+// volX is m4a's 0..64 fade scalar: 0 is silent, 64 is full. Do not special-case 0
+// here - ply_gbs_switch preserves volX precisely so that a zero arriving here
+// always means "faded out", never "uninitialised".
 static u32 GetMasterVolumeFromFade(u32 volX)
 {
     // Respect the master M4A fade control.
-    u32 masterVolume = 0;
-    if (volX != 0)
-    {
-        masterVolume = volX / 8;
-    }
-    else
-    {
-        masterVolume = 7;
-    }
+    u32 masterVolume = volX / 8;
 
     if (masterVolume > 7)
     {
