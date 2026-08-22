@@ -374,6 +374,8 @@ struct GBSSongItem
 
 extern const struct MusicPlayer gMPlayTable[];
 extern const struct Song gSongTable[];
+
+const struct Song *GetSong(int songID, bool32 gbsEnabled);
 extern const struct GBSSongItem gGBSSongTable[];
 
 

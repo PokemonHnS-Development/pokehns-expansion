@@ -623,10 +623,39 @@ void PlayBGM(u16 songNum)
     m4aSongNumStart(songNum, FlagGet(FLAG_SYS_GBS_ENABLED));
 }
 
+// GBS sound effects have to be started on a cleared music player. SE1 and SE2 both
+// have checkSongPriority set (unk_B, from the 4th field of gMPlayTable), so MPlayStart
+// can refuse to take the player over while another song is still latched on it. The
+// GBS track then never plays, with silence as the only symptom. Fanfares avoid this
+// because PlayFanfareByFanfareNum stops the players before starting - sound effects
+// had no equivalent step, which is why gGBSSongTable had no working SE_* entry at all.
+//
+// Only songs that actually resolve to a GBS track are touched, so ordinary m4a sound
+// effects keep their existing overlap behaviour, and only the single player the track
+// will use is stopped. Any new song_gbs SE_* mapping works through this for free.
+static void ClearPlayerForGBSSoundEffect(u16 songNum, bool32 isGBSEnabled)
+{
+    const struct Song *song;
+
+    if (!isGBSEnabled)
+        return;
+
+    song = GetSong(songNum, TRUE);
+    if (song == &gSongTable[songNum])
+        return; // No GBS mapping - leave m4a to mix it as usual.
+
+    m4aMPlayStop(gMPlayTable[song->ms].info);
+}
+
 void PlaySE(u16 songNum)
 {
     if (gDisableMapMusicChangeOnMapLoad == 0)
-        m4aSongNumStart(songNum, FlagGet(FLAG_SYS_GBS_ENABLED));
+    {
+        bool32 isGBSEnabled = FlagGet(FLAG_SYS_GBS_ENABLED);
+
+        ClearPlayerForGBSSoundEffect(songNum, isGBSEnabled);
+        m4aSongNumStart(songNum, isGBSEnabled);
+    }
 }
 
 void PlaySECursorMove(u16 songNum)
@@ -638,7 +667,10 @@ void PlaySECursorMove(u16 songNum)
 
 void PlaySE12WithPanning(u16 songNum, s8 pan)
 {
-    m4aSongNumStart(songNum, FlagGet(FLAG_SYS_GBS_ENABLED));
+    bool32 isGBSEnabled = FlagGet(FLAG_SYS_GBS_ENABLED);
+
+    ClearPlayerForGBSSoundEffect(songNum, isGBSEnabled);
+    m4aSongNumStart(songNum, isGBSEnabled);
     m4aMPlayImmInit(&gMPlayInfo_SE1);
     m4aMPlayImmInit(&gMPlayInfo_SE2);
     m4aMPlayPanpotControl(&gMPlayInfo_SE1, TRACKS_ALL, pan);
@@ -647,14 +679,20 @@ void PlaySE12WithPanning(u16 songNum, s8 pan)
 
 void PlaySE1WithPanning(u16 songNum, s8 pan)
 {
-    m4aSongNumStart(songNum, FlagGet(FLAG_SYS_GBS_ENABLED));
+    bool32 isGBSEnabled = FlagGet(FLAG_SYS_GBS_ENABLED);
+
+    ClearPlayerForGBSSoundEffect(songNum, isGBSEnabled);
+    m4aSongNumStart(songNum, isGBSEnabled);
     m4aMPlayImmInit(&gMPlayInfo_SE1);
     m4aMPlayPanpotControl(&gMPlayInfo_SE1, TRACKS_ALL, pan);
 }
 
 void PlaySE2WithPanning(u16 songNum, s8 pan)
 {
-    m4aSongNumStart(songNum, FlagGet(FLAG_SYS_GBS_ENABLED));
+    bool32 isGBSEnabled = FlagGet(FLAG_SYS_GBS_ENABLED);
+
+    ClearPlayerForGBSSoundEffect(songNum, isGBSEnabled);
+    m4aSongNumStart(songNum, isGBSEnabled);
     m4aMPlayImmInit(&gMPlayInfo_SE2);
     m4aMPlayPanpotControl(&gMPlayInfo_SE2, TRACKS_ALL, pan);
 }

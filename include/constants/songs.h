@@ -748,6 +748,13 @@
 #define PHONEME_ID(song)             ((song) - FIRST_PHONEME_SONG)
 #define PHONEME_ID_NONE              0xFF
 
+// Plays the exact same track as SE_M_MORNING_SUN, but under its own song ID.
+// The GBS table is keyed by song ID, so mapping SE_M_MORNING_SUN itself would also
+// change the Morning Sun *move* sound in battle. Giving the Pokemon Center's
+// "Even Faster Joy" heal its own ID lets it carry a GBS mapping in isolation.
+// Keep this last: gSongTable is indexed by song ID, so new IDs must be appended.
+#define SE_FASTER_JOY_HEAL           (LAST_PHONEME_SONG + 1)
+
 #define MUS_ROUTE118                 0x7FFF  // Map is split into 2 music sections. controlled by GetCurrLocationDefaultMusic().
 #define MUS_NONE                     0xFFFF
 

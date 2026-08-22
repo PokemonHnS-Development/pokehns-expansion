@@ -810,6 +810,11 @@ gSongTable::
 	song ph_nurse_held, MUSIC_PLAYER_SE2, 2
 	song ph_nurse_solo, MUSIC_PLAYER_SE2, 2
 
+	@ SE_FASTER_JOY_HEAL - deliberately points at the same header as SE_M_MORNING_SUN
+	@ (see include/constants/songs.h). Identical with the GB Player off; the separate ID
+	@ exists purely so gGBSSongTable can remap the heal without touching the move.
+	song se_m_morning_sun, MUSIC_PLAYER_SE1, 1
+
 	.align 2
 dummy_song_header:
 	.byte 0, 0, 0, 0
@@ -848,6 +853,11 @@ gGBSSongTable:: @ "gbs_hg_" tracks are new tracks that were transcribed from HGS
 	@song_gbs MUS_HG_OBTAIN_ACCESSORY, 2, 2 @ Unused in HnS
 	@song_gbs MUS_HG_OBTAIN_ARCADE_POINTS, 2, 2 @ Unused in HnS
 	@song_gbs MUS_HG_OBTAIN_CASTLE_POINTS, 2, 2 @ Unused in HnS
+
+	@ Pokemon Center "Even Faster Joy" heal. Mapped via the dedicated SE_FASTER_JOY_HEAL
+	@ ID rather than SE_M_MORNING_SUN, so the Morning Sun move keeps its normal battle
+	@ sound - mapping the move's ID here would change both.
+	song_gbs SE_FASTER_JOY_HEAL, gbs_sfx_morningsun_Header, 2, 2
 
 	@ ---------------------------------- @
 
