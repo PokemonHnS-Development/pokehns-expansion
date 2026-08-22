@@ -332,8 +332,8 @@ OlivineLighthouse_EventScript_JasmineDeliverPotion::
 	turnobject LOCALID_LIGHTHOUSE_JASMINE, DIR_NORTH
 	delay 20
 	turnobject LOCALID_LIGHTHOUSE_AMPHAROS, DIR_SOUTH
-	playse MUS_HEAL
-	waitse
+	playfanfare MUS_HEAL
+	waitfanfare
 	msgbox OlivineLighthouse_Text_JasmineAmphyHowFeeling, MSGBOX_DEFAULT
 	fadescreen FADE_TO_WHITE
 	playse SE_M_THUNDERBOLT2
