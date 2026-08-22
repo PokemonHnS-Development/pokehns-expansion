@@ -211,6 +211,13 @@ void PlayFanfareByFanfareNum(u8 fanfareNum)
     bool32 isGBSEnabled = FlagGet(FLAG_SYS_GBS_ENABLED);
     m4aMPlayStop(&gMPlayInfo_BGM);
     m4aMPlayStop(&gMPlayInfo_SE2);
+    // GBS writes the four CGB hardware channels directly, and UpdateCGBChannel skips
+    // every write while m4a still owns one (IsM4AUsingCGBChannel in src/gbs.c), so an
+    // SE left running on SE1 silences the fanfare outright instead of mixing with it.
+    // m4a handles that overlap fine on its own, so only clear SE1 when GBS is active -
+    // this stays a no-op in the Emerald/FRLG builds, where the flag can never be set.
+    if (isGBSEnabled)
+        m4aMPlayStop(&gMPlayInfo_SE1);
 #if IS_HNS
     songNum = sFanfaresHnS[fanfareNum].songNum;
     sFanfareCounter = sFanfaresHnS[fanfareNum].duration;
