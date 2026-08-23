@@ -591,7 +591,9 @@ extern const u8 RustboroCity_Gym_EventScript_RegisterRoxanne[];
 extern const u8 MossdeepCity_SpaceCenter_2F_EventScript_RivalRayquazaCall[];
 extern const u8 SSTidalCorridor_EventScript_ReachedStepCount[];
 extern const u8 EventScript_FallDownHoleMtPyre[];
+#if IS_HNS
 extern const u8 GoldenrodCity_RadioTower_5F_EventScript_Petrel[];
+#endif
 
 // Secret Base
 extern const u8 SecretBase_EventScript_PC[];

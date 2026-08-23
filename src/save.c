@@ -922,13 +922,17 @@ u8 LoadGameSave(u8 saveType)
     }
     if (gSaveBlock1Ptr->saveVersion < 1)
     {
+#if IS_HNS
         FlagSet(FLAG_ENABLE_CONDITION);
+#endif
         gSaveBlock1Ptr->saveVersion = 1;
     }
     if (gSaveBlock1Ptr->saveVersion < 2)
     {
+#if IS_HNS
         FlagClear(FLAG_ITEM_ICEPATH4_TM_AVALANCHE);
         FlagClear(FLAG_ITEM_VICTORYROAD1_TM_EARTHQUAKE);
+#endif
         gSaveBlock1Ptr->saveVersion = 2;
     }
 
