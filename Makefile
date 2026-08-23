@@ -1,9 +1,16 @@
-GAME_VERSION ?= EMERALD
-TITLE        ?= POKEMON EMER
+GAME_VERSION ?= POKEMON_HNS
+TITLE        ?= POKEMON HNS
 GAME_CODE    ?= BPEE
-BUILD_NAME   ?= emerald
-MAP_VERSION  ?= emerald
+BUILD_NAME   ?= hns
+MAP_VERSION  ?= hns
 
+ifeq (emerald, $(or $(BUILD), $(MAKECMDGOALS)))
+	GAME_VERSION 	:= EMERALD
+	TITLE       	:= POKEMON EMER
+	GAME_CODE   	:= BPEE
+	BUILD_NAME  	:= emerald
+	MAP_VERSION 	:= emerald
+else
 ifeq (firered, $(or $(BUILD), $(MAKECMDGOALS)))
   	GAME_VERSION 	:= FIRERED
 	TITLE       	:= POKEMON FIRE
@@ -24,6 +31,7 @@ ifeq (hns, $(or $(BUILD), $(MAKECMDGOALS)))
 	GAME_CODE   	:= BPEE
 	BUILD_NAME  	:= hns
 	MAP_VERSION 	:= hns
+endif
 endif
 endif
 endif

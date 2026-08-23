@@ -15,7 +15,7 @@ env:
   DEPRECATED_ERROR: 1
 
 jobs:
-  build-emerald:
+  build-hns:
     if: github.actor != 'allcontributors[bot]'
     runs-on: ubuntu-latest
     steps:
@@ -47,9 +47,7 @@ jobs:
             tools/wav2agb/wav2agb
           key: tools-${{ runner.os }}-${{ hashFiles('tools/*/Makefile', 'tools/**/*.c', 'tools/**/*.cpp', 'tools/**/*.h') }}
 
-      - name: ROM (Emerald)
-        env:
-          GAME_VERSION: EMERALD
+      - name: ROM (HnS)
         run: make -j$(nproc) -O all
 
   build-firered:
@@ -155,8 +153,6 @@ jobs:
           key: tools-${{ runner.os }}-${{ hashFiles('tools/*/Makefile', 'tools/**/*.c', 'tools/**/*.cpp', 'tools/**/*.h') }}
 
       - name: Release
-        env:
-          GAME_VERSION: EMERALD
         run: make -j$(nproc) release
 
   test:
@@ -195,7 +191,6 @@ jobs:
 
       - name: Test
         env:
-          GAME_VERSION: EMERALD
           TEST: 1
         run: make -j$(nproc) check
 
@@ -204,7 +199,7 @@ jobs:
   build:
     if: github.actor != 'allcontributors[bot]'
     runs-on: ubuntu-latest
-    needs: [build-emerald, build-firered, build-leafgreen, release, test]
+    needs: [build-hns, build-firered, build-leafgreen, release, test]
     steps:
       - name: All builds passed
         run: echo "All builds and tests passed."
