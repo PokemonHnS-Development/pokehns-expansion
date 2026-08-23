@@ -1,6 +1,7 @@
 #ifndef GUARD_FAKE_RTC_UTIL_H
 #define GUARD_FAKE_RTC_UTIL_H
 
+#include "global.h"
 #include "siirtc.h"
 #include "config/overworld.h"
 

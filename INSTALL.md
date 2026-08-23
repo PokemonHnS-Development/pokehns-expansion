@@ -46,18 +46,18 @@ Only tested on x86_64 based systems.
 
 [Chrome OS instructions](docs/install/chromeos/CHROME_OS.md)
 
-# Building pokeemerald-expansion
-Follow these steps to build `pokeemerald-expansion`.
+# Building pokemonHnS-expansion
+Follow these steps to build `pokemonHnS-expansion`.
 1. Navigate to the directory you want to keep the project in, be aware of any system specific limitations.
-2. Download `pokeemerald-expansion` with `git`
+2. Download `pokemonHnS-expansion` with `git`
 
     ```console
-    git clone https://github.com/rh-hideout/pokeemerald-expansion
+    git clone https://github.com/PokemonHnS-Development/pokehns-expansion
     ```
 3. Navigate to the newly downloaded project.
 
     ```console
-    cd pokeemerald-expansion
+    cd pokehns-expansion
     ```
 4. Build the project.
 
@@ -67,17 +67,16 @@ Follow these steps to build `pokeemerald-expansion`.
 5. If everything worked correctly, something very similar to this should be seen.
 
     ```console
-    arm-none-eabi-ld: warning: ../../pokeemerald.elf has a LOAD segment with RWX permissions
     Memory region         Used Size  Region Size  %age Used
-               EWRAM:      243354 B       256 KB     92.83%
-               IWRAM:       30492 B        32 KB     93.05%
-                 ROM:    26072244 B        32 MB     77.70%
-    cd build/modern && arm-none-eabi-ld  -T ../../ld_script_modern.ld --print-memory-usage -o ../../pokeemerald.elf <objs> <libs> | cat
-    tools/gbafix/gbafix pokeemerald.elf -t"POKEMON EMER" -cBPEE -m01 -r0 --silent
-    arm-none-eabi-objcopy -O binary pokeemerald.elf pokeemerald.gba
-    tools/gbafix/gbafix pokeemerald.gba -p --silent
+               EWRAM:      247380 B       256 KB     94.37%
+               IWRAM:       25692 B        32 KB     78.41%
+                 ROM:    31681852 B        32 MB     94.42%
+    cd build/hns && arm-none-eabi-ld -Map ../../pokehns.map --print-memory-usage --gc-sections -T ../../ld_script_modern.ld -o ../../pokehns.elf <objs> <libs> | cat
+    tools/gbafix/gbafix pokehns.elf -t"POKEMON HNS" -cBPEE -m01 -r0 --silent
+    arm-none-eabi-objcopy -O binary pokehns.elf pokehns.gba
+    tools/gbafix/gbafix pokehns.gba -p --silent
     ```
-    And the build ROM will be in the directory as `pokeemerald.gba`.
+    And the built ROM will be in the directory as `pokehns.gba`.
 
 # Building guidance
 
