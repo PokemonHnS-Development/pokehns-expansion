@@ -679,12 +679,18 @@ MauvilleCity_GameCorner_EventScript_NoRoomForTM::
 	end
 
 MauvilleCity_GameCorner_EventScript_YouAlreadyHaveThis::
+#if IS_HNS
+    msgbox GoldenrodCity_GameCorner_PrizeRoom_Text_YouAlreadyHaveThis, MSGBOX_AUTOCLOSE
+#else
     msgbox MauvilleCity_GameCorner_Text_YouAlreadyHaveThis, MSGBOX_AUTOCLOSE
+#endif
 	goto MauvilleCity_GameCorner_EventScript_ReturnToChooseTMPrize
 	end
 
+#if !IS_HNS
 MauvilleCity_GameCorner_Text_YouAlreadyHaveThis:
 	.string "You already have this TM.$"
+#endif
 
 MauvilleCity_GameCorner_EventScript_CancelTMSelect::
 	msgbox MauvilleCity_GameCorner_Text_OhIsThatSo, MSGBOX_DEFAULT
