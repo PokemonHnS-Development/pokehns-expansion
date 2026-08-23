@@ -4115,6 +4115,14 @@ static u32 GetMonHoldEffect(struct Pokemon *mon)
     return holdEffect;
 }
 
+// The Gen6+ "everyone shares" exp split carries a participant penalty
+// (B_EXPALL_PARTICIPANT_NUM/DEN). That penalty is the cost of the Exp Share
+// being switched on, so when it is off we fall back to the classic even split.
+static bool32 UseClassicExpSplit(void)
+{
+    return B_SPLIT_EXP < GEN_6 || !IsGen6ExpShareEnabled();
+}
+
 static void Cmd_getexp(void)
 {
     CMD_ARGS(u8 battler);
@@ -4189,7 +4197,7 @@ static void Cmd_getexp(void)
             if (B_TRAINER_EXP_MULTIPLIER <= GEN_7 && gBattleTypeFlags & BATTLE_TYPE_TRAINER)
                 calculatedExp = (calculatedExp * 150) / 100;
 
-            if (B_SPLIT_EXP < GEN_6)
+            if (UseClassicExpSplit())
             {
                 if (viaExpShare) // at least one mon is getting exp via exp share
                 {
@@ -4282,7 +4290,7 @@ static void Cmd_getexp(void)
                         gBattleStruct->battlerExpReward = 0;
 
                     if ((holdEffect == HOLD_EFFECT_EXP_SHARE || IsGen6ExpShareEnabled())
-                        && (B_SPLIT_EXP < GEN_6 || gBattleStruct->battlerExpReward == 0)) // only give exp share bonus in later gens if the mon wasn't sent out
+                        && (UseClassicExpSplit() || gBattleStruct->battlerExpReward == 0)) // only give exp share bonus in later gens if the mon wasn't sent out
                     {
                         gBattleStruct->battlerExpReward += GetSoftLevelCapExpValue(gPlayerParty[*expMonId].level, gBattleStruct->expShareExpValue);
                     }
@@ -11990,11 +11998,11 @@ void ApplyExperienceMultipliers(s32 *expAmount, u8 expGetterMonId, u8 faintedBat
     }
 
     u8 expMult = gSaveBlock3Ptr->challengeSettings.tx_Challenges_ExpMultiplier;
-    if (expMult == 3)
+    if (expMult == OPTIONS_EXP_MULTIPLIER_0X)
         *expAmount = 0;
-    else if (expMult == 2)
+    else if (expMult == OPTIONS_EXP_MULTIPLIER_2X)
         *expAmount = *expAmount * 2;
-    else if (expMult == 1)
+    else if (expMult == OPTIONS_EXP_MULTIPLIER_1_5X)
         *expAmount = (*expAmount * 3) / 2;
 }
 

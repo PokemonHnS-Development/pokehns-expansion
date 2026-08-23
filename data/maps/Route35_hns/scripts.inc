@@ -33,7 +33,22 @@ Route35_EventScript_BirdKeeperBryan::
 	end
 
 Route35_EventScript_JugglerIrwin::
-	trainerbattle_single TRAINER_IRWIN_HNS, Route35_Text_JugglerIrwinSeen, Route35_Text_JugglerIrwinBeaten
+	trainerbattle_single TRAINER_IRWIN_HNS, Route35_Text_JugglerIrwinSeen, Route35_Text_JugglerIrwinBeaten, Route35_EventScript_RegisterIrwin
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route35_EventScript_RematchIrwin
+	msgbox Route35_Text_JugglerIrwinAfter, MSGBOX_AUTOCLOSE
+	end
+
+Route35_EventScript_RegisterIrwin::
+	special PlayerFaceTrainerAfterBattle
+	waitmovement 0
+	msgbox Route35_Text_IrwinRegister, MSGBOX_DEFAULT
+	register_matchcall TRAINER_IRWIN_HNS
+	release
+	end
+
+Route35_EventScript_RematchIrwin::
+	trainerbattle_rematch TRAINER_IRWIN_HNS, Route35_Text_JugglerIrwinSeen, Route35_Text_JugglerIrwinBeaten
 	msgbox Route35_Text_JugglerIrwinAfter, MSGBOX_AUTOCLOSE
 	end
 
@@ -171,6 +186,11 @@ Route35_Text_BugCatcherArnieBeaten:
 Route35_Text_BugCatcherArnieAfter:
 	.string "My VENONAT won me the Bug-Catching\n"
 	.string "Contest at the NATIONAL PARK.$"
+
+Route35_Text_IrwinRegister:
+	.string "I was going to dazzle you with my\n"
+	.string "prize POKéMON.\p"
+	.string "But your prowess electrified me!$"
 
 Route35_Text_ArnieRegister:
 	.string "My VENONAT won me the Bug-Catching\n"

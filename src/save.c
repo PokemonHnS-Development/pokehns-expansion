@@ -12,6 +12,7 @@
 #include "trainer_hill.h"
 #include "link.h"
 #include "constants/game_stat.h"
+#include "constants/rematches.h"
 #include "event_data.h"
 
 static u16 CalculateChecksum(void *, u16);
@@ -930,6 +931,32 @@ u8 LoadGameSave(u8 saveType)
         FlagClear(FLAG_ITEM_ICEPATH4_TM_AVALANCHE);
         FlagClear(FLAG_ITEM_VICTORYROAD1_TM_EARTHQUAKE);
         gSaveBlock1Ptr->saveVersion = 2;
+    }
+
+    if (gSaveBlock1Ptr->saveVersion < 3)
+    {
+#if FREE_MATCH_CALL == FALSE
+        // Irwin, Derek and Beverly used to fill all five rematch slots with their
+        // first-battle trainer ID, so SetRematchIdForTrainer counted every slot as
+        // already beaten and stored REMATCHES_COUNT. Now that they have real tiers,
+        // knock any pending rematch back to the first one so it lines up with the
+        // tier the player will actually be handed. Harmless on non-HnS builds, where
+        // these slots are Brooke/Jessica/John & Jay and the value is only ever
+        // tested against zero.
+        static const u8 sRematchIdsToReset[] = {
+            REMATCH_BROOKE,       // Irwin
+            REMATCH_JESSICA,      // Derek
+            REMATCH_JOHN_AND_JAY, // Beverly
+        };
+        u32 i;
+
+        for (i = 0; i < ARRAY_COUNT(sRematchIdsToReset); i++)
+        {
+            if (gSaveBlock1Ptr->trainerRematches[sRematchIdsToReset[i]] != 0)
+                gSaveBlock1Ptr->trainerRematches[sRematchIdsToReset[i]] = 1;
+        }
+#endif //FREE_MATCH_CALL
+        gSaveBlock1Ptr->saveVersion = 3;
     }
 
     // Add version migration steps here:

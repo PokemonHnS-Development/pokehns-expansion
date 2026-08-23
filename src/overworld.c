@@ -1784,7 +1784,10 @@ void UpdateTimeOfDay(void)
 
     if (IS_HNS)
     {
-        if (gTimeOfDay == TIME_NIGHT || gTimeOfDay == TIME_EVENING)
+        // HnS wild encounter tables only define Day and Night variants, so TIME_MORNING
+        // and TIME_EVENING both fall back to the Day table (OW_TIME_OF_DAY_FALLBACK).
+        // The overworld mons must swap on the same boundary, i.e. only at TIME_NIGHT.
+        if (gTimeOfDay == TIME_NIGHT)
         {
             FlagClear(FLAG_NIGHT_POKEMON);
             FlagSet(FLAG_DAY_POKEMON);
@@ -1800,6 +1803,13 @@ void UpdateTimeOfDay(void)
 #undef MORNING_HOUR_MIDDLE
 #undef TIME_BLEND_WEIGHT
 #undef DEFAULT_WEIGHT
+
+// The apparent hour of day, honouring the debug time-of-day override.
+u32 GetTimeOfDayHours(void)
+{
+    RtcCalcLocalTime();
+    return sHoursOverride ? sHoursOverride : gLocalTime.hours;
+}
 
 // Whether a map type is naturally lit/outside
 bool32 MapHasNaturalLight(enum MapType mapType)

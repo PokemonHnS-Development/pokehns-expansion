@@ -19,7 +19,8 @@ SinjohRuins_Lab_EventScript_TriggerIntroTop::
 	applymovement2 LOCALID_SINJOHRUINS_LAB_STEVEN, Common_Movement_ExclamationMark
 	delay 55
 	waitmovement LOCALID_SINJOHRUINS_LAB_STEVEN
-	msgbox SinjohRuins_Lab_Text_StevenIntroCutscene1, MSGBOX_AUTOCLOSE
+	msgbox SinjohRuins_Lab_Text_StevenIntroCutscene1, MSGBOX_DEFAULT
+	closemessage
 	applymovement2 LOCALID_PLAYER, Common_Movement_WalkDown1
 	applymovement2 LOCALID_SINJOHRUINS_LAB_STEVEN, SinjohRuins_Lab_Movement_StevenMeetPlayer
 	waitmovement 0
@@ -32,7 +33,8 @@ SinjohRuins_Lab_EventScript_TriggerIntroMid::
 	applymovement2 LOCALID_SINJOHRUINS_LAB_STEVEN, Common_Movement_ExclamationMark
 	delay 55
 	waitmovement LOCALID_SINJOHRUINS_LAB_STEVEN
-	msgbox SinjohRuins_Lab_Text_StevenIntroCutscene1, MSGBOX_AUTOCLOSE
+	msgbox SinjohRuins_Lab_Text_StevenIntroCutscene1, MSGBOX_DEFAULT
+	closemessage
 	applymovement2 LOCALID_SINJOHRUINS_LAB_STEVEN, SinjohRuins_Lab_Movement_StevenMeetPlayer
 	waitmovement LOCALID_SINJOHRUINS_LAB_STEVEN
 	goto SinjohRuins_Lab_EventScript_TriggerIntro
@@ -43,7 +45,8 @@ SinjohRuins_Lab_EventScript_TriggerIntroBot::
 	applymovement2 LOCALID_SINJOHRUINS_LAB_STEVEN, Common_Movement_ExclamationMark
 	delay 55
 	waitmovement LOCALID_SINJOHRUINS_LAB_STEVEN
-	msgbox SinjohRuins_Lab_Text_StevenIntroCutscene1, MSGBOX_AUTOCLOSE
+	msgbox SinjohRuins_Lab_Text_StevenIntroCutscene1, MSGBOX_DEFAULT
+	closemessage
 	applymovement2 LOCALID_PLAYER, Common_Movement_WalkUp1
 	applymovement2 LOCALID_SINJOHRUINS_LAB_STEVEN, SinjohRuins_Lab_Movement_StevenMeetPlayer
 	waitmovement 0
@@ -52,7 +55,8 @@ SinjohRuins_Lab_EventScript_TriggerIntroBot::
 
 SinjohRuins_Lab_EventScript_TriggerIntro::
 	turnobject LOCALID_PLAYER, DIR_EAST
-	msgbox SinjohRuins_Lab_Text_StevenIntroCutscene2, MSGBOX_AUTOCLOSE
+	msgbox SinjohRuins_Lab_Text_StevenIntroCutscene2, MSGBOX_DEFAULT
+	closemessage
 	applymovement2 LOCALID_SINJOHRUINS_LAB_STEVEN, SinjohRuins_Lab_Movement_StevenSitsDown
 	delay 10
 	applymovement LOCALID_PLAYER, SinjohRuins_Lab_Movement_PlayerGoesToTable
@@ -63,12 +67,13 @@ SinjohRuins_Lab_EventScript_TriggerIntro::
 	waitmovement LOCALID_NEWSINJOH_LAB_LINGUIST
 	applymovement2 LOCALID_SINJOHRUINS_LAB_STEVEN, Common_Movement_WalkInPlaceRight
 	waitmovement 0
-	msgbox SinjohRuins_Lab_Text_StevenIntroCutscene3, MSGBOX_AUTOCLOSE
+	msgbox SinjohRuins_Lab_Text_StevenIntroCutscene3, MSGBOX_DEFAULT
+	closemessage
 	delay 10
-	waitmovement 0
 	applymovement2 LOCALID_NEWSINJOH_LAB_LINGUIST, Common_Movement_WalkInPlaceDown
 	waitmovement 0
-	msgbox SinjohRuins_Lab_Text_StevenIntroCutscene4, MSGBOX_AUTOCLOSE
+	msgbox SinjohRuins_Lab_Text_StevenIntroCutscene4, MSGBOX_DEFAULT
+	closemessage
 	delay 10
 	applymovement LOCALID_NEWSINJOH_LAB_LINGUIST, SinjohRuins_Lab_Movement_LinguistWalkUp
 	applymovement2 LOCALID_SINJOHRUINS_LAB_STEVEN, Common_Movement_WalkInPlaceRight
@@ -81,7 +86,8 @@ SinjohRuins_Lab_EventScript_IntroChoice::
 	goto SinjohRuins_Lab_EventScript_IntroChoice
 
 SinjohRuins_Lab_EventScript_IntroChoseYes::
-	msgbox SinjohRuins_Lab_Text_StevenIntroCutscene6, MSGBOX_AUTOCLOSE
+	msgbox SinjohRuins_Lab_Text_StevenIntroCutscene6, MSGBOX_DEFAULT
+	closemessage
 	setvar VAR_SINJOH_STORYLINE, 6
 	setvar VAR_NOBLE_SNEASLER, 1
 	setvar VAR_NOBLE_OVERQWIL, 1
@@ -231,7 +237,8 @@ SinjohRuins_Lab_FinalPlateScene::
 	applymovement LOCALID_SINJOHRUINS_LAB_STEVEN, Common_Movement_WalkDown1
 	turnobject LOCALID_NEWSINJOH_LAB_LINGUIST, DIR_SOUTH
 	delay 30
-	msgbox SinjohRuins_Lab_Text_FinalPlateScene1, MSGBOX_AUTOCLOSE
+	msgbox SinjohRuins_Lab_Text_FinalPlateScene1, MSGBOX_DEFAULT
+	closemessage
 	dofieldeffectsparkle 3, 8, 0
 	waitfieldeffect FLDEFF_SPARKLE
 	setvar VAR_RESULT, 3
@@ -247,7 +254,8 @@ SinjohRuins_Lab_FinalPlateScene::
 	setvar VAR_0x8007, 3  @ shake delay
 	special ShakeCamera
 	waitstate
-	msgbox SinjohRuins_Lab_Text_FinalPlateScene2, MSGBOX_AUTOCLOSE
+	msgbox SinjohRuins_Lab_Text_FinalPlateScene2, MSGBOX_DEFAULT
+	closemessage
 	applymovement LOCALID_PLAYER, SinjohRuins_Lab_Movement_PlayerLeaveLab
 	applymovement LOCALID_SINJOHRUINS_LAB_STEVEN, SinjohRuins_Lab_Movement_StevenLeaveLab
 	waitmovement 0

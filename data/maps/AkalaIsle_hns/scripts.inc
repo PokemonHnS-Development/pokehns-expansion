@@ -9,6 +9,8 @@ AkalaIsle_hns_MapScripts_MAP_SCRIPT_ON_TRANSITION:
 	goto_if_eq AkalaIsle_hns_MapScripts_MAP_SCRIPT_ON_TRANSITION_1
 	compare VAR_0x8000, TIME_DAY
 	goto_if_eq AkalaIsle_hns_MapScripts_MAP_SCRIPT_ON_TRANSITION_1
+	compare VAR_0x8000, TIME_EVENING
+	goto_if_eq AkalaIsle_hns_MapScripts_MAP_SCRIPT_ON_TRANSITION_1
 	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_SPECIES ( PROBOPASS )
 	clearflag FLAG_AKALA_TOTEM_DAY
 	call AkalaIsle_hns_SetTotemSignWarpFacing
@@ -120,6 +122,8 @@ Alola_Akala_TotemBattle_Trigger_4:
 	goto_if_eq Alola_Akala_TotemBattle_Trigger_14
 	compare VAR_0x8000, TIME_DAY
 	goto_if_eq Alola_Akala_TotemBattle_Trigger_14
+	compare VAR_0x8000, TIME_EVENING
+	goto_if_eq Alola_Akala_TotemBattle_Trigger_14
 	playmoncry SPECIES_PROBOPASS, 0
 	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_SPECIES ( PROBOPASS )
 	clearflag FLAG_AKALA_TOTEM_DAY
@@ -134,6 +138,8 @@ Alola_Akala_TotemBattle_Trigger_13:
 	compare VAR_0x8000, TIME_MORNING
 	goto_if_eq Alola_Akala_TotemBattle_Trigger_20
 	compare VAR_0x8000, TIME_DAY
+	goto_if_eq Alola_Akala_TotemBattle_Trigger_20
+	compare VAR_0x8000, TIME_EVENING
 	goto_if_eq Alola_Akala_TotemBattle_Trigger_20
 	playmoncry SPECIES_PROBOPASS, 0
 	applymovement Akala_Totem, Alola_Akala_TotemBattle_Trigger_Movement_0

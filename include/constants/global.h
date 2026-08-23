@@ -221,6 +221,11 @@ enum Gender
 #define OPTIONS_BATTLE_STYLE_SHIFT 0
 #define OPTIONS_BATTLE_STYLE_SET 1
 
+#define OPTIONS_EXP_MULTIPLIER_1X   0   // 1x EXP multiplier    Normal Difficulty
+#define OPTIONS_EXP_MULTIPLIER_1_5X 1   // 1.5x EXP multiplier  Easier Difficulty
+#define OPTIONS_EXP_MULTIPLIER_2X   2   // 2x EXP multiplier    Easiest Difficulty
+#define OPTIONS_EXP_MULTIPLIER_0X   3   // 0x EXP multiplier    Hardest Difficulty
+
 enum __attribute__((packed)) Direction
 {
     DIR_NONE,

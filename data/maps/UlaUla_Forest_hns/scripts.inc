@@ -9,6 +9,8 @@ UlaUla_Forest_hns_MapScripts_MAP_SCRIPT_ON_TRANSITION:
 	goto_if_eq UlaUla_Forest_hns_MapScripts_MAP_SCRIPT_ON_TRANSITION_1
 	compare VAR_0x8000, TIME_DAY
 	goto_if_eq UlaUla_Forest_hns_MapScripts_MAP_SCRIPT_ON_TRANSITION_1
+	compare VAR_0x8000, TIME_EVENING
+	goto_if_eq UlaUla_Forest_hns_MapScripts_MAP_SCRIPT_ON_TRANSITION_1
 	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_SPECIES ( PRIMEAPE )
 	clearflag FLAG_ULAULA_TOTEM_DAY
 	call UlaUla_Forest_hns_SetTotemSignWarpFacing
@@ -78,6 +80,8 @@ Alola_Ulaula_TotemBattle_Trigger_4:
 	goto_if_eq Alola_Ulaula_TotemBattle_Trigger_14
 	compare VAR_0x8000, TIME_DAY
 	goto_if_eq Alola_Ulaula_TotemBattle_Trigger_14
+	compare VAR_0x8000, TIME_EVENING
+	goto_if_eq Alola_Ulaula_TotemBattle_Trigger_14
 	playmoncry SPECIES_PRIMEAPE, 0
 	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_SPECIES ( PRIMEAPE )
 	clearflag FLAG_ULAULA_TOTEM_DAY
@@ -92,6 +96,8 @@ Alola_Ulaula_TotemBattle_Trigger_13:
 	compare VAR_0x8000, TIME_MORNING
 	goto_if_eq Alola_Ulaula_TotemBattle_Trigger_20
 	compare VAR_0x8000, TIME_DAY
+	goto_if_eq Alola_Ulaula_TotemBattle_Trigger_20
+	compare VAR_0x8000, TIME_EVENING
 	goto_if_eq Alola_Ulaula_TotemBattle_Trigger_20
 	playmoncry SPECIES_PRIMEAPE, 0
 	applymovement Ulaula_Totem, Alola_Ulaula_TotemBattle_Trigger_Movement_0

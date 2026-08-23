@@ -7566,11 +7566,17 @@ void AnimTask_GetTimeOfDay(u8 taskId)
 {
     gBattleAnimArgs[0] = 0; //Daytime is default
 
-    RtcCalcLocalTime();
-    if (gLocalTime.hours >= 20 || gLocalTime.hours < 4)
+    switch (GetTimeOfDay())
+    {
+    case TIME_NIGHT:
         gBattleAnimArgs[0] = 1;
-    else if (gLocalTime.hours >= 17 && gLocalTime.hours < 20)
+        break;
+    case TIME_EVENING:
         gBattleAnimArgs[0] = 2;
+        break;
+    default:
+        break;
+    }
 
     DestroyAnimVisualTask(taskId);
 }

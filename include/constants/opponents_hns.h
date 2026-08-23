@@ -630,8 +630,25 @@
 #define TRAINER_WESSEL_HNS                            615
 #define TRAINER_SKYLAR_HNS                            616
 
+
+// Phone rematch tiers for Irwin, Derek and Beverly. Appended at the end of the list
+// on purpose: trainer IDs index FLAG_TRAINER_FLAG_START, so inserting mid-list
+// would shift every later trainer's "defeated" flag and corrupt existing saves.
+#define TRAINER_IRWIN_2_HNS                   619
+#define TRAINER_IRWIN_3_HNS                   620
+#define TRAINER_IRWIN_4_HNS                   621
+#define TRAINER_IRWIN_5_HNS                   622
+#define TRAINER_DEREK_2_HNS                   623
+#define TRAINER_DEREK_3_HNS                   624
+#define TRAINER_DEREK_4_HNS                   625
+#define TRAINER_DEREK_5_HNS                   626
+#define TRAINER_BEVERLY_2_HNS                 627
+#define TRAINER_BEVERLY_3_HNS                 628
+#define TRAINER_BEVERLY_4_HNS                 629
+#define TRAINER_BEVERLY_5_HNS                 630
+
 // 618 is TRAINER_TANYA_HNS, relocated out of the TRAINER_FRONTIER_BRAIN slot (330).
-#define TRAINERS_COUNT_HNS                       619
+#define TRAINERS_COUNT_HNS                       631
 #define MAX_TRAINERS_COUNT_HNS                   864
 
 #endif  // GUARD_CONSTANTS_OPPONENTS_HNS_H

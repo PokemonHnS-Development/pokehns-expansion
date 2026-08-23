@@ -696,8 +696,7 @@ void SetWalkingIntoSignVars(void)
 
 void SetTimeBasedEncounters(void)
 {   
-    RtcCalcLocalTime();
-	if ((gLocalTime.hours >= 6 && gLocalTime.hours <= 17)) //6am-6pm DAY
+    if (GetTimeOfDay() != TIME_NIGHT)
 	{
 		VarSet(VAR_TIME_BASED_ENCOUNTER, 1); // Day
 	}

@@ -44,7 +44,22 @@ Route34_EventScript_RematchTodd::
 	end
 
 Route34_EventScript_PicnickerGina::
-	trainerbattle_single TRAINER_GINA_HNS, Route34_Text_PicnickerGina_Seen, Route34_Text_PicnickerGina_Beaten
+	trainerbattle_single TRAINER_GINA_HNS, Route34_Text_PicnickerGina_Seen, Route34_Text_PicnickerGina_Beaten, Route34_EventScript_RegisterGina
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route34_EventScript_RematchGina
+	msgbox Route34_Text_PicnickerGina_After, MSGBOX_AUTOCLOSE
+	end
+
+Route34_EventScript_RegisterGina::
+	special PlayerFaceTrainerAfterBattle
+	waitmovement 0
+	msgbox Route34_Text_GinaRegister, MSGBOX_DEFAULT
+	register_matchcall TRAINER_GINA_HNS
+	release
+	end
+
+Route34_EventScript_RematchGina::
+	trainerbattle_rematch TRAINER_GINA_HNS, Route34_Text_PicnickerGina_Seen, Route34_Text_PicnickerGina_Beaten
 	msgbox Route34_Text_PicnickerGina_After, MSGBOX_AUTOCLOSE
 	end
 
@@ -157,6 +172,10 @@ Route34_Text_ToddRematchDefeat:
 Route34_Text_ToddPostRematch:
 	.string "Maybe I should take one to DAY-CARE,\n"
 	.string "or maybe use some items…$"
+
+Route34_Text_GinaRegister:
+	.string "You're too strong to be a\n"
+	.string "practice partner.$"
 
 Route34_Text_PicnickerGina_Seen:
 	.string "Are you a TRAINER?\p"

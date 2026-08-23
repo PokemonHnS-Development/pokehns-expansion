@@ -6498,6 +6498,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
 
     [SPECIES_NOIBAT] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 40,
         .baseAttack    = 30,
         .baseDefense   = 35,
@@ -6573,6 +6574,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
 
     [SPECIES_NOIVERN] =
     {
+        .dexNotRequired = TRUE,
         .baseHP        = 85,
         .baseAttack    = 70,
         .baseDefense   = 80,

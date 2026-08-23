@@ -886,6 +886,10 @@ static u32 GetBattleTerrainTimeOfDay(void)
     case TIME_EVENING:
         return BATTLE_TERRAIN_TIME_TWILIGHT;
     default:
+        // The first hour of night is still fading down from evening in the
+        // overworld, so keep the sunset backgrounds through it.
+        if (IsBetweenHours(GetTimeOfDayHours(), NIGHT_HOUR_BEGIN, NIGHT_HOUR_BEGIN + 1))
+            return BATTLE_TERRAIN_TIME_TWILIGHT;
         return BATTLE_TERRAIN_TIME_NIGHT;
     }
 }

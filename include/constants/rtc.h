@@ -81,16 +81,19 @@
     #define NIGHT_HOUR_BEGIN   18
     #define NIGHT_HOUR_END     6
 #elif OW_TIMES_OF_DAY >= GEN_8
+// Customized from the stock Gen 8 times: night begins at 19:00 instead of 20:00,
+// with evening pulled back to 18:00-19:00 so it leads into it. Morning and day
+// starts are unchanged.
     #define MORNING_HOUR_BEGIN 6
     #define MORNING_HOUR_END   10
 
     #define DAY_HOUR_BEGIN     10
-    #define DAY_HOUR_END       19
+    #define DAY_HOUR_END       18
 
-    #define EVENING_HOUR_BEGIN 19
-    #define EVENING_HOUR_END   20
+    #define EVENING_HOUR_BEGIN 18
+    #define EVENING_HOUR_END   19
 
-    #define NIGHT_HOUR_BEGIN   20
+    #define NIGHT_HOUR_BEGIN   19
     #define NIGHT_HOUR_END     6
 #endif
 

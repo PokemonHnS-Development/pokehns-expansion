@@ -173,6 +173,7 @@ static EWRAM_DATA bool8 sIsInitialSetup = FALSE;
 enum {
     LOCK_FREE,
     LOCK_ONEWAY_DOWN,
+    LOCK_ONEWAY_UP,
     LOCK_FULL,
 };
 
@@ -205,7 +206,7 @@ static const u8 sMidGameLockPolicy[TAB_COUNT * MAX_ITEMS_PER_TAB] = {
     // TAB_DIFFICULTY
     [TAB_DIFFICULTY * MAX_ITEMS_PER_TAB + ITEM_DIFFICULTY_PARTY_LIMIT]    = LOCK_ONEWAY_DOWN,
     [TAB_DIFFICULTY * MAX_ITEMS_PER_TAB + ITEM_DIFFICULTY_LEVEL_CAP]      = LOCK_ONEWAY_DOWN,
-    [TAB_DIFFICULTY * MAX_ITEMS_PER_TAB + ITEM_DIFFICULTY_EXP_MULTIPLIER] = LOCK_ONEWAY_DOWN,
+    [TAB_DIFFICULTY * MAX_ITEMS_PER_TAB + ITEM_DIFFICULTY_EXP_MULTIPLIER] = LOCK_FREE,
     [TAB_DIFFICULTY * MAX_ITEMS_PER_TAB + ITEM_DIFFICULTY_ITEM_PLAYER]    = LOCK_ONEWAY_DOWN,
     [TAB_DIFFICULTY * MAX_ITEMS_PER_TAB + ITEM_DIFFICULTY_ITEM_TRAINER]   = LOCK_ONEWAY_DOWN,
     [TAB_DIFFICULTY * MAX_ITEMS_PER_TAB + ITEM_DIFFICULTY_MAX_PARTY_IVS]  = LOCK_ONEWAY_DOWN,
@@ -1781,6 +1782,13 @@ static void ProcessLeftRight(void)
     }
 
     if (*sel != prev && GetLockPolicy(sMenu->currentTab, itemIndex) == LOCK_ONEWAY_DOWN && *sel > prev)
+    {
+        *sel = prev;
+        PlaySE(SE_FAILURE);
+        return;
+    }
+
+    if (*sel != prev && GetLockPolicy(sMenu->currentTab, itemIndex) == LOCK_ONEWAY_UP && *sel < prev)
     {
         *sel = prev;
         PlaySE(SE_FAILURE);

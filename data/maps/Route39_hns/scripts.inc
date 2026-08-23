@@ -255,6 +255,13 @@ Route39_Text_SailorEugeneAfter:
 Route39_EventScript_Derek::
 	trainerbattle_single TRAINER_DEREK_HNS, Route39_Text_PokefanMDerekSeen, Route39_Text_PokefanMDerekBeaten, Route39_EventScript_RegisterDerek
 	goto_if_set FLAG_DEREK_HAS_ITEM_HNS, Route39_EventScript_DerekGiveItem
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route39_EventScript_RematchDerek
+	msgbox Route39_Text_PokefanMDerekAfter, MSGBOX_AUTOCLOSE
+	end
+
+Route39_EventScript_RematchDerek::
+	trainerbattle_rematch TRAINER_DEREK_HNS, Route39_Text_PokefanMDerekSeen, Route39_Text_PokefanMDerekBeaten
 	msgbox Route39_Text_PokefanMDerekAfter, MSGBOX_AUTOCLOSE
 	end
 

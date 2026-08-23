@@ -11623,6 +11623,94 @@ Level: 55
 - Body Slam
 - Mud-Slap
 
+=== TRAINER_IRWIN_2_HNS ===
+Name: IRWIN
+Class: Juggler Hns
+Pic: Juggler Hns
+Gender: Male
+Music: Hg Suspicious 1
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Voltorb
+Level: 25
+
+Pineco
+Level: 25
+
+Voltorb
+Level: 27
+
+
+=== TRAINER_IRWIN_3_HNS ===
+Name: IRWIN
+Class: Juggler Hns
+Pic: Juggler Hns
+Gender: Male
+Music: Hg Suspicious 1
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Electrode
+Level: 35
+
+Forretress
+Level: 36
+
+Voltorb
+Level: 35
+
+
+=== TRAINER_IRWIN_4_HNS ===
+Name: IRWIN
+Class: Juggler Hns
+Pic: Juggler Hns
+Gender: Male
+Music: Hg Suspicious 1
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Electrode
+Level: 45
+
+Forretress
+Level: 46
+
+Electrode
+Level: 45
+
+
+=== TRAINER_IRWIN_5_HNS ===
+Name: IRWIN
+Class: Juggler Hns
+Pic: Juggler Hns
+Gender: Male
+Music: Hg Suspicious 1
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Electrode
+Level: 55
+- Thunderbolt
+- Screech
+- Light Screen
+- Explosion
+
+Forretress
+Level: 56
+- Gyro Ball
+- Spikes
+- Protect
+- Explosion
+
+Electrode
+Level: 55
+- Thunder
+- Thunder Wave
+- Rollout
+- Explosion
+
+
 === TRAINER_ARNIE_2_HNS ===
 Name: ARNIE
 Class: Bug Catcher Hns
@@ -11935,6 +12023,78 @@ Level: 58
 - Thunder Wave
 - Lock-On
 - Tri Attack
+
+=== TRAINER_DEREK_2_HNS ===
+Name: DEREK
+Class: Pokefan Hns
+Pic: Pokefan M
+Gender: Male
+Music: Hg Suspicious 2
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Pikachu
+Level: 25
+
+Ponyta
+Level: 27
+
+
+=== TRAINER_DEREK_3_HNS ===
+Name: DEREK
+Class: Pokefan Hns
+Pic: Pokefan M
+Gender: Male
+Music: Hg Suspicious 2
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Pikachu
+Level: 36
+
+Ponyta
+Level: 35
+
+
+=== TRAINER_DEREK_4_HNS ===
+Name: DEREK
+Class: Pokefan Hns
+Pic: Pokefan M
+Gender: Male
+Music: Hg Suspicious 2
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Pikachu
+Level: 45
+
+Rapidash
+Level: 46
+
+
+=== TRAINER_DEREK_5_HNS ===
+Name: DEREK
+Class: Pokefan Hns
+Pic: Pokefan M
+Gender: Male
+Music: Hg Suspicious 2
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Pikachu @ Light Ball
+Level: 55
+- Thunderbolt
+- Iron Tail
+- Quick Attack
+- Thunder Wave
+
+Rapidash
+Level: 56
+- Fire Blast
+- Bounce
+- Stomp
+- Sunny Day
+
 
 === TRAINER_TULLY_2_HNS ===
 Name: TULLY
@@ -12381,6 +12541,62 @@ Level: 37
 - Sleep Powder
 - Acid
 - Moonlight
+
+=== TRAINER_BEVERLY_2_HNS ===
+Name: BEVERLY
+Class: Parasol Lady Hns
+Pic: Parasol Lady
+Gender: Male
+Music: Hg Girl 2
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Snubbull
+Level: 27
+
+
+=== TRAINER_BEVERLY_3_HNS ===
+Name: BEVERLY
+Class: Parasol Lady Hns
+Pic: Parasol Lady
+Gender: Male
+Music: Hg Girl 2
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Granbull
+Level: 36
+
+
+=== TRAINER_BEVERLY_4_HNS ===
+Name: BEVERLY
+Class: Parasol Lady Hns
+Pic: Parasol Lady
+Gender: Male
+Music: Hg Girl 2
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Granbull
+Level: 46
+
+
+=== TRAINER_BEVERLY_5_HNS ===
+Name: BEVERLY
+Class: Parasol Lady Hns
+Pic: Parasol Lady
+Gender: Male
+Music: Hg Girl 2
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Granbull @ Sitrus Berry
+Level: 56
+- Play Rough
+- Crunch
+- Fire Fang
+- Rock Slide
+
 
 === TRAINER_HUEY_2_HNS ===
 Name: HUEY
