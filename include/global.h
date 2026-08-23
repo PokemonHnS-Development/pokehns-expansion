@@ -262,6 +262,7 @@ struct ChallengeSettings
     u8 unitSystem:1;
     u8 fastIntro:1;
     u8 fastBattle:1;
+    u8 battleSpeed:2;
     u8 optionStyle:1;
     u8 lrToRun:1;
     u8 ballPrompt:1;

@@ -90,6 +90,8 @@ void SpriteCB_TrainerThrowObject(struct Sprite *sprite);
 void AnimSetCenterToCornerVecX(struct Sprite *sprite);
 void BeginBattleIntroDummy(void);
 void BeginBattleIntro(void);
+bool32 InBattleChoosingMoves(void);
+bool32 InBattleRunningActions(void);
 void SwitchInClearSetData(enum BattlerId battler, struct Volatiles *volatilesCopy);
 const u8 *FaintClearSetData(enum BattlerId battler);
 void BattleTurnPassed(void);

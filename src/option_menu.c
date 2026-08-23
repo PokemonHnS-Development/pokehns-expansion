@@ -58,6 +58,7 @@ enum {
 enum {
     ITEM_BATTLE_FAST_INTRO,
     ITEM_BATTLE_FAST_BATTLES,
+    ITEM_BATTLE_SPEED,
     ITEM_BATTLE_NEW_BACKGROUNDS,
     ITEM_BATTLE_NEW_BATTLEUI,
     ITEM_BATTLE_BALL_PROMPT,
@@ -249,6 +250,13 @@ static const u8 *const sChoices_RunType[] = {
     COMPOUND_STRING("B"),
 };
 
+static const u8 *const sChoices_BattleSpeed[] = {
+    COMPOUND_STRING("1X"),
+    COMPOUND_STRING("2X"),
+    COMPOUND_STRING("3X"),
+    COMPOUND_STRING("4X"),
+};
+
 static const u8 sText_TopBar_Left[]  = _("{L_BUTTON}");
 static const u8 sText_TopBar_Right[] = _("{R_BUTTON}");
 
@@ -325,6 +333,12 @@ static const u8 *const sDesc_FastIntro[] = {
 static const u8 *const sDesc_FastBattles[] = {
     COMPOUND_STRING("Skips all delays in battles, which\nmakes them faster."),
     COMPOUND_STRING("Manual delay skipping. You can\npress A or B to skip delays."),
+};
+static const u8 *const sDesc_BattleSpeed[] = {
+    COMPOUND_STRING("Run battle flow at normal speed."),
+    COMPOUND_STRING("Run battle flow at double speed.\nRecommended."),
+    COMPOUND_STRING("Run battle flow at triple speed."),
+    COMPOUND_STRING("Run battle flow at quadruple speed."),
 };
 static const u8 *const sDesc_NewBackgrounds[] = {
     COMPOUND_STRING("Original battle terrain backgrounds."),
@@ -462,6 +476,12 @@ static const struct OptionMenuItem sTabItems_Battle[] = {
         .descriptions = sDesc_FastBattles,
         .numChoices   = 2,
         .choiceNames  = sChoices_OnOff,
+    },
+    [ITEM_BATTLE_SPEED] = {
+        .name         = COMPOUND_STRING("BATTLE SPEED"),
+        .descriptions = sDesc_BattleSpeed,
+        .numChoices   = 4,
+        .choiceNames  = sChoices_BattleSpeed,
     },
     [ITEM_BATTLE_NEW_BACKGROUNDS] = {
         .name         = COMPOUND_STRING("BATTLE TERRAIN"),
@@ -1092,6 +1112,7 @@ static void Task_Save(u8 taskId)
 
     cs->fastIntro          = *GetSelectionPtr(TAB_BATTLE, ITEM_BATTLE_FAST_INTRO);
     cs->fastBattle         = *GetSelectionPtr(TAB_BATTLE, ITEM_BATTLE_FAST_BATTLES);
+    cs->battleSpeed        = *GetSelectionPtr(TAB_BATTLE, ITEM_BATTLE_SPEED);
     cs->newBackgrounds     = *GetSelectionPtr(TAB_BATTLE, ITEM_BATTLE_NEW_BACKGROUNDS);
     cs->newBattleUI        = *GetSelectionPtr(TAB_BATTLE, ITEM_BATTLE_NEW_BATTLEUI);
     cs->ballPrompt         = *GetSelectionPtr(TAB_BATTLE, ITEM_BATTLE_BALL_PROMPT);
@@ -1200,6 +1221,7 @@ void CB2_InitOptionMenu(void)
 
         *GetSelectionPtr(TAB_BATTLE, ITEM_BATTLE_FAST_INTRO)      = cs->fastIntro;
         *GetSelectionPtr(TAB_BATTLE, ITEM_BATTLE_FAST_BATTLES)    = cs->fastBattle;
+        *GetSelectionPtr(TAB_BATTLE, ITEM_BATTLE_SPEED)           = cs->battleSpeed;
         *GetSelectionPtr(TAB_BATTLE, ITEM_BATTLE_NEW_BACKGROUNDS) = cs->newBackgrounds;
         *GetSelectionPtr(TAB_BATTLE, ITEM_BATTLE_NEW_BATTLEUI)    = cs->newBattleUI;
         *GetSelectionPtr(TAB_BATTLE, ITEM_BATTLE_BALL_PROMPT)     = cs->ballPrompt;

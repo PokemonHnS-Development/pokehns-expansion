@@ -356,6 +356,7 @@ void BtlController_Complete(enum BattlerId battler); // Can be used for all the 
 void BtlController_Empty(enum BattlerId battler); // Empty command, does nothing, only completes the execution.
 void BtlController_TerminatorNop(enum BattlerId battler); // Dummy function at the end of the table.
 void BattleControllerDummy(enum BattlerId battler);
+u32 GetBattleSpeedScale(bool32 forHealthbar);
 void StartSendOutAnim(enum BattlerId battler, bool32 dontClearTransform, bool32 dontClearSubstituteBit, bool32 doSlideIn);
 void Controller_WaitForString(enum BattlerId battler);
 void Controller_WaitForHealthBar(enum BattlerId battler);

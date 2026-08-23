@@ -3089,6 +3089,28 @@ static u32 ReturnAnimIdForBattler(bool32 wasPlayerSideKnockedOut, u32 specificBa
         return GetSpeciesBackAnimSet(species);
 }
 
+u32 GetBattleSpeedScale(bool32 forHealthbar)
+{
+    u32 speedScale = 1;
+
+    if (gSaveBlock3Ptr != NULL)
+        speedScale += gSaveBlock3Ptr->challengeSettings.battleSpeed;
+
+    if (JOY_HELD(L_BUTTON))
+        return 1;
+
+    if (InBattleChoosingMoves())
+        gBattleStruct->hasBattleInputStarted = TRUE;
+
+    if (gBattleStruct->hasBattleInputStarted && InBattleChoosingMoves())
+        return 1;
+
+    if (forHealthbar)
+        return 1;
+
+    return speedScale;
+}
+
 void TrySetBattlerShadowSpriteCallback(enum BattlerId battler)
 {
     if (gSprites[gBattleSpritesDataPtr->healthBoxesData[battler].shadowSpriteIdPrimary].callback == SpriteCallbackDummy

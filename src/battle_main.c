@@ -113,6 +113,8 @@ static void SpriteCB_BounceEffect(struct Sprite *sprite);
 static void BattleStartClearSetData(void);
 static void DoBattleIntro(void);
 static void TryDoEventsBeforeFirstTurn(void);
+bool32 InBattleChoosingMoves(void);
+bool32 InBattleRunningActions(void);
 static void HandleTurnActionSelectionState(void);
 static void RunTurnActionsFunctions(void);
 static void SetActionsAndBattlersTurnOrder(void);
@@ -1863,11 +1865,61 @@ static void CB2_HandleStartMultiBattle(void)
 
 void BattleMainCB2(void)
 {
-    AnimateSprites();
-    BuildOamBuffer();
-    RunTextPrinters();
-    UpdatePaletteFade();
-    RunTasks();
+    u32 speedScale = GetBattleSpeedScale(FALSE);
+    u32 fadeResult = 0;
+
+    if (gBattleResults.caughtMonSpecies)
+        speedScale = 1;
+
+    if (speedScale <= 1)
+    {
+        AnimateSprites();
+        BuildOamBuffer();
+        RunTextPrinters();
+        UpdatePaletteFade();
+        RunTasks();
+    }
+    else
+    {
+        for (u32 s = 1; s < speedScale; s++)
+        {
+            AnimateSprites();
+            RunTextPrinters();
+            fadeResult = UpdatePaletteFade();
+
+            if (fadeResult == PALETTE_FADE_STATUS_LOADING)
+            {
+                BuildOamBuffer();
+                RunTasks();
+                break;
+            }
+
+            RunTasks();
+
+            // Only a real VBlank may swap a scanline-effect buffer and write
+            // its first line. Keep advancing its task using the back buffer.
+            if (gScanlineEffect.state != 0)
+            {
+                if (gMain.callback1)
+                    gMain.callback1();
+                continue;
+            }
+
+            VBlankCB_Battle();
+
+            if (gMain.callback1)
+                gMain.callback1();
+        }
+
+        if (fadeResult != PALETTE_FADE_STATUS_LOADING)
+        {
+            AnimateSprites();
+            BuildOamBuffer();
+            RunTextPrinters();
+            UpdatePaletteFade();
+            RunTasks();
+        }
+    }
 
     if (JOY_HELD(B_BUTTON) && gBattleTypeFlags & BATTLE_TYPE_RECORDED && RecordedBattle_CanStopPlayback())
     {
@@ -3137,6 +3189,16 @@ void BeginBattleIntro(void)
     gBattleCommunication[1] = 0;
     gBattleStruct->eventState.battleIntro = 0;
     gBattleMainFunc = DoBattleIntro;
+}
+
+bool32 InBattleChoosingMoves(void)
+{
+    return gBattleMainFunc == HandleTurnActionSelectionState;
+}
+
+bool32 InBattleRunningActions(void)
+{
+    return gBattleMainFunc == RunTurnActionsFunctions;
 }
 
 static void BattleMainCB1(void)
