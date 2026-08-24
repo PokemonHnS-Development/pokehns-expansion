@@ -175,13 +175,27 @@ bool32 SetRandomizerSeed(u32 newSeed)
 // number, plus every form and every evolution reachable from one. That picks up
 // the cross-gen evolutions (Sylveon, Weavile, Magnezone, Mamoswine, Annihilape,
 // Clodsire...), the cross-gen pre-evolutions (Munchlax, Happiny, Mantyke...) and
-// the regional forms of Gen 1-3 mons together with their evolutions (Perrserker,
-// Obstagoon, Sneasler, Ursaluna), and — via the backward sweep below — the
+// the regional forms listed in this game's obtainable Dex together with their
+// evolutions (Perrserker, Obstagoon, Sneasler, Cursola), and — via the backward
+// sweep below — the
 // cross-gen pre-evolutions whose own Dex number is later than the family they
 // evolve into (Munchlax, Happiny, Mantyke, Budew, Chingling, Bonsly, Mime Jr.).
 // Families that merely start in a later gen stay out (Kingambit off Pawniard,
 // Basculegion off Basculin).
 #define GEN_SCOPE_MASK_WORDS ((RANDOMIZER_SPECIES_COUNT + 31) / 32)
+
+// Regional forms carry their own National Dex numbers in this build
+// (P_SEPARATE_REGIONAL_FORMS), so a Gen 1-3 counterpart does not drag them in.
+// They are seeded separately, gated on the obtainable Dex so only forms this
+// game actually offers join the pool.
+static inline bool32 IsRegionalForm(u16 species)
+{
+    const struct SpeciesInfo *speciesInfo = &gSpeciesInfo[species];
+    return speciesInfo->isAlolanForm
+        || speciesInfo->isGalarianForm
+        || speciesInfo->isHisuianForm
+        || speciesInfo->isPaldeanForm;
+}
 
 // Only defined when the species tables are built at runtime; the family walk
 // wants the same depth bound either way.
@@ -247,7 +261,15 @@ static void BuildGenScopeMask(void)
     {
         u32 natDexNum = gSpeciesInfo[i].natDexNum;
         if (natDexNum != NATIONAL_DEX_NONE && natDexNum <= NATIONAL_DEX_DEOXYS)
+        {
             MarkGenScopeFamily(i, 0);
+        }
+        // The flag test comes first on purpose: SpeciesToObtainablePokedexNum
+        // linearly scans the obtainable Dex, so this must not run per species.
+        else if (IsRegionalForm(i) && SpeciesToObtainablePokedexNum(i) != 0)
+        {
+            MarkGenScopeFamily(i, 0);
+        }
     }
 
     // The walk above only follows evolutions forwards, so it never reaches a
