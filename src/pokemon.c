@@ -8382,6 +8382,123 @@ static inline bool32 CanFirstMonBoostHeldItemRarity(void)
     return FALSE;
 }
 
+#define MAX_WILD_EVO_LINE_ITEMS_PER_SPECIES 16
+
+EWRAM_DATA static u16 sWildEvoTraversalQueue[NUM_SPECIES] = {0};
+EWRAM_DATA static bool8 sWildEvoTraversalVisited[NUM_SPECIES] = {FALSE};
+
+static bool32 AddUniqueEvolutionItem(enum Item item, enum Item *items, u16 *count)
+{
+    u16 i;
+
+    if (item == ITEM_NONE || *count >= MAX_WILD_EVO_LINE_ITEMS_PER_SPECIES)
+        return FALSE;
+
+    for (i = 0; i < *count; i++)
+    {
+        if (items[i] == item)
+            return FALSE;
+    }
+
+    items[(*count)++] = item;
+    return TRUE;
+}
+
+static void CollectEvolutionItemsFromEntry(const struct Evolution *evolution, enum Item *items, u16 *itemCount)
+{
+    u16 i;
+
+    if (evolution->method == EVO_ITEM)
+        AddUniqueEvolutionItem(evolution->param, items, itemCount);
+
+    for (i = 0; evolution->params != NULL && evolution->params[i].condition != CONDITIONS_END; i++)
+    {
+        switch (evolution->params[i].condition)
+        {
+        case IF_HOLD_ITEM:
+        case IF_BAG_ITEM_COUNT:
+            AddUniqueEvolutionItem(evolution->params[i].arg1, items, itemCount);
+            break;
+        }
+    }
+}
+
+static u16 GetBaseSpeciesForEvolutionLine(u16 species)
+{
+    u16 preEvo;
+    u16 safety = 0;
+
+    while ((preEvo = GetSpeciesPreEvolution(species)) != SPECIES_NONE)
+    {
+        species = preEvo;
+        if (++safety >= NUM_SPECIES)
+            break;
+    }
+
+    return species;
+}
+
+static u16 GetEvolutionItemsForSpeciesLine(u16 species, enum Item *items)
+{
+    u16 baseSpecies;
+    u16 itemCount = 0;
+    u16 head = 0;
+    u16 tail = 0;
+
+    species = SanitizeSpeciesId(species);
+    if (species == SPECIES_NONE)
+        return 0;
+
+    baseSpecies = GetBaseSpeciesForEvolutionLine(species);
+    if (baseSpecies == SPECIES_NONE)
+        return 0;
+
+    memset(sWildEvoTraversalVisited, FALSE, sizeof(sWildEvoTraversalVisited));
+    sWildEvoTraversalQueue[tail++] = baseSpecies;
+    sWildEvoTraversalVisited[baseSpecies] = TRUE;
+
+    while (head < tail)
+    {
+        u16 currentSpecies = sWildEvoTraversalQueue[head++];
+        const struct Evolution *evolutions = GetSpeciesEvolutions(currentSpecies);
+        u16 i;
+
+        for (i = 0; evolutions != NULL && evolutions[i].method != EVOLUTIONS_END; i++)
+        {
+            u16 targetSpecies = SanitizeSpeciesId(evolutions[i].targetSpecies);
+
+            CollectEvolutionItemsFromEntry(&evolutions[i], items, &itemCount);
+
+            if (targetSpecies == SPECIES_NONE || !IsSpeciesEnabled(targetSpecies) || sWildEvoTraversalVisited[targetSpecies])
+                continue;
+
+            sWildEvoTraversalQueue[tail++] = targetSpecies;
+            sWildEvoTraversalVisited[targetSpecies] = TRUE;
+        }
+    }
+
+    return itemCount;
+}
+
+static bool32 TrySetWildMonEvolutionLineHeldItem(struct Pokemon *mon)
+{
+    u16 species = SanitizeSpeciesId(GetMonData(mon, MON_DATA_SPECIES, 0));
+    enum Item items[MAX_WILD_EVO_LINE_ITEMS_PER_SPECIES] = {0};
+    u16 itemCount = GetEvolutionItemsForSpeciesLine(species, items);
+    enum Item item;
+
+    if (itemCount == 0)
+        return FALSE;
+
+    // Exactly 50% chance for species that have item-based evolutions in their line.
+    if ((Random() % 100) >= 50)
+        return FALSE;
+
+    item = items[Random() % itemCount];
+    SetMonData(mon, MON_DATA_HELD_ITEM, &item);
+    return TRUE;
+}
+
 void SetWildMonHeldItem(void)
 {
     if (!(gBattleTypeFlags & (BATTLE_TYPE_LEGENDARY | BATTLE_TYPE_TRAINER | BATTLE_TYPE_PYRAMID | BATTLE_TYPE_PIKE)))
@@ -8398,6 +8515,9 @@ void SetWildMonHeldItem(void)
         {
             if (GetMonData(&gEnemyParty[i], MON_DATA_HELD_ITEM) != ITEM_NONE)
                 continue; // prevent overwriting previously set item
+
+            if (TrySetWildMonEvolutionLineHeldItem(&gEnemyParty[i]))
+                continue;
 
             rnd = Random() % 100;
             species = GetMonData(&gEnemyParty[i], MON_DATA_SPECIES, 0);
