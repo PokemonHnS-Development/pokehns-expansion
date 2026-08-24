@@ -1,6 +1,7 @@
 #include "global.h"
 #include "new_game.h"
 #include "random.h"
+#include "config/randomizer.h"
 #include "pokemon.h"
 #include "roamer.h"
 #include "pokemon_size_record.h"
@@ -151,6 +152,7 @@ void SetDefaultChallengeSettings(void)
     // Randomizer defaults (shown when Randomizer is ON)
     gSaveblock3.challengeSettings.tx_Random_Similar          = 1;
     gSaveblock3.challengeSettings.tx_Random_MapBased         = 1;
+    gSaveblock3.challengeSettings.tx_Random_GenScope         = RANDOMIZER_DEFAULT_GEN_SCOPE_1_3;
 
     // Nuzlocke clause defaults (shown when Nuzlocke is NORMAL/HARD)
     gSaveblock3.challengeSettings.tx_Nuzlocke_SpeciesClause  = 1;
