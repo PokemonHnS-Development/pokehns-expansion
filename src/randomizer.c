@@ -12,6 +12,7 @@
 #include "data.h"
 #include "data/randomizer/special_form_tables.h"
 #include "constants/abilities.h"
+#include "constants/pokedex.h"
 #include "data/randomizer/ability_whitelist.h"
 #include "move.h"
 
@@ -169,6 +170,96 @@ bool32 SetRandomizerSeed(u32 newSeed)
     #endif
 }
 
+// Gen scope filter. When tx_Random_GenScope is set, the randomizer may only roll
+// species belonging to a Gen 1-3 family: anything with a Gen 1-3 National Dex
+// number, plus every form and every evolution reachable from one. That picks up
+// the cross-gen evolutions (Sylveon, Weavile, Magnezone, Mamoswine, Annihilape,
+// Clodsire...), the cross-gen pre-evolutions (Munchlax, Happiny, Mantyke...) and
+// the regional forms of Gen 1-3 mons together with their evolutions (Perrserker,
+// Obstagoon, Sneasler, Ursaluna), while excluding families that merely start in a
+// later gen (Kingambit off Pawniard, Basculegion off Basculin).
+#define GEN_SCOPE_MASK_WORDS ((RANDOMIZER_SPECIES_COUNT + 31) / 32)
+
+// Only defined when the species tables are built at runtime; the family walk
+// wants the same depth bound either way.
+#ifndef RANDOMIZER_MAX_EVO_STAGES
+#define RANDOMIZER_MAX_EVO_STAGES 5
+#endif
+
+EWRAM_DATA static u32 sGenScopeMask[GEN_SCOPE_MASK_WORDS] = {0};
+EWRAM_DATA static bool8 sGenScopeMaskInitialized = FALSE;
+
+static inline bool32 GenScopeMaskGet(u16 species)
+{
+    return (sGenScopeMask[species / 32] & (1u << (species & 31))) != 0;
+}
+
+// Marks species and everything downstream of it. Never calls IsSpeciesPermitted:
+// that would re-enter the mask build. The already-marked check both keeps this
+// linear and terminates any evolution cycle.
+static void MarkGenScopeFamily(u16 species, u32 stage)
+{
+    const struct Evolution *evos;
+    const u16 *forms;
+    u32 i;
+
+    if (species == SPECIES_NONE || species >= RANDOMIZER_SPECIES_COUNT)
+        return;
+    if (stage > RANDOMIZER_MAX_EVO_STAGES)
+        return;
+    if (GenScopeMaskGet(species))
+        return;
+
+    sGenScopeMask[species / 32] |= 1u << (species & 31);
+
+    forms = gSpeciesInfo[species].formSpeciesIdTable;
+    if (forms != NULL)
+    {
+        for (i = 0; forms[i] != FORM_SPECIES_END; i++)
+            MarkGenScopeFamily(forms[i], stage);
+    }
+
+    evos = GetSpeciesEvolutions(species);
+    if (evos != NULL)
+    {
+        for (i = 0; evos[i].method != 0xFFFF; i++)
+            MarkGenScopeFamily(evos[i].targetSpecies, stage + 1);
+    }
+}
+
+static void BuildGenScopeMask(void)
+{
+    u16 i;
+
+    memset(sGenScopeMask, 0, sizeof(sGenScopeMask));
+
+    for (i = 1; i < RANDOMIZER_SPECIES_COUNT; i++)
+    {
+        u32 natDexNum = gSpeciesInfo[i].natDexNum;
+        if (natDexNum != NATIONAL_DEX_NONE && natDexNum <= NATIONAL_DEX_DEOXYS)
+            MarkGenScopeFamily(i, 0);
+    }
+
+    sGenScopeMaskInitialized = TRUE;
+}
+
+static inline bool32 IsGenScopeRestricted(void)
+{
+    return gSaveBlock3Ptr->challengeSettings.tx_Random_GenScope;
+}
+
+static bool32 IsSpeciesInGenScope(u16 species)
+{
+    if (!IsGenScopeRestricted())
+        return TRUE;
+    if (species >= RANDOMIZER_SPECIES_COUNT)
+        return FALSE;
+    if (!sGenScopeMaskInitialized)
+        BuildGenScopeMask();
+
+    return GenScopeMaskGet(species);
+}
+
 static bool32 IsSpeciesPermitted(u16 species)
 {
     if (species == SPECIES_NONE)
@@ -176,6 +267,8 @@ static bool32 IsSpeciesPermitted(u16 species)
     if (gSpeciesInfo[species].baseHP == 0)
         return FALSE;
     if (gSpeciesInfo[species].randomizerMode == MON_RANDOMIZER_INVALID)
+        return FALSE;
+    if (!IsSpeciesInGenScope(species))
         return FALSE;
 
     return TRUE;
@@ -441,7 +534,8 @@ static void GetIndicesFromGroupRange(const struct SpeciesTable *table, u16 minGr
 struct RamSpeciesTable
 {
     enum RandomizerSpeciesMode mode;
-    bool16 tableInitialized;
+    bool8 tableInitialized;
+    bool8 genScopeRestricted;
     struct SpeciesTable speciesTable;
 };
 
@@ -587,6 +681,7 @@ static void BuildRandomizerSpeciesTable(enum RandomizerSpeciesMode mode)
 
     sRamSpeciesTable.tableInitialized = TRUE;
     sRamSpeciesTable.mode = mode;
+    sRamSpeciesTable.genScopeRestricted = IsGenScopeRestricted();
     speciesTable = &sRamSpeciesTable.speciesTable;
 
     switch(mode)
@@ -649,7 +744,9 @@ static void BuildRandomizerSpeciesTable(enum RandomizerSpeciesMode mode)
 
 static const struct SpeciesTable* GetSpeciesTable(enum RandomizerSpeciesMode mode)
 {
-    if (!sRamSpeciesTable.tableInitialized || mode != sRamSpeciesTable.mode )
+    if (!sRamSpeciesTable.tableInitialized
+        || mode != sRamSpeciesTable.mode
+        || sRamSpeciesTable.genScopeRestricted != IsGenScopeRestricted())
         BuildRandomizerSpeciesTable(mode);
 
     return &sRamSpeciesTable.speciesTable;

@@ -290,6 +290,7 @@ struct ChallengeSettings
     u8 tx_Random_Items:1;
     u8 tx_Random_Static:1;
     u8 tx_Random_Starter:1;
+    u8 tx_Random_GenScope:1; // 0 = all gens, 1 = Gen 1-3 families only
     // Challenges
     u8 tx_Challenges_EvoLimit:2;
     u8 tx_Challenges_Nuzlocke:1;

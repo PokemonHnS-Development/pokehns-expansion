@@ -81,6 +81,7 @@ enum {
     ITEM_RANDOM_STATIC,
     ITEM_RANDOM_SIMILAR,
     ITEM_RANDOM_LEGENDARIES,
+    ITEM_RANDOM_GEN_SCOPE,
     ITEM_RANDOM_TYPE,
     ITEM_RANDOM_MOVES,
     ITEM_RANDOM_ABILITIES,
@@ -133,7 +134,7 @@ enum {
 };
 
 // Maximum items in any single tab
-#define MAX_ITEMS_PER_TAB 16
+#define MAX_ITEMS_PER_TAB 20
 #define ITEMS_VISIBLE 5
 #define Y_DIFF 16
 
@@ -187,6 +188,7 @@ static const u8 sMidGameLockPolicy[TAB_COUNT * MAX_ITEMS_PER_TAB] = {
     [TAB_RANDOMIZER * MAX_ITEMS_PER_TAB + ITEM_RANDOM_TRAINER]     = LOCK_ONEWAY_DOWN,
     [TAB_RANDOMIZER * MAX_ITEMS_PER_TAB + ITEM_RANDOM_STATIC]      = LOCK_ONEWAY_DOWN,
     [TAB_RANDOMIZER * MAX_ITEMS_PER_TAB + ITEM_RANDOM_LEGENDARIES] = LOCK_ONEWAY_DOWN,
+    [TAB_RANDOMIZER * MAX_ITEMS_PER_TAB + ITEM_RANDOM_GEN_SCOPE]   = LOCK_ONEWAY_DOWN,
     [TAB_RANDOMIZER * MAX_ITEMS_PER_TAB + ITEM_RANDOM_TYPE]        = LOCK_ONEWAY_DOWN,
     [TAB_RANDOMIZER * MAX_ITEMS_PER_TAB + ITEM_RANDOM_MOVES]       = LOCK_ONEWAY_DOWN,
     [TAB_RANDOMIZER * MAX_ITEMS_PER_TAB + ITEM_RANDOM_ABILITIES]   = LOCK_ONEWAY_DOWN,
@@ -512,6 +514,11 @@ static const u8 *const sChoices_OffRandom[] = {
     COMPOUND_STRING("RANDOM"),
 };
 
+static const u8 *const sChoices_GenScope[] = {
+    COMPOUND_STRING("GEN 1-9"),
+    COMPOUND_STRING("GEN 1-3"),
+};
+
 static const u8 *const sChoices_OffChaos[] = {
     COMPOUND_STRING("OFF"),
     COMPOUND_STRING("CHAOS"),
@@ -724,6 +731,10 @@ static const u8 *const sDesc_RandomLegendaries[] = {
     COMPOUND_STRING("Legendary {PKMN} will not be\nincluded and randomized."),
     COMPOUND_STRING("Include legendary {PKMN} in\nrandomization!"),
 };
+static const u8 *const sDesc_RandomGenScope[] = {
+    COMPOUND_STRING("Randomize into {PKMN} from every\ngeneration."),
+    COMPOUND_STRING("Only GEN 1-3 {PKMN} and their\ncross-gen evolutions."),
+};
 static const u8 *const sDesc_RandomType[] = {
     COMPOUND_STRING("{PKMN} types stay the same as in\nthe base game."),
     COMPOUND_STRING("Randomize all {PKMN} types."),
@@ -808,6 +819,12 @@ static const struct ChallengeMenuItem sTabItems_Randomizer[] = {
         .descriptions = sDesc_RandomLegendaries,
         .numChoices   = 2,
         .choiceNames  = sChoices_OffOn,
+    },
+    [ITEM_RANDOM_GEN_SCOPE] = {
+        .name         = COMPOUND_STRING("GEN SCOPE"),
+        .descriptions = sDesc_RandomGenScope,
+        .numChoices   = 2,
+        .choiceNames  = sChoices_GenScope,
     },
     [ITEM_RANDOM_TYPE] = {
         .name         = COMPOUND_STRING("TYPE"),
@@ -1288,6 +1305,7 @@ static bool8 CheckConditions(u8 tab, u8 itemIndex)
         case ITEM_RANDOM_SIMILAR:
             return masterOn && anyPkmn && !(*GetSelectionPtr(TAB_RANDOMIZER, ITEM_RANDOM_CHAOS));
         case ITEM_RANDOM_LEGENDARIES:
+        case ITEM_RANDOM_GEN_SCOPE:
             return masterOn && anyPkmn;
         case ITEM_RANDOM_CHAOS:
             return masterOn && (anyPkmn
@@ -1970,6 +1988,7 @@ static void Task_ConfirmSaveYes(u8 taskId)
         cs->tx_Random_Static           = 0;
         cs->tx_Random_Similar          = 0;
         cs->tx_Random_IncludeLegendaries = 0;
+        cs->tx_Random_GenScope         = 0;
         cs->tx_Random_Type             = 0;
         cs->tx_Random_Moves            = 0;
         cs->tx_Random_Abilities        = 0;
@@ -1988,6 +2007,7 @@ static void Task_ConfirmSaveYes(u8 taskId)
         cs->tx_Random_Static           = *GetSelectionPtr(TAB_RANDOMIZER, ITEM_RANDOM_STATIC);
         cs->tx_Random_Similar          = !(*GetSelectionPtr(TAB_RANDOMIZER, ITEM_RANDOM_SIMILAR));
         cs->tx_Random_IncludeLegendaries = *GetSelectionPtr(TAB_RANDOMIZER, ITEM_RANDOM_LEGENDARIES);
+        cs->tx_Random_GenScope         = *GetSelectionPtr(TAB_RANDOMIZER, ITEM_RANDOM_GEN_SCOPE);
         cs->tx_Random_Type             = *GetSelectionPtr(TAB_RANDOMIZER, ITEM_RANDOM_TYPE);
         cs->tx_Random_Moves            = *GetSelectionPtr(TAB_RANDOMIZER, ITEM_RANDOM_MOVES);
         cs->tx_Random_Abilities        = *GetSelectionPtr(TAB_RANDOMIZER, ITEM_RANDOM_ABILITIES);
@@ -2208,6 +2228,7 @@ void CB2_InitChallengeMenu(void)
             *GetSelectionPtr(TAB_RANDOMIZER, ITEM_RANDOM_STATIC)      = cs->tx_Random_Static;
             *GetSelectionPtr(TAB_RANDOMIZER, ITEM_RANDOM_SIMILAR)     = !cs->tx_Random_Similar;
             *GetSelectionPtr(TAB_RANDOMIZER, ITEM_RANDOM_LEGENDARIES) = cs->tx_Random_IncludeLegendaries;
+            *GetSelectionPtr(TAB_RANDOMIZER, ITEM_RANDOM_GEN_SCOPE)   = cs->tx_Random_GenScope;
             *GetSelectionPtr(TAB_RANDOMIZER, ITEM_RANDOM_TYPE)        = cs->tx_Random_Type;
             *GetSelectionPtr(TAB_RANDOMIZER, ITEM_RANDOM_MOVES)       = cs->tx_Random_Moves;
             *GetSelectionPtr(TAB_RANDOMIZER, ITEM_RANDOM_ABILITIES)   = cs->tx_Random_Abilities;
