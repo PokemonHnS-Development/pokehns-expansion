@@ -16,7 +16,7 @@
 
 #define SPECIAL_SECTOR_SENTINEL 0xB39D
 
-#define SAVE_VERSION       2
+#define SAVE_VERSION       3
 #define SAVE_VERSION_MAGIC 0xE8F828BC
 
 #define SECTOR_ID_SAVEBLOCK2          0

@@ -13,6 +13,7 @@
 #include "link.h"
 #include "constants/game_stat.h"
 #include "event_data.h"
+#include "item.h"
 
 static u16 CalculateChecksum(void *, u16);
 static bool8 ReadFlashSector(u8, struct SaveSector *);
@@ -931,7 +932,11 @@ u8 LoadGameSave(u8 saveType)
         FlagClear(FLAG_ITEM_VICTORYROAD1_TM_EARTHQUAKE);
         gSaveBlock1Ptr->saveVersion = 2;
     }
-
+    if (gSaveBlock1Ptr->saveVersion < 3)
+    {
+        AddBagItem(ITEM_ESCAPE_ROPE, 1);
+        gSaveBlock1Ptr->saveVersion = 3;
+    }
     // Add version migration steps here:
     // if (gSaveBlock1Ptr->saveVersion < 1)
     // {
