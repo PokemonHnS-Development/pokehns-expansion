@@ -2306,12 +2306,12 @@ void BufferPokedexRatingForMatchCall(u8 *destStr)
 #if IS_HNS
     if (VarGet(VAR_NEWBARKTOWN_LABSTATE) == 3)
     {
-        StringCopy(destStr, gElmDexRatingText_GoFindMrPokemon);
+        StringExpandPlaceholders(destStr, gElmDexRatingText_GoFindMrPokemon);
         return;
     }
     if (VarGet(VAR_NEWBARKTOWN_LABSTATE) == 4)
     {
-        StringCopy(destStr, gElmDexRatingText_Robbery);
+        StringExpandPlaceholders(destStr, gElmDexRatingText_Robbery);
         return;
     }
 #endif

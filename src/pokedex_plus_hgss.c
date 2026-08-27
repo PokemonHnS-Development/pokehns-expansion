@@ -3123,7 +3123,7 @@ static void CreateInterfaceSprites(u8 page)
 
     CreateSprite(&sScrollBarSpriteTemplate, 6, 20, 0);
 
-    if (!IsNationalPokedexEnabled() && page == PAGE_MAIN)
+    if ((!IsNationalPokedexEnabled() || sPokedexView->dexMode == DEX_MODE_HOENN) && (page == PAGE_MAIN || page == PAGE_SEARCH_RESULTS))
     {
         // Hoenn text
         CreateSprite(&sHoennNationalTextSpriteTemplate, LIST_RIGHT_SIDE_TEXT_X, 40 - LIST_RIGHT_SIDE_TEXT_Y_OFFSET - 6, 1);
@@ -3155,7 +3155,6 @@ static void CreateInterfaceSprites(u8 page)
         spriteId = CreateSprite(&sNationalDexSeenOwnNumberSpriteTemplate, LIST_RIGHT_SIDE_TEXT_X + LIST_RIGHT_SIDE_TEXT_X_OFFSET + 14, 45 - LIST_RIGHT_SIDE_TEXT_Y_OFFSET, 1);
         digitNum = (sPokedexView->seenCount % 100) % 10;
         StartSpriteAnim(&gSprites[spriteId], digitNum);
-
 
         // Hoenn owned value - 100s
         drawNextDigit = FALSE;
@@ -3321,6 +3320,95 @@ static void CreateInterfaceSprites(u8 page)
         // National owned value - 1s
         spriteId = CreateSprite(&sNationalDexSeenOwnNumberSpriteTemplate, counterX1s, 88 - LIST_RIGHT_SIDE_TEXT_Y_OFFSET, 1);
         digitNum = ((sPokedexView->ownCount % 1000) % 100) % 10;
+        StartSpriteAnim(&gSprites[spriteId], digitNum);
+    }
+    else if (page == PAGE_SEARCH_RESULTS && sPokedexView->dexMode == DEX_MODE_NATIONAL)
+    {
+        u16 seenOwnedCount;
+        u8 counterXDist  = sPokedexView->seenCount > 999 ? 6 : 7;
+        u8 counterX1s    = LIST_RIGHT_SIDE_TEXT_X + LIST_RIGHT_SIDE_TEXT_X_OFFSET + 14;
+        u8 counterX10s   = counterX1s - counterXDist;
+        u8 counterX100s  = counterX10s - counterXDist;
+        u8 counterX1000s = counterX100s - counterXDist;
+
+        // National only text
+        spriteId = CreateSprite(&sHoennNationalTextSpriteTemplate, LIST_RIGHT_SIDE_TEXT_X, 40 - LIST_RIGHT_SIDE_TEXT_Y_OFFSET - 6, 1);
+        StartSpriteAnim(&gSprites[spriteId], 1);
+
+        // National seen
+        CreateSprite(&sSeenOwnTextSpriteTemplate, LIST_RIGHT_SIDE_TEXT_X, 45 - LIST_RIGHT_SIDE_TEXT_Y_OFFSET + 6, 1);
+        // National owned
+        spriteId = CreateSprite(&sSeenOwnTextSpriteTemplate, LIST_RIGHT_SIDE_TEXT_X, 55 - LIST_RIGHT_SIDE_TEXT_Y_OFFSET + 7, 1);
+        StartSpriteAnim(&gSprites[spriteId], 1);
+
+        // National seen value - 1000s
+        seenOwnedCount = sPokedexView->seenCount;
+        drawNextDigit = FALSE;
+        spriteId = CreateSprite(&sNationalDexSeenOwnNumberSpriteTemplate, counterX1000s, 45 - LIST_RIGHT_SIDE_TEXT_Y_OFFSET, 4);
+        digitNum = seenOwnedCount / 1000;
+        StartSpriteAnim(&gSprites[spriteId], digitNum);
+        if (digitNum != 0)
+            drawNextDigit = TRUE;
+        else
+            gSprites[spriteId].invisible = TRUE;
+
+        // National seen value - 100s
+        spriteId = CreateSprite(&sNationalDexSeenOwnNumberSpriteTemplate, counterX100s, 45 - LIST_RIGHT_SIDE_TEXT_Y_OFFSET, 3);
+        digitNum = (seenOwnedCount % 1000) / 100;
+        if (digitNum != 0 || drawNextDigit)
+        {
+            drawNextDigit = TRUE;
+            StartSpriteAnim(&gSprites[spriteId], digitNum);
+        }
+        else
+            gSprites[spriteId].invisible = TRUE;
+
+        // National seen value - 10s
+        spriteId = CreateSprite(&sNationalDexSeenOwnNumberSpriteTemplate, counterX10s, 45 - LIST_RIGHT_SIDE_TEXT_Y_OFFSET, 2);
+        digitNum = ((seenOwnedCount % 1000) % 100) / 10;
+        if (digitNum != 0 || drawNextDigit)
+            StartSpriteAnim(&gSprites[spriteId], digitNum);
+        else
+            gSprites[spriteId].invisible = TRUE;
+
+        // National seen value - 1s
+        spriteId = CreateSprite(&sNationalDexSeenOwnNumberSpriteTemplate, counterX1s, 45 - LIST_RIGHT_SIDE_TEXT_Y_OFFSET, 1);
+        digitNum = ((seenOwnedCount % 1000) % 100) % 10;
+        StartSpriteAnim(&gSprites[spriteId], digitNum);
+
+        // National owned value - 1000s
+        seenOwnedCount = sPokedexView->ownCount;
+        drawNextDigit = FALSE;
+        spriteId = CreateSprite(&sNationalDexSeenOwnNumberSpriteTemplate, counterX1000s, 55 - LIST_RIGHT_SIDE_TEXT_Y_OFFSET, 4);
+        digitNum = seenOwnedCount / 1000;
+        StartSpriteAnim(&gSprites[spriteId], digitNum);
+        if (digitNum != 0)
+            drawNextDigit = TRUE;
+        else
+            gSprites[spriteId].invisible = TRUE;
+
+        // National owned value - 100s
+        spriteId = CreateSprite(&sNationalDexSeenOwnNumberSpriteTemplate, counterX100s, 55 - LIST_RIGHT_SIDE_TEXT_Y_OFFSET, 3);
+        digitNum = (seenOwnedCount % 1000) / 100;
+        if (digitNum != 0 || drawNextDigit)
+        {
+            drawNextDigit = TRUE;
+            StartSpriteAnim(&gSprites[spriteId], digitNum);
+        }
+        else
+            gSprites[spriteId].invisible = TRUE;
+
+        // National owned value - 10s
+        spriteId = CreateSprite(&sNationalDexSeenOwnNumberSpriteTemplate, counterX10s, 55 - LIST_RIGHT_SIDE_TEXT_Y_OFFSET, 2);
+        digitNum = ((seenOwnedCount % 1000) % 100) / 10;
+        if (digitNum != 0 || drawNextDigit)
+            StartSpriteAnim(&gSprites[spriteId], digitNum);
+        else
+            gSprites[spriteId].invisible = TRUE;
+
+        // National owned value - 1s
+        spriteId = CreateSprite(&sNationalDexSeenOwnNumberSpriteTemplate, counterX1s, 55 - LIST_RIGHT_SIDE_TEXT_Y_OFFSET, 1);
+        digitNum = ((seenOwnedCount % 1000) % 100) % 10;
         StartSpriteAnim(&gSprites[spriteId], digitNum);
     }
 
@@ -5054,6 +5142,10 @@ static void Task_HandleStatsScreenInput(u8 taskId)
             gTasks[taskId].data[5] = 1;
         else
             gTasks[taskId].data[5] = 0;
+
+        FillWindowPixelBuffer(WIN_STATS_MOVES_TOP, PIXEL_FILL(0));
+        PrintStatsScreen_DestroyMoveItemIcon(taskId);
+        PrintStatsScreen_Moves_Top(taskId);
 
         FillWindowPixelBuffer(WIN_STATS_LEFT, PIXEL_FILL(0));
         PrintStatsScreen_Left(taskId);

@@ -8275,7 +8275,7 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 
 === TRAINER_BROCK_HNS ===
 Name: BROCK
-Class: Leader Hns
+Class: Leader Kanto Hns
 Pic: Leader Brock Hns
 Gender: Male
 Music: Hg Boy 1
@@ -8334,7 +8334,7 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 
 === TRAINER_MISTY_HNS ===
 Name: MISTY
-Class: Leader Hns
+Class: Leader Kanto Hns
 Pic: Leader Misty Hns
 Gender: Male
 Music: Hg Boy 1
@@ -8393,7 +8393,7 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 
 === TRAINER_LTSURGE_HNS ===
 Name: LTSURGE
-Class: Leader Hns
+Class: Leader Kanto Hns
 Pic: Leader Surge Hns
 Gender: Male
 Music: Hg Boy 1
@@ -8452,7 +8452,7 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 
 === TRAINER_ERIKA_HNS ===
 Name: ERIKA
-Class: Leader Hns
+Class: Leader Kanto Hns
 Pic: Leader Erika Hns
 Gender: Male
 Music: Hg Boy 1
@@ -8511,7 +8511,7 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 
 === TRAINER_SABRINA_HNS ===
 Name: SABRINA
-Class: Leader Hns
+Class: Leader Kanto Hns
 Pic: Leader Sabrina Hns
 Gender: Male
 Music: Hg Boy 1
@@ -8570,7 +8570,7 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 
 === TRAINER_JANINE_HNS ===
 Name: JANINE
-Class: Leader Hns
+Class: Leader Kanto Hns
 Pic: Leader Janine Hns
 Gender: Male
 Music: Hg Boy 1
@@ -8629,7 +8629,7 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 
 === TRAINER_BLAINE_HNS ===
 Name: BLAINE
-Class: Leader Hns
+Class: Leader Kanto Hns
 Pic: Leader Blaine Hns
 Gender: Male
 Music: Hg Boy 1
@@ -8688,7 +8688,7 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 
 === TRAINER_BLUE_HNS ===
 Name: BLUE
-Class: Leader Hns
+Class: Leader Kanto Hns
 Pic: Leader Blue Hns
 Gender: Male
 Music: Hg Boy 1
@@ -8747,7 +8747,7 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 
 === TRAINER_BLUE_2_HNS ===
 Name: BLUE
-Class: Leader Hns
+Class: Leader Kanto Hns
 Pic: Leader Blue Hns
 Gender: Male
 Music: Hg Boy 1

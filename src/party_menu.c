@@ -6975,7 +6975,7 @@ void ItemUseCB_PokeBall(u8 taskId, TaskFunc task)
 {
     struct Pokemon *mon = &gPlayerParty[gPartyMenu.slotId];
     u16 currBall = GetMonData(mon, MON_DATA_POKEBALL);
-    u16 newBall = gSpecialVar_ItemId;
+    u16 newBall = ItemIdToBallId(gSpecialVar_ItemId);
     static const u8 sText_MonBallWasChanged[] = _("{STR_VAR_1} was put in the {STR_VAR_2}.{PAUSE_UNTIL_PRESS}");
 
     if (currBall == newBall)

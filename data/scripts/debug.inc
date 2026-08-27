@@ -203,8 +203,9 @@ Debug_EventScript_Text_DefensiveIVs:
 	.string "HP IVs: {STR_VAR_1}, DEF IVs: {STR_VAR_2}, SPDEF IVs: {STR_VAR_3}$"
 
 Debug_EventScript_Script_1::
-	special GameClear
-	waitstate
+	giveegg SPECIES_TOGEPI
+	givemon SPECIES_NATU, 5
+	givenamedmon 1
 	release
 	end
 
@@ -213,13 +214,8 @@ Debug_Text_1:
 
 
 Debug_EventScript_Script_2::
-	clearflag FLAG_DEFEATED_OLIVINE_CITY_GYM
-	clearflag FLAG_DEFEATED_CIANWOOD_GYM
-	clearflag FLAG_DEFEATED_MAHOGANY_TOWN_GYM
-	clearflag FLAG_VISITED_VERMILION_CITY
-	setflag FLAG_HIDE_DOJO_CHUCK
-	setvar VAR_MAHOGANY_TOWN_STATE, 15
-	setvar VAR_NUM_BADGES, 4
+	finditem ITEM_POTION
+	giveitem ITEM_SUPER_POTION
 	release
 	end
 

@@ -2,6 +2,9 @@
 .set AMOUNT, VAR_0x8001
 
 Std_ObtainItem::
+#if RANDOMIZER_AVAILABLE
+	callnative ObtainItemRandomize_NativeCall
+#endif
 	copyvar VAR_0x8006, ITEMID
 	additem ITEMID, AMOUNT
 	copyvar VAR_0x8007, VAR_RESULT

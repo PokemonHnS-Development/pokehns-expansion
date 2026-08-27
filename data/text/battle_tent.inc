@@ -141,7 +141,11 @@ VerdanturfTown_BattleTentLobby_Text_WelcomeToBattleTent:
 	.string "POKéMON is tested.$"
 #endif
 VerdanturfTown_BattleTentLobby_Text_TakeChallenge:
+#if IS_HNS
+	.string "Do you wish to take the PALACE\n"
+#else
 	.string "Do you wish to take the VERDANTURF\n"
+#endif
 	.string "BATTLE TENT challenge?$"
 
 VerdanturfTown_BattleTentLobby_Text_ExplainVerdanturfTent:

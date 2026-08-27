@@ -321,7 +321,16 @@ SafariZoneGate_SafariZoneEntrance_EventScript_MovePlayerBackFromCounter::
 SafariZoneGate_SafariZoneEntrance_EventScript_Boy::
 	lock
 	faceplayer
+	checkitem ITEM_POKEBLOCK_CASE
+	goto_if_eq VAR_RESULT, FALSE, SafariZoneGate_SafariZoneEntrance_EventScript_BoyGiveExtraPokeblockCase
 	msgbox SafariZoneGate_SafariZoneEntrance_Text_Boy, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
+SafariZoneGate_SafariZoneEntrance_EventScript_BoyGiveExtraPokeblockCase::
+	msgbox SafariZoneGate_SafariZoneEntrance_Text_BoyGiveCase, MSGBOX_DEFAULT
+	giveitem ITEM_POKEBLOCK_CASE
 	closemessage
 	release
 	end
@@ -385,6 +394,9 @@ SafariZoneGate_SafariZoneEntrance_Text_Baoba:
 SafariZoneGate_SafariZoneEntrance_Text_Boy:
 	.string "I heard the new zone they\n"
 	.string "are working on has dragons!$"
+
+SafariZoneGate_SafariZoneEntrance_Text_BoyGiveCase:
+	.string "Here, you seem like you need this.$"
 
 SafariZoneGate_SafariZoneEntrance_Text_Engineer:
 	.string "Sorry Trainer, this area is still\n"

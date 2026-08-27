@@ -12,7 +12,7 @@
   "allow_running": false,
   "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": 0,
+  "connections": null,
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_BALDING_MAN_HNS",
@@ -38,6 +38,20 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "GoldenrodCity_House2_EventScript_Woman",
+      "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_MOVE_DELETER",
+      "graphics_id": "OBJ_EVENT_GFX_OLD_MAN_HNS",
+      "x": 0,
+      "y": 2,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "BlackthornCity_MoveDeletersHouse_EventScript_MoveDeleter",
       "flag": "0"
     }
   ],

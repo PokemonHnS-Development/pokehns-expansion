@@ -2079,7 +2079,7 @@ static void InitStartingPosData(void)
 
 static void SetMonIconTransparency(void)
 {
-    if (sStorage->boxOption == OPTION_MOVE_ITEMS)
+    if (sStorage->boxOption == OPTION_MOVE_ITEMS || sStorage->boxOption == OPTION_SELECT_MON || sStorage->boxOption == OPTION_MOVE_MONS || sStorage->boxOption == OPTION_DEPOSIT || sStorage->boxOption == OPTION_WITHDRAW)
     {
         SetGpuReg(REG_OFFSET_BLDCNT, BLDCNT_TGT2_ALL);
         SetGpuReg(REG_OFFSET_BLDALPHA, BLDALPHA_BLEND(7, 11));
@@ -4515,6 +4515,19 @@ static bool32 ShouldBoxmonSpriteBeTransparent(u32 boxId, u32 boxPosition)
     if (sStorage->boxOption == OPTION_SELECT_MON
      && IsBoxMonExcluded(GetBoxedMonPtr(boxId, boxPosition)))
         return TRUE;
+
+    struct Pokemon mon = {0};
+    BoxMonAtToMon(boxId, boxPosition, &mon);
+
+    if (IsNuzlockeActive() || IsNuzlockeEasyActive())
+    {
+        if ((sStorage->boxOption == OPTION_SELECT_MON
+        || sStorage->boxOption == OPTION_DEPOSIT
+        || sStorage->boxOption == OPTION_WITHDRAW
+        || sStorage->boxOption == OPTION_MOVE_MONS)
+        && GetMonData(&mon, MON_DATA_HP) == 0 && GetMonData(&mon, MON_DATA_IS_EGG) == FALSE)
+            return TRUE;
+    }
     return FALSE;
 }
 
@@ -4821,6 +4834,18 @@ static void  CreatePartyMonSprite(u8 partyPosition, bool8 visible)
         if (partySprite != NULL && IsBoxMonExcluded(&(partyPokemon->box)))
             partySprite->oam.objMode = ST_OAM_OBJ_BLEND;
     }
+
+    if (IsNuzlockeActive() || IsNuzlockeEasyActive())
+    {
+        if (sStorage->boxOption == OPTION_SELECT_MON
+        || sStorage->boxOption == OPTION_DEPOSIT
+        || sStorage->boxOption == OPTION_WITHDRAW
+        || sStorage->boxOption == OPTION_MOVE_MONS)
+        {
+            if (GetMonData(partyPokemon, MON_DATA_HP) == 0 && GetMonData(partyPokemon, MON_DATA_IS_EGG) == FALSE)
+                partySprite->oam.objMode = ST_OAM_OBJ_BLEND;
+        }
+    }
 }
 
 static void CreatePartyMonsSprites(bool8 visible)
@@ -4872,6 +4897,21 @@ static void CreatePartyMonsSprites(bool8 visible)
         {
             if (sStorage->partySprites[i] != NULL && IsBoxMonExcluded(&(gPlayerParty[i].box)))
                 sStorage->partySprites[i]->oam.objMode = ST_OAM_OBJ_BLEND;
+        }
+    }
+
+    if (IsNuzlockeActive() || IsNuzlockeEasyActive())
+    {
+        if (sStorage->boxOption == OPTION_SELECT_MON
+        || sStorage->boxOption == OPTION_DEPOSIT
+        || sStorage->boxOption == OPTION_WITHDRAW
+        || sStorage->boxOption == OPTION_MOVE_MONS)
+        {
+            for (i = 0; i < PARTY_SIZE; i++)
+            {
+                if (GetMonData(&gPlayerParty[i], MON_DATA_HP) == 0 && GetMonData(&gPlayerParty[i], MON_DATA_IS_EGG) == FALSE)
+                    sStorage->partySprites[i]->oam.objMode = ST_OAM_OBJ_BLEND;
+            }
         }
     }
 }
@@ -5359,6 +5399,7 @@ static void Task_InitBox(u8 taskId)
         CreateBoxScrollArrows();
         InitBoxMonSprites(task->tBoxId);
         SetGpuReg(REG_OFFSET_BG2CNT, BGCNT_PRIORITY(2) | BGCNT_CHARBASE(2) | BGCNT_SCREENBASE(27) | BGCNT_TXT512x256);
+        SetMonIconTransparency();
         break;
     case 4:
         DestroyTask(taskId);

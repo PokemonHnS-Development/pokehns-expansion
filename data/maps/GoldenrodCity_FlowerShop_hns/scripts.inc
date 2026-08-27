@@ -135,7 +135,7 @@ GoldenrodCity_FlowerShop_Text_Owner2:
 .string "They say it dances when you water\n"
 .string "it...\p"
 .string "Oh, that's a PLAINBADGE from\n"
-.string "The GOLDENROD GYM!\p"
+.string "the GOLDENROD GYM!\p"
 .string "Did you defeat WHITNEY?!\p"
 .string "Well, then there's nothing to worry\n"
 .string "about, is there?\p"

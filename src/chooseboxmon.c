@@ -18,6 +18,7 @@
 #include "strings.h"
 #include "constants/party_menu.h"
 #include "constants/songs.h"
+#include "nuzlocke.h"
 
 #define VALID_MON 0
 #define INVALID_MON 1
@@ -180,6 +181,7 @@ static const u16 sPLATutorLearnsets[][2] =
     {SPECIES_SHARPEDO,          MOVE_WAVE_CRASH},
     {SPECIES_KABUTOPS,          MOVE_WAVE_CRASH},
     {SPECIES_FERALIGATR,        MOVE_WAVE_CRASH},
+    {SPECIES_RELICANTH,         MOVE_WAVE_CRASH},
 
     {SPECIES_SHUCKLE,           MOVE_POWER_SHIFT},
     {SPECIES_ALAKAZAM,          MOVE_POWER_SHIFT},
@@ -212,6 +214,12 @@ static u32 CanMonLearnPLAMove(struct BoxPokemon *boxmon)
 
 u32 IsBoxMonExcluded(struct BoxPokemon *boxmon)
 {
+    struct Pokemon mon = {0};
+    BoxMonToMon(boxmon, &mon);
+
+    if ((IsNuzlockeActive() || IsNuzlockeEasyActive()) && GetMonData(&mon, MON_DATA_HP) == 0 && GetMonData(&mon, MON_DATA_IS_EGG) == FALSE)
+        return TRUE;
+
     return sPcMonSelectionTypes[sSelectionType].isMonInvalid(boxmon);
 }
 

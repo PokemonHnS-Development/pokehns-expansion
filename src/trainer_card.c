@@ -1473,6 +1473,8 @@ static void LoadMonIconGfx(void)
 static void UpdateTrainerCardMonIcons(void)
 {
     u16 species;
+    u32 personality;
+    bool32 isEgg;
     u8 i;
     u8 x = 40;
 
@@ -1480,10 +1482,11 @@ static void UpdateTrainerCardMonIcons(void)
     for (i = 0; i < gPlayerPartyCount; i++, x += 32)
     {
         species = GetMonData(&gPlayerParty[i], MON_DATA_SPECIES);
-        sMonIconSpriteIds[i] = CreateMonIcon(species, SpriteCB_MonIcon, x, 124, 1, GetMonData(&gPlayerParty[i], MON_DATA_PERSONALITY));
+        personality = GetMonData(&gPlayerParty[i], MON_DATA_PERSONALITY);
+        isEgg = GetMonData(&gPlayerParty[i], MON_DATA_IS_EGG);
+        sMonIconSpriteIds[i] = CreateMonIconIsEgg(species, SpriteCB_MonIcon, x, 124, 1, personality, isEgg); // This will also set the palette, no need to also set it later
         gSprites[sMonIconSpriteIds[i]].oam.priority = 0;
         StartSpriteAnim(&gSprites[sMonIconSpriteIds[i]], 4);
-        gSprites[sMonIconSpriteIds[i]].oam.paletteNum = GetMonIconPaletteIndexFromSpecies(species);
     }
 }
 

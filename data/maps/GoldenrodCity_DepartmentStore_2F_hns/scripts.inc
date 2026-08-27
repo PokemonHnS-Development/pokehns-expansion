@@ -159,7 +159,7 @@ GoldenrodDeptStore_EventScript_TryBuyDrink::
 	msgbox GoldenrodDeptStore_Text_DrinkClankedDown, MSGBOX_DEFAULT
 	additem VAR_TEMP_0
 	bufferitemname STR_VAR_2, VAR_TEMP_0
-	bufferstdstring STR_VAR_3, STDSTRING_ITEMS
+	bufferstdstring STR_VAR_3, STDSTRING_MEDICINE
 	msgbox gText_PutItemInPocket, MSGBOX_DEFAULT
 	random 64
 	goto_if_ne VAR_RESULT, 0, GoldenrodDeptStore_EventScript_ChooseNewDrink
@@ -169,7 +169,7 @@ GoldenrodDeptStore_EventScript_TryBuyDrink::
 	msgbox GoldenrodDeptStore_Text_ExtraDrinkClankedDown, MSGBOX_DEFAULT
 	additem VAR_TEMP_0
 	bufferitemname STR_VAR_2, VAR_TEMP_0
-	bufferstdstring STR_VAR_3, STDSTRING_ITEMS
+	bufferstdstring STR_VAR_3, STDSTRING_MEDICINE
 	msgbox gText_PutItemInPocket, MSGBOX_DEFAULT
 	random 64
 	goto_if_ne VAR_RESULT, 0, GoldenrodDeptStore_EventScript_ChooseNewDrink
@@ -179,7 +179,7 @@ GoldenrodDeptStore_EventScript_TryBuyDrink::
 	msgbox GoldenrodDeptStore_Text_ExtraDrinkClankedDown, MSGBOX_DEFAULT
 	additem VAR_TEMP_0
 	bufferitemname STR_VAR_2, VAR_TEMP_0
-	bufferstdstring STR_VAR_3, STDSTRING_ITEMS
+	bufferstdstring STR_VAR_3, STDSTRING_MEDICINE
 	msgbox gText_PutItemInPocket, MSGBOX_DEFAULT
 	goto GoldenrodDeptStore_EventScript_ChooseNewDrink
 	end

@@ -2169,17 +2169,105 @@ static bool8 IsTrainerReadyForRematch_(const struct RematchTrainer *table, u16 t
     return TRUE;
 }
 
+#if IS_HNS
+// HnS rematch teams climb steeply between stages (Joey's Rattata runs 27 -> 30 -> 40 -> 65),
+// so an ungated rematch can be dozens of levels above the player's party the moment the
+// previous stage is beaten. Gate the stage the player is offered on badge count: a stage is
+// only offered once its team fits under the level ceiling for the badges earned so far, so
+// rematches stay farmable at a sane level all game. Stage 1 (the first rematch) is always
+// allowed, since that is what the trainer originally offered.
+static const u8 sRematchLevelCeilingByBadges[NUM_BADGES + 1] =
+{
+    [0]  = 12, // no badges
+    [1]  = 16,
+    [2]  = 20,
+    [3]  = 25, // OW_REMATCH_BADGE_COUNT - rematches unlock here
+    [4]  = 30,
+    [5]  = 32,
+    [6]  = 34,
+    [7]  = 43,
+    [8]  = 47, // Johto complete
+    [9]  = 52, // Kanto badges
+    [10] = 55,
+    [11] = 57,
+    [12] = 59,
+    [13] = 61,
+    [14] = 64,
+    [15] = 67,
+    [16] = MAX_LEVEL,
+};
+
+static u32 GetRematchBadgeCount(void)
+{
+    u32 i, count = 0;
+
+    for (i = FLAG_BADGE01_GET; i < FLAG_BADGE01_GET + NUM_BADGES; i++)
+    {
+        if (FlagGet(i))
+            count++;
+    }
+
+    return count;
+}
+
+static u32 GetTrainerPartyMaxLevel(u16 trainerId)
+{
+    const struct TrainerMon *party = GetTrainerPartyFromId(trainerId);
+    u32 i, partySize = GetTrainerPartySizeFromId(trainerId);
+    u32 maxLevel = 0;
+
+    if (party == NULL)
+        return 0;
+
+    for (i = 0; i < partySize; i++)
+    {
+        if (party[i].lvl > maxLevel)
+            maxLevel = party[i].lvl;
+    }
+
+    return maxLevel;
+}
+
+// Returns the highest rematch stage (index into trainerIds) the player's badge count allows.
+static s32 GetMaxRematchStageForBadges(const struct RematchTrainer *trainerEntry)
+{
+    u32 i, levelCeiling;
+    s32 maxStage = 1;
+
+    // Once the Kanto league is cleared there is nothing left to scale against.
+    if (FlagGet(FLAG_IS_KANTO_CHAMPION))
+        return REMATCHES_COUNT - 1;
+
+    levelCeiling = sRematchLevelCeilingByBadges[GetRematchBadgeCount()];
+
+    for (i = 2; i < REMATCHES_COUNT; i++)
+    {
+        if (trainerEntry->trainerIds[i] == 0)
+            break;
+        if (GetTrainerPartyMaxLevel(trainerEntry->trainerIds[i]) > levelCeiling)
+            break;
+        maxStage = i;
+    }
+
+    return maxStage;
+}
+#endif // IS_HNS
+
 u16 GetRematchTrainerIdFromTable(const struct RematchTrainer *table, u16 firstBattleTrainerId)
 {
     const struct RematchTrainer *trainerEntry;
     s32 i;
+    s32 maxStage = REMATCHES_COUNT - 1;
     s32 tableId = FirstBattleTrainerIdToRematchTableId(table, firstBattleTrainerId);
 
     if (tableId == -1)
         return FALSE;
 
     trainerEntry = &table[tableId];
-    for (i = 1; i < REMATCHES_COUNT; i++)
+#if IS_HNS
+    maxStage = GetMaxRematchStageForBadges(trainerEntry);
+#endif
+    for (i = 1; i <= maxStage; i++)
     {
         if (trainerEntry->trainerIds[i] == 0) // previous entry was this trainer's last one
             return trainerEntry->trainerIds[i - 1];
@@ -2187,7 +2275,8 @@ u16 GetRematchTrainerIdFromTable(const struct RematchTrainer *table, u16 firstBa
             return trainerEntry->trainerIds[i];
     }
 
-    return trainerEntry->trainerIds[REMATCHES_COUNT - 1]; // already beaten at max stage
+    // Already beaten every stage the player's badges unlock - keep replaying the highest one.
+    return trainerEntry->trainerIds[maxStage];
 }
 
 static u16 GetLastBeatenRematchTrainerIdFromTable(const struct RematchTrainer *table, u16 firstBattleTrainerId)

@@ -103,7 +103,7 @@ SinjohRuins_Temple_EventScript_ScannerAlreadyDone::
 	end
 
 SinjohRuins_Temple_Text_ScannerAlreadyDone:
-	.string "This sensor already been activated.$"
+	.string "This sensor has already been activated.$"
 
 SinjohRuins_Temple_Text_Responds:
 	.string "The temple responds to your actions.$"

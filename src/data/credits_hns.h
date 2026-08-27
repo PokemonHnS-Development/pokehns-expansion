@@ -81,7 +81,7 @@ static const u8 sCreditsText_Phantonomy[]                      = _("Phantonomy")
 static const u8 sCreditsText_DaniRainbow[]                     = _("DaniRainbow");
 static const u8 sCreditsText_Resetes[]                         = _("Resetes");
 static const u8 sCreditsText_Jozuno[]                          = _("Jozuno");
-static const u8 sCreditsText_Skeletonkey[]                     = _("skeletonkey");
+static const u8 sCreditsText_Skeletonkey[]                     = _("Skeletonkey36");
 static const u8 sCreditsText_Pinny[]                           = _("Pinny");
 static const u8 sCreditsText_Grintoul[]                        = _("Grintoul");
 
@@ -191,6 +191,7 @@ static const u8 sCreditsText_BandoCalrissian[]            = _("Bando Calrissian"
 static const u8 sCreditsText_blandsoup[]                  = _("blandsoup");
 static const u8 sCreditsText_Boxer[]                      = _("Boxer");
 static const u8 sCreditsText_CodyCrankZ[]                 = _("CodyCrankZ");
+static const u8 sCreditsText_d3n_ar[]                     = _("d3n_ar");
 static const u8 sCreditsText_Dan[]                        = _("Dan");
 static const u8 sCreditsText_darkblue29[]                 = _("darkblue29");
 static const u8 sCreditsText_devoobin[]                   = _("devoobin");
@@ -238,6 +239,7 @@ static const struct CreditsEntry sCreditsEntry_BandoCalrissian = {11, FALSE, sCr
 static const struct CreditsEntry sCreditsEntry_blandsoup = {11, FALSE, sCreditsText_blandsoup};
 static const struct CreditsEntry sCreditsEntry_Boxer = {11, FALSE, sCreditsText_Boxer};
 static const struct CreditsEntry sCreditsEntry_CodyCrankZ = {11, FALSE, sCreditsText_CodyCrankZ};
+static const struct CreditsEntry sCreditsEntry_d3n_ar = {11, FALSE, sCreditsText_d3n_ar};
 static const struct CreditsEntry sCreditsEntry_Dan = {11, FALSE, sCreditsText_Dan};
 static const struct CreditsEntry sCreditsEntry_darkblue29 = {11, FALSE, sCreditsText_darkblue29};
 static const struct CreditsEntry sCreditsEntry_devoobin = {11, FALSE, sCreditsText_devoobin};
@@ -890,79 +892,79 @@ static const struct CreditsEntry *const sCreditsEntryPointerTable[PAGE_COUNT][EN
     [PAGE_HNS_PLAYTESTERS_12] = {
         &sCreditsEntry_Playtesters,
         &sCreditsEntry_CodyCrankZ,
+        &sCreditsEntry_d3n_ar,
         &sCreditsEntry_Dan,
         &sCreditsEntry_darkblue29,
-        &sCreditsEntry_devoobin,
     },
     [PAGE_HNS_PLAYTESTERS_13] = {
         &sCreditsEntry_Playtesters,
+        &sCreditsEntry_devoobin,
         &sCreditsEntry_Doodles,
         &sCreditsEntry_dude,
         &sCreditsEntry_Elli,
-        &sCreditsEntry_Galaxy,
     },
     [PAGE_HNS_PLAYTESTERS_14] = {
         &sCreditsEntry_Playtesters,
+        &sCreditsEntry_Galaxy,
         &sCreditsEntry_headlocker03,
         &sCreditsEntry_irongold125,
         &sCreditsEntry_Joey,
-        &sCreditsEntry_JoseTheAlolachu,
     },
     [PAGE_HNS_PLAYTESTERS_15] = {
         &sCreditsEntry_Playtesters,
+        &sCreditsEntry_JoseTheAlolachu,
         &sCreditsEntry_jpx95,
         &sCreditsEntry_Juskut,
         &sCreditsEntry_KevinK_23,
-        &sCreditsEntry_Kigga,
     },
     [PAGE_HNS_PLAYTESTERS_16] = {
         &sCreditsEntry_Playtesters,
+        &sCreditsEntry_Kigga,
         &sCreditsEntry_lema,
         &sCreditsEntry_Levi,
         &sCreditsEntry_Mayu,
-        &sCreditsEntry_MG2123,
     },
     [PAGE_HNS_PLAYTESTERS_17] = {
         &sCreditsEntry_Playtesters,
+        &sCreditsEntry_MG2123,
         &sCreditsEntry_MisterFox,
         &sCreditsEntry_Moonglowsnow,
         &sCreditsEntry_ninjaawsome21,
-        &sCreditsEntry_Pwapy,
     },
     [PAGE_HNS_PLAYTESTERS_18] = {
         &sCreditsEntry_Playtesters,
+        &sCreditsEntry_Pwapy,
         &sCreditsEntry_SatoXian,
         &sCreditsEntry_senko,
         &sCreditsEntry_skizofenic,
-        &sCreditsEntry_Snorlaxe,
     },
     [PAGE_HNS_PLAYTESTERS_19] = {
         &sCreditsEntry_Playtesters,
+        &sCreditsEntry_Snorlaxe,
         &sCreditsEntry_Tom,
         &sCreditsEntry_tailoredfiend,
         &sCreditsEntry_tavares1607,
-        &sCreditsEntry_tfergii88,
     },
     [PAGE_HNS_PLAYTESTERS_20] = {
         &sCreditsEntry_Playtesters,
+        &sCreditsEntry_tfergii88,
         &sCreditsEntry_TheSupremeKing,
         &sCreditsEntry_TheRatKing335,
         &sCreditsEntry_Tim,
-        &sCreditsEntry_TJ,
     },
     [PAGE_HNS_PLAYTESTERS_21] = {
         &sCreditsEntry_Playtesters,
+        &sCreditsEntry_TJ,
         &sCreditsEntry_ToxicNights,
         &sCreditsEntry_Ubly,
         &sCreditsEntry_Westrah,
-        &sCreditsEntry_wise_hummingbird,
     },
     [PAGE_HNS_PLAYTESTERS_22] = {
         &sCreditsEntry_Playtesters,
+        &sCreditsEntry_wise_hummingbird,
         &sCreditsEntry_YuEatMaRice,
         &sCreditsEntry_ZenGarden550,
         &sCreditsEntry_Zero,
-        _,
     },
     [PAGE_PARAMETRIC_DESIGNERS] = {
        _,

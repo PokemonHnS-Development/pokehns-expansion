@@ -1137,6 +1137,12 @@ static u8 AcroBike_GetJumpDirection(void)
 {
     u32 i;
 
+    // No acro tricks (side jump / turn jump) in these builds.
+    // The trick history is fed unmasked keys from MovePlayerAvatar, so masking
+    // B in MovePlayerOnBike alone isn't enough to suppress the jumps.
+    if (IS_HNS || IS_FRLG)
+        return DIR_NONE;
+
     for (i = 0; i < ARRAY_COUNT(sAcroBikeTricksList); i++)
     {
         const struct BikeHistoryInputInfo *historyInputInfo = &sAcroBikeTricksList[i];

@@ -3,6 +3,7 @@ GoldenrodCity_UndergroundSwitches_hns_MapScripts::
 	.byte 0
 
 GoldenrodUnderground1_OnLoad::
+	setvar VAR_TEMP_0, 0
 	call_if_set FLAG_COMPLETED_SWITCHES, GoldenrodUnderground1_ClearTheWay
 	clearflag FLAG_GOLDENROD_SWITCH_1
 	clearflag FLAG_GOLDENROD_SWITCH_2
@@ -20,6 +21,23 @@ GoldenrodUnderground1_ClearTheWay::
 	return
 
 @ Added an antisoft lock, using wall panels
+@ Added more anti softlock 
+
+GoldenrodCity_UndergroundSwitches_InDoorAntiLock::
+	lock
+	msgbox GoldenrodCity_UndergroundSwitches_EventScript_AntiSoftLock_Text, MSGBOX_YESNO
+	closemessage
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_NoOp
+	warp MAP_GOLDENROD_CITY_UNDERGROUND_SWITCHES_HNS, 2, 25, 5
+	waitstate
+	release
+	end
+
+GoldenrodCity_UndergroundSwitches_InDoorAntiLock2::
+	lock
+	setvar VAR_TEMP_0, 1
+	release
+	end
 
 GoldenrodCity_UndergroundSwitches_EventScript_AntiSoftLock::
 	lock
@@ -36,6 +54,7 @@ GoldenrodCity_UndergroundSwitches_EventScript_AntiSoftLock_TP::
 	end
 
 GoldenrodCity_UndergroundSwitches_EventScript_AntiSoftLock_Text::
+	.string "You may be stuck.\p"
 	.string "Go back to the entrance\n"
 	.string "and reset switches?$"
 
@@ -598,7 +617,7 @@ GoldenrodUnderground_Text_GruntM13Beaten:
 
 GoldenrodUnderground_Text_GruntM13After:
     .string "You must have ice in your veins to\n"
-    .string "dis TEAM ROCKET.$"
+    .string "diss TEAM ROCKET.$"
 
 GoldenrodUnderground_Text_GruntF3Seen:
     .string "Are you lost? No, you can't be.\p"

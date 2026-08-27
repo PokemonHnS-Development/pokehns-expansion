@@ -11,8 +11,10 @@ VioletCity_PokemonCenter_EventScript_Aide::
 	faceplayer
 	goto_if_set FLAG_RECEIVED_TOGEPI_EGG, VioletCity_PokemonCenter_EventScript_Aide_Received
 	specialvar VAR_0x8004, GetMaxPartySize @ tx_randomizer_and_challenges
+	goto_if_eq VAR_0x8004, 1, VioletCity_PokemonCenter_EventScript_Aide_Offer @ party limit of 1: the Egg goes to the PC
 	getpartysize
 	goto_if_eq VAR_RESULT, VAR_0x8004, VioletCity_PokemonCenter_EventScript_AideNoRoom
+VioletCity_PokemonCenter_EventScript_Aide_Offer::
 	msgbox VioletCity_PokeCenter_Text_ElmsAideFavor, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, VioletCity_PokemonCenter_EventScript_Aide_Refuse
 	goto_if_eq VAR_RESULT, YES, VioletCity_PokemonCenter_EventScript_Aide_Accepted
@@ -41,14 +43,18 @@ VioletCity_PokemonCenter_EventScript_Aide_Refuse::
 
 VioletCity_PokemonCenter_EventScript_Aide_Accepted::
 	specialvar VAR_0x8004, GetMaxPartySize @ tx_randomizer_and_challenges
+	goto_if_eq VAR_0x8004, 1, VioletCity_PokemonCenter_EventScript_Aide_GiveEgg @ party limit of 1: the Egg goes to the PC
 	getpartysize
 	goto_if_eq VAR_RESULT, VAR_0x8004, VioletCity_PokemonCenter_EventScript_Aide_FullParty
+VioletCity_PokemonCenter_EventScript_Aide_GiveEgg::
 	playfanfare MUS_OBTAIN_ITEM
 	message LavaridgeTown_Text_ReceivedTheEgg
 	waitfanfare
 	msgbox VioletCity_PokeCenter_Text_ElmsAideGiveEgg, MSGBOX_DEFAULT
 	closemessage
 	giveegg SPECIES_TOGEPI
+	goto_if_eq VAR_RESULT, MON_CANT_GIVE, Common_EventScript_NoMoreRoomForPokemon @ party limit of 1 and every BOX full
+	call_if_eq VAR_RESULT, MON_GIVEN_TO_PC, VioletCity_PokemonCenter_EventScript_Aide_EggSentToPC
 	setflag FLAG_RECEIVED_TOGEPI_EGG
 	msgbox VioletCity_PokeCenter_Text_ElmsAideGiveItem, MSGBOX_DEFAULT
 	giveitem ITEM_EXP_SHARE_SMALL
@@ -58,6 +64,11 @@ VioletCity_PokemonCenter_EventScript_Aide_Accepted::
 	clearflag FLAG_HIDE_NEWBARKTOWN_LAB_AIDE
 	release
 	end
+
+VioletCity_PokemonCenter_EventScript_Aide_EggSentToPC::
+	msgbox VioletCity_PokeCenter_Text_ElmsAideEggToPC, MSGBOX_DEFAULT
+	closemessage
+	return
 
 VioletCity_PokemonCenter_EventScript_Aide_Received::
 	msgbox VioletCity_PokeCenter_Text_ElmsAideGiveEgg, MSGBOX_DEFAULT
@@ -128,6 +139,12 @@ VioletCity_PokeCenter_Text_ElmsAideFullParty:
 	.string "POKéMON with you.\p"
 	.string "I'll wait here while you make\n"
 	.string "room for the EGG.$"
+
+VioletCity_PokeCenter_Text_ElmsAideEggToPC:
+	.string "Oh, but you can't carry any more\n"
+	.string "POKéMON with you.\p"
+	.string "Don't worry--I sent the EGG to\n"
+	.string "BILL'S PC for you.$"
 
 VioletCity_PokeCenter_Text_ElmsAideRefuse:
 	.string "B-but… PROF.ELM asked for you…$"

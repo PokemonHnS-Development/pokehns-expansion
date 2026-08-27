@@ -90,6 +90,17 @@ u8 ScriptGiveEgg(u16 species)
     isEgg = TRUE;
     SetMonData(&mon, MON_DATA_IS_EGG, &isEgg);
 
+    // tx_randomizer_and_challenges: with a party limit of 1 the only party slot is
+    // always taken, and handing the Egg over would leave the player with a party of
+    // just an Egg. Send it straight to the PC instead of refusing the gift.
+    if (GetMaxPartySize() == 1)
+    {
+        SetMonData(&mon, MON_DATA_OT_NAME, gSaveBlock2Ptr->playerName);
+        SetMonData(&mon, MON_DATA_OT_GENDER, &gSaveBlock2Ptr->playerGender);
+        SetMonData(&mon, MON_DATA_OT_ID, gSaveBlock2Ptr->playerTrainerId);
+        return CopyMonToPC(&mon);
+    }
+
     return GiveCapturedMonToPlayer(&mon);
 }
 

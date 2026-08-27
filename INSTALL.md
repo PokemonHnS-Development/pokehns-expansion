@@ -4,7 +4,7 @@ Lines to those can be found under each heading.
 This file only contains a short introduction to each supported system.
 If you run into trouble, ask for help on Discord (see [README.md](README.md)).
 
-After completing the install instructions for your OS, proceed to [Building pokeemerald-expansion](#building-pokeemerald-expansion).
+After completing the install instructions for your OS, proceed to [Building pokehns-expansion](#building-pokehns-expansion).
 
 ## Windows
 **Windows needs one of the systems to build the project**
@@ -46,23 +46,23 @@ Only tested on x86_64 based systems.
 
 [Chrome OS instructions](docs/install/chromeos/CHROME_OS.md)
 
-# Building pokeemerald-expansion
-Follow these steps to build `pokeemerald-expansion`.
+# Building pokehns-expansion
+Follow these steps to build `pokehns-expansion`.
 1. Navigate to the directory you want to keep the project in, be aware of any system specific limitations.
-2. Download `pokeemerald-expansion` with `git`
+2. Download `pokehns-expansion` with `git`
 
     ```console
-    git clone https://github.com/rh-hideout/pokeemerald-expansion
+    git clone https://github.com/PokemonHnS-Development/pokehns-expansion.git
     ```
 3. Navigate to the newly downloaded project.
 
     ```console
-    cd pokeemerald-expansion
+    cd pokehns-expansion
     ```
 4. Build the project.
 
     ```console
-    make
+    make hns
     ```
 5. If everything worked correctly, something very similar to this should be seen.
 
@@ -77,7 +77,7 @@ Follow these steps to build `pokeemerald-expansion`.
     arm-none-eabi-objcopy -O binary pokeemerald.elf pokeemerald.gba
     tools/gbafix/gbafix pokeemerald.gba -p --silent
     ```
-    And the build ROM will be in the directory as `pokeemerald.gba`.
+    And the build ROM will be in the directory as `pokehns.gba`.
 
 # Building guidance
 
@@ -91,7 +91,7 @@ nproc
 ```
 Builds can then be sped up by running the following command:
 ```console
-make -j<output of nproc>
+make hns -j<output of nproc>
 ```
 Replace `<output of nproc>` with the number that the `nproc` command returned.
 

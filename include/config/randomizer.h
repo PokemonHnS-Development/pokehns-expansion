@@ -4,6 +4,11 @@
 #define RANDOMIZER_AVAILABLE                   1
 #define RANDOMIZER_SEED_IS_TRAINER_ID          1
 
+// Default for the challenge menu's GEN SCOPE row on a new game.
+// TRUE  = restrict the randomizer to Gen 1-3 families and their cross-gen
+//         evolutions; FALSE = draw from every generation.
+#define RANDOMIZER_DEFAULT_GEN_SCOPE_1_3       TRUE
+
 // The rest of these defines are only usable from C code
 #ifndef __ASSEMBLER__
 

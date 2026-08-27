@@ -409,7 +409,7 @@ static u16 PickOneTypeChallengeStarter(u8 starterId)
         return sStarterMon[starterId];
     }
 
-    return candidates[(starterId * 13 + gSaveBlock2Ptr->playerTrainerId[0]) % count];
+    return candidates[(gSaveBlock2Ptr->playerTrainerId[0] + starterId) % count];
 }
 
 // .text

@@ -12,6 +12,7 @@
 #include "data.h"
 #include "data/randomizer/special_form_tables.h"
 #include "constants/abilities.h"
+#include "constants/pokedex.h"
 #include "data/randomizer/ability_whitelist.h"
 #include "move.h"
 
@@ -169,7 +170,165 @@ bool32 SetRandomizerSeed(u32 newSeed)
     #endif
 }
 
-static bool32 IsSpeciesPermitted(u16 species)
+// Gen scope filter. When tx_Random_GenScope is set, the randomizer may only roll
+// species belonging to a Gen 1-3 family: anything with a Gen 1-3 National Dex
+// number, plus every form and every evolution reachable from one. That picks up
+// the cross-gen evolutions (Sylveon, Weavile, Magnezone, Mamoswine, Annihilape,
+// Clodsire...), the cross-gen pre-evolutions (Munchlax, Happiny, Mantyke...) and
+// the regional forms listed in this game's obtainable Dex together with their
+// evolutions (Perrserker, Obstagoon, Sneasler, Cursola), and — via the backward
+// sweep below — the
+// cross-gen pre-evolutions whose own Dex number is later than the family they
+// evolve into (Munchlax, Happiny, Mantyke, Budew, Chingling, Bonsly, Mime Jr.).
+// Families that merely start in a later gen stay out (Kingambit off Pawniard,
+// Basculegion off Basculin).
+#define GEN_SCOPE_MASK_WORDS ((RANDOMIZER_SPECIES_COUNT + 31) / 32)
+
+// Regional forms carry their own National Dex numbers in this build
+// (P_SEPARATE_REGIONAL_FORMS), so a Gen 1-3 counterpart does not drag them in.
+// They are seeded separately, gated on the obtainable Dex so only forms this
+// game actually offers join the pool.
+static inline bool32 IsRegionalForm(u16 species)
+{
+    const struct SpeciesInfo *speciesInfo = &gSpeciesInfo[species];
+    return speciesInfo->isAlolanForm
+        || speciesInfo->isGalarianForm
+        || speciesInfo->isHisuianForm
+        || speciesInfo->isPaldeanForm;
+}
+
+// Only defined when the species tables are built at runtime; the family walk
+// wants the same depth bound either way.
+#ifndef RANDOMIZER_MAX_EVO_STAGES
+#define RANDOMIZER_MAX_EVO_STAGES 5
+#endif
+
+EWRAM_DATA static u32 sGenScopeMask[GEN_SCOPE_MASK_WORDS] = {0};
+EWRAM_DATA static bool8 sGenScopeMaskInitialized = FALSE;
+
+static inline bool32 GenScopeMaskGet(u16 species)
+{
+    return (sGenScopeMask[species / 32] & (1u << (species & 31))) != 0;
+}
+
+// Marks species and everything downstream of it. Never calls IsSpeciesPermitted:
+// that would re-enter the mask build. The already-marked check both keeps this
+// linear and terminates any evolution cycle.
+static void MarkGenScopeFamily(u16 species, u32 stage)
+{
+    const struct Evolution *evos;
+    const u16 *forms;
+    u32 i;
+
+    if (species == SPECIES_NONE || species >= RANDOMIZER_SPECIES_COUNT)
+        return;
+    if (stage > RANDOMIZER_MAX_EVO_STAGES)
+        return;
+    if (GenScopeMaskGet(species))
+        return;
+    // GetSpeciesEvolutions() sanitizes its argument and asserts on species that
+    // are disabled in this build, so never walk into one. Enabled-but-not-
+    // randomizable species (megas and the like) still propagate the family:
+    // IsSpeciesPermitted keeps them out of the pool on its own.
+    if (!IsSpeciesEnabled(species))
+        return;
+
+    sGenScopeMask[species / 32] |= 1u << (species & 31);
+
+    forms = gSpeciesInfo[species].formSpeciesIdTable;
+    if (forms != NULL)
+    {
+        for (i = 0; forms[i] != FORM_SPECIES_END; i++)
+            MarkGenScopeFamily(forms[i], stage);
+    }
+
+    evos = GetSpeciesEvolutions(species);
+    if (evos != NULL)
+    {
+        for (i = 0; evos[i].method != 0xFFFF; i++)
+            MarkGenScopeFamily(evos[i].targetSpecies, stage + 1);
+    }
+}
+
+static void BuildGenScopeMask(void)
+{
+    u16 i;
+    bool32 changed;
+
+    memset(sGenScopeMask, 0, sizeof(sGenScopeMask));
+
+    for (i = 1; i < RANDOMIZER_SPECIES_COUNT; i++)
+    {
+        u32 natDexNum = gSpeciesInfo[i].natDexNum;
+        if (natDexNum != NATIONAL_DEX_NONE && natDexNum <= NATIONAL_DEX_DEOXYS)
+        {
+            MarkGenScopeFamily(i, 0);
+        }
+        // The flag test comes first on purpose: SpeciesToObtainablePokedexNum
+        // linearly scans the obtainable Dex, so this must not run per species.
+        else if (IsRegionalForm(i) && SpeciesToObtainablePokedexNum(i) != 0)
+        {
+            MarkGenScopeFamily(i, 0);
+        }
+    }
+
+    // The walk above only follows evolutions forwards, so it never reaches a
+    // pre-evolution that was introduced after the family it evolves into --
+    // Munchlax has a Gen 4 Dex number but belongs to Snorlax's family. Sweep
+    // backwards to a fixed point: anything evolving into a marked species joins
+    // it, along with its own forms and evolutions.
+    do
+    {
+        changed = FALSE;
+        for (i = 1; i < RANDOMIZER_SPECIES_COUNT; i++)
+        {
+            const struct Evolution *evos;
+            u32 j;
+
+            if (GenScopeMaskGet(i) || !IsSpeciesEnabled(i))
+                continue;
+
+            evos = GetSpeciesEvolutions(i);
+            if (evos == NULL)
+                continue;
+
+            for (j = 0; evos[j].method != 0xFFFF; j++)
+            {
+                u16 target = evos[j].targetSpecies;
+                if (target < RANDOMIZER_SPECIES_COUNT && GenScopeMaskGet(target))
+                {
+                    MarkGenScopeFamily(i, 0);
+                    changed = TRUE;
+                    break;
+                }
+            }
+        }
+    } while (changed);
+
+    sGenScopeMaskInitialized = TRUE;
+}
+
+static inline bool32 IsGenScopeRestricted(void)
+{
+    return gSaveBlock3Ptr->challengeSettings.tx_Random_GenScope;
+}
+
+static bool32 IsSpeciesInGenScope(u16 species)
+{
+    if (!IsGenScopeRestricted())
+        return TRUE;
+    if (species >= RANDOMIZER_SPECIES_COUNT)
+        return FALSE;
+    if (!sGenScopeMaskInitialized)
+        BuildGenScopeMask();
+
+    return GenScopeMaskGet(species);
+}
+
+// Whether a species can take part in randomization at all. Gates the species
+// being *replaced*, so it deliberately ignores the gen scope: a Noivern in a
+// trainer party still gets randomized when the pool is restricted to Gen 1-3.
+static bool32 IsSpeciesValidForRandomizer(u16 species)
 {
     if (species == SPECIES_NONE)
         return FALSE;
@@ -179,6 +338,13 @@ static bool32 IsSpeciesPermitted(u16 species)
         return FALSE;
 
     return TRUE;
+}
+
+// Whether a species may be *produced* by randomization. Everything the
+// randomizer can roll has to pass this, so the gen scope applies here.
+static bool32 IsSpeciesPermitted(u16 species)
+{
+    return IsSpeciesValidForRandomizer(species) && IsSpeciesInGenScope(species);
 };
 
 u32 GenerateSeedForRandomizer(void)
@@ -300,7 +466,10 @@ static inline bool32 IsKeyItem(u16 itemId)
 
 static inline bool32 ShouldRandomizeItem(u16 itemId)
 {
-    return !(IsItemHM(itemId) || IsKeyItem(itemId) || itemId == ITEM_NONE);
+    // ITEM_GS_BALL sits in POCKET_POKE_BALLS rather than POCKET_KEY_ITEMS, so the key-item
+    // check below doesn't cover it. It gates Kurt's Celebi chain (checkitem/removeitem in
+    // AzaleaTown_KurtsHouse_hns), so rolling it into something else softlocks that quest.
+    return !(IsItemHM(itemId) || IsKeyItem(itemId) || itemId == ITEM_GS_BALL || itemId == ITEM_NONE);
 }
 
 #include "data/randomizer/item_whitelist.h"
@@ -352,6 +521,20 @@ void FindItemRandomize_NativeCall(struct ScriptContext *ctx)
 void FindHiddenItemRandomize_NativeCall(struct ScriptContext *ctx)
 {
     RandomizeFoundItemScript(&gSpecialVar_0x8005);
+}
+
+// Items handed over by NPCs (the `giveitem` macro / STD_OBTAIN_ITEM). These have no
+// object event of their own, so seed off the current map plus the NPC being talked to.
+void ObtainItemRandomize_NativeCall(struct ScriptContext *ctx)
+{
+    if (RandomizerFeatureEnabled(RANDOMIZE_FIELD_ITEMS))
+    {
+        gSpecialVar_0x8000 = RandomizeFoundItem(
+            gSpecialVar_0x8000,
+            gSaveBlock1Ptr->location.mapNum,
+            gSaveBlock1Ptr->location.mapGroup,
+            gSpecialVar_LastTalked);
+    }
 }
 
 static inline bool32 IsRandomizerLegendary(u16 species)
@@ -441,7 +624,8 @@ static void GetIndicesFromGroupRange(const struct SpeciesTable *table, u16 minGr
 struct RamSpeciesTable
 {
     enum RandomizerSpeciesMode mode;
-    bool16 tableInitialized;
+    bool8 tableInitialized;
+    bool8 genScopeRestricted;
     struct SpeciesTable speciesTable;
 };
 
@@ -587,6 +771,7 @@ static void BuildRandomizerSpeciesTable(enum RandomizerSpeciesMode mode)
 
     sRamSpeciesTable.tableInitialized = TRUE;
     sRamSpeciesTable.mode = mode;
+    sRamSpeciesTable.genScopeRestricted = IsGenScopeRestricted();
     speciesTable = &sRamSpeciesTable.speciesTable;
 
     switch(mode)
@@ -649,7 +834,9 @@ static void BuildRandomizerSpeciesTable(enum RandomizerSpeciesMode mode)
 
 static const struct SpeciesTable* GetSpeciesTable(enum RandomizerSpeciesMode mode)
 {
-    if (!sRamSpeciesTable.tableInitialized || mode != sRamSpeciesTable.mode )
+    if (!sRamSpeciesTable.tableInitialized
+        || mode != sRamSpeciesTable.mode
+        || sRamSpeciesTable.genScopeRestricted != IsGenScopeRestricted())
         BuildRandomizerSpeciesTable(mode);
 
     return &sRamSpeciesTable.speciesTable;
@@ -674,10 +861,22 @@ static u16 RandomizeMonTableLookup(struct Sfc32State* state, enum RandomizerSpec
     originalGroup = GetSpeciesGroup(table, species);
 
     if (originalGroup == GROUP_INVALID)
-        return species;
+    {
+        // With a restricted gen scope the species being replaced can itself sit
+        // outside the pool, so it has no group to be matched against. Draw from
+        // the entire in-scope pool instead of leaving it unrandomized; BST and
+        // evolution-stage matching are meaningless for a mon that is not in the
+        // pool to begin with.
+        if (!IsGenScopeRestricted() || !IsSpeciesValidForRandomizer(species))
+            return species;
 
-    GetGroupRange(originalGroup, mode, &minGroup, &maxGroup);
-    GetIndicesFromGroupRange(table, minGroup, maxGroup, &minIndex, &maxIndex);
+        GetIndicesFromGroupRange(table, 0, GROUP_INVALID - 1, &minIndex, &maxIndex);
+    }
+    else
+    {
+        GetGroupRange(originalGroup, mode, &minGroup, &maxGroup);
+        GetIndicesFromGroupRange(table, minGroup, maxGroup, &minIndex, &maxIndex);
+    }
 
     if (maxIndex < minIndex)
         return species;
@@ -695,7 +894,7 @@ static u16 RandomizeMonTableLookup(struct Sfc32State* state, enum RandomizerSpec
 
 static u16 RandomizeMonFromSeed(struct Sfc32State *state, enum RandomizerSpeciesMode mode, u16 species)
 {
-    if (!IsSpeciesPermitted(species))
+    if (!IsSpeciesValidForRandomizer(species))
         return species;
 
     if (mode >= MAX_MON_MODE)
@@ -715,7 +914,7 @@ void GetUniqueMonList(enum RandomizerReason reason, enum RandomizerSpeciesMode m
     {
         u16 curOriginal = originalSpecies[i];
         bool32 foundNextMon = FALSE;
-        if (!IsSpeciesPermitted(curOriginal))
+        if (!IsSpeciesValidForRandomizer(curOriginal))
         {
             curMon = curOriginal;
             continue;
@@ -811,7 +1010,7 @@ u16 RandomizeMon(enum RandomizerReason reason, enum RandomizerSpeciesMode mode, 
     u16 resultSpecies;
     struct Sfc32State state;
 
-    if (!IsSpeciesPermitted(species))
+    if (!IsSpeciesValidForRandomizer(species))
         return species;
 
     state = RandomizerRandSeed(reason, seed, species);
@@ -850,7 +1049,7 @@ u16 RandomizeWildEncounter(u16 species, u8 mapNum, u8 mapGroup, enum WildPokemon
 bool32 IsRandomizationPossible(u16 originalSpecies, u16 targetSpecies)
 {
     const enum RandomizerSpeciesMode mode = GetRandomizerOption(RANDOMIZER_OPTION_SPECIES_MODE);
-    if (!IsSpeciesPermitted(targetSpecies) || !IsSpeciesPermitted(originalSpecies))
+    if (!IsSpeciesPermitted(targetSpecies) || !IsSpeciesValidForRandomizer(originalSpecies))
     {
         return originalSpecies == targetSpecies;
     }
