@@ -8,7 +8,7 @@ Melemele_House_hns_MapScripts_MAP_SCRIPT_ON_TRANSITION:
 
 Alola_Melemele_Pokecenter_Map::
 	lock
-	setvar VAR_0x8005, 0
+	setvar VAR_0x8000, 0
 	callnative OpenScreenshotsFromScript
 	waitstate
 	release
