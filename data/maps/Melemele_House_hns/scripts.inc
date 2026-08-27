@@ -6,6 +6,13 @@ Melemele_House_hns_MapScripts_MAP_SCRIPT_ON_TRANSITION:
 	setrespawn HEAL_LOCATION_MELEMELE_ISLE_HNS
 	end
 
+Alola_Melemele_Pokecenter_Map::
+	lock
+	setvar VAR_0x8005, 0
+	callnative OpenScreenshotsFromScript
+	waitstate
+	release
+	end
 
 Alola_Melemele_Pokecenter_AceTrainer::
 	lock
