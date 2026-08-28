@@ -2,7 +2,7 @@
   "id": "MAP_ROUTE5_TUNNEL_ENTRANCE_HNS",
   "name": "Route5_TunnelEntrance_hns",
   "layout": "LAYOUT_ROUTE5_TUNNEL_ENTRANCE_HNS",
-  "music": "MUS_HG_ROUTE1",
+  "music": "MUS_HG_ROCK_TUNNEL",
   "region_map_section": "MAPSEC_ROUTE_5",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
