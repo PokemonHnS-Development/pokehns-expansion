@@ -225,6 +225,7 @@ DragonsDen_Shrine_Text_PassedTest:
 DragonsDen_Shrine_EventScript_ClairEnter::
 	clearflag FLAG_HIDE_DRAGONS_DEN_SHRINE_CLAIR
 	addobject LOCALID_DRAGONSDEN3_CLAIR
+	playbgm MUS_HG_CLAIR, TRUE
 	playse SE_DOOR
 	delay 40
 	playse SE_PIN
@@ -274,6 +275,7 @@ DragonsDen_Shrine_EventScript_ClairEnter::
 	applymovement2 LOCALID_DRAGONSDEN3_CLAIR, DragonsDen_Shrine_Movement_ClairLeave
 	waitmovement 0
 	playse SE_EXIT
+	fadedefaultbgm
 	setflag FLAG_HIDE_DRAGONS_DEN_SHRINE_CLAIR
 	removeobject LOCALID_DRAGONSDEN3_CLAIR
 	clearflag FLAG_HIDE_DRAGONS_DEN_CAVERN_CLAIR
