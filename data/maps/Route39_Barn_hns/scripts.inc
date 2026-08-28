@@ -106,7 +106,7 @@ Route39_Barn_EventScript_Miltank_NeedBerries1::
 	msgbox Route39_Text_BarnGaveBerry, MSGBOX_AUTOCLOSE
 	waitse
 	msgbox Route39_Text_BarnTotallyHealthy, MSGBOX_DEFAULT
-	playfanfare MUS_OBTAIN_BADGE 
+	playfanfare MUS_HEAL 
 	waitfanfare
 	closemessage
 	setvar VAR_ROUTE39_BARN, 5
