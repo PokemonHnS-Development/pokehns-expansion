@@ -2,7 +2,7 @@
   "id": "MAP_MT_SILVER_OUTSIDE_HNS",
   "name": "MtSilver_Outside_hns",
   "layout": "LAYOUT_MT_SILVER_OUTSIDE_HNS",
-  "music": "MUS_HG_LIGHTHOUSE",
+  "music": "MUS_HG_VICTORY_ROAD",
   "region_map_section": "MAPSEC_MT_SILVER",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
