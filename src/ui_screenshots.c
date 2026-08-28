@@ -395,7 +395,7 @@ static void Task_ScreenshotsMain(u8 taskId)
 {
     if (JOY_NEW(B_BUTTON))
     {
-        PlaySE(SE_PC_OFF);
+        PlaySE(SE_SELECT);
         BeginNormalPaletteFade(0xFFFFFFFF, 0, 0, 16, RGB_BLACK);
         gTasks[taskId].func = Task_ScreenshotsTurnOff;
     }
