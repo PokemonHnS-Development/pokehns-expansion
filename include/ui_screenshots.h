@@ -11,6 +11,7 @@ void Screenshots_StartMenuInitCB(void);
 enum Screenshots
 {
     SCREENSHOT_ALOLA_MAP,
+    SCREENSHOT_SINJOH_MAP,
 };
 
 

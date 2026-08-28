@@ -9,6 +9,7 @@ Melemele_House_hns_MapScripts_MAP_SCRIPT_ON_TRANSITION:
 Alola_Melemele_Pokecenter_Map::
 	lock
 	setvar VAR_0x8000, 0
+	msgbox Alola_Melemele_Pokecenter_Map_Text_0, MSGBOX_DEFAULT
 	callnative OpenScreenshotsFromScript
 	waitstate
 	release
@@ -148,3 +149,7 @@ Alola_Melemele_Pokecenter_Jessica_Text_DeclineTrade:
 
 Alola_Melemele_Pokecenter_Jessica_Text_TradeCompleted:
 	.string "Hi, how's my old TORY doing?$"
+
+Alola_Melemele_Pokecenter_Map_Text_0:
+	.string "{PLAYER} took a closer look at the\n"
+	.string "ALOLA ISLES map.$"

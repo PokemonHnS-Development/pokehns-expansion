@@ -118,6 +118,10 @@ static const u32 sAlolaMapScreenshotsTiles[] = INCBIN_U32("graphics/ui_screensho
 static const u32 sAlolaMapScreenshotsTilemap[] = INCBIN_U32("graphics/ui_screenshots/hnsAlolaMap_tiles.bin.smolTM");
 static const u16 sAlolaMapScreenshotsPalette[] = INCBIN_U16("graphics/ui_screenshots/hnsAlolaMap_tiles.gbapal");
 
+static const u32 sSinjohMapScreenshotsTiles[] = INCBIN_U32("graphics/ui_screenshots/hnsSinjohMap_tiles.8bpp.smol");
+static const u32 sSinjohMapScreenshotsTilemap[] = INCBIN_U32("graphics/ui_screenshots/hnsSinjohMap_tiles.bin.smolTM");
+static const u16 sSinjohMapScreenshotsPalette[] = INCBIN_U16("graphics/ui_screenshots/hnsSinjohMap_tiles.gbapal");
+
 
 struct Screenshot {
 	const u32 *screenshotTiles;
@@ -130,6 +134,11 @@ static const struct Screenshot sScreenshotData[] = {
 		.screenshotTiles = sAlolaMapScreenshotsTiles,
 		.screenshotTilemap = sAlolaMapScreenshotsTilemap,
 		.screenshotPalette = sAlolaMapScreenshotsPalette,
+	},
+	[SCREENSHOT_SINJOH_MAP] = {
+		.screenshotTiles = sSinjohMapScreenshotsTiles,
+		.screenshotTilemap = sSinjohMapScreenshotsTilemap,
+		.screenshotPalette = sSinjohMapScreenshotsPalette,
 	},
 };
 
