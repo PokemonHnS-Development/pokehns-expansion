@@ -2,7 +2,7 @@
   "id": "MAP_FUCHSIA_CITY_HOUSE1_HNS",
   "name": "FuchsiaCity_House1_hns",
   "layout": "LAYOUT_FUCHSIA_CITY_HOUSE1_HNS",
-  "music": "MUS_RG_FUCHSIA",
+  "music": "MUS_HG_CERULEAN",
   "region_map_section": "MAPSEC_FUCHSIA_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
