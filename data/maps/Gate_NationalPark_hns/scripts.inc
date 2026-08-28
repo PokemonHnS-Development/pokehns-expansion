@@ -12,6 +12,7 @@ Gate_NationalPark_EventScript_Attendant::
 	end
 
 Gate_NationalPark_EventScript_AttendantStart::
+	playbgm MUS_HG_BUG_CONTEST_PREP, TRUE
 	msgbox Route35NationalParkGate_Text_OfficerAskToUseFirstMon, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, FALSE, Gate_NationalPark_EventScript_AttendantCancel
 	getpartysize
@@ -75,12 +76,14 @@ Gate_NationalPark_EventScript_AttendantEnterBot::
 Gate_NationalPark_EventScript_AttendantFaint::	
 	msgbox Route35NationalParkGate_Text_FirstMonCantBattle, MSGBOX_DEFAULT
 	closemessage
+	fadedefaultbgm
 	release
 	end	
 
 Gate_NationalPark_EventScript_AttendantCancel::	
 	msgbox Route35NationalParkGate_Text_TakePartInFuture, MSGBOX_DEFAULT
 	closemessage
+	fadedefaultbgm
 	release
 	end
 
@@ -119,6 +122,7 @@ Gate_NationalPark_EventScript_BAttendant::
 	end
 
 Gate_NationalPark_EventScript_BAttendantStart::
+	playbgm MUS_HG_BUG_CONTEST_PREP, TRUE
 	msgbox Route35NationalParkGate_Text_OfficerAskToUseFirstMon, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, FALSE, Gate_NationalPark_EventScript_AttendantCancel
 	getpartysize
