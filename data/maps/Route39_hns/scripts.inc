@@ -120,9 +120,9 @@ Route39_EventScript_LegendaryTriggerSilver::
 
 Route39_EventScript_BaobaIntro::
 	msgbox Route39_Text_BaobaIntro, MSGBOX_DEFAULT
-	playse MUS_HG_POKEGEAR_REGISTERED
+	playfanfare MUS_REGISTER_MATCH_CALL
 	msgbox Route39_Text_Registered, MSGBOX_DEFAULT
-	waitse
+	waitfanfare
 	msgbox Route39_Text_WillCall, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_R39_BAOBA, Route39_Movement_BaobaLeave
