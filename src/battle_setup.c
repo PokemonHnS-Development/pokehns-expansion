@@ -1944,6 +1944,9 @@ void PlayTrainerEncounterMusic(void)
         case TRAINER_ENCOUNTER_MUSIC_SILVER:
             music = MUS_HG_ENCOUNTER_RIVAL;
             break;
+        case TRAINER_ENCOUNTER_MUSIC_HG_KIMONO_GIRL:
+            music = MUS_HG_ENCOUNTER_KIMONO_GIRL;
+            break;
 #endif
         default:
             music = MUS_ENCOUNTER_SUSPICIOUS;
