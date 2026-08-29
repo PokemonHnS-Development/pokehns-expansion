@@ -58,6 +58,11 @@ static const struct Fanfare sFanfares[] = {
     [FANFARE_OBTAIN_B_POINTS]     = { MUS_OBTAIN_B_POINTS,     313 },
     [FANFARE_OBTAIN_SYMBOL]       = { MUS_OBTAIN_SYMBOL,       318 },
     [FANFARE_REGISTER_MATCH_CALL] = { MUS_REGISTER_MATCH_CALL, 135 },
+    // HnS-only, but PlayFanfare always searches this table for the song id, so the
+    // rows have to exist here for the HnS ones below to be reachable at all.
+    [FANFARE_HG_BUG_CONTEST_1ST]  = { MUS_HG_BUG_CONTEST_1ST_PLACE, 203 },
+    [FANFARE_HG_BUG_CONTEST_2ND]  = { MUS_HG_BUG_CONTEST_2ND_PLACE, 186 },
+    [FANFARE_HG_BUG_CONTEST_3RD]  = { MUS_HG_BUG_CONTEST_3RD_PLACE,  84 },
 };
 
 #if IS_HNS
@@ -80,6 +85,9 @@ static const struct Fanfare sFanfaresHnS[] = {
     [FANFARE_OBTAIN_B_POINTS]     = { MUS_HG_OBTAIN_B_POINTS,  264 },
     [FANFARE_OBTAIN_SYMBOL]       = { MUS_OBTAIN_SYMBOL,       318 },
     [FANFARE_REGISTER_MATCH_CALL] = { MUS_HG_POKEGEAR_REGISTERED, 160 },
+    [FANFARE_HG_BUG_CONTEST_1ST]  = { MUS_HG_BUG_CONTEST_1ST_PLACE, 232 },
+    [FANFARE_HG_BUG_CONTEST_2ND]  = { MUS_HG_BUG_CONTEST_2ND_PLACE, 186 },
+    [FANFARE_HG_BUG_CONTEST_3RD]  = { MUS_HG_BUG_CONTEST_3RD_PLACE,  84 },
 };
 #endif
 
