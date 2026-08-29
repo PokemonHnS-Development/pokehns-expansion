@@ -121,7 +121,7 @@ RadioTower1F_EventScript_ReceptionQuiz5::
 RadioTower1F_EventScript_ReceptionGiveRadio::
 	msgbox RadioTower1F_Text_QuizWin, MSGBOX_DEFAULT
 	closemessage
-	playfanfare MUS_HG_OBTAIN_KEY_ITEM
+	playfanfare MUS_RG_OBTAIN_KEY_ITEM
 	msgbox RadioTower1F_Text_PokegearRadio, MSGBOX_AUTOCLOSE
 	waitfanfare
 	msgbox RadioTower1F_Text_TuneIn, MSGBOX_DEFAULT

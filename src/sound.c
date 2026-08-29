@@ -63,6 +63,7 @@ static const struct Fanfare sFanfares[] = {
     [FANFARE_HG_BUG_CONTEST_1ST]  = { MUS_HG_BUG_CONTEST_1ST_PLACE, 203 },
     [FANFARE_HG_BUG_CONTEST_2ND]  = { MUS_HG_BUG_CONTEST_2ND_PLACE, 186 },
     [FANFARE_HG_BUG_CONTEST_3RD]  = { MUS_HG_BUG_CONTEST_3RD_PLACE,  84 },
+    [FANFARE_HG_OBTAIN_EGG]       = { MUS_HG_OBTAIN_EGG,            127 },
 };
 
 #if IS_HNS
@@ -88,6 +89,7 @@ static const struct Fanfare sFanfaresHnS[] = {
     [FANFARE_HG_BUG_CONTEST_1ST]  = { MUS_HG_BUG_CONTEST_1ST_PLACE, 232 },
     [FANFARE_HG_BUG_CONTEST_2ND]  = { MUS_HG_BUG_CONTEST_2ND_PLACE, 186 },
     [FANFARE_HG_BUG_CONTEST_3RD]  = { MUS_HG_BUG_CONTEST_3RD_PLACE,  84 },
+    [FANFARE_HG_OBTAIN_EGG]       = { MUS_HG_OBTAIN_EGG,            131 },
 };
 #endif
 

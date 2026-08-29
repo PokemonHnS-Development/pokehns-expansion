@@ -22,6 +22,7 @@
 #define FANFARE_HG_BUG_CONTEST_1ST  18
 #define FANFARE_HG_BUG_CONTEST_2ND  19
 #define FANFARE_HG_BUG_CONTEST_3RD  20
+#define FANFARE_HG_OBTAIN_EGG       21
 
 #define CRY_MODE_NORMAL        0 // Default
 #define CRY_MODE_DOUBLES       1 // Shortened cry for double battles
