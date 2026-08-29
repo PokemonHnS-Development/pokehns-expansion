@@ -67,39 +67,39 @@ BugContest_EventScript_Didntcatch::
 
 BugContest_EventScript_First::
 	msgbox BugContest_Text_First1, MSGBOX_DEFAULT
-	playfanfare MUS_OBTAIN_BERRY
+	playfanfare MUS_HG_BUG_CONTEST_3RD_PLACE
 	waitfanfare
 	msgbox BugContest_Text_First2, MSGBOX_DEFAULT
-	playfanfare MUS_OBTAIN_BERRY
+	playfanfare MUS_HG_BUG_CONTEST_2ND_PLACE
 	waitfanfare
 	msgbox BugContest_Text_First3, MSGBOX_DEFAULT
-	playfanfare MUS_OBTAIN_BADGE
+	playfanfare MUS_HG_BUG_CONTEST_1ST_PLACE
 	waitfanfare
 	closemessage
 	return
 
 BugContest_EventScript_Second::
 	msgbox BugContest_Text_Second1, MSGBOX_DEFAULT
-	playfanfare MUS_OBTAIN_BERRY
+	playfanfare MUS_HG_BUG_CONTEST_3RD_PLACE
 	waitfanfare
 	msgbox BugContest_Text_Second2, MSGBOX_DEFAULT
-	playfanfare MUS_OBTAIN_BERRY
+	playfanfare MUS_HG_BUG_CONTEST_2ND_PLACE
 	waitfanfare
 	msgbox BugContest_Text_Second3, MSGBOX_DEFAULT
-	playfanfare MUS_OBTAIN_BADGE
+	playfanfare MUS_HG_BUG_CONTEST_1ST_PLACE
 	waitfanfare
 	closemessage
 	return
 
 BugContest_EventScript_Third::
 	msgbox BugContest_Text_Third1, MSGBOX_DEFAULT
-	playfanfare MUS_OBTAIN_BERRY
+	playfanfare MUS_HG_BUG_CONTEST_3RD_PLACE
 	waitfanfare
 	msgbox BugContest_Text_Third2, MSGBOX_DEFAULT
-	playfanfare MUS_OBTAIN_BERRY
+	playfanfare MUS_HG_BUG_CONTEST_2ND_PLACE
 	waitfanfare
 	msgbox BugContest_Text_Third3, MSGBOX_DEFAULT
-	playfanfare MUS_OBTAIN_BADGE
+	playfanfare MUS_HG_BUG_CONTEST_1ST_PLACE
 	waitfanfare
 	closemessage
 	return
@@ -167,7 +167,7 @@ BugContest_Text_First3:
 	.string "{STR_VAR_1}!$"
 
 BugContest_Text_Second1:
-	.string "Placing second is the COOLTRAINER\n"
+	.string "Placing third is the COOLTRAINER\n"
 	.string "BELINDA, who caught a wriggling\l"
 	.string "BUTTERFREE!$"
 BugContest_Text_Second2:
