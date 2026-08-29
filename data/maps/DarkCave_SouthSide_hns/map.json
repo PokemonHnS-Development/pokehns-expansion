@@ -2,7 +2,7 @@
   "id": "MAP_DARK_CAVE_SOUTH_SIDE_HNS",
   "name": "DarkCave_SouthSide_hns",
   "layout": "LAYOUT_DARK_CAVE_SOUTH_SIDE_HNS",
-  "music": "MUS_HG_UNION_CAVE",
+  "music": "MUS_HG_ICE_PATH",
   "region_map_section": "MAPSEC_DARK_CAVE",
   "requires_flash": true,
   "weather": "WEATHER_NONE",
