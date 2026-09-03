@@ -2,7 +2,7 @@
   "id": "MAP_MT_MOON_CAVE_HNS",
   "name": "MtMoon_Cave_hns",
   "layout": "LAYOUT_MT_MOON_CAVE_HNS",
-  "music": "MUS_HG_ROCK_TUNNEL",
+  "music": "MUS_HG_UNION_CAVE",
   "region_map_section": "MAPSEC_MT_MOON",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

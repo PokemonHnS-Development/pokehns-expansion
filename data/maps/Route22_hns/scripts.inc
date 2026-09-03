@@ -75,7 +75,7 @@ Route22_EventScript_Scene::
 	addobject LOCALID_ROUTE22_GIOVANNI
 	addobject LOCALID_ROUTE22_SILVER
 	waitse
-	playbgm MUS_RG_ROUTE3, FALSE
+	playbgm MUS_HG_ROUTE3, FALSE
 	fadescreenswapbuffers FADE_FROM_WHITE
 	delay 50
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH

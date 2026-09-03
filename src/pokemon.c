@@ -8111,6 +8111,13 @@ u16 GetBattleBGM(void)
             return MUS_VS_FRONTIER_BRAIN;
         default:
         #if IS_HNS
+            // Trainer Hill and the three Battle Tents in its courtyard all use
+            // MAPSEC_TRAINER_HILL, which sits outside every range in GetRegionForSectionId
+            // and so falls through to REGION_HOENN and the Emerald theme. The facility is
+            // in Johto. Corrected here rather than in GetRegionForSectionId, which feeds
+            // far more than music, and inside default so class cases still take priority.
+            if (gMapHeader.regionMapSectionId == MAPSEC_TRAINER_HILL)
+                return MUS_HG_VS_TRAINER;
             if (GetCurrentRegion() == REGION_JOHTO)
                 return MUS_HG_VS_TRAINER;
             else if (GetCurrentRegion() == REGION_KANTO)

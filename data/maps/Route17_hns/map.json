@@ -2,7 +2,7 @@
   "id": "MAP_ROUTE17_HNS",
   "name": "Route17_hns",
   "layout": "LAYOUT_ROUTE17_HNS",
-  "music": "MUS_HG_ROUTE11",
+  "music": "MUS_HG_CYCLING",
   "region_map_section": "MAPSEC_ROUTE_17",
   "requires_flash": false,
   "weather": "WEATHER_RAIN",

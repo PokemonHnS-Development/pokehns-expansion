@@ -5578,18 +5578,28 @@ static void HandleEndTurn_BattleWon(void)
         BattleStopLowHpSound();
         gBattlescriptCurrInstr = BattleScript_FrontierTrainerBattleWon;
 
+        // This branch covers three things at once: the Battle Frontier, Trainer Hill, and
+        // the Battle Tents in Trainer Hill's courtyard (which set BATTLE_TYPE_PALACE/ARENA/
+        // FACTORY, all inside the BATTLE_TYPE_FRONTIER mask). The Frontier is a Hoenn
+        // institution and stays on the Emerald themes throughout; Trainer Hill and the Tents
+        // are Johto and take the HG ones, matching what GetBattleBGM gives them. They are
+        // told apart by map section, since the battle type flags do not separate the Tents
+        // from the Frontier proper.
         if (TRAINER_BATTLE_PARAM.opponentA == TRAINER_FRONTIER_BRAIN)
-        #if IS_HNS
-            PlayBGM(MUS_HG_VICTORY_FRONTIER_BRAIN);
-        #else
+        {
+            // Brains only ever appear in the Battle Frontier, so this is always Emerald.
             PlayBGM(MUS_VICTORY_GYM_LEADER);
-        #endif
-        else
-        #if IS_HNS
+        }
+    #if IS_HNS
+        else if (gMapHeader.regionMapSectionId == MAPSEC_TRAINER_HILL)
+        {
             PlayBGM(MUS_HG_VICTORY_TRAINER);
-        #else
+        }
+    #endif
+        else
+        {
             PlayBGM(MUS_VICTORY_TRAINER);
-        #endif
+        }
     }
     else if (gBattleTypeFlags & BATTLE_TYPE_TRAINER && !(gBattleTypeFlags & BATTLE_TYPE_LINK))
     {
@@ -5600,8 +5610,20 @@ static void HandleEndTurn_BattleWon(void)
         {
         case TRAINER_CLASS_ELITE_FOUR:
         case TRAINER_CLASS_CHAMPION:
+        // HnS uses its own class constants for these, so without them the Johto/Kanto
+        // Elite Four and Champions fell through to the ordinary trainer victory theme.
+        case TRAINER_CLASS_ELITE_FOUR_HNS:
+        case TRAINER_CLASS_CHAMPION_HNS:
+        case TRAINER_CLASS_PKMN_TRAINER_1_HNS:
         #if IS_HNS
-            PlayBGM(MUS_HG_VICTORY_GYM_LEADER);
+            // Steven is an Emerald guest, so he keeps the Emerald league victory theme
+            // to match the Emerald champion battle theme GetBattleBGM gives him. No
+            // facility check needed here, the Frontier and Trainer Hill are handled by
+            // the branch above, so opponentA is always a real gTrainers id at this point.
+            if (TRAINER_BATTLE_PARAM.opponentA == TRAINER_STEVEN_HNS)
+                PlayBGM(MUS_VICTORY_LEAGUE);
+            else
+                PlayBGM(MUS_HG_VICTORY_GYM_LEADER);
         #else
             PlayBGM(MUS_VICTORY_LEAGUE);
         #endif
@@ -5615,6 +5637,8 @@ static void HandleEndTurn_BattleWon(void)
             PlayBGM(MUS_VICTORY_AQUA_MAGMA);
             break;
         case TRAINER_CLASS_LEADER:
+        case TRAINER_CLASS_LEADER_HNS:
+        case TRAINER_CLASS_LEADER_KANTO_HNS:
         #if IS_HNS
             PlayBGM(MUS_HG_VICTORY_GYM_LEADER);
         #else

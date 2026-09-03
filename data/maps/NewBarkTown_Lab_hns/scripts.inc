@@ -294,7 +294,10 @@ NewBarkTown_Lab_EventScript_ChoseStarter_NicknameStarter_Nuzlocke::
 NewBarkTown_Lab_EventScript_MrPokemon::
 	setvar VAR_NEWBARKTOWN_LABSTATE, 2
 	setvar VAR_NEWBARK_TOWN_STATE, 3
-	msgbox NewBarkTown_Lab_Text_ElmDirections1, MSGBOX_DEFAULT
+	msgbox NewBarkTown_Lab_Text_ElmDirections1_Register, MSGBOX_DEFAULT
+	playfanfare MUS_REGISTER_MATCH_CALL
+	msgbox NewBarkTown_Lab_Text_RegisteredElm, MSGBOX_DEFAULT
+	waitfanfare
 	setflag FLAG_ENABLE_PROF_BIRCH_MATCH_CALL
 	msgbox NewBarkTown_Lab_Text_ElmDirections2, MSGBOX_DEFAULT
 	closemessage
@@ -753,6 +756,20 @@ NewBarkTown_Lab_Text_ElmDirections1:
 	.string "But just in case, you have my\n"
 	.string "phone number. Call me if\l"
 	.string "anything comes up!$"
+
+NewBarkTown_Lab_Text_ElmDirections1_Register:
+	.string "MR. POKéMON lives a little bit\n"
+	.string "beyond CHERRYGROVE, the next\l"
+	.string "city over.\p"
+	.string "It's almost a direct route\n"
+	.string "there, so you can't miss it.\p"
+	.string "But just in case, here's my\n"
+	.string "phone number. Call me if\l"
+	.string "anything comes up!$"
+
+NewBarkTown_Lab_Text_RegisteredElm:
+	.string "Registered PROF.ELM\n"
+	.string "in the POKéGEAR.$"
 
 
 NewBarkTown_Lab_Text_ElmLetYourMonBattle:

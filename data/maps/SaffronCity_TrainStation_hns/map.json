@@ -2,7 +2,7 @@
   "id": "MAP_SAFFRON_CITY_TRAIN_STATION_HNS",
   "name": "SaffronCity_TrainStation_hns",
   "layout": "LAYOUT_SAFFRON_CITY_TRAIN_STATION_HNS",
-  "music": "MUS_HG_GOLDENROD",
+  "music": "MUS_HG_PEWTER",
   "region_map_section": "MAPSEC_SAFFRON_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

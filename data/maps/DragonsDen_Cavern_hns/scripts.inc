@@ -29,6 +29,7 @@ DragonsDen_Cavern_Trigger_ClairLeft::
 	lock
 	setflag FLAG_TEMP_HIDE_FOLLOWER 
 	playse SE_PIN
+	playbgm MUS_HG_CLAIR, TRUE
 	applymovement2 LOCALID_DRAGONSDEN2_CLAIR, Common_Movement_ExclamationMark
 	delay 55
 	waitmovement LOCALID_DRAGONSDEN2_CLAIR
@@ -40,6 +41,7 @@ DragonsDen_Cavern_Trigger_ClairLeft::
 	setflag FLAG_HIDE_DRAGONS_DEN_CAVERN_CLAIR
 	removeobject LOCALID_DRAGONSDEN2_CLAIR
 	playse SE_EXIT
+	fadedefaultbgm
 	setvar VAR_BLACKTHORN_CITY_STATE, 4
 	setrespawn HEAL_LOCATION_BLACKTHORN_CITY_HNS
 	releaseall
@@ -48,6 +50,7 @@ DragonsDen_Cavern_Trigger_ClairLeft::
 DragonsDen_Cavern_Trigger_ClairMid::
 	lock 
 	playse SE_PIN
+	playbgm MUS_HG_CLAIR, TRUE
 	applymovement2 LOCALID_DRAGONSDEN2_CLAIR, Common_Movement_ExclamationMark
 	delay 55
 	waitmovement LOCALID_DRAGONSDEN2_CLAIR
@@ -58,6 +61,7 @@ DragonsDen_Cavern_Trigger_ClairMid::
 	setflag FLAG_HIDE_DRAGONS_DEN_CAVERN_CLAIR
 	removeobject LOCALID_DRAGONSDEN2_CLAIR
 	playse SE_EXIT
+	fadedefaultbgm
 	setvar VAR_BLACKTHORN_CITY_STATE, 4
 	release
 	end
@@ -65,6 +69,7 @@ DragonsDen_Cavern_Trigger_ClairMid::
 DragonsDen_Cavern_Trigger_ClairRight::
 	lock 
 	playse SE_PIN
+	playbgm MUS_HG_CLAIR, TRUE
 	applymovement2 LOCALID_DRAGONSDEN2_CLAIR, Common_Movement_ExclamationMark
 	delay 55
 	waitmovement LOCALID_DRAGONSDEN2_CLAIR
@@ -77,6 +82,7 @@ DragonsDen_Cavern_Trigger_ClairRight::
 	setflag FLAG_HIDE_DRAGONS_DEN_CAVERN_CLAIR
 	removeobject LOCALID_DRAGONSDEN2_CLAIR
 	playse SE_EXIT
+	fadedefaultbgm
 	setvar VAR_BLACKTHORN_CITY_STATE, 4
 	release
 	end

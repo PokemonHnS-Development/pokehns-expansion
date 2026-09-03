@@ -2784,7 +2784,7 @@ void GetFollowerAction(struct ScriptContext *ctx) // Essentially a big switch fo
         condEmotes[condCount++] = (struct SpecialEmote) {.emotion = FOLLOWER_EMOTION_SAD, .index = 6};
     }
     // Gym type advantage/disadvantage
-    if (GetCurrentMapMusic() == MUS_GYM || GetCurrentMapMusic() == MUS_RG_GYM)
+    if (GetCurrentMapMusic() == MUS_GYM || GetCurrentMapMusic() == MUS_RG_GYM || GetCurrentMapMusic() == MUS_HG_GYM)
     {
         switch (gMapHeader.regionMapSectionId)
         {
@@ -2805,6 +2805,8 @@ void GetFollowerAction(struct ScriptContext *ctx) // Essentially a big switch fo
             break;
 #if !IS_HNS
         case MAPSEC_LAVARIDGE_TOWN:
+#else
+        case MAPSEC_SEAFOAM_ISLANDS: // Blaine's gym was relocated here in HG/SS
 #endif
         case MAPSEC_CINNABAR_ISLAND:
             multi = TYPE_FIRE;
@@ -2836,9 +2838,42 @@ void GetFollowerAction(struct ScriptContext *ctx) // Essentially a big switch fo
         case MAPSEC_VIRIDIAN_CITY:
             multi = TYPE_GROUND;
             break;
+#if IS_HNS
+        case MAPSEC_VIOLET_CITY:
+            multi = TYPE_FLYING;
+            break;
+        case MAPSEC_AZALEA_TOWN:
+            multi = TYPE_BUG;
+            break;
+        case MAPSEC_GOLDENROD_CITY:
+            multi = TYPE_NORMAL;
+            break;
+        case MAPSEC_ECRUTEAK_CITY:
+            multi = TYPE_GHOST;
+            break;
+        case MAPSEC_CIANWOOD_CITY:
+            multi = TYPE_FIGHTING;
+            break;
+        case MAPSEC_OLIVINE_CITY:
+            multi = TYPE_STEEL;
+            break;
+        case MAPSEC_MAHOGANY_TOWN:
+            multi = TYPE_ICE;
+            break;
+        case MAPSEC_BLACKTHORN_CITY:
+            multi = TYPE_DRAGON;
+            break;
+#endif
         default:
             multi = NUMBER_OF_MON_TYPES;
         }
+#if IS_HNS
+        // The Fighting Dojo shares Saffron City's map section with Sabrina's gym, but holds
+        // EV-training NPCs rather than trainer battles, so there's no type to hint at.
+        if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_SAFFRON_CITY_FIGHTING_DOJO_HNS)
+         && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_SAFFRON_CITY_FIGHTING_DOJO_HNS))
+            multi = NUMBER_OF_MON_TYPES;
+#endif
         if (multi < NUMBER_OF_MON_TYPES)
         {
             multi = GetOverworldTypeEffectiveness(mon, multi);

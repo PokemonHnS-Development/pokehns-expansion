@@ -62,7 +62,7 @@ VioletCity_EventScript_Earl::
 VioletCity_EventScript_EarlTrainerSchool::
 	msgbox VioletCity_Text_FollowEarl, MSGBOX_DEFAULT
 	closemessage
-	playbgm MUS_HG_FOLLOW_ME_1, FALSE
+	playbgm MUS_HG_FOLLOW_ME_2, FALSE
 	switch VAR_FACING
 	case DIR_NORTH, VioletCity_EventScript_EarlTrainerSchoolSouth
 	case DIR_WEST, VioletCity_EventScript_EarlTrainerSchoolEast

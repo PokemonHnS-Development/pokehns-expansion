@@ -40,7 +40,7 @@ EventScript_BufferItemsPocket::
 
 EventScript_BufferKeyItemsPocket::
 	bufferstdstring STR_VAR_3, STDSTRING_KEYITEMS
-	call_if_eq VAR_0x8007, TRUE, EventScript_PlayFanfareObtainedItem
+	call_if_eq VAR_0x8007, TRUE, EventScript_PlayFanfareObtainedKeyItem
 	return
 
 EventScript_BufferPokeballsPocket::
@@ -55,7 +55,7 @@ EventScript_BufferTMHMsPocket::
 
 EventScript_BufferBerriesPocket::
 	bufferstdstring STR_VAR_3, STDSTRING_BERRIES
-	call_if_eq VAR_0x8007, TRUE, EventScript_PlayFanfareObtainedItem
+	call_if_eq VAR_0x8007, TRUE, EventScript_PlayFanfareObtainedBerry
 	return
 
 EventScript_BufferMedicinePocket::
@@ -98,8 +98,16 @@ EventScript_PlayFanfareObtainedItem::
 	playfanfare MUS_OBTAIN_ITEM
 	return
 
+EventScript_PlayFanfareObtainedKeyItem::
+	playfanfare MUS_RG_OBTAIN_KEY_ITEM
+	return
+
 EventScript_PlayFanfareObtainedTMHM::
 	playfanfare MUS_OBTAIN_TMHM
+	return
+
+EventScript_PlayFanfareObtainedBerry::
+	playfanfare MUS_OBTAIN_BERRY
 	return
 
 Std_ObtainDecoration::

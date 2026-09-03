@@ -46,14 +46,15 @@ Route39_FarmHouse_EventScript_FarmerMBuyMilk::
 	goto_if_eq VAR_RESULT, FALSE, Route39_FarmHouse_EventScript_FarmerM_BagFull
 	removemoney 500
 	updatemoneybox 0
+	msgbox Route39_Text_FarmerMGotMilk, MSGBOX_DEFAULT
+	playfanfare MUS_OBTAIN_ITEM
+	msgbox Route39_Text_GotMilk, MSGBOX_DEFAULT
+	waitfanfare
 	msgbox Route39FarmHouse_Text_WouldYouLikeAnother, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, TRUE, Route39_FarmHouse_EventScript_FarmerMBuyMilk
 
 	
-	msgbox Route39_Text_FarmerMGotMilk, MSGBOX_DEFAULT
-	closemessage
-	playse MUS_OBTAIN_ITEM
-	msgbox Route39_Text_GotMilk, MSGBOX_DEFAULT
+	msgbox Route39_Text_FarmerMNoSale, MSGBOX_DEFAULT
 	closemessage
 	hidemoneybox
 	release

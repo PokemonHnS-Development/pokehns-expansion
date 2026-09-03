@@ -2,7 +2,7 @@
   "id": "MAP_ROUTE16_HNS",
   "name": "Route16_hns",
   "layout": "LAYOUT_ROUTE16_HNS",
-  "music": "MUS_HG_ROUTE11",
+  "music": "MUS_HG_ROUTE3",
   "region_map_section": "MAPSEC_ROUTE_16",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

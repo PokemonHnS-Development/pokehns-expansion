@@ -248,6 +248,13 @@ void StartNewGameSceneHns(void)
 {
     u8 taskId;
 
+    // A new game started over an existing save inherits that save's flags until
+    // ClearSav1 runs at the end of the speech, so the intro would play GBS tracks.
+    // Clearing it here also means GBS never drives NR50 during the speech; restore
+    // the PSG master volume in case it was left attenuated on the way in.
+    FlagClear(FLAG_SYS_GBS_ENABLED);
+    RestorePSGMasterVolume();
+
     SetVBlankCallback(NULL);
     ResetTasks();
     taskId = CreateTask(Task_NewGameHnsSpeech_Init, 0);

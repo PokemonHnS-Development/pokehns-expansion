@@ -80,7 +80,7 @@ CherryGroveCity_EventScript_TriggerGent_Cancel::
 	end
 
 CherryGroveCity_EventScript_GentTour::
-	playbgm MUS_HG_FOLLOW_ME_1, FALSE
+	playbgm MUS_HG_FOLLOW_ME_2, FALSE
 	applymovement LOCALID_GUIDE_GENT, CherryGroveCity_Movement_Pokecenter
 	applymovement OBJ_EVENT_ID_PLAYER, CherryGroveCity_Movement_Pokecenter
 	waitmovement 0

@@ -126,7 +126,7 @@ Route34_DayCare_EventScript_Clerk_GaveEgg::
 	closemessage
 	delay 30
 	setflag FLAG_RECEIVED_ODD_EGG
-	playfanfare MUS_OBTAIN_ITEM
+	playfanfare MUS_RG_OBTAIN_KEY_ITEM
 	message Route34_DayCare_Text_ReceivedOddEgg
 	waitfanfare
 	closemessage
@@ -235,7 +235,7 @@ Route34_EventScript_DaycareAcceptEgg::
 
 Route34_EventScript_DaycareReceiveEgg::
 	message Route34_Text_ReceivedEgg
-	playfanfare MUS_LEVEL_UP
+	playfanfare MUS_HG_OBTAIN_EGG
 	waitfanfare
 	waitbuttonpress
 	msgbox Route34_Text_TakeGoodCareOfIt, MSGBOX_DEFAULT

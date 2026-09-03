@@ -2,7 +2,7 @@
   "id": "MAP_GATE_ROUTE40_TRAINER_HILL_COURTYARD_HNS",
   "name": "Gate_Route40_TrainerHill_Courtyard_hns",
   "layout": "LAYOUT_GATE_ROUTE40_TRAINER_HILL_COURTYARD_HNS",
-  "music": "MUS_HG_ROUTE38",
+  "music": "MUS_HG_ROUTE34",
   "region_map_section": "MAPSEC_ROUTE_40",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

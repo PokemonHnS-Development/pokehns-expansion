@@ -2,7 +2,7 @@
   "id": "MAP_ROUTE46_HNS",
   "name": "Route46_hns",
   "layout": "LAYOUT_ROUTE46_HNS",
-  "music": "MUS_HG_ROUTE42",
+  "music": "MUS_HG_ROUTE34",
   "region_map_section": "MAPSEC_ROUTE_46",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
