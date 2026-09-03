@@ -26,6 +26,8 @@
 #include "decoration_inventory.h"
 #include "randomizer.h"
 
+#if IS_HNS
+
 extern const u8 EventScript_MomGiftCall_Item[];
 extern const u8 EventScript_MomGiftCall_Berry[];
 extern const u8 EventScript_MomGiftCall_Decoration[];
@@ -537,3 +539,97 @@ void Special_MomOpenWithdrawInput(void)
 #undef tWindowMoney
 #undef tWindowInput
 #undef tWindowMessage
+
+#else
+
+void InitMomSavings(void)
+{
+}
+
+void Mom_EnsureInitialized(void)
+{
+}
+
+void Mom_EnableSaving(bool8 enable)
+{
+    (void)enable;
+}
+
+bool8 Mom_IsSavingEnabled(void)
+{
+    return FALSE;
+}
+
+u32 Mom_GetBalance(void)
+{
+    return 0;
+}
+
+bool8 Mom_TryDepositMoney(u32 amount)
+{
+    (void)amount;
+    return FALSE;
+}
+
+bool8 Mom_AutoDepositFromBattle(u32 amount)
+{
+    (void)amount;
+    return FALSE;
+}
+
+bool8 Mom_TryWithdrawMoney(u32 amount)
+{
+    (void)amount;
+    return FALSE;
+}
+
+bool8 Mom_CheckForGiftPurchase(u32 newBalance, u32 oldBalance, bool8 isAutomatic)
+{
+    (void)newBalance;
+    (void)oldBalance;
+    (void)isAutomatic;
+    return FALSE;
+}
+
+bool8 Mom_TryTriggerGiftCall(void)
+{
+    return FALSE;
+}
+
+void Special_MomEnableSaving(void)
+{
+}
+
+void Special_MomDisableSaving(void)
+{
+}
+
+void Special_MomGetBalance(void)
+{
+}
+
+void Special_MomDeposit(void)
+{
+}
+
+void Special_MomWithdraw(void)
+{
+}
+
+void Special_MomIsSavingEnabled(void)
+{
+}
+
+void Special_MomEnsureInitialized(void)
+{
+}
+
+void Special_MomOpenDepositInput(void)
+{
+}
+
+void Special_MomOpenWithdrawInput(void)
+{
+}
+
+#endif

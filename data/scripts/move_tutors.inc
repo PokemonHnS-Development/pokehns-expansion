@@ -160,6 +160,7 @@ MoveTutor_EventScript_ExplosionTaught::
 	release
 	end
 
+#if IS_HNS
 IlexForest_EventScript_HeadbuttMoveTutor::
 	lock
 	faceplayer
@@ -176,6 +177,7 @@ MoveTutor_EventScript_HeadbuttTaught::
 	msgbox MoveTutor_Text_HeadbuttTaught, MSGBOX_DEFAULT
 	release
 	end
+#endif
 
 MoveTutor_EventScript_OpenPartyMenu::
 	special ChooseMonForMoveTutor

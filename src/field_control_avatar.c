@@ -334,7 +334,11 @@ static bool8 TryStartInteractionScript(struct MapPosition *position, u16 metatil
      && script != SecretBase_EventScript_DollInteract
      && script != SecretBase_EventScript_CushionInteract
      && script != EventScript_PC
+#if IS_HNS
      && script != GoldenrodCity_RadioTower_5F_EventScript_Petrel)
+#else
+    )
+#endif
         PlaySE(SE_SELECT);
 
     ScriptContext_SetupScript(script);

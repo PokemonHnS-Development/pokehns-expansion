@@ -1620,8 +1620,10 @@ void HideStartMenu(void)
     // WARNING: VAR_TEMP_MTSILVER_RESUME_BLIZZARD_SE should not be used for anything else
     // in MAPSEC_MT_SILVER, as it will be set to 0 when the start menu is opened and closed.
     // Check variable aliases in vars_hns.h to ensire temporary variable is not used for anything else.
+#if IS_HNS
     if (gMapHeader.regionMapSectionId == MAPSEC_MT_SILVER && (gMapHeader.mapLayoutId == LAYOUT_MT_SILVER_SUMMIT_DAY_HNS || gMapHeader.mapLayoutId == LAYOUT_MT_SILVER_SUMMIT_NIGHT_HNS))
         VarSet(VAR_TEMP_MTSILVER_RESUME_BLIZZARD_SE, 0);
+#endif
     HideStartMenuWindow();
 }
 
