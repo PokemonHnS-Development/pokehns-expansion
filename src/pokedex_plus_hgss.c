@@ -277,13 +277,6 @@ static const u32 sPokedexPlusHGSS_ScreenSearchHoenn_Tilemap[] = INCBIN_U32("grap
 static const u32 sPokedexPlusHGSS_ScreenSearchNational_Tilemap[] = INCBIN_U32("graphics/pokedex/hgss/tilemap_search_screen_national.bin.smolTM");
 
 #define SCROLLING_MON_X 146// For modifying behaviour of the stats screen move list
-#define REVERSE_MOVES_DIRECTION 1 //0 false - default: Down on d-pad increments list, 1 true - reversed: Up on d-pad increments list
-#define LOOP_MOVES_LIST 1 //0 false - default: List stops at 1 and at max moves, 1 true - looped: List continues infinitely
-
-// For modifying whether to use original numbers or summarised values
-#define CATCH_RATE_NUMBER 1 //0 false - default: Use text labels instead of numeric catch rate, 1 true - use numeric catch rate
-#define FRIENDSHIP_BASE_NUMBER 1 //0 false - default: Use emoji instead of numeric base friendship rate, 1 true - use numeric friendship rate
-#define EGG_CYCLES_NUMBER 1 //0 false - default: Use egg icons instead of numeric egg cycles rate, 1 true - use numeric egg cycles
 
 // For scrolling search parameter
 #define MAX_SEARCH_PARAM_ON_SCREEN   6
