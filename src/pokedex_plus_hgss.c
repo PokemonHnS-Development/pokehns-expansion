@@ -271,7 +271,9 @@ static const u32 sPokedexPlusHGSS_ScreenSize_Tilemap[] = INCBIN_U32("graphics/po
 static const u32 sPokedexPlusHGSS_ScreenSearchHoenn_Tilemap[] = INCBIN_U32("graphics/pokedex/hgss/tilemap_search_screen_hoenn.bin.smolTM");
 static const u32 sPokedexPlusHGSS_ScreenSearchNational_Tilemap[] = INCBIN_U32("graphics/pokedex/hgss/tilemap_search_screen_national.bin.smolTM");
 
-#define SCROLLING_MON_X 146
+#define SCROLLING_MON_X 146// For modifying behaviour of the stats screen move list
+#define REVERSE_MOVES_DIRECTION 1 //0 false - default: Down on d-pad increments list, 1 true - reversed: Up on d-pad increments list
+#define LOOP_MOVES_LIST 1 //0 false - default: List stops at 1 and at max moves, 1 true - looped: List continues infinitely
 
 // For scrolling search parameter
 #define MAX_SEARCH_PARAM_ON_SCREEN   6
@@ -5169,9 +5171,16 @@ static void Task_HandleStatsScreenInput(u8 taskId)
     }
 
     //Change moves
-    if (JOY_REPEAT(DPAD_UP) && sPokedexView->moveSelected > 0)
+    if ((JOY_REPEAT(DPAD_UP) && !REVERSE_MOVES_DIRECTION) || (JOY_REPEAT(DPAD_DOWN) && REVERSE_MOVES_DIRECTION))
     {
-        sPokedexView->moveSelected -= 1;
+        // Updated to loop the move list rather than stop at one end
+        if (sPokedexView->moveSelected > 0)
+            sPokedexView->moveSelected -= 1;
+        else if (LOOP_MOVES_LIST)
+            sPokedexView->moveSelected = sPokedexView->movesTotal -1;
+        else
+            return;
+
         PlaySE(SE_SELECT);
         FillWindowPixelBuffer(WIN_STATS_MOVES_TOP, PIXEL_FILL(0));
         PrintStatsScreen_DestroyMoveItemIcon(taskId);
@@ -5184,9 +5193,16 @@ static void Task_HandleStatsScreenInput(u8 taskId)
         FillWindowPixelRect(WIN_STATS_MOVES_BOTTOM, PIXEL_FILL(0), 120, 0, 20, 16);
         PrintStatsScreen_Moves_Bottom(taskId);
     }
-    if (JOY_REPEAT(DPAD_DOWN) && sPokedexView->moveSelected < sPokedexView->movesTotal -1 )
+    if ((JOY_REPEAT(DPAD_DOWN) && !REVERSE_MOVES_DIRECTION) || (JOY_REPEAT(DPAD_UP) && REVERSE_MOVES_DIRECTION))
     {
-        sPokedexView->moveSelected = sPokedexView->moveSelected + 1;
+        // Updated to loop the move list rather than stop at one end
+        if (sPokedexView->moveSelected < sPokedexView->movesTotal -1)
+            sPokedexView->moveSelected = sPokedexView->moveSelected + 1;
+        else if (LOOP_MOVES_LIST)
+            sPokedexView->moveSelected = 0;
+        else
+            return;
+        
         PlaySE(SE_SELECT);
         FillWindowPixelBuffer(WIN_STATS_MOVES_TOP, PIXEL_FILL(0));
         PrintStatsScreen_DestroyMoveItemIcon(taskId);
@@ -5767,7 +5783,8 @@ static void PrintStatsScreen_Left(u8 taskId)
             PrintStatsScreenTextSmall(WIN_STATS_LEFT, sText_Stats_CatchRate_Relaxed, base_x + x_offset_column, base_y + base_y_offset*base_i);
         else
             PrintStatsScreenTextSmall(WIN_STATS_LEFT, sText_Stats_CatchRate_Easy, base_x + x_offset_column, base_y + base_y_offset*base_i);
-        base_i++;
+        
+            base_i++;
 
         //Growth rate
         PrintStatsScreenTextSmall(WIN_STATS_LEFT, sText_Stats_Growthrate, base_x, base_y + base_y_offset*base_i);
