@@ -147,6 +147,7 @@ static const u8 sText_Stats_EV_Plus3[] = _("{UP_ARROW_2}{UP_ARROW_2}{UP_ARROW_2}
 static const u8 sText_Stats_EvStr1Str2[] = _("{STR_VAR_1}{STR_VAR_2}");
 static const u8 sText_Stats_MoveSelectedMax[] = _("{STR_VAR_1} / {STR_VAR_2}");
 static const u8 sText_Stats_Move[] = _("MOVE");
+static const u8 sText_Stats_MoveEvo[] = _("EVO");
 static const u8 sText_Stats_MoveEgg[] = _("EGG");
 static const u8 sText_Stats_MoveLevel[] = _("LVL");
 static const u8 sText_Stats_MoveTutor[] = _("TUTOR");
@@ -5340,10 +5341,19 @@ static void PrintStatsScreen_Moves_Top(u8 taskId)
     if (selected < sPokedexView->numLevelUpMoves)
     {
         u32 level = GetSpeciesLevelUpLearnset(species)[selected].level;
-        ConvertIntToDecimalStringN(gStringVar1, level, STR_CONV_MODE_LEFT_ALIGN, 3); //Move learn lvl
-        PrintStatsScreenTextSmall(WIN_STATS_MOVES_TOP, sText_Stats_MoveLevel, moves_x + 113, moves_y + 3); //Level text
-        PrintStatsScreenTextSmall(WIN_STATS_MOVES_TOP, gStringVar1, moves_x + 113, moves_y + 14); //Print level
-        item = ITEM_RARE_CANDY;
+        if (level == 0)
+        {
+            PrintStatsScreenTextSmall(WIN_STATS_MOVES_TOP, sText_Stats_MoveEvo, moves_x + 113, moves_y + 3); //Print Evolution text
+            PrintStatsScreenTextSmall(WIN_STATS_MOVES_TOP, sText_Stats_Move, moves_x + 113, moves_y + 14); //Print Move
+            item = ITEM_RARE_CANDY;
+        }
+        else
+        {
+            ConvertIntToDecimalStringN(gStringVar1, level, STR_CONV_MODE_LEFT_ALIGN, 3); //Move learn lvl
+            PrintStatsScreenTextSmall(WIN_STATS_MOVES_TOP, sText_Stats_MoveLevel, moves_x + 113, moves_y + 3); //Level text
+            PrintStatsScreenTextSmall(WIN_STATS_MOVES_TOP, gStringVar1, moves_x + 113, moves_y + 14); //Print level
+            item = ITEM_EXP_SHARE;
+        }
     }
     else if (selected < (sPokedexView->numLevelUpMoves + sPokedexView->numTeachableMoves))
     {
