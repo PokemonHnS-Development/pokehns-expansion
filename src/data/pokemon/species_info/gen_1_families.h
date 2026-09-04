@@ -7381,7 +7381,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .description = COMPOUND_STRING(
             "Their beautiful, metallic whiskers create\n"
             "a sort of protective helmet on\n"
-            "heir heads, and they also function\n"
+            "their heads, and they also function\n"
             "as highly precise sensors."),
         .pokemonScale = 406,
         .pokemonOffset = 18,
