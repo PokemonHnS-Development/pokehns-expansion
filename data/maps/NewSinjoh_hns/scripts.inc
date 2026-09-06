@@ -8,7 +8,8 @@ NewSinjoh_On_Transition:
 
 NewSinjoh_EventScript_TriggerNorthGate::
 	lock
-	msgbox NewSinjoh_Text_TriggerNorthGate, MSGBOX_AUTOCLOSE
+	msgbox NewSinjoh_Text_TriggerNorthGate, MSGBOX_DEFAULT
+	closemessage
 	applymovement LOCALID_PLAYER, Common_Movement_WalkDown1
 	waitmovement 0
 	release
@@ -51,6 +52,7 @@ NewSinjoh_MilkMan_EventScript_Seller::
 	msgbox NewSinjoh_MilkMan_NoSale, MSGBOX_DEFAULT
 	hidemoneybox
 	closemessage
+	release
 	end
 
 NewSinjoh_EventScript_MilkMan_BuyMilk::
@@ -149,8 +151,6 @@ NewSinjoh_Pokemart_TravelShop:
 	.2byte ITEM_GREAT_BALL
 	.2byte ITEM_ULTRA_BALL
 	.2byte ITEM_NONE
-	release
-	end
 
 NewSinjoh_Text_TravelShopGreeting:
 	.string "Welcome to My little Supply Shop.\n"
@@ -169,8 +169,8 @@ Script_NewSinjoh_Traveler_Brother::
 NewSinjoh_Text_TravelBrother_Greeting:
     .string "All our goods are homemade\n"
 	.string "and grown locally!\p"
-	.string "My big Sister opened up this shop,\n"
-	.string "because the PokeMart company\l"
+	.string "My big sister opened up this shop,\n"
+	.string "because the POKéMART company\l"
 	.string "won't open a location\l"
 	.string "this far out from a major town.$"
 
@@ -274,7 +274,7 @@ NewSinjoh_EventScript_Sage2::
 	end
 
 NewSinjoh_Text_Sage2:
-	.string "Times change, but the stantler\n"
+	.string "Times change, but the STANTLER\n"
 	.string "still gather. For that, we can\l"
 	.string "be thankful.$"
 
@@ -284,14 +284,15 @@ NewSinjoh_EventScript_Daughter::
 
 NewSinjoh_Text_Daughter:
     .string "Wheeeeee!!\p"
-    .string "Look Mommy!\n"
+    .string "Look, Mommy!\n"
     .string "No hands!\p"
 	.string "Just like the snowboarders!$"
 
 NewSinjoh_EventScript_Mother::
 	lock
 	faceplayer
-	msgbox NewSinjoh_Text_Mother, MSGBOX_AUTOCLOSE
+	msgbox NewSinjoh_Text_Mother, MSGBOX_DEFAULT
+	closemessage
 	turnobject LOCALID_NEWSINJOH_MOTHER, DIR_EAST
 	release
 	end
@@ -316,6 +317,13 @@ NewSinjoh_EventScript_Resturant_Sign::
 
 NewSinjoh_Text_Resturant_Sign:
 	.string "FAMILY CAFE$"
+
+NewSinjoh_EventScript_Cave_Sign::
+	msgbox NewSinjoh_Text_Cave_Sign, MSGBOX_SIGN
+	end
+
+NewSinjoh_Text_Cave_Sign:
+	.string "HOT SPRINGS CAVE$"
 
 NewSinjoh_EventScript_Hiker::
 	goto_if_ge VAR_SINJOH_STORYLINE, 13, NewSinjoh_EventScript_HikerAfter

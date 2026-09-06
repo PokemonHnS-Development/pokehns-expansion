@@ -21173,6 +21173,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .backAnimId = BACK_ANIM_V_SHAKE,
         .palette = gMonPalette_Dragonite,
         .shinyPalette = gMonShinyPalette_Dragonite,
+        .shinyPaletteModern = gMonShinyPaletteModern_Dragonite,
         .iconSprite = gMonIcon_Dragonite,
         .iconPalIndex = 2,
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
@@ -21185,7 +21186,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             TRACKS_NONE,
             sAnimTable_Following,
             gOverworldPalette_Dragonite,
-            gShinyOverworldPalette_Dragonite
+            gShinyOverworldPalette_Dragonite,
+            gShinyModernOverworldPalette_Dragonite
         )
         .levelUpLearnset = sDragoniteLevelUpLearnset,
         .teachableLearnset = sDragoniteTeachableLearnset,

@@ -325,5 +325,5 @@ CeruleanGym_Text_Misty_GiveTM:
 
 CeruleanGym_Text_Misty_ExplainTM:
 	.string "It's the WATER PULSE TM.\p"
-	.string "It never misses and sometimes\n"
+	.string "It causes damage and sometimes\n"
 	.string "causes confusion as well!$"

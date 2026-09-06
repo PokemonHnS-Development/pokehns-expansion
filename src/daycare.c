@@ -1131,6 +1131,34 @@ void CreateEgg(struct Pokemon *mon, u16 species, bool8 setHotSpringsLocation)
     SetMonData(mon, MON_DATA_IS_EGG, &isEgg);
 }
 
+#if P_EGG_SHINY_ROLL_ON_PICKUP
+// The Egg's personality is locked in when the Egg is produced, several hundred steps before
+// the player ever talks to the Day-Care Man, so its shininess would be settled by then too.
+// Roll it fresh here instead, when the Egg actually changes hands.
+static void RollEggShininess(struct Pokemon *mon)
+{
+    u32 otId = GetMonData(mon, MON_DATA_OT_ID);
+    u32 rolls = 1;
+    bool8 isShiny = FALSE;
+
+    // CreateBoxMon already forced the result in these cases.
+    if ((P_FLAG_FORCE_SHINY != 0 && FlagGet(P_FLAG_FORCE_SHINY))
+     || (P_FLAG_FORCE_NO_SHINY != 0 && FlagGet(P_FLAG_FORCE_NO_SHINY)))
+        return;
+
+    if (CheckBagHasItem(ITEM_SHINY_CHARM, 1))
+        rolls += I_SHINY_CHARM_ADDITIONAL_ROLLS;
+
+    while (rolls > 0 && !isShiny)
+    {
+        isShiny = GET_SHINY_VALUE(otId, Random32()) < GetShinyOdds();
+        rolls--;
+    }
+
+    SetMonData(mon, MON_DATA_IS_SHINY, &isShiny);
+}
+#endif
+
 static void SetInitialEggData(struct Pokemon *mon, u16 species, struct DayCare *daycare)
 {
     u32 personality;
@@ -1140,6 +1168,9 @@ static void SetInitialEggData(struct Pokemon *mon, u16 species, struct DayCare *
 
     personality = daycare->offspringPersonality;
     CreateMonWithIVs(mon, species, EGG_HATCH_LEVEL, personality, OTID_STRUCT_PLAYER_ID, USE_RANDOM_IVS);
+#if P_EGG_SHINY_ROLL_ON_PICKUP
+    RollEggShininess(mon);
+#endif
     GiveMonInitialMoveset(mon);
     metLevel = 0;
     ball = BALL_POKE;

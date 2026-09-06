@@ -9,7 +9,7 @@ NewSinjoh_House2_EventScripts_DeskLady::
 	end
 
 NewSinjoh_House2_DeskLady_Text::
-    .string "Hello little one..\p"
+    .string "Hello, little one..\p"
 	.string "Welcome to New Sinjoh's...\n"
 	.string "Well, you might call it a library.\p"
 	.string "Really, this is where we keep all\n"

@@ -60,6 +60,7 @@
 #define P_EGG_CYCLE_LENGTH               GEN_3  // Since Gen 8, Egg cycles take half as many steps as before. Previous generations have some varied step counts around 255.
 #define P_ONLY_OBTAINABLE_SHINIES        FALSE       // If TRUE, Pokémon encountered in the Battle Pyramid or while catching is disabled won't be Shiny.
 #define P_NO_SHINIES_WITHOUT_POKEBALLS   FALSE       // If TRUE, Pokémon encountered when the player is out of Poké Balls won't be Shiny.
+#define P_EGG_SHINY_ROLL_ON_PICKUP       TRUE        // If TRUE, a Day-Care Egg's shininess is rolled when the player receives the Egg. If FALSE, it is decided by the personality locked in when the Egg was produced, so soft-resetting on pickup has no effect.
 #define P_SHOW_DYNAMIC_TYPES             FALSE       // If TRUE, all moves with dynamic type changes will be reflected as their current type in battle/summary screens instead of just select ones like in vanilla.
 
 // Learnset helper toggles

@@ -313,7 +313,7 @@ static inline bool32 IsGenScopeRestricted(void)
     return gSaveBlock3Ptr->challengeSettings.tx_Random_GenScope;
 }
 
-static bool32 IsSpeciesInGenScope(u16 species)
+bool32 IsSpeciesInGenScope(u16 species)
 {
     if (!IsGenScopeRestricted())
         return TRUE;
@@ -1162,6 +1162,44 @@ static inline bool32 IsAbilityIllegal(u16 ability)
     return FALSE;
 }
 
+// Abilities are randomized per (species, ability slot), but a species' empty or
+// duplicate slots must not turn into extra distinct abilities: Ability Capsule,
+// Ability Patch and the Pokedex all decide how many abilities a species has from
+// the base data. Collapse such slots onto the slot the base data actually uses so
+// a randomized species keeps the same ability count as it has in vanilla.
+static u8 GetEffectiveAbilitySlot(u16 species, u8 abilityNum)
+{
+    u32 i;
+
+    if (abilityNum < NUM_ABILITY_SLOTS && GetSpeciesAbility(species, abilityNum) != ABILITY_NONE)
+    {
+        // Matches the Ability Capsule check: a second ability identical to the
+        // first is not a separate ability.
+        if (abilityNum == 1 && GetSpeciesAbility(species, 1) == GetSpeciesAbility(species, 0))
+            return 0;
+        return abilityNum;
+    }
+
+    // Empty slot: mirror the fallback order GetAbilityBySpecies uses, so the
+    // randomized ability lands on the slot the base data actually resolves to.
+    if (abilityNum >= NUM_NORMAL_ABILITY_SLOTS)
+    {
+        for (i = NUM_NORMAL_ABILITY_SLOTS; i < NUM_ABILITY_SLOTS; i++)
+        {
+            if (GetSpeciesAbility(species, i) != ABILITY_NONE)
+                return i;
+        }
+    }
+
+    for (i = 0; i < NUM_ABILITY_SLOTS; i++)
+    {
+        if (GetSpeciesAbility(species, i) != ABILITY_NONE)
+            return i;
+    }
+
+    return 0;
+}
+
 u16 RandomizeAbility(u16 species, u8 abilityNum, u16 originalAbility)
 {
     if (RandomizerFeatureEnabled(RANDOMIZE_ABILITIES) && originalAbility != ABILITY_NONE)
@@ -1169,6 +1207,8 @@ u16 RandomizeAbility(u16 species, u8 abilityNum, u16 originalAbility)
         struct Sfc32State state;
         u16 result;
         u32 seed;
+
+        abilityNum = GetEffectiveAbilitySlot(species, abilityNum);
 
         seed = ((u32)species) << 8;
         seed |= abilityNum;

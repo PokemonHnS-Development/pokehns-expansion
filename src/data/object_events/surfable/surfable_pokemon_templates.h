@@ -480,7 +480,7 @@ const struct SpritePalette sSurfablePokemonShinyModernPalettes[] = {
     {gSurfablePokemonShinyPalette_Snorlax,    PAL_TAG_SNORLAX_SURF},
     {gSurfablePokemonShinyPalette_Dratini,    PAL_TAG_DRATINI_SURF},
     {gSurfablePokemonShinyPalette_Dragonair,  PAL_TAG_DRAGONAIR_SURF},
-    {gSurfablePokemonShinyPalette_Dragonite,  PAL_TAG_DRAGONITE_SURF},
+    {gSurfablePokemonShinyModernPalette_Dragonite,  PAL_TAG_DRAGONITE_SURF},
     {gSurfablePokemonShinyPalette_Mew,        PAL_TAG_MEW_SURF},
 // Gen II Pokemon
     {gSurfablePokemonShinyPalette_Totodile,   PAL_TAG_TOTODILE_SURF},

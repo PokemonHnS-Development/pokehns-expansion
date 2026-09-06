@@ -718,3 +718,4 @@ const u16 gSurfablePokemonShinyModernPalette_Raichu[]    = INCBIN_U16("graphics/
 const u16 gSurfablePokemonShinyModernPalette_Tentacool[] = INCBIN_U16("graphics/object_events/pics/pokemon/surfable/0072_tentacool_shiny_modern.gbapal");
 const u16 gSurfablePokemonShinyModernPalette_Lapras[]    = INCBIN_U16("graphics/object_events/pics/pokemon/surfable/0131_lapras_shiny_modern.gbapal");
 const u16 gSurfablePokemonShinyModernPalette_Vaporeon[]  = INCBIN_U16("graphics/object_events/pics/pokemon/surfable/0134_vaporeon_shiny_modern.gbapal");
+const u16 gSurfablePokemonShinyModernPalette_Dragonite[]  = INCBIN_U16("graphics/object_events/pics/pokemon/surfable/0149_dragonite_shiny_modern.gbapal");

@@ -2569,9 +2569,16 @@ void BtlController_HandleFaintAnimation(enum BattlerId battler)
             }
             // The player's sprite callback just slides the mon, the opponent's removes the sprite.
             // The player's sprite is removed in Controller_FaintPlayerMon. Controller_FaintOpponentMon only removes the healthbox once the sprite is removed by SpriteCB_FaintOpponentMon.
+
+            // Must stay inside this branch. This handler is re-run by the controller every frame
+            // until the line above reassigns gBattlerControllerFuncs, so calling it any higher up
+            // launches a KO animation (and a task) per frame. With a Substitute still up the
+            // animationState == 0 branch holds specialAnimActive for the whole substitute-to-mon
+            // animation, which fills gTasks. Reachable from the Battle Arena referee decision,
+            // which faints a mon before cleareffectsonfaint drops its Substitute.
+            AnimateMonAfterKnockout(battler);
         }
     }
-    AnimateMonAfterKnockout(battler);
 }
 
 #undef sSpeedX

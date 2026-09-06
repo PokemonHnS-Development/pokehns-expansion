@@ -565,7 +565,7 @@ Alola_Melemele_SamsonOakVillaIntro_Trigger_Text_2:
 
 Alola_Melemele_SamsonOakVilla_Dialogue_Text_0:
 	.string "Wow!\n"
-	.string "You saw the Guardian Dieties!\p"
+	.string "You saw the Guardian Deities!\p"
 	.string "Incredible work, {PLAYER}.\p"
 	.string "I found this while wandering about.\p"
 	.string "I'm not entirely sure what it's for,\n"

@@ -112,6 +112,7 @@ enum {
     MSG_CHANGED_TO_ITEM,
     MSG_CANT_STORE_MAIL,
     MSG_NUZLOCKE_FAINTED,
+    MSG_ONE_TYPE_BLOCKED,
 };
 
 // IDs for how to resolve variables in the above messages
@@ -1082,7 +1083,8 @@ static const struct StorageMessage sMessages[] =
     [MSG_ITEM_IS_HELD]         = {COMPOUND_STRING("{DYNAMIC 0} is now held."),   MSG_VAR_ITEM_NAME},
     [MSG_CHANGED_TO_ITEM]      = {COMPOUND_STRING("Changed to {DYNAMIC 0}."),    MSG_VAR_ITEM_NAME},
     [MSG_CANT_STORE_MAIL]      = {COMPOUND_STRING("MAIL can't be stored!"),      MSG_VAR_NONE},
-    [MSG_NUZLOCKE_FAINTED]     = {COMPOUND_STRING("This POKéMON has fainted\nin Nuzlocke mode!"),       MSG_VAR_NONE},
+    [MSG_NUZLOCKE_FAINTED]     = {COMPOUND_STRING("fainted in Nuzlocke!"),       MSG_VAR_NONE},
+    [MSG_ONE_TYPE_BLOCKED]     = {COMPOUND_STRING("Wrong type!"), MSG_VAR_NONE},
 };
 
 static bool8 IsBoxMonNuzlockeDead(u8 boxId, u8 position)
@@ -1107,6 +1109,26 @@ static bool8 IsMovingMonNuzlockeDead(void)
         return FALSE;
 
     return GetMonData(&sStorage->movingMon, MON_DATA_HP, NULL) == 0;
+}
+
+// The One Type Challenge sends off-type mon to the PC rather than the party.
+// Without these the player could just withdraw them again.
+static bool8 IsBoxMonOffType(u8 boxId, u8 position)
+{
+    u16 species = GetBoxMonDataAt(boxId, position, MON_DATA_SPECIES);
+
+    if (species == SPECIES_NONE)
+        return FALSE;
+
+    return !DoesSpeciesPassOneTypeChallenge(species);
+}
+
+static bool8 IsMovingMonOffType(void)
+{
+    if (!sIsMonBeingMoved)
+        return FALSE;
+
+    return !DoesSpeciesPassOneTypeChallenge(GetMonData(&sStorage->movingMon, MON_DATA_SPECIES));
 }
 
 static const struct WindowTemplate sYesNoWindowTemplate =
@@ -2633,6 +2655,11 @@ static void Task_OnSelectedMon(u8 taskId)
                 sStorage->state = 7;
                 break;
             }
+            if (sIsMonBeingMoved && sCursorArea == CURSOR_AREA_IN_PARTY && IsMovingMonOffType())
+            {
+                sStorage->state = 8;
+                break;
+            }
             PlaySE(SE_SELECT);
             ClearBottomWindow();
             SetPokeStorageTask(Task_PlaceMon);
@@ -2645,6 +2672,10 @@ static void Task_OnSelectedMon(u8 taskId)
             else if (sIsMonBeingMoved && sCursorArea == CURSOR_AREA_IN_PARTY && IsMovingMonNuzlockeDead())
             {
                 sStorage->state = 7;
+            }
+            else if (sIsMonBeingMoved && sCursorArea == CURSOR_AREA_IN_PARTY && IsMovingMonOffType())
+            {
+                sStorage->state = 8;
             }
             else
             {
@@ -2772,6 +2803,11 @@ static void Task_OnSelectedMon(u8 taskId)
         PrintMessage(MSG_NUZLOCKE_FAINTED);
         sStorage->state = 6;
         break;
+    case 8:
+        PlaySE(SE_FAILURE);
+        PrintMessage(MSG_ONE_TYPE_BLOCKED);
+        sStorage->state = 6;
+        break;
     }
 }
 
@@ -2846,6 +2882,11 @@ static void Task_WithdrawMon(u8 taskId)
         else if (IsBoxMonNuzlockeDead(StorageGetCurrentBox(), sCursorPosition))
         {
             PrintMessage(MSG_NUZLOCKE_FAINTED);
+            sStorage->state = 1;
+        }
+        else if (IsBoxMonOffType(StorageGetCurrentBox(), sCursorPosition))
+        {
+            PrintMessage(MSG_ONE_TYPE_BLOCKED);
             sStorage->state = 1;
         }
         else

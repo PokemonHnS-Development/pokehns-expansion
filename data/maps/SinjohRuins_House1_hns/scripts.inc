@@ -519,7 +519,7 @@ SinjohRuins_Lab_Text_Biologist:
 	.string "world.\p"
 	.string "DNA analysis reveals that it shares\n"
 	.string "a common ancestor with GROWLITHE\l"
-	.string "that can be found in other regions.\p"
+	.string "found in other regions.\p"
 	.string "Yet, its temperament and typing\n"
 	.string "differ significantly.\p"
 	.string "Descriptions of GROWLITHE found in\n"

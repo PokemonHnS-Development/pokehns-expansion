@@ -14336,7 +14336,7 @@ Pic: Steven
 Music: Hg Champion
 Gender: Male
 Double Battle: No
-AI: Check Bad Move / Try To Faint / Check Viability
+AI: Smart Trainer / Prediction
 Items: Full Restore / Full Restore
 Mugshot: Orange
 
@@ -14409,7 +14409,7 @@ Pic: Sage Hns
 Music: Hg Sage
 Gender: Male
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability
+AI: Smart Trainer / Prediction
 
 Flygon @ Focus Sash  
 Ability: Levitate  
@@ -14458,7 +14458,7 @@ Pic: Swimmer F
 Gender: female
 Music: Hg Girl 2
 Double Battle: Yes
-AI: Check Bad Move / Try To Faint / Check Viability
+AI: Smart Trainer / Prediction
 
 Politoed @ Damp Rock  
 Ability: Drizzle  
@@ -14641,4 +14641,1364 @@ Naive Nature
 - Focus Energy  
 - Drill Peck  
 - Double-Edge  
+
+=== TRAINER_FALKNER_POSTOBC_HNS ===
+Name: FALKNER
+Class: Leader Hns
+Pic: Leader Falkner Hns
+Gender: Male
+Music: Hg Boy 1
+Double Battle: No
+AI: Smart Trainer / Prediction
+Mugshot: Light Blue
+Items: Full Restore / Full Restore
+
+Noctowl  
+Ability: Tinted Lens  
+Level: 74  
+IVs: 0 Atk  
+- Psychic  
+- Air Slash  
+- Calm Mind  
+- Hyper Voice  
+
+Skarmory  
+Ability: Keen Eye  
+Level: 74 
+- Drill Peck  
+- Steel Wing  
+- Stealth Rock  
+- Autotomize  
+
+Swellow @ Flame Orb  
+Ability: Guts  
+Level: 74 
+- Brave Bird  
+- Endeavor  
+- Double Team  
+- Steel Wing  
+
+Honchkrow  
+Ability: Moxie  
+Level: 74 
+- Acrobatics  
+- Night Slash  
+- Mimic  
+- Roost  
+
+Pidgeot  
+Ability: Keen Eye  
+Level: 74  
+- Extreme Speed  
+- Fly  
+- Tailwind  
+- Sand Attack  
+
+Pelipper  
+Ability: Drizzle  
+Level: 74 
+IVs: 0 Atk  
+- Hurricane  
+- Brine  
+- Feather Dance  
+- Roost  
+
+=== TRAINER_BUGSY_POSTOBC_HNS ===
+Name: BUGSY
+Class: Leader Hns
+Pic: Leader Bugsy Hns
+Gender: Male
+Music: Hg Boy 1
+Double Battle: No
+AI: Smart Trainer / Prediction
+Mugshot: Green
+Items: Full Restore / Full Restore
+
+Forretress  
+Ability: Sturdy  
+Level: 74 
+IVs: 0 Spe  
+- Toxic Spikes  
+- Stealth Rock  
+- Gyro Ball  
+- Iron Defense  
+
+Ledian  
+Ability: Iron Fist  
+Level: 76   
+- Drain Punch  
+- Acrobatics  
+- Swords Dance  
+- Baton Pass  
+
+Masquerain  
+Ability: Intimidate  
+Level: 74   
+IVs: 0 Atk  
+- Quiver Dance  
+- Hydro Pump  
+- Bug Buzz  
+- Air Slash  
+
+Yanmega @ Sitrus Berry  
+Ability: Speed Boost  
+Level: 75   
+IVs: 0 Atk  
+- Air Slash  
+- Protect  
+- Psychic  
+- Signal Beam  
+
+Shedinja @ Focus Sash  
+Ability: Wonder Guard  
+Level: 76 
+- Phantom Force  
+- X-Scissor  
+- Hone Claws  
+- Sand Attack  
+
+Scizor @ Scope Lens  
+Ability: Technician  
+Level: 74  
+- Bullet Punch  
+- Bug Bite  
+- Swords Dance  
+- Roost  
+
+=== TRAINER_WHITNEY_POSTOBC_HNS ===
+Name: WHITNEY
+Class: Leader Hns
+Pic: Leader Whitney Hns
+Gender: Male
+Music: Hg Boy 1
+Double Battle: No
+AI: Smart Trainer / Prediction
+Mugshot: Pink
+Items: Full Restore / Full Restore
+
+Clefable  
+Ability: Cute Charm  
+Level: 75   
+IVs: 0 Atk  
+- Moonblast  
+- Meteor Beam  
+- Healing Wish  
+- Encore  
+
+Delcatty  
+Ability: Cute Charm  
+Level: 75 
+- Attract  
+- Fake Out  
+- Double-Edge  
+- Play Rough  
+
+Ambipom @ Loaded Dice  
+Ability: Technician  
+Level: 75 
+- Tail Slap  
+- Knock Off  
+- Tail Whip  
+- Aerial Ace  
+
+Ursaluna-Bloodmoon  
+Ability: Mind's Eye  
+Level: 74  
+IVs: 0 Atk  
+- Blood Moon  
+- Lunar Blessing  
+- Earth Power  
+- Calm Mind  
+
+Miltank @ Silk Scarf  
+Ability: Thick Fat  
+Level: 75  
+- Milk Drink  
+- Defense Curl  
+- Rollout  
+- Iron Head  
+
+Obstagoon  
+Ability: Reckless  
+Level: 75 
+- Double-Edge  
+- Obstruct  
+- Cross Poison  
+- Baby-Doll Eyes  
+
+=== TRAINER_MORTY_POSTOBC_HNS ===
+Name: MORTY
+Class: Leader Hns
+Pic: Leader Morty Hns
+Gender: Male
+Music: Hg Boy 1
+Double Battle: No
+AI: Smart Trainer / Prediction
+Mugshot: Purple
+Items: Full Restore / Full Restore
+
+Sableye  
+Ability: Prankster  
+Level: 77 
+IVs: 0 Atk  
+- Foul Play  
+- Will-O-Wisp  
+- Power Gem  
+- Night Shade  
+
+Wyrdeer @ Silk Scarf  
+Ability: Sap Sipper  
+Level: 75
+- Psyshield Bash  
+- Megahorn  
+- Hypnosis  
+- Body Slam  
+
+Dusknoir  
+Ability: Pressure  
+Level: 75 
+- Shadow Punch  
+- Fire Punch  
+- Will-O-Wisp  
+- Pain Split  
+
+Typhlosion-Hisui  
+Ability: Blaze  
+Level: 75 
+Quirky Nature  
+IVs: 0 Atk  
+- Infernal Parade  
+- Lava Plume  
+- Confuse Ray  
+- Calm Mind  
+
+Mismagius  
+Ability: Levitate  
+Level: 75   
+IVs: 0 Atk  
+- Mean Look  
+- Perish Song  
+- Pain Split  
+- Shadow Ball  
+
+Gengar @ Sitrus Berry  
+Ability: Cursed Body  
+Level: 75 
+IVs: 0 Atk  
+- Hex  
+- Hypnosis  
+- Dream Eater  
+- Thunderbolt  
+
+=== TRAINER_CHUCK_POSTOBC_HNS ===
+Name: CHUCK
+Class: Leader Hns
+Pic: Leader Chuck Hns
+Gender: Male
+Music: Hg Boy 1
+Double Battle: No
+AI: Smart Trainer / Prediction
+Mugshot: Orange
+Items: Full Restore / Full Restore
+
+Hitmonchan  
+Ability: Iron Fist  
+Level: 75
+- Sky Uppercut  
+- Thunder Punch  
+- Ice Punch  
+- Mach Punch  
+
+Medicham  
+Ability: Pure Power  
+Level: 75 
+- Acupressure  
+- Stored Power  
+- High Jump Kick  
+- Detect  
+
+Annihilape  
+Ability: Vital Spirit  
+Level: 75 
+- Cross Chop  
+- Rage Fist  
+- Drain Punch  
+- Stomping Tantrum  
+
+Sirfetch’d @ Leek  
+Ability: Scrappy  
+Level: 75 
+- Leaf Blade  
+- Protect  
+- Quick Attack  
+- Meteor Assault  
+
+Sneasler  
+Ability: Poison Touch  
+Level: 75
+- Dire Claw  
+- Close Combat  
+- Fake Out  
+- Night Slash  
+
+Poliwrath @ Sitrus Berry  
+Ability: Water Absorb  
+Level: 76  
+- Liquidation  
+- Submission  
+- Belly Drum  
+- Skull Bash  
+
+=== TRAINER_JASMINE_POSTOBC_HNS ===
+Name: JASMINE
+Class: Leader Hns
+Pic: Leader Jasmine Hns
+Gender: Male
+Music: Hg Boy 1
+Double Battle: No
+AI: Smart Trainer / Prediction
+Mugshot: Yellow
+Items: Full Restore / Full Restore
+
+Skarmory  
+Ability: Keen Eye  
+Level: 75 
+- Drill Peck  
+- Torment  
+- Steel Wing  
+- Stealth Rock  
+
+Sandslash-Alola  
+Ability: Snow Cloak  
+Level: 77 
+- Curse  
+- Avalanche  
+- Iron Head  
+- Spikes  
+
+Corsola @ Damp Rock  
+Ability: Regenerator  
+Level: 75
+IVs: 0 Atk  
+- Rain Dance  
+- Power Gem  
+- Aqua Ring  
+- Surf  
+
+Magnezone  
+Ability: Analytic  
+Level: 75
+Sassy Nature  
+IVs: 0 Atk / 0 Spe  
+- Thunder  
+- Rain Dance  
+- Flash Cannon  
+- Magnet Rise  
+
+Perrserker  
+Ability: Steely Spirit  
+Level: 75 
+IVs: 0 Spe  
+- Gyro Ball  
+- Play Rough  
+- Swords Dance  
+- Gunk Shot  
+
+Steelix @ Quick Claw  
+Ability: Rock Head  
+Level: 75
+- Head Smash  
+- Earthquake  
+- Dragon Dance  
+- Heavy Slam  
+
+=== TRAINER_PRYCE_POSTOBC_HNS ===
+Name: PRYCE
+Class: Leader Hns
+Pic: Leader Pryce Hns
+Gender: Male
+Music: Hg Boy 1
+Double Battle: No
+AI: Smart Trainer / Prediction
+Mugshot: Light Blue
+Items: Full Restore / Full Restore
+
+Weavile  
+Ability: Pressure  
+Level: 75 
+- Fake Out  
+- Night Slash  
+- Beat Up  
+- Icicle Crash  
+
+Mr. Rime  
+Ability: Ice Body  
+Level: 76
+IVs: 0 Atk  
+- Teeter Dance  
+- Snowscape  
+- Psyshock  
+- Trick Room  
+
+Ninetales-Alola @ Light Clay  
+Ability: Snow Warning  
+Level: 75
+IVs: 0 Atk  
+- Aurora Veil  
+- Blizzard  
+- Moonblast  
+- Freeze-Dry  
+
+Slowking  
+Ability: Regenerator  
+Level: 75  
+IVs: 0 Atk  
+- Chilly Reception  
+- Hydro Pump  
+- Reflect  
+- Safeguard  
+
+Mamoswine @ Soft Sand  
+Ability: Oblivious  
+Level: 76
+- Earthquake  
+- Avalanche  
+- Curse  
+- Ice Shard  
+
+Froslass (F)  
+Ability: Snow Cloak  
+Level: 77
+IVs: 0 Atk  
+- Shadow Ball  
+- Blizzard  
+- Will-O-Wisp  
+- Pain Split  
+
+=== TRAINER_CLAIR_OBC_HNS ===
+Name: CLAIR
+Class: Leader Hns
+Pic: Leader Clair Hns
+Gender: Male
+Music: Hg Boy 1
+Double Battle: No
+AI: Smart Trainer / Prediction
+Mugshot: Blue
+Items: Full Restore / Full Restore
+
+Dragonair @ Eviolite  
+Ability: Marvel Scale  
+Level: 77
+- Thunder Wave  
+- Thunderbolt  
+- Aqua Tail  
+- Light Screen  
+
+Dudunsparce  
+Ability: Serene Grace  
+Level: 75 
+- Charge Beam  
+- Boomburst  
+- Poison Jab  
+- Tailwind  
+
+Exeggutor-Alola @ Sitrus Berry  
+Ability: Harvest  
+Level: 76  
+- Wood Hammer  
+- Dragon Hammer  
+- Leech Seed  
+- Moonlight  
+
+Salamence  
+Ability: Moxie  
+Level: 77
+- Dragon Dance  
+- Dragon Rush  
+- Iron Head  
+- Flamethrower  
+
+Kingdra @ Scope Lens  
+Ability: Sniper  
+Level: 75 
+IVs: 0 Atk  
+- Focus Energy  
+- Dragon Pulse  
+- Hydro Pump  
+- Ice Beam  
+
+Dragonite  
+Ability: Multiscale  
+Level: 76  
+- Extreme Speed  
+- Dragon Pulse  
+- Flamethrower  
+- Hyper Beam  
+
+=== TRAINER_BROCK_POSTOBC_HNS ===
+Name: BROCK
+Class: Leader Kanto Hns
+Pic: Leader Brock Hns
+Gender: Male
+Music: Hg Boy 1
+Double Battle: No
+AI: Smart Trainer / Prediction
+Mugshot: Orange
+Items: Full Restore / Full Restore
+
+Kleavor @ Razor Claw  
+Ability: Sharpness  
+Level: 77 
+- Stone Axe  
+- X-Scissor  
+- Agility  
+- Swords Dance  
+
+Gliscor @ Toxic Orb  
+Ability: Poison Heal  
+Level: 76 
+- Spikes  
+- Protect  
+- Crabhammer  
+- Earthquake  
+
+Aerodactyl  
+Ability: Unnerve  
+Level: 77
+- Fire Fang  
+- Sky Attack  
+- Earthquake  
+- Dragon Dance  
+
+Omastar  
+Ability: Swift Swim  
+Level: 75
+IVs: 0 Atk  
+- Ancient Power  
+- Surf  
+- Ice Beam  
+- Toxic  
+
+Relicanth @ Hard Stone  
+Ability: Rock Head  
+Level: 75 
+- Wave Crash  
+- Head Smash  
+- Calm Mind  
+- Thunderbolt  
+
+Golem-Alola @ Magnet  
+Ability: Galvanize  
+Level: 77  
+- Stone Edge  
+- Body Slam  
+- Autotomize  
+- Charge  
+
+=== TRAINER_MISTY_POSTOBC_HNS ===
+Name: MISTY
+Class: Leader Kanto Hns
+Pic: Leader Misty Hns
+Gender: Male
+Music: Hg Boy 1
+Double Battle: No
+AI: Smart Trainer / Prediction
+Mugshot: Light Blue
+Items: Full Restore / Full Restore
+
+Politoed @ Damp Rock  
+Ability: Drizzle  
+Level: 76 
+- Weather Ball  
+- Seismic Toss  
+- Metronome  
+- Hypnosis  
+
+Swampert @ Quick Claw  
+Ability: Torrent  
+Level: 76 
+- Rain Dance  
+- Barrier  
+- Earthquake  
+- Liquidation  
+
+Vaporeon @ Leftovers  
+Ability: Water Absorb  
+Level: 76  
+EVs: 32 HP / 40 Def / 12 SpD  
+IVs: 0 Atk  
+- Aqua Ring  
+- Hydro Pump  
+- Ice Beam  
+- Acid Armor  
+
+Milotic @ Shell Bell  
+Ability: Marvel Scale  
+Level: 75   
+IVs: 0 Atk  
+- Scald  
+- Ice Beam  
+- Rest  
+- Sleep Talk  
+
+Lapras  
+Ability: Shell Armor  
+Level: 75 
+IVs: 0 Atk  
+- Freeze-Dry  
+- Hydro Pump  
+- Rain Dance  
+- Reflect  
+
+Starmie @ Mystic Water  
+Ability: Natural Cure  
+Level: 75
+IVs: 0 Atk  
+- Psyshock  
+- Surf  
+- Thunderbolt  
+- Recover  
+
+=== TRAINER_LTSURGE_POSTOBC_HNS ===
+Name: LTSURGE
+Class: Leader Kanto Hns
+Pic: Leader Surge Hns
+Gender: Male
+Music: Hg Boy 1
+Double Battle: No
+AI: Smart Trainer / Prediction
+Items: Full Restore / Full Restore
+Mugshot: Yellow
+
+Electrode @ Normal Gem  
+Ability: Soundproof  
+Level: 75  
+- Electro Ball  
+- Rain Dance  
+- Explosion  
+
+Jolteon  
+Ability: Volt Absorb  
+Level: 74   
+IVs: 0 Atk  
+- Electric Terrain  
+- Thunder  
+- Rain Dance  
+- Reflect  
+
+Lanturn @ Leftovers  
+Ability: Volt Absorb  
+Level: 75   
+IVs: 0 Atk  
+- Rain Dance  
+- Thunder  
+- Ion Deluge  
+- Hydro Pump  
+
+Manectric @ Terrain Extender  
+Ability: Lightning Rod  
+Level: 75  
+- Electric Terrain  
+- Charge  
+- Wild Charge  
+- Crunch  
+
+Electivire @ Scope Lens  
+Ability: Motor Drive  
+Level: 74  
+- Thunder Punch  
+- Ice Punch  
+- Cross Chop  
+- Bulk Up  
+
+Raichu-Alola @ Electric Seed  
+Ability: Surge Surfer  
+Level: 76  
+IVs: 0 Atk  
+- Rising Voltage  
+- Electric Terrain  
+- Psyshock  
+- Calm Mind  
+
+=== TRAINER_ERIKA_POSTOBC_HNS ===
+Name: ERIKA
+Class: Leader Kanto Hns
+Pic: Leader Erika Hns
+Gender: Male
+Music: Hg Boy 1
+Double Battle: No
+AI: Smart Trainer / Prediction
+Mugshot: Green
+Items: Full Restore / Full Restore
+
+Roserade @ Focus Sash  
+Ability: Natural Cure  
+Level: 75
+IVs: 0 Atk  
+- Toxic Spikes  
+- Venoshock  
+- Toxic  
+- Petal Dance  
+
+Tangrowth @ Leftovers  
+Ability: Chlorophyll  
+Level: 76 
+IVs: 0 Atk  
+- Ingrain  
+- Giga Drain  
+- Grassy Terrain  
+- Protect  
+
+Venusaur  
+Ability: Overgrow  
+Level: 75
+IVs: 0 Atk  
+- Sludge Bomb  
+- Energy Ball  
+- Synthesis  
+- Poison Powder  
+
+Electrode-Hisui @ Miracle Seed  
+Ability: Aftermath  
+Level: 76  
+IVs: 0 Atk  
+- Chloroblast  
+- Electro Ball  
+- Foul Play  
+
+Bellossom @ Lum Berry  
+Ability: Chlorophyll  
+Level: 77
+IVs: 0 Atk  
+- Grassy Terrain  
+- Quiver Dance  
+- Petal Dance  
+- Attract  
+
+Ludicolo  
+Ability: Swift Swim  
+Level: 75
+IVs: 0 Atk  
+- Rain Dance  
+- Hydro Pump  
+- Energy Ball  
+- Double Team  
+
+=== TRAINER_JANINE_POSTOBC_HNS ===
+Name: JANINE
+Class: Leader Kanto Hns
+Pic: Leader Janine Hns
+Gender: Male
+Music: Hg Boy 1
+Double Battle: No
+AI: Smart Trainer / Prediction
+Mugshot: Purple
+Items: Full Restore / Full Restore
+
+Swalot  
+Ability: Liquid Ooze  
+IVs: 0 Atk  
+Level: 75
+- Toxic Spikes  
+- Stockpile  
+- Swallow  
+- Spit Up  
+
+Weezing-Galar @ Fairy Feather  
+Ability: Levitate  
+Level: 75 
+IVs: 0 Atk  
+- Strange Steam  
+- Sludge Bomb  
+- Flamethrower  
+- Corrosive Gas  
+
+Muk-Alola @ Leftovers  
+Ability: Poison Touch  
+Level: 75 
+- Gunk Shot  
+- Acid Armor  
+- Power-Up Punch  
+- Disable  
+
+Crobat  
+Ability: Infiltrator  
+Level: 75  
+- Leech Life  
+- Confuse Ray  
+- Brave Bird  
+- Toxic  
+
+Sneasler @ Flying Gem  
+Ability: Unburden  
+Level: 75 
+- Acrobatics  
+- Dire Claw  
+- Close Combat  
+- Fake Out  
+
+Venomoth @ Bright Powder  
+Ability: Shield Dust  
+Level: 78 
+IVs: 0 Atk  
+- Venoshock  
+- Signal Beam  
+- Double Team  
+- Toxic  
+
+=== TRAINER_SABRINA_POSTOBC_HNS ===
+Name: SABRINA
+Class: Leader Kanto Hns
+Pic: Leader Sabrina Hns
+Gender: Male
+Music: Hg Boy 1
+Double Battle: No
+AI: Smart Trainer / Prediction
+Mugshot: Pink
+Items: Full Restore / Full Restore
+
+Mr. Mime-Galar @ Eviolite  
+Ability: Vital Spirit  
+Level: 75
+IVs: 0 Atk  
+- Light Screen  
+- Reflect  
+- Psychic  
+- Freeze-Dry  
+
+Slowbro-Galar @ Quick Claw  
+Ability: Quick Draw  
+Level: 75 
+- Shell Side Arm  
+- Calm Mind  
+- Psyshock  
+- Slack Off  
+
+Espeon  
+Ability: Magic Bounce  
+Level: 75
+IVs: 0 Atk  
+- Psychic  
+- Morning Sun  
+- Psychic Terrain  
+- Power Gem  
+
+Rapidash-Galar  
+Ability: Pastel Veil  
+Level: 75 
+- Play Rough  
+- Psycho Cut  
+- Wild Charge  
+- Swords Dance  
+
+Wobbuffet @ Leftovers  
+Ability: Shadow Tag  
+Level: 75  
+IVs: 0 Atk  
+- Counter  
+- Mirror Coat  
+- Encore  
+- Destiny Bond  
+
+Alakazam  
+Ability: Magic Guard  
+Level: 75 
+IVs: 0 Atk  
+- Psyshock  
+- Shadow Ball  
+- Calm Mind  
+- Tri Attack  
+
+=== TRAINER_BLAINE_POSTOBC_HNS ===
+Name: BLAINE
+Class: Leader Kanto Hns
+Pic: Leader Blaine Hns
+Gender: Male
+Music: Hg Boy 1
+Double Battle: No
+AI: Smart Trainer / Prediction
+Mugshot: Dark Red
+Items: Full Restore / Full Restore
+
+Torkoal @ Heat Rock  
+Ability: Drought  
+Level: 76 
+IVs: 0 Spe  
+- Solar Beam  
+- Heat Wave  
+- Gyro Ball  
+- Iron Defense  
+
+Magmortar @ Magnet  
+Ability: Flame Body  
+Level: 75 
+IVs: 0 Atk  
+- Fire Blast  
+- Thunderbolt  
+- Confuse Ray  
+- Clear Smog  
+
+Blaziken @ Scope Lens  
+Ability: Speed Boost  
+Level: 75 
+- Blaze Kick  
+- Power-Up Punch  
+- Thunder Punch  
+- Protect  
+
+Magcargo @ Absorb Bulb  
+Ability: Flame Body  
+Level: 75 
+IVs: 0 Atk  
+- Sunny Day  
+- Flamethrower  
+- Recover  
+- Amnesia  
+
+Arcanine-Hisui @ Rock Incense  
+Ability: Rock Head  
+Level: 75 
+- Head Smash  
+- Raging Fury  
+- Wild Charge  
+- Extreme Speed  
+
+Camerupt @ Leftovers  
+Ability: Solid Rock  
+Level: 75 
+IVs: 0 Atk  
+- Eruption  
+- Protect  
+- Amnesia  
+- Earth Power  
+
+=== TRAINER_BLUE_POSTOBC_HNS ===
+Name: BLUE
+Class: Leader Kanto Hns
+Pic: Leader Blue Hns
+Gender: Male
+Music: Hg Boy 1
+Double Battle: No
+AI: Smart Trainer / Prediction
+Mugshot: Blue
+Items: Full Restore / Full Restore
+
+Rhyperior @ Loaded Dice  
+Ability: Solid Rock  
+Level: 75 
+- Rock Blast  
+- Drill Run  
+- Toxic  
+- Stealth Rock  
+
+Pidgeot @ Quick Claw  
+Ability: Keen Eye  
+Level: 75  
+- Feather Dance  
+- Air Slash  
+- Brave Bird  
+- Roost  
+
+Machamp @ Scope Lens  
+Ability: No Guard  
+Level: 75  
+- Dynamic Punch  
+- Dual Chop  
+- Stone Edge  
+- Bulk Up  
+
+Marowak-Alola @ Thick Club  
+Ability: Lightning Rod  
+Level: 76  
+- Shadow Bone  
+- Flame Charge  
+- Pain Split  
+- Bonemerang  
+
+Tyranitar @ Rocky Helmet  
+Ability: Unnerve  
+Level: 75  
+- Stone Edge  
+- Crunch  
+- Curse  
+- Thunder Punch  
+
+Blastoise @ Sitrus Berry  
+Ability: Torrent  
+Level: 78   
+IVs: 0 Atk  
+- Scald  
+- Dark Pulse  
+- Water Spout  
+- Shell Smash  
+
+=== TRAINER_WILL_POSTOBC_HNS ===
+Name: WILL
+Class: Elite Four Hns
+Pic: Elite Four Will Hns
+Gender: Male
+Music: Elite Four
+Double Battle: No
+AI: Smart Trainer / Prediction
+Mugshot: Pink
+Items: Full Restore / Full Restore
+
+Gardevoir @ Light Clay  
+Ability: Trace  
+Level: 77 
+IVs: 0 Atk  
+- Psyshock  
+- Moonblast  
+- Reflect  
+- Vacuum Wave  
+
+Jynx @ Never-Melt Ice  
+Ability: Dry Skin  
+Level: 77 
+IVs: 0 Atk  
+- Lovely Kiss  
+- Sweet Kiss  
+- Ice Beam  
+- Psychic  
+
+Slowking-Galar @ Black Sludge  
+Ability: Own Tempo  
+Level: 77 
+IVs: 0 Atk  
+- Eerie Spell  
+- Trick Room  
+- Calm Mind  
+- Sludge Wave  
+
+Grumpig @ Leftovers  
+Ability: Thick Fat  
+Level: 77  
+IVs: 0 Atk  
+- Teeter Dance  
+- Power Gem  
+- Snore  
+- Rest  
+
+Slowbro  
+Ability: Oblivious  
+Level: 77  
+- Fire Punch  
+- Curse  
+- Earthquake  
+- Zen Headbutt  
+
+Xatu  
+Ability: Magic Bounce  
+Level: 77 
+IVs: 0 Atk  
+- Future Sight  
+- Air Slash  
+- Confuse Ray  
+- Protect  
+
+=== TRAINER_KOGA_POSTOBC_HNS ===
+Name: KOGA
+Class: Elite Four Hns
+Pic: Elite Four Koga Hns
+Gender: Male
+Music: Elite Four
+Double Battle: No
+AI: Smart Trainer / Prediction
+Mugshot: Purple
+Items: Full Restore / Full Restore
+
+Clodsire  
+Ability: Water Absorb  
+Level: 77 
+- Toxic Spikes  
+- Earthquake  
+- Gunk Shot  
+- Curse  
+
+Overqwil @ Black Sludge  
+Ability: Poison Point  
+Level: 77
+- Barb Barrage  
+- Lash Out  
+- Swords Dance  
+- Aqua Jet  
+
+Ariados @ Blunder Policy  
+Ability: Sniper  
+Level: 77
+EVs: 252 Spe  
+Jolly Nature  
+- Sticky Web  
+- Megahorn  
+- Cross Poison  
+- Disable  
+
+Nidoking @ Life Orb  
+Ability: Sheer Force  
+Level: 77   
+IVs: 0 Atk  
+- Fire Blast  
+- Ice Beam  
+- Earth Power  
+- Noble Roar  
+
+Venomoth @ Bright Powder  
+Ability: Shield Dust  
+Level: 77  
+IVs: 0 Atk  
+- Venoshock  
+- Bug Buzz  
+- Double Team  
+- Disable  
+
+Crobat  
+Ability: Inner Focus  
+Level: 77  
+- Acrobatics  
+- Cross Poison  
+- Toxic  
+- Confuse Ray  
+
+=== TRAINER_BRUNO_POSTOBC_HNS ===
+Name: BRUNO
+Class: Elite Four Hns
+Pic: Elite Four Bruno Hns
+Gender: Male
+Music: Elite Four
+Double Battle: No
+AI: Smart Trainer / Prediction
+Mugshot: Orange
+Items: Full Restore / Full Restore
+
+Steelix @ Assault Vest  
+Ability: Rock Head  
+Level: 77 
+EVs: 252 SpD  
+Sassy Nature  
+- Heavy Slam  
+- Earthquake  
+- Crunch  
+- Aqua Tail  
+
+Tauros-Paldea-Blaze  
+Ability: Intimidate  
+Level: 77 
+- Raging Bull  
+- Close Combat  
+- Rock Slide  
+- Bulk Up  
+
+Heracross @ Loaded Dice  
+Ability: Moxie  
+Level: 77 
+- Pin Missile  
+- Close Combat  
+- Earthquake  
+- Knock Off  
+
+Hariyama @ Sitrus Berry  
+Ability: Thick Fat  
+Level: 77  
+- Fake Out  
+- Belly Drum  
+- Cross Chop  
+- Body Slam  
+
+Hitmontop @ Expert Belt  
+Ability: Technician  
+Level: 77 
+- Triple Kick  
+- Victory Dance  
+- Bullet Punch  
+- Pursuit  
+
+Machamp @ Flame Orb  
+Ability: Guts  
+Level: 77  
+- Facade  
+- Cross Chop  
+- Earthquake  
+- Rock Slide  
+
+=== TRAINER_KAREN_POSTOBC_HNS ===
+Name: KAREN
+Class: Elite Four Hns
+Pic: Elite Four Karen Hns
+Gender: Male
+Music: Elite Four
+Double Battle: No
+AI: Smart Trainer / Prediction
+Mugshot: Yellow
+Items: Full Restore / Full Restore
+
+Umbreon @ Black Glasses  
+Ability: Synchronize  
+Level: 77  
+IVs: 0 Atk  
+- Lunar Blessing  
+- Foul Play  
+- Shadow Ball  
+- Calm Mind  
+
+Weavile @ Razor Claw  
+Ability: Pressure  
+Level: 78  
+- Hone Claws  
+- Night Slash  
+- Icicle Crash  
+- Low Kick  
+
+Persian-Alola @ Charcoal  
+Ability: Fur Coat  
+Level: 79 
+- Fake Out  
+- Dark Pulse  
+- Nasty Plot  
+- Burning Jealousy  
+
+Honchkrow  
+Ability: Moxie  
+Level: 77 
+- Night Slash  
+- Brave Bird  
+- Roost  
+- Taunt  
+
+Obstagoon @ Flame Orb  
+Ability: Guts  
+Level: 77 
+- Close Combat  
+- Double-Edge  
+- Fling  
+- Cross Chop  
+
+Houndoom  
+Ability: Unnerve  
+Level: 77  
+- Fire Blast  
+- Crunch  
+- Iron Tail  
+- Destiny Bond  
+
+=== TRAINER_LANCE_POSTOBC_HNS ===
+Name: LANCE
+Class: Champion Hns
+Pic: Champion Lance Hns
+Gender: Male
+Music: Hg Champion
+Double Battle: No
+AI: Smart Trainer / Prediction
+Items: Full Restore / Full Restore
+Mugshot: Blue
+
+Salamence @ Assault Vest  
+Ability: Intimidate  
+Level: 80 
+- Draco Meteor  
+- Iron Head  
+- Double-Edge  
+- Fly  
+
+Gyarados @ Eject Button  
+Ability: Intimidate  
+Level: 80 
+- Waterfall  
+- Hyper Beam  
+- Crunch  
+- Scary Face  
+
+Charizard  
+Ability: Blaze  
+Level: 80 
+- Fire Blast  
+- Earthquake  
+- Acrobatics  
+- Swords Dance  
+
+Noivern @ Silk Scarf  
+Ability: Infiltrator  
+Level: 80 
+IVs: 0 Atk  
+- Boomburst  
+- Dragon Pulse  
+- Moonlight  
+- Super Fang  
+
+Aerodactyl @ Scope Lens  
+Ability: Rock Head  
+Level: 80
+- Rock Slide  
+- Earthquake  
+- Sky Attack  
+- Dragon Dance  
+
+Dragonite @ Leftovers  
+Ability: Multiscale  
+Level: 80 
+- Iron Head  
+- Fire Punch  
+- Dragon Rush  
+- Dragon Dance  
+
+=== TRAINER_RED_POSTOBC_HNS ===
+Name: RED
+Class: Pkmn Trainer 1 Hns
+Pic: Red Hns
+Gender: Male
+Music: Hg Champion
+Double Battle: No
+AI: Smart Trainer / Prediction
+Items: Full Restore / Full Restore
+
+Pikachu-Starter @ Light Ball  
+Ability: Lightning Rod
+Level: 100
+- Volt Tackle  
+- Surf  
+- Iron Tail  
+- Double Team  
+
+Snorlax @ Chesto Berry  
+Ability: Immunity  
+Level: 89  
+- Belly Drum  
+- Earthquake  
+- Rest  
+- Heavy Slam  
+
+Charizard  
+Ability: Blaze  
+Level: 91  
+- Fire Blast  
+- Seismic Toss  
+- Outrage  
+- Steel Wing  
+
+Venusaur @ Blunder Policy  
+Ability: Chlorophyll  
+Level: 93  
+Tera Type: Grass  
+EVs: 252 Spe  
+IVs: 0 Atk  
+- Sunny Day  
+- Solar Beam  
+- Earth Power  
+- Sleep Powder 
+
+Blastoise @ Leftovers  
+Ability: Torrent  
+Level: 91
+- Hydro Cannon  
+- Skull Bash  
+- Ice Beam  
+- Flash Cannon  
+
+Tauros-Paldea-Combat @ Sitrus Berry  
+Ability: Cud Chew  
+Level: 92  
+Tera Type: Fighting  
+- Raging Bull  
+- Wild Charge  
+- Bulk Up  
+- Throat Chop
 

@@ -118,7 +118,7 @@ Route49_Text_KimonoGirl:
 	.string "You must be {PLAYER}, correct?\n"
     .string "I've heard all about you and\l"
 	.string "your deeds from my cousins\l"
-	.string "in Ecruteak City.\p"
+	.string "in ECRUTEAK CITY.\p"
 	.string "My sisters wish to meet with you.\l"
 	.string "If you find the time, please\n"
 	.string "seek us out in the town up ahead.$"

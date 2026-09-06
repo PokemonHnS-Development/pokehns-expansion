@@ -7239,7 +7239,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BattleTowerTrainer
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Beauty_hns = {TAG_NONE, OBJ_EVENT_PAL_TAG_NPC_3_HNS, OBJ_EVENT_PAL_TAG_NONE, 256, 16, 32, 4, SHADOW_SIZE_M, FALSE, FALSE, TRACKS_FOOT, &gObjectEventBaseOam_16x32, sOamTables_16x32, sAnimTable_Standard, sPicTable_Beauty_hns, gDummySpriteAffineAnimTable};
 
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Biker_hns = {TAG_NONE, OBJ_EVENT_PAL_TAG_NPC_2_HNS, OBJ_EVENT_PAL_TAG_NONE, 512, 32, 32, 4, SHADOW_SIZE_M, FALSE, FALSE, TRACKS_BIKE_TIRE, &gObjectEventBaseOam_32x32, sOamTables_32x32, sAnimTable_Biker_hns, sPicTable_Biker_hns, gDummySpriteAffineAnimTable};
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Biker_hns = {TAG_NONE, OBJ_EVENT_PAL_TAG_NPC_2_HNS, OBJ_EVENT_PAL_TAG_NONE, 512, 32, 32, 4, SHADOW_SIZE_M, FALSE, FALSE, TRACKS_BIKE_TIRE, &gObjectEventBaseOam_32x32, sOamTables_32x32, sAnimTable_AcroBike, sPicTable_Biker_hns, gDummySpriteAffineAnimTable};
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BlackBelt_hns = {TAG_NONE, OBJ_EVENT_PAL_TAG_NPC_1_HNS, OBJ_EVENT_PAL_TAG_NONE, 256, 16, 32, 4, SHADOW_SIZE_M, FALSE, FALSE, TRACKS_FOOT, &gObjectEventBaseOam_16x32, sOamTables_16x32, sAnimTable_Standard, sPicTable_BlackBelt_hns, gDummySpriteAffineAnimTable};
 

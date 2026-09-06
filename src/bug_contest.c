@@ -32,7 +32,7 @@ void BugContestRetirePrompt(void)
 
 void EnterBugContestMode(void)
 {
-    FlagClear(FLAG_ADVENTURE_STARTED);
+    FlagClear(FLAG_START_NUZLOCKE); // suspends the nuzlocke for the duration
     FlagSet(FLAG_SYS_BUG_CONTEST_MODE);
     sBugContestStartTime = gMain.vblankCounter1;
     sBugContestTimerActive = TRUE;
@@ -40,7 +40,7 @@ void EnterBugContestMode(void)
 
 void ExitBugContestMode(void)
 {
-    FlagSet(FLAG_ADVENTURE_STARTED);
+    FlagSet(FLAG_START_NUZLOCKE);
     FlagClear(FLAG_SYS_BUG_CONTEST_MODE);
     sBugContestTimerActive = FALSE;
 }

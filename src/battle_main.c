@@ -3316,7 +3316,11 @@ static void BattleStartClearSetData(void)
     gBattleStruct->runTries = 0;
     gBattleStruct->safariGoNearCounter = 0;
     gBattleStruct->safariPkblThrowCounter = 0;
+    // Species with a catch rate under 13 would truncate to a factor of 0, which
+    // zeroes the capture odds and leaves bait/rock unable to move it off 0.
     gBattleStruct->safariCatchFactor = gSpeciesInfo[GetMonData(&gEnemyParty[0], MON_DATA_SPECIES)].catchRate * 100 / 1275;
+    if (gBattleStruct->safariCatchFactor == 0)
+        gBattleStruct->safariCatchFactor = 1;
     gBattleStruct->safariEscapeFactor = 3;
     gBattleStruct->wildVictorySong = 0;
     // Amulet Coin applies as long as any party mon holds it, even if that mon never enters the battle.
@@ -5926,12 +5930,15 @@ static void HandleEndTurn_FinishBattle(void)
                                         | BATTLE_TYPE_BATTLE_TOWER
                                         | BATTLE_TYPE_CATCH_TUTORIAL
                                         | BATTLE_TYPE_LEGENDARY
+                                        | BATTLE_TYPE_ROAMER
                                         | BATTLE_TYPE_TWO_OPPONENTS
                                         | BATTLE_TYPE_INGAME_PARTNER
                                         | BATTLE_TYPE_TOWER_LINK_MULTI
                                         | BATTLE_TYPE_RECORDED_LINK)))
             {
-                if (!NuzlockeIsSpeciesClauseActive)
+                // An off-type mon under the One Type Challenge could never have been
+                // caught, so it must not burn the route's Nuzlocke encounter.
+                if (!NuzlockeIsSpeciesClauseActive && !OneTypeChallengeCaptureBlocked)
                     NuzlockeFlagSet(NuzlockeGetCurrentRegionMapSectionId());
             }
             NuzlockeIsCaptureBlocked = FALSE;

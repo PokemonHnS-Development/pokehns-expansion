@@ -264,6 +264,7 @@ Route25_BillsHouse_hns_CutsceneCleanup::
 	delay 60
 	callnative UpdateFollowingPokemon
 	fadescreen FADE_FROM_BLACK
+	setflag FLAG_USED_TELEPORTER
 	releaseall
 	end
 

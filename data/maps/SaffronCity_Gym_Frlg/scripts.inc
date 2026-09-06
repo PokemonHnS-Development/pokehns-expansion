@@ -137,7 +137,7 @@ SaffronCity_Gym_Text_ExplainTM04::
 	.string "to raise both SP. ATK and SP. DEF.$"
 
 SaffronCity_Gym_Text_BagFullOfOtherItems::
-	.string "Your BAG is full of other items.$"
+	.string "Your BAG is full of items.$"
 
 SaffronCity_Gym_Text_AmandaIntro::
 	.string "SABRINA is far younger than I,\n"

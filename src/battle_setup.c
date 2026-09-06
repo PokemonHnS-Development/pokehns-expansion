@@ -447,6 +447,12 @@ void DoStandardWildBattle_Debug(void)
 
 void BattleSetup_StartRoamerBattle(void)
 {
+    SetNuzlockeChecks();
+    // A roamer is a one-off encounter that happens to be standing on a route the
+    // player has usually already spent, so it never obeys the Nuzlocke zone flag.
+    // Only the One Type Challenge still applies.
+    NuzlockeIsCaptureBlocked = FALSE;
+    NuzlockeIsSpeciesClauseActive = FALSE;
     LockPlayerFieldControls();
     FreezeObjectEvents();
     StopPlayerAvatar();

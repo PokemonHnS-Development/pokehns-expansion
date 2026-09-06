@@ -54,7 +54,7 @@ SlateportCity_BattleTentLobby_hns_EventScript_GivePrize::
 	waitmessage
 	playfanfare MUS_OBTAIN_ITEM
 	waitfanfare
-	goto SlateportCity_BattleTentLobby_hns_EventScript_EndGivePrize
+	goto SlateportCity_BattleTentLobby_hns_EventScript_EndGivePrizeWon
 
 SlateportCity_BattleTentLobby_hns_EventScript_NoRoomForPrize::
 	msgbox SlateportCity_BattleTentLobby_Text_NoRoomInBagMakeRoom, MSGBOX_DEFAULT
@@ -70,6 +70,13 @@ SlateportCity_BattleTentLobby_hns_EventScript_LostChallenge::
 	waitse
 
 SlateportCity_BattleTentLobby_hns_EventScript_EndGivePrize::
+	msgbox SlateportCity_BattleTentLobby_Text_LookForwardToNextVisit, MSGBOX_DEFAULT
+	closemessage
+	setvar VAR_TEMP_CHALLENGE_STATUS, 255
+	releaseall
+	end
+
+SlateportCity_BattleTentLobby_hns_EventScript_EndGivePrizeWon::
 	msgbox SlateportCity_BattleTentLobby_Text_LookForwardToNextVisit, MSGBOX_DEFAULT
 	closemessage
 	setvar VAR_TEMP_CHALLENGE_STATUS, 255

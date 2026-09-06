@@ -1953,7 +1953,7 @@ static void Task_HandleInput(u8 taskId)
                 SwitchToMoveSelection(taskId);
             }
             else if (sMonSummaryScreen->currPageIndex == PSS_PAGE_INFO
-                  || sMonSummaryScreen->currPageIndex == PSS_PAGE_SKILLS)
+                  || (sMonSummaryScreen->currPageIndex == PSS_PAGE_SKILLS && gSaveBlock2Ptr->optionsButtonMode != OPTIONS_BUTTON_MODE_L_EQUALS_A))
             {
                 Task_ShowPokedexEntryFromSummary(taskId);
             }
@@ -4990,7 +4990,7 @@ static inline void ShowUtilityPrompt(s16 mode)
             promptText = gText_Info;
     }
     else if (sMonSummaryScreen->currPageIndex == PSS_PAGE_INFO
-          || sMonSummaryScreen->currPageIndex == PSS_PAGE_SKILLS)
+          || (sMonSummaryScreen->currPageIndex == PSS_PAGE_SKILLS && gSaveBlock2Ptr->optionsButtonMode != OPTIONS_BUTTON_MODE_L_EQUALS_A))
     {
         if (CanShowPokedexForCurrentMon())
             promptText = gText_MenuPokedex;

@@ -702,6 +702,14 @@
       "elevation": 0,
       "item": "ITEM_NUGGET",
       "flag": "FLAG_NEWSINJOH_HIDDEN_NUGGET"
+    },
+    {
+      "type": "sign",
+      "x": 12,
+      "y": 36,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "NewSinjoh_EventScript_Cave_Sign"
     }
   ],
   "game_version": "hns",

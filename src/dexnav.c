@@ -2144,7 +2144,7 @@ static void PrintCurrentSpeciesInfo(void)
     else if (GetSetPokedexFlag(dexNum, FLAG_GET_CAUGHT))
     {
         if (GetSpeciesAbility(species, 2) != ABILITY_NONE)
-            AddTextPrinterParameterized3(WINDOW_INFO, FONT_SMALL, 0, HA_INFO_Y, sFontColor_Black, 0, gAbilitiesInfo[GetSpeciesAbility(species, 2)].name);
+            AddTextPrinterParameterized3(WINDOW_INFO, FONT_SMALL, 0, HA_INFO_Y, sFontColor_Black, 0, gAbilitiesInfo[GetAbilityBySpecies(species, 2)].name);
         else
             AddTextPrinterParameterized3(WINDOW_INFO, FONT_SMALL, 0, HA_INFO_Y, sFontColor_Black, 0, gText_None);
     }

@@ -35,8 +35,8 @@ const static bool32 (*sSynchronizeModes[]) (u32) =
     [GIFTMON_ORIGIN] = IsTrue,
 #elif OW_SYNCHRONIZE_NATURE >= GEN_8
     [WILDMON_ORIGIN] = IsTrue,
-    [STATIC_WILDMON_ORIGIN] = IsFalse,
-    [ROAMER_ORIGIN] = IsTrue,
+    [STATIC_WILDMON_ORIGIN] = IsTrue,
+    [ROAMER_ORIGIN] = IsFalse,
     [GIFTMON_ORIGIN] = IsFalse,
 #else
     [WILDMON_ORIGIN] = IsFalse,
@@ -97,7 +97,7 @@ u32 GetSynchronizedNature(enum GeneratedMonOrigin origin, u32 species)
         return NATURE_RANDOM;
     if (gSaveBlock3Ptr->challengeSettings.tx_Mode_Synchronize == 0)
     {
-        if (origin != WILDMON_ORIGIN || !HasHalfChance(species))
+        if ((origin != WILDMON_ORIGIN && origin != STATIC_WILDMON_ORIGIN) || !HasHalfChance(species))
             return NATURE_RANDOM;
     }
     else if (!(sSynchronizeModes[origin](species)))

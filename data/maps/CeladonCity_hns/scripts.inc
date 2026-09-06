@@ -163,7 +163,7 @@ CeladonCity_Text_GameCornerSign:
 CeladonCity_Text_TrainerTips:
 	.string "TRAINER TIPS\p"
 	.string "GUARD SPEC. protects POKéMON\n"
-	.string "against SPECIAL attacks such as\n"
-	.string "fire and water.\p"
+	.string "against SPECIAL attacks such as\l"
+	.string "FLAMETHROWER and SURF.\p"
 	.string "Get your items at CELADON DEPT.\n"
 	.string "STORE!$"

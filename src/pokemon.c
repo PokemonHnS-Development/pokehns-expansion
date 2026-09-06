@@ -2533,7 +2533,7 @@ static const u32 sNationalToSpeciesOrder[NATIONAL_DEX_COUNT] =
     NATIONAL_TO_SPECIES(DECIDUEYE_HISUI),
 #endif
 #if P_PALDEAN_FORMS
-    [NATIONAL_DEX_TAUROS_PALDEA - 1] = SPECIES_TAUROS_PALDEA_AQUA,
+    [NATIONAL_DEX_TAUROS_PALDEA - 1] = SPECIES_TAUROS_PALDEA_COMBAT,
     NATIONAL_TO_SPECIES(WOOPER_PALDEA),
 #endif
 #endif
@@ -3674,6 +3674,11 @@ void CreateEnemyEventMon(void)
     s32 species = gSpecialVar_0x8004;
     s32 level = gSpecialVar_0x8005;
     s32 itemId = gSpecialVar_0x8006;
+
+    #if RANDOMIZER_AVAILABLE
+    if (RandomizerFeatureEnabled(RANDOMIZE_FIXED_MON))
+        species = RandomizeMon(RANDOMIZER_REASON_FIXED_ENCOUNTER, GetRandomizerOption(RANDOMIZER_OPTION_SPECIES_MODE), Random32(), species);
+    #endif
 
     ZeroEnemyPartyMons();
 
@@ -5385,14 +5390,8 @@ u8 GiveCapturedMonToPlayer(struct Pokemon *mon)
     if (i >= GetMaxPartySize())
         return CopyMonToPC(mon);
 
-    if (IsOneTypeChallengeActive())
-    {
-        u8 typeChallenge = gSaveBlock3Ptr->challengeSettings.tx_Challenges_OneTypeChallenge;
-        u16 species = GetMonData(mon, MON_DATA_SPECIES);
-        if (GetSpeciesType(species, 0) != typeChallenge
-         && GetSpeciesType(species, 1) != typeChallenge)
-            return CopyMonToPC(mon);
-    }
+    if (!DoesSpeciesPassOneTypeChallenge(GetMonData(mon, MON_DATA_SPECIES)))
+        return CopyMonToPC(mon);
 
     CopyMon(&gPlayerParty[i], mon, sizeof(*mon));
     gPlayerPartyCount = i + 1;
@@ -8085,6 +8084,9 @@ u16 GetBattleBGM(void)
             return MUS_HG_VS_ROCKET;
         case TRAINER_CLASS_ELITE_FOUR:
             return MUS_VS_ELITE_FOUR;
+        case TRAINER_CLASS_ELITE_FOUR_HNS:
+            // GSC/HGSS reuse the Johto Gym Leader theme for the Elite Four.
+            return MUS_HG_VS_GYM_LEADER;
         case TRAINER_CLASS_CHAMPION_FRLG:
         case TRAINER_CLASS_DEVELOPER_HNS:
             return MUS_RG_VS_CHAMPION;
@@ -9726,11 +9728,7 @@ u32 GiveScriptedMonToPlayer(struct Pokemon *mon, u8 slot)
         }
         else
         {
-            u8 typeChallenge = gSaveBlock3Ptr->challengeSettings.tx_Challenges_OneTypeChallenge;
-            u16 species = GetMonData(mon, MON_DATA_SPECIES);
-            if (IsOneTypeChallengeActive()
-             && GetSpeciesType(species, 0) != typeChallenge
-             && GetSpeciesType(species, 1) != typeChallenge)
+            if (!DoesSpeciesPassOneTypeChallenge(GetMonData(mon, MON_DATA_SPECIES)))
             {
                 sentToPc = CopyMonToPC(mon);
             }

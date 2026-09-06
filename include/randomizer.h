@@ -94,7 +94,7 @@ static inline u8 RandomizeMonType(u16 species, u8 typeNum)
     struct Sfc32State state = RandomizerRandSeed(RANDOMIZER_REASON_SPECIES_TYPE, species, typeNum);
     do {
         type = (u8)RandomizerNextRange(&state, NUMBER_OF_MON_TYPES);
-    } while (type == TYPE_MYSTERY);
+    } while (type == TYPE_NONE || type == TYPE_MYSTERY || type == TYPE_STELLAR);
     return type;
 }
 
@@ -133,6 +133,10 @@ static inline bool32 GroupSetsIntersect(struct RandomizerGroupSet* originalCache
     return originalCache->maxGroup >= targetCache->minGroup
         && originalCache->minGroup <= targetCache->maxGroup;
 }
+
+// TRUE when the Gen 1-3 scope is off, or when the species belongs to a
+// Gen 1-3 family. Also used to scope the One Type Challenge starter pool.
+bool32 IsSpeciesInGenScope(u16 species);
 
 #if RANDOMIZER_DYNAMIC_SPECIES
 void PreloadRandomizationTables(void);

@@ -2918,6 +2918,11 @@ static void SetPartyMonFieldSelectionActions(struct Pokemon *mons, u8 slotId)
     u8 i, j;
     bool32 hasFlyAlready = FALSE;
     bool32 hasFlashAlready = FALSE;
+    u8 numFieldMoves = 0;
+    u8 maxFieldMoves = MAX_MON_MOVES;
+
+    if (slotId == GetFirstLiveMonIndex())
+        maxFieldMoves--;
 
     sPartyMenuInternal->numActions = 0;
     AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, MENU_SUMMARY);
@@ -2935,21 +2940,28 @@ static void SetPartyMonFieldSelectionActions(struct Pokemon *mons, u8 slotId)
         {
             for (j = 0; j != FIELD_MOVES_COUNT; j++)
             {
-                if (GetMonData(&mons[slotId], i + MON_DATA_MOVE1) == FieldMove_GetMoveId(j))
+                if (GetMonData(&mons[slotId], i + MON_DATA_MOVE1) == FieldMove_GetMoveId(j) && numFieldMoves < maxFieldMoves)
                 {
                     if (FieldMove_GetMoveId(j) == MOVE_FLY)
                         hasFlyAlready = TRUE;
                     if (FieldMove_GetMoveId(j) == MOVE_FLASH)
                         hasFlashAlready = TRUE;
                     AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, j + MENU_FIELD_MOVES);
+                    numFieldMoves++;
                     break;
                 }
             }
         }
-        if (CheckBagHasItem(ITEM_HM02, 1) && sPartyMenuInternal->numActions < 5 && !hasFlyAlready)
+        if (CheckBagHasItem(ITEM_HM02, 1) && numFieldMoves < maxFieldMoves && !hasFlyAlready)
+        {
             AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, FIELD_MOVE_FLY + MENU_FIELD_MOVES);
-        if (CheckBagHasItem(ITEM_HM05, 1) && sPartyMenuInternal->numActions < 5 && !hasFlashAlready)
+            numFieldMoves++;
+        }
+        if (CheckBagHasItem(ITEM_HM05, 1) && numFieldMoves < maxFieldMoves && !hasFlashAlready)
+        {
             AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, FIELD_MOVE_FLASH + MENU_FIELD_MOVES);
+            numFieldMoves++;
+        }
     }
     else
     {
@@ -2959,17 +2971,26 @@ static void SetPartyMonFieldSelectionActions(struct Pokemon *mons, u8 slotId)
             {
                 if (GetMonData(&mons[slotId], i + MON_DATA_MOVE1) == FieldMove_GetMoveId(j))
                 {
-                    if (FieldMove_GetMoveId(j) != MOVE_FLY && FieldMove_GetMoveId(j) != MOVE_FLASH)
+                    if (FieldMove_GetMoveId(j) != MOVE_FLY && FieldMove_GetMoveId(j) != MOVE_FLASH && numFieldMoves < maxFieldMoves)
+                    {
                         AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, j + MENU_FIELD_MOVES);
+                        numFieldMoves++;
+                    }
                     break;
                 }
             }
         }
-        if (sPartyMenuInternal->numActions < 5 && CanLearnTeachableMove(GetMonData(&mons[slotId], MON_DATA_SPECIES), MOVE_FLY))
+        if (numFieldMoves < maxFieldMoves && CanLearnTeachableMove(GetMonData(&mons[slotId], MON_DATA_SPECIES), MOVE_FLY))
+        {
             AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, FIELD_MOVE_FLY + MENU_FIELD_MOVES);
-        if (sPartyMenuInternal->numActions < 5 && CheckBagHasItem(ITEM_HM05, 1)
+            numFieldMoves++;
+        }
+        if (numFieldMoves < maxFieldMoves && CheckBagHasItem(ITEM_HM05, 1)
          && CanLearnTeachableMove(GetMonData(&mons[slotId], MON_DATA_SPECIES), MOVE_FLASH))
+        {
             AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, FIELD_MOVE_FLASH + MENU_FIELD_MOVES);
+            numFieldMoves++;
+        }
     }
 
     if (!InBattlePike())

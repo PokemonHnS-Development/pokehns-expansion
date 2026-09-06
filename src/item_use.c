@@ -1540,7 +1540,6 @@ void Task_UseHoneyOnField(u8 taskId)
 
 static void ItemUseOnFieldCB_Honey(u8 taskId)
 {
-    Overworld_ResetStateAfterDigEscRope();
     RemoveBagItem(gSpecialVar_ItemId, 1);
     CopyItemName(gSpecialVar_ItemId, gStringVar2);
     StringExpandPlaceholders(gStringVar4, gText_PlayerUsedVar2);
@@ -1550,9 +1549,7 @@ static void ItemUseOnFieldCB_Honey(u8 taskId)
 void ItemUseOutOfBattle_Honey(u8 taskId)
 {
     sItemUseOnFieldCB = ItemUseOnFieldCB_Honey;
-    gFieldCallback = FieldCB_UseItemOnField;
-    gBagMenu->newScreenCallback = CB2_ReturnToField;
-    Task_FadeAndCloseBagMenu(taskId);
+    SetUpItemUseOnFieldCallback(taskId);
 }
 
 void ItemUseOutOfBattle_InfiniteRareCandies(u8 taskId)

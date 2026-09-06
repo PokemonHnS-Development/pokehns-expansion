@@ -96,7 +96,7 @@ SaffronCity_Gym_Text_Sabrina_GiveTM:
 
 SaffronCity_Gym_Text_Sabrina_ExplainTM:
 	.string "It holds SKILL SWAP.\p"
-	.string "It can take your opponents abilities\n"
+	.string "It can take your opponents' abilities\n"
 	.string "away from them and give them your own.\p"
 	.string "Use it wisely...$"
 

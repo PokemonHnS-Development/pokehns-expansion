@@ -648,7 +648,34 @@
 #define TRAINER_BEVERLY_5_HNS                 630
 
 // 618 is TRAINER_TANYA_HNS, relocated out of the TRAINER_FRONTIER_BRAIN slot (330).
-#define TRAINERS_COUNT_HNS                       631
+
+// Post-OBC (Battle Championship) rematch teams for the Gym Leaders, Elite Four,
+// Lance, Blue and Red. Appended at the end of the list for the same save-index
+// reason as the phone rematch tiers above.
+#define TRAINER_FALKNER_POSTOBC_HNS           631
+#define TRAINER_BUGSY_POSTOBC_HNS             632
+#define TRAINER_WHITNEY_POSTOBC_HNS           633
+#define TRAINER_MORTY_POSTOBC_HNS             634
+#define TRAINER_CHUCK_POSTOBC_HNS             635
+#define TRAINER_JASMINE_POSTOBC_HNS           636
+#define TRAINER_PRYCE_POSTOBC_HNS             637
+#define TRAINER_CLAIR_OBC_HNS                 638
+#define TRAINER_BROCK_POSTOBC_HNS             639
+#define TRAINER_LTSURGE_POSTOBC_HNS           640
+#define TRAINER_JANINE_POSTOBC_HNS            641
+#define TRAINER_SABRINA_POSTOBC_HNS           642
+#define TRAINER_BLAINE_POSTOBC_HNS            643
+#define TRAINER_BLUE_POSTOBC_HNS              644
+#define TRAINER_WILL_POSTOBC_HNS              645
+#define TRAINER_KOGA_POSTOBC_HNS              646
+#define TRAINER_BRUNO_POSTOBC_HNS             647
+#define TRAINER_KAREN_POSTOBC_HNS             648
+#define TRAINER_LANCE_POSTOBC_HNS             649
+#define TRAINER_RED_POSTOBC_HNS               650
+#define TRAINER_MISTY_POSTOBC_HNS             651
+#define TRAINER_ERIKA_POSTOBC_HNS             652
+
+#define TRAINERS_COUNT_HNS                       653
 #define MAX_TRAINERS_COUNT_HNS                   864
 
 #endif  // GUARD_CONSTANTS_OPPONENTS_HNS_H

@@ -716,6 +716,8 @@ void HandleAction_WatchesCarefully(void)
             if (gBattleStruct->safariRockThrowCounter == 0)
             {
                 gBattleStruct->safariCatchFactor = gSpeciesInfo[GetMonData(gEnemyParty, MON_DATA_SPECIES)].catchRate * 100 / 1275;
+                if (gBattleStruct->safariCatchFactor == 0)
+                    gBattleStruct->safariCatchFactor = 1;
                 gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_MON_WATCHING;
             }
             else

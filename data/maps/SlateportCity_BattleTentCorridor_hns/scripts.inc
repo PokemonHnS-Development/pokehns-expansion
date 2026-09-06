@@ -82,7 +82,7 @@ SlateportCity_BattleTentCorridor_hns_EventScript_AskRetireChallenge::
 	multichoicedefault 20, 8, MULTI_YESNO, 1, FALSE
 	switch VAR_RESULT
 	case 1, SlateportCity_BattleTentCorridor_hns_EventScript_AskReadyForOpponent
-	case 0, SlateportCity_BattleTent_EventScript_WarpToLobbyLost
+	case 0, SlateportCity_BattleTent_hns_EventScript_WarpToLobbyLost
 	case MULTI_B_PRESSED, SlateportCity_BattleTentCorridor_hns_EventScript_AskReadyForOpponent
 
 SlateportCity_BattleTentCorridor_hns_EventScript_AskSwapMon::

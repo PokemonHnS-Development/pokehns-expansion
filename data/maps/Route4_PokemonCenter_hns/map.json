@@ -2,7 +2,7 @@
   "id": "MAP_ROUTE4_POKEMON_CENTER_HNS",
   "name": "Route4_PokemonCenter_hns",
   "layout": "LAYOUT_ROUTE4_POKEMON_CENTER_HNS",
-  "music": "MUS_HG_POKE_CENTER",
+  "music": "MUS_RG_POKE_CENTER",
   "region_map_section": "MAPSEC_ROUTE_4",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

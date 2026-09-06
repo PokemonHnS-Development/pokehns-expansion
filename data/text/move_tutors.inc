@@ -185,7 +185,7 @@ MoveTutor_Text_DynamicPunchWhichMon:
 	.string "Which POKéMON should I teach?$"
 
 MoveTutor_Text_DynamicPunchTaught:
-	.string "I want you to win at the MOSSDEEP GYM\n"
+	.string "I want you to win at the CERULEAN GYM\n"
 	.string "using that DYNAMICPUNCH!$"
 
 MoveTutor_Text_DoubleEdgeTeach:

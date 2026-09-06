@@ -11,6 +11,7 @@
 #include "palette.h"
 #include "pokedex.h"
 #include "pokemon.h"
+#include "randomizer.h"
 #include "scanline_effect.h"
 #include "sound.h"
 #include "sprite.h"
@@ -350,78 +351,97 @@ static const struct SpriteTemplate sSpriteTemplate_StarterCircle =
 
 static u16 sOneTypeChallengeStarters[STARTER_MON_COUNT];
 
-static bool32 IsBaseStageSpecies(u16 species)
-{
-    u16 j;
-    for (j = 1; j < NUM_SPECIES; j++)
-    {
-        if (!IsSpeciesEnabled(j))
-            continue;
-        const struct Evolution *evos = GetSpeciesEvolutions(j);
-        if (evos == NULL)
-            continue;
-        int k;
-        for (k = 0; evos[k].method != EVOLUTIONS_END; k++)
-        {
-            if (SanitizeSpeciesId(evos[k].targetSpecies) == species)
-                return FALSE;
-        }
-    }
-    return TRUE;
-}
+#define SPECIES_BITMAP_SIZE   ((NUM_SPECIES + 8) / 8)
+#define SetSpeciesBit(map, s) ((map)[(s) / 8] |= 1 << ((s) % 8))
+#define GetSpeciesBit(map, s) ((map)[(s) / 8] & (1 << ((s) % 8)))
 
-static u16 PickOneTypeChallengeStarter(u8 starterId)
+// Fills every One Type Challenge starter slot in one pass. This used to rescan
+// the whole species table once per candidate to find base stages, which froze
+// the game for a moment the first time a ball in Elm's lab was interacted with.
+static void PickOneTypeChallengeStarters(void)
 {
     u8 typeChallenge = gSaveBlock3Ptr->challengeSettings.tx_Challenges_OneTypeChallenge;
+    u8 hasPreEvolution[SPECIES_BITMAP_SIZE];
     u16 candidates[64];
     u16 count = 0;
-    u16 i;
+    u16 i, stride;
+
+    for (i = 0; i < ARRAY_COUNT(hasPreEvolution); i++)
+        hasPreEvolution[i] = 0;
+
+    // One pass to mark every species that something else evolves into.
+    for (i = 1; i < NUM_SPECIES; i++)
+    {
+        const struct Evolution *evos;
+        u32 k;
+
+        if (!IsSpeciesEnabled(i))
+            continue;
+
+        evos = GetSpeciesEvolutions(i);
+        if (evos == NULL)
+            continue;
+
+        for (k = 0; evos[k].method != EVOLUTIONS_END; k++)
+        {
+            u16 target = evos[k].targetSpecies;
+
+            if (target != SPECIES_NONE && target <= NUM_SPECIES)
+                SetSpeciesBit(hasPreEvolution, target);
+        }
+    }
 
     for (i = 1; i < NUM_SPECIES && count < ARRAY_COUNT(candidates); i++)
     {
+        const struct Evolution *evos;
+
         if (!IsSpeciesEnabled(i))
             continue;
-        if (GetSpeciesType(i, 0) != typeChallenge && GetSpeciesType(i, 1) != typeChallenge)
+        // Alternate forms share a name and a sprite with their base form, so
+        // offering them would show the player the same mon in several balls.
+        if (GET_BASE_SPECIES_ID(i) != i)
             continue;
-        const struct Evolution *evos = GetSpeciesEvolutions(i);
+        if (GetSpeciesBit(hasPreEvolution, i))
+            continue;
+    #if RANDOMIZER_AVAILABLE
+        // Honour the randomizer's Gen 1-3 scope even when nothing else is
+        // being randomized, so a Gen 1-3 game doesn't hand out a Gen 6 starter.
+        if (!IsSpeciesInGenScope(i))
+            continue;
+    #endif
+
+        evos = GetSpeciesEvolutions(i);
         if (evos == NULL || evos[0].method == EVOLUTIONS_END)
             continue;
-        if (!IsBaseStageSpecies(i))
+        // Checked last: walking the evolution line is the expensive test.
+        if (!DoesSpeciesPassOneTypeChallenge(i))
             continue;
-        u16 j;
-        bool8 duplicate = FALSE;
-        for (j = 0; j < STARTER_MON_COUNT; j++)
-        {
-            if (j != starterId && sOneTypeChallengeStarters[j] == i)
-            {
-                duplicate = TRUE;
-                break;
-            }
-        }
-        if (!duplicate)
-            candidates[count++] = i;
+
+        candidates[count++] = i;
     }
 
-    if (count == 0)
+    // Spread the picks out so the balls aren't three neighbours in the dex.
+    stride = (count >= STARTER_MON_COUNT) ? count / STARTER_MON_COUNT : 1;
+
+    for (i = 0; i < STARTER_MON_COUNT; i++)
     {
-        if (typeChallenge == TYPE_DRAGON)
-            return SPECIES_DRATINI;
-        return sStarterMon[starterId];
+        if (count == 0)
+            sOneTypeChallengeStarters[i] = (typeChallenge == TYPE_DRAGON) ? SPECIES_DRATINI : sStarterMon[i];
+        else
+            sOneTypeChallengeStarters[i] = candidates[(gSaveBlock2Ptr->playerTrainerId[0] + i * stride) % count];
     }
-
-    return candidates[(gSaveBlock2Ptr->playerTrainerId[0] + starterId) % count];
 }
 
 // .text
 u16 GetStarterPokemon(u16 chosenStarterId)
 {
-    if (chosenStarterId > STARTER_MON_COUNT)
+    if (chosenStarterId >= STARTER_MON_COUNT)
         chosenStarterId = 0;
 
     if (IsOneTypeChallengeActive())
     {
-        if (sOneTypeChallengeStarters[chosenStarterId] == 0)
-            sOneTypeChallengeStarters[chosenStarterId] = PickOneTypeChallengeStarter(chosenStarterId);
+        if (sOneTypeChallengeStarters[0] == SPECIES_NONE)
+            PickOneTypeChallengeStarters();
         return sOneTypeChallengeStarters[chosenStarterId];
     }
 

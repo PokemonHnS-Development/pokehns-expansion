@@ -178,11 +178,12 @@ void CreateShinyScriptedMon(u16 species, u8 level, enum Item item)
 {
     u8 heldItem[2];
 
-    // TODO: HnS challenge mode hooks (needs tx_Random_* / tx_Challenges SaveBlock fields)
-    // if (gSaveBlock1Ptr->tx_Random_Static)
-    //     species = GetSpeciesRandomSeeded(species, TX_RANDOM_T_STATIC, 0);
-    // if (gSaveBlock1Ptr->tx_Random_Items)
-    //     item = RandomItemId(item);
+    #if RANDOMIZER_AVAILABLE
+    if (RandomizerFeatureEnabled(RANDOMIZE_FIXED_MON))
+        species = RandomizeMon(RANDOMIZER_REASON_FIXED_ENCOUNTER, GetRandomizerOption(RANDOMIZER_OPTION_SPECIES_MODE), Random32(), species);
+    #endif
+
+    // TODO: item randomization (HnS randomized the held item under tx_Random_Items)
 
     ZeroEnemyPartyMons();
 

@@ -119,7 +119,9 @@ AzaleaTown_KurtsHouse_EventScript_Kurt2::
 	playse SE_BANG
 	applymovement LOCALID_AZALEA_TOWN_KURT, AzaleaTownKurt_Movement_Making_Ball
 	waitmovement 0
-	turnobject LOCALID_AZALEA_TOWN_KURT, DIR_SOUTH
+	call_if_eq VAR_FACING, DIR_EAST, AzaleaTown_KurtsHouse_EventScript_TurnWest
+	call_if_eq VAR_FACING, DIR_WEST, AzaleaTown_KurtsHouse_EventScript_TurnEast
+	call_if_eq VAR_FACING, DIR_NORTH, AzaleaTown_KurtsHouse_EventScript_TurnSouth
 	goto_if_eq VAR_0x8005, 1, AzaleaTown_KurtsHouse_EventScript_SingularBall
 	bufferitemname STR_VAR_1, VAR_0x8004
 	buffernumberstring STR_VAR_2, VAR_0x8005
@@ -134,6 +136,17 @@ AzaleaTown_KurtsHouse_EventScript_Kurt2::
 	turnobject LOCALID_AZALEA_TOWN_KURT, DIR_NORTH
 	release
 	end
+
+AzaleaTown_KurtsHouse_EventScript_TurnSouth::
+	turnobject LOCALID_AZALEA_TOWN_KURT, DIR_SOUTH
+	return
+AzaleaTown_KurtsHouse_EventScript_TurnWest::
+	turnobject LOCALID_AZALEA_TOWN_KURT, DIR_WEST
+	return
+AzaleaTown_KurtsHouse_EventScript_TurnEast::
+	turnobject LOCALID_AZALEA_TOWN_KURT, DIR_EAST
+	return
+
 
 AzaleaTown_KurtsHouse_EventScript_SingularBall::
 	bufferitemname STR_VAR_1, VAR_0x8004

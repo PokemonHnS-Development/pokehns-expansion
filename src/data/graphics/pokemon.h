@@ -6419,6 +6419,7 @@ const u32 gObjectEventPic_Substitute[] = INCBIN_COMP("graphics/pokemon/question_
 #if OW_PKMN_OBJECTS_SHARE_PALETTES == FALSE
     const u16 gOverworldPalette_Dragonite[] = INCBIN_U16("graphics/pokemon/dragonite/overworld_normal.gbapal");
     const u16 gShinyOverworldPalette_Dragonite[] = INCBIN_U16("graphics/pokemon/dragonite/overworld_shiny.gbapal");
+    const u16 gShinyModernOverworldPalette_Dragonite[] = INCBIN_U16("graphics/pokemon/dragonite/overworld_shiny_modern.gbapal");
 #endif //OW_PKMN_OBJECTS_SHARE_PALETTES
 #endif //OW_POKEMON_OBJECT_EVENTS
 
@@ -27541,6 +27542,7 @@ const u32 gObjectEventPic_Substitute[] = INCBIN_COMP("graphics/pokemon/question_
     const u16 gMonShinyPaletteModern_Jolteon[] = INCBIN_U16("graphics/pokemon/jolteon/shiny_modern.gbapal");
     const u16 gMonShinyPaletteModern_Flareon[] = INCBIN_U16("graphics/pokemon/flareon/shiny_modern.gbapal");
     const u16 gMonShinyPaletteModern_Zapdos[] = INCBIN_U16("graphics/pokemon/zapdos/shiny_modern.gbapal");
+    const u16 gMonShinyPaletteModern_Dragonite[] = INCBIN_U16("graphics/pokemon/dragonite/shiny_modern.gbapal");
     const u16 gMonShinyPaletteModern_Chinchou[] = INCBIN_U16("graphics/pokemon/chinchou/shiny_modern.gbapal");
     const u16 gMonShinyPaletteModern_Lanturn[] = INCBIN_U16("graphics/pokemon/lanturn/shiny_modern.gbapal");
     const u16 gMonShinyPaletteModern_Xatu[] = INCBIN_U16("graphics/pokemon/xatu/shiny_modern.gbapal");

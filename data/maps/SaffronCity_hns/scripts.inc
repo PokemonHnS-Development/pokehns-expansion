@@ -163,8 +163,8 @@ SaffronCity_Text_Youngster1:
 	.string "time makes me sorta anxious.$"
 
 SaffronCity_Text_Youngster2:
-	.string "There's a place called TRAINER\n"
-	.string "HOUSE in VIRIDIAN where trainers\l"
+	.string "There's a place called the CONTEST\n"
+	.string "HALL in VIRIDIAN where trainers\l"
 	.string "gather from all over the place.$"
 
 SaffronCity_Text_Lass2:

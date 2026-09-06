@@ -657,8 +657,8 @@
   "bg_events": [
     {
       "type": "hidden_item",
-      "x": 57,
-      "y": 37,
+      "x": 76,
+      "y": 29,
       "elevation": 0,
       "item": "ITEM_DIRE_HIT",
       "flag": "FLAG_ITEM_VIRIDIANFOREST_DIRE_HIT"

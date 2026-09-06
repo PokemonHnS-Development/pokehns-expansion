@@ -19,7 +19,7 @@ Gate_AzaleaTown_IlexForest_EventScript_Granny::
 
 Gate_AzaleaTown_IlexForest_Text_Officer:
 	.string "ILEX FOREST is big.\n"
-	.string "Be careful!\n"
+	.string "Be careful!\l"
 	.string "Don't get lost.$"
 
 Gate_AzaleaTown_IlexForest_Text_Granny:

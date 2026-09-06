@@ -3055,8 +3055,10 @@ static struct SpriteSheet GetLastUsedBallWindowSpriteSheet(void)
 
 #if B_MOVE_DESCRIPTION_BUTTON == R_BUTTON
 static const u8 sMoveInfoWindowGfx[] = INCBIN_U8("graphics/battle_interface/move_info_window_r.4bpp");
-#else
+#elif B_MOVE_DESCRIPTION_BUTTON == L_BUTTON
 static const u8 sMoveInfoWindowGfx[] = INCBIN_U8("graphics/battle_interface/move_info_window_l.4bpp");
+#else
+static const u8 sMoveInfoWindowGfx[] = INCBIN_U8("graphics/battle_interface/move_info_window_start.4bpp");
 #endif
 
 static const struct SpriteSheet sSpriteSheet_MoveInfoWindow =

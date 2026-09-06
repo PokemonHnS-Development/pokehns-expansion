@@ -2247,7 +2247,7 @@ void CreateDecorationShop2Menu(const u16 *itemsForSale)
     SetShopMenuCallback(ScriptContext_Enable);
 }
 
-static EWRAM_DATA u16 sBPItemList[16] = {0};
+static EWRAM_DATA u16 sBPItemList[32] = {0};
 
 static void SetBPShopItems(const struct BPShopEntry *entries)
 {
