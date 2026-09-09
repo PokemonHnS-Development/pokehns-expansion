@@ -9,6 +9,7 @@
 #include "main.h"
 #include "menu.h"
 #include "map_name_popup.h"
+#include "overworld.h"
 #include "palette.h"
 #include "region_map.h"
 #include "rtc.h"
@@ -857,5 +858,15 @@ static void LoadMapNamePopUpWindowBg(void)
         else
             LoadPalette(sMapPopUp_PaletteTable[popUpThemeId], BG_PLTT_ID(14), sizeof(sMapPopUp_PaletteTable[0]));
         BlitBitmapToWindow(popupWindowId, sMapPopUp_Table[popUpThemeId], 0, 0, 80, 24);
+    }
+
+    // Shade the pop-up to match the overworld's current time of day. UpdatePalettesWithTime
+    // masks itself to PALETTES_MAP | PALETTES_OBJECTS so it never reaches this UI palette,
+    // hence blending slot 14 here directly. LoadPalette above left the untinted colors in
+    // both buffers, so unfaded stays clean as the blend source.
+    if (MapHasNaturalLight(gMapHeader.mapType))
+    {
+        TimeMixPalettes(1 << 14, gPlttBufferUnfaded, gPlttBufferFaded,
+                        &gTimeBlend.startBlend, &gTimeBlend.endBlend, gTimeBlend.weight);
     }
 }
