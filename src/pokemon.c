@@ -7342,13 +7342,50 @@ u16 NationalPokedexNumToSpecies(enum NationalDexOrder nationalNum)
     return sNationalToSpeciesOrder[nationalNum - 1];
 }
 
+u32 GetPokedexRegion(void)
+{
+    u32 region = gSaveBlock2Ptr->pokedex.region;
+
+    if (region >= REGION_KANTO && region <= REGION_HOENN)
+        return region; 
+
+        if (IS_HNS)
+            return REGION_JOHTO; 
+        else if (IS_FRLG)
+            return REGION_KANTO;
+        else 
+            return REGION_HOENN;
+}
+
+void SetPokedexRegion(u32 region)
+{
+    if (region >= REGION_KANTO && region <= REGION_HOENN)
+        gSaveBlock2Ptr->pokedex.region = region;
+}
+
+u32 GetRegionalDexCount(void)
+{
+    switch (GetPokedexRegion())
+    {
+        case REGION_KANTO:
+            return KANTO_DEX_COUNT;
+        case REGION_HOENN:
+            return HOENN_DEX_COUNT;
+        default: 
+            return JOHTO_DEX_COUNT;
+    }
+}
+
 u32 NationalToRegionalOrder(enum NationalDexOrder nationalNum)
 {
-    if (IS_HNS)
-        return NationalToJohtoOrder(nationalNum);
-    if (IS_FRLG)
-        return NationalToKantoOrder(nationalNum);
-    return NationalToHoennOrder(nationalNum);
+    switch (GetPokedexRegion()) {
+        case REGION_KANTO:
+            return NationalToKantoOrder(nationalNum);
+        case REGION_HOENN: 
+            return NationalToHoennOrder(nationalNum);
+        default: 
+            return NationalToJohtoOrder(nationalNum);
+    }
 }
 
 enum KantoDexOrder NationalToKantoOrder(enum NationalDexOrder nationalNum)
@@ -7398,11 +7435,14 @@ enum NationalDexOrder SpeciesToNationalPokedexNum(u16 species)
 
 u32 SpeciesToRegionalPokedexNum(u16 species)
 {
-    if (IS_HNS)
-        return SpeciesToJohtoPokedexNum(species);
-    if (IS_FRLG)
-        return SpeciesToKantoPokedexNum(species);
-    return SpeciesToHoennPokedexNum(species);
+    switch (GetPokedexRegion()) {
+        case REGION_KANTO: 
+            return SpeciesToKantoPokedexNum(species);
+        case REGION_HOENN: 
+            return SpeciesToHoennPokedexNum(species);
+        default:
+            return SpeciesToJohtoPokedexNum(species);
+    }
 }
 
 enum KantoDexOrder SpeciesToKantoPokedexNum(u16 species)
@@ -7421,11 +7461,15 @@ enum HoennDexOrder SpeciesToHoennPokedexNum(u16 species)
 
 enum NationalDexOrder RegionalToNationalOrder(u32 regionalNum)
 {
-    if (IS_HNS)
-        return JohtoToNationalOrder(regionalNum);
-    if (IS_FRLG)
+    switch (GetPokedexRegion())
+    {
+    case REGION_KANTO:
         return KantoToNationalOrder(regionalNum);
-    return HoennToNationalOrder(regionalNum);
+    case REGION_HOENN:
+        return HoennToNationalOrder(regionalNum);
+    default:
+        return JohtoToNationalOrder(regionalNum);
+    }
 }
 
 enum NationalDexOrder KantoToNationalOrder(enum KantoDexOrder kantoNum)
@@ -7984,9 +8028,15 @@ u16 SpeciesToPokedexNum(u16 species)
 
 bool32 IsSpeciesInRegionalDex(u16 species)
 {
-    if (IS_FRLG)
-        return IsSpeciesInKantoDex(species);
-    return IsSpeciesInHoennDex(species);
+    switch (GetPokedexRegion()) 
+    {
+        case REGION_KANTO:
+            return IsSpeciesInKantoDex(species);
+        case REGION_HOENN:
+            return IsSpeciesInHoennDex(species);
+        default: 
+            return IsSpeciesInJohtoDex(species);
+    }
 }
 
 bool32 IsSpeciesInKantoDex(u16 species)
@@ -8000,6 +8050,13 @@ bool32 IsSpeciesInKantoDex(u16 species)
 bool32 IsSpeciesInHoennDex(u16 species)
 {
     if (SpeciesToHoennPokedexNum(species) > HOENN_DEX_COUNT)
+        return FALSE;
+    else
+        return TRUE;
+}
+
+bool32 IsSpeciesInJohtoDex(u16 species) {
+    if (SpeciesToJohtoPokedexNum(species) > JOHTO_DEX_COUNT)
         return FALSE;
     else
         return TRUE;
