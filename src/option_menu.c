@@ -686,11 +686,6 @@ static void DrawFrameTypeChoice(u8 selection, int y, bool8 active)
     u8 n = selection + 1;
     u8 i = 0;
 
-    static const u8 sFrameTypePrefix[] = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}");
-
-    for (i = 0; sFrameTypePrefix[i] != EOS && i < 10; i++)
-        text[i] = sFrameTypePrefix[i];
-
     if (n / 10 != 0)
     {
         text[i++] = n / 10 + CHAR_0;
