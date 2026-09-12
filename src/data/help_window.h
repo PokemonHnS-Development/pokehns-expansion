@@ -167,7 +167,7 @@ const struct HelpWindow gHelpWindowInfo[] =
         .desc = COMPOUND_STRING("GOLD POKéBLOCKS attract POKéMON with\n"
                                 "5 perfect IVs. Flavor determines which\n"
                                 "IV is not perfect.\n"
-                                "SPICY: no SP.ATK   DRY:    no ATTACK\n"
+                                "SPICY: no SP.ATK    DRY:    no ATTACK\n"
                                 "SWEET: no SP.DEF   BITTER: no SPEED\n"
                                 "SOUR:  no HP\n"
                                 "Every POKéBLOCK attracts HIDDEN ABILITY."
