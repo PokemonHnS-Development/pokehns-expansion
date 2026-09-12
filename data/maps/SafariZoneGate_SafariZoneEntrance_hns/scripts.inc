@@ -392,8 +392,13 @@ SafariZoneGate_SafariZoneEntrance_Text_Baoba:
 	.string "ZONE?$"
 
 SafariZoneGate_SafariZoneEntrance_Text_Boy:
-	.string "I heard the new zone they\n"
-	.string "are working on has dragons!$"
+	.string "Do you know about POKéBLOCK\n"
+	.string "feeders?\p"
+	.string "Putting a POKéBLOCK in the feeder\n"
+	.string "brings out POKéMON with HIDDEN\l"
+	.string "ABILITIES!\p"
+	.string "The type of POKéBLOCK also affects\n"
+	.string "the POKéMON's nature.$"
 
 SafariZoneGate_SafariZoneEntrance_Text_BoyGiveCase:
 	.string "Here, you seem like you need this.$"
