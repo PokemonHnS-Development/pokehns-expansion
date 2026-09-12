@@ -462,34 +462,26 @@ C_mixing_setup_comp_rev:
  * r9: src address (relative to start address)
  * r0: dst address (on stack)
  * r12: delta_lookup_table */
-F_decode_compressed:
+F_decode_compressed_for:
 	stmfd sp!, {r3, lr}
 	mov lr, #BDPCM_BLK_SIZE
 	ldrb r2, [r9], #1
 	ldrb r3, [r9], #1
-	b C_bdpcm_decoder_loop_entry
+	b C_bdpcm_decoder_loop_entry_for
 
-C_bdpcm_decoder_loop:
+C_bdpcm_decoder_loop_for:
 	ldrb r3, [r9], #1
 	ldrb r2, [r12, r3, lsr#4]
 	add r2, r1, r2
 	and r3, r3, #0xF
-C_bdpcm_decoder_loop_entry:
+C_bdpcm_decoder_loop_entry_for:
 	ldrb r1, [r12, r3]
 	add r1, r1, r2
-bdpcm_instructions:
-	nop
-	nop
-	subs lr, #2
-	bgt C_bdpcm_decoder_loop
-	ldmfd sp!, {r3, pc}
-
-bdpcm_instruction_resource_for:
 	strb r2, [r0], #1
 	strb r1, [r0], #1
-bdpcm_instruction_resource_rev:
-	strb r2, [r0, #-1]!
-	strb r1, [r0, #-1]!
+	subs lr, #2
+	bgt C_bdpcm_decoder_loop_for
+	ldmfd sp!, {r3, pc}
 
 delta_lookup_table:
 	.byte 0, 1, 4, 9, 16, 25, 36, 49, -64, -49, -36, -25, -16, -9, -4, -1
@@ -497,11 +489,6 @@ stack_boundary_literal:
 	.word 0x03007900
 
 C_data_load_comp:
-	adrpl r9, bdpcm_instruction_resource_for
-	adrmi r9, bdpcm_instruction_resource_rev
-	ldmia r9, {r12, lr}
-	adr r9, bdpcm_instructions
-	stmia r9, {r12, lr}
 	adr r12, delta_lookup_table
 	bmi C_data_load_comp_rev
 C_data_load_comp_for:
@@ -546,9 +533,23 @@ C_data_load_comp_decode:
 	mov r1, #BDPCM_BLK_STRIDE
 	mla r9, r1, r9, r2
 C_data_load_comp_loop:
-	bl F_decode_compressed
+	bl F_decode_compressed_for
 	subs r8, #BDPCM_BLK_SIZE
 	bgt C_data_load_comp_loop
+	b C_select_highspeed_codepath_vla_r3
+
+C_data_load_comp_decode_rev:
+	ldr r2, [r10, #8]           @ load chn_ptr from previous stmfd
+	@ zero flag should be only set when leaving from F_clear_mem (r1 = 0)
+	streqb r1, [r2, #o_SoundChannel_statusFlags]
+	ldr r2, [r2, #o_SoundChannel_wav]
+	add r2, #o_WaveData_data
+	mov r1, #BDPCM_BLK_STRIDE
+	mla r9, r1, r9, r2
+C_data_load_comp_loop_rev:
+	bl F_decode_compressed_rev
+	subs r8, #BDPCM_BLK_SIZE
+	bgt C_data_load_comp_loop_rev
 	b C_select_highspeed_codepath_vla_r3
 
 C_data_load_comp_rev:
@@ -581,7 +582,7 @@ C_data_load_comp_rev:
 C_data_load_comp_rev_calc_pos:
 	rsb r3, r3, #0
 	and r3, r3, #BDPCM_BLK_SIZE_MASK
-	b C_data_load_comp_decode
+	b C_data_load_comp_decode_rev
 
 C_data_load_uncomp_rev:
 	/* lr = end_of_last_block */
@@ -1486,6 +1487,26 @@ C_fast_kernel_ge2:
 	ldmfd sp, {sp}
 	b C_skip_fast_mixing
 
+F_decode_compressed_rev:
+	stmfd sp!, {r3, lr}
+	mov lr, #BDPCM_BLK_SIZE
+	ldrb r2, [r9], #1
+	ldrb r3, [r9], #1
+	b C_bdpcm_decoder_loop_entry_rev
+
+C_bdpcm_decoder_loop_rev:
+	ldrb r3, [r9], #1
+	ldrb r2, [r12, r3, lsr#4]
+	add r2, r1, r2
+	and r3, r3, #0xF
+C_bdpcm_decoder_loop_entry_rev:
+	ldrb r1, [r12, r3]
+	add r1, r1, r2
+	strb r2, [r0, #-1]!
+	strb r1, [r0, #-1]!
+	subs lr, #2
+	bgt C_bdpcm_decoder_loop_rev
+	ldmfd sp!, {r3, pc}
 
 SoundMainRAM_End:
 	.syntax unified
