@@ -8,7 +8,9 @@ EventScript_FieldPoison::
 	end
 
 EventScript_FieldWhiteOut::
+#if IS_HNS
 	goto_if_set FLAG_SYS_BUG_CONTEST_MODE, BugContest_EventScript_WhiteOut
+#endif
 	message gText_PlayerWhitedOut
 	waitmessage
 	waitbuttonpress

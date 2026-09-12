@@ -41,10 +41,8 @@
 #include "constants/rgb.h"
 #include "constants/songs.h"
 #include "data/battle_frontier/battle_frontier_exchange_corner.h"
-#if IS_HNS
 #include "constants/flags.h"
 #include "event_data.h"
-#endif
 
 #define TAG_SCROLL_ARROW   2100
 #define TAG_ITEM_ICON_BASE 9110 // immune to time blending

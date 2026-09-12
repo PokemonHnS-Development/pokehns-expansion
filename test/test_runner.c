@@ -1,6 +1,6 @@
 #include <stdarg.h>
-#include "fake_rtc.h"
 #include "global.h"
+#include "fake_rtc.h"
 #include "gpu_regs.h"
 #include "load_save.h"
 #include "main.h"

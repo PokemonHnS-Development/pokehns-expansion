@@ -17,10 +17,12 @@ SafariZone_EventScript_OutOfBallsMidBattle::
 #endif
 	end
 
+#if IS_HNS
 SafariZone_EventScript_ExitKantoMidBattle::
 	clearflag FLAG_IN_KANTO_SAFARI_ZONE
 	setwarp MAP_FUCHSIA_CITY_SAFARI_ZONE_ENTRANCE_HNS, 5, 6
 	end
+#endif
 
 SafariZone_EventScript_Exit::
 #if IS_FRLG
@@ -42,11 +44,13 @@ SafariZone_EventScript_Exit::
 	waitstate
 	end
 
+#if IS_HNS
 SafariZone_EventScript_ExitKanto::
 	clearflag FLAG_IN_KANTO_SAFARI_ZONE
 	warp MAP_FUCHSIA_CITY_SAFARI_ZONE_ENTRANCE_HNS, 5, 6
 	waitstate
 	end
+#endif
 
 SafariZone_EventScript_RetirePrompt::
 	lockall

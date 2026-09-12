@@ -516,7 +516,11 @@ MauvilleCity_GameCorner_EventScript_ConfirmTMPrize::
 	special BufferTMHMMoveName
 	msgbox MauvilleCity_GameCorner_Text_SoYourChoiceIsTheTMX, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, MauvilleCity_GameCorner_EventScript_CancelTMSelect
+#if IS_HNS
 	goto_if_unset FLAG_FINITE_TMS, MauvilleCity_GameCorner_EventScript_ConfirmTMPrizeInfinite
+#else
+	goto MauvilleCity_GameCorner_EventScript_ConfirmTMPrizeInfinite
+#endif
 	switch VAR_TEMP_1
 	case 1, MauvilleCity_GameCorner_EventScript_BuyTMDoubleTeam
 	case 2, MauvilleCity_GameCorner_EventScript_BuyTMPsychic
@@ -675,9 +679,18 @@ MauvilleCity_GameCorner_EventScript_NoRoomForTM::
 	end
 
 MauvilleCity_GameCorner_EventScript_YouAlreadyHaveThis::
+#if IS_HNS
     msgbox GoldenrodCity_GameCorner_PrizeRoom_Text_YouAlreadyHaveThis, MSGBOX_AUTOCLOSE
+#else
+    msgbox MauvilleCity_GameCorner_Text_YouAlreadyHaveThis, MSGBOX_AUTOCLOSE
+#endif
 	goto MauvilleCity_GameCorner_EventScript_ReturnToChooseTMPrize
 	end
+
+#if !IS_HNS
+MauvilleCity_GameCorner_Text_YouAlreadyHaveThis:
+	.string "You already have this TM.$"
+#endif
 
 MauvilleCity_GameCorner_EventScript_CancelTMSelect::
 	msgbox MauvilleCity_GameCorner_Text_OhIsThatSo, MSGBOX_DEFAULT
@@ -1109,4 +1122,3 @@ MauvilleCity_GameCorner_Text_HeresSomeSlotsInfo:
 MauvilleCity_GameCorner_Text_CantPlayWithNoCoinCase:
 	.string "You can't play if you don't have\n"
 	.string "a COIN CASE.$"
-
