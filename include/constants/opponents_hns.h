@@ -659,7 +659,7 @@
 #define TRAINER_CHUCK_POSTOBC_HNS             635
 #define TRAINER_JASMINE_POSTOBC_HNS           636
 #define TRAINER_PRYCE_POSTOBC_HNS             637
-#define TRAINER_CLAIR_OBC_HNS                 638
+#define TRAINER_CLAIR_POSTOBC_HNS             638
 #define TRAINER_BROCK_POSTOBC_HNS             639
 #define TRAINER_LTSURGE_POSTOBC_HNS           640
 #define TRAINER_JANINE_POSTOBC_HNS            641

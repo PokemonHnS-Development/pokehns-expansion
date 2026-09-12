@@ -272,7 +272,7 @@ SaffronCity_FightingDojoVIP_EventScript_Clair_Rematch::
 	end
 
 SaffronCity_FightingDojoVIP_EventScript_Clair_PostOBC::
-	trainerbattle_no_intro TRAINER_CLAIR_OBC_HNS, SaffronCity_FightingDojoVIP_Text_Clair_RematchDefeat
+	trainerbattle_no_intro TRAINER_CLAIR_POSTOBC_HNS, SaffronCity_FightingDojoVIP_Text_Clair_RematchDefeat
 	applymovement2 VAR_LAST_TALKED, Common_Movement_FaceOriginalDirection
 	waitmovement 0
 	givebp 10
