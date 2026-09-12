@@ -236,7 +236,12 @@ BerryBlender_Text_DontHaveAnyBerriesNoneToSpare:
 
 BerryBlender_EventScript_BerryBlender1::
 	lockall
+@ HnS gates the Blend Master behind the Elite Four, because he is the only route
+@ to a Gold Pokeblock and so to a five-perfect-IV Safari Zone catch. Vanilla's
+@ Lilycove Contest Lobby shares this script, so the check has to stay HnS-only.
+#if IS_HNS
 	goto_if_unset FLAG_IS_CHAMPION, BerryBlender_EventScript_TooWeakToBlend
+#endif
 	goto_if_unset FLAG_HIDE_LILYCOVE_CONTEST_HALL_BLEND_MASTER, BerryBlender_EventScript_BlendMasterPresent
 	setvar NUM_OPPONENTS, 1
 	applymovement LOCALID_BLEND_MASTER, BerryBlender_Movement_BlendLeaderWalkInPlace
