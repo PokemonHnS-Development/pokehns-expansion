@@ -273,6 +273,7 @@ static const struct LevelUpMove sBeedrillLevelUpLearnset[] = {
 #if P_FAMILY_PIDGEY
 static const struct LevelUpMove sPidgeyLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_TACKLE),
+    LEVEL_UP_MOVE( 1, MOVE_PECK),
     LEVEL_UP_MOVE( 5, MOVE_SAND_ATTACK),
     LEVEL_UP_MOVE( 9, MOVE_GUST),
     LEVEL_UP_MOVE(13, MOVE_QUICK_ATTACK),
@@ -292,6 +293,7 @@ static const struct LevelUpMove sPidgeyLevelUpLearnset[] = {
 
 static const struct LevelUpMove sPidgeottoLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_TACKLE),
+    LEVEL_UP_MOVE( 1, MOVE_PECK),
     LEVEL_UP_MOVE( 1, MOVE_SAND_ATTACK),
     LEVEL_UP_MOVE( 1, MOVE_GUST),
     LEVEL_UP_MOVE( 5, MOVE_SAND_ATTACK),
@@ -300,9 +302,11 @@ static const struct LevelUpMove sPidgeottoLevelUpLearnset[] = {
     LEVEL_UP_MOVE(17, MOVE_WHIRLWIND),
     LEVEL_UP_MOVE(21, MOVE_ROLLOUT),
     LEVEL_UP_MOVE(22, MOVE_TWISTER),
+    LEVEL_UP_MOVE(23, MOVE_WING_ATTACK),
     LEVEL_UP_MOVE(27, MOVE_FEATHER_DANCE),
     LEVEL_UP_MOVE(32, MOVE_AGILITY),
-    LEVEL_UP_MOVE(37, MOVE_WING_ATTACK),
+    LEVEL_UP_MOVE(37, MOVE_AERIAL_ACE),
+    LEVEL_UP_MOVE(40, MOVE_SKY_DROP),
     LEVEL_UP_MOVE(42, MOVE_ROOST),
     LEVEL_UP_MOVE(47, MOVE_TAILWIND),
     LEVEL_UP_MOVE(52, MOVE_MIRROR_MOVE),
@@ -313,6 +317,7 @@ static const struct LevelUpMove sPidgeottoLevelUpLearnset[] = {
 
 static const struct LevelUpMove sPidgeotLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_HURRICANE),
+    LEVEL_UP_MOVE( 1, MOVE_PECK),
     LEVEL_UP_MOVE( 1, MOVE_TACKLE),
     LEVEL_UP_MOVE( 1, MOVE_SAND_ATTACK),
     LEVEL_UP_MOVE( 1, MOVE_GUST),
@@ -322,9 +327,11 @@ static const struct LevelUpMove sPidgeotLevelUpLearnset[] = {
     LEVEL_UP_MOVE(13, MOVE_QUICK_ATTACK),
     LEVEL_UP_MOVE(17, MOVE_WHIRLWIND),
     LEVEL_UP_MOVE(22, MOVE_TWISTER),
+    LEVEL_UP_MOVE(23, MOVE_WING_ATTACK),
     LEVEL_UP_MOVE(27, MOVE_FEATHER_DANCE),
     LEVEL_UP_MOVE(32, MOVE_AGILITY),
-    LEVEL_UP_MOVE(38, MOVE_WING_ATTACK),
+    LEVEL_UP_MOVE(38, MOVE_AERIAL_ACE),
+    LEVEL_UP_MOVE(41, MOVE_SKY_DROP),
     LEVEL_UP_MOVE(44, MOVE_ROOST),
     LEVEL_UP_MOVE(50, MOVE_TAILWIND),
     LEVEL_UP_MOVE(56, MOVE_MIRROR_MOVE),
