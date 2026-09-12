@@ -56,10 +56,11 @@ VerdanturfTown_BattleTentLobby_hns_EventScript_GivePrize::
 	waitmessage
 	playfanfare MUS_OBTAIN_ITEM
 	waitfanfare
+	givebp 10
+	msgbox BattleTentLobby_Text_EarnedBattlePoints, MSGBOX_DEFAULT
 	msgbox VerdanturfTown_BattleTentLobby_Text_ReturnFortified, MSGBOX_DEFAULT
 	closemessage
 	setvar VAR_TEMP_CHALLENGE_STATUS, 255
-	givebp 10
 	releaseall
 	end
 

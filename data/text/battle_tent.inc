@@ -469,3 +469,7 @@ BattleTentLobby_Text_ExplainLevelRules:
 VerdanturfTown_BattleTentLobby_Text_RulesAreListed:
 	.string "The VERDANTURF BATTLE TENT\n"
 	.string "rules are listed.$"
+
+BattleTentLobby_Text_EarnedBattlePoints:
+	.string "You've earned {STR_VAR_1} Battle Points!$"
+

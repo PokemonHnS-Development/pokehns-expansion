@@ -56,10 +56,11 @@ FallarborTown_BattleTentLobby_hns_EventScript_GivePrize::
 	waitmessage
 	playfanfare MUS_OBTAIN_ITEM
 	waitfanfare
+	givebp 10
+	msgbox BattleTentLobby_Text_EarnedBattlePoints, MSGBOX_DEFAULT
 	msgbox FallarborTown_BattleTentLobby_Text_AwaitAnotherChallenge2, MSGBOX_DEFAULT
 	closemessage
 	setvar VAR_TEMP_CHALLENGE_STATUS, 255
-	givebp 10
 	releaseall
 	end
 
