@@ -26,7 +26,7 @@
   ],
   "object_events": [
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_PONYTA",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_HERACROSS",
       "x": 5,
       "y": 26,
       "elevation": 0,
@@ -78,7 +78,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_EKANS",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_MILTANK",
       "x": 26,
       "y": 26,
       "elevation": 0,

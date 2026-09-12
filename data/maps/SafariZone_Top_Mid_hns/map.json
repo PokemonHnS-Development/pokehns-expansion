@@ -31,59 +31,7 @@
   ],
   "object_events": [
     {
-      "graphics_id": "OBJ_EVENT_GFX_ENGINEER_HNS",
-      "x": 30,
-      "y": 15,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "SafariZoneGate_SafariZoneEntrance_EventScript_Engineer",
-      "flag": "FLAG_SAFARI_ZONE_EAST_EXPANSION"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_ENGINEER_HNS",
-      "x": 30,
-      "y": 14,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "SafariZoneGate_SafariZoneEntrance_EventScript_Engineer",
-      "flag": "FLAG_SAFARI_ZONE_EAST_EXPANSION"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_ENGINEER_HNS",
-      "x": 7,
-      "y": 15,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "SafariZoneGate_SafariZoneEntrance_EventScript_Engineer",
-      "flag": "FLAG_SAFARI_ZONE_WEST_EXPANSION"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_ENGINEER_HNS",
-      "x": 7,
-      "y": 16,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "SafariZoneGate_SafariZoneEntrance_EventScript_Engineer",
-      "flag": "FLAG_SAFARI_ZONE_WEST_EXPANSION"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_MISDREAVUS",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_PARAS",
       "x": 16,
       "y": 14,
       "elevation": 0,
@@ -96,7 +44,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_HAUNTER",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_GIRAFARIG",
       "x": 9,
       "y": 2,
       "elevation": 0,
@@ -135,9 +83,9 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_WEEPINBELL",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_TANGELA",
       "x": 15,
-      "y": 9,
+      "y": 10,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_DOWN",
       "movement_range_x": 0,
@@ -148,7 +96,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_ARBOK",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_ABRA",
       "x": 33,
       "y": 6,
       "elevation": 0,

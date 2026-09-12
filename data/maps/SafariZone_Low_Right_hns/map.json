@@ -26,7 +26,7 @@
   ],
   "object_events": [
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_LARVITAR",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_PUPITAR",
       "x": 31,
       "y": 30,
       "elevation": 0,
@@ -65,7 +65,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_GOLDUCK",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_DUNSPARCE",
       "x": 31,
       "y": 13,
       "elevation": 0,
@@ -78,7 +78,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_GOLDUCK",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_PILOSWINE",
       "x": 32,
       "y": 12,
       "elevation": 0,
@@ -104,11 +104,11 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_QUAGSIRE",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SNEASEL",
       "x": 7,
       "y": 16,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_DOWN",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",

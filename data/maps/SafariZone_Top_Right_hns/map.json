@@ -26,7 +26,7 @@
   ],
   "object_events": [
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_RATICATE",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SKIPLOOM",
       "x": 24,
       "y": 24,
       "elevation": 0,
@@ -39,7 +39,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_RATTATA",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_WOOPER",
       "x": 23,
       "y": 26,
       "elevation": 0,
@@ -48,7 +48,7 @@
       "movement_range_y": 2,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "VioletCity_EventScript_Rattata",
+      "script": "NULL",
       "flag": "0"
     },
     {
@@ -128,6 +128,45 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "EcruteakCity_Theater_EventScript_Psyduck",
       "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ENGINEER_HNS",
+      "x": 13,
+      "y": 30,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SafariZoneGate_SafariZoneEntrance_EventScript_Engineer",
+      "flag": "FLAG_SAFARI_ZONE_WEST_EXPANSION"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ENGINEER_HNS",
+      "x": 14,
+      "y": 30,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SafariZoneGate_SafariZoneEntrance_EventScript_Engineer",
+      "flag": "FLAG_SAFARI_ZONE_WEST_EXPANSION"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ENGINEER_HNS",
+      "x": 15,
+      "y": 30,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SafariZoneGate_SafariZoneEntrance_EventScript_Engineer",
+      "flag": "FLAG_SAFARI_ZONE_WEST_EXPANSION"
     }
   ],
   "warp_events": [],
