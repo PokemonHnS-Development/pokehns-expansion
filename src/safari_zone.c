@@ -19,16 +19,27 @@ struct PokeblockFeeder
     /*0x00*/ s16 x;
     /*0x02*/ s16 y;
     /*0x04*/ s8 mapNum;
-    /*0x05*/ u8 stepCounter;
+    //u8 padding;
+    /*0x06*/ u16 stepCounter;
     /*0x08*/ struct Pokeblock pokeblock;
 };
 
 #define NUM_POKEBLOCK_FEEDERS 10
 
+// Manhattan distance, in tiles, that a Pokeblock feeder lures wild Pokemon from.
+// Set to POKEBLOCK_FEEDER_RANGE_WHOLE_MAP for the feeder to cover its entire map.
+#define POKEBLOCK_FEEDER_RANGE_WHOLE_MAP -1
+#define POKEBLOCK_FEEDER_RANGE POKEBLOCK_FEEDER_RANGE_WHOLE_MAP
+
+// How many steps a Pokeblock lasts once placed on a feeder. For reference, a full
+// Safari Game is 500 steps (600 on the FRLG build). Max 65535.
+#define POKEBLOCK_FEEDER_STEPS 300
+
 extern const u8 SafariZone_EventScript_TimesUp[];
 extern const u8 SafariZone_EventScript_RetirePrompt[];
 extern const u8 SafariZone_EventScript_OutOfBallsMidBattle[];
 extern const u8 SafariZone_EventScript_OutOfBalls[];
+extern const u8 SafariZone_EventScript_PokeblockGone[];
 
 EWRAM_DATA u8 gNumSafariBalls = 0;
 EWRAM_DATA u16 gSafariZoneStepCounter = 0;
@@ -37,7 +48,7 @@ EWRAM_DATA static u8 sSafariZonePkblkUses = 0;
 EWRAM_DATA static struct PokeblockFeeder sPokeblockFeeders[NUM_POKEBLOCK_FEEDERS] = {0};
 
 static void ClearAllPokeblockFeeders(void);
-static void DecrementFeederStepCounters(void);
+static bool8 DecrementFeederStepCounters(void);
 
 bool32 GetSafariZoneFlag(void)
 {
@@ -91,16 +102,23 @@ void ExitSafariMode(void)
 
 bool8 SafariZoneTakeStep(void)
 {
+    bool8 pokeblockRanOut;
+
     if (GetSafariZoneFlag() == FALSE)
     {
         return FALSE;
     }
 
-    DecrementFeederStepCounters();
+    pokeblockRanOut = DecrementFeederStepCounters();
     gSafariZoneStepCounter--;
     if (gSafariZoneStepCounter == 0)
     {
         ScriptContext_SetupScript(SafariZone_EventScript_TimesUp);
+        return TRUE;
+    }
+    if (pokeblockRanOut == TRUE)
+    {
+        ScriptContext_SetupScript(SafariZone_EventScript_PokeblockGone);
         return TRUE;
     }
     return FALSE;
@@ -154,6 +172,10 @@ void GetPokeblockFeederInFront(void)
 
     for (i = 0; i < NUM_POKEBLOCK_FEEDERS; i++)
     {
+        // An unused feeder slot is all zeroes, so skip it before comparing coords.
+        if (sPokeblockFeeders[i].stepCounter == 0)
+            continue;
+
         if (gSaveBlock1Ptr->location.mapNum == sPokeblockFeeders[i].mapNum
          && sPokeblockFeeders[i].x == x
          && sPokeblockFeeders[i].y == y)
@@ -176,21 +198,24 @@ void GetPokeblockFeederWithinRange(void)
 
     for (i = 0; i < NUM_POKEBLOCK_FEEDERS; i++)
     {
-        if (gSaveBlock1Ptr->location.mapNum == sPokeblockFeeders[i].mapNum)
-        {
-            // Get absolute value of x and y distance from Pokeblock feeder on current map.
-            x -= sPokeblockFeeders[i].x;
-            y -= sPokeblockFeeders[i].y;
-            if (x < 0)
-                x *= -1;
-            if (y < 0)
-                y *= -1;
-            if ((x + y) <= 5)
-            {
-                gSpecialVar_Result = i;
-                return;
-            }
-        }
+        s16 dx, dy;
+
+        // An unused feeder slot is all zeroes, so skip it before comparing the map.
+        if (sPokeblockFeeders[i].stepCounter == 0)
+            continue;
+
+        if (gSaveBlock1Ptr->location.mapNum != sPokeblockFeeders[i].mapNum)
+            continue;
+
+        // Distance from the Pokeblock feeder. Measured from the player's own coords each
+        // time, so that a second feeder on the same map is still compared correctly.
+        dx = abs(x - sPokeblockFeeders[i].x);
+        dy = abs(y - sPokeblockFeeders[i].y);
+        if (POKEBLOCK_FEEDER_RANGE != POKEBLOCK_FEEDER_RANGE_WHOLE_MAP && (dx + dy) > POKEBLOCK_FEEDER_RANGE)
+            continue;
+
+        gSpecialVar_Result = i;
+        return;
     }
 
     gSpecialVar_Result = -1;
@@ -233,7 +258,7 @@ void SafariZoneActivatePokeblockFeeder(u8 pkblId)
             GetXYCoordsOneStepInFrontOfPlayer(&x, &y);
             sPokeblockFeeders[i].mapNum = gSaveBlock1Ptr->location.mapNum;
             sPokeblockFeeders[i].pokeblock = gSaveBlock1Ptr->pokeblocks[pkblId];
-            sPokeblockFeeders[i].stepCounter = 100;
+            sPokeblockFeeders[i].stepCounter = POKEBLOCK_FEEDER_STEPS;
             sPokeblockFeeders[i].x = x;
             sPokeblockFeeders[i].y = y;
             break;
@@ -241,9 +266,13 @@ void SafariZoneActivatePokeblockFeeder(u8 pkblId)
     }
 }
 
-static void DecrementFeederStepCounters(void)
+// Returns TRUE if a feeder on the map the player is currently on ran out this step,
+// so that the caller can show a message. Feeders that run out on another map expire
+// silently, since the player has no way of seeing them.
+static bool8 DecrementFeederStepCounters(void)
 {
     u8 i;
+    bool8 expiredHere = FALSE;
 
     for (i = 0; i < NUM_POKEBLOCK_FEEDERS; i++)
     {
@@ -251,9 +280,19 @@ static void DecrementFeederStepCounters(void)
         {
             sPokeblockFeeders[i].stepCounter--;
             if (sPokeblockFeeders[i].stepCounter == 0)
+            {
+                if (gSaveBlock1Ptr->location.mapNum == sPokeblockFeeders[i].mapNum)
+                {
+                    // Copy the name out before the feeder is wiped, for the message.
+                    StringCopy(gStringVar1, gPokeblockNames[sPokeblockFeeders[i].pokeblock.color]);
+                    expiredHere = TRUE;
+                }
                 ClearPokeblockFeeder(i);
+            }
         }
     }
+
+    return expiredHere;
 }
 
 // unused
@@ -268,7 +307,7 @@ bool8 GetInFrontFeederPokeblockAndSteps(void)
 
     ConvertIntToDecimalStringN(gStringVar2,
         sPokeblockFeeders[gSpecialVar_Result].stepCounter,
-        STR_CONV_MODE_LEADING_ZEROS, 3);
+        STR_CONV_MODE_LEFT_ALIGN, 5);
 
     return TRUE;
 }

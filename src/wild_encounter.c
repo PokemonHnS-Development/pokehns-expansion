@@ -476,11 +476,27 @@ static u8 PickWildMonNature(u32 species)
     return GetSynchronizedNature(WILDMON_ORIGIN, species);
 }
 
+// A Pokeblock feeder in range also lures out Pokemon with their Hidden Ability.
+static void TryGivePokeblockHiddenAbility(struct Pokemon *mon, u16 species)
+{
+    u8 abilityNum = 2;
+
+    if (GetSafariZoneFlag() != TRUE)
+        return;
+    if (SafariZoneGetActivePokeblock() == NULL)
+        return;
+    if (GetSpeciesAbility(species, abilityNum) == ABILITY_NONE)
+        return;
+
+    SetMonData(mon, MON_DATA_ABILITY_NUM, &abilityNum);
+}
+
 void CreateWildMon(u16 species, u8 level)
 {
     ZeroEnemyPartyMons();
     u32 personality = GetMonPersonality(species, GetSynchronizedGender(WILDMON_ORIGIN, species), PickWildMonNature(species), RANDOM_UNOWN_LETTER);
     CreateMonWithIVs(&gEnemyParty[0], species, level, personality, OTID_STRUCT_PLAYER_ID, USE_RANDOM_IVS);
+    TryGivePokeblockHiddenAbility(&gEnemyParty[0], species);
     GiveMonInitialMoveset(&gEnemyParty[0]);
 }
 
