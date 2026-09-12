@@ -546,6 +546,8 @@ static void DrawOrEraseSearchParameterBox(bool8);
 static void PrintSearchParameterText(u8);
 static u8 GetSearchModeSelection(u8 taskId, u8 option);
 static void SetDefaultSearchModeAndOrder(u8);
+static u8 DexChoiceToMode(u8 choice);
+static u8 DexModeToChoice(u8 mode);
 static void CreateSearchParameterScrollArrows(u8);
 static void EraseAndPrintSearchTextBox(const u8 *);
 static void EraseSelectorArrow(u32);
@@ -1820,10 +1822,13 @@ static const u8 sSearchMovementMap_ShiftHoennDex[SEARCH_COUNT][4] =
 
 static const struct SearchOptionText sDexModeOptions[] =
 {
-    [DEX_MODE_HOENN]    = {gText_DexHoennDescription, gText_DexHoennTitle},
-    [DEX_MODE_NATIONAL] = {gText_DexNatDescription,   gText_DexNatTitle},
+    [DEX_CHOICE_KANTO]    = {gText_DexKantoDescription, gText_DexKantoTitle},
+    [DEX_CHOICE_JOHTO]    = {gText_DexJohtoDescription, gText_DexJohtoTitle},
+    [DEX_CHOICE_HOENN]    = {gText_DexHoennDescription, gText_DexHoennTitle},
+    [DEX_CHOICE_NATIONAL] = {gText_DexNatDescription,   gText_DexNatTitle},
     {},
 };
+
 
 static const struct SearchOptionText sDexOrderOptions[] =
 {
@@ -1891,7 +1896,13 @@ static const struct SearchOptionText sDexSearchTypeOptions[] =
     {},
 };
 
-static const u8 sPokedexModes[] = {DEX_MODE_HOENN, DEX_MODE_NATIONAL};
+static const u8 sPokedexModes[] = {
+    DEX_CHOICE_KANTO, 
+    DEX_CHOICE_JOHTO, 
+    DEX_CHOICE_HOENN,
+    DEX_CHOICE_NATIONAL
+};
+
 static const u8 sOrderOptions[] =
 {
     ORDER_NUMERICAL,
@@ -8363,7 +8374,7 @@ static void Task_HandleSearchMenuInput(u8 taskId)
                 sPokedexView->pokeBallRotationBackup = POKEBALL_ROTATION_TOP;
                 sLastSelectedPokemon = 0;
                 sPokedexView->selectedPokemonBackup = 0;
-                gSaveBlock2Ptr->pokedex.mode = GetSearchModeSelection(taskId, SEARCH_MODE);
+                gSaveBlock2Ptr->pokedex.mode = DexChoiceToMode(GetSearchModeSelection(taskId, SEARCH_MODE));
                 if (!IsNationalPokedexEnabled())
                     gSaveBlock2Ptr->pokedex.mode = DEX_MODE_HOENN;
                 sPokedexView->dexModeBackup = gSaveBlock2Ptr->pokedex.mode;
@@ -8424,7 +8435,7 @@ static void Task_HandleSearchMenuInput(u8 taskId)
 
 static void Task_StartPokedexSearch(u8 taskId)
 {
-    u8 dexMode = GetSearchModeSelection(taskId, SEARCH_MODE);
+    u8 dexMode = DexChoiceToMode(GetSearchModeSelection(taskId, SEARCH_MODE));
     u8 order = GetSearchModeSelection(taskId, SEARCH_ORDER);
     u8 abcGroup = GetSearchModeSelection(taskId, SEARCH_NAME);
     enum BodyColor bodyColor = GetSearchModeSelection(taskId, SEARCH_COLOR);
@@ -8462,7 +8473,7 @@ static void Task_SearchCompleteWaitForInput(u8 taskId)
         {
             // Return to dex list and show search results
             sPokedexView->screenSwitchState = 1;
-            sPokedexView->dexMode = GetSearchModeSelection(taskId, SEARCH_MODE);
+            sPokedexView->dexMode = DexChoiceToMode(GetSearchModeSelection(taskId, SEARCH_MODE));
             sPokedexView->dexOrder = GetSearchModeSelection(taskId, SEARCH_ORDER);
             gTasks[taskId].func = Task_ExitSearch;
             PlaySE(SE_PC_OFF);
@@ -8509,6 +8520,10 @@ static void Task_HandleSearchParameterInput(u8 taskId)
     cursorPos = &gTasks[taskId].data[sSearchOptions[menuItem].taskDataCursorPos];
     scrollOffset = &gTasks[taskId].data[sSearchOptions[menuItem].taskDataScrollOffset];
     maxOption = sSearchOptions[menuItem].numOptions - 1;
+
+    if (menuItem == SEARCH_MODE && !IsNationalPokedexEnabled() && maxOption > DEX_CHOICE_HOENN)
+        maxOption = DEX_CHOICE_HOENN;
+
     if (JOY_NEW(A_BUTTON))
     {
         PlaySE(SE_PIN);
@@ -8831,6 +8846,44 @@ static void PrintSearchParameterText(u8 taskId)
     EraseAndPrintSearchTextBox(texts[*cursorPos + *scrollOffset].description);
 }
 
+// Translates a DEX_CHOICE * menu selection into the dexMode the rest of the 
+// Pokedex uses (only HOENN = "Regional", or NATIONAL). Choosing a region also
+// records it via SetPokeDexRegion so every regional-dex lookup follows suit.
+static u8 DexChoiceToMode(u8 choice)
+{
+    switch (choice)
+    {
+    case DEX_CHOICE_KANTO:
+        SetPokedexRegion(REGION_KANTO);
+        return DEX_MODE_HOENN;
+    case DEX_CHOICE_JOHTO:
+        SetPokedexRegion(REGION_JOHTO);
+        return DEX_MODE_HOENN;
+    case DEX_CHOICE_HOENN:
+        SetPokedexRegion(REGION_HOENN);
+        return DEX_MODE_HOENN;
+    default:
+        return DEX_MODE_NATIONAL;
+    }
+}
+
+// Inverse of DexChoiceToMode
+static u8 DexModeToChoice(u8 mode)
+{
+    if (mode == DEX_MODE_NATIONAL)
+        return DEX_CHOICE_NATIONAL;
+
+        switch (GetPokedexRegion())
+        {
+            case REGION_KANTO:
+                return DEX_CHOICE_KANTO;
+            case REGION_HOENN: 
+                return DEX_CHOICE_HOENN;
+            default:
+                return DEX_CHOICE_JOHTO;
+        }
+}
+
 static u8 GetSearchModeSelection(u8 taskId, u8 option)
 {
     const s16 *cursorPos = &gTasks[taskId].data[sSearchOptions[option].taskDataCursorPos];
@@ -8865,17 +8918,7 @@ static void SetDefaultSearchModeAndOrder(u8 taskId)
 {
     u16 selected;
 
-    switch (sPokedexView->dexModeBackup)
-    {
-    default:
-    case DEX_MODE_HOENN:
-        selected = DEX_MODE_HOENN;
-        break;
-    case DEX_MODE_NATIONAL:
-        selected = DEX_MODE_NATIONAL;
-        break;
-    }
-    gTasks[taskId].tCursorPos_Mode = selected;
+    gTasks[taskId].tCursorPos_Mode = DexModeToChoice(sPokedexView->dexModeBackup);
 
     switch (sPokedexView->dexOrderBackup)
     {

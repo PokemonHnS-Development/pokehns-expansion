@@ -52,6 +52,7 @@
 #include "constants/rgb.h"
 #include "constants/songs.h"
 #include "constants/union_room.h"
+#include "pokemon.h"
 
 // IDs for RunTradeMenuCallback
 enum {
