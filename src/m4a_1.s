@@ -930,23 +930,9 @@ C_mixing_end_and_stop_channel:
 	strb r0, [r4]                        @ update channel flag with chn halt
 	b C_mixing_epilogue
 
-/* These are used for the fixed freq mixer */
-fixed_mixing_code_resource:
-	movs r6, r10, lsl#24
-	movs r6, r6, asr#24
-	movs r6, r10, lsl#16
-	movs r6, r6, asr#24
-	movs r6, r10, lsl#8
-	movs r6, r6, asr#24
-	movs r6, r10, asr#24
-	ldmia r3!, {r10}                          @ load chunk of samples
-	movs r6, r10, lsl#24
-	movs r6, r6, asr#24
-	movs r6, r10, lsl#16
-	movs r6, r6, asr#24
-	movs r6, r10, lsl#8
-	movs r6, r6, asr#24
-
+/* Static fixed-rate extract bodies (no IWRAM opcode paste).
+ * r12 holds the stub for r3&3; r12 is unused on this path.
+ * In-loop ldmia r3!, {r10} stays in the alignment-specific slot. */
 C_setup_fixed_freq_mixing:
 	stmfd sp!, {r4, r9}
 
@@ -960,37 +946,82 @@ C_fixed_mixing_length_check:
 
 	sub r8, r8, lr, lsl#2               @ subtract the amount of samples we need to process from the buffer length
 	sub r2, r2, lr, lsl#2               @ subtract the amount of samples we need to process from the remaining samples
-	adr r1, fixed_mixing_instructions
-	adr r0, fixed_mixing_code_resource
-	mov r9, r3, lsl#30
-	add r0, r0, r9, lsr#27              @ alignment * 8 + resource offset = new resource offset
-	ldmia r0!, {r6, r7, r9, r10}          @ load and write instructions
-	stmia r1, {r6, r7}
-	add r1, r1, #0xC
-	stmia r1, {r9, r10}
-	add r1, r1, #0xC
-	ldmia r0, {r6, r7, r9, r10}
-	stmia r1, {r6, r7}
-	add r1, r1, #0xC
-	stmia r1, {r9, r10}
 	ldmia r3!, {r10}                      @ load 4 samples from ROM
+	adr r0, C_fixed_stubs
+	and r1, r3, #3
+	add r12, r0, r1, lsl#2
 
 C_fixed_mixing_loop:
 	ldmia r5, {r0, r1, r7, r9}       @ load 4 samples from hq buffer
+	mov pc, r12
 
-fixed_mixing_instructions:
-	nop
-	nop
-	mlane r0, r11, r6, r0             @ add new sample if neccessary
-	nop
-	nop
+	.align 2
+C_fixed_stubs:
+	b C_fixed_extract0
+	b C_fixed_extract1
+	b C_fixed_extract2
+	b C_fixed_extract3
+
+C_fixed_extract0:
+	movs r6, r10, lsl#24
+	movs r6, r6, asr#24
+	mlane r0, r11, r6, r0
+	movs r6, r10, lsl#16
+	movs r6, r6, asr#24
 	mlane r1, r11, r6, r1
-	nop
-	nop
+	movs r6, r10, lsl#8
+	movs r6, r6, asr#24
 	mlane r7, r11, r6, r7
-	nop
-	nop
+	movs r6, r10, asr#24
+	ldmia r3!, {r10}
 	mlane r9, r11, r6, r9
+	b C_fixed_store
+
+C_fixed_extract1:
+	movs r6, r10, lsl#16
+	movs r6, r6, asr#24
+	mlane r0, r11, r6, r0
+	movs r6, r10, lsl#8
+	movs r6, r6, asr#24
+	mlane r1, r11, r6, r1
+	movs r6, r10, asr#24
+	ldmia r3!, {r10}
+	mlane r7, r11, r6, r7
+	movs r6, r10, lsl#24
+	movs r6, r6, asr#24
+	mlane r9, r11, r6, r9
+	b C_fixed_store
+
+C_fixed_extract2:
+	movs r6, r10, lsl#8
+	movs r6, r6, asr#24
+	mlane r0, r11, r6, r0
+	movs r6, r10, asr#24
+	ldmia r3!, {r10}
+	mlane r1, r11, r6, r1
+	movs r6, r10, lsl#24
+	movs r6, r6, asr#24
+	mlane r7, r11, r6, r7
+	movs r6, r10, lsl#16
+	movs r6, r6, asr#24
+	mlane r9, r11, r6, r9
+	b C_fixed_store
+
+C_fixed_extract3:
+	movs r6, r10, asr#24
+	ldmia r3!, {r10}
+	mlane r0, r11, r6, r0
+	movs r6, r10, lsl#24
+	movs r6, r6, asr#24
+	mlane r1, r11, r6, r1
+	movs r6, r10, lsl#16
+	movs r6, r6, asr#24
+	mlane r7, r11, r6, r7
+	movs r6, r10, lsl#8
+	movs r6, r6, asr#24
+	mlane r9, r11, r6, r9
+
+C_fixed_store:
 	stmia r5!, {r0, r1, r7, r9}       @ write samples to the mixing buffer
 	subs lr, lr, #1
 	bne C_fixed_mixing_loop
