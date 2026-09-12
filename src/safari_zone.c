@@ -76,9 +76,11 @@ void EnterSafariMode(void)
     AddBagItem(ITEM_SAFARI_BALL, 30);
 #endif
     if (IS_FRLG)
-        gSafariZoneStepCounter = 600;
+        gSafariZoneStepCounter = SAFARI_ZONE_STEPS_FRLG;
+    else if (IS_HNS)
+        gSafariZoneStepCounter = SAFARI_ZONE_STEPS_HNS;
     else
-        gSafariZoneStepCounter = 500;
+        gSafariZoneStepCounter = SAFARI_ZONE_STEPS;
     sSafariZoneCaughtMons = 0;
     sSafariZonePkblkUses = 0;
 }
