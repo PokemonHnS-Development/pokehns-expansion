@@ -710,164 +710,32 @@ C_select_highspeed_codepath_vla_r3:
 C_select_highspeed_codepath:
 	stmfd sp!, {r10}                      @ save original sp for VLA
 	/*
-	 * This code decides which piece of code to load
-	 * depending on playback-rate / default-rate ratio.
-	 * Modes > 1.0 run with different volume levels.
-	 * r4 = inter sample step
+	 * Rate class selects a static kernel. Same r4/r11 adjust as the
+	 * old paste selector; only the r0 stride is 4 (b stubs), not 24.
 	 */
-	adr r0, high_speed_code_resource    @ loads the base pointer of the code
+	adr r0, C_fast_stubs
 	subs r4, r4, #0x800000
 	movpl r11, r11, lsl#1                 @  if >= 1.0*   0-127 --> 0-254 volume level
-	addpl r0, r0, #(ARM_OP_LEN*6)         @               6 instructions further
+	addpl r0, r0, #4
 	subpls r4, r4, #0x800000               @  if >= 2.0*
-	addpl r0, r0, #(ARM_OP_LEN*6)
+	addpl r0, r0, #4
 	addpl r4, r4, #0x800000
-	ldr r2, previous_fast_code
-	cmp r0, r2                          @ code doesn't need to be reloaded if it's already in place
-	beq C_skip_fast_mixing_creation
-	/* This loads the needed code to RAM */
-	str r0, previous_fast_code
-	ldmia r0, {r0-r2, r8-r10}             @ load 6 opcodes
-	adr lr, fast_mixing_instructions
-
-C_fast_mixing_creation_loop:
-	/* paste code to destination, see below for patterns */
-	stmia lr, {r0, r1}
-	add lr, lr, #(ARM_OP_LEN*38)
-	stmia lr, {r0, r1}
-	sub lr, lr, #(ARM_OP_LEN*35)
-	stmia lr, {r2, r8-r10}
-	add lr, lr, #(ARM_OP_LEN*38)
-	stmia lr, {r2, r8-r10}
-	sub lr, lr, #(ARM_OP_LEN*32)
-	adds r5, r5, #0x40000000         @ do that for 4 blocks
-	bcc C_fast_mixing_creation_loop
-
-C_skip_fast_mixing_creation:
 	ldr r8, [sp]                        @ restore r8 with the frame length
 	ldr r8, [r8, #(ARG_FRAME_LENGTH + 0x8 + 0xC)]
 	mov r2, #0xFF000000                 @ load the fine position overflow bitmask
 	ldrsb r12, [r3]
 	sub r12, r12, r6
-C_fast_mixing_loop:
-	/* This is the actual processing and interpolation code loop; NOPs will be replaced by the code above */
-	ldmia r5, {r0, r1, r10, lr}       @ load 4 stereo samples to Registers
-	mul r9, r7, r12
-fast_mixing_instructions:
-	nop                                 @ Block #1
-	nop
-	mlane r0, r11, r9, r0
-	nop
-	nop
-	nop
-	nop
-	bic r7, r7, r2, asr#1
-	mulne r9, r7, r12
-	nop                               @ Block #2
-	nop
-	mlane r1, r11, r9, r1
-	nop
-	nop
-	nop
-	nop
-	bic r7, r7, r2, asr#1
-	mulne r9, r7, r12
-	nop                               @ Block #3
-	nop
-	mlane r10, r11, r9, r10
-	nop
-	nop
-	nop
-	nop
-	bic r7, r7, r2, asr#1
-	mulne r9, r7, r12
-	nop                               @ Block #4
-	nop
-	mlane lr, r11, r9, lr
-	nop
-	nop
-	nop
-	nop
-	bic r7, r7, r2, asr#1
-	stmia r5!, {r0, r1, r10, lr}      @ write 4 stereo samples
+	mov pc, r0
 
-	ldmia r5, {r0, r1, r10, lr}       @ load the next 4 stereo samples
-	mulne r9, r7, r12
-	nop                               @ Block #1
-	nop
-	mlane r0, r11, r9, r0
-	nop
-	nop
-	nop
-	nop
-	bic r7, r7, r2, asr#1
-	mulne r9, r7, r12
-	nop                               @ Block #2
-	nop
-	mlane r1, r11, r9, r1
-	nop
-	nop
-	nop
-	nop
-	bic r7, r7, r2, asr#1
-	mulne r9, r7, r12
-	nop                               @ Block #3
-	nop
-	mlane r10, r11, r9, r10
-	nop
-	nop
-	nop
-	nop
-	bic r7, r7, r2, asr#1
-	mulne r9, r7, r12
-	nop                               @ Block #4
-	nop
-	mlane lr, r11, r9, lr
-	nop
-	nop
-	nop
-	nop
-	bic r7, r7, r2, asr#1
-	stmia r5!, {r0, r1, r10, lr}      @ write 4 stereo samples
-	subs r8, r8, #8
-	bgt C_fast_mixing_loop
-	/* restore previously saved values */
-	ldmfd sp, {sp}                        @ reload original stack pointer from VLA
+	.align 2
+C_fast_stubs:
+	b C_fast_kernel_lt1
+	b C_fast_kernel_1to2
+	b C_fast_kernel_ge2
+
 C_skip_fast_mixing:
 	ldmfd sp!, {r2, r3}
 	b C_end_mixing
-
-/* Various variables for the cached mixer */
-
-	.align 2
-previous_fast_code:
-	.word 0x0 /* mark as invalid initially */
-
-/* Those instructions below are used by the high speed loop self modifying code */
-high_speed_code_resource:
-	/* Block for Mix Freq < 1.0 * Output Frequency */
-	mov r9, r9, asr#22
-	adds r9, r9, r6, lsl#1
-	adds r7, r7, r4
-	addpl r6, r12, r6
-	ldrplsb r12, [r3, #1]!
-	subpls r12, r12, r6
-
-	/* Block for Mix Freq > 1.0 and < 2.0 * Output Frequency */
-	adds r9, r6, r9, asr#23
-	add r6, r12, r6
-	adds r7, r7, r4
-	ldrplsb r6, [r3, #1]!
-	ldrsb r12, [r3, #1]!
-	subs r12, r12, r6
-
-	/* Block for Mix Freq > 2.0 * Output Frequency */
-	adds r9, r6, r9, asr#23
-	add r7, r7, r4
-	add r3, r3, r7, lsr#23
-	ldrsb r6, [r3]
-	ldrsb r12, [r3, #1]!
-	subs r12, r12, r6
 
 /* incase a loop or end occurs during mixing, this code is used */
 C_unbuffered_mixing:
@@ -1367,6 +1235,257 @@ C_clear_loop_rest:
 	subs r1, r1, #4
 	bgt C_clear_loop_rest
 	ldmfd sp!, {r0, r2-r5, pc}
+
+
+	.arm
+	.align 2
+/* Kernels live at SoundMainRAM_End so Thumb b range to C_end_channel_state_loop stays valid. */
+C_fast_kernel_lt1:
+	ldmia r5, {r0, r1, r10, lr}
+	mul r9, r7, r12
+	mov r9, r9, asr#22
+	adds r9, r9, r6, lsl#1
+	mlane r0, r11, r9, r0
+	adds r7, r7, r4
+	addpl r6, r12, r6
+	ldrplsb r12, [r3, #1]!
+	subpls r12, r12, r6
+	bic r7, r7, r2, asr#1
+	mulne r9, r7, r12
+	mov r9, r9, asr#22
+	adds r9, r9, r6, lsl#1
+	mlane r1, r11, r9, r1
+	adds r7, r7, r4
+	addpl r6, r12, r6
+	ldrplsb r12, [r3, #1]!
+	subpls r12, r12, r6
+	bic r7, r7, r2, asr#1
+	mulne r9, r7, r12
+	mov r9, r9, asr#22
+	adds r9, r9, r6, lsl#1
+	mlane r10, r11, r9, r10
+	adds r7, r7, r4
+	addpl r6, r12, r6
+	ldrplsb r12, [r3, #1]!
+	subpls r12, r12, r6
+	bic r7, r7, r2, asr#1
+	mulne r9, r7, r12
+	mov r9, r9, asr#22
+	adds r9, r9, r6, lsl#1
+	mlane lr, r11, r9, lr
+	adds r7, r7, r4
+	addpl r6, r12, r6
+	ldrplsb r12, [r3, #1]!
+	subpls r12, r12, r6
+	bic r7, r7, r2, asr#1
+	stmia r5!, {r0, r1, r10, lr}
+	ldmia r5, {r0, r1, r10, lr}
+	mulne r9, r7, r12
+	mov r9, r9, asr#22
+	adds r9, r9, r6, lsl#1
+	mlane r0, r11, r9, r0
+	adds r7, r7, r4
+	addpl r6, r12, r6
+	ldrplsb r12, [r3, #1]!
+	subpls r12, r12, r6
+	bic r7, r7, r2, asr#1
+	mulne r9, r7, r12
+	mov r9, r9, asr#22
+	adds r9, r9, r6, lsl#1
+	mlane r1, r11, r9, r1
+	adds r7, r7, r4
+	addpl r6, r12, r6
+	ldrplsb r12, [r3, #1]!
+	subpls r12, r12, r6
+	bic r7, r7, r2, asr#1
+	mulne r9, r7, r12
+	mov r9, r9, asr#22
+	adds r9, r9, r6, lsl#1
+	mlane r10, r11, r9, r10
+	adds r7, r7, r4
+	addpl r6, r12, r6
+	ldrplsb r12, [r3, #1]!
+	subpls r12, r12, r6
+	bic r7, r7, r2, asr#1
+	mulne r9, r7, r12
+	mov r9, r9, asr#22
+	adds r9, r9, r6, lsl#1
+	mlane lr, r11, r9, lr
+	adds r7, r7, r4
+	addpl r6, r12, r6
+	ldrplsb r12, [r3, #1]!
+	subpls r12, r12, r6
+	bic r7, r7, r2, asr#1
+	stmia r5!, {r0, r1, r10, lr}
+	subs r8, r8, #8
+	bgt C_fast_kernel_lt1
+	ldmfd sp, {sp}
+	b C_skip_fast_mixing
+
+C_fast_kernel_1to2:
+	ldmia r5, {r0, r1, r10, lr}
+	mul r9, r7, r12
+	adds r9, r6, r9, asr#23
+	add r6, r12, r6
+	mlane r0, r11, r9, r0
+	adds r7, r7, r4
+	ldrplsb r6, [r3, #1]!
+	ldrsb r12, [r3, #1]!
+	subs r12, r12, r6
+	bic r7, r7, r2, asr#1
+	mulne r9, r7, r12
+	adds r9, r6, r9, asr#23
+	add r6, r12, r6
+	mlane r1, r11, r9, r1
+	adds r7, r7, r4
+	ldrplsb r6, [r3, #1]!
+	ldrsb r12, [r3, #1]!
+	subs r12, r12, r6
+	bic r7, r7, r2, asr#1
+	mulne r9, r7, r12
+	adds r9, r6, r9, asr#23
+	add r6, r12, r6
+	mlane r10, r11, r9, r10
+	adds r7, r7, r4
+	ldrplsb r6, [r3, #1]!
+	ldrsb r12, [r3, #1]!
+	subs r12, r12, r6
+	bic r7, r7, r2, asr#1
+	mulne r9, r7, r12
+	adds r9, r6, r9, asr#23
+	add r6, r12, r6
+	mlane lr, r11, r9, lr
+	adds r7, r7, r4
+	ldrplsb r6, [r3, #1]!
+	ldrsb r12, [r3, #1]!
+	subs r12, r12, r6
+	bic r7, r7, r2, asr#1
+	stmia r5!, {r0, r1, r10, lr}
+	ldmia r5, {r0, r1, r10, lr}
+	mulne r9, r7, r12
+	adds r9, r6, r9, asr#23
+	add r6, r12, r6
+	mlane r0, r11, r9, r0
+	adds r7, r7, r4
+	ldrplsb r6, [r3, #1]!
+	ldrsb r12, [r3, #1]!
+	subs r12, r12, r6
+	bic r7, r7, r2, asr#1
+	mulne r9, r7, r12
+	adds r9, r6, r9, asr#23
+	add r6, r12, r6
+	mlane r1, r11, r9, r1
+	adds r7, r7, r4
+	ldrplsb r6, [r3, #1]!
+	ldrsb r12, [r3, #1]!
+	subs r12, r12, r6
+	bic r7, r7, r2, asr#1
+	mulne r9, r7, r12
+	adds r9, r6, r9, asr#23
+	add r6, r12, r6
+	mlane r10, r11, r9, r10
+	adds r7, r7, r4
+	ldrplsb r6, [r3, #1]!
+	ldrsb r12, [r3, #1]!
+	subs r12, r12, r6
+	bic r7, r7, r2, asr#1
+	mulne r9, r7, r12
+	adds r9, r6, r9, asr#23
+	add r6, r12, r6
+	mlane lr, r11, r9, lr
+	adds r7, r7, r4
+	ldrplsb r6, [r3, #1]!
+	ldrsb r12, [r3, #1]!
+	subs r12, r12, r6
+	bic r7, r7, r2, asr#1
+	stmia r5!, {r0, r1, r10, lr}
+	subs r8, r8, #8
+	bgt C_fast_kernel_1to2
+	ldmfd sp, {sp}
+	b C_skip_fast_mixing
+
+C_fast_kernel_ge2:
+	ldmia r5, {r0, r1, r10, lr}
+	mul r9, r7, r12
+	adds r9, r6, r9, asr#23
+	add r7, r7, r4
+	mlane r0, r11, r9, r0
+	add r3, r3, r7, lsr#23
+	ldrsb r6, [r3]
+	ldrsb r12, [r3, #1]!
+	subs r12, r12, r6
+	bic r7, r7, r2, asr#1
+	mulne r9, r7, r12
+	adds r9, r6, r9, asr#23
+	add r7, r7, r4
+	mlane r1, r11, r9, r1
+	add r3, r3, r7, lsr#23
+	ldrsb r6, [r3]
+	ldrsb r12, [r3, #1]!
+	subs r12, r12, r6
+	bic r7, r7, r2, asr#1
+	mulne r9, r7, r12
+	adds r9, r6, r9, asr#23
+	add r7, r7, r4
+	mlane r10, r11, r9, r10
+	add r3, r3, r7, lsr#23
+	ldrsb r6, [r3]
+	ldrsb r12, [r3, #1]!
+	subs r12, r12, r6
+	bic r7, r7, r2, asr#1
+	mulne r9, r7, r12
+	adds r9, r6, r9, asr#23
+	add r7, r7, r4
+	mlane lr, r11, r9, lr
+	add r3, r3, r7, lsr#23
+	ldrsb r6, [r3]
+	ldrsb r12, [r3, #1]!
+	subs r12, r12, r6
+	bic r7, r7, r2, asr#1
+	stmia r5!, {r0, r1, r10, lr}
+	ldmia r5, {r0, r1, r10, lr}
+	mulne r9, r7, r12
+	adds r9, r6, r9, asr#23
+	add r7, r7, r4
+	mlane r0, r11, r9, r0
+	add r3, r3, r7, lsr#23
+	ldrsb r6, [r3]
+	ldrsb r12, [r3, #1]!
+	subs r12, r12, r6
+	bic r7, r7, r2, asr#1
+	mulne r9, r7, r12
+	adds r9, r6, r9, asr#23
+	add r7, r7, r4
+	mlane r1, r11, r9, r1
+	add r3, r3, r7, lsr#23
+	ldrsb r6, [r3]
+	ldrsb r12, [r3, #1]!
+	subs r12, r12, r6
+	bic r7, r7, r2, asr#1
+	mulne r9, r7, r12
+	adds r9, r6, r9, asr#23
+	add r7, r7, r4
+	mlane r10, r11, r9, r10
+	add r3, r3, r7, lsr#23
+	ldrsb r6, [r3]
+	ldrsb r12, [r3, #1]!
+	subs r12, r12, r6
+	bic r7, r7, r2, asr#1
+	mulne r9, r7, r12
+	adds r9, r6, r9, asr#23
+	add r7, r7, r4
+	mlane lr, r11, r9, lr
+	add r3, r3, r7, lsr#23
+	ldrsb r6, [r3]
+	ldrsb r12, [r3, #1]!
+	subs r12, r12, r6
+	bic r7, r7, r2, asr#1
+	stmia r5!, {r0, r1, r10, lr}
+	subs r8, r8, #8
+	bgt C_fast_kernel_ge2
+	ldmfd sp, {sp}
+	b C_skip_fast_mixing
+
 
 SoundMainRAM_End:
 	.syntax unified
