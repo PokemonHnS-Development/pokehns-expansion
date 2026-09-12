@@ -318,6 +318,18 @@ SafariZoneGate_SafariZoneEntrance_EventScript_MovePlayerBackFromCounter::
 	releaseall
 	end
 
+SafariZoneGate_SafariZoneEntrance_EventScript_Chart1::
+	lock
+	helpwindow HELP_POKEBLOCK_WINDOW
+	release
+	end
+
+SafariZoneGate_SafariZoneEntrance_EventScript_Chart2::
+	lock
+	helpwindow HELP_GOLD_POKEBLOCK_WINDOW
+	release
+	end
+
 SafariZoneGate_SafariZoneEntrance_EventScript_Boy::
 	lock
 	faceplayer
@@ -398,7 +410,12 @@ SafariZoneGate_SafariZoneEntrance_Text_Boy:
 	.string "brings out POKéMON with HIDDEN\l"
 	.string "ABILITIES!\p"
 	.string "The type of POKéBLOCK also affects\n"
-	.string "the POKéMON's nature.$"
+	.string "the POKéMON's nature.\p"
+	.string "And best of all, the type of POKéBLOCK\n"
+	.string "you use can attract POKéMON with\l"
+	.string "perfect IVs!\p"
+	.string "Those charts on the wall have all\n"
+	.string "the details.$"
 
 SafariZoneGate_SafariZoneEntrance_Text_BoyGiveCase:
 	.string "Here, you seem like you need this.$"

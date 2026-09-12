@@ -144,5 +144,37 @@ const struct HelpWindow gHelpWindowInfo[] =
         .descFont = FONT_SMALL,
         .headerColor = {0, 8, 3},
     },
+    [HELP_POKEBLOCK_WINDOW] =
+    {
+        .header = COMPOUND_STRING("FEEDERS: REGULAR POKéBLOCKS"),
+        .desc = COMPOUND_STRING("POKéBLOCK colors attract perfect IVs:\n"
+                                "RED: HP,ATK,SPE   BLU: HP,SPA,SPE\n"
+                                "PNK: ATK,SPA,SPE  GRN: HP,DEF,SPD\n"
+                                "YEL: HP,ATK,DEF   PUR: ATK,DEF,SPD\n"
+                                "IND: HP,SPA,SPD   BRN: DEF,SPE,SPD\n"
+                                "LBL: SPA,SPE,SPD  OLV: ATK,DEF,SPE\n"
+                                "GRY: HP,ATK,SPA\n"
+                                "Every POKéBLOCK attracts HIDDEN ABILITY."
+
+                            ),
+        .headerFont = FONT_NORMAL,
+        .descFont = FONT_SMALL,
+        .headerColor = {0, 8, 3},
+    },
+    [HELP_GOLD_POKEBLOCK_WINDOW] =
+    {
+        .header = COMPOUND_STRING("FEEDERS: GOLD POKéBLOCKS"),
+        .desc = COMPOUND_STRING("GOLD POKéBLOCKS attract POKéMON with\n"
+                                "5 perfect IVs. Flavor determines which\n"
+                                "IV is not perfect.\n"
+                                "SPICY: no SP.ATK   DRY:    no ATTACK\n"
+                                "SWEET: no SP.DEF   BITTER: no SPEED\n"
+                                "SOUR:  no HP\n"
+                                "Every POKéBLOCK attracts HIDDEN ABILITY."
+                            ),
+        .headerFont = FONT_NORMAL,
+        .descFont = FONT_SMALL,
+        .headerColor = {0, 8, 3},
+    },
     // Add more entries
 };

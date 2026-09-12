@@ -476,19 +476,110 @@ static u8 PickWildMonNature(u32 species)
     return GetSynchronizedNature(WILDMON_ORIGIN, species);
 }
 
-// A Pokeblock feeder in range also lures out Pokemon with their Hidden Ability.
-static void TryGivePokeblockHiddenAbility(struct Pokemon *mon, u16 species)
+// Feeding a Pokeblock to a Safari Zone feeder decides which IVs the Pokemon it
+// lures out is born with. The Pokeblock's COLOR picks the set: an ordinary block
+// perfects three stats, a Gold block perfects five. Every set below is fixed, so
+// a given Pokeblock always produces the same result.
+//
+// Only the color is read. A block's level and its individual flavor values are
+// both scaled by how fast the blender was spun, and how well the player played
+// the blending minigame should not decide what they catch.
+#define POKEBLOCK_PERFECT_IVS      3
+#define POKEBLOCK_GOLD_PERFECT_IVS 5
+
+static const u8 sPokeblockColorIvs[][POKEBLOCK_PERFECT_IVS] =
 {
+    // PBLOCK_CLR_NONE should never reach here; it shares Black's set as a fallback.
+    [PBLOCK_CLR_NONE]      = { MON_DATA_HP_IV,    MON_DATA_DEF_IV,   MON_DATA_SPATK_IV },
+    [PBLOCK_CLR_RED]       = { MON_DATA_HP_IV,    MON_DATA_ATK_IV,   MON_DATA_SPEED_IV },
+    [PBLOCK_CLR_BLUE]      = { MON_DATA_HP_IV,    MON_DATA_SPATK_IV, MON_DATA_SPEED_IV },
+    [PBLOCK_CLR_PINK]      = { MON_DATA_ATK_IV,   MON_DATA_SPATK_IV, MON_DATA_SPEED_IV },
+    [PBLOCK_CLR_GREEN]     = { MON_DATA_HP_IV,    MON_DATA_DEF_IV,   MON_DATA_SPDEF_IV },
+    [PBLOCK_CLR_YELLOW]    = { MON_DATA_HP_IV,    MON_DATA_ATK_IV,   MON_DATA_DEF_IV   },
+    [PBLOCK_CLR_PURPLE]    = { MON_DATA_ATK_IV,   MON_DATA_DEF_IV,   MON_DATA_SPDEF_IV },
+    [PBLOCK_CLR_INDIGO]    = { MON_DATA_HP_IV,    MON_DATA_SPATK_IV, MON_DATA_SPDEF_IV },
+    [PBLOCK_CLR_BROWN]     = { MON_DATA_DEF_IV,   MON_DATA_SPEED_IV, MON_DATA_SPDEF_IV },
+    [PBLOCK_CLR_LITE_BLUE] = { MON_DATA_SPATK_IV, MON_DATA_SPEED_IV, MON_DATA_SPDEF_IV },
+    [PBLOCK_CLR_OLIVE]     = { MON_DATA_ATK_IV,   MON_DATA_DEF_IV,   MON_DATA_SPEED_IV },
+    [PBLOCK_CLR_GRAY]      = { MON_DATA_HP_IV,    MON_DATA_ATK_IV,   MON_DATA_SPATK_IV },
+    [PBLOCK_CLR_BLACK]     = { MON_DATA_HP_IV,    MON_DATA_DEF_IV,   MON_DATA_SPATK_IV },
+    // Only reachable by blending with another player over a link.
+    [PBLOCK_CLR_WHITE]     = { MON_DATA_HP_IV,    MON_DATA_SPEED_IV, MON_DATA_SPDEF_IV },
+};
+
+// A Gold Pokeblock perfects five stats, leaving out the one its strongest flavor
+// cares least about: a spicy Gold drops Sp. Atk, a dry Gold drops Attack, and a
+// sour Gold drops HP for the classic five-perfect spread.
+static const u8 sGoldPokeblockIvs[FLAVOR_COUNT][POKEBLOCK_GOLD_PERFECT_IVS] =
+{
+    [FLAVOR_SPICY]  = { MON_DATA_HP_IV,  MON_DATA_ATK_IV, MON_DATA_DEF_IV,   MON_DATA_SPEED_IV, MON_DATA_SPDEF_IV },
+    [FLAVOR_DRY]    = { MON_DATA_HP_IV,  MON_DATA_DEF_IV, MON_DATA_SPEED_IV, MON_DATA_SPATK_IV, MON_DATA_SPDEF_IV },
+    [FLAVOR_SWEET]  = { MON_DATA_HP_IV,  MON_DATA_ATK_IV, MON_DATA_DEF_IV,   MON_DATA_SPEED_IV, MON_DATA_SPATK_IV },
+    [FLAVOR_BITTER] = { MON_DATA_HP_IV,  MON_DATA_ATK_IV, MON_DATA_DEF_IV,   MON_DATA_SPATK_IV, MON_DATA_SPDEF_IV },
+    [FLAVOR_SOUR]   = { MON_DATA_ATK_IV, MON_DATA_DEF_IV, MON_DATA_SPEED_IV, MON_DATA_SPATK_IV, MON_DATA_SPDEF_IV },
+};
+
+// Ties resolve to the earliest flavor, so the answer is always the same block.
+static u32 GetDominantPokeblockFlavor(struct Pokeblock *pokeblock)
+{
+    u32 i, dominant = FLAVOR_SPICY;
+    s16 best = GetPokeblockData(pokeblock, PBLOCK_SPICY);
+
+    for (i = FLAVOR_DRY; i < FLAVOR_COUNT; i++)
+    {
+        s16 flavor = GetPokeblockData(pokeblock, PBLOCK_SPICY + i);
+        if (flavor > best)
+        {
+            best = flavor;
+            dominant = i;
+        }
+    }
+
+    return dominant;
+}
+
+// A Pokeblock feeder in range lures out Pokemon with their Hidden Ability, and
+// perfects the IVs its Pokeblock's color calls for. The block's nature influence
+// is handled separately, in PickWildMonNature.
+static void TryApplyPokeblockBonus(struct Pokemon *mon, u16 species)
+{
+    u32 i, color, numIvs;
+    u8 perfectIv = MAX_PER_STAT_IVS;
     u8 abilityNum = 2;
+    const u8 *ivs;
+    struct Pokeblock *pokeblock;
 
     if (GetSafariZoneFlag() != TRUE)
         return;
-    if (SafariZoneGetActivePokeblock() == NULL)
-        return;
-    if (GetSpeciesAbility(species, abilityNum) == ABILITY_NONE)
+
+    pokeblock = SafariZoneGetActivePokeblock();
+    if (pokeblock == NULL)
         return;
 
-    SetMonData(mon, MON_DATA_ABILITY_NUM, &abilityNum);
+    // The Hidden Ability is guaranteed no matter which Pokeblock was fed.
+    if (GetSpeciesAbility(species, abilityNum) != ABILITY_NONE)
+        SetMonData(mon, MON_DATA_ABILITY_NUM, &abilityNum);
+
+    color = GetPokeblockData(pokeblock, PBLOCK_COLOR);
+    if (color == PBLOCK_CLR_GOLD)
+    {
+        ivs = sGoldPokeblockIvs[GetDominantPokeblockFlavor(pokeblock)];
+        numIvs = POKEBLOCK_GOLD_PERFECT_IVS;
+    }
+    else
+    {
+        if (color >= ARRAY_COUNT(sPokeblockColorIvs))
+            color = PBLOCK_CLR_BLACK;
+        ivs = sPokeblockColorIvs[color];
+        numIvs = POKEBLOCK_PERFECT_IVS;
+    }
+
+    for (i = 0; i < numIvs; i++)
+        SetMonData(mon, ivs[i], &perfectIv);
+
+    // Max HP depends on the HP IV, and the other stats on theirs, so the mon has
+    // to be recalculated after its IVs change.
+    CalculateMonStats(mon);
 }
 
 void CreateWildMon(u16 species, u8 level)
@@ -496,7 +587,7 @@ void CreateWildMon(u16 species, u8 level)
     ZeroEnemyPartyMons();
     u32 personality = GetMonPersonality(species, GetSynchronizedGender(WILDMON_ORIGIN, species), PickWildMonNature(species), RANDOM_UNOWN_LETTER);
     CreateMonWithIVs(&gEnemyParty[0], species, level, personality, OTID_STRUCT_PLAYER_ID, USE_RANDOM_IVS);
-    TryGivePokeblockHiddenAbility(&gEnemyParty[0], species);
+    TryApplyPokeblockBonus(&gEnemyParty[0], species);
     GiveMonInitialMoveset(&gEnemyParty[0]);
 }
 
