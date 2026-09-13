@@ -190,60 +190,83 @@ static void ClearHatchedEggMoves(void)
         sHatchedEggEggMoves[i] = MOVE_NONE;
 }
 
+// Gives daycareIdx's mon any Egg Moves the other Day-Care mon knows, limited to the Egg
+// Moves of poolSpecies. Safe to call more than once per mon: GiveMoveToBoxMon returns
+// MON_ALREADY_KNOWS_MOVE for anything already in a slot, so pools may overlap.
+static void TransferEggMovesFromPool(u32 daycareIdx, u16 poolSpecies)
+{
+    u32 j, k, l;
+    u16 numEggMoves;
+    u16 moveLearnerSpecies = GetBoxMonData(&gSaveBlock1Ptr->daycare.mons[daycareIdx].mon, MON_DATA_SPECIES);
+
+    ClearHatchedEggMoves();
+    numEggMoves = GetEggMovesBySpecies(poolSpecies, sHatchedEggEggMoves);
+    for (j = 0; j < numEggMoves; j++)
+    {
+        // Go through other Daycare mons
+        for (k = 0; k < DAYCARE_MON_COUNT; k++)
+        {
+            u16 moveTeacherSpecies = GetBoxMonData(&gSaveBlock1Ptr->daycare.mons[k].mon, MON_DATA_SPECIES);
+
+            if (k == daycareIdx || !GetBoxMonData(&gSaveBlock1Ptr->daycare.mons[k].mon, MON_DATA_SANITY_HAS_SPECIES))
+                continue;
+
+            // Check if you can inherit from them
+            if (GET_BASE_SPECIES_ID(moveTeacherSpecies) != GET_BASE_SPECIES_ID(moveLearnerSpecies)
+                && (P_EGG_MOVE_TRANSFER < GEN_9 || GetBoxMonData(&gSaveBlock1Ptr->daycare.mons[daycareIdx].mon, MON_DATA_HELD_ITEM) != ITEM_MIRROR_HERB)
+            )
+                continue;
+
+            for (l = 0; l < MAX_MON_MOVES; l++)
+            {
+                if (GetBoxMonData(&gSaveBlock1Ptr->daycare.mons[k].mon, MON_DATA_MOVE1 + l) != sHatchedEggEggMoves[j])
+                    continue;
+
+                if (GiveMoveToBoxMon(&gSaveBlock1Ptr->daycare.mons[daycareIdx].mon, sHatchedEggEggMoves[j]) == MON_HAS_MAX_MOVES)
+                    break;
+            }
+        }
+    }
+}
+
 static void TransferEggMoves(void)
 {
-    u32 i, j, k, l;
-    u16 numEggMoves;
+    u32 i, j;
 
     for (i = 0; i < DAYCARE_MON_COUNT; i++)
     {
         u16 moveLearnerSpecies = GetBoxMonData(&gSaveBlock1Ptr->daycare.mons[i].mon, MON_DATA_SPECIES);
         u16 eggSpecies = GetEggSpecies(moveLearnerSpecies);
+        u16 nonBabySpecies = SPECIES_NONE;
 
         if (!GetBoxMonData(&gSaveBlock1Ptr->daycare.mons[i].mon, MON_DATA_SANITY_HAS_SPECIES))
             continue;
 
-        // Prevent non-baby species from learning incense baby egg moves
-        if (P_INCENSE_BREEDING < GEN_9 && eggSpecies != moveLearnerSpecies)
+        // GetEggSpecies walks all the way back to the Incense baby, whose Egg Move list is a
+        // separate, smaller list than its evolved stage's (Azurill's lacks Perish Song, Belly
+        // Drum, Amnesia and more that Marill's has). Without a second pass over the non-baby
+        // list, a Marill or Azumarill could never receive any of those.
+        if (eggSpecies != moveLearnerSpecies)
         {
             for (j = 0; j < ARRAY_COUNT(sIncenseBabyTable); j++)
             {
                 if (sIncenseBabyTable[j].babySpecies == eggSpecies)
                 {
-                    eggSpecies = sIncenseBabyTable[j].currSpecies;
+                    nonBabySpecies = sIncenseBabyTable[j].currSpecies;
                     break;
                 }
             }
         }
 
-        ClearHatchedEggMoves();
-        numEggMoves = GetEggMovesBySpecies(eggSpecies, sHatchedEggEggMoves);
-        for (j = 0; j < numEggMoves; j++)
-        {
-            // Go through other Daycare mons
-            for (k = 0; k < DAYCARE_MON_COUNT; k++)
-            {
-                u16 moveTeacherSpecies = GetBoxMonData(&gSaveBlock1Ptr->daycare.mons[k].mon, MON_DATA_SPECIES);
+        // Under pre-Gen 9 rules the baby can only be bred while a parent holds its Incense, so a
+        // non-baby learner isn't entitled to the baby's exclusive Egg Moves: non-baby list only.
+        if (!(P_INCENSE_BREEDING < GEN_9 && nonBabySpecies != SPECIES_NONE))
+            TransferEggMovesFromPool(i, eggSpecies);
 
-                if (k == i || !GetBoxMonData(&gSaveBlock1Ptr->daycare.mons[k].mon, MON_DATA_SANITY_HAS_SPECIES))
-                    continue;
-
-                // Check if you can inherit from them
-                if (GET_BASE_SPECIES_ID(moveTeacherSpecies) != GET_BASE_SPECIES_ID(moveLearnerSpecies)
-                    && (P_EGG_MOVE_TRANSFER < GEN_9 || GetBoxMonData(&gSaveBlock1Ptr->daycare.mons[i].mon, MON_DATA_HELD_ITEM) != ITEM_MIRROR_HERB)
-                )
-                    continue;
-
-                for (l = 0; l < MAX_MON_MOVES; l++)
-                {
-                    if (GetBoxMonData(&gSaveBlock1Ptr->daycare.mons[k].mon, MON_DATA_MOVE1 + l) != sHatchedEggEggMoves[j])
-                        continue;
-
-                    if (GiveMoveToBoxMon(&gSaveBlock1Ptr->daycare.mons[i].mon, sHatchedEggEggMoves[j]) == MON_HAS_MAX_MOVES)
-                        break;
-                }
-            }
-        }
+        // Two passes rather than one combined list: the union of both can exceed
+        // EGG_MOVES_ARRAY_COUNT and would overflow sHatchedEggEggMoves.
+        if (nonBabySpecies != SPECIES_NONE)
+            TransferEggMovesFromPool(i, nonBabySpecies);
     }
 }
 
