@@ -46,7 +46,6 @@ GoldenrodCity_FlowerShop_Mints:
 	.2byte ITEM_RELAXED_MINT
 	.2byte ITEM_SASSY_MINT
 	.2byte ITEM_TIMID_MINT
-	.2byte ITEM_MIRROR_HERB
 	pokemartlistend
 
 
