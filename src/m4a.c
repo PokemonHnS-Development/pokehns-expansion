@@ -21,7 +21,8 @@ COMMON_DATA u8 gUsedCGBChannels = 0;
 COMMON_DATA u8 gGBSSFXActiveMask = 0;
 COMMON_DATA struct MusicPlayerInfo gMPlayInfo_SE3 = {0};
 
-BSS_CODE ALIGNED(4) char SoundMainRAM_Buffer[0xB40] = {0};
+/* 0xE00: static high-speed kernels need more than the original 0xB40 IWRAM copy. */
+BSS_CODE ALIGNED(4) char SoundMainRAM_Buffer[0xE00] = {0};
 BSS_CODE ALIGNED(4) u32 hq_buffer_ptr[0x130] = {0};
 
 u32 MidiKeyToFreq(struct WaveData *wav, u8 key, u8 fineAdjust)
