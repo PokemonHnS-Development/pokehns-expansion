@@ -9,12 +9,12 @@
 #define P_GEN_1_POKEMON                  TRUE // Generation 1 Pokémon (RGBY)
 #define P_GEN_2_POKEMON                  TRUE // Generation 2 Pokémon (GSC)
 #define P_GEN_3_POKEMON                  TRUE // Generation 3 Pokémon (RSE, FRLG)
-#define P_GEN_4_POKEMON                  TRUE // Generation 4 Pokémon (DPPt, HGSS)
-#define P_GEN_5_POKEMON                  TRUE // Generation 5 Pokémon (BW, B2W2)
-#define P_GEN_6_POKEMON                  TRUE // Generation 6 Pokémon (XY, ORAS)
-#define P_GEN_7_POKEMON                  TRUE // Generation 7 Pokémon (SM, USUM, LGPE)
-#define P_GEN_8_POKEMON                  TRUE // Generation 8 Pokémon (SwSh, BDSP, LA)
-#define P_GEN_9_POKEMON                  TRUE // Generation 9 Pokémon (SV)
+#define P_GEN_4_POKEMON                  FALSE // Generation 4 Pokémon (DPPt, HGSS)
+#define P_GEN_5_POKEMON                  FALSE // Generation 5 Pokémon (BW, B2W2)
+#define P_GEN_6_POKEMON                  FALSE // Generation 6 Pokémon (XY, ORAS)
+#define P_GEN_7_POKEMON                  FALSE // Generation 7 Pokémon (SM, USUM, LGPE)
+#define P_GEN_8_POKEMON                  FALSE // Generation 8 Pokémon (SwSh, BDSP, LA)
+#define P_GEN_9_POKEMON                  FALSE // Generation 9 Pokémon (SV)
 
 // Setting this to TRUE will add the new evolutions to the Regional Dex.
 #define P_NEW_EVOS_IN_REGIONAL_DEX       TRUE
@@ -297,7 +297,7 @@
 #define P_FAMILY_DIALGA                  P_GEN_4_POKEMON
 #define P_FAMILY_PALKIA                  P_GEN_4_POKEMON
 #define P_FAMILY_HEATRAN                 P_GEN_4_POKEMON
-#define P_FAMILY_REGIGIGAS               P_GEN_4_POKEMON
+#define P_FAMILY_REGIGIGAS               TRUE // kept: Sinjoh Ruins postgame
 #define P_FAMILY_GIRATINA                P_GEN_4_POKEMON
 #define P_FAMILY_CRESSELIA               P_GEN_4_POKEMON
 #define P_FAMILY_MANAPHY                 P_GEN_4_POKEMON
@@ -418,7 +418,7 @@
 #define P_FAMILY_PHANTUMP                P_GEN_6_POKEMON
 #define P_FAMILY_PUMPKABOO               P_GEN_6_POKEMON
 #define P_FAMILY_BERGMITE                P_GEN_6_POKEMON
-#define P_FAMILY_NOIBAT                  P_GEN_6_POKEMON
+#define P_FAMILY_NOIBAT                  TRUE // kept: Ula'ula Isle postgame
 #define P_FAMILY_XERNEAS                 P_GEN_6_POKEMON
 #define P_FAMILY_YVELTAL                 P_GEN_6_POKEMON
 #define P_FAMILY_ZYGARDE                 P_GEN_6_POKEMON
@@ -461,10 +461,10 @@
 #define P_FAMILY_DRAMPA                  P_GEN_7_POKEMON
 #define P_FAMILY_DHELMISE                P_GEN_7_POKEMON
 #define P_FAMILY_JANGMO_O                P_GEN_7_POKEMON
-#define P_FAMILY_TAPU_KOKO               P_GEN_7_POKEMON
-#define P_FAMILY_TAPU_LELE               P_GEN_7_POKEMON
-#define P_FAMILY_TAPU_BULU               P_GEN_7_POKEMON
-#define P_FAMILY_TAPU_FINI               P_GEN_7_POKEMON
+#define P_FAMILY_TAPU_KOKO               TRUE // kept: Alola island guardians
+#define P_FAMILY_TAPU_LELE               TRUE // kept: Alola island guardians
+#define P_FAMILY_TAPU_BULU               TRUE // kept: Alola island guardians
+#define P_FAMILY_TAPU_FINI               TRUE // kept: Alola island guardians
 #define P_FAMILY_COSMOG                  P_GEN_7_POKEMON
 #define P_FAMILY_NIHILEGO                P_GEN_7_POKEMON
 #define P_FAMILY_BUZZWOLE                P_GEN_7_POKEMON
@@ -524,8 +524,8 @@
 #define P_FAMILY_ETERNATUS               P_GEN_8_POKEMON
 #define P_FAMILY_KUBFU                   P_GEN_8_POKEMON
 #define P_FAMILY_ZARUDE                  P_GEN_8_POKEMON
-#define P_FAMILY_REGIELEKI               P_GEN_8_POKEMON
-#define P_FAMILY_REGIDRAGO               P_GEN_8_POKEMON
+#define P_FAMILY_REGIELEKI               TRUE // kept: Sinjoh ruins + Frontier pools
+#define P_FAMILY_REGIDRAGO               TRUE // kept: Sinjoh ruins + Frontier pools
 #define P_FAMILY_GLASTRIER               P_GEN_8_POKEMON
 #define P_FAMILY_SPECTRIER               P_GEN_8_POKEMON
 #define P_FAMILY_CALYREX                 P_GEN_8_POKEMON

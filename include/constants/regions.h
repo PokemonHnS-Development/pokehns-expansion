@@ -4,10 +4,10 @@
 // Core-series regions
 enum Region
 {
-    REGION_NONE,
-    REGION_KANTO,
-    REGION_JOHTO,
-    REGION_HOENN,
+    REGION_NONE,  // 0
+    REGION_KANTO, // 1
+    REGION_JOHTO, // 2
+    REGION_HOENN, // 3
     REGION_SINNOH,
     REGION_UNOVA,
     REGION_KALOS,
