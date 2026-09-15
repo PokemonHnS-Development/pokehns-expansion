@@ -211,6 +211,7 @@ Debug_Text_1:
 	.string "{STR_VAR_1}$"
 
 
+#if IS_HNS
 Debug_EventScript_Script_2::
 	finditem ITEM_POTION
 	giveitem ITEM_SUPER_POTION
@@ -227,6 +228,7 @@ Debug_EventScript_Script_4::
 	pokenavcall SinjohRuins_Lab_Text_StevenCall6Plates
 	release
 	end
+#endif
 
 Debug_EventScript_Script_5::
 	special InitKantoRoamers
