@@ -799,9 +799,9 @@ C_mixing_end_and_stop_channel:
 	strb r0, [r4]                        @ update channel flag with chn halt
 	b C_mixing_epilogue
 
-/* Static fixed-rate extract bodies (no IWRAM opcode paste).
- * r12 holds the stub for r3&3; r12 is unused on this path.
- * In-loop ldmia r3!, {r10} stays in the alignment-specific slot. */
+/* One IWRAM bne loop; alignment is an lsl amount in r12 (no paste, no mov pc).
+ * Inner-loop mov pc distorted hatch/cry audio on dynarec; register lsl does not.
+ * r12 is unused on this path. ldmia after mlane so Z from movs still feeds mlane. */
 C_setup_fixed_freq_mixing:
 	stmfd sp!, {r4, r9}
 
@@ -816,81 +816,40 @@ C_fixed_mixing_length_check:
 	sub r8, r8, lr, lsl#2               @ subtract the amount of samples we need to process from the buffer length
 	sub r2, r2, lr, lsl#2               @ subtract the amount of samples we need to process from the remaining samples
 	ldmia r3!, {r10}                      @ load 4 samples from ROM
-	adr r0, C_fixed_stubs
 	and r1, r3, #3
-	add r12, r0, r1, lsl#2
+	rsb r12, r1, #3
+	mov r12, r12, lsl#3                 @ 24, 16, 8, 0 for r3&3 == 0, 1, 2, 3
 
 C_fixed_mixing_loop:
 	ldmia r5, {r0, r1, r7, r9}       @ load 4 samples from hq buffer
-	mov pc, r12
-
-	.align 2
-C_fixed_stubs:
-	b C_fixed_extract0
-	b C_fixed_extract1
-	b C_fixed_extract2
-	b C_fixed_extract3
-
-C_fixed_extract0:
-	movs r6, r10, lsl#24
+	mov r6, r10, lsl r12
 	movs r6, r6, asr#24
 	mlane r0, r11, r6, r0
-	movs r6, r10, lsl#16
+	cmp r12, #0
+	ldmeqia r3!, {r10}
+	subne r12, r12, #8
+	moveq r12, #24
+	mov r6, r10, lsl r12
 	movs r6, r6, asr#24
 	mlane r1, r11, r6, r1
-	movs r6, r10, lsl#8
+	cmp r12, #0
+	ldmeqia r3!, {r10}
+	subne r12, r12, #8
+	moveq r12, #24
+	mov r6, r10, lsl r12
 	movs r6, r6, asr#24
 	mlane r7, r11, r6, r7
-	movs r6, r10, asr#24
-	ldmia r3!, {r10}
-	mlane r9, r11, r6, r9
-	b C_fixed_store
-
-C_fixed_extract1:
-	movs r6, r10, lsl#16
-	movs r6, r6, asr#24
-	mlane r0, r11, r6, r0
-	movs r6, r10, lsl#8
-	movs r6, r6, asr#24
-	mlane r1, r11, r6, r1
-	movs r6, r10, asr#24
-	ldmia r3!, {r10}
-	mlane r7, r11, r6, r7
-	movs r6, r10, lsl#24
+	cmp r12, #0
+	ldmeqia r3!, {r10}
+	subne r12, r12, #8
+	moveq r12, #24
+	mov r6, r10, lsl r12
 	movs r6, r6, asr#24
 	mlane r9, r11, r6, r9
-	b C_fixed_store
-
-C_fixed_extract2:
-	movs r6, r10, lsl#8
-	movs r6, r6, asr#24
-	mlane r0, r11, r6, r0
-	movs r6, r10, asr#24
-	ldmia r3!, {r10}
-	mlane r1, r11, r6, r1
-	movs r6, r10, lsl#24
-	movs r6, r6, asr#24
-	mlane r7, r11, r6, r7
-	movs r6, r10, lsl#16
-	movs r6, r6, asr#24
-	mlane r9, r11, r6, r9
-	b C_fixed_store
-
-C_fixed_extract3:
-	movs r6, r10, asr#24
-	ldmia r3!, {r10}
-	mlane r0, r11, r6, r0
-	movs r6, r10, lsl#24
-	movs r6, r6, asr#24
-	mlane r1, r11, r6, r1
-	movs r6, r10, lsl#16
-	movs r6, r6, asr#24
-	mlane r7, r11, r6, r7
-	movs r6, r10, lsl#8
-	movs r6, r6, asr#24
-	mlane r9, r11, r6, r9
-
-C_fixed_store:
+	cmp r12, #0
+	ldmeqia r3!, {r10}
+	subne r12, r12, #8
+	moveq r12, #24
 	stmia r5!, {r0, r1, r7, r9}       @ write samples to the mixing buffer
 	subs lr, lr, #1
 	bne C_fixed_mixing_loop
