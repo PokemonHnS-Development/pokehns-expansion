@@ -799,9 +799,24 @@ C_mixing_end_and_stop_channel:
 	strb r0, [r4]                        @ update channel flag with chn halt
 	b C_mixing_epilogue
 
-/* One IWRAM bne loop; alignment is an lsl amount in r12 (no paste, no mov pc).
- * Inner-loop mov pc distorted hatch/cry audio on dynarec; register lsl does not.
- * r12 is unused on this path. ldmia after mlane so Z from movs still feeds mlane. */
+/* Four IWRAM bne loops with official immediate shifts. No paste, no mov pc,
+ * no register lsl (long TYPE_FIX notes on dynarec did not sustain with lsl r12). */
+	.macro C_fixed_hi_byte dest
+	movs r6, r10, lsl#24
+	movs r6, r6, asr#24
+	mlane \dest, r11, r6, \dest
+	.endm
+	.macro C_fixed_mid_byte shift, dest
+	movs r6, r10, lsl#\shift
+	movs r6, r6, asr#24
+	mlane \dest, r11, r6, \dest
+	.endm
+	.macro C_fixed_lo_byte dest
+	movs r6, r10, asr#24
+	ldmia r3!, {r10}
+	mlane \dest, r11, r6, \dest
+	.endm
+
 C_setup_fixed_freq_mixing:
 	stmfd sp!, {r4, r9}
 
@@ -817,43 +832,57 @@ C_fixed_mixing_length_check:
 	sub r2, r2, lr, lsl#2               @ subtract the amount of samples we need to process from the remaining samples
 	ldmia r3!, {r10}                      @ load 4 samples from ROM
 	and r1, r3, #3
-	rsb r12, r1, #3
-	mov r12, r12, lsl#3                 @ 24, 16, 8, 0 for r3&3 == 0, 1, 2, 3
+	add pc, pc, r1, lsl#2
+	nop
+	b C_fixed_loop_al0
+	b C_fixed_loop_al1
+	b C_fixed_loop_al2
+	b C_fixed_loop_al3
 
-C_fixed_mixing_loop:
-	ldmia r5, {r0, r1, r7, r9}       @ load 4 samples from hq buffer
-	mov r6, r10, lsl r12
-	movs r6, r6, asr#24
-	mlane r0, r11, r6, r0
-	cmp r12, #0
-	ldmeqia r3!, {r10}
-	subne r12, r12, #8
-	moveq r12, #24
-	mov r6, r10, lsl r12
-	movs r6, r6, asr#24
-	mlane r1, r11, r6, r1
-	cmp r12, #0
-	ldmeqia r3!, {r10}
-	subne r12, r12, #8
-	moveq r12, #24
-	mov r6, r10, lsl r12
-	movs r6, r6, asr#24
-	mlane r7, r11, r6, r7
-	cmp r12, #0
-	ldmeqia r3!, {r10}
-	subne r12, r12, #8
-	moveq r12, #24
-	mov r6, r10, lsl r12
-	movs r6, r6, asr#24
-	mlane r9, r11, r6, r9
-	cmp r12, #0
-	ldmeqia r3!, {r10}
-	subne r12, r12, #8
-	moveq r12, #24
-	stmia r5!, {r0, r1, r7, r9}       @ write samples to the mixing buffer
+C_fixed_loop_al0:
+	ldmia r5, {r0, r1, r7, r9}
+	C_fixed_hi_byte r0
+	C_fixed_mid_byte 16, r1
+	C_fixed_mid_byte 8, r7
+	C_fixed_lo_byte r9
+	stmia r5!, {r0, r1, r7, r9}
 	subs lr, lr, #1
-	bne C_fixed_mixing_loop
+	bne C_fixed_loop_al0
+	b C_fixed_mixing_rewind
 
+C_fixed_loop_al1:
+	ldmia r5, {r0, r1, r7, r9}
+	C_fixed_mid_byte 16, r0
+	C_fixed_mid_byte 8, r1
+	C_fixed_lo_byte r7
+	C_fixed_hi_byte r9
+	stmia r5!, {r0, r1, r7, r9}
+	subs lr, lr, #1
+	bne C_fixed_loop_al1
+	b C_fixed_mixing_rewind
+
+C_fixed_loop_al2:
+	ldmia r5, {r0, r1, r7, r9}
+	C_fixed_mid_byte 8, r0
+	C_fixed_lo_byte r1
+	C_fixed_hi_byte r7
+	C_fixed_mid_byte 16, r9
+	stmia r5!, {r0, r1, r7, r9}
+	subs lr, lr, #1
+	bne C_fixed_loop_al2
+	b C_fixed_mixing_rewind
+
+C_fixed_loop_al3:
+	ldmia r5, {r0, r1, r7, r9}
+	C_fixed_lo_byte r0
+	C_fixed_hi_byte r1
+	C_fixed_mid_byte 16, r7
+	C_fixed_mid_byte 8, r9
+	stmia r5!, {r0, r1, r7, r9}
+	subs lr, lr, #1
+	bne C_fixed_loop_al3
+
+C_fixed_mixing_rewind:
 	sub r3, r3, #4                      @ we'll need to load this block again, so rewind a bit
 
 C_fixed_mixing_process_rest:
