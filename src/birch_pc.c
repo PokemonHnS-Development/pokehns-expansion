@@ -3,6 +3,7 @@
 #include "field_message_box.h"
 #include "pokedex.h"
 #include "strings.h"
+#include "pokemon.h"
 
 bool16 ScriptGetPokedexInfo(void)
 {

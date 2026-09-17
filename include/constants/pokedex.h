@@ -2470,7 +2470,7 @@ enum ObtainableDexOrder {
 
 #endif
 
-#define REGIONAL_DEX_COUNT (IS_HNS ? JOHTO_DEX_COUNT : IS_FRLG ? KANTO_DEX_COUNT : HOENN_DEX_COUNT)
+#define REGIONAL_DEX_COUNT (GetRegionalDexCount())
 
 #define DECAGRAMS_IN_POUND             4536
 #define CM_PER_INCH                    2.54
@@ -2496,6 +2496,18 @@ enum
 {
     DEX_MODE_HOENN,
     DEX_MODE_NATIONAL
+};
+
+// Regional Pokedex options selectable in the Pokedex search/mode screen. 
+// These are menu choices only; sPokedexView->dexMode stays DEX_MODE_HOENN
+// ("regional", region chosen by gSaveBlock2Ptr->pokedex.region) or DEX_MODE_NATIONAL
+enum
+{
+    DEX_CHOICE_KANTO,
+    DEX_CHOICE_JOHTO,
+    DEX_CHOICE_HOENN,
+    DEX_CHOICE_NATIONAL,
+    DEX_CHOICE_COUNT
 };
 
 enum
