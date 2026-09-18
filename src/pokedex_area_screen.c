@@ -63,6 +63,15 @@
 
 #define GLOW_PALETTE 10
 
+// First BG palette slot the region map art is loaded into, see LoadPokedexAreaMapGfx.
+// The art may occupy more than one slot; dexMapPaletteSize gives how many.
+#define AREA_MAP_PALETTE 7
+
+// Weight passed to TimeMixPalettes to select the first of its two blends outright,
+// matching DEFAULT_WEIGHT in overworld.c. The area screen shades to a single fixed
+// time of day rather than interpolating between two, so both blends are the same.
+#define TIME_OF_DAY_FULL_WEIGHT 256
+
 #define TAG_AREA_MARKER 2
 #define TAG_AREA_UNKNOWN 3
 
@@ -136,6 +145,7 @@ static void Task_HandlePokedexAreaScreenInput(u8);
 static void ResetPokedexAreaMapBg(void);
 static void DestroyAreaScreenSprites(void);
 static void AddTimeOfDayLabels(void);
+static void ApplyTimeOfDayTintToAreaMap(void);
 static void ShowEncounterInfoLabel(void);
 static void ShowAreaUnknownLabel(void);
 static void PrintAreaLabelText(const u8 *text, enum PokedexAreaLabels labelId, int textXPos);
@@ -672,6 +682,35 @@ static const u8 *GetTimeOfDayTextWithButton(enum TimeOfDay timeOfDay)
     }
 }
 
+// Shades the region map art to match how the overworld dims at this time of day,
+// using the same blend table the overworld does. TIME_DAY is a no-op blend (coeff 0),
+// so this is safe to call unconditionally, and re-applying it is idempotent.
+static void ApplyTimeOfDayTintToAreaMap(void)
+{
+    const struct RegionMapInfo *mapInfo = &gRegionMapInfos[GetRegionMapType(gMapHeader.regionMapSectionId)];
+    u16 *unfaded = &gPlttBufferUnfaded[BG_PLTT_ID(AREA_MAP_PALETTE)];
+    struct BlendSettings blend;
+    u32 numPalettes;
+
+    if (!OW_TIME_OF_DAY_ENCOUNTERS)
+        return;
+
+    numPalettes = mapInfo->dexMapPaletteSize / PLTT_SIZE_4BPP;
+    if (numPalettes == 0)
+        return;
+
+    // Restore the untinted art from ROM first so this is idempotent, then tint the
+    // unfaded buffer in place. Tinting unfaded rather than faded means a fade-in
+    // started afterwards lands on the shaded colors instead of snapping to them.
+    CpuCopy32(mapInfo->dexMapPalette, unfaded, mapInfo->dexMapPaletteSize);
+
+    // The palette mask is relative to the buffer pointers passed in, so bit 0 here
+    // is the first palette of the area map rather than BG palette 0.
+    blend = gTimeOfDayBlend[gAreaTimeOfDay];
+    TimeMixPalettes((1 << numPalettes) - 1, unfaded, unfaded, &blend, &blend, TIME_OF_DAY_FULL_WEIGHT);
+    CpuCopy32(unfaded, &gPlttBufferFaded[BG_PLTT_ID(AREA_MAP_PALETTE)], mapInfo->dexMapPaletteSize);
+}
+
 static void AddTimeOfDayLabels(void)
 {
     u32 i;
@@ -793,6 +832,8 @@ static void Task_ShowPokedexAreaScreen(u8 taskId)
             CreateAreaUnknownSprites();
         break;
     case 9:
+        // Shade before the fade so it fades in to the shaded colors directly
+        ApplyTimeOfDayTintToAreaMap();
         BeginNormalPaletteFade(PALETTES_ALL & ~(0x14), 0, 16, 0, RGB_BLACK);
         break;
     case 10:
@@ -857,6 +898,8 @@ static void Task_UpdatePokedexAreaScreen(u8 taskId)
     case 5:
         SetGpuReg(REG_OFFSET_BLDCNT, BLDCNT_TGT1_BG0 | BLDCNT_EFFECT_BLEND | BLDCNT_TGT2_BG0 | BLDCNT_TGT2_ALL);
         StartAreaGlow();
+        // No fade on this path, so shade directly rather than ahead of one
+        ApplyTimeOfDayTintToAreaMap();
         AddTimeOfDayLabels();
         ShowEncounterInfoLabel();
         if (ShouldShowAreaUnknownLabel())
