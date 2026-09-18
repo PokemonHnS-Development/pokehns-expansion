@@ -374,6 +374,7 @@ bool8 CheckOmanyte(void)
 
 bool8 CheckTogepi(void)
 {
+#if IS_HNS
     // Elm doesn't check Togepi until the egg has been received.
     // After that, even if it's not hatched, if you somehow got a Togepi or its evolutions, Elm's script will trigger
     if (FlagGet(FLAG_RECEIVED_TOGEPI_EGG) == TRUE)
@@ -385,6 +386,7 @@ bool8 CheckTogepi(void)
             return TRUE;
         }
     }
+#endif
     return FALSE;
 }
 

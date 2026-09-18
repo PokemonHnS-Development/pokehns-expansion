@@ -433,6 +433,7 @@ u32 FldEff_TallGrass(void)
     s16 x = gFieldEffectArguments[0];
     s16 y = gFieldEffectArguments[1];
 
+#if IS_HNS
     if (gMapHeader.mapLayout->primaryTileset == &gTileset_AlolaIsland)
     {
         u8 paletteSlot = IndexOfSpritePaletteTag(FLDEFF_PAL_TAG_ALOLA_TALL_GRASS);
@@ -445,6 +446,7 @@ u32 FldEff_TallGrass(void)
         template = &gFieldEffectObjectTemplate_AlolaTallGrass;
     }
     else
+#endif
         template = gFieldEffectObjectTemplatePointers[FLDEFFOBJ_TALL_GRASS];
 
     SetSpritePosToOffsetMapCoords(&x, &y, 8, 8);

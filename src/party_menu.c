@@ -4871,6 +4871,7 @@ static bool32 NotUsingHPEVItemOnShedinja(struct Pokemon *mon, enum Item item)
     return TRUE;
 }
 
+#if IS_HNS
 static bool32 IsEVItem(enum Item item)
 {
     switch (GetItemEffectType(item))
@@ -4886,6 +4887,7 @@ static bool32 IsEVItem(enum Item item)
         return FALSE;
     }
 }
+#endif
 
 static bool32 IsItemFlute(enum Item item)
 {
@@ -4938,10 +4940,12 @@ void ItemUseCB_Medicine(u8 taskId, TaskFunc task)
     {
         cannotUse = TRUE;
     }
+#if IS_HNS
     else if (IsEVItem(item) && gSaveBlock3Ptr->challengeSettings.tx_Challenges_NoEVs && !FlagGet(FLAG_DEFEATED_RED))
     {
         cannotUse = TRUE;
     }
+#endif
     else
     {
         canHeal = IsHPRecoveryItem(item);
