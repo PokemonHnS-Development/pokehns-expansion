@@ -151,10 +151,10 @@ CianwoodGym_Text_ChuckIntro3:
 CianwoodGym_Text_ChuckLoss:
 	.string "¿Qué? ¿Eh? ¿Perdí?\p"
 	.string "¡Así es como se hace!\n"
-	.string "¡Mereces la STORMBADGE!$"
+	.string "¡Mereces la MEDALLA Tormenta!$"
 
 CianwoodGym_Text_GetStormBadge:
-	.string "{PLAYER} received STORMBADGE.$"
+	.string "{PLAYER} recibió la MEDALLA Tormenta.$"
 
 CianwoodGym_Text_ChuckBadgeSpeech:
 	.string "La INSIGNIA TORMENTA hace que los\n"

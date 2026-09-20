@@ -303,7 +303,7 @@ VermilionCity_Gym_Text_LtSurgePostBattle::
 	.string "POKéMON tipo DRAGÓN!$"
 
 VermilionCity_Gym_Text_ExplainThunderBadgeTakeThis::
-	.string "The THUNDERBADGE cranks up your\n"
+	.string "The MEDALLA Trueno cranks up your\n"
 	.string "POKéMON's SPEED!\p"
 	.string "It also lets your POKéMON FLY\n"
 	.string "lightning-quick anytime, kid!\p"
@@ -324,7 +324,7 @@ VermilionCity_Gym_Text_MakeRoomInYourBag::
 VermilionCity_Gym_Text_LtSurgeDefeat::
 	.string "Now that's a shocker!\p"
 	.string "You're the real deal, kid!\p"
-	.string "Fine, then, take the THUNDERBADGE!$"
+	.string "Fine, then, take the MEDALLA Trueno!$"
 
 VermilionCity_Gym_Text_TuckerIntro::
 	.string "When I was in the Army, LT. SURGE\n"

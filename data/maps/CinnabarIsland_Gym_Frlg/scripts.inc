@@ -722,7 +722,7 @@ CinnabarIsland_Gym_Text_BlaineIntro::
 CinnabarIsland_Gym_Text_BlaineDefeat::
 	.string "I have burned down to nothing!\n"
 	.string "Not even ashes remain!\p"
-	.string "You have earned the VOLCANOBADGE.$"
+	.string "You have earned the MEDALLA Volcán.$"
 
 CinnabarIsland_Gym_Text_FireBlastIsUltimateFireMove::
 	.string "FIRE BLAST is the ultimate fire\n"
@@ -731,7 +731,7 @@ CinnabarIsland_Gym_Text_FireBlastIsUltimateFireMove::
 
 CinnabarIsland_Gym_Text_ExplainVolcanoBadge::
 	.string "Hah!\p"
-	.string "The VOLCANOBADGE heightens the\n"
+	.string "The MEDALLA Volcán heightens the\n"
 	.string "SPECIAL stats of your POKéMON.\p"
 	.string "Here, you can have this, too!$"
 

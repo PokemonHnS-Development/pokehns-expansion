@@ -252,7 +252,7 @@ CeruleanGym_Text_MistyWinLoss:
 	.string "Toma. Es la MEDALLA CASCADA.$"
 
 CeruleanGym_Text_ReceivedBadge:
-	.string "{PLAYER} received CASCADEBADGE.$"
+	.string "{PLAYER} recibió la MEDALLA Cascada.$"
 
 CeruleanGym_Text_MistyFightDone:
 	.string "MISTY: ¿Hay muchos\n"

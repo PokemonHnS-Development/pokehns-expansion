@@ -89,7 +89,7 @@ Text_MegaKickTaught::
 	.string "only simple punching over there.$"
 
 Route4_Text_PeopleLikeAndRespectBrock::
-	.string "Oh, wow, that's the BOULDERBADGE!\n"
+	.string "Oh, wow, that's the MEDALLA Roca!\n"
 	.string "You got it from BROCK, didn't you?\p"
 	.string "BROCK is cool. He's not just tough.\n"
 	.string "La gente lo quiere y respeta.\p"

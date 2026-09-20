@@ -75,7 +75,7 @@ ViridianCity_Gym_Text_LeaderBlue_Win:
 	.string "MEDALLA TIERRA.$"
 
 ViridianCity_Gym_Text_ReceivedEarthBadge:
-	.string "{PLAYER} received EARTHBADGE.$"
+	.string "{PLAYER} recibió la MEDALLA Tierra.$"
 
 ViridianCity_Gym_Text_LeaderBlue_After:
 	.string "BLUE: ...\p"

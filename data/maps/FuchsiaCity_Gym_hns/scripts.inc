@@ -95,10 +95,10 @@ FuchsiaCity_Gym_Text_Janine_DisappointYou:
 FuchsiaCity_Gym_Text_Janine_ToughOne:
 	.string "JANINE: Eres fuerte. Sin duda\n"
 	.string "has ganado…\p"
-	.string "Toma la SOULBADGE. Es tuya.$"
+	.string "Toma la MEDALLA Alma. Es tuya.$"
 
 FuchsiaCity_Gym_Text_ReceivedSoulBadge:
-	.string "{PLAYER} received SOULBADGE.$"
+	.string "{PLAYER} recibió la MEDALLA Alma.$"
 
 FuchsiaCity_Gym_Text_Janine_GiveTM:
 	.string "JANINE: ¡Eres increíble! ¡Tengo un\n"

@@ -143,7 +143,7 @@ MahoganyTown_Gym_Text_PryceImpressed:
     .string "¡Eres digno de esta MEDALLA!$"
 
 MahoganyTown_Gym_Text_ReceivedBadge:
-    .string "{PLAYER} received GLACIERBADGE.$"
+    .string "{PLAYER} recibió la MEDALLA Glaciar.$"
 
 MahoganyTown_Gym_Text_GlacierBadgeSpeech:
     .string "Esa MEDALLA subirá el ATAQUE\n"

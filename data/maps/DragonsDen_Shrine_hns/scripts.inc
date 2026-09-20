@@ -365,7 +365,7 @@ DragonsDen_Shrine_Text_HereRisingBadge:
     .string "¡Date prisa! ¡Tómala!$"
 
 DragonsDen_Shrine_Text_PlayerReceivedRisingBadge:
-    .string "{PLAYER} received RISINGBADGE.$"
+    .string "{PLAYER} recibió la MEDALLA Dragón.$"
 
 DragonsDen_Shrine_Text_RisingBadgeExplanation:
     .string "La INSIGNIA ASCENDENTE permitirá\n"
