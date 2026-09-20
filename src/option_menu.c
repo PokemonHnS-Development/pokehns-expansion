@@ -377,19 +377,19 @@ static const struct OptionMenuItem sTabItems_Main[] = {
         .choiceNames  = sChoices_TextSpeed,
     },
     [ITEM_MAIN_BATTLESCENE] = {
-        .name         = COMPOUND_STRING("ESCENA COMBATE"),
+        .name         = COMPOUND_STRING("ESCENA"),
         .descriptions = sDesc_BattleScene,
         .numChoices   = 2,
         .choiceNames  = sChoices_OnOff,
     },
     [ITEM_MAIN_BATTLESTYLE] = {
-        .name         = COMPOUND_STRING("ESTILO COMBATE"),
+        .name         = COMPOUND_STRING("ESTILO"),
         .descriptions = sDesc_BattleStyle,
         .numChoices   = 2,
         .choiceNames  = sChoices_ShiftSet,
     },
     [ITEM_MAIN_BUTTONMODE] = {
-        .name         = COMPOUND_STRING("MODO BOTONES"),
+        .name         = COMPOUND_STRING("BOTONES"),
         .descriptions = sDesc_ButtonMode,
         .numChoices   = 3,
         .choiceNames  = sChoices_ButtonMode,
@@ -401,13 +401,13 @@ static const struct OptionMenuItem sTabItems_Main[] = {
         .choiceNames  = sChoices_OnOff,
     },
     [ITEM_MAIN_LARGE_FOLLOWER] = {
-        .name         = COMPOUND_STRING("SEGUIDORES GR."),
+        .name         = COMPOUND_STRING("SEGUIDORES"),
         .descriptions = sDesc_LargeFollower,
         .numChoices   = 2,
         .choiceNames  = sChoices_OnOff,
     },
     [ITEM_MAIN_AUTORUN] = {
-        .name         = COMPOUND_STRING("CORRER AUTO"),
+        .name         = COMPOUND_STRING("AUTO"),
         .descriptions = sDesc_Autorun,
         .numChoices   = 2,
         .choiceNames  = sChoices_OnOff,
@@ -452,13 +452,13 @@ static const struct OptionMenuItem sTabItems_Main[] = {
 
 static const struct OptionMenuItem sTabItems_Battle[] = {
     [ITEM_BATTLE_FAST_INTRO] = {
-        .name         = COMPOUND_STRING("INTRO RÁPIDA"),
+        .name         = COMPOUND_STRING("INTRO RÁP."),
         .descriptions = sDesc_FastIntro,
         .numChoices   = 2,
         .choiceNames  = sChoices_OnOff,
     },
     [ITEM_BATTLE_FAST_BATTLES] = {
-        .name         = COMPOUND_STRING("COMBATES RÁP."),
+        .name         = COMPOUND_STRING("COMBATES"),
         .descriptions = sDesc_FastBattles,
         .numChoices   = 2,
         .choiceNames  = sChoices_OnOff,
@@ -470,25 +470,25 @@ static const struct OptionMenuItem sTabItems_Battle[] = {
         .choiceNames  = sChoices_OldModern,
     },
     [ITEM_BATTLE_NEW_BATTLEUI] = {
-        .name         = COMPOUND_STRING("INTERFAZ COMB."),
+        .name         = COMPOUND_STRING("INTERFAZ"),
         .descriptions = sDesc_NewBattleUI,
         .numChoices   = 2,
         .choiceNames  = sChoices_Gen3Gen4,
     },
     [ITEM_BATTLE_BALL_PROMPT] = {
-        .name         = COMPOUND_STRING("AVISO POKé BALL"),
+        .name         = COMPOUND_STRING("AVISO BALL"),
         .descriptions = sDesc_BallPrompt,
         .numChoices   = 2,
         .choiceNames  = sChoices_OnOff,
     },
     [ITEM_BATTLE_RUN_TYPE] = {
-        .name         = COMPOUND_STRING("HUIDA RÁPIDA"),
+        .name         = COMPOUND_STRING("HUIDA"),
         .descriptions = sDesc_RunType,
         .numChoices   = 4,
         .choiceNames  = sChoices_RunType,
     },
     [ITEM_BATTLE_LR_RUN] = {
-        .name         = COMPOUND_STRING("AVISO HUIDA"),
+        .name         = COMPOUND_STRING("AVISO"),
         .descriptions = sDesc_LRRun,
         .numChoices   = 2,
         .choiceNames  = sChoices_OnOff,
@@ -509,13 +509,13 @@ static const struct OptionMenuItem sTabItems_Sound[] = {
         .choiceNames  = sChoices_OnOff,
     },
     [ITEM_SOUND_BIKE_MUSIC] = {
-        .name         = COMPOUND_STRING("MÚSICA BICI"),
+        .name         = COMPOUND_STRING("MÚS. BICI"),
         .descriptions = sDesc_BikeMusic,
         .numChoices   = 2,
         .choiceNames  = sChoices_OnOff,
     },
     [ITEM_SOUND_SURF_MUSIC] = {
-        .name         = COMPOUND_STRING("MÚSICA SURF"),
+        .name         = COMPOUND_STRING("MÚS. SURF"),
         .descriptions = sDesc_SurfMusic,
         .numChoices   = 2,
         .choiceNames  = sChoices_OnOff,
@@ -534,7 +534,7 @@ struct TabDef
 };
 
 static const struct TabDef sTabs[TAB_COUNT] = {
-    [TAB_MAIN]   = { COMPOUND_STRING("OPCIONES"),        sTabItems_Main,   ITEM_MAIN_COUNT },
+    [TAB_MAIN]   = { COMPOUND_STRING("AJUSTES"),        sTabItems_Main,   ITEM_MAIN_COUNT },
     [TAB_BATTLE] = { COMPOUND_STRING("COMBATE"), sTabItems_Battle, ITEM_BATTLE_COUNT },
     [TAB_SOUND]  = { COMPOUND_STRING("SONIDO"),          sTabItems_Sound,  ITEM_SOUND_COUNT },
 };
