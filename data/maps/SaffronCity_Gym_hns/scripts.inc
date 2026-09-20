@@ -80,7 +80,7 @@ SaffronCity_Gym_Text_SabrinaWinLoss:
 	.string "la MEDALLA MARJA.$"
 
 SaffronCity_Gym_Text_ReceivedMarshBadge:
-	.string "{PLAYER} recibió la MEDALLA Pantano.$"
+	.string "{PLAYER} recibió la MEDALLA PANTANO.$"
 
 SaffronCity_Gym_Text_MarshBadgeInfo:
 	.string "SABRINA: La MEDALLA MARJA saca\n"

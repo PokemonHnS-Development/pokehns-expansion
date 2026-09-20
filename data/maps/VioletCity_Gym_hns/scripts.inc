@@ -73,7 +73,7 @@ VioletGym_Text_Falkner_WinLoss:
 	.string "LIGA POKéMON, la INSIGNIA CEFIRO.$"
 
 VioletGym_Text_ReceivedZephyrBadge:
-	.string "{PLAYER} recibió la MEDALLA Céfiro.$"
+	.string "{PLAYER} recibió la MEDALLA CÉFIRO.$"
 
 VioletGym_Text_Falkner_BadgeExplain:
 	.string "La MEDALLA CÉFIRO sube el ATAQUE\n"

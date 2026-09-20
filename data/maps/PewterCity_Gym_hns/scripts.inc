@@ -55,7 +55,7 @@ PewterCity_Gym_Text_Brock_WinLoss:
 	.string "Toma, llévate esta MEDALLA.$"
 
 PewterCity_Gym_Text_ReceivedBoulderBadge:
-	.string "{PLAYER} recibió la MEDALLA Roca.$"
+	.string "{PLAYER} recibió la MEDALLA ROCA.$"
 
 PewterCity_Gym_Text_Brock_GiveTM:
 	.string "Toma, llévate esta MT.$"
@@ -70,7 +70,7 @@ PewterCity_Gym_Text_Brock_BoulderBadge:
 	.string "BROCK: {PLAYER}, gracias. Disfruté\n"
 	.string "luchar contigo, aunque estoy un\l"
 	.string "poco molesto.\p"
-	.string "Esa MEDALLA Roca hará que tus\n"
+	.string "Esa MEDALLA ROCA hará que tus\n"
 	.string "POKéMON sean más poderosos.$"
 
 PewterCity_Gym_Text_Brock_FightDone:

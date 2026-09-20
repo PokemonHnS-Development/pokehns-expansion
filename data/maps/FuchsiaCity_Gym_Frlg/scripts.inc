@@ -106,7 +106,7 @@ FuchsiaCity_Gym_Text_KogaDefeat::
 	.string "¡Hmph!\n"
 	.string "You have proven your worth!\p"
 	.string "¡Toma!\n"
-	.string "Take the MEDALLA Alma!$"
+	.string "Take the MEDALLA ALMA!$"
 
 FuchsiaCity_Gym_Text_KogaPostBattle::
 	.string "When afflicted by TOXIC, a POKéMON\n"
@@ -116,7 +116,7 @@ FuchsiaCity_Gym_Text_KogaPostBattle::
 	.string "It will surely terrorize foes!$"
 
 FuchsiaCity_Gym_Text_KogaExplainSoulBadge::
-	.string "Now that you have the MEDALLA Alma,\n"
+	.string "Now that you have the MEDALLA ALMA,\n"
 	.string "the DEFENSE of your POKéMON rises.\p"
 	.string "It also lets you SURF outside of\n"
 	.string "fantástica.\p"

@@ -305,7 +305,7 @@ VermilionGym_Text_LtSurgeWinLoss:
 	.string "Vale, chico. ¡Toma la INSIGNIA RAYO!$"
 
 VermilionGym_Text_ReceivedThunderBadge:
-	.string "{PLAYER} recibió la MEDALLA Trueno.$"
+	.string "{PLAYER} recibió la MEDALLA TRUENO.$"
 
 VermilionGym_Text_ThunderBadgeInfo:
 	.string "SURGE: La INSIGNIA RAYO aumenta\n"

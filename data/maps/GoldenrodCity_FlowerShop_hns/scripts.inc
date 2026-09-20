@@ -133,7 +133,7 @@ GoldenrodCity_FlowerShop_Text_Owner2:
 .string "en la RUTA 36.\p"
 .string "Dicen que baila al regarlo\n"
 .string "it...\p"
-.string "¡Oh, es una MEDALLA Planicie del\n"
+.string "¡Oh, es una MEDALLA PLANICIE del\n"
 .string "GIMNASIO de CIUDAD TRIGAL!\p"
 .string "¡¿Venciste a WHITNEY?!\p"
 .string "Bueno, entonces no hay nada\n"

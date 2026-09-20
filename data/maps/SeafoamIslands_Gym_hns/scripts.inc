@@ -95,7 +95,7 @@ SeafoamIslands_Gym_Text_BlaineWinLoss:
 	.string "¡Ganaste la MEDALLA VOLCÁN!$"
 
 SeafoamIslands_Gym_Text_ReceivedVolcanoBadge:
-	.string "{PLAYER} recibió la MEDALLA Volcán.$"
+	.string "{PLAYER} recibió la MEDALLA VOLCÁN.$"
 
 SeafoamIslands_Gym_Text_BlaineAfterBattle:
 	.string "BLAINE: Perdí esta vez, pero\n"

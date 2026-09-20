@@ -45,10 +45,10 @@ CeladonCity_Gym_Text_ErikaBeforeBattle:
 CeladonCity_Gym_Text_ErikaBeaten:
 	.string "ERIKA: ¡Oh! Admito mi derrota...\p"
 	.string "Eres increíblemente fuerte...\p"
-	.string "Te daré la MEDALLA Arcoíris…$"
+	.string "Te daré la MEDALLA ARCOÍRIS…$"
 
 CeladonCity_Gym_Text_PlayerReceivedRainbowBadge:
-	.string "{PLAYER} recibió la MEDALLA Arcoíris.$"
+	.string "{PLAYER} recibió la MEDALLA ARCOÍRIS.$"
 
 CeladonCity_Gym_Text_Erika_GiveTM:
 	.string "ERIKA: Fue un combate\n"

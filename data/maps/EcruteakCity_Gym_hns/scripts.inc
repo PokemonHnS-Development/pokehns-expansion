@@ -107,7 +107,7 @@ MortyWinLossText:
 	.string "Está bien. Esta MEDALLA es tuya.$"
 
 Text_ReceivedFogBadge:
-	.string "{PLAYER} received the MEDALLA Niebla.$"
+	.string "{PLAYER} received the MEDALLA NIEBLA.$"
 
 MortyText_FogBadgeSpeech:
 	.string "Con la MEDALLA NIEBLA, los\n"

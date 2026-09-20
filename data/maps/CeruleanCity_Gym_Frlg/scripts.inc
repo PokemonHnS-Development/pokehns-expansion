@@ -83,7 +83,7 @@ CeruleanCity_Gym_Text_ExplainTM03::
 	.string "Use it on an aquatic POKéMON!$"
 
 CeruleanCity_Gym_Text_ExplainCascadeBadge::
-	.string "The MEDALLA Cascada makes all\n"
+	.string "The MEDALLA CASCADA makes all\n"
 	.string "POKéMON up to Lv. 30 obey.\p"
 	.string "That includes even outsiders you\n"
 	.string "got in trades.\p"
@@ -104,7 +104,7 @@ CeruleanCity_Gym_Text_MistyDefeat::
 	.string "¡Guau!\n"
 	.string "You're too much!\p"
 	.string "All right!\p"
-	.string "You can have the MEDALLA Cascada to\n"
+	.string "You can have the MEDALLA CASCADA to\n"
 	.string "show you beat me.$"
 
 CeruleanCity_Gym_Text_DianaIntro::

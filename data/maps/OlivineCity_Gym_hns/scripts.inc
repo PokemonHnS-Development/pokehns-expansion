@@ -293,10 +293,10 @@ OlivineCity_Gym_Text_JasmineBetterTrainer:
 	.string "te concedo esta MEDALLA.$"
 
 OlivineCity_Gym_Text_ReceivedMineralBadge:
-	.string "{PLAYER} recibió la MEDALLA Mineral.$"
+	.string "{PLAYER} recibió la MEDALLA MINERAL.$"
 
 OlivineCity_Gym_Text_JasmineBadgeSpeech:
-	.string "MEDALLA Mineral sube la \n"
+	.string "MEDALLA MINERAL sube la \n"
 	.string "DEFENSA ESPECIAL de POKéMON.\p"
 	.string "…Este… Toma esto también…$"
 

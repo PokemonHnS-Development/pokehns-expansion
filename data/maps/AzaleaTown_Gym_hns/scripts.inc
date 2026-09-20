@@ -684,7 +684,7 @@ AzaleaTown_Gym_Text_BugsyBeaten:
 	.string "MEDALLA.$"
 
 AzaleaTown_Gym_Text_ReceivedHiveBadge:
-	.string "{PLAYER} recibió la MEDALLA Colmena.$"
+	.string "{PLAYER} recibió la MEDALLA COLMENA.$"
 
 AzaleaTown_Gym_Text_HiveBadgeSpeech:
 	.string "¿Conoces los beneficios de la\n"

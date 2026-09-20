@@ -119,7 +119,7 @@ ViridianCity_Gym_Text_GiovanniDefeat::
 	.string "Ha!\n"
 	.string "That was a truly intense fight.\l"
 	.string "You have won!\p"
-	.string "As proof, here is the MEDALLA Tierra!\n"
+	.string "As proof, here is the MEDALLA TIERRA!\n"
 	.string "{PAUSE_MUSIC}{PLAY_BGM}{MUS_OBTAIN_BADGE}{PAUSE 0xFE}{PAUSE 0x56}{RESUME_MUSIC}$"
 
 ViridianCity_Gym_Text_GiovanniPostBattle::
@@ -134,7 +134,7 @@ ViridianCity_Gym_Text_GiovanniPostBattle::
 	.string "¡Adiós!$"
 
 ViridianCity_Gym_Text_ExplainEarthBadgeTakeThis::
-	.string "The MEDALLA Tierra makes POKéMON of\n"
+	.string "The MEDALLA TIERRA makes POKéMON of\n"
 	.string "any level obey without question.\p"
 	.string "It is evidence of your mastery as\n"
 	.string "a POKéMON TRAINER.\p"

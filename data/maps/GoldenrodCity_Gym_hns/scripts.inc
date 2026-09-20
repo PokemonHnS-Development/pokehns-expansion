@@ -148,7 +148,7 @@ GoldenrodCity_Gym_Text_WhitneyWhatDoYouWant:
     .string "MEDALLA LLANA.$"
 
 GoldenrodCity_Gym_Text_PlayerReceivedPlainBadge:
-    .string "{PLAYER} recibió la MEDALLA Planicie.$"
+    .string "{PLAYER} recibió la MEDALLA PLANICIE.$"
 
 GoldenrodCity_Gym_Text_WhitneyPlainBadge:
     .string "La MEDALLA LLANA permite que tus\n"

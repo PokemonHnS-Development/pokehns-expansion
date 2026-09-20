@@ -104,7 +104,7 @@ CeladonCity_Gym_Text_ErikaDefeat::
 	.string "I concede defeat.\l"
 	.string "You are remarkably strong.\p"
 	.string "I must confer on you the\n"
-	.string "MEDALLA Arcoíris.$"
+	.string "MEDALLA ARCOÍRIS.$"
 
 CeladonCity_Gym_Text_ErikaPostBattle::
 	.string "You are cataloging POKéMON?\n"
@@ -113,7 +113,7 @@ CeladonCity_Gym_Text_ErikaPostBattle::
 	.string "no fueran atractivos.$"
 
 CeladonCity_Gym_Text_ExplainRainbowBadgeTakeThis::
-	.string "The MEDALLA Arcoíris will make\n"
+	.string "The MEDALLA ARCOÍRIS will make\n"
 	.string "POKéMON up to Lv. 50 obey.\p"
 	.string "It also allows POKéMON to use\n"
 	.string "STRENGTH in and out of battle.\p"
