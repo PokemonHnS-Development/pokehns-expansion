@@ -10707,9 +10707,9 @@ const struct ItemInfo gItemsInfo[] =
         .pluralName = ITEM_PLURAL_NAME("Razz Berries"),
         .price = (I_BERRY_PRICE >= GEN_8) ? 80 : 20,
         .description = COMPOUND_STRING(
-            "ingrediente {POKEBLOCK}.\n"
-            "Plántalo en suelo limoso\n"
-            "to grow Razz."),
+            "Ingrediente para {POKEBLOCK}.\n"
+            "Plántalo en suelo blando\n"
+            "para cultivar Razz."),
         .pocket = POCKET_BERRIES,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -10724,9 +10724,9 @@ const struct ItemInfo gItemsInfo[] =
         .pluralName = ITEM_PLURAL_NAME("Bluk Berries"),
         .price = (I_BERRY_PRICE >= GEN_8) ? 80 : 20,
         .description = COMPOUND_STRING(
-            "ingrediente {POKEBLOCK}.\n"
-            "Plántalo en suelo limoso\n"
-            "to grow Bluk."),
+            "Ingrediente para {POKEBLOCK}.\n"
+            "Plántalo en suelo blando\n"
+            "para cultivar Bluk."),
         .pocket = POCKET_BERRIES,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -10741,9 +10741,9 @@ const struct ItemInfo gItemsInfo[] =
         .pluralName = ITEM_PLURAL_NAME("Nanab Berries"),
         .price = (I_BERRY_PRICE >= GEN_8) ? 80 : 20,
         .description = COMPOUND_STRING(
-            "ingrediente {POKEBLOCK}.\n"
-            "Plántalo en suelo limoso\n"
-            "to grow Nanab."),
+            "Ingrediente para {POKEBLOCK}.\n"
+            "Plántalo en suelo blando\n"
+            "para cultivar Nanab."),
         .pocket = POCKET_BERRIES,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -10758,9 +10758,9 @@ const struct ItemInfo gItemsInfo[] =
         .pluralName = ITEM_PLURAL_NAME("Wepear Berries"),
         .price = (I_BERRY_PRICE >= GEN_8) ? 80 : 20,
         .description = COMPOUND_STRING(
-            "ingrediente {POKEBLOCK}.\n"
-            "Plántalo en suelo limoso\n"
-            "to grow Wepear."),
+            "Ingrediente para {POKEBLOCK}.\n"
+            "Plántalo en suelo blando\n"
+            "para cultivar Wepear."),
         .pocket = POCKET_BERRIES,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -10775,9 +10775,9 @@ const struct ItemInfo gItemsInfo[] =
         .pluralName = ITEM_PLURAL_NAME("Pinap Berries"),
         .price = (I_BERRY_PRICE >= GEN_8) ? 80 : 20,
         .description = COMPOUND_STRING(
-            "ingrediente {POKEBLOCK}.\n"
-            "Plántalo en suelo limoso\n"
-            "to grow Pinap."),
+            "Ingrediente para {POKEBLOCK}.\n"
+            "Plántalo en suelo blando\n"
+            "para cultivar Pinap."),
         .pocket = POCKET_BERRIES,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -10897,9 +10897,9 @@ const struct ItemInfo gItemsInfo[] =
         .pluralName = ITEM_PLURAL_NAME("Cornn Berries"),
         .price = (I_BERRY_PRICE >= GEN_8) ? 80 : 20,
         .description = COMPOUND_STRING(
-            "ingrediente {POKEBLOCK}.\n"
-            "Plántalo en suelo limoso\n"
-            "to grow Cornn."),
+            "Ingrediente para {POKEBLOCK}.\n"
+            "Plántalo en suelo blando\n"
+            "para cultivar Cornn."),
         .pocket = POCKET_BERRIES,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -10914,9 +10914,9 @@ const struct ItemInfo gItemsInfo[] =
         .pluralName = ITEM_PLURAL_NAME("Magost Berries"),
         .price = (I_BERRY_PRICE >= GEN_8) ? 80 : 20,
         .description = COMPOUND_STRING(
-            "ingrediente {POKEBLOCK}.\n"
-            "Plántalo en suelo limoso\n"
-            "to grow Magost."),
+            "Ingrediente para {POKEBLOCK}.\n"
+            "Plántalo en suelo blando\n"
+            "para cultivar Magost."),
         .pocket = POCKET_BERRIES,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -10931,9 +10931,9 @@ const struct ItemInfo gItemsInfo[] =
         .pluralName = ITEM_PLURAL_NAME("Rabuta Berries"),
         .price = (I_BERRY_PRICE >= GEN_8) ? 80 : 20,
         .description = COMPOUND_STRING(
-            "ingrediente {POKEBLOCK}.\n"
-            "Plántalo en suelo limoso\n"
-            "to grow Rabuta."),
+            "Ingrediente para {POKEBLOCK}.\n"
+            "Plántalo en suelo blando\n"
+            "para cultivar Rabuta."),
         .pocket = POCKET_BERRIES,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -10948,9 +10948,9 @@ const struct ItemInfo gItemsInfo[] =
         .pluralName = ITEM_PLURAL_NAME("Nomel Berries"),
         .price = (I_BERRY_PRICE >= GEN_8) ? 80 : 20,
         .description = COMPOUND_STRING(
-            "ingrediente {POKEBLOCK}.\n"
-            "Plántalo en suelo limoso\n"
-            "to grow Nomel."),
+            "Ingrediente para {POKEBLOCK}.\n"
+            "Plántalo en suelo blando\n"
+            "para cultivar Nomel."),
         .pocket = POCKET_BERRIES,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -10965,9 +10965,9 @@ const struct ItemInfo gItemsInfo[] =
         .pluralName = ITEM_PLURAL_NAME("Spelon Berries"),
         .price = (I_BERRY_PRICE >= GEN_8) ? 80 : 20,
         .description = COMPOUND_STRING(
-            "ingrediente {POKEBLOCK}.\n"
-            "Plántalo en suelo limoso\n"
-            "to grow Spelon."),
+            "Ingrediente para {POKEBLOCK}.\n"
+            "Plántalo en suelo blando\n"
+            "para cultivar Spelon."),
         .pocket = POCKET_BERRIES,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -10982,9 +10982,9 @@ const struct ItemInfo gItemsInfo[] =
         .pluralName = ITEM_PLURAL_NAME("Pamtre Berries"),
         .price = (I_BERRY_PRICE >= GEN_8) ? 80 : 20,
         .description = COMPOUND_STRING(
-            "ingrediente {POKEBLOCK}.\n"
-            "Plántalo en suelo limoso\n"
-            "to grow Pamtre."),
+            "Ingrediente para {POKEBLOCK}.\n"
+            "Plántalo en suelo blando\n"
+            "para cultivar Pamtre."),
         .pocket = POCKET_BERRIES,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -10999,9 +10999,9 @@ const struct ItemInfo gItemsInfo[] =
         .pluralName = ITEM_PLURAL_NAME("Watmel Berries"),
         .price = (I_BERRY_PRICE >= GEN_8) ? 80 : 20,
         .description = COMPOUND_STRING(
-            "ingrediente {POKEBLOCK}.\n"
-            "Plántalo en suelo limoso\n"
-            "to grow Watmel."),
+            "Ingrediente para {POKEBLOCK}.\n"
+            "Plántalo en suelo blando\n"
+            "para cultivar Watmel."),
         .pocket = POCKET_BERRIES,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -11016,9 +11016,9 @@ const struct ItemInfo gItemsInfo[] =
         .pluralName = ITEM_PLURAL_NAME("Durin Berries"),
         .price = (I_BERRY_PRICE >= GEN_8) ? 80 : 20,
         .description = COMPOUND_STRING(
-            "ingrediente {POKEBLOCK}.\n"
-            "Plántalo en suelo limoso\n"
-            "to grow Durin."),
+            "Ingrediente para {POKEBLOCK}.\n"
+            "Plántalo en suelo blando\n"
+            "para cultivar Durin."),
         .pocket = POCKET_BERRIES,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -11033,9 +11033,9 @@ const struct ItemInfo gItemsInfo[] =
         .pluralName = ITEM_PLURAL_NAME("Belue Berries"),
         .price = (I_BERRY_PRICE >= GEN_8) ? 80 : 20,
         .description = COMPOUND_STRING(
-            "ingrediente {POKEBLOCK}.\n"
-            "Plántalo en suelo limoso\n"
-            "to grow Belue."),
+            "Ingrediente para {POKEBLOCK}.\n"
+            "Plántalo en suelo blando\n"
+            "para cultivar Belue."),
         .pocket = POCKET_BERRIES,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -11602,8 +11602,8 @@ const struct ItemInfo gItemsInfo[] =
         .pluralName = ITEM_PLURAL_NAME("Enigma Berries"),
         .price = (I_BERRY_PRICE >= GEN_8) ? 80 : 20,
         .description = COMPOUND_STRING(
-            "ingrediente {POKEBLOCK}.\n"
-            "Plántalo en suelo limoso\n"
+            "Ingrediente para {POKEBLOCK}.\n"
+            "Plántalo en suelo blando\n"
             "to grow a mystery."),
         .pocket = POCKET_BERRIES,
         .type = ITEM_USE_BAG_MENU, // Type handled by ItemUseOutOfBattle_EnigmaBerry
