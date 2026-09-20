@@ -223,19 +223,19 @@ Route14_EventScript_RematchTrevorTryGiveItem::
 
 
 Route14_Text_Eusine:
-	.string "EUSINE: {PLAYER}! Not again!\n"
-	.string "I'll be there first next time!\p"
-	.string "Having followed it here, I'm\n"
-	.string "starting to understand what SUICUNE\l"
-	.string "is after.\p"
-	.string "To be honest, I would like to keep\n"
-	.string "this information to myself.\p"
-	.string "But I want to be an honest trainer\n"
-	.string "in front of SUICUNE!\p"
-	.string "That's why I am sharing a clue with\n"
+	.string "EUSINE: {PLAYER}! ¡Otra vez!\n"
+	.string "¡La próxima vez llegaré primero!\p"
+	.string "Al seguirlo hasta aquí, empiezo\n"
+	.string "a entender qué es lo que\l"
+	.string "busca SUICUNE.\p"
+	.string "Para ser sincero, me gustaría\n"
+	.string "guardar esta información.\p"
+	.string "¡Pero quiero ser un ENTRENADOR\n"
+	.string "honesto ante SUICUNE!\p"
+	.string "Por eso compartiré una pista...\n"
 	.string "vencerte.\p"
-	.string "It seems that...\n"
-	.string "SUICUNE prefers a hilly place...\l"
+	.string "Parece que...\n"
+	.string "SUICUNE prefiere un lugar alto...\l"
 	.string "Cerca del agua...\l"
 	.string "En algún lugar al norte...\p"
 	.string "Aún no sé exactamente dónde.\n"
@@ -283,30 +283,30 @@ Route14_Text_PokefanmCarterAfterBattle:
 	.string "Creo que es una mezcla equilibrada.$"
 
 Route14_Text_CarterRegister:
-	.string "You know your starters!\n"
-	.string "Let me get your number!$"
+	.string "¡Conoces bien los iniciales!\n"
+	.string "¡Dame tu número!$"
 
 Route14_Text_CarterRematchIntro:
-	.string "I've found even more rare starters\n"
-	.string "to show off! Battle me!$"
+	.string "He hallado iniciales aún más raros\n"
+	.string "¡para presumir! ¡Lucha conmigo!$"
 
 Route14_Text_CarterRematchDefeat:
-	.string "My precious starters…$"
+	.string "Mis preciosos iniciales…$"
 
 Route14_Text_CarterPostRematch:
-	.string "There are so many starters from\n"
-	.string "different regions to collect!$"
+	.string "¡Hay tantos iniciales de varias\n"
+	.string "regiones para coleccionar!$"
 
 Route14_Text_BirdKeeperRoySeen:
-	.string "My dream is to fly with my beloved\n"
+	.string "Mi sueño es volar con mi querido\n"
 	.string "POKéMON ave.$"
 
 Route14_Text_BirdKeeperRoyBeaten:
 	.string "Puedo soñar, pero no puedo volar…$"
 
 Route14_Text_BirdKeeperRoyAfterBattle:
-	.string "You have POKéMON that know the HM\n"
-	.string "move FLY, don't you? I envy you.$"
+	.string "Tienes POKéMON que saben el movimiento\n"
+	.string "MO VUELO, ¿verdad? Te envidio.$"
 
 Route14_EventScript_Pidgeotto::
 	lockall

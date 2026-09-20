@@ -359,13 +359,13 @@ Route36_Text_AlanPostRematch:
 	.string "leer libros.$"
 
 Route36_Text_AlanHasItem:
-	.string "Hey! I found something\n"
+	.string "¡Oye! Encontré algo brillante\n"
 	.string "¡mientras estudias!\p"
-	.string "Here, you can have it!$"
+	.string "¡Toma, puedes quedártelo!$"
 
 Route36_Text_AlanGaveItem:
-	.string "I'll let you know if I find\n"
-	.string "anything else!$"
+	.string "¡Te avisaré si encuentro\n"
+	.string "algo más!$"
 
 Route36_Text_AlanNoRoom:
 	.string "Hmm, tu MOCHILA está llena.\p"

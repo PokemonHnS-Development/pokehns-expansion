@@ -298,96 +298,96 @@ SlateportCity_PokemonFanClub_Text_HowIsYourPokemonGrowing:
 
 SlateportCity_PokemonFanClub_Text_HmHmISee:
 	.string "Hm, hm…\n"
-	.string "I see…$"
+	.string "Ya veo...$"
 
 SlateportCity_PokemonFanClub_Text_GiveMonMorePokeblocks:
-	.string "Hmmm… It's not bad, but it's not\n"
-	.string "good, either…\p"
-	.string "You, the TRAINER, must put more\n"
-	.string "effort into raising this POKéMON!\p"
-	.string "For instance, may I suggest that\n"
-	.string "you give it more {POKEBLOCK}S?$"
+	.string "Hmmm... No está mal, pero tampoco\n"
+	.string "está bien...\p"
+	.string "Tú, ENTRENADOR, debes esforzarte\n"
+	.string "más al criar a este POKéMON!\p"
+	.string "Por ejemplo, ¿qué tal si le das\n"
+	.string "más {POKEBLOCK}S?$"
 
 SlateportCity_PokemonFanClub_Text_NoSpaceForReward:
 	.string "Oh, my…\p"
-	.string "Your POKéMON is growing quite well,\n"
-	.string "so you deserve a reward.\p"
-	.string "Unfortunately, you have no space for\n"
-	.string "this in your BAG.$"
+	.string "Tu POKéMON crece muy bien,\n"
+	.string "así que mereces un premio.\p"
+	.string "Lamentablemente, no tienes espacio\n"
+	.string "en tu MOCHILA para esto.$"
 
 SlateportCity_PokemonFanClub_Text_MonMostImpressiveGiveItThis:
-	.string "Your {STR_VAR_1}, it is growing in\n"
-	.string "a most impressive manner!\l"
-	.string "It is one fine specimen!\p"
-	.string "But! If you were to give it this,\n"
-	.string "it would grow even better! Indeed!$"
+	.string "Tu {STR_VAR_1} está creciendo en\n"
+	.string "¡de una manera impresionante!\l"
+	.string "¡Es un ejemplar magnífico!\p"
+	.string "¡Pero! Si le dieras esto,\n"
+	.string "¡crecería aún mejor! ¡Así es!$"
 
 SlateportCity_PokemonFanClub_Text_ExplainRedScarf:
-	.string "Let a POKéMON hold that RED SCARF.\p"
-	.string "Everyone will recognize the coolness\n"
-	.string "of that POKéMON!$"
+	.string "Que un POKéMON lleve el PAÑUELO ROJO.\p"
+	.string "¡Todos notarán lo genial que es\n"
+	.string "ese POKéMON!$"
 
 SlateportCity_PokemonFanClub_Text_ExplainBlueScarf:
-	.string "Let a POKéMON hold that BLUE SCARF.\p"
-	.string "Its beauty will be accentuated much\n"
-	.string "more than now!$"
+	.string "Que un POKéMON lleve el PAÑUELO AZUL.\p"
+	.string "¡Su belleza resaltará mucho\n"
+	.string "más que ahora!$"
 
 SlateportCity_PokemonFanClub_Text_ExplainPinkScarf:
-	.string "Let a POKéMON hold that PINK SCARF.\p"
-	.string "It will draw out the cuteness of\n"
-	.string "the POKéMON some more!$"
+	.string "Que un POKéMON lleve el PAÑUELO ROSA.\p"
+	.string "Resaltará la ternura de\n"
+	.string "¡más a tu POKéMON!$"
 
 SlateportCity_PokemonFanClub_Text_ExplainGreenScarf:
-	.string "Let a POKéMON hold that GREEN SCARF.\p"
-	.string "That will enhance the\n"
-	.string "smartness of POKéMON!$"
+	.string "Que un POKéMON lleve el PAÑUELO VERDE.\p"
+	.string "Eso mejorará la\n"
+	.string "inteligencia del POKéMON!$"
 
 SlateportCity_PokemonFanClub_Text_ExplainYellowScarf:
 	.string "Let a POKéMON hold that YELLOW SCARF.\p"
-	.string "It will bolster your POKéMON's\n"
-	.string "toughness so much more!$"
+	.string "¡Aumentará mucho más la\n"
+	.string "resistencia de tu POKéMON!$"
 
 SlateportCity_PokemonFanClub_Text_NothingElseToGiveYou:
-	.string "I'm sorry, but I've nothing else to\n"
-	.string "give you! None at all!\p"
-	.string "After all, you're blessed with the gift\n"
-	.string "of raising POKéMON without resorting\l"
-	.string "to any items!$"
+	.string "Lo siento, ¡pero ya no tengo nada más\n"
+	.string "que darte! ¡Nada de nada!\p"
+	.string "Después de todo, tienes el don de\n"
+	.string "criar POKéMON sin tener que usar\l"
+	.string "ningún objeto!$"
 
 SlateportCity_PokemonFanClub_Text_ShowMePokemonThatLoveYou:
-	.string "I love seeing POKéMON that love\n"
-	.string "their TRAINERS.\p"
-	.string "POKéMON are very sensitive to\n"
-	.string "the feelings of their TRAINERS.\p"
-	.string "If you treat your POKéMON with love\n"
-	.string "and care, they'll love you back.\p"
-	.string "When your POKéMON grow to love you,\n"
-	.string "please come show me.$"
+	.string "Amo ver POKéMON que aman a\n"
+	.string "sus ENTRENADORES.\p"
+	.string "Los POKéMON son muy sensibles a\n"
+	.string "los sentimientos de sus ENTRENADORES.\p"
+	.string "Si tratas a tus POKéMON con amor\n"
+	.string "y cuidado, ellos te amarán.\p"
+	.string "Cuando tus POKéMON lleguen a amarte,\n"
+	.string "por favor, ven a mostrármelo.$"
 
 SlateportCity_PokemonFanClub_Text_PokemonAdoresYou:
-	.string "Your POKéMON really adores you.\p"
-	.string "For you, a most compassionate\n"
-	.string "TRAINER, a gift from the FAN CLUB!$"
+	.string "Tu POKéMON realmente te adora.\p"
+	.string "Para ti, un ENTRENADOR muy\n"
+	.string "compasivo, ¡un regalo del FAN CLUB!$"
 
 SlateportCity_PokemonFanClub_Text_TreatPokemonWithLove:
-	.string "POKéMON are very sensitive to\n"
-	.string "the feelings of their TRAINERS.\p"
-	.string "If you treat your POKéMON with love\n"
-	.string "and care, they'll love you back.$"
+	.string "Los POKéMON son muy sensibles a\n"
+	.string "los sentimientos de sus ENTRENADORES.\p"
+	.string "Si tratas a tus POKéMON con amor\n"
+	.string "y cuidado, ellos te amarán.$"
 
 SlateportCity_PokemonFanClub_Text_PokemonDontLikeFainting:
-	.string "If you keep letting a POKéMON faint\n"
-	.string "in battle, it'll come to resent it.\p"
-	.string "Soon, it will become less trusting\n"
-	.string "of the TRAINER.\p"
-	.string "In other words, it certainly won't\n"
-	.string "like you very much.$"
+	.string "Si dejas que un POKéMON se debilite\n"
+	.string "en batalla, te guardará rencor.\p"
+	.string "Pronto confiará mucho menos\n"
+	.string "en su ENTRENADOR.\p"
+	.string "En otras palabras, seguro que no\n"
+	.string "le gustarás mucho.$"
 
 SlateportCity_PokemonFanClub_Text_MonEnjoyedProtein:
-	.string "Do POKéMON enjoy having items used\n"
-	.string "on them?\p"
-	.string "Mine acted really happy when I gave\n"
-	.string "it some PROTEIN.$"
+	.string "¿A los POKéMON les gusta que usen\n"
+	.string "objetos con ellos?\p"
+	.string "El mío se puso muy feliz cuando le\n"
+	.string "di PROTEÍNA.$"
 
 SlateportCity_PokemonFanClub_Text_Skitty:
 	.string "SKITTY: Fffnyaaaah…$"

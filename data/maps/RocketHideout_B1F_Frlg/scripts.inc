@@ -86,7 +86,7 @@ RocketHideout_B1F_Text_Grunt2PostBattle::
 	.string "this, brat!$"
 
 RocketHideout_B1F_Text_Grunt3Intro::
-	.string "Intruder alert!$"
+	.string "¡Alerta de intruso!$"
 
 RocketHideout_B1F_Text_Grunt3Defeat::
 	.string "¡No puedo hacerlo!$"

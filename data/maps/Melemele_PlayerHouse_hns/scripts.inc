@@ -556,7 +556,7 @@ Alola_Melemele_SamsonOakVillaIntro_Trigger_Text_2:
 	.string "Pareces muy capaz.\p"
 	.string "Serías perfecto para ayudarme en mi\n"
 	.string "estudio de las ISLAS ALOLA!\p"
-	.string "Explore all the ISLES have to offer,\n"
+	.string "Explora todo lo que ofrecen las ISLAS,\n"
 	.string "y si encuentras POKéMON conocidos\l"
 	.string "que se parezcan a los de KANTO...\l"
 	.string "¡vuelve y muéstrame tu POKéDEX!\p"

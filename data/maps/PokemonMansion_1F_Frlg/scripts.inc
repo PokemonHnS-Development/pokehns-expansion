@@ -47,7 +47,7 @@ PokemonMansion_1F_Text_JohnsonIntro::
 	.string "I thought you were a ghost.$"
 
 PokemonMansion_1F_Text_JohnsonDefeat::
-	.string "Tch!\n"
+	.string "¡Tch!\n"
 	.string "I can't get any wins.$"
 
 PokemonMansion_1F_Text_JohnsonPostBattle::

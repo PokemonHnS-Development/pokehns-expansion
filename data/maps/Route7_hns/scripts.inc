@@ -17,7 +17,7 @@ Route7_EventScript_Door::
 
 Route7_Text_UndergroundPathSign:
 	.string "¿Qué es este volante?\p"
-	.string "… Uncouth trainers have been\n"
+	.string "… Entrenadores rudos han\n"
 	.string "estado luchando en el\l"
 	.string "CAMINO SUBTERRÁNEO.\p"
 	.string "Por las quejas de los\n"

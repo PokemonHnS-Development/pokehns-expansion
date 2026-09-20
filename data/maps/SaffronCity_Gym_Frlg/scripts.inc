@@ -164,7 +164,7 @@ SaffronCity_Gym_Text_JohanPostBattle::
 
 SaffronCity_Gym_Text_StacyIntro::
 	.string "POKéMON take on the appearance of\n"
-	.string "their TRAINERS.\p"
+	.string "sus ENTRENADORES.\p"
 	.string "Your POKéMON must be tough, then!$"
 
 SaffronCity_Gym_Text_StacyDefeat::

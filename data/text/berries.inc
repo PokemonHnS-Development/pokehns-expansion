@@ -16,195 +16,195 @@ Route104_Text_TrainersOftenMakeMonHoldBerries:
 	.string "Los ENTRENADORES suelen hacer que\n"
 	.string "comer BAYAS.\p"
 	.string "Tú decides si quieres cultivar BAYAS\n"
-	.string "or use them.$"
+	.string "o usarlas.$"
 
 Route111_Text_WateredPlantsEveryDayTakeBerry:
-	.string "I watered the plants every day.\n"
-	.string "They grew lots of flowers.\p"
-	.string "And they gave me lots of BERRIES, too.\p"
+	.string "Regué las plantas cada día.\n"
+	.string "Crecieron muchas flores.\p"
+	.string "Y también me dieron muchas BAYAS.\p"
 	.string "¡Aquí tienes!\n"
-	.string "You can have it!$"
+	.string "¡Puedes quedártela!$"
 
 Route111_Text_GoingToTryToMakeDifferentColorBerries:
-	.string "I'm going to try really hard and make\n"
-	.string "BERRIES in different colors.\p"
-	.string "I hope you try hard, too!$"
+	.string "Me esforzaré mucho para cultivar\n"
+	.string "BAYAS de diferentes colores.\p"
+	.string "¡Espero que tú también te esfuerces!$"
 
 Route111_Text_WhatColorBerriesToLookForToday:
-	.string "I wonder what color BERRIES I'll look\n"
-	.string "for today?$"
+	.string "¿De qué color serán las BAYAS que\n"
+	.string "buscaré hoy?$"
 
 Route114_Text_LoveUsingBerryCrushShareBerry:
-	.string "I love using the BERRY CRUSH machine,\n"
-	.string "so I'm collecting BERRIES.\p"
-	.string "I'll share one with you, if you'd like.$"
+	.string "Amo usar la máquina de BAYAS,\n"
+	.string "así que estoy juntando BAYAS.\p"
+	.string "Compartiré una contigo, si quieres.$"
 
 Route114_Text_TryBerryCrushWithFriends:
-	.string "You should try the BERRY CRUSH\n"
-	.string "machine with your friends.$"
+	.string "Deberías probar la máquina\n"
+	.string "BERRY CRUSH con tus amigos.$"
 
 Route114_Text_FunToThinkAboutBerries:
-	.string "Which BERRY should be planted?\n"
-	.string "Should you use or hoard BERRIES?\p"
-	.string "It's fun to think about.$"
+	.string "¿Qué BAYA debería plantarse?\n"
+	.string "¿Usar o guardar las BAYAS?\p"
+	.string "Es divertido pensarlo.$"
 
 Route120_Text_BerriesExpressionOfLoveIsntIt:
-	.string "BERRIES grow by soaking up sunlight.\p"
-	.string "We help the BERRIES grow by watering\n"
-	.string "them regularly.\p"
-	.string "It's an expression of love, isn't it?$"
+	.string "Las BAYAS crecen con la luz solar.\p"
+	.string "Ayudamos a las BAYAS regándolas\n"
+	.string "con regularidad.\p"
+	.string "Es una expresión de amor, ¿no?$"
 
 Route120_Text_YesYouUnderstand:
-	.string "Yes, yes.\n"
-	.string "You understand what I mean.\p"
-	.string "You should take this.$"
+	.string "Sí, sí.\n"
+	.string "Entiendes a qué me refiero.\p"
+	.string "Deberías llevarte esto.$"
 
 Route120_Text_MakeYourOwnImpressions:
-	.string "Oh… But it is important to make your\n"
-	.string "own impressions, I guess…\p"
-	.string "You can have this.$"
+	.string "Oh... Pero creo que es importante\n"
+	.string "que formes tu propia opinión...\p"
+	.string "Puedes quedarte con esto.$"
 
 Route120_Text_BerryIsRareRaiseItWithCare:
-	.string "I think that BERRY is rare.\n"
-	.string "I hope you raise it with loving care.$"
+	.string "Creo que esa BAYA es rara.\n"
+	.string "Espero que la cuides con cariño.$"
 
 Route120_Text_IllGetMoreBerriesFromBerryMaster:
-	.string "I'll get more BERRIES from\n"
-	.string "the BERRY MASTER.$"
+	.string "Conseguiré más BAYAS del\n"
+	.string "MAESTRO BAYA.$"
 
 LilycoveCity_Text_BerrySuitsYou:
-	.string "When it gets right down to it…\p"
-	.string "The same way suits suit me perfectly,\n"
-	.string "a crisp breeze suits the sea.\p"
-	.string "And you, a BERRY suits you to a “T”…\p"
-	.string "Why should that be so?$"
+	.string "Cuando lo pienso bien...\p"
+	.string "Así mismo me parece perfecto,\n"
+	.string "una brisa fresca va con el mar.\p"
+	.string "Y a ti, una BAYA te queda genial...\p"
+	.string "¿Por qué sería así?$"
 
 LilycoveCity_Text_BecauseYoureTrainer:
-	.string "When it gets right down to it…\p"
-	.string "It's because you're a TRAINER!$"
+	.string "Cuando lo pienso bien...\p"
+	.string "¡Es porque eres ENTRENADOR!$"
 
 LilycoveCity_Text_PokeblocksSuitPokemon:
-	.string "When it gets right down to it…\p"
-	.string "The way dignified simplicity suits me,\n"
-	.string "{POKEBLOCK}S perfectly suit POKéMON.$"
+	.string "Cuando lo pienso bien...\p"
+	.string "La sencillez me sienta bien,\n"
+	.string "y los {POKEBLOCK} a los POKéMON.$"
 
 Route123_BerryMastersHouse_Text_YoureDeservingOfBerry:
-	.string "You may call me the BERRY MASTER.\p"
-	.string "I dream of filling the world with\n"
-	.string "beautiful flowers, so I raise BERRIES\l"
-	.string "and hand them out to everyone.\p"
-	.string "You're deserving of one!$"
+	.string "Puedes llamarme el MAESTRO BAYA.\p"
+	.string "Sueño con llenar el mundo de\n"
+	.string "bellas flores, así que cultivo BAYAS\l"
+	.string "y las reparto a todo el mundo.\p"
+	.string "¡Tú te mereces una!$"
 
 Route123_BerryMastersHouse_Text_WhyBeStingyTakeAnother:
-	.string "Why be stingy?\n"
-	.string "Take another!$"
+	.string "¿Para qué ser tacaño?\n"
+	.string "¡Toma otra!$"
 
 Route123_BerryMastersHouse_Text_VisitPrettyPetalFlowerShop:
-	.string "Be sure to visit the PRETTY PETAL\n"
-	.string "flower shop near RUSTBORO.\p"
-	.string "Let flowers fill the world!$"
+	.string "No olvides visitar el PÉTALO BELLO\n"
+	.string "floristería cerca de FUNDA.\p"
+	.string "¡Que las flores llenen el mundo!$"
 
 Route123_BerryMastersHouse_Text_DoneForToday:
-	.string "I'm done for today.\n"
-	.string "Come again another day.\p"
-	.string "Let flowers fill the world!$"
+	.string "Ya terminé por hoy.\n"
+	.string "Vuelve otro día.\p"
+	.string "¡Que las flores llenen el mundo!$"
 
 Route123_BerryMastersHouse_Text_HeardAGoodSayingLately:
-	.string "The way my husband grows BERRIES,\n"
-	.string "oh, he's the best in the world.\p"
-	.string "He makes me proud, that he does.\p"
-	.string "Incidentally, child, have you heard\n"
-	.string "a good saying lately?$"
+	.string "La forma en que mi esposo cultiva\n"
+	.string "BAYAS... ¡es el mejor del mundo!\p"
+	.string "Me hace sentir muy orgullosa.\p"
+	.string "Por cierto, niño, ¿has oído\n"
+	.string "algún buen dicho últimamente?$"
 
 Route123_BerryMastersHouse_Text_InspirationalTakeThis:
-	.string "Ah! What a remarkable saying!\n"
-	.string "Inspirational, it is!\p"
+	.string "¡Ah! ¡Qué dicho tan notable!\n"
+	.string "¡Es muy inspirador!\p"
 	.string "Quiero que tengas esto.$"
 
 Route123_BerryMastersHouse_Text_GoodSayingTakeThis:
-	.string "Oh! A good saying it is.\n"
-	.string "You're quite remarkable.\p"
+	.string "¡Oh! Es un buen dicho.\n"
+	.string "Eres alguien admirable.\p"
 	.string "Quiero que tengas esto.$"
 
 Route123_BerryMastersHouse_Text_JoyNeverGoesOutOfMyLife:
-	.string "Our four grandchildren should become\n"
-	.string "more accomplished than my husband.\p"
-	.string "Joy never goes out of my life!$"
+	.string "Nuestros cuatro nietos deben ser\n"
+	.string "más capaces que mi esposo.\p"
+	.string "¡La alegría nunca me abandona!$"
 
 Route123_BerryMastersHouse_Text_Ah:
 	.string "Ah…$"
 
 Route104_PrettyPetalFlowerShop_Text_ThisIsPrettyPetalFlowerShop:
 	.string "¡Hola!\p"
-	.string "This is the PRETTY PETAL flower shop.\n"
-	.string "Spreading flowers all over the world!$"
+	.string "Esta es la floristería PÉTALO BELLO.\n"
+	.string "¡Llevando flores por todo el mundo!$"
 
 Route104_PrettyPetalFlowerShop_Text_LearnAboutBerries:
-	.string "{PLAYER}{KUN}, would you like to learn about\n"
-	.string "BERRIES?$"
+	.string "{PLAYER}{KUN}, ¿quieres aprender sobre\n"
+	.string "las BAYAS?$"
 
 Route104_PrettyPetalFlowerShop_Text_IntroLearnAboutBerries:
-	.string "Your name is?\p"
+	.string "¿Cómo te llamas?\p"
 	.string "{PLAYER}{KUN}.\n"
-	.string "That's a nice name.\p"
-	.string "{PLAYER}{KUN}, would you like to learn about\n"
-	.string "BERRIES?$"
+	.string "Es un nombre muy lindo.\p"
+	.string "{PLAYER}{KUN}, ¿quieres aprender sobre\n"
+	.string "las BAYAS?$"
 
 Route104_PrettyPetalFlowerShop_Text_BerriesExplanation:
-	.string "BERRIES grow on trees that thrive\n"
-	.string "only in soft, loamy soil.\p"
-	.string "If you take some BERRIES, be sure to\n"
-	.string "plant one in the loamy soil again.\p"
-	.string "A planted BERRY will soon sprout,\n"
-	.string "grow into a plant, flower beautifully,\l"
-	.string "then grow BERRIES again.\p"
-	.string "I want to see the whole wide world\n"
-	.string "filled with beautiful flowers.\l"
-	.string "That's my dream.\p"
-	.string "Please help me, {PLAYER}{KUN}. Plant BERRIES\n"
-	.string "and bring more flowers into the world.$"
+	.string "Las BAYAS crecen en árboles que\n"
+	.string "solo prosperan en suelos limosos.\p"
+	.string "Si tomas algunas BAYAS, asegúrate\n"
+	.string "de plantar una en tierra fértil.\p"
+	.string "Una BAYA plantada pronto brotará,\n"
+	.string "crecerá, florecerá hermosamente\l"
+	.string "y luego dará más BAYAS.\p"
+	.string "Quiero ver el mundo entero\n"
+	.string "lleno de flores hermosas.\l"
+	.string "Ese es mi sueño.\p"
+	.string "Ayúdame, {PLAYER}{KUN}. Planta BAYAS\n"
+	.string "y trae más flores al mundo.$"
 
 Route104_PrettyPetalFlowerShop_Text_FlowersBringHappiness:
-	.string "Flowers bring so much happiness to\n"
-	.string "people, don't they?$"
+	.string "Las flores dan mucha felicidad a\n"
+	.string "la gente, ¿no crees?$"
 
 Route104_PrettyPetalFlowerShop_Text_YouCanHaveThis:
 	.string "¡Hola!\p"
-	.string "The more attention you give to flowers,\n"
-	.string "the more beautifully they bloom.\p"
-	.string "You'll like tending flowers. I'm sure\n"
-	.string "of it. You can have this.$"
+	.string "Cuanto más cuides las flores,\n"
+	.string "más bellas florecerán.\p"
+	.string "Te gustará cuidarlas. Estoy\n"
+	.string "seguro. Toma esto.$"
 
 Route104_PrettyPetalFlowerShop_Text_WailmerPailExplanation:
-	.string "While BERRY plants are growing,\n"
-	.string "water them with the WAILMER PAIL.\p"
-	.string "Oh, another thing.\p"
-	.string "If you don't pick BERRIES for a while,\n"
-	.string "they'll drop off onto the ground.\l"
-	.string "But they'll sprout again.\p"
-	.string "Isn't that awesome?\n"
-	.string "It's like they have the will to live.$"
+	.string "Mientras crecen las BAYAS,\n"
+	.string "riégalas con el CUBO WAILMER.\p"
+	.string "Ah, otra cosa.\p"
+	.string "Si no recoges las BAYAS pronto,\n"
+	.string "caerán al suelo.\l"
+	.string "Pero volverán a brotar.\p"
+	.string "¿No es increíble?\n"
+	.string "Es como si quisieran vivir.$"
 
 Route104_PrettyPetalFlowerShop_Text_ImGrowingFlowers:
-	.string "I'm trying to be like my big sisters.\n"
-	.string "I'm growing flowers, too!\p"
+	.string "Quiero ser como mis hermanas.\n"
+	.string "¡Yo también cultivo flores!\p"
 	.string "¡Aquí tienes!\n"
-	.string "It's for you!$"
+	.string "¡Esto es para ti!$"
 
 Route104_PrettyPetalFlowerShop_Text_MachineMixesBerries:
-	.string "You can plant a BERRY and grow it big,\n"
-	.string "or you can make a POKéMON hold it.\p"
-	.string "But now they have a machine that mixes\n"
-	.string "up different BERRIES and makes candies\l"
-	.string "POKéMON.\p"
-	.string "I want some candy, too.$"
+	.string "Puedes plantar una BAYA y hacerla\n"
+	.string "crecer, o dársela a un POKéMON.\p"
+	.string "Pero ahora hay una máquina que mezcla\n"
+	.string "varias BAYAS y hace caramelos.\l"
+	.string "POKéMON planta.\p"
+	.string "¡Yo también quiero caramelos!$"
 
 SootopolisCity_Text_NameIsKiriHaveOneOfThese:
-	.string "Hi, what's your name?\p"
+	.string "Hola, ¿cómo te llamas?\p"
 	.string "… … …  … … …  … … …\n"
-	.string "Okay. That's nice!\p"
-	.string "My name is KIRI.\p"
-	.string "My mommy and daddy named me that so\n"
+	.string "Vale. ¡Qué lindo!\p"
+	.string "Mi nombre es KIRI.\p"
+	.string "Mis papás me pusieron ese nombre para\n"
 	.string "Crecería sano y bondadoso.\l"
 	.string "Eso es lo que deseaban.\p"
 	.string "Puedes quedarte con uno.$"

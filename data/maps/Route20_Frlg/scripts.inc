@@ -131,7 +131,7 @@ Route20_Text_MissyPostBattle::
 
 Route20_Text_MelissaIntro::
 	.string "En CANELA, al oeste, hay un LAB\n"
-	.string "POKéMON.\p"
+	.string "POKéMON planta.\p"
 	.string "Mi papá trabaja allí.$"
 
 Route20_Text_MelissaDefeat::

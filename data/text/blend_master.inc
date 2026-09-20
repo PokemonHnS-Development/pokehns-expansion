@@ -48,7 +48,7 @@ BerryBlender_Text_BlendMasterNoPokeblockCase:
 	.string "¡Parece que no tienes el\n"
 	.string "ESTUCHE {POKEBLOCK}!\p"
 	.string "¡Estaré aquí todo el día!\n"
-	.string "Obtain the {POKEBLOCK} CASE and hurry back!$"
+	.string "¡Toma el ESTUCHE {POKEBLOCK} y vuelve!$"
 
 BerryBlender_Text_BlendMasterPokeblockCaseFull:
 	.string "¡Hmmm!\p"

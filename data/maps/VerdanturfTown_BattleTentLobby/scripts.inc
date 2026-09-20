@@ -359,23 +359,23 @@ VerdanturfTown_BattleTentLobby_Text_AttractionMutual:
 	.string "quiero que lo hagan!$"
 
 VerdanturfTown_BattleTentLobby_Text_TaughtWhatKindsOfMoves:
-	.string "What kind of moves have you taught\n"
+	.string "¿Qué tipo de movimientos has\n"
 	.string "tus POKéMON?\p"
-	.string "I think you would give yourself\n"
-	.string "an advantage if they knew how to\l"
-	.string "heal or protect themselves.$"
+	.string "enseñado? Creo que tendrías\n"
+	.string "ventaja si supieran cómo\l"
+	.string "curarse o protegerse.$"
 
 VerdanturfTown_BattleTentLobby_Text_ScottCanMeetToughTrainers:
-	.string "SCOTT: Hey there, {PLAYER}{KUN}!\n"
-	.string "I thought I might see you here.\p"
-	.string "A BATTLE TENT's a place where\n"
-	.string "you can meet tough TRAINERS.\p"
-	.string "It doesn't matter what the rules are,\n"
-	.string "or how battles are waged, either.\p"
-	.string "{PLAYER}{KUN}, I expect you to do\n"
-	.string "the best you can!$"
+	.string "SCOTT: ¡Hola, {PLAYER}{KUN}!\n"
+	.string "Pensé que te vería por aquí.\p"
+	.string "Una TIENDA DE BATALLA es un lugar\n"
+	.string "donde hallar ENTRENADORES fuertes.\p"
+	.string "No importan las reglas,\n"
+	.string "ni cómo se luchen las batallas.\p"
+	.string "{PLAYER}{KUN}, ¡espero que des\n"
+	.string "lo mejor de ti!$"
 
 VerdanturfTown_BattleTentLobby_Text_ScottVisitRegularly:
-	.string "SCOTT: I visit here regularly in hopes\n"
-	.string "of seeing tough TRAINERS in action\l"
-	.string "in whatever the situation.$"
+	.string "SCOTT: Vengo aquí seguido con la\n"
+	.string "esperanza de ver ENTRENADORES\l"
+	.string "fuertes en cualquier situación.$"

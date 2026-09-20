@@ -6,7 +6,7 @@ FallarborTown_BattleTentLobby_Text_WelcomeToBattleTent:
 #else
 FallarborTown_BattleTentLobby_Text_WelcomeToBattleTent:
 	.string "Bienvenido a la CARPA DE BATALLA\n"
-	.string "FALLARBOR SITE!\p"
+	.string "¡SITIO FALLARBOR!\p"
 	.string "¡Soy tu guía del Torneo Set KO!$"
 #endif
 

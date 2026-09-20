@@ -133,20 +133,20 @@ Route42_Movement_Eusine2:
 
 Route42_Text_EusineAdmireSuicune:
 	.string "EUSINE: SUICUNE...\n"
-	.string "How brave it is!\p"
-	.string "How refreshing it is!\n"
-	.string "How beautiful it is!\p"
-	.string "And how quickly it moves!$"
+	.string "¡Qué valiente es!\p"
+	.string "¡Qué refrescante es!\n"
+	.string "¡Qué hermoso es!\p"
+	.string "¡Y qué rápido se mueve!$"
 
 Route42_Text_EusineJealous:
 	.string "¡{PLAYER}!\p"
-	.string "You seem to be around where\n"
-	.string "SUICUNE would appear.\p"
-	.string "Well, that's OK.\l"
-	.string "My desire to search for\n"
-	.string "SUICUNE is far beyond yours...\p"
-	.string "My grandpa was... quite into\n"
-	.string "myths.\p"
+	.string "Parece que estás donde\n"
+	.string "SUICUNE podría aparecer.\p"
+	.string "Bueno, no importa.\l"
+	.string "Mi deseo de buscar a\n"
+	.string "SUICUNE es mayor que el tuyo...\p"
+	.string "Mi abuelo... estaba muy\n"
+	.string "interesado en los mitos.\p"
 	.string "He oído muchísimas historias\n"
 	.string "sobre SUICUNE por él.$"
 
@@ -296,9 +296,9 @@ Route42_Text_TullyPostRematch:
 	.string "¡Es lo mejor de pescar!$"
 
 Route42_Text_TullyHasItem:
-	.string "Hey! I found something\n"
+	.string "¡Oye! Encontré algo brillante\n"
 	.string "¡mientras pescaba!\p"
-	.string "Here, you can have it!$"
+	.string "¡Toma, puedes quedártelo!$"
 
 Route42_Text_TullyGaveItem:
 	.string "Te avisaré si\n"

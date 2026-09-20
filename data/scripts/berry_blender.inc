@@ -151,13 +151,13 @@ BerryBlender_Text_DontHaveAnyBerries3:
 
 BerryBlender_Text_PokeblockCaseIsFull3:
 	.string "Tu ESTUCHE {POKEBLOCK} está lleno,\n"
-	.string "it looks like.\p"
+	.string "parece ser.\p"
 	.string "Usa algunos {POKEBLOCK}S\n"
 	.string "y luego regresa.$"
 
 BerryBlender_Text_DontHavePokeblockCase3:
 	.string "Aún no tienes un ESTUCHE de {POKEBLOCK}\n"
-	.string "yet, it looks like.\p"
+	.string "aún así, parece ser.\p"
 	.string "Necesitas un ESTUCHE de {POKEBLOCK} antes\n"
 	.string "regreses.$"
 

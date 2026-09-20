@@ -173,25 +173,25 @@ Route29_Text_OldManExplanation:
 	.string "¡Luego, lanza una BALL de tu\n"
 	.string "mochila! Cualquier BALL sirve.\p"
 	.string "Si quieres aprender más,\n"
-	.string "go to the ACADEMY in VIOLET CITY!\p"
-	.string "The students there know a lot\n"
-	.string "about POKéMON.$"
+	.string "¡Ve a la ACADEMIA de CIUDAD MALVA!\p"
+	.string "Los alumnos de allí saben mucho\n"
+	.string "sobre los POKéMON.$"
 
 Route29_Text_OldManDeclined:
-	.string "Oh. Fine, then.\p"
-	.string "Check every route to find\n"
-	.string "different types of POKéMON.\p"
-	.string "Your POKéDEX shows where you can\n"
-	.string "find them too!\p"
+	.string "Oh. Está bien, entonces.\p"
+	.string "Revisa cada ruta para encontrar\n"
+	.string "distintos tipos de POKéMON.\p"
+	.string "Tu POKéDEX también muestra dónde\n"
+	.string "puedes encontrarlos!\p"
 	.string "Si quieres aprender más,\n"
-	.string "go to the ACADEMY in VIOLET CITY!\p"
-	.string "The students know a lot about\n"
+	.string "¡Ve a la ACADEMIA de CIUDAD MALVA!\p"
+	.string "Los alumnos saben mucho sobre\n"
 	.string "POKéMON.$"
 
 Route29_Text_Youngster:
-	.string "Yo. How are your POKéMON?\p"
-	.string "If they're weak and not ready\n"
-	.string "for battle, keep out of the grass.$"
+	.string "Hola. ¿Cómo están tus POKéMON?\p"
+	.string "Si están débiles y no listos\n"
+	.string "para luchar, evita la hierba.$"
 
 Route29_Text_Lass:
 	.string "¿Ves esos salientes?\n"

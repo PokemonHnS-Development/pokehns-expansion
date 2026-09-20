@@ -16,8 +16,8 @@ SevenIsland_TanobyRuins_Text_BrandonPostBattle::
 	.string "why it was built in the first place.$"
 
 SevenIsland_TanobyRuins_Text_BenjaminIntro::
-	.string "A mystic POKéMON is said to sleep\n"
-	.string "inside here.$"
+	.string "Dicen que un POKéMON místico duerme\n"
+	.string "aquí adentro.$"
 
 SevenIsland_TanobyRuins_Text_BenjaminDefeat::
 	.string "I'm not much good in battle.$"
@@ -42,7 +42,7 @@ SevenIsland_TanobyRuins_Text_EdnaPostBattle::
 	.string "So CLIFFORD brought me here.$"
 
 SevenIsland_TanobyRuins_Text_CliffordIntro::
-	.string "Today, in addition to our lesson,\n"
+	.string "Hoy, además de nuestra lección,\n"
 	.string "we came to see the chamber.$"
 
 SevenIsland_TanobyRuins_Text_CliffordDefeat::

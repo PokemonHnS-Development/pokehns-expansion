@@ -75,7 +75,7 @@ Route19_Text_SwimmermHaroldBeaten:
 	.string "Glub…$"
 
 Route19_Text_SwimmermHaroldAfterBattle:
-	.string "At night, the sea turns black. It\n"
+	.string "De noche, el mar se vuelve negro.\n"
 	.string "Sientes que te tragará.$"
 
 Route19_Text_SwimmermTuckerSeen:

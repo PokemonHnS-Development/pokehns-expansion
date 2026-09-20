@@ -32,7 +32,7 @@ MoveTutor_Text_RolloutTeach:
 	.string "por ese camino.\p"
 	.string "¿Crees que tus POKéMON también\n"
 	.string "querrán rodar?\p"
-	.string "I can teach one the move ROLLOUT\n"
+	.string "Puedo enseñar el movimiento PLOMO\n"
 	.string "si así lo deseas.$"
 
 MoveTutor_Text_RolloutDeclined:
@@ -133,69 +133,69 @@ MoveTutor_Text_SleepTalkWhichMon:
 
 MoveTutor_Text_SleepTalkTaught:
 	.string "Ni una sola vez he logrado hacer\n"
-	.string "coin trick right.\p"
+	.string "truco de monedas.\p"
 	.string "Sería feliz si lo lograra hacer\n"
 	.string "aunque estuviera en SONÁMBULO…$"
 
 MoveTutor_Text_SubstituteTeach:
 	.string "Cuando veo el mundo desde arriba\n"
-	.string "here on the roof…\p"
-	.string "I think about how nice it would be\n"
-	.string "if there were more than just one me\l"
-	.string "so I could enjoy all sorts of lives.\p"
-	.string "Of course it's not possible.\n"
+	.string "aquí en el techo...\p"
+	.string "Pienso en lo lindo que sería\n"
+	.string "si hubiera más de un yo\l"
+	.string "para disfrutar todo tipo de vidas.\p"
+	.string "Claro que no es posible.\n"
 	.string "Jejeje…\p"
-	.string "I know! Would you be interested in\n"
-	.string "having a POKéMON learn SUBSTITUTE?$"
+	.string "¡Ya sé! ¿Te interesaría que\n"
+	.string "un POKéMON aprenda SUSTITUTO?$"
 
 MoveTutor_Text_SubstituteDeclined:
 	.string "Oh, no?\p"
-	.string "A POKéMON can make a copy of\n"
-	.string "itself using it, you know.$"
+	.string "Un POKéMON puede hacer una copia\n"
+	.string "de sí mismo usándolo, ¿sabes?$"
 
 MoveTutor_Text_SubstituteWhichMon:
 	.string "Jejeje…\n"
-	.string "Which POKéMON do you want me to\l"
-	.string "teach SUBSTITUTE?$"
+	.string "¿A qué POKéMON quieres que se lo\l"
+	.string "¿Enseñar SUSTITUTO?$"
 
 MoveTutor_Text_SubstituteTaught:
-	.string "We human beings should enjoy our\n"
-	.string "own lives to the utmost!\p"
-	.string "I hope you'll get that way, too!$"
+	.string "¡Los humanos debemos disfrutar\n"
+	.string "nuestras vidas al máximo!\p"
+	.string "¡Espero que tú también lo hagas!$"
 
 MoveTutor_Text_DynamicPunchTeach:
-	.string "I can't do this anymore!\p"
-	.string "It's utterly hopeless!\p"
-	.string "I'm a FIGHTING-type TRAINER,\n"
-	.string "so I can't win at the GYM\l"
-	.string "no matter how hard I try!\p"
-	.string "Argh! Punch! Punch! Punch!\n"
-	.string "Punch! Punch! Punch!\p"
-	.string "What, don't look at me that way!\n"
-	.string "I'm only hitting the ground!\p"
-	.string "Or do you want me to teach your\n"
-	.string "POKéMON DYNAMICPUNCH?$"
+	.string "¡Ya no puedo más!\p"
+	.string "¡Es totalmente inútil!\p"
+	.string "Soy un ENTRENADOR de tipo LUCHA,\n"
+	.string "¡así que no puedo ganar en el GYM\l"
+	.string "por más que lo intente!\p"
+	.string "¡Argh! ¡Golpe! ¡Golpe! ¡Golpe!\n"
+	.string "¡Golpe! ¡Golpe! ¡Golpe!\p"
+	.string "¡Qué! ¡No me mires así!\n"
+	.string "¡Solo golpeo el suelo!\p"
+	.string "¿O quieres que le enseñe a tu\n"
+	.string "POKéMON GOLPE DINÁMICO?$"
 
 MoveTutor_Text_DynamicPunchDeclined:
-	.string "Darn! You're even making fun of me?\n"
-	.string "Punch! Punch! Punch!$"
+	.string "¡Rayos! ¿Te burlas de mí?\n"
+	.string "¡Golpe! ¡Golpe! ¡Golpe!$"
 
 MoveTutor_Text_DynamicPunchWhichMon:
-	.string "What? You do? You're a good person!\n"
+	.string "¿Qué? ¿En serio? ¡Eres muy bueno!\n"
 	.string "¿A qué POKéMON se lo enseño?$"
 
 MoveTutor_Text_DynamicPunchTaught:
-	.string "I want you to win at the CERULEAN GYM\n"
-	.string "using that DYNAMICPUNCH!$"
+	.string "Quiero que ganes en el GIMNASIO\n"
+	.string "¡usando GOLPE DINÁMICO!$"
 
 MoveTutor_Text_DoubleEdgeTeach:
 	.string "Suspiro...\p"
-	.string "The GYM LEADER is really\n"
-	.string "lovably admirable.\p"
-	.string "But that also means I have many\n"
-	.string "rivals for his attention.\p"
-	.string "He's got appeal with a DOUBLE-EDGE.\n"
-	.string "I couldn't even catch his eye.\p"
+	.string "El LÍDER del GIMNASIO es\n"
+	.string "realmente admirable.\p"
+	.string "Pero eso significa que tengo\n"
+	.string "muchos rivales por su atención.\p"
+	.string "Tiene atractivo con DOBLE FILO.\n"
+	.string "Ni siquiera pude llamar su atención.\p"
 	.string "Por favor, deja que le enseñe a tu\n"
 	.string "¡el movimiento CABEZA DE HIERRO!$"
 

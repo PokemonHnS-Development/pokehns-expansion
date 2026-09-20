@@ -82,8 +82,8 @@ FiveIsland_MemorialPillar_EventScript_MemorialLemonadeAlreadyPlaced::
 	end
 
 FiveIsland_MemorialPillar_Text_MiloIntro::
-	.string "I'm the eldest of the BIRD\n"
-	.string "BROTHERS.\p"
+	.string "Soy el mayor de los HERMANOS\n"
+	.string "HERMANOS PÁJARO.\p"
 	.string "The best thing about birds…\n"
 	.string "It has to be the beak.$"
 
@@ -95,8 +95,8 @@ FiveIsland_MemorialPillar_Text_MiloPostBattle::
 	.string "para llegar aquí.$"
 
 FiveIsland_MemorialPillar_Text_ChazIntro::
-	.string "I'm the middle kid of the BIRD\n"
-	.string "BROTHERS.\p"
+	.string "Soy el hermano mediano de los\n"
+	.string "HERMANOS PÁJARO.\p"
 	.string "The best thing about birds…\n"
 	.string "It has to be the wings.$"
 
@@ -108,8 +108,8 @@ FiveIsland_MemorialPillar_Text_ChazPostBattle::
 	.string "over that way.$"
 
 FiveIsland_MemorialPillar_Text_HaroldIntro::
-	.string "I'm the youngest of the BIRD\n"
-	.string "BROTHERS.\p"
+	.string "Soy el menor de los HERMANOS\n"
+	.string "HERMANOS PÁJARO.\p"
 	.string "The best thing about birds…\n"
 	.string "It has to be the down.$"
 

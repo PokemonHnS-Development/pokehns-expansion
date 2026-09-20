@@ -133,7 +133,7 @@ Route17_Text_BikerCharlesBeaten:
 	.string "Arrrgh! Crash and burn!$"
 
 Route17_Text_BikerCharlesAfterBattle:
-	.string "Reckless driving causes accidents!\n"
+	.string "¡Manejar así causa accidentes!\n"
 	.string "¡Tómalo con calma!$"
 
 Route17_Text_RileyRegister:

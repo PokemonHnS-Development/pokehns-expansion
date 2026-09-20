@@ -31,33 +31,33 @@ GiddyText_DontYouAgree::
 	.string "¿No estás de acuerdo?$"
 
 GiddyText_ISoWantToGoOnAVacation::
-	.string "I so want to go on a vacation.\n"
+	.string "Tengo tantas ganas de ir de viaje.\n"
 	.string "¿Conoces algún lugar agradable?$"
 
 GiddyText_IBoughtCrayonsWith120Colors::
-	.string "I bought crayons with 120 colors!\n"
+	.string "¡Compré crayones de 120 colores!\n"
 	.string "¿No crees que es genial?$"
 
 GiddyText_WouldntItBeNiceIfWeCouldFloat::
-	.string "Wouldn't it be nice if we could float\n"
-	.string "away on a cloud of bubbles?$"
+	.string "¿No sería lindo si pudiéramos\n"
+	.string "flotar en una nube de burbujas?$"
 
 GiddyText_WhenYouWriteOnASandyBeach::
-	.string "When you write on a sandy beach,\n"
-	.string "they wash away. It makes me sad.$"
+	.string "Cuando escribes en la arena de la\n"
+	.string "playa, se borra. Me pone triste.$"
 
 GiddyText_WhatsTheBottomOfTheSeaLike::
-	.string "What's the bottom of the sea like?\n"
-	.string "Just once I would so love to go!$"
+	.string "¿Cómo será el fondo del mar?\n"
+	.string "¡Me encantaría ir solo una vez!$"
 
 GiddyText_WhenYouSeeTheSettingSunDoesIt::
-	.string "When you see the setting sun, does it\n"
-	.string "make you want to go home?$"
+	.string "Al ver el sol ponerse, ¿te dan\n"
+	.string "ganas de volver a casa?$"
 
 GiddyText_LyingBackInTheGreenGrass::
-	.string "Lying back in the green grass…\n"
-	.string "Oh, it's so, so nice!$"
+	.string "Recostado en el pasto verde...\n"
+	.string "¡Oh, es tan, tan agradable!$"
 
 GiddyText_SecretBasesAreSoWonderful::
-	.string "SECRET BASES are so wonderful!\n"
-	.string "Can't you feel the excitement?$"
+	.string "¡Las BASES SECRETAS son geniales!\n"
+	.string "¿No sientes la emoción?$"

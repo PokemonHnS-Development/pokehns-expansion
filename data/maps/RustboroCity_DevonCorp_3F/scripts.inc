@@ -236,7 +236,7 @@ RustboroCity_DevonCorp_3F_Text_MrStoneExplainPokenavRestUp:
 	.string "antes de seguir tu camino.$"
 
 RustboroCity_DevonCorp_3F_Text_MrStoneGoWithCautionAndCare:
-	.string "MR. STONE: Well, then, {PLAYER}{KUN},\n"
+	.string "SR. STONE: Bien, entonces, {PLAYER}{KUN},\n"
 	.string "¡ve con mucha precaución!$"
 
 RustboroCity_DevonCorp_3F_Text_CountingOnYou:
@@ -276,31 +276,31 @@ RustboroCity_DevonCorp_3F_Text_ThisIs3rdFloorWaitHere:
 	.string "que recuperaste para nosotros...\p"
 	.string "¿Podrías entregarlo en el\n"
 	.string "ASTILLERO de PORTALAGUNA?\p"
-	.string "It would be awful if those robbers\n"
-	.string "tried to take it again.\p"
-	.string "Uh… Hehehe, so, uh, could I count\n"
-	.string "on you to do that for me?\p"
-	.string "Oh, that's right.\n"
-	.string "Could you wait here a second?$"
+	.string "Sería terrible que esos ladrones\n"
+	.string "intentaran robárselo otra vez.\p"
+	.string "Eh... Jejeje, entonces, ¿podría\n"
+	.string "contar contigo para hacer eso?\p"
+	.string "Ah, es cierto.\n"
+	.string "¿Podrías esperar aquí un segundo?$"
 
 RustboroCity_DevonCorp_3F_Text_WordWithPresidentComeWithMe:
-	.string "Our PRESIDENT would like to have\n"
-	.string "a word with you.\p"
-	.string "Please come with me.$"
+	.string "Nuestro PRESIDENTE quiere\n"
+	.string "decirte unas palabras.\p"
+	.string "Por favor, ven conmigo.$"
 
 RustboroCity_DevonCorp_3F_Text_PleaseGoAhead:
 	.string "Please, go ahead.$"
 
 RustboroCity_DevonCorp_3F_Text_VisitCaptSternShipyard:
-	.string "If you visit the SHIPYARD in SLATEPORT,\n"
-	.string "you should go see CAPT. STERN.$"
+	.string "Si visitas el ASTILLERO de PORTALEN,\n"
+	.string "Deberías ir a ver al CAPT. STERN.$"
 
 RustboroCity_DevonCorp_3F_Text_RepeatAndTimerHugelyPopular:
 	.string "DEVON's new products, the REPEAT BALL\n"
-	.string "and TIMER BALL, have become hugely\l"
-	.string "popular among TRAINERS.$"
+	.string "y la TIMER BALL, se han vuelto muy\l"
+	.string "populares entre los ENTRENADORES.$"
 
 RustboroCity_DevonCorp_3F_Text_RareRocksDisplay:
 	.string "Es una colección de rocas y\n"
-	.string "stones assembled by the PRESIDENT.$"
+	.string "piedras reunidas por el PRESIDENTE.$"
 

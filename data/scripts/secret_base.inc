@@ -713,7 +713,7 @@ SecretBase_Text_RegistryInfo:
 	.string "ubicaciones de SECRET BASE.$"
 
 SecretBase_Text_BattleTowerShield:
-	.string "A shield of {STR_VAR_2} that marks winning\n"
+	.string "Un escudo de {STR_VAR_2} que marca\n"
 	.string "{STR_VAR_1} times in a row at the BATTLE TOWER.$"
 
 SecretBase_Text_ToyTV:

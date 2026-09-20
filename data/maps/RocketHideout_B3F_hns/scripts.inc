@@ -82,14 +82,14 @@ RocketHideout_B3F_Movement_DragoniteLeave:
 	step_end
 
 RocketHideout_B3F_Text_LanceGetPassword:
-    .string "LANCE: It takes two passwords\n"
-    .string "to get into the boss' quarters.\p"
-    .string "Those passwords are known only\n"
-    .string "to a few ROCKETS.\p"
-    .string "That ROCKET there very graciously\n"
-    .string "told me so.\p"
-    .string "{PLAYER}, let's go get the\n"
-    .string "passwords.$"
+    .string "LANCE: Se necesitan dos claves\n"
+    .string "para entrar al cuarto del jefe.\p"
+    .string "Solo unos pocos ROCKETS\n"
+    .string "conocen esas claves.\p"
+    .string "Aquel ROCKET tuvo la gentileza\n"
+    .string "de decírmelo.\p"
+    .string "{PLAYER}, vamos a buscar las\n"
+    .string "claves.$"
 
 RocketHideout_B3F_EventScript_RocketKO::
 	lock
@@ -99,8 +99,8 @@ RocketHideout_B3F_EventScript_RocketKO::
 	end
 
 RocketHideout_B3F_Text_B3FRocket:
-    .string "Urrggh… The guy in the cape is\n"
-    .string "incredibly tough…$"
+    .string "Urrggh... El tipo de la capa es\n"
+    .string "increíblemente fuerte...$"
 
 
 RocketHideout_B3F_Trigger_MurkrowStairs::
@@ -269,28 +269,28 @@ RocketHideout_B3F_EventScript_Item_HyperPotion::
 	end
 
 RocketHideout_B3F_Text_B3FLockedDoorNeedsPassword:
-    .string "The door's closed…\p"
-    .string "It needs two passwords to open.$"
+    .string "La puerta está cerrada...\p"
+    .string "Necesita dos claves para abrirse.$"
 
 RocketHideout_B3F_Text_B3FLockedDoorOpenSesame:
-    .string "The door's closed…\p"
-    .string "{PLAYER} entered the two passwords.\p"
+    .string "La puerta está cerrada...\p"
+    .string "{PLAYER} puso las dos contraseñas.\p"
     .string "¡La puerta se abrió!$"
 
 RocketHideout_B3F_Text_Rival:
     .string "…\p"
-    .string "Didn't I tell you that I was\n"
-    .string "going to destroy TEAM ROCKET?\p"
-    .string "…Tell me, who was the guy in the\n"
-    .string "cape who used dragon POKéMON?\p"
-    .string "My POKéMON were no match at all.\p"
-    .string "It's what he said that bothers\n"
+    .string "¿No te dije que yo iba\n"
+    .string "a destruir al TEAM ROCKET?\p"
+    .string "...Dime, ¿quién era el tipo de la\n"
+    .string "capa que usaba POKéMON dragón?\p"
+    .string "Mis POKéMON no fueron rivales.\p"
+    .string "Lo que me molesta es lo que dijo.\n"
     .string "me…\p"
-    .string "He told me that I don't love and\n"
-    .string "trust my POKéMON enough.\p"
-    .string "It's not my fault my team is so\n"
-    .string "useless.\p"
-    .string "I'm furious that I lost to a\n"
+    .string "Me dijo que no amo ni confío\n"
+    .string "suficiente en mis POKéMON.\p"
+    .string "No es mi culpa que mi equipo sea\n"
+    .string "tan inútil.\p"
+    .string "Estoy furioso por perder ante un\n"
     .string "un corazón bondadoso como el suyo.\p"
     .string "Pero me hace cuestionarme.\p"
     .string "¿Habrá algo que esté haciendo\n"
@@ -570,20 +570,20 @@ RocketHideout_B3F_Text_PetrelIntro:
 
 RocketHideout_B3F_Text_PetrelDisbelief:
     .string "...¿Eh?\n"
-    .string "I don't sound anything like\l"
-    .string "GIOVANNI?\p"
-    .string "I don't even look like GIOVANNI?\n"
-    .string "How come? I've worked so hard\l"
-    .string "to mimic him!$"
+    .string "No sueno para nada como\l"
+    .string "¡GIOVANNI!\p"
+    .string "¡Ni siquiera me parezco a él!\n"
+    .string "¡¿Cómo es posible?! Me esforcé\l"
+    .string "mucho para imitarlo!$"
 
 RocketHideout_B3F_Text_PetrelReveal:
-    .string "PETREL: I am a Team Rocket\n"
-    .string "Executive!\p"
-    .string "You must be trying to sneak into\n"
-    .string "the radio-transmitter room.\p"
-    .string "Well, that's not going to happen.\n"
-    .string "That room is protected with a\l"
-    .string "special password.\p"
+    .string "PETREL: ¡Soy un Ejecutivo\n"
+    .string "del Team Rocket!\p"
+    .string "Seguro intentas colarte en la\n"
+    .string "sala del transmisor de radio.\p"
+    .string "Bueno, eso no va a pasar.\n"
+    .string "Esa sala está protegida con una\l"
+    .string "contraseña especial.\p"
     .string "The password is “Hail GIOVANNI.”\n"
     .string "¿Te sorprende que yo lo sepa?\p"
     .string "Saber la clave no te servirá\n"

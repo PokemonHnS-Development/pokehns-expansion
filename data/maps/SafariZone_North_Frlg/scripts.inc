@@ -22,7 +22,7 @@ SafariZone_North_EventScript_TrainerTips3::
 	end
 
 SafariZone_North_Text_RestHouse::
-	.string "REST HOUSE$"
+	.string "CASA DE DESCANSO$"
 
 SafariZone_North_Text_SecretHouseStillAhead::
 	.string "CONSEJOS DE ENTRENADOR\p"

@@ -88,7 +88,7 @@ Route111_WinstrateFamilysHouse_Text_GrandsonStrong:
 	.string "Pero si lucharas con mi nieto,\n"
 	.string "terminarías llorando de rabia.\p"
 	.string "Es más fuerte que cualquier\n"
-	.string "our family knows.\p"
+	.string "nuestra familia lo sabe.\p"
 	.string "Ya debe estar desafiando al\n"
 	.string "CAMPEÓN de la LIGA POKéMON.\p"
 	.string "Conociendo a mi nieto, ¡podría ser\n"

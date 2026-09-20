@@ -240,7 +240,7 @@ SevenIsland_House_Room1_Text_StrVar1_2::
 	.string "{STR_VAR_1}$"
 
 SevenIsland_House_Room1_Text_AstoundingBattle::
-	.string "Bravo!\p"
+	.string "¡Bravo!\p"
 	.string "Bravo, indeed!\n"
 	.string "What an astounding battle!\p"
 	.string "It was so astounding, why, it keeps\n"

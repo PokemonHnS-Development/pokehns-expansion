@@ -24,7 +24,7 @@ Route2_EventScript_Nugget::
     end
 
 Route2_Text_RobRegister:
-	.string "Let me get your number!$"
+	.string "¡Dame tu número!$"
 
 Route2_Text_RobRematchIntro:
 	.string "¡Atrapé aún más bichos!\n"

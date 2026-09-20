@@ -35,8 +35,8 @@ Route6_Text_PokefanM:
 	.string "se solucione.$"
 
 Route6_Text_UndergroundPathSign:
-	.string "UNDERGROUND PATH\p"
-	.string "CERULEAN CITY - VERMILION CITY$"
+	.string "CAMINO SUBTERRÁNEO\p"
+	.string "CIUDAD CELADON - CIUDAD VERMILION$"
 
 PokefanM_Text_RexSeen:
 	.string "Mi STANTLER es el más lindo del\n"

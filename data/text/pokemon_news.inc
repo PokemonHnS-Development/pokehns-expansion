@@ -1,22 +1,22 @@
 
 gPokeNewsTextSlateport_Upcoming::
-	.string "Greetings!\n"
-	.string "It's time for POKéMON NEWS.\p"
-	.string "SLATEPORT's most popular kind of guy,\n"
-	.string "the ENERGY GURU, is in the news again!\p"
-	.string "He promises to, “Stupendously go for\n"
-	.string "it in just this many days: {STR_VAR_1}!”\p"
-	.string "While he refused to elaborate on what\n"
-	.string "he will stupendously go for, the\l"
-	.string "ENERGY GURU advised, “Save up your\l"
-	.string "money. That'll be good…”\p"
-	.string "It sounds like a trip to SLATEPORT\n"
-	.string "would be well worth your while that day.\p"
+	.string "¡Saludos!\n"
+	.string "Es hora de las NOTICIAS POKéMON.\p"
+	.string "El tipo más popular de PORTALUZ,\n"
+	.string "¡el GURÚ DE LA ENERGÍA sale otra vez!\p"
+	.string "Promete que “lo logrará de forma\n"
+	.string "estupenda en solo {STR_VAR_1} días!”.\p"
+	.string "Aunque no quiso dar detalles sobre\n"
+	.string "qué hará exactamente, el\l"
+	.string "El GURÚ aconsejó: “Ahorra tu\l"
+	.string "dinero. Eso será bueno...”.\p"
+	.string "Parece que un viaje a PORTALUZ\n"
+	.string "valdría la pena ese día.\p"
 	.string "Esas son las noticias de POKéMON NEWS.$"
 
 gPokeNewsTextSlateport_Ongoing::
-	.string "Greetings!\n"
-	.string "It's time for POKéMON NEWS.\p"
+	.string "¡Saludos!\n"
+	.string "Es hora de las NOTICIAS POKéMON.\p"
 	.string "¡Esta es la noticia que todos\n"
 	.string "estaban esperando!\p"
 	.string "¡El GURU DE ENERGÍA de PORTALA\n"
@@ -29,8 +29,8 @@ gPokeNewsTextSlateport_Ongoing::
 	.string "Esas son las noticias de POKéMON NEWS.$"
 
 gPokeNewsTextSlateport_Ending::
-	.string "Greetings!\n"
-	.string "It's time for POKéMON NEWS.\p"
+	.string "¡Saludos!\n"
+	.string "Es hora de las NOTICIAS POKéMON.\p"
 	.string "¡Esta es la noticia que todos\n"
 	.string "estaban esperando!\p"
 	.string "¡El GURU DE ENERGÍA de PORTALA\n"
@@ -44,8 +44,8 @@ gPokeNewsTextSlateport_Ending::
 	.string "Esas son las noticias de POKéMON NEWS.$"
 
 gPokeNewsTextGameCorner_Upcoming::
-	.string "Greetings!\n"
-	.string "It's time for POKéMON NEWS.\p"
+	.string "¡Saludos!\n"
+	.string "Es hora de las NOTICIAS POKéMON.\p"
 	.string "¡Ya casi llega!\n"
 	.string "¡Por fin viene!\p"
 	.string "El día de servicio del GAME CORNER\n"
@@ -55,8 +55,8 @@ gPokeNewsTextGameCorner_Upcoming::
 	.string "Esas son las noticias de POKéMON NEWS.$"
 
 gPokeNewsTextGameCorner_Ongoing::
-	.string "Greetings!\n"
-	.string "It's time for POKéMON NEWS.\p"
+	.string "¡Saludos!\n"
+	.string "Es hora de las NOTICIAS POKéMON.\p"
 	.string "¡Ya está aquí!\n"
 	.string "¡Por fin ha llegado!\p"
 	.string "¡El día de servicio del GAME CORNER\n"
@@ -68,8 +68,8 @@ gPokeNewsTextGameCorner_Ongoing::
 	.string "Esas son las noticias de POKéMON NEWS.$"
 
 gPokeNewsTextGameCorner_Ending::
-	.string "Greetings!\n"
-	.string "It's time for POKéMON NEWS.\p"
+	.string "¡Saludos!\n"
+	.string "Es hora de las NOTICIAS POKéMON.\p"
 	.string "¡Ya está aquí!\n"
 	.string "¡Por fin ha llegado!\p"
 	.string "¡El día de servicio del GAME CORNER\n"
@@ -81,8 +81,8 @@ gPokeNewsTextGameCorner_Ending::
 	.string "Esas son las noticias de POKéMON NEWS.$"
 
 gPokeNewsTextLilycove_Upcoming::
-	.string "Greetings!\n"
-	.string "It's time for POKéMON NEWS.\p"
+	.string "¡Saludos!\n"
+	.string "Es hora de las NOTICIAS POKéMON.\p"
 	.string "Acabamos de recibir noticias\n"
 	.string "de los ALMACENES DE VERIDIANO.\p"
 	.string "La liquidación de los ALMACENES\n"
@@ -92,8 +92,8 @@ gPokeNewsTextLilycove_Upcoming::
 	.string "Esas son las noticias de POKéMON NEWS.$"
 
 gPokeNewsTextLilycove_Ongoing::
-	.string "Greetings!\n"
-	.string "It's time for POKéMON NEWS.\p"
+	.string "¡Saludos!\n"
+	.string "Es hora de las NOTICIAS POKéMON.\p"
 	.string "¡Esta es la noticia que todos\n"
 	.string "estaban esperando!\p"
 	.string "La liquidación de los ALMACENES\n"
@@ -105,8 +105,8 @@ gPokeNewsTextLilycove_Ongoing::
 	.string "Esas son las noticias de POKéMON NEWS.$"
 
 gPokeNewsTextLilycove_Ending::
-	.string "Greetings!\n"
-	.string "It's time for POKéMON NEWS.\p"
+	.string "¡Saludos!\n"
+	.string "Es hora de las NOTICIAS POKéMON.\p"
 	.string "¡Esta es la noticia que todos\n"
 	.string "estaban esperando!\p"
 	.string "La liquidación de los ALMACENES\n"
@@ -118,8 +118,8 @@ gPokeNewsTextLilycove_Ending::
 	.string "Esas son las noticias de POKéMON NEWS.$"
 
 gPokeNewsTextBlendMaster_Upcoming::
-	.string "Greetings!\n"
-	.string "It's time for POKéMON NEWS.\p"
+	.string "¡Saludos!\n"
+	.string "Es hora de las NOTICIAS POKéMON.\p"
 	.string "Tenemos grandes noticias para\n"
 	.string "quienes hacen {POKEBLOCK}S.\p"
 	.string "El legendario MAESTRO MEZCLA\n"
@@ -134,8 +134,8 @@ gPokeNewsTextBlendMaster_Upcoming::
 	.string "Esas son las noticias de POKéMON NEWS.$"
 
 gPokeNewsTextBlendMaster_Ongoing::
-	.string "Greetings!\n"
-	.string "It's time for POKéMON NEWS.\p"
+	.string "¡Saludos!\n"
+	.string "Es hora de las NOTICIAS POKéMON.\p"
 	.string "Tenemos grandes noticias para\n"
 	.string "quienes hacen {POKEBLOCK}S.\p"
 	.string "¡El legendario MAESTRO BATIDOR\n"
@@ -149,8 +149,8 @@ gPokeNewsTextBlendMaster_Ongoing::
 	.string "Esas son las noticias de POKéMON NEWS.$"
 
 gPokeNewsTextBlendMaster_Ending::
-	.string "Greetings!\n"
-	.string "It's time for POKéMON NEWS.\p"
+	.string "¡Saludos!\n"
+	.string "Es hora de las NOTICIAS POKéMON.\p"
 	.string "¡Es increíble!\n"
 	.string "¡Es demasiado increíble!\p"
 	.string "La MEZCLADORA DE BAYAS gira a\n"

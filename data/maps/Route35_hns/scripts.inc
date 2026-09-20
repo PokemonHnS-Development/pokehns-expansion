@@ -209,7 +209,7 @@ Route35_Text_ArniePostRematch:
 
 Route35_Text_BugCatcherArnieYanma:
 	.string "¡Guau... Mira todos esos YANMA!\p"
-	.string "I'm so blown away, I can't move.$"
+	.string "Estoy tan impactado que no me muevo.$"
 
 Route35_Text_FirebreatherWaltSeen:
 	.string "I'm practicing my fire breathing.$"

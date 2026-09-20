@@ -37,35 +37,35 @@ Route49_Text_SkylarDefeat:
 	.string "ESTÁ BIEN, te quedas con la TABLA.$"
 
 Route49_Text_SkylarAfter:
-	.string "As cool as that PLATE is,\n"
-	.string "you earned it fair and square.\p"
-	.string "I'll just buy something at the gift\n"
-	.string "shop instead.$"
+	.string "Por muy genial que sea el PLATO,\n"
+	.string "te lo ganaste limpiamente.\p"
+	.string "Me compraré algo en la tienda de\n"
+	.string "regalos en su lugar.$"
 
 Route49_Text_SkylarBeforeBattle:
 	.string "¿Qué?\p"
-	.string "You want the PLATE?\n"
-	.string "It's an artifact imbued with an\l"
-	.string "ancient power with a connection\l"
-	.string "to the legendary POKéMON?!\p"
-	.string "Well now I'm definitely keeping it.\p"
-	.string "Fine.\p"
-	.string "You'll just have to battle me for it.$"
+	.string "¿Quieres el PLATO?\n"
+	.string "¡¿Es un artefacto con un poder\l"
+	.string "antiguo y una conexión con un\l"
+	.string "POKéMON legendario?!\p"
+	.string "Bueno, ahora seguro me lo quedo.\p"
+	.string "Está bien.\p"
+	.string "Tendrás que luchar contra mí por él.$"
 
 Route49_Text_SkylarBefore:
-	.string "When I was hitting the slopes, my\n"
-	.string "skis snagged on something.\p"
-	.string "It was this strange SKY-blue PLATE.\p"
-	.string "I think I'll hold onto it as a\n"
-	.string "souvenir!$"
+	.string "Cuando bajaba por las pistas, mi\n"
+	.string "los esquís se trabaron con algo.\p"
+	.string "Era esta extraña PLACA celeste.\p"
+	.string "¡Creo que la guardaré como un\n"
+	.string "recuerdo!$"
 
 Route49_EventScript_SkierM::
 	msgbox Route49_Text_SkierM, MSGBOX_NPC
 	end
 
 Route49_Text_SkierM::
-	.string "Hey, watch out for my board!\p"
-	.string "What? You want to battle?\n"
+	.string "¡Oye, cuidado con mi tabla!\p"
+	.string "¿Qué? ¿Quieres luchar?\n"
 	.string "No way, these slopes are too wicked!$"
 
 Route49_EventScripts_KimonoGirl::
@@ -114,14 +114,14 @@ Route49_KimonoGitl_Movement2:
 	step_end
 
 Route49_Text_KimonoGirl:
-    .string "You....\p"
-	.string "You must be {PLAYER}, correct?\n"
-    .string "I've heard all about you and\l"
-	.string "your deeds from my cousins\l"
-	.string "in ECRUTEAK CITY.\p"
-	.string "My sisters wish to meet with you.\l"
-	.string "If you find the time, please\n"
-	.string "seek us out in the town up ahead.$"
+    .string "Tú...\p"
+	.string "Tú debes ser {PLAYER}, ¿verdad?\n"
+    .string "He oído todo sobre ti y...\l"
+	.string "He oído todo sobre ti y tus\l"
+	.string "hazañas por mis primos de\p"
+	.string "Mis hermanas quieren conocerte.\l"
+	.string "Si tienes tiempo, por favor\n"
+	.string "búscanos en el pueblo de adelante.$"
 
 Route49_EventScript_Item_StarDust::
     finditem ITEM_STARDUST
@@ -136,8 +136,8 @@ Route49_EventScript_Sign::
     end
 
 Route49_Text_Sign:
-    .string "The sign is faded.\n"
-    .string "ROUTE 49$"
+    .string "El cartel está borroso.\n"
+    .string "RUTA 49$"
 
 Route49_EventScript_ActivateOverqwil::
     lock

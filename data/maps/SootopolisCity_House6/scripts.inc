@@ -32,21 +32,21 @@ SootopolisCity_House6_EventScript_NoRoomForWailmerDoll::
 	end
 
 SootopolisCity_House6_Text_FirstGuestInWhileTakeDoll:
-	.string "Hello! You're our first guest in\n"
-	.string "a good while.\p"
-	.string "You've brightened up my day, so I'll\n"
-	.string "give you a big WAILMER DOLL.$"
+	.string "¡Hola! Eres nuestro primer invitado\n"
+	.string "en mucho tiempo.\p"
+	.string "Me has alegrado el día, así que\n"
+	.string "te daré un gran MUÑECO WAILMER.$"
 
 SootopolisCity_House6_Text_TakeGoodCareOfIt:
 	.string "¡Cuídalo bien!$"
 
 SootopolisCity_House6_Text_IllHoldItForYou:
-	.string "Oh, you want it, but not right now?\n"
-	.string "Okay, then I'll hold it for you.$"
+	.string "¿Lo quieres, pero no ahora mismo?\n"
+	.string "Está bien, yo lo guardaré por ti.$"
 
 SootopolisCity_House6_Text_DontWantThisDoll:
 	.string "¿Estás seguro?\n"
-	.string "You don't want this DOLL?$"
+	.string "¿No quieres este MUÑECO?$"
 
 SootopolisCity_House6_Text_LovePlushDolls:
 	.string "I love plush DOLLS!$"

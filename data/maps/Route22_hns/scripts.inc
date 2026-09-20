@@ -13,7 +13,7 @@ Route22_EventScript_Sign::
 
 Route22_Text_VictoryRoadEntranceSign:
 	.string "LIGA POKéMON\p"
-	.string "VICTORY ROAD ENTRANCE$"
+	.string "ENTRADA A LA VÍA VICTORIA$"
 
 Route22_EventScript_ResetActivation::
 	setvar VAR_TEMP_0, 0
@@ -284,22 +284,22 @@ Route22_Movement_CelebiPush:
 
 
 Route22_Text_Silver1:
-	.string "{RIVAL}: You told me...\n"
-	.string "you were the number one in the whole\l"
-	.string "world!\p"
-	.string "Are you gonna quit?\p"
-	.string "What are you going to do now?$"
+	.string "{RIVAL}: Me dijiste...\n"
+	.string "¡que eras el número uno de todo\l"
+	.string "el mundo!\p"
+	.string "¿Vas a rendirte?\p"
+	.string "¿Qué piensas hacer ahora?$"
 
 Route22_Text_Giovanni1:
 	.string "....................\p"
-	.string "GIOVANNI: One must acknowledge one's\n"
-	.string "defeat before he can move on...\p"
-	.string "I will go solo... for now...\p"
-	.string "So that one day I will form a\n"
-	.string "stronger organization!$"
+	.string "GIOVANNI: Uno debe aceptar su\n"
+	.string "derrota para poder avanzar...\p"
+	.string "Iré solo... por ahora...\p"
+	.string "¡Para que un día forme una\n"
+	.string "organización más fuerte!$"
 
 Route22_Text_Silver2:
-	.string "{RIVAL}: What aspect of you was\n"
+	.string "{RIVAL}: ¿Qué parte de ti era\n"
 	.string "¿El número uno?\p"
 	.string "¡Reunir a tantos solo para ser\n"
 	.string "derrotado por un simple niño!$"

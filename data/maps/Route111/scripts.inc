@@ -663,9 +663,9 @@ Route111_Text_TrainerTipsSpAtkSpDef:
 	.string "CONSEJOS DE ENTRENADOR\p"
 	.string "Uno de los indicadores de un POKéMON\n"
 	.string "la potencia es ATQ. ESP. Significa\l"
-	.string "“SPECIAL ATTACK.”\p"
+	.string "“ATAQUE ESPECIAL.”\p"
 	.string "Igualmente, DEF. ESP. significa\n"
-	.string "DEFENSE.”$"
+	.string "DEFENSA.”$"
 
 Route111_Text_ShouldBeMirageTowerAroundHere:
 	.string "Debería haber una torre de arena\n"
@@ -677,7 +677,7 @@ Route111_Text_ShouldBeMirageTowerAroundHere:
 Route111_Text_MirageTowerClearlyVisible:
 	.string "¡La veo!\n"
 	.string "¡La torre de arena!\p"
-	.string "The sand tower they called a mirage\n"
+	.string "La torre de arena que llamaban\n"
 	.string "¡se ve claramente!\p"
 	.string "Pero parece tan frágil...\n"
 	.string "It could crumble away anytime…\p"
@@ -693,7 +693,7 @@ Route111_Text_ThatWasShockingSandRainedDown:
 	.string "¿Había fantasmas de arena o algo así?$"
 
 Route111_Text_MirageTowerHasntBeenSeenSince:
-	.string "Since I spoke to you, the tower of sand\n"
+	.string "Desde que hablé contigo, la torre\n"
 	.string "no ha sido visto.\p"
 	.string "Tal vez realmente fue\n"
 	.string "la TORRE ESPEJISMO…$"

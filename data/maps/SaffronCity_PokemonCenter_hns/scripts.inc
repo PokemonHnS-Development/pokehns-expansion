@@ -39,9 +39,9 @@ SaffronCity_PokemonCenter1F_Text_Fisher:
 SaffronCity_PokemonCenter1F_Text_Fisher_ReturnedPart:
 	.string "Hay una cueva rara en CERULEAN.\p"
 	.string "Como HIKER pro, debo explorarla,\n"
-	.string "but that place scares even me.$"
+	.string "pero ese lugar me asusta hasta a mí.$"
 
 SaffronCity_PokemonCenter1F_Text_Youngster:
-	.string "SILPH CO.'s HEAD OFFICE and the\n"
-	.string "MAGNET TRAIN STATION--they're the\l"
-	.string "places to see in SAFFRON.$"
+	.string "La SEDE DE SILPH CO. y la\n"
+	.string "ESTACIÓN DEL TREN MAGNÉTICO son los\l"
+	.string "sitios que ver en CIUDAD AZAFRÁN.$"

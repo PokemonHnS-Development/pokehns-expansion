@@ -7,7 +7,7 @@ Route8_EventScript_UndergroundPathSign::
 
 Route8_Text_AidanIntro::
 	.string "You look good at POKéMON, but how\n"
-	.string "is your chemistry grade?$"
+	.string "está tu nota de química?$"
 
 Route8_Text_AidanDefeat::
 	.string "Ow!\n"
@@ -98,7 +98,7 @@ Route8_Text_RichPostBattle::
 	.string "eating peanuts! I just can't stop!$"
 
 Route8_Text_JuliaIntro::
-	.string "What's a cute, round, and fluffy\n"
+	.string "¿Qué es lindo, redondo y suave?\n"
 	.string "POKéMON?$"
 
 Route8_Text_JuliaDefeat::
@@ -117,7 +117,7 @@ Route8_Text_UndergroundPathSign::
 
 Route8_Text_EliIntro::
 	.string "ELI: Twin power is fantastic.\n"
-	.string "Did you know?$"
+	.string "¿Sabías que?$"
 
 Route8_Text_EliDefeat::
 	.string "ELI: But…\n"

@@ -370,58 +370,58 @@ RuinsOfAlph_PuzzleAndRewardChambers_EventScript_RewardGotten::
 	end
 
 RuinsOfAlph_PuzzleAndRewardChambers_Text_Reward:
-	.string "The chamber reacts!\n"
+	.string "¡La cámara reacciona!\n"
 	.string "El camino está abierto.$"
 
 RuinsOfAlph_PuzzleAndRewardChambers_Text_Mon:
-	.string "Some kind of ancient sensor.\n"
-	.string "What is it looking for?$"
+	.string "Algún tipo de sensor antiguo.\n"
+	.string "¿Qué es lo que busca?$"
 
 RuinsOfAlph_PuzzleAndRewardChambers_Text_Solved:
 	.string "El camino está abierto.$"
 
 RuinsOfAlph_PuzzleAndRewardChambers_Text_Receptionist1:
-	.string "Welcome to this chamber.\p"
-	.string "There are sliding panels that depict\n"
-	.string "a POKéMON drawn by the ancients.\p"
-	.string "Slide the panels around to form\n"
-	.string "the picture.\p"
-	.string "To the left is a description of\n"
+	.string "Bienvenido a esta cámara.\p"
+	.string "Hay paneles deslizantes que muestran\n"
+	.string "un POKéMON dibujado por los antiguos.\p"
+	.string "Mueve los paneles para formar\n"
+	.string "la imagen.\p"
+	.string "A la izquierda hay una descripción de\n"
 	.string "naturaleza del POKéMON.\p"
-	.string "Scientists in the lab are examin-\n"
-	.string "-ing some newly found patterns.$"
+	.string "Científicos del lab están examina-\n"
+	.string "-ndo patrones recién hallados.$"
 
 RuinsOfAlph_PuzzleAndRewardChambers_Text_Receptionist2:
-	.string "A hole just opened up in the floor!\n"
-	.string "I'd better tell the others.$"
+	.string "¡Se abrió un hueco en el suelo!\n"
+	.string "Será mejor que avise a los demás.$"
 
 RuinsOfAlph_PuzzleAndRewardChambers_Text_Receptionist3:
-	.string "Now a hole in the wall too?!\n"
-	.string "This is getting spooky.$"
+	.string "¡¿Ahora un hueco en la pared?!\n"
+	.string "Esto se está volviendo inquietante.$"
 
 
 RuinsOfAlph_PuzzleAndRewardChambers_Text_Kabuto:
-	.string "A POKéMON that hid on the sea floor.\n"
-	.string "Eyes on its back scanned the area.$"
+	.string "Un POKéMON que se ocultó en el\n"
+	.string "Los ojos de su espalda vigilan.$"
 
 RuinsOfAlph_PuzzleAndRewardChambers_Text_UnownText:
 	.string "It's UNOWN text!$"
 
 RuinsOfAlph_PuzzleAndRewardChambers_Text_Statue:
-	.string "It's a replica of an ancient\n"
+	.string "Es una réplica de un antiguo\n"
 	.string "POKéMON.$"
 
 RuinsOfAlph_PuzzleAndRewardChambers_Text_Aerodactyl:
-	.string "This flying POKéMON attacked its\n"
-	.string "prey with saw-like fangs.$"
+	.string "Este POKéMON volador atacaba a su\n"
+	.string "presa con colmillos como sierras.$"
 
 RuinsOfAlph_PuzzleAndRewardChambers_Text_Omanyte:
-	.string "This POKéMON drifted in the sea\n"
-	.string "by twisting its ten tentacles.$"
+	.string "Este POKéMON flotaba en el mar\n"
+	.string "girando sus diez tentáculos.$"
 
 RuinsOfAlph_PuzzleAndRewardChambers_Text_Hooh:
-	.string "A POKéMON that flew gracefully on\n"
-	.string "rainbow-colored wings.$"
+	.string "Un POKéMON que volaba con gracia\n"
+	.string "con alas de colores arcoíris.$"
 
 @==========================================================================================================================================================
 @ Hooh

@@ -166,11 +166,11 @@ RocketHideout_B2F_Movement_MurkrowGate2:
 	step_end
 
 RocketHideout_B2F_Text_MurkrowUnlock:
-    .string "MURKROW screamed the password,\n"
-    .string "mimicking the voice of PETREL.\p"
+    .string "MURKROW gritó la contraseña,\n"
+    .string "imitando la voz de PETREL.\p"
     .string "..................\n"
-    .string "The voice-recognition system\l"
-    .string "unlocked the door!$"
+    .string "¡El sistema de reconocimiento\l"
+    .string "de voz abrió la puerta!$"
 
 @============================================================================================================================================
 
@@ -251,29 +251,29 @@ RocketHideout_B2F_Text_ArianaHoldIt:
     .string "ARIANA: ¡Alto ahí!$"
 
 RocketHideout_B2F_Text_ArianaChallenge:
-    .string "ARIANA: We can't let a brat like you\n"
-    .string "do as you please forever.\p"
-    .string "It'll hurt Team Rocket's pride over\n"
-    .string "and over again. Making it lessen,\l"
-    .string "you see.\p"
-    .string "...So, it's time to finish you.\n"
-    .string "However strong you may be,\p"
-    .string "if the two of us fight at the same\n"
-    .string "time, you'll have no chance of\l"
-    .string "winning. Don't you agree?\p"
-    .string "Hee hee hee! Sorry, baby.\n"
-    .string "Now, get ready to be thrashed.$"
+    .string "ARIANA: No podemos dejar que un\n"
+    .string "mocoso como tú haga lo que quiera.\p"
+    .string "Dañaría el orgullo del Team Rocket\n"
+    .string "una y otra vez. Verás, eso\l"
+    .string "debe terminar.\p"
+    .string "...Así que es hora de acabar contigo.\n"
+    .string "No importa qué tan fuerte seas,\p"
+    .string "si los dos luchamos al mismo\n"
+    .string "tiempo, no tendrás oportunidad\l"
+    .string "de ganar. ¿No estás de acuerdo?\p"
+    .string "¡Je je je! Lo siento, cariño.\n"
+    .string "¡Ahora, prepárate para perder!$"
 
 RocketHideout_B2F_Text_LanceInterrupt:
-    .string "LANCE: Hold it!\n"
-    .string "A two-on-one battle?\p"
-    .string "That is so unfair!\n"
-    .string "Typical of Team Rocket to be so\l"
-    .string "sneaky.\p"
-    .string "Allow me to join the battle!$"
+    .string "LANCE: ¡Esperen!\n"
+    .string "¿Una batalla de dos contra uno?\p"
+    .string "¡Eso es muy injusto!\n"
+    .string "Típico del Team Rocket ser tan\l"
+    .string "rastreros.\p"
+    .string "¡Permítanme unirme a la lucha!$"
 
 RocketHideout_B2F_Text_ArianaOutraged:
-    .string "ARIANA: What? You had an accomplice?\n"
+    .string "ARIANA: ¿Qué? ¿Tenías un cómplice?\n"
     .string "¿Dónde quedó tu dignidad?\p"
     .string "Como jefe interino por GIOVANNI,\n"
     .string "¡te enseñaré que es un error\l"
@@ -792,11 +792,11 @@ RocketHideout_B2F_Text_GruntM18Beaten:
 
 RocketHideout_B2F_Text_GruntM18After:
     .string "Me barrieron en la última\n"
-    .string "mission by a kid too.\p"
-    .string "When we were abducting POKéMON,\n"
-    .string "this kid with long red hair and\l"
-    .string "mean-looking eyes just\l"
-    .string "creamed me…$"
+    .string "misión de un niño también.\p"
+    .string "Cuando robábamos POKéMON,\n"
+    .string "un chico de pelo rojo largo y\l"
+    .string "mirada malvada simplemente\l"
+    .string "me aplastó…$"
 
 RocketHideout_B2F_EventScript_Grunt15::
 	trainerbattle_single TRAINER_GRUNT_15_HNS, RocketHideout_B2F_Text_GruntM18Seen, RocketHideout_B2F_Text_GruntM18Beaten
@@ -810,10 +810,10 @@ RocketHideout_B2F_Text_GruntM19Beaten:
     .string "Grrrr…$"
 
 RocketHideout_B2F_Text_GruntM19After:
-    .string "Heh, only the boss knows the\n"
-    .string "password for that door.\p"
-    .string "Where's the boss? Who knows?\n"
-    .string "Go look for yourself.$"
+    .string "Je, solo el jefe sabe la\n"
+    .string "contraseña de esa puerta.\p"
+    .string "¿Dónde está el jefe? ¡Quién sabe!\n"
+    .string "Ve a buscarlo tú mismo.$"
 
 RocketHideout_B2F_EventScript_Grunt16::
 	trainerbattle_single TRAINER_GRUNT_16_HNS, RocketHideout_B2F_Text_GruntM19Seen, RocketHideout_B2F_Text_GruntM19Beaten

@@ -50,7 +50,7 @@ Route9_Text_CaitlinPostBattle::
 	.string "Good luck to you!$"
 
 Route9_Text_JeremyIntro::
-	.string "Bwahaha!\n"
+	.string "¡Bwahaha!\n"
 	.string "Great! I was bored, eh!$"
 
 Route9_Text_JeremyDefeat::
@@ -75,7 +75,7 @@ Route9_Text_BricePostBattle::
 
 Route9_Text_BrentIntro::
 	.string "I got up early every day to raise\n"
-	.string "my POKéMON from cocoons!$"
+	.string "entrenar mis POKéMON capullos!$"
 
 Route9_Text_BrentDefeat::
 	.string "WHAT?\p"

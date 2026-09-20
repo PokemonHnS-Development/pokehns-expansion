@@ -6,7 +6,7 @@ SevenIsland_SevaultCanyon_EventScript_RouteSign::
 	end
 
 SevenIsland_SevaultCanyon_Text_CyndyIntro::
-	.string "My conditioning's in top form!$"
+	.string "¡Mi condición está al máximo!$"
 
 SevenIsland_SevaultCanyon_Text_CyndyDefeat::
 	.string "¿Eh?\n"
@@ -17,10 +17,10 @@ SevenIsland_SevaultCanyon_Text_CyndyPostBattle::
 	.string "hold off on TRAINER TOWER…$"
 
 SevenIsland_SevaultCanyon_Text_EvanIntro::
-	.string "It doesn't matter if you happen to\n"
-	.string "have the strongest POKéMON…\p"
-	.string "It doesn't mean a thing if you don't\n"
-	.string "know how to use them properly!$"
+	.string "No importa si llegas a tener\n"
+	.string "los POKéMON más fuertes...\p"
+	.string "¡No sirve de nada si no sabes\n"
+	.string "usarlos correctamente!$"
 
 SevenIsland_SevaultCanyon_Text_EvanDefeat::
 	.string "Eres un maestro en esto.$"
@@ -33,8 +33,8 @@ SevenIsland_SevaultCanyon_Text_EvanPostBattle::
 	.string "themselves need to grow up.$"
 
 SevenIsland_SevaultCanyon_Text_JacksonIntro::
-	.string "I work to protect the environment.\n"
-	.string "In turn, nature protects me!$"
+	.string "Trabajo para cuidar el ambiente.\n"
+	.string "¡A cambio, la naturaleza me cuida!$"
 
 SevenIsland_SevaultCanyon_Text_JacksonDefeat::
 	.string "Whoa! You're tough!\n"
@@ -61,7 +61,7 @@ SevenIsland_SevaultCanyon_Text_KatelynPostBattle::
 
 SevenIsland_SevaultCanyon_Text_LeroyIntro::
 	.string "You look strong.\n"
-	.string "Let me battle you, please!$"
+	.string "¡Por favor, lucha conmigo!$"
 
 SevenIsland_SevaultCanyon_Text_LeroyDefeat::
 	.string "I knew it!\n"
@@ -73,8 +73,8 @@ SevenIsland_SevaultCanyon_Text_LeroyPostBattle::
 	.string "Thanks so much!$"
 
 SevenIsland_SevaultCanyon_Text_MichelleIntro::
-	.string "I was given the best possible\n"
-	.string "education to become this strong.\p"
+	.string "Recibí la mejor educación\n"
+	.string "posible para ser así de fuerte.\p"
 	.string "I don't want to lose to anyone!$"
 
 SevenIsland_SevaultCanyon_Text_MichelleDefeat::
@@ -88,7 +88,7 @@ SevenIsland_SevaultCanyon_Text_MichellePostBattle::
 	.string "deeply.$"
 
 SevenIsland_SevaultCanyon_Text_LexIntro::
-	.string "LEX: My darling NYA, together\n"
+	.string "LEX: Mi querida NYA, ¡juntos\n"
 	.string "we could win!$"
 
 SevenIsland_SevaultCanyon_Text_LexDefeat::

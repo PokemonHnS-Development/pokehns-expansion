@@ -198,7 +198,7 @@ FiveIsland_RocketWarehouse_Text_Grunt1Intro::
 	.string "You wanted to battle?$"
 
 FiveIsland_RocketWarehouse_Text_Grunt1Defeat::
-	.string "Oh, but…\n"
+	.string "Oh, pero...\n"
 	.string "Too much!$"
 
 FiveIsland_RocketWarehouse_Text_Grunt1PostBattle::

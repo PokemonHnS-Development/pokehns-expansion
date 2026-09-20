@@ -103,7 +103,7 @@ GoldenrodDeptStore_Text_RoofTeacher:
     .string "I bought so much, my PACK's crammed!$"
 
 GoldenrodDeptStore_Text_RoofBugCatcher:
-    .string "My POKéMON always get paralyzed or\n"
+    .string "Mis POKéMON siempre se paralizan o\n"
     .string "Mis POKéMON siempre se paralizan o\p"
     .string "envenenan en el peor momento…\p"
     .string "¿Me pregunto si quedará alguno?$"

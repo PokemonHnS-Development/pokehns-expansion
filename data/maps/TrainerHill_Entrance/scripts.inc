@@ -447,5 +447,5 @@ TrainerHill_Entrance_Text_DoYouKnowWhenTheyOpen:
 	.string "desafiante de la historia!$"
 
 TrainerHill_Elevator_Text_ReturnToReception:
-	.string "Would you like to return to\n"
-	.string "the reception counter?$"
+	.string "¿Quieres volver al\n"
+	.string "mostrador de recepción?$"

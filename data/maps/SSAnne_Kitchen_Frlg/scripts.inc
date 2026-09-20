@@ -76,7 +76,7 @@ SSAnne_Kitchen_Text_HearAboutSnorlaxItsAGlutton::
 SSAnne_Kitchen_Text_OnlyGetToPeelOnions::
 	.string "Snivel… Sniff…\p"
 	.string "I only get to peel onions…\n"
-	.string "Snivel…$"
+	.string "Snif...$"
 
 SSAnne_Kitchen_Text_IAmLeChefMainCourseIs::
 	.string "Er-hem!\n"

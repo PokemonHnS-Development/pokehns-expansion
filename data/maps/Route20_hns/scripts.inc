@@ -119,7 +119,7 @@ Route20_Text_SeafoamSign:
 
 Route20_Text_NicoleRegister:
 	.string "¡Tu POKéMON nada rápido!\n"
-	.string "Let me get your number!$"
+	.string "¡Dame tu número!$"
 
 Route20_Text_NicoleRematchIntro:
 	.string "Tanto nadar ha hecho que mi\n"

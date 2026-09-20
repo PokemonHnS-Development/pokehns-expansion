@@ -208,29 +208,29 @@ Text_PolishedWindow::
 
 Text_BeautifulSkyWindow::
 	.string "Fuera de la ventana…\p"
-	.string "The sky looks fantastically\n"
-	.string "beautiful.$"
+	.string "El cielo se ve fantásticamente\n"
+	.string "bello.$"
 
 Text_BlinkingLights::
-	.string "Lights in different colors are\n"
-	.string "flashing on and off.$"
+	.string "Luces de varios colores\n"
+	.string "parpadean sin parar.$"
 
 Text_NeatlyLinedUpTools::
-	.string "All sorts of tools are lined up\n"
-	.string "neatly.$"
+	.string "Hay todo tipo de herramientas\n"
+	.string "bien ordenadas.$"
 
 Text_ImpressiveMachine::
-	.string "It's a machine of some sort.\n"
-	.string "It sure is impressive.$"
+	.string "Es una máquina de algún tipo.\n"
+	.string "Es realmente impresionante.$"
 
 Text_VideoGame::
-	.string "It's the latest video game!\n"
-	.string "It sure looks fun!$"
+	.string "¡Es el último videojuego!\n"
+	.string "¡Se ve muy divertido!$"
 
 Text_Burglary::
-	.string "There are obvious signs of burglary\n"
+	.string "Hay señales claras de un robo\n"
 	.string "por aquí...$"
 
 Text_PlayerFacingTVScreen::
-	.string "There's a POKéMON on TV!\n"
-	.string "It looks like it's having fun.$"
+	.string "¡Hay un POKéMON en la TV!\n"
+	.string "Parece que se está divirtiendo.$"

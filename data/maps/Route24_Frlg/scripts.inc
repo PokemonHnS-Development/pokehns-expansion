@@ -157,7 +157,7 @@ Route24_Text_ReliIntro::
 	.string "¿Te estás cansando?$"
 
 Route24_Text_ReliDefeat::
-	.string "I lost, too!$"
+	.string "¡Yo también perdí!$"
 
 Route24_Text_ReliPostBattle::
 	.string "I did my best, so I've no regrets!$"

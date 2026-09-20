@@ -621,7 +621,7 @@ MtChimney_Text_Grunt2Defeat:
 
 MtChimney_Text_Grunt2PostBattle:
 	.string "Nuestro JEFE dice: “Hará que todos\n"
-	.string "happy.”\p"
+	.string "feliz.\p"
 	.string "Pero, ¿por qué todos se interponen\n"
 	.string "en nuestro camino?$"
 
@@ -845,7 +845,7 @@ MtChimney_Text_SawyerRematchIntro:
 	.string "por estos rumbos. ¡No perderé!$"
 
 MtChimney_Text_SawyerRematchDefeat:
-	.string "Gosh, you're still the same\n"
+	.string "Cielos, sigues siendo el mismo\n"
 	.string "tan impulsiva como antes!$"
 
 MtChimney_Text_SawyerPostRematch:

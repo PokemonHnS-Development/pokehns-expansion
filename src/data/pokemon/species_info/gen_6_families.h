@@ -2035,7 +2035,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .description = COMPOUND_STRING(
             "Este Flabébé monta una flor roja.\n"
             "Al nacer, este POKéMON\n"
-            "begins flying around in search of a\n"
+            "vuela buscando un\n"
             "flower it likes."),
         .randomizerMode = MON_RANDOMIZER_RANDOM_FORM,
     },
@@ -2046,7 +2046,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .description = COMPOUND_STRING(
             "Lanza varios ataques usando el\n"
             "poder oculto que se encuentra\n"
-            "within flowers. This Pokémon is\n"
+            "entre flores. Este POKéMON es\n"
             "particularly fond of yellow flowers."),
         .randomizerMode = MON_RANDOMIZER_INVALID,
     },
@@ -2056,7 +2056,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         FLABEBE_MISC_INFO(Orange, ORANGE, 0),
         .description = COMPOUND_STRING(
             "Obtiene fuerza de las flores\n"
-            "and gives them some of its energy in\n"
+            "y les da algo de su energía a\n"
             "return. This Pokémon likes orange\n"
             "flowers best of all."),
         .randomizerMode = MON_RANDOMIZER_INVALID,
@@ -2185,7 +2185,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .description = COMPOUND_STRING(
             "Cuando este POKéMON encuentra\n"
             "plantas marchitas, las lleva\n"
-            "will bring them back to its territory\n"
+            "los llevará de vuelta a su territorio\n"
             "and care for them."),
         .randomizerMode = MON_RANDOMIZER_INVALID,
     },
@@ -2216,7 +2216,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .description = COMPOUND_STRING(
             "una flor que ya no florece en\n"
             "ningún lugar. Se cree que también\n"
-            "also thought to contain terrifying\n"
+            "también se cree que contiene terribles\n"
             "power."),
         .frontPic = gMonFrontPic_FloetteEternal,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
@@ -2499,7 +2499,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .weight = 910,
         .description = COMPOUND_STRING(
             "Sabe cómo se siente su entrenador\n"
-            "subtle shifts in the grip on its horns. This\n"
+            "cambios leves al sujetar sus cuernos.\n"
             "les permite correr como si fueran uno\n"
             "being. They inhabit mountainous regions."),
         .pokemonScale = 259,
@@ -4374,7 +4374,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .description = COMPOUND_STRING(
             "Al expulsar agua por la boquilla de\n"
             "su enorme garra, puede moverse a\n"
-            "at a speed of 60 knots. They launch\n"
+            "a una velocidad de 60 nudos. Lanzan\n"
             "cannonballs made of water."),
         .pokemonScale = 272,
         .pokemonOffset = 3,
@@ -4446,7 +4446,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .height = 5,
         .weight = 60,
         .description = COMPOUND_STRING(
-            "They make their home in deserts.\n"
+            "Hacen su hogar en los desiertos.\n"
             "Generan su propia energía al tomar\n"
             "bajo el sol, así que no necesitan\n"
             "a requirement."),
@@ -4516,7 +4516,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .height = 10,
         .weight = 210,
         .description = COMPOUND_STRING(
-            "A single Heliolisk can generate sufficient\n"
+            "Un Heliolisk genera suficiente\n"
             "energía para un rascacielos. Puede\n"
             "stimulate its muscles with electricity,\n"
             "boosting the strength in its legs."),
@@ -5534,7 +5534,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .description = COMPOUND_STRING(
             "Estos coleccionistas de llaves\n"
             "amenazan al rival haciendo sonar\n"
-            "at them. It will sneak into people's homes\n"
+            "a ellos. Se colará en las casas\n"
             "to steal their keys."),
         .pokemonScale = 682,
         .pokemonOffset = 24,
@@ -6370,7 +6370,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .description = COMPOUND_STRING(
             "Varios Bergmite se amontonan en su\n"
             "espalda, pareciendo un portaaviones\n"
-            "made of ice. Its cumbersome frame crushes\n"
+            "de hielo. Su cuerpo pesado aplasta\n"
             "anything that stands in its way."),
         .pokemonScale = 261,
         .pokemonOffset = 1,

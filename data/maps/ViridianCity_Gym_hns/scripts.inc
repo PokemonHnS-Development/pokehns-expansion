@@ -89,9 +89,9 @@ ViridianCity_Gym_Text_LeaderBlue_GiveTM:
 
 ViridianCity_Gym_Text_LeaderBlue_ExplainTM:
 	.string "Eso es ESPACIO RARO.\p"
-	.string "All POKEMON in battle will change speed.\n"
-	.string "Slow goes first. Fast goes last.\p"
-	.string "Use it to turn a battle on its head.$"
+	.string "La velocidad de los POKéMON cambiará.\n"
+	.string "Lento va primero. Rápido va al final.\p"
+	.string "Úsalo para darle la vuelta al combate.$"
 
 ViridianCity_Gym_Text_LeaderBlue_Epilogue:
 	.string "BLUE: Escucha bien.\p"
@@ -119,7 +119,7 @@ ViridianCity_Gym_Text_Guide:
 
 ViridianCity_Gym_Text_Guide_Win:
 	.string "Vaya, eres realmente fuerte...\p"
-	.string "That was a heck of an inspirational\n"
+	.string "Eso fue muy inspirador\n"
 	.string "Se me saltaron las lágrimas.$"
 
 

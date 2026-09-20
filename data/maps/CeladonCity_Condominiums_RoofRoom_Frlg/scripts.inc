@@ -133,7 +133,7 @@ CeladonCity_Condominiums_RoofRoom_Text_ExplainWirelessClub::
 
 CeladonCity_Condominiums_RoofRoom_Text_ExplainDirectCorner::
 	.string "To link only with a friend, go to\n"
-	.string "the DIRECT CORNER.\p"
+	.string "la ESQUINA DIRECTA.\p"
 	.string "It is the right counter at the\n"
 	.string "POKéMON WIRELESS CLUB.\p"
 	.string "Go into the TRADE CORNER or the\n"

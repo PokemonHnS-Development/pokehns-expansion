@@ -290,29 +290,29 @@ SlateportCity_OceanicMuseum_2F_Text_WereTeamAqua:
 	.string "¡Cierra la boca y dánoslas!$"
 
 SlateportCity_OceanicMuseum_2F_Text_Grunt1Defeat:
-	.string "Awaaaah!\n"
-	.string "A kid beat me!$"
+	.string "¡Awaaaah!\n"
+	.string "¡Un niño me venció!$"
 
 SlateportCity_OceanicMuseum_2F_Text_BossGoingToBeFurious:
-	.string "Oh, man, what a disaster…\n"
-	.string "The BOSS is going to be furious…$"
+	.string "Ay, no, qué desastre...\n"
+	.string "El JEFE se pondrá furioso...$"
 
 SlateportCity_OceanicMuseum_2F_Text_LetMeTakeCareOfThis:
-	.string "Humph, sniveling wimp!\n"
-	.string "Let me take care of this!$"
+	.string "¡Hmph, debilucho llorón!\n"
+	.string "¡Déjenme encargarme de esto!$"
 
 SlateportCity_OceanicMuseum_2F_Text_Grunt2Defeat:
 	.string "¡¿Qué?!\n"
-	.string "I lost, too!$"
+	.string "¡Yo también perdí!$"
 
 SlateportCity_OceanicMuseum_2F_Text_MeddlingKid:
-	.string "Now what? If we don't get the parts,\n"
-	.string "we're in for it!\p"
-	.string "Arrgh, I didn't count on being meddled\n"
-	.string "with by some meddling kid!$"
+	.string " ¿Y ahora qué? Si no conseguimos\n"
+	.string "las piezas, ¡estamos fritos!\p"
+	.string "¡Arrgh, no esperaba que un niño\n"
+	.string "metiche se interpusiera!$"
 
 SlateportCity_OceanicMuseum_2F_Text_CameToSeeWhatsTakingSoLong:
-	.string "I came to see what was taking so\n"
+	.string "Vine a ver qué estaba tardando\n"
 	.string "tardamos en robar las piezas, ¿y\l"
 	.string "ustedes caen ante un niño?$"
 
@@ -417,19 +417,19 @@ SlateportCity_OceanicMuseum_2F_Text_SurfaceSeawaterDisplay:
 SlateportCity_OceanicMuseum_2F_Text_SSTidalReplica:
 	.string "“EL FERRY S.S. TIDAL\p"
 	.string "“Una réplica a escala del barco\n"
-	.string "construction at STERN'S SHIPYARD.”$"
+	.string "construcción en ASTILLERO STERN.”$"
 
 SlateportCity_OceanicMuseum_2F_Text_SubmarineReplica:
-	.string "“SUBMARINE EXPLORER 1\p"
-	.string "“A replica of the high-performance\n"
-	.string "ocean floor exploration submarine.”$"
+	.string "“SUBMARINO EXPLORADOR 1\p"
+	.string "“Réplica de un submarino de alto\n"
+	.string "rendimiento para el fondo marino.”$"
 
 SlateportCity_OceanicMuseum_2F_Text_SumbersibleReplica:
-	.string "“SUBMERSIBLE POD\p"
-	.string "“A replica of a compact, unmanned\n"
-	.string "pod for seafloor exploration.”$"
+	.string "“CÁPSULA SUMERGIBLE\p"
+	.string "“Réplica de una cápsula compacta\n"
+	.string "y no tripulada para el fondo marino.”$"
 
 SlateportCity_OceanicMuseum_2F_Text_SSAnneReplica:
 	.string "“S.S. ANNE\p"
-	.string "“A replica of the luxury liner that\n"
-	.string "circles the globe.”$"
+	.string "“Réplica del crucero de lujo que\n"
+	.string "recorre todo el mundo.”$"

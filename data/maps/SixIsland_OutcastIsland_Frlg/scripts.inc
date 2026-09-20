@@ -21,7 +21,7 @@ SixIsland_OutcastIsland_Text_RocketPostBattle::
 
 SixIsland_OutcastIsland_Text_TylorIntro::
 	.string "I'm having no luck at all.\n"
-	.string "A battle'd be a change of pace!$"
+	.string "¡Una batalla sería un cambio!$"
 
 SixIsland_OutcastIsland_Text_TylorDefeat::
 	.string "Nope, no luck at all…$"
@@ -31,7 +31,7 @@ SixIsland_OutcastIsland_Text_TylorPostBattle::
 	.string "catching something, though.$"
 
 SixIsland_OutcastIsland_Text_MymoIntro::
-	.string "Gasp… Gasp…\p"
+	.string "Jadeo... Jadeo...\p"
 	.string "I swam here from SIX ISLE PORT\n"
 	.string "in one go.$"
 

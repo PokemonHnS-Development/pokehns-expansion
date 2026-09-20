@@ -71,5 +71,5 @@ SootopolisCity_Mart_Text_FullRestoreItemOfDreams:
 
 SootopolisCity_Mart_Text_DidSomethingAwaken:
 	.string "Este clima...\n"
-	.string "Did something awaken?$"
+	.string "¿Despertó algo?$"
 

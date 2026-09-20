@@ -19,8 +19,8 @@ Route15_Text_KindraPostBattle::
 	.string "the nickname changed.$"
 
 Route15_Text_BeckyIntro::
-	.string "You look gentle, so I think I can\n"
-	.string "beat you.\p"
+	.string "Te ves amable, así que creo que\n"
+	.string "puedo vencerte.\p"
 	.string "I'll give it a go!$"
 
 Route15_Text_BeckyDefeat::
@@ -43,7 +43,7 @@ Route15_Text_EdwinPostBattle::
 	.string "I'm not the right type, I guess.$"
 
 Route15_Text_ChesterIntro::
-	.string "Hmm? My birds are shivering!\n"
+	.string "¡¿Hmm?! ¡Mis aves están temblando!\n"
 	.string "You're good, aren't you?$"
 
 Route15_Text_ChesterDefeat::
@@ -56,7 +56,7 @@ Route15_Text_ChesterPostBattle::
 	.string "have no effect on bird POKéMON.$"
 
 Route15_Text_GraceIntro::
-	.string "Oh, you're a little cutie!\n"
+	.string "¡Oh, eres una cosita linda!\n"
 	.string "So like a darling POKéMON!$"
 
 Route15_Text_GraceDefeat::

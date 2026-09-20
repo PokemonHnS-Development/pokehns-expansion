@@ -268,7 +268,7 @@ Route22_Text_LateRivalIntro::
 	.string "{RIVAL}: What? {PLAYER}!\n"
 	.string "What a surprise to see you here!\p"
 	.string "So you're going to the POKéMON\n"
-	.string "POKéMON?\p"
+	.string "con los POKéMON?\p"
 	.string "You collected all the BADGES, too?\n"
 	.string "That's cool!\p"
 	.string "Then I'll whip you, {PLAYER}, as a\n"

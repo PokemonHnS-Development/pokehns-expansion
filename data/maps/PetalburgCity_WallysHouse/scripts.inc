@@ -91,7 +91,7 @@ PetalburgCity_WallysHouse_Text_PleaseExcuseUs:
 	.string "desde que fue a PUEBLO VERDANTE.\p"
 	.string "¡Te lo debemos todo a ti!\p"
 	.string "Cuando WALLY salió del pueblo,\n"
-	.string "him catch a POKéMON, right?\p"
+	.string "que atrape un POKéMON, ¿verdad?\p"
 	.string "Creo que eso animó mucho a WALLY.\n"
 	.string "estén felices.\p"
 	.string "De hecho, no solo a WALLY.\n"

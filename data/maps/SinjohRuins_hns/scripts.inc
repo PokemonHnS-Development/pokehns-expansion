@@ -157,17 +157,17 @@ SinjohRuins_Text_StevenGotoStairs1:
     .string "STEVEN: Esto solo puede ser una cosa.$"
 
 SinjohRuins_Text_StevenGotoStairs2:
-    .string "{PLAYER}. We were able to decipher\n"
-    .string "the rest of the glyphs...\p"
-    .string "If the translation is right, \n"
-    .string "the POKéMON at the top of that\l"
-    .string "staircase is the most powerful\l"
-    .string "being in the universe.\p"
-    .string "And it is my duty as former\n"
-    .string "CHAMPION of the HOENN LEAGUE\l"
-    .string "to make sure you are strong\l"
-    .string "enough to face it.\p"
-    .string "Meet me at that landing\n"
+    .string "{PLAYER}. Pudimos descifrar\n"
+    .string "el resto de los glifos...\p"
+    .string "el resto de los glifos...\n"
+    .string "Si la traducción es correcta,\l"
+    .string "el POKéMON que está arriba de\l"
+    .string "esa escalera es el ser más\p"
+    .string "poderoso del universo.\n"
+    .string "Y es mi deber como ex\l"
+    .string "CAMPEÓN de la LIGA HOENN\l"
+    .string "asegurar que seas lo bastante\p"
+    .string "fuerte para enfrentarlo.\n"
     .string "cuando estés listo.$"
 
 SinjohRuins_Movement_StevenGoesToStairs:

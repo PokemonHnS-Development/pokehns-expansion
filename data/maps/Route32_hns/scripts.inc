@@ -357,22 +357,22 @@ Route32_Movement_SlowpokeRight::
 	step_end
 
 Route32_Text_CooltrainerM_WhatsTheHurry:
-	.string "Wait up!\n"
-	.string "What's the hurry?$"
+	.string "¡Espera!\n"
+	.string "¿Cuál es la prisa?$"
 
 Route32_Text_CooltrainerM_AideIsWaiting:
-	.string "{PLAYER}, right?\n"
-	.string "Some guy wearing glasses\p"
-	.string "was looking for you.\p"
-	.string "See for yourself. He's waiting for\n"
-	.string "you at the POKéMON CENTER.$"
+	.string "{PLAYER}, ¿verdad?\n"
+	.string "Un tipo con lentes\p"
+	.string "te estaba buscando.\p"
+	.string "Míralo tú mismo. Te espera\n"
+	.string "en el CENTRO POKéMON.$"
 
 Route32_Text_CooltrainerM_SproutTower:
-	.string "Have you gone to SPROUT TOWER?\n"
-	.string "If you ever visit VIOLET CITY,\p"
-	.string "they'll expect you to train there.\n"
-	.string "That's basic for trainers.\p"
-	.string "Go to SPROUT TOWER!$"
+	.string "¿Fuiste a la TORRE VERDE?\n"
+	.string "Si visitas CIUDAD MALVA,\p"
+	.string "esperarán que entrenes allí.\n"
+	.string "Es básico para los entrenadores.\p"
+	.string "¡Ve a la TORRE VERDE!$"
 
 Route32_Text_CooltrainerM_VioletGym:
 	.string "¿Fuiste al GIMNASIO POKéMON?\n"

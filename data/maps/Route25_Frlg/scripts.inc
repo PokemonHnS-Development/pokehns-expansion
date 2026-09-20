@@ -41,7 +41,7 @@ Route25_Text_FlintDefeat::
 	.string "Aww, darn…$"
 
 Route25_Text_FlintPostBattle::
-	.string "Oh, well.\n"
+	.string "Oh, bueno.\n"
 	.string "My girlfriend will cheer me up.$"
 
 Route25_Text_KelseyIntro::

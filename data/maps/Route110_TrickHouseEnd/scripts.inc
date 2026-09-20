@@ -287,7 +287,7 @@ Route110_TrickHouseEnd_Text_AllNightToInstallDoors:
 	.string "¡Casi eres tan genial como yo!$"
 
 Route110_TrickHouseEnd_Text_AllNightSettingUpArrows:
-	.string "It took me all night setting up arrows…\p"
+	.string "Tardé toda la noche poniendo flechas…\p"
 	.string "¡Eres tan genial como yo!$"
 
 Route110_TrickHouseEnd_Text_AllNightPolishingFloors:

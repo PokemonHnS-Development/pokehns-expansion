@@ -332,14 +332,14 @@ Route110_TrickHousePuzzle3_Text_MarthaPostBattle:
 
 Route110_TrickHousePuzzle3_Text_AlanIntro:
 	.string "No lo entiendo. ¿Quién querría...?\n"
-	.string "with a house this bizarre?$"
+	.string "¿con una casa tan extraña?$"
 
 Route110_TrickHousePuzzle3_Text_AlanDefeat:
-	.string "I don't get it.\n"
-	.string "How did I lose?$"
+	.string "No lo entiendo.\n"
+	.string "¿Cómo pude perder?$"
 
 Route110_TrickHousePuzzle3_Text_AlanPostBattle:
-	.string "I don't get it.\n"
-	.string "How many traps are in this house?\p"
-	.string "You may be the one to solve that.$"
+	.string "No lo entiendo.\n"
+	.string "¿Cuántas trampas hay en esta casa?\p"
+	.string "Tú podrías ser quien lo resuelva.$"
 

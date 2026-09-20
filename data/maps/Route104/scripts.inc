@@ -1089,7 +1089,7 @@ Route104_Text_RegisteredMay:
 	.string "en el POKéNAV.$"
 
 Route104_Text_MayHowsYourPokedex:
-	.string "MAY: Oh, by the way, {PLAYER}{KUN},\n"
+	.string "MAY: Ah, por cierto, {PLAYER}{KUN},\n"
 	.string "¿cómo va tu POKéDEX?$"
 
 Route104_Text_MayMinesDecentLetsBattle:
@@ -1120,49 +1120,49 @@ Route104_Text_MayPostBattle:
 	.string "bueno manejando a los POKéMON.\p"
 	.string "Pero en vez de solo hacerlos\n"
 	.string "luchar, deberías ser como MR. BRINEY.\p"
-	.string "It's important to become friends with\n"
-	.string "POKéMON, too.$"
+	.string "también es importante hacerse amigo\n"
+	.string "de los POKéMON.$"
 
 Route104_Text_BrendanWeShouldRegister:
-	.string "BRENDAN: Oh, hey, {PLAYER}!\p"
-	.string "Cool, you had DEVON install the MATCH\n"
-	.string "CALL system on your POKéNAV!\p"
-	.string "Let's register each other in our\n"
-	.string "POKéNAVS so we can keep in touch.$"
+	.string "BRENDAN: ¡Hola, {PLAYER}!\p"
+	.string "¡Genial! Hiciste que DEVON instalara\n"
+	.string "el sistema MATCH CALL en tu POKéNAV!\p"
+	.string "Registrémonos en nuestros POKéNAVS\n"
+	.string "para estar en contacto.$"
 
 Route104_Text_RegisteredBrendan:
-	.string "{PLAYER} registered BRENDAN\n"
+	.string "{PLAYER} registró a BRENDAN\n"
 	.string "en el POKéNAV.$"
 
 Route104_Text_BrendanHowsYourPokedex:
-	.string "BRENDAN: {PLAYER}, how's your POKéDEX?\n"
-	.string "Have you filled in any pages yet?$"
+	.string "BRENDAN: {PLAYER}, ¿cómo va tu POKéDEX?\n"
+	.string "¿Ya llenaste algunas páginas?$"
 
 Route104_Text_BrendanDoingGreatLetsBattle:
-	.string "Me, I'm doing great!\p"
-	.string "Want to check out how good I am with\n"
-	.string "a battle?$"
+	.string "¡Yo voy muy bien!\p"
+	.string "¿Quieres ver qué tan bueno soy en\n"
+	.string "una batalla?$"
 
 Route104_Text_BrendanNoConfidence:
-	.string "BRENDAN: What's the matter? Don't have\n"
-	.string "any confidence in your POKéMON?$"
+	.string "BRENDAN: ¿Qué pasa? ¿No tienes\n"
+	.string "confianza en tus POKéMON?$"
 
 Route104_Text_BrendanLetsBattle:
-	.string "BRENDAN: What's up?\n"
-	.string "Want to have a battle with me?$"
+	.string "BRENDAN: ¿Qué tal?\n"
+	.string "¿Quieres luchar conmigo?$"
 
 Route104_Text_BrendanIntro:
-	.string "BRENDAN: I know you just became\n"
-	.string "a TRAINER, but I won't go easy!$"
+	.string "BRENDAN: Sé que acabas de ser\n"
+	.string "ENTRENADOR, ¡pero no tendré piedad!$"
 
 Route104_Text_BrendanDefeat:
 	.string "Hmm…\n"
-	.string "You're pretty good.$"
+	.string "Eres bastante bueno.$"
 
 Route104_Text_BrendanPostBattle:
-	.string "BRENDAN: You've gotten pretty decent\n"
-	.string "at handling POKéMON.\p"
-	.string "But, you know, you shouldn't just be\n"
-	.string "making POKéMON battle.\p"
-	.string "Like MR. BRINEY, it's important to\n"
-	.string "become friends with your POKéMON.$"
+	.string "BRENDAN: Te has vuelto bastante\n"
+	.string "bueno manejando POKéMON.\p"
+	.string "Pero, ya sabes, no deberías solo\n"
+	.string "hacer batallas POKéMON.\p"
+	.string "Como el SR. BRINEY, es importante\n"
+	.string "ser amigo de tus POKéMON.$"

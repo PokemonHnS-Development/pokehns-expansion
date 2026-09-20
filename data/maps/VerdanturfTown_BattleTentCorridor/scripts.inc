@@ -62,7 +62,7 @@ VerdanturfTown_ContestHall_Text_RaisedMonToBeCute:
 @ Unused
 VerdanturfTown_ContestHall_Text_MyMonRules:
 	.string "¡Mi POKéMON es el mejor!\p"
-	.string "It's cool, tough yet beautiful, cute,\n"
+	.string "Es genial, fuerte pero hermoso, lindo,\n"
 	.string "y listo. ¡Es perfecto!\p"
 	.string "Podría ganar en cada uno de los\n"
 	.string "CONCURSOS.$"

@@ -283,7 +283,7 @@ MauvilleCity_PokemonCenter_1F_Text_NotWorthyOfLegend:
 
 MauvilleCity_PokemonCenter_1F_Text_IWishMorePeopleWereInterested:
 	.string "Quisiera que más gente se interesara\n"
-	.string "in hearing my epic tales of legendary\l"
+	.string "al oír mis épicas historias de\l"
 	.string "combate.$"
 
 MauvilleCity_PokemonCenter_1F_Text_SavedGameTitle::
@@ -462,7 +462,7 @@ MauvilleCity_PokemonCenter_1F_Text_SafariGamesAction::
 MauvilleCity_PokemonCenter_1F_Text_SafariGamesStory::
 	.string "Es la historia de un ENTRENADOR\n"
 	.string "llamado {STR_VAR_3}.\p"
-	.string "This TRAINER went into the SAFARI ZONE\n"
+	.string "Este ENTRENADOR fue a la ZONA SAFARI\n"
 	.string "¡{STR_VAR_1} veces!\p"
 	.string "{STR_VAR_3} es un ENTRENADOR cuyo lado\n"
 	.string "salvaje sale en la ZONA SAFARI!$"
@@ -476,7 +476,7 @@ MauvilleCity_PokemonCenter_1F_Text_UsedCutAction::
 MauvilleCity_PokemonCenter_1F_Text_UsedCutStory::
 	.string "Es la historia de un ENTRENADOR\n"
 	.string "llamado {STR_VAR_3}.\p"
-	.string "This TRAINER used CUT\n"
+	.string "Este ENTRENADOR usó CORTE\n"
 	.string "¡{STR_VAR_1} veces!\p"
 	.string "{STR_VAR_3} es un ENTRENADOR que\n"
 	.string "simplemente ama usar CORTE!$"
@@ -518,10 +518,10 @@ MauvilleCity_PokemonCenter_1F_Text_UsedSplashAction::
 MauvilleCity_PokemonCenter_1F_Text_UsedSplashStory::
 	.string "Es la historia de un ENTRENADOR\n"
 	.string "llamado {STR_VAR_3}.\p"
-	.string "This TRAINER used SPLASH\n"
+	.string "Este ENTRENADOR usó SALPICADURA\n"
 	.string "¡{STR_VAR_1} veces!\p"
-	.string "{STR_VAR_3} is a TRAINER who must love\n"
-	.string "SPLASHING around!$"
+	.string "{STR_VAR_3} es un ENTRENADOR que ama\n"
+	.string "¡salpicar por todas partes!$"
 
 MauvilleCity_PokemonCenter_1F_Text_UsedStruggleTitle::
 	.string "The Tenacious TRAINER$"
@@ -532,10 +532,10 @@ MauvilleCity_PokemonCenter_1F_Text_UsedStruggleAction::
 MauvilleCity_PokemonCenter_1F_Text_UsedStruggleStory::
 	.string "Es la historia de un ENTRENADOR\n"
 	.string "llamado {STR_VAR_3}.\p"
-	.string "This TRAINER had to rely on STRUGGLE\n"
+	.string "Este ENTRENADOR dependió de ESFUERZO\n"
 	.string "¡{STR_VAR_1} veces!\p"
-	.string "{STR_VAR_3} is a tenacious TRAINER\n"
-	.string "who never gives in to adversity!$"
+	.string "{STR_VAR_3} es un ENTRENADOR tenaz\n"
+	.string "¡que jamás se rinde ante nada!$"
 
 MauvilleCity_PokemonCenter_1F_Text_SlotJackpotsTitle::
 	.string "The SLOT Champ$"
@@ -546,10 +546,10 @@ MauvilleCity_PokemonCenter_1F_Text_SlotJackpotsAction::
 MauvilleCity_PokemonCenter_1F_Text_SlotJackpotsStory::
 	.string "Es la historia de un ENTRENADOR\n"
 	.string "llamado {STR_VAR_3}.\p"
-	.string "This TRAINER won the jackpot on\n"
-	.string "the SLOTS {STR_VAR_1} times.\p"
-	.string "{STR_VAR_3} is a TRAINER who was lucky\n"
-	.string "on the SLOTS!$"
+	.string "Este ENTRENADOR ganó el premio en\n"
+	.string "las TRAGAPERRAS {STR_VAR_1} veces.\p"
+	.string "{STR_VAR_3} es un ENTRENADOR que tuvo\n"
+	.string "suerte en las TRAGAPERRAS!$"
 
 MauvilleCity_PokemonCenter_1F_Text_RouletteWinsTitle::
 	.string "The ROULETTE Champ$"
@@ -560,10 +560,10 @@ MauvilleCity_PokemonCenter_1F_Text_RouletteWinsAction::
 MauvilleCity_PokemonCenter_1F_Text_RouletteWinsStory::
 	.string "Es la historia de un ENTRENADOR\n"
 	.string "llamado {STR_VAR_3}.\p"
-	.string "This TRAINER won in ROULETTE\n"
-	.string "{STR_VAR_1} times in a row.\p"
-	.string "{STR_VAR_3} was lucky when the ball\n"
-	.string "bounced in ROULETTE!$"
+	.string "Este ENTRENADOR ganó en la RULETA\n"
+	.string "{STR_VAR_1} veces seguidas.\p"
+	.string "{STR_VAR_3} tuvo suerte con la bola\n"
+	.string "en la RULETA!$"
 
 MauvilleCity_PokemonCenter_1F_Text_BattleTowerChallengesTitle::
 	.string "The BATTLE TOWER Challenger$"
@@ -574,10 +574,10 @@ MauvilleCity_PokemonCenter_1F_Text_BattleTowerChallengesAction::
 MauvilleCity_PokemonCenter_1F_Text_BattleTowerChallengesStory::
 	.string "Es la historia de un ENTRENADOR\n"
 	.string "llamado {STR_VAR_3}.\p"
-	.string "This TRAINER took the BATTLE TOWER\n"
-	.string "challenge {STR_VAR_1} times!\p"
-	.string "{STR_VAR_3} is a TRAINER who aspires\n"
-	.string "for excellence in the BATTLE TOWER!$"
+	.string "Este ENTRENADOR aceptó el reto de\n"
+	.string "la BATTLE TOWER {STR_VAR_1} veces!\p"
+	.string "{STR_VAR_3} es un ENTRENADOR que\n"
+	.string "busca la excelencia en BATTLE TOWER!$"
 
 MauvilleCity_PokemonCenter_1F_Text_MadePokeblocksTitle::
 	.string "The Blend-Loving TRAINER$"
@@ -588,10 +588,10 @@ MauvilleCity_PokemonCenter_1F_Text_MadePokeblocksAction::
 MauvilleCity_PokemonCenter_1F_Text_MadePokeblocksStory::
 	.string "Es la historia de un ENTRENADOR\n"
 	.string "llamado {STR_VAR_3}.\p"
-	.string "This TRAINER made {POKEBLOCK}S\n"
+	.string "Este ENTRENADOR hizo {POKEBLOCK}S\n"
 	.string "¡{STR_VAR_1} veces!\p"
-	.string "There is none better at using a BERRY\n"
-	.string "BLENDER than {STR_VAR_3}!$"
+	.string "¡Nadie usa mejor la MEZCLADORA de\n"
+	.string "BAYAS que {STR_VAR_3}!$"
 
 MauvilleCity_PokemonCenter_1F_Text_EnteredContestsTitle::
 	.string "The CONTEST-Loving TRAINER$"
@@ -602,10 +602,10 @@ MauvilleCity_PokemonCenter_1F_Text_EnteredContestsAction::
 MauvilleCity_PokemonCenter_1F_Text_EnteredContestsStory::
 	.string "Es la historia de un ENTRENADOR\n"
 	.string "llamado {STR_VAR_3}.\p"
-	.string "This TRAINER entered CONTESTS\n"
+	.string "Este ENTRENADOR participó en\n"
 	.string "¡{STR_VAR_1} veces!\p"
-	.string "{STR_VAR_3} must love showing off\n"
-	.string "POKéMON to others!$"
+	.string "CONCURSOS. {STR_VAR_3} debe amar\n"
+	.string "lucir sus POKéMON ante otros!$"
 
 MauvilleCity_PokemonCenter_1F_Text_WonContestsTitle::
 	.string "The CONTEST Master$"

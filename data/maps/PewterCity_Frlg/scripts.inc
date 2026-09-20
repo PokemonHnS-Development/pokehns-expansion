@@ -844,7 +844,7 @@ PewterCity_Movement_WalkInPlaceLeft::
 
 Text_DreamEaterTeach::
 	.string "Yawn!\n"
-	.string "I must have dozed off in the sun.\p"
+	.string "Debí quedarme dormido al sol.\p"
 	.string "I had this weird dream about\n"
 	.string "a DROWZEE eating my dream.\p"
 	.string "And…\n"

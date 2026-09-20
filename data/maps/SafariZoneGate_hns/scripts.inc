@@ -93,7 +93,7 @@ SafariZone_Text_SlowpokeFan:
 SafariZone_Text_CustomSystem:
 	.string "Quizás pienses que existe un\n"
 	.string "sistema sofisticado para\l"
-	.string "customizing the SAFARI ZONE, right?\p"
+	.string "personalizando la ZONA SAFARI, ¿no?\p"
 	.string "La verdad es que...$"
 
 SafariZone_Text_Sign:

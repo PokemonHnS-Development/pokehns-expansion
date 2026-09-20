@@ -485,7 +485,7 @@ Route119_Text_MayIntro:
 
 Route119_Text_MayDefeat:
 	.string "¡Achah!\n"
-	.string "{PLAYER}{KUN}, you're strong!\p"
+	.string "{PLAYER}{KUN}, ¡eres fuerte!\p"
 	.string "Me preocupaba que pudieras\n"
 	.string "tener problemas entrenando.$"
 

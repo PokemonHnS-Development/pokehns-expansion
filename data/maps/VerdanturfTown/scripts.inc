@@ -80,7 +80,7 @@ VerdanturfTown_Text_ManDugTunnelForLove:
 VerdanturfTown_Text_AirCleanHere:
 	.string "Por cómo soplan los vientos, la ceniza\n"
 	.string "volcánica nunca llega hacia aquí.\p"
-	.string "The air is clean and delicious here.\n"
+	.string "El aire es puro y delicioso aquí.\n"
 	.string "Vivir aquí haría maravillas incluso\l"
 	.string "para gente débil y enfermiza.$"
 
@@ -115,11 +115,11 @@ VerdanturfTown_Text_WandasHouse:
 
 VerdanturfTown_Text_BattleTentSign:
 	.string "TIENDA BATALLA CAMPO VERDE\n"
-	.string "“Feast Your Eyes on Battles!”$"
+	.string "¡Mira estas batallas!$"
 
 VerdanturfTown_Text_RusturfTunnelSign:
 	.string "TÚNEL RUSTURF\n"
-	.string "“Linking RUSTBORO and VERDANTURF\p"
-	.string "“The tunnel project has been\n"
-	.string "canceled.”$"
+	.string "“Uniendo FUNDA y VERDANTURF,\p"
+	.string "“el proyecto del túnel ha sido\n"
+	.string "cancelado.”$"
 

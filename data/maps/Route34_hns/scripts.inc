@@ -130,25 +130,25 @@ Route34_Text_YoungsterSamuel_Beaten:
 	.string "Beaten by a passing stranger!$"
 
 Route34_Text_YoungsterSamuel_After:
-	.string "I'm going to train even harder.\p"
-	.string "After all, I'm trying to become\n"
-	.string "a GYM LEADER.$"
+	.string "Entrenaré aún más duro.\p"
+	.string "Después de todo, intento ser\n"
+	.string "un LÍDER de GIMNASIO.$"
 
 Route34_Text_YoungsterIan_Seen:
-	.string "I'm the best in my class at\n"
+	.string "Soy el mejor de mi clase en\n"
 	.string "POKéMON.$"
 
 Route34_Text_YoungsterIan_Beaten:
 	.string "¡No! Hay entrenadores mejores…$"
 
 Route34_Text_YoungsterIan_After:
-	.string "I'm trying hard so I can be the\n"
-	.string "star in my class.$"
+	.string "Me esfuerzo para ser la\n"
+	.string "estrella de mi clase.$"
 
 Route34_Text_CamperTodd_Seen:
-	.string "I'm confident in my ability to\n"
-	.string "raise POKéMON.\p"
-	.string "Want to see?$"
+	.string "Confío en mi habilidad para\n"
+	.string "criar POKéMON.\p"
+	.string "¿Quieres verlo?$"
 
 Route34_Text_CamperTodd_Beaten:
 	.string "Did I screw up my training?$"
@@ -162,9 +162,9 @@ Route34_Text_ToddRegister:
 	.string "o quizás usar algunos objetos…$"
 
 Route34_Text_ToddRematchIntro:
-	.string "I'm confident in my ability to\n"
-	.string "raise POKéMON.\p"
-	.string "Want to see?$"
+	.string "Confío en mi habilidad para\n"
+	.string "criar POKéMON.\p"
+	.string "¿Quieres verlo?$"
 
 Route34_Text_ToddRematchDefeat:
 	.string "Did I screw up my training?$"
@@ -279,5 +279,5 @@ Route34_Text_CooltrainerKate_After:
 
 
 Route34_Text_Sign_DayCare:
-	.string "DAY-CARE\p"
-	.string "LET US RAISE YOUR POKéMON FOR YOU!$"
+	.string "GUARDERÍA\p"
+	.string "¡DEJA QUE CRIEMOS TUS POKéMON!$"

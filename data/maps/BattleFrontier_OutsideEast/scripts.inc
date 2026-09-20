@@ -265,7 +265,7 @@ BattleFrontier_OutsideEast_Text_BattleTowerFeelsSpecial:
 BattleFrontier_OutsideEast_Text_ConquerLeagueAndFrontier:
 	.string "Mi gran ambición es conquistar\n"
 	.string "la BATTLE FRONTIER y la LIGA\l"
-	.string "POKéMON.\p"
+	.string "POKéMON planta.\p"
 	.string "Y si mi sueño se hace realidad...\p"
 	.string "le preguntaré a MIMI, la vecina,\n"
 	.string "¡si quiere ser mi amiga!$"

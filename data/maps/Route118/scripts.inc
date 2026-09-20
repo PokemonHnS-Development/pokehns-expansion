@@ -244,7 +244,7 @@ Route118_EventScript_Deandre::
 	end
 
 Route118_Text_StevenQuestions:
-	.string "STEVEN: Hi, {PLAYER}{KUN}!\p"
+	.string "STEVEN: ¡Hola, {PLAYER}{KUN}!\p"
 	.string "¡Soy yo, STEVEN!\n"
 	.string "Nos vimos en la cueva de DEWFORD.\p"
 	.string "¿Has conocido muchos tipos de POKéMON\n"

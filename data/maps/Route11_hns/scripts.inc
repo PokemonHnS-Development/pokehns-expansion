@@ -36,31 +36,31 @@ Route11_EventScript_Item_Grass_Knot::
     end
 
 Route11_Text_Engineer:
-	.string "I saw a strange POKéMON climbing\n"
-	.string "in the trees, but it didn't\l"
-	.string "look like MANKEY...$"
+	.string "Vi un POKéMON extraño trepando\n"
+	.string "por los árboles, pero no\l"
+	.string "parecía un MANKEY...$"
 
 Route11_Text_YoungsterOwenSeen:
-	.string "There's no cheating in POKéMON.\p"
-	.string "Let's keep it fair and square!$"
+	.string "No se hace trampa en POKéMON.\p"
+	.string "¡Mantengamos el juego limpio!$"
 
 Route11_Text_YoungsterOwenBeaten:
 	.string "¿Eh? ¿Cómo pasó esto?$"
 
 Route11_Text_YoungsterOwenAfterBattle:
-	.string "I fought fair and square with\n"
-	.string "honor.\p"
-	.string "I don't regret this at all.$"
+	.string "Luché con honor y de forma\n"
+	.string "justa.\p"
+	.string "No me arrepiento de nada.$"
 
 Route11_Text_YoungsterJasonSeen:
-	.string "It itches and tickles a bit when\n"
-	.string "I wear shorts in the grass.$"
+	.string "Me pica y me da cosquillas al\n"
+	.string "usar shorts en la hierba.$"
 
 Route11_Text_YoungsterJasonBeaten:
 	.string "Aiyaaah! I got stomped!$"
 
 Route11_Text_YoungsterJasonAfterBattle:
-	.string "I'm going to catch more POKéMON in\n"
+	.string "Atraparé más POKéMON en\n"
 	.string "caminar por la hierba.$"
 
 Route11_Text_PsychicHermanSeen:
@@ -71,19 +71,19 @@ Route11_Text_PsychicHermanBeaten:
 
 Route11_Text_PsychicHermanAfterBattle:
 	.string "…\p"
-	.string "I lost while I had my eyes closed…$"
+	.string "Perdí mientras cerraba los ojos…$"
 
 Route11_Text_PsychicFidelSeen:
-	.string "I can see it…\p"
-	.string "Everything to see about you…$"
+	.string "Puedo verlo…\p"
+	.string "Todo lo que hay en ti…$"
 
 Route11_Text_PsychicFidelBeaten:
 	.string "I couldn't foresee your power…$"
 
 Route11_Text_PsychicFidelAfterBattle:
-	.string "Strength in conviction…\p"
-	.string "You're strong because you believe\n"
-	.string "in your POKéMON.$"
+	.string "Fuerza en la convicción…\p"
+	.string "Eres fuerte porque crees\n"
+	.string "en tus POKéMON.$"
 
 Route11_Text_Sign:
 	.string "ROUTE 11$"

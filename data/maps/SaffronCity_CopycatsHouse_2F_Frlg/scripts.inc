@@ -69,7 +69,7 @@ Text_MimicTeach::
 	.string "A POKé DOLL!\p"
 	.string "For me?\n"
 	.string "¡Gracias!\p"
-	.string "You know what?\n"
+	.string "¿Sabes qué?\n"
 	.string "I can teach the move MIMIC.$"
 
 Text_MimicDeclined::
@@ -82,7 +82,7 @@ Text_MimicWhichMon::
 Text_MimicTaughtMale::
 	.string "{PLAYER}: Hi!\n"
 	.string "Thanks for earlier!\p"
-	.string "{PLAYER}: Pardon?\p"
+	.string "{PLAYER}: ¿Perdón?\p"
 	.string "{PLAYER}: Is it that fun to mimic my\n"
 	.string "every move?\p"
 	.string "COPYCAT: You bet!\n"
@@ -91,7 +91,7 @@ Text_MimicTaughtMale::
 Text_MimicTaughtFemale::
 	.string "{PLAYER}: Hi!\n"
 	.string "Thanks for what you did for us.\p"
-	.string "{PLAYER}: Pardon?\p"
+	.string "{PLAYER}: ¿Perdón?\p"
 	.string "{PLAYER}: Is it really that fun to\n"
 	.string "copy what I say and do?\p"
 	.string "COPYCAT: You bet!\n"

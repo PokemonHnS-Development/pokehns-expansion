@@ -18,7 +18,7 @@ SafariZone_West_EventScript_AreaSign::
 	end
 
 SafariZone_West_Text_RestHouse::
-	.string "REST HOUSE$"
+	.string "CASA DE DESCANSO$"
 
 SafariZone_West_Text_PleaseFindWardensLostTeeth::
 	.string "REQUEST NOTICE\p"

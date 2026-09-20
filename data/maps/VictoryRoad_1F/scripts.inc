@@ -201,7 +201,7 @@ VictoryRoad_1F_Text_QuincyDefeat:
 
 VictoryRoad_1F_Text_QuincyPostBattle:
 	.string "Pasar por aquí a salvo es la\n"
-	.string "the final test for any TRAINER aiming\l"
+	.string "la prueba final para todo ENTRENADOR\l"
 	.string "ser el CAMPEÓN POKéMON.\p"
 	.string "Por eso se llama la VÍA\n"
 	.string "TRIUNFO.$"

@@ -31,13 +31,13 @@ Questionnaire_Text_YouCanAccessMysteryEvent::
 	.string "acceder al EVENTO MISTERIOSO.$"
 
 MysteryGift_Text_TheresATicketForYou::
-	.string "Thank you for using the MYSTERY\n"
+	.string "Gracias por usar el sistema de\n"
 	.string "Sistema de EVENTOS.\p"
-	.string "You must be {PLAYER}.\n"
-	.string "There is a ticket here for you.$"
+	.string "Tú debes ser {PLAYER}.\n"
+	.string "Tengo un boleto aquí para ti.$"
 
 MysteryGift_Text_TryUsingItAtLilycovePort::
 	.string "Parece que se usa en\n"
 	.string "el puerto de CIUDAD FONDOPLATA.\p"
-	.string "Why not give it a try and see what\n"
-	.string "it is about?$"
+	.string "¿Por qué no lo pruebas y ves de qué\n"
+	.string "se trata?$"

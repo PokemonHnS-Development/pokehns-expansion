@@ -1615,7 +1615,7 @@ PalletTown_ProfessorOaksLab_Text_RivalJustLetMeHandleEverything::
 	.string "I went and collected more POKéMON,\n"
 	.string "and faster, too.\p"
 	.string "You should just let me handle\n"
-	.string "everything.$"
+	.string "todo.$"
 
 PalletTown_ProfessorOaksLab_Text_OakNeedYourHelpTooNeedToSeePokedexes::
 	.string "OAK: I know, I know.\n"

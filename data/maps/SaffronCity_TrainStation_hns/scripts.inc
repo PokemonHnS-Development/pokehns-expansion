@@ -296,8 +296,8 @@ SaffronMagnetTrainStation_Text_OfficerTrainHasntComeIn:
     .string "Eso no funcionará.$"
 
 SaffronMagnetTrainStation_Text_OfficerComingAboard:
-    .string "We'll soon depart for GOLDENROD.\p"
-    .string "Are you coming aboard?$"
+    .string "Pronto partiremos a CIUDAD TRIGAL.\p"
+    .string "¿Quieres subir a bordo?$"
 
 SaffronMagnetTrainStation_Text_OfficerRightThisWay:
     .string "¿Puedo ver su PASE de tren, por favor?\p"
@@ -310,36 +310,36 @@ SaffronMagnetTrainStation_Text_OfficerHopeToSeeYouAgain:
     .string "¡Esperamos volver a verte!$"
 
 SaffronMagnetTrainStation_Text_OfficerArrivedInSaffron:
-    .string "We have arrived in SAFFRON.\p"
+    .string "Hemos llegado a CIUDAD AZAFRÁN.\p"
     .string "Esperamos verte de nuevo.$"
 
 @=============================================================================================================================
 
 SaffronMagnetTrainStation_Text_Officer_TrainNotOperating:
-	.string "I'm sorry, but the MAGNET TRAIN\n"
-	.string "isn't operating now.$"
+	.string "Lo siento, pero el MAGNET TRAIN\n"
+	.string "no está funcionando ahora.$"
 
 SaffronMagnetTrainStation_Text_GymGuide:
-	.string "The MAGNET TRAIN is a super-modern\n"
-	.string "rail liner that uses electricity\p"
-	.string "and magnets to attain incredible\n"
-	.string "speed.\p"
-	.string "However, if there isn't any\n"
-	.string "electricity…$"
+	.string "El MAGNET TRAIN es un tren\n"
+	.string "moderno que usa electricidad\p"
+	.string "e imanes para alcanzar una\n"
+	.string "velocidad increíble.\p"
+	.string "Sin embargo, si no hay\n"
+	.string "electricidad…$"
 
 SaffronMagnetTrainStation_Text_GymGuide_ReturnedPart:
 	.string "Uff...\p"
-	.string "How many times have I gone back\n"
-	.string "and forth between KANTO and JOHTO?$"
+	.string "¿Cuántas veces he regresado?\n"
+	.string "y JOHTO?$"
 
 SaffronMagnetTrainStation_Text_Teacher:
-	.string "Before the MAGNET TRAIN STATION\n"
-	.string "was built, there was a house there.\p"
-	.string "A little girl named COPYCAT used\n"
-	.string "to live there.$"
+	.string "Ante la ESTACIÓN DEL TREN MAGNÉTICO\n"
+	.string "fuera construida, había una casa.\p"
+	.string "Una niña llamada COPYCAT solía\n"
+	.string "vivir allí.$"
 
 SaffronMagnetTrainStation_Text_Lass:
-	.string "Hi. Do you have a rail PASS?\n"
-	.string "I have one.\p"
-	.string "All the people in SAFFRON who ride\n"
-	.string "the MAGNET TRAIN have PASSES.$"
+	.string "Hola. ¿Tienes un PASE de tren?\n"
+	.string "Tengo uno.\p"
+	.string "Toda la gente de SAFFRON que usa\n"
+	.string "el TREN MAGNÉTICO tiene PASES.$"

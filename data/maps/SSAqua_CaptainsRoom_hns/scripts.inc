@@ -56,7 +56,7 @@ SSAqua_CaptainsRoom_Text_CaptainExhausting:
 	.string "fue agotador.$"
 
 SSAqua_CaptainsRoom_Text_CaptainHowDoYouLike:
-	.string "How do you like S.S.AQUA's ride?\p"
+	.string "¿Qué te parece el viaje en S.S.AQUA?\p"
 	.string "Prácticamente se desliza sobre\n"
 	.string "las olas.$"
 

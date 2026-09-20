@@ -156,7 +156,7 @@ DragonsDen_Cavern_Text_Clair_ExplainTM:
 DragonsDen_Cavern_Text_ClairWhatsTheMatter:
     .string "¿Qué pasa? ¿No vas a ir a la\n"
     .string "LIGA POKéMON?\l"
-    .string "POKéMON?\p"
+    .string "con los POKéMON?\p"
     .string "Cuando seas CAMPEÓN, podrás\n"
     .string "retar a cualquier LÍDER de\l"
     .string "GIMNASIO que quieras.\p"

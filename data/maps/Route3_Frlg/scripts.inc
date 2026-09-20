@@ -17,7 +17,7 @@ Route3_Text_TunnelFromCeruleanTiring::
 
 Route3_Text_ColtonIntro::
 	.string "¡Hola!\n"
-	.string "I saw you in VIRIDIAN FOREST!$"
+	.string "¡Te vi en el BOSQUE VERDE!$"
 
 Route3_Text_ColtonDefeat::
 	.string "You beat me again!$"
@@ -54,7 +54,7 @@ Route3_Text_JanicePostBattle::
 
 Route3_Text_GregIntro::
 	.string "Are you a TRAINER?\n"
-	.string "Let's get with it right away!$"
+	.string "¡Vamos a luchar ahora mismo!$"
 
 Route3_Text_GregDefeat::
 	.string "If I had new POKéMON, I would've\n"
@@ -88,7 +88,7 @@ Route3_Text_CalvinPostBattle::
 	.string "winter. That's my policy.$"
 
 Route3_Text_JamesIntro::
-	.string "I'll battle you with the POKéMON\n"
+	.string "Lucharé contra ti con el POKéMON\n"
 	.string "I just caught.$"
 
 Route3_Text_JamesDefeat::
@@ -99,7 +99,7 @@ Route3_Text_JamesPostBattle::
 	.string "the wild ones.$"
 
 Route3_Text_RobinIntro::
-	.string "Eek!\n"
+	.string "¡Ay!\n"
 	.string "Did you touch me?$"
 
 Route3_Text_RobinDefeat::

@@ -1,7 +1,7 @@
 LilycoveCity_DepartmentStore_1F_Text_LotteryCornerDrawTicket:
 	.string "Es el RINCÓN DE LOTERÍA POKéMON.\p"
-	.string "All shoppers at our DEPARTMENT STORE\n"
-	.string "get to draw a POKéMON LOTO TICKET.\p"
+	.string "Todos los clientes de nuestro\n"
+	.string "ALMACÉN reciben un BOLETO LOTO.\p"
 	.string "Si el número del TICKET LOTO coincide\n"
 	.string "con el ID de alguno de tus POKéMON,\l"
 	.string "recibirás un regalo fabuloso.\p"

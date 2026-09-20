@@ -1416,7 +1416,7 @@ LilycoveCity_ContestLobby_Text_ExplainContests:
 	.string "Un CONCURSO POKéMON consiste en cuatro\n"
 	.string "ENTRENADORES que inscriben un POKéMON\l"
 	.string "cada uno para ser juzgados.\p"
-	.string "A CONTEST has two stages of judging,\n"
+	.string "Un CONCURSO tiene dos etapas,\n"
 	.string "la primaria y la secundaria.\p"
 	.string "El juicio primario es una encuesta de\n"
 	.string "popularidad con el público.\p"
@@ -1451,7 +1451,7 @@ LilycoveCity_ContestLobby_Text_ExplainContestRanks:
 	.string "Igual, un ganador del Rango SUPER\n"
 	.string "puede subir al Rango HYPER, y\l"
 	.string "un ganador del Rango HYPER puede\l"
-	.string "the MASTER Rank in the same category.\p"
+	.string "el Rango MASTER en la categoría.\p"
 	.string "Un POKéMON que gane el Rango MASTER\n"
 	.string "puede competir en el Rango MASTER\l"
 	.string "tan seguido como su ENTRENADOR quiera.$"
@@ -1517,7 +1517,7 @@ ContestHall_Text_GettingStartedParticipantsAsFollows:
 
 ContestHall_Text_GettingStartedParticipantsAsFollowsLink:
 	.string "MC: ¡Hola! Vamos a comenzar\n"
-	.string "with a 4-player linked POKéMON\l"
+	.string "con un POKéMON vinculado de 4\l"
 	.string "{STR_VAR_2}!\p"
 	.string "Los ENTRENADORES y sus\n"
 	.string "POKéMON son los siguientes:$"
@@ -1699,16 +1699,16 @@ LilycoveCity_ContestLobby_Text_EnterWhichPokemon3:
 	.string "Which POKéMON would you like to enter?$"
 
 LilycoveCity_ContestLobby_Text_PleaseDecideLinkLeader:
-	.string "Please decide which of you will\n"
-	.string "become the GROUP LEADER.\p"
-	.string "The other players must then choose\n"
-	.string "“JOIN GROUP.”$"
+	.string "Por favor, decidan quién de\n"
+	.string "ustedes será el LÍDER DE GRUPO.\p"
+	.string "Los otros jugadores deben elegir\n"
+	.string "“UNIRSE AL GRUPO”.$"
 
 LilycoveCity_ContestLobby_Text_PlayerAt4PCounterUseGMode:
 	.string "Al menos un jugador entró usando\n"
 	.string "el mostrador de 4 jugadores.\p"
 	.string "Deben haber cuatro jugadores\n"
-	.string "using a GBA Game Link cable.\p"
+	.string "con un cable Game Link de GBA.\p"
 	.string "Cuando los cuatro estén listos,\n"
 	.string "elige G-MODE (MODO GLOBAL),\l"
 	.string "luego regístrate para entrar otra vez.$"
@@ -1724,7 +1724,7 @@ LilycoveCity_ContestLobby_Text_ExplainLinkContest:
 	.string "dos a cuatro jugadores, cada uno con\l"
 	.string "un juego de POKéMON Emerald.\p"
 	.string "El G-MODE (MODO GLOBAL) es solo para\n"
-	.string "four players, each with a POKéMON\l"
+	.string "4 jugadores, cada uno con un POKéMON\l"
 	.string "Pak de Emerald, Ruby o Sapphire.\p"
 	.string "Los jugadores deben discutir qué modo\n"
 	.string "quieren y elegir el mismo modo.\p"
@@ -1772,7 +1772,7 @@ LilycoveCity_ContestLobby_Text_WhichContestMode:
 
 ContestHall_Text_GettingStartedWireless:
 	.string "MC: ¡Hola! Vamos a comenzar\n"
-	.string "with a 4-player linked POKéMON\l"
+	.string "con un POKéMON vinculado de 4\l"
 	.string "¡{STR_VAR_2}!$"
 
 ContestHall_Text_ParticipantsAsFollows:

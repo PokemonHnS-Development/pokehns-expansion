@@ -40,20 +40,20 @@ PewterCity_Museum_1F_EventScript_Bones::
 
 PewterCity_Museum_1F_Text_Recptionist:
 	.string "¡Bienvenido!\p"
-	.string "Just to let you know, all the large\n"
-	.string "specimens have been taken to the\l"
-	.string "other museums for display.\p"
-	.string "So for now, admission is free of\n"
-	.string "charge!\p"
-	.string "Please go ahead.$"
+	.string "Solo para que sepas, todos los\n"
+	.string "especímenes grandes fueron llevados\l"
+	.string "a otros museos para exhibirlos.\p"
+	.string "¡Así que por ahora la entrada es\n"
+	.string "gratis!\p"
+	.string "Por favor, adelante.$"
 
 PewterCity_Museum_1F_Text_FossilWoman:
-	.string "You must be a strong trainer.\p"
-	.string "We don't have much use for the\n"
-	.string "fossils on the counter over there.\p"
-	.string "A strange man with silver hair\n"
-	.string "dropped a ton of them off here.\p"
-	.string "Go ahead and take them if you like.$"
+	.string "Debes ser un entrenador fuerte.\p"
+	.string "No tenemos mucho uso para los\n"
+	.string "fósiles de aquel mostrador.\p"
+	.string "Un hombre extraño de pelo plateado\n"
+	.string "dejó un montón de ellos aquí.\p"
+	.string "Tómalos si quieres.$"
 
 PewterCity_Museum_1F_Text_FossilWomanAfter:
 	.string "Solemos compartir investigaciones\n"

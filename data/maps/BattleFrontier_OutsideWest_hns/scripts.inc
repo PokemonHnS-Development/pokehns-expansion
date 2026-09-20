@@ -406,7 +406,7 @@ BattleFrontier_OutsideWest_Text_NothingHereNotLongAgo_hns:
 
 BattleFrontier_OutsideWest_Text_FinallyArrivedAtFrontier_hns:
 	.string "¡Al fin llegué a la\n"
-	.string "BATTLE FRONTIER!\p"
+	.string "¡BATTLE FRONTIER!\p"
 	.string "¡Seguro llamaré la atención con\n"
 	.string "mi aspecto y habilidad!$"
 

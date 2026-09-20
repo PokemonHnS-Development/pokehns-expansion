@@ -510,7 +510,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .speciesName = _("POPPLIO"),
         .cryId = CRY_POPPLIO,
         .natDexNum = NATIONAL_DEX_POPPLIO,
-        .categoryName = _("Sea Lion"),
+        .categoryName = _("León Marino"),
         .height = 4,
         .weight = 75,
         .description = COMPOUND_STRING(
@@ -1452,7 +1452,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .weight = 1800,
         .description = COMPOUND_STRING(
             "Buscaba la cima, pero se perdió y\n"
-            "ended up on a snowy mountain. Being forced\n"
+            "terminó en una montaña nevada. Forzado\n"
             "que aguantar el frío, este POKéMON\n"
             "and grew thick fur."),
         .pokemonScale = 259,
@@ -2484,7 +2484,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .description = COMPOUND_STRING(
             "Ante rivales fuertes, forman una\n"
             "formación. Si resultan heridos,\n"
-            "wounded in battle, they'll scatter\n"
+            "heridos en batalla, se dispersarán\n"
             "and become solitary again."),
         .pokemonScale = 682,
         .pokemonOffset = 24,
@@ -4079,7 +4079,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .description = COMPOUND_STRING(
             "Este POKéMON es un cobarde. Al huir\n"
             "desesperadamente, el aleteo de sus\n"
-            "leaves a sparkling clean path in its wake.\n"
+            "deja un camino reluciente a su paso.\n"
             "It lives on beaches and seabeds."),
         .pokemonScale = 432,
         .pokemonOffset = 13,
@@ -4148,7 +4148,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .description = COMPOUND_STRING(
             "Lucha con destreza con sus 6 brazos,\n"
             "con un tajo veloz de sus garras\n"
-            "claws, it cleaves seawater--or even\n"
+            "garras, corta el mar o incluso\n"
             "air--right in two."),
         .pokemonScale = 261,
         .pokemonOffset = 1,
@@ -4221,8 +4221,8 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .weight = 1480,
         .description = COMPOUND_STRING(
             "Usa cuatro brazos para atacar con\n"
-            "assail its foes. Once they've been pushed\n"
-            "to the brink of defeat, it finishes them\n"
+            "ataca a sus rivales. Una vez que están\n"
+            "al borde de la derrota, los remata\n"
             "off with the arms it kept hidden."),
         .frontPic = gMonFrontPic_GolisopodMega,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
@@ -4482,7 +4482,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .description = COMPOUND_STRING(
             "Por el peligro de que este POKéMON\n"
             "sintético se descontrole, lleva una\n"
-            "control mask to restrain its capabilities.\n"
+            "máscara de control para limitarlo.\n"
             "It has some hidden special power."),
         .pokemonScale = 256,
         .pokemonOffset = 1,
@@ -4751,7 +4751,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .height = 4,
         .weight = 199,
         .description = COMPOUND_STRING(
-            "It is born asleep, and it dies asleep.\n"
+            "Nace dormido y muere dormido.\n"
             "Sus movimientos parecen ser solo\n"
             "el resultado de darse vueltas.\n"
             "in its dreams."),
@@ -5876,7 +5876,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .height = 12,
         .weight = 186,
         .description = COMPOUND_STRING(
-            "A fragrant aroma of flowers follows it.\n"
+            "Un fragante aroma a flores lo sigue.\n"
             "Al revolotear, esparce sus\n"
             "escamas que brillan. Al tocarlas\n"
             "is said to restore good health."),
@@ -7474,7 +7474,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .speciesName = _("POIPOLE"),
         .cryId = CRY_POIPOLE,
         .natDexNum = NATIONAL_DEX_POIPOLE,
-        .categoryName = _("Poison Pin"),
+        .categoryName = _("Aguja Tóxica"),
         .height = 6,
         .weight = 18,
         .description = COMPOUND_STRING(
@@ -7540,7 +7540,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .speciesName = _("NAGANADEL"),
         .cryId = CRY_NAGANADEL,
         .natDexNum = NATIONAL_DEX_NAGANADEL,
-        .categoryName = _("Poison Pin"),
+        .categoryName = _("Aguja Tóxica"),
         .height = 36,
         .weight = 1500,
         .description = COMPOUND_STRING(

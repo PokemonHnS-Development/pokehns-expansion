@@ -535,7 +535,7 @@ SaffronCity_PokemonTrainerFanClub_Text_EveryoneButMeStoppedBeingYourFan::
 	.string "My one and only {PLAYER}!$"
 
 SaffronCity_PokemonTrainerFanClub_Text_WantToBeLikeSabrina::
-	.string "Do you know what?\n"
+	.string "¿Sabes una cosa?\n"
 	.string "I want to be like SABRINA!\p"
 	.string "I want to be a psychic girl just\n"
 	.string "like her!$"

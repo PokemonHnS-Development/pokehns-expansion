@@ -275,23 +275,23 @@ Route128_Text_MaxieThisDefiesBelief:
 	.string "MAXIE: Esto es increíble...\p"
 	.string "Esos POKéMON superantiguos...\p"
 	.string "Su poder es increíble.\n"
-	.string "They've upset the balance of nature…$"
+	.string "Alteraron el equilibrio natural…$"
 
 Route128_Text_StevenWhatIsHappening:
 	.string "STEVEN: ¡{PLAYER}{KUN}!\n"
-	.string "What is happening?$"
+	.string "¿Qué está pasando?$"
 
 Route128_Text_StevenWholeWorldWillDrown:
-	.string "This is terrible…\p"
-	.string "After the scorching heat wave ended,\n"
-	.string "this deluge began.\p"
-	.string "If this doesn't stop, all of HOENN…\n"
-	.string "No, the whole world will drown.\p"
-	.string "This huge rain cloud is spreading\n"
-	.string "from above SOOTOPOLIS…\p"
-	.string "What in the world is taking place there?\p"
-	.string "There's no point arguing here…\n"
-	.string "SOOTOPOLIS might provide answers…$"
+	.string "Esto es terrible…\p"
+	.string "Tras terminar la ola de calor,\n"
+	.string "empezó este diluvio.\p"
+	.string "Si no para, todo HOENN…\n"
+	.string "No, el mundo entero se ahogará.\p"
+	.string "Esta gran nube de lluvia se expande\n"
+	.string "desde arriba de CALAGUNDO…\p"
+	.string "¿Qué rayos estará pasando allí?\p"
+	.string "No tiene sentido discutir aquí…\n"
+	.string "CALAGUNDO podría darnos respuestas…$"
 
 Route128_Text_StevenImGoingToSootopolis:
 	.string "{PLAYER}{KUN}…\n"

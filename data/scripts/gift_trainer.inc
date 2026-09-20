@@ -20,8 +20,8 @@ MysteryGiftScript_VisitingTrainerArrived:
 	end
 
 sText_MysteryGiftVisitingTrainerInstructions:
-	.string "Thank you for using the MYSTERY\n"
-	.string "GIFT System.\p"
+	.string "Gracias por usar el sistema de\n"
+	.string "REGALO MISTERIOSO.\p"
 	.string "Al tener esta WONDER CARD,\n"
 	.string "podrás participar en una encuesta\l"
 	.string "en un POKéMON MART.\p"
@@ -36,13 +36,13 @@ sText_MysteryGiftVisitingTrainerInstructions:
 	.string "INALÁMBRICA.$"
 
 sText_MysteryGiftVisitingTrainerArrived:
-	.string "Thank you for using the MYSTERY\n"
-	.string "GIFT System.\p"
-	.string "A TRAINER has arrived in\n"
-	.string "SOOTOPOLIS CITY looking for you.\p"
-	.string "We hope you will enjoy\n"
-	.string "battling the visiting TRAINER.\p"
-	.string "You may invite other TRAINERS by\n"
-	.string "entering other passwords.\p"
-	.string "Try looking for other passwords\n"
-	.string "that may work.$"
+	.string "Gracias por usar el sistema de\n"
+	.string "REGALO MISTERIOSO.\p"
+	.string "Un ENTRENADOR ha llegado a\n"
+	.string "CIUDAD CALOR buscando verte.\p"
+	.string "Esperamos que disfrutes\n"
+	.string "luchando contra el ENTRENADOR.\p"
+	.string "Puedes invitar a más ENTRENADORES\n"
+	.string "usando otras contraseñas.\p"
+	.string "Busca otras contraseñas\n"
+	.string "que puedan funcionar.$"

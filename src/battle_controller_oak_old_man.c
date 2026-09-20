@@ -49,12 +49,12 @@ static void PrintOakTextWithMainBgDarkened(enum BattlerId battler, const u8 *tex
 static void HandleInputChooseAction(enum BattlerId battler);
 
 static const u8 sText_ForPetesSake[] = _("OAK: Oh, for Pete's sake…\nSo pushy, as always.\p{B_PLAYER_NAME}.\pYou've never had a POKéMON battle\nbefore, have you?\pA POKéMON battle is when TRAINERS\npit their POKéMON against each\lother.\p");
-static const u8 sText_HowDissapointing[] = _("OAK: Hm…\nHow disappointing…\pIf you win, you earn prize money,\nand your POKéMON grow.\pBut if you lose, {B_PLAYER_NAME}, you end\nup paying prize money…\pHowever, since you had no warning\nthis time, I'll pay for you.\pBut things won't be this way once\nyou step outside these doors.\pThat's why you must strengthen your\nPOKéMON by battling wild POKéMON.\p");
-static const u8 sText_InflictingDamageIsKey[] = _("OAK: Inflicting damage on the foe\nis the key to any battle.\p");
-static const u8 sText_KeepAnEyeOnHP[] = _("OAK: Keep your eyes on your\nPOKéMON's HP.\pIt will faint if the HP drops to\n“0.”\p");
+static const u8 sText_HowDissapointing[] = _("OAK: Hm...\nQué decepción...\pSi ganas, obtienes dinero en premios\ny tus POKéMON crecen.\pPero si pierdes, {B_PLAYER_NAME}, terminarás\npagar el premio...\pPero, como no tuviste aviso\nesta vez, yo pagaré por ti.\pPero no será así una vez que\ncruces esas puertas.\pPor eso debes fortalecer a tus\nPOKéMON luchando contra salvajes.\p");
+static const u8 sText_InflictingDamageIsKey[] = _("OAK: Dañar al enemigo\nes la clave de cualquier batalla.\p");
+static const u8 sText_KeepAnEyeOnHP[] = _("OAK: No pierdas de vista los\nPS de tus POKéMON.\pSe debilitará si los PS bajan a\n“0.”\p");
 static const u8 sText_LoweringStats[] = _("OAK: Bajar las estadísticas del rival\nte dará una gran ventaja.\p");
 static const u8 sText_OakNoRunningFromATrainer[] = _("OAK: ¡No! No puedes huir de una\nbatalla POKéMON contra ENTRENADORES!\p");
-static const u8 sText_TheTrainerThat[] = _("The TRAINER that makes the other\nTRAINER's POKéMON faint by lowering\ltheir HP to “0,” wins.\p");
+static const u8 sText_TheTrainerThat[] = _("El ENTRENADOR que debilite los\nPOKéMON del otro, bajando sus PS\lsu PS a “0”, gana.\p");
 static const u8 sText_TryBattling[] = _("Pero en vez de hablar de ello,\naprenderás más con la experiencia.\p¡Lucha y compruébalo tú mismo!\p");
 static const u8 sText_WinEarnsPrizeMoney[] = _("OAK: ¡Hm! ¡Excelente!\pSi ganas, obtienes dinero en premios\n¡y así tus POKéMON crecerán!\p¡Lucha contra ENTRENADORES y\nfortalece tus POKéMON!\p");
 static const u8 gText_WhatWillOldManDo[] = _("¿Qué hará el\nanciano?");

@@ -142,7 +142,7 @@ Route44_Text_WiltonPostRematch:
 Route44_Text_WiltonHasItem:
     .string "¡Oye! Pesqué algo que\n"
     .string "no es un POKéMON!\p"
-    .string "Here, you can have it!$"
+    .string "¡Toma, puedes quedártelo!$"
 
 Route44_Text_WiltonGaveItem:
     .string "Te avisaré si\n"

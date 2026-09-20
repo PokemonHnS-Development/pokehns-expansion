@@ -111,7 +111,7 @@ PokemonFanClub_Text_Chairman_Gift:
 
 PokemonFanClub_Text_Chairman_Candy:
 	.string "Es un CARAMELO RARO que hace\n"
-	.string "POKéMON stronger.\p"
+	.string "POKéMON más fuertes.\p"
 	.string "Prefiero que mis POKéMON sean\n"
 	.string "fuertes luchando, así que tú\l"
 	.string "puedes quedártelo.$"

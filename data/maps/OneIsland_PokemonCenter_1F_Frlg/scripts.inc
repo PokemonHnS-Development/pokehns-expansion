@@ -728,7 +728,7 @@ OneIsland_PokemonCenter_1F_Text_CelioCaughtMoreMonMaybeICanBeUseful::
 	.string "been for you?\p"
 	.string "Oh, ¿de verdad?\n"
 	.string "You've caught more POKéMON.\p"
-	.string "Do you know what?\n"
+	.string "¿Sabes una cosa?\n"
 	.string "Maybe I can be useful to you.$"
 
 OneIsland_PokemonCenter_1F_Text_YoullBeTradingFromTrainersFarAway::
@@ -908,7 +908,7 @@ OneIsland_PokemonCenter_1F_Text_MachineLinkedWithKanto::
 	.string "Network Machine\n"
 	.string "Link Level 1\p"
 	.string "Link established with the KANTO\n"
-	.string "region.$"
+	.string "de HOENN.$"
 
 OneIsland_PokemonCenter_1F_Text_MachineLinkedWithKantoAndHoenn::
 	.string "Network Machine\n"

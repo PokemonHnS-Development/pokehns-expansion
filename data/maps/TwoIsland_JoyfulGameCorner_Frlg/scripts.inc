@@ -265,7 +265,7 @@ TwoIsland_JoyfulGameCorner_Text_LostelleItsOkayDaddy::
 	.string "I got to be friends with {PLAYER}!$"
 
 TwoIsland_JoyfulGameCorner_Text_ThisIsForMe::
-	.string "Oh, what's that?\n"
+	.string "Oh, ¿qué es eso?\n"
 	.string "You're saying that this is for me?\p"
 	.string "How did you know that I love rare\n"
 	.string "rocks and gems?\p"

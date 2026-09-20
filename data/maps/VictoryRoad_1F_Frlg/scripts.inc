@@ -62,6 +62,6 @@ VictoryRoad_1F_Text_RolandoDefeat::
 	.string "I had a chance…$"
 
 VictoryRoad_1F_Text_RolandoPostBattle::
-	.string "Tch!\n"
+	.string "¡Tch!\n"
 	.string "I concede, you are better than I!$"
 

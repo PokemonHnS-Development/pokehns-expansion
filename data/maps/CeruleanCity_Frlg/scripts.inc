@@ -379,7 +379,7 @@ CeruleanCity_Text_RivalPostBattle::
 	.string "POKéDEX!\p"
 	.string "After all, BILL's world famous as a\n"
 	.string "como un POKéMANÍACO.\p"
-	.string "He invented the POKéMON Storage\n"
+	.string "Inventó también el Sistema de\n"
 	.string "System on PC, too.\p"
 	.string "Since you're using his system,\n"
 	.string "you should go thank him.\p"

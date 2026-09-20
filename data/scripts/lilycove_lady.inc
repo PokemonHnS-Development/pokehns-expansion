@@ -530,52 +530,52 @@ LilycoveCity_PokemonCenter_1F_Text_ImTheFavorLady:
 	.string "I'm the FAVOR LADY…$"
 
 LilycoveCity_PokemonCenter_1F_Text_ObsessedWithThing:
-	.string "I've recently developed an obsession\n"
-	.string "for {STR_VAR_1} things…$"
+	.string "Hace poco me obsesioné\n"
+	.string "con las cosas {STR_VAR_1}…$"
 
 LilycoveCity_PokemonCenter_1F_Text_ThankYouForLastTime:
 	.string "Oh…\n"
-	.string "Thank you for last time…$"
+	.string "Gracias por la última vez…$"
 
 LilycoveCity_PokemonCenter_1F_Text_PlayerGaveMeBadThing:
-	.string "Before, I think it was {STR_VAR_3}…\p"
-	.string "{STR_VAR_3} gave me one {STR_VAR_2},\n"
-	.string "saying it was {STR_VAR_1}.\p"
-	.string "But it wasn't {STR_VAR_1}.\n"
-	.string "Not in the least bit.$"
+	.string "Antes creo que fue {STR_VAR_3}…\p"
+	.string "{STR_VAR_3} me dio un {STR_VAR_2},\n"
+	.string "diciendo que era {STR_VAR_1}.\p"
+	.string "Pero no era {STR_VAR_1}.\n"
+	.string "Para nada.$"
 
 LilycoveCity_PokemonCenter_1F_Text_PlayerGaveMeGreatThing:
-	.string "Before, {STR_VAR_3} gave me a very\n"
-	.string "{STR_VAR_1} {STR_VAR_2}.\p"
-	.string "I cherish it now.$"
+	.string "Antes, {STR_VAR_3} me dio un\n"
+	.string "{STR_VAR_2} muy {STR_VAR_1}.\p"
+	.string "Ahora lo valoro mucho.$"
 
 LilycoveCity_PokemonCenter_1F_Text_WillYouShareThing:
-	.string "Listen, if you have anything that\n"
-	.string "is {STR_VAR_1}, will you share it\l"
+	.string "Mira, si tienes algo que\n"
+	.string "sea {STR_VAR_1}, ¿lo compartirías?\l"
 	.string "conmigo?$"
 
 LilycoveCity_PokemonCenter_1F_Text_WhatWillYouGiveMe:
-	.string "…Really?\n"
-	.string "What will you give me?$"
+	.string "…¿En serio?\n"
+	.string "¿Qué me darás a cambio?$"
 
 LilycoveCity_PokemonCenter_1F_Text_IsThatSoGoodbye:
 	.string "¿De verdad?\n"
-	.string "Then, it's good-bye…$"
+	.string "Entonces, adiós…$"
 
 LilycoveCity_PokemonCenter_1F_Text_NotWillingToShare:
 	.string "Oh…\n"
-	.string "You're not willing to share?$"
+	.string "¿No quieres compartirlo?$"
 
 LilycoveCity_PokemonCenter_1F_Text_IllTryToCherishIt:
 	.string "Oh?\n"
-	.string "That {STR_VAR_2} is {STR_VAR_1}?\p"
-	.string "…Oh, is that right?\p"
-	.string "Well, I owe you a thanks anyway.\n"
-	.string "I'll try to cherish it…$"
+	.string "¿Ese {STR_VAR_2} es {STR_VAR_1}?\p"
+	.string "…Oh, ¿de verdad?\p"
+	.string "Bueno, igual te doy las gracias.\n"
+	.string "Trataré de cuidarlo mucho…$"
 
 LilycoveCity_PokemonCenter_1F_Text_IWillCherishThis:
 	.string "Oh…\p"
-	.string "That's a quite {STR_VAR_1}\n"
+	.string "Es un {STR_VAR_1} bastante bueno\n"
 	.string "{STR_VAR_2}…\p"
 	.string "¿No es lindo?\n"
 	.string "Es como un sueño...\p"

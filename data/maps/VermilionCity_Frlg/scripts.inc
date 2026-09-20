@@ -307,7 +307,7 @@ VermilionCity_Text_SnorlaxBlockingRoute12::
 	.string "VERMILION POLICE$"
 
 VermilionCity_Text_PokemonFanClubSign::
-	.string "POKéMON FAN CLUB\n"
+	.string "CLUB DE FANS POKéMON\n"
 	.string "All POKéMON fans welcome!$"
 
 VermilionCity_Text_GymSign::

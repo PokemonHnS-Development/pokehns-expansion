@@ -202,7 +202,7 @@ SilphCo_11F_Text_Grunt2Intro::
 
 SilphCo_11F_Text_Grunt2Defeat::
 	.string "Don't…\n"
-	.string "Please!$"
+	.string "¡Por favor!$"
 
 SilphCo_11F_Text_Grunt2PostBattle::
 	.string "So, you want to see my BOSS?$"

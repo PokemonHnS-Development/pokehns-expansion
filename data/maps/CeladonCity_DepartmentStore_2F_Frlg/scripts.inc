@@ -75,7 +75,7 @@ CeladonCity_DepartmentStore_2F_Text_FloorSign::
 
 CeladonCity_DepartmentStore_2F_Text_LanceComesToBuyCapes::
 	.string "We have a customer, LANCE, who\n"
-	.string "occasionally comes.\p"
-	.string "He always buys capes.\p"
-	.string "I wonder… Does he have many\n"
-	.string "identical capes at home?$"
+	.string "viene de vez en cuando.\p"
+	.string "Siempre compra capas.\p"
+	.string "Me pregunto... ¿Tendrá muchas?\n"
+	.string "¿capas iguales en casa?$"

@@ -3,7 +3,7 @@ gText_Birch_Welcome::
 	.string "¡Bienvenido al mundo POKéMON!\p"
 	.string "Mi nombre es BIRCH.\p"
 	.string "Pero todos me llaman el PROFESOR\n"
-	.string "POKéMON.\p"
+	.string "POKéMON planta.\p"
 	.string "$"
 
 gText_Birch_Pokemon::

@@ -439,22 +439,22 @@ RusturfTunnel_Text_GruntDefeat:
 	.string "a un callejón sin salida!$"
 
 RusturfTunnel_Text_GruntTakePackage:
-	.string "This is plain not right…\p"
-	.string "The BOSS told me this would be a\n"
-	.string "slick-and-easy job to pull.\p"
-	.string "All I had to do was steal some package\n"
-	.string "from DEVON.\p"
-	.string "Tch!\n"
-	.string "You want it back that badly, take it!$"
+	.string "Esto no está nada bien...\p"
+	.string "El JEFE me dijo que este sería un\n"
+	.string "trabajo rápido y sencillo.\p"
+	.string "Solo tenía que robar un paquete\n"
+	.string "de DEVON.\p"
+	.string "¡Tch!\n"
+	.string "¡Si lo quieres tanto, tómalo!$"
 
 RusturfTunnel_Text_PeekoGladToSeeYouSafe:
-	.string "PEEKO!\n"
-	.string "Am I glad to see you're safe!$"
+	.string "¡PEEKO!\n"
+	.string "¡Qué alegría que estés a salvo!$"
 
 RusturfTunnel_Text_ThankYouLetsGoHomePeeko:
-	.string "PEEKO owes her life to you!\p"
-	.string "They call me MR. BRINEY.\n"
-	.string "And, you are?\p"
+	.string "¡PEEKO te debe la vida!\p"
+	.string "Me llaman SR. BRINEY.\n"
+	.string "¿Y tú quién eres?\p"
 	.string "… … … … … … … …\n"
 	.string "… … … … … … … …\p"
 	.string "¡Ah, así que tú eres {PLAYER}{KUN}!\n"

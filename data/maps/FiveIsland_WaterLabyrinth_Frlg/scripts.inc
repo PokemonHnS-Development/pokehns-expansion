@@ -65,7 +65,7 @@ FiveIsland_WaterLabyrinth_EventScript_ReturnForEgg::
 
 FiveIsland_WaterLabyrinth_Text_LetMeTakeLookAtMons::
 	.string "You travel all over the place,\n"
-	.string "don't you?\p"
+	.string "tipo PLANTA, ¿verdad?\p"
 	.string "You're not driving your POKéMON\n"
 	.string "too harshly, are you?\p"
 	.string "Let me take a look.\n"

@@ -13,7 +13,7 @@ EventTicket_Text_BrineyHoldOnASecond:
 	.string "a quien le debo tanto?$"
 
 EventTicket_Text_BrineyLetsSail:
-	.string "{PLAYER}{KUN}, I'm terribly sorry.\p"
+	.string "{PLAYER}{KUN}, lo siento mucho.\p"
 	.string "Viniste a buscar mi ayuda\n"
 	.string "y casi te mandamos lejos.\p"
 	.string "Bueno, dejaré que todo esté bien.\p"
@@ -59,17 +59,17 @@ EventTicket_Text_OddTicketsWhereTo:
 	.string "¡Solo pensarlo me emociona\n"
 	.string "como marino!\p"
 	.string "¡Sube a bordo, jovencito!\n"
-	.string "Where shall we sail first?$"
+	.string "¿A dónde navegaremos primero?$"
 
 NavelRock_Harbor_Text_SailorReturn:
-	.string "Did… Did you hear that?\n"
-	.string "That low growling from deep in there.\p"
-	.string "Are you sure it's safe?\n"
-	.string "Do you think we should leave?$"
+	.string "¿Escuchaste... escuchaste eso?\n"
+	.string "Ese gruñido bajo que viene de ahí.\p"
+	.string "¿Estás seguro de que es seguro?\n"
+	.string "¿Crees que deberíamos irnos?$"
 
 FarawayIsland_Entrance_Text_Sign:
-	.string "The writing is fading as if it was\n"
-	.string "written a long time ago…\p"
+	.string "La letra se borra, como si hubiera\n"
+	.string "sido escrita hace mucho tiempo...\p"
 	.string "“…ber, 6th day\n"
 	.string "If any human…sets foot here…\l"
 	.string "again…et it be a kindhearted pers…\l"

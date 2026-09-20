@@ -29,19 +29,19 @@ Route21_Text_SwimmermSethBeaten:
 	.string "Glug…$"
 
 Route21_Text_SwimmermSethAfterBattle:
-	.string "This arrogant guy was at CINNABAR's\n"
-	.string "volcano.$"
+	.string "Este tipo arrogante estaba en el\n"
+	.string "volcán de CINNABAR.$"
 
 Route21_Text_SwimmerfNikkiSeen:
-	.string "If I win, you have to help me with\n"
-	.string "my suntan lotion!$"
+	.string "¡Si gano, me ayudarás con mi\n"
+	.string "loción bronceadora!$"
 
 Route21_Text_SwimmerfNikkiBeaten:
 	.string "I'm worried about sunburn…$"
 
 Route21_Text_SwimmerfNikkiAfterBattle:
-	.string "I have to watch out for blemishes\n"
-	.string "caused by the sun.$"
+	.string "Debo cuidar que el sol no me deje\n"
+	.string "manchas en la piel.$"
 
 Route21_Text_FisherArnoldSeen:
 	.string "I'm bored by fishing. Let's battle!$"

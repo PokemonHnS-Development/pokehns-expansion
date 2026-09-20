@@ -12,13 +12,13 @@ SaffronCity_Text_BaobaName:
 SaffronCity_Text_Baoba:
 	.string "GUARDABAOBA: ¡{PLAYER}!\p"
 	.string "Soy el GUARDABAOBA.\p"
-	.string "I'm calling to tell you that the\n"
-	.string "SAFARI ZONE has expanded again!\p"
-	.string "Finally, my SAFARI ZONE has been\n"
-	.string "fully realized!\p"
-	.string "You remember where it is, right?\p"
-	.string "Just west of CIANWOOD CITY!\n"
-	.string "see you soon!$"
+	.string "Llamo para decirte que la\n"
+	.string "¡ZONA SAFARI se expandió otra vez!\p"
+	.string "¡Al fin mi ZONA SAFARI es\n"
+	.string "exactamente como la soñé!\p"
+	.string "Recuerdas dónde está, ¿verdad?\p"
+	.string "¡Al oeste de CIUDAD ORQUIDEA!\n"
+	.string "¡Nos vemos pronto!$"
 
 SaffronCity_EventScript_Lass1A::
 	goto_if_set FLAG_RETURNED_MACHINE_PART, SaffronCity_EventScript_Lass1B
@@ -98,31 +98,31 @@ SaffronCity_Text_Elli:
 	.string "I love VULPIX! :D$"
 
 SaffronCity_Text_Lass1:
-	.string "A little girl who is an expert at\n"
-	.string "mimicking people lives here.\p"
-	.string "She even mimics the people she's\n"
-	.string "conversing with. It's confusing.$"
+	.string "Aquí vive una niña experta en\n"
+	.string "imitar a las personas.\p"
+	.string "Imita incluso a quien tiene\n"
+	.string "enfrente. ¡Es confuso!$"
 
 SaffronCity_Text_Lass1_ReturnedPart:
-	.string "The COPYCAT girl looked unhappy.\p"
-	.string "She said she lost her favorite\n"
-	.string "POKé DOLL--CLEFAIRY.$"
+	.string "La chica IMITADORA se veía triste.\p"
+	.string "Dijo que perdió su MUÑECA\n"
+	.string "POKé favorita: CLEFAIRY.$"
 
 SaffronCity_Text_PokefanM:
-	.string "You came out from JOHTO?\p"
-	.string "You can zip back home if the\n"
-	.string "MAGNET TRAIN's running.$"
+	.string "¿Vienes de JOHTO?\p"
+	.string "Puedes volver rápido a casa si el\n"
+	.string "MAGNET TRAIN está funcionando.$"
 
 SaffronCity_Text_PokefanM_ReturnedPart:
-	.string "You came out from JOHTO?\p"
-	.string "You can zip back home by hopping\n"
-	.string "on the MAGNET TRAIN.$"
+	.string "¿Vienes de JOHTO?\p"
+	.string "Puedes volver rápido a casa usando\n"
+	.string "el MAGNET TRAIN.$"
 
 SaffronCity_Text_CooltrainerM:
-	.string "I went to the GYM, raring for\n"
-	.string "battles against trainers…\p"
-	.string "It turns out, I stumbled into the\n"
-	.string "unused GYM next door.\p"
+	.string "Fui al GIMNASIO, ansioso por\n"
+	.string "luchar contra entrenadores...\p"
+	.string "Resulta que entré por error al\n"
+	.string "GIMNASIO vacío de al lado.\p"
 	.string "Vaya, estaba muy avergonzado.$"
 
 SaffronCity_Text_CooltrainerF:

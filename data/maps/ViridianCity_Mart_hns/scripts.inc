@@ -13,6 +13,6 @@ ViridianMart_Text_Lass:
 	.string "El LÍDER de este GIMNASIO es genial.$"
 
 ViridianMart_Text_CooltrainerM:
-	.string "Have you been to CINNABAR?\p"
-	.string "It's an island way south of here.$"
+	.string "¿Has estado en CANNON?\p"
+	.string "Es una isla muy al sur de aquí.$"
 

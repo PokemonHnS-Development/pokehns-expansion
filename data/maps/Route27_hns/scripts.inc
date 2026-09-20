@@ -173,23 +173,23 @@ Route27_Text_FisherHey:
     .string "Hey!$"
 
 Route27_Text_FisherMessage:
-    .string "Do you know what you just did?\p"
-    .string "You've taken your first step into\n"
+    .string "¿Sabes lo que acabas de hacer?\p"
+    .string "Has dado tu primer paso en\n"
     .string "KANTO.\p"
-    .string "Check your POKéGEAR MAP and see.$"
+    .string "Mira el MAPA del POKéGEAR.$"
 
 Route27_Text_CooltrainermBlakeSeen:
-    .string "You look pretty strong.\n"
-    .string "Let me battle you!$"
+    .string "Pareces bastante fuerte.\n"
+    .string "¡Lucha contra mí!$"
 
 Route27_Text_CooltrainermBlakeBeaten:
     .string "Yow!$"
 
 Route27_Text_CooltrainermBlakeAfter:
-    .string "If you prevail on this harsh trek,\n"
-    .string "the truth will be revealed!\p"
-    .string "Heh, sorry, I just wanted to say\n"
-    .string "something cool.$"
+    .string "Si vences en este duro viaje,\n"
+    .string "¡la verdad será revelada!\p"
+    .string "Je, perdón, solo quería decir\n"
+    .string "algo genial.$"
 
 Route27_Text_CooltrainermBrianSeen:
     .string "¿Mmm? Eres bueno, ¿no?$"
@@ -198,64 +198,64 @@ Route27_Text_CooltrainermBrianBeaten:
     .string "Just as I thought!$"
 
 Route27_Text_CooltrainermBrianAfter:
-    .string "A good trainer can recognize other\n"
-    .string "good trainers.$"
+    .string "Un buen entrenador reconoce a\n"
+    .string "otros buenos entrenadores.$"
 
 Route27_Text_CooltrainerfReenaSeen:
-    .string "You shouldn't underestimate the\n"
-    .string "wild POKéMON in these parts.$"
+    .string "No deberías subestimar a los\n"
+    .string "POKéMON salvajes de esta zona.$"
 
 Route27_Text_CooltrainerfReenaBeaten:
     .string "Oh! You're much too strong!$"
 
 Route27_Text_CooltrainerfReenaAfter:
-    .string "You're just a kid, but you're not\n"
-    .string "to be underestimated either.$"
+    .string "Solo eres un niño, pero tú\n"
+    .string "tampoco debes subestimarse.$"
 
 Route27_Text_ReenaRegister:
-    .string "You're just a kid, but you're not\n"
-    .string "to be underestimated either.$"
+    .string "Solo eres un niño, pero tú\n"
+    .string "tampoco debes subestimarse.$"
 
 Route27_Text_ReenaRematchIntro:
-    .string "You shouldn't underestimate the\n"
-    .string "wild POKéMON in these parts.$"
+    .string "No deberías subestimar a los\n"
+    .string "POKéMON salvajes de esta zona.$"
 
 Route27_Text_ReenaRematchDefeat:
     .string "Oh! You're much too strong!$"
 
 Route27_Text_ReenaPostRematch:
-    .string "You're just a kid, but you're not\n"
-    .string "to be underestimated either.$"
+    .string "Solo eres un niño, pero tú\n"
+    .string "tampoco debes subestimarse.$"
 
 Route27_Text_CooltrainerfMeganSeen:
-    .string "It's rare to see anyone come here.\p"
-    .string "Are you training on your own?$"
+    .string "Es raro ver a alguien por aquí.\p"
+    .string "¿Entrenas por tu cuenta?$"
 
 Route27_Text_CooltrainerfMeganBeaten:
     .string "Oh! You're really strong!$"
 
 Route27_Text_CooltrainerfMeganAfter:
-    .string "I'm checking out pre- and post-\n"
-    .string "evolution POKéMON.\p"
-    .string "Evolution really does make\n"
-    .string "POKéMON stronger.\p"
-    .string "But evolved forms also learn\n"
-    .string "moves later on.$"
+    .string "Estoy revisando el antes y el\n"
+    .string "POKéMON evolución.\p"
+    .string "La evolución realmente hace\n"
+    .string "POKéMON más fuertes.\p"
+    .string "Pero las formas evolucionadas\n"
+    .string "aprenden ataques más tarde.$"
 
 Route27_Text_PsychicGilbertSeen:
-    .string "Don't say a thing!\p"
-    .string "Let me guess what you're thinking.\p"
-    .string "Mmmmmmm…\p"
-    .string "I got it! You're on the POKéMON\n"
-    .string "LEAGUE challenge!$"
+    .string "¡No digas nada!\p"
+    .string "Déjame adivinar qué piensas.\p"
+    .string "Mmmmmmm...\p"
+    .string "¡Lo tengo! ¡Estás en el reto de\n"
+    .string "la LIGA POKéMON!$"
 
 Route27_Text_PsychicGilbertBeaten:
     .string "You're too much!$"
 
 Route27_Text_PsychicGilbertAfter:
-    .string "With your skills, you'll do well at\n"
+    .string "Con tu habilidad, te irá bien en\n"
     .string "LIGA.\p"
-    .string "That's what my premonition says.$"
+    .string "Eso es lo que dice mi premonición.$"
 
 Route27_Text_BirdKeeperJoseSeen:
     .string "Tweet! Tweet! Tetweet!$"
@@ -264,12 +264,12 @@ Route27_Text_BirdKeeperJoseBeaten:
     .string "Tweet!$"
 
 Route27_Text_BirdKeeperJoseAfter:
-    .string "BIRD KEEPERS like me mimic bird\n"
-    .string "whistles to command POKéMON.$"
+    .string "Los CUIDADORES de aves como yo\n"
+    .string "imitan silbidos para mandar.$"
 
 Route27_Text_JoseRegister:
-    .string "BIRD KEEPERS like me mimic bird\n"
-    .string "whistles to command POKéMON.$"
+    .string "Los CUIDADORES de aves como yo\n"
+    .string "imitan silbidos para mandar.$"
 
 Route27_Text_JoseRematchIntro:
     .string "Tweet! Tweet! Tetweet!$"
@@ -278,26 +278,26 @@ Route27_Text_JoseRematchDefeat:
     .string "Tweet!$"
 
 Route27_Text_JosePostRematch:
-    .string "BIRD KEEPERS like me mimic bird\n"
-    .string "whistles to command POKéMON.$"
+    .string "Los CUIDADORES de aves como yo\n"
+    .string "imitan silbidos para mandar.$"
 
 Route27_Text_JoseHasItem:
-    .string "Hey! I found something\n"
-    .string "shiny while bird-watching!\p"
-    .string "Here, you can have it!$"
+    .string "¡Oye! Encontré algo brillante\n"
+    .string "mientras observaba aves.\p"
+    .string "¡Toma, puedes quedártelo!$"
 
 Route27_Text_JoseGaveItem:
-    .string "I find all sorts of things\n"
-    .string "out here on ROUTE 27.\p"
-    .string "I'll let you know if I find\n"
-    .string "anything else!$"
+    .string "Encuentro todo tipo de cosas\n"
+    .string "aquí en la RUTA 27.\p"
+    .string "¡Te avisaré si encuentro\n"
+    .string "algo más!$"
 
 Route27_Text_JoseNoRoom:
     .string "Hmm, tu MOCHILA está llena.\p"
     .string "Vuelve cuando tengas espacio.$"
 
 TohjoFalls_Text_Sign:
-    .string "TOHJO FALLS\p"
+    .string "CASCADAS TOHJO\p"
     .string "EL VÍNCULO ENTRE KANTO Y JOHTO$"
 
 Route27_Text_FisherScottSeen:

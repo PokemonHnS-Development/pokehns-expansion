@@ -193,7 +193,7 @@ VermilionCity_PokemonFanClub_Text_DidntComeToSeeAboutMonsAgain::
 	.string "¿Vienes a verme por mi\n"
 	.string "POKéMON otra vez?\p"
 	.string "No?\n"
-	.string "Too bad!$"
+	.string "¡Qué mal!$"
 
 VermilionCity_PokemonFanClub_Text_MakeRoomForThis::
 	.string "Make room for this!$"

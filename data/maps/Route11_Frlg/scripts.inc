@@ -28,7 +28,7 @@ Route11_Text_JasperPostBattle::
 	.string "¡evolución POKéMON!$"
 
 Route11_Text_EddieIntro::
-	.string "Let's go, but don't cheat!$"
+	.string "¡Vamos, pero no hagas trampa!$"
 
 Route11_Text_EddieDefeat::
 	.string "¿Eh?\n"
@@ -50,7 +50,7 @@ Route11_Text_BraxtonPostBattle::
 
 Route11_Text_DillonIntro::
 	.string "I just became a TRAINER.\n"
-	.string "But, I think I can win.$"
+	.string "Pero creo que puedo ganar.$"
 
 Route11_Text_DillonDefeat::
 	.string "My POKéMON couldn't win…\n"
@@ -61,7 +61,7 @@ Route11_Text_DillonPostBattle::
 	.string "¡Déjame en paz!$"
 
 Route11_Text_DirkIntro::
-	.string "Fwahaha!\n"
+	.string "¡Fwahaha!\n"
 	.string "I have never lost!$"
 
 Route11_Text_DirkDefeat::
@@ -80,7 +80,7 @@ Route11_Text_DarianPostBattle::
 	.string "I was unlucky, as always.$"
 
 Route11_Text_YasuIntro::
-	.string "I'm the best in my class.\n"
+	.string "Soy el mejor de mi clase.\n"
 	.string "I train every morning.$"
 
 Route11_Text_YasuDefeat::
@@ -104,7 +104,7 @@ Route11_Text_BerniePostBattle::
 	.string "Well, better get back to work.$"
 
 Route11_Text_DaveIntro::
-	.string "I raised my POKéMON carefully.\n"
+	.string "Crié a mis POKéMON con cuidado.\n"
 	.string "They should be ready by now!$"
 
 Route11_Text_DaveDefeat::

@@ -297,7 +297,7 @@ MossdeepCity_SpaceCenter_1F_Text_RocketLaunchDemandsPerfection:
 	.string "Un lanzamiento exige perfección.\n"
 	.string "No se permite ni un 1% de error.\p"
 	.string "Aunque esté un 99% bien, todo\n"
-	.string "is useless if 1% happens to be no good.\p"
+	.string "no sirve si ese 1% sale mal.\p"
 	.string "Aun así, nunca dejamos de intentar.\n"
 	.string "¿Por qué? Es un sueño sin fin.$"
 
@@ -350,7 +350,7 @@ MossdeepCity_SpaceCenter_1F_Text_MagmaWantsToSpoilMyDream:
 	.string "¡No permitiré que pase!$"
 
 MossdeepCity_SpaceCenter_1F_Text_StevenMagmaCantBeAllowedToTakeFuel:
-	.string "STEVEN: {PLAYER}{KUN}, have you read that\n"
+	.string "STEVEN: {PLAYER}{KUN}, ¿leíste eso?\n"
 	.string "proclamación?\p"
 	.string "El TEAM MAGMA busca el combustible\n"
 	.string "de cohetes en esta isla.\p"
@@ -386,7 +386,7 @@ MossdeepCity_SpaceCenter_1F_Text_Grunt1PostBattle:
 
 MossdeepCity_SpaceCenter_1F_Text_Grunt4Intro:
 	.string "El combustible que el CENTRO ESPACIAL\n"
-	.string "in storage--that's what we're after.\p"
+	.string "en el almacén... eso es lo que busco.\p"
 	.string "¡Planeamos llevarnos hasta el final!$"
 
 MossdeepCity_SpaceCenter_1F_Text_Grunt4Defeat:

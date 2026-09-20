@@ -301,7 +301,7 @@ gFameCheckerFlavorText_Sabrina5:: @ 0x81AE841
 gFameCheckerFlavorText_Blaine0:: @ 0x81AE89E
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}¿Qué hace esta persona?\p"
 	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}GIMNASIO POKéMON ISLA CANELA\n"
-	.string "LEADER: BLAINE\l"
+	.string "LÍDER: BLAINE\l"
 	.string "¡El impulsivo Maestro Quiz!$"
 
 gFameCheckerFlavorText_Blaine1:: @ 0x81AE90A
@@ -459,53 +459,53 @@ gFameCheckerFlavorText_Lance0:: @ 0x81AF4FD
 gFameCheckerFlavorText_Lance1:: @ 0x81AF567
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}¿Tu tipo de POKéMON favorito?\p"
 	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Sabes que los dragones son\n"
-	.string "mythical POKéMON.\p"
-	.string "They're hard to catch and raise,\n"
-	.string "but their powers are superior.\p"
-	.string "They're virtually indestructible.\n"
-	.string "There's no being clever with them.$"
+	.string "POKéMON míticos.\p"
+	.string "Son difíciles de capturar y criar,\n"
+	.string "pero sus poderes son superiores.\p"
+	.string "Son virtualmente indestructibles.\n"
+	.string "No hay forma de engañarlos.$"
 
 gFameCheckerFlavorText_Lance2:: @ 0x81AF641
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}¿Cómo es esta persona?\p"
-	.string "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}He stands for justice!\n"
-	.string "He's cool, and yet passionate!\l"
-	.string "He's the greatest, LANCE!$"
+	.string "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}¡Él representa la justicia!\n"
+	.string "¡Es genial y a la vez apasionado!\l"
+	.string "¡Es el mejor, LANCE!$"
 
 gFameCheckerFlavorText_Lance3:: @ 0x81AF6BA
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Hay un rumor…\p"
-	.string "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}We have a customer, LANCE, who\n"
-	.string "occasionally comes.\p"
-	.string "He always buys capes.\p"
-	.string "I wonder… Does he have many\n"
-	.string "identical capes at home?$"
+	.string "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Tenemos un cliente, LANCE, que\n"
+	.string "viene de vez en cuando.\p"
+	.string "Siempre compra capas.\p"
+	.string "Me pregunto... ¿Tendrá muchas?\n"
+	.string "¿capas iguales en casa?$"
 
 gFameCheckerFlavorText_Lance4:: @ 0x81AF758
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}¿Familia y amigos?\p"
-	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}LANCE's grandfather is thought to\n"
-	.string "be the elder of a famous clan of\l"
-	.string "dragon masters.$"
+	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Se cree que el abuelo de LANCE\n"
+	.string "es el anciano de un famoso clan de\l"
+	.string "maestros dragón.$"
 
 gFameCheckerFlavorText_Lance5:: @ 0x81AF7CB
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}¿Familia y amigos?\p"
-	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}From what I've heard, LANCE has\n"
-	.string "a cousin who's a GYM LEADER\l"
+	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}He oído que LANCE tiene\n"
+	.string "un primo que es LÍDER de GIMNASIO\l"
 	.string "un lugar muy lejano.$"
 
 gFameCheckerFlavorText_Bill0:: @ 0x81AF83E
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}¿Qué hace esta persona?\p"
-	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}After all, BILL's world-famous as a\n"
+	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}BILL es famoso en todo el mundo\n"
 	.string "como un POKéMANÍACO.\p"
-	.string "He invented the POKéMON Storage\n"
-	.string "System on PC, too.$"
+	.string "Inventó también el Sistema de\n"
+	.string "Almacenamiento POKéMON en PC.$"
 
 gFameCheckerFlavorText_Bill1:: @ 0x81AF8CA
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}¿Tu tipo de POKéMON favorito?\p"
-	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}BILL has lots of POKéMON!\n"
-	.string "He collects rare ones, too!$"
+	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}¡BILL tiene muchos POKéMON!\n"
+	.string "¡También colecciona los raros!$"
 
 gFameCheckerFlavorText_Bill2:: @ 0x81AF929
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}¿Cómo es esta persona?\p"
-	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}He's my grandson!\p"
+	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}¡Es mi nieto!\p"
 	.string "Siempre le gustó coleccionar cosas,\n"
 	.string "¡incluso de niño!$"
 
@@ -665,23 +665,23 @@ gFameCheckerPersonQuote_LtSurge:: @ 0x81B0456
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}De: LT. SURGE\n"
 	.string "Para: {PLAYER}\p"
 	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}¡Oye, chico!\n"
-	.string "You electrified me in our battle!\p"
-	.string "I didn't know that there were\n"
-	.string "gutsy TRAINERS like you.\p"
-	.string "It made me change my mind about\n"
+	.string "¡Me electrificaste en la batalla!\p"
+	.string "No sabía que existieran\n"
+	.string "ENTRENADORES tan valientes.\p"
+	.string "Me hiciste cambiar de opinión sobre\n"
 	.string "eres!$"
 
 gFameCheckerPersonName_Erika:: @ 0x81B0504
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}ERIKA$"
 
 gFameCheckerPersonQuote_Erika:: @ 0x81B0510
-	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}From: ERIKA\n"
+	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}De: ERIKA\n"
 	.string "Para: {PLAYER}\p"
-	.string "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}I am so glad that there are strong\n"
-	.string "TRAINERS like you.\p"
-	.string "That awareness alone inspires and\n"
-	.string "motivates me to try harder.\p"
-	.string "Please visit me again.\n"
+	.string "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Me alegra que haya\n"
+	.string "ENTRENADORES fuertes como tú.\p"
+	.string "Saber eso me inspira y me\n"
+	.string "motiva a esforzarme más.\p"
+	.string "Por favor, visítame de nuevo.\n"
 	.string "Zzz…$"
 
 gFameCheckerPersonName_Koga:: @ 0x81B05C2
@@ -921,7 +921,7 @@ gFameCheckerFlavorTextOriginLocation_Koga4::
 	.string "CIUDAD FUCHSIA$"
 
 gFameCheckerFlavorTextOriginLocation_Koga5::
-	.string "SAFARI ZONE$"
+	.string "ZONA SAFARI$"
 
 gFameCheckerFlavorTextOriginLocation_Sabrina0::
 	.string "CIUDAD AZAFRÁN$"
@@ -1458,8 +1458,8 @@ PokemonJournal_Text_SpecialFeatureLance::
 	.string "Característica especial:\n"
 	.string "¡LANCE del ALTO MANDO!\p"
 	.string "Se cree que el abuelo de LANCE\n"
-	.string "be the elder of a famous clan of\l"
-	.string "dragon masters.$"
+	.string "es el anciano de un famoso clan de\l"
+	.string "maestros dragón.$"
 
 PokemonJournal_Text_SpecialFeatureProfOak::
 	.string "DIARIO POKéMON\p"

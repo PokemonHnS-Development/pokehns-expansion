@@ -28,7 +28,7 @@ Route25_EventScript_MistyRematch::
 Route25_Text_Misty:
     .string "MISTY: ¡Amo el atardecer aquí!\n"
 	.string "Me da el valor para seguir,\l"
-	.string "you know?\p"
+	.string "trabajo duro, ¿sabes?\p"
 	.string "¡Así es!\p"
 	.string "Si estás listo para un chapuzón,\n"
 	.string "¡ve al DOJO DE LUCHA!$"

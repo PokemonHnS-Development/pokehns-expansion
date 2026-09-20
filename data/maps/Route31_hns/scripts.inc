@@ -136,103 +136,103 @@ Route31_Text_BugCatcherWade1_After:
 Route31_Text_SleepyMan:
 	.string "… Hnuurg… ¿Eh?\p"
 	.string "Caminé demasiado hoy buscando\n"
-	.string "POKéMON.\p"
+	.string "POKéMON planta.\p"
 	.string "Me duelen los pies y tengo sueño…\p"
-	.string "If I were a wild POKéMON, I'd\n"
-	.string "be easy to catch…\p"
+	.string "Si fuera un POKéMON salvaje,\n"
+	.string "sería fácil de atrapar...\p"
 	.string "…Zzzz…$"
 
 Route31_Text_SleepyManGotMail:
-	.string "…Zzzz… Huh?\p"
-	.string "What's that? You have MAIL\n"
+	.string "...Zzzz... ¿Eh?\p"
+	.string "¿Qué es eso? Tienes CORREO\n"
 	.string "por mí?$"
 
 Route31_Text_SleepyManFail:
 	.string "…Zzzz…$"
 
 Route31_Text_HandOverMailMon:
-	.string "{PLAYER} handed over the\n"
-	.string "POKéMON holding the MAIL.$"
+	.string "{PLAYER} entregó al\n"
+	.string "POKéMON que traía el CORREO.$"
 
 Route31_Text_ReadingMail:
 	.string "Veamos...\p"
-	.string "Thanks for bringing this to\n"
+	.string "Gracias por traer esto a\n"
 	.string "me.\p"
-	.string "My friend's a good guy, and\n"
-	.string "you're swell too!\p"
-	.string "I'd like to do something good\n"
-	.string "in return too!\p"
-	.string "I know! I want you to have\n"
-	.string "this!$"
+	.string "Mi amigo es buen tipo, y\n"
+	.string "¡tú también eres genial!\p"
+	.string "¡Yo también quiero hacer algo\n"
+	.string "bueno a cambio!\p"
+	.string "¡Ya sé! Quiero que tengas\n"
+	.string "¡esto!$"
 
 Route31_Text_DescribeRest:
 	.string "...Zzz...\p"
-	.string "...Umm... Rest!\p"
-	.string "The phrase 'recover fast' became\n"
-	.string "shortened to 'Rest,' you see?\p"
-	.string "This is a move to sleep and recover\n"
-	.string "some HP.$"
+	.string "...Umm... ¡Descanso!\p"
+	.string "La frase 'recupérate rápido'\n"
+	.string "se acortó a 'Descanso', ¿ves?\p"
+	.string "Es un movimiento para dormir y\n"
+	.string "recuperar PS.$"
 
 Route31_Text_WrongMail:
 	.string "Esta CARTA no es para mí.$"
 
 Route31_Text_MissingMail:
-	.string "Why is this POKéMON so special?\p"
-	.string "It doesn't have any MAIL.$"
+	.string "¿Por qué este POKéMON es especial?\p"
+	.string "No tiene ningún CORREO.$"
 
 Route31_Text_DeclinedToHandOverMail:
-	.string "What? You don't want\n"
-	.string "anything?$"
+	.string "¿Qué? ¿No quieres\n"
+	.string "nada?$"
 
 Route31_Text_CantTakeLastMon:
-	.string "If I take that POKéMON from\n"
-	.string "you,\p"
-	.string "what are you going to use in\n"
-	.string "battle?$"
+	.string "Si te quito ese POKéMON,\n"
+	.string "tú,\p"
+	.string "¿qué usarás en?\n"
+	.string "para luchar?$"
 
 Route31_Text_Youngster:
-	.string "I found a good POKéMON in DARK\n"
-	.string "CAVE.\p"
-	.string "I'm going to raise it to take\n"
-	.string "on FALKNER.\p"
-	.string "He's the leader of VIOLET\n"
-	.string "CITY's GYM.$"
+	.string "Hallé un buen POKéMON en la\n"
+	.string "CUEVA OSCURA.\p"
+	.string "Lo entrenaré para luchar\n"
+	.string "contra FALKNER.\p"
+	.string "Él es el líder del GIMNASIO de\n"
+	.string "CIUDAD MALVA.$"
 
 Route31_Text_Sign:
-	.string "ROUTE 31\p"
+	.string "RUTA 31\p"
 	.string "CDAD. MALVA - CDAD. CEREZO$"
 
 Route31_Text_WadeRegister:
-	.string "You're awesome! I like you!\p"
-	.string "I look for POKéMON here every\n"
-	.string "day.\p"
-	.string "When I'm in the grass, I find\n"
-	.string "all kinds of BERRIES.\p"
-	.string "If you'd like, I'll share\n"
-	.string "some.$"
+	.string "¡Eres genial! ¡Me caes bien!\p"
+	.string "Busco POKéMON aquí cada\n"
+	.string "día.\p"
+	.string "Cuando estoy en el pasto, hallo\n"
+	.string "todo tipo de BAYAS.\p"
+	.string "Si quieres, compartiré\n"
+	.string "algunas.$"
 
 Route31_Text_WadeRematchIntro:
-	.string "I was waiting for you.\n"
+	.string "Te estaba esperando.\n"
 	.string "¡A luchar!$"
 
 Route31_Text_WadeRematchDefeat:
 	.string "Awwwww…$"
 
 Route31_Text_WadePostRematch:
-	.string "You'll hear from me as soon\n"
-	.string "as I find anything that you\l"
-	.string "might like.$"
+	.string "Te avisaré en cuanto\n"
+	.string "encuentre algo que\l"
+	.string "te guste.$"
 
 Route31_Text_WadeHasItem:
-	.string "Hey! I've been looking for\n"
-	.string "you!\p"
-	.string "I found something while I\n"
+	.string "¡Hola! ¡Te he estado\n"
+	.string "buscando!\p"
+	.string "Hallé algo mientras yo\n"
 	.string "estaba en la hierba.\p"
-	.string "Here, you can have it!$"
+	.string "¡Toma, puedes quedártelo!$"
 
 Route31_Text_WadeGaveItem:
-	.string "I'll let you know if I find\n"
-	.string "anything else!$"
+	.string "¡Te avisaré si encuentro\n"
+	.string "algo más!$"
 
 Route31_Text_WadeNoRoom:
 	.string "Hmm, parece que tu MOCHILA\n"

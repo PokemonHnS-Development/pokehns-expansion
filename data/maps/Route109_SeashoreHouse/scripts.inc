@@ -102,22 +102,22 @@ Route109_SeashoreHouse_EventScript_TrainersNotCompleted::
 	end
 
 Route109_SeashoreHouse_Text_SeashoreHouseIntro:
-	.string "I'm the owner of the SEASHORE HOUSE.\n"
-	.string "But you can call me MR. SEA!\p"
-	.string "What I love above all is to see hot\n"
-	.string "POKéMON battles.\p"
-	.string "Let me see that your heart burns hot!\p"
-	.string "If you can defeat all the TRAINERS\n"
-	.string "here, I'll reward your efforts.$"
+	.string "Soy el dueño de la CASA COSTERA.\n"
+	.string "¡Pero puedes llamarme SR. MAR!\p"
+	.string "Lo que más amo es ver batallas\n"
+	.string "POKéMON intensas.\p"
+	.string "¡Deja que vea que tu corazón arde!\p"
+	.string "Si vences a todos los ENTRENADORES\n"
+	.string "de aquí, premiaré tu esfuerzo.$"
 
 Route109_SeashoreHouse_Text_ShowMeSomeHotMatches:
-	.string "Show me some hot matches!\p"
-	.string "I run this SEASHORE HOUSE just for\n"
-	.string "that reason alone!$"
+	.string "¡Muéstrame combates intensos!\p"
+	.string "¡Manejo esta CASA COSTERA solo por\n"
+	.string "esa única razón!$"
 
 Route109_SeashoreHouse_Text_TakeTheseSodaPopBottles:
-	.string "You're scorching hot!\n"
-	.string "Those battles blazed!\l"
+	.string "¡Estás que ardes!\n"
+	.string "¡Esas batallas fueron ardientes!\l"
 	.string "¡Estoy más que satisfecho!\p"
 	.string "Como agradecimiento por tu\n"
 	.string "racha, quiero que te lleves esto.\p"

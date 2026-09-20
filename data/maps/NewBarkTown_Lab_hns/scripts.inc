@@ -881,7 +881,7 @@ NewBarkTown_Lab_Text_ElmGiveEverstone1:
 NewBarkTown_Lab_Text_ElmGiveEverstone2:
 	.string "Es una PIEDRA ETERNA.\p"
 	.string "Algunas especies de POKéMON\n"
-	.string "when they grow to certain levels.\p"
+	.string "cuando alcancen ciertos niveles.\p"
 	.string "Un POKéMON con la PIEDRA ETERNA\n"
 	.string "no evolucionará.\p"
 	.string "Dáselo a un POKéMON que no\n"

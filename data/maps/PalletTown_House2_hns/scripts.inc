@@ -78,8 +78,8 @@ PalletTown_House2_Text_Alright:
 
 PalletTown_House2_Text_AllDone:
 	.string "DAISY: ¡Listo! Ya terminé.\p"
-	.string "See? Doesn't {STR_VAR_1} look\n"
-	.string "nice?\p"
+	.string "¿Ves? ¿No se ve bien {STR_VAR_1}?\n"
+	.string "¿Lindo?\p"
 	.string "Es un POKéMON muy lindo.$"
 
 PalletTown_House2_Text_AlreadyGroomed:

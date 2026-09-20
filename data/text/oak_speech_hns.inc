@@ -3,7 +3,7 @@ gText_Oak_Welcome::
 	.string "¡Bienvenido al mundo POKéMON!\p"
 	.string "Mi nombre es OAK.\p"
 	.string "La gente me llama el POKéMON\n"
-	.string "POKéMON.\p"
+	.string "POKéMON planta.\p"
 	.string "$"
 
 gText_Oak_Pokemon::

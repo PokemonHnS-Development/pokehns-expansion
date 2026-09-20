@@ -63,7 +63,7 @@ CianwoodCity_Text_BellTowerStory:
 
 CianwoodCity_Text_WhirlIslandsStory:
 	.string "Have you heard of WHIRL ISLANDS?\p"
-	.string "There are what they call Tidal Bells\n"
+	.string "Allí están las llamadas Campanas Marea\n"
 	.string "en la base de su cascada.\p"
 	.string "No hacen ni un solo ruido\n"
 	.string "entre las olas rompientes.\p"

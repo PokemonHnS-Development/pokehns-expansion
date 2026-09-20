@@ -12,8 +12,8 @@ SinjohRuins_Temple_OpenDoor::
 	return
 
 SinjohRuins_Temple_Text_Mon:
-	.string "Some kind of ancient sensor.\n"
-	.string "What is it looking for?$"
+	.string "Algún tipo de sensor antiguo.\n"
+	.string "¿Qué es lo que busca?$"
 
 SinjohRuins_Temple_EventScript_RegiceScanner::
 	lock

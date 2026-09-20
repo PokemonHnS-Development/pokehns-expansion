@@ -778,7 +778,7 @@ CinnabarIsland_Gym_Text_AveryIntro::
 	.string "You can't win!$"
 
 CinnabarIsland_Gym_Text_AveryDefeat::
-	.string "Waah!\n"
+	.string "¡Waaa!\n"
 	.string "My studies were insufficient!$"
 
 CinnabarIsland_Gym_Text_AveryPostBattle::
@@ -849,14 +849,14 @@ CinnabarIsland_Gym_Text_GymGuyPostVictory::
 	.string "You beat that firebrand!$"
 
 CinnabarIsland_Gym_Text_GymStatue::
-	.string "CINNABAR POKéMON GYM\n"
-	.string "LEADER: BLAINE\p"
+	.string "GIMNASIO POKéMON DE CANELA\n"
+	.string "LÍDER: BLAINE\p"
 	.string "ENTRENADORES GANADORES:\n"
 	.string "{RIVAL}$"
 
 CinnabarIsland_Gym_Text_GymStatuePlayerWon::
-	.string "CINNABAR POKéMON GYM\n"
-	.string "LEADER: BLAINE\p"
+	.string "GIMNASIO POKéMON DE CANELA\n"
+	.string "LÍDER: BLAINE\p"
 	.string "ENTRENADORES GANADORES:\n"
 	.string "{RIVAL}, {PLAYER}$"
 

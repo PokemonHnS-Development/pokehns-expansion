@@ -309,23 +309,23 @@ VermilionCity_Movement_EusineLeave:
 	step_end
 
 VermilionCity_Text_Eusine:
-	.string "EUSINE: That was so close!\n"
-	.string "I though I could corner it by\l"
-	.string "ambushing it here.\p"
-	.string "But running on the water is beyond\n"
+	.string "EUSINE: ¡Estuvo muy cerca!\n"
+	.string "Creí que podría acorralarlo\l"
+	.string "con una emboscada aquí.\p"
+	.string "Pero correr sobre el agua es\n"
 	.string "me.\p"
-	.string "Still, I am starting to see\n"
-	.string "a pattern.\p"
-	.string "SUICUNE prefers water!\p"
-	.string "That means...$"
+	.string "Aun así, empiezo a notar\n"
+	.string "un patrón.\p"
+	.string "¡SUICUNE prefiere el agua!\p"
+	.string "Eso significa...$"
 
 VermilionCity_Text_Eusine2:
 	.string "Sorry {PLAYER}, I've got to go!$"
 
 VermilionCity_Text_Teacher:
-	.string "VERMILION PORT is KANTO's seaside\n"
-	.string "gateway.\p"
-	.string "Luxury liners from around the\n"
+	.string "EL PUERTO VERMILIAN es la puerta\n"
+	.string "de entrada a KANTO.\p"
+	.string "Llegan cruceros de todo el\n"
 	.string "muelle del mundo aquí.$"
 
 VermilionCity_Text_MachopOwner:
@@ -407,7 +407,7 @@ VermilionCity_Text_GymSign:
 	.string "El Rayo Americano$"
 
 VermilionCity_Text_FanClubSign:
-	.string "POKéMON FAN CLUB\p"
+	.string "CLUB DE FANS POKéMON\p"
 	.string "¡Fans de POKéMON bienvenidos!$"
 
 VermilionCity_Text_DiglettsCaveSign:

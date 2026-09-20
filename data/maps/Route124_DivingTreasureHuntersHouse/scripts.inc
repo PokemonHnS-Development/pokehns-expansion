@@ -284,24 +284,24 @@ Route124_DivingTreasureHuntersHouse_EventScript_ShardTradeBoard::
 	end
 
 Route124_DivingTreasureHuntersHouse_Text_Greeting:
-	.string "I'm the DIVING TREASURE HUNTER!\p"
-	.string "I'm the awesome dude who makes\n"
-	.string "deep-sea dives to gather treasures\l"
-	.string "resting at the bottom.$"
+	.string "¡Soy el BUSCADOR DE TESOROS!\p"
+	.string "¡Soy el tipo genial que hace\n"
+	.string "buceos profundos para hallar tesoros\l"
+	.string "en el fondo del mar!$"
 
 Route124_DivingTreasureHuntersHouse_Text_HaveYouSeenAnyShards:
-	.string "Tell me, have you seen any SHARDS of\n"
-	.string "tools made in ancient times?$"
+	.string "Dime, ¿has visto FRAGMENTOS de\n"
+	.string "herramientas de la antigüedad?$"
 
 Route124_DivingTreasureHuntersHouse_Text_YouHaventGotAnyShards:
-	.string "You haven't got any treasures\n"
-	.string "for me…\p"
-	.string "If you see any SHARDS, like the RED\n"
-	.string "SHARD, you've got to trade it with me!$"
+	.string "No tienes ningún tesoro\n"
+	.string "para mí...\p"
+	.string "Si ves FRAGMENTOS, como el ROJO,\n"
+	.string "¡tienes que cambiármelo!$"
 
 Route124_DivingTreasureHuntersHouse_Text_ThatsAShardIllTradeYou:
-	.string "Oh, hey! That…\n"
-	.string "That's a SHARD! I'm looking for those!\p"
+	.string "¡Oh, hola! Eso...\n"
+	.string "¡Es un FRAGMENTO! ¡Busco esos!\p"
 	.string "¡Oye, tienes que cambiar eso\n"
 	.string "conmigo! ¡Te daré algo bueno!$"
 

@@ -167,7 +167,7 @@ CeladonCity_Text_GuardSpecProtectsFromStatus::
 	.string "CONSEJOS DE ENTRENADOR\p"
 	.string "La DEF. ESP. protege al POKéMON\n"
 	.string "from status-reduction moves during\l"
-	.string "battle.\p"
+	.string "fantástica.\p"
 	.string "Get your items at the\n"
 	.string "CELADON DEPT. STORE!$"
 

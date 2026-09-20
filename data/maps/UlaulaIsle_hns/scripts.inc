@@ -304,42 +304,42 @@ Alola_Ulaula_Bench_Heal_Movement_0:
 	step_end
 
 Alola_Ulaula_BattlePalossand_Text_0:
-	.string "Shuck!$"
+	.string "¡Rayos!$"
 
 Alola_Ulaula_MtLanikalaSign_Text_0:
-	.string "This mountain is affectionately\n"
-	.string "referred to as MT. LANIKALA by the\l"
+	.string "La gente de aquí llama con cariño\n"
+	.string "a esta montaña MT. LANIKALA,\l"
 	.string "locals, as it is the tallest mountain\l"
 	.string "en las ISLAS ALOLA.\p"
-	.string "The real name of this mountain has been\n"
-	.string "lost to time.$"
+	.string "El nombre real de esta montaña se\n"
+	.string "perdió con el tiempo.$"
 
 Alola_Ulaula_UlaulaSign_Text_0:
 	.string "ISLA ULA'ULA$"
 
 Alola_Ulaula_Phant_outside_Text_0:
-	.string "Hello there, {PLAYER}!\p"
-	.string "I'm the developer who built this\n"
-	.string "section of the game!\p"
-	.string "I hope you enjoyed this taste of ALOLA.\p"
-	.string "I'm working on a full demake of the\n"
-	.string "region called ULTRA ECLIPSE.$"
+	.string "¡Hola, {PLAYER}!\p"
+	.string "Soy el desarrollador que creó esto\n"
+	.string "¡sección del juego!\p"
+	.string "Espero que disfrutes ALOLA.\p"
+	.string "Hago un demake completo de la\n"
+	.string "región ULTRA ECLIPSE.$"
 
 Alola_Ulaula_Phant_outside_Text_1:
-	.string "Please come visit me at my house at\n"
-	.string "the top of this isle.\l"
-	.string "I'll make it worth your while!$"
+	.string "Visítame en mi casa, en la\n"
+	.string "cima de esta isla.\l"
+	.string "¡Valdrá la pena!$"
 
 Alola_Ulaula_TrainerBattlePicnicker_Text_0:
 	.string "¡Sorpresa!\n¡Estaba en los árboles!$"
 
 Alola_Ulaula_TrainerBattlePicnicker_Text_1:
-	.string "Back into hiding I go…$"
+	.string "Volveré a esconderme...$"
 
 Alola_Ulaula_TrainerBattlePicnicker_Text_2:
-	.string "I thought I saw something red flying\n"
-	.string "through the sky.\p"
-	.string "Could it have been a POKéMON?$"
+	.string "Creí ver algo rojo volando\n"
+	.string "por el cielo.\p"
+	.string "¿Podría ser un POKéMON?$"
 
 Alola_Ulaula_TrainerBattleYoungster_Text_0:
 	.string "Hey, I'm going to be the first to climb\nMT. LANIKALA!$"
@@ -648,43 +648,43 @@ Alola_Ulaula_Text_TutorMove_Confide:
 	.string "CONFIDENZA$"
 
 Alola_Ulaula_Text_TutorMove_DazzlingGleam:
-	.string "DAZZLING GLEAM$"
+	.string "BRILLO MÁGICO$"
 
 Alola_Ulaula_Text_TutorMove_DragonTail:
-	.string "DRAGON TAIL$"
+	.string "COLA DRAGÓN$"
 
 Alola_Ulaula_Text_TutorMove_EchoedVoice:
-	.string "ECHOED VOICE$"
+	.string "VOZ ECO$"
 
 Alola_Ulaula_Text_TutorMove_FlameCharge:
-	.string "FLAME CHARGE$"
+	.string "CARGA LLAMA$"
 
 Alola_Ulaula_Text_TutorMove_FrostBreath:
-	.string "FROST BREATH$"
+	.string "ALIENTO GÉLIDO$"
 
 Alola_Ulaula_Text_TutorMove_Infestation:
-	.string "INFESTATION$"
+	.string "INFESTACIÓN$"
 
 Alola_Ulaula_Text_TutorMove_LeechLife:
 	.string "LEECH LIFE$"
 
 Alola_Ulaula_Text_TutorMove_LowSweep:
-	.string "LOW SWEEP$"
+	.string "BARRIDO BAJO$"
 
 Alola_Ulaula_Text_TutorMove_Psyshock:
-	.string "PSYSHOCK$"
+	.string "PSICOGOLPE$"
 
 Alola_Ulaula_Text_TutorMove_Quash:
-	.string "QUASH$"
+	.string "APLASTAR$"
 
 Alola_Ulaula_Text_TutorMove_Round:
-	.string "ROUND$"
+	.string "GOLPE ROUND$"
 
 Alola_Ulaula_Text_TutorMove_Scald:
-	.string "SCALD$"
+	.string "ESCALDADO$"
 
 Alola_Ulaula_Text_TutorMove_SkyDrop:
-	.string "SKY DROP$"
+	.string "CAÍDA DEL CIELO$"
 
 Alola_Ulaula_Text_TutorMove_SludgeWave:
 	.string "OLA DE LODO$"

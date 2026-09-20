@@ -45,32 +45,32 @@ Route110_TrickHousePuzzle6_EventScript_Sebastian::
 Route110_TrickHousePuzzle6_Text_WroteSecretCodeLockOpened:
 	.string "{PLAYER} anotó el código secreto\n"
 	.string "en la puerta.\p"
-	.string "“TRICK MASTER is my life.”\n"
+	.string "“TRICK MASTER es mi vida.”\n"
 	.string "… … … … … … … …\p"
 	.string "¡La cerradura se abrió!$"
 
 Route110_TrickHousePuzzle6_Text_SophiaIntro:
-	.string "When I heard there was a strange\n"
-	.string "house, I had to check it out.$"
+	.string "Cuando oí que había una casa\n"
+	.string "extraña, tenía que verla.$"
 
 Route110_TrickHousePuzzle6_Text_SophiaDefeat:
 	.string "I've discovered a tough TRAINER!$"
 
 Route110_TrickHousePuzzle6_Text_SophiaPostBattle:
-	.string "I'm sure having a good time checking\n"
-	.string "this place out.\p"
-	.string "It's a challenge I've found worth\n"
-	.string "repeating!$"
+	.string "Me divierto mucho explorando\n"
+	.string "este lugar.\p"
+	.string "¡Es un desafío que vale la pena\n"
+	.string "repetir!$"
 
 Route110_TrickHousePuzzle6_Text_BennyIntro:
-	.string "Maybe I could get my BIRD POKéMON\n"
-	.string "to fly over the wall…$"
+	.string "Tal vez mi POKéMON ave podría\n"
+	.string "volar sobre el muro…$"
 
 Route110_TrickHousePuzzle6_Text_BennyDefeat:
 	.string "Gwaaah! I blew it!$"
 
 Route110_TrickHousePuzzle6_Text_BennyPostBattle:
-	.string "Ehehehe… I guess I lost because\n"
+	.string "Ehehehe… Supongo que perdí porque\n"
 	.string "Intentaba hacer trampa.$"
 
 Route110_TrickHousePuzzle6_Text_SebastianIntro:

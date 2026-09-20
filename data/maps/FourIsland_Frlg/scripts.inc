@@ -184,7 +184,7 @@ FourIsland_Text_RivalAlreadyGotEggBeSmellingYa::
 	.string "What are you doing here in the\n"
 	.string "SEVII ISLANDS?\p"
 	.string "You should quit copying me,\n"
-	.string "you know?\p"
+	.string "trabajo duro, ¿sabes?\p"
 	.string "Anyways, I already got my POKéMON\n"
 	.string "EGG, so I'm done with this island.\p"
 	.string "Heh, I bet you don't even know\n"

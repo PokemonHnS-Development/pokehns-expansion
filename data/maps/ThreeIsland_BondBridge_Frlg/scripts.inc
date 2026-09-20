@@ -46,7 +46,7 @@ ThreeIsland_BondBridge_Text_AmiraPostBattle::
 	.string "learn how to swim!$"
 
 ThreeIsland_BondBridge_Text_AlexisIntro::
-	.string "Yay, yay!\n"
+	.string "¡Sii, sii!\n"
 	.string "POKéMON!$"
 
 ThreeIsland_BondBridge_Text_AlexisDefeat::

@@ -1402,7 +1402,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .weight = 0,
         .description = COMPOUND_STRING(
             "Su cerebro ha crecido hasta ser\n"
-            "size, as has the rest of its body.\n"
+            "tamaño, al igual que su cuerpo.\n"
             "El intelecto de este POKéMON y\n"
             "psychic abilities are overpowering."),
         .pokemonScale = 491,
@@ -1463,7 +1463,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .weight = 89,
         .description = COMPOUND_STRING(
             "Gracias a las almohadillas de sus\n"
-            "silently raids the food stores of other\n"
+            "roba en silencio la comida de otros\n"
             "Sobrevive gracias a sus\n"
             "ill-gotten gains."),
         .pokemonScale = 422,
@@ -2634,7 +2634,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .height = 4,
         .weight = 130,
         .description = COMPOUND_STRING(
-            "Eating a sweet apple caused its evolution.\n"
+            "Comer una manzana dulce lo evolucionó.\n"
             "Un aroma a néctar emana de su cuerpo,\n"
             "luring in the bug Pokémon it preys on."),
         .pokemonScale = 491,
@@ -2760,7 +2760,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .height = 4,
         .weight = 44,
         .description = COMPOUND_STRING(
-            "Dipplin is two creatures in one Pokémon.\n"
+            "Dipplin son dos seres en un POKéMON.\n"
             "Su evolución fue causada por un objeto\n"
             "apple grown only in one place."),
         .pokemonScale = 356,
@@ -6743,7 +6743,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .height = 14,
         .weight = 110,
         .description = COMPOUND_STRING(
-            "It's capable of flying faster than 120 mph.\n"
+            "Puede volar a más de 190 km/h.\n"
             "Lucha junto a Dreepy y lo mima.\n"
             "on them until they successfully evolve."),
         .pokemonScale = 265,
@@ -7419,7 +7419,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .height = 290,
         .weight = 0,
         .description = COMPOUND_STRING(
-            "People call it the embodiment of\n"
+            "La gente lo llama la encarnación de\n"
             "Dicen que es la encarnación de la\n"
             "furia. Su grito y expresión\n"
             "rid the world of malevolence."),
@@ -7480,7 +7480,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .height = 19,
         .weight = 1050,
         .description = COMPOUND_STRING(
-            "This form of Urshifu is a strong\n"
+            "Esta forma de Urshifu es un fuerte\n"
             "Esta forma de Urshifu cree que lo\n"
             "mejor es derrotar al rival con una\n"
             "strikes are nonstop, flowing like a river."),

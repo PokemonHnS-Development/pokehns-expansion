@@ -62,7 +62,7 @@ FourIsland_House2_Text_WowHoFLow::
 
 FourIsland_House2_Text_WowHoFHigh::
 	.string "¡Guau! Has logrado entrar al\n"
-	.string "HALL OF FAME that often?\l"
+	.string "¿Tanto vas al SALÓN DE LA FAMA?\l"
 	.string "¡Eso es increíble, de verdad!\p"
 	.string "¡Dominas la LIGA POKéMON!\n"
 	.string "Te daré una de estas.$"
@@ -74,7 +74,7 @@ FourIsland_House2_Text_WowHoFHighest::
 	.string "Ya basta, tengo que darte esto.$"
 
 FourIsland_House2_Text_HoFStickerApplied::
-	.string "The HALL OF FAME STICKER was\n"
+	.string "La CALCOMANÍA DEL SALÓN DE LA FAMA\n"
 	.string "en la TARJETA de ENTRENADOR.$"
 
 FourIsland_House2_Text_ComeBackWithBetterStoryHoF::
@@ -145,15 +145,15 @@ FourIsland_House2_Text_WowLinkWinsHigh::
 	.string "Te daré una de estas.$"
 
 FourIsland_House2_Text_WowLinkWinsHighest::
-	.string "Wh… Wickedly whoa!\n"
-	.string "You've won mind-blowingly often!\p"
-	.string "It just knocks me out thinking\n"
-	.string "about how tough you are.\p"
-	.string "You're the stuff of nightmares!\n"
+	.string "¡Gu... Guau, increíble!\n"
+	.string "¡Has ganado muchísimas veces!\p"
+	.string "Me deja atónito pensar\n"
+	.string "en lo fuerte que eres.\p"
+	.string "¡Eres una auténtica pesadilla!\n"
 	.string "Ya basta, tengo que darte esto.$"
 
 FourIsland_House2_Text_VictoryStickerApplied::
-	.string "The VICTORY STICKER was applied\n"
+	.string "Se aplicó la CALCOMANÍA DE VICTORIA\n"
 	.string "en la TARJETA DE ENTRENADOR.$"
 
 FourIsland_House2_Text_ComeBackWithBetterStoryLinkWins::

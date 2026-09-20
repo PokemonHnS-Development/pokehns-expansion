@@ -492,7 +492,7 @@ SlateportCity_Harbor_Text_NeedDiveToCatchSub:
 
 SlateportCity_Harbor_Text_WontBeLongBeforeWeFinishFerry:
 	.string "CAP. STERN: Ah, sí.\n"
-	.string "MR. BRINEY came to our SHIPYARD.\p"
+	.string "El SR. BRINEY vino al ASTILLERO.\p"
 	.string "¡No pasará mucho tiempo antes de que\n"
 	.string "terminemos el ferry!$"
 
@@ -537,4 +537,4 @@ SlateportCity_Harbor_Text_HandedScannerToStern:
 
 SlateportCity_Harbor_Text_ThisWillHelpResearch:
 	.string "CAPT. STERN: ¡Gracias, {PLAYER}{KUN}!\n"
-	.string "This will help our research a lot!$"
+	.string "¡Esto ayudará mucho al estudio!$"

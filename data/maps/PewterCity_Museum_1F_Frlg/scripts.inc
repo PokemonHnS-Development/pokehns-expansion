@@ -189,7 +189,7 @@ PewterCity_Museum_1F_EventScript_KabutopsFossil::
 	end
 
 PewterCity_Museum_1F_Text_Its50YForChildsTicket::
-	.string "Yes, yes.\n"
+	.string "Sí, sí.\n"
 	.string "It's ¥50 for a child's ticket.\p"
 	.string "Would you like to come in?$"
 

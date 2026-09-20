@@ -65,8 +65,8 @@ SixIsland_RuinValley_Text_DoorIsOpen::
 	.string "La puerta está abierta.$"
 
 SixIsland_RuinValley_Text_StanlyIntro::
-	.string "There appear to be many secrets\n"
-	.string "still unsolved in this world.$"
+	.string "Parece que hay muchos secretos\n"
+	.string "aún sin resolver en este mundo.$"
 
 SixIsland_RuinValley_Text_StanlyDefeat::
 	.string "Hmm…$"
@@ -91,8 +91,8 @@ SixIsland_RuinValley_Text_FosterPostBattle::
 	.string "a long way.$"
 
 SixIsland_RuinValley_Text_LarryIntro::
-	.string "It's been said that there are\n"
-	.string "mysterious stones on this island.\p"
+	.string "Dicen que hay piedras\n"
+	.string "misteriosas en esta isla.\p"
 	.string "I suspect it has something to do\n"
 	.string "with the ruins here.$"
 
@@ -115,8 +115,8 @@ SixIsland_RuinValley_Text_DarylPostBattle::
 	.string "¡Siente la alegría de escalar!$"
 
 SixIsland_RuinValley_Text_HectorIntro::
-	.string "I'm pretty familiar with the land\n"
-	.string "around these parts.$"
+	.string "Conozco muy bien las tierras\n"
+	.string "de por aquí.$"
 
 SixIsland_RuinValley_Text_HectorDefeat::
 	.string "You don't need to be so pushy.\n"

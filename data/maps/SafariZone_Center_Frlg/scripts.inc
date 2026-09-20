@@ -19,7 +19,7 @@ SafariZone_Center_EventScript_AreaSign::
 	end
 
 SafariZone_Center_Text_RestHouse::
-	.string "REST HOUSE$"
+	.string "CASA DE DESCANSO$"
 
 SafariZone_Center_Text_PressStartToCheckTime::
 	.string "CONSEJOS DE ENTRENADOR\p"

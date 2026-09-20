@@ -2443,7 +2443,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .description = COMPOUND_STRING(
             "Tadbulb agita su cola para\n"
             "generate electricity. If it senses danger,\n"
-            "it will make its head blink on and off\n"
+            "hará que su cabeza parpadee\n"
             "to alert its allies."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
@@ -3874,7 +3874,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .description = COMPOUND_STRING(
             "El martillo pesa 100 kilos, pero\n"
             "Tinkaton lo balancea con facilidad\n"
-            "Tinkaton as it steals whatever it pleases\n"
+            "Tinkaton mientras roba lo que quiera\n"
             "and carries its plunder back home."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
@@ -3938,7 +3938,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .weight = 18,
         .description = COMPOUND_STRING(
             "Este POKéMON puede oler a un\n"
-            "of a Veluza just over 65 feet away\n"
+            "de un Veluza a más de 20 metros\n"
             "and will hide itself in the sand."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
@@ -6811,7 +6811,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .description = COMPOUND_STRING(
             "Tiene un cuerpo robusto formado por\n"
             "monedas apiladas. Gholdengo vence a\n"
-            "its enemies by firing coin after coin\n"
+            "a sus enemigos lanzando monedas\n"
             "at them in quick succession."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
@@ -6876,7 +6876,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .description = COMPOUND_STRING(
             "El rencor de alguien castigado por\n"
             "escribir los males del rey en tablas\n"
-            "wooden tablets has clad itself in\n"
+            "tablillas de madera se ha cubierto\n"
             "dead leaves to become a Pokémon."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
@@ -7077,7 +7077,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .description = COMPOUND_STRING(
             "Controla llamas que arden a más de\n"
             "3000 grados Celsius. Nada\n"
-            "casually swims through the sea of lava it\n"
+            "nada tranquilamente por el mar de lava\n"
             "creates by melting rock and sand."),
         .pokemonScale = 356,
         .pokemonOffset = 17,

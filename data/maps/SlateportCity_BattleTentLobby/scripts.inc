@@ -277,16 +277,16 @@ SlateportCity_BattleTentLobby_Text_CouldntFindMonForMe:
 	.string "ningún POKéMON que fuera para mí.\p"
 	.string "Así que pensé, tipo, oye, debería\n"
 	.string "quejarme con el tipo de allí.\p"
-	.string "And he wouldn't hear me out, like, hey!\n"
-	.string "So, like, total bummer, man!\p"
-	.string "Hey, like, you! Zip it, you know?\n"
-	.string "Just, you know, take this!$"
+	.string "¡Y no quiso escucharme, oye!\n"
+	.string "¡Así que es un bajón total!\p"
+	.string "¡Oye, tú! ¡Cállate, ¿sabes?!\n"
+	.string "¡Solo, ya sabes, toma esto!$"
 
 SlateportCity_BattleTentLobby_Text_ExplainTorment:
-	.string "That's, like, TM41, you know?\n"
-	.string "Hey, it's TORMENT, you hearing me?\p"
+	.string "Es, tipo, la MT41, ¿sabes?\n"
+	.string "Es TORMENTA, ¿me escuchas?\p"
 	.string "O sea, no deja que el otro tipo\n"
-	.string "use the same move twice in a row, see?\p"
+	.string "Usa el mismo movimiento dos veces,\p"
 	.string "Oye, escucha bien, o sea,\n"
 	.string "¡no te estoy lanzando una maldición!$"
 

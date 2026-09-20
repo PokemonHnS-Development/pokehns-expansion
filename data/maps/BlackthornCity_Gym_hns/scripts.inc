@@ -277,7 +277,7 @@ BlackthornGym_Text_ClairText_DescribeTM:
 BlackthornGym_Text_ClairText_League:
     .string "¿Qué sucede?\p"
     .string "¿No vas camino a la LIGA\n"
-    .string "POKéMON?\p"
+    .string "con los POKéMON?\p"
     .string "¿No sabes dónde está?\p"
     .string "Ve a PUEBLO PRIMAVERA.\p"
     .string "Luego usa SURF al este. Esa ruta\n"

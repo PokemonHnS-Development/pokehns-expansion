@@ -172,23 +172,23 @@ SlateportCity_ContestHall_Text_MyPapaIsContestJudge:
 
 @ Unused
 SlateportCity_ContestHall_Text_ImLikeMajorlyCheesed:
-	.string "Hey, man, I'm like majorly cheesed,\n"
-	.string "you know. Like, you know, I just\l"
-	.string "wanted to know why my POKéMON\l"
-	.string "never won, you know, like, hey?\p"
-	.string "So, like, I gave the JUDGE my two\n"
-	.string "cents, you know, they're free.\p"
-	.string "And he wouldn't hear me out, like, hey!\n"
-	.string "So, like, total bummer, man!\p"
-	.string "Hey, like, you! Zip it, you know?\n"
-	.string "Just, you know, take this!$"
+	.string "Oye, estoy súper molesto,\n"
+	.string "ya sabes. Es que solo quería\l"
+	.string "saber por qué mi POKéMON\l"
+	.string "nunca ganó, ¿sabes? ¡Oye!\p"
+	.string "Así que le di mi opinión al JUEZ,\n"
+	.string "ya sabes, que es gratis.\p"
+	.string "¡Y no quiso escucharme, oye!\n"
+	.string "¡Así que es un bajón total!\p"
+	.string "¡Oye, tú! ¡Cállate, ¿sabes?!\n"
+	.string "¡Solo, ya sabes, toma esto!$"
 
 @ Unused
 SlateportCity_ContestHall_Text_ExplainTorment:
-	.string "That's, like, TM41, you know?\n"
-	.string "Hey, it's TORMENT, you hearing me?\p"
+	.string "Es, tipo, la MT41, ¿sabes?\n"
+	.string "Es TORMENTA, ¿me escuchas?\p"
 	.string "O sea, no deja que el otro tipo\n"
-	.string "use the same move twice in a row, see?\p"
+	.string "Usa el mismo movimiento dos veces,\p"
 	.string "Oye, escucha bien, o sea,\n"
 	.string "¡no te estoy lanzando una maldición!$"
 
@@ -231,7 +231,7 @@ SlateportCity_ContestHall_Text_RewardWithSageAdvice:
 	.string "Si un movimiento sale muy bien,\n"
 	.string "el público se emocionará.\p"
 	.string "El POKéMON que haga su atractivo\n"
-	.string "right when everyone's excited…\p"
+	.string "justo cuando todos están emocionados…\p"
 	.string "Bueno, ¡seguro que pasará algo\n"
 	.string "bueno!$"
 

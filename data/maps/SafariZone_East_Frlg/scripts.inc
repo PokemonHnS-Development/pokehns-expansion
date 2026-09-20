@@ -14,7 +14,7 @@ SafariZone_East_EventScript_AreaSign::
 	end
 
 SafariZone_East_Text_RestHouse::
-	.string "REST HOUSE$"
+	.string "CASA DE DESCANSO$"
 
 SafariZone_East_Text_TimeDeclinesOnlyWhileYouWalk::
 	.string "CONSEJOS DE ENTRENADOR\p"

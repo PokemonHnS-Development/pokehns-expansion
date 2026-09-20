@@ -141,7 +141,7 @@ FuchsiaCity_EventScript_OmanyteSign::
 FuchsiaCity_Text_DidYouTrySafariGame::
 	.string "Did you try the SAFARI GAME?\p"
 	.string "There are some rare POKéMON that\n"
-	.string "can only be caught there.$"
+	.string "solo pueden capturarse allí.$"
 
 FuchsiaCity_Text_SafariZoneZooInFront::
 	.string "The SAFARI ZONE has a zoo in front\n"
@@ -165,7 +165,7 @@ FuchsiaCity_Text_CitySign::
 
 FuchsiaCity_Text_SafariZoneSign::
 	.string "POKéMON PARADISE\n"
-	.string "SAFARI ZONE$"
+	.string "ZONA SAFARI$"
 
 FuchsiaCity_Text_SafariGameSign::
 	.string "SAFARI GAME\n"

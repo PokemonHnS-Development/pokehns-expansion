@@ -29,15 +29,15 @@ Trade_Text_WellIfYouDontWantTo::
 
 Trade_Text_ThisIsntMon::
 	.string "¿Hmmm?\n"
-	.string "This isn't a {STR_VAR_1}.\p"
-	.string "Think of me if you get one.$"
+	.string "Esto no es un {STR_VAR_1}.\p"
+	.string "Piensa en mí si consigues uno.$"
 
 Trade_Text_Thanks::
 	.string "¡Gracias!$"
 
 Trade_Text_HasTradedMonGrownStronger::
-	.string "The {STR_VAR_2} that I traded you,\n"
-	.string "has it grown stronger?$"
+	.string "El {STR_VAR_2} que te cambié,\n"
+	.string "¿se ha vuelto más fuerte?$"
 
 Trade_Text_DoYouHaveMonWantToTradeForMon::
 	.string "Hi!\n"
@@ -49,12 +49,12 @@ Trade_Text_ThatsTooBad::
 	.string "Qué mal.$"
 
 Trade_Text_ThisIsNoMon::
-	.string "…This is no {STR_VAR_1}.\p"
-	.string "If you get one, trade it with me.$"
+	.string "...Esto no es un {STR_VAR_1}.\p"
+	.string "Si consigues uno, cámbialo conmigo.$"
 
 Trade_Text_ThanksYoureAPal::
-	.string "Thanks, you're a pal!$"
+	.string "¡Gracias, eres un amigo!$"
 
 Trade_Text_HowIsMyOldMon::
-	.string "How is my old {STR_VAR_2}?\n"
-	.string "My {STR_VAR_1} is doing great!$"
+	.string "¿Cómo está mi viejo {STR_VAR_2}?\n"
+	.string "¡Mi {STR_VAR_1} está genial!$"

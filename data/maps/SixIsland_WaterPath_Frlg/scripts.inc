@@ -71,7 +71,7 @@ SixIsland_WaterPath_Text_EarlPostBattle::
 	.string "these parts?$"
 
 SixIsland_WaterPath_Text_MiuIntro::
-	.string "MIU: Hello, POKéMON!\n"
+	.string "MIU: ¡Hola, POKéMON!\n"
 	.string "It's time to play!$"
 
 SixIsland_WaterPath_Text_MiuDefeat::
@@ -87,7 +87,7 @@ SixIsland_WaterPath_Text_MiuNotEnoughMons::
 	.string "We want to battle together.$"
 
 SixIsland_WaterPath_Text_MiaIntro::
-	.string "MIA: Hello, POKéMON!\n"
+	.string "MIA: ¡Hola, POKéMON!\n"
 	.string "It's time to battle!$"
 
 SixIsland_WaterPath_Text_MiaDefeat::

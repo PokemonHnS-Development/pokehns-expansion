@@ -206,21 +206,21 @@ Route13_Text_KennyRematchDefeat:
 	.string "Aún no es suficiente…$"
 
 Route13_Text_KennyPostRematch:
-	.string "The power of POKéMON is like\n"
-	.string "erosion. We will persevere!$"
+	.string "El poder POKéMON es como la\n"
+	.string "erosión. ¡Perseveraremos!$"
 
 Route13_Text_TrainerTips:
 	.string "CONSEJOS DE ENTRENADOR\p"
-	.string "Look! Right there, at the left\n"
-	.string "side of the post.$"
+	.string "¡Mira! Justo ahí, al lado\n"
+	.string "izquierdo del poste.$"
 
 Route13_Text_Sign:
-	.string "ROUTE 13\p"
-	.string "NORTH TO SILENCE BRIDGE$"
+	.string "RUTA 13\p"
+	.string "NORTE AL PUENTE SILENCIO$"
 
 Route13_Text_DirectionsSign:
-	.string "NORTH TO LAVENDER TOWN\p"
-	.string "WEST TO FUCHSIA CITY$"
+	.string "NORTE A PUEBLO LAVANDA\p"
+	.string "OESTE A CIUDAD FUCHSIA$"
 
 Route13_GetOffBoat::
 	lock
@@ -423,17 +423,17 @@ Route13_Movement_BoatArrive:
 	step_end
 
 Route13_GetOffBoat_Text_0:
-	.string "Welcome back to mainland Kanto!\p"
+	.string "¡Bienvenido a Kanto continental!\p"
 	.string "Vuelve si quieres hacer un viaje\n"
-	.string "to the ALOLA ISLES!$"
+	.string "¡a las ISLAS ALOLA!$"
 
 Route13_TravelToAlola_Text_0:
-	.string "Ahoy there!\p"
-	.string "That's one strange souvenir.\n"
-	.string "You must be from the ISLES!$"
+	.string "¡Hola, marinero!\p"
+	.string "Es un recuerdo muy extraño.\n"
+	.string "¡Debes ser de las ISLAS!$"
 Route13_TravelToAlola_Text_0_5:
-	.string "Would you like to take the next ship?\n"
-	.string "It departs shortly!$"
+	.string "¿Quieres tomar el próximo barco?\n"
+	.string "¡Sale en breve!$"
 
 Route13_TravelToAlola_Text_1:
 	.string "¡Ahoy! ¡Sube a bordo!$"
@@ -443,13 +443,13 @@ Route13_TravelToAlola_Text_2:
 	.string "Vuelve cuando quieras zarpar.$"
 
 Route13_TravelToAlola_Text_3:
-	.string "Ah, it's you again!\n"
-	.string "Do you want to go to the ALOLA ISLES?$"
+	.string "¡Ah, eres tú otra vez!\n"
+	.string "¿Quieres ir a las ISLAS ALOLA?$"
 
 Route13_TravelToAlola_Text_4:
 	.string "¡Ahoy!\n"
-	.string "This port is for residents only.\p"
-	.string "All of the residents of these ISLES\n"
-	.string "carry some… {PAUSE 30}strange souvenirs.\p"
-	.string "It makes them so easy to identify,\n"
-	.string "I don't even need to check tickets!$"
+	.string "Este puerto es solo residentes.\p"
+	.string "Todos los residentes de estas ISLAS\n"
+	.string "llevan algunos... {PAUSE 30}recuerdos raros.\p"
+	.string "Es muy fácil identificarlos,\n"
+	.string "¡ni necesito revisar boletos!$"

@@ -18,8 +18,8 @@ Route10_EventScript_PowerPlantSign::
 
 Route10_Text_MarkIntro::
 	.string "Wow, you came all the way here?\n"
-	.string "Maybe you're a POKéMANIAC, too?\l"
-	.string "Want to see my collection?$"
+	.string "¿Serás tú un POKéMANIAC también?\l"
+	.string "¿Quieres ver mi colección?$"
 
 Route10_Text_MarkDefeat::
 	.string "Humph.\n"
@@ -42,7 +42,7 @@ Route10_Text_ClarkPostBattle::
 	.string "Snort! Snivel!$"
 
 Route10_Text_HermanIntro::
-	.string "Hi, kid!\n"
+	.string "¡Hola, chico!\n"
 	.string "Want to see my POKéMON?$"
 
 Route10_Text_HermanDefeat::

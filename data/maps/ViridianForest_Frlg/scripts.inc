@@ -127,7 +127,7 @@ ViridianForest_Text_CharlieDefeat::
 	.string "I lost!$"
 
 ViridianForest_Text_CharliePostBattle::
-	.string "BUG POKéMON evolve quickly.\n"
+	.string "Los POKéMON bicho evolucionan rápido.\n"
 	.string "They're a lot of fun!$"
 
 ViridianForest_Text_RanOutOfPokeBalls::

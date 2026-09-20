@@ -131,7 +131,7 @@ Route43_Text_PokemaniacRonBeaten:
 
 Route43_Text_PokemaniacRonAfter:
     .string "Está bien que a la gente le guste\n"
-    .string "different types of POKéMON.\p"
+    .string "distintos tipos de POKéMON.\p"
     .string "POKéMON no es solo tener al\n"
     .string "más poderoso.$"
 

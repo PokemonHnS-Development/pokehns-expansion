@@ -16,8 +16,8 @@ PewterCity_PokemonCenter_EventScript_BugCatcher::
 
 PewterCity_PokemonCenter1F_Text_Teacher:
 	.string "…Yeah, and the GYM in CINNABAR's gone.\p"
-	.string "I was really amazed.\p"
-	.string "…Yes? I'm on the phone. Go away!$"
+	.string "Me quedé muy sorprendido.\p"
+	.string "…¿Sí? Estoy al teléfono. ¡Vete!$"
 
 PewterCity_PokemonCenter1F_Text_Jigglypuff:
 	.string "JIGGLYPUFF: Puu pupuu.$"
@@ -48,26 +48,26 @@ PewterCity_PokemonCenter_EventScript_TradeCompleted::
 	end
 
 PewterCity_PokemonCenter_Text_WantToTrade:
-	.string "I've been traveling all over, looking\n"
-	.string "for a good {STR_VAR_1}.\p"
-	.string "Would you trade one for my\n"
+	.string "He viajado por todas partes buscando\n"
+	.string "un buen {STR_VAR_1}.\p"
+	.string "¿Cambiarías uno por mi\n"
 	.string "{STR_VAR_2}?$"
 
 PewterCity_PokemonCenter_Text_TakeCare:
 	.string "¡Muchas gracias!\n"
-	.string "Take good care of my {STR_VAR_1}!$"
+	.string "¡Cuida mucho a mi {STR_VAR_1}!$"
 
 PewterCity_PokemonCenter_Text_DeclineTrade:
-	.string "No? That's too bad…\n"
-	.string "I think you'd like my HAUNTER.$"
+	.string "¿No? Qué mal…\n"
+	.string "Creo que te gustaría mi HAUNTER.$"
 
 PewterCity_PokemonCenter_Text_NotRequestedMon:
 	.string "Hmm, eso no es un {STR_VAR_1}.\n"
-	.string "That's not what I'm looking for.$"
+	.string "Eso no es lo que estoy buscando.$"
 
 PewterCity_PokemonCenter_Text_TradeCompleted:
-	.string "How's that HAUNTER treating you?\n"
-	.string "It's a real trickster!$"
+	.string "¿Cómo te trata ese HAUNTER?\n"
+	.string "¡Es un verdadero bromista!$"
 
 PewterCity_PokemonCenter1F_Text_BugCatcher:
 	.string "La mayoría de POKéMON se duermen si\n"

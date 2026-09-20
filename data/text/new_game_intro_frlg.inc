@@ -1,5 +1,5 @@
 gOtherText_NewName::
-	.string "NEW NAME$"
+	.string "NUEVO NOMBRE$"
 
 gNameChoice_Green::
 	.string "GREEN$"

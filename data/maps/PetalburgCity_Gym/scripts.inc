@@ -1276,7 +1276,7 @@ PetalburgCity_Gym_Text_NormanDefeat:
 	.string "Toma, ten esto.$"
 
 PetalburgCity_Gym_Text_ReceivedBalanceBadge:
-	.string "{PLAYER} received the BALANCE BADGE\n"
+	.string "{PLAYER} recibió la MEDALLA EQUILIBRIO\n"
 	.string "¡de DAD!$"
 
 PetalburgCity_Gym_Text_ExplainBalanceBadgeTakeThis:
@@ -1302,13 +1302,13 @@ PetalburgCity_Gym_Text_DadHappyAndSad:
 	.string "feliz y triste a la vez. Es raro…$"
 
 PetalburgCity_Gym_Text_PleaseComeWithMe:
-	.string "Ah, there you are, {PLAYER}{KUN}!\p"
+	.string "¡Ah, ahí estás, {PLAYER}{KUN}!\p"
 	.string "Por favor, ven conmigo.\n"
 	.string "Tengo algo que quiero darte.$"
 
 PetalburgCity_Gym_Text_LetMeBorrowPlayer:
 	.string "NORMAN, no te importa, ¿verdad?\p"
-	.string "Let me borrow your {PLAYER}{KUN} for\n"
+	.string "Préstame a tu {PLAYER}{KUN} por\n"
 	.string "un minuto o dos.$"
 
 PetalburgCity_Gym_Text_DadGoingToKeepTraining:

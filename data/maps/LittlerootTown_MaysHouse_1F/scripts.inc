@@ -320,7 +320,7 @@ RivalsHouse_1F_Text_OhYoureTheNewNeighbor:
 	.string "Oh, hola. ¿Y tú quién eres?\p"
 	.string "… … … … … … … … …\n"
 	.string "… … … … … … … … …\p"
-	.string "Oh, you're {PLAYER}{KUN}, our new next-door\n"
+	.string "Oh, tú eres {PLAYER}{KUN}, nuestro nuevo vecino\n"
 	.string "vecino! ¡Hola!\p"
 	.string "Tenemos un {STR_VAR_1} más o menos\n"
 	.string "de tu edad.\p"

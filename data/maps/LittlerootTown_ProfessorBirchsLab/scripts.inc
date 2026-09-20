@@ -664,13 +664,13 @@ LittlerootTown_ProfessorBirchsLab_Text_BirchAwayOnFieldwork:
 	.string "Es estudiar cosas en el entorno\n"
 	.string "natural, como campos y montañas,\l"
 	.string "en vez de en un laboratorio.\p"
-	.string "The PROF isn't one for doing desk work.\n"
+	.string "El PROF no es de los que hacen\n"
 	.string "Es el tipo de persona que prefiere\l"
 	.string "salir y experimentar las cosas\l"
 	.string "que leer sobre ellas aquí.$"
 
 LittlerootTown_ProfessorBirchsLab_Text_BirchIsntOneForDeskWork:
-	.string "The PROF isn't one for doing desk work.\n"
+	.string "El PROF no es de los que hacen\n"
 	.string "Es el tipo de persona que prefiere\l"
 	.string "salir y experimentar las cosas\l"
 	.string "que leer sobre ellas aquí.$"
@@ -678,7 +678,7 @@ LittlerootTown_ProfessorBirchsLab_Text_BirchIsntOneForDeskWork:
 LittlerootTown_ProfessorBirchsLab_Text_BirchEnjoysRivalsHelpToo:
 	.string "El PROF. BIRCH estudia los hábitats\n"
 	.string "y la distribución de POKéMON.\p"
-	.string "The PROF enjoys {RIVAL}'s help, too.\n"
+	.string "El PROF. también aprecia la ayuda de {RIVAL}.\n"
 	.string "Hay mucho cariño allí.$"
 
 LittlerootTown_ProfessorBirchsLab_Text_LikeYouToHavePokemon:
@@ -728,14 +728,14 @@ LittlerootTown_ProfessorBirchsLab_Text_BirchRivalGoneHome:
 	.string "Deberías descansar en casa.$"
 
 LittlerootTown_ProfessorBirchsLab_Text_HeardYouBeatRivalTakePokedex:
-	.string "PROF. BIRCH: Oh, hi, {PLAYER}{KUN}!\p"
+	.string "PROF. BIRCH: ¡Hola, {PLAYER}{KUN}!\p"
 	.string "Supe que venciste a {RIVAL} en\n"
 	.string "tu primer intento. ¡Excelente!\p"
 	.string "{RIVAL} ha ayudado en mi estudio\n"
 	.string "por mucho tiempo.\p"
 	.string "{RIVAL} ya tiene mucha historia\n"
 	.string "como ENTRENADOR.\p"
-	.string "Here, {PLAYER}{KUN}, I ordered this for my\n"
+	.string "Toma, {PLAYER}{KUN}, pedí esto para\n"
 	.string "estudio, pero creo que tú debes\l"
 	.string "tener esta POKéDEX.$"
 
@@ -748,9 +748,9 @@ LittlerootTown_ProfessorBirchsLab_Text_ExplainPokedex:
 	.string "cada POKéMON que veas o captures.\p"
 	.string "Mi hijo, {RIVAL}, va a todas partes\n"
 	.string "con ella.\p"
-	.string "Whenever my kid catches a rare POKéMON\n"
+	.string "Cada vez que mi hijo atrapa un\n"
 	.string "y anota sus datos en la POKéDEX,\l"
-	.string "why, {RIVAL} looks for me while I'm out\l"
+	.string "vaya, {RIVAL} me busca cuando salgo\l"
 	.string "de campo para mostrármelo.$"
 
 LittlerootTown_ProfessorBirchsLab_Text_CountlessPokemonAwait:

@@ -35,28 +35,28 @@ Route4_EventScript_Sign::
 	end
 
 Route4_Text_BirdKeeperHank_Seen:
-	.string "I'm raising my POKéMON. Want to battle\n"
+	.string "Entreno a mis POKéMON. ¿Batallamos?\n"
 	.string "conmigo?$"
 
 Route4_Text_BirdKeeperHank_Beaten:
 	.string "Ack! I lost that one…$"
 
 Route4_Text_BirdKeeperHank_AfterBattle:
-	.string "If you have a specific POKéMON that you\n"
-	.string "want to raise, put it out first, then\l"
-	.string "switch it right away.\p"
-	.string "That's how to do it.$"
+	.string "Si tienes un POKéMON específico que\n"
+	.string "quieras entrenar, sácalo primero y\l"
+	.string "cámbialo enseguida.\p"
+	.string "Así es como se hace.$"
 
 Route4_Text_PicnickerHope_Seen:
-	.string "I have a feeling that I can win.\p"
-	.string "Let's see if I'm right!$"
+	.string "Tengo el presentimiento de que ganaré.\p"
+	.string "¡Veamos si tengo razón!$"
 
 Route4_Text_PicnickerHope_Beaten:
 	.string "Ay, eres demasiado fuerte.$"
 
 Route4_Text_PicnickerHope_AfterBattle:
-	.string "I heard CLEFAIRY appear at MT.MOON.\p"
-	.string "But where could they be?$"
+	.string "Oí que CLEFAIRY sale en MT.MOON.\p"
+	.string "Pero, ¿dónde podrían estar?$"
 
 Route4_Text_PicnickerSharon_Seen:
 	.string "Um…\n"

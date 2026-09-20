@@ -15,7 +15,7 @@ Route5_PokemonDayCare_Text_WhichMonShouldIRaise::
 	.string "Which POKéMON should I raise?$"
 
 Route5_PokemonDayCare_Text_ComeAnytimeYouLike::
-	.string "Fine.\n"
+	.string "Está bien.\n"
 	.string "Come anytime you like.$"
 
 Route5_PokemonDayCare_Text_LookAfterMonForAWhile::
@@ -36,7 +36,7 @@ Route5_PokemonDayCare_Text_OweMeXForMonsReturn::
 
 Route5_PokemonDayCare_Text_ThankYouHeresMon::
 	.string "¡Gracias!\n"
-	.string "Here's your POKéMON.$"
+	.string "Aquí tienes tu POKéMON.$"
 
 Route5_PokemonDayCare_Text_PlayerGotMonBack::
 	.string "{PLAYER} got {STR_VAR_1} back\n"
@@ -47,7 +47,7 @@ Route5_PokemonDayCare_Text_OnlyHaveOneMonWithYou::
 	.string "contigo.$"
 
 Route5_PokemonDayCare_Text_WhatWillYouBattleWith::
-	.string "If you leave me that POKéMON,\n"
+	.string "Si me dejas ese POKéMON,\n"
 	.string "what will you battle with?$"
 
 Route5_PokemonDayCare_Text_MonHasGrownByXLevels::

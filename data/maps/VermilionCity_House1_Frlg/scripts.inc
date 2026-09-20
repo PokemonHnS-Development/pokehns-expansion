@@ -58,7 +58,7 @@ VermilionCity_House1_Text_OhThatsSoDisappointing::
 	.string "That's so disappointing…$"
 
 VermilionCity_House1_Text_HowAreTheFishBiting::
-	.string "Hello there, {PLAYER}!\p"
+	.string "¡Hola, {PLAYER}!\p"
 	.string "How are the fish biting?$"
 
 VermilionCity_House1_Text_NoRoomForNiceGift::

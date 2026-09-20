@@ -449,13 +449,13 @@ void CB2_FlashNotDetectedScreen(void)
     InitWindows(textWin);
     DrawStdFrameWithCustomTileAndPalette(0, TRUE, 0x214, 0xE);
     static const u8 saveFailedMessage[] =_(
-        "{COLOR RED}ERROR! {COLOR DARK_GRAY}Flash memory not detected!\n"
+        "{COLOR RED}¡ERROR! {COLOR DARK_GRAY}¡Memoria Flash no detectada!\n"
         "\n"
-        "If playing on an emulator, set your\n"
-        "save type setting to\n"
-        "Flash 1Mb/128K and reload the ROM.\n"
+        "Si usas un emulador, cambia el\n"
+        "tipo de guardado a\n"
+        "Flash 1Mb/128K y recarga la ROM.\n"
         "\n"
-        "If playing on hardware, your cart\n"
+        "Si usas hardware, tu cartucho\n"
         "does not have a working flash chip.");
     SaveFailedScreenTextPrint(saveFailedMessage, 1, 0);
     TransferPlttBuffer();

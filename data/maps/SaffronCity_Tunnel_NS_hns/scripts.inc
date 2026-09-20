@@ -29,23 +29,23 @@ SaffronCity_Tunnel_NS_EventScript_BaldingManAfter::
 	end
 
 SaffronCity_Tunnel_NS_Text_BaldingManIntro:
-	.string "Don't be afraid, I'm not a bad\n"
-	.string "person.\p"
-	.string "A place like this...\n"
-	.string "attracts mean people.\p"
-	.string "They would eventually cause\n"
-	.string "trouble...\p"
-	.string "It makes me mad just thinking about\n"
+	.string "No tengas miedo, no soy una mala\n"
+	.string "persona.\p"
+	.string "Un lugar como este...\n"
+	.string "atrae a gente mala.\p"
+	.string "Tarde o temprano causarían\n"
+	.string "problemas...\p"
+	.string "Me enoja solo de pensarlo\n"
 	.string "it.$"
 
 SaffronCity_Tunnel_NS_Text_BaldingManCandybarDetected:
-	.string "Aha!\n"
-	.string "That's a RAGE CANDYBAR!\p"
-	.string "Can I have it?\n"
-	.string "Please!$"
+	.string "¡Ajá!\n"
+	.string "¡Es una BARRA DE FURIA!\p"
+	.string "¿Me la das?\n"
+	.string "¡Por favor!$"
 
 SaffronCity_Tunnel_NS_Text_BaldingManGaveCandybar:
-	.string "{PLAYER} Gave the RageCandyBar to the\n"
+	.string "{PLAYER} le dio la Barra de Furia a\n"
 	.string "tipo del camino subterráneo.\p"
 	.string "¡Ñam!\p"
 	.string "¡Qué frustrante!\p"
@@ -62,15 +62,15 @@ SaffronCity_Tunnel_NS_Text_BaldingManGaveCandybar:
 SaffronCity_Tunnel_NS_Text_BaldingManGaveTm:
 	.string "La MT 64 contiene........\p"
 	.string "tic-\n"
-	.string "            tock\l"
+	.string "            tac\l"
 	.string "tic-\l"
-	.string "            tock\l"
+	.string "            tac\l"
 	.string "tic-\l"
-	.string "            tock\l"
+	.string "            tac\l"
 	.string "tic-\l"
-	.string "            tock\l"
-	.string "tick.....\l"
+	.string "            tac\l"
+	.string "tic.....\l"
 	.string "......................\l"
 	.string "......................\l"
-	.string "KA-BOOM!!!$"	
+	.string "¡BUM!!!$"	
 

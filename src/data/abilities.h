@@ -2333,7 +2333,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
 
     [ABILITY_EMBODY_ASPECT_TEAL_MASK] =
     {
-        .name = _("EMBODY ASPECT"),
+        .name = _("ASPECTO CORPORAL"),
         .description = COMPOUND_STRING("Raises Speed."),
         .aiRating = 6,
         .cantBeCopied = TRUE,
@@ -2344,7 +2344,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
 
     [ABILITY_EMBODY_ASPECT_HEARTHFLAME_MASK] =
     {
-        .name = _("EMBODY ASPECT"),
+        .name = _("ASPECTO CORPORAL"),
         .description = COMPOUND_STRING("Raises Attack."),
         .aiRating = 6,
         .cantBeCopied = TRUE,
@@ -2355,7 +2355,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
 
     [ABILITY_EMBODY_ASPECT_WELLSPRING_MASK] =
     {
-        .name = _("EMBODY ASPECT"),
+        .name = _("ASPECTO CORPORAL"),
         .description = COMPOUND_STRING("Raises Sp. Def."),
         .aiRating = 6,
         .cantBeCopied = TRUE,
@@ -2366,7 +2366,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
 
     [ABILITY_EMBODY_ASPECT_CORNERSTONE_MASK] =
     {
-        .name = _("EMBODY ASPECT"),
+        .name = _("ASPECTO CORPORAL"),
         .description = COMPOUND_STRING("Raises Defense."),
         .aiRating = 6,
         .cantBeCopied = TRUE,

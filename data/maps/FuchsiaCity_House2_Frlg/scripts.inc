@@ -60,7 +60,7 @@ FuchsiaCity_House2_Text_OhThatsDisappointing::
 	.string "That's so disappointing…$"
 
 FuchsiaCity_House2_Text_HowAreTheFishBiting::
-	.string "Hello there, {PLAYER}!\p"
+	.string "¡Hola, {PLAYER}!\p"
 	.string "How are the fish biting?$"
 
 FuchsiaCity_House2_Text_YouHaveNoRoomForGift::

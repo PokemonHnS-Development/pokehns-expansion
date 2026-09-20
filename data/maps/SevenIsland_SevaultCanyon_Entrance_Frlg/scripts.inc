@@ -7,10 +7,10 @@ SevenIsland_SevaultCanyon_Entrance_EventScript_RouteSign::
 
 SevenIsland_SevaultCanyon_Entrance_Text_MiahIntro::
 	.string "Kyahaha!\n"
-	.string "I'll flick you away effortlessly!$"
+	.string "¡Te echaré lejos sin esfuerzo!$"
 
 SevenIsland_SevaultCanyon_Entrance_Text_MiahDefeat::
-	.string "Tch!\n"
+	.string "¡Tch!\n"
 	.string "Too strong for me!$"
 
 SevenIsland_SevaultCanyon_Entrance_Text_MiahPostBattle::
@@ -33,7 +33,7 @@ SevenIsland_SevaultCanyon_Entrance_Text_MasonPostBattle::
 	.string "all the girls scream and shout!$"
 
 SevenIsland_SevaultCanyon_Entrance_Text_NicolasIntro::
-	.string "This island is too spread out…\n"
+	.string "Esta isla es muy extensa...\n"
 	.string "It's not easy patrolling the place.$"
 
 SevenIsland_SevaultCanyon_Entrance_Text_NicolasDefeat::
@@ -58,8 +58,8 @@ SevenIsland_SevaultCanyon_Entrance_Text_MadelinePostBattle::
 	.string "kindness, they'll understand.$"
 
 SevenIsland_SevaultCanyon_Entrance_Text_EveIntro::
-	.string "EVE: I'll team up with JON and\n"
-	.string "battle together.$"
+	.string "EVE: Me aliaré con JON y\n"
+	.string "POKéMON luchen juntos.$"
 
 SevenIsland_SevaultCanyon_Entrance_Text_EveDefeat::
 	.string "EVE: Me and JON, we lost.\n"
@@ -75,7 +75,7 @@ SevenIsland_SevaultCanyon_Entrance_Text_EveNotEnoughMons::
 	.string "Come back with two POKéMON, okay?$"
 
 SevenIsland_SevaultCanyon_Entrance_Text_JonIntro::
-	.string "JON: When I'm with EVE, it feels\n"
+	.string "JON: Cuando estoy con EVE, siento\n"
 	.string "like we could never lose.$"
 
 SevenIsland_SevaultCanyon_Entrance_Text_JonDefeat::

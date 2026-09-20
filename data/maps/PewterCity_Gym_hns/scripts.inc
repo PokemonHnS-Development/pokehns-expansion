@@ -50,7 +50,7 @@ PewterCity_Gym_Text_Brock_Intro:
 
 PewterCity_Gym_Text_Brock_WinLoss:
 	.string "BROCK: Los fuertes ataques de tus\n"
-	.string "overcame my rock-hard defense…\p"
+	.string "superó mi defensa tan dura...\p"
 	.string "Eres más fuerte de lo que esperaba...\p"
 	.string "Toma, llévate esta MEDALLA.$"
 

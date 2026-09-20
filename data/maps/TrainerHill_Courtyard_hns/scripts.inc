@@ -67,42 +67,42 @@ TrainerHill_Courtyard_EventScript_Sailor::
 	end
 
 BattleTowerOutsideYoungsterText:
-	.string "Wow, the TRAINER HILL is huge!\p"
-	.string "There must be many kinds of\n"
-	.string "POKéMON in there!$"
+	.string "¡Vaya, la COLINA ENTRENADOR es enorme!\p"
+	.string "¡Debe haber muchos tipos de\n"
+	.string "POKéMON allí!$"
 
 BattleTowerOutsideBeautyText:
-	.string "In the BATTLE TENTS, you can\n"
-	.string "use only three POKéMON.\p"
-	.string "It's so hard to decide which\n"
-	.string "three should go into battle…$"
+	.string "En las CARPAS DE BATALLA, solo\n"
+	.string "puedes usar tres POKéMON.\p"
+	.string "Es muy difícil decidir qué\n"
+	.string "tres irán a la batalla…$"
 
 BattleTowerOutsideSailorText:
-	.string "Hehehe, I snuck out from work.\p"
-	.string "I can't bail out until I've won!\p"
-	.string "I have to win it all. That I must!$"
+	.string "Jejeje, me escapé del trabajo.\p"
+	.string "¡No me iré hasta que gane!\p"
+	.string "Debo ganarlo todo. ¡Tengo que hacerlo!$"
 
 BattleTowerOutsideSignText:
-	.string "{UP_ARROW} TRAINER HILL ENTRANCE\p"
+	.string "{UP_ARROW} ENTRADA COLINA ENTRENADOR\p"
 	.string "¡Lleguen a la cima, ENTRENADORES\n"
-	.string "TRAINERS!”\p"
-	.string "{RIGHT_ARROW} BATTLE TENTS.$"
+	.string "¡ENTRENADORES!\p"
+	.string "{RIGHT_ARROW} CARPAS DE BATALLA.$"
 
 BattleTower_Battle_Tent_Text_Factory:
-	.string "BATTLE TENT: FACTORY\n"
+	.string "CARPA BATALLA: FÁBRICA\n"
 	.string "“¡Búscalo! ¡El POKéMON definitivo!”$"
 
 BattleTower_Battle_Tent_Text_Palace:
-	.string "BATTLE TENT: PALACE\n"
-	.string "“Feast Your Eyes on Battles!”$"
+	.string "CARPA BATALLA: PALACIO\n"
+	.string "¡Mira estas batallas!$"
 
 BattleTower_Battle_Tent_Text_Arena:
-	.string "BATTLE TENT: ARENA\n"
+	.string "TIENDA BATALLA: ARENA\n"
 	.string "¡Que se reúnan los mejores equipos!$"
 
 BattleTowerOutsideText_Closed:
-	.string "The TRAINER HILL is currently\n"
-	.string "closed for repairs.$"
+	.string "La COLINA ENTRENADOR está\n"
+	.string "cerrada por reparaciones.$"
 
 
 TrainerHill_Courtyard_EventScript_LeftMoveTutor::
@@ -198,9 +198,9 @@ TrainerHill_Courtyard_ExchangeServiceCorner_EventScript_OldWTMan::
 	end
 
 TrainerHill_Courtyard_ExchangeServiceCorner_EventScript_OldWTMan_Text:
-	.string "Hi! If you are looking for the\n"
-	.string "WONDERTRADE, they're now located in\l"
-	.string "every POKéMON CENTER. Have fun!$"
+	.string "¡Hola! Si buscas el\n"
+	.string "WONDERTRADE, ahora están en\l"
+	.string "cada CENTRO POKéMON. ¡Diviértete!$"
 
 TrainerHill_Courtyard_ExchangeServiceCorner_Text_WelcomePleaseChoosePrize:
 	.string "Hola, este es el SERVICIO DE\n"

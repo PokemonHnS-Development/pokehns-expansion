@@ -459,7 +459,7 @@ PetalburgWoods_Text_TrainerTipsExperience:
 	.string "sea una vez ganará puntos de EXP.\p"
 	.string "Para subir a un POKéMON débil, ponlo\n"
 	.string "al principio de la lista del equipo.\p"
-	.string "As soon as a battle starts, switch it\n"
+	.string "Al iniciar el combate, cámbialo\n"
 	.string "Ganará puntos de EXP sin correr\l"
 	.string "ningún peligro.$"
 

@@ -246,7 +246,7 @@ RocketHideout_B1F_Movement_GruntWalkLeft:
 
 RocketHideout_B1F_Text_CameraGrunt1Seen:
     .string "¡Hola!\n"
-    .string "Intruder alert!$"
+    .string "¡Alerta de intruso!$"
 
 RocketHideout_B1F_Text_CameraGrunt1Beaten:
     .string "Dang… I failed…$"
@@ -255,10 +255,10 @@ RocketHideout_B1F_Text_CameraGrunt2Seen:
     .string "¡Es mi turno! ¡No hay escapatoria!$"
 
 RocketHideout_B1F_Text_CameraGrunt2Beaten:
-    .string "Surveillance cams are in the\n"
-    .string "POKéMON statues.\p"
-    .string "We'll keep appearing until you\n"
-    .string "trip a secret switch.$"
+    .string "Las cámaras están en las\n"
+    .string "estatuas POKéMON.\p"
+    .string "Apareceremos hasta que\n"
+    .string "actives un interruptor secreto.$"
 
 RocketHideout_B1F_EventScript_TrainerJed::
 	trainerbattle_single TRAINER_JED_HNS, RocketHideout_B1F_Text_ScientistJedSeen, RocketHideout_B1F_Text_ScientistJedBeaten
@@ -266,20 +266,20 @@ RocketHideout_B1F_EventScript_TrainerJed::
 	end
 
 RocketHideout_B1F_Text_ScientistJedSeen:
-    .string "This was once a ninja hideout.\p"
-    .string "There are traps to confound\n"
-    .string "intruders like you.$"
+    .string "Esto fue un refugio ninja.\p"
+    .string "Hay trampas para confundir a\n"
+    .string "intrusos como tú.$"
 
 RocketHideout_B1F_Text_ScientistJedBeaten:
     .string "I get it…$"
 
 RocketHideout_B1F_Text_ScientistJedAfter:
-    .string "All right. I'll divulge a secret\n"
-    .string "about our hideout.\p"
-    .string "That thing on the floor up ahead\n"
-    .string "is a warp panel.\p"
-    .string "If you step on it, you'll be\n"
-    .string "warped back to the entrance.$"
+    .string "Está bien. Revelaré un secreto\n"
+    .string "sobre nuestro escondite.\p"
+    .string "Eso que hay en el suelo\n"
+    .string "es un panel de teletransporte.\p"
+    .string "Si lo pisas, serás\n"
+    .string "teletransportado a la entrada.$"
 
 RocketHideout_B1F_Text_GruntM16Seen:
     .string "Heheh. Feeling lucky, punk?$"
@@ -288,10 +288,10 @@ RocketHideout_B1F_Text_GruntM16Beaten:
     .string "Kaboom!$"
 
 RocketHideout_B1F_Text_GruntM16After:
-    .string "I don't even know where the traps\n"
-    .string "are planted.\p"
-    .string "You'll just have to collect your\n"
-    .string "courage and walk.$"
+    .string "Ni siquiera sé dónde están\n"
+    .string "puestas las trampas.\p"
+    .string "Solo tendrás que armarte de\n"
+    .string "valor y caminar.$"
 
 RocketHideout_B1F_EventScript_Rocket16::
 	trainerbattle_single TRAINER_GRUNT_13_HNS, RocketHideout_B1F_Text_GruntM16Seen, RocketHideout_B1F_Text_GruntM16Beaten

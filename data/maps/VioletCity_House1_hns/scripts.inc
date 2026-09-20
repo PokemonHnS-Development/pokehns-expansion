@@ -55,7 +55,7 @@ VioletCity_House1_Text_After:
 	.string "Hi, how's my old ONIX doing?$"
 
 VioletCity_House1_Text_PokefanM:
-	.string "A POKéMON you get in a trade\n"
-	.string "grows quickly.\p"
-	.string "But if you don't have the right\n"
-	.string "GYM BADGE, they may disobey you.$"
+	.string "Un POKéMON obtenido por intercambio\n"
+	.string "crece rápidamente.\p"
+	.string "Pero si no tienes la MEDALLA de\n"
+	.string "GIMNASIO correcta, puede desobedecer.$"

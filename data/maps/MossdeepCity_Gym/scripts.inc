@@ -544,22 +544,22 @@ MossdeepCity_Gym_Text_NicholasIntro:
 
 MossdeepCity_Gym_Text_NicholasDefeat:
 	.string "Oh!\n"
-	.string "Done in!$"
+	.string "¡Acabado!$"
 
 MossdeepCity_Gym_Text_NicholasPostBattle:
-	.string "All right! I think I'll develop a special\n"
-	.string "invincible POKéMON power next.$"
+	.string "¡Bien! Creo que crearé un poder\n"
+	.string "invencible para POKéMON ahora.$"
 
 MossdeepCity_Gym_Text_TateAndLizaIntro:
-	.string "TATE: Hehehe… Were you surprised?\p"
-	.string "LIZA: Fufufu… Were you surprised?\p"
+	.string "TATE: Jejeje... ¿Te sorprendiste?\p"
+	.string "LIZA: Jajaja... ¿Te sorprendiste?\p"
 	.string "TATE: That there are two GYM LEADERS?\n"
 	.string "LIZA: That there are two GYM LEADERS?\p"
-	.string "TATE: We're twins!\n"
-	.string "LIZA: We're twins!\p"
-	.string "TATE: We don't need to talk because…\n"
-	.string "LIZA: We can each determine what…\p"
-	.string "TATE: The other is thinking…\n"
+	.string "TATE: ¡Somos gemelos!\n"
+	.string "LIZA: ¡Somos gemelas!\p"
+	.string "TATE: No hace falta hablar porque...\n"
+	.string "LIZA: Cada uno puede determinar qué...\p"
+	.string "TATE: El otro está pensando…\n"
 	.string "LIZA: ¡Todo está en la mente!\p"
 	.string "TATE: Nuestra combinación...\n"
 	.string "LIZA: ¿Podrás vencerla?$"
@@ -602,7 +602,7 @@ MossdeepCity_Gym_Text_TateAndLizaPostBattle:
 	.string "Peleamos contigo, así que lo sabemos.$"
 
 MossdeepCity_Gym_Text_TateAndLizaNeedTwoMons:
-	.string "TATE: Hehehe… Were you surprised?\p"
+	.string "TATE: Jejeje... ¿Te sorprendiste?\p"
 	.string "LIZA: That there are two GYM LEADERS?\p"
 	.string "TATE: Ups, solo tienes un...\n"
 	.string "LIZA: POKéMON que puede luchar.\p"

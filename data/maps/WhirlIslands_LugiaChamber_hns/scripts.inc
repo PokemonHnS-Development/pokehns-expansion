@@ -290,19 +290,19 @@ WhirlIslands_LugiaChamber_EventScript_KuniAfter::
 
 WhirlIslands_LugiaChamber_Text_Kimono_AfterNotCaught:
 	.string "No solo has traído a LUGIA\n"
-	.string "appear, but you have also defeated\l"
+	.string "aparezca, sino que también\l"
 	.string "it...\p"
-	.string "There is nothing more for us to\n"
-	.string "say. Take care of yourself in your\l"
-	.string "journey...$"	
+	.string "No hay nada más que podamos\n"
+	.string "decir. Cuídate mucho en tu\l"
+	.string "viaje...$"	
 
 WhirlIslands_LugiaChamber_Text_Kimono_AfterCaught:
 	.string "No solo has traído a LUGIA\n"
-	.string "appear, but you have also caught\l"
+	.string "aparezca, sino que lo capturaste\l"
 	.string "it...\p"
-	.string "There is nothing more for us to\n"
-	.string "say. Take care of yourself in your\l"
-	.string "journey...$"
+	.string "No hay nada más que podamos\n"
+	.string "decir. Cuídate mucho en tu\l"
+	.string "viaje...$"
 
 WhirlIslands_LugiaChamber_Movement_CameraPanUp:
 	walk_up
@@ -571,10 +571,10 @@ WhirlIslands_LugiaChamber_Text_Kuni_Before::
 	.string "KUNI: Go, face LUGIA. $"
 
 WhirlIslands_LugiaChamber_Text_Kimono_Opening::
-	.string "KIMONO GIRL: That's right.\n"
+	.string "CHICA KIMONO: Así es.\n"
 	.string "Aquí es donde recibimos a LUGIA.\p"
-	.string "When the dance we practiced many\n"
-	.string "days becomes one with the sound of the\l"
+	.string "Cuando la danza que practicamos por\n"
+	.string "muchos días se una al sonido de la\l"
 	.string "Con la Campana Tidal que te dimos,\l"
 	.string "LUGIA saldrá de lo más profundo\l"
 	.string "de la cascada una vez más. $"
@@ -582,16 +582,16 @@ WhirlIslands_LugiaChamber_Text_Kimono_Opening::
 WhirlIslands_LugiaChamber_Text_Kimono_Closing1::
 	.string "Realmente es LUGIA...\n"
 	.string "El guardián de estas islas desde\l"
-	.string "ancient times... \p"
+	.string "tiempos antiguos... \p"
 	.string "So many have tried again and again,\n"
-	.string "only to fail...\p"
-	.string "{PLAYER}, your heart in complete\n"
+	.string "solo para fallar...\p"
+	.string "{PLAYER}, tu corazón en completa\n"
 	.string "la armonía con la Campana Marina\l"
-	.string "allowed it to appear...\n"
-	.string "{PLAYER}, don't you see?\p"
+	.string "finalmente permitió que aparezca...\n"
+	.string "{PLAYER}, ¿no lo ves?\p"
 	.string "LUGIA... Debió estar esperando a\n"
-	.string "someone like you all this time.\p"
-	.string "Wouldn't you agree? $"
+	.string "alguien como tú todo este tiempo.\p"
+	.string "¿No estás de acuerdo? $"
 
 WhirlIslands_LugiaChamber_Text_Kimono_After::
 	.string "CHICA KIMONO: Te has superado\n"

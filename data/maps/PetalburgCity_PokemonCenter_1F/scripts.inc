@@ -89,6 +89,6 @@ PetalburgCity_PokemonCenter_1F_Text_MudkipIsWaterType:
 	.string "Por ejemplo, tu MUDKIP\n"
 	.string "es de tipo AGUA.\p"
 	.string "Es fuerte contra el tipo FUEGO.\p"
-	.string "But, it's weak against GRASS-type\n"
+	.string "Pero es débil ante el tipo PLANTA\n"
 	.string "y los POKéMON tipo ELÉCTRICO.$"
 

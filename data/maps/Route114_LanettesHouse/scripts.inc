@@ -47,7 +47,7 @@ Route114_LanettesHouse_EventScript_PC::
 
 Route114_LanettesHouse_Text_EverythingClutteredKeepThis:
 	.string "LANETTE: ¡Oh! ¡{PLAYER}{KUN}!\p"
-	.string "I'm sorry everything is so cluttered…\n"
+	.string "Siento que todo esté tan desordenado…\n"
 	.string "Cuando me concentro en investigar,\l"
 	.string "las cosas terminan así...\p"
 	.string "Qué vergüenza... Por favor, guarda\n"

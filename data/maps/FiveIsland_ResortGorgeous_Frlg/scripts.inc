@@ -106,7 +106,7 @@ FiveIsland_ResortGorgeous_Text_GillianPostBattle::
 	.string "say, a sun-room may be sublime.$"
 
 FiveIsland_ResortGorgeous_Text_DestinIntro::
-	.string "I'm a good runner.\n"
+	.string "Soy un buen corredor.\n"
 	.string "I'm really fast!$"
 
 FiveIsland_ResortGorgeous_Text_DestinDefeat::

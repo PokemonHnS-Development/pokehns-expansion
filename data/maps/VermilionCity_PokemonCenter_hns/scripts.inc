@@ -24,23 +24,23 @@ VermilionPokeCenter_EventScript_Bugcatcher::
 	end
 
 VermilionCity_PokemonCenter1F_Text_FishingGuru:
-	.string "A sleeping POKéMON is lying in\n"
-	.string "front of DIGLETT'S CAVE.\p"
-	.string "It's a fantastic opportunity to\n"
-	.string "get it, but how do you wake it up?$"
+	.string "Un POKéMON dormido está\n"
+	.string "frente a la CUEVA DIGLETT.\p"
+	.string "Es una gran oportunidad para\n"
+	.string "atraparlo, ¿pero cómo lo despiertas?$"
 
 VermilionCity_PokemonCenter1F_Text_FishingGuru_FoughtSnorlax:
-	.string "There used to be a sleeping\n"
-	.string "POKéMON lying in front of\l"
-	.string "DIGLETT'S CAVE.\p"
-	.string "But it seems to have disappeared.$"
+	.string "Había un POKéMON dormido\n"
+	.string "frente a la CUEVA DIGLETT.\l"
+	.string "CUEVA DIGLETT.\p"
+	.string "Pero parece que ha desaparecido.$"
 
 VermilionCity_PokemonCenter1F_Text_Sailor:
-	.string "The FAST SHIP is a great place to\n"
-	.string "meet and battle trainers.$"
+	.string "El BARCO RÁPIDO es un gran lugar\n"
+	.string "conoce y lucha con entrenadores.$"
 
 VermilionCity_PokemonCenter1F_Text_BugCatcher:
-	.string "Oh? You have some BADGES I've\n"
-	.string "never seen before.\p"
-	.string "Oh, I get it. You got them in\n"
+	.string "¿Oh? Tienes algunas MEDALLAS que\n"
+	.string "nunca había visto.\p"
+	.string "Ah, ya entiendo. Los conseguiste en\n"
 	.string "JOHTO.$"

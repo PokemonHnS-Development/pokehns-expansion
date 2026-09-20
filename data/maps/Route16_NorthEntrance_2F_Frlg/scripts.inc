@@ -67,7 +67,7 @@ Route16_NorthEntrance_2F_Text_LongPathOverWater::
 	.string "Let's see what the binoculars have\n"
 	.string "to show…\p"
 	.string "There's a long path over water far\n"
-	.string "away.$"
+	.string "lejano.$"
 
 Route16_NorthEntrance_2F_Text_GiveAmuletCoinIfCaught40::
 	.string "Hi! Remember me?\n"

@@ -489,7 +489,7 @@ PalletTown_Text_OakLetMeSeePokedex::
 	.string "How much have you filled in your\n"
 	.string "POKéDEX?\p"
 	.string "¿Puedo verla?\p"
-	.string "Let's see…$"
+	.string "Veamos...$"
 
 PalletTown_Text_CaughtXPuttingInHonestEffort::
 	.string "You've caught {STR_VAR_2}…\p"

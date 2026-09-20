@@ -497,7 +497,7 @@ MauvilleCity_Text_WallyMyUncleWontKnowImStrong:
 	.string "volverse muy fuerte.$"
 
 MauvilleCity_Text_UncleCanYouBattleWally:
-	.string "UNCLE: {PLAYER}{KUN}, was it?\n"
+	.string "TÍO: {PLAYER}{KUN}, ¿verdad?\n"
 	.string "Por WALLY, ¿podrías hacer el favor\l"
 	.string "de luchar con él solo esta vez?\p"
 	.string "No creo que escuche ninguna razón\n"
@@ -536,7 +536,7 @@ MauvilleCity_Text_UncleNoNeedToBeDown:
 	.string "Todos te están esperando.$"
 
 MauvilleCity_Text_UncleVisitUsSometime:
-	.string "UNCLE: {PLAYER}{KUN}, it just dawned on me\n"
+	.string "TÍO: {PLAYER}{KUN}, acabo de notar\n"
 	.string "de que debes ser el ENTRENADOR que\l"
 	.string "cuidó de WALLY cuando atrapó a\l"
 	.string "sus POKéMON.\p"

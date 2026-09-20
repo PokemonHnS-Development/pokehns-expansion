@@ -134,33 +134,33 @@ Route113_EventScript_Wyatt::
 	end
 
 Route113_Text_AshCanBeFashionedIntoGlass:
-	.string "Wahahaha! Today's technology is a\n"
-	.string "wondrous thing!\p"
-	.string "Take this volcanic ash here.\n"
-	.string "It can be fashioned into glass.$"
+	.string "¡Jajaja! La tecnología actual es\n"
+	.string "¡algo maravilloso!\p"
+	.string "Toma estas cenizas volcánicas.\n"
+	.string "Se pueden usar para hacer vidrio.$"
 
 Route113_Text_FunWalkingThroughAsh:
-	.string "It's fun walking through the volcano's\n"
-	.string "ashes on the ground and grass.\p"
-	.string "You can see where you walked--it's\n"
-	.string "really neat!$"
+	.string "Es divertido caminar sobre las\n"
+	.string "cenizas del volcán en el suelo.\p"
+	.string "Ves por donde caminaste; es\n"
+	.string "¡está genial!$"
 
 Route113_Text_RouteSign111:
-	.string "ROUTE 113\n"
-	.string "{RIGHT_ARROW} ROUTE 111$"
+	.string "RUTA 113\n"
+	.string "{RIGHT_ARROW} RUTA 111$"
 
 Route113_Text_RouteSignFallarbor:
-	.string "ROUTE 113\n"
-	.string "{LEFT_ARROW} FALLARBOR TOWN$"
+	.string "RUTA 113\n"
+	.string "{LEFT_ARROW} PUEBLO FALLARBOR$"
 
 Route113_Text_TrainerTipsRegisterKeyItems:
 	.string "CONSEJOS DE ENTRENADOR\p"
-	.string "You may register one of the KEY ITEMS\n"
-	.string "in your BAG as SELECT.\p"
-	.string "Simply press SELECT to use\n"
-	.string "the registered item conveniently.$"
+	.string "Puedes registrar un OBJETO CLAVE\n"
+	.string "en tu BOLSA como SELECT.\p"
+	.string "Solo presiona SELECT para usar\n"
+	.string "el objeto registrado fácilmente.$"
 
 Route113_Text_GlassWorkshopSign:
 	.string "TALLER DE VIDRIO\n"
-	.string "“Turning Volcanic Ash into Glass Items”$"
+	.string "Convertir ceniza volcánica en vidrio$"
 

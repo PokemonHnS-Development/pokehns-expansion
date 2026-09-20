@@ -60,20 +60,20 @@ Route10_PowerPlantBackRoom_EventScript_Engineer::
 	end
 
 Route10_PowerPlantBackRoom_Text_ManagerWhoWouldRuinMyGenerator:
-	.string "MANAGER: I, I, I'm ready to blast\n"
-	.string "someone!\p"
-	.string "Who would dare ruin my\n"
-	.string "generator?\p"
-	.string "I spent so much time on it!\p"
-	.string "If I catch him, he's going to\n"
-	.string "get a taste of my ZAP CANNON!$"
+	.string "GERENTE: ¡Yo, yo, estoy listo\n"
+	.string "para fulminar a alguien!\p"
+	.string "¿Quién se atrevió a arruinar mi\n"
+	.string "generador?\p"
+	.string "¡Le dediqué muchísimo tiempo!\p"
+	.string "¡Si lo atrapo, probará mi\n"
+	.string "CAÑÓN ELÉCTRICO!$"
 
 Route10_PowerPlantBackRoom_Text_ManagerIWontForgiveCulprit:
-	.string "MANAGER: I won't forgive him!\p"
-	.string "The culprit can cry and\n"
-	.string "apologize,\p"
-	.string "but I'll still hammer him!\p"
-	.string "Gahahahah!$"
+	.string "GERENTE: ¡No lo perdonaré!\p"
+	.string "El culpable puede llorar y\n"
+	.string "pedir perdón,\p"
+	.string "¡pero aun así lo castigaré!\p"
+	.string "¡Gajajajaja!$"
 
 Route10_PowerPlantBackRoom_Text_ManagerThatsThePart:
 	.string "GERENTE: ¡Ah! ¡Sí!\p"

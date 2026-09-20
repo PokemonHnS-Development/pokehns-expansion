@@ -235,6 +235,6 @@ SaffronCity_Text_HowCanClubNotRecognizeLance::
 	.string "How could they not recognize\n"
 	.string "the brilliance that is LANCE?\p"
 	.string "He stands for justice!\n"
-	.string "He's cool, and yet passionate!\l"
-	.string "He's the greatest, LANCE!$"
+	.string "¡Es genial y a la vez apasionado!\l"
+	.string "¡Es el mejor, LANCE!$"
 

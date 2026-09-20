@@ -1004,7 +1004,7 @@ LittlerootTown_Text_ProfBirchsHouse:
 	.string "PROF. BIRCH'S HOUSE$"
 
 LittlerootTown_Text_BirchSomethingToShowYouAtLab:
-	.string "PROF. BIRCH: Well, well, {PLAYER}{KUN}!\n"
+	.string "PROF. BIRCH: ¡Vaya, vaya, {PLAYER}{KUN}!\n"
 	.string "¡Hiciste un gran trabajo!\p"
 	.string "Sabía que había algo especial\n"
 	.string "en ti desde que te vi,\l"

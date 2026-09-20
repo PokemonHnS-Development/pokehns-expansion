@@ -80,7 +80,7 @@ Route12_Text_NedIntro::
 	.string "I got a bite here!$"
 
 Route12_Text_NedDefeat::
-	.string "Tch!\n"
+	.string "¡Tch!\n"
 	.string "Just a small fry…$"
 
 Route12_Text_NedPostBattle::
@@ -89,7 +89,7 @@ Route12_Text_NedPostBattle::
 
 Route12_Text_ChipIntro::
 	.string "Be patient.\n"
-	.string "Fishing is a waiting game.$"
+	.string "Pescar es cuestión de paciencia.$"
 
 Route12_Text_ChipDefeat::
 	.string "That one got away!$"
@@ -100,7 +100,7 @@ Route12_Text_ChipPostBattle::
 
 Route12_Text_JustinIntro::
 	.string "I'm searching for a MOON STONE.\n"
-	.string "Have you found one?$"
+	.string "¿Tú has encontrado una?$"
 
 Route12_Text_JustinDefeat::
 	.string "Oww!$"
@@ -112,8 +112,8 @@ Route12_Text_JustinPostBattle::
 
 Route12_Text_LucaIntro::
 	.string "Electricity is my specialty.\p"
-	.string "I don't know a thing about POKéMON\n"
-	.string "of the sea, though.$"
+	.string "No sé nada sobre los POKéMON\n"
+	.string "del mar, sin embargo.$"
 
 Route12_Text_LucaDefeat::
 	.string "Unplugged!$"
@@ -148,7 +148,7 @@ Route12_Text_ElliotPostBattle::
 	.string "Losing doesn't bug me anymore.$"
 
 Route12_Text_AndrewIntro::
-	.string "What's catching?\p"
+	.string "¿Qué estás pescando?\p"
 	.string "You never know what you could\n"
 	.string "catch!$"
 

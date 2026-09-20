@@ -115,9 +115,9 @@ ViridianCity_Text_GrampsNearGym_BlueReturned:
 ViridianCity_Text_DreamEaterFisherNew:
 	.string "...Zzzzz...\p" 
 	.string "¡Bostezo!\p"
-	.string "I must have dozed off in the sun.\p"
-	.string "What? I remind you of somebody?\p"
-	.string "I don't know, here, have this.$"
+	.string "Debí quedarme dormido al sol.\p"
+	.string "¿Qué? ¿Te recuerdo a alguien?\p"
+	.string "No lo sé, ten, toma esto.$"
 
 
 ViridianCity_Text_DreamEaterFisher_GotTM::
@@ -125,21 +125,21 @@ ViridianCity_Text_DreamEaterFisher_GotTM::
 
 ViridianCity_Text_DreamEaterFisher:
 	.string "¡Bostezo!\p"
-	.string "I must have dozed off in the sun.\p"
-	.string "…I had this dream about a DROWZEE\n"
-	.string "eating my dream. Weird, huh?\p"
-	.string "Huh? What's this?\p"
-	.string "Where did this TM come from?\p"
-	.string "This is spooky! Here, you can have\n"
-	.string "this TM.$"
+	.string "Debí quedarme dormido al sol.\p"
+	.string "...Soñé con un DROWZEE\n"
+	.string "comiéndose mi sueño. Raro, ¿no?\p"
+	.string "¿Eh? ¿Qué es esto?\p"
+	.string "¿De dónde salió esta MT?\p"
+	.string "¡Qué miedo! Ten, puedes quedarte\n"
+	.string "con esta MT.$"
 
 ViridianCity_Text_DreamEaterFisher_GotDreamEater:
-	.string "TM42 contains DREAM EATER…\p"
+	.string "La MT42 es SONÁMBULO...\p"
 	.string "…Zzzzz…$"
 
 ViridianCity_Text_Youngster:
-	.string "I heard that there are many items\n"
-	.string "on the ground in VIRIDIAN FOREST.$"
+	.string "Oí que hay muchos objetos\n"
+	.string "en el BOSQUE VERDE.$"
 
 ViridianCity_Text_Sign:
 	.string "CIUDAD VERIDIAN\p"

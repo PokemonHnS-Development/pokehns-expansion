@@ -5198,7 +5198,7 @@ void ItemUseCB_AbilityPatch(u8 taskId, TaskFunc task)
 void Task_Mint(u8 taskId)
 {
     static const u8 sText_askText[] = _("Podría afectar los stats de {STR_VAR_1}.\n¿Seguro que quieres usarlo?");
-    static const u8 sText_doneText[] = _("{STR_VAR_1}'s stats may have changed due\nto the effects of the {STR_VAR_2}!{PAUSE_UNTIL_PRESS}");
+    static const u8 sText_doneText[] = _("Los stats de {STR_VAR_1} pudieron\n¡a los efectos de {STR_VAR_2}!{PAUSE_UNTIL_PRESS}");
     s16 *data = gTasks[taskId].data;
 
     switch (tState)
@@ -6144,7 +6144,7 @@ static void BufferMonStatsToTaskData(struct Pokemon *mon, s16 *data)
 
 void Task_DynamaxCandy(u8 taskId)
 {
-    static const u8 sText_doneText[] = _("{STR_VAR_1}'s Dynamax Level\nincreased by 1!{PAUSE_UNTIL_PRESS}");
+    static const u8 sText_doneText[] = _("¡El Nivel Dynamax de {STR_VAR_1}\nha subido en 1!{PAUSE_UNTIL_PRESS}");
     s16 *data = gTasks[taskId].data;
 
     switch (tState)

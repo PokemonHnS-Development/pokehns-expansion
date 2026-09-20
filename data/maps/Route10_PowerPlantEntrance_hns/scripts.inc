@@ -194,7 +194,7 @@ Route10_PowerPlantEntrance_Text_WantToTrade:
 	.string "por años.\p"
 	.string "Pero siempre he querido un\n"
 	.string "{STR_VAR_1}.\p"
-	.string "Would you trade one for my\n"
+	.string "¿Cambiarías uno por mi\n"
 	.string "{STR_VAR_2}?$"
 
 Route10_PowerPlantEntrance_Text_TakeCare:

@@ -308,7 +308,7 @@ Route103_Text_MayTimeToHeadBack:
 	.string "estaré pendiente de ti ahora.\p"
 	.string "Digo, acabas de recibir ese POKéMON,\n"
 	.string "pero ya le agradas.\p"
-	.string "You might be able to befriend any\n"
+	.string "Podrías hacerte amigo de cualquier\n"
 	.string "tipo de POKéMON fácilmente.\p"
 	.string "Bueno, es hora de volver al\n"
 	.string "LABORATORIO.$"

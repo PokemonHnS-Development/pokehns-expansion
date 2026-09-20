@@ -136,6 +136,6 @@ Route110_TrickHousePuzzle2_Text_GeorgiaDefeat:
 	.string "I didn't study battling enough!$"
 
 Route110_TrickHousePuzzle2_Text_GeorgiaPostBattle:
-	.string "You're strong, aren't you?\n"
+	.string "Eres fuerte, ¿verdad?\n"
 	.string "¡Quizás basta para ser LÍDER de GYM!$"
 

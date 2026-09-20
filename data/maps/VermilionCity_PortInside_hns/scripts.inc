@@ -12,9 +12,9 @@ VermilionPortPassage_Text_Teacher:
 	.string "¡El FAST SHIP zarpa todos los días!$"
 
 VermilionPort_Text_SuperNerd:
-	.string "You came from JOHTO?\p"
-	.string "I hear many rare POKéMON live\n"
-	.string "over there.$"
+	.string "¿Vienes de JOHTO?\p"
+	.string "He oído que viven muchos POKéMON\n"
+	.string "raros por allá.$"
 
 VermilionPort_EventScript_Sailor::
 	lock
@@ -167,9 +167,9 @@ VermilionPort_Movement_BoatLeave:
 	step_end
 
 VermilionPort_Text_SailorCantSail:
-	.string "There's been a break-in at the\n"
-	.string "POWER PLANT, so we cannot set sail\l"
-	.string "until the THIEF is found.$"
+	.string "Hubo un robo en la CENTRAL\n"
+	.string "ELÉCTRICA, así que no zarparemos\l"
+	.string "hasta que hallen al LADRÓN.$"
 
 VermilionPort_Text_NoPass:
     .string "{PLAYER} intentó mostrar el\n"

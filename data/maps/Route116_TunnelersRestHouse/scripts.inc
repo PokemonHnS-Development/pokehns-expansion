@@ -28,20 +28,20 @@ Route116_TunnelersRestHouse_EventScript_TunnelOpened::
 	end
 
 Route116_TunnelersRestHouse_Text_WeHadToStopBoring:
-	.string "That RUSTURF TUNNEL there…\p"
-	.string "At first, we had a huge work crew boring\n"
-	.string "through rock with the latest machinery.\l"
-	.string "But, we had to stop.\p"
-	.string "It turns out that we would have had\n"
-	.string "a negative effect on wild POKéMON in\l"
-	.string "the area.\p"
-	.string "So, we've got nothing to do but loll\n"
-	.string "around here doing nothing.$"
+	.string "Aquel TÚNEL RUSTURF...\p"
+	.string "Al principio, un gran equipo excavaba\n"
+	.string "la roca con maquinaria moderna.\l"
+	.string "Pero tuvimos que parar.\p"
+	.string "Resulta que habríamos causado\n"
+	.string "un efecto negativo en los POKéMON\l"
+	.string "salvajes de la zona.\p"
+	.string "Así que no nos queda más que\n"
+	.string "estar aquí sin hacer nada.$"
 
 Route116_TunnelersRestHouse_Text_ManDiggingHisWayToVerdanturf:
-	.string "There's a man digging his way to\n"
-	.string "VERDANTURF all by his lonesome.\l"
-	.string "He's desperate to get through.\p"
+	.string "Hay un hombre cavando hacia\n"
+	.string "VERDANTURF él solo.\l"
+	.string "Está desesperado por pasar.\p"
 	.string "Dice que si cava poco a poco\n"
 	.string "sin usar máquinas, no\l"
 	.string "molestará a los POKéMON y evitará\l"

@@ -375,7 +375,7 @@ CinnabarIsland_Text_PokemonLab::
 
 CinnabarIsland_Text_GymSign::
 	.string "CINNABAR ISLAND POKéMON GYM\n"
-	.string "LEADER: BLAINE\l"
+	.string "LÍDER: BLAINE\l"
 	.string "¡El impulsivo Maestro Quiz!$"
 
 CinnabarIsland_Text_HeyIfItIsntPlayer::

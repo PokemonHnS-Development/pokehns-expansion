@@ -194,7 +194,7 @@ CeruleanCity_House1_Text_GoCrushBerriesAtDirectCorner::
 	.string "This is where you come in.\p"
 	.string "I have a favor to ask, one that\n"
 	.string "I can entrust only to you.\p"
-	.string "Could you make BERRY POWDER for\n"
+	.string "¿Podrías hacer POLVO BAYA para\n"
 	.string "me using that machine?\p"
 	.string "Don't forget, the machine is at the\n"
 	.string "DIRECT CORNER of POKéMON CENTERS.\p"
@@ -215,7 +215,7 @@ CeruleanCity_House1_Text_TakeInterestInAllSortsOfThings::
 
 CeruleanCity_House1_Text_HaveYouBroughtBerryPowder::
 	.string "Er-hem! Have you brought me some\n"
-	.string "BERRY POWDER?$"
+	.string "POLVO BAYA?$"
 
 CeruleanCity_House5_Text_ExchangeWithWhat::
 	.string "With what would you like to \n"
@@ -227,11 +227,11 @@ CeruleanCity_House1_Text_YoullExchangeBerryPowderForItem::
 
 CeruleanCity_House1_Text_DontHaveEnoughBerryPowder::
 	.string "Hm? You don't have enough\n"
-	.string "BERRY POWDER.$"
+	.string "POLVO BAYA.$"
 
 CeruleanCity_House1_Text_TradeMoreBerryPowder::
 	.string "This is fine BERRY POWDER indeed.\n"
-	.string "It will make excellent medicine.\p"
+	.string "Servirá para hacer medicinas.\p"
 	.string "Would you like to trade more BERRY\n"
 	.string "POWDER for something else?$"
 

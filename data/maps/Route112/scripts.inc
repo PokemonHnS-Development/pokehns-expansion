@@ -129,14 +129,14 @@ Route112_Text_NotEasyToGetBackToLavaridge:
 
 Route112_Text_MtChimneyCableCarSign:
 	.string "TELEFÉRICO DEL MT. CHIMNEY\n"
-	.string "“A short walk {UP_ARROW} way!”$"
+	.string "“¡Un paseo corto hacia {UP_ARROW}!”$"
 
 Route112_Text_MtChimneySign:
 	.string "MT. CHIMNEY\p"
-	.string "“For LAVARIDGE TOWN or the summit,\n"
-	.string "please take the CABLE CAR.”$"
+	.string "“Para ir a PUEBLO LAVARIDGE o la\n"
+	.string "cima, usa el TELEFÉRICO.”$"
 
 Route112_Text_RouteSignLavaridge:
-	.string "ROUTE 112\n"
-	.string "{LEFT_ARROW} LAVARIDGE TOWN$"
+	.string "RUTA 112\n"
+	.string "{LEFT_ARROW} PUEBLO LAVARIDGE$"
 

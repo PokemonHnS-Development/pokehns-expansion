@@ -19,7 +19,7 @@ Melemele_House4_Woman::
 
 
 Melemele_House4_Man_Text_0:
-	.string "We're vacationing on the ALOLA ISLES!\p"
+	.string "¡Estamos de vacaciones en ALOLA!\p"
 	.string "Es justo como la región de ALOLA,\n"
 	.string "¡pero más cerca de KANTO!\p"
 	.string "¡Ahorré mucho en los viajes!$"
