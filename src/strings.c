@@ -555,16 +555,16 @@ const u8 gText_Multi[] = _("MULTI");
 const u8 gText_MultiLink[] = _("MULTI-LINK");
 const u8 gText_MenuOptionPokedex[] = _("POKéDEX");
 const u8 gText_MenuOptionPokemon[] = _("POKéMON");
-const u8 gText_MenuOptionBag[] = _("BAG");
+const u8 gText_MenuOptionBag[] = _("MOCHILA");
 #if IS_HNS
 const u8 gText_MenuOptionPokenav[] = _("POKéGEAR");
 #else
 const u8 gText_MenuOptionPokenav[] = _("POKéNAV");
 #endif
 const u8 gText_Blank[] = _("");
-const u8 gText_MenuOptionSave[] = _("SAVE");
-const u8 gText_MenuOptionOption[] = _("OPTION");
-const u8 gText_MenuOptionExit[] = _("EXIT");
+const u8 gText_MenuOptionSave[] = _("GUARDAR");
+const u8 gText_MenuOptionOption[] = _("OPCIÓN");
+const u8 gText_MenuOptionExit[] = _("SALIR");
 const u8 gText_SouthernIsland[] = _("SOUTHERN ISLAND");
 const u8 gText_BirthIsland[] = _("BIRTH ISLAND");
 const u8 gText_FarawayIsland[] = _("FARAWAY ISLAND");
@@ -1025,21 +1025,21 @@ const u8 gText_RTCTime[] = _("RTC time"); // Unused
 const u8 gText_UpdatedTime[] = _("Updated time"); // Unused
 const u8 gText_MenuPokedex[] = _("POKéDEX");
 const u8 gText_MenuPokemon[] = _("POKéMON");
-const u8 gText_MenuBag[] = _("BAG");
+const u8 gText_MenuBag[] = _("MOCHILA");
 #if IS_HNS
 const u8 gText_MenuPokenav[] = _("{POKE}GEAR");
 #else
 const u8 gText_MenuPokenav[] = _("POKéNAV");
 #endif
 const u8 gText_MenuPlayer[] = _("{PLAYER}");
-const u8 gText_MenuSave[] = _("SAVE");
-const u8 gText_MenuOption[] = _("OPTION");
-const u8 gText_MenuExit[] = _("EXIT");
-const u8 gText_MenuRetire[] = _("RETIRE");
-const u8 gText_MenuRest[] = _("REST");
+const u8 gText_MenuSave[] = _("GUARDAR");
+const u8 gText_MenuOption[] = _("OPCIÓN");
+const u8 gText_MenuExit[] = _("SALIR");
+const u8 gText_MenuRetire[] = _("RETIRARSE");
+const u8 gText_MenuRest[] = _("DESCANSAR");
 const u8 gText_MenuDexNav[] = _("DEXNAV");
 const u8 gText_SafariBallStock[] = _("SAFARI BALLS\nStock: {STR_VAR_1}");
-const u8 gText_MenuSafariStats[] = _("{STR_VAR_1}/{STR_VAR_2}\nBALLS  {STR_VAR_3}");
+const u8 gText_MenuSafariStats[] = _("{STR_VAR_1}/{STR_VAR_2}\nBOLAS  {STR_VAR_3}");
 const u8 gText_BattlePyramidFloor[] = _("Battle Pyramid\n{STR_VAR_1}");
 const u8 gText_Floor1[] = _("Floor 1");
 const u8 gText_Floor2[] = _("Floor 2");
