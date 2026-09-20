@@ -64,7 +64,7 @@ gText_ApprenticeChallenge15::
 
 gText_ApprenticePleaseTeach0::
 	.string "¿Tú eres... {PLAYER}?\n"
-	.string "¡Oh! *Snif*... *bua*...\p"
+	.string "¡Oh! ·Snif·... ·bua·...\p"
 	.string "¡Oh! L-lo siento...\n"
 	.string "I'm so nervous, I can't help crying…\p"
 	.string "Soy {STR_VAR_1}, y realmente te admiro,\n"
@@ -2142,7 +2142,7 @@ gText_ApprenticeMoveThanks15::
 gText_ApprenticePickWinSpeech0::
 	.string "Oh... ¿{PLAYER}?\n"
 	.string "¡Es {PLAYER}!\l"
-	.string "¡Oh! *Snif*... *Bua*... ¡Escucha!\p"
+	.string "¡Oh! ·Snif·... ·Bua·... ¡Escucha!\p"
 	.string "Yo... Cuando lucho, me pongo tan\n"
 	.string "nervioso que lloro aunque gane...\p"
 	.string "Desearía decir algo genial\n"

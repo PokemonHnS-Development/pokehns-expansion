@@ -354,25 +354,25 @@ Route113_GlassWorkshop_Text_AllThatAshButDontWantAnything:
 
 Route113_GlassWorkshop_Text_IveFinishedGlassItem:
 	.string "Ah, terminé tu {STR_VAR_1}.\n"
-	.string "Tómalo, *jadeo*.$"
+	.string "Tómalo, ·jadeo·.$"
 
 Route113_GlassWorkshop_Text_NoRoomInBag:
 	.string "Oh?\n"
-	.string "No hay espacio en tu MOCHILA, *jadeo*.\p"
+	.string "No hay espacio en tu MOCHILA, ·jadeo·.\p"
 	.string "Yo lo guardaré, vuelve más tarde,\n"
-	.string "*jadeo*.$"
+	.string "·jadeo·.$"
 
 Route113_GlassWorkshop_Text_NoRoomInPC:
 	.string "Oh?\n"
-	.string "¿No hay espacio en tu PC, *jadeo*?\p"
+	.string "¿No hay espacio en tu PC, ·jadeo·?\p"
 	.string "Yo lo guardaré, vuelve más tarde,\n"
-	.string "*jadeo*.$"
+	.string "·jadeo·.$"
 
 Route113_GlassWorkshop_Text_HaventGotYourSootSack:
 	.string "¿Eh? No traes tu SACO DE HOLLÍN\n"
-	.string "contigo, *jadeo*.\p"
+	.string "contigo, ·jadeo·.\p"
 	.string "Debes llevarlo para recolectar la\n"
-	.string "ceniza volcánica, *jadeo*.$"
+	.string "ceniza volcánica, ·jadeo·.$"
 
 Route113_GlassWorkshop_Text_FunToBlowGlassFlute:
 	.string "Es divertido tocar la flauta de\n"
