@@ -53,8 +53,7 @@ gText_Oak_YourePlayer::
 	.string "$"
 
 gText_Oak_AreYouReady::
-	.string "¡Te esperan momentos divertidos\n"
-	.string "participen.\p"
+	.string "¡Te esperan momentos divertidos\ny emocionantes con POKéMON!\p"
 	.string "Un mundo de sueños y aventuras\n"
 	.string "y retos con POKéMON! ¡Vamos!\p"
 	.string "¡Nos vemos más tarde!\p"

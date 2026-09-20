@@ -34,13 +34,10 @@ Route49_EventScript_SkylarAfter::
 	end
 
 Route49_Text_SkylarDefeat:
-	.string "ESTÁ BIEN, te quedas con la TABLA.$"
+	.string "ESTÁ BIEN, quédate con la TABLA.$"
 
 Route49_Text_SkylarAfter:
-	.string "Por muy genial que sea el PLATO,\n"
-	.string "te lo ganaste limpiamente.\p"
-	.string "Me compraré algo en la tienda de\n"
-	.string "regalos en su lugar.$"
+	.string "Por genial que sea esa TABLA,\nte la ganaste en buena ley.\pMe compraré algo en la tienda\nde regalos.$"
 
 Route49_Text_SkylarBeforeBattle:
 	.string "¿Qué?\p"
@@ -53,11 +50,7 @@ Route49_Text_SkylarBeforeBattle:
 	.string "Tendrás que luchar contra mí por él.$"
 
 Route49_Text_SkylarBefore:
-	.string "Cuando bajaba por las pistas, mi\n"
-	.string "los esquís se trabaron con algo.\p"
-	.string "Era esta extraña PLACA celeste.\p"
-	.string "¡Creo que la guardaré como un\n"
-	.string "recuerdo!$"
+	.string "Cuando bajaba esquiando,\nlos esquís se me engancharon.\pEra esta TABLA azul cielo,\nmuy rara.\p¡Creo que la guardaré como\nrecuerdo!$"
 
 Route49_EventScript_SkierM::
 	msgbox Route49_Text_SkierM, MSGBOX_NPC
