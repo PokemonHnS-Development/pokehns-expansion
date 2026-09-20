@@ -863,7 +863,7 @@ void SetMonFormPSS_ItemHold(struct BoxPokemon *boxMon);
 void UpdateSpeciesSpritePSS(struct BoxPokemon *boxmon);
 
 static const u8 gText_JustOnePkmn[] = _("There is just one POKéMON with you.");
-static const u8 gText_PartyFull[] = _("Your party is full!");
+static const u8 gText_PartyFull[] = _("¡Tu equipo está lleno!");
 static const u8 gText_Box[] = _("BOX");
 
 struct {

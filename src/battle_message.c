@@ -72,16 +72,16 @@ static const u8 sText_EmptyString4[] = _("");
 
 const u8 gText_PkmnShroudedInMist[] = _("{B_ATK_TEAM1} team became shrouded in mist!");
 const u8 gText_PkmnGettingPumped[] = _("{B_DEF_NAME_WITH_PREFIX} is getting pumped!");
-const u8 gText_PkmnsXPreventsSwitching[] = _("{B_BUFF1} is preventing switching out with its {B_LAST_ABILITY} Ability!\p");
+const u8 gText_PkmnsXPreventsSwitching[] = _("¡{B_BUFF1} impide el cambio con su habilidad {B_LAST_ABILITY}!\p");
 const u8 gText_StatSharply[] = _("sharply ");
 const u8 gText_StatRose[] = _("rose!");
 const u8 gText_StatFell[] = _("fell!");
 const u8 gText_DefendersStatRose[] = _("{B_DEF_NAME_WITH_PREFIX}'s {B_BUFF1} {B_BUFF2}rose!");
 static const u8 sText_GotAwaySafely[] = _("{PLAY_SE SE_FLEE}¡Lograste escapar!\p");
 static const u8 sText_PlayerDefeatedLinkTrainer[] = _("¡Derrotaste a {B_LINK_OPPONENT1_NAME}!");
-static const u8 sText_TwoLinkTrainersDefeated[] = _("You defeated {B_LINK_OPPONENT1_NAME} and {B_LINK_OPPONENT2_NAME}!");
+static const u8 sText_TwoLinkTrainersDefeated[] = _("¡Derrotaste a {B_LINK_OPPONENT1_NAME} y a {B_LINK_OPPONENT2_NAME}!");
 static const u8 sText_PlayerLostAgainstLinkTrainer[] = _("¡Perdiste contra {B_LINK_OPPONENT1_NAME}!");
-static const u8 sText_PlayerLostToTwo[] = _("You lost to {B_LINK_OPPONENT1_NAME} and {B_LINK_OPPONENT2_NAME}!");
+static const u8 sText_PlayerLostToTwo[] = _("¡Perdiste contra {B_LINK_OPPONENT1_NAME} y {B_LINK_OPPONENT2_NAME}!");
 static const u8 sText_PlayerBattledToDrawLinkTrainer[] = _("¡Empataste contra {B_LINK_OPPONENT1_NAME}!");
 static const u8 sText_PlayerBattledToDrawVsTwo[] = _("¡Empataste contra {B_LINK_OPPONENT1_NAME} y {B_LINK_OPPONENT2_NAME}!");
 static const u8 sText_WildFled[] = _("{PLAY_SE SE_FLEE}{B_LINK_OPPONENT1_NAME} fled!"); //not in gen 5+, replaced with match was forfeited text
@@ -1414,13 +1414,13 @@ const u16 gZenModeStringIds[] =
     [B_MSG_ZEN_MODE_ENDED] = STRINGID_ZENMODEENDED
 };
 
-const u8 gText_PkmnIsEvolving[] = _("What?\n{STR_VAR_1} is evolving!");
-const u8 gText_CongratsPkmnEvolved[] = _("Congratulations! Your {STR_VAR_1}\nevolved into {STR_VAR_2}!{WAIT_SE}\p");
+const u8 gText_PkmnIsEvolving[] = _("¿Qué?\n¡{STR_VAR_1} está evolucionando!");
+const u8 gText_CongratsPkmnEvolved[] = _("¡Felicidades! Tu {STR_VAR_1}\nevolucionó a {STR_VAR_2}!{WAIT_SE}\p");
 const u8 gText_PkmnStoppedEvolving[] = _("Huh? {STR_VAR_1}\nstopped evolving!\p");
 const u8 gText_EllipsisQuestionMark[] = _("……?\p");
 const u8 gText_WhatWillPkmnDo[] = _("¿Qué hará\n{B_BUFF1}?");
 const u8 gText_WhatWillPkmnDo2[] = _("¿Qué hará\n¿Qué hará {B_PLAYER_NAME}?");
-const u8 gText_WhatWillWallyDo[] = _("What will\nWALLY do?");
+const u8 gText_WhatWillWallyDo[] = _("¿Qué hará\nWALLY?");
 const u8 gText_LinkStandby[] = _("{PAUSE 16}Link standby…");
 const u8 gText_BattleMenu[] = _("LUCHA{CLEAR_TO 56}MOCHILA\nPOKéMON{CLEAR_TO 56}HUIR");
 const u8 gText_SafariZoneMenu[] = _("BALL{CLEAR_TO 56}{POKEBLOCK}\nGO NEAR{CLEAR_TO 56}RUN");
@@ -1470,7 +1470,7 @@ const u8 *const gRoundsStringTable[DOME_ROUNDS_COUNT] =
 };
 
 const u8 gText_TheGreatNewHope[] = _("The great new hope!\p");
-const u8 gText_WillChampionshipDreamComeTrue[] = _("Will the championship dream come true?!\p");
+const u8 gText_WillChampionshipDreamComeTrue[] = _("¿Se cumplirá el sueño del campeonato?!\p");
 const u8 gText_AFormerChampion[] = _("¡Un antiguo campeón!\p");
 const u8 gText_ThePreviousChampion[] = _("¡El campeón anterior!\p");
 const u8 gText_TheUnbeatenChampion[] = _("¡El campeón invicto!\p");

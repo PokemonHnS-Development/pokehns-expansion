@@ -121,7 +121,7 @@ static const u32 sPokenavDeviceBgTilemap[] = INCBIN_U32("graphics/pokenav/device
 static const u16 sMatchCallBlueLightPal[] = INCBIN_U16("graphics/pokenav/blue_light.gbapal");
 static const u32 sMatchCallBlueLightTiles[] = INCBIN_U32("graphics/pokenav/blue_light.4bpp.smol");
 
-static const u8 gText_NoRibbonWinners[] = _("There are no RIBBON winners.");
+static const u8 gText_NoRibbonWinners[] = _("No hay ganadores de CINTAS.");
 
 static const struct BgTemplate sPokenavMainMenuBgTemplates[] = {
     {

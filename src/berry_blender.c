@@ -267,9 +267,9 @@ static const u8 *const sBlenderOpponentsNames[] =
 };
 
 static const u8 sText_CommunicationStandby[] = _("Communication standby…");
-static const u8 sText_WouldLikeToBlendAnotherBerry[] = _("Would you like to blend another BERRY?");
+static const u8 sText_WouldLikeToBlendAnotherBerry[] = _("¿Quieres licuar otra BAYA?");
 static const u8 sText_RunOutOfBerriesForBlending[] = _("You've run out of BERRIES for\nblending in the BERRY BLENDER.\p");
-static const u8 sText_YourPokeblockCaseIsFull[] = _("Your {POKEBLOCK} CASE is full.\p");
+static const u8 sText_YourPokeblockCaseIsFull[] = _("Tu {POKEBLOCK} CASE está lleno.\p");
 static const u8 sText_HasNoBerriesToPut[] = _(" has no BERRIES to put in\nthe BERRY BLENDER.");
 static const u8 sText_ApostropheSPokeblockCaseIsFull[] = _("'s {POKEBLOCK} CASE is full.\p");
 static const u8 sText_BlendingResults[] = _("RESULTS OF BLENDING");
@@ -282,8 +282,8 @@ static const u8 sText_RPM[] = _(" RPM");
 static const u8 sText_Dot[] = _(".");
 static const u8 sText_NewLine[] = _("\n");
 static const u8 sText_Ranking[] = _("RANKING");
-static const u8 sText_TheLevelIs[] = _("The level is ");
-static const u8 sText_TheFeelIs[] = _(", and the feel is ");
+static const u8 sText_TheLevelIs[] = _("El nivel es ");
+static const u8 sText_TheFeelIs[] = _(", y la sensación es ");
 static const u8 sText_Dot2[] = _(".");
 
 static const u8 sText_SavingDontTurnOff2[] = _("SAVING…\nDON'T TURN OFF THE POWER.");

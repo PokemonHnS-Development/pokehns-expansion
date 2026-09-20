@@ -417,7 +417,7 @@ static void SpriteCB_Shroomish(struct Sprite *);
 static void SpriteCB_Taillow(struct Sprite *);
 
 static const u8 Roulette_Text_PlayMinimumWagerIsX[] = _("La apuesta mínima en esta mesa\nes {STR_VAR_1}. ¿Quieres jugar?");
-static const u8 Roulette_Text_NotEnoughCoins[] = _("You don't have enough COINS.");
+static const u8 Roulette_Text_NotEnoughCoins[] = _("No tienes suficientes MONEDAS.");
 static const u8 Roulette_Text_SpecialRateTable[] = _("Special rate table right now!");
 static const u8 Roulette_Text_ControlsInstruction[] = _("Apuesta con el botón + del\ncontrol y luego presiona A.");
 static const u8 Roulette_Text_ItsAHit[] = _("It's a hit!");
@@ -426,7 +426,7 @@ static const u8 Roulette_Text_NothingDoing[] = _("Nothing doing!");
 static const u8 Roulette_Text_YouveWonXCoins[] = _("You've won {STR_VAR_1} COINS!");
 static const u8 Roulette_Text_NoCoinsLeft[] = _("No COINS left…");
 static const u8 Roulette_Text_KeepPlaying[] = _("Keep playing?");
-static const u8 Roulette_Text_BoardWillBeCleared[] = _("The ROULETTE board will be cleared.");
+static const u8 Roulette_Text_BoardWillBeCleared[] = _("Se limpiará el tablero de la RULETA.");
 static const u8 Roulette_Text_CoinCaseIsFull[] = _("¡Tu MONEDERO está lleno!\nCanjea las monedas por premios.");
 
 static const u16 sWheel_Pal[] = INCBIN_U16("graphics/roulette/wheel.gbapal"); // also palette for grid

@@ -512,7 +512,7 @@ static void Task_FirstBattleEnterParty_RunPrinterMsg2(u8 taskId);
 static void Task_FirstBattleEnterParty_FadeNormal(u8 taskId);
 static void Task_FirstBattleEnterParty_WaitFadeNormal(u8 taskId);
 
-static const u8 sText_askText[] = _("Would you like to change {STR_VAR_1}'s\nability to {STR_VAR_2}?");
+static const u8 sText_askText[] = _("¿Quieres cambiar la habilidad\nde {STR_VAR_1} a {STR_VAR_2}?");
 static const u8 sText_doneText[] = _("La habilidad de {STR_VAR_1}\n¡pasó a ser {STR_VAR_2}!{PAUSE_UNTIL_PRESS}");
 static const u8 sText_BasePointsResetToZero[] = _("Los puntos base de {STR_VAR_1}\n¡se han reiniciado a cero!{PAUSE_UNTIL_PRESS}");
 static const u8 sText_CannotSendMonToBoxHM[] = _("No puedes enviar ese POKéMON\nal PC, pues sabe un movimiento MO.{PAUSE_UNTIL_PRESS}");
@@ -6997,7 +6997,7 @@ void ItemUseCB_PokeBall(u8 taskId, TaskFunc task)
     struct Pokemon *mon = &gPlayerParty[gPartyMenu.slotId];
     u16 currBall = GetMonData(mon, MON_DATA_POKEBALL);
     u16 newBall = ItemIdToBallId(gSpecialVar_ItemId);
-    static const u8 sText_MonBallWasChanged[] = _("{STR_VAR_1} was put in the {STR_VAR_2}.{PAUSE_UNTIL_PRESS}");
+    static const u8 sText_MonBallWasChanged[] = _("{STR_VAR_1} se guardó en {STR_VAR_2}.{PAUSE_UNTIL_PRESS}");
 
     if (currBall == newBall)
     {

@@ -1147,7 +1147,7 @@ static const u8 gText_MatchCallSteven_Pokemon[] = _("Ultimate STEEL POKéMON.");
 static const u8 gText_MatchCallBrendan_Strategy[] = _("Battle with knowledge!");
 static const u8 gText_MatchCallBrendan_Pokemon[] = _("I will use various POKéMON.");
 static const u8 gText_MatchCallBrendan_Intro1[] = _("I'll be a better POKéMON");
-static const u8 gText_MatchCallBrendan_Intro2[] = _("prof than my father is!");
+static const u8 gText_MatchCallBrendan_Intro2[] = _("profesor que mi padre!");
 
 static const u8 gText_MatchCallMay_Strategy[] = _("I'm not so good at battles.");
 static const u8 gText_MatchCallMay_Pokemon[] = _("I'll use any POKéMON!");

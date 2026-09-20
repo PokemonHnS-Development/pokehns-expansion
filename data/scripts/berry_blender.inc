@@ -101,7 +101,7 @@ BerryBlender_Text_DontHaveAnyBerries2:
 
 BerryBlender_Text_PokeblockCaseIsFull2:
 	.string "Oh, pero espera un segundo...\n"
-	.string "Your {POKEBLOCK} CASE is full.\p"
+	.string "Tu {POKEBLOCK} CASE está lleno.\p"
 	.string "Usa algunos {POKEBLOCK}S y\n"
 	.string "luego regresa.$"
 
