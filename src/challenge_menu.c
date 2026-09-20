@@ -635,11 +635,11 @@ static const u8 *const sDesc_RtcType[] = {
     COMPOUND_STRING("Usa un reloj falso.\n1 h real = 1 día de juego."),
 };
 static const u8 *const sDesc_ShinyChance[] = {
-    COMPOUND_STRING("Prob. mínima de VARIOC.\nLa de GEN III por defecto."),
-    COMPOUND_STRING("Prob. baja de VARIOC.\nLa de GEN VI+ por defecto."),
-    COMPOUND_STRING("Prob. media de VARIOC."),
-    COMPOUND_STRING("Prob. alta de VARIOC."),
-    COMPOUND_STRING("Prob. muy alta de VARIOC."),
+    COMPOUND_STRING("Prob. mínima de SHINY\nLa de GEN III por defecto."),
+    COMPOUND_STRING("Prob. baja de SHINY\nLa de GEN VI+ por defecto."),
+    COMPOUND_STRING("Prob. media de SHINY"),
+    COMPOUND_STRING("Prob. alta de SHINY"),
+    COMPOUND_STRING("Prob. muy alta de SHINY"),
 };
 static const u8 *const sDesc_ItemDrop[] = {
     COMPOUND_STRING("Los obj. de {PKMN} salvajes\nsolo con captura o LADRÓN."),
@@ -650,8 +650,8 @@ static const u8 *const sDesc_FrontierBans[] = {
     COMPOUND_STRING("Todos los legendarios\nentran al FRENTE BATALLA."),
 };
 static const u8 *const sDesc_ShinyColor[] = {
-    COMPOUND_STRING("Paleta varioc. original\npara todos. Por defecto."),
-    COMPOUND_STRING("Algunos {PKMN} varioc.\ntienen paletas nuevas."),
+    COMPOUND_STRING("Paleta shiny original\npara todos. Por defecto."),
+    COMPOUND_STRING("Algunos {PKMN} shiny\ntienen paletas nuevas."),
 };
 static const u8 *const sDesc_FeaturesNext[] = {
     COMPOUND_STRING("Sigue a las opciones de Aleatorizador."),
@@ -665,13 +665,13 @@ static const struct ChallengeMenuItem sTabItems_Features[] = {
         .choiceNames  = sChoices_RtcFake,
     },
     [ITEM_FEATURES_SHINY_CHANCE] = {
-        .name         = COMPOUND_STRING("PROB. VARIOC."),
+        .name         = COMPOUND_STRING("PROB. SHINY"),
         .descriptions = sDesc_ShinyChance,
         .numChoices   = 5,
         .choiceNames  = sChoices_ShinyChance,
     },
     [ITEM_FEATURES_SHINY_COLOR] = {
-        .name         = COMPOUND_STRING("VARIOC. ALTERNO"),
+        .name         = COMPOUND_STRING("SHINY ALTERNO"),
         .descriptions = sDesc_ShinyColor,
         .numChoices   = 2,
         .choiceNames  = sChoices_OffOn,
@@ -898,8 +898,8 @@ static const u8 *const sDesc_SpeciesClause[] = {
     COMPOUND_STRING("Siempre debes capturar el\nprimer {PKMN} de la ruta."),
 };
 static const u8 *const sDesc_ShinyClause[] = {
-    COMPOUND_STRING("Siempre puedes capturar\n{PKMN} variocolor."),
-    COMPOUND_STRING("Solo capturas variocolor\nsi es el primer encuentro."),
+    COMPOUND_STRING("Siempre puedes capturar\n{PKMN} shiny."),
+    COMPOUND_STRING("Solo capturas shiny\nsi es el primer encuentro."),
 };
 static const u8 *const sDesc_Nicknaming[] = {
     COMPOUND_STRING("Obliga a apodar a todos\nlos {PKMN}."),
@@ -931,7 +931,7 @@ static const struct ChallengeMenuItem sTabItems_Nuzlocke[] = {
         .choiceNames  = sChoices_OnOff,
     },
     [ITEM_NUZLOCKE_SHINY_CLAUSE] = {
-        .name         = COMPOUND_STRING("REGLA VARIOC."),
+        .name         = COMPOUND_STRING("REGLA SHINY"),
         .descriptions = sDesc_ShinyClause,
         .numChoices   = 2,
         .choiceNames  = sChoices_OnOff,
