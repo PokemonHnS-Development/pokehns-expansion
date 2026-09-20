@@ -224,7 +224,7 @@ static const u8 *const sChoices_TextSpeed[] = {
     COMPOUND_STRING("LENTA"),
     COMPOUND_STRING("MEDIA"),
     COMPOUND_STRING("RÁPIDA"),
-    COMPOUND_STRING("MÁS RÁPIDA"),
+    COMPOUND_STRING("MÁXIMA"),
 };
 
 static const u8 *const sChoices_MetricImperial[] = {
@@ -371,7 +371,7 @@ static const u8 *const sDesc_SurfMusic[] = {
 
 static const struct OptionMenuItem sTabItems_Main[] = {
     [ITEM_MAIN_TEXTSPEED] = {
-        .name         = COMPOUND_STRING("VELOCIDAD TEXTO"),
+        .name         = COMPOUND_STRING("VELOCIDAD"),
         .descriptions = sDesc_TextSpeed,
         .numChoices   = 4,
         .choiceNames  = sChoices_TextSpeed,
@@ -401,7 +401,7 @@ static const struct OptionMenuItem sTabItems_Main[] = {
         .choiceNames  = sChoices_OnOff,
     },
     [ITEM_MAIN_LARGE_FOLLOWER] = {
-        .name         = COMPOUND_STRING("SEGUIDORES GRANDES"),
+        .name         = COMPOUND_STRING("SEGUIDORES GR."),
         .descriptions = sDesc_LargeFollower,
         .numChoices   = 2,
         .choiceNames  = sChoices_OnOff,
@@ -535,7 +535,7 @@ struct TabDef
 
 static const struct TabDef sTabs[TAB_COUNT] = {
     [TAB_MAIN]   = { COMPOUND_STRING("OPCIONES"),        sTabItems_Main,   ITEM_MAIN_COUNT },
-    [TAB_BATTLE] = { COMPOUND_STRING("OPCIONES COMBATE"), sTabItems_Battle, ITEM_BATTLE_COUNT },
+    [TAB_BATTLE] = { COMPOUND_STRING("COMBATE"), sTabItems_Battle, ITEM_BATTLE_COUNT },
     [TAB_SOUND]  = { COMPOUND_STRING("SONIDO"),          sTabItems_Sound,  ITEM_SOUND_COUNT },
 };
 
