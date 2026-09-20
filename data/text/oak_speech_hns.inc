@@ -44,7 +44,7 @@ gText_Oak_WhatsYourName::
 	.string "¿Y cuál es tu nombre?$"
 
 gText_Oak_SoItsPlayer::
-	.string "Oh! So you're {PLAYER}{KUN}?$"
+	.string "¡Ah! ¿Así que eres {PLAYER}{KUN}?$"
 
 gText_Oak_YourePlayer::
 	.string "{PLAYER}{KUN}, ¿estás listo?\p"
