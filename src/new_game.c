@@ -138,7 +138,7 @@ void SetDefaultChallengeSettings(void)
     gSaveblock3.challengeSettings.musicOnOff = 0;
     gSaveblock3.challengeSettings.runType = 0;
 
-    // Challenge menu — "RECOMMENDED" defaults
+    // Challenge menu - "RECOMMENDED" defaults
     gSaveblock3.challengeSettings.tx_Mode_Modern_Moves       = 1;
     gSaveblock3.challengeSettings.tx_Mode_Synchronize        = 1;
     gSaveblock3.challengeSettings.tx_Mode_Sturdy             = 1;

@@ -9,7 +9,7 @@
 #define FLAG_SHINY_STARTER_2    FLAG_TEMP_5
 #define FLAG_SHINY_STARTER_3    FLAG_TEMP_6
 
-// Content flags (0x22 – 0x4FF)
+// Content flags (0x22 - 0x4FF)
 
 // Hide Pokemon
 #define HNS_HIDE_POKEMON_START                      0x22
@@ -855,8 +855,8 @@
 
 #define HNS_CONTENT_FLAGS_END                       0x308
 
-// Extended content flags (0x36A – 0x495)
-// 300 slots for new content; 0x496–0x4FF reserved for future expansion.
+// Extended content flags (0x36A - 0x495)
+// 300 slots for new content; 0x496-0x4FF reserved for future expansion.
 //
 // WARNING: this block butts directly against the trainer registered (match call)
 // flags below it, with NO gap. Those start at 0x310 and use one flag per rematch
@@ -1184,9 +1184,9 @@
 #define FLAG_MELEMELE_HIDDEN_ITEM                   (HNS_EXTENDED_CONTENT_START + 299)
 #define HNS_EXTENDED_CONTENT_COUNT                  300
 #define HNS_EXTENDED_CONTENT_END                    (HNS_EXTENDED_CONTENT_START + HNS_EXTENDED_CONTENT_COUNT - 1)
-// 0x496–0x4FF remaining reserved for future expansion
+// 0x496-0x4FF remaining reserved for future expansion
 
-// Trainer registered (match call) flags — one per rematchable trainer
+// Trainer registered (match call) flags - one per rematchable trainer
 #define TRAINER_REGISTERED_FLAGS_START               0x310
 #define FLAG_REGISTERED_JOEY_HNS            (TRAINER_REGISTERED_FLAGS_START + REMATCH_ROSE)
 #define FLAG_REGISTERED_WADE_HNS            (TRAINER_REGISTERED_FLAGS_START + REMATCH_ANDRES)

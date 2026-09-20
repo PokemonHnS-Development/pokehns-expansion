@@ -256,7 +256,7 @@ static const u8 sText_TopBar_Left[]  = _("{L_BUTTON}");
 static const u8 sText_TopBar_Right[] = _("{R_BUTTON}");
 
 // =============================================================================
-// Frame type — special: draws "TYPE  N" instead of choice text
+// Frame type - special: draws "TYPE  N" instead of choice text
 // =============================================================================
 
 // numChoices = 0 signals special handling; we use WINDOW_FRAMES_COUNT for cycling
@@ -720,7 +720,7 @@ static void OptionMenu_ItemPrintFunc(u8 windowId, u32 itemId, u8 y)
         AddTextPrinterParameterized4(windowId, FONT_NORMAL, 8, y + 1, 0, 0, color, TEXT_SKIP_DRAW, items[itemId].name);
     }
 
-    // Frame type is special — no choiceNames array
+    // Frame type is special - no choiceNames array
     if (sMenu->currentTab == TAB_MAIN && itemId == ITEM_MAIN_FRAMETYPE)
     {
         DrawFrameTypeChoice(*GetSelectionPtr(sMenu->currentTab, itemId), y, active);
@@ -1050,7 +1050,7 @@ static void Task_ProcessInput(u8 taskId)
 
 static void Task_Save(u8 taskId)
 {
-    // SaveBlock2 — original options
+    // SaveBlock2 - original options
     gSaveBlock2Ptr->optionsTextSpeed        = *GetSelectionPtr(TAB_MAIN, ITEM_MAIN_TEXTSPEED);
     gSaveBlock2Ptr->optionsBattleSceneOff   = *GetSelectionPtr(TAB_MAIN, ITEM_MAIN_BATTLESCENE);
     gSaveBlock2Ptr->optionsBattleStyle      = *GetSelectionPtr(TAB_MAIN, ITEM_MAIN_BATTLESTYLE);
@@ -1058,7 +1058,7 @@ static void Task_Save(u8 taskId)
     gSaveBlock2Ptr->optionsWindowFrameType  = *GetSelectionPtr(TAB_MAIN, ITEM_MAIN_FRAMETYPE);
     gSaveBlock2Ptr->optionsSound            = *GetSelectionPtr(TAB_SOUND, ITEM_SOUND_SOUND);
 
-    // SaveBlock3 — HnS options plus
+    // SaveBlock3 - HnS options plus
     struct ChallengeSettings *cs = &gSaveBlock3Ptr->challengeSettings;
     cs->followerEnable     = *GetSelectionPtr(TAB_MAIN, ITEM_MAIN_FOLLOWER);
     cs->followerLargeEnable= *GetSelectionPtr(TAB_MAIN, ITEM_MAIN_LARGE_FOLLOWER);

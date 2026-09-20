@@ -176,8 +176,8 @@ bool32 SetRandomizerSeed(u32 newSeed)
 // the cross-gen evolutions (Sylveon, Weavile, Magnezone, Mamoswine, Annihilape,
 // Clodsire...), the cross-gen pre-evolutions (Munchlax, Happiny, Mantyke...) and
 // the regional forms listed in this game's obtainable Dex together with their
-// evolutions (Perrserker, Obstagoon, Sneasler, Cursola), and — via the backward
-// sweep below — the
+// evolutions (Perrserker, Obstagoon, Sneasler, Cursola), and - via the backward
+// sweep below - the
 // cross-gen pre-evolutions whose own Dex number is later than the family they
 // evolve into (Munchlax, Happiny, Mantyke, Budew, Chingling, Bonsly, Mime Jr.).
 // Families that merely start in a later gen stay out (Kingambit off Pawniard,

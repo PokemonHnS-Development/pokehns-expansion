@@ -43,7 +43,7 @@ enum {
 };
 
 // =============================================================================
-// Per-tab item enums — placeholder items for skeleton testing
+// Per-tab item enums - placeholder items for skeleton testing
 // =============================================================================
 
 enum {
@@ -143,7 +143,7 @@ enum {
 #define Y_DIFF 16
 
 // =============================================================================
-// Menu item descriptor — one per option row
+// Menu item descriptor - one per option row
 // =============================================================================
 
 struct ChallengeMenuItem
@@ -183,8 +183,8 @@ enum {
 };
 
 static const u8 sMidGameLockPolicy[TAB_COUNT * MAX_ITEMS_PER_TAB] = {
-    // TAB_MODE — all free
-    // TAB_FEATURES — all free
+    // TAB_MODE - all free
+    // TAB_FEATURES - all free
     // TAB_RANDOMIZER
     [TAB_RANDOMIZER * MAX_ITEMS_PER_TAB + ITEM_RANDOM_OFF_ON]      = LOCK_ONEWAY_DOWN,
     [TAB_RANDOMIZER * MAX_ITEMS_PER_TAB + ITEM_RANDOM_STARTER]     = LOCK_ONEWAY_DOWN,
@@ -306,7 +306,7 @@ static const struct BgTemplate sBgTemplates[] = {
 static const u16 sBgPal[] = {RGB(14, 20, 24)};
 static const u16 sTextPal[] = INCBIN_U16("graphics/interface/option_menu_text_custom.gbapal");
 
-// Frame tile IDs — loaded from window frame tileset at base 0x1A2
+// Frame tile IDs - loaded from window frame tileset at base 0x1A2
 #define TILE_TOP_CORNER_L 0x1A2
 #define TILE_TOP_EDGE     0x1A3
 #define TILE_TOP_CORNER_R 0x1A4
@@ -362,7 +362,7 @@ static const u8 sText_TopBar_Save[]   = _("{R_BUTTON}GUARDAR");
 static const u8 sText_TopBar_Cancel[] = _("{B_BUTTON}CANCELAR");
 
 // =============================================================================
-// Tab item tables — skeleton placeholders
+// Tab item tables - skeleton placeholders
 // =============================================================================
 
 static const u8 *const sDesc_Gamemode[] = {
@@ -510,7 +510,7 @@ static const u8 *const sDesc_SaveExit[] = { COMPOUND_STRING("Guardar y continuar
 static const u8 sText_ConfirmSave[] = COMPOUND_STRING("¿Confirmas tus ajustes?");
 
 // =============================================================================
-// Choice strings — shared across tabs
+// Choice strings - shared across tabs
 // =============================================================================
 
 static const u8 *const sChoices_OffRandom[] = {
@@ -1335,7 +1335,7 @@ static bool8 CheckConditions(u8 tab, u8 itemIndex)
         case ITEM_NUZLOCKE_RARE_CANDY:
             return nuzSel > 0;
         default:
-            if (nuzSel == 1) // EASY — lock all sub-options except RARE_CANDY
+            if (nuzSel == 1) // EASY - lock all sub-options except RARE_CANDY
                 return FALSE;
             return nuzSel > 0;
         }
@@ -1638,7 +1638,7 @@ static void DrawDescription(void)
 
 static void DrawBgFrames(void)
 {
-    // Outer frame — top edge at row 2, shared side edges rows 3-18
+    // Outer frame - top edge at row 2, shared side edges rows 3-18
     FillBgTilemapBufferRect(1, TILE_TOP_CORNER_L,  1,  2,  1,  1,  7);
     FillBgTilemapBufferRect(1, TILE_TOP_EDGE,      2,  2, 26,  1,  7);
     FillBgTilemapBufferRect(1, TILE_TOP_CORNER_R, 28,  2,  1,  1,  7);
@@ -1773,7 +1773,7 @@ static void ProcessLeftRight(void)
         if (sMenu->currentTab == TAB_MODE && itemIndex == ITEM_MODE_GAMEMODE && *sel == 0)
             ApplyRecommendedPresets();
 
-        // Nuzlocke OFF or EASY — reset sub-options to defaults
+        // Nuzlocke OFF or EASY - reset sub-options to defaults
         if (sMenu->currentTab == TAB_NUZLOCKE && itemIndex == ITEM_NUZLOCKE_NUZLOCKE
             && (*sel == 0 || *sel == 1))
         {
@@ -1932,7 +1932,7 @@ static void Task_ConfirmSaveYes(u8 taskId)
     cs->tx_Features_FrontierBans   = *GetSelectionPtr(TAB_FEATURES, ITEM_FEATURES_FRONTIER_BANS);
     cs->tx_Features_ShinyColors    = *GetSelectionPtr(TAB_FEATURES, ITEM_FEATURES_SHINY_COLOR);
 
-    // Randomizer tab — if master toggle is OFF, clear all sub-fields
+    // Randomizer tab - if master toggle is OFF, clear all sub-fields
     if (*GetSelectionPtr(TAB_RANDOMIZER, ITEM_RANDOM_OFF_ON) == 0)
     {
         cs->tx_Random_Starter          = 0;
@@ -1976,27 +1976,27 @@ static void Task_ConfirmSaveYes(u8 taskId)
         cs->tx_Random_Chaos            = *GetSelectionPtr(TAB_RANDOMIZER, ITEM_RANDOM_CHAOS);
     }
 
-    // Nuzlocke tab — decompose selection back to 3 bits (matches HnS encoding)
+    // Nuzlocke tab - decompose selection back to 3 bits (matches HnS encoding)
     {
         u8 nuzSel = *GetSelectionPtr(TAB_NUZLOCKE, ITEM_NUZLOCKE_NUZLOCKE);
         cs->tx_Challenges_Nuzlocke         = (nuzSel >= 2) ? 1 : 0;
         cs->tx_Nuzlocke_EasyMode           = (nuzSel == 1) ? 1 : 0;
         cs->tx_Challenges_NuzlockeHardcore = (nuzSel == 3) ? 1 : 0;
 
-        if (nuzSel == 0) // OFF — clear sub-options
+        if (nuzSel == 0) // OFF - clear sub-options
         {
             cs->tx_Nuzlocke_SpeciesClause = 0;
             cs->tx_Nuzlocke_ShinyClause   = 0;
             cs->tx_Nuzlocke_Nicknaming    = 0;
         }
-        else if (nuzSel == 1) // EASY — save RareCandy, clear clauses
+        else if (nuzSel == 1) // EASY - save RareCandy, clear clauses
         {
             cs->tx_Nuzlocke_RareCandy     = !(*GetSelectionPtr(TAB_NUZLOCKE, ITEM_NUZLOCKE_RARE_CANDY));
             cs->tx_Nuzlocke_SpeciesClause = 0;
             cs->tx_Nuzlocke_ShinyClause   = 0;
             cs->tx_Nuzlocke_Nicknaming    = 0;
         }
-        else // NORMAL or HARD — save all sub-options with polarity inversion
+        else // NORMAL or HARD - save all sub-options with polarity inversion
         {
             cs->tx_Nuzlocke_SpeciesClause = !(*GetSelectionPtr(TAB_NUZLOCKE, ITEM_NUZLOCKE_SPECIES_CLAUSE));
             cs->tx_Nuzlocke_ShinyClause   = !(*GetSelectionPtr(TAB_NUZLOCKE, ITEM_NUZLOCKE_SHINY_CLAUSE));
@@ -2136,7 +2136,7 @@ void CB2_InitChallengeMenu(void)
         {
             struct ChallengeSettings *cs = &gSaveBlock3Ptr->challengeSettings;
 
-            // Mode tab — load sub-items, then derive GAMEMODE from whether they match recommended
+            // Mode tab - load sub-items, then derive GAMEMODE from whether they match recommended
             *GetSelectionPtr(TAB_MODE, ITEM_MODE_MODERN_MOVES)       = cs->tx_Mode_Modern_Moves;
             *GetSelectionPtr(TAB_MODE, ITEM_MODE_SYNCHRONIZE)        = cs->tx_Mode_Synchronize;
             *GetSelectionPtr(TAB_MODE, ITEM_MODE_STURDY)             = cs->tx_Mode_Sturdy;
@@ -2171,7 +2171,7 @@ void CB2_InitChallengeMenu(void)
             *GetSelectionPtr(TAB_FEATURES, ITEM_FEATURES_FRONTIER_BANS)= cs->tx_Features_FrontierBans;
             *GetSelectionPtr(TAB_FEATURES, ITEM_FEATURES_SHINY_COLOR)  = cs->tx_Features_ShinyColors;
 
-            // Randomizer tab — derive master toggle from whether any sub-field is active
+            // Randomizer tab - derive master toggle from whether any sub-field is active
             *GetSelectionPtr(TAB_RANDOMIZER, ITEM_RANDOM_OFF_ON) =
                 (cs->tx_Random_Starter || cs->tx_Random_WildPokemon
               || cs->tx_Random_Trainer || cs->tx_Random_Static
@@ -2196,7 +2196,7 @@ void CB2_InitChallengeMenu(void)
             *GetSelectionPtr(TAB_RANDOMIZER, ITEM_RANDOM_ITEMS)       = cs->tx_Random_Items;
             *GetSelectionPtr(TAB_RANDOMIZER, ITEM_RANDOM_CHAOS)       = cs->tx_Random_Chaos;
 
-            // Nuzlocke tab — 3 bits → 4 selection states (matches HnS encoding)
+            // Nuzlocke tab - 3 bits → 4 selection states (matches HnS encoding)
             if (cs->tx_Challenges_Nuzlocke && cs->tx_Challenges_NuzlockeHardcore)
                 *GetSelectionPtr(TAB_NUZLOCKE, ITEM_NUZLOCKE_NUZLOCKE) = 3; // HARD
             else if (cs->tx_Challenges_Nuzlocke)

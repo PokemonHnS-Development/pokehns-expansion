@@ -1,5 +1,5 @@
 #if IS_HNS
-// HnS rematch trainer check page text — currently unused (check page disabled).
+// HnS rematch trainer check page text - currently unused (check page disabled).
 // Rematch slot → HnS trainer mapping kept here for reference if re-enabled.
 // REMATCH_ROSE         = Joey (Youngster, Route 30)
 // REMATCH_ANDRES       = Wade (Bug Catcher, Route 31)
@@ -423,7 +423,7 @@ const u8 gText_MatchCallChampion_Wallace_Intro2[] = _("well as intelligence.");
 #endif
 
 #if IS_HNS
-// Check page disabled for HnS trainers — table left empty.
+// Check page disabled for HnS trainers - table left empty.
 // To re-enable: add MCFLAVOR entries here and set HasCheckPage_Trainer to TRUE.
 const u8 *const gMatchCallFlavorTexts[REMATCH_TABLE_ENTRIES][CHECK_PAGE_ENTRY_COUNT] = {0};
 #else
