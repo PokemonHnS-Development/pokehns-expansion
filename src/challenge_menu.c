@@ -1503,26 +1503,6 @@ static void ChallengeMenu_ItemPrintFunc(u8 windowId, u32 itemId, u8 y)
         DrawChoices_Adaptive(items[itemId].choiceNames, items[itemId].numChoices, sel, y, active);
         break;
     }
-    case 3:
-        DrawChoices_Three(items[itemId].choiceNames, sel, y, active);
-        break;
-    case 4:
-        DrawChoices_Four(items[itemId].choiceNames, sel, y, active);
-        break;
-    case 5:
-        DrawChoices_Five(items[itemId].choiceNames, sel, y, active);
-        break;
-    case 6:
-        DrawChoices_Six(items[itemId].choiceNames, sel, y, active);
-        break;
-    default:
-    {
-        const u8 *choiceStr = items[itemId].choiceNames[sel];
-        u8 x = GetStringRightAlignXOffset(FONT_SHORT, choiceStr, VALUE_X_END);
-        DrawRightSideChoiceText(choiceStr, x, y + 1, TRUE, active);
-        break;
-    }
-    }
 }
 
 // =============================================================================
