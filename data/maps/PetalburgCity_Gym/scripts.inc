@@ -1540,7 +1540,7 @@ PetalburgCity_Gym_Text_EnterOHKORoom:
 	.string "¿Quieres entrar?$"
 
 PetalburgCity_Gym_Text_EnterGymLeadersRoom:
-	.string "SALA DEL LÍDER DEL GIMNASIO\p"¡Comprueba\npor ti mismo lo\nduros que son mis POKéMON!"\ndice el cartel.\p¿Quieres entrar?$"
+	.string "SALA DEL LÍDER DEL GIMNASIO\p“¡Comprueba\npor ti mismo lo\nduros que son mis POKéMON!”\ndice el cartel.\p¿Quieres entrar?$"
 
 PetalburgCity_Gym_Text_GymStatue:
 	.string "PETALBURG CITY POKéMON GYM$"
