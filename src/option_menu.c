@@ -413,7 +413,7 @@ static const struct OptionMenuItem sTabItems_Main[] = {
         .choiceNames  = sChoices_OnOff,
     },
     [ITEM_MAIN_AUTORUN_SURF] = {
-        .name         = COMPOUND_STRING("CORRER AUTO (SURF)"),
+        .name         = COMPOUND_STRING("AUTO (SURF)"),
         .descriptions = sDesc_AutorunSurf,
         .numChoices   = 2,
         .choiceNames  = sChoices_OnOff,
@@ -431,7 +431,7 @@ static const struct OptionMenuItem sTabItems_Main[] = {
         .choiceNames  = sChoices_OnOff,
     },
     [ITEM_MAIN_UNIT_TYPE] = {
-        .name         = COMPOUND_STRING("SISTEMA UNIDADES"),
+        .name         = COMPOUND_STRING("UNIDADES"),
         .descriptions = sDesc_UnitType,
         .numChoices   = 2,
         .choiceNames  = sChoices_MetricImperial,
@@ -458,7 +458,7 @@ static const struct OptionMenuItem sTabItems_Battle[] = {
         .choiceNames  = sChoices_OnOff,
     },
     [ITEM_BATTLE_FAST_BATTLES] = {
-        .name         = COMPOUND_STRING("COMBATES RÁPIDOS"),
+        .name         = COMPOUND_STRING("COMBATES RÁP."),
         .descriptions = sDesc_FastBattles,
         .numChoices   = 2,
         .choiceNames  = sChoices_OnOff,
@@ -470,7 +470,7 @@ static const struct OptionMenuItem sTabItems_Battle[] = {
         .choiceNames  = sChoices_OldModern,
     },
     [ITEM_BATTLE_NEW_BATTLEUI] = {
-        .name         = COMPOUND_STRING("INTERFAZ COMBATE"),
+        .name         = COMPOUND_STRING("INTERFAZ COMB."),
         .descriptions = sDesc_NewBattleUI,
         .numChoices   = 2,
         .choiceNames  = sChoices_Gen3Gen4,
