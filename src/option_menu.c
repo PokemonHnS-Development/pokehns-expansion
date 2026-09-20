@@ -649,6 +649,29 @@ static void DrawRightSideChoiceText(const u8 *text, int x, int y, bool8 chosen, 
     AddTextPrinterParameterized4(WIN_OPTIONS, FONT_SHORT, x, y + 1, 0, 0, color, TEXT_SKIP_DRAW, text);
 }
 
+// Frame type: draws "TYPE  N" on the right side
+static void DrawFrameTypeChoice(u8 selection, int y, bool8 active)
+{
+    u8 text[16];
+    u8 n = selection + 1;
+    u8 i = 0;
+
+    if (n / 10 != 0)
+    {
+        text[i++] = n / 10 + CHAR_0;
+        text[i++] = n % 10 + CHAR_0;
+    }
+    else
+    {
+        text[i++] = n % 10 + CHAR_0;
+        text[i++] = CHAR_SPACER;
+    }
+    text[i] = EOS;
+
+    DrawRightSideChoiceText(COMPOUND_STRING("TIPO"), 104, y + 1, FALSE, active);
+    DrawRightSideChoiceText(text, 128, y + 1, TRUE, active);
+}
+
 // Muestra como mucho DOS opciones: el valor seleccionado y un vecino.
 // Si las dos no caben en el ancho disponible, muestra solo la seleccionada.
 static void DrawChoices_Adaptive(const u8 *const *strings, int count, int selection, int y, bool8 active)
