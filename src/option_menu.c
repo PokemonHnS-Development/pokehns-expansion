@@ -76,6 +76,8 @@ enum {
 
 #define MAX_ITEMS_PER_TAB 16
 #define ITEMS_VISIBLE 5
+#define VALUE_X_START 108   // donde empiezan los valores
+#define VALUE_X_END   222   // fin de la zona de valores (ventana completa)
 #define Y_DIFF 16
 
 // =============================================================================
@@ -224,17 +226,17 @@ static const u8 *const sChoices_TextSpeed[] = {
     COMPOUND_STRING("LENTA"),
     COMPOUND_STRING("MEDIA"),
     COMPOUND_STRING("RÁPIDA"),
-    COMPOUND_STRING("MÁXIMA"),
+    COMPOUND_STRING("MÁS RÁPIDA"),
 };
 
 static const u8 *const sChoices_MetricImperial[] = {
-    COMPOUND_STRING("METRICO"),
+    COMPOUND_STRING("MÉTRICO"),
     COMPOUND_STRING("IMPERIAL"),
 };
 
 static const u8 *const sChoices_OldModern[] = {
-    COMPOUND_STRING("VIEJO"),
-    COMPOUND_STRING("NUEVO"),
+    COMPOUND_STRING("CLÁSICO"),
+    COMPOUND_STRING("MODERNO"),
 };
 
 static const u8 *const sChoices_Gen3Gen4[] = {
@@ -371,25 +373,25 @@ static const u8 *const sDesc_SurfMusic[] = {
 
 static const struct OptionMenuItem sTabItems_Main[] = {
     [ITEM_MAIN_TEXTSPEED] = {
-        .name         = COMPOUND_STRING("VELOCIDAD"),
+        .name         = COMPOUND_STRING("VELOCIDAD TEXTO"),
         .descriptions = sDesc_TextSpeed,
         .numChoices   = 4,
         .choiceNames  = sChoices_TextSpeed,
     },
     [ITEM_MAIN_BATTLESCENE] = {
-        .name         = COMPOUND_STRING("ESCENA"),
+        .name         = COMPOUND_STRING("ESCENA COMBATE"),
         .descriptions = sDesc_BattleScene,
         .numChoices   = 2,
         .choiceNames  = sChoices_OnOff,
     },
     [ITEM_MAIN_BATTLESTYLE] = {
-        .name         = COMPOUND_STRING("ESTILO"),
+        .name         = COMPOUND_STRING("ESTILO COMBATE"),
         .descriptions = sDesc_BattleStyle,
         .numChoices   = 2,
         .choiceNames  = sChoices_ShiftSet,
     },
     [ITEM_MAIN_BUTTONMODE] = {
-        .name         = COMPOUND_STRING("BOTONES"),
+        .name         = COMPOUND_STRING("MODO BOTONES"),
         .descriptions = sDesc_ButtonMode,
         .numChoices   = 3,
         .choiceNames  = sChoices_ButtonMode,
@@ -401,19 +403,19 @@ static const struct OptionMenuItem sTabItems_Main[] = {
         .choiceNames  = sChoices_OnOff,
     },
     [ITEM_MAIN_LARGE_FOLLOWER] = {
-        .name         = COMPOUND_STRING("SEGUIDORES"),
+        .name         = COMPOUND_STRING("SEGUIDORES GRANDES"),
         .descriptions = sDesc_LargeFollower,
         .numChoices   = 2,
         .choiceNames  = sChoices_OnOff,
     },
     [ITEM_MAIN_AUTORUN] = {
-        .name         = COMPOUND_STRING("AUTO"),
+        .name         = COMPOUND_STRING("CORRER AUTO"),
         .descriptions = sDesc_Autorun,
         .numChoices   = 2,
         .choiceNames  = sChoices_OnOff,
     },
     [ITEM_MAIN_AUTORUN_SURF] = {
-        .name         = COMPOUND_STRING("AUTO (SURF)"),
+        .name         = COMPOUND_STRING("CORRER AUTO (SURF)"),
         .descriptions = sDesc_AutorunSurf,
         .numChoices   = 2,
         .choiceNames  = sChoices_OnOff,
@@ -431,7 +433,7 @@ static const struct OptionMenuItem sTabItems_Main[] = {
         .choiceNames  = sChoices_OnOff,
     },
     [ITEM_MAIN_UNIT_TYPE] = {
-        .name         = COMPOUND_STRING("UNIDADES"),
+        .name         = COMPOUND_STRING("SISTEMA UNIDADES"),
         .descriptions = sDesc_UnitType,
         .numChoices   = 2,
         .choiceNames  = sChoices_MetricImperial,
@@ -452,13 +454,13 @@ static const struct OptionMenuItem sTabItems_Main[] = {
 
 static const struct OptionMenuItem sTabItems_Battle[] = {
     [ITEM_BATTLE_FAST_INTRO] = {
-        .name         = COMPOUND_STRING("INTRO RÁP."),
+        .name         = COMPOUND_STRING("INTRO RÁPIDA"),
         .descriptions = sDesc_FastIntro,
         .numChoices   = 2,
         .choiceNames  = sChoices_OnOff,
     },
     [ITEM_BATTLE_FAST_BATTLES] = {
-        .name         = COMPOUND_STRING("COMBATES"),
+        .name         = COMPOUND_STRING("COMBATES RÁPIDOS"),
         .descriptions = sDesc_FastBattles,
         .numChoices   = 2,
         .choiceNames  = sChoices_OnOff,
@@ -470,25 +472,25 @@ static const struct OptionMenuItem sTabItems_Battle[] = {
         .choiceNames  = sChoices_OldModern,
     },
     [ITEM_BATTLE_NEW_BATTLEUI] = {
-        .name         = COMPOUND_STRING("INTERFAZ"),
+        .name         = COMPOUND_STRING("INTERFAZ COMBATE"),
         .descriptions = sDesc_NewBattleUI,
         .numChoices   = 2,
         .choiceNames  = sChoices_Gen3Gen4,
     },
     [ITEM_BATTLE_BALL_PROMPT] = {
-        .name         = COMPOUND_STRING("AVISO BALL"),
+        .name         = COMPOUND_STRING("AVISO POKé BALL"),
         .descriptions = sDesc_BallPrompt,
         .numChoices   = 2,
         .choiceNames  = sChoices_OnOff,
     },
     [ITEM_BATTLE_RUN_TYPE] = {
-        .name         = COMPOUND_STRING("HUIDA"),
+        .name         = COMPOUND_STRING("HUIDA RÁPIDA"),
         .descriptions = sDesc_RunType,
         .numChoices   = 4,
         .choiceNames  = sChoices_RunType,
     },
     [ITEM_BATTLE_LR_RUN] = {
-        .name         = COMPOUND_STRING("AVISO"),
+        .name         = COMPOUND_STRING("AVISO HUIDA"),
         .descriptions = sDesc_LRRun,
         .numChoices   = 2,
         .choiceNames  = sChoices_OnOff,
@@ -509,13 +511,13 @@ static const struct OptionMenuItem sTabItems_Sound[] = {
         .choiceNames  = sChoices_OnOff,
     },
     [ITEM_SOUND_BIKE_MUSIC] = {
-        .name         = COMPOUND_STRING("MÚS.BICI"),
+        .name         = COMPOUND_STRING("MÚSICA BICI"),
         .descriptions = sDesc_BikeMusic,
         .numChoices   = 2,
         .choiceNames  = sChoices_OnOff,
     },
     [ITEM_SOUND_SURF_MUSIC] = {
-        .name         = COMPOUND_STRING("MÚS.SURF"),
+        .name         = COMPOUND_STRING("MÚSICA SURF"),
         .descriptions = sDesc_SurfMusic,
         .numChoices   = 2,
         .choiceNames  = sChoices_OnOff,
@@ -534,8 +536,8 @@ struct TabDef
 };
 
 static const struct TabDef sTabs[TAB_COUNT] = {
-    [TAB_MAIN]   = { COMPOUND_STRING("AJUSTES"),        sTabItems_Main,   ITEM_MAIN_COUNT },
-    [TAB_BATTLE] = { COMPOUND_STRING("COMBATE"), sTabItems_Battle, ITEM_BATTLE_COUNT },
+    [TAB_MAIN]   = { COMPOUND_STRING("OPCIONES"),        sTabItems_Main,   ITEM_MAIN_COUNT },
+    [TAB_BATTLE] = { COMPOUND_STRING("OPCIONES COMBATE"), sTabItems_Battle, ITEM_BATTLE_COUNT },
     [TAB_SOUND]  = { COMPOUND_STRING("SONIDO"),          sTabItems_Sound,  ITEM_SOUND_COUNT },
 };
 
@@ -643,30 +645,29 @@ static void DrawRightSideChoiceText(const u8 *text, int x, int y, bool8 chosen, 
         color[1] = chosen ? TEXT_COLOR_OPTIONS_RED_DARK_FG : TEXT_COLOR_OPTIONS_GRAY_LIGHT_FG;
         color[2] = chosen ? TEXT_COLOR_OPTIONS_RED_DARK_SHADOW : TEXT_COLOR_OPTIONS_GRAY_SHADOW;
     }
-    AddTextPrinterParameterized4(WIN_OPTIONS, FONT_NORMAL, x, y, 0, 0, color, TEXT_SKIP_DRAW, text);
+    AddTextPrinterParameterized4(WIN_OPTIONS, FONT_SMALL, x, y + 1, 0, 0, color, TEXT_SKIP_DRAW, text);
 }
 
 static int GetMiddleX(const u8 *txt1, const u8 *txt2, const u8 *txt3)
 {
-    int widthLeft = GetStringWidth(FONT_NORMAL, txt1, 0);
-    int widthMid = GetStringWidth(FONT_NORMAL, txt2, 0);
-    int widthRight = GetStringWidth(FONT_NORMAL, txt3, 0);
-    widthMid -= (198 - 104);
-    return (widthLeft - widthMid - widthRight) / 2 + 104;
+    int widthLeft = GetStringWidth(FONT_SMALL, txt1, 0);
+    int widthMid = GetStringWidth(FONT_SMALL, txt2, 0);
+    int widthRight = GetStringWidth(FONT_SMALL, txt3, 0);
+    return (VALUE_X_END - widthMid) / 2 + VALUE_X_START;
 }
 
 static void DrawChoices_Two(const u8 *const *strings, int selection, int y, bool8 active)
 {
-    DrawRightSideChoiceText(strings[0], 104, y + 1, selection == 0, active);
-    DrawRightSideChoiceText(strings[1], GetStringRightAlignXOffset(FONT_NORMAL, strings[1], 198), y + 1, selection == 1, active);
+    DrawRightSideChoiceText(strings[0], VALUE_X_START, y + 1, selection == 0, active);
+    DrawRightSideChoiceText(strings[1], GetStringRightAlignXOffset(FONT_SMALL, strings[1], VALUE_X_END), y + 1, selection == 1, active);
 }
 
 static void DrawChoices_Three(const u8 *const *strings, int selection, int y, bool8 active)
 {
     int xMid = GetMiddleX(strings[0], strings[1], strings[2]);
-    DrawRightSideChoiceText(strings[0], 104, y + 1, selection == 0, active);
+    DrawRightSideChoiceText(strings[0], VALUE_X_START, y + 1, selection == 0, active);
     DrawRightSideChoiceText(strings[1], xMid, y + 1, selection == 1, active);
-    DrawRightSideChoiceText(strings[2], GetStringRightAlignXOffset(FONT_NORMAL, strings[2], 198), y + 1, selection == 2, active);
+    DrawRightSideChoiceText(strings[2], GetStringRightAlignXOffset(FONT_SMALL, strings[2], VALUE_X_END), y + 1, selection == 2, active);
 }
 
 static void DrawChoices_Four(const u8 *const *strings, int selection, int y, bool8 active)
@@ -792,7 +793,7 @@ static void InitListMenu(void)
     template.lettersSpacing = 0;
     template.itemVerticalPadding = 0;
     template.scrollMultiple = LIST_NO_MULTIPLE_SCROLL;
-    template.fontId = FONT_NORMAL;
+    template.fontId = FONT_SMALL;
     template.cursorKind = CURSOR_INVISIBLE;
 
     sMenu->listTaskId = ListMenuInit(&template,

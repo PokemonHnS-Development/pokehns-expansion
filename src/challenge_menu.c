@@ -137,6 +137,8 @@ enum {
 // Maximum items in any single tab
 #define MAX_ITEMS_PER_TAB 20
 #define ITEMS_VISIBLE 5
+#define VALUE_X_START 108   // inicio de la zona de valores
+#define VALUE_X_END   222   // fin (se usa toda la ventana)
 #define Y_DIFF 16
 
 // =============================================================================
@@ -344,19 +346,19 @@ static const u8 *const sChoices_OnOff[] = {
 };
 
 static const u8 *const sChoices_Gamemode[] = {
-    COMPOUND_STRING("RECOM."),
-    COMPOUND_STRING("PROPIO"),
+    COMPOUND_STRING("RECOMENDADO"),
+    COMPOUND_STRING("PERSONALIZADO"),
 };
 
 static const u8 *const sChoices_OriginalModern[] = {
     COMPOUND_STRING("ORIGINAL"),
-    COMPOUND_STRING("NUEVO"),
+    COMPOUND_STRING("MODERNO"),
 };
 
 static const u8 sText_TopBar_Left[]   = _("{L_BUTTON}ANTERIOR");
-static const u8 sText_TopBar_Right[]  = _("{R_BUTTON}SIG.");
-static const u8 sText_TopBar_Save[]   = _("{R_BUTTON}GUAR");
-static const u8 sText_TopBar_Cancel[] = _("{B_BUTTON}SALIR");
+static const u8 sText_TopBar_Right[]  = _("{R_BUTTON}SIGUIENTE");
+static const u8 sText_TopBar_Save[]   = _("{R_BUTTON}GUARDAR");
+static const u8 sText_TopBar_Cancel[] = _("{B_BUTTON}CANCELAR");
 
 // =============================================================================
 // Tab item tables — skeleton placeholders
@@ -371,16 +373,16 @@ static const u8 *const sDesc_ModernMoves[] = {
     COMPOUND_STRING("Movs. y conjuntos de GEN 7\ncon cambios menores."),
 };
 static const u8 *const sDesc_Synchronize[] = {
-    COMPOUND_STRING("SINCRO como en GEN III.\n50% de copiar la natura."),
-    COMPOUND_STRING("SINCRO como en GEN VIII+.\n100% de copiar la natura."),
+    COMPOUND_STRING("SINCRONÍA como en GEN III.\n50% de copiar la natura."),
+    COMPOUND_STRING("SINCRONÍA como en GEN VIII+.\n100% de copiar la natura."),
 };
 static const u8 *const sDesc_Sturdy[] = {
-    COMPOUND_STRING("ROBUST como en GEN III.\nSolo anula movs. de KO."),
-    COMPOUND_STRING("ROBUST como en GEN V+.\nSobrevive con 1 PS."),
+    COMPOUND_STRING("ROBUSTEZ como en GEN III.\nSolo anula movs. de KO."),
+    COMPOUND_STRING("ROBUSTEZ como en GEN V+.\nSobrevive con 1 PS."),
 };
 static const u8 *const sDesc_NewCitrus[] = {
-    COMPOUND_STRING("La B. SITRUS da 30 PS.\nIgual que en GEN III."),
-    COMPOUND_STRING("La B. SITRUS da el 25% de\nlos PS. Como desde GEN IV."),
+    COMPOUND_STRING("La BAYA SITRUS da 30 PS.\nIgual que en GEN III."),
+    COMPOUND_STRING("La BAYA SITRUS da el 25% de\nlos PS. Como desde GEN IV."),
 };
 static const u8 *const sDesc_FairyTypes[] = {
     COMPOUND_STRING("El TIPO HADA no se añade a\nlos {PKMN} de GEN VI."),
@@ -424,7 +426,7 @@ static const u8 *const sDesc_Next[] = {
 
 static const struct ChallengeMenuItem sTabItems_Mode[] = {
     [ITEM_MODE_GAMEMODE] = {
-        .name         = COMPOUND_STRING("MODO"),
+        .name         = COMPOUND_STRING("MODO DE JUEGO"),
         .descriptions = sDesc_Gamemode,
         .numChoices   = 2,
         .choiceNames  = sChoices_Gamemode,
@@ -436,67 +438,67 @@ static const struct ChallengeMenuItem sTabItems_Mode[] = {
         .choiceNames  = sChoices_Gen3Gen7,
     },
     [ITEM_MODE_SYNCHRONIZE] = {
-        .name         = COMPOUND_STRING("SINCRO"),
+        .name         = COMPOUND_STRING("SINCRONÍA"),
         .descriptions = sDesc_Synchronize,
         .numChoices   = 2,
         .choiceNames  = sChoices_OriginalModern,
     },
     [ITEM_MODE_STURDY] = {
-        .name         = COMPOUND_STRING("ROBUST"),
+        .name         = COMPOUND_STRING("ROBUSTEZ"),
         .descriptions = sDesc_Sturdy,
         .numChoices   = 2,
         .choiceNames  = sChoices_OriginalModern,
     },
     [ITEM_MODE_NEW_CITRUS] = {
-        .name         = COMPOUND_STRING("B. SITRUS"),
+        .name         = COMPOUND_STRING("BAYA SITRUS"),
         .descriptions = sDesc_NewCitrus,
         .numChoices   = 2,
         .choiceNames  = sChoices_OriginalModern,
     },
     [ITEM_MODE_FAIRY_TYPES] = {
-        .name         = COMPOUND_STRING("TIPO HADA"),
+        .name         = COMPOUND_STRING("AÑADIR TIPO HADA"),
         .descriptions = sDesc_FairyTypes,
         .numChoices   = 2,
         .choiceNames  = sChoices_OffOn,
     },
     [ITEM_MODE_LEGENDARY_ABILITIES] = {
-        .name         = COMPOUND_STRING("HABS. LEGEND."),
+        .name         = COMPOUND_STRING("HAB. LEGENDARIOS"),
         .descriptions = sDesc_LegAbilities,
         .numChoices   = 2,
         .choiceNames  = sChoices_OffOn,
     },
     [ITEM_MODE_INFINITE_TMS] = {
-        .name         = COMPOUND_STRING("MT REUSABLES"),
+        .name         = COMPOUND_STRING("MT REUTILIZABLES"),
         .descriptions = sDesc_InfiniteTMs,
         .numChoices   = 2,
         .choiceNames  = sChoices_OffOn,
     },
     [ITEM_MODE_MINTS] = {
-        .name         = COMPOUND_STRING("MENTAS"),
+        .name         = COMPOUND_STRING("MENTAS NATURALEZA"),
         .descriptions = sDesc_Mints,
         .numChoices   = 2,
         .choiceNames  = sChoices_OffOn,
     },
     [ITEM_MODE_SURVIVE_POISON] = {
-        .name         = COMPOUND_STRING("VENENO"),
+        .name         = COMPOUND_STRING("SOBREVIVIR VENENO"),
         .descriptions = sDesc_SurvivePoison,
         .numChoices   = 2,
         .choiceNames  = sChoices_OffOn,
     },
     [ITEM_MODE_SPLIT] = {
-        .name         = COMPOUND_STRING("FÍS/ESP"),
+        .name         = COMPOUND_STRING("SEPARAR FÍS/ESP"),
         .descriptions = sDesc_Split,
         .numChoices   = 2,
         .choiceNames  = sChoices_OffOn,
     },
     [ITEM_MODE_GEN_ONE_RECHARGE] = {
-        .name         = COMPOUND_STRING("MOVS. RECARGA"),
+        .name         = COMPOUND_STRING("MOVS. DE RECARGA"),
         .descriptions = sDesc_GenOneRecharge,
         .numChoices   = 2,
         .choiceNames  = sChoices_Gen3Gen1,
     },
     [ITEM_MODE_NEXT] = {
-        .name         = COMPOUND_STRING("SIG."),
+        .name         = COMPOUND_STRING("SIGUIENTE"),
         .descriptions = sDesc_Next,
         .numChoices   = 0,
         .choiceNames  = NULL,
@@ -512,7 +514,7 @@ static const u8 sText_ConfirmSave[] = COMPOUND_STRING("¿Confirmas tus ajustes?"
 
 static const u8 *const sChoices_OffRandom[] = {
     COMPOUND_STRING("NO"),
-    COMPOUND_STRING("AZAR"),
+    COMPOUND_STRING("ALEATORIO"),
 };
 
 static const u8 *const sChoices_GenScope[] = {
@@ -531,13 +533,13 @@ static const u8 *const sChoices_YesNo[] = {
 };
 
 static const u8 *const sChoices_BanUnban[] = {
-    COMPOUND_STRING("NO"),
-    COMPOUND_STRING("SÍ"),
+    COMPOUND_STRING("PROHIBIR"),
+    COMPOUND_STRING("PERMITIR"),
 };
 
 static const u8 *const sChoices_RtcFake[] = {
     COMPOUND_STRING("RTC"),
-    COMPOUND_STRING("FALSO"),
+    COMPOUND_STRING("RTC FALSO"),
 };
 
 static const u8 *const sChoices_ShinyChance[] = {
@@ -552,11 +554,11 @@ static const u8 *const sChoices_Nuzlocke[] = {
     COMPOUND_STRING("NO"),
     COMPOUND_STRING("FÁCIL"),
     COMPOUND_STRING("NORMAL"),
-    COMPOUND_STRING("DURO"),
+    COMPOUND_STRING("DIFÍCIL"),
 };
 
 static const u8 *const sChoices_CemeteryRelease[] = {
-    COMPOUND_STRING("CEMENT."),
+    COMPOUND_STRING("CEMENTERIO"),
     COMPOUND_STRING("LIBERAR"),
 };
 
@@ -572,7 +574,7 @@ static const u8 *const sChoices_PartyLimit[] = {
 static const u8 *const sChoices_LevelCap[] = {
     COMPOUND_STRING("NO"),
     COMPOUND_STRING("NORMAL"),
-    COMPOUND_STRING("DURO"),
+    COMPOUND_STRING("DIFÍCIL"),
 };
 
 static const u8 *const sChoices_ExpMult[] = {
@@ -585,14 +587,14 @@ static const u8 *const sChoices_ExpMult[] = {
 static const u8 *const sChoices_TrainerIVs[] = {
     COMPOUND_STRING("NO"),
     COMPOUND_STRING("ESCALA"),
-    COMPOUND_STRING("DURO"),
+    COMPOUND_STRING("DIFÍCIL"),
 };
 
 static const u8 *const sChoices_TrainerEVs[] = {
     COMPOUND_STRING("NO"),
     COMPOUND_STRING("ESCALA"),
-    COMPOUND_STRING("DURO"),
-    COMPOUND_STRING("MÁXIMO"),
+    COMPOUND_STRING("DIFÍCIL"),
+    COMPOUND_STRING("EXTREMO"),
 };
 
 static const u8 *const sChoices_PlayerIVs[] = {
@@ -615,8 +617,8 @@ static const u8 *const sChoices_Expensive[] = {
 
 static const u8 *const sChoices_EvoLimit[] = {
     COMPOUND_STRING("NO"),
-    COMPOUND_STRING("PRIM."),
-    COMPOUND_STRING("TOD"),
+    COMPOUND_STRING("PRIMERO"),
+    COMPOUND_STRING("TODOS"),
 };
 
 static const u8 *const sChoices_BstEqual[] = {
@@ -659,7 +661,7 @@ static const u8 *const sDesc_FeaturesNext[] = {
 
 static const struct ChallengeMenuItem sTabItems_Features[] = {
     [ITEM_FEATURES_RTC_TYPE] = {
-        .name         = COMPOUND_STRING("RELOJ"),
+        .name         = COMPOUND_STRING("TIPO DE RELOJ"),
         .descriptions = sDesc_RtcType,
         .numChoices   = 2,
         .choiceNames  = sChoices_RtcFake,
@@ -671,25 +673,25 @@ static const struct ChallengeMenuItem sTabItems_Features[] = {
         .choiceNames  = sChoices_ShinyChance,
     },
     [ITEM_FEATURES_SHINY_COLOR] = {
-        .name         = COMPOUND_STRING("SHINY ALT"),
+        .name         = COMPOUND_STRING("SHINY ALTERNO"),
         .descriptions = sDesc_ShinyColor,
         .numChoices   = 2,
         .choiceNames  = sChoices_OffOn,
     },
     [ITEM_FEATURES_ITEM_DROP] = {
-        .name         = COMPOUND_STRING("OBJ. CAEN"),
+        .name         = COMPOUND_STRING("OBJETOS CAÍDOS"),
         .descriptions = sDesc_ItemDrop,
         .numChoices   = 2,
         .choiceNames  = sChoices_OffOn,
     },
     [ITEM_FEATURES_FRONTIER_BANS] = {
-        .name         = COMPOUND_STRING("FRONTERA"),
+        .name         = COMPOUND_STRING("PROHIB. FRONTERA"),
         .descriptions = sDesc_FrontierBans,
         .numChoices   = 2,
         .choiceNames  = sChoices_BanUnban,
     },
     [ITEM_FEATURES_NEXT] = {
-        .name         = COMPOUND_STRING("SIG."),
+        .name         = COMPOUND_STRING("SIGUIENTE"),
         .descriptions = sDesc_FeaturesNext,
         .numChoices   = 0,
         .choiceNames  = NULL,
@@ -774,7 +776,7 @@ static const u8 *const sDesc_RandomNext[] = {
 
 static const struct ChallengeMenuItem sTabItems_Randomizer[] = {
     [ITEM_RANDOM_OFF_ON] = {
-        .name         = COMPOUND_STRING("AL AZAR"),
+        .name         = COMPOUND_STRING("ALEATORIZADOR"),
         .descriptions = sDesc_RandomOffOn,
         .numChoices   = 2,
         .choiceNames  = sChoices_OffRandom,
@@ -786,19 +788,19 @@ static const struct ChallengeMenuItem sTabItems_Randomizer[] = {
         .choiceNames  = sChoices_OffRandom,
     },
     [ITEM_RANDOM_WILD_PKMN] = {
-        .name         = COMPOUND_STRING("{PKMN} SALV."),
+        .name         = COMPOUND_STRING("{PKMN} SALVAJE"),
         .descriptions = sDesc_RandomWild,
         .numChoices   = 2,
         .choiceNames  = sChoices_OffRandom,
     },
     [ITEM_RANDOM_MAP_BASED] = {
-        .name         = COMPOUND_STRING("SEMILLA"),
+        .name         = COMPOUND_STRING("SEMILLA POR MAPA"),
         .descriptions = sDesc_RandomMapBased,
         .numChoices   = 2,
         .choiceNames  = sChoices_OffOn,
     },
     [ITEM_RANDOM_TRAINER] = {
-        .name         = COMPOUND_STRING("RIVAL"),
+        .name         = COMPOUND_STRING("ENTRENADOR"),
         .descriptions = sDesc_RandomTrainer,
         .numChoices   = 2,
         .choiceNames  = sChoices_OffRandom,
@@ -810,7 +812,7 @@ static const struct ChallengeMenuItem sTabItems_Randomizer[] = {
         .choiceNames  = sChoices_OffRandom,
     },
     [ITEM_RANDOM_SIMILAR] = {
-        .name         = COMPOUND_STRING("BALANCE"),
+        .name         = COMPOUND_STRING("EQUILIBRIO"),
         .descriptions = sDesc_RandomSimilar,
         .numChoices   = 2,
         .choiceNames  = sChoices_OnOff,
@@ -822,7 +824,7 @@ static const struct ChallengeMenuItem sTabItems_Randomizer[] = {
         .choiceNames  = sChoices_OffOn,
     },
     [ITEM_RANDOM_GEN_SCOPE] = {
-        .name         = COMPOUND_STRING("GENERAC."),
+        .name         = COMPOUND_STRING("GENERACIONES"),
         .descriptions = sDesc_RandomGenScope,
         .numChoices   = 2,
         .choiceNames  = sChoices_GenScope,
@@ -876,7 +878,7 @@ static const struct ChallengeMenuItem sTabItems_Randomizer[] = {
         .choiceNames  = sChoices_OffChaos,
     },
     [ITEM_RANDOM_NEXT] = {
-        .name         = COMPOUND_STRING("SIG."),
+        .name         = COMPOUND_STRING("SIGUIENTE"),
         .descriptions = sDesc_RandomNext,
         .numChoices   = 0,
         .choiceNames  = NULL,
@@ -925,13 +927,13 @@ static const struct ChallengeMenuItem sTabItems_Nuzlocke[] = {
         .choiceNames  = sChoices_Nuzlocke,
     },
     [ITEM_NUZLOCKE_SPECIES_CLAUSE] = {
-        .name         = COMPOUND_STRING("DUPES"),
+        .name         = COMPOUND_STRING("REGLA DUPLICADOS"),
         .descriptions = sDesc_SpeciesClause,
         .numChoices   = 2,
         .choiceNames  = sChoices_OnOff,
     },
     [ITEM_NUZLOCKE_SHINY_CLAUSE] = {
-        .name         = COMPOUND_STRING("SHINY"),
+        .name         = COMPOUND_STRING("REGLA SHINY"),
         .descriptions = sDesc_ShinyClause,
         .numChoices   = 2,
         .choiceNames  = sChoices_OnOff,
@@ -943,19 +945,19 @@ static const struct ChallengeMenuItem sTabItems_Nuzlocke[] = {
         .choiceNames  = sChoices_OnOff,
     },
     [ITEM_NUZLOCKE_DELETION] = {
-        .name         = COMPOUND_STRING("DEBILIT."),
+        .name         = COMPOUND_STRING("DEBILITADOS"),
         .descriptions = sDesc_Deletion,
         .numChoices   = 2,
         .choiceNames  = sChoices_CemeteryRelease,
     },
     [ITEM_NUZLOCKE_RARE_CANDY] = {
-        .name         = COMPOUND_STRING("CARAMELO INF."),
+        .name         = COMPOUND_STRING("CARAMELO RARO INF."),
         .descriptions = sDesc_RareCandy,
         .numChoices   = 2,
         .choiceNames  = sChoices_OnOff,
     },
     [ITEM_NUZLOCKE_NEXT] = {
-        .name         = COMPOUND_STRING("SIG."),
+        .name         = COMPOUND_STRING("SIGUIENTE"),
         .descriptions = sDesc_NuzlockeNext,
         .numChoices   = 0,
         .choiceNames  = NULL,
@@ -977,10 +979,10 @@ static const u8 *const sDesc_LevelCap[] = {
     COMPOUND_STRING("El nivel máximo es el del\n{PKMN} más débil del gimnasio."),
 };
 static const u8 *const sDesc_ExpMult[] = {
-    COMPOUND_STRING("Tus {PKMN} ganan EXP. normal.\nSe suma a la EXP de DURO."),
-    COMPOUND_STRING("¡Tus {PKMN} ganan 50% más EXP!\nSe suma a la de DURO."),
-    COMPOUND_STRING("¡Tus {PKMN} ganan doble EXP!\nSe suma a la de DURO."),
-    COMPOUND_STRING("¡¡Tus {PKMN} ganan CERO EXP!!\nTambién en EXP de DURO."),
+    COMPOUND_STRING("Tus {PKMN} ganan EXP. normal.\nSe suma a la EXP de DIFÍCIL."),
+    COMPOUND_STRING("¡Tus {PKMN} ganan 50% más EXP!\nSe suma a la de DIFÍCIL."),
+    COMPOUND_STRING("¡Tus {PKMN} ganan doble EXP!\nSe suma a la de DIFÍCIL."),
+    COMPOUND_STRING("¡¡Tus {PKMN} ganan CERO EXP!!\nTambién en EXP de DIFÍCIL."),
 };
 static const u8 *const sDesc_ItemPlayer[] = {
     COMPOUND_STRING("Puedes usar objetos en combate."),
@@ -1024,13 +1026,13 @@ static const u8 *const sDesc_DifficultyNext[] = {
 
 static const struct ChallengeMenuItem sTabItems_Difficulty[] = {
     [ITEM_DIFFICULTY_PARTY_LIMIT] = {
-        .name         = COMPOUND_STRING("LÍM. EQUIPO"),
+        .name         = COMPOUND_STRING("LÍMITE EQUIPO"),
         .descriptions = sDesc_PartyLimit,
         .numChoices   = 6,
         .choiceNames  = sChoices_PartyLimit,
     },
     [ITEM_DIFFICULTY_LEVEL_CAP] = {
-        .name         = COMPOUND_STRING("LÍM. NIVEL"),
+        .name         = COMPOUND_STRING("LÍMITE NIVEL"),
         .descriptions = sDesc_LevelCap,
         .numChoices   = 3,
         .choiceNames  = sChoices_LevelCap,
@@ -1078,19 +1080,19 @@ static const struct ChallengeMenuItem sTabItems_Difficulty[] = {
         .choiceNames  = sChoices_TrainerEVs,
     },
     [ITEM_DIFFICULTY_LESS_ESCAPES] = {
-        .name         = COMPOUND_STRING("HUIDAS DIFÍC."),
+        .name         = COMPOUND_STRING("HUIDAS DIFÍCILES"),
         .descriptions = sDesc_LessEscapes,
         .numChoices   = 2,
         .choiceNames  = sChoices_OffOn,
     },
     [ITEM_DIFFICULTY_ESCAPE_ROPE_DIG] = {
-        .name         = COMPOUND_STRING("CUERDA/EXCAV."),
+        .name         = COMPOUND_STRING("CUERDA / EXCAVAR"),
         .descriptions = sDesc_EscapeRopeDig,
         .numChoices   = 2,
         .choiceNames  = sChoices_YesNo,
     },
     [ITEM_DIFFICULTY_NEXT] = {
-        .name         = COMPOUND_STRING("SIG."),
+        .name         = COMPOUND_STRING("SIGUIENTE"),
         .descriptions = sDesc_DifficultyNext,
         .numChoices   = 0,
         .choiceNames  = NULL,
@@ -1169,7 +1171,7 @@ static const struct ChallengeMenuItem sTabItems_Challenges[] = {
         .choiceNames  = NULL,
     },
     [ITEM_CHALLENGES_BST_EQUALIZER] = {
-        .name         = COMPOUND_STRING("IGUALAR EST."),
+        .name         = COMPOUND_STRING("IGUALAR ESTADÍS."),
         .descriptions = sDesc_BstEqualizer,
         .numChoices   = 4,
         .choiceNames  = sChoices_BstEqual,
@@ -1208,7 +1210,7 @@ struct TabDef
 static const struct TabDef sTabs[TAB_COUNT] = {
     [TAB_MODE]       = { COMPOUND_STRING("MODO"),       sTabItems_Mode,       ITEM_MODE_COUNT },
     [TAB_FEATURES]   = { COMPOUND_STRING("AJUSTES"),   sTabItems_Features,   ITEM_FEATURES_COUNT },
-    [TAB_RANDOMIZER] = { COMPOUND_STRING("AL AZAR"), sTabItems_Randomizer, ITEM_RANDOM_COUNT },
+    [TAB_RANDOMIZER] = { COMPOUND_STRING("ALEATORIZADOR"), sTabItems_Randomizer, ITEM_RANDOM_COUNT },
     [TAB_NUZLOCKE]   = { COMPOUND_STRING("NUZLOCKE"),   sTabItems_Nuzlocke,   ITEM_NUZLOCKE_COUNT },
     [TAB_DIFFICULTY] = { COMPOUND_STRING("DIFICULTAD"),  sTabItems_Difficulty, ITEM_DIFFICULTY_COUNT },
     [TAB_CHALLENGES] = { COMPOUND_STRING("RETOS"), sTabItems_Challenges, ITEM_CHALLENGES_COUNT },
@@ -1415,30 +1417,29 @@ static void DrawRightSideChoiceText(const u8 *text, int x, int y, bool8 chosen, 
         color[1] = chosen ? TEXT_COLOR_OPTIONS_RED_DARK_FG : TEXT_COLOR_OPTIONS_GRAY_LIGHT_FG;
         color[2] = chosen ? TEXT_COLOR_OPTIONS_RED_DARK_SHADOW : TEXT_COLOR_OPTIONS_GRAY_SHADOW;
     }
-    AddTextPrinterParameterized4(WIN_OPTIONS, FONT_NORMAL, x, y, 0, 0, color, TEXT_SKIP_DRAW, text);
+    AddTextPrinterParameterized4(WIN_OPTIONS, FONT_SMALL, x, y + 1, 0, 0, color, TEXT_SKIP_DRAW, text);
 }
 
 static int GetMiddleX(const u8 *txt1, const u8 *txt2, const u8 *txt3)
 {
-    int widthLeft = GetStringWidth(FONT_NORMAL, txt1, 0);
-    int widthMid = GetStringWidth(FONT_NORMAL, txt2, 0);
-    int widthRight = GetStringWidth(FONT_NORMAL, txt3, 0);
-    widthMid -= (198 - 104);
-    return (widthLeft - widthMid - widthRight) / 2 + 104;
+    int widthLeft = GetStringWidth(FONT_SMALL, txt1, 0);
+    int widthMid = GetStringWidth(FONT_SMALL, txt2, 0);
+    int widthRight = GetStringWidth(FONT_SMALL, txt3, 0);
+    return (VALUE_X_END - widthMid) / 2 + VALUE_X_START;
 }
 
 static void DrawChoices_Two(const u8 *const *strings, int selection, int y, bool8 active, int leftX)
 {
     DrawRightSideChoiceText(strings[0], leftX, y + 1, selection == 0, active);
-    DrawRightSideChoiceText(strings[1], GetStringRightAlignXOffset(FONT_NORMAL, strings[1], 198), y + 1, selection == 1, active);
+    DrawRightSideChoiceText(strings[1], GetStringRightAlignXOffset(FONT_SMALL, strings[1], VALUE_X_END), y + 1, selection == 1, active);
 }
 
 static void DrawChoices_Three(const u8 *const *strings, int selection, int y, bool8 active)
 {
     static const u8 orders[][2] = { {0, 1}, {1, 2}, {1, 2} };
     const u8 *order = orders[selection];
-    DrawRightSideChoiceText(strings[order[0]], 104, y + 1, selection == order[0], active);
-    DrawRightSideChoiceText(strings[order[1]], GetStringRightAlignXOffset(FONT_NORMAL, strings[order[1]], 198), y + 1, selection == order[1], active);
+    DrawRightSideChoiceText(strings[order[0]], VALUE_X_START, y + 1, selection == order[0], active);
+    DrawRightSideChoiceText(strings[order[1]], GetStringRightAlignXOffset(FONT_SMALL, strings[order[1]], VALUE_X_END), y + 1, selection == order[1], active);
 }
 
 static void DrawChoices_Four(const u8 *const *strings, int selection, int y, bool8 active)
@@ -1446,9 +1447,9 @@ static void DrawChoices_Four(const u8 *const *strings, int selection, int y, boo
     static const u8 orders[][3] = { {0, 1, 2}, {0, 1, 2}, {1, 2, 3}, {1, 2, 3} };
     const u8 *order = orders[selection];
     int xMid = GetMiddleX(strings[order[0]], strings[order[1]], strings[order[2]]);
-    DrawRightSideChoiceText(strings[order[0]], 104, y + 1, selection == order[0], active);
+    DrawRightSideChoiceText(strings[order[0]], VALUE_X_START, y + 1, selection == order[0], active);
     DrawRightSideChoiceText(strings[order[1]], xMid, y + 1, selection == order[1], active);
-    DrawRightSideChoiceText(strings[order[2]], GetStringRightAlignXOffset(FONT_NORMAL, strings[order[2]], 198), y + 1, selection == order[2], active);
+    DrawRightSideChoiceText(strings[order[2]], GetStringRightAlignXOffset(FONT_SMALL, strings[order[2]], VALUE_X_END), y + 1, selection == order[2], active);
 }
 
 static void DrawChoices_Five(const u8 *const *strings, int selection, int y, bool8 active)
@@ -1456,9 +1457,9 @@ static void DrawChoices_Five(const u8 *const *strings, int selection, int y, boo
     static const u8 orders[][3] = { {0, 1, 2}, {0, 1, 2}, {1, 2, 3}, {2, 3, 4}, {2, 3, 4} };
     const u8 *order = orders[selection];
     int xMid = GetMiddleX(strings[order[0]], strings[order[1]], strings[order[2]]);
-    DrawRightSideChoiceText(strings[order[0]], 104, y + 1, selection == order[0], active);
+    DrawRightSideChoiceText(strings[order[0]], VALUE_X_START, y + 1, selection == order[0], active);
     DrawRightSideChoiceText(strings[order[1]], xMid, y + 1, selection == order[1], active);
-    DrawRightSideChoiceText(strings[order[2]], GetStringRightAlignXOffset(FONT_NORMAL, strings[order[2]], 198), y + 1, selection == order[2], active);
+    DrawRightSideChoiceText(strings[order[2]], GetStringRightAlignXOffset(FONT_SMALL, strings[order[2]], VALUE_X_END), y + 1, selection == order[2], active);
 }
 
 static void DrawChoices_Six(const u8 *const *strings, int selection, int y, bool8 active)
@@ -1466,9 +1467,9 @@ static void DrawChoices_Six(const u8 *const *strings, int selection, int y, bool
     static const u8 orders[][3] = { {0, 1, 2}, {0, 1, 2}, {1, 2, 3}, {2, 3, 4}, {3, 4, 5}, {3, 4, 5} };
     const u8 *order = orders[selection];
     int xMid = GetMiddleX(strings[order[0]], strings[order[1]], strings[order[2]]);
-    DrawRightSideChoiceText(strings[order[0]], 104, y + 1, selection == order[0], active);
+    DrawRightSideChoiceText(strings[order[0]], VALUE_X_START, y + 1, selection == order[0], active);
     DrawRightSideChoiceText(strings[order[1]], xMid, y + 1, selection == order[1], active);
-    DrawRightSideChoiceText(strings[order[2]], GetStringRightAlignXOffset(FONT_NORMAL, strings[order[2]], 198), y + 1, selection == order[2], active);
+    DrawRightSideChoiceText(strings[order[2]], GetStringRightAlignXOffset(FONT_SMALL, strings[order[2]], VALUE_X_END), y + 1, selection == order[2], active);
 }
 
 // =============================================================================
@@ -1498,7 +1499,7 @@ static void ChallengeMenu_ItemPrintFunc(u8 windowId, u32 itemId, u8 y)
     if (!active)
     {
         u8 color[3] = { TEXT_COLOR_TRANSPARENT, TEXT_COLOR_OPTIONS_GRAY_LIGHT_FG, TEXT_COLOR_OPTIONS_GRAY_SHADOW };
-        AddTextPrinterParameterized4(windowId, FONT_NORMAL, 8, y + 1, 0, 0, color, TEXT_SKIP_DRAW, items[itemId].name);
+        AddTextPrinterParameterized4(windowId, FONT_SMALL, 8, y + 1, 0, 0, color, TEXT_SKIP_DRAW, items[itemId].name);
     }
 
     u8 sel = *GetSelectionPtr(sMenu->currentTab, itemId);
@@ -1508,7 +1509,7 @@ static void ChallengeMenu_ItemPrintFunc(u8 windowId, u32 itemId, u8 y)
     {
         u8 n = sel;
         const u8 *text;
-        static const u8 sText_Random[] = _("AZAR");
+        static const u8 sText_Random[] = _("ALEATORIO");
         static const u8 sText_Off[] = _("NO");
         if (n > 18)
             text = sText_Off;
@@ -1518,7 +1519,7 @@ static void ChallengeMenu_ItemPrintFunc(u8 windowId, u32 itemId, u8 y)
             text = gTypesInfo[n + 2].name;
         else
             text = gTypesInfo[n + 1].name;
-        DrawRightSideChoiceText(text, GetStringRightAlignXOffset(FONT_NORMAL, text, 198), y + 1, TRUE, active);
+        DrawRightSideChoiceText(text, GetStringRightAlignXOffset(FONT_SMALL, text, VALUE_X_END), y + 1, TRUE, active);
         return;
     }
 
@@ -1532,7 +1533,7 @@ static void ChallengeMenu_ItemPrintFunc(u8 windowId, u32 itemId, u8 y)
     {
     case 2:
     {
-        int leftX = (sMenu->currentTab == TAB_MODE && itemId == ITEM_MODE_GAMEMODE) ? 74 : 104;
+        int leftX = (sMenu->currentTab == TAB_MODE && itemId == ITEM_MODE_GAMEMODE) ? VALUE_X_START - 34 : VALUE_X_START;
         DrawChoices_Two(items[itemId].choiceNames, sel, y, active, leftX);
         break;
     }
@@ -1551,7 +1552,7 @@ static void ChallengeMenu_ItemPrintFunc(u8 windowId, u32 itemId, u8 y)
     default:
     {
         const u8 *choiceStr = items[itemId].choiceNames[sel];
-        u8 x = GetStringRightAlignXOffset(FONT_NORMAL, choiceStr, 198);
+        u8 x = GetStringRightAlignXOffset(FONT_SMALL, choiceStr, VALUE_X_END);
         DrawRightSideChoiceText(choiceStr, x, y + 1, TRUE, active);
         break;
     }
@@ -1591,7 +1592,7 @@ static void InitListMenu(void)
     template.lettersSpacing = 0;
     template.itemVerticalPadding = 0;
     template.scrollMultiple = LIST_NO_MULTIPLE_SCROLL;
-    template.fontId = FONT_NORMAL;
+    template.fontId = FONT_SMALL;
     template.cursorKind = CURSOR_INVISIBLE;
 
     sMenu->listTaskId = ListMenuInit(&template,
