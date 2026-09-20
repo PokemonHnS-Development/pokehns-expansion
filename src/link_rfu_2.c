@@ -245,7 +245,7 @@ static const char sASCII_RfuCmds[][15] = {
     "RFU CP POLL"
 };
 
-static const char sASCII_RecoverCmds[][16] = {
+static const char sASCII_RecoverCmds[][28] = {
     "              ",
     "RECOVER START ",
     "DISSCONECT    ",

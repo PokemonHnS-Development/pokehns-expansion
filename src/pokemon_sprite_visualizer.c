@@ -157,7 +157,7 @@ static const struct WindowTemplate sPokemonSpriteVisualizerWindowTemplate[] =
 };
 
 //Lookup tables
-const u8 gBackAnimNames[][23 + 1] =
+const u8 gBackAnimNames[][40] =
 {
     [BACK_ANIM_NONE]                    = _("NONE"),
     [BACK_ANIM_H_VIBRATE]               = _("VIBR. HORIZ."),
