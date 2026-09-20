@@ -408,7 +408,7 @@ Route120_Text_StevenGoodbye:
 	.string "Well, let's meet again somewhere.$"
 
 Kecleon_Text_SomethingUnseeable:
-	.string "Something unseeable is in the way.$"
+	.string "Algo invisible bloquea el paso.$"
 
 Kecleon_Text_WantToUseDevonScope:
 	.string "Algo invisible bloquea el camino.\p"

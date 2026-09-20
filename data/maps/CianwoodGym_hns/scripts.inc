@@ -195,7 +195,7 @@ CianwoodGym_Text_BlackbeltYoshiSeen:
 	.string "¡Nuestro vínculo jamás se romperá!$"
 
 CianwoodGym_Text_BlackbeltYoshiBeaten:
-	.string "This isn't real!$"
+	.string "¡Esto no es real!$"
 
 CianwoodGym_Text_BlackbeltYoshiAfter:
 	.string "¡Tú también pareces tener un vínculo\n"

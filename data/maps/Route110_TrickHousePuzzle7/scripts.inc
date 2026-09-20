@@ -362,7 +362,7 @@ Route110_TrickHousePuzzle7_Text_MarielaIntro:
 	.string "¡Vayamos directo al grano!$"
 
 Route110_TrickHousePuzzle7_Text_MarielaDefeat:
-	.string "You're so casual about winning!$"
+	.string "¡Ganas como si nada!$"
 
 Route110_TrickHousePuzzle7_Text_MarielaPostBattle:
 	.string "¡Humph! ¡No estoy molesto!\n"
@@ -384,7 +384,7 @@ Route110_TrickHousePuzzle7_Text_EverettIntro:
 	.string "It's awfully cramped in here…$"
 
 Route110_TrickHousePuzzle7_Text_EverettDefeat:
-	.string "Oh, yes, strong you are.$"
+	.string "Ah, sí, eres muy fuerte.$"
 
 Route110_TrickHousePuzzle7_Text_EverettPostBattle:
 	.string "Esperaba cambiar de lugar contigo\n"

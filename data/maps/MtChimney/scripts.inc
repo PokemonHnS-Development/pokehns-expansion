@@ -790,7 +790,7 @@ MtChimney_Text_MelissaIntro:
 	.string "¡No aguanto más! ¡Tengo que luchar!$"
 
 MtChimney_Text_MelissaDefeat:
-	.string "Ooh, that was a scorching-hot match!$"
+	.string "¡Oh, qué combate tan candente!$"
 
 MtChimney_Text_MelissaPostBattle:
 	.string "El calor del MT. CHIMNEY me\n"

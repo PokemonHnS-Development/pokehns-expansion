@@ -38,7 +38,7 @@ PacifidlogTown_House4_Text_SkyPokemon:
 	.string "¡Un POKéMON del cielo!$"
 
 PacifidlogTown_House4_Text_WhereDidYouComeFrom:
-	.string "Where did you come from?$"
+	.string "¿De dónde vienes?$"
 
 PacifidlogTown_House4_Text_YesTown:
 	.string "¿Sí?\n"

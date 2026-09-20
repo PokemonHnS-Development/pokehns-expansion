@@ -138,7 +138,7 @@ ProfileMan_Text_YouHaveWonderfulSmile:
 	.string "Tienes una sonrisa maravillosa.$"
 
 ProfileMan_Text_MayISeeYourNewProfile:
-	.string "May I see your new profile?$"
+	.string "¿Puedo ver tu nuevo perfil?$"
 
 ProfileMan_Text_EvenBetterThanLastProfile:
 	.string "¡Sí! ¡Muchas gracias!\p"

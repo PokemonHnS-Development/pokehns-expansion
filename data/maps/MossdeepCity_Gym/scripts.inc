@@ -467,7 +467,7 @@ MossdeepCity_Gym_Text_MauraIntro:
 	.string "aprendido!$"
 
 MossdeepCity_Gym_Text_MauraDefeat:
-	.string "You've traveled a path of greatness!$"
+	.string "¡Has recorrido un camino de grandeza!$"
 
 MossdeepCity_Gym_Text_MauraPostBattle:
 	.string "Un futuro brillante espera a quien\n"

@@ -187,7 +187,7 @@ MtMoon_B2F_Text_Grunt3Intro::
 	.string "Get lost, kid!$"
 
 MtMoon_B2F_Text_Grunt3Defeat::
-	.string "So, you are good…$"
+	.string "Vaya, eres muy hábil…$"
 
 MtMoon_B2F_Text_Grunt3PostBattle::
 	.string "If you find a fossil, give it to me\n"
@@ -206,10 +206,10 @@ MtMoon_B2F_Text_Grunt4PostBattle::
 	.string "people came.$"
 
 MtMoon_B2F_Text_YouWantDomeFossil::
-	.string "Do you want the DOME FOSSIL?$"
+	.string "¿Quieres el FÓSIL DOMO?$"
 
 MtMoon_B2F_Text_YouWantHelixFossil::
-	.string "Do you want the HELIX FOSSIL?$"
+	.string "¿Quieres el FÓSIL HÉLIX?$"
 
 MtMoon_B2F_Text_ObtainedHelixFossil::
 	.string "Obtained the HELIX FOSSIL!$"

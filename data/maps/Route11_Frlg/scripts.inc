@@ -43,7 +43,7 @@ Route11_Text_BraxtonIntro::
 	.string "I'm laying down some cables!$"
 
 Route11_Text_BraxtonDefeat::
-	.string "That was electric!$"
+	.string "¡Eso fue electrizante!$"
 
 Route11_Text_BraxtonPostBattle::
 	.string "Spread the word to save energy!$"
@@ -68,10 +68,10 @@ Route11_Text_DirkDefeat::
 	.string "My first loss!$"
 
 Route11_Text_DirkPostBattle::
-	.string "You were just lucky, that's all.$"
+	.string "Solo tuviste suerte, eso es todo.$"
 
 Route11_Text_DarianIntro::
-	.string "I have never won before…$"
+	.string "Nunca había ganado antes…$"
 
 Route11_Text_DarianDefeat::
 	.string "I saw this coming…$"

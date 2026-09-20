@@ -220,7 +220,7 @@ TohjoFalls_GiovanniRoom_Text_GiovanniBeforeBattle:
 	.string "three years ago!$"
 
 TohjoFalls_GiovanniRoom_Text_GiovanniDefeat:
-	.string "What in the world are you?$"
+	.string "¿Qué diablos eres?$"
 
 TohjoFalls_GiovanniRoom_Text_GiovanniAfter:
 	.string "GIOVANNI: How is this possible...?\n"

@@ -326,7 +326,7 @@ Route103_Text_BrendanLetsBattle:
 	.string "¡sobre eso!$"
 
 Route103_Text_BrendanDefeated:
-	.string "Huh, {PLAYER}, you're not too shabby.$"
+	.string "Vaya, {PLAYER}, no estás nada mal.$"
 
 Route103_Text_BrendanTimeToHeadBack:
 	.string "BRENDAN: Creo que lo entiendo.\n"

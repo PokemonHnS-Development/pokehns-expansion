@@ -65,7 +65,7 @@ FuchsiaCity_House3_Text_WhichMonShouldForgetMove::
 	.string "move?$"
 
 FuchsiaCity_House3_Text_WhichMoveShouldBeForgotten::
-	.string "Which move should be forgotten?$"
+	.string "¿Qué movimiento se debe olvidar?$"
 
 FuchsiaCity_House3_Text_MonOnlyKnowsOneMove::
 	.string "{STR_VAR_1} seems to know only one\n"

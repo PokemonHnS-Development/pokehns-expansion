@@ -276,7 +276,7 @@ MossdeepCity_SpaceCenter_1F_Movement_MoveGruntFromStairs:
 	step_end
 
 MossdeepCity_SpaceCenter_1F_Text_RocketLaunchImminent:
-	.string "The rocket's launch is imminent!$"
+	.string "¡El cohete despegará pronto!$"
 
 MossdeepCity_SpaceCenter_1F_Text_SuccessfulLaunchNumber:
 	.string "¡El cohete despegó con éxito!\n"
@@ -285,7 +285,7 @@ MossdeepCity_SpaceCenter_1F_Text_SuccessfulLaunchNumber:
 MossdeepCity_SpaceCenter_1F_Text_HaywireButRocketLaunchImminent:
 	.string "Sé que las cosas están un poco\n"
 	.string "caóticas ahora mismo, pero...\p"
-	.string "The rocket's launch is imminent!$"
+	.string "¡El cohete despegará pronto!$"
 
 MossdeepCity_SpaceCenter_1F_Text_HaywireButSuccessfulLaunchNumber:
 	.string "Sé que las cosas están un poco\n"

@@ -258,7 +258,7 @@ Copycat_Text_Male_3:
 	.string "my every move?$"
 
 Copycat_Text_ItsAScream:
-	.string "COPYCAT: You bet! It's a scream!$"
+	.string "COPYCAT: ¡Claro! ¡Es muy divertido!$"
 
 Copycat_Text_Dodrio1:
 	.string "DODRIO: Gii giii!$"

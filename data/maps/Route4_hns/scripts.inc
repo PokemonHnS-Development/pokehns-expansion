@@ -52,7 +52,7 @@ Route4_Text_PicnickerHope_Seen:
 	.string "Let's see if I'm right!$"
 
 Route4_Text_PicnickerHope_Beaten:
-	.string "Aww, you are too strong.$"
+	.string "Ay, eres demasiado fuerte.$"
 
 Route4_Text_PicnickerHope_AfterBattle:
 	.string "I heard CLEFAIRY appear at MT.MOON.\p"

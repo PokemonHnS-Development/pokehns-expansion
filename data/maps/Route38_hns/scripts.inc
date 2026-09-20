@@ -181,7 +181,7 @@ Route38_Text_SailorHarrySeen:
 	.string "POKéMON!$"
 
 Route38_Text_SailorHarryBeaten:
-	.string "Your skill is world class!$"
+	.string "¡Tu habilidad es de clase mundial!$"
 
 Route38_Text_SailorHarryAfter:
 	.string "All kinds of people around\n"

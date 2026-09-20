@@ -666,7 +666,7 @@ Route25_Text_WayneRematchIntro::
 	.string "¡Primero, luchamos!$"
 
 Route24_Text_ShaneRematchIntro::
-	.string "I saw your feat from the grass!$"
+	.string "¡Vi tu hazaña desde el pasto!$"
 
 Route24_Text_EthanRematchIntro::
 	.string "¡Está bien!\n"
@@ -752,7 +752,7 @@ OneIsland_KindleRoad_Text_MikRematchIntro::
 	.string "We'll prove it to you this time!$"
 
 ThreeIsland_BondBridge_Text_NikkiRematchIntro::
-	.string "Are we to battle again?$"
+	.string "¿Volvemos a combatir?$"
 
 ThreeIsland_BondBridge_Text_VioletRematchIntro::
 	.string "From where have you come, and\n"
@@ -901,7 +901,7 @@ SixIsland_RuinValley_Text_LarryRematchIntro::
 	.string "we last met?$"
 
 SixIsland_RuinValley_Text_DarylRematchIntro::
-	.string "A rematch with you, so high up!$"
+	.string "¡Una revancha contigo, tan arriba!$"
 
 SixIsland_RuinValley_Text_HectorRematchIntro::
 	.string "I'm pretty familiar with the land\n"

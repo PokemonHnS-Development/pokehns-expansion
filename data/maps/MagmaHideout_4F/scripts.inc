@@ -137,7 +137,7 @@ MagmaHideout_4F_Text_Grunt11Defeat:
 	.string "no mantiene la calma...$"
 
 MagmaHideout_4F_Text_Grunt11PostBattle:
-	.string "I wonder if GROUDON even has a tail?$"
+	.string "¿Me pregunto si GROUDON tiene cola?$"
 
 MagmaHideout_4F_Text_Grunt12Intro:
 	.string "¡Fuhahaha!\n"
@@ -157,7 +157,7 @@ MagmaHideout_4F_Text_Grunt13Intro:
 	.string "¡No pasarás por aquí tan fácil!$"
 
 MagmaHideout_4F_Text_Grunt13Defeat:
-	.string "Was I that easy to knock down?$"
+	.string "¿Fui tan fácil de derribar?$"
 
 MagmaHideout_4F_Text_Grunt13PostBattle:
 	.string "C-come on, one more match…$"

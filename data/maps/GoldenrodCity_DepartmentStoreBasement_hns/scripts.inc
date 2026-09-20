@@ -182,7 +182,7 @@ GoldenrodCity_DepartmentStoreBasement_Movement_Boulder3:
 
 
 GoldenrodDeptStore_Text_BlackBeltMove:
-	.string "MACHOKE, help us move that boulder!$"
+	.string "¡MACHOKE, ayúdanos a mover esa roca!$"
 
 GoldenrodDeptStore_Text_B1FBlackBelt1:
     .string "¡Oye, niño! ¡Nos estorbas!\p"

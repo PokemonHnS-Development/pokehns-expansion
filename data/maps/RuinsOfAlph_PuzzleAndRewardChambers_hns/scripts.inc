@@ -371,14 +371,14 @@ RuinsOfAlph_PuzzleAndRewardChambers_EventScript_RewardGotten::
 
 RuinsOfAlph_PuzzleAndRewardChambers_Text_Reward:
 	.string "The chamber reacts!\n"
-	.string "The way is open.$"
+	.string "El camino está abierto.$"
 
 RuinsOfAlph_PuzzleAndRewardChambers_Text_Mon:
 	.string "Some kind of ancient sensor.\n"
 	.string "What is it looking for?$"
 
 RuinsOfAlph_PuzzleAndRewardChambers_Text_Solved:
-	.string "The way is open.$"
+	.string "El camino está abierto.$"
 
 RuinsOfAlph_PuzzleAndRewardChambers_Text_Receptionist1:
 	.string "Welcome to this chamber.\p"

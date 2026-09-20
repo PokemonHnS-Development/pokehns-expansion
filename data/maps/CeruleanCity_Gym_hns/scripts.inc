@@ -271,14 +271,14 @@ CeruleanGym_Text_MistyRematch:
 	.string "¿Quieres otra revancha conmigo?$"
 
 CeruleanGym_Text_MistyRematchDefeat:
-	.string "MISTY: You really are good…$"
+	.string "MISTY: Eres realmente bueno…$"
 
 CeruleanGym_Text_SwimmerfDianaSeen:
 	.string "Siento haberme ido. ¡Que\n"
 	.string "empiece la batalla!$"
 
 CeruleanGym_Text_SwimmerfDianaBeaten:
-	.string "I give up! You're the winner!$"
+	.string "¡Me rindo! ¡Tú ganas!$"
 
 CeruleanGym_Text_SwimmerfDianaAfter:
 	.string "I'll be swimming quietly.$"
@@ -288,7 +288,7 @@ CeruleanGym_Text_SwimmerfBrianaSeen:
 	.string "ponga nervioso.$"
 
 CeruleanGym_Text_SwimmerfBrianaBeaten:
-	.string "Ooh, you calmly disposed of me…$"
+	.string "Vaya, me venciste con calma…$"
 
 CeruleanGym_Text_SwimmerfBrianaAfter:
 	.string "No presumas por haber ganado,\n"
@@ -301,7 +301,7 @@ CeruleanGym_Text_SwimmermParkerSeen:
 	.string "¡Yo voy primero! ¡Atrápame!$"
 
 CeruleanGym_Text_SwimmermParkerBeaten:
-	.string "This can't be…$"
+	.string "Esto no puede ser…$"
 
 CeruleanGym_Text_SwimmermParkerAfter:
 	.string "MISTY ha mejorado mucho en\n"

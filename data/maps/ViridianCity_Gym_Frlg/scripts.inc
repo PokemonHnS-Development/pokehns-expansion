@@ -156,7 +156,7 @@ ViridianCity_Gym_Text_ExplainTM26::
 	.string "far too long ago… $"
 
 ViridianCity_Gym_Text_YouDoNotHaveSpace::
-	.string "You do not have space for this!$"
+	.string "¡No tienes espacio para esto!$"
 
 ViridianCity_Gym_Text_YujiIntro::
 	.string "Heh!\n"
@@ -185,7 +185,7 @@ ViridianCity_Gym_Text_JasonIntro::
 	.string "music together!$"
 
 ViridianCity_Gym_Text_JasonDefeat::
-	.string "You are in perfect harmony!$"
+	.string "¡Estás en perfecta armonía!$"
 
 ViridianCity_Gym_Text_JasonPostBattle::
 	.string "Do you know the identity of our\n"
@@ -203,7 +203,7 @@ ViridianCity_Gym_Text_KiyoPostBattle::
 	.string "karate as I…$"
 
 ViridianCity_Gym_Text_WarrenIntro::
-	.string "The truly talented win with style.$"
+	.string "Solo los de talento ganan con estilo.$"
 
 ViridianCity_Gym_Text_WarrenDefeat::
 	.string "I lost my grip!$"

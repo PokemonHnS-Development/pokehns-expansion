@@ -249,7 +249,7 @@ BattleFrontier_ScottsHouse_Text_ExplainBattlePoints:
 	.string "quieras, como canjearlos por objetos.$"
 
 BattleFrontier_ScottsHouse_Text_ExpectingGreatThings:
-	.string "I'm expecting great things from you!$"
+	.string "¡Espero grandes cosas de ti!$"
 
 BattleFrontier_ScottsHouse_Text_WhyIGoSeekingTrainers:
 	.string "SCOTT: Cada ENTRENADOR es único.\n"

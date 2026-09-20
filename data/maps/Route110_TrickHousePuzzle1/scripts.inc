@@ -48,7 +48,7 @@ Route110_TrickHousePuzzle1_Text_SallyIntro:
 	.string "con el CORTE que aprendimos!$"
 
 Route110_TrickHousePuzzle1_Text_SallyDefeat:
-	.string "Why are you so serious?$"
+	.string "¿Por qué estás tan serio?$"
 
 Route110_TrickHousePuzzle1_Text_SallyPostBattle:
 	.string "Nunca me canso de cortar\n"
@@ -66,7 +66,7 @@ Route110_TrickHousePuzzle1_Text_EddiePostBattle:
 	.string "now even more lost… I can't get out…$"
 
 Route110_TrickHousePuzzle1_Text_RobinIntro:
-	.string "Just who is the TRICK MASTER?$"
+	.string "¿Quién es el MAESTRO DE LOS TRUCOS?$"
 
 Route110_TrickHousePuzzle1_Text_RobinDefeat:
 	.string "I lost while I was lost in thought!$"

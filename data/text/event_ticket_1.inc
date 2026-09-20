@@ -38,7 +38,7 @@ EventTicket_Text_SailHome:
 	.string "Sail home we will!$"
 
 EventTicket_Text_AsYouLike:
-	.string "Aye, right, as you like, then.$"
+	.string "Bien, como quieras, entonces.$"
 
 SouthernIsland_Interior_Text_Sign:
 	.string "“All dreams are but another reality.\n"

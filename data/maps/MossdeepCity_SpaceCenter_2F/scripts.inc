@@ -458,7 +458,7 @@ MossdeepCity_SpaceCenter_2F_Text_JustWantToExpandLand:
 	.string "Solo quiero expandir la tierra...$"
 
 MossdeepCity_SpaceCenter_Text_TabithaDefeat:
-	.string "I'm with our leader…$"
+	.string "Estoy con nuestro líder…$"
 
 MossdeepCity_SpaceCenter_2F_Text_MaxieWeFailedIsAquaAlsoMisguided:
 	.string "MAXIE: Fallamos al hacer que el\n"

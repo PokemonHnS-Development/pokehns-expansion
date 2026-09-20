@@ -828,7 +828,7 @@ BattleFrontier_BattlePikeRoomNormal_Text_WillRestoreAllMons_hns:
 	.string "curaré a todos tus POKéMON…$"
 
 BattleFrontier_BattlePikeRoomNormal_Text_ShallFetchOurMaster_hns:
-	.string "I shall go fetch our master…$"
+	.string "Iré a buscar a nuestro maestro…$"
 
 BattleFrontier_BattlePikeRoomNormal_Text_WillRestoreTwoMons_hns:
 	.string "¡Ah, tienes mucha suerte!\n"

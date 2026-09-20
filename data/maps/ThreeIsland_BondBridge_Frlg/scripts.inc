@@ -95,7 +95,7 @@ ThreeIsland_BondBridge_Text_MegDefeat::
 	.string "JOY!$"
 
 ThreeIsland_BondBridge_Text_MegPostBattle::
-	.string "MEG: JOY, wasn't that fun?$"
+	.string "MEG: JOY, ¿no fue divertido?$"
 
 ThreeIsland_BondBridge_Text_MegNotEnoughMons::
 	.string "MEG: I want to battle together\n"

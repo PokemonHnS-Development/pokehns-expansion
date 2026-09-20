@@ -132,7 +132,7 @@ VioletCity_PokeCenter_Text_ElmsAideGiveEgg:
 	.string "we can rely on.$"
 
 VioletCity_PokeCenter_Text_ElmsAideGiveItem:
-	.string "Oh, and this might help when it hatches.$"
+	.string "Ah, y esto puede ayudar cuando nazca.$"
 
 VioletCity_PokeCenter_Text_ElmsAideFullParty:
 	.string "Oh, no. You can't carry any more\n"

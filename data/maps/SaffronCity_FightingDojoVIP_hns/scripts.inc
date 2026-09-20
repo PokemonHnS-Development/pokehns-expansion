@@ -23,7 +23,7 @@ SaffronCity_FightingDojoVIP_Text_Nurse1:
 	.string "I will heal your POKéMON.$"
 
 SaffronCity_FightingDojoVIP_Text_Nurse2:
-	.string "We hope to see you again!$"
+	.string "¡Esperamos volver a verte!$"
 
 
 SaffronCity_FightingDojoVIP_EventScript_Declined::
@@ -844,7 +844,7 @@ SaffronCity_FightingDojoVIP_Text_Misty_Rematch:
 	.string "¿Quieres otra revancha conmigo?$"
 
 SaffronCity_FightingDojoVIP_Text_Misty_RematchDefeat:
-	.string "MISTY: You really are good…$"
+	.string "MISTY: Eres realmente bueno…$"
 
 SaffronCity_FightingDojoVIP_Text_Surge_Rematch:
 	.string "SURGE: ¡Así que ahora eres el\n"

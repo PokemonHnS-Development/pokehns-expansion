@@ -62,7 +62,7 @@ Route5_PokemonDayCare_Text_YouveGotNoRoomForIt::
 	.string "if you've got no room for it.$"
 
 Route5_PokemonDayCare_Text_DontHaveEnoughMoney::
-	.string "You don't have enough money.$"
+	.string "No tienes suficiente dinero.$"
 
 Route5_PokemonDayCare_Text_WantMeToTakeALookAtYours::
 	.string "きみの\n"

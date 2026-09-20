@@ -70,7 +70,7 @@ Route9_Text_PicnickerHeidiAfter:
 	.string "¡Están deliciosos!$"
 
 Route9_Text_CamperSidSeen:
-	.string "Hey, you! Don't litter!$"
+	.string "¡Oye, tú! ¡No tires basura!$"
 
 Route9_Text_CamperSidBeaten:
 	.string "I was just pointing out…$"
@@ -100,7 +100,7 @@ Route9_Text_HikerTimBeaten:
 	.string "I was too busy singing…$"
 
 Route9_Text_HikerTimAfter:
-	.string "Battles are about concentration.$"
+	.string "La concentración es clave en combate.$"
 
 Route9_Text_HikerSidneySeen:
 	.string "Te contaré un secreto.\p"

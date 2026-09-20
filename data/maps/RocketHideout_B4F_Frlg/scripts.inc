@@ -133,7 +133,7 @@ RocketHideout_B4F_Text_GiovanniIntro::
 
 RocketHideout_B4F_Text_GiovanniDefeat::
 	.string "WHAT!\n"
-	.string "This can't be!$"
+	.string "¡No puede ser!$"
 
 RocketHideout_B4F_Text_GiovanniPostBattle::
 	.string "I see that you raise POKéMON with\n"

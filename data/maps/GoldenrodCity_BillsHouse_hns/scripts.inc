@@ -73,7 +73,7 @@ BillHouse_Text_CountingOnYou:
     .string "BILL: ¡Sabía que lo lograrías!\p"
     .string "¡Así se hace! ¡Eres el mejor!\p"
     .string "Bien, cuento contigo.\p"
-    .string "Take good care of it!$"
+    .string "¡Cuídalo bien!$"
 
 BillHouse_Text_ReceivedEevee:
     .string "{PLAYER} received EEVEE!$"
@@ -87,7 +87,7 @@ BillHouse_Text_PartyFull:
     .string "POKéMON.$"
 
 BillHouse_Text_NoEevee:
-    .string "Oh… Now what to do?$"
+    .string "Oh... ¿Y ahora qué hago?$"
 
 BillHouse_Text_PopWontWork:
     .string "BILL: Mi padre no trabaja. Solo\n"
@@ -123,7 +123,7 @@ BillHouse_Text_SisterRefusedNumber:
     .string "…$"
 
 BillHouse_Text_SisterPhoneFull:
-    .string "You can't record any more numbers.$"
+    .string "No puedes registrar más números.$"
 
 BillHouse_Text_SisterStorageSystem:
     .string "Mi hermano BILL creó el sistema\n"

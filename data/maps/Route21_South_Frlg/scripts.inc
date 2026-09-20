@@ -34,7 +34,7 @@ Route21_South_Text_RolandPostBattle::
 	.string "I'm sunburnt to a crisp!$"
 
 Route21_South_Text_ClaudeIntro::
-	.string "Hey, don't scare away the fish!$"
+	.string "¡Oye, no espantes a los peces!$"
 
 Route21_South_Text_ClaudeDefeat::
 	.string "Sorry! I'm just so frustrated from\n"

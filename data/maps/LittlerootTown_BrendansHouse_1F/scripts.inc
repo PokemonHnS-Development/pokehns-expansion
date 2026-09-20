@@ -413,7 +413,7 @@ PlayersHouse_1F_Text_DadShouldStayLonger:
 	.string "Debería relajarse y quedarse más.$"
 
 PlayersHouse_1F_Text_IsThatABreakingStory:
-	.string "MOM: Is that a breaking news story?$"
+	.string "MAMÁ: ¿Eso es noticia de última hora?$"
 
 PlayersHouse_1F_Text_LatiEmergencyNewsFlash:
 	.string "¡Les traemos este flash de\n"

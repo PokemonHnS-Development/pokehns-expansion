@@ -402,20 +402,20 @@ SlateportCity_Harbor_Text_FlashedTicketWhereTo:
 	.string "¿Y a dónde te gustaría ir?$"
 
 SlateportCity_Harbor_Text_SailAnotherTime:
-	.string "Please sail with us another time!$"
+	.string "¡Navega con nosotros en otra ocasión!$"
 
 SlateportCity_Harbor_Text_LilycoveItIs:
-	.string "LILYCOVE CITY it is, then!$"
+	.string "¡Ciudad Calagua, entonces!$"
 
 SlateportCity_Harbor_Text_BattleFrontierItIs:
-	.string "BATTLE FRONTIER it is, then!$"
+	.string "¡Frente Batalla, entonces!$"
 
 SlateportCity_Harbor_Text_PleaseBoardFerry:
 	.string "Sube al ferry y espera la\n"
 	.string "salida.$"
 
 SlateportCity_Harbor_Text_WhereWouldYouLikeToGo:
-	.string "Then, where would you like to go?$"
+	.string "Entonces, ¿adónde quieres ir?$"
 
 SlateportCity_Harbor_Text_LoveToGoDeepUnderwaterSomeday:
 	.string "Un viaje al fondo del mar...\n"
@@ -529,7 +529,7 @@ SlateportCity_Harbor_Text_TradeForDeepSeaScale:
 	.string "por mi DEEPSEASCALE?$"
 
 SlateportCity_Harbor_Text_WhichOneDoYouWant:
-	.string "CAPT. STERN: Which one do you want?$"
+	.string "CAPT. STERN: ¿Cuál quieres?$"
 
 SlateportCity_Harbor_Text_HandedScannerToStern:
 	.string "{PLAYER} le entregó el SCANNER al\n"

@@ -167,7 +167,7 @@ SilphCo_11F_Text_ThatsOurSecretPrototype::
 	.string "su voz.$"
 
 SilphCo_11F_Text_YouHaveNoRoomForThis::
-	.string "You have no room for this.$"
+	.string "No tienes espacio para esto.$"
 
 SilphCo_11F_Text_ThanksForRescuingUs::
 	.string "SECRETARY: Thank you for rescuing\n"

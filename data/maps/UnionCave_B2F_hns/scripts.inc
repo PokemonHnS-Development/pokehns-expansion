@@ -79,7 +79,7 @@ UnionCave_B2F_Text_CooltrainerfEmmaSeen:
 	.string "Eso es lo que hace un entrenador.$"
 
 UnionCave_B2F_Text_CooltrainerfEmmaBeaten:
-	.string "I'd rather pet my babies than this!$"
+	.string "¡Antes acaricio a mis bebés que esto!$"
 
 UnionCave_B2F_Text_CooltrainerfEmmaAfter:
 	.string "Una vez por semana, un POKéMON\n"

@@ -20,5 +20,5 @@ ThreeIsland_House1_Text_YoureAlwaysSoCool::
 	.string "day, {PLAYER}.$"
 
 ThreeIsland_House1_Text_RareRocksGemsDisplayed::
-	.string "Rare rocks and gems are displayed.$"
+	.string "Se exhiben rocas y gemas raras.$"
 

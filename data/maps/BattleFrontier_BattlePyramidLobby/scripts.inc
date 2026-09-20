@@ -541,7 +541,7 @@ BattleFrontier_BattlePyramidLobby_Text_EmbarkOnChallenge:
 	.string "desafío de la Búsqueda de Batalla?$"
 
 BattleFrontier_BattlePyramidLobby_Text_AwaitFutureChallenge:
-	.string "We await your challenge in the future!$"
+	.string "¡Esperamos tu desafío en el futuro!$"
 
 BattleFrontier_BattlePyramidLobby_Text_ExplainBattlePyramid:
 	.string "La Búsqueda de Batalla es un evento\n"
@@ -867,10 +867,10 @@ BattleFrontier_BattlePyramidLobby_Text_GiveYouTheseBattlePoints:
 	.string "¡te damos estos Puntos de Combate!$"
 
 BattleFrontier_BattlePyramidLobby_Text_RulesAreListed:
-	.string "The Battle Quest rules are listed.$"
+	.string "Las reglas de Battle Quest se listan.$"
 
 BattleFrontier_BattlePyramidLobby_Text_ReadWhichHeading:
-	.string "Which heading do you want to read?$"
+	.string "¿Qué título quieres leer?$"
 
 BattleFrontier_BattlePyramidLobby_Text_ExplainMonRules:
 	.string "Cuando la PIRÁMIDE es conquistada,\n"

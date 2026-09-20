@@ -51,14 +51,14 @@ VictoryRoad_B2F_Text_OwenIntro:
 	.string "por aquí. ¿Se referían a ti?$"
 
 VictoryRoad_B2F_Text_OwenDefeat:
-	.string "The little shrimp is tough!$"
+	.string "¡Ese pequeñín es muy duro!$"
 
 VictoryRoad_B2F_Text_OwenPostBattle:
 	.string "Según los rumores, ese chico\n"
 	.string "es de CIUDAD PETALBURG.$"
 
 VictoryRoad_B2F_Text_CarolineIntro:
-	.string "You must be getting a little tired.$"
+	.string "Ya debes estar algo cansado.$"
 
 VictoryRoad_B2F_Text_CarolineDefeat:
 	.string "No signs of tiring at all!$"
@@ -75,7 +75,7 @@ VictoryRoad_B2F_Text_JulieIntro:
 	.string "que sea mejor que tú!$"
 
 VictoryRoad_B2F_Text_JulieDefeat:
-	.string "You're better than me!$"
+	.string "¡Eres mejor que yo!$"
 
 VictoryRoad_B2F_Text_JuliePostBattle:
 	.string "Mira tus MEDALLAS obtenidas y\n"
@@ -100,7 +100,7 @@ VictoryRoad_B2F_Text_DianneIntro:
 	.string "¿Qué te parece el lugar?$"
 
 VictoryRoad_B2F_Text_DianneDefeat:
-	.string "Not rattled in the least bit!$"
+	.string "¡Ni se inmuta en absoluto!$"
 
 VictoryRoad_B2F_Text_DiannePostBattle:
 	.string "¡Tienes agallas! ¡Eso me gusta!\n"

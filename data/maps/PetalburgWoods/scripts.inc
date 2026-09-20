@@ -347,7 +347,7 @@ PetalburgWoods_Text_NoOneCrossesTeamAqua:
 	.string "¡Ven y lucha contra mí!$"
 
 PetalburgWoods_Text_YoureKiddingMe:
-	.string "You're kidding me! You're tough!$"
+	.string "¡No me lo creo! ¡Eres fuerte!$"
 
 PetalburgWoods_Text_YouveGotSomeNerve:
 	.string "Grrr... Tienes mucho valor al\n"
@@ -398,7 +398,7 @@ PetalburgWoods_Text_InstantlyPopularWithBugPokemon:
 	.string "¡te haces popular al instante!$"
 
 PetalburgWoods_Text_CantBePopularIfILose:
-	.string "I can't be popular if I lose.$"
+	.string "No seré popular si pierdo.$"
 
 PetalburgWoods_Text_PeopleRespectYou:
 	.string "Si tienes un POKéMON bicho grande,\n"
@@ -419,7 +419,7 @@ PetalburgWoods_Text_MyPokemonHaveGrown:
 	.string "Volveré a ser popular.$"
 
 PetalburgWoods_Text_CantBePopularIfLose:
-	.string "I can't be popular if I lose.$"
+	.string "No seré popular si pierdo.$"
 
 PetalburgWoods_Text_IveBeenTrainingHard:
 	.string "Eres popular si tienes\n"

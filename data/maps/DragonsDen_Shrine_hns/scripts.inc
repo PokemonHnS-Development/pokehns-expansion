@@ -189,7 +189,7 @@ DragonsDen_Shrine_Text_Question1:
     .string "What are POKéMON to you?$"
 
 DragonsDen_Shrine_Text_Question2:
-    .string "What helps you to win battles?$"
+    .string "¿Qué te ayuda a ganar combates?$"
 
 DragonsDen_Shrine_Text_Question3:
     .string "¿Contra qué tipo de ENTRENADOR\n"
@@ -207,7 +207,7 @@ DragonsDen_Shrine_Text_WrongAnswer1:
     .string "Hah? I didn't quite catch that…$"
 
 DragonsDen_Shrine_Text_WrongAnswer2:
-    .string "What was it you said?$"
+    .string "¿Qué fue lo que dijiste?$"
 
 DragonsDen_Shrine_Text_RightAnswer:
     .string "Oh, I understand…$"
@@ -343,7 +343,7 @@ DragonsDen_Shrine_Text_ClairYouPassed:
     .string "...¿Qué? ¿Pasaste?$"
 
 DragonsDen_Shrine_Text_ClairThatCantBe:
-    .string "That can't be!$"
+    .string "¡Eso no puede ser!$"
 
 DragonsDen_Shrine_Text_ClairYoureLying:
     .string "¡Estás mintiendo!\p"
@@ -384,7 +384,7 @@ DragonsDen_Shrine_Text_Speechless:
     .string "..................................$"
 
 DragonsDen_Shrine_Text_ComeAgain:
-    .string "Come again, if you so desire.$"
+    .string "Vuelve si así lo deseas.$"
 
 DragonsDen_Shrine_Text_SilverIsInTraining:
     .string "Un chico de tu edad está\n"

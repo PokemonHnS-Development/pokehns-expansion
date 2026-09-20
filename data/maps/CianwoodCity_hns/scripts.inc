@@ -287,7 +287,7 @@ CianwoodCity_Text_EusineSuicune:
 	.string "¡Vamos, {PLAYER}! ¡A luchar!$"
 
 CianwoodCity_Text_EusineBeaten:
-	.string "I hate to admit it, but you win.$"
+	.string "Odio admitirlo, pero tú ganas.$"
 
 CianwoodCity_Text_EusineAfter:
 	.string "¡Eres increíble, {PLAYER}!\p"

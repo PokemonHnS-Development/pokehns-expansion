@@ -352,7 +352,7 @@ BattleFrontier_BattleFactoryLobby_Text_ExplainSinglesChallenge_hns:
 	.string "descalificado del reto.$"
 
 BattleFrontier_BattleFactoryLobby_Text_LookForwardToNextVisit_hns:
-	.string "We look forward to your next visit.$"
+	.string "Esperamos tu próxima visita.$"
 
 BattleFrontier_BattleFactoryLobby_Text_WhichLevelMode_hns:
 	.string "¿Qué nivel quieres desafiar?\n"
@@ -508,10 +508,10 @@ BattleFrontier_BattleFactoryLobby_Text_RentalMonsAreVaried_hns:
 	.string "variaban los POKéMON de alquiler.$"
 
 BattleFrontier_BattleFactoryLobby_Text_RulesAreListed_hns:
-	.string "The Battle Swap rules are listed.$"
+	.string "Las reglas del Battle Swap están aquí.$"
 
 BattleFrontier_BattleFactoryLobby_Text_ReadWhichHeading_hns:
-	.string "Which heading do you want to read?$"
+	.string "¿Qué título quieres leer?$"
 
 BattleFrontier_BattleFactoryLobby_Text_ExplainBasicRules_hns:
 	.string "En un evento de Intercambio, solo\n"

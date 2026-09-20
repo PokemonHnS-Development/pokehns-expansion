@@ -140,7 +140,7 @@ Route14_Text_KiriDefeat::
 	.string "We lost, didn't we?$"
 
 Route14_Text_KiriPostBattle::
-	.string "KIRI: Did we lose because of me?$"
+	.string "KIRI: ¿Perdimos por mi culpa?$"
 
 Route14_Text_KiriNotEnoughMons::
 	.string "KIRI: We can battle if you have\n"

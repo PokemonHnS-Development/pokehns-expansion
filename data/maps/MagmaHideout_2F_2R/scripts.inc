@@ -26,7 +26,7 @@ MagmaHideout_2F_2R_Text_Grunt15Intro:
 	.string "¡Solo sigo órdenes!$"
 
 MagmaHideout_2F_2R_Text_Grunt15Defeat:
-	.string "I may have lost, but…$"
+	.string "Puede que haya perdido, pero…$"
 
 MagmaHideout_2F_2R_Text_Grunt15PostBattle:
 	.string "¡Desenterramos algo increíble!\n"

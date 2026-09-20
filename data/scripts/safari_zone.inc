@@ -155,14 +155,14 @@ Route121_SafariZoneEntrance_Text_WelcomeToSafariZone:
 	.string "gates to POKéMON TRAINERS.\p"
 	.string "You're encouraged to catch POKéMON\n"
 	.string "for keeps!\p"
-	.string "Come in and enjoy the SAFARI ZONE!$"
+	.string "¡Entra y disfruta de la ZONA SAFARI!$"
 
 Route121_SafariZoneEntrance_Text_WelcomeFirstTime:
 	.string "Welcome to the SAFARI ZONE!\n"
 	.string "Is it your first time here?$"
 
 Route121_SafariZoneEntrance_Text_ComeInAndEnjoy:
-	.string "Come in and enjoy the SAFARI ZONE!$"
+	.string "¡Entra y disfruta de la ZONA SAFARI!$"
 
 Route121_SafariZoneEntrance_Text_FirstTimeInfo:
 	.string "When you enter the SAFARI ZONE, you\n"
@@ -171,7 +171,7 @@ Route121_SafariZoneEntrance_Text_FirstTimeInfo:
 	.string "The SAFARI Game is over when you run\n"
 	.string "out of SAFARI BALLS, or when you've\l"
 	.string "walked 500 steps.\p"
-	.string "Come in and enjoy the SAFARI ZONE!$"
+	.string "¡Entra y disfruta de la ZONA SAFARI!$"
 
 Route121_SafariZoneEntrance_Text_WouldYouLikeToPlay:
 	.string "Welcome to the SAFARI ZONE!\p"
@@ -187,10 +187,10 @@ Route121_SafariZoneEntrance_Text_NotEnoughMoney:
 	.string "Lo siento.$"
 
 Route121_SafariZoneEntrance_Text_ThatWillBe500Please:
-	.string "That will be ¥500, please.$"
+	.string "Serán ¥500, por favor.$"
 
 Route121_SafariZoneEntrance_Text_HereAreYourSafariBalls:
-	.string "Here are your SAFARI BALLS.$"
+	.string "Aquí tienes tus SAFARI BALLS.$"
 
 Route121_SafariZoneEntrance_Text_Received30SafariBalls:
 	.string "{PLAYER} received 30 SAFARI BALLS.$"
@@ -231,7 +231,7 @@ SafariZone_South_Text_ExitEarlyThankYouForPlaying:
 	.string "I'll take back your remaining SAFARI\n"
 	.string "BALLS.\p"
 	.string "Thank you for playing.\n"
-	.string "We hope to see you again.$"
+	.string "Esperamos verte de nuevo.$"
 
 SafariZone_South_Text_GoodLuck:
 	.string "Good luck!\p"

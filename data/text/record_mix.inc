@@ -3,4 +3,4 @@ Text_WouldYouLikeToMixRecords:
 	.string "other TRAINERS?$"
 
 Text_WeHopeToSeeYouAgain:
-	.string "We hope to see you again!$"
+	.string "¡Esperamos volver a verte!$"

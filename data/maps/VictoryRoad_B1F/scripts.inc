@@ -56,7 +56,7 @@ VictoryRoad_B1F_Text_MichelleIntro:
 	.string "en camino a la LIGA POKéMON.$"
 
 VictoryRoad_B1F_Text_MichelleDefeat:
-	.string "That's the way!$"
+	.string "¡Así se hace!$"
 
 VictoryRoad_B1F_Text_MichellePostBattle:
 	.string "¡Te irá bien, seguro!\n"
@@ -67,7 +67,7 @@ VictoryRoad_B1F_Text_MitchellIntro:
 	.string "impresionantes!$"
 
 VictoryRoad_B1F_Text_MitchellDefeat:
-	.string "I've never met anyone like you before.$"
+	.string "Nunca había conocido a nadie como tú.$"
 
 VictoryRoad_B1F_Text_MitchellPostBattle:
 	.string "Incluso fuera de batalla, siento\n"

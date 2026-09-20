@@ -12,7 +12,7 @@ BerryBlender_Text_MadeOldTimerSad:
 	.string "Has puesto triste a este viejo...$"
 
 BerryBlender_Text_KnowHowToMakePokeblocks:
-	.string "Do you know how to make a {POKEBLOCK}?$"
+	.string "¿Sabes cómo hacer un {POKEBLOCK}?$"
 
 BerryBlender_Text_LetsBerryBlender:
 	.string "¡Entonces, empecemos!\p"

@@ -59,7 +59,7 @@ Route32_Pokecenter_Text_FishingGuruNo:
 	.string "Oh. That's rather disappointing…$"
 
 Route32_Pokecenter_Text_FishingGuruAfter:
-	.string "Yo, kid. How are they biting?$"
+	.string "Oye, chico. ¿Cómo pican?$"
 
 Route32_Pokecenter_Text_CooltrainerF:
 	.string "What should I make my POKéMON hold?\p"

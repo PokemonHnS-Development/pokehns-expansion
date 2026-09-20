@@ -64,7 +64,7 @@ Route20_Text_TiffanyPostBattle::
 	.string "Want to float with me?$"
 
 Route20_Text_IreneIntro::
-	.string "Are you on vacation, too?$"
+	.string "¿También estás de vacaciones?$"
 
 Route20_Text_IreneDefeat::
 	.string "No mercy at all!$"

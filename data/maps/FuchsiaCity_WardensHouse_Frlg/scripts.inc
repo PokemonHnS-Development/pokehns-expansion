@@ -76,7 +76,7 @@ FuchsiaCity_WardensHouse_Text_GaveGoldTeethToWarden::
 	.string "to the WARDEN.$"
 
 FuchsiaCity_WardensHouse_Text_WardenPoppedInHisTeeth::
-	.string "The WARDEN popped in his teeth!$"
+	.string "¡El GUARDA se puso los dientes!$"
 
 FuchsiaCity_WardensHouse_Text_ThanksSonGiveYouSomething::
 	.string "WARDEN: Thanks, son!\n"

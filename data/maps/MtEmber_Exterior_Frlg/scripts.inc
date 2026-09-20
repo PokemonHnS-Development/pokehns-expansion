@@ -183,7 +183,7 @@ MtEmber_Exterior_Text_Grunt1Defeat::
 	.string "Huh, what?$"
 
 MtEmber_Exterior_Text_Grunt1PostBattle::
-	.string "Why'd you have to win?$"
+	.string "¿Por qué tuviste que ganar?$"
 
 MtEmber_Exterior_Text_Grunt2Intro::
 	.string "Trying to horn in on our treasure?\n"

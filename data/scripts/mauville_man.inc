@@ -541,7 +541,7 @@ MauvilleCity_PokemonCenter_1F_Text_SlotJackpotsTitle::
 	.string "The SLOT Champ$"
 
 MauvilleCity_PokemonCenter_1F_Text_SlotJackpotsAction::
-	.string "Won the jackpot on the SLOTS$"
+	.string "Ganó el premio mayor en TRAGAPERRAS$"
 
 MauvilleCity_PokemonCenter_1F_Text_SlotJackpotsStory::
 	.string "Es la historia de un ENTRENADOR\n"
@@ -555,7 +555,7 @@ MauvilleCity_PokemonCenter_1F_Text_RouletteWinsTitle::
 	.string "The ROULETTE Champ$"
 
 MauvilleCity_PokemonCenter_1F_Text_RouletteWinsAction::
-	.string "Had consecutive ROULETTE wins of$"
+	.string "Tuvo una racha en la RULETA de$"
 
 MauvilleCity_PokemonCenter_1F_Text_RouletteWinsStory::
 	.string "Es la historia de un ENTRENADOR\n"

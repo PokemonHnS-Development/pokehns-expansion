@@ -53,7 +53,7 @@ RuinsOfAlph_PuzzleAndRewardChambers_EventScript_GSBALL::
 	end
 
 RuinsOfAlph_B1F_Text_Presence:
-	.string "There is a strange presence here.$"
+	.string "Aquí hay una presencia extraña.$"
 
 RuinsOfAlph_B1F_Text_Hiker:
 	.string "Es una habitación grande, pero no\n"

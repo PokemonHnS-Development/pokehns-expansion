@@ -127,7 +127,7 @@ SaffronCity_Gym_Text_MediumRebeccaBeaten:
 	.string "Strong… Far too strong…$"
 
 SaffronCity_Gym_Text_MediumRebeccaAfter:
-	.string "What is the source of your power?$"
+	.string "¿Cuál es la fuente de tu poder?$"
 
 SaffronCity_Gym_Text_PsychicFranklinSeen:
 	.string "El poder psíquico es el poder de\n"
@@ -174,7 +174,7 @@ SaffronCity_Gym_Text_GymGuideIntro:
 	.string "¡Buena suerte!$"
 
 SaffronCity_Gym_Text_GymGuideWin:
-	.string "That was another fantastic battle!$"
+	.string "¡Esa fue otra batalla fantástica!$"
 
 SaffronCity_Gym_EventScript_GymStatue::
 	lockall

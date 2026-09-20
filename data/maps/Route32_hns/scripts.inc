@@ -490,10 +490,10 @@ Route32_Text_YoungsterGordon_After:
 	.string "cosas pegajosas.$"
 
 Route32_Text_CamperRoland_Seen:
-	.string "That glance… It's intriguing.$"
+	.string "Esa mirada... Es intrigante.$"
 
 Route32_Text_CamperRoland_Beaten:
-	.string "Hmmm. This is disappointing.$"
+	.string "Mmm. Esto es decepcionante.$"
 
 Route32_Text_CamperRoland_After:
 	.string "Si no quieres luchar,\n"
@@ -531,7 +531,7 @@ Route32_Text_BirdKeeperPeter_Seen:
 	.string "¿Venciste a FALKNER?$"
 
 Route32_Text_BirdKeeperPeter_Beaten:
-	.string "I know what my weaknesses are.$"
+	.string "Sé cuáles son mis debilidades.$"
 
 Route32_Text_BirdKeeperPeter_After:
 	.string "Debo entrenar otra vez en el\n"
@@ -573,7 +573,7 @@ Route32_Text_FriedaFriday:
 	.string "¿no crees que es genial?$"
 
 Route32_Text_FriedaNope:
-	.string "FRIEDA: Not that one!$"
+	.string "FRIEDA: ¡Esa no!$"
 
 Route32_Text_Sign1:
 	.string "RUTA 32\p"

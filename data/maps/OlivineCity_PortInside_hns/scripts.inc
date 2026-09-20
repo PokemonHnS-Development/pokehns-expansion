@@ -266,20 +266,20 @@ OlivinePort_Text_SailorGetOnBoard:
     .string "Por favor, sube a bordo.$"
 
 OlivinePort_Text_CantBoard:
-    .string "Sorry. You can't board now.$"
+    .string "Lo siento. No puedes abordar ahora.$"
 
 OlivinePort_Text_WhereSail:
-    .string "Where would you like to sail?$"
+    .string "¿A dónde te gustaría zarpar?$"
 
 OlivinePort_Text_AskBoard:
     .string "Bienvenido al FAST SHIP S.S.AQUA.\p"
     .string "¿Subirás a bordo hoy?$"
 
 OlivinePort_Text_AskTicket:
-    .string "May I see your S.S.TICKET?$"
+    .string "¿Puedo ver tu BILLETE S.S.?$"
 
 OlivinePort_Text_ComeAgain:
-    .string "We hope to see you again!$"
+    .string "¡Esperamos volver a verte!$"
 
 OlivinePort_Text_FlashTicket:
     .string "{PLAYER} mostró el S.S.TICKET.\p"

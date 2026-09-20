@@ -111,7 +111,7 @@ Route44_Text_FisherWilton1Seen:
     .string "¿Qué piensas hacer al respecto?$"
 
 Route44_Text_FisherWilton1Beaten:
-    .string "Just forget about it.$"
+    .string "Olvídalo.$"
 
 Route44_Text_FisherWiltonHugePoliwag:
     .string "Ese POLIWAG que escapó...\n"
@@ -131,7 +131,7 @@ Route44_Text_WiltonRematchIntro:
     .string "¿Qué piensas hacer al respecto?$"
 
 Route44_Text_WiltonRematchDefeat:
-    .string "Just forget about it.$"
+    .string "Olvídalo.$"
 
 Route44_Text_WiltonPostRematch:
     .string "Ese POLIWAG que escapó...\n"
@@ -159,7 +159,7 @@ Route44_Text_FisherEdgarSeen:
     .string "POKéMON.$"
 
 Route44_Text_FisherEdgarBeaten:
-    .string "Hmmmm… This isn't right.$"
+    .string "Mmm... Esto no está bien.$"
 
 Route44_Text_FisherEdgarAfter:
     .string "Son 100 victorias y 101 derrotas.\p"
@@ -242,7 +242,7 @@ Route44_Text_CooltrainerfCybilSeen:
     .string "rivales fuertes por instinto.$"
 
 Route44_Text_CooltrainerfCybilBeaten:
-    .string "Nope! This won't do at all.$"
+    .string "¡No! Esto no sirve para nada.$"
 
 Route44_Text_CooltrainerfCybilAfter:
     .string "Todos mejoramos al vivir\n"

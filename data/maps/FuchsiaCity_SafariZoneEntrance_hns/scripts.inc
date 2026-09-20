@@ -69,7 +69,7 @@ FuchsiaCity_SafariZoneEntrance_EventScript_StevenGiveCase::
 	return
 
 FuchsiaCity_SafariZoneEntrance_Text_StevenGiveCase:
-	.string "Oh and you might need this.$"
+	.string "Ah, y esto te hará falta.$"
 
 FuchsiaCity_SafariZoneEntrance_Steven::
 	lock
@@ -317,7 +317,7 @@ FuchsiaCity_SafariZoneEntrance_Text_Level3:
 	.string "a 4? Te costará ¥400,000.$"
 
 FuchsiaCity_SafariZoneEntrance_Text_UpgradeGuyDeclined:
-	.string "Oh, that's too bad, then...$"
+	.string "Ah, qué lástima, entonces...$"
 
 FuchsiaCity_SafariZoneEntrance_Text_UpgradeGuyAccepted:
 	.string "¡Disfruta la experiencia premium\n"

@@ -25,7 +25,7 @@ Route4_Text_CrissyIntro::
 	.string "mushroom POKéMON.$"
 
 Route4_Text_CrissyDefeat::
-	.string "After all I did to catch them!$"
+	.string "¡Con lo que me costó atraparlos!$"
 
 Route4_Text_CrissyPostBattle::
 	.string "There might not be any more\n"

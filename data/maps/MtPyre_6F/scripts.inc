@@ -32,7 +32,7 @@ MtPyre_6F_Text_ValerieIntro:
 	.string "Un poder curioso fluye en mí…$"
 
 MtPyre_6F_Text_ValerieDefeat:
-	.string "The power is ebbing away…$"
+	.string "El poder se está desvaneciendo…$"
 
 MtPyre_6F_Text_ValeriePostBattle:
 	.string "Tal vez el poder sea de los espíritus\n"

@@ -91,7 +91,7 @@ BattleFrontier_ExchangeServiceCorner_Text_WelcomePleaseChoosePrize_hns:
 	.string "CANJE.\p"
 	.string "Canjeamos tus Puntos de Batalla\n"
 	.string "por premios fantásticos.\p"
-	.string "Please choose a prize from this list.$"
+	.string "Elige un premio de la lista.$"
 
 BattleFrontier_ExchangeServiceCorner_Text_WishIHadAllDolls_hns:
 	.string "¡Oh, son tan lindos!\n"

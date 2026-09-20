@@ -252,7 +252,7 @@ RocketHideout_B1F_Text_CameraGrunt1Beaten:
     .string "Dang… I failed…$"
 
 RocketHideout_B1F_Text_CameraGrunt2Seen:
-    .string "It's my turn! There's no escape!$"
+    .string "¡Es mi turno! ¡No hay escapatoria!$"
 
 RocketHideout_B1F_Text_CameraGrunt2Beaten:
     .string "Surveillance cams are in the\n"
@@ -364,4 +364,4 @@ RocketHideout_B1F_Text_SecretSwitch:
     .string "A secret switch! Better press it.$"
 
 RocketHideout_B1F_Text_SwitchOff:
-    .string "The switch is turned off.$"
+    .string "El interruptor está apagado.$"

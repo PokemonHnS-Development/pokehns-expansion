@@ -51,7 +51,7 @@ SixIsland_WaterPath_Text_DeniseIntro::
 	.string "come swimming by myself.$"
 
 SixIsland_WaterPath_Text_DeniseDefeat::
-	.string "Awww, I knew this would happen!$"
+	.string "Ay, ¡sabía que esto pasaría!$"
 
 SixIsland_WaterPath_Text_DenisePostBattle::
 	.string "When I can't be with my boyfriend,\n"

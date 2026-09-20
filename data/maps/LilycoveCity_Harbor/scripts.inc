@@ -558,20 +558,20 @@ LilycoveCity_Harbor_Text_FlashTicketWhereTo:
 	.string "¿Y a dónde te gustaría ir?$"
 
 LilycoveCity_Harbor_Text_SailAnotherTime:
-	.string "Please sail with us another time!$"
+	.string "¡Navega con nosotros en otra ocasión!$"
 
 LilycoveCity_Harbor_Text_SlateportItIs:
-	.string "SLATEPORT CITY it is, then!$"
+	.string "¡Entonces, a CIUDAD PORTUAL!$"
 
 LilycoveCity_Harbor_Text_BattleFrontierItIs:
-	.string "BATTLE FRONTIER it is, then!$"
+	.string "¡Frente Batalla, entonces!$"
 
 LilycoveCity_Harbor_Text_PleaseBoard:
 	.string "Sube al ferry y espera la\n"
 	.string "salida.$"
 
 LilycoveCity_Harbor_Text_WhereWouldYouLikeToGo:
-	.string "Then, where would you like to go?$"
+	.string "Entonces, ¿adónde quieres ir?$"
 
 LilycoveCity_Harbor_Text_SailorFerryUnavailable:
 	.string "Hasta que terminen el ferry,\n"

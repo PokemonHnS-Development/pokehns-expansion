@@ -117,7 +117,7 @@ RuinsOfAlph_Outside_Text_SuperNerdStan_After:
 	.string "It's all one big mystery…$"
 
 RuinsOfAlph_Outside_Text_PsychicNathan_Seen:
-	.string "Hmmm… This is a strange place.$"
+	.string "Mmm… Este lugar es extraño.$"
 
 RuinsOfAlph_Outside_Text_PsychicNathan_Beaten:
 	.string "…$"

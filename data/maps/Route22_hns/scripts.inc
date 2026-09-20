@@ -340,5 +340,5 @@ Route22_Text_Silver5:
 	.string "ALL BY MYSELF!$"
 
 Route22_Text_Silver6:
-	.string "{RIVAL}: ... What are you staring at?$"
+	.string "{RIVAL}: ... ¿Qué estás mirando?$"
 

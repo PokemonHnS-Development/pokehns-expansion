@@ -362,11 +362,11 @@ BattleFrontier_ExchangeServiceCorner_Text_WelcomePleaseChoosePrize:
 	.string "CANJE.\p"
 	.string "Canjeamos tus Puntos de Batalla\n"
 	.string "por premios fantásticos.\p"
-	.string "Please choose a prize from this list.$"
+	.string "Elige un premio de la lista.$"
 
 @ Unused
 BattleFrontier_ExchangeServiceCorner_Text_PleaseChoosePrize:
-	.string "Please choose a prize from this list.$"
+	.string "Elige un premio de la lista.$"
 
 BattleFrontier_ExchangeServiceCorner_Text_ConfirmPurchase:
 	.string "Has elegido {STR_VAR_1}.\n"
@@ -377,7 +377,7 @@ BattleFrontier_ExchangeServiceCorner_Text_WellSendItToPC:
 	.string "Lo enviaremos a tu PC de casa.$"
 
 BattleFrontier_ExchangeServiceCorner_Text_HereIsYourPrize:
-	.string "Here is your prize!$"
+	.string "¡Aquí tienes tu premio!$"
 
 BattleFrontier_ExchangeServiceCorner_Text_DontHaveEnoughPoints:
 	.string "Lo siento mucho...\n"

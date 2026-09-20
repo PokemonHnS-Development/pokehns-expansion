@@ -106,7 +106,7 @@ Route24_Text_ReceivedNuggetFromMysteryTrainer::
 	.string "from the mystery TRAINER!$"
 
 Route24_Text_YouDontHaveAnyRoom::
-	.string "You don't have any room!$"
+	.string "¡No tienes espacio!$"
 
 Route24_Text_JoinTeamRocket::
 	.string "By the way, how would you like to\n"
@@ -132,7 +132,7 @@ Route24_Text_YoudBecomeTopRocketLeader::
 	.string "Don't let this chance go to waste.$"
 
 Route24_Text_ShaneIntro::
-	.string "I saw your feat from the grass!$"
+	.string "¡Vi tu hazaña desde el pasto!$"
 
 Route24_Text_ShaneDefeat::
 	.string "I thought not!$"

@@ -21,7 +21,7 @@ LilycoveCity_House2_EventScript_ReceivedRest::
 LilycoveCity_House2_Text_NotAwakeYetHaveThis:
 	.string "¿Eh? ¿Qué? ¿Qué es eso?\p"
 	.string "Aún no he despertado...\n"
-	.string "You can have this…$"
+	.string "Puedes quedarte con esto...$"
 
 LilycoveCity_House2_Text_SleepIsEssential:
 	.string "Bostezo...\p"

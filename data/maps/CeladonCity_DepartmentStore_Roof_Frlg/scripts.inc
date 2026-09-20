@@ -286,7 +286,7 @@ CeladonCity_DepartmentStore_Roof_Text_ImThirstyGiveHerDrink::
 	.string "{FONT_NORMAL}Give her a drink?$"
 
 CeladonCity_DepartmentStore_Roof_Text_GiveWhichDrink::
-	.string "Give her which drink?$"
+	.string "¿Qué bebida le doy?$"
 
 CeladonCity_DepartmentStore_Roof_Text_YayFreshWaterHaveThis::
 	.string "Yay!\p"
@@ -326,7 +326,7 @@ CeladonCity_DepartmentStore_Roof_Text_ExplainTM33::
 	.string "of physical attacks by your foe.$"
 
 CeladonCity_DepartmentStore_Roof_Text_DontHaveSpaceForThis::
-	.string "You don't have space for this!$"
+	.string "¡No tienes espacio para esto!$"
 
 CeladonCity_DepartmentStore_Roof_Text_ImNotThirstyAfterAll::
 	.string "No, thank you!\n"
@@ -354,7 +354,7 @@ CeladonCity_DepartmentStore_Roof_Text_NotEnoughMoney::
 	.string "Oops, not enough money!$"
 
 CeladonCity_DepartmentStore_Roof_Text_DrinkCanPoppedOut::
-	.string "A can of {STR_VAR_1} popped out!$"
+	.string "¡Salió una lata de {STR_VAR_1}!$"
 
 CeladonCity_DepartmentStore_Roof_Text_NoMoreRoomForStuff::
 	.string "There's no more room for stuff!$"

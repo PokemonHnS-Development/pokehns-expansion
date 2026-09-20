@@ -69,7 +69,7 @@ AbandonedShip_Rooms_1F_Text_DemetriusIntro:
 	.string "¡Me encontraron! ...¿Eh?$"
 
 AbandonedShip_Rooms_1F_Text_DemetriusDefeat:
-	.string "Oh, you're not my mom.$"
+	.string "Oh, no eres mi mamá.$"
 
 AbandonedShip_Rooms_1F_Text_DemetriusPostBattle:
 	.string "Tengo problemas con mi mamá y huí.\n"

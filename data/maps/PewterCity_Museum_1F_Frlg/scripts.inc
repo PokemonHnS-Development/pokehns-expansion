@@ -201,7 +201,7 @@ PewterCity_Museum_1F_Text_Right50YThankYou::
 	.string "Thank you!$"
 
 PewterCity_Museum_1F_Text_DontHaveEnoughMoney::
-	.string "You don't have enough money.$"
+	.string "No tienes suficiente dinero.$"
 
 PewterCity_Museum_1F_Text_PleaseEnjoyYourself::
 	.string "Please enjoy yourself.$"
@@ -257,7 +257,7 @@ PewterCity_Museum_1F_Text_GetOldAmberChecked::
 	.string "Get the OLD AMBER checked!$"
 
 PewterCity_Museum_1F_Text_DontHaveSpaceForThis::
-	.string "You don't have space for this.$"
+	.string "No tienes espacio para esto.$"
 
 PewterCity_Museum_1F_Text_WeHaveTwoFossilsOnExhibit::
 	.string "We have two fossils of rare,\n"

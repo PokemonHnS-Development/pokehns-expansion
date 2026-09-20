@@ -33,7 +33,7 @@ CeladonDeptStore_Text_5FReceptionistOhYourMon:
     .string "Hello. Oh, your POKéMON…$"
 
 CeladonDeptStore_Text_5FReceptionistWait:
-    .string "Wait, I already gave you that TM!$"
+    .string "Espera, ¡ya te di esa MT!$"
 
 CeladonDeptStore_Text_5FReceptionistPutInSomeMoreEffort:
 	.string "Hmm…\n"

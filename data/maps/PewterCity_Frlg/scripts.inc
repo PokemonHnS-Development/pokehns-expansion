@@ -879,7 +879,7 @@ PewterCity_Text_BrockOnlySeriousTrainerHere::
 	.string "CIUDAD VALE, no es así.$"
 
 PewterCity_Text_DidYouCheckOutMuseum::
-	.string "Did you check out the MUSEUM?$"
+	.string "¿Ya visitaste el MUSEO?$"
 
 PewterCity_Text_WerentThoseFossilsAmazing::
 	.string "Weren't those fossils from MT. MOON\n"

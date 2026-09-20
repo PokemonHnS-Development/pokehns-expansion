@@ -331,7 +331,7 @@ Alola_Ulaula_Phant_outside_Text_1:
 	.string "I'll make it worth your while!$"
 
 Alola_Ulaula_TrainerBattlePicnicker_Text_0:
-	.string "Surprise!\nI was in the trees!$"
+	.string "¡Sorpresa!\n¡Estaba en los árboles!$"
 
 Alola_Ulaula_TrainerBattlePicnicker_Text_1:
 	.string "Back into hiding I go…$"
@@ -345,7 +345,7 @@ Alola_Ulaula_TrainerBattleYoungster_Text_0:
 	.string "Hey, I'm going to be the first to climb\nMT. LANIKALA!$"
 
 Alola_Ulaula_TrainerBattleYoungster_Text_1:
-	.string "It's not even the real MT. LANIKALA…$"
+	.string "No es ni la verdadera MT. LANIKALA…$"
 
 Alola_Ulaula_TrainerBattleYoungster_Text_2:
 	.string "Mi papá nunca me dijo el nombre real\n"

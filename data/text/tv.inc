@@ -449,7 +449,7 @@ gTVFanClubText01::
 	.string "¡Qué carta tan increíble!$"
 
 gTVFanClubText02::
-	.string "I loved it, so here it is again!$"
+	.string "¡Me encantó, aquí está de nuevo!$"
 
 gTVFanClubText03::
 	.string "¡Una gran carta merece leerse una\n"
@@ -2096,7 +2096,7 @@ TVSecretBaseSecrets_Text_WhatWillPlayerDoNext1::
 	.string "What will {STR_VAR_2} do next?$"
 
 TVSecretBaseSecrets_Text_WhatWillPlayerDoNext2::
-	.string "And now, what will {STR_VAR_2} do?$"
+	.string "¿Y ahora, qué hará {STR_VAR_2}?$"
 
 TVSecretBaseSecrets_Text_TookXStepsBeforeLeaving::
 	.string "In the end, {STR_VAR_2} took {STR_VAR_3} steps\n"
@@ -2200,7 +2200,7 @@ TVSecretBaseSecrets_Text_UsedBag::
 	.string "¡Parece un comercial de TV!$"
 
 TVSecretBaseSecrets_Text_UsedCushion::
-	.string "The visitor grabs a cushion and…$"
+	.string "El visitante toma un cojín y…$"
 
 TVSecretBaseSecrets_Text_HitCushion::
 	.string "…¡empieza a golpearlo!\p"

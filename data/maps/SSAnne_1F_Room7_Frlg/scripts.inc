@@ -15,5 +15,5 @@ SSAnne_1F_Room7_Text_ThomasDefeat::
 	.string "My, my friends…$"
 
 SSAnne_1F_Room7_Text_ThomasPostBattle::
-	.string "You should be nice to friends!$"
+	.string "¡Debes ser amable con tus amigos!$"
 

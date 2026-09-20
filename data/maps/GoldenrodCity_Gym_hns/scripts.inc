@@ -164,7 +164,7 @@ GoldenrodCity_Gym_Text_WhitneyAttract:
     .string "linda como yo?$"
 
 GoldenrodCity_Gym_Text_WhitneyGoodCry:
-    .string "Ah, that was a good cry!$"
+    .string "¡Ah, qué buen llanto!$"
 
 GoldenrodCity_Gym_Text_WhitneyRematch:
     .string "¡Hola! ¡Eres tú!\p"
@@ -184,7 +184,7 @@ GoldenrodCity_Gym_Text_LassCarrieSeen:
     .string "¡Pueden azotarte!$"
 
 GoldenrodCity_Gym_Text_LassCarrieBeaten:
-    .string "Darn… I thought you were weak…$"
+    .string "Vaya… creía que eras débil…$"
 
 GoldenrodCity_Gym_Text_LassCarrieAfter:
     .string "Do my POKéMON think I'm cute?$"

@@ -97,7 +97,7 @@ Route15_Text_AlexIntro::
 	.string "pierdas contra mí, niño!$"
 
 Route15_Text_AlexDefeat::
-	.string "That can't be true!$"
+	.string "¡Eso no puede ser verdad!$"
 
 Route15_Text_AlexPostBattle::
 	.string "I was just joking about the money.\n"

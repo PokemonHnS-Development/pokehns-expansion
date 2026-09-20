@@ -150,7 +150,7 @@ Route40_Text_MonicaNotMonday:
 	.string "sea lunes. Qué triste…$"
 
 Route40_Text_MonicaNope:
-	.string "Not that one.$"
+	.string "Ese no.$"
 
 Rotue40_EventScript_Monica::
 	lock

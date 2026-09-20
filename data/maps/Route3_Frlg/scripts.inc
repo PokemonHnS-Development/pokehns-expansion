@@ -33,7 +33,7 @@ Route3_Text_BenIntro::
 	.string "easy to wear!$"
 
 Route3_Text_BenDefeat::
-	.string "I don't believe it!$"
+	.string "¡No lo puedo creer!$"
 
 Route3_Text_BenPostBattle::
 	.string "Are you using a POKéMON CENTER's\n"
@@ -103,7 +103,7 @@ Route3_Text_RobinIntro::
 	.string "Did you touch me?$"
 
 Route3_Text_RobinDefeat::
-	.string "That's it?$"
+	.string "¿Eso es todo?$"
 
 Route3_Text_RobinPostBattle::
 	.string "ROUTE 4 is at the foot of\n"

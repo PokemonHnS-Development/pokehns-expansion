@@ -192,7 +192,7 @@ Route27_Text_CooltrainermBlakeAfter:
     .string "something cool.$"
 
 Route27_Text_CooltrainermBrianSeen:
-    .string "Hm? You're good, aren't you?$"
+    .string "¿Mmm? Eres bueno, ¿no?$"
 
 Route27_Text_CooltrainermBrianBeaten:
     .string "Just as I thought!$"
@@ -306,7 +306,7 @@ Route27_Text_FisherScottSeen:
     .string "¡CAMPEÓN DE LA LIGA!$"
 
 Route27_Text_FisherScottBeaten:
-    .string "No! Not in this battle!$"
+    .string "¡No! ¡No en esta batalla!$"
 
 Route27_Text_FisherScottAfter:
     .string "Como al pescar, todo acaba en\n"

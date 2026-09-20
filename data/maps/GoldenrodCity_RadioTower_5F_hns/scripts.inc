@@ -97,7 +97,7 @@ GoldenrodCity_RadioTower_5F_Movement_Spin2:
 
 
 GoldenrodCity_RadioTower_5F_Text_FakeDirector1:
-	.string "Y-you! You came to rescue me?$"
+	.string "¡¿T-tú?! ¿Viniste a rescatarme?$"
 
 GoldenrodCity_RadioTower_5F_Text_FakeDirector2:
 	.string "¿Eso es lo que esperabas?\p"
@@ -110,7 +110,7 @@ GoldenrodCity_RadioTower_5F_Text_FakeDirector2:
 	.string "puedes vencerme!$"
 
 GoldenrodCity_RadioTower_5F_Text_FakeDirectorWin:
-	.string "OK, OK. I'll tell you where he is.$"
+	.string "Está bien. Te diré dónde está.$"
 
 GoldenrodCity_RadioTower_5F_Text_FakeDirectorAfter:
 	.string "El jefe guardó al DIRECTOR en el\n"
@@ -428,7 +428,7 @@ GoldenrodCity_RadioTower_5F_Text_DirectorIntro:
 	.string "nuestros programas.$"
 
 GoldenrodCity_RadioTower_5F_Text_Ben:
-	.string "BEN: Do you listen to our music?$"
+	.string "BEN: ¿Escuchas nuestra música?$"
 
 GoldenrodCity_RadioTower_5F_Text_DirectorOfficeSign:
 	.string "5F DIRECTOR'S   OFFICE$"

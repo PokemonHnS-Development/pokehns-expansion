@@ -70,7 +70,7 @@ PalletTown_House2_Text_OfferGrooming:
 	.string "¿Quieres que limpie a alguno?$"
 
 PalletTown_House2_Text_WhichMon:
-	.string "DAISY: Which one should I groom?$"
+	.string "DAISY: ¿A cuál debo arreglar?$"
 
 PalletTown_House2_Text_Alright:
 	.string "DAISY: Bien, lo dejaré impecable\n"

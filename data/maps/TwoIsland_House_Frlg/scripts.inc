@@ -137,7 +137,7 @@ TwoIsland_House_Text_TutorWhichMon::
 	.string "Which POKéMON needs tutoring?$"
 
 TwoIsland_House_Text_TeachWhichMove::
-	.string "Which move should I teach?$"
+	.string "¿Qué movimiento debería enseñar?$"
 
 TwoIsland_House_Text_NoMoveICanTeachThatMon::
 	.string "Lo siento...\p"

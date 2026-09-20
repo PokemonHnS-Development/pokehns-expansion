@@ -202,7 +202,7 @@ SecretBase_EventScript_SkittyTV::
 	end
 
 SecretBase_Text_SmallIndentInWall::
-	.string "There's a small indent in the wall.$"
+	.string "Hay una pequeña hendidura en la pared.$"
 
 SecretBase_Text_IndentUseSecretPower::
 	.string "Hay un hueco pequeño en la pared.\p"

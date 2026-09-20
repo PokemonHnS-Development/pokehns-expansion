@@ -96,5 +96,5 @@ Route10_PowerPlantBackRoom_Text_ManagerMyBelovedGenerator:
 	.string "¡Sigue bombeando electricidad!$"
 
 Route10_PowerPlantBackRoom_Text_Engineer:
-	.string "This door is unsafe without power.$"
+	.string "Esta puerta es insegura sin energía.$"
 

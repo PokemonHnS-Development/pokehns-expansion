@@ -80,7 +80,7 @@ ThreeIsland_BerryForest_Text_ThankYouHaveThis::
 	.string "¡Gracias!\p"
 	.string "LOSTELLE came to pick some\n"
 	.string "comer BAYAS.\p"
-	.string "You can have this!$"
+	.string "¡Puedes quedarte con esto!$"
 
 ThreeIsland_BerryForest_Text_LetsGoHome::
 	.string "What's your name?\p"

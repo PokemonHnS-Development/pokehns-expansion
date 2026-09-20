@@ -47,7 +47,7 @@ LavenderTown_EventScript_PokemonTowerSign::
 	end
 
 LavenderTown_Text_DoYouBelieveInGhosts::
-	.string "Do you believe in ghosts?$"
+	.string "¿Crees en fantasmas?$"
 
 LavenderTown_Text_SoThereAreBelievers::
 	.string "Really?\n"

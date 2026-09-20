@@ -139,7 +139,7 @@ Route34_Text_YoungsterIan_Seen:
 	.string "POKéMON.$"
 
 Route34_Text_YoungsterIan_Beaten:
-	.string "No! There are better trainers…$"
+	.string "¡No! Hay entrenadores mejores…$"
 
 Route34_Text_YoungsterIan_After:
 	.string "I'm trying hard so I can be the\n"
@@ -209,7 +209,7 @@ Route34_Text_PokefanBrandon_Seen:
 	.string "¡Veamos cuánto se fortaleció!$"
 
 Route34_Text_PokefanBrandon_Beaten:
-	.string "Why does it end this way?$"
+	.string "¿Por qué termina así?$"
 
 Route34_Text_PokefanBrandon_After:
 	.string "Mi POKéMON volvió con nuevos\p"
@@ -232,7 +232,7 @@ Route34_Text_TrainerTips:
 	.string "BAYAS.$"
 
 Route34_Text_CooltrainerIrene_Seen:
-	.string "IRENE: Who are you?!$"
+	.string "IRENE: ¿Quién eres?!$"
 
 Route34_Text_CooltrainerIrene_Beaten:
 	.string "IRENE: Ohhh! You're too strong!$"

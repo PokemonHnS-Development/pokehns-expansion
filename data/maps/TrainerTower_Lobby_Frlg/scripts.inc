@@ -250,7 +250,7 @@ TrainerTower_Lobby_Text_StartClockGetSetGo::
 	.string "Go!$"
 
 TrainerTower_Lobby_Text_PleaseVisitUsAgain::
-	.string "Please do visit us again!$"
+	.string "¡Vuelve a visitarnos!$"
 
 TrainerTower_Lobby_Text_TooBadComeBackTryAgain::
 	.string "Fue una lástima.\p"
@@ -259,7 +259,7 @@ TrainerTower_Lobby_Text_TooBadComeBackTryAgain::
 	.string "¡Vuelve e inténtalo de nuevo!$"
 
 TrainerTower_Lobby_Text_GiveItYourBest::
-	.string "I hope you give it your best.$"
+	.string "Espero que des lo mejor de ti.$"
 
 TrainerTower_Lobby_Text_MoveCounterHereWhenTrainersSwitch::
 	.string "Cuando los ENTRENADORES cambian\n"
@@ -279,7 +279,7 @@ TrainerTower_Roof_Text_ImOwnerBattledPerfectly::
 	.string "It, too, was perfection…$"
 
 TrainerTower_Roof_Text_ThisIsForYou::
-	.string "This is for you…$"
+	.string "Esto es para ti…$"
 
 TrainerTower_Roof_Text_DoneItInRecordTime::
 	.string "Oh!\n"

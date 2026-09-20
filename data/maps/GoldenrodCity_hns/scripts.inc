@@ -368,7 +368,7 @@ GoldenrodCity_Text_Gramps:
 	.string "que no encuentro nada de nada.$"
 
 GoldenrodCity_Text_RocketScout1:
-	.string "So this is the RADIO TOWER…$"
+	.string "Así que esta es la TORRE RADIO…$"
 
 GoldenrodCity_Text_RocketScout2:
 	.string "¿Qué quieres, plaga?\n"
@@ -453,7 +453,7 @@ GoldenrodCity_Text_MoveTutorDecline:
 
 GoldenrodCity_Text_MoveTutorWhich:
 	.string "¡Jajaja! ¡No te arrepentirás!\p"
-	.string "Which move should I teach?$"
+	.string "¿Qué movimiento debería enseñar?$"
 
 GoldenrodCity_Text_MoveTutorNoCash:
 	.string "Qué mal. Tendré que\n"
@@ -470,4 +470,4 @@ GoldenrodCity_Text_MoveTutorBut:
 	.string "B-but…$"
 
 GoldenrodCity_Text_MoveTutorNotEnoughCoins:
-	.string "…You don't have enough coins…$"
+	.string "…No tienes suficientes monedas…$"

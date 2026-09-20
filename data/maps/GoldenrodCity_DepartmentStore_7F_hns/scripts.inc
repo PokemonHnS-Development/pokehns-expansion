@@ -90,7 +90,7 @@ GoldenrodDeptStore_Text_RoofSuperNerdOhWow:
     .string "Oh, wow!$"
 
 GoldenrodDeptStore_Text_RoofSuperNerdQuitBotheringMe:
-    .string "Will you quit bothering me?$"
+    .string "¿Dejarás de molestarme?$"
 
 GoldenrodDeptStore_Text_RoofPokefanM:
     .string "Hay algo que quiero mucho,\n"

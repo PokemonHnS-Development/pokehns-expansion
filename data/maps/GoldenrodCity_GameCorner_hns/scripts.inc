@@ -582,7 +582,7 @@ GoldenrodCity_GameCorner_EventScript_Pharmacist::
 	end
 
 GoldenrodCity_GameCorner_PrizeRoom_Text_YouWantPrize:
-	.string "{STR_VAR_1} is what you want?$"
+	.string "¿{STR_VAR_1} es lo que quieres?$"
 
 GoldenrodCity_GameCorner_Text_PlayerObtainedTheMon:
 	.string "{PLAYER} got {STR_VAR_1}!$"
@@ -596,7 +596,7 @@ GoldenrodCity_GameCorner_Text_PrizeVendorIntro:
     .string "¡premios fabulosos!$"
 
 GoldenrodCity_GameCorner_Text_PrizeVendorWhichPrize:
-    .string "Which prize would you like?$"
+    .string "¿Qué premio quieres?$"
 
 GoldenrodCity_GameCorner_Text_PrizeVendorHereYouGo:
     .string "Here you go!$"
@@ -605,14 +605,14 @@ GoldenrodCity_GameCorner_Text_PrizeVendorNeedMoreCoins:
     .string "Sorry! You need more coins.$"
 
 GoldenrodCity_GameCorner_Text_PrizeVendorNoMoreRoom:
-    .string "Sorry. You can't carry any more.$"
+    .string "Lo siento. No puedes llevar más.$"
 
 GoldenrodCity_GameCorner_Text_PrizeVendorQuit:
     .string "OK. ¡Ahorra tus monedas y vuelve\n"
     .string "pronto!$"
 
 GoldenrodCity_GameCorner_Text_PrizeVendorNoCoinCase:
-    .string "Oh? You don't have a COIN CASE.$"
+    .string "¿Oh? No tienes un MONEDERO.$"
 
 GoldenrodCity_GameCorner_Text_Pharmacist:
     .string "Siempre juego en esta máquina.\n"
@@ -886,7 +886,7 @@ GoldenrodCity_GameCorner_Text_VF_AboutNotes:
 	.string "Usa otra nota para quitarla.$"
 
 GoldenrodCity_GameCorner_Text_VF_NeedCoinCase:
-	.string "Oh? You don't have a COIN CASE.$"
+	.string "¿Oh? No tienes un MONEDERO.$"
 
 GoldenrodCity_GameCorner_Text_VFAttendant1:
 	.string "¿Quieres jugar VOLTORB FLIP?\p"

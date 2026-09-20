@@ -304,14 +304,14 @@ SaffronMagnetTrainStation_Text_OfficerRightThisWay:
     .string "Bien. Por aquí, por favor.$"
 
 SaffronMagnetTrainStation_Text_OfficerNoRailPass:
-    .string "Sorry. You don't have a rail PASS.$"
+    .string "Lo siento. No tienes PASE de tren.$"
 
 SaffronMagnetTrainStation_Text_OfficerHopeToSeeYouAgain:
-    .string "We hope to see you again!$"
+    .string "¡Esperamos volver a verte!$"
 
 SaffronMagnetTrainStation_Text_OfficerArrivedInSaffron:
     .string "We have arrived in SAFFRON.\p"
-    .string "We hope to see you again.$"
+    .string "Esperamos verte de nuevo.$"
 
 @=============================================================================================================================
 

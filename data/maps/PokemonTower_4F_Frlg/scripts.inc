@@ -21,10 +21,10 @@ PokemonTower_4F_Text_PaulaIntro::
 	.string "Kwaaah!$"
 
 PokemonTower_4F_Text_PaulaDefeat::
-	.string "Where is the ghost?$"
+	.string "¿Dónde está el fantasma?$"
 
 PokemonTower_4F_Text_PaulaPostBattle::
-	.string "I must have been dreaming…$"
+	.string "Debo haber estado soñando…$"
 
 PokemonTower_4F_Text_LaurelIntro::
 	.string "Be cursed with me!\n"

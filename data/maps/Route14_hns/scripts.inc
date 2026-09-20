@@ -302,7 +302,7 @@ Route14_Text_BirdKeeperRoySeen:
 	.string "POKéMON ave.$"
 
 Route14_Text_BirdKeeperRoyBeaten:
-	.string "I can dream, but I can't ever fly…$"
+	.string "Puedo soñar, pero no puedo volar…$"
 
 Route14_Text_BirdKeeperRoyAfterBattle:
 	.string "You have POKéMON that know the HM\n"

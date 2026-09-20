@@ -86,7 +86,7 @@ VictoryRoad_3F_Text_GeorgeIntro::
 	.string "I heard rumors of a child prodigy.$"
 
 VictoryRoad_3F_Text_GeorgeDefeat::
-	.string "The rumors were true!$"
+	.string "¡Los rumores eran ciertos!$"
 
 VictoryRoad_3F_Text_GeorgePostBattle::
 	.string "So, it was you who beat GIOVANNI\n"
@@ -116,10 +116,10 @@ VictoryRoad_3F_Text_CarolinePostBattle::
 	.string "I was…$"
 
 VictoryRoad_3F_Text_ColbyIntro::
-	.string "Only the chosen can pass here!$"
+	.string "¡Solo los elegidos pueden pasar!$"
 
 VictoryRoad_3F_Text_ColbyDefeat::
-	.string "I don't believe it!$"
+	.string "¡No lo puedo creer!$"
 
 VictoryRoad_3F_Text_ColbyPostBattle::
 	.string "All TRAINERS here are headed to\n"
@@ -132,7 +132,7 @@ VictoryRoad_3F_Text_RayIntro::
 
 VictoryRoad_3F_Text_RayDefeat::
 	.string "RAY: Ludicrous!\n"
-	.string "This can't be!$"
+	.string "¡No puede ser!$"
 
 VictoryRoad_3F_Text_RayPostBattle::
 	.string "RAY: You've beaten us.\n"

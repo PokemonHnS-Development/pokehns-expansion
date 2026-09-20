@@ -1356,7 +1356,7 @@ PetalburgCity_Gym_Text_RandallIntro:
 	.string "ventaja, ¿no estás de acuerdo?$"
 
 PetalburgCity_Gym_Text_RandallDefeat:
-	.string "That was a magnificent battle!$"
+	.string "¡Fue una batalla magnífica!$"
 
 PetalburgCity_Gym_Text_RandallPostBattle:
 	.string "Ve a la siguiente sala, donde un\n"
@@ -1444,7 +1444,7 @@ PetalburgCity_Gym_Text_MaryIntro:
 	.string "acierta sin fallar.$"
 
 PetalburgCity_Gym_Text_MaryDefeat:
-	.string "You were a cut above me…$"
+	.string "Fuiste mejor que yo…$"
 
 PetalburgCity_Gym_Text_MaryPostBattle:
 	.string "Hay algunos aún más fuertes\n"
@@ -1478,7 +1478,7 @@ PetalburgCity_Gym_Text_AlexiaPostBattle:
 	.string "expertos en el ataque.$"
 
 PetalburgCity_Gym_Text_AlexiaPostBadge:
-	.string "Hi! Have you tried using SURF?$"
+	.string "¡Hola! ¿Ya probaste usar SURF?$"
 
 PetalburgCity_Gym_Text_JodyIntro:
 	.string "Nuestro LÍDER de GIMNASIO dijo que\n"

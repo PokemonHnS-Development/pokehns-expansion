@@ -117,7 +117,7 @@ Route12_Text_FisherBarneySeen:
 	.string "nuestra vida diaria?$"
 
 Route12_Text_FisherBarneyBeaten:
-	.string "The answer is coming up next!$"
+	.string "¡La respuesta viene ahora!$"
 
 Route12_Text_FisherBarneyAfterBattle:
 	.string "Creo que la electricidad es lo\n"
@@ -144,10 +144,10 @@ Route12_Text_KylePostRematch:
 	.string "¡tan buena como una gran pesca!$"
 
 Route12_Text_FisherKyleSeen:
-	.string "Do you remember?$"
+	.string "¿Recuerdas?$"
 
 Route12_Text_FisherKyleBeaten:
-	.string "You do remember?$"
+	.string "¿De verdad recuerdas?$"
 
 Route12_Text_FisherKyleAfterBattle:
 	.string "El tirón que sientes en la CAÑA al\n"

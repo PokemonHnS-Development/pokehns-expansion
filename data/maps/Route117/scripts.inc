@@ -227,7 +227,7 @@ Route117_Text_ArentTheseFlowersPretty:
 	.string "¡Yo las planté todas!$"
 
 Route117_Text_AirIsTastyHere:
-	.string "The air is tasty here!$"
+	.string "¡El aire está delicioso aquí!$"
 
 Route117_Text_RouteSignVerdanturf:
 	.string "RUTA 117\n"

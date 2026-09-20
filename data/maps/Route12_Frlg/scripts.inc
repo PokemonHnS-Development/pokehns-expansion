@@ -141,7 +141,7 @@ Route12_Text_ElliotIntro::
 	.string "work.$"
 
 Route12_Text_ElliotDefeat::
-	.string "It's not easy…$"
+	.string "No es fácil…$"
 
 Route12_Text_ElliotPostBattle::
 	.string "It's all right.\n"

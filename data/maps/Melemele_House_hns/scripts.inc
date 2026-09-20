@@ -162,7 +162,7 @@ Alola_Melemele_Pokecenter_Jessica_Text_TakeCare:
 	.string "¡TORY, cuídate mucho!$"
 
 Alola_Melemele_Pokecenter_Jessica_Text_DeclineTrade:
-	.string "You don't want to trade? Aww...$"
+	.string "¿No quieres intercambiar? Ohh...$"
 
 Alola_Melemele_Pokecenter_Jessica_Text_TradeCompleted:
 	.string "Hola, ¿cómo está mi viejo TORY?$"

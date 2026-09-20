@@ -204,7 +204,7 @@ RustboroCity_PokemonSchool_Text_BlackboardListsStatusChanges:
 	.string "that may affect POKéMON in battle.$"
 
 RustboroCity_PokemonSchool_Text_ReadWhichTopic:
-	.string "Which topic do you want to read?$"
+	.string "¿Qué tema quieres leer?$"
 
 RustboroCity_PokemonSchool_Text_ExplainPoison:
 	.string "If a POKéMON is poisoned, it will\n"

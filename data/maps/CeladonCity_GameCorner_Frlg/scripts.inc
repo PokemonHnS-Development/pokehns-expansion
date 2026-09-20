@@ -487,7 +487,7 @@ CeladonCity_GameCorner_Text_CoinCaseIsFull::
 	.string "Your COIN CASE is full.$"
 
 CeladonCity_GameCorner_Text_CantAffordCoins::
-	.string "You can't afford the COINS.$"
+	.string "No te alcanza para las FICHAS.$"
 
 CeladonCity_GameCorner_Text_HereAreYourCoins::
 	.string "Gracias.\n"
@@ -503,14 +503,14 @@ CeladonCity_GameCorner_Text_ThinkMachinesHaveDifferentOdds::
 	.string "different odds.$"
 
 CeladonCity_GameCorner_Text_DoYouWantToPlay::
-	.string "Kid, do you want to play?$"
+	.string "Chico, ¿quieres jugar?$"
 
 CeladonCity_GameCorner_Text_Received10CoinsFromMan::
 	.string "{PLAYER} received 10 COINS\n"
 	.string "from the man.$"
 
 CeladonCity_GameCorner_Text_DontNeedMyCoins::
-	.string "You don't need my COINS!$"
+	.string "¡No necesitas mis FICHAS!$"
 
 CeladonCity_GameCorner_Text_WinsComeAndGo::
 	.string "Wins seem to come and go.\n"
@@ -550,7 +550,7 @@ CeladonCity_GameCorner_Text_Received20CoinsFromNiceGuy::
 	.string "from the nice guy.$"
 
 CeladonCity_GameCorner_Text_YouHaveLotsOfCoins::
-	.string "You have lots of COINS!$"
+	.string "¡Tienes muchas MONEDAS!$"
 
 CeladonCity_GameCorner_Text_NeedMoreCoinsForMonIWant::
 	.string "Darn! I need more COINS for the\n"

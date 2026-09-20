@@ -369,7 +369,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice2Intro_hns::
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice2Mon1_hns::
 	.string "{STR_VAR_3} recomendó a mi equipo.\n"
-	.string "One {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "Uno {STR_VAR_2} con {STR_VAR_1} y$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice2Mon2Ask_hns::
 	.string "un {STR_VAR_2} con {STR_VAR_1},\n"
@@ -496,7 +496,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice7Intro_hns::
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice7Mon1_hns::
 	.string "¡Oye, escucha! Tienes que saber\n"
 	.string "del POKéMON que recomendó {STR_VAR_3}.\l"
-	.string "One {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "Uno {STR_VAR_2} con {STR_VAR_1} y$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice7Mon2Ask_hns::
 	.string "un {STR_VAR_2} con {STR_VAR_1}.\n"
@@ -776,7 +776,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_YoungsterIntro_hns::
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_YoungsterMon1_hns::
 	.string "¿Quieres saber qué tengo?\n"
-	.string "One {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "Uno {STR_VAR_2} con {STR_VAR_1} y$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_YoungsterMon2Ask_hns::
 	.string "¡un {STR_VAR_2} con {STR_VAR_1}!\p"
@@ -818,7 +818,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_BeautyIntro_hns::
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_BeautyMon1_hns::
 	.string "¿Sabes qué he estado criando?\n"
-	.string "One {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "Uno {STR_VAR_2} con {STR_VAR_1} y$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_BeautyMon2Ask_hns::
 	.string "¡un {STR_VAR_2} con {STR_VAR_1}!\p"
@@ -882,7 +882,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_CyclingTriathleteFIntro_hns::
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_CyclingTriathleteFMon1_hns::
 	.string "Lo que tengo...\n"
-	.string "One {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "Uno {STR_VAR_2} con {STR_VAR_1} y$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_CyclingTriathleteFMon2Ask_hns::
 	.string "¡un {STR_VAR_2} con {STR_VAR_1}!\n"
@@ -904,7 +904,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_BugCatcherIntro_hns::
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_BugCatcherMon1_hns::
 	.string "¡Mira lo que tengo!\n"
-	.string "One {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "Uno {STR_VAR_2} con {STR_VAR_1} y$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_BugCatcherMon2Ask_hns::
 	.string "¡un {STR_VAR_2} con {STR_VAR_1}!\p"
@@ -949,7 +949,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_RichBoyIntro_hns::
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_RichBoyMon1_hns::
 	.string "¡Adivina qué tengo!\n"
-	.string "One {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "Uno {STR_VAR_2} con {STR_VAR_1} y$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_RichBoyMon2Ask_hns::
 	.string "¡un {STR_VAR_2} con {STR_VAR_1}!\p"
@@ -993,7 +993,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_TuberFIntro_hns::
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_TuberFMon1_hns::
 	.string "Te diré lo que tengo.\n"
-	.string "One {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "Uno {STR_VAR_2} con {STR_VAR_1} y$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_TuberFMon2Ask_hns::
 	.string "¡un {STR_VAR_2} con {STR_VAR_1}!\n"
@@ -1033,7 +1033,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_PkmnBreederMIntro_hns::
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PkmnBreederMMon1_hns::
 	.string "¡Estoy criando unos muy buenos!\n"
-	.string "One {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "Uno {STR_VAR_2} con {STR_VAR_1} y$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PkmnBreederMMon2Ask_hns::
 	.string "¡un {STR_VAR_2} con {STR_VAR_1}!\p"
@@ -1055,7 +1055,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_RunningTriathleteFIntro_hns::
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_RunningTriathleteFMon1_hns::
 	.string "¿Quieres ver qué POKéMON tengo?\n"
-	.string "One {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "Uno {STR_VAR_2} con {STR_VAR_1} y$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_RunningTriathleteFMon2Ask_hns::
 	.string "¡un {STR_VAR_2} con {STR_VAR_1}!\p"
@@ -1140,7 +1140,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_TuberMIntro_hns::
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_TuberMMon1_hns::
 	.string "¿Qué traigo conmigo?\n"
-	.string "One {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "Uno {STR_VAR_2} con {STR_VAR_1} y$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_TuberMMon2Ask_hns::
 	.string "¡un {STR_VAR_2} con {STR_VAR_1}!\p"
@@ -1162,7 +1162,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_GuitaristIntro_hns::
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_GuitaristMon1_hns::
 	.string "¡Mira mi séquito!\n"
-	.string "One {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "Uno {STR_VAR_2} con {STR_VAR_1} y$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_GuitaristMon2Ask_hns::
 	.string "¡un {STR_VAR_2} con {STR_VAR_1}!\p"
@@ -1247,7 +1247,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_ExpertFIntro_hns::
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_ExpertFMon1_hns::
 	.string "He criado bien a mis POKéMON.\n"
-	.string "One {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "Uno {STR_VAR_2} con {STR_VAR_1} y$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_ExpertFMon2Ask_hns::
 	.string "un {STR_VAR_2} con {STR_VAR_1}--\n"
@@ -1287,7 +1287,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_BirdKeeperIntro_hns::
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_BirdKeeperMon1_hns::
 	.string "¿Qué POKéMON tengo?\n"
-	.string "One {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "Uno {STR_VAR_2} con {STR_VAR_1} y$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_BirdKeeperMon2Ask_hns::
 	.string "un {STR_VAR_2} con {STR_VAR_1}.\p"
@@ -1350,7 +1350,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_BugManiacIntro_hns::
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_BugManiacMon1_hns::
 	.string "He hallado mis POKéMON, sí.\n"
-	.string "One {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "Uno {STR_VAR_2} con {STR_VAR_1} y$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_BugManiacMon2Ask_hns::
 	.string "un {STR_VAR_2} con {STR_VAR_1}--\n"
@@ -1373,7 +1373,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_SailorIntro_hns::
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SailorMon1_hns::
 	.string "¡Mira mi mayor orgullo y alegría!\n"
-	.string "One {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "Uno {STR_VAR_2} con {STR_VAR_1} y$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SailorMon2Ask_hns::
 	.string "¡un {STR_VAR_2} con {STR_VAR_1}!\p"
@@ -1542,7 +1542,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_PokemaniacIntro_hns::
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PokemaniacMon1_hns::
 	.string "¿Qué tiene alguien como yo?\n"
-	.string "One {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "Uno {STR_VAR_2} con {STR_VAR_1} y$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PokemaniacMon2Ask_hns::
 	.string "un {STR_VAR_2} con {STR_VAR_1},\n"
@@ -1564,7 +1564,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_KindlerIntro_hns::
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_KindlerMon1_hns::
 	.string "¿Sabes qué logró mi entrenamiento?\n"
-	.string "One {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "Uno {STR_VAR_2} con {STR_VAR_1} y$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_KindlerMon2Ask_hns::
 	.string "¡un {STR_VAR_2} con {STR_VAR_1}!\p"
@@ -1645,7 +1645,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_PsychicFIntro_hns::
 	.string "Soy un PSÍQUICO.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PsychicFMon1_hns::
-	.string "One {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "Uno {STR_VAR_2} con {STR_VAR_1} y$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PsychicFMon2Ask_hns::
 	.string "un {STR_VAR_2} con {STR_VAR_1}--\n"
@@ -1748,7 +1748,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_SwimmingTriathleteMIntro_hns::
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SwimmingTriathleteMMon1_hns::
 	.string "Tengo unos POKéMON decentes.\n"
-	.string "One {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "Uno {STR_VAR_2} con {STR_VAR_1} y$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SwimmingTriathleteMMon2Ask_hns::
 	.string "¡un {STR_VAR_2} con {STR_VAR_1}!\p"
@@ -1767,7 +1767,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_SwimmingTriathleteFIntro_hns::
 	.string "I'm the TRIATHLETE {STR_VAR_1}!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SwimmingTriathleteFMon1_hns::
-	.string "One {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "Uno {STR_VAR_2} con {STR_VAR_1} y$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SwimmingTriathleteFMon2Ask_hns::
 	.string "Otro {STR_VAR_2} que sabe\n"
@@ -1789,7 +1789,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_SwimmerMIntro_hns::
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SwimmerMMon1_hns::
 	.string "¡Mira lo que he estado criando!\n"
-	.string "One {STR_VAR_2} with {STR_VAR_1} and$"
+	.string "Uno {STR_VAR_2} con {STR_VAR_1} y$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SwimmerMMon2Ask_hns::
 	.string "¡un {STR_VAR_2} con {STR_VAR_1}!\p"

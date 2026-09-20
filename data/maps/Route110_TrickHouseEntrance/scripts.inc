@@ -816,7 +816,7 @@ Route110_TrickHousePuzzle_Text_MemorizedSecretCode:
 	.string "escrito en el pergamino.$"
 
 Route110_TrickHousePuzzle_Text_SecretCodeWrittenOnIt:
-	.string "A secret code is written on it.$"
+	.string "Un código secreto está escrito en él.$"
 
 Route110_TrickHouseEntrance_Text_DoorLockedWriteSecretCodeHere:
 	.string "La puerta está cerrada.\p"

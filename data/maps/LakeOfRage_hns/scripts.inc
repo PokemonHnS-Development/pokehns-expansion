@@ -291,7 +291,7 @@ LakeOfRage_Text_Gramps:
     .string "¡Es un mal presagio!$"
 
 LakeOfRage_Text_GrampsCleared:
-    .string "Hahah! The MAGIKARP are biting!$"
+    .string "¡Jajaja! ¡Los MAGIKARP están picando!$"
 
 LakeOfRage_Text_SuperNerd:
     .string "Oí que este lago fue creado por\n"

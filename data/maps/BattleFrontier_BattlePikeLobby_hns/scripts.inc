@@ -416,10 +416,10 @@ BattleFrontier_BattlePikeLobby_Text_TrainersWhicheverPathIChoose_hns:
 	.string "ENTRENADORES en cualquier ruta.$"
 
 BattleFrontier_BattlePikeLobby_Text_RulesAreListed_hns:
-	.string "The Battle Choice's rules are listed.$"
+	.string "Reglas de Elección de Batalla.$"
 
 BattleFrontier_BattlePikeLobby_Text_ReadWhichHeading_hns:
-	.string "Which heading do you want to read?$"
+	.string "¿Qué título quieres leer?$"
 
 BattleFrontier_BattlePikeLobby_Text_ExplainPokenavBagRules_hns:
 	.string "No se pueden usar la MOCHILA ni el\n"

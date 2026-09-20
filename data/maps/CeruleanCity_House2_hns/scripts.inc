@@ -26,7 +26,7 @@ CeruleanPolice_Text_FishingGuru:
 	.string "ser un ladrón.$"
 
 CeruleanPolice_Text_PokefanF:
-	.string "We were held up by robbers before.$"
+	.string "Nos asaltaron unos ladrones antes.$"
 
 CeruleanPolice_Text_Diglett:
 	.string "DIGLETT: Dug dug.$"

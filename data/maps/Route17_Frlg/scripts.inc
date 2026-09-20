@@ -66,7 +66,7 @@ Route17_Text_BillyDefeat::
 	.string "Smoked!$"
 
 Route17_Text_BillyPostBattle::
-	.string "Are you looking for adventure?$"
+	.string "¿Buscas aventura?$"
 
 Route17_Text_NikolasIntro::
 	.string "Let VOLTORB electrify you!$"
@@ -116,14 +116,14 @@ Route17_Text_JaxonDefeat::
 	.string "Shoot!$"
 
 Route17_Text_JaxonPostBattle::
-	.string "The slope makes it hard to steer.$"
+	.string "La pendiente dificulta el control.$"
 
 Route17_Text_WilliamIntro::
 	.string "¡Lárgate, niño!\n"
 	.string "¡Estoy agotado!$"
 
 Route17_Text_WilliamDefeat::
-	.string "Are you satisfied?$"
+	.string "¿Estás satisfecho?$"
 
 Route17_Text_WilliamPostBattle::
 	.string "I need to catch a few z's!$"

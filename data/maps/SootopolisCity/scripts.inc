@@ -1399,7 +1399,7 @@ SootopolisCity_Text_CitySign:
 	.string "historia dormita.$"
 
 SootopolisCity_Text_DoorIsClosed:
-	.string "The door is closed.$"
+	.string "La puerta está cerrada.$"
 
 SootopolisCity_Text_PhysicallyFitLivingHere:
 	.string "Bucear en el mar. Subir y bajar\n"
@@ -1507,7 +1507,7 @@ SootopolisCity_Text_NoOrdinaryTourist:
 	.string "un turista extraordinario.$"
 
 SootopolisCity_Text_CityRegainedCalm:
-	.string "The city has regained its calm…$"
+	.string "La ciudad ha recuperado la calma…$"
 
 SootopolisCity_Text_CaveOfOriginPleaseLeave:
 	.string "¿Quién podrías ser tú?\p"

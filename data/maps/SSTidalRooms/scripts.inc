@@ -72,7 +72,7 @@ SSTidalRooms_Text_ColtonIntro:
 	.string "ya ves.$"
 
 SSTidalRooms_Text_ColtonDefeat:
-	.string "That was an enjoyable match!$"
+	.string "¡Qué combate tan ameno!$"
 
 SSTidalRooms_Text_ColtonPostBattle:
 	.string "Me emociona imaginar qué tipos\n"
@@ -80,10 +80,10 @@ SSTidalRooms_Text_ColtonPostBattle:
 	.string "CONCURSO. ¡La espera es emocionante!$"
 
 SSTidalRooms_Text_MicahIntro:
-	.string "Are your friends strong?$"
+	.string "¿Tus amigos son fuertes?$"
 
 SSTidalRooms_Text_MicahDefeat:
-	.string "Your friends are, indeed, strong.$"
+	.string "Tus amigos sí que son fuertes.$"
 
 SSTidalRooms_Text_MicahPostBattle:
 	.string "Los amigos no tienen que ser humanos.\n"
@@ -139,7 +139,7 @@ SSTidalRooms_Text_GarretIntro:
 	.string "Puedes entretenerme.$"
 
 SSTidalRooms_Text_GarretDefeat:
-	.string "…That will do.$"
+	.string "…Con eso basta.$"
 
 SSTidalRooms_Text_GarretPostBattle:
 	.string "Tal vez haga que mi padre consiga\n"

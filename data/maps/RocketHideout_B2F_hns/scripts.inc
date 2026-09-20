@@ -248,7 +248,7 @@ RocketHideout_B2F_Movement_Lance:
 	step_end
 
 RocketHideout_B2F_Text_ArianaHoldIt:
-    .string "ARIANA: Hold it right there!$"
+    .string "ARIANA: ¡Alto ahí!$"
 
 RocketHideout_B2F_Text_ArianaChallenge:
     .string "ARIANA: We can't let a brat like you\n"

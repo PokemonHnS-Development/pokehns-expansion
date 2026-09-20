@@ -544,7 +544,7 @@ BattleFrontier_BattleTowerBattleRoom_Text_AnabelYouCameBack_hns:
 	.string "pude luchar sin pensar en nada…$"
 
 BattleFrontier_BattleTowerBattleRoom_Text_LetsBeginShallWe_hns:
-	.string "Let's begin, shall we?$"
+	.string "Empecemos, ¿te parece?$"
 
 BattleFrontier_BattleTowerBattleRoom_Text_AnabelCongratsYourPassPlease_hns:
 	.string "ANABEL: Fufu, felicidades…\n"

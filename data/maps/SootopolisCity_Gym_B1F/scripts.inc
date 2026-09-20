@@ -110,7 +110,7 @@ SootopolisCity_Gym_B1F_Text_BridgetIntro:
 	.string "Es el GIMNASIO de CALAGIRI.$"
 
 SootopolisCity_Gym_B1F_Text_BridgetDefeat:
-	.string "What a high level you are!$"
+	.string "¡Qué nivel tan alto tienes!$"
 
 SootopolisCity_Gym_B1F_Text_BridgetPostBattle:
 	.string "En vez de conformarte con estar\n"

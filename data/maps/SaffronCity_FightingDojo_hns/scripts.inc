@@ -284,7 +284,7 @@ SaffronCity_FightingDojo_Ability_Finish:
 	end
 
 SaffronCity_FightingDojo_Ability_Finish_Text:
-	.string "That's it! You're welcome!$"
+	.string "¡Eso es! ¡De nada!$"
 
 SaffronCity_FightingDojo_Ability_Text1:
 	.string "¡Bienvenido! ¡Soy el EXPERTO EN\p"
@@ -294,7 +294,7 @@ SaffronCity_FightingDojo_Ability_Text1:
 	.string "HABILIDAD de algún POKéMON?$"
 
 SaffronCity_FightingDojo_Ability_Text_No:
-	.string "Sure. I'll be here if you need me.$"
+	.string "Claro. Aquí estaré si me necesitas.$"
 
 SaffronCity_FightingDojo_Ability_Text_Cant:
 	.string "No puedo hacer eso. ¡Este POKéMON\n"

@@ -234,17 +234,17 @@ SproutTower_Text_SageTroy_Seen:
 	.string "para tu POKéMON.$"
 
 SproutTower_Text_SageTroy_Beaten:
-	.string "Yes, your trust is real!$"
+	.string "¡Sí, tu confianza es real!$"
 
 SproutTower_Text_SageTroy_AfterBattle:
-	.string "It is not far to the ELDER.$"
+	.string "El ANCIANO no está lejos.$"
 
 SproutTower_Text_SageNeal_Seen:
 	.string "The ELDER's HM lights even\n"
 	.string "pitch-black darkness.$"
 
 SproutTower_Text_SageNeal_Beaten:
-	.string "It is my head that is bright!$"
+	.string "¡Es mi cabeza la que brilla!$"
 
 SproutTower_Text_SageNeal_AfterBattle:
 	.string "Let there be light on your\n"

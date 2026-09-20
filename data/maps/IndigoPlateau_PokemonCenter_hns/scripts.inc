@@ -158,7 +158,7 @@ IndigoPlateau_Text_TeleportGuyYes:
     .string "mente...$"
 
 IndigoPlateau_Text_TeleportGuyNo:
-    .string "OK, OK. The best of luck to you!$"
+    .string "Está bien, está bien. ¡Mucha suerte!$"
 
 IndigoPlateau_Text_Abra:
     .string "ABRA: Aabra…$"

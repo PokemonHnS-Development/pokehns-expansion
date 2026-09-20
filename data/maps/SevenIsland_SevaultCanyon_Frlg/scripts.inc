@@ -23,7 +23,7 @@ SevenIsland_SevaultCanyon_Text_EvanIntro::
 	.string "know how to use them properly!$"
 
 SevenIsland_SevaultCanyon_Text_EvanDefeat::
-	.string "You're a master at this.$"
+	.string "Eres un maestro en esto.$"
 
 SevenIsland_SevaultCanyon_Text_EvanPostBattle::
 	.string "You see them every so often,\n"

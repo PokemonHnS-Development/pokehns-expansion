@@ -324,7 +324,7 @@ Route110_TrickHousePuzzle3_Text_MarthaIntro:
 	.string "Empiezo a sentirme triste…$"
 
 Route110_TrickHousePuzzle3_Text_MarthaDefeat:
-	.string "You… You're awful!$"
+	.string "Tú… ¡Eres terrible!$"
 
 Route110_TrickHousePuzzle3_Text_MarthaPostBattle:
 	.string "¡Ya sé que soy débil!\n"

@@ -394,7 +394,7 @@ BattleFrontier_OutsideEast_Text_LikeToHaveNameRecordedHere_hns:
 	.string "quede registrado aquí para siempre.$"
 
 BattleFrontier_OutsideEast_Text_CanDoAnythingWithYou_hns:
-	.string "With you by my side, I can do anything.$"
+	.string "Contigo a mi lado, todo es posible.$"
 
 BattleFrontier_OutsideEast_Text_PowerOfOurLoveWillOvercome_hns:
 	.string "¡Ay, cariño, eres maravilloso!\p"

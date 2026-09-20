@@ -2,7 +2,7 @@ Text_PictureBookShelf:
 	.string "There's a set of POKéMON picture books.$"
 
 Text_BookShelf:
-	.string "It's filled with all sorts of books.$"
+	.string "Está lleno de todo tipo de libros.$"
 
 Text_PokemonCenterBookShelf:
 	.string "POKéMON magazines!\n"

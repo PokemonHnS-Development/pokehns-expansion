@@ -26,7 +26,7 @@ SootopolisCity_House3_Text_JuanHasManyFansDoYou:
 	.string "¿Tú tienes alguno?$"
 
 SootopolisCity_House3_Text_YouMustBePrettyStrong:
-	.string "Oh, then you must be pretty strong.$"
+	.string "Oh, entonces eres bastante fuerte.$"
 
 SootopolisCity_House3_Text_LonesomeTryWorkingHarder:
 	.string "Ay, Dios mío...\n"

@@ -210,7 +210,7 @@ SafariZoneGate_SafariZoneEntrance_Text_BaobaCaveDone:
 	.string "premio por tus molestias.$"
 
 SafariZoneGate_SafariZoneEntrance_Text_BaobaWrong:
-	.string "That can't be right!$"
+	.string "¡Eso no puede ser!$"
 
 SafariZoneGate_SafariZoneEntrance_Text_BaobaBeach:
 	.string "¡Ah, {PLAYER}!\p"

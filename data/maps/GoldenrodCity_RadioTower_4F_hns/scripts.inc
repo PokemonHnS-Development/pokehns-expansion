@@ -140,7 +140,7 @@ GoldenrodCity_RadioTower_4F4_Text_GruntM10Beaten:
 	.string "No! Unbelievable!$"
 
 GoldenrodCity_RadioTower_4F4_Text_GruntM10After:
-	.string "I don't believe it! I was beaten!$"
+	.string "¡No lo puedo creer! ¡Me venciste!$"
 
 GoldenrodCity_RadioTower_4F4_Text_ExecutiveM2Seen:
 	.string "¡Alto! ¡Soy conocido como la\n"

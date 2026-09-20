@@ -626,7 +626,7 @@ GoldenrodUnderground_Text_GruntF3Seen:
     .string "que tengas miedo!$"
 
 GoldenrodUnderground_Text_GruntF3Beaten:
-    .string "How could you?$"
+    .string "¿Cómo pudiste?$"
 
 GoldenrodUnderground_Text_GruntF3After:
     .string "¡Ve a donde quieras! ¡Lárgate!\n"

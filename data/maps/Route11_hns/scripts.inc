@@ -45,7 +45,7 @@ Route11_Text_YoungsterOwenSeen:
 	.string "Let's keep it fair and square!$"
 
 Route11_Text_YoungsterOwenBeaten:
-	.string "Huh? How did this happen?$"
+	.string "¿Eh? ¿Cómo pasó esto?$"
 
 Route11_Text_YoungsterOwenAfterBattle:
 	.string "I fought fair and square with\n"

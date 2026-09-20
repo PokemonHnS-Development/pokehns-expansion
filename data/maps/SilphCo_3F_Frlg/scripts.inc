@@ -43,7 +43,7 @@ SilphCo_3F_Text_YouAndYourMonsSavedUs::
 	.string "You and your POKéMON saved us!$"
 
 SilphCo_3F_Text_GruntIntro::
-	.string "Quit messing with us, kid!$"
+	.string "¡Deja de meterte con nosotros, chico!$"
 
 SilphCo_3F_Text_GruntDefeat::
 	.string "I give up!$"

@@ -486,7 +486,7 @@ BattleFrontier_BattlePalaceLobby_Text_NoSpaceForPrize:
 	.string "tu MOCHILA.$"
 
 BattleFrontier_BattlePalaceLobby_Text_WeHaveBeenWaiting:
-	.string "We have been waiting for you…$"
+	.string "Te hemos estado esperando...$"
 
 BattleFrontier_BattlePalaceLobby_Text_MustSaveBeforeChallenge:
 	.string "Debo guardar antes de llevarte al\n"
@@ -597,10 +597,10 @@ BattleFrontier_BattlePalaceLobby_Text_LikeToRecordMatch:
 	.string "BATALLA en tu PASA FRONTERA?$"
 
 BattleFrontier_BattlePalaceLobby_Text_RulesAreListed:
-	.string "The BATTLE HALL rules are listed.$"
+	.string "Las reglas de SALA BATALLA se listan.$"
 
 BattleFrontier_BattlePalaceLobby_Text_ReadWhichHeading:
-	.string "Which heading do you want to read?$"
+	.string "¿Qué título quieres leer?$"
 
 BattleFrontier_BattlePalaceLobby_Text_ExplainRulesBasics:
 	.string "Aquí, los POKéMON deben pensar\n"

@@ -131,7 +131,7 @@ CeladonCity_Gym_Text_ExplainTM19::
 	.string "wonderful move?$"
 
 CeladonCity_Gym_Text_ShouldMakeRoomForThis::
-	.string "You should make room for this.$"
+	.string "Deberías hacer espacio para esto.$"
 
 CeladonCity_Gym_Text_KayIntro::
 	.string "I should tell you about this GYM.\p"

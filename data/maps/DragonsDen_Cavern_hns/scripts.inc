@@ -255,7 +255,7 @@ DragonsDen_Cavern_Text_CooltrainerfCaraAfter:
     .string "la aprobación de nuestro MAESTRO.$"
 
 DragonsDen_Cavern_Text_TwinsLeaandPia1Seen:
-    .string "It's a stranger we don't know.$"
+    .string "Es un desconocido que no conocemos.$"
 
 DragonsDen_Cavern_Text_TwinsLeaandPia1Beaten:
     .string "Ouchies.$"
@@ -265,7 +265,7 @@ DragonsDen_Cavern_Text_TwinsLeaandPia1After:
     .string "contra LANCE.$"
 
 DragonsDen_Cavern_Text_TwinsLeaandPia2Seen:
-    .string "Who are you?$"
+    .string "¿Quién eres?$"
 
 DragonsDen_Cavern_Text_TwinsLeaandPia2Beaten:
     .string "Meanie.$"

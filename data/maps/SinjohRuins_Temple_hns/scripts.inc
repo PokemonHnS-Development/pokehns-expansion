@@ -109,5 +109,5 @@ SinjohRuins_Temple_Text_Responds:
 	.string "El templo responde a tus acciones.$"
 
 SinjohRuins_Temple_Text_Door:
-	.string "The way is open.$"
+	.string "El camino está abierto.$"
 

@@ -576,7 +576,7 @@ Route111_Text_IsThatSo:
 	.string "¡Pasa por aquí si cambias de idea!$"
 
 Route111_Text_VictorIntro:
-	.string "That's the spirit! I like you!$"
+	.string "¡Así me gusta! ¡Me caes bien!$"
 
 Route111_Text_VictorDefeat:
 	.string "¡Aiyah!\n"

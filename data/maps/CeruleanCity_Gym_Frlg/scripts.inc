@@ -98,7 +98,7 @@ CeruleanCity_Gym_Text_ReceivedTM03FromMisty::
 	.string "from MISTY.$"
 
 CeruleanCity_Gym_Text_BetterMakeRoomForThis::
-	.string "You better make room for this!$"
+	.string "¡Más te vale hacer espacio!$"
 
 CeruleanCity_Gym_Text_MistyDefeat::
 	.string "¡Guau!\n"
@@ -125,7 +125,7 @@ CeruleanCity_Gym_Text_LuisIntro::
 	.string "Let's do it!$"
 
 CeruleanCity_Gym_Text_LuisDefeat::
-	.string "That can't be!$"
+	.string "¡Eso no puede ser!$"
 
 CeruleanCity_Gym_Text_LuisPostBattle::
 	.string "MISTY is a TRAINER who's going to\n"

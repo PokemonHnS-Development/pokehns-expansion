@@ -83,7 +83,7 @@ RockTunnel_B1F_Text_SteveIntro::
 	.string "cosplay?$"
 
 RockTunnel_B1F_Text_SteveDefeat::
-	.string "Well, that's that.$"
+	.string "Bueno, eso es todo.$"
 
 RockTunnel_B1F_Text_StevePostBattle::
 	.string "POKéMON cosplay is dressing up as\n"
@@ -115,7 +115,7 @@ RockTunnel_B1F_Text_MarthaPostBattle::
 	.string "Big ones are too scary!$"
 
 RockTunnel_B1F_Text_EricIntro::
-	.string "Hit me with your best shot!$"
+	.string "¡Dame lo mejor que tengas!$"
 
 RockTunnel_B1F_Text_EricDefeat::
 	.string "Fired away!$"

@@ -944,7 +944,7 @@ MauvilleCity_GameCorner_EventScript_NoCoinCase::
 	end
 
 MauvilleCity_GameCorner_Text_ThisIsMauvilleGameCorner:
-	.string "This is the GAME CORNER.$"
+	.string "Este es el CASINO.$"
 
 MauvilleCity_GameCorner_Text_NeedCoinCaseForCoins:
 	.string "Bien, ¿quieres algunas MONEDAS\n"
@@ -996,7 +996,7 @@ MauvilleCity_GameCorner_Text_ExchangeCoinsForPrizes:
 	.string "premios aquí.$"
 
 MauvilleCity_GameCorner_Text_WhichPrize:
-	.string "Which prize would you like?$"
+	.string "¿Qué premio quieres?$"
 
 MauvilleCity_GameCorner_Text_SoYourChoiceIsTheTMX:
 	.string "Entonces tu elección es\n"
@@ -1007,7 +1007,7 @@ MauvilleCity_GameCorner_Text_SendToYourHomePC:
 	.string "Lo enviaremos a tu PC de casa.$"
 
 MauvilleCity_GameCorner_Text_NotEnoughCoins:
-	.string "You don't have enough COINS.$"
+	.string "No tienes suficientes FICHAS.$"
 
 @ Unused
 MauvilleCity_GameCorner_Text_NoRoomForPlacingDecor:
@@ -1020,14 +1020,14 @@ MauvilleCity_GameCorner_Text_OhIsThatSo:
 	.string "de volver aquí.$"
 
 MauvilleCity_GameCorner_Text_SoYourChoiceIsX:
-	.string "So your choice is {STR_VAR_1}?$"
+	.string "¿Entonces eliges {STR_VAR_1}?$"
 
 MauvilleCity_GameCorner_Text_HereYouGo:
 	.string "Here you go!$"
 
 @ Unused
 MauvilleCity_GameCorner_Text_CantCarryAnyMore:
-	.string "Oh, you can't carry any more than that.$"
+	.string "Oh, no puedes llevar más que eso.$"
 
 MauvilleCity_GameCorner_Text_GotTwoOfSameDollWantOne:
 	.string "Cometí un error y conseguí dos\n"
@@ -1043,7 +1043,7 @@ MauvilleCity_GameCorner_Text_YouWantItButNotNow:
 
 MauvilleCity_GameCorner_Text_DontBeNegative:
 	.string "¡Oh, no seas tan negativo!\n"
-	.string "You can have this!$"
+	.string "¡Puedes quedarte con esto!$"
 
 MauvilleCity_GameCorner_Text_CantWinJackpot:
 	.string "Hay un premio que quiero, pero no\n"

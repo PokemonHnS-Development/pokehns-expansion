@@ -306,7 +306,7 @@ Route124_DivingTreasureHuntersHouse_Text_ThatsAShardIllTradeYou:
 	.string "conmigo! ¡Te daré algo bueno!$"
 
 Route124_DivingTreasureHuntersHouse_Text_WhatDoYouWantToTrade:
-	.string "What do you want to trade?$"
+	.string "¿Qué quieres cambiar?$"
 
 Route124_DivingTreasureHuntersHouse_Text_YoullTradeShardForStone:
 	.string "¿Cambiarás tu {STR_VAR_1} por\n"
@@ -317,7 +317,7 @@ Route124_DivingTreasureHuntersHouse_Text_ItsADeal:
 	.string "¡Úsalo con sabiduría!$"
 
 Route124_DivingTreasureHuntersHouse_Text_TradeSomethingElse:
-	.string "Do you want to trade something else?$"
+	.string "¿Quieres cambiar algo más?$"
 
 Route124_DivingTreasureHuntersHouse_Text_BagFull:
 	.string "Vaya, tu MOCHILA está llena.\n"

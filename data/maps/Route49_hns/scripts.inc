@@ -34,7 +34,7 @@ Route49_EventScript_SkylarAfter::
 	end
 
 Route49_Text_SkylarDefeat:
-	.string "OKAY, you can have the PLATE.$"
+	.string "ESTÁ BIEN, te quedas con la TABLA.$"
 
 Route49_Text_SkylarAfter:
 	.string "As cool as that PLATE is,\n"

@@ -496,10 +496,10 @@ BattleFrontier_BattleArenaBattleRoom_Text_SetKOTourneyBegin_hns:
 	.string "¡Empiecen!$"
 
 BattleFrontier_BattleArenaBattleRoom_Text_WinnerIsPlayer_hns:
-	.string "REFEREE: The winner is {PLAYER}!$"
+	.string "ÁRBITRO: ¡El ganador es {PLAYER}!$"
 
 BattleFrontier_BattleArenaBattleRoom_Text_WinnerIsOpponent_hns:
-	.string "REFEREE: The winner is {STR_VAR_1}!$"
+	.string "ÁRBITRO: ¡El ganador es {STR_VAR_1}!$"
 
 BattleFrontier_BattleArenaBattleRoom_Text_MonsWillBeRestored_hns:
 	.string "Tu POKéMON será restaurado a\n"

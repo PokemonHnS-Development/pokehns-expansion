@@ -339,16 +339,16 @@ BattleFrontier_BattleDomePreBattleRoom_Text_PlayersNextOpponentIsTrainer_hns:
 	.string "es este ENTRENADOR.$"
 
 BattleFrontier_BattleDomePreBattleRoom_Text_TourneyInRound1_hns:
-	.string "The tournament is in the 1st round.$"
+	.string "El torneo está en la primera ronda.$"
 
 BattleFrontier_BattleDomePreBattleRoom_Text_TourneyInRound2_hns:
-	.string "The tournament is in the 2nd round.$"
+	.string "El torneo está en la segunda ronda.$"
 
 BattleFrontier_BattleDomePreBattleRoom_Text_TourneyInSemifinals_hns:
-	.string "The tournament is in the semifinals.$"
+	.string "El torneo está en las semifinales.$"
 
 BattleFrontier_BattleDomePreBattleRoom_Text_TourneyInFinals_hns:
-	.string "The tournament is up to the final.$"
+	.string "El torneo está en la final.$"
 
 BattleFrontier_BattleDomePreBattleRoom_Text_SaveAndQuitGame_hns:
 	.string "¿Quieres guardar y\n"

@@ -820,7 +820,7 @@ OneIsland_PokemonCenter_1F_Text_ThankYouGiveMeTime::
 	.string "Please give me a little time.$"
 
 OneIsland_PokemonCenter_1F_Text_OkayThisIsGood::
-	.string "Okay, this is good…$"
+	.string "Bien, esto está bien...$"
 
 OneIsland_PokemonCenter_1F_Text_LinkedUpWithLanette::
 	.string "I did it!\n"

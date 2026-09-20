@@ -1066,7 +1066,7 @@ EcruteakCity_Theater_Text_ZukiLugia:
 	.string "¡Nos vemos allá!$"
 
 EcruteakCity_Theater_Text_KimonoDone:
-	.string "We are rehearsing a dance.$"
+	.string "Estamos ensayando un baile.$"
 
 EcruteakCity_Theater_Text_ZukiAfterAll:
 	.string "Gracias por tu ayuda el\n"

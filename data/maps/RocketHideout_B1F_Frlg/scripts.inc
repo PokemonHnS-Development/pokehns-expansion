@@ -89,7 +89,7 @@ RocketHideout_B1F_Text_Grunt3Intro::
 	.string "Intruder alert!$"
 
 RocketHideout_B1F_Text_Grunt3Defeat::
-	.string "I can't do it!$"
+	.string "¡No puedo hacerlo!$"
 
 RocketHideout_B1F_Text_Grunt3PostBattle::
 	.string "SILPH SCOPE? Humph!\n"
@@ -99,14 +99,14 @@ RocketHideout_B1F_Text_Grunt4Intro::
 	.string "Why did you come here?$"
 
 RocketHideout_B1F_Text_Grunt4Defeat::
-	.string "This won't do!$"
+	.string "¡Esto no sirve!$"
 
 RocketHideout_B1F_Text_Grunt4PostBattle::
 	.string "Okay, I'll talk…\n"
 	.string "Take the elevator to see my BOSS.$"
 
 RocketHideout_B1F_Text_Grunt5Intro::
-	.string "Are you lost, you little mouse?$"
+	.string "¿Estás perdido, ratoncito?$"
 
 RocketHideout_B1F_Text_Grunt5Defeat::
 	.string "Why…?$"

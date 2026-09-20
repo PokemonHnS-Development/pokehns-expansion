@@ -137,7 +137,7 @@ SaffronCity_Gym_Text_ExplainTM04::
 	.string "to raise both SP. ATK and SP. DEF.$"
 
 SaffronCity_Gym_Text_BagFullOfOtherItems::
-	.string "Your BAG is full of items.$"
+	.string "Tu BOLSA está llena de objetos.$"
 
 SaffronCity_Gym_Text_AmandaIntro::
 	.string "SABRINA is far younger than I,\n"
@@ -153,7 +153,7 @@ SaffronCity_Gym_Text_AmandaPostBattle::
 	.string "and will yourself to victory.$"
 
 SaffronCity_Gym_Text_JohanIntro::
-	.string "Does our unseen power scare you?$"
+	.string "¿Te asusta nuestro poder oculto?$"
 
 SaffronCity_Gym_Text_JohanDefeat::
 	.string "I never foresaw this!$"
@@ -181,7 +181,7 @@ SaffronCity_Gym_Text_TyronIntro::
 	.string "win in the world of POKéMON?$"
 
 SaffronCity_Gym_Text_TyronDefeat::
-	.string "I don't believe this!$"
+	.string "¡No puedo creer esto!$"
 
 SaffronCity_Gym_Text_TyronPostBattle::
 	.string "SABRINA just wiped out the KARATE\n"

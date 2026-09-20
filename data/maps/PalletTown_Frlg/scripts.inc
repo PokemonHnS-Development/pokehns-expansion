@@ -525,7 +525,7 @@ PalletTown_Text_OhLookLook::
 	.string "Look, look!$"
 
 PalletTown_Text_ReadItReadIt::
-	.string "Read it, read it!$"
+	.string "¡Léelo, léelo!$"
 
 @ Used by sign
 PalletTown_Text_PressStartToOpenMenu::
@@ -533,7 +533,7 @@ PalletTown_Text_PressStartToOpenMenu::
 	.string "Press START to open the MENU!$"
 
 PalletTown_Text_SignsAreUsefulArentThey::
-	.string "Signs are useful, aren't they?$"
+	.string "Los carteles son útiles, ¿no?$"
 
 PalletTown_Text_LookCopiedTrainerTipsSign::
 	.string "Look, look!\p"

@@ -293,7 +293,7 @@ Text_MetronomeTeach::
 	.string "Does it strike your fancy?$"
 
 Text_MetronomeDeclined::
-	.string "I tell you, it's a lot of fun!$"
+	.string "¡Te digo que es muy divertido!$"
 
 Text_MetronomeWhichMon::
 	.string "¡Está bien!\n"

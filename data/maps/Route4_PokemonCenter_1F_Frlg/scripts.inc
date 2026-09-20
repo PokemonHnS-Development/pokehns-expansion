@@ -187,7 +187,7 @@ Route4_PokemonCenter_1F_Text_NoRoomForMorePokemon::
 	.string "POKéMON, it looks like.$"
 
 Route4_PokemonCenter_1F_Text_YoullNeedMoreMoney::
-	.string "You'll need more money than that!$"
+	.string "¡Necesitarás más dinero que eso!$"
 
 Route4_PokemonCenter_1F_Text_IDontGiveRefunds::
 	.string "MAN: Well, I don't give refunds.\n"

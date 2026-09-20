@@ -222,7 +222,7 @@ PalletTown_RivalsHouse_Text_DontNeedAnyGrooming::
 	.string "Okay, we'll just have tea.$"
 
 PalletTown_RivalsHouse_Text_GroomWhichOne::
-	.string "Which one should I groom?$"
+	.string "¿A cuál le hago el arreglo?$"
 
 PalletTown_RivalsHouse_Text_LookingNiceInNoTime::
 	.string "DAISY: Okay, I'll get it looking\n"

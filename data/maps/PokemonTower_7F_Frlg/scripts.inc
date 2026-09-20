@@ -238,7 +238,7 @@ PokemonTower_7F_Text_Grunt1Defeat::
 	.string "I give up!$"
 
 PokemonTower_7F_Text_Grunt1PostBattle::
-	.string "I'm not going to forget this!$"
+	.string "¡No voy a olvidar esto!$"
 
 PokemonTower_7F_Text_Grunt2Intro::
 	.string "This old guy marched right up to\n"
@@ -258,13 +258,13 @@ PokemonTower_7F_Text_Grunt2PostBattle::
 	.string "You stay out of our business!$"
 
 PokemonTower_7F_Text_Grunt3Intro::
-	.string "You're not saving anyone, kid!$"
+	.string "¡No vas a salvar a nadie, chico!$"
 
 PokemonTower_7F_Text_Grunt3Defeat::
-	.string "Don't fight us ROCKETS!$"
+	.string "¡No te metas con los ROCKETS!$"
 
 PokemonTower_7F_Text_Grunt3PostBattle::
-	.string "You're not getting away with this!$"
+	.string "¡No te vas a salir con la tuya!$"
 
 PokemonTower_7F_Text_MrFujiThankYouFollowMe::
 	.string "MR. FUJI: Heh?\n"

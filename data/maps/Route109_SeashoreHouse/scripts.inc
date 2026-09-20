@@ -137,7 +137,7 @@ Route109_SeashoreHouse_Text_HereYouGo:
 	.string "Here you go!$"
 
 Route109_SeashoreHouse_Text_NotEnoughMoney:
-	.string "You don't have the money.$"
+	.string "No tienes el dinero.$"
 
 Route109_SeashoreHouse_Text_ThatsTooBad:
 	.string "No?\n"

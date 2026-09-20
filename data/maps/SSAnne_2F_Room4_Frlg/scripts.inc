@@ -16,7 +16,7 @@ SSAnne_2F_Room4_Text_LamarIntro::
 	.string "a strong or a rare POKéMON?$"
 
 SSAnne_2F_Room4_Text_LamarDefeat::
-	.string "I must salute you!$"
+	.string "¡Debo saludarte!$"
 
 SSAnne_2F_Room4_Text_LamarPostBattle::
 	.string "Personally, I prefer strong and\n"

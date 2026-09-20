@@ -335,7 +335,7 @@ GoldenrodUnderground_Text_YoungerBrotherLookCool:
     .string "OK! I'll make it look cool!$"
 
 GoldenrodUnderground_Text_YoungerBrotherAllDone:
-    .string "There we go! All done!$"
+    .string "¡Eso es! ¡Ya está!$"
 
 GoldenrodUnderground_Text_YoungerBrotherDisappointed:
     .string "No? How disappointing!$"
@@ -368,10 +368,10 @@ GoldenrodUnderground_Text_OlderBrotherAllDone:
     .string "There! All done!$"
 
 GoldenrodUnderground_Text_OlderBrotherThatsAShame:
-    .string "Is that right? That's a shame!$"
+    .string "¿En serio? ¡Qué lástima!$"
 
 GoldenrodUnderground_Text_OlderBrotherNeedMoreMoney:
-    .string "You'll need more money than that.$"
+    .string "Necesitas más dinero que eso.$"
 
 GoldenrodUnderground_Text_OlderBrotherOnePerDay:
     .string "Solo hago un corte al día.\n"
@@ -438,10 +438,10 @@ GoldenrodUnderground_Text_DoorsLocked:
     .string "The door's locked…$"
 
 GoldenrodUnderground_Text_DoorIsOpen:
-    .string "The door is open.$"
+    .string "La puerta está abierta.$"
 
 GoldenrodUnderground_Text_KeyOpenedDoor:
-    .string "The BASEMENT KEY opened the door.$"
+    .string "La LLAVE DEL SÓTANO abrió la puerta.$"
 
 GoldenrodUnderground_Text_NoEntry:
     .string "NO ENTRY BEYOND THIS POINT$"

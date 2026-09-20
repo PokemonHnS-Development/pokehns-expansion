@@ -41,7 +41,7 @@ OlivineCity_House1_Text_ThisIsntAMon:
 	.string "Eso no es un {STR_VAR_1}.$"
 
 OlivineCity_House1_Text_YouWontTradeMe:
-	.string "You don't want to trade? Aww...$"
+	.string "¿No quieres intercambiar? Ohh...$"
 
 OlivineCity_House1_Text_After:
 	.string "Hi, how's my old VOLTORB doing?$"

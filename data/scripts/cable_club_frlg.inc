@@ -1310,7 +1310,7 @@ CableClub_Text_PleaseEnter_Frlg::
 	.string "Please enter.$"
 
 CableClub_Text_DirectYouToYourRoom_Frlg::
-	.string "I'll direct you to your room now.$"
+	.string "Te llevaré a tu habitación ahora.$"
 
 CableClub_Text_SomeoneIsNotReadyToLink_Frlg::
 	.string "Alguien no está listo para el enlace.\p"
@@ -1396,7 +1396,7 @@ CableClub_Text_NotSetUpForFarAwayRegion_Frlg::
 	.string "región lejana...$"
 
 CableClub_Text_OtherTrainerNotReady_Frlg::
-	.string "The other TRAINER is not ready.$"
+	.string "El otro ENTRENADOR no está listo.$"
 
 CableClub_Text_YouHaveAMonThatCantBeTaken_Frlg::
 	.string "Tienes al menos un POKéMON\n"

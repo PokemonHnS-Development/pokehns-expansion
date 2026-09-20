@@ -924,7 +924,7 @@ BattleFrontier_BattleDomeBattleRoom_Movement_RefereeExit_hns:
 	step_end
 
 BattleFrontier_BattleDomeBattleRoom_Text_PlayerHasEnteredDome_hns:
-	.string "{PLAYER} has entered the BATTLE DOME!$"
+	.string "¡{PLAYER} ha entrado en la Cúpula Batalla!$"
 
 BattleFrontier_BattleDomeBattleRoom_Text_PlayerVersusTrainer_hns:
 	.string "{STR_VAR_1}\n"
@@ -1050,7 +1050,7 @@ BattleFrontier_BattleDomeBattleRoom_Text_WillFormerChampRegainGlory_hns:
 	.string "$"
 
 BattleFrontier_BattleDomeBattleRoom_Text_FeelGlowOfTrueMaster_hns:
-	.string "Feel the glow of a true master!$"
+	.string "¡Siente el fulgor de un gran maestro!$"
 
 BattleFrontier_BattleDomeBattleRoom_Text_MakeWayForDomeAceTucker_hns:
 	.string "Y ahora... ¡El ENTRENADOR que\n"

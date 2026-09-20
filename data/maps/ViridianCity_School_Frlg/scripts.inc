@@ -150,7 +150,7 @@ ViridianCity_School_Text_BlackboardListsStatusProblems::
 	.string "STATUS problems during battles.$"
 
 ViridianCity_School_Text_ReadWhichTopic::
-	.string "Which topic do you want to read?$"
+	.string "¿Qué tema quieres leer?$"
 
 ViridianCity_School_Text_ExplainSleep::
 	.string "A POKéMON can't attack if it's\n"

@@ -124,7 +124,7 @@ Route35_Text_CamperElliotSeen:
 	.string "el mejor!$"
 
 Route35_Text_CamperElliotBeaten:
-	.string "I wish you would have lost for me…$"
+	.string "Ojalá hubieras perdido por mí…$"
 
 Route35_Text_CamperElliotAfter:
 	.string "Fui humillado delante de mi\n"
@@ -142,7 +142,7 @@ Route35_Text_PicnickerBrookeAfter:
 	.string "mi novio.$"
 
 Route35_Text_PicnickerKimSeen:
-	.string "Are you going to the GYM? Me too!$"
+	.string "¿Vas al GIMNASIO? ¡Yo también!$"
 
 Route35_Text_PicnickerKimBeaten:
 	.string "Oh. I couldn't win…$"
@@ -152,7 +152,7 @@ Route35_Text_PicnickerKimAfter:
 	.string "colecciono.$"
 
 Route35_Text_BirdKeeperBryanSeen:
-	.string "What kinds of BALLS do you use?$"
+	.string "¿Qué tipo de BALLS usas?$"
 
 Route35_Text_BirdKeeperBryanBeaten:
 	.string "Yikes! Not fast enough!$"
@@ -169,7 +169,7 @@ Route35_Text_JugglerIrwinSeen:
 	.string "Behold my graceful BALL dexterity!$"
 
 Route35_Text_JugglerIrwinBeaten:
-	.string "Whew! That was a jolt!$"
+	.string "¡Uf! ¡Qué sacudida!$"
 
 Route35_Text_JugglerIrwinAfter:
 	.string "Iba a deslumbrarte con mi\n"
@@ -181,7 +181,7 @@ Route35_Text_BugCatcherArnieSeen:
 	.string "aparezcan POKéMON bicho.$"
 
 Route35_Text_BugCatcherArnieBeaten:
-	.string "Huh? I shouldn't have lost that…$"
+	.string "¿Eh? No debí perder eso…$"
 
 Route35_Text_BugCatcherArnieAfter:
 	.string "Mi VENONAT ganó el Concurso de\n"
@@ -201,7 +201,7 @@ Route35_Text_ArnieRematchIntro:
 	.string "aparezcan POKéMON bicho.$"
 
 Route35_Text_ArnieRematchDefeat:
-	.string "Huh? I shouldn't have lost that…$"
+	.string "¿Eh? No debí perder eso…$"
 
 Route35_Text_ArniePostRematch:
 	.string "Mi VENONAT ganó el Concurso de\n"
@@ -215,7 +215,7 @@ Route35_Text_FirebreatherWaltSeen:
 	.string "I'm practicing my fire breathing.$"
 
 Route35_Text_FirebreatherWaltBeaten:
-	.string "Ow! I scorched the tip of my nose!$"
+	.string "¡Ay! ¡Me quemé la punta de la nariz!$"
 
 Route35_Text_FirebreatherWaltAfter:
 	.string "La Marcha POKéMON de la radio\n"

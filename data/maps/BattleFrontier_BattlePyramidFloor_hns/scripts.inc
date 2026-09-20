@@ -126,7 +126,7 @@ BattlePyramid_Retire_hns::
 
 @ Also used by Trainer Hill
 BattleFacility_TrainerBattle_PlaceholderText_hns:
-	.string "This is a sample message.$"
+	.string "Este es un mensaje de ejemplo.$"
 
 gText_BattlePyramidConfirmRest_hns::
 	.string "Tu reto de la PIRÁMIDE BATALLA\n"

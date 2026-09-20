@@ -224,7 +224,7 @@ BlackthornCity_MeetSantosText:
 	.string "Adivina.$"
 
 BlackthornCity_SantosGivesGiftText:
-	.string "You can have this…$"
+	.string "Puedes quedarte con esto...$"
 
 BlackthornCity_SantosGaveGiftText:
 	.string "SANTOS: …\p"

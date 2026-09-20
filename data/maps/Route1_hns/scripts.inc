@@ -33,7 +33,7 @@ Route1_Text_SchoolboyDanny_AfterBattle:
 	.string "que lucharemos al vernos.$"
 
 Route1_Text_CooltrainerFQuinn_Seen:
-	.string "You there! Want to battle?$"
+	.string "¡Oye, tú! ¿Quieres combatir?$"
 
 Route1_Text_CooltrainerFQuinn_Beaten:
 	.string "Down and out…$"

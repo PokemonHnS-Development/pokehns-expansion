@@ -174,7 +174,7 @@ Route31_Text_DescribeRest:
 	.string "some HP.$"
 
 Route31_Text_WrongMail:
-	.string "This MAIL isn't for me.$"
+	.string "Esta CARTA no es para mí.$"
 
 Route31_Text_MissingMail:
 	.string "Why is this POKéMON so special?\p"

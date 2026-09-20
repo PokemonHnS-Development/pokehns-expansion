@@ -164,7 +164,7 @@ Route45_Text_HikerTimothySeen:
     .string "¡Porque están ahí!$"
 
 Route45_Text_HikerTimothyBeaten:
-    .string "Losses… They're there too!$"
+    .string "Las derrotas… ¡También están ahí!$"
 
 Route45_Text_HikerTimothyAfter:
     .string "Lo mejor que me ha pasado en la\n"
@@ -261,7 +261,7 @@ Route45_Text_CamperQuentinSeen:
     .string "I'm really, really tough!$"
 
 Route45_Text_CamperQuentinBeaten:
-    .string "I was tough at the TRAINER HILL…$"
+    .string "Era duro en la COLINA DEL ENTRENADOR…$"
 
 Route45_Text_CamperQuentinAfter:
     .string "¿Has ido a TRAINER HILL?\p"

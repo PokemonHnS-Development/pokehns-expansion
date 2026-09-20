@@ -47,7 +47,7 @@ NewMauville_Entrance_EventScript_DontOpenDoor::
 	end
 
 NewMauville_Entrance_Text_DoorIsLocked:
-	.string "The door is locked.$"
+	.string "La puerta está cerrada.$"
 
 NewMauville_Entrance_Text_UseBasementKey:
 	.string "Use the BASEMENT KEY?$"

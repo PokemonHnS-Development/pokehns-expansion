@@ -83,7 +83,7 @@ Route13_Text_PerryPostBattle::
 	.string "I guess I'll FLY home.$"
 
 Route13_Text_LolaIntro::
-	.string "Sure, I'll play with you, sweetie.$"
+	.string "Claro, juego contigo, cariño.$"
 
 Route13_Text_LolaDefeat::
 	.string "Oh!\n"
@@ -107,7 +107,7 @@ Route13_Text_SheilaPostBattle::
 	.string "for their looks!$"
 
 Route13_Text_JaredIntro::
-	.string "What're you lookin' at?$"
+	.string "¿Qué estás mirando?$"
 
 Route13_Text_JaredDefeat::
 	.string "Dang!\n"

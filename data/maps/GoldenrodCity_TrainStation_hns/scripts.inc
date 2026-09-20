@@ -306,7 +306,7 @@ GoldenrodMagnetTrainStation_Text_OfficerRightThisWay:
     .string "Bien. Por aquí, por favor.$"
 
 GoldenrodMagnetTrainStation_Text_OfficerNoRailPass:
-    .string "Sorry. You don't have a rail PASS.$"
+    .string "Lo siento. No tienes PASE de tren.$"
 
 GoldenrodMagnetTrainStation_Text_GentlemanPresident:
     .string "Soy el PRESIDENTE.\p"
@@ -320,4 +320,4 @@ GoldenrodCity_TrainStation_Text_Boy:
 	.string "MAGNÉTICO, ¿verdad?$"
 
 GoldenrodCity_TrainStation_Text_Psychic:
-	.string "I thought you had it!$"
+	.string "¡Creía que lo tenías!$"

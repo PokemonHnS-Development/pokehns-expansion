@@ -169,10 +169,10 @@ Alola_Ulaula_House_Phant_Text_2:
 	.string "¡Felicidades, {PLAYER}!$"
 
 Alola_Ulaula_House_Phant_Text_3:
-	.string "I think you've earned this.$"
+	.string "Creo que te has ganado esto.$"
 
 Alola_Ulaula_House_Phant_Text_4:
-	.string "You received an EGG from PHANTONOMY!$"
+	.string "¡Has recibido un HUEVO de PHANTONOMY!$"
 
 Alola_Ulaula_House_Phant_Text_5:
 	.string "That EGG contains my favorite POKéMON.\p"

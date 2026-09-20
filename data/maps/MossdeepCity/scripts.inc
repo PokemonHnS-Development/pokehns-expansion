@@ -316,7 +316,7 @@ MossdeepCity_Text_YouCanKeepIt:
 	.string "para STEVEN.$"
 
 MossdeepCity_Text_StevensHouseOverThere:
-	.string "STEVEN's house is right over there!$"
+	.string "La casa de STEVEN está justo ahí!$"
 
 MossdeepCity_Text_WhatToDoWithWeirdRock:
 	.string "¡Sí, tú también lo crees! ¿Qué se\n"

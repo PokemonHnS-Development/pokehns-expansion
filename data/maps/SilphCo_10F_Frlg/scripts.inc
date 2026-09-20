@@ -45,7 +45,7 @@ SilphCo_10F_Text_GruntPostBattle::
 	.string "one more floor.$"
 
 SilphCo_10F_Text_TravisIntro::
-	.string "Enough of your silly games!$"
+	.string "¡Basta de tus juegos tontos!$"
 
 SilphCo_10F_Text_TravisDefeat::
 	.string "No continues left!$"

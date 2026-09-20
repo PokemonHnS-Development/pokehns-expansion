@@ -192,7 +192,7 @@ LavaridgeTown_Gym_1F_Text_GymGuideAdvice:
 	.string "ve a por ella!$"
 
 LavaridgeTown_Gym_1F_Text_GymGuidePostVictory:
-	.string "Yow! That was a scorching-hot battle!$"
+	.string "¡Uf! ¡Qué batalla tan ardiente!$"
 
 LavaridgeTown_Gym_1F_Text_ColeIntro:
 	.string "¡Ay ay ay ay ay!\n"
@@ -228,7 +228,7 @@ LavaridgeTown_Gym_B1F_Text_KeeganIntro:
 	.string "clave para todo ENTRENADOR.$"
 
 LavaridgeTown_Gym_B1F_Text_KeeganDefeat:
-	.string "Play with fire, and be burned…$"
+	.string "Si juegas con fuego, te quemas…$"
 
 LavaridgeTown_Gym_B1F_Text_KeeganPostBattle:
 	.string "Tu habilidad es real…\n"

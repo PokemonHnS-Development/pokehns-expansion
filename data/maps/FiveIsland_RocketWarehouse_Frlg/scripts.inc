@@ -185,7 +185,7 @@ FiveIsland_RocketWarehouse_Text_Grunt2Intro::
 	.string "TEAM ROCKET's WAREHOUSE?$"
 
 FiveIsland_RocketWarehouse_Text_Grunt2Defeat::
-	.string "What do you think you're doing?!$"
+	.string "¿¡Qué te crees que estás haciendo!?$"
 
 FiveIsland_RocketWarehouse_Text_Grunt2PostBattle::
 	.string "TEAM ROCKET broke up?\n"
@@ -212,7 +212,7 @@ FiveIsland_RocketWarehouse_Text_Grunt3Intro::
 	.string "know our BOSS GIOVANNI!$"
 
 FiveIsland_RocketWarehouse_Text_Grunt3Defeat::
-	.string "Don't…you…dare…laugh…$"
+	.string "No…te…atrevas…a…reír…$"
 
 FiveIsland_RocketWarehouse_Text_Grunt3PostBattle::
 	.string "Don't mess in the doings of adults,\n"

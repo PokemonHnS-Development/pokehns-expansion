@@ -530,7 +530,7 @@ Route109_Text_SandCastleTakingLongTime:
 	.string "to make.$"
 
 Route109_Text_YouCanHaveThis:
-	.string "You can have this!$"
+	.string "¡Puedes quedarte con esto!$"
 
 Route109_Text_WereGoingToMakeBigCastle:
 	.string "We're going to get all the sand from\n"

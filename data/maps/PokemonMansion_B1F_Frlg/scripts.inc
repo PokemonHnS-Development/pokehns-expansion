@@ -46,7 +46,7 @@ PokemonMansion_B1F_Text_IvanIntro::
 	.string "Look at all this space.$"
 
 PokemonMansion_B1F_Text_IvanDefeat::
-	.string "What was that for?$"
+	.string "¿Para qué fue eso?$"
 
 PokemonMansion_B1F_Text_IvanPostBattle::
 	.string "I like it here.\n"

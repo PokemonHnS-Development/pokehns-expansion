@@ -74,7 +74,7 @@ Route103_Text_DaisyIntro:
 	.string "soul-soothing fragrance?$"
 
 Route103_Text_DaisyDefeated:
-	.string "You weren't led astray by our aroma…$"
+	.string "No te desvió nuestro aroma…$"
 
 Route103_Text_DaisyPostBattle:
 	.string "Aromatherapy is a form of mental\n"
@@ -421,7 +421,7 @@ Route104_Text_DarianIntro:
 	.string "¡Seguro que se ve fuerte, sí que sí!$"
 
 Route104_Text_DarianDefeat:
-	.string "What the…$"
+	.string "¿Qué demonios…?$"
 
 Route104_Text_DarianPostBattle:
 	.string "Oye, MAGIKARP, no haces honor\n"
@@ -660,7 +660,7 @@ Route107_Text_BethIntro:
 	.string "¡Claro, iré contigo!$"
 
 Route107_Text_BethDefeated:
-	.string "I wasn't good enough for you.$"
+	.string "No fui lo bastante bueno para ti.$"
 
 Route107_Text_BethPostBattle:
 	.string "Creo que seguirás mejorando.\n"
@@ -793,7 +793,7 @@ Route108_Text_CarolinaIntro:
 	.string "We'll show you one speedy battle!$"
 
 Route108_Text_CarolinaDefeated:
-	.string "That wasn't cute at all.$"
+	.string "Eso no fue nada tierno.$"
 
 Route108_Text_CarolinaPostBattle:
 	.string "Since I'm at sea like this, I wouldn't\n"
@@ -820,14 +820,14 @@ Route109_Text_AliceDefeated:
 	.string "Ouch, ouch, ouch!$"
 
 Route109_Text_AlicePostBattle:
-	.string "Cheeks are the most prone to burning!$"
+	.string "¡Las mejillas se queman más fácil!$"
 
 Route109_Text_HueyIntro:
 	.string "I've laid anchor in ports around\n"
 	.string "the world, but SLATEPORT's the best.$"
 
 Route109_Text_HueyDefeated:
-	.string "You're the best!$"
+	.string "¡Eres el mejor!$"
 
 Route109_Text_HueyPostBattle:
 	.string "In the best port was the best\n"
@@ -919,7 +919,7 @@ Route109_Text_GwenDefeated:
 	.string "Oh, you're strong.$"
 
 Route109_Text_GwenPostBattle:
-	.string "How did you get to be so strong?$"
+	.string "¿Cómo te volviste tan fuerte?$"
 
 Route109_Text_CarterIntro:
 	.string "Wahahah! This dude's going to catch\n"
@@ -1028,7 +1028,7 @@ Route110_Text_AnthonyPostBattle:
 	.string "Debo reconsiderar esto...$"
 
 Route110_Text_BenjaminIntro:
-	.string "Don't panic if your BIKE's going fast!$"
+	.string "¡No temas si tu BICICLETA va rápido!$"
 
 Route110_Text_BenjaminDefeated:
 	.string "No debo entrar en pánico en POKéMON\n"
@@ -1162,7 +1162,7 @@ Route110_Text_IsabelIntro:
 	.string "lucir a mis lindos POKéMON.$"
 
 Route110_Text_IsabelDefeated:
-	.string "Oh, dear, this won't do.$"
+	.string "Ay, cielos, esto no sirve.$"
 
 Route110_Text_IsabelPostBattle:
 	.string "En vez de luchar, tal vez debería\n"
@@ -1179,7 +1179,7 @@ Route110_Text_IsabelRematchIntro:
 	.string "mis POKéMON todo lo que quieras!$"
 
 Route110_Text_IsabelRematchDefeated:
-	.string "Oh, dear, this won't do.$"
+	.string "Ay, cielos, esto no sirve.$"
 
 Route110_Text_IsabelRematchPostBattle:
 	.string "No creo que pudiera dejar de\n"
@@ -1215,7 +1215,7 @@ Route110_Text_JosephIntro:
 	.string "ritmo, ¡te quedarás atrás!$"
 
 Route110_Text_JosephDefeated:
-	.string "You got into the groove all right…$"
+	.string "Le agarraste bien el ritmo…$"
 
 Route110_Text_JosephPostBattle:
 	.string "¡Esto no me desanimará!\n"
@@ -1226,7 +1226,7 @@ Route110_Text_KalebIntro:
 	.string "¡No hay vista más adorable!$"
 
 Route110_Text_KalebDefeated:
-	.string "Have you no compassion or pity?$"
+	.string "¿No tienes compasión ni piedad?$"
 
 Route110_Text_KalebPostBattle:
 	.string "Está bien, hiciste lo mejor que\n"
@@ -1417,7 +1417,7 @@ Route111_Text_BrookeRematchIntro:
 	.string "know?$"
 
 Route111_Text_BrookeRematchDefeat:
-	.string "You've taught them good moves!$"
+	.string "¡Les has enseñado buenos movimientos!$"
 
 Route111_Text_BrookePostRematch:
 	.string "Maybe I should have stopped my\n"
@@ -1589,7 +1589,7 @@ Route112_Text_BryantIntro:
 	.string "¡Echa un vistazo!$"
 
 Route112_Text_BryantDefeat:
-	.string "What a bumpy ride that was!$"
+	.string "¡Qué viaje tan movido!$"
 
 Route112_Text_BryantPostBattle:
 	.string "Me gusta cómo luchas.\n"
@@ -1628,7 +1628,7 @@ Route113_Text_DillonIntro:
 	.string "La tierra está viva.$"
 
 Route113_Text_DillonDefeat:
-	.string "You're some kind of strong!$"
+	.string "¡Qué fuerza tienes!$"
 
 Route113_Text_DillonPostBattle:
 	.string "¡Ay! ¡Agh! ¡No puedo ver!\n"
@@ -1806,7 +1806,7 @@ Route114_Text_LucasIntro:
 	.string "estar en las montañas!$"
 
 Route114_Text_LucasDefeat:
-	.string "The mountains are unforgiving…$"
+	.string "Las montañas no perdonan…$"
 
 Route114_Text_LucasPostBattle:
 	.string "En invierno, son mortales\n"
@@ -1903,7 +1903,7 @@ Route114_Text_ClaudeIntro:
 	.string "¡Así que saca tu POKéMON!$"
 
 Route114_Text_ClaudeDefeat:
-	.string "If we were fishing, I would've won…$"
+	.string "Si estuviéramos pescando, ganaría…$"
 
 Route114_Text_ClaudePostBattle:
 	.string "Creo que probaré mi suerte buscando\n"
@@ -1975,7 +1975,7 @@ Route114_Text_CharlotteIntro:
 	.string "¡No soy solo una cara bonita!$"
 
 Route114_Text_CharlotteDefeat:
-	.string "That wasn't cute in the least!$"
+	.string "¡Eso no fue nada tierno!$"
 
 Route114_Text_CharlottePostBattle:
 	.string "No quiero un POKéMON que sea\n"
@@ -2139,7 +2139,7 @@ Route115_Text_HeleneIntro:
 	.string "strength!$"
 
 Route115_Text_HeleneDefeat:
-	.string "This is too humiliating!$"
+	.string "¡Esto es muy humillante!$"
 
 Route115_Text_HelenePostBattle:
 	.string "I rarely meet anyone who's better\n"
@@ -2308,7 +2308,7 @@ Route116_Text_DawsonIntro:
 	.string "you helpless!$"
 
 Route116_Text_DawsonDefeat:
-	.string "Oh, baby, say it isn't so!$"
+	.string "¡Oh, nena, di que no es cierto!$"
 
 Route116_Text_DawsonPostBattle:
 	.string "Oh, no, no, no!\n"
@@ -2317,7 +2317,7 @@ Route116_Text_DawsonPostBattle:
 	.string "I'll have to call my stylist now!$"
 
 Route116_Text_DevanIntro:
-	.string "We'll rock you hard!$"
+	.string "¡Te vamos a dar duro!$"
 
 Route116_Text_DevanDefeat:
 	.string "Aiyiyi!\n"
@@ -2332,7 +2332,7 @@ Route116_Text_JohnsonIntro:
 	.string "I'm bored, so can we battle?$"
 
 Route116_Text_JohnsonDefeat:
-	.string "That was fun even though I lost.$"
+	.string "Eso fue divertido aunque perdí.$"
 
 Route116_Text_JohnsonPostBattle:
 	.string "Want to stay here and keep\n"
@@ -2372,7 +2372,7 @@ Route117_Text_LydiaIntro:
 	.string "have raised your POKéMON properly.$"
 
 Route117_Text_LydiaDefeat:
-	.string "Yes, they are growing properly.$"
+	.string "Sí, están creciendo bien.$"
 
 Route117_Text_LydiaPostBattle:
 	.string "Try raising POKéMON with more\n"
@@ -2387,7 +2387,7 @@ Route117_Text_LydiaRematchIntro:
 	.string "raised your POKéMON properly.$"
 
 Route117_Text_LydiaRematchDefeat:
-	.string "They are growing admirably.$"
+	.string "Están creciendo de maravilla.$"
 
 Route117_Text_LydiaPostRematch:
 	.string "POKéMON seem to like different kinds\n"
@@ -2513,7 +2513,7 @@ Route117_Text_AnnaRematchIntro:
 	.string "ante mi compañera junior, ¿verdad?$"
 
 Route117_Text_AnnaRematchDefeat:
-	.string "ANNA: I couldn't get into the groove.$"
+	.string "ANNA: No logré encontrar el ritmo.$"
 
 Route117_Text_AnnaPostRematch:
 	.string "ANNA: Tus POKéMON tienen buenas\n"
@@ -2722,7 +2722,7 @@ Route119_Text_TaylorIntro:
 	.string "Si giras a la derecha, nosotrosも…$"
 
 Route119_Text_TaylorDefeat:
-	.string "But if you win, I lose…$"
+	.string "Pero si ganas, yo pierdo…$"
 
 Route119_Text_TaylorPostBattle:
 	.string "No puedo MIMIC que ganes el duelo.\n"
@@ -2734,7 +2734,7 @@ Route119_Text_DougIntro:
 	.string "¿O estabas intentando evitarme?$"
 
 Route119_Text_DougDefeat:
-	.string "Whoop, that was a great match!$"
+	.string "¡Vaya, fue un gran combate!$"
 
 Route119_Text_DougPostBattle:
 	.string "¡Somos el CÍRCULO MIMETIZADOR!\n"
@@ -2761,7 +2761,7 @@ Route119_Text_KentDefeat:
 	.string "I give up!$"
 
 Route119_Text_KentPostBattle:
-	.string "Won't you join our MIMIC CIRCLE?$"
+	.string "¿No te unes al CÍRCULO MÍMICO?$"
 
 Route119_Text_JacksonIntro:
 	.string "Quien tiene el conocimiento y\n"
@@ -3143,7 +3143,7 @@ Route121_Text_VanessaIntro:
 	.string "lindos POKéMON?$"
 
 Route121_Text_VanessaDefeat:
-	.string "This isn't what I meant!$"
+	.string "¡No era lo que quería decir!$"
 
 Route121_Text_VanessaPostBattle:
 	.string "Iré a un CONCURSO en FONDO PLATA.\p"
@@ -3342,7 +3342,7 @@ Route123_Text_WendyIntro:
 	.string "¡Yo seré tu prueba!$"
 
 Route123_Text_WendyDefeat:
-	.string "You passed with flying colors!$"
+	.string "¡Pasaste con honores!$"
 
 Route123_Text_WendyPostBattle:
 	.string "Para vencerme incluso a mí...\n"
@@ -3865,7 +3865,7 @@ Route125_Text_KimIntro:
 	.string "Are you going to see him, too?$"
 
 Route125_Text_KimDefeat:
-	.string "KIM: I thought we would win.$"
+	.string "KIM: Creía que ganaríamos.$"
 
 Route125_Text_KimPostBattle:
 	.string "KIM: A funny old man lives in the\n"
@@ -3881,7 +3881,7 @@ Route125_Text_IrisIntro:
 	.string "looking for out here?$"
 
 Route125_Text_IrisDefeat:
-	.string "IRIS: Oh, we came sort of close.$"
+	.string "IRIS: Vaya, casi lo logramos.$"
 
 Route125_Text_IrisPostBattle:
 	.string "IRIS: KIM, are we really going into\n"
@@ -4027,7 +4027,7 @@ Route126_Text_SiennaIntro:
 	.string "en esto!$"
 
 Route126_Text_SiennaDefeat:
-	.string "You had more heart!$"
+	.string "¡Tenías más corazón!$"
 
 Route126_Text_SiennaPostBattle:
 	.string "Tengo que refrescarme ahora...\n"
@@ -4218,10 +4218,10 @@ Route128_Text_AlexaPostBattle:
 	.string "no me rendiré por un contratiempo.$"
 
 Route128_Text_RubenIntro:
-	.string "There is no stronger TRAINER than I!$"
+	.string "¡No hay ENTRENADOR más fuerte que yo!$"
 
 Route128_Text_RubenDefeat:
-	.string "This can't be!$"
+	.string "¡No puede ser!$"
 
 Route128_Text_RubenPostBattle:
 	.string "¡Probablemente no hay ningún\n"
@@ -4664,7 +4664,7 @@ Route133_Text_ConorIntro:
 	.string "demasiado. No tienen rumbo.$"
 
 Route133_Text_ConorDefeat:
-	.string "You have a firm sense of purpose.$"
+	.string "Tienes un claro sentido de propósito.$"
 
 Route133_Text_ConorPostBattle:
 	.string "No dejes que otros te desvíen.\n"

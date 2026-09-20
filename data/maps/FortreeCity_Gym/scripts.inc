@@ -225,7 +225,7 @@ FortreeCity_Gym_Text_DariusIntro:
 	.string "Lo sabes, ¿verdad?$"
 
 FortreeCity_Gym_Text_DariusDefeat:
-	.string "You seem to know your stuff!$"
+	.string "¡Parece que sabes de esto!$"
 
 FortreeCity_Gym_Text_DariusPostBattle:
 	.string "Sí, me has vencido.\n"

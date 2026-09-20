@@ -171,7 +171,7 @@ CinnabarIsland_PokemonCenter_1F_Text_ReadyToSailToOneIsland::
 	.string "Ready to set sail to ONE ISLAND?$"
 
 CinnabarIsland_PokemonCenter_1F_Text_OhNotDoneYet::
-	.string "Oh, you're still not done yet?$"
+	.string "Ah, ¿aún no has terminado?$"
 
 CinnabarIsland_PokemonCenter_1F_Text_LetsGo::
 	.string "Well, that's it.\n"

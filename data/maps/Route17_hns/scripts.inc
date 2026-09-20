@@ -97,19 +97,19 @@ Route17_EventScript_RematchCharlesTryGiveItem::
 	end
 
 Route17_Text_BikerRileySeen:
-	.string "Hey, you! You're from JOHTO, huh?$"
+	.string "¡Oye, tú! Eres de JOHTO, ¿no?$"
 
 Route17_Text_BikerRileyBeaten:
 	.string "Whoa, you kick!$"
 
 Route17_Text_BikerRileyAfterBattle:
-	.string "Don't get cocky, you JOHTO punk!$"
+	.string "No te confíes, chico de JOHTO.$"
 
 Route17_Text_BikerJoelSeen:
 	.string "Wow. That's a cool BICYCLE!$"
 
 Route17_Text_BikerJoelBeaten:
-	.string "But you don't just look cool…$"
+	.string "Pero no solo pareces genial…$"
 
 Route17_Text_BikerJoelAfterBattle:
 	.string "Me veo genial, pero soy débil, así\n"

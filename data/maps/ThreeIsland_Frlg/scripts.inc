@@ -464,7 +464,7 @@ ThreeIsland_Text_Biker1Defeat::
 
 ThreeIsland_Text_Biker1PostBattle::
 	.string "Aww, man…\n"
-	.string "Don't you dare laugh!$"
+	.string "¡No te atrevas a reír!$"
 
 ThreeIsland_Text_Biker2Intro::
 	.string "Aren't you from KANTO?\n"

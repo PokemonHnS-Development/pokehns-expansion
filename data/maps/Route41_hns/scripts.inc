@@ -109,7 +109,7 @@ Route41_Text_SwimmerfKayleeSeen:
 	.string "Iré a explorar con amigos.$"
 
 Route41_Text_SwimmerfKayleeBeaten:
-	.string "Is that how you do it?$"
+	.string "¿Así se hace?$"
 
 Route41_Text_SwimmerfKayleeAfter:
 	.string "Se supone que hay un gran\n"
@@ -161,7 +161,7 @@ Route41_Text_SwimmerfKaraSeen:
 	.string "así podrás seguir con fuerza.$"
 
 Route41_Text_SwimmerfKaraBeaten:
-	.string "Oh! You have more energy than I do.$"
+	.string "¡Oh! Tienes más energía que yo.$"
 
 Route41_Text_SwimmerfKaraAfter:
 	.string "Oí rugidos desde lo profundo\n"

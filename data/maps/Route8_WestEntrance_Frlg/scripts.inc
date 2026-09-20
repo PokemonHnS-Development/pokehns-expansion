@@ -119,5 +119,5 @@ Route8_WestEntrance_Text_ThanksIllShareTeaWithGuards::
 	.string "guards!$"
 
 Route8_WestEntrance_Text_HiHowsItGoing::
-	.string "Hi, how's it going?$"
+	.string "Hola, ¿qué tal?$"
 

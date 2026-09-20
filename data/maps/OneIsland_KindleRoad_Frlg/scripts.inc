@@ -69,7 +69,7 @@ OneIsland_KindleRoad_Text_SharonIntro::
 	.string "training?$"
 
 OneIsland_KindleRoad_Text_SharonDefeat::
-	.string "You were a cut above me.$"
+	.string "Fuiste superior a mí.$"
 
 OneIsland_KindleRoad_Text_SharonPostBattle::
 	.string "It's clear that you're skilled.\n"

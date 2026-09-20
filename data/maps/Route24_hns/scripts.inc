@@ -161,7 +161,7 @@ Route24_Text_RocketDisappears:
 
 
 Route24_Text_Woman:
-	.string "Isn't it a lovely view?$"
+	.string "¿No es una vista hermosa?$"
 Route24_Text_Man:
 	.string "I could stay here all day.$"
 
@@ -171,6 +171,6 @@ Route24_Text_ManRocket:
 	.string "Nobody pushes my girlfriend!$"
 
 Route24_Text_WomanAfterRocket:
-	.string "What was that all about?$"
+	.string "¿A qué se debió todo eso?$"
 Route24_Text_ManAfterRocket:
-	.string "Was that a ROCKET?$"
+	.string "¿Ese era un ROCKET?$"

@@ -196,14 +196,14 @@ GoldenrodCity_RadioTower_2F_Text_GruntM5Seen:
 	.string "¡Amamos ser malos! ¿Tienes miedo?$"
 
 GoldenrodCity_RadioTower_2F_Text_GruntM5Beaten:
-	.string "You think you're a hero?$"
+	.string "¿Te crees un héroe?$"
 
 GoldenrodCity_RadioTower_2F_Text_GruntM5After:
 	.string "No siempre somos malos. Solo hacemos\n"
 	.string "lo que nos da la gana.$"
 
 GoldenrodCity_RadioTower_2F_Text_GruntM6Seen:
-	.string "Hey, hey! Keep out of our way!$"
+	.string "¡Oye, oye! ¡Quítate de nuestro camino!$"
 
 GoldenrodCity_RadioTower_2F_Text_GruntM6Beaten:
 	.string "Arggh. I give up.$"
@@ -221,7 +221,7 @@ GoldenrodCity_RadioTower_2F_Text_GruntF2Seen:
 	.string "¡Vamos, diviérteme más!$"
 
 GoldenrodCity_RadioTower_2F_Text_GruntF2Beaten:
-	.string "Wh-who are you?$"
+	.string "¿Qui-quién eres?$"
 
 GoldenrodCity_RadioTower_2F_Text_GruntF2After:
 	.string "Me venciste, y no lo olvidaré.\n"

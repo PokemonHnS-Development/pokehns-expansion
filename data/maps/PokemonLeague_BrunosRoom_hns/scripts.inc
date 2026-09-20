@@ -88,7 +88,7 @@ PokemonLeague_BrunosRoom_Text_Before:
     .string "¡Hoo hah!$"
 
 PokemonLeague_BrunosRoom_Text_Beaten:
-    .string "Why? How could we lose?$"
+    .string "¿Por qué? ¿Cómo pudimos perder?$"
 
 PokemonLeague_BrunosRoom_Text_Defeat:
     .string "Al haber perdido, no tengo derecho\n"

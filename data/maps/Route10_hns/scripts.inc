@@ -88,7 +88,7 @@ Route10_Text_PokefanmRobertSeen:
 	.string "¡A mí también!$"
 
 Route10_Text_PokefanmRobertBeaten:
-	.string "I'd have to say that's my loss.$"
+	.string "Diría que esa es mi derrota.$"
 
 Route10_Text_PokefanmRobertAfter:
 	.string "Mira lo que le hiciste a mi POKéMON…\p"

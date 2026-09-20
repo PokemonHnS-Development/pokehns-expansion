@@ -82,7 +82,7 @@ PetalburgCity_WallysHouse_Text_ThanksForPlayingWithWally:
 	.string "en este momento?$"
 
 PetalburgCity_WallysHouse_Text_WonderHowWallyIsDoing:
-	.string "I wonder how our WALLY is doing?$"
+	.string "¿Cómo estará nuestro WALLY?$"
 
 PetalburgCity_WallysHouse_Text_PleaseExcuseUs:
 	.string "{PLAYER}{KUN}! Perdónanos por\n"

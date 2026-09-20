@@ -86,7 +86,7 @@ Route43_Text_PokemaniacBenSeen:
     .string "seguiré atrapando POKéMON!$"
 
 Route43_Text_PokemaniacBenBeaten:
-    .string "How could you do this to me?$"
+    .string "¿Cómo pudiste hacerme esto?$"
 
 Route43_Text_PokemaniacBenAfter:
     .string "¿Qué más me gusta aparte de\n"

@@ -56,7 +56,7 @@ MoveTutor_Text_FuryCutterTeach:
 	.string "¿Quieres que se lo enseñe a uno?$"
 
 MoveTutor_Text_FuryCutterDeclined:
-	.string "We're not on the same wavelength.$"
+	.string "No estamos en la misma sintonía.$"
 
 MoveTutor_Text_FuryCutterWhichMon:
 	.string "¡Súper!\n"

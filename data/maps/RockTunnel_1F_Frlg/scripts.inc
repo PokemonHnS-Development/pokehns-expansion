@@ -97,7 +97,7 @@ RockTunnel_1F_Text_LeahIntro::
 	.string "dark!$"
 
 RockTunnel_1F_Text_LeahDefeat::
-	.string "It was too dark…$"
+	.string "Estaba muy oscuro…$"
 
 RockTunnel_1F_Text_LeahPostBattle::
 	.string "I saw a MACHOP in this tunnel.$"

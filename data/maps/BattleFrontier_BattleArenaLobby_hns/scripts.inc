@@ -517,10 +517,10 @@ BattleFrontier_BattleArenaLobby_Text_OrderOfMonsImportant_hns:
 	.string "armar un equipo efectivo.$"
 
 BattleFrontier_BattleArenaLobby_Text_RulesAreListed_hns:
-	.string "The Set KO Tourney's rules are listed.$"
+	.string "Reglas del Torneo Set KO.$"
 
 BattleFrontier_BattleArenaLobby_Text_ReadWhichHeading_hns:
-	.string "Which heading do you want to read?$"
+	.string "¿Qué título quieres leer?$"
 
 BattleFrontier_BattleArenaLobby_Text_ExplainBattleRules_hns:
 	.string "El Torneo KO tiene reglas especiales,\n"

@@ -107,5 +107,5 @@ Route6_NorthEntrance_Text_ThanksIllShareTeaWithGuards::
 	.string "guards!$"
 
 Route6_NorthEntrance_Text_HiHowsItGoing::
-	.string "Hi, how's it going?$"
+	.string "Hola, ¿qué tal?$"
 

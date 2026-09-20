@@ -83,4 +83,4 @@ MountMortar4_Text_KiyoGotTyrogue:
 	.string "¡Adiós!$"
 
 MountMortar4_Text_KiyoFullParty:
-	.string "You have no room in your party!$"
+	.string "¡No tienes espacio en tu equipo!$"

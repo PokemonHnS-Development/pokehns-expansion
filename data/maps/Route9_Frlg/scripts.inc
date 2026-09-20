@@ -36,10 +36,10 @@ Route9_Text_DrewDefeat::
 	.string "Can't measure up…$"
 
 Route9_Text_DrewPostBattle::
-	.string "Are you off to ROCK TUNNEL, too?$"
+	.string "¿Tú también vas a TÚNEL ROCA?$"
 
 Route9_Text_CaitlinIntro::
-	.string "Don't you dare patronize me!$"
+	.string "¡No me trates con condescendencia!$"
 
 Route9_Text_CaitlinDefeat::
 	.string "No!\n"

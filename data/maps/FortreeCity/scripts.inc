@@ -131,7 +131,7 @@ FortreeCity_Text_PokemonThatEvolveWhenTraded:
 	.string "intercambiarlos! Eso escuché.$"
 
 FortreeCity_Text_SomethingUnseeable:
-	.string "Something unseeable is in the way.$"
+	.string "Algo invisible bloquea el paso.$"
 
 FortreeCity_Text_UnseeableUseDevonScope:
 	.string "Algo invisible bloquea el camino.\p"

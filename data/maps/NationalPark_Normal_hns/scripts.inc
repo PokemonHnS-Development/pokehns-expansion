@@ -217,7 +217,7 @@ NationalPark_Normal_Text_PokefanFBeverly1_Seen:
 	.string "me hacen adorables.$"
 
 NationalPark_Normal_Text_PokefanFBeverly1_Beaten:
-	.string "I can beat you in pride, but…$"
+	.string "Puedo superarte en orgullo, pero…$"
 
 NationalPark_Normal_Text_PokefanFBeverly_After:
 	.string "debo decir que tus POKéMON son muy\n"

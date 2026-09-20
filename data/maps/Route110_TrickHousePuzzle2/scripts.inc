@@ -107,7 +107,7 @@ Route110_TrickHousePuzzle2_Text_WroteSecretCodeLockOpened:
 	.string "¡La cerradura se abrió!$"
 
 Route110_TrickHousePuzzle2_Text_TedIntro:
-	.string "Which switch closes which hole?$"
+	.string "¿Qué interruptor cierra qué agujero?$"
 
 Route110_TrickHousePuzzle2_Text_TedDefeat:
 	.string "¡Después de esa batalla, estoy más\n"

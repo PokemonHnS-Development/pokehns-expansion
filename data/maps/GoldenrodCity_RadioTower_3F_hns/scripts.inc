@@ -131,13 +131,13 @@ GoldenrodCity_RadioTower_3F_EventScript_Sign2::
 	end
 
 GoldenrodCity_RadioTower_3F_Text_CardKeySlot:
-	.string "It's the CARD KEY slot.$"
+	.string "Es la ranura de la LLAVE MAGNÉTICA.$"
 
 GoldenrodCity_RadioTower_3F_Text_InsertedCardKey:
 	.string "{PLAYER} inserted the CARD KEY.$"
  
 GoldenrodCity_RadioTower_3F_Text_Open:
-	.string "The gate is open.$"
+	.string "La reja está abierta.$"
 
 GoldenrodCity_RadioTower_3F_Text_PersonnelSign:
 	.string "3F PERSONNEL$"
@@ -171,7 +171,7 @@ GoldenrodCity_RadioTower_3F_Text_CooltrainerFPleaseSave:
 	.string "¡Por favor, sálvalo!$"
 
 GoldenrodCity_RadioTower_3F_Text_CooltrainerFDirectorSafe:
-	.string "Is the DIRECTOR safe?$"
+	.string "¿El DIRECTOR está a salvo?$"
 
 GoldenrodCity_RadioTower_3F_Text_CooltrainerFHeroGift:
 	.string "¡Gracias! ¡Eres mi héroe!\p"
@@ -183,7 +183,7 @@ GoldenrodCity_RadioTower_3F_Text_CooltrainerFSunnyDay:
 	.string "fuego por un tiempo.$"
 
 GoldenrodCity_RadioTower_3F_Text_CooltrainerFMarvelous:
-	.string "You were simply marvelous!$"
+	.string "¡Estuviste simplemente maravilloso!$"
 
 GoldenrodCity_RadioTower_3F_Text_GruntM7Seen:
 	.string "Recibí órdenes muy estrictas.\p"
@@ -218,11 +218,11 @@ GoldenrodCity_RadioTower_3F_Text_GruntM9Beaten:
 GoldenrodCity_RadioTower_3F_Text_GruntM9After:
 	.string "¿¡Qué!? ¿Pasaste a nuestros hombres\n"
 	.string "del SUBTERRÁNEO?\p"
-	.string "How could you?$"
+	.string "¿Cómo pudiste?$"
 
 GoldenrodCity_RadioTower_3F_Text_ScientistMarcSeen:
 	.string "¿Un niño desconocido por aquí?\p"
-	.string "Who are you?$"
+	.string "¿Quién eres?$"
 
 GoldenrodCity_RadioTower_3F_Text_ScientistMarcBeaten:
 	.string "Tch! I took you too lightly!$"

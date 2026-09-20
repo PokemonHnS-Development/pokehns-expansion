@@ -330,7 +330,7 @@ BattleFrontier_Lounge7_Text_LeftTutorWelcomeBack:
 
 BattleFrontier_Lounge7_Text_TeachWhichMove:
 	.string "¡Bien, bien, mira aquí!\n"
-	.string "Which move should I teach?$"
+	.string "¿Qué movimiento debería enseñar?$"
 
 BattleFrontier_Lounge7_Text_MoveWillBeXBattlePoints:
 	.string "El ataque {STR_VAR_1}, ¿verdad?\n"

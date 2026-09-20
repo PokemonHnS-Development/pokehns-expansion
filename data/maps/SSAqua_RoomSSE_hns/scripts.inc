@@ -102,4 +102,4 @@ SSAqua_RoomSSE_Text_GranddaughterWasPlaying:
     .string "el CAPITÁN y esta persona!$"
 
 SSAqua_RoomSSE_Text_GranddaughterHadFun:
-    .string "I had lots of fun playing!$"
+    .string "¡Me divertí mucho jugando!$"

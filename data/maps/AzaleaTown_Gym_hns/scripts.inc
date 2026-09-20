@@ -738,7 +738,7 @@ AzaleaTown_Gym_Text_BugCatcherAlSeen:
 	.string "¡Te lo demostraré!$"
 
 AzaleaTown_Gym_Text_BugCatcherAlBeaten:
-	.string "You proved how tough you are…$"
+	.string "Demostraste lo fuerte que eres…$"
 
 AzaleaTown_Gym_Text_BugCatcherAlAfter:
 	.string "Son geniales, pero a la mayoría\n"

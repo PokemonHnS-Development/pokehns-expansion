@@ -76,8 +76,8 @@ enum {
 
 #define MAX_ITEMS_PER_TAB 16
 #define ITEMS_VISIBLE 5
-#define VALUE_X_START 108   // donde empiezan los valores
-#define VALUE_X_END   222   // fin de la zona de valores (ventana completa)
+#define VALUE_X_START 104   // donde empiezan los valores
+#define VALUE_X_END   198   // fin de la zona de valores (ventana completa)
 #define Y_DIFF 16
 
 // =============================================================================
@@ -645,21 +645,21 @@ static void DrawRightSideChoiceText(const u8 *text, int x, int y, bool8 chosen, 
         color[1] = chosen ? TEXT_COLOR_OPTIONS_RED_DARK_FG : TEXT_COLOR_OPTIONS_GRAY_LIGHT_FG;
         color[2] = chosen ? TEXT_COLOR_OPTIONS_RED_DARK_SHADOW : TEXT_COLOR_OPTIONS_GRAY_SHADOW;
     }
-    AddTextPrinterParameterized4(WIN_OPTIONS, FONT_SMALL, x, y + 1, 0, 0, color, TEXT_SKIP_DRAW, text);
+    AddTextPrinterParameterized4(WIN_OPTIONS, FONT_SHORT, x, y + 1, 0, 0, color, TEXT_SKIP_DRAW, text);
 }
 
 static int GetMiddleX(const u8 *txt1, const u8 *txt2, const u8 *txt3)
 {
-    int widthLeft = GetStringWidth(FONT_SMALL, txt1, 0);
-    int widthMid = GetStringWidth(FONT_SMALL, txt2, 0);
-    int widthRight = GetStringWidth(FONT_SMALL, txt3, 0);
+    int widthLeft = GetStringWidth(FONT_SHORT, txt1, 0);
+    int widthMid = GetStringWidth(FONT_SHORT, txt2, 0);
+    int widthRight = GetStringWidth(FONT_SHORT, txt3, 0);
     return (VALUE_X_END - widthMid) / 2 + VALUE_X_START;
 }
 
 static void DrawChoices_Two(const u8 *const *strings, int selection, int y, bool8 active)
 {
     DrawRightSideChoiceText(strings[0], VALUE_X_START, y + 1, selection == 0, active);
-    DrawRightSideChoiceText(strings[1], GetStringRightAlignXOffset(FONT_SMALL, strings[1], VALUE_X_END), y + 1, selection == 1, active);
+    DrawRightSideChoiceText(strings[1], GetStringRightAlignXOffset(FONT_SHORT, strings[1], VALUE_X_END), y + 1, selection == 1, active);
 }
 
 static void DrawChoices_Three(const u8 *const *strings, int selection, int y, bool8 active)
@@ -667,7 +667,7 @@ static void DrawChoices_Three(const u8 *const *strings, int selection, int y, bo
     int xMid = GetMiddleX(strings[0], strings[1], strings[2]);
     DrawRightSideChoiceText(strings[0], VALUE_X_START, y + 1, selection == 0, active);
     DrawRightSideChoiceText(strings[1], xMid, y + 1, selection == 1, active);
-    DrawRightSideChoiceText(strings[2], GetStringRightAlignXOffset(FONT_SMALL, strings[2], VALUE_X_END), y + 1, selection == 2, active);
+    DrawRightSideChoiceText(strings[2], GetStringRightAlignXOffset(FONT_SHORT, strings[2], VALUE_X_END), y + 1, selection == 2, active);
 }
 
 static void DrawChoices_Four(const u8 *const *strings, int selection, int y, bool8 active)
@@ -793,7 +793,7 @@ static void InitListMenu(void)
     template.lettersSpacing = 0;
     template.itemVerticalPadding = 0;
     template.scrollMultiple = LIST_NO_MULTIPLE_SCROLL;
-    template.fontId = FONT_SMALL;
+    template.fontId = FONT_SHORT;
     template.cursorKind = CURSOR_INVISIBLE;
 
     sMenu->listTaskId = ListMenuInit(&template,

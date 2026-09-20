@@ -129,7 +129,7 @@ LavenderTown_VolunteerPokemonHouse_Text_ExplainPokeFlute::
 	.string "sleeping obstacles.$"
 
 LavenderTown_VolunteerPokemonHouse_Text_MustMakeRoomForThis::
-	.string "You must make room for this!$"
+	.string "¡Debes hacer espacio para esto!$"
 
 LavenderTown_VolunteerPokemonHouse_Text_HasPokeFluteHelpedYou::
 	.string "MR. FUJI: Has my POKé FLUTE\n"

@@ -63,7 +63,7 @@ CableClub_Text_PleaseEnter:
 	.string "Please enter.$"
 
 CableClub_Text_DirectYouToYourRoom:
-	.string "I'll direct you to your room now.$"
+	.string "Te llevaré a tu habitación ahora.$"
 
 Text_SomeoneIsNotReadyToLink:
 	.string "Alguien no está listo para el enlace.\p"
@@ -148,14 +148,14 @@ CableClub_Text_NotSetUpForFarAwayRegion:
 	.string "región lejana...$"
 
 CableClub_Text_OtherTrainerNotReady:
-	.string "The other TRAINER is not ready.$"
+	.string "El otro ENTRENADOR no está listo.$"
 
 CableClub_Text_YouHaveAMonThatCantBeTaken:
 	.string "Tienes al menos un POKéMON\n"
 	.string "que no puede ser intercambiado.$"
 
 RecordCorner_Text_TakeSeatAndWait:
-	.string "Please take your seat and wait.$"
+	.string "Toma tu asiento y espera, por favor.$"
 
 RecordCorner_Text_PlayerSentOverOneX:
 	.string "{STR_VAR_1} envió un\n"
@@ -211,7 +211,7 @@ CableClub_Text_CancelSelectedItem::
 
 @ Unused
 CableClub_Text_WhichBattleMode:
-	.string "Which battle mode would you like?$"
+	.string "¿Qué modo de combate quieres?$"
 
 @ Unused
 CableClub_Text_ReturnsToPreviousStep:

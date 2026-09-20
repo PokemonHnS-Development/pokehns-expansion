@@ -69,14 +69,14 @@ Route8_Text_BikerZekeAfter:
 	.string "de ahora en adelante…$"
 
 Route8_Text_SupernerdSamSeen:
-	.string "How does the MAGNET TRAIN work?$"
+	.string "¿Cómo funciona el TREN MAGNÉTICO?$"
 
 Route8_Text_SupernerdSamBeaten:
 	.string "Solo quiero ver el MAGNET\n"
 	.string "TRAIN…$"
 
 Route8_Text_SupernerdSamAfter:
-	.string "The power of magnets is awesome!$"
+	.string "¡El poder de los imanes es increíble!$"
 
 Route8_Text_SupernerdTomSeen:
 	.string "Hm… You've got many GYM BADGES.$"

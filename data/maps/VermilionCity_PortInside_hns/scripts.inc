@@ -9,7 +9,7 @@ VermilionPortIndoor_EventScript_Nerd::
 	end
 
 VermilionPortPassage_Text_Teacher:
-	.string "The FAST SHIP sails every day!$"
+	.string "¡El FAST SHIP zarpa todos los días!$"
 
 VermilionPort_Text_SuperNerd:
 	.string "You came from JOHTO?\p"
@@ -184,20 +184,20 @@ VermilionPort_Text_SailorGetOnBoard:
     .string "Por favor, sube a bordo.$"
 
 VermilionPort_Text_CantBoard:
-    .string "Sorry. You can't board now.$"
+    .string "Lo siento. No puedes abordar ahora.$"
 
 VermilionPort_Text_WhereSail:
-    .string "Where would you like to sail?$"
+    .string "¿A dónde te gustaría zarpar?$"
 
 VermilionPort_Text_AskBoard:
     .string "Bienvenido al FAST SHIP S.S.AQUA.\p"
     .string "¿Subirás a bordo hoy?$"
 
 VermilionPort_Text_AskTicket:
-    .string "May I see your S.S.TICKET?$"
+    .string "¿Puedo ver tu BILLETE S.S.?$"
 
 VermilionPort_Text_ComeAgain:
-    .string "We hope to see you again!$"
+    .string "¡Esperamos volver a verte!$"
 
 VermilionPort_Text_FlashTicket:
     .string "{PLAYER} mostró el S.S.TICKET.\p"

@@ -715,7 +715,7 @@ LilycoveCity_PokemonCenter_1F_Text_ImTheContestLady:
 	.string "¡Me encantan los CONCURSOS!$"
 
 LilycoveCity_PokemonCenter_1F_Text_ThankForPokeblock:
-	.string "Thanks for your {POKEBLOCK} before!$"
+	.string "¡Gracias por tu {POKEBLOCK} de antes!$"
 
 LilycoveCity_PokemonCenter_1F_Text_MyFriendDisplaysQuality:
 	.string "¡Este es mi amigo {STR_VAR_1}!\n"

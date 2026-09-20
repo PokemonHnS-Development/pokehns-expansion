@@ -126,7 +126,7 @@ Route13_Text_PokefanmAlexSeen:
 	.string "Bow down before my regal POKéMON!$"
 
 Route13_Text_PokefanmAlexBeaten:
-	.string "How… How dare you mock royalty!$"
+	.string "¡¿Cómo osas burlarte de la realeza?$"
 
 Route13_Text_PokefanmAlexAfterBattle:
 	.string "¿Acaso no todos desean algún día\n"
@@ -163,7 +163,7 @@ Route13_Text_BirdKeeperPerrySeen:
 	.string "POKéMON ave.$"
 
 Route13_Text_BirdKeeperPerryBeaten:
-	.string "You beat me with your speed…$"
+	.string "Me venciste con tu velocidad...$"
 
 Route13_Text_BirdKeeperPerryAfterBattle:
 	.string "Tus POKéMON están muy bien\n"

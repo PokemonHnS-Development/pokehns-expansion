@@ -228,7 +228,7 @@ NewBarkTown_Text_LabSign:
 	.string "PROF.ELM'S LAB$"
 
 NewBarkTown_Text_Door:
-	.string "The door is locked.$"
+	.string "La puerta está cerrada.$"
 
 NewBarkTown_Text_Wooper:
 	.string "WOOPER: Woooooop.$"
@@ -268,7 +268,7 @@ NewBarkTown_Text_Silver1:
 	.string "LAB. POKéMON de ELM…$"
 
 NewBarkTown_Text_Silver2:
-	.string "…What are you staring at?$"
+	.string "…¿Qué estás mirando?$"
 
 NewBarkTown_Text_Sign:
 	.string "PUEBLO PRIMAVERA\p"

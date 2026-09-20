@@ -120,10 +120,10 @@ SecretBase_Text_Trainer2Intro:
 	.string "So, how would you like a battle?$"
 
 SecretBase_Text_Trainer2AcceptBattle:
-	.string "That's the way!$"
+	.string "¡Así se hace!$"
 
 SecretBase_Text_Trainer2DeclineBattle:
-	.string "When you're ready, give me a shout!$"
+	.string "Cuando estés listo, ¡avísame!$"
 
 SecretBase_Text_Trainer2Defeated::
 	.string "Aww! Done in!\n"
@@ -208,7 +208,7 @@ SecretBase_Text_Trainer8AcceptBattle:
 	.string "¡No puedo perder!$"
 
 SecretBase_Text_Trainer8DeclineBattle:
-	.string "I'll battle with you anytime.$"
+	.string "Batallaré contigo cuando quieras.$"
 
 SecretBase_Text_Trainer8Defeated::
 	.string "¿Eh?\n"
@@ -233,14 +233,14 @@ SecretBase_Text_Trainer4Intro:
 	.string "¿Quieres luchar conmigo?$"
 
 SecretBase_Text_Trainer4AcceptBattle:
-	.string "Show me what you're made of!$"
+	.string "¡Demuéstrame de qué estás hecho!$"
 
 SecretBase_Text_Trainer4DeclineBattle:
 	.string "Supongo que hay veces en que uno no\n"
 	.string "tiene ganas.$"
 
 SecretBase_Text_Trainer4Defeated::
-	.string "I know exactly what you're made of now.$"
+	.string "Ya sé exactamente de qué estás hecho.$"
 
 SecretBase_Text_Trainer4PostBattle:
 	.string "Ambos podemos hacernos más fuertes.\n"

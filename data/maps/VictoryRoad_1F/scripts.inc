@@ -185,7 +185,7 @@ VictoryRoad_1F_Text_HopeIntro:
 	.string "hace honor a su nombre de VICTORIA.$"
 
 VictoryRoad_1F_Text_HopeDefeat:
-	.string "Your battle style is fantastic…$"
+	.string "Tu estilo de combate es fantástico…$"
 
 VictoryRoad_1F_Text_HopePostBattle:
 	.string "Pareces tener el potencial para\n"
@@ -211,7 +211,7 @@ VictoryRoad_1F_Text_KatelynnIntro:
 	.string "ha llegado tan lejos. ¡Ven!$"
 
 VictoryRoad_1F_Text_KatelynnDefeat:
-	.string "This is a disgrace…$"
+	.string "Esto es una vergüenza…$"
 
 VictoryRoad_1F_Text_KatelynnPostBattle:
 	.string "Hmph, sigue adelante.\n"

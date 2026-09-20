@@ -92,7 +92,7 @@ Route15_EventScript_PPup::
 	end
 
 Route15_Text_TeacherColetteSeen:
-	.string "Have you forgotten anything?$"
+	.string "¿Has olvidado algo?$"
 
 Route15_Text_TeacherColetteBeaten:
 	.string "Kyaaah!$"

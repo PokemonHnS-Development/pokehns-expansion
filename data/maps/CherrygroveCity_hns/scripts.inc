@@ -336,7 +336,7 @@ CherrygroveCity_Text_RivalSeen:
 	.string "POKéMON. ¡Te lo demostraré!$"
 
 CherrygroveCity_Text_SilverWin:
-	.string "Humph. Are you happy you won?$"
+	.string "Hum. ¿Estás feliz de haber ganado?$"
 
 CherrygroveCity_Text_RivalAfter:
 	.string "… … … … … … … …\p"

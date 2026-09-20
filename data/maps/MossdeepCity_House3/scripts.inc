@@ -43,7 +43,7 @@ MossdeepCity_House3_Text_TryDroppingRodInWater:
 
 MossdeepCity_House3_Text_DontYouLikeToFish:
 	.string "¿Eh?\n"
-	.string "Don't you like to fish?$"
+	.string "¿No te gusta pescar?$"
 
 MossdeepCity_House3_Text_GoAfterSeafloorPokemon:
 	.string "Busca POKéMON del fondo marino con\n"

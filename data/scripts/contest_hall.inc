@@ -1410,7 +1410,7 @@ LilycoveCity_ContestLobby_Text_EnterContest1:
 	.string "en nuestros CONCURSOS?$"
 
 LilycoveCity_ContestLobby_Text_WhichTopic1:
-	.string "Which topic would you like?$"
+	.string "¿Qué tema prefieres?$"
 
 LilycoveCity_ContestLobby_Text_ExplainContests:
 	.string "Un CONCURSO POKéMON consiste en cuatro\n"
@@ -1457,10 +1457,10 @@ LilycoveCity_ContestLobby_Text_ExplainContestRanks:
 	.string "tan seguido como su ENTRENADOR quiera.$"
 
 LilycoveCity_ContestLobby_Text_EnterWhichRank:
-	.string "Which Rank would you like to enter?$"
+	.string "¿En qué rango quieres entrar?$"
 
 LilycoveCity_ContestLobby_Text_EnterWhichContest1:
-	.string "Which CONTEST would you like to enter?$"
+	.string "¿En qué CONCURSO quieres participar?$"
 
 LilycoveCity_ContestLobby_Text_EnterWhichPokemon1:
 	.string "Which POKéMON would you like to enter?$"
@@ -1492,7 +1492,7 @@ LilycoveCity_ContestLobby_Text_YourMonIsEntryNum4:
 	.string "Bien, tu POKéMON será inscrito\n"
 	.string "en este CONCURSO.\p"
 	.string "Tu POKéMON es el No. 4.\n"
-	.string "The CONTEST will begin shortly.$"
+	.string "El CONCURSO comenzará pronto.$"
 
 LilycoveCity_ContestLobby_Text_ComeThroughHere:
 	.string "Por favor, entra por aquí.\n"
@@ -1550,7 +1550,7 @@ ContestHall_Text_VotingCompleteLetsAppeal:
 	.string "¡A lucirse!$"
 
 ContestHall_Text_ThatsItForJudging:
-	.string "MC: That's it for judging!$"
+	.string "MC: ¡Terminó la evaluación!$"
 
 ContestHall_Text_ThankYouForAppeals:
 	.string "¡Gracias a todos por tan maravillosa\n"
@@ -1565,7 +1565,7 @@ ContestHall_Text_JudgeLooksReady:
 	.string "¡el anuncio!$"
 
 ContestHall_Text_WeWillNowDeclareWinner:
-	.string "JUDGE: We will now declare the winner!$"
+	.string "JUEZ: ¡Ahora anunciaremos al ganador!$"
 
 ContestHall_Text_CongratsTrainerXandMon:
 	.string "MC: ¡Entrada No. {STR_VAR_2}!\p"
@@ -1614,7 +1614,7 @@ LilycoveCity_ContestLobby_Text_ParticipateAnotherTime:
 
 @ Unused
 LilycoveCity_ContestLobby_Text_EnterContest2:
-	.string "Would you like to enter a CONTEST?$"
+	.string "¿Quieres entrar en un CONCURSO?$"
 
 @ Unused
 LilycoveCity_ContestLobby_Text_Explain4PlayerContest:
@@ -1630,7 +1630,7 @@ LilycoveCity_ContestLobby_Text_Explain4PlayerContest:
 
 @ Unused
 LilycoveCity_ContestLobby_Text_EnterWhichContest2:
-	.string "Which CONTEST would you like to enter?$"
+	.string "¿En qué CONCURSO quieres participar?$"
 
 @ Unused
 LilycoveCity_ContestLobby_Text_EnterWhichPokemon2:
@@ -1670,7 +1670,7 @@ LilycoveCity_ContestLobby_Text_YourMonIsEntryNumX:
 	.string "Tu POKéMON es el No. {STR_VAR_2}.$"
 
 LilycoveCity_ContestLobby_Text_ContestBeginShortly:
-	.string "The CONTEST will begin shortly.$"
+	.string "El CONCURSO comenzará pronto.$"
 
 LilycoveCity_ContestLobby_Text_LinkContestReception:
 	.string "¡Bienvenido! Este es el mostrador\n"
@@ -1679,13 +1679,13 @@ LilycoveCity_ContestLobby_Text_LinkContestReception:
 	.string "uno o más amigos.$"
 
 LilycoveCity_ContestLobby_Text_WhichTopic2:
-	.string "Which topic would you like?$"
+	.string "¿Qué tema prefieres?$"
 
 LilycoveCity_ContestLobby_Text_EnterContest3:
-	.string "Would you like to enter a CONTEST?$"
+	.string "¿Quieres entrar en un CONCURSO?$"
 
 LilycoveCity_ContestLobby_Text_EnterWhichContest3:
-	.string "Which CONTEST would you like to enter?$"
+	.string "¿En qué CONCURSO quieres participar?$"
 
 LilycoveCity_ContestLobby_Text_MonInNoCondition2:
 	.string "Tu POKéMON no parece estar en\n"

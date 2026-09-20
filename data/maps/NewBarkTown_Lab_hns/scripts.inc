@@ -1022,14 +1022,14 @@ NewBarkTown_Lab_Text_Officer1:
 	.string "su nombre?$"
 
 NewBarkTown_Lab_Text_Officer2_1:
-	.string "OK! So {RIVAL} was his name?$"
+	.string "¡OK! ¿Así que {RIVAL} era su nombre?$"
 
 NewBarkTown_Lab_Text_Officer2:
 	.string "¡Gracias por ayudar en mi\n"
 	.string "investigación!$"
 
 NewBarkTown_Lab_Text_OfficerNo:
-	.string "Surely you got his name?!$"
+	.string "¡¿Seguro que ya sabes su nombre?!$"
 
 NewBarkTown_Lab_Text_Elm_CallMe:
 	.string "¡Ah, {PLAYER}!\p"

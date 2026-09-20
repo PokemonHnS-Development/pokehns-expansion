@@ -78,7 +78,7 @@ FiveIsland_Meadow_Text_Rocket1Intro::
 	.string "Out, out!$"
 
 FiveIsland_Meadow_Text_Rocket1Defeat::
-	.string "Is this for real?$"
+	.string "¿Es en serio?$"
 
 FiveIsland_Meadow_Text_Rocket1PostBattle::
 	.string "You don't have any business here!\n"
@@ -90,7 +90,7 @@ FiveIsland_Meadow_Text_Rocket2Intro::
 	.string "So what brings you here?$"
 
 FiveIsland_Meadow_Text_Rocket2Defeat::
-	.string "That wasn't supposed to happen…$"
+	.string "Eso no debía pasar…$"
 
 FiveIsland_Meadow_Text_Rocket2PostBattle::
 	.string "You're wanting to know what's inside\n"

@@ -31,7 +31,7 @@ PokemonMansion_3F_EventScript_Braydon::
 	end
 
 PokemonMansion_1F_Text_SimonIntro::
-	.string "This place is, like, huge!$"
+	.string "¡Este lugar es, o sea, enorme!$"
 
 PokemonMansion_1F_Text_SimonDefeat::
 	.string "Ayah!$"

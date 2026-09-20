@@ -40,7 +40,7 @@ Route19_Text_MatthewPostBattle::
 	.string "at swimming.$"
 
 Route19_Text_DouglasIntro::
-	.string "What's beyond the horizon?$"
+	.string "¿Qué hay más allá del horizonte?$"
 
 Route19_Text_DouglasDefeat::
 	.string "¡Glub!$"

@@ -482,7 +482,7 @@ LilycoveCity_ContestHall_Text_MyMonAppealSoMuchCuter:
 	.string "mucho más linda que las demás.$"
 
 LilycoveCity_ContestHall_Text_MyChildIsInContest:
-	.string "My child is in this CONTEST.$"
+	.string "Mi hijo está en este CONCURSO.$"
 
 LilycoveCity_ContestHall_Text_ComeOnDear:
 	.string "¡Vamos, cariño! ¡Tú puedes!\n"

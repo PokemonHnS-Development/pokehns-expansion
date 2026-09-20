@@ -154,7 +154,7 @@ SinjohRuins_StairsScene::
     end
 
 SinjohRuins_Text_StevenGotoStairs1:
-    .string "STEVEN: This could only mean one thing.$"
+    .string "STEVEN: Esto solo puede ser una cosa.$"
 
 SinjohRuins_Text_StevenGotoStairs2:
     .string "{PLAYER}. We were able to decipher\n"

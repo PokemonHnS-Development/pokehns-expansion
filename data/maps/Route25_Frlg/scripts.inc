@@ -49,7 +49,7 @@ Route25_Text_KelseyIntro::
 	.string "My boyfriend is cool!$"
 
 Route25_Text_KelseyDefeat::
-	.string "My conditioning isn't the best…$"
+	.string "Mi preparación no es la mejor…$"
 
 Route25_Text_KelseyPostBattle::
 	.string "I wish my boyfriend was as good\n"

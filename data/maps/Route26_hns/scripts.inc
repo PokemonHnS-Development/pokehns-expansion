@@ -115,7 +115,7 @@ Route26_Text_CooltrainerfJoyceSeen:
     .string "batalla!$"
 
 Route26_Text_CooltrainerfJoyceBeaten:
-    .string "No! I don't believe this!$"
+    .string "¡No! ¡No puedo creerlo!$"
 
 Route26_Text_CooltrainerfJoyceAfter:
     .string "Vencí a ocho LÍDERES de GIMNASIO,\n"

@@ -107,5 +107,5 @@ Route5_SouthEntrance_Text_ThanksIllShareTeaWithGuards::
 	.string "guards!$"
 
 Route5_SouthEntrance_Text_HiHowsItGoing::
-	.string "Hi, how's it going?$"
+	.string "Hola, ¿qué tal?$"
 

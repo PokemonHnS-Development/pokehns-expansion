@@ -142,7 +142,7 @@ RustboroCity_Gym_Text_JoshIntro:
 	.string "¡Te mostraré por qué somos mejores!$"
 
 RustboroCity_Gym_Text_JoshDefeat:
-	.string "You were too good for me…$"
+	.string "Eras demasiado bueno para mí…$"
 
 RustboroCity_Gym_Text_JoshPostBattle:
 	.string "¡Aún no has visto el terrorífico\n"

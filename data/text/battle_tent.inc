@@ -279,7 +279,7 @@ SlateportCity_BattleTentLobby_Text_ExplainSlateportTent:
 	.string "quedarás descalificado.$"
 
 SlateportCity_BattleTentLobby_Text_LookForwardToNextVisit:
-	.string "We look forward to your next visit.$"
+	.string "Esperamos tu próxima visita.$"
 
 @ Unused
 SlateportCity_BattleTentLobby_Text_WhichLevelMode:
@@ -350,11 +350,11 @@ SlateportCity_BattleTentLobby_Text_ReceivedPrize:
 
 @ Unused
 SlateportCity_BattleTentLobby_Text_RulesAreListed:
-	.string "The Battle Swap rules are listed.$"
+	.string "Las reglas del Battle Swap están aquí.$"
 
 @ Unused
 SlateportCity_BattleTentLobby_Text_ReadWhichHeading:
-	.string "Which heading do you want to read?$"
+	.string "¿Qué título quieres leer?$"
 
 SlateportCity_BattleTentLobby_Text_ExplainBasicRules:
 	.string "En un evento de Intercambio, solo\n"
@@ -401,7 +401,7 @@ VerdanturfTown_BattleTentLobby_Text_RulesAreListed2:
 
 @ Unused
 VerdanturfTown_BattleTentLobby_Text_ReadWhichHeading:
-	.string "Which heading do you want to read?$"
+	.string "¿Qué título quieres leer?$"
 
 @ Unused
 VerdanturfTown_BattleTentLobby_Text_ExplainBasicRules:

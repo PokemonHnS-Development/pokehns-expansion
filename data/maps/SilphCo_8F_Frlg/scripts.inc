@@ -39,13 +39,13 @@ SilphCo_8F_EventScript_Grunt2::
 	end
 
 SilphCo_8F_Text_WonderIfSilphIsFinished::
-	.string "I wonder if SILPH is finished…$"
+	.string "Me pregunto si SILPH ya terminó…$"
 
 SilphCo_8F_Text_ThanksForSavingUs::
 	.string "Thanks for saving us!$"
 
 SilphCo_8F_Text_Grunt1Intro::
-	.string "That's as far as you'll go!$"
+	.string "¡Hasta aquí llegaste!$"
 
 SilphCo_8F_Text_Grunt1Defeat::
 	.string "Not enough grit!$"
@@ -55,7 +55,7 @@ SilphCo_8F_Text_Grunt1PostBattle::
 	.string "I'll call for backup!$"
 
 SilphCo_8F_Text_ParkerIntro::
-	.string "You're causing us problems!$"
+	.string "¡Nos estás causando problemas!$"
 
 SilphCo_8F_Text_ParkerDefeat::
 	.string "¿Eh?\n"

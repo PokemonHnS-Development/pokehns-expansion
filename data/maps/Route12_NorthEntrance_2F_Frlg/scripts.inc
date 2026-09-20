@@ -66,7 +66,7 @@ Route12_NorthEntrance_2F_Text_ExplainTM27::
 	.string "its hardest in battle.$"
 
 Route12_NorthEntrance_2F_Text_DontHaveRoomForThis::
-	.string "You don't have room for this.$"
+	.string "No tienes espacio para esto.$"
 
 Route12_NorthEntrance_2F_Text_TheresManFishing::
 	.string "Let's see what the binoculars have\n"

@@ -937,7 +937,7 @@ Route110_TrickHousePuzzle5_Text_Wahahahaha:
 	.string "¡CLIC-CLAC!$"
 
 Route110_TrickHousePuzzle5_Text_WaitForNextChallenge:
-	.string "YOUR NEXT CHALLENGE WE WAIT FOR.$"
+	.string "ESPERAMOS TU PRÓXIMO DESAFÍO.$"
 
 Route110_TrickHousePuzzle5_Text_Mechadoll2Intro:
 	.string "CLICKETY-CLACK…\n"

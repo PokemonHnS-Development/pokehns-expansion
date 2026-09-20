@@ -73,7 +73,7 @@ Text_MimicTeach::
 	.string "I can teach the move MIMIC.$"
 
 Text_MimicDeclined::
-	.string "Don't you like MIMIC?$"
+	.string "¿No te gusta MIMÉTICO?$"
 
 Text_MimicWhichMon::
 	.string "I really love MIMIC!\n"

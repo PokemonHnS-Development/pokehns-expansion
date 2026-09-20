@@ -132,7 +132,7 @@ VioletGym_Text_BirdKeeperAbe_Seen:
 	.string "enough to face FALKNER!$"
 
 VioletGym_Text_BirdKeeperAbe_Beaten:
-	.string "This can't be true!$"
+	.string "¡Esto no puede ser!$"
 
 VioletGym_Text_BirdKeeperAbe_After:
 	.string "This is pathetic, losing to some\n"

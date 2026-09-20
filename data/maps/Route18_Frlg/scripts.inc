@@ -42,7 +42,7 @@ Route18_Text_RamiroIntro::
 	.string "How do you like my birdcall?$"
 
 Route18_Text_RamiroDefeat::
-	.string "I had to bug you!$"
+	.string "¡Tenía que molestarte!$"
 
 Route18_Text_RamiroPostBattle::
 	.string "I collect sea POKéMON on weekends\n"

@@ -219,7 +219,7 @@ LilycoveCity_LilycoveMuseum_2F_EventScript_ShowToughPainting::
 	end
 
 LilycoveCity_LilycoveMuseum_2F_Text_ThisIsExhibitHall:
-	.string "This is our special exhibit hall.$"
+	.string "Nuestra sala de exhibición especial.$"
 
 LilycoveCity_LilycoveMuseum_2F_Text_ExplainExhibitHall:
 	.string "Como puedes ver, no hay ni\n"
@@ -276,7 +276,7 @@ LilycoveCity_LilycoveMuseum_2F_Text_PaintingsAttractedMoreGuests:
 	.string "¡Es mi sueño hecho realidad!$"
 
 LilycoveCity_LilycoveMuseum_2F_Text_TokenOfGratitude:
-	.string "This is merely a token of my gratitude.$"
+	.string "Es solo una muestra de mi gratitud.$"
 
 LilycoveCity_LilycoveMuseum_2F_Text_KeepThisForYou:
 	.string "Guardaré esto por ti hasta que nos\n"

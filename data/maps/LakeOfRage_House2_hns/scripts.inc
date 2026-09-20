@@ -156,7 +156,7 @@ LakeOfRage_House2_Text_TooShort:
     .string "Supongo que vale algo.$"
 
 LakeOfRage_House2_Text_NotMagikarp:
-    .string "What? That's not a MAGIKARP!$"
+    .string "¿Qué? ¡Eso no es un MAGIKARP!$"
 
 LakeOfRage_House2_Text_Refused:
     .string "Oh... ¿Así que no atrapaste uno\n"

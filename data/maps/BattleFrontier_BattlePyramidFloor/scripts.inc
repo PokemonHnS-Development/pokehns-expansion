@@ -126,7 +126,7 @@ BattlePyramid_Retire::
 
 @ Also used by Trainer Hill
 BattleFacility_TrainerBattle_PlaceholderText:
-	.string "This is a sample message.$"
+	.string "Este es un mensaje de ejemplo.$"
 
 gText_BattlePyramidConfirmRest::
 	.string "Tu reto de la PIRÁMIDE BATALLA\n"

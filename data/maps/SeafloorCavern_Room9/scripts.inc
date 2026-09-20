@@ -219,7 +219,7 @@ SeafloorCavern_Room9_Movement_Delay32:
 	step_end
 
 SeafloorCavern_Room9_Text_ArchieHoldItRightThere:
-	.string "ARCHIE: Hold it right there.$"
+	.string "ARCHIE: ¡Alto ahí!$"
 
 SeafloorCavern_Room9_Text_ArchieSoItWasYou:
 	.string "ARCHIE: Fufufu…\n"

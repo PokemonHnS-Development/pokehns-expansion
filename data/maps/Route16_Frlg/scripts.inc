@@ -77,7 +77,7 @@ Route16_Text_LaoIntro::
 	.string "¿Qué quieres?$"
 
 Route16_Text_LaoDefeat::
-	.string "Don't you dare laugh!$"
+	.string "¡No te atrevas a reír!$"
 
 Route16_Text_LaoPostBattle::
 	.string "We like just hanging here.\n"
@@ -91,7 +91,7 @@ Route16_Text_KojiDefeat::
 	.string "Knockout!$"
 
 Route16_Text_KojiPostBattle::
-	.string "Forget it, who needs your BIKE!$"
+	.string "¡Olvídalo, quién quiere tu BICICLETA!$"
 
 Route16_Text_LukeIntro::
 	.string "Come out and play, little mouse!$"

@@ -75,7 +75,7 @@ EverGrandeCity_DrakesRoom_Text_IntroSpeech:
 	.string "vencerme!$"
 
 EverGrandeCity_DrakesRoom_Text_Defeat:
-	.string "Superb, it should be said.$"
+	.string "Espléndido, hay que decirlo.$"
 
 EverGrandeCity_DrakesRoom_Text_PostBattleSpeech:
 	.string "Mereces todo el crédito por llegar\n"

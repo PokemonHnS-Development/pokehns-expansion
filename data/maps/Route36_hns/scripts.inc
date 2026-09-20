@@ -262,7 +262,7 @@ Route36_Text_RockSmashGuy3:
 	.string "¡simplemente destrúyelas!$"
 
 Route36_Text_OddTree:
-	.string "A weird tree is blocking the way.$"
+	.string "Un árbol extraño bloquea el paso.$"
 
 Route36_Text_Lass1:
 	.string "¡Cuidado de noche en esta ruta!\p"
@@ -308,7 +308,7 @@ Route36_Text_ArthurNope:
 	.string "Not quite!$"
 
 Route36_Text_ArthurGivesGift:
-	.string "Here. You can have this.$"
+	.string "Toma. Puedes quedarte con esto.$"
 
 Route36_Text_ArthurGaveGift:
 	.string "ARTHUR: Un POKéMON que use\n"

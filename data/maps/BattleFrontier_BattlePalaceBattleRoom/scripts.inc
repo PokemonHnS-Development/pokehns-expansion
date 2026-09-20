@@ -473,7 +473,7 @@ BattleFrontier_BattlePalaceBattleRoom_Text_SaveAndQuitGame:
 	.string "¿El juego?$"
 
 BattleFrontier_BattlePalaceBattleRoom_Text_WishToQuitChallenge:
-	.string "Do you wish to quit your challenge?$"
+	.string "¿Quieres abandonar tu desafío?$"
 
 BattleFrontier_BattlePalaceBattleRoom_Text_SavingData:
 	.string "Guardando los datos.\n"

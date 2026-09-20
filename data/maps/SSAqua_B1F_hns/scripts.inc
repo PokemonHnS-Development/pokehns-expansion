@@ -124,7 +124,7 @@ SSAqua_B1F_EventScript_Garrett::
 	end
 
 SSAqua_B1F_Text_SailorGarrettSeen:
-	.string "This is where we sailors work!$"
+	.string "¡Aquí trabajamos los marineros!$"
 
 SSAqua_B1F_Text_SailorGarrettBeaten:
 	.string "I lost on my home field…$"
@@ -181,7 +181,7 @@ SSAqua_B1F_Text_SailorKennethSeen:
 	.string "¡ser el CAMPEÓN!$"
 
 SSAqua_B1F_Text_SailorKennethBeaten:
-	.string "My lack of training is obvious…$"
+	.string "Mi falta de entrenamiento es obvia...$"
 
 SSAqua_B1F_Text_SailorKennethAfter:
 	.string "¡Ocho MEDALLAS! Eso demuestra\n"
@@ -211,7 +211,7 @@ SSAqua_B1F_EventScript_Nate::
 	end
 
 SSAqua_B1F_Text_SchoolboyNateSeen:
-	.string "Do you know the RUINS OF ALPH?$"
+	.string "¿Conoces las RUINAS ALFA?$"
 
 SSAqua_B1F_Text_SchoolboyNateBeaten:
 	.string "Yaargh!$"

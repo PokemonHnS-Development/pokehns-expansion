@@ -62,7 +62,7 @@ GoldenrodCity_DepartmentStore_6F_Text_ThisIsntAMon:
 	.string "Eso no es un {STR_VAR_1}.$"
 
 GoldenrodCity_DepartmentStore_6F_Text_YouWontTradeMe:
-	.string "You don't want to trade? Aww...$"
+	.string "¿No quieres intercambiar? Ohh...$"
 
 GoldenrodCity_DepartmentStore_6F_Text_After:
 	.string "Hi, how's my old MACHOP doing?$"

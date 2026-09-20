@@ -344,7 +344,7 @@ BattleFrontier_ReceptionGate_Text_YourGuideToFacilities:
 	.string "de la BATTLE FRONTIER.$"
 
 BattleFrontier_ReceptionGate_Text_LearnAboutWhich2:
-	.string "Which would you like to learn about?$"
+	.string "¿Sobre qué te gustaría saber?$"
 
 BattleFrontier_ReceptionGate_Text_BattleTowerInfo:
 	.string "Es la torre gigante considerada\n"
@@ -419,7 +419,7 @@ BattleFrontier_ReceptionGate_Text_YourGuideToRules:
 	.string "FRONTIER.$"
 
 BattleFrontier_ReceptionGate_Text_LearnAboutWhat:
-	.string "What would you like to learn about?$"
+	.string "¿Sobre qué te gustaría saber?$"
 
 BattleFrontier_ReceptionGate_Text_LevelModeInfo:
 	.string "Los retos de la BATTLE FRONTIER\n"
@@ -467,10 +467,10 @@ BattleFrontier_ReceptionGate_Text_HoldItemsInfo:
 	.string "objetos diferentes.$"
 
 BattleFrontier_ReceptionGate_Text_YourGuideToFrontierPass:
-	.string "I'm your guide to the FRONTIER PASS.$"
+	.string "Soy tu guía del PASE FRONTERA.$"
 
 BattleFrontier_ReceptionGate_Text_LearnAboutWhich1:
-	.string "Which would you like to learn about?$"
+	.string "¿Sobre qué te gustaría saber?$"
 
 BattleFrontier_ReceptionGate_Text_SymbolsInfo:
 	.string "Hay siete instalaciones en el\n"

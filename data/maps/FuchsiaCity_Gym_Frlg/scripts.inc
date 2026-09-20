@@ -171,7 +171,7 @@ FuchsiaCity_Gym_Text_NateIntro::
 	.string "techniques!$"
 
 FuchsiaCity_Gym_Text_NateDefeat::
-	.string "You had me fooled!$"
+	.string "¡Me engañaste!$"
 
 FuchsiaCity_Gym_Text_NatePostBattle::
 	.string "I like poison and sleep techniques,\n"

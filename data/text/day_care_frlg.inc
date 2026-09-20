@@ -33,7 +33,7 @@ DayCare_Text_ReceivedEgg::
 	.string "the DAY-CARE MAN.$"
 
 DayCare_Text_TakeGoodCareOfIt::
-	.string "Take good care of it.$"
+	.string "Cuídalo bien.$"
 
 DayCare_Text_SeeWifeIfYouWantToPickUpMon::
 	.string "ポケモンを　ひきとりたい　ときは\n"
@@ -67,14 +67,14 @@ DayCare_Text_WeCanRaiseOneMore::
 	.string "more POKéMON for you?$"
 
 DayCare_Text_HusbandWasLookingForYou::
-	.string "My husband was looking for you.$"
+	.string "Mi esposo te estaba buscando.$"
 
 DayCare_Text_FineThenComeAgain::
 	.string "Oh, está bien entonces.\n"
 	.string "Vuelve pronto.$"
 
 DayCare_Text_NotEnoughMoney::
-	.string "You don't have enough money…$"
+	.string "No tienes suficiente dinero…$"
 
 DayCare_Text_TakeOtherOneBackToo::
 	.string "Will you take back the other one,\n"

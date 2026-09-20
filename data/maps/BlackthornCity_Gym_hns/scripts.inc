@@ -313,7 +313,7 @@ BlackthornGym_Text_CooltrainermCodySeenText:
     .string "POKéMON tipo DRAGÓN!$"
 
 BlackthornGym_Text_CooltrainermCodyBeatenText:
-    .string "Rats! If only I had a DRAGONITE!$"
+    .string "¡Rayos! ¡Si tuviera un DRAGONITE!$"
 
 BlackthornGym_Text_CooltrainermCodyAfterBattleText:
     .string "Los miembros de nuestro clan\n"

@@ -76,7 +76,7 @@ BlackthornCity_MoveDeletersHouse_Text_WhichMonShouldForget:
 	.string "Which POKéMON should forget a move?$"
 
 BlackthornCity_MoveDeletersHouse_Text_WhichMoveShouldBeForgotten:
-	.string "Which move should be forgotten?$"
+	.string "¿Qué movimiento se debe olvidar?$"
 
 BlackthornCity_MoveDeletersHouse_Text_MonOnlyKnowsOneMove:
 	.string "{STR_VAR_1} solo sabe un movimiento,\n"
@@ -170,7 +170,7 @@ BlackthornCity_MoveRelearnersHouse_EventScript_Randomizer::
 	end
 
 BlackthornCity_MoveRelearnersHouse_Text_SorryCantHelp:
-	.string "Sorry, I can't help you.$"
+	.string "Lo siento, no puedo ayudarte.$"
 
 BlackthornCity_MoveRelearnersHouse_Text_ImTheMoveTutor:
 	.string "Soy el TUTOR de MOVIMIENTOS.\p"
@@ -192,7 +192,7 @@ BlackthornCity_MoveRelearnersHouse_Text_TutorWhichMon:
 	.string "Which POKéMON needs tutoring?$"
 
 BlackthornCity_MoveRelearnersHouse_Text_TeachWhichMove:
-	.string "Which move should I teach?$"
+	.string "¿Qué movimiento debería enseñar?$"
 
 BlackthornCity_MoveRelearnersHouse_Text_DontHaveMoveToTeachPokemon:
 	.string "Lo siento...\p"

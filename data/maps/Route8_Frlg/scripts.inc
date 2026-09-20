@@ -14,7 +14,7 @@ Route8_Text_AidanDefeat::
 	.string "Meltdown!$"
 
 Route8_Text_AidanPostBattle::
-	.string "I am better at school than this!$"
+	.string "¡Soy mejor en la escuela que en esto!$"
 
 Route8_Text_StanIntro::
 	.string "¡Muy bien!\n"
@@ -32,7 +32,7 @@ Route8_Text_GlennIntro::
 	.string "You need strategy to win at this!$"
 
 Route8_Text_GlennDefeat::
-	.string "It's not logical!$"
+	.string "¡No es lógico!$"
 
 Route8_Text_GlennPostBattle::
 	.string "Go with GRIMER first…and…\n"

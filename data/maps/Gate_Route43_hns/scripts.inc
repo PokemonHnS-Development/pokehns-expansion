@@ -78,7 +78,7 @@ Gate_Route43_Rocket_Text_ThankYou:
     .string "Thank you very much!$"
 
 Gate_Route43_Rocket_Text_AllYouGot:
-    .string "Then pay what you have, please.$"
+    .string "Paga lo que tengas, por favor.$"
 
 Gate_Route43_Rocket_Text_KickOut:
 	.string "¡Guau!\p"

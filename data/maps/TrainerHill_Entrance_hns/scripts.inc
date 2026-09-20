@@ -336,7 +336,7 @@ TrainerHill_Entrance_hns_Text_TimeProgessGetSetGo:
 	.string "Go!$"
 
 TrainerHill_Entrance_hns_Text_PleaseVisitUsAgain:
-	.string "Please do visit us again!$"
+	.string "¡Vuelve a visitarnos!$"
 
 TrainerHill_Entrance_hns_Text_TooBadTremendousEffort:
 	.string "Fue una lástima.\p"
@@ -345,7 +345,7 @@ TrainerHill_Entrance_hns_Text_TooBadTremendousEffort:
 	.string "¡Vuelve e inténtalo de nuevo!$"
 
 TrainerHill_Entrance_hns_Text_HopeYouGiveItYourBest:
-	.string "I hope you give it your best.$"
+	.string "Espero que des lo mejor de ti.$"
 
 TrainerHill_Entrance_hns_Text_MovedReceptionHereForSwitch:
 	.string "Cuando los ENTRENADORES cambian\n"

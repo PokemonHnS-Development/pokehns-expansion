@@ -661,4 +661,4 @@ MauvilleCity_Text_ExplainTV:
 	.string "TV siempre que puedas.$"
 
 MauvilleCity_Text_BeenCheckingOutTV:
-	.string "Hi, have you been checking out TVs?$"
+	.string "Hola, ¿has estado mirando televisores?$"

@@ -502,7 +502,7 @@ Route34_Text_ReceivedEgg:
 	.string "the DAY-CARE MAN.$"
 
 Route34_Text_TakeGoodCareOfIt:
-	.string "Take good care of it.$"
+	.string "Cuídalo bien.$"
 
 Route34_Text_FriendlyWithOtherTrainersMon:
 	.string "By the way, about your {STR_VAR_1},\n"
@@ -543,14 +543,14 @@ Route34_DayCare_Text_WeCanRaiseOneMore:
 	.string "¿Quieres que criemos otro más?$"
 
 Route34_DayCare_Text_HusbandWasLookingForYou:
-	.string "My husband was looking for you.$"
+	.string "Mi esposo te estaba buscando.$"
 
 Route34_DayCare_Text_FineThenComeAgain:
 	.string "Oh, está bien entonces.\n"
 	.string "Vuelve pronto.$"
 
 Route34_DayCare_Text_NotEnoughMoney:
-	.string "You don't have enough money…$"
+	.string "No tienes suficiente dinero…$"
 
 Route34_DayCare_Text_TakeOtherOneBackToo:
 	.string "Will you take back the other one,\n"

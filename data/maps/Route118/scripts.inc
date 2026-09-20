@@ -277,7 +277,7 @@ Route118_Text_TryYourLuckFishing:
 	.string "pescando.$"
 
 Route118_Text_DontYouLikeToFish:
-	.string "Don't you like to fish?$"
+	.string "¿No te gusta pescar?$"
 
 Route118_Text_TryCatchingMonWithGoodRod:
 	.string "Intenta capturar muchos POKéMON\n"

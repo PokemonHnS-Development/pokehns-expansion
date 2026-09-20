@@ -42,7 +42,7 @@ Route3_Text_FirebreatherOtis_AfterBattle:
 	.string "la ignición…$"
 
 Route3_Text_YoungsterWarren_Seen:
-	.string "Hmmm… I don't know what to do…$"
+	.string "Hmmm... No sé qué hacer...$"
 
 Route3_Text_YoungsterWarren_Beaten:
 	.string "I knew I'd lose…$"
@@ -52,7 +52,7 @@ Route3_Text_YoungsterWarren_AfterBattle:
 	.string "Me dio miedo enfrentarte…$"
 
 Route3_Text_YoungsterJimmy_Seen:
-	.string "I can run like the wind!$"
+	.string "¡Puedo correr como el viento!$"
 
 Route3_Text_YoungsterJimmy_Beaten:
 	.string "Blown away!$"

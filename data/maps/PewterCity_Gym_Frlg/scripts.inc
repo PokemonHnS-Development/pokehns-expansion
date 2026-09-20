@@ -143,7 +143,7 @@ PewterCity_Gym_Text_BrockPostBattle::
 	.string "your abilities.$"
 
 PewterCity_Gym_Text_DontHaveRoomForThis::
-	.string "You don't have room for this.$"
+	.string "No tienes espacio para esto.$"
 
 PewterCity_Gym_Text_LiamIntro::
 	.string "Stop right there, kid!\p"

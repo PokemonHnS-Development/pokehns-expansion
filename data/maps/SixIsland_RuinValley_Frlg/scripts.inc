@@ -62,7 +62,7 @@ SixIsland_RuinValley_Text_SeveralDotsOnTheDoor::
 	.string "several dots on the door…$"
 
 SixIsland_RuinValley_Text_DoorIsOpen::
-	.string "The door is open.$"
+	.string "La puerta está abierta.$"
 
 SixIsland_RuinValley_Text_StanlyIntro::
 	.string "There appear to be many secrets\n"
@@ -105,14 +105,14 @@ SixIsland_RuinValley_Text_LarryPostBattle::
 	.string "how I can get inside.$"
 
 SixIsland_RuinValley_Text_DarylIntro::
-	.string "A battle with you, so high up!$"
+	.string "¡Una batalla contigo, tan arriba!$"
 
 SixIsland_RuinValley_Text_DarylDefeat::
 	.string "Oh, the heartbreak of losing so\n"
 	.string "easily to you!$"
 
 SixIsland_RuinValley_Text_DarylPostBattle::
-	.string "Experience the joy of climbing!$"
+	.string "¡Siente la alegría de escalar!$"
 
 SixIsland_RuinValley_Text_HectorIntro::
 	.string "I'm pretty familiar with the land\n"

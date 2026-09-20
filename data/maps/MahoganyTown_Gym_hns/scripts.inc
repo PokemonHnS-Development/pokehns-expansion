@@ -218,7 +218,7 @@ MahoganyTown_Gym_Text_BoarderBradSeen:
     .string "jugar aquí!$"
 
 MahoganyTown_Gym_Text_BoarderBradBeaten:
-    .string "Do you see how serious we are?$"
+    .string "¿Ves lo serios que somos?$"
 
 MahoganyTown_Gym_Text_BoarderBradAfter:
     .string "Este GIMNASIO es genial.\n"

@@ -369,7 +369,7 @@ AzaleaTown_Text_RivalAfter:
 	.string "alguien como tú es un distractor.$"
 
 AzaleaTown_Text_RivalLoss:
-	.string "…Humph! I knew you were lying.$"
+	.string "…¡Hum! Sabía que mentías.$"
 
 AzaleaTown_Text_Rocket1:
 	.string "Es peligroso entrar ahí,\n"

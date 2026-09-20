@@ -1316,7 +1316,7 @@ PalletTown_ProfessorOaksLab_Text_RivalGoChoosePlayer::
 	.string "Go ahead and choose, {PLAYER}!$"
 
 PalletTown_ProfessorOaksLab_Text_RivalIllTakeThisOneThen::
-	.string "{RIVAL}: I'll take this one, then!$"
+	.string "{RIVAL}: ¡Entonces tomo este!$"
 
 PalletTown_ProfessorOaksLab_Text_RivalReceivedMonFromOak::
 	.string "{RIVAL} received the {STR_VAR_1}\n"

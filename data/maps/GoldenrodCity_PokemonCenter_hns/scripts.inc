@@ -241,7 +241,7 @@ GoldenrodCity_PokemonCenter_PokefanFDaughterWillBeDelightedText:
     .string "My daughter will be delighted!$"
 
 GoldenrodCity_PokemonCenter_PokefanFTooBadText:
-    .string "Oh? You don't have one? Too bad.$"
+    .string "¿Ah? ¿No tienes uno? Qué lástima.$"
 
 GoldenrodCity_PokemonCenter_PokefanFAnotherTimeThenText:
     .string "Oh… Well, another time, then.$"
