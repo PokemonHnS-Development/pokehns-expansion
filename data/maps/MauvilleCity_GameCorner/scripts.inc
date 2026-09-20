@@ -1089,7 +1089,7 @@ MauvilleCity_GameCorner_Text_UpTo3CoinsCanBeUsed:
 	.string "para jugar a las TRAGAPERRAS.$"
 
 MauvilleCity_GameCorner_Text_DifficultToStopOn7:
-	.string "Es muy difícil hacer que pare\njusto en el «7».\pSi para en el «7» en\nel TIEMPO DE\nCINTA de bonificación, ganas MONEDAS.$"
+	.string "Es muy difícil hacer que pare\njusto en el “7”.\pSi para en el “7” en\nel TIEMPO DE\nCINTA de bonificación, ganas MONEDAS.$"
 
 MauvilleCity_GameCorner_Text_HeresSomeSlotsInfo:
 	.string "Aquí tienes información\n"
