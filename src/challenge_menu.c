@@ -1422,9 +1422,9 @@ static void DrawRightSideChoiceText(const u8 *text, int x, int y, bool8 chosen, 
 
 static int GetMiddleX(const u8 *txt1, const u8 *txt2, const u8 *txt3)
 {
-    int widthLeft = GetStringWidth(FONT_SHORT, txt1, 0);
     int widthMid = GetStringWidth(FONT_SHORT, txt2, 0);
-    int widthRight = GetStringWidth(FONT_SHORT, txt3, 0);
+    (void)txt1;
+    (void)txt3;
     return (VALUE_X_END - widthMid) / 2 + VALUE_X_START;
 }
 
