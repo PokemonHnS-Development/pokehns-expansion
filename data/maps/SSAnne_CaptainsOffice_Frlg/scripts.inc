@@ -75,7 +75,7 @@ SSAnne_CaptainsOffice_Text_ObtainedHM01FromCaptain::
 
 SSAnne_CaptainsOffice_Text_ExplainCut::
 	.string "Using CUT, you can chop down\n"
-	.string "small trees.\p"
+	.string "árboles pequeños.\p"
 	.string "Why not try it with the trees\n"
 	.string "around VERMILION CITY?$"
 
@@ -92,8 +92,8 @@ SSAnne_CaptainsOffice_Text_YouHaveNoRoomForThis::
 	.string "You have no room for this!$"
 
 SSAnne_CaptainsOffice_Text_YuckShouldntHaveLooked::
-	.string "Yuck!\n"
-	.string "Shouldn't have looked!$"
+	.string "¡Qué asco!\n"
+	.string "¡No debí mirar!$"
 
 SSAnne_CaptainsOffice_Text_HowToConquerSeasickness::
 	.string "How to Conquer Seasickness…\n"

@@ -64,8 +64,8 @@ Route15_WestEntrance_2F_Text_GiveItemIfCaughtEnough::
 
 Route15_WestEntrance_2F_Text_GreatHereYouGo::
 	.string "Great! You have caught or owned\n"
-	.string "{STR_VAR_3} kinds of POKéMON!\p"
-	.string "Congratulations!\n"
+	.string "{STR_VAR_3} tipos de POKéMON!\p"
+	.string "¡Felicidades!\n"
 	.string "Here you go!$"
 
 Route15_WestEntrance_2F_Text_ReceivedItemFromAide::

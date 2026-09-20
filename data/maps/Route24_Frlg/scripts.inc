@@ -114,7 +114,7 @@ Route24_Text_JoinTeamRocket::
 	.string "We're a group of professional\n"
 	.string "criminals specializing in POKéMON!\p"
 	.string "Want to join?\p"
-	.string "Are you sure?\p"
+	.string "¿Estás seguro?\p"
 	.string "Come on, join us!\p"
 	.string "I'm telling you to join!\p"
 	.string "…Okay, you need convincing!\p"
@@ -122,7 +122,7 @@ Route24_Text_JoinTeamRocket::
 	.string "refuse!$"
 
 Route24_Text_RocketDefeat::
-	.string "Arrgh!\n"
+	.string "¡Arrgh!\n"
 	.string "You are good!$"
 
 Route24_Text_YoudBecomeTopRocketLeader::
@@ -143,10 +143,10 @@ Route24_Text_ShanePostBattle::
 
 Route24_Text_EthanIntro::
 	.string "Okay! I'm No. 5!\n"
-	.string "I'll stomp you!$"
+	.string "¡Te voy a aplastar!$"
 
 Route24_Text_EthanDefeat::
-	.string "Whoa!\n"
+	.string "¡Vaya!\n"
 	.string "Too much!$"
 
 Route24_Text_EthanPostBattle::
@@ -154,7 +154,7 @@ Route24_Text_EthanPostBattle::
 
 Route24_Text_ReliIntro::
 	.string "I'm No. 4!\n"
-	.string "Getting tired?$"
+	.string "¿Te estás cansando?$"
 
 Route24_Text_ReliDefeat::
 	.string "I lost, too!$"
@@ -163,7 +163,7 @@ Route24_Text_ReliPostBattle::
 	.string "I did my best, so I've no regrets!$"
 
 Route24_Text_TimmyIntro::
-	.string "Here's No. 3!\n"
+	.string "¡Aquí llega el No. 3!\n"
 	.string "I won't be easy!$"
 
 Route24_Text_TimmyDefeat::
@@ -175,7 +175,7 @@ Route24_Text_TimmyPostBattle::
 
 Route24_Text_AliIntro::
 	.string "I'm second!\n"
-	.string "Now it's serious!$"
+	.string "¡Ahora esto va en serio!$"
 
 Route24_Text_AliDefeat::
 	.string "How could I lose?$"
@@ -184,8 +184,8 @@ Route24_Text_AliPostBattle::
 	.string "I did my best. I have no regrets!$"
 
 Route24_Text_CaleIntro::
-	.string "People call this the NUGGET\n"
-	.string "BRIDGE!\p"
+	.string "¡La gente llama a esto el PUENTE\n"
+	.string "PÉPITA!\p"
 	.string "Beat us five TRAINERS and win\n"
 	.string "a fabulous prize!\p"
 	.string "Think you got what it takes?$"

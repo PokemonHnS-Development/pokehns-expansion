@@ -83,7 +83,7 @@ LavenderTown_VolunteerPokemonHouse_EventScript_Bookshelf::
 LavenderTown_PokemonCenter_1F_Text_HearMrFujiNotFromAroundHere::
 	.string "I recently moved to this town.\p"
 	.string "I hear that MR. FUJI's not from\n"
-	.string "these parts originally, either.$"
+	.string "originario de estas tierras.$"
 
 LavenderTown_VolunteerPokemonHouse_Text_WhereDidMrFujiGo::
 	.string "That's odd, MR. FUJI isn't here.\n"
@@ -96,8 +96,8 @@ LavenderTown_VolunteerPokemonHouse_Text_MrFujiWasPrayingForCubonesMother::
 LavenderTown_VolunteerPokemonHouse_Text_MrFujiLooksAfterOrphanedMons::
 	.string "This is really MR. FUJI's house.\p"
 	.string "He's really kind.\p"
-	.string "He looks after abandoned and\n"
-	.string "orphaned POKéMON.$"
+	.string "Cuida de POKéMON abandonados y\n"
+	.string "huérfanos.$"
 
 LavenderTown_VolunteerPokemonHouse_Text_MonsNiceToHug::
 	.string "It's so warm!\n"
@@ -137,10 +137,10 @@ LavenderTown_VolunteerPokemonHouse_Text_HasPokeFluteHelpedYou::
 
 LavenderTown_VolunteerPokemonHouse_Text_GrandPrizeDrawingClipped::
 	.string "POKéMON FAN MAGAZINE\n"
-	.string "Monthly Grand Prize Drawing!\p"
-	.string "The application form is…\p"
-	.string "Gone! It's been clipped out.\n"
-	.string "Someone must have applied already.$"
+	.string "¡Sorteo Mensual del Gran Premio!\p"
+	.string "El formulario de solicitud es...\p"
+	.string "¡Se fue! Lo han recortado.\n"
+	.string "Alguien ya debió aplicarlo.$"
 
 LavenderTown_VolunteerPokemonHouse_Text_PokemonMagazinesLineShelf::
 	.string "POKéMON magazines line the shelf.\p"

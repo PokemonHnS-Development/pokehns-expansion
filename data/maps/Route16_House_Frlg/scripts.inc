@@ -35,7 +35,7 @@ Route16_House_EventScript_Fearow::
 	end
 
 Route16_House_Text_FoundMySecretRetreat::
-	.string "Oh, dear.\n"
+	.string "Vaya, vaya.\n"
 	.string "You've found my secret retreat.\p"
 	.string "Please don't tell anyone I'm here.\n"
 	.string "I'll make it up to you with this!$"

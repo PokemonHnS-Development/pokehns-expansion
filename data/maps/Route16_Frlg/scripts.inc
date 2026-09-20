@@ -74,7 +74,7 @@ Route16_EventScript_RouteSign::
 	end
 
 Route16_Text_LaoIntro::
-	.string "What do you want?$"
+	.string "¿Qué quieres?$"
 
 Route16_Text_LaoDefeat::
 	.string "Don't you dare laugh!$"
@@ -84,7 +84,7 @@ Route16_Text_LaoPostBattle::
 	.string "What's it to you?$"
 
 Route16_Text_KojiIntro::
-	.string "Nice BIKE!\n"
+	.string "¡Linda BICICLETA!\n"
 	.string "Hand it over!$"
 
 Route16_Text_KojiDefeat::
@@ -116,7 +116,7 @@ Route16_Text_HideoPostBattle::
 	.string "FUCHSIA going along the coast.$"
 
 Route16_Text_CamronIntro::
-	.string "I'm feeling hungry and mean!\n"
+	.string "¡Tengo hambre y estoy de mal humor!\n"
 	.string "I need a punching bag!$"
 
 Route16_Text_CamronDefeat::
@@ -129,7 +129,7 @@ Route16_Text_CamronPostBattle::
 	.string "in tatters.$"
 
 Route16_Text_RubenIntro::
-	.string "Hey, there!\n"
+	.string "¡Hola!\n"
 	.string "Let's have ourselves a good time!$"
 
 Route16_Text_RubenDefeat::
@@ -151,7 +151,7 @@ Route16_Text_CyclingRoadSign::
 
 Route16_Text_RouteSign::
 	.string "ROUTE 16\n"
-	.string "CELADON CITY - FUCHSIA CITY$"
+	.string "CIUDAD CELADON - CIUDAD FUXIA$"
 
 Route16_Text_JedIntro::
 	.string "JED: Our love knows no bounds.\n"
@@ -170,8 +170,8 @@ Route16_Text_JedNotEnoughMons::
 	.string "Is there no love in your heart?$"
 
 Route16_Text_LeaIntro::
-	.string "LEA: Sometimes, the intensity of\n"
-	.string "our love scares me.$"
+	.string "LEA: A veces, la intensidad de\n"
+	.string "nuestro amor me asusta.$"
 
 Route16_Text_LeaDefeat::
 	.string "LEA: Ohh! But JED looks cool\n"
@@ -183,6 +183,6 @@ Route16_Text_LeaPostBattle::
 
 Route16_Text_LeaNotEnoughMons::
 	.string "LEA: Oh, you don't have two\n"
-	.string "POKéMON with you?\p"
+	.string "POKéMON contigo?\p"
 	.string "Doesn't it feel lonely for you or\n"
-	.string "your POKéMON?$"
+	.string "tu POKéMON?$"

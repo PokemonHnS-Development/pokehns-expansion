@@ -22,7 +22,7 @@ DayCare_Text_YourMonIsDoingFine::
 
 DayCare_Text_IllKeepIt::
 	.string "Well then, I'll keep it.\n"
-	.string "Thanks!$"
+	.string "¡Gracias!$"
 
 DayCare_Text_YouHaveNoRoomForIt::
 	.string "You have no room for it…\n"
@@ -49,20 +49,20 @@ DayCare_Text_IWillKeepDoYouWantIt::
 
 DayCare_Text_WouldYouLikeUsToRaiseMon::
 	.string "I'm the DAY-CARE LADY.\p"
-	.string "We can raise POKéMON for you.\p"
-	.string "Would you like us to raise one?$"
+	.string "Podemos criar POKéMON por ti.\p"
+	.string "¿Quieres que criemos uno?$"
 
 DayCare_Text_WhichMonShouldWeRaise::
-	.string "Which POKéMON should we raise for\n"
-	.string "you?$"
+	.string "¿Qué POKéMON quieres que criemos\n"
+	.string "por ti?$"
 
 DayCare_Text_WellRaiseYourMon::
-	.string "Fine, we'll raise your {STR_VAR_1}\n"
-	.string "for a while.\p"
-	.string "Come back for it later.$"
+	.string "Bien, cuidaremos a tu {STR_VAR_1}\n"
+	.string "por un tiempo.\p"
+	.string "Vuelve más tarde por él.$"
 
 DayCare_Text_WeCanRaiseOneMore::
-	.string "We can raise two of your POKéMON.\p"
+	.string "Podemos criar dos de tus POKéMON.\p"
 	.string "Would you like us to raise one\n"
 	.string "more POKéMON for you?$"
 
@@ -70,32 +70,32 @@ DayCare_Text_HusbandWasLookingForYou::
 	.string "My husband was looking for you.$"
 
 DayCare_Text_FineThenComeAgain::
-	.string "Oh, fine, then.\n"
-	.string "Come again.$"
+	.string "Oh, está bien entonces.\n"
+	.string "Vuelve pronto.$"
 
 DayCare_Text_NotEnoughMoney::
 	.string "You don't have enough money…$"
 
 DayCare_Text_TakeOtherOneBackToo::
 	.string "Will you take back the other one,\n"
-	.string "too?$"
+	.string "las pinturas?$"
 
 DayCare_Text_ComeAgain::
 	.string "Fine.\n"
-	.string "Come again.$"
+	.string "Vuelve pronto.$"
 
 DayCare_Text_GoodToSeeYou::
 	.string "Ah, it's you!\n"
 	.string "Good to see you.\p"
 	.string "Your POKéMON can only be doing\n"
-	.string "good!$"
+	.string "buena!$"
 
 DayCare_Text_YourMonHasGrownXLevels::
 	.string "By level, your {STR_VAR_1} has\n"
 	.string "grown by {STR_VAR_2}.$"
 
 DayCare_Text_YourPartyIsFull::
-	.string "Your POKéMON party is full.\n"
+	.string "Tu equipo POKéMON está lleno.\n"
 	.string "Make room, then come see me.$"
 
 DayCare_Text_TakeBackWhichMon::
@@ -115,7 +115,7 @@ DayCare_Text_TookBackMon::
 
 DayCare_Text_YouHaveJustOneMon::
 	.string "Oh? But you have just one\n"
-	.string "POKéMON.\p"
+	.string "POKéMON planta.\p"
 	.string "Come back another time.$"
 
 DayCare_Text_TakeYourMonBack::

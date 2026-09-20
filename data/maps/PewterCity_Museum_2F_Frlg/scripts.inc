@@ -41,7 +41,7 @@ Text_SeismicTossTeach::
 	.string "Should I teach that to a POKéMON?$"
 
 Text_SeismicTossDeclined::
-	.string "Is that so?\n"
+	.string "¿De verdad?\n"
 	.string "I'm sure you'll be back for it.$"
 
 Text_SeismicTossWhichMon::
@@ -69,9 +69,9 @@ PewterCity_Museum_1F_Text_RunningSpaceExhibitThisMonth::
 	.string "exhibit.$"
 
 PewterCity_Museum_1F_Text_AskedDaddyToCatchPikachu::
-	.string "I want a PIKACHU!\n"
-	.string "It's so cute!\p"
-	.string "I asked my daddy to catch me one!$"
+	.string "¡Quiero un PIKACHU!\n"
+	.string "¡Es tan lindo!\p"
+	.string "¡Le pedí a mi papi que atrape uno!$"
 
 PewterCity_Museum_1F_Text_PikachuSoonIPromise::
 	.string "Yeah, a PIKACHU soon, I promise!$"
@@ -81,5 +81,5 @@ PewterCity_Museum_1F_Text_SpaceShuttle::
 
 PewterCity_Museum_1F_Text_MeteoriteThatFellOnMtMoon::
 	.string "A meteorite that fell on MT. MOON.\n"
-	.string "It is thought to be a MOON STONE.$"
+	.string "Se cree que es una MOON STONE.$"
 

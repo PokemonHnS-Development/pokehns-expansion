@@ -48,7 +48,7 @@ ThreeIsland_Port_Text_ForkOverMoney::
 
 ThreeIsland_Port_Text_IllCallThePolice::
 	.string "Aiyeeh!\p"
-	.string "Wh-who are you?!\n"
+	.string "¡¿Qu-quién eres?!\n"
 	.string "I… I'll call the police!$"
 
 ThreeIsland_Port_Text_ThankGoodnessBikersGone::

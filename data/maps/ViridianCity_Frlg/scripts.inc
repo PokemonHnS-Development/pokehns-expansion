@@ -288,7 +288,7 @@ ViridianCity_Text_ShowYouHowToCatchMons::
 	.string "the POKéDEX automatically updates\l"
 	.string "its data.\p"
 	.string "…You don't know how to catch\n"
-	.string "a POKéMON?\p"
+	.string "un POKéMON?\p"
 	.string "I suppose I had better show you\n"
 	.string "then!$"
 
@@ -335,17 +335,17 @@ ViridianCity_Text_TooBusyForTeachyTV::
 
 ViridianCity_Text_CitySign::
 	.string "VIRIDIAN CITY \n"
-	.string "The Eternally Green Paradise$"
+	.string "El Paraíso Eternamente Verde$"
 
 ViridianCity_Text_CatchMonsForEasierBattles::
-	.string "TRAINER TIPS\p"
+	.string "CONSEJOS DE ENTRENADOR\p"
 	.string "Catch POKéMON and expand your\n"
 	.string "collection.\p"
 	.string "The more you have, the easier it\n"
 	.string "is to battle.$"
 
 ViridianCity_Text_MovesLimitedByPP::
-	.string "TRAINER TIPS\p"
+	.string "CONSEJOS DE ENTRENADOR\p"
 	.string "The battle moves of POKéMON are\n"
 	.string "limited by their POWER POINTS, PP.\p"
 	.string "To replenish PP, rest your tired\n"

@@ -6,11 +6,11 @@ OneIsland_TreasureBeach_EventScript_Boy::
 	end
 
 OneIsland_TreasureBeach_Text_AmaraIntro::
-	.string "Lying back, rocked by the waves…\n"
+	.string "Tumbado, me mecen las olas...\n"
 	.string "It's exquisite.$"
 
 OneIsland_TreasureBeach_Text_AmaraDefeat::
-	.string "I lost…\n"
+	.string "Perdí...\n"
 	.string "It feels awful.$"
 
 OneIsland_TreasureBeach_Text_AmaraPostBattle::

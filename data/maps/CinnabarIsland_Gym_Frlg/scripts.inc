@@ -714,9 +714,9 @@ CinnabarIsland_Gym_Text_BlaineIntro::
 	.string "I am BLAINE, the red-hot LEADER\n"
 	.string "of CINNABAR GYM!\p"
 	.string "My fiery POKéMON are all rough\n"
-	.string "and ready with intense heat!\p"
+	.string "listos con un calor intenso!\p"
 	.string "They incinerate all challengers!\p"
-	.string "Hah!\n"
+	.string "¡Ja!\n"
 	.string "You better have BURN HEAL!{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
 
 CinnabarIsland_Gym_Text_BlaineDefeat::
@@ -798,18 +798,18 @@ CinnabarIsland_Gym_Text_RamonPostBattle::
 
 CinnabarIsland_Gym_Text_DerekIntro::
 	.string "I know why BLAINE became a\n"
-	.string "TRAINER.$"
+	.string "ENTRENADOR.$"
 
 CinnabarIsland_Gym_Text_DerekDefeat::
 	.string "Ow!$"
 
 CinnabarIsland_Gym_Text_DerekPostBattle::
 	.string "Our LEADER, BLAINE, became lost\n"
-	.string "in the mountains but good.\p"
-	.string "Night fell when a fiery bird\n"
-	.string "POKéMON appeared.\p"
-	.string "Its light allowed BLAINE to find\n"
-	.string "his way down safely.$"
+	.string "en las montañas, pero todo bien.\p"
+	.string "Cayó la noche cuando un POKéMON\n"
+	.string "ave de fuego apareció.\p"
+	.string "Su luz permitió que BLAINE bajara\n"
+	.string "a salvo.$"
 
 CinnabarIsland_Gym_Text_DustyIntro::
 	.string "I've been to many GYMS, but this\n"
@@ -837,7 +837,7 @@ CinnabarIsland_Gym_Text_ZacPostBattle::
 
 CinnabarIsland_Gym_Text_GymGuyAdvice::
 	.string "Yo!\n"
-	.string "Champ in the making!\p"
+	.string "¡Un futuro campeón!\p"
 	.string "The hotheaded BLAINE is a FIRE\n"
 	.string "POKéMON pro.\p"
 	.string "Douse his spirits with water!\p"
@@ -845,19 +845,19 @@ CinnabarIsland_Gym_Text_GymGuyAdvice::
 	.string "BURN HEALS, too.$"
 
 CinnabarIsland_Gym_Text_GymGuyPostVictory::
-	.string "{PLAYER}!\n"
+	.string "¡{PLAYER}!\n"
 	.string "You beat that firebrand!$"
 
 CinnabarIsland_Gym_Text_GymStatue::
 	.string "CINNABAR POKéMON GYM\n"
 	.string "LEADER: BLAINE\p"
-	.string "WINNING TRAINERS:\n"
+	.string "ENTRENADORES GANADORES:\n"
 	.string "{RIVAL}$"
 
 CinnabarIsland_Gym_Text_GymStatuePlayerWon::
 	.string "CINNABAR POKéMON GYM\n"
 	.string "LEADER: BLAINE\p"
-	.string "WINNING TRAINERS:\n"
+	.string "ENTRENADORES GANADORES:\n"
 	.string "{RIVAL}, {PLAYER}$"
 
 CinnabarIsland_Gym_Text_PokemonQuizRules::
@@ -896,6 +896,6 @@ CinnabarIsland_Gym_Text_CorrectGoOnThrough::
 	.string "Go on through!$"
 
 CinnabarIsland_Gym_Text_SorryBadCall::
-	.string "Sorry!\n"
+	.string "¡Lo siento!\n"
 	.string "Bad call!$"
 

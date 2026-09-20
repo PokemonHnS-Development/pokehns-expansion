@@ -71,7 +71,7 @@ FiveIsland_LostCave_Room10_Text_SelphyDefeat::
 
 FiveIsland_LostCave_Room10_Text_MayIAskYouToTakeMeHome::
 	.string "I am so glad that you happened\n"
-	.string "here.\p"
+	.string "pueden entrenar aquí.\p"
 	.string "I grew rather bored of walking,\n"
 	.string "and I am feeling fatigued.\p"
 	.string "May I ask you to take me home\n"

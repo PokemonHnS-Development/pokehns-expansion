@@ -231,11 +231,11 @@ FuchsiaCity_SafariZone_Entrance_Text_CallYouOnPAWhenYouRunOut::
 	.string "luck!$"
 
 FuchsiaCity_SafariZone_Entrance_Text_OkayPleaseComeAgain::
-	.string "Okay.\n"
+	.string "Está bien.\n"
 	.string "Please come again!$"
 
 FuchsiaCity_SafariZone_Entrance_Text_OopsNotEnoughMoney::
-	.string "Oops!\n"
+	.string "¡Ups!\n"
 	.string "Not enough money!$"
 
 FuchsiaCity_SafariZone_Entrance_Text_GoingToLeaveSafariZoneEarly::
@@ -247,7 +247,7 @@ FuchsiaCity_SafariZone_Entrance_Text_PleaseReturnSafariBalls::
 	.string "you may have left.$"
 
 FuchsiaCity_SafariZone_Entrance_Text_GoodLuck::
-	.string "Good luck!$"
+	.string "¡Buena suerte!$"
 
 FuchsiaCity_SafariZone_Entrance_Text_CatchFairShareComeAgain::
 	.string "Did you catch your fair share?\n"

@@ -25,7 +25,7 @@ CinnabarIsland_PokemonLab_ResearchRoom_Text_LegendaryBirdEmail::
 	.string "There's an e-mail message.\p"
 	.string "… … …\p"
 	.string "There are three legendary bird\n"
-	.string "POKéMON.\p"
+	.string "POKéMON planta.\p"
 	.string "They are ARTICUNO, ZAPDOS, and\n"
 	.string "MOLTRES.\p"
 	.string "Their whereabouts are unknown.\p"

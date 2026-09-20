@@ -172,16 +172,16 @@ VermilionPort_Text_SailorCantSail:
 	.string "until the THIEF is found.$"
 
 VermilionPort_Text_NoPass:
-    .string "{PLAYER} tried to show the\n"
+    .string "{PLAYER} intentó mostrar el\n"
     .string "{STR_VAR_1}…\p"
-    .string "…But no {STR_VAR_1}!\p"
-    .string "Sorry!\n"
-    .string "You may board only if you have an\l"
+    .string "…¡Pero no hay {STR_VAR_1}!\p"
+    .string "¡Lo siento!\n"
+    .string "Solo puedes subir si tienes un\l"
     .string "{STR_VAR_1}.$"
 
 VermilionPort_Text_SailorGetOnBoard:
-    .string "We're departing soon.\n"
-    .string "Please get on board.$"
+    .string "Partiremos pronto.\n"
+    .string "Por favor, sube a bordo.$"
 
 VermilionPort_Text_CantBoard:
     .string "Sorry. You can't board now.$"
@@ -190,8 +190,8 @@ VermilionPort_Text_WhereSail:
     .string "Where would you like to sail?$"
 
 VermilionPort_Text_AskBoard:
-    .string "Welcome to FAST SHIP S.S.AQUA.\p"
-    .string "Will you be boarding today?$"
+    .string "Bienvenido al FAST SHIP S.S.AQUA.\p"
+    .string "¿Subirás a bordo hoy?$"
 
 VermilionPort_Text_AskTicket:
     .string "May I see your S.S.TICKET?$"
@@ -200,13 +200,13 @@ VermilionPort_Text_ComeAgain:
     .string "We hope to see you again!$"
 
 VermilionPort_Text_FlashTicket:
-    .string "{PLAYER} flashed the S.S.TICKET.\p"
-    .string "That's it. Thank you!$"
+    .string "{PLAYER} mostró el S.S.TICKET.\p"
+    .string "Eso es todo. ¡Gracias!$"
 
 VermilionPort_Text_NoTicket:
-    .string "{PLAYER} tried to show the\n"
+    .string "{PLAYER} intentó mostrar el\n"
     .string "S.S.TICKET…\p"
-    .string "…But no TICKET!\p"
-    .string "Sorry!\n"
-    .string "You may board only\l"
-    .string "if you have an S.S.TICKET.$"
+    .string "…¡Pero no tienes TICKET!\p"
+    .string "¡Lo siento!\n"
+    .string "Solo puedes subir\l"
+    .string "si tienes un S.S.TICKET.$"

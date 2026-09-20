@@ -68,7 +68,7 @@ SilphCo_5F_Text_YoureOurHeroThankYou::
 
 SilphCo_5F_Text_Grunt1Intro::
 	.string "I heard a kid was wandering\n"
-	.string "around.$"
+	.string "merodeando.$"
 
 SilphCo_5F_Text_Grunt1Defeat::
 	.string "Boom!$"
@@ -133,8 +133,8 @@ SilphCo_5F_Text_FloorSign::
 
 SilphCo_5F_Text_RocketBossLookingForStrongMons::
 	.string "Those thugs that took over our\n"
-	.string "building…\p"
-	.string "Their BOSS said he was looking for\n"
-	.string "strong POKéMON.\p"
+	.string "edificio…\p"
+	.string "Su JEFE dijo que buscaba\n"
+	.string "los POKéMON fuertes.\p"
 	.string "I hope our PRESIDENT managed to\n"
 	.string "avoid trouble…$"

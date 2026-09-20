@@ -292,7 +292,7 @@ Route117_Text_YourMonIsDoingFine:
 
 Route117_Text_IllKeepIt:
 	.string "Well then, I'll keep it.\n"
-	.string "Thanks!$"
+	.string "¡Gracias!$"
 
 Route117_Text_YouHaveNoRoomForIt:
 	.string "You have no room for it…\n"
@@ -327,39 +327,39 @@ Route117_Text_IWillKeepDoYouWantIt:
 
 Route117_PokemonDayCare_Text_WouldYouLikeUsToRaiseAMon:
 	.string "I'm the DAY-CARE LADY.\p"
-	.string "We can raise POKéMON for you.\p"
-	.string "Would you like us to raise one?$"
+	.string "Podemos criar POKéMON por ti.\p"
+	.string "¿Quieres que criemos uno?$"
 
 Route117_PokemonDayCare_Text_WhichMonShouldWeRaise:
-	.string "Which POKéMON should we raise for\n"
-	.string "you?$"
+	.string "¿Qué POKéMON quieres que criemos\n"
+	.string "por ti?$"
 
 Route117_PokemonDayCare_Text_WellRaiseYourMon:
-	.string "Fine, we'll raise your {STR_VAR_1}\n"
-	.string "for a while.\p"
-	.string "Come back for it later.$"
+	.string "Bien, cuidaremos a tu {STR_VAR_1}\n"
+	.string "por un tiempo.\p"
+	.string "Vuelve más tarde por él.$"
 
 Route117_PokemonDayCare_Text_WeCanRaiseOneMore:
-	.string "We can raise two of your POKéMON.\n"
-	.string "Would you like us to raise one more?$"
+	.string "Podemos criar dos de tus POKéMON.\n"
+	.string "¿Quieres que criemos otro más?$"
 
 Route117_PokemonDayCare_Text_HusbandWasLookingForYou:
 	.string "My husband was looking for you.$"
 
 Route117_PokemonDayCare_Text_FineThenComeAgain:
-	.string "Oh, fine, then.\n"
-	.string "Come again.$"
+	.string "Oh, está bien entonces.\n"
+	.string "Vuelve pronto.$"
 
 Route117_PokemonDayCare_Text_NotEnoughMoney:
 	.string "You don't have enough money…$"
 
 Route117_PokemonDayCare_Text_TakeOtherOneBackToo:
 	.string "Will you take back the other one,\n"
-	.string "too?$"
+	.string "las pinturas?$"
 
 Route117_PokemonDayCare_Text_ComeAgain:
 	.string "Fine.\n"
-	.string "Come again.$"
+	.string "Vuelve pronto.$"
 
 Route117_PokemonDayCare_Text_GoodToSeeYou:
 	.string "Ah, it's you! Good to see you.\n"
@@ -391,7 +391,7 @@ Route117_PokemonDayCare_Text_TookBackMon:
 
 Route117_PokemonDayCare_Text_YouHaveJustOneMon:
 	.string "Oh? But you have just one\n"
-	.string "POKéMON.\p"
+	.string "POKéMON planta.\p"
 	.string "Come back another time.$"
 
 Route117_PokemonDayCare_Text_TakeYourMonBack:
@@ -406,8 +406,8 @@ Text_EggHatchHuh:
 	.string "Huh?$"
 
 Route117_PokemonDayCare_Text_YoullBeLeftWithJustOne:
-	.string "Huh?\n"
-	.string "Now, now.\p"
+	.string "¿Eh?\n"
+	.string "Ya, ya.\p"
 	.string "If you leave that POKéMON with\n"
 	.string "me, you'll be left with just one.\p"
 	.string "You will be better off if you catch\n"

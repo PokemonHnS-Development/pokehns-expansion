@@ -175,5 +175,5 @@ CinnabarIsland_PokemonCenter_1F_Text_OhNotDoneYet::
 
 CinnabarIsland_PokemonCenter_1F_Text_LetsGo::
 	.string "Well, that's it.\n"
-	.string "Let's go!$"
+	.string "¡Vamos!$"
 

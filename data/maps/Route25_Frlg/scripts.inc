@@ -23,8 +23,8 @@ Route25_Text_JoeyPostBattle::
 	.string "POKéMON of different types.$"
 
 Route25_Text_DanIntro::
-	.string "Dad took me to a great party on\n"
-	.string "the S.S. ANNE at VERMILION CITY.$"
+	.string "Papá me llevó a una gran fiesta en\n"
+	.string "el S.S. ANNE en CIUDAD VERMILIAN.$"
 
 Route25_Text_DanDefeat::
 	.string "I'm not mad!$"
@@ -34,7 +34,7 @@ Route25_Text_DanPostBattle::
 	.string "from around the world.$"
 
 Route25_Text_FlintIntro::
-	.string "I'm a cool guy.\n"
+	.string "Soy un chico genial.\n"
 	.string "I've got a girlfriend!$"
 
 Route25_Text_FlintDefeat::
@@ -53,10 +53,10 @@ Route25_Text_KelseyDefeat::
 
 Route25_Text_KelseyPostBattle::
 	.string "I wish my boyfriend was as good\n"
-	.string "as you.$"
+	.string "joven como tú.$"
 
 Route25_Text_ChadIntro::
-	.string "I had this feeling…\n"
+	.string "Tenía este presentimiento...\n"
 	.string "I knew I had to battle you!$"
 
 Route25_Text_ChadDefeat::
@@ -68,8 +68,8 @@ Route25_Text_ChadPostBattle::
 	.string "That's a good tactic.$"
 
 Route25_Text_HaleyIntro::
-	.string "My friend has many cute POKéMON.\n"
-	.string "I'm so jealous!$"
+	.string "Mi amigo tiene POKéMON lindos.\n"
+	.string "¡Tengo mucha envidia!$"
 
 Route25_Text_HaleyDefeat::
 	.string "I'm not so jealous!$"
@@ -80,7 +80,7 @@ Route25_Text_HaleyPostBattle::
 
 Route25_Text_FranklinIntro::
 	.string "I just got down from MT. MOON,\n"
-	.string "but I've still got gas in the tank!$"
+	.string "¡pero aún tengo energía!$"
 
 Route25_Text_FranklinDefeat::
 	.string "You worked hard!$"
@@ -105,7 +105,7 @@ Route25_Text_NobPostBattle::
 
 Route25_Text_WayneIntro::
 	.string "You're going to see BILL?\n"
-	.string "First, we battle!$"
+	.string "¡Primero, luchamos!$"
 
 Route25_Text_WayneDefeat::
 	.string "You're something.$"
@@ -115,13 +115,13 @@ Route25_Text_WaynePostBattle::
 	.string "CERULEAN CITY.$"
 
 Route25_Text_SeaCottageSign::
-	.string "SEA COTTAGE\n"
+	.string "CABAÑA DEL MAR\n"
 	.string "BILL lives here!$"
 
 Route25_Text_MistyHighHopesAboutThisPlace::
 	.string "This cape is a famous date spot.\p"
-	.string "MISTY, the GYM LEADER, has high\n"
-	.string "hopes about this place.$"
+	.string "MISTY, la LÍDER, tiene grandes\n"
+	.string "esperanzas en este lugar.$"
 
 Route25_Text_AreYouHereAlone::
 	.string "Hello, are you here alone?\p"

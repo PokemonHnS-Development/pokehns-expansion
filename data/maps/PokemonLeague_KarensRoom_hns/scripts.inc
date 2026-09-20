@@ -63,18 +63,18 @@ PokemonLeague_KarensRoom_EventScript_KarenDefeated::
 	end
 
 PokemonLeague_KarensRoom_Text_RematchBefore:
-    .string "KAREN: Ah, it's you again.\p"
-    .string "I trust you haven't forgotten\n"
-    .string "my belief:\p"
-    .string "True strength arises from trust\n"
-    .string "in one's POKéMON.\p"
-    .string "Since our last encounter, my\n"
-    .string "bond with my POKéMON has\l"
-    .string "deepened further.\p"
-    .string "Are you ready to face a team\n"
-    .string "united by an unbreakable bond?\p"
-    .string "Show me the power of the bond\n"
-    .string "with your POKéMON.$"
+    .string "KAREN: Ah, eres tú otra vez.\p"
+    .string "Confío en que no has olvidado\n"
+    .string "mi creencia:\p"
+    .string "La fuerza real nace de la confianza\n"
+    .string "en los POKéMON.\p"
+    .string "Desde nuestro último encuentro,\n"
+    .string "mi vínculo con mis POKéMON\l"
+    .string "se ha vuelto más profundo.\p"
+    .string "¿Estás listo para enfrentar a un\n"
+    .string "equipo con un vínculo irrompible?\p"
+    .string "¡Muéstrame el poder del vínculo\n"
+    .string "con tus POKéMON!$"
 
 PokemonLeague_KarensRoom_Text_Before:
     .string "I am KAREN of the ELITE FOUR.\p"

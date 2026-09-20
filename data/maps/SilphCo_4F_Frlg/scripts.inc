@@ -44,7 +44,7 @@ SilphCo_4F_Text_CantYouSeeImHiding::
 	.string "Can't you see I'm hiding?$"
 
 SilphCo_4F_Text_TeamRocketIsGone::
-	.string "Huh?\n"
+	.string "¿Eh?\n"
 	.string "TEAM ROCKET is gone?$"
 
 SilphCo_4F_Text_Grunt1Intro::

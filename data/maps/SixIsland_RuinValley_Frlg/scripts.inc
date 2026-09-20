@@ -127,4 +127,4 @@ SixIsland_RuinValley_Text_HectorPostBattle::
 	.string "It has these strange patterns\l"
 	.string "engraved on the outside.\p"
 	.string "I don't know what they mean,\n"
-	.string "though.$"
+	.string "su voz.$"

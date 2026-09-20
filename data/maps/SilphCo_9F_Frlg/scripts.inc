@@ -49,7 +49,7 @@ SilphCo_9F_Text_YouShouldTakeQuickNap::
 	.string "You should take a quick nap.$"
 
 SilphCo_9F_Text_DontGiveUp::
-	.string "Don't give up!$"
+	.string "¡No te rindas!$"
 
 SilphCo_9F_Text_ThankYouSoMuch::
 	.string "Thank you so much.$"

@@ -1,5 +1,5 @@
 Route3_Text_ColtonRematchIntro::
-	.string "Hey!\n"
+	.string "¡Hola!\n"
 	.string "I saw you in VIRIDIAN FOREST!$"
 
 Route3_Text_BenRematchIntro::
@@ -8,11 +8,11 @@ Route3_Text_BenRematchIntro::
 	.string "You should be wearing shorts, too!$"
 
 Route3_Text_JaniceRematchIntro::
-	.string "Excuse me!\n"
+	.string "¡Disculpa!\n"
 	.string "You keep looking at me, don't you?$"
 
 Route3_Text_GregRematchIntro::
-	.string "You're a TRAINER, aren't you?\n"
+	.string "Eres ENTRENADOR, ¿verdad?\n"
 	.string "Let's get with it right away!$"
 
 Route3_Text_SallyRematchIntro::
@@ -50,7 +50,7 @@ Route6_Text_KeigoRematchIntro::
 	.string "that's not a BUG POKéMON, but…$"
 
 Route6_Text_JeffRematchIntro::
-	.string "Huh?\n"
+	.string "¿Eh?\n"
 	.string "You want to go with me again?$"
 
 Route6_Text_IsabelleRematchIntro::
@@ -66,7 +66,7 @@ Route8_Text_AidanRematchIntro::
 	.string "is your chemistry grade?$"
 
 Route8_Text_StanRematchIntro::
-	.string "All right!\n"
+	.string "¡Muy bien!\n"
 	.string "Let's play another game!$"
 
 Route8_Text_GlennRematchIntro::
@@ -96,7 +96,7 @@ Route8_Text_RichRematchIntro::
 
 Route8_Text_JuliaRematchIntro::
 	.string "What's a cute, round, and fluffy\n"
-	.string "POKéMON?\p"
+	.string "con los POKéMON?\p"
 	.string "You already know, don't you?$"
 
 Route8_Text_RicardoRematchIntro::
@@ -136,7 +136,7 @@ Route9_Text_JeremyRematchIntro::
 	.string "Great! I was bored again, eh!$"
 
 Route9_Text_BriceRematchIntro::
-	.string "Hahaha!\n"
+	.string "¡Jajaja!\n"
 	.string "A little toughie, as always!$"
 
 Route9_Text_BrentRematchIntro::
@@ -144,7 +144,7 @@ Route9_Text_BrentRematchIntro::
 	.string "my POKéMON from cocoons!$"
 
 Route9_Text_AlanRematchIntro::
-	.string "Hahahaha!\n"
+	.string "¡Jajajaja!\n"
 	.string "I'll win this time!$"
 
 Route9_Text_ConnerRematchIntro::
@@ -189,7 +189,7 @@ Route11_Text_EddieRematchIntro::
 	.string "Let's go, but don't cheat!$"
 
 Route11_Text_BraxtonRematchIntro::
-	.string "Hi, there!\p"
+	.string "¡Hola!\p"
 	.string "But be careful!\n"
 	.string "I'm still laying down some cables!$"
 
@@ -221,7 +221,7 @@ Route11_Text_DaveRematchIntro::
 	.string "This time, they should win, too.$"
 
 Route12_Text_NedRematchIntro::
-	.string "Yeah!\n"
+	.string "¡Sí!\n"
 	.string "I got a bite, here!\l"
 	.string "Th-this might be the real thing!$"
 
@@ -235,7 +235,7 @@ Route12_Text_JustinRematchIntro::
 
 Route12_Text_LucaRematchIntro::
 	.string "Electricity has always been my\n"
-	.string "specialty.\p"
+	.string "del MT. CHIMNEY.\p"
 	.string "I don't know a thing about POKéMON\n"
 	.string "of the sea, though.$"
 
@@ -250,107 +250,107 @@ Route12_Text_ElliotRematchIntro::
 
 Route12_Text_AndrewRematchIntro::
 	.string "What's catching?\p"
-	.string "You'll never know unless you beat\n"
+	.string "No lo sabrás hasta que venzas a\n"
 	.string "me!$"
 
 Route12_Text_JesRematchIntro::
-	.string "JES: I'll win here today and\n"
-	.string "propose to my GIA.$"
+	.string "JES: ¡Ganaré hoy mismo y\n"
+	.string "le pediré matrimonio a GIA!$"
 
 Route12_Text_GiaRematchIntro::
-	.string "GIA: Hey, JES…\n"
-	.string "I've been waiting a long time now.\p"
-	.string "If we win today, I'll marry you!$"
+	.string "GIA: Oye, JES...\n"
+	.string "He estado esperando mucho tiempo.\p"
+	.string "¡Si ganamos hoy, me casaré contigo!$"
 
 Route13_Text_SebastianRematchIntro::
-	.string "My bird POKéMON remember you!$"
+	.string "¡Mi POKéMON ave te recuerda!$"
 
 Route13_Text_SusieRematchIntro::
-	.string "I want to be the best TRAINER \n"
-	.string "while I'm a kid!$"
+	.string "¡Quiero ser el mejor ENTRENADOR\n"
+	.string "mientras sea niño!$"
 
 Route13_Text_ValerieRematchIntro::
-	.string "Wow!\n"
-	.string "You got more cool BADGES!$"
+	.string "¡Guau!\n"
+	.string "¡Tienes MEDALLAS más geniales!$"
 
 Route13_Text_GwenRematchIntro::
-	.string "My cutely grown POKéMON wish to\n"
-	.string "become reacquainted with you.$"
+	.string "Mis lindos POKéMON quieren\n"
+	.string "volver a conocerte.$"
 
 Route13_Text_AlmaRematchIntro::
-	.string "I cleaned out my savings and\n"
-	.string "bought more CARBOS.$"
+	.string "Gasté todos mis ahorros y\n"
+	.string "compré más CARBOS.$"
 
 Route13_Text_PerryRematchIntro::
-	.string "I'm not going to lose this time.\n"
-	.string "The wind's blowing my way!$"
+	.string "No voy a perder esta vez.\n"
+	.string "¡El viento sopla a mi favor!$"
 
 Route13_Text_LolaRematchIntro::
-	.string "Oh, you're back?\p"
-	.string "Sure, I'll play again with you,\n"
-	.string "sweetie.$"
+	.string "Ah, ¿ya volviste?\p"
+	.string "Claro, jugaré contigo otra vez,\n"
+	.string "cariño.$"
 
 Route13_Text_SheilaRematchIntro::
-	.string "Can't you forget that you battled\n"
-	.string "with me?$"
+	.string "¿No puedes olvidar que luchaste\n"
+	.string "conmigo?$"
 
 Route13_Text_JaredRematchIntro::
-	.string "What're you starin' at?$"
+	.string "¿Qué estás mirando?$"
 
 Route13_Text_RobertRematchIntro::
-	.string "I always go with bird POKéMON.\n"
-	.string "I've dedicated myself to them.$"
+	.string "Siempre uso POKéMON ave.\n"
+	.string "Me he dedicado a ellos.$"
 
 Route14_Text_CarterRematchIntro::
-	.string "I used TMs to teach good moves\n"
-	.string "to my POKéMON.$"
+	.string "Usé MTs para enseñar buenos ataques\n"
+	.string "a mis POKéMON.$"
 
 Route14_Text_MitchRematchIntro::
-	.string "My bird POKéMON should be ready\n"
-	.string "for battle this time.$"
+	.string "Mi POKéMON ave ya debería estar\n"
+	.string "listo para luchar ahora.$"
 
 Route14_Text_BeckRematchIntro::
-	.string "Are you using TMs on POKéMON?\n"
-	.string "Just holding them is useless.$"
+	.string "¿Usas MT en tus POKéMON?\n"
+	.string "Tenerlas guardadas no sirve de nada.$"
 
 Route14_Text_MarlonRematchIntro::
-	.string "Have you taught your bird POKéMON\n"
-	.string "how to FLY?\p"
-	.string "You'll be able to soar with it into\n"
-	.string "the sky! Give it a try.$"
+	.string "¿Le has enseñando a tu POKéMON ave\n"
+	.string "a usar VUELO?\p"
+	.string "¡Podrás surcar los cielos con él!\n"
+	.string "¡Inténtalo!$"
 
 Route14_Text_DonaldRematchIntro::
-	.string "The legend of the winged mirages…\n"
-	.string "You've heard it, right?$"
+	.string "La leyenda de los espejismos...\n"
+	.string "La has escuchado, ¿verdad?$"
 
 Route14_Text_BennyRematchIntro::
-	.string "I'm really not into it, but okay.\n"
-	.string "Let's go!$"
+	.string "No me interesa mucho, pero está bien.\n"
+	.string "¡Vamos!$"
 
 Route14_Text_LukasRematchIntro::
-	.string "Hey!\n"
-	.string "I remember you!\p"
-	.string "C'mon, c'mon.\n"
-	.string "Let's go, let's go, let's go!$"
+	.string "¡Hola!\n"
+	.string "¡Te recuerdo!\p"
+	.string "Vamos, vamos.\n"
+	.string "¡Vamos, vamos, vamos!$"
 
 Route14_Text_IsaacRematchIntro::
-	.string "You're here again, huh?\n"
-	.string "Shut up and battle.$"
+	.string "Estás aquí otra vez, ¿eh?\n"
+	.string "Cállate y lucha.$"
 
 Route14_Text_GeraldRematchIntro::
-	.string "We've been riding here because of\n"
-	.string "the wide-open spaces.$"
+	.string "Hemos venido cabalgando por\n"
+	.string "los espacios abiertos.$"
 
 Route14_Text_MalikRematchIntro::
-	.string "POKéMON battle, right?\n"
-	.string "Cool! Rumble!$"
+	.string "Batalla POKéMON, ¿verdad?\n"
+	.string "¡Genial! ¡A luchar!$"
 
 Route14_Text_KiriRematchIntro::
-	.string "KIRI: JAN, I hope we win today.$"
+	.string "KIRI: JAN, espero que ganemos hoy.$"
 
 Route14_Text_JanRematchIntro::
-	.string "JAN: KIRI, here we go!\n"
-	.string "Let's win for sure this time!$"
+	.string "JAN: ¡KIRI, allá vamos!\n"
+	.string "¡Ganemos seguro esta vez!$"
 
 Route15_Text_KindraRematchIntro::
 	.string "I'm going to keep battling with the\n"
@@ -373,227 +373,227 @@ Route15_Text_ChesterRematchIntro::
 Route15_Text_GraceRematchIntro::
 	.string "Oh, you're a little cutie!\n"
 	.string "So like a darling POKéMON!\l"
-	.string "I remember you now!$"
+	.string "¡Ya te recuerdo!$"
 
 Route15_Text_OliviaRematchIntro::
-	.string "I raise POKéMON for protection\n"
-	.string "because I live alone.\p"
-	.string "That hasn't changed.$"
+	.string "Crío POKéMON para protegerme\n"
+	.string "porque vivo solo.\p"
+	.string "Eso no ha cambiado.$"
 
 Route15_Text_ErnestRematchIntro::
-	.string "Hey, kid! C'mon!\n"
-	.string "I got these off some loser!$"
+	.string "¡Oye, niño! ¡Ven!\n"
+	.string "¡Se los quité a un perdedor!$"
 
 Route15_Text_AlexRematchIntro::
-	.string "Fork over all your cash when you\n"
-	.string "lose to me, kid!$"
+	.string "¡Dame todo tu dinero cuando\n"
+	.string "pierdas contra mí, niño!$"
 
 Route15_Text_CeliaRematchIntro::
-	.string "What's cool and happening?\n"
-	.string "Trading POKéMON, of course.$"
+	.string "¿Qué es lo más genial ahora?\n"
+	.string "Intercambiar POKéMON, claro.$"
 
 Route15_Text_YazminRematchIntro::
-	.string "Want to play with my POKéMON\n"
-	.string "again?$"
+	.string "¿Quieres jugar con mis POKéMON\n"
+	.string "otra vez?$"
 
 Route15_Text_MyaRematchIntro::
-	.string "MYA: Hi, we keep meeting,\n"
-	.string "don't we?\p"
-	.string "Help me train my little brother\n"
-	.string "again?$"
+	.string "MYA: Hola, nos seguimos viendo,\n"
+	.string "¿verdad?\p"
+	.string "Ayúdame a entrenar a mi hermano\n"
+	.string "otra vez?$"
 
 Route15_Text_RonRematchIntro::
-	.string "RON: My sister's gotten more\n"
-	.string "powerful…$"
+	.string "RON: Mi hermana se ha vuelto más\n"
+	.string "poderosa…$"
 
 Route16_Text_LaoRematchIntro::
-	.string "What do you want?$"
+	.string "¿Qué quieres?$"
 
 Route16_Text_KojiRematchIntro::
-	.string "Nice BIKE!\n"
-	.string "Hand it over quick!$"
+	.string "¡Linda BICICLETA!\n"
+	.string "¡Dámela rápido!$"
 
 Route16_Text_LukeRematchIntro::
-	.string "Come out and play, little mouse.\n"
-	.string "I'll treat you right!$"
+	.string "Sal a jugar, ratoncito.\n"
+	.string "¡Te trataré muy bien!$"
 
 Route16_Text_HideoRematchIntro::
-	.string "Hey, wait a second!\n"
-	.string "Don't call me and then run away!$"
+	.string "¡Oye, espera un segundo!\n"
+	.string "¡No me llames para luego huir!$"
 
 Route16_Text_CamronRematchIntro::
-	.string "I'm feeling hungry and mean!\n"
-	.string "I really need a punching bag!$"
+	.string "¡Tengo hambre y estoy de mal humor!\n"
+	.string "¡De verdad necesito un saco!$"
 
 Route16_Text_RubenRematchIntro::
-	.string "Hey, there!\n"
-	.string "We'll have ourselves a good time!$"
+	.string "¡Hola!\n"
+	.string "¡Nos vamos a divertir mucho!$"
 
 Route16_Text_JedRematchIntro::
-	.string "JED: Are you here to see our\n"
-	.string "love, which knows no bounds?$"
+	.string "JED: ¿Vienes a ver nuestro\n"
+	.string "amor, que no tiene límites?$"
 
 Route16_Text_LeaRematchIntro::
-	.string "LEA: Sometimes, the intensity of\n"
-	.string "our love scares me.$"
+	.string "LEA: A veces, la intensidad de\n"
+	.string "nuestro amor me asusta.$"
 
 Route17_Text_RaulRematchIntro::
-	.string "I told you, there's no getting rich\n"
-	.string "quick in battling kids.$"
+	.string "Te lo dije, no se hace uno rico\n"
+	.string "luchando contra niños.$"
 
 Route17_Text_IsaiahRematchIntro::
-	.string "I'm mighty proud of my bod, kiddo.\n"
-	.string "Come on!$"
+	.string "Estoy orgulloso de mi cuerpo, niño.\n"
+	.string "¡Vamos!$"
 
 Route17_Text_VirgilRematchIntro::
-	.string "You out for a stroll?$"
+	.string "¿Salieste a caminar?$"
 
 Route17_Text_BillyRematchIntro::
-	.string "We're BIKERS!\n"
-	.string "We rule the roads, man!$"
+	.string "¡Somos MOTEROS!\n"
+	.string "¡Mandamos en las rutas, amigo!$"
 
 Route17_Text_NikolasRematchIntro::
-	.string "VOLTORB's going to seriously\n"
-	.string "electrify you today!$"
+	.string "¡VOLTORB te dará una descarga\n"
+	.string "eléctrica muy fuerte hoy!$"
 
 Route17_Text_ZeekRematchIntro::
-	.string "I leveled up my POKéMON, but it\n"
-	.string "absolutely won't evolve. Why?$"
+	.string "Subí el nivel de mi POKéMON, pero\n"
+	.string "no quiere evolucionar. ¿Por qué?$"
 
 Route17_Text_JamalRematchIntro::
-	.string "Gaah! I really need to exercise\n"
-	.string "and seriously trim some flab!$"
+	.string "¡Gaah! De verdad debo hacer\n"
+	.string "ejercicio y bajar de peso!$"
 
 Route17_Text_CoreyRematchIntro::
-	.string "Be a rebel!$"
+	.string "¡Sé un rebelde!$"
 
 Route17_Text_JaxonRematchIntro::
-	.string "Yep, that's a nice BIKE!\n"
-	.string "How's it handle?$"
+	.string "¡Sí, qué buena BICICLETA!\n"
+	.string "¿Cómo se maneja?$"
 
 Route17_Text_WilliamRematchIntro::
-	.string "Get lost, kid!\n"
-	.string "I'm bushed!$"
+	.string "¡Lárgate, niño!\n"
+	.string "¡Estoy agotado!$"
 
 Route18_Text_WiltonRematchIntro::
-	.string "I've been checking every grassy\n"
-	.string "area for new POKéMON.\p"
-	.string "But it's not always easy…$"
+	.string "He estado revisando cada zona\n"
+	.string "área para nuevos POKéMON.\p"
+	.string "Pero no siempre es fácil…$"
 
 Route18_Text_RamiroRematchIntro::
-	.string "Koorukukukoo!\n"
-	.string "Is my birdcall getting better?$"
+	.string "¡Koorukukukoo!\n"
+	.string "¿Mejoró mi canto de ave?$"
 
 Route18_Text_JacobRematchIntro::
-	.string "I warned you before, this is my\n"
-	.string "turf!\p"
-	.string "I don't want you coming around.$"
+	.string "Ya te lo advertí, este es mi\n"
+	.string "territorio!\p"
+	.string "No quiero que andes por aquí.$"
 
 Route19_Text_RichardRematchIntro::
-	.string "I'm almost warmed up to go\n"
-	.string "out for a swim.$"
+	.string "Ya casi estoy listo para ir\n"
+	.string "a nadar.$"
 
 Route19_Text_ReeceRematchIntro::
-	.string "Wait! Slow down!\n"
-	.string "What if you have a heart attack?$"
+	.string "¡Espera! ¡Ve más despacio!\n"
+	.string "¡¿Y si te da un infarto?!$"
 
 Route19_Text_MatthewRematchIntro::
-	.string "I love swimming!\n"
-	.string "I guess you're the surfing type.$"
+	.string "¡Me encanta nadar!\n"
+	.string "Supongo que te gusta surfear.$"
 
 Route19_Text_DouglasRematchIntro::
-	.string "What's beyond the horizon?\n"
-	.string "Have you seen?$"
+	.string "¿Qué habrá tras el horizonte?\n"
+	.string "¿Lo has visto?$"
 
 Route19_Text_DavidRematchIntro::
-	.string "I tried diving for POKéMON again,\n"
-	.string "but it was a no-go like before.$"
+	.string "Intenté bucear por POKéMON otra vez,\n"
+	.string "pero no funcionó, como antes.$"
 
 Route19_Text_TonyRematchIntro::
-	.string "I look at the sea to forget all\n"
-	.string "the bad things that happened.\p"
-	.string "…Like losing to you the last time!$"
+	.string "Miro el mar para olvidar todas\n"
+	.string "las cosas malas que pasaron.\p"
+	.string "…¡Como perder contra ti la vez pasada!$"
 
 Route19_Text_AnyaRematchIntro::
-	.string "You always get to ride your\n"
+	.string "Siempre puedes montar tu\n"
 	.string "POKéMON…\p"
-	.string "It looks so relaxing.\n"
-	.string "Can I have it if I win?$"
+	.string "Se ve muy relajante.\n"
+	.string "¿Me lo das si gano?$"
 
 Route19_Text_AliceRematchIntro::
-	.string "Swimming's great!\n"
-	.string "Sunburns aren't!$"
+	.string "¡Nadar es genial!\n"
+	.string "¡Las quemaduras no!$"
 
 Route19_Text_AxleRematchIntro::
-	.string "These waters are treacherous!\n"
-	.string "You shouldn't come back here!$"
+	.string "¡Estas aguas son traicioneras!\n"
+	.string "¡No deberías volver aquí!$"
 
 Route19_Text_ConnieRematchIntro::
-	.string "I swam here with my friends…\n"
-	.string "I'm tired…\l"
-	.string "Must we really battle again?$"
+	.string "Nadé hasta aquí con mis amigos…\n"
+	.string "Estoy cansado…\l"
+	.string "¿De verdad debemos luchar otra vez?$"
 
 Route19_Text_LiaRematchIntro::
-	.string "LIA: You know my brother just\n"
-	.string "became a TRAINER, right?\p"
-	.string "I want to make him better, so I\n"
-	.string "need your help again.$"
+	.string "LIA: Sabes que mi hermano acaba\n"
+	.string "de ser ENTRENADOR, ¿verdad?\p"
+	.string "Quiero que mejore, así que\n"
+	.string "necesito tu ayuda otra vez.$"
 
 Route19_Text_LucRematchIntro::
-	.string "LUC: My big sis taught me all\n"
-	.string "about POKéMON.\p"
-	.string "I wonder if I'm better?$"
+	.string "LUC: Mi hermana me enseñó todo\n"
+	.string "sobre los POKéMON.\p"
+	.string "¿Me pregunto si soy mejor?$"
 
 Route20_Text_BarryRematchIntro::
-	.string "The water is shallow here.\n"
-	.string "There are many people swimming.$"
+	.string "El agua es poco profunda aquí.\n"
+	.string "Hay mucha gente nadando.$"
 
 Route20_Text_ShirleyRematchIntro::
-	.string "Are you jealous that I'm\n"
-	.string "vacationing on SEAFOAM?$"
+	.string "¿Tienes celos de que esté\n"
+	.string "de vacaciones en SEAFOAM?$"
 
 Route20_Text_TiffanyRematchIntro::
-	.string "I love floating with the fishes\n"
-	.string "here among the waves.$"
+	.string "Amo flotar con los peces\n"
+	.string "aquí entre las olas.$"
 
 Route20_Text_IreneRematchIntro::
-	.string "Were you on vacation, too?$"
+	.string "¿Tú también estabas de vacaciones?$"
 
 Route20_Text_DeanRematchIntro::
-	.string "Check out my physique!\p"
-	.string "It's even more buff than ever\n"
-	.string "before!$"
+	.string "¡Mira mi físico!\p"
+	.string "¡Está más fuerte que\n"
+	.string "nunca!$"
 
 Route20_Text_DarrinRematchIntro::
-	.string "Why are you riding a POKéMON?\n"
-	.string "Haven't you learned to swim yet?$"
+	.string "¿Por qué montas un POKéMON?\n"
+	.string "¿Aún no has aprendido a nadar?$"
 
 Route20_Text_RogerRematchIntro::
-	.string "I rode my bird POKéMON here.$"
+	.string "Vine aquí en mi POKéMON ave.$"
 
 Route20_Text_NoraRematchIntro::
-	.string "My boyfriend gave me big pearls.\n"
-	.string "And, they've grown bigger!$"
+	.string "Mi novio me dio perlas grandes.\n"
+	.string "¡Y ahora han crecido más!$"
 
 Route20_Text_MissyRematchIntro::
-	.string "I swam here from CINNABAR ISLAND.\n"
-	.string "It wasn't easy, like I said.$"
+	.string "Nadé desde ISLA CANELA hasta aquí.\n"
+	.string "No fue fácil, como ya dije.$"
 
 Route20_Text_MelissaRematchIntro::
-	.string "CINNABAR, in the west, has a LAB\n"
-	.string "for POKéMON.\p"
-	.string "My daddy works there.$"
+	.string "En CANELA, al oeste, hay un LAB\n"
+	.string "POKéMON.\p"
+	.string "Mi papá trabaja allí.$"
 
 Route21_North_Text_RonaldRematchIntro::
-	.string "You want to know if the fish are\n"
-	.string "biting?$"
+	.string "¿Quieres saber si los peces\n"
+	.string "están picando?$"
 
 Route21_North_Text_WadeRematchIntro::
-	.string "I got a big haul again!\n"
-	.string "Wanna go for it once more?$"
+	.string "¡He vuelto a pescar mucho!\n"
+	.string "¿Quieres intentarlo una vez más?$"
 
 Route21_North_Text_SpencerRematchIntro::
-	.string "The sea cleanses my body and soul!$"
+	.string "¡El mar limpia mi cuerpo y alma!$"
 
 @ Unused trainer from RB that had a rematch intro added
 Route21_North_Text_CueBallRematchIntro::
@@ -601,148 +601,148 @@ Route21_North_Text_CueBallRematchIntro::
 	.string "きちまったぜ$"
 
 Route21_South_Text_JackRematchIntro::
-	.string "I caught my POKéMON at sea.\n"
-	.string "And that's where I train them.$"
+	.string "Atrapé mis POKéMON en el mar.\n"
+	.string "Y ahí es donde los entreno.$"
 
 Route21_South_Text_JeromeRematchIntro::
-	.string "Right now, I'm in another triathlon\n"
-	.string "meet!$"
+	.string "Ahora estoy en otro encuentro\n"
+	.string "de triatlón!$"
 
 Route21_South_Text_RolandRematchIntro::
-	.string "Ahh!\n"
-	.string "Feel the sun and the wind!$"
+	.string "¡Ahh!\n"
+	.string "¡Siente el sol y el viento!$"
 
 Route21_South_Text_ClaudeRematchIntro::
-	.string "Hey, cut it out already.\n"
-	.string "You always scare away the fish!$"
+	.string "Oye, ya detente con eso.\n"
+	.string "¡Siempre espantas a los peces!$"
 
 Route21_South_Text_NolanRematchIntro::
-	.string "Keep me company till I get a hit.$"
+	.string "Acompáñame hasta que pique algo.$"
 
 Route21_North_Text_LilRematchIntro::
-	.string "LIL: Huh? A battle again?\n"
-	.string "IAN, can't you do it alone?$"
+	.string "LIL: ¿Eh? ¿Otra batalla?\n"
+	.string "IAN, ¿no puedes hacerlo solo?$"
 
 Route21_North_Text_IanRematchIntro::
-	.string "IAN: My sis is still a slob.\n"
-	.string "Help me get her into shape!$"
+	.string "IAN: Mi hermana sigue siendo floja.\n"
+	.string "¡Ayúdame a que se ponga en forma!$"
 
 Route25_Text_JoeyRematchIntro::
-	.string "I won't lose while I'm here!$"
+	.string "¡No perderé mientras esté aquí!$"
 
 Route25_Text_DanRematchIntro::
-	.string "Dad took me to a great party on\n"
-	.string "the S.S. ANNE at VERMILION CITY.$"
+	.string "Papá me llevó a una gran fiesta en\n"
+	.string "el S.S. ANNE en CIUDAD VERMILIAN.$"
 
 Route25_Text_FlintRematchIntro::
-	.string "I'm a cool guy.\n"
-	.string "I've got a girlfriend!\p"
-	.string "I'll show her how cool I am for\n"
-	.string "sure this time!$"
+	.string "Soy un chico genial.\n"
+	.string "¡Tengo novia!\p"
+	.string "¡Le mostraré lo genial que soy\n"
+	.string "esta vez sin duda!$"
 
 Route25_Text_KelseyRematchIntro::
 	.string "Hi!\n"
-	.string "My boyfriend is cool!\l"
-	.string "My conditioning's good today!$"
+	.string "¡Mi novio es genial!\l"
+	.string "¡Mi condición es buena hoy!$"
 
 Route25_Text_ChadRematchIntro::
-	.string "I had this feeling…\n"
+	.string "Tenía este presentimiento...\n"
 	.string "I knew I had to battle you again!$"
 
 Route25_Text_HaleyRematchIntro::
-	.string "My friend has many cute POKéMON.\n"
-	.string "I'm so jealous!$"
+	.string "Mi amigo tiene POKéMON lindos.\n"
+	.string "¡Tengo mucha envidia!$"
 
 Route25_Text_FranklinRematchIntro::
-	.string "I just trained up on MT. MOON,\n"
-	.string "but I've still got gas in the tank!$"
+	.string "Entrené en el MONTE MOON,\n"
+	.string "¡pero aún tengo energía!$"
 
 Route25_Text_NobRematchIntro::
-	.string "A POKéMANIAC lives on the cape.\n"
-	.string "Have you seen his collection?$"
+	.string "Un POKéMANÍACO vive en el cabo.\n"
+	.string "¿Has visto su colección?$"
 
 Route25_Text_WayneRematchIntro::
-	.string "You're going to see BILL again?\n"
-	.string "First, we battle!$"
+	.string "¿Vas a ver a BILL otra vez?\n"
+	.string "¡Primero, luchamos!$"
 
 Route24_Text_ShaneRematchIntro::
 	.string "I saw your feat from the grass!$"
 
 Route24_Text_EthanRematchIntro::
-	.string "Okay!\n"
-	.string "I'll stomp you!$"
+	.string "¡Está bien!\n"
+	.string "¡Te voy a aplastar!$"
 
 Route24_Text_ReliRematchIntro::
-	.string "You always look so busy…\n"
-	.string "Aren't you getting tired?$"
+	.string "Siempre pareces tan ocupado...\n"
+	.string "¿No te estás cansando?$"
 
 Route24_Text_TimmyRematchIntro::
-	.string "You really must love coming to\n"
-	.string "NUGGET BRIDGE.$"
+	.string "De verdad te debe encantar venir al\n"
+	.string "PUENTE PÉPITA.$"
 
 Route24_Text_AliRematchIntro::
-	.string "The time we battled…\p"
-	.string "Even though I was the second in\n"
-	.string "line, I was the best, wasn't I?$"
+	.string "Cuando luchamos...\p"
+	.string "Aunque yo era el segundo en la\n"
+	.string "fila, era el mejor, ¿verdad?$"
 
 Route24_Text_CaleRematchIntro::
-	.string "People call this the NUGGET\n"
-	.string "BRIDGE!\p"
-	.string "You've already beaten us, so you're\n"
-	.string "not allowed to take the challenge…\p"
-	.string "…But, you're welcome to battle with\n"
-	.string "us again.$"
+	.string "¡La gente llama a esto el PUENTE\n"
+	.string "PÉPITA!\p"
+	.string "Ya nos venciste, así que no puedes\n"
+	.string "aceptar el desafío...\p"
+	.string "...Pero puedes luchar con nosotros\n"
+	.string "otra vez.$"
 
 OneIsland_TreasureBeach_Text_AmaraRematchIntro::
-	.string "Lying back, rocked by the waves…\n"
-	.string "I don't notice time slipping by…$"
+	.string "Tumbado, me mecen las olas...\n"
+	.string "No noto cómo pasa el tiempo…$"
 
 OneIsland_KindleRoad_Text_MariaRematchIntro::
-	.string "The weather's gorgeous!\n"
-	.string "I'll try not to spoil it.$"
+	.string "¡El clima está hermoso!\n"
+	.string "Trataré de no arruinarlo.$"
 
 OneIsland_KindleRoad_Text_AbigailRematchIntro::
-	.string "My sunburn is starting to hurt…$"
+	.string "Mi quemadura empieza a doler…$"
 
 OneIsland_KindleRoad_Text_FinnRematchIntro::
-	.string "The fire bird's mountain casts\n"
-	.string "a huge shadow…$"
+	.string "La montaña del ave de fuego\n"
+	.string "proyecta una sombra enorme…$"
 
 OneIsland_KindleRoad_Text_GarrettRematchIntro::
-	.string "I have this strong feeling that\n"
-	.string "I can win this time!$"
+	.string "Tengo el fuerte presentimiento\n"
+	.string "¡de que ganaré esta vez!$"
 
 OneIsland_KindleRoad_Text_TommyRematchIntro::
-	.string "Wait! Wait a second!\n"
-	.string "I'm sure I've hooked a big one!$"
+	.string "¡Espera! ¡Espera un segundo!\n"
+	.string "¡Seguro pesqué uno grande!$"
 
 OneIsland_KindleRoad_Text_SharonRematchIntro::
-	.string "You'll help me out with my\n"
-	.string "training again?$"
+	.string "¿Me ayudarás de nuevo con mi\n"
+	.string "entrenamiento?$"
 
 OneIsland_KindleRoad_Text_TanyaRematchIntro::
-	.string "We haven't missed a single day of\n"
-	.string "training yet!$"
+	.string "¡No hemos faltado ni un solo día\n"
+	.string "al entrenamiento!$"
 
 OneIsland_KindleRoad_Text_SheaRematchIntro::
-	.string "Every morning, before breakfast,\n"
-	.string "I swim around this island…\l"
-	.string "Three times!$"
+	.string "Cada mañana, antes del desayuno,\n"
+	.string "nado alrededor de esta isla...\l"
+	.string "¡Tres veces!$"
 
 OneIsland_KindleRoad_Text_HughRematchIntro::
-	.string "Dress appropriately for battle!\n"
-	.string "Lose that frivolous outfit, I said!$"
+	.string "¡Vístete bien para la batalla!\n"
+	.string "¡Quítate ese traje ridículo!$"
 
 OneIsland_KindleRoad_Text_BryceRematchIntro::
-	.string "You know, everything tastes great\n"
-	.string "when you're out in the wild.$"
+	.string "Sabes, todo sabe mucho mejor\n"
+	.string "cuando estás en la naturaleza.$"
 
 OneIsland_KindleRoad_Text_ClaireRematchIntro::
-	.string "I ate too much again, so will you\n"
-	.string "battle us for some exercise?$"
+	.string "Comí demasiado otra vez, ¿quieres\n"
+	.string "luchar para hacer ejercicio?$"
 
 OneIsland_KindleRoad_Text_KiaRematchIntro::
-	.string "KIA: My big brother and I make\n"
+	.string "KIA: Mi hermano mayor y yo\n"
 	.string "an awesome combination!\p"
 	.string "We won't lose this time!$"
 
@@ -768,31 +768,31 @@ ThreeIsland_BondBridge_Text_AlexisRematchIntro::
 
 ThreeIsland_BondBridge_Text_TishaRematchIntro::
 	.string "Oh, no, didn't I tell you already?\n"
-	.string "Please, stay away from me!$"
+	.string "¡Por favor, aléjate de mí!$"
 
 ThreeIsland_BondBridge_Text_JoyRematchIntro::
-	.string "JOY: We've gotten stronger!\n"
-	.string "Lots and lots!$"
+	.string "JOY: ¡Nos hemos vuelto fuertes!\n"
+	.string "¡Muchísimo!$"
 
 ThreeIsland_BondBridge_Text_MegRematchIntro::
-	.string "MEG: You can't beat us today!$"
+	.string "MEG: ¡No nos ganarás hoy!$"
 
 FiveIsland_WaterLabyrinth_Text_AlizeRematchIntro::
-	.string "Oh, hello!\p"
-	.string "Are you raising your POKéMON in a\n"
-	.string "good environment?$"
+	.string "¡Oh, hola!\p"
+	.string "¿Crías a tus POKéMON en un\n"
+	.string "buen ambiente?$"
 
 FiveIsland_ResortGorgeous_Text_DaisyRematchIntro::
-	.string "With these hands, I will create\n"
-	.string "my victory today.$"
+	.string "Con estas manos, crearé\n"
+	.string "mi victoria hoy.$"
 
 FiveIsland_ResortGorgeous_Text_CelinaRematchIntro::
-	.string "Must I repeat myself?\n"
-	.string "I'm trying to paint.\l"
-	.string "Please keep out of my sight!$"
+	.string "¿Tengo que repetirlo?\n"
+	.string "Estoy intentando pintar.\l"
+	.string "¡Por favor, no me molestes!$"
 
 FiveIsland_ResortGorgeous_Text_RaynaRematchIntro::
-	.string "I haven't made any progress…\n"
+	.string "No he avanzado nada...\n"
 	.string "I still can't get the right angle…$"
 
 FiveIsland_ResortGorgeous_Text_JackiRematchIntro::
@@ -852,17 +852,17 @@ SixIsland_OutcastIsland_Text_GebRematchIntro::
 	.string "tougher than before!$"
 
 SixIsland_GreenPath_Text_JaclynRematchIntro::
-	.string "…Huh?\p"
+	.string "…¿Eh?\p"
 	.string "I envision my house, but TELEPORT\n"
 	.string "always brings me here!$"
 
 SixIsland_WaterPath_Text_RoseRematchIntro::
-	.string "Oh, hello.\n"
+	.string "Oh, hola.\n"
 	.string "A pleasant breeze is blowing again.$"
 
 SixIsland_WaterPath_Text_EdwardRematchIntro::
 	.string "Hehehe, I'm practicing in secret\n"
-	.string "again.$"
+	.string "otra vez.$"
 
 SixIsland_WaterPath_Text_SamirRematchIntro::
 	.string "What, you're sick of seeing\n"
@@ -871,7 +871,7 @@ SixIsland_WaterPath_Text_SamirRematchIntro::
 	.string "Battle with me again.$"
 
 SixIsland_WaterPath_Text_DeniseRematchIntro::
-	.string "Sigh…\n"
+	.string "Suspiro...\n"
 	.string "My boyfriend's busy again…$"
 
 SixIsland_WaterPath_Text_EarlRematchIntro::

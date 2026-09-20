@@ -36,7 +36,7 @@ Route4_EventScript_Sign::
 
 Route4_Text_BirdKeeperHank_Seen:
 	.string "I'm raising my POKéMON. Want to battle\n"
-	.string "with me?$"
+	.string "conmigo?$"
 
 Route4_Text_BirdKeeperHank_Beaten:
 	.string "Ack! I lost that one…$"
@@ -69,7 +69,7 @@ Route4_Text_PicnickerSharon_AfterBattle:
 	.string "……I'll go train some more…$"
 
 Route4_Text_MtMoonSquareSign:
-	.string "MT.MOON NEW ENTRANCE\n"
-	.string "DUE TO CAVE-IN\p"
-	.string "WATCH YOUR STEP$"
+	.string "NUEVA ENTRADA MT.MOON\n"
+	.string "DEBIDO A UN DERRUMBE\p"
+	.string "TEN CUIDADO AL PASAR$"
 

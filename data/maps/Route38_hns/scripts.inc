@@ -149,7 +149,7 @@ Route38_Text_ChadPostRematch:
 
 Route38_Text_LassDana1Seen:
 	.string "You seem to be good at\n"
-	.string "POKéMON.\p"
+	.string "POKéMON planta.\p"
 	.string "If you are, how about\n"
 	.string "giving me some advice?$"
 
@@ -169,7 +169,7 @@ Route38_Text_BeautyValerieSeen:
 
 Route38_Text_BeautyValerieBeaten:
 	.string "I'm glad I got to see\n"
-	.string "your POKéMON!$"
+	.string "a tu POKéMON!$"
 
 Route38_Text_BeautyValerieAfter:
 	.string "When I see POKéMON, it\n"
@@ -207,7 +207,7 @@ Route38_Text_Sign:
 	.string "OLIVINE CITY - ECRUTEAK CITY$"
 
 Route38_Text_TrainerTips:
-	.string "TRAINER TIPS\p"
+	.string "CONSEJOS DE ENTRENADOR\p"
 	.string "If a POKéMON is trying to\n"
 	.string "evolve, you can stop it.\p"
 	.string "Press the B Button during\n"
@@ -228,7 +228,7 @@ Route38_Text_DanaRegister:
 
 Route38_Text_DanaRematchIntro:
 	.string "You seem to be good at\n"
-	.string "POKéMON.\p"
+	.string "POKéMON planta.\p"
 	.string "If you are, how about\n"
 	.string "giving me some advice?$"
 
@@ -251,5 +251,5 @@ Route38_Text_DanaGaveItem:
 	.string "anything else!$"
 
 Route38_Text_DanaNoRoom:
-	.string "Hmm, your BAG is full.\p"
-	.string "Come back when you have room.$"
+	.string "Hmm, tu MOCHILA está llena.\p"
+	.string "Vuelve cuando tengas espacio.$"

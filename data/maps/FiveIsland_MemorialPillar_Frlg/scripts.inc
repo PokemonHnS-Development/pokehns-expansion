@@ -92,7 +92,7 @@ FiveIsland_MemorialPillar_Text_MiloDefeat::
 
 FiveIsland_MemorialPillar_Text_MiloPostBattle::
 	.string "You can fly to FOUR ISLAND from\n"
-	.string "here.$"
+	.string "para llegar aquí.$"
 
 FiveIsland_MemorialPillar_Text_ChazIntro::
 	.string "I'm the middle kid of the BIRD\n"
@@ -147,7 +147,7 @@ FiveIsland_MemorialPillar_Text_PlacedCanOfLemonade::
 	.string "in front of the grave.$"
 
 FiveIsland_MemorialPillar_Text_ThankYouPleaseTakeThis::
-	.string "Th-thank you…\p"
+	.string "Gr-gracias...\p"
 	.string "That was my TECTONIX's favorite\n"
 	.string "drink…\p"
 	.string "I don't even know you, but your\n"
@@ -158,7 +158,7 @@ FiveIsland_MemorialPillar_Text_ThankYouPleaseTakeThis::
 
 FiveIsland_MemorialPillar_Text_BeGoodToYourMonsToo::
 	.string "Please be good to your POKéMON,\n"
-	.string "too.$"
+	.string "de vergüenza.$"
 
 FiveIsland_MemorialPillar_Text_DontHaveRoomForIt::
 	.string "If you don't have room for it,\n"

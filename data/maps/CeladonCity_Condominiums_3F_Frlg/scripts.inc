@@ -57,7 +57,7 @@ CeladonCity_Condominiums_3F_Text_ImTheProgrammer::
 
 CeladonCity_Condominiums_3F_Text_ImTheGraphicArtist::
 	.string "I'm the graphic artist!\n"
-	.string "I drew you!$"
+	.string "¡Yo te dibujé!$"
 
 CeladonCity_Condominiums_3F_Text_IWroteTheStory::
 	.string "I wrote the story!\n"
@@ -66,16 +66,16 @@ CeladonCity_Condominiums_3F_Text_IWroteTheStory::
 	.string "Oh, and SABRINA, I like her!$"
 
 CeladonCity_Condominiums_3F_Text_ImGameDesignerShowMeFinishedPokedex::
-	.string "Is that right?\p"
+	.string "¿De verdad?\p"
 	.string "I'm the game designer!\p"
-	.string "Filling up your POKéDEX is tough,\n"
+	.string "Llenar la POKéDEX es difícil,\n"
 	.string "but don't quit!\p"
 	.string "When you finish, come tell me!$"
 
 CeladonCity_Condominiums_3F_Text_CompletedPokedexCongratulations::
 	.string "Wow! Excellent!\n"
 	.string "You completed your POKéDEX!\l"
-	.string "Congratulations!\l"
+	.string "¡Felicidades!\l"
 	.string "…$"
 
 CeladonCity_Condominiums_3F_Text_ItsTheGameProgram::

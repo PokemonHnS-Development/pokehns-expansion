@@ -274,146 +274,146 @@ BattleFrontier_BattlePike_EventScript_CloseCurtain::
 	return
 
 BattleFrontier_BattlePikeLobby_Text_WelcomeToBattlePike:
-	.string "Where the luck of TRAINERS\n"
-	.string "is put to the test…\p"
-	.string "Welcome to the BATTLE PIKE…\p"
-	.string "I am your guide to the BATTLE PIKE…$"
+	.string "Donde la suerte de los ENTRENADORES\n"
+	.string "se pone a prueba...\p"
+	.string "Bienvenido al BATTLE PIKE...\p"
+	.string "Soy tu guía del BATTLE PIKE...$"
 
 BattleFrontier_BattlePikeLobby_Text_TakeChallenge:
-	.string "Would you like to take the Battle\n"
-	.string "Choice challenge?$"
+	.string "¿Te gustaría aceptar el desafío\n"
+	.string "¿Reto de elección?$"
 
 BattleFrontier_BattlePikeLobby_Text_ExplainBattlePike:
-	.string "Here we conduct an event we call\n"
-	.string "the Battle Choice.\p"
-	.string "The Battle Choice rules are very\n"
-	.string "simple…\p"
-	.string "Choose one of three paths and make\n"
-	.string "your way to the goal room at the end\l"
-	.string "of the BATTLE PIKE. It's that simple.\p"
-	.string "However, what happens on the chosen\n"
-	.string "path depends entirely on the luck\l"
-	.string "of the challenger…\p"
-	.string "If you reach the goal, you will be\n"
-	.string "rewarded with Battle Points.\p"
-	.string "If you want to interrupt your\n"
-	.string "challenge, please have a word with\l"
-	.string "our staff in the big rooms on the way.\p"
-	.string "If you don't save before interrupting,\n"
-	.string "you will be disqualified.$"
+	.string "Aquí hacemos un evento llamado\n"
+	.string "la Elección de Batalla.\p"
+	.string "Las reglas de la Elección de Batalla\n"
+	.string "son muy simples...\p"
+	.string "Elige uno de tres caminos y llega\n"
+	.string "a la sala final al terminar el\l"
+	.string "BATTLE PIKE. Así de simple.\p"
+	.string "Pero lo que pase en el camino\n"
+	.string "elegido dependerá totalmente de\l"
+	.string "la suerte del retador…\p"
+	.string "Si llegas a la meta, recibirás\n"
+	.string "Puntos de Batalla como premio.\p"
+	.string "Si quieres interrumpir tu\n"
+	.string "Para el reto, habla con nuestro\l"
+	.string "personal en las salas del camino.\p"
+	.string "Si no guardas antes de interrumpir,\n"
+	.string "quedarás descalificado.$"
 
 BattleFrontier_BattlePikeLobby_Text_LookForwardToSeeingYou:
-	.string "We look forward to seeing you\n"
-	.string "on another occasion…$"
+	.string "Esperamos verte por aquí\n"
+	.string "en otra ocasión…$"
 
 BattleFrontier_BattlePikeLobby_Text_WhichChallengeMode:
-	.string "You have the choice of two courses,\n"
-	.string "Level 50 and Open Level.\l"
-	.string "Which will you challenge?$"
+	.string "Puedes elegir entre dos rutas,\n"
+	.string "Nivel 50 y Nivel Abierto.\l"
+	.string "¿Cuál quieres retar?$"
 
 BattleFrontier_BattlePikeLobby_Text_NotEnoughValidMonsLv50:
-	.string "I beg your pardon, but…\p"
-	.string "You do not have three eligible\n"
-	.string "POKéMON for the Battle Choice event.\p"
-	.string "You must have three different POKéMON\n"
-	.string "of Level 50 or less to enter.\p"
-	.string "They also must be holding different\n"
-	.string "kinds of items.\p"
-	.string "EGGS{STR_VAR_1}.$"
+	.string "Perdona, pero…\p"
+	.string "No tienes tres POKéMON aptos\n"
+	.string "para el evento Battle Choice.\p"
+	.string "Debes tener tres POKéMON distintos\n"
+	.string "de nivel 50 o menos para entrar.\p"
+	.string "También deben llevar objetos\n"
+	.string "tipo de objeto.\p"
+	.string "HUEVOS{STR_VAR_1}.$"
 
 BattleFrontier_BattlePikeLobby_Text_NotEnoughValidMonsEnd:
-	.string "Please come see me when\n"
-	.string "you are ready…$"
+	.string "Vuelve a verme cuando\n"
+	.string "estés listo…$"
 
 BattleFrontier_BattlePikeLobby_Text_NotEnoughValidMonsLvOpen:
-	.string "I beg your pardon, but…\p"
-	.string "You do not have three eligible\n"
-	.string "POKéMON for the Battle Choice event.\p"
-	.string "You must have three different\n"
-	.string "POKéMON to enter.\p"
-	.string "They also must be holding different\n"
-	.string "kinds of items.\p"
-	.string "EGGS{STR_VAR_1}.$"
+	.string "Perdona, pero…\p"
+	.string "No tienes tres POKéMON aptos\n"
+	.string "para el evento Battle Choice.\p"
+	.string "Debes tener tres POKéMON\n"
+	.string "distintos para entrar.\p"
+	.string "También deben llevar objetos\n"
+	.string "tipo de objeto.\p"
+	.string "HUEVOS{STR_VAR_1}.$"
 
 BattleFrontier_BattlePikeLobby_Text_PleaseChooseThreeMons:
-	.string "Please choose the three POKéMON\n"
-	.string "you wish to enter in the challenge…$"
+	.string "Elige los tres POKéMON que\n"
+	.string "quieras usar en el desafío…$"
 
 BattleFrontier_BattlePikeLobby_Text_SaveBeforeChallenge:
-	.string "Before starting your Battle Choice\n"
-	.string "challenge, I must save the game.\l"
-	.string "Is that acceptable?$"
+	.string "Antes de iniciar el desafío\n"
+	.string "Battle Choice, debo guardar.\l"
+	.string "¿Te parece bien?$"
 
 BattleFrontier_BattlePikeLobby_Text_StepThisWay:
 	.string "Please step this way…$"
 
 BattleFrontier_BattlePikeLobby_Text_ChallengeEndedRecordResults:
-	.string "Your challenge has ended…\p"
-	.string "I shall record your results.\n"
-	.string "Please wait…$"
+	.string "Tu desafío ha terminado…\p"
+	.string "Registraré tus resultados.\n"
+	.string "Espera, por favor…$"
 
 BattleFrontier_BattlePikeLobby_Text_PossessLuckInAbundance:
-	.string "You have completed the challenge…\p"
-	.string "I must say… You seem to possess luck\n"
-	.string "in abundance…$"
+	.string "Completaste el desafío…\p"
+	.string "Debo decir que pareces tener mucha\n"
+	.string "suerte…$"
 
 BattleFrontier_BattlePikeLobby_Text_ShallRecordResults:
-	.string "I shall record your results.\n"
-	.string "Please wait…$"
+	.string "Registraré tus resultados.\n"
+	.string "Espera, por favor…$"
 
 @ Unused
 BattleFrontier_BattlePikeLobby_Text_AwardYouTheseBattlePoints2:
-	.string "To commemorate your completion of\n"
-	.string "the Battle Choice challenge, we award\l"
-	.string "you these Battle Point(s)…$"
+	.string "Para conmemorar que completaste el\n"
+	.string "desafío de Elección de Batalla,\l"
+	.string "te damos estos Puntos de Batalla…$"
 
 @ Unused
 BattleFrontier_BattlePikeLobby_Text_ReachedBattlePointLimit:
-	.string "You appear to have reached the limit\n"
-	.string "for Battle Points…\p"
-	.string "Please exchange some Battle Points\n"
-	.string "for prizes, then return…$"
+	.string "Parece que has alcanzado el límite\n"
+	.string "de Puntos de Batalla…\p"
+	.string "Por favor, canjea algunos puntos\n"
+	.string "por premios, luego vuelve…$"
 
 BattleFrontier_BattlePikeLobby_Text_FailedToSaveBeforeQuitting:
-	.string "I beg your pardon, but…\p"
-	.string "You failed to save before you quit\n"
-	.string "your challenge the last time.\p"
-	.string "Because of that, your challenge so far\n"
-	.string "has been disqualified. I am sorry…$"
+	.string "Perdona, pero…\p"
+	.string "No guardaste antes de salir\n"
+	.string "tu desafío la última vez.\p"
+	.string "Por eso, tu progreso hasta ahora\n"
+	.string "ha sido descalificado. Lo siento…$"
 
 BattleFrontier_BattlePikeLobby_Text_SnatchedVictoryFromQueen:
-	.string "Congratulations…\p"
-	.string "You have snatched victory from the\n"
-	.string "PIKE QUEEN and cleared the event…$"
+	.string "Felicidades…\p"
+	.string "Le has arrebatado la victoria a la\n"
+	.string "REINA CARPA y ganaste el evento…$"
 
 BattleFrontier_BattlePikeLobby_Text_AwardYouTheseBattlePoints:
-	.string "In recognition of your amazing luck,\n"
-	.string "we award you these Battle Point(s)…$"
+	.string "Por tu increíble suerte,\n"
+	.string "te damos estos Puntos de Batalla…$"
 
 BattleFrontier_BattlePikeLobby_Text_OneRoomAwayFromGoal:
-	.string "Arrgh! I blew my chance!\n"
-	.string "I was one room away from the goal!\p"
-	.string "In this place, you'd better watch out\n"
-	.string "for poison, freezing, and so on.$"
+	.string "¡Arggh! ¡Perdí mi oportunidad!\n"
+	.string "¡Estaba a una sala de la meta!\p"
+	.string "En este lugar, mejor ten cuidado\n"
+	.string "con el veneno, congelación y más.$"
 
 BattleFrontier_BattlePikeLobby_Text_NeverHadToBattleTrainer:
-	.string "I've completed the challenge 10 times\n"
-	.string "now, but I've never had to battle\l"
-	.string "a TRAINER once.$"
+	.string "He completado el reto 10 veces\n"
+	.string "ya, pero nunca tuve que luchar\l"
+	.string "contra un ENTRENADOR.$"
 
 BattleFrontier_BattlePikeLobby_Text_ThinkAbilitiesUsefulHere:
-	.string "Listen! Listen!\p"
-	.string "Don't you think that the special\n"
-	.string "abilities of POKéMON will be useful\l"
-	.string "here?$"
+	.string "¡Escucha! ¡Escucha!\p"
+	.string "¿No crees que las habilidades\n"
+	.string "especiales de los POKéMON serán\l"
+	.string "útiles aquí?$"
 
 @ Unused
 BattleFrontier_BattlePikeLobby_Text_TrainersWhicheverPathIChoose:
-	.string "What is this weird place?\n"
-	.string "I can't figure it out at all!\p"
-	.string "I've taken the challenge a bunch\n"
-	.string "of times, but all I ever do is run into\l"
-	.string "TRAINERS whichever path I choose.$"
+	.string "¿Qué es este lugar tan raro?\n"
+	.string "¡No logro entenderlo!\p"
+	.string "He hecho el reto muchas veces,\n"
+	.string "pero siempre me topo con\l"
+	.string "ENTRENADORES en cualquier ruta.$"
 
 BattleFrontier_BattlePikeLobby_Text_RulesAreListed:
 	.string "The Battle Choice's rules are listed.$"
@@ -422,18 +422,18 @@ BattleFrontier_BattlePikeLobby_Text_ReadWhichHeading:
 	.string "Which heading do you want to read?$"
 
 BattleFrontier_BattlePikeLobby_Text_ExplainPokenavBagRules:
-	.string "The BAG and POKéNAV may not be used\n"
-	.string "during a Battle Choice challenge.$"
+	.string "No se pueden usar la MOCHILA ni el\n"
+	.string "POKéNAV en un reto Battle Choice.$"
 
 BattleFrontier_BattlePikeLobby_Text_ExplainHeldItemRules:
-	.string "During a Battle Choice challenge,\n"
-	.string "any BERRY or HERB held by POKéMON\l"
-	.string "will be effective only once.$"
+	.string "En un reto de Battle Choice,\n"
+	.string "cualquier BAYA o hierba que lleve\l"
+	.string "el POKéMON solo servirá una vez.$"
 
 BattleFrontier_BattlePikeLobby_Text_ExplainMonOrderRules:
-	.string "During a Battle Choice challenge,\n"
-	.string "the sequence of POKéMON cannot be\l"
-	.string "changed.\p"
-	.string "The sequence must be set before\n"
-	.string "starting your challenge.$"
+	.string "En un reto de Battle Choice,\n"
+	.string "El orden de los POKéMON no puede\l"
+	.string "cambiarse.\p"
+	.string "El orden debe fijarse antes de\n"
+	.string "empezar el reto.$"
 

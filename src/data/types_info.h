@@ -446,7 +446,7 @@ const struct TypeInfo gTypesInfo[NUMBER_OF_MON_TYPES] =
     [TYPE_FAIRY] =
     {
         .name = _("FAIRY"),
-        .generic = _("a FAIRY move"),
+        .generic = _("un mov. HADA"),
         .palette = 14,
         .zMove = MOVE_TWINKLE_TACKLE,
         .maxMove = MOVE_MAX_STARFALL,
@@ -467,8 +467,8 @@ const struct TypeInfo gTypesInfo[NUMBER_OF_MON_TYPES] =
     },
     [TYPE_STELLAR] =
     {
-        .name = _("STELLAR"),
-        .generic = _("a STELLAR move"),
+        .name = _("ESTELAR"),
+        .generic = _("un mov. ESTELAR"),
         .palette = 15,
         .zMove = MOVE_BREAKNECK_BLITZ,
         .maxMove = MOVE_MAX_STRIKE,

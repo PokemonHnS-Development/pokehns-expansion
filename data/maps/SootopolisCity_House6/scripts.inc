@@ -45,7 +45,7 @@ SootopolisCity_House6_Text_IllHoldItForYou:
 	.string "Okay, then I'll hold it for you.$"
 
 SootopolisCity_House6_Text_DontWantThisDoll:
-	.string "Are you sure?\n"
+	.string "¿Estás seguro?\n"
 	.string "You don't want this DOLL?$"
 
 SootopolisCity_House6_Text_LovePlushDolls:

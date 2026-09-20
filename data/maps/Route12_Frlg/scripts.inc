@@ -76,7 +76,7 @@ Text_PlayedPokeFlute::
 	.string "{PLAYER} played the POKé FLUTE.$"
 
 Route12_Text_NedIntro::
-	.string "Yeah!\n"
+	.string "¡Sí!\n"
 	.string "I got a bite here!$"
 
 Route12_Text_NedDefeat::

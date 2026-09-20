@@ -422,8 +422,8 @@ struct SpeciesInfo /*0xC4*/
     u8 safariZoneFleeRate;
 
     // Pokédex data
-    u8 categoryName[13];
-    u8 speciesName[POKEMON_NAME_LENGTH + 1];
+    u8 categoryName[32];
+    u8 speciesName[32];
     enum PokemonCry cryId:16;
     enum NationalDexOrder natDexNum:16;
     u16 height; //in decimeters

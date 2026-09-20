@@ -291,7 +291,7 @@ CeladonCity_DepartmentStore_Roof_Text_GiveWhichDrink::
 CeladonCity_DepartmentStore_Roof_Text_YayFreshWaterHaveThis::
 	.string "Yay!\p"
 	.string "FRESH WATER!\p"
-	.string "Thank you!\n"
+	.string "¡Gracias!\n"
 	.string "You can have this from me!$"
 
 Text_ReceivedItemFromLittleGirl::
@@ -306,7 +306,7 @@ CeladonCity_DepartmentStore_Roof_Text_ExplainTM16::
 CeladonCity_DepartmentStore_Roof_Text_YaySodaPopHaveThis::
 	.string "Yay!\p"
 	.string "SODA POP!\p"
-	.string "Thank you!\n"
+	.string "¡Gracias!\n"
 	.string "You can have this from me!$"
 
 CeladonCity_DepartmentStore_Roof_Text_ExplainTM20::
@@ -317,7 +317,7 @@ CeladonCity_DepartmentStore_Roof_Text_ExplainTM20::
 CeladonCity_DepartmentStore_Roof_Text_YayLemonadeHaveThis::
 	.string "Yay!\p"
 	.string "LEMONADE!\p"
-	.string "Thank you!\n"
+	.string "¡Gracias!\n"
 	.string "You can have this from me!$"
 
 CeladonCity_DepartmentStore_Roof_Text_ExplainTM33::

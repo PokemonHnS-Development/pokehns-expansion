@@ -55,7 +55,7 @@ SixIsland_OutcastIsland_Text_NicolePostBattle::
 	.string "Are you headed for the island up\n"
 	.string "past here?\p"
 	.string "I didn't see anything interesting\n"
-	.string "there.$"
+	.string "raras allí.$"
 
 SixIsland_OutcastIsland_Text_AvaIntro::
 	.string "AVA: Let's have a two-on-two\n"
@@ -71,7 +71,7 @@ SixIsland_OutcastIsland_Text_AvaPostBattle::
 
 SixIsland_OutcastIsland_Text_AvaNotEnoughMons::
 	.string "AVA: You're challenging us to\n"
-	.string "a battle?\p"
+	.string "tener una batalla?\p"
 	.string "You'll need at least two POKéMON\n"
 	.string "if you want to do that.$"
 

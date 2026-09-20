@@ -1,43 +1,43 @@
 Questionnaire_Text_FillOut::
-	.string "There is a questionnaire.\n"
-	.string "Would you like to fill it out?$"
+	.string "Hay un cuestionario.\n"
+	.string "¿Te gustaría llenarlo?$"
 
 Questionnaire_Text_ThankYou::
-	.string "Thank you for taking the time to\n"
-	.string "fill out our questionnaire.\p"
-	.string "Your feedback will be used for\n"
-	.string "future reference.$"
+	.string "Gracias por tomarte el tiempo de\n"
+	.string "llenar nuestro cuestionario.\p"
+	.string "Tus respuestas servirán de\n"
+	.string "referencia en el futuro.$"
 
 Questionnaire_Text_YouKnowThoseWordsGift::
-	.string "Oh, hello!\n"
-	.string "You know those words?\p"
-	.string "That means you must know about\n"
-	.string "the MYSTERY GIFT.\p"
-	.string "From now on, you should be\n"
-	.string "receiving MYSTERY GIFTS!$"
+	.string "¡Oh, hola!\n"
+	.string "¿Conoces esas palabras?\p"
+	.string "Eso significa que debes saber\n"
+	.string "del REGALO MISTERIOSO.\p"
+	.string "¡De ahora en adelante, deberías\n"
+	.string "recibir REGALOS MISTERIOSOS!$"
 
 Questionnaire_Text_YouCanAccessMysteryGift::
-	.string "Once you save your game, you can\n"
-	.string "access the MYSTERY GIFT.$"
+	.string "Al guardar tu partida, podrás\n"
+	.string "acceder al REGALO MISTERIOSO.$"
 
 Questionnaire_Text_YouKnowThoseWordsEvent::
-	.string "Oh, hello!\n"
-	.string "You know those words?\p"
-	.string "That means you must know about\n"
-	.string "the MYSTERY EVENT.$"
+	.string "¡Oh, hola!\n"
+	.string "¿Conoces esas palabras?\p"
+	.string "Eso significa que debes saber\n"
+	.string "el EVENTO MISTERIOSO.$"
 
 Questionnaire_Text_YouCanAccessMysteryEvent::
-	.string "Once you save your game, you can\n"
-	.string "access the MYSTERY EVENT.$"
+	.string "Al guardar tu partida, podrás\n"
+	.string "acceder al EVENTO MISTERIOSO.$"
 
 MysteryGift_Text_TheresATicketForYou::
 	.string "Thank you for using the MYSTERY\n"
-	.string "EVENT System.\p"
+	.string "Sistema de EVENTOS.\p"
 	.string "You must be {PLAYER}.\n"
 	.string "There is a ticket here for you.$"
 
 MysteryGift_Text_TryUsingItAtLilycovePort::
-	.string "It appears to be for use at\n"
-	.string "the LILYCOVE CITY port.\p"
+	.string "Parece que se usa en\n"
+	.string "el puerto de CIUDAD FONDOPLATA.\p"
 	.string "Why not give it a try and see what\n"
 	.string "it is about?$"

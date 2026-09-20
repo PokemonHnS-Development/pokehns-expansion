@@ -356,9 +356,9 @@ CinnabarIsland_Text_DoorIsLocked::
 
 CinnabarIsland_Text_BlaineLivedHereSinceBeforeLab::
 	.string "CINNABAR GYM's BLAINE is quite the\n"
-	.string "odd fellow.\p"
-	.string "He's lived on the island since way\n"
-	.string "before the LAB was built.$"
+	.string "tipo muy extraño.\p"
+	.string "Vive en la isla desde mucho\n"
+	.string "antes de que hicieran el LAB.$"
 
 CinnabarIsland_Text_ScientistsExperimentInMansion::
 	.string "Scientists conduct experiments \n"
@@ -368,7 +368,7 @@ CinnabarIsland_Text_ScientistsExperimentInMansion::
 
 CinnabarIsland_Text_IslandSign::
 	.string "CINNABAR ISLAND\n"
-	.string "The Fiery Town of Burning Desire$"
+	.string "El Pueblo Ardiente del Deseo$"
 
 CinnabarIsland_Text_PokemonLab::
 	.string "POKéMON LAB$"
@@ -376,10 +376,10 @@ CinnabarIsland_Text_PokemonLab::
 CinnabarIsland_Text_GymSign::
 	.string "CINNABAR ISLAND POKéMON GYM\n"
 	.string "LEADER: BLAINE\l"
-	.string "The Hotheaded Quiz Master!$"
+	.string "¡El impulsivo Maestro Quiz!$"
 
 CinnabarIsland_Text_HeyIfItIsntPlayer::
-	.string "Huh?\n"
+	.string "¿Eh?\n"
 	.string "Hey, if it isn't {PLAYER}!$"
 
 CinnabarIsland_Text_ComeWithMeToOneIsland::
@@ -393,12 +393,12 @@ CinnabarIsland_Text_ComeWithMeToOneIsland::
 	.string "south called ONE ISLAND.\p"
 	.string "A friend invited me, so I'm on my\n"
 	.string "way out there.\p"
-	.string "How about it?\n"
+	.string "¿Qué te parece?\n"
 	.string "Do you feel like coming with me?$"
 
 CinnabarIsland_Text_AllRightLetsGo::
-	.string "All right, then.\n"
-	.string "Let's go!$"
+	.string "Muy bien, entonces.\n"
+	.string "¡Vamos!$"
 
 CinnabarIsland_Text_IllBeWaitingInPokeCenter::
 	.string "What, are you too busy?\p"
@@ -411,14 +411,14 @@ CinnabarIsland_Text_IllBeWaitingInPokeCenter::
 
 CinnabarIsland_Text_MyPalsBoatArrived::
 	.string "Looks like my pal's boat arrived,\n"
-	.string "too.\p"
+	.string "también nos iremos.\p"
 	.string "He sent it specially here to\n"
 	.string "CINNABAR to pick me up.$"
 
 CinnabarIsland_Text_IfYouHaveTriPassYouCanGoAgain::
 	.string "Hey, wasn't that a long cruise?\p"
 	.string "My buddy CELIO seemed to enjoy\n"
-	.string "your company.\p"
+	.string "tu compañía.\p"
 	.string "I'm sure he'd welcome you if you\n"
 	.string "were to visit him again.\p"
 	.string "If you have a TRI-PASS, you can\n"

@@ -16,7 +16,7 @@ Route3_Text_TunnelFromCeruleanTiring::
 	.string "lot out of you!$"
 
 Route3_Text_ColtonIntro::
-	.string "Hey!\n"
+	.string "¡Hola!\n"
 	.string "I saw you in VIRIDIAN FOREST!$"
 
 Route3_Text_ColtonDefeat::
@@ -42,7 +42,7 @@ Route3_Text_BenPostBattle::
 	.string "30 POKéMON.$"
 
 Route3_Text_JaniceIntro::
-	.string "Excuse me!\n"
+	.string "¡Disculpa!\n"
 	.string "You looked at me, didn't you?$"
 
 Route3_Text_JaniceDefeat::

@@ -17,7 +17,7 @@ RocketHideout_B3F_Text_Grunt1Intro::
 
 RocketHideout_B3F_Text_Grunt1Defeat::
 	.string "Oof!\n"
-	.string "Taken down!$"
+	.string "¡Me derrotaron!$"
 
 RocketHideout_B3F_Text_Grunt1PostBattle::
 	.string "SILPH SCOPE?\n"
@@ -29,7 +29,7 @@ RocketHideout_B3F_Text_Grunt2Intro::
 	.string "were coming!$"
 
 RocketHideout_B3F_Text_Grunt2Defeat::
-	.string "What?\n"
+	.string "¿Qué?\n"
 	.string "I lost? No!$"
 
 RocketHideout_B3F_Text_Grunt2PostBattle::

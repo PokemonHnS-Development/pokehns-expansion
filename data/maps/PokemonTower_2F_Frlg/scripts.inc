@@ -106,10 +106,10 @@ PokemonTower_2F_Text_RivalIntro::
 	.string "Is your POKéMON dead?\p"
 	.string "Hey! It's alive!\p"
 	.string "I can at least make them faint!\n"
-	.string "Let's go!$"
+	.string "¡Vamos!$"
 
 PokemonTower_2F_Text_RivalDefeat::
-	.string "What?\n"
+	.string "¿Qué?\n"
 	.string "You stinker!\p"
 	.string "I took it easy on you, too!$"
 

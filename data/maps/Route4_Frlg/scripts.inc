@@ -46,7 +46,7 @@ Text_MegaPunchTeach::
 	.string "When the chips are down,\n"
 	.string "MEGA PUNCH is the ultimate attack!\l"
 	.string "You agree, yes?\p"
-	.string "Now!\n"
+	.string "¡Ahora!\n"
 	.string "Let me teach it to your POKéMON!$"
 
 Text_MegaPunchDeclined::
@@ -54,7 +54,7 @@ Text_MegaPunchDeclined::
 	.string "the worth of MEGA PUNCH.$"
 
 Text_MegaPunchWhichMon::
-	.string "Fine!\n"
+	.string "¡Bien!\n"
 	.string "Which POKéMON will learn it?$"
 
 Text_MegaPunchTaught::
@@ -70,7 +70,7 @@ Text_MegaKickTeach::
 	.string "When you get right down to it,\n"
 	.string "MEGA KICK is the ultimate attack!\l"
 	.string "Don't you agree?\p"
-	.string "Okay!\n"
+	.string "¡Está bien!\n"
 	.string "I'll teach it to your POKéMON!$"
 
 Text_MegaKickDeclined::
@@ -78,7 +78,7 @@ Text_MegaKickDeclined::
 	.string "realize the value of MEGA KICK.$"
 
 Text_MegaKickWhichMon::
-	.string "All right!\n"
+	.string "¡Muy bien!\n"
 	.string "Which POKéMON wants to learn it?$"
 
 Text_MegaKickTaught::
@@ -92,6 +92,6 @@ Route4_Text_PeopleLikeAndRespectBrock::
 	.string "Oh, wow, that's the BOULDERBADGE!\n"
 	.string "You got it from BROCK, didn't you?\p"
 	.string "BROCK is cool. He's not just tough.\n"
-	.string "People like and respect him.\p"
-	.string "I want to become a GYM LEADER\n"
-	.string "like him.$"
+	.string "La gente lo quiere y respeta.\p"
+	.string "Quiero ser un LÍDER de GIMNASIO\n"
+	.string "como él.$"

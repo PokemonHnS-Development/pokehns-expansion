@@ -17,7 +17,7 @@ Route19_Text_RichardPostBattle::
 	.string "I'm ready for a swim.$"
 
 Route19_Text_ReeceIntro::
-	.string "Wait! Slow down!\n"
+	.string "¡Espera! ¡Ve más despacio!\n"
 	.string "You'll have a heart attack!$"
 
 Route19_Text_ReeceDefeat::
@@ -29,7 +29,7 @@ Route19_Text_ReecePostBattle::
 	.string "They sting so painfully.$"
 
 Route19_Text_MatthewIntro::
-	.string "I love swimming!\n"
+	.string "¡Me encanta nadar!\n"
 	.string "What about you?$"
 
 Route19_Text_MatthewDefeat::
@@ -43,7 +43,7 @@ Route19_Text_DouglasIntro::
 	.string "What's beyond the horizon?$"
 
 Route19_Text_DouglasDefeat::
-	.string "Glub!$"
+	.string "¡Glub!$"
 
 Route19_Text_DouglasPostBattle::
 	.string "I see a couple of islands over\n"
@@ -61,7 +61,7 @@ Route19_Text_DavidPostBattle::
 	.string "POKéMON.$"
 
 Route19_Text_TonyIntro::
-	.string "I look at the sea to forget all\n"
+	.string "Miro el mar para olvidar todas\n"
 	.string "the bad things that happened.$"
 
 Route19_Text_TonyDefeat::
@@ -74,7 +74,7 @@ Route19_Text_TonyPostBattle::
 
 Route19_Text_AnyaIntro::
 	.string "Oh, I just love your ride!\n"
-	.string "Can I have it if I win?$"
+	.string "¿Me lo das si gano?$"
 
 Route19_Text_AnyaDefeat::
 	.string "Oh! I lost!$"
@@ -85,8 +85,8 @@ Route19_Text_AnyaPostBattle::
 	.string "I want to go back to FUCHSIA…$"
 
 Route19_Text_AliceIntro::
-	.string "Swimming's great!\n"
-	.string "Sunburns aren't!$"
+	.string "¡Nadar es genial!\n"
+	.string "¡Las quemaduras no!$"
 
 Route19_Text_AliceDefeat::
 	.string "Shocker!$"
@@ -96,7 +96,7 @@ Route19_Text_AlicePostBattle::
 	.string "SEAFOAM ISLANDS.$"
 
 Route19_Text_AxleIntro::
-	.string "Ahoy, there!\n"
+	.string "¡Hola, marinero!\n"
 	.string "These waters are treacherous!$"
 
 Route19_Text_AxleDefeat::
@@ -108,7 +108,7 @@ Route19_Text_AxlePostBattle::
 	.string "Glub, glub…$"
 
 Route19_Text_ConnieIntro::
-	.string "I swam here with my friends…\n"
+	.string "Nadé hasta aquí con mis amigos…\n"
 	.string "I'm tired…$"
 
 Route19_Text_ConnieDefeat::
@@ -122,7 +122,7 @@ Route19_Text_ConniePostBattle::
 
 Route19_Text_RouteSign::
 	.string "SEA ROUTE 19\n"
-	.string "FUCHSIA CITY - SEAFOAM ISLANDS$"
+	.string "CIUDAD FUXIA - ISLAS CANELA$"
 
 Route19_Text_LiaIntro::
 	.string "LIA: I'm looking after my brother.\n"

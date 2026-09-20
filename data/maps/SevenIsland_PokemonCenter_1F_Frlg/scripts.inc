@@ -39,7 +39,7 @@ SevenIsland_PokemonCenter_1F_Text_DidYouRideSeagallopHere::
 	.string "There are at least ten of those\n"
 	.string "high-speed ships.\p"
 	.string "I don't know where they all go,\n"
-	.string "though.$"
+	.string "su voz.$"
 
 SevenIsland_PokemonCenter_1F_Text_CheckOutTrainerTower::
 	.string "If you're confident, you should\n"

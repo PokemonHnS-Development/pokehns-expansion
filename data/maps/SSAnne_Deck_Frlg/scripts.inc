@@ -28,7 +28,7 @@ SSAnne_Deck_Text_ShipDepartingSoon::
 	.string "The ship will be departing soon.$"
 
 SSAnne_Deck_Text_ScrubbingDecksHardWork::
-	.string "Whew!\n"
+	.string "¡Uff!\n"
 	.string "Scrubbing decks is hard work!$"
 
 SSAnne_Deck_Text_FeelSeasick::
@@ -48,7 +48,7 @@ SSAnne_Deck_Text_EdmondPostBattle::
 	.string "think there are in this big world?$"
 
 SSAnne_Deck_Text_TrevorIntro::
-	.string "Ahoy, there!\n"
+	.string "¡Hola, marinero!\n"
 	.string "Are you seasick?$"
 
 SSAnne_Deck_Text_TrevorDefeat::

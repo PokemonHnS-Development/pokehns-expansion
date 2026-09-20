@@ -201,10 +201,10 @@ TohjoFalls_GiovanniRoom_Text_Radio:
 TohjoFalls_GiovanniRoom_Text_GiovanniIntro:
 	.string "GIOVANNI: ...\p"
 	.string "I don't know why you have come\n"
-	.string "here.\p"
+	.string "pueden entrenar aquí.\p"
 	.string "Anyway, I have to warn you that\n"
 	.string "this is not a place for kids like\l"
-	.string "you.\p"
+	.string "vencerte.\p"
 	.string "You have a certain look.\n"
 	.string "It reminds me of the kid who stood\l"
 	.string "in front of me three years ago...\p"

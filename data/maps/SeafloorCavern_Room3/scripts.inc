@@ -12,47 +12,47 @@ SeafloorCavern_Room3_EventScript_Grunt5::
 	end
 
 SeafloorCavern_Room3_Text_ShellyIntro:
-	.string "Ahahahaha!\p"
-	.string "How did you manage to get here without\n"
-	.string "a submarine?\l"
-	.string "What an impressive child!\p"
-	.string "But… It won't do to have you\n"
-	.string "meddling about here.\p"
-	.string "And, I do want payback for what\n"
-	.string "happened at the WEATHER INSTITUTE…\p"
-	.string "I'm going to give you a little taste\n"
-	.string "of pain! Resign yourself to it!$"
+	.string "¡Ahajajaja!\p"
+	.string "¿Cómo lograste llegar hasta aquí sin\n"
+	.string "un submarino?\l"
+	.string "¡Qué niño tan impresionante!\p"
+	.string "Pero... no puedo dejar que andes\n"
+	.string "metiendo las narices por aquí.\p"
+	.string "Y quiero venganza por lo que\n"
+	.string "pasó en el INST. CLIMATOLÓGICO...\p"
+	.string "¡Voy a darte una pequeña dosis\n"
+	.string "de dolor! ¡Resígnate!$"
 
 SeafloorCavern_Room3_Text_ShellyDefeat:
-	.string "Ahahahaha!\p"
-	.string "Ouch!$"
+	.string "¡Ahajajaja!\p"
+	.string "¡Ay!$"
 
 SeafloorCavern_Room3_Text_ShellyPostBattle:
-	.string "Ahahahaha!\n"
-	.string "You're so darn strong.\p"
-	.string "It's terribly disappointing that you're\n"
-	.string "not a TEAM AQUA member.\p"
-	.string "You could have enjoyed the fabulous\n"
-	.string "world our BOSS has promised as\l"
-	.string "one of us…$"
+	.string "¡Ahajajaja!\n"
+	.string "Eres demasiado fuerte.\p"
+	.string "Es muy decepcionante que seas\n"
+	.string "no eres del TEAM AQUA.\p"
+	.string "Pudiste disfrutar del fabuloso\n"
+	.string "mundo que nuestro JEFE prometió\l"
+	.string "como uno de nosotros…$"
 
 SeafloorCavern_Room3_Text_Grunt5Intro:
 	.string "For our dream to become real, we need\n"
-	.string "the power of POKéMON.\p"
-	.string "But meddlers like you use the power of\n"
-	.string "POKéMON to mess with us even at\l"
-	.string "a place like this!\p"
-	.string "Life just doesn't work the way we\n"
-	.string "need it to!$"
+	.string "el poder de los POKéMON.\p"
+	.string "Pero entrometidos como tú usan el\n"
+	.string "poder POKéMON para molestarnos\l"
+	.string "¡hasta en un lugar así!\p"
+	.string "¡La vida no funciona como nosotros\n"
+	.string "queremos!$"
 
 SeafloorCavern_Room3_Text_Grunt5Defeat:
 	.string "Gwah!$"
 
 SeafloorCavern_Room3_Text_Grunt5PostBattle:
-	.string "You know, we don't dare question\n"
-	.string "the motives of our leader.\p"
-	.string "But here you are, just some punk,\n"
-	.string "going up against our BOSS.\p"
-	.string "Maybe…\n"
-	.string "You must be something…$"
+	.string "Sabes, no nos atrevemos a cuestionar\n"
+	.string "los motivos de nuestro líder.\p"
+	.string "Pero tú no eres más que un novato\n"
+	.string "enfrentándote a nuestro JEFE.\p"
+	.string "Tal vez...\n"
+	.string "debas ser alguien especial...$"
 

@@ -43,7 +43,7 @@ PokemonMansion_1F_Text_BraydonIntro::
 	.string "My mentor once lived here.$"
 
 PokemonMansion_1F_Text_BraydonDefeat::
-	.string "Whew!\n"
+	.string "¡Uff!\n"
 	.string "Overwhelming!$"
 
 PokemonMansion_1F_Text_BraydonPostBattle::

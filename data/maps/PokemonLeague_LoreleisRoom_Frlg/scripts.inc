@@ -95,12 +95,12 @@ PokemonLeague_LoreleisRoom_EventScript_DefeatedLorelei::
 PokemonLeague_LoreleisRoom_Text_Intro::
 	.string "Welcome to the POKéMON LEAGUE.\p"
 	.string "I am LORELEI of the ELITE FOUR.\p"
-	.string "No one can best me when it comes\n"
+	.string "Nadie puede superarme al criar\n"
 	.string "to icy POKéMON.\p"
 	.string "Freezing moves are powerful.\p"
 	.string "Your POKéMON will be at my mercy\n"
 	.string "when they are frozen solid.\p"
-	.string "Hahaha!\n"
+	.string "¡Jajaja!\n"
 	.string "Are you ready?{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
 
 PokemonLeague_LoreleisRoom_Text_RematchIntro::
@@ -113,7 +113,7 @@ PokemonLeague_LoreleisRoom_Text_RematchIntro::
 	.string "Freezing moves are powerful.\p"
 	.string "Your POKéMON will be at my mercy\n"
 	.string "when they are frozen solid.\p"
-	.string "Hahaha!\n"
+	.string "¡Jajaja!\n"
 	.string "Are you ready?{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
 
 PokemonLeague_LoreleisRoom_Text_Defeat::

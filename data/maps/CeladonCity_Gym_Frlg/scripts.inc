@@ -92,8 +92,8 @@ CeladonCity_Gym_Text_ErikaIntro::
 	.string "My name is ERIKA.\n"
 	.string "I am the LEADER of CELADON GYM.\p"
 	.string "I am a student of the art of\n"
-	.string "flower arranging.\p"
-	.string "My POKéMON are solely of the\n"
+	.string "el arreglo floral.\p"
+	.string "Mis POKéMON son únicamente de\n"
 	.string "GRASS type.\p"
 	.string "…Oh, I'm sorry, I had no idea that\n"
 	.string "you wished to challenge me.\p"
@@ -110,7 +110,7 @@ CeladonCity_Gym_Text_ErikaPostBattle::
 	.string "You are cataloging POKéMON?\n"
 	.string "I must say I'm impressed.\p"
 	.string "I would never collect POKéMON if\n"
-	.string "they were unattractive.$"
+	.string "no fueran atractivos.$"
 
 CeladonCity_Gym_Text_ExplainRainbowBadgeTakeThis::
 	.string "The RAINBOWBADGE will make\n"
@@ -180,9 +180,9 @@ CeladonCity_Gym_Text_TamiaDefeat::
 
 CeladonCity_Gym_Text_TamiaPostBattle::
 	.string "We only use GRASS-type POKéMON at\n"
-	.string "our GYM.\p"
-	.string "Why? We also use them for making\n"
-	.string "flower arrangements!$"
+	.string "en nuestro GIMNASIO.\p"
+	.string "¿Por qué? ¡También los usamos para\n"
+	.string "hacer arreglos florales!$"
 
 CeladonCity_Gym_Text_LisaIntro::
 	.string "Oh, hey!\p"
@@ -195,10 +195,10 @@ CeladonCity_Gym_Text_LisaDefeat::
 
 CeladonCity_Gym_Text_LisaPostBattle::
 	.string "Our LEADER ERIKA might be quiet,\n"
-	.string "but she's famous around here.$"
+	.string "pero es famosa por aquí.$"
 
 CeladonCity_Gym_Text_LoriIntro::
-	.string "Pleased to meet you.\n"
+	.string "Mucho gusto.\n"
 	.string "My hobby is POKéMON training.$"
 
 CeladonCity_Gym_Text_LoriDefeat::
@@ -224,14 +224,14 @@ CeladonCity_Gym_Text_MaryPostBattle::
 	.string "Wait until next time!$"
 
 CeladonCity_Gym_Text_GymStatue::
-	.string "CELADON POKéMON GYM\n"
-	.string "LEADER: ERIKA\p"
-	.string "WINNING TRAINERS:\n"
+	.string "GIMNASIO POKéMON DE CIUDAD CELESTE\n"
+	.string "LÍDER: ERIKA\p"
+	.string "ENTRENADORES GANADORES:\n"
 	.string "{RIVAL}$"
 
 CeladonCity_Gym_Text_GymStatuePlayerWon::
-	.string "CELADON POKéMON GYM\n"
-	.string "LEADER: ERIKA\p"
-	.string "WINNING TRAINERS:\n"
+	.string "GIMNASIO POKéMON DE CIUDAD CELESTE\n"
+	.string "LÍDER: ERIKA\p"
+	.string "ENTRENADORES GANADORES:\n"
 	.string "{RIVAL}, {PLAYER}$"
 

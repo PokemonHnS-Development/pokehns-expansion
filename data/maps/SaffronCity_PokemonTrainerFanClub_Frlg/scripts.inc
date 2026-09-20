@@ -384,7 +384,7 @@ SaffronCity_PokemonTrainerFanClub_EventScript_BlackBeltOnlyNonFan::
 	end
 
 SaffronCity_PokemonTrainerFanClub_Text_HuhYou::
-	.string "Huh?\n"
+	.string "¿Eh?\n"
 	.string "You…$"
 
 SaffronCity_PokemonTrainerFanClub_Text_YourePlayerWereYourFansNow::
@@ -415,7 +415,7 @@ SaffronCity_PokemonTrainerFanClub_Text_IllAlwaysBelieveInYou::
 	.string "like when you battle seriously.$"
 
 SaffronCity_PokemonTrainerFanClub_Text_WasYourFanNotAnymore::
-	.string "I'm sorry.\n"
+	.string "Lo siento.\n"
 	.string "I was your fan before.\p"
 	.string "But now, you seem to have lost\n"
 	.string "the drive you had before.\p"
@@ -424,7 +424,7 @@ SaffronCity_PokemonTrainerFanClub_Text_WasYourFanNotAnymore::
 
 SaffronCity_PokemonTrainerFanClub_Text_EveryonesYourFanButICantBe::
 	.string "Oh!\n"
-	.string "{PLAYER}!\p"
+	.string "¡{PLAYER}!\p"
 	.string "Everyone's been all excited about\n"
 	.string "you recently.\p"
 	.string "I can understand why.\n"
@@ -442,7 +442,7 @@ SaffronCity_PokemonTrainerFanClub_Text_CanYouAutographShorts::
 	.string "Oh! It's {PLAYER}!\n"
 	.string "Too cool!\p"
 	.string "Oh!\n"
-	.string "Oh, yeah!\p"
+	.string "¡Oh, sí!\p"
 	.string "Can you autograph something?\n"
 	.string "How about my shorts?$"
 
@@ -555,13 +555,13 @@ SaffronCity_PokemonTrainerFanClub_Text_CanIBecomeCoolTrainerOneDay::
 SaffronCity_PokemonTrainerFanClub_Text_TheWayYouBattleIsCool::
 	.string "Oh, man, oh, man!\n"
 	.string "Cool! Too cool!\p"
-	.string "…Huh?\n"
+	.string "…¿Eh?\n"
 	.string "No, not you.\p"
 	.string "Just the way you battle.\n"
 	.string "That's cool.$"
 
 SaffronCity_PokemonTrainerFanClub_Text_ImOnlyOneLeftOfYourFans::
-	.string "Yo, {PLAYER}!\p"
+	.string "¡Hola, {PLAYER}!\p"
 	.string "Looks like I'm the only one left\n"
 	.string "out of your fans.\p"
 	.string "But, you know, I like being an only\n"
@@ -601,12 +601,12 @@ SaffronCity_PokemonTrainerFanClub_Text_ImYourNumberOneFan::
 
 SaffronCity_PokemonTrainerFanClub_Text_TrainerHasBeenOnFire::
 	.string "Recently, {STR_VAR_1} has been on\n"
-	.string "fire.\p"
+	.string "incendio.\p"
 	.string "The way he battles… It's just \n"
 	.string "the way that I like it!$"
 
 SaffronCity_PokemonTrainerFanClub_Text_EveryoneTalksAboutYou::
-	.string "Oh, hello!\n"
+	.string "¡Oh, hola!\n"
 	.string "If it isn't {PLAYER}!\p"
 	.string "Lately, all everyone talks about\n"
 	.string "is you.\p"
@@ -641,7 +641,7 @@ SaffronCity_PokemonTrainerFanClub_Text_BelieveInMasterWithAllMyHeart::
 	.string "{STR_VAR_1}.$"
 
 SaffronCity_PokemonTrainerFanClub_Text_YourBattleStyleIsEducational::
-	.string "Hiyah!\p"
+	.string "¡Hiyah!\p"
 	.string "Your battling style is most\n"
 	.string "educational.\p"
 	.string "I hope that you will keep plugging\n"

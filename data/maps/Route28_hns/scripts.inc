@@ -72,19 +72,19 @@ Route28_Movement_ScientistLeave:
 	step_end
 
 Route28_Text_Scientist:
-	.string "Hiya, Boss.\p"
-	.string "Yes, I've found several artifacts,\n"
-	.string "but no sign of the AZURE FLUTE.\p"
-	.string "It may be inside the MOUNTAIN, but\n"
-	.string "the wild POKéMON here are strong,\l"
-	.string "and my team needs some rest...\p"
+	.string "Hola, jefe.\p"
+	.string "Sí, hallé varios artefactos,\n"
+	.string "pero no hay rastro de la FLAUTA AZUL.\p"
+	.string "Podría estar en la MONTAÑA, pero\n"
+	.string "los POKéMON salvajes son fuertes,\l"
+	.string "y mi equipo necesita descansar...\p"
 	.string "..................\p"
-	.string "You're breaking up...\l"
-	.string "Boss....?\p"
-	.string "I'm going to the POKéMON CENTER.\p"
-	.string "I'll call back if I find the FLUTE.$"
+	.string "Se corta la señal...\l"
+	.string "¿Jefe...?\p"
+	.string "Iré al CENTRO POKéMON.\p"
+	.string "Llamaré si encuentro la FLAUTA.$"
 
 Route28_Text_Scientist2:
 	.string ".......CLICK\p"
-	.string "The signal in SINJOH sucks...$"
+	.string "La señal en SINJOH es malísima...$"
 

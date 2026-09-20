@@ -302,36 +302,36 @@ Route110_TrickHousePuzzle3_EventScript_Alan::
 	end
 
 Route110_TrickHousePuzzle3_Text_WroteSecretCodeLockOpened:
-	.string "{PLAYER} wrote down the secret code\n"
-	.string "on the door.\p"
-	.string "“TRICK MASTER is coveted.”\n"
+	.string "{PLAYER} anotó el código secreto\n"
+	.string "en la puerta.\p"
+	.string "“TRICK MASTER es codiciado.”\n"
 	.string "… … … … … … … …\p"
-	.string "The lock clicked open!$"
+	.string "¡La cerradura se abrió!$"
 
 Route110_TrickHousePuzzle3_Text_JustinIntro:
 	.string "I keep coming back to this same place!$"
 
 Route110_TrickHousePuzzle3_Text_JustinDefeat:
-	.string "I'm already having trouble, and then\n"
-	.string "you have to beat me? It's not fair!$"
+	.string "Ya tengo suficientes problemas y\n"
+	.string "¡¿ahora me vences?! ¡No es justo!$"
 
 Route110_TrickHousePuzzle3_Text_JustinPostBattle:
-	.string "It's full of doors here!\n"
-	.string "It's too small and dark in here! Help!$"
+	.string "¡Hay demasiadas puertas aquí!\n"
+	.string "¡Está muy oscuro y pequeño! ¡Ayuda!$"
 
 Route110_TrickHousePuzzle3_Text_MarthaIntro:
-	.string "I don't know what's going on here.\n"
-	.string "I'm starting to feel sad…$"
+	.string "No sé qué está pasando aquí.\n"
+	.string "Empiezo a sentirme triste…$"
 
 Route110_TrickHousePuzzle3_Text_MarthaDefeat:
 	.string "You… You're awful!$"
 
 Route110_TrickHousePuzzle3_Text_MarthaPostBattle:
-	.string "I know I'm weak!\n"
-	.string "And, I have no sense of direction!$"
+	.string "¡Ya sé que soy débil!\n"
+	.string "¡Y no tengo sentido de la orientación!$"
 
 Route110_TrickHousePuzzle3_Text_AlanIntro:
-	.string "I don't get it. What would anyone want\n"
+	.string "No lo entiendo. ¿Quién querría...?\n"
 	.string "with a house this bizarre?$"
 
 Route110_TrickHousePuzzle3_Text_AlanDefeat:

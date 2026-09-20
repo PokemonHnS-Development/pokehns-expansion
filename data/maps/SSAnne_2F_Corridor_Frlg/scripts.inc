@@ -176,7 +176,7 @@ SSAnne_2F_Corridor_Text_ThisShipIsLuxuryLiner::
 
 SSAnne_2F_Corridor_Text_RivalIntro::
 	.string "{RIVAL}: Bonjour!\n"
-	.string "{PLAYER}!\p"
+	.string "¡{PLAYER}!\p"
 	.string "Imagine seeing you here!\n"
 	.string "{PLAYER}, were you really invited?\p"
 	.string "So how's your POKéDEX coming?\p"
@@ -186,7 +186,7 @@ SSAnne_2F_Corridor_Text_RivalIntro::
 	.string "look hard for them.$"
 
 SSAnne_2F_Corridor_Text_RivalDefeat::
-	.string "Humph!\p"
+	.string "¡Hmph!\p"
 	.string "At least you're raising your\n"
 	.string "POKéMON!$"
 

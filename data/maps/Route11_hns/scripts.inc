@@ -61,7 +61,7 @@ Route11_Text_YoungsterJasonBeaten:
 
 Route11_Text_YoungsterJasonAfterBattle:
 	.string "I'm going to catch more POKéMON in\n"
-	.string "the grass.$"
+	.string "caminar por la hierba.$"
 
 Route11_Text_PsychicHermanSeen:
 	.string "…$"

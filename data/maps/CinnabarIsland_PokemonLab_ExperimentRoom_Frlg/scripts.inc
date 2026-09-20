@@ -296,8 +296,8 @@ Text_MetronomeDeclined::
 	.string "I tell you, it's a lot of fun!$"
 
 Text_MetronomeWhichMon::
-	.string "Okay!\n"
-	.string "Which POKéMON should I teach?$"
+	.string "¡Está bien!\n"
+	.string "¿A qué POKéMON se lo enseño?$"
 
 Text_MetronomeTaught::
 	.string "Tch-tch-tch!\n"
@@ -331,7 +331,7 @@ CinnabarIsland_PokemonLab_ExperimentRoom_Text_FossilMonBackToLife::
 	.string "It was {STR_VAR_1} like I think!$"
 
 CinnabarIsland_PokemonLab_ExperimentRoom_Text_ReceivedMonFromDoctor::
-	.string "{PLAYER} received the {STR_VAR_1}\n"
+	.string "{PLAYER} recibió el {STR_VAR_1}\n"
 	.string "from the doctor.$"
 
 @ Unused
@@ -358,6 +358,6 @@ CinnabarIsland_PokemonLab_ExperimentRoom_Text_TakesTimeGoForWalk::
 	.string "You go for walk a little while!$"
 
 CinnabarIsland_PokemonLab_ExperimentRoom_Text_YouComeAgain::
-	.string "Aiyah!\n"
+	.string "¡Aiyah!\n"
 	.string "You come again!$"
 

@@ -14,7 +14,7 @@ CeladonCity_House1_EventScript_Rocket2::
 	end
 
 CeladonCity_House1_Text_SlotsReelInTheDough::
-	.string "Hehehe!\p"
+	.string "¡Jejeje!\p"
 	.string "The slots just reel in the dough,\n"
 	.string "big-time!$"
 

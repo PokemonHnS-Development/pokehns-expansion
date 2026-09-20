@@ -477,7 +477,7 @@ Route109_EventScript_Elijah::
 	end
 
 DewfordTown_Text_BrineyLandedInSlateportDeliverGoods:
-	.string "MR. BRINEY: Ahoy!\n"
+	.string "SR. BRINEY: ¡Ahoy!\n"
 	.string "We've made land in SLATEPORT!\p"
 	.string "I suppose you're going to visit CAPT.\n"
 	.string "STERN and deliver the DEVON GOODS?$"
@@ -490,27 +490,27 @@ Route109_Text_BrineySailToDewfordQuestion:
 
 Route109_Text_BrineyDewfordItIs:
 	.string "MR. BRINEY: DEWFORD it is, then!\p"
-	.string "Anchors aweigh!\n"
-	.string "PEEKO, we're setting sail, my darling!$"
+	.string "¡Leven anclas!\n"
+	.string "¡PEEKO, zarpamos, cariño!$"
 
 Route109_Text_BrineyDeliverDevonGoods:
-	.string "MR. BRINEY: Then you go on and deliver\n"
+	.string "SR. BRINEY: Entonces ve y entrega\n"
 	.string "the DEVON GOODS. I'll be waiting.$"
 
 DewfordTown_Text_BrineyLandedInSlateport:
 	.string "MR. BRINEY: Ahoy! We've made land in\n"
 	.string "SLATEPORT!\p"
-	.string "You just go on and tell me whenever\n"
-	.string "you want to set sail again!$"
+	.string "Solo avísame cuando quieras\n"
+	.string "¡quieres zarpar otra vez!$"
 
 Route109_Text_BrineyWhereAreWeBound:
-	.string "MR. BRINEY: Ahoy!\n"
-	.string "For you, I'll go out to sea anytime!\p"
-	.string "Now, my friend, where are we bound?$"
+	.string "SR. BRINEY: ¡Ahoy!\n"
+	.string "¡Por ti, iré al mar cuando quieras!\p"
+	.string "Ahora, amigo, ¿a dónde vamos?$"
 
 Route109_Text_BrineyTellMeWhenYouNeedToSail:
-	.string "MR. BRINEY: You just tell me whenever\n"
-	.string "you need to set sail again!$"
+	.string "SR. BRINEY: Solo dime cuando\n"
+	.string "¡quieras zarpar otra vez!$"
 
 Route109_Text_ChillAtMyPapasSpot:
 	.string "Yo, TRAINERS!\n"
@@ -552,12 +552,12 @@ Route109_Text_ZigzagoonCry:
 	.string "ZIGZAGOON: Guguu?$"
 
 Route109_Text_SeashoreHouseSign:
-	.string "SEASHORE HOUSE\p"
+	.string "CASA DE LA COSTA\p"
 	.string "“May hot battles rage on hot sands!\n"
 	.string "The place for hot TRAINERS!”$"
 
 Route109_Text_TrainerTipsSign:
-	.string "TRAINER TIPS\p"
+	.string "CONSEJOS DE ENTRENADOR\p"
 	.string "POKéMON at the same level may not\n"
 	.string "always have identical stats.\p"
 	.string "POKéMON raised by TRAINERS are said\n"

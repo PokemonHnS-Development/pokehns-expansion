@@ -181,76 +181,76 @@ SafariZoneGate_SafariZoneEntrance_EventScript_Test::
 	end
 
 SafariZoneGate_SafariZoneEntrance_Text_BaobaBeachDone:
-	.string "Thank you, {PLAYER}!\n"
-	.string "Here, take this money to upgrade\l"
-	.string "your SAFARI LEVEL and show me an\l"
-	.string "exotic POKéMON from the BRUSH area\l"
-	.string "next!$"
+	.string "¡Gracias, {PLAYER}!\n"
+	.string "Toma este dinero para mejorar\l"
+	.string "tu NIVEL SAFARI y muéstrame un\l"
+	.string "POKéMON exótico del área MALEZA\l"
+	.string "la próxima vez!$"
 	
 SafariZoneGate_SafariZoneEntrance_Text_BaobaBrushDone:
-	.string "Thank you, {PLAYER}!\n"
-	.string "Here, take this money to upgrade\l"
-	.string "your SAFARI LEVEL and show me an\l"
-	.string "exotic POKéMON from the MOUNTAIN\l"
-	.string "area next!$"
+	.string "¡Gracias, {PLAYER}!\n"
+	.string "Toma este dinero para mejorar\l"
+	.string "tu NIVEL SAFARI y muéstrame un\l"
+	.string "POKéMON exótico del área MONTAÑA\l"
+	.string "la próxima vez!$"
 
 SafariZoneGate_SafariZoneEntrance_Text_BaobaMountainDone:
-	.string "Thank you, {PLAYER}!\n"
-	.string "Here, take this money to upgrade\l"
-	.string "your SAFARI LEVEL and show me an\l"
-	.string "exotic POKéMON from the CAVE area\l"
-	.string "next!$"
+	.string "¡Gracias, {PLAYER}!\n"
+	.string "Toma este dinero para mejorar\l"
+	.string "tu NIVEL SAFARI y muéstrame un\l"
+	.string "POKéMON exótico del área CUEVA\l"
+	.string "la próxima vez!$"
 
 SafariZoneGate_SafariZoneEntrance_Text_BaobaCaveDone:
-	.string "Thank you, {PLAYER}!\n"
-	.string "That's all I need to see.\p"
-	.string "Now that I know what DEVON is up\n"
-	.string "to, I'll be able to keep my SAFARI\l"
-	.string "competitive. Here, take this as a\l"
-	.string "reward for your troubles.$"
+	.string "¡Gracias, {PLAYER}!\n"
+	.string "Eso es todo lo que necesito ver.\p"
+	.string "Ahora que sé qué trama DEVON,\n"
+	.string "podré mantener mi SAFARI\l"
+	.string "competitivo. Toma esto como un\l"
+	.string "premio por tus molestias.$"
 
 SafariZoneGate_SafariZoneEntrance_Text_BaobaWrong:
 	.string "That can't be right!$"
 
 SafariZoneGate_SafariZoneEntrance_Text_BaobaBeach:
-	.string "Ah, {PLAYER}!\p"
-	.string "Did you bring an exotic POKéMON\n"
-	.string "from the BEACH area of the FUCHSIA\l"
-	.string "SAFARI ZONE to show me?$"
+	.string "¡Ah, {PLAYER}!\p"
+	.string "¿Trajiste un POKéMON exótico\n"
+	.string "de la zona PLAYA de la ZONA\l"
+	.string "SAFARI FUCSIA para mostrarme?$"
 
 SafariZoneGate_SafariZoneEntrance_Text_BaobaBrush:
-	.string "Ah, {PLAYER}!\p"
-	.string "Did you bring an exotic POKéMON\n"
-	.string "from the BRUSH area of the FUCHSIA\l"
-	.string "SAFARI ZONE to show me?$"
+	.string "¡Ah, {PLAYER}!\p"
+	.string "¿Trajiste un POKéMON exótico\n"
+	.string "de la zona MATAS para la ZONA\l"
+	.string "SAFARI FUCSIA para mostrarme?$"
 
 SafariZoneGate_SafariZoneEntrance_Text_BaobaMountain:
-	.string "Ah, {PLAYER}!\p"
-	.string "Did you bring an exotic POKéMON\n"
-	.string "from the MOUNTAIN area of the\l"
-	.string "FUCHSIA SAFARI ZONE to show me?$"
+	.string "¡Ah, {PLAYER}!\p"
+	.string "¿Trajiste un POKéMON exótico\n"
+	.string "de la zona MONTAÑA de la\l"
+	.string "ZONA SAFARI FUCSIA para mostrarme?$"
 
 SafariZoneGate_SafariZoneEntrance_Text_BaobaCave:
-	.string "Ah, {PLAYER}!\p"
-	.string "Did you bring an exotic POKéMON\n"
-	.string "from the CAVE area of the FUCHSIA\l"
-	.string "SAFARI ZONE to show me?$"
+	.string "¡Ah, {PLAYER}!\p"
+	.string "¿Trajiste un POKéMON exótico\n"
+	.string "de la zona CUEVA de la ZONA\l"
+	.string "SAFARI FUCSIA para mostrarme?$"
 
 SafariZoneGate_SafariZoneEntrance_Text_BaobaDeclined:
-	.string "What will I do now?\n"
-	.string "We'll never keep up with DEVON!$"
+	.string "¿Qué haré ahora?\n"
+	.string "¡Nunca alcanzaremos a DEVON!$"
 
 SafariZoneGate_SafariZoneEntrance_Text_BaobaLastMon:
 	.string "I can't take your last POKéMON!$"
 
 SafariZoneGate_SafariZoneEntrance_Text_BaobaDone:
-	.string "Ah, {PLAYER}!\p"
-	.string "Thanks to you, the SAFARI ZONE is\n"
-	.string "thriving!\p"
-	.string "Maybe I should name you OWNER of\n"
-	.string "the safari zone...\p"
-	.string "No, that would be ridiculous.\n"
-	.string "Ahahahaha.$"
+	.string "¡Ah, {PLAYER}!\p"
+	.string "Gracias a ti, la ZONA SAFARI\n"
+	.string "¡está prosperando!\p"
+	.string "Quizá debería nombrarte DUEÑO de\n"
+	.string "la zona safari...\p"
+	.string "No, eso sería ridículo.\n"
+	.string "Jajajaja.$"
 
 SafariZoneGate_SafariZoneEntrance_EventScript_EntranceCounterTrigger::
 	lockall
@@ -380,47 +380,47 @@ SafariZoneGate_SafariZoneEntrance_Movement_ReturnToTable:
 	step_end
 
 SafariZoneGate_SafariZoneEntrance_Text_BaobaWelcome:
-	.string "Hi {PLAYER}!\n"
-	.string "I've been waiting for you.\n"
-	.string "What do you think?\p"
-	.string "This is a brand new SAFARI ZONE\n"
-	.string "by the way...\p"
-	.string "And it's still expanding!\p"
-	.string "So far, we have two zones open\n"
-	.string "and 4 more on the way!\p"
-	.string "Enjoy the SAFARI ZONE! I'll\n"
-	.string "call you when the other zones\l"
-	.string "are ready!$"
+	.string "¡Hola {PLAYER}!\n"
+	.string "Te he estado esperando.\n"
+	.string "¿Qué te parece?\p"
+	.string "Por cierto, esta es una ZONA SAFARI\n"
+	.string "completamente nueva...\p"
+	.string "¡Y sigue expandiéndose!\p"
+	.string "De momento, hay dos zonas abiertas\n"
+	.string "¡y 4 más en camino!\p"
+	.string "¡Disfruta la SAFARI ZONE! Te\n"
+	.string "llamaré cuando las otras zonas\l"
+	.string "estén listas!$"
 
 SafariZoneGate_SafariZoneEntrance_Text_BaobaPokeblocks:
-	.string "Oh! I almost forgot.\p"
-	.string "POKéBLOCKS are an essential\n"
-	.string "feature of my SAFARI ZONE, so\l"
-	.string "you'd better have one of these!$"
+	.string "¡Oh! Casi lo olvido.\p"
+	.string "Los POKéBLOCKS son esenciales\n"
+	.string "en mi SAFARI ZONE, ¡así que\l"
+	.string "mejor ten uno de estos!$"
 
 SafariZoneGate_SafariZoneEntrance_Text_Baoba:
-	.string "Hi {PLAYER}!\p"
-	.string "How are you enjoying the SAFARI\n"
+	.string "¡Hola {PLAYER}!\p"
+	.string "¿Qué tal te parece la SAFARI\n"
 	.string "ZONE?$"
 
 SafariZoneGate_SafariZoneEntrance_Text_Boy:
-	.string "Do you know about POKéBLOCK\n"
-	.string "feeders?\p"
-	.string "Putting a POKéBLOCK in the feeder\n"
-	.string "brings out POKéMON with HIDDEN\l"
-	.string "ABILITIES!\p"
-	.string "The type of POKéBLOCK also affects\n"
-	.string "the POKéMON's nature.\p"
-	.string "And best of all, the type of POKéBLOCK\n"
-	.string "you use can attract POKéMON with\l"
-	.string "perfect IVs!\p"
-	.string "Those charts on the wall have all\n"
-	.string "the details.$"
+	.string "¿Sabes qué son los comedores\n"
+	.string "de POKéBLOCK?\p"
+	.string "Poner un POKéBLOCK en el comedero\n"
+	.string "atrae POKéMON con HABILIDADES\l"
+	.string "OCULTAS!\p"
+	.string "El tipo de POKéBLOCK también\n"
+	.string "afecta la naturaleza del POKéMON.\p"
+	.string "Y lo mejor es que el tipo de\n"
+	.string "POKéBLOCK que uses puede atraer\l"
+	.string "¡POKéMON con IVs perfectos!\p"
+	.string "Esos cuadros de la pared tienen\n"
+	.string "todos los detalles.$"
 
 SafariZoneGate_SafariZoneEntrance_Text_BoyGiveCase:
-	.string "Here, you seem like you need this.$"
+	.string "Toma, parece que necesitas esto.$"
 
 SafariZoneGate_SafariZoneEntrance_Text_Engineer:
-	.string "Sorry Trainer, this area is still\n"
-	.string "under construction. Check back\l"
-	.string "later!$"
+	.string "Lo siento Entrenador, esta zona\n"
+	.string "En construcción. Vuelve a\l"
+	.string "intentarlo luego!$"

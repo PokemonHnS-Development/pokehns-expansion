@@ -2,8 +2,8 @@ Route21_North_Frlg_MapScripts::
 	.byte 0
 
 Route21_North_Text_RonaldIntro::
-	.string "You want to know if the fish are\n"
-	.string "biting?$"
+	.string "¿Quieres saber si los peces\n"
+	.string "están picando?$"
 
 Route21_North_Text_RonaldDefeat::
 	.string "Dang!$"
@@ -24,7 +24,7 @@ Route21_North_Text_WadePostBattle::
 	.string "I seem to only catch MAGIKARP!$"
 
 Route21_North_Text_SpencerIntro::
-	.string "The sea cleanses my body and soul!$"
+	.string "¡El mar limpia mi cuerpo y alma!$"
 
 Route21_North_Text_SpencerDefeat::
 	.string "Ayah!$"

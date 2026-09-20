@@ -70,13 +70,13 @@ IndigoPlateau_PokemonCenter_1F_EventScript_Nurse::
 
 IndigoPlateau_PokemonCenter_1F_Text_GymGuyAdvice::
 	.string "Yo!\n"
-	.string "Champ in the making!\p"
+	.string "¡Un futuro campeón!\p"
 	.string "At the POKéMON LEAGUE, you will\n"
 	.string "face the ELITE FOUR all in a row.\p"
 	.string "If you lose, you have to start all\n"
 	.string "over again!\p"
 	.string "This is it!\n"
-	.string "Go for it!$"
+	.string "¡Ve a por ello!$"
 
 IndigoPlateau_PokemonCenter_1F_Text_FaceEliteFourGoodLuck::
 	.string "From here on, you face the\n"
@@ -100,14 +100,14 @@ IndigoPlateau_PokemonCenter_1F_Text_AgathaWhuppedUs::
 	.string "I went at AGATHA feeling pretty\n"
 	.string "confident, but she whupped us.\p"
 	.string "That old lady's also got a really\n"
-	.string "short fuse, too.\p"
-	.string "It doesn't take anything to get\n"
-	.string "that scary lady hollering.$"
+	.string "también es impulsiva.\p"
+	.string "No hace falta casi nada para\n"
+	.string "que esa señora empiece a gritar.$"
 
 IndigoPlateau_PokemonCenter_1F_Text_LancesCousinGymLeaderFarAway::
 	.string "Maybe becoming an ELITE FOUR\n"
 	.string "member is in the blood.\p"
 	.string "From what I've heard, LANCE has\n"
 	.string "a cousin who's a GYM LEADER\l"
-	.string "somewhere far away.$"
+	.string "un lugar muy lejano.$"
 

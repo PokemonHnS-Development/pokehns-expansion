@@ -174,7 +174,7 @@ static const u8 sBGControlRegs[] = {
     REG_OFFSET_BG3CNT
 };
 static const char sASCIIGameFreakInc[] = "GameFreak inc.";
-static const char sASCIITestPrint[] = "TEST PRINT\nP0\nP1\nP2\nP3";
+static const char sASCIITestPrint[] = "IMPRESIÓN DE PRUEBA\nP0\nP1\nP2\nP3";
 static const struct BgTemplate sLinkErrorBgTemplates[] = {
     {
         .bg = 0,

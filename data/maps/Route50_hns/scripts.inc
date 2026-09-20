@@ -100,7 +100,7 @@ Route50_EventScript_FinleyAfter::
 
 Route50_Text_FinleyBefore:
 	.string "How are the villagers treating\n"
-    .string "you?\p"
+    .string "contigo?\p"
     .string "They can be very unwelcoming to\n"
     .string "strangers.\p"
     .string "But meeting new people is one\n"

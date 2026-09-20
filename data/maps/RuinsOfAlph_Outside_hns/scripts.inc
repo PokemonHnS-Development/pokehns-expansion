@@ -84,19 +84,19 @@ RuinsOfAlph_Outside_EventScript_Sign3::
 	end
 
 RuinsOfAlph_Outside_Text_Scientist:
-	.string "Hm? That's a POKéDEX, isn't it?\n"
-	.string "May I see it?\p"
-	.string "There are so many kinds of\n"
-	.string "POKéMON.\p"
-	.string "Hm? What's this?\p"
-	.string "What is this POKéMON?\p"
-	.string "It looks like the strange\n"
-	.string "writing on the walls of the\p"
-	.string "RUINS.\p"
-	.string "If those drawings are really\n"
-	.string "POKéMON, there should be many\n"
-	.string "more.\p"
-	.string "I know! Let me upgrade your\n"
+	.string "¿Hm? Es una POKéDEX, ¿verdad?\n"
+	.string "¿Puedo verla?\p"
+	.string "Hay muchísimos tipos de\n"
+	.string "POKéMON planta.\p"
+	.string "¿Hm? ¿Qué es esto?\p"
+	.string "¿Qué POKéMON es este?\p"
+	.string "Se parece a los extraños\n"
+	.string "escritos de las paredes de las\p"
+	.string "RUINAS.\p"
+	.string "Si esos dibujos son realmente\n"
+	.string "POKéMON, debería haber muchos\n"
+	.string "más.\p"
+	.string "¡Ya sé! Déjame mejorar tu\n"
 	.string "POKéDEX. Follow me.$"
 
 RuinsOfAlph_Outside_Text_SuperNerdStan_Seen:
@@ -104,7 +104,7 @@ RuinsOfAlph_Outside_Text_SuperNerdStan_Seen:
 	.string "don't disturb me!$"
 
 RuinsOfAlph_Outside_Text_SuperNerdStan_Beaten:
-	.string "Sorry…\n"
+	.string "Lo siento...\n"
 	.string "I'm frustrated by our lack of\p"
 	.string "real understanding…$"
 
@@ -129,7 +129,7 @@ RuinsOfAlph_Outside_Text_MysteryChamberSign:
 	.string "MYSTERY STONE PANEL CHAMBER$"
 
 RuinsOfAlph_Outside_Text_MainSign:
-	.string "RUINS OF ALPH\n"
+	.string "RUINAS ALFA\n"
 	.string "VISITORS WELCOME$"
 
 RuinsOfAlph_Outside_Text_ResearchSign:
@@ -153,5 +153,5 @@ RuinsOfAlph_Outside_Text_Youngster1:
 
 RuinsOfAlph_Outside_Text_Youngster2:
 	.string "A… H… E… A… D… Hmm…\p"
-	.string "What?\p"
+	.string "¿Qué?\p"
 	.string "I'm decoding this message!$"

@@ -84,7 +84,7 @@ ViridianCity_Mart_EventScript_Youngster::
 	end
 
 ViridianCity_Mart_Text_YouCameFromPallet::
-	.string "Hey!\n"
+	.string "¡Hola!\n"
 	.string "You came from PALLET TOWN?$"
 
 ViridianCity_Mart_Text_TakeThisToProfOak::

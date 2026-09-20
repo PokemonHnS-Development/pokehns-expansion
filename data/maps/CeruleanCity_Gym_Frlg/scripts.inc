@@ -101,7 +101,7 @@ CeruleanCity_Gym_Text_BetterMakeRoomForThis::
 	.string "You better make room for this!$"
 
 CeruleanCity_Gym_Text_MistyDefeat::
-	.string "Wow!\n"
+	.string "¡Guau!\n"
 	.string "You're too much!\p"
 	.string "All right!\p"
 	.string "You can have the CASCADEBADGE to\n"
@@ -120,7 +120,7 @@ CeruleanCity_Gym_Text_DianaPostBattle::
 	.string "to see how good you really are.$"
 
 CeruleanCity_Gym_Text_LuisIntro::
-	.string "Splash!\p"
+	.string "¡Splash!\p"
 	.string "I'm first up!\n"
 	.string "Let's do it!$"
 
@@ -129,12 +129,12 @@ CeruleanCity_Gym_Text_LuisDefeat::
 
 CeruleanCity_Gym_Text_LuisPostBattle::
 	.string "MISTY is a TRAINER who's going to\n"
-	.string "keep improving.\p"
-	.string "She won't lose to someone like you!$"
+	.string "dejará de mejorar.\p"
+	.string "¡Ella no perderá contra ti!$"
 
 CeruleanCity_Gym_Text_GymGuyAdvice::
 	.string "Yo!\n"
-	.string "Champ in the making!\p"
+	.string "¡Un futuro campeón!\p"
 	.string "Let me give you some advice!\p"
 	.string "The LEADER, MISTY, is a pro who\n"
 	.string "uses WATER-type POKéMON.\p"
@@ -150,14 +150,14 @@ CeruleanCity_Gym_Text_WeMakePrettyGoodTeam::
 	.string "darn-good team!$"
 
 CeruleanCity_Gym_Text_GymStatue::
-	.string "CERULEAN POKéMON GYM\n"
-	.string "LEADER: MISTY\p"
-	.string "WINNING TRAINERS:\n"
+	.string "GIMNASIO POKéMON AZULONA\n"
+	.string "LÍDER: MISTY\p"
+	.string "ENTRENADORES GANADORES:\n"
 	.string "{RIVAL}$"
 
 CeruleanCity_Gym_Text_GymStatuePlayerWon::
-	.string "CERULEAN POKéMON GYM\n"
-	.string "LEADER: MISTY\p"
-	.string "WINNING TRAINERS:\n"
+	.string "GIMNASIO POKéMON AZULONA\n"
+	.string "LÍDER: MISTY\p"
+	.string "ENTRENADORES GANADORES:\n"
 	.string "{RIVAL}, {PLAYER}$"
 

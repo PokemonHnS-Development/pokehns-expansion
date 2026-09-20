@@ -537,25 +537,25 @@ LilycoveCity_Harbor_Movement_SailorBoardWithBrineyEast:
 	step_end
 
 LilycoveCity_Harbor_Text_FerryUnavailable:
-	.string "I beg your pardon?\n"
-	.string "You're looking for a ship?\p"
-	.string "I'm sorry, the ferry service isn't\n"
-	.string "available at present…$"
+	.string "¿Perdón?\n"
+	.string "¿Buscas un barco?\p"
+	.string "Lo siento, el servicio de ferry no\n"
+	.string "está disponible ahora…$"
 
 LilycoveCity_Harbor_Text_MayISeeYourTicket:
-	.string "Hello, are you here for the ferry?\n"
-	.string "May I see your TICKET?$"
+	.string "Hola, ¿vienes por el ferry?\n"
+	.string "¿Puedo ver tu TICKET?$"
 
 LilycoveCity_Harbor_Text_NoTicket:
-	.string "{PLAYER} doesn't have the TICKET…\p"
-	.string "I'm terribly sorry.\p"
-	.string "You must have a TICKET to board\n"
-	.string "the ferry.$"
+	.string "{PLAYER} no tiene el TICKET...\p"
+	.string "Lo siento muchísimo.\p"
+	.string "Necesitas un TICKET para subir\n"
+	.string "al ferry.$"
 
 LilycoveCity_Harbor_Text_FlashTicketWhereTo:
-	.string "{PLAYER} flashed the TICKET.\p"
-	.string "Perfect! That's all you need!\p"
-	.string "And where would you like to go?$"
+	.string "{PLAYER} mostró el TICKET.\p"
+	.string "¡Perfecto! ¡Eso es todo!\p"
+	.string "¿Y a dónde te gustaría ir?$"
 
 LilycoveCity_Harbor_Text_SailAnotherTime:
 	.string "Please sail with us another time!$"
@@ -567,21 +567,21 @@ LilycoveCity_Harbor_Text_BattleFrontierItIs:
 	.string "BATTLE FRONTIER it is, then!$"
 
 LilycoveCity_Harbor_Text_PleaseBoard:
-	.string "Please board the ferry and wait for\n"
-	.string "departure.$"
+	.string "Sube al ferry y espera la\n"
+	.string "salida.$"
 
 LilycoveCity_Harbor_Text_WhereWouldYouLikeToGo:
 	.string "Then, where would you like to go?$"
 
 LilycoveCity_Harbor_Text_SailorFerryUnavailable:
-	.string "Until they finish making the ferry,\n"
-	.string "we sailors have nothing to do…\p"
-	.string "I wish they'd get a move on, the folks\n"
-	.string "at the SHIPYARD in SLATEPORT.$"
+	.string "Hasta que terminen el ferry,\n"
+	.string "nosotros no tenemos nada que hacer…\p"
+	.string "Ojalá se apresuren los del\n"
+	.string "ASTILLERO de PORTALUAR.$"
 
 LilycoveCity_Harbor_Text_SailorFerryAvailable:
-	.string "The ferry S.S. TIDAL is finally in\n"
-	.string "operation.\p"
-	.string "The folks at the SHIPYARD in SLATEPORT\n"
-	.string "must've worked extra hard.\p"
-	.string "Well, it's my turn to get busy now!$"
+	.string "El ferry S.S. TIDAL ya está\n"
+	.string "en funcionamiento.\p"
+	.string "La gente del ASTILLERO de PORTALUAR\n"
+	.string "debió esforzarse mucho.\p"
+	.string "¡Bueno, ahora es mi turno de trabajar!$"

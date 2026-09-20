@@ -55,46 +55,46 @@ CeladonCity_House1_EventScript_Sign::
 
 CeladonCity_House1_Text_ChefEatathon:
 	.string "Hi!\p"
-	.string "We're holding an eatathon contest.\p"
-	.string "We can't serve you right now.\n"
-	.string "Sorry.$"
+	.string "Hacemos un concurso de comer.\p"
+	.string "No podemos atenderte ahora.\n"
+	.string "Lo siento.$"
 
 CeladonCity_House1_Text_Fisher1Snarfle:
 	.string "…Snarfle, chew…$"
 
 CeladonCity_House1_Text_Fisher1Concentration:
-	.string "Don't talk to me!\p"
-	.string "You'll break my concentration!$"
+	.string "¡No me hables!\p"
+	.string "¡Romperás mi concentración!$"
 
 CeladonCity_House1_Text_Fisher2GulpChew:
 	.string "…Gulp… Chew…$"
 
 CeladonCity_House1_Text_Fisher2Quantity:
-	.string "I take quantity over quality!\p"
-	.string "I'm happy when I'm full!$"
+	.string "¡Prefiero cantidad que calidad!\p"
+	.string "¡Soy feliz cuando estoy lleno!$"
 
 CeladonCity_House1_Text_Fisher3MunchMunch:
 	.string "Munch, munch…$"
 
 CeladonCity_House1_Text_Fisher3GoldenrodIsBest:
-	.string "The food is good here, but\n"
-	.string "GOLDENROD has the best food\l"
-	.string "anywhere.$"
+	.string "La comida es buena aquí, pero\n"
+	.string "CIUDAD TRIGAL tiene la mejor\l"
+	.string "comida de todas.$"
 
 CeladonCity_House1_Text_TeacherCrunchCrunch:
 	.string "Crunch… Crunch…$"
 
 CeladonCity_House1_Text_TeacherNoCoinCase:
-	.string "Nobody here will give you a COIN\n"
-	.string "CASE. You should look in JOHTO.$"
+	.string "Nadie aquí te dará una MONEDA\n"
+	.string "CASE. Busca en JOHTO.$"
 
 CeladonCity_House1_Text_TeacherKeepEating:
-	.string "Crunch… Crunch…\p"
-	.string "I can keep eating!\p"
-	.string "More, CHEF!$"
+	.string "Crunch... Crunch...\p"
+	.string "¡Puedo seguir comiendo!\p"
+	.string "¡Más, CHEF!$"
 
 CeladonCity_House1_Text_EatathonContestPoster:
-	.string "Eatathon Contest! No time limit!\p"
-	.string "A battle without end! The biggest\n"
-	.string "muncher gets it all for free!$"
+	.string "¡Concurso de comer! ¡Sin tiempo!\p"
+	.string "¡Una batalla sin fin! El que más\n"
+	.string "coma se lleva todo gratis!$"
 

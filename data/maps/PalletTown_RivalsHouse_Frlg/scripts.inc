@@ -212,10 +212,10 @@ PalletTown_RivalsHouse_Text_LikeMeToGroomMon::
 	.string "DAISY: Hi, {PLAYER}!\n"
 	.string "Good timing.\p"
 	.string "I'm about to have some tea.\n"
-	.string "Would you like to join me?\p"
+	.string "¿Te gustaría acompañarme?\p"
 	.string "Oh, but look.\n"
 	.string "Your POKéMON are a little dirty.\p"
-	.string "Would you like me to groom one?$"
+	.string "¿Quieres que limpie a alguno?$"
 
 PalletTown_RivalsHouse_Text_DontNeedAnyGrooming::
 	.string "You don't need any grooming done?\n"
@@ -226,7 +226,7 @@ PalletTown_RivalsHouse_Text_GroomWhichOne::
 
 PalletTown_RivalsHouse_Text_LookingNiceInNoTime::
 	.string "DAISY: Okay, I'll get it looking\n"
-	.string "nice in no time.$"
+	.string "bien en un abrir y cerrar de ojos.$"
 
 PalletTown_RivalsHouse_Text_ThereYouGoAllDone::
 #ifdef BUGFIX @ The localizers missed what should be a textcolor change in the localizations.
@@ -237,12 +237,12 @@ PalletTown_RivalsHouse_Text_ThereYouGoAllDone::
 	.string "{FONT_FEMALE}DAISY: There you go! All done.\n"
 #endif
 	.string "See? Doesn't it look nice?\p"
-	.string "Giggle…\n"
-	.string "It's such a cute POKéMON.$"
+	.string "Jejeje…\n"
+	.string "Es un POKéMON muy lindo.$"
 
 PalletTown_RivalsHouse_Text_CantGroomAnEgg::
 	.string "Oh, sorry. I honestly can't\n"
-	.string "groom an EGG.$"
+	.string "arreglar un HUEVO.$"
 
 PalletTown_RivalsHouse_Text_MayISeeFirstMon::
 	.string "DAISY: Your POKéMON grow to love\n"
@@ -271,7 +271,7 @@ PalletTown_RivalsHouse_Text_ItsWarmingUpToYou::
 
 PalletTown_RivalsHouse_Text_NotFamiliarWithYouYet::
 	.string "It's not quite familiar with you\n"
-	.string "yet.\p"
+	.string "está completa.\p"
 	.string "POKéMON are all quite wary when\n"
 	.string "you first get them.$"
 

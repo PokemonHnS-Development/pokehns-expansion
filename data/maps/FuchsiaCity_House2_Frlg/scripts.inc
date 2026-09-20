@@ -33,7 +33,7 @@ FuchsiaCity_House2_EventScript_NoRoomForGoodRod::
 
 FuchsiaCity_House2_Text_DoYouLikeToFish::
 	.string "I'm the FISHING GURU's older\n"
-	.string "brother.\p"
+	.string "EXPERTO EN PESCA.\p"
 	.string "I simply looove fishing!\n"
 	.string "I can't bear to go without.\p"
 	.string "Tell me, do you like to fish?$"

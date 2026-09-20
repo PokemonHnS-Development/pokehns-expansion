@@ -235,7 +235,7 @@ static const u8 *GetHoldEffectName(enum HoldEffect holdEffect);
 // const rom data
 static const u8 sText_Ability[] = _("Ability");
 static const u8 sText_HeldItem[] = _("Held Item");
-static const u8 sText_HoldEffect[] = _("Hold Effect");
+static const u8 sText_HoldEffect[] = _("Efecto Objeto");
 static const u8 sText_EmptyString[] = _("");
 
 static const struct BitfieldInfo sStatus1Bitfield[] =

@@ -387,7 +387,7 @@ RuinsOfAlph_PuzzleAndRewardChambers_Text_Receptionist1:
 	.string "Slide the panels around to form\n"
 	.string "the picture.\p"
 	.string "To the left is a description of\n"
-	.string "the POKéMON.\p"
+	.string "naturaleza del POKéMON.\p"
 	.string "Scientists in the lab are examin-\n"
 	.string "-ing some newly found patterns.$"
 

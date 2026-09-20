@@ -245,7 +245,7 @@ Route22_Text_EarlyRivalIntro::
 	.string "any stronger?$"
 
 Route22_Text_EarlyRivalDefeat::
-	.string "Awww!\n"
+	.string "¡Aww!\n"
 	.string "You just lucked out!$"
 
 Route22_Text_EarlyRivalPostBattle::
@@ -268,12 +268,12 @@ Route22_Text_LateRivalIntro::
 	.string "{RIVAL}: What? {PLAYER}!\n"
 	.string "What a surprise to see you here!\p"
 	.string "So you're going to the POKéMON\n"
-	.string "LEAGUE?\p"
+	.string "POKéMON?\p"
 	.string "You collected all the BADGES, too?\n"
 	.string "That's cool!\p"
 	.string "Then I'll whip you, {PLAYER}, as a\n"
 	.string "warm-up for the POKéMON LEAGUE!\p"
-	.string "Come on!$"
+	.string "¡Vamos!$"
 
 Route22_Text_LateRivalDefeat::
 	.string "What!?\p"
@@ -296,6 +296,6 @@ Route22_Text_LateRivalVictory::
 	.string "あははーッ！$"
 
 Route22_Text_LeagueGateSign::
-	.string "POKéMON LEAGUE\n"
+	.string "LIGA POKéMON\n"
 	.string "Front Gate$"
 

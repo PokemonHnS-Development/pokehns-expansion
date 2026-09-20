@@ -100,38 +100,38 @@ Alola_AkalaCave_TrainerBattleCamper::
 
 
 Alola_Melemele_BattleMarowak_Text_0:
-	.string "Raah!$"
+	.string "¡Raah!$"
 
 Alola_Melemele_BattleDugtrio_Text_0:
-	.string "Cha-Cha!$"
+	.string "¡Cha-Cha!$"
 
 Alola_AkalaCave_TrainerBattleHiker_Text_0:
-	.string "You must be tough if you made it all the\nway up here!$"
+	.string "¡Debes ser fuerte si lograste llegar\nhasta aquí arriba!$"
 
 Alola_AkalaCave_TrainerBattleHiker_Text_1:
-	.string "Tougher than me!$"
+	.string "¡Más fuerte que yo!$"
 
 Alola_AkalaCave_TrainerBattleHiker_Text_2:
-	.string "I had to stop climbing because it was\n"
-	.string "getting far too hot.\p"
-	.string "It's like someone's got a fire going\n"
-	.string "up on the peak…$"
+	.string "Tuve que dejar de subir porque hacía\n"
+	.string "demasiado calor.\p"
+	.string "Parece que alguien encendió un fuego\n"
+	.string "allá en la cima…$"
 
 Alola_AkalaCave_TrainerBattlePicnicker_Text_0:
-	.string "I'm tired from all this walking,\nlet's have a battle!$"
+	.string "Estoy cansado de tanto caminar,\n¡Tengamos una batalla!$"
 
 Alola_AkalaCave_TrainerBattlePicnicker_Text_1:
-	.string "Well that was refreshing!$"
+	.string "¡Eso fue refrescante!$"
 
 Alola_AkalaCave_TrainerBattlePicnicker_Text_2:
-	.string "I'm usually not this tired but\n"
-	.string "the heat in this cave is exhausting!$"
+	.string "No suelo estar tan cansado, pero\n"
+	.string "¡el calor de esta cueva agota!$"
 
 Alola_AkalaCave_TrainerBattleCamper_Text_0:
-	.string "Check me out!\nI caught some strong POKéMON!$"
+	.string "¡Mírame!\n¡Atrapé POKéMON muy fuertes!$"
 
 Alola_AkalaCave_TrainerBattleCamper_Text_1:
-	.string "Not bad,\nbut not good enough!$"
+	.string "No estuvo mal,\n¡pero no es suficiente!$"
 
 Alola_AkalaCave_TrainerBattleCamper_Text_2:
-	.string "Is it warm in here or is it just me?$"
+	.string "¿Hace calor aquí o soy yo?$"

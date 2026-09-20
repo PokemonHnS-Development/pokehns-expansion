@@ -273,10 +273,10 @@ SlateportCity_BattleTentLobby_EventScript_ExitRules::
 	end
 
 SlateportCity_BattleTentLobby_Text_CouldntFindMonForMe:
-	.string "So, like, I couldn't find myself any\n"
-	.string "POKéMON that were, like, for me.\p"
-	.string "So, I figured, like, hey, I should file\n"
-	.string "a complaint to the guy there?\p"
+	.string "Es que, tipo, no pude encontrar\n"
+	.string "ningún POKéMON que fuera para mí.\p"
+	.string "Así que pensé, tipo, oye, debería\n"
+	.string "quejarme con el tipo de allí.\p"
 	.string "And he wouldn't hear me out, like, hey!\n"
 	.string "So, like, total bummer, man!\p"
 	.string "Hey, like, you! Zip it, you know?\n"
@@ -285,23 +285,23 @@ SlateportCity_BattleTentLobby_Text_CouldntFindMonForMe:
 SlateportCity_BattleTentLobby_Text_ExplainTorment:
 	.string "That's, like, TM41, you know?\n"
 	.string "Hey, it's TORMENT, you hearing me?\p"
-	.string "Like, it won't let the other guy\n"
+	.string "O sea, no deja que el otro tipo\n"
 	.string "use the same move twice in a row, see?\p"
-	.string "Hey, now, you listen here, like,\n"
-	.string "I'm not laying a torment on you!$"
+	.string "Oye, escucha bien, o sea,\n"
+	.string "¡no te estoy lanzando una maldición!$"
 
 SlateportCity_BattleTentLobby_Text_IllTryUsingBugMons:
-	.string "I don't really like BUG POKéMON,\n"
-	.string "but maybe I'll try using some for\l"
-	.string "a change of pace.\p"
-	.string "Who knows, I might even get to like\n"
-	.string "them!$"
+	.string "No me gustan los POKéMON bicho,\n"
+	.string "pero quizá intente usar algunos\l"
+	.string "para variar un poco.\p"
+	.string "¡Quién sabe, puede que hasta\n"
+	.string "me lleguen a gustar!$"
 
 SlateportCity_BattleTentLobby_Text_BattleEvenWithoutToughMons:
-	.string "You can battle all you want here even\n"
-	.string "if you don't have any tough POKéMON.$"
+	.string "Puedes luchar todo lo que quieras\n"
+	.string "aunque no tengas POKéMON fuertes.$"
 
 SlateportCity_BattleTentLobby_Text_NiceIfMoreSelection:
-	.string "Wouldn't it be nice if they had more of\n"
-	.string "a selection?$"
+	.string "¿No sería genial que hubiera más\n"
+	.string "¿Una selección?$"
 

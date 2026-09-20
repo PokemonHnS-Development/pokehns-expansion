@@ -55,11 +55,11 @@ RockTunnel_B1F_Text_SofiaPostBattle::
 	.string "I want to go home!$"
 
 RockTunnel_B1F_Text_DudleyIntro::
-	.string "Hahaha!\n"
+	.string "¡Jajaja!\n"
 	.string "Can you beat my power?$"
 
 RockTunnel_B1F_Text_DudleyDefeat::
-	.string "Oops!\n"
+	.string "¡Ups!\n"
 	.string "Outmuscled!$"
 
 RockTunnel_B1F_Text_DudleyPostBattle::
@@ -129,7 +129,7 @@ RockTunnel_B1F_Text_WinstonIntro::
 	.string "when I'm home.$"
 
 RockTunnel_B1F_Text_WinstonDefeat::
-	.string "Whew…\n"
+	.string "Uff...\n"
 	.string "I'm exhausted…$"
 
 RockTunnel_B1F_Text_WinstonPostBattle::

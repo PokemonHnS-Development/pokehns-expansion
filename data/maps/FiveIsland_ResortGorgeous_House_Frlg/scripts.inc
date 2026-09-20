@@ -163,7 +163,7 @@ FiveIsland_ResortGorgeous_House_Text_MonYouCaughtForMeThankYou::
 	.string "SELPHY: Oh, hello, there.\p"
 	.string "Oh, my gracious. That must be the\n"
 	.string "{STR_VAR_1} you caught for me.\p"
-	.string "Giggle…\n"
+	.string "Jejeje…\n"
 	.string "I see a resemblance to you.\p"
 	.string "Thank you so kindly.\p"
 	.string "… …  … …  … …\n"

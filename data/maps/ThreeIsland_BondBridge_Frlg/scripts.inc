@@ -38,7 +38,7 @@ ThreeIsland_BondBridge_Text_AmiraIntro::
 	.string "without my float ring.$"
 
 ThreeIsland_BondBridge_Text_AmiraDefeat::
-	.string "Waaah!\n"
+	.string "¡Waaah!\n"
 	.string "Waaah!$"
 
 ThreeIsland_BondBridge_Text_AmiraPostBattle::
@@ -58,7 +58,7 @@ ThreeIsland_BondBridge_Text_AlexisPostBattle::
 
 ThreeIsland_BondBridge_Text_TishaIntro::
 	.string "Oh, no, don't come here!\n"
-	.string "Please, stay away from me!$"
+	.string "¡Por favor, aléjate de mí!$"
 
 ThreeIsland_BondBridge_Text_TishaDefeat::
 	.string "Okay, you've won!\n"

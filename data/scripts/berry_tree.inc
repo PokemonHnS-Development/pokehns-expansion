@@ -340,7 +340,7 @@ BerryTree_Text_ItsSoftLoamySoil:
 	.string "It's soft, loamy soil.$"
 
 BerryTree_Text_WantToPlant:
-	.string "It's soft, loamy soil.\n"
+	.string "Es tierra blanda y limosa.\n"
 	.string "Want to plant a BERRY?$"
 
 BerryTree_Text_PlantedOneBerry:
@@ -393,8 +393,8 @@ BerryTree_Text_CareAdverbGood:
 
 BerryTree_Text_WantToPick:
 	.string "You found {STR_VAR_2} {STR_VAR_1}!\p"
-	.string "Do you want to pick the\n"
-	.string "{STR_VAR_1}?$"
+	.string "¿Quieres recoger la\n"
+	.string "¿{STR_VAR_1}?$"
 
 BerryTree_Text_PickedTheBerry:
 	.string "{PLAYER} picked the {STR_VAR_2} {STR_VAR_1}.$"
@@ -495,7 +495,7 @@ BerryTree_EventScript_UseMulch::
 	return
 
 BerryTree_Text_WantToMulch:
-	.string "It's soft, loamy soil.\n"
+	.string "Es tierra blanda y limosa.\n"
 	.string "Put down some fertilizer?$"
 
 BerryTree_Text_ScatteredMulch:

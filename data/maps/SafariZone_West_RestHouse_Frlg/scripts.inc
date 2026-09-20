@@ -15,11 +15,11 @@ SafariZone_West_RestHouse_EventScript_CooltrainerF::
 
 SafariZone_West_Text_KogaPatrolsSafariEverySoOften::
 	.string "The SAFARI ZONE's huge, wouldn't\n"
-	.string "you say?\p"
-	.string "FUCHSIA's GYM LEADER, KOGA, \n"
-	.string "patrols the grounds every so often.\p"
-	.string "Thanks to him, we can play here\n"
-	.string "knowing that we're safe.$"
+	.string "¿no crees?\p"
+	.string "KOGA, LÍDER del GIMNASIO de FUCHSIA, \n"
+	.string "patrulla el lugar a menudo.\p"
+	.string "Gracias a él, podemos jugar aquí\n"
+	.string "sabiendo que estamos a salvo.$"
 
 SafariZone_West_Text_RocksMakeMonRunButEasierCatch::
 	.string "Tossing ROCKS at POKéMON might\n"

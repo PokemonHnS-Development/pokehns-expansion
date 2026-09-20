@@ -17,7 +17,7 @@ Route14_Text_CarterPostBattle::
 	.string "can't forget those moves easily.$"
 
 Route14_Text_MitchIntro::
-	.string "My bird POKéMON should be ready\n"
+	.string "Mi POKéMON ave ya debería estar\n"
 	.string "for battle.$"
 
 Route14_Text_MitchDefeat::
@@ -43,9 +43,9 @@ Route14_Text_BeckPostBattle::
 	.string "of the move.$"
 
 Route14_Text_MarlonIntro::
-	.string "Have you taught your bird POKéMON\n"
-	.string "how to FLY?\p"
-	.string "You'll be able to soar with it into\n"
+	.string "¿Le has enseñando a tu POKéMON ave\n"
+	.string "a usar VUELO?\p"
+	.string "¡Podrás surcar los cielos con él!\n"
 	.string "the sky!$"
 
 Route14_Text_MarlonDefeat::
@@ -71,7 +71,7 @@ Route14_Text_DonaldPostBattle::
 
 Route14_Text_BennyIntro::
 	.string "I'm not into it, but okay.\n"
-	.string "Let's go!$"
+	.string "¡Vamos!$"
 
 Route14_Text_BennyDefeat::
 	.string "I knew it!$"
@@ -81,8 +81,8 @@ Route14_Text_BennyPostBattle::
 	.string "under this huge sky.$"
 
 Route14_Text_LukasIntro::
-	.string "C'mon, c'mon.\n"
-	.string "Let's go, let's go, let's go!$"
+	.string "Vamos, vamos.\n"
+	.string "¡Vamos, vamos, vamos!$"
 
 Route14_Text_LukasDefeat::
 	.string "Arrg!\n"
@@ -94,10 +94,10 @@ Route14_Text_LukasPostBattle::
 
 Route14_Text_IsaacIntro::
 	.string "I need to burn some time.\n"
-	.string "Shut up and battle.$"
+	.string "Cállate y lucha.$"
 
 Route14_Text_IsaacDefeat::
-	.string "What?\n"
+	.string "¿Qué?\n"
 	.string "You!?$"
 
 Route14_Text_IsaacPostBattle::
@@ -112,13 +112,13 @@ Route14_Text_GeraldDefeat::
 
 Route14_Text_GeraldPostBattle::
 	.string "It's cool you made your POKéMON so\n"
-	.string "strong.\p"
-	.string "Might is right!\n"
+	.string "increíblemente fuertes.\p"
+	.string "¡El más fuerte tiene la razón!\n"
 	.string "And you know it!$"
 
 Route14_Text_MalikIntro::
 	.string "POKéMON battle?\n"
-	.string "Cool! Rumble!$"
+	.string "¡Genial! ¡A luchar!$"
 
 Route14_Text_MalikDefeat::
 	.string "Blown away!$"
@@ -147,7 +147,7 @@ Route14_Text_KiriNotEnoughMons::
 	.string "two POKéMON.$"
 
 Route14_Text_JanIntro::
-	.string "JAN: KIRI, here we go!\n"
+	.string "JAN: ¡KIRI, allá vamos!\n"
 	.string "We have to try hard!$"
 
 Route14_Text_JanDefeat::

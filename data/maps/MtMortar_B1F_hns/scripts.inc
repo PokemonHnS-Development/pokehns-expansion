@@ -51,36 +51,36 @@ MountMortar4_EventScript_KiyoAfter::
 
 
 MountMortar4_Text_KiyoIntro:
-	.string "Hey!\p"
-	.string "I am the KARATE KING!\n"
-	.string "I train alone here in the dark!\p"
-	.string "You! Battle with me!\n"
-	.string "Hwaaarggh!$"
+	.string "¡Hola!\p"
+	.string "¡Soy el REY DEL KARATE!\n"
+	.string "¡Entreno solo aquí en la oscuridad!\p"
+	.string "¡Tú! ¡Lucha conmigo!\n"
+	.string "¡Hwaaarggh!$"
 
 MountMortar4_Text_KiyoWin:
-	.string "Waaaarggh!\n"
-	.string "I'm beaten!$"
+	.string "¡Waaaarggh!\n"
+	.string "¡Me vencieron!$"
 
 MountMortar4_Text_KiyoTyrogueReward:
-	.string "I... I'm crushed...\p"
-	.string "My training is still not\n"
-	.string "enough...\p"
-	.string "But a loss is a loss.\n"
-	.string "I admit it.\p"
-	.string "As proof that you defeated me,\n"
-	.string "I'll give you a rare fighting\l"
+	.string "Estoy... derrotado...\p"
+	.string "Mi entrenamiento aún no es\n"
+	.string "suficiente...\p"
+	.string "Pero una derrota es una derrota.\n"
+	.string "Lo admito.\p"
+	.string "Como prueba de que me venciste,\n"
+	.string "Te daré un raro POKéMON lucha\l"
 	.string "POKéMON.$"
 
 MountMortar4_Text_ReceiveTyrogue:
 	.string "{PLAYER} received TYROGUE.$"
 
 MountMortar4_Text_KiyoGotTyrogue:
-	.string "TYROGUE is a FIGHTING-type.\p"
-	.string "It evolves into a tougher\n"
-	.string "POKéMON.\p"
-	.string "Keep up the hard work.\n"
-	.string "I'll keep training too.\p"
-	.string "Farewell!$"
+	.string "TYROGUE es de tipo LUCHA.\p"
+	.string "Evoluciona en uno más fuerte\n"
+	.string "POKéMON planta.\p"
+	.string "Sigue esforzándote mucho.\n"
+	.string "Yo también seguiré entrenando.\p"
+	.string "¡Adiós!$"
 
 MountMortar4_Text_KiyoFullParty:
 	.string "You have no room in your party!$"

@@ -177,7 +177,7 @@ SootopolisCity_Gym_1F_EventScript_GymStatue::
 
 SootopolisCity_Gym_1F_Text_GymGuideAdvice:
 	.string "Yo! How's it going, CHAMPION-\n"
-	.string "bound {PLAYER}?\p"
+	.string "CAMPEÓN {PLAYER}?\p"
 	.string "SOOTOPOLIS's GYM LEADER JUAN is\n"
 	.string "a master of WATER-type POKéMON.\p"
 	.string "And, to get to JUAN, an icy floor\n"
@@ -196,35 +196,35 @@ SootopolisCity_Gym_1F_Text_GymGuidePostVictory:
 
 SootopolisCity_Gym_1F_Text_JuanIntro:
 	.string "Let me ask you.\n"
-	.string "Did you know?\l"
+	.string "¿Sabías esto?\l"
 	.string "Ah, I should not be so coy.\p"
 	.string "It was I who taught WALLACE everything\n"
 	.string "there is to know about POKéMON.\p"
 	.string "Once, I had given up my position as\n"
-	.string "the GYM LEADER.\p"
+	.string "LÍDER del GIMNASIO.\p"
 	.string "In my place, I had entrusted WALLACE\n"
 	.string "with the GYM.\p"
 	.string "However, a compelling reason arose for\n"
 	.string "me to make a comeback.\p"
 	.string "Ah, but enough chatter.\n"
-	.string "Let us begin our match, shall we?\p"
-	.string "Please, you shall bear witness to\n"
-	.string "our artistry.\p"
-	.string "A grand illusion of water sculpted\n"
-	.string "by POKéMON and myself!$"
+	.string "Empecemos el combate, ¿te parece?\p"
+	.string "Por favor, sé testigo de\n"
+	.string "nuestro arte.\p"
+	.string "¡Una gran ilusión de agua creada\n"
+	.string "por POKéMON y por mí!$"
 
 @ NOTE: This defeat text actually causes a buffer overflow. It's about 50 bytes too long for
 @ the gDisplayedStringBattle buffer that it's put into, and it stomps all over the gBattleTextBuffs
 @ after, as well as the otherwise unused array after that. One wonders if that's the reason for
 @ the existence of that unused array of ints.
 SootopolisCity_Gym_1F_Text_JuanDefeat:
-	.string "Ahahaha, excellent!\n"
-	.string "Very well, you are the winner.\p"
-	.string "From you, I sense the brilliant shine\n"
-	.string "of skill that will overcome all.\p"
-	.string "However, compared with me or even\n"
-	.string "WALLACE, you are lacking in elegance.\p"
-	.string "Perhaps I should make you a loan\n"
+	.string "¡Ahahaha, excelente!\n"
+	.string "Muy bien, tú eres el ganador.\p"
+	.string "Siento en ti el brillo radiante\n"
+	.string "de una habilidad que todo vence.\p"
+	.string "Pero, comparado conmigo o incluso\n"
+	.string "con WALLACE, te falta elegancia.\p"
+	.string "Tal vez debería darte un préstamo\n"
 	.string "of my outfit?\p"
 	.string "… … … … … …\n"
 	.string "… … … … … …\p"
@@ -255,7 +255,7 @@ SootopolisCity_Gym_1F_Text_ExplainWaterPulse:
 
 SootopolisCity_Gym_1F_Text_RegisteredJuan:
 	.string "Registered GYM LEADER JUAN\n"
-	.string "in the POKéNAV.$"
+	.string "en el POKéNAV.$"
 
 SootopolisCity_Gym_1F_Text_JuanPostBattle:
 	.string "The TRAINERS who have gathered all\n"
@@ -263,57 +263,57 @@ SootopolisCity_Gym_1F_Text_JuanPostBattle:
 	.string "way to the ultimate destination.\p"
 	.string "The POKéMON LEAGUE.\p"
 	.string "Travel to the easternmost reaches\n"
-	.string "of HOENN, to the island EVER GRANDE.\p"
-	.string "There, you shall find the POKéMON\n"
-	.string "LEAGUE.$"
+	.string "de HOENN, a la ISLA EVER GRANDE.\p"
+	.string "Allí encontrarás la LIGA\n"
+	.string "POKéMON.$"
 
 SootopolisCity_Gym_1F_Text_GoGetFortreeBadge:
-	.string "There remains but one BADGE to\n"
-	.string "obtain in HOENN.\p"
-	.string "If you wish to challenge the POKéMON\n"
-	.string "LEAGUE, you must obtain the last\l"
-	.string "BADGE from the GYM in FORTREE.$"
+	.string "Solo queda una MEDALLA por\n"
+	.string "obtener en HOENN.\p"
+	.string "Si quieres desafiar la LIGA\n"
+	.string "POKéMON, debes obtener la última\l"
+	.string "MEDALLA del GIMNASIO de FORTREE.$"
 
 SootopolisCity_Gym_1F_Text_GymStatue:
 	.string "SOOTOPOLIS CITY POKéMON GYM$"
 
 SootopolisCity_Gym_1F_Text_GymStatueCertified:
-	.string "SOOTOPOLIS CITY POKéMON GYM\p"
-	.string "JUAN'S CERTIFIED TRAINERS:\n"
+	.string "GIMNASIO POKéMON DE CIUDAD SOOTOPOLIS\p"
+	.string "ENTRENADORES CERTIFICADOS DE JUAN:\n"
 	.string "{PLAYER}$"
 
 SootopolisCity_Gym_1F_Text_JuanPreRematch:
-	.string "JUAN: Ah, this GYM had returned to its\n"
-	.string "usual state of serenity…\p"
-	.string "But our young typhoon has returned\n"
-	.string "to put us to the test again!\p"
-	.string "Well, my friend, most certainly!\p"
-	.string "I shall be delighted to dance with you\n"
-	.string "as often as you wish!$"
+	.string "JUAN: Ah, este GIMNASIO volvió a su\n"
+	.string "estado habitual de serenidad…\p"
+	.string "Pero nuestro joven tifón ha vuelto\n"
+	.string "¡para ponernos a prueba otra vez!\p"
+	.string "¡Bueno, amigo, ciertamente!\p"
+	.string "¡Estaré encantado de bailar contigo\n"
+	.string "tantas veces como quieras!$"
 
 SootopolisCity_Gym_1F_Text_JuanRematchDefeat:
-	.string "Ahahaha, you are the winner!\n"
-	.string "You have defeated me again!$"
+	.string "¡Ahahaha, tú eres el ganador!\n"
+	.string "¡Me has derrotado otra vez!$"
 
 SootopolisCity_Gym_1F_Text_JuanPostRematch:
-	.string "JUAN: If I told you to become my\n"
-	.string "apprentice, you will refuse, I am sure.\p"
-	.string "I would like to make a gift of my coat\n"
-	.string "to you.\p"
-	.string "But again, you will refuse.\n"
-	.string "I imagine that to be so.\p"
-	.string "And that, my friend, is a certain sign\n"
-	.string "of nobility!$"
+	.string "JUAN: Si te pidiera que fueras mi\n"
+	.string "aprendiz, seguro que rechazarías.\p"
+	.string "Me gustaría regalarte mi abrigo\n"
+	.string "a ti.\p"
+	.string "Pero, de nuevo, lo rechazarías.\n"
+	.string "Imagino que así es.\p"
+	.string "Y eso, amigo mío, es una señal\n"
+	.string "de nobleza!$"
 
 SootopolisCity_Gym_1F_Text_JuanRematchNeedTwoMons:
-	.string "JUAN: Ah, this GYM had returned to its\n"
-	.string "usual state of serenity…\p"
-	.string "But our young typhoon has returned\n"
-	.string "to put us to the test again!\p"
-	.string "Well, my friend, most certainly!\n"
-	.string "I shall be delighted to dance with you…\p"
+	.string "JUAN: Ah, este GIMNASIO volvió a su\n"
+	.string "estado habitual de serenidad…\p"
+	.string "Pero nuestro joven tifón ha vuelto\n"
+	.string "¡para ponernos a prueba otra vez!\p"
+	.string "¡Bueno, amigo, ciertamente!\n"
+	.string "Estaré encantado de bailar contigo…\p"
 	.string "Ah, no, no, no.\n"
-	.string "You have with you but one POKéMON.\p"
-	.string "I wish that you would return with\n"
-	.string "two, perhaps more, POKéMON, please.$"
+	.string "Solo tienes un POKéMON contigo.\p"
+	.string "Deseo que regreses con dos,\n"
+	.string "o quizás más POKéMON, por favor.$"
 

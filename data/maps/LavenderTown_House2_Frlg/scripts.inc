@@ -62,14 +62,14 @@ LavenderTown_House2_EventScript_ChoseNewNickname::
 	end
 
 LavenderTown_House2_Text_WantMeToRateNicknames::
-	.string "Hello, hello!\n"
+	.string "¡Hola, hola!\n"
 	.string "I am the official NAME RATER!\p"
 	.string "Want me to rate the nicknames of\n"
-	.string "your POKéMON?$"
+	.string "tu POKéMON?$"
 
 LavenderTown_House2_Text_CritiqueWhichMonsNickname::
-	.string "Which POKéMON's nickname should\n"
-	.string "I critique?$"
+	.string "¿El apodo de qué POKéMON\n"
+	.string "debo criticar?$"
 
 LavenderTown_House2_Text_GiveItANicerName::
 	.string "{STR_VAR_1}, is it?\n"
@@ -79,25 +79,25 @@ LavenderTown_House2_Text_GiveItANicerName::
 	.string "How about it?$"
 
 LavenderTown_House2_Text_WhatShallNewNicknameBe::
-	.string "Ah, good. Then, what shall the new\n"
-	.string "nickname be?$"
+	.string "Ah, bien. Entonces, ¿cuál será el\n"
+	.string "nuevo apodo?$"
 
 LavenderTown_House2_Text_FromNowOnShallBeKnownAsName::
-	.string "Done! From now on, this POKéMON\n"
-	.string "shall be known as {STR_VAR_1}!\p"
-	.string "It is a better name than before!\n"
-	.string "How fortunate for you!$"
+	.string "¡Listo! De ahora en adelante,\n"
+	.string "¡este POKéMON se llamará {STR_VAR_1}!\p"
+	.string "¡Es un nombre mejor que el anterior!\n"
+	.string "¡Qué suerte tienes!$"
 
 LavenderTown_House2_Text_ISeeComeVisitAgain::
-	.string "I see.\n"
-	.string "Do come visit again.$"
+	.string "Ya veo.\n"
+	.string "Vuelve a visitarnos.$"
 
 LavenderTown_House2_Text_FromNowOnShallBeKnownAsSameName::
-	.string "Done! From now on, this POKéMON\n"
-	.string "shall be known as {STR_VAR_1}!\p"
-	.string "It looks no different from before,\n"
-	.string "and yet, this is vastly superior!\p"
-	.string "How fortunate for you!$"
+	.string "¡Listo! De ahora en adelante,\n"
+	.string "¡este POKéMON se llamará {STR_VAR_1}!\p"
+	.string "No se ve distinto a antes,\n"
+	.string "¡y aun así, es muy superior!\p"
+	.string "¡Qué suerte tienes!$"
 
 LavenderTown_House2_Text_TrulyImpeccableName::
 	.string "{STR_VAR_1}, is it?\n"
@@ -105,6 +105,6 @@ LavenderTown_House2_Text_TrulyImpeccableName::
 	.string "Take good care of {STR_VAR_1}!$"
 
 LavenderTown_House2_Text_ThatIsMerelyAnEgg::
-	.string "Now, now.\n"
-	.string "That is merely an EGG!$"
+	.string "Ya, ya.\n"
+	.string "¡Eso es solo un HUEVO!$"
 

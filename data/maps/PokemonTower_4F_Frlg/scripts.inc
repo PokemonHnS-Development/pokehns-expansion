@@ -42,7 +42,7 @@ PokemonTower_4F_Text_JodyIntro::
 	.string "Beat me not!$"
 
 PokemonTower_4F_Text_JodyDefeat::
-	.string "Huh?\n"
+	.string "¿Eh?\n"
 	.string "Who? What?$"
 
 PokemonTower_4F_Text_JodyPostBattle::

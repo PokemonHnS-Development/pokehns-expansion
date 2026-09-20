@@ -193,9 +193,9 @@ BugContest_Text_Third3:
 	.string "whopping PINSIR!$"
 
 BugContest_Text_TakePartInFuture:
-	.string "Thank you for participating!\n"
+	.string "¡Gracias por participar!\n"
 	.string "We hope you'll take part in the\l"
-	.string "future.$"
+	.string "futuro.$"
 
 BugContest_Text_TransferAndReturn:
 	.string "Your chosen BUG POKéMON will now\n"

@@ -245,7 +245,7 @@ RocketHideout_B1F_Movement_GruntWalkLeft:
 	step_end
 
 RocketHideout_B1F_Text_CameraGrunt1Seen:
-    .string "Hey!\n"
+    .string "¡Hola!\n"
     .string "Intruder alert!$"
 
 RocketHideout_B1F_Text_CameraGrunt1Beaten:

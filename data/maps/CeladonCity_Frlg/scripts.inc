@@ -139,9 +139,9 @@ CeladonCity_Text_KeepOutOfTeamRocketsWay::
 	.string "Keep out of TEAM ROCKET's way!$"
 
 CeladonCity_Text_ExplainXAccuracyDireHit::
-	.string "TRAINER TIPS\p"
+	.string "CONSEJOS DE ENTRENADOR\p"
 	.string "X ACCURACY boosts the accuracy of\n"
-	.string "techniques.\p"
+	.string "técnicas.\p"
 	.string "DIRE HIT jacks up the likelihood\n"
 	.string "of critical hits.\p"
 	.string "Get your items at the CELADON\n"
@@ -149,12 +149,12 @@ CeladonCity_Text_ExplainXAccuracyDireHit::
 
 CeladonCity_Text_CitySign::
 	.string "CELADON CITY\n"
-	.string "The City of Rainbow Dreams$"
+	.string "La Ciudad de los Sueños Arcoíris$"
 
 CeladonCity_Text_GymSign::
 	.string "CELADON CITY POKéMON GYM\n"
-	.string "LEADER: ERIKA\l"
-	.string "The Nature-Loving Princess!$"
+	.string "LÍDER: ERIKA\l"
+	.string "¡La Princesa Amante Naturaleza!$"
 
 CeladonCity_Text_MansionSign::
 	.string "CELADON MANSION$"
@@ -164,8 +164,8 @@ CeladonCity_Text_DeptStoreSign::
 	.string "CELADON DEPT. STORE!$"
 
 CeladonCity_Text_GuardSpecProtectsFromStatus::
-	.string "TRAINER TIPS\p"
-	.string "GUARD SPEC. protects POKéMON\n"
+	.string "CONSEJOS DE ENTRENADOR\p"
+	.string "La DEF. ESP. protege al POKéMON\n"
 	.string "from status-reduction moves during\l"
 	.string "battle.\p"
 	.string "Get your items at the\n"
@@ -198,7 +198,7 @@ Text_SoftboiledTeach::
 
 Text_SoftboiledDeclined::
 	.string "I'll always be keeping an eye out\n"
-	.string "for you.\p"
+	.string "estábamos guardando.\p"
 	.string "I hope we can chat again.$"
 
 Text_SoftboiledWhichMon::
@@ -206,7 +206,7 @@ Text_SoftboiledWhichMon::
 	.string "the chance to learn SOFTBOILED?$"
 
 Text_SoftboiledTaught::
-	.string "I wish you the best of luck!$"
+	.string "¡Te deseo mucha suerte!$"
 
 CeladonCity_Text_SomeoneStoleSilphScope::
 	.string "Oh, what am I to do…\p"

@@ -302,37 +302,37 @@ Route124_DivingTreasureHuntersHouse_Text_YouHaventGotAnyShards:
 Route124_DivingTreasureHuntersHouse_Text_ThatsAShardIllTradeYou:
 	.string "Oh, hey! That…\n"
 	.string "That's a SHARD! I'm looking for those!\p"
-	.string "Oh, man, you've got to trade that\n"
-	.string "with me! I'll give you something good!$"
+	.string "¡Oye, tienes que cambiar eso\n"
+	.string "conmigo! ¡Te daré algo bueno!$"
 
 Route124_DivingTreasureHuntersHouse_Text_WhatDoYouWantToTrade:
 	.string "What do you want to trade?$"
 
 Route124_DivingTreasureHuntersHouse_Text_YoullTradeShardForStone:
-	.string "You'll trade your {STR_VAR_1} for\n"
-	.string "my {STR_VAR_2}, then?$"
+	.string "¿Cambiarás tu {STR_VAR_1} por\n"
+	.string "mi {STR_VAR_2}, entonces?$"
 
 Route124_DivingTreasureHuntersHouse_Text_ItsADeal:
-	.string "It's a done deal!\n"
-	.string "Use that wisely!$"
+	.string "¡Trato hecho!\n"
+	.string "¡Úsalo con sabiduría!$"
 
 Route124_DivingTreasureHuntersHouse_Text_TradeSomethingElse:
 	.string "Do you want to trade something else?$"
 
 Route124_DivingTreasureHuntersHouse_Text_BagFull:
-	.string "Whoops, your BAG's full.\n"
-	.string "Get rid of some items, friend!$"
+	.string "Vaya, tu MOCHILA está llena.\n"
+	.string "¡Tira algunas cosas, amigo!$"
 
 Route124_DivingTreasureHuntersHouse_Text_ComeBackIfYouChangeMind:
-	.string "No? That's a downer.\n"
-	.string "Well, if you change your mind, come back.$"
+	.string "¿No? Qué mal.\n"
+	.string "Si cambias de opinión, vuelve.$"
 
 Route124_DivingTreasureHuntersHouse_Text_ShardTradeBoard:
-	.string "{CLEAR_TO 0x0a}Wanted item{CLEAR_TO 0x7c}Trade item\n"
-	.string "{CLEAR_TO 0x0f}RED SHARD{CLEAR_TO 0x59}{LEFT_ARROW}{RIGHT_ARROW}{CLEAR_TO 0x7b}FIRE STONE{CLEAR_TO 0xc8}\p"
-	.string "{CLEAR_TO 0x0a}Wanted item{CLEAR_TO 0x7c}Trade item\n"
-	.string "{CLEAR_TO 0x06}YELLOW SHARD{CLEAR_TO 0x59}{LEFT_ARROW}{RIGHT_ARROW}{CLEAR_TO 0x73}THUNDERSTONE{CLEAR_TO 0xc8}\p"
-	.string "{CLEAR_TO 0x0a}Wanted item{CLEAR_TO 0x7c}Trade item\n"
-	.string "{CLEAR_TO 0x0c}BLUE SHARD{CLEAR_TO 0x59}{LEFT_ARROW}{RIGHT_ARROW}{CLEAR_TO 0x79}WATER STONE{CLEAR_TO 0xc8}\p"
-	.string "{CLEAR_TO 0x0a}Wanted item{CLEAR_TO 0x7c}Trade item\n"
-	.string "{CLEAR_TO 0x08}GREEN SHARD{CLEAR_TO 0x59}{LEFT_ARROW}{RIGHT_ARROW}{CLEAR_TO 0x7b}LEAF STONE$"
+	.string "{CLEAR_TO 0x0a}Objeto buscado{CLEAR_TO 0x7c}Objeto cambio\n"
+	.string "{CLEAR_TO 0x0f}FRAGMENTO ROJO{CLEAR_TO 0x59}{LEFT_ARROW}{RIGHT_ARROW}{CLEAR_TO 0x7b}PIEDRA FUEGO{CLEAR_TO 0xc8}\p"
+	.string "{CLEAR_TO 0x0a}Objeto buscado{CLEAR_TO 0x7c}Objeto cambio\n"
+	.string "{CLEAR_TO 0x06}FRAGMENTO AMARILLO{CLEAR_TO 0x59}{LEFT_ARROW}{RIGHT_ARROW}{CLEAR_TO 0x73}PIEDRA RAYO{CLEAR_TO 0xc8}\p"
+	.string "{CLEAR_TO 0x0a}Objeto buscado{CLEAR_TO 0x7c}Objeto cambio\n"
+	.string "{CLEAR_TO 0x0c}FRAGMENTO AZUL{CLEAR_TO 0x59}{LEFT_ARROW}{RIGHT_ARROW}{CLEAR_TO 0x79}PIEDRA AGUA{CLEAR_TO 0xc8}\p"
+	.string "{CLEAR_TO 0x0a}Objeto buscado{CLEAR_TO 0x7c}Objeto cambio\n"
+	.string "{CLEAR_TO 0x08}FRAGMENTO VERDE{CLEAR_TO 0x59}{LEFT_ARROW}{RIGHT_ARROW}{CLEAR_TO 0x7b}PIEDRA HOJA$"

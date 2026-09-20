@@ -437,14 +437,14 @@ static const u8 *const sTradeReactionTexts[GENDER_COUNT][4] = {
 ALIGNED(4) static const u8 sText_XCheckedTradingBoard[] = _("{STR_VAR_1} checked the\nTRADING BOARD.\p");
 ALIGNED(4) static const u8 sText_RegisterMonAtTradingBoard[] = _("Welcome to the TRADING BOARD.\pYou may register your POKéMON\nand offer it up for a trade.\pWould you like to register one of\nyour POKéMON?");
 ALIGNED(4) static const u8 sText_TradingBoardInfo[] = _("This TRADING BOARD is used for\n"
-                                                        "offering a POKéMON for a trade.\p"
-                                                        "All you need to do is register a\n"
-                                                        "POKéMON for a trade.\p"
-                                                        "Another TRAINER may offer a party\n"
-                                                        "POKéMON in return for the trade.\p"
-                                                        "We hope you will register POKéMON\n"
-                                                        "and trade them with many, many\l"
-                                                        "other TRAINERS.\p"
+                                                        "ofreciendo un POKéMON para canje.\p"
+                                                        "Solo tienes que registrar un\n"
+                                                        "POKéMON para un intercambio.\p"
+                                                        "Otro ENTRENADOR podría ofrecer un\n"
+                                                        "POKéMON a cambio del trueque.\p"
+                                                        "Esperamos que registres POKéMON\n"
+                                                        "y los cambies con muchos otros.\l"
+                                                        "conocer a otros ENTRENADORES.\p"
                                                         "Would you like to register one of\nyour POKéMON?");
 ALIGNED(4) static const u8 sText_ThankYouForRegistering[] = _("We have registered your POKéMON for\ntrade on the TRADING BOARD.\pThank you for using this service!\p"); // unused
 ALIGNED(4) static const u8 sText_NobodyHasRegistered[] = _("Nobody has registered any POKéMON\nfor trade on the TRADING BOARD.\p\n"); // unused

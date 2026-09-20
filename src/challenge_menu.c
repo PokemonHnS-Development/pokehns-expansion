@@ -355,7 +355,7 @@ static const u8 *const sChoices_OriginalModern[] = {
 
 static const u8 sText_TopBar_Left[]   = _("{L_BUTTON}PREVIOUS");
 static const u8 sText_TopBar_Right[]  = _("{R_BUTTON}NEXT");
-static const u8 sText_TopBar_Save[]   = _("{R_BUTTON}SAVE");
+static const u8 sText_TopBar_Save[]   = _("{R_BUTTON}GUARDAR");
 static const u8 sText_TopBar_Cancel[] = _("{B_BUTTON}CANCEL");
 
 // =============================================================================
@@ -966,7 +966,7 @@ static const struct ChallengeMenuItem sTabItems_Nuzlocke[] = {
 // DIFFICULTY descriptions + table
 // =============================================================================
 
-static const u8 sText_Desc_PartyLimit[] = _("Limits the amount of {PKMN} in the\nparty. 1 has visual bugs in DOUBLES.");
+static const u8 sText_Desc_PartyLimit[] = _("Limita la cantidad de {PKMN} en el\nequipo. 1 tiene errores en DOBLES.");
 static const u8 *const sDesc_PartyLimit[] = {
     sText_Desc_PartyLimit, sText_Desc_PartyLimit, sText_Desc_PartyLimit,
     sText_Desc_PartyLimit, sText_Desc_PartyLimit, sText_Desc_PartyLimit,
@@ -1120,7 +1120,7 @@ static const u8 *const sDesc_EvoLimit[] = {
 #define ONE_TYPE_OFF 31
 #define EVO_LINE_TYPE_SEARCH_DEPTH 4 // deepest evolution chain worth walking
 
-static const u8 sText_Desc_OneType[] = _("Allow only one {PKMN} type the\nplayer can capture and use.");
+static const u8 sText_Desc_OneType[] = _("Permite solo un tipo de {PKMN} que\nel jugador pueda capturar y usar.");
 static const u8 *const sDesc_OneType[] = {
     sText_Desc_OneType, sText_Desc_OneType, sText_Desc_OneType, sText_Desc_OneType,
     sText_Desc_OneType, sText_Desc_OneType, sText_Desc_OneType, sText_Desc_OneType,

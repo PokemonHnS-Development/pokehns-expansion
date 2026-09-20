@@ -111,12 +111,12 @@ Route18_EastEntrance_1F_Movement_WalkRight::
 
 Route18_EastEntrance_1F_Text_NeedBicycleForCyclingRoad::
 	.string "You need a BICYCLE to go out on\n"
-	.string "CYCLING ROAD!$"
+	.string "CICLOVÍA!$"
 
 Route18_EastEntrance_1F_Text_CyclingRoadAllUphillFromHere::
 	.string "CYCLING ROAD is all uphill from\n"
-	.string "here.$"
+	.string "para llegar aquí.$"
 
 Route18_EastEntrance_1F_Text_ExcuseMe::
-	.string "Excuse me!$"
+	.string "¡Disculpa!$"
 

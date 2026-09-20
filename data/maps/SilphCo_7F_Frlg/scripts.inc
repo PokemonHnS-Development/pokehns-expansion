@@ -272,7 +272,7 @@ SilphCo_7F_Text_BadIfTeamRocketTookOver::
 	.string "took over SILPH or our POKéMON.$"
 
 SilphCo_7F_Text_WowYouChasedOffTeamRocket::
-	.string "Wow!\p"
+	.string "¡Guau!\p"
 	.string "You chased off TEAM ROCKET all by\n"
 	.string "yourself?$"
 
@@ -283,7 +283,7 @@ SilphCo_7F_Text_ReallyDangerousHere::
 	.string "You can't!$"
 
 SilphCo_7F_Text_ThankYouSoMuch::
-	.string "Thank you so much!$"
+	.string "¡Muchas gracias!$"
 
 SilphCo_7F_Text_Grunt3Intro::
 	.string "Uh-oh!\n"
@@ -324,7 +324,7 @@ SilphCo_7F_Text_Grunt2Intro::
 	.string "That must be you!$"
 
 SilphCo_7F_Text_Grunt2Defeat::
-	.string "Fine!\n"
+	.string "¡Bien!\n"
 	.string "I lost!$"
 
 SilphCo_7F_Text_Grunt2PostBattle::

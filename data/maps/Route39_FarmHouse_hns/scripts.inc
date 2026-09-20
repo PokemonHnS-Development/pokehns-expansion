@@ -96,7 +96,7 @@ Route39_Text_FarmerMBuyMilk:
 	.string "¥500.$"
 
 Route39_Text_FarmerMGotMilk:
-	.string "Here ya go!\n"
+	.string "¡Aquí tiene!\n"
 	.string "Drink up'n enjoy!$"
 
 Route39_Text_FarmerMNoMoney:
@@ -107,7 +107,7 @@ Route39_Text_FarmerMNoRoom:
 	.string "I reckon yer PACK's full.$"
 
 Route39_Text_FarmerMNoSale:
-	.string "You don't want it?\n"
+	.string "¿No lo quieres?\n"
 	.string "Come again, hear?$"
 
 Route39FarmHouse_Text_WouldYouLikeAnother:

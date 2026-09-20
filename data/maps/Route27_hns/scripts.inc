@@ -254,7 +254,7 @@ Route27_Text_PsychicGilbertBeaten:
 
 Route27_Text_PsychicGilbertAfter:
     .string "With your skills, you'll do well at\n"
-    .string "the LEAGUE.\p"
+    .string "LIGA.\p"
     .string "That's what my premonition says.$"
 
 Route27_Text_BirdKeeperJoseSeen:
@@ -293,21 +293,21 @@ Route27_Text_JoseGaveItem:
     .string "anything else!$"
 
 Route27_Text_JoseNoRoom:
-    .string "Hmm, your BAG is full.\p"
-    .string "Come back when you have room.$"
+    .string "Hmm, tu MOCHILA está llena.\p"
+    .string "Vuelve cuando tengas espacio.$"
 
 TohjoFalls_Text_Sign:
     .string "TOHJO FALLS\p"
-    .string "THE LINK BETWEEN KANTO AND JOHTO$"
+    .string "EL VÍNCULO ENTRE KANTO Y JOHTO$"
 
 Route27_Text_FisherScottSeen:
-    .string "I'm feeling great today!\p"
-    .string "I feel like I could boot even the\n"
-    .string "LEAGUE CHAMP!$"
+    .string "¡Me siento genial hoy!\p"
+    .string "Siento que podría vencer hasta al\n"
+    .string "¡CAMPEÓN DE LA LIGA!$"
 
 Route27_Text_FisherScottBeaten:
     .string "No! Not in this battle!$"
 
 Route27_Text_FisherScottAfter:
-    .string "Just like in fishing, it's all over\n"
-    .string "in POKéMON if you give up.$"
+    .string "Como al pescar, todo acaba en\n"
+    .string "POKéMON si te rindes.$"

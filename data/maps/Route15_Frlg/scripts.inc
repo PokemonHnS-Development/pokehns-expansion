@@ -68,7 +68,7 @@ Route15_Text_GracePostBattle::
 	.string "I'm a big girl now.$"
 
 Route15_Text_OliviaIntro::
-	.string "I raise POKéMON for protection\n"
+	.string "Crío POKéMON para protegerme\n"
 	.string "because I live alone.$"
 
 Route15_Text_OliviaDefeat::
@@ -81,7 +81,7 @@ Route15_Text_OliviaPostBattle::
 	.string "It's so reassuring.$"
 
 Route15_Text_ErnestIntro::
-	.string "Hey, kid! C'mon!\n"
+	.string "¡Oye, niño! ¡Ven!\n"
 	.string "I just got these off some loser!$"
 
 Route15_Text_ErnestDefeat::
@@ -93,8 +93,8 @@ Route15_Text_ErnestPostBattle::
 	.string "TEAM ROCKET RULES!$"
 
 Route15_Text_AlexIntro::
-	.string "Fork over all your cash when you\n"
-	.string "lose to me, kid!$"
+	.string "¡Dame todo tu dinero cuando\n"
+	.string "pierdas contra mí, niño!$"
 
 Route15_Text_AlexDefeat::
 	.string "That can't be true!$"
@@ -104,7 +104,7 @@ Route15_Text_AlexPostBattle::
 	.string "Don't take me all serious.$"
 
 Route15_Text_CeliaIntro::
-	.string "What's cool and happening?\n"
+	.string "¿Qué es lo más genial ahora?\n"
 	.string "Trading POKéMON!$"
 
 Route15_Text_CeliaDefeat::

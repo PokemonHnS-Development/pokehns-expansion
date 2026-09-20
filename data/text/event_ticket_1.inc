@@ -1,24 +1,24 @@
 EventTicket_Text_ShowOldSeaMap:
-	.string "The ferry to SLATEPORT is…\p"
-	.string "I beg your pardon?\n"
-	.string "Can we sail to this place on the map?\p"
-	.string "I know someone who will help you better.\n"
+	.string "El ferry a PORTALAGUNA es...\p"
+	.string "¿Perdón?\n"
+	.string "¿Podemos ir a este lugar del mapa?\p"
+	.string "Conozco a alguien que te ayudará.\n"
 	.string "Please wait.$"
 
 EventTicket_Text_ThatPass:
-	.string "The ferry to SLATEPORT is…\p"
+	.string "El ferry a PORTALAGUNA es...\p"
 	.string "Oh?\n"
-	.string "That PASS…$"
+	.string "Ese PASE...$"
 
 EventTicket_Text_ShowEonTicket:
-	.string "Aye, mate, are you the one who brought\n"
-	.string "that mighty odd PASS?\p"
-	.string "I'll tell you, you're trying to reach a\n"
-	.string "tiny spit of an island far in the south.\p"
-	.string "There's no telling what we'll encounter\n"
-	.string "once we reach there, aye.\l"
-	.string "That shivers my timbers!\p"
-	.string "All aboard!$"
+	.string "¡Hola! ¿Tú eres quien trajo\n"
+	.string "ese PASE tan extraño?\p"
+	.string "Te diré, buscas llegar a una\n"
+	.string "isla muy pequeña al sur.\p"
+	.string "No sabemos qué encontraremos\n"
+	.string "cuando lleguemos allá.\l"
+	.string "¡Eso me da escalofríos!\p"
+	.string "¡Todos a bordo!$"
 
 #if IS_HNS
 EventTicket_Text_SouthernIslandSailBack:

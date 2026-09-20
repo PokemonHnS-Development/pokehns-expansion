@@ -13,7 +13,7 @@ SSAqua_RoomSW_EventScript_Clyde::
 
 SSAqua_RoomSW_Text_BeautyCassieSeen:
     .string "I'm trying to forget my woes.\n"
-    .string "Let's battle!$"
+    .string "¡A luchar!$"
 
 SSAqua_RoomSW_Text_BeautyCassieBeaten:
     .string "My heart weeps…$"

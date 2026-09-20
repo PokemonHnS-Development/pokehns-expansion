@@ -97,7 +97,7 @@ VictoryRoad_2F_Text_DaisukeDefeat::
 
 VictoryRoad_2F_Text_DaisukePostBattle::
 	.string "If you get stuck, try moving some\n"
-	.string "boulders around.$"
+	.string "rocas.$"
 
 VictoryRoad_2F_Text_NelsonIntro::
 	.string "Ah, so you wish to challenge the\n"
@@ -124,7 +124,7 @@ VictoryRoad_2F_Text_GregoryIntro::
 	.string "Is VICTORY ROAD too tough?$"
 
 VictoryRoad_2F_Text_GregoryDefeat::
-	.string "Well done!$"
+	.string "¡Bien hecho!$"
 
 VictoryRoad_2F_Text_GregoryPostBattle::
 	.string "Many TRAINERS give up their\n"

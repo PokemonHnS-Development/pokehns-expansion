@@ -63,7 +63,7 @@ RocketHideout_B1F_EventScript_RemoveBarrier::
 	return
 
 RocketHideout_B1F_Text_Grunt1Intro::
-	.string "Who are you?\n"
+	.string "¿Quién eres?\n"
 	.string "How did you get here?$"
 
 RocketHideout_B1F_Text_Grunt1Defeat::

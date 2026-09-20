@@ -250,7 +250,7 @@ static const char sASCII_RecoverCmds[][16] = {
     "RECOVER START ",
     "DISSCONECT    ",
     "RECOVER SUUSES",
-    "RECOVER FAILED"
+    "ERROR RECUPERACIÓN"
 };
 
 // List of additional tasks to destroy (if active) when the RFU shuts down
@@ -261,8 +261,8 @@ static const TaskFunc sShutdownTasks[] = {
 };
 
 static const char sASCII_PokemonSioInfo[] = "PokemonSioInfo";
-static const char sASCII_LinkLossDisconnect[] = "LINK LOSS DISCONNECT!";
-static const char sASCII_LinkLossRecoveryNow[] = "LINK LOSS RECOVERY NOW";
+static const char sASCII_LinkLossDisconnect[] = "¡VÍNCULO PERDIDO!";
+static const char sASCII_LinkLossRecoveryNow[] = "RECUPERANDO VÍNCULO";
 ALIGNED(4) static const char sASCII_30Spaces[] = {"                              "};
 static const char sASCII_15Spaces[] = {"               "};
 static const char sASCII_8Spaces[] = {"        "};

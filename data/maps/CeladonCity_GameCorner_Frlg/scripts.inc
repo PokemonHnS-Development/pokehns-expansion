@@ -465,8 +465,8 @@ CeladonCity_GameCorner_EventScript_UnusableSlotMachine3::
 	end
 
 CeladonCity_GameCorner_Text_CanExchangeCoinsNextDoor::
-	.string "Welcome!\p"
-	.string "You can exchange your COINS for\n"
+	.string "¡Bienvenido!\p"
+	.string "Puedes canjear tus MONEDAS por\n"
 	.string "fabulous prizes next door.$"
 
 CeladonCity_GameCorner_Text_WelcomeBuySomeCoins::
@@ -483,15 +483,15 @@ CeladonCity_GameCorner_Text_SorryDontHaveCoinCase::
 	.string "You don't have a COIN CASE.$"
 
 CeladonCity_GameCorner_Text_CoinCaseIsFull::
-	.string "Whoops!\n"
+	.string "¡Vaya!\n"
 	.string "Your COIN CASE is full.$"
 
 CeladonCity_GameCorner_Text_CantAffordCoins::
 	.string "You can't afford the COINS.$"
 
 CeladonCity_GameCorner_Text_HereAreYourCoins::
-	.string "Thank you.\n"
-	.string "Here are your COINS!$"
+	.string "Gracias.\n"
+	.string "¡Aquí tienes tus MONEDAS!$"
 
 CeladonCity_GameCorner_Text_RumoredTeamRocketRunsThisPlace::
 	.string "Keep this quiet.\p"
@@ -518,10 +518,10 @@ CeladonCity_GameCorner_Text_WinsComeAndGo::
 
 CeladonCity_GameCorner_Text_WinOrLoseItsOnlyLuck::
 	.string "These slot games…\n"
-	.string "Win or lose, it's only by luck.$"
+	.string "Ganes o pierdas, es solo suerte.$"
 
 CeladonCity_GameCorner_Text_GymGuyAdvice::
-	.string "Hey!\p"
+	.string "¡Hola!\p"
 	.string "You have better things to do,\n"
 	.string "champ in the making!\p"
 	.string "CELADON GYM's LEADER is ERIKA.\p"
@@ -585,7 +585,7 @@ CeladonCity_GameCorner_Text_GruntPostBattle::
 	.string "I better tell BOSS!$"
 
 CeladonCity_GameCorner_Text_SwitchBehindPosterPushIt::
-	.string "Hey!\p"
+	.string "¡Hola!\p"
 	.string "A switch behind the poster!?\n"
 	.string "Let's push it!$"
 
@@ -593,7 +593,7 @@ CeladonCity_GameCorner_Text_CoinCaseIsRequired::
 	.string "A COIN CASE is required…$"
 
 CeladonCity_GameCorner_Text_DontHaveCoinCase::
-	.string "Oops!\n"
+	.string "¡Ups!\n"
 	.string "Don't have the COIN CASE!$"
 
 CeladonCity_GameCorner_Text_SlotMachineWantToPlay::

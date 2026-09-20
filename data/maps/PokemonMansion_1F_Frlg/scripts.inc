@@ -32,11 +32,11 @@ PokemonMansion_1F_EventScript_Johnson::
 	end
 
 PokemonMansion_1F_Text_TedIntro::
-	.string "Who are you?\n"
+	.string "¿Quién eres?\n"
 	.string "There shouldn't be anyone here.$"
 
 PokemonMansion_1F_Text_TedDefeat::
-	.string "Ouch!$"
+	.string "¡Ay!$"
 
 PokemonMansion_1F_Text_TedPostBattle::
 	.string "A key? I don't know what you're\n"

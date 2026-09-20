@@ -1,58 +1,58 @@
 MoveRelearner_Text_WouldLearnNewMoves:
-	.string "Hi, I'm the Move Relearner.\n"
-	.string "Would you like to learn new moves?$"
+	.string "Hola, soy el Recordador de Movs.\n"
+	.string "¿Quieres aprender nuevos movimientos?$"
 
 MoveRelearner_Text_LevelUpMoves:
-	.string "Level Up Moves$"
+	.string "Movs. por nivel$"
 
 MoveRelearner_Text_EggMoves:
-	.string "Egg Moves$"
+	.string "Movs. de Huevo$"
 
 MoveRelearner_Text_TMMoves:
-	.string "TM Moves$"
+	.string "Movs. de MT$"
 
 MoveRelearner_Text_TutormoveMoves:
-	.string "Tutor Moves$"
+	.string "Movs. de Tutor$"
 
 MoveRelearner_Text_SeeYa:
 	.string "See ya!$"
 
 MoveRelearner_Text_AnythingElse:
-	.string "Is there anything else I may do for you?$"
+	.string "¿Hay algo más que pueda hacer por ti?$"
 
 MoveRelearner_Text_ChoosePkmn:
-	.string "Please choose your Pokémon.$"
+	.string "Elige a tu POKéMON.$"
 
 MoveRelearner_Text_HaveNoPkmn:
-	.string "You have no Pokémon.$"
+	.string "No tienes POKéMON.$"
 
 MoveRelearner_Text_CantTeachMoveToEgg:
-	.string "Sorry…\n"
-	.string "But an Egg can't learn moves.$"
+	.string "Lo siento...\n"
+	.string "Un Huevo no puede aprender movs.$"
 
 MoveRelearner_Text_CantTeachMoveToPkmn:
-	.string "Sorry…\p"
-	.string "It doesn't appear as if I have any move\n"
-	.string "I can teach that Pokémon.$"
+	.string "Lo siento...\p"
+	.string "No parece que tenga ningún movimiento\n"
+	.string "Puedo enseñarle a ese POKéMON.$"
 
 MoveRelearner_Text_LevelUpMoveLWR::
-	.string "level up move$"
+	.string "movimiento por nivel$"
 
 MoveRelearner_Text_EggMoveLWR::
-	.string "egg move$"
+	.string "mov. de huevo$"
 
 MoveRelearner_Text_TMMoveLWR::
-	.string "TM move$"
+	.string "mov. de MT$"
 
 MoveRelearner_Text_TutorMoveLWR::
-	.string "tutor move$"
+	.string "mov. de tutor$"
 
 MoveRelearner_Text_MoveLWR::
-	.string "move$"
+	.string "movimiento$"
 
 MoveRelearner_Text_WhichXmoveShouldTeach:
-	.string "Which {STR_VAR_3} should I teach?$"
+	.string "¿Qué {STR_VAR_3} debo enseñar?$"
 
 MoveRelearner_Text_ThankYouComeAgain:
-	.string "Thank you for using our services.\n"
+	.string "Gracias por usar nuestros servicios.\n"
 	.string "Please come again!$"

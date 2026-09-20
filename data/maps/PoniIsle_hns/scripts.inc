@@ -388,14 +388,14 @@ Alola_Poni_BattleExeggutor_Text_0:
 	.string "Gaah-aah!$"
 
 Alola_Poni_Island_Sign_Text_0:
-	.string "PONI ISLE$"
+	.string "ISLA PONI$"
 
 Alola_Poni_TotemBattle_Text_0:
 	.string "Buzz!!$"
 
 Alola_Poni_TotemBattle_Text_1:
 	.string "Totem ELECTIVIRE was defeated!\n"
-	.string "It scampered off somewhere…$"
+	.string "Salió corriendo a algún lugar…$"
 
 PoniIsle_hns_Movement_FacePlayerUpAfterTotemWarp:
 	face_up
@@ -403,26 +403,26 @@ PoniIsle_hns_Movement_FacePlayerUpAfterTotemWarp:
 
 
 Alola_Poni_Totem_sign_Text_0:
-	.string "The totem is emanating a strong\n"
-	.string "energy…\p"
-	.string "Touch the totem to teleport to another\n"
-	.string "Isle?$"
+	.string "El tótem emana una energía\n"
+	.string "muy fuerte…\p"
+	.string "¿Tocas el tótem para teletransportarte\n"
+	.string "a otra isla?$"
 
 Alola_Poni_Totem_sign_Text_1:
-	.string "MELEMELE ISLE$"
+	.string "ISLA MELEMELE$"
 
 Alola_Poni_Totem_sign_Text_2:
-	.string "AKALA ISLE$"
+	.string "ISLA AKALA$"
 
 Alola_Poni_Totem_sign_Text_3:
-	.string "ULA'ULA ISLE$"
+	.string "ISLA ULA'ULA$"
 
 Alola_Poni_Totem_sign_Text_4:
 	.string "CANCEL$"
 
 Alola_Poni_Totem_sign_Text_5:
-	.string "A strange totem stands here,\n"
-	.string "power is emanating from it…$"
+	.string "Hay un tótem extraño aquí,\n"
+	.string "emana un gran poder de él…$"
 
 Alola_Poni_BattleVsTapuFini_Text_0:
 	.string "Fiiin!$"
@@ -452,5 +452,5 @@ Alola_Poni_NPC_girl_Text_0:
 	.string "The wilderness just speaks for itself!$"
 
 Alola_Poni_Bench_Heal_Text_0:
-	.string "Would you like to take a rest on this\n"
-	.string "bench?$"
+	.string "¿Te gustaría descansar un poco en\n"
+	.string "este banco?$"

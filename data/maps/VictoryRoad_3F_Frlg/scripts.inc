@@ -70,11 +70,11 @@ Text_DoubleEdgeTeach::
 
 Text_DoubleEdgeDeclined::
 	.string "I'll teach you the technique\n"
-	.string "anytime.$"
+	.string "en cualquier momento.$"
 
 Text_DoubleEdgeWhichMon::
 	.string "Which POKéMON should I teach\n"
-	.string "DOUBLE-EDGE?$"
+	.string "CABEZA DE HIERRO?$"
 
 Text_DoubleEdgeTaught::
 	.string "Keep that drive going for the\n"
@@ -102,7 +102,7 @@ VictoryRoad_3F_Text_AlexaDefeat::
 
 VictoryRoad_3F_Text_AlexaPostBattle::
 	.string "By fighting tough battles, you get\n"
-	.string "stronger.$"
+	.string "más fuerte.$"
 
 VictoryRoad_3F_Text_CarolineIntro::
 	.string "I'll show you just how good you\n"

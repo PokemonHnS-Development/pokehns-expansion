@@ -300,7 +300,7 @@ VermilionCity_Gym_Text_LtSurgePostBattle::
 	.string "A little word of advice, kid!\p"
 	.string "Electricity is sure powerful!\p"
 	.string "But, it's useless against GROUND-\n"
-	.string "type POKéMON!$"
+	.string "POKéMON tipo DRAGÓN!$"
 
 VermilionCity_Gym_Text_ExplainThunderBadgeTakeThis::
 	.string "The THUNDERBADGE cranks up your\n"
@@ -328,8 +328,8 @@ VermilionCity_Gym_Text_LtSurgeDefeat::
 
 VermilionCity_Gym_Text_TuckerIntro::
 	.string "When I was in the Army, LT. SURGE\n"
-	.string "was my strict CO.\p"
-	.string "He was a hard taskmaster.$"
+	.string "TEN. SURGE era mi superior.\p"
+	.string "Era un jefe muy exigente.$"
 
 VermilionCity_Gym_Text_TuckerDefeat::
 	.string "Stop!\n"
@@ -338,7 +338,7 @@ VermilionCity_Gym_Text_TuckerDefeat::
 VermilionCity_Gym_Text_TuckerPostBattle::
 	.string "It's not easy opening that door.\p"
 	.string "LT. SURGE was always famous for\n"
-	.string "his cautious nature in the Army.$"
+	.string "por ser cauteloso en el ejército.$"
 
 VermilionCity_Gym_Text_BailyIntro::
 	.string "I'm a lightweight, but I'm good\n"
@@ -358,12 +358,12 @@ VermilionCity_Gym_Text_DwayneIntro::
 	.string "Not even if you're good!$"
 
 VermilionCity_Gym_Text_DwayneDefeat::
-	.string "Wow!\n"
+	.string "¡Guau!\n"
 	.string "Surprised me!$"
 
 VermilionCity_Gym_Text_DwaynePostBattle::
 	.string "LT. SURGE installed the traps in\n"
-	.string "the GYM himself.\p"
+	.string "GIMNASIO él mismo.\p"
 	.string "He set up double locks everywhere.\n"
 	.string "Let me give you a hint.\p"
 	.string "When you open the first lock, the\n"
@@ -371,51 +371,51 @@ VermilionCity_Gym_Text_DwaynePostBattle::
 
 VermilionCity_Gym_Text_GymGuyAdvice::
 	.string "Yo!\n"
-	.string "Champ in the making!\p"
-	.string "LT. SURGE has a nickname.\p"
-	.string "People refer to him as the\n"
-	.string "Lightning American!\p"
-	.string "He's an expert on electric\n"
-	.string "POKéMON.\p"
+	.string "¡Un futuro campeón!\p"
+	.string "LT. SURGE tiene un apodo.\p"
+	.string "La gente lo llama el\n"
+	.string "¡Americano Relámpago!\p"
+	.string "Es un experto en tipos eléctrico.\n"
+	.string "POKéMON planta.\p"
 	.string "BIRD/WATER-type POKéMON match\n"
-	.string "poorly against the ELECTRIC type.\p"
-	.string "Beware of paralysis, too.\p"
-	.string "LT. SURGE is very cautious.\p"
-	.string "He's locked himself in, so it won't\n"
-	.string "be easy getting to him.$"
+	.string "están en desventaja ante el ELÉCTRICO.\p"
+	.string "Cuidado también con la parálisis.\p"
+	.string "LT. SURGE es muy cauteloso.\p"
+	.string "Se encerró, así que no será\n"
+	.string "fácil llegar hasta él.$"
 
 VermilionCity_Gym_Text_GymGuyPostVictory::
-	.string "Whew!\n"
+	.string "¡Uff!\n"
 	.string "That match was electric!$"
 
 VermilionCity_Gym_Text_GymStatue::
-	.string "VERMILION POKéMON GYM\n"
-	.string "LEADER: LT. SURGE\p"
-	.string "WINNING TRAINERS:\n"
+	.string "GIMNASIO POKéMON VERMILIAN\n"
+	.string "LÍDER: TENIENTE SURGE\p"
+	.string "ENTRENADORES GANADORES:\n"
 	.string "{RIVAL}$"
 
 VermilionCity_Gym_Text_GymStatuePlayerWon::
-	.string "VERMILION POKéMON GYM\n"
-	.string "LEADER: LT. SURGE\p"
-	.string "WINNING TRAINERS:\n"
+	.string "GIMNASIO POKéMON VERMILIAN\n"
+	.string "LÍDER: TENIENTE SURGE\p"
+	.string "ENTRENADORES GANADORES:\n"
 	.string "{RIVAL}, {PLAYER}$"
 
 VermilionCity_Gym_Text_NopeOnlyTrashHere::
-	.string "Nope!\n"
-	.string "There's only trash here.$"
+	.string "¡No!\n"
+	.string "Aquí solo hay basura.$"
 
 VermilionCity_Gym_Text_SwitchUnderTrashFirstLockOpened::
-	.string "Hey! There's a switch under the\n"
-	.string "trash! Turn it on!\p"
-	.string "The first electric lock opened!$"
+	.string "¡Oye! ¡Hay un interruptor bajo la\n"
+	.string "basura! ¡Actívalo!\p"
+	.string "¡Se abrió el primer cerrojo!$"
 
 VermilionCity_Gym_Text_SecondLockOpened::
-	.string "The second electric lock opened!\n"
-	.string "The motorized door opened!$"
+	.string "¡Se abrió el segundo cerrojo!\n"
+	.string "¡Se abrió la puerta motorizada!$"
 
 VermilionCity_Gym_Text_OnlyTrashLocksWereReset::
-	.string "Nope!\n"
-	.string "There's only trash here.\p"
-	.string "Hey!\n"
-	.string "The electric locks were reset!$"
+	.string "¡No!\n"
+	.string "Solo hay basura aquí.\p"
+	.string "¡Hola!\n"
+	.string "¡Se reiniciaron los cerrojos!$"
 

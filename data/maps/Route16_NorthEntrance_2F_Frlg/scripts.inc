@@ -83,8 +83,8 @@ Route16_NorthEntrance_2F_Text_GiveAmuletCoinIfCaught40::
 
 Route16_NorthEntrance_2F_Text_GreatHereYouGo::
 	.string "Great! You have caught or owned\n"
-	.string "{STR_VAR_3} kinds of POKéMON!\p"
-	.string "Congratulations!\n"
+	.string "{STR_VAR_3} tipos de POKéMON!\p"
+	.string "¡Felicidades!\n"
 	.string "Here you go!$"
 
 Route16_NorthEntrance_2F_Text_ReceivedAmuletCoinFromAide::

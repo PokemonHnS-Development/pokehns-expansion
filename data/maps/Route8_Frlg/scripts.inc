@@ -17,7 +17,7 @@ Route8_Text_AidanPostBattle::
 	.string "I am better at school than this!$"
 
 Route8_Text_StanIntro::
-	.string "All right!\n"
+	.string "¡Muy bien!\n"
 	.string "Let's play a game!$"
 
 Route8_Text_StanDefeat::
@@ -133,7 +133,7 @@ Route8_Text_EliNotEnoughMons::
 
 Route8_Text_AnneIntro::
 	.string "ANNE: We'll shock you with our twin\n"
-	.string "power!$"
+	.string "tu poder!$"
 
 Route8_Text_AnneDefeat::
 	.string "ANNE: Our twin power…$"

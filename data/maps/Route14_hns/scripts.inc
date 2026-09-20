@@ -233,54 +233,54 @@ Route14_Text_Eusine:
 	.string "But I want to be an honest trainer\n"
 	.string "in front of SUICUNE!\p"
 	.string "That's why I am sharing a clue with\n"
-	.string "you.\p"
+	.string "vencerte.\p"
 	.string "It seems that...\n"
 	.string "SUICUNE prefers a hilly place...\l"
-	.string "Near water...\l"
-	.string "Somewhere north...\p"
-	.string "I don't know exactly where yet.\n"
-	.string "It will just be you and me!\p"
-	.string "Who'll find it first?\n"
-	.string "I challenge you!$"
+	.string "Cerca del agua...\l"
+	.string "En algún lugar al norte...\p"
+	.string "Aún no sé exactamente dónde.\n"
+	.string "¡Seremos solo tú y yo!\p"
+	.string "¿Quién lo encontrará primero?\n"
+	.string "¡Te desafío!$"
 
 Route14_Text_PokefanmTrevorSeen:
-	.string "Hi. Did you know…?\p"
-	.string "POKéMON get more friendly if you\n"
-	.string "train them in a place that they\l"
-	.string "remember.$"
+	.string "Hola. ¿Sabías que...?\p"
+	.string "Los POKéMON son más amistosos si\n"
+	.string "los entrenas en un lugar que\l"
+	.string "recuerden.$"
 
 Route14_Text_PokefanmTrevorBeaten:
 	.string "Where did I meet this SCIZOR?$"
 
 Route14_Text_PokefanmTrevorAfterBattle:
-	.string "If only there were an easy way to\n"
-	.string "identify where I got my POKéMON…$"
+	.string "Ojalá hubiera una forma fácil de\n"
+	.string "saber dónde obtuve mis POKéMON...$"
 
 Route14_Text_TrevorRegister:
-	.string "You're interesting!\n"
-	.string "Can I have your number?$"
+	.string "¡Eres interesante!\n"
+	.string "¿Me das tu número?$"
 
 Route14_Text_TrevorRematchIntro:
-	.string "I've been training with my\n"
-	.string "POKéMON in familiar places!$"
+	.string "¡He entrenado con mis\n"
+	.string "POKéMON en sitios conocidos!$"
 
 Route14_Text_TrevorRematchDefeat:
-	.string "Maybe I need new places…$"
+	.string "Tal vez necesite sitios nuevos…$"
 
 Route14_Text_TrevorPostRematch:
-	.string "Friendship makes POKéMON\n"
-	.string "stronger. I'm sure of it!$"
+	.string "La amistad hace que los POKéMON\n"
+	.string "sean más fuertes. ¡Lo sé!$"
 
 Route14_Text_PokefanmCarterSeen:
-	.string "Let me tell you, I had a hard time\n"
-	.string "catching my prized POKéMON.$"
+	.string "Te cuento que me costó mucho\n"
+	.string "atrapar a mi POKéMON favorito.$"
 
 Route14_Text_PokefanmCarterBeaten:
 	.string "Awaaah!$"
 
 Route14_Text_PokefanmCarterAfterBattle:
 	.string "TOTODILE, CYNDAQUIL, CHIKORITA…\p"
-	.string "I think that's a well-balanced mix.$"
+	.string "Creo que es una mezcla equilibrada.$"
 
 Route14_Text_CarterRegister:
 	.string "You know your starters!\n"
@@ -299,7 +299,7 @@ Route14_Text_CarterPostRematch:
 
 Route14_Text_BirdKeeperRoySeen:
 	.string "My dream is to fly with my beloved\n"
-	.string "bird POKéMON.$"
+	.string "POKéMON ave.$"
 
 Route14_Text_BirdKeeperRoyBeaten:
 	.string "I can dream, but I can't ever fly…$"

@@ -95,7 +95,7 @@ CeruleanCity_House1_Text_AttackStatFlash::
 
 CeruleanCity_House1_Text_ObeyLv30Cut::
 	.string "POKéMON up to Lv. 30 will obey\n"
-	.string "you.\p"
+	.string "vencerte.\p"
 	.string "That includes even outsiders you\n"
 	.string "obtain in trades.\p"
 	.string "POKéMON of higher levels will\n"
@@ -111,7 +111,7 @@ CeruleanCity_House1_Text_SpeedStatFly::
 
 CeruleanCity_House1_Text_ObeyLv50Strength::
 	.string "POKéMON up to Lv. 50 will obey\n"
-	.string "you.\p"
+	.string "vencerte.\p"
 	.string "That includes even outsiders you\n"
 	.string "obtain in trades.\p"
 	.string "POKéMON of higher levels will\n"
@@ -127,7 +127,7 @@ CeruleanCity_House1_Text_DefenseStatSurf::
 
 CeruleanCity_House1_Text_ObeyLv70RockSmash::
 	.string "POKéMON up to Lv. 70 will obey\n"
-	.string "you.\p"
+	.string "vencerte.\p"
 	.string "That includes even outsiders you\n"
 	.string "obtain in trades.\p"
 	.string "POKéMON of higher levels will\n"

@@ -223,14 +223,14 @@ TrainerTower_Lobby_EventScript_BaldingMan::
 @ All Trainer Tower text (Lobby and Roof) is interleaved here
 
 TrainerTower_Lobby_Text_WelcomeToTrainerTower::
-	.string "Hello!\p"
+	.string "¡Hola!\p"
 	.string "Welcome to TRAINER TOWER where\n"
 	.string "TRAINERS gather from all over!$"
 
 TrainerTower_Lobby_Text_TrainersUpToFloorNum::
 	.string "TRAINERS from all over the world\n"
 	.string "gather here to battle.\p"
-	.string "Let me see…\p"
+	.string "Déjame ver...\p"
 	.string "Right now, there are TRAINERS only\n"
 	.string "up to Floor {STR_VAR_1}.$"
 
@@ -239,34 +239,34 @@ TrainerTower_Lobby_Text_TrainersUpEighthFloor::
 	.string "challenge up to the eighth floor.$"
 
 TrainerTower_Lobby_Text_LikeToChallengeTrainers::
-	.string "Would you like to challenge the\n"
-	.string "waiting TRAINERS?$"
+	.string "¿Quieres desafiar a los\n"
+	.string "ENTRENADORES que esperan?$"
 
 TrainerTower_Lobby_Text_StartClockGetSetGo::
 	.string "Okay, I'll get the clock started,\n"
 	.string "so give it everything you have.\p"
-	.string "On your marks…\p"
-	.string "Get set…\p"
+	.string "En sus marcas...\p"
+	.string "Listos...\p"
 	.string "Go!$"
 
 TrainerTower_Lobby_Text_PleaseVisitUsAgain::
 	.string "Please do visit us again!$"
 
 TrainerTower_Lobby_Text_TooBadComeBackTryAgain::
-	.string "That was too bad.\p"
-	.string "I think you put in a tremendous\n"
-	.string "effort in your battling.\p"
-	.string "Please come back and try again!$"
+	.string "Fue una lástima.\p"
+	.string "Creo que pusiste un esfuerzo\n"
+	.string "tremendo en tus batallas.\p"
+	.string "¡Vuelve e inténtalo de nuevo!$"
 
 TrainerTower_Lobby_Text_GiveItYourBest::
 	.string "I hope you give it your best.$"
 
 TrainerTower_Lobby_Text_MoveCounterHereWhenTrainersSwitch::
-	.string "When the TRAINERS switch places,\n"
-	.string "the movement can be hectic.\p"
-	.string "To avoid the stampede, we moved\n"
-	.string "the reception counter here.\p"
-	.string "I'm sorry for the inconvenience.$"
+	.string "Cuando los ENTRENADORES cambian\n"
+	.string "de lugar, todo es un caos.\p"
+	.string "Para evitar el alboroto, pusimos\n"
+	.string "el mostrador de recepción aquí.\p"
+	.string "Siento los inconvenientes.$"
 
 TrainerTower_Roof_Text_ImOwnerBattledPerfectly::
 	.string "Hello…\p"
@@ -298,7 +298,7 @@ TrainerTower_Roof_Text_TookSweetTimeGettingHere::
 TrainerTower_Roof_Text_IdLikeToSeeBetterTime::
 	.string "What I would like to see is a\n"
 	.string "better time out of you…\p"
-	.string "I'm counting on you.\p"
+	.string "Cuento contigo.\p"
 	.string "Until then, farewell…$"
 
 TrainerTower_Text_XMinYZSec::

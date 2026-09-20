@@ -164,7 +164,7 @@ SilphCo_11F_Text_ThatsOurSecretPrototype::
 	.string "It will catch any POKéMON without\n"
 	.string "fail!\p"
 	.string "You should be quiet about using it,\n"
-	.string "though.$"
+	.string "su voz.$"
 
 SilphCo_11F_Text_YouHaveNoRoomForThis::
 	.string "You have no room for this.$"

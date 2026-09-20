@@ -76,24 +76,24 @@ Route10_PowerPlantBackRoom_Text_ManagerIWontForgiveCulprit:
 	.string "Gahahahah!$"
 
 Route10_PowerPlantBackRoom_Text_ManagerThatsThePart:
-	.string "MANAGER: Ah! Yeah!\p"
-	.string "That's the missing PART from my\n"
-	.string "beloved generator! You found it?$"
+	.string "GERENTE: ¡Ah! ¡Sí!\p"
+	.string "¡Es la PIEZA que le faltaba a mi\n"
+	.string "querido generador! ¿La hallaste?$"
 
 Route10_PowerPlantBackRoom_Text_ManagerTakeThisTM:
-	.string "Wahah! Thanks!\p"
-	.string "Here! Take this TM as a reward!$"
+	.string "¡Jajaja! ¡Gracias!\p"
+	.string "¡Toma esta MT como recompensa!$"
 
 Route10_PowerPlantBackRoom_Text_ManagerTM07IsZapCannon:
-	.string "MANAGER: That TM is THUNDER.\p"
-	.string "It's a powerful technique!\p"
-	.string "It's not what anyone would\n"
-	.string "consider accurate, but it packs a\l"
-	.string "wallop!$"
+	.string "GERENTE: Esa MT es RAYO.\p"
+	.string "¡Es una técnica muy poderosa!\p"
+	.string "No es lo que cualquiera\n"
+	.string "consideraría preciso, ¡pero tiene\l"
+	.string "mucha fuerza!$"
 
 Route10_PowerPlantBackRoom_Text_ManagerMyBelovedGenerator:
-	.string "MANAGER: My beloved generator!\p"
-	.string "Keep pumping the electricity out!$"
+	.string "GERENTE: ¡Mi querido generador!\p"
+	.string "¡Sigue bombeando electricidad!$"
 
 Route10_PowerPlantBackRoom_Text_Engineer:
 	.string "This door is unsafe without power.$"

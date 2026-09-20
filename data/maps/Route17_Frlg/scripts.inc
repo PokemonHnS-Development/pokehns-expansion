@@ -39,8 +39,8 @@ Route17_Text_RaulPostBattle::
 	.string "up and selling them.$"
 
 Route17_Text_IsaiahIntro::
-	.string "I'm mighty proud of my bod, kiddo.\n"
-	.string "Come on!$"
+	.string "Estoy orgulloso de mi cuerpo, niño.\n"
+	.string "¡Vamos!$"
 
 Route17_Text_IsaiahDefeat::
 	.string "Whoo!$"
@@ -59,8 +59,8 @@ Route17_Text_VirgilPostBattle::
 	.string "I love racing downhill!$"
 
 Route17_Text_BillyIntro::
-	.string "We're BIKERS!\n"
-	.string "We rule the roads, man!$"
+	.string "¡Somos MOTEROS!\n"
+	.string "¡Mandamos en las rutas, amigo!$"
 
 Route17_Text_BillyDefeat::
 	.string "Smoked!$"
@@ -76,10 +76,10 @@ Route17_Text_NikolasDefeat::
 
 Route17_Text_NikolasPostBattle::
 	.string "I got my VOLTORB at the abandoned\n"
-	.string "POWER PLANT.$"
+	.string "CENTRAL ELÉCTRICA.$"
 
 Route17_Text_ZeekIntro::
-	.string "I leveled up my POKéMON, but it\n"
+	.string "Subí el nivel de mi POKéMON, pero\n"
 	.string "won't evolve. Why?$"
 
 Route17_Text_ZeekDefeat::
@@ -93,14 +93,14 @@ Route17_Text_JamalIntro::
 	.string "I need a little exercise!$"
 
 Route17_Text_JamalDefeat::
-	.string "Whew!\n"
+	.string "¡Uff!\n"
 	.string "Good workout!$"
 
 Route17_Text_JamalPostBattle::
 	.string "I'm sure I lost weight there!$"
 
 Route17_Text_CoreyIntro::
-	.string "Be a rebel!$"
+	.string "¡Sé un rebelde!$"
 
 Route17_Text_CoreyDefeat::
 	.string "Aaaargh!$"
@@ -109,8 +109,8 @@ Route17_Text_CoreyPostBattle::
 	.string "Be ready to fight for your beliefs!$"
 
 Route17_Text_JaxonIntro::
-	.string "Nice BIKE!\n"
-	.string "How's it handle?$"
+	.string "¡Linda BICICLETA!\n"
+	.string "¿Cómo se maneja?$"
 
 Route17_Text_JaxonDefeat::
 	.string "Shoot!$"
@@ -119,8 +119,8 @@ Route17_Text_JaxonPostBattle::
 	.string "The slope makes it hard to steer.$"
 
 Route17_Text_WilliamIntro::
-	.string "Get lost, kid!\n"
-	.string "I'm bushed!$"
+	.string "¡Lárgate, niño!\n"
+	.string "¡Estoy agotado!$"
 
 Route17_Text_WilliamDefeat::
 	.string "Are you satisfied?$"
@@ -133,19 +133,19 @@ Route17_Text_WatchOutForDiscardedItems::
 	.string "Watch out for discarded items.$"
 
 Route17_Text_SameSpeciesGrowDifferentRates::
-	.string "TRAINER TIPS\p"
+	.string "CONSEJOS DE ENTRENADOR\p"
 	.string "All POKéMON are unique.\p"
 	.string "Even POKéMON of the same species\n"
 	.string "and level grow at different rates.$"
 
 Route17_Text_PressBToStayInPlace::
-	.string "TRAINER TIPS\p"
+	.string "CONSEJOS DE ENTRENADOR\p"
 	.string "Press the B Button to stay in place\n"
 	.string "while on a slope.$"
 
 Route17_Text_RouteSign::
 	.string "ROUTE 17\n"
-	.string "CELADON CITY - FUCHSIA CITY$"
+	.string "CIUDAD CELADON - CIUDAD FUXIA$"
 
 Route17_Text_DontThrowGameThrowBalls::
 	.string "It's a notice!\p"
@@ -153,6 +153,6 @@ Route17_Text_DontThrowGameThrowBalls::
 	.string "BALLS instead!$"
 
 Route17_Text_CyclingRoadSign::
-	.string "CYCLING ROAD\n"
+	.string "CICLOVÍA\n"
 	.string "Slope ends here!$"
 

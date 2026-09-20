@@ -32,9 +32,9 @@ CinnabarIsland_PokemonLab_Entrance_EventScript_TestingRoomSign::
 
 CinnabarIsland_Gym_Text_PhotoOfBlaineAndFuji::
 	.string "It's a photo of BLAINE and\n"
-	.string "MR. FUJI.\p"
-	.string "They're standing shoulder to\n"
-	.string "shoulder with big grins.$"
+	.string "SR. FUJI.\p"
+	.string "Están hombro con hombro\n"
+	.string "con grandes sonrisas.$"
 
 CinnabarIsland_PokemonLab_Entrance_Text_StudyMonsExtensively::
 	.string "We study POKéMON extensively\n"

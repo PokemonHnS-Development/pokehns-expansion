@@ -87,7 +87,7 @@ ViridianForest_Text_DougIntro::
 	.string "POKéMON TRAINER!$"
 
 ViridianForest_Text_DougDefeat::
-	.string "Huh?\n"
+	.string "¿Eh?\n"
 	.string "I ran out of POKéMON!$"
 
 ViridianForest_Text_DougPostBattle::
@@ -104,7 +104,7 @@ ViridianForest_Text_SammyDefeat::
 
 ViridianForest_Text_SammyPostBattle::
 	.string "Sometimes, you can find stuff on\n"
-	.string "the ground.\p"
+	.string "hasta los cimientos.\p"
 	.string "I'm looking for the stuff I\n"
 	.string "dropped. Can you help me?$"
 
@@ -137,7 +137,7 @@ ViridianForest_Text_RanOutOfPokeBalls::
 	.string "many POKé BALLS.$"
 
 ViridianForest_Text_AvoidGrassyAreasWhenWeak::
-	.string "TRAINER TIPS\p"
+	.string "CONSEJOS DE ENTRENADOR\p"
 	.string "If your POKéMON are weak and you\n"
 	.string "want to avoid battles, stay away\l"
 	.string "from grassy areas!$"
@@ -147,19 +147,19 @@ ViridianForest_Text_UseAntidoteForPoison::
 	.string "Get it at POKéMON MARTS!$"
 
 ViridianForest_Text_ContactOakViaPCToRatePokedex::
-	.string "TRAINER TIPS\p"
+	.string "CONSEJOS DE ENTRENADOR\p"
 	.string "Contact PROF. OAK via a PC to\n"
 	.string "get your POKéDEX evaluated!$"
 
 ViridianForest_Text_CantCatchOwnedMons::
-	.string "TRAINER TIPS\p"
+	.string "CONSEJOS DE ENTRENADOR\p"
 	.string "You can't catch a POKéMON that\n"
 	.string "belongs to someone else.\p"
 	.string "Throw POKé BALLS only at wild\n"
 	.string "POKéMON to catch them!$"
 
 ViridianForest_Text_WeakenMonsBeforeCapture::
-	.string "TRAINER TIPS\p"
+	.string "CONSEJOS DE ENTRENADOR\p"
 	.string "Weaken POKéMON before attempting\n"
 	.string "capture!\p"
 	.string "When healthy, they may escape!$"

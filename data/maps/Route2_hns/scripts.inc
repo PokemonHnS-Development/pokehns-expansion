@@ -27,37 +27,37 @@ Route2_Text_RobRegister:
 	.string "Let me get your number!$"
 
 Route2_Text_RobRematchIntro:
-	.string "I've caught even more bugs!\n"
-	.string "Check them out!$"
+	.string "¡Atrapé aún más bichos!\n"
+	.string "¡Échales un vistazo!$"
 
 Route2_Text_RobRematchDefeat:
-	.string "I need better bugs!$"
+	.string "¡Necesito mejores bichos!$"
 
 Route2_Text_RobPostRematch:
-	.string "I caught every bug in VIRIDIAN.\n"
-	.string "Is there a better FOREST somewhere?$"
+	.string "Atrapé todo bicho de VIRIDIAN.\n"
+	.string "¿Habrá un mejor BOSQUE en algún lado?$"
 
 Route2_Text_BugCatcherRob_Seen:
 	.string "My bug POKéMON are tough. Prepare to\n"
-	.string "lose!$"
+	.string "para perder!$"
 
 Route2_Text_BugCatcherRob_Beaten:
 	.string "I was whipped…$"
 
 Route2_Text_BugCatcherRob_AfterBattle:
-	.string "I'm going to look for stronger bug\n"
+	.string "Buscaré bichos más fuertes\n"
 	.string "POKéMON.$"
 
 Route2_Text_BugCatcherEd_Seen:
-	.string "If you walk in tall grass wearing\n"
-	.string "shorts, do you get nicks and cuts?$"
+	.string "Si caminas por hierba alta en\n"
+	.string "shorts, ¿te haces cortes y raspones?$"
 
 Route2_Text_BugCatcherEd_Beaten:
 	.string "Ouch, ouch, ouch!$"
 
 Route2_Text_BugCatcherEd_AfterBattle:
-	.string "They'll really sting when you take a\n"
-	.string "bath.$"
+	.string "¡Arderán mucho al ponerte un\n"
+	.string "baño.$"
 
 Route2_Text_BugCatcherDoug_Seen:
 	.string "Why don't girls like bug POKéMON?$"
@@ -66,13 +66,13 @@ Route2_Text_BugCatcherDoug_Beaten:
 	.string "No good!$"
 
 Route2_Text_BugCatcherDoug_AfterBattle:
-	.string "Bug POKéMON squish like plush toys\n"
-	.string "when you squeeze their bellies.\p"
-	.string "I love how they feel!$"
+	.string "Los POKéMON bicho son como peluches\n"
+	.string "cuando les aprietas la panza.\p"
+	.string "¡Me encanta cómo se sienten!$"
 
 Route2_Text_Sign:
-	.string "ROUTE 2\p"
-	.string "VIRIDIAN CITY - PEWTER CITY$"
+	.string "RUTA 2\p"
+	.string "CIUDAD VERIDIAN - CIUDAD PLATEADA$"
 
 Route2_Text_DiglettsCaveSign:
 	.string "DIGLETT'S CAVE$"

@@ -43,7 +43,7 @@ Route49_Text_SkylarAfter:
 	.string "shop instead.$"
 
 Route49_Text_SkylarBeforeBattle:
-	.string "What?\p"
+	.string "¿Qué?\p"
 	.string "You want the PLATE?\n"
 	.string "It's an artifact imbued with an\l"
 	.string "ancient power with a connection\l"

@@ -24,7 +24,7 @@ TwoIsland_PokemonCenter_1F_EventScript_BugCatcher::
 
 TwoIsland_PokemonCenter_1F_Text_HaveYouVisitedGameCorner::
 	.string "Have you visited the GAME CORNER\n"
-	.string "already?\p"
+	.string "JEFE DE FÁBRICA?\p"
 	.string "It's no good to go alone.\n"
 	.string "You have to take a friend along.$"
 

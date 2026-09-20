@@ -39,5 +39,5 @@ CeladonCity_PokemonCenter_1F_Text_RodeHereFromFuchsia::
 
 CeladonCity_PokemonCenter_1F_Text_GoToCyclingRoadIfIHadBike::
 	.string "If I had a BIKE, I would go to\n"
-	.string "CYCLING ROAD!$"
+	.string "CICLOVÍA!$"
 

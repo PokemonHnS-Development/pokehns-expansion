@@ -197,7 +197,7 @@ SaffronCity_Dojo_Text_HidekiPostBattle::
 	.string "Be prepared to lose!$"
 
 SaffronCity_Dojo_Text_AaronIntro::
-	.string "Hiyah!\n"
+	.string "¡Hiyah!\n"
 	.string "I have no fear for anything tough!\p"
 	.string "I shatter boulders for training\n"
 	.string "every day!$"
@@ -228,7 +228,7 @@ SaffronCity_Dojo_Text_YouWantHitmonlee::
 	.string "HITMONLEE?$"
 
 SaffronCity_Dojo_Text_ReceivedMonFromKarateMaster::
-	.string "{PLAYER} received the {STR_VAR_1}\n"
+	.string "{PLAYER} recibió el {STR_VAR_1}\n"
 	.string "from the KARATE MASTER.$"
 
 SaffronCity_Dojo_Text_YouWantHitmonchan::
@@ -249,5 +249,5 @@ SaffronCity_Dojo_Text_GoesAroundComesAround::
 	.string "What goes around comes around.$"
 
 SaffronCity_Dojo_Text_FightingDojo::
-	.string "FIGHTING DOJO$"
+	.string "DOJO DE LUCHA$"
 

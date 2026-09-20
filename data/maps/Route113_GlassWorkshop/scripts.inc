@@ -313,7 +313,7 @@ Route113_GlassWorkshop_Text_LetsSeeCollectedAshes:
 	.string "Let me see, huff-puff.$"
 
 Route113_GlassWorkshop_Text_NotEnoughAshNeedX:
-	.string "Hmmm…\n"
+	.string "Hmmm...\n"
 	.string "There's not enough ash here, huff-puff.\l"
 	.string "I can't make glass with this, huff-puff.\p"
 	.string "Let's see… {STR_VAR_1} is the number of steps\n"

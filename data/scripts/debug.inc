@@ -131,8 +131,8 @@ Debug_FlagsNotSetOverworldConfigMessage::
 	goto Debug_MessageEnd
 
 Debug_FlagsNotSetOverworldConfigMessage_Text:
-	.string "Feature unavailable!\n"
-	.string "Please define a usable flag in:\l"
+	.string "¡Función no disponible!\n"
+	.string "Define un flag usable en:\l"
 	.string "'include/config/overworld.h'!$"
 
 Debug_FlagsNotSetBattleConfigMessage::
@@ -140,8 +140,8 @@ Debug_FlagsNotSetBattleConfigMessage::
 	goto Debug_MessageEnd
 
 Debug_FlagsNotSetBattleConfigMessage_Text:
-	.string "Feature unavailable!\n"
-	.string "Please define a usable flag in:\l"
+	.string "¡Función no disponible!\n"
+	.string "Define un flag usable en:\l"
 	.string "'include/config/battle.h'!$"
 
 Debug_VarsNotSetBattleConfigMessage::
@@ -149,8 +149,8 @@ Debug_VarsNotSetBattleConfigMessage::
 	goto Debug_MessageEnd
 
 Debug_VarsNotSetBattleConfigMessage_Text:
-	.string "Feature unavailable!\n"
-	.string "Please define a usable var in:\l"
+	.string "¡Función no disponible!\n"
+	.string "Define una var usable en:\l"
 	.string "'include/config/battle.h'!$"
 
 Debug_BoxFilledMessage::
@@ -158,7 +158,7 @@ Debug_BoxFilledMessage::
 	goto Debug_MessageEnd
 
 Debug_BoxFilledMessage_Text:
-	.string "Storage boxes filled!$"
+	.string "¡Cajas de PC llenas!$"
 
 Debug_EventScript_CheckEVs::
 	lockall
@@ -176,10 +176,10 @@ Debug_EventScript_CheckEVs_End::
 	end
 
 Debug_EventScript_Text_OffensiveEVs:
-	.string "ATK EVs: {STR_VAR_1}, SPATK EVs: {STR_VAR_2}, SPEED EVs: {STR_VAR_3}$"
+	.string "EV ATK: {STR_VAR_1}, SPATK: {STR_VAR_2}, VEL: {STR_VAR_3}$"
 
 Debug_EventScript_Text_DefensiveEVs:
-	.string "HP EVs: {STR_VAR_1}, DEF EVs: {STR_VAR_2}, SPDEF EVs: {STR_VAR_3}$"
+	.string "EV PS: {STR_VAR_1}, DEF: {STR_VAR_2}, SPDEF: {STR_VAR_3}$"
 
 Debug_EventScript_CheckIVs::
 	lockall
@@ -197,10 +197,10 @@ Debug_EventScript_CheckIVs_End::
 	end
 
 Debug_EventScript_Text_OffensiveIVs:
-	.string "ATK IVs: {STR_VAR_1}, SPATK IVs: {STR_VAR_2}, SPEED IVs: {STR_VAR_3}$"
+	.string "IV ATK: {STR_VAR_1}, SPATK: {STR_VAR_2}, VEL: {STR_VAR_3}$"
 
 Debug_EventScript_Text_DefensiveIVs:
-	.string "HP IVs: {STR_VAR_1}, DEF IVs: {STR_VAR_2}, SPDEF IVs: {STR_VAR_3}$"
+	.string "IV PS: {STR_VAR_1}, DEF: {STR_VAR_2}, SPDEF: {STR_VAR_3}$"
 
 Debug_EventScript_Script_1::
 	goto UnionCave_B2F_EventScript_Lapras
@@ -278,13 +278,13 @@ Debug_EventScript_LanceMultiWin::
 	end
 
 Debug_Text_ArianaDefeat:
-	.string "You haven't seen the last of me!$"
+	.string "¡Aún no has visto mi final!$"
 
 Debug_Text_Grunt23Defeat:
-	.string "I won't accept this!$"
+	.string "¡No aceptaré esto!$"
 
 Debug_Text_LanceMultiVictory:
-	.string "Lance multi battle complete!$"
+	.string "¡Batalla múltiple de Lance lista!$"
 
 Debug_EventScript_Silver_Multi::
 	special SavePlayerParty
@@ -331,10 +331,10 @@ Debug_Text_SilverMultiVictory:
 	.string "Silver multi battle complete!$"
 
 Debug_Text_Lance3Defeat:
-	.string "You haven't seen the last of me!$"
+	.string "¡Aún no has visto mi final!$"
 
 Debug_Text_Clair3Defeat:
-	.string "I won't accept this!$"
+	.string "¡No aceptaré esto!$"
 
 Debug_CheckSaveBlock::
 	callnative CheckSaveBlock1Size
@@ -830,21 +830,21 @@ Debug_EventScript_FontTest_Text_4::
 
 Debug_EventScript_FontTest_Text_5::
 	.string "{FONT_SMALL_NARROWER}"                 @ Edit this to test your font
-	.string "Milliner milliner modal for the alumna\n"
-	.string "solomon of the album custom and summon.\l"
-	.string "Number number nodule for the unmade\l"
-	.string "economic of the shotgun bison and\l"
-	.string "tunnel. Onset onset oddball for the\l"
-	.string "abandon podium of the antiquo tempo\l"
-	.string "and moonlit. Pneumo pneumo poncho for\l"
-	.string "the dauphin opossum of the holdup\l"
-	.string "bishop and supplies.$"
+	.string "Sombrerero modal para la alumna\n"
+	.string "Solomón del álbum y la invocación.\l"
+	.string "Nódulo numérico para lo no hecho\l"
+	.string "Economía del bisonte escopeta y\l"
+	.string "túnel. Inicio extraño para el\l"
+	.string "podio abandonado del tempo antiguo\l"
+	.string "y luz de luna. Poncho pneumo para\l"
+	.string "la zarigüeya delfín del atraco\l"
+	.string "obispo y suministros.$"
 
 Debug_EventScript_FontTest_Text_6::
 	.string "{FONT_SMALL_NARROWER}"                 @ Edit this to test your font
-	.string "Quanta quanta qophs for the inquest\n"
-	.string "sheqel of the cinq coq and suqqu. Rhone\l"
-	.string "rhone roman for the burnt porous of the\l"
+	.string "Quanta qophs para la indagación\n"
+	.string "sheqel del cinq coq y suqqu. Rhone\l"
+	.string "rhone romano para el poro quemado\l"
 	.string "lemur clamor and carrot. Snout snout\l"
 	.string "sodium for the ensnare bosom of the\l"
 	.string "genus pathos and missing. Tundra\l"
@@ -880,7 +880,7 @@ Debug_EventScript_FontTest_Text_9::                 @ Special thanks to Nintendo
 	.string "Nintendo GBA can connect to a Nintendo\l"
 	.string "GameCube console! He claimed-though I don't\l"
 	.string "believe him-to have done so in an eyes-shut\l"
-	.string "state…?$"
+	.string "estado...$"
 
 Debug_PrintFontTest::
 	msgbox Debug_EventScript_FontTest_Text_1, MSGBOX_DEFAULT
@@ -936,8 +936,8 @@ Debug_EventScript_FakeRTCNotEnabled_Text_0:
 
 
 Debug_EventScript_TellTheTime_Text_0:
-	.string "Time and date:\n"
+	.string "Hora y fecha:\n"
 	.string "{STR_VAR_1}, {STR_VAR_2}:{STR_VAR_3}$"
 
 DebugEventScript_PrintWeekday_Text_0:
-	.string "Time of day: {STR_VAR_1}$"
+	.string "Hora del día: {STR_VAR_1}$"

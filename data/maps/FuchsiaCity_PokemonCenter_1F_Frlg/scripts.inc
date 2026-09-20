@@ -42,5 +42,5 @@ FuchsiaCity_PokemonCenter_1F_Text_VisitSafariZoneForPokedex::
 	.string "If you're working on a POKéDEX,\n"
 	.string "visit the SAFARI ZONE.\p"
 	.string "All sorts of rare POKéMON breed\n"
-	.string "there.$"
+	.string "raras allí.$"
 

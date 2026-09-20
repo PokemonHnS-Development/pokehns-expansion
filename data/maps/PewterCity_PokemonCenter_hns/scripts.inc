@@ -54,7 +54,7 @@ PewterCity_PokemonCenter_Text_WantToTrade:
 	.string "{STR_VAR_2}?$"
 
 PewterCity_PokemonCenter_Text_TakeCare:
-	.string "Thanks a bunch!\n"
+	.string "¡Muchas gracias!\n"
 	.string "Take good care of my {STR_VAR_1}!$"
 
 PewterCity_PokemonCenter_Text_DeclineTrade:
@@ -62,7 +62,7 @@ PewterCity_PokemonCenter_Text_DeclineTrade:
 	.string "I think you'd like my HAUNTER.$"
 
 PewterCity_PokemonCenter_Text_NotRequestedMon:
-	.string "Hmm, that's not a {STR_VAR_1}.\n"
+	.string "Hmm, eso no es un {STR_VAR_1}.\n"
 	.string "That's not what I'm looking for.$"
 
 PewterCity_PokemonCenter_Text_TradeCompleted:
@@ -70,7 +70,7 @@ PewterCity_PokemonCenter_Text_TradeCompleted:
 	.string "It's a real trickster!$"
 
 PewterCity_PokemonCenter1F_Text_BugCatcher:
-	.string "Most POKéMON get drowsy if they hear a\n"
-	.string "JIGGLYPUFF singing.\p"
-	.string "There are several moves that can be\n"
-	.string "used only while a POKéMON is asleep.$"
+	.string "La mayoría de POKéMON se duermen si\n"
+	.string "oyen cantar a un JIGGLYPUFF.\p"
+	.string "Hay varios movimientos que solo se\n"
+	.string "usan mientras el POKéMON duerme.$"

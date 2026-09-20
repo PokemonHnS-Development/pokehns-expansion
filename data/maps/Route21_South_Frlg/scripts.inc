@@ -23,8 +23,8 @@ Route21_South_Text_JeromePostBattle::
 	.string "bike race and marathon left!$"
 
 Route21_South_Text_RolandIntro::
-	.string "Ahh!\n"
-	.string "Feel the sun and the wind!$"
+	.string "¡Ahh!\n"
+	.string "¡Siente el sol y el viento!$"
 
 Route21_South_Text_RolandDefeat::
 	.string "Yow!\n"
@@ -46,7 +46,7 @@ Route21_South_Text_ClaudePostBattle::
 	.string "giant pool or something?$"
 
 Route21_South_Text_NolanIntro::
-	.string "Keep me company till I get a hit.$"
+	.string "Acompáñame hasta que pique algo.$"
 
 Route21_South_Text_NolanDefeat::
 	.string "That burned some time.$"
@@ -57,7 +57,7 @@ Route21_South_Text_NolanPostBattle::
 
 Route21_North_Text_LilIntro::
 	.string "LIL: Huh? A battle?\n"
-	.string "IAN, can't you do it alone?$"
+	.string "IAN, ¿no puedes hacerlo solo?$"
 
 Route21_North_Text_LilDefeat::
 	.string "LIL: Oh, see?\n"

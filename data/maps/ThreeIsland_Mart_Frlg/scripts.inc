@@ -36,7 +36,7 @@ ThreeIsland_Mart_EventScript_Youngster::
 	end
 
 ThreeIsland_Mart_Text_TrueThatCeldadonDeptStoreBigger::
-	.string "Is it true?\p"
+	.string "¿Es verdad?\p"
 	.string "CELADON DEPT. STORE is several\n"
 	.string "times bigger than this shop?$"
 

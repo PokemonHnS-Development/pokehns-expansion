@@ -55,7 +55,7 @@ enum DecorationCategory_HnS
 struct Decoration
 {
     u8 id;
-    u8 name[16];
+    u8 name[24];
     u8 permission;
     u8 shape;
     u8 category;

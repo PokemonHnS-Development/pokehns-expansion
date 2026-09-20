@@ -39,7 +39,7 @@ PewterCity_Museum_1F_EventScript_Bones::
 	end
 
 PewterCity_Museum_1F_Text_Recptionist:
-	.string "Welcome!\p"
+	.string "¡Bienvenido!\p"
 	.string "Just to let you know, all the large\n"
 	.string "specimens have been taken to the\l"
 	.string "other museums for display.\p"
@@ -56,17 +56,17 @@ PewterCity_Museum_1F_Text_FossilWoman:
 	.string "Go ahead and take them if you like.$"
 
 PewterCity_Museum_1F_Text_FossilWomanAfter:
-	.string "We often share research with the\n"
-	.string "RUINS OF ALPH researchers.\p"
-	.string "We even share fossils with them\n"
-	.string "through the PC!$"
+	.string "Solemos compartir investigaciones\n"
+	.string "con los de RUINS OF ALPH.\p"
+	.string "¡Incluso compartimos fósiles\n"
+	.string "a través de la PC!$"
 
 PewterCity_Museum_1F_Text_Oldman:
-	.string "I should be grateful for my long\n"
-	.string "life.\p"
-	.string "Never did I think I would get to\n"
-	.string "see the bones of a dragon!$"
+	.string "Debería estar agradecido por mi\n"
+	.string "larga vida.\p"
+	.string "¡Jamás pensé que vería los\n"
+	.string "huesos de un dragón!$"
 
 PewterCity_Museum_1F_Text_Bones:
-	.string "Bones of an ancient dragon\n"
+	.string "Huesos de un dragón antiguo\n"
 	.string "POKéMON.$"

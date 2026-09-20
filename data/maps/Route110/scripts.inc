@@ -739,86 +739,86 @@ Route110_Movement_BirchExit4:
 	step_end
 
 Route110_Text_WeCantTalkAboutAquaActivities:
-	.string "TEAM AQUA's activities…\n"
-	.string "We can't talk about them yet.$"
+	.string "Las actividades del EQUIPO AQUA...\n"
+	.string "No podemos hablar de eso aún.$"
 
 Route110_Text_KickUpARuckus:
-	.string "I want to get going to SLATEPORT and\n"
-	.string "kick up a ruckus!$"
+	.string "¡Quiero ir ya a PORT VALIANTE y\n"
+	.string "armar un buen escándalo!$"
 
 Route110_Text_MyFirstJobInAqua:
-	.string "This is my first job after joining\n"
-	.string "TEAM AQUA. It's a little scary.$"
+	.string "Es mi primer trabajo desde que me\n"
+	.string "uní al EQUIPO AQUA. Da miedo.$"
 
 Route110_Text_AquaActionsBringSmiles:
-	.string "TEAM AQUA's actions should bring\n"
-	.string "smiles to people's faces!$"
+	.string "¡Las acciones del EQUIPO AQUA\n"
+	.string "harán feliz a todo el mundo!$"
 
 Route110_Text_MayLetsBattle:
-	.string "MAY: Hi, {PLAYER}{KUN}, long time no see!\p"
-	.string "While I was searching for other\n"
-	.string "POKéMON, my POKéMON grew stronger.\p"
+	.string "MAY: ¡Hola, {PLAYER}{KUN}! ¡Tanto tiempo!\p"
+	.string "Mientras buscaba otros POKéMON,\n"
+	.string "los míos se hicieron más fuertes.\p"
 	.string "So…\n"
-	.string "How about a little battle?$"
+	.string "¿Qué tal una pequeña batalla?$"
 
 Route110_Text_MayDefeated:
-	.string "Yikes!\n"
-	.string "You're better than I expected!$"
+	.string "¡Cielos!\n"
+	.string "¡Eres mejor de lo que esperaba!$"
 
 Route110_Text_MayTakeThis:
-	.string "MAY: {PLAYER}{KUN}, you've been busy\n"
-	.string "training, too, haven't you?\p"
-	.string "I think you deserve a reward!\n"
-	.string "This is from me!$"
+	.string "MAY: {PLAYER}{KUN}, has estado ocupado\n"
+	.string "entrenando, ¿verdad?\p"
+	.string "¡Creo que mereces un premio!\n"
+	.string "¡Esto es para ti!$"
 
 Route110_Text_MayExplainItemfinder:
-	.string "MAY: That's an ITEMFINDER.\p"
-	.string "Try it out. If there is an item that's\n"
-	.string "not visible, it emits a sound.\p"
-	.string "Okay, {PLAYER}{KUN}, let's meet again!\p"
-	.string "I know it's a little silly coming from\n"
-	.string "me, but I think you should train a lot\l"
-	.string "harder for the next time.$"
+	.string "MAY: Es un BUSCADESOBJ.\p"
+	.string "Pruébalo. Si hay un objeto que\n"
+	.string "no se ve, emitirá un sonido.\p"
+	.string "¡Bien, {PLAYER}{KUN}, nos vemos!\p"
+	.string "Sé que suena tonto viniendo de mí,\n"
+	.string "pero creo que debes entrenar mucho\l"
+	.string "más para la próxima vez.$"
 
 Route110_Text_BrendanLetsBattle:
-	.string "BRENDAN: Hey, {PLAYER}.\n"
-	.string "So this is where you were.\l"
-	.string "How's it going?\p"
-	.string "Have you been raising your POKéMON?\n"
-	.string "I'll check for you.$"
+	.string "BRENDAN: Hola, {PLAYER}.\n"
+	.string "Así que aquí estabas.\l"
+	.string "¿Cómo va todo?\p"
+	.string "¿Has estado criando tus POKéMON?\n"
+	.string "Lo revisaré por ti.$"
 
 Route110_Text_BrendanDefeated:
 	.string "Hmm…\n"
 	.string "You're pretty good.$"
 
 Route110_Text_BrendanTakeThis:
-	.string "BRENDAN: {PLAYER}, you've trained\n"
-	.string "without me noticing…\p"
-	.string "Good enough!\n"
-	.string "Here, take this.$"
+	.string "BRENDAN: {PLAYER}, has entrenado\n"
+	.string "sin que me diera cuenta...\p"
+	.string "¡Está bastante bien!\n"
+	.string "Toma, ten esto.$"
 
 Route110_Text_BrendanExplainItemfinder:
-	.string "BRENDAN: That's an ITEMFINDER.\p"
-	.string "Use it to root around for items that\n"
-	.string "aren't visible.\p"
-	.string "If it senses something, it emits\n"
-	.string "a sound.\p"
-	.string "Anyway, I'm off to look for new\n"
+	.string "BRENDAN: Eso es un ITEMFINDER.\p"
+	.string "Úsalo para buscar objetos que\n"
+	.string "no son visibles.\p"
+	.string "Si detecta algo, emitirá\n"
+	.string "un sonido.\p"
+	.string "En fin, me voy a buscar nuevos\n"
 	.string "POKéMON.$"
 
 Route110_Text_RideBikeAtFullSpeed:
-	.string "Wouldn't it be great to ride a BIKE\n"
-	.string "at full speed on CYCLING ROAD?$"
+	.string "¿No sería genial usar una BIKE?\n"
+	.string "¿a toda velocidad en la RUTA CICLISTA?$"
 
 Route110_Text_HairStreamsBehindMe:
-	.string "How do you like the way my raven-\n"
-	.string "colored hair streams behind me?\p"
-	.string "I grew my hair out just for that.$"
+	.string "¿Qué te parece cómo mi cabello\n"
+	.string "color cuervo ondea tras de mí?\p"
+	.string "Lo dejé crecer solo para eso.$"
 
 Route110_Text_YouGotBikeFromRydel:
-	.string "Oh, hey, you got that BIKE from RYDEL!\p"
-	.string "Oh, it's glaringly obvious.\n"
-	.string "It says right on your bike…\p"
+	.string "¡Oh, tienes la BICICLETA de RYDEL!\p"
+	.string "Oh, es demasiado obvio.\n"
+	.string "Dice justo en tu bicicleta...\p"
 	.string "RYDEL, RYDEL, RYDEL, RYDEL, RYDEL,\n"
 	.string "RYDEL, RYDEL, RYDEL, RYDEL, RYDEL,\p"
 	.string "RYDEL, RYDEL, RYDEL, RYDEL, RYDEL,\n"
@@ -827,30 +827,30 @@ Route110_Text_YouGotBikeFromRydel:
 	.string "RYDEL, RYDEL, RYDEL, RYDEL, RYDEL,\p"
 	.string "RYDEL, RYDEL, RYDEL, RYDEL, RYDEL,\n"
 	.string "RYDEL, RYDEL, RYDEL, RYDEL, RYDEL,\p"
-	.string "RYDEL, RYDEL, RYDEL, RYDEL, RYDEL…\n"
-	.string "That name's everywhere.\p"
-	.string "You should ride it around all over\n"
-	.string "the place--it's good advertising!$"
+	.string "RYDEL, RYDEL, RYDEL, RYDEL, RYDEL...\n"
+	.string "Ese nombre está en todas partes.\p"
+	.string "Deberías usarla por todo el\n"
+	.string "lugar... ¡es buena publicidad!$"
 
 Route110_Text_TwoRoads:
 	.string "The two roads, one above, one below…\p"
-	.string "A road each for people and POKéMON.\n"
-	.string "Perhaps that is right and fair.$"
+	.string "Uno para personas y otro POKéMON.\n"
+	.string "Tal vez así sea justo y correcto.$"
 
 Route110_Text_WalkOnTheLowRoad:
-	.string "I don't have a BIKE, so I'll take\n"
-	.string "a leisurely walk on the low road.$"
+	.string "No tengo BICICLETA, así que daré\n"
+	.string "un paseo tranquilo por el camino bajo.$"
 
 Route110_Text_BikeTechniques:
-	.string "Learning techniques will make BIKE\n"
-	.string "riding even more fun.\p"
-	.string "There are some places that you can\n"
-	.string "reach only by using a BIKE technique.$"
+	.string "Aprender técnicas hará que usar la\n"
+	.string "BICICLETA sea más divertido.\p"
+	.string "Hay lugares a los que solo puedes\n"
+	.string "llegar usando técnicas de BICICLETA.$"
 
 Route110_Text_WhichShouldIChoose:
-	.string "Which should I choose?\p"
-	.string "Make a beeline for MAUVILLE on\n"
-	.string "CYCLING ROAD, or take the low road\l"
+	.string "¿Cuál debería elegir?\p"
+	.string "Ir directo a MALVILLA por la\n"
+	.string "CICLOVÍA, o tomar el camino bajo\l"
 	.string "and look for POKéMON?$"
 
 Route110_Text_CyclingChallengeResultSummary:
@@ -934,14 +934,14 @@ Route110_Text_MauvilleCitySign:
 	.string "{UP_ARROW} MAUVILLE CITY$"
 
 Route110_Text_TrainerTipsPrlzSleep:
-	.string "TRAINER TIPS\p"
+	.string "CONSEJOS DE ENTRENADOR\p"
 	.string "The foe can be made helpless by\n"
 	.string "paralyzing it or causing it to sleep.\p"
 	.string "It is an important technique for\n"
-	.string "POKéMON battles.$"
+	.string "combates POKéMON.$"
 
 Route110_Text_TrainerTipsRegisterItems:
-	.string "TRAINER TIPS\p"
+	.string "CONSEJOS DE ENTRENADOR\p"
 	.string "The items in the BAG can be reorganized\n"
 	.string "by pressing SELECT.$"
 
@@ -960,7 +960,7 @@ Route110_Text_ThereIsNoRecord:
 	.string "challenge. There is no record…$"
 
 Route110_Text_ImagineSeeingYouHere:
-	.string "PROF. BIRCH: Oh, {PLAYER}{KUN}!\n"
+	.string "PROF. BIRCH: ¡Oh, {PLAYER}{KUN}!\n"
 	.string "Imagine seeing you here!\p"
 	.string "And where might my {RIVAL} be?$"
 
@@ -978,7 +978,7 @@ Route110_Text_HeardYouInstallMatchCall:
 
 Route110_Text_RegisteredBirchInPokenav:
 	.string "Registered PROF. BIRCH\n"
-	.string "in the POKéNAV.$"
+	.string "en el POKéNAV.$"
 
 Route110_Text_KeepAnEyeOutForRival:
 	.string "PROF. BIRCH: {PLAYER}{KUN}…\p"

@@ -678,7 +678,7 @@ OneIsland_PokemonCenter_1F_Text_UsualPCServicesUnavailable::
 
 OneIsland_PokemonCenter_1F_Text_BillOhHeyPlayer::
 	.string "BILL: Oh, hey!\n"
-	.string "{PLAYER}!$"
+	.string "¡{PLAYER}!$"
 
 OneIsland_PokemonCenter_1F_Text_BillWeGotItDone::
 	.string "BILL: What kept you so long?\n"
@@ -726,14 +726,14 @@ OneIsland_PokemonCenter_1F_Text_CelioImModifyingMyNetworkMachine::
 OneIsland_PokemonCenter_1F_Text_CelioCaughtMoreMonMaybeICanBeUseful::
 	.string "CELIO: {PLAYER}, how have things\n"
 	.string "been for you?\p"
-	.string "Oh, is that right?\n"
+	.string "Oh, ¿de verdad?\n"
 	.string "You've caught more POKéMON.\p"
 	.string "Do you know what?\n"
 	.string "Maybe I can be useful to you.$"
 
 OneIsland_PokemonCenter_1F_Text_YoullBeTradingFromTrainersFarAway::
 	.string "I'm modifying the Network Machine\n"
-	.string "right now.\p"
+	.string "CUESTIONARIO ahora mismo.\p"
 	.string "I'm changing it so it can handle\n"
 	.string "trades over long distances.\p"
 	.string "When I get finished, you'll be\n"
@@ -767,7 +767,7 @@ OneIsland_PokemonCenter_1F_Text_HandedRubyToCelio::
 	.string "to CELIO.$"
 
 OneIsland_PokemonCenter_1F_Text_MayIAskOneMoreFavor::
-	.string "Thank you!\n"
+	.string "¡Gracias!\n"
 	.string "{PLAYER}, you're simply amazing.\p"
 	.string "… … …  … … …\p"
 	.string "Um… May I ask one more giant favor\n"
@@ -827,7 +827,7 @@ OneIsland_PokemonCenter_1F_Text_LinkedUpWithLanette::
 	.string "I linked up with LANETTE!$"
 
 OneIsland_PokemonCenter_1F_Text_ManagedToLinkWithHoennThankYou::
-	.string "{PLAYER}…\n"
+	.string "{PLAYER}...\n"
 	.string "{PLAYER}, I did it!\p"
 	.string "I've managed to link up with\n"
 	.string "TRAINERS in the HOENN region!\p"
@@ -843,20 +843,20 @@ OneIsland_PokemonCenter_1F_Text_WishYouBestOfLuck::
 	.string "That's enough about me!\p"
 	.string "{PLAYER}, you're going to keep\n"
 	.string "looking for exotic POKéMON, right?\p"
-	.string "I wish you the best of luck!$"
+	.string "¡Te deseo mucha suerte!$"
 
 OneIsland_PokemonCenter_1F_Text_CelioHearingRumorsAboutYou::
 	.string "CELIO: Hello!\p"
 	.string "{PLAYER}, I've been hearing rumors\n"
-	.string "about you.$"
+	.string "razón sobre ti.$"
 
 OneIsland_PokemonCenter_1F_Text_BillsFirstMonWasAbra::
 	.string "{PLAYER}, what's your favorite kind\n"
 	.string "of POKéMON?\p"
 	.string "BILL is a POKéMANIAC, so he loves\n"
-	.string "every kind.\p"
-	.string "Apparently, the first one he caught\n"
-	.string "was an ABRA.$"
+	.string "todos los tipos.\p"
+	.string "Al parecer, el primero que atrapó\n"
+	.string "fue un ABRA.$"
 
 OneIsland_PokemonCenter_1F_Text_BillsHometownInGoldenrod::
 	.string "By the way, {PLAYER}, you're from\n"
@@ -864,8 +864,8 @@ OneIsland_PokemonCenter_1F_Text_BillsHometownInGoldenrod::
 	.string "I've heard that it's a quiet and\n"
 	.string "pleasant place.\p"
 	.string "BILL's hometown is GOLDENROD CITY,\n"
-	.string "where his folks still live.\p"
-	.string "I've heard that it's quite the\n"
+	.string "donde aún viven sus padres.\p"
+	.string "He oído que es una ciudad muy\n"
 	.string "festive, bustling city.\p"
 	.string "I'd like to go there one day.$"
 
@@ -873,7 +873,7 @@ OneIsland_PokemonCenter_1F_Text_BillCantStomachMilk::
 	.string "{PLAYER}, is there anything that\n"
 	.string "you can't stand?\p"
 	.string "Apparently, BILL simply can't\n"
-	.string "stomach milk at all.$"
+	.string "soporta la leche.$"
 
 OneIsland_PokemonCenter_1F_Text_CameFromPalletDontKnowIt::
 	.string "Oh, you're a stranger here!\n"

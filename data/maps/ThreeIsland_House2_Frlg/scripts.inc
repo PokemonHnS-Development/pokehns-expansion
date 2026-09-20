@@ -23,9 +23,9 @@ ThreeIsland_House2_Text_CantMakeThisSpoonBend::
 
 ThreeIsland_House2_Text_IAdmireSabrina::
 	.string "You know about a girl GYM LEADER\n"
-	.string "in SAFFRON CITY?\p"
-	.string "She uses PSYCHIC-type POKéMON,\n"
-	.string "right?\p"
+	.string "en CIUDAD AZAFRÁN?\p"
+	.string "Usa POKéMON de tipo PSÍQUICO,\n"
+	.string "¿Verdad?\p"
 	.string "I admire her, I really do.\p"
 	.string "I've heard that she's one cool\n"
 	.string "customer and beautiful, too.$"

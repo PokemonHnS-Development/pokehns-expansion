@@ -161,7 +161,7 @@ FuchsiaCity_Text_ItemBallInThere::
 
 FuchsiaCity_Text_CitySign::
 	.string "FUCHSIA CITY\n"
-	.string "Behold! It's Passion Pink!$"
+	.string "¡Mira! ¡Es Rosa Pasión!$"
 
 FuchsiaCity_Text_SafariZoneSign::
 	.string "POKéMON PARADISE\n"
@@ -172,7 +172,7 @@ FuchsiaCity_Text_SafariGameSign::
 	.string "POKéMON-U-CATCH!$"
 
 FuchsiaCity_Text_WardensHomeSign::
-	.string "SAFARI ZONE\n"
+	.string "ZONA SAFARI\n"
 	.string "WARDEN'S HOME$"
 
 FuchsiaCity_Text_SafariZoneOfficeSign::
@@ -181,9 +181,9 @@ FuchsiaCity_Text_SafariZoneOfficeSign::
 	.string "SAFARI ZONE OFFICE$"
 
 FuchsiaCity_Text_GymSign::
-	.string "FUCHSIA CITY POKéMON GYM\n"
-	.string "LEADER: KOGA\l"
-	.string "The Poisonous Ninja Master$"
+	.string "GIMNASIO POKéMON CIUDAD FUCHSIA\n"
+	.string "CIUDAD FUXIA: KOGA\l"
+	.string "El Maestro Ninja Venenoso$"
 
 FuchsiaCity_Text_ChanseySign::
 	.string "Name: CHANSEY\n"
@@ -246,7 +246,7 @@ Text_SubstituteTaught::
 
 FuchsiaCity_Text_MyFatherIsGymLeader::
 	.string "My father is the GYM LEADER of\n"
-	.string "this town.\p"
-	.string "I'm training to use POISON POKéMON\n"
-	.string "as well as my father.$"
+	.string "de este pueblo.\p"
+	.string "Entreno para usar POKéMON TIPO\n"
+	.string "VENENO, igual que mi padre.$"
 

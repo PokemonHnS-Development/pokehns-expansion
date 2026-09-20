@@ -8,7 +8,7 @@ gBirchDexRatingText_Cancel::
 	.string "POKéMON to make it worthwhile.$"
 
 gBirchDexRatingText_SoYouveSeenAndCaught::
-	.string "Hmhm…\p"
+	.string "Hmhm...\p"
 	.string "So, you've seen {STR_VAR_1} POKéMON,\n"
 	.string "and you've caught {STR_VAR_2} POKéMON…$"
 
@@ -72,7 +72,7 @@ gBirchDexRatingText_LessThan130::
 gBirchDexRatingText_LessThan140::
 	.string "I've heard of POKéMON that evolve\n"
 	.string "when they come to fully love their\l"
-	.string "TRAINERS.$"
+	.string "combate.$"
 
 gBirchDexRatingText_LessThan150::
 	.string "I had no idea that there were so\n"
@@ -105,11 +105,11 @@ gBirchDexRatingText_LessThan200::
 	.string "I can feel it in my bones!$"
 
 gBirchDexRatingText_DexCompleted::
-	.string "Congratulations!\n"
+	.string "¡Felicidades!\n"
 	.string "Your POKéDEX is complete!$"
 
 gBirchDexRatingText_OnANationwideBasis::
-	.string "Hmhm…\n"
+	.string "Hmhm...\n"
 	.string "On a nationwide basis…\p"
 	.string "You've seen {STR_VAR_1} POKéMON,\n"
 	.string "and you've caught {STR_VAR_2} POKéMON…$"
@@ -177,7 +177,7 @@ PokedexRating_Text_LessThan90::
 	.string "like to collect things, don't you?$"
 
 PokedexRating_Text_LessThan100::
-	.string "I'm impressed!\n"
+	.string "¡Estoy impresionado!\n"
 	.string "It must have been difficult to do!$"
 
 PokedexRating_Text_LessThan110::
@@ -224,15 +224,15 @@ PokedexRating_Text_Wroooaaarrr::
 	.string "Wroooooooaaaaaarrrr!$"
 
 PokedexRating_Text_ThankYouMadeDreamReality::
-	.string "Thank you, {PLAYER}!\n"
+	.string "¡Gracias, {PLAYER}!\n"
 	.string "Sincerely, thank you!\l"
 	.string "You've made my dream a reality!$"
 
 PokedexRating_Text_LoveSeeingYourPokedex::
 	.string "OAK: Ah, welcome!\p"
 	.string "Tell me, how is your POKéDEX\n"
-	.string "coming along?\p"
-	.string "Wahaha!\p"
+	.string "las ISLAS ALOLA?\p"
+	.string "¡Jajaja!\p"
 	.string "Actually, I know how it is, but I\n"
 	.string "love seeing it anyway!\p"
 	.string "Let's see…$"
@@ -302,7 +302,7 @@ gJohtoDexRatingText_LessThan140::
 	.string "Keep up the good work!$"
 
 gJohtoDexRatingText_LessThan155::
-	.string "I'm impressed.\n"
+	.string "Estoy impresionado.\n"
 	.string "You're evolving POKéMON, not just\p"
 	.string "catching them.$"
 
@@ -353,7 +353,7 @@ gJohtoDexRatingText_LessThanMaxDex::
 	.string "You're ready to turn professional!$"
 
 gJohtoDexRatingText_Complete::
-	.string "Wow!\n"
+	.string "¡Guau!\n"
 	.string "That is a complete Johto POKéDEX!\p"  
 	.string "Thanks to you, {PLAYER}, the Johto\n"
 	.string "POKéDEX is complete!\p"
@@ -394,7 +394,7 @@ gNationalDexRatingText_LessThan400::
 	.string "There are hidden locations all\n"
 	.string "over the world containing rare\p"
 	.string "and unusual POKéMON, try to find\n"
-	.string "them all!$"
+	.string "encontrarlos todos!$"
 
 gNationalDexRatingText_LessThan435::
 	.string "Wow, you've gotten so far...!\n"
@@ -414,10 +414,10 @@ gNationalDexRatingText_LessThanMaxDex::
 
 gNationalDexRatingText_Complete::
 	.string "Excellent! That is an amazing\n"
-	.string "National POKéDEX!\p"
-	.string "Wow...{PAUSE 10}\p"
-	.string "You've lived up to my\n"
-	.string "expectations wonderfully!\p"
-	.string "No, you've exceeded them, {PLAYER}.\n"
-	.string "You've become an amazing Trainer!\p"
-	.string "Thank you, {PLAYER}!$"
+	.string "¡POKéDEX Nacional!\p"
+	.string "Vaya...{PAUSE 10}\p"
+	.string "¡Has cumplido mis\n"
+	.string "expectativas maravillosamente!\p"
+	.string "No, las has superado, {PLAYER}.\n"
+	.string "¡Eres un Entrenador increíble!\p"
+	.string "¡Gracias, {PLAYER}!$"

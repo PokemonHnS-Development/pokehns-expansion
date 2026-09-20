@@ -118,7 +118,7 @@ OneIsland_Text_BillLetsGoSeeCelio::
 	.string "Let's just go see CELIO!$"
 
 Text_WhereDoYouWantToSail::
-	.string "Ahoy, there!\n"
+	.string "¡Hola, marinero!\n"
 	.string "Where do you want to sail?$"
 
 OneIsland_Text_LuckyToHaveCelioHere::

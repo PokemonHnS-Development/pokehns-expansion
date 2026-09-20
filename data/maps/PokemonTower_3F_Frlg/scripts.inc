@@ -37,7 +37,7 @@ PokemonTower_3F_Text_CarlyDefeat::
 	.string "What am I doing?$"
 
 PokemonTower_3F_Text_CarlyPostBattle::
-	.string "Sorry!\n"
+	.string "¡Lo siento!\n"
 	.string "I was possessed!$"
 
 PokemonTower_3F_Text_PatriciaIntro::
@@ -45,7 +45,7 @@ PokemonTower_3F_Text_PatriciaIntro::
 	.string "Malevolent spirit!$"
 
 PokemonTower_3F_Text_PatriciaDefeat::
-	.string "Whew!\n"
+	.string "¡Uff!\n"
 	.string "The spirit left!$"
 
 PokemonTower_3F_Text_PatriciaPostBattle::

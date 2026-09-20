@@ -9,6 +9,7 @@
 #include "constants/field_effects.h"
 #include "constants/songs.h"
 #include "constants/metatile_labels.h"
+#include "constants/flags_hns.h"
 #include "fieldmap.h"
 #include "party_menu.h"
 #include "fldeff.h"

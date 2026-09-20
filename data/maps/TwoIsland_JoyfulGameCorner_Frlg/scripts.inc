@@ -246,12 +246,12 @@ TwoIsland_JoyfulGameCorner_Text_PleaseGoToThreeIsland::
 	.string "me this big favor.$"
 
 TwoIsland_JoyfulGameCorner_Text_NotRunningAnyGamesToday::
-	.string "I'm sorry.\n"
+	.string "Lo siento.\n"
 	.string "We're not running any games today.$"
 
 TwoIsland_JoyfulGameCorner_Text_GetGamesGoingSoon::
 	.string "We'll get the games going soon\n"
-	.string "for you!$"
+	.string "¡para ti!$"
 
 TwoIsland_JoyfulGameCorner_Text_YouRescuedLostelle::
 	.string "So you rescued LOSTELLE?\n"
@@ -270,7 +270,7 @@ TwoIsland_JoyfulGameCorner_Text_ThisIsForMe::
 	.string "How did you know that I love rare\n"
 	.string "rocks and gems?\p"
 	.string "You sure know how to make a guy\n"
-	.string "happy.$"
+	.string "Seguro que eso los hará felices.$"
 
 TwoIsland_JoyfulGameCorner_Text_HandedMeteoriteToLostellesDaddy::
 	.string "{PLAYER} handed the METEORITE\n"
@@ -280,7 +280,7 @@ TwoIsland_JoyfulGameCorner_Text_OhThisIsFromBill::
 	.string "Oh, I see, this is from BILL!\n"
 	.string "You have to thank him for me!\p"
 	.string "You know, you've been fantastic.\n"
-	.string "I want you to have this.$"
+	.string "Quiero que tengas esto.$"
 
 TwoIsland_JoyfulGameCorner_Text_ReceivedMoonStoneFromLostellesDaddy::
 	.string "{PLAYER} received a MOON STONE\n"
@@ -297,7 +297,7 @@ TwoIsland_JoyfulGameCorner_Text_IllGetGameCornerRunning::
 	.string "friend.$"
 
 TwoIsland_JoyfulGameCorner_Text_PleaseShowMeYouBeingCool::
-	.string "Listen, listen!\p"
+	.string "¡Escucha, escucha!\p"
 	.string "Please show me you being cool\n"
-	.string "again!$"
+	.string "pronto!$"
 

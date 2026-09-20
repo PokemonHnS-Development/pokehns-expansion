@@ -103,9 +103,9 @@ FuchsiaCity_Gym_Text_KogaIntro::
 	.string "POISON-type POKéMON!{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
 
 FuchsiaCity_Gym_Text_KogaDefeat::
-	.string "Humph!\n"
+	.string "¡Hmph!\n"
 	.string "You have proven your worth!\p"
-	.string "Here!\n"
+	.string "¡Toma!\n"
 	.string "Take the SOULBADGE!$"
 
 FuchsiaCity_Gym_Text_KogaPostBattle::
@@ -144,14 +144,14 @@ FuchsiaCity_Gym_Text_KaydenIntro::
 	.string "beat brute strength.$"
 
 FuchsiaCity_Gym_Text_KaydenDefeat::
-	.string "What?\n"
+	.string "¿Qué?\n"
 	.string "Extraordinary!$"
 
 FuchsiaCity_Gym_Text_KaydenPostBattle::
 	.string "So, you mix brawn with brains?\n"
 	.string "Good strategy!\p"
 	.string "That's remarkable for a child\n"
-	.string "TRAINER.$"
+	.string "ENTRENADOR.$"
 
 FuchsiaCity_Gym_Text_KirkIntro::
 	.string "I was a magician once upon a time.\p"
@@ -163,8 +163,8 @@ FuchsiaCity_Gym_Text_KirkDefeat::
 
 FuchsiaCity_Gym_Text_KirkPostBattle::
 	.string "Even though I've lost, I will keep\n"
-	.string "training according to the teachings\l"
-	.string "of KOGA, my ninja master.$"
+	.string "entrenando según las enseñanzas\l"
+	.string "de KOGA, mi maestro ninja.$"
 
 FuchsiaCity_Gym_Text_NateIntro::
 	.string "Let's see you beat my special\n"
@@ -183,7 +183,7 @@ FuchsiaCity_Gym_Text_PhilIntro::
 	.string "FUCHSIA GYM have you frustrated?$"
 
 FuchsiaCity_Gym_Text_PhilDefeat::
-	.string "Whoa!\n"
+	.string "¡Vaya!\n"
 	.string "You've got it!$"
 
 FuchsiaCity_Gym_Text_PhilPostBattle::
@@ -217,11 +217,11 @@ FuchsiaCity_Gym_Text_ShawnPostBattle::
 	.string "Where there is light, there is\n"
 	.string "shadow!\p"
 	.string "Light and shadow!\n"
-	.string "Which do you choose?$"
+	.string "¿Cuál eliges tú?$"
 
 FuchsiaCity_Gym_Text_GymGuyAdvice::
 	.string "Yo!\n"
-	.string "Champ in the making!\p"
+	.string "¡Un futuro campeón!\p"
 	.string "FUCHSIA GYM is a tricked-up place.\n"
 	.string "It's riddled with invisible walls!\p"
 	.string "KOGA might appear close, but he's\n"
@@ -234,14 +234,14 @@ FuchsiaCity_Gym_Text_GymGuyPostVictory::
 	.string "even now!$"
 
 FuchsiaCity_Gym_Text_GymStatue::
-	.string "FUCHSIA POKéMON GYM\n"
+	.string "GIMNASIO POKéMON DE Fucsia\n"
 	.string "LEADER: KOGA\p"
-	.string "WINNING TRAINERS:\n"
+	.string "ENTRENADORES GANADORES:\n"
 	.string "{RIVAL}$"
 
 FuchsiaCity_Gym_Text_GymStatuePlayerWon::
-	.string "FUCHSIA POKéMON GYM\n"
+	.string "GIMNASIO POKéMON DE Fucsia\n"
 	.string "LEADER: KOGA\p"
-	.string "WINNING TRAINERS:\n"
+	.string "ENTRENADORES GANADORES:\n"
 	.string "{RIVAL}, {PLAYER}$"
 

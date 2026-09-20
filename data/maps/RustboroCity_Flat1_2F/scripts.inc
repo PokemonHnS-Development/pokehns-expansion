@@ -86,7 +86,7 @@ RustboroCity_Flat1_2F_Text_ComingUpWithMealsIsHard:
 	.string "meals every day.$"
 
 RustboroCity_Flat1_2F_Text_HelloDoYouKnowFunnyPhrase:
-	.string "Oh, hello!\n"
+	.string "¡Oh, hola!\n"
 	.string "Welcome to the PEPPER household.\p"
 	.string "I have a question for you.\n"
 	.string "Have you ever baby-sat?\p"
@@ -110,7 +110,7 @@ RustboroCity_Flat1_2F_Text_WonderfulLetsHearSuggestion:
 	.string "So, let's hear it, your suggestion.$"
 
 RustboroCity_Flat1_2F_Text_OhIsThatRight:
-	.string "Oh, is that right?\p"
+	.string "Oh, ¿de verdad?\p"
 	.string "Well, if you come up with a good\n"
 	.string "suggestion, I'm all ears.$"
 
@@ -155,7 +155,7 @@ RustboroCity_Flat1_2F_Text_OhYouDontKnowAny:
 	.string "don't hesitate in telling me, okay?$"
 
 RustboroCity_Flat1_2F_Text_ThankYouIllGiveYouWallpaper:
-	.string "Thank you!\p"
+	.string "¡Gracias!\p"
 	.string "Thanks to you, my darling WALDA\n"
 	.string "laughed for me!\p"
 	.string "Actually, I may not look all that\n"

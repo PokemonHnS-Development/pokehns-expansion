@@ -37,9 +37,9 @@ OldSeaMap_Obtained:
 sText_MysteryGiftOldSeaMapForYou:
 	.string "Thank you for using the MYSTERY\n"
 	.string "GIFT System.\p"
-	.string "Let me confirm--you are {PLAYER}?\p"
-	.string "We received this OLD SEA MAP\n"
-	.string "addressed to you.$"
+	.string "Déjame confirmar... ¿eres {PLAYER}?\p"
+	.string "Recibimos este VIEJO MAPA MARINO\n"
+	.string "dirigido a ti.$"
 
 sText_MysteryGiftOldSeaMapUseAtPort:
 	.string "It appears to be for use at the\n"

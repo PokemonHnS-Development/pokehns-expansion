@@ -79,7 +79,7 @@ VictoryRoadGate_Text_NotEnoughBadges:
     .string "You don't have all the GYM BADGES\n"
     .string "of JOHTO.\p"
     .string "I'm sorry, but I can't let you go\n"
-    .string "through.$"
+    .string "pasar.$"
 
 VictoryRoadGate_Text_EightBadges:
     .string "Oh! The eight BADGES of JOHTO!\p"
@@ -88,7 +88,7 @@ VictoryRoadGate_Text_EightBadges:
 VictoryRoadGate_Text_LeftBlackBelt:
     .string "This way leads to MT.SILVER.\p"
     .string "You'll see scary-strong POKéMON out\n"
-    .string "there.$"
+    .string "raras allí.$"
 
 VictoryRoadGate_Text_RightBlackBelt:
     .string "Off to the POKéMON LEAGUE, are you?\p"

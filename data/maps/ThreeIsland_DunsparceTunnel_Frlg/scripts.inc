@@ -51,8 +51,8 @@ ThreeIsland_DunsparceTunnel_EventScript_ProspectorAlreadyGaveNugget::
 	end
 
 ThreeIsland_DunsparceTunnel_Text_ProspectingForGold::
-	.string "Hey, there!\n"
-	.string "How's it going?\p"
+	.string "¡Hola!\n"
+	.string "¿Cómo va todo?\p"
 	.string "What am I doing here, you ask?\n"
 	.string "Why, I'm prospecting for gold!\p"
 	.string "When I strike it rich, I'm buying\n"
@@ -70,8 +70,8 @@ ThreeIsland_DunsparceTunnel_Text_StruckGoldThisIsForYou::
 
 ThreeIsland_DunsparceTunnel_Text_ThatsANugget::
 	.string "That's a NUGGET!\p"
-	.string "I can't give you any nuggets of\n"
-	.string "wisdom, so that'll have to do!$"
+	.string "No puedo darte pepitas de\n"
+	.string "sabiduría, ¡así que esto servirá!$"
 
 ThreeIsland_DunsparceTunnel_Text_WhoopsBagCrammedFull::
 	.string "Whoops, your BAG is crammed full!\n"

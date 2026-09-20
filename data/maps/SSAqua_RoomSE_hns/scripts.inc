@@ -20,7 +20,7 @@ SSAqua_RoomSE_EventScript_Peg::
 
 SSAqua_RoomSE_Text_PokefanmColinSeen:
     .string "Hey, kid! Want to battle\n"
-    .string "with me?$"
+    .string "conmigo?$"
 
 SSAqua_RoomSE_Text_PokefanmColinBeaten:
     .string "You're strong!$"

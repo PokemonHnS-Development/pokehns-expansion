@@ -229,7 +229,7 @@ Text_OnlyPassWithBadgeDontHaveYet::
 	.string "You can pass here only if you have\n"
 	.string "the {STR_VAR_1}.\p"
 	.string "You don't have the {STR_VAR_1}\n"
-	.string "yet.\p"
+	.string "está completa.\p"
 	.string "You have to have it to get to\n"
 	.string "the POKéMON LEAGUE.$"
 

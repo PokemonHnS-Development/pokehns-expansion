@@ -52,7 +52,7 @@ SSAnne_Kitchen_EventScript_Chef7::
 SSAnne_Kitchen_Text_BusyOutOfTheWay::
 	.string "You, mon petit!\n"
 	.string "We're busy here!\l"
-	.string "Out of the way!$"
+	.string "¡Quítate de en medio!$"
 
 SSAnne_Kitchen_Text_SawOddBerryInTrash::
 	.string "I saw an odd BERRY in the trash.\n"

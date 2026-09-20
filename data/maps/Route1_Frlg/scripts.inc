@@ -36,7 +36,7 @@ Route1_EventScript_RouteSign::
 
 Route1_Text_WorkAtPokeMartTakeSample::
 	.string "Hi!\n"
-	.string "I work at a POKéMON MART.\p"
+	.string "Trabajo en un POKéMON MART.\p"
 	.string "It's part of a convenient chain\n"
 	.string "selling all sorts of items.\p"
 	.string "Please, visit us in VIRIDIAN CITY.\p"
@@ -60,5 +60,5 @@ Route1_Text_CanJumpFromLedges::
 
 Route1_Text_RouteSign::
 	.string "ROUTE 1\n"
-	.string "PALLET TOWN - VIRIDIAN CITY$"
+	.string "PUEBLO PALETA - CIUDAD VERIDIAN$"
 

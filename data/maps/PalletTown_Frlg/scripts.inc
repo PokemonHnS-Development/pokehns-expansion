@@ -466,7 +466,7 @@ PalletTown_Text_RaisingMonsToo::
 	.string "protect me.$"
 
 PalletTown_Text_CanStoreItemsAndMonsInPC::
-	.string "Technology is incredible!\p"
+	.string "¡La tecnología es increíble!\p"
 	.string "You can now store and recall items\n"
 	.string "and POKéMON as data via PC.$"
 
@@ -484,11 +484,11 @@ PalletTown_Text_TownSign::
 	.string "Shades of your journey await!$"
 
 PalletTown_Text_OakLetMeSeePokedex::
-	.string "OAK: Ah, {PLAYER}!\n"
+	.string "OAK: ¡Ah, {PLAYER}!\n"
 	.string "You're back, are you?\p"
 	.string "How much have you filled in your\n"
 	.string "POKéDEX?\p"
-	.string "May I see it?\p"
+	.string "¿Puedo verla?\p"
 	.string "Let's see…$"
 
 PalletTown_Text_CaughtXPuttingInHonestEffort::
@@ -507,7 +507,7 @@ PalletTown_Text_CaughtXImpressiveFollowMe::
 	.string "Follow me.$"
 
 PalletTown_Text_OakYouEnjoyingTraveling::
-	.string "OAK: Ah, {PLAYER}!\n"
+	.string "OAK: ¡Ah, {PLAYER}!\n"
 	.string "You seem to be enjoying traveling.\p"
 	.string "Knowing you, {PLAYER}, I can easily\n"
 	.string "imagine you going out to even more\l"
@@ -529,7 +529,7 @@ PalletTown_Text_ReadItReadIt::
 
 @ Used by sign
 PalletTown_Text_PressStartToOpenMenu::
-	.string "TRAINER TIPS\p"
+	.string "CONSEJOS DE ENTRENADOR\p"
 	.string "Press START to open the MENU!$"
 
 PalletTown_Text_SignsAreUsefulArentThey::

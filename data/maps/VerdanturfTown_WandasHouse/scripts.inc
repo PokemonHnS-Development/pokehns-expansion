@@ -128,31 +128,31 @@ VerdanturfTown_WandasHouse_Text_MeetWanda:
 	.string "You're the {PLAYER} who WALLY was\n"
 	.string "telling me about.\p"
 	.string "I'm WALLY's cousin.\n"
-	.string "Glad to meet you!\p"
+	.string "¡Mucho gusto!\p"
 	.string "I think WALLY's become a lot more lively\n"
 	.string "and healthy since he came here.$"
 
 VerdanturfTown_WandasHouse_Text_DontWorryAboutWally:
 	.string "WANDA: Don't worry about WALLY.\n"
-	.string "He'll be just fine.\p"
-	.string "I know my little cousin, and he has\n"
-	.string "POKéMON with him, too.$"
+	.string "Él estará bien.\p"
+	.string "Conozco a mi primito, y él tiene\n"
+	.string "POKéMON con él también.$"
 
 VerdanturfTown_WandasHouse_Text_CanSeeGirlfriendEveryDay:
-	.string "Thanks to you, I can see my girlfriend\n"
-	.string "every day.\l"
-	.string "Happy? You bet I am!$"
+	.string "Gracias a ti, podré ver a mi novia\n"
+	.string "cada día.\l"
+	.string "¿Feliz? ¡Claro que lo estoy!$"
 
 VerdanturfTown_WandasHouse_Text_DaughtersBoyfriendDriven:
-	.string "My daughter's boyfriend is a very\n"
-	.string "driven and passionate sort of person.\p"
-	.string "He's been digging a tunnel nonstop\n"
-	.string "just so he can see my daughter.\p"
-	.string "My daughter's a little concerned,\n"
-	.string "so she goes out to the tunnel a lot.$"
+	.string "El novio de mi hija es una persona\n"
+	.string "muy decidida y apasionada.\p"
+	.string "Ha estado cavando un túnel sin parar\n"
+	.string "solo para poder ver a mi hija.\p"
+	.string "Mi hija está algo preocupada,\n"
+	.string "así que va mucho al túnel.$"
 
 VerdanturfTown_WandasHouse_Text_DaughtersBoyfriendWasDigging:
-	.string "It's amazing. My daughter's boyfriend\n"
+	.string "Es increíble. El novio de mi hija\n"
 	.string "was digging the tunnel by hand!\p"
 	.string "It's so incredible!$"
 

@@ -9,7 +9,7 @@ SevenIsland_SevaultCanyon_Text_CyndyIntro::
 	.string "My conditioning's in top form!$"
 
 SevenIsland_SevaultCanyon_Text_CyndyDefeat::
-	.string "Huh?\n"
+	.string "¿Eh?\n"
 	.string "Something's not right…$"
 
 SevenIsland_SevaultCanyon_Text_CyndyPostBattle::
@@ -133,5 +133,5 @@ SevenIsland_SevaultCanyon_Text_BrunoTrainedWithBrawly::
 	.string "But it's also not bad to aim for\n"
 	.string "the top with a partner.\p"
 	.string "Even BRUNO…\n"
-	.string "He trained with a fellow by the\l"
-	.string "name of BRAWLY before.$"
+	.string "Antes entrenó con un sujeto\l"
+	.string "llamado BRAWLY.$"

@@ -76,16 +76,16 @@ CeruleanCity_BikeShop_Text_WelcomeToBikeShop::
 	.string "Hi!\n"
 	.string "Welcome to our BIKE SHOP.\p"
 	.string "Have we got just the BIKE for\n"
-	.string "you!$"
+	.string "eres!$"
 
 CeruleanCity_BikeShop_Text_SorryYouCantAffordIt::
-	.string "Sorry!\n"
+	.string "¡Lo siento!\n"
 	.string "You can't afford it!$"
 
 CeruleanCity_BikeShop_Text_OhBikeVoucherHereYouGo::
 	.string "Oh, that's…\p"
 	.string "A BIKE VOUCHER!\p"
-	.string "Okay!\n"
+	.string "¡Está bien!\n"
 	.string "Here you go!$"
 
 CeruleanCity_BikeShop_Text_ExchangedVoucherForBicycle::
@@ -93,7 +93,7 @@ CeruleanCity_BikeShop_Text_ExchangedVoucherForBicycle::
 	.string "BIKE VOUCHER for a BICYCLE.$"
 
 CeruleanCity_BikeShop_Text_ThankYouComeAgain::
-	.string "Thank you!\n"
+	.string "¡Gracias!\n"
 	.string "Come back again sometime!$"
 
 CeruleanCity_BikeShop_Text_HowDoYouLikeNewBicycle::

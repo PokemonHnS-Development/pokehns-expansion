@@ -249,8 +249,8 @@ Route39_Text_SailorEugeneBeaten:
 Route39_Text_SailorEugeneAfter:
 	.string "My POKéMON were caught and\n"
 	.string "raised overseas.\p"
-	.string "They're my companions on\n"
-	.string "those long voyages.$"
+	.string "Son mis compañeros en\n"
+	.string "esos largos viajes.$"
 
 Route39_EventScript_Derek::
 	trainerbattle_single TRAINER_DEREK_HNS, Route39_Text_PokefanMDerekSeen, Route39_Text_PokefanMDerekBeaten, Route39_EventScript_RegisterDerek
@@ -286,18 +286,18 @@ Route39_EventScript_DerekNoRoom::
 	end
 
 Route39_Text_PokefanMDerekSeen:
-	.string "This is a good time to brag\n"
-	.string "about my PIKACHU!$"
+	.string "¡Es buen momento para presumir\n"
+	.string "de mi PIKACHU!$"
 
 Route39_Text_PokefanMDerekBeaten:
-	.string "I had no time to show off\n"
+	.string "No tuve tiempo de lucir a\n"
 	.string "PIKACHU…$"
 
 Route39_Text_PokefanMDerekAfter:
-	.string "I'm not listening to your\n"
-	.string "bragging!\p"
-	.string "We POKé FANS have a policy\n"
-	.string "of not listening to bragging!$"
+	.string "¡No voy a escuchar tus\n"
+	.string "presunciones!\p"
+	.string "¡Los POKé FANS no tenemos\n"
+	.string "costumbre de oír presumidos!$"
 
 Route39_EventScript_Ruth::
 	trainerbattle_single TRAINER_RUTH_HNS, Route39_Text_PokefanFRuthSeen, Route39_Text_PokefanFRuthBeaten
@@ -305,8 +305,8 @@ Route39_EventScript_Ruth::
 	end
 
 Route39_Text_PokefanFRuthSeen:
-	.string "Such darling POKéMON.\p"
-	.string "Let's show our POKéMON\n"
+	.string "Qué POKéMON tan lindos.\p"
+	.string "Mostremos nuestros POKéMON\n"
 	.string "together at the same time.$"
 
 Route39_Text_PokefanFRuthBeaten:
@@ -314,7 +314,7 @@ Route39_Text_PokefanFRuthBeaten:
 
 Route39_Text_PokefanFRuthAfter:
 	.string "Do you know about baby\n"
-	.string "POKéMON?\p"
+	.string "con los POKéMON?\p"
 	.string "I bet they're just adorable!$"
 
 Route39_EventScript_Norman::
@@ -328,14 +328,14 @@ Route39_Text_PsychicNormanSeen:
 
 Route39_Text_PsychicNormanBeaten:
 	.string "Ooh, your POKéMON have\n"
-	.string "potential.$"
+	.string "potencial.$"
 
 Route39_Text_PsychicNormanAfter:
 	.string "You know how POKéMON have\n"
 	.string "different abilities?\p"
 	.string "People are like that too.\n"
 	.string "Everyone has different\l"
-	.string "potential.$"
+	.string "potencial.$"
 
 Route39_EventScript_Jamie::
 	trainerbattle_single TRAINER_JAMIE_HNS, Route39_Text_PokefanFJaimeSeen, Route39_Text_PokefanFJaimeBeaten
@@ -344,7 +344,7 @@ Route39_EventScript_Jamie::
 
 Route39_Text_PokefanFJaimeSeen:
 	.string "You came at just the right\n"
-	.string "time.\p"
+	.string "tiempo.\p"
 	.string "Let's battle.$"
 
 Route39_Text_PokefanFJaimeBeaten:
@@ -358,7 +358,7 @@ Route39_Text_PokefanFJaimeAfter:
 	.string "train here.\p"
 	.string "It seems to become friendlier\n"
 	.string "by training here than\l"
-	.string "anywhere else.$"
+	.string "en cualquier otro lugar.$"
 
 Route39_EventScript_Sign1::
 	lock
@@ -390,29 +390,29 @@ Route39_EventScript_Sign3::
 	end
 
 Route39_Text_TrainerTips:
-	.string "TRAINER TIPS\p"
-	.string "Use HEADBUTT on trees to shake\n"
-	.string "POKéMON out.\p"
-	.string "Different kinds of POKéMON\n"
-	.string "drop out of trees.\p"
-	.string "Use HEADBUTT on any tree\n"
-	.string "you see!$"
+	.string "CONSEJOS DE ENTRENADOR\p"
+	.string "Usa CABEZAZO en los árboles para\n"
+	.string "sacar POKéMON.\p"
+	.string "Aparecen distintos tipos de\n"
+	.string "que caigan de los árboles.\p"
+	.string "¡Usa CABEZAZO en cualquier árbol\n"
+	.string "que veas!$"
 
 Route39_Text_DerekRegister:
-	.string "I'm not listening to your\n"
-	.string "bragging!\p"
-	.string "We POKé FANS have a policy\n"
-	.string "of not listening to bragging!$"
+	.string "¡No voy a escuchar tus\n"
+	.string "presunciones!\p"
+	.string "¡Los POKé FANS no tenemos\n"
+	.string "costumbre de oír presumidos!$"
 
 Route39_Text_DerekHasItem:
-	.string "Hey! I was showing off my\n"
-	.string "PIKACHU and found something.\p"
+	.string "¡Oye! Presumía de mi\n"
+	.string "PIKACHU y encontré algo.\p"
 	.string "Here, you can have it!$"
 
 Route39_Text_DerekGaveItem:
-	.string "PIKACHU is it!\n"
-	.string "Don't you agree?$"
+	.string "¡Es un PIKACHU!\n"
+	.string "¿No estás de acuerdo?$"
 
 Route39_Text_DerekNoRoom:
-	.string "Hmm, your BAG is full.\p"
-	.string "Come back when you have room.$"
+	.string "Hmm, tu MOCHILA está llena.\p"
+	.string "Vuelve cuando tengas espacio.$"

@@ -188,19 +188,19 @@ SaffronCity_Text_HesTakingASnooze::
 	.string "Hah! He's taking a snooze!$"
 
 SaffronCity_Text_CitySign::
-	.string "SAFFRON CITY\n"
-	.string "Shining, Golden Land of Commerce$"
+	.string "CIUDAD AZAFRÁN\n"
+	.string "Brillante, Dorada Tierra Comercial$"
 
 SaffronCity_Text_FightingDojo::
-	.string "FIGHTING DOJO$"
+	.string "DOJO DE LUCHA$"
 
 SaffronCity_Text_GymSign::
 	.string "SAFFRON CITY POKéMON GYM\n"
-	.string "LEADER: SABRINA\l"
-	.string "The Master of PSYCHIC POKéMON!$"
+	.string "LÍDER: SABRINA\l"
+	.string "¡El Maestro de POKéMON PSÍQUICOS!$"
 
 SaffronCity_Text_FullHealCuresStatus::
-	.string "TRAINER TIPS\p"
+	.string "CONSEJOS DE ENTRENADOR\p"
 	.string "FULL HEAL cures all ailments like\n"
 	.string "burns, paralysis, poisoning,\l"
 	.string "freezing, and sleep.\p"
@@ -208,7 +208,7 @@ SaffronCity_Text_FullHealCuresStatus::
 	.string "convenient than buying other items.$"
 
 SaffronCity_Text_GreatBallImprovedCatchRate::
-	.string "TRAINER TIPS\p"
+	.string "CONSEJOS DE ENTRENADOR\p"
 	.string "The new GREAT BALL offers improved\n"
 	.string "catching rates.\p"
 	.string "Try it on those hard-to-catch\n"
@@ -225,7 +225,7 @@ SaffronCity_Text_SilphsLatestProduct::
 	.string "Release to be determined…$"
 
 SaffronCity_Text_TrainerFanClubSign::
-	.string "POKéMON TRAINER FAN CLUB\p"
+	.string "CLUB DE FANS DE ENTRENADORES\p"
 	.string "Many TRAINERS have scribbled their\n"
 	.string "names on this sign.$"
 

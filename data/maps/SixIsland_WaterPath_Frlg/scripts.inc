@@ -100,7 +100,7 @@ SixIsland_WaterPath_Text_MiaPostBattle::
 
 SixIsland_WaterPath_Text_MiaNotEnoughMons::
 	.string "MIA: Oh, you only have one\n"
-	.string "POKéMON?\p"
+	.string "con los POKéMON?\p"
 	.string "Don't you feel lonesome?$"
 
 SixIsland_WaterPath_Text_WantedUltimateHorn::

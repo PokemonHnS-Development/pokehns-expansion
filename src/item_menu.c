@@ -2188,7 +2188,7 @@ static void ItemMenu_Cancel(u8 taskId)
     ReturnToItemList(taskId);
 }
 
-static const u8 sText_NoItemsInBattle[] = _("Battle items are not allowed\nunder current rules!");
+static const u8 sText_NoItemsInBattle[] = _("No se permiten objetos de batalla\nbajo las reglas actuales!");
 
 static void ItemMenu_UseInBattle(u8 taskId)
 {

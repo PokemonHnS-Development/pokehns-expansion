@@ -87,8 +87,8 @@ PewterCity_Gym_Text_BrockIntro::
 	.string "My rock-hard willpower is evident\n"
 	.string "even in my POKéMON.\p"
 	.string "My POKéMON are all rock hard, and\n"
-	.string "have true-grit determination.\p"
-	.string "That's right - my POKéMON are all\n"
+	.string "roca y tienen gran determinación.\p"
+	.string "Así es, ¡todos mis POKéMON son\n"
 	.string "the ROCK type!\p"
 	.string "Fuhaha! You're going to challenge\n"
 	.string "me knowing that you'll lose?\p"
@@ -99,7 +99,7 @@ PewterCity_Gym_Text_BrockIntro::
 
 PewterCity_Gym_Text_BrockDefeat::
 	.string "I took you for granted, and so\n"
-	.string "I lost.\p"
+	.string "Perdí.\p"
 	.string "As proof of your victory, I confer\n"
 	.string "on you this…the official POKéMON\l"
 	.string "LEAGUE BOULDERBADGE.\p"
@@ -113,8 +113,8 @@ PewterCity_Gym_Text_BrockDefeat::
 	.string "move FLASH to use it.$"
 
 PewterCity_Gym_Text_TakeThisWithYou::
-	.string "Wait!\n"
-	.string "Take this with you.$"
+	.string "¡Espera!\n"
+	.string "Llévate esto contigo.$"
 
 PewterCity_Gym_Text_ReceivedTM39FromBrock::
 	.string "{PLAYER} received TM39\n"
@@ -160,7 +160,7 @@ PewterCity_Gym_Text_LiamPostBattle::
 	.string "…But not as hot as BROCK!$"
 
 PewterCity_Gym_Text_LetMeTakeYouToTheTop::
-	.string "Hiya!\n"
+	.string "¡Hola!\n"
 	.string "Do you want to dream big?\p"
 	.string "Do you dare to dream of becoming\n"
 	.string "the POKéMON champ?\p"
@@ -169,7 +169,7 @@ PewterCity_Gym_Text_LetMeTakeYouToTheTop::
 	.string "Let me take you to the top!$"
 
 PewterCity_Gym_Text_LetsGetHappening::
-	.string "All right!\n"
+	.string "¡Muy bien!\n"
 	.string "Let's get happening!$"
 
 PewterCity_Gym_Text_TryDifferentPartyOrders::
@@ -189,14 +189,14 @@ PewterCity_Gym_Text_YoureChampMaterial::
 	.string "You're POKéMON champ material!$"
 
 PewterCity_Gym_Text_GymStatue::
-	.string "PEWTER POKéMON GYM\n"
-	.string "LEADER: BROCK\p"
-	.string "WINNING TRAINERS:\n"
+	.string "GIMNASIO POKéMON DE PIEDRA\n"
+	.string "LÍDER: BROCK\p"
+	.string "ENTRENADORES GANADORES:\n"
 	.string "{RIVAL}$"
 
 PewterCity_Gym_Text_GymStatuePlayerWon::
-	.string "PEWTER POKéMON GYM\n"
-	.string "LEADER: BROCK\p"
-	.string "WINNING TRAINERS:\n"
+	.string "GIMNASIO POKéMON DE PIEDRA\n"
+	.string "LÍDER: BROCK\p"
+	.string "ENTRENADORES GANADORES:\n"
 	.string "{RIVAL}, {PLAYER}$"
 

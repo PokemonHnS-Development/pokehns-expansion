@@ -66,11 +66,11 @@ TinTower_1F_Sage2_Text:
 	.string "to have perished. It was tragic.\p"
 	.string "However…\p"
 	.string "A rainbow-colored POKéMON…\n"
-	.string "In other words…\p"
+	.string "En otras palabras...\p"
 	.string "HO-OH descended from the sky and\n"
 	.string "gave new life to the three POKéMON.\p"
 	.string "They are…\n"
-	.string "SUICUNE, ENTEI and RAIKOU.\p"
+	.string "SUICUNE, ENTEI y RAIKOU.\p"
 	.string "That is what they say.$"
 
 TinTower_1F_Sage3_Text:

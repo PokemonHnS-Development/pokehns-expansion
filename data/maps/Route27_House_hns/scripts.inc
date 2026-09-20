@@ -45,7 +45,7 @@ Route27_Movement_FollowerJump:
 
 SandstormHouse_Text_Woman1:
     .string "Where are you off to with\n"
-    .string "POKéMON?\p"
+    .string "con los POKéMON?\p"
     .string "POKéMON LEAGUE?\p"
     .string "Are your POKéMON loyal enough for\n"
     .string "you to win?\p"

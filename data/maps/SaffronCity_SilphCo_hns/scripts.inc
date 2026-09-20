@@ -93,9 +93,9 @@ SaffronCity_SilphCo_Movement_StevenLeave:
 
 SaffronCity_SilphCo_Text_Steven1:
 	.string "Hello...\n"
-	.string "You're breaking up...\l"
+	.string "Se corta la señal...\l"
 	.string "I think it depends on my dad.\l"
-	.string "I see...\n"
+	.string "Ya veo...\n"
 	.string "I'll be on my way. See you soon.$"
 SaffronCity_SilphCo_Text_Steven2:
 	.string "STEVEN: You are... I remember your\n"

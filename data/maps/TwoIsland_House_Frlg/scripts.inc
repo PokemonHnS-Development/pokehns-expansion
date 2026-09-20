@@ -140,7 +140,7 @@ TwoIsland_House_Text_TeachWhichMove::
 	.string "Which move should I teach?$"
 
 TwoIsland_House_Text_NoMoveICanTeachThatMon::
-	.string "Sorry…\p"
+	.string "Lo siento...\p"
 	.string "It doesn't appear as if I have a\n"
 	.string "move I can teach that POKéMON.$"
 

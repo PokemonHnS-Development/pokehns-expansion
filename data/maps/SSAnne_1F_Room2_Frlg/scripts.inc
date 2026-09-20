@@ -16,7 +16,7 @@ SSAnne_1F_Room2_EventScript_Tyler::
 	end
 
 SSAnne_1F_Room2_Text_TylerIntro::
-	.string "I love POKéMON!\n"
+	.string "¡Amo a los POKéMON!\n"
 	.string "Do you?$"
 
 SSAnne_1F_Room2_Text_TylerDefeat::
@@ -24,7 +24,7 @@ SSAnne_1F_Room2_Text_TylerDefeat::
 	.string "You're great!$"
 
 SSAnne_1F_Room2_Text_TylerPostBattle::
-	.string "Listen, listen!\n"
+	.string "¡Escucha, escucha!\n"
 	.string "Let me be your friend, okay?\p"
 	.string "Then we can trade POKéMON and\n"
 	.string "do stuff.$"

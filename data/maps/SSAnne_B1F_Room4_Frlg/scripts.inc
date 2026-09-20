@@ -20,7 +20,7 @@ SSAnne_B1F_Room4_Text_LeonardDefeat::
 	.string "Good battle, mate!$"
 
 SSAnne_B1F_Room4_Text_LeonardPostBattle::
-	.string "Hahaha!\n"
+	.string "¡Jajaja!\n"
 	.string "Want to be a sailor, mate?$"
 
 SSAnne_B1F_Room4_Text_DuncanIntro::

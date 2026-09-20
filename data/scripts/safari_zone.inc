@@ -126,7 +126,7 @@ SafariZone_Text_WouldYouLikeToExit:
 	.string "ZONE right now?$"
 
 SafariZone_Text_TimesUp:
-	.string "Ding-dong! Time's up!\n"
+	.string "¡Ding-dong! ¡Se acabó el tiempo!\n"
 	.string "Your SAFARI Game is over.$"
 
 SafariZone_Text_OutOfBalls:
@@ -179,12 +179,12 @@ Route121_SafariZoneEntrance_Text_WouldYouLikeToPlay:
 	.string "Would you like to play a SAFARI Game?$"
 
 Route121_SafariZoneEntrance_Text_PlayAnotherTime:
-	.string "Okay.\n"
+	.string "Está bien.\n"
 	.string "Please play another time!$"
 
 Route121_SafariZoneEntrance_Text_NotEnoughMoney:
-	.string "You don't have enough money.\n"
-	.string "Sorry.$"
+	.string "No tienes suficiente dinero.\n"
+	.string "Lo siento.$"
 
 Route121_SafariZoneEntrance_Text_ThatWillBe500Please:
 	.string "That will be ¥500, please.$"
@@ -202,11 +202,11 @@ Route121_SafariZoneEntrance_Text_PleaseEnjoyYourself:
 	.string "Off you go on your wild excursion!$"
 
 Route121_SafariZoneEntrance_Text_PCIsFull:
-	.string "Excuse me!\n"
+	.string "¡Disculpa!\n"
 	.string "Your PC BOX is full.$"
 
 Route121_SafariZoneEntrance_Text_YouNeedPokeblockCase:
-	.string "Excuse me!\n"
+	.string "¡Disculpa!\n"
 	.string "You seem to be without a {POKEBLOCK} CASE.\p"
 	.string "Your SAFARI Game will be much more\n"
 	.string "fruitful if you use {POKEBLOCK}S.\p"
@@ -227,7 +227,7 @@ SafariZone_South_Text_EnjoyTheRestOfYourAdventure:
 	.string "adventure!$"
 
 SafariZone_South_Text_ExitEarlyThankYouForPlaying:
-	.string "Okay.\p"
+	.string "Está bien.\p"
 	.string "I'll take back your remaining SAFARI\n"
 	.string "BALLS.\p"
 	.string "Thank you for playing.\n"
@@ -239,7 +239,7 @@ SafariZone_South_Text_GoodLuck:
 	.string "to tell me, please!$"
 
 SafariZone_South_Text_Boy:
-	.string "Did you know?\p"
+	.string "¿Sabías esto?\p"
 	.string "If you put a {POKEBLOCK} in that square box,\n"
 	.string "POKéMON gather around.$"
 
@@ -341,7 +341,7 @@ SafariZone_Northeast_Text_Woman:
 	.string "Where might one be?$"
 
 SafariZone_Northeast_Text_Girl:
-	.string "Oh, boo!\n"
+	.string "¡Ay, qué mal!\n"
 	.string "I can't seem to catch anything!\p"
 	.string "I'll end up wasting the admission\n"
 	.string "price if I don't catch something!$"

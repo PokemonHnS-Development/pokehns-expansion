@@ -32,8 +32,8 @@ Route20_EventScript_SeafoamIslandsSign::
 	end
 
 Route20_Text_BarryIntro::
-	.string "The water is shallow here.\n"
-	.string "There are many people swimming.$"
+	.string "El agua es poco profunda aquí.\n"
+	.string "Hay mucha gente nadando.$"
 
 Route20_Text_BarryDefeat::
 	.string "Splash!$"
@@ -54,8 +54,8 @@ Route20_Text_ShirleyPostBattle::
 	.string "this island.$"
 
 Route20_Text_TiffanyIntro::
-	.string "I love floating with the fishes\n"
-	.string "here among the waves.$"
+	.string "Amo flotar con los peces\n"
+	.string "aquí entre las olas.$"
 
 Route20_Text_TiffanyDefeat::
 	.string "Yowch!$"
@@ -84,18 +84,18 @@ Route20_Text_DeanPostBattle::
 	.string "POKéMON, not me!$"
 
 Route20_Text_DarrinIntro::
-	.string "Why are you riding a POKéMON?\n"
+	.string "¿Por qué montas un POKéMON?\n"
 	.string "Can't you swim?$"
 
 Route20_Text_DarrinDefeat::
-	.string "Ouch!\n"
+	.string "¡Ay!\n"
 	.string "Torpedoed!$"
 
 Route20_Text_DarrinPostBattle::
 	.string "Riding a POKéMON sure looks fun!$"
 
 Route20_Text_RogerIntro::
-	.string "I rode my bird POKéMON here.$"
+	.string "Vine aquí en mi POKéMON ave.$"
 
 Route20_Text_RogerDefeat::
 	.string "Oh, no!\n"
@@ -117,7 +117,7 @@ Route20_Text_NoraPostBattle::
 	.string "CLOYSTER?$"
 
 Route20_Text_MissyIntro::
-	.string "I swam here from CINNABAR ISLAND.\n"
+	.string "Nadé desde ISLA CANELA hasta aquí.\n"
 	.string "It wasn't easy, I tell you.$"
 
 Route20_Text_MissyDefeat::
@@ -130,12 +130,12 @@ Route20_Text_MissyPostBattle::
 	.string "now.$"
 
 Route20_Text_MelissaIntro::
-	.string "CINNABAR, in the west, has a LAB\n"
-	.string "for POKéMON.\p"
-	.string "My daddy works there.$"
+	.string "En CANELA, al oeste, hay un LAB\n"
+	.string "POKéMON.\p"
+	.string "Mi papá trabaja allí.$"
 
 Route20_Text_MelissaDefeat::
-	.string "Wait!\n"
+	.string "¡Espera!\n"
 	.string "You're supposed to wait!$"
 
 Route20_Text_MelissaPostBattle::
@@ -148,6 +148,6 @@ Route20_Text_SeafoamIslands::
 
 Route20_Text_MistyTrainsHere::
 	.string "Strong TRAINERS and WATER POKéMON\n"
-	.string "are common sights in these parts.\p"
-	.string "They say that MISTY of the\n"
-	.string "CERULEAN GYM trains here.$"
+	.string "de AGUA abundan por aquí.\p"
+	.string "Dicen que MISTY, del\n"
+	.string "GIMNASIO CERULEAN, entrena aquí.$"

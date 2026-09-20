@@ -14,9 +14,9 @@ Route9_Text_AliciaDefeat::
 
 Route9_Text_AliciaPostBattle::
 	.string "The tunnel coming up is pitch-black\n"
-	.string "inside.\p"
+	.string "por dentro.\p"
 	.string "You'll need FLASH to get through\n"
-	.string "there.$"
+	.string "raras allí.$"
 
 Route9_Text_ChrisIntro::
 	.string "Who's that walking there with those\n"
@@ -63,14 +63,14 @@ Route9_Text_JeremyPostBattle::
 	.string "me there, eh?$"
 
 Route9_Text_BriceIntro::
-	.string "Hahaha!\n"
+	.string "¡Jajaja!\n"
 	.string "Aren't you a little toughie!$"
 
 Route9_Text_BriceDefeat::
-	.string "What's that?$"
+	.string "¿Qué es eso?$"
 
 Route9_Text_BricePostBattle::
-	.string "Hahaha!\n"
+	.string "¡Jajaja!\n"
 	.string "Kids should be tough!$"
 
 Route9_Text_BrentIntro::
@@ -86,15 +86,15 @@ Route9_Text_BrentPostBattle::
 	.string "to get stronger…$"
 
 Route9_Text_AlanIntro::
-	.string "Hahahaha!\n"
-	.string "Bring it on!$"
+	.string "¡Jajajaja!\n"
+	.string "¡Ven con todo!$"
 
 Route9_Text_AlanDefeat::
-	.string "Hahahaha!\n"
+	.string "¡Jajajaja!\n"
 	.string "You beat me fair!$"
 
 Route9_Text_AlanPostBattle::
-	.string "Hahahaha!\n"
+	.string "¡Jajajaja!\n"
 	.string "Us hearty guys always laugh!$"
 
 Route9_Text_ConnerIntro::
@@ -109,5 +109,5 @@ Route9_Text_ConnerPostBattle::
 
 Route9_Text_RouteSign::
 	.string "ROUTE 9\n"
-	.string "CERULEAN CITY - ROCK TUNNEL$"
+	.string "CIUDAD CERULEAN - TÚNEL ROCA$"
 

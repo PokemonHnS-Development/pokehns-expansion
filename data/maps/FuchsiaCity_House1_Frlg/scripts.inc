@@ -26,8 +26,8 @@ FuchsiaCity_House1_Text_BillIsMyGrandson::
 	.string "Hmm?\n"
 	.string "You've met BILL?\p"
 	.string "He's my grandson!\p"
-	.string "He always liked collecting things,\n"
-	.string "even as a child!$"
+	.string "Siempre le gustó coleccionar cosas,\n"
+	.string "¡incluso de niño!$"
 
 FuchsiaCity_House1_Text_BillFilesHisOwnMonData::
 	.string "BILL files his own POKéMON data on\n"

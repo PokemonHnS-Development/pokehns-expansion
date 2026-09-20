@@ -139,7 +139,7 @@ MtMoon_B2F_Text_MiguelIntro::
 	.string "They're both mine!$"
 
 MtMoon_B2F_Text_MiguelDefeat::
-	.string "Okay!\n"
+	.string "¡Está bien!\n"
 	.string "I'll share!$"
 
 MtMoon_B2F_Text_WellEachTakeAFossil::
@@ -147,7 +147,7 @@ MtMoon_B2F_Text_WellEachTakeAFossil::
 	.string "No being greedy!$"
 
 MtMoon_B2F_Text_ThenThisFossilIsMine::
-	.string "All right.\n"
+	.string "Está bien.\n"
 	.string "Then this fossil is mine!$"
 
 MtMoon_B2F_Text_LabOnCinnabarRegeneratesFossils::
@@ -163,7 +163,7 @@ MtMoon_B2F_Text_Grunt1Intro::
 	.string "earn us huge riches!$"
 
 MtMoon_B2F_Text_Grunt1Defeat::
-	.string "Urgh!\n"
+	.string "¡Urgh!\n"
 	.string "Now I'm mad!$"
 
 MtMoon_B2F_Text_Grunt1PostBattle::

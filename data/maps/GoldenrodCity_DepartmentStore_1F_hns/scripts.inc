@@ -42,25 +42,25 @@ GoldenrodDeptStor1_Text_Receptionist:
     .string "Welcome to GOLDENROD DEPT.STORE.$"
 
 GoldenrodDeptStore1_Text_Gentleman:
-    .string "The DEPT.STORE has a decent\n"
-    .string "selection.\p"
-    .string "But some items are only available\n"
-    .string "as GAME CORNER prizes.$"
+    .string "Los ALMACENES tienen una\n"
+    .string "buena selección.\p"
+    .string "Pero algunos objetos solo están\n"
+    .string "en el GAME CORNER.$"
 
 GoldenrodDeptStore1_Text_PokefanF:
     .string "I'm raring to shop again today!$"
 
 GoldenrodDeptStore1_Text_BugCatcher:
-    .string "Mom's good at bargain hunting.\p"
-    .string "She always buys stuff at lower\n"
-    .string "prices.$"
+    .string "Mamá es buena buscando ofertas.\p"
+    .string "Siempre compra cosas a precios\n"
+    .string "más bajos.$"
 
 GoldenrodDeptStore1_Text_Directory:
-    .string "1F SERVICE COUNTER\n"
-	.string "YOU ARE HERE.\p"
-    .string "2F TRAINER'S MARKET\p"
-    .string "3F BATTLE COLLECTION\p"
-    .string "4F MEDICINE BOX\p"
-    .string "5F TM CORNER\p"
-    .string "6F TRANQUIL SQUARE\p"
-    .string "ROOFTOP LOOKOUT$"
+    .string "1F MOSTRADOR\n"
+	.string "ESTÁS AQUÍ.\p"
+    .string "2F MERCADO ENTRENADOR\p"
+    .string "3F COLECCIÓN DE BATALLAS\p"
+    .string "4F CAJA DE MEDICINAS\p"
+    .string "5F RINCÓN DE LAS MT\p"
+    .string "6F PLAZA TRANQUILA\p"
+    .string "MIRADOR DE LA AZOTEA$"

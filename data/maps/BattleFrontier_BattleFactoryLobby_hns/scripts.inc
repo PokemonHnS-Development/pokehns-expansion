@@ -323,91 +323,91 @@ BattleFrontier_BattleFactoryLobby_EventScript_ExitRules_hns::
 	end
 
 BattleFrontier_BattleFactoryLobby_Text_WelcomeForSingleBattle_hns:
-	.string "Where the intelligence of TRAINERS\n"
-	.string "is put to the test!\p"
-	.string "Welcome to the BATTLE FACTORY!\p"
-	.string "I am your guide to the Battle Swap\n"
-	.string "Single Tournament.$"
+	.string "Donde la inteligencia de ENTRENADORES\n"
+	.string "ENTRENADORES es puesto a prueba!\p"
+	.string "¡Bienvenido a la FÁBRICA DE COMBATE!\p"
+	.string "Soy tu guía del Intercambio de Combate\n"
+	.string "Torneo Individual.$"
 
 BattleFrontier_BattleFactoryLobby_Text_TakeSinglesChallenge_hns:
-	.string "Would you like to take the Battle\n"
-	.string "Swap Single challenge?$"
+	.string "¿Te gustaría aceptar el desafío\n"
+	.string "Individual de Intercambio?$"
 
 BattleFrontier_BattleFactoryLobby_Text_ExplainSinglesChallenge_hns:
-	.string "The Battle Swap Single Tournament\n"
-	.string "is a SINGLE BATTLE competition using\l"
-	.string "only rental POKéMON.\p"
-	.string "First, you will be loaned three\n"
-	.string "POKéMON specifically for this event.\p"
-	.string "Using the supplied rental POKéMON,\n"
-	.string "you must conduct a SINGLE BATTLE.\p"
-	.string "If you win, you are permitted to trade\n"
-	.string "one of your rental POKéMON.\p"
-	.string "Repeat this cycle of battling and\n"
-	.string "trading--if you win seven times in\l"
-	.string "a row, you will earn Battle Points.\p"
-	.string "If you want to interrupt your\n"
-	.string "challenge, please save the game.\p"
-	.string "If you don't save, you will be\n"
-	.string "disqualified from your challenge.$"
+	.string "El Torneo Individual de Intercambio\n"
+	.string "es una competencia de COMBATE INDIV.\l"
+	.string "usando solo POKéMON de alquiler.\p"
+	.string "Primero, se te prestarán tres\n"
+	.string "POKéMON específicos para este evento.\p"
+	.string "Usando los POKéMON de alquiler,\n"
+	.string "Debes luchar en BATALLA INDIVIDUAL.\p"
+	.string "Si ganas, podrás intercambiar\n"
+	.string "uno de tus POKéMON de alquiler.\p"
+	.string "Repite el ciclo de luchar y\n"
+	.string "cambiar; si ganas siete veces\l"
+	.string "seguidas, ganarás Puntos Batalla.\p"
+	.string "Si quieres interrumpir tu\n"
+	.string "Antes del reto, guarda la partida.\p"
+	.string "Si no guardas, quedarás\n"
+	.string "descalificado del reto.$"
 
 BattleFrontier_BattleFactoryLobby_Text_LookForwardToNextVisit_hns:
 	.string "We look forward to your next visit.$"
 
 BattleFrontier_BattleFactoryLobby_Text_WhichLevelMode_hns:
-	.string "Which level do you wish to challenge?\n"
-	.string "Level 50 or Open Level?$"
+	.string "¿Qué nivel quieres desafiar?\n"
+	.string "¿Nivel 50 o Nivel Abierto?$"
 
 BattleFrontier_BattleFactoryLobby_Text_OkayToSaveBeforeChallenge_hns:
-	.string "Before you begin your challenge,\n"
-	.string "I need to save the game. Is that okay?$"
+	.string "Antes de empezar tu desafío,\n"
+	.string "debo guardar la partida. ¿Está bien?$"
 
 @ Unused
 BattleFrontier_BattleFactoryLobby_Text_WillHoldMonsForSafekeeping_hns:
-	.string "Okay, I will hold your POKéMON for\n"
-	.string "safekeeping while you compete.$"
+	.string "Bien, cuidaré de tus POKéMON\n"
+	.string "mientras compites.$"
 
 BattleFrontier_BattleFactoryLobby_Text_StepThisWay_hns:
 	.string "Please step this way.$"
 
 BattleFrontier_BattleFactoryLobby_Text_ReturnMons_hnsSaveResults_hns:
-	.string "Thank you for participating!\p"
-	.string "I will return your POKéMON in exchange\n"
-	.string "for our rental POKéMON.\p"
-	.string "I must also save the event results.\n"
+	.string "¡Gracias por participar!\p"
+	.string "Te devolveré tus POKéMON a cambio\n"
+	.string "de nuestros POKéMON de alquiler.\p"
+	.string "También debo guardar los resultados.\n"
 	.string "Please wait.$"
 
 @ Unused
 BattleFrontier_BattleFactoryLobby_Text_ReturnMons_hns:
-	.string "I will return your POKéMON in exchange\n"
-	.string "for our rental POKéMON.$"
+	.string "Te devolveré tus POKéMON a cambio\n"
+	.string "de nuestros POKéMON de alquiler.$"
 
 BattleFrontier_BattleFactoryLobby_Text_CongratsSevenWins_hns:
-	.string "Congratulations! You've won seven\n"
-	.string "straight Battle Swap matches!$"
+	.string "¡Felicidades! ¡Ganaste siete\n"
+	.string "combates de Intercambio seguidos!$"
 
 @ Unused
 BattleFrontier_BattleFactoryLobby_Text_AwardBattlePoints_hnsForStreak_hns:
-	.string "In recognition of your 7-win streak,\n"
-	.string "we award you these Battle Point(s).$"
+	.string "Por tu racha de 7 victorias,\n"
+	.string "Te damos estos Puntos de Batalla.$"
 
 @ Unused
 BattleFrontier_BattleFactoryLobby_Text_MaxBattlePoints_hns:
 	.string "Oh, oh, oh!\p"
-	.string "Your Battle Points are maxed.\p"
-	.string "Please come back after using\n"
-	.string "some Battle Points.$"
+	.string "Tus Puntos de Batalla están al max.\p"
+	.string "Vuelve después de usar\n"
+	.string "algunos Puntos de Batalla.$"
 
 BattleFrontier_BattleFactoryLobby_Text_WaitingForYouToResume_hns:
-	.string "We've been waiting for you!\p"
-	.string "Before we resume your challenge,\n"
-	.string "I must save the game.$"
+	.string "¡Te estábamos esperando!\p"
+	.string "Antes de seguir con el desafío,\n"
+	.string "debo guardar la partida.$"
 
 BattleFrontier_BattleFactoryLobby_Text_DidntSaveBeforeQuitting_hns:
-	.string "I'm sorry to say this, but you didn't\n"
-	.string "save before you quit playing last time.\p"
-	.string "As a result, you have been disqualified\n"
-	.string "from your challenge.$"
+	.string "Siento decirte que no guardaste\n"
+	.string "la partida la última vez que jugaste.\p"
+	.string "Por eso, has sido descalificado\n"
+	.string "de tu desafío.$"
 
 @ Unused
 BattleFrontier_BattleFactoryLobby_Text_WellReturnMons_hns:
@@ -415,97 +415,97 @@ BattleFrontier_BattleFactoryLobby_Text_WellReturnMons_hns:
 
 @ Unused
 BattleFrontier_BattleFactoryLobby_Text_ReceivedPrizeItem_hns:
-	.string "{PLAYER} received the prize\n"
+	.string "{PLAYER} recibió el premio\n"
 	.string "{STR_VAR_1}.$"
 
 BattleFrontier_BattleFactoryLobby_Text_WelcomeForDoubleBattle_hns:
-	.string "Where the intelligence of TRAINERS\n"
-	.string "is put to the test!\p"
-	.string "Welcome to the BATTLE FACTORY!\p"
-	.string "I am your guide to the Battle Swap\n"
-	.string "Double Tournament.$"
+	.string "Donde la inteligencia de ENTRENADORES\n"
+	.string "ENTRENADORES es puesto a prueba!\p"
+	.string "¡Bienvenido a la FÁBRICA DE COMBATE!\p"
+	.string "Soy tu guía del Intercambio de Combate\n"
+	.string "Torneo Doble.$"
 
 BattleFrontier_BattleFactoryLobby_Text_TakeDoublesChallenge_hns:
-	.string "Would you like to take the Battle\n"
-	.string "Swap Double challenge?$"
+	.string "¿Te gustaría aceptar el desafío\n"
+	.string "¿Reto de Intercambio Doble?$"
 
 BattleFrontier_BattleFactoryLobby_Text_ExplainDoublesChallenge_hns:
-	.string "The Battle Swap Double Tournament\n"
-	.string "is a DOUBLE BATTLE competition using\l"
-	.string "only rental POKéMON.\p"
-	.string "First, you will be loaned three\n"
-	.string "POKéMON specifically for this event.\p"
-	.string "Using the supplied rental POKéMON,\n"
-	.string "you must conduct a DOUBLE BATTLE.\p"
-	.string "If you win, you are permitted to trade\n"
-	.string "one of your rental POKéMON.\p"
-	.string "Repeat this cycle of battling and\n"
-	.string "trading--if you win seven times in\l"
-	.string "a row, you will earn Battle Points.\p"
-	.string "If you want to interrupt your\n"
-	.string "challenge, please save the game.\p"
-	.string "If you don't save before interrupting,\n"
-	.string "you will be disqualified.$"
+	.string "El Torneo de Intercambio Doble\n"
+	.string "es una competencia de BATALLA DOBLE\l"
+	.string "usando solo POKéMON de alquiler.\p"
+	.string "Primero, se te prestarán tres\n"
+	.string "POKéMON específicos para este evento.\p"
+	.string "Usando los POKéMON de alquiler,\n"
+	.string "debes hacer una BATALLA DOBLE.\p"
+	.string "Si ganas, podrás intercambiar\n"
+	.string "uno de tus POKéMON de alquiler.\p"
+	.string "Repite el ciclo de luchar y\n"
+	.string "cambiar; si ganas siete veces\l"
+	.string "seguidas, ganarás Puntos Batalla.\p"
+	.string "Si quieres interrumpir tu\n"
+	.string "Antes del reto, guarda la partida.\p"
+	.string "Si no guardas antes de interrumpir,\n"
+	.string "quedarás descalificado.$"
 
 BattleFrontier_BattleFactoryLobby_Text_CongratsForDefeatingHead_hns:
-	.string "Congratulations for defeating\n"
-	.string "the FACTORY HEAD and winning\l"
-	.string "seven matches in a row!$"
+	.string "Felicidades por derrotar al\n"
+	.string "JEFE DE FÁBRICA y ganar\l"
+	.string "¡siete combates seguidos!$"
 
 BattleFrontier_BattleFactoryLobby_Text_AwardBattlePoints_hns:
-	.string "In recognition of your wealth of\n"
-	.string "knowledge and keen intelligence,\l"
-	.string "we award you these Battle Point(s).$"
+	.string "En reconocimiento a tu gran\n"
+	.string "conocimiento e inteligencia,\l"
+	.string "Te damos estos Puntos de Batalla.$"
 
 BattleFrontier_BattleFactoryLobby_Text_ExchangeMonsAndSave_hns:
-	.string "Let me exchange your POKéMON\n"
-	.string "for our rental POKéMON.\p"
-	.string "I need to save the battle data,\n"
-	.string "so please wait.$"
+	.string "Permíteme cambiar tu POKéMON\n"
+	.string "de nuestros POKéMON de alquiler.\p"
+	.string "Debo guardar los datos de batalla,\n"
+	.string "así que espera, por favor.$"
 
 BattleFrontier_BattleFactoryLobby_Text_RecordLastMatch_hns:
-	.string "Would you like to record your last\n"
-	.string "BATTLE FACTORY match on your\l"
-	.string "FRONTIER PASS?$"
+	.string "¿Quieres grabar tu última batalla\n"
+	.string "Combate de BATTLE FACTORY en tu\l"
+	.string "BATALLA en tu PASA FRONTERA?$"
 
 BattleFrontier_BattleFactoryLobby_Text_NeedKnowledgeOfMonsMoves_hns:
 	.string "Hi!\n"
-	.string "You, there!\p"
-	.string "Are you thinking that the events here\n"
-	.string "are easy since you don't need to have\l"
-	.string "a raised team of POKéMON?\p"
-	.string "I wouldn't be too sure about winning\n"
-	.string "that easily.\p"
-	.string "If you don't have thorough knowledge\n"
-	.string "about POKéMON and their moves,\l"
-	.string "it will be tough to keep winning.$"
+	.string "¡Tú, ahí!\p"
+	.string "¿Crees que los eventos de aquí\n"
+	.string "son fáciles porque no necesitas\l"
+	.string "un equipo de POKéMON entrenado?\p"
+	.string "No estaría tan seguro de ganar\n"
+	.string "tan fácilmente.\p"
+	.string "Si no tienes un conocimiento\n"
+	.string "de los POKéMON y sus movimientos,\l"
+	.string "será difícil seguir ganando.$"
 
 BattleFrontier_BattleFactoryLobby_Text_SwappedForWeakMon_hns:
-	.string "I swapped for a weak POKéMON…\n"
-	.string "I thought it was a good kind to have…\p"
-	.string "They wiped the floor with us…$"
+	.string "Cambié por un POKéMON débil...\n"
+	.string "Pensé que sería útil tenerlo...\p"
+	.string "Nos dieron una paliza...$"
 
 BattleFrontier_BattleFactoryLobby_Text_NeedToCheckOpponentsMons_hns:
-	.string "Things haven't been going my way\n"
-	.string "at all.\p"
-	.string "You need to check your opponent's\n"
-	.string "POKéMON during battle to see if\l"
-	.string "they're any good.$"
+	.string "Las cosas no me han salido\n"
+	.string "nada bien.\p"
+	.string "Debes analizar bien los POKéMON\n"
+	.string "POKéMON en batalla para ver si\l"
+	.string "son buenos.$"
 
 BattleFrontier_BattleFactoryLobby_Text_CantFigureOutStaffHints_hns:
-	.string "You know how the staff here give you\n"
-	.string "a few hints about your next opponent?\p"
-	.string "Well, I'm a full-grown man, but I have\n"
-	.string "trouble figuring out their hints.$"
+	.string "Sabes que el personal aquí te da\n"
+	.string "pistas sobre tu próximo rival?\p"
+	.string "Bueno, soy un hombre adulto, pero\n"
+	.string "me cuesta entender sus pistas.$"
 
 @ Unused
 BattleFrontier_BattleFactoryLobby_Text_RentalMonsAreVaried_hns:
-	.string "Like, I'm really tough, but I get bored\n"
-	.string "really easily, so I just kept swapping\l"
-	.string "and battling over and over.\p"
-	.string "So anyway, when I kept entering\n"
-	.string "Battle Swap events, I noticed they\l"
-	.string "varied the rental POKéMON.$"
+	.string "Soy muy fuerte, pero me aburro\n"
+	.string "muy rápido, así que seguí cambiando\l"
+	.string "y luchando una y otra vez.\p"
+	.string "En fin, cuando seguía entrando\n"
+	.string "en eventos de Intercambio, vi que\l"
+	.string "variaban los POKéMON de alquiler.$"
 
 BattleFrontier_BattleFactoryLobby_Text_RulesAreListed_hns:
 	.string "The Battle Swap rules are listed.$"
@@ -514,38 +514,38 @@ BattleFrontier_BattleFactoryLobby_Text_ReadWhichHeading_hns:
 	.string "Which heading do you want to read?$"
 
 BattleFrontier_BattleFactoryLobby_Text_ExplainBasicRules_hns:
-	.string "In a Battle Swap event, you may use\n"
-	.string "only three POKéMON.\p"
-	.string "Whether you are renting or swapping,\n"
-	.string "your team may not have two or more\l"
-	.string "of the same POKéMON.$"
+	.string "En un evento de Intercambio, solo\n"
+	.string "puedes usar tres POKéMON.\p"
+	.string "Ya sea alquilando o intercambiando,\n"
+	.string "tu equipo no puede tener dos o más\l"
+	.string "del mismo POKéMON.$"
 
 BattleFrontier_BattleFactoryLobby_Text_ExplainSwapPartnerRules_hns:
-	.string "You may swap POKéMON only with\n"
-	.string "the TRAINER you have just defeated.\p"
-	.string "You may swap for only those POKéMON\n"
-	.string "used by the beaten TRAINER.$"
+	.string "Solo puedes intercambiar POKéMON\n"
+	.string "con el ENTRENADOR que venciste.\p"
+	.string "Solo puedes cambiar por esos POKéMON\n"
+	.string "usado por el ENTRENADOR vencido.$"
 
 BattleFrontier_BattleFactoryLobby_Text_ExplainSwapNumberRules_hns:
-	.string "After every battle you win, you may\n"
-	.string "swap for one of your defeated\l"
-	.string "opponent's POKéMON.\p"
-	.string "You will not be able to swap POKéMON\n"
-	.string "with the seventh TRAINER in the event.$"
+	.string "Tras cada batalla ganada, puedes\n"
+	.string "cambiar uno de tus POKéMON por uno\l"
+	.string "derrotado del rival.\p"
+	.string "No podrás cambiar POKéMON con el\n"
+	.string "séptimo ENTRENADOR del evento.$"
 
 BattleFrontier_BattleFactoryLobby_Text_ExplainSwapNotesRules_hns:
-	.string "There are two key points to be aware\n"
-	.string "of when swapping POKéMON.\p"
-	.string "First, when swapping, you can't check\n"
-	.string "the stats of the POKéMON you are\l"
-	.string "about to receive.\p"
-	.string "Second, the POKéMON on your team\n"
-	.string "are lined up in sequence, depending on\l"
-	.string "the order in which you rented them.\p"
-	.string "This sequence remains unchanged\n"
-	.string "even when swaps are made.$"
+	.string "Hay dos puntos clave que debes\n"
+	.string "saber al cambiar POKéMON.\p"
+	.string "Primero, al cambiar, no puedes ver\n"
+	.string "las estadísticas del POKéMON que\l"
+	.string "estás por recibir.\p"
+	.string "Segundo, el POKéMON de tu equipo\n"
+	.string "están en secuencia, dependiendo de\l"
+	.string "el orden en que los alquilaste.\p"
+	.string "Esta secuencia no cambia\n"
+	.string "aunque se hagan intercambios.$"
 
 BattleFrontier_BattleFactoryLobby_Text_ExplainOpenLvRules_hns:
-	.string "In the Open Level, the rental POKéMON\n"
-	.string "and the opposing TRAINERS' POKéMON\l"
-	.string "are all Level 100.$"
+	.string "En el Nivel Abierto, los POKéMON\n"
+	.string "alquilados y los POKéMON del\l"
+	.string "ENTRENADOR rival son Nivel 100.$"

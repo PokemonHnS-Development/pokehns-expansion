@@ -172,15 +172,15 @@ FourIsland_Text_LoreleiHasReturned::
 FourIsland_Text_LoreleiMetLaprasAsChild::
 	.string "LORELEI has gone back.\p"
 	.string "The LAPRAS she has, I imagine it\n"
-	.string "to be the one she met as a child.\p"
-	.string "I believe it was in ICEFALL CAVE\n"
-	.string "that she caught it.\p"
-	.string "Perhaps that POKéMON has been with\n"
-	.string "her ever since.$"
+	.string "conoció cuando era niña.\p"
+	.string "Creo que fue en la CUEVA HIELO\n"
+	.string "donde lo capturó.\p"
+	.string "Tal vez ese POKéMON ha estado con\n"
+	.string "ella desde entonces.$"
 
 FourIsland_Text_RivalAlreadyGotEggBeSmellingYa::
 	.string "{RIVAL}: Hey!\n"
-	.string "{PLAYER}!\p"
+	.string "¡{PLAYER}!\p"
 	.string "What are you doing here in the\n"
 	.string "SEVII ISLANDS?\p"
 	.string "You should quit copying me,\n"
@@ -203,9 +203,9 @@ FourIsland_Text_LoreleiHasLotsOfStuffedDolls::
 	.string "Oh, you found me!\n"
 	.string "Please don't tell LORELEI.\p"
 	.string "Did you know that LORELEI has lots\n"
-	.string "and lots of stuffed dolls?\p"
-	.string "Every time she comes back to\n"
-	.string "FOUR ISLAND, her collection grows!$"
+	.string "muñecos de peluche?\p"
+	.string "¡Cada vez que vuelve a la\n"
+	.string "ISLA CUATRO, su colección crece!$"
 
 FourIsland_Text_MadeSlushieUsingIcefallCaveIce::
 	.string "Ooh, chilly!\p"

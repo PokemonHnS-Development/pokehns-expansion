@@ -204,7 +204,7 @@ FourIsland_IcefallCave_Back_Text_ShutItLadyLeaveUsBe::
 
 FourIsland_IcefallCave_Back_Text_LoreleiPlayerHelpMeKickPoachersOut::
 	.string "LORELEI: {PLAYER}?!\n"
-	.string "What are you doing here?\p"
+	.string "¿Qué haces aquí?\p"
 	.string "No, we can catch up later.\n"
 	.string "Right now, I need your help.\p"
 	.string "Help me kick these poachers out\n"
@@ -228,7 +228,7 @@ FourIsland_IcefallCave_Back_Text_LoreleiWhereHaveYouTakenMons::
 	.string "You!\n"
 	.string "Tell me!\p"
 	.string "Where have you taken the captured\n"
-	.string "POKéMON?\p"
+	.string "con los POKéMON?\p"
 	.string "I'm smashing your ring once and\n"
 	.string "for all!$"
 
@@ -256,7 +256,7 @@ FourIsland_IcefallCave_Back_Text_OkayRocketWareHouseFiveIsland::
 	.string "Heheheheh!$"
 
 FourIsland_IcefallCave_Back_Text_ThankYouThisIsAwful::
-	.string "{PLAYER}, thank you.\n"
+	.string "{PLAYER}, gracias.\n"
 	.string "But this is awful…\p"
 	.string "I was born and raised here on\n"
 	.string "these islands.\p"

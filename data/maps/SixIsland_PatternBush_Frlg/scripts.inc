@@ -88,7 +88,7 @@ SixIsland_PatternBush_Text_BethanyDefeat::
 SixIsland_PatternBush_Text_BethanyPostBattle::
 	.string "In the same way your mother raised\n"
 	.string "you full of love, you should raise\l"
-	.string "your POKéMON.$"
+	.string "para tu POKéMON.$"
 
 SixIsland_PatternBush_Text_AllisonIntro::
 	.string "I'm working to preserve the natural\n"
@@ -109,7 +109,7 @@ SixIsland_PatternBush_Text_GarretIntro::
 	.string "only around here!$"
 
 SixIsland_PatternBush_Text_GarretDefeat::
-	.string "Heheh…\n"
+	.string "Jeje…\n"
 	.string "Isn't my POKéMON awesome?$"
 
 SixIsland_PatternBush_Text_GarretPostBattle::
@@ -205,7 +205,7 @@ SixIsland_PatternBush_Text_RileyDefeat::
 
 SixIsland_PatternBush_Text_RileyPostBattle::
 	.string "I'm going to observe the night sky\n"
-	.string "here.$"
+	.string "para llegar aquí.$"
 
 SixIsland_PatternBush_Text_MarcyIntro::
 	.string "Oh, yuck!\n"

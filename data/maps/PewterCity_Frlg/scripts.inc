@@ -872,11 +872,11 @@ PewterCity_Text_ClefairyCameFromMoon::
 
 PewterCity_Text_BrockOnlySeriousTrainerHere::
 	.string "There aren't many serious POKéMON\n"
-	.string "TRAINERS here.\p"
-	.string "They're all like BUG CATCHERS,\n"
-	.string "you know, just hobbyists.\p"
-	.string "But PEWTER GYM's BROCK isn't like\n"
-	.string "that, not one bit.$"
+	.string "serios por aquí.\p"
+	.string "Son todos como los COLECCIONISTAS,\n"
+	.string "ya sabes, simples aficionados.\p"
+	.string "Pero BROCK, del GIMNASIO DE\n"
+	.string "CIUDAD VALE, no es así.$"
 
 PewterCity_Text_DidYouCheckOutMuseum::
 	.string "Did you check out the MUSEUM?$"
@@ -899,7 +899,7 @@ PewterCity_Text_DoYouKnowWhatImDoing::
 	.string "Do you know what I'm doing?$"
 
 PewterCity_Text_ThatsRightItsHardWork::
-	.string "That's right!\n"
+	.string "¡Así es!\n"
 	.string "It's hard work!$"
 
 PewterCity_Text_SprayingRepelToKeepWildMonsOut::
@@ -916,7 +916,7 @@ PewterCity_Text_GoTakeOnBrock::
 	.string "go take on BROCK!$"
 
 PewterCity_Text_TrainerTipsEarningEXP::
-	.string "TRAINER TIPS\p"
+	.string "CONSEJOS DE ENTRENADOR\p"
 	.string "All POKéMON that appear in battle,\n"
 	.string "however briefly, earn EXP Points.$"
 
@@ -931,13 +931,13 @@ PewterCity_Text_MuseumOfScience::
 	.string "PEWTER MUSEUM OF SCIENCE$"
 
 PewterCity_Text_GymSign::
-	.string "PEWTER CITY POKéMON GYM\n"
-	.string "LEADER: BROCK\l"
-	.string "The Rock-Solid POKéMON TRAINER!$"
+	.string "GIMNASIO POKéMON DE CIUDAD PLATEA\n"
+	.string "LÍDER: BROCK\l"
+	.string "¡El ENTRENADOR POKéMON de roca!$"
 
 PewterCity_Text_CitySign::
-	.string "PEWTER CITY\n"
-	.string "A Stone Gray City$"
+	.string "CIUDAD PLATEA\n"
+	.string "Una ciudad gris de piedra$"
 
 PewterCity_Text_OhPlayer::
 	.string "Oh, {PLAYER}{KUN}!$"
@@ -953,8 +953,8 @@ PewterCity_Text_ReceivedRunningShoesFromAide::
 	.string "RUNNING SHOES from the AIDE.$"
 
 PewterCity_Text_SwitchedShoesWithRunningShoes::
-	.string "{PLAYER} switched shoes with the\n"
-	.string "RUNNING SHOES.$"
+	.string "{PLAYER} se puso las\n"
+	.string "ZAPATILLAS.$"
 
 PewterCity_Text_ExplainRunningShoes::
 	.string "Press the B Button to run.\n"
@@ -963,7 +963,7 @@ PewterCity_Text_ExplainRunningShoes::
 PewterCity_Text_MustBeGoingBackToLab::
 	.string "Well, I must be going back to\n"
 	.string "the LAB.\p"
-	.string "Bye-bye!$"
+	.string "¡Adiós!$"
 
 PewterCity_Text_RunningShoesLetterFromMom::
 	.string "There's a letter attached…\p"

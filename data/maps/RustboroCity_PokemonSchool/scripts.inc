@@ -261,7 +261,7 @@ RustboroCity_PokemonSchool_Text_ExplainQuickClaw:
 
 RustboroCity_PokemonSchool_Text_TradingRightNow:
 	.string "I'm trading POKéMON with my friend\n"
-	.string "right now.$"
+	.string "en este momento.$"
 
 RustboroCity_PokemonSchool_Text_AlwaysWantedSeedot:
 	.string "I always wanted a SEEDOT, and\n"
@@ -303,18 +303,18 @@ RustboroCity_PokemonSchool_Text_StudentsNotes:
 
 RustboroCity_PokemonSchool_Text_ScottMetAlreadyCut:
 	.string "Hello? Didn't we meet before?\n"
-	.string "I think back in PETALBURG CITY.\p"
-	.string "Let me introduce myself.\n"
-	.string "My name's SCOTT.\p"
-	.string "I've been traveling everywhere in\n"
-	.string "search of outstanding TRAINERS.\p"
-	.string "More specifically, I'm looking for\n"
-	.string "POKéMON battle experts.\p"
-	.string "So, what brings you to this SCHOOL?\n"
-	.string "Are you a TRAINER, too?\p"
-	.string "The first thing you should do is to\n"
+	.string "Pienso en CIUDAD PETALBURG.\p"
+	.string "Permíteme presentarme.\n"
+	.string "Mi nombre es SCOTT.\p"
+	.string "He viajado por todas partes en\n"
+	.string "busca de grandes ENTRENADORES.\p"
+	.string "Más específicamente, busco a\n"
+	.string "expertos en batallas POKéMON.\p"
+	.string "¿Qué te trae a esta ESCUELA?\n"
+	.string "¿Tú también eres ENTRENADOR?\p"
+	.string "Lo primero que debes hacer es que\n"
 	.string "have a POKéMON learn the move CUT.\p"
-	.string "If I remember correctly, someone in\n"
+	.string "Si mal no recuerdo, alguien en\n"
 	.string "this town has CUT.$"
 
 RustboroCity_PokemonSchool_Text_StudentTalentLevelUnknown:
@@ -333,17 +333,17 @@ RustboroCity_PokemonSchool_Text_ScottStoneBadge:
 
 RustboroCity_PokemonSchool_Text_ScottMetAlreadyStoneBadge:
 	.string "Hello? Didn't we meet before?\n"
-	.string "I think back in PETALBURG CITY.\p"
-	.string "Let me introduce myself.\n"
-	.string "My name's SCOTT.\p"
-	.string "I've been traveling everywhere in\n"
-	.string "search of outstanding TRAINERS.\p"
-	.string "More specifically, I'm looking for\n"
-	.string "POKéMON battle experts.\p"
+	.string "Pienso en CIUDAD PETALBURG.\p"
+	.string "Permíteme presentarme.\n"
+	.string "Mi nombre es SCOTT.\p"
+	.string "He viajado por todas partes en\n"
+	.string "busca de grandes ENTRENADORES.\p"
+	.string "Más específicamente, busco a\n"
+	.string "expertos en batallas POKéMON.\p"
 	.string "Oh, what's that?\n"
 	.string "It's a STONE BADGE, isn't it?\p"
-	.string "That's pretty impressive, I'd say, for\n"
-	.string "a starting TRAINER like yourself.\p"
+	.string "Diría que es impresionante para\n"
+	.string "un ENTRENADOR novato como tú.\p"
 	.string "But, you know, I would've loved to see\n"
 	.string "you in battle.\p"
 	.string "It's hard to tell what you're like as\n"

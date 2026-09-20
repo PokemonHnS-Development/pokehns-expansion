@@ -1,5 +1,5 @@
 gText_HowMayIServeYou::
-	.string "Welcome!\p"
+	.string "¡Bienvenido!\p"
 	.string "How may I serve you?$"
 
 gText_PleaseComeAgain::

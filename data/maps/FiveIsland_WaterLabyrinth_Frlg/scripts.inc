@@ -104,14 +104,14 @@ FiveIsland_WaterLabyrinth_Text_GladIMetSomeoneLikeYou::
 	.string "I'm glad I met someone like you.$"
 
 FiveIsland_WaterLabyrinth_Text_CuteMonRemindsMeOfDaisy::
-	.string "Oh, hello.\n"
+	.string "Oh, hola.\n"
 	.string "That's a cute {STR_VAR_2}.\p"
 	.string "Seeing it reminds me of a sweet \n"
 	.string "little girl I met while traveling.\p"
 	.string "She was gently grooming POKéMON…\n"
-	.string "She was a little angel.\p"
-	.string "That little girl's name…\n"
-	.string "I think it was DAISY.$"
+	.string "Era como un angelito.\p"
+	.string "El nombre de esa niña...\n"
+	.string "creo que era DAISY.$"
 
 FiveIsland_WaterLabyrinth_Text_AlizeIntro::
 	.string "This is an excellent environment\n"

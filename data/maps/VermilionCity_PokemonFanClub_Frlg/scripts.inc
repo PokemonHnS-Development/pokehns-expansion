@@ -123,7 +123,7 @@ VermilionCity_PokemonFanClub_Text_AdmirePikachusTail::
 	.string "adorable tail?$"
 
 VermilionCity_PokemonFanClub_Text_PikachuTwiceAsCute::
-	.string "Humph!\p"
+	.string "¡Hmph!\p"
 	.string "My PIKACHU is twice as cute as\n"
 	.string "that one!$"
 
@@ -134,7 +134,7 @@ VermilionCity_PokemonFanClub_Text_AdoreMySeel::
 	.string "hug it!$"
 
 VermilionCity_PokemonFanClub_Text_SeelFarMoreAttractive::
-	.string "Oh, dear!\p"
+	.string "¡Cielos!\p"
 	.string "My SEEL is far more attractive.\n"
 	.string "By double, I would say.$"
 
@@ -147,15 +147,15 @@ VermilionCity_PokemonFanClub_Text_Seel::
 VermilionCity_PokemonFanClub_Text_DidYouComeToHearAboutMyMons::
 	.string "I chair the POKéMON Fan Club!\p"
 	.string "I raise more than a hundred\n"
-	.string "POKéMON!\p"
-	.string "I'm very fussy when it comes to\n"
+	.string "exóticos POKéMON!\p"
+	.string "Soy muy exigente en cuanto a\n"
 	.string "POKéMON! I surely am!\p"
 	.string "So…\p"
 	.string "Did you come visit to hear about\n"
-	.string "my POKéMON?$"
+	.string "de mis POKéMON?$"
 
 VermilionCity_PokemonFanClub_Text_ChairmansStory::
-	.string "Good!\n"
+	.string "¡Bien!\n"
 	.string "Then listen up!\p"
 	.string "My favorite RAPIDASH…\p"
 	.string "It's…cute…lovely…smart… \n"
@@ -168,7 +168,7 @@ VermilionCity_PokemonFanClub_Text_ChairmansStory::
 	.string "…Oops! Look at the time!\l"
 	.string "I kept you too long!\p"
 	.string "Thanks for hearing me out!\n"
-	.string "I want you to have this!$"
+	.string "¡Quiero que tengas esto!$"
 
 VermilionCity_PokemonFanClub_Text_ReceivedBikeVoucherFromChairman::
 	.string "{PLAYER} received a BIKE VOUCHER\n"
@@ -189,9 +189,9 @@ VermilionCity_PokemonFanClub_Text_ComeBackToHearStory::
 	.string "hear my story!$"
 
 VermilionCity_PokemonFanClub_Text_DidntComeToSeeAboutMonsAgain::
-	.string "Hello, {PLAYER}!\p"
-	.string "Did you come see me about my\n"
-	.string "POKéMON again?\p"
+	.string "¡Hola, {PLAYER}!\p"
+	.string "¿Vienes a verme por mi\n"
+	.string "POKéMON otra vez?\p"
 	.string "No?\n"
 	.string "Too bad!$"
 
@@ -204,13 +204,13 @@ VermilionCity_PokemonFanClub_Text_ChairmanVeryVocalAboutPokemon::
 
 VermilionCity_PokemonFanClub_Text_ListenPolitelyToOtherTrainers::
 	.string "Let's all listen politely to other\n"
-	.string "TRAINERS!$"
+	.string "¡ENTRENADORES!$"
 
 VermilionCity_PokemonFanClub_Text_SomeoneBragsBragBack::
 	.string "If someone brags, brag right back!$"
 
 VermilionCity_PokemonFanClub_Text_ChairmanReallyAdoresHisMons::
 	.string "Our CHAIRMAN really does adore his\n"
-	.string "POKéMON.\p"
+	.string "POKéMON planta.\p"
 	.string "But the person who is most liked by\n"
-	.string "POKéMON is DAISY, I think.$"
+	.string "POKéMON es DAISY, creo.$"

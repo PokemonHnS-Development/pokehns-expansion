@@ -47,7 +47,7 @@ SaffronCity_CopycatsHouse_2F_EventScript_Game::
 SaffronCity_CopycatsHouse_2F_Text_MimickingFavoriteHobbyMale::
 	.string "{PLAYER}: Hi!\n"
 	.string "Do you like POKéMON?\p"
-	.string "{PLAYER}: Uh, no, I just asked you.\p"
+	.string "{PLAYER}: Eh, no, solo te preguntaba.\p"
 	.string "{PLAYER}: Huh?\n"
 	.string "You're strange!\p"
 	.string "COPYCAT: Hmm? Quit mimicking?\n"
@@ -62,13 +62,13 @@ SaffronCity_CopycatsHouse_2F_Text_MimickingFavoriteHobbyFemale::
 	.string "You're weird!\l"
 	.string " \l"
 	.string "COPYCAT: Hmm? Quit mimicking?\l"
-	.string "But that's my favorite hobby!$"
+	.string "¡Pero si es mi pasatiempo favorito!$"
 
 Text_MimicTeach::
 	.string "Oh wow!\n"
 	.string "A POKé DOLL!\p"
 	.string "For me?\n"
-	.string "Thank you!\p"
+	.string "¡Gracias!\p"
 	.string "You know what?\n"
 	.string "I can teach the move MIMIC.$"
 

@@ -10,7 +10,7 @@ OneIsland_KindleRoad_EventScript_EmberSpaSign::
 	end
 
 OneIsland_KindleRoad_Text_MariaIntro::
-	.string "The weather's gorgeous!\n"
+	.string "¡El clima está hermoso!\n"
 	.string "Perfect for a battle!$"
 
 OneIsland_KindleRoad_Text_MariaDefeat::
@@ -54,7 +54,7 @@ OneIsland_KindleRoad_Text_GarrettPostBattle::
 	.string "you should swim some.$"
 
 OneIsland_KindleRoad_Text_TommyIntro::
-	.string "Wait! Wait a second!\n"
+	.string "¡Espera! ¡Espera un segundo!\n"
 	.string "I think I've hooked a big one!$"
 
 OneIsland_KindleRoad_Text_TommyDefeat::
@@ -86,7 +86,7 @@ OneIsland_KindleRoad_Text_TanyaPostBattle::
 	.string "I'll train even harder from now on!$"
 
 OneIsland_KindleRoad_Text_SheaIntro::
-	.string "Every morning, before breakfast,\n"
+	.string "Cada mañana, antes del desayuno,\n"
 	.string "I swim around this island.$"
 
 OneIsland_KindleRoad_Text_SheaDefeat::
@@ -98,7 +98,7 @@ OneIsland_KindleRoad_Text_SheaPostBattle::
 	.string "the running I did…$"
 
 OneIsland_KindleRoad_Text_HughIntro::
-	.string "Dress appropriately for battle!\n"
+	.string "¡Vístete bien para la batalla!\n"
 	.string "Lose that frivolous outfit!$"
 
 OneIsland_KindleRoad_Text_HughDefeat::
@@ -109,8 +109,8 @@ OneIsland_KindleRoad_Text_HughPostBattle::
 	.string "fashion conscious these days…$"
 
 OneIsland_KindleRoad_Text_BryceIntro::
-	.string "You know, everything tastes great\n"
-	.string "when you're out in the wild.$"
+	.string "Sabes, todo sabe mucho mejor\n"
+	.string "cuando estás en la naturaleza.$"
 
 OneIsland_KindleRoad_Text_BryceDefeat::
 	.string "Awww, blown!$"
@@ -121,7 +121,7 @@ OneIsland_KindleRoad_Text_BrycePostBattle::
 
 OneIsland_KindleRoad_Text_ClaireIntro::
 	.string "My lunch filled us up, so will you\n"
-	.string "battle us for some exercise?$"
+	.string "luchar para hacer ejercicio?$"
 
 OneIsland_KindleRoad_Text_ClaireDefeat::
 	.string "That made me all sweaty.$"
@@ -131,7 +131,7 @@ OneIsland_KindleRoad_Text_ClairePostBattle::
 	.string "I feel famished again.$"
 
 OneIsland_KindleRoad_Text_KiaIntro::
-	.string "KIA: My big brother and I make\n"
+	.string "KIA: Mi hermano mayor y yo\n"
 	.string "an awesome combination!$"
 
 OneIsland_KindleRoad_Text_KiaDefeat::

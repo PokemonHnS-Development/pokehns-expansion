@@ -87,9 +87,9 @@ OneIsland_KindleRoad_EmberSpa_Text_BrunoVisitsSpaOnOccasion::
 	.string "nothing beats a relaxing soak in\l"
 	.string "the hot spring pool.\p"
 	.string "BRUNO, who's a senior ahead of me,\n"
-	.string "visits the SPA on occasion.\p"
-	.string "He comes to rehab injuries, both\n"
-	.string "his own and his POKéMON's.$"
+	.string "visita el SPA ocasionalmente.\p"
+	.string "Viene a curar lesiones, tanto las\n"
+	.string "suyas como las de sus POKéMON.$"
 
 OneIsland_KindleRoad_EmberSpa_Text_UsedThisToMakeEmberSpa::
 	.string "Hot springs go hand-in-hand with\n"

@@ -17,7 +17,7 @@ Route6_Text_RickyPostBattle::
 	.string "Whisper…$"
 
 Route6_Text_NancyIntro::
-	.string "Excuse me!\n"
+	.string "¡Disculpa!\n"
 	.string "This is a private conversation!$"
 
 Route6_Text_NancyDefeat::
@@ -40,7 +40,7 @@ Route6_Text_KeigoPostBattle::
 	.string "VIRIDIAN FOREST.$"
 
 Route6_Text_JeffIntro::
-	.string "Huh?\n"
+	.string "¿Eh?\n"
 	.string "You want to talk to me?$"
 
 Route6_Text_JeffDefeat::

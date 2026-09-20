@@ -84,8 +84,8 @@ MtChimney_CableCarStation_Movement_ExitCableCar:
 	step_end
 
 MtChimney_CableCarStation_Text_CableCarReadyGetOn:
-	.string "The CABLE CAR is ready to go down.\n"
-	.string "Would you like to be on it?$"
+	.string "El TELEFÉRICO está listo para bajar.\n"
+	.string "¿Quieres subirte?$"
 
 MtChimney_CableCarStation_Text_StepThisWay:
 	.string "Please step this way.$"

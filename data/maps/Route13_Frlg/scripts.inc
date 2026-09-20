@@ -37,7 +37,7 @@ Route13_Text_SusiePostBattle::
 	.string "I'll train hard, just watch.$"
 
 Route13_Text_ValerieIntro::
-	.string "Wow!\n"
+	.string "¡Guau!\n"
 	.string "Your BADGES are too cool!$"
 
 Route13_Text_ValerieDefeat::
@@ -117,8 +117,8 @@ Route13_Text_JaredPostBattle::
 	.string "Get lost!$"
 
 Route13_Text_RobertIntro::
-	.string "I always go with bird POKéMON.\n"
-	.string "I've dedicated myself to them.$"
+	.string "Siempre uso POKéMON ave.\n"
+	.string "Me he dedicado a ellos.$"
 
 Route13_Text_RobertDefeat::
 	.string "Out of power!$"
@@ -128,12 +128,12 @@ Route13_Text_RobertPostBattle::
 	.string "PIDGEOTTO…$"
 
 Route13_Text_LookToLeftOfThatPost::
-	.string "TRAINER TIPS\p"
+	.string "CONSEJOS DE ENTRENADOR\p"
 	.string "Look, look!\n"
 	.string "Look to the left of that post!$"
 
 Route13_Text_SelectToSwitchItems::
-	.string "TRAINER TIPS\p"
+	.string "CONSEJOS DE ENTRENADOR\p"
 	.string "Use SELECT to switch items in the\n"
 	.string "ITEMS window.$"
 

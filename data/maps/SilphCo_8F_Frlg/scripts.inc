@@ -58,8 +58,8 @@ SilphCo_8F_Text_ParkerIntro::
 	.string "You're causing us problems!$"
 
 SilphCo_8F_Text_ParkerDefeat::
-	.string "Huh?\n"
-	.string "I lost?$"
+	.string "¿Eh?\n"
+	.string "¿Perdí?$"
 
 SilphCo_8F_Text_ParkerPostBattle::
 	.string "So, what do you think of SILPH\n"
@@ -83,7 +83,7 @@ SilphCo_8F_Text_FloorSign::
 SilphCo_8F_Text_ToRocketBossMonsAreTools::
 	.string "TEAM ROCKET's BOSS is terribly\n"
 	.string "cruel!\p"
-	.string "To him, POKéMON are just tools to\n"
+	.string "Para él, los POKéMON son solo\n"
 	.string "be used.\p"
 	.string "What will happen if that tyrant\n"
 	.string "takes over our company…$"

@@ -172,7 +172,7 @@ MtEmber_Exterior_Text_FirstPasswordGoldeen::
 	.string "And the second one is…$"
 
 MtEmber_Exterior_Text_SnoopsBeenListeningIn::
-	.string "Hey!\n"
+	.string "¡Hola!\n"
 	.string "This snoop's been listening in!$"
 
 MtEmber_Exterior_Text_Grunt1Intro::
@@ -190,7 +190,7 @@ MtEmber_Exterior_Text_Grunt2Intro::
 	.string "Don't bet on it!$"
 
 MtEmber_Exterior_Text_Grunt2Defeat::
-	.string "Wait!\n"
+	.string "¡Espera!\n"
 	.string "But how?$"
 
 MtEmber_Exterior_Text_Grunt2PostBattle::

@@ -45,7 +45,7 @@ SaffronCity_PokemonCenter_1F_Text_SilphCoVictimOfFame::
 	.string "attracted TEAM ROCKET.$"
 
 SaffronCity_PokemonCenter_1F_Text_GreatIfEliteFourCameBeatRockets::
-	.string "Sigh…\n"
+	.string "Suspiro...\n"
 	.string "Wouldn't this be great?\p"
 	.string "If the ELITE FOUR came and\n"
 	.string "stomped TEAM ROCKET?$"

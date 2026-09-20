@@ -99,8 +99,8 @@ Route12_FishingHouse_EventScript_MagikarpRecordSignRecordSet::
 	end
 
 Route12_FishingHouse_Text_DoYouLikeToFish::
-	.string "I'm the FISHING GURU's younger\n"
-	.string "brother.\p"
+	.string "Soy el hermano menor del\n"
+	.string "EXPERTO EN PESCA.\p"
 	.string "I simply looove fishing!\n"
 	.string "I can't bear to go without.\p"
 	.string "Tell me, do you like to fish?$"
@@ -135,7 +135,7 @@ Route12_FishingHouse_Text_TryFishingBringMeMagikarp::
 	.string "Try fishing with the SUPER ROD in\n"
 	.string "any body of water.\p"
 	.string "You'll find different POKéMON in\n"
-	.string "different places.\p"
+	.string "otros lugares.\p"
 	.string "Oh, and don't forget to bring me\n"
 	.string "gigantic MAGIKARP.$"
 
@@ -157,7 +157,7 @@ Route12_FishingHouse_Text_LookForwardToGreaterRecords::
 	.string "records from you!$"
 
 Route12_FishingHouse_Text_HuhXInchesSameSizeAsLast::
-	.string "Huh?\n"
+	.string "¿Eh?\n"
 	.string "{STR_VAR_2} inches?\p"
 	.string "This is the same size as the one\n"
 	.string "I saw before.$"

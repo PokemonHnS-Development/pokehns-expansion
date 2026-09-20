@@ -98,7 +98,7 @@ ViridianCity_School_Text_TryingToMemorizeNotes::
 	.string "notes.$"
 
 ViridianCity_School_Text_ReadBlackboardCarefully::
-	.string "Okay!\p"
+	.string "¡Está bien!\p"
 	.string "Be sure to read what's on the\n"
 	.string "blackboard carefully!$"
 
@@ -106,7 +106,7 @@ ViridianCity_School_Text_NotebookFirstPage::
 	.string "Let's check out the notebook.\p"
 	.string "First page…\p"
 	.string "POKé BALLS are used to catch\n"
-	.string "POKéMON.\p"
+	.string "POKéMON planta.\p"
 	.string "Up to six POKéMON can be carried\n"
 	.string "in your party.\p"
 	.string "People who raise and battle\n"
@@ -154,7 +154,7 @@ ViridianCity_School_Text_ReadWhichTopic::
 
 ViridianCity_School_Text_ExplainSleep::
 	.string "A POKéMON can't attack if it's\n"
-	.string "asleep.\p"
+	.string "si están dormidos.\p"
 	.string "POKéMON will stay asleep even\n"
 	.string "after battles.\p"
 	.string "Use AWAKENING to awaken one\n"

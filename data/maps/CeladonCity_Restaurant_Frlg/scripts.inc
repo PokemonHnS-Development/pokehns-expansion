@@ -42,7 +42,7 @@ CeladonCity_Restaurant_EventScript_FatMan::
 CeladonCity_Restaurant_Text_TakingBreakRightNow::
 	.string "Hi!\p"
 	.string "Sorry, but we're taking a break\n"
-	.string "right now.$"
+	.string "en este momento.$"
 
 CeladonCity_Restaurant_Text_OftenGoToDrugstore::
 	.string "My POKéMON are weak, so I often\n"
@@ -62,7 +62,7 @@ CeladonCity_Restaurant_Text_TakeThisImBusted::
 	.string "I'm flat-out busted!\p"
 	.string "No more slots for me!\n"
 	.string "I'm going straight!\p"
-	.string "Here!\n"
+	.string "¡Toma!\n"
 	.string "I won't be needing this anymore!$"
 
 CeladonCity_Restaurant_Text_ReceivedCoinCaseFromMan::

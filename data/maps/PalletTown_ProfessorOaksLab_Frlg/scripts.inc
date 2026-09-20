@@ -1392,7 +1392,7 @@ PalletTown_ProfessorOaksLab_Text_OakBePatientRival::
 PalletTown_ProfessorOaksLab_Text_OakWhichOneWillYouChoose::
 	.string "OAK: Now, {PLAYER}.\p"
 	.string "Inside those three POKé BALLS are\n"
-	.string "POKéMON.\p"
+	.string "POKéMON planta.\p"
 	.string "Which one will you choose for\n"
 	.string "yourself?$"
 
@@ -1423,7 +1423,7 @@ PalletTown_ProfessorOaksLab_Text_OakThisMonIsEnergetic::
 	.string "energetic!$"
 
 PalletTown_ProfessorOaksLab_Text_ReceivedMonFromOak::
-	.string "{PLAYER} received the {STR_VAR_1}\n"
+	.string "{PLAYER} recibió el {STR_VAR_1}\n"
 	.string "from PROF. OAK!$"
 
 PalletTown_ProfessorOaksLab_Text_OakCanReachNextTownWithMon::
@@ -1444,7 +1444,7 @@ PalletTown_ProfessorOaksLab_Text_OakHaveSomethingForMe::
 	.string "attached to you.\p"
 	.string "You must be talented as a POKéMON\n"
 	.string "TRAINER.\p"
-	.string "What's that?\n"
+	.string "¿Qué es eso?\n"
 	.string "You have something for me?$"
 
 PalletTown_ProfessorOaksLab_Text_DeliveredOaksParcel::
@@ -1463,8 +1463,8 @@ PalletTown_ProfessorOaksLab_Text_OakHaveRequestForYouTwo::
 PalletTown_ProfessorOaksLab_Text_OakPokedexOnDesk::
 	.string "On the desk there is my invention,\n"
 	.string "the POKéDEX!\p"
-	.string "It automatically records data on\n"
-	.string "POKéMON you've seen or caught.\p"
+	.string "Registra datos automáticamente de\n"
+	.string "POKéMON que veas o captures.\p"
 	.string "It's a high-tech encyclopedia!$"
 
 PalletTown_ProfessorOaksLab_Text_OakTakeTheseWithYou::
@@ -1497,7 +1497,7 @@ PalletTown_ProfessorOaksLab_Text_OakExplainCatching::
 
 PalletTown_ProfessorOaksLab_Text_OakCompleteMonGuideWasMyDream::
 	.string "To make a complete guide on all\n"
-	.string "the POKéMON in the world…\p"
+	.string "los POKéMON del mundo...\p"
 	.string "That was my dream!\p"
 	.string "But, I'm too old.\n"
 	.string "I can't get the job done.\p"
@@ -1553,14 +1553,14 @@ PalletTown_ProfessorOaksLab_Text_AllMonTypesHaveStrongAndWeakPoints::
 PalletTown_ProfessorOaksLab_Text_EmailMessage::
 	.string "There's an e-mail message here.\p"
 	.string "…\p"
-	.string "Finally!\n"
+	.string "¡Al fin!\n"
 	.string "The ultimate TRAINERS of the\l"
 	.string "POKéMON LEAGUE are ready to\l"
 	.string "take on all comers!\p"
 	.string "Bring your best POKéMON and see\n"
 	.string "how you rate as a TRAINER!\p"
 	.string "POKéMON LEAGUE HQ\n"
-	.string "INDIGO PLATEAU\p"
+	.string "MESETA AÑIL\p"
 	.string "PROF. OAK, please visit us!\n"
 	.string "…$"
 
@@ -1574,23 +1574,23 @@ PalletTown_ProfessorOaksLab_Text_DaisyWillGroomMons::
 	.string "By the way, did you know about\n"
 	.string "DAISY?\p"
 	.string "If you show DAISY your POKéMON,\n"
-	.string "she can tell how much it likes you.\p"
-	.string "Occasionally, she will even groom\n"
+	.string "ella sabe cuánto le agradas.\p"
+	.string "A veces, incluso acicalará\n"
 	.string "a POKéMON for you.\p"
 	.string "This is a secret, so please don't\n"
 	.string "tell anyone.$"
 
 PalletTown_ProfessorOaksLab_Text_OakIsGoingToHaveRadioShow::
 	.string "PROF. OAK is going to have his own\n"
-	.string "radio show soon.\p"
-	.string "The program will be called PROF.\n"
+	.string "programa de radio.\p"
+	.string "El programa se llamará EL SEMINARIO\n"
 	.string "OAK's POKéMON SEMINAR.$"
 
 PalletTown_ProfessorOaksLab_Text_OakIsAuthorityOnMons::
 	.string "PROF. OAK may not look like much,\n"
-	.string "but he's the authority on POKéMON.\p"
-	.string "Many POKéMON TRAINERS hold him in\n"
-	.string "high regard.$"
+	.string "pero es la autoridad en POKéMON.\p"
+	.string "Muchos ENTRENADORES POKéMON lo\n"
+	.string "respetan mucho.$"
 
 PalletTown_ProfessorOaksLab_Text_OakFavorToAskYouPlayer::
 	.string "Ah, now this is excellent!\p"

@@ -8,17 +8,17 @@ Route47_EventScript_Hiker::
 	end
 
 Route47_Text_HikerSeen::
-	.string "Longing for others is...\n"
-	.string "what it is. \p"
-	.string "But battles are battles,\n"
-	.string "so let's go!$"
+	.string "Anhelar a los demás es...\n"
+	.string "lo que es.\p"
+	.string "Pero las batallas son batallas,\n"
+	.string "¡así que vamos!$"
 
 Route47_Text_HikerBeaten::
 	.string "Wahaha!$"
 
 Route47_Text_HikerAfter::
-	.string "After a battle you should always leave\n"
-	.string "with a parting laugh!$"
+	.string "Tras una batalla siempre debes irte\n"
+	.string "con una risa de despedida!$"
 
 Route47_EventScript_Camper::
 	trainerbattle_single TRAINER_GRANT_HNS, Route47_Text_CamperSeen, Route47_Text_CamperBeaten
@@ -26,13 +26,13 @@ Route47_EventScript_Camper::
 	end
 
 Route47_Text_CamperSeen::
-	.string "I'm not good with large crowds, so\n"
-	.string "I'm camping out here with my\l"
+	.string "No me gustan las multitudes, así que\n"
+	.string "estoy acampando aquí con mi\l"
 	.string "POKéMON!$"
 
 Route47_Text_CamperBeaten::
-	.string "I should be headed deeper into the\n"
-	.string "mountain I guess...$"
+	.string "Supongo que debo ir más profundo en la\n"
+	.string "montaña...$"
 
 Route47_Text_CamperAfter::
 	.string "See ya!$"
@@ -107,7 +107,7 @@ Route47_EventScript_Sage::
 	end
 
 EmbeddedTower_Text_OldManIntro:
-	.string "Well, hello!\p"
+	.string "¡Hola, qué tal!\p"
 	.string "It's said that past this hole used to\n"
 	.string "be a huge tower reaching far into\l"
 	.string "the sky.\p"

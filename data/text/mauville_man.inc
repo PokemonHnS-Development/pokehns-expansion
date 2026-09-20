@@ -28,15 +28,15 @@ GiddyText_Is::
 
 GiddyText_DontYouAgree::
 	.string "\n"
-	.string "Don't you agree?$"
+	.string "¿No estás de acuerdo?$"
 
 GiddyText_ISoWantToGoOnAVacation::
 	.string "I so want to go on a vacation.\n"
-	.string "Would you happen to know a nice place?$"
+	.string "¿Conoces algún lugar agradable?$"
 
 GiddyText_IBoughtCrayonsWith120Colors::
 	.string "I bought crayons with 120 colors!\n"
-	.string "Don't you think that's nice?$"
+	.string "¿No crees que es genial?$"
 
 GiddyText_WouldntItBeNiceIfWeCouldFloat::
 	.string "Wouldn't it be nice if we could float\n"

@@ -47,7 +47,7 @@ Route10_Text_HermanIntro::
 
 Route10_Text_HermanDefeat::
 	.string "Oh, no!\n"
-	.string "My POKéMON!$"
+	.string "¡Mi POKéMON!$"
 
 Route10_Text_HermanPostBattle::
 	.string "I don't like you.\n"

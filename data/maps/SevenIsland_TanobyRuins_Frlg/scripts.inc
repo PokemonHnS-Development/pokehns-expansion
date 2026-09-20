@@ -2,7 +2,7 @@ SevenIsland_TanobyRuins_Frlg_MapScripts::
 	.byte 0
 
 SevenIsland_TanobyRuins_Text_BrandonIntro::
-	.string "Do you know anything about this\n"
+	.string "¿Sabes algo sobre este\n"
 	.string "stone chamber?$"
 
 SevenIsland_TanobyRuins_Text_BrandonDefeat::

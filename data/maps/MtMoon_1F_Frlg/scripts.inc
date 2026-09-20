@@ -51,7 +51,7 @@ MtMoon_1F_Text_MarcosIntro::
 	.string "…Oh, you're just a kid!$"
 
 MtMoon_1F_Text_MarcosDefeat::
-	.string "Wow!\n"
+	.string "¡Guau!\n"
 	.string "Shocked again!$"
 
 MtMoon_1F_Text_MarcosPostBattle::
@@ -60,7 +60,7 @@ MtMoon_1F_Text_MarcosPostBattle::
 
 MtMoon_1F_Text_JoshIntro::
 	.string "Did you come to explore the cave,\n"
-	.string "too?$"
+	.string "las pinturas?$"
 
 MtMoon_1F_Text_JoshDefeat::
 	.string "Losing stinks!\n"
@@ -76,7 +76,7 @@ MtMoon_1F_Text_MiriamIntro::
 
 MtMoon_1F_Text_MiriamDefeat::
 	.string "Oh!\n"
-	.string "I lost it!$"
+	.string "¡Lo perdí!$"
 
 MtMoon_1F_Text_MiriamPostBattle::
 	.string "How do you get out of here?\n"
@@ -94,12 +94,12 @@ MtMoon_1F_Text_JovanPostBattle::
 	.string "Where might they be?$"
 
 MtMoon_1F_Text_IrisIntro::
-	.string "What?\n"
+	.string "¿Qué?\n"
 	.string "I'm waiting for my friends to find\l"
 	.string "me here.$"
 
 MtMoon_1F_Text_IrisDefeat::
-	.string "I lost?$"
+	.string "¿Perdí?$"
 
 MtMoon_1F_Text_IrisPostBattle::
 	.string "I came because I heard there are\n"
@@ -134,6 +134,6 @@ MtMoon_1F_Text_ZubatIsABloodsucker::
 
 MtMoon_1F_Text_BrockHelpsExcavateFossils::
 	.string "Hi, I'm excavating for fossils here\n"
-	.string "under MT. MOON.\p"
-	.string "Sometimes, BROCK of PEWTER GYM\n"
-	.string "lends me a hand.$"
+	.string "bajo el MT. MOON.\p"
+	.string "A veces, BROCK del GIMNASIO de\n"
+	.string "CIUDAD PLATEA me ayuda.$"

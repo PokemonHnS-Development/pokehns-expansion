@@ -188,7 +188,7 @@ SevenIsland_House_Room1_Text_ChallengeVisitingTrainer::
 	.string "Welcome, my friend!\p"
 	.string "Let me tell you something. There's\n"
 	.string "a hidden room in the basement.\p"
-	.string "A TRAINER named {STR_VAR_1} is\n"
+	.string "Un ENTRENADOR llamado {STR_VAR_1}\n"
 	.string "waiting there now.\p"
 	.string "Tell me, you did come to challenge\n"
 	.string "{STR_VAR_1}, am I right?$"
@@ -218,7 +218,7 @@ SevenIsland_House_Room1_Text_SaveProgressBeforeBattle::
 	.string "you like to save your game?$"
 
 SevenIsland_House_Room1_Text_DontHoldAnythingBack::
-	.string "All right.\n"
+	.string "Está bien.\n"
 	.string "Don't hold anything back!$"
 
 @ Unused
@@ -248,7 +248,7 @@ SevenIsland_House_Room1_Text_AstoundingBattle::
 	.string "The thrust and parry of expertly\n"
 	.string "used techniques!\p"
 	.string "The clash of power upon power!\p"
-	.string "Yes!\n"
+	.string "¡Sí!\n"
 	.string "It was sheer magnificence!$"
 
 @ Unused
@@ -256,7 +256,7 @@ SevenIsland_House_Room1_Text_StrVar1_3::
 	.string "{STR_VAR_1}$"
 
 SevenIsland_House_Room1_Text_FeelYourDisappointment::
-	.string "Too bad!\n"
+	.string "¡Qué mal!\n"
 	.string "I feel your disappointment.\p"
 	.string "However, that disappointment is\n"
 	.string "what will make you better.\p"

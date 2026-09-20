@@ -45,7 +45,7 @@ VictoryRoad_1F_EventScript_Rolando::
 
 VictoryRoad_1F_Text_NaomiIntro::
 	.string "I wonder if you are good enough\n"
-	.string "for me?$"
+	.string "por mí?$"
 
 VictoryRoad_1F_Text_NaomiDefeat::
 	.string "I lost out…$"

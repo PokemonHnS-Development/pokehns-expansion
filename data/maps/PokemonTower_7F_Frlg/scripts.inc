@@ -242,14 +242,14 @@ PokemonTower_7F_Text_Grunt1PostBattle::
 
 PokemonTower_7F_Text_Grunt2Intro::
 	.string "This old guy marched right up to\n"
-	.string "our HIDEOUT.\p"
-	.string "Then, he starts ranting about how\n"
-	.string "TEAM ROCKET's abusing POKéMON.\p"
-	.string "So, we're just talking it over as\n"
-	.string "adults.$"
+	.string "nuestro ESCONDITE.\p"
+	.string "Luego empezó a decir que el\n"
+	.string "TEAM ROCKET abusa de POKéMON.\p"
+	.string "Así que lo hablamos tranquilamente\n"
+	.string "como adultos.$"
 
 PokemonTower_7F_Text_Grunt2Defeat::
-	.string "Please!\n"
+	.string "¡Por favor!\n"
 	.string "No more!$"
 
 PokemonTower_7F_Text_Grunt2PostBattle::

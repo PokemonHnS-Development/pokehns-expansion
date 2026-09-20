@@ -52,8 +52,8 @@ Route2_EastBuilding_Text_GiveHM05IfSeen10Mons::
 
 Route2_EastBuilding_Text_GreatHereYouGo::
 	.string "Great! You have caught or owned\n"
-	.string "{STR_VAR_3} kinds of POKéMON!\p"
-	.string "Congratulations!\n"
+	.string "{STR_VAR_3} tipos de POKéMON!\p"
+	.string "¡Felicidades!\n"
 	.string "Here you go!$"
 
 Route2_EastBuilding_Text_ReceivedHM05FromAide::

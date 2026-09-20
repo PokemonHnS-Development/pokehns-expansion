@@ -98,8 +98,8 @@ SaffronCity_Gym_EventScript_GymStatuePostVictory::
 SaffronCity_Gym_Text_SabrinaIntro::
 	.string "I had a vision of your arrival.\p"
 	.string "I have had psychic powers since\n"
-	.string "I was a child.\p"
-	.string "It started when a spoon I\n"
+	.string "era una niña.\p"
+	.string "Todo empezó cuando una cuchara que\n"
 	.string "carelessly tossed, bent.\p"
 	.string "I dislike battling, but if you wish,\n"
 	.string "I will show you my powers!{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
@@ -110,7 +110,7 @@ SaffronCity_Gym_Text_SabrinaDefeat::
 	.string "I admit, I didn't work hard enough\n"
 	.string "to win.\p"
 	.string "Your victory has earned you the\n"
-	.string "MARSHBADGE.$"
+	.string "la MEDALLA MARJA.$"
 
 SaffronCity_Gym_Text_SabrinaPostBattle::
 	.string "Psychic power isn't something that\n"
@@ -185,11 +185,11 @@ SaffronCity_Gym_Text_TyronDefeat::
 
 SaffronCity_Gym_Text_TyronPostBattle::
 	.string "SABRINA just wiped out the KARATE\n"
-	.string "MASTER next door.$"
+	.string "MAESTRO KARATE de al lado.$"
 
 SaffronCity_Gym_Text_TashaIntro::
 	.string "You and I, our POKéMON shall\n"
-	.string "battle!$"
+	.string "batalla!$"
 
 SaffronCity_Gym_Text_TashaDefeat::
 	.string "I lost after all!$"
@@ -230,7 +230,7 @@ SaffronCity_Gym_Text_PrestonPostBattle::
 
 SaffronCity_Gym_Text_GymGuyAdvice::
 	.string "Yo!\n"
-	.string "Champ in the making!\p"
+	.string "¡Un futuro campeón!\p"
 	.string "SABRINA's POKéMON use psychic\n"
 	.string "power instead of force.\p"
 	.string "FIGHTING POKéMON are especially\n"
@@ -244,14 +244,14 @@ SaffronCity_Gym_Text_GymGuyPostVictory::
 	.string "at the slots!$"
 
 SaffronCity_Gym_Text_GymStatue::
-	.string "SAFFRON POKéMON GYM\n"
-	.string "LEADER: SABRINA\p"
-	.string "WINNING TRAINERS:\n"
+	.string "GIMNASIO POKéMON DE AZAFRÁN\n"
+	.string "LÍDER: SABRINA\p"
+	.string "ENTRENADORES GANADORES:\n"
 	.string "{RIVAL}$"
 
 SaffronCity_Gym_Text_GymStatuePlayerWon::
-	.string "SAFFRON POKéMON GYM\n"
-	.string "LEADER: SABRINA\p"
-	.string "WINNING TRAINERS:\n"
+	.string "GIMNASIO POKéMON DE AZAFRÁN\n"
+	.string "LÍDER: SABRINA\p"
+	.string "ENTRENADORES GANADORES:\n"
 	.string "{RIVAL}, {PLAYER}$"
 

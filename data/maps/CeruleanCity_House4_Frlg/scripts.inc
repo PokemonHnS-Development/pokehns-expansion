@@ -91,7 +91,7 @@ CeruleanCity_House4_EventScript_NoRoomForBerries::
 	end
 
 CeruleanCity_House4_Text_NothingEntertaining::
-	.string "Sigh…\n"
+	.string "Suspiro...\n"
 	.string "Too much time, too little to do…\p"
 	.string "Is nothing entertaining happening\n"
 	.string "anywhere?$"
@@ -100,7 +100,7 @@ CeruleanCity_House4_Text_NewNewsInformativeHaveThis::
 	.string "Ah!\n"
 	.string "A new news report!\p"
 	.string "Hmm…\p"
-	.string "I see!\n"
+	.string "¡Ya veo!\n"
 	.string "That was quite informative!\p"
 	.string "I applaud you for taking interest\n"
 	.string "in the news at your young age.\p"

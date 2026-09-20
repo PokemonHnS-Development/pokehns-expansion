@@ -14,17 +14,17 @@ Aide_EventScript_DeclineCheckMons::
 	end
 
 Aide_Text_HaventCaughtEnoughMonsForItem::
-	.string "Let's see…\n"
-	.string "Uh-oh! You have caught only\l"
-	.string "{STR_VAR_3} kinds of POKéMON!\p"
-	.string "You need {STR_VAR_1} kinds\n"
-	.string "if you want the {STR_VAR_2}.$"
+	.string "Veamos...\n"
+	.string "¡Uy! Solo has capturado\l"
+	.string "{STR_VAR_3} tipos de POKéMON!\p"
+	.string "Necesitas {STR_VAR_1} tipos\n"
+	.string "para obtener el {STR_VAR_2}.$"
 
 Aide_Text_GetEnoughMonsComeBackForItem::
-	.string "…Oh. I see.\p"
-	.string "When you get {STR_VAR_1} kinds of POKéMON,\n"
-	.string "come back for the {STR_VAR_2}.$"
+	.string "...Oh. Ya veo.\p"
+	.string "Cuando tengas {STR_VAR_1} tipos de\n"
+	.string "POKéMON, vuelve por el {STR_VAR_2}.$"
 
 Aide_Text_DontHaveAnyRoomForItem::
-	.string "Oh! I see you don't have any\n"
-	.string "room for the {STR_VAR_2}.$"
+	.string "¡Oh! Veo que no tienes espacio\n"
+	.string "para el {STR_VAR_2}.$"

@@ -30,8 +30,8 @@ CeladonDeptStore6F_Text_Vending:
 	.string "A vending machine! Here's the menu.$"
 
 CeladonDeptStore6F_Text_Clang:
-	.string "Clang!\p"
-	.string "{STRING} popped out.$"
+	.string "¡Clang!\p"
+	.string "Salió {STRING}.$"
 
 CeladonDeptStore6F_Text_VendingNoMoney:
 	.string "Oops, not enough money…$"
@@ -40,14 +40,14 @@ CeladonDeptStore6F_Text_VendingNoSpace:
 	.string "There's no more room for stuff…$"
 
 CeladonDeptStore6F_Text_SuperNerd:
-	.string "A vending machine with a prize\n"
-	.string "roulette…\p"
-	.string "You never see those anymore.$"
+	.string "Una máquina expendedora con un\n"
+	.string "premio de ruleta…\p"
+	.string "Ya no se ven estas máquinas.$"
 
 CeladonDeptStore6F_Text_Youngster:
-	.string "Aww! There's no games here!\p"
-	.string "I wanted to play…$"
+	.string "¡Aww! ¡Aquí no hay juegos!\p"
+	.string "Quería jugar…$"
 
 CeladonDeptStore6F_Text_Directory:
-	.string "6F: ROOFTOP SQUARE VENDING\n"
-	.string "MACHINES$"
+	.string "6F: MÁQUINAS EXPENDEDORAS DE\n"
+	.string "LA PLAZA DE LA AZOTEA$"

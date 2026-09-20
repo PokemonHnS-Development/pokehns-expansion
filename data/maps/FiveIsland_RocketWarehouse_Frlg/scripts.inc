@@ -256,7 +256,7 @@ FiveIsland_RocketWarehouse_Text_Admin2Intro::
 	.string "an angry adult can be!$"
 
 FiveIsland_RocketWarehouse_Text_Admin2Defeat::
-	.string "Urgh…\n"
+	.string "Ugh...\n"
 	.string "You were too strong…\p"
 	.string "…\n"
 	.string "Th-that's GIOVANNI's BADGE!\p"
@@ -303,7 +303,7 @@ FiveIsland_RocketWarehouse_Text_GetLostLeaveMeBe::
 FiveIsland_RocketWarehouse_Text_GiovannisKidHasRedHair::
 	.string "What, you again?\p"
 	.string "You… You're not GIOVANNI's kid,\n"
-	.string "are you?\p"
+	.string "¿verdad?\p"
 	.string "No, that can't be right!\n"
 	.string "GIOVANNI's kid has red hair.\p"
 	.string "You don't have any reasons for\n"

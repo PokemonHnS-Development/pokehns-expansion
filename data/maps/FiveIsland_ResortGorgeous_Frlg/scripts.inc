@@ -44,7 +44,7 @@ FiveIsland_ResortGorgeous_EventScript_SelphysHouseSign::
 	end
 
 FiveIsland_ResortGorgeous_Text_DaisyIntro::
-	.string "With these hands, I will create\n"
+	.string "Con estas manos, crearé\n"
 	.string "my victory!$"
 
 FiveIsland_ResortGorgeous_Text_DaisyDefeat::
@@ -56,9 +56,9 @@ FiveIsland_ResortGorgeous_Text_DaisyPostBattle::
 	.string "scattered everywhere!$"
 
 FiveIsland_ResortGorgeous_Text_CelinaIntro::
-	.string "Excuse me!\n"
-	.string "I'm trying to paint.\l"
-	.string "Please keep out of my sight!$"
+	.string "¡Disculpa!\n"
+	.string "Estoy intentando pintar.\l"
+	.string "¡Por favor, no me molestes!$"
 
 FiveIsland_ResortGorgeous_Text_CelinaDefeat::
 	.string "This loss…\n"
@@ -110,7 +110,7 @@ FiveIsland_ResortGorgeous_Text_DestinIntro::
 	.string "I'm really fast!$"
 
 FiveIsland_ResortGorgeous_Text_DestinDefeat::
-	.string "Oops!\n"
+	.string "¡Ups!\n"
 	.string "I rushed things!$"
 
 FiveIsland_ResortGorgeous_Text_DestinPostBattle::

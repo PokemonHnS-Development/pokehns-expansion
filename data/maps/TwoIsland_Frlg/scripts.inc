@@ -250,7 +250,7 @@ TwoIsland_Text_HopeYouGiveItYourBest::
 
 TwoIsland_Text_BringingItemsFromDistantLands::
 	.string "Oh, hello, {PLAYER}!\n"
-	.string "Welcome!\p"
+	.string "¡Bienvenido!\p"
 	.string "I've started bringing in items from\n"
 	.string "distant lands.\p"
 	.string "I've got some rare items in, too.\n"
@@ -260,7 +260,7 @@ TwoIsland_Text_FellowMovedFromCeladonCity::
 	.string "That fellow there, he moved here\n"
 	.string "from CELADON CITY.\p"
 	.string "He started up a shop with his\n"
-	.string "younger brother.\p"
+	.string "menor del PRESIDENTE.\p"
 	.string "You have to wonder if he knew what\n"
 	.string "he was getting into.$"
 
@@ -272,14 +272,14 @@ TwoIsland_Text_ShopkeepersBrotherWorksGameCorner::
 
 TwoIsland_Text_BrunoCameToIslandWhileBack::
 	.string "Listen, listen.\n"
-	.string "Did you know?\p"
+	.string "¿Sabías esto?\p"
 	.string "A famous TRAINER came to the\n"
 	.string "ISLAND a little while back.\p"
 	.string "He's one of the ELITE FOUR.\n"
-	.string "His name is BRUNO.\p"
-	.string "He went away disappointed when he\n"
-	.string "found out that they were all sold\l"
-	.string "out of Rage Candybars.$"
+	.string "Su nombre es BRUNO.\p"
+	.string "Se fue decepcionado cuando supo\n"
+	.string "que ya no quedaban\l"
+	.string "Chocolates Rabia.$"
 
 TwoIsland_Text_BuyRareItemsHere::
 	.string "The discerning TRAINER knows to\n"

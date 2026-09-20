@@ -55,22 +55,22 @@ VioletCity_Gym_EventScript_Falkner_Defeated::
 	end
 
 VioletGym_Text_Falkner_Intro:
-	.string "I'm FALKNER, the VIOLET POKéMON\n"
-	.string "GYM leader!\p"
-	.string "People say you can clip\n"
-	.string "FLYING-type POKéMON's wings\p"
-	.string "with a jolt of electricity…\n"
-	.string "I won't allow such insults to bird\l"
-	.string "POKéMON!\p"
-	.string "I'll show you the real power\n"
-	.string "of the magnificent bird POKéMON!$"
+	.string "Soy FALKNER, el líder del\n"
+	.string "GIMNASIO de CIUDAD MALVA!\p"
+	.string "Dicen que puedes cortar las\n"
+	.string "alas de los POKéMON VOLADOR\p"
+	.string "con una descarga eléctrica...\n"
+	.string "¡No permitiré tales insultos!\l"
+	.string "exóticos POKéMON!\p"
+	.string "¡Te mostraré el verdadero poder\n"
+	.string "de los magníficos POKéMON ave!$"
 
 VioletGym_Text_Falkner_WinLoss:
-	.string "…Darn! My dad's cherished bird\n"
+	.string "...¡Rayos! El ave favorita de papá\n"
 	.string "POKéMON…\p"
-	.string "All right. Take this.\p"
-	.string "It's the official POKéMON LEAGUE\n"
-	.string "ZEPHYRBADGE.$"
+	.string "Está bien. Toma esto.\p"
+	.string "Es la insignia oficial de la\n"
+	.string "LIGA POKéMON, la INSIGNIA CEFIRO.$"
 
 VioletGym_Text_ReceivedZephyrBadge:
 	.string "{PLAYER} received ZEPHYRBADGE.$"
@@ -80,7 +80,7 @@ VioletGym_Text_Falkner_BadgeExplain:
 	.string "power of POKéMON.\p"
 	.string "It also enables POKéMON to use\n"
 	.string "FLASH, if they can learn it,\l"
-	.string "anytime.\p"
+	.string "en cualquier momento.\p"
 	.string "Here--take this too.$"
 
 VioletGym_Text_Falkner_TMExplain:
@@ -117,7 +117,7 @@ VioletGym_Text_BirdKeeperRod_Seen:
 	.string "The keyword is guts!\p"
 	.string "Those here are training night and\n"
 	.string "day to become bird POKéMON masters.\p"
-	.string "Come on!$"
+	.string "¡Vamos!$"
 
 VioletGym_Text_BirdKeeperRod_Beaten:
 	.string "Gaaah!$"
@@ -179,6 +179,6 @@ VioletCity_Gym_Text_GymStatue:
 	.string "VIOLET CITY POKéMON GYM$"
 
 VioletCity_Gym_Text_GymStatueCertified:
-	.string "VIOLET CITY POKéMON GYM\p"
+	.string "GIMNASIO POKéMON CIUDAD MALVA\p"
 	.string "FALKNER'S CERTIFIED TRAINERS:\n"
 	.string "{PLAYER}$"

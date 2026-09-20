@@ -25,18 +25,18 @@ Route11_Text_JasperDefeat::
 
 Route11_Text_JasperPostBattle::
 	.string "You can't be a coward in the world\n"
-	.string "of POKéMON!$"
+	.string "¡evolución POKéMON!$"
 
 Route11_Text_EddieIntro::
 	.string "Let's go, but don't cheat!$"
 
 Route11_Text_EddieDefeat::
-	.string "Huh?\n"
+	.string "¿Eh?\n"
 	.string "That's not right!$"
 
 Route11_Text_EddiePostBattle::
-	.string "I did my best.\n"
-	.string "I have no regrets.$"
+	.string "Hice mi mejor esfuerzo.\n"
+	.string "No me arrepiento de nada.$"
 
 Route11_Text_BraxtonIntro::
 	.string "Careful!\n"
@@ -58,7 +58,7 @@ Route11_Text_DillonDefeat::
 
 Route11_Text_DillonPostBattle::
 	.string "What now?\n"
-	.string "Leave me alone!$"
+	.string "¡Déjame en paz!$"
 
 Route11_Text_DirkIntro::
 	.string "Fwahaha!\n"
@@ -97,7 +97,7 @@ Route11_Text_BernieIntro::
 	.string "Watch out for live wires!$"
 
 Route11_Text_BernieDefeat::
-	.string "Whoa!\n"
+	.string "¡Vaya!\n"
 	.string "You spark plug!$"
 
 Route11_Text_BerniePostBattle::

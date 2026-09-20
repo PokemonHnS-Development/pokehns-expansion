@@ -38,7 +38,7 @@ sText_MysteryGiftBattleCountCard:
 sText_MysteryGiftBattleCountCard_WonPrize:
 	.string "Thank you for using the MYSTERY\n"
 	.string "GIFT System.\p"
-	.string "Congratulations!\p"
+	.string "¡Felicidades!\p"
 	.string "You have won a prize for winning\n"
 	.string "three battles!\p"
 	.string "We hope you will be inspired to\n"

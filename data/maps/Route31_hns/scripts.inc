@@ -116,28 +116,28 @@ Route31_EventScript_ItemAntidote::
 	end
 
 Route31_Text_CooltrainerM:
-	.string "DARK CAVE…\p"
-	.string "If POKéMON could light it up,\n"
-	.string "I'd explore it.$"
+	.string "CUEVA OSCURA…\p"
+	.string "Si un POKéMON pudiera iluminarla,\n"
+	.string "la exploraría.$"
 
 Route31_Text_BugCatcherWade1_Seen:
-	.string "I caught a bunch of POKéMON.\n"
-	.string "Let me battle with you!$"
+	.string "Atrapé varios POKéMON.\n"
+	.string "¡Lucha conmigo!$"
 
 Route31_Text_BugCatcherWade1_Beaten:
 	.string "Awwwww…$"
 
 Route31_Text_BugCatcherWade1_After:
-	.string "You can catch POKéMON even if\n"
-	.string "you have six with you.\p"
-	.string "If you catch one, it'll go to\n"
-	.string "your BOX automatically.$"
+	.string "Puedes capturar POKéMON aunque\n"
+	.string "ya lleves seis contigo.\p"
+	.string "Si capturas uno, irá a tu\n"
+	.string "BOX automáticamente.$"
 
 Route31_Text_SleepyMan:
-	.string "… Hnuurg… Huh?\p"
-	.string "I walked too far today looking\n"
-	.string "for POKéMON.\p"
-	.string "My feet hurt and I'm sleepy…\p"
+	.string "… Hnuurg… ¿Eh?\p"
+	.string "Caminé demasiado hoy buscando\n"
+	.string "POKéMON.\p"
+	.string "Me duelen los pies y tengo sueño…\p"
 	.string "If I were a wild POKéMON, I'd\n"
 	.string "be easy to catch…\p"
 	.string "…Zzzz…$"
@@ -145,7 +145,7 @@ Route31_Text_SleepyMan:
 Route31_Text_SleepyManGotMail:
 	.string "…Zzzz… Huh?\p"
 	.string "What's that? You have MAIL\n"
-	.string "for me?$"
+	.string "por mí?$"
 
 Route31_Text_SleepyManFail:
 	.string "…Zzzz…$"
@@ -155,7 +155,7 @@ Route31_Text_HandOverMailMon:
 	.string "POKéMON holding the MAIL.$"
 
 Route31_Text_ReadingMail:
-	.string "Let's see…\p"
+	.string "Veamos...\p"
 	.string "Thanks for bringing this to\n"
 	.string "me.\p"
 	.string "My friend's a good guy, and\n"
@@ -200,7 +200,7 @@ Route31_Text_Youngster:
 
 Route31_Text_Sign:
 	.string "ROUTE 31\p"
-	.string "VIOLET CITY - CHERRYGROVE CITY$"
+	.string "CDAD. MALVA - CDAD. CEREZO$"
 
 Route31_Text_WadeRegister:
 	.string "You're awesome! I like you!\p"
@@ -213,7 +213,7 @@ Route31_Text_WadeRegister:
 
 Route31_Text_WadeRematchIntro:
 	.string "I was waiting for you.\n"
-	.string "Let's battle!$"
+	.string "¡A luchar!$"
 
 Route31_Text_WadeRematchDefeat:
 	.string "Awwwww…$"
@@ -227,7 +227,7 @@ Route31_Text_WadeHasItem:
 	.string "Hey! I've been looking for\n"
 	.string "you!\p"
 	.string "I found something while I\n"
-	.string "was in the grass.\p"
+	.string "estaba en la hierba.\p"
 	.string "Here, you can have it!$"
 
 Route31_Text_WadeGaveItem:
@@ -235,10 +235,10 @@ Route31_Text_WadeGaveItem:
 	.string "anything else!$"
 
 Route31_Text_WadeNoRoom:
-	.string "Hmm, looks like your BAG\n"
-	.string "is full.\p"
-	.string "Come back when you have\n"
-	.string "room!$"
+	.string "Hmm, parece que tu MOCHILA\n"
+	.string "está llena.\p"
+	.string "Vuelve cuando tengas espacio.\n"
+	.string "cuarto del jefe!$"
 
 Route31_Text_DarkCaveSign:
 	.string "DARK CAVE$"

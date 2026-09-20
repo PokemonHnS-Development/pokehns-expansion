@@ -32,7 +32,7 @@ SafariZone_SecretHouse_Text_CongratsYouveWon::
 	.string "for our grand opening,\p"
 	.string "I was getting worried that no one\n"
 	.string "would win our campaign prize.\p"
-	.string "Congratulations!\n"
+	.string "¡Felicidades!\n"
 	.string "You have won!$"
 
 SafariZone_SecretHouse_Text_ReceivedHM03FromAttendant::

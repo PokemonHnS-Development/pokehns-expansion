@@ -287,8 +287,8 @@ SlateportCity_OceanicMuseum_1F_Text_WantSeaPokemon:
 	.string "to hug.$"
 
 SlateportCity_OceanicMuseum_1F_Text_RememberMeTakeThis:
-	.string "Aiyeeeh!\n"
-	.string "What are you doing here?\p"
+	.string "¡Aiyeeeh!\n"
+	.string "¿Qué haces aquí?\p"
 	.string "Me? I'm the TEAM AQUA member\n"
 	.string "you thumped before, remember?\l"
 	.string "Back in RUSTURF TUNNEL?\p"
@@ -299,7 +299,7 @@ SlateportCity_OceanicMuseum_1F_Text_HopeINeverSeeYouAgain:
 	.string "That TM, it suits you more than it\n"
 	.string "does me.\p"
 	.string "Hope I never see you again!\n"
-	.string "Wahahaha!$"
+	.string "¡Jajajaja!$"
 
 SlateportCity_OceanicMuseum_1F_Text_YouHaveToTakeThis:
 	.string "Awww, come on!\n"
@@ -340,22 +340,22 @@ SlateportCity_OceanicMuseum_1F_Text_OceanicMinifact1:
 	.string "“Light is composed of many colors.\p"
 	.string "“When light passes through water,\n"
 	.string "most kinds of light lose color.\p"
-	.string "“However, blue light retains its\n"
-	.string "color, making the sea appear blue.”$"
+	.string "“Sin embargo, la luz azul mantiene\n"
+	.string "su color, haciendo el mar azul.”$"
 
 SlateportCity_OceanicMuseum_1F_Text_OceanicMinifact2:
-	.string "“OCEANIC MINIFACT 2\n"
-	.string "Why is the sea salty?\p"
-	.string "“Seawater contains dissolved salt in\n"
-	.string "the form of sodium and chlorine ions.\p"
-	.string "“These ions leech out of rocks\n"
-	.string "and are carried out to sea by rain.\p"
-	.string "“The concentration of dissolved salt\n"
-	.string "makes the sea salty.”$"
+	.string "“DATO OCEÁNICO 2\n"
+	.string "¿Por qué el mar es salado?\p"
+	.string "“El agua de mar tiene sal disuelta\n"
+	.string "como iones de sodio y cloro.\p"
+	.string "“Estos iones salen de las rocas\n"
+	.string "y la lluvia los lleva hacia el mar.\p"
+	.string "“La concentración de sal disuelta\n"
+	.string "hace que el mar sea salado.”$"
 
 SlateportCity_OceanicMuseum_1F_Text_OceanicMinifact3:
-	.string "“OCEANIC MINIFACT 3\n"
-	.string "Which is bigger? The sea or land?\p"
+	.string "“DATO OCEÁNICO 3\n"
+	.string "¿Qué es más grande? ¿Mar o tierra?\p"
 	.string "“The sea covers about 70% of\n"
 	.string "the planet, and the rest is land.\p"
 	.string "“The sea is therefore more than twice\n"

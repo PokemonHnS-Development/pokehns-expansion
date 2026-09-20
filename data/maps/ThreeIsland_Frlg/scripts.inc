@@ -419,7 +419,7 @@ ThreeIsland_Text_AreYouBossGoBackToKanto::
 	.string "Go back to KANTO right now!$"
 
 ThreeIsland_Text_JustGotHerePal::
-	.string "Hah?\p"
+	.string "¿Eh?\p"
 	.string "I just got here, pal.\p"
 	.string "What's with the hostile attitude?\n"
 	.string "It's mighty cold of you!$"

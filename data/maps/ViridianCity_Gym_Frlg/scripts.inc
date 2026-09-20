@@ -107,7 +107,7 @@ ViridianCity_Gym_EventScript_GymStatuePostVictory::
 ViridianCity_Gym_Text_GiovanniIntro::
 	.string "Fwahahaha!\n"
 	.string "Welcome to my hideout!\p"
-	.string "It shall be so until I can restore\n"
+	.string "Así será hasta que devuelva al\n"
 	.string "TEAM ROCKET to its former glory.\p"
 	.string "But, you have found me again.\n"
 	.string "So be it.\l"
@@ -131,7 +131,7 @@ ViridianCity_Gym_Text_GiovanniPostBattle::
 	.string "As for myself, I shall dedicate\n"
 	.string "my life to training again.\p"
 	.string "Let us meet again someday!\n"
-	.string "Farewell!$"
+	.string "¡Adiós!$"
 
 ViridianCity_Gym_Text_ExplainEarthBadgeTakeThis::
 	.string "The EARTHBADGE makes POKéMON of\n"
@@ -168,7 +168,7 @@ ViridianCity_Gym_Text_YujiDefeat::
 
 ViridianCity_Gym_Text_YujiPostBattle::
 	.string "You'll need power to keep up with\n"
-	.string "our GYM LEADER.$"
+	.string "nuestro LÍDER de GIMNASIO.$"
 
 ViridianCity_Gym_Text_AtsushiIntro::
 	.string "Rrrroar!\n"
@@ -228,16 +228,16 @@ ViridianCity_Gym_Text_ColeIntro::
 	.string "crack of my whip!$"
 
 ViridianCity_Gym_Text_ColeDefeat::
-	.string "Yowch!\n"
+	.string "¡Ay!\n"
 	.string "Whiplash!$"
 
 ViridianCity_Gym_Text_ColePostBattle::
-	.string "Wait!\n"
+	.string "¡Espera!\n"
 	.string "I was just careless!$"
 
 ViridianCity_Gym_Text_SamuelIntro::
 	.string "VIRIDIAN GYM was closed for a\n"
-	.string "long time.\p"
+	.string "mucho tiempo.\p"
 	.string "But now, our LEADER is back!$"
 
 ViridianCity_Gym_Text_SamuelDefeat::
@@ -250,7 +250,7 @@ ViridianCity_Gym_Text_SamuelPostBattle::
 
 ViridianCity_Gym_Text_GymGuyAdvice::
 	.string "Yo!\n"
-	.string "Champ in the making!\p"
+	.string "¡Un futuro campeón!\p"
 	.string "Even I don't know the VIRIDIAN\n"
 	.string "LEADER's identity.\p"
 	.string "But one thing's certain.\n"
@@ -261,17 +261,17 @@ ViridianCity_Gym_Text_GymGuyAdvice::
 
 ViridianCity_Gym_Text_GymGuyPostVictory::
 	.string "Blow me away! GIOVANNI was the\n"
-	.string "GYM LEADER of VIRIDIAN?$"
+	.string "LÍDER del GIMNASIO VIRIDIAN?$"
 
 ViridianCity_Gym_Text_GymStatue::
-	.string "VIRIDIAN POKéMON GYM\n"
+	.string "GIMNASIO POKéMON VERDIANA\n"
 	.string "LEADER: ?\p"
-	.string "WINNING TRAINERS:\n"
+	.string "ENTRENADORES GANADORES:\n"
 	.string "{RIVAL}$"
 
 ViridianCity_Gym_Text_GymStatuePlayerWon::
-	.string "VIRIDIAN POKéMON GYM\n"
+	.string "GIMNASIO POKéMON VERDIANA\n"
 	.string "LEADER: GIOVANNI\p"
-	.string "WINNING TRAINERS:\n"
+	.string "ENTRENADORES GANADORES:\n"
 	.string "{RIVAL}, {PLAYER}$"
 

@@ -52,12 +52,12 @@ static const u8 sText_ForPetesSake[] = _("OAK: Oh, for Pete's sake…\nSo pushy,
 static const u8 sText_HowDissapointing[] = _("OAK: Hm…\nHow disappointing…\pIf you win, you earn prize money,\nand your POKéMON grow.\pBut if you lose, {B_PLAYER_NAME}, you end\nup paying prize money…\pHowever, since you had no warning\nthis time, I'll pay for you.\pBut things won't be this way once\nyou step outside these doors.\pThat's why you must strengthen your\nPOKéMON by battling wild POKéMON.\p");
 static const u8 sText_InflictingDamageIsKey[] = _("OAK: Inflicting damage on the foe\nis the key to any battle.\p");
 static const u8 sText_KeepAnEyeOnHP[] = _("OAK: Keep your eyes on your\nPOKéMON's HP.\pIt will faint if the HP drops to\n“0.”\p");
-static const u8 sText_LoweringStats[] = _("OAK: Lowering the foe's stats\nwill put you at an advantage.\p");
-static const u8 sText_OakNoRunningFromATrainer[] = _("OAK: No! There's no running away\nfrom a TRAINER POKéMON battle!\p");
+static const u8 sText_LoweringStats[] = _("OAK: Bajar las estadísticas del rival\nte dará una gran ventaja.\p");
+static const u8 sText_OakNoRunningFromATrainer[] = _("OAK: ¡No! No puedes huir de una\nbatalla POKéMON contra ENTRENADORES!\p");
 static const u8 sText_TheTrainerThat[] = _("The TRAINER that makes the other\nTRAINER's POKéMON faint by lowering\ltheir HP to “0,” wins.\p");
-static const u8 sText_TryBattling[] = _("But rather than talking about it,\nyou'll learn more from experience.\pTry battling and see for yourself.\p");
-static const u8 sText_WinEarnsPrizeMoney[] = _("OAK: Hm! Excellent!\pIf you win, you earn prize money,\nand your POKéMON will grow!\pBattle other TRAINERS and make\nyour POKéMON strong!\p");
-static const u8 gText_WhatWillOldManDo[] = _("What will the\nold man do?");
+static const u8 sText_TryBattling[] = _("Pero en vez de hablar de ello,\naprenderás más con la experiencia.\p¡Lucha y compruébalo tú mismo!\p");
+static const u8 sText_WinEarnsPrizeMoney[] = _("OAK: ¡Hm! ¡Excelente!\pSi ganas, obtienes dinero en premios\n¡y así tus POKéMON crecerán!\p¡Lucha contra ENTRENADORES y\nfortalece tus POKéMON!\p");
+static const u8 gText_WhatWillOldManDo[] = _("¿Qué hará el\nanciano?");
 
 static void (*const sOakOldManBufferCommands[CONTROLLER_CMDS_COUNT])(enum BattlerId battler) =
 {

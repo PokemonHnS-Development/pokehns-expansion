@@ -300,12 +300,12 @@ Route25_SeaCottage_Text_ImBillHelpMeOutPal::
 	.string "…No I'm not!\p"
 	.string "Call me BILL!\n"
 	.string "I'm a true-blue POKéMANIAC!\p"
-	.string "Hey!\n"
+	.string "¡Hola!\n"
 	.string "What's with that skeptical look?\p"
 	.string "I'm not joshing you, pal.\p"
 	.string "I screwed up an experiment and got\n"
 	.string "combined with a POKéMON!\p"
-	.string "So, how about it?\n"
+	.string "Entonces, ¿qué dices?\n"
 	.string "Help me out here!$"
 
 Route25_SeaCottage_Text_ImBillHelpMeOutLady::
@@ -313,12 +313,12 @@ Route25_SeaCottage_Text_ImBillHelpMeOutLady::
 	.string "…No I'm not!\p"
 	.string "Call me BILL!\n"
 	.string "I'm a true-blue POKéMANIAC!\p"
-	.string "Hey!\n"
+	.string "¡Hola!\n"
 	.string "What's with that skeptical look?\p"
 	.string "I'm not joshing you, lady.\p"
 	.string "I screwed up an experiment and got\n"
 	.string "combined with a POKéMON!\p"
-	.string "So, how about it?\n"
+	.string "Entonces, ¿qué dices?\n"
 	.string "Help me out here!$"
 
 Route25_SeaCottage_Text_RunCellSeparationOnPC::
@@ -376,7 +376,7 @@ Route25_SeaCottage_Text_YouveGotTooMuchStuff::
 
 Route25_SeaCottage_Text_SSAnnePartyYouGoInstead::
 	.string "That cruise ship S.S. ANNE is in\n"
-	.string "VERMILION CITY.\p"
+	.string "CIUDAD VERMILIAN.\p"
 	.string "I hear there are lots of TRAINERS\n"
 	.string "on board, too.\p"
 	.string "They invited me to their party, but\n"

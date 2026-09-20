@@ -50,7 +50,7 @@ RockTunnel_1F_Text_LennyIntro::
 
 RockTunnel_1F_Text_LennyDefeat::
 	.string "Doh!\n"
-	.string "You win!$"
+	.string "¡Tú ganas!$"
 
 RockTunnel_1F_Text_LennyPostBattle::
 	.string "Watch for ONIX.\n"
@@ -121,10 +121,10 @@ RockTunnel_1F_Text_ArianaDefeat::
 	.string "You play hard!$"
 
 RockTunnel_1F_Text_ArianaPostBattle::
-	.string "Whew!\n"
+	.string "¡Uff!\n"
 	.string "I'm all sweaty now.$"
 
 RockTunnel_1F_Text_RouteSign::
 	.string "ROCK TUNNEL\n"
-	.string "CERULEAN CITY - LAVENDER TOWN$"
+	.string "CIUDAD CEREZO - PUEBLO LAVANDA$"
 

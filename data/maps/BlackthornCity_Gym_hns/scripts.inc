@@ -233,97 +233,97 @@ BlackthornGym_EventScript_ClairAfterLeague::
 	end
 
 BlackthornGym_Text_ClairIntroText:
-    .string "I am CLAIR.\p"
-    .string "The world's best dragon master.\p"
-    .string "I can hold my own against even the\n"
-    .string "POKéMON LEAGUE's ELITE FOUR.\p"
-    .string "Do you still want to take me on?\p"
-    .string "…Fine. Let's do it!\p"
-    .string "As a GYM LEADER, I will use my full\n"
-    .string "power against any opponent!$"
+    .string "Soy CLAIR.\p"
+    .string "La mejor maestra dragón del mundo.\p"
+    .string "Puedo luchar incluso contra el\n"
+    .string "ALTO MANDO de la LIGA POKéMON.\p"
+    .string "¿Aún quieres enfrentarte a mí?\p"
+    .string "...Bien. ¡Hagámoslo!\p"
+    .string "Como LÍDER de GIMNASIO, usaré todo\n"
+    .string "mi poder contra cualquier rival!$"
 
 BlackthornGym_Text_ClairWinText:
-    .string "I lost?\p"
-    .string "I don't believe it. There must be\n"
-    .string "some mistake…$"
+    .string "¿Perdí?\p"
+    .string "No lo creo. Debe haber\n"
+    .string "algún error...$"
 
 BlackthornGym_Text_ClairText_GoToDragonsDen:
-    .string "I won't admit this.\p"
-    .string "I may have lost, but you're still\n"
-    .string "not ready for the POKéMON LEAGUE.\p"
-    .string "I know. You should take the dragon-\n"
-    .string "user challenge.\p"
-    .string "Behind this GYM is a place called\n"
-    .string "DRAGON'S DEN.\p"
-    .string "There is a small shrine at its\n"
-    .string "center. Go there.\p"
-    .string "If you can prove that you've lost\n"
-    .string "your lazy ideals, I will recognize\l"
-    .string "you as a trainer worthy of a GYM\l"
-    .string "BADGE!$"
+    .string "No admitiré esto.\p"
+    .string "Puede que haya perdido, pero aún\n"
+    .string "no estás listo para la LIGA POKéMON.\p"
+    .string "Lo sé. Deberías aceptar el reto\n"
+    .string "de los usuarios de dragones.\p"
+    .string "Tras este GIMNASIO hay un lugar\n"
+    .string "llamado GUARIDA DRAGÓN.\p"
+    .string "Hay un pequeño santuario en su\n"
+    .string "centro. Ve allí.\p"
+    .string "Si demuestras que has dejado atrás\n"
+    .string "tus ideales perezosos, te veré\l"
+    .string "como un ENTRENADOR digno de una\l"
+    .string "MEDALLA!$"
 
 BlackthornGym_Text_ClairText_TooMuchToExpect:
-    .string "What's the matter?\p"
-    .string "Is it too much to expect of you?$"
+    .string "¿Qué sucede?\p"
+    .string "¿Es mucho pedirte?$"
 
 BlackthornGym_Text_ClairText_YouKeptMeWaiting:
-    .string "You've kept me waiting!\p"
-    .string "Here! Take this!$"
+    .string "¡Me has hecho esperar!\p"
+    .string "¡Toma! ¡Toma esto!$"
 
 BlackthornGym_Text_ClairText_DescribeTM:
-    .string "That contains DRAGON CLAW.\p"
-    .string "You can figure out what it does.$"
+    .string "Contiene GARRA DRAGÓN.\p"
+    .string "Ya verás para qué sirve.$"
 
 BlackthornGym_Text_ClairText_League:
-    .string "What's the matter?\p"
-    .string "Aren't you headed to the POKéMON\n"
-    .string "LEAGUE?\p"
-    .string "Don't you know where it is?\p"
-    .string "From here, go to NEW BARK TOWN.\p"
-    .string "Then SURF east. The route there is\n"
-    .string "very tough.\p"
-    .string "Don't you dare lose at the POKéMON\n"
-    .string "LEAGUE!\p"
-    .string "If you do, I'll feel even worse\n"
-    .string "about having lost to you!\p"
-    .string "Give it everything you've got.$"
+    .string "¿Qué sucede?\p"
+    .string "¿No vas camino a la LIGA\n"
+    .string "POKéMON?\p"
+    .string "¿No sabes dónde está?\p"
+    .string "Ve a PUEBLO PRIMAVERA.\p"
+    .string "Luego usa SURF al este. Esa ruta\n"
+    .string "es muy difícil.\p"
+    .string "¡Ni se te ocurra perder en la\n"
+    .string "LIGA POKéMON!\p"
+    .string "Si lo haces, me sentiré peor\n"
+    .string "por haber perdido contra ti!\p"
+    .string "¡Da todo lo que tengas!$"
 
 BlackthornGym_Text_ClairAfterLeague:
-    .string "You did it, huh?\p"
-    .string "You are now the JOHTO CHAMP.$"
+    .string "Lo lograste, ¿eh?\p"
+    .string "¡Ahora eres el CAMPEÓN DE JOHTO!$"
 
 BlackthornGym_Text_ClairRematchText:
-    .string "You did it, huh?\p"
-    .string "You are now the JOHTO CHAMP.\p"
-    .string "You've proven your strength but can\n"
-    .string "you handle me again?\p"
-    .string "As a Dragon Master, I won't hold\n"
-    .string "back.\p"
-    .string "Not this time.\p"
-    .string "Want to have a rematch with me?$"
+    .string "Lo lograste, ¿eh?\p"
+    .string "Ahora eres el CAMPEÓN DE JOHTO.\p"
+    .string "Probaste tu fuerza, pero ¿puedes\n"
+    .string "vencerme otra vez?\p"
+    .string "Como Maestro Dragón, no me\n"
+    .string "contendré.\p"
+    .string "Esta vez no.\p"
+    .string "¿Quieres otra revancha conmigo?$"
 
 BlackthornGym_Text_ClairRematchDefeatText:
-    .string "I lost?\p"
-    .string "Again?\p"
-    .string "I don't believe it. There must be\n"
-    .string "some mistake…$"
+    .string "¿Perdí?\p"
+    .string "¿Otra vez?\p"
+    .string "No lo creo. Debe haber\n"
+    .string "algún error...$"
 
 BlackthornGym_Text_CooltrainermCodySeenText:
-    .string "I just got access to use DRAGON-\n"
-    .string "type POKéMON!$"
+    .string "¡Apenas tengo permiso de usar\n"
+    .string "POKéMON tipo DRAGÓN!$"
 
 BlackthornGym_Text_CooltrainermCodyBeatenText:
     .string "Rats! If only I had a DRAGONITE!$"
 
 BlackthornGym_Text_CooltrainermCodyAfterBattleText:
-    .string "Members of our dragon-user clan\n"
-    .string "can use dragon POKéMON only after\l"
-    .string "our MASTER allows it.$"
+    .string "Los miembros de nuestro clan\n"
+    .string "solo usan POKéMON dragón cuando\l"
+    .string "nuestro MASTER lo permite.$"
 
 BlackthornGym_Text_CooltrainerfFranSeenText:
-    .string "I can't allow a nameless trainer\n"
-    .string "past me!\p"
-    .string "CLAIR would be livid if I did!$"
+    .string "¡No dejaré pasar a un\n"
+    .string "entrenador desconocido!\p"
+    .string "¡CLAIR se enfurecería si lo hago!$"
 
 BlackthornGym_Text_CooltrainerfFranBeatenText:
     .string "Awww… I lost…$"
@@ -332,40 +332,40 @@ BlackthornGym_Text_CooltrainerfFranAfterBattleText:
     .string "Uh-oh… CLAIR is going to be mad…$"
 
 BlackthornGym_Text_CooltrainermPaulSeenText:
-    .string "Your first battle against dragons?\p"
-    .string "I'll show you how tough they are!$"
+    .string "¿Tu primera batalla contra dragones?\p"
+    .string "¡Te mostraré lo fuertes que son!$"
 
 BlackthornGym_Text_CooltrainermPaulBeatenText:
     .string "My dragon POKéMON lost?$"
 
 BlackthornGym_Text_CooltrainermPaulAfterBattleText:
-    .string "LANCE told you that he'd like to\n"
-    .string "see you again?\p"
-    .string "Not a chance!$"
+    .string "¿LANCE te dijo que le gustaría\n"
+    .string "verte de nuevo?\p"
+    .string "¡Ni hablar!$"
 
 BlackthornGym_Text_CooltrainermMikeSeenText:
-    .string "My chance of losing? Not even one\n"
-    .string "percent!$"
+    .string "¿Mi probabilidad de perder? ¡Ni un\n"
+    .string "por ciento!$"
 
 BlackthornGym_Text_CooltrainermMikeBeatenText:
     .string "That's odd.$"
 
 BlackthornGym_Text_CooltrainermMikeAfterBattleText:
-    .string "I know my short-comings now.\p"
-    .string "Thanks for showing me!$"
+    .string "Ya conozco mis debilidades.\p"
+    .string "¡Gracias por mostrármelas!$"
 
 BlackthornGym_Text_CooltrainerfLolaSeenText:
-    .string "Dragons are sacred POKéMON.\p"
-    .string "They are full of life energy.\p"
-    .string "If you're not serious, you won't\n"
-    .string "be able to beat them.$"
+    .string "Los dragones son POKéMON sagrados.\p"
+    .string "Están llenos de energía vital.\p"
+    .string "Si no vas en serio, no podrás\n"
+    .string "vencerlos.$"
 
 BlackthornGym_Text_CooltrainerfLolaBeatenText:
     .string "Way to go!$"
 
 BlackthornGym_Text_CooltrainerfLolaAfterBattleText:
-    .string "Dragons are weak against DRAGON-\n"
-    .string "type moves.$"
+    .string "Los dragones son débiles ante los\n"
+    .string "movimientos tipo DRAGÓN.$"
 
 BlackthornGym_EventScript_GymGuy::
 	lock
@@ -388,34 +388,34 @@ BlackthornGym_EventScript_GymGuy3::
 	end	
 
 BlackthornGym_Text_GuideText:
-    .string "Yo! CHAMP in making!\p"
-    .string "It's been a long journey, but we\n"
-    .string "are almost done! Count on me!\p"
-    .string "While CLAIR looks up to the Dragon\n"
-    .string "Master, LANCE, she's managed to\l"
-    .string "create her own identity with a\l"
-    .string "team consisting of dragons from\l"
-    .string "the sea.\p"
-    .string "Dragons are supposed to be\n"
-    .string "weak against ICE-type moves,\l"
-    .string "but you'll need some DRAGON-type\l"
-	.string "or FAIRY-type moves of your own if\l"
-    .string "you want to win.$"
-    .string "You got this!$"
+    .string "¡Ey! ¡Futuro CAMPEÓN!\p"
+    .string "Ha sido un viaje largo, ¡pero ya\n"
+    .string "casi terminamos! ¡Cuenta conmigo!\p"
+    .string "Aunque CLAIR admira al Maestro\n"
+    .string "Dragón, LANCE, ella ha logrado\l"
+    .string "crear su propia identidad con un\l"
+    .string "equipo de dragones provenientes\l"
+    .string "del mar.\p"
+    .string "Se supone que los dragones son\n"
+    .string "débiles ante ataques de tipo HIELO,\l"
+    .string "pero necesitarás ataques tipo\l"
+	.string "DRAGÓN o HADA si quieres\l"
+    .string "ganar.$"
+    .string "¡Tú puedes lograrlo!$"
 
 BlackthornGym_Text_GuideGotoDragonsDen:
-	.string "You were great to beat CLAIR!\p"
-    .string "She can be a bit of a sore loser,\n"
-	.string "though\p"
-    .string "Sounds like you need to head to the\n"
-    .string "DRAGON'S DEN if you want that GYM BADGE!$"
+	.string "¡Fue genial vencer a CLAIR!\p"
+    .string "Aunque puede que no sepa\n"
+	.string "perder muy bien\p"
+    .string "Parece que debes ir a la\n"
+    .string "GUERRA DE DRAGONES por esa MEDALLA!$"
 
 BlackthornGym_Text_GuideWinText:
-    .string "You were great to beat CLAIR!\p"
-    .string "All that's left is the POKéMON\n"
-    .string "LEAGUE challenge.\p"
-    .string "You're on the way to becoming the\n"
-    .string "POKéMON CHAMPION!$"
+    .string "¡Fue genial vencer a CLAIR!\p"
+    .string "Solo queda el desafío de la\n"
+    .string "LIGA POKéMON.\p"
+    .string "¡Estás en camino a ser el\n"
+    .string "CAMPEÓN POKéMON!$"
 
 
 BlackthornGym_EventScript_Statue::
@@ -436,6 +436,6 @@ BlackthornGym_Text_GymStatue:
 	.string "BLACKTHORN CITY POKéMON GYM$"
 
 BlackthornGym_Text_GymStatueCertified:
-	.string "BLACKTHORN CITY POKéMON GYM\p"
-	.string "CLAIR'S CERTIFIED TRAINERS:\n"
+	.string "GIMNASIO POKéMON CIUDAD ENDRINO\p"
+	.string "ENTRENADORES CERTIFICADOS DE CLAIR:\n"
 	.string "{PLAYER}$"

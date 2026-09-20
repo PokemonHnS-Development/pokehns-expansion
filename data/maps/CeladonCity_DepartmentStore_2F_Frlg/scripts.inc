@@ -71,7 +71,7 @@ CeladonCity_DepartmentStore_2F_Text_BuyReviveForLongOutings::
 
 CeladonCity_DepartmentStore_2F_Text_FloorSign::
 	.string "Top-Grade Items for TRAINERS!\p"
-	.string "2F: TRAINER'S MARKET$"
+	.string "2F: MERCADO DE ENTRENADORES$"
 
 CeladonCity_DepartmentStore_2F_Text_LanceComesToBuyCapes::
 	.string "We have a customer, LANCE, who\n"

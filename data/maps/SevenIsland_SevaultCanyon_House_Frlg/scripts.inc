@@ -96,7 +96,7 @@ SevenIsland_SevaultCanyon_House_Text_DancedChanseyDance::
 	.string "{PLAYER} danced the CHANSEY Dance!$"
 
 SevenIsland_SevaultCanyon_House_Text_YoureAllChipperNow::
-	.string "Ahahahaha!\p"
+	.string "¡Ahajajaja!\p"
 	.string "There, you're all chipper now!\n"
 	.string "Lucky!$"
 

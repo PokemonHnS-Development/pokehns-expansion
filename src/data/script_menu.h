@@ -822,14 +822,14 @@ static const struct MenuAction sMultichoiceList_Eeveelutions[] = {
     { COMPOUND_STRING("Quit looking.") }
 };
 
-static const u8 gText_SeviiIslands[] = _("SEVII ISLANDS");
-static const u8 gText_OneIsland[] = _("ONE ISLAND");
-static const u8 gText_TwoIsland[] = _("TWO ISLAND");
-static const u8 gText_ThreeIsland[] = _("THREE ISLAND");
-static const u8 gText_FourIsland[] = _("FOUR ISLAND");
-static const u8 gText_FiveIsland[] = _("FIVE ISLAND");
-static const u8 gText_SixIsland[] = _("SIX ISLAND");
-static const u8 gText_SevenIsland[] = _("SEVEN ISLAND");
+static const u8 gText_SeviiIslands[] = _("ISLAS SEVII");
+static const u8 gText_OneIsland[] = _("ISLA UNO");
+static const u8 gText_TwoIsland[] = _("ISLA DOS");
+static const u8 gText_ThreeIsland[] = _("ISLA TRES");
+static const u8 gText_FourIsland[] = _("ISLA CUATRO");
+static const u8 gText_FiveIsland[] = _("ISLA CINCO");
+static const u8 gText_SixIsland[] = _("ISLA SEIS");
+static const u8 gText_SevenIsland[] = _("ISLA SIETE");
 
 static const struct MenuAction sMultichoiceList_Island23[] = {
     { gText_TwoIsland },
@@ -901,7 +901,7 @@ static const struct MenuAction sMultichoiceList_SeagallopVermilion[] = {
     { gText_Exit }
 };
 
-const u8 sText_NoThanks[] = _("NO THANKS");
+const u8 sText_NoThanks[] = _("NO, GRACIAS");
 
 static const struct MenuAction sMultichoiceList_GameCornerPokemonPrizes[] = {
 #if defined(FIRERED)
@@ -1075,8 +1075,8 @@ static const struct MenuAction sMultichoiceList_TrainerCardIconTint[] = {
     { COMPOUND_STRING("SEPIA") }
 };
 
-static const u8 sText_Eggs[] = _("EGGS");
-static const u8 sText_Victories[] = _("VICTORIES");
+static const u8 sText_Eggs[] = _("HUEVOS");
+static const u8 sText_Victories[] = _("VICTORIAS");
 
 static const struct MenuAction sMultichoiceList_HOF_Quit[] = {
     { gText_HallOfFame },

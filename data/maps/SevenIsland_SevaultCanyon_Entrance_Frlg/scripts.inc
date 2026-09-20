@@ -14,7 +14,7 @@ SevenIsland_SevaultCanyon_Entrance_Text_MiahDefeat::
 	.string "Too strong for me!$"
 
 SevenIsland_SevaultCanyon_Entrance_Text_MiahPostBattle::
-	.string "What's that?\n"
+	.string "¿Qué es eso?\n"
 	.string "I don't act the way I look?\p"
 	.string "Heh, that's a part of my strategy!$"
 
@@ -43,7 +43,7 @@ SevenIsland_SevaultCanyon_Entrance_Text_NicolasPostBattle::
 	.string "TRAINERS like you from cities,\n"
 	.string "they sure are tough.\p"
 	.string "You'll be headed for the TOWER,\n"
-	.string "won't you?$"
+	.string "¿verdad?$"
 
 SevenIsland_SevaultCanyon_Entrance_Text_MadelineIntro::
 	.string "I punish people who abuse\n"
@@ -51,7 +51,7 @@ SevenIsland_SevaultCanyon_Entrance_Text_MadelineIntro::
 
 SevenIsland_SevaultCanyon_Entrance_Text_MadelineDefeat::
 	.string "You don't seem to be a problem\n"
-	.string "TRAINER.$"
+	.string "ENTRENADOR.$"
 
 SevenIsland_SevaultCanyon_Entrance_Text_MadelinePostBattle::
 	.string "If you treat your POKéMON with\n"
