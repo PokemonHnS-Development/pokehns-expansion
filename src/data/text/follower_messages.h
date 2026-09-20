@@ -38,10 +38,10 @@ static const u8 sHappyMsg15[] = _("{STR_VAR_1} hace lo posible\npor seguirte el 
 static const u8 sHappyMsg16[] = _("{STR_VAR_1} se acurruca\nmuy feliz junto a ti.");
 static const u8 sHappyMsg17[] = _("¡{STR_VAR_1} está lleno de vida!");
 static const u8 sHappyMsg18[] = _("{STR_VAR_1} seems to be very happy!");
-static const u8 sHappyMsg19[] = _("{STR_VAR_1} is so happy that it\ncan't stand still!");
+static const u8 sHappyMsg19[] = _("¡{STR_VAR_1} está tan feliz que\nno puede quedarse quieto!");
 static const u8 sHappyMsg20[] = _("{STR_VAR_1} nodded slowly.");
 static const u8 sHappyMsg21[] = _("{STR_VAR_1} is very eager!");
-static const u8 sHappyMsg22[] = _("{STR_VAR_1} is wandering around and\nlistening to the different sounds.");
+static const u8 sHappyMsg22[] = _("{STR_VAR_1} pasea por ahí\nescuchando los distintos sonidos.");
 static const u8 sHappyMsg23[] = _("{STR_VAR_1} looks very interested.");
 static const u8 sHappyMsg24[] = _("{STR_VAR_1} is somehow forcing\nitself to keep going.");
 static const u8 sHappyMsg25[] = _("{STR_VAR_1} gave you a sunny look!");
@@ -226,7 +226,7 @@ static const u8 sSurpriseMsg17[] = _("¡{STR_VAR_1} tiene miedo y se\nacurruca c
 static const u8 sSurpriseMsg18[] = _("{STR_VAR_1} is feeling an unusual\npresence…");
 static const u8 sSurpriseMsg19[] = _("{STR_VAR_1} se pone tenso con\nenergía nerviosa.");
 // Conditional messages, index 20
-static const u8 sSurpriseMsg20[] = _("{STR_VAR_1} seems to be very\nsurprised that it is raining!");
+static const u8 sSurpriseMsg20[] = _("{STR_VAR_1} parece muy\nsorprendido de que llueva!");
 
 const struct FollowerMsgInfo gFollowerSurpriseMessages[] = {
     {sSurpriseMsg00},
@@ -270,7 +270,7 @@ static const u8 sMusicMsg05[] = _("{STR_VAR_1} salta feliz.");
 static const u8 sMusicMsg06[] = _("{STR_VAR_1} canta y tararea.");
 static const u8 sMusicMsg07[] = _("{STR_VAR_1} te muerde los pies!");
 static const u8 sMusicMsg08[] = _("{STR_VAR_1} se da la vuelta\ny te mira.");
-static const u8 sMusicMsg09[] = _("{STR_VAR_1} is working hard to show\noff its mighty power!");
+static const u8 sMusicMsg09[] = _("{STR_VAR_1} se esfuerza por lucir\nsu enorme poder!");
 static const u8 sMusicMsg10[] = _("Whoa! {STR_VAR_1} suddenly danced in\nhappiness!");
 static const u8 sMusicMsg11[] = _("{STR_VAR_1} is cheerful!");
 static const u8 sMusicMsg12[] = _("{STR_VAR_1} is jumping around in a\ncarefree way!");

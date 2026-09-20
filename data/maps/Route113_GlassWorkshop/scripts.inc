@@ -324,14 +324,14 @@ Route113_GlassWorkshop_Text_WhichGlassItemWoudYouLike:
 	.string "Oh!\n"
 	.string "¡Tienes muchas cenizas, uf, uf!\p"
 	.string "¡Te haré un objeto de vidrio, uf, uf!\n"
-	.string "Which one would you like, huff-puff?$"
+	.string "¿Cuál quieres, jof, jof?$"
 
 Route113_GlassWorkshop_Text_IsThatTheItemForYou:
 	.string "¿Un {STR_VAR_1}, uf, uf?\n"
 	.string "¿Es ese el que quieres, uf, uf?$"
 
 Route113_GlassWorkshop_Text_WhichWouldYouLike:
-	.string "Which one would you like, huff-puff?$"
+	.string "¿Cuál quieres, jof, jof?$"
 
 Route113_GlassWorkshop_Text_IllMakeItemForYou:
 	.string "¡Un {STR_VAR_1} será, ja-ja!\p"

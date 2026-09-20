@@ -1670,7 +1670,7 @@ gTVTrainerFanClubText01::
 	.string "las POKé BALLS!$"
 
 gTVTrainerFanClubText02::
-	.string "FANS: Their adorable way of running!$"
+	.string "FANS: ¡Su adorable forma de correr!$"
 
 gTVTrainerFanClubText03::
 	.string "FANS: ¡Cómo el ENTRENADOR se hace\n"
@@ -2093,7 +2093,7 @@ TVSecretBaseSecrets_Text_Intro::
 	.string "¿Qué hará {STR_VAR_2}?$"
 
 TVSecretBaseSecrets_Text_WhatWillPlayerDoNext1::
-	.string "What will {STR_VAR_2} do next?$"
+	.string "¿Qué hará {STR_VAR_2} después?$"
 
 TVSecretBaseSecrets_Text_WhatWillPlayerDoNext2::
 	.string "¿Y ahora, qué hará {STR_VAR_2}?$"
