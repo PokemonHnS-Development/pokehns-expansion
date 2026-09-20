@@ -180,7 +180,7 @@ static const u8 sText_TooImportantToToss[] = _("That's much too\nimportant to to
 
 static const u8 *const sItemStorage_OptionDescriptions[] =
 {
-    [MENU_WITHDRAW] = COMPOUND_STRING("Take out items from the PC."),
+    [MENU_WITHDRAW] = COMPOUND_STRING("Saca los objetos de la PC."),
     [MENU_DEPOSIT]  = COMPOUND_STRING("Store items in the PC."),
     [MENU_TOSS]     = COMPOUND_STRING("Throw away items stored in the PC."),
     [MENU_EXIT]     = gText_GoBackPrevMenu,

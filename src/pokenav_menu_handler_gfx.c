@@ -334,13 +334,13 @@ static const struct WindowTemplate sOptionDescWindowTemplate =
 };
 
 #if IS_HNS
-static const u8 *const sHnSMapPageDescriptionJohto = COMPOUND_STRING("Check the map of the JOHTO region");
+static const u8 *const sHnSMapPageDescriptionJohto = COMPOUND_STRING("Mira el mapa de la región JOHTO");
 static const u8 *const sHnSMapPageDescriptionJohtoKanto = COMPOUND_STRING("Check the combined region map");
 #endif
 
 static const u8 *const sPageDescriptions[] =
 {
-    [POKENAV_MENUITEM_MAP]                     = COMPOUND_STRING("Check the map of the HOENN region"),
+    [POKENAV_MENUITEM_MAP]                     = COMPOUND_STRING("Mira el mapa de la región HOENN"),
     [POKENAV_MENUITEM_CONDITION]               = COMPOUND_STRING("Check POKéMON in detail."),
     [POKENAV_MENUITEM_MATCH_CALL]              = COMPOUND_STRING("Call a registered TRAINER."),
     [POKENAV_MENUITEM_RIBBONS]                 = COMPOUND_STRING("Check obtained RIBBONS."),
