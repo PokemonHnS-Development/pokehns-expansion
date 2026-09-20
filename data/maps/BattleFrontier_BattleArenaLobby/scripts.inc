@@ -535,12 +535,7 @@ BattleFrontier_BattleArenaLobby_Text_ExplainBattleRules:
 	.string "POKéMON hasta que termine el duelo.$"
 
 BattleFrontier_BattleArenaLobby_Text_ExplainMindRules:
-	.string "The first judging factor is “Mind.”\n"
-	.string "Este factor evalúa qué tan\l"
-	.string "agresivos fueron los luchadores.\p"
-	.string "Se juzga según cuántas veces\n"
-	.string "los ENTRENADORES ordenaron usar\l"
-	.string "movimientos ofensivos.$"
+	.string "El primer factor es la “Mente.”\nEste factor evalúa qué tan\lagresivos\nfueron los luchadores.\pSe juzga según\ncuántas veces\nlos ENTRENADORES ordenaron\nusar\lmovimientos ofensivos.$"
 
 BattleFrontier_BattleArenaLobby_Text_ExplainSkillRules:
 	.string "The second judging factor is “Skill.”\n"

@@ -188,11 +188,7 @@ SootopolisCity_Gym_1F_Text_GymGuideAdvice:
 	.string "¡Hazlo tú mismo!$"
 
 SootopolisCity_Gym_1F_Text_GymGuidePostVictory:
-	.string "¡Vaya! Venciste hasta a JUAN, quien\n"
-	.string "was supposedly the best in all HOENN!\p"
-	.string "¡Bien! Mira tu TARJETA DE ENTRENADOR.\p"
-	.string "Si ya tienes todas las MEDALLAS,\n"
-	.string "¡estás listo para la LIGA POKéMON!$"
+	.string "¡Vaya! Venciste hasta a JUAN, quien\nsupuestamente era el mejor de\nHOENN!\p¡Bien! Mira tu TARJETA DE\nENTRENADOR.\pSi ya tienes todas las\nMEDALLAS,\n¡estás listo para la LIGA POKéMON!$"
 
 SootopolisCity_Gym_1F_Text_JuanIntro:
 	.string "Déjame preguntarte.\n"

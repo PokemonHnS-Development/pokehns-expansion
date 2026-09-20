@@ -29,11 +29,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .categoryName = _("Hoja"),
         .height = 9,
         .weight = 64,
-        .description = COMPOUND_STRING(
-            "Mueve su hoja para mantener a los\n"
-            "rivales alejados. Pero un dulce aroma\n"
-            "sale de ella, creando un ambiente\n"
-            "atmosphere that becalms the battlers."),
+        .description = COMPOUND_STRING("Mueve su hoja para mantener a los\nrivales alejados. Pero un dulce aroma\nsale de ella, creando un ambiente\nque calma a los combatientes. \n \n \n"),
         .pokemonScale = 512,
         .pokemonOffset = 20,
         .trainerScale = 256,
@@ -967,11 +963,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .categoryName = _("Cuerpo Largo"),
         .height = 18,
         .weight = 325,
-        .description = COMPOUND_STRING(
-            "Furret tiene un cuerpo muy delgado. Al\n"
-            "atacar, puede deslizarse por huecos\n"
-            "estrechos para escapar. Pese a ser\n"
-            "limbs, it is very nimble and fleet."),
+        .description = COMPOUND_STRING("Furret tiene un cuerpo muy delgado. Al\natacar, puede deslizarse por huecos\nestrechos para escapar. Pese a sus\npatas cortas, es ágil y veloz. \n \n \n"),
         .pokemonScale = 346,
         .pokemonOffset = 11,
         .trainerScale = 256,
@@ -1271,11 +1263,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .categoryName = _("Cinco Estrellas"),
         .height = 14,
         .weight = 356,
-        .description = COMPOUND_STRING(
-            "Dicen que en tierras de aire puro,\n"
-            "donde las estrellas llenan el cielo,\n"
-            "viven muchos Ledian. Por buen motivo,\n"
-            "the light of the stars as energy."),
+        .description = COMPOUND_STRING("Dicen que en tierras de aire puro,\ndonde las estrellas llenan el cielo,\nviven muchos Ledian. Por buen motivo,\npues usan luz estelar como energía. \n \n \n"),
         .pokemonScale = 256,
         .pokemonOffset = 2,
         .trainerScale = 256,

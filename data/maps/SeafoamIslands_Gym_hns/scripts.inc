@@ -79,16 +79,7 @@ SeafoamIslands_Gym_Text_Blaine_ExplainTM:
 	.string "una CURAQUEMADURAS extra! ¡Waaah!$"
 
 SeafoamIslands_Gym_Text_BlaineIntro:
-	.string "BLAINE: ¡Waaah!\p"
-	.string "Mi GIMNASIO en CANELA se quemó.\p"
-	.string "Mis POKéMON de fuego y yo estamos\n"
-	.string "sin hogar por el volcán.\p"
-	.string "¡Waaah!\p"
-	.string "Pero volví a trabajar como LÍDER\n"
-	.string "de GIMNASIO aquí en la cueva.\p"
-	.string "Si me vences, te daré\n"
-	.string "una MEDALLA.\p"
-	.string "Ha! You'd better have BURN HEAL!$"
+	.string "BLAINE: ¡Waaah!\pMi GIMNASIO en CANELA\nse quemó.\pMis POKéMON de fuego y yo\nestamos\nsin hogar por el volcán.\p¡Waaah!\pPero\nvolví a trabajar como LÍDER\nde GIMNASIO aquí en la cueva.\pSi me\nvences, te daré\nuna MEDALLA.\p¡Ja! Mejor ten una CURA\nQUEMADURA!$"
 
 SeafoamIslands_Gym_Text_BlaineWinLoss:
 	.string "BLAINE: Increíble. Me he agotado…\p"

@@ -168,11 +168,7 @@ Route34_DayCare_Text_ClerkQuestion:
 	.string "¿Qué piensas de este HUEVO EXTRAÑO?$"
 
 Route34_DayCare_Text_Rejection:
-	.string "Hmm, I think this EGG isn't for you.\p"
-	.string "Sería irresponsable de mi parte\n"
-	.string "dar un HUEVO tan precioso\l"
-	.string "a alguien que no sabe tanto\l"
-	.string "sobre los POKéMON bebé!$"
+	.string "Hmm, este HUEVO no es para ti.\pSería\nirresponsable de mi parte\ndar un HUEVO tan precioso\la alguien que\nno sabe tanto\lsobre los POKéMON bebé!$"
 
 Route34_DayCare_Text_ReceivedOddEgg:
 	.string "{PLAYER} Received the ODD EGG.$"

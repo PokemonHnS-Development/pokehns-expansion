@@ -551,18 +551,7 @@ MossdeepCity_Gym_Text_NicholasPostBattle:
 	.string "invencible para POKéMON ahora.$"
 
 MossdeepCity_Gym_Text_TateAndLizaIntro:
-	.string "TATE: Jejeje... ¿Te sorprendiste?\p"
-	.string "LIZA: Jajaja... ¿Te sorprendiste?\p"
-	.string "TATE: That there are two GYM LEADERS?\n"
-	.string "LIZA: That there are two GYM LEADERS?\p"
-	.string "TATE: ¡Somos gemelos!\n"
-	.string "LIZA: ¡Somos gemelas!\p"
-	.string "TATE: No hace falta hablar porque...\n"
-	.string "LIZA: Cada uno puede determinar qué...\p"
-	.string "TATE: El otro está pensando…\n"
-	.string "LIZA: ¡Todo está en la mente!\p"
-	.string "TATE: Nuestra combinación...\n"
-	.string "LIZA: ¿Podrás vencerla?$"
+	.string "TATE: Jejeje... ¿Te sorprendiste?\pLIZA:\nJajaja... ¿Te sorprendiste?\pTATE: ¿Que\nhay dos LÍDERES de GIMNASIO?\nLIZA: ¿Que hay dos LÍDERES de\nGIMNASIO?\pTATE: ¡Somos gemelos!\nLIZA: ¡Somos gemelas!\pTATE: No hace\nfalta hablar porque...\nLIZA: Cada uno puede determinar\nqué...\pTATE: El otro está pensando…\nLIZA: ¡Todo está en la mente!\pTATE:\nNuestra combinación...\nLIZA: ¿Podrás vencerla?$"
 
 MossdeepCity_Gym_Text_TateAndLizaDefeat:
 	.string "TATE: ¡¿Qué?! Nuestra combinación...\n"
@@ -602,13 +591,7 @@ MossdeepCity_Gym_Text_TateAndLizaPostBattle:
 	.string "Peleamos contigo, así que lo sabemos.$"
 
 MossdeepCity_Gym_Text_TateAndLizaNeedTwoMons:
-	.string "TATE: Jejeje... ¿Te sorprendiste?\p"
-	.string "LIZA: That there are two GYM LEADERS?\p"
-	.string "TATE: Ups, solo tienes un...\n"
-	.string "LIZA: POKéMON que puede luchar.\p"
-	.string "TATE: ¡No podemos luchar así!\p"
-	.string "LIZA: Si quieres retarnos,\n"
-	.string "trae más POKéMON.$"
+	.string "TATE: Jejeje... ¿Te sorprendiste?\pLIZA:\n¿Que hay dos LÍDERES de GIMNASIO?\pTATE:\nUps, solo tienes un...\nLIZA: POKéMON que puede luchar.\pTATE:\n¡No podemos luchar así!\pLIZA: Si\nquieres retarnos,\ntrae más POKéMON.$"
 
 MossdeepCity_Gym_Text_GymStatue:
 	.string "MOSSDEEP CITY POKéMON GYM$"
@@ -619,16 +602,7 @@ MossdeepCity_Gym_Text_GymStatueCertified:
 	.string "{PLAYER}$"
 
 MossdeepCity_Gym_Text_TateAndLizaPreRematch:
-	.string "TATE: POKéMON...\n"
-	.string "LIZA: POKéMON...\p"
-	.string "TATE: Al cambiar la mezcla del equipo…\n"
-	.string "LIZA: El estilo de combate cambia.\p"
-	.string "TATE: Pero yo...\n"
-	.string "LIZA: Pero yo...\p"
-	.string "TATE: ¡Siempre estaré con LIZA!\n"
-	.string "LIZA: ¡Siempre estaré con TATE!\p"
-	.string "TATE: Nuestra combinación...\n"
-	.string "LIZA: We'll show you again and again!$"
+	.string "TATE: POKéMON...\nLIZA: POKéMON...\pTATE: Al cambiar la\nmezcla del equipo…\nLIZA: El estilo de combate\ncambia.\pTATE: Pero yo...\nLIZA: Pero yo...\pTATE: ¡Siempre estaré\ncon LIZA!\nLIZA: ¡Siempre estaré con TATE!\pTATE:\nNuestra combinación...\nLIZA: ¡Te lo mostraremos una y otra\nvez!$"
 
 MossdeepCity_Gym_Text_TateAndLizaRematchDefeat:
 	.string "TATE: Tú y tu POKéMON...\n"

@@ -498,16 +498,7 @@ BattleFrontier_BattlePalaceBattleRoom_Text_AnnounceArrivalOfSpenser_hns:
 	.string "del EXPERTO, SPENSER!$"
 
 BattleFrontier_BattlePalaceBattleRoom_Text_SpenserFirstIntro_hns:
-	.string "SPENSER: ¡Mi ser físico está con\n"
-	.string "los POKéMON siempre!\p"
-	.string "¡Mi corazón late al unísono con\n"
-	.string "los POKéMON siempre!\p"
-	.string "el de un joven ENTRENADOR!\n"
-	.string "¿Crees en tus POKéMON?\p"
-	.string "¿Puedes creer que pasen\n"
-	.string "y pasen?\p"
-	.string "If your bonds of trust are frail,\n"
-	.string "¡jamás vencerás a mis hermanos!$"
+	.string "SPENSER: ¡Mi ser físico está con\nlos POKéMON siempre!\p¡Mi corazón late\nal unísono con\nlos POKéMON siempre!\pel de un joven\nENTRENADOR!\n¿Crees en tus POKéMON?\p¿Puedes creer\nque pasen\ny pasen?\pSi tus lazos de confianza son\n¡jamás vencerás a mis hermanos!$"
 
 BattleFrontier_BattlePalaceBattleRoom_Text_ProveYourBondWithMons_hns:
 	.string "¡El vínculo con tu POKéMON!\n"

@@ -37,13 +37,7 @@ SeafloorCavern_Room3_Text_ShellyPostBattle:
 	.string "como uno de nosotros…$"
 
 SeafloorCavern_Room3_Text_Grunt5Intro:
-	.string "For our dream to become real, we need\n"
-	.string "el poder de los POKéMON.\p"
-	.string "Pero entrometidos como tú usan el\n"
-	.string "poder POKéMON para molestarnos\l"
-	.string "¡hasta en un lugar así!\p"
-	.string "¡La vida no funciona como nosotros\n"
-	.string "queremos!$"
+	.string "Nuestro sueño necesita el\npoder de los POKéMON.\pPero entrometidos\ncomo tú usan el\npoder POKéMON para molestarnos\l¡hasta\nen un lugar así!\p¡La vida no funciona\ncomo nosotros\nqueremos!$"
 
 SeafloorCavern_Room3_Text_Grunt5Defeat:
 	.string "Gwah!$"

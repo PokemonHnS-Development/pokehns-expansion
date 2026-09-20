@@ -333,17 +333,7 @@ MauvilleCity_Gym_Text_AngeloPostBattle:
 	.string "la frente. ¡Me hace feliz!$"
 
 MauvilleCity_Gym_Text_WattsonIntro:
-	.string "alegría! He abandonado mis planes\n"
-	.string "de convertir la ciudad, así es.\p"
-	.string "Por eso, dedico mi tiempo a crear\n"
-	.string "trampas en las puertas de mi GIMNASIO.\p"
-	.string " ¿Oh? ¿Y tú qué haces por aquí?\p"
-	.string "¿Qué dices? ¿Que pasaste todas\n"
-	.string "mis puertas trucadas?\p"
-	.string "¡Jajajajaja!\n"
-	.string "¡Eso sí que es divertido!\p"
-	.string "Entonces, yo, WATTSON, el LÍDER de\n"
-	.string "MAUVILLE GYM, shall electrify you!$"
+	.string "alegría! He abandonado mis planes\nde convertir la ciudad, así es.\pPor\neso, dedico mi tiempo a crear\ntrampas en las puertas de mi GIMNASIO.\p\n¿Oh? ¿Y tú qué haces por aquí?\p¿Qué\ndices? ¿Que pasaste todas\nmis puertas trucadas?\p¡Jajajajaja!\n¡Eso sí que es divertido!\pEntonces, yo,\nWATTSON, el LÍDER de\nMAUVILLE GYM, ¡te electrocutaré!$"
 
 MauvilleCity_Gym_Text_WattsonDefeat:
 	.string "¡Jajajajaja!\n"

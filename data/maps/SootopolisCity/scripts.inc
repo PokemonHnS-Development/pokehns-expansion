@@ -1691,17 +1691,7 @@ SootopolisCity_Text_ThankYouForHelpAcceptThis:
 	.string "Por favor, acéptalo.$"
 
 SootopolisCity_Text_ExplainWaterfallGoToGym:
-	.string "Esa MO contiene\n"
-	.string "CASCADA.\p"
-	.string "Con la MEDALLA LLUVIA, un POKéMON\n"
-	.string "que sepa ese movimiento MO puede\l"
-	.string "subir por las cascadas.\p"
-	.string "And where does one get the RAIN BADGE?\n"
-	.string "Tú lo sabes, ¿verdad?\p"
-	.string "¡Exacto! Tienes que vencer a\n"
-	.string "el LÍDER del GIMNASIO de CALORÍAS.\p"
-	.string "Cuando estés listo, pasa por\n"
-	.string "aquella puerta.$"
+	.string "Esa MO contiene\nCASCADA.\pCon la MEDALLA LLUVIA, un\nPOKéMON\nque sepa ese movimiento MO puede\lsubir\npor las cascadas.\p¿Y dónde se consigue\nla MEDALLA\nLLUVIA? Tú lo sabes, ¿verdad?\p¡Exacto!\nTienes que vencer a\nel LÍDER del GIMNASIO de\nCALORÍAS.\pCuando estés listo, pasa por\naquella puerta.$"
 
 SootopolisCity_Text_DazzledByMentor:
 	.string "WALLACE: Seguro que quedarás\n"

@@ -325,19 +325,7 @@ FallarborTown_BattleTentLobby_Text_CameToCampOut:
 	.string "luchar un poco!$"
 
 FallarborTown_BattleTentLobby_Text_ScottLookingForSomeone:
-	.string "SCOTT: ¡Hola, {PLAYER}{KUN}!\n"
-	.string "So you came out to this BATTLE TENT!\p"
-	.string "La gente de por aquí suele ser\n"
-	.string "muy relajada y tranquila.\p"
-	.string "Pero, verás, lo que yo busco son\n"
-	.string "personas con...\p"
-	.string "¿Cómo debería decir esto?\p"
-	.string "Alguien que desborde deseo\n"
-	.string "y ganas de ganar.\p"
-	.string "Si hubiera un ENTRENADOR así,\n"
-	.string "yo inmediatamente...\p"
-	.string "¡Ups! ¡Olvídalo!\n"
-	.string "¡Sigue esforzándote!$"
+	.string "SCOTT: ¡Hola, {PLAYER}{KUN}!\n¡Viniste a esta CARPA DE COMBATE!\pLa\ngente de por aquí suele ser\nmuy relajada y tranquila.\pPero, verás,\nlo que yo busco son\npersonas con...\p¿Cómo debería decir\nesto?\pAlguien que desborde deseo\ny ganas de ganar.\pSi hubiera un\nENTRENADOR así,\nyo inmediatamente...\p¡Ups! ¡Olvídalo!\n¡Sigue esforzándote!$"
 
 FallarborTown_BattleTentLobby_Text_ScottMakeChallenge:
 	.string "SCOTT: En vez de perder el\n"

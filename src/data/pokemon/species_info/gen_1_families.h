@@ -19634,11 +19634,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .categoryName = _("Virtual"),
         .height = 6,
         .weight = 325,
-        .description = COMPOUND_STRING(
-            "Fue creado por humanos usando el poder\n"
-            "de la ciencia. Tiene una inteligencia\n"
-            "artificial que le permite aprender\n"
-            "gestures and emotions on its own."),
+        .description = COMPOUND_STRING("Fue creado por humanos usando el poder\nde la ciencia. Tiene una inteligencia\nartificial que le permite aprender\ngestos y emociones por sí solo. \n \n \n"),
         .pokemonScale = 320,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -21339,11 +21335,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .categoryName = _("Genético"),
         .height = 23,
         .weight = 1270,
-        .description = COMPOUND_STRING(
-            "Psychic power has augmented its muscles.\n"
-            "Tiene fuerza de una tonelada y puede\n"
-            "correr cien metros en dos segundos\n"
-            "flat!"),
+        .description = COMPOUND_STRING("El poder psíquico aumentó músculos.\nTiene fuerza de una tonelada y puede\ncorrer cien metros en dos segundos\nplanos. \n \n \n"),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 309,

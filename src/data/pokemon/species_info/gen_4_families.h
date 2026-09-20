@@ -5887,11 +5887,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .categoryName = _("Árbol Gélido"),
         .height = 27,
         .weight = 1850,
-        .description = COMPOUND_STRING(
-            "Los brotes de Abomasnow se vuelven\n"
-            "great shafts of ice when it Mega Evolves.\n"
-            "No le gusta juntarse con otros y\n"
-            "chooses to live quietly deep in mountains."),
+        .description = COMPOUND_STRING("Los brotes de Abomasnow se vuelven\ngrandes pilares de hielo al\nMegaevolucionar. No le gusta\njuntarse con otros y prefiere vivir\ntranquilo en lo profundo de las\nmontañas.\n \n \n"),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 348,
@@ -6127,11 +6123,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .categoryName = _("Plasma"),
         .height = 3,
         .weight = 3,
-        .description = COMPOUND_STRING(
-            "Le gusta hacer bromas basadas en\n"
-            "el agua. El modelo de lavadora que\n"
-            "Rotom puede poseer fue descontinuado,\n"
-            "so they are now traded at high prices."),
+        .description = COMPOUND_STRING("Le gusta hacer bromas basadas en\nel agua. El modelo de lavadora que\nRotom puede poseer fue descontinuado,\ny ahora se intercambia\na precios altos.\n \n \n"),
         .pokemonScale = 530,
         .pokemonOffset = 13,
         .trainerScale = 256,
@@ -7796,11 +7788,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .categoryName = _("Gratitud"),
         .height = 2,
         .weight = 21,
-        .description = COMPOUND_STRING(
-            "Las flores de su cuerpo florecen si\n"
-            "abrazado con amor y siente gratitud.\n"
-            "aire se purifica para transformarse\n"
-            "ruined land into a lush field of flowers."),
+        .description = COMPOUND_STRING("Las flores de su cuerpo florecen si\nlo abraza con amor y siente gratitud.\nEl aire se purifica para transformar\ntierras arruinadas en un campo\nexuberante de flores.\n \n \n"),
         .pokemonScale = 682,
         .pokemonOffset = 24,
         .trainerScale = 256,

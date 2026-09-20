@@ -1116,12 +1116,7 @@ Route104_Text_MayDefeat:
 	.string "¡Eres mejor de lo que esperaba!$"
 
 Route104_Text_MayPostBattle:
-	.string "MAY: Noto que te has vuelto muy\n"
-	.string "bueno manejando a los POKéMON.\p"
-	.string "Pero en vez de solo hacerlos\n"
-	.string "luchar, deberías ser como MR. BRINEY.\p"
-	.string "también es importante hacerse amigo\n"
-	.string "de los POKéMON.$"
+	.string "MAY: Noto que te has vuelto muy\nbueno manejando a los POKéMON.\pPero en\nvez de solo hacerlos\nluchar, deberías ser como MR.\nBRINEY.\ptambién es importante hacerse\namigo\nde los POKéMON.$"
 
 Route104_Text_BrendanWeShouldRegister:
 	.string "BRENDAN: ¡Hola, {PLAYER}!\p"

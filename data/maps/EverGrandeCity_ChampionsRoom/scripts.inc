@@ -289,20 +289,7 @@ EverGrandeCity_ChampionsRoom_Text_BrendanYouveWon:
 	.string "¿Que venciste al CAMPEÓN?$"
 
 EverGrandeCity_ChampionsRoom_Text_BirchArriveRatePokedex:
-	.string "PROF. BIRCH: ¿Ves?\n"
-	.string "¿Qué te dije, {RIVAL}?\p"
-	.string "¿No te dije que no tenías que\n"
-	.string "preocuparte por {PLAYER}{KUN}?\p"
-	.string "… … … … … … … …\n"
-	.string "{PLAYER}{KUN}, al fin lo lograste.\p"
-	.string "Cuando supe que venciste a tu\n"
-	.string "padre en el GIMNASIO PETALBURG,\l"
-	.string "I thought perhaps you had a chance…\p"
-	.string "Pero pensar que realmente te has\n"
-	.string "¡convertido en CAMPEÓN!\p"
-	.string "¡Ah, sí!\p"
-	.string "¿Qué pasó con tu POKéDEX?\n"
-	.string "Aquí, déjame verla.$"
+	.string "PROF. BIRCH: ¿Ves?\n¿Qué te dije, {RIVAL}?\p¿No te dije que no\ntenías que\npreocuparte por {PLAYER}{KUN}?\p… … … … … … … …\n{PLAYER}{KUN}, al fin lo lograste.\pCuando supe que\nvenciste a tu\npadre en el GIMNASIO PETALBURG,\lpensé\nque tenías una oportunidad…\pPero pensar\nque realmente te has\n¡convertido en CAMPEÓN!\p¡Ah, sí!\p¿Qué\npasó con tu POKéDEX?\nAquí, déjame verla.$"
 
 EverGrandeCity_ChampionsRoom_Text_BirchCongratulations:
 	.string "PROF. BIRCH: En fin,\n"

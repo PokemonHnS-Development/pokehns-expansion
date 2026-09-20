@@ -62,18 +62,7 @@ CianwoodCity_Text_BellTowerStory:
 	.string "Pero nunca conseguí una...$"
 
 CianwoodCity_Text_WhirlIslandsStory:
-	.string "Have you heard of WHIRL ISLANDS?\p"
-	.string "Allí están las llamadas Campanas Marea\n"
-	.string "en la base de su cascada.\p"
-	.string "No hacen ni un solo ruido\n"
-	.string "entre las olas rompientes.\p"
-	.string "Solo hay una forma de hacer que\n"
-	.string "suenen.\p"
-	.string "Es para obtener otra Campana Mareal\n"
-	.string "como las que hay en la base de la\l"
-	.string "cascada.\p"
-	.string "La busqué cuando era joven.\n"
-	.string "Pero nunca conseguí una...$"
+	.string "¿Has oído hablar de las\nISLAS REMOLINO?\pAllí están las llamadas\nCampanas Marea\nen la base de su cascada.\pNo hacen ni\nun solo ruido\nentre las olas rompientes.\pSolo hay una\nforma de hacer que\nsuenen.\pEs para obtener otra Campana\nMareal\ncomo las que hay en la base de\nla\lcascada.\pLa busqué cuando era joven.\nPero nunca conseguí una...$"
 
 CianwoodCity_Text_ClearBellReaction:
 	.string "¡Oh! ¿Has logrado conseguir una\n"

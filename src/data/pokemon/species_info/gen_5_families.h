@@ -1400,11 +1400,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .categoryName = _("Mono Planta"),
         .height = 6,
         .weight = 105,
-        .description = COMPOUND_STRING(
-            "Vive en lo profundo del bosque.\n"
-            "Es experto buscando bayas y las\n"
-            "recolecta de todas partes. Es amable\n"
-            "share them with friends."),
+        .description = COMPOUND_STRING("Vive en lo profundo del bosque.\nEs experto buscando bayas y las\nrecolecta de todas partes. Es amable\ny las comparte con sus amigos.\n \n \n"),
         .pokemonScale = 422,
         .pokemonOffset = 12,
         .trainerScale = 256,
@@ -2269,11 +2265,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .categoryName = _("Rayo"),
         .height = 16,
         .weight = 795,
-        .description = COMPOUND_STRING(
-            "Cuando Zebstrika corre a tope, el\n"
-            "estruendo del trueno resuena. Es\n"
-            "peligroso si se enfada, pues dispara\n"
-            "lightning from its mane in all directions."),
+        .description = COMPOUND_STRING("Cuando Zebstrika corre a tope, el\nestruendo del trueno resuena. Es\npeligroso si se enfada, pues dispara\nrayos de su crin en todas\ndirecciones.\n \n \n"),
         .pokemonScale = 259,
         .pokemonOffset = 1,
         .trainerScale = 296,
