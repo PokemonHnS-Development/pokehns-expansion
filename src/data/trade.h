@@ -51,7 +51,7 @@ static const u8 sText_Summary2[] = _("SUMMARY");
 static const u8 sText_Trade2[] = _("TRADE");
 static const u8 sText_CommunicationStandby[] = _("{BACKGROUND WHITE}{TEXT_COLORS DARK_GRAY LIGHT_GRAY WHITE}Comunicación en espera…\nEspera, por favor.");
 static const u8 sText_TheTradeHasBeenCanceled[] = _("{BACKGROUND WHITE}{TEXT_COLORS DARK_GRAY LIGHT_GRAY WHITE}El intercambio ha\nsido cancelado.");
-static const u8 sText_OnlyPkmnForBattle[] = _("That's your only\nPOKéMON for battle.");
+static const u8 sText_OnlyPkmnForBattle[] = _("Ese es tu único\nPOKéMON de batalla.");
 static const u8 sText_WaitingForYourFriend[] = _("{BACKGROUND WHITE}{TEXT_COLORS DARK_GRAY LIGHT_GRAY WHITE}Esperando a que tu amigo\ntermine…");
 static const u8 sText_YourFriendWantsToTrade[] = _("Your friend wants\nto trade POKéMON.");
 

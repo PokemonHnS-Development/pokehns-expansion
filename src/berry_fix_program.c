@@ -41,10 +41,7 @@ static const u8 sText_Emerald[] = _("Emerald");
 static const u8 sText_BerryProgramWillBeUpdatedPressA[] = _("The Berry Program on your POKéMON\n"
                                                             "El juego Ruby/Sapphire se actualizará.\n"
                                                             "{COLOR RED}{SHADOW LIGHT_RED}Press the A Button.");
-static const u8 sText_EnsureGBAConnectionMatches[] = _("Please ensure the connection of your\n"
-                                                       "El sistema GBA es compatible.\n"
-                                                       "{COLOR RED}{SHADOW LIGHT_RED}SÍ: Presiona el Botón A.\n"
-                                                       "NO: Turn off the power and try again.");
+static const u8 sText_EnsureGBAConnectionMatches[] = _("Verifica la conexión de tu\nEl sistema GBA es compatible.\n{COLOR RED}{SHADOW LIGHT_RED}SÍ: Presiona el Botón A.\nNO: Apaga y vuelve a intentarlo.");
 static const u8 sText_TurnOffPowerHoldingStartSelect[] = _("Please turn on the power of POKéMON\n"
                                                            "Ruby/Sapphire pulsando START y\n"
                                                            "SELECT a la vez. Luego, asegúrate\n"
@@ -52,8 +49,7 @@ static const u8 sText_TurnOffPowerHoldingStartSelect[] = _("Please turn on the p
 static const u8 sText_TransmittingPleaseWait[] = _("Transmitting. Please wait.\n"
                                                    "{COLOR RED}{SHADOW LIGHT_RED}No apagues la consola ni\n"
                                                    "unplug the Game Boy Advance Game\nLink Cable.");
-static const u8 sText_PleaseFollowInstructionsOnScreen[] = _("Please follow the instructions on your\n"
-                                                             "POKéMON Ruby/Sapphire screen.");
+static const u8 sText_PleaseFollowInstructionsOnScreen[] = _("Sigue las instrucciones que aparezcan\nen la pantalla de POKéMON Rubí/Zafiro.");
 static const u8 sText_TransmissionFailureTryAgain[] = _("Transmission failure.\n"
                                                         "{COLOR RED}{SHADOW LIGHT_RED}Please try again.");
 

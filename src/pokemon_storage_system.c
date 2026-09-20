@@ -862,7 +862,7 @@ void SetMonFormPSS(struct BoxPokemon *boxMon, enum FormChanges method);
 void SetMonFormPSS_ItemHold(struct BoxPokemon *boxMon);
 void UpdateSpeciesSpritePSS(struct BoxPokemon *boxmon);
 
-static const u8 gText_JustOnePkmn[] = _("There is just one POKéMON with you.");
+static const u8 gText_JustOnePkmn[] = _("Solo tienes un POKéMON contigo.");
 static const u8 gText_PartyFull[] = _("¡Tu equipo está lleno!");
 static const u8 gText_Box[] = _("BOX");
 
@@ -873,7 +873,7 @@ struct {
 {
     [OPTION_WITHDRAW]   = {COMPOUND_STRING("WITHDRAW POKéMON"), COMPOUND_STRING("Move POKéMON stored in BOXES to\nyour party.")},
     [OPTION_DEPOSIT]    = {COMPOUND_STRING("DEPOSIT POKéMON"),  COMPOUND_STRING("Store POKéMON in your party in BOXES.")},
-    [OPTION_MOVE_MONS]  = {COMPOUND_STRING("MOVE POKéMON"),     COMPOUND_STRING("Organize the POKéMON in BOXES and\nin your party.")},
+    [OPTION_MOVE_MONS]  = {COMPOUND_STRING("MOVE POKéMON"),     COMPOUND_STRING("Organiza los POKéMON en CAJAS\ny en tu equipo.")},
     [OPTION_MOVE_ITEMS] = {COMPOUND_STRING("MOVE ITEMS"),       COMPOUND_STRING("Move items held by any POKéMON\nin a BOX or your party.")},
     [OPTION_EXIT]       = {COMPOUND_STRING("SEE YA!"),          COMPOUND_STRING("Return to the previous menu.")}
 };
@@ -1065,7 +1065,7 @@ static const struct StorageMessage sMessages[] =
     [MSG_WAS_RELEASED]         = {COMPOUND_STRING("{DYNAMIC 0} was released."),  MSG_VAR_RELEASE_MON_1},
     [MSG_BYE_BYE]              = {COMPOUND_STRING("Bye-bye, {DYNAMIC 0}!"),      MSG_VAR_RELEASE_MON_3},
     [MSG_MARK_POKE]            = {COMPOUND_STRING("Mark your POKéMON."),         MSG_VAR_NONE},
-    [MSG_LAST_POKE]            = {COMPOUND_STRING("That's your last POKéMON!"),  MSG_VAR_NONE},
+    [MSG_LAST_POKE]            = {COMPOUND_STRING("¡Es tu último POKéMON!"),  MSG_VAR_NONE},
     [MSG_PARTY_FULL]           = {gText_YourPartysFull,                          MSG_VAR_NONE},
     [MSG_HOLDING_POKE]         = {COMPOUND_STRING("You're holding a POKéMON!"),  MSG_VAR_NONE},
     [MSG_WHICH_ONE_WILL_TAKE]  = {COMPOUND_STRING("¿Cuál vas a elegir?"),   MSG_VAR_NONE},

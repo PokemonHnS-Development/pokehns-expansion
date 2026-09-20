@@ -87,9 +87,9 @@ const struct ContestEffect gContestEffects[] =
     [CONTEST_EFFECT_STARTLE_PREV_MON] =
     {
         #if C_UPDATED_MOVE_EFFECTS >= GEN_6
-        .description = COMPOUND_STRING("Startles the last Pokémon\nto act before the user."),
+        .description = COMPOUND_STRING("Sorprende al último Pokémon\nque actuó antes del usuario."),
         #else
-        .description = COMPOUND_STRING("Startles the POKéMON that\nappealed before the user."),
+        .description = COMPOUND_STRING("Sorprende al POKéMON que\nactuó antes que el usuario."),
         #endif
         .effectType = CONTEST_EFFECT_TYPE_STARTLE_MON,
         .appeal = 20,
@@ -99,9 +99,9 @@ const struct ContestEffect gContestEffects[] =
     [CONTEST_EFFECT_STARTLE_PREV_MONS] =
     {
         #if C_UPDATED_MOVE_EFFECTS >= GEN_6
-        .description = COMPOUND_STRING("Startles all of the Pokémon\nto act before the user."),
+        .description = COMPOUND_STRING("Sorprende a todos los Pokémon\nque actuaron antes que el usuario."),
         #else
-        .description = COMPOUND_STRING("Startles all POKéMON that\nhave done their appeals."),
+        .description = COMPOUND_STRING("Sorprende a todos los POKéMON\nque ya hicieron sus actuaciones."),
         #endif
         .effectType = CONTEST_EFFECT_TYPE_STARTLE_MONS,
         .appeal = 20,
@@ -126,7 +126,7 @@ const struct ContestEffect gContestEffects[] =
     },
     [CONTEST_EFFECT_STARTLE_PREV_MON_2] =
     {
-        .description = COMPOUND_STRING("Startles the POKéMON that\nappealed before the user."),
+        .description = COMPOUND_STRING("Sorprende al POKéMON que\nactuó antes que el usuario."),
         .effectType = CONTEST_EFFECT_TYPE_STARTLE_MON,
         .appeal = 30,
         .jam = 20,
@@ -134,7 +134,7 @@ const struct ContestEffect gContestEffects[] =
     },
     [CONTEST_EFFECT_STARTLE_PREV_MONS_2] =
     {
-        .description = COMPOUND_STRING("Startles all POKéMON that\nhave done their appeals."),
+        .description = COMPOUND_STRING("Sorprende a todos los POKéMON\nque ya hicieron sus actuaciones."),
         .effectType = CONTEST_EFFECT_TYPE_STARTLE_MONS,
         .appeal = 30,
         .jam = 10,
@@ -154,7 +154,7 @@ const struct ContestEffect gContestEffects[] =
     },
     [CONTEST_EFFECT_STARTLE_MON_WITH_JUDGES_ATTENTION] =
     {
-        .description = COMPOUND_STRING("Startles the POKéMON that\nhas the JUDGE's attention."),
+        .description = COMPOUND_STRING("Sorprende al POKéMON que\natrae al JUEZ."),
         .effectType = CONTEST_EFFECT_TYPE_STARTLE_MONS,
         .appeal = 20,
         .jam = 10,
@@ -323,7 +323,7 @@ const struct ContestEffect gContestEffects[] =
     [CONTEST_EFFECT_AFFECTED_BY_PREV_APPEAL] =
     {
         #if C_UPDATED_MOVE_EFFECTS >= GEN_6
-        .description = COMPOUND_STRING("Affected by how well the\nprevious Pokémon's move went."),
+        .description = COMPOUND_STRING("Depende de qué tan bien\nsalió el movimiento anterior."),
         #else
         .description = COMPOUND_STRING("Depende de qué tan bien salga\nla actuación previa."),
         #endif
