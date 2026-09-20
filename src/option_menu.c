@@ -228,13 +228,13 @@ static const u8 *const sChoices_TextSpeed[] = {
 };
 
 static const u8 *const sChoices_MetricImperial[] = {
-    COMPOUND_STRING("MÉTRICO"),
+    COMPOUND_STRING("METRICO"),
     COMPOUND_STRING("IMPERIAL"),
 };
 
 static const u8 *const sChoices_OldModern[] = {
-    COMPOUND_STRING("CLÁSICO"),
-    COMPOUND_STRING("MODERNO"),
+    COMPOUND_STRING("VIEJO"),
+    COMPOUND_STRING("NUEVO"),
 };
 
 static const u8 *const sChoices_Gen3Gen4[] = {
@@ -509,13 +509,13 @@ static const struct OptionMenuItem sTabItems_Sound[] = {
         .choiceNames  = sChoices_OnOff,
     },
     [ITEM_SOUND_BIKE_MUSIC] = {
-        .name         = COMPOUND_STRING("MÚS. BICI"),
+        .name         = COMPOUND_STRING("MÚS.BICI"),
         .descriptions = sDesc_BikeMusic,
         .numChoices   = 2,
         .choiceNames  = sChoices_OnOff,
     },
     [ITEM_SOUND_SURF_MUSIC] = {
-        .name         = COMPOUND_STRING("MÚS. SURF"),
+        .name         = COMPOUND_STRING("MÚS.SURF"),
         .descriptions = sDesc_SurfMusic,
         .numChoices   = 2,
         .choiceNames  = sChoices_OnOff,

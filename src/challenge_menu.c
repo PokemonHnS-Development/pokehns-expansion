@@ -355,7 +355,7 @@ static const u8 *const sChoices_OriginalModern[] = {
 
 static const u8 sText_TopBar_Left[]   = _("{L_BUTTON}ANTERIOR");
 static const u8 sText_TopBar_Right[]  = _("{R_BUTTON}SIG.");
-static const u8 sText_TopBar_Save[]   = _("{R_BUTTON}GUAR.");
+static const u8 sText_TopBar_Save[]   = _("{R_BUTTON}GUAR");
 static const u8 sText_TopBar_Cancel[] = _("{B_BUTTON}SALIR");
 
 // =============================================================================
@@ -537,7 +537,7 @@ static const u8 *const sChoices_BanUnban[] = {
 
 static const u8 *const sChoices_RtcFake[] = {
     COMPOUND_STRING("RTC"),
-    COMPOUND_STRING("RTC FALSO"),
+    COMPOUND_STRING("FALSO"),
 };
 
 static const u8 *const sChoices_ShinyChance[] = {
@@ -786,19 +786,19 @@ static const struct ChallengeMenuItem sTabItems_Randomizer[] = {
         .choiceNames  = sChoices_OffRandom,
     },
     [ITEM_RANDOM_WILD_PKMN] = {
-        .name         = COMPOUND_STRING("{PKMN} SALVAJE"),
+        .name         = COMPOUND_STRING("{PKMN} SALV."),
         .descriptions = sDesc_RandomWild,
         .numChoices   = 2,
         .choiceNames  = sChoices_OffRandom,
     },
     [ITEM_RANDOM_MAP_BASED] = {
-        .name         = COMPOUND_STRING("SEMILLA MAPA"),
+        .name         = COMPOUND_STRING("SEMILLA"),
         .descriptions = sDesc_RandomMapBased,
         .numChoices   = 2,
         .choiceNames  = sChoices_OffOn,
     },
     [ITEM_RANDOM_TRAINER] = {
-        .name         = COMPOUND_STRING("ENTRENADOR"),
+        .name         = COMPOUND_STRING("RIVAL"),
         .descriptions = sDesc_RandomTrainer,
         .numChoices   = 2,
         .choiceNames  = sChoices_OffRandom,
@@ -810,7 +810,7 @@ static const struct ChallengeMenuItem sTabItems_Randomizer[] = {
         .choiceNames  = sChoices_OffRandom,
     },
     [ITEM_RANDOM_SIMILAR] = {
-        .name         = COMPOUND_STRING("EQUILIBRIO"),
+        .name         = COMPOUND_STRING("BALANCE"),
         .descriptions = sDesc_RandomSimilar,
         .numChoices   = 2,
         .choiceNames  = sChoices_OnOff,
@@ -822,7 +822,7 @@ static const struct ChallengeMenuItem sTabItems_Randomizer[] = {
         .choiceNames  = sChoices_OffOn,
     },
     [ITEM_RANDOM_GEN_SCOPE] = {
-        .name         = COMPOUND_STRING("GENERACIONES"),
+        .name         = COMPOUND_STRING("GENERAC."),
         .descriptions = sDesc_RandomGenScope,
         .numChoices   = 2,
         .choiceNames  = sChoices_GenScope,
@@ -1024,13 +1024,13 @@ static const u8 *const sDesc_DifficultyNext[] = {
 
 static const struct ChallengeMenuItem sTabItems_Difficulty[] = {
     [ITEM_DIFFICULTY_PARTY_LIMIT] = {
-        .name         = COMPOUND_STRING("LÍMITE EQUIPO"),
+        .name         = COMPOUND_STRING("LÍM. EQUIPO"),
         .descriptions = sDesc_PartyLimit,
         .numChoices   = 6,
         .choiceNames  = sChoices_PartyLimit,
     },
     [ITEM_DIFFICULTY_LEVEL_CAP] = {
-        .name         = COMPOUND_STRING("LÍMITE NIVEL"),
+        .name         = COMPOUND_STRING("LÍM. NIVEL"),
         .descriptions = sDesc_LevelCap,
         .numChoices   = 3,
         .choiceNames  = sChoices_LevelCap,
