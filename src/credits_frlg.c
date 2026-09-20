@@ -421,7 +421,7 @@ ALIGNED(4) const u8 gCreditsString_Teruki_Murakawa_Souichi_Yamamoto_Kimiko_Nakam
 ALIGNED(4) const u8 gCreditsString_NOA_Product_Testing[] = _("Pruebas de Producto NOA\n\n\n\n\n\n");
 ALIGNED(4) const u8 gCreditsString_Thomas_Hertzog_Kathy_Huguenard_Mika_Kurosawa[] = _("\nThomas Hertzog\nKathy Huguenard\nMika Kurosawa\n\n\n");
 ALIGNED(4) const u8 gCreditsString_Braille_Code_Check_2[] = _("Revisión Código Braille\n\n\n\n\n\n");
-ALIGNED(4) const u8 gCreditsString_National_Federation_of_the_Blind_Patricia_A_Maurer_Japan_Braille_Library_European_Blind_Union[] = _("\nNational Federation\n{CLEAR_TO 0x13}of the Blind\nPatricia A. Maurer\nJapan Braille Library\nEuropean Blind Union\n");
+ALIGNED(4) const u8 gCreditsString_National_Federation_of_the_Blind_Patricia_A_Maurer_Japan_Braille_Library_European_Blind_Union[] = _("\nFederación Nacional\n{CLEAR_TO 0x13}de Ciegos\nPatricia A. Maurer\nBiblioteca Braille de Japón\nUnión Europea de Ciegos\n");
 ALIGNED(4) const u8 gCreditsString_Braille_Code_Check_3[] = _("\nRevisión Código Braille\n\n\n\n\n");
 ALIGNED(4) const u8 gCreditsString_National_Information_Library_Service_Margaret_Campion[] = _("\n\nNational Information Library\n{CLEAR_TO 0x2D}Service\nMargaret Campion\n\n");
 ALIGNED(4) const u8 gCreditsString_Special_Thanks_4[] = _("Agradecimientos Especiales\n\n\n\n\n\n");
@@ -429,7 +429,7 @@ ALIGNED(4) const u8 gCreditsString_Takehiro_Izushi_Motoyasu_Tojima_Hitoshi_Yamag
 ALIGNED(4) const u8 gCreditsString_Special_Thanks_5[] = _("Agradecimientos Especiales\n\n\n\n\n\n");
 ALIGNED(4) const u8 gCreditsString_Nicola_Pratt_Barlow_Shellie_Dow_Anthony_Howitt_Naoko_Saeki_Kyoko_Onishi[] = _("\nNicola Pratt-Barlow\nShellie Dow\nAnthony Howitt\nNaoko Saeki\nKyoko Onishi\n");
 ALIGNED(4) const u8 gCreditsString_Braille_Code_Check_4[] = _("\nRevisión Código Braille\n\n\n\n\n");
-ALIGNED(4) const u8 gCreditsString_The_Royal_New_Zealand_Foundation_of_the_Blind_Greg_Moran[] = _("\n\nThe Royal New Zealand\nFoundation of the Blind\nGreg Moran\n\n");
+ALIGNED(4) const u8 gCreditsString_The_Royal_New_Zealand_Foundation_of_the_Blind_Greg_Moran[] = _("\n\nFundación Real de Ciegos\nde Nueva Zelanda\nGreg Moran\n\n");
 ALIGNED(4) const u8 gCreditsString_Graphic_Designer[] = _("\n\nDiseñador Gráfico\n\n\n\n");
 ALIGNED(4) const u8 gCreditsString_Akira_Kinashi[] = _("\n\n\nAkira Kinashi\n\n\n");
 

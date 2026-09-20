@@ -126,7 +126,7 @@ static const u32 sPokeball_Gfx[] = INCBIN_U32("graphics/pokenav/match_call/pokeb
 
 static const u8 gText_NumberRegistered[] = _("No. registered");
 static const u8 gText_NumberOfBattles[] = _("No. of battles");
-static const u8 gText_TrainerCloseBy[] = _("That TRAINER is close by.\nTalk to the TRAINER in person!");
+static const u8 gText_TrainerCloseBy[] = _("Ese ENTRENADOR está cerca.\n¡Habla con él en persona!");
 static const u8 gText_Unknown[] = _("UNKNOWN");
 
 static const struct BgTemplate sMatchCallBgTemplates[3] =
