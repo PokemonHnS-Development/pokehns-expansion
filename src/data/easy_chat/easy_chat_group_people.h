@@ -343,7 +343,7 @@ const struct EasyChatWordInfo gEasyChatGroup_People[] = {
     },
     [EC_INDEX(EC_WORD_TO_THEM)] =
     {
-        .text = COMPOUND_STRING("TO THEM"),
+        .text = COMPOUND_STRING("A ELLOS"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_TO_ME),
         .enabled = TRUE,
     },
@@ -379,7 +379,7 @@ const struct EasyChatWordInfo gEasyChatGroup_People[] = {
     },
     [EC_INDEX(EC_WORD_TO_US)] =
     {
-        .text = COMPOUND_STRING("TO US"),
+        .text = COMPOUND_STRING("A NOSOTROS"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_WE_RE),
         .enabled = TRUE,
     },
@@ -427,7 +427,7 @@ const struct EasyChatWordInfo gEasyChatGroup_People[] = {
     },
     [EC_INDEX(EC_WORD_TO_HER)] =
     {
-        .text = COMPOUND_STRING("TO HER"),
+        .text = COMPOUND_STRING("A ELLA"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_YOU_RE),
         .enabled = TRUE,
     },

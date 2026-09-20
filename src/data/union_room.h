@@ -255,10 +255,10 @@ static const u8 *const sJoinChatTexts[][GENDER_COUNT] = {
 
 ALIGNED(4) static const u8 sText_TrainerAppearsBusy[] = _("……\nThe TRAINER appears to be busy…\p");
 ALIGNED(4) static const u8 sText_WaitForBattleMale[] = _("A battle, huh?\nAll right, just give me some time.");
-ALIGNED(4) static const u8 sText_WaitForChatMale[] = _("You want to chat, huh?\nSure, just wait a little.");
+ALIGNED(4) static const u8 sText_WaitForChatMale[] = _("¿Quieres charlar?\nEspera un poco, ¿sí?");
 ALIGNED(4) static const u8 sText_ShowTrainerCardMale[] = _("Sure thing! As my “Greetings,”\nhere's my TRAINER CARD.");
-ALIGNED(4) static const u8 sText_WaitForBattleFemale[] = _("A battle? Of course, but I need\ntime to get ready.");
-ALIGNED(4) static const u8 sText_WaitForChatFemale[] = _("Did you want to chat?\nOkay, but please wait a moment.");
+ALIGNED(4) static const u8 sText_WaitForBattleFemale[] = _("¿Una batalla? Claro, pero necesito\ntiempo para prepararme.");
+ALIGNED(4) static const u8 sText_WaitForChatFemale[] = _("¿Querías conversar?\nBien, pero espera un momento.");
 ALIGNED(4) static const u8 sText_ShowTrainerCardFemale[] = _("As my introduction, I'll show you\nmy TRAINER CARD.");
 
 static const u8 *const sText_WaitOrShowCardTexts[GENDER_COUNT][4] = {
@@ -276,9 +276,9 @@ static const u8 *const sText_WaitOrShowCardTexts[GENDER_COUNT][4] = {
 };
 
 ALIGNED(4) static const u8 sText_WaitForChatMale2[] = _("You want to chat, huh?\nSure, just wait a little."); // Unused
-ALIGNED(4) static const u8 sText_DoneWaitingBattleMale[] = _("Thanks for waiting!\nLet's get our battle started!{PAUSE 60}");
+ALIGNED(4) static const u8 sText_DoneWaitingBattleMale[] = _("¡Gracias por esperar!\n¡Comencemos la batalla!{PAUSE 60}");
 ALIGNED(4) static const u8 sText_DoneWaitingChatMale[] = _("All right!\nLet's chat!{PAUSE 60}");
-ALIGNED(4) static const u8 sText_DoneWaitingBattleFemale[] = _("Sorry I made you wait!\nLet's get started!{PAUSE 60}");
+ALIGNED(4) static const u8 sText_DoneWaitingBattleFemale[] = _("¡Perdón por la espera!\n¡Empecemos!{PAUSE 60}");
 ALIGNED(4) static const u8 sText_DoneWaitingChatFemale[] = _("Sorry I made you wait!\nLet's chat.{PAUSE 60}");
 ALIGNED(4) static const u8 sText_TradeWillBeStarted[] = _("El intercambio comenzará.{PAUSE 60}");
 ALIGNED(4) static const u8 sText_BattleWillBeStarted[] = _("El combate comenzará.{PAUSE 60}");
@@ -356,7 +356,7 @@ static const u8 *const sChatDeclinedTexts[GENDER_COUNT] = {
 
 ALIGNED(4) static const u8 sText_YoureToughMale[] = _("¡Vaya!\n¡Se nota que eres fuerte!\p");
 ALIGNED(4) static const u8 sText_UsedGoodMoveMale[] = _("¿Usaste ese movimiento?\n¡Buena estrategia!\p");
-ALIGNED(4) static const u8 sText_BattleSurpriseMale[] = _("Way to go!\nThat was an eye-opener!\p");
+ALIGNED(4) static const u8 sText_BattleSurpriseMale[] = _("¡Bien hecho!\n¡Me abriste los ojos!\p");
 ALIGNED(4) static const u8 sText_SwitchedMonsMale[] = _("¡Oh! ¿Cómo pudiste usar ese\nPOKéMON en esa situación?\p");
 ALIGNED(4) static const u8 sText_YoureToughFemale[] = _("Ese POKéMON…\n¡Lo has criado muy bien!\p");
 ALIGNED(4) static const u8 sText_UsedGoodMoveFemale[] = _("¡Eso es!\n¡Ese es el movimiento!\p");
@@ -403,7 +403,7 @@ static const u8 *const sChatReactionTexts[GENDER_COUNT][4] = {
 };
 
 ALIGNED(4) static const u8 sText_ShowedTrainerCardMale1[] = _("I'm just showing my TRAINER CARD\nas my way of greeting.\p");
-ALIGNED(4) static const u8 sText_ShowedTrainerCardMale2[] = _("I hope I get to know you better!\p");
+ALIGNED(4) static const u8 sText_ShowedTrainerCardMale2[] = _("¡Ojalá lleguemos a conocernos mejor!\p");
 ALIGNED(4) static const u8 sText_ShowedTrainerCardFemale1[] = _("Nos mostramos las TARJETAS\nDE ENTRENADOR para conocernos.\p");
 ALIGNED(4) static const u8 sText_ShowedTrainerCardFemale2[] = _("Mucho gusto.\n¡No seas un extraño!\p");
 
@@ -467,9 +467,9 @@ ALIGNED(4) static const u8 sText_TradeOfferRejected[] = _("Rechazaron tu oferta 
 ALIGNED(4) static const u8 sText_EggTrade[] = _("EGG TRADE");
 ALIGNED(4) static const u8 sText_ChooseJoinCancel[] = _("{DPAD_UPDOWN}CHOOSE  {A_BUTTON}JOIN  {B_BUTTON}CANCEL");
 ALIGNED(4) static const u8 sText_ChooseTrainer[] = _("Please choose a TRAINER.");
-ALIGNED(4) static const u8 sText_ChooseTrainerSingleBattle[] = _("Please choose a TRAINER for\na SINGLE BATTLE.");
-ALIGNED(4) static const u8 sText_ChooseTrainerDoubleBattle[] = _("Please choose a TRAINER for\na DOUBLE BATTLE.");
-ALIGNED(4) static const u8 sText_ChooseLeaderMultiBattle[] = _("Please choose the LEADER\nfor a MULTI BATTLE.");
+ALIGNED(4) static const u8 sText_ChooseTrainerSingleBattle[] = _("Elige un ENTRENADOR para\nuna batalla individual.");
+ALIGNED(4) static const u8 sText_ChooseTrainerDoubleBattle[] = _("Elige un ENTRENADOR para\nuna DOBLE BATALLA.");
+ALIGNED(4) static const u8 sText_ChooseLeaderMultiBattle[] = _("Elige al LÍDER para una\nBATALLA MULTIPLE.");
 ALIGNED(4) static const u8 sText_ChooseTrainerToTradeWith[] = _("Elige al ENTRENADOR con quien\nquieras cambiar.");
 ALIGNED(4) static const u8 sText_ChooseTrainerToShareWonderCards[] = _("Elige al ENTRENADOR que\ncomparte TARJETAS MARAVILLA.");
 ALIGNED(4) static const u8 sText_ChooseTrainerToShareWonderNews[] = _("Elige al ENTRENADOR que\ncomparte NOTICIAS MARAVILLA.");

@@ -281,7 +281,7 @@ const u8 gText_MatchCallPicnicker_Diana_Pokemon[] = _("I like all POKéMON.");
 const u8 gText_MatchCallPicnicker_Diana_Intro1[] = _("Lo que hay más allá de eso");
 const u8 gText_MatchCallPicnicker_Diana_Intro2[] = _("yonder hill?");
 
-const u8 gText_MatchCallTwins_AmyAndLiv_Strategy[] = _("We battle together!");
+const u8 gText_MatchCallTwins_AmyAndLiv_Strategy[] = _("¡Luchamos juntos!");
 const u8 gText_MatchCallTwins_AmyAndLiv_Pokemon[] = _("We train together!");
 const u8 gText_MatchCallTwins_AmyAndLiv_Intro1[] = _("Nos gustan los mismos POKéMON,");
 const u8 gText_MatchCallTwins_AmyAndLiv_Intro2[] = _("but different desserts.");

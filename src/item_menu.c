@@ -335,7 +335,7 @@ static const u8 sRegisterOptions[] = {
     ACTION_REGISTER_TAP, ACTION_REGISTER_HOLD,
 };
 
-static const u8 sText_RegisterHow[] = _("Register this\nitem by tapping or\nholding SELECT?");
+static const u8 sText_RegisterHow[] = _("¿Registrar este\nobjeto tocando o\nmanteniendo SELECT?");
 
 static const u8 sContextMenuItems_BallsPocket[] = {
     ACTION_USE,         ACTION_GIVE,
@@ -2842,7 +2842,7 @@ static void PrintTMHMMoveData(enum Item itemId)
     }
 }
 
-static const u8 sText_SortItemsHow[] = _("Sort items how?");
+static const u8 sText_SortItemsHow[] = _("¿Cómo ordeno los objetos?");
 static const u8 sText_ItemsSorted[] = _("Items sorted by {STR_VAR_1}!");
 static const u8 *const sSortTypeStrings[] =
 {

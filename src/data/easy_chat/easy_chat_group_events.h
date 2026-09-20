@@ -115,7 +115,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Events[] = {
     },
     [EC_INDEX(EC_WORD_BATTLE_ROOM)] =
     {
-        .text = COMPOUND_STRING("BATTLE ROOM"),
+        .text = COMPOUND_STRING("SALA DE COMBATE"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_JUDGE),
         .enabled = TRUE,
     },

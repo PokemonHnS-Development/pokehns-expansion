@@ -130,10 +130,7 @@ const u8 DecorDesc_BLUE_BALLOON[] = _(
         "de agua. Explota.\n"
         "if stepped on.");
 
-const u8 DecorDesc_YELLOW_BALLOON[] = _(
-    "Un globo amarillo\n"
-        "lleno de agua.\n"
-        "Pops if stepped on.");
+const u8 DecorDesc_YELLOW_BALLOON[] = _("Un globo amarillo\nlleno de agua.\nSe revienta al pisarlo.");
 
 const u8 DecorDesc_RED_TENT[] = _(
     "Una carpa roja grande.\n"
@@ -230,10 +227,7 @@ const u8 DecorDesc_SPIN_MAT[] = _(
         "gira cuando\n"
         "stepped on.");
 
-const u8 DecorDesc_C_LOW_NOTE_MAT[] = _(
-    "Un tapete que suena\n"
-        "una nota Do baja cuando\n"
-        "stepped on.");
+const u8 DecorDesc_C_LOW_NOTE_MAT[] = _("Un tapete que suena\nuna nota Do baja cuando\nse pisa.");
 
 const u8 DecorDesc_D_NOTE_MAT[] = _(
     "Un tapete que suena\n"
@@ -265,45 +259,21 @@ const u8 DecorDesc_B_NOTE_MAT[] = _(
         "una nota Si cuando\n"
         "stepped on.");
 
-const u8 DecorDesc_C_HIGH_NOTE_MAT[] = _(
-    "Un tapete que suena\n"
-        "una nota Do alta cuando\n"
-        "stepped on.");
+const u8 DecorDesc_C_HIGH_NOTE_MAT[] = _("Un tapete que suena\nuna nota Do alta cuando\nse pisa.");
 
-const u8 DecorDesc_SURF_MAT[] = _(
-    "Un tapete diseñado con\n"
-        "una imagen de SURF.\n"
-        "Put items on top.");
+const u8 DecorDesc_SURF_MAT[] = _("Un tapete con diseño\nde SURF.\n \nColoca objetos encima.");
 
-const u8 DecorDesc_THUNDER_MAT[] = _(
-    "Un tapete diseñado con\n"
-        "una imagen de RAYO.\n"
-        "Put items on top.");
+const u8 DecorDesc_THUNDER_MAT[] = _("Un tapete con diseño\nde RAYO.\n \nColoca objetos encima.");
 
-const u8 DecorDesc_FIRE_BLAST_MAT[] = _(
-    "Un tapete diseñado con\n"
-        "una imagen de LANZALLAMAS.\n"
-        "Put items on top.");
+const u8 DecorDesc_FIRE_BLAST_MAT[] = _("Un tapete con diseño\nde LANZALLAMAS.\n \nColoca objetos encima.");
 
-const u8 DecorDesc_POWDER_SNOW_MAT[] = _(
-    "Un tapete con un diseño\n"
-        "de NIEVE.\n"
-        "Put items on top.");
+const u8 DecorDesc_POWDER_SNOW_MAT[] = _("Un tapete con diseño\nde NIEVE.\n \nColoca objetos encima.");
 
-const u8 DecorDesc_ATTRACT_MAT[] = _(
-    "Un tapete diseñado con\n"
-        "una imagen de ATRACTIVO.\n"
-        "Put items on top.");
+const u8 DecorDesc_ATTRACT_MAT[] = _("Un tapete con diseño\nde ATRACTIVO.\n \nColoca objetos encima.");
 
-const u8 DecorDesc_FISSURE_MAT[] = _(
-    "Un tapete diseñado con\n"
-        "una imagen de GRIETA.\n"
-        "Put items on top.");
+const u8 DecorDesc_FISSURE_MAT[] = _("Un tapete diseñado con\nuna imagen de GRIETA.\nColoca objetos encima.");
 
-const u8 DecorDesc_SPIKES_MAT[] = _(
-    "Un tapete diseñado con\n"
-        "una imagen de PÚAS.\n"
-        "Put items on top.");
+const u8 DecorDesc_SPIKES_MAT[] = _("Un tapete diseñado con\nuna imagen de PÚAS.\nColoca objetos encima.");
 
 const u8 DecorDesc_BALL_POSTER[] = _(
     "Un póster pequeño\n"

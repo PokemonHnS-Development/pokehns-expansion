@@ -6908,7 +6908,7 @@ static void PrintEvolutionTargetSpeciesAndMethod(u8 taskId, u16 species, u8 dept
                     if (condition == IF_REGION)
                         StringAppend(gStringVar4, COMPOUND_STRING("in "));
                     else if (condition == IF_NOT_REGION)
-                        StringAppend(gStringVar4, COMPOUND_STRING("out of "));
+                        StringAppend(gStringVar4, COMPOUND_STRING("se quedó sin "));
 
                     switch ((enum Region)evolutions[i].params[j].arg1)
                     {
@@ -6958,7 +6958,7 @@ static void PrintEvolutionTargetSpeciesAndMethod(u8 taskId, u16 species, u8 dept
                     StringAppend(gStringVar4, COMPOUND_STRING(" critical hits"));
                     break;
                 case IF_USED_MOVE_X_TIMES:
-                    StringAppend(gStringVar4, COMPOUND_STRING("use move "));
+                    StringAppend(gStringVar4, COMPOUND_STRING("usar el movimiento "));
                     StringAppend(gStringVar4, GetMoveName(evolutions[i].params[j].arg1));
                     StringAppend(gStringVar4, COMPOUND_STRING(" "));
                     ConvertIntToDecimalStringN(gStringVar2, evolutions[i].params[j].arg2, STR_CONV_MODE_LEFT_ALIGN, 3);

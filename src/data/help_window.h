@@ -6,10 +6,7 @@ const struct HelpWindow gHelpWindowInfo[] =
     [HELP_DEMO_WINDOW] =
     {
         .header = COMPOUND_STRING("Information: Help Windows"),
-        .desc = COMPOUND_STRING("This is a help window. You can put\n"
-                                "mucho texto en pantalla que\n"
-                                "¡los jugadores no leerán!\n\n¡No es genial!"
-                            ),
+        .desc = COMPOUND_STRING("Esta es una ventana de ayuda.\nPuedes poner mucho texto en\npantalla ¡y nadie lo leerá!\n\n¡Qué genial!"),
         .headerFont = FONT_NORMAL,
         .descFont = FONT_NORMAL,
         .headerColor = {0, 4, 5},
@@ -17,13 +14,7 @@ const struct HelpWindow gHelpWindowInfo[] =
     [HELP_GAMESTART_WINDOW] =
     {
         .header = COMPOUND_STRING("Information: More Options"),
-        .desc = COMPOUND_STRING("The clock can be changed from any\n"
-                                "CENTRO POKéMON sin penalización.\n"
-                                "Revisa los OBJETOS CLAVE de tu BOLSA\n"
-                                "y el MENÚ de OPCIONES para más\n"
-                                "formas de personalizar tu juego.\n"
-                                "¡Disfruta!"
-                            ),
+        .desc = COMPOUND_STRING("El reloj se puede cambiar en\ncualquier CENTRO POKéMON sin\npenalización. Revisa los OBJETOS\nCLAVE de tu BOLSA y el MENÚ de\nOPCIONES para más opciones.\n¡Disfruta!"),
         .headerFont = FONT_NORMAL,
         .descFont = FONT_NORMAL,
         .headerColor = {0, 8, 3},
@@ -31,14 +22,7 @@ const struct HelpWindow gHelpWindowInfo[] =
     [HELP_TRADE_WINDOW] =
     {
         .header = COMPOUND_STRING("WARNING: COMPATIBILITY"),
-        .desc = COMPOUND_STRING("Attempting to link incorrectly may result\n"
-                                "daño permanente a tu partida.\n"
-                                "Solo conéctate con otro jugador si:\n"
-                                "Ambos juegan Heart & Soul.\n"
-                                "Ambos tienen la misma versión.\n"
-                                "Ambos tienen los mismos ajustes.\n"
-                                "NO estás usando el randomizer."
-                            ),
+        .desc = COMPOUND_STRING("Un enlace incorrecto puede dañar\ntu partida de forma permanente.\nConéctate solo si:\nAmbos juegan Heart & Soul.\nMisma versión y mismos ajustes.\nNO uses el randomizer."),
         .headerFont = FONT_NORMAL,
         .descFont = FONT_SMALL,
         .headerColor = {0, 4, 5},
@@ -59,13 +43,7 @@ const struct HelpWindow gHelpWindowInfo[] =
     [HELP_SINJOH_WINDOW] =
     {
         .header = COMPOUND_STRING("OPTIONAL BONUS CONTENT: SINJOH"),
-        .desc = COMPOUND_STRING("This NPC grants access to optional\n"
-                                "contenido extra: SINJOH.\n"
-                                "NO es necesario para la historia\n"
-                                "ni para completar la POKéDEX NAC.\n"
-                                "\n"
-                                "Es solo un extra. Si lo quieres."
-                            ),
+        .desc = COMPOUND_STRING("Este NPC da acceso a contenido\nopcional: SINJOH.\nNO es necesario para la historia\nni para completar la POKéDEX NAC.\n \nEs solo un extra. Si lo quieres."),
         .headerFont = FONT_NORMAL,
         .descFont = FONT_NORMAL,
         .headerColor = {0, 8, 3},
@@ -73,13 +51,7 @@ const struct HelpWindow gHelpWindowInfo[] =
     [HELP_ALOLA_WINDOW] =
     {
         .header = COMPOUND_STRING("OPTIONAL BONUS CONTENT: ISLES"),
-        .desc = COMPOUND_STRING("This NPC grants access to optional\n"
-                                "contenido extra: ISLAS.\n"
-                                "NO es necesario para la historia\n"
-                                "ni para completar la POKéDEX NAC.\n"
-                                "\n"
-                                "Es solo un extra. Si lo quieres."
-                            ),
+        .desc = COMPOUND_STRING("Este NPC da acceso a contenido\nopcional: ISLAS.\nNO es necesario para la historia\nni para completar la POKéDEX NAC.\n \nEs solo un extra. Si lo quieres."),
         .headerFont = FONT_NORMAL,
         .descFont = FONT_NORMAL,
         .headerColor = {0, 8, 3},

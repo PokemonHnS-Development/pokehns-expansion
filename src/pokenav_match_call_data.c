@@ -1141,11 +1141,11 @@ static void (*const sMatchCall_GetNameAndDescFunctions[])(match_call_t, const u8
     MatchCall_GetNameAndDesc_Birch
 };
 
-static const u8 gText_MatchCallSteven_Strategy[] = _("Attack the weak points!");
+static const u8 gText_MatchCallSteven_Strategy[] = _("¡Ataca los puntos débiles!");
 static const u8 gText_MatchCallSteven_Pokemon[] = _("Ultimate STEEL POKéMON.");
 
-static const u8 gText_MatchCallBrendan_Strategy[] = _("Battle with knowledge!");
-static const u8 gText_MatchCallBrendan_Pokemon[] = _("I will use various POKéMON.");
+static const u8 gText_MatchCallBrendan_Strategy[] = _("¡Combate con conocimiento!");
+static const u8 gText_MatchCallBrendan_Pokemon[] = _("Usaré varios POKéMON.");
 static const u8 gText_MatchCallBrendan_Intro1[] = _("I'll be a better POKéMON");
 static const u8 gText_MatchCallBrendan_Intro2[] = _("profesor que mi padre!");
 

@@ -181,8 +181,8 @@ static const u8 sText_TooImportantToToss[] = _("That's much too\nimportant to to
 static const u8 *const sItemStorage_OptionDescriptions[] =
 {
     [MENU_WITHDRAW] = COMPOUND_STRING("Saca los objetos de la PC."),
-    [MENU_DEPOSIT]  = COMPOUND_STRING("Store items in the PC."),
-    [MENU_TOSS]     = COMPOUND_STRING("Throw away items stored in the PC."),
+    [MENU_DEPOSIT]  = COMPOUND_STRING("Guarda objetos en la PC."),
+    [MENU_TOSS]     = COMPOUND_STRING("Tira objetos guardados en la PC."),
     [MENU_EXIT]     = gText_GoBackPrevMenu,
 };
 
@@ -228,7 +228,7 @@ static const u16 sNewGamePCItems[][2] =
 const struct MenuAction gMailboxMailOptions[] =
 {
     { COMPOUND_STRING("READ"),        {Mailbox_DoMailRead} },
-    { COMPOUND_STRING("MOVE TO BAG"), {Mailbox_MoveToBag} },
+    { COMPOUND_STRING("MOVER A BOLSA"), {Mailbox_MoveToBag} },
     { COMPOUND_STRING("GIVE"),        {Mailbox_Give} },
     { gText_Cancel2,                  {Mailbox_Cancel} }
 };

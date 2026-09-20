@@ -345,9 +345,9 @@ static const u8 *const sPageDescriptions[] =
     [POKENAV_MENUITEM_MATCH_CALL]              = COMPOUND_STRING("Call a registered TRAINER."),
     [POKENAV_MENUITEM_RIBBONS]                 = COMPOUND_STRING("Check obtained RIBBONS."),
 #if IS_HNS
-    [POKENAV_MENUITEM_RADIO]                   = COMPOUND_STRING("Listen to the radio."),
+    [POKENAV_MENUITEM_RADIO]                   = COMPOUND_STRING("Escuchar la radio."),
     [POKENAV_MENUITEM_SWITCH_OFF]              = COMPOUND_STRING("Put away the POKéGEAR."),
-    [POKENAV_MENUITEM_CONDITION_CANCEL]        = COMPOUND_STRING("Return to the POKéGEAR menu."),
+    [POKENAV_MENUITEM_CONDITION_CANCEL]        = COMPOUND_STRING("Volver al menú del POKéGEAR."),
 #else
     [POKENAV_MENUITEM_SWITCH_OFF]              = COMPOUND_STRING("Put away the POKéNAV."),
     [POKENAV_MENUITEM_CONDITION_CANCEL]        = COMPOUND_STRING("Return to the POKéNAV menu."),
@@ -359,7 +359,7 @@ static const u8 *const sPageDescriptions[] =
     [POKENAV_MENUITEM_CONDITION_SEARCH_CUTE]   = COMPOUND_STRING("Find cute POKéMON."),
     [POKENAV_MENUITEM_CONDITION_SEARCH_SMART]  = COMPOUND_STRING("Find smart POKéMON."),
     [POKENAV_MENUITEM_CONDITION_SEARCH_TOUGH]  = COMPOUND_STRING("Find tough POKéMON."),
-    [POKENAV_MENUITEM_CONDITION_SEARCH_CANCEL] = COMPOUND_STRING("Return to the CONDITION menu.")
+    [POKENAV_MENUITEM_CONDITION_SEARCH_CANCEL] = COMPOUND_STRING("Volver al menú de ESTADO.")
 };
 
 static const u8 sOptionDescTextColors[]  = {TEXT_COLOR_GREEN, TEXT_COLOR_BLUE, TEXT_COLOR_LIGHT_GREEN};

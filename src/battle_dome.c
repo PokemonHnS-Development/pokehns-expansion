@@ -857,7 +857,7 @@ static const u8 sTournamentIdToPairedTrainerIds[DOME_TOURNAMENT_TRAINERS_COUNT] 
 // Dome Ace Tucker has their own separate potential text.
 static const u8 *const sBattleDomePotentialTexts[DOME_TOURNAMENT_TRAINERS_COUNT + 1] =
 {
-    COMPOUND_STRING("The best candidate to be a champ!"), // Highest potential
+    COMPOUND_STRING("¡El mejor candidato a campeón!"), // Highest potential
     COMPOUND_STRING("A sure-finalist team."),
     COMPOUND_STRING("A likely top-three finisher."),
     COMPOUND_STRING("A candidate to finish first."),
@@ -867,39 +867,39 @@ static const u8 *const sBattleDomePotentialTexts[DOME_TOURNAMENT_TRAINERS_COUNT 
     COMPOUND_STRING("This tournament's average team."),
     COMPOUND_STRING("A team with average potential."),
     COMPOUND_STRING("A weaker-than-average team."),
-    COMPOUND_STRING("A team looking for its first win."),
+    COMPOUND_STRING("Un equipo que busca su primera\nvictoria."),
     COMPOUND_STRING("Ganar hará orgulloso a este equipo."),
     COMPOUND_STRING("Overall, a weak team."),
     COMPOUND_STRING("A team with very low potential."),
-    COMPOUND_STRING("A team unlikely to win the tournament."),
-    COMPOUND_STRING("The team most unlikely to win."), // Lowest potential
+    COMPOUND_STRING("Un equipo con pocas chances de ganar."),
+    COMPOUND_STRING("El equipo con menos chances de ganar."), // Lowest potential
     COMPOUND_STRING("The perfect, invincible superstar!"), // Dome Ace Tucker
 };
 
 // The second line of text on a trainers info card. It gives information about their battle style (dependent on their party's moves).
 static const u8 *const sBattleDomeOpponentStyleTexts[NUM_BATTLE_STYLES] =
 {
-    [DOME_BATTLE_STYLE_RISKY]           = COMPOUND_STRING("Willing to risk total disaster at times."),
+    [DOME_BATTLE_STYLE_RISKY]           = COMPOUND_STRING("A veces arriesga un desastre total."),
     [DOME_BATTLE_STYLE_STALL]           = COMPOUND_STRING("Skilled at enduring long battles."),
-    [DOME_BATTLE_STYLE_VARIED]          = COMPOUND_STRING("Varies tactics to suit the opponent."),
+    [DOME_BATTLE_STYLE_VARIED]          = COMPOUND_STRING("Cambia de táctica según el rival."),
     [DOME_BATTLE_STYLE_COMBO_HIGH]      = COMPOUND_STRING("Has a tough winning pattern."),
     [DOME_BATTLE_STYLE_RARE_MOVES]      = COMPOUND_STRING("Occasionally uses a very rare move."),  // Seems like the text for these two was swapped
     [DOME_BATTLE_STYLE_RARE_MOVE]       = COMPOUND_STRING("Uses startling and disruptive moves."), //
     [DOME_BATTLE_STYLE_HP]              = COMPOUND_STRING("Constantly watches HP in battle."),
-    [DOME_BATTLE_STYLE_STORE_POWER]     = COMPOUND_STRING("Good at storing then loosing power."),
+    [DOME_BATTLE_STYLE_STORE_POWER]     = COMPOUND_STRING("Bueno para acumular y soltar poder."),
     [DOME_BATTLE_STYLE_ENFEEBLE_LOW]    = COMPOUND_STRING("Skilled at enfeebling foes."),
-    [DOME_BATTLE_STYLE_LUCK]            = COMPOUND_STRING("Prefers tactics that rely on luck."),
+    [DOME_BATTLE_STYLE_LUCK]            = COMPOUND_STRING("Prefiere tácticas basadas en\nla suerte."),
     [DOME_BATTLE_STYLE_REGAL]           = COMPOUND_STRING("Attacks with a regal atmosphere."),
     [DOME_BATTLE_STYLE_LOW_PP]          = COMPOUND_STRING("Attacks with powerful, low-PP moves."),
-    [DOME_BATTLE_STYLE_STATUS_ATK]      = COMPOUND_STRING("Skilled at enfeebling, then attacking."),
+    [DOME_BATTLE_STYLE_STATUS_ATK]      = COMPOUND_STRING("Experto en debilitar y atacar."),
     [DOME_BATTLE_STYLE_ENDURE]          = COMPOUND_STRING("Battles while enduring all attacks."),
     [DOME_BATTLE_STYLE_STATUS]          = COMPOUND_STRING("Skilled at upsetting foes emotionally."),
     [DOME_BATTLE_STYLE_STRAIGHTFORWARD] = COMPOUND_STRING("Uses strong and straightforward moves."),
     [DOME_BATTLE_STYLE_AGGRESSIVE]      = COMPOUND_STRING("Aggressively uses strong moves."),
     [DOME_BATTLE_STYLE_DEF]             = COMPOUND_STRING("Battles while cleverly dodging attacks."),
-    [DOME_BATTLE_STYLE_ENFEEBLE_HIGH]   = COMPOUND_STRING("Skilled at using upsetting attacks."),
+    [DOME_BATTLE_STYLE_ENFEEBLE_HIGH]   = COMPOUND_STRING("Experto en ataques molestos."),
     [DOME_BATTLE_STYLE_POPULAR_POWER]   = COMPOUND_STRING("Uses many popular moves."),
-    [DOME_BATTLE_STYLE_COMBO_LOW]       = COMPOUND_STRING("Has moves for powerful combinations."),
+    [DOME_BATTLE_STYLE_COMBO_LOW]       = COMPOUND_STRING("Tiene movimientos para combos."),
     [DOME_BATTLE_STYLE_ACCURATE]        = COMPOUND_STRING("Uses high-probability attacks."),
     [DOME_BATTLE_STYLE_POWERFUL]        = COMPOUND_STRING("Aggressively uses spectacular moves."),
     [DOME_BATTLE_STYLE_ATK_OVER_DEF]    = COMPOUND_STRING("Emphasizes offense over defense."),
@@ -916,42 +916,42 @@ static const u8 *const sBattleDomeOpponentStyleTexts[NUM_BATTLE_STYLES] =
 // The third line of text on a trainers info card. It that gives information about their party's stat spread (based on their Pokémon's effort values and Nature).
 static const u8 *const sBattleDomeOpponentStatsTexts[] =
 {
-    COMPOUND_STRING("Emphasizes HP and ATTACK."),              // DOME_TEXT_TWO_GOOD_STATS and DOME_TEXT_HP start here
+    COMPOUND_STRING("Prioriza PS y ATAQUE."),              // DOME_TEXT_TWO_GOOD_STATS and DOME_TEXT_HP start here
     COMPOUND_STRING("Emphasizes HP and DEFENSE."),
     COMPOUND_STRING("Emphasizes HP and SPEED."),
-    COMPOUND_STRING("Emphasizes HP and SP. ATTACK."),
+    COMPOUND_STRING("Prioriza PS y AT. ESPECIAL."),
     COMPOUND_STRING("Emphasizes HP and SP. DEFENSE."),
-    COMPOUND_STRING("Emphasizes ATTACK and DEFENSE."),         // DOME_TEXT_ATK starts here
-    COMPOUND_STRING("Emphasizes ATTACK and SPEED."),
-    COMPOUND_STRING("Emphasizes ATTACK and SP. ATTACK."),
-    COMPOUND_STRING("Emphasizes ATTACK and SP. DEFENSE."),
+    COMPOUND_STRING("Prioriza ATAQUE y DEFENSA."),         // DOME_TEXT_ATK starts here
+    COMPOUND_STRING("Prioriza ATAQUE y VELOCIDAD."),
+    COMPOUND_STRING("Prioriza ATAQUE y AT. ESP."),
+    COMPOUND_STRING("Realza ATAQUE y DEF.ESP."),
     COMPOUND_STRING("Emphasizes DEFENSE and SPEED."),          // DOME_TEXT_DEF starts here
-    COMPOUND_STRING("Emphasizes DEFENSE and SP. ATTACK."),
+    COMPOUND_STRING("Realza DEFENSA y ATQ.ESP."),
     COMPOUND_STRING("Emphasizes DEFENSE and SP. DEFENSE."),
-    COMPOUND_STRING("Emphasizes SPEED and SP. ATTACK."),       // DOME_TEXT_SPEED starts here
+    COMPOUND_STRING("Realza VELOCIDAD y ATQ.ESP."),       // DOME_TEXT_SPEED starts here
     COMPOUND_STRING("Emphasizes SPEED and SP. DEFENSE."),
-    COMPOUND_STRING("Emphasizes SP. ATTACK and SP. DEFENSE."), // DOME_TEXT_SPATK starts here
+    COMPOUND_STRING("Realza ATQ.ESP. y DEF.ESP."), // DOME_TEXT_SPATK starts here
     COMPOUND_STRING("Emphasizes HP."),                         // DOME_TEXT_ONE_GOOD_STAT starts here
     COMPOUND_STRING("Emphasizes ATTACK."),
     COMPOUND_STRING("Emphasizes DEFENSE."),
     COMPOUND_STRING("Emphasizes SPEED."),
     COMPOUND_STRING("Emphasizes SP. ATTACK."),
     COMPOUND_STRING("Emphasizes SP. DEFENSE."),
-    COMPOUND_STRING("Neglects HP and ATTACK."),                // DOME_TEXT_TWO_BAD_STATS starts here
+    COMPOUND_STRING("Descuida PS y ATAQUE."),                // DOME_TEXT_TWO_BAD_STATS starts here
     COMPOUND_STRING("Neglects HP and DEFENSE."),
     COMPOUND_STRING("Neglects HP and SPEED."),
-    COMPOUND_STRING("Neglects HP and SP. ATTACK."),
+    COMPOUND_STRING("Descuida PS y ATQ.ESP."),
     COMPOUND_STRING("Neglects HP and SP. DEFENSE."),
-    COMPOUND_STRING("Neglects ATTACK and DEFENSE."),
-    COMPOUND_STRING("Neglects ATTACK and SPEED."),
-    COMPOUND_STRING("Neglects ATTACK and SP. ATTACK."),
-    COMPOUND_STRING("Neglects ATTACK and SP. DEFENSE."),
+    COMPOUND_STRING("Descuida ATAQUE y DEFENSA."),
+    COMPOUND_STRING("Descuida ATAQUE y VELOCIDAD."),
+    COMPOUND_STRING("Descuida ATAQUE y AT. ESP."),
+    COMPOUND_STRING("Descuida ATAQUE y DEF. ESP."),
     COMPOUND_STRING("Neglects DEFENSE and SPEED."),
-    COMPOUND_STRING("Neglects DEFENSE and SP. ATTACK."),
+    COMPOUND_STRING("Descuida DEFENSA y AT. ESP."),
     COMPOUND_STRING("Neglects DEFENSE and SP. DEFENSE."),
-    COMPOUND_STRING("Neglects SPEED and SP. ATTACK."),
+    COMPOUND_STRING("Descuida VELOCIDAD y AT. ESP."),
     COMPOUND_STRING("Neglects SPEED and SP. DEFENSE."),
-    COMPOUND_STRING("Neglects SP. ATTACK and SP. DEFENSE."),
+    COMPOUND_STRING("Descuida AT. ESP. y DEF. ESP."),
     COMPOUND_STRING("Neglects HP."),                           // DOME_TEXT_ONE_BAD_STAT starts here
     COMPOUND_STRING("Neglects ATTACK."),
     COMPOUND_STRING("Neglects DEFENSE."),
@@ -997,7 +997,7 @@ static const u8 *const sBattleDomeMatchNumberTexts[DOME_TOURNAMENT_MATCHES_COUNT
 
 static const u8 *const sBattleDomeWinTexts[] =
 {
-    [DOME_TEXT_NO_WINNER_YET]    = COMPOUND_STRING("Let the battle begin!"),
+    [DOME_TEXT_NO_WINNER_YET]    = COMPOUND_STRING("¡Que empiece la batalla!"),
     [DOME_TEXT_WON_USING_MOVE]   = COMPOUND_STRING("{STR_VAR_1} won using {STR_VAR_2}!"),
     [DOME_TEXT_CHAMP_USING_MOVE] = COMPOUND_STRING("{STR_VAR_1} became the champ!"),
     [DOME_TEXT_WON_ON_FORFEIT]   = COMPOUND_STRING("{STR_VAR_1} won by default!"),

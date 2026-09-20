@@ -871,11 +871,11 @@ struct {
     const u8 *desc;
 } static const sMainMenuTexts[OPTIONS_COUNT] =
 {
-    [OPTION_WITHDRAW]   = {COMPOUND_STRING("WITHDRAW POKéMON"), COMPOUND_STRING("Move POKéMON stored in BOXES to\nyour party.")},
+    [OPTION_WITHDRAW]   = {COMPOUND_STRING("WITHDRAW POKéMON"), COMPOUND_STRING("Mueve POKéMON de las CAJAS a tu\nequipo.")},
     [OPTION_DEPOSIT]    = {COMPOUND_STRING("DEPOSIT POKéMON"),  COMPOUND_STRING("Store POKéMON in your party in BOXES.")},
     [OPTION_MOVE_MONS]  = {COMPOUND_STRING("MOVE POKéMON"),     COMPOUND_STRING("Organiza los POKéMON en CAJAS\ny en tu equipo.")},
-    [OPTION_MOVE_ITEMS] = {COMPOUND_STRING("MOVE ITEMS"),       COMPOUND_STRING("Move items held by any POKéMON\nin a BOX or your party.")},
-    [OPTION_EXIT]       = {COMPOUND_STRING("SEE YA!"),          COMPOUND_STRING("Return to the previous menu.")}
+    [OPTION_MOVE_ITEMS] = {COMPOUND_STRING("MOVER OBJETOS"),       COMPOUND_STRING("Mueve objetos de cualquier POKéMON\nen una CAJA o tu equipo.")},
+    [OPTION_EXIT]       = {COMPOUND_STRING("SEE YA!"),          COMPOUND_STRING("Vuelve al menú anterior.")}
 };
 
 static const struct WindowTemplate sWindowTemplate_MainMenu =
@@ -1057,7 +1057,7 @@ static const struct StorageMessage sMessages[] =
     [MSG_PICK_A_THEME]         = {COMPOUND_STRING("Please pick a theme."),       MSG_VAR_NONE},
     [MSG_PICK_A_WALLPAPER]     = {COMPOUND_STRING("Pick the wallpaper."),        MSG_VAR_NONE},
     [MSG_IS_SELECTED]          = {gText_PkmnIsSelected,                          MSG_VAR_MON_NAME_1},
-    [MSG_JUMP_TO_WHICH_BOX]    = {COMPOUND_STRING("Jump to which BOX?"),         MSG_VAR_NONE},
+    [MSG_JUMP_TO_WHICH_BOX]    = {COMPOUND_STRING("¿Saltar a qué CAJA?"),         MSG_VAR_NONE},
     [MSG_DEPOSIT_IN_WHICH_BOX] = {COMPOUND_STRING("Deposit in which BOX?"),      MSG_VAR_NONE},
     [MSG_WAS_DEPOSITED]        = {COMPOUND_STRING("{DYNAMIC 0} was deposited."), MSG_VAR_MON_NAME_1},
     [MSG_BOX_IS_FULL]          = {COMPOUND_STRING("La CAJA está llena."),           MSG_VAR_NONE},
@@ -1077,7 +1077,7 @@ static const struct StorageMessage sMessages[] =
     [MSG_PLEASE_REMOVE_MAIL]   = {COMPOUND_STRING("Please remove the MAIL."),    MSG_VAR_NONE},
     [MSG_IS_SELECTED2]         = {gText_PkmnIsSelected,                          MSG_VAR_ITEM_NAME},
     [MSG_GIVE_TO_MON]          = {COMPOUND_STRING("GIVE to a POKéMON?"),         MSG_VAR_NONE},
-    [MSG_PLACED_IN_BAG]        = {COMPOUND_STRING("Placed item in the BAG."),    MSG_VAR_ITEM_NAME},
+    [MSG_PLACED_IN_BAG]        = {COMPOUND_STRING("Objeto guardado en la BOLSA."),    MSG_VAR_ITEM_NAME},
     [MSG_BAG_FULL]             = {COMPOUND_STRING("La MOCHILA está llena."),           MSG_VAR_NONE},
     [MSG_PUT_IN_BAG]           = {COMPOUND_STRING("¿Guardar este objeto en la BOLSA?"),  MSG_VAR_NONE},
     [MSG_ITEM_IS_HELD]         = {COMPOUND_STRING("{DYNAMIC 0} is now held."),   MSG_VAR_ITEM_NAME},

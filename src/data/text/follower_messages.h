@@ -274,7 +274,7 @@ static const u8 sMusicMsg09[] = _("{STR_VAR_1} se esfuerza por lucir\nsu enorme 
 static const u8 sMusicMsg10[] = _("Whoa! {STR_VAR_1} suddenly danced in\nhappiness!");
 static const u8 sMusicMsg11[] = _("{STR_VAR_1} is cheerful!");
 static const u8 sMusicMsg12[] = _("{STR_VAR_1} is jumping around in a\ncarefree way!");
-static const u8 sMusicMsg13[] = _("Your POKéMON seems to be smelling a\nnostalgically familiar scent…");
+static const u8 sMusicMsg13[] = _("Tu POKéMON parece oler un aroma\nnostálgicamente familiar…");
 // Conditional music messages, index 14
 static const u8 sMusicMsg14[] = _("{STR_VAR_1} está feliz con la\nlluvia.");
 

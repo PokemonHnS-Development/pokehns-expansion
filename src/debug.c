@@ -539,8 +539,8 @@ static const struct DebugMenuOption sDebugMenu_Actions_FollowerNPCMenu_Create[] 
 static const struct DebugMenuOption sDebugMenu_Actions_TimeMenu[] =
 {
     { COMPOUND_STRING("Get time…"),         DebugAction_ExecuteScript, Debug_EventScript_TellTheTime },
-    { COMPOUND_STRING("Get time of day…"),  DebugAction_ExecuteScript, Debug_EventScript_PrintTimeOfDay },
-    { COMPOUND_STRING("Set time of day…"),  DebugAction_OpenSubMenuFakeRTC, sDebugMenu_Actions_TimeMenu_TimesOfDay },
+    { COMPOUND_STRING("Obtener hora del día…"),  DebugAction_ExecuteScript, Debug_EventScript_PrintTimeOfDay },
+    { COMPOUND_STRING("Fijar hora del día…"),  DebugAction_OpenSubMenuFakeRTC, sDebugMenu_Actions_TimeMenu_TimesOfDay },
     { COMPOUND_STRING("Set weekday…"),      DebugAction_OpenSubMenuFakeRTC, sDebugMenu_Actions_TimeMenu_Weekdays },
     { COMPOUND_STRING("Check wall clock…"), DebugAction_ExecuteScript, PlayersHouse_2F_EventScript_CheckWallClock },
     { COMPOUND_STRING("Set wall clock…"),   DebugAction_ExecuteScript, PlayersHouse_2F_EventScript_SetWallClock },
@@ -588,11 +588,11 @@ static const struct DebugMenuOption sDebugMenu_Actions_PCBag_Fill[] =
     { COMPOUND_STRING("Fill PC Boxes Fast"),        DebugAction_PCBag_Fill_PCBoxes_Fast },
     { COMPOUND_STRING("Fill PC Boxes Slow (LAG!)"), DebugAction_PCBag_Fill_PCBoxes_Slow },
     { COMPOUND_STRING("Fill PC Items") ,            DebugAction_PCBag_Fill_PCItemStorage },
-    { COMPOUND_STRING("Fill Pocket Items"),         DebugAction_PCBag_Fill_PocketItems },
+    { COMPOUND_STRING("Llenar Bolsillo Objetos"),         DebugAction_PCBag_Fill_PocketItems },
     { COMPOUND_STRING("Fill Pocket Poké Balls"),    DebugAction_PCBag_Fill_PocketPokeBalls },
     { COMPOUND_STRING("Fill Pocket TMHM"),          DebugAction_PCBag_Fill_PocketTMHM },
     { COMPOUND_STRING("Fill Pocket Berries"),       DebugAction_PCBag_Fill_PocketBerries },
-    { COMPOUND_STRING("Fill Pocket Key Items"),     DebugAction_PCBag_Fill_PocketKeyItems },
+    { COMPOUND_STRING("Llenar Bolsillo Clave"),     DebugAction_PCBag_Fill_PocketKeyItems },
     { NULL }
 };
 

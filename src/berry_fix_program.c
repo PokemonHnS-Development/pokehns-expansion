@@ -38,14 +38,9 @@ static void BerryFix_HideScene(void);
 static const u8 sText_BerryProgramUpdate[] = _("Berry Program Update");
 static const u8 sText_RubySapphire[] = _("Ruby/Sapphire");
 static const u8 sText_Emerald[] = _("Emerald");
-static const u8 sText_BerryProgramWillBeUpdatedPressA[] = _("The Berry Program on your POKéMON\n"
-                                                            "El juego Ruby/Sapphire se actualizará.\n"
-                                                            "{COLOR RED}{SHADOW LIGHT_RED}Press the A Button.");
+static const u8 sText_BerryProgramWillBeUpdatedPressA[] = _("El programa de BAYAS de tu\nPOKéMON se actualizará.\n{COLOR RED}{SHADOW LIGHT_RED}Presiona el botón A.");
 static const u8 sText_EnsureGBAConnectionMatches[] = _("Verifica la conexión de tu\nEl sistema GBA es compatible.\n{COLOR RED}{SHADOW LIGHT_RED}SÍ: Presiona el Botón A.\nNO: Apaga y vuelve a intentarlo.");
-static const u8 sText_TurnOffPowerHoldingStartSelect[] = _("Please turn on the power of POKéMON\n"
-                                                           "Ruby/Sapphire pulsando START y\n"
-                                                           "SELECT a la vez. Luego, asegúrate\n"
-                                                           "the picture above appears.");
+static const u8 sText_TurnOffPowerHoldingStartSelect[] = _("Enciende el poder de POKéMON\nRuby/Sapphire pulsando START y\nSELECT a la vez. Luego verifica\nque aparezca la imagen de arriba.");
 static const u8 sText_TransmittingPleaseWait[] = _("Transmitting. Please wait.\n"
                                                    "{COLOR RED}{SHADOW LIGHT_RED}No apagues la consola ni\n"
                                                    "unplug the Game Boy Advance Game\nLink Cable.");

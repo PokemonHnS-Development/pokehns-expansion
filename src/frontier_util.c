@@ -263,12 +263,8 @@ const struct FrontierBrain gFrontierBrainInfo[NUM_FRONTIER_FACILITIES] =
 #endif
         .isFemale = FALSE,
         .lostTexts = {
-            COMPOUND_STRING(
-                "¡Eso es! ¡Lo hiciste genial!\n"
-                "You've worked hard for this!"), //Silver
-            COMPOUND_STRING(
-                "¡Eso es! ¡Lo lograste!\n"
-                "You kept working for this!")    //Gold
+            COMPOUND_STRING("¡Eso es! ¡Lo hiciste genial!\n¡Trabajaste duro para esto!"), //Silver
+            COMPOUND_STRING("¡Eso es! ¡Lo lograste!\n¡Seguiste esforzándote!")    //Gold
         },
         .wonTexts = {
             COMPOUND_STRING(

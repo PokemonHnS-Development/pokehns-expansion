@@ -1720,11 +1720,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .categoryName = _("Capullo"),
         .height = 7,
         .weight = 115,
-        .description = COMPOUND_STRING(
-            "Para evitar que lo vean, se esconde\n"
-            "sin moverse bajo hojas grandes y en\n"
-            "huecos de ramas. También se pega\n"
-            "dead leaves to its body for camouflage."),
+        .description = COMPOUND_STRING("Para evitar que lo vean, se esconde\nsin moverse bajo hojas grandes y en\nhuecos de ramas. También pega hojas\nsecas a su cuerpo para camuflarse."),
         .pokemonScale = 391,
         .pokemonOffset = 20,
         .trainerScale = 256,
@@ -1894,11 +1890,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .categoryName = _("Alga Acuática"),
         .height = 5,
         .weight = 26,
-        .description = COMPOUND_STRING(
-            "Este POKéMON vive en estanques de\n"
-            "agua limpia. Suele transportar a\n"
-            "POKéMON pequeños sobre su lomo.\n"
-            "broad leaf on its head."),
+        .description = COMPOUND_STRING("Este POKéMON vive en estanques de\nagua limpia. Suele transportar a\nPOKéMON pequeños sobre la hoja\nancha que tiene en la cabeza."),
         .pokemonScale = 406,
         .pokemonOffset = 19,
         .trainerScale = 256,
@@ -3523,11 +3515,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .categoryName = _("Mono Salvaje"),
         .height = 14,
         .weight = 465,
-        .description = COMPOUND_STRING(
-            "No puede parar, su sangre hierve\n"
-            "de energía. Corre por los campos\n"
-            "y montes todo el día para calmarse.\n"
-            "doesn't, it can't sleep at night."),
+        .description = COMPOUND_STRING("No puede parar, su sangre hierve\nde energía. Corre por los campos\ny montes todo el día para calmarse.\nSi no lo hace, no puede dormir."),
         .pokemonScale = 301,
         .pokemonOffset = 2,
         .trainerScale = 256,
@@ -4885,11 +4873,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .categoryName = _("Armadura de Hierro"),
         .height = 4,
         .weight = 600,
-        .description = COMPOUND_STRING(
-            "Un POKéMON revestido de acero.\n"
-            "A new suit of armor is made when it evolves.\n"
-            "La armadura vieja es desechada y\n"
-            "metal for making iron products."),
+        .description = COMPOUND_STRING("Un POKéMON revestido de acero.\nAl evolucionar, forma una nueva\narmadura y desecha la vieja; el\nmetal sirve para hacer hierro."),
         .pokemonScale = 419,
         .pokemonOffset = 23,
         .trainerScale = 256,
@@ -4957,11 +4941,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .categoryName = _("Armadura de Hierro"),
         .height = 9,
         .weight = 1200,
-        .description = COMPOUND_STRING(
-            "Cuando dos Lairon se hallan salvajes,\n"
-            "luchan por territorio chocando entre\n"
-            "otros con sus cuerpos de acero. El\n"
-            "of their collision carries for miles."),
+        .description = COMPOUND_STRING("Cuando dos Lairon se hallan salvajes,\nluchan por territorio chocando entre\nsí con sus cuerpos de acero. El\nestruego se oye a kilómetros."),
         .pokemonScale = 275,
         .pokemonOffset = 12,
         .trainerScale = 256,
@@ -7688,11 +7668,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .categoryName = _("Pájaro de Algodón"),
         .height = 4,
         .weight = 12,
-        .description = COMPOUND_STRING(
-            "Un POKéMON con alas como nubes de\n"
-            "algodón. Tras pasar el invierno, con\n"
-            "poca comida, Swablu se agrupa...\n"
-            "move closer to towns in the spring."),
+        .description = COMPOUND_STRING("Un POKéMON con alas como nubes de\nalgodón. Tras pasar el invierno con\npoca comida, se agrupa y en primavera\nse acerca a los pueblos."),
         .pokemonScale = 422,
         .pokemonOffset = -8,
         .trainerScale = 256,
@@ -7991,11 +7967,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .categoryName = _("Serpiente Colmillo"),
         .height = 27,
         .weight = 525,
-        .description = COMPOUND_STRING(
-            "Seviper and Zangoose are eternal rivals.\n"
-            "Rivaliza la agilidad de Zangoose\n"
-            "con su cola de espada, que además\n"
-            "a horrible poison."),
+        .description = COMPOUND_STRING("Seviper y Zangoose son rivales\neternos. Su cola de espada rivaliza\ncon la agilidad de Zangoose y\nademás porta un veneno horrible."),
         .pokemonScale = 275,
         .pokemonOffset = 7,
         .trainerScale = 256,
@@ -8611,11 +8583,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .categoryName = _("Clay Doll"),
         .height = 15,
         .weight = 1080,
-        .description = COMPOUND_STRING(
-            "Un Claydol duerme flotando en el aire.\n"
-            "Sus brazos están separados del cuerpo.\n"
-            "Flotan gracias al poder del POKéMON.\n"
-            "manipulation of psychic power."),
+        .description = COMPOUND_STRING("Un Claydol duerme flotando en el aire.\nSus brazos están separados del cuerpo.\nFlotan gracias al poder del POKéMON.\nmanipulación de poder psíquico.\n \n \n"),
         .pokemonScale = 256,
         .pokemonOffset = 3,
         .trainerScale = 280,
@@ -9552,11 +9520,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .categoryName = _("Títere"),
         .height = 6,
         .weight = 23,
-        .description = COMPOUND_STRING(
-            "Este POKéMON vaga por lo profundo de\n"
-            "noche buscando emociones negativas\n"
-            "como rencores y envidia. Vuelve a su\n"
-            "when the sun begins to rise."),
+        .description = COMPOUND_STRING("Este POKéMON vaga por lo profundo de\nnoche buscando emociones negativas\ncomo rencores y envidia. Vuelve a su\nhogar cuando comienza a salir el sol.\n \n \n"),
         .pokemonScale = 440,
         .pokemonOffset = 20,
         .trainerScale = 256,
@@ -10546,11 +10510,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .categoryName = _("Sombrero Nieve"),
         .height = 7,
         .weight = 168,
-        .description = COMPOUND_STRING(
-            "Suelen moverse en grupos de unos\n"
-            "cinco Snorunt. En zonas nevadas,\n"
-            "Dicen que cuando se ven tarde en la\n"
-            "night, snowfall will arrive by morning."),
+        .description = COMPOUND_STRING("Suelen moverse en grupos de unos\ncinco Snorunt. En zonas nevadas,\nDicen que cuando se ven tarde en la\nnoche, nevará al amanecer.\n \n \n"),
         .pokemonScale = 380,
         .pokemonOffset = 15,
         .trainerScale = 256,
@@ -10991,11 +10951,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .categoryName = _("Rodar Bola"),
         .height = 11,
         .weight = 876,
-        .description = COMPOUND_STRING(
-            "Sealeo live in herds on ice floes. Using its\n"
-            "potentes aletas para romper el hielo.\n"
-            "Se sumerge en el mar para cazar presas\n"
-            "times a day."),
+        .description = COMPOUND_STRING("Los Sealeo viven en manadas sobre\nhielos flotantes. Usa sus potentes\naletas para romper el hielo.\nSe sumerge en el mar para cazar\nvarias veces al día.\n \n \n"),
         .pokemonScale = 338,
         .pokemonOffset = 13,
         .trainerScale = 256,
@@ -11071,11 +11027,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .categoryName = _("Rompehielo"),
         .height = 14,
         .weight = 1506,
-        .description = COMPOUND_STRING(
-            "Para cuidar su manada, el líder lucha\n"
-            "anything that invades its territory, even\n"
-            "aun a costa de su vida. Sus colmillos\n"
-            "off in battle."),
+        .description = COMPOUND_STRING("Para cuidar a su manada, el líder\nlucha contra todo el que invade su\nterritorio, aun a costa de su vida.\nSus colmillos se desprenden\nen batalla.\n \n \n"),
         .pokemonScale = 316,
         .pokemonOffset = 4,
         .trainerScale = 256,
@@ -11144,11 +11096,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .categoryName = _("Bivalvo"),
         .height = 4,
         .weight = 525,
-        .description = COMPOUND_STRING(
-            "A Clamperl slams its shell closed on prey\n"
-            "para evitar que escape. La perla que\n"
-            "crea al evolucionar se dice que tiene\n"
-            "a mysterious energy."),
+        .description = COMPOUND_STRING("Un Clamperl cierra su concha sobre\na su presa para evitar que escape.\nLa perla que crea al evolucionar\nse dice que tiene energía misteriosa."),
         .pokemonScale = 691,
         .pokemonOffset = 22,
         .trainerScale = 256,
@@ -11359,11 +11307,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .categoryName = _("Longevidad"),
         .height = 10,
         .weight = 234,
-        .description = COMPOUND_STRING(
-            "Un POKéMON que se creía que había\n"
-            "estando extinto. La especie no ha\n"
-            "cambiado su forma en 100 millones de\n"
-            "the seafloor using its pectoral fins."),
+        .description = COMPOUND_STRING("Un POKéMON que se creía extinto.\nLa especie no ha cambiado su forma\nen 100 millones de años. Se apoya\nen el fondo marino con sus aletas."),
         .pokemonScale = 316,
         .pokemonOffset = 7,
         .trainerScale = 256,
@@ -11518,11 +11462,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .categoryName = _("Cabeza Roca"),
         .height = 6,
         .weight = 421,
-        .description = COMPOUND_STRING(
-            "Aunque es pequeño, este POKéMON es muy\n"
-            "powerful because its body is a bundle of\n"
-            "músculos. Lanza cabezazos con sus\n"
-            "ironlike skull."),
+        .description = COMPOUND_STRING("Aunque es pequeño, este POKéMON es\nmuy poderoso porque su cuerpo está\nlleno de músculos. Lanza cabezazos\ncon su cráneo duro como hierro."),
         .pokemonScale = 448,
         .pokemonOffset = 18,
         .trainerScale = 256,
@@ -13242,11 +13182,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .categoryName = _("DNA"),
         .height = 17,
         .weight = 608,
-        .description = COMPOUND_STRING(
-            "Deoxys surgió de un virus que vino\n"
-            "del espacio. Es muy inteligente y\n"
-            "lanza láseres desde el cristalino\n"
-            "organ on its chest."),
+        .description = COMPOUND_STRING("Deoxys surgió de un virus que vino\ndel espacio. Es muy inteligente y\nlanza láseres desde el órgano que\ntiene en el pecho."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 290,

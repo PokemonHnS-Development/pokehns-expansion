@@ -218,8 +218,8 @@ static const struct MenuAction MultichoiceList_VendingMachine[] =
 
 static const struct MenuAction MultichoiceList_MachBikeInfo[] =
 {
-    {COMPOUND_STRING("HOW TO RIDE")},
-    {COMPOUND_STRING("HOW TO TURN")},
+    {COMPOUND_STRING("CÓMO MONTAR")},
+    {COMPOUND_STRING("CÓMO GIRAR")},
     {COMPOUND_STRING("SANDY SLOPES")},
     {gText_Exit},
 };

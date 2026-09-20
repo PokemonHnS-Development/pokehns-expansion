@@ -26,11 +26,7 @@ const u8 gPikachuPokedexText[] = _(
 
 const u8 gMarowakAlolaPokedexText[] = _("Dicen que las llamas malditas del\nhueso de este POKéMON causan\ndaño mental y físico que\nnunca se desvanecerá.");
 
-const u8 gEeveePokedexText[] = _(
-    "Eevee tiene una estructura genética\n"
-    "inestable que muta repentinamente\n"
-    "según su entorno y la radiación.\n"
-    "Stones causes this Pokémon to evolve.");
+const u8 gEeveePokedexText[] = _("Eevee tiene una estructura genética\ninestable que muta repentinamente\nsegún su entorno y la radiación.\n \n \n \nLas piedras lo hacen evolucionar.");
 
 // Gen 2 families
 const u8 gUnownPokedexText[] = _(
@@ -53,11 +49,7 @@ const u8 gArceusPokedexText[] = _(
     "even existed.");
 
 // Gen 5 families
-const u8 gGenesectPokedexText[] = _(
-    "Hace más de 300 millones de años,\n"
-    "era el cazador más temido.\n"
-    "El Equipo Plasma lo alteró y le puso\n"
-    "a cannon to its back.");
+const u8 gGenesectPokedexText[] = _("Hace más de 300 millones de años,\nera el cazador más temido.\nEl Equipo Plasma lo alteró y le puso\n \n \n \nun cañón en la espalda.");
 
 // Gen 6 families
 const u8 gGreninjaPokedexText[] = _(
@@ -109,11 +101,7 @@ const u8 gRibombeePokedexText[] = _(
     "como alimento y otras para luchar.\n"
     "They are sometimes sold as supplements.");
 
-const u8 gRockruffPokedexText[] = _(
-    "Este POKéMON vive con humanos desde\n"
-    "hace mucho tiempo. Siente cuando su\n"
-    "Entrenador está triste y lo acompaña.\n"
-    "close by its Trainer's side.");
+const u8 gRockruffPokedexText[] = _("Este POKéMON vive con humanos\ndesde hace mucho tiempo. Siente\ncuando su Entrenador está triste\ny lo acompaña siempre a su lado.");
 
 const u8 gAraquanidPokedexText[] = _("Pese a lo que sugiere su apariencia,\ncuida de los demás. Si halla POKéMON\ndébiles, los protege y los lleva\nen su burbuja de agua.");
 
@@ -127,11 +115,7 @@ const u8 gSalazzlePokedexText[] = _("Por alguna razón, solo se han hallado\nhem
 
 const u8 gSilvallyNormalPokedexText[] = _("Su confianza en su compañero lo\ndespierta. Este POKéMON puede cambiar\nde tipo al equipar recuerdos\nespeciales, algo notable en combate.");
 
-const u8 gSilvallyMemoryPokedexText[] = _(
-    "Al despertar, su Sistema RKS se\n"
-    "activa. Usando memorias\n"
-    "específicas, este POKéMON se adapta\n"
-    "type to confound its enemies.");
+const u8 gSilvallyMemoryPokedexText[] = _("Al despertar, su Sistema RKS se\nactiva. Con memorias específicas,\neste POKéMON cambia de tipo para\nconfundir a sus enemigos.");
 
 const u8 gMiniorMeteorPokedexText[] = _("Vivía en la capa de ozono, pero\ncae al suelo cuando el caparazón\nde su cuerpo se vuelve muy pesado.\nNació de nanopartículas mutadas.");
 

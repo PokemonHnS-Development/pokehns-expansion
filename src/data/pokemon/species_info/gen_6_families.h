@@ -361,11 +361,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .categoryName = _("Fox"),
         .height = 10,
         .weight = 145,
-        .description = COMPOUND_STRING(
-            "Braixen tiene una rama en su cola.\n"
-            "Cuando saca la rama de su cola,\n"
-            "la fricción la enciende. La llama\n"
-            "is used to send signals to its allies."),
+        .description = COMPOUND_STRING("Braixen tiene una rama en su cola.\nCuando saca la rama de su cola,\nla fricción la enciende. La llama\nsirve para avisar a sus aliados."),
         .pokemonScale = 305,
         .pokemonOffset = 7,
         .trainerScale = 257,
@@ -429,11 +425,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .categoryName = _("Fox"),
         .height = 15,
         .weight = 390,
-        .description = COMPOUND_STRING(
-            "Mira la llama en la punta de su\n"
-            "rama para concentrarse, lo que le\n"
-            "permite ver el futuro. La usa para\n"
-            "psychic power to incinerate its foes."),
+        .description = COMPOUND_STRING("Mira la llama en la punta de su\nrama para concentrarse, lo que le\npermite ver el futuro. Usa su poder\npsíquico para incinerar rivales."),
         .pokemonScale = 268,
         .pokemonOffset = 2,
         .trainerScale = 271,
@@ -565,11 +557,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .categoryName = _("Pokémon Burbuja"),
         .height = 3,
         .weight = 70,
-        .description = COMPOUND_STRING(
-            "Protege su piel cubriendo su cuerpo\n"
-            "con burbujas que segrega de su pecho y\n"
-            "espalda. Tras su aire despreocupado,\n"
-            "keeps a watchful eye on its surroundings."),
+        .description = COMPOUND_STRING("Protege su piel cubriendo su cuerpo\ncon burbujas que segrega de su pecho y\nespalda. Tras su aire despreocupado,\nvigila todo lo que lo rodea."),
         .pokemonScale = 530,
         .pokemonOffset = 13,
         .trainerScale = 256,
@@ -2162,11 +2150,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
     [SPECIES_FLOETTE_BLUE] =
     {
         FLOETTE_NORMAL_INFO(Blue, BLUE, 0),
-        .description = COMPOUND_STRING(
-            "Cuando este POKéMON encuentra\n"
-            "plantas marchitas, las lleva\n"
-            "los llevará de vuelta a su territorio\n"
-            "and care for them."),
+        .description = COMPOUND_STRING("Cuando este POKéMON encuentra\nplantas marchitas, las lleva\nde vuelta a su territorio\ny las cuida."),
         .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 
@@ -3224,11 +3208,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .categoryName = _("Espada Real"),
         .height = 17,
         .weight = 530,
-        .description = COMPOUND_STRING(
-            "En esta postura defensiva,\n"
-            "Aegislash usa su cuerpo de acero y un\n"
-            "campo de poder espectral para reducir\n"
-            "damage of any attack."),
+        .description = COMPOUND_STRING("En esta postura defensiva,\nAegislash usa su cuerpo de acero\ny un campo espectral para reducir\nel daño de cualquier ataque."),
         .pokemonScale = 259,
         .pokemonOffset = 0,
         .trainerScale = 290,
@@ -3720,11 +3700,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .categoryName = _("Volcar"),
         .height = 15,
         .weight = 470,
-        .description = COMPOUND_STRING(
-            "It lures prey close with hypnotic motions,\n"
-            "luego las envuelve con sus tentáculos\n"
-            "y las acaba con fluidos digestivos.\n"
-            "forces others to do whatever it wants."),
+        .description = COMPOUND_STRING("Atrae a sus presas con movimientos\nhipnóticos, luego las envuelve con\nsus tentáculos y las acaba con\nfluidos digestivos."),
         .pokemonScale = 268,
         .pokemonOffset = 2,
         .trainerScale = 271,
@@ -7426,11 +7402,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .categoryName = _("Genio"),
         .height = 65,
         .weight = 490,
-        .description = COMPOUND_STRING(
-            "Es la forma real de Hoopa, que ha\n"
-            "su poder sellado. Los aros que lleva\n"
-            "doblan dimensiones y son poderosos.\n"
-            "able to seize anything in the world."),
+        .description = COMPOUND_STRING("Es la forma real de Hoopa, con su\npoder sellado. Los aros que lleva\ndoblan dimensiones y son capaces\nde apoderarse de cualquier cosa."),
         .pokemonScale = 432,
         .pokemonOffset = 13,
         .trainerScale = 256,
