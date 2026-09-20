@@ -137,6 +137,7 @@ enum {
 // Maximum items in any single tab
 #define MAX_ITEMS_PER_TAB 20
 #define ITEMS_VISIBLE 5
+#define CHOICE_GAP 6      // separacion entre las 2 opciones visibles
 #define VALUE_X_START 104   // inicio de la zona de valores
 #define VALUE_X_END   198   // fin (se usa toda la ventana)
 #define Y_DIFF 16
@@ -1420,61 +1421,23 @@ static void DrawRightSideChoiceText(const u8 *text, int x, int y, bool8 chosen, 
     AddTextPrinterParameterized4(WIN_OPTIONS, FONT_SHORT, x, y + 1, 0, 0, color, TEXT_SKIP_DRAW, text);
 }
 
-static int GetMiddleX(const u8 *txt1, const u8 *txt2, const u8 *txt3)
+// Muestra como mucho DOS opciones: el valor seleccionado y un vecino.
+// Si las dos no caben en el ancho disponible, muestra solo la seleccionada.
+static void DrawChoices_Adaptive(const u8 *const *strings, int count, int selection, int y, bool8 active)
 {
-    int widthMid = GetStringWidth(FONT_SHORT, txt2, 0);
-    (void)txt1;
-    (void)txt3;
-    return (VALUE_X_END - widthMid) / 2 + VALUE_X_START;
-}
+    int wSel = GetStringWidth(FONT_SHORT, strings[selection], 0);
+    int xSel = GetStringRightAlignXOffset(FONT_SHORT, strings[selection], VALUE_X_END);
+    int other = (selection + 1 < count) ? (selection + 1) : (selection - 1);
 
-static void DrawChoices_Two(const u8 *const *strings, int selection, int y, bool8 active, int leftX)
-{
-    DrawRightSideChoiceText(strings[0], leftX, y + 1, selection == 0, active);
-    DrawRightSideChoiceText(strings[1], GetStringRightAlignXOffset(FONT_SHORT, strings[1], VALUE_X_END), y + 1, selection == 1, active);
+    if (other >= 0 && other != selection)
+    {
+        int wOth = GetStringWidth(FONT_SHORT, strings[other], 0);
+        int xOth = xSel - CHOICE_GAP - wOth;
+        if (xOth >= VALUE_X_START)
+            DrawRightSideChoiceText(strings[other], xOth, y + 1, FALSE, active);
+    }
+    DrawRightSideChoiceText(strings[selection], xSel, y + 1, TRUE, active);
 }
-
-static void DrawChoices_Three(const u8 *const *strings, int selection, int y, bool8 active)
-{
-    static const u8 orders[][2] = { {0, 1}, {1, 2}, {1, 2} };
-    const u8 *order = orders[selection];
-    DrawRightSideChoiceText(strings[order[0]], VALUE_X_START, y + 1, selection == order[0], active);
-    DrawRightSideChoiceText(strings[order[1]], GetStringRightAlignXOffset(FONT_SHORT, strings[order[1]], VALUE_X_END), y + 1, selection == order[1], active);
-}
-
-static void DrawChoices_Four(const u8 *const *strings, int selection, int y, bool8 active)
-{
-    static const u8 orders[][3] = { {0, 1, 2}, {0, 1, 2}, {1, 2, 3}, {1, 2, 3} };
-    const u8 *order = orders[selection];
-    int xMid = GetMiddleX(strings[order[0]], strings[order[1]], strings[order[2]]);
-    DrawRightSideChoiceText(strings[order[0]], VALUE_X_START, y + 1, selection == order[0], active);
-    DrawRightSideChoiceText(strings[order[1]], xMid, y + 1, selection == order[1], active);
-    DrawRightSideChoiceText(strings[order[2]], GetStringRightAlignXOffset(FONT_SHORT, strings[order[2]], VALUE_X_END), y + 1, selection == order[2], active);
-}
-
-static void DrawChoices_Five(const u8 *const *strings, int selection, int y, bool8 active)
-{
-    static const u8 orders[][3] = { {0, 1, 2}, {0, 1, 2}, {1, 2, 3}, {2, 3, 4}, {2, 3, 4} };
-    const u8 *order = orders[selection];
-    int xMid = GetMiddleX(strings[order[0]], strings[order[1]], strings[order[2]]);
-    DrawRightSideChoiceText(strings[order[0]], VALUE_X_START, y + 1, selection == order[0], active);
-    DrawRightSideChoiceText(strings[order[1]], xMid, y + 1, selection == order[1], active);
-    DrawRightSideChoiceText(strings[order[2]], GetStringRightAlignXOffset(FONT_SHORT, strings[order[2]], VALUE_X_END), y + 1, selection == order[2], active);
-}
-
-static void DrawChoices_Six(const u8 *const *strings, int selection, int y, bool8 active)
-{
-    static const u8 orders[][3] = { {0, 1, 2}, {0, 1, 2}, {1, 2, 3}, {2, 3, 4}, {3, 4, 5}, {3, 4, 5} };
-    const u8 *order = orders[selection];
-    int xMid = GetMiddleX(strings[order[0]], strings[order[1]], strings[order[2]]);
-    DrawRightSideChoiceText(strings[order[0]], VALUE_X_START, y + 1, selection == order[0], active);
-    DrawRightSideChoiceText(strings[order[1]], xMid, y + 1, selection == order[1], active);
-    DrawRightSideChoiceText(strings[order[2]], GetStringRightAlignXOffset(FONT_SHORT, strings[order[2]], VALUE_X_END), y + 1, selection == order[2], active);
-}
-
-// =============================================================================
-// ListMenu callbacks
-// =============================================================================
 
 static void ChallengeMenu_MoveCursorFunc(s32 itemIndex, bool8 onInit, struct ListMenu *list)
 {
@@ -1532,9 +1495,12 @@ static void ChallengeMenu_ItemPrintFunc(u8 windowId, u32 itemId, u8 y)
     switch (items[itemId].numChoices)
     {
     case 2:
-    {
-        int leftX = (sMenu->currentTab == TAB_MODE && itemId == ITEM_MODE_GAMEMODE) ? VALUE_X_START - 34 : VALUE_X_START;
-        DrawChoices_Two(items[itemId].choiceNames, sel, y, active, leftX);
+    case 3:
+    case 4:
+    case 5:
+    case 6:
+    default:
+        DrawChoices_Adaptive(items[itemId].choiceNames, items[itemId].numChoices, sel, y, active);
         break;
     }
     case 3:

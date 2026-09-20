@@ -76,6 +76,7 @@ enum {
 
 #define MAX_ITEMS_PER_TAB 16
 #define ITEMS_VISIBLE 5
+#define CHOICE_GAP 6      // separacion entre las 2 opciones visibles
 #define VALUE_X_START 104   // donde empiezan los valores
 #define VALUE_X_END   198   // fin de la zona de valores (ventana completa)
 #define Y_DIFF 16
@@ -648,64 +649,23 @@ static void DrawRightSideChoiceText(const u8 *text, int x, int y, bool8 chosen, 
     AddTextPrinterParameterized4(WIN_OPTIONS, FONT_SHORT, x, y + 1, 0, 0, color, TEXT_SKIP_DRAW, text);
 }
 
-static int GetMiddleX(const u8 *txt1, const u8 *txt2, const u8 *txt3)
+// Muestra como mucho DOS opciones: el valor seleccionado y un vecino.
+// Si las dos no caben en el ancho disponible, muestra solo la seleccionada.
+static void DrawChoices_Adaptive(const u8 *const *strings, int count, int selection, int y, bool8 active)
 {
-    int widthMid = GetStringWidth(FONT_SHORT, txt2, 0);
-    (void)txt1;
-    (void)txt3;
-    return (VALUE_X_END - widthMid) / 2 + VALUE_X_START;
-}
+    int wSel = GetStringWidth(FONT_SHORT, strings[selection], 0);
+    int xSel = GetStringRightAlignXOffset(FONT_SHORT, strings[selection], VALUE_X_END);
+    int other = (selection + 1 < count) ? (selection + 1) : (selection - 1);
 
-static void DrawChoices_Two(const u8 *const *strings, int selection, int y, bool8 active)
-{
-    DrawRightSideChoiceText(strings[0], VALUE_X_START, y + 1, selection == 0, active);
-    DrawRightSideChoiceText(strings[1], GetStringRightAlignXOffset(FONT_SHORT, strings[1], VALUE_X_END), y + 1, selection == 1, active);
-}
-
-static void DrawChoices_Three(const u8 *const *strings, int selection, int y, bool8 active)
-{
-    int xMid = GetMiddleX(strings[0], strings[1], strings[2]);
-    DrawRightSideChoiceText(strings[0], VALUE_X_START, y + 1, selection == 0, active);
-    DrawRightSideChoiceText(strings[1], xMid, y + 1, selection == 1, active);
-    DrawRightSideChoiceText(strings[2], GetStringRightAlignXOffset(FONT_SHORT, strings[2], VALUE_X_END), y + 1, selection == 2, active);
-}
-
-static void DrawChoices_Four(const u8 *const *strings, int selection, int y, bool8 active)
-{
-    static const u8 orders[][3] = { {0, 1, 2}, {0, 1, 2}, {1, 2, 3}, {1, 2, 3} };
-    const u8 *order = orders[selection];
-    int xMid = GetMiddleX(strings[order[0]], strings[order[1]], strings[order[2]]);
-    DrawRightSideChoiceText(strings[order[0]], 104, y + 1, selection == order[0], active);
-    DrawRightSideChoiceText(strings[order[1]], xMid, y + 1, selection == order[1], active);
-    DrawRightSideChoiceText(strings[order[2]], GetStringRightAlignXOffset(FONT_NORMAL, strings[order[2]], 198), y + 1, selection == order[2], active);
-}
-
-// Frame type: draws "TYPE  N" on the right side
-static void DrawFrameTypeChoice(u8 selection, int y, bool8 active)
-{
-    u8 text[16];
-    u8 n = selection + 1;
-    u8 i = 0;
-
-    if (n / 10 != 0)
+    if (other >= 0 && other != selection)
     {
-        text[i++] = n / 10 + CHAR_0;
-        text[i++] = n % 10 + CHAR_0;
+        int wOth = GetStringWidth(FONT_SHORT, strings[other], 0);
+        int xOth = xSel - CHOICE_GAP - wOth;
+        if (xOth >= VALUE_X_START)
+            DrawRightSideChoiceText(strings[other], xOth, y + 1, FALSE, active);
     }
-    else
-    {
-        text[i++] = n % 10 + CHAR_0;
-        text[i++] = CHAR_SPACER;
-    }
-    text[i] = EOS;
-
-    DrawRightSideChoiceText(COMPOUND_STRING("TIPO"), 104, y + 1, FALSE, active);
-    DrawRightSideChoiceText(text, 128, y + 1, TRUE, active);
+    DrawRightSideChoiceText(strings[selection], xSel, y + 1, TRUE, active);
 }
-
-// =============================================================================
-// ListMenu callbacks
-// =============================================================================
 
 static void OptionMenu_MoveCursorFunc(s32 itemIndex, bool8 onInit, struct ListMenu *list)
 {
@@ -749,13 +709,12 @@ static void OptionMenu_ItemPrintFunc(u8 windowId, u32 itemId, u8 y)
     switch (items[itemId].numChoices)
     {
     case 2:
-        DrawChoices_Two(items[itemId].choiceNames, sel, y, active);
-        break;
     case 3:
-        DrawChoices_Three(items[itemId].choiceNames, sel, y, active);
-        break;
     case 4:
-        DrawChoices_Four(items[itemId].choiceNames, sel, y, active);
+    case 5:
+    case 6:
+    default:
+        DrawChoices_Adaptive(items[itemId].choiceNames, items[itemId].numChoices, sel, y, active);
         break;
     }
 }
