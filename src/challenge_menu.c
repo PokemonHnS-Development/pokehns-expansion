@@ -1395,9 +1395,14 @@ static void VBlankCB(void)
 static void HighlightRow(void)
 {
     u16 scrollOffset, selectedRow;
+    u8 rowH, rowY;
     ListMenuGetScrollAndRow(sMenu->listTaskId, &scrollOffset, &selectedRow);
+    // La fila no siempre mide Y_DIFF: las opciones pueden ocupar dos lineas.
+    // Usamos la misma Y que el motor de listas para que la barra siga al texto.
+    rowH = GetFontAttribute(FONT_SHORT, FONTATTR_MAX_LETTER_HEIGHT);
+    rowY = ListMenuGetYCoordForPrintingArrowCursor(sMenu->listTaskId);
     SetGpuReg(REG_OFFSET_WIN0H, WIN_RANGE(Y_DIFF, 224));
-    SetGpuReg(REG_OFFSET_WIN0V, WIN_RANGE(selectedRow * Y_DIFF + 24, selectedRow * Y_DIFF + 40));
+    SetGpuReg(REG_OFFSET_WIN0V, WIN_RANGE(rowY + 23, rowY + 23 + rowH));
 }
 
 // =============================================================================
