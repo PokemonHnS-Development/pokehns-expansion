@@ -57,9 +57,7 @@ Route49_EventScript_SkierM::
 	end
 
 Route49_Text_SkierM::
-	.string "¡Oye, cuidado con mi tabla!\p"
-	.string "¿Qué? ¿Quieres luchar?\n"
-	.string "No way, these slopes are too wicked!$"
+	.string "¡Oye, cuidado con mi tabla!\p¿Qué? ¿Quieres pelear?\n¡Ni loco, estas pistas son\ndemasiado!$"
 
 Route49_EventScripts_KimonoGirl::
     delay 10
