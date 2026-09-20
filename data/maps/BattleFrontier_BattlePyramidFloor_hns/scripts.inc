@@ -129,9 +129,7 @@ BattleFacility_TrainerBattle_PlaceholderText_hns:
 	.string "Este es un mensaje de ejemplo.$"
 
 gText_BattlePyramidConfirmRest_hns::
-	.string "Tu reto de la PIRÁMIDE BATALLA\n"
-	.string "se guardará para que puedas salir.\l"
-	.string "Is that okay?$"
+	.string "Tu reto de la PIRÁMIDE BATALLA\nse guardará para que puedas salir.\l¿De\nacuerdo?$"
 
 gText_BattlePyramidConfirmRetire_hns::
 	.string "¿Estás seguro de que quieres dejar\n"

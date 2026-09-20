@@ -28,8 +28,7 @@ PacifidlogTown_PokemonCenter_1F_EventScript_OldMan::
 	end
 
 PacifidlogTown_PokemonCenter_1F_Text_WhatColorTrainerCard:
-	.string "What color is your TRAINER CARD?\n"
-	.string "¡La mía es de cobre!$"
+	.string "¿De qué color es tu TARJETA\nDE ENTRENADOR?\n¡La mía es de cobre!$"
 
 PacifidlogTown_PokemonCenter_1F_Text_OnColonyOfCorsola:
 	.string "PUEBLO PACIFIDLOG flota sobre\n"

@@ -5841,11 +5841,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .categoryName = _("Garra Afilada"),
         .height = 9,
         .weight = 270,
-        .description = COMPOUND_STRING(
-            "Sus garras curvas son ideales para\n"
-            "cruzar acantilados escarpados. De las\n"
-            "puntas de estas garras gotea un veneno\n"
-            "infiltrates the nerves of any prey caught."),
+        .description = COMPOUND_STRING("Sus garras curvas son ideales para\ncruzar acantilados escarpados. De\nsus puntas gotea un veneno que\ninfecta los nervios de su presa."),
         .pokemonScale = 413,
         .pokemonOffset = -3,
         .trainerScale = 256,

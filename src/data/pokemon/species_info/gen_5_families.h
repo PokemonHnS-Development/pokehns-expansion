@@ -3018,11 +3018,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .categoryName = _("Oído"),
         .height = 15,
         .weight = 320,
-        .description = COMPOUND_STRING(
-            "Mega Audino emite un pulso calmante\n"
-            "que reduce la hostilidad ajena.\n"
-            "Todo lo que entra en contacto con su\n"
-            "second feelers will fall into a deep sleep."),
+        .description = COMPOUND_STRING("Mega Audino emite un pulso\ntranquilizador que reduce la\nhostilidad ajena. Todo lo que\ntoca sus antenas cae en un\nsueño profundo."),
         .pokemonScale = 320,
         .pokemonOffset = 7,
         .trainerScale = 256,
@@ -4622,11 +4618,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .categoryName = _("Hostil"),
         .height = 10,
         .weight = 180,
-        .description = COMPOUND_STRING(
-            "Forman bancos con otros del mismo\n"
-            "color. El mayor rival de un grupo de\n"
-            "Basculin azules es el grupo rojo.\n"
-            "Its flavor is light and inoffensive."),
+        .description = COMPOUND_STRING("Forman bancos con otros de\nsu mismo color. El mayor rival\nde un grupo de Basculin azules\nes el grupo rojo. Su sabor es\nsuave e inofensivo."),
         .pokemonScale = 316,
         .pokemonOffset = 7,
         .trainerScale = 257,
@@ -4963,11 +4955,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .categoryName = _("Pokémon Cocodrilo"),
         .height = 10,
         .weight = 334,
-        .description = COMPOUND_STRING(
-            "Se mueven en grupos reducidos.\n"
-            "Gracias a la membrana especial que\n"
-            "sus ojos, puede ver su entorno\n"
-            "clearly, even in the dead of night."),
+        .description = COMPOUND_STRING("Se mueven en grupos reducidos.\nGracias a la membrana especial\nde sus ojos, puede ver su\nentorno con claridad, incluso\nde noche."),
         .pokemonScale = 305,
         .pokemonOffset = 7,
         .trainerScale = 257,
@@ -5108,11 +5096,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .categoryName = _("Amuleto Zen"),
         .height = 6,
         .weight = 375,
-        .description = COMPOUND_STRING(
-            "Cuando su fuego interno arde, no\n"
-            "puede calmarse y corre sin parar.\n"
-            "Cuando el fuego baja, se retrae\n"
-            "limbs into its body and falls asleep."),
+        .description = COMPOUND_STRING("Cuando su fuego interno arde,\nno puede calmarse y corre sin\nparar. Cuando el fuego baja,\n retrae sus extremidades y se\nduerme."),
         .pokemonScale = 422,
         .pokemonOffset = 14,
         .trainerScale = 256,
@@ -5248,10 +5232,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .categoryName = _("Ardiente"),
         .height = 13,
         .weight = 929,
-        .description = COMPOUND_STRING(
-            "Si es herido, deja de moverse. Se\n"
-            "queda quieto como piedra para\n"
-            "sharpening its mind and spirit."),
+        .description = COMPOUND_STRING("Si es herido, deja de moverse.\nSe queda quieto como piedra\npara agudizar su mente y su\nespíritu."),
         .pokemonScale = 272,
         .pokemonOffset = 3,
         .trainerScale = 256,
@@ -8152,11 +8133,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .categoryName = _("Estación"),
         .height = 6,
         .weight = 195,
-        .description = COMPOUND_STRING(
-            "Para evitar que Deerling entre en\n"
-            "sus campos, muchos granjeros usan\n"
-            "varios Lycanroc de guardia, ya que\n"
-            "they are its natural enemy."),
+        .description = COMPOUND_STRING("Para evitar que Deerling entre\nen sus campos, muchos granjeros\nusan varios Lycanroc de guardia,\nya que son su enemigo natural."),
         .pokemonScale = 422,
         .pokemonOffset = 14,
         .trainerScale = 256,
@@ -9063,11 +9040,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .categoryName = _("Flotante"),
         .height = 22,
         .weight = 1350,
-        .description = COMPOUND_STRING(
-            "Se impulsan expulsando el agua\n"
-            "de mar absorbida por sus cuerpos.\n"
-            "Dicen que hay un castillo de barcos\n"
-            "Jellicent have sunk on the seafloor."),
+        .description = COMPOUND_STRING("Se impulsan expulsando el agua\nde mar absorbida por sus cuerpos.\nDicen que hay un castillo de barcos\nque Jellicent hundió en el lecho\nmarino."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 348,
@@ -9589,11 +9562,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .categoryName = _("Engranaje"),
         .height = 6,
         .weight = 510,
-        .description = COMPOUND_STRING(
-            "Un miniengranaje y uno grande forman\n"
-            "su cuerpo. Los miniengranajes giran\n"
-            "a gran velocidad y se disparan.\n"
-            "It is dangerous if the gears don't return."),
+        .description = COMPOUND_STRING("Un miniengranaje y uno grande\nforman su cuerpo. Los miniengranajes\ngiran a gran velocidad y se disparan.\nEs peligroso si no regresan."),
         .pokemonScale = 422,
         .pokemonOffset = 12,
         .trainerScale = 256,
@@ -11587,11 +11556,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .categoryName = _("Hoja Afilada"),
         .height = 5,
         .weight = 102,
-        .description = COMPOUND_STRING(
-            "Ignoran sus heridas y atacan en grupo\n"
-            "clavando las hojas de sus cuerpos\n"
-            "en la presa. Si se desgastan, entonces\n"
-            "sharpens them on stones by the river."),
+        .description = COMPOUND_STRING("Ignoran sus heridas y atacan\nen grupo clavando las hojas de\nsus cuerpos en la presa. Si se\ndesgastan, las afilan en piedras del\nrío."),
         .pokemonScale = 432,
         .pokemonOffset = 15,
         .trainerScale = 256,
@@ -11944,11 +11909,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .categoryName = _("Valiente"),
         .height = 15,
         .weight = 410,
-        .description = COMPOUND_STRING(
-            "Por sus amigos, este bravo\n"
-            "warrior of the sky will not stop battling,\n"
-            "even if it is injured. One can carry a car\n"
-            "while flying."),
+        .description = COMPOUND_STRING("Por sus amigos, este bravo\nguerrero del cielo no dejará\nde luchar, aunque esté herido.\nPuede cargar un auto volando."),
         .pokemonScale = 268,
         .pokemonOffset = 2,
         .trainerScale = 271,
@@ -12234,11 +12195,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .categoryName = _("Oso Hormiguero"),
         .height = 14,
         .weight = 580,
-        .description = COMPOUND_STRING(
-            "Aspira aire por la cola,\n"
-            "lo convierte en fuego y lo usa como\n"
-            "lengua. Queman el acero de Durant\n"
-            "bodies and consume their insides."),
+        .description = COMPOUND_STRING("Aspira aire por la cola, lo\nconvierte en fuego y lo usa como\nlengua. Quema el acero de los\ncuerpos de Durant y devora sus\nentrañas."),
         .pokemonScale = 265,
         .pokemonOffset = 2,
         .trainerScale = 262,
@@ -12387,11 +12344,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .categoryName = _("Irate"),
         .height = 8,
         .weight = 173,
-        .description = COMPOUND_STRING(
-            "Al no ver, no es consciente de su\n"
-            "entorno, choca con todo y come\n"
-            "come anything that moves. Approaching\n"
-            "it carelessly is dangerous."),
+        .description = COMPOUND_STRING("Al no ver, no percibe su entorno,\nchoca con todo y se come\ncualquier cosa que se mueva.\nAcercarse sin cuidado es peligroso."),
         .pokemonScale = 366,
         .pokemonOffset = 12,
         .trainerScale = 257,

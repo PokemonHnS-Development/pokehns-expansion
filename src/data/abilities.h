@@ -413,7 +413,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_TRUANT] =
     {
         .name = _("AUSENTE"),
-        .description = COMPOUND_STRING("Moves only every two turns."),
+        .description = COMPOUND_STRING("Se mueve solo cada dos turnos."),
         .aiRating = -2,
         .cantBeOverwritten = TRUE,
     },
@@ -449,7 +449,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_FORECAST] =
     {
         .name = _("PREDICCIÓN"),
-        .description = COMPOUND_STRING("Changes with the weather."),
+        .description = COMPOUND_STRING("Cambia según el clima."),
         .aiRating = 6,
         .cantBeCopied = TRUE,
         .cantBeTraced = B_UPDATED_ABILITY_DATA >= GEN_4,
@@ -1001,7 +1001,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_WEAK_ARMOR] =
     {
         .name = _("ARMADURA FRÁGIL"),
-        .description = COMPOUND_STRING("Its stats change when hit."),
+        .description = COMPOUND_STRING("Sus stats cambian al recibir golpes."),
         .aiRating = 2,
     },
 
@@ -1130,7 +1130,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_IMPOSTER] =
     {
         .name = _("IMPOSTOR"),
-        .description = COMPOUND_STRING("Transforms into the foe."),
+        .description = COMPOUND_STRING("Se transforma en el rival."),
         .aiRating = 9,
         .cantBeCopied = TRUE,
         .cantBeTraced = TRUE,
@@ -1504,7 +1504,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_WATER_BUBBLE] =
     {
         .name = _("POMPA"),
-        .description = COMPOUND_STRING("Guards from fire and burns."),
+        .description = COMPOUND_STRING("Protege del fuego y de quemaduras."),
         .aiRating = 8,
         .breakable = TRUE,
     },
@@ -1820,7 +1820,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_COTTON_DOWN] =
     {
         .name = _("PELUSA"),
-        .description = COMPOUND_STRING("Lower Speed of all when hit."),
+        .description = COMPOUND_STRING("Baja la Velocidad de todos\nal recibir un golpe."),
         .aiRating = 3,
     },
 
@@ -1842,7 +1842,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_GULP_MISSILE] =
     {
         .name = _("TRAGAMISIL"),
-        .description = COMPOUND_STRING("If hit, spits prey from sea."),
+        .description = COMPOUND_STRING("Si le pegan, escupe a su presa al mar."),
         .aiRating = 3,
         .cantBeSwapped = B_UPDATED_ABILITY_DATA < GEN_9,
         .cantBeCopied = B_UPDATED_ABILITY_DATA < GEN_9,

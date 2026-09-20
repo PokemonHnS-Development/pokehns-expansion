@@ -298,11 +298,7 @@ FortreeCity_Gym_Text_WinonaRematchDefeat:
 	.string "I failed to reach your height again…$"
 
 FortreeCity_Gym_Text_WinonaPostRematch:
-	.string "WINONA: Aunque haya perdido,\n"
-	.string "the wings of my heart remain unbroken.\p"
-	.string "Puedo elevarme y volar otra vez\n"
-	.string "y una vez más.\p"
-	.string "¡Estoy convencido de ello!$"
+	.string "WINONA: Aunque haya perdido,\nmis alas del corazón siguen\nfirmes.\pPuedo elevarme y volar otra vez\ny una vez más.\p¡Estoy convencido de\nello!$"
 
 FortreeCity_Gym_Text_WinonaRematchNeedTwoMons:
 	.string "WINONA: Los humanos nunca podemos\n"

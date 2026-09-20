@@ -596,8 +596,7 @@ Alola_Akala_TrainerBattleSwimmerWater_Text_1:
 	.string "No es el descanso que buscaba…$"
 
 Alola_Akala_TrainerBattleSwimmerWater_Text_2:
-	.string "ULA'ULA ISLE has the best beaches!\n"
-	.string "¡Ignora a quien diga lo contrario!$"
+	.string "¡La ISLA ULA'ULA tiene las mejores\nplayas!\n¡Ignora a quien diga lo contrario!$"
 
 Alola_Akala_TrainerBattleSwimmerWaterM_Text_0:
 	.string "¡Ja!\n¿Usar un POKéMON para surfear?$"

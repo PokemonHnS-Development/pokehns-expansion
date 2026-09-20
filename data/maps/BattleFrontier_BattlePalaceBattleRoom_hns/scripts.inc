@@ -521,10 +521,7 @@ BattleFrontier_BattlePalaceBattleRoom_Text_SpenserPostSilverBattle_hns:
 	.string "¡Tráeme el objeto!$"
 
 BattleFrontier_BattlePalaceBattleRoom_Text_LetsSeeFrontierPass_hns:
-	.string "My, my, if only you could maintain that\n"
-	.string "fachada de autoridad distinguida…\p"
-	.string "¡Toma!\n"
-	.string "¡Enseña tu FRONTIER PASS!$"
+	.string "Vaya, vaya, ojalá mantuvieras esa\nfachada de autoridad\ndistinguida…\p¡Toma!\n¡Enseña tu FRONTIER PASS!$"
 
 BattleFrontier_BattlePalaceBattleRoom_Text_ReceivedSpiritsSymbol_hns:
 	.string "El Símbolo Espíritu estaba grabado\n"

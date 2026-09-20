@@ -307,12 +307,7 @@ Alola_Ulaula_BattlePalossand_Text_0:
 	.string "¡Rayos!$"
 
 Alola_Ulaula_MtLanikalaSign_Text_0:
-	.string "La gente de aquí llama con cariño\n"
-	.string "a esta montaña MT. LANIKALA,\l"
-	.string "locals, as it is the tallest mountain\l"
-	.string "en las ISLAS ALOLA.\p"
-	.string "El nombre real de esta montaña se\n"
-	.string "perdió con el tiempo.$"
+	.string "La gente de aquí llama con cariño\na esta montaña MT. LANIKALA,\lpues es la\nmontaña más alta\lde las ISLAS ALOLA.\pEl\nnombre real de esta montaña se\nperdió con el tiempo.$"
 
 Alola_Ulaula_UlaulaSign_Text_0:
 	.string "ISLA ULA'ULA$"

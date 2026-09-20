@@ -1492,11 +1492,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .categoryName = _("Bicho Peludo"),
         .height = 3,
         .weight = 32,
-        .description = COMPOUND_STRING(
-            "Weedle tiene un sentido del olfato\n"
-            "muy agudo. Distingue sus hojas\n"
-            "favoritas de las que no le gustan.\n"
-            "sniffing with its big red nose."),
+        .description = COMPOUND_STRING("Weedle tiene un olfato muy agudo.\nDistingue sus hojas favoritas\nde las que no le gustan.\nOlfatea con su gran nariz roja."),
         .pokemonScale = 455,
         .pokemonOffset = 22,
         .trainerScale = 256,
@@ -2115,11 +2111,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .categoryName = _("Ratón"),
         .height = 3,
         .weight = 35,
-        .description = COMPOUND_STRING(
-            "Rattata es extremadamente cauteloso.\n"
-            "Incluso al dormir, mueve sus orejas\n"
-            "siempre para escuchar el peligro.\n"
-            "It will make its nest anywhere."),
+        .description = COMPOUND_STRING("Rattata es muy cauteloso.\nAun dormido, mueve las orejas\npara detectar el peligro.\nPuede anidar en cualquier lugar."),
         .pokemonScale = 481,
         .pokemonOffset = 21,
         .trainerScale = 256,
@@ -5222,11 +5214,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .categoryName = _("Taladro"),
         .height = 14,
         .weight = 620,
-        .description = COMPOUND_STRING(
-            "La cola de Nidoking tiene un poder\n"
-            "destructivo capaz de derribar\n"
-            "una torre de metal. Una vez que ataca\n"
-            "on a rampage, there is no stopping it."),
+        .description = COMPOUND_STRING("La cola de Nidoking tiene un poder\ndestructivo capaz de derribar\nuna torre de metal. Cuando entra\nen furia, nadie puede detenerlo."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 256,
@@ -7042,11 +7030,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .categoryName = _("Polilla Venenosa"),
         .height = 15,
         .weight = 125,
-        .description = COMPOUND_STRING(
-            "Venomoth son nocturnos; solo salen\n"
-            "activos de noche. Sus presas favoritas\n"
-            "insectos que se juntan en las farolas,\n"
-            "attracted by the light in the darkness."),
+        .description = COMPOUND_STRING("Venomoth son nocturnos; solo salen\nactivos de noche. Sus presas favoritas\ninsectos que se juntan en las farolas,\natraídos por la luz en la oscuridad."),
         .pokemonScale = 285,
         .pokemonOffset = 2,
         .trainerScale = 256,
@@ -7697,11 +7681,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .categoryName = _("Gato Elegante"),
         .height = 11,
         .weight = 330,
-        .description = COMPOUND_STRING(
-            "Mira a todos por debajo del hombro,\n"
-            "itself. In contrast to its lovely face, it\n"
-            "es tan brutal que tortura a los\n"
-            "prey rather than finishing them off."),
+        .description = COMPOUND_STRING("Mira a todos por debajo del hombro,\nitself. A diferencia de su bella cara,\nes tan brutal que tortura a sus\npresas en vez de rematarlas."),
         .pokemonScale = 320,
         .pokemonOffset = 10,
         .trainerScale = 256,
@@ -10388,11 +10368,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .categoryName = _("Roca"),
         .height = 10,
         .weight = 1100,
-        .description = COMPOUND_STRING(
-            "Cuando dos Graveler chocan por la\n"
-            "dravita, su comida favorita, causan\n"
-            "destellos de luz y ruidos fuertes.\n"
-            "People call them “fireworks of the earth.”"),
+        .description = COMPOUND_STRING("Cuando dos Graveler chocan por la\ndravita, su comida favorita, causan\ndestellos de luz y ruidos fuertes.\nLa gente los llama "fuegos de tierra"."),
         .pokemonScale = 256,
         .pokemonOffset = 2,
         .trainerScale = 256,
@@ -12336,11 +12312,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .categoryName = _("Lodo"),
         .height = 7,
         .weight = 420,
-        .description = COMPOUND_STRING(
-            "Hay unos cien de ellos viviendo\n"
-            "en el vertedero de Alola. Son todos\n"
-            "muy trabajadores y comen mucha basura.\n"
-            "seems to relish any and all kinds of trash."),
+        .description = COMPOUND_STRING("Hay unos cien de ellos viviendo\nen el vertedero de Alola. Son todos\nmuy trabajadores y comen mucha basura.\nDisfrutan cualquier tipo de basura."),
         .pokemonScale = 258,
         .pokemonOffset = 10,
         .trainerScale = 256,

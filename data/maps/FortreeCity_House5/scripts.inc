@@ -20,9 +20,7 @@ FortreeCity_House5_EventScript_Zigzagoon::
 	end
 
 FortreeCity_House5_Text_TreeHousesAreGreat:
-	.string "The tree houses of FORTREE are great!\p"
-	.string "Creo que es el mejor pueblo para\n"
-	.string "vivir junto a los POKéMON.$"
+	.string "¡Qué geniales casas de ARBOLEDA!\pCreo\nque es el mejor pueblo para\nvivir junto a los POKéMON.$"
 
 FortreeCity_House5_Text_AdaptedToNature:
 	.string "POKéMON y personas se adaptaron a\n"

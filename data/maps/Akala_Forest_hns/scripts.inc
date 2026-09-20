@@ -66,9 +66,7 @@ Alola_AkalaForest_TrainerBattleBugCatcher1_Text_1:
 	.string "¡Ay, eso dolió!$"
 
 Alola_AkalaForest_TrainerBattleBugCatcher1_Text_2:
-	.string "The ISLES are far away from other land,\n"
-	.string "así que los POKéMON bicho de aquí\l"
-	.string "se adaptaron al entorno.$"
+	.string "Las ISLAS están lejos de otras\ntierras,\nasí que los POKéMON bicho de aquí\lse\nadaptaron al entorno.$"
 
 Alola_AkalaForest_TrainerBattleBugCatcher2_Text_0:
 	.string "¡Mira lo que atrapé!$"

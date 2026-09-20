@@ -65,6 +65,5 @@ SootopolisCity_PokemonCenter_1F_Text_AlwaysBeFriendsWithPokemon:
 	.string "Because it's fun to be with POKéMON!$"
 
 SootopolisCity_PokemonCenter_1F_Text_ArentPokemonOurFriends:
-	.string "¿No son los POKéMON nuestros amigos?\p"
-	.string "Why are they going wild this way?$"
+	.string "¿No son los POKéMON nuestros\namigos?\p¿Por qué se comportan así?$"
 

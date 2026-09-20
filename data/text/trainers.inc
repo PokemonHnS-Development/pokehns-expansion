@@ -698,8 +698,7 @@ Route107_Text_RayPostBattle:
 	.string "más importante!$"
 
 Route107_Text_RayNotEnoughPokemon:
-	.string "RAY: If you want to battle us,\n"
-	.string "¡trae más POKéMON!$"
+	.string "RAY: Si nos quieren retar,\n¡traigan más POKéMON!$"
 
 Route107_Text_CamronIntro:
 	.string "Estoy en medio de un triatlón,\n"
@@ -2488,8 +2487,7 @@ Route117_Text_AnnaAndMegRegister:
 	.string "Volverás, ¿verdad?$"
 
 Route117_Text_AnnaNotEnoughMons:
-	.string "ANNA: If you want to battle us,\n"
-	.string "trae dos POKéMON contigo.$"
+	.string "ANNA: Si nos quieren retar,\ntraigan dos POKéMON.$"
 
 Route117_Text_MegIntro:
 	.string "MEG: ¡Me uniré a mi compañero\n"
@@ -2521,8 +2519,7 @@ Route117_Text_AnnaPostRematch:
 	.string "¡Diría que eres el segundo mejor!$"
 
 Route117_Text_AnnaRematchNotEnoughMons:
-	.string "ANNA: If you want to battle us,\n"
-	.string "trae dos POKéMON contigo.$"
+	.string "ANNA: Si nos quieren retar,\ntraigan dos POKéMON.$"
 
 Route117_Text_MegRematchIntro:
 	.string "MEG: ¡Me uniré a mi compañero\n"

@@ -49,7 +49,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Greetings[] = {
     },
     [EC_INDEX(EC_WORD_HOW_DO)] =
     {
-        .text = COMPOUND_STRING("HOW DO"),
+        .text = COMPOUND_STRING("CÓMO SE"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_FORGIVE),
         .enabled = TRUE,
     },

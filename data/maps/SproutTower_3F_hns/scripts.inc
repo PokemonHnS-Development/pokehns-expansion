@@ -206,10 +206,7 @@ SproutTower_Text_SageLi_TakeFlash:
 	.string "Toma esta MO FLASH.$"
 
 SproutTower_Text_SageLi_FlashExplain:
-	.string "FLASH ilumina hasta el lugar\n"
-	.string "más oscuro de todos.\p"
-	.string "Pero para usarlo fuera de combate,\n"
-	.string "need the BADGE from VIOLET's GYM.$"
+	.string "FLASH ilumina hasta el lugar\nmás oscuro de todos.\pPero para usarlo\nfuera de combate,\nnecesitas la MEDALLA del GIMNASIO\nde CIUDAD VIOLETA.$"
 
 SproutTower_Text_SageLi_AfterBattle:
 	.string "Espero que aprendas y crezcas\n"

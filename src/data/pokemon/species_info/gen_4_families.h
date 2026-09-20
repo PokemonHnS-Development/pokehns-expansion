@@ -635,11 +635,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .categoryName = _("Emperador"),
         .height = 17,
         .weight = 845,
-        .description = COMPOUND_STRING(
-            "Los tres cuernos de su pico\n"
-            "demuestran su poder. Evita\n"
-            "peleas, pero aniquila a su rival.\n"
-            "anything that threatens its pride."),
+        .description = COMPOUND_STRING("Los tres cuernos de su pico\ndemuestran su poder. Evita\npeleas, pero aniquila a su rival.\nsi algo amenaza su orgullo."),
         .pokemonScale = 259,
         .pokemonOffset = 0,
         .trainerScale = 290,
@@ -1856,11 +1852,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .categoryName = _("Escudo"),
         .height = 13,
         .weight = 1495,
-        .description = COMPOUND_STRING(
-            "Sus caras duras como rocas sirven\n"
-            "para protegerse de ataques frontales.\n"
-            "Al ser atacados, forman un muro.\n"
-            "They shielded their young in that way."),
+        .description = COMPOUND_STRING("Sus caras duras como rocas sirven\npara protegerse de ataques frontales.\nAl ser atacados, forman un muro.\nAsí protegían a sus crías."),
         .pokemonScale = 272,
         .pokemonOffset = 4,
         .trainerScale = 256,
@@ -2207,11 +2199,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .categoryName = _("Bagworm"),
         .height = 5,
         .weight = 65,
-        .description = COMPOUND_STRING(
-            "Su piel de tierra es bastante dura y\n"
-            "repele sin problema los picotazos.\n"
-            "Dicen que un Wormadam que evoluciona\n"
-            "on a cold day will have a thicker cloak."),
+        .description = COMPOUND_STRING("Su piel de tierra es bastante dura y\nrepele sin problema los picotazos.\nDicen que un Wormadam que evoluciona\nen día frío tendrá capa más gruesa."),
         .pokemonScale = 432,
         .pokemonOffset = 13,
         .trainerScale = 256,
@@ -2276,11 +2264,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .categoryName = _("Bagworm"),
         .height = 5,
         .weight = 65,
-        .description = COMPOUND_STRING(
-            "Su cuerpo de desechos se mezcla con\n"
-            "el paisaje para pasar inadvertido.\n"
-            "Parece la forma perfecta para que\n"
-            "evade the detection of predators."),
+        .description = COMPOUND_STRING("Su cuerpo de desechos se mezcla con\nel paisaje para pasar inadvertido.\nParece la forma perfecta para que\nevada a los depredadores."),
         .pokemonScale = 432,
         .pokemonOffset = 13,
         .trainerScale = 256,

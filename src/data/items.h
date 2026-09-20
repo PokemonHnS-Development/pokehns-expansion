@@ -135,9 +135,7 @@ static const u8 sPureIncenseDesc[]    = _("A hold item that\n"
                                           "ayuda a repeler\n"
                                           "Pokémon.");
 
-static const u8 sKingsRockDesc[]      = _("A hold item that\n"
-                                          "puede causar retroceso\n"
-                                          "when the foe is hit.");
+static const u8 sKingsRockDesc[]      = _("Objeto que puede causar\nretroceso al golpear\nal rival.");
 
 static const u8 sFigyBerryDesc[]      = _("A hold item that\n"
                                           "recupera PS pero\n"
@@ -12886,10 +12884,7 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM47"),
         .price = 3000,
-        .description = COMPOUND_STRING(
-            "Propaga un\n"
-            "alas afiladas y\n"
-            "slams into the foe."),
+        .description = COMPOUND_STRING("Lanza alas afiladas y\nse estrella contra\nel rival."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -12900,10 +12895,7 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM48"),
         .price = 3000,
-        .description = COMPOUND_STRING(
-            "Intercambia habilidades\n"
-            "con el rival en el\n"
-            "turn this is used."),
+        .description = COMPOUND_STRING("Intercambia habilidades\ncon el rival en el turno\nen que se usa."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,

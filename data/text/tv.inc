@@ -35,9 +35,7 @@ LilycoveCity_ContestLobby_Text_ThatsAllForInterview:
 	.string "¡Espero que la esperes con ansias!$"
 
 LilycoveCity_ContestLobby_Text_PleaseDoShareStoryWithMe:
-	.string "Oh, qué mal...\p"
-	.string "Well, if you come across a good story,\n"
-	.string "por favor, compártela conmigo.$"
+	.string "Oh, qué mal...\pSi te topas con una\nbuena historia,\ncompártela conmigo,\npor favor.$"
 
 LilycoveCity_ContestLobby_Text_LookingForwardToNextContest:
 	.string "Estaré esperando tu próximo\n"

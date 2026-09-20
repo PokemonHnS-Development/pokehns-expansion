@@ -135,11 +135,7 @@ RustboroCity_Flat1_2F_Text_ShesNotSmilingAtAll:
 	.string "Quizá WALDA sea una niña seria...$"
 
 RustboroCity_Flat1_2F_Text_ThinkOfMyOwnPhrase:
-	.string "Oh, así que no sabes palabras.\n"
-	.string "Mejor pienso algo yo misma, entonces.\p"
-	.string "Hmm…\n"
-	.string "How about “{STR_VAR_1}”?\l"
-	.string "Veamos si eso funciona.$"
+	.string "Oh, así que no sabes palabras.\nMejor pienso algo yo misma,\nentonces.\pHmm…\n¿Qué tal "{STR_VAR_1}"?\lVeamos si eso funciona.$"
 
 RustboroCity_Flat1_2F_Text_ShesNotSmilingAtAll2:
 	.string "{STR_VAR_1}.\n"

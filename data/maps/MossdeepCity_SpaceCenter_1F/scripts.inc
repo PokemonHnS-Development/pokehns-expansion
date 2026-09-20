@@ -390,8 +390,7 @@ MossdeepCity_SpaceCenter_1F_Text_Grunt4Intro:
 	.string "¡Planeamos llevarnos hasta el final!$"
 
 MossdeepCity_SpaceCenter_1F_Text_Grunt4Defeat:
-	.string "Please, can you spare some fuel?\n"
-	.string "¡Hasta una taza pequeña sirve!$"
+	.string "¿Podrías darme algo de combustible?\n¡Hasta una taza pequeña sirve!$"
 
 MossdeepCity_SpaceCenter_1F_Text_Grunt4PostBattle:
 	.string "¿Qué vamos a hacer con\n"

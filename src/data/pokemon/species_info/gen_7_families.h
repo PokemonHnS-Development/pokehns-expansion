@@ -779,11 +779,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .categoryName = _("Pico Corneta"),
         .height = 6,
         .weight = 148,
-        .description = COMPOUND_STRING(
-            "Al doblar su pico, puede emitir\n"
-            "varios sonidos y ser una molestia\n"
-            "ruidosa para sus vecinos. Come\n"
-            "berries and stores their seeds in its beak."),
+        .description = COMPOUND_STRING("Al doblar su pico, puede emitir\nvarios sonidos y molestar con\nruido a sus vecinos. Come bayas\ny guarda sus semillas en el pico."),
         .pokemonScale = 422,
         .pokemonOffset = 12,
         .trainerScale = 256,
@@ -2673,11 +2669,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .categoryName = _("Burro"),
         .height = 10,
         .weight = 1100,
-        .description = COMPOUND_STRING(
-            "El lodo pegado a los cascos de\n"
-            "Mudbray mejora su agarre y su potente\n"
-            "paso. Comer tierra, hacer lodo y jugar\n"
-            "in the mire form its daily routine."),
+        .description = COMPOUND_STRING("El lodo pegado a los cascos de\nMudbray mejora su agarre y su\npaso potente. Comer tierra, hacer\nlodo y jugar es su rutina diaria."),
         .pokemonScale = 305,
         .pokemonOffset = 7,
         .trainerScale = 257,
@@ -5260,11 +5252,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .categoryName = _("Triturar"),
         .height = 9,
         .weight = 190,
-        .description = COMPOUND_STRING(
-            "It stuns its prey with its psychic powers\n"
-            "y luego la tritura con sus fuertes\n"
-            "strong teeth. Even Shellder's shell is no\n"
-            "match for it."),
+        .description = COMPOUND_STRING("Aturde a sus presas con sus poderes\npsíquicos y luego las tritura con\nsus fuertes dientes. Ni la concha\nde Shellder puede contra él."),
         .pokemonScale = 338,
         .pokemonOffset = 8,
         .trainerScale = 256,
@@ -6917,11 +6905,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .categoryName = _("Prisma"),
         .height = 38,
         .weight = 4600,
-        .description = COMPOUND_STRING(
-            "Esta es su forma mientras devora\n"
-            "y luego los ataca con sus garras.\n"
-            "...\n"
-            "claws on its four limbs and back."),
+        .description = COMPOUND_STRING("Esta es su forma mientras devora\ny luego los ataca con sus garras.\n \n \n"),
         .pokemonScale = 256,
         .pokemonOffset = 3,
         .trainerScale = 369,
@@ -7744,10 +7728,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .categoryName = _("Golpe Trueno"),
         .height = 15,
         .weight = 445,
-        .description = COMPOUND_STRING(
-            "Ataca a sus enemigos a la velocidad\n"
-            "del rayo y los despedaza con fuerza.\n"
-            "limb with its sharp claws."),
+        .description = COMPOUND_STRING("Ataca a sus enemigos a la velocidad\ndel rayo y los despedaza con fuerza.\n \n"),
         .pokemonScale = 268,
         .pokemonOffset = 2,
         .trainerScale = 271,
@@ -7876,10 +7857,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .categoryName = _("Tuerca Hex"),
         .height = 2,
         .weight = 80,
-        .description = COMPOUND_STRING(
-            "Funde hierro y otros metales del suelo\n"
-            "para poder absorberlos.\n"
-            "into its body of molten steel."),
+        .description = COMPOUND_STRING("Funde hierro y otros metales del suelo\npara poder absorberlos.\n \n"),
         .pokemonScale = 682,
         .pokemonOffset = 24,
         .trainerScale = 256,
@@ -7941,10 +7919,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .categoryName = _("Tuerca Hex"),
         .height = 25,
         .weight = 8000,
-        .description = COMPOUND_STRING(
-            "Venerado hace tiempo por su capacidad\n"
-            "de crear hierro de la nada, por\n"
-            "it has come back to life after 3,000 years."),
+        .description = COMPOUND_STRING("Venerado hace tiempo por su capacidad\nde crear hierro de la nada, por\n \n"),
         .pokemonScale = 257,
         .pokemonOffset = 10,
         .trainerScale = 423,

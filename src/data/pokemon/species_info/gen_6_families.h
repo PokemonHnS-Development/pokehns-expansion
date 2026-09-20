@@ -29,11 +29,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .categoryName = _("Nuez Espinosa"),
         .height = 4,
         .weight = 90,
-        .description = COMPOUND_STRING(
-            "The quills on its head are usually soft.\n"
-            "Al tensarlas, las puntas se vuelven\n"
-            "tan duras que pueden perforar cosas.\n"
-            "rock without any effort."),
+        .description = COMPOUND_STRING("Las púas de su cabeza suelen ser\nblandas. Al tensarlas, las puntas\nse vuelven tan duras que pueden\nperforar rocas sin esfuerzo."),
         .pokemonScale = 491,
         .pokemonOffset = 12,
         .trainerScale = 256,
@@ -3400,11 +3396,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .categoryName = _("Perfume"),
         .height = 2,
         .weight = 5,
-        .description = COMPOUND_STRING(
-            "Antes, en vez de usar perfumes,\n"
-            "las damas llevaban un Spritzee que\n"
-            "soltaba el aroma que deseaban.\n"
-            "changes depending on what it has eaten."),
+        .description = COMPOUND_STRING("Antes, en vez de usar perfumes,\nlas damas llevaban un Spritzee\nque soltaba el aroma que deseaban,\nsegún lo que hubiera comido."),
         .pokemonScale = 682,
         .pokemonOffset = 24,
         .trainerScale = 256,
@@ -6367,11 +6359,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .categoryName = _("Iceberg"),
         .height = 20,
         .weight = 5050,
-        .description = COMPOUND_STRING(
-            "Varios Bergmite se amontonan en su\n"
-            "espalda, pareciendo un portaaviones\n"
-            "de hielo. Su cuerpo pesado aplasta\n"
-            "anything that stands in its way."),
+        .description = COMPOUND_STRING("Varios Bergmite se amontonan en\nsu espalda, como un portaaviones\nde hielo. Su cuerpo pesado aplasta\ntodo lo que se cruza en su camino."),
         .pokemonScale = 261,
         .pokemonOffset = 1,
         .trainerScale = 334,
@@ -7212,11 +7200,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .categoryName = _("Orden"),
         .height = 77,
         .weight = 6100,
-        .description = COMPOUND_STRING(
-            "En respuesta a las emociones humanas\n"
-            "durante una crisis sin precedentes,\n"
-            "Zygarde Megaevoluciona y calma el\n"
-            "situation with its unmatched power."),
+        .description = COMPOUND_STRING("En respuesta a las emociones humanas\ndurante una crisis sin precedentes,\nZygarde Megaevoluciona y calma la\nsituación con su poder sin igual."),
         .frontPic = gMonFrontPic_ZygardeMega,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
@@ -7350,11 +7334,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .categoryName = _("Joyas"),
         .height = 11,
         .weight = 278,
-        .description = COMPOUND_STRING(
-            "Las impurezas de la superficie\n"
-            "desaparecieron, brillando tanto\n"
-            "que no se puede mirar directamente.\n"
-            "It is known as “the Royal Pink Princess”."),
+        .description = COMPOUND_STRING("Las impurezas de la superficie\ndesaparecieron, brillando tanto\nque no se puede mirar directo.\nEs la “Princesa Rosa Real”."),
         .pokemonScale = 365,
         .pokemonOffset = 12,
         .trainerScale = 256,

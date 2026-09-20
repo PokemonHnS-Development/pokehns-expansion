@@ -673,9 +673,7 @@ SecretBase_EventScript_CushionInteract::
 	end
 
 SecretBase_Text_AllDecorationsWillBeReturned:
-	.string "Toda la decoración y muebles de tu\n"
-	.string "BASE SECRETA volverán a tu PC.\p"
-	.string "Is that okay?$"
+	.string "Toda la decoración y muebles de tu\nBASE SECRETA volverán a tu PC.\p¿Estás\nde acuerdo?$"
 
 SecretBase_Text_WantToRegisterSecretBase:
 	.string "¿Quieres registrar\n"

@@ -766,10 +766,7 @@ Route110_Text_MayDefeated:
 	.string "¡Eres mejor de lo que esperaba!$"
 
 Route110_Text_MayTakeThis:
-	.string "MAY: {PLAYER}{KUN}, has estado ocupado\n"
-	.string "entrenando, ¿verdad?\p"
-	.string "¡Creo que mereces un premio!\n"
-	.string "¡Esto es para ti!$"
+	.string "MAY: {PLAYER}{KUN}, has estado ocupado\nentrenando, ¿verdad?\p¡Creo que mereces\nun premio!\n¡Esto es para ti!$"
 
 Route110_Text_MayExplainItemfinder:
 	.string "MAY: Es un BUSCADESOBJ.\p"

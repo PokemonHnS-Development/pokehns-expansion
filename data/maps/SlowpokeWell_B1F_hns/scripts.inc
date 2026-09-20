@@ -157,9 +157,7 @@ SlowpokeWell_B1F_Text_GruntM2After:
 	.string "¡Es duro ser un RECLUTA ROCKET!$"
 
 SlowpokeWell_B1F_Text_GruntF1Seen:
-	.string "¿Que deje de quitar colas?\p"
-	.string "Sí, solo intenta derrotar a\n"
-	.string "of us!$"
+	.string "¿Que deje de quitar colas?\p¡Sí, solo\nintenta vencernos!$"
 
 SlowpokeWell_B1F_Text_GruntF1Beaten:
 	.string "You rotten brat!$"

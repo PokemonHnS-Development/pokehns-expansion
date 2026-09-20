@@ -187,5 +187,4 @@ PewterCity_Gym_Text_BrockNotRequestedMon:
 	.string "Eso no es lo que estoy buscando.$"
 
 PewterCity_Gym_Text_BrockTradeCompleted:
-	.string "BROCK: ¿Cómo va WOODY?\n"
-	.string "BONSLY are tougher than they look!$"
+	.string "BROCK: ¿Cómo le va a WOODY?\n¡Los BONSLY son más duros de\nlo que parecen!$"

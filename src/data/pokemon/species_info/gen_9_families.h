@@ -677,10 +677,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .categoryName = _("Hog"),
         .height = 10,
         .weight = 1200,
-        .description = COMPOUND_STRING(
-            "Oinkologne presume de su piel\n"
-            "fina y brillante. Emite un aroma\n"
-            "scent from the tip of its tail."),
+        .description = COMPOUND_STRING("Oinkologne presume de su piel\nfina y brillante. Emite un aroma\npor la punta de su cola.\n"),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -1982,11 +1979,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .categoryName = _("Loro"),
         .height = 6,
         .weight = 24,
-        .description = COMPOUND_STRING(
-            "Aunque estos Squawkabilly son los\n"
-            "menos numerosos, no tienen\n"
-            "problemas en pueblos pues se mezclan\n"
-            "in with the white buildings."),
+        .description = COMPOUND_STRING("Aunque estos Squawkabilly son los\nmenos numerosos, no tienen\nproblemas en pueblos pues se mezclan\ncon los edificios blancos.\n"),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -4130,10 +4123,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .categoryName = _("Delfín"),
         .height = 13,
         .weight = 602,
-        .description = COMPOUND_STRING(
-            "Su anillo de agua es de agua\n"
-            "agua de mar con un fluido pegajoso\n"
-            "Finizen secretes from its blowhole."),
+        .description = COMPOUND_STRING("Su anillo de agua es de agua\nmarina con un fluido pegajoso\nque Finizen segrega por su espiráculo.\n"),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,

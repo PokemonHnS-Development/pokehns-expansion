@@ -932,7 +932,7 @@ Debug_EventScript_FakeRTCNotEnabled::
 	return
 
 Debug_EventScript_FakeRTCNotEnabled_Text_0:
-	.string "You currently do not have Fake RTC\nenabled. Please enable it in include/\lconfig/overworld.h$"
+	.string "Actualmente no tienes el RTC falso\nactivado. Actívalo en\ninclude/\lconfig/overworld.h$"
 
 
 Debug_EventScript_TellTheTime_Text_0:

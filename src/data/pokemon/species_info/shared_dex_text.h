@@ -100,11 +100,7 @@ const u8 gZygarde50PokedexText[] = _(
     "Hay rumores de que posee un poder\n"
     "lies hidden within its cells.");
 
-const u8 gZygarde10PokedexText[] = _(
-    "Este es Zygarde cuando cerca del 10%\n"
-    "de sus piezas han sido ensambladas.\n"
-    "Salta hacia el pecho de su rival y\n"
-    "sinks its sharp fangs into them.");
+const u8 gZygarde10PokedexText[] = _("Este es Zygarde cuando cerca del 10%\nde sus piezas han sido ensambladas.\nSalta hacia el pecho de su rival y\nclava sus afilados colmillos en él.\n");
 
 // Gen 7 families
 const u8 gGumshoosPokedexText[] = _(

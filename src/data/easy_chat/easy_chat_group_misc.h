@@ -85,7 +85,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Misc[] = {
     },
     [EC_INDEX(EC_WORD_THIS_IS_IT_EXCL)] =
     {
-        .text = COMPOUND_STRING("THIS IS IT!"),
+        .text = COMPOUND_STRING("¡ESTO ES TODO!"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_HIGH),
         .enabled = TRUE,
     },
@@ -151,7 +151,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Misc[] = {
     },
     [EC_INDEX(EC_WORD_THAT_WAS)] =
     {
-        .text = COMPOUND_STRING("THAT WAS"),
+        .text = COMPOUND_STRING("FUE ESE"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_THAT),
         .enabled = TRUE,
     },

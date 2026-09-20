@@ -884,11 +884,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .categoryName = _("Pez Lodo"),
         .height = 19,
         .weight = 1020,
-        .description = COMPOUND_STRING(
-            "Al Megaevolucionar, aumenta la fuerza\n"
-            "que necesita para actuar en el agua.\n"
-            "Puede usar su poder tenaz\n"
-            "both on land and in the water."),
+        .description = COMPOUND_STRING("Al Megaevolucionar, aumenta la fuerza\nque necesita para actuar en el agua.\nUsa su poder tenaz tanto en tierra\ncomo en el agua."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 256,
@@ -966,11 +962,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .categoryName = _("Bocado"),
         .height = 5,
         .weight = 136,
-        .description = COMPOUND_STRING(
-            "Amenaza ferozmente a sus rivales con\n"
-            "sus colmillos. Persigue sin descanso\n"
-            "a quien huye. Huye si es superado.\n"
-            "however, if the foe strikes back."),
+        .description = COMPOUND_STRING("Amenaza ferozmente a sus rivales\ncon sus colmillos. Persigue sin\ndescanso a quien huye. Huye, sin\nembargo, si el rival contraataca."),
         .pokemonScale = 481,
         .pokemonOffset = 19,
         .trainerScale = 256,
@@ -1505,11 +1497,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .categoryName = _("Gusano"),
         .height = 3,
         .weight = 36,
-        .description = COMPOUND_STRING(
-            "Se pega a las ramas y come hojas.\n"
-            "El hilo que escupe por la boca,\n"
-            "se vuelve pegajoso al tocar algo\n"
-            "air, slows the movement of its foes."),
+        .description = COMPOUND_STRING("Se pega a las ramas y come hojas.\nEl hilo que escupe por la boca se\nvuelve pegajoso al tocar el aire y\nralentiza a sus rivales."),
         .pokemonScale = 711,
         .pokemonOffset = 24,
         .trainerScale = 256,
@@ -2654,11 +2642,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .categoryName = _("Ave Acuática"),
         .height = 12,
         .weight = 280,
-        .description = COMPOUND_STRING(
-            "Vuela rozando la cima de las olas.\n"
-            "Al ver una presa, usa su gran pico\n"
-            "para atraparla junto con el agua.\n"
-            "It protects its eggs in its beak."),
+        .description = COMPOUND_STRING("Vuela rozando la cima de las olas.\nAl ver una presa, usa su gran pico\npara atraparla junto con el agua.\nProtege sus huevos en el pico."),
         .pokemonScale = 288,
         .pokemonOffset = 1,
         .trainerScale = 256,
@@ -5101,11 +5085,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .categoryName = _("Armadura de Hierro"),
         .height = 21,
         .weight = 3600,
-        .description = COMPOUND_STRING(
-            "Sus cuernos de hierro crecen poco a\n"
-            "poco. Se usan para determinar la\n"
-            "edad de Aggron. Los surcos en su\n"
-            "worn with pride as mementos from battles."),
+        .description = COMPOUND_STRING("Sus cuernos de hierro crecen\npoco a poco. Sirven para saber\nla edad de Aggron. Sus surcos\nse gastan con orgullo como trofeos."),
         .pokemonScale = 256,
         .pokemonOffset = -1,
         .trainerScale = 350,
@@ -5640,10 +5620,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .categoryName = _("Descarga"),
         .height = 18,
         .weight = 440,
-        .description = COMPOUND_STRING(
-            "Se ha acumulado mucha electricidad en\n"
-            "cuerpo, irritando a Manectric. Su\n"
-            "speed is equal to that of a lightning bolt."),
+        .description = COMPOUND_STRING("Acumula tanta electricidad en el\ncuerpo que irrita a Manectric. Su\nvelocidad iguala a un rayo."),
         .pokemonScale = 256,
         .pokemonOffset = 3,
         .trainerScale = 257,
@@ -6102,11 +6079,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .categoryName = _("Espina"),
         .height = 3,
         .weight = 20,
-        .description = COMPOUND_STRING(
-            "Un Roselia que bebe agua de manantial\n"
-            "rica en nutrientes florece hermoso.\n"
-            "La fragancia de sus flores tiene el\n"
-            "effect of making its foes careless."),
+        .description = COMPOUND_STRING("Un Roselia que bebe agua de\nmanantial rica en nutrientes\nflorece hermoso. La fragancia\nde sus flores distrae a rivales."),
         .pokemonScale = 677,
         .pokemonOffset = 20,
         .trainerScale = 256,
@@ -10156,11 +10129,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .categoryName = _("Fruta"),
         .height = 20,
         .weight = 1000,
-        .description = COMPOUND_STRING(
-            "Vuela batiendo sus anchas hojas.\n"
-            "El racimo de frutas que crece en su\n"
-            "cuello es muy dulce. En primavera,\n"
-            "it scatters pollen from its neck."),
+        .description = COMPOUND_STRING("Vuela batiendo sus anchas hojas.\nEl racimo de frutas de su cuello\nes muy dulce. En primavera\nesparce polen desde el cuello."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 344,
@@ -10403,11 +10372,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .categoryName = _("Campana de Viento"),
         .height = 12,
         .weight = 80,
-        .description = COMPOUND_STRING(
-            "Vibra todo su cuerpo para atacar en\n"
-            "todas direcciones con ondas sonoras.\n"
-            "Quien las oye se confunde tanto que\n"
-            "forget who they are."),
+        .description = COMPOUND_STRING("Vibra todo su cuerpo para atacar\nen todas direcciones con ondas\nsonoras. Quien las oye se\nconfunde y olvida quien es."),
         .frontPic = gMonFrontPic_ChimechoMega,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
@@ -10622,11 +10587,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .categoryName = _("Desastre"),
         .height = 12,
         .weight = 490,
-        .description = COMPOUND_STRING(
-            "Usa su pelaje, que ha vuelto afilado\n"
-            "como garras, para cortar rivales de\n"
-            "un solo golpe. Es un acto de bondad\n"
-            "to keep them from suffering."),
+        .description = COMPOUND_STRING("Usa su pelaje, que ha vuelto afilado\ncomo garras, para cortar rivales de\nun solo golpe. Es un acto de bondad\npara evitarles sufrimiento."),
         .frontPic = gMonFrontPic_AbsolMegaZ,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 1,

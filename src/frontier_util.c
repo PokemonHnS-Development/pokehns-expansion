@@ -165,9 +165,7 @@ const struct FrontierBrain gFrontierBrainInfo[NUM_FRONTIER_FACILITIES] =
 #endif
         .isFemale = FALSE,
         .lostTexts = {
-            COMPOUND_STRING(
-                "Ah…\n"
-                "Now this is something else…"), //Silver
+            COMPOUND_STRING("Ah…\nEsto sí que es otra cosa…"), //Silver
             COMPOUND_STRING(
                 "¡Gwah!\n"
                 "Hahahaha!")                    //Gold

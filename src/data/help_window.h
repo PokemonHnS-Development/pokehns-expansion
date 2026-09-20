@@ -87,14 +87,7 @@ const struct HelpWindow gHelpWindowInfo[] =
     [HELP_DAYCARE1_WINDOW] =
     {
         .header = COMPOUND_STRING("BABY POKéMON ABILITIES"),
-        .desc = COMPOUND_STRING("PICHU's ability is STATIC.\n"
-                                "La habilidad de CLEFFA es ATRACTO.\n"
-                                "IGGLYBUFF's ability is CUTE CHARM.\n"
-                                "TYROGUE's ability is GUTS.\n"
-                                "SMOOCHUM's ability is OBLIVIOUS.\n"
-                                "ELEKID's ability is STATIC.\n"
-                                "MAGBY's ability is FLAME BODY."
-                            ),
+        .desc = COMPOUND_STRING("La habilidad de PICHU: ELECTRICIDAD.\nLa habilidad de CLEFFA es ATRACTO.\nLa habilidad de IGGLYBUFF es ENCANTO.\nLa habilidad de TYROGUE es AGALLAS.\nLa habilidad de SMOOCHUM es DESPISTE.\nLa habilidad de ELEKID: ELECTRICIDAD.\nLa habilidad de MAGBY: CUERPO LLAMA."),
         .headerFont = FONT_NORMAL,
         .descFont = FONT_SMALL,
         .headerColor = {0, 8, 3},

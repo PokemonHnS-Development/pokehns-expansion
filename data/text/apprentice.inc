@@ -536,12 +536,7 @@ gText_ApprenticeRejectTeaching12::
 	.string "¡Necesito que me enseñes todo!$"
 
 gText_ApprenticeWhichLevelMode12::
-	.string "¡Qué suerte, sí, yujuu!\n"
-	.string "¿Te puedo hacer una pregunta?\p"
-	.string "Since we're near the BATTLE TOWER,\n"
-	.string "¿qué tal una pregunta sobre su poder?\p"
-	.string "De las opciones que ves,\n"
-	.string "¿cuál es la correcta para mí?$"
+	.string "¡Qué suerte, sí, yujuu!\n¿Te puedo hacer una pregunta?\pComo\nestamos cerca de la TORRE\nBATALLA, ¿qué tal una pregunta\nsobre su poder?\pDe las opciones, ¿cuál\nme conviene?$"
 
 gText_ApprenticeLevelModeThanks12::
 	.string "Si {STR_VAR_1} es lo que sugieres,\n"

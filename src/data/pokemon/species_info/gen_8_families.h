@@ -222,10 +222,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .categoryName = _("Tambor"),
         .height = 280,
         .weight = 0,
-        .description = COMPOUND_STRING(
-            "Rillaboom se ha unido a su\n"
-            "bosque de tambores y sigue dando\n"
-            "down beats that shake all of Galar."),
+        .description = COMPOUND_STRING("Rillaboom se ha unido a su\nbosque de tambores y sigue dando\n \n"),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 365,
@@ -603,10 +600,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .categoryName = _("Lagarto Agua"),
         .height = 7,
         .weight = 115,
-        .description = COMPOUND_STRING(
-            "Es un combatiente astuto que lucha\n"
-            "usando globos de agua creados con\n"
-            "moisture secreted from its palms."),
+        .description = COMPOUND_STRING("Es un combatiente astuto que lucha\nusando globos de agua creados con\nla humedad que secretan sus palmas."),
         .pokemonScale = 365,
         .pokemonOffset = 12,
         .trainerScale = 256,
@@ -2889,10 +2883,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .categoryName = _("Serpiente Arena"),
         .height = 22,
         .weight = 76,
-        .description = COMPOUND_STRING(
-            "Al cavar, traga arena y la guarda\n"
-            "en su cuello. Su bolsa puede albergar\n"
-            "more than 17 pounds of sand."),
+        .description = COMPOUND_STRING("Al cavar, traga arena y la guarda\nen su cuello. Su bolsa puede\nalmacenar más de 8 kg de arena."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 348,
@@ -5248,9 +5239,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .categoryName = _("Formación"),
         .height = 30,
         .weight = 620,
-        .description = COMPOUND_STRING(
-            "Cinco son soldados y uno es el\n"
-            "brass. The brass's orders are absolute."),
+        .description = COMPOUND_STRING("Cinco son soldados y uno es el jefe.\nLas órdenes del jefe son absolutas."),
         .pokemonScale = 275,
         .pokemonOffset = 7,
         .trainerScale = 256,
@@ -5374,10 +5363,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .categoryName = _("Erizo de Mar"),
         .height = 3,
         .weight = 10,
-        .description = COMPOUND_STRING(
-            "Come algas, usando sus dientes para\n"
-            "rasparlas de las rocas. Corriente\n"
-            "flows from the tips of its spines."),
+        .description = COMPOUND_STRING("Come algas, usando sus dientes para\nrasparlas de las rocas. Corriente\neléctrica fluye por sus púas."),
         .pokemonScale = 530,
         .pokemonOffset = 13,
         .trainerScale = 256,
@@ -6410,11 +6396,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .categoryName = _("Fósil"),
         .height = 20,
         .weight = 1750,
-        .description = COMPOUND_STRING(
-            "Aunque captura presas congelando\n"
-            "su entorno, luego tiene problemas\n"
-            "para comerlas debido a su cuerpo.\n"
-            "mouth is on top of its head."),
+        .description = COMPOUND_STRING("Aunque captura presas congelando\nsu entorno, luego tiene problemas\npara comerlas: su boca está en la\nparte superior de la cabeza."),
         .pokemonScale = 261,
         .pokemonOffset = 1,
         .trainerScale = 334,
@@ -6475,10 +6457,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .categoryName = _("Aleación"),
         .height = 18,
         .weight = 400,
-        .description = COMPOUND_STRING(
-            "Su cuerpo parece metal pulido y\n"
-            "es ligero y fuerte a la vez. Lo\n"
-            "drawback is that it rusts easily."),
+        .description = COMPOUND_STRING("Su cuerpo parece metal pulido y\nes ligero y fuerte a la vez. El\ninconveniente es que se oxida fácil.\n"),
         .pokemonScale = 267,
         .pokemonOffset = 2,
         .trainerScale = 286,
