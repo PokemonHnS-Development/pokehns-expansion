@@ -25,7 +25,7 @@ static const u8 sPokeDollDesc[]       = _("Sirve para huir de\ncualquier batalla
 
 static const u8 sMaxReviveDesc[]      = _("Revives a fainted\n"
                                           "Pokémon con todos los\n"
-                                          "its HP.");
+                                          "sus PS.");
 
 static const u8 sHealthFeatherDesc[]  = _("Un objeto que sube\nlos PS base de\nun Pokémon.");
 
@@ -872,7 +872,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = COMPOUND_STRING(
             "Hierba muy amarga\n"
             "que revive a un\n"
-            "fainted Pokémon."),
+            "POKéMON debilitado."),
         .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_HEALTH_RECOVERY,
         .type = ITEM_USE_PARTY_MENU,
@@ -1103,7 +1103,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = COMPOUND_STRING(
             "Revive totalmente y\n"
             "restaura todo\n"
-            "fainted Pokémon."),
+            "POKéMON debilitado."),
         .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_HEALTH_RECOVERY,
         .type = ITEM_USE_PARTY_MENU,
