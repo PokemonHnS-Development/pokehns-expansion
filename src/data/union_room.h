@@ -275,7 +275,7 @@ static const u8 *const sText_WaitOrShowCardTexts[GENDER_COUNT][4] = {
     }
 };
 
-ALIGNED(4) static const u8 sText_WaitForChatMale2[] = _("You want to chat, huh?\nSure, just wait a little."); // Unused
+ALIGNED(4) static const u8 sText_WaitForChatMale2[] = _("¿Quieres charlar?\nEspera un poco, ¿sí?"); // Unused
 ALIGNED(4) static const u8 sText_DoneWaitingBattleMale[] = _("¡Gracias por esperar!\n¡Comencemos la batalla!{PAUSE 60}");
 ALIGNED(4) static const u8 sText_DoneWaitingChatMale[] = _("All right!\nLet's chat!{PAUSE 60}");
 ALIGNED(4) static const u8 sText_DoneWaitingBattleFemale[] = _("¡Perdón por la espera!\n¡Empecemos!{PAUSE 60}");

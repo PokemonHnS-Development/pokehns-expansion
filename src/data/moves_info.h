@@ -1934,9 +1934,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     [MOVE_ABSORB] =
     {
         .name = COMPOUND_STRING("ABSORBER"),
-        .description = COMPOUND_STRING(
-            "Ataque que absorbe\n"
-            "half the damage inflicted."),
+        .description = COMPOUND_STRING("Ataque que absorbe\nla mitad del daño causado."),
         .effect = EFFECT_ABSORB,
         .power = 20,
         .type = TYPE_GRASS,
@@ -2157,9 +2155,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     [MOVE_PETAL_DANCE] =
     {
         .name = COMPOUND_STRING("DANZA PÉTALO"),
-        .description = COMPOUND_STRING(
-            "Un frenesí de 2 a 3 turnos\n"
-            "that confuses the user."),
+        .description = COMPOUND_STRING("Frenesí de 2 a 3 turnos\nque confunde al usuario."),
         #if B_UPDATED_MOVE_DATA >= GEN_5
             .power = 120,
         #elif B_UPDATED_MOVE_DATA == GEN_4
@@ -2699,9 +2695,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     [MOVE_NIGHT_SHADE] =
     {
         .name = COMPOUND_STRING("TINIEBLAS"),
-        .description = COMPOUND_STRING(
-            "Inflige un daño idéntico\n"
-            "to the user's level."),
+        .description = COMPOUND_STRING("Inflige un daño igual al\nnivel del usuario."),
         .effect = EFFECT_LEVEL_DAMAGE,
         .power = 1,
         .type = TYPE_GHOST,
@@ -3069,9 +3063,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     [MOVE_REFLECT] =
     {
         .name = COMPOUND_STRING("REFLEJO"),
-        .description = COMPOUND_STRING(
-            "Muro de luz que reduce\n"
-            "damage for 5 turns."),
+        .description = COMPOUND_STRING("Muro de luz que reduce el\ndaño por 5 turnos."),
         .effect = EFFECT_REFLECT,
         .power = 0,
         .type = TYPE_PSYCHIC,
@@ -4079,9 +4071,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     [MOVE_EXPLOSION] =
     {
         .name = COMPOUND_STRING("EXPLOSIÓN"),
-        .description = COMPOUND_STRING(
-            "Causa gran daño pero\n"
-            "makes the user faint."),
+        .description = COMPOUND_STRING("Causa gran daño pero\nel usuario se debilita."),
         .effect = EFFECT_HIT,
         .power = B_UPDATED_MOVE_DATA >= GEN_2 ? 250 : 170,
         .type = TYPE_NORMAL,
@@ -4785,9 +4775,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     [MOVE_REVERSAL] =
     {
         .name = COMPOUND_STRING("INVERSIÓN"),
-        .description = COMPOUND_STRING(
-            "Causa más daño cuando\n"
-            "the user's HP is down."),
+        .description = COMPOUND_STRING("Causa más daño cuando\nel usuario tiene menos PS."),
         .effect = EFFECT_FLAIL,
         .power = 1,
         .type = TYPE_FIGHTING,
@@ -5339,9 +5327,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     [MOVE_OUTRAGE] =
     {
         .name = COMPOUND_STRING("ENFADO"),
-        .description = COMPOUND_STRING(
-            "Un frenesí de 2 a 3 turnos\n"
-            "that confuses the user."),
+        .description = COMPOUND_STRING("Frenesí de 2 a 3 turnos\nque confunde al usuario."),
         .effect = EFFECT_HIT,
         .power = B_UPDATED_MOVE_DATA >= GEN_4 ? 120 : 90,
         .type = TYPE_DRAGON,
@@ -8104,9 +8090,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     [MOVE_BLAST_BURN] =
     {
         .name = COMPOUND_STRING("ANILLO ÍGNEO"),
-        .description = COMPOUND_STRING(
-            "Potente, pero deja al\n"
-            "user immobile the next turn."),
+        .description = COMPOUND_STRING("Potente, pero deja al\nusuario inmóvil el próximo turno."),
         .effect = EFFECT_HIT,
         .power = 150,
         .type = TYPE_FIRE,
@@ -8130,9 +8114,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     [MOVE_HYDRO_CANNON] =
     {
         .name = COMPOUND_STRING("HIDROCAÑÓN"),
-        .description = COMPOUND_STRING(
-            "Potente, pero deja al\n"
-            "user immobile the next turn."),
+        .description = COMPOUND_STRING("Potente, pero deja al\nusuario inmóvil el próximo turno."),
         .effect = EFFECT_HIT,
         .power = 150,
         .type = TYPE_WATER,
@@ -8888,9 +8870,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     [MOVE_FRENZY_PLANT] =
     {
         .name = COMPOUND_STRING("PLANTA FEROZ"),
-        .description = COMPOUND_STRING(
-            "Potente, pero deja al\n"
-            "user immobile the next turn."),
+        .description = COMPOUND_STRING("Potente, pero deja al\nusuario inmóvil el próximo turno."),
         .effect = EFFECT_HIT,
         .power = 150,
         .type = TYPE_GRASS,
@@ -11825,9 +11805,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     [MOVE_ROAR_OF_TIME] =
     {
         .name = COMPOUND_STRING("DISTORSIÓN"),
-        .description = COMPOUND_STRING(
-            "Potente, pero deja al\n"
-            "user immobile the next turn."),
+        .description = COMPOUND_STRING("Potente, pero deja al\nusuario inmóvil el próximo turno."),
         .effect = EFFECT_HIT,
         .power = 150,
         .type = TYPE_DRAGON,
@@ -19100,9 +19078,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     [MOVE_RAGING_FURY] =
     {
         .name = COMPOUND_STRING("ERUPCIÓN DE IRA"),
-        .description = COMPOUND_STRING(
-            "Un frenesí de 2 a 3 turnos\n"
-            "that confuses the user."),
+        .description = COMPOUND_STRING("Frenesí de 2 a 3 turnos\nque confunde al usuario."),
         .effect = EFFECT_HIT,
         .power = B_UPDATED_MOVE_DATA >= GEN_9 ? 120 : 90,
         .type = TYPE_FIRE,
@@ -20114,13 +20090,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("PAISAJE NEVADO"),
         #if B_PREFERRED_ICE_WEATHER == B_ICE_WEATHER_HAIL
-            .description = COMPOUND_STRING(
-                "Llama una tormenta de granizo\n"
-                "strikes every turn."),
+            .description = COMPOUND_STRING("Invoca una granizada\nque golpea cada turno."),
         #else
-            .description = COMPOUND_STRING(
-                "Llama a una tormenta de nieve\n"
-                "lasts for five turns."),
+            .description = COMPOUND_STRING("Invoca una tormenta de nieve\nque dura cinco turnos."),
         #endif
         .effect = EFFECT_WEATHER,
         .power = 0,
@@ -20300,9 +20272,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     [MOVE_BITTER_BLADE] =
     {
         .name = COMPOUND_STRING("ESPADA LAMENTO"),
-        .description = COMPOUND_STRING(
-            "Ataque que absorbe\n"
-            "half the damage inflicted."),
+        .description = COMPOUND_STRING("Ataque que absorbe\nla mitad del daño causado."),
         .effect = EFFECT_ABSORB,
         .power = 90,
         .type = TYPE_FIRE,
