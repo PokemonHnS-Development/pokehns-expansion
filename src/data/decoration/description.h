@@ -1,6 +1,4 @@
-const u8 DecorDesc_SMALL_DESK[] = _(
-    "Un escritorio pequeño\n"
-        "for one.");
+const u8 DecorDesc_SMALL_DESK[] = _("Un escritorio pequeño\n");
 
 const u8 DecorDesc_POKEMON_DESK[] = _(
     "Un escritorio pequeño\n"
@@ -30,50 +28,32 @@ const u8 DecorDesc_HARD_DESK[] = _(
         "de rocas. Cabe\n"
         "many decorations.");
 
-const u8 DecorDesc_SMALL_CHAIR[] = _(
-    "Una silla pequeña\n"
-        "for one.");
+const u8 DecorDesc_SMALL_CHAIR[] = _("Una silla pequeña\n");
 
 const u8 DecorDesc_POKEMON_CHAIR[] = _(
     "Una silla pequeña\n"
         "con forma de\n"
         "POKé BALL.");
 
-const u8 DecorDesc_HEAVY_CHAIR[] = _(
-    "Una silla pequeña\n"
-        "of steel.");
+const u8 DecorDesc_HEAVY_CHAIR[] = _("Una silla pequeña\n");
 
-const u8 DecorDesc_PRETTY_CHAIR[] = _(
-    "Una silla pequeña\n"
-        "of glass.");
+const u8 DecorDesc_PRETTY_CHAIR[] = _("Una silla pequeña\n");
 
-const u8 DecorDesc_COMFORT_CHAIR[] = _(
-    "Una silla pequeña\n"
-        "of leaves.");
+const u8 DecorDesc_COMFORT_CHAIR[] = _("Una silla pequeña\n");
 
-const u8 DecorDesc_RAGGED_CHAIR[] = _(
-    "Una silla pequeña\n"
-        "of wood.");
+const u8 DecorDesc_RAGGED_CHAIR[] = _("Una silla pequeña\n");
 
-const u8 DecorDesc_BRICK_CHAIR[] = _(
-    "Una silla pequeña\n"
-        "of brick.");
+const u8 DecorDesc_BRICK_CHAIR[] = _("Una silla pequeña\n");
 
-const u8 DecorDesc_CAMP_CHAIR[] = _(
-    "Una silla pequeña\n"
-        "of logs.");
+const u8 DecorDesc_CAMP_CHAIR[] = _("Una silla pequeña\n");
 
-const u8 DecorDesc_HARD_CHAIR[] = _(
-    "Una silla pequeña\n"
-        "of rock.");
+const u8 DecorDesc_HARD_CHAIR[] = _("Una silla pequeña\n");
 
 const u8 DecorDesc_RED_PLANT[] = _(
     "Una planta roja\n"
         "plant.");
 
-const u8 DecorDesc_TROPICAL_PLANT[] = _(
-    "Una planta tropical\n"
-        "plant in a pot.");
+const u8 DecorDesc_TROPICAL_PLANT[] = _("Una planta tropical\n");
 
 const u8 DecorDesc_PRETTY_FLOWERS[] = _(
     "Una maceta linda\n"
@@ -89,9 +69,7 @@ const u8 DecorDesc_BIG_PLANT[] = _(
         "forma de sombrilla\n"
         "big pot.");
 
-const u8 DecorDesc_GORGEOUS_PLANT[] = _(
-    "Una planta imponente\n"
-        "plant in a big pot.");
+const u8 DecorDesc_GORGEOUS_PLANT[] = _("Una planta imponente\n");
 
 const u8 DecorDesc_RED_BRICK[] = _(
     "Un ladrillo rojo.\n"
@@ -135,9 +113,7 @@ const u8 DecorDesc_SOLID_BOARD[] = _(
         "para cruzar al otro\n"
         "side.");
 
-const u8 DecorDesc_SLIDE[] = _(
-    "Úsalo para deslizarte\n"
-        "from the platform.");
+const u8 DecorDesc_SLIDE[] = _("Úsalo para deslizarte\n");
 
 const u8 DecorDesc_FENCE_LENGTH[] = _(
     "Una valla pequeña que\n"
@@ -152,9 +128,7 @@ const u8 DecorDesc_TIRE[] = _(
         "Los adornos pueden ser\n"
         "placed on top.");
 
-const u8 DecorDesc_STAND[] = _(
-    "Un pedestal grande\n"
-        "with steps.");
+const u8 DecorDesc_STAND[] = _("Un pedestal grande\n");
 
 const u8 DecorDesc_MUD_BALL[] = _(
     "Una gran bola de lodo.\n"

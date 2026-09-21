@@ -848,10 +848,9 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("POLVO CURACIÓN"),
         .price = (I_PRICE >= GEN_7) ? 300 : 450,
-        .description = COMPOUND_STRING(
-            "Polvo amargo\n"
-            "que cura todo\n"
-            "status problems."),
+        .description = COMPOUND_STRING("Polvo amargo que\n
+cura todo problema\n
+de estado."),
         .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_STATUS_RECOVERY,
         .type = ITEM_USE_PARTY_MENU,
@@ -1060,10 +1059,9 @@ const struct ItemInfo gItemsInfo[] =
         .name = ITEM_NAME("ELIXIR MÁXIMO"),
         .price = (I_PRICE >= GEN_2) ? 4500 : 1,
         .holdEffectParam = 255,
-        .description = COMPOUND_STRING(
-            "Restaura totalmente los\n"
-            "PP de un POKéMON\n"
-            "moves."),
+        .description = COMPOUND_STRING("Restaura totalmente\n
+los PP de un\n
+movimiento."),
         .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_PP_RECOVERY,
         .type = ITEM_USE_PARTY_MENU,
@@ -7926,10 +7924,7 @@ const struct ItemInfo gItemsInfo[] =
         .price = (I_PRICE >= GEN_7) ? 0 : 10000,
         .holdEffect = HOLD_EFFECT_GRISEOUS_ORB,
         .holdEffectParam = 20,
-        .description = COMPOUND_STRING(
-            "Potencia el poder de Giratina\n"
-            "Dragón y Fantasma-\n"
-            "type moves."),
+        .description = COMPOUND_STRING("Potencia el poder de Giratina\n"),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_SPECIAL_HELD_ITEM,
         .type = ITEM_USE_BAG_MENU,
@@ -8348,10 +8343,9 @@ const struct ItemInfo gItemsInfo[] =
         .price = TYPE_BOOSTING_PRICE,
         .holdEffect = HOLD_EFFECT_TYPE_POWER,
         .holdEffectParam = TYPE_BOOST_PARAM,
-        .description = COMPOUND_STRING(
-            "Objeto equipado que\n"
-            "sube el poder de\n"
-            "Normal-type moves."),
+        .description = COMPOUND_STRING("Objeto equipado que\n
+sube el poder de\n
+movimientos TIERRA."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_TYPE_BOOST_HELD_ITEM,
         .type = ITEM_USE_BAG_MENU,
@@ -8374,10 +8368,9 @@ const struct ItemInfo gItemsInfo[] =
     #endif
         .holdEffect = HOLD_EFFECT_TYPE_POWER,
         .holdEffectParam = TYPE_BOOST_PARAM,
-        .description = COMPOUND_STRING(
-            "Objeto equipado que\n"
-            "sube el poder de\n"
-            "Fire-type moves."),
+        .description = COMPOUND_STRING("Objeto equipado que\n
+sube el poder de\n
+movimientos TIERRA."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_TYPE_BOOST_HELD_ITEM,
         .type = ITEM_USE_BAG_MENU,
@@ -8394,10 +8387,9 @@ const struct ItemInfo gItemsInfo[] =
         .price = TYPE_BOOSTING_PRICE,
         .holdEffect = HOLD_EFFECT_TYPE_POWER,
         .holdEffectParam = TYPE_BOOST_PARAM,
-        .description = COMPOUND_STRING(
-            "Objeto equipado que\n"
-            "sube el poder de\n"
-            "Water-type moves."),
+        .description = COMPOUND_STRING("Objeto equipado que\n
+sube el poder de\n
+movimientos TIERRA."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_TYPE_BOOST_HELD_ITEM,
         .type = ITEM_USE_BAG_MENU,
@@ -8414,10 +8406,9 @@ const struct ItemInfo gItemsInfo[] =
         .price = TYPE_BOOSTING_PRICE,
         .holdEffect = HOLD_EFFECT_TYPE_POWER,
         .holdEffectParam = TYPE_BOOST_PARAM,
-        .description = COMPOUND_STRING(
-            "Objeto equipado que\n"
-            "potencia el tipo Eléctrico-\n"
-            "type moves."),
+        .description = COMPOUND_STRING("Objeto equipado que\n
+potencia los ataques\n
+tipo LUCHA."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_TYPE_BOOST_HELD_ITEM,
         .type = ITEM_USE_BAG_MENU,
@@ -8451,10 +8442,9 @@ const struct ItemInfo gItemsInfo[] =
         .price = TYPE_BOOSTING_PRICE,
         .holdEffect = HOLD_EFFECT_TYPE_POWER,
         .holdEffectParam = TYPE_BOOST_PARAM,
-        .description = COMPOUND_STRING(
-            "Objeto equipado que\n"
-            "sube el poder de\n"
-            "Ice-type moves."),
+        .description = COMPOUND_STRING("Objeto equipado que\n
+sube el poder de\n
+movimientos TIERRA."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_TYPE_BOOST_HELD_ITEM,
         .type = ITEM_USE_BAG_MENU,
@@ -8471,10 +8461,9 @@ const struct ItemInfo gItemsInfo[] =
         .price = TYPE_BOOSTING_PRICE,
         .holdEffect = HOLD_EFFECT_TYPE_POWER,
         .holdEffectParam = TYPE_BOOST_PARAM,
-        .description = COMPOUND_STRING(
-            "Objeto equipado que\n"
-            "potencia el tipo Lucha-\n"
-            "type moves."),
+        .description = COMPOUND_STRING("Objeto equipado que\n
+potencia los ataques\n
+tipo LUCHA."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_TYPE_BOOST_HELD_ITEM,
         .type = ITEM_USE_BAG_MENU,
@@ -8491,10 +8480,9 @@ const struct ItemInfo gItemsInfo[] =
         .price = TYPE_BOOSTING_PRICE,
         .holdEffect = HOLD_EFFECT_TYPE_POWER,
         .holdEffectParam = TYPE_BOOST_PARAM,
-        .description = COMPOUND_STRING(
-            "Objeto equipado que\n"
-            "sube el poder de\n"
-            "Poison-type moves."),
+        .description = COMPOUND_STRING("Objeto equipado que\n
+sube el poder de\n
+movimientos TIERRA."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_TYPE_BOOST_HELD_ITEM,
         .type = ITEM_USE_BAG_MENU,
@@ -8512,10 +8500,9 @@ const struct ItemInfo gItemsInfo[] =
         .price = TYPE_BOOSTING_PRICE,
         .holdEffect = HOLD_EFFECT_TYPE_POWER,
         .holdEffectParam = TYPE_BOOST_PARAM,
-        .description = COMPOUND_STRING(
-            "Objeto equipado que\n"
-            "sube el poder de\n"
-            "Ground-type moves."),
+        .description = COMPOUND_STRING("Objeto equipado que\n
+sube el poder de\n
+movimientos TIERRA."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_TYPE_BOOST_HELD_ITEM,
         .type = ITEM_USE_BAG_MENU,
@@ -8532,10 +8519,9 @@ const struct ItemInfo gItemsInfo[] =
         .price = TYPE_BOOSTING_PRICE,
         .holdEffect = HOLD_EFFECT_TYPE_POWER,
         .holdEffectParam = TYPE_BOOST_PARAM,
-        .description = COMPOUND_STRING(
-            "Objeto equipado que\n"
-            "sube el poder de\n"
-            "Flying-type moves."),
+        .description = COMPOUND_STRING("Objeto equipado que\n
+sube el poder de\n
+movimientos TIERRA."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_TYPE_BOOST_HELD_ITEM,
         .type = ITEM_USE_BAG_MENU,
@@ -8569,10 +8555,9 @@ const struct ItemInfo gItemsInfo[] =
         .price = TYPE_BOOSTING_PRICE,
         .holdEffect = HOLD_EFFECT_TYPE_POWER,
         .holdEffectParam = TYPE_BOOST_PARAM,
-        .description = COMPOUND_STRING(
-            "Objeto equipado que\n"
-            "sube el poder de\n"
-            "Bug-type moves."),
+        .description = COMPOUND_STRING("Objeto equipado que\n
+sube el poder de\n
+movimientos TIERRA."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_TYPE_BOOST_HELD_ITEM,
         .type = ITEM_USE_BAG_MENU,
@@ -8606,10 +8591,9 @@ const struct ItemInfo gItemsInfo[] =
         .price = TYPE_BOOSTING_PRICE,
         .holdEffect = HOLD_EFFECT_TYPE_POWER,
         .holdEffectParam = TYPE_BOOST_PARAM,
-        .description = COMPOUND_STRING(
-            "Objeto equipado que\n"
-            "sube el poder de\n"
-            "Ghost-type moves."),
+        .description = COMPOUND_STRING("Objeto equipado que\n
+sube el poder de\n
+movimientos TIERRA."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_TYPE_BOOST_HELD_ITEM,
         .type = ITEM_USE_BAG_MENU,
@@ -8626,10 +8610,9 @@ const struct ItemInfo gItemsInfo[] =
         .price = TYPE_BOOSTING_PRICE,
         .holdEffect = HOLD_EFFECT_TYPE_POWER,
         .holdEffectParam = TYPE_BOOST_PARAM,
-        .description = COMPOUND_STRING(
-            "Objeto equipado que\n"
-            "sube el poder de\n"
-            "Dragon-type moves."),
+        .description = COMPOUND_STRING("Objeto equipado que\n
+sube el poder de\n
+movimientos TIERRA."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_TYPE_BOOST_HELD_ITEM,
         .type = ITEM_USE_BAG_MENU,
@@ -8647,10 +8630,9 @@ const struct ItemInfo gItemsInfo[] =
         .price = TYPE_BOOSTING_PRICE,
         .holdEffect = HOLD_EFFECT_TYPE_POWER,
         .holdEffectParam = TYPE_BOOST_PARAM,
-        .description = COMPOUND_STRING(
-            "Objeto equipado que\n"
-            "sube el poder de\n"
-            "Dark-type moves."),
+        .description = COMPOUND_STRING("Objeto equipado que\n
+sube el poder de\n
+movimientos TIERRA."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_TYPE_BOOST_HELD_ITEM,
         .type = ITEM_USE_BAG_MENU,
@@ -8674,10 +8656,9 @@ const struct ItemInfo gItemsInfo[] =
         .price = 20000,
         .holdEffect = HOLD_EFFECT_TYPE_POWER,
         .holdEffectParam = TYPE_BOOST_PARAM,
-        .description = COMPOUND_STRING(
-            "Objeto equipado que\n"
-            "sube el poder de\n"
-            "Steel-type moves."),
+        .description = COMPOUND_STRING("Objeto equipado que\n
+sube el poder de\n
+movimientos TIERRA."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_TYPE_BOOST_HELD_ITEM,
         .type = EVO_HELD_ITEM_TYPE,
@@ -9088,10 +9069,7 @@ const struct ItemInfo gItemsInfo[] =
         .price = 100,
     #endif
         .holdEffect = HOLD_EFFECT_WHITE_HERB,
-        .description = COMPOUND_STRING(
-            "Objeto equipado que\n"
-            "restaura cualquier\n"
-            "lowered stat."),
+        .description = COMPOUND_STRING("Objeto equipado que\nrestaura 10 PP en\ncombate."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_HELD_ITEM,
         .type = ITEM_USE_BAG_MENU,
@@ -11241,10 +11219,9 @@ const struct ItemInfo gItemsInfo[] =
         .price = (I_BERRY_PRICE >= GEN_8) ? 80 : 20,
         .holdEffect = HOLD_EFFECT_CRITICAL_UP,
         .holdEffectParam = 4,
-        .description = COMPOUND_STRING(
-            "Objeto equipado que\n"
-            "sube los críticos de\n"
-            "hit rate in a pinch."),
+        .description = COMPOUND_STRING("Objeto equipado que\n
+sube los puntos EXP.\n
+ganados en batalla."),
         .pocket = POCKET_BERRIES,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -11620,10 +11597,9 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM17"),
         .price = 10000,
-        .description = COMPOUND_STRING(
-            "Anula todo el daño,\n"
-            "pero puede fallar si\n"
-            "in succession."),
+        .description = COMPOUND_STRING("Anula todo el daño,\n
+pero puede fallar si se\n
+usa seguido."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -11814,10 +11790,9 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("TM33"),
         .price = 10000,
-        .description = COMPOUND_STRING(
-            "Crea un muro de\n"
-            "luz que debilita\n"
-            "physical attacks."),
+        .description = COMPOUND_STRING("Crea un muro de\n
+luz que debilita los\n
+ataques físicos."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14429,10 +14404,9 @@ const struct ItemInfo gItemsInfo[] =
         .price = 1000,
         .holdEffect = HOLD_EFFECT_TYPE_POWER,
         .holdEffectParam = TYPE_BOOST_PARAM,
-        .description = COMPOUND_STRING(
-            "Objeto equipado que\n"
-            "sube el poder de\n"
-            "Fairy-type moves."),
+        .description = COMPOUND_STRING("Objeto equipado que\n
+sube el poder de\n
+movimientos TIERRA."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_TYPE_BOOST_HELD_ITEM,
         .type = ITEM_USE_BAG_MENU,

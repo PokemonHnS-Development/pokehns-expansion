@@ -138,9 +138,8 @@ const struct FrontierBrain gFrontierBrainInfo[NUM_FRONTIER_FACILITIES] =
 #endif
         .isFemale = FALSE,
         .lostTexts = {
-            COMPOUND_STRING(
-                "Grr...\n"
-                "What the…"),        //Silver
+            COMPOUND_STRING("Grrrr…\n
+¡Perdí la paciencia!$"),        //Silver
             COMPOUND_STRING(
                 "¡Ahahaha!\n"
                 "You're inspiring!") //Gold
@@ -270,9 +269,7 @@ const struct FrontierBrain gFrontierBrainInfo[NUM_FRONTIER_FACILITIES] =
             COMPOUND_STRING(
                 "¡Oye! ¡¿Qué te pasa?!\n"
                 "Let's see some effort! Get up!"),       //Silver
-            COMPOUND_STRING(
-                "¡Oye! ¡No te rindas ahora!\n"
-                "Get up! Don't lose faith in yourself!") //Gold
+            COMPOUND_STRING("¡Oye! ¡No te rindas ahora!\n") //Gold
         },
         .battledBit = {1 << 12, 1 << 13},
         .streakAppearances = {21, 70, 35, 0},

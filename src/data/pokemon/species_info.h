@@ -207,11 +207,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .categoryName = _("Desconocido"),
         .height = 0,
         .weight = 0,
-        .description = COMPOUND_STRING(
-            "Es un POKéMON recién descubierto.\n"
-            "Está bajo investigación.\n"
-            "No hay información detallada\n"
-            "at this time."),
+        .description = COMPOUND_STRING("Es un POKéMON recién descubierto.\n"),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 256,
