@@ -12620,7 +12620,7 @@ ataques físicos."),
 
     [ITEM_HM_CUT] =
     {
-        .name = ITEM_NAME("HM01"),
+        .name = ITEM_NAME("MO01"),
         .price = 0,
         .description = COMPOUND_STRING(
             "Ataca al rival\n"
@@ -12634,7 +12634,7 @@ ataques físicos."),
 
     [ITEM_HM_FLY] =
     {
-        .name = ITEM_NAME("HM02"),
+        .name = ITEM_NAME("MO02"),
         .price = 0,
         .description = COMPOUND_STRING("Vuela en el primer\nturno y ataca en el\nsiguiente."),
         .importance = 1,
@@ -12645,7 +12645,7 @@ ataques físicos."),
 
     [ITEM_HM_SURF] =
     {
-        .name = ITEM_NAME("HM03"),
+        .name = ITEM_NAME("MO03"),
         .price = 0,
         .description = COMPOUND_STRING("Crea una ola\ngigante y la\ntira al rival."),
         .importance = 1,
@@ -12656,7 +12656,7 @@ ataques físicos."),
 
     [ITEM_HM_STRENGTH] =
     {
-        .name = ITEM_NAME("HM04"),
+        .name = ITEM_NAME("MO04"),
         .price = 0,
         .description = COMPOUND_STRING("Carga un poder\nenorme y golpea\nal rival."),
         .importance = 1,
@@ -12667,7 +12667,7 @@ ataques físicos."),
 
     [ITEM_HM_FLASH] =
     {
-        .name = ITEM_NAME("HM05"),
+        .name = ITEM_NAME("MO05"),
         .price = 0,
         .description = COMPOUND_STRING(
             "Lanza un potente\n"
@@ -12681,7 +12681,7 @@ ataques físicos."),
 
     [ITEM_HM_ROCK_SMASH] =
     {
-        .name = ITEM_NAME("HM06"),
+        .name = ITEM_NAME("MO06"),
         .price = 0,
         .description = COMPOUND_STRING("Un ataque fuerte\nque aplasta rocas.\nPuede bajar Defensa."),
         .importance = 1,
@@ -12692,7 +12692,7 @@ ataques físicos."),
 
     [ITEM_HM_WATERFALL] =
     {
-        .name = ITEM_NAME("HM07"),
+        .name = ITEM_NAME("MO07"),
         .price = 0,
         .description = COMPOUND_STRING("Ataca al rival\ncon gran potencia\npara escalar cascadas."),
         .importance = 1,
@@ -12704,7 +12704,7 @@ ataques físicos."),
 #if IS_HNS
     [ITEM_HM_WHIRLPOOL] =
     {
-        .name = ITEM_NAME("HM08"),
+        .name = ITEM_NAME("MO08"),
         .price = 0,
         .description = COMPOUND_STRING(
             "Atrapa al rival en un\n"
@@ -12718,7 +12718,7 @@ ataques físicos."),
 #else
     [ITEM_HM_DIVE] =
     {
-        .name = ITEM_NAME("HM08"),
+        .name = ITEM_NAME("MO08"),
         .price = 0,
         .description = COMPOUND_STRING("Se sumerge en el agua\nel 1er turno y ataca\nen el siguiente."),
         .importance = 1,
