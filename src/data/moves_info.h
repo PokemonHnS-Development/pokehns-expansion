@@ -21898,7 +21898,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("G-MAX CHI STRIKE"),
         .description = COMPOUND_STRING(
             "Ataque Gigamax Machamp.\n"
-            "Boosts critical-hit ratio."),    //ANIM TODO
+            "Aumenta la probabilidad\nde golpe crítico."),    //ANIM TODO
         .effect = EFFECT_MAX_MOVE,
         .power = 10,
         .type = TYPE_FIGHTING,
@@ -21994,7 +21994,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("G-MAX REPLENISH"),
         .description = COMPOUND_STRING(
             "Ataque Gigamax de Snorlax.\n"
-            "Restores eaten Berries."),    //ANIM TODO
+            "Restaura las Bayas\nque se comieron."),    //ANIM TODO
         .effect = EFFECT_MAX_MOVE,
         .power = 10,
         .type = TYPE_NORMAL,
@@ -22326,7 +22326,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("G-MAX FINALE"),
         .description = COMPOUND_STRING(
             "Ataque Gigamax de Alcremie.\n"
-            "Heals ally HP."),    //ANIM TODO
+            "Restaura los PS\ndel aliado."),    //ANIM TODO
         .effect = EFFECT_MAX_MOVE,
         .power = 10,
         .type = TYPE_FAIRY,

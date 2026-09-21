@@ -1016,7 +1016,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_LIGHT_METAL] =
     {
         .name = _("METAL LIVIANO"),
-        .description = COMPOUND_STRING("Halves weight."),
+        .description = COMPOUND_STRING("Reduce el peso\na la mitad."),
         .aiRating = 2,
         .breakable = TRUE,
     },
@@ -1253,7 +1253,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_FLOWER_VEIL] =
     {
         .name = _("VELO FLOR"),
-        .description = COMPOUND_STRING("Protects Grass-types."),
+        .description = COMPOUND_STRING("Protege a los POKéMON\nde tipo Planta."),
         .aiRating = 0,
         .breakable = TRUE,
     },
