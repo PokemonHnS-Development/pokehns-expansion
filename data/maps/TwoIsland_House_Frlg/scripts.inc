@@ -157,7 +157,7 @@ TwoIsland_House_Text_HandedOverOneBigMushroom::
 	.string "BIG MUSHROOM in exchange.$"
 
 TwoIsland_House_Text_NeedMushroomOrTwoToLearnMove::
-	.string "If your POKéMON need to learn a\n"
+	.string "Si tu POKéMON debe aprender un\n"
 	.string "move, I need a MUSHROOM or two.$"
 
 TwoIsland_House_Text_CantTeachAnEgg::

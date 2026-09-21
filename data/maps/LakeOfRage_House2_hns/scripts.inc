@@ -123,7 +123,7 @@ LakeOfRage_House2_Text_LastMon:
     .string "POKéMON!$"
 
 LakeOfRage_House2_Text_WorldsLargest:
-    .string "LAKE OF RAGE is back to normal.\p"
+	.string "El LAGO DE LA FURIA está normal.\p"
     .string "Los MAGIKARP han regresado.\p"
     .string "Aún podré cumplir mi sueño de te-\n"
     .string "ner al MAGIKARP más grande del mundo.\p"

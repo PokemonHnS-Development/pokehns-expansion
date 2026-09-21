@@ -50,5 +50,5 @@ AzaleaPokecenter_Text_PokefanF:
 	.string "Ábrela, vacíala y ponle\n"
 	.string "un dispositivo especial.\p"
 	.string "Así podrás capturar POKéMON.\p"
-	.string "Before POKé BALLS were invented,\n"
+	.string "Antes de que existieran las POKé BALL,\n"
 	.string "todos usaban BAYAS.$"

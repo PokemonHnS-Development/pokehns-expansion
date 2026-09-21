@@ -93,7 +93,7 @@ Route19_Text_SwimmerfDawnSeen:
 	.string "I'm disgusted by wimpy people!$"
 
 Route19_Text_SwimmerfDawnBeaten:
-	.string "I could beat you at swimming…$"
+	.string "Podría ganarte nadando…$"
 
 Route19_Text_SwimmerfDawnAfterBattle:
 	.string "Es un nado rápido hasta FUCHSIA\n"

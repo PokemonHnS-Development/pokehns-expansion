@@ -18,7 +18,7 @@ Route14_Text_CarterPostBattle::
 
 Route14_Text_MitchIntro::
 	.string "Mi POKéMON ave ya debería estar\n"
-	.string "for battle.$"
+	.string "para la batalla.$"
 
 Route14_Text_MitchDefeat::
 	.string "Not ready yet!$"

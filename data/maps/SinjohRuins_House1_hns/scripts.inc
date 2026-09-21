@@ -642,7 +642,7 @@ SinjohRuins_Lab_Text_Note4:
 	.string "Mi idea funcionó para cruzar\n"
 	.string "el hielo. Solo que no trajimos\l"
 	.string "los tipo FUEGO de nuestro hogar.\p"
-	.string "The boss insisted we get them locally.\p"
+	.string "El jefe insistió en comprarlas aquí.\p"
 	.string "Hallamos una fuente termal cerca de\n"
 	.string "un pueblo...\p"
 	.string "Y tomamos lo que necesitábamos...\p"
@@ -654,7 +654,7 @@ SinjohRuins_Lab_Text_Note4:
 	.string "La arquitectura de la estructura\n"
 	.string "principal indica que podría ser de\l"
 	.string "los antiguos pueblos de Celestica...\p"
-	.string "Our ancestors. Before they moved north.\p"
+	.string "Ancestros, antes de ir al norte.\p"
 	.string "El jefe quiere que abran el templo\n"
 	.string "lo antes posible...$"
 

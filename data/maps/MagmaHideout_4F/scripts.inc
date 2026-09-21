@@ -160,7 +160,7 @@ MagmaHideout_4F_Text_Grunt13Defeat:
 	.string "¿Fui tan fácil de derribar?$"
 
 MagmaHideout_4F_Text_Grunt13PostBattle:
-	.string "C-come on, one more match…$"
+	.string "¡V-vamos, una más…$"
 
 MagmaHideout_4F_Text_TabithaIntro:
 	.string "¡Jejeje!\n"

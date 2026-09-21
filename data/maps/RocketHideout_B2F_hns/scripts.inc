@@ -627,7 +627,7 @@ RocketHideout_B2F_Text_LanceElectrodeFaint:
     .string "{PLAYER}, dividamos el trabajo.$"
 
 RocketHideout_B2F_Text_LanceSide:
-    .string "LANCE: Leave this side to me.$"
+	.string "LANCE: Deja este lado a mi cargo.$"
 
 RocketHideout_B2F_Text_LanceElectrodeDone:
     .string "LANCE: Esa señal extraña\n"

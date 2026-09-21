@@ -71,7 +71,7 @@ UnionCave_B1F_Text_PokemaniacCalvinSeen:
 	.string "una batalla real!$"
 
 UnionCave_B1F_Text_PokemaniacCalvinBeaten:
-	.string "You demonstrated on me!$"
+	.string "¡Me lo has demostrado tú!$"
 
 UnionCave_B1F_Text_PokemaniacCalvinAfter:
 	.string "Debo compilar y anunciar los\n"

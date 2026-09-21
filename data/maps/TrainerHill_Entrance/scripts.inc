@@ -347,7 +347,7 @@ TrainerHill_Entrance_Text_MovedReceptionHereForSwitch:
 	.string "Siento los inconvenientes.$"
 
 TrainerHill_Entrance_Text_ThankYouForPlaying:
-	.string "Thank you for playing!$"
+	.string "¡Gracias por jugar!$"
 
 TrainerHill_Entrance_Text_ExplainTrainerHill:
 	.string "Aquí en TRAINER HILL, hacemos\n"

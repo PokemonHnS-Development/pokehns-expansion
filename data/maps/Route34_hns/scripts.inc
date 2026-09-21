@@ -153,11 +153,11 @@ Route34_Text_CamperTodd_Beaten:
 	.string "Did I screw up my training?$"
 
 Route34_Text_CamperTodd_After:
-	.string "Maybe I should take one to DAY-CARE,\n"
+	.string "Quizá lleve uno a la GUARDERÍA,\n"
 	.string "o quizás usar algunos objetos…$"
 
 Route34_Text_ToddRegister:
-	.string "Maybe I should take one to DAY-CARE,\n"
+	.string "Quizá lleve uno a la GUARDERÍA,\n"
 	.string "o quizás usar algunos objetos…$"
 
 Route34_Text_ToddRematchIntro:
@@ -169,7 +169,7 @@ Route34_Text_ToddRematchDefeat:
 	.string "Did I screw up my training?$"
 
 Route34_Text_ToddPostRematch:
-	.string "Maybe I should take one to DAY-CARE,\n"
+	.string "Quizá lleve uno a la GUARDERÍA,\n"
 	.string "o quizás usar algunos objetos…$"
 
 Route34_Text_GinaRegister:

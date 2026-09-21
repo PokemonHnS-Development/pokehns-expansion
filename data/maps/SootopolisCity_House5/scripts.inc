@@ -13,5 +13,5 @@ SootopolisCity_House5_Text_SootopolisMtPyreConnection:
 	.string "Parece haber cierta conexión\nentre ARRECÍPOLIS y el MONTE PÍRICO.\pMis amigos y yo investigamos\neso en el laboratorio donde trabajaba.$"
 
 SootopolisCity_House5_Text_BrotherUsedToStudySea:
-	.string "My big brother used to study the sea.$"
+	.string "Mi hermano mayor estudiaba el mar.$"
 

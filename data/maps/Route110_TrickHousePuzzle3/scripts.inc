@@ -309,7 +309,7 @@ Route110_TrickHousePuzzle3_Text_WroteSecretCodeLockOpened:
 	.string "¡La cerradura se abrió!$"
 
 Route110_TrickHousePuzzle3_Text_JustinIntro:
-	.string "I keep coming back to this same place!$"
+	.string "¡No dejo de volver a este lugar!$"
 
 Route110_TrickHousePuzzle3_Text_JustinDefeat:
 	.string "Ya tengo suficientes problemas y\n"

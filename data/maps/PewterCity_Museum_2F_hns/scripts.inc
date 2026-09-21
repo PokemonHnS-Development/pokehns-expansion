@@ -43,5 +43,5 @@ PewterCity_Museum_2F_Text_SpaceShuttle::
     .string "Space Shuttle$"
 
 PewterCity_Museum_2F_Text_MeteoriteThatFellOnMtMoon::
-    .string "A meteorite that fell on MT. MOON.\n"
+	.string "Un meteorito caído en MONTE LUNA.\n"
     .string "Se cree que es una MOON STONE.$"

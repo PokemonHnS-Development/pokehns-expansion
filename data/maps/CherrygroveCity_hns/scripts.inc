@@ -373,7 +373,7 @@ CherrygroveCity_Text_MysticWaterGuyBefore:
 	.string "quieres?$"
 
 CherrygroveCity_Text_MysticWaterGuyAfter:
-	.string "Back to fishing for me, then.$"
+	.string "Vuelvo a pescar, entonces.$"
 
 CherrygroveCity_Text_CitySign:
 	.string "CIUDAD CEREZO\p"

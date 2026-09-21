@@ -147,7 +147,7 @@ VioletCity_PokeCenter_Text_ElmsAideEggToPC:
 	.string "al PC de BILL por ti.$"
 
 VioletCity_PokeCenter_Text_ElmsAideRefuse:
-	.string "B-but… PROF.ELM asked for you…$"
+	.string "¡P-pero… PROF.ELM te pidió…$"
 
 VioletCity_PokeCenter_Text_BooksAreGreat:
 	.string "Mientras mis POKéMON se recuperan\n"
@@ -169,6 +169,6 @@ VioletCity_PokeCenter_Text_Gentleman:
 
 VioletCity_PokeCenter_Text_Youngster:
 	.string "Los POKéMON son listos. No\n"
-	.string "obey a trainer they don't respect.\p"
+	.string "a un entrenador que no respetan.\p"
 	.string "Sin las MEDALLAS de GIMNASIO\n"
 	.string "correctas, harán lo que quieran.$"

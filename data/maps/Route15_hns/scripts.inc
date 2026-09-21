@@ -128,7 +128,7 @@ Route15_Text_HillaryPostRematch:
 	.string "educar niños. ¡Paciencia!$"
 
 Route15_Text_SchoolboyKippSeen:
-	.string "Hang on. I have to phone my mom.$"
+	.string "Espera. Tengo que llamar a mi mamá.$"
 
 Route15_Text_SchoolboyKippBeaten:
 	.string "Sorry, Mom! I was beaten!$"
@@ -141,7 +141,7 @@ Route15_Text_SchoolboyTommySeen:
 	.string "Let's battle. I won't lose!$"
 
 Route15_Text_SchoolboyTommyBeaten:
-	.string "I forgot to do my homework!$"
+	.string "¡Olvidé hacer mi tarea!$"
 
 Route15_Text_SchoolboyTommyAfterBattle:
 	.string "¡Sayonara! Lo acabo de aprender en\n"

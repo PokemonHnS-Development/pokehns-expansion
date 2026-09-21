@@ -862,7 +862,7 @@ NewBarkTown_Lab_Text_ShowTogepi1:
 	.string "ELM: {PLAYER}, you look great!$"
 
 NewBarkTown_Lab_Text_ShowTogepi2:
-	.string "What? That POKéMON!?!$"
+	.string "¿Qué? ¡¿Ese POKéMON?!?$"
 
 NewBarkTown_Lab_Text_ShowTogepi3:
 	.string "¡El HUEVO nació! Así que los\n"

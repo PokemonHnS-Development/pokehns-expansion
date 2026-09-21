@@ -61,7 +61,7 @@ VictoryRoad_B2F_Text_CarolineIntro:
 	.string "Debes estar cansándote un poco.$"
 
 VictoryRoad_B2F_Text_CarolineDefeat:
-	.string "No signs of tiring at all!$"
+	.string "¡Ni rastro de cansancio!$"
 
 VictoryRoad_B2F_Text_CarolinePostBattle:
 	.string "VIAJE VICTORIA y la LIGA POKéMON\n"

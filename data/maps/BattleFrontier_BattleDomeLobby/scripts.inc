@@ -536,7 +536,7 @@ BattleFrontier_BattleDomeLobby_Text_BagFullMakeRoom:
 	.string "vuelve a verme.$"
 
 BattleFrontier_BattleDomeLobby_Text_ThankYouForPlaying:
-	.string "Thank you for playing!$"
+	.string "¡Gracias por jugar!$"
 
 BattleFrontier_BattleDomeLobby_Text_RecordWillBeSaved:
 	.string "Tu récord será guardado.\n"

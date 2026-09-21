@@ -248,7 +248,7 @@ FuchsiaCity_Gym_Text_CamperBarry_Before:
 	.string "¡Claro que sí! ¡Soy JANINE!$"
 
 FuchsiaCity_Gym_Text_CamperBarry_Beaten:
-	.string "My disguise was right on! Dang!$"
+	.string "¡Mi disfraz era perfecto! ¡Rayos!$"
 
 FuchsiaCity_Gym_Text_CamperBarry_After:
 	.string "Oye, tú. ¿Mi disfraz era lindo o\n"

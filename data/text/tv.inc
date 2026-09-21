@@ -151,7 +151,7 @@ BattleFrontier_BattleTowerLobby_Text_ThatsGreatLine::
 	.string "¡Oh, eso es increíblemente genial!\p"
 	.string "¡Es una frase excelente!\n"
 	.string "Espero que te vaya bien la próxima.\p"
-	.string "I hope to see you again!$"
+	.string "¡Espero verte de nuevo!$"
 
 BattleFrontier_BattleTowerLobby_Text_SilentType::
 	.string "Oh, ya veo...\p"
@@ -1712,7 +1712,7 @@ TVSpotTheCuties_Text_RibbonsMid::
 	.string "{STR_VAR_2} lleva unas\n"
 	.string "CINTAS {STR_VAR_3} increíbles!\p"
 	.string "It speaks volumes about {STR_VAR_1}'s\n"
-	.string "commitment to the POKéMON!$"
+	.string "compromiso con los POKéMON!$"
 
 TVSpotTheCuties_Text_RibbonsHigh::
 	.string "{STR_VAR_2} lleva unas cintas\n"

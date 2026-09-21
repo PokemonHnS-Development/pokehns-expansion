@@ -87,7 +87,7 @@ PewterCity_Gym_Text_CamperJerry_Seen:
 	.string "¿Estás listo para esto?$"
 
 PewterCity_Gym_Text_CamperJerry_Beaten:
-	.string "I have to win these battles…$"
+	.string "Tengo que ganar estas…$"
 
 PewterCity_Gym_Text_CamperJerry_AfterBattle:
 	.string "¡Oye, tú! ¡Entrenador de JOHTO! BROCK\n"

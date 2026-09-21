@@ -553,7 +553,7 @@ GoldenrodUnderground_Text_SilverAfter:
     .string "el mejor ENTRENADOR POKéMON!$"
 
 GoldenrodUnderground_Text_SilverLoss:
-    .string "Humph. This is my real power, wimp.\p"
+	.string "Humph. Este es mi verdadero poder,\p"
     .string "Haré que el TEAM ROCKET sea historia.\p"
     .string "Y voy a aplastar a ese LANCE\n"
     .string "bajo mis talones.$"
@@ -563,7 +563,7 @@ GoldenrodUnderground_Text_GruntM11Seen:
     .string "¡Apuesto a que no llegarás!$"
 
 GoldenrodUnderground_Text_GruntM11Beaten:
-    .string "Drat! I was sunk by indecision!$"
+	.string "¡Rayos! ¡La indecisión me hundió!$"
 
 GoldenrodUnderground_Text_GruntM11After:
     .string "Yo también estoy confundido... El\n"

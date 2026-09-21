@@ -45,7 +45,7 @@ gText_IllTakeYourPkmn2::
 	.string "por unos segundos.$"
 
 gText_ThankYouForWaiting::
-	.string "Thank you for waiting.$"
+	.string "Gracias por esperar.$"
 
 gText_WeHopeToSeeYouAgain2::
 	.string "¡Esperamos volver a verte!$"

@@ -40,4 +40,4 @@ ViridianCity_PokemonCenter_Text_1FCooltrainerF:
 	.string "el LÍDER de GIMNASIO.$"
 
 ViridianCity_PokemonCenter_Text_1FBugCatcher:
-	.string "My dream is to become a GYM LEADER.$"
+	.string "Mi sueño es ser LÍDER de GIMNASIO.$"

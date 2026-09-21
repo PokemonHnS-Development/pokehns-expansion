@@ -399,7 +399,7 @@ BattleFrontier_OutsideEast_Text_CanDoAnythingWithYou_hns:
 BattleFrontier_OutsideEast_Text_PowerOfOurLoveWillOvercome_hns:
 	.string "¡Ay, cariño, eres maravilloso!\p"
 	.string "¡Ay, ya no puedo esperar más!\p"
-	.string "¡Vamos a una MULTI BATTLE ROOM\n"
+	.string "¡Vamos a una SALA MULTI\n"
 	.string "en este mismo instante!\p"
 	.string "Si nos unimos en el BATTLE SALON,\n"
 	.string "el poder de nuestro amor vencerá\l"

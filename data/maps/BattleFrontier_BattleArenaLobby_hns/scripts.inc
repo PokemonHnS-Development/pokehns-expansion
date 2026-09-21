@@ -538,7 +538,7 @@ BattleFrontier_BattleArenaLobby_Text_ExplainMindRules_hns:
 	.string "El primer factor es la “Mente.”\nEste factor evalúa qué tan\lagresivos\nfueron los luchadores.\pSe juzga según\ncuántas veces\nlos ENTRENADORES ordenaron\nusar\lmovimientos ofensivos.$"
 
 BattleFrontier_BattleArenaLobby_Text_ExplainSkillRules_hns:
-	.string "The second judging factor is “Skill.”\n"
+	.string "El segundo factor es la “Habilidad”.\n"
 	.string "Este factor evalúa qué tan bien\l"
 	.string "se usaron los movimientos POKéMON.\p"
 	.string "Si un movimiento tuvo éxito,\n"

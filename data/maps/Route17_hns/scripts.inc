@@ -117,7 +117,7 @@ Route17_Text_BikerJoelAfterBattle:
 	.string "Tengo que entrenar más…$"
 
 Route17_Text_BikerGlennSeen:
-	.string "Hey! Want to have a speed battle?$"
+	.string "¡Oye! ¿Quieres un duelo de velocidad?$"
 
 Route17_Text_BikerGlennBeaten:
 	.string "Yikes! You've got awesome torque!$"

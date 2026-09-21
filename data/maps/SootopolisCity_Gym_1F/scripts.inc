@@ -180,7 +180,7 @@ SootopolisCity_Gym_1F_Text_GymGuideAdvice:
 	.string "CAMPEÓN {PLAYER}?\p"
 	.string "JUAN, el LÍDER del GIMNASIO de\n"
 	.string "CIUDAD ARRECIFE, es un maestro\p"
-	.string "And, to get to JUAN, an icy floor\n"
+	.string "Y para llegar a JUAN, un suelo\nhelado"
 	.string "de hielo frenará tu camino...\p"
 	.string "Mira, lo siento, pero eso es todo\n"
 	.string "el consejo que tengo para ti.\p"

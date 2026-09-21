@@ -139,7 +139,7 @@ CableClub_Text_TrainerCardDataOverwritten:
 	.string "ENTRENADOR se borrarán.$"
 
 CableClub_Text_HopeToSeeYouAgain:
-	.string "I hope to see you again!$"
+	.string "¡Espero verte de nuevo!$"
 
 CableClub_Text_NotSetUpForFarAwayRegion:
 	.string "Lo siento muchísimo.\p"
@@ -207,7 +207,7 @@ CableClub_Text_GuideToVariousServices:
 	.string "del CLUB INALÁMBRICO.$"
 
 CableClub_Text_CancelSelectedItem::
-	.string "Cancels the selected MENU item.$"
+	.string "Cancela la opción del MENÚ.$"
 
 @ Unused
 CableClub_Text_WhichBattleMode:
@@ -215,7 +215,7 @@ CableClub_Text_WhichBattleMode:
 
 @ Unused
 CableClub_Text_ReturnsToPreviousStep:
-	.string "Returns to the previous step.$"
+	.string "Vuelve al paso anterior.$"
 
 CableClub_Text_NeedBerryForBerryCrush:
 	.string "Para usar el servicio BERRY CRUSH,\n"
@@ -340,7 +340,7 @@ CableClub_Text_WelcomeWhichDirectCornerRoom:
 	.string "inscribir?$"
 
 CableClub_Text_TradePokemon:
-	.string "Would you like to trade POKéMON?$"
+	.string "¿Quieres intercambiar POKéMON?$"
 
 CableClub_Text_PlayWhichBattleMode:
 	.string "¿Qué modo de batalla prefieres?\n"

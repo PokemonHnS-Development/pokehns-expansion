@@ -930,7 +930,7 @@ BattleFrontier_BattleDomeBattleRoom_Text_PlayerVersusTrainer:
 	.string "{STR_VAR_1}\n"
 	.string "¡combate!\p"
 	.string "¡{PLAYER} contra {STR_VAR_2}!\p"
-	.string "Let the battle begin!$"
+	.string "¡Que empiece la batalla!$"
 
 BattleFrontier_BattleDomeBattleRoom_Text_PlayerIsWinner:
 	.string "¡{PLAYER} es el ganador!\n"
@@ -1165,7 +1165,7 @@ BattleFrontier_BattleDomeBattleRoom_Text_PlayerIsLvOpenChamp2:
 BattleFrontier_BattleDomeBattleRoom_Text_PlayerVersusTucker:
 	.string "¡El combate final!\p"
 	.string "{PLAYER} contra el AS DEL DOME, TUCKER!\p"
-	.string "Let the battle begin!$"
+	.string "¡Que empiece la batalla!$"
 
 BattleFrontier_BattleDomeBattleRoom_Text_RefereesDecidedWinnerTucker:
 	.string "¡Los JUECES han llegado a\n"

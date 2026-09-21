@@ -1505,8 +1505,8 @@ PetalburgCity_Gym_Text_DoorAppearsLocked:
 	.string "cerrada ahora mismo…$"
 
 PetalburgCity_Gym_Text_EnterSpeedRoom:
-	.string "“SPEED ROOM,” the sign says.\p"
-	.string "¿Quieres entrar?$"
+	.string "El cartel dice: “SALA VELOCIDAD”.\p"
+	.string "SALA DEL LÍDER DEL GIMNASIO\p“¡Comprueba\npor ti mismo lo\nduros que son mis POKéMON!”\ndice el cartel.\p¿Quieres entrar?$"
 
 @ Unused
 PetalburgCity_Gym_Text_DoorAppearsLocked2:
@@ -1514,28 +1514,28 @@ PetalburgCity_Gym_Text_DoorAppearsLocked2:
 	.string "cerrada ahora mismo…$"
 
 PetalburgCity_Gym_Text_EnterAccuracyRoom:
-	.string "“ACCURACY ROOM,” the sign says.\p"
-	.string "¿Quieres entrar?$"
+	.string "El cartel dice: “SALA PRECISIÓN”.\p"
+	.string "SALA DEL LÍDER DEL GIMNASIO\p“¡Comprueba\npor ti mismo lo\nduros que son mis POKéMON!”\ndice el cartel.\p¿Quieres entrar?$"
 
 PetalburgCity_Gym_Text_EnterConfusionRoom:
-	.string "“CONFUSION ROOM,” the sign says.\p"
-	.string "¿Quieres entrar?$"
+	.string "El cartel dice: “SALA CONFUSIÓN”.\p"
+	.string "SALA DEL LÍDER DEL GIMNASIO\p“¡Comprueba\npor ti mismo lo\nduros que son mis POKéMON!”\ndice el cartel.\p¿Quieres entrar?$"
 
 PetalburgCity_Gym_Text_EnterDefenseRoom:
-	.string "“DEFENSE ROOM,” the sign says.\p"
-	.string "¿Quieres entrar?$"
+	.string "El cartel dice: “SALA DEFENSA”.\p"
+	.string "SALA DEL LÍDER DEL GIMNASIO\p“¡Comprueba\npor ti mismo lo\nduros que son mis POKéMON!”\ndice el cartel.\p¿Quieres entrar?$"
 
 PetalburgCity_Gym_Text_EnterRecoveryRoom:
-	.string "“RECOVERY ROOM,” the sign says.\p"
-	.string "¿Quieres entrar?$"
+	.string "El cartel dice: “SALA RECUPERACIÓN”.\p"
+	.string "SALA DEL LÍDER DEL GIMNASIO\p“¡Comprueba\npor ti mismo lo\nduros que son mis POKéMON!”\ndice el cartel.\p¿Quieres entrar?$"
 
 PetalburgCity_Gym_Text_EnterStrengthRoom:
-	.string "“STRENGTH ROOM,” the sign says.\p"
-	.string "¿Quieres entrar?$"
+	.string "El cartel dice: “SALA FUERZA”.\p"
+	.string "SALA DEL LÍDER DEL GIMNASIO\p“¡Comprueba\npor ti mismo lo\nduros que son mis POKéMON!”\ndice el cartel.\p¿Quieres entrar?$"
 
 PetalburgCity_Gym_Text_EnterOHKORoom:
-	.string "“ONE-HIT KO ROOM,” the sign says.\p"
-	.string "¿Quieres entrar?$"
+	.string "El cartel dice: “SALA KO UN GOLPE”.\p"
+	.string "SALA DEL LÍDER DEL GIMNASIO\p“¡Comprueba\npor ti mismo lo\nduros que son mis POKéMON!”\ndice el cartel.\p¿Quieres entrar?$"
 
 PetalburgCity_Gym_Text_EnterGymLeadersRoom:
 	.string "SALA DEL LÍDER DEL GIMNASIO\p“¡Comprueba\npor ti mismo lo\nduros que son mis POKéMON!”\ndice el cartel.\p¿Quieres entrar?$"

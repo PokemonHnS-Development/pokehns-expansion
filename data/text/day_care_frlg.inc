@@ -110,7 +110,7 @@ DayCare_Text_YouHaveJustOneMon::
 	.string "Vuelve en otro momento.$"
 
 DayCare_Text_TakeYourMonBack::
-	.string "Will you take your POKéMON back?$"
+	.string "¿Recuperarás a tu POKéMON?$"
 
 DayCare_Text_WhatWillYouBattleWith::
 	.string "Si me dejas ese POKéMON,\n"

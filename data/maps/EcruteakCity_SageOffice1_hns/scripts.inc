@@ -124,10 +124,10 @@ EcruteakTinTowerEntrance_Text_SageHearsClearBell2:
 	.string "Tú…\p"
 	.string "Tú podrías ser capaz de cruzar la\n"
 	.string "TORRE CAMPANA.\p"
-	.string "Please, do go on.$"
+	.string "Por favor, continúa.$"
 
 EcruteakTinTowerEntrance_Text_SagePleaseDoGoOn:
-	.string "Please, do go on.$"
+	.string "Por favor, continúa.$"
 
 EcruteakTinTowerEntrance_Text_SageDone:
 	.string "El tañido de esa campana indica\n"

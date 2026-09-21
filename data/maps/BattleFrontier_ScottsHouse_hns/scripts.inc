@@ -304,7 +304,7 @@ BattleFrontier_ScottsHouse_Text_YouveCollectedAllGoldSymbols_hns:
 	.string "…Espera un segundo…\n"
 	.string "¡No puedo creer lo que veo!\p"
 	.string "¡Tu FRONTIER PASS!\n"
-	.string "¡Has reunido el set completo\l"
+	.string "Has reunido el set completo\l"
 	.string "de símbolos de oro!\p"
 	.string "¡Eso es más que estupendo!\n"
 	.string "¡Eres increíble, como sospechaba!\p"

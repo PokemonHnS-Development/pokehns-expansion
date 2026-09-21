@@ -131,7 +131,7 @@ Route45_Text_HikerMichaelAfter:
     .string "¡No puedo evitarlo!$"
 
 Route45_Text_HikerParrySeen:
-    .string "My POKéMON are power packed!$"
+	.string "¡Mis POKéMON están llenos de poder!$"
 
 Route45_Text_HikerParryBeaten:
     .string "Wahahah! I'm the big loser!$"
@@ -147,7 +147,7 @@ Route45_Text_ParryRegister:
     .string "¡Así que avanzo con poder!$"
 
 Route45_Text_ParryRematchIntro:
-    .string "My POKéMON are power packed!$"
+	.string "¡Mis POKéMON están llenos de poder!$"
 
 Route45_Text_ParryRematchDefeat:
     .string "Wahahah! I'm the big loser!$"

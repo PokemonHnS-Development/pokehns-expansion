@@ -1024,7 +1024,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_HexManiacAccept::
 	.string "Nos inscribiré ahora mismo...$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_HexManiacReject::
-	.string "I so longed to join you…$"
+	.string "¡Cuánto deseaba ir contigo…$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PkmnBreederMIntro::
 	.string "¿Cómo estás? Soy {STR_VAR_1},\n"

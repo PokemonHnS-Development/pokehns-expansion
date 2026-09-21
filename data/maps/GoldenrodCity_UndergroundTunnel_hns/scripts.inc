@@ -329,7 +329,7 @@ GoldenrodUnderground_Text_YoungerBrotherOffer:
     .string "¿Y bien? ¿Qué dices?$"
 
 GoldenrodUnderground_Text_YoungerBrotherAskWhich:
-    .string "OK, which POKéMON should I do?$"
+	.string "OK, ¿qué POKéMON hago?$"
 
 GoldenrodUnderground_Text_YoungerBrotherLookCool:
     .string "OK! I'll make it look cool!$"
@@ -359,7 +359,7 @@ GoldenrodUnderground_Text_OlderBrotherOffer:
     .string "¿Quieres que haga eso?$"
 
 GoldenrodUnderground_Text_OlderBrotherAskWhich:
-    .string "Which POKéMON should I work on?$"
+	.string "¿Con qué POKéMON trabajo?$"
 
 GoldenrodUnderground_Text_OlderBrotherWatchItBeautiful:
     .string "OK! Watch it become beautiful!$"

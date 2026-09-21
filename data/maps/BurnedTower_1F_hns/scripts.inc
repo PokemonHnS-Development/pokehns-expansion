@@ -199,7 +199,7 @@ BurnedTower_Text_NardSeen:
 	.string "¡Nosotros sabemos el verdadero\n"
 	.string "poder del fuego mejor que nadie!$"
 BurnedTower_Text_NardBeaten:
-	.string "Thanks for such a heated battle!$"
+	.string "¡Gracias por esa batalla tan intensa!$"
 BurnedTower_Text_NardAfter:
 	.string "La razón por la que esta torre\n"
 	.string "ardió es que cayó un rayo.\p"

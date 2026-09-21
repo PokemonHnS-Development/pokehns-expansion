@@ -307,7 +307,7 @@ DewfordTown_Gym_Text_TakaoIntro:
 	.string "¡Vamos!$"
 
 DewfordTown_Gym_Text_TakaoDefeat:
-	.string "Not enough power…$"
+	.string "No hay suficiente energía…$"
 
 DewfordTown_Gym_Text_TakaoPostBattle:
 	.string "¡Tu habilidad superó mi fuerza!\n"

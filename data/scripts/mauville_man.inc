@@ -357,7 +357,7 @@ MauvilleCity_PokemonCenter_1F_Text_InterviewsStory::
 	.string "¡que atrae mucha atención!$"
 
 MauvilleCity_PokemonCenter_1F_Text_TrainerBattlesTitle::
-	.string "The Battle-Happy TRAINER$"
+	.string "El ENTRENADOR amante de la lucha$"
 
 MauvilleCity_PokemonCenter_1F_Text_TrainerBattlesAction::
 	.string "Battled$"
@@ -496,7 +496,7 @@ MauvilleCity_PokemonCenter_1F_Text_UsedRockSmashStory::
 	.string "¡no deja piedra sin romper!$"
 
 MauvilleCity_PokemonCenter_1F_Text_MovedBasesTitle::
-	.string "The Move-Loving TRAINER$"
+	.string "El ENTRENADOR amante de movs.$"
 
 MauvilleCity_PokemonCenter_1F_Text_MovedBasesAction::
 	.string "Moved the SECRET BASE$"
@@ -527,7 +527,7 @@ MauvilleCity_PokemonCenter_1F_Text_UsedStruggleTitle::
 	.string "The Tenacious TRAINER$"
 
 MauvilleCity_PokemonCenter_1F_Text_UsedStruggleAction::
-	.string "Resorted to using STRUGGLE$"
+	.string "Recorrió a usar DESESPERAR$"
 
 MauvilleCity_PokemonCenter_1F_Text_UsedStruggleStory::
 	.string "Es la historia de un ENTRENADOR\n"
@@ -556,10 +556,10 @@ MauvilleCity_PokemonCenter_1F_Text_RouletteWinsStory::
 	.string "Es la historia de un ENTRENADOR\nllamado {STR_VAR_3}.\pEste ENTRENADOR ganó en la RULETA\n{STR_VAR_1} veces seguidas.\p{STR_VAR_3} tuvo suerte cuando\nla bola cayó en la RULETA!$"
 
 MauvilleCity_PokemonCenter_1F_Text_BattleTowerChallengesTitle::
-	.string "The BATTLE TOWER Challenger$"
+	.string "El retador de la TORRE BATALLA$"
 
 MauvilleCity_PokemonCenter_1F_Text_BattleTowerChallengesAction::
-	.string "Took the BATTLE TOWER challenge$"
+	.string "Aceptó el reto de la TORRE BATALLA$"
 
 MauvilleCity_PokemonCenter_1F_Text_BattleTowerChallengesStory::
 	.string "Es la historia de un ENTRENADOR\nllamado {STR_VAR_3}.\pEste ENTRENADOR aceptó el reto de la\nTORRE BATALLA {STR_VAR_1} veces!\p{STR_VAR_3} es un ENTRENADOR que busca\nla excelencia en la TORRE BATALLA!$"
@@ -621,7 +621,7 @@ MauvilleCity_PokemonCenter_1F_Text_TimesShoppedStory::
 	.string "personas que nacieron para comprar.$"
 
 MauvilleCity_PokemonCenter_1F_Text_UsedItemFinderTitle::
-	.string "The Item-Finding TRAINER$"
+	.string "El ENTRENADOR buscador de objetos$"
 
 MauvilleCity_PokemonCenter_1F_Text_UsedItemFinderAction::
 	.string "Used an ITEMFINDER$"
@@ -732,10 +732,10 @@ MauvilleCity_PokemonCenter_1F_Text_WonLotteryStory::
 	.string "para intercambiar POKéMON!$"
 
 MauvilleCity_PokemonCenter_1F_Text_UsedDaycareTitle::
-	.string "The DAY CARE-Using Trainer$"
+	.string "El ENTRENADOR de la GUARDERÍA$"
 
 MauvilleCity_PokemonCenter_1F_Text_UsedDaycareAction::
-	.string "Left POKéMON at the DAY CARE$"
+	.string "Dejó POKéMON en la GUARDERÍA$"
 
 MauvilleCity_PokemonCenter_1F_Text_UsedDaycareStory::
 	.string "Es la historia de un ENTRENADOR\n"

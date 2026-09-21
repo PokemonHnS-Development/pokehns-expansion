@@ -46,7 +46,7 @@ RS_MysteryEventsHouse_Text_OldManGreeting:
 	.string "ENTRENADORES luchar.$"
 
 RS_MysteryEventsHouse_Text_DoorIsLocked:
-	.string "The door appears to be locked.$"
+	.string "La puerta parece estar cerrada.$"
 
 RS_MysteryEventsHouse_Text_ChallengeVisitingTrainer:
 	.string "Un ENTRENADOR llamado {STR_VAR_1}\n"

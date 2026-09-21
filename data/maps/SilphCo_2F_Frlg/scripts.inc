@@ -94,7 +94,7 @@ Text_ThunderWaveDeclined::
 	.string "But THUNDER WAVE is convenient…$"
 
 Text_ThunderWaveWhichMon::
-	.string "Which POKéMON should I teach\n"
+	.string "¿A qué POKéMON le enseño\n"
 	.string "THUNDER WAVE?$"
 
 Text_ThunderWaveTaught::

@@ -73,7 +73,7 @@ Route9_Text_CamperSidSeen:
 	.string "¡Oye, tú! ¡No tires basura!$"
 
 Route9_Text_CamperSidBeaten:
-	.string "I was just pointing out…$"
+	.string "Solo estaba señalando…$"
 
 Route9_Text_CamperSidAfter:
 	.string "Perdón. No estabas tirando basura.\n"

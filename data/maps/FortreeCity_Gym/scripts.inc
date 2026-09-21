@@ -295,7 +295,7 @@ FortreeCity_Gym_Text_WinonaPreRematch:
 	.string "en pleno vuelo!$"
 
 FortreeCity_Gym_Text_WinonaRematchDefeat:
-	.string "I failed to reach your height again…$"
+	.string "Otra vez no llegué a tu altura…$"
 
 FortreeCity_Gym_Text_WinonaPostRematch:
 	.string "WINONA: Aunque haya perdido,\nmis alas del corazón siguen\nfirmes.\pPuedo elevarme y volar otra vez\ny una vez más.\p¡Estoy convencido de\nello!$"

@@ -63,7 +63,7 @@ Route110_TrickHousePuzzle1_Text_EddieDefeat:
 
 Route110_TrickHousePuzzle1_Text_EddiePostBattle:
 	.string "Me perdí, perdí una batalla y ahora\n"
-	.string "now even more lost… I can't get out…$"
+	.string "aún más perdido… No puedo salir…$"
 
 Route110_TrickHousePuzzle1_Text_RobinIntro:
 	.string "¿Quién es el MAESTRO DE TRUCOS?$"

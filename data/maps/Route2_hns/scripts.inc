@@ -38,7 +38,7 @@ Route2_Text_RobPostRematch:
 	.string "¿Habrá un mejor BOSQUE en algún lado?$"
 
 Route2_Text_BugCatcherRob_Seen:
-	.string "My bug POKéMON are tough. Prepare to\n"
+	.string "Mis POKéMON bicho son duros. Prepárate\n"
 	.string "para perder!$"
 
 Route2_Text_BugCatcherRob_Beaten:

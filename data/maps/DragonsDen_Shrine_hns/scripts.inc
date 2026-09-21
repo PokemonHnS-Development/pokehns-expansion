@@ -186,7 +186,7 @@ DragonsDen_Shrine_Text_ElderGreeting:
     .string "¿Listo?$"
 
 DragonsDen_Shrine_Text_Question1:
-    .string "What are POKéMON to you?$"
+	.string "¿Qué son los POKéMON para ti?$"
 
 DragonsDen_Shrine_Text_Question2:
     .string "¿Qué te ayuda a ganar combates?$"

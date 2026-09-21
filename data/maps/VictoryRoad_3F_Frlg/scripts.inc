@@ -73,7 +73,7 @@ Text_DoubleEdgeDeclined::
 	.string "en cualquier momento.$"
 
 Text_DoubleEdgeWhichMon::
-	.string "Which POKéMON should I teach\n"
+	.string "¿A qué POKéMON le enseño\n"
 	.string "CABEZA DE HIERRO?$"
 
 Text_DoubleEdgeTaught::

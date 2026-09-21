@@ -59,7 +59,7 @@ CianwoodCity_Text_BellTowerStory:
 	.string "igual a las que están en lo alto\l"
 	.string "de la torre.\p"
 	.string "La busqué cuando era joven.\n"
-	.string "Pero nunca conseguí una...$"
+	.string "¿Has oído hablar de las\nISLAS REMOLINO?\pAllí están las llamadas\nCampanas Marea\nen la base de su cascada.\pNo hacen ni\nun solo ruido\nentre las olas rompientes.\pSolo hay una\nforma de hacer que\nsuenen.\pEs para obtener otra Campana\nMareal\ncomo las que hay en la base de\nla\lcascada.\pLa busqué cuando era joven.\nPero nunca conseguí una...$"
 
 CianwoodCity_Text_WhirlIslandsStory:
 	.string "¿Has oído hablar de las\nISLAS REMOLINO?\pAllí están las llamadas\nCampanas Marea\nen la base de su cascada.\pNo hacen ni\nun solo ruido\nentre las olas rompientes.\pSolo hay una\nforma de hacer que\nsuenen.\pEs para obtener otra Campana\nMareal\ncomo las que hay en la base de\nla\lcascada.\pLa busqué cuando era joven.\nPero nunca conseguí una...$"

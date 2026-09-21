@@ -1002,7 +1002,7 @@ BattleFrontier_BattleTowerLobby_Text_DescribeFeelingsAboutBattleTower_hns:
 	.string "Disculpa, ¿tienes un momento?\p"
 	.string "¿Puedes describir qué sientes cuando\n"
 	.string "estás por iniciar un combate en la\l"
-	.string "BATTLE TOWER, o cuando has ganado\l"
+	.string "TORRE BATALLA, o cuando has ganado\l"
 	.string "o perdido un combate?$"
 
 BattleFrontier_BattleTowerLobby_Text_FeelWhatWhenYouBegin_hns:
@@ -1374,7 +1374,7 @@ BattleFrontier_BattleTowerLobby_Text_ExplainTowerRules_hns:
 	.string "el tipo de batalla que quieras.$"
 
 BattleFrontier_BattleTowerLobby_Text_ExplainMonRules_hns:
-	.string "Según la BATTLE ROOM en la que estés\n"
+	.string "Según la SALA BATALLA en la que estés\n"
 	.string "al entrar, deberás llevar\l"
 	.string "cierto número de POKéMON.\p"
 	.string "El modo COMBATE INDIVIDUAL pide\n"

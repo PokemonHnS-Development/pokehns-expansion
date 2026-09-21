@@ -236,7 +236,7 @@ Route119_WeatherInstitute_2F_Text_Grunt5Intro:
 	.string "¡Llegamos primero para atraparlo!$"
 
 Route119_WeatherInstitute_2F_Text_Grunt5Defeat:
-	.string "Oh, will you look at my POKéMON?$"
+	.string "¡Vaya, mira mis POKéMON!$"
 
 Route119_WeatherInstitute_2F_Text_Grunt5PostBattle:
 	.string "Humph, ¿y qué con eso?\n"

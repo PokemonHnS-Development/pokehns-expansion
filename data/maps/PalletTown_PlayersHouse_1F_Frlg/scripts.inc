@@ -72,7 +72,7 @@ PalletTown_PlayersHouse_1F_Text_YouShouldTakeQuickRest::
 	.string "You should take a quick rest.$"
 
 PalletTown_PlayersHouse_1F_Text_LookingGreatTakeCare::
-	.string "MOM: Oh, good! You and your\n"
+	.string "MAMÁ: ¡Oh, qué bien! Tú y tu\n"
 	.string "POKéMON are looking great.\l"
 	.string "Take care now!$"
 

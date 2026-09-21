@@ -73,7 +73,7 @@ BlackthornCity_MoveDeletersHouse_Text_ICanMakeMonForgetMove:
 	.string "¿Quieres que haga eso?$"
 
 BlackthornCity_MoveDeletersHouse_Text_WhichMonShouldForget:
-	.string "Which POKéMON should forget a move?$"
+	.string "¿Qué movimiento olvidará el POKéMON?$"
 
 BlackthornCity_MoveDeletersHouse_Text_WhichMoveShouldBeForgotten:
 	.string "¿Qué movimiento quieres olvidar?$"
@@ -204,7 +204,7 @@ BlackthornCity_MoveRelearnersHouse_Text_HandedOverHeartScale:
 	.string "a cambio.$"
 
 BlackthornCity_MoveRelearnersHouse_Text_ComeBackWithHeartScale:
-	.string "If your POKéMON need to learn a move,\n"
+	.string "Si tu POKéMON debe aprender un\n"
 	.string "vuelve con una ESCAMA CORAZÓN.$"
 
 BlackthornCity_MoveRelearnersHouse_Text_CantTeachEgg:

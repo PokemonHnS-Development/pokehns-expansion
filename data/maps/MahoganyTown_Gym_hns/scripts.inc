@@ -249,10 +249,10 @@ MahoganyTown_Gym_Text_SkierRoxanneAfter:
     .string "no llegarás lejos en este GIMNASIO.$"
 
 MahoganyTown_Gym_Text_SkierClarissaSeen:
-    .string "Check out my parallel turn!$"
+	.string "¡Mira mi giro paralelo!$"
 
 MahoganyTown_Gym_Text_SkierClarissaBeaten:
-    .string "No! You made me wipe out!$"
+	.string "¡No! ¡Me hiciste caer!$"
 
 MahoganyTown_Gym_Text_SkierClarissaAfter:
     .string "No debí presumir\n"

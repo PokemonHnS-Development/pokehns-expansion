@@ -232,7 +232,7 @@ CeruleanCity_House1_Text_DontHaveEnoughBerryPowder::
 CeruleanCity_House1_Text_TradeMoreBerryPowder::
 	.string "This is fine BERRY POWDER indeed.\n"
 	.string "Servirá para hacer medicinas.\p"
-	.string "Would you like to trade more BERRY\n"
+	.string "¿Quieres cambiar más BAYAS?\n"
 	.string "POWDER for something else?$"
 
 CeruleanCity_House1_Text_HopeToSeeYouAgain::

@@ -126,7 +126,7 @@ CeladonCity_Condominiums_RoofRoom_Text_ReadWhichHeading::
 	.string "¿Qué título quieres leer?$"
 
 CeladonCity_Condominiums_RoofRoom_Text_ExplainWirelessClub::
-	.string "The POKéMON WIRELESS CLUB is\n"
+	.string "El CLUB INALÁMBRICO POKéMON es\n"
 	.string "upstairs at any POKéMON CENTER.\p"
 	.string "Visit one to link up with friend(s)\n"
 	.string "using your Wireless Adapter.$"

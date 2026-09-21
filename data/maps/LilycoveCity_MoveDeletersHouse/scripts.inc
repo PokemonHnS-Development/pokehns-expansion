@@ -73,7 +73,7 @@ LilycoveCity_MoveDeletersHouse_Text_ICanMakeMonForgetMove:
 	.string "¿Quieres que haga eso?$"
 
 LilycoveCity_MoveDeletersHouse_Text_WhichMonShouldForget:
-	.string "Which POKéMON should forget a move?$"
+	.string "¿Qué POKéMON olvidará un movimiento?$"
 
 LilycoveCity_MoveDeletersHouse_Text_WhichMoveShouldBeForgotten:
 	.string "¿Qué movimiento debo olvidar?$"

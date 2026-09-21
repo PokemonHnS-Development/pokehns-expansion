@@ -113,7 +113,7 @@ Text_CounterDeclined::
 	.string "me if you change your mind.$"
 
 Text_CounterWhichMon::
-	.string "Which POKéMON should I teach\n"
+	.string "¿A qué POKéMON le enseño\n"
 	.string "COUNTER to?$"
 
 Text_CounterTaught::

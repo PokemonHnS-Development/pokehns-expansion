@@ -20046,9 +20046,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("FRÍA ACOGIDA"),
         #if B_PREFERRED_ICE_WEATHER == B_ICE_WEATHER_HAIL
-        .description = COMPOUND_STRING(
-            "Un mal chiste trae granizo.\n"
-            "The user also switches out."),
+        .description = COMPOUND_STRING("Un mal chiste trae nieve.\n"),
         #else
         .description = COMPOUND_STRING("Un mal chiste trae nieve.\n"),
         #endif

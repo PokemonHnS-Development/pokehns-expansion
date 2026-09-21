@@ -46,7 +46,7 @@ Route102_Text_RickIntro:
 	.string "¡Lucharé con mis POKéMON bicho!$"
 
 Route102_Text_RickDefeated:
-	.string "Ow! Down and out!$"
+	.string "¡Ay! ¡Derrotado!$"
 
 Route102_Text_RickPostBattle:
 	.string "Si cruzas la mirada con un\nENTRENADOR, ¡lo retas! ¡Es ley!$"
@@ -299,7 +299,7 @@ Route104_Text_HaleyRegister2:
 	.string "¡Está bien, te registraré!$"
 
 Route104_Text_HaleyRematchIntro:
-	.string "Come on, battle with me!$"
+	.string "¡Vamos, batalla conmigo!$"
 
 Route104_Text_HaleyRematchDefeat:
 	.string "Oh...\n"
@@ -522,7 +522,7 @@ Route106_Text_ElliotRematchDefeated:
 	.string "I lost again spectacularly!$"
 
 Route106_Text_ElliotRematchPostBattle:
-	.string "Win or lose, POKéMON are the greatest!\n"
+	.string "Gane o pierda, ¡POKéMON es lo más!\n"
 	.string "Estás de acuerdo conmigo, ¿verdad?$"
 
 Route106_Text_NedIntro:
@@ -1396,7 +1396,7 @@ Route111_Text_BrandenPostBattle:
 	.string "mis sándwiches.$"
 
 Route111_Text_TyronIntro:
-	.string "This is my favorite kind of POKéMON!$"
+	.string "¡Este es mi tipo de POKéMON favorito!$"
 
 Route111_Text_TyronDefeat:
 	.string "¡Espera!\n"
@@ -1698,7 +1698,7 @@ Route113_Text_LawrenceDefeat:
 	.string "Nos derrotaron limpiamente.$"
 
 Route113_Text_LawrencePostBattle:
-	.string "I ought to hide under the ashes, too.$"
+	.string "Yo también debería ocultarme entre\nlas cenizas.$"
 
 Route113_Text_WyattIntro:
 	.string "¿Q-quieres luchar conmigo?\n"
@@ -1860,7 +1860,7 @@ Route114_Text_TyraIntro:
 	.string "Te enseñaré algo sobre POKéMON.$"
 
 Route114_Text_TyraDefeat:
-	.string "TYRA: What an amazing battle style!$"
+	.string "TYRA: ¡Qué estilo de batalla tan\nincreíble!$"
 
 Route114_Text_TyraPostBattle:
 	.string "TYRA: Le estaba enseñando a IVY\n"
@@ -1872,10 +1872,10 @@ Route114_Text_TyraNotEnoughMons:
 	.string "POKéMON no es suficiente!$"
 
 Route114_Text_IvyIntro:
-	.string "IVY: Who taught you about POKéMON?$"
+	.string "IVY: ¿Quién te enseñó de POKéMON?$"
 
 Route114_Text_IvyDefeat:
-	.string "IVY: What an amazing battle style!$"
+	.string "IVY: ¡Qué estilo de batalla!$"
 
 Route114_Text_IvyPostBattle:
 	.string "IVY: Empecé a entrenar POKéMON\n"
@@ -2311,7 +2311,7 @@ Route117_Text_DylanIntro:
 	.string "¡Da igual, peleemos!$"
 
 Route117_Text_DylanDefeat:
-	.string "I ran out of energy!$"
+	.string "¡Me quedé sin energía!$"
 
 Route117_Text_DylanPostBattle:
 	.string "Puede que lo haya arruinado...\p"
@@ -2319,7 +2319,7 @@ Route117_Text_DylanPostBattle:
 	.string "en esa batalla...$"
 
 Route117_Text_DylanRegister:
-	.string "POKéMON have to be strong, too?\n"
+	.string "¿POKéMON también deben ser fuertes?\n"
 	.string "¡Quiero que me entrenes!$"
 
 Route117_Text_DylanRematchIntro:
@@ -2328,7 +2328,7 @@ Route117_Text_DylanRematchIntro:
 	.string "¡Hagamos que sea una batalla rápida!$"
 
 Route117_Text_DylanRematchDefeat:
-	.string "I ran out of energy again!$"
+	.string "¡Otra vez me quedé sin energía!$"
 
 Route117_Text_DylanPostRematch:
 	.string "Fui el mejor en nado y ciclismo,\n"
@@ -2743,7 +2743,7 @@ Route119_Text_HughIntro:
 	.string "euforia de volar!$"
 
 Route119_Text_HughDefeat:
-	.string "Down and out!$"
+	.string "¡Derrotado por completo!$"
 
 Route119_Text_HughPostBattle:
 	.string "¡Mi POKéMON ave hizo realidad mis\n"
@@ -2785,10 +2785,10 @@ Route119_Text_TakashiPostBattle:
 	.string "fracaso…$"
 
 Route119_Text_HideoIntro:
-	.string "To hide a tree, use a forest!$"
+	.string "Para ocultar un árbol, usa un bosque!$"
 
 Route119_Text_HideoDefeat:
-	.string "I bow to your superiority.$"
+	.string "Me inclino ante tu superioridad.$"
 
 Route119_Text_HideoPostBattle:
 	.string "¡Para ocultar un árbol, usa un bosque!\n"
@@ -2862,7 +2862,7 @@ Route120_Text_RobertIntro:
 	.string "¿Qué tal los tuyos?$"
 
 Route120_Text_RobertDefeat:
-	.string "Your POKéMON were stronger…$"
+	.string "Tus POKéMON eran más fuertes…$"
 
 Route120_Text_RobertPostBattle:
 	.string "Un POKéMON que crece constante es\n"
@@ -2877,7 +2877,7 @@ Route120_Text_RobertRematchIntro:
 	.string "uno en quien confiar.$"
 
 Route120_Text_RobertRematchDefeat:
-	.string "Your POKéMON are seriously strong.$"
+	.string "Tus POKéMON son muy fuertes.$"
 
 Route120_Text_RobertPostRematch:
 	.string "Mis POKéMON son cada vez más fuertes.\n"
@@ -3459,7 +3459,7 @@ Route123_Text_EdIntro:
 	.string "Yo los observo.$"
 
 Route123_Text_EdDefeat:
-	.string "I kind of like your POKéMON.$"
+	.string "Me gustan tus POKéMON.$"
 
 Route123_Text_EdPostBattle:
 	.string "¡Jeje, robo tus ideas de combate!\n"
@@ -4041,7 +4041,7 @@ Route128_Text_KatelynIntro:
 	.string "tres eventos.$"
 
 Route128_Text_KatelynDefeat:
-	.string "A POKéMON battle is grueling, too…$"
+	.string "Una batalla POKéMON es dura…$"
 
 Route128_Text_KatelynPostBattle:
 	.string "Ahora me toca usar la BICI, pero…\n"
@@ -4222,7 +4222,7 @@ Route130_Text_SantiagoIntro:
 	.string "Es tranquilo.$"
 
 Route130_Text_SantiagoDefeat:
-	.string "I needed to be a little less peaceful!$"
+	.string "¡Debí ser menos pacífico!$"
 
 Route130_Text_SantiagoPostBattle:
 	.string "Nadar y pelear así…\nSoy un tipo feliz…$"
@@ -4332,7 +4332,7 @@ Route132_Text_GilbertIntro:
 	.string "De niño me resfriaba a cada rato,\npero me puse muy en forma desde\lque empecé a nadar.$"
 
 Route132_Text_GilbertDefeat:
-	.string "I crave more power…$"
+	.string "Quiero más poder…$"
 
 Route132_Text_GilbertPostBattle:
 	.string "Los ENTRENADORES recorren campos y\nmontañas, así que estarán en forma.$"

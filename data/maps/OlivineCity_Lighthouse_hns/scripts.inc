@@ -166,7 +166,7 @@ OlivineLighthouse_Text_GentlemanPrestonSeen:
 	.string "POKéMON. Quiero luchar contigo.$"
 
 OlivineLighthouse_Text_GentlemanPrestonBeaten:
-	.string "…sigh… I must train some more…$"
+	.string "…suspiro… Debo entrenar más…$"
 
 OlivineLighthouse_Text_GentlemanPrestonAfter:
 	.string "JASMINE solía usar POKéMON\n"

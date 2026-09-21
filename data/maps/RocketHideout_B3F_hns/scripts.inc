@@ -584,7 +584,7 @@ RocketHideout_B3F_Text_PetrelReveal:
     .string "Bueno, eso no va a pasar.\n"
     .string "Esa sala está protegida con una\l"
     .string "contraseña especial.\p"
-    .string "The password is “Hail GIOVANNI.”\n"
+	.string "La contraseña es “VIVA GIOVANNI”.\n"
     .string "¿Te sorprende que yo lo sepa?\p"
     .string "Saber la clave no te servirá\n"
     .string "de nada.\p"

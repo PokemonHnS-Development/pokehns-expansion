@@ -218,7 +218,7 @@ RadioTower1F_Text_PokegearRadio:
     .string "también sirve como RADIO!$"
 
 RadioTower1F_Text_TuneIn:
-    .string "Please tune in to our RADIO shows.$"
+	.string "¡Escucha nuestros programas de RADIO!$"
 
 RadioTower1F_Text_WrongAnswer:
     .string "Vaya, vaya.\n"

@@ -583,7 +583,7 @@ WhirlIslands_LugiaChamber_Text_Kimono_Closing1::
 	.string "Realmente es LUGIA...\n"
 	.string "El guardián de estas islas desde\l"
 	.string "tiempos antiguos... \p"
-	.string "So many have tried again and again,\n"
+	.string "Muchos lo han intentado y reintentado,\n"
 	.string "solo para fallar...\p"
 	.string "{PLAYER}, tu corazón en completa\n"
 	.string "la armonía con la Campana Marina\l"

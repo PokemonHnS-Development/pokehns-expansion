@@ -127,7 +127,7 @@ SSAqua_B1F_Text_SailorGarrettSeen:
 	.string "¡Aquí trabajamos los marineros!$"
 
 SSAqua_B1F_Text_SailorGarrettBeaten:
-	.string "I lost on my home field…$"
+	.string "Perdí en mi propia cancha…$"
 
 SSAqua_B1F_Text_SailorGarrettAfter:
 	.string "Llegan pasajeros distintos\n"

@@ -72,7 +72,7 @@ PalletTown_Lab_EventScript_PC::
 	end
 
 PalletTown_Lab_Text_OakLabDexCheck:
-	.string "How is your POKéDEX coming?$"
+	.string "¿Cómo va tu POKéDEX?$"
 
 PalletTown_Lab_Text_OakWelcomeKanto:
 	.string "OAK: ¡Ah, {PLAYER}!\n"

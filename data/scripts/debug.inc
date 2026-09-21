@@ -400,7 +400,7 @@ DebugScript_HatchAnEgg_CantForceHatch::
 	end
 
 DebugScript_Text_EmptyParty::
-	.string "You have no Pokémon nor Eggs.$"
+	.string "No tienes POKéMON ni HUEVOS.$"
 
 DebugScript_HatchAnEgg_Text_NotAnEgg::
 	.string "That's not a Pokémon Egg.$"
@@ -424,7 +424,7 @@ DebugText_DaycareNoPokemon:
 	.string "No tienes POKéMON en la Guardería.$"
 
 DebugText_DaycareOnePokemon:
-	.string "You have only one Pokémon at Daycare.$"
+	.string "Solo tienes un POKéMON en el criadero.$"
 
 DebugText_DaycarePokemonNotCompatible:
 	.string "Tus POKéMON en la Guardería no\n¡pueden tener huevos juntos!$"

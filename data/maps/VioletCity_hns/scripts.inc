@@ -492,6 +492,6 @@ VioletCity_Text_Kimono_Girl3:
 .string "por mí. ¿Está claro?$"
 
 VioletCity_Text_Kimono_Girl4:
-.string "I am counting on you.$"
+	.string "Cuento contigo.$"
 
 

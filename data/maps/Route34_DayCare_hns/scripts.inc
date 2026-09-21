@@ -559,7 +559,7 @@ Route34_DayCare_Text_YourTeamIsFull:
 
 @ Unused
 Route34_DayCare_Text_TakeBackWhichMon:
-	.string "Which POKéMON will you take back?$"
+	.string "¿Qué POKéMON vas a recuperar?$"
 
 Route34_DayCare_Text_ItWillCostX:
 	.string "Si quieres recuperar tu {STR_VAR_1},\nte costará ¥{STR_VAR_2}.$"
@@ -577,7 +577,7 @@ Route34_DayCare_Text_YouHaveJustOneMon:
 	.string "Vuelve en otro momento.$"
 
 Route34_DayCare_Text_TakeYourMonBack:
-	.string "Will you take your POKéMON back?$"
+	.string "¿Quieres recuperar a tu POKéMON?$"
 
 Route34_DayCare_Text_WhatWillYouBattleWith:
 	.string "Si me dejas ese POKéMON,\n"

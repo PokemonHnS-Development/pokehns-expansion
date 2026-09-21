@@ -12,7 +12,7 @@ Route5_PokemonDayCare_Text_ComeAgain::
 	.string "Vuelve pronto.$"
 
 Route5_PokemonDayCare_Text_WhichMonShouldIRaise::
-	.string "Which POKéMON should I raise?$"
+	.string "¿A qué POKéMON debería criar?$"
 
 Route5_PokemonDayCare_Text_ComeAnytimeYouLike::
 	.string "Está bien.\n"

@@ -492,7 +492,7 @@ BattleFrontier_ExchangeServiceCorner_Text_CarbosDesc::
 	.string "POKéMON.$"
 
 BattleFrontier_ExchangeServiceCorner_Text_HPUpDesc::
-	.string "Raises the HP of one POKéMON.$"
+	.string "Sube los PS de un POKéMON.$"
 
 BattleFrontier_ExchangeServiceCorner_Text_LeftoversDesc::
 	.string "Objeto equipado que recupera\n"

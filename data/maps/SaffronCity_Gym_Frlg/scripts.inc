@@ -205,7 +205,7 @@ SaffronCity_Gym_Text_CameronIntro::
 
 SaffronCity_Gym_Text_CameronDefeat::
 	.string "Ow!\n"
-	.string "Down and out!$"
+	.string "¡Fuera de combate!$"
 
 SaffronCity_Gym_Text_CameronPostBattle::
 	.string "There used to be two POKéMON GYMS\n"

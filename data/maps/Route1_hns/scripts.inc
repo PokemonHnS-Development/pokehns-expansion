@@ -36,7 +36,7 @@ Route1_Text_CooltrainerFQuinn_Seen:
 	.string "¡Oye, tú! ¿Quieres combatir?$"
 
 Route1_Text_CooltrainerFQuinn_Beaten:
-	.string "Down and out…$"
+	.string "Abajo y fuera…$"
 
 Route1_Text_CooltrainerFQuinn_AfterBattle:
 	.string "Eres fuerte.\p"

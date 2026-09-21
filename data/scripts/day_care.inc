@@ -364,7 +364,7 @@ Route117_PokemonDayCare_Text_YourTeamIsFull:
 
 @ Unused
 Route117_PokemonDayCare_Text_TakeBackWhichMon:
-	.string "Which POKéMON will you take back?$"
+	.string "¿Qué POKéMON vas a llevar?$"
 
 Route117_PokemonDayCare_Text_ItWillCostX:
 	.string "Si quieres recuperar tu {STR_VAR_1},\ncostará ¥{STR_VAR_2}.$"
@@ -382,7 +382,7 @@ Route117_PokemonDayCare_Text_YouHaveJustOneMon:
 	.string "Vuelve en otro momento.$"
 
 Route117_PokemonDayCare_Text_TakeYourMonBack:
-	.string "Will you take your POKéMON back?$"
+	.string "¿Llevarás a tu POKéMON?$"
 
 Route117_PokemonDayCare_Text_WhatWillYouBattleWith:
 	.string "Si me dejas ese POKéMON,\n"

@@ -43,7 +43,7 @@ const struct HelpWindow gHelpWindowInfo[] =
     [HELP_SINJOH_WINDOW] =
     {
         .header = COMPOUND_STRING("OPTIONAL BONUS CONTENT: SINJOH"),
-        .desc = COMPOUND_STRING("Este NPC da acceso a contenido\nopcional: SINJOH.\nNO es necesario para la historia\nni para completar la POKéDEX NAC.\n \nEs solo un extra. Si lo quieres."),
+        .desc = COMPOUND_STRING("Este NPC da acceso a contenido\nopcional: ISLAS.\nNO es necesario para la historia\nni para completar la POKéDEX NAC.\n \nEs solo un extra. Si lo quieres."),
         .headerFont = FONT_NORMAL,
         .descFont = FONT_NORMAL,
         .headerColor = {0, 8, 3},

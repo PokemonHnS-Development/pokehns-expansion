@@ -61,7 +61,7 @@ FuchsiaCity_House3_Text_WouldYouLikeToForgetMove::
 	.string "¿Quieres que haga eso?$"
 
 FuchsiaCity_House3_Text_WhichMonShouldForgetMove::
-	.string "Which POKéMON should forget a\n"
+	.string "¿Qué POKéMON debería olvidar un\n"
 	.string "move?$"
 
 FuchsiaCity_House3_Text_WhichMoveShouldBeForgotten::

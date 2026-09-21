@@ -90,7 +90,7 @@ FallarborTown_MoveRelearnersHouse_Text_HandedOverHeartScale:
 	.string "a cambio.$"
 
 FallarborTown_MoveRelearnersHouse_Text_ComeBackWithHeartScale:
-	.string "If your POKéMON need to learn a move,\n"
+	.string "Si tu POKéMON debe aprender\n"
 	.string "vuelve con una ESCAMA CORAZÓN.$"
 
 FallarborTown_MoveRelearnersHouse_Text_CantTeachEgg:

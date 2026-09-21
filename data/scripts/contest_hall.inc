@@ -1463,7 +1463,7 @@ LilycoveCity_ContestLobby_Text_EnterWhichContest1:
 	.string "¿En qué CONCURSO quieres entrar?$"
 
 LilycoveCity_ContestLobby_Text_EnterWhichPokemon1:
-	.string "Which POKéMON would you like to enter?$"
+	.string "¿Qué POKéMON quieres inscribir?$"
 
 LilycoveCity_ContestLobby_Text_MonNotQualifiedForRank:
 	.string "Lo siento mucho, pero tu POKéMON\n"
@@ -1486,7 +1486,7 @@ LilycoveCity_ContestLobby_Text_AlreadyWonEnterAnyway:
 	.string "este CONCURSO?$"
 
 LilycoveCity_ContestLobby_Text_ConfirmContestMon:
-	.string "Is that your CONTEST POKéMON?$"
+	.string "¿Ese es tu POKéMON de concurso?$"
 
 LilycoveCity_ContestLobby_Text_YourMonIsEntryNum4:
 	.string "Bien, tu POKéMON será inscrito\n"
@@ -1634,7 +1634,7 @@ LilycoveCity_ContestLobby_Text_EnterWhichContest2:
 
 @ Unused
 LilycoveCity_ContestLobby_Text_EnterWhichPokemon2:
-	.string "Which POKéMON would you like to enter?$"
+	.string "¿Qué POKéMON quieres inscribir?$"
 
 LilycoveCity_ContestLobby_Text_Transmitting:
 	.string "Transmitting…$"
@@ -1696,7 +1696,7 @@ LilycoveCity_ContestLobby_Text_EggCannotTakePart2:
 	.string "en un CONCURSO POKéMON.$"
 
 LilycoveCity_ContestLobby_Text_EnterWhichPokemon3:
-	.string "Which POKéMON would you like to enter?$"
+	.string "¿Qué POKéMON quieres inscribir?$"
 
 LilycoveCity_ContestLobby_Text_PleaseDecideLinkLeader:
 	.string "Decidan quién de ustedes será\nel LÍDER DEL GRUPO.\pLos demás jugadores deben elegir\n“UNIRSE AL GRUPO.”$"

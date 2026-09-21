@@ -88,7 +88,7 @@ CianwoodCity_Text_ManiacGotShuckle:
 	.string "{PLAYER} received a POKéMON.$"
 
 CianwoodCity_Text_ManiacPartyFull:
-	.string "Your POKéMON party is full.$"
+	.string "Tu equipo POKéMON está lleno.$"
 
 CianwoodCity_Text_ManiacIfHeComesBack:
 	.string "Oh, no... ¿Qué haré si él\n"

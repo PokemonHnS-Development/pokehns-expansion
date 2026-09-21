@@ -1387,7 +1387,7 @@ CableClub_Text_TrainerCardDataOverwritten_Frlg::
 	.string "ENTRENADOR se borrarán.$"
 
 CableClub_Text_HopeToSeeYouAgain_Frlg::
-	.string "I hope to see you again!$"
+	.string "¡Espero verte otra vez!$"
 
 CableClub_Text_NotSetUpForFarAwayRegion_Frlg::
 	.string "Lo siento muchísimo.\p"
@@ -1436,7 +1436,7 @@ CableClub_Text_CanMixRecords_Frlg::
 	.string "あそびかたを　せつめいします$"
 
 CableClub_Text_CancelSelectedItem_Frlg::
-	.string "Cancels the selected MENU item.$"
+	.string "Cancela el elemento del MENÚ elegido.$"
 
 @ Unused, translated in Emerald
 CableClub_Text_WhichBattleMode_Frlg::
@@ -1567,7 +1567,7 @@ CableClub_Text_WelcomeWhichDirectCornerRoom_Frlg::
 	.string "inscribir?$"
 
 CableClub_Text_TradePokemon_Frlg::
-	.string "Would you like to trade POKéMON?$"
+	.string "¿Quieres intercambiar POKéMON?$"
 
 CableClub_Text_PlayWhichBattleMode_Frlg::
 	.string "¿Qué modo de batalla prefieres?\n"

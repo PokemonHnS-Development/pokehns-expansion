@@ -602,7 +602,7 @@ GoldenrodCity_GameCorner_Text_PrizeVendorHereYouGo:
     .string "Here you go!$"
 
 GoldenrodCity_GameCorner_Text_PrizeVendorNeedMoreCoins:
-    .string "Sorry! You need more coins.$"
+	.string "¡Lo siento! Te faltan monedas.$"
 
 GoldenrodCity_GameCorner_Text_PrizeVendorNoMoreRoom:
     .string "Lo siento. No puedes llevar más.$"

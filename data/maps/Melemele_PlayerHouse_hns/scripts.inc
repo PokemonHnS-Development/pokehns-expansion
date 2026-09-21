@@ -700,7 +700,7 @@ Alola_Melemele_SamsonOakVilla_Dialogue_Text_22:
 Alola_Melemele_SamsonOakVilla_Dialogue_Text_23:
 	.string "Déjame ver tu POKéDEX{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.\p"
 	.string "Parece que aún no has hallado todas\n"
-	.string "the Alolan variants on MELEMELE ISLE\l"
+	.string "variantes de Alola en ISLA MELEMELE\l"
 	.string "todavía.\p"
 	.string "Oí que en ISLA MELEMELE hay {COLOR RED}4 {COLOR DARK_GRAY}Alolan\n"
 	.string "de Alola para que encuentres...\p"

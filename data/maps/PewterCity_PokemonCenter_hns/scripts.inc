@@ -15,7 +15,7 @@ PewterCity_PokemonCenter_EventScript_BugCatcher::
 	end
 
 PewterCity_PokemonCenter1F_Text_Teacher:
-	.string "…Sí, ISLA CANELA ya no tiene GIMNASIO.\pMe sorprendió mucho.\p…¿Sí? Estoy al teléfono. ¡Vete!$"
+	.string "…Sí, el GIMNASIO de ISLA CRESPO\nya no existe.\pMe quedé muy\nsorprendido.\p…¿Sí? Estoy al teléfono.\n¡Vete!$"
 
 PewterCity_PokemonCenter1F_Text_Jigglypuff:
 	.string "JIGGLYPUFF: Puu pupuu.$"
