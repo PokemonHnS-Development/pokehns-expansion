@@ -496,7 +496,7 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_SAFARI_BALL] =
     {
-        .name = ITEM_NAME("SAFARI BALL"),
+        .name = ITEM_NAME("BOLA SAFARI"),
         .price = 0,
         .description = COMPOUND_STRING(
             "Una Ball especial que\n"

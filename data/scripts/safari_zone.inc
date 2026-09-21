@@ -128,7 +128,7 @@ SafariZone_Text_TimesUp:
 	.string "Tu juego SAFARI ha terminado.$"
 
 SafariZone_Text_OutOfBalls:
-	.string "Te quedaste sin SAFARI BALLS.\nTu juego SAFARI ha terminado.$"
+	.string "Te quedaste sin BOLAS SAFARI.\nTu juego SAFARI ha terminado.$"
 
 SafariZone_Text_PlacePokeblockOnFeeder:
 	.string "¿Quieres poner un {POKEBLOCK}\nen el COMEDERO DE {POKEBLOCK}?$"
@@ -159,10 +159,10 @@ Route121_SafariZoneEntrance_Text_ComeInAndEnjoy:
 
 Route121_SafariZoneEntrance_Text_FirstTimeInfo:
 	.string "Al entrar en la ZONA SAFARI, tú\n"
-	.string "empiezas con 30 SAFARI BALLS para\l"
+	.string "empiezas con 30 BOLAS SAFARI para\l"
 	.string "atrapar POKéMON.\p"
 	.string "El juego SAFARI termina al gastar\n"
-	.string "tus SAFARI BALLS, o al caminar\l"
+	.string "tus BOLAS SAFARI, o al caminar\l"
 	.string "500 pasos.\p"
 	.string "¡Entra y disfruta de la ZONA SAFARI!$"
 
@@ -181,10 +181,10 @@ Route121_SafariZoneEntrance_Text_ThatWillBe500Please:
 	.string "Son ¥500, por favor.$"
 
 Route121_SafariZoneEntrance_Text_HereAreYourSafariBalls:
-	.string "Aquí tienes tus SAFARI BALLS.$"
+	.string "Aquí tienes tus BOLAS SAFARI.$"
 
 Route121_SafariZoneEntrance_Text_Received30SafariBalls:
-	.string "{PLAYER} received 30 SAFARI BALLS.$"
+	.string "{PLAYER} received 30 BOLAS SAFARI.$"
 
 Route121_SafariZoneEntrance_Text_PleaseEnjoyYourself:
 	.string "Te avisaremos cuando tu partida\nhaya terminado.\pMientras tanto, ¡diviértete!\n¡Disfruta tu excursión salvaje!$"
@@ -214,7 +214,7 @@ SafariZone_South_Text_EnjoyTheRestOfYourAdventure:
 
 SafariZone_South_Text_ExitEarlyThankYouForPlaying:
 	.string "Está bien.\p"
-	.string "Recuperaré tus SAFARI BALLS\n"
+	.string "Recuperaré tus BOLAS SAFARI\n"
 	.string "restantes.\p"
 	.string "Gracias por jugar.\n"
 	.string "Esperamos verte de nuevo.$"
@@ -274,7 +274,7 @@ SafariZone_RestHouse_Text_Youngster:
 	.string "bastantes POKéMON.\p"
 	.string "Puedes mejorar tus chances de captura\n"
 	.string "acercándote más a ellos\l"
-	.string "antes de lanzar una SAFARI BALL.$"
+	.string "antes de lanzar una BOLA SAFARI.$"
 
 SafariZone_RestHouse_Text_PsychicM:
 	.string "Si usas {POKEBLOCK}S, los POKéMON\n"
@@ -312,7 +312,7 @@ SafariZone_Southeast_Text_RichBoy:
 	.string "venir de fuera de HOENN.$"
 
 SafariZone_Northeast_Text_Boy:
-	.string "Solo me quedan un par de SAFARI BALLS.\pMe cuesta mucho decidir\nqué debería atrapar.$"
+	.string "Solo me quedan un par de BOLAS SAFARI.\pMe cuesta mucho decidir\nqué debería atrapar.$"
 
 SafariZone_Northeast_Text_Woman:
 	.string "Oí que aquí se puede ver a PIKACHU.\n¿Dónde podría haber uno?$"

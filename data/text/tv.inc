@@ -2278,7 +2278,7 @@ TVSecretBaseSecrets_Text_UsedJumpMat::
 gTVSafariFanClubText00::
 	.string "¡CLUB DE FANS DEL SAFARI!\p"
 	.string "REPORTERO: ¡Muy bien, amigos!\n"
-	.string "Lanzas SAFARI BALL, ¿verdad?\p"
+	.string "Lanzas BOLA SAFARI, ¿verdad?\p"
 	.string "¡Puedes apostar que estoy en la\n"
 	.string "ZONA SAFARI llena de POKéMON!\p"
 	.string "¡Vamos a hablar un rato con\n"
