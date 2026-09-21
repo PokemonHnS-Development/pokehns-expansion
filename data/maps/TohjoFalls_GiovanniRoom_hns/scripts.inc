@@ -22,8 +22,8 @@ TohjoFalls_GiovanniRoom_EventScript_Radio::
 	end
 
 TohjoFalls_GiovanniRoom_Text_RadioObject::
-	.string "Una radio...\n"
-	.string "La batería está agotada...$"
+	.string "Una radio...\n
+La batería se agotó...$"
 
 TohjoFalls_GiovanniRoom_CancelScene::
 	setvar VAR_TOHJO_FALLS_GIOVANNI_STATE, 0
@@ -189,14 +189,14 @@ TohjoFalls_Movement_GiovanniLeave:
 	step_end
 
 TohjoFalls_GiovanniRoom_Text_Radio:
-	.string "RADIO: ... ...\n"
-	.string "¡Ejem, somos el TEAM ROCKET!\l"
-	.string "Tras tres años de preparación,\l"
-	.string "¡hemos resurgido de las cenizas!\l"
-	.string "¡GIOVANNI! ¿Puedes oírnos?\l"
-	.string "¡Lo logramos!\l"
-	.string "¿Dónde está nuestro jefe?\l"
-	.string "¿Nos está escuchando?$"
+	.string "RADIO: ... ...\n
+Ejem, ¡somos el EQUIPO ROCKET!\l
+Tras tres años de preparación,\l
+¡hemos resurgido de las cenizas!\l
+¡GIOVANNI! ¿Nos oyes?\l
+¡Lo logramos!\l
+¿Dónde está nuestro jefe?\l
+¿Nos escucha?$"
 
 TohjoFalls_GiovanniRoom_Text_GiovanniIntro:
 	.string "GIOVANNI: ...\p"
@@ -215,19 +215,19 @@ TohjoFalls_GiovanniRoom_Text_GiovanniIntro:
 	.string "¿Vas a interponerte en mi camino?$"
 
 TohjoFalls_GiovanniRoom_Text_GiovanniBeforeBattle:
-	.string "Mis viejos socios me necesitan...\n"
-	.string "¡No repetiremos el fracaso de\l"
-	.string "hace tres años!$"
+	.string "Mis viejos compañeros me necesitan...\n
+¡No repetiremos el fracaso de\l
+hace tres años!$"
 
 TohjoFalls_GiovanniRoom_Text_GiovanniDefeat:
-	.string "¿Qué diablos eres?$"
+	.string "¿Qué demonios eres?$"
 
 TohjoFalls_GiovanniRoom_Text_GiovanniAfter:
-	.string "GIOVANNI: ¿Cómo es posible...?\n"
-	.string "¿Los últimos tres años han sido un\l"
-	.string "desperdicio...?\p"
-	.string "¿Cómo puede un niño como tú\n"
-	.string "destruir mi sueño otra vez?\p"
-	.string "El preciado sueño del TEAM ROCKET\n"
-	.string "no es más que una\l"
-	.string "ilusión...$"
+	.string "GIOVANNI: ¿Cómo es posible...?\n
+¿Estos tres años han sido una\l
+pérdida...?\p
+¿Cómo puede un niño como tú\n
+destruir mi sueño otra vez?\p
+El preciado sueño del EQUIPO ROCKET\n
+no es más que una\l
+ilusión...$"

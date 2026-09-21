@@ -461,10 +461,10 @@ Route116_Text_TrainerTipsBToStopEvolution:
 	.string "Esto es cancelar la evolución.$"
 
 Route116_Text_TrainerTipsBagHasPockets:
-	.string "CONSEJOS DE ENTRENADOR\p"
-	.string "Tu MOCHILA tiene varios BOLSILLOS.\p"
-	.string "Los objetos que obtengas se guardan\n"
-	.string "en los BOLSILLOS adecuados.\p"
-	.string "Ningún ENTRENADOR puede estar sin\n"
-	.string "su propia MOCHILA.$"
+	.string "CONSEJOS DE ENTRENADOR\p
+Tu MOCHILA tiene varios BOLSILLOS.\p
+Los objetos que obtengas se\n
+guardan solos en el BOLSILLO correcto.\p
+Ningún ENTRENADOR puede prescindir de\n
+una MOCHILA propia.$"
 

@@ -6,7 +6,9 @@ Route50_EventScript_BlackBelt1::
 	end
 
 Route50_Text_BlackBelt1::
-	.string "El cuerpo debe endurecerse\n"
+	.string "El cuerpo debe endurecerse\n
+y la mente fortalecerse\l
+¡en las condiciones más duras!$"
     .string "y la mente fortalecerse\l"
     .string "¡en las peores condiciones!$"
 
@@ -60,16 +62,16 @@ Route50_Text_WesselBefore:
     .string "¡Debo recolectar más datos!$"
 
 Route50_Text_WesselBeforeBattle:
-	.string "¿Quieres esta PLACA?\n"
-	.string "¡Pero si aún no la he analizado!\p"
-	.string "Bien, lucharemos por ella.$"
+	.string "¿Quieres esta TABLA?\n
+¡Pero aún no la he analizado!\p
+Está bien, lucharemos por ella.$"
 
 Route50_Text_WesselDefeat:
 	.string "Mi hipótesis era errónea...$"
 
 Route50_Text_WesselAfter:
-	.string "Toma la PLACA. No quiero\n"
-	.string "hablar de ello.$"
+	.string "Toma la TABLA. No quiero\n
+hablar de esto.$"
 
 Route50_EventScript_Finley::
 	goto_if_defeated TRAINER_FINLEY_HNS, Route50_EventScript_FinleyAfter
@@ -99,7 +101,19 @@ Route50_EventScript_FinleyAfter::
 	end
 
 Route50_Text_FinleyBefore:
-	.string "¿Cómo te tratan los aldeanos?\n"
+	.string "¿Cómo te están tratando\n
+los aldeanos?\p
+Pueden ser muy poco amables\n
+con los extraños.\p
+Pero conocer gente nueva es\n
+una de las mayores alegrías.\p
+Algún día, espero conocer al\n
+CAMPEÓN LANCE.\p
+Es un legendario domador\n
+de dragones, igual que yo.\l
+¿Quién soy?\p
+Bueno, soy FINLEY, el guardián\n
+de la TABLA DRACO.$"
     .string "contigo?\p"
     .string "Pueden ser muy hostiles con\n"
     .string "desconocidos.\p"
@@ -114,17 +128,17 @@ Route50_Text_FinleyBefore:
     .string "PLACA DRACO.$"
 
 Route50_Text_FinleyBeforeBattle:
-	.string "Sé que los KIMONO te enviaron\n"
-	.string "a recolectar estas PLACAS.\p"
-	.string "Dicen que eres digno...\n"
-	.string "Pero ¿vencerás a mis dragones?$"
+	.string "Sé que los KIMONO te enviaron\n
+a reunir estas TABLAS.\p
+Dicen que eres digno...\n
+¿Pero puedes vencer a mis dragones?$"
 
 Route50_Text_FinleyDefeat:
 	.string "Mis dragones lucharon bien.$"
 
 Route50_Text_FinleyAfter:
-	.string "Tal vez seas lo bastante fuerte\n"
-	.string "para vencer a LANCE...$"
+	.string "Quizá seas lo bastante fuerte\n
+para vencer a LANCE...$"
 
 Route50_EventScript_Item_ULtraBall::
     finditem ITEM_ULTRA_BALL

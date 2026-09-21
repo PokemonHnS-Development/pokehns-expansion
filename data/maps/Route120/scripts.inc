@@ -373,8 +373,8 @@ Route120_Text_StevenGreeting:
 	.string "para luchar?$"
 
 Route120_Text_StevenIllWaitHere:
-	.string "STEVEN: ¿No?\p"
-	.string "Esperaré aquí para que te prepares.$"
+	.string "STEVEN: ¿No?\p
+Esperaré aquí, así puedes prepararte.$"
 
 Route120_Text_StevenReadyForBattle:
 	.string "STEVEN: {PLAYER}{KUN}, ¿están tus\n"

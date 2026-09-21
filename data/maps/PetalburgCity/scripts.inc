@@ -712,7 +712,7 @@ PetalburgCity_Text_AreYouRookieTrainer:
 	.string "hay en el pueblo.$"
 
 PetalburgCity_Text_ThisIsPetalburgGym:
-	.string "¿Ves? El GIMNASIO de CIUDAD PETALIA.$"
+	.string "¿Ves? El GIMNASIO de CIUDAD PETALBURG.$"
 
 PetalburgCity_Text_ThisIsGymSign:
 	.string "Es el cartel del GIMNASIO. Búscalo\n"

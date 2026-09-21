@@ -138,8 +138,8 @@ ViridianCity_Text_DreamEaterFisher_GotDreamEater:
 	.string "…Zzzzz…$"
 
 ViridianCity_Text_Youngster:
-	.string "Oí que hay muchos objetos\n"
-	.string "en el BOSQUE VERDE.$"
+	.string "Oí que hay muchos objetos\n
+en el suelo del BOSQUE VERDE.$"
 
 ViridianCity_Text_Sign:
 	.string "CIUDAD VERIDIAN\p"

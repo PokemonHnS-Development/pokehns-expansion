@@ -449,7 +449,7 @@ BattleFrontier_BattleDomeLobby_Text_TakeSinglesChallenge_hns:
 	.string "de BATALLA INDIVIDUAL?$"
 
 BattleFrontier_BattleDomeLobby_Text_HopeToSeeYouAgain_hns:
-	.string "Esperamos verte de nuevo.$"
+	.string "¡Esperamos verte de nuevo!$"
 
 BattleFrontier_BattleDomeLobby_Text_ExplainSinglesChallenge_hns:
 	.string "El Torneo de BATALLA INDIVIDUAL\n"
@@ -543,7 +543,7 @@ BattleFrontier_BattleDomeLobby_Text_RecordWillBeSaved_hns:
 	.string "Please wait.$"
 
 BattleFrontier_BattleDomeLobby_Text_WeveBeenWaitingForYou_hns:
-	.string "¡Te hemos estado esperando!$"
+	.string "¡Te estuvimos esperando!$"
 
 BattleFrontier_BattleDomeLobby_Text_OkayToSaveBeforeChallenge_hns2_hns:
 	.string "Antes de ir al BATTLE DOME,\n"

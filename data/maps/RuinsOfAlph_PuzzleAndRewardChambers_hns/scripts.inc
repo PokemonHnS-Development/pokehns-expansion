@@ -370,12 +370,12 @@ RuinsOfAlph_PuzzleAndRewardChambers_EventScript_RewardGotten::
 	end
 
 RuinsOfAlph_PuzzleAndRewardChambers_Text_Reward:
-	.string "¡La cámara reacciona!\n"
-	.string "El camino está abierto.$"
+	.string "¡La cámara reacciona!\n
+El camino está abierto.$"
 
 RuinsOfAlph_PuzzleAndRewardChambers_Text_Mon:
-	.string "Algún tipo de sensor antiguo.\n"
-	.string "¿Qué es lo que busca?$"
+	.string "Algún tipo de sensor antiguo.\n
+¿Qué estará buscando?$"
 
 RuinsOfAlph_PuzzleAndRewardChambers_Text_Solved:
 	.string "El camino está abierto.$"
@@ -392,12 +392,12 @@ RuinsOfAlph_PuzzleAndRewardChambers_Text_Receptionist1:
 	.string "-ndo patrones recién hallados.$"
 
 RuinsOfAlph_PuzzleAndRewardChambers_Text_Receptionist2:
-	.string "¡Se abrió un hueco en el suelo!\n"
-	.string "Será mejor que avise a los demás.$"
+	.string "¡Se abrió un agujero en el suelo!\n
+Mejor aviso a los demás.$"
 
 RuinsOfAlph_PuzzleAndRewardChambers_Text_Receptionist3:
-	.string "¡¿Ahora un hueco en la pared?!\n"
-	.string "Esto se está volviendo inquietante.$"
+	.string "¡¿Y ahora un agujero en la pared?!\n
+Esto se está poniendo raro.$"
 
 
 RuinsOfAlph_PuzzleAndRewardChambers_Text_Kabuto:

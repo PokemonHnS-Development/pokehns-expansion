@@ -309,15 +309,15 @@ VermilionCity_Movement_EusineLeave:
 	step_end
 
 VermilionCity_Text_Eusine:
-	.string "EUSINE: ¡Estuvo muy cerca!\n"
-	.string "Creí que podría acorralarlo\l"
-	.string "con una emboscada aquí.\p"
-	.string "Pero correr sobre el agua es\n"
-	.string "me.\p"
-	.string "Aun así, empiezo a notar\n"
-	.string "un patrón.\p"
-	.string "¡SUICUNE prefiere el agua!\p"
-	.string "Eso significa...$"
+	.string "EUSINE: ¡Estuvo muy cerca!\n
+Pensé que podría acorralarlo\l
+emboscándolo aquí.\p
+Pero correr sobre el agua es demasiado\n
+para mí.\p
+Aun así, empiezo a ver\n
+un patrón.\p
+¡SUICUNE prefiere el agua!\p
+Eso significa...$"
 
 VermilionCity_Text_Eusine2:
 	.string "Sorry {PLAYER}, I've got to go!$"

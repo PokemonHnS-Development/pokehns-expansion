@@ -35,23 +35,23 @@ AuroraTicket_Obtained:
 	end
 
 sText_AuroraTicketForYou:
-	.string "Gracias por usar el sistema de\n"
-	.string "REGALO MISTERIOSO.\p"
-	.string "Tú debes ser {PLAYER}.\n"
-	.string "Tengo un boleto aquí para ti.$"
+	.string "Gracias por usar el SISTEMA\n
+de REGALO MISTERIOSO.\p
+Debes ser {PLAYER}.\n
+Hay un boleto aquí para ti.$"
 
 sText_AuroraTicketUseAtPort:
-	.string "Parece que es para usarlo en el\n"
-	.string "puerto de CIUDAD VERALTO.\p"
-	.string "¿Por qué no lo pruebas y ves de qué\n"
-	.string "se trata?$"
+	.string "Parece que es para usarlo en el\n
+puerto de CIUDAD CALAGUA.\p
+¿Por qué no probarlo y ver de qué\n
+se trata?$"
 
 sText_AuroraTicketThankYou:
-	.string "Gracias por usar el sistema de\n"
-	.string "Sistema de REGALO.$"
+	.string "Gracias por usar el SISTEMA\n
+de REGALO MISTERIOSO.$"
 
 sText_AuroraTicketBagFull:
-	.string "Oh, lo siento, {PLAYER}.\n"
-	.string "El BOLSILLO OBJETOS CLAVE está lleno.\p"
-	.string "Guarda algo en tu PC y luego\n"
-	.string "regresa por esto.$"
+	.string "Ay, lo siento, {PLAYER}.\n
+Tu BOLSILLO de OBJ. CLAVE está lleno.\p
+Por favor, guarda algo en tu PC,\n
+y vuelve luego por esto.$"

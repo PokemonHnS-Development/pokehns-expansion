@@ -283,8 +283,8 @@ Route14_Text_PokefanmCarterAfterBattle:
 	.string "Creo que es una mezcla equilibrada.$"
 
 Route14_Text_CarterRegister:
-	.string "¡Conoces bien los iniciales!\n"
-	.string "¡Dame tu número!$"
+	.string "¡Conoces los iniciales!\n
+¡Dame tu número!$"
 
 Route14_Text_CarterRematchIntro:
 	.string "He hallado iniciales aún más raros\n"
@@ -294,15 +294,15 @@ Route14_Text_CarterRematchDefeat:
 	.string "Mis preciosos iniciales…$"
 
 Route14_Text_CarterPostRematch:
-	.string "¡Hay tantos iniciales de varias\n"
-	.string "regiones para coleccionar!$"
+	.string "¡Hay tantos iniciales de\n
+diferentes regiones por coleccionar!$"
 
 Route14_Text_BirdKeeperRoySeen:
 	.string "Mi sueño es volar con mi querido\n"
 	.string "POKéMON ave.$"
 
 Route14_Text_BirdKeeperRoyBeaten:
-	.string "Puedo soñar, pero no puedo volar…$"
+	.string "Sueño con volar, pero no puedo...$"
 
 Route14_Text_BirdKeeperRoyAfterBattle:
 	.string "Tienes POKéMON que saben el movimiento\n"

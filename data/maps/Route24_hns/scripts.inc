@@ -171,6 +171,6 @@ Route24_Text_ManRocket:
 	.string "Nobody pushes my girlfriend!$"
 
 Route24_Text_WomanAfterRocket:
-	.string "¿A qué se debió todo eso?$"
+	.string "¿Qué fue todo eso?$"
 Route24_Text_ManAfterRocket:
-	.string "¿Ese era un ROCKET?$"
+	.string "¿Eso fue un ROCKET?$"

@@ -43,7 +43,7 @@ UnionCave_B1F_Text_HikerPhillipAfter:
 	.string "tengo muchísima hambre!$"
 
 UnionCave_B1F_Text_HikerLeonardSeen:
-	.string "¡Qué sorpresa! ¡Una visita!$"
+	.string "¡No me digas! ¡Una visita!$"
 
 UnionCave_B1F_Text_HikerLeonardBeaten:
 	.string "Wahahah! You're a feisty one!$"

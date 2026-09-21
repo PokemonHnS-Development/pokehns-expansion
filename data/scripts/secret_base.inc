@@ -692,7 +692,7 @@ SecretBase_Text_RegistrationCompleted:
 	.string "Registration completed.$"
 
 SecretBase_Text_DataUnregistered:
-	.string "Los datos se han eliminado.$"
+	.string "Los datos se han borrado.$"
 
 SecretBase_Text_BootUpPC:
 	.string "{PLAYER} booted up the PC.$"
@@ -711,8 +711,8 @@ SecretBase_Text_RegistryInfo:
 	.string "ubicaciones de SECRET BASE.$"
 
 SecretBase_Text_BattleTowerShield:
-	.string "Un escudo de {STR_VAR_2} que marca\n"
-	.string "{STR_VAR_1} times in a row at the BATTLE TOWER.$"
+	.string "Un escudo de {STR_VAR_2} que marca\n
+{STR_VAR_1} veces seguidas en la TORRE BATALLA.$"
 
 SecretBase_Text_ToyTV:
 	.string "Una TV de juguete realista. Podría\n"

@@ -357,8 +357,8 @@ Route32_Movement_SlowpokeRight::
 	step_end
 
 Route32_Text_CooltrainerM_WhatsTheHurry:
-	.string "¡Espera!\n"
-	.string "¿Cuál es la prisa?$"
+	.string "¡Espera!\n
+¿Por qué la prisa?$"
 
 Route32_Text_CooltrainerM_AideIsWaiting:
 	.string "{PLAYER}, ¿verdad?\n"
@@ -368,11 +368,11 @@ Route32_Text_CooltrainerM_AideIsWaiting:
 	.string "en el CENTRO POKéMON.$"
 
 Route32_Text_CooltrainerM_SproutTower:
-	.string "¿Fuiste a la TORRE VERDE?\n"
-	.string "Si visitas CIUDAD MALVA,\p"
-	.string "esperarán que entrenes allí.\n"
-	.string "Es básico para los entrenadores.\p"
-	.string "¡Ve a la TORRE VERDE!$"
+	.string "¿Has ido a la TORRE BELLSPROUT?\n
+Si alguna vez visitas CIUDAD MALVA,\p
+esperarán que entrenes allí.\n
+Eso es básico para los entrenadores.\p
+¡Ve a la TORRE BELLSPROUT!$"
 
 Route32_Text_CooltrainerM_VioletGym:
 	.string "¿Fuiste al GIMNASIO POKéMON?\n"
@@ -490,10 +490,10 @@ Route32_Text_YoungsterGordon_After:
 	.string "cosas pegajosas.$"
 
 Route32_Text_CamperRoland_Seen:
-	.string "Esa mirada... Es intrigante.$"
+	.string "Esa mirada… Es intrigante.$"
 
 Route32_Text_CamperRoland_Beaten:
-	.string "Mmm. Esto es decepcionante.$"
+	.string "Mmm. Qué decepción.$"
 
 Route32_Text_CamperRoland_After:
 	.string "Si no quieres luchar,\n"

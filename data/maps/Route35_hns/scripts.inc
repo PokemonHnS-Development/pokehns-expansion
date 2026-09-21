@@ -124,7 +124,7 @@ Route35_Text_CamperElliotSeen:
 	.string "el mejor!$"
 
 Route35_Text_CamperElliotBeaten:
-	.string "Ojalá hubieras perdido por mí…$"
+	.string "Desearía que hubieras perdido por mí…$"
 
 Route35_Text_CamperElliotAfter:
 	.string "Fui humillado delante de mi\n"
@@ -169,7 +169,7 @@ Route35_Text_JugglerIrwinSeen:
 	.string "Behold my graceful BALL dexterity!$"
 
 Route35_Text_JugglerIrwinBeaten:
-	.string "¡Uf! ¡Qué sacudida!$"
+	.string "¡Uf! ¡Qué descarga!$"
 
 Route35_Text_JugglerIrwinAfter:
 	.string "Iba a deslumbrarte con mi\n"

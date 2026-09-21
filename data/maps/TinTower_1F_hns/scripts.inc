@@ -81,8 +81,8 @@ TinTower_1F_Sage3_Text:
 	.string "sigue siendo importante hoy.$"
 
 TinTower_1F_Sage4_Text1:
-	.string "¡Parece que HO-OH ha descendido\n"
-	.string "sobre esta, la TORRE CAMPANA!$"
+	.string "¡HO-OH parece haber descendido\n
+sobre esta, la TORRE HOJALATA!$"
 
 TinTower_1F_Sage4_Text2:
 	.string "Dicen que los POKéMON legendarios\n"

@@ -155,7 +155,7 @@ CableClub_Text_YouHaveAMonThatCantBeTaken:
 	.string "que no puede ser intercambiado.$"
 
 RecordCorner_Text_TakeSeatAndWait:
-	.string "Toma tu asiento y espera, por favor.$"
+	.string "Por favor, toma asiento y espera.$"
 
 RecordCorner_Text_PlayerSentOverOneX:
 	.string "{STR_VAR_1} envió un\n"
@@ -347,8 +347,8 @@ CableClub_Text_PlayWhichBattleMode:
 	.string "jugar?$"
 
 CableClub_Text_AccessRecordCorner:
-	.string "¿Quieres entrar al\n"
-	.string "RINCÓN DE REGISTROS?$"
+	.string "¿Quieres ir a\n
+la SALA DE RÉCORDS?$"
 
 CableClub_Text_UseBerryCrush:
 	.string "¿Quieres usar el sistema\n"
@@ -376,16 +376,16 @@ CableClub_Text_ChooseGroupLeaderOfTwo:
 	.string "“UNIRSE AL GRUPO”.$"
 
 CableClub_Text_ChooseGroupLeaderOfFour:
-	.string "Por favor, decidan cuál de los cuatro\n"
-	.string "será el LÍDER DEL GRUPO.\p"
-	.string "Los otros jugadores deben elegir\n"
-	.string "“UNIRSE AL GRUPO”.$"
+	.string "Decidan cuál de ustedes cuatro\n
+será el LÍDER DE GRUPO.\p
+Los demás jugadores deben\n
+elegir UNIRSE AL GRUPO.$"
 
 CableClub_Text_ChooseGroupLeader:
-	.string "Por favor, decidan quién de\n"
-	.string "ustedes será el LÍDER DE GRUPO.\p"
-	.string "Los otros jugadores deben elegir\n"
-	.string "“UNIRSE AL GRUPO”.$"
+	.string "Decide quién será\n
+el LÍDER DE GRUPO.\p
+Los demás jugadores deben\n
+elegir UNIRSE AL GRUPO.$"
 
 CableClub_Text_WelcomeUnionRoomEnter:
 	.string "Bienvenido al CLUB WIRELESS\n"

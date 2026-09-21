@@ -52,12 +52,12 @@ MatchCall_WildBattleText6::
 	.string "Cuídate mucho.$"
 
 MatchCall_WildBattleText7::
-	.string "...Eh, {PLAYER}{KUN}?\n"
-	.string "Soy yo, {STR_VAR_1}.\p"
-	.string "¡Oh, espera! ¡Espera!\n"
-	.string "Puedo atrapar a este {STR_VAR_2}...\p"
-	.string "¡Aaarrrgh! ¡Se escapó!\n"
-	.string "¡Estuve muy cerca!$"
+	.string "…Eh, ¿{PLAYER}{KUN}?\n
+Soy yo, {STR_VAR_1}.\p
+¡Ah, espera! ¡Espera!\n
+Puedo atrapar este {STR_VAR_2}…\p
+¡Aaarrrgh! ¡Se soltó!\n
+¡No estuvo ni cerca!$"
 
 MatchCall_WildBattleText8::
 	.string "Oh, {PLAYER}{KUN}, ¿cómo estás?\n"
@@ -139,12 +139,12 @@ MatchCall_NegativeBattleText1::
 	.string "Bueno, ¡nos vemos!$"
 
 MatchCall_NegativeBattleText2::
-	.string "Hola, {PLAYER}{KUN}.\n"
-	.string "Es {STR_VAR_1}.\p"
-	.string "Reté a alguien más después de\n"
-	.string "que luchamos.\p"
-	.string "Estuve cerca, pero terminé\n"
-	.string "perdiendo. ¡Ni modo!$"
+	.string "Hola, {PLAYER}{KUN}.\n
+Soy {STR_VAR_1}.\p
+Desafié a alguien más después\n
+de que peleamos.\p
+Estuve cerca, pero terminé\n
+perdiendo. ¡Ni modo!$"
 
 MatchCall_NegativeBattleText3::
 	.string "¡Hola, {PLAYER}!\n"
@@ -154,12 +154,12 @@ MatchCall_NegativeBattleText3::
 	.string "equipo!$"
 
 MatchCall_NegativeBattleText4::
-	.string "Oye, {PLAYER}.\n"
-	.string "Aquí {STR_VAR_1}.\p"
-	.string "Ayer intenté otra batalla,\n"
-	.string "pero no pude conseguir la victoria.\p"
-	.string "Mi equipo necesita más entrenamiento.\n"
-	.string "Vale, ¡nos vemos luego!$"
+	.string "Oye, {PLAYER}.\n
+Habla {STR_VAR_1}.\p
+Ayer intenté otra batalla,\n
+pero no logré ganar.\p
+Mi equipo necesita más\n
+entrenamiento. Bueno, nos vemos.$"
 
 MatchCall_NegativeBattleText5::
 	.string "¡Hola, {PLAYER}!\n"
@@ -1142,12 +1142,12 @@ MatchCall_PersonalizedText43::
 	.string "¡Adiós!$"
 
 MatchCall_PersonalizedText44::
-	.string "Este es {STR_VAR_1}.\n"
-	.string "entrené mucho desde que nos vimos.\p"
-	.string "Mi {STR_VAR_2} se está volviendo fuerte\n"
-	.string "fuerte.\p"
-	.string "Entrenar en la playa es efectivo,\n"
-	.string "tal como pensé. ¡Adiós!$"
+	.string "Soy {STR_VAR_1}.\n
+Seguí entrenando desde que nos vimos.\p
+Mi {STR_VAR_2} se está poniendo\n
+fuerte.\p
+Entrenar en la playa es efectivo,\n
+tal como pensé. ¡Adiós!$"
 
 MatchCall_PersonalizedText45::
 	.string "¿Cómo estás?\n"
@@ -1430,13 +1430,13 @@ MatchCall_BattleFrontierStreakText5::
 	.string "¡Nos vemos pronto!$"
 
 MatchCall_BattleFrontierStreakText6::
-	.string "Hola, {PLAYER}{KUN}.\n"
-	.string "Soy {STR_VAR_1}. ¿Cómo estás?\p"
-	.string "Por cierto, oí que lograste\n"
-	.string "la hazaña de {STR_VAR_3} victorias\l"
-	.string "el {STR_VAR_2}.\p"
-	.string "Eso me motiva a enfocarme en\n"
-	.string "entrenar a mi equipo.$"
+	.string "Oye, {PLAYER}{KUN}.\n
+Habla {STR_VAR_1}. ¿Cómo estás?\p
+Por cierto, oí que lograste\n
+la hazaña de {STR_VAR_3} victorias\l
+seguidas en el {STR_VAR_2}.\p
+Eso me inspira a concentrarme\n
+en entrenar a mi equipo.$"
 
 MatchCall_BattleFrontierStreakText7::
 	.string "…Este, ¿{PLAYER}{KUN}?\n"
@@ -1466,22 +1466,22 @@ MatchCall_BattleFrontierStreakText9::
 	.string "¡Yo también debo esforzarme más!$"
 
 MatchCall_BattleFrontierStreakText10::
-	.string "Oh, {PLAYER}{KUN}, hola...\n"
-	.string "Este es {STR_VAR_1}.\p"
-	.string "Ganaste {STR_VAR_3} batallas seguidas en\n"
-	.string "el {STR_VAR_2}?\p"
-	.string "Es un gran logro.\n"
-	.string "Debo esforzarme más.$"
+	.string "Oh, {PLAYER}{KUN}, hola...\n
+Soy {STR_VAR_1}.\p
+¿Ganaste {STR_VAR_3} seguidas en\n
+el {STR_VAR_2}?\p
+Es todo un logro.\n
+Debo esforzarme más.$"
 
 MatchCall_BattleFrontierStreakText11::
-	.string "Ah, {PLAYER}{KUN}.\n"
-	.string "Este es {STR_VAR_1}.\p"
-	.string "Oigo que eres el terror de\n"
-	.string "el {STR_VAR_2}?\p"
-	.string "Ganaste, ¿qué?, {STR_VAR_3} combates\n"
-	.string "seguidos?\p"
-	.string "Eres muy bueno.\n"
-	.string "¿Cuántos podré ganar yo?$"
+	.string "Ah, {PLAYER}{KUN}.\n
+Soy {STR_VAR_1}.\p
+Oí que eres el terror\n
+del {STR_VAR_2}?\p
+Ganaste, ¿qué, {STR_VAR_3} combates\n
+seguidos?\p
+Eres bueno, tú.\n
+¿Cuántos podré ganar yo?$"
 
 MatchCall_BattleFrontierStreakText12::
 	.string "Hola, {PLAYER}{KUN}.\n"
@@ -1592,22 +1592,22 @@ MatchCall_BattleFrontierRecordStreakText9::
 	.string "¡Yo también debo esforzarme más!$"
 
 MatchCall_BattleFrontierRecordStreakText10::
-	.string "Oh, {PLAYER}{KUN}, hola...\n"
-	.string "Este es {STR_VAR_1}.\p"
-	.string "Ganaste {STR_VAR_3} batallas seguidas en\n"
-	.string "el {STR_VAR_2}?\p"
-	.string "Es un gran logro.\n"
-	.string "Debo esforzarme más.$"
+	.string "Oh, {PLAYER}{KUN}, hola...\n
+Soy {STR_VAR_1}.\p
+¿Ganaste {STR_VAR_3} seguidas en\n
+el {STR_VAR_2}?\p
+Es todo un logro.\n
+Debo esforzarme más.$"
 
 MatchCall_BattleFrontierRecordStreakText11::
-	.string "Ah, {PLAYER}{KUN}.\n"
-	.string "Este es {STR_VAR_1}.\p"
-	.string "Oigo que eres el terror de\n"
-	.string "el {STR_VAR_2}?\p"
-	.string "Ganaste, ¿qué?, {STR_VAR_3} combates\n"
-	.string "seguidos?\p"
-	.string "Eres muy bueno.\n"
-	.string "¿Cuántos podré ganar yo?$"
+	.string "Ah, {PLAYER}{KUN}.\n
+Este es {STR_VAR_1}.\p
+Me dicen que eres el terror de\n
+la {STR_VAR_2}?\p
+Ganaste, ¿qué?, ¿{STR_VAR_3} combates\n
+seguidos?\p
+Eres bueno, ¿eh?\n
+¿Cuántos podré ganar yo?$"
 
 MatchCall_BattleFrontierRecordStreakText12::
 	.string "Hola, {PLAYER}{KUN}.\n"
@@ -1664,12 +1664,12 @@ MatchCall_BattleDomeText3::
 	.string "¡Nos vemos pronto!$"
 
 MatchCall_BattleDomeText4::
-	.string "Hola, {PLAYER}{KUN}.\n"
-	.string "Aquí {STR_VAR_1}.\p"
-	.string "Oí que fuiste el campeón\n"
-	.string "en {STR_VAR_2} {STR_VAR_3} veces.\p"
-	.string "Parece que te esfuerzas mucho.\n"
-	.string "¡Intentaré seguirte el ritmo!$"
+	.string "Hey, {PLAYER}{KUN}.\n
+Habla {STR_VAR_1}.\p
+Me enteré de que te hiciste campeón\n
+en {STR_VAR_2} {STR_VAR_3} veces.\p
+Se nota que te esfuerzas mucho.\n
+¡Trataré de seguirte el ritmo!$"
 
 MatchCall_BattleDomeText5::
 	.string "¡Hola, {PLAYER}{KUN}!\n"
@@ -1717,12 +1717,12 @@ MatchCall_BattleDomeText9::
 	.string "¡Yo también debo esforzarme más!$"
 
 MatchCall_BattleDomeText10::
-	.string "Oh, hola {PLAYER}{KUN}.\n"
-	.string "Este es {STR_VAR_1}.\p"
-	.string "Ganaste {STR_VAR_3} veces seguidas en\n"
-	.string "el {STR_VAR_2}?\p"
-	.string "Es un gran logro.\n"
-	.string "Debo esforzarme más.$"
+	.string "Oh, {PLAYER}{KUN}, hola.\n
+Este es {STR_VAR_1}.\p
+¿Ganaste {STR_VAR_3} veces seguidas en\n
+{STR_VAR_2}?\p
+Es todo un logro.\n
+Yo debo esforzarme más.$"
 
 MatchCall_BattleDomeText11::
 	.string "Ah, {PLAYER}{KUN}.\n"
@@ -1842,12 +1842,12 @@ MatchCall_BattlePikeText9::
 	.string "¡Yo también debo esforzarme más!$"
 
 MatchCall_BattlePikeText10::
-	.string "Oh, hola {PLAYER}{KUN}.\n"
-	.string "Este es {STR_VAR_1}.\p"
-	.string "Ganaste en {STR_VAR_3} salas\n"
-	.string "en {STR_VAR_2}?\p"
-	.string "Es un gran logro.\n"
-	.string "Debo esforzarme más.$"
+	.string "Oh, {PLAYER}{KUN}, hola.\n
+Este es {STR_VAR_1}.\p
+¿Superaste {STR_VAR_3} salas en\n
+{STR_VAR_2}?\p
+Es todo un logro.\n
+Yo debo esforzarme más.$"
 
 MatchCall_BattlePikeText11::
 	.string "Ah, {PLAYER}{KUN}.\n"
@@ -1915,12 +1915,12 @@ MatchCall_BattlePyramidText3::
 	.string "¡Nos vemos pronto!$"
 
 MatchCall_BattlePyramidText4::
-	.string "Hola, {PLAYER}{KUN}.\n"
-	.string "Aquí {STR_VAR_1}.\p"
-	.string "Oí que escalaste {STR_VAR_3} pisos\n"
-	.string "en {STR_VAR_2}.\p"
-	.string "Mejor me esfuerzo para intentar\n"
-	.string "¡no quedarme atrás!$"
+	.string "Hey, {PLAYER}{KUN}.\n
+Habla {STR_VAR_1}.\p
+Supe que subiste {STR_VAR_3} pisos\n
+en {STR_VAR_2}.\p
+¡Mejor me esfuerzo y trato\n
+de seguirte el ritmo!$"
 
 MatchCall_BattlePyramidText5::
 	.string "¡Hola, {PLAYER}{KUN}!\n"
@@ -1968,12 +1968,12 @@ MatchCall_BattlePyramidText9::
 	.string "¡Yo también debo esforzarme más!$"
 
 MatchCall_BattlePyramidText10::
-	.string "Oh, hola {PLAYER}{KUN}.\n"
-	.string "Este es {STR_VAR_1}.\p"
-	.string "Subiste {STR_VAR_3} pisos adentro\n"
-	.string "el {STR_VAR_2}?\p"
-	.string "Es un gran logro.\n"
-	.string "Debo esforzarme más.$"
+	.string "Oh, {PLAYER}{KUN}, hola.\n
+Este es {STR_VAR_1}.\p
+¿Subiste {STR_VAR_3} pisos dentro de\n
+{STR_VAR_2}?\p
+Es todo un logro.\n
+Yo debo esforzarme más.$"
 
 MatchCall_BattlePyramidText11::
 	.string "Ah, {PLAYER}{KUN}.\n"
@@ -2229,43 +2229,43 @@ MatchCall_Text_TateLiza3::
 	.string "LIZA: ¡MOSSDEEP cuando quieran!$"
 
 MatchCall_Text_TateLiza4::
-	.string "TATE: {PLAYER}, la batalla que tuvimos...\n"
-	.string "LIZA: Fue una experiencia invaluable.\p"
-	.string "TATE: Sería lindo si...\n"
-	.string "LIZA: ¡Pudiéramos luchar otra vez!$"
+	.string "TATE: {PLAYER}, la batalla que tuvimos…\n
+LIZA: Fue una experiencia invaluable.\p
+TATE: Sería genial si…\n
+LIZA: ¡Pudiéramos volver a combatir!$"
 
 MatchCall_Text_Juan1::
-	.string "JUAN: Hmm...\n"
-	.string "{PLAYER}{KUN}... ¿era así?\p"
-	.string "Nuestra batalla me trajo\n"
-	.string "recuerdos de cuando conocí\l"
-	.string "a WALLACE por primera vez.\p"
-	.string "¡Tal vez seas un genio que\n"
-	.string "podría superar a WALLACE!$"
+	.string "JUAN: Mmm…\n
+{PLAYER}{KUN}… ¿Eras tú?\p
+Nuestro combate me trajo\n
+recuerdos de cuando conocí\l
+a WALLACE por primera vez.\p
+¡Quizá seas un genio que\n
+llegue a superar a WALLACE!$"
 
 MatchCall_Text_Juan2::
-	.string "JUAN: Fufu... {PLAYER}{KUN}...\n"
-	.string "Al fin lograste tu objetivo.\p"
-	.string "Mi ojo para el talento no falló\n"
-	.string "equivocado...\p"
-	.string "Desearía otra oportunidad de\n"
-	.string "verte, pues has escalado la cima\l"
-	.string "del poder y el prestigio.$"
+	.string "JUAN: Ju, ju… {PLAYER}{KUN}…\n
+Por fin alcanzaste tu meta.\p
+Mi ojo para evaluar talento no\n
+se equivocó…\p
+Deseo otra oportunidad de verte,\n
+pues has escalado la cima\l
+del poder y el prestigio.$"
 
 MatchCall_Text_Juan3::
-	.string "JUAN: Jo jo... {PLAYER}{KUN}...\p"
-	.string "Nuestro GIMNASIO de CALMASADA\n"
-	.string "finalmente ha reabierto.\p"
-	.string "Si deseas verme, eres bienvenido\n"
-	.string "a visitarme en cualquier momento.$"
+	.string "JUAN: Jo, jo… {PLAYER}{KUN}…\p
+Nuestro GIMNASIO de ARRECIFE\n
+por fin ha reabierto.\p
+Si deseas verme, puedes\n
+visitarme cuando quieras.$"
 
 MatchCall_Text_Juan4::
-	.string "JUAN: {PLAYER}{KUN}...\p"
-	.string "Como la mejor música, las luchas\n"
-	.string "que libramos juntos crean acordes\l"
-	.string "de inspiración en mi corazón...\p"
-	.string "Al cerrar los ojos, veo visiones\n"
-	.string "de ti volando con la melodía...$"
+	.string "JUAN: {PLAYER}{KUN}…\p
+Como la mejor música, los duelos\n
+que libramos juntos tocan cuerdas\l
+de inspiración en mi corazón…\p
+Al cerrar los ojos, veo visiones\n
+de ti elevándote con la melodía…$"
 
 MatchCall_Text_Sidney::
 	.string "SIDNEY: ¡Hola, {PLAYER}!\p"
@@ -2381,12 +2381,12 @@ MatchCall_Text_May4::
 	.string "une FONDOPLATA y VERDANTURF.$"
 
 MatchCall_Text_May5::
-	.string "MAY: {PLAYER}{KUN}, ¿cómo estás?\p"
-	.string "Ahora estoy en la RUTA 111.\p"
-	.string "Voy a descansar en la casa de\n"
-	.string "una anciana.\p"
-	.string "Ella vive justo al norte del\n"
-	.string "desierto.$"
+	.string "MAY: {PLAYER}{KUN}, ¿cómo estás?\p
+Ahora estoy en la RUTA 111.\p
+Voy a descansar en la casa de\n
+una anciana.\p
+Ella vive justo al norte del\n
+desierto.$"
 
 MatchCall_Text_May6::
 	.string "MAY: ¡Hola, {PLAYER}{KUN}!\p"
@@ -2663,12 +2663,12 @@ MatchCall_Text_Scott1::
 	.string "por todas partes. ¡Qué ajetreo!$"
 
 MatchCall_Text_Scott2::
-	.string "SCOTT: Estoy en la RUTA 119 ahora.\n"
-	.string "¡Está llena de ENTRENADORES!\p"
-	.string "También hay hierba alta\n"
-	.string "por todas partes, al parecer.\p"
-	.string "Caminar aquí en pantalones cortos\n"
-	.string "¡me da mucha cosquillita!$"
+	.string "SCOTT: Ahora estoy en la RUTA 119.\n
+¡Está llena de ENTRENADORES!\p
+También está cubierta de hierba\n
+alta por todas partes, parece.\p
+Caminar con shorts por aquí\n
+¡me da cosquillas!$"
 
 MatchCall_Text_Scott3::
 	.string "SCOTT: ¡Hola, hola, {PLAYER}{KUN}!\p"
@@ -2745,19 +2745,19 @@ MatchCall_Text_Norman3::
 	.string "¡Todos estaremos esperándote!$"
 
 MatchCall_Text_Norman4::
-	.string "PAPÁ: {PLAYER}! Deberías ir a\n"
-	.string "visitar a tu madre a veces.\p"
-	.string "Yo me quedaré aquí para\n"
-	.string "redoblar mi entrenamiento.\p"
-	.string "¡El arte de luchar es profundo\n"
-	.string "y despiadado!$"
+	.string "PAPÁ: ¡{PLAYER}! Deberías ir a\n
+visitar a Mamá de vez en cuando.\p
+Yo me quedaré aquí y\n
+redoblaré mi entrenamiento.\p
+¡El camino del combate es\n
+profundo e implacable!$"
 
 MatchCall_Text_Norman5::
-	.string "PAPÁ: ¡Oh, hola, {PLAYER}!\p"
-	.string "¿Qué es eso? ¿EMBLEMA MAGMA?\n"
-	.string "No sé de qué se trata.\p"
-	.string "Pero con ese nombre, ¡podría\n"
-	.string "estar ligado a un volcán!$"
+	.string "PAPÁ: ¡Ah, hola, {PLAYER}!\p
+¿Qué dices? ¿EMBLEMA MAGMA?\n
+No sé de qué se trata.\p
+Pero con un nombre así, quizá\n
+¡esté ligado a un volcán!$"
 
 MatchCall_Text_Norman6::
 	.string "PAPÁ: ¡Hiyah! ¡Haah! ¡Dwah!\p"

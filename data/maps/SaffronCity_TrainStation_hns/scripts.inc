@@ -320,26 +320,26 @@ SaffronMagnetTrainStation_Text_Officer_TrainNotOperating:
 	.string "no está funcionando ahora.$"
 
 SaffronMagnetTrainStation_Text_GymGuide:
-	.string "El MAGNET TRAIN es un tren\n"
-	.string "moderno que usa electricidad\p"
-	.string "e imanes para alcanzar una\n"
-	.string "velocidad increíble.\p"
-	.string "Sin embargo, si no hay\n"
-	.string "electricidad…$"
+	.string "El MAGNET TRAIN es un tren\n
+súper moderno que funciona con\p
+electricidad e imanes para alcanzar\n
+una velocidad increíble.\p
+Sin embargo, si no hay\n
+electricidad…$"
 
 SaffronMagnetTrainStation_Text_GymGuide_ReturnedPart:
-	.string "Uff...\p"
-	.string "¿Cuántas veces he regresado?\n"
-	.string "y JOHTO?$"
+	.string "Uff...\p
+¿Cuántas veces he ido y venido\n
+entre KANTO y JOHTO?$"
 
 SaffronMagnetTrainStation_Text_Teacher:
-	.string "Ante la ESTACIÓN DEL TREN MAGNÉTICO\n"
-	.string "fuera construida, había una casa.\p"
-	.string "Una niña llamada COPYCAT solía\n"
-	.string "vivir allí.$"
+	.string "Antes de construir la ESTACIÓN\n
+del MAGNET TRAIN, había una casa.\p
+Una niña llamada COPYCAT solía\n
+vivir ahí.$"
 
 SaffronMagnetTrainStation_Text_Lass:
-	.string "Hola. ¿Tienes un PASE de tren?\n"
-	.string "Tengo uno.\p"
-	.string "Toda la gente de SAFFRON que usa\n"
-	.string "el TREN MAGNÉTICO tiene PASES.$"
+	.string "Hola. ¿Tienes un PASE de tren?\n
+Yo tengo uno.\p
+Toda la gente de AZAFRÁN que\n
+usa el MAGNET TRAIN tiene PASE.$"

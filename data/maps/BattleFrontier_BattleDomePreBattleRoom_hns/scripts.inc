@@ -339,10 +339,10 @@ BattleFrontier_BattleDomePreBattleRoom_Text_PlayersNextOpponentIsTrainer_hns:
 	.string "es este ENTRENADOR.$"
 
 BattleFrontier_BattleDomePreBattleRoom_Text_TourneyInRound1_hns:
-	.string "El torneo está en la primera ronda.$"
+	.string "El torneo está en la 1ª ronda.$"
 
 BattleFrontier_BattleDomePreBattleRoom_Text_TourneyInRound2_hns:
-	.string "El torneo está en la segunda ronda.$"
+	.string "El torneo está en la 2ª ronda.$"
 
 BattleFrontier_BattleDomePreBattleRoom_Text_TourneyInSemifinals_hns:
 	.string "El torneo está en las semifinales.$"

@@ -212,18 +212,18 @@ Route23_Movement_WalkDown::
 	step_end
 
 Text_OnlySkilledTrainersAllowedThrough::
-	.string "Solo los ENTRENADORES expertos\n"
-	.string "pueden pasar.\p"
-	.string "¡Aún no tienes el {STR_VAR_1}\n"
-	.string "contigo!$"
+	.string "Solo los ENTRENADORES realmente\n
+hábiles pueden pasar.\p
+¡No tienes {STR_VAR_1}\n
+aún!$"
 
 Text_CantLetYouPass::
-	.string "Las reglas son las reglas.\n"
-	.string "No puedo dejarte pasar.$"
+	.string "Las reglas son las reglas.\n
+No puedo dejarte pasar.$"
 
 Text_OhThatsBadgeGoRightAhead::
-	.string "¡Oh! ¡Es el {STR_VAR_1}!\n"
-	.string "Go right ahead.$"
+	.string "¡Ah! ¡Ese es el {STR_VAR_1}!\n
+Adelante, pasa.$"
 
 Text_OnlyPassWithBadgeDontHaveYet::
 	.string "Solo puedes pasar si tienes\n"
@@ -234,9 +234,9 @@ Text_OnlyPassWithBadgeDontHaveYet::
 	.string "LIGA POKéMON.$"
 
 Text_OnlyPassWithBadgeOhGoAhead::
-	.string "Solo puedes pasar si tienes\n"
-	.string "el {STR_VAR_1}.\p"
-	.string "¡Oh! ¡Es el {STR_VAR_1}!{PAUSE_MUSIC}{PLAY_BGM}{MUS_LEVEL_UP}{PAUSE 0x60}{RESUME_MUSIC}\p"
-	.string "Está bien, entonces.\n"
-	.string "Por favor, adelante.$"
+	.string "Solo puedes pasar si tienes\n
+el {STR_VAR_1}.\p
+¡Ah! ¡Ese es el {STR_VAR_1}!{PAUSE_MUSIC}{PLAY_BGM}{MUS_LEVEL_UP}{PAUSE 0x60}{RESUME_MUSIC}\p
+Muy bien, entonces.\n
+Adelante, pasa.$"
 

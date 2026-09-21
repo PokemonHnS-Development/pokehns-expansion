@@ -69,30 +69,30 @@ VerdanturfTown_FriendshipRatersHouse_Text_SeeHowMuchPokemonLikesYou:
 	.string "Tu POKéMON…$"
 
 VerdanturfTown_FriendshipRatersHouse_Text_AdoresYou:
-	.string "Te adora.\n"
-	.string "Es imposible que te quiera más.\l"
-	.string "Me hace feliz verlo así.$"
+	.string "Te adora.\n
+No podría quererte más.\l
+Hasta me siento feliz al verlo.$"
 
 VerdanturfTown_FriendshipRatersHouse_Text_VeryHappy:
-	.string "Parece estar muy feliz.\n"
-	.string "Es obvio que te quiere muchísimo.$"
+	.string "Parece muy feliz.\n
+Se nota que le gustas mucho.$"
 
 VerdanturfTown_FriendshipRatersHouse_Text_LikesYouQuiteALot:
-	.string "Te quiere bastante.\n"
-	.string "Parece que quiere mimos.$"
+	.string "Le gustas bastante.\n
+Parece que quiere que lo mimen.$"
 
 VerdanturfTown_FriendshipRatersHouse_Text_GettingUsedToYou:
-	.string "Se está acostumbrando a ti.\n"
-	.string "Parece que confía en ti.$"
+	.string "Se está acostumbrando a ti.\n
+Parece confiar en ti.$"
 
 VerdanturfTown_FriendshipRatersHouse_Text_NotUsedToYou:
-	.string "Aún no se acostumbra a ti.\n"
-	.string "No te ama ni te odia.$"
+	.string "Aún no se acostumbra a ti.\n
+Ni te quiere ni te odia.$"
 
 VerdanturfTown_FriendshipRatersHouse_Text_VeryWary:
-	.string "Está muy alerta.\n"
-	.string "Tiene una mirada muy feroz.\l"
-	.string "No le agradas en absoluto.$"
+	.string "Es muy desconfiado.\n
+Tiene maldad en su mirada.\l
+No le gustas casi nada.$"
 
 VerdanturfTown_FriendshipRatersHouse_Text_DetestsYou:
 	.string "Esto es difícil de decir...\p"

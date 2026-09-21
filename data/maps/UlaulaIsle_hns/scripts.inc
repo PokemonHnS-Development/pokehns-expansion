@@ -307,23 +307,28 @@ Alola_Ulaula_BattlePalossand_Text_0:
 	.string "¡Rayos!$"
 
 Alola_Ulaula_MtLanikalaSign_Text_0:
-	.string "La gente de aquí llama con cariño\na esta montaña MT. LANIKALA,\lpues es la\nmontaña más alta\lde las ISLAS ALOLA.\pEl\nnombre real de esta montaña se\nperdió con el tiempo.$"
+	.string "Esta montaña es conocida con cariño\n
+como MT. LANIKALA por los\l
+lugareños, pues es la montaña\l
+más alta de las ISLAS ALOLA.\p
+El nombre real de esta montaña se ha\n
+perdido con el tiempo.$"
 
 Alola_Ulaula_UlaulaSign_Text_0:
 	.string "ISLA ULA'ULA$"
 
 Alola_Ulaula_Phant_outside_Text_0:
-	.string "¡Hola, {PLAYER}!\p"
-	.string "Soy el desarrollador que creó esto\n"
-	.string "¡sección del juego!\p"
-	.string "Espero que disfrutes ALOLA.\p"
-	.string "Hago un demake completo de la\n"
-	.string "región ULTRA ECLIPSE.$"
+	.string "¡Hola, {PLAYER}!\p
+¡Soy el desarrollador que creó esta\n
+sección del juego!\p
+¡Espero que te haya gustado ALOLA.\p
+Estoy con un demake completo de la\n
+región llamada ULTRA ECLIPSE.$"
 
 Alola_Ulaula_Phant_outside_Text_1:
-	.string "Visítame en mi casa, en la\n"
-	.string "cima de esta isla.\l"
-	.string "¡Valdrá la pena!$"
+	.string "Ven a visitarme a mi casa en la\n
+cima de esta isla.\l
+¡Vale la pena, ya verás!$"
 
 Alola_Ulaula_TrainerBattlePicnicker_Text_0:
 	.string "¡Sorpresa!\n¡Estaba en los árboles!$"
@@ -340,7 +345,7 @@ Alola_Ulaula_TrainerBattleYoungster_Text_0:
 	.string "Hey, I'm going to be the first to climb\nMT. LANIKALA!$"
 
 Alola_Ulaula_TrainerBattleYoungster_Text_1:
-	.string "No es ni la verdadera MT. LANIKALA…$"
+	.string "No es el verdadero MT. LANIKALA…$"
 
 Alola_Ulaula_TrainerBattleYoungster_Text_2:
 	.string "Mi papá nunca me dijo el nombre real\n"

@@ -241,12 +241,12 @@ SproutTower_Text_SageNeal_Seen:
 	.string "la oscuridad más profunda.$"
 
 SproutTower_Text_SageNeal_Beaten:
-	.string "¡Es mi cabeza la que brilla!$"
+	.string "¡Mi cabeza es la que brilla!$"
 
 SproutTower_Text_SageNeal_AfterBattle:
-	.string "Que haya luz en tu\n"
-	.string "viaje.$"
+	.string "Que haya luz en tu\n
+viaje.$"
 
 SproutTower_Text_3F_Painting:
-	.string "Es una pintura poderosa de un\n"
-	.string "BELLSPROUT.$"
+	.string "Es una pintura poderosa de\n
+un BELLSPROUT.$"

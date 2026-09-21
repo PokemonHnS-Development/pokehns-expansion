@@ -203,7 +203,7 @@ GoldenrodCity_RadioTower_2F_Text_GruntM5After:
 	.string "lo que nos da la gana.$"
 
 GoldenrodCity_RadioTower_2F_Text_GruntM6Seen:
-	.string "¡Oye, oye! ¡Quítate de nuestro camino!$"
+	.string "¡Oye, oye! ¡Apártense!$"
 
 GoldenrodCity_RadioTower_2F_Text_GruntM6Beaten:
 	.string "Arggh. I give up.$"

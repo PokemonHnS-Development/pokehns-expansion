@@ -543,7 +543,7 @@ BattleFrontier_BattleDomeLobby_Text_RecordWillBeSaved:
 	.string "Please wait.$"
 
 BattleFrontier_BattleDomeLobby_Text_WeveBeenWaitingForYou:
-	.string "¡Te hemos estado esperando!$"
+	.string "¡Te estábamos esperando!$"
 
 BattleFrontier_BattleDomeLobby_Text_OkayToSaveBeforeChallenge2:
 	.string "Antes de ir al BATTLE DOME,\n"
@@ -660,7 +660,7 @@ BattleFrontier_BattleDomeLobby_Text_RulesAreListed:
 	.string "están listadas.$"
 
 BattleFrontier_BattleDomeLobby_Text_ReadWhichHeading:
-	.string "¿Qué título quieres leer?$"
+	.string "¿Qué sección quieres leer?$"
 
 BattleFrontier_BattleDomeLobby_Text_ExplainMatchupRules:
 	.string "Los emparejamientos del torneo se\n"

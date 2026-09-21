@@ -106,7 +106,7 @@ Text_TakeYourPkmnForFewSeconds_Frlg::
 	.string "unos segundos.$"
 
 Text_WeHopeToSeeYouAgain_Frlg::
-	.string "¡Esperamos volver a verte!$"
+	.string "¡Esperamos verte de nuevo!$"
 
 Text_RestoredPkmnToFullHealth_Frlg::
 	.string "Gracias por esperar.\n"

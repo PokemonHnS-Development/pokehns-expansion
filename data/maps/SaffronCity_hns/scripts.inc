@@ -98,10 +98,10 @@ SaffronCity_Text_Elli:
 	.string "I love VULPIX! :D$"
 
 SaffronCity_Text_Lass1:
-	.string "Aquí vive una niña experta en\n"
-	.string "imitar a las personas.\p"
-	.string "Imita incluso a quien tiene\n"
-	.string "enfrente. ¡Es confuso!$"
+	.string "Aquí vive una niña experta\n
+en imitar a la gente.\p
+Incluso imita a las personas\n
+con las que conversa. Es confuso.$"
 
 SaffronCity_Text_Lass1_ReturnedPart:
 	.string "La chica IMITADORA se veía triste.\p"
@@ -109,21 +109,21 @@ SaffronCity_Text_Lass1_ReturnedPart:
 	.string "POKé favorita: CLEFAIRY.$"
 
 SaffronCity_Text_PokefanM:
-	.string "¿Vienes de JOHTO?\p"
-	.string "Puedes volver rápido a casa si el\n"
-	.string "MAGNET TRAIN está funcionando.$"
+	.string "¿Vienes de JOHTO?\p
+Puedes volver a casa si el\n
+MAGNET TRAIN funciona.$"
 
 SaffronCity_Text_PokefanM_ReturnedPart:
-	.string "¿Vienes de JOHTO?\p"
-	.string "Puedes volver rápido a casa usando\n"
-	.string "el MAGNET TRAIN.$"
+	.string "¿Vienes de JOHTO?\p
+Puedes volver a casa\n
+subiendo al MAGNET TRAIN.$"
 
 SaffronCity_Text_CooltrainerM:
-	.string "Fui al GIMNASIO, ansioso por\n"
-	.string "luchar contra entrenadores...\p"
-	.string "Resulta que entré por error al\n"
-	.string "GIMNASIO vacío de al lado.\p"
-	.string "Vaya, estaba muy avergonzado.$"
+	.string "Fui al GIMNASIO con ganas de\n
+pelear contra entrenadores…\p
+Resulta que entré al GIMNASIO\n
+abandonado de al lado.\p
+Vaya, estaba muy avergonzado.$"
 
 SaffronCity_Text_CooltrainerF:
 	.string "Esta es SILPH CO., famosa por\n"

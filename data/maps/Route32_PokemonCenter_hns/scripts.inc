@@ -41,19 +41,19 @@ Route32_PokemonCenter_EventScript_FishingGuru3::
 
 
 Route32_Pokecenter_Text_FishingGuruQuestion:
-	.string "Es un gran lugar para pescar.\p"
-	.string "¿Viste gente pescando?\n"
-	.string "¿Y tú qué tal?\p"
-	.string "¿Quieres una de mis CAÑAS?$"
+	.string "Este es un gran sitio para pescar.\p
+¿Viste a gente pescando?\n
+¿Y tú qué?\p
+¿Quieres una de mis CAÑAS?$"
 
 Route32_Pokecenter_Text_FishingGuruYes:
-	.string "Je, me alegra oír eso.\p"
-	.string "¡Ahora tú también eres pescador!$"
+	.string "Je, qué bueno oírlo.\p
+¡Ahora también eres pescador!$"
 
 Route32_Pokecenter_Text_FishingGuruGiveRod:
-	.string "¡Pescar es genial!\p"
-	.string "Si hay agua, ya sea el mar o\n"
-	.string "un río, usa tu CAÑA.$"
+	.string "¡Pescar es genial!\p
+Si hay agua, ya sea el mar o\n
+un río, prueba tu CAÑA.$"
 
 Route32_Pokecenter_Text_FishingGuruNo:
 	.string "Oh. That's rather disappointing…$"

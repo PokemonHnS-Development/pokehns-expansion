@@ -39,7 +39,7 @@ Route110_TrickHousePuzzle8_Text_VincentIntro:
 	.string "llegado tan lejos.$"
 
 Route110_TrickHousePuzzle8_Text_VincentDefeat:
-	.string "Así que también eres fuerte...$"
+	.string "Así que tú también eres fuerte...$"
 
 Route110_TrickHousePuzzle8_Text_VincentPostBattle:
 	.string "¿Has vencido al CAMPEÓN de la\n"

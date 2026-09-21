@@ -33,10 +33,10 @@ VerdanturfTown_PokemonCenter_1F_Text_FaithInYourPokemon:
 	.string "hasta el puro final.$"
 
 VerdanturfTown_PokemonCenter_1F_Text_VisitForBattleTent:
-	.string "La razón por la que alguien visita\n"
-	.string "VERDANTURF…\p"
-	.string "Es la CARPA DE COMBATE. No hace\n"
-	.string "falta decirlo.\p"
-	.string "¿O hay alguien aquí a quien\n"
-	.string "viniste a ver?$"
+	.string "La razón por la que alguien\n
+visitaría PUEBLO VERDANTURF…\p
+Es la CARPA BATALLA. No hace falta\n
+decirlo.\p
+¿O hay alguien a quien hayas\n
+venido a ver?$"
 

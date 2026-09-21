@@ -132,9 +132,9 @@ Route112_Text_MtChimneyCableCarSign:
 	.string "“¡Un paseo corto hacia {UP_ARROW}!”$"
 
 Route112_Text_MtChimneySign:
-	.string "MT. CHIMNEY\p"
-	.string "“Para ir a PUEBLO LAVARIDGE o la\n"
-	.string "cima, usa el TELEFÉRICO.”$"
+	.string "MONTE CENIZO\p
+“Para PUEBLO LAVACALDA o la cima,\n
+toma el TELEFÉRICO.”$"
 
 Route112_Text_RouteSignLavaridge:
 	.string "RUTA 112\n"

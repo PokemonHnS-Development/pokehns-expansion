@@ -132,7 +132,7 @@ VioletCity_PokeCenter_Text_ElmsAideGiveEgg:
 	.string "podemos confiar.$"
 
 VioletCity_PokeCenter_Text_ElmsAideGiveItem:
-	.string "Ah, y esto puede ayudar cuando nazca.$"
+	.string "Y esto te ayudará cuando eclosione.$"
 
 VioletCity_PokeCenter_Text_ElmsAideFullParty:
 	.string "Oh, no. No puedes llevar más\n"
@@ -154,11 +154,11 @@ VioletCity_PokeCenter_Text_BooksAreGreat:
 	.string "me encanta leer un buen libro.$"
 
 VioletCity_PokeCenter_Text_MobileAdapter:
-	.string "Acabo de luchar con un amigo en\n"
-	.string "CIUDAD ORQUIDEA vía enlace.\p"
-	.string "Si usas un ADAPTADOR MÓVIL,\n"
-	.string "podrás conectarte con un amigo\l"
-	.string "lejano.$"
+	.string "Acabo de luchar con un amigo en\n
+CIUDAD ORQUIDEA por enlace.\p
+Si conectas un ADAPTADOR MÓVIL,\n
+podrás enlazarte con un amigo que\l
+esté lejos.$"
 
 VioletCity_PokeCenter_Text_GameboyKid:
 	.string "Un tipo llamado BILL creó el\n"

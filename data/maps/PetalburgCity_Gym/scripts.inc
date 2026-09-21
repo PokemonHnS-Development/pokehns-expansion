@@ -1302,9 +1302,9 @@ PetalburgCity_Gym_Text_DadHappyAndSad:
 	.string "feliz y triste a la vez. Es raro…$"
 
 PetalburgCity_Gym_Text_PleaseComeWithMe:
-	.string "¡Ah, ahí estás, {PLAYER}{KUN}!\p"
-	.string "Por favor, ven conmigo.\n"
-	.string "Tengo algo que quiero darte.$"
+	.string "Ah, ahí estás, {PLAYER}{KUN}!\p
+Por favor, ven conmigo.\n
+Tengo algo que quiero darte.$"
 
 PetalburgCity_Gym_Text_LetMeBorrowPlayer:
 	.string "NORMAN, no te importa, ¿verdad?\p"
@@ -1444,7 +1444,7 @@ PetalburgCity_Gym_Text_MaryIntro:
 	.string "acierta sin fallar.$"
 
 PetalburgCity_Gym_Text_MaryDefeat:
-	.string "Fuiste mejor que yo…$"
+	.string "Fuiste muy superior a mí…$"
 
 PetalburgCity_Gym_Text_MaryPostBattle:
 	.string "Hay algunos aún más fuertes\n"
@@ -1478,7 +1478,7 @@ PetalburgCity_Gym_Text_AlexiaPostBattle:
 	.string "expertos en el ataque.$"
 
 PetalburgCity_Gym_Text_AlexiaPostBadge:
-	.string "¡Hola! ¿Ya probaste usar SURF?$"
+	.string "¡Hola! ¿Ya usaste SURF?$"
 
 PetalburgCity_Gym_Text_JodyIntro:
 	.string "Nuestro LÍDER de GIMNASIO dijo que\n"

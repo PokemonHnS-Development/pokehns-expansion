@@ -881,8 +881,8 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_CyclingTriathleteFIntro::
 	.string "I'm TRIATHLETE {STR_VAR_1}!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_CyclingTriathleteFMon1::
-	.string "Lo que tengo...\n"
-	.string "Uno {STR_VAR_2} con {STR_VAR_1} y$"
+	.string "Lo que tengo...\n
+Un {STR_VAR_2} con {STR_VAR_1} y$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_CyclingTriathleteFMon2Ask::
 	.string "¡un {STR_VAR_2} con {STR_VAR_1}!\n"

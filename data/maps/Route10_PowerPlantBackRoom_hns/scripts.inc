@@ -60,20 +60,20 @@ Route10_PowerPlantBackRoom_EventScript_Engineer::
 	end
 
 Route10_PowerPlantBackRoom_Text_ManagerWhoWouldRuinMyGenerator:
-	.string "GERENTE: ¡Yo, yo, estoy listo\n"
-	.string "para fulminar a alguien!\p"
-	.string "¿Quién se atrevió a arruinar mi\n"
-	.string "generador?\p"
-	.string "¡Le dediqué muchísimo tiempo!\p"
-	.string "¡Si lo atrapo, probará mi\n"
-	.string "CAÑÓN ELÉCTRICO!$"
+	.string "ENCARGADO: ¡E, e, estoy listo para\n
+electrocutar a alguien!\p
+¿Quién se atrevió a arruinar\n
+mi generador?\p
+¡Le dediqué muchísimo tiempo!\p
+Si lo atrapo, ¡va a probar\n
+mi ELECTROCAÑÓN!$"
 
 Route10_PowerPlantBackRoom_Text_ManagerIWontForgiveCulprit:
-	.string "GERENTE: ¡No lo perdonaré!\p"
-	.string "El culpable puede llorar y\n"
-	.string "pedir perdón,\p"
-	.string "¡pero aun así lo castigaré!\p"
-	.string "¡Gajajajaja!$"
+	.string "ENCARGADO: ¡No lo perdonaré!\p
+El culpable puede llorar y\n
+disculparse,\p
+¡pero igual lo machacaré!\p
+¡Jajajajá!$"
 
 Route10_PowerPlantBackRoom_Text_ManagerThatsThePart:
 	.string "GERENTE: ¡Ah! ¡Sí!\p"
@@ -96,5 +96,5 @@ Route10_PowerPlantBackRoom_Text_ManagerMyBelovedGenerator:
 	.string "¡Sigue bombeando electricidad!$"
 
 Route10_PowerPlantBackRoom_Text_Engineer:
-	.string "Esta puerta es insegura sin energía.$"
+	.string "Esta puerta no es segura sin energía.$"
 

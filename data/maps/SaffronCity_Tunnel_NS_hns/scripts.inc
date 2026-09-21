@@ -29,20 +29,20 @@ SaffronCity_Tunnel_NS_EventScript_BaldingManAfter::
 	end
 
 SaffronCity_Tunnel_NS_Text_BaldingManIntro:
-	.string "No tengas miedo, no soy una mala\n"
-	.string "persona.\p"
-	.string "Un lugar como este...\n"
-	.string "atrae a gente mala.\p"
-	.string "Tarde o temprano causarían\n"
-	.string "problemas...\p"
-	.string "Me enoja solo de pensarlo\n"
-	.string "it.$"
+	.string "No tengas miedo, no soy una mala\n
+persona.\p
+Un lugar como este...\n
+atrae a gente mala.\p
+Tarde o temprano causarían\n
+problemas...\p
+Me enfurece solo de pensar en\n
+eso.$"
 
 SaffronCity_Tunnel_NS_Text_BaldingManCandybarDetected:
-	.string "¡Ajá!\n"
-	.string "¡Es una BARRA DE FURIA!\p"
-	.string "¿Me la das?\n"
-	.string "¡Por favor!$"
+	.string "¡Ajá!\n
+¡Eso es un CARAMELO FURIA!\p
+¿Me lo das?\n
+¡Por favor!$"
 
 SaffronCity_Tunnel_NS_Text_BaldingManGaveCandybar:
 	.string "{PLAYER} le dio la Barra de Furia a\n"

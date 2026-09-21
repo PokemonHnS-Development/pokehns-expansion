@@ -261,28 +261,28 @@ MatchCall_HNS_Gina_Battle::
 
 @ Irwin - Juggler, Route 35
 MatchCall_HNS_Irwin_General1::
-	.string "Eh, ¿hola, {PLAYER}?\n"
-	.string "¡Soy tu amigo, IRWIN!\p"
-	.string "¡Vi la batalla más increíble\n"
-	.string "el otro día!\p"
-	.string "Desearía poder luchar\n"
-	.string "así.\p"
-	.string "¡Ah, espera, puedo! Solo\n"
-	.string "¡necesito a alguien para luchar!$"
+	.string "¿Hola, {PLAYER}?\n
+¡Soy tu amigo, IRWIN!\p
+¡El otro día vi una\n
+batalla increíble!\p
+Ojalá pudiera luchar\n
+así.\p
+¡Ah, espera, sí puedo!\n
+¡Solo necesito un rival!$"
 
 MatchCall_HNS_Irwin_General2::
-	.string "Eh, ¿hola, {PLAYER}?\n"
-	.string "¡Soy tu amigo, IRWIN!\p"
-	.string "¡Jeje, llamé enseguida!\p"
-	.string "¡Creo que podemos ser\n"
-	.string "buenos amigos!$"
+	.string "¿Hola, {PLAYER}?\n
+¡Soy tu amigo, IRWIN!\p
+Jeje, ¡llamé enseguida!\p
+¡Creo que podemos ser\n
+buenos amigos!$"
 
 MatchCall_HNS_Irwin_General3::
-	.string "Eh, ¿hola, {PLAYER}?\n"
-	.string "¡Soy tu amigo, IRWIN!\p"
-	.string "¡Saber de tus aventuras\n"
-	.string "me emociona el alma!\p"
-	.string "¡Claro que sí!$"
+	.string "¿Hola, {PLAYER}?\n
+¡Soy tu amigo, IRWIN!\p
+¡Oír de tus aventuras\n
+me llega al alma!\p
+¡Vaya que sí!$"
 
 MatchCall_HNS_Irwin_Battle::
 	.string "Eh, ¿hola, {PLAYER}?\n"
@@ -1107,9 +1107,9 @@ MatchCall_HNS_Trevor_Battle::
 
 @ Kyle - Fisherman, Route 12
 MatchCall_HNS_Kyle_General1::
-	.string "¡¿Quién es?!\n"
-	.string "¡¿Te llamé yo?!\p"
-	.string "Soy KYLE. ¡No lo olvides!$"
+	.string "¿Quién habla?!\n
+¿Yo te llamé?\p
+Soy KYLE. ¡No lo olvides!$"
 
 MatchCall_HNS_Kyle_General2::
 	.string "¡Oye, {PLAYER}!\p"
@@ -1150,14 +1150,14 @@ MatchCall_HNS_Carter_Battle::
 
 @ Hillary - Expert, Route 15
 MatchCall_HNS_Hillary_General1::
-	.string "Hola, {PLAYER}.\n"
-	.string "Es la MAESTRA HILLARY.\p"
-	.string "¿Por qué no estás en clase?$"
+	.string "Hola, {PLAYER}.\n
+Soy la MAESTRA HILLARY.\p
+¿Por qué no estás en la escuela?$"
 
 MatchCall_HNS_Hillary_General2::
-	.string "Hola, {PLAYER}.\p"
-	.string "¿Estás jugando juegos\n"
-	.string "en vez de hacer la tarea?$"
+	.string "Hola, {PLAYER}.\p
+¿Estás jugando en vez\n
+de hacer la tarea?$"
 
 MatchCall_HNS_Hillary_Battle::
 	.string "Hola, {PLAYER}.\n"

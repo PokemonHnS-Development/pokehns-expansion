@@ -36,11 +36,11 @@ VermilionCity_PokemonCenter1F_Text_FishingGuru_FoughtSnorlax:
 	.string "Pero parece que ha desaparecido.$"
 
 VermilionCity_PokemonCenter1F_Text_Sailor:
-	.string "El BARCO RÁPIDO es un gran lugar\n"
-	.string "conoce y lucha con entrenadores.$"
+	.string "El FAST SHIP es un buen lugar\n
+para conocer y combatir entrenadores.$"
 
 VermilionCity_PokemonCenter1F_Text_BugCatcher:
-	.string "¿Oh? Tienes algunas MEDALLAS que\n"
-	.string "nunca había visto.\p"
-	.string "Ah, ya entiendo. Los conseguiste en\n"
-	.string "JOHTO.$"
+	.string "¿Oh? Tienes unas MEDALLAS que\n
+nunca había visto.\p
+Ah, ya entiendo. Las ganaste en\n
+JOHTO.$"

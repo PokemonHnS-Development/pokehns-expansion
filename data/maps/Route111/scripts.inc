@@ -576,7 +576,7 @@ Route111_Text_IsThatSo:
 	.string "¡Pasa por aquí si cambias de idea!$"
 
 Route111_Text_VictorIntro:
-	.string "¡Así me gusta! ¡Me caes bien!$"
+	.string "¡Así se habla! ¡Me caes bien!$"
 
 Route111_Text_VictorDefeat:
 	.string "¡Aiyah!\n"
@@ -693,10 +693,10 @@ Route111_Text_ThatWasShockingSandRainedDown:
 	.string "¿Había fantasmas de arena o algo así?$"
 
 Route111_Text_MirageTowerHasntBeenSeenSince:
-	.string "Desde que hablé contigo, la torre\n"
-	.string "no ha sido visto.\p"
-	.string "Tal vez realmente fue\n"
-	.string "la TORRE ESPEJISMO…$"
+	.string "Desde que hablé contigo, la torre de\n
+arena no se ha visto.\p
+Tal vez realmente fue\n
+la TORRE ESPEJISMO…$"
 
 Route111_Text_ClawFossilDisappeared:
 	.string "El FÓSIL GARRA desapareció en\n"

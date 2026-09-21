@@ -110,7 +110,7 @@ CeladonCity_Gym_Text_PicnickerTanyaSeen:
 	.string "¡pero está bien!$"
 
 CeladonCity_Gym_Text_PicnickerTanyaBeaten:
-	.string "¿Eso es todo?$"
+	.string "¿Oh, eso es todo?$"
 
 CeladonCity_Gym_Text_PicnickerTanyaAfter:
 	.string "Mira todas tus MEDALLAS. ¡Con\n"
@@ -151,7 +151,7 @@ CeladonCity_Gym_Text_TwinsJoAndZoe1Beaten:
 	.string "Oh… We lost…$"
 
 CeladonCity_Gym_Text_TwinsJoAndZoe1After:
-	.string "¡ERIKA nos vengará!$"
+	.string "¡ERIKA te las hará pagar por nosotros!$"
 
 CeladonCity_Gym_Text_TwinsJoAndZoe2Seen:
 	.string "We're going to protect ERIKA!$"

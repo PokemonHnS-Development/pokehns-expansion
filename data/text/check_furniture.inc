@@ -11,9 +11,9 @@ Text_PokemonCenterBookShelf:
 	.string "POKéMON ADORABLES…$"
 
 Text_Vase:
-	.string "Este florero parece caro…\n"
-	.string "Miraste adentro…\p"
-	.string "Pero estaba vacío.$"
+	.string "Este jarrón parece caro…\n
+Miré dentro…\p
+Pero estaba vacío.$"
 
 Text_EmptyTrashCan:
 	.string "It's empty.$"
@@ -23,5 +23,5 @@ Text_ShopShelf:
 	.string "productos de POKéMON.$"
 
 Text_Blueprint:
-	.string "¿Algún tipo de plano?\n"
-	.string "¡Es demasiado complicado!$"
+	.string "¿Un plano de algún tipo?\n
+¡Es muy complicado!$"

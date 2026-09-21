@@ -174,7 +174,7 @@ SaffronCity_Gym_Text_GymGuideIntro:
 	.string "¡Buena suerte!$"
 
 SaffronCity_Gym_Text_GymGuideWin:
-	.string "¡Esa fue otra batalla fantástica!$"
+	.string "¡Fue otra batalla fantástica!$"
 
 SaffronCity_Gym_EventScript_GymStatue::
 	lockall

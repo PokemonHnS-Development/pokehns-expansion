@@ -131,7 +131,7 @@ GoldenrodCity_RadioTower_3F_EventScript_Sign2::
 	end
 
 GoldenrodCity_RadioTower_3F_Text_CardKeySlot:
-	.string "Es la ranura de la LLAVE MAGNÉTICA.$"
+	.string "Es la ranura de LLAVE MAGNÉTICA.$"
 
 GoldenrodCity_RadioTower_3F_Text_InsertedCardKey:
 	.string "{PLAYER} inserted the CARD KEY.$"
@@ -183,7 +183,7 @@ GoldenrodCity_RadioTower_3F_Text_CooltrainerFSunnyDay:
 	.string "fuego por un tiempo.$"
 
 GoldenrodCity_RadioTower_3F_Text_CooltrainerFMarvelous:
-	.string "¡Estuviste simplemente maravilloso!$"
+	.string "¡Estuviste simplemente increíble!$"
 
 GoldenrodCity_RadioTower_3F_Text_GruntM7Seen:
 	.string "Recibí órdenes muy estrictas.\p"

@@ -62,18 +62,18 @@ EventTicket_Text_OddTicketsWhereTo:
 	.string "¿A dónde navegaremos primero?$"
 
 NavelRock_Harbor_Text_SailorReturn:
-	.string "¿Escuchaste... escuchaste eso?\n"
-	.string "Ese gruñido bajo que viene de ahí.\p"
-	.string "¿Estás seguro de que es seguro?\n"
-	.string "¿Crees que deberíamos irnos?$"
+	.string "¿Oíste…? ¿Oíste eso?\n
+Ese gruñido grave de ahí dentro.\p
+¿Estás seguro de que es seguro?\n
+¿Crees que deberíamos irnos?$"
 
 FarawayIsland_Entrance_Text_Sign:
-	.string "La letra se borra, como si hubiera\n"
-	.string "sido escrita hace mucho tiempo...\p"
-	.string "“…ber, 6th day\n"
-	.string "If any human…sets foot here…\l"
-	.string "again…et it be a kindhearted pers…\l"
-	.string "…ith that hope, I depar…”$"
+	.string "La escritura se desvanece como si\n
+se hubiera escrito hace mucho…\p
+“…ber, día 6\n
+Si algún humano…pisa aquí…\l
+otra vez… que sea buena pers…\l
+…on esa esperanza, me march…”$"
 
 FarawayIsland_Interior_Text_Mew:
 	.string "Myuu…$"

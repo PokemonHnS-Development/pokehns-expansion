@@ -132,11 +132,11 @@ Route42_Movement_Eusine2:
 	step_end
 
 Route42_Text_EusineAdmireSuicune:
-	.string "EUSINE: SUICUNE...\n"
-	.string "¡Qué valiente es!\p"
-	.string "¡Qué refrescante es!\n"
-	.string "¡Qué hermoso es!\p"
-	.string "¡Y qué rápido se mueve!$"
+	.string "EUSINE: SUICUNE...\n
+¡Qué valiente es!\p
+¡Qué refrescante es!\n
+¡Qué hermoso es!\p
+¡Y qué rápido se mueve!$"
 
 Route42_Text_EusineJealous:
 	.string "¡{PLAYER}!\p"

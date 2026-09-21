@@ -212,20 +212,20 @@ Text_BeautifulSkyWindow::
 	.string "bello.$"
 
 Text_BlinkingLights::
-	.string "Luces de varios colores\n"
-	.string "parpadean sin parar.$"
+	.string "Luces de varios colores\n
+se encienden y apagan.$"
 
 Text_NeatlyLinedUpTools::
-	.string "Hay todo tipo de herramientas\n"
-	.string "bien ordenadas.$"
+	.string "Herramientas de todo tipo\n
+ordenadas con esmero.$"
 
 Text_ImpressiveMachine::
-	.string "Es una máquina de algún tipo.\n"
-	.string "Es realmente impresionante.$"
+	.string "Es una máquina de algún tipo.\n
+Sin duda es impresionante.$"
 
 Text_VideoGame::
-	.string "¡Es el último videojuego!\n"
-	.string "¡Se ve muy divertido!$"
+	.string "¡Es el videojuego más nuevo!\n
+¡Se ve muy divertido!$"
 
 Text_Burglary::
 	.string "Hay señales claras de un robo\n"

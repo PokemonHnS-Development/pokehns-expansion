@@ -229,8 +229,8 @@ SootopolisCity_Gym_1F_Text_JuanDefeat:
 	.string "¡esto, la MEDALLA LLUVIA!$"
 
 SootopolisCity_Gym_1F_Text_ReceivedRainBadge:
-	.string "{PLAYER} recibió la MEDALLA LLUVIA\n"
-	.string "de JUAN.$"
+	.string "{PLAYER} recibió la MEDALLA LLUVIA\n
+de JUAN.$"
 
 SootopolisCity_Gym_1F_Text_ExplainRainBadgeTakeThis:
 	.string "Tener la MEDALLA LLUVIA asegura\n"
@@ -243,11 +243,11 @@ SootopolisCity_Gym_1F_Text_ExplainRainBadgeTakeThis:
 	.string "batalla que tuvimos, toma esto…$"
 
 SootopolisCity_Gym_1F_Text_ExplainWaterPulse:
-	.string "La MT que te he entregado\n"
-	.string "contiene PULSO AGUA.\p"
-	.string "Al usarlo, a veces confundirá al\n"
-	.string "rival con ondas ultrasónicas.\p"
-	.string "… … … … … …$"
+	.string "La MT que te entregué\n
+contiene PULSO AGUA.\p
+Al usarlo, a veces confunde\n
+al objetivo con ondas ultrasónicas.\p
+… … … … … …$"
 
 SootopolisCity_Gym_1F_Text_RegisteredJuan:
 	.string "LÍDER DE GIMNASIO JUAN registrado\n"

@@ -284,19 +284,19 @@ Route22_Movement_CelebiPush:
 
 
 Route22_Text_Silver1:
-	.string "{RIVAL}: Me dijiste...\n"
-	.string "¡que eras el número uno de todo\l"
-	.string "el mundo!\p"
-	.string "¿Vas a rendirte?\p"
-	.string "¿Qué piensas hacer ahora?$"
+	.string "{RIVAL}: Me dijiste...\n
+que eras el número uno de todo el\l
+mundo!\p
+¿Vas a renunciar?\p
+¿Qué vas a hacer ahora?$"
 
 Route22_Text_Giovanni1:
-	.string "....................\p"
-	.string "GIOVANNI: Uno debe aceptar su\n"
-	.string "derrota para poder avanzar...\p"
-	.string "Iré solo... por ahora...\p"
-	.string "¡Para que un día forme una\n"
-	.string "organización más fuerte!$"
+	.string "....................\p
+GIOVANNI: Hay que reconocer\n
+la derrota antes de seguir...\p
+Iré por mi cuenta... por ahora...\p
+¡Para que algún día forme una\n
+organización más fuerte!$"
 
 Route22_Text_Silver2:
 	.string "{RIVAL}: ¿Qué parte de ti era\n"

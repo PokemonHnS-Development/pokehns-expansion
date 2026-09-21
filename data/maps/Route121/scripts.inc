@@ -178,9 +178,9 @@ Route121_Text_AheadLoomsMtPyre:
 	.string "espíritus de POKéMON fallecidos…$"
 
 Route121_Text_MtPyrePierSign:
-	.string "MUELLE MONTE PIRAL\p"
-	.string "…El cartel es viejo y gastado.\n"
-	.string "Apenas se puede leer…$"
+	.string "MUELLE DEL MONTE PIRÓN\p
+…El cartel está viejo y desgastado.\n
+Las palabras apenas son legibles…$"
 
 Route121_Text_SafariZoneSign:
 	.string "“¡Lleno de POKéMON raros!”\n"

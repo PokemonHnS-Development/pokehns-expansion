@@ -271,7 +271,7 @@ CeruleanGym_Text_MistyRematch:
 	.string "¿Quieres otra revancha conmigo?$"
 
 CeruleanGym_Text_MistyRematchDefeat:
-	.string "MISTY: Eres realmente bueno…$"
+	.string "MISTY: Eres muy bueno…$"
 
 CeruleanGym_Text_SwimmerfDianaSeen:
 	.string "Siento haberme ido. ¡Que\n"

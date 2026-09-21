@@ -350,11 +350,11 @@ SlateportCity_BattleTentLobby_Text_ReceivedPrize:
 
 @ Unused
 SlateportCity_BattleTentLobby_Text_RulesAreListed:
-	.string "Las reglas del Battle Swap están aquí.$"
+	.string "Se listan las reglas del Battle Swap.$"
 
 @ Unused
 SlateportCity_BattleTentLobby_Text_ReadWhichHeading:
-	.string "¿Qué título quieres leer?$"
+	.string "¿Qué apartado quieres leer?$"
 
 SlateportCity_BattleTentLobby_Text_ExplainBasicRules:
 	.string "En un evento de Intercambio, solo\n"
@@ -401,7 +401,7 @@ VerdanturfTown_BattleTentLobby_Text_RulesAreListed2:
 
 @ Unused
 VerdanturfTown_BattleTentLobby_Text_ReadWhichHeading:
-	.string "¿Qué título quieres leer?$"
+	.string "¿Qué apartado quieres leer?$"
 
 @ Unused
 VerdanturfTown_BattleTentLobby_Text_ExplainBasicRules:

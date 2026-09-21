@@ -416,7 +416,7 @@ BattleFrontier_BattlePikeLobby_Text_TrainersWhicheverPathIChoose_hns:
 	.string "ENTRENADORES en cualquier ruta.$"
 
 BattleFrontier_BattlePikeLobby_Text_RulesAreListed_hns:
-	.string "Reglas de Elección de Batalla.$"
+	.string "Las reglas de Battle Choice se listan.$"
 
 BattleFrontier_BattlePikeLobby_Text_ReadWhichHeading_hns:
 	.string "¿Qué título quieres leer?$"

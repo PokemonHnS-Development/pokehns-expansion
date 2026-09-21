@@ -95,10 +95,10 @@ VerdanturfTown_WandasHouse_Text_StrongerSpeech:
 	.string "a otra batalla.$"
 
 VerdanturfTown_WandasHouse_Text_StrongerSpeechShort:
-	.string "WALLY: Por favor, mírame, {PLAYER}.\n"
-	.string "Voy a ser más fuerte que tú.\p"
-	.string "Cuando lo logre, te retaré\n"
-	.string "a otra batalla.$"
+	.string "WALLY: Mírame, {PLAYER}.\n
+Voy a ser más fuerte que tú.\p
+Cuando lo consiga, te retaré\n
+a otro combate.$"
 
 VerdanturfTown_WandasHouse_Text_WallysNextDoor:
 	.string "UNCLE: Oh! {PLAYER}{KUN}!\n"
@@ -116,11 +116,11 @@ VerdanturfTown_WandasHouse_Text_WallySlippedOff:
 	.string "Se escapó solo...$"
 
 VerdanturfTown_WandasHouse_Text_WallyGoneThatFar:
-	.string "TÍO: ¿De verdad?\n"
-	.string "WALLY ha llegado tan lejos solo...\l"
-	.string "...\p"
-	.string "Bueno, hay que reconocer que es\n"
-	.string "el hijo de mi hermano menor.$"
+	.string "TÍO: ¿De veras?\n
+WALLY se marchó tan lejos por su\l
+cuenta…\p
+Bueno, hay que reconocer que es\n
+el hijo de mi hermano menor.$"
 
 VerdanturfTown_WandasHouse_Text_MeetWanda:
 	.string "WANDA: ¿Tú eres...?\n"
@@ -157,12 +157,12 @@ VerdanturfTown_WandasHouse_Text_DaughtersBoyfriendWasDigging:
 	.string "¡Es increíble!$"
 
 VerdanturfTown_WandasHouse_Text_IfAnythingHappenedToWally:
-	.string "Si algo le pasara a WALLY,\n"
-	.string "no podría mirar a los ojos a sus\l"
-	.string "padres en PETALBURG...$"
+	.string "Si le pasara algo a WALLY,\n
+nunca podría mirar a sus\l
+padres de PETALIA a los ojos…$"
 
 VerdanturfTown_WandasHouse_Text_WallyWasInEverGrande:
-	.string "¿WALLY estaba en ISLA FARO?\p"
-	.string "Sus padres en PETALBURG estarían\n"
-	.string "¡Me sorprende escuchar eso!$"
+	.string "¿WALLY estuvo en CIUDAD COLOSALIA?\p
+Sus padres en CIUDAD PETALIA se\n
+asombrarían al oírlo!$"
 

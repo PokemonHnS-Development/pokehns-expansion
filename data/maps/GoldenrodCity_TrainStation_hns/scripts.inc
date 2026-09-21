@@ -320,4 +320,4 @@ GoldenrodCity_TrainStation_Text_Boy:
 	.string "MAGNÉTICO, ¿verdad?$"
 
 GoldenrodCity_TrainStation_Text_Psychic:
-	.string "¡Creía que lo tenías!$"
+	.string "¡Pensé que lo tenías!$"

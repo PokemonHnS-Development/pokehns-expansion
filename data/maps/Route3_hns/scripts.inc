@@ -42,7 +42,7 @@ Route3_Text_FirebreatherOtis_AfterBattle:
 	.string "la ignición…$"
 
 Route3_Text_YoungsterWarren_Seen:
-	.string "Hmmm... No sé qué hacer...$"
+	.string "Mmm... No sé qué hacer...$"
 
 Route3_Text_YoungsterWarren_Beaten:
 	.string "I knew I'd lose…$"

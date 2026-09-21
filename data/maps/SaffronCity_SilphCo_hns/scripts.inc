@@ -110,11 +110,11 @@ SaffronCity_SilphCo_Text_Steven2:
 	.string "frente a ti. ¿Qué color\l"
 	.string "elegirías?$"
 SaffronCity_SilphCo_Text_Steven3:
-	.string "¡Elegiste bien! Te daré\n"
-	.string "{STR_VAR_1}!$"
+	.string "¡Elegiste bien! Te daré\n
+{STR_VAR_1}!$"
 SaffronCity_SilphCo_Text_Steven4:
-	.string "Cuídalo mucho. Que lo cuides\n"
-	.string "me hará muy feliz.$"
+	.string "Cuídalo bien. Que lo cuides\n
+me hará muy feliz.$"
 
 SaffronCity_SilphCo_EventScript_Receptionist::
 	msgbox SilphCo_Text_Receptionist, MSGBOX_NPC
@@ -145,16 +145,16 @@ SilphCo_Text_Sign2:
 	.string "ASCENSOR FUERA DE SERVICIO$"
 
 SilphCo_Text_Receptionist:
-	.string "Bienvenido. Este es el EDIFICIO\n"
-	.string "CENTRAL de SILPH CO.$"
+	.string "Bienvenido. Este es el EDIFICIO\n
+PRINCIPAL DE SILPH CO.$"
 
 SilphCo_Text_Officer:
-	.string "Solo los empleados tienen permiso\n"
-	.string "de subir.\p"
-	.string "Pero como viniste desde tan lejos\n"
-	.string "camino,\p"
-	.string "toma este lindo recuerdo.$"
+	.string "Solo el personal puede\n
+subir al piso de arriba.\p
+Pero como viniste desde\n
+tan lejos,\p
+toma este lindo recuerdo.$"
 
 SilphCo_Text_Officer_GotUpGrade:
-	.string "Es lo último de SILPH CO.\p"
-	.string "Aún no se vende en ningún lado.$"
+	.string "Es lo más nuevo de SILPH CO.\p
+Todavía no se vende en ningún lado.$"

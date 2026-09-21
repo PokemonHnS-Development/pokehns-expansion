@@ -66,5 +66,5 @@ Route110_TrickHousePuzzle4_Text_PaulaDefeat:
 	.string "Aaak!$"
 
 Route110_TrickHousePuzzle4_Text_PaulaPostBattle:
-	.string "¿Alguien ha llegado hasta el final?$"
+	.string "¿Alguien ha llegado al final?$"
 

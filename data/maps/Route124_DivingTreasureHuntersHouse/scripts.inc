@@ -284,20 +284,20 @@ Route124_DivingTreasureHuntersHouse_EventScript_ShardTradeBoard::
 	end
 
 Route124_DivingTreasureHuntersHouse_Text_Greeting:
-	.string "¡Soy el BUSCADOR DE TESOROS!\p"
-	.string "¡Soy el tipo genial que hace\n"
-	.string "buceos profundos para hallar tesoros\l"
-	.string "en el fondo del mar!$"
+	.string "¡Soy el CAZATESOROS BUCEADOR!\p
+Soy el asombroso tipo que hace\n
+inmersiones profundas para reunir\l
+tesoros que descansan en el fondo.$"
 
 Route124_DivingTreasureHuntersHouse_Text_HaveYouSeenAnyShards:
-	.string "Dime, ¿has visto FRAGMENTOS de\n"
-	.string "herramientas de la antigüedad?$"
+	.string "Dime, ¿has visto FRAGMENTOS de\n
+herramientas de tiempos antiguos?$"
 
 Route124_DivingTreasureHuntersHouse_Text_YouHaventGotAnyShards:
-	.string "No tienes ningún tesoro\n"
-	.string "para mí...\p"
-	.string "Si ves FRAGMENTOS, como el ROJO,\n"
-	.string "¡tienes que cambiármelo!$"
+	.string "No tienes ningún tesoro\n
+para mí…\p
+Si ves algún FRAGMENTO, como el\n
+ROJO, ¡tienes que cambiarlo conmigo!$"
 
 Route124_DivingTreasureHuntersHouse_Text_ThatsAShardIllTradeYou:
 	.string "¡Oh, hola! Eso...\n"
@@ -306,7 +306,7 @@ Route124_DivingTreasureHuntersHouse_Text_ThatsAShardIllTradeYou:
 	.string "conmigo! ¡Te daré algo bueno!$"
 
 Route124_DivingTreasureHuntersHouse_Text_WhatDoYouWantToTrade:
-	.string "¿Qué quieres cambiar?$"
+	.string "¿Qué quieres intercambiar?$"
 
 Route124_DivingTreasureHuntersHouse_Text_YoullTradeShardForStone:
 	.string "¿Cambiarás tu {STR_VAR_1} por\n"
@@ -317,7 +317,7 @@ Route124_DivingTreasureHuntersHouse_Text_ItsADeal:
 	.string "¡Úsalo con sabiduría!$"
 
 Route124_DivingTreasureHuntersHouse_Text_TradeSomethingElse:
-	.string "¿Quieres cambiar algo más?$"
+	.string "¿Quieres intercambiar algo más?$"
 
 Route124_DivingTreasureHuntersHouse_Text_BagFull:
 	.string "Vaya, tu MOCHILA está llena.\n"

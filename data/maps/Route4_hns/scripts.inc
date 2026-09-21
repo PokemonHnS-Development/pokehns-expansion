@@ -48,8 +48,8 @@ Route4_Text_BirdKeeperHank_AfterBattle:
 	.string "Así es como se hace.$"
 
 Route4_Text_PicnickerHope_Seen:
-	.string "Tengo el presentimiento de que ganaré.\p"
-	.string "¡Veamos si tengo razón!$"
+	.string "Presiento que puedo ganar.\p
+¡Veamos si tengo razón!$"
 
 Route4_Text_PicnickerHope_Beaten:
 	.string "Ay, eres demasiado fuerte.$"

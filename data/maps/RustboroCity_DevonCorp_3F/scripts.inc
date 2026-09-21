@@ -284,21 +284,21 @@ RustboroCity_DevonCorp_3F_Text_ThisIs3rdFloorWaitHere:
 	.string "¿Podrías esperar aquí un segundo?$"
 
 RustboroCity_DevonCorp_3F_Text_WordWithPresidentComeWithMe:
-	.string "Nuestro PRESIDENTE quiere\n"
-	.string "decirte unas palabras.\p"
-	.string "Por favor, ven conmigo.$"
+	.string "Nuestro PRESIDENTE quiere\n
+hablar contigo.\p
+Acompáñame, por favor.$"
 
 RustboroCity_DevonCorp_3F_Text_PleaseGoAhead:
 	.string "Please, go ahead.$"
 
 RustboroCity_DevonCorp_3F_Text_VisitCaptSternShipyard:
-	.string "Si visitas el ASTILLERO de PORTALEN,\n"
-	.string "Deberías ir a ver al CAPT. STERN.$"
+	.string "Si vas al ASTILLERO de CIUDAD\n
+PORTUAL, visita al CAP. STERN.$"
 
 RustboroCity_DevonCorp_3F_Text_RepeatAndTimerHugelyPopular:
-	.string "DEVON's new products, the REPEAT BALL\n"
-	.string "y la TIMER BALL, se han vuelto muy\l"
-	.string "populares entre los ENTRENADORES.$"
+	.string "Los nuevos productos de DEVON, la\n
+REPEAT BALL y la TIMER BALL, son\l
+muy populares entre los ENTRENADORES.$"
 
 RustboroCity_DevonCorp_3F_Text_RareRocksDisplay:
 	.string "Es una colección de rocas y\n"

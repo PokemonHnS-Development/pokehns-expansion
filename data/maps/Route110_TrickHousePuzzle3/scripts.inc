@@ -324,7 +324,7 @@ Route110_TrickHousePuzzle3_Text_MarthaIntro:
 	.string "Empiezo a sentirme triste…$"
 
 Route110_TrickHousePuzzle3_Text_MarthaDefeat:
-	.string "Tú… ¡Eres terrible!$"
+	.string "Tú... ¡Eres horrible!$"
 
 Route110_TrickHousePuzzle3_Text_MarthaPostBattle:
 	.string "¡Ya sé que soy débil!\n"
@@ -335,11 +335,11 @@ Route110_TrickHousePuzzle3_Text_AlanIntro:
 	.string "¿con una casa tan extraña?$"
 
 Route110_TrickHousePuzzle3_Text_AlanDefeat:
-	.string "No lo entiendo.\n"
-	.string "¿Cómo pude perder?$"
+	.string "No lo entiendo.\n
+¿Cómo perdí?$"
 
 Route110_TrickHousePuzzle3_Text_AlanPostBattle:
-	.string "No lo entiendo.\n"
-	.string "¿Cuántas trampas hay en esta casa?\p"
-	.string "Tú podrías ser quien lo resuelva.$"
+	.string "No lo entiendo.\n
+¿Cuántas trampas hay en esta casa?\p
+Puede que tú seas quien lo resuelva.$"
 

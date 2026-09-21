@@ -137,7 +137,7 @@ MagmaHideout_4F_Text_Grunt11Defeat:
 	.string "no mantiene la calma...$"
 
 MagmaHideout_4F_Text_Grunt11PostBattle:
-	.string "¿Me pregunto si GROUDON tiene cola?$"
+	.string "Me pregunto si GROUDON tiene cola.$"
 
 MagmaHideout_4F_Text_Grunt12Intro:
 	.string "¡Fuhahaha!\n"

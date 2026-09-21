@@ -118,32 +118,32 @@ SafariZone_EventScript_PokeblockGone::
 	end
 
 SafariZone_Text_PokeblockGone:
-	.string "¡El {STR_VAR_1} se lo\n"
-	.string "comieron todo!$"
+	.string "¡El {STR_VAR_1} fue devorado\n
+por completo!$"
 
 SafariZone_Text_WouldYouLikeToExit:
-	.string "¿Quieres salir de la ZONA\n"
-	.string "SAFARI ahora mismo?$"
+	.string "¿Quieres salir ahora de la\n
+ZONA SAFARI?$"
 
 SafariZone_Text_TimesUp:
 	.string "¡Ding-dong! ¡Se acabó el tiempo!\n"
 	.string "Tu juego SAFARI ha terminado.$"
 
 SafariZone_Text_OutOfBalls:
-	.string "Te quedaste sin SAFARI BALLS.\n"
-	.string "Tu juego SAFARI ha terminado.$"
+	.string "Te quedaste sin SAFARI BALLS.\n
+Tu juego SAFARI ha terminado.$"
 
 SafariZone_Text_PlacePokeblockOnFeeder:
-	.string "¿Quieres poner un {POKEBLOCK}\n"
-	.string "en el COMEDERO {POKEBLOCK}?$"
+	.string "¿Quieres poner un {POKEBLOCK}\n
+en el COMEDERO DE {POKEBLOCK}?$"
 
 SafariZone_Text_PokeblockStillHere:
-	.string "El {STR_VAR_1} que dejaste\n"
-	.string "antes todavía está aquí.$"
+	.string "El {STR_VAR_1} que dejaste\n
+antes sigue aquí.$"
 
 SafariZone_Text_PokeblockWasPlaced:
-	.string "El {STR_VAR_1} fue puesto\n"
-	.string "en el COMEDERO {POKEBLOCK}.$"
+	.string "El {STR_VAR_1} se colocó\n
+en el COMEDERO DE {POKEBLOCK}.$"
 
 Route121_SafariZoneEntrance_Text_WelcomeToSafariZone:
 	.string "¡Bienvenido a la ZONA SAFARI!\p"
@@ -158,8 +158,8 @@ Route121_SafariZoneEntrance_Text_WelcomeToSafariZone:
 	.string "¡Entra y disfruta de la ZONA SAFARI!$"
 
 Route121_SafariZoneEntrance_Text_WelcomeFirstTime:
-	.string "¡Bienvenido a la ZONA SAFARI!\n"
-	.string "¿Es tu primera vez aquí?$"
+	.string "¡Bienvenido a la ZONA SAFARI!\n
+¿Es tu primera vez aquí?$"
 
 Route121_SafariZoneEntrance_Text_ComeInAndEnjoy:
 	.string "¡Entra y disfruta de la ZONA SAFARI!$"
@@ -174,9 +174,9 @@ Route121_SafariZoneEntrance_Text_FirstTimeInfo:
 	.string "¡Entra y disfruta de la ZONA SAFARI!$"
 
 Route121_SafariZoneEntrance_Text_WouldYouLikeToPlay:
-	.string "¡Bienvenido a la ZONA SAFARI!\p"
-	.string "¡Atrapa todo por solo ¥500!\n"
-	.string "¿Quieres jugar al SAFARI Game?$"
+	.string "¡Bienvenido a la ZONA SAFARI!\p
+¡Puedes atrapar todo por solo ¥500!\n
+¿Quieres jugar una partida SAFARI?$"
 
 Route121_SafariZoneEntrance_Text_PlayAnotherTime:
 	.string "Está bien.\n"
@@ -187,7 +187,7 @@ Route121_SafariZoneEntrance_Text_NotEnoughMoney:
 	.string "Lo siento.$"
 
 Route121_SafariZoneEntrance_Text_ThatWillBe500Please:
-	.string "Serán ¥500, por favor.$"
+	.string "Son ¥500, por favor.$"
 
 Route121_SafariZoneEntrance_Text_HereAreYourSafariBalls:
 	.string "Aquí tienes tus SAFARI BALLS.$"
@@ -196,10 +196,10 @@ Route121_SafariZoneEntrance_Text_Received30SafariBalls:
 	.string "{PLAYER} received 30 SAFARI BALLS.$"
 
 Route121_SafariZoneEntrance_Text_PleaseEnjoyYourself:
-	.string "Te avisaremos cuando tu juego\n"
-	.string "ha terminado.\p"
-	.string "¡Así que, hasta entonces, disfruta!\n"
-	.string "¡Ve ya a tu gran excursión!$"
+	.string "Te avisaremos cuando tu partida\n
+haya terminado.\p
+Mientras tanto, ¡diviértete!\n
+¡Disfruta tu excursión salvaje!$"
 
 Route121_SafariZoneEntrance_Text_PCIsFull:
 	.string "¡Disculpa!\n"
@@ -219,12 +219,12 @@ Route121_SafariZoneEntrance_Text_YouNeedPokeblockCase:
 #endif
 
 SafariZone_South_Text_StillHaveTimeExit:
-	.string "Aún te queda tiempo. ¿Te gustaría\n"
-	.string "¿Quieres salir de la ZONA SAFARI?$"
+	.string "Aún te queda tiempo. ¿Quieres\n
+salir de la ZONA SAFARI ahora?$"
 
 SafariZone_South_Text_EnjoyTheRestOfYourAdventure:
-	.string "¡Disfruta el resto de tu aventura\n"
-	.string "salvaje!$"
+	.string "¡Disfruta el resto de tu\n
+aventura salvaje!$"
 
 SafariZone_South_Text_ExitEarlyThankYouForPlaying:
 	.string "Está bien.\p"
@@ -234,9 +234,9 @@ SafariZone_South_Text_ExitEarlyThankYouForPlaying:
 	.string "Esperamos verte de nuevo.$"
 
 SafariZone_South_Text_GoodLuck:
-	.string "¡Buena suerte!\p"
-	.string "Si necesitas algo, no dudes en\n"
-	.string "decírmelo, ¡por favor!$"
+	.string "¡Buena suerte!\p
+Si necesitas algo, no dudes\n
+en decírmelo, ¡por favor!$"
 
 SafariZone_South_Text_Boy:
 	.string "¿Sabías esto?\p"
@@ -305,17 +305,17 @@ SafariZone_RestHouse_Text_FatMan:
 	.string "naturaleza buscan un {POKEBLOCK}.$"
 
 SafariZone_South_Text_AreaOffLimits1:
-	.string "Esta zona sigue en construcción.\n"
-	.string "¡Está prohibido pasar, lo siento!$"
+	.string "Esta área aún está en construcción.\n
+Está prohibido el paso, ¡lo siento!$"
 
 SafariZone_Southeast_Text_ExpansionIsFinished:
-	.string "El proyecto de expansión de la\n"
-	.string "ZONA SAFARI ya terminó.\p"
-	.string "Esperamos que disfrutes la zona.$"
+	.string "El proyecto de ampliación de\n
+la ZONA SAFARI ya terminó.\p
+Esperamos que disfrutes la zona.$"
 
 SafariZone_South_Text_AreaOffLimits2:
-	.string "Esta zona sigue en construcción.\n"
-	.string "¡Está prohibido pasar, lo siento!$"
+	.string "Esta zona aún está en construcción.\n
+Está prohibido el paso, ¡perdón!$"
 
 SafariZone_Southeast_Text_LittleGirl:
 	.string "¡Guau! ¡Genial! ¡No había visto\n"
@@ -332,13 +332,13 @@ SafariZone_Southeast_Text_RichBoy:
 	.string "venir de fuera de HOENN.$"
 
 SafariZone_Northeast_Text_Boy:
-	.string "Solo me quedan un par de SAFARI BALLS.\p"
-	.string "Me cuesta mucho decidir\n"
-	.string "qué debería capturar.$"
+	.string "Solo me quedan un par de SAFARI BALLS.\p
+Me cuesta mucho decidir\n
+qué debería atrapar.$"
 
 SafariZone_Northeast_Text_Woman:
-	.string "Oí que se puede ver a PIKACHU aquí.\n"
-	.string "¿Dónde podrá estar?$"
+	.string "Oí que aquí se puede ver a PIKACHU.\n
+¿Dónde podría haber uno?$"
 
 SafariZone_Northeast_Text_Girl:
 	.string "¡Ay, qué mal!\n"

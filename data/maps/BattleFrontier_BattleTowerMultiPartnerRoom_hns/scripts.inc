@@ -881,8 +881,8 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_CyclingTriathleteFIntro_hns::
 	.string "I'm TRIATHLETE {STR_VAR_1}!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_CyclingTriathleteFMon1_hns::
-	.string "Lo que tengo...\n"
-	.string "Uno {STR_VAR_2} con {STR_VAR_1} y$"
+	.string "Lo que tengo...\n
+Un {STR_VAR_2} con {STR_VAR_1} y$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_CyclingTriathleteFMon2Ask_hns::
 	.string "¡un {STR_VAR_2} con {STR_VAR_1}!\n"
@@ -1645,7 +1645,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_PsychicFIntro_hns::
 	.string "Soy un PSÍQUICO.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PsychicFMon1_hns::
-	.string "Uno {STR_VAR_2} con {STR_VAR_1} y$"
+	.string "Un {STR_VAR_2} con {STR_VAR_1} y$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PsychicFMon2Ask_hns::
 	.string "un {STR_VAR_2} con {STR_VAR_1}--\n"
@@ -1767,7 +1767,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_SwimmingTriathleteFIntro_hns::
 	.string "I'm the TRIATHLETE {STR_VAR_1}!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SwimmingTriathleteFMon1_hns::
-	.string "Uno {STR_VAR_2} con {STR_VAR_1} y$"
+	.string "Un {STR_VAR_2} con {STR_VAR_1} y$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SwimmingTriathleteFMon2Ask_hns::
 	.string "Otro {STR_VAR_2} que sabe\n"

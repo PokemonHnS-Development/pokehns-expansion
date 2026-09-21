@@ -142,8 +142,8 @@ Route34_Text_YoungsterIan_Beaten:
 	.string "¡No! Hay entrenadores mejores…$"
 
 Route34_Text_YoungsterIan_After:
-	.string "Me esfuerzo para ser la\n"
-	.string "estrella de mi clase.$"
+	.string "Me esfuerzo mucho para ser\n
+la estrella de mi clase.$"
 
 Route34_Text_CamperTodd_Seen:
 	.string "Confío en mi habilidad para\n"
@@ -232,7 +232,7 @@ Route34_Text_TrainerTips:
 	.string "BAYAS.$"
 
 Route34_Text_CooltrainerIrene_Seen:
-	.string "IRENE: ¿Quién eres?!$"
+	.string "IRENE: ¿Quién eres?$"
 
 Route34_Text_CooltrainerIrene_Beaten:
 	.string "IRENE: Ohhh! You're too strong!$"

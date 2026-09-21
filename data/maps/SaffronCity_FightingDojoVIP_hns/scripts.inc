@@ -23,7 +23,7 @@ SaffronCity_FightingDojoVIP_Text_Nurse1:
 	.string "Curaré a tus POKéMON.$"
 
 SaffronCity_FightingDojoVIP_Text_Nurse2:
-	.string "¡Esperamos volver a verte!$"
+	.string "¡Esperamos verte de nuevo!$"
 
 
 SaffronCity_FightingDojoVIP_EventScript_Declined::
@@ -718,9 +718,9 @@ SaffronCity_FightingDojoVIP_Text_Falkner_Rematch:
 	.string "poder del cielo otra vez?$"
 
 SaffronCity_FightingDojoVIP_Text_Falkner_RematchDefeat:
-	.string "Vaya... Me venciste de nuevo.\p"
-	.string "¡Entrenaré más duro para ser\n"
-	.string "el mejor maestro de aves!$"
+	.string "Vaya… Me venciste otra vez.\p
+Voy a entrenar más duro\n
+¡para ser el mejor maestro de aves!$"
 
 SaffronCity_FightingDojoVIP_Text_Bugsy_Rematch:
 	.string "¡Vaya, ahora eres el\n"
@@ -732,10 +732,10 @@ SaffronCity_FightingDojoVIP_Text_Bugsy_Rematch:
 	.string "¿Quieres otra revancha conmigo?$"
 
 SaffronCity_FightingDojoVIP_Text_Bugsy_RematchDefeat:
-	.string "Vaya, debes ser un experto\n"
-	.string "ENTRENADOR.\p"
-	.string "Mi investigación no debe estar\n"
-	.string "completa…$"
+	.string "Vaya, debes ser un experto\n
+ENTRENADOR.\p
+Mi investigación no debe\n
+estar completa…$"
 
 SaffronCity_FightingDojoVIP_Text_Whitney_Rematch:
 	.string "¡Hola! ¡Eres tú!\p"
@@ -762,10 +762,10 @@ SaffronCity_FightingDojoVIP_Text_Morty_Rematch:
 	.string "¿Quieres otra revancha conmigo?$"
 
 SaffronCity_FightingDojoVIP_Text_Morty_RematchDefeat:
-	.string "Aún no soy lo suficiente...\p"
-	.string "Has presenciado mucho más\n"
-	.string "que yo.\p"
-	.string "Te envidio por eso...$"
+	.string "Aún no soy lo bastante bueno…\p
+Has visto mucho más\n
+que yo.\p
+Te envidio por eso…$"
 
 SaffronCity_FightingDojoVIP_Text_Chuck_Rematch:
 	.string "¡JAJAJA! ¡CAMPEÓN DE JOHTO!\p"
@@ -785,9 +785,9 @@ SaffronCity_FightingDojoVIP_Text_Jasmine_Rematch:
 	.string "¿Quieres otra revancha conmigo?$"
 
 SaffronCity_FightingDojoVIP_Text_Jasmine_RematchDefeat:
-	.string "...Eres mejor ENTRENADOR que yo.\n"
-	.string "me,\p"
-	.string "en habilidad y bondad.$"
+	.string "…Eres mejor entrenador que\n
+yo,\p
+en habilidad y bondad.$"
 
 SaffronCity_FightingDojoVIP_Text_Pryce_Rematch:
 	.string "¡Ah, CAMPEÓN DE JOHTO!\p"
@@ -801,11 +801,11 @@ SaffronCity_FightingDojoVIP_Text_Pryce_Rematch:
 	.string "¿Quieres otra revancha conmigo?$"
 
 SaffronCity_FightingDojoVIP_Text_Pryce_RematchDefeat:
-	.string "Ah, otra vez me impresiona\n"
-	.string "tu destreza.\p"
-	.string "Con tu voluntad, sé que\n"
-	.string "superarás todos los obstáculos\l"
-	.string "de la vida.$"
+	.string "Ah, otra vez me impresiona\n
+tu destreza.\p
+Con tu fuerte voluntad, sé\n
+que superarás todos los\l
+obstáculos de la vida.$"
 
 SaffronCity_FightingDojoVIP_Text_Clair_Rematch:
 	.string "Lo lograste, ¿eh?\p"
@@ -844,7 +844,7 @@ SaffronCity_FightingDojoVIP_Text_Misty_Rematch:
 	.string "¿Quieres otra revancha conmigo?$"
 
 SaffronCity_FightingDojoVIP_Text_Misty_RematchDefeat:
-	.string "MISTY: Eres realmente bueno…$"
+	.string "MISTY: De verdad eres bueno…$"
 
 SaffronCity_FightingDojoVIP_Text_Surge_Rematch:
 	.string "SURGE: ¡Así que ahora eres el\n"

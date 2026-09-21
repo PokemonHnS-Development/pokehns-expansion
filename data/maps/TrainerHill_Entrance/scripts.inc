@@ -328,7 +328,7 @@ TrainerHill_Entrance_Text_TimeProgessGetSetGo:
 	.string "Go!$"
 
 TrainerHill_Entrance_Text_PleaseVisitUsAgain:
-	.string "¡Vuelve a visitarnos!$"
+	.string "¡Vuelve a visitarnos pronto!$"
 
 TrainerHill_Entrance_Text_TooBadTremendousEffort:
 	.string "Fue una lástima.\p"
@@ -447,5 +447,5 @@ TrainerHill_Entrance_Text_DoYouKnowWhenTheyOpen:
 	.string "desafiante de la historia!$"
 
 TrainerHill_Elevator_Text_ReturnToReception:
-	.string "¿Quieres volver al\n"
-	.string "mostrador de recepción?$"
+	.string "¿Quieres volver al\n
+mostrador de recepción?$"

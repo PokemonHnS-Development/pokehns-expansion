@@ -126,7 +126,7 @@ Route13_Text_PokefanmAlexSeen:
 	.string "Bow down before my regal POKéMON!$"
 
 Route13_Text_PokefanmAlexBeaten:
-	.string "¡¿Cómo osas burlarte de la realeza?$"
+	.string "¿Cómo...? ¡No insultes a la realeza!$"
 
 Route13_Text_PokefanmAlexAfterBattle:
 	.string "¿Acaso no todos desean algún día\n"
@@ -163,7 +163,7 @@ Route13_Text_BirdKeeperPerrySeen:
 	.string "POKéMON ave.$"
 
 Route13_Text_BirdKeeperPerryBeaten:
-	.string "Me venciste con tu velocidad...$"
+	.string "Me ganaste con tu velocidad...$"
 
 Route13_Text_BirdKeeperPerryAfterBattle:
 	.string "Tus POKéMON están muy bien\n"
@@ -210,9 +210,9 @@ Route13_Text_KennyPostRematch:
 	.string "erosión. ¡Perseveraremos!$"
 
 Route13_Text_TrainerTips:
-	.string "CONSEJOS DE ENTRENADOR\p"
-	.string "¡Mira! Justo ahí, al lado\n"
-	.string "izquierdo del poste.$"
+	.string "CONSEJOS DE ENTRENADOR\p
+¡Mira! Justo ahí, a la\n
+izquierda del poste.$"
 
 Route13_Text_Sign:
 	.string "RUTA 13\p"
@@ -428,12 +428,12 @@ Route13_GetOffBoat_Text_0:
 	.string "¡a las ISLAS ALOLA!$"
 
 Route13_TravelToAlola_Text_0:
-	.string "¡Hola, marinero!\p"
-	.string "Es un recuerdo muy extraño.\n"
-	.string "¡Debes ser de las ISLAS!$"
+	.string "¡Hola!\p
+Qué recuerdo tan raro.\n
+¡Debes ser de las ISLAS!$"
 Route13_TravelToAlola_Text_0_5:
-	.string "¿Quieres tomar el próximo barco?\n"
-	.string "¡Sale en breve!$"
+	.string "¿Quieres tomar el próximo barco?\n
+¡Zarpa en un momento!$"
 
 Route13_TravelToAlola_Text_1:
 	.string "¡Ahoy! ¡Sube a bordo!$"
@@ -443,8 +443,8 @@ Route13_TravelToAlola_Text_2:
 	.string "Vuelve cuando quieras zarpar.$"
 
 Route13_TravelToAlola_Text_3:
-	.string "¡Ah, eres tú otra vez!\n"
-	.string "¿Quieres ir a las ISLAS ALOLA?$"
+	.string "¡Ah, eres tú de nuevo!\n
+¿Quieres ir a las ISLAS ALOLA?$"
 
 Route13_TravelToAlola_Text_4:
 	.string "¡Ahoy!\n"

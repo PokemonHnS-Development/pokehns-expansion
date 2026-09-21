@@ -100,10 +100,10 @@ BerryBlender_Text_DontHaveAnyBerries2:
 	.string "algunas BAYAS para mezclar.$"
 
 BerryBlender_Text_PokeblockCaseIsFull2:
-	.string "Oh, pero espera un segundo...\n"
-	.string "Tu {POKEBLOCK} CASE está lleno.\p"
-	.string "Usa algunos {POKEBLOCK}S y\n"
-	.string "luego regresa.$"
+	.string "Oh, pero espera un segundo...\n
+Tu ESTUCHE {POKEBLOCK} está lleno.\p
+Usa algunos {POKEBLOCK}S y\n
+luego regresa.$"
 
 BerryBlender_Text_DontHavePokeblockCase2:
 	.string "Oh, pero espera un segundo...\n"

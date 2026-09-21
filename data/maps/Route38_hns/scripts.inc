@@ -154,13 +154,13 @@ Route38_Text_LassDana1Seen:
 	.string "me das algunos consejos?$"
 
 Route38_Text_LassDana1Beaten:
-	.string "Ya veo. Así que puedes luchar\n"
-	.string "de esa manera.$"
+	.string "Ya veo. Así puedes luchar\n
+de esa forma.$"
 
 Route38_Text_LassDanaAfter:
-	.string "¡Sé algo muy bueno!\p"
-	.string "La leche de GRANJA MOOMOO es\n"
-	.string "famosa por su sabor.$"
+	.string "¡Sé algo bueno!\p
+La leche de MOOMOO FARM\n
+es famosa por su sabor.$"
 
 Route38_Text_BeautyValerieSeen:
 	.string "¡Hola! Qué lindo eres\n"
@@ -181,7 +181,7 @@ Route38_Text_SailorHarrySeen:
 	.string "POKéMON!$"
 
 Route38_Text_SailorHarryBeaten:
-	.string "¡Tu habilidad es de clase mundial!$"
+	.string "¡Tu habilidad es de nivel mundial!$"
 
 Route38_Text_SailorHarryAfter:
 	.string "Gente de todo el mundo vive\n"
@@ -193,14 +193,14 @@ Route38_Text_BeautyOliviaSeen:
 	.string "y yo somos hermosos?$"
 
 Route38_Text_BeautyOliviaBeaten:
-	.string "Bebemos LECHE MOOMOO cada\n"
-	.string "día.$"
+	.string "Tomamos LECHE MOOMOO todos\n
+los días.$"
 
 Route38_Text_BeautyOliviaAfter:
-	.string "La LECHE MOOMOO es buena para\n"
-	.string "la salud y la belleza,\p"
-	.string "pero, lamentablemente, solo\n"
-	.string "venden una botella a la vez.$"
+	.string "La LECHE MOOMOO es buena\n
+para la belleza y la salud,\p
+pero, por desgracia, solo\n
+venden una botella a la vez.$"
 
 Route38_Text_Sign:
 	.string "RUTA 38\p"
@@ -222,9 +222,9 @@ Route38_Text_WaterSign:
 	.string "-CONSEJO DE CIUDAD IRIS$"
 
 Route38_Text_DanaRegister:
-	.string "¡Sé algo muy bueno!\p"
-	.string "La leche de GRANJA MOOMOO es\n"
-	.string "famosa por su sabor.$"
+	.string "¡Sé algo bueno!\p
+La leche de MOOMOO FARM\n
+es famosa por su sabor.$"
 
 Route38_Text_DanaRematchIntro:
 	.string "Pareces ser bueno en eso.\n"
@@ -233,22 +233,22 @@ Route38_Text_DanaRematchIntro:
 	.string "me das algunos consejos?$"
 
 Route38_Text_DanaRematchDefeat:
-	.string "Ya veo. Así que puedes luchar\n"
-	.string "de esa manera.$"
+	.string "Ya veo. Así puedes luchar\n
+de esa forma.$"
 
 Route38_Text_DanaPostRematch:
-	.string "¡Sé algo muy bueno!\p"
-	.string "La leche de GRANJA MOOMOO es\n"
-	.string "famosa por su sabor.$"
+	.string "¡Sé algo bueno!\p
+La leche de MOOMOO FARM\n
+es famosa por su sabor.$"
 
 Route38_Text_DanaHasItem:
-	.string "¡Oye! Encontré algo brillante\n"
-	.string "¡interesante!\p"
-	.string "¡Toma, puedes quedártelo!$"
+	.string "¡Oye! Encontré algo\n
+interesante!\p
+Toma, ¡es para ti!$"
 
 Route38_Text_DanaGaveItem:
-	.string "¡Te avisaré si encuentro\n"
-	.string "algo más!$"
+	.string "¡Te aviso si encuentro\n
+algo más!$"
 
 Route38_Text_DanaNoRoom:
 	.string "Hmm, tu MOCHILA está llena.\p"

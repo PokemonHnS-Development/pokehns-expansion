@@ -56,7 +56,7 @@ SSAqua_RoomNW_Text_GentlemanEdwardSeen:
 	.string "que es muy importante.$"
 
 SSAqua_RoomNW_Text_GentlemanEdwardBeaten:
-	.string "Yo... yo no lo encuentro...$"
+	.string "No... no lo encuentro...$"
 
 SSAqua_RoomNW_Text_GentlemanEdwardAfterBattle:
 	.string "Me rindo. No tienes que\n"

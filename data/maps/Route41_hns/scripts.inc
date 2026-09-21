@@ -180,9 +180,9 @@ Route41_Text_SwimmerfWendyBeaten:
 	.string "Oh, dear…$"
 
 Route41_Text_SwimmerfWendyAfter:
-	.string "Los grupos de STARYU se iluminan\n"
-	.string "al mismo tiempo.\p"
-	.string "Es tan bello que asusta.$"
+	.string "Los grupos de STARYU se iluminan\n
+al mismo tiempo.\p
+Es tan hermoso que da miedo.$"
 
 Route41_EventScript_Tentacruel1::
 	lock
@@ -291,5 +291,5 @@ Route41_Text_TentacruelAttack:
 	.string "TENTACRUEL: CRUOOOOOO!$"
 
 Route41_Text_TentacruelHeal:
-	.string "¡TENTACRUEL usó RECUPERAR!\n"
-	.string "¡Se ha curado por completo!$"
+	.string "TENTACRUEL usó RECUPERACIÓN!\n
+¡Está completamente curado!$"

@@ -508,7 +508,7 @@ BattleFrontier_BattleFactoryLobby_Text_RentalMonsAreVaried_hns:
 	.string "variaban los POKéMON de alquiler.$"
 
 BattleFrontier_BattleFactoryLobby_Text_RulesAreListed_hns:
-	.string "Las reglas del Battle Swap están aquí.$"
+	.string "Aquí están las reglas de Battle Swap.$"
 
 BattleFrontier_BattleFactoryLobby_Text_ReadWhichHeading_hns:
 	.string "¿Qué título quieres leer?$"

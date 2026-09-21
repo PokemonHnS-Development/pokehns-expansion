@@ -134,16 +134,16 @@ Route113_EventScript_Wyatt::
 	end
 
 Route113_Text_AshCanBeFashionedIntoGlass:
-	.string "¡Jajaja! La tecnología actual es\n"
-	.string "¡algo maravilloso!\p"
-	.string "Toma estas cenizas volcánicas.\n"
-	.string "Se pueden usar para hacer vidrio.$"
+	.string "¡Jajajaja! ¡La tecnología de hoy\n
+es maravillosa!\p
+Toma esta ceniza volcánica.\n
+Puede convertirse en vidrio.$"
 
 Route113_Text_FunWalkingThroughAsh:
-	.string "Es divertido caminar sobre las\n"
-	.string "cenizas del volcán en el suelo.\p"
-	.string "Ves por donde caminaste; es\n"
-	.string "¡está genial!$"
+	.string "Es divertido caminar entre las\n
+cenizas del volcán y el pasto.\p
+Puedes ver dónde pisaste,\n
+¡es genial!$"
 
 Route113_Text_RouteSign111:
 	.string "RUTA 113\n"
@@ -154,11 +154,11 @@ Route113_Text_RouteSignFallarbor:
 	.string "{LEFT_ARROW} PUEBLO FALLARBOR$"
 
 Route113_Text_TrainerTipsRegisterKeyItems:
-	.string "CONSEJOS DE ENTRENADOR\p"
-	.string "Puedes registrar un OBJETO CLAVE\n"
-	.string "en tu BOLSA como SELECT.\p"
-	.string "Solo presiona SELECT para usar\n"
-	.string "el objeto registrado fácilmente.$"
+	.string "CONSEJOS DE ENTRENADOR\p
+Puedes registrar uno de los OBJETOS\n
+CLAVE en tu MOCHILA con SELECT.\p
+Solo presiona SELECT para usar\n
+el objeto registrado fácilmente.$"
 
 Route113_Text_GlassWorkshopSign:
 	.string "TALLER DE VIDRIO\n"

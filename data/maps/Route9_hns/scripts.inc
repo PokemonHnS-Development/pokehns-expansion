@@ -100,7 +100,7 @@ Route9_Text_HikerTimBeaten:
 	.string "I was too busy singing…$"
 
 Route9_Text_HikerTimAfter:
-	.string "La concentración es clave en combate.$"
+	.string "Las batallas son de concentración.$"
 
 Route9_Text_HikerSidneySeen:
 	.string "Te contaré un secreto.\p"

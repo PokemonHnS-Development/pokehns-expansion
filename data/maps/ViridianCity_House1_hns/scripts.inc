@@ -37,8 +37,8 @@ ViridianCity_House1_Text_PokefanM:
 	.string "divertido el intercambio.$"
 
 ViridianCity_House1_Text_Lass:
-	.string "Son SPEARY, un SPEAROW, y\n"
-	.string "RATTEY, un RATTATA.$"
+	.string "Son SPEARY--un SPEAROW--y\n
+RATTEY--un RATTATA.$"
 
 ViridianCity_House1_Text_Speary:
 	.string "SPEARY: Ch-chun!$"

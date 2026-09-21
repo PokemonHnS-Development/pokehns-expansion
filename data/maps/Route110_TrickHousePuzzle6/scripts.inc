@@ -50,17 +50,17 @@ Route110_TrickHousePuzzle6_Text_WroteSecretCodeLockOpened:
 	.string "¡La cerradura se abrió!$"
 
 Route110_TrickHousePuzzle6_Text_SophiaIntro:
-	.string "Cuando oí que había una casa\n"
-	.string "extraña, tenía que verla.$"
+	.string "Cuando supe de una casa extraña,\n
+tuve que venir a verla.$"
 
 Route110_TrickHousePuzzle6_Text_SophiaDefeat:
 	.string "I've discovered a tough TRAINER!$"
 
 Route110_TrickHousePuzzle6_Text_SophiaPostBattle:
-	.string "Me divierto mucho explorando\n"
-	.string "este lugar.\p"
-	.string "¡Es un desafío que vale la pena\n"
-	.string "repetir!$"
+	.string "La verdad me lo estoy pasando\n
+genial explorando este lugar.\p
+¡Es un reto que vale la pena\n
+repetir!$"
 
 Route110_TrickHousePuzzle6_Text_BennyIntro:
 	.string "Tal vez mi POKéMON ave podría\n"

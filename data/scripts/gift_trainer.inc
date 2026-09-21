@@ -36,13 +36,13 @@ sText_MysteryGiftVisitingTrainerInstructions:
 	.string "INALÁMBRICA.$"
 
 sText_MysteryGiftVisitingTrainerArrived:
-	.string "Gracias por usar el sistema de\n"
-	.string "REGALO MISTERIOSO.\p"
-	.string "Un ENTRENADOR ha llegado a\n"
-	.string "CIUDAD CALOR buscando verte.\p"
-	.string "Esperamos que disfrutes\n"
-	.string "luchando contra el ENTRENADOR.\p"
-	.string "Puedes invitar a más ENTRENADORES\n"
-	.string "usando otras contraseñas.\p"
-	.string "Busca otras contraseñas\n"
-	.string "que puedan funcionar.$"
+	.string "Gracias por usar el Sistema\n
+REGALO MISTERIOSO.\p
+Un ENTRENADOR ha llegado a\n
+CIUDAD ARRECIFE buscándote.\p
+Esperamos que disfrutes\n
+luchando contra el ENTRENADOR.\p
+Puedes invitar a otros\n
+ENTRENADORES con más contraseñas.\p
+Busca otras contraseñas\n
+que puedan funcionar.$"

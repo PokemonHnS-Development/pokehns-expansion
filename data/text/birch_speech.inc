@@ -29,7 +29,7 @@ gText_Birch_MainSpeech::
 	.string "$"
 
 gText_Birch_AndYouAre::
-	.string "¿Y tú quién eres?$"
+	.string "¿Y tú eres?$"
 
 gText_Birch_BoyOrGirl::
 	.string "¿Eres un chico?\n"

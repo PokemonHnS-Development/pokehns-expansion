@@ -439,13 +439,13 @@ RusturfTunnel_Text_GruntDefeat:
 	.string "a un callejón sin salida!$"
 
 RusturfTunnel_Text_GruntTakePackage:
-	.string "Esto no está nada bien...\p"
-	.string "El JEFE me dijo que este sería un\n"
-	.string "trabajo rápido y sencillo.\p"
-	.string "Solo tenía que robar un paquete\n"
-	.string "de DEVON.\p"
-	.string "¡Tch!\n"
-	.string "¡Si lo quieres tanto, tómalo!$"
+	.string "Esto no está nada bien…\p
+El JEFE me dijo que esto sería un\n
+trabajo fácil y rápido de hacer.\p
+Todo lo que tenía que hacer era robar\n
+un paquete de DEVON.\p
+¡Tch!\n
+¡Si lo quieres de vuelta, tómalo!$"
 
 RusturfTunnel_Text_PeekoGladToSeeYouSafe:
 	.string "¡PEEKO!\n"

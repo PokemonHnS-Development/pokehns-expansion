@@ -538,25 +538,25 @@ LilycoveCity_PokemonCenter_1F_Text_ThankYouForLastTime:
 	.string "Gracias por la última vez…$"
 
 LilycoveCity_PokemonCenter_1F_Text_PlayerGaveMeBadThing:
-	.string "Antes creo que fue {STR_VAR_3}…\p"
-	.string "{STR_VAR_3} me dio un {STR_VAR_2},\n"
-	.string "diciendo que era {STR_VAR_1}.\p"
-	.string "Pero no era {STR_VAR_1}.\n"
-	.string "Para nada.$"
+	.string "Antes, creo que era {STR_VAR_3}…\p
+{STR_VAR_3} me dio un {STR_VAR_2},\n
+diciendo que era {STR_VAR_1}.\p
+Pero no era {STR_VAR_1}.\n
+Ni un poquito.$"
 
 LilycoveCity_PokemonCenter_1F_Text_PlayerGaveMeGreatThing:
-	.string "Antes, {STR_VAR_3} me dio un\n"
-	.string "{STR_VAR_2} muy {STR_VAR_1}.\p"
-	.string "Ahora lo valoro mucho.$"
+	.string "Antes, {STR_VAR_3} me dio un\n
+{STR_VAR_1} {STR_VAR_2} muy bueno.\p
+Ahora lo atesoro mucho.$"
 
 LilycoveCity_PokemonCenter_1F_Text_WillYouShareThing:
-	.string "Mira, si tienes algo que\n"
-	.string "sea {STR_VAR_1}, ¿lo compartirías?\l"
-	.string "conmigo?$"
+	.string "Oye, si tienes algo que\n
+sea {STR_VAR_1}, ¿me lo compartes\l
+conmigo?$"
 
 LilycoveCity_PokemonCenter_1F_Text_WhatWillYouGiveMe:
-	.string "…¿En serio?\n"
-	.string "¿Qué me darás a cambio?$"
+	.string "¿En serio?\n
+¿Qué me darás?$"
 
 LilycoveCity_PokemonCenter_1F_Text_IsThatSoGoodbye:
 	.string "¿De verdad?\n"
@@ -567,11 +567,11 @@ LilycoveCity_PokemonCenter_1F_Text_NotWillingToShare:
 	.string "¿No quieres compartirlo?$"
 
 LilycoveCity_PokemonCenter_1F_Text_IllTryToCherishIt:
-	.string "Oh?\n"
-	.string "¿Ese {STR_VAR_2} es {STR_VAR_1}?\p"
-	.string "…Oh, ¿de verdad?\p"
-	.string "Bueno, igual te doy las gracias.\n"
-	.string "Trataré de cuidarlo mucho…$"
+	.string "¿Ah, sí?\n
+¿Ese {STR_VAR_2} es {STR_VAR_1}?\p
+…Ah, ¿en serio?\p
+Bueno, igual te debo las gracias.\n
+Intentaré atesorarlo…$"
 
 LilycoveCity_PokemonCenter_1F_Text_IWillCherishThis:
 	.string "Oh…\p"

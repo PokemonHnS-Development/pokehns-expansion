@@ -50,23 +50,23 @@ Route47_EventScript_Kae::
 	end
 
 Route47_Text_Couple1Seen::
-	.string "THOM: Uno más uno son dos. Pero\n"
-	.string "nosotros dos juntos somos mucho\l"
-	.string "más fuertes!\p"
-	.string "KAE: ¡No somos una pareja\n"
-	.string "¡Pareja aburrida!$"
+	.string "THOM: Uno más uno son dos. Pero\n
+los dos juntos somos mucho\l
+más fuertes!\p
+KAE: Los dos no somos solo una\n
+pareja aburrida!$"
 
 Route47_Text_Couple1Beaten::
-	.string "THOM: No era lo que esperaba.\l"
-	.string "KAE: ¡Tú también eres inusual!$"
+	.string "THOM: No esperaba eso.\l
+KAE: ¡Tú también eres peculiar!$"
 
 Route47_Text_Couple1After1::
-	.string "THOM: ¡Parece que tu poder es\n"
-	.string "imposible de predecir!$"
+	.string "THOM: ¡Parece que tu poder\n
+es imposible de predecir!$"
 
 Route47_Text_Couple1After2::
-	.string "KAE: Pensé que eras un ENTRENADOR\n"
-	.string "solitario común. ¡Qué error!$"
+	.string "KAE: Pensé que eras un simple\n
+entrenador solitario. ¡Me equivoqué!$"
 
 Route47_EventScript_Duff::
 	trainerbattle_double TRAINER_DUFF_AND_EDA_HNS, Route47_Text_Couple2Seen, Route47_Text_Couple2Beaten, Route104_Text_GinaNotEnoughMons
@@ -80,23 +80,23 @@ Route47_EventScript_Eda::
 	end
 
 Route47_Text_Couple2Seen::
-	.string "DUFF: Cuidando a mi novia\n"
-	.string "¡me hace volar el corazón!\p"
-	.string "EDA: Lo que siento por mi\n"
-	.string "novio es tan amplio y profundo\l"
-	.string "como el océano!$"
+	.string "DUFF: Cuidar a mi novia\n
+¡hace que mi corazón se eleve!\p
+EDA: Los sentimientos de mi\n
+corazón por mi novio son\l
+¡anchos y profundos como el mar!$"
 
 Route47_Text_Couple2Beaten::
-	.string "DUFF: No fui rival para ti...\l"
-	.string "EDA: Eres increíble...$"
+	.string "DUFF: No estuve a tu altura...\l
+EDA: Eres realmente increíble...$"
 
 Route47_Text_Couple2After1::
-	.string "DUFF: ¡Gracias por esta\n"
-	.string "batalla inspiradora! ¡Adiós!$"
+	.string "DUFF: ¡Gracias por esta\n
+batalla impresionante! ¡Adiós!$"
 
 Route47_Text_Couple2After2::
-	.string "EDA: ¡Tú también deberías buscar\n"
-	.string "una pareja maravillosa!$"
+	.string "EDA: ¡Tú también deberías\n
+buscar una pareja increíble!$"
 
 Route47_EventScript_Sage::
 	lock

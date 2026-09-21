@@ -110,7 +110,7 @@ SlowpokeWell_B1F_Text_GruntM29Seen:
 	.string "peleando contra ti!$"
 
 SlowpokeWell_B1F_Text_GruntM29Beaten:
-	.string "¡Arrgh! ¡Este NO es mi día!$"
+	.string "¡Arrgh! ¡Hoy no es mi día!$"
 
 SlowpokeWell_B1F_Text_GruntM29After:
 	.string "Claro, hemos estado hackeando\n"
@@ -178,4 +178,4 @@ SlowpokeWell_B1F_Text_SlowpokeMail:
 	.string "Con amor, Papá$"
 
 SlowpokeWell_B1F_Text_TaillessSlowpoke:
-	.string "Un SLOWPOKE con la COLA cortada…$"
+	.string "Un SLOWPOKE con su COLA cortada…$"

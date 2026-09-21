@@ -111,9 +111,9 @@ Route109_SeashoreHouse_Text_SeashoreHouseIntro:
 	.string "de aquí, premiaré tu esfuerzo.$"
 
 Route109_SeashoreHouse_Text_ShowMeSomeHotMatches:
-	.string "¡Muéstrame combates intensos!\p"
-	.string "¡Manejo esta CASA COSTERA solo por\n"
-	.string "esa única razón!$"
+	.string "¡Muéstrame combates candentes!\p
+Dirijo esta CASA DE LA PLAYA solo por\n
+esa razón. ¡Nada más!$"
 
 Route109_SeashoreHouse_Text_TakeTheseSodaPopBottles:
 	.string "¡Estás que ardes!\n"
@@ -137,7 +137,7 @@ Route109_SeashoreHouse_Text_HereYouGo:
 	.string "Here you go!$"
 
 Route109_SeashoreHouse_Text_NotEnoughMoney:
-	.string "No tienes el dinero.$"
+	.string "No tienes dinero.$"
 
 Route109_SeashoreHouse_Text_ThatsTooBad:
 	.string "No?\n"

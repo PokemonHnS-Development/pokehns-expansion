@@ -366,7 +366,7 @@ BattleFrontier_ExchangeServiceCorner_Text_WelcomePleaseChoosePrize:
 
 @ Unused
 BattleFrontier_ExchangeServiceCorner_Text_PleaseChoosePrize:
-	.string "Elige un premio de la lista.$"
+	.string "Elige un premio de esta lista.$"
 
 BattleFrontier_ExchangeServiceCorner_Text_ConfirmPurchase:
 	.string "Has elegido {STR_VAR_1}.\n"
@@ -380,7 +380,8 @@ BattleFrontier_ExchangeServiceCorner_Text_HereIsYourPrize:
 	.string "¡Aquí tienes tu premio!$"
 
 BattleFrontier_ExchangeServiceCorner_Text_DontHaveEnoughPoints:
-	.string "Lo siento mucho...\nNo tienes suficientes Puntos de\nCombate…$"
+	.string "Lo siento mucho...\n
+Te faltan Puntos de Combate…$"
 
 BattleFrontier_ExchangeServiceCorner_Text_PCIsFull:
 	.string "Lo siento mucho...\n"

@@ -6,7 +6,7 @@ CeladonCity_GameCorner_Text_TryPokemonPrinter::
 	.string "¿Te gustaría probarla?$"
 
 CeladonCity_GameCorner_Text_DontHaveEnoughMoney::
-	.string "No tienes suficiente dinero.$"
+	.string "No tienes dinero suficiente.$"
 
 CeladonCity_GameCorner_Text_ChoosePrintType::
 	.string "Elige el tipo de impresión, por favor.$"
@@ -74,8 +74,8 @@ FourIsland_House2_Text_WowHoFHighest::
 	.string "Ya basta, tengo que darte esto.$"
 
 FourIsland_House2_Text_HoFStickerApplied::
-	.string "La CALCOMANÍA DEL SALÓN DE LA FAMA\n"
-	.string "en la TARJETA de ENTRENADOR.$"
+	.string "La PEGATINA del SALÓN DE LA FAMA\n
+se puso en la TARJETA DE ENTRENADOR.$"
 
 FourIsland_House2_Text_ComeBackWithBetterStoryHoF::
 	.string "Hmm…\p"
@@ -145,16 +145,16 @@ FourIsland_House2_Text_WowLinkWinsHigh::
 	.string "Te daré una de estas.$"
 
 FourIsland_House2_Text_WowLinkWinsHighest::
-	.string "¡Gu... Guau, increíble!\n"
-	.string "¡Has ganado muchísimas veces!\p"
-	.string "Me deja atónito pensar\n"
-	.string "en lo fuerte que eres.\p"
-	.string "¡Eres una auténtica pesadilla!\n"
-	.string "Ya basta, tengo que darte esto.$"
+	.string "¿Q… Qué barbaridad!\n
+¡Has ganado muchísimas veces!\p
+Me deja alucinado pensar\n
+en lo fuerte que eres.\p
+¡Eres la pesadilla hecha realidad!\n
+Ya basta, tengo que darte esto.$"
 
 FourIsland_House2_Text_VictoryStickerApplied::
-	.string "Se aplicó la CALCOMANÍA DE VICTORIA\n"
-	.string "en la TARJETA DE ENTRENADOR.$"
+	.string "La PEGATINA DE VICTORIA se puso\n
+en la TARJETA DE ENTRENADOR.$"
 
 FourIsland_House2_Text_ComeBackWithBetterStoryLinkWins::
 	.string "Hmm…\p"

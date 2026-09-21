@@ -444,12 +444,12 @@ Alola_Poni_TrainerBattleSwimmer2_Text_1:
 	.string "Ugh, está bien,\nsolo déjame nadar…$"
 
 Alola_Poni_TrainerBattleSwimmer2_Text_2:
-	.string "La corriente es genial para flotar.\n"
-	.string "¡No creo que viaje a otro lado!$"
+	.string "La corriente es ideal para flotar.\n
+¡No pienso flotar en otro lugar!$"
 
 Alola_Poni_NPC_girl_Text_0:
-	.string "ISLA PONI es mi favorita.\n"
-	.string "¡La naturaleza habla por sí sola!$"
+	.string "ISLA PONI es mi favorita.\n
+¡La naturaleza habla por sí sola!$"
 
 Alola_Poni_Bench_Heal_Text_0:
 	.string "¿Te gustaría descansar un poco en\n"

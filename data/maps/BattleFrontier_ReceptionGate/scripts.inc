@@ -419,7 +419,7 @@ BattleFrontier_ReceptionGate_Text_YourGuideToRules:
 	.string "FRONTIER.$"
 
 BattleFrontier_ReceptionGate_Text_LearnAboutWhat:
-	.string "¿Sobre qué te gustaría saber?$"
+	.string "¿Qué te gustaría aprender?$"
 
 BattleFrontier_ReceptionGate_Text_LevelModeInfo:
 	.string "Los retos de la BATTLE FRONTIER\n"
@@ -467,7 +467,7 @@ BattleFrontier_ReceptionGate_Text_HoldItemsInfo:
 	.string "objetos diferentes.$"
 
 BattleFrontier_ReceptionGate_Text_YourGuideToFrontierPass:
-	.string "Soy tu guía del PASE FRONTERA.$"
+	.string "Soy tu guía en el PASE FRONTERA.$"
 
 BattleFrontier_ReceptionGate_Text_LearnAboutWhich1:
 	.string "¿Sobre qué te gustaría saber?$"

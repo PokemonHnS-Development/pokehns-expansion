@@ -47,20 +47,20 @@ gText_ApprenticeChallenge11::
 	.string "¡Hagamos que esto ruede!$"
 
 gText_ApprenticeChallenge12::
-	.string "¡Yippee-yahoo! Soy lo que llaman\n"
-	.string "¡el aprendiz nro. {STR_VAR_2} de {STR_VAR_1}!$"
+	.string "¡Yupi-yuju! Soy lo que se dice\n
+el aprendiz nro. {STR_VAR_2} de {STR_VAR_1}!$"
 
 gText_ApprenticeChallenge13::
 	.string "Cough! I'm {STR_VAR_1}'s no. {STR_VAR_2} apprentice.\n"
 	.string "¡Gusto en conocerte! ¡Cof!$"
 
 gText_ApprenticeChallenge14::
-	.string "Esto pone los nervios de punta...\n"
-	.string "Soy el aprendiz nro. {STR_VAR_2} de {STR_VAR_1}.$"
+	.string "¡Qué nervios…\n
+Soy el aprendiz nro. {STR_VAR_2} de {STR_VAR_1}.$"
 
 gText_ApprenticeChallenge15::
-	.string "Soy el aprendiz nro. {STR_VAR_2} de {STR_VAR_1},\n"
-	.string "y eso no es mentira.$"
+	.string "Soy el aprendiz nro. {STR_VAR_2} de {STR_VAR_1},\n
+y no te miento.$"
 
 gText_ApprenticePleaseTeach0::
 	.string "¿Tú eres... {PLAYER}?\n"
@@ -101,13 +101,13 @@ gText_ApprenticeLevelModeThanks0::
 	.string "¡Por favor, háblame otra vez!$"
 
 gText_ApprenticePleaseTeach1::
-	.string "¡Guau! Tú eres {PLAYER}, ¿verdad?\n"
-	.string "Eres increíblemente fuerte, ¿no?\p"
-	.string "¡Yo soy {STR_VAR_1}!\n"
-	.string "¡Acabo de ser ENTRENADOR!\p"
-	.string "¡Por favor, {PLAYER}!\n"
-	.string "¿Puedes ser mi maestro y contarme\l"
-	.string "mucho sobre ser ENTRENADOR?$"
+	.string "¡Guau! Tú eres {PLAYER}, ¿verdad?\n
+Eres increíblemente fuerte, ¿no?\p
+¡Yo soy {STR_VAR_1}!\n
+¡Acabo de ser ENTRENADOR!\p
+¡Por favor, {PLAYER}!\n
+¿Puedes ser mi maestro y contarme\l
+mucho sobre ser ENTRENADOR?$"
 
 gText_ApprenticeRejectTeaching1::
 	.string "Ay, ¿por qué?\n"
@@ -122,10 +122,10 @@ gText_ApprenticeWhichLevelMode1::
 	.string "¿Cuál sería perfecta para mí?$"
 
 gText_ApprenticeLevelModeThanks1::
-	.string "{STR_VAR_1}, ¿eh? ¡Es cierto!\n"
-	.string "¡Daré lo mejor de mí allí!\p"
-	.string "Si nos vemos aquí otra vez, por favor\n"
-	.string "¡enséñame algo más, maestro!$"
+	.string "{STR_VAR_1}, ¿en serio? ¡Es cierto!\n
+¡Ahí daré lo mejor de mí!\p
+Si nos vemos otra vez aquí, enséñame\n
+otra cosa, maestro!$"
 
 gText_ApprenticePleaseTeach2::
 	.string "Este… ¿Eres {PLAYER}?\n"
@@ -203,13 +203,13 @@ gText_ApprenticeWhichLevelMode3::
 	.string "como yo tendría oportunidad?$"
 
 gText_ApprenticeLevelModeThanks3::
-	.string "¿{STR_VAR_1}? ¡Está bien!\n"
-	.string "Pero ¿de verdad crees que alguien\l"
-	.string "como yo tendría oportunidad?\p"
-	.string "Daré lo mejor de mí, aunque no\n"
-	.string "creo que funcionará.\p"
-	.string "Muchas gracias por pasar tiempo\n"
-	.string "con alguien como yo.$"
+	.string "¿{STR_VAR_1}? ¡Está bien!\n
+Pero, ¿de verdad crees que alguien\l
+como yo tendría oportunidad?\p
+Daré lo mejor de mí, aunque no\n
+creo que funcione.\p
+Muchas gracias por pasar\n
+tiempo con alguien como yo.$"
 
 gText_ApprenticePleaseTeach4::
 	.string "¡Oh! Eres {PLAYER}{KUN}, ¿verdad?\p"
@@ -539,11 +539,11 @@ gText_ApprenticeWhichLevelMode12::
 	.string "¡Qué suerte, sí, yujuu!\n¿Te puedo hacer una pregunta?\pComo\nestamos cerca de la TORRE\nBATALLA, ¿qué tal una pregunta\nsobre su poder?\pDe las opciones, ¿cuál\nme conviene?$"
 
 gText_ApprenticeLevelModeThanks12::
-	.string "Si {STR_VAR_1} es lo que sugieres,\n"
-	.string "¡debe ser la mejor de todas!\p"
-	.string "Bueno, {PLAYER}, debo irme ya,\n"
-	.string "pero no te olvides de mí.\p"
-	.string "¡Nos vemos, mi inteligente amigo!$"
+	.string "Si {STR_VAR_1} es lo que sugieres,\n
+¡debe ser lo mejor de lo mejor!\p
+Bueno, {PLAYER}, debo seguir mi camino,\n
+pero no me olvides.\p
+¡Nos vemos, amigo listo!$"
 
 gText_ApprenticePleaseTeach13::
 	.string "¡Oh, hola! ¡Tú, ahí!\n"
@@ -650,13 +650,13 @@ gText_ApprenticeWhichLevelMode15::
 	.string "¿Nivel 50 o Nivel Abierto?$"
 
 gText_ApprenticeLevelModeThanks15::
-	.string "¿{STR_VAR_1}?\n"
-	.string "¿Estás seguro?\p"
-	.string "Ya veo. Si es así, está bien.\n"
-	.string "Te agradezco por tu tiempo.\p"
-	.string "Sé que puedo molestar, pero me alegra\n"
-	.string "que me hayas aceptado.\p"
-	.string "¡Reunámonos de nuevo!$"
+	.string "¿{STR_VAR_1}?\n
+¿Estás seguro?\p
+Ya veo. Si es así, está bien.\n
+Gracias por tu tiempo.\p
+Sé que puedo molestar, pero me alegra\n
+que me hayas aceptado.\p
+¡Volvamos a vernos!$"
 
 gText_ApprenticeWhatHeldItem0::
 	.string "Suspiro... Buaaa...\n"
@@ -1015,8 +1015,8 @@ gText_ApprenticeWhatHeldItem10::
 	.string "debe llevar mi {STR_VAR_1}, maestro?$"
 
 gText_ApprenticeHoldNothing10::
-	.string "¿Qué significa eso?\n"
-	.string "¿Que no lleve ningún objeto?$"
+	.string "¿Qué significa eso?\n
+¿Que no lleve ningún objeto?$"
 
 gText_ApprenticeThanksNoHeldItem10::
 	.string "Vale, no debe llevar nada.\n"
@@ -1130,15 +1130,15 @@ gText_ApprenticeWhatHeldItem13::
 	.string "bueno que lleve mi {STR_VAR_1}?$"
 
 gText_ApprenticeHoldNothing13::
-	.string "Ay...\p"
-	.string "¿Así que sugieres que mi {STR_VAR_1}\n"
-	.string "no tenga que llevar nada?$"
+	.string "Ay...\p
+¿Entonces mi {STR_VAR_1}\n
+no tiene que llevar nada?$"
 
 gText_ApprenticeThanksNoHeldItem13::
-	.string "Hm, está bien. Sería más fácil\n"
-	.string "para mí, tal como están las cosas.\p"
-	.string "Espero poder seguir pidiéndote\n"
-	.string "ayuda como esta.$"
+	.string "Mmm, está bien. Me sería más fácil\n
+para mí, tal como están las cosas.\p
+Espero poder seguir pidiéndote\n
+ayuda así.$"
 
 gText_ApprenticeThanksHeldItem13::
 	.string "Hm, está bien. Ese es un {STR_VAR_1}.\n"
@@ -1216,9 +1216,9 @@ gText_ApprenticeHoldNothing15::
 	.string "¿Estás seguro?$"
 
 gText_ApprenticeThanksNoHeldItem15::
-	.string "Ya veo. Si es así, está bien.\n"
-	.string "Te agradezco por tu tiempo.\p"
-	.string "¡Reunámonos de nuevo!$"
+	.string "Ya veo. Si es así, está bien.\n
+Gracias por tu tiempo.\p
+¡Volvamos a vernos!$"
 
 gText_ApprenticeThanksHeldItem15::
 	.string "¿Un {STR_VAR_1}?\n"
@@ -1523,13 +1523,13 @@ gText_ApprenticeWhichMonFirst15::
 	.string "debería ir primero en batalla.$"
 
 gText_ApprenticeMonFirstThanks15::
-	.string "Mi {STR_VAR_1}...\n"
-	.string "¿No me estás tomando el pelo?\p"
-	.string "Ya veo. Si es así, está bien.\n"
-	.string "Te agradezco por tu tiempo.\p"
-	.string "Soy como ves, pero lo haré\n"
-	.string "lo mejor.\p"
-	.string "¡Reunámonos de nuevo!$"
+	.string "Mi {STR_VAR_1}...\n
+¿No me estás tomando el pelo?\p
+Ya veo. Si es así, está bien.\n
+Gracias por tu tiempo.\p
+Soy como me ves, pero daré\n
+lo mejor de mí.\p
+¡Volvamos a vernos!$"
 
 gText_ApprenticeWhichMon0::
 	.string "Snif…\n"
@@ -1595,12 +1595,12 @@ gText_ApprenticeWhichMon3::
 	.string "molestia, pero decide por mí.$"
 
 gText_ApprenticeMonThanks3::
-	.string "Pero ¿un {STR_VAR_1} salvaje me\n"
-	.string "hará caso a mí?\p"
-	.string "¡Lo intentaré!\p"
-	.string "Pero ¿podré siquiera atrapar uno...?\n"
-	.string "¡No! ¡Daré lo mejor de mí!\p"
-	.string "Thank you!$"
+	.string "¿Pero un {STR_VAR_1} salvaje me\n
+hará caso?\p
+¡Lo intentaré!\p
+¿Pero podré atrapar a uno...?\n
+¡No! ¡Daré lo mejor de mí!\p
+¡Gracias!$"
 
 gText_ApprenticeWhichMon4::
 	.string "¡Oh, {PLAYER}{KUN}! ¡Qué alegría verte!\n"
@@ -1822,13 +1822,13 @@ gText_ApprenticeWhichMon15::
 	.string "más digno de mí?$"
 
 gText_ApprenticeMonThanks15::
-	.string "¿{STR_VAR_1}?\n"
-	.string "¿Estás seguro?\p"
-	.string "Ya veo. Si es así, está bien.\n"
-	.string "Te agradezco por tu tiempo.\p"
-	.string "Espero que sea algo que hasta yo\n"
-	.string "pueda manejar con aplomo.\p"
-	.string "¡Reunámonos de nuevo!$"
+	.string "¿{STR_VAR_1}?\n
+¿Estás seguro?\p
+Ya veo. Si es así, está bien.\n
+Gracias por tu tiempo.\p
+Espero que sea algo que hasta yo\n
+pueda manejar con aplomo.\p
+¡Volvamos a vernos!$"
 
 gText_ApprenticeWhichMove0::
 	.string "¡Waaah! ¡Oh, {PLAYER}!\n"

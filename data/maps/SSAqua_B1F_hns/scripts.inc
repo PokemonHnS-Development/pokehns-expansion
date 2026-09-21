@@ -181,7 +181,7 @@ SSAqua_B1F_Text_SailorKennethSeen:
 	.string "¡ser el CAMPEÓN!$"
 
 SSAqua_B1F_Text_SailorKennethBeaten:
-	.string "Mi falta de entrenamiento es obvia...$"
+	.string "Mi falta de entrenamiento es obvia…$"
 
 SSAqua_B1F_Text_SailorKennethAfter:
 	.string "¡Ocho MEDALLAS! Eso demuestra\n"

@@ -336,7 +336,7 @@ TrainerHill_Entrance_hns_Text_TimeProgessGetSetGo:
 	.string "Go!$"
 
 TrainerHill_Entrance_hns_Text_PleaseVisitUsAgain:
-	.string "¡Vuelve a visitarnos!$"
+	.string "¡Vuelve a visitarnos pronto!$"
 
 TrainerHill_Entrance_hns_Text_TooBadTremendousEffort:
 	.string "Fue una lástima.\p"

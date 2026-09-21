@@ -219,7 +219,7 @@ LilycoveCity_LilycoveMuseum_2F_EventScript_ShowToughPainting::
 	end
 
 LilycoveCity_LilycoveMuseum_2F_Text_ThisIsExhibitHall:
-	.string "Nuestra sala de exhibición especial.$"
+	.string "Nuestra sala especial de exposiciones.$"
 
 LilycoveCity_LilycoveMuseum_2F_Text_ExplainExhibitHall:
 	.string "Como puedes ver, no hay ni\n"

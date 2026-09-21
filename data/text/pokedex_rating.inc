@@ -17,8 +17,8 @@ gBirchDexRatingText_LessThan10::
 	.string "POKéMON con más cuidado.$"
 
 gBirchDexRatingText_LessThan20::
-	.string "Creo que le estás agarrando el\n"
-	.string "truco. Pero será más difícil ahora.$"
+	.string "Veo que le vas tomando el\n
+truco. Pero ahora se pone difícil.$"
 
 gBirchDexRatingText_LessThan30::
 	.string "Algunos POKéMON solo aparecen en\n"
@@ -31,8 +31,8 @@ gBirchDexRatingText_LessThan40::
 	.string "a una POKéDEX.$"
 
 gBirchDexRatingText_LessThan50::
-	.string "Esto va progresando muy bien.\n"
-	.string "Sigue esforzándote.$"
+	.string "Esto va muy bien.\n
+Sigue esforzándote.$"
 
 gBirchDexRatingText_LessThan60::
 	.string "¿Estás usando alguna CAÑA?\n"
@@ -48,8 +48,8 @@ gBirchDexRatingText_LessThan80::
 	.string "Eso es lo que siento.$"
 
 gBirchDexRatingText_LessThan90::
-	.string "Has recolectado tantos...\n"
-	.string "¡Tu talento es increíble!$"
+	.string "Ya has coleccionado muchos…\n
+¡Tu talento es notable!$"
 
 gBirchDexRatingText_LessThan100::
 	.string "¿Has ido a la ZONA SAFARI?\p"
@@ -134,10 +134,10 @@ PokedexRating_Text_LessThan10::
 	.string "veas y busca POKéMON!$"
 
 PokedexRating_Text_LessThan20::
-	.string "Parece que estás progresando\n"
-	.string "¡Vas por buen camino!\p"
-	.string "Le di a uno de mis AYUDANTES un\n"
-	.string "MO FLASH. ¡Asegúrate de ir por él!$"
+	.string "¡Parece que vas por\n
+buen camino!\p
+Le di a uno de mis AYUDANTES la MO\n
+DESTELLO. ¡Ve a buscarla!$"
 
 PokedexRating_Text_LessThan30::
 	.string "Tu POKéDEX aún necesita un poco\n"
@@ -146,10 +146,10 @@ PokedexRating_Text_LessThan30::
 	.string "POKéMON!$"
 
 PokedexRating_Text_LessThan40::
-	.string "Bien, es evidente que te estás\n"
-	.string "esforzando mucho.\p"
-	.string "Le di a uno de mis AYUDANTES un\n"
-	.string "ITEMFINDER. ¡Asegúrate de recogerlo!$"
+	.string "¡Bien, se nota que te\n
+esfuerzas mucho!\p
+Le di a uno de mis AYUDANTES un\n
+BUSCAOBJETOS. ¡Ve a recogerlo!$"
 
 PokedexRating_Text_LessThan50::
 	.string "Tu POKéDEX está progresando muy\n"
@@ -158,10 +158,10 @@ PokedexRating_Text_LessThan50::
 	.string "AMULET COIN. ¡Asegúrate de tenerla!$"
 
 PokedexRating_Text_LessThan60::
-	.string "¡Ah, finalmente superaste las 50\n"
-	.string "especies!\p"
-	.string "Le di un REPARTIR EXP. a uno de mis\n"
-	.string "AYUDANTES. ¡Ve a buscarlo!$"
+	.string "¡Ah, ya superaste las 50\n
+especies!\p
+Le di a uno de mis AYUDANTES el\n
+REPARTIR EXP. ¡Ve a buscarlo!$"
 
 PokedexRating_Text_LessThan70::
 	.string "¡Jo, jo! ¡Esta POKéDEX se está\n"
@@ -173,16 +173,16 @@ PokedexRating_Text_LessThan80::
 	.string "si te vas a pescar!$"
 
 PokedexRating_Text_LessThan90::
-	.string "¡Maravilloso! Déjame adivinar... Te\n"
-	.string "gusta coleccionar cosas, ¿verdad?$"
+	.string "¡Excelente! Déjame adivinar…\n
+Te gusta coleccionar, ¿no?$"
 
 PokedexRating_Text_LessThan100::
 	.string "¡Estoy impresionado!\n"
 	.string "¡Debió ser muy difícil de lograr!$"
 
 PokedexRating_Text_LessThan110::
-	.string "¡Ya alcanzaste las 100 especies!\n"
-	.string "¡No creo lo bueno que eres!$"
+	.string "¡Por fin llegaste a 100 especies!\n
+¡No puedo creer lo bueno que eres!$"
 
 PokedexRating_Text_LessThan120::
 	.string "¡Incluso tienes las formas\n"
@@ -193,8 +193,8 @@ PokedexRating_Text_LessThan130::
 	.string "amigos para conseguir más!$"
 
 PokedexRating_Text_LessThan140::
-	.string "¡Sobresaliente!\n"
-	.string "¡Te has vuelto un pro en esto!$"
+	.string "¡Excelente!\n
+¡Ya eres todo un experto!$"
 
 PokedexRating_Text_LessThan150::
 	.string "¡Ya no me queda nada que decir!\n"
@@ -268,8 +268,8 @@ gJohtoDexRatingText_LessThan20::
 	.string "usar las Poké BALL.$"
 
 gJohtoDexRatingText_LessThan35::
-	.string "Te estás volviendo bueno en esto,\n"
-	.string "pero aún te falta mucho camino.$"
+	.string "Vas mejorando,\n
+pero te falta mucho camino.$"
 
 gJohtoDexRatingText_LessThan50::
 	.string "Hmm, ¡estás capturando POKéMON a\n"
@@ -361,8 +361,8 @@ gJohtoDexRatingText_Complete::
 	.string "¡Has hecho un trabajo increíble!$"
 
 gNationalDexRatingText_LessThan100::
-	.string "La meta puede estar lejos, pero no\n"
-	.string "te rindas aún. ¡Sigue adelante!$"
+	.string "La meta quizá esté lejos,\n
+¡pero no te rindas! ¡Sigue!$"
 
 gNationalDexRatingText_LessThan150::
 	.string "No olvides que algunos POKéMON solo\n"
@@ -401,16 +401,16 @@ gNationalDexRatingText_LessThan435::
 	.string "¡La verdad es que me sorprende!$"
 
 gNationalDexRatingText_LessThan465::
-	.string "¡Este es un momento crítico!\n"
-	.string "¡No puedes desanimarte ahora!$"
+	.string "¡Es un momento crítico!\n
+¡No puedes desanimarte!$"
 
 gNationalDexRatingText_LessThan475::
 	.string "¡Solo un poco más!\n"
 	.string "¡Tengo grandes expectativas!$"
 
 gNationalDexRatingText_LessThanMaxDex::
-	.string "En todos mis años, jamás había\n"
-	.string "¡visto un Entrenador tan increíble!$"
+	.string "Nunca en todos mis años\n
+vi a un Entrenador tan increíble!$"
 
 gNationalDexRatingText_Complete::
 	.string "¡Excelente! Eso es asombroso\n"

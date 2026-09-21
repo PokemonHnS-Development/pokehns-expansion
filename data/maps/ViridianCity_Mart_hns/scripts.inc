@@ -10,9 +10,9 @@ ViridianCity_Mart_EventScript_Cooltrainer::
 	end
 
 ViridianMart_Text_Lass:
-	.string "El LÍDER de este GIMNASIO es genial.$"
+	.string "El LÍDER DE GIMNASIO aquí es genial.$"
 
 ViridianMart_Text_CooltrainerM:
-	.string "¿Has estado en CANNON?\p"
-	.string "Es una isla muy al sur de aquí.$"
+	.string "¿Has estado en ISLA CANELA?\p
+Es una isla muy al sur de aquí.$"
 

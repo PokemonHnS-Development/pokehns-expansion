@@ -903,11 +903,11 @@ Route110_TrickHousePuzzle5_Text_WroteSecretCodeLockOpened:
 	.string "¡La cerradura se abrió!$"
 
 Route110_TrickHousePuzzle5_Text_Mechadoll1Intro:
-	.string "CLIC-CLAC...\n"
-	.string "¡SOY MECHADOLL 1!\p"
-	.string "SI RESPONDES BIEN LOS ACERTIJOS,\n"
-	.string "IRÁS CON MECHADOLL 5.\l"
-	.string "¡Y PODRÁS OBTENER EL CÓDIGO SECRETO!$"
+	.string "CLIC-CLAC…\n
+¡SOY MECHADOLL 1!\p
+SI RESPONDES BIEN LOS CONCURSOS,\n
+PASARÁS A MECHADOLL 5.\l
+ASÍ OBTENDRÁS EL CÓDIGO SECRETO.$"
 
 Route110_TrickHousePuzzle5_Text_Mechadoll1Quiz1:
 	.string "ACERTIJO DE MECHADOLL 1.\p"
@@ -961,9 +961,9 @@ Route110_TrickHousePuzzle5_Text_Mechadoll2Quiz3:
 	.string "TEAM AQUA en el BOSQUE PETALBURG?$"
 
 Route110_TrickHousePuzzle5_Text_Mechadoll3Intro:
-	.string "CLIC-CLAC...\n"
-	.string "¡SOY MECHADOLL 3!\p"
-	.string "EL DINERO ES MI ÚNICO INTERÉS.$"
+	.string "CLIC-CLAC…\n
+¡SOY MECHADOLL 3!\p
+MI ÚNICO INTERÉS ES EL DINERO.$"
 
 Route110_TrickHousePuzzle5_Text_Mechadoll3Quiz1:
 	.string "TRIVIA DE MECHADOLL 3.\p"
@@ -971,9 +971,9 @@ Route110_TrickHousePuzzle5_Text_Mechadoll3Quiz1:
 	.string "Three HARBOR MAILS or one BURN HEAL?$"
 
 Route110_TrickHousePuzzle5_Text_Mechadoll3Quiz2:
-	.string "TRIVIA DE MECHADOLL 3.\p"
-	.string "Vende una GREAT BALL y compra\n"
-	.string "una POCIÓN. ¿Cuánto dinero queda?$"
+	.string "CONCURSO DE MECHADOLL 3.\p
+Vende una SUPER BALL y compra\n
+una POCIÓN. ¿Cuánto dinero queda?$"
 
 Route110_TrickHousePuzzle5_Text_Mechadoll3Quiz3:
 	.string "TRIVIA DE MECHADOLL 3.\p"

@@ -153,44 +153,44 @@ BugContest_Text_WhiteOut:
 	.string "{PLAYER} se retiró del concurso.$"
 
 BugContest_Text_First1:
-	.string "El tercer lugar es para el\n"
-	.string "ENTRENADOR GENIAL BELINDA,\l"
-	.string "¡con un inquieto BUTTERFREE!$"
+	.string "El tercer puesto es para la\n
+ENTRENADORA BELINDA, que atrapó\l
+un BUTTERFREE que se revolvía!$"
 BugContest_Text_First2:
-	.string "En segundo lugar está el\n"
-	.string "CAZABICHOS SHAUN, ¡quien atrapó\l"
-	.string "un PINSIR!$"
+	.string "El segundo puesto es para el\n
+CAZABICHOS SHAUN, que atrapó\l
+¡un PINSIR que se retorcía!$"
 BugContest_Text_First3:
-	.string "El ganador del Concurso de Bichos\n"
-	.string "is...\p"
-	.string "{PLAYER}, quien atrapó un enorme\n"
-	.string "{STR_VAR_1}!$"
+	.string "El ganador del Concurso\n
+de Captura de Bichos es...\p
+{PLAYER}, que atrapó un\n
+{STR_VAR_1} enorme!$"
 
 BugContest_Text_Second1:
-	.string "El tercer lugar es para el\n"
-	.string "ENTRENADOR GENIAL BELINDA,\l"
-	.string "¡con un inquieto BUTTERFREE!$"
+	.string "El tercer puesto es para la\n
+ENTRENADORA BELINDA, que atrapó\l
+un BUTTERFREE que se revolvía!$"
 BugContest_Text_Second2:
 	.string "En segundo lugar está {PLAYER},\n"
 	.string "¡quien atrapó un {STR_VAR_1}!$"
 BugContest_Text_Second3:
-	.string "El ganador del Concurso de Bichos\n"
-	.string "is...\p"
-	.string "CAZABICHOS SHAUN, quien atrapó un\n"
-	.string "¡un enorme PINSIR!$"
+	.string "El ganador del Concurso\n
+de Captura de Bichos es...\p
+CAZABICHOS SHAUN, que atrapó\n
+¡un PINSIR enorme!$"
 
 BugContest_Text_Third1:
 	.string "En tercer lugar está {PLAYER},\n"
 	.string "¡quien atrapó un {STR_VAR_1}!$"
 BugContest_Text_Third2:
-	.string "En segundo lugar está la\n"
-	.string "ENTRENADORA BELINDA, quien atrapó\l"
-	.string "¡con un inquieto BUTTERFREE!$"
+	.string "El segundo puesto es para la\n
+ENTRENADORA BELINDA, que atrapó\l
+un BUTTERFREE que se retorcía!$"
 BugContest_Text_Third3:
-	.string "El ganador del Concurso de Bichos\n"
-	.string "is...\p"
-	.string "CAZABICHOS SHAUN, quien atrapó un\n"
-	.string "¡un enorme PINSIR!$"
+	.string "El ganador del Concurso\n
+de Captura de Bichos es...\p
+CAZABICHOS SHAUN, que atrapó\n
+¡un PINSIR enorme!$"
 
 BugContest_Text_TakePartInFuture:
 	.string "¡Gracias por participar!\n"

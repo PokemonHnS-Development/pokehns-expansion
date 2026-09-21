@@ -244,28 +244,28 @@ Copycat_Text_GivePass:
 	.string "MAGNÉTICO, como prometí!$"
 
 Copycat_Text_ExplainPass:
-	.string "COPYCAT: Ese es el PASE para el\n"
-	.string "TREN MAGNÉTICO.\p"
-	.string "El hombre del tren me dio eso\n"
-	.string "cuando demolieron nuestra vieja\l"
-	.string "casa para hacer la ESTACIÓN.$"
+	.string "COPYCAT: Ese es el PASE para el\n
+MAGNET TRAIN.\p
+El de la compañía me lo dio\n
+cuando tiraron nuestra vieja\l
+casa para la ESTACIÓN.$"
 
 Copycat_Text_Male_3:
-	.string "{PLAYER}: ¡Hola! Muchas gracias por\n"
-	.string "el PASE de tren!\p"
-	.string "{PLAYER}: ¿Perdón?\p"
-	.string "{PLAYER}: ¿Tanto te divierte imitar?\n"
-	.string "¿Cada movimiento mío?$"
+	.string "{PLAYER}: ¡Hola! Gracias por el\n
+PASE de tren!\p
+{PLAYER}: ¿Perdón?\p
+{PLAYER}: ¿Es tan divertido imitar\n
+cada movimiento mío?$"
 
 Copycat_Text_ItsAScream:
-	.string "COPYCAT: ¡Claro! ¡Es muy divertido!$"
+	.string "COPYCAT: ¡Claro que sí! ¡Es genial!$"
 
 Copycat_Text_Dodrio1:
 	.string "DODRIO: Gii giii!$"
 
 Copycat_Text_Dodrio2:
-	.string "ESPEJO, ESPEJITO DE MI PARED,\n"
-	.string "¿QUIÉN ES LA MÁS BELLA DE TODAS?$"
+	.string "ESPEJITO, ESPEJITO,\n
+¿QUIÉN ES LA MÁS BELLA DE TODAS?$"
 
 Copycat_Text_2FDoll:
 	.string "¡Es un POKéMON raro! ¿Eh?\p"

@@ -109,9 +109,9 @@ VioletGym_Text_Falkner_Rematch:
 	.string "poder del cielo otra vez?$"
 
 VioletGym_Text_Falkner_RematchLoss:
-	.string "Vaya... Me venciste de nuevo.\p"
-	.string "¡Entrenaré más duro para ser\n"
-	.string "el mejor maestro de aves!$"
+	.string "Vaya… Me ganaste otra vez.\p
+Voy a entrenar más duro para\n
+¡ser el mejor maestro de aves!$"
 
 VioletGym_Text_BirdKeeperRod_Seen:
 	.string "¡La palabra clave es valor!\p"
@@ -123,20 +123,20 @@ VioletGym_Text_BirdKeeperRod_Beaten:
 	.string "Gaaah!$"
 
 VioletGym_Text_BirdKeeperRod_After:
-	.string "¡La habilidad de FALKNER es real!\p"
-	.string "¡No te confíes solo porque\n"
-	.string "me hayas vencido!$"
+	.string "¡Lo de FALKNER es en serio!\p
+No te confíes solo porque\n
+¡me ganaste!$"
 
 VioletGym_Text_BirdKeeperAbe_Seen:
-	.string "¡Veré si eres lo bastante bueno\n"
-	.string "para enfrentar a FALKNER!$"
+	.string "Veamos si eres lo bastante\n
+bueno para retar a FALKNER!$"
 
 VioletGym_Text_BirdKeeperAbe_Beaten:
-	.string "¡Esto no puede ser!$"
+	.string "¡No puede ser!$"
 
 VioletGym_Text_BirdKeeperAbe_After:
-	.string "Es patético perder contra un\n"
-	.string "ENTRENADOR novato…$"
+	.string "Qué patético, perder contra\n
+un entrenador novato…$"
 
 VioletGym_Text_GymGuide_Intro:
 	.string "¡Hola! ¿Qué pasa? No soy\n"
@@ -157,9 +157,9 @@ VioletGym_Text_GymGuide_Intro:
 	.string "muchísimo!$"
 
 VioletGym_Text_GymGuide_Win:
-	.string "¡Buena batalla! Sigue así\n"
-	.string "y serás el CAMPEÓN en muy\l"
-	.string "poco tiempo!$"
+	.string "¡Buena batalla! Sigue así,\n
+y serás el CAMPEÓN en un\l
+¡abrir y cerrar de ojos!$"
 
 VioletCity_Gym_EventScript_Statue::
 	lock

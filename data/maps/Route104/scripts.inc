@@ -1134,17 +1134,17 @@ Route104_Text_BrendanHowsYourPokedex:
 	.string "¿Ya llenaste algunas páginas?$"
 
 Route104_Text_BrendanDoingGreatLetsBattle:
-	.string "¡Yo voy muy bien!\p"
-	.string "¿Quieres ver qué tan bueno soy en\n"
-	.string "una batalla?$"
+	.string "¡Yo estoy genial!\p
+¿Quieres ver qué tan bueno soy\n
+en una batalla?$"
 
 Route104_Text_BrendanNoConfidence:
 	.string "BRENDAN: ¿Qué pasa? ¿No tienes\n"
 	.string "confianza en tus POKéMON?$"
 
 Route104_Text_BrendanLetsBattle:
-	.string "BRENDAN: ¿Qué tal?\n"
-	.string "¿Quieres luchar conmigo?$"
+	.string "BRENDAN: ¿Qué pasa?\n
+¿Quieres combatir conmigo?$"
 
 Route104_Text_BrendanIntro:
 	.string "BRENDAN: Sé que acabas de ser\n"

@@ -100,13 +100,13 @@ RuinsOfAlph_Outside_Text_Scientist:
 	.string "POKéDEX. Sígueme.$"
 
 RuinsOfAlph_Outside_Text_SuperNerdStan_Seen:
-	.string "¿Qué quieres? Estoy estudiando--\n"
-	.string "¡no me molestes!$"
+	.string "¿Qué quieres? Estoy estudiando--\n
+¡no me molestes!$"
 
 RuinsOfAlph_Outside_Text_SuperNerdStan_Beaten:
-	.string "Lo siento...\n"
-	.string "Me frustra que no tengamos un\p"
-	.string "entendimiento real…$"
+	.string "Lo siento...\n
+Me frustra nuestra falta de\p
+verdadero entendimiento…$"
 
 RuinsOfAlph_Outside_Text_SuperNerdStan_After:
 	.string "Las RUINAS son de hace unos 1500\n"
@@ -133,23 +133,23 @@ RuinsOfAlph_Outside_Text_MainSign:
 	.string "VISITAS BIENVENIDAS$"
 
 RuinsOfAlph_Outside_Text_ResearchSign:
-	.string "CENTRO INVESTIGACIÓN RUINAS ALFA\p"
-	.string "LA AUTORIDAD SOBRE LAS\n"
-	.string "RUINAS ALFA$"
+	.string "CENTRO DE INVESTIGACIÓN DE RUINAS ALFA\p
+LA AUTORIDAD SOBRE LAS\n
+RUINAS ALFA$"
 
 RuinsOfAlph_Outside_Text_Fisher1:
-	.string "Al explorar las RUINAS, de\n"
-	.string "de pronto notó una presencia rara.\p"
-	.string "Todos nos asustamos y huimos.\n"
-	.string "Tú también deberías cuidarte.$"
+	.string "Explorando las RUINAS,\n
+notamos algo extraño.\p
+Nos asustamos y huimos.\n
+Ten cuidado tú también.$"
 
 RuinsOfAlph_Outside_Text_Fisher2:
 	.string "¡Las RUINAS ocultan un gran secreto!\p"
 	.string "...Creo...$"
 
 RuinsOfAlph_Outside_Text_Youngster1:
-	.string "Hay muchos tipos de UNOWN, así\n"
-	.string "que los usamos para códigos secretos.$"
+	.string "Hay muchas clases de UNOWN, así\n
+que los usamos como códigos secretos.$"
 
 RuinsOfAlph_Outside_Text_Youngster2:
 	.string "A… H… E… A… D… Hmm…\p"

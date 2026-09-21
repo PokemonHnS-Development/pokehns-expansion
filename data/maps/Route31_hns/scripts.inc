@@ -155,23 +155,23 @@ Route31_Text_HandOverMailMon:
 	.string "POKéMON que traía el CORREO.$"
 
 Route31_Text_ReadingMail:
-	.string "Veamos...\p"
-	.string "Gracias por traer esto a\n"
-	.string "me.\p"
-	.string "Mi amigo es buen tipo, y\n"
-	.string "¡tú también eres genial!\p"
-	.string "¡Yo también quiero hacer algo\n"
-	.string "bueno a cambio!\p"
-	.string "¡Ya sé! Quiero que tengas\n"
-	.string "¡esto!$"
+	.string "Veamos...\p
+Gracias por traérmelo\n
+a mí.\p
+Mi amigo es buena persona, y\n
+¡tú también eres genial!\p
+¡También quiero hacer algo\n
+bueno en agradecimiento!\p
+¡Ya sé! Quiero que te\n
+quedes con esto!$"
 
 Route31_Text_DescribeRest:
-	.string "...Zzz...\p"
-	.string "...Umm... ¡Descanso!\p"
-	.string "La frase 'recupérate rápido'\n"
-	.string "se acortó a 'Descanso', ¿ves?\p"
-	.string "Es un movimiento para dormir y\n"
-	.string "recuperar PS.$"
+	.string "...Zzz...\p
+...Mmm... ¡Descanso!\p
+La frase 'recuperarse rápido' se\n
+acortó a 'Descanso', ¿ves?\p
+Es un movimiento para dormir y\n
+recuperar algo de PS.$"
 
 Route31_Text_WrongMail:
 	.string "Esta CARTA no es para mí.$"
@@ -181,8 +181,8 @@ Route31_Text_MissingMail:
 	.string "No tiene ningún CORREO.$"
 
 Route31_Text_DeclinedToHandOverMail:
-	.string "¿Qué? ¿No quieres\n"
-	.string "nada?$"
+	.string "¿Qué? ¿No quieres\n
+nada?$"
 
 Route31_Text_CantTakeLastMon:
 	.string "Si te quito ese POKéMON,\n"
@@ -219,20 +219,20 @@ Route31_Text_WadeRematchDefeat:
 	.string "Awwwww…$"
 
 Route31_Text_WadePostRematch:
-	.string "Te avisaré en cuanto\n"
-	.string "encuentre algo que\l"
-	.string "te guste.$"
+	.string "Te aviso en cuanto encuentre\n
+algo que te pueda\l
+gustar.$"
 
 Route31_Text_WadeHasItem:
-	.string "¡Hola! ¡Te he estado\n"
-	.string "buscando!\p"
-	.string "Hallé algo mientras yo\n"
-	.string "estaba en la hierba.\p"
-	.string "¡Toma, puedes quedártelo!$"
+	.string "¡Oye! ¡Te he estado\n
+buscando!\p
+Encontré algo mientras\n
+estaba en la hierba.\p
+¡Toma, es para ti!$"
 
 Route31_Text_WadeGaveItem:
-	.string "¡Te avisaré si encuentro\n"
-	.string "algo más!$"
+	.string "¡Te aviso si encuentro\n
+algo más!$"
 
 Route31_Text_WadeNoRoom:
 	.string "Hmm, parece que tu MOCHILA\n"

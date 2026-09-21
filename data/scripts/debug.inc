@@ -454,7 +454,7 @@ Debug_Follower_NPC_Event_Script::
 	end
 
 Debug_Follower_NPC_Test_Message:
-	.string "Prueba de NPC seguidor.$"
+	.string "Esta es una prueba de NPC seguidor.$"
 
 Debug_EventScript_Steven_Multi::
 	call MossdeepCity_SpaceCenter_2F_EventScript_ChoosePartyForMultiBattle
@@ -476,8 +476,8 @@ Debug_BerryPestsDisabled::
 	end
 
 DebugText_BerryPestsDisabled:
-	.string "OW_BERRY_PESTS está desactivado.\n"
-	.string "No se pueden forzar plagas en bayas.$"
+	.string "OW_BERRY_PESTS está desactivado.\n
+No se fuerzan plagas en las bayas.$"
 
 Debug_BerryWeedsDisabled::
 	msgbox DebugText_BerryWeedsDisabled, MSGBOX_DEFAULT
@@ -485,8 +485,8 @@ Debug_BerryWeedsDisabled::
 	end
 
 DebugText_BerryWeedsDisabled:
-	.string "OW_BERRY_WEEDS está desactivado.\n"
-	.string "No se pueden forzar malezas en bayas.$"
+	.string "OW_BERRY_WEEDS está desactivado.\n
+No se fuerzan malezas en las bayas.$"
 
 Debug_EventScript_InflictStatus1::
 	lockall

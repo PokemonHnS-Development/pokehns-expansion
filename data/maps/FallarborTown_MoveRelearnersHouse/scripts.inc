@@ -78,7 +78,7 @@ FallarborTown_MoveRelearnersHouse_Text_TutorWhichMon:
 	.string "Which POKéMON needs tutoring?$"
 
 FallarborTown_MoveRelearnersHouse_Text_TeachWhichMove:
-	.string "¿Qué movimiento debería enseñar?$"
+	.string "¿Qué movimiento debo enseñar?$"
 
 FallarborTown_MoveRelearnersHouse_Text_DontHaveMoveToTeachPokemon:
 	.string "Lo siento...\p"

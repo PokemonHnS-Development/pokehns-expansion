@@ -1410,7 +1410,7 @@ LilycoveCity_ContestLobby_Text_EnterContest1:
 	.string "en nuestros CONCURSOS?$"
 
 LilycoveCity_ContestLobby_Text_WhichTopic1:
-	.string "¿Qué tema prefieres?$"
+	.string "¿Qué tema quieres?$"
 
 LilycoveCity_ContestLobby_Text_ExplainContests:
 	.string "Un CONCURSO POKéMON consiste en cuatro\n"
@@ -1457,10 +1457,10 @@ LilycoveCity_ContestLobby_Text_ExplainContestRanks:
 	.string "tan seguido como su ENTRENADOR quiera.$"
 
 LilycoveCity_ContestLobby_Text_EnterWhichRank:
-	.string "¿En qué rango quieres entrar?$"
+	.string "¿En qué Rango quieres entrar?$"
 
 LilycoveCity_ContestLobby_Text_EnterWhichContest1:
-	.string "¿En qué CONCURSO quieres participar?$"
+	.string "¿En qué CONCURSO quieres entrar?$"
 
 LilycoveCity_ContestLobby_Text_EnterWhichPokemon1:
 	.string "Which POKéMON would you like to enter?$"
@@ -1565,7 +1565,7 @@ ContestHall_Text_JudgeLooksReady:
 	.string "¡el anuncio!$"
 
 ContestHall_Text_WeWillNowDeclareWinner:
-	.string "JUEZ: ¡Ahora anunciaremos al ganador!$"
+	.string "JUEZ: ¡Ahora anunciamos al ganador!$"
 
 ContestHall_Text_CongratsTrainerXandMon:
 	.string "MC: ¡Entrada No. {STR_VAR_2}!\p"
@@ -1614,7 +1614,7 @@ LilycoveCity_ContestLobby_Text_ParticipateAnotherTime:
 
 @ Unused
 LilycoveCity_ContestLobby_Text_EnterContest2:
-	.string "¿Quieres entrar en un CONCURSO?$"
+	.string "¿Quieres entrar a un CONCURSO?$"
 
 @ Unused
 LilycoveCity_ContestLobby_Text_Explain4PlayerContest:
@@ -1630,7 +1630,7 @@ LilycoveCity_ContestLobby_Text_Explain4PlayerContest:
 
 @ Unused
 LilycoveCity_ContestLobby_Text_EnterWhichContest2:
-	.string "¿En qué CONCURSO quieres participar?$"
+	.string "¿En qué CONCURSO quieres entrar?$"
 
 @ Unused
 LilycoveCity_ContestLobby_Text_EnterWhichPokemon2:
@@ -1679,10 +1679,10 @@ LilycoveCity_ContestLobby_Text_LinkContestReception:
 	.string "uno o más amigos.$"
 
 LilycoveCity_ContestLobby_Text_WhichTopic2:
-	.string "¿Qué tema prefieres?$"
+	.string "¿Qué tema quieres?$"
 
 LilycoveCity_ContestLobby_Text_EnterContest3:
-	.string "¿Quieres entrar en un CONCURSO?$"
+	.string "¿Quieres participar en un CONCURSO?$"
 
 LilycoveCity_ContestLobby_Text_EnterWhichContest3:
 	.string "¿En qué CONCURSO quieres participar?$"
@@ -1699,10 +1699,10 @@ LilycoveCity_ContestLobby_Text_EnterWhichPokemon3:
 	.string "Which POKéMON would you like to enter?$"
 
 LilycoveCity_ContestLobby_Text_PleaseDecideLinkLeader:
-	.string "Por favor, decidan quién de\n"
-	.string "ustedes será el LÍDER DE GRUPO.\p"
-	.string "Los otros jugadores deben elegir\n"
-	.string "“UNIRSE AL GRUPO”.$"
+	.string "Decidan quién de ustedes será\n
+el LÍDER DEL GRUPO.\p
+Los demás jugadores deben elegir\n
+“UNIRSE AL GRUPO.”$"
 
 LilycoveCity_ContestLobby_Text_PlayerAt4PCounterUseGMode:
 	.string "Al menos un jugador entró usando\n"

@@ -944,7 +944,7 @@ MauvilleCity_GameCorner_EventScript_NoCoinCase::
 	end
 
 MauvilleCity_GameCorner_Text_ThisIsMauvilleGameCorner:
-	.string "Este es el CASINO.$"
+	.string "Este es el SALÓN DE JUEGOS.$"
 
 MauvilleCity_GameCorner_Text_NeedCoinCaseForCoins:
 	.string "Bien, ¿quieres algunas MONEDAS\n"
@@ -1007,7 +1007,7 @@ MauvilleCity_GameCorner_Text_SendToYourHomePC:
 	.string "Lo enviaremos a tu PC de casa.$"
 
 MauvilleCity_GameCorner_Text_NotEnoughCoins:
-	.string "No tienes suficientes FICHAS.$"
+	.string "No tienes suficientes MONEDAS.$"
 
 @ Unused
 MauvilleCity_GameCorner_Text_NoRoomForPlacingDecor:
@@ -1020,7 +1020,7 @@ MauvilleCity_GameCorner_Text_OhIsThatSo:
 	.string "de volver aquí.$"
 
 MauvilleCity_GameCorner_Text_SoYourChoiceIsX:
-	.string "¿Entonces eliges {STR_VAR_1}?$"
+	.string "¿Así que eliges {STR_VAR_1}?$"
 
 MauvilleCity_GameCorner_Text_HereYouGo:
 	.string "Here you go!$"

@@ -72,7 +72,7 @@ SSTidalRooms_Text_ColtonIntro:
 	.string "ya ves.$"
 
 SSTidalRooms_Text_ColtonDefeat:
-	.string "¡Qué combate tan ameno!$"
+	.string "¡Fue un combate muy divertido!$"
 
 SSTidalRooms_Text_ColtonPostBattle:
 	.string "Me emociona imaginar qué tipos\n"

@@ -63,12 +63,12 @@ SlateportCity_SternsShipyard_1F_EventScript_Briney::
 	end
 
 SlateportCity_SternsShipyard_1F_Text_CantMakeHeadsOrTails:
-	.string "Umm... Si esto va aquí, y aquello\n"
-	.string "va por allá...\p"
-	.string "Entonces, ¿dónde va esta cosa?\n"
-	.string "¿Y qué pasa con ese aparatito?\p"
-	.string "¡Aaargh! ¡No entiendo nada\n"
-	.string "de esto!$"
+	.string "Mmm... Si esto va aquí, y eso\n
+va allá...\p
+¿Y dónde va esta cosa?\n
+¿Y qué hay de ese trasto?\p
+¡Aaargh! ¡No le encuentro\n
+ni pies ni cabeza!$"
 
 SlateportCity_SternsShipyard_1F_Text_MeetDockDeliverToStern:
 	.string "Hm?\n"
@@ -113,19 +113,19 @@ SlateportCity_SternsShipyard_1F_Text_FerryIsReady:
 	.string "el avance tecnológico.$"
 
 SlateportCity_SternsShipyard_1F_Text_DecidedToHelpDock:
-	.string "SR. BRINEY: ¡Ah, {PLAYER}{KUN}!\n"
-	.string "¡Ha pasado mucho tiempo!\p"
-	.string "¡Sí, desde que te vi, este viejo\n"
-	.string "lobo de mar se siente activo!\p"
-	.string "Así que decidí ayudar a DOCK a\n"
-	.string "hacer un ferry.\p"
-	.string "Sí, después de todo, un ferry\n"
-	.string "podría llevar a mucha gente.\p"
-	.string "Pero, ya sabes, ese DOCK es\n"
-	.string "realmente especial.\p"
-	.string "Con su talento para la tecnología y\n"
-	.string "por mi experiencia, estoy seguro\l"
-	.string "de que haremos un gran barco!$"
+	.string "SR. BRINEY: ¡Ah, {PLAYER}{KUN}!\n
+¡Cuánto tiempo sin verte!\p
+Ay, desde que te conocí, este viejo\n
+lobo de mar se siente muy vivo!\p
+Así que decidí ayudar a DOCK a\n
+construir un transbordador.\p
+Ay, al final, un transbordador\n
+podría llevar a mucha gente.\p
+Pero, ¿sabes? Ese DOCK es\n
+algo muy especial.\p
+Con su don para la tecnología y\n
+por mi experiencia, estoy seguro\l
+de que haremos un gran barco!$"
 
 SlateportCity_SternsShipyard_1F_Text_SeaIsLikeLivingThing:
 	.string "Las estaciones, el clima, donde\n"

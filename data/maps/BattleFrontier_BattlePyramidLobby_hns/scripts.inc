@@ -867,10 +867,10 @@ BattleFrontier_BattlePyramidLobby_Text_GiveYouTheseBattlePoints_hns:
 	.string "¡te damos estos Puntos de Combate!$"
 
 BattleFrontier_BattlePyramidLobby_Text_RulesAreListed_hns:
-	.string "Las reglas de Battle Quest se listan.$"
+	.string "Estas son las reglas de Battle Quest.$"
 
 BattleFrontier_BattlePyramidLobby_Text_ReadWhichHeading_hns:
-	.string "¿Qué título quieres leer?$"
+	.string "¿Qué apartado quieres leer?$"
 
 BattleFrontier_BattlePyramidLobby_Text_ExplainMonRules_hns:
 	.string "Cuando la PIRÁMIDE es conquistada,\n"

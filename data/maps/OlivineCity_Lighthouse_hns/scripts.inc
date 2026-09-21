@@ -153,7 +153,7 @@ OlivineLighthouse_Text_SailorTerrellSeen:
 	.string "¿Y tú qué tal?$"
 
 OlivineLighthouse_Text_SailorTerrellBeaten:
-	.string "Eres a la vez amable y fuerte…$"
+	.string "Eres amable y fuerte a la vez...$"
 
 OlivineLighthouse_Text_SailorTerrellAfter:
 	.string "Cada vez que vuelvo a CIUDAD OLIVO,\n"

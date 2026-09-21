@@ -78,5 +78,5 @@ TrainerHill_Elevator_hns_Movement_AttendantFaceDown:
 	step_end
 
 TrainerHill_Elevator_hns_Text_ReturnToReception:
-	.string "¿Quieres volver al\n"
-	.string "mostrador de recepción?$"
+	.string "¿Quieres volver al\n
+mostrador de recepción?$"

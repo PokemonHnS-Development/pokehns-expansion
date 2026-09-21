@@ -289,20 +289,20 @@ BattleFrontier_OutsideWest_Text_WhereWouldYouLikeToGo_hns:
 	.string "¿Y a dónde te gustaría ir?$"
 
 BattleFrontier_OutsideWest_Text_SlateportItIs_hns:
-	.string "¡Entonces, a CIUDAD PORTUAL!$"
+	.string "¡CIUDAD PORTUAL, entonces!$"
 
 BattleFrontier_OutsideWest_Text_LilycoveItIs_hns:
-	.string "¡Ciudad Calagua, entonces!$"
+	.string "¡CIUDAD CALAGUA, entonces!$"
 
 BattleFrontier_OutsideWest_Text_SailWithUsAnotherTime_hns:
-	.string "¡Navega con nosotros en otra ocasión!$"
+	.string "¡Navega con nosotros otra vez!$"
 
 BattleFrontier_OutsideWest_Text_PleaseBoardFerry_hns:
 	.string "Sube al ferry y espera la\n"
 	.string "salida.$"
 
 BattleFrontier_OutsideWest_Text_ThenWhereWouldYouLikeToGo_hns:
-	.string "Entonces, ¿adónde quieres ir?$"
+	.string "Entonces, ¿a dónde te gustaría ir?$"
 
 BattleFrontier_OutsideWest_Text_BestOutOfAllMyFriends_hns:
 	.string "Soy el mejor de todos mis amigos.\n"

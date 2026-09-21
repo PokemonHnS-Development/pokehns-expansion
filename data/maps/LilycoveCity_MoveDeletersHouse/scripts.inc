@@ -76,7 +76,7 @@ LilycoveCity_MoveDeletersHouse_Text_WhichMonShouldForget:
 	.string "Which POKéMON should forget a move?$"
 
 LilycoveCity_MoveDeletersHouse_Text_WhichMoveShouldBeForgotten:
-	.string "¿Qué movimiento se debe olvidar?$"
+	.string "¿Qué movimiento debo olvidar?$"
 
 LilycoveCity_MoveDeletersHouse_Text_MonOnlyKnowsOneMove:
 	.string "{STR_VAR_1} solo sabe un movimiento,\n"

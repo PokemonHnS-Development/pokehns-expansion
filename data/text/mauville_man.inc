@@ -39,25 +39,25 @@ GiddyText_IBoughtCrayonsWith120Colors::
 	.string "¿No crees que es genial?$"
 
 GiddyText_WouldntItBeNiceIfWeCouldFloat::
-	.string "¿No sería lindo si pudiéramos\n"
-	.string "flotar en una nube de burbujas?$"
+	.string "¿No sería genial irnos\n
+flotando en una nube de burbujas?$"
 
 GiddyText_WhenYouWriteOnASandyBeach::
-	.string "Cuando escribes en la arena de la\n"
-	.string "playa, se borra. Me pone triste.$"
+	.string "Si escribes en la arena,\n
+las olas lo borran. Qué triste.$"
 
 GiddyText_WhatsTheBottomOfTheSeaLike::
-	.string "¿Cómo será el fondo del mar?\n"
-	.string "¡Me encantaría ir solo una vez!$"
+	.string "¿Cómo será el fondo del mar?\n
+¡Me encantaría ir una vez!$"
 
 GiddyText_WhenYouSeeTheSettingSunDoesIt::
-	.string "Al ver el sol ponerse, ¿te dan\n"
-	.string "ganas de volver a casa?$"
+	.string "Cuando ves la puesta de sol,\n
+¿te dan ganas de volver a casa?$"
 
 GiddyText_LyingBackInTheGreenGrass::
-	.string "Recostado en el pasto verde...\n"
-	.string "¡Oh, es tan, tan agradable!$"
+	.string "Recostado en la hierba verde...\n
+¡Ah, es tan, tan agradable!$"
 
 GiddyText_SecretBasesAreSoWonderful::
-	.string "¡Las BASES SECRETAS son geniales!\n"
-	.string "¿No sientes la emoción?$"
+	.string "¡Las BASES SECRETAS son geniales!\n
+¿No sientes la emoción?$"

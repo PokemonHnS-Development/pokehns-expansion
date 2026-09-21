@@ -48,13 +48,13 @@ Route11_Text_YoungsterOwenBeaten:
 	.string "¿Eh? ¿Cómo pasó esto?$"
 
 Route11_Text_YoungsterOwenAfterBattle:
-	.string "Luché con honor y de forma\n"
-	.string "justa.\p"
-	.string "No me arrepiento de nada.$"
+	.string "Luché limpio y con\n
+honor.\p
+No me arrepiento en absoluto.$"
 
 Route11_Text_YoungsterJasonSeen:
-	.string "Me pica y me da cosquillas al\n"
-	.string "usar shorts en la hierba.$"
+	.string "Pica y da cosquillas cuando\n
+llevo shorts en el pasto.$"
 
 Route11_Text_YoungsterJasonBeaten:
 	.string "Aiyaaah! I got stomped!$"
@@ -74,8 +74,8 @@ Route11_Text_PsychicHermanAfterBattle:
 	.string "Perdí mientras cerraba los ojos…$"
 
 Route11_Text_PsychicFidelSeen:
-	.string "Puedo verlo…\p"
-	.string "Todo lo que hay en ti…$"
+	.string "Puedo verlo…\p
+Todo lo que hay que ver de ti…$"
 
 Route11_Text_PsychicFidelBeaten:
 	.string "I couldn't foresee your power…$"

@@ -51,14 +51,14 @@ VictoryRoad_B2F_Text_OwenIntro:
 	.string "por aquí. ¿Se referían a ti?$"
 
 VictoryRoad_B2F_Text_OwenDefeat:
-	.string "¡Ese pequeñín es muy duro!$"
+	.string "¡El pequeñín es duro!$"
 
 VictoryRoad_B2F_Text_OwenPostBattle:
 	.string "Según los rumores, ese chico\n"
 	.string "es de CIUDAD PETALBURG.$"
 
 VictoryRoad_B2F_Text_CarolineIntro:
-	.string "Ya debes estar algo cansado.$"
+	.string "Debes estar cansándote un poco.$"
 
 VictoryRoad_B2F_Text_CarolineDefeat:
 	.string "No signs of tiring at all!$"

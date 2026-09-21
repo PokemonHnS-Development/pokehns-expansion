@@ -483,10 +483,10 @@ DewfordTown_Text_BrineyLandedInSlateportDeliverGoods:
 	.string "STERN y dar los PRODUCTOS DEVON?$"
 
 Route109_Text_BrineySailToDewfordQuestion:
-	.string "SR. BRINEY: Creí que debías\n"
-	.string "entregar los PRODUCTOS DEVON.\p"
-	.string "¿Quieres que naveguemos de vuelta\n"
-	.string "a ROCA FARO, entonces?$"
+	.string "SR. BRINEY: Creía que ibas\n
+a entregar la MERCANCÍA DEVON.\p
+¿Quieres volver a\n
+PUEBLO AZULIZA, entonces?$"
 
 Route109_Text_BrineyDewfordItIs:
 	.string "SR. BRINEY: ¡A ISLA ROCA, pues!\p"
@@ -533,28 +533,28 @@ Route109_Text_YouCanHaveThis:
 	.string "¡Puedes quedarte con esto!$"
 
 Route109_Text_WereGoingToMakeBigCastle:
-	.string "¡Usaremos toda la arena de la\n"
-	.string "playa para hacer un gran castillo!\p"
-	.string "¡Y luego seremos un rey y una\n"
-	.string "reina.\p"
-	.string "Te dejaremos ser un sirviente.$"
+	.string "¡Vamos a traer toda la arena\n
+de la playa y hacer un castillo!\p
+Y luego seremos rey y\n
+reina.\p
+Te dejaremos ser sirviente.$"
 
 Route109_Text_ZigzagoonPicksUpLitter:
-	.string "El agua por aquí es limpia.\p"
-	.string "Pero hago que mi ZIGZAGOON recoja\n"
-	.string "la basura de la costa a veces.\p"
-	.string "El agua sucia es lluvia y llega a\n"
-	.string "nuestros ríos, de donde bebemos...\p"
-	.string "Si contaminamos el mar, todo\n"
-	.string "nos afectará tarde o temprano.$"
+	.string "El agua de estos lugares es limpia.\p
+Pero a veces mi ZIGZAGOON recoge\n
+basura de la orilla.\p
+El agua sucia se vuelve lluvia y va\n
+a los ríos de los que bebemos…\p
+Si contaminamos el mar, todo\n
+nos volverá a afectar al final.$"
 
 Route109_Text_ZigzagoonCry:
 	.string "ZIGZAGOON: Guguu?$"
 
 Route109_Text_SeashoreHouseSign:
-	.string "CASA DE LA COSTA\p"
-	.string "¡Que ardan las batallas en la arena!\n"
-	.string "¡El lugar para ENTRENADORES ardientes!$"
+	.string "CASA DE LA COSTA\p
+“¡Aquí se libran batallas ardientes\n
+en arenas ardientes, ¡ENTRENADORES!”$"
 
 Route109_Text_TrainerTipsSign:
 	.string "CONSEJOS DE ENTRENADOR\p"

@@ -92,5 +92,5 @@ Route112_CableCarStation_Text_StepThisWay:
 	.string "Please step this way.$"
 
 Route112_CableCarStation_Text_RideAnotherTime:
-	.string "Por favor, viaja con nosotros después.$"
+	.string "Por favor, acompáñanos otro día.$"
 

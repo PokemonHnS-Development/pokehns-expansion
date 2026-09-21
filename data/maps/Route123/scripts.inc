@@ -190,8 +190,8 @@ Route123_Text_RouteSign:
 	.string "{LEFT_ARROW} RUTA 118$"
 
 Route123_Text_RouteSignMtPyre:
-	.string "{UP_ARROW} MONTE CENIZA\n"
-	.string "Prohibido para los cobardes.$"
+	.string "{UP_ARROW} MONTE PYRE\n
+“Prohibido a los débiles de corazón.”$"
 
 Route123_Text_BerryMastersHouse:
 	.string "BERRY MASTER'S HOUSE$"

@@ -935,7 +935,7 @@ BattleFrontier_BattleTowerLobby_EventScript_ExitRules::
 
 @ Unused
 BattleFrontier_BattleTowerLobby_Text_DirectYouToBattleRoom:
-	.string "Ahora te llevo a tu SALA DE COMBATE.$"
+	.string "Te llevaré a tu SALA DE COMBATE ahora.$"
 
 BattleFrontier_BattleTowerLobby_Text_DidntSaveBeforeQuitting:
 	.string "¡Disculpa!\p"
@@ -1358,10 +1358,10 @@ BattleFrontier_Text_ObtainedXBattlePoints:
 	.string "{PLAYER} obtained {STR_VAR_1} Battle Point(s).$"
 
 BattleFrontier_BattleTowerLobby_Text_RulesAreListed:
-	.string "Aquí las reglas de la TORRE BATALLA.$"
+	.string "Las reglas de la TORRE BATALLA.$"
 
 BattleFrontier_BattleTowerLobby_Text_ReadWhichHeading:
-	.string "¿Qué título quieres leer?$"
+	.string "¿Qué apartado quieres leer?$"
 
 BattleFrontier_BattleTowerLobby_Text_ExplainTowerRules:
 	.string "La BATTLE TOWER es un lugar donde\n"

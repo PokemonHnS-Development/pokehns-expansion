@@ -790,7 +790,7 @@ MtChimney_Text_MelissaIntro:
 	.string "¡No aguanto más! ¡Tengo que luchar!$"
 
 MtChimney_Text_MelissaDefeat:
-	.string "¡Oh, qué combate tan candente!$"
+	.string "¡Uf, qué combate tan candente!$"
 
 MtChimney_Text_MelissaPostBattle:
 	.string "El calor del MT. CHIMNEY me\n"
@@ -845,8 +845,8 @@ MtChimney_Text_SawyerRematchIntro:
 	.string "por estos rumbos. ¡No perderé!$"
 
 MtChimney_Text_SawyerRematchDefeat:
-	.string "Cielos, sigues siendo el mismo\n"
-	.string "tan impulsiva como antes!$"
+	.string "Vaya, aún eres la misma\n
+tan impulsiva como antes!$"
 
 MtChimney_Text_SawyerPostRematch:
 	.string "La verdad es que hace calor aquí.\n"

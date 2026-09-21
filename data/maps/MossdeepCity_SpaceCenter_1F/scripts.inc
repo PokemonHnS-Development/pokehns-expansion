@@ -276,7 +276,7 @@ MossdeepCity_SpaceCenter_1F_Movement_MoveGruntFromStairs:
 	step_end
 
 MossdeepCity_SpaceCenter_1F_Text_RocketLaunchImminent:
-	.string "¡El cohete despegará pronto!$"
+	.string "¡El lanzamiento es inminente!$"
 
 MossdeepCity_SpaceCenter_1F_Text_SuccessfulLaunchNumber:
 	.string "¡El cohete despegó con éxito!\n"
