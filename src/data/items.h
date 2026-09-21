@@ -11387,7 +11387,7 @@ ganados en batalla."),
 
     [ITEM_TM_FOCUS_PUNCH] =
     {
-        .name = ITEM_NAME("TM01"),
+        .name = ITEM_NAME("MT01"),
         .price = 3000,
         .description = COMPOUND_STRING("Potente, pero hace\nretroceder al usuario\nsi el rival lo golpea."),
         .importance = I_REUSABLE_TMS,
@@ -11398,7 +11398,7 @@ ganados en batalla."),
 
     [ITEM_TM_DRAGON_CLAW] =
     {
-        .name = ITEM_NAME("TM02"),
+        .name = ITEM_NAME("MT02"),
         .price = 3000,
         .description = COMPOUND_STRING(
             "Engancha y corta\n"
@@ -11412,7 +11412,7 @@ ganados en batalla."),
 
     [ITEM_TM_WATER_PULSE] =
     {
-        .name = ITEM_NAME("TM03"),
+        .name = ITEM_NAME("MT03"),
         .price = 3000,
         .description = COMPOUND_STRING("Genera una onda\nultrasónica que puede\nconfundir al rival."),
         .importance = I_REUSABLE_TMS,
@@ -11423,7 +11423,7 @@ ganados en batalla."),
 
     [ITEM_TM_CALM_MIND] =
     {
-        .name = ITEM_NAME("TM04"),
+        .name = ITEM_NAME("MT04"),
         .price = 3000,
         .description = COMPOUND_STRING("Sube el Atq. Esp. y la\nDef. Esp. al concentrar\nla mente."),
         .importance = I_REUSABLE_TMS,
@@ -11434,7 +11434,7 @@ ganados en batalla."),
 
     [ITEM_TM_ROAR] =
     {
-        .name = ITEM_NAME("TM05"),
+        .name = ITEM_NAME("MT05"),
         .price = 1000,
         .description = COMPOUND_STRING("Un rugido salvaje que\nhace huir al rival,\nterminando la batalla."),
         .importance = I_REUSABLE_TMS,
@@ -11445,7 +11445,7 @@ ganados en batalla."),
 
     [ITEM_TM_TOXIC] =
     {
-        .name = ITEM_NAME("TM06"),
+        .name = ITEM_NAME("MT06"),
         .price = 3000,
         .description = COMPOUND_STRING(
             "Envenena al rival\n"
@@ -11459,7 +11459,7 @@ ganados en batalla."),
 
     [ITEM_TM_HAIL] =
     {
-        .name = ITEM_NAME("TM07"),
+        .name = ITEM_NAME("MT07"),
         .price = 3000,
     #if B_PREFERRED_ICE_WEATHER == B_ICE_WEATHER_SNOW
         .description = COMPOUND_STRING("Sube la Defensa\nde {PKMN} tipo Hielo\ndurante 5 turnos."),
@@ -11477,7 +11477,7 @@ ganados en batalla."),
 
     [ITEM_TM_BULK_UP] =
     {
-        .name = ITEM_NAME("TM08"),
+        .name = ITEM_NAME("MT08"),
         .price = 3000,
         .description = COMPOUND_STRING("Fortalece el cuerpo para\naumentar Ataque y\nDefensa."),
         .importance = I_REUSABLE_TMS,
@@ -11488,7 +11488,7 @@ ganados en batalla."),
 
     [ITEM_TM_BULLET_SEED] =
     {
-        .name = ITEM_NAME("TM09"),
+        .name = ITEM_NAME("MT09"),
         .price = 3000,
         .description = COMPOUND_STRING("Lanza de 2 a 5 semillas\nseguidas para atacar\nal rival."),
         .importance = I_REUSABLE_TMS,
@@ -11499,7 +11499,7 @@ ganados en batalla."),
 
     [ITEM_TM_HIDDEN_POWER] =
     {
-        .name = ITEM_NAME("TM10"),
+        .name = ITEM_NAME("MT10"),
         .price = 3000,
         .description = COMPOUND_STRING(
             "El poder de ataque\n"
@@ -11513,7 +11513,7 @@ ganados en batalla."),
 
     [ITEM_TM_SUNNY_DAY] =
     {
-        .name = ITEM_NAME("TM11"),
+        .name = ITEM_NAME("MT11"),
         .price = 2000,
         .description = COMPOUND_STRING("Sube el poder de\nlos movs. tipo Fuego\ndurante 5 turnos."),
         .importance = I_REUSABLE_TMS,
@@ -11524,7 +11524,7 @@ ganados en batalla."),
 
     [ITEM_TM_TAUNT] =
     {
-        .name = ITEM_NAME("TM12"),
+        .name = ITEM_NAME("MT12"),
         .price = 3000,
         .description = COMPOUND_STRING("Enfurece al rival, que\nsolo podrá usar\nmovimientos de ataque."),
         .importance = I_REUSABLE_TMS,
@@ -11535,7 +11535,7 @@ ganados en batalla."),
 
     [ITEM_TM_ICE_BEAM] =
     {
-        .name = ITEM_NAME("TM13"),
+        .name = ITEM_NAME("MT13"),
         .price = 3000,
         .description = COMPOUND_STRING(
             "Lanza un rayo gélido\n"
@@ -11553,7 +11553,7 @@ ganados en batalla."),
 
     [ITEM_TM_BLIZZARD] =
     {
-        .name = ITEM_NAME("TM14"),
+        .name = ITEM_NAME("MT14"),
         .price = 10000,
         .description = COMPOUND_STRING(
         #if B_USE_FROSTBITE == TRUE
@@ -11573,7 +11573,7 @@ ganados en batalla."),
 
     [ITEM_TM_HYPER_BEAM] =
     {
-        .name = ITEM_NAME("TM15"),
+        .name = ITEM_NAME("MT15"),
         .price = 10000,
         .description = COMPOUND_STRING("Potente, pero requiere\nrecargar el\nturno siguiente."),
         .importance = I_REUSABLE_TMS,
@@ -11584,7 +11584,7 @@ ganados en batalla."),
 
     [ITEM_TM_LIGHT_SCREEN] =
     {
-        .name = ITEM_NAME("TM16"),
+        .name = ITEM_NAME("MT16"),
         .price = 10000,
         .description = COMPOUND_STRING("Crea un muro de\nluz que reduce el daño\nEspecial."),
         .importance = I_REUSABLE_TMS,
@@ -11595,7 +11595,7 @@ ganados en batalla."),
 
     [ITEM_TM_PROTECT] =
     {
-        .name = ITEM_NAME("TM17"),
+        .name = ITEM_NAME("MT17"),
         .price = 10000,
         .description = COMPOUND_STRING("Anula todo el daño,\n
 pero puede fallar si se\n
@@ -11608,7 +11608,7 @@ usa seguido."),
 
     [ITEM_TM_RAIN_DANCE] =
     {
-        .name = ITEM_NAME("TM18"),
+        .name = ITEM_NAME("MT18"),
         .price = 2000,
         .description = COMPOUND_STRING("Sube el poder de los\nmovimientos de agua\ndurante 5 turnos."),
         .importance = I_REUSABLE_TMS,
@@ -11619,7 +11619,7 @@ usa seguido."),
 
     [ITEM_TM_GIGA_DRAIN] =
     {
-        .name = ITEM_NAME("TM19"),
+        .name = ITEM_NAME("MT19"),
         .price = 3000,
         .description = COMPOUND_STRING("Recupera la mitad de\nlos PS del daño\nque causa este ataque."),
         .importance = I_REUSABLE_TMS,
@@ -11630,7 +11630,7 @@ usa seguido."),
 
     [ITEM_TM_SAFEGUARD] =
     {
-        .name = ITEM_NAME("TM20"),
+        .name = ITEM_NAME("MT20"),
         .price = 3000,
         .description = COMPOUND_STRING("Evita estados\nanómalos con un\npoder místico."),
         .importance = I_REUSABLE_TMS,
@@ -11641,7 +11641,7 @@ usa seguido."),
 
     [ITEM_TM_FRUSTRATION] =
     {
-        .name = ITEM_NAME("TM21"),
+        .name = ITEM_NAME("MT21"),
         .price = 1000,
         .description = COMPOUND_STRING("Cuanto menos le gustes\nal usuario, más\npoderoso este movimiento."),
         .importance = I_REUSABLE_TMS,
@@ -11652,7 +11652,7 @@ usa seguido."),
 
     [ITEM_TM_SOLAR_BEAM] =
     {
-        .name = ITEM_NAME("TM22"),
+        .name = ITEM_NAME("MT22"),
         .price = 10000,
         .description = COMPOUND_STRING("Absorbe luz solar en\nel 1er turno, luego\nataca el sig. turno."),
         .importance = I_REUSABLE_TMS,
@@ -11663,7 +11663,7 @@ usa seguido."),
 
     [ITEM_TM_IRON_TAIL] =
     {
-        .name = ITEM_NAME("TM23"),
+        .name = ITEM_NAME("MT23"),
         .price = 3000,
         .description = COMPOUND_STRING(
             "Golpea al rival con\n"
@@ -11677,7 +11677,7 @@ usa seguido."),
 
     [ITEM_TM_THUNDERBOLT] =
     {
-        .name = ITEM_NAME("TM24"),
+        .name = ITEM_NAME("MT24"),
         .price = 3000,
         .description = COMPOUND_STRING(
             "Un poderoso ataque\n"
@@ -11691,7 +11691,7 @@ usa seguido."),
 
     [ITEM_TM_THUNDER] =
     {
-        .name = ITEM_NAME("TM25"),
+        .name = ITEM_NAME("MT25"),
         .price = 10000,
         .description = COMPOUND_STRING("Golpea al rival\ncon un rayo potente.\nPuede paralizar."),
         .importance = I_REUSABLE_TMS,
@@ -11702,7 +11702,7 @@ usa seguido."),
 
     [ITEM_TM_EARTHQUAKE] =
     {
-        .name = ITEM_NAME("TM26"),
+        .name = ITEM_NAME("MT26"),
         .price = 3000,
         .description = COMPOUND_STRING("Causa un temblor\nque no afecta a\nenemigos voladores."),
         .importance = I_REUSABLE_TMS,
@@ -11713,7 +11713,7 @@ usa seguido."),
 
     [ITEM_TM_RETURN] =
     {
-        .name = ITEM_NAME("TM27"),
+        .name = ITEM_NAME("MT27"),
         .price = 1000,
         .description = COMPOUND_STRING("Cuanto más le guste\nal usuario, más\npoderoso este movimiento."),
         .importance = I_REUSABLE_TMS,
@@ -11724,7 +11724,7 @@ usa seguido."),
 
     [ITEM_TM_DIG] =
     {
-        .name = ITEM_NAME("TM28"),
+        .name = ITEM_NAME("MT28"),
         .price = 2000,
         .description = COMPOUND_STRING("Cava bajo tierra\nel 1er turno, luego\ngolpea el sig. turno."),
         .importance = I_REUSABLE_TMS,
@@ -11735,7 +11735,7 @@ usa seguido."),
 
     [ITEM_TM_PSYCHIC] =
     {
-        .name = ITEM_NAME("TM29"),
+        .name = ITEM_NAME("MT29"),
         .price = 2000,
         .description = COMPOUND_STRING(
             "Un poderoso ataque\n"
@@ -11749,7 +11749,7 @@ usa seguido."),
 
     [ITEM_TM_SHADOW_BALL] =
     {
-        .name = ITEM_NAME("TM30"),
+        .name = ITEM_NAME("MT30"),
         .price = 3000,
         .description = COMPOUND_STRING(
             "Lanza una masa oscura\n"
@@ -11763,7 +11763,7 @@ usa seguido."),
 
     [ITEM_TM_BRICK_BREAK] =
     {
-        .name = ITEM_NAME("TM31"),
+        .name = ITEM_NAME("MT31"),
         .price = 3000,
         .description = COMPOUND_STRING("Destruye barreras\ncomo Pantalla de Luz\ny causa daño."),
         .importance = I_REUSABLE_TMS,
@@ -11774,7 +11774,7 @@ usa seguido."),
 
     [ITEM_TM_DOUBLE_TEAM] =
     {
-        .name = ITEM_NAME("TM32"),
+        .name = ITEM_NAME("MT32"),
         .price = 2000,
         .description = COMPOUND_STRING(
             "Crea copias\n"
@@ -11788,7 +11788,7 @@ usa seguido."),
 
     [ITEM_TM_REFLECT] =
     {
-        .name = ITEM_NAME("TM33"),
+        .name = ITEM_NAME("MT33"),
         .price = 10000,
         .description = COMPOUND_STRING("Crea un muro de\n
 luz que debilita los\n
@@ -11801,7 +11801,7 @@ ataques físicos."),
 
     [ITEM_TM_SHOCK_WAVE] =
     {
-        .name = ITEM_NAME("TM34"),
+        .name = ITEM_NAME("MT34"),
         .price = 3000,
         .description = COMPOUND_STRING("Ataca al rival con\nuna descarga eléctrica\nque nunca falla."),
         .importance = I_REUSABLE_TMS,
@@ -11812,7 +11812,7 @@ ataques físicos."),
 
     [ITEM_TM_FLAMETHROWER] =
     {
-        .name = ITEM_NAME("TM35"),
+        .name = ITEM_NAME("MT35"),
         .price = 3000,
         .description = COMPOUND_STRING("Lanza un chorro de\nfuego que puede quemar\nal rival."),
         .importance = I_REUSABLE_TMS,
@@ -11823,7 +11823,7 @@ ataques físicos."),
 
     [ITEM_TM_SLUDGE_BOMB] =
     {
-        .name = ITEM_NAME("TM36"),
+        .name = ITEM_NAME("MT36"),
         .price = 1000,
         .description = COMPOUND_STRING("Lanza lodo al\nrival. Puede\nenvenenarlo."),
         .importance = I_REUSABLE_TMS,
@@ -11834,7 +11834,7 @@ ataques físicos."),
 
     [ITEM_TM_SANDSTORM] =
     {
-        .name = ITEM_NAME("TM37"),
+        .name = ITEM_NAME("MT37"),
         .price = 2000,
         .description = COMPOUND_STRING("Causa una tormenta de arena\nque golpea al rival\ndurante varios turnos."),
         .importance = I_REUSABLE_TMS,
@@ -11845,7 +11845,7 @@ ataques físicos."),
 
     [ITEM_TM_FIRE_BLAST] =
     {
-        .name = ITEM_NAME("TM38"),
+        .name = ITEM_NAME("MT38"),
         .price = 10000,
         .description = COMPOUND_STRING("Un viento poderoso\nde fuego que puede\nquemar al rival."),
         .importance = I_REUSABLE_TMS,
@@ -11856,7 +11856,7 @@ ataques físicos."),
 
     [ITEM_TM_ROCK_TOMB] =
     {
-        .name = ITEM_NAME("TM39"),
+        .name = ITEM_NAME("MT39"),
         .price = 3000,
         .description = COMPOUND_STRING("Evita que el rival\nse mueva con rocas.\nPuede bajar Velocidad."),
         .importance = I_REUSABLE_TMS,
@@ -11867,7 +11867,7 @@ ataques físicos."),
 
     [ITEM_TM_AERIAL_ACE] =
     {
-        .name = ITEM_NAME("TM40"),
+        .name = ITEM_NAME("MT40"),
         .price = 3000,
         .description = COMPOUND_STRING(
             "Un ataque extremadamente\n"
@@ -11881,7 +11881,7 @@ ataques físicos."),
 
     [ITEM_TM_TORMENT] =
     {
-        .name = ITEM_NAME("TM41"),
+        .name = ITEM_NAME("MT41"),
         .price = 3000,
         .description = COMPOUND_STRING("Evita que el rival\nuse el mismo movimiento\ndos veces seguidas."),
         .importance = I_REUSABLE_TMS,
@@ -11892,7 +11892,7 @@ ataques físicos."),
 
     [ITEM_TM_FACADE] =
     {
-        .name = ITEM_NAME("TM42"),
+        .name = ITEM_NAME("MT42"),
         .price = 3000,
         .description = COMPOUND_STRING(
             "Sube el Ataque al estar\n"
@@ -11906,7 +11906,7 @@ ataques físicos."),
 
     [ITEM_TM_SECRET_POWER] =
     {
-        .name = ITEM_NAME("TM43"),
+        .name = ITEM_NAME("MT43"),
         .price = 3000,
         .description = COMPOUND_STRING("Añade un efecto al\nataque dependiendo\ndel lugar."),
         .importance = I_REUSABLE_TMS,
@@ -11917,7 +11917,7 @@ ataques físicos."),
 
     [ITEM_TM_REST] =
     {
-        .name = ITEM_NAME("TM44"),
+        .name = ITEM_NAME("MT44"),
         .price = 3000,
         .description = COMPOUND_STRING("El usuario duerme\n2 turnos para recuperar\nsalud y estado."),
         .importance = I_REUSABLE_TMS,
@@ -11928,7 +11928,7 @@ ataques físicos."),
 
     [ITEM_TM_ATTRACT] =
     {
-        .name = ITEM_NAME("TM45"),
+        .name = ITEM_NAME("MT45"),
         .price = 3000,
         .description = COMPOUND_STRING(
             "Dificulta el\n"
@@ -11942,7 +11942,7 @@ ataques físicos."),
 
     [ITEM_TM_THIEF] =
     {
-        .name = ITEM_NAME("TM46"),
+        .name = ITEM_NAME("MT46"),
         .price = 3000,
         .description = COMPOUND_STRING("Al atacar,\npuede robar el\nobjeto del rival.\n \n"),
         .importance = I_REUSABLE_TMS,
@@ -11953,7 +11953,7 @@ ataques físicos."),
 
     [ITEM_TM_STEEL_WING] =
     {
-        .name = ITEM_NAME("TM47"),
+        .name = ITEM_NAME("MT47"),
         .price = 3000,
         .description = COMPOUND_STRING("Lanza alas afiladas y\nse estrella contra\nel rival."),
         .importance = I_REUSABLE_TMS,
@@ -11964,7 +11964,7 @@ ataques físicos."),
 
     [ITEM_TM_SKILL_SWAP] =
     {
-        .name = ITEM_NAME("TM48"),
+        .name = ITEM_NAME("MT48"),
         .price = 3000,
         .description = COMPOUND_STRING("Intercambia habilidades\ncon el rival en el turno\nen que se usa."),
         .importance = I_REUSABLE_TMS,
@@ -11975,7 +11975,7 @@ ataques físicos."),
 
     [ITEM_TM_SNATCH] =
     {
-        .name = ITEM_NAME("TM49"),
+        .name = ITEM_NAME("MT49"),
         .price = 3000,
         .description = COMPOUND_STRING("Roba los efectos del\nmovimiento que el rival\nintenta usar.\n \n"),
         .importance = I_REUSABLE_TMS,
@@ -11986,7 +11986,7 @@ ataques físicos."),
 
     [ITEM_TM_OVERHEAT] =
     {
-        .name = ITEM_NAME("TM50"),
+        .name = ITEM_NAME("MT50"),
         .price = 3000,
         .description = COMPOUND_STRING(
             "Permite un ataque\n"
@@ -12000,7 +12000,7 @@ ataques físicos."),
 
     [ITEM_TM51] = // Roost
     {
-        .name = ITEM_NAME("TM51"),
+        .name = ITEM_NAME("MT51"),
         .price = 3000,
         .description = COMPOUND_STRING(
             "Restaura los PS del\n"
@@ -12014,7 +12014,7 @@ ataques físicos."),
 
     [ITEM_TM52] = // Focus Blast
     {
-        .name = ITEM_NAME("TM52"),
+        .name = ITEM_NAME("MT52"),
         .price = 10000,
         .description = COMPOUND_STRING("Ataca con todo su\npoder. Puede bajar la\nDef. Esp. del rival."),
         .importance = I_REUSABLE_TMS,
@@ -12025,7 +12025,7 @@ ataques físicos."),
 
     [ITEM_TM53] = // Energy Ball
     {
-        .name = ITEM_NAME("TM53"),
+        .name = ITEM_NAME("MT53"),
         .price = 3000,
         .description = COMPOUND_STRING("Obtiene poder de\nnaturaleza al atacar.\nPuede bajar Def. Esp."),
         .importance = I_REUSABLE_TMS,
@@ -12036,7 +12036,7 @@ ataques físicos."),
 
     [ITEM_TM54] = // False Swipe
     {
-        .name = ITEM_NAME("TM54"),
+        .name = ITEM_NAME("MT54"),
         .price = 3000,
         .description = COMPOUND_STRING(
             "Ataque que deja\n"
@@ -12050,7 +12050,7 @@ ataques físicos."),
 
     [ITEM_TM55] = // Brine
     {
-        .name = ITEM_NAME("TM55"),
+        .name = ITEM_NAME("MT55"),
         .price = 3000,
         .description = COMPOUND_STRING("Hace el doble de daño\na rivales con mitad de\nPS o menos."),
         .importance = I_REUSABLE_TMS,
@@ -12061,7 +12061,7 @@ ataques físicos."),
 
     [ITEM_TM56] = // Fling
     {
-        .name = ITEM_NAME("TM56"),
+        .name = ITEM_NAME("MT56"),
         .price = 3000,
         .description = COMPOUND_STRING("La efectividad\nvaría según el\nobjeto equipado.\n \n"),
         .importance = I_REUSABLE_TMS,
@@ -12072,7 +12072,7 @@ ataques físicos."),
 
     [ITEM_TM57] = // Charge Beam
     {
-        .name = ITEM_NAME("TM57"),
+        .name = ITEM_NAME("MT57"),
         .price = 3000,
         .description = COMPOUND_STRING(
             "Lanza un rayo de\n"
@@ -12086,7 +12086,7 @@ ataques físicos."),
 
     [ITEM_TM58] = // Endure
     {
-        .name = ITEM_NAME("TM58"),
+        .name = ITEM_NAME("MT58"),
         .price = 3000,
         .description = COMPOUND_STRING("Resiste cualquier\nataque por 1 turno,\ndejando al menos 1 PS."),
         .importance = I_REUSABLE_TMS,
@@ -12097,7 +12097,7 @@ ataques físicos."),
 
     [ITEM_TM59] = // Dragon Pulse
     {
-        .name = ITEM_NAME("TM59"),
+        .name = ITEM_NAME("MT59"),
         .price = 3000,
         .description = COMPOUND_STRING("Genera una onda de\ndescarga para dañar\nal rival."),
         .importance = I_REUSABLE_TMS,
@@ -12108,7 +12108,7 @@ ataques físicos."),
 
     [ITEM_TM60] = // Drain Punch
     {
-        .name = ITEM_NAME("TM60"),
+        .name = ITEM_NAME("MT60"),
         .price = 3000,
         .description = COMPOUND_STRING("Ataque que\nabsorbe la mitad\ndel daño recibido."),
         .importance = I_REUSABLE_TMS,
@@ -12119,7 +12119,7 @@ ataques físicos."),
 
     [ITEM_TM61] = // Will-O-Wisp
     {
-        .name = ITEM_NAME("TM61"),
+        .name = ITEM_NAME("MT61"),
         .price = 3000,
         .description = COMPOUND_STRING(
             "Quema al\n"
@@ -12133,7 +12133,7 @@ ataques físicos."),
 
     [ITEM_TM62] = // Silver Wind
     {
-        .name = ITEM_NAME("TM62"),
+        .name = ITEM_NAME("MT62"),
         .price = 3000,
         .description = COMPOUND_STRING("Ataque de polvo\nque puede subir\ntodas las estadísticas."),
         .importance = I_REUSABLE_TMS,
@@ -12144,7 +12144,7 @@ ataques físicos."),
 
     [ITEM_TM63] = // Embargo
     {
-        .name = ITEM_NAME("TM63"),
+        .name = ITEM_NAME("MT63"),
         .price = 3000,
         .description = COMPOUND_STRING("Evita que el rival\nuse cualquier\nobjeto."),
         .importance = I_REUSABLE_TMS,
@@ -12155,7 +12155,7 @@ ataques físicos."),
 
     [ITEM_TM64] = // Explosion
     {
-        .name = ITEM_NAME("TM64"),
+        .name = ITEM_NAME("MT64"),
         .price = 3000,
         .description = COMPOUND_STRING("Causa daño grave\npero el usuario\ncae debilitado.\n \n"),
         .importance = I_REUSABLE_TMS,
@@ -12166,7 +12166,7 @@ ataques físicos."),
 
     [ITEM_TM65] = // Shadow Claw
     {
-        .name = ITEM_NAME("TM65"),
+        .name = ITEM_NAME("MT65"),
         .price = 3000,
         .description = COMPOUND_STRING(
             "Golpea con una\n"
@@ -12180,7 +12180,7 @@ ataques físicos."),
 
     [ITEM_TM66] = // Payback
     {
-        .name = ITEM_NAME("TM66"),
+        .name = ITEM_NAME("MT66"),
         .price = 3000,
         .description = COMPOUND_STRING(
             "Ataque que gana\n"
@@ -12194,7 +12194,7 @@ ataques físicos."),
 
     [ITEM_TM67] = // Recycle
     {
-        .name = ITEM_NAME("TM67"),
+        .name = ITEM_NAME("MT67"),
         .price = 3000,
         .description = COMPOUND_STRING("Recicla un objeto usado\npara un uso más."),
         .importance = I_REUSABLE_TMS,
@@ -12205,7 +12205,7 @@ ataques físicos."),
 
     [ITEM_TM68] = // Giga Impact
     {
-        .name = ITEM_NAME("TM68"),
+        .name = ITEM_NAME("MT68"),
         .price = 3000,
         .description = COMPOUND_STRING("Potente, pero deja\nal usuario inmóvil\nel siguiente turno.\n \n"),
         .importance = I_REUSABLE_TMS,
@@ -12216,7 +12216,7 @@ ataques físicos."),
 
     [ITEM_TM69] = // Rock Polish
     {
-        .name = ITEM_NAME("TM69"),
+        .name = ITEM_NAME("MT69"),
         .price = 3000,
         .description = COMPOUND_STRING(
             "Pule el cuerpo\n"
@@ -12231,7 +12231,7 @@ ataques físicos."),
 #if IS_HNS
     [ITEM_TM70] = // Rock Climb
     {
-        .name = ITEM_NAME("TM70"),
+        .name = ITEM_NAME("MT70"),
         .price = 3000,
         .description = COMPOUND_STRING("Una carga total\nde viento que puede\nconfundir al rival."),
         .importance = I_REUSABLE_TMS,
@@ -12242,7 +12242,7 @@ ataques físicos."),
 #else
     [ITEM_TM70] = // Flash
     {
-        .name = ITEM_NAME("TM70"),
+        .name = ITEM_NAME("MT70"),
         .price = 3000,
         .description = COMPOUND_STRING(
             "Lanza un potente\n"
@@ -12257,7 +12257,7 @@ ataques físicos."),
 
     [ITEM_TM71] = // Stone Edge
     {
-        .name = ITEM_NAME("TM71"),
+        .name = ITEM_NAME("MT71"),
         .price = 3000,
         .description = COMPOUND_STRING(
             "Apuñala al rival con\n"
@@ -12271,7 +12271,7 @@ ataques físicos."),
 
     [ITEM_TM72] = // Avalanche
     {
-        .name = ITEM_NAME("TM72"),
+        .name = ITEM_NAME("MT72"),
         .price = 3000,
         .description = COMPOUND_STRING("Ataque que se mueve\nal final y gana poder\nsi es golpeado."),
         .importance = I_REUSABLE_TMS,
@@ -12282,7 +12282,7 @@ ataques físicos."),
 
     [ITEM_TM73] = // Thunder Wave
     {
-        .name = ITEM_NAME("TM73"),
+        .name = ITEM_NAME("MT73"),
         .price = 3000,
         .description = COMPOUND_STRING("Una descarga eléctrica\ndébil que paraliza\nal rival."),
         .importance = I_REUSABLE_TMS,
@@ -12293,7 +12293,7 @@ ataques físicos."),
 
     [ITEM_TM74] = // Gyro Ball
     {
-        .name = ITEM_NAME("TM74"),
+        .name = ITEM_NAME("MT74"),
         .price = 3000,
         .description = COMPOUND_STRING("Giro rápido que\nhace más daño\na rivales veloces."),
         .importance = I_REUSABLE_TMS,
@@ -12304,7 +12304,7 @@ ataques físicos."),
 
     [ITEM_TM75] = // Swords Dance
     {
-        .name = ITEM_NAME("TM75"),
+        .name = ITEM_NAME("MT75"),
         .price = 3000,
         .description = COMPOUND_STRING("Danza de lucha que\nsube mucho el\nAtaque."),
         .importance = I_REUSABLE_TMS,
@@ -12315,7 +12315,7 @@ ataques físicos."),
 
     [ITEM_TM76] = // Stealth Rock
     {
-        .name = ITEM_NAME("TM76"),
+        .name = ITEM_NAME("MT76"),
         .price = 3000,
         .description = COMPOUND_STRING(
             "Piedras flotantes\n"
@@ -12329,7 +12329,7 @@ ataques físicos."),
 
     [ITEM_TM77] = // Psych Up
     {
-        .name = ITEM_NAME("TM77"),
+        .name = ITEM_NAME("MT77"),
         .price = 3000,
         .description = COMPOUND_STRING("Copia los efectos o\ncambios de stats y\nlos da al usuario."),
         .importance = I_REUSABLE_TMS,
@@ -12340,7 +12340,7 @@ ataques físicos."),
 
     [ITEM_TM78] = // Captivate
     {
-        .name = ITEM_NAME("TM78"),
+        .name = ITEM_NAME("MT78"),
         .price = 3000,
         .description = COMPOUND_STRING("Hace que el sexo\nopuesto reduzca\nsu At. Esp."),
         .importance = I_REUSABLE_TMS,
@@ -12351,7 +12351,7 @@ ataques físicos."),
 
     [ITEM_TM79] = // Dark Pulse
     {
-        .name = ITEM_NAME("TM79"),
+        .name = ITEM_NAME("MT79"),
         .price = 3000,
         .description = COMPOUND_STRING(
             "Ataca con un\n"
@@ -12365,7 +12365,7 @@ ataques físicos."),
 
     [ITEM_TM80] = // Rock Slide
     {
-        .name = ITEM_NAME("TM80"),
+        .name = ITEM_NAME("MT80"),
         .price = 3000,
         .description = COMPOUND_STRING(
             "Lanza rocas grandes.\n"
@@ -12379,7 +12379,7 @@ ataques físicos."),
 
     [ITEM_TM81] = // X-Scissor
     {
-        .name = ITEM_NAME("TM81"),
+        .name = ITEM_NAME("MT81"),
         .price = 3000,
         .description = COMPOUND_STRING(
             "Corta al rival con\n"
@@ -12393,7 +12393,7 @@ ataques físicos."),
 
     [ITEM_TM82] = // Sleep Talk
     {
-        .name = ITEM_NAME("TM82"),
+        .name = ITEM_NAME("MT82"),
         .price = 3000,
         .description = COMPOUND_STRING(
             "Usa un movimiento\n"
@@ -12407,7 +12407,7 @@ ataques físicos."),
 
     [ITEM_TM83] = // Natural Gift
     {
-        .name = ITEM_NAME("TM83"),
+        .name = ITEM_NAME("MT83"),
         .price = 10000,
         .description = COMPOUND_STRING(
             "La efectividad\n"
@@ -12421,7 +12421,7 @@ ataques físicos."),
 
     [ITEM_TM84] = // Poison Jab
     {
-        .name = ITEM_NAME("TM84"),
+        .name = ITEM_NAME("MT84"),
         .price = 3000,
         .description = COMPOUND_STRING("Un ataque punzante\nque puede envenenar\nal rival."),
         .importance = I_REUSABLE_TMS,
@@ -12432,7 +12432,7 @@ ataques físicos."),
 
     [ITEM_TM85] = // Dream Eater
     {
-        .name = ITEM_NAME("TM85"),
+        .name = ITEM_NAME("MT85"),
         .price = 3000,
         .description = COMPOUND_STRING(
             "Recibe la mitad del\n"
@@ -12446,7 +12446,7 @@ ataques físicos."),
 
     [ITEM_TM86] = // Grass Knot
     {
-        .name = ITEM_NAME("TM86"),
+        .name = ITEM_NAME("MT86"),
         .price = 3000,
         .description = COMPOUND_STRING(
             "Un ataque de trampa\n"
@@ -12460,7 +12460,7 @@ ataques físicos."),
 
     [ITEM_TM87] = // Swagger
     {
-        .name = ITEM_NAME("TM87"),
+        .name = ITEM_NAME("MT87"),
         .price = 3000,
         .description = COMPOUND_STRING("Confunde al rival,\npero también sube\nsu Ataque."),
         .importance = I_REUSABLE_TMS,
@@ -12471,7 +12471,7 @@ ataques físicos."),
 
     [ITEM_TM88] = // Pluck
     {
-        .name = ITEM_NAME("TM88"),
+        .name = ITEM_NAME("MT88"),
         .price = 3000,
         .description = COMPOUND_STRING(
             "Come la Baya que\n"
@@ -12485,7 +12485,7 @@ ataques físicos."),
 
     [ITEM_TM89] = // U-turn
     {
-        .name = ITEM_NAME("TM89"),
+        .name = ITEM_NAME("MT89"),
         .price = 3000,
         .description = COMPOUND_STRING("Daña y luego\ncambia al POKéMON\nusuario."),
         .importance = I_REUSABLE_TMS,
@@ -12496,7 +12496,7 @@ ataques físicos."),
 
     [ITEM_TM90] = // Substitute
     {
-        .name = ITEM_NAME("TM90"),
+        .name = ITEM_NAME("MT90"),
         .price = 3000,
         .description = COMPOUND_STRING("Crea un señuelo\nusando 1/4 de los\nPS máximos del usuario."),
         .importance = I_REUSABLE_TMS,
@@ -12507,7 +12507,7 @@ ataques físicos."),
 
     [ITEM_TM91] = // Flash Cannon
     {
-        .name = ITEM_NAME("TM91"),
+        .name = ITEM_NAME("MT91"),
         .price = 3000,
         .description = COMPOUND_STRING(
             "Lanza un destello\n"
@@ -12521,7 +12521,7 @@ ataques físicos."),
 
     [ITEM_TM92] = // Trick Room
     {
-        .name = ITEM_NAME("TM92"),
+        .name = ITEM_NAME("MT92"),
         .price = 3000,
         .description = COMPOUND_STRING("Los POKéMON lentos\natacan primero por\n5 turnos."),
         .importance = I_REUSABLE_TMS,
