@@ -22,14 +22,12 @@ EventTicket_Text_ShowEonTicket:
 
 #if IS_HNS
 EventTicket_Text_SouthernIslandSailBack:
-	.string "Oye, amigo, no hay nada que\nver ni hacer en esta isla olvidable.\p¿Qué tal si navegamos a CALAGUA?$"
-ver ni hacer en esta isla olvidable.\p
-¿Qué tal si navegamos a OLIVO?$"
+	.string "Oye, amigo, no hay nada que\nver ni hacer en esta isla olvidable.\p¿Qué tal si navegamos a OLIVO?$"
 #else
 EventTicket_Text_SouthernIslandSailBack:
 	.string "Sí, amigo, no hay nada que\n"
 	.string "ver ni hacer en esta isla olvidada.\p"
-	.string "¿Qué tal si volvemos a LILYCOVE?$"
+	.string "¿Qué tal si volvemos a CALAGUA?$"
 #endif 
 
 
