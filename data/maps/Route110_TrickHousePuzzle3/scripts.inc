@@ -335,11 +335,8 @@ Route110_TrickHousePuzzle3_Text_AlanIntro:
 	.string "¿con una casa tan extraña?$"
 
 Route110_TrickHousePuzzle3_Text_AlanDefeat:
-	.string "No lo entiendo.\n
-¿Cómo perdí?$"
+	.string "No lo entiendo.\n¿Cómo perdí?$"
 
 Route110_TrickHousePuzzle3_Text_AlanPostBattle:
-	.string "No lo entiendo.\n
-¿Cuántas trampas hay en esta casa?\p
-Puede que tú seas quien lo resuelva.$"
+	.string "No lo entiendo.\n¿Cuántas trampas hay en esta casa?\pPuede que tú seas quien lo resuelva.$"
 

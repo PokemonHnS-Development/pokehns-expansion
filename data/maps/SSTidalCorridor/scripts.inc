@@ -281,28 +281,19 @@ SSTidal_Text_HopeYouEnjoyVoyage:
 	.string "nuestro ferry.$"
 
 SSTidal_Text_MadeLandInSlateport:
-	.string "Hemos llegado a CIUDAD CALAGUA.\n
-Gracias por navegar con nosotros.$"
+	.string "Hemos llegado a CIUDAD CALAGUA.\nGracias por navegar con nosotros.$"
 
 SSTidal_Text_MadeLandInLilycove:
-	.string "Hemos llegado a CIUDAD CALAGUA.\n
-Gracias por navegar con nosotros.$"
+	.string "Hemos llegado a CIUDAD CALAGUA.\nGracias por navegar con nosotros.$"
 
 SSTidalCorridor_Text_CanRestInCabin2:
-	.string "Todavía falta para llegar a tierra,\n
-supongo.\p
-Puedes descansar en tu camarote\n
-si quieres. Es el camarote 2.\p
-La cama de ahí es suave y esponjosa.\n
-¡Te aseguro que es cómoda!$"
+	.string "Todavía falta para llegar a tierra,\nsupongo.\pPuedes descansar en tu camarote\nsi quieres. Es el camarote 2.\pLa cama de ahí es suave y esponjosa.\n¡Te aseguro que es cómoda!$"
 
 SSTidalCorridor_Text_WeveArrived:
 	.string "We've arrived!$"
 
 SSTidalCorridor_Text_VisitOtherCabins:
-	.string "Ve a visitar otros camarotes.\n
-Los ENTRENADORES aburridos\l
-del viaje querrán combatir.$"
+	.string "Ve a visitar otros camarotes.\nLos ENTRENADORES aburridos\ldel viaje querrán combatir.$"
 
 SSTidalCorridor_Text_EnjoyYourCruise:
 	.string "Enjoy your cruise!$"

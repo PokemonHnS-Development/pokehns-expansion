@@ -167,9 +167,7 @@ VermilionPort_Movement_BoatLeave:
 	step_end
 
 VermilionPort_Text_SailorCantSail:
-	.string "Han entrado a robar en la\n
-CENTRAL ELÉCTRICA, así que no\l
-zarpamos hasta atrapar al LADRÓN.$"
+	.string "Han entrado a robar en la\nCENTRAL ELÉCTRICA, así que no\lzarpamos hasta atrapar al LADRÓN.$"
 
 VermilionPort_Text_NoPass:
     .string "{PLAYER} intentó mostrar el\n"

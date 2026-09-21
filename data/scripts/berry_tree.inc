@@ -70,8 +70,7 @@ BerryTree_Text_Hns_Picked:
 	.string "{PLAYER} picked the {STR_VAR_2} {STR_VAR_1}.$"
 
 BerryTree_Text_Hns_BagFull:
-	.string "El BOLSILLO de BAYAS está lleno.\p
-No se puede llevar {STR_VAR_1}.$"
+	.string "El BOLSILLO de BAYAS está lleno.\pNo se puede llevar {STR_VAR_1}.$"
 
 BerryTree_Text_Hns_Sprouted:
 	.string "The berry tree suddenly sprouted!$"
@@ -400,22 +399,17 @@ BerryTree_Text_PickedTheBerry:
 	.string "{PLAYER} picked the {STR_VAR_2} {STR_VAR_1}.$"
 
 BerryTree_Text_PutAwayBerry:
-	.string "{PLAYER} guardó {STR_VAR_1}\n
-en el BOLSILLO BAYAS.\p
-La tierra volvió a estar suave\n
-y esponjosa.$"
+	.string "{PLAYER} guardó {STR_VAR_1}\nen el BOLSILLO BAYAS.\pLa tierra volvió a estar suave\ny esponjosa.$"
 
 BerryTree_Text_BerryPocketFull:
-	.string "El BOLSILLO de BAYAS está lleno.\p
-No se puede llevar {STR_VAR_1}.$"
+	.string "El BOLSILLO de BAYAS está lleno.\pNo se puede llevar {STR_VAR_1}.$"
 
 BerryTree_Text_BerryLeftUnpicked:
 	.string "{PLAYER} dejó la {STR_VAR_1}\n"
 	.string "sin recoger.$"
 
 BerryTree_Text_WantToWater:
-	.string "¿Quieres regar {STR_VAR_1} con\n
-el CUBO WAILMER?$"
+	.string "¿Quieres regar {STR_VAR_1} con\nel CUBO WAILMER?$"
 
 BerryTree_Text_WateredTheBerry:
 	.string "{PLAYER} regó el {STR_VAR_1}.$"
@@ -461,29 +455,19 @@ BerryTree_EventScript_PickBerry_Mutation::
 	end
 
 BerryTree_Text_WantToPick_Mutation:
-	.string "¡Encontraste {STR_VAR_2} {STR_VAR_1}\n
-y 1 {STR_VAR_3}!\p
-¿Quieres recogerlos?$"
+	.string "¡Encontraste {STR_VAR_2} {STR_VAR_1}\ny 1 {STR_VAR_3}!\p¿Quieres recogerlos?$"
 
 BerryTree_Text_BerryLeftUnpicked_Mutation:
-	.string "{PLAYER} dejó {STR_VAR_1}\n
-y {STR_VAR_3} sin recoger.$"
+	.string "{PLAYER} dejó {STR_VAR_1}\ny {STR_VAR_3} sin recoger.$"
 
 BerryTree_Text_BerryPocketFull_Mutation:
-	.string "El BOLSILLO de BAYAS está lleno.\p
-No se pudieron guardar la {STR_VAR_1}\n
-ni la {STR_VAR_3}.$"
+	.string "El BOLSILLO de BAYAS está lleno.\pNo se pudieron guardar la {STR_VAR_1}\nni la {STR_VAR_3}.$"
 
 BerryTree_Text_PickedTheBerry_Mutation:
-	.string "{PLAYER} recogió {STR_VAR_2} {STR_VAR_1}\n
-y {STR_VAR_3}.$"
+	.string "{PLAYER} recogió {STR_VAR_2} {STR_VAR_1}\ny {STR_VAR_3}.$"
 
 BerryTree_Text_PutAwayBerry_Mutation:
-	.string "{PLAYER} guardó {STR_VAR_1}\n
-y {STR_VAR_3} en el BOLSILLO\l
-de BAYAS de la MOCHILA.\p
-La tierra volvió a estar blanda\n
-y suelta.$"
+	.string "{PLAYER} guardó {STR_VAR_1}\ny {STR_VAR_3} en el BOLSILLO\lde BAYAS de la MOCHILA.\pLa tierra volvió a estar blanda\ny suelta.$"
 .endif
 
 .if OW_BERRY_MULCH_USAGE == TRUE
@@ -499,8 +483,7 @@ BerryTree_Text_WantToMulch:
 	.string "¿Poner algo de fertilizante?$"
 
 BerryTree_Text_ScatteredMulch:
-	.string "{PLAYER} esparció {STR_VAR_1}\n
-sobre la tierra blanda y suelta.$"
+	.string "{PLAYER} esparció {STR_VAR_1}\nsobre la tierra blanda y suelta.$"
 .endif
 
 .if OW_BERRY_WEEDS == TRUE
@@ -522,8 +505,7 @@ BerryTree_EventScript_PullOutWeed::
 	return
 
 BerryTree_Text_WeedIsGrowing:
-	.string "Hay una mala hierba aquí.\n
-¿Quieres arrancarla?$"
+	.string "Hay una mala hierba aquí.\n¿Quieres arrancarla?$"
 
 BerryTree_Text_PulledOutTheWeed:
 	.string "¡{PLAYER} arrancó la maleza!$"

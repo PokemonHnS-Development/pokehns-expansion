@@ -45,10 +45,7 @@ VerdanturfTown_Mart_Text_XSpecialIsCrucial:
 	.string "aunque sea solo por una batalla.$"
 
 VerdanturfTown_Mart_Text_NoStrategyGuidesForBattleTent:
-	.string "No parece que vendan guías de\n
-estrategia para la CARPA DE COMBATE…\p
-Parece que uno debe confiar en su\n
-propio ingenio después de todo…$"
+	.string "No parece que vendan guías de\nestrategia para la CARPA DE COMBATE…\pParece que uno debe confiar en su\npropio ingenio después de todo…$"
 
 VerdanturfTown_Mart_Text_NestBallOnWeakenedPokemon:
 	.string "La NEST BALL funciona mejor con\n"

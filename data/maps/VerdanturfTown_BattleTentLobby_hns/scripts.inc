@@ -370,16 +370,7 @@ VerdanturfTown_BattleTentLobby_hns_Text_TaughtWhatKindsOfMoves:
 	.string "curarse o protegerse.$"
 
 VerdanturfTown_BattleTentLobby_hns_Text_ScottCanMeetToughTrainers:
-	.string "SCOTT: ¡Hola, {PLAYER}{KUN}!\n
-Pensé que te vería por aquí.\p
-Una CARPA DE COMBATE es donde\n
-conoces a ENTRENADORES duros.\p
-No importa cuáles sean las reglas,\n
-ni cómo se libran los combates.\p
-{PLAYER}{KUN}, espero que des\n
-¡lo mejor de ti!$"
+	.string "SCOTT: ¡Hola, {PLAYER}{KUN}!\nPensé que te vería por aquí.\pUna CARPA DE COMBATE es donde\nconoces a ENTRENADORES duros.\pNo importa cuáles sean las reglas,\nni cómo se libran los combates.\p{PLAYER}{KUN}, espero que des\n¡lo mejor de ti!$"
 
 VerdanturfTown_BattleTentLobby_hns_Text_ScottVisitRegularly:
-	.string "SCOTT: Vengo seguido con la esperanza\n
-de ver a ENTRENADORES duros en\l
-acción, sea cual sea la situación.$"
+	.string "SCOTT: Vengo seguido con la esperanza\nde ver a ENTRENADORES duros en\lacción, sea cual sea la situación.$"

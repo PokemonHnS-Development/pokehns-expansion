@@ -155,23 +155,10 @@ Route31_Text_HandOverMailMon:
 	.string "POKéMON que traía el CORREO.$"
 
 Route31_Text_ReadingMail:
-	.string "Veamos...\p
-Gracias por traérmelo\n
-a mí.\p
-Mi amigo es buena persona, y\n
-¡tú también eres genial!\p
-¡También quiero hacer algo\n
-bueno en agradecimiento!\p
-¡Ya sé! Quiero que te\n
-quedes con esto!$"
+	.string "Veamos...\pGracias por traérmelo\na mí.\pMi amigo es buena persona, y\n¡tú también eres genial!\p¡También quiero hacer algo\nbueno en agradecimiento!\p¡Ya sé! Quiero que te\nquedes con esto!$"
 
 Route31_Text_DescribeRest:
-	.string "...Zzz...\p
-...Mmm... ¡Descanso!\p
-La frase 'recuperarse rápido' se\n
-acortó a 'Descanso', ¿ves?\p
-Es un movimiento para dormir y\n
-recuperar algo de PS.$"
+	.string "...Zzz...\p...Mmm... ¡Descanso!\pLa frase 'recuperarse rápido' se\nacortó a 'Descanso', ¿ves?\pEs un movimiento para dormir y\nrecuperar algo de PS.$"
 
 Route31_Text_WrongMail:
 	.string "Esta CARTA no es para mí.$"
@@ -181,8 +168,7 @@ Route31_Text_MissingMail:
 	.string "No tiene ningún CORREO.$"
 
 Route31_Text_DeclinedToHandOverMail:
-	.string "¿Qué? ¿No quieres\n
-nada?$"
+	.string "¿Qué? ¿No quieres\nnada?$"
 
 Route31_Text_CantTakeLastMon:
 	.string "Si te quito ese POKéMON,\n"
@@ -219,20 +205,13 @@ Route31_Text_WadeRematchDefeat:
 	.string "Awwwww…$"
 
 Route31_Text_WadePostRematch:
-	.string "Te aviso en cuanto encuentre\n
-algo que te pueda\l
-gustar.$"
+	.string "Te aviso en cuanto encuentre\nalgo que te pueda\lgustar.$"
 
 Route31_Text_WadeHasItem:
-	.string "¡Oye! ¡Te he estado\n
-buscando!\p
-Encontré algo mientras\n
-estaba en la hierba.\p
-¡Toma, es para ti!$"
+	.string "¡Oye! ¡Te he estado\nbuscando!\pEncontré algo mientras\nestaba en la hierba.\p¡Toma, es para ti!$"
 
 Route31_Text_WadeGaveItem:
-	.string "¡Te aviso si encuentro\n
-algo más!$"
+	.string "¡Te aviso si encuentro\nalgo más!$"
 
 Route31_Text_WadeNoRoom:
 	.string "Hmm, parece que tu MOCHILA\n"

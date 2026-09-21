@@ -80,13 +80,7 @@ Route39_FarmHouse_EventScript_FarmerM_NotEnough::
 	end
 
 Route39_Text_FarmerMSickCow:
-	.string "Mi MILTANK ya no me da\n
-leche.\p
-Esta GRANJA tiene leche famosa.\p
-Casi todos quieren probarla.\p
-Me dará un montón de leche si\n
-le doy muchas BAYAS,\l
-supongo.$"
+	.string "Mi MILTANK ya no me da\nleche.\pEsta GRANJA tiene leche famosa.\pCasi todos quieren probarla.\pMe dará un montón de leche si\nle doy muchas BAYAS,\lsupongo.$"
 
 Route39_Text_FarmerMBuyMilk:
 	.string "¿Quieres mi LECHE MU-MU?\p"
@@ -120,15 +114,10 @@ Route39_Text_FarmerMMilking:
 	.string "I best go do my milkin'.$"
 
 Route39_Text_FarmerFInTrouble:
-	.string "Nuestra leche llega hasta\n
-KANTO.\p
-Así que si nuestro MILTANK\n
-no nos da leche, es un problema.$"
+	.string "Nuestra leche llega hasta\nKANTO.\pAsí que si nuestro MILTANK\nno nos da leche, es un problema.$"
 
 Route39_Text_FarmerFHealedMiltank:
-	.string "Arreglaste a nuestro MILTANK, cariño.\n
-Ahora vuelve a dar LECHE MOOMOO.\p
-Aquí tienes algo por tu molestia.$"
+	.string "Arreglaste a nuestro MILTANK, cariño.\nAhora vuelve a dar LECHE MOOMOO.\pAquí tienes algo por tu molestia.$"
 
 Route39_Text_FarmerFSnatchSpeech:
 	.string "Eso es un SNATCH.\p"

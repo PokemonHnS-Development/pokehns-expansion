@@ -42,6 +42,4 @@ SaffronCity_PokemonCenter1F_Text_Fisher_ReturnedPart:
 	.string "pero ese lugar me asusta hasta a mí.$"
 
 SaffronCity_PokemonCenter1F_Text_Youngster:
-	.string "La oficina central de SILPH CO. y la\n
-estación del tren magnético--son los\l
-lugares que ver en CIUDAD AZAFRÁN.$"
+	.string "La oficina central de SILPH CO. y la\nestación del tren magnético--son los\llugares que ver en CIUDAD AZAFRÁN.$"

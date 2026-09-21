@@ -29,19 +29,16 @@ Route21_Text_SwimmermSethBeaten:
 	.string "Glug…$"
 
 Route21_Text_SwimmermSethAfterBattle:
-	.string "Ese arrogante estaba en el\n
-volcán de ISLA CANELA.$"
+	.string "Ese arrogante estaba en el\nvolcán de ISLA CANELA.$"
 
 Route21_Text_SwimmerfNikkiSeen:
-	.string "¡Si gano, me tienes que ayudar con\n
-mi crema bronceadora!$"
+	.string "¡Si gano, me tienes que ayudar con\nmi crema bronceadora!$"
 
 Route21_Text_SwimmerfNikkiBeaten:
 	.string "I'm worried about sunburn…$"
 
 Route21_Text_SwimmerfNikkiAfterBattle:
-	.string "Tengo que cuidarme de las manchas\n
-que causa el sol.$"
+	.string "Tengo que cuidarme de las manchas\nque causa el sol.$"
 
 Route21_Text_FisherArnoldSeen:
 	.string "I'm bored by fishing. Let's battle!$"

@@ -15,9 +15,7 @@ PewterCity_PokemonCenter_EventScript_BugCatcher::
 	end
 
 PewterCity_PokemonCenter1F_Text_Teacher:
-	.string "…Sí, ISLA CANELA ya no tiene GIMNASIO.\p
-Me sorprendió mucho.\p
-…¿Sí? Estoy al teléfono. ¡Vete!$"
+	.string "…Sí, ISLA CANELA ya no tiene GIMNASIO.\pMe sorprendió mucho.\p…¿Sí? Estoy al teléfono. ¡Vete!$"
 
 PewterCity_PokemonCenter1F_Text_Jigglypuff:
 	.string "JIGGLYPUFF: Puu pupuu.$"
@@ -48,26 +46,20 @@ PewterCity_PokemonCenter_EventScript_TradeCompleted::
 	end
 
 PewterCity_PokemonCenter_Text_WantToTrade:
-	.string "He viajado por todas partes\n
-buscando un buen {STR_VAR_1}.\p
-¿Me cambiarías uno por mi\n
-{STR_VAR_2}?$"
+	.string "He viajado por todas partes\nbuscando un buen {STR_VAR_1}.\p¿Me cambiarías uno por mi\n{STR_VAR_2}?$"
 
 PewterCity_PokemonCenter_Text_TakeCare:
 	.string "¡Muchas gracias!\n"
 	.string "¡Cuida mucho a mi {STR_VAR_1}!$"
 
 PewterCity_PokemonCenter_Text_DeclineTrade:
-	.string "¿No? Qué lástima…\n
-Creo que te gustaría mi HAUNTER.$"
+	.string "¿No? Qué lástima…\nCreo que te gustaría mi HAUNTER.$"
 
 PewterCity_PokemonCenter_Text_NotRequestedMon:
-	.string "Mmm, eso no es un {STR_VAR_1}.\n
-Eso no es lo que busco.$"
+	.string "Mmm, eso no es un {STR_VAR_1}.\nEso no es lo que busco.$"
 
 PewterCity_PokemonCenter_Text_TradeCompleted:
-	.string "¿Qué tal te trata ese HAUNTER?\n
-¡Es un verdadero travieso!$"
+	.string "¿Qué tal te trata ese HAUNTER?\n¡Es un verdadero travieso!$"
 
 PewterCity_PokemonCenter1F_Text_BugCatcher:
 	.string "La mayoría de POKéMON se duermen si\n"

@@ -6,9 +6,7 @@ Route50_EventScript_BlackBelt1::
 	end
 
 Route50_Text_BlackBelt1::
-	.string "El cuerpo debe endurecerse\n
-y la mente fortalecerse\l
-¡en las condiciones más duras!$"
+	.string "El cuerpo debe endurecerse\ny la mente fortalecerse\l¡en las condiciones más duras!$"
     .string "y la mente fortalecerse\l"
     .string "¡en las peores condiciones!$"
 
@@ -62,16 +60,13 @@ Route50_Text_WesselBefore:
     .string "¡Debo recolectar más datos!$"
 
 Route50_Text_WesselBeforeBattle:
-	.string "¿Quieres esta TABLA?\n
-¡Pero aún no la he analizado!\p
-Está bien, lucharemos por ella.$"
+	.string "¿Quieres esta TABLA?\n¡Pero aún no la he analizado!\pEstá bien, lucharemos por ella.$"
 
 Route50_Text_WesselDefeat:
 	.string "Mi hipótesis era errónea...$"
 
 Route50_Text_WesselAfter:
-	.string "Toma la TABLA. No quiero\n
-hablar de esto.$"
+	.string "Toma la TABLA. No quiero\nhablar de esto.$"
 
 Route50_EventScript_Finley::
 	goto_if_defeated TRAINER_FINLEY_HNS, Route50_EventScript_FinleyAfter
@@ -101,19 +96,7 @@ Route50_EventScript_FinleyAfter::
 	end
 
 Route50_Text_FinleyBefore:
-	.string "¿Cómo te están tratando\n
-los aldeanos?\p
-Pueden ser muy poco amables\n
-con los extraños.\p
-Pero conocer gente nueva es\n
-una de las mayores alegrías.\p
-Algún día, espero conocer al\n
-CAMPEÓN LANCE.\p
-Es un legendario domador\n
-de dragones, igual que yo.\l
-¿Quién soy?\p
-Bueno, soy FINLEY, el guardián\n
-de la TABLA DRACO.$"
+	.string "¿Cómo te están tratando\nlos aldeanos?\pPueden ser muy poco amables\ncon los extraños.\pPero conocer gente nueva es\nuna de las mayores alegrías.\pAlgún día, espero conocer al\nCAMPEÓN LANCE.\pEs un legendario domador\nde dragones, igual que yo.\l¿Quién soy?\pBueno, soy FINLEY, el guardián\nde la TABLA DRACO.$"
     .string "contigo?\p"
     .string "Pueden ser muy hostiles con\n"
     .string "desconocidos.\p"
@@ -128,17 +111,13 @@ de la TABLA DRACO.$"
     .string "PLACA DRACO.$"
 
 Route50_Text_FinleyBeforeBattle:
-	.string "Sé que los KIMONO te enviaron\n
-a reunir estas TABLAS.\p
-Dicen que eres digno...\n
-¿Pero puedes vencer a mis dragones?$"
+	.string "Sé que los KIMONO te enviaron\na reunir estas TABLAS.\pDicen que eres digno...\n¿Pero puedes vencer a mis dragones?$"
 
 Route50_Text_FinleyDefeat:
 	.string "Mis dragones lucharon bien.$"
 
 Route50_Text_FinleyAfter:
-	.string "Quizá seas lo bastante fuerte\n
-para vencer a LANCE...$"
+	.string "Quizá seas lo bastante fuerte\npara vencer a LANCE...$"
 
 Route50_EventScript_Item_ULtraBall::
     finditem ITEM_ULTRA_BALL

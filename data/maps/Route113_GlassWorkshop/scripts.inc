@@ -293,50 +293,28 @@ Route113_GlassWorkshop_EventScript_NinjaBoy::
 	end
 
 Route113_GlassWorkshop_Text_GoCollectAshWithThis:
-	.string "Aquí todo está cubierto de ceniza,\n
-¡puf-puf!\p
-Tengo un don especial, puf-puf.\p
-Hago cristal con la ceniza volcánica\n
-y fabrico objetos, puf-puf.\p
-Recoge ceniza con esto, puf-puf.$"
+	.string "Aquí todo está cubierto de ceniza,\n¡puf-puf!\pTengo un don especial, puf-puf.\pHago cristal con la ceniza volcánica\ny fabrico objetos, puf-puf.\pRecoge ceniza con esto, puf-puf.$"
 
 Route113_GlassWorkshop_Text_ExplainSootSack:
-	.string "Solo toma ese SACO HOLLÍN y camina\n
-entre montones de ceniza, puf-puf.\p
-Y se llenará con la ceniza volcánica,\n
-puf-puf.\p
-Cuando ya tengas una buena\n
-cantidad, ven a verme, puf-puf.$"
+	.string "Solo toma ese SACO HOLLÍN y camina\nentre montones de ceniza, puf-puf.\pY se llenará con la ceniza volcánica,\npuf-puf.\pCuando ya tengas una buena\ncantidad, ven a verme, puf-puf.$"
 
 Route113_GlassWorkshop_Text_LetsSeeCollectedAshes:
-	.string "¿Ya recogiste ceniza, puf-puf?\n
-Déjame ver, puf-puf.$"
+	.string "¿Ya recogiste ceniza, puf-puf?\nDéjame ver, puf-puf.$"
 
 Route113_GlassWorkshop_Text_NotEnoughAshNeedX:
-	.string "Mmm...\n
-Aquí no hay bastante ceniza, puf-puf.\l
-No puedo hacer cristal, puf-puf.\p
-A ver... {STR_VAR_1} son los pasos\n
-que debes caminar para que te haga\l
-una FLAUTA AZUL, puf-puf.$"
+	.string "Mmm...\nAquí no hay bastante ceniza, puf-puf.\lNo puedo hacer cristal, puf-puf.\pA ver... {STR_VAR_1} son los pasos\nque debes caminar para que te haga\luna FLAUTA AZUL, puf-puf.$"
 
 Route113_GlassWorkshop_Text_WhichGlassItemWoudYouLike:
-	.string "¡Oh!\n
-¡Tienes mucha ceniza, puf-puf!\p
-¡Te haré uno de cristal, puf-puf!\n
-¿Cuál quieres, puf-puf?$"
+	.string "¡Oh!\n¡Tienes mucha ceniza, puf-puf!\p¡Te haré uno de cristal, puf-puf!\n¿Cuál quieres, puf-puf?$"
 
 Route113_GlassWorkshop_Text_IsThatTheItemForYou:
-	.string "¿Un {STR_VAR_1}, puf-puf?\n
-¿Es ese el que quieres, puf-puf?$"
+	.string "¿Un {STR_VAR_1}, puf-puf?\n¿Es ese el que quieres, puf-puf?$"
 
 Route113_GlassWorkshop_Text_WhichWouldYouLike:
 	.string "¿Cuál te gustaría, puf-puf?$"
 
 Route113_GlassWorkshop_Text_IllMakeItemForYou:
-	.string "Un {STR_VAR_1}, entonces, puf-puf!\p
-¡Bien! Te lo haré, puf-puf.\n
-Espera un momento, puf-puf.$"
+	.string "Un {STR_VAR_1}, entonces, puf-puf!\p¡Bien! Te lo haré, puf-puf.\nEspera un momento, puf-puf.$"
 
 Route113_GlassWorkshop_Text_NotEnoughAshToMakeItem:
 	.string "¿Un {STR_VAR_1}, uf, uf?\p"

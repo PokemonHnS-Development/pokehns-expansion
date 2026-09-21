@@ -357,8 +357,7 @@ Route32_Movement_SlowpokeRight::
 	step_end
 
 Route32_Text_CooltrainerM_WhatsTheHurry:
-	.string "¡Espera!\n
-¿Por qué la prisa?$"
+	.string "¡Espera!\n¿Por qué la prisa?$"
 
 Route32_Text_CooltrainerM_AideIsWaiting:
 	.string "{PLAYER}, ¿verdad?\n"
@@ -368,11 +367,7 @@ Route32_Text_CooltrainerM_AideIsWaiting:
 	.string "en el CENTRO POKéMON.$"
 
 Route32_Text_CooltrainerM_SproutTower:
-	.string "¿Has ido a la TORRE BELLSPROUT?\n
-Si alguna vez visitas CIUDAD MALVA,\p
-esperarán que entrenes allí.\n
-Eso es básico para los entrenadores.\p
-¡Ve a la TORRE BELLSPROUT!$"
+	.string "¿Has ido a la TORRE BELLSPROUT?\nSi alguna vez visitas CIUDAD MALVA,\pesperarán que entrenes allí.\nEso es básico para los entrenadores.\p¡Ve a la TORRE BELLSPROUT!$"
 
 Route32_Text_CooltrainerM_VioletGym:
 	.string "¿Fuiste al GIMNASIO POKéMON?\n"

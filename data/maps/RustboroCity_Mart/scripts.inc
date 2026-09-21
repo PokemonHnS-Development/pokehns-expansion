@@ -65,10 +65,7 @@ RustboroCity_Mart_EventScript_BugCatcher::
 	end
 
 RustboroCity_Mart_Text_BuyingHealsInCaseOfShroomish:
-	.string "Estoy comprando ANTIPARÁLISIS y\n
-ANTÍDOTOS.\p
-Por si me encuentro con SHROOMISH\n
-en el BOSQUE PETALIA.$"
+	.string "Estoy comprando ANTIPARÁLISIS y\nANTÍDOTOS.\pPor si me encuentro con SHROOMISH\nen el BOSQUE PETALIA.$"
 
 RustboroCity_Mart_Text_ShouldBuySuperPotionsInstead:
 	.string "Mi POKéMON evolucionó.\n"
@@ -77,8 +74,5 @@ RustboroCity_Mart_Text_ShouldBuySuperPotionsInstead:
 	.string "en vez de POCIONES comunes.$"
 
 RustboroCity_Mart_Text_GettingEscapeRopeJustInCase:
-	.string "Voy a comprar una CUERDA HUIDA\n
-por si me pierdo en una cueva.\p
-Solo tengo que usarla para volver\n
-a la entrada.$"
+	.string "Voy a comprar una CUERDA HUIDA\npor si me pierdo en una cueva.\pSolo tengo que usarla para volver\na la entrada.$"
 

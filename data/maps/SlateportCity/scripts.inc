@@ -1207,16 +1207,10 @@ SlateportCity_Text_SternsShipyardWantedSign:
 	.string "en todas las corrientes.”$"
 
 SlateportCity_Text_SternsShipyardNearsCompletion:
-	.string "ASTILLERO DE STERN\p
-“El transbordador S.S. TIDAL está\n
-por terminarse; dará servicio a\l
-CIUDAD PORTUAL y CIUDAD CALAGUA.”$"
+	.string "ASTILLERO DE STERN\p“El transbordador S.S. TIDAL está\npor terminarse; dará servicio a\lCIUDAD PORTUAL y CIUDAD CALAGUA.”$"
 
 SlateportCity_Text_SternsShipyardFerryComplete:
-	.string "ASTILLERO DE STERN\p
-“El embarque del ferry S.S. TIDAL\n
-entre CIUDAD PORTUAL y CALAGUA\l
-se hace en el PUERTO.”$"
+	.string "ASTILLERO DE STERN\p“El embarque del ferry S.S. TIDAL\nentre CIUDAD PORTUAL y CALAGUA\lse hace en el PUERTO.”$"
 
 SlateportCity_Text_PokemonFanClubSign:
 	.string "CLUB DE FANS POKéMON\n"
@@ -1279,45 +1273,28 @@ SlateportCity_Text_ExplainBerryPowder:
 	.string "si me traes mucho POLVO BAYA.$"
 
 SlateportCity_Text_BroughtMeSomeBerryPowder:
-	.string "¿Me has traído algo de\n
-POLVO DE BAYA?$"
+	.string "¿Me has traído algo de\nPOLVO DE BAYA?$"
 
 SlateportCity_Text_ExchangeWhatWithIt:
-	.string "¿Por cuál objeto lo quieres\n
-cambiar?$"
+	.string "¿Por cuál objeto lo quieres\ncambiar?$"
 
 SlateportCity_Text_ExchangeBerryPowderForItem:
-	.string "Está bien, ¿quieres cambiar tu\n
-POLVO DE BAYA por un {STR_VAR_1}?$"
+	.string "Está bien, ¿quieres cambiar tu\nPOLVO DE BAYA por un {STR_VAR_1}?$"
 
 SlateportCity_Text_DontHaveEnoughBerryPowder:
-	.string "Ah, vaya. No tienes suficiente\n
-POLVO DE BAYA.$"
+	.string "Ah, vaya. No tienes suficiente\nPOLVO DE BAYA.$"
 
 SlateportCity_Text_FineBerryPowderTradeSomethingElse:
-	.string "Este POLVO DE BAYA es muy bueno.\n
-Servirá para hacer gran medicina.\p
-¿Quieres cambiar más de tu\n
-POLVO DE BAYA por otra cosa?$"
+	.string "Este POLVO DE BAYA es muy bueno.\nServirá para hacer gran medicina.\p¿Quieres cambiar más de tu\nPOLVO DE BAYA por otra cosa?$"
 
 SlateportCity_Text_WhenYouGetMoreBringItToMe:
-	.string "¡Está bien! Cuando tengas más\n
-POLVO DE BAYA, tráemelo, ¡por favor!$"
+	.string "¡Está bien! Cuando tengas más\nPOLVO DE BAYA, tráemelo, ¡por favor!$"
 
 SlateportCity_Text_ComeBackToTradeBerryPowder:
-	.string "Regresa si quieres cambiar tu\n
-POLVO DE BAYA por medicina.\p
-Siempre tengo un bazar aquí.\p
-¿Lo sabías?$"
+	.string "Regresa si quieres cambiar tu\nPOLVO DE BAYA por medicina.\pSiempre tengo un bazar aquí.\p¿Lo sabías?$"
 
 SlateportCity_Text_YouDroveTeamAquaAway:
-	.string "SCOTT: ¿Eh?\n
-Seguro que te vi antes en algún lado.\p
-¿Ya me presenté contigo?\n
-Si no, me llamo SCOTT.\p
-Acabo de ver al EQUIPO AQUA huir de\n
-aquí como si los hubieran picado.\p
-Déjame adivinar: ¿los ahuyentaste?$"
+	.string "SCOTT: ¿Eh?\nSeguro que te vi antes en algún lado.\p¿Ya me presenté contigo?\nSi no, me llamo SCOTT.\pAcabo de ver al EQUIPO AQUA huir de\naquí como si los hubieran picado.\pDéjame adivinar: ¿los ahuyentaste?$"
 
 SlateportCity_Text_MaybeThisTrainer:
 	.string "SCOTT: Hmm...\n"
@@ -1335,20 +1312,7 @@ SlateportCity_Text_RegisteredScott:
 	.string "en el POKéNAV.$"
 
 SlateportCity_Text_KeepEyeOnTrainersBeSeeingYou:
-	.string "SCOTT: Me gustaría ir contigo,\n
-pero también quiero echar un ojo\l
-al talento de los demás.\p
-Así que me iré a recorrer otros\n
-pueblos un rato más.\p
-¡Nos vemos, {PLAYER}{KUN}!$"
+	.string "SCOTT: Me gustaría ir contigo,\npero también quiero echar un ojo\lal talento de los demás.\pAsí que me iré a recorrer otros\npueblos un rato más.\p¡Nos vemos, {PLAYER}{KUN}!$"
 
 SlateportCity_Text_TakingBattleTentChallenge:
-	.string "SCOTT: ¡Ah, hola!\n
-¡Pero si eres {PLAYER}{KUN}!\p
-{PLAYER}{KUN}, déjame adivinar: ¿vas\n
-a participar en la CARPA BATALLA?\p
-¡Sí! ¡Qué buena idea!\n
-¡Es una idea buenísima!\p
-Después de todo, un ENTRENADOR\n
-duro encaja en la CARPA BATALLA!\p
-¡Da lo mejor de ti!$"
+	.string "SCOTT: ¡Ah, hola!\n¡Pero si eres {PLAYER}{KUN}!\p{PLAYER}{KUN}, déjame adivinar: ¿vas\na participar en la CARPA BATALLA?\p¡Sí! ¡Qué buena idea!\n¡Es una idea buenísima!\pDespués de todo, un ENTRENADOR\nduro encaja en la CARPA BATALLA!\p¡Da lo mejor de ti!$"

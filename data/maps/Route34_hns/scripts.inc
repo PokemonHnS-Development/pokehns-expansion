@@ -142,8 +142,7 @@ Route34_Text_YoungsterIan_Beaten:
 	.string "¡No! Hay entrenadores mejores…$"
 
 Route34_Text_YoungsterIan_After:
-	.string "Me esfuerzo mucho para ser\n
-la estrella de mi clase.$"
+	.string "Me esfuerzo mucho para ser\nla estrella de mi clase.$"
 
 Route34_Text_CamperTodd_Seen:
 	.string "Confío en mi habilidad para\n"

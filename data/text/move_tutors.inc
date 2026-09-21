@@ -159,9 +159,7 @@ MoveTutor_Text_SubstituteWhichMon:
 	.string "¿Enseñar SUSTITUTO?$"
 
 MoveTutor_Text_SubstituteTaught:
-	.string "Los humanos deberíamos disfrutar\n
-nuestra propia vida al máximo!\p
-¡Espero que tú también lo hagas!$"
+	.string "Los humanos deberíamos disfrutar\nnuestra propia vida al máximo!\p¡Espero que tú también lo hagas!$"
 
 MoveTutor_Text_DynamicPunchTeach:
 	.string "¡Ya no puedo más!\p"
@@ -177,16 +175,14 @@ MoveTutor_Text_DynamicPunchTeach:
 	.string "POKéMON GOLPE DINÁMICO?$"
 
 MoveTutor_Text_DynamicPunchDeclined:
-	.string "¡Rayos! ¿Y encima te burlas de mí?\n
-¡Pum! ¡Pum! ¡Pum!$"
+	.string "¡Rayos! ¿Y encima te burlas de mí?\n¡Pum! ¡Pum! ¡Pum!$"
 
 MoveTutor_Text_DynamicPunchWhichMon:
 	.string "¿Qué? ¿En serio? ¡Eres muy bueno!\n"
 	.string "¿A qué POKéMON se lo enseño?$"
 
 MoveTutor_Text_DynamicPunchTaught:
-	.string "Quiero que ganes en el GIMNASIO DE\n
-CIUDAD CELESTE usando PUÑO DINÁMICO!$"
+	.string "Quiero que ganes en el GIMNASIO DE\nCIUDAD CELESTE usando PUÑO DINÁMICO!$"
 
 MoveTutor_Text_DoubleEdgeTeach:
 	.string "Suspiro...\p"

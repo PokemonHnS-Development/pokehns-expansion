@@ -74,8 +74,7 @@ FourIsland_House2_Text_WowHoFHighest::
 	.string "Ya basta, tengo que darte esto.$"
 
 FourIsland_House2_Text_HoFStickerApplied::
-	.string "La PEGATINA del SALÓN DE LA FAMA\n
-se puso en la TARJETA DE ENTRENADOR.$"
+	.string "La PEGATINA del SALÓN DE LA FAMA\nse puso en la TARJETA DE ENTRENADOR.$"
 
 FourIsland_House2_Text_ComeBackWithBetterStoryHoF::
 	.string "Hmm…\p"
@@ -145,16 +144,10 @@ FourIsland_House2_Text_WowLinkWinsHigh::
 	.string "Te daré una de estas.$"
 
 FourIsland_House2_Text_WowLinkWinsHighest::
-	.string "¿Q… Qué barbaridad!\n
-¡Has ganado muchísimas veces!\p
-Me deja alucinado pensar\n
-en lo fuerte que eres.\p
-¡Eres la pesadilla hecha realidad!\n
-Ya basta, tengo que darte esto.$"
+	.string "¿Q… Qué barbaridad!\n¡Has ganado muchísimas veces!\pMe deja alucinado pensar\nen lo fuerte que eres.\p¡Eres la pesadilla hecha realidad!\nYa basta, tengo que darte esto.$"
 
 FourIsland_House2_Text_VictoryStickerApplied::
-	.string "La PEGATINA DE VICTORIA se puso\n
-en la TARJETA DE ENTRENADOR.$"
+	.string "La PEGATINA DE VICTORIA se puso\nen la TARJETA DE ENTRENADOR.$"
 
 FourIsland_House2_Text_ComeBackWithBetterStoryLinkWins::
 	.string "Hmm…\p"

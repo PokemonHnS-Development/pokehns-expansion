@@ -63,12 +63,7 @@ SlateportCity_SternsShipyard_1F_EventScript_Briney::
 	end
 
 SlateportCity_SternsShipyard_1F_Text_CantMakeHeadsOrTails:
-	.string "Mmm... Si esto va aquí, y eso\n
-va allá...\p
-¿Y dónde va esta cosa?\n
-¿Y qué hay de ese trasto?\p
-¡Aaargh! ¡No le encuentro\n
-ni pies ni cabeza!$"
+	.string "Mmm... Si esto va aquí, y eso\nva allá...\p¿Y dónde va esta cosa?\n¿Y qué hay de ese trasto?\p¡Aaargh! ¡No le encuentro\nni pies ni cabeza!$"
 
 SlateportCity_SternsShipyard_1F_Text_MeetDockDeliverToStern:
 	.string "Hm?\n"
@@ -113,19 +108,7 @@ SlateportCity_SternsShipyard_1F_Text_FerryIsReady:
 	.string "el avance tecnológico.$"
 
 SlateportCity_SternsShipyard_1F_Text_DecidedToHelpDock:
-	.string "SR. BRINEY: ¡Ah, {PLAYER}{KUN}!\n
-¡Cuánto tiempo sin verte!\p
-Ay, desde que te conocí, este viejo\n
-lobo de mar se siente muy vivo!\p
-Así que decidí ayudar a DOCK a\n
-construir un transbordador.\p
-Ay, al final, un transbordador\n
-podría llevar a mucha gente.\p
-Pero, ¿sabes? Ese DOCK es\n
-algo muy especial.\p
-Con su don para la tecnología y\n
-por mi experiencia, estoy seguro\l
-de que haremos un gran barco!$"
+	.string "SR. BRINEY: ¡Ah, {PLAYER}{KUN}!\n¡Cuánto tiempo sin verte!\pAy, desde que te conocí, este viejo\nlobo de mar se siente muy vivo!\pAsí que decidí ayudar a DOCK a\nconstruir un transbordador.\pAy, al final, un transbordador\npodría llevar a mucha gente.\pPero, ¿sabes? Ese DOCK es\nalgo muy especial.\pCon su don para la tecnología y\npor mi experiencia, estoy seguro\lde que haremos un gran barco!$"
 
 SlateportCity_SternsShipyard_1F_Text_SeaIsLikeLivingThing:
 	.string "Las estaciones, el clima, donde\n"

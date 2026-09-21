@@ -320,26 +320,13 @@ SaffronMagnetTrainStation_Text_Officer_TrainNotOperating:
 	.string "no está funcionando ahora.$"
 
 SaffronMagnetTrainStation_Text_GymGuide:
-	.string "El MAGNET TRAIN es un tren\n
-súper moderno que funciona con\p
-electricidad e imanes para alcanzar\n
-una velocidad increíble.\p
-Sin embargo, si no hay\n
-electricidad…$"
+	.string "El MAGNET TRAIN es un tren\nsúper moderno que funciona con\pelectricidad e imanes para alcanzar\nuna velocidad increíble.\pSin embargo, si no hay\nelectricidad…$"
 
 SaffronMagnetTrainStation_Text_GymGuide_ReturnedPart:
-	.string "Uff...\p
-¿Cuántas veces he ido y venido\n
-entre KANTO y JOHTO?$"
+	.string "Uff...\p¿Cuántas veces he ido y venido\nentre KANTO y JOHTO?$"
 
 SaffronMagnetTrainStation_Text_Teacher:
-	.string "Antes de construir la ESTACIÓN\n
-del MAGNET TRAIN, había una casa.\p
-Una niña llamada COPYCAT solía\n
-vivir ahí.$"
+	.string "Antes de construir la ESTACIÓN\ndel MAGNET TRAIN, había una casa.\pUna niña llamada COPYCAT solía\nvivir ahí.$"
 
 SaffronMagnetTrainStation_Text_Lass:
-	.string "Hola. ¿Tienes un PASE de tren?\n
-Yo tengo uno.\p
-Toda la gente de AZAFRÁN que\n
-usa el MAGNET TRAIN tiene PASE.$"
+	.string "Hola. ¿Tienes un PASE de tren?\nYo tengo uno.\pToda la gente de AZAFRÁN que\nusa el MAGNET TRAIN tiene PASE.$"

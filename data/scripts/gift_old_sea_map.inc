@@ -42,17 +42,10 @@ sText_MysteryGiftOldSeaMapForYou:
 	.string "dirigido a ti.$"
 
 sText_MysteryGiftOldSeaMapUseAtPort:
-	.string "Parece que sirve para el\n
-puerto de CIUDAD CALAGUA.\p
-¿Y si lo pruebas para ver\n
-de qué se trata?$"
+	.string "Parece que sirve para el\npuerto de CIUDAD CALAGUA.\p¿Y si lo pruebas para ver\nde qué se trata?$"
 
 sText_MysteryGiftOldSeaMapThankYou:
-	.string "Gracias por usar el sistema\n
-de REGALO MISTERIOSO.$"
+	.string "Gracias por usar el sistema\nde REGALO MISTERIOSO.$"
 
 sText_MysteryGiftOldSeaMapBagFull:
-	.string "Ah, lo siento, {PLAYER}.\n
-Se llenó tu BOLSILLO DE OBJETOS CLAVE.\p
-Guarda algo en tu PC,\n
-y luego vuelve por esto.$"
+	.string "Ah, lo siento, {PLAYER}.\nSe llenó tu BOLSILLO DE OBJETOS CLAVE.\pGuarda algo en tu PC,\ny luego vuelve por esto.$"

@@ -316,11 +316,7 @@ SlateportCity_PokemonFanClub_Text_NoSpaceForReward:
 	.string "en tu MOCHILA para esto.$"
 
 SlateportCity_PokemonFanClub_Text_MonMostImpressiveGiveItThis:
-	.string "Tu {STR_VAR_1} está creciendo\n
-de forma impresionante!\l
-¡Es un ejemplar magnífico!\p
-¡Pero! Si le dieras esto,\n
-crecería aún mejor! ¡Vaya!$"
+	.string "Tu {STR_VAR_1} está creciendo\nde forma impresionante!\l¡Es un ejemplar magnífico!\p¡Pero! Si le dieras esto,\ncrecería aún mejor! ¡Vaya!$"
 
 SlateportCity_PokemonFanClub_Text_ExplainRedScarf:
 	.string "Que un POKéMON lleve el PAÑUELO ROJO.\p"

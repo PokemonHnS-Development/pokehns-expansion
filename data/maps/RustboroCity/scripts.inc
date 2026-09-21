@@ -1015,15 +1015,10 @@ RustboroCity_EventScript_Boy1::
 	end
 
 RustboroCity_Text_WeShortenItToDevon:
-	.string "La CORPORACIÓN DEVON…\n
-Todos le decimos DEVON.\p
-Esa empresa fabrica todo tipo\n
-de productos prácticos.$"
+	.string "La CORPORACIÓN DEVON…\nTodos le decimos DEVON.\pEsa empresa fabrica todo tipo\nde productos prácticos.$"
 
 RustboroCity_Text_SneakyLookingManWentAroundCorner:
-	.string "¿Mmm? ¿Un hombre sospechoso?\p
-Ahora que lo pienso, sí, un tipo\n
-de aspecto turbio dobló la esquina.$"
+	.string "¿Mmm? ¿Un hombre sospechoso?\pAhora que lo pienso, sí, un tipo\nde aspecto turbio dobló la esquina.$"
 
 RustboroCity_Text_HaveYouChallengedGym:
 	.string "¿Ya fuiste al GIMNASIO POKéMON?\n"
@@ -1202,8 +1197,7 @@ RustboroCity_Text_BrendanNoConfidenceInPokemon:
 	.string "confianza en tus POKéMON?$"
 
 RustboroCity_Text_BrendanWantToBattle:
-	.string "BRENDAN: ¿Qué pasa?\n
-¿Quieres batallar conmigo?$"
+	.string "BRENDAN: ¿Qué pasa?\n¿Quieres batallar conmigo?$"
 
 RustboroCity_Text_BrendanIWontGoEasy:
 	.string "BRENDAN: Sé que acabas de ser\n"

@@ -140,19 +140,16 @@ Route39_Barn_EventScript_TwinsAfter::
 	end
 
 Route39_Text_BarnTwinMoomooIsSick:
-	.string "MOOMOO está enferma…\p
-Necesita muchas BAYAS ORAN.$"
+	.string "MOOMOO está enferma…\pNecesita muchas BAYAS ORAN.$"
 
 Route39_Text_BarnTwinFeedingMoomoo:
-	.string "¡MOOMOO ya está mejor!\n
-¡Gracias!$"
+	.string "¡MOOMOO ya está mejor!\n¡Gracias!$"
 
 Route39_Text_MoomooWeakMoo:
 	.string "MILTANK: …Moo…$"
 
 Route39_Text_BarnCryIsWeak:
-	.string "Su llanto es débil…\n
-¿Le das una BAYA ORAN a MILTANK?$"
+	.string "Su llanto es débil…\n¿Le das una BAYA ORAN a MILTANK?$"
 
 Route39_Text_MoomooHappyMoo:
 	.string "MILTANK: Mooo!$"

@@ -261,28 +261,13 @@ MatchCall_HNS_Gina_Battle::
 
 @ Irwin - Juggler, Route 35
 MatchCall_HNS_Irwin_General1::
-	.string "¿Hola, {PLAYER}?\n
-¡Soy tu amigo, IRWIN!\p
-¡El otro día vi una\n
-batalla increíble!\p
-Ojalá pudiera luchar\n
-así.\p
-¡Ah, espera, sí puedo!\n
-¡Solo necesito un rival!$"
+	.string "¿Hola, {PLAYER}?\n¡Soy tu amigo, IRWIN!\p¡El otro día vi una\nbatalla increíble!\pOjalá pudiera luchar\nasí.\p¡Ah, espera, sí puedo!\n¡Solo necesito un rival!$"
 
 MatchCall_HNS_Irwin_General2::
-	.string "¿Hola, {PLAYER}?\n
-¡Soy tu amigo, IRWIN!\p
-Jeje, ¡llamé enseguida!\p
-¡Creo que podemos ser\n
-buenos amigos!$"
+	.string "¿Hola, {PLAYER}?\n¡Soy tu amigo, IRWIN!\pJeje, ¡llamé enseguida!\p¡Creo que podemos ser\nbuenos amigos!$"
 
 MatchCall_HNS_Irwin_General3::
-	.string "¿Hola, {PLAYER}?\n
-¡Soy tu amigo, IRWIN!\p
-¡Oír de tus aventuras\n
-me llega al alma!\p
-¡Vaya que sí!$"
+	.string "¿Hola, {PLAYER}?\n¡Soy tu amigo, IRWIN!\p¡Oír de tus aventuras\nme llega al alma!\p¡Vaya que sí!$"
 
 MatchCall_HNS_Irwin_Battle::
 	.string "Eh, ¿hola, {PLAYER}?\n"
@@ -1107,9 +1092,7 @@ MatchCall_HNS_Trevor_Battle::
 
 @ Kyle - Fisherman, Route 12
 MatchCall_HNS_Kyle_General1::
-	.string "¿Quién habla?!\n
-¿Yo te llamé?\p
-Soy KYLE. ¡No lo olvides!$"
+	.string "¿Quién habla?!\n¿Yo te llamé?\pSoy KYLE. ¡No lo olvides!$"
 
 MatchCall_HNS_Kyle_General2::
 	.string "¡Oye, {PLAYER}!\p"
@@ -1150,14 +1133,10 @@ MatchCall_HNS_Carter_Battle::
 
 @ Hillary - Expert, Route 15
 MatchCall_HNS_Hillary_General1::
-	.string "Hola, {PLAYER}.\n
-Soy la MAESTRA HILLARY.\p
-¿Por qué no estás en la escuela?$"
+	.string "Hola, {PLAYER}.\nSoy la MAESTRA HILLARY.\p¿Por qué no estás en la escuela?$"
 
 MatchCall_HNS_Hillary_General2::
-	.string "Hola, {PLAYER}.\p
-¿Estás jugando en vez\n
-de hacer la tarea?$"
+	.string "Hola, {PLAYER}.\p¿Estás jugando en vez\nde hacer la tarea?$"
 
 MatchCall_HNS_Hillary_Battle::
 	.string "Hola, {PLAYER}.\n"

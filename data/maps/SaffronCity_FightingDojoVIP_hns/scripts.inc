@@ -718,9 +718,7 @@ SaffronCity_FightingDojoVIP_Text_Falkner_Rematch:
 	.string "poder del cielo otra vez?$"
 
 SaffronCity_FightingDojoVIP_Text_Falkner_RematchDefeat:
-	.string "Vaya… Me venciste otra vez.\p
-Voy a entrenar más duro\n
-¡para ser el mejor maestro de aves!$"
+	.string "Vaya… Me venciste otra vez.\pVoy a entrenar más duro\n¡para ser el mejor maestro de aves!$"
 
 SaffronCity_FightingDojoVIP_Text_Bugsy_Rematch:
 	.string "¡Vaya, ahora eres el\n"
@@ -732,10 +730,7 @@ SaffronCity_FightingDojoVIP_Text_Bugsy_Rematch:
 	.string "¿Quieres otra revancha conmigo?$"
 
 SaffronCity_FightingDojoVIP_Text_Bugsy_RematchDefeat:
-	.string "Vaya, debes ser un experto\n
-ENTRENADOR.\p
-Mi investigación no debe\n
-estar completa…$"
+	.string "Vaya, debes ser un experto\nENTRENADOR.\pMi investigación no debe\nestar completa…$"
 
 SaffronCity_FightingDojoVIP_Text_Whitney_Rematch:
 	.string "¡Hola! ¡Eres tú!\p"
@@ -762,10 +757,7 @@ SaffronCity_FightingDojoVIP_Text_Morty_Rematch:
 	.string "¿Quieres otra revancha conmigo?$"
 
 SaffronCity_FightingDojoVIP_Text_Morty_RematchDefeat:
-	.string "Aún no soy lo bastante bueno…\p
-Has visto mucho más\n
-que yo.\p
-Te envidio por eso…$"
+	.string "Aún no soy lo bastante bueno…\pHas visto mucho más\nque yo.\pTe envidio por eso…$"
 
 SaffronCity_FightingDojoVIP_Text_Chuck_Rematch:
 	.string "¡JAJAJA! ¡CAMPEÓN DE JOHTO!\p"
@@ -785,9 +777,7 @@ SaffronCity_FightingDojoVIP_Text_Jasmine_Rematch:
 	.string "¿Quieres otra revancha conmigo?$"
 
 SaffronCity_FightingDojoVIP_Text_Jasmine_RematchDefeat:
-	.string "…Eres mejor entrenador que\n
-yo,\p
-en habilidad y bondad.$"
+	.string "…Eres mejor entrenador que\nyo,\pen habilidad y bondad.$"
 
 SaffronCity_FightingDojoVIP_Text_Pryce_Rematch:
 	.string "¡Ah, CAMPEÓN DE JOHTO!\p"
@@ -801,11 +791,7 @@ SaffronCity_FightingDojoVIP_Text_Pryce_Rematch:
 	.string "¿Quieres otra revancha conmigo?$"
 
 SaffronCity_FightingDojoVIP_Text_Pryce_RematchDefeat:
-	.string "Ah, otra vez me impresiona\n
-tu destreza.\p
-Con tu fuerte voluntad, sé\n
-que superarás todos los\l
-obstáculos de la vida.$"
+	.string "Ah, otra vez me impresiona\ntu destreza.\pCon tu fuerte voluntad, sé\nque superarás todos los\lobstáculos de la vida.$"
 
 SaffronCity_FightingDojoVIP_Text_Clair_Rematch:
 	.string "Lo lograste, ¿eh?\p"

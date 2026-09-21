@@ -366,16 +366,7 @@ VerdanturfTown_BattleTentLobby_Text_TaughtWhatKindsOfMoves:
 	.string "curarse o protegerse.$"
 
 VerdanturfTown_BattleTentLobby_Text_ScottCanMeetToughTrainers:
-	.string "SCOTT: ¡Hola, {PLAYER}{KUN}!\n
-Pensé que te vería por aquí.\p
-En una CARPA DE COMBATE conoces\n
-a ENTRENADORES fuertes.\p
-No importan las reglas,\n
-ni cómo se libran los combates.\p
-{PLAYER}{KUN}, ¡espero que des\n
-lo mejor de ti!$"
+	.string "SCOTT: ¡Hola, {PLAYER}{KUN}!\nPensé que te vería por aquí.\pEn una CARPA DE COMBATE conoces\na ENTRENADORES fuertes.\pNo importan las reglas,\nni cómo se libran los combates.\p{PLAYER}{KUN}, ¡espero que des\nlo mejor de ti!$"
 
 VerdanturfTown_BattleTentLobby_Text_ScottVisitRegularly:
-	.string "SCOTT: Vengo seguido con la esperanza\n
-de ver a ENTRENADORES duros\l
-en cualquier situación.$"
+	.string "SCOTT: Vengo seguido con la esperanza\nde ver a ENTRENADORES duros\len cualquier situación.$"

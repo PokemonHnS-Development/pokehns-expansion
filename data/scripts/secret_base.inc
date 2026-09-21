@@ -711,8 +711,7 @@ SecretBase_Text_RegistryInfo:
 	.string "ubicaciones de SECRET BASE.$"
 
 SecretBase_Text_BattleTowerShield:
-	.string "Un escudo de {STR_VAR_2} que marca\n
-{STR_VAR_1} veces seguidas en la TORRE BATALLA.$"
+	.string "Un escudo de {STR_VAR_2} que marca\n{STR_VAR_1} veces seguidas en la TORRE BATALLA.$"
 
 SecretBase_Text_ToyTV:
 	.string "Una TV de juguete realista. Podría\n"

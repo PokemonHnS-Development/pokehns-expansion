@@ -845,8 +845,7 @@ MtChimney_Text_SawyerRematchIntro:
 	.string "por estos rumbos. ¡No perderé!$"
 
 MtChimney_Text_SawyerRematchDefeat:
-	.string "Vaya, aún eres la misma\n
-tan impulsiva como antes!$"
+	.string "Vaya, aún eres la misma\ntan impulsiva como antes!$"
 
 MtChimney_Text_SawyerPostRematch:
 	.string "La verdad es que hace calor aquí.\n"

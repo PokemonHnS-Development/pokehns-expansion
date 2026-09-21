@@ -857,53 +857,28 @@ Route110_Text_CyclingChallengeResultSummary:
 	.string "… … {STR_VAR_2}!$"
 
 Route110_Text_ChallengeReactionBest:
-	.string "¡Bravo! ¡Magnífica demostración!\p
-Tu amor por la bici nace en lo\n
-más profundo de tu corazón.\l
-¡Me has conmovido hasta el alma!$"
+	.string "¡Bravo! ¡Magnífica demostración!\pTu amor por la bici nace en lo\nmás profundo de tu corazón.\l¡Me has conmovido hasta el alma!$"
 
 Route110_Text_ChallengeReactionGood:
-	.string "Tu técnica es notable.\p
-Te sugiero que aceleres un poco\n
-sin dejar de evitar colisiones.$"
+	.string "Tu técnica es notable.\pTe sugiero que aceleres un poco\nsin dejar de evitar colisiones.$"
 
 Route110_Text_ChallengeReactionOk:
-	.string "Te consideraría un trabajo en\n
-progreso.\p
-Aun así, espero que no olvides\n
-el puro placer de pedalear.$"
+	.string "Te consideraría un trabajo en\nprogreso.\pAun así, espero que no olvides\nel puro placer de pedalear.$"
 
 Route110_Text_ChallengeReactionBad:
-	.string "Cielos… Tu habilidad en la bici\n
-roza lo aterrador.\p
-Sin duda, necesitas mucha más\n
-práctica al pedalear.$"
+	.string "Cielos… Tu habilidad en la bici\nroza lo aterrador.\pSin duda, necesitas mucha más\npráctica al pedalear.$"
 
 Route110_Text_ChallengeReactionWorst:
-	.string "…Estoy estupefacto…\p
-Quizá no naciste para este\n
-desafortunado oficio del ciclismo.\p
-Deberías pensar seriamente en\n
-devolverle esa BICI a RYDEL.$"
+	.string "…Estoy estupefacto…\pQuizá no naciste para este\ndesafortunado oficio del ciclismo.\pDeberías pensar seriamente en\ndevolverle esa BICI a RYDEL.$"
 
 Route110_Text_RatedForNumberOfCollisions:
-	.string "Este es el CAMINO CICLISTA.\p
-Si recorrieras de MAUVILLE a\n
-SLATEPORT en una BICI MACH, serías\l
-evaluado por tu número de choques\l
-y tu tiempo total.$"
+	.string "Este es el CAMINO CICLISTA.\pSi recorrieras de MAUVILLE a\nSLATEPORT en una BICI MACH, serías\levaluado por tu número de choques\ly tu tiempo total.$"
 
 Route110_Text_AlwaysAimHigher:
-	.string "Sin importar los resultados,\n
-espero más retos tuyos.\l
-¡Apunta siempre más alto!$"
+	.string "Sin importar los resultados,\nespero más retos tuyos.\l¡Apunta siempre más alto!$"
 
 Route110_Text_AcroBikesDoNotQualify:
-	.string "En este CAMINO CICLISTA, quienes usen\n
-BICI MACH se clasifican por su\l
-número de choques y su tiempo total.\p
-Las BICI ACRO no se clasifican.\n
-Giran fácilmente, no es justo.$"
+	.string "En este CAMINO CICLISTA, quienes usen\nBICI MACH se clasifican por su\lnúmero de choques y su tiempo total.\pLas BICI ACRO no se clasifican.\nGiran fácilmente, no es justo.$"
 
 Route110_Text_SlateportCitySign:
 	.string "RUTA 110\n"
@@ -913,11 +888,7 @@ Route110_Text_CyclingRoadSign:
 	.string "SEASIDE CYCLING ROAD$"
 
 Route110_Text_AquaWasHere:
-	.string "“¡EL EQUIPO AQUA estuvo aquí!”\p
-Alguien lo pintó en este letrero,\n
-pero alguien más lo volvió a pintar.\p
-“¡EL EQUIPO MAGMA manda!” es lo\n
-que ahora dice.$"
+	.string "“¡EL EQUIPO AQUA estuvo aquí!”\pAlguien lo pintó en este letrero,\npero alguien más lo volvió a pintar.\p“¡EL EQUIPO MAGMA manda!” es lo\nque ahora dice.$"
 
 Route110_Text_Route103Sign:
 	.string "RUTA 110\n"
@@ -938,23 +909,16 @@ Route110_Text_TrainerTipsPrlzSleep:
 	.string "combates POKéMON.$"
 
 Route110_Text_TrainerTipsRegisterItems:
-	.string "CONSEJOS DE ENTRENADOR\p
-Los objetos de la MOCHILA se pueden\n
-reorganizar pulsando SELECT.$"
+	.string "CONSEJOS DE ENTRENADOR\pLos objetos de la MOCHILA se pueden\nreorganizar pulsando SELECT.$"
 
 Route110_Text_TrickHouseSign:
-	.string "“Tres pasos {RIGHT_ARROW} y dos pasos {UP_ARROW}\n
-para llegar a la CASA DE LOS TRUCOS.”$"
+	.string "“Tres pasos {RIGHT_ARROW} y dos pasos {UP_ARROW}\npara llegar a la CASA DE LOS TRUCOS.”$"
 
 Route110_Text_BestRecord:
-	.string "EL MEJOR RÉCORD HASTA LA FECHA…\p
-Choques: {STR_VAR_1}\p
-Tiempo transcurrido: {STR_VAR_2}$"
+	.string "EL MEJOR RÉCORD HASTA LA FECHA…\pChoques: {STR_VAR_1}\pTiempo transcurrido: {STR_VAR_2}$"
 
 Route110_Text_ThereIsNoRecord:
-	.string "EL MEJOR RÉCORD HASTA LA FECHA…\p
-Parece que nadie ha aceptado el\n
-reto. No hay ningún récord…$"
+	.string "EL MEJOR RÉCORD HASTA LA FECHA…\pParece que nadie ha aceptado el\nreto. No hay ningún récord…$"
 
 Route110_Text_ImagineSeeingYouHere:
 	.string "PROF. BIRCH: ¡Oh, {PLAYER}{KUN}!\n"
@@ -978,9 +942,5 @@ Route110_Text_RegisteredBirchInPokenav:
 	.string "en el POKéNAV.$"
 
 Route110_Text_KeepAnEyeOutForRival:
-	.string "PROF. BIRCH: {PLAYER}{KUN}…\p
-Por favor, vigila a mi {RIVAL}.\n
-… … … … … …\p
-Bueno, mejor me voy yendo.\n
-¡Nos vemos, {PLAYER}{KUN}!$"
+	.string "PROF. BIRCH: {PLAYER}{KUN}…\pPor favor, vigila a mi {RIVAL}.\n… … … … … …\pBueno, mejor me voy yendo.\n¡Nos vemos, {PLAYER}{KUN}!$"
 

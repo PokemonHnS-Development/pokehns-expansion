@@ -476,8 +476,7 @@ Debug_BerryPestsDisabled::
 	end
 
 DebugText_BerryPestsDisabled:
-	.string "OW_BERRY_PESTS está desactivado.\n
-No se fuerzan plagas en las bayas.$"
+	.string "OW_BERRY_PESTS está desactivado.\nNo se fuerzan plagas en las bayas.$"
 
 Debug_BerryWeedsDisabled::
 	msgbox DebugText_BerryWeedsDisabled, MSGBOX_DEFAULT
@@ -485,8 +484,7 @@ Debug_BerryWeedsDisabled::
 	end
 
 DebugText_BerryWeedsDisabled:
-	.string "OW_BERRY_WEEDS está desactivado.\n
-No se fuerzan malezas en las bayas.$"
+	.string "OW_BERRY_WEEDS está desactivado.\nNo se fuerzan malezas en las bayas.$"
 
 Debug_EventScript_InflictStatus1::
 	lockall

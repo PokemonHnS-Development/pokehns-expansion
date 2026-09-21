@@ -13,6 +13,5 @@ ViridianMart_Text_Lass:
 	.string "El LÍDER DE GIMNASIO aquí es genial.$"
 
 ViridianMart_Text_CooltrainerM:
-	.string "¿Has estado en ISLA CANELA?\p
-Es una isla muy al sur de aquí.$"
+	.string "¿Has estado en ISLA CANELA?\pEs una isla muy al sur de aquí.$"
 

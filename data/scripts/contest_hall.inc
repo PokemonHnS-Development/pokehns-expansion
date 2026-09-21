@@ -1699,10 +1699,7 @@ LilycoveCity_ContestLobby_Text_EnterWhichPokemon3:
 	.string "Which POKéMON would you like to enter?$"
 
 LilycoveCity_ContestLobby_Text_PleaseDecideLinkLeader:
-	.string "Decidan quién de ustedes será\n
-el LÍDER DEL GRUPO.\p
-Los demás jugadores deben elegir\n
-“UNIRSE AL GRUPO.”$"
+	.string "Decidan quién de ustedes será\nel LÍDER DEL GRUPO.\pLos demás jugadores deben elegir\n“UNIRSE AL GRUPO.”$"
 
 LilycoveCity_ContestLobby_Text_PlayerAt4PCounterUseGMode:
 	.string "Al menos un jugador entró usando\n"

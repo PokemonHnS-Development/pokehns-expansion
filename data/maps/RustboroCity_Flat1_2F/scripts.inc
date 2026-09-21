@@ -77,13 +77,7 @@ RustboroCity_Flat1_2F_EventScript_PokeDoll::
 	end
 
 RustboroCity_Flat1_2F_Text_ComingUpWithMealsIsHard:
-	.string "Ay, qué difícil es todos los días…\p
-¿Qué es difícil?\n
-¿Hace falta preguntar?\p
-Es pensar qué hacer de comer\n
-todos los días.\p
-La verdad es que no es fácil\n
-pensar en la comida diaria.$"
+	.string "Ay, qué difícil es todos los días…\p¿Qué es difícil?\n¿Hace falta preguntar?\pEs pensar qué hacer de comer\ntodos los días.\pLa verdad es que no es fácil\npensar en la comida diaria.$"
 
 RustboroCity_Flat1_2F_Text_HelloDoYouKnowFunnyPhrase:
 	.string "¡Oh, hola!\n"
@@ -100,14 +94,10 @@ RustboroCity_Flat1_2F_Text_HelloDoYouKnowFunnyPhrase:
 	.string "divertida que me puedas decir?$"
 
 RustboroCity_Flat1_2F_Text_BeenSayingXDoYouKnowBetterPhrase:
-	.string "Últimamente le digo “{STR_VAR_1}”\n
-para divertirla.\p
-¿Se te ocurre alguna palabra o\n
-frase que funcione mejor?$"
+	.string "Últimamente le digo “{STR_VAR_1}”\npara divertirla.\p¿Se te ocurre alguna palabra o\nfrase que funcione mejor?$"
 
 RustboroCity_Flat1_2F_Text_WonderfulLetsHearSuggestion:
-	.string "Oh, qué bien.\n
-A ver, dime tu sugerencia.$"
+	.string "Oh, qué bien.\nA ver, dime tu sugerencia.$"
 
 RustboroCity_Flat1_2F_Text_OhIsThatRight:
 	.string "Oh, ¿de verdad?\p"
@@ -115,8 +105,7 @@ RustboroCity_Flat1_2F_Text_OhIsThatRight:
 	.string "sugerencia, soy todo oídos.$"
 
 RustboroCity_Flat1_2F_Text_LetsGiveItATry2:
-	.string "Ah, ya veo.\n
-Bueno, vamos a probarlo, ¿sí?$"
+	.string "Ah, ya veo.\nBueno, vamos a probarlo, ¿sí?$"
 
 RustboroCity_Flat1_2F_Text_OhShesLaughing:
 	.string "{STR_VAR_1}.\n"
@@ -125,8 +114,7 @@ RustboroCity_Flat1_2F_Text_OhShesLaughing:
 	.string "¡Oh, estoy tan feliz como ella!$"
 
 RustboroCity_Flat1_2F_Text_LetsGiveItATry:
-	.string "Ah, ya veo.\n
-Bueno, vamos a probarlo, ¿sí?$"
+	.string "Ah, ya veo.\nBueno, vamos a probarlo, ¿sí?$"
 
 RustboroCity_Flat1_2F_Text_ShesNotSmilingAtAll:
 	.string "{STR_VAR_1}.\n"
@@ -135,11 +123,7 @@ RustboroCity_Flat1_2F_Text_ShesNotSmilingAtAll:
 	.string "Quizá WALDA sea una niña seria...$"
 
 RustboroCity_Flat1_2F_Text_ThinkOfMyOwnPhrase:
-	.string "Ah, no sabes ninguna palabra.\n
-Entonces, mejor pienso yo solo.\p
-Mmm…\n
-¿Qué tal “{STR_VAR_1}”?\l
-A ver si funciona.$"
+	.string "Ah, no sabes ninguna palabra.\nEntonces, mejor pienso yo solo.\pMmm…\n¿Qué tal “{STR_VAR_1}”?\lA ver si funciona.$"
 
 RustboroCity_Flat1_2F_Text_ShesNotSmilingAtAll2:
 	.string "{STR_VAR_1}.\n"
@@ -148,11 +132,7 @@ RustboroCity_Flat1_2F_Text_ShesNotSmilingAtAll2:
 	.string "Quizá WALDA sea una niña seria...$"
 
 RustboroCity_Flat1_2F_Text_OhYouDontKnowAny:
-	.string "Ah, no sabes ninguna palabra.\n
-Entonces trataré de divertirla con\l
-lo que le decía antes.\p
-En fin, si se te ocurre algo bueno,\n
-no dudes en decírmelo, ¿sí?$"
+	.string "Ah, no sabes ninguna palabra.\nEntonces trataré de divertirla con\llo que le decía antes.\pEn fin, si se te ocurre algo bueno,\nno dudes en decírmelo, ¿sí?$"
 
 RustboroCity_Flat1_2F_Text_ThankYouIllGiveYouWallpaper:
 	.string "¡Gracias!\p"

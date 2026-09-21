@@ -210,9 +210,7 @@ Route13_Text_KennyPostRematch:
 	.string "erosión. ¡Perseveraremos!$"
 
 Route13_Text_TrainerTips:
-	.string "CONSEJOS DE ENTRENADOR\p
-¡Mira! Justo ahí, a la\n
-izquierda del poste.$"
+	.string "CONSEJOS DE ENTRENADOR\p¡Mira! Justo ahí, a la\nizquierda del poste.$"
 
 Route13_Text_Sign:
 	.string "RUTA 13\p"
@@ -428,12 +426,9 @@ Route13_GetOffBoat_Text_0:
 	.string "¡a las ISLAS ALOLA!$"
 
 Route13_TravelToAlola_Text_0:
-	.string "¡Hola!\p
-Qué recuerdo tan raro.\n
-¡Debes ser de las ISLAS!$"
+	.string "¡Hola!\pQué recuerdo tan raro.\n¡Debes ser de las ISLAS!$"
 Route13_TravelToAlola_Text_0_5:
-	.string "¿Quieres tomar el próximo barco?\n
-¡Zarpa en un momento!$"
+	.string "¿Quieres tomar el próximo barco?\n¡Zarpa en un momento!$"
 
 Route13_TravelToAlola_Text_1:
 	.string "¡Ahoy! ¡Sube a bordo!$"
@@ -443,8 +438,7 @@ Route13_TravelToAlola_Text_2:
 	.string "Vuelve cuando quieras zarpar.$"
 
 Route13_TravelToAlola_Text_3:
-	.string "¡Ah, eres tú de nuevo!\n
-¿Quieres ir a las ISLAS ALOLA?$"
+	.string "¡Ah, eres tú de nuevo!\n¿Quieres ir a las ISLAS ALOLA?$"
 
 Route13_TravelToAlola_Text_4:
 	.string "¡Ahoy!\n"

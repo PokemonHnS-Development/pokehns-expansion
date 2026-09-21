@@ -22,8 +22,7 @@ TohjoFalls_GiovanniRoom_EventScript_Radio::
 	end
 
 TohjoFalls_GiovanniRoom_Text_RadioObject::
-	.string "Una radio...\n
-La batería se agotó...$"
+	.string "Una radio...\nLa batería se agotó...$"
 
 TohjoFalls_GiovanniRoom_CancelScene::
 	setvar VAR_TOHJO_FALLS_GIOVANNI_STATE, 0
@@ -189,14 +188,7 @@ TohjoFalls_Movement_GiovanniLeave:
 	step_end
 
 TohjoFalls_GiovanniRoom_Text_Radio:
-	.string "RADIO: ... ...\n
-Ejem, ¡somos el EQUIPO ROCKET!\l
-Tras tres años de preparación,\l
-¡hemos resurgido de las cenizas!\l
-¡GIOVANNI! ¿Nos oyes?\l
-¡Lo logramos!\l
-¿Dónde está nuestro jefe?\l
-¿Nos escucha?$"
+	.string "RADIO: ... ...\nEjem, ¡somos el EQUIPO ROCKET!\lTras tres años de preparación,\l¡hemos resurgido de las cenizas!\l¡GIOVANNI! ¿Nos oyes?\l¡Lo logramos!\l¿Dónde está nuestro jefe?\l¿Nos escucha?$"
 
 TohjoFalls_GiovanniRoom_Text_GiovanniIntro:
 	.string "GIOVANNI: ...\p"
@@ -215,19 +207,10 @@ TohjoFalls_GiovanniRoom_Text_GiovanniIntro:
 	.string "¿Vas a interponerte en mi camino?$"
 
 TohjoFalls_GiovanniRoom_Text_GiovanniBeforeBattle:
-	.string "Mis viejos compañeros me necesitan...\n
-¡No repetiremos el fracaso de\l
-hace tres años!$"
+	.string "Mis viejos compañeros me necesitan...\n¡No repetiremos el fracaso de\lhace tres años!$"
 
 TohjoFalls_GiovanniRoom_Text_GiovanniDefeat:
 	.string "¿Qué demonios eres?$"
 
 TohjoFalls_GiovanniRoom_Text_GiovanniAfter:
-	.string "GIOVANNI: ¿Cómo es posible...?\n
-¿Estos tres años han sido una\l
-pérdida...?\p
-¿Cómo puede un niño como tú\n
-destruir mi sueño otra vez?\p
-El preciado sueño del EQUIPO ROCKET\n
-no es más que una\l
-ilusión...$"
+	.string "GIOVANNI: ¿Cómo es posible...?\n¿Estos tres años han sido una\lpérdida...?\p¿Cómo puede un niño como tú\ndestruir mi sueño otra vez?\pEl preciado sueño del EQUIPO ROCKET\nno es más que una\lilusión...$"

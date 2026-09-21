@@ -22,9 +22,7 @@ EventTicket_Text_ShowEonTicket:
 
 #if IS_HNS
 EventTicket_Text_SouthernIslandSailBack:
-	.string "Oye, amigo, no hay nada que\n
-ver ni hacer en esta isla olvidable.\p
-¿Qué tal si navegamos a CALAGUA?$"
+	.string "Oye, amigo, no hay nada que\nver ni hacer en esta isla olvidable.\p¿Qué tal si navegamos a CALAGUA?$"
 ver ni hacer en esta isla olvidable.\p
 ¿Qué tal si navegamos a OLIVO?$"
 #else
@@ -36,8 +34,7 @@ EventTicket_Text_SouthernIslandSailBack:
 
 
 EventTicket_Text_SailHome:
-	.string "¡Muy bien, entonces!\n
-¡A casa navegaremos!$"
+	.string "¡Muy bien, entonces!\n¡A casa navegaremos!$"
 
 EventTicket_Text_AsYouLike:
 	.string "Está bien, como tú digas.$"
@@ -47,5 +44,4 @@ SouthernIsland_Interior_Text_Sign:
 	.string "Nunca lo olvides…”$"
 
 SouthernIsland_Exterior_Text_Sign:
-	.string "“Aquellos cuyas memorias se borran\n
-buscan grabarlas en sus corazones…”$"
+	.string "“Aquellos cuyas memorias se borran\nbuscan grabarlas en sus corazones…”$"

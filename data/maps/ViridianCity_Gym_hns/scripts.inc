@@ -88,10 +88,7 @@ ViridianCity_Gym_Text_LeaderBlue_GiveTM:
 	.string "Llévate esto contigo.$"
 
 ViridianCity_Gym_Text_LeaderBlue_ExplainTM:
-	.string "Eso es ESPACIO RARO.\p
-En combate cambiará la Velocidad.\n
-Primero el lento. Último el rápido.\p
-Úsalo para dar vuelta al combate.$"
+	.string "Eso es ESPACIO RARO.\pEn combate cambiará la Velocidad.\nPrimero el lento. Último el rápido.\pÚsalo para dar vuelta al combate.$"
 
 ViridianCity_Gym_Text_LeaderBlue_Epilogue:
 	.string "BLUE: Escucha bien.\p"

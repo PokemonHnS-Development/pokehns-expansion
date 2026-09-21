@@ -154,13 +154,10 @@ Route38_Text_LassDana1Seen:
 	.string "me das algunos consejos?$"
 
 Route38_Text_LassDana1Beaten:
-	.string "Ya veo. Así puedes luchar\n
-de esa forma.$"
+	.string "Ya veo. Así puedes luchar\nde esa forma.$"
 
 Route38_Text_LassDanaAfter:
-	.string "¡Sé algo bueno!\p
-La leche de MOOMOO FARM\n
-es famosa por su sabor.$"
+	.string "¡Sé algo bueno!\pLa leche de MOOMOO FARM\nes famosa por su sabor.$"
 
 Route38_Text_BeautyValerieSeen:
 	.string "¡Hola! Qué lindo eres\n"
@@ -193,14 +190,10 @@ Route38_Text_BeautyOliviaSeen:
 	.string "y yo somos hermosos?$"
 
 Route38_Text_BeautyOliviaBeaten:
-	.string "Tomamos LECHE MOOMOO todos\n
-los días.$"
+	.string "Tomamos LECHE MOOMOO todos\nlos días.$"
 
 Route38_Text_BeautyOliviaAfter:
-	.string "La LECHE MOOMOO es buena\n
-para la belleza y la salud,\p
-pero, por desgracia, solo\n
-venden una botella a la vez.$"
+	.string "La LECHE MOOMOO es buena\npara la belleza y la salud,\ppero, por desgracia, solo\nvenden una botella a la vez.$"
 
 Route38_Text_Sign:
 	.string "RUTA 38\p"
@@ -222,9 +215,7 @@ Route38_Text_WaterSign:
 	.string "-CONSEJO DE CIUDAD IRIS$"
 
 Route38_Text_DanaRegister:
-	.string "¡Sé algo bueno!\p
-La leche de MOOMOO FARM\n
-es famosa por su sabor.$"
+	.string "¡Sé algo bueno!\pLa leche de MOOMOO FARM\nes famosa por su sabor.$"
 
 Route38_Text_DanaRematchIntro:
 	.string "Pareces ser bueno en eso.\n"
@@ -233,22 +224,16 @@ Route38_Text_DanaRematchIntro:
 	.string "me das algunos consejos?$"
 
 Route38_Text_DanaRematchDefeat:
-	.string "Ya veo. Así puedes luchar\n
-de esa forma.$"
+	.string "Ya veo. Así puedes luchar\nde esa forma.$"
 
 Route38_Text_DanaPostRematch:
-	.string "¡Sé algo bueno!\p
-La leche de MOOMOO FARM\n
-es famosa por su sabor.$"
+	.string "¡Sé algo bueno!\pLa leche de MOOMOO FARM\nes famosa por su sabor.$"
 
 Route38_Text_DanaHasItem:
-	.string "¡Oye! Encontré algo\n
-interesante!\p
-Toma, ¡es para ti!$"
+	.string "¡Oye! Encontré algo\ninteresante!\pToma, ¡es para ti!$"
 
 Route38_Text_DanaGaveItem:
-	.string "¡Te aviso si encuentro\n
-algo más!$"
+	.string "¡Te aviso si encuentro\nalgo más!$"
 
 Route38_Text_DanaNoRoom:
 	.string "Hmm, tu MOCHILA está llena.\p"

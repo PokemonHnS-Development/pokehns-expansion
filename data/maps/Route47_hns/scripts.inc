@@ -50,23 +50,16 @@ Route47_EventScript_Kae::
 	end
 
 Route47_Text_Couple1Seen::
-	.string "THOM: Uno más uno son dos. Pero\n
-los dos juntos somos mucho\l
-más fuertes!\p
-KAE: Los dos no somos solo una\n
-pareja aburrida!$"
+	.string "THOM: Uno más uno son dos. Pero\nlos dos juntos somos mucho\lmás fuertes!\pKAE: Los dos no somos solo una\npareja aburrida!$"
 
 Route47_Text_Couple1Beaten::
-	.string "THOM: No esperaba eso.\l
-KAE: ¡Tú también eres peculiar!$"
+	.string "THOM: No esperaba eso.\lKAE: ¡Tú también eres peculiar!$"
 
 Route47_Text_Couple1After1::
-	.string "THOM: ¡Parece que tu poder\n
-es imposible de predecir!$"
+	.string "THOM: ¡Parece que tu poder\nes imposible de predecir!$"
 
 Route47_Text_Couple1After2::
-	.string "KAE: Pensé que eras un simple\n
-entrenador solitario. ¡Me equivoqué!$"
+	.string "KAE: Pensé que eras un simple\nentrenador solitario. ¡Me equivoqué!$"
 
 Route47_EventScript_Duff::
 	trainerbattle_double TRAINER_DUFF_AND_EDA_HNS, Route47_Text_Couple2Seen, Route47_Text_Couple2Beaten, Route104_Text_GinaNotEnoughMons
@@ -80,23 +73,16 @@ Route47_EventScript_Eda::
 	end
 
 Route47_Text_Couple2Seen::
-	.string "DUFF: Cuidar a mi novia\n
-¡hace que mi corazón se eleve!\p
-EDA: Los sentimientos de mi\n
-corazón por mi novio son\l
-¡anchos y profundos como el mar!$"
+	.string "DUFF: Cuidar a mi novia\n¡hace que mi corazón se eleve!\pEDA: Los sentimientos de mi\ncorazón por mi novio son\l¡anchos y profundos como el mar!$"
 
 Route47_Text_Couple2Beaten::
-	.string "DUFF: No estuve a tu altura...\l
-EDA: Eres realmente increíble...$"
+	.string "DUFF: No estuve a tu altura...\lEDA: Eres realmente increíble...$"
 
 Route47_Text_Couple2After1::
-	.string "DUFF: ¡Gracias por esta\n
-batalla impresionante! ¡Adiós!$"
+	.string "DUFF: ¡Gracias por esta\nbatalla impresionante! ¡Adiós!$"
 
 Route47_Text_Couple2After2::
-	.string "EDA: ¡Tú también deberías\n
-buscar una pareja increíble!$"
+	.string "EDA: ¡Tú también deberías\nbuscar una pareja increíble!$"
 
 Route47_EventScript_Sage::
 	lock

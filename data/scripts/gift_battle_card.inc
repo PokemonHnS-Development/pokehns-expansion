@@ -24,16 +24,7 @@ MysteryGiftScript_BattleCardInfo:
 	end
 
 sText_MysteryGiftBattleCountCard:
-	.string "Gracias por usar el sistema\n
-de REGALO MISTERIOSO.\p
-Tu TARJETA DE COMBATES guarda\n
-tu registro de combates contra\l
-ENTRENADORES con la misma TARJETA.\p
-Busca y reta a ENTRENADORES\n
-que tengan la misma TARJETA.\p
-Puedes consultar la clasificación\n
-leyendo las NOTICIAS.\p
-¡Anímate a probarlo!$"
+	.string "Gracias por usar el sistema\nde REGALO MISTERIOSO.\pTu TARJETA DE COMBATES guarda\ntu registro de combates contra\lENTRENADORES con la misma TARJETA.\pBusca y reta a ENTRENADORES\nque tengan la misma TARJETA.\pPuedes consultar la clasificación\nleyendo las NOTICIAS.\p¡Anímate a probarlo!$"
 
 sText_MysteryGiftBattleCountCard_WonPrize:
 	.string "Gracias por usar el sistema de\n"

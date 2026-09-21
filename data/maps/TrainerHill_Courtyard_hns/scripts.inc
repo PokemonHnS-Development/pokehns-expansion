@@ -78,9 +78,7 @@ BattleTowerOutsideBeautyText:
 	.string "tres irán a la batalla…$"
 
 BattleTowerOutsideSailorText:
-	.string "Jejeje, me escapé del trabajo.\p
-¡No puedo rendirme hasta ganar!\p
-Tengo que ganarlo todo. ¡Debo hacerlo!$"
+	.string "Jejeje, me escapé del trabajo.\p¡No puedo rendirme hasta ganar!\pTengo que ganarlo todo. ¡Debo hacerlo!$"
 
 BattleTowerOutsideSignText:
 	.string "{UP_ARROW} ENTRADA COLINA ENTRENADOR\p"
@@ -101,8 +99,7 @@ BattleTower_Battle_Tent_Text_Arena:
 	.string "¡Que se reúnan los mejores equipos!$"
 
 BattleTowerOutsideText_Closed:
-	.string "La COLINA ENTRENADOR está actualmente\n
-cerrada por reparaciones.$"
+	.string "La COLINA ENTRENADOR está actualmente\ncerrada por reparaciones.$"
 
 
 TrainerHill_Courtyard_EventScript_LeftMoveTutor::

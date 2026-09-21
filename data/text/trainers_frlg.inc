@@ -3,9 +3,7 @@ Route3_Text_ColtonRematchIntro::
 	.string "¡Te vi en el BOSQUE VERDE!$"
 
 Route3_Text_BenRematchIntro::
-	.string "¡Hola! ¡Me gustan los shorts!\n
-¡Son cómodos y fáciles de llevar!\p
-¡Tú también deberías usar shorts!$"
+	.string "¡Hola! ¡Me gustan los shorts!\n¡Son cómodos y fáciles de llevar!\p¡Tú también deberías usar shorts!$"
 
 Route3_Text_JaniceRematchIntro::
 	.string "¡Disculpa!\n"
@@ -16,12 +14,10 @@ Route3_Text_GregRematchIntro::
 	.string "¡Vamos a luchar ahora mismo!$"
 
 Route3_Text_SallyRematchIntro::
-	.string "Esa mirada que me das…\n
-¡Me intriga tanto!$"
+	.string "Esa mirada que me das…\n¡Me intriga tanto!$"
 
 Route3_Text_CalvinRematchIntro::
-	.string "¡Oye! ¿Qué te pasa?\n
-¡Todavía no llevas shorts!$"
+	.string "¡Oye! ¿Qué te pasa?\n¡Todavía no llevas shorts!$"
 
 Route3_Text_JamesRematchIntro::
 	.string "Lucharé contra ti con el POKéMON\n"
@@ -36,14 +32,10 @@ Route4_Text_CrissyRematchIntro::
 	.string "en el MT. MOON.$"
 
 Route6_Text_RickyRematchIntro::
-	.string "¡Ah! ¡Eres ese niño metiche que\n
-nos escuchó a escondidas!$"
+	.string "¡Ah! ¡Eres ese niño metiche que\nnos escuchó a escondidas!$"
 
 Route6_Text_NancyRematchIntro::
-	.string "¡Disculpa! ¿No te dije que\n
-esto es una conversación privada?\p
-¡No deberías escuchar,\n
-niño malcriado!$"
+	.string "¡Disculpa! ¿No te dije que\nesto es una conversación privada?\p¡No deberías escuchar,\nniño malcriado!$"
 
 Route6_Text_KeigoRematchIntro::
 	.string "Busco algo bueno que no sea\n"
@@ -58,8 +50,7 @@ Route6_Text_IsabelleRematchIntro::
 	.string "Bueno, está bien. Jugaré una vez.$"
 
 Route6_Text_ElijahRematchIntro::
-	.string "¡Hola, cuánto tiempo!\n
-¿Has mejorado?$"
+	.string "¡Hola, cuánto tiempo!\n¿Has mejorado?$"
 
 Route8_Text_AidanRematchIntro::
 	.string "Eres bueno en POKéMON, pero ¿cómo\n"
@@ -70,9 +61,7 @@ Route8_Text_StanRematchIntro::
 	.string "¡Juguemos a otra cosa!$"
 
 Route8_Text_GlennRematchIntro::
-	.string "Necesitas estrategia para ganar\n
-en los combates.\p
-¿Sigues mis consejos?$"
+	.string "Necesitas estrategia para ganar\nen los combates.\p¿Sigues mis consejos?$"
 
 Route8_Text_PaigeRematchIntro::
 	.string "He atrapado muchos NIDORAN.\n"
@@ -83,12 +72,10 @@ Route8_Text_LeslieRematchIntro::
 	.string "los POKéMON también lo son.$"
 
 Route8_Text_AndreaRematchIntro::
-	.string "MEOWTH y PERSIAN son tan lindos,\n
-¡miau, miau, miau!$"
+	.string "MEOWTH y PERSIAN son tan lindos,\n¡miau, miau, miau!$"
 
 Route8_Text_MeganRematchIntro::
-	.string "Puede que nos veamos raros aquí\n
-así, ¡pero aún puedo luchar!$"
+	.string "Puede que nos veamos raros aquí\nasí, ¡pero aún puedo luchar!$"
 
 Route8_Text_RichRematchIntro::
 	.string "¡Soy un tipo gamer errante!\n"
@@ -114,8 +101,7 @@ Route8_Text_AnneRematchIntro::
 	.string "ANNE: ¡Nuestro poder gemelo subió!$"
 
 Route9_Text_AliciaRematchIntro::
-	.string "¿Otra vez vamos a luchar?\n
-¡Esta vez eres mío!$"
+	.string "¿Otra vez vamos a luchar?\n¡Esta vez eres mío!$"
 
 Route9_Text_ChrisRematchIntro::
 	.string "No he olvidado que estabas con\n"
@@ -128,8 +114,7 @@ Route9_Text_DrewRematchIntro::
 	.string "camino…$"
 
 Route9_Text_CaitlinRematchIntro::
-	.string "¡No te atrevas a menospreciarme!\n
-¡Esto va en serio!$"
+	.string "¡No te atrevas a menospreciarme!\n¡Esto va en serio!$"
 
 Route9_Text_JeremyRematchIntro::
 	.string "¡Bwahaha!\n"
@@ -168,21 +153,17 @@ Route10_Text_HeidiRematchIntro::
 	.string "...Pero perdí como siempre.$"
 
 Route10_Text_TrentRematchIntro::
-	.string "¡Ah!\n
-¡El aire de la montaña es delicioso!\l
-¡Es tan bueno que no me voy!$"
+	.string "¡Ah!\n¡El aire de la montaña es delicioso!\l¡Es tan bueno que no me voy!$"
 
 Route10_Text_CarolRematchIntro::
-	.string "Me está empezando a dar vueltas\n
-la cabeza. Llevo demasiado…$"
+	.string "Me está empezando a dar vueltas\nla cabeza. Llevo demasiado…$"
 
 Route11_Text_HugoRematchIntro::
 	.string "¡Gane, pierda o empate!\n"
 	.string "¡Ahora vamos a la revancha!$"
 
 Route11_Text_JasperRematchIntro::
-	.string "Competir es la máxima emoción.\n
-¡Todavía no me canso!$"
+	.string "Competir es la máxima emoción.\n¡Todavía no me canso!$"
 
 Route11_Text_EddieRematchIntro::
 	.string "Tú lo sabes, ¿verdad?\n"
@@ -198,19 +179,13 @@ Route11_Text_DillonRematchIntro::
 	.string "Pero creo que puedo ganar.$"
 
 Route11_Text_DirkRematchIntro::
-	.string "¡Jajaja!\n
-¡Nunca he perdido!\p
-…Y si lo hice, ya lo he\n
-olvidado todo!$"
+	.string "¡Jajaja!\n¡Nunca he perdido!\p…Y si lo hice, ya lo he\nolvidado todo!$"
 
 Route11_Text_DarianRematchIntro::
-	.string "Nunca he ganado antes…\p
-Quizá esté destinado a seguir\n
-así…$"
+	.string "Nunca he ganado antes…\pQuizá esté destinado a seguir\nasí…$"
 
 Route11_Text_YasuRematchIntro::
-	.string "Nadie es mejor que yo en mi clase.\n
-¡Entreno día y noche!$"
+	.string "Nadie es mejor que yo en mi clase.\n¡Entreno día y noche!$"
 
 Route11_Text_BernieRematchIntro::
 	.string "¡Cuidado con los cables vivos!$"
@@ -226,12 +201,10 @@ Route12_Text_NedRematchIntro::
 	.string "¡E-esto podría ser real!$"
 
 Route12_Text_ChipRematchIntro::
-	.string "Por fin llegaste.\n
-Pescar es cosa de paciencia.$"
+	.string "Por fin llegaste.\nPescar es cosa de paciencia.$"
 
 Route12_Text_JustinRematchIntro::
-	.string "Aún no encuentro una PIEDRA LUNAR…\n
-¿Ya encontraste una?$"
+	.string "Aún no encuentro una PIEDRA LUNAR…\n¿Ya encontraste una?$"
 
 Route12_Text_LucaRematchIntro::
 	.string "La electricidad siempre ha sido mi\n"
@@ -244,9 +217,7 @@ Route12_Text_HankRematchIntro::
 	.string "¡Otra ronda, lucha!$"
 
 Route12_Text_ElliotRematchIntro::
-	.string "Amo pescar, no me malinterpretes.\n
-Pero quisiera tener más trabajo…\l
-…¡Es difícil dejar la pesca!$"
+	.string "Amo pescar, no me malinterpretes.\nPero quisiera tener más trabajo…\l…¡Es difícil dejar la pesca!$"
 
 Route12_Text_AndrewRematchIntro::
 	.string "¿Qué estás pescando?\p"
@@ -357,9 +328,7 @@ Route15_Text_KindraRematchIntro::
 	.string "POKéMON que obtuve en intercambios.$"
 
 Route15_Text_BeckyRematchIntro::
-	.string "Pareces amable, así que creo que\n
-te puedo ganar.\p
-¡Lo intentaré una vez más!$"
+	.string "Pareces amable, así que creo que\nte puedo ganar.\p¡Lo intentaré una vez más!$"
 
 Route15_Text_EdwinRematchIntro::
 	.string "Cuando silbo, los POKéMON ave\n"
@@ -367,8 +336,7 @@ Route15_Text_EdwinRematchIntro::
 	.string "¡Son increíblemente lindos!$"
 
 Route15_Text_ChesterRematchIntro::
-	.string "¿Mmm? ¡Mis aves tiemblan!\n
-Espera, ¿no eres tú ese ENTRENADOR…$"
+	.string "¿Mmm? ¡Mis aves tiemblan!\nEspera, ¿no eres tú ese ENTRENADOR…$"
 
 Route15_Text_GraceRematchIntro::
 	.string "¡Oh, eres una cosita linda!\n"
@@ -742,21 +710,16 @@ OneIsland_KindleRoad_Text_ClaireRematchIntro::
 	.string "luchar para hacer ejercicio?$"
 
 OneIsland_KindleRoad_Text_KiaRematchIntro::
-	.string "KIA: Mi hermano mayor y yo\n
-¡una combinación increíble!\p
-¡Esta vez no perderemos!$"
+	.string "KIA: Mi hermano mayor y yo\n¡una combinación increíble!\p¡Esta vez no perderemos!$"
 
 OneIsland_KindleRoad_Text_MikRematchIntro::
-	.string "MIK: junto con KIA, ¡no le\n
-tememos a nada!\p
-¡Te lo demostraremos esta vez!$"
+	.string "MIK: junto con KIA, ¡no le\ntememos a nada!\p¡Te lo demostraremos esta vez!$"
 
 ThreeIsland_BondBridge_Text_NikkiRematchIntro::
 	.string "¿Volvemos a luchar?$"
 
 ThreeIsland_BondBridge_Text_VioletRematchIntro::
-	.string "¿De dónde vienes y\n
-hacia dónde vas?$"
+	.string "¿De dónde vienes y\nhacia dónde vas?$"
 
 ThreeIsland_BondBridge_Text_AmiraRematchIntro::
 	.string "Pronto quiero nadar sin mi\n"
@@ -792,12 +755,10 @@ FiveIsland_ResortGorgeous_Text_CelinaRematchIntro::
 	.string "¡Por favor, no me molestes!$"
 
 FiveIsland_ResortGorgeous_Text_RaynaRematchIntro::
-	.string "No he avanzado nada...\n
-Todavía no acierto con el ángulo...$"
+	.string "No he avanzado nada...\nTodavía no acierto con el ángulo...$"
 
 FiveIsland_ResortGorgeous_Text_JackiRematchIntro::
-	.string "¿Me darás otra\n
-oportunidad de medirte conmigo?$"
+	.string "¿Me darás otra\noportunidad de medirte conmigo?$"
 
 FiveIsland_ResortGorgeous_Text_GillianRematchIntro::
 	.string "Ya casi terminan de hacer la\n"
@@ -809,26 +770,16 @@ FiveIsland_ResortGorgeous_Text_DestinRematchIntro::
 	.string "¡Me he vuelto aún más rápido!$"
 
 FiveIsland_ResortGorgeous_Text_TobyRematchIntro::
-	.string "¡Oye, amigo!\n
-¡Disfrutemos de este momento!$"
+	.string "¡Oye, amigo!\n¡Disfrutemos de este momento!$"
 
 FiveIsland_MemorialPillar_Text_MiloRematchIntro::
-	.string "Soy el mayor de los\n
-HERMANOS PÁJARO. ¿Te acuerdas?\p
-Sí, soy el que ama a las aves\n
-por sus picos!$"
+	.string "Soy el mayor de los\nHERMANOS PÁJARO. ¿Te acuerdas?\pSí, soy el que ama a las aves\npor sus picos!$"
 
 FiveIsland_MemorialPillar_Text_ChazRematchIntro::
-	.string "Soy el mediano de los\n
-HERMANOS PÁJARO.\p
-Soy el que ama las alas.\n
-¡Luchemos otra vez!$"
+	.string "Soy el mediano de los\nHERMANOS PÁJARO.\pSoy el que ama las alas.\n¡Luchemos otra vez!$"
 
 FiveIsland_MemorialPillar_Text_HaroldRematchIntro::
-	.string "Soy el menor de los HERMANOS\n
-PÁJARO.\p
-Amo a las aves por su plumón.\n
-¡No creí que te vería otra vez!$"
+	.string "Soy el menor de los HERMANOS\nPÁJARO.\pAmo a las aves por su plumón.\n¡No creí que te vería otra vez!$"
 
 SixIsland_OutcastIsland_Text_TylorRematchIntro::
 	.string "Sigo sin tener nada de suerte.\n"
@@ -848,8 +799,7 @@ SixIsland_OutcastIsland_Text_AvaRematchIntro::
 	.string "marina de dos contra dos hoy!$"
 
 SixIsland_OutcastIsland_Text_GebRematchIntro::
-	.string "GEB: Mi hermana mayor y yo somos\n
-mucho más fuertes que antes!$"
+	.string "GEB: Mi hermana mayor y yo somos\nmucho más fuertes que antes!$"
 
 SixIsland_GreenPath_Text_JaclynRematchIntro::
 	.string "…¿Eh?\p"
@@ -865,18 +815,14 @@ SixIsland_WaterPath_Text_EdwardRematchIntro::
 	.string "otra vez.$"
 
 SixIsland_WaterPath_Text_SamirRematchIntro::
-	.string "¿Qué, ya te hartaste de ver\n
-NADADORES como yo?\p
-Ay, no me odies.\n
-Pelea conmigo otra vez.$"
+	.string "¿Qué, ya te hartaste de ver\nNADADORES como yo?\pAy, no me odies.\nPelea conmigo otra vez.$"
 
 SixIsland_WaterPath_Text_DeniseRematchIntro::
 	.string "Suspiro...\n"
 	.string "Mi novio está ocupado otra vez…$"
 
 SixIsland_WaterPath_Text_EarlRematchIntro::
-	.string "Vamos, dime, ¿dónde están las\n
-montañas por estos rumbos?$"
+	.string "Vamos, dime, ¿dónde están las\nmontañas por estos rumbos?$"
 
 SixIsland_WaterPath_Text_MiuRematchIntro::
 	.string "MIU: ¡Hola, POKéMON!\n"
@@ -887,25 +833,19 @@ SixIsland_WaterPath_Text_MiaRematchIntro::
 	.string "¡Es hora de luchar otra vez!$"
 
 SixIsland_RuinValley_Text_StanlyRematchIntro::
-	.string "Parece que hay muchos secretos\n
-sin resolver en este mundo.$"
+	.string "Parece que hay muchos secretos\nsin resolver en este mundo.$"
 
 SixIsland_RuinValley_Text_FosterRematchIntro::
-	.string "Hola, ¿no nos vimos antes?\n
-¿Qué te hizo volver?$"
+	.string "Hola, ¿no nos vimos antes?\n¿Qué te hizo volver?$"
 
 SixIsland_RuinValley_Text_LarryRematchIntro::
-	.string "Dicen que hay piedras\n
-misteriosas en esta isla.\p
-¿Has descubierto algo desde\n
-la última vez que nos vimos?$"
+	.string "Dicen que hay piedras\nmisteriosas en esta isla.\p¿Has descubierto algo desde\nla última vez que nos vimos?$"
 
 SixIsland_RuinValley_Text_DarylRematchIntro::
 	.string "¡Una revancha contigo, tan arriba!$"
 
 SixIsland_RuinValley_Text_HectorRematchIntro::
-	.string "Conozco bastante bien la zona\n
-de por aquí.$"
+	.string "Conozco bastante bien la zona\nde por aquí.$"
 
 SevenIsland_TrainerTower_Text_DarioRematchIntro::
 	.string "Sentí que te acercabas.$"
@@ -920,24 +860,20 @@ SevenIsland_SevaultCanyon_Entrance_Text_MiahRematchIntro::
 	.string "¡Te echaré lejos sin esfuerzo!$"
 
 SevenIsland_SevaultCanyon_Entrance_Text_MasonRematchIntro::
-	.string "¡Hola! Eres miembro de mi\n
-club de fans, ¿verdad?$"
+	.string "¡Hola! Eres miembro de mi\nclub de fans, ¿verdad?$"
 
 SevenIsland_SevaultCanyon_Entrance_Text_NicolasRematchIntro::
-	.string "Esta isla es demasiado grande…\n
-Vigilar el lugar es un fastidio…$"
+	.string "Esta isla es demasiado grande…\nVigilar el lugar es un fastidio…$"
 
 SevenIsland_SevaultCanyon_Entrance_Text_MadelineRematchIntro::
 	.string "No perdono a quienes abusan\n"
 	.string "POKéMON!$"
 
 SevenIsland_SevaultCanyon_Entrance_Text_EveRematchIntro::
-	.string "EVE: Me uniré a JON y\n
-volveremos a luchar juntos.$"
+	.string "EVE: Me uniré a JON y\nvolveremos a luchar juntos.$"
 
 SevenIsland_SevaultCanyon_Entrance_Text_JonRematchIntro::
-	.string "JON: Con EVE siento que nunca\n
-podríamos perder, jamás.$"
+	.string "JON: Con EVE siento que nunca\npodríamos perder, jamás.$"
 
 SevenIsland_SevaultCanyon_Text_CyndyRematchIntro::
 	.string "Tengamos otra batalla.\n"
@@ -954,39 +890,30 @@ SevenIsland_SevaultCanyon_Text_JacksonRematchIntro::
 	.string "¡A cambio, la naturaleza me cuida!$"
 
 SevenIsland_SevaultCanyon_Text_KatelynRematchIntro::
-	.string "Cada vez que nos vemos, llevas\n
-esos zapatos tan elegantes.$"
+	.string "Cada vez que nos vemos, llevas\nesos zapatos tan elegantes.$"
 
 SevenIsland_SevaultCanyon_Text_LeroyRematchIntro::
-	.string "Debes haberte hecho más fuerte.\n
-¡Déjame luchar contigo!$"
+	.string "Debes haberte hecho más fuerte.\n¡Déjame luchar contigo!$"
 
 SevenIsland_SevaultCanyon_Text_MichelleRematchIntro::
-	.string "Recibí la mejor educación\n
-posible para ser así de fuerte.\p
-Esta vez no perderé.\n
-¡Ni de casualidad!$"
+	.string "Recibí la mejor educación\nposible para ser así de fuerte.\pEsta vez no perderé.\n¡Ni de casualidad!$"
 
 SevenIsland_SevaultCanyon_Text_LexRematchIntro::
-	.string "LEX: Mi querida NYA, juntos\n
-¡sin duda ganaremos!$"
+	.string "LEX: Mi querida NYA, juntos\n¡sin duda ganaremos!$"
 
 SevenIsland_SevaultCanyon_Text_NyaRematchIntro::
 	.string "NYA: ¡No decepcionaré a mi mentor\n"
 	.string "LEX! ¡Vamos a ganar!$"
 
 SevenIsland_TanobyRuins_Text_BrandonRematchIntro::
-	.string "¿Has descubierto algo sobre\n
-esta cámara de piedra?$"
+	.string "¿Has descubierto algo sobre\nesta cámara de piedra?$"
 
 SevenIsland_TanobyRuins_Text_BenjaminRematchIntro::
 	.string "Dicen que un POKéMON místico duerme\n"
 	.string "aquí adentro.$"
 
 SevenIsland_TanobyRuins_Text_EdnaRematchIntro::
-	.string "Mi maestro me está enseñando\n
-a pintar un poco más.$"
+	.string "Mi maestro me está enseñando\na pintar un poco más.$"
 
 SevenIsland_TanobyRuins_Text_CliffordRematchIntro::
-	.string "Hoy, además de la lección,\n
-volvimos a ver la cámara.$"
+	.string "Hoy, además de la lección,\nvolvimos a ver la cámara.$"

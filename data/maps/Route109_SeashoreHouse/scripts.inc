@@ -111,9 +111,7 @@ Route109_SeashoreHouse_Text_SeashoreHouseIntro:
 	.string "de aquí, premiaré tu esfuerzo.$"
 
 Route109_SeashoreHouse_Text_ShowMeSomeHotMatches:
-	.string "¡Muéstrame combates candentes!\p
-Dirijo esta CASA DE LA PLAYA solo por\n
-esa razón. ¡Nada más!$"
+	.string "¡Muéstrame combates candentes!\pDirijo esta CASA DE LA PLAYA solo por\nesa razón. ¡Nada más!$"
 
 Route109_SeashoreHouse_Text_TakeTheseSodaPopBottles:
 	.string "¡Estás que ardes!\n"

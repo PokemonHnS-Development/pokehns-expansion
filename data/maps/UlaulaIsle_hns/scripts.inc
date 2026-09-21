@@ -307,28 +307,16 @@ Alola_Ulaula_BattlePalossand_Text_0:
 	.string "¡Rayos!$"
 
 Alola_Ulaula_MtLanikalaSign_Text_0:
-	.string "Esta montaña es conocida con cariño\n
-como MT. LANIKALA por los\l
-lugareños, pues es la montaña\l
-más alta de las ISLAS ALOLA.\p
-El nombre real de esta montaña se ha\n
-perdido con el tiempo.$"
+	.string "Esta montaña es conocida con cariño\ncomo MT. LANIKALA por los\llugareños, pues es la montaña\lmás alta de las ISLAS ALOLA.\pEl nombre real de esta montaña se ha\nperdido con el tiempo.$"
 
 Alola_Ulaula_UlaulaSign_Text_0:
 	.string "ISLA ULA'ULA$"
 
 Alola_Ulaula_Phant_outside_Text_0:
-	.string "¡Hola, {PLAYER}!\p
-¡Soy el desarrollador que creó esta\n
-sección del juego!\p
-¡Espero que te haya gustado ALOLA.\p
-Estoy con un demake completo de la\n
-región llamada ULTRA ECLIPSE.$"
+	.string "¡Hola, {PLAYER}!\p¡Soy el desarrollador que creó esta\nsección del juego!\p¡Espero que te haya gustado ALOLA.\pEstoy con un demake completo de la\nregión llamada ULTRA ECLIPSE.$"
 
 Alola_Ulaula_Phant_outside_Text_1:
-	.string "Ven a visitarme a mi casa en la\n
-cima de esta isla.\l
-¡Vale la pena, ya verás!$"
+	.string "Ven a visitarme a mi casa en la\ncima de esta isla.\l¡Vale la pena, ya verás!$"
 
 Alola_Ulaula_TrainerBattlePicnicker_Text_0:
 	.string "¡Sorpresa!\n¡Estaba en los árboles!$"

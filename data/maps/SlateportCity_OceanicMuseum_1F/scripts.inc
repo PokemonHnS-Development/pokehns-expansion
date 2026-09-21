@@ -223,43 +223,31 @@ SlateportCity_OceanicMuseum_1F_Movement_FamiliarGruntExitNorth:
 	step_end
 
 SlateportCity_OceanicMuseum_1F_Text_WouldYouLikeToEnter:
-	.string "Bienvenido al MUSEO OCEÁNICO.\p
-La entrada cuesta ¥50.\n
-¿Quieres entrar?$"
+	.string "Bienvenido al MUSEO OCEÁNICO.\pLa entrada cuesta ¥50.\n¿Quieres entrar?$"
 
 SlateportCity_OceanicMuseum_1F_Text_PleaseEnjoyYourself:
 	.string "Please enjoy yourself.$"
 
 SlateportCity_OceanicMuseum_1F_Text_NotEnoughMoney:
-	.string "¿Oh? Lo siento, pero no pareces\n
-tener dinero suficiente.$"
+	.string "¿Oh? Lo siento, pero no pareces\ntener dinero suficiente.$"
 
 SlateportCity_OceanicMuseum_1F_Text_CatchUpWithYourGroup:
-	.string "¿Oh? ¿Eres del grupo que\n
-entró antes?\p
-Eres el único que llegó tarde.\n
-¡Más te vale alcanzarlos!$"
+	.string "¿Oh? ¿Eres del grupo que\nentró antes?\pEres el único que llegó tarde.\n¡Más te vale alcanzarlos!$"
 
 SlateportCity_OceanicMuseum_1F_Text_AquaExistForGoodOfAll:
-	.string "Nosotros, el EQUIPO AQUA, existimos\n
-por el bien de todos!$"
+	.string "Nosotros, el EQUIPO AQUA, existimos\npor el bien de todos!$"
 
 SlateportCity_OceanicMuseum_1F_Text_OurBossIsntHere:
-	.string "Nos dijeron que nos reuniéramos aquí,\n
-y vinimos, pero…\p
-Nuestro JEFE, el pilar, no está aquí.$"
+	.string "Nos dijeron que nos reuniéramos aquí,\ny vinimos, pero…\pNuestro JEFE, el pilar, no está aquí.$"
 
 SlateportCity_OceanicMuseum_1F_Text_WouldStuffHereMakeMeRich:
-	.string "Si me robo las cosas de aquí,\n
-¿me haría rico?$"
+	.string "Si me robo las cosas de aquí,\n¿me haría rico?$"
 
 SlateportCity_OceanicMuseum_1F_Text_CanLearnForNefariousDeeds:
-	.string "Lo que aprenda aquí, lo puedo usar\n
-para cometer fechorías…$"
+	.string "Lo que aprenda aquí, lo puedo usar\npara cometer fechorías…$"
 
 SlateportCity_OceanicMuseum_1F_Text_RustboroBungled:
-	.string "¡Si nuestros matones no arruinaran\n
-CIUDAD FÉRRICA, no estaríamos aquí!$"
+	.string "¡Si nuestros matones no arruinaran\nCIUDAD FÉRRICA, no estaríamos aquí!$"
 
 SlateportCity_OceanicMuseum_1F_Text_DidntHaveMoney:
 	.string "No tenía ¥50, así que tardé mucho\n"
@@ -335,13 +323,7 @@ SlateportCity_OceanicMuseum_1F_Text_BeachSandDisplay:
 	.string "como arena en las playas.”$"
 
 SlateportCity_OceanicMuseum_1F_Text_OceanicMinifact1:
-	.string "“MINIDATO OCEÁNICO 1\n
-¿Por qué es azul el agua del mar?\p
-“La luz se compone de muchos colores.\p
-“Cuando la luz pasa por el agua,\n
-casi toda la luz pierde color.\p
-“Sin embargo, la luz azul mantiene\n
-su color, haciendo el mar azul.”$"
+	.string "“MINIDATO OCEÁNICO 1\n¿Por qué es azul el agua del mar?\p“La luz se compone de muchos colores.\p“Cuando la luz pasa por el agua,\ncasi toda la luz pierde color.\p“Sin embargo, la luz azul mantiene\nsu color, haciendo el mar azul.”$"
 
 SlateportCity_OceanicMuseum_1F_Text_OceanicMinifact2:
 	.string "“DATO OCEÁNICO 2\n"
@@ -362,17 +344,8 @@ SlateportCity_OceanicMuseum_1F_Text_OceanicMinifact3:
 	.string "del tamaño de la tierra.”$"
 
 SlateportCity_OceanicMuseum_1F_Text_FossilDisplay:
-	.string "Es un fósil con crestas onduladas.\p
-“El fondo del mar es arrastrado\n
-por la marea.\p
-“El agua al fluir marca el suelo\n
-con pequeñas crestas y valles.\p
-“Si este suelo se fosiliza, se llama\n
-marca de oleaje.”$"
+	.string "Es un fósil con crestas onduladas.\p“El fondo del mar es arrastrado\npor la marea.\p“El agua al fluir marca el suelo\ncon pequeñas crestas y valles.\p“Si este suelo se fosiliza, se llama\nmarca de oleaje.”$"
 
 SlateportCity_OceanicMuseum_1F_Text_DepthMeasuringMachine:
-	.string "Una máquina extraña gira bajo\n
-una cúpula de vidrio.\p
-Quizá sirva para medir la\n
-profundidad de algo…$"
+	.string "Una máquina extraña gira bajo\nuna cúpula de vidrio.\pQuizá sirva para medir la\nprofundidad de algo…$"
 

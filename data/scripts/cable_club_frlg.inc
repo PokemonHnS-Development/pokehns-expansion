@@ -1599,16 +1599,10 @@ CableClub_Text_ChooseGroupLeaderOfTwo_Frlg::
 	.string "“UNIRSE AL GRUPO”.$"
 
 CableClub_Text_ChooseGroupLeaderOfFour_Frlg::
-	.string "Decidan cuál de ustedes cuatro\n
-será el LÍDER DEL GRUPO.\p
-Los demás jugadores deben elegir\n
-“UNIRSE AL GRUPO.”$"
+	.string "Decidan cuál de ustedes cuatro\nserá el LÍDER DEL GRUPO.\pLos demás jugadores deben elegir\n“UNIRSE AL GRUPO.”$"
 
 CableClub_Text_ChooseGroupLeader_Frlg::
-	.string "Decidan quién de ustedes\n
-será el LÍDER DEL GRUPO.\p
-Los demás jugadores deben elegir\n
-“UNIRSE AL GRUPO.”$"
+	.string "Decidan quién de ustedes\nserá el LÍDER DEL GRUPO.\pLos demás jugadores deben elegir\n“UNIRSE AL GRUPO.”$"
 
 CableClub_Text_WelcomeUnionRoomEnter_Frlg::
 	.string "Bienvenido al CLUB WIRELESS\n"

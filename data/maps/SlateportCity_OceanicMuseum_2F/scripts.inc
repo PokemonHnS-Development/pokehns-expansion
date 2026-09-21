@@ -294,22 +294,17 @@ SlateportCity_OceanicMuseum_2F_Text_Grunt1Defeat:
 	.string "¡Un niño me venció!$"
 
 SlateportCity_OceanicMuseum_2F_Text_BossGoingToBeFurious:
-	.string "Ay, qué desastre…\n
-El JEFE va a estar furioso…$"
+	.string "Ay, qué desastre…\nEl JEFE va a estar furioso…$"
 
 SlateportCity_OceanicMuseum_2F_Text_LetMeTakeCareOfThis:
-	.string "¡Bah, llorón cobarde!\n
-¡Déjame encargarme de esto!$"
+	.string "¡Bah, llorón cobarde!\n¡Déjame encargarme de esto!$"
 
 SlateportCity_OceanicMuseum_2F_Text_Grunt2Defeat:
 	.string "¡¿Qué?!\n"
 	.string "¡Yo también perdí!$"
 
 SlateportCity_OceanicMuseum_2F_Text_MeddlingKid:
-	.string "¿Y ahora? Si no nos dan las piezas,\n
-¡estamos en apuros!\p
-Arrgh, no contaba con que un\n
-niño entrometido se metiera!$"
+	.string "¿Y ahora? Si no nos dan las piezas,\n¡estamos en apuros!\pArrgh, no contaba con que un\nniño entrometido se metiera!$"
 
 SlateportCity_OceanicMuseum_2F_Text_CameToSeeWhatsTakingSoLong:
 	.string "Vine a ver qué estaba tardando\n"
@@ -420,9 +415,7 @@ SlateportCity_OceanicMuseum_2F_Text_SSTidalReplica:
 	.string "construcción en ASTILLERO STERN.”$"
 
 SlateportCity_OceanicMuseum_2F_Text_SubmarineReplica:
-	.string "“EXPLORADOR SUBMARINO 1\p
-“Réplica del submarino de exploración\n
-marina de alto rendimiento.”$"
+	.string "“EXPLORADOR SUBMARINO 1\p“Réplica del submarino de exploración\nmarina de alto rendimiento.”$"
 
 SlateportCity_OceanicMuseum_2F_Text_SumbersibleReplica:
 	.string "“CÁPSULA SUMERGIBLE\p"
@@ -430,6 +423,4 @@ SlateportCity_OceanicMuseum_2F_Text_SumbersibleReplica:
 	.string "y no tripulada para el fondo marino.”$"
 
 SlateportCity_OceanicMuseum_2F_Text_SSAnneReplica:
-	.string "“S.S. ANNE\p
-“Réplica del transatlántico de lujo\n
-que da la vuelta al mundo.”$"
+	.string "“S.S. ANNE\p“Réplica del transatlántico de lujo\nque da la vuelta al mundo.”$"

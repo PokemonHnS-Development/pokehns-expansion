@@ -232,10 +232,7 @@ RustboroCity_PokemonSchool_Text_ExplainSleep:
 	.string "Despiértalo con un DESPERTAR.$"
 
 RustboroCity_PokemonSchool_Text_ExplainBurn:
-	.string "La quemadura reduce el ATAQUE y\n
-le baja los PS poco a poco.\p
-La quemadura sigue tras el combate.\n
-Cura una quemadura con ANTIQUEMAR.$"
+	.string "La quemadura reduce el ATAQUE y\nle baja los PS poco a poco.\pLa quemadura sigue tras el combate.\nCura una quemadura con ANTIQUEMAR.$"
 
 RustboroCity_PokemonSchool_Text_ExplainFreeze:
 	.string "Si un POKéMON se congela, queda\n"
@@ -244,11 +241,7 @@ RustboroCity_PokemonSchool_Text_ExplainFreeze:
 	.string "Descongélalo con una CURA HIELO.$"
 
 RustboroCity_PokemonSchool_Text_StudentsWhoDontStudyGetQuickClaw:
-	.string "Los alumnos que no estudian prueban\n
-un poco de mi GARRA RÁPIDA.\p
-Se notará si eres buen alumno o no\n
-por la forma en que uses\l
-este objeto.$"
+	.string "Los alumnos que no estudian prueban\nun poco de mi GARRA RÁPIDA.\pSe notará si eres buen alumno o no\npor la forma en que uses\leste objeto.$"
 
 RustboroCity_PokemonSchool_Text_ExplainQuickClaw:
 	.string "Un POKéMON con la GARRA RÁPIDA\n"
@@ -318,18 +311,10 @@ RustboroCity_PokemonSchool_Text_ScottMetAlreadyCut:
 	.string "este pueblo tiene CORTE.$"
 
 RustboroCity_PokemonSchool_Text_StudentTalentLevelUnknown:
-	.string "SCOTT: Mmm...\p
-El talento de los alumnos de aquí\n
-es una incógnita. Hay potencial.$"
+	.string "SCOTT: Mmm...\pEl talento de los alumnos de aquí\nes una incógnita. Hay potencial.$"
 
 RustboroCity_PokemonSchool_Text_ScottStoneBadge:
-	.string "SCOTT: Ah, ¿qué es eso?\p
-Es una MEDALLA PIEDRA, ¿no?\n
-La verdad, es impresionante.\p
-Pero, sabes, me habría encantado\n
-verte en combate.\p
-Es difícil saber cómo eres como\n
-ENTRENADOR por una MEDALLA LIGA.$"
+	.string "SCOTT: Ah, ¿qué es eso?\pEs una MEDALLA PIEDRA, ¿no?\nLa verdad, es impresionante.\pPero, sabes, me habría encantado\nverte en combate.\pEs difícil saber cómo eres como\nENTRENADOR por una MEDALLA LIGA.$"
 
 RustboroCity_PokemonSchool_Text_ScottMetAlreadyStoneBadge:
 	.string "¿Hola? ¿No nos conocíamos?\n"

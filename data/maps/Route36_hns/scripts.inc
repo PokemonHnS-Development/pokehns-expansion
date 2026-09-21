@@ -364,8 +364,7 @@ Route36_Text_AlanHasItem:
 	.string "¡Toma, puedes quedártelo!$"
 
 Route36_Text_AlanGaveItem:
-	.string "Te aviso si encuentro\n
-¡alguna otra cosa!$"
+	.string "Te aviso si encuentro\n¡alguna otra cosa!$"
 
 Route36_Text_AlanNoRoom:
 	.string "Hmm, tu MOCHILA está llena.\p"

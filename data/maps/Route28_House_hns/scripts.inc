@@ -14,10 +14,7 @@ Route28House_EventScript_CelebrityAfter::
 	end
 
 Route28House_Text_Celebrity1:
-	.string "¡Oh, cielos! Me encontraste.\p
-Por favor, no le digas a nadie.\p
-Te daré esto por guardar mi\n
-secreto. ¿Por favor?$"
+	.string "¡Oh, cielos! Me encontraste.\pPor favor, no le digas a nadie.\pTe daré esto por guardar mi\nsecreto. ¿Por favor?$"
 
 Route28House_Text_Celebrity2:
 	.string "Es duro ser una gran celebridad.\p"

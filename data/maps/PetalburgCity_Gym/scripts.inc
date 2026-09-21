@@ -1302,9 +1302,7 @@ PetalburgCity_Gym_Text_DadHappyAndSad:
 	.string "feliz y triste a la vez. Es raro…$"
 
 PetalburgCity_Gym_Text_PleaseComeWithMe:
-	.string "Ah, ahí estás, {PLAYER}{KUN}!\p
-Por favor, ven conmigo.\n
-Tengo algo que quiero darte.$"
+	.string "Ah, ahí estás, {PLAYER}{KUN}!\pPor favor, ven conmigo.\nTengo algo que quiero darte.$"
 
 PetalburgCity_Gym_Text_LetMeBorrowPlayer:
 	.string "NORMAN, no te importa, ¿verdad?\p"

@@ -544,12 +544,7 @@ MauvilleCity_PokemonCenter_1F_Text_SlotJackpotsAction::
 	.string "Ganó el gran premio en las TRAGAPERRAS$"
 
 MauvilleCity_PokemonCenter_1F_Text_SlotJackpotsStory::
-	.string "Es la historia de un ENTRENADOR\n
-llamado {STR_VAR_3}.\p
-Este ENTRENADOR ganó el gran premio\n
-en las TRAGAPERRAS {STR_VAR_1} veces.\p
-{STR_VAR_3} es un ENTRENADOR\n
-con suerte en las TRAGAPERRAS!$"
+	.string "Es la historia de un ENTRENADOR\nllamado {STR_VAR_3}.\pEste ENTRENADOR ganó el gran premio\nen las TRAGAPERRAS {STR_VAR_1} veces.\p{STR_VAR_3} es un ENTRENADOR\ncon suerte en las TRAGAPERRAS!$"
 
 MauvilleCity_PokemonCenter_1F_Text_RouletteWinsTitle::
 	.string "The ROULETTE Champ$"
@@ -558,12 +553,7 @@ MauvilleCity_PokemonCenter_1F_Text_RouletteWinsAction::
 	.string "Tuvo una racha en la RULETA de$"
 
 MauvilleCity_PokemonCenter_1F_Text_RouletteWinsStory::
-	.string "Es la historia de un ENTRENADOR\n
-llamado {STR_VAR_3}.\p
-Este ENTRENADOR ganó en la RULETA\n
-{STR_VAR_1} veces seguidas.\p
-{STR_VAR_3} tuvo suerte cuando\n
-la bola cayó en la RULETA!$"
+	.string "Es la historia de un ENTRENADOR\nllamado {STR_VAR_3}.\pEste ENTRENADOR ganó en la RULETA\n{STR_VAR_1} veces seguidas.\p{STR_VAR_3} tuvo suerte cuando\nla bola cayó en la RULETA!$"
 
 MauvilleCity_PokemonCenter_1F_Text_BattleTowerChallengesTitle::
 	.string "The BATTLE TOWER Challenger$"
@@ -572,12 +562,7 @@ MauvilleCity_PokemonCenter_1F_Text_BattleTowerChallengesAction::
 	.string "Took the BATTLE TOWER challenge$"
 
 MauvilleCity_PokemonCenter_1F_Text_BattleTowerChallengesStory::
-	.string "Es la historia de un ENTRENADOR\n
-llamado {STR_VAR_3}.\p
-Este ENTRENADOR aceptó el reto de la\n
-TORRE BATALLA {STR_VAR_1} veces!\p
-{STR_VAR_3} es un ENTRENADOR que busca\n
-la excelencia en la TORRE BATALLA!$"
+	.string "Es la historia de un ENTRENADOR\nllamado {STR_VAR_3}.\pEste ENTRENADOR aceptó el reto de la\nTORRE BATALLA {STR_VAR_1} veces!\p{STR_VAR_3} es un ENTRENADOR que busca\nla excelencia en la TORRE BATALLA!$"
 
 MauvilleCity_PokemonCenter_1F_Text_MadePokeblocksTitle::
 	.string "The Blend-Loving TRAINER$"

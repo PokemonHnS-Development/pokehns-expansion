@@ -284,20 +284,13 @@ Route124_DivingTreasureHuntersHouse_EventScript_ShardTradeBoard::
 	end
 
 Route124_DivingTreasureHuntersHouse_Text_Greeting:
-	.string "¡Soy el CAZATESOROS BUCEADOR!\p
-Soy el asombroso tipo que hace\n
-inmersiones profundas para reunir\l
-tesoros que descansan en el fondo.$"
+	.string "¡Soy el CAZATESOROS BUCEADOR!\pSoy el asombroso tipo que hace\ninmersiones profundas para reunir\ltesoros que descansan en el fondo.$"
 
 Route124_DivingTreasureHuntersHouse_Text_HaveYouSeenAnyShards:
-	.string "Dime, ¿has visto FRAGMENTOS de\n
-herramientas de tiempos antiguos?$"
+	.string "Dime, ¿has visto FRAGMENTOS de\nherramientas de tiempos antiguos?$"
 
 Route124_DivingTreasureHuntersHouse_Text_YouHaventGotAnyShards:
-	.string "No tienes ningún tesoro\n
-para mí…\p
-Si ves algún FRAGMENTO, como el\n
-ROJO, ¡tienes que cambiarlo conmigo!$"
+	.string "No tienes ningún tesoro\npara mí…\pSi ves algún FRAGMENTO, como el\nROJO, ¡tienes que cambiarlo conmigo!$"
 
 Route124_DivingTreasureHuntersHouse_Text_ThatsAShardIllTradeYou:
 	.string "¡Oh, hola! Eso...\n"

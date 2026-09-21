@@ -298,9 +298,7 @@ Route119_WeatherInstitute_2F_Text_PokemonChangesWithWeather:
 	.string "INSTITUTO; puedes llevártelo.$"
 
 Route119_WeatherInstitute_2F_Text_ChangingWeatherRidiculous:
-	.string "He investigado la lluvia por muchos\n
-años, pero es ridículo pensar que\l
-los humanos puedan cambiar el clima.$"
+	.string "He investigado la lluvia por muchos\naños, pero es ridículo pensar que\llos humanos puedan cambiar el clima.$"
 
 Route119_WeatherInstitute_2F_Text_GroudonWeather:
 	.string "Sigo los patrones climáticos en\n"

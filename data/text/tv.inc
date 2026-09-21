@@ -295,10 +295,7 @@ SlateportCity_PokemonFanClub_Text_LikenMonToSomethingYouLike:
 	.string "que te guste, ¿qué sería?$"
 
 SlateportCity_PokemonFanClub_Text_WhatAttractedYouAboutMon:
-	.string "Esta pregunta también es sobre tu\n
-querido {STR_VAR_1}.\p
-¿Qué fue lo de {STR_VAR_1} que\n
-te atrajo?$"
+	.string "Esta pregunta también es sobre tu\nquerido {STR_VAR_1}.\p¿Qué fue lo de {STR_VAR_1} que\nte atrajo?$"
 
 SlateportCity_PokemonFanClub_Text_WhatDoPokemonMeanToYou:
 	.string "Bien, eso tiene sentido.\p"
@@ -339,9 +336,7 @@ SlateportCity_PokemonFanClub_Text_InterviewRequest:
 	.string "contarme algo sobre tu {STR_VAR_1}?$"
 
 SlateportCity_PokemonFanClub_Text_TellMeAnythingAboutYourMon:
-	.string "¡Vaya, gracias!\p
-Bien, entonces cuéntame lo que\n
-quieras sobre tu {STR_VAR_1}.$"
+	.string "¡Vaya, gracias!\pBien, entonces cuéntame lo que\nquieras sobre tu {STR_VAR_1}.$"
 
 SlateportCity_PokemonFanClub_Text_ThatsAllForInterview2:
 	.string "Vaya...\n"
@@ -672,36 +667,19 @@ gTVTrainerFanClubSpecialText00::
 	.string "fuerza de 0 a 100.$"
 
 gTVTrainerFanClubSpecialText01::
-	.string "¡El puntaje fue {STR_VAR_3} puntos!\n
-¡Sin duda es un puntaje muy alto!\p
-Obviamente {STR_VAR_2} tiene a\n
-{STR_VAR_1} en muy alta estima.$"
+	.string "¡El puntaje fue {STR_VAR_3} puntos!\n¡Sin duda es un puntaje muy alto!\pObviamente {STR_VAR_2} tiene a\n{STR_VAR_1} en muy alta estima.$"
 
 gTVTrainerFanClubSpecialText02::
-	.string "¡El puntaje fue {STR_VAR_3} puntos!\n
-Es un buen puntaje.\p
-{STR_VAR_2} debe considerar\n
-a {STR_VAR_1} como su rival.$"
+	.string "¡El puntaje fue {STR_VAR_3} puntos!\nEs un buen puntaje.\p{STR_VAR_2} debe considerar\na {STR_VAR_1} como su rival.$"
 
 gTVTrainerFanClubSpecialText03::
-	.string "¡El puntaje fue {STR_VAR_3} puntos!\n
-Es un puntaje bastante bajo.\p
-{STR_VAR_2} debe considerar\n
-a {STR_VAR_1} como su ayudante.$"
+	.string "¡El puntaje fue {STR_VAR_3} puntos!\nEs un puntaje bastante bajo.\p{STR_VAR_2} debe considerar\na {STR_VAR_1} como su ayudante.$"
 
 gTVTrainerFanClubSpecialText04::
-	.string "¡El puntaje fue {STR_VAR_3} punto(s)!\n
-Es un puntaje terrible.\p
-{STR_VAR_2} debe considerar\n
-a {STR_VAR_1} como su subordinado.$"
+	.string "¡El puntaje fue {STR_VAR_3} punto(s)!\nEs un puntaje terrible.\p{STR_VAR_2} debe considerar\na {STR_VAR_1} como su subordinado.$"
 
 gTVTrainerFanClubSpecialText05::
-	.string "¡Y eso es todo, amigos!\p
-Creo que todos aprendimos\n
-algo nuevo de {STR_VAR_1}.\p
-Para cerrar, les dejo con\n
-las palabras de {STR_VAR_2}.\p
-¡{STR_VAR_3} {STR_VAR_1}!$"
+	.string "¡Y eso es todo, amigos!\pCreo que todos aprendimos\nalgo nuevo de {STR_VAR_1}.\pPara cerrar, les dejo con\nlas palabras de {STR_VAR_2}.\p¡{STR_VAR_3} {STR_VAR_1}!$"
 
 gTVNameRaterText00::
 	.string "Y ahora, es momento de...\n"
@@ -1088,21 +1066,13 @@ SmartShopper_Text_ThirdItem::
 	.string "{STR_VAR_3} unidades de {STR_VAR_2}.$"
 
 SmartShopper_Text_DuringSale::
-	.string "EMPLEADO: Además, fue en oferta.\n
-¡Qué buena compra!$"
+	.string "EMPLEADO: Además, fue en oferta.\n¡Qué buena compra!$"
 
 SmartShopper_Text_OutroNormal::
-	.string "ENTREVISTADOR: Mmm… {STR_VAR_1}\n
-parece un astuto cazador de ofertas!\p
-En total, {STR_VAR_1} compró…\p
-¥{STR_VAR_2}?!\n
-¡Qué suma tan increíble!\p
-¡Ups! ¡Se nos acabó el tiempo!\n
-¡Nos vemos en la próxima emisión!$"
+	.string "ENTREVISTADOR: Mmm… {STR_VAR_1}\nparece un astuto cazador de ofertas!\pEn total, {STR_VAR_1} compró…\p¥{STR_VAR_2}?!\n¡Qué suma tan increíble!\p¡Ups! ¡Se nos acabó el tiempo!\n¡Nos vemos en la próxima emisión!$"
 
 SmartShopper_Text_IsVIP::
-	.string "EMPLEADO: {STR_VAR_1}, cliente VIP,\n
-sin duda alguna.$"
+	.string "EMPLEADO: {STR_VAR_1}, cliente VIP,\nsin duda alguna.$"
 
 SmartShopper_Text_ClerkMax::
 	.string "Entrevistemos al empleado para\n"
@@ -1126,15 +1096,7 @@ SmartShopper_Text_ClerkMax::
 	.string "no hay ninguna duda.$"
 
 SmartShopper_Text_OutroMax::
-	.string "ENTREVISTADOR: Mmm…\n
-Eso es increíble.\p
-¿Pero por qué el ENTRENADOR necesita\n
-comprar tantas?\p
-… …\p
-El misterio crece, pero se nos acabó\n
-el tiempo por hoy.\l
-¡Nos vemos en la próxima emisión!\p
-Aun así, {STR_VAR_1} es un enigma…$"
+	.string "ENTREVISTADOR: Mmm…\nEso es increíble.\p¿Pero por qué el ENTRENADOR necesita\ncomprar tantas?\p… …\pEl misterio crece, pero se nos acabó\nel tiempo por hoy.\l¡Nos vemos en la próxima emisión!\pAun así, {STR_VAR_1} es un enigma…$"
 
 gTVWorldOfMastersText00::
 	.string "EL MUNDO DE LOS MAESTROS\p"
@@ -1576,11 +1538,7 @@ gTVSecretBaseVisitText12::
 	.string "¡Sin duda, fue una gran lección!$"
 
 gTVSecretBaseVisitText13::
-	.string "Debo decir, ¡qué gran BASE SECRETA\n
-era!\p
-Espectadores, si tienes la ocasión,\n
-visita la BASE SECRETA, {STR_VAR_1}.\p
-¡Hasta la próxima, me despido!$"
+	.string "Debo decir, ¡qué gran BASE SECRETA\nera!\pEspectadores, si tienes la ocasión,\nvisita la BASE SECRETA, {STR_VAR_1}.\p¡Hasta la próxima, me despido!$"
 
 gTVPokemonLotteryWinnerFlashReportText00::
 	.string "¡Es emocionante!\n"
@@ -1618,14 +1576,10 @@ gTVThePokemonBattleSeminarText00::
 	.string "luchaba contra un {STR_VAR_3}…$"
 
 gTVThePokemonBattleSeminarText01::
-	.string "Y usó el movimiento {STR_VAR_3}\n
-contra el {STR_VAR_2}…\p
-Mmm… ¡{STR_VAR_1}!\n
-¡Eso no se hace!$"
+	.string "Y usó el movimiento {STR_VAR_3}\ncontra el {STR_VAR_2}…\pMmm… ¡{STR_VAR_1}!\n¡Eso no se hace!$"
 
 gTVThePokemonBattleSeminarText02::
-	.string "Además del movimiento condenado,\n
-el {STR_VAR_1} del ENTRENADOR sabía$"
+	.string "Además del movimiento condenado,\nel {STR_VAR_1} del ENTRENADOR sabía$"
 
 gTVThePokemonBattleSeminarText03::
 	.string "sabía {STR_VAR_1}, {STR_VAR_2},\n"
@@ -2097,95 +2051,53 @@ TVSecretBaseSecrets_Text_WhatWillPlayerDoNext2::
 	.string "Y ahora, ¿qué hará {STR_VAR_2}?$"
 
 TVSecretBaseSecrets_Text_TookXStepsBeforeLeaving::
-	.string "Al final, {STR_VAR_2} dio {STR_VAR_3} pasos\n
-en la BASE SECRETA de {STR_VAR_1}\l
-antes de irse.$"
+	.string "Al final, {STR_VAR_2} dio {STR_VAR_3} pasos\nen la BASE SECRETA de {STR_VAR_1}\lantes de irse.$"
 
 TVSecretBaseSecrets_Text_BaseFailedToInterestPlayer::
-	.string "Mmm…\p
-La BASE SECRETA de {STR_VAR_1} no\n
-parece interesar a {STR_VAR_2}…$"
+	.string "Mmm…\pLa BASE SECRETA de {STR_VAR_1} no\nparece interesar a {STR_VAR_2}…$"
 
 TVSecretBaseSecrets_Text_PlayerEnjoyedBase::
 	.string "{STR_VAR_2} parece haber disfrutado\n"
 	.string "mucho la BASE SECRETA de {STR_VAR_1}.$"
 
 TVSecretBaseSecrets_Text_PlayerHugeFanOfBase::
-	.string "{STR_VAR_2} se ha vuelto\n
-un gran fan de {STR_VAR_1}\l
-y su BASE SECRETA.$"
+	.string "{STR_VAR_2} se ha vuelto\nun gran fan de {STR_VAR_1}\ly su BASE SECRETA.$"
 
 TVSecretBaseSecrets_Text_Outro::
-	.string "Los televidentes quizá quieran ver\n
-la BASE SECRETA de {STR_VAR_1}.\p
-¡Acompáñennos a ver otra BASE\n
-SECRETA! ¡Gracias por acompañarnos!$"
+	.string "Los televidentes quizá quieran ver\nla BASE SECRETA de {STR_VAR_1}.\p¡Acompáñennos a ver otra BASE\nSECRETA! ¡Gracias por acompañarnos!$"
 
 TVSecretBaseSecrets_Text_StoppedMoving1::
-	.string "¡El visitante se detuvo!\p
-¡El visitante no se mueve!\p
-¿La BASE SECRETA de {STR_VAR_1}\n
-era tan poco impresionante?$"
+	.string "¡El visitante se detuvo!\p¡El visitante no se mueve!\p¿La BASE SECRETA de {STR_VAR_1}\nera tan poco impresionante?$"
 
 TVSecretBaseSecrets_Text_StoppedMoving2::
-	.string "¡El visitante se detuvo!\p
-¡El visitante no se mueve!\p
-¿Será cansancio?\n
-¿El visitante estará agotado?$"
+	.string "¡El visitante se detuvo!\p¡El visitante no se mueve!\p¿Será cansancio?\n¿El visitante estará agotado?$"
 
 TVSecretBaseSecrets_Text_UsedChair::
-	.string "¡El visitante se sentó en una silla!\n
-¡El visitante está sentado!\p
-¡Mira esa cara de felicidad!\p
-¡Esa silla debe ser muy cómoda\n
-para lograr esa reacción!$"
+	.string "¡El visitante se sentó en una silla!\n¡El visitante está sentado!\p¡Mira esa cara de felicidad!\p¡Esa silla debe ser muy cómoda\npara lograr esa reacción!$"
 
 TVSecretBaseSecrets_Text_UsedBalloon::
-	.string "¡El visitante chocó contra un globo!\p
-¡Estalló!\n
-¡Ay, Dios mío, reventó!\p
-¡El visitante se asustó con\n
-el ruido repentino!$"
+	.string "¡El visitante chocó contra un globo!\p¡Estalló!\n¡Ay, Dios mío, reventó!\p¡El visitante se asustó con\nel ruido repentino!$"
 
 TVSecretBaseSecrets_Text_UsedTent::
-	.string "¡El visitante entró a una CARPA!\p
-¡El visitante corre por todos lados!\p
-¡Vaya, el visitante retoza!\p
-¡El visitante se asombra del\n
-tamaño de la CARPA!$"
+	.string "¡El visitante entró a una CARPA!\p¡El visitante corre por todos lados!\p¡Vaya, el visitante retoza!\p¡El visitante se asombra del\ntamaño de la CARPA!$"
 
 TVSecretBaseSecrets_Text_UsedPlant::
-	.string "El visitante examina\n
-¡una planta en maceta!\p
-El visitante tiene un gusto\n
-sorprendentemente maduro!$"
+	.string "El visitante examina\n¡una planta en maceta!\pEl visitante tiene un gusto\nsorprendentemente maduro!$"
 
 TVSecretBaseSecrets_Text_UsedGoldShield::
-	.string "El visitante examina\n
-¡un ESCUDO DORADO!\p
-¡Los ojos del visitante brillan\n
-de asombro!$"
+	.string "El visitante examina\n¡un ESCUDO DORADO!\p¡Los ojos del visitante brillan\nde asombro!$"
 
 TVSecretBaseSecrets_Text_UsedSilverShield::
-	.string "El visitante está examinando\n
-un ESCUDO PLATEADO!\p
-¡El visitante parece estar asombrado!$"
+	.string "El visitante está examinando\nun ESCUDO PLATEADO!\p¡El visitante parece estar asombrado!$"
 
 TVSecretBaseSecrets_Text_UsedGlassOrnament::
-	.string "El visitante examina\n
-¡un ADORNO DE CRISTAL!\p
-¡Ay, no!\p
-¡El visitante lo está tocando!\p
-¡Se está llenando\n
-de huellas…$"
+	.string "El visitante examina\n¡un ADORNO DE CRISTAL!\p¡Ay, no!\p¡El visitante lo está tocando!\p¡Se está llenando\nde huellas…$"
 
 TVSecretBaseSecrets_Text_UsedTV::
-	.string "¡El visitante está viendo la tele!\p
-¡Parece que le encanta la TV!$"
+	.string "¡El visitante está viendo la tele!\p¡Parece que le encanta la TV!$"
 
 TVSecretBaseSecrets_Text_UsedMudBall::
-	.string "¡El visitante pisó una BOLA DE LODO!\p
-¡El visitante está encantado!$"
+	.string "¡El visitante pisó una BOLA DE LODO!\p¡El visitante está encantado!$"
 
 TVSecretBaseSecrets_Text_UsedBag::
 	.string "…Oh?\p"
@@ -2461,81 +2373,53 @@ ContestLiveUpdates_Text_WonBothRounds::
 	.string "¡Ese {STR_VAR_2} seguirá ganando!$"
 
 ContestLiveUpdates_Text_BetterRound2::
-	.string "Espectador: El {STR_VAR_2} no hizo\n
-gran cosa en la ronda primaria, pero\l
-¡se lució en la secundaria!\p
-Fue un regreso milagroso\n
-para ese {STR_VAR_2}. ¡Yupi!$"
+	.string "Espectador: El {STR_VAR_2} no hizo\ngran cosa en la ronda primaria, pero\l¡se lució en la secundaria!\pFue un regreso milagroso\npara ese {STR_VAR_2}. ¡Yupi!$"
 
 ContestLiveUpdates_Text_EqualRounds::
-	.string "Espectador: El {STR_VAR_2} se mantuvo\n
-constante en la ronda primaria\l
-y la secundaria.\p
-{STR_VAR_3} y el {STR_VAR_2},\n
-¡no son un dúo cualquiera!$"
+	.string "Espectador: El {STR_VAR_2} se mantuvo\nconstante en la ronda primaria\ly la secundaria.\p{STR_VAR_3} y el {STR_VAR_2},\n¡no son un dúo cualquiera!$"
 
 ContestLiveUpdates_Text_BetterRound1::
-	.string "Espectador: En cuanto a ser {STR_VAR_1},\n
-ese {STR_VAR_2} fue sobresaliente.\p
-Aunque espero que haga mejores\n
-actuaciones la próxima vez.$"
+	.string "Espectador: En cuanto a ser {STR_VAR_1},\nese {STR_VAR_2} fue sobresaliente.\pAunque espero que haga mejores\nactuaciones la próxima vez.$"
 
 ContestLiveUpdates_Text_GotNervous::
-	.string "Espectador: Cuando el {STR_VAR_2} se\n
-puso nervioso, no pude evitar\l
-gritar para animarlo.\p
-Quiero decirle a ese\n
-{STR_VAR_2}: ¡Felicidades!$"
+	.string "Espectador: Cuando el {STR_VAR_2} se\npuso nervioso, no pude evitar\lgritar para animarlo.\pQuiero decirle a ese\n{STR_VAR_2}: ¡Felicidades!$"
 
 ContestLiveUpdates_Text_StartledFoes::
-	.string "Espectador: ¡La apelación de {STR_VAR_2}\n
-¡Incluso a mí me asombró!\p
-{STR_VAR_2}, ¡estuviste genial!$"
+	.string "Espectador: ¡La apelación de {STR_VAR_2}\n¡Incluso a mí me asombró!\p{STR_VAR_2}, ¡estuviste genial!$"
 
 ContestLiveUpdates_Text_UsedCombo::
-	.string "Espectador: ¡El combo de {STR_VAR_2}\n
-¡La apelación fue asombrosa!\p
-¡Me ha sacudido por completo!$"
+	.string "Espectador: ¡El combo de {STR_VAR_2}\n¡La apelación fue asombrosa!\p¡Me ha sacudido por completo!$"
 
 ContestLiveUpdates_Text_ExcitingAppeal::
 	.string "Espectador: El {STR_VAR_2} ganador\n"
 	.string "¡Tu atractivo me aceleró el corazón!$"
 
 ContestLiveUpdates_Text_WasCool::
-	.string "¡{STR_VAR_2}!\n
-¡Estuviste genial!$"
+	.string "¡{STR_VAR_2}!\n¡Estuviste genial!$"
 
 ContestLiveUpdates_Text_WasBeautiful::
-	.string "{STR_VAR_2}!\n
-¡Qué belleza!$"
+	.string "{STR_VAR_2}!\n¡Qué belleza!$"
 
 ContestLiveUpdates_Text_WasCute::
-	.string "{STR_VAR_2}!\n
-¡Qué dulzura!$"
+	.string "{STR_VAR_2}!\n¡Qué dulzura!$"
 
 ContestLiveUpdates_Text_WasSmart::
-	.string "{STR_VAR_2}!\n
-¡Qué ingenio!$"
+	.string "{STR_VAR_2}!\n¡Qué ingenio!$"
 
 ContestLiveUpdates_Text_WasTough::
-	.string "{STR_VAR_2}!\n
-¡Qué fortaleza!$"
+	.string "{STR_VAR_2}!\n¡Qué fortaleza!$"
 
 ContestLiveUpdates_Text_VeryExcitingAppeal::
-	.string "Espectador: ¡La actuación ganadora de {STR_VAR_2}\n
-aún me tiene con el corazón acelerado!$"
+	.string "Espectador: ¡La actuación ganadora de {STR_VAR_2}\naún me tiene con el corazón acelerado!$"
 
 ContestLiveUpdates_Text_VeryCool::
-	.string "{STR_VAR_2}!\n
-¡Eres el colmo del carisma!$"
+	.string "{STR_VAR_2}!\n¡Eres el colmo del carisma!$"
 
 ContestLiveUpdates_Text_VeryBeautiful::
-	.string "{STR_VAR_2}!\n
-¡Eres la máxima belleza!$"
+	.string "{STR_VAR_2}!\n¡Eres la máxima belleza!$"
 
 ContestLiveUpdates_Text_VeryCute::
-	.string "{STR_VAR_2}!\n
-¡Eres la máxima dulzura!$"
+	.string "{STR_VAR_2}!\n¡Eres la máxima dulzura!$"
 
 ContestLiveUpdates_Text_VerySmart::
 	.string "{STR_VAR_2}!\n"
@@ -2611,12 +2495,7 @@ ContestLiveUpdates_Text_NeverExciting::
 	.string "atraer más al público.$"
 
 ContestLiveUpdates_Text_LostBySmallMargin::
-	.string "Perdió contra {STR_VAR_1} y su {STR_VAR_2}\n
-por muy poco.\p
-Debe ser desgarrador llegar\n
-tan cerca de ganar y fallar.\p
-No me sorprendería que {STR_VAR_3}\n
-estuviera llorando por esto.$"
+	.string "Perdió contra {STR_VAR_1} y su {STR_VAR_2}\npor muy poco.\pDebe ser desgarrador llegar\ntan cerca de ganar y fallar.\pNo me sorprendería que {STR_VAR_3}\nestuviera llorando por esto.$"
 
 ContestLiveUpdates_Text_RepeatedAppeals::
 	.string "Decepcionó al JUEZ al\n"
@@ -2627,11 +2506,7 @@ ContestLiveUpdates_Text_RepeatedAppeals::
 	.string "esta triste actuación.$"
 
 ContestLiveUpdates_Text_ValiantEffortButLost::
-	.string "{STR_VAR_1} hizo un esfuerzo valiente,\n
-pero...\p
-Todo fue en vano, quedó en último.\p
-{STR_VAR_1} debe aprender de esta\n
-derrota y usarlo para mejorar.$"
+	.string "{STR_VAR_1} hizo un esfuerzo valiente,\npero...\pTodo fue en vano, quedó en último.\p{STR_VAR_1} debe aprender de esta\nderrota y usarlo para mejorar.$"
 
 ContestLiveUpdates_Text_Outro::
 	.string "Quiero cerrar el programa con nuestra\n"
@@ -2680,9 +2555,7 @@ gTVPokemonBattleUpdateText05::
 	.string "El equipo de {STR_VAR_1}.$"
 
 gTVPokemonBattleUpdateText06::
-	.string "En la batalla, el {STR_VAR_2} del\n
-equipo de {STR_VAR_1} fue una fuerza\l
-formidable con {STR_VAR_3}.$"
+	.string "En la batalla, el {STR_VAR_2} del\nequipo de {STR_VAR_1} fue una fuerza\lformidable con {STR_VAR_3}.$"
 
 gTVPokemonBattleUpdateText07::
 	.string "El mal desempeño del {STR_VAR_3}\n"
@@ -2722,10 +2595,7 @@ GabbyAndTy_Text_WhoAreYouInterview:
 	.string "tu tiempo para una entrevista?$"
 
 GabbyAndTy_Text_QuoteFromLastInterview:
-	.string "GABBY: “{STR_VAR_1}!”\p
-¿Recuerdas? Esa es la frase que\n
-nos diste para cerrar la batalla.\p
-¡Jamás, jamás olvido cosas así!$"
+	.string "GABBY: “{STR_VAR_1}!”\p¿Recuerdas? Esa es la frase que\nnos diste para cerrar la batalla.\p¡Jamás, jamás olvido cosas así!$"
 
 GabbyAndTy_Text_YouStompedUsInterviewAgain:
 	.string "La última vez que luchamos, nos\n"
@@ -2775,9 +2645,7 @@ GabbyAndTy_Text_PerfectWellBeSeeingYou:
 	.string "¡Nos vemos!$"
 
 GabbyAndTy_Text_DontGiveUpKeepingEyeOut:
-	.string "GABBY: Oh...\p
-Está bien, ¡no te rindas!\n
-¡Seguiremos pendientes de ti!$"
+	.string "GABBY: Oh...\pEstá bien, ¡no te rindas!\n¡Seguiremos pendientes de ti!$"
 
 GabbyAndTy_Text_KeepingAnEyeOutForYou:
 	.string "GABBY: Estaremos pendientes\n"

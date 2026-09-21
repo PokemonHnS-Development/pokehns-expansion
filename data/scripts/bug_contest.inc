@@ -153,44 +153,27 @@ BugContest_Text_WhiteOut:
 	.string "{PLAYER} se retiró del concurso.$"
 
 BugContest_Text_First1:
-	.string "El tercer puesto es para la\n
-ENTRENADORA BELINDA, que atrapó\l
-un BUTTERFREE que se revolvía!$"
+	.string "El tercer puesto es para la\nENTRENADORA BELINDA, que atrapó\lun BUTTERFREE que se revolvía!$"
 BugContest_Text_First2:
-	.string "El segundo puesto es para el\n
-CAZABICHOS SHAUN, que atrapó\l
-¡un PINSIR que se retorcía!$"
+	.string "El segundo puesto es para el\nCAZABICHOS SHAUN, que atrapó\l¡un PINSIR que se retorcía!$"
 BugContest_Text_First3:
-	.string "El ganador del Concurso\n
-de Captura de Bichos es...\p
-{PLAYER}, que atrapó un\n
-{STR_VAR_1} enorme!$"
+	.string "El ganador del Concurso\nde Captura de Bichos es...\p{PLAYER}, que atrapó un\n{STR_VAR_1} enorme!$"
 
 BugContest_Text_Second1:
-	.string "El tercer puesto es para la\n
-ENTRENADORA BELINDA, que atrapó\l
-un BUTTERFREE que se revolvía!$"
+	.string "El tercer puesto es para la\nENTRENADORA BELINDA, que atrapó\lun BUTTERFREE que se revolvía!$"
 BugContest_Text_Second2:
 	.string "En segundo lugar está {PLAYER},\n"
 	.string "¡quien atrapó un {STR_VAR_1}!$"
 BugContest_Text_Second3:
-	.string "El ganador del Concurso\n
-de Captura de Bichos es...\p
-CAZABICHOS SHAUN, que atrapó\n
-¡un PINSIR enorme!$"
+	.string "El ganador del Concurso\nde Captura de Bichos es...\pCAZABICHOS SHAUN, que atrapó\n¡un PINSIR enorme!$"
 
 BugContest_Text_Third1:
 	.string "En tercer lugar está {PLAYER},\n"
 	.string "¡quien atrapó un {STR_VAR_1}!$"
 BugContest_Text_Third2:
-	.string "El segundo puesto es para la\n
-ENTRENADORA BELINDA, que atrapó\l
-un BUTTERFREE que se retorcía!$"
+	.string "El segundo puesto es para la\nENTRENADORA BELINDA, que atrapó\lun BUTTERFREE que se retorcía!$"
 BugContest_Text_Third3:
-	.string "El ganador del Concurso\n
-de Captura de Bichos es...\p
-CAZABICHOS SHAUN, que atrapó\n
-¡un PINSIR enorme!$"
+	.string "El ganador del Concurso\nde Captura de Bichos es...\pCAZABICHOS SHAUN, que atrapó\n¡un PINSIR enorme!$"
 
 BugContest_Text_TakePartInFuture:
 	.string "¡Gracias por participar!\n"

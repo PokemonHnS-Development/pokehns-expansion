@@ -482,30 +482,23 @@ Route34_Text_DoYouWantEgg:
 	.string "Lo quieres, ¿verdad?$"
 
 Route34_Text_YourMonIsDoingFine:
-	.string "¡Ah, eres tú! Qué bueno verte.\n
-Tu {STR_VAR_1} está bien.$"
+	.string "¡Ah, eres tú! Qué bueno verte.\nTu {STR_VAR_1} está bien.$"
 
 Route34_Text_IllKeepIt:
 	.string "Bueno, entonces me lo quedo.\n"
 	.string "¡Gracias!$"
 
 Route34_Text_YouHaveNoRoomForIt:
-	.string "No tienes espacio para eso…\n
-Vuelve cuando hagas espacio.$"
+	.string "No tienes espacio para eso…\nVuelve cuando hagas espacio.$"
 
 Route34_Text_ReceivedEgg:
-	.string "{PLAYER} recibió el HUEVO de\n
-parte del CUIDADOR.$"
+	.string "{PLAYER} recibió el HUEVO de\nparte del CUIDADOR.$"
 
 Route34_Text_TakeGoodCareOfIt:
 	.string "Cuídalo bien.$"
 
 Route34_Text_FriendlyWithOtherTrainersMon:
-	.string "Por cierto, sobre tu {STR_VAR_1},\n
-parecía llevarse bien con\l
-{STR_VAR_3} de {STR_VAR_2}.\p
-Hasta creo que lo vi recibir\n
-una CARTA.$"
+	.string "Por cierto, sobre tu {STR_VAR_1},\nparecía llevarse bien con\l{STR_VAR_3} de {STR_VAR_2}.\pHasta creo que lo vi recibir\nuna CARTA.$"
 
 @ Unused
 Route34_Text_SeeWifeIfYouWantToPickUpMon:
@@ -513,12 +506,10 @@ Route34_Text_SeeWifeIfYouWantToPickUpMon:
 	.string "habla con mi esposa.$"
 
 Route34_Text_YourMonsAreDoingFine:
-	.string "¡Ah, eres tú! Tu {STR_VAR_1} y\n
-{STR_VAR_2} están muy bien.$"
+	.string "¡Ah, eres tú! Tu {STR_VAR_1} y\n{STR_VAR_2} están muy bien.$"
 
 Route34_Text_IWillKeepDoYouWantIt:
-	.string "De verdad que lo cuidaré.\n
-Quieres esto, ¿verdad?$"
+	.string "De verdad que lo cuidaré.\nQuieres esto, ¿verdad?$"
 
 Route34_DayCare_Text_WouldYouLikeUsToRaiseAMon:
 	.string "Soy la SEÑORA DE LA GUARDERÍA.\p"
@@ -549,8 +540,7 @@ Route34_DayCare_Text_NotEnoughMoney:
 	.string "No tienes suficiente dinero…$"
 
 Route34_DayCare_Text_TakeOtherOneBackToo:
-	.string "¿Recuperarás al otro,\n
-las pinturas?$"
+	.string "¿Recuperarás al otro,\nlas pinturas?$"
 
 Route34_DayCare_Text_ComeAgain:
 	.string "Está bien.\n"
@@ -561,8 +551,7 @@ Route34_DayCare_Text_GoodToSeeYou:
 	.string "¡Tu POKéMON solo mejora!$"
 
 Route34_DayCare_Text_YourMonHasGrownXLevels:
-	.string "Tu {STR_VAR_1} ha subido\n
-{STR_VAR_2} niveles.$"
+	.string "Tu {STR_VAR_1} ha subido\n{STR_VAR_2} niveles.$"
 
 Route34_DayCare_Text_YourTeamIsFull:
 	.string "Tu equipo POKéMON está lleno.\n"
@@ -573,16 +562,14 @@ Route34_DayCare_Text_TakeBackWhichMon:
 	.string "Which POKéMON will you take back?$"
 
 Route34_DayCare_Text_ItWillCostX:
-	.string "Si quieres recuperar tu {STR_VAR_1},\n
-te costará ¥{STR_VAR_2}.$"
+	.string "Si quieres recuperar tu {STR_VAR_1},\nte costará ¥{STR_VAR_2}.$"
 
 Route34_DayCare_Text_HeresYourMon:
 	.string "¡Perfecto!\n"
 	.string "Aquí tienes tu POKéMON.$"
 
 Route34_DayCare_Text_TookBackMon:
-	.string "{PLAYER} recuperó a {STR_VAR_1}\n
-de la SRA. DE LA GUARDERÍA.$"
+	.string "{PLAYER} recuperó a {STR_VAR_1}\nde la SRA. DE LA GUARDERÍA.$"
 
 Route34_DayCare_Text_YouHaveJustOneMon:
 	.string " ¿Oh? Pero solo tienes uno.\n"

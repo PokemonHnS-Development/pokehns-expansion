@@ -154,11 +154,7 @@ VioletCity_PokeCenter_Text_BooksAreGreat:
 	.string "me encanta leer un buen libro.$"
 
 VioletCity_PokeCenter_Text_MobileAdapter:
-	.string "Acabo de luchar con un amigo en\n
-CIUDAD ORQUIDEA por enlace.\p
-Si conectas un ADAPTADOR MÓVIL,\n
-podrás enlazarte con un amigo que\l
-esté lejos.$"
+	.string "Acabo de luchar con un amigo en\nCIUDAD ORQUIDEA por enlace.\pSi conectas un ADAPTADOR MÓVIL,\npodrás enlazarte con un amigo que\lesté lejos.$"
 
 VioletCity_PokeCenter_Text_GameboyKid:
 	.string "Un tipo llamado BILL creó el\n"

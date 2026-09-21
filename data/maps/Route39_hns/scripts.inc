@@ -218,8 +218,7 @@ Route39_EventScript_Woman::
 	end
 
 Route39_Text_Woman:
-	.string "Esa sombra... ¿Será un PIDGEY\n
-gigante?$"
+	.string "Esa sombra... ¿Será un PIDGEY\ngigante?$"
 
 Route39_EventScript_Miltank::
 	lock
@@ -343,22 +342,13 @@ Route39_EventScript_Jamie::
 	end
 
 Route39_Text_PokefanFJaimeSeen:
-	.string "Llegaste en el momento\n
-justo.\p
-¡A luchar!$"
+	.string "Llegaste en el momento\njusto.\p¡A luchar!$"
 
 Route39_Text_PokefanFJaimeBeaten:
 	.string "Oh, how disappointing…$"
 
 Route39_Text_PokefanFJaimeAfter:
-	.string "Conocí a UMBREON de noche\n
-aquí, en la RUTA 39.\p
-No sé por qué, pero parece\n
-que le gusta que entrene\l
-aquí.\p
-Parece volverse más amistoso\n
-entrenando aquí que en\l
-cualquier otro lugar.$"
+	.string "Conocí a UMBREON de noche\naquí, en la RUTA 39.\pNo sé por qué, pero parece\nque le gusta que entrene\laquí.\pParece volverse más amistoso\nentrenando aquí que en\lcualquier otro lugar.$"
 
 Route39_EventScript_Sign1::
 	lock
@@ -379,8 +369,7 @@ Route39_EventScript_Sign2::
 	end
 
 Route39_Text_MoomooFarmSign:
-	.string "GRANJA MOOMOO\p
-Disfruta nuestra leche fresca$"
+	.string "GRANJA MOOMOO\pDisfruta nuestra leche fresca$"
 
 Route39_EventScript_Sign3::
 	lock

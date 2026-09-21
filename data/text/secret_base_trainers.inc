@@ -1,9 +1,5 @@
 SecretBase_Text_Trainer0Intro:
-	.string "¿Ya hiciste una BASE SECRETA?\p
-Fui de aquí para allá antes de\n
-elegir este lugar.\p
-Ya que estás aquí, ¿te gustaría\n
-tener un combate?$"
+	.string "¿Ya hiciste una BASE SECRETA?\pFui de aquí para allá antes de\nelegir este lugar.\pYa que estás aquí, ¿te gustaría\ntener un combate?$"
 
 SecretBase_Text_Trainer0AcceptBattle:
 	.string "¡Está bien!\n"
@@ -14,77 +10,51 @@ SecretBase_Text_Trainer0DeclineBattle:
 	.string "Oh, no puedes ahora...$"
 
 SecretBase_Text_Trainer0Defeated::
-	.string "¡Aaargh! ¡Eres muy fuerte!\n
-Que perdí... ¡Guárdalo en secreto!$"
+	.string "¡Aaargh! ¡Eres muy fuerte!\nQue perdí... ¡Guárdalo en secreto!$"
 
 SecretBase_Text_Trainer0PostBattle:
-	.string "¿Qué piensas de mi BASE SECRETA?\n
-Ven a visitarme otra vez mañana.$"
+	.string "¿Qué piensas de mi BASE SECRETA?\nVen a visitarme otra vez mañana.$"
 
 SecretBase_Text_Trainer0PreChampion:
-	.string "¿Ya hiciste una BASE SECRETA?\p
-Fui de aquí para allá antes de\n
-elegir este lugar.\p
-¡Quédate a pasar el rato!$"
+	.string "¿Ya hiciste una BASE SECRETA?\pFui de aquí para allá antes de\nelegir este lugar.\p¡Quédate a pasar el rato!$"
 
 SecretBase_Text_Trainer5Intro:
-	.string "Hay muchos lugares donde\n
-puedes hacer una BASE SECRETA.\p
-Pero este sitio es mi favorito.\n
-¿No crees que es lindo?\p
-Oh, ¿te gustaría combatir?$"
+	.string "Hay muchos lugares donde\npuedes hacer una BASE SECRETA.\pPero este sitio es mi favorito.\n¿No crees que es lindo?\pOh, ¿te gustaría combatir?$"
 
 SecretBase_Text_Trainer5AcceptBattle:
 	.string "Okay, here goes!$"
 
 SecretBase_Text_Trainer5DeclineBattle:
-	.string "Oh...\n
-Ahora no, ¿está bien?$"
+	.string "Oh...\nAhora no, ¿está bien?$"
 
 SecretBase_Text_Trainer5Defeated::
-	.string "Hmmm... Perdimos...\n
-¡Pero no se lo digas a nadie!\l
-¡Es un secreto confidencial!$"
+	.string "Hmmm... Perdimos...\n¡Pero no se lo digas a nadie!\l¡Es un secreto confidencial!$"
 
 SecretBase_Text_Trainer5PostBattle:
-	.string "Si vuelves por esta zona,\n
-espero que me visites.$"
+	.string "Si vuelves por esta zona,\nespero que me visites.$"
 
 SecretBase_Text_Trainer5PreChampion:
-	.string "Hay muchos sitios donde puedes\n
-hacer una BASE SECRETA.\p
-Pero este rincón me gusta más.\n
-¿No te parece lindo?$"
+	.string "Hay muchos sitios donde puedes\nhacer una BASE SECRETA.\pPero este rincón me gusta más.\n¿No te parece lindo?$"
 
 SecretBase_Text_Trainer1Intro:
-	.string "Este sitio es popular.\n
-Siempre está ocupado.\p
-¡Ah! ¿También pensabas\n
-quedarte con este sitio?\p
-Te diré algo: te lo puedes quedar\n
-si logras vencerme.$"
+	.string "Este sitio es popular.\nSiempre está ocupado.\p¡Ah! ¿También pensabas\nquedarte con este sitio?\pTe diré algo: te lo puedes quedar\nsi logras vencerme.$"
 
 SecretBase_Text_Trainer1AcceptBattle:
 	.string "¡Está bien!\n"
 	.string "¡Defenderé mi BASE SECRETA!$"
 
 SecretBase_Text_Trainer1DeclineBattle:
-	.string "¿Eh? ¿De verdad?\n
-¿No te interesa este sitio?$"
+	.string "¿Eh? ¿De verdad?\n¿No te interesa este sitio?$"
 
 SecretBase_Text_Trainer1Defeated::
 	.string "¡No puedo seguir así!\n"
 	.string "I surrender!$"
 
 SecretBase_Text_Trainer1PostBattle:
-	.string "Bien, cuando me mude algún día,\n
-¡este lugar será tuyo!$"
+	.string "Bien, cuando me mude algún día,\n¡este lugar será tuyo!$"
 
 SecretBase_Text_Trainer1PreChampion:
-	.string "Este sitio es popular.\n
-Siempre está ocupado.\p
-Esperé mucho a que se libre.\n
-¡Por fin pude usarlo!$"
+	.string "Este sitio es popular.\nSiempre está ocupado.\pEsperé mucho a que se libre.\n¡Por fin pude usarlo!$"
 
 SecretBase_Text_Trainer6Intro:
 	.string "Bienvenido a mi LAB. POKéMON.\p"
@@ -113,11 +83,7 @@ SecretBase_Text_Trainer6PreChampion:
 	.string "secreto.$"
 
 SecretBase_Text_Trainer2Intro:
-	.string "Una gran mansión está bien, pero\n
-prefiero un sitio así.\p
-Me gusta porque viene a verme\n
-todo tipo de gente.\p
-Y bien, ¿quieres combatir?$"
+	.string "Una gran mansión está bien, pero\nprefiero un sitio así.\pMe gusta porque viene a verme\ntodo tipo de gente.\pY bien, ¿quieres combatir?$"
 
 SecretBase_Text_Trainer2AcceptBattle:
 	.string "¡Así se hace!$"
@@ -161,8 +127,7 @@ SecretBase_Text_Trainer7Defeated::
 	.string "I concede…$"
 
 SecretBase_Text_Trainer7PostBattle:
-	.string "¡Todo fue en broma!\n
-Ahora debería ir de compras.$"
+	.string "¡Todo fue en broma!\nAhora debería ir de compras.$"
 
 SecretBase_Text_Trainer7PreChampion:
 	.string "Me encanta comprar decoraciones\n"
@@ -171,18 +136,13 @@ SecretBase_Text_Trainer7PreChampion:
 	.string "tanto.$"
 
 SecretBase_Text_Trainer3Intro:
-	.string "Algunos hacen sus BASES SECRETAS en\n
-lugares difíciles de encontrar.\l
-¿Quieren pasar desapercibidos?\p
-Pero ya que me encontraste,\n
-¿qué tal si batallamos?$"
+	.string "Algunos hacen sus BASES SECRETAS en\nlugares difíciles de encontrar.\l¿Quieren pasar desapercibidos?\pPero ya que me encontraste,\n¿qué tal si batallamos?$"
 
 SecretBase_Text_Trainer3AcceptBattle:
 	.string "I'm not going down easily!$"
 
 SecretBase_Text_Trainer3DeclineBattle:
-	.string "Oh… ¿Quizá estás cansado de buscar\n
-este lugar?$"
+	.string "Oh… ¿Quizá estás cansado de buscar\neste lugar?$"
 
 SecretBase_Text_Trainer3Defeated::
 	.string "I went down…$"

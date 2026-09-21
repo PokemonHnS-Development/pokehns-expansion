@@ -287,30 +287,23 @@ Route117_Text_DoYouWantEgg:
 	.string "Lo quieres, ¿verdad?$"
 
 Route117_Text_YourMonIsDoingFine:
-	.string "¡Ah, eres tú! Qué bueno verte.\n
-Tu {STR_VAR_1} está bien.$"
+	.string "¡Ah, eres tú! Qué bueno verte.\nTu {STR_VAR_1} está bien.$"
 
 Route117_Text_IllKeepIt:
 	.string "Bueno, entonces me lo quedo.\n"
 	.string "¡Gracias!$"
 
 Route117_Text_YouHaveNoRoomForIt:
-	.string "No tienes espacio para ello…\n
-Vuelve cuando hagas espacio.$"
+	.string "No tienes espacio para ello…\nVuelve cuando hagas espacio.$"
 
 Route117_Text_ReceivedEgg:
-	.string "{PLAYER} recibió el HUEVO de\n
-parte del HOMBRE de la GUARDERÍA.$"
+	.string "{PLAYER} recibió el HUEVO de\nparte del HOMBRE de la GUARDERÍA.$"
 
 Route117_Text_TakeGoodCareOfIt:
 	.string "Cuídalo bien.$"
 
 Route117_Text_FriendlyWithOtherTrainersMon:
-	.string "Por cierto, sobre tu {STR_VAR_1},\n
-parecía llevarse bien con\l
-el {STR_VAR_3} de {STR_VAR_2}.\p
-Hasta puede que lo haya visto\n
-recibir una CARTA.$"
+	.string "Por cierto, sobre tu {STR_VAR_1},\nparecía llevarse bien con\lel {STR_VAR_3} de {STR_VAR_2}.\pHasta puede que lo haya visto\nrecibir una CARTA.$"
 
 @ Unused
 Route117_Text_SeeWifeIfYouWantToPickUpMon:
@@ -318,12 +311,10 @@ Route117_Text_SeeWifeIfYouWantToPickUpMon:
 	.string "habla con mi esposa.$"
 
 Route117_Text_YourMonsAreDoingFine:
-	.string "¡Ah, eres tú! Tu {STR_VAR_1} y\n
-{STR_VAR_2} están muy bien.$"
+	.string "¡Ah, eres tú! Tu {STR_VAR_1} y\n{STR_VAR_2} están muy bien.$"
 
 Route117_Text_IWillKeepDoYouWantIt:
-	.string "De verdad que me lo quedo.\n
-Quieres esto, ¿verdad?$"
+	.string "De verdad que me lo quedo.\nQuieres esto, ¿verdad?$"
 
 Route117_PokemonDayCare_Text_WouldYouLikeUsToRaiseAMon:
 	.string "Soy la SEÑORA DE LA GUARDERÍA.\p"
@@ -354,8 +345,7 @@ Route117_PokemonDayCare_Text_NotEnoughMoney:
 	.string "No tienes suficiente dinero…$"
 
 Route117_PokemonDayCare_Text_TakeOtherOneBackToo:
-	.string "¿Recuperarás el otro,\n
-las pinturas?$"
+	.string "¿Recuperarás el otro,\nlas pinturas?$"
 
 Route117_PokemonDayCare_Text_ComeAgain:
 	.string "Está bien.\n"
@@ -366,8 +356,7 @@ Route117_PokemonDayCare_Text_GoodToSeeYou:
 	.string "¡Tu POKéMON solo mejora!$"
 
 Route117_PokemonDayCare_Text_YourMonHasGrownXLevels:
-	.string "Por nivel, tu {STR_VAR_1} ha\n
-crecido {STR_VAR_2}.$"
+	.string "Por nivel, tu {STR_VAR_1} ha\ncrecido {STR_VAR_2}.$"
 
 Route117_PokemonDayCare_Text_YourTeamIsFull:
 	.string "Tu equipo POKéMON está lleno.\n"
@@ -378,16 +367,14 @@ Route117_PokemonDayCare_Text_TakeBackWhichMon:
 	.string "Which POKéMON will you take back?$"
 
 Route117_PokemonDayCare_Text_ItWillCostX:
-	.string "Si quieres recuperar tu {STR_VAR_1},\n
-costará ¥{STR_VAR_2}.$"
+	.string "Si quieres recuperar tu {STR_VAR_1},\ncostará ¥{STR_VAR_2}.$"
 
 Route117_PokemonDayCare_Text_HeresYourMon:
 	.string "¡Perfecto!\n"
 	.string "Aquí tienes tu POKéMON.$"
 
 Route117_PokemonDayCare_Text_TookBackMon:
-	.string "{PLAYER} recuperó {STR_VAR_1} de\n
-la SEÑORA GUARDERÍA.$"
+	.string "{PLAYER} recuperó {STR_VAR_1} de\nla SEÑORA GUARDERÍA.$"
 
 Route117_PokemonDayCare_Text_YouHaveJustOneMon:
 	.string " ¿Oh? Pero solo tienes uno.\n"

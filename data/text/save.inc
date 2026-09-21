@@ -3,8 +3,7 @@ gText_ConfirmSave::
 	.string "¿Quieres guardar la partida?$"
 
 gText_AlreadySavedFile::
-	.string "Ya existe una partida guardada.\n
-¿Quieres sobrescribirla?$"
+	.string "Ya existe una partida guardada.\n¿Quieres sobrescribirla?$"
 
 gText_SavingDontTurnOff::
 	.string "GUARDANDO…\n"

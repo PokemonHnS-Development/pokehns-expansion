@@ -244,9 +244,7 @@ SproutTower_Text_SageNeal_Beaten:
 	.string "¡Mi cabeza es la que brilla!$"
 
 SproutTower_Text_SageNeal_AfterBattle:
-	.string "Que haya luz en tu\n
-viaje.$"
+	.string "Que haya luz en tu\nviaje.$"
 
 SproutTower_Text_3F_Painting:
-	.string "Es una pintura poderosa de\n
-un BELLSPROUT.$"
+	.string "Es una pintura poderosa de\nun BELLSPROUT.$"

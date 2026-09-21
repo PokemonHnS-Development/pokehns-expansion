@@ -179,13 +179,10 @@ Alola_Ulaula_House_Phant_Text_5:
 	.string "Por favor, cuídalo mucho…$"
 
 Alola_Ulaula_House_Phant_Text_6:
-	.string "No te preocupes, {PLAYER}.\n
-Vuelve cuando estés listo…$"
+	.string "No te preocupes, {PLAYER}.\nVuelve cuando estés listo…$"
 
 Alola_Ulaula_House_Phant_Text_7:
-	.string "Ojalá te guste esta muestra de ALOLA.\p
-Estoy haciendo un demake total de la\n
-región llamada ULTRA ECLIPSE.$"
+	.string "Ojalá te guste esta muestra de ALOLA.\pEstoy haciendo un demake total de la\nregión llamada ULTRA ECLIPSE.$"
 
 Alola_Ulaula_House_Noivern_Text_0:
 	.string "¡Scree!$"

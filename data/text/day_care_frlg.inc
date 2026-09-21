@@ -17,20 +17,17 @@ DayCare_Text_DoYouWantEgg::
 	.string "Lo quieres, ¿verdad?$"
 
 DayCare_Text_YourMonIsDoingFine::
-	.string "¡Ah, eres tú! Qué bueno verte.\n
-Tu {STR_VAR_1} está muy bien.$"
+	.string "¡Ah, eres tú! Qué bueno verte.\nTu {STR_VAR_1} está muy bien.$"
 
 DayCare_Text_IllKeepIt::
 	.string "Bueno, entonces me lo quedo.\n"
 	.string "¡Gracias!$"
 
 DayCare_Text_YouHaveNoRoomForIt::
-	.string "No tienes espacio para él…\n
-Vuelve cuando tengas espacio.$"
+	.string "No tienes espacio para él…\nVuelve cuando tengas espacio.$"
 
 DayCare_Text_ReceivedEgg::
-	.string "{PLAYER} recibió el HUEVO de\n
-parte del CUIDADOR.$"
+	.string "{PLAYER} recibió el HUEVO de\nparte del CUIDADOR.$"
 
 DayCare_Text_TakeGoodCareOfIt::
 	.string "Cuídalo bien.$"
@@ -40,12 +37,10 @@ DayCare_Text_SeeWifeIfYouWantToPickUpMon::
 	.string "ばさんに　いって　おくれ$"
 
 DayCare_Text_YourMonsAreDoingFine::
-	.string "¡Ah, eres tú! Tu {STR_VAR_1} y\n
-{STR_VAR_2} están muy bien.$"
+	.string "¡Ah, eres tú! Tu {STR_VAR_1} y\n{STR_VAR_2} están muy bien.$"
 
 DayCare_Text_IWillKeepDoYouWantIt::
-	.string "De verdad me lo quedaré.\n
-¿Tú quieres esto, verdad?$"
+	.string "De verdad me lo quedaré.\n¿Tú quieres esto, verdad?$"
 
 DayCare_Text_WouldYouLikeUsToRaiseMon::
 	.string "Soy la SEÑORA DE LA GUARDERÍA.\p"
@@ -77,8 +72,7 @@ DayCare_Text_NotEnoughMoney::
 	.string "No tienes suficiente dinero…$"
 
 DayCare_Text_TakeOtherOneBackToo::
-	.string "¿Vas a recuperar al otro,\n
-las pinturas?$"
+	.string "¿Vas a recuperar al otro,\nlas pinturas?$"
 
 DayCare_Text_ComeAgain::
 	.string "Está bien.\n"
@@ -91,8 +85,7 @@ DayCare_Text_GoodToSeeYou::
 	.string "buena!$"
 
 DayCare_Text_YourMonHasGrownXLevels::
-	.string "Por nivel, tu {STR_VAR_1} ha\n
-subido {STR_VAR_2}.$"
+	.string "Por nivel, tu {STR_VAR_1} ha\nsubido {STR_VAR_2}.$"
 
 DayCare_Text_YourPartyIsFull::
 	.string "Tu equipo POKéMON está lleno.\n"
@@ -102,16 +95,14 @@ DayCare_Text_TakeBackWhichMon::
 	.string "どっちの　ポケモンを　ひきとるかい？$"
 
 DayCare_Text_ItWillCostX::
-	.string "Si quieres recuperar tu {STR_VAR_1},\n
-costará ¥{STR_VAR_2}.$"
+	.string "Si quieres recuperar tu {STR_VAR_1},\ncostará ¥{STR_VAR_2}.$"
 
 DayCare_Text_HeresYourMon::
 	.string "¡Perfecto!\n"
 	.string "Aquí tienes tu POKéMON.$"
 
 DayCare_Text_TookBackMon::
-	.string "{PLAYER} recuperó a {STR_VAR_1}\n
-de la SEÑORA GUARDERÍA.$"
+	.string "{PLAYER} recuperó a {STR_VAR_1}\nde la SEÑORA GUARDERÍA.$"
 
 DayCare_Text_YouHaveJustOneMon::
 	.string " ¿Oh? Pero solo tienes uno.\n"

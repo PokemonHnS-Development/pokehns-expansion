@@ -284,19 +284,10 @@ Route22_Movement_CelebiPush:
 
 
 Route22_Text_Silver1:
-	.string "{RIVAL}: Me dijiste...\n
-que eras el número uno de todo el\l
-mundo!\p
-¿Vas a renunciar?\p
-¿Qué vas a hacer ahora?$"
+	.string "{RIVAL}: Me dijiste...\nque eras el número uno de todo el\lmundo!\p¿Vas a renunciar?\p¿Qué vas a hacer ahora?$"
 
 Route22_Text_Giovanni1:
-	.string "....................\p
-GIOVANNI: Hay que reconocer\n
-la derrota antes de seguir...\p
-Iré por mi cuenta... por ahora...\p
-¡Para que algún día forme una\n
-organización más fuerte!$"
+	.string "....................\pGIOVANNI: Hay que reconocer\nla derrota antes de seguir...\pIré por mi cuenta... por ahora...\p¡Para que algún día forme una\norganización más fuerte!$"
 
 Route22_Text_Silver2:
 	.string "{RIVAL}: ¿Qué parte de ti era\n"

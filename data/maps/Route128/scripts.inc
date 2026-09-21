@@ -282,16 +282,7 @@ Route128_Text_StevenWhatIsHappening:
 	.string "¿Qué está pasando?$"
 
 Route128_Text_StevenWholeWorldWillDrown:
-	.string "Esto es terrible…\p
-Después de que acabó la ola de calor,\n
-empezó este diluvio.\p
-Si esto no se detiene, todo HOENN…\n
-No, el mundo entero se ahogará.\p
-Esta enorme nube de lluvia se extiende\n
-desde arriba de CIUDAD ARRECIFE…\p
-¿Qué demonios pasa allí?\p
-No tiene sentido discutir aquí…\n
-CIUDAD ARRECIFE podría dar respuestas…$"
+	.string "Esto es terrible…\pDespués de que acabó la ola de calor,\nempezó este diluvio.\pSi esto no se detiene, todo HOENN…\nNo, el mundo entero se ahogará.\pEsta enorme nube de lluvia se extiende\ndesde arriba de CIUDAD ARRECIFE…\p¿Qué demonios pasa allí?\pNo tiene sentido discutir aquí…\nCIUDAD ARRECIFE podría dar respuestas…$"
 
 Route128_Text_StevenImGoingToSootopolis:
 	.string "{PLAYER}{KUN}…\n"

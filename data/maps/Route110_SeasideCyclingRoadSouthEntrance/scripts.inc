@@ -37,13 +37,8 @@ Route110_SeasideCyclingRoadSouthEntrance_EventScript_ClearCyclingRoad::
 	end
 
 Route110_SeasideCyclingRoadSouthEntrance_Text_GoAllOutOnCyclingRoad:
-	.string "En la RUTA CICLISTA puedes correr\n
-y pedalear tan rápido como quieras.\p
-Ir tan rápido se siente genial,\n
-pero procura no chocar con nadie!$"
+	.string "En la RUTA CICLISTA puedes correr\ny pedalear tan rápido como quieras.\pIr tan rápido se siente genial,\npero procura no chocar con nadie!$"
 
 Route110_SeasideCyclingRoadSouthEntrance_Text_TooDangerousToWalk:
-	.string "Lo siento, no puedes ir a pie por\n
-la RUTA CICLISTA. Es muy peligroso.\p
-Vuelve con una BICICLETA, por favor.$"
+	.string "Lo siento, no puedes ir a pie por\nla RUTA CICLISTA. Es muy peligroso.\pVuelve con una BICICLETA, por favor.$"
 

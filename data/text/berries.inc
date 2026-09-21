@@ -26,62 +26,41 @@ Route111_Text_WateredPlantsEveryDayTakeBerry:
 	.string "¡Puedes quedártela!$"
 
 Route111_Text_GoingToTryToMakeDifferentColorBerries:
-	.string "Me esforzaré mucho y haré\n
-BAYAS de distintos colores.\p
-¡Espero que tú también te esfuerces!$"
+	.string "Me esforzaré mucho y haré\nBAYAS de distintos colores.\p¡Espero que tú también te esfuerces!$"
 
 Route111_Text_WhatColorBerriesToLookForToday:
 	.string "¿De qué color serán las BAYAS que\n"
 	.string "buscaré hoy?$"
 
 Route114_Text_LoveUsingBerryCrushShareBerry:
-	.string "Me encanta usar la máquina\n
-de BAYAS, así que las colecciono.\p
-Te comparto una si quieres.$"
+	.string "Me encanta usar la máquina\nde BAYAS, así que las colecciono.\pTe comparto una si quieres.$"
 
 Route114_Text_TryBerryCrushWithFriends:
-	.string "Deberías probar la máquina\n
-de BAYAS con tus amigos.$"
+	.string "Deberías probar la máquina\nde BAYAS con tus amigos.$"
 
 Route114_Text_FunToThinkAboutBerries:
-	.string "¿Qué BAYA deberías plantar?\n
-¿Usas las BAYAS o las guardas?\p
-Es divertido pensarlo.$"
+	.string "¿Qué BAYA deberías plantar?\n¿Usas las BAYAS o las guardas?\pEs divertido pensarlo.$"
 
 Route120_Text_BerriesExpressionOfLoveIsntIt:
-	.string "Las BAYAS crecen con la luz del sol.\p
-Ayudamos a las BAYAS a crecer\n
-regándolas con regularidad.\p
-Es una muestra de amor, ¿no?$"
+	.string "Las BAYAS crecen con la luz del sol.\pAyudamos a las BAYAS a crecer\nregándolas con regularidad.\pEs una muestra de amor, ¿no?$"
 
 Route120_Text_YesYouUnderstand:
-	.string "Sí, sí.\n
-Entiendes lo que quiero decir.\p
-Deberías tomar esto.$"
+	.string "Sí, sí.\nEntiendes lo que quiero decir.\pDeberías tomar esto.$"
 
 Route120_Text_MakeYourOwnImpressions:
-	.string "Oh… Pero es importante que te\n
-formes tus propias ideas, supongo…\p
-Puedes quedarte con esto.$"
+	.string "Oh… Pero es importante que te\nformes tus propias ideas, supongo…\pPuedes quedarte con esto.$"
 
 Route120_Text_BerryIsRareRaiseItWithCare:
-	.string "Creo que esa BAYA es rara.\n
-Espero que la cuides con cariño.$"
+	.string "Creo que esa BAYA es rara.\nEspero que la cuides con cariño.$"
 
 Route120_Text_IllGetMoreBerriesFromBerryMaster:
-	.string "Conseguiré más BAYAS del\n
-MAESTRO DE BAYAS.$"
+	.string "Conseguiré más BAYAS del\nMAESTRO DE BAYAS.$"
 
 LilycoveCity_Text_BerrySuitsYou:
-	.string "A la hora de la verdad...\p
-Un traje me queda a la perfección,\n
-la brisa fresca le va al mar.\p
-Y a ti, una BAYA te va a la T...\p
-¿Y por qué será?$"
+	.string "A la hora de la verdad...\pUn traje me queda a la perfección,\nla brisa fresca le va al mar.\pY a ti, una BAYA te va a la T...\p¿Y por qué será?$"
 
 LilycoveCity_Text_BecauseYoureTrainer:
-	.string "A la hora de la verdad...\p
-¡Es porque eres un ENTRENADOR!$"
+	.string "A la hora de la verdad...\p¡Es porque eres un ENTRENADOR!$"
 
 LilycoveCity_Text_PokeblocksSuitPokemon:
 	.string "Cuando lo pienso bien...\p"
@@ -89,20 +68,14 @@ LilycoveCity_Text_PokeblocksSuitPokemon:
 	.string "y los {POKEBLOCK} a los POKéMON.$"
 
 Route123_BerryMastersHouse_Text_YoureDeservingOfBerry:
-	.string "Puedes llamarme el MAESTRO DE BAYAS.\p
-Sueño con llenar el mundo con\n
-bellas flores, así que cultivo BAYAS\l
-y se las reparto a todos.\p
-¡Tú te mereces una!$"
+	.string "Puedes llamarme el MAESTRO DE BAYAS.\pSueño con llenar el mundo con\nbellas flores, así que cultivo BAYAS\ly se las reparto a todos.\p¡Tú te mereces una!$"
 
 Route123_BerryMastersHouse_Text_WhyBeStingyTakeAnother:
 	.string "¿Para qué ser tacaño?\n"
 	.string "¡Toma otra!$"
 
 Route123_BerryMastersHouse_Text_VisitPrettyPetalFlowerShop:
-	.string "Visita la floristería\n
-PRETTY PETAL cerca de FÉRRICA.\p
-¡Que las flores llenen el mundo!$"
+	.string "Visita la floristería\nPRETTY PETAL cerca de FÉRRICA.\p¡Que las flores llenen el mundo!$"
 
 Route123_BerryMastersHouse_Text_DoneForToday:
 	.string "Ya terminé por hoy.\n"
@@ -110,26 +83,16 @@ Route123_BerryMastersHouse_Text_DoneForToday:
 	.string "¡Que las flores llenen el mundo!$"
 
 Route123_BerryMastersHouse_Text_HeardAGoodSayingLately:
-	.string "Mi marido cultiva las BAYAS,\n
-ay, es el mejor del mundo.\p
-Me siento muy orgullosa.\p
-A propósito, cariño, ¿has oído\n
-algún buen dicho últimamente?$"
+	.string "Mi marido cultiva las BAYAS,\nay, es el mejor del mundo.\pMe siento muy orgullosa.\pA propósito, cariño, ¿has oído\nalgún buen dicho últimamente?$"
 
 Route123_BerryMastersHouse_Text_InspirationalTakeThis:
-	.string "¡Ah! ¡Qué dicho tan notable!\n
-¡Inspirador, de verdad!\p
-Quiero que tengas esto.$"
+	.string "¡Ah! ¡Qué dicho tan notable!\n¡Inspirador, de verdad!\pQuiero que tengas esto.$"
 
 Route123_BerryMastersHouse_Text_GoodSayingTakeThis:
-	.string "¡Oh! Un buen dicho es.\n
-Eres digno de admiración.\p
-Quiero que tengas esto.$"
+	.string "¡Oh! Un buen dicho es.\nEres digno de admiración.\pQuiero que tengas esto.$"
 
 Route123_BerryMastersHouse_Text_JoyNeverGoesOutOfMyLife:
-	.string "Nuestros cuatro nietos deben ser\n
-más capaces que mi esposo.\p
-¡La alegría nunca sale de mi vida!$"
+	.string "Nuestros cuatro nietos deben ser\nmás capaces que mi esposo.\p¡La alegría nunca sale de mi vida!$"
 
 Route123_BerryMastersHouse_Text_Ah:
 	.string "Ah…$"
@@ -140,29 +103,13 @@ Route104_PrettyPetalFlowerShop_Text_ThisIsPrettyPetalFlowerShop:
 	.string "¡Llevando flores por todo el mundo!$"
 
 Route104_PrettyPetalFlowerShop_Text_LearnAboutBerries:
-	.string "{PLAYER}{KUN}, ¿te gustaría aprender\n
-sobre las BAYAS?$"
+	.string "{PLAYER}{KUN}, ¿te gustaría aprender\nsobre las BAYAS?$"
 
 Route104_PrettyPetalFlowerShop_Text_IntroLearnAboutBerries:
-	.string "¿Cómo te llamas?\p
-{PLAYER}{KUN}.\n
-Bonito nombre.\p
-{PLAYER}{KUN}, ¿te gustaría aprender\n
-sobre las BAYAS?$"
+	.string "¿Cómo te llamas?\p{PLAYER}{KUN}.\nBonito nombre.\p{PLAYER}{KUN}, ¿te gustaría aprender\nsobre las BAYAS?$"
 
 Route104_PrettyPetalFlowerShop_Text_BerriesExplanation:
-	.string "Las BAYAS crecen en árboles que\n
-solo brotan en tierra fértil.\p
-Si tomas BAYAS, asegúrate de\n
-volver a plantar una en la tierra.\p
-Una BAYA plantada pronto brotará,\n
-se hará planta y florecerá bonito,\l
-y luego dará BAYAS otra vez.\p
-Quiero ver todo el mundo entero\n
-lleno de flores hermosas.\l
-Ese es mi sueño.\p
-Por favor, ayúdame, {PLAYER}{KUN}. Planta\n
-BAYAS y trae más flores al mundo.$"
+	.string "Las BAYAS crecen en árboles que\nsolo brotan en tierra fértil.\pSi tomas BAYAS, asegúrate de\nvolver a plantar una en la tierra.\pUna BAYA plantada pronto brotará,\nse hará planta y florecerá bonito,\ly luego dará BAYAS otra vez.\pQuiero ver todo el mundo entero\nlleno de flores hermosas.\lEse es mi sueño.\pPor favor, ayúdame, {PLAYER}{KUN}. Planta\nBAYAS y trae más flores al mundo.$"
 
 Route104_PrettyPetalFlowerShop_Text_FlowersBringHappiness:
 	.string "Las flores dan mucha felicidad a\n"
@@ -176,14 +123,7 @@ Route104_PrettyPetalFlowerShop_Text_YouCanHaveThis:
 	.string "seguro. Toma esto.$"
 
 Route104_PrettyPetalFlowerShop_Text_WailmerPailExplanation:
-	.string "Mientras las plantas de BAYA crecen,\n
-riégalas con el CUBO WAILMER.\p
-Ah, otra cosa.\p
-Si no recoges BAYAS por un tiempo,\n
-se caerán al suelo.\l
-Pero volverán a brotar.\p
-¿No es increíble?\n
-Como si tuvieran ganas de vivir.$"
+	.string "Mientras las plantas de BAYA crecen,\nriégalas con el CUBO WAILMER.\pAh, otra cosa.\pSi no recoges BAYAS por un tiempo,\nse caerán al suelo.\lPero volverán a brotar.\p¿No es increíble?\nComo si tuvieran ganas de vivir.$"
 
 Route104_PrettyPetalFlowerShop_Text_ImGrowingFlowers:
 	.string "Quiero ser como mis hermanas.\n"

@@ -1596,13 +1596,7 @@ SootopolisCity_Text_AfterAllOurScheming:
 	.string "Fuhahaha...$"
 
 SootopolisCity_Text_KyogreCalmDown:
-	.string "ARCHIE: ¡KYOGRE! ¿Qué te pasa?!\n
-¡Mira aquí! ¡Es el ORBE ROJO!\l
-¡Cálmate! ¡KYOGRE!\p
-… … … … … …\n
-… … … … … …\p
-¡No funciona!\n
-¡No responde en absoluto!$"
+	.string "ARCHIE: ¡KYOGRE! ¿Qué te pasa?!\n¡Mira aquí! ¡Es el ORBE ROJO!\l¡Cálmate! ¡KYOGRE!\p… … … … … …\n… … … … … …\p¡No funciona!\n¡No responde en absoluto!$"
 
 SootopolisCity_Text_TryingMeaninglessToPokemon:
 	.string "ARCHIE: KYOGRE y GROUDON\n"
@@ -1640,20 +1634,13 @@ SootopolisCity_Text_DoesThisMakeYourFearPokemon:
 	.string "Tú ya lo sabes.$"
 
 SootopolisCity_Text_HereWereAreHelpWallace:
-	.string "STEVEN: ¡Muy bien, aquí estamos!\p
-Aquí dentro encontrarás a alguien\n
-llamado WALLACE.\p
-Creo que tienes lo necesario para\n
-ayudarlo…$"
+	.string "STEVEN: ¡Muy bien, aquí estamos!\pAquí dentro encontrarás a alguien\nllamado WALLACE.\pCreo que tienes lo necesario para\nayudarlo…$"
 
 SootopolisCity_Text_KnowWhatsNeededToHelpHim:
-	.string "STEVEN: Creo que tienes lo que\n
-se necesita para ayudarlo…$"
+	.string "STEVEN: Creo que tienes lo que\nse necesita para ayudarlo…$"
 
 SootopolisCity_Text_NeverBeenToSkyPillar:
-	.string "STEVEN: El PILAR CELESTE…\p
-Nunca he estado allí.\n
-¿Dónde estará?$"
+	.string "STEVEN: El PILAR CELESTE…\pNunca he estado allí.\n¿Dónde estará?$"
 
 SootopolisCity_Text_SoThatsRayquaza:
 	.string "STEVEN: Así que ese es RAYQUAZA...\p"
@@ -1661,18 +1648,10 @@ SootopolisCity_Text_SoThatsRayquaza:
 	.string "furiosos huyan de él con miedo...$"
 
 SootopolisCity_Text_MaxieArchieLeft:
-	.string "STEVEN: Parece que MAXIE y ARCHIE\n
-se han ido a algún lugar.\p
-Quizá fueron al MONTE PYRE a\n
-devolver esas ORBES…$"
+	.string "STEVEN: Parece que MAXIE y ARCHIE\nse han ido a algún lugar.\pQuizá fueron al MONTE PYRE a\ndevolver esas ORBES…$"
 
 SootopolisCity_Text_HaventYouScaledSkyPillar:
-	.string "WALLACE: ¿Oh?\n
-¿{PLAYER}{KUN}?\p
-¿Aún no has subido el PILAR\n
-CELESTE?\p
-Seguro que puedes llegar a\n
-la cima del PILAR CELESTE…$"
+	.string "WALLACE: ¿Oh?\n¿{PLAYER}{KUN}?\p¿Aún no has subido el PILAR\nCELESTE?\pSeguro que puedes llegar a\nla cima del PILAR CELESTE…$"
 
 SootopolisCity_Text_AquaMagmaDidntMeanHarm:
 	.string "WALLACE: {PLAYER}{KUN}...\p"

@@ -48,12 +48,7 @@ PewterCity_Museum_1F_Text_Recptionist:
 	.string "Por favor, adelante.$"
 
 PewterCity_Museum_1F_Text_FossilWoman:
-	.string "Debes ser un entrenador fuerte.\p
-No les damos mucho uso a los\n
-fósiles del mostrador de allí.\p
-Un hombre raro de cabello plateado\n
-dejó un montón de ellos aquí.\p
-Adelante, tómalos si quieres.$"
+	.string "Debes ser un entrenador fuerte.\pNo les damos mucho uso a los\nfósiles del mostrador de allí.\pUn hombre raro de cabello plateado\ndejó un montón de ellos aquí.\pAdelante, tómalos si quieres.$"
 
 PewterCity_Museum_1F_Text_FossilWomanAfter:
 	.string "Solemos compartir investigaciones\n"

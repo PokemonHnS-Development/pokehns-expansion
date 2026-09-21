@@ -693,10 +693,7 @@ Route111_Text_ThatWasShockingSandRainedDown:
 	.string "¿Había fantasmas de arena o algo así?$"
 
 Route111_Text_MirageTowerHasntBeenSeenSince:
-	.string "Desde que hablé contigo, la torre de\n
-arena no se ha visto.\p
-Tal vez realmente fue\n
-la TORRE ESPEJISMO…$"
+	.string "Desde que hablé contigo, la torre de\narena no se ha visto.\pTal vez realmente fue\nla TORRE ESPEJISMO…$"
 
 Route111_Text_ClawFossilDisappeared:
 	.string "El FÓSIL GARRA desapareció en\n"

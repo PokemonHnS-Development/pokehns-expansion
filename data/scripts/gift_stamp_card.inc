@@ -15,7 +15,4 @@ MysteryGiftScript_StampCard::
 	end
 
 sText_MysteryGiftStampCard:
-	.string "Gracias por usar el sistema\n
-TARJETA DE SELLOS.\p
-Te faltan {STR_VAR_1} por juntar\n
-para llenar tu TARJETA DE SELLOS.$"
+	.string "Gracias por usar el sistema\nTARJETA DE SELLOS.\pTe faltan {STR_VAR_1} por juntar\npara llenar tu TARJETA DE SELLOS.$"

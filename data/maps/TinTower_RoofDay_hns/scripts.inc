@@ -286,20 +286,10 @@ TinTower_RoofDay_EventScript_KuniAfter::
 	end
 
 TinTower_RoofDay_Text_Kimono_AfterNotCaught:
-	.string "No solo has hecho aparecer a HO-OH\n
-sino que también lo has\l
-derrotado...\p
-Ya no tenemos nada más que decir.\n
-Cuídate mucho en tu\l
-viaje...$"
+	.string "No solo has hecho aparecer a HO-OH\nsino que también lo has\lderrotado...\pYa no tenemos nada más que decir.\nCuídate mucho en tu\lviaje...$"
 
 TinTower_RoofDay_Text_Kimono_AfterCaught:
-	.string "No solo has hecho aparecer a HO-OH\n
-sino que también lo has\l
-atrapado...\p
-Ya no tenemos nada más que decir.\n
-Cuídate mucho en tu\l
-viaje...$"
+	.string "No solo has hecho aparecer a HO-OH\nsino que también lo has\latrapado...\pYa no tenemos nada más que decir.\nCuídate mucho en tu\lviaje...$"
 
 TinTower_RoofDay_Movement_CameraPanUp:
 	walk_up
@@ -565,28 +555,10 @@ TinTower_RoofDay_Text_Kuni_Before::
 	.string "KUNI: Go, face HO-OH. $"
 
 TinTower_RoofDay_Text_Kimono_Opening::
-	.string "KIMONO GIRL: Así es.\n
-Aquí es donde recibimos a HO-OH.\p
-Cuando el baile que practicamos\n
-durante días se una al sonido de la\p
-CAMPANA CLARA que te confiamos,\n
-entonces HO-OH bajará del gran\l
-arco del cielo una vez más. $"
+	.string "KIMONO GIRL: Así es.\nAquí es donde recibimos a HO-OH.\pCuando el baile que practicamos\ndurante días se una al sonido de la\pCAMPANA CLARA que te confiamos,\nentonces HO-OH bajará del gran\larco del cielo una vez más. $"
 
 TinTower_RoofDay_Text_Kimono_Closing1::
-	.string "Sin duda, es HO-OH...\n
-El guardián del cielo de\p
-tiempos antiguos... \p
-Muchos lo han intentado una y otra\n
-y acabaron fallando...\p
-{PLAYER}, tu corazón en plena\n
-armonía con la CAMPANA CLARA ha\p
-permitido al fin que aparezca...\n
-{PLAYER}, ¿no lo ves?\p
-HO-OH... Todo este tiempo ha\n
-estado esperando a alguien como tú.\p
-¿No crees? $"
+	.string "Sin duda, es HO-OH...\nEl guardián del cielo de\ptiempos antiguos... \pMuchos lo han intentado una y otra\ny acabaron fallando...\p{PLAYER}, tu corazón en plena\narmonía con la CAMPANA CLARA ha\ppermitido al fin que aparezca...\n{PLAYER}, ¿no lo ves?\pHO-OH... Todo este tiempo ha\nestado esperando a alguien como tú.\p¿No crees? $"
 
 TinTower_RoofDay_Text_Kimono_After::
-	.string "Has hecho un gran trabajo.\n
-Saluda a PROF.ELM de nuestra parte.$"
+	.string "Has hecho un gran trabajo.\nSaluda a PROF.ELM de nuestra parte.$"

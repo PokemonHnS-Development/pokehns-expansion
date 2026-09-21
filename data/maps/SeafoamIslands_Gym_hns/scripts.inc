@@ -71,12 +71,7 @@ SeafoamIslands_Gym_Text_Blaine_GiveTM:
 	.string "¡Toma esto también!$"
 
 SeafoamIslands_Gym_Text_Blaine_ExplainTM:
-	.string "Esta MT contiene\n
-¡el increíble SOFOCO!\p
-El calor abrasador achicharra a\n
-tus rivales, pero baja tu potencia.\p
-¡Espero que tu rival tenga un\n
-ANTIQUEMADURA extra. ¡Buaaah!$"
+	.string "Esta MT contiene\n¡el increíble SOFOCO!\pEl calor abrasador achicharra a\ntus rivales, pero baja tu potencia.\p¡Espero que tu rival tenga un\nANTIQUEMADURA extra. ¡Buaaah!$"
 
 SeafoamIslands_Gym_Text_BlaineIntro:
 	.string "BLAINE: ¡Waaah!\pMi GIMNASIO en CANELA\nse quemó.\pMis POKéMON de fuego y yo\nestamos\nsin hogar por el volcán.\p¡Waaah!\pPero\nvolví a trabajar como LÍDER\nde GIMNASIO aquí en la cueva.\pSi me\nvences, te daré\nuna MEDALLA.\p¡Ja! Mejor ten una CURA\nQUEMADURA!$"
@@ -109,18 +104,10 @@ SeafoamIslands_Gym_Text_BlaineRematch:
 	.string "¿Quieres otra revancha conmigo?$"
 
 SeafoamIslands_Gym_Text_BlaineRematchDefeat:
-	.string "BLAINE: ¡Tus habilidades son ígneas!\p
-Has calcinado todas mis\n
-defensas.$"
+	.string "BLAINE: ¡Tus habilidades son ígneas!\pHas calcinado todas mis\ndefensas.$"
 
 SeafoamIslands_Gym_Text_GymGuideWin:
-	.string "¡Oye!\p
-… ¿Eh? ¿Ya terminó?\p
-¡Perdón, perdón!\p
-El GIMNASIO de ISLA CANELA ya no\n
-estaba, no sabía dónde encontrarte.\p
-Pero, oye, eres muy fuerte incluso\n
-sin mis consejos. ¡Sabía que ganarías!$"
+	.string "¡Oye!\p… ¿Eh? ¿Ya terminó?\p¡Perdón, perdón!\pEl GIMNASIO de ISLA CANELA ya no\nestaba, no sabía dónde encontrarte.\pPero, oye, eres muy fuerte incluso\nsin mis consejos. ¡Sabía que ganarías!$"
 
 SeafoamIslands_Gym_Text_GymGuideWin2:
 	.string "Un GIMNASIO POKéMON puede estar en\n"
