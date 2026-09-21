@@ -856,7 +856,7 @@ gTVPokemonTodayFailedText00::
 	.string "Hoy veremos al {STR_VAR_1}'s\n"
 	.string "¡POKéMON {STR_VAR_2}!\p"
 	.string "HERMANO: ¡Sí! ¡A eso venimos!\n"
-	.string "to do!$"
+	.string "¡y eso haremos!$"
 
 gTVPokemonTodayFailedText01::
 	.string "Oh!\n"
@@ -927,7 +927,7 @@ gTVPokemonTodaySuccessfulText00::
 	.string "Hoy veremos al {STR_VAR_1}'s\n"
 	.string "¡POKéMON {STR_VAR_2}!\p"
 	.string "HERMANO: ¡Sí! ¡A eso venimos!\n"
-	.string "to do!$"
+	.string "¡y eso haremos!$"
 
 gTVPokemonTodaySuccessfulText01::
 	.string "HERMANA: {STR_VAR_1} le puso el apodo\n"

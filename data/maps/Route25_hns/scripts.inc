@@ -429,7 +429,7 @@ Route25_Text_SchoolboyJoeSeen:
 	.string "No será nada fácil.$"
 
 Route25_Text_SchoolboyJoeBeaten:
-	.string "Ow! Stomped flat!$"
+	.string "¡Ay! ¡Me aplastaste!$"
 
 Route25_Text_SchoolboyJoeAfter:
 	.string "Hice mi mejor esfuerzo.\n"
