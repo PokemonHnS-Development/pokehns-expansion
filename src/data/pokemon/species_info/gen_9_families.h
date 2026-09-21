@@ -850,11 +850,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .categoryName = _("Trampa"),
         .height = 10,
         .weight = 165,
-        .description = COMPOUND_STRING(
-            "Se aferra a ramas y techos\n"
-            "usa sus hilos y se mueve sin\n"
-            "hacer ruido. Atrapa a su presa\n"
-            "before the prey even notices it."),
+        .description = COMPOUND_STRING("Se aferra a ramas y techos\n con sus hilos y se mueve\n sin hacer ruido. Atrapa a\n su presa sin que la note."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -976,11 +972,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .categoryName = _("Saltamontes"),
         .height = 10,
         .weight = 175,
-        .description = COMPOUND_STRING(
-            "Cuando decide luchar a fondo, se\n"
-            "apoya en sus patas plegadas\n"
-            "para entrar en Modo Duelo.\n"
-            "neutralizes its enemies in short order."),
+        .description = COMPOUND_STRING("Cuando lucha a fondo, se apoya\n en sus patas plegadas para\n entrar en Modo Duelo y\n neutraliza enemigos al instante."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -2585,11 +2577,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .categoryName = _("Fragata"),
         .height = 14,
         .weight = 386,
-        .description = COMPOUND_STRING(
-            "Usa su saco gular para guardar la\n"
-            "electricidad de sus alas.\n"
-            "Casi no hay aceite en sus plumas,\n"
-            "so it is a poor swimmer."),
+        .description = COMPOUND_STRING("Guarda en su saco gular la\n electricidad de sus alas.\n Casi no tiene aceite en sus\n plumas: nada mal."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,

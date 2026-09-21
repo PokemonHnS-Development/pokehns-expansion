@@ -87,7 +87,7 @@ static const u8 *const sPlayersNeededOrModeTexts[][5] = {
 
 ALIGNED(4) static const u8 sText_BButtonCancel[] = _("{B_BUTTON}CANCEL");
 ALIGNED(4) static const u8 sJPText_SearchingForParticipants[] = _("ため\nさんかしゃ ぼしゅうちゅう です！"); // Unused, may have been cut off
-ALIGNED(4) static const u8 sText_PlayerContactedYouForXAccept[] = _("{STR_VAR_2} contacted you for\n{STR_VAR_1}. Accept?");
+ALIGNED(4) static const u8 sText_PlayerContactedYouForXAccept[] = _("{STR_VAR_2} te contactó para\n{STR_VAR_1}. ¿Aceptas?");
 ALIGNED(4) static const u8 sText_PlayerContactedYouShareX[] = _("{STR_VAR_2} te contactó.\n¿Compartirás {STR_VAR_1}?");
 ALIGNED(4) static const u8 sText_PlayerContactedYouAddToMembers[] = _("{STR_VAR_2} te contactó.\n¿Agregar a los miembros?");
 ALIGNED(4) static const u8 sText_AreTheseMembersOK[] = _("{STR_VAR_1}!\nAre these members OK?");
@@ -517,7 +517,7 @@ ALIGNED(4) static const u8 sText_MustHaveTwoMonsForDoubleBattle[] = _("Para un C
 ALIGNED(4) static const u8 sText_AwaitingPlayersResponse[] = _("Awaiting {STR_VAR_1}'s response…");
 ALIGNED(4) static const u8 sText_PlayerHasBeenAskedToRegisterYouPleaseWait[] = _("{STR_VAR_1} \nha recibido la solicitud de\nregistrarte. Espera.");
 ALIGNED(4) static const u8 sText_AwaitingResponseFromWirelessSystem[] = _("Esperando respuesta del\nSISTEMA DE COMUNICACIÓN\lINALÁMBRICA.");
-ALIGNED(4) static const u8 sText_PleaseWaitForOtherTrainersToGather[] = _("Please wait for other TRAINERS to\ngather and get ready."); // Unused
+ALIGNED(4) static const u8 sText_PleaseWaitForOtherTrainersToGather[] = _("Espera a que otros ENTRENADORES\nse reúnan y se preparen."); // Unused
 ALIGNED(4) static const u8 sText_NoCardsSharedRightNow[] = _("No CARDS appear to be shared \nright now.");
 ALIGNED(4) static const u8 sText_NoNewsSharedRightNow[] = _("No NEWS appears to be shared\nright now.");
 
@@ -571,7 +571,7 @@ static const u8 *const sCardColorTexts[] = {
 ALIGNED(4) static const u8 sText_TrainerCardInfoPage1[] = _("This is {DYNAMIC 0} {DYNAMIC 1}'s\nTRAINER CARD…\l{DYNAMIC 2}\pPOKéDEX: {DYNAMIC 3}\nTIME:    {DYNAMIC 4}:{DYNAMIC 5}\p");
 ALIGNED(4) static const u8 sText_TrainerCardInfoPage2[] = _("BATTLES: WINS: {DYNAMIC 0}  LOSSES: {DYNAMIC 2}\nTRADES: {DYNAMIC 3}\p“{DYNAMIC 4} {DYNAMIC 5}\n{DYNAMIC 6} {DYNAMIC 7}”\p");
 ALIGNED(4) static const u8 sText_GladToMeetYouMale[] = _("{DYNAMIC 1}: ¡Qué gusto conocerte!{PAUSE 60}");
-ALIGNED(4) static const u8 sText_GladToMeetYouFemale[] = _("{DYNAMIC 1}: Glad to meet you!{PAUSE 60}");
+ALIGNED(4) static const u8 sText_GladToMeetYouFemale[] = _("{DYNAMIC 1}: ¡Encantado de conocerte!{PAUSE 60}");
 
 static const u8 *const sGladToMeetYouTexts[GENDER_COUNT] = {
     sText_GladToMeetYouMale,

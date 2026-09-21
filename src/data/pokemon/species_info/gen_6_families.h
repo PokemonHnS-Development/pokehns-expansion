@@ -2044,11 +2044,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
     [SPECIES_FLABEBE_WHITE]  =
     {
         FLABEBE_MISC_INFO(White, WHITE, 1),
-        .description = COMPOUND_STRING(
-            "Al caer la tarde, busca\n"
-            "un lugar con flores del\n"
-            "mismo color blanco que ella, y\n"
-            "then it goes to sleep."),
+        .description = COMPOUND_STRING("Al caer la tarde, busca\nun lugar con flores del\nmismo color blanco que ella, y\nluego se va a dormir."),
         .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 

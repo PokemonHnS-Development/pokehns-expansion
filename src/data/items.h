@@ -81,9 +81,7 @@ static const u8 sFullIncenseDesc[]    = _("Objeto que hace que\nel portador se m
 
 static const u8 sRoseIncenseDesc[]    = _("Objeto que aumenta\nel poder de movimientos \nde tipo Planta.");
 
-static const u8 sLuckIncenseDesc[]    = _("Doubles money in\n"
-                                          "luche si el\n"
-                                          "holder takes part.");
+static const u8 sLuckIncenseDesc[]    = _("Duplica el dinero en las\nluchas si el portador\nparticipa.");
 
 static const u8 sPureIncenseDesc[]    = _("Objeto que ayuda a\nrepele a los\nPOKéMON.");
 

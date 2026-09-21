@@ -181,7 +181,7 @@ static const u8 sText_Var1DotVar2_Metric[] = {PLACEHOLDER_BEGIN, 0x02, CHAR_PERI
 static const u8 sText_NumberVar1Var2[] = _("{NO}{STR_VAR_1} {STR_VAR_2}");
 static const u8 sText_BerryTag[] = _("BERRY TAG");
 static const u8 sText_ThreeMarks[] = _("???");
-static const u8 sText_WatmelDesc1_Metric[] = _("A huge Berry, with some over half a");
+static const u8 sText_WatmelDesc1_Metric[] = _("Una baya enorme, con más de media");
 static const u8 sText_WatmelDesc2_Metric[] = _("meter discovered. Exceedingly sweet.");
 
 // code

@@ -7338,10 +7338,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .categoryName = _("Aguja Tóxica"),
         .height = 6,
         .weight = 18,
-        .description = COMPOUND_STRING(
-            "Esta Ultraente es bastante\n"
-            "quiso ser elegido como un\n"
-            "first partner in its own world."),
+        .description = COMPOUND_STRING("Esta Ultraente es bastante\n quisgosa; quiso ser elegido\n como compañero inicial."),
         .pokemonScale = 422,
         .pokemonOffset = 12,
         .trainerScale = 256,

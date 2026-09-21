@@ -1323,11 +1323,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .categoryName = _("usan Saliva Pegajosa"),
         .height = 5,
         .weight = 85,
-        .description = COMPOUND_STRING(
-            "La red que teje es como si fuera su\n"
-            "segundo sistema nervioso. Dicen que un\n"
-            "Spinarak halla su presa con sus\n"
-            "vibrations it feels through the web."),
+        .description = COMPOUND_STRING("La red que teje es como su segundo\nsistema nervioso. Dicen que un\nSpinarak halla su presa con las\nvibraciones que siente en la red."),
         .pokemonScale = 414,
         .pokemonOffset = 21,
         .trainerScale = 256,
@@ -3949,11 +3945,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .categoryName = _("Mágico"),
         .height = 9,
         .weight = 44,
-        .description = COMPOUND_STRING(
-            "Sus gritos suenan como encantamientos.\n"
-            "Quienes lo oyen sufren de\n"
-            "dolores de cabeza y alucinaciones.\n"
-            "It appears where you least expect it."),
+        .description = COMPOUND_STRING("Sus gritos suenan como encantamientos.\nQuienes lo oyen sufren de\ndolores de cabeza y alucinaciones.\nAparece donde menos lo esperas."),
         .pokemonScale = 338,
         .pokemonOffset = 8,
         .trainerScale = 256,

@@ -246,11 +246,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .categoryName = _("Bosque"),
         .height = 19,
         .weight = 552,
-        .description = COMPOUND_STRING(
-            "Gracias al poder de sus veloces patas,\n"
-            "Mega Sceptile puede alcanzar al rival\n"
-            "en un instante. Puede cortar su cola\n"
-            "to fire it like a missile at an opponent."),
+        .description = COMPOUND_STRING("Gracias al poder de sus veloces patas,\nMega Sceptile puede alcanzar al rival\nen un instante. Puede cortar su cola\npara lanzarla como misil al rival."),
         .pokemonScale = 256,
         .pokemonOffset = -1,
         .trainerScale = 275,
@@ -1110,11 +1106,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .categoryName = _("Mapache Pequeño"),
         .height = 4,
         .weight = 175,
-        .description = COMPOUND_STRING(
-            "Frota su nariz contra el suelo y\n"
-            "siempre vaga de un lado a otro\n"
-            "buscando algo. Se distingue\n"
-            "by the zigzag footprints it leaves."),
+        .description = COMPOUND_STRING("Frota su nariz contra el suelo y\nsiempre vaga de un lado a otro\nbuscando algo. Se distingue\npor las huellas en zigzag que deja."),
         .pokemonScale = 560,
         .pokemonOffset = 22,
         .trainerScale = 256,
@@ -11983,10 +11975,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .categoryName = _("Pierna Hierro"),
         .height = 25,
         .weight = 9429,
-        .description = COMPOUND_STRING(
-            "Si sabe que no puede ganar, cava el\n"
-            "clava las garras en el rival y\n"
-            "starts the countdown to a big explosion."),
+        .description = COMPOUND_STRING("Si sabe que no puede ganar, clava\nlas garras en el rival e inicia la\ncuenta regresiva a una explosión."),
         .pokemonScale = 256,
         .pokemonOffset = 4,
         .trainerScale = 447,

@@ -7162,10 +7162,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .categoryName = _("Wushu"),
         .height = 6,
         .weight = 120,
-        .description = COMPOUND_STRING(
-            "Kubfu entrena duro para perfeccionar\n"
-            "sus movimientos. Los que domine\n"
-            "form it takes when it evolves."),
+        .description = COMPOUND_STRING("Kubfu entrena duro para\n perfeccionar sus movimientos;\n los que domine marcan su forma."),
         .pokemonScale = 422,
         .pokemonOffset = 12,
         .trainerScale = 256,

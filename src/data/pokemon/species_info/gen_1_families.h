@@ -5300,11 +5300,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .categoryName = _("Hada"),
         .height = 6,
         .weight = 75,
-        .description = COMPOUND_STRING(
-            "Cada noche de luna llena, salen a\n"
-            "jugar. Al amanecer, los cansados\n"
-            "Clefairy duermen acurrucados.\n"
-            "each other in deep and quiet mountains."),
+        .description = COMPOUND_STRING("Cada noche de luna llena, salen a\njugar. Al amanecer, los cansados\nClefairy duermen acurrucados."),
         .pokemonScale = 441,
         .pokemonOffset = 20,
         .trainerScale = 256,
@@ -5382,11 +5378,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .categoryName = _("Hada"),
         .height = 13,
         .weight = 400,
-        .description = COMPOUND_STRING(
-            "Clefable usa sus alas para saltar\n"
-            "como si volara. Su paso ligero\n"
-            "le permite caminar sobre el agua.\n"
-            "moonlit nights, it strolls on lakes."),
+        .description = COMPOUND_STRING("Clefable usa sus alas para saltar\ncomo si volara. Su paso ligero\nle permite caminar sobre el agua."),
         .pokemonScale = 256,
         .pokemonOffset = 5,
         .trainerScale = 256,
@@ -5457,10 +5449,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .categoryName = _("Hada"),
         .height = 17,
         .weight = 423,
-        .description = COMPOUND_STRING(
-            "Vuela usando el poder de la\n"
-            "luz lunar para controlar la gravedad\n"
-            "a radius of over 32 feet around it."),
+        .description = COMPOUND_STRING("Vuela usando el poder de la\nluz lunar para controlar la gravedad\nen un radio de más de 10 metros."),
         .frontPic = gMonFrontPic_ClefableMega,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
@@ -5998,11 +5987,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .categoryName = _("Globo"),
         .height = 10,
         .weight = 120,
-        .description = COMPOUND_STRING(
-            "Su pelaje es el colmo del lujo.\n"
-            "Dormir junto a un Wigglytuff es\n"
-            "divinas. Su cuerpo se expande sin\n"
-            "end when it inhales."),
+        .description = COMPOUND_STRING("Su pelaje es el colmo del lujo.\nDormir junto a un Wigglytuff es\nuna divinidad. Su cuerpo crece sin\nfin cuando inhala."),
         .pokemonScale = 328,
         .pokemonOffset = 11,
         .trainerScale = 256,
@@ -17180,11 +17165,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .categoryName = _("Eléctrico"),
         .height = 11,
         .weight = 300,
-        .description = COMPOUND_STRING(
-            "Cuando viene una tormenta, compite\n"
-            "con otros por subir a cimas que\n"
-            "suelen ser golpeadas por rayos.\n"
-            "Electabuzz in place of lightning rods."),
+        .description = COMPOUND_STRING("Cuando viene una tormenta, compite\ncon otros por subir a cimas que\nsuelen ser golpeadas por rayos.\nElectabuzz reemplaza a los pararrayos."),
         .pokemonScale = 351,
         .pokemonOffset = 8,
         .trainerScale = 256,
@@ -19177,11 +19158,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .categoryName = _("Entrelazar"),
         .height = 10,
         .weight = 235,
-        .description = COMPOUND_STRING(
-            "Sus antenas emiten un aura\n"
-            "that weakens hostility in its prey, causing\n"
-            "bajen la guardia. En un momento\n"
-            "later, it pounces."),
+        .description = COMPOUND_STRING("Sus antenas emiten un aura\nque debilita la hostilidad de sus\npresas, haciendo que bajen la guardia.\nUn momento después, salta."),
         .pokemonScale = 305,
         .pokemonOffset = 7,
         .trainerScale = 257,

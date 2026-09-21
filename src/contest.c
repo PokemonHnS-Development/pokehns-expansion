@@ -372,7 +372,7 @@ const u8 gText_JudgeLookedAtMonExpectantly[] = COMPOUND_STRING("El JUEZ miró a\
 const u8 gText_AppealComboWentOverWell[] = COMPOUND_STRING("The appeal combo went\nover well.{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}");
 const u8 gText_AppealComboWentOverVeryWell[] = COMPOUND_STRING("The appeal combo went\nover very well.{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}");
 const u8 gText_AppealComboWentOverExcellently[] = COMPOUND_STRING("The appeal combo went\nover excellently.{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}");
-const u8 gText_MonWasTooNervousToMove[] = COMPOUND_STRING("{STR_VAR_1} was too\nnervous to move.{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}");
+const u8 gText_MonWasTooNervousToMove[] = COMPOUND_STRING("{STR_VAR_1} estaba muy\nnervioso para moverse.{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}");
 const u8 gText_CouldntImproveItsCondition[] = COMPOUND_STRING("But it couldn't improve\nits condition…{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}");
 const u8 gText_BadConditionResultedInWeakAppeal[] = COMPOUND_STRING("Its bad condition\nresulted in a weak appeal.{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}");
 const u8 gText_MonWasUnaffected[] = COMPOUND_STRING("{STR_VAR_1} was\nunaffected.{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}");
@@ -734,7 +734,7 @@ const struct ContestCategory gContestCategoryInfo[CONTEST_CATEGORIES_COUNT + 1] 
 // Takes the .attentionLevel of a contestant as an index.
 static const u8 *const sRoundResultTexts[] =
 {
-    COMPOUND_STRING("{STR_VAR_1} failed to\nstand out at all…{PAUSE_UNTIL_PRESS}"),
+    COMPOUND_STRING("{STR_VAR_1} no logró\ndestacar para nada…{PAUSE_UNTIL_PRESS}"),
     COMPOUND_STRING("{STR_VAR_1} didn't stand\nout very much…{PAUSE_UNTIL_PRESS}"),
     COMPOUND_STRING("{STR_VAR_1} caught a\nlittle attention.{PAUSE_UNTIL_PRESS}"),
     COMPOUND_STRING("{STR_VAR_1} attracted a\nlot of attention.{PAUSE_UNTIL_PRESS}"),

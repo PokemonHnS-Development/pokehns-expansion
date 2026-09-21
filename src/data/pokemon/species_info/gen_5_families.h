@@ -4332,11 +4332,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .categoryName = _("Florecimiento"),
         .height = 11,
         .weight = 163,
-        .description = COMPOUND_STRING(
-            "Incluso Entrenadores veteranos sufren\n"
-            "para que su bella flor florezca.\n"
-            "Se marchita si el Entrenador no lo\n"
-            "take good care of it."),
+        .description = COMPOUND_STRING("Incluso Entrenadores veteranos\nsufren para lograr que su bella\nflor florezca. Se marchita si el\nEntrenador no lo cuida bien."),
         .pokemonScale = 320,
         .pokemonOffset = 7,
         .trainerScale = 256,
@@ -10605,11 +10601,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .categoryName = _("Cristalizar"),
         .height = 11,
         .weight = 1480,
-        .description = COMPOUND_STRING(
-            "Nacen en nubes de nieve. Cuando su\n"
-            "temperatura sube, se vuelve vapor y\n"
-            "desaparece. Cuando su\n"
-            "temperature lowers, it returns to ice."),
+        .description = COMPOUND_STRING("Nacen en nubes de nieve. Cuando su\ntemperatura sube, se vuelve vapor\ny desaparece. Cuando su\ntemperatura baja, vuelve al hielo."),
         .pokemonScale = 320,
         .pokemonOffset = 7,
         .trainerScale = 256,

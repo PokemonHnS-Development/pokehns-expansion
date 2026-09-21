@@ -7,20 +7,11 @@ const u8 DecorDesc_POKEMON_DESK[] = _(
         "con forma de POKé\n"
         "BALL.");
 
-const u8 DecorDesc_HEAVY_DESK[] = _(
-    "Un escritorio grande\n"
-        "de acero. Pon algo\n"
-        "decorations on it.");
+const u8 DecorDesc_HEAVY_DESK[] = _("Un escritorio grande de acero.\n \nColoca decoraciones en él.");
 
-const u8 DecorDesc_RAGGED_DESK[] = _(
-    "Un escritorio grande\n"
-        "de madera. Pon algo\n"
-        "decorations on it.");
+const u8 DecorDesc_RAGGED_DESK[] = _("Un escritorio grande de madera.\n \nColoca decoraciones en él.");
 
-const u8 DecorDesc_COMFORT_DESK[] = _(
-    "Un escritorio grande\n"
-        "de hojas. Pon algo\n"
-        "decorations on it.");
+const u8 DecorDesc_COMFORT_DESK[] = _("Un escritorio grande de hojas.\n \nColoca decoraciones en él.");
 
 const u8 DecorDesc_PRETTY_DESK[] = _(
     "Un escritorio enorme\n"
@@ -32,10 +23,7 @@ const u8 DecorDesc_BRICK_DESK[] = _(
         "de ladrillo. Cabe mucho\n"
         "of decorations.");
 
-const u8 DecorDesc_CAMP_DESK[] = _(
-    "Un escritorio enorme\n"
-        "de troncos. Pon mucho\n"
-        "decorations on it.");
+const u8 DecorDesc_CAMP_DESK[] = _("Un escritorio enorme\nde troncos. Lleno de\nadornos.");
 
 const u8 DecorDesc_HARD_DESK[] = _(
     "Un escritorio enorme\n"
