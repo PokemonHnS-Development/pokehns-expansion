@@ -141,7 +141,7 @@ const struct FrontierBrain gFrontierBrainInfo[NUM_FRONTIER_FACILITIES] =
             COMPOUND_STRING("Grrrr… ¡Perdí la paciencia!"),        //Silver
             COMPOUND_STRING(
                 "¡Ahahaha!\n"
-                "You're inspiring!") //Gold
+                "¡Qué inspirador!") //Gold
         },
         .wonTexts = {
             COMPOUND_STRING(
@@ -171,7 +171,7 @@ const struct FrontierBrain gFrontierBrainInfo[NUM_FRONTIER_FACILITIES] =
         .wonTexts = {
             COMPOUND_STRING(
                 "Tus POKéMON son unos debiluchos\n"
-                "you're wimpy as a TRAINER!"),           //Silver
+                "¡eres débil como ENTRENADOR!"),           //Silver
             COMPOUND_STRING("¡Gwahaha!\n¡Hermanos, no hay que temer!") //Gold
         },
         .battledBit = {1 << 4, 1 << 5},
@@ -218,7 +218,7 @@ const struct FrontierBrain gFrontierBrainInfo[NUM_FRONTIER_FACILITIES] =
             COMPOUND_STRING("¡Buen trabajo hallando las escaleras, DRAGONITE!"), //Silver
             COMPOUND_STRING(
                 "¡Oye, oye, oye!\n"
-                "You're finished already?")     //Gold
+                "¿Ya terminaste?")     //Gold
         },
         .battledBit = {1 << 8, 1 << 9},
         .streakAppearances = {21, 42, 21, 1},

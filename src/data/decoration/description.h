@@ -16,12 +16,12 @@ const u8 DecorDesc_COMFORT_DESK[] = _("Un escritorio grande de hojas.\n \nColoca
 const u8 DecorDesc_PRETTY_DESK[] = _(
     "Un escritorio enorme\n"
         "de vidrio. Cabe mucho\n"
-        "of decorations.");
+        "de adornos.");
 
 const u8 DecorDesc_BRICK_DESK[] = _(
     "Un escritorio enorme\n"
         "de ladrillo. Cabe mucho\n"
-        "of decorations.");
+        "de adornos.");
 
 const u8 DecorDesc_CAMP_DESK[] = _("Un escritorio enorme\nde troncos. Lleno de\nadornos.");
 
@@ -41,31 +41,31 @@ const u8 DecorDesc_POKEMON_CHAIR[] = _(
 
 const u8 DecorDesc_HEAVY_CHAIR[] = _(
     "Una silla pequeña\n"
-        "of steel.");
+        "de acero.");
 
 const u8 DecorDesc_PRETTY_CHAIR[] = _(
     "Una silla pequeña\n"
-        "of glass.");
+        "de vidrio.");
 
 const u8 DecorDesc_COMFORT_CHAIR[] = _(
     "Una silla pequeña\n"
-        "of leaves.");
+        "de hojas.");
 
 const u8 DecorDesc_RAGGED_CHAIR[] = _(
     "Una silla pequeña\n"
-        "of wood.");
+        "de madera.");
 
 const u8 DecorDesc_BRICK_CHAIR[] = _(
     "Una silla pequeña\n"
-        "of brick.");
+        "de ladrillo.");
 
 const u8 DecorDesc_CAMP_CHAIR[] = _(
     "Una silla pequeña\n"
-        "of logs.");
+        "de troncos.");
 
 const u8 DecorDesc_HARD_CHAIR[] = _(
     "Una silla pequeña\n"
-        "of rock.");
+        "de roca.");
 
 const u8 DecorDesc_RED_PLANT[] = _(
     "Una planta roja\n"
@@ -137,7 +137,7 @@ const u8 DecorDesc_SOLID_BOARD[] = _(
 
 const u8 DecorDesc_SLIDE[] = _(
     "Úsalo para deslizarte\n"
-        "from the platform.");
+        "de la plataforma.");
 
 const u8 DecorDesc_FENCE_LENGTH[] = _(
     "Una valla pequeña que\n"
@@ -154,7 +154,7 @@ const u8 DecorDesc_TIRE[] = _(
 
 const u8 DecorDesc_STAND[] = _(
     "Un pedestal grande\n"
-        "with steps.");
+        "con escalones.");
 
 const u8 DecorDesc_MUD_BALL[] = _(
     "Una gran bola de lodo.\n"
@@ -174,17 +174,17 @@ const u8 DecorDesc_SAND_ORNAMENT[] = _(
 const u8 DecorDesc_SILVER_SHIELD[] = _(
     "Otorgado por 50\n"
         "victorias seguidas en\n"
-        "the BATTLE TOWER.");
+        "la TORRE BATALLA.");
 
 const u8 DecorDesc_GOLD_SHIELD[] = _(
     "Otorgado por 100\n"
         "victorias seguidas en\n"
-        "the BATTLE TOWER.");
+        "la TORRE BATALLA.");
 
 const u8 DecorDesc_GLASS_ORNAMENT[] = _(
     "Réplica de vidrio de\n"
         "una escultura famosa\n"
-        "at the ART MUSEUM.");
+        "el MUSEO DE ARTE.");
 
 const u8 DecorDesc_TV[] = _(
     "Un pequeño y gris\n"

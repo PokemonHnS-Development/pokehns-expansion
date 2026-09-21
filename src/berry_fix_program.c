@@ -43,7 +43,7 @@ static const u8 sText_EnsureGBAConnectionMatches[] = _("Verifica la conexión de
 static const u8 sText_TurnOffPowerHoldingStartSelect[] = _("Enciende el poder de POKéMON\nRuby/Sapphire pulsando START y\nSELECT a la vez. Luego verifica\nque aparezca la imagen de arriba.");
 static const u8 sText_TransmittingPleaseWait[] = _("Transmitting. Please wait.\n"
                                                    "{COLOR RED}{SHADOW LIGHT_RED}No apagues la consola ni\n"
-                                                   "unplug the Game Boy Advance Game\nLink Cable.");
+                                                   "el Cable Game Link de Game Boy\nAdvance.");
 static const u8 sText_PleaseFollowInstructionsOnScreen[] = _("Sigue las instrucciones que aparezcan\nen la pantalla de POKéMON Rubí/Zafiro.");
 static const u8 sText_TransmissionFailureTryAgain[] = _("Transmission failure.\n"
                                                         "{COLOR RED}{SHADOW LIGHT_RED}Please try again.");

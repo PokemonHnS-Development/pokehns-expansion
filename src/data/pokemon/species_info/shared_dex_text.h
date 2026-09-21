@@ -33,7 +33,7 @@ const u8 gUnownPokedexText[] = _(
     "Este POKéMON parece texto antiguo.\n"
     "Aunque se sigue investigando,\n"
     "es un misterio qué surgió primero.\n"
-    "the ancient writings or the various Unown.");
+    "los escritos antiguos o los Unown.");
 
 // Gen 4 families
 const u8 gMothimPokedexText[] = _(
@@ -56,7 +56,7 @@ const u8 gGreninjaPokedexText[] = _(
     "Aparece y desaparece con la gracia\n"
     "de un ninja. Juega con sus enemigos\n"
     "con rapidez, mientras los corta con\n"
-    "throwing stars made of compressed water.");
+    "estrellas hechas de agua comprimida.");
 
 const u8 gScatterbugPokedexText[] = _(
     "Si lo atacan POKéMON pájaro,\n"
@@ -93,7 +93,7 @@ const u8 gVikavoltPokedexText[] = _(
     "Concentra energía eléctrica dentro\n"
     "de sus mandíbulas para electrocutar.\n"
     "Somete a POKéMON ave con descargas.\n"
-    "beams of electrical energy.");
+    "rayos de energía eléctrica.");
 
 const u8 gRibombeePokedexText[] = _("Ribombee enrolla polen en pompones. Crea muchas variedades, algunas como alimento y otras para luchar. A veces se venden como suplementos.");
 
@@ -143,7 +143,7 @@ const u8 gKommoOPokedexText[] = _(
     "Sus escamas rígidas sirven de ataque y\n"
     "defensa. En el pasado, sus escamas se\n"
     "procesaban para fabricar armas\n"
-    "and other valuable commodities.");
+    "y otros artículos valiosos.");
 
 // Gen 8 families
 const u8 gAlcremieVanillaCreamPokedexText[] = _("Si Alcremie está feliz, la crema\nque produce se vuelve más dulce.\nSi confía en su ENTRENADOR, le da\nbayas decoradas con crema.");
@@ -203,17 +203,17 @@ const u8 gOgerponTealMaskPokedexText[] = _(
     "El tipo de este POKéMON cambia según\n"
     "la máscara que use. Confunde a\n"
     "sus enemigos con movimientos ágiles\n"
-    "and kicks.");
+    "y patadas.");
 
 const u8 gOgerponWellspringMaskPokedexText[] = _(
     "Esta forma destaca en ataque\n"
     "y defensa. Desata sin cesar\n"
-    "moves like a spring gushes water.");
+    "como un manantial que brota agua.");
 
 const u8 gOgerponHearthflameMaskPokedexText[] = _(
     "Esta forma es la más agresiva,\n"
     "bombardeando con gran intensidad\n"
-    "of flames blazing within a hearth.");
+    "de llamas que arden en un hogar.");
 
 const u8 gOgerponCornerstoneMaskPokedexText[] = _(
     "En esta forma, usa el poder\n"

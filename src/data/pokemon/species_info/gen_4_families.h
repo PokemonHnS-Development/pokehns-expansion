@@ -178,7 +178,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
             "Hay POKéMON que nacen sobre un\n"
             "vuelven y pasan toda su vida allí.\n"
             "La gente antigua imaginaba que bajo \n"
-            "the ground, a gigantic Torterra dwelled."),
+            "el suelo, vivía un Torterra gigante."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 348,
@@ -1445,7 +1445,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
             "Fuerte electricidad recorre las\n"
             "puntas de sus garras afiladas. Un\n"
             "rasguño basta para causar desmayo.\n"
-            "in foes."),
+            "a sus rivales."),
         .pokemonScale = 338,
         .pokemonOffset = 10,
         .trainerScale = 256,
@@ -1686,7 +1686,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
             "El resultado de constantes cabezazos\n"
             "es un cráneo grueso y muy duro.\n"
             "Sin embargo, su cerebro se encogió\n"
-            "compared with Cranidos's."),
+            "comparado con el de Cranidos."),
         .pokemonScale = 259,
         .pokemonOffset = 1,
         .trainerScale = 296,
@@ -1960,7 +1960,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
             "Teje una capa con arena, lodo y la\n"
             "seda que escupe. Esta capa de tierra\n"
             "se daña con el viento y la lluvia, así\n"
-            "hides away in caves and other such places."),
+            "se esconde en cuevas y otros sitios."),
         .pokemonScale = 682,
         .pokemonOffset = 24,
         .trainerScale = 256,
@@ -2099,7 +2099,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
             "Su aspecto cambia según el lugar\n"
             "donde evolucionó Burmy. Los materiales\n"
             "disponibles pasan a ser parte de él.\n"
-            "The cloak is never shed."),
+            "Nunca se quita esa capa."),
         .pokemonScale = 432,
         .pokemonOffset = 13,
         .trainerScale = 256,
@@ -2524,7 +2524,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
             "Se puede ver a una pareja frotando sus\n"
             "para intentar compartir la\n"
             "electricidad almacenada. La guarda en\n"
-            "berries in tree holes."),
+            "bayas en huecos de árboles."),
         .pokemonScale = 491,
         .pokemonOffset = 16,
         .trainerScale = 256,
@@ -2693,7 +2693,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
             "Su saco de flotación se desarrolló al\n"
             "de perseguir presas acuáticas. Puede\n"
             "como balsa. Ayuda en los rescates\n"
-            "of drowning people."),
+            "de personas que se ahogan."),
         .pokemonScale = 320,
         .pokemonOffset = 7,
         .trainerScale = 256,
@@ -2857,7 +2857,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
             "Está inmóvil, salvo por algún leve\n"
             "temblor. Muchos POKéMON se reúnen\n"
             "aquí, atraídos por ella\n"
-            "scent exuded from Cherrim's folded petals."),
+            "salía de los pétalos de Cherrim."),
         .pokemonScale = 432,
         .pokemonOffset = 13,
         .trainerScale = 256,
@@ -2930,7 +2930,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
             "Cherrim toma esta forma en días solead\n"
             "Su aroma atrae a los POKéMON bicho.\n"
             "Cierra sus pétalos inmediatamente y\n"
-            "becomes immobile once the sun hides."),
+            "se inmoviliza si el sol se oculta."),
         .pokemonScale = 432,
         .pokemonOffset = 13,
         .trainerScale = 256,
@@ -3477,7 +3477,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
             "Un POKéMON extremadamente cauteloso.\n"
             "Cuida mucho su apariencia y nunca\n"
             "deja de asear sus orejas.\n"
-            "It runs with sprightly jumps."),
+            "Corre dando saltos ágiles."),
         .pokemonScale = 282,
         .pokemonOffset = 4,
         .trainerScale = 256,
@@ -3912,7 +3912,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
             "Se hallaron herramientas con su forma\n"
             "en tumbas antiguas. Hay investigadores\n"
             "quien cree que este POKéMON es como\n"
-            "mirror in the distant past."),
+            "espejo en el pasado lejano."),
         .pokemonScale = 432,
         .pokemonOffset = 13,
         .trainerScale = 256,
@@ -4065,7 +4065,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
             "Imita los gritos de otros POKéMON para\n"
             "engañarlos y que crean que es uno más.\n"
             "Así no lo atacarán. Puede\n"
-            "also learn and speak human words."),
+            "también aprende y habla\npalabras humanas."),
         .pokemonScale = 432,
         .pokemonOffset = 15,
         .trainerScale = 256,
@@ -4222,7 +4222,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
             "Anida en agujeros horizontales con\n"
             "calor geotérmico. Si alguien se acerca\n"
             "demasiado, saltará sobre él.\n"
-            "and bitten."),
+            "y mordido."),
         .pokemonScale = 365,
         .pokemonOffset = 12,
         .trainerScale = 256,
@@ -4477,7 +4477,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
             "La energía fundió sus brazos y alas\n"
             "en guadañas, volviéndolo loco de\n"
             "furia. Agita sus guadañas con fuerza\n"
-            "slices the ground to pieces."),
+            "hace trizas el suelo."),
         .pokemonScale = 256,
         .pokemonOffset = 1,
         .trainerScale = 326,
@@ -4689,7 +4689,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
             "Entiende el lenguaje humano.\n"
             "Dicen que ningún rival puede ocultarse\n"
             "de Lucario, pues detecta las Auras.\n"
-            "Even foes it could not otherwise see."),
+            "Hasta a rivales que no podría ver."),
         .pokemonScale = 282,
         .pokemonOffset = 4,
         .trainerScale = 256,
@@ -4899,7 +4899,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
             "Hippopotas cierra sus fosas nasales al\n"
             "viajar por la arena. En vez de\n"
             "sudor, expulsa granos de arena\n"
-            "from its body."),
+            "de su cuerpo."),
         .pokemonScale = 366,
         .pokemonOffset = 11,
         .trainerScale = 257,
@@ -4984,7 +4984,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
             "Se enfada con sorprendente rapidez.\n"
             "Muestra su enorme boca abierta para\n"
             "lucir su fuerza y asustar a todos.\n"
-            "vast quantities of sand while attacking."),
+            "grandes cantidades de arena al atacar."),
         .pokemonScale = 261,
         .pokemonOffset = 2,
         .trainerScale = 334,
@@ -5150,7 +5150,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
             "De complexión robusta, se siente muy\n"
             "orgulloso de su gran fuerza.\n"
             "con sus garras para hacer chatarra\n"
-            "out of a car."),
+            "de un auto."),
         .pokemonScale = 272,
         .pokemonOffset = 5,
         .trainerScale = 256,
@@ -5227,7 +5227,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
             "Croagunk rara vez lucha limpio.\n"
             "Infla sus sacos de veneno y llena\n"
             "un sonido extraño y hace retroceder\n"
-            "opponents with a poison jab."),
+            "rivales con un pinchazo venenoso."),
         .pokemonScale = 365,
         .pokemonOffset = 12,
         .trainerScale = 256,
@@ -5479,7 +5479,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
             "Sus aletas dobles impulsan sus\n"
             "saltos. Al salir a la superficie,\n"
             "los Wingull bajan para atraparlo.\n"
-            "the fly."),
+            "el vuelo."),
         .pokemonScale = 491,
         .pokemonOffset = 12,
         .trainerScale = 256,
@@ -6372,7 +6372,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
             "Conocido como El Ser del Conocimiento,\n"
             "según algunas fuentes, este POKéMON\n"
             "dio la inteligencia a las personas\n"
-            "necessary to solve various problems."),
+            "para resolver varios problemas."),
         .pokemonScale = 530,
         .pokemonOffset = 13,
         .trainerScale = 256,
@@ -6751,7 +6751,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
             "Palkia puede distorsionar el espacio.\n"
             "Su control total sobre los límites del\n"
             "espacio le permite transportarse a\n"
-            "faraway places and other dimensions."),
+            "lugares lejanos y otras dimensiones."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 650,
@@ -7045,7 +7045,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
             "Existe una leyenda eterna que\n"
             "dice que Regirock,\n"
             "Regice y Registeel fueron hechos de\n"
-            "and magma."),
+            "y magma."),
         .pokemonScale = 256,
         .pokemonOffset = 2,
         .trainerScale = 610,
@@ -7280,7 +7280,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
             "Quienes duermen con una de las\n"
             "plumas de Cresselia tendrán\n"
             "sueños felices. Se dice que es\n"
-            "the crescent moon."),
+            "la luna creciente."),
         .pokemonScale = 268,
         .pokemonOffset = 2,
         .trainerScale = 271,

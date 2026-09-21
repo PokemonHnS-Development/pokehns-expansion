@@ -957,7 +957,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             "Tiene orejas como palas. Cavar hoyos\n"
             "fortalece tanto sus orejas que estas\n"
             "corta raíces gruesas sin esfuerzo.\n"
-            "Bunnelby dig the whole night through."),
+            "Bunnelby cava toda la noche."),
         .pokemonScale = 491,
         .pokemonOffset = 12,
         .trainerScale = 256,
@@ -1162,7 +1162,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             "Lanza brasas por el pico que prenden\n"
             "la hierba alta arde. Luego se lanza\n"
             "sobre cualquier POKéMON confundido\n"
-            "the grass."),
+            "la hierba."),
         .pokemonScale = 365,
         .pokemonOffset = 12,
         .trainerScale = 256,
@@ -1236,7 +1236,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             "En el fervor de una gran batalla,\n"
             "lanza brasas entre sus plumas y\n"
             "sale volando. Así termina el combate.\n"
-            "its prey off with a colossal kick."),
+            "a su presa con una patada enorme."),
         .pokemonScale = 282,
         .pokemonOffset = 4,
         .trainerScale = 256,
@@ -1512,7 +1512,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             "Su patrón depende del clima y la\n"
             "topografía de donde nació.\n"
             "Esta forma es de tierras gélidas.\n"
-            "It scatters toxic color scales in battle."),
+            "Esparce escamas tóxicas\nde colores en batalla."),
         .randomizerMode = MON_RANDOMIZER_RANDOM_FORM,
     },
 
@@ -1523,7 +1523,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             "Su patrón depende del clima y la\n"
             "topografía de donde nació.\n"
             "Esta forma es de tierras nevadas.\n"
-            "It scatters toxic color scales in battle."),
+            "Esparce escamas tóxicas\nde colores en batalla."),
         .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 
@@ -1534,7 +1534,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             "Su patrón depende del clima y la\n"
             "topografía de donde nació.\n"
             "Esta forma es de tierras muy frías.\n"
-            "It scatters toxic color scales in battle."),
+            "Esparce escamas tóxicas\nde colores en batalla."),
         .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 
@@ -1545,7 +1545,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             "Su patrón depende del clima y la\n"
             "topografía de donde nació.\n"
             "Esta forma es de tierras extensas.\n"
-            "It scatters toxic color scales in battle."),
+            "Esparce escamas tóxicas\nde colores en batalla."),
         .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 
@@ -1556,7 +1556,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             "Su patrón depende del clima y la\n"
             "topografía de donde nació.\n"
             "Esta forma es de tierras verdes.\n"
-            "It scatters toxic color scales in battle."),
+            "Esparce escamas tóxicas\nde colores en batalla."),
         .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 
@@ -1567,7 +1567,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             "Su patrón depende del clima y la\n"
             "topografía de donde nació. Esta\n"
             "forma es de tierras con estaciones.\n"
-            "It scatters toxic color scales in battle."),
+            "Esparce escamas tóxicas\nde colores en batalla."),
         .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 
@@ -1578,7 +1578,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             "Su patrón depende del clima y la\n"
             "topografía de donde nació. Esta\n"
             "forma es de tierras con flores.\n"
-            "It scatters toxic color scales in battle."),
+            "Esparce escamas tóxicas\nde colores en batalla."),
         .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 
@@ -1589,7 +1589,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             "Su patrón depende del clima y la\n"
             "topografía de donde nació.\n"
             "Esta forma es de tierras soleadas.\n"
-            "It scatters toxic color scales in battle."),
+            "Esparce escamas tóxicas\nde colores en batalla."),
         .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 
@@ -1600,7 +1600,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             "Su patrón depende del clima y la\n"
             "topografía de donde nació. Esta\n"
             "forma es de tierras con brisa marina.\n"
-            "It scatters toxic color scales in battle."),
+            "Esparce escamas tóxicas\nde colores en batalla."),
         .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 
@@ -1611,7 +1611,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             "Su patrón depende del clima y la\n"
             "topografía de donde nació.\n"
             "Esta forma es de zonas con islas.\n"
-            "It scatters toxic color scales in battle."),
+            "Esparce escamas tóxicas\nde colores en batalla."),
         .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 
@@ -1622,7 +1622,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             "Su patrón depende del clima y la\n"
             "topografía de donde nació.\n"
             "Esta forma es de tierras secas.\n"
-            "It scatters toxic color scales in battle."),
+            "Esparce escamas tóxicas\nde colores en batalla."),
         .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 
@@ -1633,7 +1633,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             "Su patrón depende del clima y la\n"
             "topografía de donde nació.\n"
             "Esta forma es de tierras áridas.\n"
-            "It scatters toxic color scales in battle."),
+            "Esparce escamas tóxicas\nde colores en batalla."),
         .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 
@@ -1644,7 +1644,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             "Su patrón depende del clima y la\n"
             "topografía de donde nació. Esta\n"
             "Esta forma es de tierras con ríos.\n"
-            "It scatters toxic color scales in battle."),
+            "Esparce escamas tóxicas\nde colores en batalla."),
         .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 
@@ -1655,7 +1655,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             "Su patrón depende del clima y la\n"
             "topografía de donde nació. Esta\n"
             "Esta forma es de tierras lluviosas.\n"
-            "It scatters toxic color scales in battle."),
+            "Esparce escamas tóxicas\nde colores en batalla."),
         .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 
@@ -1666,7 +1666,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             "Su patrón depende del clima y la\n"
             "topografía de donde nació. Esta\n"
             "Esta forma es de clima tropical.\n"
-            "It scatters toxic color scales in battle."),
+            "Esparce escamas tóxicas\nde colores en batalla."),
         .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 
@@ -1677,7 +1677,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             "Su patrón depende del clima y la\n"
             "topografía de donde nació.\n"
             "Esta forma es de tierras de luz.\n"
-            "It scatters toxic color scales in battle."),
+            "Esparce escamas tóxicas\nde colores en batalla."),
         .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 
@@ -1688,7 +1688,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             "Su patrón depende del clima y la\n"
             "topografía de donde nació. Esta\n"
             "Esta forma es de verano eterno.\n"
-            "It scatters toxic color scales in battle."),
+            "Esparce escamas tóxicas\nde colores en batalla."),
         .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 
@@ -1699,7 +1699,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             "Su patrón depende del clima y la\n"
             "topografía de donde nació. Esta\n"
             "Esta forma es de selvas tropicales.\n"
-            "It scatters toxic color scales in battle."),
+            "Esparce escamas tóxicas\nde colores en batalla."),
         .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 
@@ -1710,7 +1710,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             "Su patrón depende del clima y la\n"
             "topografía de donde nació.\n"
             "Esta forma es de una tierra rara.\n"
-            "It scatters toxic color scales in battle."),
+            "Esparce escamas tóxicas\nde colores en batalla."),
         .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 
@@ -1721,7 +1721,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             "Su patrón depende del clima y la\n"
             "topografía de donde nació.\n"
             "Esta forma es de una tierra especial.\n"
-            "It scatters toxic color scales in battle."),
+            "Esparce escamas tóxicas\nde colores en batalla."),
         .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 #endif //P_FAMILY_SCATTERBUG
@@ -1913,7 +1913,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             "Este POKéMON lanza llamas más\n"
             "que 10,000 grados Celsius.\n"
             "Balancea su gran y ardiente\n"
-            "mane as it protects its allies."),
+            "mane mientras protege a sus aliados."),
         .frontPic = gMonFrontPic_PyroarMega,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
@@ -2019,7 +2019,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             "Lanza varios ataques usando el\n"
             "poder oculto que se encuentra\n"
             "entre flores. Este POKéMON es\n"
-            "particularly fond of yellow flowers."),
+            "muy afín a las flores amarillas."),
         .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 
@@ -2037,7 +2037,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             "A este POKéMON le gustan las flores\n"
             "azules. Flota hacia arriba usando la\n"
             "poder que emana de su flor\n"
-            "and bobs along lightly through the air."),
+            "y flota con suavidad por el aire."),
         .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 
@@ -2157,7 +2157,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             "Si ve a alguien arruinando un\n"
             "jardín, lo atacará\n"
             "sin piedad. Este Floette tiene\n"
-            "particularly good care of white flowers."),
+            "cuida mucho las flores blancas."),
         .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 
@@ -2287,7 +2287,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .description = COMPOUND_STRING(
             "Los pigmentos azules eran muy\n"
             "caros antes, por eso las pinturas\n"
-            "of blue Florges are highly valuable."),
+            "de Florges azul son muy valiosas."),
         .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 
@@ -2604,7 +2604,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             "Presume de una fuerza física suprema.\n"
             "Quienes quieran ser el Entrenador de\n"
             "un Pangoro deberán hablar con él.\n"
-            "with their fists."),
+            "con sus puños."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 365,
@@ -3629,7 +3629,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             "Lanza destellos desde su cuerpo,\n"
             "quitando al rival las ganas de\n"
             "luchar. Así aprovecha el momento.\n"
-            "scuttle away and hide."),
+            "escapan corriendo y se esconden."),
         .pokemonScale = 491,
         .pokemonOffset = 12,
         .trainerScale = 256,
@@ -3827,7 +3827,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             "Se estiran y contraen, arrastrando\n"
             "sus rocas en saltos audaces.\n"
             "Comen algas que llegan a la costa\n"
-            "the shoreline."),
+            "la orilla del mar."),
         .pokemonScale = 432,
         .pokemonOffset = 13,
         .trainerScale = 256,
@@ -3900,7 +3900,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             "Las patas y manos de Barbaracle\n"
             "tienen mente propia y se mueven\n"
             "solas. Pero suelen obedecer.\n"
-            "the head's orders."),
+            "las órdenes de la cabeza."),
         .pokemonScale = 272,
         .pokemonOffset = 3,
         .trainerScale = 256,
@@ -3973,7 +3973,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .description = COMPOUND_STRING(
             "Usa sus muchos brazos para jugar\n"
             "con sus rivales. Esto\n"
-            "keeps the head extremely busy."),
+            "mantiene la cabeza muy ocupada."),
         .frontPic = gMonFrontPic_BarbaracleMega,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
@@ -4307,7 +4307,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             "Al expulsar agua por la boquilla de\n"
             "su enorme garra, puede moverse a\n"
             "a una velocidad de 60 nudos. Lanzan\n"
-            "cannonballs made of water."),
+            "balas de cañón hechas de agua."),
         .pokemonScale = 272,
         .pokemonOffset = 3,
         .trainerScale = 256,
@@ -4516,7 +4516,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             "Sus mandíbulas tienen fuerza\n"
             "para triturar un auto. Si algo\n"
             "no le gusta, reacciona con furia.\n"
-            "it throws a tantrum and runs wild."),
+            "berrinche y se vuelve salvaje."),
         .pokemonScale = 366,
         .pokemonOffset = 7,
         .trainerScale = 257,
@@ -4799,7 +4799,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             "Con sus alas, controla su posición en\n"
             "el aire. Sus grandes habilidades de\n"
             "combate le permiten luchar contra\n"
-            "like Machamp and Hariyama."),
+            "como Machamp y Hariyama."),
         .pokemonScale = 366,
         .pokemonOffset = 7,
         .trainerScale = 257,
@@ -5002,7 +5002,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             "Nace de las altas temperaturas y\n"
             "presiones subterráneas, se defiende\n"
             "lanzando rayos desde su joya.\n"
-            "of its body."),
+            "de su cuerpo."),
         .pokemonScale = 530,
         .pokemonOffset = 13,
         .trainerScale = 256,
@@ -5300,7 +5300,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             "Una criatura dada a la melancolía.\n"
             "Su caparazón metálico surgió por la\n"
             "reacción de la mucosidad de su piel.\n"
-            "with the iron in Hisui's water."),
+            "con el hierro del agua de Hisui."),
         .pokemonScale = 366,
         .pokemonOffset = 7,
         .trainerScale = 257,
@@ -5868,7 +5868,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .description = COMPOUND_STRING(
             "Pumpkaboo gigantes son muy\n"
             "atraído por los espíritus de gente\n"
-            "were of similarly superior proportions."),
+            "eran de proporciones superiores."),
         .pokemonScale = 491,
         .pokemonOffset = 12,
         .trainerScale = 256,
@@ -5936,7 +5936,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             "Gritos inquietantes emanan de su\n"
             "cuerpo en plena noche. Dicen que\n"
             "son lamentos de espíritus que\n"
-            "are suffering in the afterlife."),
+            "sufren en la otra vida."),
         .pokemonScale = 338,
         .pokemonOffset = 8,
         .trainerScale = 256,
@@ -6354,7 +6354,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .description = COMPOUND_STRING(
             "La armadura de hielo de su parte baja\n"
             "mandíbula supera al acero y puede\n"
-            "shatter rocks with ease."),
+            "hace añicos rocas con facilidad."),
         .pokemonScale = 261,
         .pokemonOffset = 1,
         .trainerScale = 334,
