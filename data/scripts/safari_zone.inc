@@ -184,7 +184,7 @@ Route121_SafariZoneEntrance_Text_HereAreYourSafariBalls:
 	.string "Aquí tienes tus BOLAS SAFARI.$"
 
 Route121_SafariZoneEntrance_Text_Received30SafariBalls:
-	.string "{PLAYER} received 30 BOLAS SAFARI.$"
+	.string "¡{PLAYER} recibió 30 BOLAS SAFARI!$"
 
 Route121_SafariZoneEntrance_Text_PleaseEnjoyYourself:
 	.string "Te avisaremos cuando tu partida\nhaya terminado.\pMientras tanto, ¡diviértete!\n¡Disfruta tu excursión salvaje!$"
