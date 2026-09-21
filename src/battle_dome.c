@@ -978,21 +978,21 @@ static const u8 sStatTextOffsets[NUM_STATS - 1] =
 
 static const u8 *const sBattleDomeMatchNumberTexts[DOME_TOURNAMENT_MATCHES_COUNT] =
 {
-    COMPOUND_STRING("Round 1, Match 1"),
-    COMPOUND_STRING("Round 1, Match 2"),
-    COMPOUND_STRING("Round 1, Match 3"),
-    COMPOUND_STRING("Round 1, Match 4"),
-    COMPOUND_STRING("Round 1, Match 5"),
-    COMPOUND_STRING("Round 1, Match 6"),
-    COMPOUND_STRING("Round 1, Match 7"),
-    COMPOUND_STRING("Round 1, Match 8"),
-    COMPOUND_STRING("Round 2, Match 1"),
-    COMPOUND_STRING("Round 2, Match 2"),
-    COMPOUND_STRING("Round 2, Match 3"),
-    COMPOUND_STRING("Round 2, Match 4"),
-    COMPOUND_STRING("Semifinal Match 1"),
-    COMPOUND_STRING("Semifinal Match 2"),
-    COMPOUND_STRING("Final Match"),
+    COMPOUND_STRING("Ronda 1, Combate 1"),
+    COMPOUND_STRING("Ronda 1, Combate 2"),
+    COMPOUND_STRING("Ronda 1, Combate 3"),
+    COMPOUND_STRING("Ronda 1, Combate 4"),
+    COMPOUND_STRING("Ronda 1, Combate 5"),
+    COMPOUND_STRING("Ronda 1, Combate 6"),
+    COMPOUND_STRING("Ronda 1, Combate 7"),
+    COMPOUND_STRING("Ronda 1, Combate 8"),
+    COMPOUND_STRING("Ronda 2, Combate 1"),
+    COMPOUND_STRING("Ronda 2, Combate 2"),
+    COMPOUND_STRING("Ronda 2, Combate 3"),
+    COMPOUND_STRING("Ronda 2, Combate 4"),
+    COMPOUND_STRING("Semifinal, Combate 1"),
+    COMPOUND_STRING("Semifinal, Combate 2"),
+    COMPOUND_STRING("Combate Final"),
 };
 
 static const u8 *const sBattleDomeWinTexts[] =

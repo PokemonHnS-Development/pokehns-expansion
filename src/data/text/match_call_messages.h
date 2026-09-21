@@ -92,7 +92,7 @@ const u8 gText_MatchCallBeauty_Thalia_Intro1[] = _("I dream of cruising around")
 const u8 gText_MatchCallBeauty_Thalia_Intro2[] = _("el mundo en un lujoso crucero.");
 
 const u8 gText_MatchCallBeauty_Jessica_Strategy[] = _("I'll lead you astray.");
-const u8 gText_MatchCallBeauty_Jessica_Pokemon[] = _("Cute, of course.");
+const u8 gText_MatchCallBeauty_Jessica_Pokemon[] = _("Lindo, claro que sí.");
 const u8 gText_MatchCallBeauty_Jessica_Intro1[] = _("I love the SAFARI ZONE.");
 const u8 gText_MatchCallBeauty_Jessica_Intro2[] = _("I seem to end up there.");
 
@@ -271,7 +271,7 @@ const u8 gText_MatchCallParasolLady_Madeline_Pokemon[] = _("I'll raise anything.
 const u8 gText_MatchCallParasolLady_Madeline_Intro1[] = _("Los rayos UV son de tu piel");
 const u8 gText_MatchCallParasolLady_Madeline_Intro2[] = _("enemy. Get protected.");
 
-const u8 gText_MatchCallSwimmer_Jenny_Strategy[] = _("No mercy!");
+const u8 gText_MatchCallSwimmer_Jenny_Strategy[] = _("¡Sin piedad!");
 const u8 gText_MatchCallSwimmer_Jenny_Pokemon[] = _("Cute WATER POKéMON.");
 const u8 gText_MatchCallSwimmer_Jenny_Intro1[] = _("I have too many fans.");
 const u8 gText_MatchCallSwimmer_Jenny_Intro2[] = _("I was interviewed on TV.");
@@ -371,7 +371,7 @@ const u8 gText_MatchCallSwellShock_Wattson_Pokemon[] = _("Get shocked by electri
 const u8 gText_MatchCallSwellShock_Wattson_Intro1[] = _("One must never throw a");
 const u8 gText_MatchCallSwellShock_Wattson_Intro2[] = _("combate. Ni siquiera yo debo.");
 
-const u8 gText_MatchCallPassionBurn_Flannery_Strategy[] = _("Battle aggressively.");
+const u8 gText_MatchCallPassionBurn_Flannery_Strategy[] = _("Batalla con agresividad.");
 const u8 gText_MatchCallPassionBurn_Flannery_Pokemon[] = _("Burn with passion!");
 const u8 gText_MatchCallPassionBurn_Flannery_Intro1[] = _("Completely wash away daily");
 const u8 gText_MatchCallPassionBurn_Flannery_Intro2[] = _("fatigue in hot springs!");

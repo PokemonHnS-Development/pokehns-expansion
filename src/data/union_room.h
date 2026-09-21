@@ -90,9 +90,9 @@ ALIGNED(4) static const u8 sJPText_SearchingForParticipants[] = _("ため\nさ�
 ALIGNED(4) static const u8 sText_PlayerContactedYouForXAccept[] = _("{STR_VAR_2} te contactó para\n{STR_VAR_1}. ¿Aceptas?");
 ALIGNED(4) static const u8 sText_PlayerContactedYouShareX[] = _("{STR_VAR_2} te contactó.\n¿Compartirás {STR_VAR_1}?");
 ALIGNED(4) static const u8 sText_PlayerContactedYouAddToMembers[] = _("{STR_VAR_2} te contactó.\n¿Agregar a los miembros?");
-ALIGNED(4) static const u8 sText_AreTheseMembersOK[] = _("{STR_VAR_1}!\nAre these members OK?");
-ALIGNED(4) static const u8 sText_CancelModeWithTheseMembers[] = _("Cancel {STR_VAR_1} MODE\nwith these members?");
-ALIGNED(4) static const u8 sText_AnOKWasSentToPlayer[] = _("An “OK” was sent\nto {STR_VAR_1}.");
+ALIGNED(4) static const u8 sText_AreTheseMembersOK[] = _("{STR_VAR_1}!\n¿Están bien estos miembros?");
+ALIGNED(4) static const u8 sText_CancelModeWithTheseMembers[] = _("¿Cancelar el MODO {STR_VAR_1}\ncon estos miembros?");
+ALIGNED(4) static const u8 sText_AnOKWasSentToPlayer[] = _("Se envió un “OK”\na {STR_VAR_1}.");
 ALIGNED(4) static const u8 sText_OtherTrainerUnavailableNow[] = _("The other TRAINER doesn't appear\nto be available now…\p");
 ALIGNED(4) static const u8 sText_CantTransmitTrainerTooFar[] = _("No puedes transmitir con un\nENTRENADOR que esté muy lejos.\p");
 ALIGNED(4) static const u8 sText_TrainersNotReadyYet[] = _("El otro ENTRENADOR aún no\nestá listo.\p");
@@ -111,9 +111,9 @@ static const u8 *const sPlayerUnavailableTexts[] = {
 };
 
 ALIGNED(4) static const u8 sText_TrainerAppearsUnavailable[] = _("The other TRAINER appears\nunavailable…\p");
-ALIGNED(4) static const u8 sText_PlayerSentBackOK[] = _("{STR_VAR_1} sent back an “OK”!");
-ALIGNED(4) static const u8 sText_PlayerOKdRegistration[] = _("{STR_VAR_1} OK'd your registration as\na member.");
-ALIGNED(4) static const u8 sText_PlayerRepliedNo[] = _("{STR_VAR_1} replied, “No…”\p");
+ALIGNED(4) static const u8 sText_PlayerSentBackOK[] = _("{STR_VAR_1} respondió con un ¡OK!");
+ALIGNED(4) static const u8 sText_PlayerOKdRegistration[] = _("{STR_VAR_1} aceptó tu registro\ncomo miembro.");
+ALIGNED(4) static const u8 sText_PlayerRepliedNo[] = _("{STR_VAR_1} respondió: No...\p");
 ALIGNED(4) static const u8 sText_AwaitingOtherMembers[] = _("{STR_VAR_1}!\nAwaiting other members!");
 ALIGNED(4) static const u8 sText_QuitBeingMember[] = _("Quit being a member?");
 ALIGNED(4) static const u8 sText_StoppedBeingMember[] = _("You stopped being a member.\p");
@@ -134,7 +134,7 @@ static const u8 *const sPlayerDisconnectedTexts[] = {
 ALIGNED(4) static const u8 sText_WirelessLinkEstablished[] = _("Se estableció el enlace del\nSISTEMA DE COMUNICACIÓN\lINALÁMBRICA.");
 ALIGNED(4) static const u8 sText_WirelessLinkDropped[] = _("Se perdió el enlace del\nSISTEMA DE COMUNICACIÓN\lINALÁMBRICA…");
 ALIGNED(4) static const u8 sText_LinkWithFriendDropped[] = _("Se perdió el enlace con\ntu amigo…");
-ALIGNED(4) static const u8 sText_PlayerRepliedNo2[] = _("{STR_VAR_1} replied, “No…”");
+ALIGNED(4) static const u8 sText_PlayerRepliedNo2[] = _("{STR_VAR_1} respondió: “No…”");
 
 static const u8 *const sLinkDroppedTexts[] = {
     [RFU_STATUS_OK]                  = NULL,
@@ -518,8 +518,8 @@ ALIGNED(4) static const u8 sText_AwaitingPlayersResponse[] = _("Awaiting {STR_VA
 ALIGNED(4) static const u8 sText_PlayerHasBeenAskedToRegisterYouPleaseWait[] = _("{STR_VAR_1} \nha recibido la solicitud de\nregistrarte. Espera.");
 ALIGNED(4) static const u8 sText_AwaitingResponseFromWirelessSystem[] = _("Esperando respuesta del\nSISTEMA DE COMUNICACIÓN\lINALÁMBRICA.");
 ALIGNED(4) static const u8 sText_PleaseWaitForOtherTrainersToGather[] = _("Espera a que otros ENTRENADORES\nse reúnan y se preparen."); // Unused
-ALIGNED(4) static const u8 sText_NoCardsSharedRightNow[] = _("No CARDS appear to be shared \nright now.");
-ALIGNED(4) static const u8 sText_NoNewsSharedRightNow[] = _("No NEWS appears to be shared\nright now.");
+ALIGNED(4) static const u8 sText_NoCardsSharedRightNow[] = _("No parece haber CARTAS\ncompartidas por ahora.");
+ALIGNED(4) static const u8 sText_NoNewsSharedRightNow[] = _("Ahora mismo no hay\nNOTICIAS nuevas.");
 
 static const u8 *const sNoWonderSharedTexts[] = {
     sText_NoCardsSharedRightNow,
