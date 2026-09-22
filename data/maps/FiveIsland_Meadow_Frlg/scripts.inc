@@ -65,7 +65,7 @@ FiveIsland_Meadow_Text_EnteredPasswordAnotherNeeded::
 FiveIsland_Meadow_Text_EnteredPasswordDoorOpened::
 	.string "{PLAYER} entered two passwords.\p"
 	.string "“GOLDEEN need log.”\n"
-	.string "\"Sí, claro, CHANSEY.\"\p"
+	.string "“Sí, claro, CHANSEY.“\p"
 	.string "… …  … …  … …\p"
 	.string "¡La puerta del ALMACÉN se abrió!$"
 

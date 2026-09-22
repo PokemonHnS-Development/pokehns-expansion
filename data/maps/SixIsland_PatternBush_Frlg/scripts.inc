@@ -125,7 +125,7 @@ SixIsland_PatternBush_Text_JonahDefeat::
 	.string "POKéMON's appeal, too.$"
 
 SixIsland_PatternBush_Text_JonahPostBattle::
-	.string "Por cierto, \"encanto\" es una\n"
+	.string "Por cierto, “encanto“ es una\n"
 	.string "palabra rara si lo piensas.\p"
 	.string "¿Como la cáscara de una naranja?\n"
 	.string "¿O como una campana sonando?$"

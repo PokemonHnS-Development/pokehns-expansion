@@ -461,7 +461,7 @@ SaffronCity_PokemonTrainerFanClub_Text_BrocksMyHero::
 	.string "¡Es un hombre entre hombres!\p"
 	.string "Jeje, logré que mi mamá\n"
 	.string "hiciera algo por mí.\p"
-	.string "Logré que bordara \"BROCK\"\n"
+	.string "Logré que bordara “BROCK“\n"
 	.string "en mis pantalones!$"
 
 SaffronCity_PokemonTrainerFanClub_Text_BrocksFanToBitterEnd::
