@@ -7957,10 +7957,7 @@ const struct ItemInfo gItemsInfo[] =
             "la Precisión del rival.""Potencia los movimientos\nde tipo Normal."),
     #else
         .holdEffectParam = 5,
-        .description = COMPOUND_STRING(
-            "Objeto equipado que\n"
-            "baja ligeramente el\n"
-            "la Precisión del rival."),
+        .description = COMPOUND_STRING("Potencia los movimientos\nde tipo Dragón y Fantasma\nde Giratina."),
     #endif
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_INCENSE,
@@ -8621,7 +8618,7 @@ const struct ItemInfo gItemsInfo[] =
         .price = 100,
     #endif
         .holdEffect = HOLD_EFFECT_CHOICE_BAND,
-        .description = COMPOUND_STRING("Sube el Ataque, pero\npermite el uso de\nun solo movimiento."),
+        .description = COMPOUND_STRING("Potencia los movimientos\nde tipo Fantasma."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_HELD_ITEM,
         .type = ITEM_USE_BAG_MENU,
