@@ -39,7 +39,7 @@ SilphCo_8F_EventScript_Grunt2::
 	end
 
 SilphCo_8F_Text_WonderIfSilphIsFinished::
-	.string "Me pregunto si SILPH ya terminó…$"
+	.string "Me pregunto si SILPH ya terminó...$"
 
 SilphCo_8F_Text_ThanksForSavingUs::
 	.string "¡Gracias por salvarnos!$"
@@ -51,7 +51,7 @@ SilphCo_8F_Text_Grunt1Defeat::
 	.string "¡No tienes agallas!$"
 
 SilphCo_8F_Text_Grunt1PostBattle::
-	.string "Si no te das la vuelta…\n"
+	.string "Si no te das la vuelta...\n"
 	.string "¡Llamaré a refuerzos!$"
 
 SilphCo_8F_Text_ParkerIntro::
@@ -86,4 +86,4 @@ SilphCo_8F_Text_ToRocketBossMonsAreTools::
 	.string "Para él, los POKéMON son solo\n"
 	.string "de ser usado.\p"
 	.string "¿Qué pasará si ese tirano\n"
-	.string "toma el control de nuestra empresa…$"
+	.string "toma el control de nuestra empresa...$"

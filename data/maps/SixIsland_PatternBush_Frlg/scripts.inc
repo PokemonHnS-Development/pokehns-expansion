@@ -109,7 +109,7 @@ SixIsland_PatternBush_Text_GarretIntro::
 	.string "¡solo por aquí!$"
 
 SixIsland_PatternBush_Text_GarretDefeat::
-	.string "Jeje…\n"
+	.string "Jeje...\n"
 	.string "Isn't my POKéMON awesome?$"
 
 SixIsland_PatternBush_Text_GarretPostBattle::
@@ -150,7 +150,7 @@ SixIsland_PatternBush_Text_NashDefeat::
 	.string "Super awesome!$"
 
 SixIsland_PatternBush_Text_NashPostBattle::
-	.string "Los patrones raros del suelo…\p"
+	.string "Los patrones raros del suelo...\p"
 	.string "Se parecen a los patrones de mi\n"
 	.string "grandpa's clothes.$"
 
@@ -164,7 +164,7 @@ SixIsland_PatternBush_Text_CordellDefeat::
 
 SixIsland_PatternBush_Text_CordellPostBattle::
 	.string "Vaya, la gente del pueblo llega\n"
-	.string "tan elegante con sombrero vistoso…\p"
+	.string "tan elegante con sombrero vistoso...\p"
 	.string "¿Qué tal si me lo das?$"
 
 SixIsland_PatternBush_Text_DaliaIntro::
@@ -201,7 +201,7 @@ SixIsland_PatternBush_Text_RileyIntro::
 	.string "Aquí pondré mi carpa.$"
 
 SixIsland_PatternBush_Text_RileyDefeat::
-	.string "Wimped out…$"
+	.string "Wimped out...$"
 
 SixIsland_PatternBush_Text_RileyPostBattle::
 	.string "Voy a observar el cielo nocturno\n"
@@ -216,7 +216,7 @@ SixIsland_PatternBush_Text_MarcyDefeat::
 	.string "Me corté la espinilla con el pasto.$"
 
 SixIsland_PatternBush_Text_MarcyPostBattle::
-	.string "Un corte tan pequeño…\n"
+	.string "Un corte tan pequeño...\n"
 	.string "¡Con un poco de saliva se cura!$"
 
 SixIsland_PatternBush_Text_LaytonIntro::

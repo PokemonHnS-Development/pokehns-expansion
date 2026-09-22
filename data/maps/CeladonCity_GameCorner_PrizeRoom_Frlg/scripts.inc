@@ -385,10 +385,10 @@ CeladonCity_GameCorner_PrizeRoom_Text_FancyThatPorygon::
 
 CeladonCity_GameCorner_PrizeRoom_Text_RakedItInToday::
 	.string "¡Gajaja! ¡Hoy me forré!\n"
-	.string "Ojalá todos los días fueran así…$"
+	.string "Ojalá todos los días fueran así...$"
 
 CeladonCity_GameCorner_PrizeRoom_Text_CoinCaseRequired::
-	.string "Se requiere un MONEDERO…$"
+	.string "Se requiere un MONEDERO...$"
 
 CeladonCity_GameCorner_PrizeRoom_Text_WeExchangeCoinsForPrizes::
 	.string "Cambiamos tus MONEDAS por premios.$"

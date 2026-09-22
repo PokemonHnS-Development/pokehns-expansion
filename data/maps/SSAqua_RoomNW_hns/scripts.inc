@@ -71,4 +71,4 @@ SSAqua_RoomNW_Text_BurglarCoreyBeaten:
 
 SSAqua_RoomNW_Text_BurglarCoreyAfterBattle:
 	.string "Hallé una moneda linda aquí.\p"
-	.string "Alguien debe haberla perdido…$"
+	.string "Alguien debe haberla perdido...$"

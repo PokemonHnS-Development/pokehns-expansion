@@ -39,4 +39,4 @@ RedsHouse_Text_Mom2:
 
 RedsHouse_Text_TV:
 	.string "Tienen programas que no son\n"
-	.string "vistos en JOHTO…$"
+	.string "vistos en JOHTO...$"

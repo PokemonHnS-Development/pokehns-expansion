@@ -58,15 +58,15 @@ FiveIsland_Meadow_Text_DoorNeedsTwoPasswords::
 FiveIsland_Meadow_Text_EnteredPasswordAnotherNeeded::
 	.string "{PLAYER} ingresó una contraseña.\p"
 	.string "“GOLDEEN need log.”\p"
-	.string "… …  … …  … …\p"
+	.string "... ...  ... ...  ... ...\p"
 	.string "Se necesita otra contraseña\n"
-	.string "para abrir la puerta…$"
+	.string "para abrir la puerta...$"
 
 FiveIsland_Meadow_Text_EnteredPasswordDoorOpened::
 	.string "{PLAYER} entered two passwords.\p"
 	.string "“GOLDEEN need log.”\n"
 	.string "“Sí, claro, CHANSEY.“\p"
-	.string "… …  … …  … …\p"
+	.string "... ...  ... ...  ... ...\p"
 	.string "¡La puerta del ALMACÉN se abrió!$"
 
 FiveIsland_Meadow_Text_WarehouseDoorAlreadyOpen::
@@ -90,7 +90,7 @@ FiveIsland_Meadow_Text_Rocket2Intro::
 	.string "¿Y qué te trae por aquí?$"
 
 FiveIsland_Meadow_Text_Rocket2Defeat::
-	.string "Eso no debía pasar…$"
+	.string "Eso no debía pasar...$"
 
 FiveIsland_Meadow_Text_Rocket2PostBattle::
 	.string "¿Quieres saber qué hay dentro\n"

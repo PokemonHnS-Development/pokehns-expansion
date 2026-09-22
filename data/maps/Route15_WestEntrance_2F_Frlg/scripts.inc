@@ -81,13 +81,13 @@ Route15_WestEntrance_2F_Text_ExplainExpShare::
 
 Route15_WestEntrance_2F_Text_LargeShiningBird::
 	.string "Veamos qué muestran los\n"
-	.string "prismáticos…\p"
+	.string "prismáticos...\p"
 	.string "Un ave grande y brillante vuela\n"
 	.string "hacia el mar.$"
 
 Route15_WestEntrance_2F_Text_SmallIslandOnHorizon::
 	.string "Veamos qué muestran los\n"
-	.string "prismáticos…\p"
+	.string "prismáticos...\p"
 	.string "Parece una pequeña isla en\n"
 	.string "¡el horizonte!$"
 

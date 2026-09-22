@@ -265,7 +265,7 @@ Route14_Text_TrevorRematchIntro:
 	.string "POKéMON en sitios conocidos!$"
 
 Route14_Text_TrevorRematchDefeat:
-	.string "Tal vez necesite sitios nuevos…$"
+	.string "Tal vez necesite sitios nuevos...$"
 
 Route14_Text_TrevorPostRematch:
 	.string "La amistad hace que los POKéMON\n"
@@ -279,7 +279,7 @@ Route14_Text_PokefanmCarterBeaten:
 	.string "Awaaah!$"
 
 Route14_Text_PokefanmCarterAfterBattle:
-	.string "TOTODILE, CYNDAQUIL, CHIKORITA…\p"
+	.string "TOTODILE, CYNDAQUIL, CHIKORITA...\p"
 	.string "Creo que es una mezcla equilibrada.$"
 
 Route14_Text_CarterRegister:
@@ -290,7 +290,7 @@ Route14_Text_CarterRematchIntro:
 	.string "¡para presumir! ¡Lucha conmigo!$"
 
 Route14_Text_CarterRematchDefeat:
-	.string "Mis preciosos iniciales…$"
+	.string "Mis preciosos iniciales...$"
 
 Route14_Text_CarterPostRematch:
 	.string "¡Hay tantos iniciales de\ndiferentes regiones por coleccionar!$"

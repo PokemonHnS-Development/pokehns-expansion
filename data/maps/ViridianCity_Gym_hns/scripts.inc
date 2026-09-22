@@ -57,7 +57,7 @@ ViridianCity_Gym_Text_LeaderBlue_Before:
 	.string "BLUE: ¡Ey! Al fin llegaste, ¿eh?\p"
 	.string "No tenía ganas en ISLA CANELA,\p"
 	.string "pero ahora estoy listo para luchar.\p"
-	.string "…\p"
+	.string "...\p"
 	.string " ¿Me dices que venciste a todos\n"
 	.string "los GIMNASIOS de JOHTO?\p"
 	.string "¡Je! Los GIMNASIOS de JOHTO deben\n"
@@ -70,7 +70,7 @@ ViridianCity_Gym_Text_LeaderBlue_Before:
 ViridianCity_Gym_Text_LeaderBlue_Win:
 	.string "BLUE: ¿Qué?\p"
 	.string "¿Cómo rayos pude perder contigo?\p"
-	.string "…\p"
+	.string "...\p"
 	.string "Tch, está bien... Toma esto, es la\n"
 	.string "MEDALLA TIERRA.$"
 

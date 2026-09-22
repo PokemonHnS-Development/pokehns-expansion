@@ -287,8 +287,8 @@ LavaridgeTown_Text_MayExplainGoGogglesChallengeDad:
 	.string "Supongo que estaría bien que...\n"
 	.string "MAY: Con esas GO-GOGGLES, no\l"
 	.string "tendrás problemas en el desierto\p"
-	.string "Pero, vaya, {PLAYER}{KUN}…\n"
-	.string "Retar a los GIMNASIOS…\p"
+	.string "Pero, vaya, {PLAYER}{KUN}...\n"
+	.string "Retar a los GIMNASIOS...\p"
 	.string "Te esfuerzas mucho porque no\n"
 	.string "quieres perder contra mí, ¡apuesto!\p"
 	.string "{PLAYER}{KUN}, creo que debería\n"
@@ -298,7 +298,7 @@ LavaridgeTown_Text_MayExplainGoGogglesChallengeDad:
 LavaridgeTown_Text_BrendanNiceBadgesTakeThis:
 	.string "BRENDAN: {PLAYER}, hola, ha pasado tiempo.\n"
 	.string "¿Cómo va todo?\p"
-	.string "Hmm…\n"
+	.string "Hmm...\n"
 	.string "Es una buena colección de MEDALLAS.\p"
 	.string "Muy bien, entonces.\n"
 	.string "Toma esto, te servirá.$"
@@ -339,7 +339,7 @@ LavaridgeTown_Text_ReceivedTheEgg:
 
 LavaridgeTown_Text_NoRoomForThisEgg:
 	.string "¿Oh? Tienes demasiados POKéMON.\n"
-	.string "No hay sitio para este HUEVO…$"
+	.string "No hay sitio para este HUEVO...$"
 
 LavaridgeTown_Text_AsYouWishThen:
 	.string "Como quieras, entonces...\p"
@@ -388,7 +388,7 @@ LavaridgeTown_Text_HotSpringsClaims:
 	.string "calman la tensión nerviosa,\l"
 	.string "alivian dolores musculares, resuelven\l"
 	.string "problemas románticos y atraen\l"
-	.string "el dinero…$"
+	.string "el dinero...$"
 
 LavaridgeTown_Text_TownSign:
 	.string "PUEBLO LAVARIDGE\p"

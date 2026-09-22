@@ -54,7 +54,7 @@ Route8_Text_BikerHarrisBeaten:
 
 Route8_Text_BikerHarrisAfter:
 	.string "Derrotado por un novato de\n"
-	.string "JOHTO…$"
+	.string "JOHTO...$"
 
 Route8_Text_BikerZekeSeen:
 	.string "Somos la FEDERACIÓN POKéMON de\n"
@@ -66,31 +66,31 @@ Route8_Text_BikerZekeBeaten:
 
 Route8_Text_BikerZekeAfter:
 	.string "Trataremos de no molestar a nadie\n"
-	.string "de ahora en adelante…$"
+	.string "de ahora en adelante...$"
 
 Route8_Text_SupernerdSamSeen:
 	.string "¿Cómo funciona el TREN MAGNÉTICO?$"
 
 Route8_Text_SupernerdSamBeaten:
 	.string "Solo quiero ver el MAGNET\n"
-	.string "TRAIN…$"
+	.string "TRAIN...$"
 
 Route8_Text_SupernerdSamAfter:
 	.string "¡El poder de los imanes es increíble!$"
 
 Route8_Text_SupernerdTomSeen:
-	.string "Hm… You've got many GYM BADGES.$"
+	.string "Hm... You've got many GYM BADGES.$"
 
 Route8_Text_SupernerdTomBeaten:
-	.string "Tal como pensé… ¡Eres fuerte!$"
+	.string "Tal como pensé... ¡Eres fuerte!$"
 
 Route8_Text_SupernerdTomAfter:
 	.string "Las MEDALLAS dan ventajas en\n"
 	.string "batallas.$"
 
 Route8_Text_LockedDoor:
-	.string "Está cerrado…$"
+	.string "Está cerrado...$"
 
 Route8_Text_UndergroundPathSign:
 	.string "El volante está roto.\p"
-	.string "Es imposible de leer…$"
+	.string "Es imposible de leer...$"

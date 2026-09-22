@@ -412,13 +412,13 @@ MossdeepCity_Text_ScottSomethingWrongWithTown:
 	.string "Pero algo no me cuadra\n"
 	.string "de este pueblo.\p"
 	.string "La gente habla de una advertencia\n"
-	.string "carta y el CENTRO ESPACIAL…\p"
+	.string "carta y el CENTRO ESPACIAL...\p"
 	.string "No creo que tenga algo que ver\n"
 	.string "conmigo, en realidad.$"
 
 MossdeepCity_Text_SootopolisNewGymLeader:
-	.string "Ahh… Se siente genial dejar que las\n"
-	.string "olas bañen mis pies…\p"
+	.string "Ahh... Se siente genial dejar que las\n"
+	.string "olas bañen mis pies...\p"
 	.string "Hablando de olas, ¿conoces esa\n"
 	.string "ciudad isla, CALORÍS?\p"
 	.string "Creo que el GIMNASIO de allá tiene\n"

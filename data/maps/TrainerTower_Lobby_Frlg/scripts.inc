@@ -269,17 +269,17 @@ TrainerTower_Lobby_Text_MoveCounterHereWhenTrainersSwitch::
 	.string "Siento los inconvenientes.$"
 
 TrainerTower_Roof_Text_ImOwnerBattledPerfectly::
-	.string "Hello…\p"
-	.string "Soy el dueño de esta TORRE…\p"
+	.string "Hello...\p"
+	.string "Soy el dueño de esta TORRE...\p"
 	.string "Cómo el cielo se extiende\n"
-	.string "rooftop…\p"
-	.string "La caricia del viento aquí…\p"
-	.string "Todo es tan perfecto…\p"
-	.string "La forma en que luchaste…\n"
-	.string "También fue perfección…$"
+	.string "rooftop...\p"
+	.string "La caricia del viento aquí...\p"
+	.string "Todo es tan perfecto...\p"
+	.string "La forma en que luchaste...\n"
+	.string "También fue perfección...$"
 
 TrainerTower_Roof_Text_ThisIsForYou::
-	.string "Esto es para ti…$"
+	.string "Esto es para ti...$"
 
 TrainerTower_Roof_Text_DoneItInRecordTime::
 	.string "Oh!\n"
@@ -287,19 +287,19 @@ TrainerTower_Roof_Text_DoneItInRecordTime::
 	.string "Es maravilloso cómo has llegado\n"
 	.string "tan rápido.\p"
 	.string "La verdad es que lo has hecho en\n"
-	.string "record time…\p"
+	.string "record time...\p"
 	.string "Publicaré tu récord en el\n"
 	.string "mostrador de recepción.$"
 
 TrainerTower_Roof_Text_TookSweetTimeGettingHere::
 	.string "Parece que te has tomado tu\n"
-	.string "tiempo en llegar…$"
+	.string "tiempo en llegar...$"
 
 TrainerTower_Roof_Text_IdLikeToSeeBetterTime::
 	.string "Lo que me gustaría ver es un\n"
-	.string "mejor tiempo de tu parte…\p"
+	.string "mejor tiempo de tu parte...\p"
 	.string "Cuento contigo.\p"
-	.string "Until then, farewell…$"
+	.string "Until then, farewell...$"
 
 TrainerTower_Text_XMinYZSec::
 	.string "{STR_VAR_1} min. {STR_VAR_2}.{STR_VAR_3} sec.$"
@@ -335,8 +335,8 @@ TrainerTower_Lobby_Text_WonderWhatKindsOfTrainers::
 	.string "¡Es de los nervios!$"
 
 TrainerTower_Lobby_Text_StairsTougherThanAnyBattle::
-	.string "Gasp, gasp…\n"
-	.string "Gasp…\p"
-	.string "Never mind battling! These stairs…\n"
-	.string "Son más duros que cualquier batalla…$"
+	.string "Gasp, gasp...\n"
+	.string "Gasp...\p"
+	.string "Never mind battling! These stairs...\n"
+	.string "Son más duros que cualquier batalla...$"
 

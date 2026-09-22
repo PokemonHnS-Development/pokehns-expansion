@@ -153,7 +153,7 @@ ViridianCity_Gym_Text_ExplainTM26::
 	.string "Es un ataque poderoso que\n"
 	.string "provoca un temblor enorme.\p"
 	.string "Lo creé cuando dirigía el\n"
-	.string "far too long ago… $"
+	.string "far too long ago... $"
 
 ViridianCity_Gym_Text_YouDoNotHaveSpace::
 	.string "¡No tienes espacio para esto!$"
@@ -200,7 +200,7 @@ ViridianCity_Gym_Text_KiyoDefeat::
 
 ViridianCity_Gym_Text_KiyoPostBattle::
 	.string "If my POKéMON were as good at\n"
-	.string "karate as I…$"
+	.string "karate as I...$"
 
 ViridianCity_Gym_Text_WarrenIntro::
 	.string "Solo los de talento ganan con estilo.$"
@@ -210,7 +210,7 @@ ViridianCity_Gym_Text_WarrenDefeat::
 
 ViridianCity_Gym_Text_WarrenPostBattle::
 	.string "El LÍDER me regañará por\n"
-	.string "perder de esta forma…$"
+	.string "perder de esta forma...$"
 
 ViridianCity_Gym_Text_TakashiIntro::
 	.string "¡Soy el REY DEL KARATE!\n"

@@ -19,7 +19,7 @@ LilycoveCity_House1_Text_PokemonPartnersNotTools:
 	.string "Los POKéMON son socios humanos.\n"
 	.string "No son nuestras herramientas.\p"
 	.string "Lamentablemente, hay personas\n"
-	.string "que no logran entender eso…$"
+	.string "que no logran entender eso...$"
 
 LilycoveCity_House1_Text_Kecleon:
 	.string "KECLEON: Ruroro?$"

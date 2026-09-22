@@ -96,13 +96,13 @@ IndigoPlateau_Text_RivalEntrance1:
     .string "¡Te desafío!$"
 
 IndigoPlateau_Text_RivalWin:
-    .string "…\p"
+    .string "...\p"
     .string "Vale... perdí...$"
 
 IndigoPlateau_Text_RivalAfter:
     .string "...Rayos... sigo sin ganar...\p"
     .string "Yo... debo pensar más en mi\n"
-    .string "POKéMON…\p"
+    .string "POKéMON...\p"
     .string "¡Hmph! ¡Intenta no perder!$"
 
 IndigoPlateau_EventScript_Psychic::
@@ -161,4 +161,4 @@ IndigoPlateau_Text_TeleportGuyNo:
     .string "Está bien, está bien. ¡Mucha suerte!$"
 
 IndigoPlateau_Text_Abra:
-    .string "ABRA: Aabra…$"
+    .string "ABRA: Aabra...$"

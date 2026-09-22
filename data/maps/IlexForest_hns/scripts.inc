@@ -709,7 +709,7 @@ IlexForest_Text_Shrine:
 IlexForest_Text_ShrineCelebiEvent:
 	.string "SANTUARIO DEL BOSQUE VERDE...\p"
 	.string "Es en honor al protector\n"
-	.string "protector…\p"
+	.string "protector...\p"
 	.string "¡¿Oh?! ¿Qué es esto?\p"
 	.string "Es un hueco.\n"
 	.string "Parece que la GS BALL cabría\l"
@@ -733,7 +733,7 @@ IlexForest_Text_BugCatcherWayneSeen:
 	.string "¡Ahuyentaste a un POKéMON!$"
 
 IlexForest_Text_BugCatcherWayneBeaten:
-	.string "I hadn't seen that POKéMON before…$"
+	.string "I hadn't seen that POKéMON before...$"
 
 IlexForest_Text_BugCatcherWayneAfter:
 	.string "Un POKéMON que nunca había visto\n"

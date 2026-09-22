@@ -701,7 +701,7 @@ PetalburgCity_EventScript_GymBoy::
 PetalburgCity_Text_WhereIsWally:
 	.string "¿A dónde se fue nuestro WALLY?\p"
 	.string "Tenemos que irnos a PUEBLO VERDANTE\n"
-	.string "muy pronto…$"
+	.string "muy pronto...$"
 
 PetalburgCity_Text_AreYouRookieTrainer:
 	.string "¡Hola! ¿Acaso eres...\n"
@@ -720,14 +720,14 @@ PetalburgCity_Text_ThisIsGymSign:
 
 PetalburgCity_Text_WaterReflection:
 	.string "Mi cara se refleja en el agua.\p"
-	.string "Es una sonrisa brillante de esperanza…\p"
+	.string "Es una sonrisa brillante de esperanza...\p"
 	.string "O podría ser una mirada de silencio\n"
-	.string "luchando contra el miedo…\p"
+	.string "luchando contra el miedo...\p"
 	.string "¿Qué ves reflejado en tu rostro?$"
 
 PetalburgCity_Text_FullPartyExplanation:
 	.string "Digamos que tienes seis POKéMON.\n"
-	.string "Si capturas otro más…\p"
+	.string "Si capturas otro más...\p"
 	.string "Se envía automáticamente a una BOX\n"
 	.string "de ALMACÉN vía PC.$"
 
@@ -749,7 +749,7 @@ PetalburgCity_Text_AreYouATrainer:
 	.string "vestido, ¿eres un ENTRENADOR POKéMON?$"
 
 PetalburgCity_Text_WellMaybeNot:
-	.string "… … … … … …\p"
+	.string "... ... ... ... ... ...\p"
 	.string "Bueno, tal vez no.\n"
 	.string "Tu ropa no está tan sucia.\p"
 	.string "O eres un ENTRENADOR novato,\n"

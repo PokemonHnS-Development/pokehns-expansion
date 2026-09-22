@@ -167,7 +167,7 @@ SlowpokeWell_B1F_Text_GruntF1After:
 	.string "¿Qué tiene de malo venderlas?$"
 
 SlowpokeWell_B1F_Text_SlowpokeWithMail:
-	.string "Un SLOWPOKE con la cola cortada…\p"
+	.string "Un SLOWPOKE con la cola cortada...\p"
 	.string "¿Eh? Tiene CORREO.\n"
 	.string "¿Lo lees?$"
 
@@ -178,4 +178,4 @@ SlowpokeWell_B1F_Text_SlowpokeMail:
 	.string "Con amor, Papá$"
 
 SlowpokeWell_B1F_Text_TaillessSlowpoke:
-	.string "Un SLOWPOKE con su COLA cortada…$"
+	.string "Un SLOWPOKE con su COLA cortada...$"

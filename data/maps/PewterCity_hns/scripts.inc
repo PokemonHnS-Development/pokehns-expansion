@@ -111,12 +111,12 @@ PewterCity_Text_GymSign:
 	.string "El Entrenador POKéMON sólido como roca$"
 
 PewterCity_Text_MuseumSign:
-	.string "Hay un aviso aquí…\p"
+	.string "Hay un aviso aquí...\p"
 	.string "El MUSEO DE CIUDAD PLATEA está cerrado\n"
 	.string "por renovaciones...$"
 
 PewterCity_Text_MtMoonGiftShopSign:
-	.string "Hay un aviso aquí…\p"
+	.string "Hay un aviso aquí...\p"
 	.string "¡TIENDA DEL MT.MOON YA ABIERTA!$"
 
 PewterCity_Text_WelcomeSign:

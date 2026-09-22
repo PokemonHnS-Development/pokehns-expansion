@@ -137,14 +137,14 @@ EventScript_UseSpray::
 
 
 Text_SprayWoreOff::
-	.string "El efecto de {STR_VAR_1} terminó…$"
+	.string "El efecto de {STR_VAR_1} terminó...$"
 
 Text_SprayWoreOffAskUseAnother::
 	.string "¡El efecto de {STR_VAR_1} terminó!\n"
 	.string "¿Usar otro?$"
 
 Text_SprayWoreOffAskUseX::
-	.string "El efecto de {STR_VAR_1} terminó…\n"
+	.string "El efecto de {STR_VAR_1} terminó...\n"
 	.string "¿Usar un {STR_VAR_2}?$"
 
 Text_SprayWoreOffUseX::

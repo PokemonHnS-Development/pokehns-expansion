@@ -66,7 +66,7 @@ FiveIsland_LostCave_Room10_Text_SelphyIntro::
 	.string "¿a mí?$"
 
 FiveIsland_LostCave_Room10_Text_SelphyDefeat::
-	.string "Oh… temía que quisieras\n"
+	.string "Oh... temía que quisieras\n"
 	.string "hacerme daño.$"
 
 FiveIsland_LostCave_Room10_Text_MayIAskYouToTakeMeHome::

@@ -56,7 +56,7 @@ RS_MysteryEventsHouse_Text_ChallengeVisitingTrainer:
 
 RS_MysteryEventsHouse_Text_YouWontBattle:
 	.string "¿No lucharás? Me decepciona\n"
-	.string "no poder verte combatir…$"
+	.string "no poder verte combatir...$"
 
 RS_MysteryEventsHouse_Text_KeepItToA3On3:
 	.string "¡Oh, bien, bien!\p"

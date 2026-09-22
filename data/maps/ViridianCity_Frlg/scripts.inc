@@ -287,7 +287,7 @@ ViridianCity_Text_ShowYouHowToCatchMons::
 	.string "Whenever you catch a POKéMON,\n"
 	.string "the POKéDEX automatically updates\l"
 	.string "its data.\p"
-	.string "…No sabes cómo atrapar\n"
+	.string "...No sabes cómo atrapar\n"
 	.string "un POKéMON?\p"
 	.string "Supongo que será mejor\nmostrártelo"
 	.string "then!$"
@@ -307,7 +307,7 @@ ViridianCity_Text_WeakenMonsFirstToCatch::
 	.string "Bueno, ya me tomé mi café, y\n"
 	.string "¡eso es lo que necesito para irme!\p"
 	.string "Pero lo hice demasiado fuerte.\n"
-	.string "Me dio dolor de cabeza…\p"
+	.string "Me dio dolor de cabeza...\p"
 	.string "Por cierto, ¿ya estás llenando\n"
 	.string "POKéDEX?\p"
 	.string "Al principio, enfócate en debilitar\n"
@@ -317,7 +317,7 @@ ViridianCity_Text_HowsTeachyTVHelping::
 	.string "Bueno, ya me tomé mi café, y\n"
 	.string "¡eso es lo que necesito para irme!\p"
 	.string "Pero lo hice demasiado fuerte.\n"
-	.string "Me dio dolor de cabeza…\p"
+	.string "Me dio dolor de cabeza...\p"
 	.string "Por cierto, ¿mi vieja TV\n"
 	.string "¿Te ayudo?$"
 
@@ -328,10 +328,10 @@ ViridianCity_Text_MyGrandsonOnTheShow::
 	.string "clases, seguro aprenderás.$"
 
 ViridianCity_Text_TooBusyForTeachyTV::
-	.string "Hm… Estás tan ocupado que no\n"
-	.string "tienes tiempo para TV ENSEÑA…\p"
+	.string "Hm... Estás tan ocupado que no\n"
+	.string "tienes tiempo para TV ENSEÑA...\p"
 	.string "El tiempo es dinero, y ninguno\n"
-	.string "se gastarán mal…$"
+	.string "se gastarán mal...$"
 
 ViridianCity_Text_CitySign::
 	.string "VIRIDIAN CITY \n"
@@ -355,5 +355,5 @@ ViridianCity_Text_GymSign::
 	.string "VIRIDIAN CITY POKéMON GYM$"
 
 ViridianCity_Text_GymDoorsAreLocked::
-	.string "VIRIDIAN GYM's doors are locked…$"
+	.string "VIRIDIAN GYM's doors are locked...$"
 

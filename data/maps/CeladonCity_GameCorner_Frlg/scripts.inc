@@ -517,7 +517,7 @@ CeladonCity_GameCorner_Text_WinsComeAndGo::
 	.string "Nada es seguro.$"
 
 CeladonCity_GameCorner_Text_WinOrLoseItsOnlyLuck::
-	.string "These slot games…\n"
+	.string "These slot games...\n"
 	.string "Ganes o pierdas, es solo suerte.$"
 
 CeladonCity_GameCorner_Text_GymGuyAdvice::
@@ -528,7 +528,7 @@ CeladonCity_GameCorner_Text_GymGuyAdvice::
 	.string "Ella es usuaria de tipo PLANTA\n"
 	.string "POKéMON, and at one with nature.\p"
 	.string "Podría parecer dócil debido a\n"
-	.string "su arreglo floral…\p"
+	.string "su arreglo floral...\p"
 	.string "Pero no es de las que se dejan atrapar\n"
 	.string "lightly!$"
 
@@ -590,7 +590,7 @@ CeladonCity_GameCorner_Text_SwitchBehindPosterPushIt::
 	.string "¡Empujémoslo!"
 
 CeladonCity_GameCorner_Text_CoinCaseIsRequired::
-	.string "Se requiere un MONEDERO…$"
+	.string "Se requiere un MONEDERO...$"
 
 CeladonCity_GameCorner_Text_DontHaveCoinCase::
 	.string "¡Ups!\n"

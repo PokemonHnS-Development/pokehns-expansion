@@ -689,7 +689,7 @@ NewBarkTown_Lab_Text_ElmResearchAmbitions:
 
 NewBarkTown_Lab_Text_ElmGotAnEmail:
 	.string "¡Oh, mira! ¡Recibí un e-mail!\p"
-	.string "… … … … … … … …\n"
+	.string "... ... ... ... ... ... ... ...\n"
 	.string "Hm... Ajá...\p"
 	.string "Está bien...$"
 
@@ -792,7 +792,7 @@ NewBarkTown_Lab_Text_ElmDescribesMrPokemon:
 	.string "MR. POKéMON viaja por doquier y\n"
 	.string "encuentra rarezas.\p"
 	.string "Lástima que solo sean raras y\n"
-	.string "no muy útiles…$"
+	.string "no muy útiles...$"
 
 NewBarkTown_Lab_Text_ElmPokeBall:
 	.string "Contiene un POKéMON capturado\n"
@@ -801,7 +801,7 @@ NewBarkTown_Lab_Text_ElmPokeBall:
 @THEFT================================================================================
 
 NewBarkTown_Lab_Text_ElmAfterTheft1:
-	.string "ELM: {PLAYER}, esto es terrible…\p"
+	.string "ELM: {PLAYER}, esto es terrible...\p"
 	.string "Oh, sí, ¿cuál fue el gran\n"
 	.string "descubrimiento del SR. POKéMON?$"
 
@@ -813,7 +813,7 @@ NewBarkTown_Lab_Text_ElmAfterTheft3:
 	.string "ELM: This?$"
 
 NewBarkTown_Lab_Text_ElmAfterTheft4:
-	.string "Pero… ¿es un HUEVO POKéMON?\p"
+	.string "Pero... ¿es un HUEVO POKéMON?\p"
 	.string "¡Si lo es, es un gran\n"
 	.string "descubrimiento!\p"
 	.string "ELM: ¡¿Qué?!?\p"
@@ -892,7 +892,7 @@ NewBarkTown_Lab_Text_ElmCallYou:
 	.string "surge cualquier novedad.$"
 
 NewBarkTown_Lab_Text_AideAfterTheft:
-	.string "…Suspiro… Ese POKéMON robado.\p"
+	.string "...Suspiro... Ese POKéMON robado.\p"
 	.string "Me pregunto cómo estará.\p"
 	.string "Dicen que un POKéMON criado por\n"
 	.string "alguien malo, se vuelve malo.$"
@@ -992,7 +992,7 @@ NewBarkTown_Lab_Text_AideTheftTestimony:
 	.string "alguien robó un POKéMON.\p"
 	.string "¡Es increíble que alguien\n"
 	.string "haga algo así!\p"
-	.string "…Suspiro… Ese POKéMON robado.\p"
+	.string "...Suspiro... Ese POKéMON robado.\p"
 	.string "Me pregunto cómo estará.\p"
 	.string "Dicen que un POKéMON criado por\n"
 	.string "alguien malo, se vuelve malo.$"
@@ -1014,7 +1014,7 @@ NewBarkTown_Lab_Text_Officer1:
 	.string "Solo estaba consiguiendo unos\n"
 	.string "información del PROF.ELM.\p"
 	.string "Al parecer, era un joven\n"
-	.string "con el pelo largo y rojo…\p"
+	.string "con el pelo largo y rojo...\p"
 	.string "¿Qué?\p"
 	.string "¿Luchaste contra un\n"
 	.string "entrenador así?\p"

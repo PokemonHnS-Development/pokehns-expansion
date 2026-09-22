@@ -92,9 +92,9 @@ Route119_WeatherInstitute_1F_Text_Grunt4Defeat:
 	.string "¡¿Perdí?!$"
 
 Route119_WeatherInstitute_1F_Text_Grunt4PostBattle:
-	.string "Oh, no…\n"
+	.string "Oh, no...\n"
 	.string "Me regañarán por perder con un niño...\p"
-	.string "Debería tomar una siesta en la cama…$"
+	.string "Debería tomar una siesta en la cama...$"
 
 Route119_WeatherInstitute_1F_Text_EveryoneWentUpstairs:
 	.string "¡Mientras dormía, todos subieron\n"
@@ -119,7 +119,7 @@ Route119_WeatherInstitute_1F_Text_NoticingAbnormalWeather:
 	.string "de la región de HOENN.\p"
 	.string "Hemos notado casos aislados y\n"
 	.string "temporales de sequías y\l"
-	.string "lluvias fuertes últimamente…$"
+	.string "lluvias fuertes últimamente...$"
 
 Route119_WeatherInstitute_1F_Text_WhatWereAquasUpTo:
 	.string "¡Hola!\n"
@@ -128,6 +128,6 @@ Route119_WeatherInstitute_1F_Text_WhatWereAquasUpTo:
 	.string "tramaban los AQUA.$"
 
 Route119_WeatherInstitute_1F_Text_TakeRestInBed:
-	.string "Hay una cama…\n"
+	.string "Hay una cama...\n"
 	.string "Descansemos un poco.$"
 

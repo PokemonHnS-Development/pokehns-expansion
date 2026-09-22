@@ -1098,7 +1098,7 @@ BattleFrontier_BattleDomeBattleRoom_Text_ReceivedTacticsSymbol:
 	.string "en el FRONTIER PASS!$"
 
 BattleFrontier_BattleDomeBattleRoom_Text_WontUnderestimateYouNextTime:
-	.string "… … … … … …\p"
+	.string "... ... ... ... ... ...\p"
 	.string "Te subestimé mucho. No volveré a\n"
 	.string "cometer el mismo error...$"
 

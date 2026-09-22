@@ -30,7 +30,7 @@ LavenderTown_House1_Text_Cubone::
 LavenderTown_House1_Text_RocketsKilledCubonesMother::
 	.string "Those horrible ROCKETS!\n"
 	.string "¡No merecen piedad!\p"
-	.string "La pobre madre de ese CUBONE…\p"
+	.string "La pobre madre de ese CUBONE...\p"
 	.string "Murió al intentar escapar de\n"
 	.string "TEAM ROCKET.$"
 

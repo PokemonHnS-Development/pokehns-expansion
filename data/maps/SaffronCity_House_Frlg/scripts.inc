@@ -24,9 +24,9 @@ SaffronCity_House_EventScript_Letter::
 	end
 
 SaffronCity_House_Text_DontLookAtMyLetter::
-	.string "…Gracias por escribir.\n"
+	.string "...Gracias por escribir.\n"
 	.string "¡Espero verte pronto!\p"
-	.string "…Hey!\n"
+	.string "...Hey!\n"
 	.string "¡No mires mi carta!$"
 
 SaffronCity_House_Text_Pidgey::

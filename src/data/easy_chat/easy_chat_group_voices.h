@@ -25,19 +25,19 @@ const struct EasyChatWordInfo gEasyChatGroup_Voices[] = {
     },
     [EC_INDEX(EC_WORD_ELLIPSIS)] =
     {
-        .text = COMPOUND_STRING("…"),
+        .text = COMPOUND_STRING("..."),
         .alphabeticalOrder = EC_INDEX(EC_WORD_ELLIPSIS),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_ELLIPSIS_EXCL)] =
     {
-        .text = COMPOUND_STRING("…!"),
+        .text = COMPOUND_STRING("...!"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_ELLIPSIS_EXCL),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_ELLIPSIS_ELLIPSIS_ELLIPSIS)] =
     {
-        .text = COMPOUND_STRING("………"),
+        .text = COMPOUND_STRING("........."),
         .alphabeticalOrder = EC_INDEX(EC_WORD_ELLIPSIS_ELLIPSIS_ELLIPSIS),
         .enabled = TRUE,
     },

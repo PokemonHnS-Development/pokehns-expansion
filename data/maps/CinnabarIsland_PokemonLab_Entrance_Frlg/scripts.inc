@@ -43,7 +43,7 @@ CinnabarIsland_PokemonLab_Entrance_Text_StudyMonsExtensively::
 	.string "para examinarla.$"
 
 CinnabarIsland_PokemonLab_Entrance_Text_PhotoOfLabFounderDrFuji::
-	.string "Una foto del fundador del LAB…\n"
+	.string "Una foto del fundador del LAB...\n"
 	.string "DR. FUJI?!$"
 
 CinnabarIsland_PokemonLab_Entrance_Text_MeetingRoomSign::

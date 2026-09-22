@@ -548,7 +548,7 @@ BattleFrontier_BattleArenaLobby_Text_ExplainSkillRules_hns:
 	.string "Si fue un ataque, la Habilidad\n"
 	.string "Sube si el movimiento fue “muy\l"
 	.string "efectivo” y baja si fue\l"
-	.string "«no es muy eficaz.»\p"
+	.string "“no es muy eficaz.”\p"
 	.string "La Habilidad no subirá si\n"
 	.string "movimientos como PROTECT y DETECT.\p"
 	.string "Si el rival usó PROTECCIÓN o\n"

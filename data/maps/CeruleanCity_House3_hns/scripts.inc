@@ -33,7 +33,7 @@ CeruleanHouse_Text_Granny:
 	.string "POKéMON que obtuvo por cambios.$"
 
 CeruleanHouse_Text_Gramps:
-	.string "Ah… qué feliz soy…$"
+	.string "Ah... qué feliz soy...$"
 
 CeruleanHouse_Text_Kangaskhan:
 	.string "KANGASKHAN: Garu garuu.$"

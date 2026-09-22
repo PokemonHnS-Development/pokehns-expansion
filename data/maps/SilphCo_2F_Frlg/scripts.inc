@@ -85,13 +85,13 @@ Text_ThunderWaveTeach::
 	.string "Eeek!\n"
 	.string "¡No! ¡Alto! ¡Auxilio!\p"
 	.string "Oh, no eres del TEAM ROCKET.\n"
-	.string "I'm sorry, I thought…\p"
+	.string "I'm sorry, I thought...\p"
 	.string "¿Me perdonarás si te enseño\n"
 	.string "la técnica ONDA TRUENO?$"
 
 Text_ThunderWaveDeclined::
-	.string "Oh…\n"
-	.string "Pero ONDA TRUENO es útil…$"
+	.string "Oh...\n"
+	.string "Pero ONDA TRUENO es útil...$"
 
 Text_ThunderWaveWhichMon::
 	.string "¿A qué POKéMON le enseño\n"

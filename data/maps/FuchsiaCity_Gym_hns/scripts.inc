@@ -86,15 +86,15 @@ FuchsiaCity_Gym_EventScript_Janine_Defeated::
 	end
 
 FuchsiaCity_Gym_Text_Janine_DisappointYou:
-	.string "Fufufufu…\p"
-	.string "Siento decepcionarte…\p"
+	.string "Fufufufu...\p"
+	.string "Siento decepcionarte...\p"
 	.string "¡Solo estoy bromeando!\p"
 	.string "¡Yo soy la verdadera!\p"
 	.string "¡Soy JANINE del GIMNASIO FUCHSIA!$"
 
 FuchsiaCity_Gym_Text_Janine_ToughOne:
 	.string "JANINE: Eres fuerte. Sin duda\n"
-	.string "has ganado…\p"
+	.string "has ganado...\p"
 	.string "Toma la MEDALLA ALMA. Es tuya.$"
 
 FuchsiaCity_Gym_Text_ReceivedSoulBadge:
@@ -227,7 +227,7 @@ FuchsiaCity_Gym_Text_LassLinda_Before:
 	.string "¡Te engañé! ¡Jajaja!$"
 
 FuchsiaCity_Gym_Text_LassLinda_Beaten:
-	.string "Oh… Perdí… No eres débil…$"
+	.string "Oh... Perdí... No eres débil...$"
 
 FuchsiaCity_Gym_Text_LassLinda_After:
 	.string "Well? Wasn't my disguise perfect?$"

@@ -14,12 +14,12 @@ SixIsland_WaterPath_Text_RoseIntro::
 	.string "todo el camino hasta aquí.$"
 
 SixIsland_WaterPath_Text_RoseDefeat::
-	.string "Ji, ji… Qué lindo eres cuando\n"
+	.string "Ji, ji... Qué lindo eres cuando\n"
 	.string "determined.$"
 
 SixIsland_WaterPath_Text_RosePostBattle::
 	.string "Quiero ir al bosque que está\n"
-	.string "allá, pero…\p"
+	.string "allá, pero...\p"
 	.string "There are lots of BUG POKéMON.\n"
 	.string "Me dan un poco de miedo.$"
 
@@ -44,7 +44,7 @@ SixIsland_WaterPath_Text_SamirDefeat::
 
 SixIsland_WaterPath_Text_SamirPostBattle::
 	.string "No podría soportar el estigma de\n"
-	.string "un NADADOR…$"
+	.string "un NADADOR...$"
 
 SixIsland_WaterPath_Text_DeniseIntro::
 	.string "Mi novio siempre está ocupado,\n"
@@ -80,7 +80,7 @@ SixIsland_WaterPath_Text_MiuDefeat::
 
 SixIsland_WaterPath_Text_MiuPostBattle::
 	.string "MIU: Me pone muy triste\n"
-	.string "cuando perdemos…$"
+	.string "cuando perdemos...$"
 
 SixIsland_WaterPath_Text_MiuNotEnoughMons::
 	.string "MIU: MIA y yo somos GEMELAS.\n"
@@ -95,8 +95,8 @@ SixIsland_WaterPath_Text_MiaDefeat::
 	.string "¡Eres malo por ganar!$"
 
 SixIsland_WaterPath_Text_MiaPostBattle::
-	.string "MIA: Ohh…\n"
-	.string "I'm sorry, my POKéMON…$"
+	.string "MIA: Ohh...\n"
+	.string "I'm sorry, my POKéMON...$"
 
 SixIsland_WaterPath_Text_MiaNotEnoughMons::
 	.string "MIA: Oh, solo tienes uno\n"

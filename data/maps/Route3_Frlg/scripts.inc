@@ -10,8 +10,8 @@ Route3_EventScript_RouteSign::
 	end
 
 Route3_Text_TunnelFromCeruleanTiring::
-	.string "Uf… mejor descanso un poco…\n"
-	.string "Groan…\p"
+	.string "Uf... mejor descanso un poco...\n"
+	.string "Groan...\p"
 	.string "Ese túnel de CERULEA agota\n"
 	.string "a cualquiera!$"
 
@@ -65,7 +65,7 @@ Route3_Text_GregPostBattle::
 	.string "llena, cambia a otra CAJA.$"
 
 Route3_Text_SallyIntro::
-	.string "Esa mirada que me diste…\n"
+	.string "Esa mirada que me diste...\n"
 	.string "¡Qué intrigante!$"
 
 Route3_Text_SallyDefeat::

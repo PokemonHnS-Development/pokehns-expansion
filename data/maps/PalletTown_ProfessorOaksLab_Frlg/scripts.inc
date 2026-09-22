@@ -1370,7 +1370,7 @@ PalletTown_ProfessorOaksLab_Text_RivalTellSisNotToGiveYouMap::
 
 PalletTown_ProfessorOaksLab_Text_OakThreeMonsChooseOne::
 	.string "OAK: {RIVAL}?\n"
-	.string "Déjame pensar…\p"
+	.string "Déjame pensar...\p"
 	.string "Ah, cierto, te dije que\n"
 	.string "come! Just wait!\p"
 	.string "Toma, {PLAYER}.\p"
@@ -1518,7 +1518,7 @@ PalletTown_ProfessorOaksLab_Text_OakAddedNothingToPokedex::
 	.string "POKéMON and added to the data.\p"
 	.string "Así que, {PLAYER}, veamos\n"
 	.string "your POKéDEX.\p"
-	.string "…¿Qué ocurre?\n"
+	.string "...¿Qué ocurre?\n"
 	.string "No has añadido datos nuevos.\p"
 	.string "Te doy esto, así que intenta\n"
 	.string "little harder.$"
@@ -1552,7 +1552,7 @@ PalletTown_ProfessorOaksLab_Text_AllMonTypesHaveStrongAndWeakPoints::
 
 PalletTown_ProfessorOaksLab_Text_EmailMessage::
 	.string "Hay un mensaje de correo aquí.\p"
-	.string "…\p"
+	.string "...\p"
 	.string "¡Al fin!\n"
 	.string "Los ENTRENADORES supremos\l"
 	.string "POKéMON LEAGUE are ready to\l"
@@ -1562,7 +1562,7 @@ PalletTown_ProfessorOaksLab_Text_EmailMessage::
 	.string "POKéMON LEAGUE HQ\n"
 	.string "MESETA AÑIL\p"
 	.string "¡PROF. OAK, visítenos!\n"
-	.string "…$"
+	.string "...$"
 
 PalletTown_ProfessorOaksLab_Text_StudyAsOaksAide::
 	.string "I study POKéMON as PROF. OAK's\n"
@@ -1628,8 +1628,8 @@ PalletTown_ProfessorOaksLab_Text_OakTookBothPokedexUnits::
 	.string "units.$"
 
 PalletTown_ProfessorOaksLab_Text_OakNowTheseUnitsCanRecordMoreData::
-	.string "… … …  … … …\p"
-	.string "… … …  … … …\p"
+	.string "... ... ...  ... ... ...\p"
+	.string "... ... ...  ... ... ...\p"
 	.string "¡Y listo!\p"
 	.string "Ahora estas unidades pueden registrar\n"
 	.string "a lot more POKéMON.$"
@@ -1652,6 +1652,6 @@ PalletTown_ProfessorOaksLab_Text_RivalIllCompleteThePokedex::
 	.string "I'll get the POKéDEX completed,\n"
 	.string "no te preocupes por nada.\p"
 	.string "I think I'll try looking around\n"
-	.string "ONE ISLAND first…\p"
+	.string "ONE ISLAND first...\p"
 	.string "¡Bueno, me voy!$"
 

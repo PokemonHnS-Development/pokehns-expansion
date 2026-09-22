@@ -212,7 +212,7 @@ Text_RockSlideWhichMon::
 
 Text_RockSlideTaught::
 	.string "Podría dar miedo usarla aquí\n"
-	.string "tunnel…$"
+	.string "tunnel...$"
 
 SeafoamIslands_B4F_Text_BouldersMightChangeWaterFlow::
 	.string "Pista: Las rocas podrían cambiar\n"

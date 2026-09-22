@@ -248,7 +248,7 @@ CeruleanGym_Text_MistyIntro:
 
 CeruleanGym_Text_MistyWinLoss:
 	.string "MISTY: Eres muy bueno...\p"
-	.string "Admito que tienes habilidad…\p"
+	.string "Admito que tienes habilidad...\p"
 	.string "Toma. Es la MEDALLA CASCADA.$"
 
 CeruleanGym_Text_ReceivedBadge:
@@ -271,7 +271,7 @@ CeruleanGym_Text_MistyRematch:
 	.string "¿Quieres otra revancha conmigo?$"
 
 CeruleanGym_Text_MistyRematchDefeat:
-	.string "MISTY: Eres muy bueno…$"
+	.string "MISTY: Eres muy bueno...$"
 
 CeruleanGym_Text_SwimmerfDianaSeen:
 	.string "Siento haberme ido. ¡Que\n"
@@ -288,7 +288,7 @@ CeruleanGym_Text_SwimmerfBrianaSeen:
 	.string "ponga nervioso.$"
 
 CeruleanGym_Text_SwimmerfBrianaBeaten:
-	.string "Vaya, me venciste con calma…$"
+	.string "Vaya, me venciste con calma...$"
 
 CeruleanGym_Text_SwimmerfBrianaAfter:
 	.string "No presumas por haber ganado,\n"
@@ -301,7 +301,7 @@ CeruleanGym_Text_SwimmermParkerSeen:
 	.string "¡Yo voy primero! ¡Atrápame!$"
 
 CeruleanGym_Text_SwimmermParkerBeaten:
-	.string "Esto no puede ser…$"
+	.string "Esto no puede ser...$"
 
 CeruleanGym_Text_SwimmermParkerAfter:
 	.string "MISTY ha mejorado mucho en\n"

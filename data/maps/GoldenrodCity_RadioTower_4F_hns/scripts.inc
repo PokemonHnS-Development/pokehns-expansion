@@ -129,7 +129,7 @@ GoldenrodCity_RadioTower_4F4_Text_DJMaryAfter:
 	.string "POKéMON TALK del PROF.OAK!$"
 
 GoldenrodCity_RadioTower_4F4_Text_Meowth:
-	.string "MEOWTH: Meowth…$"
+	.string "MEOWTH: Meowth...$"
 
 GoldenrodCity_RadioTower_4F4_Text_GruntM10Seen:
 	.string "¿Planeas rescatar al DIRECTOR?\p"

@@ -114,7 +114,7 @@ OneIsland_Text_BillLetsGoSeeCelio::
 	.string "para buscarme.\p"
 	.string "Él se encarga de la PC de la isla\n"
 	.string "la red por su cuenta.\p"
-	.string "…¿Por qué te cuento esto ahora?\n"
+	.string "...¿Por qué te cuento esto ahora?\n"
 	.string "¡Vamos a ver a CELIO!$"
 
 Text_WhereDoYouWantToSail::

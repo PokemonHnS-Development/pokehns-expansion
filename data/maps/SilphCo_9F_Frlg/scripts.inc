@@ -63,7 +63,7 @@ SilphCo_9F_Text_Grunt1Defeat::
 
 SilphCo_9F_Text_Grunt1PostBattle::
 	.string "Si hubiera empezado como ENTRENADOR\n"
-	.string "a tu edad…$"
+	.string "a tu edad...$"
 
 SilphCo_9F_Text_EdIntro::
 	.string "Your POKéMON have weak points!\n"

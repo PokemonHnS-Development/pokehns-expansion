@@ -691,7 +691,7 @@ BattleFrontier_BattlePyramidLobby_Text_ReceivedPrizeItem_hns:
 
 @ Unused
 BattleFrontier_BattlePyramidLobby_Text_BagIsFull_hns:
-	.string "…Ah…\n"
+	.string "...Ah...\n"
 	.string "Tu BAG parece estar llena.\p"
 	.string "Vuelve cuando hayas organizado\n"
 	.string "el contenido de tu MOCHILA.$"
@@ -719,9 +719,9 @@ BattleFrontier_BattlePyramidLobby_Text_TellYouWhatMisfortunesAwait_hns:
 	.string "desgracias hay en la PIRÁMIDE...$"
 
 BattleFrontier_BattlePyramidLobby_Text_Aah_hns:
-	.string "… … … … … …\n"
-	.string "… … … … … …\p"
-	.string "… … … … … …\n"
+	.string "... ... ... ... ... ...\n"
+	.string "... ... ... ... ... ...\p"
+	.string "... ... ... ... ... ...\n"
 	.string "¡Aah!$"
 
 BattleFrontier_BattlePyramidLobby_Text_HintParalysis_hns:
@@ -745,47 +745,47 @@ BattleFrontier_BattlePyramidLobby_Text_HintPPWaste_hns:
 	.string "Es una maldición...\p"
 	.string "...Y veo a tu POKéMON sin\n"
 	.string "Puntos de Poder y sin recursos\l"
-	.string "pero usar LUCHA…$"
+	.string "pero usar LUCHA...$"
 
 BattleFrontier_BattlePyramidLobby_Text_HintLevitate_hns:
-	.string "Veo POKéMON volando muy alto…\p"
-	.string "…Y veo a tu POKéMON frustrado\n"
-	.string "por ataques TIPO TIERRA inútiles…$"
+	.string "Veo POKéMON volando muy alto...\p"
+	.string "...Y veo a tu POKéMON frustrado\n"
+	.string "por ataques TIPO TIERRA inútiles...$"
 
 BattleFrontier_BattlePyramidLobby_Text_HintTrapAbility_hns:
 	.string "Siento una energía tremenda subir\n"
-	.string "desde el suelo…\p"
-	.string "…Y veo a tu POKéMON incapaz de\n"
-	.string "escapar de ese poder…$"
+	.string "desde el suelo...\p"
+	.string "...Y veo a tu POKéMON incapaz de\n"
+	.string "escapar de ese poder...$"
 
 BattleFrontier_BattlePyramidLobby_Text_HintIce_hns:
-	.string "Veo POKéMON TIPO HIELO…\p"
-	.string "…Y veo a tu POKéMON luchando\n"
-	.string "contra los efectos del hielo…$"
+	.string "Veo POKéMON TIPO HIELO...\p"
+	.string "...Y veo a tu POKéMON luchando\n"
+	.string "contra los efectos del hielo...$"
 
 BattleFrontier_BattlePyramidLobby_Text_HintExplosion_hns:
 	.string "Veo una ráfaga de ataques peligrosos\n"
-	.string "el usuario…\p"
-	.string "…Y veo a tu POKéMON caer\n"
-	.string "ante ellos…$"
+	.string "el usuario...\p"
+	.string "...Y veo a tu POKéMON caer\n"
+	.string "ante ellos...$"
 
 BattleFrontier_BattlePyramidLobby_Text_HintPsychic_hns:
-	.string "Veo POKéMON tipo PSÍQUICO…\p"
-	.string "…Y veo a tu POKéMON sufriendo\n"
-	.string "por ataques PSÍQUICOS…$"
+	.string "Veo POKéMON tipo PSÍQUICO...\p"
+	.string "...Y veo a tu POKéMON sufriendo\n"
+	.string "por ataques PSÍQUICOS...$"
 
 BattleFrontier_BattlePyramidLobby_Text_HintRock_hns:
-	.string "Veo POKéMON tipo ROCA…\p"
+	.string "Veo POKéMON tipo ROCA...\p"
 	.string "...Y veo a tu POKéMON sufriendo\n"
-	.string "por ataques ROCA…$"
+	.string "por ataques ROCA...$"
 
 BattleFrontier_BattlePyramidLobby_Text_HintFighting_hns:
-	.string "Veo POKéMON tipo LUCHA…\p"
-	.string "…Y veo a tu POKéMON golpeado\n"
-	.string "por ataques de LUCHA…$"
+	.string "Veo POKéMON tipo LUCHA...\p"
+	.string "...Y veo a tu POKéMON golpeado\n"
+	.string "por ataques de LUCHA...$"
 
 BattleFrontier_BattlePyramidLobby_Text_HintWeather_hns:
-	.string "DANZA LUVIA… DÍA SOLEADO…\n"
+	.string "DANZA LUVIA... DÍA SOLEADO...\n"
 	.string "TORMENTA DE ARENA... GRANIZO...\p"
 	.string "Veo POKéMON que se hacen fuertes\n"
 	.string "con el clima...\p"
@@ -810,36 +810,36 @@ BattleFrontier_BattlePyramidLobby_Text_HintWater_hns:
 BattleFrontier_BattlePyramidLobby_Text_HintGhost_hns:
 	.string "Veo POKéMON tipo FANTASMA...\p"
 	.string "...Y veo a tu POKéMON sufriendo\n"
-	.string "de los ataques tipo FANTASMA…$"
+	.string "de los ataques tipo FANTASMA...$"
 
 BattleFrontier_BattlePyramidLobby_Text_HintSteel_hns:
-	.string "Veo POKéMON tipo ACERO…\p"
+	.string "Veo POKéMON tipo ACERO...\p"
 	.string "...Y veo a tu POKéMON sufriendo\n"
-	.string "de ataques muy poderosos…$"
+	.string "de ataques muy poderosos...$"
 
 BattleFrontier_BattlePyramidLobby_Text_HintFlyingDragon_hns:
-	.string "Veo POKéMON voladores…\p"
+	.string "Veo POKéMON voladores...\p"
 	.string "...Y veo a tu POKéMON sufriendo\n"
-	.string "de ataques muy poderosos…$"
+	.string "de ataques muy poderosos...$"
 
 BattleFrontier_BattlePyramidLobby_Text_HintStoneEvolve_hns:
 	.string "Veo a los que han evolucionado por\n"
-	.string "el poder de las piedras…\p"
+	.string "el poder de las piedras...\p"
 	.string "También siento fuego, agua,\n"
-	.string "y electricidad…\p"
+	.string "y electricidad...\p"
 	.string "...Y veo a tu POKéMON sufriendo\n"
-	.string "de esos tres poderes…$"
+	.string "de esos tres poderes...$"
 
 BattleFrontier_BattlePyramidLobby_Text_HintNormal_hns:
-	.string "Veo POKéMON tipo NORMAL…\p"
+	.string "Veo POKéMON tipo NORMAL...\p"
 	.string "...Y veo a tu POKéMON sufriendo\n"
-	.string "de ataques muy poderosos…$"
+	.string "de ataques muy poderosos...$"
 
 BattleFrontier_BattlePyramidLobby_Text_BelieveMyFortunesOrNot_hns:
 	.string "Si crees en mis predicciones\n"
-	.string "o no, la decisión es tuya…\p"
-	.string "El futuro puede cambiar siempre…\n"
-	.string "Deseo que tengas un viaje seguro…$"
+	.string "o no, la decisión es tuya...\p"
+	.string "El futuro puede cambiar siempre...\n"
+	.string "Deseo que tengas un viaje seguro...$"
 
 BattleFrontier_BattlePyramidLobby_Text_TrainersNoticeRunning_hns:
 	.string "¿Sabías esto?\p"

@@ -112,7 +112,7 @@ MatchCall_HNS_Ralph_General3::
 	.string "se burló diciendo que podía\l"
 	.string "lo mismo fácilmente.\p"
 	.string "Vaya, se ha vuelto\n"
-	.string "muy presumido…$"
+	.string "muy presumido...$"
 
 MatchCall_HNS_Ralph_Battle::
 	.string "¡Oye, {PLAYER}!\p"
@@ -499,7 +499,7 @@ MatchCall_HNS_Tully_General3::
 	.string "Era enorme, incluso de este\n"
 	.string "tamaño.\p"
 	.string "Je, supongo que no se puede\n"
-	.string "saber por teléfono…$"
+	.string "saber por teléfono...$"
 
 MatchCall_HNS_Tully_FoundItem::
 	.string "¡Oye, {PLAYER}!\n"
@@ -651,7 +651,7 @@ MatchCall_HNS_Wilton_General3::
 	.string "¡Oye, {PLAYER}!\n"
 	.string "¡Es WILTON!\p"
 	.string "Vencimos a un\n"
-	.string "{STR_VAR_3} salvaje…\p"
+	.string "{STR_VAR_3} salvaje...\p"
 	.string "Sabes, me divierte más\n"
 	.string "pescar que vencer a\l"
 	.string "POKéMON.$"

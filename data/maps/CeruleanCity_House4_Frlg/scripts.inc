@@ -92,14 +92,14 @@ CeruleanCity_House4_EventScript_NoRoomForBerries::
 
 CeruleanCity_House4_Text_NothingEntertaining::
 	.string "Suspiro...\n"
-	.string "Tanto tiempo, tan poco que hacer…\p"
+	.string "Tanto tiempo, tan poco que hacer...\p"
 	.string "¿No pasa nada interesante\n"
 	.string "anywhere?$"
 
 CeruleanCity_House4_Text_NewNewsInformativeHaveThis::
 	.string "Ah!\n"
 	.string "¡Un nuevo reportaje!\p"
-	.string "Hmm…\p"
+	.string "Hmm...\p"
 	.string "¡Ya veo!\n"
 	.string "¡Qué informativo fue!\p"
 	.string "Aplausos por tu interés\n"
@@ -110,7 +110,7 @@ CeruleanCity_House4_Text_NewNewsInformativeHaveThis::
 CeruleanCity_House4_Text_IncredibleNewsHaveBerries::
 	.string "Oh, oh!\n"
 	.string "¡E-esta noticia!\p"
-	.string "Hmm…\p"
+	.string "Hmm...\p"
 	.string "Amazing!\n"
 	.string "¡Qué noticia tan increíble!\p"
 	.string "No he visto una noticia tan\n"
@@ -120,9 +120,9 @@ CeruleanCity_House4_Text_IncredibleNewsHaveBerries::
 
 CeruleanCity_House4_Text_WishCouldShareNewsWithOthers::
 	.string "Sería una lástima no compartir\n"
-	.string "esta noticia con otras personas…\p"
-	.string "Ojalá pudiera contárselo a alguien…\n"
-	.string "Que otros se enteren de la noticia…$"
+	.string "esta noticia con otras personas...\p"
+	.string "Ojalá pudiera contárselo a alguien...\n"
+	.string "Que otros se enteren de la noticia...$"
 
 CeruleanCity_House4_Text_ThanksForSpreadingNewsTakeThis::
 	.string "Ah, ¿esparciste la noticia por mí?\p"

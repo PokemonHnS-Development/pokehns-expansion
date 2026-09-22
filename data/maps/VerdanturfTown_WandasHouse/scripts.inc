@@ -113,7 +113,7 @@ VerdanturfTown_WandasHouse_Text_WallySlippedOff:
 	.string "Se escapó solo...$"
 
 VerdanturfTown_WandasHouse_Text_WallyGoneThatFar:
-	.string "TÍO: ¿De veras?\nWALLY se marchó tan lejos por su\lcuenta…\pBueno, hay que reconocer que es\nel hijo de mi hermano menor.$"
+	.string "TÍO: ¿De veras?\nWALLY se marchó tan lejos por su\lcuenta...\pBueno, hay que reconocer que es\nel hijo de mi hermano menor.$"
 
 VerdanturfTown_WandasHouse_Text_MeetWanda:
 	.string "WANDA: ¿Tú eres...?\n"
@@ -150,7 +150,7 @@ VerdanturfTown_WandasHouse_Text_DaughtersBoyfriendWasDigging:
 	.string "¡Es increíble!$"
 
 VerdanturfTown_WandasHouse_Text_IfAnythingHappenedToWally:
-	.string "Si le pasara algo a WALLY,\nnunca podría mirar a sus\lpadres de PETALIA a los ojos…$"
+	.string "Si le pasara algo a WALLY,\nnunca podría mirar a sus\lpadres de PETALIA a los ojos...$"
 
 VerdanturfTown_WandasHouse_Text_WallyWasInEverGrande:
 	.string "¿WALLY estuvo en CIUDAD COLOSALIA?\pSus padres en CIUDAD PETALIA se\nasombrarían al oírlo!$"

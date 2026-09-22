@@ -146,7 +146,7 @@ PalletTown_Lab_Text_OaksAssistant3:
 
 PalletTown_Lab_Text_OaksLabPC:
 	.string "Hay un correo en la PC.\p"
-	.string "…\p"
+	.string "...\p"
 	.string "PROF.OAK, ¿cómo va su investigación?\n"
 	.string "las ISLAS ALOLA?\p"
 	.string "Sigo trabajando duro en ella.\p"

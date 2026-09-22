@@ -29,7 +29,7 @@ CianwoodCity_EventScript_PharmacistAfter::
 CianwoodCity_Text_PharmacistGivePotion:
 	.string "Tus POKéMON parecen estar bien.\p"
 	.string "¿Algo te preocupa?\p"
-	.string "…\p"
+	.string "...\p"
 	.string "¿El POKéMON del FARO está en\n"
 	.string "problemas?\p"
 	.string "¡Ya lo tengo!\p"

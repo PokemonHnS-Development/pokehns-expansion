@@ -256,5 +256,5 @@ MahoganyTown_Gym_Text_SkierClarissaBeaten:
 
 MahoganyTown_Gym_Text_SkierClarissaAfter:
     .string "No debí presumir\n"
-    .string "de mi forma de esquiar…$"
+    .string "de mi forma de esquiar...$"
 

@@ -290,7 +290,7 @@ DOUBLE_BATTLE_TEST("Spread Moves: Explosion, Gem Boosted, vs Resist Berries")
         ANIMATION(ANIM_TYPE_MOVE, MOVE_EXPLOSION, playerLeft);
         HP_BAR(opponentLeft);
         HP_BAR(opponentRight);
-        MESSAGE("It doesn't affect Misdreavus…");
+        MESSAGE("It doesn't affect Misdreavus...");
     }
 }
 
@@ -436,7 +436,7 @@ DOUBLE_BATTLE_TEST("Spread Moves: Doesn't affect message on both opposing mons")
         TURN { MOVE(playerLeft, MOVE_PRECIPICE_BLADES); }
     } SCENE {
         NOT ANIMATION(ANIM_TYPE_MOVE, MOVE_PRECIPICE_BLADES, playerLeft);
-        MESSAGE("It doesn't affect the opposing Pidgey and Hoothoot…");
+        MESSAGE("It doesn't affect the opposing Pidgey and Hoothoot...");
     }
 }
 
@@ -497,7 +497,7 @@ DOUBLE_BATTLE_TEST("Spread Moves: AOE ground type move vs Levitate and Air Ballo
         TURN { MOVE(playerLeft, MOVE_EARTHQUAKE); }
     } SCENE {
         ABILITY_POPUP(opponentLeft, ABILITY_LEVITATE);
-        MESSAGE("It doesn't affect the opposing Wynaut…");
+        MESSAGE("It doesn't affect the opposing Wynaut...");
         ANIMATION(ANIM_TYPE_MOVE, MOVE_EARTHQUAKE, playerLeft);
         HP_BAR(playerRight);
     }

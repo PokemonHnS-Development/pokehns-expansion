@@ -293,7 +293,7 @@ BattleFrontier_BattlePikeLobby_Text_ExplainBattlePike_hns:
 	.string "BATTLE PIKE. Así de simple.\p"
 	.string "Pero lo que pase en el camino\n"
 	.string "elegido dependerá totalmente de\l"
-	.string "la suerte del retador…\p"
+	.string "la suerte del retador...\p"
 	.string "Si llegas a la meta, recibirás\n"
 	.string "Puntos de Batalla como premio.\p"
 	.string "Si quieres interrumpir tu\n"
@@ -304,7 +304,7 @@ BattleFrontier_BattlePikeLobby_Text_ExplainBattlePike_hns:
 
 BattleFrontier_BattlePikeLobby_Text_LookForwardToSeeingYou_hns:
 	.string "Esperamos verte por aquí\n"
-	.string "en otra ocasión…$"
+	.string "en otra ocasión...$"
 
 BattleFrontier_BattlePikeLobby_Text_WhichChallengeMode_hns:
 	.string "Puedes elegir entre dos rutas,\n"
@@ -312,7 +312,7 @@ BattleFrontier_BattlePikeLobby_Text_WhichChallengeMode_hns:
 	.string "¿Cuál quieres retar?$"
 
 BattleFrontier_BattlePikeLobby_Text_NotEnoughValidMonsLv50_hns:
-	.string "Perdona, pero…\p"
+	.string "Perdona, pero...\p"
 	.string "No tienes tres POKéMON aptos\n"
 	.string "para el evento Battle Choice.\p"
 	.string "Debes tener tres POKéMON distintos\n"
@@ -323,10 +323,10 @@ BattleFrontier_BattlePikeLobby_Text_NotEnoughValidMonsLv50_hns:
 
 BattleFrontier_BattlePikeLobby_Text_NotEnoughValidMonsEnd_hns:
 	.string "Vuelve a verme cuando\n"
-	.string "estés listo…$"
+	.string "estés listo...$"
 
 BattleFrontier_BattlePikeLobby_Text_NotEnoughValidMonsLvOpen_hns:
-	.string "Perdona, pero…\p"
+	.string "Perdona, pero...\p"
 	.string "No tienes tres POKéMON aptos\n"
 	.string "para el evento Battle Choice.\p"
 	.string "Debes tener tres POKéMON\n"
@@ -337,7 +337,7 @@ BattleFrontier_BattlePikeLobby_Text_NotEnoughValidMonsLvOpen_hns:
 
 BattleFrontier_BattlePikeLobby_Text_PleaseChooseThreeMons_hns:
 	.string "Elige los tres POKéMON que\n"
-	.string "quieras usar en el desafío…$"
+	.string "quieras usar en el desafío...$"
 
 BattleFrontier_BattlePikeLobby_Text_SaveBeforeChallenge_hns:
 	.string "Antes de iniciar el desafío\n"
@@ -345,50 +345,50 @@ BattleFrontier_BattlePikeLobby_Text_SaveBeforeChallenge_hns:
 	.string "¿Te parece bien?$"
 
 BattleFrontier_BattlePikeLobby_Text_StepThisWay_hns:
-	.string "Pase por aquí, por favor…$"
+	.string "Pase por aquí, por favor...$"
 
 BattleFrontier_BattlePikeLobby_Text_ChallengeEndedRecordResults_hns:
-	.string "Tu desafío ha terminado…\p"
+	.string "Tu desafío ha terminado...\p"
 	.string "Registraré tus resultados.\n"
-	.string "Espera, por favor…$"
+	.string "Espera, por favor...$"
 
 BattleFrontier_BattlePikeLobby_Text_PossessLuckInAbundance_hns:
-	.string "Completaste el desafío…\p"
+	.string "Completaste el desafío...\p"
 	.string "Debo decir que pareces tener mucha\n"
-	.string "suerte…$"
+	.string "suerte...$"
 
 BattleFrontier_BattlePikeLobby_Text_ShallRecordResults_hns:
 	.string "Registraré tus resultados.\n"
-	.string "Espera, por favor…$"
+	.string "Espera, por favor...$"
 
 @ Unused
 BattleFrontier_BattlePikeLobby_Text_AwardYouTheseBattlePoints_hns2_hns:
 	.string "Para conmemorar que completaste el\n"
 	.string "desafío de Elección de Batalla,\l"
-	.string "te damos estos Puntos de Batalla…$"
+	.string "te damos estos Puntos de Batalla...$"
 
 @ Unused
 BattleFrontier_BattlePikeLobby_Text_ReachedBattlePointLimit_hns:
 	.string "Parece que has alcanzado el límite\n"
-	.string "de Puntos de Batalla…\p"
+	.string "de Puntos de Batalla...\p"
 	.string "Por favor, canjea algunos puntos\n"
-	.string "por premios, luego vuelve…$"
+	.string "por premios, luego vuelve...$"
 
 BattleFrontier_BattlePikeLobby_Text_FailedToSaveBeforeQuitting_hns:
-	.string "Perdona, pero…\p"
+	.string "Perdona, pero...\p"
 	.string "No guardaste antes de salir\n"
 	.string "tu desafío la última vez.\p"
 	.string "Por eso, tu progreso hasta ahora\n"
-	.string "ha sido descalificado. Lo siento…$"
+	.string "ha sido descalificado. Lo siento...$"
 
 BattleFrontier_BattlePikeLobby_Text_SnatchedVictoryFromQueen_hns:
-	.string "Felicidades…\p"
+	.string "Felicidades...\p"
 	.string "Le has robado la victoria a la\n"
-	.string "REINA CARPA y ganaste el evento…$"
+	.string "REINA CARPA y ganaste el evento...$"
 
 BattleFrontier_BattlePikeLobby_Text_AwardYouTheseBattlePoints_hns:
 	.string "Por tu increíble suerte,\n"
-	.string "te damos estos Puntos de Batalla…$"
+	.string "te damos estos Puntos de Batalla...$"
 
 BattleFrontier_BattlePikeLobby_Text_OneRoomAwayFromGoal_hns:
 	.string "¡Arggh! ¡Perdí mi oportunidad!\n"

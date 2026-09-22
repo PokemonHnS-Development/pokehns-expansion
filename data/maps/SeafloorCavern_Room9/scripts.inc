@@ -222,7 +222,7 @@ SeafloorCavern_Room9_Text_ArchieHoldItRightThere:
 	.string "ARCHIE: ¡Alto ahí!$"
 
 SeafloorCavern_Room9_Text_ArchieSoItWasYou:
-	.string "ARCHIE: Fufufu…\n"
+	.string "ARCHIE: Fufufu...\n"
 	.string "Así que eras tú, después de todo.$"
 
 SeafloorCavern_Room9_Text_ArchieBeholdKyogre:
@@ -230,7 +230,7 @@ SeafloorCavern_Room9_Text_ArchieBeholdKyogre:
 	.string "¡Mira qué belleza, la forma\n"
 	.string "durmiente del antiguo POKéMON KYOGRE!\p"
 	.string "He esperado mucho tiempo a que\n"
-	.string "llegara este día…$"
+	.string "llegara este día...$"
 
 SeafloorCavern_Room9_Text_ArchieYouMustDisappear:
 	.string "ARCHIE: Me sorprende que hayas\n"
@@ -244,12 +244,12 @@ SeafloorCavern_Room9_Text_ArchieDefeat:
 	.string "¡¿Perdí contra un niño como tú?!$"
 
 SeafloorCavern_Room9_Text_ArchieWithThisRedOrb:
-	.string "ARCHIE: Fufufu…\p"
+	.string "ARCHIE: Fufufu...\p"
 	.string "Te felicito. Debo reconocer que\n"
 	.string "tienes un gran talento.\p"
 	.string "¡Pero!\n"
 	.string "¡Tengo esto en mi poder!\p"
-	.string "Con este ORBE ROJO, haré que KYOGRE…$"
+	.string "Con este ORBE ROJO, haré que KYOGRE...$"
 
 SeafloorCavern_Room9_Text_RedOrbShinesByItself:
 	.string "¡El ORBE ROJO empezó a brillar\n"
@@ -258,26 +258,26 @@ SeafloorCavern_Room9_Text_RedOrbShinesByItself:
 SeafloorCavern_Room9_Text_ArchieWhereDidKyogreGo:
 	.string "ARCHIE: ¡¿Qué?!\p"
 	.string "Yo no hice nada.\n"
-	.string "Por qué el ORBE ROJO…\p"
+	.string "Por qué el ORBE ROJO...\p"
 	.string "¿A dónde se fue KYOGRE?$"
 
 SeafloorCavern_Room9_Text_ArchieAMessageFromOutside:
 	.string "ARCHIE: ¿Hm? Es un mensaje de los\n"
-	.string "miembros de afuera…$"
+	.string "miembros de afuera...$"
 
 SeafloorCavern_Room9_Text_ArchieWhatRainingTooHard:
 	.string "ARCHIE: Sí, ¿qué pasa?\p"
-	.string "Hm…\n"
+	.string "Hm...\n"
 	.string "¿Está lloviendo fuerte?\p"
-	.string "Bien… Así debía ser.\n"
+	.string "Bien... Así debía ser.\n"
 	.string "Por eso despertamos a KYOGRE,\l"
 	.string "para cumplir la visión del\l"
 	.string "TEAM AQUA de expandir el mar.\p"
 	.string "¡¿Qué?!\p"
 	.string "¿Llueve más fuerte de lo que\n"
 	.string "creíamos? ¿Están en peligro?\p"
-	.string "No puede ser…\n"
-	.string "Eso simplemente no es posible…\p"
+	.string "No puede ser...\n"
+	.string "Eso simplemente no es posible...\p"
 	.string "Mantengan su posición y vigilen\n"
 	.string "la situación!$"
 
@@ -296,7 +296,7 @@ SeafloorCavern_Room9_Text_MaxieWhatHaveYouWrought:
 	.string "¿Qué pasará con el mundo si esto\n"
 	.string "¿la lluvia seguirá por siempre?\p"
 	.string "Toda la tierra del mundo se ahogará\n"
-	.string "en el mar profundo…$"
+	.string "en el mar profundo...$"
 
 SeafloorCavern_Room9_Text_ArchieDontGetAllHighAndMighty:
 	.string "ARCHIE: ¡¿Q-qué?!\n"
@@ -304,8 +304,8 @@ SeafloorCavern_Room9_Text_ArchieDontGetAllHighAndMighty:
 	.string "¡¿No fueron ustedes, TEAM MAGMA,\n"
 	.string "quienes enfurecieron a GROUDON?!\p"
 	.string "Mientras tenga este ORBE ROJO,\n"
-	.string "podré controlar a KYOGRE…\p"
-	.string "¡Debo poder controlarlo…!$"
+	.string "podré controlar a KYOGRE...\p"
+	.string "¡Debo poder controlarlo...!$"
 
 SeafloorCavern_Room9_Text_MaxieWeDontHaveTimeToArgue:
 	.string "MAXIE: ¡No tenemos tiempo para\n"

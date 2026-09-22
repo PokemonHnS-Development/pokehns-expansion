@@ -34,7 +34,7 @@ PalletTown_PlayersHouse_2F_Text_PlayedWithNES::
 	.string "¡Es hora de irse!$"
 
 PalletTown_PlayersHouse_2F_Text_PressLRForHelp::
-	.string "Es un aviso publicado…\p"
+	.string "Es un aviso publicado...\p"
 	.string "Si estás confundido, ¡pide AYUDA!\n"
 	.string "¡Presiona el botón L o R!$"
 

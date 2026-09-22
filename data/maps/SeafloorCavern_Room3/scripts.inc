@@ -34,7 +34,7 @@ SeafloorCavern_Room3_Text_ShellyPostBattle:
 	.string "no eres del TEAM AQUA.\p"
 	.string "Pudiste disfrutar del fabuloso\n"
 	.string "mundo que nuestro JEFE prometió\l"
-	.string "como uno de nosotros…$"
+	.string "como uno de nosotros...$"
 
 SeafloorCavern_Room3_Text_Grunt5Intro:
 	.string "Nuestro sueño necesita el\npoder de los POKéMON.\pPero entrometidos\ncomo tú usan el\npoder POKéMON para molestarnos\l¡hasta\nen un lugar así!\p¡La vida no funciona\ncomo nosotros\nqueremos!$"

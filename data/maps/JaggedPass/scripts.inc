@@ -148,17 +148,17 @@ JaggedPass_EventScript_Autumn::
 	end
 
 JaggedPass_Text_EricIntro:
-	.string "PASO ESCARPADO DEL MT. CHIMNEY…\p"
+	.string "PASO ESCARPADO DEL MT. CHIMNEY...\p"
 	.string "Esto es lo que siempre he querido\n"
 	.string "en una montaña.\p"
-	.string "Este relieve tan escarpado…\n"
+	.string "Este relieve tan escarpado...\n"
 	.string "¡Me llega al alma!$"
 
 JaggedPass_Text_EricDefeat:
 	.string "¡Perder me dejó amargado!$"
 
 JaggedPass_Text_EricPostBattle:
-	.string "Sí, perdí en las batallas POKéMON…\p"
+	.string "Sí, perdí en las batallas POKéMON...\p"
 	.string "Pero, en el amor por las\n"
 	.string "montañas, ¡te he ganado!$"
 
@@ -168,7 +168,7 @@ JaggedPass_Text_DianaIntro:
 
 JaggedPass_Text_DianaDefeat:
 	.string "¡Ohhh, no!\n"
-	.string "El suelo es muy irregular…$"
+	.string "El suelo es muy irregular...$"
 
 JaggedPass_Text_DianaPostBattle:
 	.string "¿Sabías esto?\p"
@@ -197,7 +197,7 @@ JaggedPass_Text_EthanIntro:
 
 JaggedPass_Text_EthanDefeat:
 	.string "Todo terminó mientras aún\n"
-	.string "buscábamos estabilidad…$"
+	.string "buscábamos estabilidad...$"
 
 JaggedPass_Text_EthanPostBattle:
 	.string "Si tuviera una ACRO BIKE, podría\n"
@@ -214,11 +214,11 @@ JaggedPass_Text_EthanRematchIntro:
 
 JaggedPass_Text_EthanRematchDefeat:
 	.string "Sigue siendo difícil luchar en este\n"
-	.string "terreno tan irregular…$"
+	.string "terreno tan irregular...$"
 
 JaggedPass_Text_EthanPostRematch:
 	.string "Debo conseguir una ACRO BIKE de RYDEL\n"
-	.string "en CIUDAD MALVA…$"
+	.string "en CIUDAD MALVA...$"
 
 JaggedPass_Text_GruntIntro:
 	.string "¡Wah!\n"
@@ -227,9 +227,9 @@ JaggedPass_Text_GruntIntro:
 	.string "¿Y a ti qué te importa?$"
 
 JaggedPass_Text_GruntDefeat:
-	.string "Urrrgh…\p"
+	.string "Urrrgh...\p"
 	.string "Debí entrar a nuestro ESCONDITE\n"
-	.string "de inmediato…$"
+	.string "de inmediato...$"
 
 JaggedPass_Text_GoWhereverYouWant:
 	.string "¡Está bien, está bien!\n"
@@ -246,18 +246,18 @@ JaggedPass_Text_JulioIntro:
 	.string "montaña de un solo golpe!$"
 
 JaggedPass_Text_JulioDefeat:
-	.string "I feel like I'm falling apart…$"
+	.string "I feel like I'm falling apart...$"
 
 JaggedPass_Text_JulioPostBattle:
 	.string "Mi BICICLETA saltó tanto que\n"
-	.string "me duele el trasero…$"
+	.string "me duele el trasero...$"
 
 JaggedPass_Text_AutumnIntro:
 	.string "Subo esta colina cada día.\n"
 	.string "¡Confío en mi fuerza!$"
 
 JaggedPass_Text_AutumnDefeat:
-	.string "Hmm…\n"
+	.string "Hmm...\n"
 	.string "¿Qué salió mal?$"
 
 JaggedPass_Text_AutumnPostBattle:

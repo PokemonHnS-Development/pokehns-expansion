@@ -24,7 +24,7 @@ PokemonTower_4F_Text_PaulaDefeat::
 	.string "¿Dónde está el fantasma?$"
 
 PokemonTower_4F_Text_PaulaPostBattle::
-	.string "Debo haber estado soñando…$"
+	.string "Debo haber estado soñando...$"
 
 PokemonTower_4F_Text_LaurelIntro::
 	.string "¡Sé maldito conmigo!\n"
@@ -35,10 +35,10 @@ PokemonTower_4F_Text_LaurelDefeat::
 
 PokemonTower_4F_Text_LaurelPostBattle::
 	.string "No podemos determinar la identidad\n"
-	.string "los fantasmas…$"
+	.string "los fantasmas...$"
 
 PokemonTower_4F_Text_JodyIntro::
-	.string "Huhuhu…\n"
+	.string "Huhuhu...\n"
 	.string "¡No me pegues!$"
 
 PokemonTower_4F_Text_JodyDefeat::
@@ -47,5 +47,5 @@ PokemonTower_4F_Text_JodyDefeat::
 
 PokemonTower_4F_Text_JodyPostBattle::
 	.string "May the departed POKéMON rest in\n"
-	.string "peace…$"
+	.string "peace...$"
 

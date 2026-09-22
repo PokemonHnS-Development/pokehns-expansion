@@ -244,7 +244,7 @@ GoldenrodCity_PokemonCenter_PokefanFTooBadText:
     .string "¿Ah? ¿No tienes uno? Qué lástima.$"
 
 GoldenrodCity_PokemonCenter_PokefanFAnotherTimeThenText:
-    .string "Oh… Bueno, será otra vez.$"
+    .string "Oh... Bueno, será otra vez.$"
 
 GoldenrodCity_PokemonCenter_PlayerGaveAwayTheEonMailText:
     .string "{PLAYER} regaló la CARTA EON.$"

@@ -21,7 +21,7 @@ MahoganyRedGyaradosHouse_Text_BlackBelt:
     .string "Oí que apareció un GYARADOS rojo\n"
     .string "en el LAGO.\p"
     .string "Es raro, ya que incluso los\n"
-    .string "GYARADOS comunes son raros ahí…$"
+    .string "GYARADOS comunes son raros ahí...$"
 
 MahoganyRedGyaradosHouse_Text_Teacher:
     .string "¿Mi programa favorito? Diría que\n"
@@ -29,5 +29,5 @@ MahoganyRedGyaradosHouse_Text_Teacher:
 
 MahoganyRedGyaradosHouse_Text_Teacher_Rockets:
     .string "He estado oyendo risas en la\n"
-    .string "radio…\p"
+    .string "radio...\p"
     .string "Da miedo.$"

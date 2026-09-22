@@ -516,11 +516,11 @@ Route109_Text_ChillAtMyPapasSpot:
 	.string "¡relájate en lo de mi papá!$"
 
 Route109_Text_LittleKidsDartAround:
-	.string "Los niños corren muy rápido…\p"
+	.string "Los niños corren muy rápido...\p"
 	.string "No puedes quitarles la vista de\n"
 	.string "encima ni un segundo. Es agotador.\p"
 	.string "Los míos están con mis POKéMON,\n"
-	.string "así que estarán bien, pero…$"
+	.string "así que estarán bien, pero...$"
 
 Route109_Text_SandCastleTakingLongTime:
 	.string "Nuestro castillo de arena tarda\n"
@@ -533,7 +533,7 @@ Route109_Text_WereGoingToMakeBigCastle:
 	.string "¡Vamos a traer toda la arena\nde la playa y hacer un castillo!\pY luego seremos rey y\nreina.\pTe dejaremos ser sirviente.$"
 
 Route109_Text_ZigzagoonPicksUpLitter:
-	.string "El agua de estos lugares es limpia.\pPero a veces mi ZIGZAGOON recoge\nbasura de la orilla.\pEl agua sucia se vuelve lluvia y va\na los ríos de los que bebemos…\pSi contaminamos el mar, todo\nnos volverá a afectar al final.$"
+	.string "El agua de estos lugares es limpia.\pPero a veces mi ZIGZAGOON recoge\nbasura de la orilla.\pEl agua sucia se vuelve lluvia y va\na los ríos de los que bebemos...\pSi contaminamos el mar, todo\nnos volverá a afectar al final.$"
 
 Route109_Text_ZigzagoonCry:
 	.string "ZIGZAGOON: Guguu?$"

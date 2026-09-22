@@ -20,7 +20,7 @@ LakeOfRage_House1_EventScript_HiddenPowerGuyAfter::
 	end
 
 HiddenPowerGuy_Text_Intro:
-    .string "…Has llegado muy lejos…\p"
+    .string "...Has llegado muy lejos...\p"
     .string "Aquí he meditado. En mi interior,\n"
     .string "un nuevo poder ha despertado.\p"
     .string "Permíteme compartir mi poder con tu\n"
@@ -34,4 +34,4 @@ HiddenPowerGuy_Text_Explanation:
     .string "dependen del POKéMON que lo use.$"
 
 HiddenPowerGuy_Text_Meditating:
-    .string "I am meditating…$"
+    .string "I am meditating...$"

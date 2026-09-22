@@ -173,12 +173,12 @@ Route121_Text_OkayMoveOutToMtPyre:
 	.string "¡Nos vamos al MONTE PIRAL!$"
 
 Route121_Text_AheadLoomsMtPyre:
-	.string "Frente a ti está el MONTE PIRAL…\p"
+	.string "Frente a ti está el MONTE PIRAL...\p"
 	.string "Es un monumento natural para los\n"
-	.string "espíritus de POKéMON fallecidos…$"
+	.string "espíritus de POKéMON fallecidos...$"
 
 Route121_Text_MtPyrePierSign:
-	.string "MUELLE DEL MONTE PIRÓN\p…El cartel está viejo y desgastado.\nLas palabras apenas son legibles…$"
+	.string "MUELLE DEL MONTE PIRÓN\p...El cartel está viejo y desgastado.\nLas palabras apenas son legibles...$"
 
 Route121_Text_SafariZoneSign:
 	.string "“¡Lleno de POKéMON raros!”\n"

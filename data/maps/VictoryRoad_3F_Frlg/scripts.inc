@@ -113,7 +113,7 @@ VictoryRoad_3F_Text_CarolineDefeat::
 
 VictoryRoad_3F_Text_CarolinePostBattle::
 	.string "You showed me just how good\n"
-	.string "era yo…$"
+	.string "era yo...$"
 
 VictoryRoad_3F_Text_ColbyIntro::
 	.string "¡Solo los elegidos pueden pasar!$"
@@ -136,7 +136,7 @@ VictoryRoad_3F_Text_RayDefeat::
 
 VictoryRoad_3F_Text_RayPostBattle::
 	.string "RAY: Nos has vencido.\n"
-	.string "Greatness remains elusive…$"
+	.string "Greatness remains elusive...$"
 
 VictoryRoad_3F_Text_RayNotEnoughMons::
 	.string "RAY: Juntos, los dos estamos\n"
@@ -149,7 +149,7 @@ VictoryRoad_3F_Text_TyraIntro::
 	.string "champions together.$"
 
 VictoryRoad_3F_Text_TyraDefeat::
-	.string "TYRA: Oh, but…$"
+	.string "TYRA: Oh, but...$"
 
 VictoryRoad_3F_Text_TyraPostBattle::
 	.string "TYRA: Me enseñaste que el poder\n"

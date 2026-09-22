@@ -72,7 +72,7 @@ Route19_Text_SwimmermHaroldSeen:
 	.string "mar por la noche?$"
 
 Route19_Text_SwimmermHaroldBeaten:
-	.string "Glub…$"
+	.string "Glub...$"
 
 Route19_Text_SwimmermHaroldAfterBattle:
 	.string "De noche, el mar se vuelve negro.\n"
@@ -93,7 +93,7 @@ Route19_Text_SwimmerfDawnSeen:
 	.string "I'm disgusted by wimpy people!$"
 
 Route19_Text_SwimmerfDawnBeaten:
-	.string "Podría ganarte nadando…$"
+	.string "Podría ganarte nadando...$"
 
 Route19_Text_SwimmerfDawnAfterBattle:
 	.string "Es un nado rápido hasta FUCHSIA\n"

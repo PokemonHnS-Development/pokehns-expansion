@@ -108,10 +108,10 @@ SSAqua_B1F_EventScript_Fritz::
 	end
 
 SSAqua_B1F_Text_JugglerFritzSeen:
-	.string "Urrf… I'm seasick!$"
+	.string "Urrf... I'm seasick!$"
 
 SSAqua_B1F_Text_JugglerFritzBeaten:
-	.string "Ya no puedo moverme…$"
+	.string "Ya no puedo moverme...$"
 
 SSAqua_B1F_Text_JugglerFritzAfter:
 	.string "No más barcos para mí.\n"
@@ -127,7 +127,7 @@ SSAqua_B1F_Text_SailorGarrettSeen:
 	.string "¡Aquí trabajamos los marineros!$"
 
 SSAqua_B1F_Text_SailorGarrettBeaten:
-	.string "Perdí en mi propia cancha…$"
+	.string "Perdí en mi propia cancha...$"
 
 SSAqua_B1F_Text_SailorGarrettAfter:
 	.string "Llegan pasajeros distintos\n"
@@ -145,7 +145,7 @@ SSAqua_B1F_Text_FisherJonahSeen:
 	.string "¡Qué aburrimiento! ¡Luchemos!$"
 
 SSAqua_B1F_Text_FisherJonahBeaten:
-	.string "Ya… ya no estoy aburrida…$"
+	.string "Ya... ya no estoy aburrida...$"
 
 SSAqua_B1F_Text_FisherJonahAfter:
 	.string "Pienso pescar desde\n"
@@ -181,7 +181,7 @@ SSAqua_B1F_Text_SailorKennethSeen:
 	.string "¡ser el CAMPEÓN!$"
 
 SSAqua_B1F_Text_SailorKennethBeaten:
-	.string "Mi falta de entrenamiento es obvia…$"
+	.string "Mi falta de entrenamiento es obvia...$"
 
 SSAqua_B1F_Text_SailorKennethAfter:
 	.string "¡Ocho MEDALLAS! Eso demuestra\n"

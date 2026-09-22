@@ -743,7 +743,7 @@ AzaleaTown_Gym_Text_BugCatcherAlBeaten:
 AzaleaTown_Gym_Text_BugCatcherAlAfter:
 	.string "Son geniales, pero a la mayoría\n"
 	.string "de chicas no les gustan los\p"
-	.string "POKéMON bicho. No sé por qué…$"
+	.string "POKéMON bicho. No sé por qué...$"
 
 AzaleaTown_Gym_Text_BugCatcherJoshSeen:
 	.string "¿Salvaste a todos los SLOWPOKE?\n"
@@ -756,7 +756,7 @@ AzaleaTown_Gym_Text_BugCatcherJoshBeaten:
 
 AzaleaTown_Gym_Text_BugCatcherJoshAfter:
 	.string "Supongo que debería enseñarles\n"
-	.string "mejores movimientos…$"
+	.string "mejores movimientos...$"
 
 AzaleaTown_Gym_Text_TwinsAmyMay1Seen:
 	.string "AMY: ¡Hola! ¿Vas a retar\n"

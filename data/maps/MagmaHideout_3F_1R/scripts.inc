@@ -17,7 +17,7 @@ MagmaHideout_3F_1R_Text_Grunt9Intro:
 	.string "¡Me arde la oreja izquierda!$"
 
 MagmaHideout_3F_1R_Text_Grunt9Defeat:
-	.string "I'm getting heat exhaustion…$"
+	.string "I'm getting heat exhaustion...$"
 
 MagmaHideout_3F_1R_Text_Grunt9PostBattle:
 	.string "¿No crees que es raro usar capuchas\n"

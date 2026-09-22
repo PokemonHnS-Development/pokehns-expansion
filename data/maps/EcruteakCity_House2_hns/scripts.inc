@@ -24,7 +24,7 @@ Ecruteak_Text_ItemfinderExplanation:
 	.string "en la TORRE QUEMADA de CIUDAD IRIS.$"
 
 Ecruteak_Text_ItemfinderToEachHisOwn:
-	.string "Oh… Cada quien, supongo…$"
+	.string "Oh... Cada quien, supongo...$"
 
 EcruteakCity_House2_EventScript_ItemFinderMan::
 	lock

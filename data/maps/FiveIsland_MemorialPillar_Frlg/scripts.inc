@@ -84,7 +84,7 @@ FiveIsland_MemorialPillar_EventScript_MemorialLemonadeAlreadyPlaced::
 FiveIsland_MemorialPillar_Text_MiloIntro::
 	.string "Soy el mayor de los HERMANOS\n"
 	.string "HERMANOS PÁJARO.\p"
-	.string "Lo mejor de las aves…\n"
+	.string "Lo mejor de las aves...\n"
 	.string "tiene que ser el pico.$"
 
 FiveIsland_MemorialPillar_Text_MiloDefeat::
@@ -97,7 +97,7 @@ FiveIsland_MemorialPillar_Text_MiloPostBattle::
 FiveIsland_MemorialPillar_Text_ChazIntro::
 	.string "Soy el hermano mediano de los\n"
 	.string "HERMANOS PÁJARO.\p"
-	.string "Lo mejor de las aves…\n"
+	.string "Lo mejor de las aves...\n"
 	.string "tiene que ser el pico.$"
 
 FiveIsland_MemorialPillar_Text_ChazDefeat::
@@ -110,27 +110,27 @@ FiveIsland_MemorialPillar_Text_ChazPostBattle::
 FiveIsland_MemorialPillar_Text_HaroldIntro::
 	.string "Soy el menor de los HERMANOS\n"
 	.string "HERMANOS PÁJARO.\p"
-	.string "Lo mejor de las aves…\n"
+	.string "Lo mejor de las aves...\n"
 	.string "Es el plumón.$"
 
 FiveIsland_MemorialPillar_Text_HaroldDefeat::
-	.string "El plumón es tan suave…\n"
-	.string "Me da sueño…$"
+	.string "El plumón es tan suave...\n"
+	.string "Me da sueño...$"
 
 FiveIsland_MemorialPillar_Text_HaroldPostBattle::
 	.string "Me llena de alegría cuando\n"
-	.string "bird POKéMON beg playfully…$"
+	.string "bird POKéMON beg playfully...$"
 
 FiveIsland_MemorialPillar_Text_ScrubScrub::
-	.string "Scrub, scrub…$"
+	.string "Scrub, scrub...$"
 
 FiveIsland_MemorialPillar_Text_YourMonsLookHealthy::
-	.string "Hello…\n"
-	.string "Your POKéMON look healthy…$"
+	.string "Hello...\n"
+	.string "Your POKéMON look healthy...$"
 
 FiveIsland_MemorialPillar_Text_ThisIsWhereIBuriedMyOnix::
-	.string "Aquí enterré a mi ONIX…\n"
-	.string "Se llamaba TECTONIX…$"
+	.string "Aquí enterré a mi ONIX...\n"
+	.string "Se llamaba TECTONIX...$"
 
 FiveIsland_MemorialPillar_Text_HereLiesTectonixLemonadeOffering::
 	.string "“Aquí yace TECTONIX” está grabado\n"
@@ -149,9 +149,9 @@ FiveIsland_MemorialPillar_Text_PlacedCanOfLemonade::
 FiveIsland_MemorialPillar_Text_ThankYouPleaseTakeThis::
 	.string "Gr-gracias...\p"
 	.string "Era la favorita de mi TECTONIX.\n"
-	.string "drink…\p"
+	.string "drink...\p"
 	.string "Ni siquiera te conozco, pero tu\n"
-	.string "acto de bondad…\p"
+	.string "acto de bondad...\p"
 	.string "Eso me animó un poco.\p"
 	.string "¿Puedes tomar esto como mi\n"
 	.string "thanks?$"
@@ -165,14 +165,14 @@ FiveIsland_MemorialPillar_Text_DontHaveRoomForIt::
 	.string "Lo guardaré hasta la próxima.$"
 
 FiveIsland_MemorialPillar_Text_StillHaveThingAsMyThanks::
-	.string "Ah, eres tú de aquella vez…\p"
+	.string "Ah, eres tú de aquella vez...\p"
 	.string "Todavía tengo esa cosa que quería\n"
 	.string "darte como agradecimiento.$"
 
 FiveIsland_MemorialPillar_Text_ScrubScrubTectonix::
-	.string "Scrub, scrub…\p"
-	.string "… … …\n"
-	.string "TECTONIX…$"
+	.string "Scrub, scrub...\p"
+	.string "... ... ...\n"
+	.string "TECTONIX...$"
 
 FiveIsland_MemorialPillar_Text_HereLiesTectonix::
 	.string "Rocas y piedras están apiladas\n"

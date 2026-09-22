@@ -352,7 +352,7 @@ CinnabarIsland_EventScript_GymSign::
 	end
 
 CinnabarIsland_Text_DoorIsLocked::
-	.string "La puerta está cerrada…$"
+	.string "La puerta está cerrada...$"
 
 CinnabarIsland_Text_BlaineLivedHereSinceBeforeLab::
 	.string "BLAINE del GIMNASIO ISLA\n"

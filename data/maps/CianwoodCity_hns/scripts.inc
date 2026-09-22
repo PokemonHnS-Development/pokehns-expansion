@@ -280,7 +280,7 @@ CianwoodCity_Text_EusineSuicune:
 	.string "Y corre por ciudades y rutas a\n"
 	.string "velocidades asombrosas.\p"
 	.string "Es maravilloso...\p"
-	.string "Quiero ver a SUICUNE de cerca…\p"
+	.string "Quiero ver a SUICUNE de cerca...\p"
 	.string "Ya me decidí.\p"
 	.string "¡Lucharé contigo como ENTRENADOR\n"
 	.string "para ganar el respeto de SUICUNE!\p"

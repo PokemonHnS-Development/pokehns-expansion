@@ -73,7 +73,7 @@ Route9_Text_CamperSidSeen:
 	.string "¡Oye, tú! ¡No tires basura!$"
 
 Route9_Text_CamperSidBeaten:
-	.string "Solo estaba señalando…$"
+	.string "Solo estaba señalando...$"
 
 Route9_Text_CamperSidAfter:
 	.string "Perdón. No estabas tirando basura.\n"
@@ -84,7 +84,7 @@ Route9_Text_PicnickerEdnaSeen:
 	.string "tirada.$"
 
 Route9_Text_PicnickerEdnaBeaten:
-	.string "Ohh… I lost…$"
+	.string "Ohh... I lost...$"
 
 Route9_Text_PicnickerEdnaAfter:
 	.string "Ahorrar energía es importante,\n"
@@ -97,7 +97,7 @@ Route9_Text_HikerTimSeen:
 	.string "MT.SILVER está en JOHTO, ¿verdad?$"
 
 Route9_Text_HikerTimBeaten:
-	.string "I was too busy singing…$"
+	.string "I was too busy singing...$"
 
 Route9_Text_HikerTimAfter:
 	.string "Las batallas son de concentración.$"
@@ -107,7 +107,7 @@ Route9_Text_HikerSidneySeen:
 	.string "¡Pero primero, luchamos!$"
 
 Route9_Text_HikerSidneyBeaten:
-	.string "¡Ay, no! Perdí eso…$"
+	.string "¡Ay, no! Perdí eso...$"
 
 Route9_Text_HikerSidneyAfter:
 	.string "La CENTRAL ELÉCTRICA está tras un\n"

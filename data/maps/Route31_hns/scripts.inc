@@ -116,7 +116,7 @@ Route31_EventScript_ItemAntidote::
 	end
 
 Route31_Text_CooltrainerM:
-	.string "CUEVA OSCURA…\p"
+	.string "CUEVA OSCURA...\p"
 	.string "Si un POKéMON pudiera iluminarla,\n"
 	.string "la exploraría.$"
 
@@ -125,7 +125,7 @@ Route31_Text_BugCatcherWade1_Seen:
 	.string "¡Lucha conmigo!$"
 
 Route31_Text_BugCatcherWade1_Beaten:
-	.string "Awwwww…$"
+	.string "Awwwww...$"
 
 Route31_Text_BugCatcherWade1_After:
 	.string "Puedes capturar POKéMON aunque\n"
@@ -134,13 +134,13 @@ Route31_Text_BugCatcherWade1_After:
 	.string "BOX automáticamente.$"
 
 Route31_Text_SleepyMan:
-	.string "… Hnuurg… ¿Eh?\p"
+	.string "... Hnuurg... ¿Eh?\p"
 	.string "Caminé demasiado hoy buscando\n"
 	.string "POKéMON planta.\p"
-	.string "Me duelen los pies y tengo sueño…\p"
+	.string "Me duelen los pies y tengo sueño...\p"
 	.string "Si fuera un POKéMON salvaje,\n"
 	.string "sería fácil de atrapar...\p"
-	.string "…Zzzz…$"
+	.string "...Zzzz...$"
 
 Route31_Text_SleepyManGotMail:
 	.string "...Zzzz... ¿Eh?\p"
@@ -148,7 +148,7 @@ Route31_Text_SleepyManGotMail:
 	.string "por mí?$"
 
 Route31_Text_SleepyManFail:
-	.string "…Zzzz…$"
+	.string "...Zzzz...$"
 
 Route31_Text_HandOverMailMon:
 	.string "{PLAYER} entregó al\n"
@@ -202,7 +202,7 @@ Route31_Text_WadeRematchIntro:
 	.string "¡A luchar!$"
 
 Route31_Text_WadeRematchDefeat:
-	.string "Awwwww…$"
+	.string "Awwwww...$"
 
 Route31_Text_WadePostRematch:
 	.string "Te aviso en cuanto encuentre\nalgo que te pueda\lgustar.$"

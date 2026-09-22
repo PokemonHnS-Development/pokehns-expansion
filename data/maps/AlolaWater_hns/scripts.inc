@@ -13,7 +13,7 @@ Alola_MelemeleSea_TrainerBattleSwimmer_Text_0:
 	.string "¡Hay tanta agua abierta aquí!$"
 
 Alola_MelemeleSea_TrainerBattleSwimmer_Text_1:
-	.string "Ay,\nme lesioné el isquio…$"
+	.string "Ay,\nme lesioné el isquio...$"
 
 Alola_MelemeleSea_TrainerBattleSwimmer_Text_2:
 	.string "Hay corrientes fuertes aquí.\n"

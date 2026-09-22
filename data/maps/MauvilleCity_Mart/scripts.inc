@@ -39,13 +39,13 @@ MauvilleCity_Mart_Text_ItemsToTemporarilyElevateStats:
 	.string "Hay objetos que elevan los\n"
 	.string "estadísticos de POKéMON temporalmente.\p"
 	.string "Los que sé que usas en batalla\n"
-	.string "son ATAQUE X y DEFENSA X…\p"
+	.string "son ATAQUE X y DEFENSA X...\p"
 	.string "Creo que existen otros\n"
 	.string "similares.$"
 
 MauvilleCity_Mart_Text_DecisionsDetermineBattle:
 	.string "Usa un movimiento o usa un objeto\n"
-	.string "en su lugar…\p"
+	.string "en su lugar...\p"
 	.string "Las decisiones del ENTRENADOR\n"
 	.string "definen el resultado del combate.$"
 

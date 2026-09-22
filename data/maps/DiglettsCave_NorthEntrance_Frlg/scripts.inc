@@ -9,5 +9,5 @@ DiglettsCave_NorthEntrance_RockTunnelPitchBlack::
 	.string "Entré al TÚNEL ROCA, pero es\n"
 	.string "negro total y da miedo.\p"
 	.string "If I could get a POKéMON to use\n"
-	.string "¡FLASH y a iluminar…$"
+	.string "¡FLASH y a iluminar...$"
 

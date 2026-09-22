@@ -427,7 +427,7 @@ EventScript_FailSweetScent::
 	end
 
 Text_FailSweetScent:
-	.string "Looks like there's nothing here…$"
+	.string "Looks like there's nothing here...$"
 
 EventScript_UseDefog::
 	lockall

@@ -255,8 +255,8 @@ OlivinePort_Movement_BoatLeave:
 
 OlivinePort_Text_NoPass:
     .string "{PLAYER} intentó mostrar el\n"
-    .string "{STR_VAR_1}…\p"
-    .string "…¡Pero no hay {STR_VAR_1}!\p"
+    .string "{STR_VAR_1}...\p"
+    .string "...¡Pero no hay {STR_VAR_1}!\p"
     .string "¡Lo siento!\n"
     .string "Solo puedes subir si tienes un\l"
     .string "{STR_VAR_1}.$"
@@ -287,8 +287,8 @@ OlivinePort_Text_FlashTicket:
 
 OlivinePort_Text_NoTicket:
     .string "{PLAYER} intentó mostrar el\n"
-    .string "S.S.TICKET…\p"
-    .string "…¡Pero no tienes TICKET!\p"
+    .string "S.S.TICKET...\p"
+    .string "...¡Pero no tienes TICKET!\p"
     .string "¡Lo siento!\n"
     .string "Solo puedes subir\l"
     .string "si tienes un S.S.TICKET.$"
@@ -308,7 +308,7 @@ OlivinePort_Text_Youngster:
 
 OlivinePort_Text_CooltrainerF:
     .string "Hay muchos POKéMON en KANTO.\p"
-    .string "Desearía poder ir…$"
+    .string "Desearía poder ir...$"
 
 OlivinePort_Text_SailorBeforeHOF:
     .string "No queremos que te caigas al\n"

@@ -105,8 +105,8 @@ SilphCo_5F_Text_Grunt2Intro::
 	.string "¡Respeta al TEAM ROCKET!$"
 
 SilphCo_5F_Text_Grunt2Defeat::
-	.string "Cough…\n"
-	.string "Cough…$"
+	.string "Cough...\n"
+	.string "Cough...$"
 
 SilphCo_5F_Text_Grunt2PostBattle::
 	.string "Ahora que lo recuerdo.\p"
@@ -133,8 +133,8 @@ SilphCo_5F_Text_FloorSign::
 
 SilphCo_5F_Text_RocketBossLookingForStrongMons::
 	.string "Esos matones que tomaron nuestro\n"
-	.string "edificio…\p"
+	.string "edificio...\p"
 	.string "Su JEFE dijo que buscaba\n"
 	.string "los POKéMON fuertes.\p"
 	.string "Espero que nuestro PRESIDENTE\n"
-	.string "avoid trouble…$"
+	.string "avoid trouble...$"

@@ -100,7 +100,7 @@ PacifidlogTown_House2_Text_ChairmansYoungerBrotherOnVacation:
 
 PacifidlogTown_House2_Text_AhYourPokemon:
 	.string "Ah!\n"
-	.string "Tu POKéMON…$"
+	.string "Tu POKéMON...$"
 
 PacifidlogTown_House2_Text_AdoringPokemonTakeThis:
 	.string "Se nota que te quiere muchísimo.\p"
@@ -108,7 +108,7 @@ PacifidlogTown_House2_Text_AdoringPokemonTakeThis:
 	.string "merece una MT como esta, ¿no?$"
 
 PacifidlogTown_House2_Text_PutInSomeMoreEffort:
-	.string "Hmm…\n"
+	.string "Hmm...\n"
 	.string "No está mal, pero tampoco está bien.\p"
 	.string "Tú, como ENTRENADOR, debes poner\n"
 	.string "más esfuerzo.$"

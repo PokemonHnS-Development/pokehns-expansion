@@ -355,7 +355,7 @@ PlayersHouse_1F_Text_IsThatAPokenav:
 	.string "¿Te lo dio alguien de DEVON?\p"
 	.string "Bueno, cariño, ¿qué tal si registras\n"
 	.string "a tu mamá?\p"
-	.string "… … …$"
+	.string "... ... ...$"
 
 PlayersHouse_1F_Text_RegisteredMom:
 	.string "Registraste a MAMÁ\n"
@@ -365,7 +365,7 @@ PlayersHouse_1F_Text_Vigoroth1:
 	.string "Fugiiiiih!$"
 
 PlayersHouse_1F_Text_Vigoroth2:
-	.string "Huggoh, uggo uggo…$"
+	.string "Huggoh, uggo uggo...$"
 
 PlayersHouse_1F_Text_ReportFromPetalburgGym:
 	.string "ENTREVISTADOR: ...Te traemos este\n"

@@ -138,9 +138,9 @@ LilycoveCity_CoveLilyMotel_2F_Text_NeverLeaveWithoutGameBoy:
 	.string "mi GAME BOY ADVANCE.$"
 
 LilycoveCity_CoveLilyMotel_2F_Text_SnoozingPreferBattles:
-	.string "SCOTT: … … … … …\n"
-	.string "… … … … … Zzz…\p"
-	.string "… … … … … ¡¿Eh?!\n"
+	.string "SCOTT: ... ... ... ... ...\n"
+	.string "... ... ... ... ... Zzz...\p"
+	.string "... ... ... ... ... ¡¿Eh?!\n"
 	.string "¡Oh, perdón! ¡Me quedé dormido!\p"
 	.string "Vine a ver a este POKéMON\n"
 	.string "Cosas de CONCURSOS.\p"

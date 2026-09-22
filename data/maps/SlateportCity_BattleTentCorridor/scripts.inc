@@ -231,7 +231,7 @@ SlateportCity_ContestHall_Text_RewardWithSageAdvice:
 	.string "Si un movimiento sale muy bien,\n"
 	.string "el público se emocionará.\p"
 	.string "El POKéMON que haga su atractivo\n"
-	.string "justo cuando todos están emocionados…\p"
+	.string "justo cuando todos están emocionados...\p"
 	.string "Bueno, ¡seguro que pasará algo\n"
 	.string "bueno!$"
 

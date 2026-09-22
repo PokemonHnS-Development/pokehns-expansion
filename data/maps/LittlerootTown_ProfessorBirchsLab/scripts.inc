@@ -799,7 +799,7 @@ LittlerootTown_ProfessorBirchsLab_Text_HeyYourBagsFull:
 
 LittlerootTown_ProfessorBirchsLab_Text_BrendanWhereShouldIGoNext:
 	.string "BRENDAN: ¿Dónde debería buscar\n"
-	.string "POKéMON ahora…?$"
+	.string "POKéMON ahora...?$"
 
 LittlerootTown_ProfessorBirchsLab_Text_SeriousLookingMachine:
 	.string "Es una máquina muy seria.\n"
@@ -816,7 +816,7 @@ LittlerootTown_ProfessorBirchsLab_Text_BookTooHardToRead:
 	.string "Es un libro demasiado difícil de leer.$"
 
 LittlerootTown_ProfessorBirchsLab_Text_OtherRegionsUpgradeToNational:
-	.string "PROF. BIRCH: Ahora…\p"
+	.string "PROF. BIRCH: Ahora...\p"
 	.string "{PLAYER}{KUN} y {RIVAL}, ustedes dos\n"
 	.string "me ayudaron a estudiar POKéMON.\p"
 	.string "Gracias a su ayuda, nuevos datos\n"
@@ -877,8 +877,8 @@ LittlerootTown_ProfessorBirchsLab_Text_BrendanTakeBreakFromFieldwork:
 LittlerootTown_ProfessorBirchsLab_Text_CompletedDexChoosePokemon:
 	.string "PROF. BIRCH: ¡Oh, {PLAYER}{KUN}!\n"
 	.string "Veamos tu POKéDEX.\p"
-	.string "… … … … … …\n"
-	.string "… … … … … …\p"
+	.string "... ... ... ... ... ...\n"
+	.string "... ... ... ... ... ...\p"
 	.string "Sí, no hay ninguna duda.\p"
 	.string "Realmente has completado la\n"
 	.string "POKéDEX de la región de HOENN.\p"
@@ -953,7 +953,7 @@ LittlerootTown_ProfessorBirchsLab_Text_DontHaveAnyRoomForPokemon:
 	.string "este POKéMON.$"
 
 LittlerootTown_ProfessorBirchsLab_Text_MayWhatNextImStayingHere:
-	.string "MAY: {PLAYER}{KUN}, después de esto…\n"
+	.string "MAY: {PLAYER}{KUN}, después de esto...\n"
 	.string "¿Qué piensas hacer?\p"
 	.string "¿Seguirás luchando para\n"
 	.string "mejorar tus habilidades?\p"
@@ -977,8 +977,8 @@ LittlerootTown_ProfessorBirchsLab_Text_BrendanHaveYouGoneToBattleFrontier:
 	.string "la BATTLE FRONTIER?$"
 
 LittlerootTown_ProfessorBirchsLab_Text_ScottAboardSSTidalCall:
-	.string "… … … … … …\n"
-	.string "… … … … … ¡Bip!\p"
+	.string "... ... ... ... ... ...\n"
+	.string "... ... ... ... ... ¡Bip!\p"
 	.string "SCOTT: ¡Hola, hola, {PLAYER}!\n"
 	.string "Soy yo, SCOTT.\p"
 	.string "Estoy a bordo del S.S. TIDAL.\n"
@@ -990,5 +990,5 @@ LittlerootTown_ProfessorBirchsLab_Text_ScottAboardSSTidalCall:
 	.string "en PORTALUAR o CALMAYORA.\p"
 	.string "Te daré los detalles cuando\n"
 	.string "nos veamos. ¡Te esperaré!\p"
-	.string "… … … … … …\n"
+	.string "... ... ... ... ... ...\n"
 	.string "... ... ... ... ... ¡Click!$"

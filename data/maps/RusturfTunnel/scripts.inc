@@ -439,7 +439,7 @@ RusturfTunnel_Text_GruntDefeat:
 	.string "a un callejón sin salida!$"
 
 RusturfTunnel_Text_GruntTakePackage:
-	.string "Esto no está nada bien…\pEl JEFE me dijo que esto sería un\ntrabajo fácil y rápido de hacer.\pTodo lo que tenía que hacer era robar\nun paquete de DEVON.\p¡Tch!\n¡Si lo quieres de vuelta, tómalo!$"
+	.string "Esto no está nada bien...\pEl JEFE me dijo que esto sería un\ntrabajo fácil y rápido de hacer.\pTodo lo que tenía que hacer era robar\nun paquete de DEVON.\p¡Tch!\n¡Si lo quieres de vuelta, tómalo!$"
 
 RusturfTunnel_Text_PeekoGladToSeeYouSafe:
 	.string "¡PEEKO!\n"
@@ -449,8 +449,8 @@ RusturfTunnel_Text_ThankYouLetsGoHomePeeko:
 	.string "¡PEEKO te debe la vida!\p"
 	.string "Me llaman SR. BRINEY.\n"
 	.string "¿Y tú quién eres?\p"
-	.string "… … … … … … … …\n"
-	.string "… … … … … … … …\p"
+	.string "... ... ... ... ... ... ... ...\n"
+	.string "... ... ... ... ... ... ... ...\p"
 	.string "¡Ah, así que tú eres {PLAYER}{KUN}!\n"
 	.string "¡Te lo agradezco sinceramente!\p"
 	.string "Ahora, si hay algo que te preocupe,\n"
@@ -462,21 +462,21 @@ RusturfTunnel_Text_ThankYouLetsGoHomePeeko:
 	.string "PEEKO: ¡Pihyoh!$"
 
 RusturfTunnel_Text_WhyCantTheyKeepDigging:
-	.string "… …\p"
+	.string "... ...\p"
 	.string "¿Por qué no siguen cavando?\n"
 	.string "¿Será que la roca es muy dura?\p"
 	.string "Mi amor me espera en VERDANTURF\n"
-	.string "El PUEBLO justo después de aquí…\p"
+	.string "El PUEBLO justo después de aquí...\p"
 	.string "Si RUSTBORO y VERDANTURF estuvieran\n"
 	.string "unidos por este túnel, podría\l"
-	.string "verla todos los días…\p"
-	.string "Pero esto…\n"
+	.string "verla todos los días...\p"
+	.string "Pero esto...\n"
 	.string "¿Qué voy a hacer?$"
 
 RusturfTunnel_Text_ToGetToVerdanturf:
 	.string "Para ir de RUSTBORO a VERDANTURF,\n"
 	.string "debes ir a DEWFORD, luego pasar\l"
-	.string "por SLATEPORT y MAUVILLE…$"
+	.string "por SLATEPORT y MAUVILLE...$"
 
 RusturfTunnel_Text_YouShatteredBoulderTakeHM:
 	.string "¡Guau! Destrozaste la roca que\n"

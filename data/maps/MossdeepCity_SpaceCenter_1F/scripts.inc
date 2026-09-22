@@ -366,7 +366,7 @@ MossdeepCity_SpaceCenter_1F_Text_Grunt3Intro:
 	.string "¡el combustible cohete!$"
 
 MossdeepCity_SpaceCenter_1F_Text_Grunt3Defeat:
-	.string "Se quedó sin combustible…$"
+	.string "Se quedó sin combustible...$"
 
 MossdeepCity_SpaceCenter_1F_Text_Grunt3PostBattle:
 	.string "¡No creas que tienes suerte solo\n"
@@ -378,7 +378,7 @@ MossdeepCity_SpaceCenter_1F_Text_Grunt1Intro:
 
 MossdeepCity_SpaceCenter_1F_Text_Grunt1Defeat:
 	.string "Grrr...\n"
-	.string "Debimos usar traiciones furtivas…$"
+	.string "Debimos usar traiciones furtivas...$"
 
 MossdeepCity_SpaceCenter_1F_Text_Grunt1PostBattle:
 	.string "¡Ya entendí! La próxima vez,\n"

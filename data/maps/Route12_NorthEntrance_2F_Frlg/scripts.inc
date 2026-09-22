@@ -47,20 +47,20 @@ Route12_NorthEntrance_2F_Text_TakeTMDontNeedAnymoreMale::
 	.string "My POKéMON's ashes are stored in\n"
 	.string "POKéMON TOWER.\p"
 	.string "Puedes quedarte esta MT.\n"
-	.string "Ya no la necesito…$"
+	.string "Ya no la necesito...$"
 
 Route12_NorthEntrance_2F_Text_TakeTMDontNeedAnymoreFemale::
 	.string "My POKéMON's ashes are stored in\n"
 	.string "POKéMON TOWER.\p"
 	.string "Puedes quedarte esta MT.\n"
-	.string "Ya no la necesito…$"
+	.string "Ya no la necesito...$"
 
 Route12_NorthEntrance_2F_Text_ReceivedTM27FromLittleGirl::
 	.string "{PLAYER} received TM27\n"
 	.string "de la niña.$"
 
 Route12_NorthEntrance_2F_Text_ExplainTM27::
-	.string "La MT27 es el movimiento RETRO…\p"
+	.string "La MT27 es el movimiento RETRO...\p"
 	.string "If you treat your POKéMON good,\n"
 	.string "devolverá tu cariño esforzándose\l"
 	.string "al máximo en combate.$"
@@ -70,11 +70,11 @@ Route12_NorthEntrance_2F_Text_DontHaveRoomForThis::
 
 Route12_NorthEntrance_2F_Text_TheresManFishing::
 	.string "Veamos qué tienen los prismáticos\n"
-	.string "para mostrar…\p"
+	.string "para mostrar...\p"
 	.string "¡Hay un hombre pescando!$"
 
 Route12_NorthEntrance_2F_Text_ItsPokemonTower::
 	.string "Veamos qué tienen los prismáticos\n"
-	.string "para mostrar…\p"
+	.string "para mostrar...\p"
 	.string "It's POKéMON TOWER!$"
 

@@ -49,7 +49,7 @@ Route18_Text_BirdKeeperBobSeen:
 	.string "hacia CIUDAD CELADON.$"
 
 Route18_Text_BirdKeeperBobBeaten:
-	.string "…Whew!$"
+	.string "...Whew!$"
 
 Route18_Text_BirdKeeperBobAfterBattle:
 	.string "Si no tienes una BICICLETA,\n"

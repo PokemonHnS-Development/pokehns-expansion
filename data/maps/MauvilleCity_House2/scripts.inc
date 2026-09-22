@@ -45,7 +45,7 @@ MauvilleCity_House2_Text_BuyHarborMailAtSlateport:
 	.string "Si tuviera una BICI, sería fácil ir\n"
 	.string "a PORTALUANA de compras.\p"
 	.string "Podría comprar CORREO DEL PUERTO en\n"
-	.string "la TIENDA POKéMON de PORTALUANA…$"
+	.string "la TIENDA POKéMON de PORTALUANA...$"
 
 MauvilleCity_House2_Text_TradeHarborMailForCoinCase:
 	.string "¡Oh! ¿Tienes CORREO DEL PUERTO?\n"

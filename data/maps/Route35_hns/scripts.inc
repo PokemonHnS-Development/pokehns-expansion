@@ -124,11 +124,11 @@ Route35_Text_CamperElliotSeen:
 	.string "el mejor!$"
 
 Route35_Text_CamperElliotBeaten:
-	.string "Desearía que hubieras perdido por mí…$"
+	.string "Desearía que hubieras perdido por mí...$"
 
 Route35_Text_CamperElliotAfter:
 	.string "Fui humillado delante de mi\n"
-	.string "novia…$"
+	.string "novia...$"
 
 Route35_Text_PicnickerBrookeSeen:
 	.string "Mi novio es débil, no puedo\n"
@@ -145,7 +145,7 @@ Route35_Text_PicnickerKimSeen:
 	.string "¿Vas al GIMNASIO? ¡Yo también!$"
 
 Route35_Text_PicnickerKimBeaten:
-	.string "Oh. I couldn't win…$"
+	.string "Oh. I couldn't win...$"
 
 Route35_Text_PicnickerKimAfter:
 	.string "Las MEDALLAS son lindas. Las\n"
@@ -181,7 +181,7 @@ Route35_Text_BugCatcherArnieSeen:
 	.string "aparezcan POKéMON bicho.$"
 
 Route35_Text_BugCatcherArnieBeaten:
-	.string "¿Eh? No debí perder eso…$"
+	.string "¿Eh? No debí perder eso...$"
 
 Route35_Text_BugCatcherArnieAfter:
 	.string "Mi VENONAT ganó el Concurso de\n"
@@ -201,7 +201,7 @@ Route35_Text_ArnieRematchIntro:
 	.string "aparezcan POKéMON bicho.$"
 
 Route35_Text_ArnieRematchDefeat:
-	.string "¿Eh? No debí perder eso…$"
+	.string "¿Eh? No debí perder eso...$"
 
 Route35_Text_ArniePostRematch:
 	.string "Mi VENONAT ganó el Concurso de\n"

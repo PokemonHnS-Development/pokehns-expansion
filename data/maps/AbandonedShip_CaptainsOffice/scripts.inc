@@ -26,7 +26,7 @@ AbandonedShip_CaptainsOffice_Text_NoSuccessFindingScanner:
 	.string "Investigo este barco por encargo\n"
 	.string "del CAPT. STERN.\p"
 	.string "Me pidió buscar un SCANNER,\n"
-	.string "pero no he tenido éxito…$"
+	.string "pero no he tenido éxito...$"
 
 AbandonedShip_CaptainsOffice_Text_OhCanYouDeliverScanner:
 	.string "¡Oh! ¡Eso es un SCANNER!\p"

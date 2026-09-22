@@ -308,12 +308,12 @@ SSTidalCorridor_Text_BrineyWelcomeAboard:
 	.string "ferry S.S. TIDAL!\p"
 	.string "¡Ya puedes llamarme CAPITÁN BRINEY!\p"
 	.string "Sabes, ya me había retirado una vez,\n"
-	.string "pero al ver este barco tan majestuoso…\p"
+	.string "pero al ver este barco tan majestuoso...\p"
 	.string "Solo diré que despertó mi alma de\n"
 	.string "marinero!$"
 
 SSTidalCorridor_Text_Peeko:
-	.string "PEEKO: Pihyo pihyohyo…$"
+	.string "PEEKO: Pihyo pihyohyo...$"
 
 SSTidalCorridor_Text_Cabin1:
 	.string "Cabin 1$"

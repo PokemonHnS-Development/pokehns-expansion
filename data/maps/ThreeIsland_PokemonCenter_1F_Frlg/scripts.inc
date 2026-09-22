@@ -41,7 +41,7 @@ ThreeIsland_PokemonCenter_1F_Text_ImpossibleToSurfBetweenIslands::
 
 ThreeIsland_PokemonCenter_1F_Text_AlwaysBerriesInBerryForest::
 	.string "¡Aplastemos BAYAS!\n"
-	.string "…That'd be wasting BERRIES?\p"
+	.string "...That'd be wasting BERRIES?\p"
 	.string "Siempre puedes encontrar BAYAS\n"
 	.string "en el suelo del BOSQUE BAYA.$"
 

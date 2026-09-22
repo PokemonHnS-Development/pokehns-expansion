@@ -31,7 +31,7 @@ PokemonMansion_B1F_EventScript_Ivan::
 	end
 
 PokemonMansion_B1F_Text_LewisIntro::
-	.string "Uh-oh…\n"
+	.string "Uh-oh...\n"
 	.string "Where am I now?$"
 
 PokemonMansion_B1F_Text_LewisDefeat::
@@ -56,5 +56,5 @@ PokemonMansion_B1F_Text_MewtwoIsFarTooPowerful::
 	.string "Diary: Sept. 1\n"
 	.string "MEWTWO es demasiado poderoso.\p"
 	.string "No logramos frenar su\n"
-	.string "tendencies…$"
+	.string "tendencies...$"
 

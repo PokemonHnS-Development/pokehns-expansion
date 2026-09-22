@@ -164,14 +164,14 @@ GoldenrodCity_RadioTower_2F_Text_TeacherRockets:
 	.string "la TORRE RADIO?$"
 
 GoldenrodCity_RadioTower_2F_Text_Jigglypuff:
-	.string "JIGGLYPUFF: Jiggly…$"
+	.string "JIGGLYPUFF: Jiggly...$"
 
 GoldenrodCity_RadioTower_2F_Text_BlackBelt1:
 	.string "Lo siento. Solo personal\n"
 	.string "autorizado más allá de aquí.\p"
 	.string "Antes no era así.\p"
 	.string "Algo anda mal con el\n"
-	.string "DIRECTOR…$"
+	.string "DIRECTOR...$"
 
 GoldenrodCity_RadioTower_2F_Text_BlackBelt2:
 	.string "Siéntete libre de mirar todo.\p"

@@ -404,7 +404,7 @@ CeruleanCity_Text_ExplainFameCheckerSmellYa::
 CeruleanCity_Text_GruntIntro::
 	.string "Hey! Stay out!\n"
 	.string "¡No es tu patio!\p"
-	.string "…¿Eh?\n"
+	.string "...¿Eh?\n"
 	.string "¿Yo?\p"
 	.string "¡Soy un inocente\ntranseúnte!"
 	.string "¿No me crees?{PLAY_BGM}{MUS_RG_ENCOUNTER_ROCKET}$"
@@ -414,7 +414,7 @@ CeruleanCity_Text_GruntDefeat::
 	.string "I'll leave quietly!$"
 
 CeruleanCity_Text_OkayIllReturnStolenTM::
-	.string "…Okay.\n"
+	.string "...Okay.\n"
 	.string "Devolveré la MT que robé.$"
 
 CeruleanCity_Text_RecoveredTM28FromGrunt::
@@ -431,7 +431,7 @@ CeruleanCity_Text_MakeRoomForThisCantRun::
 
 CeruleanCity_Text_TrainerLifeIsToughIsntIt::
 	.string "You're a TRAINER, too?\p"
-	.string "Collecting, battling…\n"
+	.string "Collecting, battling...\n"
 	.string "Es una vida dura, ¿verdad?$"
 
 CeruleanCity_Text_YouCanCutDownSmallTrees::
@@ -485,16 +485,16 @@ CeruleanCity_Text_HardToControlMonsObedience::
 	.string "en tus habilidades como ENTRENADOR.$"
 
 CeruleanCity_Text_SlowbroTookSnooze::
-	.string "SLOWBRO se echó una siesta…$"
+	.string "SLOWBRO se echó una siesta...$"
 
 CeruleanCity_Text_SlowbroLoafingAround::
-	.string "SLOWBRO está holgazaneando…$"
+	.string "SLOWBRO está holgazaneando...$"
 
 CeruleanCity_Text_SlowbroTurnedAway::
-	.string "SLOWBRO turned away…$"
+	.string "SLOWBRO turned away...$"
 
 CeruleanCity_Text_SlowbroIgnoredOrders::
-	.string "SLOWBRO ignored orders…$"
+	.string "SLOWBRO ignored orders...$"
 
 CeruleanCity_Text_WantBrightRedBicycle::
 	.string "Quiero una bicicleta roja\p"

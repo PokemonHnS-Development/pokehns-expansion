@@ -380,7 +380,7 @@ BattleFrontier_ExchangeServiceCorner_Text_HereIsYourPrize:
 	.string "¡Aquí tienes tu premio!$"
 
 BattleFrontier_ExchangeServiceCorner_Text_DontHaveEnoughPoints:
-	.string "Lo siento mucho...\nTe faltan Puntos de Combate…$"
+	.string "Lo siento mucho...\nTe faltan Puntos de Combate...$"
 
 BattleFrontier_ExchangeServiceCorner_Text_PCIsFull:
 	.string "Lo siento mucho...\n"
@@ -388,7 +388,7 @@ BattleFrontier_ExchangeServiceCorner_Text_PCIsFull:
 
 BattleFrontier_ExchangeServiceCorner_Text_DontHaveSpaceToHoldIt:
 	.string "Lo siento mucho...\n"
-	.string "No tienes espacio para guardarlo…$"
+	.string "No tienes espacio para guardarlo...$"
 
 BattleFrontier_ExchangeServiceCorner_Text_ThankYouVisitWithPoints:
 	.string "Muchas gracias.\p"

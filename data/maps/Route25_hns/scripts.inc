@@ -391,7 +391,7 @@ Route25_Text_MistyDate:
 	.string "gente como tú?\p"
 	.string "¡Plagas! Me oíste bien,\n"
 	.string "de plaga!\p"
-	.string "…\p"
+	.string "...\p"
 	.string "...¿Eh? Esas MEDALLAS que tienes...\n"
 	.string "¿Son MEDALLAS de JOHTO?\p"
 	.string "Si tienes ocho, debes ser\n"
@@ -440,7 +440,7 @@ Route25_Text_LassLauraSeen:
 	.string "¿Te estás cansando?$"
 
 Route25_Text_LassLauraBeaten:
-	.string "Yo también perdí…$"
+	.string "Yo también perdí...$"
 
 Route25_Text_LassLauraAfter:
 	.string "Hice mi mejor esfuerzo.\n"
@@ -469,7 +469,7 @@ Route25_Text_LassShannonAfter:
 	.string "No me arrepiento de nada.$"
 
 Route25_Text_SupernerdPatSeen:
-	.string "Mufufufu…\p"
+	.string "Mufufufu...\p"
 	.string "No tengo nada que ver con los\n"
 	.string "ENTRENADORES musculosos.\p"
 	.string "Esperé aquí para vencerte cuando\n"

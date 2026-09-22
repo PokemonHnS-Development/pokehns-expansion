@@ -36,7 +36,7 @@ SINGLE_BATTLE_TEST("Tar Shot doubles the effectiveness of Fire-type moves used o
         if (species != SPECIES_OMASTAR)
             MESSAGE("It's super effective!");
         else
-            MESSAGE("It's not very effective…");
+            MESSAGE("It's not very effective...");
     } THEN {
         EXPECT_MUL_EQ(damage[0], Q_4_12(2.0), damage[1]);
     }

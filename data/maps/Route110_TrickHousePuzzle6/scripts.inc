@@ -46,7 +46,7 @@ Route110_TrickHousePuzzle6_Text_WroteSecretCodeLockOpened:
 	.string "{PLAYER} anotó el código secreto\n"
 	.string "en la puerta.\p"
 	.string "“TRICK MASTER es mi vida.”\n"
-	.string "… … … … … … … …\p"
+	.string "... ... ... ... ... ... ... ...\p"
 	.string "¡La cerradura se abrió!$"
 
 Route110_TrickHousePuzzle6_Text_SophiaIntro:
@@ -60,22 +60,22 @@ Route110_TrickHousePuzzle6_Text_SophiaPostBattle:
 
 Route110_TrickHousePuzzle6_Text_BennyIntro:
 	.string "Tal vez mi POKéMON ave podría\n"
-	.string "volar sobre el muro…$"
+	.string "volar sobre el muro...$"
 
 Route110_TrickHousePuzzle6_Text_BennyDefeat:
 	.string "¡Guaaah! ¡Lo arruiné!$"
 
 Route110_TrickHousePuzzle6_Text_BennyPostBattle:
-	.string "Ehehehe… Supongo que perdí porque\n"
+	.string "Ehehehe... Supongo que perdí porque\n"
 	.string "Intentaba hacer trampa.$"
 
 Route110_TrickHousePuzzle6_Text_SebastianIntro:
 	.string "Me marea estas puertas\n"
-	.string "giratorias…$"
+	.string "giratorias...$"
 
 Route110_TrickHousePuzzle6_Text_SebastianDefeat:
 	.string "Todo da vueltas y vueltas.\n"
-	.string "Ya no puedo más…$"
+	.string "Ya no puedo más...$"
 
 Route110_TrickHousePuzzle6_Text_SebastianPostBattle:
 	.string "A ti no parece afectarte nada.\n"

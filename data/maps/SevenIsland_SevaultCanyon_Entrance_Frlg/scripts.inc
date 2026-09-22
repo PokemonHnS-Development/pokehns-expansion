@@ -23,12 +23,12 @@ SevenIsland_SevaultCanyon_Entrance_Text_MasonIntro::
 	.string "¿Eres de mi club de fans?$"
 
 SevenIsland_SevaultCanyon_Entrance_Text_MasonDefeat::
-	.string "Ah, no eres fan…\p"
+	.string "Ah, no eres fan...\p"
 	.string "Bueno, eso puedo cambiarlo.\n"
 	.string "¡Déjame cantar para ti!$"
 
 SevenIsland_SevaultCanyon_Entrance_Text_MasonPostBattle::
-	.string "Lalalah…\n"
+	.string "Lalalah...\n"
 	.string "My POKéMON, I send them out,\l"
 	.string "¡todas las chicas gritan y aplauden!$"
 
@@ -37,7 +37,7 @@ SevenIsland_SevaultCanyon_Entrance_Text_NicolasIntro::
 	.string "No es fácil patrullar el lugar.$"
 
 SevenIsland_SevaultCanyon_Entrance_Text_NicolasDefeat::
-	.string "Uh-huh…$"
+	.string "Uh-huh...$"
 
 SevenIsland_SevaultCanyon_Entrance_Text_NicolasPostBattle::
 	.string "Los ENTRENADORES como tú, de las\n"

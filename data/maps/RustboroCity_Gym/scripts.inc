@@ -142,7 +142,7 @@ RustboroCity_Gym_Text_JoshIntro:
 	.string "¡Te mostraré por qué somos mejores!$"
 
 RustboroCity_Gym_Text_JoshDefeat:
-	.string "Fuiste demasiado bueno para mí…$"
+	.string "Fuiste demasiado bueno para mí...$"
 
 RustboroCity_Gym_Text_JoshPostBattle:
 	.string "¡Aún no has visto el terrorífico\n"
@@ -185,7 +185,7 @@ RustboroCity_Gym_Text_RoxanneIntro:
 	.string "y con qué POKéMON?$"
 
 RustboroCity_Gym_Text_RoxanneDefeat:
-	.string "So…\n"
+	.string "So...\n"
 	.string "Perdí...\p"
 	.string "Parece que todavía me queda mucho\n"
 	.string "por aprender...\p"
@@ -232,8 +232,8 @@ RustboroCity_Gym_Text_GymStatueCertified:
 	.string "{PLAYER}$"
 
 RustboroCity_Gym_Text_RoxanneRegisterCall:
-	.string "… … … … … …\n"
-	.string "… … … … … ¡Bip!\p"
+	.string "... ... ... ... ... ...\n"
+	.string "... ... ... ... ... ¡Bip!\p"
 	.string "ROXANNE: Oh, ¿hola, {PLAYER}?\n"
 	.string "Soy ROXANNE de CIUDAD PORTALIA.\p"
 	.string "BRAWLY me dijo que estás\n"
@@ -245,7 +245,7 @@ RustboroCity_Gym_Text_RoxanneRegisterCall:
 	.string "para que nos desafíes de nuevo.\p"
 	.string "¡Espero que aguardes esa ocasión\n"
 	.string "tanto como yo!\p"
-	.string "… … … … … …\n"
+	.string "... ... ... ... ... ...\n"
 	.string "... ... ... ... ... ¡Click!$"
 
 RustboroCity_Gym_Text_RegisteredRoxanne:
@@ -277,7 +277,7 @@ RustboroCity_Gym_Text_RoxanneRematchNeedTwoMons:
 	.string "batallas desde la última vez.\p"
 	.string "Quiero ver cuánto hemos mejorado.\n"
 	.string "nos hemos vuelto...\p"
-	.string "Oh, no…\n"
+	.string "Oh, no...\n"
 	.string "¿Solo traes un POKéMON contigo?\p"
 	.string "Vuelve con al menos uno más\n"
 	.string "POKéMON.$"

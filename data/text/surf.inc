@@ -1,5 +1,5 @@
 gText_WantToUseSurf::
-	.string "El agua es de un azul profundo…\n"
+	.string "El agua es de un azul profundo...\n"
 	.string "¿Quieres usar SURF?$"
 
 gText_PlayerUsedSurf::
@@ -7,4 +7,4 @@ gText_PlayerUsedSurf::
 
 Text_CurrentTooFast::
 	.string "¡La corriente es muy fuerte!\n"
-	.string "No puedes usar SURF aquí…$"
+	.string "No puedes usar SURF aquí...$"

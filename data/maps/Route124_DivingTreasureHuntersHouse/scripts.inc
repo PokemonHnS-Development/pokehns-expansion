@@ -290,7 +290,7 @@ Route124_DivingTreasureHuntersHouse_Text_HaveYouSeenAnyShards:
 	.string "Dime, ¿has visto FRAGMENTOS de\nherramientas de tiempos antiguos?$"
 
 Route124_DivingTreasureHuntersHouse_Text_YouHaventGotAnyShards:
-	.string "No tienes ningún tesoro\npara mí…\pSi ves algún FRAGMENTO, como el\nROJO, ¡tienes que cambiarlo conmigo!$"
+	.string "No tienes ningún tesoro\npara mí...\pSi ves algún FRAGMENTO, como el\nROJO, ¡tienes que cambiarlo conmigo!$"
 
 Route124_DivingTreasureHuntersHouse_Text_ThatsAShardIllTradeYou:
 	.string "¡Oh, hola! Eso...\n"

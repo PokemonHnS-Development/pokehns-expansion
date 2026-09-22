@@ -29,6 +29,6 @@ FiveIsland_PokemonCenter_1F_Text_OnMyWayToPrepareMeal::
 FiveIsland_PokemonCenter_1F_Text_YoureOnQuestToCatchEveryMon::
 	.string "Estás en una misión para atrapar a todos\n"
 	.string "single kind of POKéMON?\p"
-	.string "…Qué increíble. Avísame si\n"
+	.string "...Qué increíble. Avísame si\n"
 	.string "atrapas uno fuerte!$"
 

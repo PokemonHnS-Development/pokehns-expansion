@@ -294,7 +294,7 @@ TwoIsland_Text_OldWomanLivesOutOnCape::
 TwoIsland_Text_HaveYouTriedJumpingGame::
 	.string "Boing! Boing!\n"
 	.string "¿Probaste el juego de saltar?\p"
-	.string "The POKéMON you can enter…\n"
+	.string "The POKéMON you can enter...\n"
 	.string "Boing!\p"
 	.string "Unos hacen ¡boing!\p"
 	.string "¡Y otros hacen booooooing!\p"

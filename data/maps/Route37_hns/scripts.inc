@@ -110,7 +110,7 @@ Route37_Text_PsychicGreg_Seen:
 	.string "¡Te mostraré lo aterrador que es!$"
 
 Route37_Text_PsychicGreg_Beaten:
-	.string "Perdí. Qué triste…$"
+	.string "Perdí. Qué triste...$"
 
 Route37_Text_PsychicGreg_After:
 	.string "Dormir o paralizar a los POKéMON\n"
@@ -132,9 +132,9 @@ Route37_Text_Sunny_GiveGift2:
 
 Route37_Text_Sunny_GaveGift:
 	.string "SUNNY: Esa cosa...\p"
-	.string "Um…\p"
+	.string "Um...\p"
 	.string "... ¿Cómo era ahora...?\p"
-	.string "…\p"
+	.string "...\p"
 	.string "¡Ah! ¡Ya me acuerdo!\p"
 	.string "Un POKéMON que sepa movimientos\n"
 	.string "eléctricos debería llevarlo.\p"

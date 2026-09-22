@@ -35,9 +35,9 @@ SoulHouse_Text_Teacher:
 
 SoulHouse_Text_Lass:
 	.string "Vine con mi mamá a visitar\n"
-	.string "tumbas de POKéMON…$"
+	.string "tumbas de POKéMON...$"
 
 SoulHouse_Text_Granny:
-	.string "Los POKéMON que vivieron conmigo…\p"
+	.string "Los POKéMON que vivieron conmigo...\p"
 	.string "Los amaba como si fueran\n"
-	.string "mis nietos…$"
+	.string "mis nietos...$"

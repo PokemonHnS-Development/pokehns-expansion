@@ -741,7 +741,7 @@ static const struct MessageWindowInfo sDisplayStdMessages[] = {
     }
 };
 
-static const u8 sText_Ellipsis[] = _("…");
+static const u8 sText_Ellipsis[] = _("...");
 
 static const struct MenuAction sKeyboardPageTitleTexts[UNION_ROOM_KB_PAGE_COUNT + 1] = {
     [UNION_ROOM_KB_PAGE_UPPER]    = {gText_Upper, {NULL}},

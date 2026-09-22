@@ -17,10 +17,10 @@ SINGLE_BATTLE_TEST("Powder moves are blocked by Grass-type Pokémon (Gen6+)")
     } SCENE {
         if (gen == GEN_6) {
             NOT ANIMATION(ANIM_TYPE_MOVE, MOVE_STUN_SPORE, player);
-            MESSAGE("It doesn't affect the opposing Oddish…");
+            MESSAGE("It doesn't affect the opposing Oddish...");
         } else {
             ANIMATION(ANIM_TYPE_MOVE, MOVE_STUN_SPORE, player);
-            NOT MESSAGE("It doesn't affect the opposing Oddish…");
+            NOT MESSAGE("It doesn't affect the opposing Oddish...");
         }
     }
 }

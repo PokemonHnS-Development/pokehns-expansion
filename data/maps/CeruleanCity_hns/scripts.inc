@@ -90,7 +90,7 @@ CeruleanCity_Text_CooltrainerF2:
 	.string "¡SLOWBRO, muéstrame tu CONFUSIÓN!$"
 
 CeruleanCity_Text_CooltrainerF3:
-	.string "…$"
+	.string "...$"
 
 CeruleanCity_EventScript_Fisher::
 	goto_if_eq VAR_CERULEAN_CITY_STATE, 2, CeruleanCity_EventScript_FisherDuringRocket
@@ -119,7 +119,7 @@ CeruleanCity_Text_Youngster1:
 
 CeruleanCity_Text_Youngster2:
 	.string "¿Ayuh?\p"
-	.string "Mi BUSCAOBJETOS está reaccionando…$"
+	.string "Mi BUSCAOBJETOS está reaccionando...$"
 
 CeruleanCity_EventScript_Sign::
 	msgbox CeruleanCity_Text_Sign, MSGBOX_SIGN
@@ -152,12 +152,12 @@ CeruleanCity_Text_GymSign:
 	.string "La Sirena Marimacho$"
 
 CeruleanCity_Text_BikeShopSign:
-	.string "Hay un aviso aquí…\p"
+	.string "Hay un aviso aquí...\p"
 	.string "La TIENDA DE BICIS se mudó a\n"
-	.string "CIUDAD TRIGAL en JOHTO…$"
+	.string "CIUDAD TRIGAL en JOHTO...$"
 
 CeruleanCity_Text_PoliceSign:
-	.string "Hay un aviso aquí…\p"
+	.string "Hay un aviso aquí...\p"
 	.string "¡Acabemos con los robos y hagamos\n"
 	.string "de la ciudad un lugar más amable\l"
 	.string "y alegre!\p"
@@ -168,5 +168,5 @@ CeruleanCity_Text_CapeSign:
 	.string "ADELANTE$"
 
 CeruleanCity_Text_LockedDoor:
-	.string "Está cerrado con llave…$"
+	.string "Está cerrado con llave...$"
 

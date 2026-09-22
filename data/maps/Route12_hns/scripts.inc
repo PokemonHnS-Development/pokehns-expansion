@@ -97,7 +97,7 @@ Route12_Text_FisherMartinBeaten:
 	.string "Gwaaah!$"
 
 Route12_Text_FisherMartinAfterBattle:
-	.string "Soy muy impaciente para pescar…$"
+	.string "Soy muy impaciente para pescar...$"
 
 Route12_Text_FisherStephenSeen:
 	.string "Me siento feliz pescando mientras\n"

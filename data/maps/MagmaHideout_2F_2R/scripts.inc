@@ -26,7 +26,7 @@ MagmaHideout_2F_2R_Text_Grunt15Intro:
 	.string "¡Solo sigo órdenes!$"
 
 MagmaHideout_2F_2R_Text_Grunt15Defeat:
-	.string "Puede que haya perdido, pero…$"
+	.string "Puede que haya perdido, pero...$"
 
 MagmaHideout_2F_2R_Text_Grunt15PostBattle:
 	.string "¡Desenterramos algo increíble!\n"
@@ -49,7 +49,7 @@ MagmaHideout_2F_2R_Text_Grunt6PostBattle:
 MagmaHideout_2F_2R_Text_Grunt7Intro:
 	.string "A veces se oyen temblores aquí.\p"
 	.string "¿Será el volcán agitándose?\n"
-	.string "¿O será GROU…\p"
+	.string "¿O será GROU...\p"
 	.string "¡Vaya!\n"
 	.string "¡No, no, no importa!$"
 
@@ -65,14 +65,14 @@ MagmaHideout_2F_2R_Text_Grunt7PostBattle:
 
 MagmaHideout_2F_2R_Text_Grunt8Intro:
 	.string "Uno de los nuestros estaba asustado\n"
-	.string "perdió su EMBLEMA MAGMA…\p"
+	.string "perdió su EMBLEMA MAGMA...\p"
 	.string "¡Espera un momento!\n"
 	.string "¿Fuiste tú quien lo encontró?$"
 
 MagmaHideout_2F_2R_Text_Grunt8Defeat:
-	.string "Me cuesta creer esto…$"
+	.string "Me cuesta creer esto...$"
 
 MagmaHideout_2F_2R_Text_Grunt8PostBattle:
 	.string "Tengo el presentimiento de que el plan\n"
-	.string "va a terminar en fracaso…$"
+	.string "va a terminar en fracaso...$"
 

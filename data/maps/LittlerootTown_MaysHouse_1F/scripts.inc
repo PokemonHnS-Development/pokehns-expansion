@@ -318,8 +318,8 @@ LittlerootTown_MaysHouse_1F_Movement_MayGoUpstairs2:
 
 RivalsHouse_1F_Text_OhYoureTheNewNeighbor:
 	.string "Oh, hola. ¿Y tú quién eres?\p"
-	.string "… … … … … … … … …\n"
-	.string "… … … … … … … … …\p"
+	.string "... ... ... ... ... ... ... ... ...\n"
+	.string "... ... ... ... ... ... ... ... ...\p"
 	.string "Oh, tú eres {PLAYER}{KUN}, nuestro nuevo vecino\n"
 	.string "vecino! ¡Hola!\p"
 	.string "Tenemos un {STR_VAR_1} más o menos\n"
@@ -358,13 +358,13 @@ RivalsHouse_1F_Text_ShouldGoHomeEverySoOften:
 RivalsHouse_1F_Text_MayWhoAreYou:
 	.string "¿Eh?\n"
 	.string "¿Quién... quién eres?\p"
-	.string "… … … … … … … …\n"
-	.string "… … … … … … … …\p"
+	.string "... ... ... ... ... ... ... ...\n"
+	.string "... ... ... ... ... ... ... ...\p"
 	.string "Ah, tú eres {PLAYER}{KUN}.\n"
 	.string "Así que hoy era tu mudanza.\p"
 	.string "Este... yo soy MAY.\n"
 	.string "¡Mucho gusto!\p"
-	.string "I…\n"
+	.string "I...\n"
 	.string "Tengo el sueño de ser amiga de los\l"
 	.string "POKéMON de todo el mundo.\p"
 	.string "Yo... escuché sobre ti, {PLAYER}{KUN}, de\n"
@@ -381,7 +381,7 @@ RivalsHouse_1F_Text_MayWhoAreYou:
 
 RivalsHouse_1F_Text_BrendanWhoAreYou:
 	.string "¡Hola!\n"
-	.string "Tú…\p"
+	.string "Tú...\p"
 	.string "¿Quién eres?\p"
 	.string "Oh, tú eres {PLAYER}, ¿verdad?\n"
 	.string "Te mudaste al lado, ¿cierto?\p"

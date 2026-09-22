@@ -29,7 +29,7 @@ SINGLE_BATTLE_TEST("Limber prevents paralysis from Thunder Wave")
     } WHEN {
         TURN { MOVE(opponent, MOVE_THUNDER_WAVE); }
     } SCENE {
-        MESSAGE("It doesn't affect Persian…");
+        MESSAGE("It doesn't affect Persian...");
         NONE_OF {
             ANIMATION(ANIM_TYPE_STATUS, B_ANIM_STATUS_PRZ, player);
             STATUS_ICON(player, paralysis: TRUE);

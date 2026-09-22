@@ -109,12 +109,12 @@ Route17_Text_BikerJoelSeen:
 	.string "Vaya. ¡Qué BICICLETA tan genial!$"
 
 Route17_Text_BikerJoelBeaten:
-	.string "Pero no solo pareces genial…$"
+	.string "Pero no solo pareces genial...$"
 
 Route17_Text_BikerJoelAfterBattle:
 	.string "Me veo genial, pero soy débil, así\n"
 	.string "que no soy tan genial.\p"
-	.string "Tengo que entrenar más…$"
+	.string "Tengo que entrenar más...$"
 
 Route17_Text_BikerGlennSeen:
 	.string "¡Oye! ¿Quieres un duelo de velocidad?$"
@@ -157,7 +157,7 @@ Route17_Text_JoelRematchIntro:
 	.string "¡Veamos quién es más genial ahora!$"
 
 Route17_Text_JoelRematchDefeat:
-	.string "Aún no soy lo bastante genial…$"
+	.string "Aún no soy lo bastante genial...$"
 
 Route17_Text_JoelPostRematch:
 	.string "¡Seguiré entrenando para ser tan\n"

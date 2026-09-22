@@ -527,18 +527,18 @@ LilycoveCity_PokemonCenter_1F_EventScript_Pikachu::
 	end
 
 LilycoveCity_PokemonCenter_1F_Text_ImTheFavorLady:
-	.string "I'm the FAVOR LADY…$"
+	.string "I'm the FAVOR LADY...$"
 
 LilycoveCity_PokemonCenter_1F_Text_ObsessedWithThing:
 	.string "Hace poco me obsesioné\n"
-	.string "con las cosas {STR_VAR_1}…$"
+	.string "con las cosas {STR_VAR_1}...$"
 
 LilycoveCity_PokemonCenter_1F_Text_ThankYouForLastTime:
-	.string "Oh…\n"
-	.string "Gracias por la última vez…$"
+	.string "Oh...\n"
+	.string "Gracias por la última vez...$"
 
 LilycoveCity_PokemonCenter_1F_Text_PlayerGaveMeBadThing:
-	.string "Antes, creo que era {STR_VAR_3}…\p{STR_VAR_3} me dio un {STR_VAR_2},\ndiciendo que era {STR_VAR_1}.\pPero no era {STR_VAR_1}.\nNi un poquito.$"
+	.string "Antes, creo que era {STR_VAR_3}...\p{STR_VAR_3} me dio un {STR_VAR_2},\ndiciendo que era {STR_VAR_1}.\pPero no era {STR_VAR_1}.\nNi un poquito.$"
 
 LilycoveCity_PokemonCenter_1F_Text_PlayerGaveMeGreatThing:
 	.string "Antes, {STR_VAR_3} me dio un\n{STR_VAR_1} {STR_VAR_2} muy bueno.\pAhora lo atesoro mucho.$"
@@ -551,26 +551,26 @@ LilycoveCity_PokemonCenter_1F_Text_WhatWillYouGiveMe:
 
 LilycoveCity_PokemonCenter_1F_Text_IsThatSoGoodbye:
 	.string "¿De verdad?\n"
-	.string "Entonces, adiós…$"
+	.string "Entonces, adiós...$"
 
 LilycoveCity_PokemonCenter_1F_Text_NotWillingToShare:
-	.string "Oh…\n"
+	.string "Oh...\n"
 	.string "¿No quieres compartirlo?$"
 
 LilycoveCity_PokemonCenter_1F_Text_IllTryToCherishIt:
-	.string "¿Ah, sí?\n¿Ese {STR_VAR_2} es {STR_VAR_1}?\p…Ah, ¿en serio?\pBueno, igual te debo las gracias.\nIntentaré atesorarlo…$"
+	.string "¿Ah, sí?\n¿Ese {STR_VAR_2} es {STR_VAR_1}?\p...Ah, ¿en serio?\pBueno, igual te debo las gracias.\nIntentaré atesorarlo...$"
 
 LilycoveCity_PokemonCenter_1F_Text_IWillCherishThis:
-	.string "Oh…\p"
+	.string "Oh...\p"
 	.string "Es un {STR_VAR_1} bastante bueno\n"
-	.string "{STR_VAR_2}…\p"
+	.string "{STR_VAR_2}...\p"
 	.string "¿No es lindo?\n"
 	.string "Es como un sueño...\p"
-	.string "Gracias…\n"
+	.string "Gracias...\n"
 	.string "Lo cuidaré mucho...$"
 
 LilycoveCity_PokemonCenter_1F_Text_IWillTreasureThis:
-	.string "…Oh, oh, oh…\p"
+	.string "...Oh, oh, oh...\p"
 	.string "¡Esto es increíble!\n"
 	.string "¡Esto es realmente {STR_VAR_1}!\p"
 	.string "No sabía que uno {STR_VAR_2}\n"
@@ -611,8 +611,8 @@ LilycoveCity_PokemonCenter_1F_Text_TakeQuizChallenge:
 	.string "challenge?$"
 
 LilycoveCity_PokemonCenter_1F_Text_WaitForAnswer:
-	.string "… … … … … …\n"
-	.string "… … … … … …$"
+	.string "... ... ... ... ... ...\n"
+	.string "... ... ... ... ... ...$"
 
 LilycoveCity_PokemonCenter_1F_Text_HowBoringBye:
 	.string "¡Ay, qué aburrido!\n"
@@ -740,7 +740,7 @@ LilycoveCity_PokemonCenter_1F_Text_IllUseYourPokeblock:
 LilycoveCity_PokemonCenter_1F_Text_NoChangeThanks:
 	.string "...No parece haber cambiado\n"
 	.string "en absoluto...\p"
-	.string "Hmm…\p"
+	.string "Hmm...\p"
 	.string "¡Bueno, ni modo!\n"
 	.string "Thank you very much!$"
 
@@ -752,7 +752,7 @@ LilycoveCity_PokemonCenter_1F_Text_ReallyImprovedThanks:
 	.string "¡Muchas gracias!$"
 
 LilycoveCity_PokemonCenter_1F_Text_ReadyToEnterContests:
-	.string "Hmm…\p"
+	.string "Hmm...\p"
 	.string "Creo que ya podemos entrar\n"
 	.string "algunos CONCURSOS.\p"
 	.string "Si nos ves en alguno,\n"
@@ -765,7 +765,7 @@ LilycoveCity_PokemonCenter_1F_Text_Kecleon:
 	.string "{STR_VAR_1}: Igigigiiih!$"
 
 LilycoveCity_PokemonCenter_1F_Text_Poochyena:
-	.string "{STR_VAR_1}: Baaarun…$"
+	.string "{STR_VAR_1}: Baaarun...$"
 
 LilycoveCity_PokemonCenter_1F_Text_Pikachu:
 	.string "{STR_VAR_1}: Pikka!$"

@@ -154,7 +154,7 @@ LilycoveCity_DepartmentStore_5F_Text_GettingDollInsteadOfPokemon:
 LilycoveCity_DepartmentStore_5F_Text_SellManyCuteMatsHere:
 	.string "Venden muchos TAPETES lindos aquí.\p"
 	.string "¿Cuál debería elegir?\n"
-	.string "Tal vez los compre todos…$"
+	.string "Tal vez los compre todos...$"
 
 LilycoveCity_DepartmentStore_5F_Text_ClosedRooftopForWeather:
 	.string "Creo que cerraron la azotea\n"

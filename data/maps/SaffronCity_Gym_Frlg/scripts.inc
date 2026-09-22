@@ -171,9 +171,9 @@ SaffronCity_Gym_Text_StacyDefeat::
 	.string "¡Lo sabía!$"
 
 SaffronCity_Gym_Text_StacyPostBattle::
-	.string "Aún me queda mucho por aprender…\p"
+	.string "Aún me queda mucho por aprender...\p"
 	.string "Debo dominar el tipo PSI y enseñárselo\n"
-	.string "to my POKéMON…$"
+	.string "to my POKéMON...$"
 
 SaffronCity_Gym_Text_TyronIntro::
 	.string "Lo entiendes, ¿verdad?\p"

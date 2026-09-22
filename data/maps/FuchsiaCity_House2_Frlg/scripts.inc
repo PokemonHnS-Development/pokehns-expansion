@@ -56,8 +56,8 @@ FuchsiaCity_House2_Text_GoodRodCanCatchBetterMons::
 	.string "catch much better POKéMON.$"
 
 FuchsiaCity_House2_Text_OhThatsDisappointing::
-	.string "Oh…\n"
-	.string "Qué decepción…$"
+	.string "Oh...\n"
+	.string "Qué decepción...$"
 
 FuchsiaCity_House2_Text_HowAreTheFishBiting::
 	.string "¡Hola, {PLAYER}!\p"

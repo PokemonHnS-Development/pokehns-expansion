@@ -181,7 +181,7 @@ SilphCo_11F_Text_GiovanniIntro::
 	.string "El PRESIDENTE y yo estamos\n"
 	.string "un asunto de negocios vital.\p"
 	.string "No te metas en asuntos de\n"
-	.string "matters…\p"
+	.string "matters...\p"
 	.string "adultos, ¡o sufrirás!$"
 
 SilphCo_11F_Text_GiovanniDefeat::
@@ -201,7 +201,7 @@ SilphCo_11F_Text_Grunt2Intro::
 	.string "Don't you move!$"
 
 SilphCo_11F_Text_Grunt2Defeat::
-	.string "Don't…\n"
+	.string "Don't...\n"
 	.string "¡Por favor!$"
 
 SilphCo_11F_Text_Grunt2PostBattle::
@@ -216,7 +216,7 @@ SilphCo_11F_Text_Grunt1Defeat::
 	.string "Demolished!$"
 
 SilphCo_11F_Text_Grunt1PostBattle::
-	.string "Cuidado por donde pisas…\n"
+	.string "Cuidado por donde pisas...\n"
 	.string "My BOSS likes his POKéMON tough!$"
 
 SilphCo_11F_Text_MonitorHasMonsOnIt::

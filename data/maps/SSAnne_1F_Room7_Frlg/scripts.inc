@@ -7,12 +7,12 @@ SSAnne_1F_Room7_EventScript_Thomas::
 	end
 
 SSAnne_1F_Room7_Text_ThomasIntro::
-	.string "Solo soy un viajero solitario…\p"
+	.string "Solo soy un viajero solitario...\p"
 	.string "Mis únicos compañeros y amigos\n"
-	.string "POKéMON I caught on my journeys…$"
+	.string "POKéMON I caught on my journeys...$"
 
 SSAnne_1F_Room7_Text_ThomasDefeat::
-	.string "Mis… mis amigos…$"
+	.string "Mis... mis amigos...$"
 
 SSAnne_1F_Room7_Text_ThomasPostBattle::
 	.string "¡Debes ser amable con tus amigos!$"

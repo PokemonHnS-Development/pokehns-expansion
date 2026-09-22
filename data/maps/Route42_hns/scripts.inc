@@ -254,7 +254,7 @@ Route42_Text_PokemaniacShaneSeen:
 
 Route42_Text_PokemaniacShaneBeaten:
 	.string "Debí haber usado mi\n"
-	.string "PIEDRA LUNAR…$"
+	.string "PIEDRA LUNAR...$"
 
 Route42_Text_PokemaniacShaneAfter:
 	.string "¿Trabajas en una POKéDEX?\p"

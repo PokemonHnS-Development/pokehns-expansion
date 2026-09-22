@@ -1389,7 +1389,7 @@ LilycoveCity_ContestLobby_Text_ReceptionDontHavePokeblockCase:
 
 LilycoveCity_ContestLobby_Text_NowThatWeveClearedThatUp:
 	.string "Bien, ahora que hemos aclarado eso\n"
-	.string "up…\p"
+	.string "up...\p"
 	.string "¡Hola!\p"
 	.string "Este es el mostrador de recepción\n"
 	.string "CONCURSOS POKéMON.$"
@@ -1468,7 +1468,7 @@ LilycoveCity_ContestLobby_Text_EnterWhichPokemon1:
 LilycoveCity_ContestLobby_Text_MonNotQualifiedForRank:
 	.string "Lo siento mucho, pero tu POKéMON\n"
 	.string "aún no está calificado para competir\l"
-	.string "en este Rango…$"
+	.string "en este Rango...$"
 
 LilycoveCity_ContestLobby_Text_EggCannotTakePart:
 	.string "Lo siento, pero un HUEVO no puede\n"
@@ -1476,7 +1476,7 @@ LilycoveCity_ContestLobby_Text_EggCannotTakePart:
 
 LilycoveCity_ContestLobby_Text_MonInNoConditionForContest:
 	.string "Tu POKéMON no parece estar en\n"
-	.string "condiciones para un CONCURSO…$"
+	.string "condiciones para un CONCURSO...$"
 
 LilycoveCity_ContestLobby_Text_AlreadyWonEnterAnyway:
 	.string "Oh, pero esa CINTA...\p"
@@ -1536,7 +1536,7 @@ ContestHall_Text_SeenContestantsAudienceWillVote:
 	.string "comience la votación!$"
 
 ContestHall_Text_VotingUnderWay:
-	.string "Voting under way…$"
+	.string "Voting under way...$"
 
 ContestHall_Text_VotingCompleteLetsAppeal:
 	.string "¡La votación ha terminado!\p"
@@ -1637,10 +1637,10 @@ LilycoveCity_ContestLobby_Text_EnterWhichPokemon2:
 	.string "¿Qué POKéMON quieres inscribir?$"
 
 LilycoveCity_ContestLobby_Text_Transmitting:
-	.string "Transmitting…$"
+	.string "Transmitting...$"
 
 LilycoveCity_ContestLobby_Text_TransmissionError:
-	.string "Transmission error…$"
+	.string "Transmission error...$"
 
 LilycoveCity_ContestLobby_Text_PlayersChoseDifferentContest:
 	.string "Puede que hayas elegido un\n"
@@ -1652,7 +1652,7 @@ LilycoveCity_ContestLobby_Text_PlayersMadeDifferentChoice:
 
 LilycoveCity_ContestLobby_Text_PleaseWaitBButtonCancel:
 	.string "Espera, por favor.\n"
-	.string "… … Botón B: Cancelar$"
+	.string "... ... Botón B: Cancelar$"
 
 @ Unused
 LilycoveCity_ContestLobby_Text_ParticipateAnotherTime2:
@@ -1689,7 +1689,7 @@ LilycoveCity_ContestLobby_Text_EnterWhichContest3:
 
 LilycoveCity_ContestLobby_Text_MonInNoCondition2:
 	.string "Tu POKéMON no parece estar en\n"
-	.string "condiciones para un CONCURSO…$"
+	.string "condiciones para un CONCURSO...$"
 
 LilycoveCity_ContestLobby_Text_EggCannotTakePart2:
 	.string "Lo siento, pero un HUEVO no puede\n"

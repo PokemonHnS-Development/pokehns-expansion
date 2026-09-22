@@ -128,7 +128,7 @@ TwoIsland_House_Text_TeachMonMoveForMushroom::
 	.string "a move to one POKéMON.$"
 
 TwoIsland_House_Text_WantMeToTeachMove::
-	.string "Sniff, sniff…\n"
+	.string "Sniff, sniff...\n"
 	.string "¡Hm! ¡Hueles a HONGOS!\p"
 	.string "¿Quieres que te enseñe un\n"
 	.string "to a POKéMON of yours?$"

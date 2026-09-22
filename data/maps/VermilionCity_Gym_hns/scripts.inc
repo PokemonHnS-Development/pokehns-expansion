@@ -375,11 +375,11 @@ VermilionGym_Text_JugglerHortonSeen:
 	.string "¡Prepárate para el impacto!$"
 
 VermilionGym_Text_JugglerHortonBeaten:
-	.string "¡Guaah! Me dominaron…$"
+	.string "¡Guaah! Me dominaron...$"
 
 VermilionGym_Text_JugglerHortonAfter:
 	.string "No te confíes demasiado por\n"
-	.string "haberme vencido…\p"
+	.string "haberme vencido...\p"
 	.string "LT.SURGE es fuerte.$"
 
 VermilionCity_Gym_Text_GymGuyAdvice::

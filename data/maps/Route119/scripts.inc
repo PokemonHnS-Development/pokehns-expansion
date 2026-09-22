@@ -516,7 +516,7 @@ Route119_Text_BrendanIntro:
 	.string "¡Es una batalla, así que lucha!$"
 
 Route119_Text_BrendanDefeat:
-	.string "Hmm…\n"
+	.string "Hmm...\n"
 	.string "Te has vuelto bastante decente.$"
 
 Route119_Text_BrendanIllGiveYouThis:
@@ -549,8 +549,8 @@ Route119_Text_ScottWayToGoBeSeeingYou:
 
 
 Route119_Text_ScottYouWonAtFortreeGym:
-	.string "… … … … … …\n"
-	.string "… … … … … ¡Bip!\p"
+	.string "... ... ... ... ... ...\n"
+	.string "... ... ... ... ... ¡Bip!\p"
 	.string "SCOTT: ¡Hola, {PLAYER}{KUN}, soy yo!\p"
 	.string "Tal como pensé, ganaste en el\n"
 	.string "GIMNASIO DE FORTREE.\p"
@@ -560,7 +560,7 @@ Route119_Text_ScottYouWonAtFortreeGym:
 	.string "Recuerda que tienes un fan en mí.\n"
 	.string "Te apoyaré desde la barrera.\l"
 	.string "¡Sigue así de bien!\p"
-	.string "… … … … … …\n"
+	.string "... ... ... ... ... ...\n"
 	.string "... ... ... ... ... ¡Click!$"
 
 Route119_Text_StayAwayFromWeatherInstitute:
@@ -580,11 +580,11 @@ Route119_Text_ThoughtFlyByCatchingBirdMons:
 	.string "¡Pero resulta que hay un movimiento\n"
 	.string "MO llamado VUELO!\p"
 	.string "Ojalá lo hubiera sabido hace tiempo\n"
-	.string "hace tiempo…$"
+	.string "hace tiempo...$"
 
 Route119_Text_TallGrassSnaresBikeTires:
-	.string "Tch…\n"
-	.string "No se puede…\p"
+	.string "Tch...\n"
+	.string "No se puede...\p"
 	.string "La hierba alta atrapa la BICICLETA.\n"
 	.string "No puedes ir en bici por aquí.$"
 

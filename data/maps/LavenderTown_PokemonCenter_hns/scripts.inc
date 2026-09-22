@@ -40,7 +40,7 @@ LavenderTown_PokemonCenter1F_Text_Youngster:
 	.string "Si la CENTRAL ELÉCTRICA no\n"
 	.string "funciona, el TREN MAGNÉTICO\p"
 	.string "tampoco... Y la ESTACIÓN DE RADIO\n"
-	.string "no puede transmitir…$"
+	.string "no puede transmitir...$"
 
 LavenderTown_PokemonCenter1F_Text_Youngster_ReturnedMachinePart:
 	.string "El DIRECTOR de la ESTACIÓN DE RADIO\n"

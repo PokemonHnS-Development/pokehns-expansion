@@ -149,7 +149,7 @@ CeladonCity_Condominiums_RoofRoom_Text_ExplainUnionRoom::
 
 CeladonCity_Condominiums_RoofRoom_Text_PamphletOnTMs::
 	.string "Es un folleto sobre las MT.\p"
-	.string "… …\p"
+	.string "... ...\p"
 	.string "En total hay cincuenta MT.\p"
 	.string "Tambien hay siete MT que\n"
 	.string "Se puede usar repetidamente.\p"

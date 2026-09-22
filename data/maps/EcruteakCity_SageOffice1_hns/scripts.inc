@@ -104,9 +104,9 @@ EcruteakTinTowerEntrance_Text_SageNoClearBell:
 	.string "Ha ocurrido un evento importante.\p"
 	.string "Perdone, pero debo pedirle que\n"
 	.string "se retire.\p"
-	.string "…Lo que calma el alma…\p"
+	.string "...Lo que calma el alma...\p"
 	.string "El TRÍO SABIO dice cosas que son\n"
-	.string "muy difíciles de entender…$"
+	.string "muy difíciles de entender...$"
 
 EcruteakTinTowerEntrance_Text_SageHearsClearBell1:
 	.string "Ha ocurrido un evento importante.\p"
@@ -116,12 +116,12 @@ EcruteakTinTowerEntrance_Text_SageHearsClearBell1:
 EcruteakTinTowerEntrance_Text_SageHearsClearBell2:
 	.string "Ah!\p"
 	.string "¡El sonido de esa CAMPANA CLARA!\p"
-	.string "¡Es… es sublime!\p"
+	.string "¡Es... es sublime!\p"
 	.string "¡Nunca había escuchado un sonido\n"
 	.string "tan hermoso!\p"
 	.string "El tañido de esa campana indica\n"
 	.string "el alma de quien la lleva.\p"
-	.string "Tú…\p"
+	.string "Tú...\p"
 	.string "Tú podrías ser capaz de cruzar la\n"
 	.string "TORRE CAMPANA.\p"
 	.string "Por favor, continúa.$"
@@ -132,7 +132,7 @@ EcruteakTinTowerEntrance_Text_SagePleaseDoGoOn:
 EcruteakTinTowerEntrance_Text_SageDone:
 	.string "El tañido de esa campana indica\n"
 	.string "el alma de quien la lleva.\p"
-	.string "Tú…\n"
+	.string "Tú...\n"
 	.string "Realmente son dignos.$"
 
 EcruteakTinTowerEntrance_Text_WanderingSage:

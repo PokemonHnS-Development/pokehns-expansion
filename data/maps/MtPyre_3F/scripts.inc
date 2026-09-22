@@ -39,7 +39,7 @@ MtPyre_3F_Text_WilliamIntro:
 	.string "¿Sueñas con ganar?$"
 
 MtPyre_3F_Text_WilliamDefeat:
-	.string "Me hundo en la lástima…$"
+	.string "Me hundo en la lástima...$"
 
 MtPyre_3F_Text_WilliamPostBattle:
 	.string "Mis poderes psíquicos seguro\n"
@@ -51,7 +51,7 @@ MtPyre_3F_Text_KaylaIntro:
 	.string "¡y menos para ti!$"
 
 MtPyre_3F_Text_KaylaDefeat:
-	.string "Perdí eso limpiamente…$"
+	.string "Perdí eso limpiamente...$"
 
 MtPyre_3F_Text_KaylaPostBattle:
 	.string "Esto significa que mi entreno no\n"
@@ -77,7 +77,7 @@ MtPyre_3F_Text_GabriellePostBattle:
 
 MtPyre_3F_Text_GabrielleRegister:
 	.string "Me gustaría ver a tus POKéMON\n"
-	.string "cuando crezcan un poco más…\p"
+	.string "cuando crezcan un poco más...\p"
 	.string "Por favor, deja que vea tu POKéNAV.$"
 
 MtPyre_3F_Text_GabrielleRematchIntro:

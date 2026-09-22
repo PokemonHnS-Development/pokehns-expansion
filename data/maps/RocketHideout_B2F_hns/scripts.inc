@@ -656,7 +656,7 @@ RocketHideout_B2F_Text_LanceMonMaster:
     .string "difícil.\p"
     .string "Sabiendo eso, ¿seguirás\n"
     .string "adelante?\p"
-    .string "…\p"
+    .string "...\p"
     .string "Ya veo. No, tienes razón.\p"
     .string "Si te rindieras tan fácil,\n"
     .string "jamás habrías perseguido ese\l"
@@ -788,7 +788,7 @@ RocketHideout_B2F_Text_GruntM18Seen:
     .string "esto, pero debo eliminarte.$"
 
 RocketHideout_B2F_Text_GruntM18Beaten:
-    .string "I knew I'd lose…$"
+    .string "I knew I'd lose...$"
 
 RocketHideout_B2F_Text_GruntM18After:
     .string "Me barrieron en la última\n"
@@ -796,7 +796,7 @@ RocketHideout_B2F_Text_GruntM18After:
     .string "Cuando robábamos POKéMON,\n"
     .string "un chico de pelo rojo largo y\l"
     .string "mirada malvada simplemente\l"
-    .string "me aplastó…$"
+    .string "me aplastó...$"
 
 RocketHideout_B2F_EventScript_Grunt15::
 	trainerbattle_single TRAINER_GRUNT_15_HNS, RocketHideout_B2F_Text_GruntM18Seen, RocketHideout_B2F_Text_GruntM18Beaten
@@ -807,7 +807,7 @@ RocketHideout_B2F_Text_GruntM19Seen:
     .string "¡Mocoso repugnante!$"
 
 RocketHideout_B2F_Text_GruntM19Beaten:
-    .string "Grrrr…$"
+    .string "Grrrr...$"
 
 RocketHideout_B2F_Text_GruntM19After:
     .string "Je, solo el jefe sabe la\n"

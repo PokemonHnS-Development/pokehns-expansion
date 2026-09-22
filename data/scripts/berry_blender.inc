@@ -8,7 +8,7 @@ BerryBlender_Text_Excellent:
 	.string "Excellent!$"
 
 BerryBlender_Text_MadeOldTimerSad:
-	.string "Oh…\n"
+	.string "Oh...\n"
 	.string "Has puesto triste a este viejo...$"
 
 BerryBlender_Text_KnowHowToMakePokeblocks:
@@ -95,7 +95,7 @@ BerryBlender_Text_DontHaveAnyBerries2:
 	.string "Oh, pero espera un segundo...\n"
 	.string "No tienes BAYAS.\p"
 	.string "No puedes hacer {POKEBLOCK}S sin\n"
-	.string "BAYAS…\p"
+	.string "BAYAS...\p"
 	.string "Estaremos aquí cuando consigas\n"
 	.string "algunas BAYAS para mezclar.$"
 
@@ -179,7 +179,7 @@ BerryBlender_Text_SaveGameBeforeBerryBlenderLink:
 
 BerryBlender_Text_SearchingForFriends:
 	.string "Buscando a tus amigos...\n"
-	.string "… … Botón B: Cancelar$"
+	.string "... ... Botón B: Cancelar$"
 
 BerryBlender_Text_Player1Arrived:
 	.string "{STR_VAR_1} arrived.$"

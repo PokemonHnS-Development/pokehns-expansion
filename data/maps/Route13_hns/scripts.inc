@@ -141,7 +141,7 @@ Route13_Text_AlexRematchIntro:
 	.string "¡A luchar!$"
 
 Route13_Text_AlexRematchDefeat:
-	.string "Destronado otra vez…$"
+	.string "Destronado otra vez...$"
 
 Route13_Text_AlexPostRematch:
 	.string "Tal vez solo soy un peón al final.$"
@@ -186,7 +186,7 @@ Route13_Text_HikerKennySeen:
 	.string "atrapar un ONIX.$"
 
 Route13_Text_HikerKennyBeaten:
-	.string "I lost…$"
+	.string "I lost...$"
 
 Route13_Text_HikerKennyAfterBattle:
 	.string "Parece que las formaciones\n"
@@ -203,7 +203,7 @@ Route13_Text_KennyRematchIntro:
 	.string "¡Vamos!$"
 
 Route13_Text_KennyRematchDefeat:
-	.string "Aún no es suficiente…$"
+	.string "Aún no es suficiente...$"
 
 Route13_Text_KennyPostRematch:
 	.string "El poder POKéMON es como la\n"

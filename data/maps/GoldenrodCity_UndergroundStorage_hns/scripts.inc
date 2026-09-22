@@ -53,7 +53,7 @@ RadioTowerBasement_Text_GruntM24Seen:
     .string "me encargaré de ti.$"
 
 RadioTowerBasement_Text_GruntM24Beaten:
-    .string "Me derrotaron…$"
+    .string "Me derrotaron...$"
 
 RadioTowerBasement_Text_GruntM24After:
     .string "EL TEAM ROCKET seguirá, esperando\n"
@@ -107,5 +107,5 @@ RadioTowerBasement_Text_DirectorAfter:
     .string "¡Podrían controlar a los\n"
     .string "POKéMON con una señal especial!\p"
     .string "Eres el único al que puedo acudir.\p"
-    .string "Por favor, salva la RADIO TOWER…\p"
+    .string "Por favor, salva la RADIO TOWER...\p"
     .string "¡Y todos los POKéMON del país!$"

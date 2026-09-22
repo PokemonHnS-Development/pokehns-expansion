@@ -340,14 +340,14 @@ Alola_Ulaula_TotemBattle_Text_0:
 
 Alola_Ulaula_TotemBattle_Text_1:
 	.string "¡El TANGROWTH Tótem cayó!\n"
-	.string "Salió corriendo a algún lugar…$"
+	.string "Salió corriendo a algún lugar...$"
 
 Alola_Ulaula_TotemBattle_Text_2:
 	.string "¡Graah!$"
 
 Alola_Ulaula_TotemBattle_Text_3:
 	.string "¡El PRIMEAPE Tótem cayó!\n"
-	.string "Salió corriendo a algún lugar…$"
+	.string "Salió corriendo a algún lugar...$"
 
 UlaUla_Forest_hns_Movement_FacePlayerUpAfterTotemWarp:
 	face_up
@@ -356,7 +356,7 @@ UlaUla_Forest_hns_Movement_FacePlayerUpAfterTotemWarp:
 
 Alola_Ulaula_Totem_sign_Text_0:
 	.string "El tótem emana una energía\n"
-	.string "muy fuerte…\p"
+	.string "muy fuerte...\p"
 	.string "¿Tocas el tótem para teletransportarte\n"
 	.string "a otra isla?$"
 
@@ -377,7 +377,7 @@ Alola_Ulaula_Totem_sign_Text_5:
 
 Alola_Ulaula_Totem_sign_Text_6:
 	.string "Hay un tótem extraño aquí,\n"
-	.string "emana un gran poder de él…$"
+	.string "emana un gran poder de él...$"
 
 Alola_Ulaula_BattleVsTapuBulu_Text_0:
 	.string "¡Bu-Bulu!$"

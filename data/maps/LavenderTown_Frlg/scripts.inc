@@ -51,11 +51,11 @@ LavenderTown_Text_DoYouBelieveInGhosts::
 
 LavenderTown_Text_SoThereAreBelievers::
 	.string "Really?\n"
-	.string "Así que hay creyentes…$"
+	.string "Así que hay creyentes...$"
 
 LavenderTown_Text_JustImaginingWhiteHand::
 	.string "Jajaja, supongo que no.\p"
-	.string "Esa mano blanca en tu hombro…\n"
+	.string "Esa mano blanca en tu hombro...\n"
 	.string "Solo me lo estoy imaginando.$"
 
 LavenderTown_Text_TownKnownAsMonGraveSite::

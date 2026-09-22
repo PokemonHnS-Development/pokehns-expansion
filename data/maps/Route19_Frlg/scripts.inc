@@ -81,8 +81,8 @@ Route19_Text_AnyaDefeat::
 
 Route19_Text_AnyaPostBattle::
 	.string "Todavía falta mucho para\n"
-	.string "SEAFOAM ISLANDS…\p"
-	.string "Quiero volver a FUCSIA…$"
+	.string "SEAFOAM ISLANDS...\p"
+	.string "Quiero volver a FUCSIA...$"
 
 Route19_Text_AliceIntro::
 	.string "¡Nadar es genial!\n"
@@ -105,14 +105,14 @@ Route19_Text_AxleDefeat::
 
 Route19_Text_AxlePostBattle::
 	.string "acalambraron!\n"
-	.string "Glub, glub…$"
+	.string "Glub, glub...$"
 
 Route19_Text_ConnieIntro::
-	.string "Nadé hasta aquí con mis amigos…\n"
-	.string "I'm tired…$"
+	.string "Nadé hasta aquí con mis amigos...\n"
+	.string "I'm tired...$"
 
 Route19_Text_ConnieDefeat::
-	.string "I'm exhausted…$"
+	.string "I'm exhausted...$"
 
 Route19_Text_ConniePostBattle::
 	.string "If I were to ride a POKéMON on\n"

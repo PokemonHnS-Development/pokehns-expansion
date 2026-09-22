@@ -27,7 +27,7 @@ sText_MysteryGiftVisitingTrainerInstructions:
 	.string "en un POKéMON MART.\p"
 	.string "Usa las encuestas para invitar\n"
 	.string "ENTRENADORES a CIUDAD ARRECIFE.\p"
-	.string "…Déjame darte una contraseña\n"
+	.string "...Déjame darte una contraseña\n"
 	.string "secreta para una encuesta:\p"
 	.string "“DAME UN\n"
 	.string "ENTRENADOR GENIAL”\p"

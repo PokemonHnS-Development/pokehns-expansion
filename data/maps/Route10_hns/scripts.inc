@@ -91,8 +91,8 @@ Route10_Text_PokefanmRobertBeaten:
 	.string "Tendría que decir que es mi derrota.$"
 
 Route10_Text_PokefanmRobertAfter:
-	.string "Mira lo que le hiciste a mi POKéMON…\p"
-	.string "No olvidaré esto…$"
+	.string "Mira lo que le hiciste a mi POKéMON...\p"
+	.string "No olvidaré esto...$"
 
 Route10_Text_PowerPlant:
 	.string "POWER PLANT$"

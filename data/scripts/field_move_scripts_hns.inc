@@ -560,7 +560,7 @@ EventScript_FailSweetScent::
 	end
 
 Text_FailSweetScent:
-	.string "Parece que no hay nada aquí…$"
+	.string "Parece que no hay nada aquí...$"
 
 EventScript_DigCommon:
 	isfollowerfieldmoveuser VAR_0x8004

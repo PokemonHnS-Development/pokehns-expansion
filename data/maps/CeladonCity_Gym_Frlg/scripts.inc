@@ -84,10 +84,10 @@ CeladonCity_Gym_EventScript_GymStatuePostVictory::
 	end
 
 CeladonCity_Gym_Text_ErikaIntro::
-	.string "Hello…\n"
+	.string "Hello...\n"
 	.string "Hace un día precioso, ¿verdad?\l"
-	.string "Es tan agradable…\p"
-	.string "…Oh, dear…\n"
+	.string "Es tan agradable...\p"
+	.string "...Oh, dear...\n"
 	.string "Debí quedarme dormido. Bienvenido.\p"
 	.string "Me llamo ERIKA.\n"
 	.string "Soy la LÍDER del GIMNASIO CELESTE.\p"
@@ -95,7 +95,7 @@ CeladonCity_Gym_Text_ErikaIntro::
 	.string "el arreglo floral.\p"
 	.string "Mis POKéMON son únicamente de\n"
 	.string "GRASS type.\p"
-	.string "…Oh, lo siento, no tenía idea de que\n"
+	.string "...Oh, lo siento, no tenía idea de que\n"
 	.string "querías retarme.\p"
 	.string "Muy bien, pero no perderé.{PLAY_BGM MUS_RG_ENCOUNTER_GYM_LEADER}$"
 
@@ -159,15 +159,15 @@ CeladonCity_Gym_Text_BridgetPostBattle::
 	.string "and GROUND-type POKéMON.$"
 
 CeladonCity_Gym_Text_TinaIntro::
-	.string "…¿No estabas espiando aquí\n"
+	.string "...¿No estabas espiando aquí\n"
 	.string "earlier?$"
 
 CeladonCity_Gym_Text_TinaDefeat::
 	.string "¡Eres toda una revelación!$"
 
 CeladonCity_Gym_Text_TinaPostBattle::
-	.string "Oh, estabas mirando a ERIKA…\n"
-	.string "No me mirabas…$"
+	.string "Oh, estabas mirando a ERIKA...\n"
+	.string "No me mirabas...$"
 
 CeladonCity_Gym_Text_TamiaIntro::
 	.string "Look, look!\n"

@@ -184,7 +184,7 @@ Text_Telephone::
 
 Text_Computer::
 	.string "Son palabras complicadas y\n"
-	.string "números que no tienen sentido…$"
+	.string "números que no tienen sentido...$"
 
 Text_AdvertisingPoster::
 	.string "Es un póster publicitario de\n"
@@ -195,8 +195,8 @@ Text_TastyFood::
 	.string "¡Me dará hambre de solo olerlo!$"
 
 Text_TrashBin::
-	.string "Dentro de esto…\n"
-	.string "……\p"
+	.string "Dentro de esto...\n"
+	.string "......\p"
 	.string "¡No hay nada aquí!$"
 
 Text_Cup::
@@ -207,7 +207,7 @@ Text_PolishedWindow::
 	.string "La ventana está muy limpia.$"
 
 Text_BeautifulSkyWindow::
-	.string "Fuera de la ventana…\p"
+	.string "Fuera de la ventana...\p"
 	.string "El cielo se ve fantásticamente\n"
 	.string "bello.$"
 

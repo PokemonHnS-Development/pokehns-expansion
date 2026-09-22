@@ -348,7 +348,7 @@ NewBarkTown_PlayersHouse_1F_Text_MomsFriend:
 NewBarkTown_PlayersHouse_1F_Text_MomLeaving:
 	.string "MAMÁ: Vaya, qué lindo POKéMON.\n"
 	.string "¿De dónde lo sacaste?\p"
-	.string "…\p"
+	.string "...\p"
 	.string "Así que te vas de aventura...\n"
 	.string "Eso suena muy desafiante...\p"
 	.string "Solo ten mucho cuidado.\p"

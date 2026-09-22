@@ -326,11 +326,11 @@ CherrygroveCity_Text_GuideGentDecline:
 	.string "quieras.$"
 
 CherrygroveCity_Text_RivalSeen:
-	.string "… … … … … … … …\p"
+	.string "... ... ... ... ... ... ... ...\p"
 	.string "Recibiste un POKéMON en el LAB.\p"
 	.string "Qué desperdicio.\n"
 	.string "Un debilucho como tú.\p"
-	.string "… … … … … … … …\p"
+	.string "... ... ... ... ... ... ... ...\p"
 	.string "¿No entiendes lo que digo?\n"
 	.string "Bueno, yo también tengo un buen\p"
 	.string "POKéMON. ¡Te lo demostraré!$"
@@ -339,7 +339,7 @@ CherrygroveCity_Text_SilverWin:
 	.string "Bah. ¿Estás feliz de haber ganado?$"
 
 CherrygroveCity_Text_RivalAfter:
-	.string "… … … … … … … …\p"
+	.string "... ... ... ... ... ... ... ...\p"
 	.string "¿Quieres saber quién soy?\p"
 	.string "Voy a ser el mejor\n"
 	.string "ENTRENADOR POKéMON del mundo.$"

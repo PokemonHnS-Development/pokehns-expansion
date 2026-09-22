@@ -84,7 +84,7 @@ CharcoalKiln_Text_Boss1:
 	.string "quedarnos dentro.$"
 
 CharcoalKiln_Text_Boss2:
-	.string "Los SLOWPOKE han vuelto…$"
+	.string "Los SLOWPOKE han vuelto...$"
 
 CharcoalKiln_Text_Boss3:
 	.string "Los SLOWPOKE han vuelto...\p"

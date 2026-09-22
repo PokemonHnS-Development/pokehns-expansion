@@ -275,19 +275,19 @@ OlivineCity_Gym_EventScript_Jasmine_Defeated::
 
 
 OlivineCity_Gym_Text_JasmineSteelTypeIntro:
-	.string "…Gracias por tu ayuda en el\n"
-	.string "FARO…\p"
+	.string "...Gracias por tu ayuda en el\n"
+	.string "FARO...\p"
 	.string "Pero esto es diferente.\n"
 	.string "Permíteme presentarme.\p"
 	.string "Soy JASMINE, LÍDER de GIMNASIO.\n"
 	.string "Uso el tipo ACERO.\p"
-	.string "…¿Sabes algo del tipo ACERO?\p"
+	.string "...¿Sabes algo del tipo ACERO?\p"
 	.string "Es un tipo que fue descubierto\n"
 	.string "hace muy poco.\p"
-	.string "…Este… ¿Puedo empezar?$"
+	.string "...Este... ¿Puedo empezar?$"
 
 OlivineCity_Gym_Text_JasmineBetterTrainer:
-	.string "…Eres mejor entrenador que yo,\n"
+	.string "...Eres mejor entrenador que yo,\n"
 	.string "en habilidad y en bondad.\p"
 	.string "Según las reglas de la LIGA,\n"
 	.string "te concedo esta MEDALLA.$"
@@ -298,25 +298,25 @@ OlivineCity_Gym_Text_ReceivedMineralBadge:
 OlivineCity_Gym_Text_JasmineBadgeSpeech:
 	.string "MEDALLA MINERAL sube la \n"
 	.string "DEFENSA ESPECIAL de POKéMON.\p"
-	.string "…Este… Toma esto también…$"
+	.string "...Este... Toma esto también...$"
 
 OlivineCity_Gym_Text_JasmineIronTailSpeech:
-	.string "…Puedes usar esa MT para enseñar\n"
+	.string "...Puedes usar esa MT para enseñar\n"
 	.string "COLA FÉRREA.$"
 
 OlivineCity_Gym_Text_JasmineGoodLuck:
-	.string "Este… No sé cómo decir esto,\n"
-	.string "pero buena suerte…$"
+	.string "Este... No sé cómo decir esto,\n"
+	.string "pero buena suerte...$"
 
 OlivineCity_Gym_Text_JasmineRematchText:
-	.string "…Felicidades, CAMPEÓN DE JOHTO.\p"
-	.string "Te has vuelto muy fuerte…\p"
+	.string "...Felicidades, CAMPEÓN DE JOHTO.\p"
+	.string "Te has vuelto muy fuerte...\p"
 	.string "Me pregunto si mejoré.\p"
 	.string "¿Quieres ponerlo a prueba?\p"
 	.string "¿Quieres otra revancha conmigo?$"
 
 OlivineCity_Gym_Text_JasmineRematchDefeatText:
-	.string "…Eres mejor entrenador que yo,\n"
+	.string "...Eres mejor entrenador que yo,\n"
 	.string "en habilidad y bondad.$"
 
 OlivineCity_Gym_EventScript_Statue::
@@ -369,7 +369,7 @@ OlivineCity_Gym_EventScript_JasmineTradeCompleted::
 	end
 
 OlivineCity_Gym_Text_JasmineWantToTrade:
-	.string "…Este, {PLAYER}…\n"
+	.string "...Este, {PLAYER}...\n"
 	.string "Tengo algo que preguntarte.\p"
 	.string "He criado a este STEELIX desde que\n"
 	.string "era un pequeño ONIX.\p"

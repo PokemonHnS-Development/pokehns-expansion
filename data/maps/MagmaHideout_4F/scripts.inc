@@ -160,7 +160,7 @@ MagmaHideout_4F_Text_Grunt13Defeat:
 	.string "¿Fui tan fácil de derribar?$"
 
 MagmaHideout_4F_Text_Grunt13PostBattle:
-	.string "¡V-vamos, una más…$"
+	.string "¡V-vamos, una más...$"
 
 MagmaHideout_4F_Text_TabithaIntro:
 	.string "¡Jejeje!\n"
@@ -174,21 +174,21 @@ MagmaHideout_4F_Text_TabithaIntro:
 
 MagmaHideout_4F_Text_TabithaDefeat:
 	.string "Me derrotaron otra vez...\n"
-	.string "Jeje…$"
+	.string "Jeje...$"
 
 MagmaHideout_4F_Text_TabithaPostBattle:
-	.string "…Y mientras perdías tiempo conmigo,\n"
-	.string "MAXIE debió despertar a GROUDON…$"
+	.string "...Y mientras perdías tiempo conmigo,\n"
+	.string "MAXIE debió despertar a GROUDON...$"
 
 MagmaHideout_4F_Text_MaxieAwakenGroudon:
-	.string "MAXIE: GROUDON…\p"
+	.string "MAXIE: GROUDON...\p"
 	.string "Nada podría despertarte de tu\n"
-	.string "sueño bañado en magma…\p"
+	.string "sueño bañado en magma...\p"
 	.string "Este ORBE AZUL es lo que buscabas.\n"
 	.string "¿No es así?\p"
 	.string "Te he traído el ORBE AZUL.\n"
 	.string "¡Que su brillo te despierte!\p"
-	.string "Y muéstrame…\n"
+	.string "Y muéstrame...\n"
 	.string "¡Muéstrame todo tu poder!$"
 
 MagmaHideout_4F_Text_MaxieGroudonWhatsWrong:
@@ -214,8 +214,8 @@ MagmaHideout_4F_Text_MaxieImGoingAfterGroudon:
 	.string "por la que GROUDON huyó...\p"
 	.string "Eso es lo que intentas decir,\n"
 	.string "¿verdad?\p"
-	.string "… … … … … …\n"
-	.string "… … … … … …\p"
+	.string "... ... ... ... ... ...\n"
+	.string "... ... ... ... ... ...\p"
 	.string "Humph...\n"
 	.string "¿Crees que yo no lo sabía?\p"
 	.string "Sin GROUDON, ya no hay\n"

@@ -14,12 +14,12 @@ ThreeIsland_BondBridge_Text_NikkiIntro::
 	.string "Me alegra el corazón.$"
 
 ThreeIsland_BondBridge_Text_NikkiDefeat::
-	.string "…Sniff, sniff…\n"
-	.string "Something smells unpleasant…$"
+	.string "...Sniff, sniff...\n"
+	.string "Something smells unpleasant...$"
 
 ThreeIsland_BondBridge_Text_NikkiPostBattle::
 	.string "Quizá ese olor es tu sudor\n"
-	.string "POKéMON's body odor…$"
+	.string "POKéMON's body odor...$"
 
 ThreeIsland_BondBridge_Text_VioletIntro::
 	.string "¿A dónde vas con tanta\n"
@@ -74,7 +74,7 @@ ThreeIsland_BondBridge_Text_JoyIntro::
 	.string "favorite POKéMON is!$"
 
 ThreeIsland_BondBridge_Text_JoyDefeat::
-	.string "JOY: Ohh…\n"
+	.string "JOY: Ohh...\n"
 	.string "MEG!$"
 
 ThreeIsland_BondBridge_Text_JoyPostBattle::
@@ -91,7 +91,7 @@ ThreeIsland_BondBridge_Text_MegIntro::
 	.string "POKéMON.$"
 
 ThreeIsland_BondBridge_Text_MegDefeat::
-	.string "MEG: Ohh…\n"
+	.string "MEG: Ohh...\n"
 	.string "JOY!$"
 
 ThreeIsland_BondBridge_Text_MegPostBattle::

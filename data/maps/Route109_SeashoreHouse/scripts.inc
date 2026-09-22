@@ -171,7 +171,7 @@ Route109_SeashoreHouse_Text_SimonIntro:
 	.string "son mis POKéMON, ¡no llores!$"
 
 Route109_SeashoreHouse_Text_SimonDefeated:
-	.string "…Perdí, pero no lloraré…$"
+	.string "...Perdí, pero no lloraré...$"
 
 Route109_SeashoreHouse_Text_SimonPostBattle:
 	.string "Si uno de mis POKéMON supiera el\n"

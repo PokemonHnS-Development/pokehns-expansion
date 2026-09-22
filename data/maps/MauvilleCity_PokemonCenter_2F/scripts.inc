@@ -28,5 +28,5 @@ MauvilleCity_PokemonCenter_2F_Text_Youngster:
 	.string "Ponen tu récord en la pared\n"
 	.string "para que todos lo vean.\p"
 	.string "Es vergonzoso si pierdes más\n"
-	.string "veces de las que ganas…$"
+	.string "veces de las que ganas...$"
 

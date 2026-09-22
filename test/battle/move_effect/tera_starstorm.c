@@ -18,7 +18,7 @@ SINGLE_BATTLE_TEST("Tera Starstorm changes from Normal-type to Stellar-type if u
         MESSAGE("Terapagos used Tera Starstorm!");
         ANIMATION(ANIM_TYPE_MOVE, MOVE_TERA_STARSTORM, player);
         HP_BAR(opponent);
-        NOT { MESSAGE("It doesn't affect the opposing Misdreavus…"); }
+        NOT { MESSAGE("It doesn't affect the opposing Misdreavus..."); }
     }
 }
 
@@ -76,6 +76,6 @@ SINGLE_BATTLE_TEST("Tera Starstorm remains Normal-type if used by Pokemon other 
         TURN { MOVE(player, MOVE_TERA_STARSTORM, gimmick: GIMMICK_TERA); }
     } SCENE {
         MESSAGE("Wobbuffet used Tera Starstorm!");
-        MESSAGE("It doesn't affect the opposing Misdreavus…");
+        MESSAGE("It doesn't affect the opposing Misdreavus...");
     }
 }

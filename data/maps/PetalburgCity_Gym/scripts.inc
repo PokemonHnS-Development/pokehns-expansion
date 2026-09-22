@@ -1152,7 +1152,7 @@ PetalburgCity_Gym_Text_DadYoureHereWithYourPokemon:
 	.string "¡Lo estaré esperando!$"
 
 PetalburgCity_Gym_Text_WallyIdLikeAPokemon:
-	.string "Um… I…\n"
+	.string "Um... I...\n"
 	.string "Quisiera un POKéMON, por favor...$"
 
 PetalburgCity_Gym_Text_DadOhYoureWallyRight:
@@ -1268,7 +1268,7 @@ PetalburgCity_Gym_Text_NormanIntro:
 	.string "dar lo mejor de ti!$"
 
 PetalburgCity_Gym_Text_NormanDefeat:
-	.string "…\p"
+	.string "...\p"
 	.string "Yo... no puedo...\p"
 	.string "No lo creo. {PLAYER}...\p"
 	.string "¿Perdí contra {PLAYER}?\p"
@@ -1297,9 +1297,9 @@ PetalburgCity_Gym_Text_ExplainFacade:
 
 PetalburgCity_Gym_Text_DadHappyAndSad:
 	.string "PAPÁ: Como LÍDER de GIMNASIO, no\n"
-	.string "puedo expresar lo molesto que estoy…\p"
+	.string "puedo expresar lo molesto que estoy...\p"
 	.string "Pero como padre, me hace sentir\n"
-	.string "feliz y triste a la vez. Es raro…$"
+	.string "feliz y triste a la vez. Es raro...$"
 
 PetalburgCity_Gym_Text_PleaseComeWithMe:
 	.string "Ah, ahí estás, {PLAYER}{KUN}!\pPor favor, ven conmigo.\nTengo algo que quiero darte.$"
@@ -1376,7 +1376,7 @@ PetalburgCity_Gym_Text_ParkerIntro:
 	.string "con tus POKéMON!$"
 
 PetalburgCity_Gym_Text_ParkerDefeat:
-	.string "No pude confundir mucho a tu equipo…\n"
+	.string "No pude confundir mucho a tu equipo...\n"
 	.string "Tienen un vínculo muy fuerte.$"
 
 PetalburgCity_Gym_Text_ParkerPostBattle:
@@ -1389,15 +1389,15 @@ PetalburgCity_Gym_Text_ParkerPostBadge:
 
 PetalburgCity_Gym_Text_GeorgeIntro:
 	.string "Justo cuando crees que vas a\n"
-	.string "ganas, el rival recupera PS…\p"
+	.string "ganas, el rival recupera PS...\p"
 	.string "¿Puedes imaginar lo horrible que\n"
 	.string "debe sentirse?\p"
 	.string "¡Te mostraré exactamente lo mal\n"
 	.string "que se siente!$"
 
 PetalburgCity_Gym_Text_GeorgeDefeat:
-	.string "No pude recuperar suficientes PS…\n"
-	.string "Qué poder de ATAQUE…$"
+	.string "No pude recuperar suficientes PS...\n"
+	.string "Qué poder de ATAQUE...$"
 
 PetalburgCity_Gym_Text_GeorgePostBattle:
 	.string "No esperaba menos del hijo de\n"
@@ -1436,13 +1436,13 @@ PetalburgCity_Gym_Text_BerkePostBadge:
 	.string "se han vuelto más fuertes.$"
 
 PetalburgCity_Gym_Text_MaryIntro:
-	.string "Jejeje…\n"
+	.string "Jejeje...\n"
 	.string "Esta es la SALA DE PRECISIÓN.\p"
 	.string "Es terrible cuando cada ataque\n"
 	.string "acierta sin fallar.$"
 
 PetalburgCity_Gym_Text_MaryDefeat:
-	.string "Fuiste muy superior a mí…$"
+	.string "Fuiste muy superior a mí...$"
 
 PetalburgCity_Gym_Text_MaryPostBattle:
 	.string "Hay algunos aún más fuertes\n"
@@ -1463,7 +1463,7 @@ PetalburgCity_Gym_Text_AlexiaIntro:
 	.string "temerario puedo ser al atacar.$"
 
 PetalburgCity_Gym_Text_AlexiaDefeat:
-	.string "Nuestras defensas no bastaron…$"
+	.string "Nuestras defensas no bastaron...$"
 
 PetalburgCity_Gym_Text_AlexiaPostBattle:
 	.string "Creo que me has dado una lección\n"
@@ -1485,10 +1485,10 @@ PetalburgCity_Gym_Text_JodyIntro:
 	.string "¡El hijo del LÍDER!$"
 
 PetalburgCity_Gym_Text_JodyDefeat:
-	.string "¡Pero… me esforcé al máximo!$"
+	.string "¡Pero... me esforcé al máximo!$"
 
 PetalburgCity_Gym_Text_JodyPostBattle:
-	.string "La forma en que usas tus POKéMON…\n"
+	.string "La forma en que usas tus POKéMON...\n"
 	.string "Es igual al estilo de tu padre.\p"
 	.string "¡Sigue adelante! El LÍDER del GYM,\n"
 	.string "¡tu padre, te espera!$"
@@ -1502,7 +1502,7 @@ PetalburgCity_Gym_Text_JodyPostBadge:
 
 PetalburgCity_Gym_Text_DoorAppearsLocked:
 	.string "Parece que esta puerta está\n"
-	.string "cerrada ahora mismo…$"
+	.string "cerrada ahora mismo...$"
 
 PetalburgCity_Gym_Text_EnterSpeedRoom:
 	.string "El cartel dice: “SALA VELOCIDAD”.\p"
@@ -1511,7 +1511,7 @@ PetalburgCity_Gym_Text_EnterSpeedRoom:
 @ Unused
 PetalburgCity_Gym_Text_DoorAppearsLocked2:
 	.string "Parece que esta puerta está\n"
-	.string "cerrada ahora mismo…$"
+	.string "cerrada ahora mismo...$"
 
 PetalburgCity_Gym_Text_EnterAccuracyRoom:
 	.string "El cartel dice: “SALA PRECISIÓN”.\p"

@@ -492,14 +492,14 @@ PalletTown_Text_OakLetMeSeePokedex::
 	.string "Veamos...$"
 
 PalletTown_Text_CaughtXPuttingInHonestEffort::
-	.string "¡Has atrapado {STR_VAR_2}…\p"
+	.string "¡Has atrapado {STR_VAR_2}...\p"
 	.string "Vaya, parece que te lo estás\n"
 	.string "tomando en serio.\p"
 	.string "Cuando logres llenarlo un poco\n"
 	.string "más, ven a verme, por favor.$"
 
 PalletTown_Text_CaughtXImpressiveFollowMe::
-	.string "¡Has atrapado… {STR_VAR_2}!?\n"
+	.string "¡Has atrapado... {STR_VAR_2}!?\n"
 	.string "¡Esto es impresionante!\p"
 	.string "Hay algo que quería preguntar\n"
 	.string "te, {PLAYER}.\p"
@@ -517,8 +517,8 @@ PalletTown_Text_OakYouEnjoyingTraveling::
 
 @ For the NPC in Pallet Town that talks about the Trainer Tips sign
 PalletTown_Text_HmmIsThatRight::
-	.string "Hmm…\n"
-	.string "¿En serio…?$"
+	.string "Hmm...\n"
+	.string "¿En serio...?$"
 
 PalletTown_Text_OhLookLook::
 	.string "Oh!\n"

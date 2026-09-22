@@ -325,8 +325,8 @@ MauvilleCity_Gym_Text_AngeloIntro:
 	.string "I love shiny things!$"
 
 MauvilleCity_Gym_Text_AngeloDefeat:
-	.string "Oh…\n"
-	.string "Mis ojos están agotados…$"
+	.string "Oh...\n"
+	.string "Mis ojos están agotados...$"
 
 MauvilleCity_Gym_Text_AngeloPostBattle:
 	.string "WATTSON del GIMNASIO de MALDITA\n"
@@ -350,14 +350,14 @@ MauvilleCity_Gym_Text_ExplainDynamoBadgeTakeThis:
 	.string "pueden usar ROMPER ROCAS fuera\p"
 	.string "de combate. Además, hará que tus\n"
 	.string "POKéMON sean un poco más rápidos.\p"
-	.string "Hmm…\n"
+	.string "Hmm...\n"
 	.string "¡También deberías llevarte esto!$"
 
 MauvilleCity_Gym_Text_ExplainShockWave:
 	.string "Esa MT34 contiene ONDA DE CHOQUE.\p"
 	.string "¡Es un movimiento confiable que\n"
 	.string "nunca falla! ¡Puedes contar con él!\p"
-	.string "… … … … … …$"
+	.string "... ... ... ... ... ...$"
 
 MauvilleCity_Gym_Text_RegisteredWattson:
 	.string "LÍDER DE GIMNASIO WATTSON\n"

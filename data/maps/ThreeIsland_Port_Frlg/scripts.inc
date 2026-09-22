@@ -49,10 +49,10 @@ ThreeIsland_Port_Text_ForkOverMoney::
 ThreeIsland_Port_Text_IllCallThePolice::
 	.string "Aiyeeh!\p"
 	.string "¡¿Qu-quién eres?!\n"
-	.string "¡…llamaré a la policía!$"
+	.string "¡...llamaré a la policía!$"
 
 ThreeIsland_Port_Text_ThankGoodnessBikersGone::
-	.string "Those BIKERS…\n"
+	.string "Those BIKERS...\n"
 	.string "¿Ya se fueron?\p"
 	.string "Oh, thank goodness!\n"
 	.string "¡Me aterraron de verdad!$"

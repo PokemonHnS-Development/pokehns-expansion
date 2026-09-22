@@ -70,7 +70,7 @@ MountMortar2_Text_SupernerdMarkusBeaten:
 MountMortar2_Text_SupernerdMarkusAfter:
 	.string "Vine a explorar el MT.MORTAR,\n"
 	.string "pero me separé de mi\l"
-	.string "compañero…\p"
+	.string "compañero...\p"
 	.string "¿Te cruzaste con un ENTRENADOR\n"
 	.string "que use un SEADRA que sepa\l"
 	.string "CASCADA?$"

@@ -380,7 +380,7 @@ TrainerHill_Roof_Text_YouFinallyCameBravo:
 	.string "de la COLINA ENTRENADOR, porque...\p"
 	.string "¡Quieres formar un equipo conmigo!\n"
 	.string "¡Wa-hoo!\p"
-	.string "…Uh?\n"
+	.string "...Uh?\n"
 	.string "¿No es eso?\p"
 	.string "En fin, te vi mientras subías.\n"
 	.string "¡Combates maravillosos! ¡Bravo!$"

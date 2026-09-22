@@ -16,7 +16,7 @@ SSAqua_RoomSW_Text_BeautyCassieSeen:
     .string "¡A luchar!$"
 
 SSAqua_RoomSW_Text_BeautyCassieBeaten:
-    .string "Mi corazón llora…$"
+    .string "Mi corazón llora...$"
 
 SSAqua_RoomSW_Text_BeautyCassieAfterBattle:
     .string "Un viaje es lo mejor para sanar\n"
@@ -33,9 +33,9 @@ SSAqua_RoomSW_Text_GuitaristClydeBeaten:
 
 SSAqua_RoomSW_Text_GuitaristClydeAfterBattleMobile:
     .string "Iba a hacer mi debut en la\n"
-    .string "BATTLE TOWER…\p"
+    .string "BATTLE TOWER...\p"
     .string "Debería volver a VERMILION y\n"
-    .string "repetir mi entrenamiento…$"
+    .string "repetir mi entrenamiento...$"
 
 SSAqua_RoomSW_Text_GuitaristClydeAfterBattle:
     .string "Hablando de la ESTACIÓN DE RADIO,\n"

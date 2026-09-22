@@ -307,7 +307,7 @@ DewfordTown_Gym_Text_TakaoIntro:
 	.string "¡Vamos!$"
 
 DewfordTown_Gym_Text_TakaoDefeat:
-	.string "No hay suficiente energía…$"
+	.string "No hay suficiente energía...$"
 
 DewfordTown_Gym_Text_TakaoPostBattle:
 	.string "¡Tu habilidad superó mi fuerza!\n"
@@ -325,7 +325,7 @@ DewfordTown_Gym_Text_JocelynDefeat:
 DewfordTown_Gym_Text_JocelynPostBattle:
 	.string "No desperdiciaré esta derrota.\n"
 	.string "¡La usaré para motivarme a entrenar!\p"
-	.string "Algún día seré LÍDER de GIMNASIO…\p"
+	.string "Algún día seré LÍDER de GIMNASIO...\p"
 	.string "No, ¡seré el CAMPEÓN de la\n"
 	.string "LIGA POKéMON!$"
 
@@ -341,14 +341,14 @@ DewfordTown_Gym_Text_LauraPostBattle:
 	.string "Lucho en la oscuridad para que mi\n"
 	.string "corazón sea más fuerte.\p"
 	.string "Pero como está tan oscuro, nunca\n"
-	.string "ver la cara de BRAWLY…$"
+	.string "ver la cara de BRAWLY...$"
 
 DewfordTown_Gym_Text_LilithIntro:
-	.string "Ufufu…\n"
+	.string "Ufufu...\n"
 	.string "¿Andas perdido en la oscuridad?$"
 
 DewfordTown_Gym_Text_LilithDefeat:
-	.string "Oh, tú…\n"
+	.string "Oh, tú...\n"
 	.string "¡No quiero conocerte!$"
 
 DewfordTown_Gym_Text_LilithPostBattle:
@@ -412,7 +412,7 @@ DewfordTown_Gym_Text_ExplainBulkUp:
 	.string "Esa MT08 contiene BULK UP.\p"
 	.string "Es un movimiento que sube el ATAQUE\n"
 	.string "y la DEFENSA.\p"
-	.string "… … … … … …$"
+	.string "... ... ... ... ... ...$"
 
 DewfordTown_Gym_Text_RegisteredBrawly:
 	.string "Registré al LÍDER BRAWLY\n"
@@ -433,7 +433,7 @@ DewfordTown_Gym_Text_GymStatueCertified:
 
 DewfordTown_Gym_Text_BrawlyPreRematch:
 	.string "BRAWLY: Una ola puede retroceder,\n"
-	.string "Una ola gigante de talento como tú…\p"
+	.string "Una ola gigante de talento como tú...\p"
 	.string "¡Sabía que volverías!\n"
 	.string "¡Muéstrame cuánto has\p"
 	.string "¡pero muéstrame qué tan alto\n"
@@ -450,7 +450,7 @@ DewfordTown_Gym_Text_BrawlyPostRematch:
 
 DewfordTown_Gym_Text_BrawlyRematchNeedTwoMons:
 	.string "BRAWLY: Una ola puede retroceder,\n"
-	.string "Una ola gigante de talento como tú…\p"
+	.string "Una ola gigante de talento como tú...\p"
 	.string "¡Sabía que volverías!\n"
 	.string "¡Muéstrame cuánto has\p"
 	.string "¿Oh? Solo tienes un POKéMON\n"

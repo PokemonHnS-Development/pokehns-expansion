@@ -282,7 +282,7 @@ BattleFrontier_BattleFactoryBattleRoom_Text_NextTimeNoHoldsBarred_hns:
 BattleFrontier_BattleFactoryBattleRoom_Text_HarderLookThanLastTime_hns:
 	.string "NOLAND: ¡Hola, hola! ¿Cómo va todo?\n"
 	.string "¿Sigues al día con tus estudios?\p"
-	.string "…Oh?\p"
+	.string "...Oh?\p"
 	.string "Te ves con una mirada más dura que\n"
 	.string "la última vez que te vi.\p"
 	.string "¡Ahora esto será divertido!\n"

@@ -141,12 +141,12 @@ OlivineLighthouse_Text_BirdKeeperTheoSeen:
 
 OlivineLighthouse_Text_BirdKeeperTheoBeaten:
 	.string "Realmente te preocupa\n"
-	.string "el POKéMON enfermo…$"
+	.string "el POKéMON enfermo...$"
 
 OlivineLighthouse_Text_BirdKeeperTheoAfter:
 	.string "¿Cómo rayos se sube?\p"
 	.string "Quiero visitar al POKéMON enfermo,\n"
-	.string "pero no puedo subir ahí…$"
+	.string "pero no puedo subir ahí...$"
 
 OlivineLighthouse_Text_SailorTerrellSeen:
 	.string "Los marinos son amables y fuertes.\n"
@@ -166,7 +166,7 @@ OlivineLighthouse_Text_GentlemanPrestonSeen:
 	.string "POKéMON. Quiero luchar contigo.$"
 
 OlivineLighthouse_Text_GentlemanPrestonBeaten:
-	.string "…suspiro… Debo entrenar más…$"
+	.string "...suspiro... Debo entrenar más...$"
 
 OlivineLighthouse_Text_GentlemanPrestonAfter:
 	.string "JASMINE solía usar POKéMON\n"
@@ -191,7 +191,7 @@ OlivineLighthouse_Text_SailorKentSeen:
 	.string "Ya ni siquiera sonríe hoy en día.$"
 
 OlivineLighthouse_Text_SailorKentBeaten:
-	.string "Yo tampoco puedo sonreír…$"
+	.string "Yo tampoco puedo sonreír...$"
 
 OlivineLighthouse_Text_SailorKentAfter:
 	.string "Hablando de salud, oí que hay\n"
@@ -242,13 +242,13 @@ OlivineLighthouse_Text_BirdKeeperDenisSeen:
 	.string "están en su mejor forma.$"
 
 OlivineLighthouse_Text_BirdKeeperDenisBeaten:
-	.string "Ups… Se chocaron…$"
+	.string "Ups... Se chocaron...$"
 
 OlivineLighthouse_Text_BirdKeeperDenisAfter:
 	.string "Mi POKéMON aprendió a usar VUELO en\n"
 	.string "CIUDAD ORQUIDEA.\p"
 	.string "Bueno, como perdí, usaré VUELO\n"
-	.string "sobre el mar…$"
+	.string "sobre el mar...$"
 
 @6th floor==============================================================================================================================
 
@@ -294,11 +294,11 @@ OlivineLighthouse_EventScript_AmpharosSick::
 	end
 
 OlivineLighthouse_Text_JasmineCianwoodPharmacy:
-	.string "JASMINE: …Este POKéMON siempre\n"
+	.string "JASMINE: ...Este POKéMON siempre\n"
 	.string "iluminaba el mar de noche.\p"
-	.string "…Pero enfermó de repente… No\n"
-	.string "puede respirar…\p"
-	.string "…Tengo entendido que hay un\n"
+	.string "...Pero enfermó de repente... No\n"
+	.string "puede respirar...\p"
+	.string "...Tengo entendido que hay un\n"
 	.string "maravillosa FARMACIA en PUEBLO\p"
 	.string "Pero eso es cruzando el mar...\n"
 	.string "Y no puedo dejar a AMPHY solo...$"

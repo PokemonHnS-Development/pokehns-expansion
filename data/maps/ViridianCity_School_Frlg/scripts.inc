@@ -104,7 +104,7 @@ ViridianCity_School_Text_ReadBlackboardCarefully::
 
 ViridianCity_School_Text_NotebookFirstPage::
 	.string "Veamos el cuaderno.\p"
-	.string "First page…\p"
+	.string "First page...\p"
 	.string "POKé BALLS are used to catch\n"
 	.string "POKéMON planta.\p"
 	.string "Up to six POKéMON can be carried\n"
@@ -113,14 +113,14 @@ ViridianCity_School_Text_NotebookFirstPage::
 	.string "with POKéMON are called TRAINERS.$"
 
 ViridianCity_School_Text_NotebookSecondPage::
-	.string "Second page…\p"
+	.string "Second page...\p"
 	.string "A healthy POKéMON may be hard to\n"
 	.string "catch, so weaken it first.\p"
 	.string "Poison, burn, or cause another\n"
 	.string "estado para debilitarlo.$"
 
 ViridianCity_School_Text_NotebookThirdPage::
-	.string "Third page…\p"
+	.string "Third page...\p"
 	.string "POKéMON TRAINERS seek others to\n"
 	.string "engage in POKéMON battles.\p"
 	.string "Para los ENTRENADORES, el sabor\nde la victoria"
@@ -129,12 +129,12 @@ ViridianCity_School_Text_NotebookThirdPage::
 	.string "POKéMON GYMS everywhere.$"
 
 ViridianCity_School_Text_NotebookFourthPage::
-	.string "Fourth page…\p"
+	.string "Fourth page...\p"
 	.string "The ultimate goal for all POKéMON\n"
 	.string "ENTRENADORES es simple.\p"
 	.string "Es vencer a los ocho mejores\n"
 	.string "POKéMON GYM LEADERS.\p"
-	.string "Hazlo para ganar el derecho a…\p"
+	.string "Hazlo para ganar el derecho a...\p"
 	.string "The ELITE FOUR of the POKéMON\n"
 	.string "LEAGUE!$"
 

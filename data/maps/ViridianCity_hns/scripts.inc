@@ -121,7 +121,7 @@ ViridianCity_Text_DreamEaterFisherNew:
 
 
 ViridianCity_Text_DreamEaterFisher_GotTM::
-	.string "…Zzzzz…$"
+	.string "...Zzzzz...$"
 
 ViridianCity_Text_DreamEaterFisher:
 	.string "¡Bostezo!\p"
@@ -135,7 +135,7 @@ ViridianCity_Text_DreamEaterFisher:
 
 ViridianCity_Text_DreamEaterFisher_GotDreamEater:
 	.string "La MT42 es SONÁMBULO...\p"
-	.string "…Zzzzz…$"
+	.string "...Zzzzz...$"
 
 ViridianCity_Text_Youngster:
 	.string "Oí que hay muchos objetos\nen el suelo del BOSQUE VERDE.$"
@@ -146,8 +146,8 @@ ViridianCity_Text_Sign:
 
 ViridianCity_Text_GymSign:
 	.string "GIMNASIO POKéMON C. VERIDIAN\n"
-	.string "LÍDER: …\p"
-	.string "El resto del texto es ilegible…$"
+	.string "LÍDER: ...\p"
+	.string "El resto del texto es ilegible...$"
 
 ViridianCity_Text_WelcomeSign:
 	.string "BIENVENIDO A CIUDAD VERIDIAN,\p"

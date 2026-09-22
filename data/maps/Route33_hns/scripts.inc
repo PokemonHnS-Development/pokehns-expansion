@@ -72,7 +72,7 @@ Route33_Text_HikerAnthonyDunsparce:
 	.string "¡Tiene una cara muy graciosa!$"
 
 Route33_Text_Lass:
-	.string "Jadeo, jadeo…\p"
+	.string "Jadeo, jadeo...\p"
 	.string "Esa cueva era más grande que\n"
 	.string "Era lo que esperaba.\p"
 	.string "Me cansé de explorar\n"

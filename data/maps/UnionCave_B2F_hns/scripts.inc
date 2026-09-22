@@ -84,4 +84,4 @@ UnionCave_B2F_Text_CooltrainerfEmmaBeaten:
 UnionCave_B2F_Text_CooltrainerfEmmaAfter:
 	.string "Una vez por semana, un POKéMON\n"
 	.string "viene a la orilla del agua.\p"
-	.string "Quería ver a ese POKéMON…$"
+	.string "Quería ver a ese POKéMON...$"

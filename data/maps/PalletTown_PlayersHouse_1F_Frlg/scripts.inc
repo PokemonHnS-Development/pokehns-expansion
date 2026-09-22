@@ -54,14 +54,14 @@ PalletTown_PlayersHouse_1F_EventScript_TVScreenFemale::
 	return
 
 PalletTown_PlayersHouse_1F_Text_AllBoysLeaveOakLookingForYou::
-	.string "MOM: …Right.\n"
+	.string "MOM: ...Right.\n"
 	.string "All boys leave home someday.\l"
 	.string "Lo dijeron en la tele.\p"
 	.string "Ah, sí. El PROF. OAK, de al lado,\n"
 	.string "te buscaba.$"
 
 PalletTown_PlayersHouse_1F_Text_AllGirlsLeaveOakLookingForYou::
-	.string "MOM: …Right.\n"
+	.string "MOM: ...Right.\n"
 	.string "Todas las chicas sueñan con viajar.\l"
 	.string "Lo dijeron en la tele.\p"
 	.string "Ah, sí. El PROF. OAK, de al lado,\n"
@@ -80,13 +80,13 @@ PalletTown_PlayersHouse_1F_Text_MovieOnTVFourBoysOnRailroad::
 	.string "Hay una película en la TV.\n"
 	.string "Cuatro chicos caminan por la vía\l"
 	.string "tracks.\p"
-	.string "…Mejor me voy también.$"
+	.string "...Mejor me voy también.$"
 
 PalletTown_PlayersHouse_1F_Text_MovieOnTVGirlOnBrickRoad::
 	.string "Hay una película en la TV.\n"
 	.string "Una niña con trenzas camina\l"
 	.string "por un camino de ladrillos.\p"
-	.string "…Mejor me voy también.$"
+	.string "...Mejor me voy también.$"
 
 PalletTown_PlayersHouse_1F_Text_OopsWrongSide::
-	.string "Oops, wrong side…$"
+	.string "Oops, wrong side...$"

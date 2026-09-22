@@ -68,7 +68,7 @@ OneIsland_KindleRoad_EmberSpa_Text_EnjoyBowlOfChowder::
 
 OneIsland_KindleRoad_EmberSpa_Text_WaterExquisiteFullyRefreshed::
 	.string "El agua está perfecta.\n"
-	.string "Se siente exquisito…\p"
+	.string "Se siente exquisito...\p"
 	.string "{PLAYER} and the POKéMON were\n"
 	.string "fully refreshed!$"
 

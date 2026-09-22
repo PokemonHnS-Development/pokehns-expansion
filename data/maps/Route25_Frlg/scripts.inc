@@ -38,7 +38,7 @@ Route25_Text_FlintIntro::
 	.string "¡Tengo novia!$"
 
 Route25_Text_FlintDefeat::
-	.string "Aww, darn…$"
+	.string "Aww, darn...$"
 
 Route25_Text_FlintPostBattle::
 	.string "Oh, bueno.\n"
@@ -49,7 +49,7 @@ Route25_Text_KelseyIntro::
 	.string "¡Mi novio es genial!$"
 
 Route25_Text_KelseyDefeat::
-	.string "Mi preparación no es la mejor…$"
+	.string "Mi preparación no es la mejor...$"
 
 Route25_Text_KelseyPostBattle::
 	.string "Ojalá mi novio fuera tan bueno\n"
@@ -125,6 +125,6 @@ Route25_Text_MistyHighHopesAboutThisPlace::
 
 Route25_Text_AreYouHereAlone::
 	.string "Hola, ¿estás aquí solo?\p"
-	.string "Si estás en el cabo de AZUL…\n"
+	.string "Si estás en el cabo de AZUL...\n"
 	.string "deberías venir en pareja.$"
 

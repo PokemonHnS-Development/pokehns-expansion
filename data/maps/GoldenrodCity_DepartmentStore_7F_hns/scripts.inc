@@ -94,9 +94,9 @@ GoldenrodDeptStore_Text_RoofSuperNerdQuitBotheringMe:
 
 GoldenrodDeptStore_Text_RoofPokefanM:
     .string "Hay algo que quiero mucho,\n"
-    .string "pero no tengo el dinero necesario…\p"
+    .string "pero no tengo el dinero necesario...\p"
     .string "Tal vez venda las BAYAS que he\n"
-    .string "recolectado…$"
+    .string "recolectado...$"
 
 GoldenrodDeptStore_Text_RoofTeacher:
     .string "¡Oh, todo es tan barato!\p"
@@ -105,5 +105,5 @@ GoldenrodDeptStore_Text_RoofTeacher:
 GoldenrodDeptStore_Text_RoofBugCatcher:
     .string "Mis POKéMON siempre se paralizan o\n"
     .string "Mis POKéMON siempre se paralizan o\p"
-    .string "envenenan en el peor momento…\p"
+    .string "envenenan en el peor momento...\p"
     .string "¿Me pregunto si quedará alguno?$"

@@ -257,7 +257,7 @@ NewMauville_Inside_Text_GeneratorQuietedDown:
 NewMauville_Inside_Text_SteppedOnSwitchGeneratorStopped:
 	.string "{PLAYER} pisó el interruptor.\p"
 	.string "Click...\p"
-	.string "… … … … … … … …\n"
-	.string "… … … … … … … …\p"
+	.string "... ... ... ... ... ... ... ...\n"
+	.string "... ... ... ... ... ... ... ...\p"
 	.string "Parece que el generador se ha\n"
 	.string "detenido...$"

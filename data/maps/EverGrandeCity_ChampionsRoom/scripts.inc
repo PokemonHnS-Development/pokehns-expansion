@@ -221,7 +221,7 @@ EverGrandeCity_ChampionsRoom_Movement_BirchArrives:
 
 EverGrandeCity_ChampionsRoom_Text_IntroSpeech:
 	.string "WALLACE: Bienvenido, {PLAYER}{KUN}.\p"
-	.string "Aquel incidente en CIUDAD ARRECIFE…\n"
+	.string "Aquel incidente en CIUDAD ARRECIFE...\n"
 	.string "Fue un trabajo estupendo poner fin\l"
 	.string "a esa crisis tú solo.\p"
 	.string "¡Ups!\p"
@@ -243,7 +243,7 @@ EverGrandeCity_ChampionsRoom_Text_IntroSpeech:
 	.string "¡Demuéstramelo aquí y ahora!$"
 
 EverGrandeCity_ChampionsRoom_Text_Defeat:
-	.string "Yo, el CAMPEÓN, he sido derrotado…\p"
+	.string "Yo, el CAMPEÓN, he sido derrotado...\p"
 	.string "Fue un trabajo maravilloso.\n"
 	.string "Fuiste elegante, casi irritante.\l"
 	.string "¡Y aun así fue totalmente glorioso!\p"
@@ -264,32 +264,32 @@ EverGrandeCity_ChampionsRoom_Text_PostBattleSpeech:
 	.string "Ahora estás en la gloriosa cima\n"
 	.string "de la LIGA POKéMON.\p"
 	.string "Ahora te proclamo como el nuevo\n"
-	.string "de la región de HOENN…$"
+	.string "de la región de HOENN...$"
 
 EverGrandeCity_ChampionsRoom_Text_MayAdvice:
 	.string "MAY: ¡{PLAYER}{KUN}!\p"
 	.string "Tengo un consejo antes de que retes\n"
-	.string "al CAMPEÓN…$"
+	.string "al CAMPEÓN...$"
 
 EverGrandeCity_ChampionsRoom_Text_MayItsAlreadyOver:
 	.string "MAY: ¿Eh?\n"
 	.string "¿Qué, qué, qué?\p"
-	.string "{PLAYER}{KUN}…\n"
-	.string "¿Será posible que…\l"
+	.string "{PLAYER}{KUN}...\n"
+	.string "¿Será posible que...\l"
 	.string "¿Ya terminó todo?$"
 
 EverGrandeCity_ChampionsRoom_Text_BrendanAdvice:
 	.string "BRENDAN: ¡{PLAYER}!\p"
 	.string "¿Quieres un consejo antes de que\n"
-	.string "¿Retas al CAMPEÓN?…$"
+	.string "¿Retas al CAMPEÓN?...$"
 
 EverGrandeCity_ChampionsRoom_Text_BrendanYouveWon:
-	.string "BRENDAN: {PLAYER}…\p"
-	.string "¿Me estás intentando decir…\n"
+	.string "BRENDAN: {PLAYER}...\p"
+	.string "¿Me estás intentando decir...\n"
 	.string "¿Que venciste al CAMPEÓN?$"
 
 EverGrandeCity_ChampionsRoom_Text_BirchArriveRatePokedex:
-	.string "PROF. BIRCH: ¿Ves?\n¿Qué te dije, {RIVAL}?\p¿No te dije que no\ntenías que\npreocuparte por {PLAYER}{KUN}?\p… … … … … … … …\n{PLAYER}{KUN}, al fin lo lograste.\pCuando supe que\nvenciste a tu\npadre en el GIMNASIO PETALBURG,\lpensé\nque tenías una oportunidad…\pPero pensar\nque realmente te has\n¡convertido en CAMPEÓN!\p¡Ah, sí!\p¿Qué\npasó con tu POKéDEX?\nAquí, déjame verla.$"
+	.string "PROF. BIRCH: ¿Ves?\n¿Qué te dije, {RIVAL}?\p¿No te dije que no\ntenías que\npreocuparte por {PLAYER}{KUN}?\p... ... ... ... ... ... ... ...\n{PLAYER}{KUN}, al fin lo lograste.\pCuando supe que\nvenciste a tu\npadre en el GIMNASIO PETALBURG,\lpensé\nque tenías una oportunidad...\pPero pensar\nque realmente te has\n¡convertido en CAMPEÓN!\p¡Ah, sí!\p¿Qué\npasó con tu POKéDEX?\nAquí, déjame verla.$"
 
 EverGrandeCity_ChampionsRoom_Text_BirchCongratulations:
 	.string "PROF. BIRCH: En fin,\n"
@@ -311,8 +311,8 @@ EverGrandeCity_ChampionsRoom_Text_WallaceWaitOutside:
 
 EverGrandeCity_ChampionsRoom_Text_MayCongratulations:
 	.string "MAY: Ugh...\p"
-	.string "… … … … … … … …\n"
-	.string "… … … … … … … …\p"
+	.string "... ... ... ... ... ... ... ...\n"
+	.string "... ... ... ... ... ... ... ...\p"
 	.string "¡Solo bromeaba! ¡No pasa nada!\n"
 	.string "¡Así es la regla!\p"
 	.string "¡{PLAYER}{KUN}!\n"
@@ -320,7 +320,7 @@ EverGrandeCity_ChampionsRoom_Text_MayCongratulations:
 
 EverGrandeCity_ChampionsRoom_Text_BrendanCongratulations:
 	.string "BRENDAN: ¡¿Quééé?! ... ... ... ... ...\n"
-	.string "… … … … … … … …\p"
+	.string "... ... ... ... ... ... ... ...\p"
 	.string "No hay nada que hacer si es la regla.\p"
 	.string "{PLAYER}, ¡así se hace!\n"
 	.string "¡Felicidades!$"

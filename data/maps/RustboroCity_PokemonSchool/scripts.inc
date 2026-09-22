@@ -282,7 +282,7 @@ RustboroCity_PokemonSchool_Text_PokemonHealItselfWithBerry:
 	.string "notas...$"
 
 RustboroCity_PokemonSchool_Text_StudentsNotes:
-	.string "Es el cuaderno de un estudiante…\p"
+	.string "Es el cuaderno de un estudiante...\p"
 	.string "Los POKéMON se capturan usando\n"
 	.string "POKé BALLS.\p"
 	.string "Hasta seis POKéMON pueden acompañar\n"

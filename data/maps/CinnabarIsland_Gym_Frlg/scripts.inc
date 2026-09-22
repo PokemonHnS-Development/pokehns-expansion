@@ -758,9 +758,9 @@ CinnabarIsland_Gym_Text_ErikDefeat::
 
 CinnabarIsland_Gym_Text_ErikPostBattle::
 	.string "Fuego, o más precisamente,\n"
-	.string "combustion…\p"
-	.string "…El oxígeno del aire…\n"
-	.string "Blah, blah, blah, blah…$"
+	.string "combustion...\p"
+	.string "...El oxígeno del aire...\n"
+	.string "Blah, blah, blah, blah...$"
 
 CinnabarIsland_Gym_Text_QuinnIntro::
 	.string "Fui ladrón, pero me reformé\n"
@@ -820,7 +820,7 @@ CinnabarIsland_Gym_Text_DustyDefeat::
 	.string "Too hot!$"
 
 CinnabarIsland_Gym_Text_DustyPostBattle::
-	.string "PONYTA, NINETALES…\n"
+	.string "PONYTA, NINETALES...\n"
 	.string "Those are popular FIRE POKéMON.$"
 
 CinnabarIsland_Gym_Text_ZacIntro::
@@ -866,7 +866,7 @@ CinnabarIsland_Gym_Text_PokemonQuizRules::
 	.string "la siguiente habitación.\p"
 	.string "Get it wrong, and face a TRAINER!\p"
 	.string "Si quieres conservar tu\n"
-	.string "POKéMON for the GYM LEADER…\p"
+	.string "POKéMON for the GYM LEADER...\p"
 	.string "¡Entonces acierta!\n"
 	.string "¡Allá vamos!$"
 

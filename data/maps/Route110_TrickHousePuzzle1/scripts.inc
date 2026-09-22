@@ -40,7 +40,7 @@ Route110_TrickHousePuzzle1_Text_WroteSecretCodeLockOpened::
 	.string "{PLAYER} anotó el código secreto\n"
 	.string "en la puerta.\p"
 	.string "“TRICK MASTER es fabuloso”.\n"
-	.string "… … … … … … … …\p"
+	.string "... ... ... ... ... ... ... ...\p"
 	.string "¡La cerradura se abrió!$"
 
 Route110_TrickHousePuzzle1_Text_SallyIntro:
@@ -56,14 +56,14 @@ Route110_TrickHousePuzzle1_Text_SallyPostBattle:
 
 Route110_TrickHousePuzzle1_Text_EddieIntro:
 	.string "Entré en esta casa extraña\n"
-	.string "por accidente…$"
+	.string "por accidente...$"
 
 Route110_TrickHousePuzzle1_Text_EddieDefeat:
-	.string "Y ahora he perdido…$"
+	.string "Y ahora he perdido...$"
 
 Route110_TrickHousePuzzle1_Text_EddiePostBattle:
 	.string "Me perdí, perdí una batalla y ahora\n"
-	.string "aún más perdido… No puedo salir…$"
+	.string "aún más perdido... No puedo salir...$"
 
 Route110_TrickHousePuzzle1_Text_RobinIntro:
 	.string "¿Quién es el MAESTRO DE TRUCOS?$"

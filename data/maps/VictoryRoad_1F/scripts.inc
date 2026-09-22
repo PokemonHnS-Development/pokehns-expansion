@@ -160,7 +160,7 @@ VictoryRoad_1F_Text_EdgarIntro:
 	.string "pero el tramo final es muy largo...$"
 
 VictoryRoad_1F_Text_EdgarDefeat:
-	.string "Mi sueño termina aquí otra vez…$"
+	.string "Mi sueño termina aquí otra vez...$"
 
 VictoryRoad_1F_Text_EdgarPostBattle:
 	.string "Tú has llegado hasta aquí. Sigue\n"
@@ -185,7 +185,7 @@ VictoryRoad_1F_Text_HopeIntro:
 	.string "hace honor a su nombre de VICTORIA.$"
 
 VictoryRoad_1F_Text_HopeDefeat:
-	.string "Tu estilo de combate es fantástico…$"
+	.string "Tu estilo de combate es fantástico...$"
 
 VictoryRoad_1F_Text_HopePostBattle:
 	.string "Pareces tener el potencial para\n"
@@ -211,7 +211,7 @@ VictoryRoad_1F_Text_KatelynnIntro:
 	.string "ha llegado tan lejos. ¡Ven!$"
 
 VictoryRoad_1F_Text_KatelynnDefeat:
-	.string "Esto es una vergüenza…$"
+	.string "Esto es una vergüenza...$"
 
 VictoryRoad_1F_Text_KatelynnPostBattle:
 	.string "Hmph, sigue adelante.\n"

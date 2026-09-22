@@ -17,8 +17,8 @@ PokemonTower_3F_EventScript_Hope::
 	end
 
 PokemonTower_3F_Text_HopeIntro::
-	.string "Urrg… Awaa…\n"
-	.string "Huhu… Graa…$"
+	.string "Urrg... Awaa...\n"
+	.string "Huhu... Graa...$"
 
 PokemonTower_3F_Text_HopeDefeat::
 	.string "Hwa!\n"
@@ -29,7 +29,7 @@ PokemonTower_3F_Text_HopePostBattle::
 	.string "identificados con el SCOPE SILPH.$"
 
 PokemonTower_3F_Text_CarlyIntro::
-	.string "Kekeke…\n"
+	.string "Kekeke...\n"
 	.string "Kwaaah!$"
 
 PokemonTower_3F_Text_CarlyDefeat::
@@ -49,6 +49,6 @@ PokemonTower_3F_Text_PatriciaDefeat::
 	.string "¡El espíritu se fue!$"
 
 PokemonTower_3F_Text_PatriciaPostBattle::
-	.string "Los demás arriba…\n"
+	.string "Los demás arriba...\n"
 	.string "Debieron estar poseídos.$"
 

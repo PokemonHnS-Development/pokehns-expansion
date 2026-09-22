@@ -246,12 +246,12 @@ RadioTower1F_Text_GruntM3Seen:
     .string "¡Verán lo aterradores que somos!$"
 
 RadioTower1F_Text_GruntM3Beaten:
-    .string "Too strong! I'm sorry boss…$"
+    .string "Too strong! I'm sorry boss...$"
 
 RadioTower1F_Text_GruntM3After:
     .string "Eres demasiado fuerte.\p"
     .string "Nuestro plan podría arruinarse. Debo\n"
-    .string "avisar a los demás…$"
+    .string "avisar a los demás...$"
 
 RadioTower1F_Text_Directory:
     .string "RECEPCIÓN 1F\n"
@@ -383,7 +383,7 @@ GoldenrodCity_RadioTower_1F_Text_PleaseVisitAgain:
 
 GoldenrodCity_RadioTower_1F_Text_PleasePickTicket:
 	.string "Elige un TICKET LOTO, por favor.\n"
-	.string "…{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}…{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}…{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}$"
+	.string "...{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}...{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}...{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}$"
 
 GoldenrodCity_RadioTower_1F_Text_TicketNumberIsXPleaseWait:
 	.string "El número del TICKET LOTO es {STR_VAR_1}.\p"

@@ -265,10 +265,10 @@ NewBarkTown_Text_LassState5:
 NewBarkTown_Text_Silver1:
 	.string ". . .\p"
 	.string "Así que este es el famoso\n"
-	.string "LAB. POKéMON de ELM…$"
+	.string "LAB. POKéMON de ELM...$"
 
 NewBarkTown_Text_Silver2:
-	.string "…¿Qué estás mirando?$"
+	.string "...¿Qué estás mirando?$"
 
 NewBarkTown_Text_Sign:
 	.string "PUEBLO PRIMAVERA\p"

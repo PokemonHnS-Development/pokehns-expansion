@@ -502,21 +502,21 @@ BattleFrontier_BattleTowerBattleRoom_Text_GreetingsImAnabel:
 	.string "Saludos...\n"
 	.string "Mi nombre es ANABEL.\p"
 	.string "Soy la DONCELLA DEL SALÓN, y estoy\n"
-	.string "encargada de la TORRE COMBATE…\p"
+	.string "encargada de la TORRE COMBATE...\p"
 	.string "He oído varios rumores\n"
-	.string "sobre ti…\p"
+	.string "sobre ti...\p"
 	.string "Sinceramente, lo que he oído no\n"
-	.string "absoluto…\p"
-	.string "La razón por la que vine a verte…\n"
-	.string "Bueno, solo hay una razón…$"
+	.string "absoluto...\p"
+	.string "La razón por la que vine a verte...\n"
+	.string "Bueno, solo hay una razón...$"
 
 BattleFrontier_BattleTowerBattleRoom_Text_LetMeSeeYourTalent:
 	.string "Déjame ver tu talento en\n"
-	.string "todo su esplendor…$"
+	.string "todo su esplendor...$"
 
 BattleFrontier_BattleTowerBattleRoom_Text_AnabelTalentShallBeRecognized:
-	.string "ANABEL: Fufufu, bien hecho…\p"
-	.string "Tu PASE FRONTERA, por favor…\n"
+	.string "ANABEL: Fufufu, bien hecho...\p"
+	.string "Tu PASE FRONTERA, por favor...\n"
 	.string "Tu talento será reconocido.$"
 
 BattleFrontier_BattleTowerBattleRoom_Text_ReceivedAbilitySymbol:
@@ -524,38 +524,38 @@ BattleFrontier_BattleTowerBattleRoom_Text_ReceivedAbilitySymbol:
 	.string "en el FRONTIER PASS!$"
 
 BattleFrontier_BattleTowerBattleRoom_Text_UntilNextTime:
-	.string "… … … … … …\p"
+	.string "... ... ... ... ... ...\p"
 	.string "Confías en el talento de combate\n"
 	.string "de tus POKéMON, ¿verdad?\p"
 	.string "Te insto a que sigas luchando y\n"
 	.string "sigas ganando.\p"
 	.string "Estaré esperándote.\n"
-	.string "Hasta la próxima vez que nos veamos…$"
+	.string "Hasta la próxima vez que nos veamos...$"
 
 BattleFrontier_BattleTowerBattleRoom_Text_AnabelYouCameBack:
 	.string "ANABEL: De verdad regresaste para\n"
-	.string "verme…\p"
-	.string "… … … … … …\p"
-	.string "Ganaste varias veces para verme…\n"
-	.string "No tendré que contenerme contigo…\p"
-	.string "Ha pasado demasiado tiempo…\p"
+	.string "verme...\p"
+	.string "... ... ... ... ... ...\p"
+	.string "Ganaste varias veces para verme...\n"
+	.string "No tendré que contenerme contigo...\p"
+	.string "Ha pasado demasiado tiempo...\p"
 	.string "Ha pasado mucho tiempo desde que\n"
-	.string "pude luchar sin pensar en nada…$"
+	.string "pude luchar sin pensar en nada...$"
 
 BattleFrontier_BattleTowerBattleRoom_Text_LetsBeginShallWe:
 	.string "Empecemos, ¿de acuerdo?$"
 
 BattleFrontier_BattleTowerBattleRoom_Text_AnabelCongratsYourPassPlease:
-	.string "ANABEL: Fufu, felicidades…\n"
-	.string "Tu FRONTIER PASS, por favor…$"
+	.string "ANABEL: Fufu, felicidades...\n"
+	.string "Tu FRONTIER PASS, por favor...$"
 
 BattleFrontier_BattleTowerBattleRoom_Text_AbilitySymbolTookGoldenShine:
 	.string "El Símbolo de Habilidad se obtuvo\n"
 	.string "brilla con un tono dorado!$"
 
 BattleFrontier_BattleTowerBattleRoom_Text_WishICouldBattleYouAgain:
-	.string "Eso fue divertido…\p"
+	.string "Eso fue divertido...\p"
 	.string "Nunca había tenido una batalla\n"
-	.string "de POKéMON tan agradable…\p"
-	.string "Desearía luchar contigo otra vez…$"
+	.string "de POKéMON tan agradable...\p"
+	.string "Desearía luchar contigo otra vez...$"
 

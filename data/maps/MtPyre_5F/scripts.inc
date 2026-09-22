@@ -9,17 +9,17 @@ MtPyre_4F_EventScript_Tasha::
 	end
 
 MtPyre_4F_Text_TashaIntro:
-	.string "Amo todo lo que sea horroroso…\n"
-	.string "Es como una enfermedad…\p"
-	.string "Cuando estoy aquí…\n"
-	.string "Tiemblo de miedo…$"
+	.string "Amo todo lo que sea horroroso...\n"
+	.string "Es como una enfermedad...\p"
+	.string "Cuando estoy aquí...\n"
+	.string "Tiemblo de miedo...$"
 
 MtPyre_4F_Text_TashaDefeat:
-	.string "Losing, I dislike…$"
+	.string "Losing, I dislike...$"
 
 MtPyre_4F_Text_TashaPostBattle:
-	.string "Quiero ver cosas espantosas…\n"
-	.string "No puedo irme…\p"
-	.string "Quédate…\n"
+	.string "Quiero ver cosas espantosas...\n"
+	.string "No puedo irme...\p"
+	.string "Quédate...\n"
 	.string "¿No te quedarás conmigo?$"
 

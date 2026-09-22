@@ -62,7 +62,7 @@ SINGLE_BATTLE_TEST("Explosion causes the user to faint even if it has no effect"
         TURN { MOVE(player, MOVE_EXPLOSION); }
     } SCENE {
         HP_BAR(player, hp: 0);
-        MESSAGE("It doesn't affect the opposing Gastly…");
+        MESSAGE("It doesn't affect the opposing Gastly...");
         NOT HP_BAR(opponent);
         MESSAGE("Wobbuffet fainted!");
     }

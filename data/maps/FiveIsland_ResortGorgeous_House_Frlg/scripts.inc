@@ -163,13 +163,13 @@ FiveIsland_ResortGorgeous_House_Text_MonYouCaughtForMeThankYou::
 	.string "SELPHY: Oh, hola.\p"
 	.string "Oh, cielos. Ese debe ser el\n"
 	.string "{STR_VAR_1} que atrapaste para mí.\p"
-	.string "Jejeje…\n"
+	.string "Jejeje...\n"
 	.string "Se parece a ti.\p"
 	.string "Muchas gracias.\p"
-	.string "… …  … …  … …\n"
+	.string "... ...  ... ...  ... ...\n"
 	.string "¿Pasa algo?\p"
 	.string "Puedes retirarte.\p"
-	.string "… …  … …  … …\n"
+	.string "... ...  ... ...  ... ...\n"
 	.string "Oh, fine. I understand now.\p"
 	.string "SEBASTIAN!\n"
 	.string "¡Necesito que estés aquí ahora!$"
@@ -188,14 +188,14 @@ FiveIsland_ResortGorgeous_House_Text_ButlerIShallDoAsYouBid::
 FiveIsland_ResortGorgeous_House_Text_ButlerPleaseAcceptThisAsHerThanks::
 	.string "Mayordomo: Le agradezco de\n"
 	.string "pleasing Lady SELPHY.\p"
-	.string "corazón…$"
+	.string "corazón...$"
 
 FiveIsland_ResortGorgeous_House_Text_ButlerBagAppearsToBeFull::
 	.string "Mayordomo: Su BOLSA parece estar\n"
 	.string "unfortunately full.$"
 
 FiveIsland_ResortGorgeous_House_Text_OhHowDisappointing::
-	.string "Oh…\n"
+	.string "Oh...\n"
 	.string "How disappointing.$"
 
 FiveIsland_ResortGorgeous_House_Text_SelphyWishYouBestOfLuck::

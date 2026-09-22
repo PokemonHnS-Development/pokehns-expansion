@@ -423,19 +423,19 @@ Route116_Text_MayISeeThoseGlasses:
 	.string "¿Puedo verlos un segundo?$"
 
 Route116_Text_NotWhatImLookingForMaybeTheyArentHere:
-	.string "Hmm…\n"
+	.string "Hmm...\n"
 	.string "Estos son LENTESNEGROS.\l"
 	.string "No son los que estoy buscando...\p"
 	.string "Tal vez mis lentes no estén\n"
 	.string "por aquí...$"
 
 Route116_Text_CantFindGlassesNotHere:
-	.string "Hmm…\n"
+	.string "Hmm...\n"
 	.string "No encuentro mis lentes...\l"
 	.string "Tal vez no estén por aquí...$"
 
 Route116_Text_NotWhatImLookingFor:
-	.string "Hmm…\n"
+	.string "Hmm...\n"
 	.string "Estos son LENTESNEGROS.\l"
 	.string "No son los que estoy buscando...$"
 

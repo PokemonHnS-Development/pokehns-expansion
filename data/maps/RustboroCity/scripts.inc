@@ -1015,7 +1015,7 @@ RustboroCity_EventScript_Boy1::
 	end
 
 RustboroCity_Text_WeShortenItToDevon:
-	.string "La CORPORACIÓN DEVON…\nTodos le decimos DEVON.\pEsa empresa fabrica todo tipo\nde productos prácticos.$"
+	.string "La CORPORACIÓN DEVON...\nTodos le decimos DEVON.\pEsa empresa fabrica todo tipo\nde productos prácticos.$"
 
 RustboroCity_Text_SneakyLookingManWentAroundCorner:
 	.string "¿Mmm? ¿Un hombre sospechoso?\pAhora que lo pienso, sí, un tipo\nde aspecto turbio dobló la esquina.$"
@@ -1082,7 +1082,7 @@ RustboroCity_Text_TradePokemonGrowFast:
 	.string "Un POKéMON recibido por cambio\n"
 	.string "crece más rápido.\p"
 	.string "Pero sin ciertas MEDALLAS de\n"
-	.string "GIMNASIO, puede desobedecerte…$"
+	.string "GIMNASIO, puede desobedecerte...$"
 
 RustboroCity_Text_OutOfTheWay:
 	.string "¡Fuera!\n"
@@ -1128,7 +1128,7 @@ RustboroCity_Text_MayHiLetsRegister:
 	.string "en tu POKéNAV!\p"
 	.string "¡Registrémonos para poder\n"
 	.string "contactarnos en cualquier momento!\p"
-	.string "… … … … … …$"
+	.string "... ... ... ... ... ...$"
 
 RustboroCity_Text_RegisteredMay:
 	.string "Registraste a MAY\n"
@@ -1141,7 +1141,7 @@ RustboroCity_Text_MayPassedBrineyWantToBattle:
 	.string "su cabaña junto al mar.\p"
 	.string "¿Cómo va tu POKéDEX,\n"
 	.string "{PLAYER}{KUN}? ¡La mía va muy bien!\p"
-	.string "So…\n"
+	.string "So...\n"
 	.string "¿Qué tal una pequeña batalla?$"
 
 RustboroCity_Text_MayOhHaventRaisedPokemonEnough:
@@ -1175,7 +1175,7 @@ RustboroCity_Text_BrendanHiLetsRegister:
 	.string "¡en tu POKéNAV! ¡Genial!\p"
 	.string "¡Registrémonos para poder\n"
 	.string "¡contáctame cuando quieras!\p"
-	.string "… … … … … …$"
+	.string "... ... ... ... ... ...$"
 
 RustboroCity_Text_RegisteredBrendan:
 	.string "Registrado a BRENDAN\n"
@@ -1204,7 +1204,7 @@ RustboroCity_Text_BrendanIWontGoEasy:
 	.string "ENTRENADOR, ¡pero no tendré piedad!$"
 
 RustboroCity_Text_BrendanDefeat:
-	.string "Hmm…\n"
+	.string "Hmm...\n"
 	.string "Eres bastante bueno.$"
 
 RustboroCity_Text_BrendanMrBrineyHint:
@@ -1217,9 +1217,9 @@ RustboroCity_Text_BrendanMrBrineyHint:
 RustboroCity_Text_TunnelNearingCompletion:
 	.string "“Túnel de ahorro de tiempo casi\n"
 	.string "terminado!”\p"
-	.string "…Eso dice el cartel, pero\n"
+	.string "...Eso dice el cartel, pero\n"
 	.string "también hay una “X” gigante\l"
-	.string "pintada en rojo encima…$"
+	.string "pintada en rojo encima...$"
 
 RustboroCity_Text_DevonCorpSign:
 	.string "DEVON CORPORATION\p"
@@ -1251,7 +1251,7 @@ RustboroCity_Text_CuttersHouse:
 
 RustboroCity_Text_DevelopedNewPokenavFeature:
 	.string "He estado creando una función extra\n"
-	.string "para el POKéNAV…\p"
+	.string "para el POKéNAV...\p"
 	.string "¡Y el resultado es genial!\p"
 	.string "{PLAYER}, ¿puedo ver ese POKéNAV?\n"
 	.string "¿El que te dio nuestro PRESIDENTE?$"

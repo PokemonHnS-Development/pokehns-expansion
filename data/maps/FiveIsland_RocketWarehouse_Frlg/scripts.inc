@@ -174,7 +174,7 @@ FiveIsland_RocketWarehouse_Movement_AdminWalkToSwitch::
 
 FiveIsland_RocketWarehouse_Text_ManyMonsLockedInPen::
 	.string "There are many POKéMON locked\n"
-	.string "lejos en el corral…$"
+	.string "lejos en el corral...$"
 
 FiveIsland_RocketWarehouse_Text_PenUnlockedMonsFled::
 	.string "La puerta del corral está\n"
@@ -212,7 +212,7 @@ FiveIsland_RocketWarehouse_Text_Grunt3Intro::
 	.string "¡conoce a nuestro JEFE GIOVANNI!$"
 
 FiveIsland_RocketWarehouse_Text_Grunt3Defeat::
-	.string "No…te…atrevas…a…reír…$"
+	.string "No...te...atrevas...a...reír...$"
 
 FiveIsland_RocketWarehouse_Text_Grunt3PostBattle::
 	.string "No te metas en asuntos de adultos,\n"
@@ -220,18 +220,18 @@ FiveIsland_RocketWarehouse_Text_Grunt3PostBattle::
 
 FiveIsland_RocketWarehouse_Text_Admin1Intro::
 	.string "No sé ni me importa si lo que hago\n"
-	.string "está bien o mal…\p"
+	.string "está bien o mal...\p"
 	.string "Solo deposito mi fe en GIOVANNI\n"
 	.string "y hago lo que me ordenan.$"
 
 FiveIsland_RocketWarehouse_Text_Admin1Defeat::
-	.string "I…\n"
-	.string "I'm shattered…$"
+	.string "I...\n"
+	.string "I'm shattered...$"
 
 FiveIsland_RocketWarehouse_Text_Admin1PostBattle::
 	.string "Tú haces las cosas según\n"
 	.string "tus creencias y moral.\p"
-	.string "I understand now…$"
+	.string "I understand now...$"
 
 FiveIsland_RocketWarehouse_Text_MadeItSoYouCanComeBackThrough::
 	.string "He hecho que puedas volver\n"
@@ -247,7 +247,7 @@ FiveIsland_RocketWarehouse_Text_Admin2Intro::
 	.string "Ya es suficiente con que tú \n"
 	.string "quieras ser el héroe, niño.\p"
 	.string "Spreading lies about how TEAM\n"
-	.string "El EQUIPO ROCKET se disolvió…\p"
+	.string "El EQUIPO ROCKET se disolvió...\p"
 	.string "Es un intento tan obvio de\n"
 	.string "causar confusión en nuestras filas.\p"
 	.string "Por suerte, no somos tan ingenuos\n"
@@ -257,35 +257,35 @@ FiveIsland_RocketWarehouse_Text_Admin2Intro::
 
 FiveIsland_RocketWarehouse_Text_Admin2Defeat::
 	.string "Ugh...\n"
-	.string "Eras demasiado fuerte…\p"
-	.string "…\n"
+	.string "Eras demasiado fuerte...\p"
+	.string "...\n"
 	.string "¡Esa es la MEDALLA de GIOVANNI!\p"
 	.string "¿Así que es verdad?\n"
 	.string "¿El EQUIPO ROCKET se disolvió?$"
 
 FiveIsland_RocketWarehouse_Text_Admin2PostBattle::
-	.string "Abandonaremos este ALMACÉN…\p"
+	.string "Abandonaremos este ALMACÉN...\p"
 	.string "Pero no creas que esto ha terminado.\n"
 	.string "No dejaré que esto sea el fin.\p"
 	.string "Encontraré a GIOVANNI.\n"
 	.string "¡Y resucitaré al EQUIPO ROCKET!\l"
-	.string "Yo…\p"
+	.string "Yo...\p"
 	.string "Until then, farewell!$"
 
 FiveIsland_RocketWarehouse_Text_ReportWithGraphsAndText::
 	.string "Un informe con gráficos y texto está\n"
 	.string "la pantalla de la PC.\p"
 	.string "“La influencia de las ondas\n"
-	.string "on POKéMON Evolution”…\p"
-	.string "… … … … … …\p"
-	.string "Es muy difícil de entender…$"
+	.string "on POKéMON Evolution”...\p"
+	.string "... ... ... ... ... ...\p"
+	.string "Es muy difícil de entender...$"
 
 FiveIsland_RocketWarehouse_Text_GideonIntro::
 	.string "Casi logré vender el\n"
-	.string "ZAFIRO por mucho dinero…\p"
+	.string "ZAFIRO por mucho dinero...\p"
 	.string "Entonces, tú solo tuviste que venir\n"
 	.string "¡y arruinar todo el trato!\p"
-	.string "Fufu… Fufufufu…\n"
+	.string "Fufu... Fufufufu...\n"
 	.string "¡No hay perdón para ti!$"
 
 FiveIsland_RocketWarehouse_Text_GideonDefeat::

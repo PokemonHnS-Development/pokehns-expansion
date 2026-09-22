@@ -347,7 +347,7 @@ FuchsiaCity_SafariZoneEntrance_EventScript_StevenTradeCompleted::
 	end
 
 FuchsiaCity_SafariZoneEntrance_Text_StevenWantToTrade:
-	.string "Oye, {PLAYER}…\n"
+	.string "Oye, {PLAYER}...\n"
 	.string "He estado criando a este BELDUM\l"
 	.string "desde hace tiempo.\p"
 	.string "Pero creo que le iría mejor\n"

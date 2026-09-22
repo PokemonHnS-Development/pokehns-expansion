@@ -540,7 +540,7 @@ LilycoveCity_Harbor_Text_FerryUnavailable:
 	.string "¿Perdón?\n"
 	.string "¿Buscas un barco?\p"
 	.string "Lo siento, el servicio de ferry no\n"
-	.string "está disponible ahora…$"
+	.string "está disponible ahora...$"
 
 LilycoveCity_Harbor_Text_MayISeeYourTicket:
 	.string "Hola, ¿vienes por el ferry?\n"
@@ -575,7 +575,7 @@ LilycoveCity_Harbor_Text_WhereWouldYouLikeToGo:
 
 LilycoveCity_Harbor_Text_SailorFerryUnavailable:
 	.string "Hasta que terminen el ferry,\n"
-	.string "nosotros no tenemos nada que hacer…\p"
+	.string "nosotros no tenemos nada que hacer...\p"
 	.string "Ojalá se apresuren los del\n"
 	.string "ASTILLERO de PORTALUAR.$"
 

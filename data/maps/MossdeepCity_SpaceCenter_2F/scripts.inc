@@ -365,10 +365,10 @@ MossdeepCity_SpaceCenter_2F_Text_MagmaCantGetAwayWithThis:
 
 MossdeepCity_SpaceCenter_2F_Text_WishOrdinaryPeopleCouldGoIntoSpace:
 	.string "Desearía que la gente común pudiera\n"
-	.string "ir al espacio algún día…$"
+	.string "ir al espacio algún día...$"
 
 MossdeepCity_SpaceCenter_2F_Text_DoesMagmaWantToGoToSpace:
-	.string "EQUIPO MAGMA…\n"
+	.string "EQUIPO MAGMA...\n"
 	.string "¿Ellos también quieren ir al espacio?$"
 
 MossdeepCity_SpaceCenter_2F_Text_YoureOutnumberedTakeUsOn:
@@ -467,11 +467,11 @@ MossdeepCity_SpaceCenter_2F_Text_MaxieWeFailedIsAquaAlsoMisguided:
 	.string "tras haberlo despertado...\p"
 	.string "¿Será errónea nuestra meta de\n"
 	.string "expandir la tierra?\p"
-	.string "… … … … … …\n"
-	.string "… … … … … …\p"
-	.string "If…\n"
+	.string "... ... ... ... ... ...\n"
+	.string "... ... ... ... ... ...\p"
+	.string "If...\n"
 	.string "Si nosotros, TEAM MAGMA, nos\l"
-	.string "… … … … … …\p"
+	.string "... ... ... ... ... ...\p"
 	.string "equivocamos... ¿será que la meta\n"
 	.string "¿el mar también estaría equivocado?$"
 

@@ -85,7 +85,7 @@ static bool32 IsValidLocationForVsSeeker(void);
 static const u8 sText_CantDismountBike[] = _("No puedes bajar de la BICICLETA aquí.{PAUSE_UNTIL_PRESS}");
 static const u8 sText_ItemFinderNearby[] = _("¿Eh?\n¡El BUSCAOBJETOS responde!\p¡Hay un\nobjeto enterrado\npor aquí!{PAUSE_UNTIL_PRESS}");
 static const u8 sText_ItemFinderOnTop[] = _("Oh!\nThe ITEMFINDER's shaking wildly!{PAUSE_UNTIL_PRESS}");
-static const u8 sText_ItemFinderNothing[] = _("… … … …Nope!\nThere's no response.{PAUSE_UNTIL_PRESS}");
+static const u8 sText_ItemFinderNothing[] = _("... ... ... ...Nope!\nThere's no response.{PAUSE_UNTIL_PRESS}");
 static const u8 sText_CoinCase[] = _("Your COINS:\n{STR_VAR_1}{PAUSE_UNTIL_PRESS}");
 static const u8 sText_PowderQty[] = _("POWDER QTY: {STR_VAR_1}{PAUSE_UNTIL_PRESS}");
 static const u8 sText_BootedUpTM[] = _("Booted up a TM.");

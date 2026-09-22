@@ -22,7 +22,7 @@ MahoganyTown_PokemonCenter_Text_PokefanM:
     .string "¿Qué es esto? ¿El TEAM ROCKET ha\n"
     .string "vuelto?\p"
     .string "Vi hombres de negro en el LAGO de la\n"
-    .string "Furia…$"
+    .string "Furia...$"
 
 MahoganyTown_PokemonCenter_Text_Youngster:
     .string "Evito que mis POKéMON evolucionen\n"

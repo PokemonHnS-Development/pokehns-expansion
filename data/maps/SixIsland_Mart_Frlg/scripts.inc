@@ -39,5 +39,5 @@ SixIsland_Mart_Text_AgathaOldestEverEliteFourMember::
 
 SixIsland_Mart_Text_ShouldBuyMailAndWriteLetter::
 	.string "Debería comprar CARTAS y escribir\n"
-	.string "una carta…$"
+	.string "una carta...$"
 

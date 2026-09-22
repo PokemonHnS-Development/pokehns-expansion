@@ -107,7 +107,7 @@ Route15_Text_TeacherHillarySeen:
 	.string "que estudiar en clase.$"
 
 Route15_Text_TeacherHillaryBeaten:
-	.string "No quería perder…$"
+	.string "No quería perder...$"
 
 Route15_Text_TeacherHillaryAfterBattle:
 	.string "Estudiar es importante, pero el\n"
@@ -177,7 +177,7 @@ Route15_Text_BillyRematchIntro:
 	.string "¡Déjame mostrarte lo que aprendí!$"
 
 Route15_Text_BillyRematchDefeat:
-	.string "Debo estudiar más…$"
+	.string "Debo estudiar más...$"
 
 Route15_Text_BillyPostRematch:
 	.string "Saber libros no lo es todo.\n"

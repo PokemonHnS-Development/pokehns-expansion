@@ -152,8 +152,8 @@ AquaHideout_B2F_Text_Grunt8Intro:
 
 AquaHideout_B2F_Text_Grunt8Defeat:
 	.string "Estaba muy ocupado pensando en\n"
-	.string "los paneles de salto…$"
+	.string "los paneles de salto...$"
 
 AquaHideout_B2F_Text_Grunt8PostBattle:
 	.string "Tendré que aprender cómo puedo\n"
-	.string "luchar más eficazmente…$"
+	.string "luchar más eficazmente...$"

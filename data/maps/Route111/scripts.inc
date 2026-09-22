@@ -680,7 +680,7 @@ Route111_Text_MirageTowerClearlyVisible:
 	.string "La torre de arena que llamaban\n"
 	.string "¡se ve claramente!\p"
 	.string "Pero parece tan frágil...\n"
-	.string "It could crumble away anytime…\p"
+	.string "It could crumble away anytime...\p"
 	.string "Quiero entrar, pero no puedo\n"
 	.string "armarme de valor...$"
 
@@ -693,15 +693,15 @@ Route111_Text_ThatWasShockingSandRainedDown:
 	.string "¿Había fantasmas de arena o algo así?$"
 
 Route111_Text_MirageTowerHasntBeenSeenSince:
-	.string "Desde que hablé contigo, la torre de\narena no se ha visto.\pTal vez realmente fue\nla TORRE ESPEJISMO…$"
+	.string "Desde que hablé contigo, la torre de\narena no se ha visto.\pTal vez realmente fue\nla TORRE ESPEJISMO...$"
 
 Route111_Text_ClawFossilDisappeared:
 	.string "El FÓSIL GARRA desapareció en\n"
-	.string "la arena…$"
+	.string "la arena...$"
 
 Route111_Text_RootFossilDisappeared:
 	.string "El FÓSIL RAÍZ desapareció en\n"
-	.string "la arena…$"
+	.string "la arena...$"
 
 Route111_Text_MauvilleUncleToldMeToTakeRockSmash:
 	.string "Oh, no!\p"

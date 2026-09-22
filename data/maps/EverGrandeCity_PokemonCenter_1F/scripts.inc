@@ -92,7 +92,7 @@ EverGrandeCity_PokemonCenter_1F_Text_ScottHappyForYou:
 	.string "¡Me alegro mucho por ti!\n"
 	.string "¡Valió la pena apoyarte!\p"
 	.string "{PLAYER}{KUN}, si llegaras a ser\n"
-	.string "el CAMPEÓN de la LIGA POKéMON…\p"
+	.string "el CAMPEÓN de la LIGA POKéMON...\p"
 	.string "Me pondré en contacto contigo.\p"
 	.string "Está bien, {PLAYER}{KUN}.\n"
 	.string "¡Ve por la grandeza!$"

@@ -6,12 +6,12 @@ Text_BookShelf:
 
 Text_PokemonCenterBookShelf:
 	.string "¡Revistas de POKéMON!\n"
-	.string "POKéMON PAL…\p"
-	.string "MANUAL DE POKéMON…\n"
-	.string "POKéMON ADORABLES…$"
+	.string "POKéMON PAL...\p"
+	.string "MANUAL DE POKéMON...\n"
+	.string "POKéMON ADORABLES...$"
 
 Text_Vase:
-	.string "Este jarrón parece caro…\nMiré dentro…\pPero estaba vacío.$"
+	.string "Este jarrón parece caro...\nMiré dentro...\pPero estaba vacío.$"
 
 Text_EmptyTrashCan:
 	.string "It's empty.$"

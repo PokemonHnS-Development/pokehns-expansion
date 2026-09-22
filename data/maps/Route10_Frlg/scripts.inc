@@ -56,7 +56,7 @@ Route10_Text_HermanPostBattle::
 Route10_Text_HeidiIntro::
 	.string "I've been out at a POKéMON GYM\n"
 	.string "algunas veces.\p"
-	.string "…But I always lose.$"
+	.string "...But I always lose.$"
 
 Route10_Text_HeidiDefeat::
 	.string "Ohh!\n"
@@ -88,7 +88,7 @@ Route10_Text_CarolDefeat::
 
 Route10_Text_CarolPostBattle::
 	.string "The POKéMON here in the mountains\n"
-	.string "son tan gruesos…\p"
+	.string "son tan gruesos...\p"
 	.string "I wish there were pink POKéMON\n"
 	.string "¡con un patrón floral!$"
 

@@ -118,7 +118,7 @@ CeladonCity_Text_GameCornerIsBadForCitysImage::
 	.string "Es malo para la imagen de nuestra ciudad.$"
 
 CeladonCity_Text_BlewItAllAtSlots::
-	.string "Moan…\n"
+	.string "Moan...\n"
 	.string "¡Me lo gasté todo en las tragamonedas!\p"
 	.string "Sabía que debería haber canjeado mi\n"
 	.string "MONEDAS por premios!$"
@@ -180,7 +180,7 @@ CeladonCity_Text_GameCornerSign::
 	.string "¡El parque de diversiones para adultos!$"
 
 CeladonCity_Text_ScaldedTongueOnTea::
-	.string "Aaaagh, ow…\n"
+	.string "Aaaagh, ow...\n"
 	.string "¡Me quemé la lengua!\p"
 	.string "Esta simpática señora mayor en la MANSIÓN\n"
 	.string "me dio un poco de TÉ.\p"
@@ -209,7 +209,7 @@ Text_SoftboiledTaught::
 	.string "¡Te deseo mucha suerte!$"
 
 CeladonCity_Text_SomeoneStoleSilphScope::
-	.string "Oh, ¿qué voy a hacer…\p"
+	.string "Oh, ¿qué voy a hacer...\p"
 	.string "Alguien robó nuestro SILPH SCOPE.\p"
 	.string "El ladrón vino corriendo por aquí,\n"
 	.string "Estoy seguro.\p"

@@ -66,7 +66,7 @@ VerdanturfTown_FriendshipRatersHouse_Text_SeeHowMuchPokemonLikesYou:
 	.string "Déjame ver a tu POKéMON.\n"
 	.string "Veré cuánto cariño te tiene.\p"
 	.string "Oh.\n"
-	.string "Tu POKéMON…$"
+	.string "Tu POKéMON...$"
 
 VerdanturfTown_FriendshipRatersHouse_Text_AdoresYou:
 	.string "Te adora.\nNo podría quererte más.\lHasta me siento feliz al verlo.$"

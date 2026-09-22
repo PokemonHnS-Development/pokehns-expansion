@@ -17,10 +17,10 @@ SaffronCity_House1_EventScript_MrPsychicAfter::
 	end
 
 MrPsychic_Text_1:
-	.string "…\p"
-	.string "…\p"
-	.string "…\p"
-	.string "…¡Lo tengo!\p"
+	.string "...\p"
+	.string "...\p"
+	.string "...\p"
+	.string "...¡Lo tengo!\p"
 	.string "¡Querías esto!$"
 
 MrPsychic_Text_2:

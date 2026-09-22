@@ -104,7 +104,7 @@ GraniteCave_StevensRoom_Text_CouldBecomeChampionLetsRegister:
 	.string "Ya que nos hemos conocido\n"
 	.string "mejor, registrémonos el uno al\l"
 	.string "otro en nuestros POKéNAV.\p"
-	.string "… … … … … …$"
+	.string "... ... ... ... ... ...$"
 
 GraniteCave_StevensRoom_Text_RegisteredSteven:
 	.string "Registraste a STEVEN\n"
@@ -114,6 +114,6 @@ GraniteCave_StevensRoom_Text_IveGotToHurryAlong:
 	.string "Ahora tengo que apurarme.$"
 
 GraniteCave_StevensRoom_Text_OhBagIsFull:
-	.string "Oh, tu MOCHILA está llena…\n"
+	.string "Oh, tu MOCHILA está llena...\n"
 	.string "Qué mal entonces.$"
 

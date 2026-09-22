@@ -48,7 +48,7 @@ MtMoon_1F_EventScript_Robby::
 MtMoon_1F_Text_MarcosIntro::
 	.string "WHOA!\n"
 	.string "¡Me sorprendiste!\l"
-	.string "…¡Ah, eres solo un niño!$"
+	.string "...¡Ah, eres solo un niño!$"
 
 MtMoon_1F_Text_MarcosDefeat::
 	.string "¡Guau!\n"

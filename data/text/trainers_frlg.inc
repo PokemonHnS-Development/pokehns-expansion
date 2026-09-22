@@ -14,7 +14,7 @@ Route3_Text_GregRematchIntro::
 	.string "¡Vamos a luchar ahora mismo!$"
 
 Route3_Text_SallyRematchIntro::
-	.string "Esa mirada que me das…\n¡Me intriga tanto!$"
+	.string "Esa mirada que me das...\n¡Me intriga tanto!$"
 
 Route3_Text_CalvinRematchIntro::
 	.string "¡Oye! ¿Qué te pasa?\n¡Todavía no llevas shorts!$"
@@ -109,9 +109,9 @@ Route9_Text_ChrisRematchIntro::
 
 Route9_Text_DrewRematchIntro::
 	.string "Voy por el TÚNEL ROCA para ir a\n"
-	.string "LAVANDA…\p"
+	.string "LAVANDA...\p"
 	.string "Pero todos me detienen en el\n"
-	.string "camino…$"
+	.string "camino...$"
 
 Route9_Text_CaitlinRematchIntro::
 	.string "¡No te atrevas a menospreciarme!\n¡Esto va en serio!$"
@@ -156,7 +156,7 @@ Route10_Text_TrentRematchIntro::
 	.string "¡Ah!\n¡El aire de la montaña es delicioso!\l¡Es tan bueno que no me voy!$"
 
 Route10_Text_CarolRematchIntro::
-	.string "Me está empezando a dar vueltas\nla cabeza. Llevo demasiado…$"
+	.string "Me está empezando a dar vueltas\nla cabeza. Llevo demasiado...$"
 
 Route11_Text_HugoRematchIntro::
 	.string "¡Gane, pierda o empate!\n"
@@ -179,10 +179,10 @@ Route11_Text_DillonRematchIntro::
 	.string "Pero creo que puedo ganar.$"
 
 Route11_Text_DirkRematchIntro::
-	.string "¡Jajaja!\n¡Nunca he perdido!\p…Y si lo hice, ya lo he\nolvidado todo!$"
+	.string "¡Jajaja!\n¡Nunca he perdido!\p...Y si lo hice, ya lo he\nolvidado todo!$"
 
 Route11_Text_DarianRematchIntro::
-	.string "Nunca he ganado antes…\pQuizá esté destinado a seguir\nasí…$"
+	.string "Nunca he ganado antes...\pQuizá esté destinado a seguir\nasí...$"
 
 Route11_Text_YasuRematchIntro::
 	.string "Nadie es mejor que yo en mi clase.\n¡Entreno día y noche!$"
@@ -204,7 +204,7 @@ Route12_Text_ChipRematchIntro::
 	.string "Por fin llegaste.\nPescar es cosa de paciencia.$"
 
 Route12_Text_JustinRematchIntro::
-	.string "Aún no encuentro una PIEDRA LUNAR…\n¿Ya encontraste una?$"
+	.string "Aún no encuentro una PIEDRA LUNAR...\n¿Ya encontraste una?$"
 
 Route12_Text_LucaRematchIntro::
 	.string "La electricidad siempre ha sido mi\n"
@@ -217,7 +217,7 @@ Route12_Text_HankRematchIntro::
 	.string "¡Otra ronda, lucha!$"
 
 Route12_Text_ElliotRematchIntro::
-	.string "Amo pescar, no me malinterpretes.\nPero quisiera tener más trabajo…\l…¡Es difícil dejar la pesca!$"
+	.string "Amo pescar, no me malinterpretes.\nPero quisiera tener más trabajo...\l...¡Es difícil dejar la pesca!$"
 
 Route12_Text_AndrewRematchIntro::
 	.string "¿Qué estás pescando?\p"
@@ -336,7 +336,7 @@ Route15_Text_EdwinRematchIntro::
 	.string "¡Son increíblemente lindos!$"
 
 Route15_Text_ChesterRematchIntro::
-	.string "¿Mmm? ¡Mis aves tiemblan!\nEspera, ¿no eres tú ese ENTRENADOR…$"
+	.string "¿Mmm? ¡Mis aves tiemblan!\nEspera, ¿no eres tú ese ENTRENADOR...$"
 
 Route15_Text_GraceRematchIntro::
 	.string "¡Oh, eres una cosita linda!\n"
@@ -372,7 +372,7 @@ Route15_Text_MyaRematchIntro::
 
 Route15_Text_RonRematchIntro::
 	.string "RON: Mi hermana se ha vuelto más\n"
-	.string "poderosa…$"
+	.string "poderosa...$"
 
 Route16_Text_LaoRematchIntro::
 	.string "¿Qué quieres?$"
@@ -446,7 +446,7 @@ Route17_Text_WilliamRematchIntro::
 Route18_Text_WiltonRematchIntro::
 	.string "He estado revisando cada zona\n"
 	.string "área para nuevos POKéMON.\p"
-	.string "Pero no siempre es fácil…$"
+	.string "Pero no siempre es fácil...$"
 
 Route18_Text_RamiroRematchIntro::
 	.string "¡Koorukukukoo!\n"
@@ -480,11 +480,11 @@ Route19_Text_DavidRematchIntro::
 Route19_Text_TonyRematchIntro::
 	.string "Miro el mar para olvidar todas\n"
 	.string "las cosas malas que pasaron.\p"
-	.string "…¡Como perder contra ti la vez pasada!$"
+	.string "...¡Como perder contra ti la vez pasada!$"
 
 Route19_Text_AnyaRematchIntro::
 	.string "Siempre puedes montar tu\n"
-	.string "POKéMON…\p"
+	.string "POKéMON...\p"
 	.string "Se ve muy relajante.\n"
 	.string "¿Me lo das si gano?$"
 
@@ -497,8 +497,8 @@ Route19_Text_AxleRematchIntro::
 	.string "¡No deberías volver aquí!$"
 
 Route19_Text_ConnieRematchIntro::
-	.string "Nadé hasta aquí con mis amigos…\n"
-	.string "Estoy cansado…\l"
+	.string "Nadé hasta aquí con mis amigos...\n"
+	.string "Estoy cansado...\l"
 	.string "¿De verdad debemos luchar otra vez?$"
 
 Route19_Text_LiaRematchIntro::
@@ -663,18 +663,18 @@ Route24_Text_CaleRematchIntro::
 
 OneIsland_TreasureBeach_Text_AmaraRematchIntro::
 	.string "Tumbado, me mecen las olas...\n"
-	.string "No noto cómo pasa el tiempo…$"
+	.string "No noto cómo pasa el tiempo...$"
 
 OneIsland_KindleRoad_Text_MariaRematchIntro::
 	.string "¡El clima está hermoso!\n"
 	.string "Trataré de no arruinarlo.$"
 
 OneIsland_KindleRoad_Text_AbigailRematchIntro::
-	.string "Mi quemadura empieza a doler…$"
+	.string "Mi quemadura empieza a doler...$"
 
 OneIsland_KindleRoad_Text_FinnRematchIntro::
 	.string "La montaña del ave de fuego\n"
-	.string "proyecta una sombra enorme…$"
+	.string "proyecta una sombra enorme...$"
 
 OneIsland_KindleRoad_Text_GarrettRematchIntro::
 	.string "Tengo el fuerte presentimiento\n"
@@ -802,7 +802,7 @@ SixIsland_OutcastIsland_Text_GebRematchIntro::
 	.string "GEB: Mi hermana mayor y yo somos\nmucho más fuertes que antes!$"
 
 SixIsland_GreenPath_Text_JaclynRematchIntro::
-	.string "…¿Eh?\p"
+	.string "...¿Eh?\p"
 	.string "Pienso en mi casa, ¡pero TELEPORT\n"
 	.string "siempre me trae aquí!$"
 
@@ -819,7 +819,7 @@ SixIsland_WaterPath_Text_SamirRematchIntro::
 
 SixIsland_WaterPath_Text_DeniseRematchIntro::
 	.string "Suspiro...\n"
-	.string "Mi novio está ocupado otra vez…$"
+	.string "Mi novio está ocupado otra vez...$"
 
 SixIsland_WaterPath_Text_EarlRematchIntro::
 	.string "Vamos, dime, ¿dónde están las\nmontañas por estos rumbos?$"
@@ -863,7 +863,7 @@ SevenIsland_SevaultCanyon_Entrance_Text_MasonRematchIntro::
 	.string "¡Hola! Eres miembro de mi\nclub de fans, ¿verdad?$"
 
 SevenIsland_SevaultCanyon_Entrance_Text_NicolasRematchIntro::
-	.string "Esta isla es demasiado grande…\nVigilar el lugar es un fastidio…$"
+	.string "Esta isla es demasiado grande...\nVigilar el lugar es un fastidio...$"
 
 SevenIsland_SevaultCanyon_Entrance_Text_MadelineRematchIntro::
 	.string "No perdono a quienes abusan\n"

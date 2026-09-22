@@ -259,7 +259,7 @@ Route110_TrickHouseEnd_Text_AllNightToPlantTrees:
 	.string "uno, dos, tres, cuatro, cinco, seis!$"
 
 Route110_TrickHouseEnd_Text_AllNightToMakeMaze:
-	.string "Tardé toda la noche en el laberinto…\p"
+	.string "Tardé toda la noche en el laberinto...\p"
 	.string "¡Casi eres tan grande como yo por\n"
 	.string "¡Uno, dos, tres, cuatro, cinco sitios!$"
 
@@ -287,20 +287,20 @@ Route110_TrickHouseEnd_Text_AllNightToInstallDoors:
 	.string "¡Casi eres tan genial como yo!$"
 
 Route110_TrickHouseEnd_Text_AllNightSettingUpArrows:
-	.string "Tardé toda la noche poniendo flechas…\p"
+	.string "Tardé toda la noche poniendo flechas...\p"
 	.string "¡Eres tan genial como yo!$"
 
 Route110_TrickHouseEnd_Text_AllNightPolishingFloors:
 	.string "Tardé toda la noche puliendo suelos...\p"
 	.string "¡Eres más grande que yo!\n"
-	.string "Posiblemente…$"
+	.string "Posiblemente...$"
 
 Route110_TrickHouseEnd_Text_FountainOfIdeasRunDry:
 	.string "¿Qu-qué debería hacer?\n"
 	.string "Mi fuente de ideas para trucos se\l"
-	.string "ha secado…\p"
+	.string "ha secado...\p"
 	.string "Quizá sea hora de recorrer el país\n"
-	.string "buscando nuevos trucos…$"
+	.string "buscando nuevos trucos...$"
 
 Route110_TrickHouseEnd_Text_DefeatedMePreferWhichTent:
 	.string "Odio admitir la derrota, ¡pero me\n"
@@ -325,7 +325,7 @@ Route110_TrickHouseEnd_Text_NoRoomInPC:
 	.string "¡Es muy amable, vuelve más tarde!$"
 
 Route110_TrickHouseEnd_Text_LeavingOnJourney:
-	.string "… … … … … …\p"
+	.string "... ... ... ... ... ...\p"
 	.string "Me voy en un viaje de descubrimientos.\n"
 	.string "Una búsqueda de nuevos trucos.\p"
 	.string "Espero que algún día me visites y\n"

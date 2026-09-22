@@ -136,7 +136,7 @@ Route14_Text_KiriIntro::
 	.string "really hard together.$"
 
 Route14_Text_KiriDefeat::
-	.string "KIRI: Whimper…\n"
+	.string "KIRI: Whimper...\n"
 	.string "Perdimos, ¿verdad?$"
 
 Route14_Text_KiriPostBattle::

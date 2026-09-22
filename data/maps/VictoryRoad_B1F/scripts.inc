@@ -32,7 +32,7 @@ VictoryRoad_B1F_Text_SamuelIntro:
 	.string "Me están dando nervios...$"
 
 VictoryRoad_B1F_Text_SamuelDefeat:
-	.string "No pude hacer nada…$"
+	.string "No pude hacer nada...$"
 
 VictoryRoad_B1F_Text_SamuelPostBattle:
 	.string "La LIGA POKéMON se siente lejana\n"

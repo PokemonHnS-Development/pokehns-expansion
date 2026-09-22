@@ -162,7 +162,7 @@ Alola_Ulaula_House_Phant_Text_0:
 	.string "¡Gracias por jugar!$"
 
 Alola_Ulaula_House_Phant_Text_1:
-	.string "Espero que estés preparado…\n"
+	.string "Espero que estés preparado...\n"
 	.string "buena suerte.$"
 
 Alola_Ulaula_House_Phant_Text_2:
@@ -176,10 +176,10 @@ Alola_Ulaula_House_Phant_Text_4:
 
 Alola_Ulaula_House_Phant_Text_5:
 	.string "Ese HUEVO tiene mi POKéMON favorito.\p"
-	.string "Por favor, cuídalo mucho…$"
+	.string "Por favor, cuídalo mucho...$"
 
 Alola_Ulaula_House_Phant_Text_6:
-	.string "No te preocupes, {PLAYER}.\nVuelve cuando estés listo…$"
+	.string "No te preocupes, {PLAYER}.\nVuelve cuando estés listo...$"
 
 Alola_Ulaula_House_Phant_Text_7:
 	.string "Ojalá te guste esta muestra de ALOLA.\pEstoy haciendo un demake total de la\nregión llamada ULTRA ECLIPSE.$"

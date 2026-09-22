@@ -31,7 +31,7 @@ Route110_TrickHousePuzzle4_Text_WroteSecretCodeLockOpened:
 	.string "{PLAYER} anotó el código secreto\n"
 	.string "en la puerta.\p"
 	.string "“TRICK MASTER es genial”.\n"
-	.string "… … … … … … … …\p"
+	.string "... ... ... ... ... ... ... ...\p"
 	.string "¡La cerradura se abrió!$"
 
 Route110_TrickHousePuzzle4_Text_CoraIntro:
@@ -52,10 +52,10 @@ Route110_TrickHousePuzzle4_Text_YujiIntro:
 
 Route110_TrickHousePuzzle4_Text_YujiDefeat:
 	.string "Puedo empujar rocas, pero no puedo\n"
-	.string "resolver el puzzle…$"
+	.string "resolver el puzzle...$"
 
 Route110_TrickHousePuzzle4_Text_YujiPostBattle:
-	.string "No basta con tener fuerza…\n"
+	.string "No basta con tener fuerza...\n"
 	.string "Hay que usar la cabeza. ¡Sé listo!$"
 
 Route110_TrickHousePuzzle4_Text_PaulaIntro:

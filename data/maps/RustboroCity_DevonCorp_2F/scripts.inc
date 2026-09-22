@@ -275,8 +275,8 @@ RustboroCity_DevonCorp_2F_Text_DeviceForTalkingToPokemon:
 
 RustboroCity_DevonCorp_2F_Text_DevelopingNewBalls:
 	.string "Estoy creando nuevos tipos de\n"
-	.string "POKé BALLS…\p"
-	.string "Pero no he avanzado mucho…$"
+	.string "POKé BALLS...\p"
+	.string "Pero no he avanzado mucho...$"
 
 RustboroCity_DevonCorp_2F_Text_WeFinallyMadeNewBalls:
 	.string "¡Al fin creamos nuevos tipos de\n"
@@ -308,16 +308,16 @@ RustboroCity_DevonCorp_2F_Text_WowThatsAPokenav:
 RustboroCity_DevonCorp_2F_Text_DeviceToVisualizePokemonDreams:
 	.string "Intento crear un dispositivo que\n"
 	.string "reproduzca visualmente los sueños de\l"
-	.string "POKéMON…\p"
+	.string "POKéMON...\p"
 	.string "Pero no va muy bien.$"
 
 RustboroCity_DevonCorp_2F_Text_DevelopDeviceToResurrectFossils:
 	.string "He intentado crear un aparato\n"
-	.string "que reviva POKéMON de fósiles…\p"
+	.string "que reviva POKéMON de fósiles...\p"
 	.string "¡Y está funcionando!$"
 
 RustboroCity_DevonCorp_2F_Text_WantToBringFossilBackToLife:
-	.string "¡Espera! Eso que tienes ahí…\n"
+	.string "¡Espera! Eso que tienes ahí...\n"
 	.string "¿Es un fósil POKéMON?\p"
 	.string "¿Te gustaría devolver a la vida\n"
 	.string "a ese POKéMON?\p"
@@ -369,7 +369,7 @@ RustboroCity_DevonCorp_2F_Text_TooManyPokemon:
 
 RustboroCity_DevonCorp_2F_Text_DevelopNewPokenavFeature:
 	.string "Intento crear una función nueva\n"
-	.string "para el POKéNAV…\p"
+	.string "para el POKéNAV...\p"
 	.string "Pero no va muy bien.$"
 
 RustboroCity_DevonCorp_2F_Text_WhatToWorkOnNext:

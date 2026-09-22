@@ -92,7 +92,7 @@ BillHouse_Text_NoEevee:
 BillHouse_Text_PopWontWork:
     .string "BILL: Mi padre no trabaja. Solo\n"
     .string "se pasa el día perdiendo el tiempo.\p"
-    .string "Se está volviendo un dolor de cabeza…$"
+    .string "Se está volviendo un dolor de cabeza...$"
 
 BillHouse_Text_MomBeforeEcruteak:
     .string "Oh, ¿coleccionas POKéMON? Mi hijo\n"
@@ -100,7 +100,7 @@ BillHouse_Text_MomBeforeEcruteak:
     .string "Lo acaban de llamar los POKéMON\n"
     .string "CENTRO en CIUDAD IRIS.\p"
     .string "Mi esposo se fue a la TIENDA\n"
-    .string "de JUEGOS sin que lo llamaran…$"
+    .string "de JUEGOS sin que lo llamaran...$"
 
 BillHouse_Text_MomAfterEcruteak:
     .string "Mi esposo fue conocido alguna vez\n"
@@ -120,7 +120,7 @@ BillHouse_Text_SisterRefusedNumber:
     .string "Mi hermano creó el PC POKéMON\n"
     .string "sistema de almacenamiento.\p"
     .string "Iba a darte el número de BILL\n"
-    .string "…$"
+    .string "...$"
 
 BillHouse_Text_SisterPhoneFull:
     .string "No puedes registrar más números.$"

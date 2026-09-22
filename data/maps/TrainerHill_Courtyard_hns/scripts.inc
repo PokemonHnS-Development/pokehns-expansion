@@ -75,7 +75,7 @@ BattleTowerOutsideBeautyText:
 	.string "En las CARPAS DE BATALLA, solo\n"
 	.string "puedes usar tres POKéMON.\p"
 	.string "Es muy difícil decidir qué\n"
-	.string "tres irán a la batalla…$"
+	.string "tres irán a la batalla...$"
 
 BattleTowerOutsideSailorText:
 	.string "Jejeje, me escapé del trabajo.\p¡No puedo rendirme hasta ganar!\pTengo que ganarlo todo. ¡Debo hacerlo!$"

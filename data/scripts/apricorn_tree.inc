@@ -64,10 +64,10 @@ ApricornTree_Text_Intro:
 	.string "¡Es un árbol de Bellotas!$"
 
 ApricornTree_Text_Empty:
-	.string "No hay Bellotas…$"
+	.string "No hay Bellotas...$"
 
 ApricornTree_Text_WantToPick:
-	.string "…¡Es {STR_VAR_2} {STR_VAR_1}!\n"
+	.string "...¡Es {STR_VAR_2} {STR_VAR_1}!\n"
 	.string "¿Quieres recoger la\l"
 	.string "¿{STR_VAR_1}?$"
 
@@ -83,8 +83,8 @@ ApricornTree_Text_PutAwayApricorn:
 ApricornTree_Text_PocketFull:
 	.string "El BOLSILLO {STR_VAR_3} está lleno.\p"
 	.string "{PLAYER} desistió de la\n"
-	.string "{STR_VAR_1}…$"
+	.string "{STR_VAR_1}...$"
 
 ApricornTree_Text_ApricornLeftUnpicked:
 	.string "{PLAYER} desistió de la\n"
-	.string "{STR_VAR_1}…$"
+	.string "{STR_VAR_1}...$"

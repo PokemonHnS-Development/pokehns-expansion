@@ -342,7 +342,7 @@ AzaleaTown_Movement_KurtLeave:
 	step_end
 
 AzaleaTown_Text_RivalBefore:
-	.string "…Dime una cosa.\p"
+	.string "...Dime una cosa.\p"
 	.string "¿Es verdad que el TEAM ROCKET\n"
 	.string "ha regresado?\p"
 	.string "¿Qué? ¿Les ganaste? ¡Ja! Deja\n"
@@ -351,7 +351,7 @@ AzaleaTown_Text_RivalBefore:
 	.string "¡Veamos qué tan bueno eres!$"
 
 AzaleaTown_Text_RivalWin:
-	.string "…¡Humph! ¡POKéMON inútiles!\p"
+	.string "...¡Humph! ¡POKéMON inútiles!\p"
 	.string "Escucha. Solo ganaste porque\n"
 	.string "mis POKéMON estaban débiles.$"
 
@@ -369,7 +369,7 @@ AzaleaTown_Text_RivalAfter:
 	.string "alguien como tú es un distractor.$"
 
 AzaleaTown_Text_RivalLoss:
-	.string "…¡Hum! Sabía que mentías.$"
+	.string "...¡Hum! Sabía que mentías.$"
 
 AzaleaTown_Text_Rocket1:
 	.string "Es peligroso entrar ahí,\n"
@@ -383,7 +383,7 @@ AzaleaTown_Text_Rocket2:
 
 AzaleaTown_Text_GrampsBefore:
 	.string "Los SLOWPOKE han desaparecido\n"
-	.string "del pueblo…\p"
+	.string "del pueblo...\p"
 	.string "Oí que venden sus COLAS\n"
 	.string "en algún lugar.$"
 

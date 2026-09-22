@@ -108,7 +108,7 @@ FortreeCity_Text_ThisTimeIllBeatWinona:
 
 FortreeCity_Text_TreesGrowByDrinkingRainwater:
 	.string "El suelo absorbe el agua de lluvia,\n"
-	.string "y los árboles crecen bebiéndola…\p"
+	.string "y los árboles crecen bebiéndola...\p"
 	.string "Nuestra CIUDAD BOSQUE existe porque\n"
 	.string "hay agua y tierra.$"
 

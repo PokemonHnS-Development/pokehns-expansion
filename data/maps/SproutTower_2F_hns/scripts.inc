@@ -39,14 +39,14 @@ SproutTower_Text_SageNico_AfterBattle:
 	.string "TORRE, incluso de terremotos.$"
 
 SproutTower_Text_SageEdmond_Seen:
-	.string "…Se mece como hoja al viento…$"
+	.string "...Se mece como hoja al viento...$"
 
 SproutTower_Text_SageEdmond_Beaten:
 	.string "Oh, I'm weak!$"
 
 SproutTower_Text_SageEdmond_AfterBattle:
 	.string "Traté de copiar los suaves\n"
-	.string "movimientos de BELLSPROUT…\p"
+	.string "movimientos de BELLSPROUT...\p"
 	.string "Pero no entrené lo suficiente.$"
 
 SproutTower_Text_2F_Statue:

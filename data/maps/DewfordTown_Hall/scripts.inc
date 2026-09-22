@@ -293,7 +293,7 @@ DewfordTown_Hall_Text_NotEasyToKeepUp:
 
 DewfordTown_Hall_Text_TVShowAboutTrend:
 	.string "Todo este asunto sobre...\n"
-	.string "“{STR_VAR_1}”…\l"
+	.string "“{STR_VAR_1}”...\l"
 	.string "¿No hay un programa de TV sobre eso?$"
 
 DewfordTown_Hall_Text_IsTrendMorePopularAcrossSea:
@@ -308,7 +308,7 @@ DewfordTown_Hall_Text_CollectTrendMerchandise:
 	.string "Tengo muñecos\n"
 	.string "oficiales de {STR_VAR_1}...\p"
 	.string "“{STR_VAR_1}” oficial\n"
-	.string "ropa de marca…\p"
+	.string "ropa de marca...\p"
 	.string "Y libros ilustrados\n"
 	.string "“{STR_VAR_1}”\l"
 	.string "con licencia oficial.\p"
@@ -318,12 +318,12 @@ DewfordTown_Hall_Text_CollectTrendMerchandise:
 DewfordTown_Hall_Text_BooksAboutTrend:
 	.string "IDENTIFICANDO BIEN\n"
 	.string "“{STR_VAR_1}” &\l"
-	.string "MAL “{STR_VAR_1}”…\p"
+	.string "MAL “{STR_VAR_1}”...\p"
 	.string "EL VÍNCULO ENTRE\n"
 	.string "“{STR_VAR_1}” Y\l"
-	.string "POKéMON…\p"
+	.string "POKéMON...\p"
 	.string "ÚTIL\n"
-	.string "“{STR_VAR_1}”…\p"
+	.string "“{STR_VAR_1}”...\p"
 	.string "Está lleno de libros sobre\n"
 	.string "“{STR_VAR_1}.”$"
 
@@ -366,14 +366,14 @@ DewfordTown_Hall_Text_ComposedTrendThemeSong:
 	.string "“{STR_VAR_1}”\n"
 	.string "Es muy popular ahora mismo.\p"
 	.string "¡Bien, escucha!\n"
-	.string "… …\p"
+	.string "... ...\p"
 	.string "Oh!\n"
 	.string "¡{STR_VAR_1}!\p"
 	.string "Maravilloso\n"
 	.string "{STR_VAR_1}!$"
 
 DewfordTown_Hall_Text_WorkOnYourSinging:
-	.string "… …\p"
+	.string "... ...\p"
 	.string "Me atrevo a decir que te convendría\n"
 	.string "mejorar tu canto antes de que\l"
 	.string "te arriesgues con\l"

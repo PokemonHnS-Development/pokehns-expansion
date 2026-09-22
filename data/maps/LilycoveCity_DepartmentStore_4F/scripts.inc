@@ -50,7 +50,7 @@ LilycoveCity_DepartmentStore_4F_Pokemart_DefenseTMs:
 	pokemartlistend
 
 LilycoveCity_DepartmentStore_4F_Text_AttackOrDefenseTM:
-	.string "Hmm…\p"
+	.string "Hmm...\p"
 	.string "Un movimiento de ataque...\n"
 	.string "O uno de defensa...\p"
 	.string "No es fácil decidir qué MT\n"

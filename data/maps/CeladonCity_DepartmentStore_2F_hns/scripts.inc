@@ -23,7 +23,7 @@ CeladonDeptStore2F_Text_PokefanM:
 CeladonDeptStore2F_Text_Youngster:
 	.string "A mi papá le cuesta mucho\n"
 	.string "aprender los nombres de los objetos\l"
-	.string "y cómo se deben usar…$"
+	.string "y cómo se deben usar...$"
 
 CeladonDeptStore2F_Text_Directory:
 	.string "¡Objetos top para entrenadores!\p"

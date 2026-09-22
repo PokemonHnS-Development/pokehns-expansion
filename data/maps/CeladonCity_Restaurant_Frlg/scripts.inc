@@ -53,7 +53,7 @@ CeladonCity_Restaurant_Text_PsstBasementUnderGameCorner::
 	.string "GAME CORNER, I hear.$"
 
 CeladonCity_Restaurant_Text_ManLostItAllAtSlots::
-	.string "Munch…\p"
+	.string "Munch...\p"
 	.string "El hombre de esa mesa lo perdió todo\n"
 	.string "en las tragamonedas.$"
 
@@ -74,5 +74,5 @@ CeladonCity_Restaurant_Text_MakeRoomForThis::
 
 CeladonCity_Restaurant_Text_ThoughtIdWinItBack::
 	.string "Siempre pensé que iba a\n"
-	.string "Recupéralo…$"
+	.string "Recupéralo...$"
 

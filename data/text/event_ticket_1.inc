@@ -39,7 +39,7 @@ EventTicket_Text_AsYouLike:
 
 SouthernIsland_Interior_Text_Sign:
 	.string "“Todos los sueños son otra realidad.\n"
-	.string "Nunca lo olvides…”$"
+	.string "Nunca lo olvides...”$"
 
 SouthernIsland_Exterior_Text_Sign:
-	.string "“Aquellos cuyas memorias se borran\nbuscan grabarlas en sus corazones…”$"
+	.string "“Aquellos cuyas memorias se borran\nbuscan grabarlas en sus corazones...”$"

@@ -566,13 +566,13 @@ BattleFrontier_BattleArenaBattleRoom_Text_GretaYoureChallenger:
 
 BattleFrontier_BattleArenaBattleRoom_Text_IsThatRight:
 	.string "¿Es así? Hmm...\n"
-	.string "Hmhm…$"
+	.string "Hmhm...$"
 
 BattleFrontier_BattleArenaBattleRoom_Text_YouLookWeakTakeThingsEasy:
-	.string "No sé cómo decirlo, pero…\n"
+	.string "No sé cómo decirlo, pero...\n"
 	.string "Para ser franca, te ves muy débil.\l"
 	.string "¿Seguro que puedes conmigo?\p"
-	.string "Hmm…\p"
+	.string "Hmm...\p"
 	.string "¡Bueno, está bien!\n"
 	.string "¡Empecemos con algo tranquilo!$"
 
@@ -591,7 +591,7 @@ BattleFrontier_BattleArenaBattleRoom_Text_ReceivedGutsSymbol:
 	.string "en el FRONTIER PASS!$"
 
 BattleFrontier_BattleArenaBattleRoom_Text_GoingToBeFunNextTime:
-	.string "Hmm…\p"
+	.string "Hmm...\p"
 	.string "¡La próxima vez será divertido!\n"
 	.string "¡Lo espero con ansias!$"
 
@@ -603,7 +603,7 @@ BattleFrontier_BattleArenaBattleRoom_Text_GretaLookingForwardToSeeingAgain:
 	.string "verte!$"
 
 BattleFrontier_BattleArenaBattleRoom_Text_SoAreYouReady:
-	.string "… … …\n"
+	.string "... ... ...\n"
 	.string "Entonces, ¿estás listo?$"
 
 BattleFrontier_BattleArenaBattleRoom_Text_WontAllowHalfheartedEffort:

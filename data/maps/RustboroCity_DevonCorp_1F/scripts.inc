@@ -121,7 +121,7 @@ RustboroCity_DevonCorp_1F_Text_RocksMetalDisplay:
 	.string "Hay muestras de rocas y metal\n"
 	.string "en la vitrina de cristal.\p"
 	.string "Hay un panel con un texto\n"
-	.string "en ello…\p"
+	.string "en ello...\p"
 	.string "“DEVON CORPORATION comenzó como\n"
 	.string "productor de piedras de canteras.\p"
 	.string "“La empresa también producía hierro\n"
@@ -134,7 +134,7 @@ RustboroCity_DevonCorp_1F_Text_RocksMetalDisplay:
 RustboroCity_DevonCorp_1F_Text_ProductDisplay:
 	.string "Prototipos y pruebas llenan\n"
 	.string "la vitrina de cristal.\p"
-	.string "Hay un panel con una descripción…\p"
+	.string "Hay un panel con una descripción...\p"
 	.string "“Además de productos industriales,\n"
 	.string "DEVON ahora vende artículos varios\l"
 	.string "y fármacos para una mejor vida.\p"

@@ -23,5 +23,5 @@ SSAquaRooms_Text_TakeRestOnBed_PokecenterChallenge:
 	.string "¡desafío del POKéCENTER!$"
 
 SSAquaRooms_Text_TakeRestOnBed:
-	.string "Hay una cama…\n"
+	.string "Hay una cama...\n"
 	.string "Descansemos un poco.$"

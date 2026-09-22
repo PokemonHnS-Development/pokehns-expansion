@@ -14,7 +14,7 @@ Route111_Text_ExplainSecretPower:
 	.string "caer para que puedas subir al árbol.\p"
 	.string "Hallarás mucho espacio para poner\n"
 	.string "tus cosas favoritas.\p"
-	.string "Será tu propia habitación secreta…\n"
+	.string "Será tu propia habitación secreta...\n"
 	.string "¡UNA BASE SECRETA!\p"
 	.string "Tú también deberías hacer una.\p"
 	.string "Otra cosa, no siempre tienes que\n"

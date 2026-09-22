@@ -29,7 +29,7 @@ CeruleanCity_House2_Text_RocketsStoleTMForDig::
 	.string "Robaron una MT que enseña\n"
 	.string "POKéMON how to DIG holes!\p"
 	.string "Iba a usarla en un\n"
-	.string "MANKEY o un SANDSHREW…\p"
+	.string "MANKEY o un SANDSHREW...\p"
 	.string "¡Eso me costó un dineral!$"
 
 CeruleanCity_House2_Text_TeachDiglettDigWithoutTM::

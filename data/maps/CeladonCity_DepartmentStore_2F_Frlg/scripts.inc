@@ -62,7 +62,7 @@ CeladonCity_DepartmentStore_2F_TMs::
 
 CeladonCity_DepartmentStore_2F_Text_SuperRepelMorePowerfulRepel::
 	.string "SUPER REPEL keeps weak POKéMON at\n"
-	.string "bay…\p"
+	.string "bay...\p"
 	.string "Mmm, es un REPELENTE más potente."
 
 CeladonCity_DepartmentStore_2F_Text_BuyReviveForLongOutings::

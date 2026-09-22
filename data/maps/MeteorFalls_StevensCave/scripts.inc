@@ -40,8 +40,8 @@ MeteorFalls_StevensCave_Text_ShouldKnowHowGoodIAmExpectWorst:
 	.string "reto serio, ¡espera lo peor!$"
 
 MeteorFalls_StevensCave_Text_StevenDefeat:
-	.string "Tú…\n"
-	.string "No sabía que serías tan fuerte…$"
+	.string "Tú...\n"
+	.string "No sabía que serías tan fuerte...$"
 
 MeteorFalls_StevensCave_Text_MyPredictionCameTrue:
 	.string "STEVEN: Ahora que lo pienso, desde\n"
@@ -51,7 +51,7 @@ MeteorFalls_StevensCave_Text_MyPredictionCameTrue:
 	.string "te volverías el CAMPEÓN.\p"
 	.string "Mis predicciones suelen cumplirse.\p"
 	.string "¿Y a dónde irás ahora?\p"
-	.string "… … … … … …\n"
-	.string "… … … … … …\p"
+	.string "... ... ... ... ... ...\n"
+	.string "... ... ... ... ... ...\p"
 	.string "Fufufu, ni yo mismo sabría decirte.$"
 

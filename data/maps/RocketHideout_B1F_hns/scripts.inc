@@ -249,7 +249,7 @@ RocketHideout_B1F_Text_CameraGrunt1Seen:
     .string "¡Alerta de intruso!$"
 
 RocketHideout_B1F_Text_CameraGrunt1Beaten:
-    .string "Dang… I failed…$"
+    .string "Dang... I failed...$"
 
 RocketHideout_B1F_Text_CameraGrunt2Seen:
     .string "¡Es mi turno! ¡No hay escapatoria!$"
@@ -271,7 +271,7 @@ RocketHideout_B1F_Text_ScientistJedSeen:
     .string "intrusos como tú.$"
 
 RocketHideout_B1F_Text_ScientistJedBeaten:
-    .string "Ya entiendo…$"
+    .string "Ya entiendo...$"
 
 RocketHideout_B1F_Text_ScientistJedAfter:
     .string "Está bien. Revelaré un secreto\n"
@@ -315,7 +315,7 @@ RocketHideout_B1F_EventScript_Persian::
 	end
 
 RocketHideout_B1F_Text_SecurityCameraStatue:
-    .string "Es una estatua PERSIAN…$"
+    .string "Es una estatua PERSIAN...$"
 
 RocketHideout_B1F_EventScript_DummyPanel::
 	msgbox RocketHideout_B1F_Text_NothingThere, MSGBOX_SIGN

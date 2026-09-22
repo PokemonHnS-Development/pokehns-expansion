@@ -154,8 +154,8 @@ FortreeCity_Gym_Text_JaredIntro:
 	.string "de los POKéMON AVE!$"
 
 FortreeCity_Gym_Text_JaredDefeat:
-	.string "Tú…\n"
-	.string "Eres fuerte…$"
+	.string "Tú...\n"
+	.string "Eres fuerte...$"
 
 FortreeCity_Gym_Text_JaredPostBattle:
 	.string "Un ENTRENADOR debe ser listo para\n"
@@ -171,7 +171,7 @@ FortreeCity_Gym_Text_EdwardoIntro:
 
 FortreeCity_Gym_Text_EdwardoDefeat:
 	.string "Fue una carga demasiado pesada\n"
-	.string "para mí…$"
+	.string "para mí...$"
 
 FortreeCity_Gym_Text_EdwardoPostBattle:
 	.string "El mundo es enorme, y existen\n"
@@ -198,7 +198,7 @@ FortreeCity_Gym_Text_AshleyIntro:
 	.string "¡No me ganarás fácilmente!$"
 
 FortreeCity_Gym_Text_AshleyDefeat:
-	.string "Fui derrotado…$"
+	.string "Fui derrotado...$"
 
 FortreeCity_Gym_Text_AshleyPostBattle:
 	.string "Gracias a WINONA, la gente de\n"
@@ -206,7 +206,7 @@ FortreeCity_Gym_Text_AshleyPostBattle:
 
 FortreeCity_Gym_Text_HumbertoIntro:
 	.string "Cuando WINONA lucha, su rostro\n"
-	.string "brilla con gran determinación…\p"
+	.string "brilla con gran determinación...\p"
 	.string "¡No dejaré que veas esa\n"
 	.string "bella imagen!$"
 
@@ -266,7 +266,7 @@ FortreeCity_Gym_Text_ExplainAerialAce:
 	.string "La MT40 contiene GOLPE AÉREO.\p"
 	.string "Su velocidad...\n"
 	.string "Ningún POKéMON podrá evitarlo.\p"
-	.string "… … … … … …$"
+	.string "... ... ... ... ... ...$"
 
 FortreeCity_Gym_Text_RegisteredWinona:
 	.string "Líder de GIMNASIO WINONA\n"
@@ -295,7 +295,7 @@ FortreeCity_Gym_Text_WinonaPreRematch:
 	.string "en pleno vuelo!$"
 
 FortreeCity_Gym_Text_WinonaRematchDefeat:
-	.string "Otra vez no llegué a tu altura…$"
+	.string "Otra vez no llegué a tu altura...$"
 
 FortreeCity_Gym_Text_WinonaPostRematch:
 	.string "WINONA: Aunque haya perdido,\nmis alas del corazón siguen\nfirmes.\pPuedo elevarme y volar otra vez\ny una vez más.\p¡Estoy convencido de\nello!$"

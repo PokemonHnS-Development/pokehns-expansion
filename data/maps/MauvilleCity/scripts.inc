@@ -513,8 +513,8 @@ MauvilleCity_Text_WallyHereICome:
 
 MauvilleCity_Text_WallyDefeat:
 	.string "WALLY: ... ... ... ... ... ... ...\p"
-	.string "… … … … … … … …\p"
-	.string "I lost…$"
+	.string "... ... ... ... ... ... ... ...\p"
+	.string "I lost...$"
 
 MauvilleCity_Text_WallyIllGoBackToVerdanturf:
 	.string "WALLY: TÍO...\n"
@@ -546,14 +546,14 @@ MauvilleCity_Text_UncleVisitUsSometime:
 
 
 MauvilleCity_Text_WallyPokenavCall:
-	.string "… … … … … …\n"
-	.string "… … … … … ¡Bip!\p"
+	.string "... ... ... ... ... ...\n"
+	.string "... ... ... ... ... ¡Bip!\p"
 	.string "WALLY: ¡Oh, hola, {PLAYER}!\p"
 	.string "¡Solo quería decirte que mi tío\n"
 	.string "me compró un POKéNAV!\p"
 	.string "¡Ahora podré ponerme en contacto!\n"
 	.string "¡Cuando quieras, {PLAYER}!\p"
-	.string "… … … … … …\n"
+	.string "... ... ... ... ... ...\n"
 	.string "... ... ... ... ... ¡Click!$"
 
 MauvilleCity_Text_RegisteredWally:
@@ -570,7 +570,7 @@ MauvilleCity_Text_ScottYouDidntHoldBack:
 	.string "¡Sí! ¡De eso se trata una real\n"
 	.string "batalla POKéMON!\p"
 	.string "¡Idolatro a ENTRENADORES así!\p"
-	.string "… … … … … …\n"
+	.string "... ... ... ... ... ...\n"
 	.string "¡Estaré apoyándote!$"
 
 MauvilleCity_Text_WattsonNeedFavorTakeKey:

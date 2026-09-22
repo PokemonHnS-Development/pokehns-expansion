@@ -723,23 +723,23 @@ Alola_Melemele_SamsonOak_Trigger_Beginning_Text_3:
 Alola_Melemele_SamsonOak_Trigger_Beginning_Text_4:
 	.string "Es el pueblo principal de estas islas.\p"
 	.string "Es muy parecido a CIUDAD HAU'OLI en\n"
-	.string "ALOLA… {PAUSE 30}Y ahora que lo pienso…\p"
+	.string "ALOLA... {PAUSE 30}Y ahora que lo pienso...\p"
 	.string "Toda esta isla me recuerda a la ISLA\n"
-	.string "MELEMELE…$"
+	.string "MELEMELE...$"
 
 Alola_Melemele_SamsonOak_Trigger_Beginning_Text_5:
 	.string "¡Bueno, en fin!\p"
 	.string "¡Investigo variaciones de POKéMON que\n"
 	.string "están en diferentes regiones!\p"
 	.string "Al volver de la región de ALOLA,\n"
-	.string "me topé con estas islas…\p"
+	.string "me topé con estas islas...\p"
 	.string "Sorprendentemente, muchos POKéMON\n"
 	.string "de ALOLA estaban aquí, así que\l"
-	.string "llamé a este lugar… {PAUSE 30}¡las ISLAS ALOLA!$"
+	.string "llamé a este lugar... {PAUSE 30}¡las ISLAS ALOLA!$"
 
 Alola_Melemele_SamsonOak_Trigger_Beginning_Text_6:
 	.string "Aún no he explorado las ISLAS\n"
-	.string "por completo… {PAUSE 30}acabo de llegar.\p"
+	.string "por completo... {PAUSE 30}acabo de llegar.\p"
 	.string "Quisiera saber si todas las formas\n"
 	.string "nativas de ALOLA están aquí.\p"
 	.string "Si llegas a encontrar alguna,\n"
@@ -750,7 +750,7 @@ Alola_Melemele_SamsonOak_Trigger_Beginning_Text_6:
 	.string "¡Nos vemos allá!$"
 
 Alola_Melemele_NeedToTalkToSamsonOak_Text_0:
-	.string "SAMSON te espera en su villa…\n"
+	.string "SAMSON te espera en su villa...\n"
 	.string "{PAUSE 30}¡mejor no lo hagas esperar!$"
 
 Alola_Melemele_TotemBattle_Text_0:
@@ -758,14 +758,14 @@ Alola_Melemele_TotemBattle_Text_0:
 
 Alola_Melemele_TotemBattle_Text_1:
 	.string "¡El LEAFEON Tótem fue derrotado!\n"
-	.string "Salió corriendo a algún lugar…$"
+	.string "Salió corriendo a algún lugar...$"
 
 Alola_Melemele_TotemBattle_Text_2:
 	.string "¡Thhhh!$"
 
 Alola_Melemele_TotemBattle_Text_3:
 	.string "¡El RATICATE Tótem fue derrotado!\n"
-	.string "Salió corriendo a algún lugar…$"
+	.string "Salió corriendo a algún lugar...$"
 
 MelemeleIsle_hns_Movement_FacePlayerUpAfterTotemWarp:
 	face_up
@@ -774,7 +774,7 @@ MelemeleIsle_hns_Movement_FacePlayerUpAfterTotemWarp:
 
 Alola_Melemele_Totem_sign_Text_0:
 	.string "El tótem emana una energía\n"
-	.string "muy fuerte…\p"
+	.string "muy fuerte...\p"
 	.string "¿Tocas el tótem para teletransportarte\n"
 	.string "a otra isla?$"
 
@@ -795,7 +795,7 @@ Alola_Melemele_Totem_sign_Text_5:
 
 Alola_Melemele_Totem_sign_Text_6:
 	.string "Hay un tótem extraño aquí,\n"
-	.string "emana un gran poder de él…$"
+	.string "emana un gran poder de él...$"
 
 Alola_Melemele_BattleVsTapuKoko_Text_0:
 	.string "¡Ko-Ko-Kooo!$"
@@ -804,7 +804,7 @@ Alola_Melemele_TrainerBattleSwimmer_Text_0:
 	.string "¡El agua es cálida aquí en las ISLAS!$"
 
 Alola_Melemele_TrainerBattleSwimmer_Text_1:
-	.string "Tal vez debería secarme en tierra\nun poco…$"
+	.string "Tal vez debería secarme en tierra\nun poco...$"
 
 Alola_Melemele_TrainerBattleSwimmer_Text_2:
 	.string "Hay muchos POKéMON geniales en el\n"

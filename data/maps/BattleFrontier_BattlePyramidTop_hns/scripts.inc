@@ -249,7 +249,7 @@ BattleFrontier_BattlePyramidTop_Text_ExplorationsAreGrandestAdventure_hns:
 	.string "¡Tu propia fuerza!\p"
 	.string "¡Tus propios POKéMON!\p"
 	.string "Y, sobre todo, solo tu valor\n"
-	.string "para guiarte por mundos desconocidos…$"
+	.string "para guiarte por mundos desconocidos...$"
 
 BattleFrontier_BattlePyramidTop_Text_ImPyramidKingBrandon_hns:
 	.string "¡Ah, sí, esta vida es grandiosa!\n"
@@ -284,17 +284,17 @@ BattleFrontier_BattlePyramidTop_Text_LookForwardToNextMeeting_hns:
 
 BattleFrontier_BattlePyramidTop_Text_BrandonYouveReturned_hns:
 	.string "BRANDON: ...Al fin has vuelto,\n"
-	.string "joven explorador…\p"
+	.string "joven explorador...\p"
 	.string "Tu amor por la aventura parece venir\n"
-	.string "desde lo más profundo del corazón…\p"
-	.string "Sí… Eres exactamente como yo era en\n"
-	.string "mi propia juventud…\p"
-	.string "… … …Ah…\p"
+	.string "desde lo más profundo del corazón...\p"
+	.string "Sí... Eres exactamente como yo era en\n"
+	.string "mi propia juventud...\p"
+	.string "... ... ...Ah...\p"
 	.string "¡El apasionado!\p"
 	.string "¡El peligroso!\p"
 	.string "¡El desesperado!\p"
 	.string "Esos días de aventuras arriesgadas\n"
-	.string "y llenas de vida han vuelto…$"
+	.string "y llenas de vida han vuelto...$"
 
 BattleFrontier_BattlePyramidTop_Text_MyCourageIsOffMeter_hns:
 	.string "¡Ahora, veamos!\p"

@@ -293,7 +293,7 @@ TrainerHill_Entrance_hns_Text_Money:
 	.string "Oí que puedes ganar hasta 1.000.000¥\n"
 	.string "¡si terminas en diez minutos!\p"
 	.string "Pero si tardas más, la recompensa\n"
-	.string "será menor…$"
+	.string "será menor...$"
 
 TrainerHill_Entrance_hns_Text_StillGettingReady:
 	.string "Esta es la COLINA ENTRENADOR,\n"

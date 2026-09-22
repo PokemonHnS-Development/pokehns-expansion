@@ -199,7 +199,7 @@ LavaridgeTown_Gym_1F_Text_ColeIntro:
 	.string "¡Cielos, quema!$"
 
 LavaridgeTown_Gym_1F_Text_ColeDefeat:
-	.string "El sudor me ciega los ojos…$"
+	.string "El sudor me ciega los ojos...$"
 
 LavaridgeTown_Gym_1F_Text_ColePostBattle:
 	.string "Enterrarse en arena caliente ayuda\n"
@@ -215,9 +215,9 @@ LavaridgeTown_Gym_1F_Text_AxleDefeat:
 	.string "¡Ojalá FLANNERY te queme bien!$"
 
 LavaridgeTown_Gym_1F_Text_AxlePostBattle:
-	.string "Haaah… Uff…\p"
+	.string "Haaah... Uff...\p"
 	.string "Si pasas mucho tiempo enterrado en\n"
-	.string "arena caliente, te agotas…$"
+	.string "arena caliente, te agotas...$"
 
 LavaridgeTown_Gym_B1F_Text_KeeganIntro:
 	.string "Ya debes de estar cansado.\n"
@@ -228,10 +228,10 @@ LavaridgeTown_Gym_B1F_Text_KeeganIntro:
 	.string "clave para todo ENTRENADOR.$"
 
 LavaridgeTown_Gym_B1F_Text_KeeganDefeat:
-	.string "Juega con fuego y te quemarás…$"
+	.string "Juega con fuego y te quemarás...$"
 
 LavaridgeTown_Gym_B1F_Text_KeeganPostBattle:
-	.string "Tu habilidad es real…\n"
+	.string "Tu habilidad es real...\n"
 	.string "Pero nuestra LÍDER FLANNERY es fuerte.\p"
 	.string "Si no tienes cuidado, podrías\n"
 	.string "quemarte seriamente.$"
@@ -241,7 +241,7 @@ LavaridgeTown_Gym_1F_Text_GeraldIntro:
 	.string "un calor de 392 grados?$"
 
 LavaridgeTown_Gym_1F_Text_GeraldDefeat:
-	.string "No ardió con suficiente calor…$"
+	.string "No ardió con suficiente calor...$"
 
 LavaridgeTown_Gym_1F_Text_GeraldPostBattle:
 	.string "La temperatura del magma es\n"
@@ -250,7 +250,7 @@ LavaridgeTown_Gym_1F_Text_GeraldPostBattle:
 	.string "sobrevivirá fácil en el magma.$"
 
 LavaridgeTown_Gym_1F_Text_DanielleIntro:
-	.string "Um…\n"
+	.string "Um...\n"
 	.string "Está bien, lucharé contigo.$"
 
 LavaridgeTown_Gym_1F_Text_DanielleDefeat:
@@ -283,7 +283,7 @@ LavaridgeTown_Gym_B1F_Text_JeffDefeat:
 LavaridgeTown_Gym_B1F_Text_JeffPostBattle:
 	.string "Bueno, ¿y qué? ¡Digo, ¿y qué?\n"
 	.string "¡Puedo caminar sobre brasas!\p"
-	.string "…¡Ni se te ocurra intentarlo!$"
+	.string "...¡Ni se te ocurra intentarlo!$"
 
 LavaridgeTown_Gym_B1F_Text_EliIntro:
 	.string "Aunque amo las montañas,\n"
@@ -306,7 +306,7 @@ LavaridgeTown_Gym_1F_Text_FlanneryIntro:
 	.string "No, espera.\p"
 	.string "¡Soy FLANNERY, la LÍDER del\n"
 	.string "GIMNASIO de aquí!\p"
-	.string "Uh…\n"
+	.string "Uh...\n"
 	.string "¡No me subestimes aunque lleve\l"
 	.string "poco tiempo como LÍDER!\p"
 	.string "Con las habilidades de mi abue-\n"
@@ -314,7 +314,7 @@ LavaridgeTown_Gym_1F_Text_FlanneryIntro:
 	.string "movimientos que pulimos aquí!$"
 
 LavaridgeTown_Gym_1F_Text_FlanneryDefeat:
-	.string "Oh…\n"
+	.string "Oh...\n"
 	.string "Creo que me esforcé demasiado...\p"
 	.string "Yo... hace poco que soy\n"
 	.string "LÍDER de GIMNASIO.\p"

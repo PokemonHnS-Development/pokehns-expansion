@@ -16,7 +16,7 @@ SSAqua_RoomSSW_Text_FirebreatherLyleSeen:
     .string "¡shows de fuego!$"
 
 SSAqua_RoomSSW_Text_FirebreatherLyleBeaten:
-    .string "Fizzle… The flame's tiny…$"
+    .string "Fizzle... The flame's tiny...$"
 
 SSAqua_RoomSSW_Text_FirebreatherLyleAfterBattle:
     .string "El fuego es débil en el mar.\n"

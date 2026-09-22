@@ -60,21 +60,21 @@ CeladonCity_House1_Text_ChefEatathon:
 	.string "Lo siento.$"
 
 CeladonCity_House1_Text_Fisher1Snarfle:
-	.string "…Snarfle, chew…$"
+	.string "...Snarfle, chew...$"
 
 CeladonCity_House1_Text_Fisher1Concentration:
 	.string "¡No me hables!\p"
 	.string "¡Romperás mi concentración!$"
 
 CeladonCity_House1_Text_Fisher2GulpChew:
-	.string "…Gulp… Chew…$"
+	.string "...Gulp... Chew...$"
 
 CeladonCity_House1_Text_Fisher2Quantity:
 	.string "¡Prefiero cantidad que calidad!\p"
 	.string "¡Soy feliz cuando estoy lleno!$"
 
 CeladonCity_House1_Text_Fisher3MunchMunch:
-	.string "Munch, munch…$"
+	.string "Munch, munch...$"
 
 CeladonCity_House1_Text_Fisher3GoldenrodIsBest:
 	.string "La comida es buena aquí, pero\n"
@@ -82,7 +82,7 @@ CeladonCity_House1_Text_Fisher3GoldenrodIsBest:
 	.string "comida de todas.$"
 
 CeladonCity_House1_Text_TeacherCrunchCrunch:
-	.string "Crunch… Crunch…$"
+	.string "Crunch... Crunch...$"
 
 CeladonCity_House1_Text_TeacherNoCoinCase:
 	.string "Nadie aquí te dará una MONEDA\n"

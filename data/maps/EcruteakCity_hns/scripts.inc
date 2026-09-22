@@ -288,7 +288,7 @@ EcruteakCity_Text_Vulpix:
 
 
 EcruteakCity_Text_UnusedMissingDaughter:
-	.string "Oh, no. Oh, no…\p"
+	.string "Oh, no. Oh, no...\p"
 	.string "Mi hija ha desaparecido.\p"
 	.string "No... No puede haber ido a la\n"
 	.string "TORRE QUEMADA.\p"

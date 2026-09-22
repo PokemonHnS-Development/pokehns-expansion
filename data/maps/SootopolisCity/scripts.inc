@@ -1435,7 +1435,7 @@ SootopolisCity_Text_TwoPokemonArentAngry:
 SootopolisCity_Text_FlyingMonStoppedRampage:
 	.string "Ese POKéMON volador bajó del cielo\n"
 	.string "y detuvo el alboroto\l"
-	.string "POKéMON…$"
+	.string "POKéMON...$"
 
 SootopolisCity_Text_WonderWhatWorldIsLike:
 	.string "Yo... nunca he salido de la ciudad.\p"
@@ -1455,7 +1455,7 @@ SootopolisCity_Text_GoRedAndBlueMon:
 	.string "¡No retrocedas, POKéMON azul!$"
 
 SootopolisCity_Text_DoYouKnowMonNames:
-	.string "… … … … … …\p"
+	.string "... ... ... ... ... ...\p"
 	.string "Hola, ¿sabes los nombres de esos\n"
 	.string "¿POKéMON peleando por allá?$"
 
@@ -1490,7 +1490,7 @@ SootopolisCity_Text_BigPokemonFighting:
 
 SootopolisCity_Text_PrettyMonCameFromSky:
 	.string "Un POKéMON hermoso bajó desde\n"
-	.string "el cielo…$"
+	.string "el cielo...$"
 
 SootopolisCity_Text_SootopolisWillBeWrecked:
 	.string "Oh, no!\n"
@@ -1507,7 +1507,7 @@ SootopolisCity_Text_NoOrdinaryTourist:
 	.string "un turista extraordinario.$"
 
 SootopolisCity_Text_CityRegainedCalm:
-	.string "La ciudad ha recuperado la calma…$"
+	.string "La ciudad ha recuperado la calma...$"
 
 SootopolisCity_Text_CaveOfOriginPleaseLeave:
 	.string "¿Quién podrías ser tú?\p"
@@ -1518,23 +1518,23 @@ SootopolisCity_Text_CaveOfOriginPleaseLeave:
 
 SootopolisCity_Text_LeadSuperiorTrainerToCave:
 	.string "Alguien con una voluntad fuerte y\n"
-	.string "un talento superior…\p"
+	.string "un talento superior...\p"
 	.string "Un ENTRENADOR con conocimiento y\n"
-	.string "experiencia en muchos POKéMON…\p"
+	.string "experiencia en muchos POKéMON...\p"
 	.string "Si alguien así aparecía, WALLACE me\n"
 	.string "instruyó para guiar a ese\l"
 	.string "ENTRENADOR hasta esta CUEVA.$"
 
 SootopolisCity_Text_AwakenedPokemonClash:
-	.string "Oh, dios…\p"
+	.string "Oh, dios...\p"
 	.string "El choque entre los dos POKéMON\n"
 	.string "despertados fue calmado por el\l"
-	.string "despertar de un tercer POKéMON…$"
+	.string "despertar de un tercer POKéMON...$"
 
 SootopolisCity_Text_CaveOfOriginSleepsToo:
-	.string "Esta es la CUEVA ORIGEN…\p"
+	.string "Esta es la CUEVA ORIGEN...\p"
 	.string "Al pasar la crisis,\n"
-	.string "la cueva también dormirá…$"
+	.string "la cueva también dormirá...$"
 
 SootopolisCity_Text_SootopolisSkyBeautiful:
 	.string "SOTOPOLIS surgió como un pueblo en\n"
@@ -1592,25 +1592,25 @@ SootopolisCity_Text_AfterAllOurScheming:
 	.string "esfuerzos frenéticos, la acción de\l"
 	.string "un solo POKéMON lo arregla todo\l"
 	.string "como si nada hubiera pasado...\p"
-	.string "Fu…\n"
+	.string "Fu...\n"
 	.string "Fuhahaha...$"
 
 SootopolisCity_Text_KyogreCalmDown:
-	.string "ARCHIE: ¡KYOGRE! ¿Qué te pasa?!\n¡Mira aquí! ¡Es el ORBE ROJO!\l¡Cálmate! ¡KYOGRE!\p… … … … … …\n… … … … … …\p¡No funciona!\n¡No responde en absoluto!$"
+	.string "ARCHIE: ¡KYOGRE! ¿Qué te pasa?!\n¡Mira aquí! ¡Es el ORBE ROJO!\l¡Cálmate! ¡KYOGRE!\p... ... ... ... ... ...\n... ... ... ... ... ...\p¡No funciona!\n¡No responde en absoluto!$"
 
 SootopolisCity_Text_TryingMeaninglessToPokemon:
 	.string "ARCHIE: KYOGRE y GROUDON\n"
 	.string "volaron quién sabe a dónde.\p"
 	.string "El clima de HOENN ha vuelto\n"
-	.string "a su estado normal…\p"
-	.string "Jaja…\n"
+	.string "a su estado normal...\p"
+	.string "Jaja...\n"
 	.string "Jajaja...\p"
 	.string "Tal vez lo que intentamos hacer era\n"
 	.string "algo pequeño, incluso sin sentido,\l"
-	.string "para los POKéMON…$"
+	.string "para los POKéMON...$"
 
 SootopolisCity_Text_InvolvedWithCrisisComeWithMe:
-	.string "STEVEN: Esos POKéMON peleando…\n"
+	.string "STEVEN: Esos POKéMON peleando...\n"
 	.string "GROUDON... y KYOGRE...\p"
 	.string "Los dos POKéMON superantiguos\n"
 	.string "despertaron de un largo sueño...\p"
@@ -1634,13 +1634,13 @@ SootopolisCity_Text_DoesThisMakeYourFearPokemon:
 	.string "Tú ya lo sabes.$"
 
 SootopolisCity_Text_HereWereAreHelpWallace:
-	.string "STEVEN: ¡Muy bien, aquí estamos!\pAquí dentro encontrarás a alguien\nllamado WALLACE.\pCreo que tienes lo necesario para\nayudarlo…$"
+	.string "STEVEN: ¡Muy bien, aquí estamos!\pAquí dentro encontrarás a alguien\nllamado WALLACE.\pCreo que tienes lo necesario para\nayudarlo...$"
 
 SootopolisCity_Text_KnowWhatsNeededToHelpHim:
-	.string "STEVEN: Creo que tienes lo que\nse necesita para ayudarlo…$"
+	.string "STEVEN: Creo que tienes lo que\nse necesita para ayudarlo...$"
 
 SootopolisCity_Text_NeverBeenToSkyPillar:
-	.string "STEVEN: El PILAR CELESTE…\pNunca he estado allí.\n¿Dónde estará?$"
+	.string "STEVEN: El PILAR CELESTE...\pNunca he estado allí.\n¿Dónde estará?$"
 
 SootopolisCity_Text_SoThatsRayquaza:
 	.string "STEVEN: Así que ese es RAYQUAZA...\p"
@@ -1648,10 +1648,10 @@ SootopolisCity_Text_SoThatsRayquaza:
 	.string "furiosos huyan de él con miedo...$"
 
 SootopolisCity_Text_MaxieArchieLeft:
-	.string "STEVEN: Parece que MAXIE y ARCHIE\nse han ido a algún lugar.\pQuizá fueron al MONTE PYRE a\ndevolver esas ORBES…$"
+	.string "STEVEN: Parece que MAXIE y ARCHIE\nse han ido a algún lugar.\pQuizá fueron al MONTE PYRE a\ndevolver esas ORBES...$"
 
 SootopolisCity_Text_HaventYouScaledSkyPillar:
-	.string "WALLACE: ¿Oh?\n¿{PLAYER}{KUN}?\p¿Aún no has subido el PILAR\nCELESTE?\pSeguro que puedes llegar a\nla cima del PILAR CELESTE…$"
+	.string "WALLACE: ¿Oh?\n¿{PLAYER}{KUN}?\p¿Aún no has subido el PILAR\nCELESTE?\pSeguro que puedes llegar a\nla cima del PILAR CELESTE...$"
 
 SootopolisCity_Text_AquaMagmaDidntMeanHarm:
 	.string "WALLACE: {PLAYER}{KUN}...\p"
@@ -1663,7 +1663,7 @@ SootopolisCity_Text_AquaMagmaDidntMeanHarm:
 SootopolisCity_Text_ThankYouForHelpAcceptThis:
 	.string "WALLACE: {PLAYER}{KUN}...\n"
 	.string "Mis ojos no me engañaron.\p"
-	.string "Gracias a tu ayuda, SOOTOPOLIS…\n"
+	.string "Gracias a tu ayuda, SOOTOPOLIS...\n"
 	.string "No, todo HOENN fue salvado.\p"
 	.string "En nombre del pueblo, gracias.\p"
 	.string "Esto es un regalo mío.\n"

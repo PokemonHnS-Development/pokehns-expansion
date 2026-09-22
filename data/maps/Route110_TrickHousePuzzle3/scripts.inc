@@ -305,7 +305,7 @@ Route110_TrickHousePuzzle3_Text_WroteSecretCodeLockOpened:
 	.string "{PLAYER} anotó el código secreto\n"
 	.string "en la puerta.\p"
 	.string "“TRICK MASTER es codiciado.”\n"
-	.string "… … … … … … … …\p"
+	.string "... ... ... ... ... ... ... ...\p"
 	.string "¡La cerradura se abrió!$"
 
 Route110_TrickHousePuzzle3_Text_JustinIntro:
@@ -321,7 +321,7 @@ Route110_TrickHousePuzzle3_Text_JustinPostBattle:
 
 Route110_TrickHousePuzzle3_Text_MarthaIntro:
 	.string "No sé qué está pasando aquí.\n"
-	.string "Empiezo a sentirme triste…$"
+	.string "Empiezo a sentirme triste...$"
 
 Route110_TrickHousePuzzle3_Text_MarthaDefeat:
 	.string "Tú... ¡Eres horrible!$"

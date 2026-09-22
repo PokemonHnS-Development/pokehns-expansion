@@ -56,7 +56,7 @@ VermilionCity_PokemonCenter_1F_Text_PoisonedMonFaintedWhileWalking::
 
 VermilionCity_PokemonCenter_1F_Text_AllMonWeakToSpecificTypes::
 	.string "Es cierto que uno de nivel\n"
-	.string "POKéMON will be more powerful…\p"
+	.string "POKéMON will be more powerful...\p"
 	.string "But, all POKéMON will have weak\n"
 	.string "points against specific types.\p"
 	.string "Así que parece que no hay\n"
@@ -64,7 +64,7 @@ VermilionCity_PokemonCenter_1F_Text_AllMonWeakToSpecificTypes::
 
 VermilionCity_PokemonCenter_1F_Text_UrgeToBattleSomeoneAgain::
 	.string "Las ganas de batallar con alguien\n"
-	.string "con quien ya te has enfrentado…\p"
+	.string "con quien ya te has enfrentado...\p"
 	.string "Alguna vez tuviste esas ganas?\n"
 	.string "Seguro que sí.\p"
 	.string "Yo también quise batirme con\n"

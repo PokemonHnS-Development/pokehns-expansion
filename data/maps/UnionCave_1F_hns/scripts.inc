@@ -90,7 +90,7 @@ UnionCave_1F_Text_PokemaniacLarrySeen:
 	.string "¡Entonces eres mi rival de captura!$"
 
 UnionCave_1F_Text_PokemaniacLarryBeaten:
-	.string "Ugh. My poor POKéMON…$"
+	.string "Ugh. My poor POKéMON...$"
 
 UnionCave_1F_Text_PokemaniacLarryAfter:
 	.string "A veces se oyen rugidos de POKéMON\n"

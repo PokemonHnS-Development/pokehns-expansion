@@ -409,13 +409,13 @@ MossdeepCity_Gym_Text_VirgilPostBattle:
 	.string "Si existen prodigios en el mundo,\n"
 	.string "¡entonces son nuestros LÍDERES de GYM!\p"
 	.string "Sin embargo, puede que seas más\n"
-	.string "talentoso que ellos…$"
+	.string "talentoso que ellos...$"
 
 MossdeepCity_Gym_Text_BlakeIntro:
 	.string "Fufufufu... ¡Mira cómo levito una\n"
 	.string "POKé BALL con telequinesis!\p"
 	.string "¡Wrooooooooaaaar!\n"
-	.string "… … … … … … …\p"
+	.string "... ... ... ... ... ... ...\p"
 	.string "A veces, estoy desincronizado...$"
 
 MossdeepCity_Gym_Text_BlakeDefeat:
@@ -426,7 +426,7 @@ MossdeepCity_Gym_Text_BlakePostBattle:
 	.string "Una POKé BALL pesaba mucho para\n"
 	.string "mi mente. Pero esta pelusa...\p"
 	.string "¡Whoooooooooooooooh!\n"
-	.string "… … … … … …\p"
+	.string "... ... ... ... ... ...\p"
 	.string "¡No, no estoy haciendo trampa!\n"
 	.string "¡No soplé la pelusa! ¡Lo juro!$"
 
@@ -456,13 +456,13 @@ MossdeepCity_Gym_Text_SamanthaDefeat:
 
 MossdeepCity_Gym_Text_SamanthaPostBattle:
 	.string "Librarás una batalla intensamente\n"
-	.string "fuerte con nuestros LÍDERES de GYM…\p"
-	.string "El resultado…\n"
+	.string "fuerte con nuestros LÍDERES de GYM...\p"
+	.string "El resultado...\n"
 	.string "¡No me lo preguntes a mí!$"
 
 MossdeepCity_Gym_Text_MauraIntro:
-	.string "Los caminos que has recorrido…\n"
-	.string "Lo que has experimentado…\p"
+	.string "Los caminos que has recorrido...\n"
+	.string "Lo que has experimentado...\p"
 	.string "¡Ven a mí con todo lo que has\n"
 	.string "aprendido!$"
 
@@ -551,7 +551,7 @@ MossdeepCity_Gym_Text_NicholasPostBattle:
 	.string "invencible para POKéMON ahora.$"
 
 MossdeepCity_Gym_Text_TateAndLizaIntro:
-	.string "TATE: Jejeje... ¿Te sorprendiste?\pLIZA:\nJajaja... ¿Te sorprendiste?\pTATE: ¿Que\nhay dos LÍDERES de GIMNASIO?\nLIZA: ¿Que hay dos LÍDERES de\nGIMNASIO?\pTATE: ¡Somos gemelos!\nLIZA: ¡Somos gemelas!\pTATE: No hace\nfalta hablar porque...\nLIZA: Cada uno puede determinar\nqué...\pTATE: El otro está pensando…\nLIZA: ¡Todo está en la mente!\pTATE:\nNuestra combinación...\nLIZA: ¿Podrás vencerla?$"
+	.string "TATE: Jejeje... ¿Te sorprendiste?\pLIZA:\nJajaja... ¿Te sorprendiste?\pTATE: ¿Que\nhay dos LÍDERES de GIMNASIO?\nLIZA: ¿Que hay dos LÍDERES de\nGIMNASIO?\pTATE: ¡Somos gemelos!\nLIZA: ¡Somos gemelas!\pTATE: No hace\nfalta hablar porque...\nLIZA: Cada uno puede determinar\nqué...\pTATE: El otro está pensando...\nLIZA: ¡Todo está en la mente!\pTATE:\nNuestra combinación...\nLIZA: ¿Podrás vencerla?$"
 
 MossdeepCity_Gym_Text_TateAndLizaDefeat:
 	.string "TATE: ¡¿Qué?! Nuestra combinación...\n"
@@ -577,7 +577,7 @@ MossdeepCity_Gym_Text_ExplainCalmMind:
 	.string "LIZA: ¡Sube la DEF. ESP.!\p"
 	.string "TATE: Es un movimiento perfecto...\n"
 	.string "LIZA: ¡Para POKéMON PSÍQUICOS!\p"
-	.string "… … … … … …$"
+	.string "... ... ... ... ... ...$"
 
 MossdeepCity_Gym_Text_RegisteredTateAndLiza:
 	.string "LÍDERES de GIMNASIO TATE y LIZA\n"
@@ -602,7 +602,7 @@ MossdeepCity_Gym_Text_GymStatueCertified:
 	.string "{PLAYER}$"
 
 MossdeepCity_Gym_Text_TateAndLizaPreRematch:
-	.string "TATE: POKéMON...\nLIZA: POKéMON...\pTATE: Al cambiar la\nmezcla del equipo…\nLIZA: El estilo de combate\ncambia.\pTATE: Pero yo...\nLIZA: Pero yo...\pTATE: ¡Siempre estaré\ncon LIZA!\nLIZA: ¡Siempre estaré con TATE!\pTATE:\nNuestra combinación...\nLIZA: ¡Te lo mostraremos una y otra\nvez!$"
+	.string "TATE: POKéMON...\nLIZA: POKéMON...\pTATE: Al cambiar la\nmezcla del equipo...\nLIZA: El estilo de combate\ncambia.\pTATE: Pero yo...\nLIZA: Pero yo...\pTATE: ¡Siempre estaré\ncon LIZA!\nLIZA: ¡Siempre estaré con TATE!\pTATE:\nNuestra combinación...\nLIZA: ¡Te lo mostraremos una y otra\nvez!$"
 
 MossdeepCity_Gym_Text_TateAndLizaRematchDefeat:
 	.string "TATE: Tú y tu POKéMON...\n"

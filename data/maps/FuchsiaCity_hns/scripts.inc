@@ -120,7 +120,7 @@ FuchsiaCity_Text_GymSign:
 	.string "El Maestro Ninja Venenoso$"
 
 FuchsiaCity_Text_SafariZoneOfficeSign:
-	.string "Hay un aviso aquí…\p"
+	.string "Hay un aviso aquí...\p"
 	.string "La OFICINA DE LA ZONA SAFARI\n"
 	.string "está cerrada hasta nuevo aviso.$"
 

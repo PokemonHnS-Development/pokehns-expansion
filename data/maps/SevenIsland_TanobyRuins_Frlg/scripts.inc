@@ -50,6 +50,6 @@ SevenIsland_TanobyRuins_Text_CliffordDefeat::
 
 SevenIsland_TanobyRuins_Text_CliffordPostBattle::
 	.string "Ah, so you are studying POKéMON\n"
-	.string "por tu cuenta…\p"
+	.string "por tu cuenta...\p"
 	.string "Sí, desde luego que eres todo\n"
 	.string "extraordinary person, indeed.$"

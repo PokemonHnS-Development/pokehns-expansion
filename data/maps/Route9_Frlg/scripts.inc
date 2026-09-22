@@ -10,7 +10,7 @@ Route9_Text_AliciaIntro::
 	.string "¡Eres mío!$"
 
 Route9_Text_AliciaDefeat::
-	.string "Me engañaste…$"
+	.string "Me engañaste...$"
 
 Route9_Text_AliciaPostBattle::
 	.string "El túnel que viene es negro\n"
@@ -30,10 +30,10 @@ Route9_Text_ChrisPostBattle::
 
 Route9_Text_DrewIntro::
 	.string "Voy por el TÚNEL ROCOSO\n"
-	.string "para ir a LAVANDA…$"
+	.string "para ir a LAVANDA...$"
 
 Route9_Text_DrewDefeat::
-	.string "No le llego a los talones…$"
+	.string "No le llego a los talones...$"
 
 Route9_Text_DrewPostBattle::
 	.string "¿Tú también vas a TÚNEL ROCA?$"
@@ -83,7 +83,7 @@ Route9_Text_BrentDefeat::
 
 Route9_Text_BrentPostBattle::
 	.string "Tengo que recolectar más que bichos\n"
-	.string "para hacerme más fuerte…$"
+	.string "para hacerme más fuerte...$"
 
 Route9_Text_AlanIntro::
 	.string "¡Jajajaja!\n"
@@ -101,7 +101,7 @@ Route9_Text_ConnerIntro::
 	.string "Go, my super BUG POKéMON!$"
 
 Route9_Text_ConnerDefeat::
-	.string "Mis bichos…$"
+	.string "Mis bichos...$"
 
 Route9_Text_ConnerPostBattle::
 	.string "If you don't like BUG POKéMON,\n"

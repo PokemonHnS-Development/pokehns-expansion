@@ -198,14 +198,14 @@ BattleFrontier_Lounge3_EventScript_FaceOriginalDirection_hns::
 	end
 
 BattleFrontier_Lounge3_Text_CantYouSeeWereBusyHere_hns::
-	.string "…¿Qué es lo que quieres?\p"
+	.string "...¿Qué es lo que quieres?\p"
 	.string "¿No ves que estamos algo ocupados?\n"
 	.string "¿No puede esperar tu asunto?$"
 
 BattleFrontier_Lounge3_Text_YouLookToughExplainGambling_hns::
-	.string "…¿Eh?\n"
+	.string "...¿Eh?\n"
 	.string "Pareces un ENTRENADOR fuerte.\p"
-	.string "Jeje…\n"
+	.string "Jeje...\n"
 	.string "Escucha, tengo una propuesta.\p"
 	.string "Tenemos un pequeño grupo aquí,\n"
 	.string "y jugamos un juego sobre lo que\l"
@@ -220,7 +220,7 @@ BattleFrontier_Lounge3_Text_YouLookToughExplainGambling_hns::
 	.string "el mejor récord se lleva todos los\l"
 	.string "Battle Points del pozo.\p"
 	.string "Suena simple, ¿no?\n"
-	.string "En fin…$"
+	.string "En fin...$"
 
 BattleFrontier_Lounge3_Text_ChallengeBattleTowerSingle_hns::
 	.string "Busco a un TRAINER que vaya a\n"
@@ -446,23 +446,23 @@ BattleFrontier_Lounge3_Text_NotInterested_hns::
 	.string "tener miedo de arriesgarte!$"
 
 BattleFrontier_Lounge3_Text_Oh_hns::
-	.string "Oh…$"
+	.string "Oh...$"
 
 BattleFrontier_Lounge3_Text_BackedWrongTrainer_hns::
 	.string "¡Aposté por el ENTRENADOR errado!\p"
 	.string "Tal vez debería luchar normal\n"
-	.string "como todos los demás…$"
+	.string "como todos los demás...$"
 
 BattleFrontier_Lounge3_Text_TrainerGoodButRattled_hns::
-	.string "Ese ENTRENADOR…\p"
+	.string "Ese ENTRENADOR...\p"
 	.string "Es bueno, pero se pone nervioso\n"
-	.string "sobrevivir fácil al BATTLE DOME…$"
+	.string "sobrevivir fácil al BATTLE DOME...$"
 
 BattleFrontier_Lounge3_Text_KnowWinnerWhenISeeOne_hns::
 	.string "¡Jeje!\n"
 	.string "¡Reconozco a un ganador al verlo!$"
 
 BattleFrontier_Lounge3_Text_ShouldBeTakingChallenges_hns::
-	.string "Esos ENTRENADORES…\n"
+	.string "Esos ENTRENADORES...\n"
 	.string "¿Qué están haciendo?\l"
 	.string "Deberían aceptar los desafíos.$"

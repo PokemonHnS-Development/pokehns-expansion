@@ -441,8 +441,8 @@ ThreeIsland_Text_OughtToBeThankingUs::
 	.string "intentar sacarnos de aquí.$"
 
 ThreeIsland_Text_YouCowardsToughInPack::
-	.string "Grr… cobardes…\n"
-	.string "Fuertes en manada…$"
+	.string "Grr... cobardes...\n"
+	.string "Fuertes en manada...$"
 
 ThreeIsland_Text_WannaMakeSomethingOfYourStaring::
 	.string "Tú, ¿qué miras?\n"
@@ -456,14 +456,14 @@ ThreeIsland_Text_ThatsSmart::
 
 ThreeIsland_Text_Biker1Intro::
 	.string "Heh, me gusta tu valentía.\n"
-	.string "Perderás dinero conmigo, pero…$"
+	.string "Perderás dinero conmigo, pero...$"
 
 ThreeIsland_Text_Biker1Defeat::
-	.string "Wha…\n"
+	.string "Wha...\n"
 	.string "¿Qué es esto, niño?!$"
 
 ThreeIsland_Text_Biker1PostBattle::
-	.string "Aww, man…\n"
+	.string "Aww, man...\n"
 	.string "¡No te atrevas a reír!$"
 
 ThreeIsland_Text_Biker2Intro::
@@ -484,7 +484,7 @@ ThreeIsland_Text_Biker3Intro::
 	.string "¡Nos avergonzaste, amigo!$"
 
 ThreeIsland_Text_Biker3Defeat::
-	.string "… … …   … … …$"
+	.string "... ... ...   ... ... ...$"
 
 ThreeIsland_Text_Biker3PostBattle::
 	.string "Jefe, te digo que tienes que\n"
@@ -531,7 +531,7 @@ ThreeIsland_Text_LostelleWentOffTowardsBondBridge::
 	.string "fuerte mientras viviste aquí.\p"
 	.string "Espero que al menos te quedes\n"
 	.string "un rato.\p"
-	.string "…¿Perdón?\n"
+	.string "...¿Perdón?\n"
 	.string "¿Buscas a LOSTELLE?\p"
 	.string "LOSTELLE went off towards BOND\n"
 	.string "PUENTE hace un rato.$"

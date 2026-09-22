@@ -43,11 +43,11 @@ MtPyre_2F_EventScript_Zander::
 	end
 
 MtPyre_2F_Text_MemoriesOfSkitty:
-	.string "Recuerdos de mi querido SKITTY…\n"
+	.string "Recuerdos de mi querido SKITTY...\n"
 	.string "Lloro solo de pensarlo.$"
 
 MtPyre_2F_Text_TumbledFromFloorAbove:
-	.string "Ay, ay… Hay agujeros en el\n"
+	.string "Ay, ay... Hay agujeros en el\n"
 	.string "suelo por todas partes.\p"
 	.string "No me di cuenta y me caí desde\n"
 	.string "el piso de arriba.$"
@@ -111,7 +111,7 @@ MtPyre_2F_Text_LeahIntro:
 	.string "¡Vete antes de que pase algo!$"
 
 MtPyre_2F_Text_LeahDefeat:
-	.string "Hmm…\n"
+	.string "Hmm...\n"
 	.string "Eres resistente.$"
 
 MtPyre_2F_Text_LeahPostBattle:
@@ -130,6 +130,6 @@ MtPyre_2F_Text_ZanderDefeat:
 
 MtPyre_2F_Text_ZanderPostBattle:
 	.string "Me asusto cada vez que veo\n"
-	.string "que algo se mueva…\p"
-	.string "No debí venir aquí a entrenar…$"
+	.string "que algo se mueva...\p"
+	.string "No debí venir aquí a entrenar...$"
 

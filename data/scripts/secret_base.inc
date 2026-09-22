@@ -719,11 +719,11 @@ SecretBase_Text_ToyTV:
 
 SecretBase_Text_SeedotTV:
 	.string "Una TV de juguete con forma de SEEDOT.\n"
-	.string "Parece lista para rodar sola…$"
+	.string "Parece lista para rodar sola...$"
 
 SecretBase_Text_SkittyTV:
 	.string "Una TV de juguete con forma de SKITTY.\n"
-	.string "Parece que quiere irse paseando…$"
+	.string "Parece que quiere irse paseando...$"
 
 SecretBase_Text_WouldYouLikeToMoveBases:
 	.string "Solo puedes tener una BASE SECRETA.\p"

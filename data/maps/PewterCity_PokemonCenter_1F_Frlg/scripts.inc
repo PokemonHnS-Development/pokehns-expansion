@@ -57,9 +57,9 @@ PewterCity_PokemonCenter_1F_Text_Jigglypuff::
 PewterCity_PokemonCenter_1F_Text_WhenJiggylypuffSingsMonsGetDrowsy::
 	.string "¡Bostezo!\p"
 	.string "When JIGGLYPUFF sings, POKéMON get\n"
-	.string "drowsy…\p"
-	.string "…A mí también…\n"
-	.string "Snore…$"
+	.string "drowsy...\p"
+	.string "...A mí también...\n"
+	.string "Snore...$"
 
 PewterCity_PokemonCenter_1F_Text_TradingMyClefairyForPikachu::
 	.string "Quiero un PIKACHU, así que\n"

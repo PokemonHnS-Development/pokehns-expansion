@@ -15,8 +15,8 @@ Route21_South_Text_JeromeIntro::
 	.string "Ahora estoy en un triatlón.$"
 
 Route21_South_Text_JeromeDefeat::
-	.string "Pant…\n"
-	.string "Pant… Pant…$"
+	.string "Pant...\n"
+	.string "Pant... Pant...$"
 
 Route21_South_Text_JeromePostBattle::
 	.string "¡Estoy agotado! Pero aún me\n"

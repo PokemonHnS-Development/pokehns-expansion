@@ -54,19 +54,19 @@ Route114_FossilManiacsTunnel_EventScript_PlayerRevivedFossil::
 	end
 
 Route114_FossilManiacsTunnel_Text_LookInDesertForFossils:
-	.string "Soy el MANÍACO DE LOS FÓSILES…\n"
-	.string "Soy un buen tipo que ama los FÓSILES…\p"
+	.string "Soy el MANÍACO DE LOS FÓSILES...\n"
+	.string "Soy un buen tipo que ama los FÓSILES...\p"
 	.string "¿Quieres un FÓSIL?\p"
 	.string "Pero los FÓSILES de por aquí\n"
-	.string "son todos míos… Nada para ti…\p"
+	.string "son todos míos... Nada para ti...\p"
 	.string "Si no puedes soportar estar\n"
 	.string "sin un FÓSIL, busca en un desierto\l"
 	.string "con rocas y arena que puedan\l"
-	.string "ocultar FÓSILES…$"
+	.string "ocultar FÓSILES...$"
 
 Route114_FossilManiacsTunnel_Text_DevonCorpRevivingFossils:
 	.string "Hallaste un FÓSIL, ¿verdad?\n"
-	.string "Qué lindo… Es un sueño…\p"
+	.string "Qué lindo... Es un sueño...\p"
 	.string "¿Qué vas a hacer con eso?\n"
 	.string "¿FÓSILES?\p"
 	.string "Según he oído, DEVON está\n"
@@ -80,7 +80,7 @@ Route114_FossilManiacsTunnel_Text_FossilsAreWonderful:
 	.string "Es un sueño...$"
 
 Route114_FossilManiacsTunnel_Text_NotSafeThatWay:
-	.string "Oh…\n"
+	.string "Oh...\n"
 	.string "No es seguro por ahí...\p"
 	.string "Estaba excavando, ¿sabes?\n"
 	.string "Cuando toda la pared colapsó...\p"

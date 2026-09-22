@@ -14,9 +14,9 @@ ThreeIsland_House2_EventScript_Rocker::
 	end
 
 ThreeIsland_House2_Text_CantMakeThisSpoonBend::
-	.string "Urrrrrrrrgggghhhh…\n"
+	.string "Urrrrrrrrgggghhhh...\n"
 	.string "Kwaaaaah!\p"
-	.string "…¡Es inútil! No puedo doblar\n"
+	.string "...¡Es inútil! No puedo doblar\n"
 	.string "esta cuchara con la mente.\p"
 	.string "Quizá de verdad no tengo\n"
 	.string "psychic powers.$"

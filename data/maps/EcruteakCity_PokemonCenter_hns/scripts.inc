@@ -135,8 +135,8 @@ EcruteakCity_PokemonCenter1F_Text_CooltrainerF:
 	.string "Sus POKéMON también son fuertes.$"
 
 EcruteakCity_PokemonCenter1F_Text_GymGuide:
-	.string "LAGO DE la FURIA…\p"
+	.string "LAGO DE la FURIA...\p"
 	.string "La aparición de un grupo de\n"
-	.string "GYARADOS…\p"
+	.string "GYARADOS...\p"
 	.string "Huelo una conspiración. ¡Lo sé!$"
 

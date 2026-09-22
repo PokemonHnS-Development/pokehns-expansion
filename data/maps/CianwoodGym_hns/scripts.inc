@@ -138,7 +138,7 @@ CianwoodGym_Text_ChuckIntro1:
 
 CianwoodGym_Text_ChuckIntro2:
 	.string "CHUCK: ¡Urggh!\n"
-	.string "…\p"
+	.string "...\p"
 	.string "¡Oooarrgh!$"
 
 CianwoodGym_Text_ChuckIntro3:
@@ -214,7 +214,7 @@ CianwoodGym_Text_BlackbeltLaoBeaten:
 
 CianwoodGym_Text_BlackbeltLaoAfter:
 	.string "Los POKéMON lucha temen a los\n"
-	.string "psíquicos…$"
+	.string "psíquicos...$"
 
 
 CianwoodGym_EventScript_Nob::
@@ -227,7 +227,7 @@ CianwoodGym_Text_BlackbeltNobSeen:
 	.string "¡Que hablen tus puños!$"
 
 CianwoodGym_Text_BlackbeltNobBeaten:
-	.string "…$"
+	.string "...$"
 
 CianwoodGym_Text_BlackbeltNobAfter:
 	.string "I lost! I'm speechless!$"
@@ -245,6 +245,6 @@ CianwoodGym_Text_BlackbeltLungBeaten:
 	.string "¡Quedé hecho añicos!$"
 
 CianwoodGym_Text_BlackbeltLungAfter:
-	.string "Mi POKéMON perdió…\n"
-	.string "Mi… mi orgullo está destrozado…$"
+	.string "Mi POKéMON perdió...\n"
+	.string "Mi... mi orgullo está destrozado...$"
 

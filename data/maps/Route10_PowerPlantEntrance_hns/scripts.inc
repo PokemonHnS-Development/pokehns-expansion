@@ -151,7 +151,7 @@ Route10_PowerPlantEntrance_Text_Officer2ManagerHasBeenSadAndFurious:
 	.string "está atrás con el generador.\p"
 	.string "Pero como alguien rompió el\n"
 	.string "generador, ha estado triste y\l"
-	.string "furioso…$"
+	.string "furioso...$"
 
 Route10_PowerPlantEntrance_Text_Officer2ManagerHasBeenCheerful:
 	.string "Desde que arreglaron el generador,\n"

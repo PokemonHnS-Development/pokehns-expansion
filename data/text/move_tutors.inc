@@ -87,7 +87,7 @@ MoveTutor_Text_MimicWhichMon:
 MoveTutor_Text_MimicTaught:
 	.string "MÍMICA es un movimiento complejo.\p"
 	.string "¿Podrás ejecutarlo a la perfección\n"
-	.string "tan bien como yo…?$"
+	.string "tan bien como yo...?$"
 
 MoveTutor_Text_MetronomeTeach:
 	.string "¡Quiero muchas cosas!\n"
@@ -125,7 +125,7 @@ MoveTutor_Text_SleepTalkTeach:
 
 MoveTutor_Text_SleepTalkDeclined:
 	.string "Oh, está bien. También quieres estar\n"
-	.string "despierto con PODER OCULTO…$"
+	.string "despierto con PODER OCULTO...$"
 
 MoveTutor_Text_SleepTalkWhichMon:
 	.string "¡Ah, un niño agradecido!\n"
@@ -135,7 +135,7 @@ MoveTutor_Text_SleepTalkTaught:
 	.string "Ni una sola vez he logrado hacer\n"
 	.string "truco de monedas.\p"
 	.string "Sería feliz si lo lograra hacer\n"
-	.string "aunque estuviera en SONÁMBULO…$"
+	.string "aunque estuviera en SONÁMBULO...$"
 
 MoveTutor_Text_SubstituteTeach:
 	.string "Cuando veo el mundo desde arriba\n"
@@ -144,7 +144,7 @@ MoveTutor_Text_SubstituteTeach:
 	.string "si hubiera más de un yo\l"
 	.string "para disfrutar todo tipo de vidas.\p"
 	.string "Claro que no es posible.\n"
-	.string "Jejeje…\p"
+	.string "Jejeje...\p"
 	.string "¡Ya sé! ¿Te interesaría que\n"
 	.string "un POKéMON aprenda SUSTITUTO?$"
 
@@ -154,7 +154,7 @@ MoveTutor_Text_SubstituteDeclined:
 	.string "de sí mismo usándolo, ¿sabes?$"
 
 MoveTutor_Text_SubstituteWhichMon:
-	.string "Jejeje…\n"
+	.string "Jejeje...\n"
 	.string "¿A qué POKéMON quieres que se lo\l"
 	.string "¿Enseñar SUSTITUTO?$"
 
@@ -196,8 +196,8 @@ MoveTutor_Text_DoubleEdgeTeach:
 	.string "¡el movimiento CABEZA DE HIERRO!$"
 
 MoveTutor_Text_DoubleEdgeDeclined:
-	.string "Oh…\n"
-	.string "Hasta tú me rechazaste…$"
+	.string "Oh...\n"
+	.string "Hasta tú me rechazaste...$"
 
 MoveTutor_Text_DoubleEdgeWhichMon:
 	.string "Bien, ¿a qué POKéMON debo enseñarle\n"

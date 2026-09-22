@@ -256,7 +256,7 @@ LakeOfRage_Text_LanceIntro1:
 LakeOfRage_Text_LanceIntro2:
     .string "Este hombre me informó sobre\n"
     .string "algunos rumores.\p"
-    .string "Así que vinimos a investigar…$"
+    .string "Así que vinimos a investigar...$"
 
 LakeOfRage_Text_LanceIntro3:
     .string "Vi cómo luchaste\n"
@@ -313,7 +313,7 @@ LakeOfRage_Text_FisherAndreSeen:
 
 LakeOfRage_Text_FisherAndreBeaten:
     .string "Seré un experto pescador, pero\n"
-    .string "Soy un mal ENTRENADOR POKéMON…$"
+    .string "Soy un mal ENTRENADOR POKéMON...$"
 
 LakeOfRage_Text_FisherAndreAfter:
     .string "¡No perderé como pescador! Atrapé\n"
@@ -322,10 +322,10 @@ LakeOfRage_Text_FisherAndreAfter:
 
 LakeOfRage_Text_FisherRaymondSeen:
     .string "Haga lo que haga, siempre atrapo\n"
-    .string "los mismos POKéMON…$"
+    .string "los mismos POKéMON...$"
 
 LakeOfRage_Text_FisherRaymondBeaten:
-    .string "Mi línea está toda enredada…$"
+    .string "Mi línea está toda enredada...$"
 
 LakeOfRage_Text_FisherRaymondAfter:
     .string "¿Por qué no puedo atrapar buenos\n"
@@ -337,7 +337,7 @@ LakeOfRage_Text_CooltrainermAaronSeen:
     .string "Ese es nuestro destino.$"
 
 LakeOfRage_Text_CooltrainermAaronBeaten:
-    .string "Whew… Good battle.$"
+    .string "Whew... Good battle.$"
 
 LakeOfRage_Text_CooltrainermAaronAfter:
     .string "Los POKéMON y su ENTRENADOR se\n"

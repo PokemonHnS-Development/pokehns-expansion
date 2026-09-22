@@ -311,7 +311,7 @@ BattleFrontier_Lounge7_Text_LeftTutorIntro:
 	.string "¡pero yo era una ENTRENADORA dura!\p"
 	.string "Tenía fama de ser la BEAUTY\n"
 	.string "más fuerte de todas, ¡te lo digo!\p"
-	.string "… … … … … …\p"
+	.string "... ... ... ... ... ...\p"
 	.string "¿Qué pasa ahora?\n"
 	.string "No me crees.\p"
 	.string "No soy como esa fanfarrona de\n"
@@ -341,7 +341,7 @@ BattleFrontier_Lounge7_Text_TeachMoveToWhichMon:
 	.string "al que debo enseñarle el ataque.$"
 
 BattleFrontier_Lounge7_Text_HaventGotEnoughPoints:
-	.string "Pero qué…\n"
+	.string "Pero qué...\n"
 	.string "You haven't got enough Battle Points!$"
 
 BattleFrontier_Lounge7_Text_IllTakeBattlePoints:
@@ -360,7 +360,7 @@ BattleFrontier_Lounge7_Text_RightTutorIntro:
 	.string "fui un ENTRENADOR fantástico.\p"
 	.string "Tenía fama de ser el NADADOR más\n"
 	.string "¡un NADADOR invencible, te digo!\p"
-	.string "… … … … … …\p"
+	.string "... ... ... ... ... ...\p"
 	.string "¿Qué pasa?\n"
 	.string "No me crees.\p"
 	.string "No soy como esa mujer tan tonta de\n"

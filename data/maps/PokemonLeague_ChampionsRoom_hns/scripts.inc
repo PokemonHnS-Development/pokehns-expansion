@@ -351,7 +351,7 @@ PokemonLeague_ChampionsRoom_Text_BattleIntro:
     .string "Lucharemos para ver quién es\n"
     .string "el más fuerte de los dos.\p"
     .string "Como el entrenador más poderoso y\n"
-    .string "el CAMPEÓN de la LIGA POKéMON…\p"
+    .string "el CAMPEÓN de la LIGA POKéMON...\p"
     .string "yo, LANCE, el maestro dragón, ¡acepto\n"
     .string "tu desafío!$"
 
@@ -374,7 +374,7 @@ PokemonLeague_ChampionsRoom_Text_BattleAfter:
 
 PokemonLeague_ChampionsRoom_Text_MaryOhNoOak:
     .string "MARY: ¡Oh, no! ¡Todo terminó!\p"
-    .string "PROF.OAK, si no fueras tan lento…$"
+    .string "PROF.OAK, si no fueras tan lento...$"
 
 PokemonLeague_ChampionsRoom_Text_OakCongratulations:
     .string "PROF.OAK: ¡Ah, {PLAYER}!\p"

@@ -96,7 +96,7 @@ VerdanturfTown_Text_GuyTryingToBustThroughCave:
 	.string "Hay un tipo ahí que está intentando\n"
 	.string "rompe rocas para que pueda salir\l"
 	.string "hacia el otro lado.\p"
-	.string "Sería genial si pudiéramos pasar…\n"
+	.string "Sería genial si pudiéramos pasar...\n"
 	.string "Será fácil visitar RUSTBORO.$"
 
 VerdanturfTown_Text_EasyToGetToRustboroNow:

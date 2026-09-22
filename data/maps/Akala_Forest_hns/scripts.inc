@@ -76,7 +76,7 @@ Alola_AkalaForest_TrainerBattleBugCatcher2_Text_1:
 
 Alola_AkalaForest_TrainerBattleBugCatcher2_Text_2:
 	.string "El clima es algo diferente en las\n"
-	.string "ISLAS ALOLA…\p"
+	.string "ISLAS ALOLA...\p"
 	.string "Seguro que por eso hay algunos\n"
 	.string "POKéMON tipo Bicho únicos aquí.$"
 

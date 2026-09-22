@@ -24,7 +24,7 @@ SINGLE_BATTLE_TEST("Wonder Guard activates when targeted by moves not super effe
         TURN { MOVE(opponent, move); }
     } SCENE {
         ABILITY_POPUP(player, ABILITY_WONDER_GUARD);
-        MESSAGE("It doesn't affect Shedinja…");
+        MESSAGE("It doesn't affect Shedinja...");
     }
 }
 

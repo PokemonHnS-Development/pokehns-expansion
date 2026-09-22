@@ -173,7 +173,7 @@ Route30_Text_BugCatcherDonBeaten:
 Route30_Text_BugCatcherDonAfter:
 	.string "Me quedé sin POKé BALLS mientras\n"
 	.string "capturaba POKéMON.\p"
-	.string "Debí haber comprado más…$"
+	.string "Debí haber comprado más...$"
 
 Route30_Text_YoungsterDirectionsToMrPokemon:
 	.string "¿La casa del SR. POKéMON?\n"
@@ -248,7 +248,7 @@ Route30_Text_Elm_Disaster:
 	.string "un desastre!\p"
 	.string "¡Eh, esto es terrible!\p"
 	.string "¿Qué debo hacer? Es que...\n"
-	.string "Oh, no…\p"
+	.string "Oh, no...\p"
 	.string "¡Por favor, vuelve ahora mismo!$"
 
 

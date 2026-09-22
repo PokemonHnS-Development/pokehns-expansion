@@ -74,15 +74,15 @@ Route102_EventScript_Allen::
 	end
 
 Route102_Text_WatchMeCatchPokemon:
-	.string "WALLY: {PLAYER}…\n"
+	.string "WALLY: {PLAYER}...\n"
 	.string "Los POKéMON se ocultan en la\l"
 	.string "hierba alta, ¿verdad?\p"
 	.string "Por favor, mírame y ve si puedo\n"
 	.string "atrapar uno correctamente.\p"
-	.string "…¡Guau!$"
+	.string "...¡Guau!$"
 
 Route102_Text_WallyIDidIt:
-	.string "WALLY: ¡Lo logré… Es mi…\n"
+	.string "WALLY: ¡Lo logré... Es mi...\n"
 	.string "¡Mi POKéMON!$"
 
 Route102_Text_LetsGoBack:
@@ -90,10 +90,10 @@ Route102_Text_LetsGoBack:
 	.string "¡Volvamos al GIMNASIO!$"
 
 Route102_Text_ImNotVeryTall:
-	.string "Soy… bajito, así que me hundo en\n"
+	.string "Soy... bajito, así que me hundo en\n"
 	.string "la hierba alta.\p"
-	.string "La hierba me entra en la nariz y…\n"
-	.string "Fwafwafwafwafwa…\p"
+	.string "La hierba me entra en la nariz y...\n"
+	.string "Fwafwafwafwafwa...\p"
 	.string "¡Atchís!$"
 
 Route102_Text_CatchWholeBunchOfPokemon:

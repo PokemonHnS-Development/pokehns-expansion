@@ -45,7 +45,7 @@ CeladonCity_Gym_Text_ErikaBeforeBattle:
 CeladonCity_Gym_Text_ErikaBeaten:
 	.string "ERIKA: ¡Oh! Admito mi derrota...\p"
 	.string "Eres increíblemente fuerte...\p"
-	.string "Te daré la MEDALLA ARCOÍRIS…$"
+	.string "Te daré la MEDALLA ARCOÍRIS...$"
 
 CeladonCity_Gym_Text_PlayerReceivedRainbowBadge:
 	.string "{PLAYER} recibió la MEDALLA ARCOÍRIS.$"
@@ -61,7 +61,7 @@ CeladonCity_Gym_Text_Erika_ExplainTM:
 	.string "Es un movimiento maravilloso que\n"
 	.string "absorbe la mitad del daño hecho\l"
 	.string "para curar a tu POKéMON.\p"
-	.string "Úsala si así lo deseas…$"
+	.string "Úsala si así lo deseas...$"
 
 CeladonCity_Gym_Text_ErikaAfterBattle:
 	.string "ERIKA: Perder deja un sabor amargo\n"
@@ -148,7 +148,7 @@ CeladonCity_Gym_Text_TwinsJoAndZoe1Seen:
 	.string "que ERIKA nos enseñó!$"
 
 CeladonCity_Gym_Text_TwinsJoAndZoe1Beaten:
-	.string "Oh… Perdimos…$"
+	.string "Oh... Perdimos...$"
 
 CeladonCity_Gym_Text_TwinsJoAndZoe1After:
 	.string "¡ERIKA te las hará pagar por nosotros!$"
@@ -157,7 +157,7 @@ CeladonCity_Gym_Text_TwinsJoAndZoe2Seen:
 	.string "¡Vamos a proteger a ERIKA!$"
 
 CeladonCity_Gym_Text_TwinsJoAndZoe2Beaten:
-	.string "No pudimos ganar…$"
+	.string "No pudimos ganar...$"
 
 CeladonCity_Gym_Text_TwinsJoAndZoe2After:
 	.string "¡ERIKA es mucho más fuerte!$"

@@ -48,7 +48,7 @@ static void PrintOakText_ForPetesSake(enum BattlerId battler);
 static void PrintOakTextWithMainBgDarkened(enum BattlerId battler, const u8 *text, u8 delay);
 static void HandleInputChooseAction(enum BattlerId battler);
 
-static const u8 sText_ForPetesSake[] = _("OAK: Oh, for Pete's sake…\nSo pushy, as always.\p{B_PLAYER_NAME}.\pYou've never had a POKéMON battle\nbefore, have you?\pA POKéMON battle is when TRAINERS\npit their POKéMON against each\lother.\p");
+static const u8 sText_ForPetesSake[] = _("OAK: Oh, for Pete's sake...\nSo pushy, as always.\p{B_PLAYER_NAME}.\pYou've never had a POKéMON battle\nbefore, have you?\pA POKéMON battle is when TRAINERS\npit their POKéMON against each\lother.\p");
 static const u8 sText_HowDissapointing[] = _("OAK: Hm...\nQué decepción...\pSi ganas, obtienes dinero en premios\ny tus POKéMON crecen.\pPero si pierdes, {B_PLAYER_NAME}, terminarás\npagar el premio...\pPero, como no tuviste aviso\nesta vez, yo pagaré por ti.\pPero no será así una vez que\ncruces esas puertas.\pPor eso debes fortalecer a tus\nPOKéMON luchando contra salvajes.\p");
 static const u8 sText_InflictingDamageIsKey[] = _("OAK: Dañar al enemigo\nes la clave de cualquier batalla.\p");
 static const u8 sText_KeepAnEyeOnHP[] = _("OAK: No pierdas de vista los\nPS de tus POKéMON.\pSe debilitará si los PS bajan a\n“0.”\p");

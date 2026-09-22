@@ -315,11 +315,11 @@ Route103_Text_MayTimeToHeadBack:
 
 Route103_Text_BrendanRoute103Pokemon:
 	.string "BRENDAN: Bien, entonces son este y\n"
-	.string "aquel los que viven en la RUTA 103…$"
+	.string "aquel los que viven en la RUTA 103...$"
 
 Route103_Text_BrendanLetsBattle:
 	.string "¡Hey, es {PLAYER}!\p"
-	.string "…Ah, sí, Papá te dio un POKéMON.\p"
+	.string "...Ah, sí, Papá te dio un POKéMON.\p"
 	.string "Ya que estamos aquí, ¿qué tal una\n"
 	.string "la batalla?\p"
 	.string "Te enseñaré lo que es ser ENTRENADOR\n"
@@ -339,8 +339,8 @@ Route103_Text_BrendanTimeToHeadBack:
 	.string "Deberíamos volver al LAB.$"
 
 Route103_Text_ShouldHaveBroughtPotion:
-	.string "Mi POKéMON está agotadísimo…\n"
-	.string "Debí traer una POCIÓN…$"
+	.string "Mi POKéMON está agotadísimo...\n"
+	.string "Debí traer una POCIÓN...$"
 
 Route103_Text_ShortcutToOldale:
 	.string "Si cruzas el mar desde aquí,\n"

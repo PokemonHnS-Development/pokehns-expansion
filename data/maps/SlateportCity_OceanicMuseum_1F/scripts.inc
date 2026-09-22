@@ -238,13 +238,13 @@ SlateportCity_OceanicMuseum_1F_Text_AquaExistForGoodOfAll:
 	.string "Nosotros, el EQUIPO AQUA, existimos\npor el bien de todos!$"
 
 SlateportCity_OceanicMuseum_1F_Text_OurBossIsntHere:
-	.string "Nos dijeron que nos reuniéramos aquí,\ny vinimos, pero…\pNuestro JEFE, el pilar, no está aquí.$"
+	.string "Nos dijeron que nos reuniéramos aquí,\ny vinimos, pero...\pNuestro JEFE, el pilar, no está aquí.$"
 
 SlateportCity_OceanicMuseum_1F_Text_WouldStuffHereMakeMeRich:
 	.string "Si me robo las cosas de aquí,\n¿me haría rico?$"
 
 SlateportCity_OceanicMuseum_1F_Text_CanLearnForNefariousDeeds:
-	.string "Lo que aprenda aquí, lo puedo usar\npara cometer fechorías…$"
+	.string "Lo que aprenda aquí, lo puedo usar\npara cometer fechorías...$"
 
 SlateportCity_OceanicMuseum_1F_Text_RustboroBungled:
 	.string "¡Si nuestros matones no arruinaran\nCIUDAD FÉRRICA, no estaríamos aquí!$"
@@ -265,7 +265,7 @@ SlateportCity_OceanicMuseum_1F_Text_SternIsRoleModel:
 
 SlateportCity_OceanicMuseum_1F_Text_MustBePokemonWeDontKnow:
 	.string "El mar es vasto y sin final, y\n"
-	.string "está infinitamente profundo…\p"
+	.string "está infinitamente profundo...\p"
 	.string "Debe haber muchos POKéMON que\n"
 	.string "aún no conocemos.$"
 
@@ -347,5 +347,5 @@ SlateportCity_OceanicMuseum_1F_Text_FossilDisplay:
 	.string "Es un fósil con crestas onduladas.\p“El fondo del mar es arrastrado\npor la marea.\p“El agua al fluir marca el suelo\ncon pequeñas crestas y valles.\p“Si este suelo se fosiliza, se llama\nmarca de oleaje.”$"
 
 SlateportCity_OceanicMuseum_1F_Text_DepthMeasuringMachine:
-	.string "Una máquina extraña gira bajo\nuna cúpula de vidrio.\pQuizá sirva para medir la\nprofundidad de algo…$"
+	.string "Una máquina extraña gira bajo\nuna cúpula de vidrio.\pQuizá sirva para medir la\nprofundidad de algo...$"
 

@@ -139,7 +139,7 @@ Route34_Text_YoungsterIan_Seen:
 	.string "POKéMON.$"
 
 Route34_Text_YoungsterIan_Beaten:
-	.string "¡No! Hay entrenadores mejores…$"
+	.string "¡No! Hay entrenadores mejores...$"
 
 Route34_Text_YoungsterIan_After:
 	.string "Me esfuerzo mucho para ser\nla estrella de mi clase.$"
@@ -154,11 +154,11 @@ Route34_Text_CamperTodd_Beaten:
 
 Route34_Text_CamperTodd_After:
 	.string "Quizá lleve uno a la GUARDERÍA,\n"
-	.string "o quizás usar algunos objetos…$"
+	.string "o quizás usar algunos objetos...$"
 
 Route34_Text_ToddRegister:
 	.string "Quizá lleve uno a la GUARDERÍA,\n"
-	.string "o quizás usar algunos objetos…$"
+	.string "o quizás usar algunos objetos...$"
 
 Route34_Text_ToddRematchIntro:
 	.string "Confío en mi habilidad para\n"
@@ -170,7 +170,7 @@ Route34_Text_ToddRematchDefeat:
 
 Route34_Text_ToddPostRematch:
 	.string "Quizá lleve uno a la GUARDERÍA,\n"
-	.string "o quizás usar algunos objetos…$"
+	.string "o quizás usar algunos objetos...$"
 
 Route34_Text_GinaRegister:
 	.string "Eres demasiado fuerte para ser un\n"
@@ -181,7 +181,7 @@ Route34_Text_PicnickerGina_Seen:
 	.string "Tengamos una batalla de práctica.$"
 
 Route34_Text_PicnickerGina_Beaten:
-	.string "¡Oh, no! No puedo ganar…$"
+	.string "¡Oh, no! No puedo ganar...$"
 
 Route34_Text_PicnickerGina_After:
 	.string "Eres demasiado fuerte para ser un\n"

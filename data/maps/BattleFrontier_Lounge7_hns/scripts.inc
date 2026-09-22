@@ -393,7 +393,7 @@ BattleFrontier_Lounge7_Text_LeftTutorIntro_hns:
 	.string "¡pero yo era una ENTRENADORA dura!\p"
 	.string "Tenía fama de ser la BEAUTY\n"
 	.string "más fuerte de todas, ¡te lo digo!\p"
-	.string "… … … … … …\p"
+	.string "... ... ... ... ... ...\p"
 	.string "¿Qué pasa ahora?\n"
 	.string "No me crees.\p"
 	.string "No soy como esa fanfarrona de\n"
@@ -423,7 +423,7 @@ BattleFrontier_Lounge7_Text_TeachMoveToWhichMon_hns:
 	.string "al que debo enseñarle el ataque.$"
 
 BattleFrontier_Lounge7_Text_HaventGotEnoughPoints_hns:
-	.string "Pero qué…\n"
+	.string "Pero qué...\n"
 	.string "You haven't got enough Battle Points!$"
 
 BattleFrontier_Lounge7_Text_IllTakeBattlePoints_hns:
@@ -442,7 +442,7 @@ BattleFrontier_Lounge7_Text_RightTutorIntro_hns:
 	.string "fui un ENTRENADOR fantástico.\p"
 	.string "Tenía fama de ser el NADADOR más\n"
 	.string "¡un NADADOR invencible, te digo!\p"
-	.string "… … … … … …\p"
+	.string "... ... ... ... ... ...\p"
 	.string "¿Qué pasa?\n"
 	.string "No me crees.\p"
 	.string "No soy como esa mujer tan tonta de\n"
@@ -580,7 +580,7 @@ BattleFrontier_Lounge7_Text_FirePunchDesc_hns::
 
 
 BattleFrontier_Lounge7_Text_ElementalTutorIntro::
-	.string "Zzzzzz…\p"
+	.string "Zzzzzz...\p"
 	.string "Qué, cómo, qué?\p"
 	.string "Oh, perdón, estaba dormitando.\p"
 	.string "Soy el TUTOR ELEMENTAL.\p"
@@ -591,7 +591,7 @@ BattleFrontier_Lounge7_Text_ElementalTutorIntro::
 	.string "tan fuerte?$"
 
 BattleFrontier_Lounge7_Text_ElementalTutorWelcomeBack:
-	.string "Zzzzzz…\p"
+	.string "Zzzzzz...\p"
 	.string "Qué, cómo, qué, quién?\p"
 	.string "Oh, ¿viniste a aprender el poder\n"
 	.string "de mis movimientos más fuertes?$"

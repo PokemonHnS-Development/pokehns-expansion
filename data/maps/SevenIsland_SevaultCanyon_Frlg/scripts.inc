@@ -10,11 +10,11 @@ SevenIsland_SevaultCanyon_Text_CyndyIntro::
 
 SevenIsland_SevaultCanyon_Text_CyndyDefeat::
 	.string "¿Eh?\n"
-	.string "Algo no anda bien…$"
+	.string "Algo no anda bien...$"
 
 SevenIsland_SevaultCanyon_Text_CyndyPostBattle::
 	.string "Como estoy ahora, quizás tenga\n"
-	.string "espera con la TORRE ENTRENADOR…$"
+	.string "espera con la TORRE ENTRENADOR...$"
 
 SevenIsland_SevaultCanyon_Text_EvanIntro::
 	.string "No importa si llegas a tener\n"
@@ -93,7 +93,7 @@ SevenIsland_SevaultCanyon_Text_LexIntro::
 
 SevenIsland_SevaultCanyon_Text_LexDefeat::
 	.string "LEX: Parece que fui demasiado\n"
-	.string "careless…$"
+	.string "careless...$"
 
 SevenIsland_SevaultCanyon_Text_LexPostBattle::
 	.string "LEX: Creo que fue una buena\n"
@@ -109,14 +109,14 @@ SevenIsland_SevaultCanyon_Text_NyaIntro::
 	.string "para no defraudar a mi mentor, LEX!$"
 
 SevenIsland_SevaultCanyon_Text_NyaDefeat::
-	.string "NYA: Oh, no…\n"
-	.string "I'm so sorry, I…$"
+	.string "NYA: Oh, no...\n"
+	.string "I'm so sorry, I...$"
 
 SevenIsland_SevaultCanyon_Text_NyaPostBattle::
 	.string "Creo que necesitaré mucho\n"
 	.string "más sazón y práctica\l"
-	.string "under LEX…\p"
-	.string "…Así que, LEX, ¿puedo\n"
+	.string "under LEX...\p"
+	.string "...Así que, LEX, ¿puedo\n"
 	.string "quedarme contigo así?$"
 
 SevenIsland_SevaultCanyon_Text_NyaNotEnoughMons::
@@ -132,6 +132,6 @@ SevenIsland_SevaultCanyon_Text_BrunoTrainedWithBrawly::
 	.string "algo malo, claro.\p"
 	.string "Pero apuntar a algo más\n"
 	.string "la cima con un compañero.\p"
-	.string "Even BRUNO…\n"
+	.string "Even BRUNO...\n"
 	.string "Antes entrenó con un sujeto\l"
 	.string "llamado BRAWLY.$"

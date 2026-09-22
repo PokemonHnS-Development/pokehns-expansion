@@ -16,11 +16,11 @@ SeafloorCavern_Room1_Text_Grunt1Intro:
 	.string "¡Vete ya a casa!$"
 
 SeafloorCavern_Room1_Text_Grunt1Defeat:
-	.string "Quiero ir a casa…$"
+	.string "Quiero ir a casa...$"
 
 SeafloorCavern_Room1_Text_Grunt1PostBattle:
 	.string "Quiero un ascenso para poder\n"
-	.string "mandar a los RECLUTAS…$"
+	.string "mandar a los RECLUTAS...$"
 
 SeafloorCavern_Room1_Text_Grunt2Intro:
 	.string "Ese submarino... es diminuto.\n"

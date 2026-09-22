@@ -335,7 +335,7 @@ BattleFrontier_OutsideWest_Text_SureWeCanChallengeWithNoMons_hns:
 	.string "sin tener ningún POKéMON?$"
 
 BattleFrontier_OutsideWest_Text_BigGuySaidIllLendYouMons_hns:
-	.string "Uh…\n"
+	.string "Uh...\n"
 	.string "Seguro que todo saldrá bien.\p"
 	.string "Creo que...\p"
 	.string "¿Recuerdas al tipo grande y aterrador?\n"
@@ -357,14 +357,14 @@ BattleFrontier_OutsideWest_Text_ScaredOfPikeBecauseSeviper_hns:
 BattleFrontier_OutsideWest_Text_LetsPlayRockPaperScissors_hns:
 	.string "¡Juguemos piedra, papel o tijera!\n"
 	.string "¡Uno, dos, tres!\p"
-	.string "… … … … … …$"
+	.string "... ... ... ... ... ...$"
 
 BattleFrontier_OutsideWest_Text_WonIllTakePikeChallenge_hns:
 	.string "¡Sii! ¡Gané!\n"
 	.string "¡Aceptaré el reto de la LANZA!$"
 
 BattleFrontier_OutsideWest_Text_LostIllPutOffPikeChallenge_hns:
-	.string "Oh, no…\n"
+	.string "Oh, no...\n"
 	.string "Perdí.\p"
 	.string "Creo que hoy no tengo suerte.\n"
 	.string "Dejaré mi reto de la LANZA\l"
@@ -414,7 +414,7 @@ BattleFrontier_OutsideWest_Text_SquareFilledWithToughPeople_hns:
 	.string "Munch, munch...\p"
 	.string "Parece que esta plaza está llena\n"
 	.string "de gente fuerte.\p"
-	.string "Munch, munch…$"
+	.string "Munch, munch...$"
 
 BattleFrontier_OutsideWest_Text_MetOlderGirlAtPike_hns:
 	.string "Crunch, munch...\p"
@@ -427,7 +427,7 @@ BattleFrontier_OutsideWest_Text_MetOlderGirlAtPike_hns:
 	.string "¡comiendo!”. Luego me dio una paliza.\p"
 	.string "Fue una experiencia aterradora\n"
 	.string "y espeluznante, la verdad.\p"
-	.string "Crunch, munch…$"
+	.string "Crunch, munch...$"
 
 BattleFrontier_OutsideWest_Text_LastTimeOurEyesMet_hns:
 	.string "¿Eh? ¿Te escuchas a ti mismo?\n"
@@ -469,7 +469,7 @@ BattleFrontier_OutsideWest_Text_MonWithLongTailInFrontier_hns:
 	.string "Oí un rumor de que alguien vio\n"
 	.string "un POKéMON con una cola muy larga\l"
 	.string "en algún lugar de BATTLE FRONTIER.\p"
-	.string "Debe ser adorable. Estoy segura…\p"
+	.string "Debe ser adorable. Estoy segura...\p"
 	.string "Oh, los retos pueden esperar. ¡Siento\n"
 	.string "que debo hallar a esa criatura!$"
 

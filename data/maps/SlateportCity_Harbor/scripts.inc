@@ -384,7 +384,7 @@ SlateportCity_Harbor_Text_FerryServiceUnavailable:
 	.string "¿Perdón?\n"
 	.string "¿Buscas un barco?\p"
 	.string "Lo siento, el servicio de ferry no\n"
-	.string "está disponible ahora…$"
+	.string "está disponible ahora...$"
 
 SlateportCity_Harbor_Text_MayISeeYourTicket:
 	.string "Hola, ¿vienes por el ferry?\n"
@@ -438,16 +438,16 @@ SlateportCity_Harbor_Text_SubTooSmallForMe:
 	.string "la exploración del fondo marino.\p"
 	.string "Pero el submarino es muy chico.\p"
 	.string "Si yo entrara, no quedaría\n"
-	.string "espacio para el CAPITÁN…$"
+	.string "espacio para el CAPITÁN...$"
 
 SlateportCity_Harbor_Text_SameThugsTriedToRobAtMuseum:
-	.string "CAPT. STERN: Esos matones…\p"
+	.string "CAPT. STERN: Esos matones...\p"
 	.string "Son los mismos que quisieron robar\n"
 	.string "los BIENES DE DEVON del MUSEO.$"
 
 SlateportCity_Harbor_Text_ArchieYouAgainHideoutInLilycove:
 	.string "ARCHIE: ¿Oh?\n"
-	.string "Tú otra vez…\p"
+	.string "Tú otra vez...\p"
 	.string "Eres tenaz al rastrearnos hasta aquí,\n"
 	.string "eso te lo reconozco.\p"
 	.string "Pero ahora...\n"
@@ -478,17 +478,17 @@ SlateportCity_Harbor_Text_TeamAquaLeftNeedDive:
 	.string "Tal vez si fueras hacia\n"
 	.string "CIUDAD FESTA...\p"
 	.string "Muchos buzos viven allá, así que\n"
-	.string "alguien podría enseñarte…$"
+	.string "alguien podría enseñarte...$"
 
 SlateportCity_Harbor_Text_NeedDiveToCatchSub:
 	.string "CAP. STERN: Intentar atrapar un\n"
-	.string "submarino… Es imposible.\p"
+	.string "submarino... Es imposible.\p"
 	.string "Necesitarías un POKéMON que sepa\n"
 	.string "cómo BUCEAR...\p"
 	.string "Tal vez si fueras hacia\n"
 	.string "CIUDAD FESTA...\p"
 	.string "Muchos buzos viven allá, así que\n"
-	.string "alguien podría enseñarte…$"
+	.string "alguien podría enseñarte...$"
 
 SlateportCity_Harbor_Text_WontBeLongBeforeWeFinishFerry:
 	.string "CAP. STERN: Ah, sí.\n"

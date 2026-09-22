@@ -3,9 +3,9 @@ EventTicket_Text_OldSeaMapTooFar:
 	.string "¿Qué, se supone que tú tienes\n"
 	.string "un mapa viejo y roto?\p"
 	.string "Veamos un poco.\n"
-	.string "… … … … … …\p"
+	.string "... ... ... ... ... ...\p"
 	.string "Vaya, esto queda muy lejos.\n"
-	.string "Me temo que no puedo ayudarte…$"
+	.string "Me temo que no puedo ayudarte...$"
 
 EventTicket_Text_BrineyHoldOnASecond:
 	.string "BRINEY: ¡Espera un segundo!\p"
@@ -26,7 +26,7 @@ EventTicket_Text_OddTicketGetOnBoard:
 	.string "boleto extraño?\p"
 	.string "A donde quieres ir es una isla\n"
 	.string "que está muy, muy lejos.\p"
-	.string "Nadie sabe qué aguarda allí…\p"
+	.string "Nadie sabe qué aguarda allí...\p"
 	.string "¡Solo pensarlo me emociona\n"
 	.string "como marino!\p"
 	.string "¡Sube a bordo, jovencito!$"
@@ -51,7 +51,7 @@ BirthIsland_Harbor_Text_SailorReturn:
 EventTicket_Text_OddTicketsWhereTo:
 	.string "¿Tú eres quien trajo esos\n"
 	.string "boletos raros?\p"
-	.string "… … …Hm.\p"
+	.string "... ... ...Hm.\p"
 	.string "Estos boletos te llevarán a islas\n"
 	.string "que están muy, muy lejos.\p"
 	.string "Nadie sabe qué hay allí,\n"
@@ -62,10 +62,10 @@ EventTicket_Text_OddTicketsWhereTo:
 	.string "¿A dónde navegaremos primero?$"
 
 NavelRock_Harbor_Text_SailorReturn:
-	.string "¿Oíste…? ¿Oíste eso?\nEse gruñido grave de ahí dentro.\p¿Estás seguro de que es seguro?\n¿Crees que deberíamos irnos?$"
+	.string "¿Oíste...? ¿Oíste eso?\nEse gruñido grave de ahí dentro.\p¿Estás seguro de que es seguro?\n¿Crees que deberíamos irnos?$"
 
 FarawayIsland_Entrance_Text_Sign:
-	.string "La escritura se desvanece como si\nse hubiera escrito hace mucho…\p“…ber, día 6\nSi algún humano…pisa aquí…\lotra vez… que sea buena pers…\l…on esa esperanza, me march…”$"
+	.string "La escritura se desvanece como si\nse hubiera escrito hace mucho...\p“...ber, día 6\nSi algún humano...pisa aquí...\lotra vez... que sea buena pers...\l...on esa esperanza, me march...”$"
 
 FarawayIsland_Interior_Text_Mew:
-	.string "Myuu…$"
+	.string "Myuu...$"

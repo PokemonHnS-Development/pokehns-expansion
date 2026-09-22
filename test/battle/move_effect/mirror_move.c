@@ -75,7 +75,7 @@ SINGLE_BATTLE_TEST("Mirror Move's called powder move fails against Grass Types")
         MESSAGE("The opposing Wobbuffet used Mirror Move!");
         MESSAGE("The opposing Wobbuffet used Stun Spore!");
         NOT ANIMATION(ANIM_TYPE_MOVE, MOVE_STUN_SPORE, opponent);
-        MESSAGE("It doesn't affect Oddish…");
+        MESSAGE("It doesn't affect Oddish...");
         NOT STATUS_ICON(player, paralysis: TRUE);
     }
 }

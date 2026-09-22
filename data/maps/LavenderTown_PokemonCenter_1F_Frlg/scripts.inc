@@ -35,7 +35,7 @@ LavenderTown_PokemonCenter_1F_Text_RocketsDoAnythingForMoney::
 LavenderTown_PokemonCenter_1F_Text_CubonesMotherKilledByRockets::
 	.string "Vi a la madre de CUBONE intentar\n"
 	.string "escapar del EQUIPO ROCKET.\p"
-	.string "Murió al intentar huir…$"
+	.string "Murió al intentar huir...$"
 
 LavenderTown_PokemonCenter_1F_Text_PeoplePayForCuboneSkulls::
 	.string "¿Sabes cómo es la especie CUBONE?\n"

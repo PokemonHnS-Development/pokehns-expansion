@@ -486,7 +486,7 @@ BattleFrontier_BattlePalaceLobby_Text_NoSpaceForPrize_hns:
 	.string "tu MOCHILA.$"
 
 BattleFrontier_BattlePalaceLobby_Text_WeHaveBeenWaiting_hns:
-	.string "Te estábamos esperando…$"
+	.string "Te estábamos esperando...$"
 
 BattleFrontier_BattlePalaceLobby_Text_MustSaveBeforeChallenge_hns:
 	.string "Debo guardar antes de llevarte al\n"
@@ -521,7 +521,7 @@ BattleFrontier_BattlePalaceLobby_Text_LadyCanTellWhatMonsThink_hns:
 	.string "¿Por qué me miras así?$"
 
 BattleFrontier_BattlePalaceLobby_Text_NatureAndMovesKeyHere_hns:
-	.string "Hmm…\p"
+	.string "Hmm...\p"
 	.string "Parece que la naturaleza del POKéMON\n"
 	.string "y los movimientos que ha\l"
 	.string "aprendido son la clave aquí.\p"
@@ -584,7 +584,7 @@ BattleFrontier_BattlePalaceLobby_Text_ExplainDoubleBattleChallenge_hns:
 
 BattleFrontier_BattlePalaceLobby_Text_ToDefeatMavenAnd7Trainers_hns:
 	.string "Para vencer al EXPERTO DEL PALACIO\n"
-	.string "y a siete ENTRENADORES seguidos…$"
+	.string "y a siete ENTRENADORES seguidos...$"
 
 BattleFrontier_BattlePalaceLobby_Text_PresentYouWithBattlePoints_hns:
 	.string "En honor al vínculo que compartes con\n"

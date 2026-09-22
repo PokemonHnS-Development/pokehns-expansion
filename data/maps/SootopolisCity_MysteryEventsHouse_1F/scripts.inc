@@ -181,7 +181,7 @@ SootopolisCity_MysteryEventsHouse_1F_Text_ChallengeVisitingTrainer:
 
 SootopolisCity_MysteryEventsHouse_1F_Text_YouWontBattle:
 	.string "¿No lucharás? Me decepciona\n"
-	.string "no poder verte combatir…$"
+	.string "no poder verte combatir...$"
 
 SootopolisCity_MysteryEventsHouse_1F_Text_KeepItTo3On3:
 	.string "¡Oh, bien, bien!\p"

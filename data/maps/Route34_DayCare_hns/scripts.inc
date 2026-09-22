@@ -489,7 +489,7 @@ Route34_Text_IllKeepIt:
 	.string "¡Gracias!$"
 
 Route34_Text_YouHaveNoRoomForIt:
-	.string "No tienes espacio para eso…\nVuelve cuando hagas espacio.$"
+	.string "No tienes espacio para eso...\nVuelve cuando hagas espacio.$"
 
 Route34_Text_ReceivedEgg:
 	.string "{PLAYER} recibió el HUEVO de\nparte del CUIDADOR.$"
@@ -537,7 +537,7 @@ Route34_DayCare_Text_FineThenComeAgain:
 	.string "Vuelve pronto.$"
 
 Route34_DayCare_Text_NotEnoughMoney:
-	.string "No tienes suficiente dinero…$"
+	.string "No tienes suficiente dinero...$"
 
 Route34_DayCare_Text_TakeOtherOneBackToo:
 	.string "¿Recuperarás al otro,\nlas pinturas?$"

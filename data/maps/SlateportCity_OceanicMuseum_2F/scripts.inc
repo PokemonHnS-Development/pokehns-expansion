@@ -294,7 +294,7 @@ SlateportCity_OceanicMuseum_2F_Text_Grunt1Defeat:
 	.string "¡Un niño me venció!$"
 
 SlateportCity_OceanicMuseum_2F_Text_BossGoingToBeFurious:
-	.string "Ay, qué desastre…\nEl JEFE va a estar furioso…$"
+	.string "Ay, qué desastre...\nEl JEFE va a estar furioso...$"
 
 SlateportCity_OceanicMuseum_2F_Text_LetMeTakeCareOfThis:
 	.string "¡Bah, llorón cobarde!\n¡Déjame encargarme de esto!$"
@@ -317,13 +317,13 @@ SlateportCity_OceanicMuseum_2F_Text_ArchieWarning:
 	.string "Y yo soy el líder del EQUIPO AQUA,\n"
 	.string "¡ARCHIE!\p"
 	.string "¿Por qué interfieres con nosotros?\p"
-	.string "…¡No! ¡No puede ser!\n"
+	.string "...¡No! ¡No puede ser!\n"
 	.string "¿No eres del EQUIPO MAGMA?\p"
 	.string "Espera, eso no puede estar bien.\n"
 	.string "No vistes como uno de ellos.\p"
-	.string "… … … … … …\n"
-	.string "… … … … … …\p"
-	.string "POKéMON, personas… Toda la vida\n"
+	.string "... ... ... ... ... ...\n"
+	.string "... ... ... ... ... ...\p"
+	.string "POKéMON, personas... Toda la vida\n"
 	.string "del mar.\p"
 	.string "Así que, el TEAM AQUA se dedica a\n"
 	.string "la expansión del mar.\p"
@@ -359,7 +359,7 @@ SlateportCity_OceanicMuseum_2F_Text_SternIveGotToGo:
 SlateportCity_OceanicMuseum_2F_Text_RemindsMeOfAbandonedShip:
 	.string "Vi una maqueta de un barco aquí.\p"
 	.string "Me recordó al BARCO ABANDONADO\n"
-	.string "cerca de PUEBLO AGUA…$"
+	.string "cerca de PUEBLO AGUA...$"
 
 SlateportCity_OceanicMuseum_2F_Text_DontRunInMuseum:
 	.string "¡No te atrevas a correr dentro\n"

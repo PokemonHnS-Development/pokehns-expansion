@@ -44,7 +44,7 @@ CeladonDept3_EventScript_Directory::
 
 CeladonDeptStore3F_Text_Youngster:
 	.string "No puedo decidir en qué POKéMON\n"
-	.string "usar esta MT…$"
+	.string "usar esta MT...$"
 
 CeladonDeptStore3F_Text_GameboyKid1:
 	.string "¡Oh, no! Intercambié mi POKéMON sin\n"
@@ -54,8 +54,8 @@ CeladonDeptStore3F_Text_GameboyKid2:
 	.string "¡Sí! ¡Por fin voy a tener un\n"
 	.string "PORYGON!\p"
 	.string "Soy malo en las tragaperras, así\n"
-	.string "que nunca conseguía monedas…\p"
-	.string "…¿Eh?\p"
+	.string "que nunca conseguía monedas...\p"
+	.string "...¿Eh?\p"
 	.string "¡El PORYGON intercambiado se volvió\n"
 	.string "un POKéMON diferente!$"
 

@@ -315,7 +315,7 @@ LilycoveCity_ContestHall_Text_TodayWonSmartnessContest:
 	.string "aquí antes.\p"
 	.string "Bueno, ¿sabes qué? Hoy logré que\n"
 	.string "¡ganara un CONCURSO INTELIGENCIA!\p"
-	.string "Mis habilidades me asustan hasta a mí…$"
+	.string "Mis habilidades me asustan hasta a mí...$"
 
 LilycoveCity_ContestHall_Text_EnteredBunchOfContests:
 	.string "He entrado en varios CONCURSOS,\n"

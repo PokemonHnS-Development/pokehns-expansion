@@ -59,7 +59,7 @@ SilphCo_10F_Text_WaaaImScared::
 	.string "I'm scared!$"
 
 SilphCo_10F_Text_KeepMeCryingASecret::
-	.string "Sobre que yo llorara…\n"
+	.string "Sobre que yo llorara...\n"
 	.string "Guárdalo en secreto, por favor.$"
 
 SilphCo_10F_Text_FloorSign::

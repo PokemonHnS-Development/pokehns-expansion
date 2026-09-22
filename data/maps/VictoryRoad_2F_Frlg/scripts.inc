@@ -118,7 +118,7 @@ VictoryRoad_2F_Text_VincentDefeat::
 
 VictoryRoad_2F_Text_VincentPostBattle::
 	.string "Te ganaste el derecho a estar\n"
-	.string "VICTORY ROAD…$"
+	.string "VICTORY ROAD...$"
 
 VictoryRoad_2F_Text_GregoryIntro::
 	.string "¿La RUTA VICTORIA es muy dura?$"

@@ -48,7 +48,7 @@ Route120_Text_YesYouUnderstand:
 	.string "Sí, sí.\nEntiendes lo que quiero decir.\pDeberías tomar esto.$"
 
 Route120_Text_MakeYourOwnImpressions:
-	.string "Oh… Pero es importante que te\nformes tus propias ideas, supongo…\pPuedes quedarte con esto.$"
+	.string "Oh... Pero es importante que te\nformes tus propias ideas, supongo...\pPuedes quedarte con esto.$"
 
 Route120_Text_BerryIsRareRaiseItWithCare:
 	.string "Creo que esa BAYA es rara.\nEspero que la cuides con cariño.$"
@@ -95,7 +95,7 @@ Route123_BerryMastersHouse_Text_JoyNeverGoesOutOfMyLife:
 	.string "Nuestros cuatro nietos deben ser\nmás capaces que mi esposo.\p¡La alegría nunca sale de mi vida!$"
 
 Route123_BerryMastersHouse_Text_Ah:
-	.string "Ah…$"
+	.string "Ah...$"
 
 Route104_PrettyPetalFlowerShop_Text_ThisIsPrettyPetalFlowerShop:
 	.string "¡Hola!\p"
@@ -141,7 +141,7 @@ Route104_PrettyPetalFlowerShop_Text_MachineMixesBerries:
 
 SootopolisCity_Text_NameIsKiriHaveOneOfThese:
 	.string "Hola, ¿cómo te llamas?\p"
-	.string "… … …  … … …  … … …\n"
+	.string "... ... ...  ... ... ...  ... ... ...\n"
 	.string "Vale. ¡Qué lindo!\p"
 	.string "Mi nombre es KIRI.\p"
 	.string "Mis papás me pusieron ese nombre para\n"
@@ -169,6 +169,6 @@ SootopolisCity_Text_ThenILoveAutumn:
 	.string "¿Qué estación te gusta?$"
 
 SootopolisCity_Text_OhDoesntMatter:
-	.string "Oh…\n"
+	.string "Oh...\n"
 	.string "No importa...\p"
 	.string "Hay tanto que quiero saber...$"

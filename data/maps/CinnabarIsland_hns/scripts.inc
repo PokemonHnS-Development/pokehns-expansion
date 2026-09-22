@@ -67,7 +67,7 @@ CinnabarIsland_Text_BlueBefore:
 	.string "Podemos ganar o perder con los\n"
 	.string "POKéMON. Pero si la naturaleza se\l"
 	.string "mueve, podemos perder en un segundo.\p"
-	.string "…\p"
+	.string "...\p"
 	.string "Así son las cosas...\p"
 	.string "Pero, sea como sea, soy entrenador.\p"
 	.string "Si veo a un rival fuerte, entonces\n"
@@ -94,7 +94,7 @@ CinnabarIsland_Text_Blue:
 	.string "Podemos ganar o perder con los\n"
 	.string "POKéMON. Pero si la naturaleza se\l"
 	.string "mueve, podemos perder en un segundo.\p"
-	.string "…\p"
+	.string "...\p"
 	.string "Así son las cosas...\p"
 	.string "Pero, sea como sea, soy entrenador.\p"
 	.string "Si veo a un rival fuerte, entonces\n"
@@ -112,7 +112,7 @@ CinnabarIsland_EventScript_GymSign::
 	end
 
 CinnabarIsland_Text_GymSign:
-	.string "Hay un aviso aquí…\p"
+	.string "Hay un aviso aquí...\p"
 	.string "El GIMNASIO CINNABAR se mudó a\n"
 	.string "LAS ISLAS SEAFOAM.\p"
 	.string "BLAINE$"

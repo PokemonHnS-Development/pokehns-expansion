@@ -147,7 +147,7 @@ VioletCity_PokeCenter_Text_ElmsAideEggToPC:
 	.string "al PC de BILL por ti.$"
 
 VioletCity_PokeCenter_Text_ElmsAideRefuse:
-	.string "¡P-pero… PROF.ELM te pidió…$"
+	.string "¡P-pero... PROF.ELM te pidió...$"
 
 VioletCity_PokeCenter_Text_BooksAreGreat:
 	.string "Mientras mis POKéMON se recuperan\n"

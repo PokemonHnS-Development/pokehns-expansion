@@ -34,19 +34,19 @@ CeladonDeptStore6F_Text_Clang:
 	.string "Salió {STRING}.$"
 
 CeladonDeptStore6F_Text_VendingNoMoney:
-	.string "Vaya, no hay dinero suficiente…$"
+	.string "Vaya, no hay dinero suficiente...$"
 
 CeladonDeptStore6F_Text_VendingNoSpace:
-	.string "Ya no hay espacio para cosas…$"
+	.string "Ya no hay espacio para cosas...$"
 
 CeladonDeptStore6F_Text_SuperNerd:
 	.string "Una máquina expendedora con un\n"
-	.string "premio de ruleta…\p"
+	.string "premio de ruleta...\p"
 	.string "Ya no se ven estas máquinas.$"
 
 CeladonDeptStore6F_Text_Youngster:
 	.string "¡Aww! ¡Aquí no hay juegos!\p"
-	.string "Quería jugar…$"
+	.string "Quería jugar...$"
 
 CeladonDeptStore6F_Text_Directory:
 	.string "6F: MÁQUINAS EXPENDEDORAS DE\n"

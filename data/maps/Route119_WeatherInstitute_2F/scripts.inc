@@ -242,7 +242,7 @@ Route119_WeatherInstitute_2F_Text_Grunt5PostBattle:
 	.string "Humph, ¿y qué con eso?\n"
 	.string "Lo que queremos...\p"
 	.string "Lo que queremos no está aquí...\n"
-	.string "Ihihihihi…$"
+	.string "Ihihihihi...$"
 
 Route119_WeatherInstitute_2F_Text_ShellyIntro:
 	.string "¡Ahajajaja!\p"
@@ -306,7 +306,7 @@ Route119_WeatherInstitute_2F_Text_GroudonWeather:
 	.string "Ahora se ha registrado una sequía\n"
 	.string "en {STR_VAR_1}.\p"
 	.string " ¿Podría significar que, cerca de\n"
-	.string "{STR_VAR_1}…$"
+	.string "{STR_VAR_1}...$"
 
 Route119_WeatherInstitute_2F_Text_KyogreWeather:
 	.string "Sigo los patrones climáticos en\n"
@@ -314,7 +314,7 @@ Route119_WeatherInstitute_2F_Text_KyogreWeather:
 	.string "Ahora mismo, hay fuertes lluvias\n"
 	.string "grabado sobre {STR_VAR_1}.\p"
 	.string " ¿Podría significar que, cerca de\n"
-	.string "{STR_VAR_1}…$"
+	.string "{STR_VAR_1}...$"
 
 Route119_WeatherInstitute_2F_Text_NoAbnormalWeather:
 	.string "El clima anormal ya no\n"

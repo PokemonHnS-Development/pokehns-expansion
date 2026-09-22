@@ -225,7 +225,7 @@ VerdanturfTown_BattleTentLobby_Text_ResultsWillBeRecorded:
 	.string "Te pido que esperes un momento.$"
 
 VerdanturfTown_BattleTentLobby_Text_AchievedThreeWinStreak:
-	.string "Para lograr 3 victorias seguidas…\p"
+	.string "Para lograr 3 victorias seguidas...\p"
 	.string "Los vínculos que unen tu corazón\n"
 	.string "con tu POKéMON parecen fuertes.$"
 

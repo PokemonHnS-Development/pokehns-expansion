@@ -42,7 +42,7 @@ AbandonedShip_Rooms_1F_Text_ThaliaIntro:
 	.string "hasta aquí? ¡Debes ser curioso!$"
 
 AbandonedShip_Rooms_1F_Text_ThaliaDefeat:
-	.string "No solo curioso, sino fuerte…$"
+	.string "No solo curioso, sino fuerte...$"
 
 AbandonedShip_Rooms_1F_Text_ThaliaPostBattle:
 	.string "El hombre de al lado...\p"

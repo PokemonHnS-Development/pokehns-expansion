@@ -10,7 +10,7 @@ gBirchDexRatingText_Cancel::
 gBirchDexRatingText_SoYouveSeenAndCaught::
 	.string "Hmhm...\p"
 	.string "Has visto {STR_VAR_1} POKéMON,\n"
-	.string "y has capturado {STR_VAR_2} POKéMON…$"
+	.string "y has capturado {STR_VAR_2} POKéMON...$"
 
 gBirchDexRatingText_LessThan10::
 	.string "Ve más a las zonas de hierba y busca\n"
@@ -46,7 +46,7 @@ gBirchDexRatingText_LessThan80::
 	.string "Eso es lo que siento.$"
 
 gBirchDexRatingText_LessThan90::
-	.string "Ya has coleccionado muchos…\n¡Tu talento es notable!$"
+	.string "Ya has coleccionado muchos...\n¡Tu talento es notable!$"
 
 gBirchDexRatingText_LessThan100::
 	.string "¿Has ido a la ZONA SAFARI?\p"
@@ -109,7 +109,7 @@ gBirchDexRatingText_OnANationwideBasis::
 	.string "Hmhm...\n"
 	.string "A nivel nacional...\p"
 	.string "Has visto {STR_VAR_1} POKéMON,\n"
-	.string "y has capturado {STR_VAR_2} POKéMON…$"
+	.string "y has capturado {STR_VAR_2} POKéMON...$"
 
 @ FRLG
 
@@ -161,7 +161,7 @@ PokedexRating_Text_LessThan80::
 	.string "si te vas a pescar!$"
 
 PokedexRating_Text_LessThan90::
-	.string "¡Excelente! Déjame adivinar…\nTe gusta coleccionar, ¿no?$"
+	.string "¡Excelente! Déjame adivinar...\nTe gusta coleccionar, ¿no?$"
 
 PokedexRating_Text_LessThan100::
 	.string "¡Estoy impresionado!\n"

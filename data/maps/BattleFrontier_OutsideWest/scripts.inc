@@ -377,7 +377,7 @@ BattleFrontier_OutsideWest_Text_SureWeCanChallengeWithNoMons:
 	.string "sin tener ningún POKéMON?$"
 
 BattleFrontier_OutsideWest_Text_BigGuySaidIllLendYouMons:
-	.string "Uh…\n"
+	.string "Uh...\n"
 	.string "Seguro que todo saldrá bien.\p"
 	.string "Creo que...\p"
 	.string "¿Recuerdas al tipo grande y aterrador?\n"
@@ -399,14 +399,14 @@ BattleFrontier_OutsideWest_Text_ScaredOfPikeBecauseSeviper:
 BattleFrontier_OutsideWest_Text_LetsPlayRockPaperScissors:
 	.string "¡Juguemos piedra, papel o tijera!\n"
 	.string "¡Uno, dos, tres!\p"
-	.string "… … … … … …$"
+	.string "... ... ... ... ... ...$"
 
 BattleFrontier_OutsideWest_Text_WonIllTakePikeChallenge:
 	.string "¡Sii! ¡Gané!\n"
 	.string "¡Aceptaré el reto de la LANZA!$"
 
 BattleFrontier_OutsideWest_Text_LostIllPutOffPikeChallenge:
-	.string "Oh, no…\n"
+	.string "Oh, no...\n"
 	.string "Perdí.\p"
 	.string "Creo que hoy no tengo suerte.\n"
 	.string "Dejaré mi reto de la LANZA\l"
@@ -456,7 +456,7 @@ BattleFrontier_OutsideWest_Text_SquareFilledWithToughPeople:
 	.string "Munch, munch...\p"
 	.string "Parece que esta plaza está llena\n"
 	.string "de gente fuerte.\p"
-	.string "Munch, munch…$"
+	.string "Munch, munch...$"
 
 BattleFrontier_OutsideWest_Text_MetOlderGirlAtPike:
 	.string "Crunch, munch...\p"
@@ -469,7 +469,7 @@ BattleFrontier_OutsideWest_Text_MetOlderGirlAtPike:
 	.string "¡comiendo!”. Luego me dio una paliza.\p"
 	.string "Fue una experiencia aterradora\n"
 	.string "y espeluznante, la verdad.\p"
-	.string "Crunch, munch…$"
+	.string "Crunch, munch...$"
 
 BattleFrontier_OutsideWest_Text_LastTimeOurEyesMet:
 	.string "¿Eh? ¿Te escuchas a ti mismo?\n"
@@ -511,7 +511,7 @@ BattleFrontier_OutsideWest_Text_MonWithLongTailInFrontier:
 	.string "Oí un rumor de que alguien vio\n"
 	.string "un POKéMON con una cola muy larga\l"
 	.string "en algún lugar de BATTLE FRONTIER.\p"
-	.string "Debe ser adorable. Estoy segura…\p"
+	.string "Debe ser adorable. Estoy segura...\p"
 	.string "Oh, los retos pueden esperar. ¡Siento\n"
 	.string "que debo hallar a esa criatura!$"
 

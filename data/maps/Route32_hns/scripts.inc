@@ -485,7 +485,7 @@ Route32_Text_YoungsterGordon_After:
 	.string "cosas pegajosas.$"
 
 Route32_Text_CamperRoland_Seen:
-	.string "Esa mirada… Es intrigante.$"
+	.string "Esa mirada... Es intrigante.$"
 
 Route32_Text_CamperRoland_Beaten:
 	.string "Mmm. Qué decepción.$"

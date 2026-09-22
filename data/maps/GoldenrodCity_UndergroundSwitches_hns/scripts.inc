@@ -526,27 +526,27 @@ GoldenrodUnderground_Text_SilverBefore:
     .string "Te vi, así que te seguí.\p"
     .string "No te necesito estorbando mientras\n"
     .string "me encargo del TEAM ROCKET.\p"
-    .string "…Espera un segundo. Me venciste\n"
+    .string "...Espera un segundo. Me venciste\n"
     .string "antes, ¿verdad?\p"
     .string "Eso fue solo suerte.\p"
     .string "He entrenado a mi equipo y ahora\n"
     .string "¡pagaré mis cuentas!$"
 
 GoldenrodUnderground_Text_SilverWin:
-    .string "…¿Por qué…? ¿Por qué pierdo?\p"
+    .string "...¿Por qué...? ¿Por qué pierdo?\p"
     .string "Reuní a los POKéMON más fuertes.\p"
     .string "No bajé la guardia ni un segundo.\p"
     .string "Entonces, ¿por qué pierdo?$"
 
 GoldenrodUnderground_Text_SilverAfter:
-    .string "…No lo entiendo…\p"
+    .string "...No lo entiendo...\p"
     .string "¿Será cierto lo que dijo LANCE?\p"
     .string "¿Que no trato bien a los POKéMON?\p"
-    .string "Amor…\p"
-    .string "Confianza…\p"
+    .string "Amor...\p"
+    .string "Confianza...\p"
     .string "¿De verdad es lo que me falta?\p"
     .string "¿Eso es lo que me impide ganar?\p"
-    .string "Yo… Simplemente no lo entiendo.\p"
+    .string "Yo... Simplemente no lo entiendo.\p"
     .string "Pero esto no terminará aquí.\p"
     .string "Ahora no. No por esto.\p"
     .string "¡No renunciaré a mi sueño de ser\n"
@@ -567,7 +567,7 @@ GoldenrodUnderground_Text_GruntM11Beaten:
 
 GoldenrodUnderground_Text_GruntM11After:
     .string "Yo también estoy confundido... El\n"
-    .string "el final es el que va primero, pero…$"
+    .string "el final es el que va primero, pero...$"
 
 GoldenrodUnderground_Text_GruntM25Seen:
     .string "¡Kwahaha!\p"
@@ -576,7 +576,7 @@ GoldenrodUnderground_Text_GruntM25Seen:
     .string "puedes vencerme!$"
 
 GoldenrodUnderground_Text_GruntM25Beaten:
-    .string "Uwww… la regué.$"
+    .string "Uwww... la regué.$"
 
 GoldenrodUnderground_Text_GruntM25After:
     .string "Está bien. ¡Una pista!\p"

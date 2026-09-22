@@ -51,7 +51,7 @@ Route15_Text_ChesterDefeat::
 
 Route15_Text_ChesterPostBattle::
 	.string "Esto es muy obvio, deberías saber\n"
-	.string "esto, pero…\p"
+	.string "esto, pero...\p"
 	.string "Movimientos como TERREMOTO y ABISMO\n"
 	.string "have no effect on bird POKéMON.$"
 
@@ -148,12 +148,12 @@ Route15_Text_RonIntro::
 	.string "lose.$"
 
 Route15_Text_RonDefeat::
-	.string "RON: Oh, no, no…\n"
+	.string "RON: Oh, no, no...\n"
 	.string "Sis, I'm sorry!$"
 
 Route15_Text_RonPostBattle::
-	.string "RON: Oh, bleah…\n"
-	.string "I wish I had a nice sister…$"
+	.string "RON: Oh, bleah...\n"
+	.string "I wish I had a nice sister...$"
 
 Route15_Text_RonNotEnoughMons::
 	.string "RON: ¿Querías pelear con\n"

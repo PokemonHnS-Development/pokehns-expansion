@@ -65,7 +65,7 @@ Route46_Text_CamperTedSeen:
 	.string "¿Luchas contra mí?$"
 
 Route46_Text_CamperTedBeaten:
-	.string "Wha…?$"
+	.string "Wha...?$"
 
 Route46_Text_CamperTedAfterBattle:
 	.string "Hice lo que pude, pero no fue\n"

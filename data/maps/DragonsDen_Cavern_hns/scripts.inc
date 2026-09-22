@@ -20,7 +20,7 @@ DragonsDen_EventScript_ClairRematch::
     end
 
 DragonsDen_Text_Clair:
-    .string "{PLAYER}… Así que estás aquí.\p"
+    .string "{PLAYER}... Así que estás aquí.\p"
 	.string "Si crees que puedes seguirme\n"
 	.string "el ritmo, ven al DOJO DE LUCHA\l"
 	.string "en CIUDAD AZAFRÁN.$"
@@ -215,7 +215,7 @@ DragonsDen_Cavern_Text_DragonShrineSign:
     .string "DE DRAGONES.$"
 
 DragonsDen_Cavern_Text_SilverTraining1:
-    .string "…\n"
+    .string "...\n"
     .string "¿Qué? ¿{PLAYER}?\p"
     .string "...No, no lucharé contigo ahora...\p"
     .string "Mis POKéMON no están listos para\n"
@@ -225,7 +225,7 @@ DragonsDen_Cavern_Text_SilverTraining1:
     .string "mejor ENTRENADOR POKéMON...$"
 
 DragonsDen_Cavern_Text_SilverTraining2:
-    .string "…\p"
+    .string "...\p"
     .string "Uff...\p"
     .string "Aprende a no cruzarte en mi camino...$"
 

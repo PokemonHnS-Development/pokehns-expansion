@@ -354,7 +354,7 @@ GoldenrodCity_Text_CooltrainerF2_GotCard:
 	.string "como radio!$"
 
 GoldenrodCity_Text_Youngster2:
-	.string "E-je-je-je…\p"
+	.string "E-je-je-je...\p"
 	.string "Me regañaron por jugar en el\n"
 	.string "sótano del CENTRO COMERCIAL.$"
 
@@ -368,7 +368,7 @@ GoldenrodCity_Text_Gramps:
 	.string "que no encuentro nada de nada.$"
 
 GoldenrodCity_Text_RocketScout1:
-	.string "Así que esta es la TORRE RADIO…$"
+	.string "Así que esta es la TORRE RADIO...$"
 
 GoldenrodCity_Text_RocketScout2:
 	.string "¿Qué quieres, plaga?\n"
@@ -379,7 +379,7 @@ GoldenrodCity_Text_Rocket1:
 	.string "¡Lárgate, niño!$"
 
 GoldenrodCity_Text_Rocket2:
-	.string "Apoderarse de la RADIO TOWER…\p"
+	.string "Apoderarse de la RADIO TOWER...\p"
 	.string "¿Qué? ¡No es asunto tuyo!$"
 
 GoldenrodCity_Text_Rocket3:
@@ -449,7 +449,7 @@ GoldenrodCity_Text_MoveTutorCost:
 	.string "¿De acuerdo?$"
 
 GoldenrodCity_Text_MoveTutorDecline:
-	.string "Ay… ¡Pero son geniales!$"
+	.string "Ay... ¡Pero son geniales!$"
 
 GoldenrodCity_Text_MoveTutorWhich:
 	.string "¡Jajaja! ¡No te arrepentirás!\p"
@@ -457,7 +457,7 @@ GoldenrodCity_Text_MoveTutorWhich:
 
 GoldenrodCity_Text_MoveTutorNoCash:
 	.string "Qué mal. Tendré que\n"
-	.string "buscar dinero en casa…$"
+	.string "buscar dinero en casa...$"
 
 GoldenrodCity_Text_MoveTutorUnderstand:
 	.string "Si entiendes este ataque,\n"
@@ -467,7 +467,7 @@ GoldenrodCity_Text_MoveTutorFarewell:
 	.string "Wahahah! Farewell, kid!$"
 
 GoldenrodCity_Text_MoveTutorBut:
-	.string "P-pero…$"
+	.string "P-pero...$"
 
 GoldenrodCity_Text_MoveTutorNotEnoughCoins:
-	.string "…No tienes suficientes monedas…$"
+	.string "...No tienes suficientes monedas...$"

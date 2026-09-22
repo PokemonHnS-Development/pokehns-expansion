@@ -13,7 +13,7 @@ SixIsland_OutcastIsland_Text_RocketIntro::
 	.string "¡Me desquitaré contigo!$"
 
 SixIsland_OutcastIsland_Text_RocketDefeat::
-	.string "…Huh?$"
+	.string "...Huh?$"
 
 SixIsland_OutcastIsland_Text_RocketPostBattle::
 	.string "Escucha, ¿no has visto a\n"
@@ -24,7 +24,7 @@ SixIsland_OutcastIsland_Text_TylorIntro::
 	.string "¡Una batalla sería un cambio!$"
 
 SixIsland_OutcastIsland_Text_TylorDefeat::
-	.string "No, nada de suerte…$"
+	.string "No, nada de suerte...$"
 
 SixIsland_OutcastIsland_Text_TylorPostBattle::
 	.string "No puedo volver a casa sin\n"
@@ -36,12 +36,12 @@ SixIsland_OutcastIsland_Text_MymoIntro::
 	.string "SEIS de una sola vez.$"
 
 SixIsland_OutcastIsland_Text_MymoDefeat::
-	.string "Gasp…\n"
-	.string "Gasp…$"
+	.string "Gasp...\n"
+	.string "Gasp...$"
 
 SixIsland_OutcastIsland_Text_MymoPostBattle::
-	.string "Solo llevo la mitad del camino…\n"
-	.string "I'm beat…$"
+	.string "Solo llevo la mitad del camino...\n"
+	.string "I'm beat...$"
 
 SixIsland_OutcastIsland_Text_NicoleIntro::
 	.string "It's not so easy sending POKéMON\n"
@@ -90,4 +90,4 @@ SixIsland_OutcastIsland_Text_GebPostBattle::
 SixIsland_OutcastIsland_Text_GebNotEnoughMons::
 	.string "GEB: Por favor, lucha contra mí y\n"
 	.string "¡mi hermana!\p"
-	.string "…Oh, you don't have two POKéMON?$"
+	.string "...Oh, you don't have two POKéMON?$"

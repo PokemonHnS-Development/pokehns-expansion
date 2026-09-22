@@ -12685,7 +12685,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
             "Cuando Kyogre rugió, el agua brotó y\n"
             "los mares se expandieron.\n"
             "Nubes oscuras envolvieron el mundo.\n"
-            "y el diluvio cayó sobre todos…"),
+            "y el diluvio cayó sobre todos..."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 515,

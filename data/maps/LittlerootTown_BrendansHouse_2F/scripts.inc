@@ -282,7 +282,7 @@ PlayersHouse_2F_EventScript_GameCube::
 	end
 
 PlayersHouse_2F_Text_ClockIsStopped:
-	.string "El reloj está detenido…\p"
+	.string "El reloj está detenido...\p"
 	.string "¡Mejor ajustarlo y ponerlo en marcha!$"
 
 PlayersHouse_2F_Text_HowDoYouLikeYourRoom:
@@ -301,7 +301,7 @@ PlayersHouse_2F_Text_Notebook:
 	.string "Abre el MENÚ con START.\p"
 	.string "REGLA DE AVENTURA N.º 2\n"
 	.string "Guarda tu progreso con SAVE.\p"
-	.string "Las demás páginas están vacías…$"
+	.string "Las demás páginas están vacías...$"
 
 Common_Text_LookCloserAtMap:
 	.string "{PLAYER} miró más de cerca el\n"

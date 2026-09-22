@@ -242,7 +242,7 @@ SixIsland_DottedHole_SapphireRoom_Text_FoundSapphire::
 	.string "¡{PLAYER} encontró un ZAFIRO!$"
 
 SixIsland_DottedHole_SapphireRoom_Text_IWasRightInTailingYou::
-	.string "Fufu… Fufufufu…\n"
+	.string "Fufu... Fufufufu...\n"
 	.string "I guessed right.\p"
 	.string "¡Tenía razón al seguirte!$"
 

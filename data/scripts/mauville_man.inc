@@ -91,7 +91,7 @@ MauvilleCity_PokemonCenter_1F_Text_WantToTradeDecor:
 	.string "¿Quieres cambiar adornos conmigo?$"
 
 MauvilleCity_PokemonCenter_1F_Text_TraderFeelingTheBlues:
-	.string "Oh…\n"
+	.string "Oh...\n"
 	.string "Me has dejado muy triste...$"
 
 MauvilleCity_PokemonCenter_1F_Text_WeveAlreadyTraded:
@@ -239,7 +239,7 @@ MauvilleCity_PokemonCenter_1F_Text_WillYouHearMyTale:
 	.string "¿Quieres oír mi relato?$"
 
 MauvilleCity_PokemonCenter_1F_Text_StorytellerFeelingTheBlues:
-	.string "Oh…\n"
+	.string "Oh...\n"
 	.string "Me has dejado muy triste...$"
 
 MauvilleCity_PokemonCenter_1F_Text_WhichTaleToTell:
@@ -276,7 +276,7 @@ MauvilleCity_PokemonCenter_1F_Text_HearAnotherLegendaryTale:
 	.string "otro relato legendario?$"
 
 MauvilleCity_PokemonCenter_1F_Text_NotWorthyOfLegend:
-	.string "Hmm…\n"
+	.string "Hmm...\n"
 	.string "No estoy satisfecho...\p"
 	.string "Quisiera que me traigas noticias\n"
 	.string "dignas de ser una leyenda.$"
@@ -846,11 +846,11 @@ MauvilleCity_PokemonCenter_1F_Text_HearMyStory:
 	.string "¿Quieres escuchar mi historia?$"
 
 MauvilleCity_PokemonCenter_1F_Text_GiddyFeelingTheBlues:
-	.string "Oh…\n"
+	.string "Oh...\n"
 	.string "Me has dejado muy triste...$"
 
 MauvilleCity_PokemonCenter_1F_Text_AlsoIWasThinking:
-	.string "Also, I was thinking…$"
+	.string "Also, I was thinking...$"
 
 MauvilleCity_PokemonCenter_1F_Text_WeShouldChatAgain:
 	.string "Eso es todo, creo...\p"
@@ -908,12 +908,12 @@ MauvilleCity_PokemonCenter_1F_Text_WouldYouLikeToHearMySong:
 	.string "¿Quieres escuchar mi canción?$"
 
 MauvilleCity_PokemonCenter_1F_Text_BardFeelingTheBlues1:
-	.string "Oh…\n"
+	.string "Oh...\n"
 	.string "Me has dejado muy triste...$"
 
 MauvilleCity_PokemonCenter_1F_Text_WishICouldPlaySongForOthers:
-	.string "Oh, qué canción tan emotiva…\n"
-	.string "Desearía tocarla para otros…$"
+	.string "Oh, qué canción tan emotiva...\n"
+	.string "Desearía tocarla para otros...$"
 
 MauvilleCity_PokemonCenter_1F_Text_WouldYouLikeToWriteSomeLyrics:
 	.string "So?\n"
@@ -924,7 +924,7 @@ MauvilleCity_PokemonCenter_1F_Text_WouldYouLikeToWriteSomeLyrics:
 	.string "letra nueva?$"
 
 MauvilleCity_PokemonCenter_1F_Text_BardFeelingTheBlues2:
-	.string "Oh…\n"
+	.string "Oh...\n"
 	.string "Me has dejado muy triste...$"
 
 MauvilleCity_PokemonCenter_1F_Text_LetMeSingItForYou:

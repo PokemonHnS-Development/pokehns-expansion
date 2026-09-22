@@ -28,7 +28,7 @@ CeladonCity_Apartments_RoofHouse_EventScript_BlackBeltAfter::
 	end
 
 CeladonMansionRoofHouse_Text_PharmacistIntro:
-	.string "Let me recount a terrifying tale…$"
+	.string "Let me recount a terrifying tale...$"
 
 CeladonMansionRoofHouse_Text_PharmacistNotNight:
 	.string "Aunque no da tanto miedo\n"
@@ -38,10 +38,10 @@ CeladonMansionRoofHouse_Text_PharmacistNotNight:
 CeladonMansionRoofHouse_Text_PharmacistStory:
 	.string "Había una vez un\n"
 	.string "niño pequeño que recibió una\l"
-	.string "BICICLETA nueva…\p"
-	.string "Quiso probarla enseguida…\p"
+	.string "BICICLETA nueva...\p"
+	.string "Quiso probarla enseguida...\p"
 	.string "Se divertía tanto que\n"
-	.string "no notó que el sol se ocultó…\p"
+	.string "no notó que el sol se ocultó...\p"
 	.string "Mientras volvía a casa en la\n"
 	.string "oscuridad, la bici de repente\l"
 	.string "¡se frenó!\p"
@@ -51,12 +51,12 @@ CeladonMansionRoofHouse_Text_PharmacistStory:
 	.string "Era como si la bici estuviera\n"
 	.string "maldita y quisiera arrastrarlo\l"
 	.string "al olvido!\p"
-	.string "…\p"
-	.string "…\p"
+	.string "...\p"
+	.string "...\p"
 	.string "¡¡¡GRIIIIIIIIII!!!\p"
 	.string "El chico subía la colina en la\n"
 	.string "¡CICLOVÍA!\p"
-	.string "…\n"
+	.string "...\n"
 	.string "¡Tucún tucún!\p"
 	.string "Por escuchar tan pacientemente,\n"
 	.string "¡Toma esto, la MT82!$"

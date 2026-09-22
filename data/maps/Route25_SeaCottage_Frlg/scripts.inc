@@ -296,7 +296,7 @@ Route25_SeaCottage_Movement_BillExitTeleporter::
 	step_end
 
 Route25_SeaCottage_Text_ImBillHelpMeOutPal::
-	.string "Hiya! I'm a POKéMON…\n"
+	.string "Hiya! I'm a POKéMON...\n"
 	.string "¡...No, no lo soy!\p"
 	.string "¡Llámame BILL!\n"
 	.string "I'm a true-blue POKéMANIAC!\p"
@@ -309,7 +309,7 @@ Route25_SeaCottage_Text_ImBillHelpMeOutPal::
 	.string "¡Ayúdame con esto!$"
 
 Route25_SeaCottage_Text_ImBillHelpMeOutLady::
-	.string "Hiya! I'm a POKéMON…\n"
+	.string "Hiya! I'm a POKéMON...\n"
 	.string "¡...No, no lo soy!\p"
 	.string "¡Llámame BILL!\n"
 	.string "I'm a true-blue POKéMANIAC!\p"

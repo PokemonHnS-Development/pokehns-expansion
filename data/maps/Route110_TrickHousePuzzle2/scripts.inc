@@ -103,7 +103,7 @@ Route110_TrickHousePuzzle2_Text_WroteSecretCodeLockOpened:
 	.string "{PLAYER} anotó el código secreto\n"
 	.string "en la puerta.\p"
 	.string "“TRICK MASTER es inteligente”.\n"
-	.string "… … … … … … … …\p"
+	.string "... ... ... ... ... ... ... ...\p"
 	.string "¡La cerradura se abrió!$"
 
 Route110_TrickHousePuzzle2_Text_TedIntro:

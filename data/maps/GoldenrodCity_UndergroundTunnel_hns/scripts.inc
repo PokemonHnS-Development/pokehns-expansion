@@ -380,10 +380,10 @@ GoldenrodUnderground_Text_OlderBrotherOnePerDay:
 GoldenrodUnderground_Text_SupernerdEricSeen:
     .string "Me echaron del CASINO.\p"
     .string "Intentaba hacer trampa usando mi\n"
-    .string "POKéMON…$"
+    .string "POKéMON...$"
 
 GoldenrodUnderground_Text_SupernerdEricBeaten:
-    .string "…Grumble…$"
+    .string "...Grumble...$"
 
 GoldenrodUnderground_Text_SupernerdEricAfterBattle:
     .string "Supongo que debo hacer las cosas de\n"
@@ -435,7 +435,7 @@ GoldenrodUnderground_Text_PokemaniacDonaldAfterBattleOld:
     .string "POKéMON.$"
 
 GoldenrodUnderground_Text_DoorsLocked:
-    .string "La puerta está cerrada…$"
+    .string "La puerta está cerrada...$"
 
 GoldenrodUnderground_Text_DoorIsOpen:
     .string "La puerta está abierta.$"

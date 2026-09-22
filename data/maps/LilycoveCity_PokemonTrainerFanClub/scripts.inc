@@ -616,7 +616,7 @@ LilycoveCity_PokemonTrainerFanClub_Text_ImPullingForYou:
 
 LilycoveCity_PokemonTrainerFanClub_Text_BrawlyNoImYourFan:
 	.string "Suspiro...\n"
-	.string "BRAWLY…\p"
+	.string "BRAWLY...\p"
 	.string "¡Oh, no! ¡Espera!\n"
 	.string "¡Eso no está bien! ¡No, no, no!\p"
 	.string "¡Soy tu fan de corazón!\p"
@@ -625,11 +625,11 @@ LilycoveCity_PokemonTrainerFanClub_Text_BrawlyNoImYourFan:
 
 LilycoveCity_PokemonTrainerFanClub_Text_ICantHelpLikingBrawly:
 	.string "No puedo evitarlo, solo puedo\n"
-	.string "querer a BRAWLY…$"
+	.string "querer a BRAWLY...$"
 
 LilycoveCity_PokemonTrainerFanClub_Text_NobodyUnderstandsBrawly:
 	.string "Nadie entiende el encanto de\n"
-	.string "BRAWLY…\p"
+	.string "BRAWLY...\p"
 	.string "¡No me importa!\p"
 	.string "Aunque sea la única, voy a\n"
 	.string "¡seguir animando a BRAWLY!$"
@@ -690,7 +690,7 @@ LilycoveCity_PokemonTrainerFanClub_Text_AlwaysCheerForYou:
 	.string "¡muy fuerte, {PLAYER}!$"
 
 LilycoveCity_PokemonTrainerFanClub_Text_EveryoneThinksTrainerIsCool:
-	.string "{STR_VAR_1} es genial…\p"
+	.string "{STR_VAR_1} es genial...\p"
 	.string "Todos piensan lo mismo, ¿verdad?$"
 
 LilycoveCity_PokemonTrainerFanClub_Text_TrainerIsReallyCoolItsJustMe:
@@ -700,10 +700,10 @@ LilycoveCity_PokemonTrainerFanClub_Text_TrainerIsReallyCoolItsJustMe:
 	.string "animando a mi ENTRENADOR favorito.$"
 
 LilycoveCity_PokemonTrainerFanClub_Text_WishThereWasTrainerLikeThat:
-	.string "Mi ENTRENADOR favorito es…\p"
-	.string "Genial…\p"
-	.string "Fuerte…\p"
-	.string "Y muy amable…\p"
+	.string "Mi ENTRENADOR favorito es...\p"
+	.string "Genial...\p"
+	.string "Fuerte...\p"
+	.string "Y muy amable...\p"
 	.string "Ojalá hubiera un ENTRENADOR así...$"
 
 LilycoveCity_PokemonTrainerFanClub_Text_WantToBeStrongLikeYou:
@@ -713,17 +713,17 @@ LilycoveCity_PokemonTrainerFanClub_Text_WantToBeStrongLikeYou:
 	.string "¡como tú, {PLAYER}!$"
 
 LilycoveCity_PokemonTrainerFanClub_Text_OnlyOneWhoCheersForYou:
-	.string "Aunque sea el único…\p"
+	.string "Aunque sea el único...\p"
 	.string "Tú siempre serás el único\n"
 	.string "a quien apoyo, {PLAYER}!\p"
 	.string "¡Porque creo en ti, {PLAYER}!$"
 
 LilycoveCity_PokemonTrainerFanClub_Text_TrainerIsWickedlyCool:
-	.string "{STR_VAR_1} es genial…\n"
+	.string "{STR_VAR_1} es genial...\n"
 	.string "Quiero darle la mano a mi héroe.$"
 
 LilycoveCity_PokemonTrainerFanClub_Text_NeverGoingToStopBeingTrainersFan:
-	.string "Aunque sea el único…\p"
+	.string "Aunque sea el único...\p"
 	.string "Nunca voy a dejar de ser\n"
 	.string "¡Fan de {STR_VAR_1}!\p"
 	.string "Porque he oído que {STR_VAR_1}\n"
@@ -784,7 +784,7 @@ LilycoveCity_PokemonTrainerFanClub_Text_NoOneCanKnockYouButTrainerStronger:
 	.string "¡Estoy seguro!$"
 
 LilycoveCity_PokemonTrainerFanClub_Text_YouImpressive:
-	.string "Tú…\p"
+	.string "Tú...\p"
 	.string "¡Impresionante!$"
 
 LilycoveCity_PokemonTrainerFanClub_Text_OnlyIRecognizeYourTrueWorth:
@@ -807,5 +807,5 @@ LilycoveCity_PokemonTrainerFanClub_Text_YourePowerfulButNotTrueStrength:
 	.string "¡Esa fuerza aún no puede ser\n"
 	.string "considerada fuerza real!\p"
 	.string "¡La fuerza real es...!\n"
-	.string "… …\p"
+	.string "... ...\p"
 	.string "En realidad, yo tampoco lo sé.$"

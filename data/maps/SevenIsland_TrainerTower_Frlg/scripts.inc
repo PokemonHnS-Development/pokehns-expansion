@@ -18,7 +18,7 @@ SevenIsland_TrainerTower_Text_DarioIntro::
 	.string "Sentí que te acercabas.$"
 
 SevenIsland_TrainerTower_Text_DarioDefeat::
-	.string "Ríndete…$"
+	.string "Ríndete...$"
 
 SevenIsland_TrainerTower_Text_DarioPostBattle::
 	.string "En tu futuro, veo que conocerás\n"

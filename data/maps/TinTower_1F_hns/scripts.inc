@@ -53,10 +53,10 @@ TinTower_1F_EventScript_SageC_Hooh::
 
 
 TinTower_1F_Sage1_Text:
-	.string "Según la leyenda…\n"
+	.string "Según la leyenda...\n"
 	.string "Cuando las almas de POKéMON y humanos\p"
 	.string "se comunican, desciende del cielo un\n"
-	.string "POKéMON de colores arcoíris…\p"
+	.string "POKéMON de colores arcoíris...\p"
 	.string "¿Significa que los POKéMON legendarios\n"
 	.string "nos están poniendo a prueba?$"
 
@@ -64,8 +64,8 @@ TinTower_1F_Sage2_Text:
 	.string "Cuando la TORRE LATÓN se quemó,\n"
 	.string "dicen que tres POKéMON sin nombre\l"
 	.string "perecieron. Fue trágico.\p"
-	.string "Sin embargo…\p"
-	.string "Un POKéMON de colores arcoíris…\n"
+	.string "Sin embargo...\p"
+	.string "Un POKéMON de colores arcoíris...\n"
 	.string "En otras palabras...\p"
 	.string "HO-OH descendió del cielo y\n"
 	.string "dio nueva vida a los tres POKéMON.\p"
@@ -88,7 +88,7 @@ TinTower_1F_Sage4_Text2:
 	.string "encarnan tres poderes...\p"
 	.string "El rayo que golpeó la TORRE.\n"
 	.string "El fuego que quemó la TORRE.\p"
-	.string "Y la lluvia que apagó el fuego…$"
+	.string "Y la lluvia que apagó el fuego...$"
 
 TinTower_1F_Sage6_Text2:
 	.string "Del POKéMON legendario SUICUNE,\n"

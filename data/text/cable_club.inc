@@ -38,10 +38,10 @@ CableClub_Text_CantTradeEnigmaBerry:
 
 gText_PleaseWaitForLink::
 	.string "Espera, por favor.\n"
-	.string "… … Botón B: Cancelar$"
+	.string "... ... Botón B: Cancelar$"
 
 gText_ConfirmLinkWhenPlayersReady::
-	.string "Cuando todos estén listos…\n"
+	.string "Cuando todos estén listos...\n"
 	.string "Botón A: Confirmar\l"
 	.string "Botón B: Cancelar$"
 
@@ -51,8 +51,8 @@ gText_ConfirmStartLinkWithXPlayers::
 	.string "Botón B: Cancelar$"
 
 gText_AwaitingLinkup::
-	.string "Esperando enlace…\n"
-	.string "… … Botón B: Cancelar$"
+	.string "Esperando enlace...\n"
+	.string "... ... Botón B: Cancelar$"
 
 @ Unused
 CableClub_Text_OkayToSaveProgress::
@@ -71,7 +71,7 @@ Text_SomeoneIsNotReadyToLink:
 	.string "estén preparados.$"
 
 Text_LinkErrorPleaseReset:
-	.string "Lo siento, hay un error de enlace…\n"
+	.string "Lo siento, hay un error de enlace...\n"
 	.string "Reinicia e inténtalo de nuevo.$"
 
 Text_PlayersMadeDifferentSelections:
@@ -106,13 +106,13 @@ Text_TerminateLinkConfirmation:
 	.string "sales del cuarto. ¿Está bien?$"
 
 Text_TerminateLinkPleaseWait:
-	.string "Cortando enlace…\n"
+	.string "Cortando enlace...\n"
 	.string "Te escoltarán fuera\l"
 	.string "del cuarto. Espera, por favor.$"
 
 CableClub_Text_TooBusyToNotice:
 	.string "Este ENTRENADOR está muy ocupado\n"
-	.string "para notar…$"
+	.string "para notar...$"
 
 CableClub_Text_GotToLookAtTrainerCard:
 	.string "Score! Got to look at {STR_VAR_1}'s\n"
@@ -238,7 +238,7 @@ CableClub_Text_UnionRoomAdapterNotConnected:
 
 @ Unused
 CableClub_Text_OhExcuseMe:
-	.string "Oh…\n"
+	.string "Oh...\n"
 	.string "¡Disculpa!$"
 
 CableClub_Text_PlayerIsWaiting:
@@ -309,7 +309,7 @@ MossdeepCity_GameCorner_1F_Text_LeavingDoComeAgain:
 
 MossdeepCity_GameCorner_1F_Text_ExplainRequiredMon:
 	.string "Parece que no tienes ningún\n"
-	.string "POKéMON que puedas inscribir…\p"
+	.string "POKéMON que puedas inscribir...\p"
 	.string "¿Quieres que te explique qué\n"
 	.string "tipos de POKéMON pueden entrar?$"
 

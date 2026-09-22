@@ -36,11 +36,11 @@ FourIsland_LoreleisHouse_Text_IfAnythingWereToHappenToIsland::
 	.string "LORELEI: Hay algo que me\n"
 	.string "pesa mucho en la mente.\p"
 	.string "Si llegara a pasar algo en\n"
-	.string "la isla donde nací…\p"
+	.string "la isla donde nací...\p"
 	.string "no lo sabría si fuera\n"
 	.string "in the POKéMON LEAGUE.\p"
 	.string "Me pregunto si eso me haría\n"
-	.string "irresponsable con mi hogar…$"
+	.string "irresponsable con mi hogar...$"
 
 FourIsland_LoreleisHouse_Text_IllReturnToLeagueInShortWhile::
 	.string "LORELEI: Así que lograste\n"
@@ -48,13 +48,13 @@ FourIsland_LoreleisHouse_Text_IllReturnToLeagueInShortWhile::
 	.string "Qué maravilla.\p"
 	.string "Eso significa que no hay razón\n"
 	.string "para que yo esté aquí siempre.\p"
-	.string "Gracias…\p"
+	.string "Gracias...\p"
 	.string "I'll return to the POKéMON LEAGUE\n"
 	.string "dentro de poco.$"
 
 FourIsland_LoreleisHouse_Text_WillDoWhatICanHereAndNow::
 	.string "No sé qué pasará\n"
-	.string "el futuro, pero…\p"
+	.string "el futuro, pero...\p"
 	.string "Haré lo que pueda aquí y ahora.\n"
 	.string "Es todo lo que puedo hacer.$"
 

@@ -127,7 +127,7 @@ ProfileMan_Text_LetsSeeItThen:
 ProfileMan_Text_ImagineYouWouldHaveWonderfulProfile:
 	.string "Oh, ¿en serio?\p"
 	.string "Imagino que alguien como tú tendría\n"
-	.string "un perfil maravilloso…$"
+	.string "un perfil maravilloso...$"
 
 ProfileMan_Text_NotIntoItRightNow:
 	.string "¿Oh? ¿No te interesa ahora mismo?\p"

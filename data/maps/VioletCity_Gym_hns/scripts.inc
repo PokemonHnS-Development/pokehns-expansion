@@ -67,7 +67,7 @@ VioletGym_Text_Falkner_Intro:
 
 VioletGym_Text_Falkner_WinLoss:
 	.string "...¡Rayos! El ave favorita de papá\n"
-	.string "POKéMON…\p"
+	.string "POKéMON...\p"
 	.string "Está bien. Toma esto.\p"
 	.string "Es la insignia oficial de la\n"
 	.string "LIGA POKéMON, la INSIGNIA CEFIRO.$"
@@ -109,7 +109,7 @@ VioletGym_Text_Falkner_Rematch:
 	.string "poder del cielo otra vez?$"
 
 VioletGym_Text_Falkner_RematchLoss:
-	.string "Vaya… Me ganaste otra vez.\pVoy a entrenar más duro para\n¡ser el mejor maestro de aves!$"
+	.string "Vaya... Me ganaste otra vez.\pVoy a entrenar más duro para\n¡ser el mejor maestro de aves!$"
 
 VioletGym_Text_BirdKeeperRod_Seen:
 	.string "¡La palabra clave es valor!\p"
@@ -130,7 +130,7 @@ VioletGym_Text_BirdKeeperAbe_Beaten:
 	.string "¡No puede ser!$"
 
 VioletGym_Text_BirdKeeperAbe_After:
-	.string "Qué patético, perder contra\nun entrenador novato…$"
+	.string "Qué patético, perder contra\nun entrenador novato...$"
 
 VioletGym_Text_GymGuide_Intro:
 	.string "¡Hola! ¿Qué pasa? No soy\n"

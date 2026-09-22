@@ -19,7 +19,7 @@ Route28House_Text_Celebrity1:
 Route28House_Text_Celebrity2:
 	.string "Es duro ser una gran celebridad.\p"
 	.string "A donde voy, la gente me persigue.\p"
-	.string "Solo quiero que me dejen en paz…$"
+	.string "Solo quiero que me dejen en paz...$"
 
 Route28House_Text_Fearow:
 	.string "FEAROW: Feero!$"

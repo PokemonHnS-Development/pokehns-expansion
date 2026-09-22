@@ -103,7 +103,7 @@ RuinsOfAlph_Outside_Text_SuperNerdStan_Seen:
 	.string "¿Qué quieres? Estoy estudiando--\n¡no me molestes!$"
 
 RuinsOfAlph_Outside_Text_SuperNerdStan_Beaten:
-	.string "Lo siento...\nMe frustra nuestra falta de\pverdadero entendimiento…$"
+	.string "Lo siento...\nMe frustra nuestra falta de\pverdadero entendimiento...$"
 
 RuinsOfAlph_Outside_Text_SuperNerdStan_After:
 	.string "Las RUINAS son de hace unos 1500\n"
@@ -111,13 +111,13 @@ RuinsOfAlph_Outside_Text_SuperNerdStan_After:
 	.string "Nadie sabe quién las construyó.\p"
 	.string "Tampoco se sabe si las estatuas\n"
 	.string "POKéMON tienen algún significado.\p"
-	.string "Todo es un gran misterio…$"
+	.string "Todo es un gran misterio...$"
 
 RuinsOfAlph_Outside_Text_PsychicNathan_Seen:
-	.string "Mmm… Este lugar es extraño.$"
+	.string "Mmm... Este lugar es extraño.$"
 
 RuinsOfAlph_Outside_Text_PsychicNathan_Beaten:
-	.string "…$"
+	.string "...$"
 
 RuinsOfAlph_Outside_Text_PsychicNathan_After:
 	.string "Me gusta pensar aquí.$"
@@ -143,6 +143,6 @@ RuinsOfAlph_Outside_Text_Youngster1:
 	.string "Hay muchas clases de UNOWN, así\nque los usamos como códigos secretos.$"
 
 RuinsOfAlph_Outside_Text_Youngster2:
-	.string "A… H… E… A… D… Hmm…\p"
+	.string "A... H... E... A... D... Hmm...\p"
 	.string "¿Qué?\p"
 	.string "¡Estoy descifrando este mensaje!$"

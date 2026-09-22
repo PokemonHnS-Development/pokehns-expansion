@@ -634,11 +634,11 @@ BattleFrontier_BattleFactoryPreBattleRoom_Text_WaitFewMoments:
 	.string "¿Podrías esperar unos momentos?$"
 
 BattleFrontier_BattleFactoryPreBattleRoom_Text_UnderstoodSirWillDo:
-	.string "…¿Eh? ¡¿Qué?! …¡Vaya!\n"
+	.string "...¿Eh? ¡¿Qué?! ...¡Vaya!\n"
 	.string "¡Entendido, señor! ¡Lo haré!$"
 
 BattleFrontier_BattleFactoryPreBattleRoom_Text_MessageFromHeadComeRightNow:
-	.string "Oh, Dios…\n"
+	.string "Oh, Dios...\n"
 	.string "¡Siento haberte hecho esperar!\p"
 	.string "Tengo un mensaje del jefe de este\n"
 	.string "lugar, el JEFE DE FÁBRICA.\p"

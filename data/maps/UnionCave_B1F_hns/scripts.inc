@@ -35,7 +35,7 @@ UnionCave_B1F_Text_HikerPhillipSeen:
 	.string "No seas tímido. ¡Luchemos!$"
 
 UnionCave_B1F_Text_HikerPhillipBeaten:
-	.string "Uurggh…$"
+	.string "Uurggh...$"
 
 UnionCave_B1F_Text_HikerPhillipAfter:
 	.string "Llevo mucho tiempo perdido...\p"
@@ -58,7 +58,7 @@ UnionCave_B1F_Text_PokemaniacAndrewSeen:
 	.string "¡Déjame en paz a mí y a mi POKéMON!$"
 
 UnionCave_B1F_Text_PokemaniacAndrewBeaten:
-	.string "Go… Go away!$"
+	.string "Go... Go away!$"
 
 UnionCave_B1F_Text_PokemaniacAndrewAfter:
 	.string "Solo mi POKéMON y yo. Estoy de-\n"

@@ -59,7 +59,7 @@ SixIsland_RuinValley_Text_LeftDoorAlone::
 
 SixIsland_RuinValley_Text_SeveralDotsOnTheDoor::
 	.string "Al mirar de cerca, hay\n"
-	.string "varios puntos en la puerta…$"
+	.string "varios puntos en la puerta...$"
 
 SixIsland_RuinValley_Text_DoorIsOpen::
 	.string "La puerta está abierta.$"
@@ -69,7 +69,7 @@ SixIsland_RuinValley_Text_StanlyIntro::
 	.string "aún sin resolver en este mundo.$"
 
 SixIsland_RuinValley_Text_StanlyDefeat::
-	.string "Hmm…$"
+	.string "Hmm...$"
 
 SixIsland_RuinValley_Text_StanlyPostBattle::
 	.string "Te sugiero que tú también,\n"
@@ -100,7 +100,7 @@ SixIsland_RuinValley_Text_LarryDefeat::
 	.string "Oh, interesting.$"
 
 SixIsland_RuinValley_Text_LarryPostBattle::
-	.string "Aquellas ruinas de allá…\p"
+	.string "Aquellas ruinas de allá...\p"
 	.string "No he tenido suerte en encontrar\n"
 	.string "cómo puedo entrar.$"
 
@@ -123,7 +123,7 @@ SixIsland_RuinValley_Text_HectorDefeat::
 	.string "Con gusto te lo diré.$"
 
 SixIsland_RuinValley_Text_HectorPostBattle::
-	.string "La puerta de las ruinas…\n"
+	.string "La puerta de las ruinas...\n"
 	.string "Tiene extraños grabados\l"
 	.string "en el exterior.\p"
 	.string "No sé qué significan,\n"

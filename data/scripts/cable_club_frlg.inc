@@ -1285,10 +1285,10 @@ CableClub_Text_CantTradeEnigmaBerry_Frlg::
 
 CableClub_Text_PleaseWaitBCancel_Frlg::
 	.string "Espera, por favor.\n"
-	.string "… … Botón B: Cancelar$"
+	.string "... ... Botón B: Cancelar$"
 
 CableClub_Text_WhenAllPlayersReadyAConfirmBCancel_Frlg::
-	.string "Cuando todos estén listos…\n"
+	.string "Cuando todos estén listos...\n"
 	.string "Botón A: Confirmar\l"
 	.string "Botón B: Cancelar$"
 
@@ -1298,8 +1298,8 @@ CableClub_Text_StartLinkWithXPlayersAConfirmBCancel_Frlg::
 	.string "Botón B: Cancelar$"
 
 CableClub_Text_AwaitingLinkupBCancel_Frlg::
-	.string "Esperando enlace…\n"
-	.string "… … Botón B: Cancelar$"
+	.string "Esperando enlace...\n"
+	.string "... ... Botón B: Cancelar$"
 
 @ Unused, translated in Emerald
 CableClub_Text_OkayToSaveProgress_Frlg::
@@ -1318,7 +1318,7 @@ CableClub_Text_SomeoneIsNotReadyToLink_Frlg::
 	.string "estén preparados.$"
 
 CableClub_Text_LinkErrorPleaseReset_Frlg::
-	.string "Lo siento, hay un error de enlace…\n"
+	.string "Lo siento, hay un error de enlace...\n"
 	.string "Reinicia e inténtalo de nuevo.$"
 
 CableClub_Text_PlayersMadeDifferentSelections_Frlg::
@@ -1353,13 +1353,13 @@ Text_TerminateLinkIfYouLeaveRoom_Frlg::
 	.string "sales del cuarto. ¿Está bien?$"
 
 Text_TerminateLinkConfirmation_Frlg::
-	.string "Cortando enlace…\n"
+	.string "Cortando enlace...\n"
 	.string "Te escoltarán fuera\l"
 	.string "del cuarto. Espera, por favor.$"
 
 Text_TrainerTooBusyToNotice_Frlg::
 	.string "Este ENTRENADOR está muy ocupado\n"
-	.string "para notar…$"
+	.string "para notar...$"
 
 Text_LookedAtPlayersTrainerCard_Frlg::
 	.string "Score! Got to look at {STR_VAR_1}'s\n"
@@ -1534,7 +1534,7 @@ Text_LeavingDoComeAgain_Frlg::
 
 EventScript_ExplainPokemonJumpRequirements_Frlg::
 	.string "Parece que no tienes ningún\n"
-	.string "POKéMON que puedas inscribir…\p"
+	.string "POKéMON que puedas inscribir...\p"
 	.string "¿Quieres que te explique qué\n"
 	.string "tipos de POKéMON pueden entrar?$"
 
@@ -1548,7 +1548,7 @@ Text_ShortJumpingPokemonAllowed_Frlg::
 	.string "Eso es todo lo que debes saber.$"
 
 Text_OnlyDodrioAllowed_Frlg::
-	.string "“RECOLECCIÓN DE BAYAS DODRIO”…\n"
+	.string "“RECOLECCIÓN DE BAYAS DODRIO”...\n"
 	.string "Bueno, el nombre lo dice todo.\p"
 	.string "Necesitas un DODRIO para jugar\n"
 	.string "este juego.$"
@@ -1710,4 +1710,4 @@ Text_WirelessClubUndergoingAdjustments::
 
 Text_AppearsToBeUndergoingAdjustments::
 	.string "Parece que está pasando por\n"
-	.string "ajustes…$"
+	.string "ajustes...$"

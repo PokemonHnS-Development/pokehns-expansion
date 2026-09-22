@@ -969,7 +969,7 @@ MauvilleCity_GameCorner_Text_DontHaveEnoughMoneyFor50:
 
 MauvilleCity_GameCorner_Text_DontHaveEnoughMoney:
 	.string "Eh... No pareces tener\n"
-	.string "dinero suficiente para tantas MONEDAS…$"
+	.string "dinero suficiente para tantas MONEDAS...$"
 
 MauvilleCity_GameCorner_Text_NoRoomFor50Coins:
 	.string "¡Oh! Tu MONEDERO está muy lleno para\n"
@@ -983,7 +983,7 @@ MauvilleCity_GameCorner_Text_NoRoomForCoins:
 	.string "Tus MONEDAS no caben en el MONEDERO...$"
 
 MauvilleCity_GameCorner_Text_DontNeedCoinsThen:
-	.string "Oh… ¿Entonces no necesitas MONEDAS?\n"
+	.string "Oh... ¿Entonces no necesitas MONEDAS?\n"
 	.string "¡Buena suerte en tu aventura!$"
 
 MauvilleCity_GameCorner_Text_ThanksBuyCoins:

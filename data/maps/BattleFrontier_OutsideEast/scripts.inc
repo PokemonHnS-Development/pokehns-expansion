@@ -304,7 +304,7 @@ BattleFrontier_OutsideEast_Text_BelieveInYouBuddy:
 	.string "favoritos si ganas!$"
 
 BattleFrontier_OutsideEast_Text_ZigzagoonLooksVacant:
-	.string "ZIGZAGOON looks vacant…$"
+	.string "ZIGZAGOON looks vacant...$"
 
 BattleFrontier_OutsideEast_Text_PeopleCallMeBusybody:
 	.string "Dicen que soy un entrometido,\n"
@@ -313,7 +313,7 @@ BattleFrontier_OutsideEast_Text_PeopleCallMeBusybody:
 	.string "¡Oh, no, basura en el suelo!\l"
 	.string "¡Uy, ya casi es hora de cenar!\p"
 	.string "No sé si pueda soportar solo\n"
-	.string "mirar en el BATTLE PALACE…$"
+	.string "mirar en el BATTLE PALACE...$"
 
 BattleFrontier_OutsideEast_Text_OnceBeatGymLeader:
 	.string "Quizá no luzca muy impresionante,\n"
@@ -429,7 +429,7 @@ BattleFrontier_OutsideEast_Text_OnceAnOddTreePastHere:
 	.string "había un árbol raro por aquí.$"
 
 BattleFrontier_OutsideEast_Text_StickyMonWithLongTail:
-	.string "I…\n"
+	.string "I...\n"
 	.string "¡Lo vi!\p"
 	.string "Había un POKéMON pegajoso\n"
 	.string "con una cola larga más adelante!\p"

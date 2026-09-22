@@ -54,10 +54,10 @@ PokemonTower_1F_Text_CameToPrayForDepartedClefairy::
 	.string "Vine a rezar por mi querido\n"
 	.string "departed CLEFAIRY.\p"
 	.string "Sniff!\n"
-	.string "Estoy bañado en lágrimas…$"
+	.string "Estoy bañado en lágrimas...$"
 
 PokemonTower_1F_Text_GrowlitheWhyDidYouDie::
-	.string "Mi GROWLITHE…\n"
+	.string "Mi GROWLITHE...\n"
 	.string "¿Por qué moriste?$"
 
 PokemonTower_1F_Text_SenseSpiritsUpToMischief::

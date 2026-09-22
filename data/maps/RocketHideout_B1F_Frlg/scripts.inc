@@ -71,7 +71,7 @@ RocketHideout_B1F_Text_Grunt1Defeat::
 	.string "Beaten!$"
 
 RocketHideout_B1F_Text_Grunt1PostBattle::
-	.string "Maldición… Estás insultando al\n"
+	.string "Maldición... Estás insultando al\n"
 	.string "EQUIPO ROCKET, ¿verdad?$"
 
 RocketHideout_B1F_Text_Grunt2Intro::
@@ -102,14 +102,14 @@ RocketHideout_B1F_Text_Grunt4Defeat::
 	.string "¡Esto no sirve!$"
 
 RocketHideout_B1F_Text_Grunt4PostBattle::
-	.string "Okay, I'll talk…\n"
+	.string "Okay, I'll talk...\n"
 	.string "Toma el ascensor para ver a mi JEFE.$"
 
 RocketHideout_B1F_Text_Grunt5Intro::
 	.string "¿Estás perdido, ratoncito?$"
 
 RocketHideout_B1F_Text_Grunt5Defeat::
-	.string "Why…?$"
+	.string "Why...?$"
 
 RocketHideout_B1F_Text_Grunt5PostBattle::
 	.string "Oh-oh, ese alboroto abrió de\n"

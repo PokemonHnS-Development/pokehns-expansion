@@ -247,7 +247,7 @@ Route128_Text_ArchieWhatHappened:
 	.string "¿Acaso... cometí un error horrible?$"
 
 Route128_Text_ArchieIOnlyWanted:
-	.string "I…\n"
+	.string "I...\n"
 	.string "Yo solo quería...$"
 
 Route128_Text_MaxieDoYouUnderstandNow:
@@ -275,17 +275,17 @@ Route128_Text_MaxieThisDefiesBelief:
 	.string "MAXIE: Esto es increíble...\p"
 	.string "Esos POKéMON superantiguos...\p"
 	.string "Su poder es increíble.\n"
-	.string "Alteraron el equilibrio natural…$"
+	.string "Alteraron el equilibrio natural...$"
 
 Route128_Text_StevenWhatIsHappening:
 	.string "STEVEN: ¡{PLAYER}{KUN}!\n"
 	.string "¿Qué está pasando?$"
 
 Route128_Text_StevenWholeWorldWillDrown:
-	.string "Esto es terrible…\pDespués de que acabó la ola de calor,\nempezó este diluvio.\pSi esto no se detiene, todo HOENN…\nNo, el mundo entero se ahogará.\pEsta enorme nube de lluvia se extiende\ndesde arriba de CIUDAD ARRECIFE…\p¿Qué demonios pasa allí?\pNo tiene sentido discutir aquí…\nCIUDAD ARRECIFE podría dar respuestas…$"
+	.string "Esto es terrible...\pDespués de que acabó la ola de calor,\nempezó este diluvio.\pSi esto no se detiene, todo HOENN...\nNo, el mundo entero se ahogará.\pEsta enorme nube de lluvia se extiende\ndesde arriba de CIUDAD ARRECIFE...\p¿Qué demonios pasa allí?\pNo tiene sentido discutir aquí...\nCIUDAD ARRECIFE podría dar respuestas...$"
 
 Route128_Text_StevenImGoingToSootopolis:
-	.string "{PLAYER}{KUN}…\n"
+	.string "{PLAYER}{KUN}...\n"
 	.string "No sé qué piensas hacer,\l"
 	.string "pero no hagas nada imprudente.\p"
 	.string "Está bien.\n"

@@ -77,7 +77,7 @@ NationalPark_Normal_Text_PokefanF:
 
 NationalPark_Normal_Text_Teacher1:
 	.string "¡Presta atención, por favor!\p"
-	.string "…Vaya, debo dejar de pensar como\n"
+	.string "...Vaya, debo dejar de pensar como\n"
 	.string "maestro todo el tiempo.\p"
 	.string "Debes ser un ENTRENADOR POKéMON.\p"
 	.string "Como te esfuerzas tanto, quiero\n"
@@ -99,7 +99,7 @@ NationalPark_Normal_Text_Youngster2:
 NationalPark_Normal_Text_Teacher2:
 	.string "Camino por el PARQUE, pero\n"
 	.string "nunca entro en la hierba.\p"
-	.string "Los Entrenadores siempre pelean…\p"
+	.string "Los Entrenadores siempre pelean...\p"
 	.string "Debes haber tenido muchas batallas.\n"
 	.string "Deja que cure a tus POKéMON.$"
 
@@ -217,7 +217,7 @@ NationalPark_Normal_Text_PokefanFBeverly1_Seen:
 	.string "me hacen adorables.$"
 
 NationalPark_Normal_Text_PokefanFBeverly1_Beaten:
-	.string "Puedo superarte en orgullo, pero…$"
+	.string "Puedo superarte en orgullo, pero...$"
 
 NationalPark_Normal_Text_PokefanFBeverly_After:
 	.string "debo decir que tus POKéMON son muy\n"
@@ -240,7 +240,7 @@ NationalPark_Normal_Text_LassKrise_Seen:
 	.string "Oh, ¿una batalla?$"
 
 NationalPark_Normal_Text_LassKrise_Beaten:
-	.string "…Hmmm…$"
+	.string "...Hmmm...$"
 
 NationalPark_Normal_Text_LassKrise_After:
 	.string "¡Pensé que me mirabas\n"

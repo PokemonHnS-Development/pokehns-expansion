@@ -141,7 +141,7 @@ RocketHideout_B4F_Text_GiovanniPostBattle::
 	.string "Un niño como tú jamás\n"
 	.string "entendería lo que busco.\p"
 	.string "¡Esta vez me apartaré!\p"
-	.string "Espero que volvamos a vernos…$"
+	.string "Espero que volvamos a vernos...$"
 
 RocketHideout_B4F_Text_Grunt2Intro::
 	.string "¡Te conozco!\n"

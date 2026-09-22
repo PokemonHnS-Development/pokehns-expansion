@@ -9,7 +9,7 @@ ShoalCave_LowTideEntranceRoom_Text_AreYouPlanningOnGoingInThere:
 ShoalCave_LowTideEntranceRoom_Text_BringMe4ShoalSaltAndShells:
 	.string "Si me traes cuatro de cada una,\n"
 	.string "SAL MARINA y CONCHAS MARINAS,\l"
-	.string "puedo hacerte un CAMPANA CONCHA…\p"
+	.string "puedo hacerte un CAMPANA CONCHA...\p"
 	.string "Puedes hallar esos ingredientes\n"
 	.string "every day.$"
 
@@ -22,8 +22,8 @@ ShoalCave_LowTideEntranceRoom_Text_WouldYouLikeShellBell:
 ShoalCave_LowTideEntranceRoom_Text_MakeShellBellRightAway:
 	.string "¡Muy bien! Te haré\n"
 	.string "una CAMPANA CONCHA ahora mismo.\p"
-	.string "… … … … … … … …\n"
-	.string "… … … … … … … …\p"
+	.string "... ... ... ... ... ... ... ...\n"
+	.string "... ... ... ... ... ... ... ...\p"
 	.string "¡Listo! ¡Ya está!$"
 
 ShoalCave_LowTideEntranceRoom_Text_ExplainShellBell:
@@ -36,7 +36,7 @@ ShoalCave_LowTideEntranceRoom_Text_ExplainShellBell:
 
 ShoalCave_LowTideEntranceRoom_Text_WantedToMakeShellBell:
 	.string "Oh... ¿Es así...?\n"
-	.string "Quería hacer un CAMPANA CONCHA…$"
+	.string "Quería hacer un CAMPANA CONCHA...$"
 
 ShoalCave_LowTideEntranceRoom_Text_NoSpaceInYourBag:
 	.string "No tienes espacio en tu BOLSA\n"

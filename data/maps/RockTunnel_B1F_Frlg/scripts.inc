@@ -79,7 +79,7 @@ RockTunnel_B1F_Text_CooperPostBattle::
 	.string "¿me lo das?$"
 
 RockTunnel_B1F_Text_SteveIntro::
-	.string "Um… Do you know about POKéMON\n"
+	.string "Um... Do you know about POKéMON\n"
 	.string "cosplay?$"
 
 RockTunnel_B1F_Text_SteveDefeat::
@@ -130,7 +130,7 @@ RockTunnel_B1F_Text_WinstonIntro::
 
 RockTunnel_B1F_Text_WinstonDefeat::
 	.string "Uff...\n"
-	.string "I'm exhausted…$"
+	.string "I'm exhausted...$"
 
 RockTunnel_B1F_Text_WinstonPostBattle::
 	.string "Soy artista, no peleador.\n"

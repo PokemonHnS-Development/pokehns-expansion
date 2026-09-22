@@ -6,7 +6,7 @@ gText_AlreadySavedFile::
 	.string "Ya existe una partida guardada.\n¿Quieres sobrescribirla?$"
 
 gText_SavingDontTurnOff::
-	.string "GUARDANDO…\n"
+	.string "GUARDANDO...\n"
 	.string "NO APAGUES LA CONSOLA.$"
 
 gText_PlayerSavedGame::
@@ -28,5 +28,5 @@ gText_SaveError::
 	.string "memoria de respaldo.$"
 
 gText_SavingDontTurnOffPower::
-	.string "GUARDANDO…\n"
+	.string "GUARDANDO...\n"
 	.string "NO APAGUES LA CONSOLA.$"

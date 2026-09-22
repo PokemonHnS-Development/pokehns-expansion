@@ -26,7 +26,7 @@ Melemele_House4_Man_Text_0:
 
 Melemele_House4_Woman_Text_0:
 	.string "Mi novio me dijo que iríamos a\n"
-	.string "ALOLA…\p"
+	.string "ALOLA...\p"
 	.string "Supuse que sería la región de\n"
 	.string "ALOLA, no las islas pequeñas de la\l"
 	.string "costa de KANTO.$"

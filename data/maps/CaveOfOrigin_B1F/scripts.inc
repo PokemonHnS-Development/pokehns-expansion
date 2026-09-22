@@ -67,8 +67,8 @@ CaveOfOrigin_B1F_Text_WallaceStory:
 	.string "SOTOPOLIS, pero surgió algo.\p"
 	.string "Así que le confié al mentor JUAN\n"
 	.string "la gestión del GIMNASIO.\p"
-	.string "… … … … … …\n"
-	.string "… … … … … …\p"
+	.string "... ... ... ... ... ...\n"
+	.string "... ... ... ... ... ...\p"
 	.string "GROUDON y KYOGRE, los dos POKéMON\n"
 	.string "que causan caos aquí, son\l"
 	.string "considerados POKéMON ancestrales.\p"
@@ -81,7 +81,7 @@ CaveOfOrigin_B1F_Text_WallaceStory:
 	.string "calmó a los dos combatientes en\l"
 	.string "el pasado remoto.\p"
 	.string "Pero ni yo tengo idea de\n"
-	.string "dónde se encuentra RAYQUAZA…$"
+	.string "dónde se encuentra RAYQUAZA...$"
 
 CaveOfOrigin_B1F_Text_WhereIsRayquaza:
 	.string "WALLACE: {PLAYER}{KUN}, ¿por casualidad?\n"

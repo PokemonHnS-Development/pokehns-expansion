@@ -69,11 +69,11 @@ FiveIsland_WaterLabyrinth_Text_LetMeTakeLookAtMons::
 	.string "You're not driving your POKéMON\n"
 	.string "demasiado duro, ¿verdad?\p"
 	.string "Déjame ver.\n"
-	.string "… … …   … … …$"
+	.string "... ... ...   ... ... ...$"
 
 FiveIsland_WaterLabyrinth_Text_HmmISeeIsee::
-	.string "Ah, hmm…\n"
-	.string "I see, I see…$"
+	.string "Ah, hmm...\n"
+	.string "I see, I see...$"
 
 FiveIsland_WaterLabyrinth_Text_TreatMonRightHaveThis::
 	.string "Oh, impressive.\n"
@@ -87,7 +87,7 @@ FiveIsland_WaterLabyrinth_Text_ReceivedEggFromMan::
 	.string "¡del hombre!$"
 
 FiveIsland_WaterLabyrinth_Text_DontHaveSpaceInYourParty::
-	.string "…Lamentablemente, no tienes\n"
+	.string "...Lamentablemente, no tienes\n"
 	.string "espacio para esto en tu equipo.\p"
 	.string "Será mejor que vuelvas por él\n"
 	.string "another time.$"
@@ -108,7 +108,7 @@ FiveIsland_WaterLabyrinth_Text_CuteMonRemindsMeOfDaisy::
 	.string "Qué lindo {STR_VAR_2}.\p"
 	.string "Verlo me recuerda a un dulce\n"
 	.string "little girl I met while traveling.\p"
-	.string "She was gently grooming POKéMON…\n"
+	.string "She was gently grooming POKéMON...\n"
 	.string "Era como un angelito.\p"
 	.string "El nombre de esa niña...\n"
 	.string "creo que era DAISY.$"

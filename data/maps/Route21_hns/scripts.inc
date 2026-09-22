@@ -26,7 +26,7 @@ Route21_Text_SwimmermSethSeen:
 	.string "Land ho! Gotta keep going!$"
 
 Route21_Text_SwimmermSethBeaten:
-	.string "Glug…$"
+	.string "Glug...$"
 
 Route21_Text_SwimmermSethAfterBattle:
 	.string "Ese arrogante estaba en el\nvolcán de ISLA CANELA.$"
@@ -35,7 +35,7 @@ Route21_Text_SwimmerfNikkiSeen:
 	.string "¡Si gano, me tienes que ayudar con\nmi crema bronceadora!$"
 
 Route21_Text_SwimmerfNikkiBeaten:
-	.string "Me preocupa quemarme con el sol…$"
+	.string "Me preocupa quemarme con el sol...$"
 
 Route21_Text_SwimmerfNikkiAfterBattle:
 	.string "Tengo que cuidarme de las manchas\nque causa el sol.$"
@@ -44,8 +44,8 @@ Route21_Text_FisherArnoldSeen:
 	.string "La pesca me aburre. ¡Batallamos!$"
 
 Route21_Text_FisherArnoldBeaten:
-	.string "Utter failure…$"
+	.string "Utter failure...$"
 
 Route21_Text_FisherArnoldAfterBattle:
-	.string "Volveré a pescar mejor…$"
+	.string "Volveré a pescar mejor...$"
 

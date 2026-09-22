@@ -112,7 +112,7 @@ SaffronCity_Text_PokefanM_ReturnedPart:
 	.string "¿Vienes de JOHTO?\pPuedes volver a casa\nsubiendo al MAGNET TRAIN.$"
 
 SaffronCity_Text_CooltrainerM:
-	.string "Fui al GIMNASIO con ganas de\npelear contra entrenadores…\pResulta que entré al GIMNASIO\nabandonado de al lado.\pVaya, estaba muy avergonzado.$"
+	.string "Fui al GIMNASIO con ganas de\npelear contra entrenadores...\pResulta que entré al GIMNASIO\nabandonado de al lado.\pVaya, estaba muy avergonzado.$"
 
 SaffronCity_Text_CooltrainerF:
 	.string "Esta es SILPH CO., famosa por\n"

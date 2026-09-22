@@ -11,8 +11,8 @@ AbandonedShip_Rooms_B1F_EventScript_FatMan::
 	end
 
 AbandonedShip_Rooms_B1F_Text_GettingQueasy:
-	.string "Urrrrppp…\p"
+	.string "Urrrrppp...\p"
 	.string "Me dan náuseas solo de estar en\n"
-	.string "este barco…\p"
-	.string "Ni siquiera se mueve, pero…$"
+	.string "este barco...\p"
+	.string "Ni siquiera se mueve, pero...$"
 

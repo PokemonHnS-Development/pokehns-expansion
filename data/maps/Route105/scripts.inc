@@ -77,10 +77,10 @@ Route105_EventScript_AndresRematch::
 	end
 
 Route104_Text_DadPokenavCall:
-	.string "… … … … … …\n"
-	.string "… … … … … ¡Bip!\p"
+	.string "... ... ... ... ... ...\n"
+	.string "... ... ... ... ... ¡Bip!\p"
 	.string "PAPÁ: Oh, {PLAYER}?\p"
-	.string "… … … … … …\n"
+	.string "... ... ... ... ... ...\n"
 	.string "¿Dónde estás ahora?\l"
 	.string "Parece que hace viento donde estás.\p"
 	.string "Me acaba de informar el SR. STONE\n"
@@ -89,7 +89,7 @@ Route104_Text_DadPokenavCall:
 	.string "Parece que te va muy bien,\n"
 	.string "así que me alegro mucho.\p"
 	.string "Cuídate mucho.\p"
-	.string "… … … … … …\n"
+	.string "... ... ... ... ... ...\n"
 	.string "... ... ... ... ... ¡Click!$"
 
 Route104_Text_RegisteredDadInPokenav:

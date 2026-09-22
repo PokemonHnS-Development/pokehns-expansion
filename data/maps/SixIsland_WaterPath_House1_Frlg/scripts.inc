@@ -97,7 +97,7 @@ SixIsland_WaterPath_House1_Text_WantToSeeBiggerOne::
 	.string "HERACROSS!$"
 
 SixIsland_WaterPath_House1_Text_ItsXInchesSameAsBefore::
-	.string "¿Eh? Mide {STR_VAR_2} pulgadas…\n"
+	.string "¿Eh? Mide {STR_VAR_2} pulgadas...\n"
 	.string "¡Bah! ¡Es igual que antes!$"
 
 SixIsland_WaterPath_House1_Text_ItsXInchesYInchesWasBiggest::

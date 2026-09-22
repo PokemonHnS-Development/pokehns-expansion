@@ -6,7 +6,7 @@ SSAnne_1F_Room1_EventScript_Gentleman::
 	end
 
 SSAnne_1F_Room1_Text_ImAGlobalPoliceAgent::
-	.string "Ssh…!\n"
+	.string "Ssh...!\n"
 	.string "I'm a GLOBAL POLICE agent.\p"
 	.string "Voy tras el rastro del EQUIPO ROCKET.\n"
 	.string "¡No traen nada bueno!$"

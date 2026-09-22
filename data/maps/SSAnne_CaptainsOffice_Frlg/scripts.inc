@@ -47,15 +47,15 @@ SSAnne_CaptainsOffice_EventScript_Book::
 	end
 
 SSAnne_CaptainsOffice_Text_CaptainIFeelSeasick::
-	.string "CAPTAIN: Ooargh…\n"
-	.string "I feel hideous…\l"
-	.string "Urrp! Seasick…$"
+	.string "CAPTAIN: Ooargh...\n"
+	.string "I feel hideous...\l"
+	.string "Urrp! Seasick...$"
 
 SSAnne_CaptainsOffice_Text_RubbedCaptainsBack::
 	.string "{PLAYER} frotó el CAPITÁN\n"
 	.string "back!\p"
-	.string "Rub-rub…\n"
-	.string "Rub-rub…$"
+	.string "Rub-rub...\n"
+	.string "Rub-rub...$"
 
 SSAnne_CaptainsOffice_Text_ThankYouHaveHMForCut::
 	.string "CAPITÁN: ¡Uf! ¡Gracias!\n"
@@ -63,7 +63,7 @@ SSAnne_CaptainsOffice_Text_ThankYouHaveHMForCut::
 	.string "¿Quieres ver mi CUT oculto\n"
 	.string "technique?\p"
 	.string "Podría mostrarte mi preciado\n"
-	.string "technique if I weren't so ill…\p"
+	.string "technique if I weren't so ill...\p"
 	.string "¡Ya sé! ¡Puedes tener esto!\n"
 	.string "¡Esta MÁQUINA OCULTA!\p"
 	.string "Teach CUT to your POKéMON, and\n"
@@ -80,7 +80,7 @@ SSAnne_CaptainsOffice_Text_ExplainCut::
 	.string "around VERMILION CITY?$"
 
 SSAnne_CaptainsOffice_Text_SSAnneWillSetSailSoon::
-	.string "CAPTAIN: …Whew!\p"
+	.string "CAPTAIN: ...Whew!\p"
 	.string "Ahora que ya no estoy enfermo,\n"
 	.string "creo que es el momento.\p"
 	.string "¡El S.S. ANNE zarpará pronto!\p"
@@ -96,6 +96,6 @@ SSAnne_CaptainsOffice_Text_YuckShouldntHaveLooked::
 	.string "¡No debí mirar!$"
 
 SSAnne_CaptainsOffice_Text_HowToConquerSeasickness::
-	.string "Cómo vencer el mareo…\n"
+	.string "Cómo vencer el mareo...\n"
 	.string "¡Lo lee el CAPITÁN!$"
 

@@ -154,7 +154,7 @@ Route43_Text_CamperSpencerSeen:
     .string "POKéMON... ¡es superdivertido!$"
 
 Route43_Text_CamperSpencerBeaten:
-    .string "Perder no es nada divertido…$"
+    .string "Perder no es nada divertido...$"
 
 Route43_Text_CamperSpencerAfter:
     .string "¿Qué pasa en el LAGO DE la FURIA?\p"

@@ -63,13 +63,13 @@ GoldenrodDeptStore5_EventScript_Receptionist_Already::
 	end
 
 GoldenrodDeptStore_Text_5FReceptionistOhYourMon:
-    .string "Hello. Oh, your POKéMON…$"
+    .string "Hello. Oh, your POKéMON...$"
 
 GoldenrodDeptStore_Text_5FReceptionistWait:
     .string "Espera, ¡ya te di esa MT!$"
 
 GoldenrodDeptStore_Text_5FReceptionistPutInSomeMoreEffort:
-	.string "Hmm…\n"
+	.string "Hmm...\n"
 	.string "No está mal, pero tampoco está bien.\p"
 	.string "Tú, como ENTRENADOR, debes poner\n"
 	.string "más esfuerzo.$"

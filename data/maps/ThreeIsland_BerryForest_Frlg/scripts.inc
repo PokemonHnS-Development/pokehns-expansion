@@ -60,14 +60,14 @@ ThreeIsland_BerryForest_EventScript_BewareSign::
 	end
 
 ThreeIsland_BerryForest_Text_HelpScaryPokemon::
-	.string "LOSTELLE: Whimper… Sniff…\n"
+	.string "LOSTELLE: Whimper... Sniff...\n"
 	.string "Oh! Please, help!\p"
 	.string "A scary POKéMON appeared there\n"
 	.string "llegó hace poco.\p"
 	.string "Seguía asustando.\n"
 	.string "Puso a LOSTELLE asustada.\p"
 	.string "I'm too scared to move!\n"
-	.string "Pero quiero ir a casa…$"
+	.string "Pero quiero ir a casa...$"
 
 ThreeIsland_BerryForest_Text_HereItComesAgain::
 	.string "¡Oh! ¡Ahí viene otra vez!\n"

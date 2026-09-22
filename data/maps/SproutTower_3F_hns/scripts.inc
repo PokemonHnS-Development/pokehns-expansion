@@ -168,11 +168,11 @@ SproutTower_Text_ElderLecturesRival:
 	.string "tratar mejor a tus POKéMON.\p"
 	.string "Tu forma de luchar es demasiado\n"
 	.string "dura.\p"
-	.string "Los POKéMON no son armas de guerra…$"
+	.string "Los POKéMON no son armas de guerra...$"
 
 SproutTower_Text_RivalOnlyCaresStrong:
-	.string "…\n"
-	.string "…¡Bah!\p"
+	.string "...\n"
+	.string "...¡Bah!\p"
 	.string "Dice ser el ANCIANO, pero\n"
 	.string "es débil.\p"
 	.string "Es lógico.\p"
@@ -217,7 +217,7 @@ SproutTower_Text_SageJin_Seen:
 	.string "¡en los POKéMON!$"
 
 SproutTower_Text_SageJin_Beaten:
-	.string "Mi entrenamiento está incompleto…$"
+	.string "Mi entrenamiento está incompleto...$"
 
 SproutTower_Text_SageJin_AfterBattle:
 	.string "Cuando los POKéMON se hacen fuertes,\n"

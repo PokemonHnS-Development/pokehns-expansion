@@ -16,7 +16,7 @@ CeladonCity_Apartments_2F_EventScript_Sign::
 
 CeladonMansion2F_Text_Computer:
 	.string "{PLAYER} encendió la PC.\p"
-	.string "…\p"
+	.string "...\p"
 	.string "Alguien estaba escribiendo\n"
 	.string "un correo electrónico.\p"
 	.string "...Espero que visites KANTO.\p"
@@ -25,7 +25,7 @@ CeladonMansion2F_Text_Computer:
 	.string "Verás muchos POKéMON que\n"
 	.string "no son nativos de JOHTO.\p"
 	.string "Para el PRODUCTOR\p"
-	.string "…$"
+	.string "...$"
 
 CeladonMansion2F_Text_DevOfficeSign:
 	.string "HEART & SOUL DEVELOPMENT OFFICE$"

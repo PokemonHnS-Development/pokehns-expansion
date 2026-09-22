@@ -21,14 +21,14 @@ OneIsland_KindleRoad_Text_MariaPostBattle::
 	.string "¡Arruinarás el maquillaje!$"
 
 OneIsland_KindleRoad_Text_AbigailIntro::
-	.string "Me está saliendo una quemadura…$"
+	.string "Me está saliendo una quemadura...$"
 
 OneIsland_KindleRoad_Text_AbigailDefeat::
 	.string "Oh, qué terrible eres.$"
 
 OneIsland_KindleRoad_Text_AbigailPostBattle::
 	.string "Me gusta tu gorra.\n"
-	.string "Maybe I should wear one, too…$"
+	.string "Maybe I should wear one, too...$"
 
 OneIsland_KindleRoad_Text_FinnIntro::
 	.string "Desde aquí, el MT. EMBER se\n"
@@ -46,7 +46,7 @@ OneIsland_KindleRoad_Text_GarrettIntro::
 	.string "¿y tú me retas?$"
 
 OneIsland_KindleRoad_Text_GarrettDefeat::
-	.string "Oye, ¿qué…?\n"
+	.string "Oye, ¿qué...?\n"
 	.string "¡Eres bueno, tú!$"
 
 OneIsland_KindleRoad_Text_GarrettPostBattle::
@@ -58,7 +58,7 @@ OneIsland_KindleRoad_Text_TommyIntro::
 	.string "¡Creo que piqué uno grande!$"
 
 OneIsland_KindleRoad_Text_TommyDefeat::
-	.string "Lo he perdido todo otra vez…$"
+	.string "Lo he perdido todo otra vez...$"
 
 OneIsland_KindleRoad_Text_TommyPostBattle::
 	.string "No solo perdí, sino que el grande\n"
@@ -90,12 +90,12 @@ OneIsland_KindleRoad_Text_SheaIntro::
 	.string "Nado alrededor de esta isla.$"
 
 OneIsland_KindleRoad_Text_SheaDefeat::
-	.string "Gasp…\n"
-	.string "Gasp…$"
+	.string "Gasp...\n"
+	.string "Gasp...$"
 
 OneIsland_KindleRoad_Text_SheaPostBattle::
 	.string "Perdí porque estoy agotado de\n"
-	.string "tanto correr…$"
+	.string "tanto correr...$"
 
 OneIsland_KindleRoad_Text_HughIntro::
 	.string "¡Vístete bien para la batalla!\n"
@@ -106,7 +106,7 @@ OneIsland_KindleRoad_Text_HughDefeat::
 
 OneIsland_KindleRoad_Text_HughPostBattle::
 	.string "Hasta los artistas marciales se\n"
-	.string "fashion conscious these days…$"
+	.string "fashion conscious these days...$"
 
 OneIsland_KindleRoad_Text_BryceIntro::
 	.string "Sabes, todo sabe mucho mejor\n"

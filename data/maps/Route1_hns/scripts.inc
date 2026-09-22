@@ -26,7 +26,7 @@ Route1_Text_SchoolboyDanny_Seen:
 	.string "lo primero es luchar.$"
 
 Route1_Text_SchoolboyDanny_Beaten:
-	.string "Awww… tengo más derrotas…$"
+	.string "Awww... tengo más derrotas...$"
 
 Route1_Text_SchoolboyDanny_AfterBattle:
 	.string "Para los entrenadores, es obvio\n"
@@ -36,7 +36,7 @@ Route1_Text_CooltrainerFQuinn_Seen:
 	.string "¡Oye, tú! ¿Quieres combatir?$"
 
 Route1_Text_CooltrainerFQuinn_Beaten:
-	.string "Abajo y fuera…$"
+	.string "Abajo y fuera...$"
 
 Route1_Text_CooltrainerFQuinn_AfterBattle:
 	.string "Eres fuerte.\p"

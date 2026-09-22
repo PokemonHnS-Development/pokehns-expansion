@@ -48,7 +48,7 @@ Trade_Text_ThatsTooBad::
 	.string "Qué mal.$"
 
 Trade_Text_ThisIsNoMon::
-	.string "…Esto no es un {STR_VAR_1}.\pSi consigues uno, cámbialo conmigo.$"
+	.string "...Esto no es un {STR_VAR_1}.\pSi consigues uno, cámbialo conmigo.$"
 
 Trade_Text_ThanksYoureAPal::
 	.string "¡Gracias, eres un amigo!$"

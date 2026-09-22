@@ -77,7 +77,7 @@ RustboroCity_Flat1_2F_EventScript_PokeDoll::
 	end
 
 RustboroCity_Flat1_2F_Text_ComingUpWithMealsIsHard:
-	.string "Ay, qué difícil es todos los días…\p¿Qué es difícil?\n¿Hace falta preguntar?\pEs pensar qué hacer de comer\ntodos los días.\pLa verdad es que no es fácil\npensar en la comida diaria.$"
+	.string "Ay, qué difícil es todos los días...\p¿Qué es difícil?\n¿Hace falta preguntar?\pEs pensar qué hacer de comer\ntodos los días.\pLa verdad es que no es fácil\npensar en la comida diaria.$"
 
 RustboroCity_Flat1_2F_Text_HelloDoYouKnowFunnyPhrase:
 	.string "¡Oh, hola!\n"
@@ -123,7 +123,7 @@ RustboroCity_Flat1_2F_Text_ShesNotSmilingAtAll:
 	.string "Quizá WALDA sea una niña seria...$"
 
 RustboroCity_Flat1_2F_Text_ThinkOfMyOwnPhrase:
-	.string "Ah, no sabes ninguna palabra.\nEntonces, mejor pienso yo solo.\pMmm…\n¿Qué tal “{STR_VAR_1}”?\lA ver si funciona.$"
+	.string "Ah, no sabes ninguna palabra.\nEntonces, mejor pienso yo solo.\pMmm...\n¿Qué tal “{STR_VAR_1}”?\lA ver si funciona.$"
 
 RustboroCity_Flat1_2F_Text_ShesNotSmilingAtAll2:
 	.string "{STR_VAR_1}.\n"

@@ -90,7 +90,7 @@ SlateportCity_SternsShipyard_1F_Text_CouldUseAdviceFromVeteran:
 	.string "Hay cosas que no se resuelven\n"
 	.string "solo con cálculos.\p"
 	.string "Me vendría bien el consejo de un\n"
-	.string "veterano que conozca los mares…$"
+	.string "veterano que conozca los mares...$"
 
 SlateportCity_SternsShipyard_1F_Text_BrineyJoinedUs:
 	.string "DOCK: ¡Hola! El SR. BRINEY se ha\n"

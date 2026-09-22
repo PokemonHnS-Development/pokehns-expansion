@@ -48,8 +48,8 @@ FiveIsland_ResortGorgeous_Text_DaisyIntro::
 	.string "¡mi victoria!$"
 
 FiveIsland_ResortGorgeous_Text_DaisyDefeat::
-	.string "La vergüenza de esto…\n"
-	.string "I'm red-faced…$"
+	.string "La vergüenza de esto...\n"
+	.string "I'm red-faced...$"
 
 FiveIsland_ResortGorgeous_Text_DaisyPostBattle::
 	.string "Ay no, mis tubos de pintura\n"
@@ -61,24 +61,24 @@ FiveIsland_ResortGorgeous_Text_CelinaIntro::
 	.string "¡Por favor, no me molestes!$"
 
 FiveIsland_ResortGorgeous_Text_CelinaDefeat::
-	.string "Esta derrota…\n"
-	.string "I feel like I'm whiting out…$"
+	.string "Esta derrota...\n"
+	.string "I feel like I'm whiting out...$"
 
 FiveIsland_ResortGorgeous_Text_CelinaPostBattle::
 	.string "GILLIAN?\n"
-	.string "Inclina un poco la cabeza…\l"
+	.string "Inclina un poco la cabeza...\l"
 	.string "¡Ahí! ¡Ese look que quiero!$"
 
 FiveIsland_ResortGorgeous_Text_RaynaIntro::
-	.string "Hmm…\n"
-	.string "El ángulo, aún no está…$"
+	.string "Hmm...\n"
+	.string "El ángulo, aún no está...$"
 
 FiveIsland_ResortGorgeous_Text_RaynaDefeat::
-	.string "Oh…\n"
-	.string "Mis sentimientos son tristes…$"
+	.string "Oh...\n"
+	.string "Mis sentimientos son tristes...$"
 
 FiveIsland_ResortGorgeous_Text_RaynaPostBattle::
-	.string "El cielo y el mar…\n"
+	.string "El cielo y el mar...\n"
 	.string "Son tan cambiantes.\p"
 	.string "Sus expresiones cambiantes hacen\n"
 	.string "difícil atraparlos.$"
@@ -126,7 +126,7 @@ FiveIsland_ResortGorgeous_Text_TobyDefeat::
 	.string "Debes estar bromeando.$"
 
 FiveIsland_ResortGorgeous_Text_TobyPostBattle::
-	.string "Ponerse tan serio por esto…\n"
+	.string "Ponerse tan serio por esto...\n"
 	.string "How nonsensical.$"
 
 FiveIsland_ResortGorgeous_Text_SelphyThanksYouMayGoNow::

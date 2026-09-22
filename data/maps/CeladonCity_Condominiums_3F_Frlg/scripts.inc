@@ -76,7 +76,7 @@ CeladonCity_Condominiums_3F_Text_CompletedPokedexCongratulations::
 	.string "Wow! Excellent!\n"
 	.string "You completed your POKéDEX!\l"
 	.string "¡Felicidades!\l"
-	.string "…$"
+	.string "...$"
 
 CeladonCity_Condominiums_3F_Text_ItsTheGameProgram::
 	.string "¡Es el programa del juego! Manipulando\n"

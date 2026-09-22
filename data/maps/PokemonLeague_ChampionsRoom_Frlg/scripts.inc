@@ -284,10 +284,10 @@ PokemonLeague_ChampionsRoom_Text_PostBattle::
 	.string "Why?\n"
 	.string "¿Por qué perdí?\p"
 	.string "I never made any mistakes raising\n"
-	.string "my POKéMON…\p"
+	.string "my POKéMON...\p"
 	.string "Darn it! You're the new POKéMON\n"
 	.string "LEAGUE CHAMPION!\p"
-	.string "Aunque no me gusta admitirlo…$"
+	.string "Aunque no me gusta admitirlo...$"
 
 PokemonLeague_ChampionsRoom_Text_OakPlayer::
 	.string "OAK: {PLAYER}!$"
@@ -303,7 +303,7 @@ PokemonLeague_ChampionsRoom_Text_OakCongratulations::
 	.string "{PLAYER}, ¡has llegado a ser adulto!$"
 
 PokemonLeague_ChampionsRoom_Text_OakImDisappointedRival::
-	.string "OAK: {RIVAL}…\n"
+	.string "OAK: {RIVAL}...\n"
 	.string "Me decepcionas.\p"
 	.string "Vine cuando supe que habías ganado\n"
 	.string "el Alto Mando.\p"

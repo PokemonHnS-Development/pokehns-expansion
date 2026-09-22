@@ -79,7 +79,7 @@ CeladonCity_Text_Poliwrath:
 	.string "POLIWRATH: Croak!$"
 
 CeladonCity_Text_Teacher1:
-	.string "Perdí en las tragamonedas otra vez…\p"
+	.string "Perdí en las tragamonedas otra vez...\p"
 	.string "Nosotras también jugamos ahora.\p"
 	.string "Tú también deberías probarlas.$"
 
@@ -88,7 +88,7 @@ CeladonCity_Text_Gramps1:
 	.string "¿Ves ese estanque frente a la\n"
 	.string "casa? Ahora viven GRIMER ahí.\p"
 	.string "¿De dónde salieron? Esto es un\n"
-	.string "problema serio…$"
+	.string "problema serio...$"
 
 CeladonCity_Text_Gramps2:
 	.string "¡Nihihi! ¡Este GIMNASIO es genial!\n"
@@ -103,14 +103,14 @@ CeladonCity_Text_Youngster2:
 	.string "Hacen un concurso de comida en\n"
 	.string "el restaurante.\p"
 	.string "Solo verlos comer ya me hace\n"
-	.string "sentir hinchada…$"
+	.string "sentir hinchada...$"
 
 CeladonCity_Text_Teacher2:
 	.string "TIENDAS CELADON tiene la mayor\n"
 	.string "y mejor selección de productos.\p"
 	.string "Si no lo encuentras ahí, no lo\n"
 	.string "encontrarás en ningún lugar.\p"
-	.string "Vaya… Parezco un vendedor.$"
+	.string "Vaya... Parezco un vendedor.$"
 
 CeladonCity_Text_Lass:
 	.string "Mirar al suelo mientras caminaba\n"

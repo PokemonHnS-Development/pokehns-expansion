@@ -207,7 +207,7 @@ MrPokemonHouse_Text_OakIntro:
 	.string "PROF.ELM y yo, son nuestros amigos.\p"
 	.string "Él vio que tratarías a tu\n"
 	.string "POKéMON con amor y cuidado.\p"
-	.string "…Ah!\p"
+	.string "...Ah!\p"
 	.string "Pareces alguien confiable. ¿Te\n"
 	.string "gustaría ayudarme?\p"
 	.string "¿Ves? Esta es la versión más\n"
@@ -249,7 +249,7 @@ MrPokemonHouse_Text_ExpShare:
 MrPokemonHouse_Text_ForeignMagazines:
 	.string "Está lleno de revistas\n"
 	.string "extranjeras.\p"
-	.string "Ni siquiera leo los títulos…$"
+	.string "Ni siquiera leo los títulos...$"
 
 MrPokemonHouse_Text_BrokenComputer:
 	.string "Es una computadora grande.\n"
@@ -258,7 +258,7 @@ MrPokemonHouse_Text_BrokenComputer:
 MrPokemonHouse_Text_StrangeCoins:
 	.string "¡Un montón de monedas extrañas!\p"
 	.string "Tal vez sean de otro\n"
-	.string "país…$"
+	.string "país...$"
 
 MrPokemonHouse_Text_GotExpShare:
 	.string "{PLAYER} received EXP. SHARE!$"

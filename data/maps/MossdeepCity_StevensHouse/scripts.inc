@@ -193,7 +193,7 @@ MossdeepCity_StevensHouse_Text_LeftPokeBallWhereItWas:
 
 MossdeepCity_StevensHouse_Text_LetterFromSteven:
 	.string "Es una carta.\p"
-	.string "… … … … … …\p"
+	.string "... ... ... ... ... ...\p"
 	.string "Para {PLAYER}{KUN}...\p"
 	.string "He decidido reflexionar un poco\n"
 	.string "y entrenar por el camino.\p"

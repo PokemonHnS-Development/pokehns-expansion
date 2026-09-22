@@ -179,5 +179,5 @@ SkyPillar_Top_Movement_CameraPanDown:
 	step_end
 
 SkyPillar_Top_Text_RayquazaFlewOff:
-	.string "El RAYQUAZA despertado se fue…$"
+	.string "El RAYQUAZA despertado se fue...$"
 

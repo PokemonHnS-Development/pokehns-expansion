@@ -60,12 +60,12 @@ Route16_NorthEntrance_2F_Text_RidingTogetherOnNewBikes::
 
 Route16_NorthEntrance_2F_Text_ItsCeladonDeptStore::
 	.string "Veamos qué tienen los prismáticos\n"
-	.string "para mostrar…\p"
+	.string "para mostrar...\p"
 	.string "¡Es el ALMACÉN DE AZALEA!$"
 
 Route16_NorthEntrance_2F_Text_LongPathOverWater::
 	.string "Veamos qué tienen los prismáticos\n"
-	.string "para mostrar…\p"
+	.string "para mostrar...\p"
 	.string "Hay un largo camino sobre el agua\n"
 	.string "lejano.$"
 

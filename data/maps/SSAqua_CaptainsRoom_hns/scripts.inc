@@ -45,7 +45,7 @@ SSAqua_CaptainsRoom_Text_GranddaughterCaptainPlayWithMe:
 
 SSAqua_CaptainsRoom_Text_GranddaughterHasToFindGrandpa:
 	.string "¡Hola! ¿Quieres jugar conmigo?\p"
-	.string "…Oh!\p"
+	.string "...Oh!\p"
 	.string "¿El abuelo está preocupado por mí?\p"
 	.string "¡Tengo que irme!\p"
 	.string "¡Tengo que ir a buscar al abuelo!$"

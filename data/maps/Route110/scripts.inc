@@ -758,7 +758,7 @@ Route110_Text_MayLetsBattle:
 	.string "MAY: ¡Hola, {PLAYER}{KUN}! ¡Tanto tiempo!\p"
 	.string "Mientras buscaba otros POKéMON,\n"
 	.string "los míos se hicieron más fuertes.\p"
-	.string "So…\n"
+	.string "So...\n"
 	.string "¿Qué tal una pequeña batalla?$"
 
 Route110_Text_MayDefeated:
@@ -785,7 +785,7 @@ Route110_Text_BrendanLetsBattle:
 	.string "Lo revisaré por ti.$"
 
 Route110_Text_BrendanDefeated:
-	.string "Hmm…\n"
+	.string "Hmm...\n"
 	.string "Eres bastante bueno.$"
 
 Route110_Text_BrendanTakeThis:
@@ -830,7 +830,7 @@ Route110_Text_YouGotBikeFromRydel:
 	.string "lugar... ¡es buena publicidad!$"
 
 Route110_Text_TwoRoads:
-	.string "Dos caminos, uno arriba y otro abajo…\p"
+	.string "Dos caminos, uno arriba y otro abajo...\p"
 	.string "Uno para personas y otro POKéMON.\n"
 	.string "Tal vez así sea justo y correcto.$"
 
@@ -852,9 +852,9 @@ Route110_Text_WhichShouldIChoose:
 
 Route110_Text_CyclingChallengeResultSummary:
 	.string "Número de choques:\n"
-	.string "… … {STR_VAR_1}!\p"
+	.string "... ... {STR_VAR_1}!\p"
 	.string "Tiempo total:\n"
-	.string "… … {STR_VAR_2}!$"
+	.string "... ... {STR_VAR_2}!$"
 
 Route110_Text_ChallengeReactionBest:
 	.string "¡Bravo! ¡Magnífica demostración!\pTu amor por la bici nace en lo\nmás profundo de tu corazón.\l¡Me has conmovido hasta el alma!$"
@@ -866,10 +866,10 @@ Route110_Text_ChallengeReactionOk:
 	.string "Te consideraría un trabajo en\nprogreso.\pAun así, espero que no olvides\nel puro placer de pedalear.$"
 
 Route110_Text_ChallengeReactionBad:
-	.string "Cielos… Tu habilidad en la bici\nroza lo aterrador.\pSin duda, necesitas mucha más\npráctica al pedalear.$"
+	.string "Cielos... Tu habilidad en la bici\nroza lo aterrador.\pSin duda, necesitas mucha más\npráctica al pedalear.$"
 
 Route110_Text_ChallengeReactionWorst:
-	.string "…Estoy estupefacto…\pQuizá no naciste para este\ndesafortunado oficio del ciclismo.\pDeberías pensar seriamente en\ndevolverle esa BICI a RYDEL.$"
+	.string "...Estoy estupefacto...\pQuizá no naciste para este\ndesafortunado oficio del ciclismo.\pDeberías pensar seriamente en\ndevolverle esa BICI a RYDEL.$"
 
 Route110_Text_RatedForNumberOfCollisions:
 	.string "Este es el CAMINO CICLISTA.\pSi recorrieras de MAUVILLE a\nSLATEPORT en una BICI MACH, serías\levaluado por tu número de choques\ly tu tiempo total.$"
@@ -915,10 +915,10 @@ Route110_Text_TrickHouseSign:
 	.string "“Tres pasos {RIGHT_ARROW} y dos pasos {UP_ARROW}\npara llegar a la CASA DE LOS TRUCOS.”$"
 
 Route110_Text_BestRecord:
-	.string "EL MEJOR RÉCORD HASTA LA FECHA…\pChoques: {STR_VAR_1}\pTiempo transcurrido: {STR_VAR_2}$"
+	.string "EL MEJOR RÉCORD HASTA LA FECHA...\pChoques: {STR_VAR_1}\pTiempo transcurrido: {STR_VAR_2}$"
 
 Route110_Text_ThereIsNoRecord:
-	.string "EL MEJOR RÉCORD HASTA LA FECHA…\pParece que nadie ha aceptado el\nreto. No hay ningún récord…$"
+	.string "EL MEJOR RÉCORD HASTA LA FECHA...\pParece que nadie ha aceptado el\nreto. No hay ningún récord...$"
 
 Route110_Text_ImagineSeeingYouHere:
 	.string "PROF. BIRCH: ¡Oh, {PLAYER}{KUN}!\n"
@@ -935,12 +935,12 @@ Route110_Text_HeardYouInstallMatchCall:
 	.string "registrarte en mi POKéNAV.\p"
 	.string "Así, aunque estemos lejos,\n"
 	.string "Puedo evaluar tu POKéDEX cuando sea.\p"
-	.string "… … … … … …$"
+	.string "... ... ... ... ... ...$"
 
 Route110_Text_RegisteredBirchInPokenav:
 	.string "Registrado PROF. BIRCH\n"
 	.string "en el POKéNAV.$"
 
 Route110_Text_KeepAnEyeOutForRival:
-	.string "PROF. BIRCH: {PLAYER}{KUN}…\pPor favor, vigila a mi {RIVAL}.\n… … … … … …\pBueno, mejor me voy yendo.\n¡Nos vemos, {PLAYER}{KUN}!$"
+	.string "PROF. BIRCH: {PLAYER}{KUN}...\pPor favor, vigila a mi {RIVAL}.\n... ... ... ... ... ...\pBueno, mejor me voy yendo.\n¡Nos vemos, {PLAYER}{KUN}!$"
 

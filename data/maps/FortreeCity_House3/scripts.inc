@@ -23,7 +23,7 @@ FortreeCity_House3_Text_MetStevenHadAmazingPokemon:
 
 FortreeCity_House3_Text_OhYouHavePokedex:
 	.string "¿Qué es eso que tienes ahí?\p"
-	.string "… … … … … …\p"
+	.string "... ... ... ... ... ...\p"
 	.string "Ah, ¿se llama POKéDEX?\n"
 	.string "¡Es realmente increíble!$"
 

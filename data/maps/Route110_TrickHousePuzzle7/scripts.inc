@@ -318,7 +318,7 @@ Route110_TrickHousePuzzle7_Text_WroteSecretCodeLockOpened::
 	.string "{PLAYER} anotó el código secreto\n"
 	.string "en la puerta.\p"
 	.string "“TRICK MASTER es abrazable.”\n"
-	.string "… … … … … … … …\p"
+	.string "... ... ... ... ... ... ... ...\p"
 	.string "¡La cerradura se abrió!$"
 
 Route110_TrickHousePuzzle7_Text_JoshuaIntro:
@@ -372,7 +372,7 @@ Route110_TrickHousePuzzle7_Text_AlvaroIntro:
 	.string "¡Te vi venir de cerca!$"
 
 Route110_TrickHousePuzzle7_Text_AlvaroDefeat:
-	.string "No vi venir este final…$"
+	.string "No vi venir este final...$"
 
 Route110_TrickHousePuzzle7_Text_AlvaroPostBattle:
 	.string "Bueno, igual, ambos elegimos un lugar\n"
@@ -381,12 +381,12 @@ Route110_TrickHousePuzzle7_Text_AlvaroPostBattle:
 	.string "¡demos lo mejor de nosotros!$"
 
 Route110_TrickHousePuzzle7_Text_EverettIntro:
-	.string "Qué estrecho está aquí…$"
+	.string "Qué estrecho está aquí...$"
 
 Route110_TrickHousePuzzle7_Text_EverettDefeat:
 	.string "Oh, sí, eres fuerte.$"
 
 Route110_TrickHousePuzzle7_Text_EverettPostBattle:
 	.string "Esperaba cambiar de lugar contigo\n"
-	.string "al vencerte, pero…$"
+	.string "al vencerte, pero...$"
 

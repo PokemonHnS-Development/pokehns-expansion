@@ -109,10 +109,10 @@ FallarborTown_CozmosHouse_Text_CozmoWentToMeteorFalls:
 	.string "TEAM MAGMA.$"
 
 FallarborTown_CozmosHouse_Text_FeelSorryForCozmo:
-	.string "Pobre PROF. COZMO…\n"
-	.string "Está muy triste… Me da lástima.$"
+	.string "Pobre PROF. COZMO...\n"
+	.string "Está muy triste... Me da lástima.$"
 
 FallarborTown_CozmosHouse_Text_CozmoIsSoHappy:
-	.string "Mira al PROF. COZMO…\n"
+	.string "Mira al PROF. COZMO...\n"
 	.string "¡Está muy feliz! Es tierno.$"
 

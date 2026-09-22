@@ -66,7 +66,7 @@ Text_SnorlaxWokeUp::
 
 Text_SnorlaxReturnedToMountains::
 	.string "SNORLAX calmed down.\n"
-	.string "Bostezó muy fuerte…\l"
+	.string "Bostezó muy fuerte...\l"
 	.string "Y volvió a las montañas.$"
 
 Text_WantToUsePokeFlute::
@@ -81,7 +81,7 @@ Route12_Text_NedIntro::
 
 Route12_Text_NedDefeat::
 	.string "¡Tch!\n"
-	.string "Solo uno pequeño…$"
+	.string "Solo uno pequeño...$"
 
 Route12_Text_NedPostBattle::
 	.string "¡Espera!\n"
@@ -96,7 +96,7 @@ Route12_Text_ChipDefeat::
 
 Route12_Text_ChipPostBattle::
 	.string "Con una CAÑA mejor, podría pescar\n"
-	.string "better POKéMON…$"
+	.string "better POKéMON...$"
 
 Route12_Text_JustinIntro::
 	.string "Busco una PIEDRA LUNAR.\n"
@@ -141,7 +141,7 @@ Route12_Text_ElliotIntro::
 	.string "work.$"
 
 Route12_Text_ElliotDefeat::
-	.string "No es fácil…$"
+	.string "No es fácil...$"
 
 Route12_Text_ElliotPostBattle::
 	.string "Está bien.\n"
@@ -186,7 +186,7 @@ Route12_Text_JesNotEnoughMons::
 	.string "two POKéMON of your own.$"
 
 Route12_Text_GiaIntro::
-	.string "GIA: Hey, JES…\p"
+	.string "GIA: Hey, JES...\p"
 	.string "¡Si ganamos, te casarás conmigo!$"
 
 Route12_Text_GiaDefeat::

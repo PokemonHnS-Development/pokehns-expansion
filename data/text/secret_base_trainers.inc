@@ -124,7 +124,7 @@ SecretBase_Text_Trainer7DeclineBattle:
 	.string "Qué decepción...$"
 
 SecretBase_Text_Trainer7Defeated::
-	.string "I concede…$"
+	.string "I concede...$"
 
 SecretBase_Text_Trainer7PostBattle:
 	.string "¡Todo fue en broma!\nAhora debería ir de compras.$"
@@ -142,10 +142,10 @@ SecretBase_Text_Trainer3AcceptBattle:
 	.string "I'm not going down easily!$"
 
 SecretBase_Text_Trainer3DeclineBattle:
-	.string "Oh… ¿Quizá estás cansado de buscar\neste lugar?$"
+	.string "Oh... ¿Quizá estás cansado de buscar\neste lugar?$"
 
 SecretBase_Text_Trainer3Defeated::
-	.string "I went down…$"
+	.string "I went down...$"
 
 SecretBase_Text_Trainer3PostBattle:
 	.string "¿Dónde está tu BASE SECRETA?\n"
@@ -231,7 +231,7 @@ SecretBase_Text_Trainer9DeclineBattle:
 
 SecretBase_Text_Trainer9Defeated::
 	.string "¡Tienes un talento supremo!\n"
-	.string "Tu poder parece no tener límites…$"
+	.string "Tu poder parece no tener límites...$"
 
 SecretBase_Text_Trainer9PostBattle:
 	.string "¿Qué te pareció mi estilo?\n"

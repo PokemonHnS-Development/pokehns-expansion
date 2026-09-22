@@ -333,7 +333,7 @@ Alola_Ulaula_TrainerBattleYoungster_Text_0:
 	.string "¡Seré el primero en escalar\n¡el MONTE LANIKALA!$"
 
 Alola_Ulaula_TrainerBattleYoungster_Text_1:
-	.string "No es el verdadero MT. LANIKALA…$"
+	.string "No es el verdadero MT. LANIKALA...$"
 
 Alola_Ulaula_TrainerBattleYoungster_Text_2:
 	.string "Mi papá nunca me dijo el nombre real\n"

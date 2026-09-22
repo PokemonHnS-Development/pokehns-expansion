@@ -30,13 +30,13 @@ PewterCity_Museum_2F_EventScript_MoonStone::
 	end
 
 Text_SeismicTossTeach::
-	.string "Los secretos del espacio…\n"
-	.string "Los misterios de la tierra…\p"
+	.string "Los secretos del espacio...\n"
+	.string "Los misterios de la tierra...\p"
 	.string "Hay tantas cosas que\n"
 	.string "conocemos tan poco.\p"
 	.string "Pero eso debe impulsarnos a estudiar\n"
 	.string "más, no a tirar la toalla.\p"
-	.string "Lo único que deberías tirar…\p"
+	.string "Lo único que deberías tirar...\p"
 	.string "Well, how about SEISMIC TOSS?\n"
 	.string "Should I teach that to a POKéMON?$"
 

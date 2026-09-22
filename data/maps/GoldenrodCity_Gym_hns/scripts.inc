@@ -139,10 +139,10 @@ GoldenrodCity_Gym_Text_WhitneyShouldntBeSoSerious:
 GoldenrodCity_Gym_Text_WhitneyYouMeanie:
     .string "¡Buaaaaa!\p"
     .string "¡Buaaaaa!\p"
-    .string "…Snif, hic… ¡Eres malo!$"
+    .string "...Snif, hic... ¡Eres malo!$"
 
 GoldenrodCity_Gym_Text_WhitneyWhatDoYouWant:
-    .string "…Snif…\p"
+    .string "...Snif...\p"
     .string "¿Qué? ¿Qué quieres? ¿UNA MEDALLA?\p"
     .string "Ah, cierto. Lo olvidé. Ten,\n"
     .string "MEDALLA LLANA.$"
@@ -176,7 +176,7 @@ GoldenrodCity_Gym_Text_WhitneyRematch:
 GoldenrodCity_Gym_Text_WhitneyRematchDefeat:
     .string "¡Buaaaaa!\p"
     .string "¡Buaaaaa!\p"
-    .string "…Snif, hic… ¡Eres malo!$"
+    .string "...Snif, hic... ¡Eres malo!$"
 
 GoldenrodCity_Gym_Text_LassCarrieSeen:
     .string "Que la linda apariencia de mis\n"
@@ -184,7 +184,7 @@ GoldenrodCity_Gym_Text_LassCarrieSeen:
     .string "¡Pueden azotarte!$"
 
 GoldenrodCity_Gym_Text_LassCarrieBeaten:
-    .string "Vaya… creía que eras débil…$"
+    .string "Vaya... creía que eras débil...$"
 
 GoldenrodCity_Gym_Text_LassCarrieAfter:
     .string "Do my POKéMON think I'm cute?$"
@@ -228,7 +228,7 @@ GoldenrodCity_Gym_Text_BeautySamanthaBeaten:
 
 GoldenrodCity_Gym_Text_BeautySamanthaAfter:
     .string "Le enseñé a MEOWTH movimientos para\n"
-    .string "cualquier tipo…$"
+    .string "cualquier tipo...$"
 
 GoldenrodCity_Gym_Text_GymGuide:
     .string "¡Ey! ¡Futuro CAMPEÓN!\p"

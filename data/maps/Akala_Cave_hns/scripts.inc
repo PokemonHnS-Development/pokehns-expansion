@@ -115,7 +115,7 @@ Alola_AkalaCave_TrainerBattleHiker_Text_2:
 	.string "Tuve que dejar de subir porque hacía\n"
 	.string "demasiado calor.\p"
 	.string "Parece que alguien encendió un fuego\n"
-	.string "allá en la cima…$"
+	.string "allá en la cima...$"
 
 Alola_AkalaCave_TrainerBattlePicnicker_Text_0:
 	.string "Estoy cansado de tanto caminar,\n¡Tengamos una batalla!$"

@@ -195,16 +195,16 @@ gOakSpeech_Text_WelcomeToTheWorld::
 	.string "el PROFESOR POKéMON.\p$"
 
 gOakSpeech_Text_ThisWorld::
-	.string "Este mundo…$"
+	.string "Este mundo...$"
 
 gOakSpeech_Text_IsInhabitedFarAndWide::
-	.string "…está habitado por todas partes\n"
+	.string "...está habitado por todas partes\n"
 	.string "por criaturas llamadas POKéMON.\p$"
 
 gOakSpeech_Text_IStudyPokemon::
 	.string "Para algunos, son mascotas.\n"
 	.string "Otros los usan para combatir.\p"
-	.string "En cuanto a mí…\p"
+	.string "En cuanto a mí...\p"
 	.string "estudio POKéMON por profesión.\p$"
 
 gOakSpeech_Text_TellMeALittleAboutYourself::

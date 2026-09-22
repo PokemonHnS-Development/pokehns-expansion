@@ -101,7 +101,7 @@ PewterCity_Gym_Text_BrockDefeat::
 	.string "Te tuve por sentado, y por eso\n"
 	.string "Perdí.\p"
 	.string "Como prueba de tu victoria, te doy\n"
-	.string "on you this…the official POKéMON\l"
+	.string "on you this...the official POKéMON\l"
 	.string "LEAGUE MEDALLA ROCA.\p"
 	.string "{FONT_NORMAL}{PLAYER} recibió la MEDALLA ROCA\n"
 	.string "de BROCK!{PAUSE_MUSIC}{PLAY_BGM}{MUS_OBTAIN_BADGE}{PAUSE 0xFE}{PAUSE 0x56}{RESUME_MUSIC}\p"
@@ -128,7 +128,7 @@ PewterCity_Gym_Text_ExplainTM39::
 	.string "Una MT solo puede usarse una vez.\p"
 	.string "Así que, al usar una, elige la\n"
 	.string "POKéMON carefully.\p"
-	.string "Anyways…\n"
+	.string "Anyways...\n"
 	.string "TM39 contains ROCK TOMB.\p"
 	.string "Lanza rocas al rival y puede\n"
 	.string "lowers its SPEED.$"
@@ -152,12 +152,12 @@ PewterCity_Gym_Text_LiamIntro::
 
 PewterCity_Gym_Text_LiamDefeat::
 	.string "Darn!\p"
-	.string "Light-years isn't time…\n"
+	.string "Light-years isn't time...\n"
 	.string "¡Mide la distancia!$"
 
 PewterCity_Gym_Text_LiamPostBattle::
 	.string "Estás bien buena.\n"
-	.string "…Pero no tanto como ¡BROCK!$"
+	.string "...Pero no tanto como ¡BROCK!$"
 
 PewterCity_Gym_Text_LetMeTakeYouToTheTop::
 	.string "¡Hola!\n"

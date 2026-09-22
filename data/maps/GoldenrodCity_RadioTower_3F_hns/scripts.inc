@@ -228,7 +228,7 @@ GoldenrodCity_RadioTower_3F_Text_ScientistMarcBeaten:
 	.string "¡Tch! ¡Te subestimé!$"
 
 GoldenrodCity_RadioTower_3F_Text_ScientistMarcAfter:
-	.string "Bwahahaha…\p"
+	.string "Bwahahaha...\p"
 	.string "Puedo transmitir una señal tan fuerte\n"
 	.string "como necesite desde aquí.$"
 

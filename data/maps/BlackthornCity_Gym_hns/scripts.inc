@@ -326,10 +326,10 @@ BlackthornGym_Text_CooltrainerfFranSeenText:
     .string "¡CLAIR se enfurecería si lo hago!$"
 
 BlackthornGym_Text_CooltrainerfFranBeatenText:
-    .string "Awww… I lost…$"
+    .string "Awww... I lost...$"
 
 BlackthornGym_Text_CooltrainerfFranAfterBattleText:
-	.string "Ay, no… CLAIR se va a enfadar…$"
+	.string "Ay, no... CLAIR se va a enfadar...$"
 
 BlackthornGym_Text_CooltrainermPaulSeenText:
     .string "¿Tu primera batalla contra dragones?\p"

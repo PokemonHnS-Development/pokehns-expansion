@@ -35,21 +35,21 @@ Route3_Text_FirebreatherOtis_Seen:
 	.string "¡Ah! El clima está espléndido.$"
 
 Route3_Text_FirebreatherOtis_Beaten:
-	.string "Hay sol, pero estoy empapado…$"
+	.string "Hay sol, pero estoy empapado...$"
 
 Route3_Text_FirebreatherOtis_AfterBattle:
 	.string "Cuando llueve, es difícil lograr\n"
-	.string "la ignición…$"
+	.string "la ignición...$"
 
 Route3_Text_YoungsterWarren_Seen:
 	.string "Mmm... No sé qué hacer...$"
 
 Route3_Text_YoungsterWarren_Beaten:
-	.string "I knew I'd lose…$"
+	.string "I knew I'd lose...$"
 
 Route3_Text_YoungsterWarren_AfterBattle:
 	.string "Te veías fuerte.\p"
-	.string "Me dio miedo enfrentarte…$"
+	.string "Me dio miedo enfrentarte...$"
 
 Route3_Text_YoungsterJimmy_Seen:
 	.string "¡Puedo correr como el viento!$"
@@ -70,7 +70,7 @@ Route3_Text_FirebreatherBurt_Beaten:
 Route3_Text_FirebreatherBurt_AfterBattle:
 	.string "El mejor lanzallamas de KANTO,\n"
 	.string "ese soy yo.\p"
-	.string "Pero no el mejor entrenador…$"
+	.string "Pero no el mejor entrenador...$"
 
 Route3_Text_MtMoonSquareSign:
 	.string "PLAZA DEL MT.MOON\p"

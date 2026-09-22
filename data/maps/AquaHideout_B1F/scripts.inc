@@ -111,7 +111,7 @@ AquaHideout_B1F_Text_Grunt2Intro:
 	.string "nuestra GUARIDA, ¡venceme!$"
 
 AquaHideout_B1F_Text_Grunt2Defeat:
-	.string "No puedo ganar en absoluto…$"
+	.string "No puedo ganar en absoluto...$"
 
 AquaHideout_B1F_Text_Grunt2PostBattle:
 	.string "¿El secreto de la GUARIDA?\p"
@@ -153,7 +153,7 @@ AquaHideout_B1F_Text_Grunt7Intro:
 	.string "¿El uniforme de TEAM AQUA o MAGMA?$"
 
 AquaHideout_B1F_Text_Grunt7Defeat:
-	.string "Perdí de forma genial…$"
+	.string "Perdí de forma genial...$"
 
 AquaHideout_B1F_Text_Grunt7PostBattle:
 	.string "Con un uniforme genial, te ves bien\n"

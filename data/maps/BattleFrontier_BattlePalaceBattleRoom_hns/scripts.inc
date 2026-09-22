@@ -441,7 +441,7 @@ BattleFrontier_BattlePalaceBattleRoom_Movement_SpenserEnter_hns:
 	step_end
 
 BattleFrontier_BattlePalaceBattleRoom_Text_LetMeRestoreYourMons_hns:
-	.string "Excelente…\n"
+	.string "Excelente...\n"
 	.string "Permíteme curar tus POKéMON.$"
 
 BattleFrontier_BattlePalaceBattleRoom_Text_PreparedFor2ndOpponent_hns:
@@ -477,7 +477,7 @@ BattleFrontier_BattlePalaceBattleRoom_Text_WishToQuitChallenge_hns:
 
 BattleFrontier_BattlePalaceBattleRoom_Text_SavingData_hns:
 	.string "Guardando los datos.\n"
-	.string "Ten paciencia…$"
+	.string "Ten paciencia...$"
 
 BattleFrontier_BattlePalaceBattleRoom_Text_RecordLastMatch_hns:
 	.string "¿Quieres registrar tu último\n"
@@ -512,7 +512,7 @@ BattleFrontier_BattlePalaceBattleRoom_Text_SpenserPostSilverBattle_hns:
 	.string "¡Tráeme el objeto!$"
 
 BattleFrontier_BattlePalaceBattleRoom_Text_LetsSeeFrontierPass_hns:
-	.string "Vaya, vaya, ojalá mantuvieras esa\nfachada de autoridad\ndistinguida…\p¡Toma!\n¡Enseña tu FRONTIER PASS!$"
+	.string "Vaya, vaya, ojalá mantuvieras esa\nfachada de autoridad\ndistinguida...\p¡Toma!\n¡Enseña tu FRONTIER PASS!$"
 
 BattleFrontier_BattlePalaceBattleRoom_Text_ReceivedSpiritsSymbol_hns:
 	.string "El Símbolo Espíritu estaba grabado\n"
@@ -536,7 +536,7 @@ BattleFrontier_BattlePalaceBattleRoom_Text_SpenserThisTimeWontHoldBack_hns:
 	.string "¡Prepárate para perder!$"
 
 BattleFrontier_BattlePalaceBattleRoom_Text_Kaaah_hns:
-	.string "… … …Kaaah!$"
+	.string "... ... ...Kaaah!$"
 
 BattleFrontier_BattlePalaceBattleRoom_Text_SpenserYourTeamIsAdmirable_hns:
 	.string "SPENSER: ¡Vaya, qué exhibición!\n"

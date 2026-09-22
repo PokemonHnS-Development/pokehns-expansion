@@ -336,7 +336,7 @@ KurtsHouse_Text_KurtImCheckingItNow:
 	.string "Lo reviso ahora.$"
 
 KurtsHouse_Text_KurtAhHaISee:
-	.string "¡Ajá! ¡Ya veo! Así que…$"
+	.string "¡Ajá! ¡Ya veo! Así que...$"
 
 KurtsHouse_Text_KurtThisBallStartedToShake:
 	.string "¡{PLAYER}!\p"
@@ -349,11 +349,11 @@ KurtsHouse_Text_Kurt_Whatwasthat:
 	.string "¡Vamos afuera a investigar!$"
 
 KurtsHouse_Text_GranddaughterSlowpokeGone:
-	.string "Los SLOWPOKE se han ido… \n"
+	.string "Los SLOWPOKE se han ido... \n"
 	.string "¿Se los llevaron personas malas?$"
 
 KurtsHouse_Text_GranddaughterLonely:
-	.string "El abuelo se fue… Qué soledad…$"
+	.string "El abuelo se fue... Qué soledad...$"
 
 KurtsHouse_Text_GranddaughterSlowpokeBack:
 	.string "¡Volvió el SLOWPOKE que me dio papá!\p"
@@ -382,10 +382,10 @@ KurtsHouse_Text_Forest:
 	.string "Suena muy inquieto.$"
 
 KurtsHouse_Text_Slowpoke:
-	.string "SLOWPOKE: … Yawn?$"
+	.string "SLOWPOKE: ... Yawn?$"
 
 KurtsHouse_Text_OakPhoto:
-	.string "…A young PROF. OAK?$"
+	.string "...A young PROF. OAK?$"
 
 KurtsHouse_Text_CelebiStatue:
 	.string "Es una estatua del protector\n"

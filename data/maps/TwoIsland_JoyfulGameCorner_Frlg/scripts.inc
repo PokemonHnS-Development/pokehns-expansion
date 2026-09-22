@@ -192,7 +192,7 @@ TwoIsland_JoyfulGameCorner_Text_WhereHasLostelleGottenTo::
 	.string "LOSTELLE?\n"
 	.string "today?\p"
 	.string "Siempre me trae el almuerzo\n"
-	.string "day right about now…$"
+	.string "day right about now...$"
 
 TwoIsland_JoyfulGameCorner_Text_PleaseHelpFindLostelle::
 	.string "¿Eh? ¡Tú, ahí!\n"
@@ -201,7 +201,7 @@ TwoIsland_JoyfulGameCorner_Text_PleaseHelpFindLostelle::
 	.string "No sé dónde puede estar.\l"
 	.string "Debió llegar hace mucho.\p"
 	.string "LOSTELLE es una linda chica, me\n"
-	.string "encanta. ¿Y si alguien…\p"
+	.string "encanta. ¿Y si alguien...\p"
 	.string "¿Y si algo le pasó a mi\n"
 	.string "LOSTELLE?!\p"
 	.string "¡Por favor, ayúdenme a\n"
@@ -210,7 +210,7 @@ TwoIsland_JoyfulGameCorner_Text_PleaseHelpFindLostelle::
 TwoIsland_JoyfulGameCorner_Text_IsThisOnlyThreeIsland::
 	.string "Eh? ¿Qué es este CASINO?\n"
 	.string "¿Qué tan triste puede ser esto?\p"
-	.string "Those clowns…\p"
+	.string "Those clowns...\p"
 	.string "Dijeron que esperarían en la\n"
 	.string "isla, ¿dónde están?\p"
 	.string "¡Oye, tú! ¿Es esta la única\n"
@@ -224,10 +224,10 @@ TwoIsland_JoyfulGameCorner_Text_ThisIsTwoIslandMoveIt::
 	.string "de mi local.$"
 
 TwoIsland_JoyfulGameCorner_Text_TheseIslandsAreConfusing::
-	.string "Huh…\n"
+	.string "Huh...\n"
 	.string "Oh, oh, gotcha.\p"
-	.string "Tch…\n"
-	.string "Estas islas son confusas…$"
+	.string "Tch...\n"
+	.string "Estas islas son confusas...$"
 
 TwoIsland_JoyfulGameCorner_Text_PunkScuffedUpMyFloor::
 	.string "¿Puedes creerlo?\n"
@@ -237,7 +237,7 @@ TwoIsland_JoyfulGameCorner_Text_PleaseGoToThreeIsland::
 	.string "¡Oye, pero escucha! Te lo ruego,\n"
 	.string "tienes que ir a la ISLA TRES.\p"
 	.string "Si algo le llegara a pasar a mi\n"
-	.string "LOSTELLE…\p"
+	.string "LOSTELLE...\p"
 	.string "Mi casa es la del techo rojo en\n"
 	.string "la ISLA TRES.\p"
 	.string "Puede que llegue tarde aquí,\n"
@@ -288,7 +288,7 @@ TwoIsland_JoyfulGameCorner_Text_ReceivedMoonStoneFromLostellesDaddy::
 
 TwoIsland_JoyfulGameCorner_Text_NotGoingToFitInBag::
 	.string "Tu MOCHILA no tiene espacio\n"
-	.string "thing…$"
+	.string "thing...$"
 
 TwoIsland_JoyfulGameCorner_Text_IllGetGameCornerRunning::
 	.string "Está bien, iré a la SALA DE\n"

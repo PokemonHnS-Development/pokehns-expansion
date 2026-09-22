@@ -26,11 +26,11 @@ MagmaHideout_1F_Text_Grunt1Intro:
 MagmaHideout_1F_Text_Grunt1Defeat:
 	.string "¡También llego tarde a los\n"
 	.string "entrenamientos!\p"
-	.string "Odio admitirlo, pero soy un miedoso…$"
+	.string "Odio admitirlo, pero soy un miedoso...$"
 
 MagmaHideout_1F_Text_Grunt1PostBattle:
 	.string "Está bien, me esforzaré un poco\n"
-	.string "más de ahora en adelante…$"
+	.string "más de ahora en adelante...$"
 
 MagmaHideout_1F_Text_Grunt2Intro:
 	.string "Nuestro líder nos dijo que caváramos\n"

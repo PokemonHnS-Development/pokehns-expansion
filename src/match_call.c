@@ -1450,7 +1450,7 @@ static const u16 sPokenavIcon_Pal[] = INCBIN_U16("graphics/pokenav/match_call/na
 static const u32 sPokenavIcon_Gfx[] = INCBIN_U32("graphics/pokenav/match_call/nav_icon.4bpp.smol");
 #endif
 
-static const u8 sText_PokenavCallEllipsis[] = _("………………\p");
+static const u8 sText_PokenavCallEllipsis[] = _("..................\p");
 
 #define tState      data[0]
 #define tWindowId   data[2]

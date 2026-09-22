@@ -103,7 +103,7 @@ Route13_Text_SheilaDefeat::
 Route13_Text_SheilaPostBattle::
 	.string "I don't know anything about\n"
 	.string "POKéMON actually.\p"
-	.string "Los que uso… los elegí\n"
+	.string "Los que uso... los elegí\n"
 	.string "por su apariencia!$"
 
 Route13_Text_JaredIntro::
@@ -125,7 +125,7 @@ Route13_Text_RobertDefeat::
 
 Route13_Text_RobertPostBattle::
 	.string "Ojalá pudiera volar como PIDGEY y\n"
-	.string "PIDGEOTTO…$"
+	.string "PIDGEOTTO...$"
 
 Route13_Text_LookToLeftOfThatPost::
 	.string "CONSEJOS DE ENTRENADOR\p"

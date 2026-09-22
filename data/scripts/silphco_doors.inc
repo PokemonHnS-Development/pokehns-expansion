@@ -552,4 +552,4 @@ Text_ItNeedsCardKey::
 	.string "¡Necesita una CARD KEY!$"
 
 Text_TheDoorIsOpen::
-	.string "La puerta está abierta…$"
+	.string "La puerta está abierta...$"

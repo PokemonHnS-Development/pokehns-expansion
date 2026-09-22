@@ -58,7 +58,7 @@ Route8_Text_LeslieDefeat::
 
 Route8_Text_LesliePostBattle::
 	.string "Planeaba salir a tomar un\n"
-	.string "poco de aire fresco, pero…\p"
+	.string "poco de aire fresco, pero...\p"
 	.string "Estamos atrapados aquí por\n"
 	.string "gates at SAFFRON.$"
 
@@ -120,8 +120,8 @@ Route8_Text_EliIntro::
 	.string "¿Sabías que?$"
 
 Route8_Text_EliDefeat::
-	.string "ELI: But…\n"
-	.string "Usamos nuestro poder gemelo…$"
+	.string "ELI: But...\n"
+	.string "Usamos nuestro poder gemelo...$"
 
 Route8_Text_EliPostBattle::
 	.string "ELI: I caught my POKéMON with\n"
@@ -136,7 +136,7 @@ Route8_Text_AnneIntro::
 	.string "tu poder!$"
 
 Route8_Text_AnneDefeat::
-	.string "ANNE: Nuestro poder gemelo…$"
+	.string "ANNE: Nuestro poder gemelo...$"
 
 Route8_Text_AnnePostBattle::
 	.string "ANNE: I'm raising POKéMON with\n"

@@ -222,8 +222,8 @@ SootopolisCity_Gym_1F_Text_JuanDefeat:
 	.string "con WALLACE, te falta elegancia.\p"
 	.string "Tal vez debería darte un préstamo\n"
 	.string "¿de mi ropa?\p"
-	.string "… … … … … …\n"
-	.string "… … … … … …\p"
+	.string "... ... ... ... ... ...\n"
+	.string "... ... ... ... ... ...\p"
 	.string "¡Jajaja, solo bromeaba!\p"
 	.string "En vez de mi ropa, te daré\n"
 	.string "¡esto, la MEDALLA LLUVIA!$"
@@ -239,10 +239,10 @@ SootopolisCity_Gym_1F_Text_ExplainRainBadgeTakeThis:
 	.string "usar la MO CASCADA para subir\l"
 	.string "paredes de agua cayendo.\p"
 	.string "Y, para que nunca olvides la\n"
-	.string "batalla que tuvimos, toma esto…$"
+	.string "batalla que tuvimos, toma esto...$"
 
 SootopolisCity_Gym_1F_Text_ExplainWaterPulse:
-	.string "La MT que te entregué\ncontiene PULSO AGUA.\pAl usarlo, a veces confunde\nal objetivo con ondas ultrasónicas.\p… … … … … …$"
+	.string "La MT que te entregué\ncontiene PULSO AGUA.\pAl usarlo, a veces confunde\nal objetivo con ondas ultrasónicas.\p... ... ... ... ... ...$"
 
 SootopolisCity_Gym_1F_Text_RegisteredJuan:
 	.string "LÍDER DE GIMNASIO JUAN registrado\n"
@@ -275,7 +275,7 @@ SootopolisCity_Gym_1F_Text_GymStatueCertified:
 
 SootopolisCity_Gym_1F_Text_JuanPreRematch:
 	.string "JUAN: Ah, este GIMNASIO volvió a su\n"
-	.string "estado habitual de serenidad…\p"
+	.string "estado habitual de serenidad...\p"
 	.string "Pero nuestro joven tifón ha vuelto\n"
 	.string "¡para ponernos a prueba otra vez!\p"
 	.string "¡Bueno, amigo, ciertamente!\p"
@@ -298,11 +298,11 @@ SootopolisCity_Gym_1F_Text_JuanPostRematch:
 
 SootopolisCity_Gym_1F_Text_JuanRematchNeedTwoMons:
 	.string "JUAN: Ah, este GIMNASIO volvió a su\n"
-	.string "estado habitual de serenidad…\p"
+	.string "estado habitual de serenidad...\p"
 	.string "Pero nuestro joven tifón ha vuelto\n"
 	.string "¡para ponernos a prueba otra vez!\p"
 	.string "¡Bueno, amigo, ciertamente!\n"
-	.string "Estaré encantado de bailar contigo…\p"
+	.string "Estaré encantado de bailar contigo...\p"
 	.string "Ah, no, no, no.\n"
 	.string "Solo tienes un POKéMON contigo.\p"
 	.string "Deseo que regreses con dos,\n"

@@ -925,7 +925,7 @@ SlateportCity_Text_EnergyGuruSellWhatYouNeed:
 
 SlateportCity_Text_OhYourPokemon:
 	.string "Oh?\n"
-	.string "Tu {STR_VAR_1}…$"
+	.string "Tu {STR_VAR_1}...$"
 
 SlateportCity_Text_PleaseGiveItThisEffortRibbon:
 	.string "¡Lo hizo estupendamente!\p"
@@ -1026,7 +1026,7 @@ SlateportCity_Text_BossIsBrilliant:
 SlateportCity_Text_WhatsNewSchemeIWonder:
 	.string "¿Cuál será el nuevo plan?\p"
 	.string "Nuestro JEFE da miedo si se enoja,\n"
-	.string "mejor no arruinar las cosas…$"
+	.string "mejor no arruinar las cosas...$"
 
 SlateportCity_Text_ShouldTakeItAll:
 	.string "Si hay algo que necesitemos en\n"
@@ -1039,7 +1039,7 @@ SlateportCity_Text_DontButtIn:
 SlateportCity_Text_RemindsMeOfLongLineForGames:
 	.string "Una fila larga, ¿eh?\p"
 	.string "Me recuerda a cuando hacía fila\n"
-	.string "para comprar juegos famosos…$"
+	.string "para comprar juegos famosos...$"
 
 SlateportCity_Text_WhyAreWeLiningUp:
 	.string "¿Por qué hacemos fila y pagamos?\n"
@@ -1143,7 +1143,7 @@ SlateportCity_Text_BigSmileForCamera:
 
 SlateportCity_Text_MostInvaluableExperience:
 	.string "GABBY: Ya veo, ya veo. Ha tenido una\n"
-	.string "experiencia invaluable…$"
+	.string "experiencia invaluable...$"
 
 SlateportCity_Text_SternMoveAheadWithExploration:
 	.string "CAPITÁN STERN: Sí, así es. Planeamos\n"
@@ -1298,14 +1298,14 @@ SlateportCity_Text_YouDroveTeamAquaAway:
 
 SlateportCity_Text_MaybeThisTrainer:
 	.string "SCOTT: Hmm...\n"
-	.string "Tal vez, solo tal vez, este TRAINER…$"
+	.string "Tal vez, solo tal vez, este TRAINER...$"
 
 SlateportCity_Text_LetsRegisterEachOther:
 	.string "SCOTT: ¡Muy bien! Creo que vamos\n"
 	.string "a ser buenos amigos.\p"
 	.string "Así que registrémonos mutuamente en\n"
 	.string "nuestros POKéNAVS.\p"
-	.string "… … … … … …$"
+	.string "... ... ... ... ... ...$"
 
 SlateportCity_Text_RegisteredScott:
 	.string "Registraste a SCOTT\n"

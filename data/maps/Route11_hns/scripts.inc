@@ -61,23 +61,23 @@ Route11_Text_YoungsterJasonAfterBattle:
 	.string "caminar por la hierba.$"
 
 Route11_Text_PsychicHermanSeen:
-	.string "…$"
+	.string "...$"
 
 Route11_Text_PsychicHermanBeaten:
-	.string "…$"
+	.string "...$"
 
 Route11_Text_PsychicHermanAfterBattle:
-	.string "…\p"
-	.string "Perdí mientras cerraba los ojos…$"
+	.string "...\p"
+	.string "Perdí mientras cerraba los ojos...$"
 
 Route11_Text_PsychicFidelSeen:
-	.string "Puedo verlo…\pTodo lo que hay que ver de ti…$"
+	.string "Puedo verlo...\pTodo lo que hay que ver de ti...$"
 
 Route11_Text_PsychicFidelBeaten:
-	.string "No pude prever tu poder…$"
+	.string "No pude prever tu poder...$"
 
 Route11_Text_PsychicFidelAfterBattle:
-	.string "Fuerza en la convicción…\p"
+	.string "Fuerza en la convicción...\p"
 	.string "Eres fuerte porque crees\n"
 	.string "en tus POKéMON.$"
 

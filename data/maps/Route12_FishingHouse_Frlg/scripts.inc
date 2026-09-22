@@ -126,8 +126,8 @@ Route12_FishingHouse_Text_IfYouCatchBigMagikarpShowMe::
 	.string "love seeing gigantic MAGIKARP.$"
 
 Route12_FishingHouse_Text_OhThatsDisappointing::
-	.string "Oh…\n"
-	.string "Qué decepción…$"
+	.string "Oh...\n"
+	.string "Qué decepción...$"
 
 Route12_FishingHouse_Text_TryFishingBringMeMagikarp::
 	.string "¡Hola, {PLAYER}!\n"
@@ -145,7 +145,7 @@ Route12_FishingHouse_Text_OhMagikarpAllowMeToSee::
 	.string "¡Déjame verlo, rápido!$"
 
 Route12_FishingHouse_Text_WhoaXInchesTakeThis::
-	.string "… … …Whoa!\n"
+	.string "... ... ...Whoa!\n"
 	.string "{STR_VAR_2} inches!\p"
 	.string "Tienes un aprecio poco común\n"
 	.string "por lo poético de la pesca!\p"
@@ -163,13 +163,13 @@ Route12_FishingHouse_Text_HuhXInchesSameSizeAsLast::
 	.string "I saw before.$"
 
 Route12_FishingHouse_Text_HmmXInchesDoesntMeasureUp::
-	.string "Hmm…\n"
+	.string "Hmm...\n"
 	.string "Este mide {STR_VAR_2} pulgadas.\p"
 	.string "No llega a medir lo\n"
 	.string "{STR_VAR_3}-inch one you brought before.$"
 
 Route12_FishingHouse_Text_DoesntLookLikeMagikarp::
-	.string "Eh… Eso no parece muy\n"
+	.string "Eh... Eso no parece muy\n"
 	.string "un MAGIKARP.$"
 
 Route12_FishingHouse_Text_NoRoomForGift::
@@ -179,7 +179,7 @@ Route12_FishingHouse_Text_NoRoomForGift::
 
 Route12_FishingHouse_Text_MostGiganticMagikarpXInches::
 	.string "El MAGIKARP más gigantesco\n"
-	.string "que he visto jamás…\p"
+	.string "que he visto jamás...\p"
 	.string "{STR_VAR_3} inches!$"
 
 Route12_FishingHouse_Text_BlankChartOfSomeSort::

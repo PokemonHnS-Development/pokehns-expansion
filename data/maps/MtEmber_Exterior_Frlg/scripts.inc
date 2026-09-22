@@ -141,7 +141,7 @@ Text_ExplosionWhichMon::
 
 Text_ExplosionTaught::
 	.string "Using EXPLOSION while on this\n"
-	.string "volcano…\p"
+	.string "volcano...\p"
 	.string "What a terrifying thrill!$"
 
 MtEmber_Exterior_Text_WellTryDiggingHere::
@@ -151,7 +151,7 @@ MtEmber_Exterior_Text_WellTryDiggingHere::
 	.string "talking about should be here.$"
 
 MtEmber_Exterior_Text_YoureInTheWayGetLost::
-	.string "What the…?\n"
+	.string "What the...?\n"
 	.string "You're in the way. Get lost.$"
 
 MtEmber_Exterior_Text_PunchedThroughAtLast::
@@ -161,7 +161,7 @@ MtEmber_Exterior_Text_PunchedThroughAtLast::
 MtEmber_Exterior_Text_WhatsPasswordAgain::
 	.string "Any treasure we find, we haul back\n"
 	.string "to the WAREHOUSE, understood?\p"
-	.string "…Oh, and what're the passwords?\n"
+	.string "...Oh, and what're the passwords?\n"
 	.string "At the ROCKET WAREHOUSE, I mean.$"
 
 MtEmber_Exterior_Text_FirstPasswordGoldeen::
@@ -169,7 +169,7 @@ MtEmber_Exterior_Text_FirstPasswordGoldeen::
 	.string "There're actually two.\p"
 	.string "The first one's “GOLDEEN need\n"
 	.string "log.”\p"
-	.string "And the second one is…$"
+	.string "And the second one is...$"
 
 MtEmber_Exterior_Text_SnoopsBeenListeningIn::
 	.string "¡Hola!\n"
@@ -198,7 +198,7 @@ MtEmber_Exterior_Text_Grunt2PostBattle::
 	.string "forget everything you heard!$"
 
 MtEmber_Exterior_Text_WellRegroupDontStepInsideThere::
-	.string "What a setback…\n"
+	.string "What a setback...\n"
 	.string "We'll have to regroup.\p"
 	.string "You! Don't even think about taking\n"
 	.string "a step inside here!\p"
@@ -210,7 +210,7 @@ MtEmber_Exterior_Text_LoganIntro::
 	.string "erupting, or about to.$"
 
 MtEmber_Exterior_Text_LoganDefeat::
-	.string "Whew… That was hot!\n"
+	.string "Whew... That was hot!\n"
 	.string "Sweat's erupting from me!$"
 
 MtEmber_Exterior_Text_LoganPostBattle::
@@ -234,14 +234,14 @@ MtEmber_Exterior_Text_BethPostBattle::
 
 MtEmber_Exterior_Text_JocelynIntro::
 	.string "I've been in training so I can mend\n"
-	.string "my broken heart…\p"
+	.string "my broken heart...\p"
 	.string "It toughened me up physically at\n"
 	.string "least! Hi-yah!$"
 
 MtEmber_Exterior_Text_JocelynDefeat::
-	.string "I think I tried to overdo it…$"
+	.string "I think I tried to overdo it...$"
 
 MtEmber_Exterior_Text_JocelynPostBattle::
 	.string "The way you battle, it reminds me\n"
-	.string "of the guy who dumped me…$"
+	.string "of the guy who dumped me...$"
 

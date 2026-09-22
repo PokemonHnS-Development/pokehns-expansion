@@ -187,7 +187,7 @@ MtMoon_B2F_Text_Grunt3Intro::
 	.string "¡Lárgate, niño!$"
 
 MtMoon_B2F_Text_Grunt3Defeat::
-	.string "Vaya, eres muy hábil…$"
+	.string "Vaya, eres muy hábil...$"
 
 MtMoon_B2F_Text_Grunt3PostBattle::
 	.string "Si encuentras un fósil, dámelo\n"

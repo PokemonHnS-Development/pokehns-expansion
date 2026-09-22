@@ -10,7 +10,7 @@ SixIsland_GreenPath_EventScript_LeftRouteSign::
 	end
 
 SixIsland_GreenPath_Text_JaclynIntro::
-	.string "…¿Eh?\p"
+	.string "...¿Eh?\p"
 	.string "Me imaginaba mi casa, pero\n"
 	.string "¿aquí es donde TELETRANSPORTO?$"
 

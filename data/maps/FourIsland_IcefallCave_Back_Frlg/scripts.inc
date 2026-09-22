@@ -242,7 +242,7 @@ FourIsland_IcefallCave_Back_Text_LoreleiWellDeepFreezeYou::
 	.string "Mi LAPRAS está furioso por lo\n"
 	.string "que les hiciste a sus amigos.\p"
 	.string "¡Vamos, LAPRAS!\n"
-	.string "ICE BEAM…$"
+	.string "ICE BEAM...$"
 
 FourIsland_IcefallCave_Back_Text_OkayRocketWareHouseFiveIsland::
 	.string "Wawaah! Okay!\n"
@@ -251,7 +251,7 @@ FourIsland_IcefallCave_Back_Text_OkayRocketWareHouseFiveIsland::
 	.string "ALMACÉN en la ISLA CINCO.\p"
 	.string "¡Ahí lo dije!\n"
 	.string "Ya nos vamos!\p"
-	.string "…Pero dudo que lo logres\n"
+	.string "...Pero dudo que lo logres\n"
 	.string "¡al ALMACÉN COHETE!\p"
 	.string "Heheheheh!$"
 
@@ -261,5 +261,5 @@ FourIsland_IcefallCave_Back_Text_ThankYouThisIsAwful::
 	.string "Nací y crecí aquí en\n"
 	.string "these islands.\p"
 	.string "No tenía idea de que esos\n"
-	.string "criminals were loose here…$"
+	.string "criminals were loose here...$"
 

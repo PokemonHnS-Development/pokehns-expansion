@@ -204,13 +204,13 @@ DragonsDen_Shrine_Text_Question5:
     .string "¿Cuál es más importante?$"
 
 DragonsDen_Shrine_Text_WrongAnswer1:
-    .string "¿Eh? No te escuché bien…$"
+    .string "¿Eh? No te escuché bien...$"
 
 DragonsDen_Shrine_Text_WrongAnswer2:
     .string "¿Qué fue lo que dijiste?$"
 
 DragonsDen_Shrine_Text_RightAnswer:
-    .string "Oh, I understand…$"
+    .string "Oh, I understand...$"
 
 DragonsDen_Shrine_Text_PassedTest:
     .string "Hm... ya veo...\p"
@@ -358,10 +358,10 @@ DragonsDen_Shrine_Text_MustIInformLance:
     .string "¿O debo informarle a LANCE?$"
 
 DragonsDen_Shrine_Text_IUnderstand:
-    .string "I-I understand…$"
+    .string "I-I understand...$"
 
 DragonsDen_Shrine_Text_HereRisingBadge:
-    .string "Toma, es la INSIGNIA ASCENDENTE…\p"
+    .string "Toma, es la INSIGNIA ASCENDENTE...\p"
     .string "¡Date prisa! ¡Tómala!$"
 
 DragonsDen_Shrine_Text_PlayerReceivedRisingBadge:
@@ -376,7 +376,7 @@ DragonsDen_Shrine_Text_RisingBadgeExplanation:
     .string "órdenes sin cuestionar nada.$"
 
 DragonsDen_Shrine_Text_ElderScoldsClair:
-    .string "CLAIR…\p"
+    .string "CLAIR...\p"
     .string "Reflexiona sobre lo que tú no\n"
     .string "tienes y este niño sí tiene.$"
 
@@ -390,7 +390,7 @@ DragonsDen_Shrine_Text_SilverIsInTraining:
     .string "Un chico de tu edad está\n"
     .string "entrenando aquí.\p"
     .string "Es muy parecido a CLAIR cuando era\n"
-    .string "más joven. Es algo preocupante…$"
+    .string "más joven. Es algo preocupante...$"
 
 DragonsDen_Shrine_EventScript_Elder2::
 	msgbox DragonsDen_Shrine_Text_Elder2, MSGBOX_NPC

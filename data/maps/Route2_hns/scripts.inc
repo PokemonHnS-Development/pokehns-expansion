@@ -42,7 +42,7 @@ Route2_Text_BugCatcherRob_Seen:
 	.string "para perder!$"
 
 Route2_Text_BugCatcherRob_Beaten:
-	.string "Fui derrotado…$"
+	.string "Fui derrotado...$"
 
 Route2_Text_BugCatcherRob_AfterBattle:
 	.string "Buscaré bichos más fuertes\n"

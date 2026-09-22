@@ -54,7 +54,7 @@ FuchsiaCity_House3_EventScript_CancelForgetMove::
 	end
 
 FuchsiaCity_House3_Text_WouldYouLikeToForgetMove::
-	.string "Uh…\n"
+	.string "Uh...\n"
 	.string "Oh, sí, soy el BORRADOR DE MOVS.\p"
 	.string "I can make POKéMON forget their\n"
 	.string "tipo NORMAl.\p"
@@ -69,7 +69,7 @@ FuchsiaCity_House3_Text_WhichMoveShouldBeForgotten::
 
 FuchsiaCity_House3_Text_MonOnlyKnowsOneMove::
 	.string "{STR_VAR_1} parece conocer solo\n"
-	.string "move…$"
+	.string "move...$"
 
 FuchsiaCity_House3_Text_MonsMoveShouldBeForgotten::
 	.string "¡Hm! ¿{STR_VAR_2} de {STR_VAR_1}?\n"

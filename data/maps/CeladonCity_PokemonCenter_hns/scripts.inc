@@ -48,7 +48,7 @@ Celadon_Text_NoBeasts:
 	.string "Ah, por cierto, {PLAYER}.\p"
 	.string "¿Ya atrapaste a los legendarios\n"
 	.string "POKéMON RAIKOU y ENTEI?\p"
-	.string "<……><……><……>\p"
+	.string "<......><......><......>\p"
 	.string "Está bien...\p"
 	.string "Si atrapas aunque sea a uno,\n"
 	.string "espero que me avises.\p"

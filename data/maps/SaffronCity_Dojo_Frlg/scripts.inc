@@ -240,7 +240,7 @@ SaffronCity_Dojo_Text_ReceivedMonFromKarateMaster2::
 	.string "{STR_VAR_1}を　もらった！$"
 
 SaffronCity_Dojo_Text_BetterNotGetGreedy::
-	.string "Mejor no ser avaricioso…$"
+	.string "Mejor no ser avaricioso...$"
 
 SaffronCity_Dojo_Text_EnemiesOnEverySide::
 	.string "¡Enemigos por todos lados!$"

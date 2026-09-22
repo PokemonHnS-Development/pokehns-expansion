@@ -201,7 +201,7 @@ Route44_Text_PsychicPhilSeen:
     .string "¡Voy a ganar, seguro!$"
 
 Route44_Text_PsychicPhilBeaten:
-    .string "Ugh… Qué derrota tan dura…$"
+    .string "Ugh... Qué derrota tan dura...$"
 
 Route44_Text_PsychicPhilAfter:
     .string "Es importante tener convicción\n"

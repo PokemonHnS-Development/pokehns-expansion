@@ -34,9 +34,9 @@ SSAnne_1F_Room6_Text_GladEveryoneIsRefreshed::
 
 SSAnne_1F_Room6_Text_SorryYouLookLikeMyBrother::
 	.string "Perdón por preocuparme tanto.\n"
-	.string "Te pareces a mi hermanito…$"
+	.string "Te pareces a mi hermanito...$"
 
 SSAnne_1F_Room6_Text_SorryYouLookLikeMySister::
 	.string "Perdón por preocuparme tanto.\n"
-	.string "Pareces mi hermana menor…$"
+	.string "Pareces mi hermana menor...$"
 

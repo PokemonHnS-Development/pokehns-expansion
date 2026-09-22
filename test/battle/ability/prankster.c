@@ -23,7 +23,7 @@ SINGLE_BATTLE_TEST("Prankster-affected moves don't affect Dark-type Pokémon (Ge
             ANIMATION(ANIM_TYPE_MOVE, MOVE_CONFUSE_RAY, opponent);
         } else {
             NOT ANIMATION(ANIM_TYPE_MOVE, MOVE_CONFUSE_RAY, opponent);
-            MESSAGE("It doesn't affect Umbreon…");
+            MESSAGE("It doesn't affect Umbreon...");
         }
     }
 }
@@ -39,7 +39,7 @@ SINGLE_BATTLE_TEST("Prankster-affected moves don't affect Dark-type Pokémon aft
         TURN { SWITCH(player, 1); MOVE(opponent, MOVE_CONFUSE_RAY); }
     } SCENE {
         NOT ANIMATION(ANIM_TYPE_MOVE, MOVE_CONFUSE_RAY, opponent);
-        MESSAGE("It doesn't affect Umbreon…");
+        MESSAGE("It doesn't affect Umbreon...");
     }
 }
 
@@ -54,7 +54,7 @@ DOUBLE_BATTLE_TEST("Prankster-affected moves affect Ally Dark-type Pokémon")
         TURN { MOVE(playerLeft, MOVE_CONFUSE_RAY, target: playerRight); }
     } SCENE {
         ANIMATION(ANIM_TYPE_MOVE, MOVE_CONFUSE_RAY, playerLeft);
-        NOT MESSAGE("It doesn't affect Umbreon…");
+        NOT MESSAGE("It doesn't affect Umbreon...");
     }
 }
 
@@ -75,7 +75,7 @@ SINGLE_BATTLE_TEST("Prankster-affected moves called via Assist don't affect Dark
             ANIMATION(ANIM_TYPE_MOVE, MOVE_CONFUSE_RAY, opponent);
         } else {
             NOT ANIMATION(ANIM_TYPE_MOVE, MOVE_CONFUSE_RAY, opponent);
-            MESSAGE("It doesn't affect Umbreon…");
+            MESSAGE("It doesn't affect Umbreon...");
         }
     }
 }
@@ -104,7 +104,7 @@ DOUBLE_BATTLE_TEST("Prankster-affected moves called via Instruct do not affect D
             ANIMATION(ANIM_TYPE_MOVE, MOVE_CONFUSE_RAY, playerLeft);
         } else {
             NOT ANIMATION(ANIM_TYPE_MOVE, MOVE_CONFUSE_RAY, playerLeft);
-            MESSAGE("It doesn't affect the opposing Umbreon…");
+            MESSAGE("It doesn't affect the opposing Umbreon...");
         }
         MESSAGE("Wobbuffet used Instruct!");
         MESSAGE("Volbeat used Confuse Ray!");
@@ -112,7 +112,7 @@ DOUBLE_BATTLE_TEST("Prankster-affected moves called via Instruct do not affect D
             ANIMATION(ANIM_TYPE_MOVE, MOVE_CONFUSE_RAY, playerLeft);
         } else {
             NOT ANIMATION(ANIM_TYPE_MOVE, MOVE_CONFUSE_RAY, playerLeft);
-            MESSAGE("It doesn't affect the opposing Umbreon…");
+            MESSAGE("It doesn't affect the opposing Umbreon...");
         }
     }
 }
@@ -215,7 +215,7 @@ SINGLE_BATTLE_TEST("Prankster-affected moves which are reflected by Magic Coat c
         MESSAGE("Sableye bounced the Confuse Ray back!");
         if (sableyeAbility == ABILITY_PRANKSTER) {
             NOT ANIMATION(ANIM_TYPE_MOVE, MOVE_CONFUSE_RAY, player);
-            MESSAGE("It doesn't affect the opposing Murkrow…");
+            MESSAGE("It doesn't affect the opposing Murkrow...");
         } else {
             ANIMATION(ANIM_TYPE_MOVE, MOVE_CONFUSE_RAY, player);
             MESSAGE("The opposing Murkrow became confused!");

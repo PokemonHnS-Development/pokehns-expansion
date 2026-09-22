@@ -235,7 +235,7 @@ SINGLE_BATTLE_TEST("(TERA) Terastallization changes type effectiveness")
         TURN { MOVE(player, MOVE_CELEBRATE, gimmick: GIMMICK_TERA); MOVE(opponent, MOVE_EARTHQUAKE); }
     } SCENE {
         MESSAGE("The opposing Wobbuffet used Earthquake!");
-        MESSAGE("It doesn't affect Wobbuffet…");
+        MESSAGE("It doesn't affect Wobbuffet...");
         NOT { HP_BAR(player); }
     }
 }
@@ -254,11 +254,11 @@ SINGLE_BATTLE_TEST("(TERA) Terastallization persists across switches")
     } SCENE {
         // turn 1
         MESSAGE("The opposing Wobbuffet used Earthquake!");
-        MESSAGE("It doesn't affect Wobbuffet…");
+        MESSAGE("It doesn't affect Wobbuffet...");
         NOT { HP_BAR(player); }
         // turn 4
         MESSAGE("The opposing Wobbuffet used Earthquake!");
-        MESSAGE("It doesn't affect Wobbuffet…");
+        MESSAGE("It doesn't affect Wobbuffet...");
         NOT { HP_BAR(player); }
     }
 }
@@ -342,7 +342,7 @@ SINGLE_BATTLE_TEST("(TERA) Reflect Type copies a Terastallized Pokemon's Tera Ty
         ANIMATION(ANIM_TYPE_MOVE, MOVE_REFLECT_TYPE, opponent);
         // turn 3
         MESSAGE("Wobbuffet used Scratch!");
-        MESSAGE("It doesn't affect the opposing Wobbuffet…");
+        MESSAGE("It doesn't affect the opposing Wobbuffet...");
         NOT { HP_BAR(opponent); }
     }
 }
@@ -358,7 +358,7 @@ SINGLE_BATTLE_TEST("(TERA) Synchronoise uses a Terastallized Pokemon's Tera Type
     } SCENE {
         // turn 1
         MESSAGE("The opposing Wobbuffet used Synchronoise!");
-        MESSAGE("It doesn't affect Wobbuffet…");
+        MESSAGE("It doesn't affect Wobbuffet...");
         // turn 2
         MESSAGE("The opposing Wobbuffet used Synchronoise!");
         ANIMATION(ANIM_TYPE_MOVE, MOVE_SYNCHRONOISE, opponent);
@@ -375,7 +375,7 @@ SINGLE_BATTLE_TEST("(TERA) Revelation Dance uses a Terastallized Pokemon's Tera 
         TURN { MOVE(player, MOVE_REVELATION_DANCE, gimmick: GIMMICK_TERA); }
     } SCENE {
         MESSAGE("Oricorio used Revelation Dance!");
-        MESSAGE("It doesn't affect the opposing Gengar…");
+        MESSAGE("It doesn't affect the opposing Gengar...");
         NOT { HP_BAR(opponent); }
     }
 }
@@ -459,7 +459,7 @@ SINGLE_BATTLE_TEST("(TERA) Reflect Type copies a Stellar-type Pokemon's base typ
         ANIMATION(ANIM_TYPE_MOVE, MOVE_REFLECT_TYPE, opponent);
         // turn 3
         MESSAGE("Banette used Scratch!");
-        MESSAGE("It doesn't affect the opposing Wobbuffet…");
+        MESSAGE("It doesn't affect the opposing Wobbuffet...");
         NOT { HP_BAR(opponent); }
     }
 }
@@ -474,7 +474,7 @@ SINGLE_BATTLE_TEST("(TERA) Revelation Dance uses a Stellar-type Pokemon's base t
         TURN { MOVE(player, MOVE_REVELATION_DANCE, gimmick: GIMMICK_TERA); }
     } SCENE {
         MESSAGE("Oricorio used Revelation Dance!");
-        MESSAGE("It doesn't affect the opposing Gumshoos…");
+        MESSAGE("It doesn't affect the opposing Gumshoos...");
         NOT { HP_BAR(opponent); }
     }
 }

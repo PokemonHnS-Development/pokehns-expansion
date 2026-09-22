@@ -68,7 +68,7 @@ gFameCheckerFlavorText_Daisy4:: @ 0x81AD608
 	.string "para comprar TÉ.$"
 
 gFameCheckerFlavorText_Daisy5:: @ 0x81AD69F
-	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Hay un rumor…\p"
+	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Hay un rumor...\p"
 	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}La Gran Campeona del\n"
 	.string "CONCURSO POKéMON de Primavera es\l"
 	.string "DAISY OAK de PUEBLO PALETA!$"
@@ -134,20 +134,20 @@ gFameCheckerFlavorText_Misty2:: @ 0x81ADB5A
 	.string "¡Ella no perderá contra ti!$"
 
 gFameCheckerFlavorText_Misty3:: @ 0x81ADBD9
-	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Hay un rumor…\p"
+	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Hay un rumor...\p"
 	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}ENTRENADORES fuertes y POKéMON\n"
 	.string "de AGUA abundan por aquí.\p"
 	.string "Dicen que MISTY, del\n"
 	.string "GIMNASIO CERULEAN, entrena aquí.$"
 
 gFameCheckerFlavorText_Misty4:: @ 0x81ADC72
-	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Hay un rumor…\p"
+	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Hay un rumor...\p"
 	.string "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Este cabo es famoso para citas.\p"
 	.string "MISTY, la LÍDER, tiene grandes\n"
 	.string "esperanzas en este lugar.$"
 
 gFameCheckerFlavorText_Misty5:: @ 0x81ADCEB
-	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Hay un rumor…\p"
+	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Hay un rumor...\p"
 	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Dicen que MISTY admira a LORELEI\n"
 	.string "del ALTO MANDO.$"
 
@@ -180,7 +180,7 @@ gFameCheckerFlavorText_LtSurge4:: @ 0x81ADEEC
 	.string "Puso doble cerradura en todo lado.$"
 
 gFameCheckerFlavorText_LtSurge5:: @ 0x81ADF6A
-	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Hay un rumor…\p"
+	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Hay un rumor...\p"
 	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Dicen que el TEN. SURGE fue\n"
 	.string "piloto cuando volvió a América.\p"
 	.string "Usó la electricidad generada\n"
@@ -217,7 +217,7 @@ gFameCheckerFlavorText_Erika4:: @ 0x81AE1E5
 	.string "no fueran atractivos.$"
 
 gFameCheckerFlavorText_Erika5:: @ 0x81AE247
-	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Hay un rumor…\p"
+	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Hay un rumor...\p"
 	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Dicen que si espías en el\n"
 	.string "GIMNASIO CELADON, a veces\l"
 	.string "puedes ver a ERIKA durmiendo.$"
@@ -247,7 +247,7 @@ gFameCheckerFlavorText_Koga3:: @ 0x81AE407
 	.string "VENENO, igual que mi padre.$"
 
 gFameCheckerFlavorText_Koga4:: @ 0x81AE48D
-	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Hay un rumor…\p"
+	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Hay un rumor...\p"
 	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Dicen que KOGA tiene un gran\n"
 	.string "conocimiento de medicina.\p"
 	.string "Incluso crea medicinas para curar\n"
@@ -288,7 +288,7 @@ gFameCheckerFlavorText_Sabrina3:: @ 0x81AE762
 	.string "¡te mostraré mis poderes!$"
 
 gFameCheckerFlavorText_Sabrina4:: @ 0x81AE7CB
-	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Hay un rumor…\p"
+	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Hay un rumor...\p"
 	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Dicen que SABRINA puede\n"
 	.string "comunicarse con sus POKéMON\l"
 	.string "en batalla sin hablar.$"
@@ -334,7 +334,7 @@ gFameCheckerFlavorText_Blaine4:: @ 0x81AEAEE
 	.string "con grandes sonrisas.$"
 
 gFameCheckerFlavorText_Blaine5:: @ 0x81AEB69
-	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Hay un rumor…\p"
+	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Hay un rumor...\p"
 	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Dicen que BLAINE se quita sus\n"
 	.string "lentes solo cuando piensa en\l"
 	.string "nuevas preguntas de trivia.$"
@@ -400,7 +400,7 @@ gFameCheckerFlavorText_Bruno3:: @ 0x81AF04C
 	.string "suyas como las de sus POKéMON.$"
 
 gFameCheckerFlavorText_Bruno4:: @ 0x81AF0F0
-	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Hay un rumor…\p"
+	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Hay un rumor...\p"
 	.string "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Es uno del ALTO MANDO.\n"
 	.string "Su nombre es BRUNO.\p"
 	.string "Se fue decepcionado cuando supo\n"
@@ -430,7 +430,7 @@ gFameCheckerFlavorText_Agatha2:: @ 0x81AF2B7
 	.string "que esa señora empiece a gritar.$"
 
 gFameCheckerFlavorText_Agatha3:: @ 0x81AF34E
-	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Hay un rumor…\p"
+	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Hay un rumor...\p"
 	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}De jóvenes, AGATHA y el PROF.\n"
 	.string "OAK eran rivales que luchaban por\l"
 	.string "ser los mejores ENTRENADORES.$"
@@ -472,7 +472,7 @@ gFameCheckerFlavorText_Lance2:: @ 0x81AF641
 	.string "¡Es el mejor, LANCE!$"
 
 gFameCheckerFlavorText_Lance3:: @ 0x81AF6BA
-	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Hay un rumor…\p"
+	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Hay un rumor...\p"
 	.string "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Tenemos un cliente, LANCE, que\n"
 	.string "viene de vez en cuando.\p"
 	.string "Siempre compra capas.\p"
@@ -524,7 +524,7 @@ gFameCheckerFlavorText_Bill4:: @ 0x81AFA20
 	.string "festiva y bulliciosa.$"
 
 gFameCheckerFlavorText_Bill5:: @ 0x81AFAB9
-	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Hay un rumor…\p"
+	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Hay un rumor...\p"
 	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Al parecer, BILL simplemente no\n"
 	.string "soporta la leche.$"
 
@@ -552,7 +552,7 @@ gFameCheckerFlavorText_MrFuji2:: @ 0x81AFC38
 	.string "Alguien ya debió aplicarlo.$"
 
 gFameCheckerFlavorText_MrFuji3:: @ 0x81AFCE9
-	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Hay un rumor…\p"
+	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Hay un rumor...\p"
 	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Oigo que el SR. FUJI tampoco es\n"
 	.string "originario de estas tierras.$"
 
@@ -581,7 +581,7 @@ gFameCheckerFlavorText_Giovanni0:: @ 0x81AFE68
 gFameCheckerFlavorText_Giovanni1:: @ 0x81AFF23
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}¿Tu tipo de POKéMON favorito?\p"
 	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Esos matones que tomaron nuestro\n"
-	.string "edificio…\p"
+	.string "edificio...\p"
 	.string "Su JEFE dijo que buscaba\n"
 	.string "POKéMON fuertes.$"
 
@@ -682,7 +682,7 @@ gFameCheckerPersonQuote_Erika:: @ 0x81B0510
 	.string "Saber eso me inspira y me\n"
 	.string "motiva a esforzarme más.\p"
 	.string "Por favor, visítame de nuevo.\n"
-	.string "Zzz…$"
+	.string "Zzz...$"
 
 gFameCheckerPersonName_Koga:: @ 0x81B05C2
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}KOGA$"
@@ -702,7 +702,7 @@ gFameCheckerPersonQuote_Sabrina:: @ 0x81B0675
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}De: SABRINA\n"
 	.string "Para: {PLAYER}\p"
 	.string "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}El amor que sientes por tus\n"
-	.string "POKéMON…\p"
+	.string "POKéMON...\p"
 	.string "POKéMON fue un poder que jamás\n"
 	.string "fue vencido por mi poder psíquico.$"
 
@@ -1470,7 +1470,7 @@ PokemonJournal_Text_SpecialFeatureProfOak::
 
 PokemonJournal_Text_SpecialFeatureDaisyOak::
 	.string "Este es un DIARIO POKéMON de hace\n"
-	.string "muchos años…\p"
+	.string "muchos años...\p"
 	.string "DIARIO POKéMON\n"
 	.string "¡Especial de CONCURSOS!\p"
 	.string "El CONCURSO POKéMON de Primavera\n"

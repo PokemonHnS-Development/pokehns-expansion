@@ -89,19 +89,19 @@ Route5_SouthEntrance_Text_ThirstyOnGuardDuty::
 	.string "Ah, espera, el camino está cerrado.$"
 
 Route5_SouthEntrance_Text_ThatTeaLooksTasty::
-	.string "Ah, ese TÉ…\n"
-	.string "Se ve delicioso…$"
+	.string "Ah, ese TÉ...\n"
+	.string "Se ve delicioso...$"
 
 Route5_SouthEntrance_Text_ThanksIllShareTeaWithGuards::
 	.string "¿Eh? ¿Puedo tomar esta bebida?\n"
 	.string "Gee, thanks!\l"
-	.string "… …\l"
-	.string "Glug, glug…\l"
-	.string "… …\l"
-	.string "Gulp…\l"
+	.string "... ...\l"
+	.string "Glug, glug...\l"
+	.string "... ...\l"
+	.string "Gulp...\l"
 	.string "Si quieres ir a AZULONA\l"
-	.string "CITY…\l"
-	.string "… …\l"
+	.string "CITY...\l"
+	.string "... ...\l"
 	.string "Puedes pasar.\p"
 	.string "Compartiré este TÉ con los demás\n"
 	.string "guards!$"

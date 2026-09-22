@@ -943,8 +943,8 @@ LittlerootTown_Text_ExplainRunningShoes:
 	.string "por todo el mundo!”$"
 
 LittlerootTown_Text_ComeHomeIfAnythingHappens:
-	.string "… … … … … … … …\n"
-	.string "… … … … … … … …\p"
+	.string "... ... ... ... ... ... ... ...\n"
+	.string "... ... ... ... ... ... ... ...\p"
 	.string "Pensar que ya tienes tu propio\n"
 	.string "POKéMON...\l"
 	.string "Tu padre estará muy feliz.\p"
@@ -960,7 +960,7 @@ LittlerootTown_Text_CanUsePCToStoreItems:
 LittlerootTown_Text_BirchSpendsDaysInLab:
 	.string "El PROF. BIRCH pasa días en su LAB\n"
 	.string "estudiando, y luego sale de repente\l"
-	.string "al campo para investigar más…\p"
+	.string "al campo para investigar más...\p"
 	.string "¿Cuándo pasa tiempo el PROF. BIRCH\n"
 	.string "en su casa?$"
 
@@ -978,7 +978,7 @@ LittlerootTown_Text_CanYouGoSeeWhatsHappening:
 	.string "¡Hay POKéMON aterradores fuera!\n"
 	.string "¡Puedo oír sus gritos!\p"
 	.string "Quiero ir a ver qué pasa,\n"
-	.string "pero no tengo POKéMON…\p"
+	.string "pero no tengo POKéMON...\p"
 	.string "¿Puedes ir a ver qué ocurre\n"
 	.string "por mí?$"
 

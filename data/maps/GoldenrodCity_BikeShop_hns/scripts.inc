@@ -79,8 +79,8 @@ GoldenrodCity_BikeShop_Text_Mainshop:
 	.string "¡Cuidado! ¡Así irás más rápido!$"
 
 GoldenrodCity_BikeShop_Text_Refused:
-    .string "…suspiro… Oh, la amabilidad de\n"
-    .string "la gente…$"
+    .string "...suspiro... Oh, la amabilidad de\n"
+    .string "la gente...$"
 
 GoldenrodCity_BikeShop_Text_JustReleasedCompact:
     .string "¡Recién lanzadas!\p"

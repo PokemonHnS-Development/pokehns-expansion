@@ -16,7 +16,7 @@ SeafloorCavern_Room4_Text_Grunt3Intro:
 	.string "¿Por dónde entraste?$"
 
 SeafloorCavern_Room4_Text_Grunt3Defeat:
-	.string "Lo perdí…$"
+	.string "Lo perdí...$"
 
 SeafloorCavern_Room4_Text_Grunt3PostBattle:
 	.string "¡No encuentro la salida!\p"

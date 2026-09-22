@@ -20,7 +20,7 @@ Melemele_House6_GameboyKid::
 
 Melemele_House6_Hiker_Text_0:
 	.string "Compré este lugar para que mi hijo\n"
-	.string "y yo exploráramos el exterior…\p"
+	.string "y yo exploráramos el exterior...\p"
 	.string "Pero él solo quiere jugar con su\n"
 	.string "Game Boy Advance.$"
 

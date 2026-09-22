@@ -45,11 +45,11 @@ Route18_EastEntrance_2F_EventScript_AlreadyTraded::
 
 Route18_EastEntrance_2F_Text_PalletTownInWest::
 	.string "Veamos qué muestran los\n"
-	.string "prismáticos…\p"
+	.string "prismáticos...\p"
 	.string "PUEBLO PALETA está al oeste.$"
 
 Route18_EastEntrance_2F_Text_PeopleSwimming::
 	.string "Veamos qué muestran los\n"
-	.string "prismáticos…\p"
+	.string "prismáticos...\p"
 	.string "Hay gente nadando.$"
 

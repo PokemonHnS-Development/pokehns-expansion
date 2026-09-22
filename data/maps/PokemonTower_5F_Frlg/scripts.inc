@@ -47,8 +47,8 @@ PokemonTower_5F_Text_RestHereInPurifiedSpace::
 	.string "Puedes descansar aquí.$"
 
 PokemonTower_5F_Text_TammyIntro::
-	.string "Dame…\n"
-	.string "todo…tuyo…$"
+	.string "Dame...\n"
+	.string "todo...tuyo...$"
 
 PokemonTower_5F_Text_TammyDefeat::
 	.string "Gasp!$"
@@ -57,8 +57,8 @@ PokemonTower_5F_Text_TammyPostBattle::
 	.string "Estaba poseído.$"
 
 PokemonTower_5F_Text_RuthIntro::
-	.string "Tú…deberás…\n"
-	.string "unirte…a…nosotros…$"
+	.string "Tú...deberás...\n"
+	.string "unirte...a...nosotros...$"
 
 PokemonTower_5F_Text_RuthDefeat::
 	.string "¡Qué pesadilla!$"
@@ -76,15 +76,15 @@ PokemonTower_5F_Text_KarinaPostBattle::
 	.string "Recuperé la razón.$"
 
 PokemonTower_5F_Text_JanaeIntro::
-	.string "Urgah…\n"
-	.string "Urff…$"
+	.string "Urgah...\n"
+	.string "Urff...$"
 
 PokemonTower_5F_Text_JanaeDefeat::
 	.string "Whoo!$"
 
 PokemonTower_5F_Text_JanaePostBattle::
 	.string "Caí ante espíritus malignos a pesar\n"
-	.string "de mi entrenamiento en la montaña…$"
+	.string "de mi entrenamiento en la montaña...$"
 
 PokemonTower_5F_Text_PurifiedZoneMonsFullyHealed::
 	.string "Entré en el lugar purificado y\nprotegido"

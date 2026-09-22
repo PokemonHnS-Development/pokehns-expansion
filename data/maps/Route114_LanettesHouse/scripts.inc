@@ -47,7 +47,7 @@ Route114_LanettesHouse_EventScript_PC::
 
 Route114_LanettesHouse_Text_EverythingClutteredKeepThis:
 	.string "LANETTE: ¡Oh! ¡{PLAYER}{KUN}!\p"
-	.string "Siento que todo esté tan desordenado…\n"
+	.string "Siento que todo esté tan desordenado...\n"
 	.string "Cuando me concentro en investigar,\l"
 	.string "las cosas terminan así...\p"
 	.string "Qué vergüenza... Por favor, guarda\n"
@@ -90,7 +90,7 @@ Route114_LanettesHouse_Text_ClosedTheNotebook:
 Route114_LanettesHouse_Text_EmailFromBill:
 	.string "Hay un correo de alguien en la\n"
 	.string "PC.\p"
-	.string "“… … … … … … …\p"
+	.string "“... ... ... ... ... ... ...\p"
 	.string "“Tu Sistema de Almacenamiento es más\n"
 	.string "conveniente que el mío.\p"
 	.string "“Tiene funciones muy fáciles de usar\n"
@@ -100,5 +100,5 @@ Route114_LanettesHouse_Text_EmailFromBill:
 	.string "“Espero que continúes con tu\n"
 	.string "estudio de los Sistemas de Almacén.\p"
 	.string "“De BILL\n"
-	.string "… … … … … … … …”$"
+	.string "... ... ... ... ... ... ... ...”$"
 

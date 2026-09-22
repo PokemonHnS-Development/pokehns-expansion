@@ -103,7 +103,7 @@ SINGLE_BATTLE_TEST("Roost suppresses the user's Flying-typing this turn, then re
         // Turn 2: EQ has no effect because Roost expired
         MESSAGE("The opposing Wobbuffet used Earthquake!");
         NOT ANIMATION(ANIM_TYPE_MOVE, MOVE_EARTHQUAKE, opponent);
-        MESSAGE("It doesn't affect Skarmory…");
+        MESSAGE("It doesn't affect Skarmory...");
         NOT HP_BAR(player);
     }
 }
@@ -152,15 +152,15 @@ SINGLE_BATTLE_TEST("Roost, if used by a Flying/Flying type, treats the user as a
             else if (damagingMove == MOVE_LICK)
             {
                 NOT ANIMATION(ANIM_TYPE_MOVE, damagingMove, opponent);
-                MESSAGE("It doesn't affect Tornadus…");
+                MESSAGE("It doesn't affect Tornadus...");
             }
             else
             {
                 ANIMATION(ANIM_TYPE_MOVE, damagingMove, opponent);
                 NONE_OF {
                     MESSAGE("It's super effective!");
-                    MESSAGE("It's not very effective…");
-                    MESSAGE("It doesn't affect Tornadus…");
+                    MESSAGE("It's not very effective...");
+                    MESSAGE("It doesn't affect Tornadus...");
                 }
             }
         }
@@ -169,8 +169,8 @@ SINGLE_BATTLE_TEST("Roost, if used by a Flying/Flying type, treats the user as a
             // Should not see any effectiveness messages
             NONE_OF {
                 MESSAGE("It's super effective!");
-                MESSAGE("It's not very effective…");
-                MESSAGE("It doesn't affect Tornadus…");
+                MESSAGE("It's not very effective...");
+                MESSAGE("It doesn't affect Tornadus...");
             }
         }
     }
@@ -218,8 +218,8 @@ SINGLE_BATTLE_TEST("Roost, if used by a Mystery/Flying type, treats the user as 
         ANIMATION(ANIM_TYPE_MOVE, damagingMove, opponent);
         NONE_OF {
             MESSAGE("It's super effective!");
-            MESSAGE("It's not very effective…");
-            MESSAGE("It doesn't affect Moltres…");
+            MESSAGE("It's not very effective...");
+            MESSAGE("It doesn't affect Moltres...");
         }
     }
 }
@@ -342,7 +342,7 @@ SINGLE_BATTLE_TEST("Roost's suppression prevents Reflect Type from copying any F
         MESSAGE("The opposing Wobbuffet became the same type as Swellow!");
         // Turn 3: EQ has no effect
         MESSAGE("Swellow used Earthquake!");
-        MESSAGE("It doesn't affect the opposing Wobbuffet…");
+        MESSAGE("It doesn't affect the opposing Wobbuffet...");
         NONE_OF {
             ANIMATION(ANIM_TYPE_MOVE, MOVE_EARTHQUAKE, player);
             HP_BAR(opponent);

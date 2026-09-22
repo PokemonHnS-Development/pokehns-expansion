@@ -432,39 +432,39 @@ BattlePyramid_Text_ZeroItemsRemaining4::
 
 BattlePyramid_Text_EightItemsRemaining5::
 	.string "En este piso de la PIRÁMIDE,\n"
-	.string "oigo que hay ocho objetos…$"
+	.string "oigo que hay ocho objetos...$"
 
 BattlePyramid_Text_SevenItemsRemaining5::
 	.string "En este piso de la PIRÁMIDE,\n"
-	.string "oigo que hay siete objetos…$"
+	.string "oigo que hay siete objetos...$"
 
 BattlePyramid_Text_SixItemsRemaining5::
 	.string "En este piso de la PIRÁMIDE,\n"
-	.string "Oigo que hay seis objetos…$"
+	.string "Oigo que hay seis objetos...$"
 
 BattlePyramid_Text_FiveItemsRemaining5::
 	.string "En este piso de la PIRÁMIDE,\n"
-	.string "Oigo que hay cinco objetos…$"
+	.string "Oigo que hay cinco objetos...$"
 
 BattlePyramid_Text_FourItemsRemaining5::
 	.string "En este piso de la PIRÁMIDE,\n"
-	.string "Oigo que hay cuatro objetos…$"
+	.string "Oigo que hay cuatro objetos...$"
 
 BattlePyramid_Text_ThreeItemsRemaining5::
 	.string "En este piso de la PIRÁMIDE,\n"
-	.string "Oigo que hay tres objetos…$"
+	.string "Oigo que hay tres objetos...$"
 
 BattlePyramid_Text_TwoItemsRemaining5::
 	.string "En este piso de la PIRÁMIDE,\n"
-	.string "Oigo que hay dos objetos…$"
+	.string "Oigo que hay dos objetos...$"
 
 BattlePyramid_Text_OneItemRemaining5::
 	.string "En este piso de la PIRÁMIDE,\n"
-	.string "Oigo que hay un objeto…$"
+	.string "Oigo que hay un objeto...$"
 
 BattlePyramid_Text_ZeroItemsRemaining5::
 	.string "En este piso de la PIRÁMIDE,\n"
-	.string "Oigo que no hay objetos…$"
+	.string "Oigo que no hay objetos...$"
 
 BattlePyramid_Text_EightItemsRemaining6::
 	.string "¿Has recogido algún objeto?\p"
@@ -661,7 +661,7 @@ BattlePyramid_Text_OneTrainersRemaining4::
 
 BattlePyramid_Text_ZeroTrainersRemaining4::
 	.string "Ya no queda ni una sola persona que\n"
-	.string "pueda derrotarte ahora…$"
+	.string "pueda derrotarte ahora...$"
 
 BattlePyramid_Text_SevenTrainersRemaining5::
 	.string "Puede que tengas lo necesario para\n"
@@ -726,4 +726,4 @@ BattlePyramid_Text_OneTrainersRemaining6::
 
 BattlePyramid_Text_ZeroTrainersRemaining6::
 	.string "No quedan ENTRENADORES que\n"
-	.string "puedan luchar contra ti ahora…$"
+	.string "puedan luchar contra ti ahora...$"

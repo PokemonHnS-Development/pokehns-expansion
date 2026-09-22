@@ -127,7 +127,7 @@ BattleFrontier_RankingHall_Text_WorkHarderIfYouSawFriendsName_hns:
 	.string "¡seguro que te esforzarías más!$"
 
 BattleFrontier_RankingHall_Text_MyNamesNotUpThere_hns:
-	.string "Hmm…\n"
+	.string "Hmm...\n"
 	.string "Mi nombre no está ahí...\p"
 	.string "Bueno, es natural, ya que aún no he\n"
 	.string "aceptado ningún desafío.$"

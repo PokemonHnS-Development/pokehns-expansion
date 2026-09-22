@@ -899,11 +899,11 @@ Route110_TrickHousePuzzle5_Text_WroteSecretCodeLockOpened:
 	.string "{PLAYER} anotó el código secreto\n"
 	.string "en la puerta.\p"
 	.string "“TRICK MASTER es un genio”.\n"
-	.string "… … … … … … … …\p"
+	.string "... ... ... ... ... ... ... ...\p"
 	.string "¡La cerradura se abrió!$"
 
 Route110_TrickHousePuzzle5_Text_Mechadoll1Intro:
-	.string "CLIC-CLAC…\n¡SOY MECHADOLL 1!\pSI RESPONDES BIEN LOS CONCURSOS,\nPASARÁS A MECHADOLL 5.\lASÍ OBTENDRÁS EL CÓDIGO SECRETO.$"
+	.string "CLIC-CLAC...\n¡SOY MECHADOLL 1!\pSI RESPONDES BIEN LOS CONCURSOS,\nPASARÁS A MECHADOLL 5.\lASÍ OBTENDRÁS EL CÓDIGO SECRETO.$"
 
 Route110_TrickHousePuzzle5_Text_Mechadoll1Quiz1:
 	.string "ACERTIJO DE MECHADOLL 1.\p"
@@ -957,7 +957,7 @@ Route110_TrickHousePuzzle5_Text_Mechadoll2Quiz3:
 	.string "TEAM AQUA en el BOSQUE PETALBURG?$"
 
 Route110_TrickHousePuzzle5_Text_Mechadoll3Intro:
-	.string "CLIC-CLAC…\n¡SOY MECHADOLL 3!\pMI ÚNICO INTERÉS ES EL DINERO.$"
+	.string "CLIC-CLAC...\n¡SOY MECHADOLL 3!\pMI ÚNICO INTERÉS ES EL DINERO.$"
 
 Route110_TrickHousePuzzle5_Text_Mechadoll3Quiz1:
 	.string "TRIVIA DE MECHADOLL 3.\p"

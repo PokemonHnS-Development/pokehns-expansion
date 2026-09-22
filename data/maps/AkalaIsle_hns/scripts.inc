@@ -515,18 +515,18 @@ Alola_Akala_TotemBattle_Text_0:
 
 Alola_Akala_TotemBattle_Text_1:
 	.string "¡El MAGMORTAR Tótem fue derrotado!\n"
-	.string "Salió corriendo a algún lugar…$"
+	.string "Salió corriendo a algún lugar...$"
 
 Alola_Akala_TotemBattle_Text_2:
 	.string "¡Prrrob!$"
 
 Alola_Akala_TotemBattle_Text_3:
 	.string "¡El PROBOPASS Tótem fue derrotado!\n"
-	.string "Salió corriendo a algún lugar…$"
+	.string "Salió corriendo a algún lugar...$"
 
 Alola_Akala_Totem_sign_Text_0:
 	.string "El tótem emana una energía\n"
-	.string "muy fuerte…\p"
+	.string "muy fuerte...\p"
 	.string "¿Tocas el tótem para teletransportarte\n"
 	.string "a otra isla?$"
 
@@ -544,7 +544,7 @@ Alola_Akala_Totem_sign_Text_4:
 
 Alola_Akala_Totem_sign_Text_5:
 	.string "Hay un tótem extraño aquí,\n"
-	.string "emana un gran poder de él…$"
+	.string "emana un gran poder de él...$"
 
 Alola_Akala_BattleVsTapuLele_Text_0:
 	.string "¡Le-Lele!$"
@@ -553,7 +553,7 @@ Alola_Akala_TrainerBattleHiker_Text_0:
 	.string "¡Vine a las ISLAS para escalar\nlas montañas!$"
 
 Alola_Akala_TrainerBattleHiker_Text_1:
-	.string "Y terminé cayendo…$"
+	.string "Y terminé cayendo...$"
 
 Alola_Akala_TrainerBattleHiker_Text_2:
 	.string "¡ISLA AKALA es la mejor para escalar!\n"
@@ -563,7 +563,7 @@ Alola_Akala_TrainerBattlePicnicker_Text_0:
 	.string "¡Ja! No me viste, ¿verdad?$"
 
 Alola_Akala_TrainerBattlePicnicker_Text_1:
-	.string "Supongo que el factor sorpresa no\nsiempre es súper efectivo…$"
+	.string "Supongo que el factor sorpresa no\nsiempre es súper efectivo...$"
 
 Alola_Akala_TrainerBattlePicnicker_Text_2:
 	.string "Es muy exuberante en ISLA AKALA,\n"
@@ -583,7 +583,7 @@ Alola_Akala_TrainerBattleSwimmerLand_Text_0:
 	.string "¡Oye! ¡Sin zapatos en la playa!$"
 
 Alola_Akala_TrainerBattleSwimmerLand_Text_1:
-	.string "Ay,\ndonde habrá un salvavidas ahora…$"
+	.string "Ay,\ndonde habrá un salvavidas ahora...$"
 
 Alola_Akala_TrainerBattleSwimmerLand_Text_2:
 	.string "¡ISLA AKALA tiene las mejores playas!\n"
@@ -593,7 +593,7 @@ Alola_Akala_TrainerBattleSwimmerWater_Text_0:
 	.string "¡Quítate de mi camino!\n¡Estoy nadando vueltas!$"
 
 Alola_Akala_TrainerBattleSwimmerWater_Text_1:
-	.string "No es el descanso que buscaba…$"
+	.string "No es el descanso que buscaba...$"
 
 Alola_Akala_TrainerBattleSwimmerWater_Text_2:
 	.string "¡La ISLA ULA'ULA tiene las mejores\nplayas!\n¡Ignora a quien diga lo contrario!$"
@@ -602,7 +602,7 @@ Alola_Akala_TrainerBattleSwimmerWaterM_Text_0:
 	.string "¡Ja!\n¿Usar un POKéMON para surfear?$"
 
 Alola_Akala_TrainerBattleSwimmerWaterM_Text_1:
-	.string "Si no hubiera nadado yo mismo,\nquizá tendría energía para ganar…$"
+	.string "Si no hubiera nadado yo mismo,\nquizá tendría energía para ganar...$"
 
 Alola_Akala_TrainerBattleSwimmerWaterM_Text_2:
 	.string "¡La corriente aquí es fuerte!\n"

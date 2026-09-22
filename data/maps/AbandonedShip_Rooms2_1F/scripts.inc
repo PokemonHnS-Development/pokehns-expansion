@@ -55,10 +55,10 @@ AbandonedShip_Rooms2_1F_Text_DanIntro:
 
 AbandonedShip_Rooms2_1F_Text_DanDefeat:
 	.string "DAN: No pudimos ganar aunque\n"
-	.string "trabajamos juntos…$"
+	.string "trabajamos juntos...$"
 
 AbandonedShip_Rooms2_1F_Text_DanPostBattle:
-	.string "DAN: No hallamos tesoros…\n"
+	.string "DAN: No hallamos tesoros...\n"
 	.string "¿Alguien se los habrá llevado?$"
 
 AbandonedShip_Rooms2_1F_Text_DanNotEnoughMons:
@@ -113,7 +113,7 @@ AbandonedShip_Rooms2_1F_Text_KiraRematchIntro:
 	.string "que dejar de buscar?$"
 
 AbandonedShip_Rooms2_1F_Text_KiraRematchDefeat:
-	.string "KIRA: Oh, perdimos otra vez…$"
+	.string "KIRA: Oh, perdimos otra vez...$"
 
 AbandonedShip_Rooms2_1F_Text_KiraPostRematch:
 	.string "KIRA: No nos iremos hasta que\n"

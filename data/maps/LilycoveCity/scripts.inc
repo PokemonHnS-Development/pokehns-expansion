@@ -426,7 +426,7 @@ LilycoveCity_Text_MayNotRaisingPokemon:
 	.string "MAY: ¿Ah, por qué? {PLAYER}{KUN}, ¿no...?\n"
 	.string "¿Has estado criando tus POKéMON?\p"
 	.string "No es una muy buena muestra como\n"
-	.string "ENTRENADOR…$"
+	.string "ENTRENADOR...$"
 
 LilycoveCity_Text_MayBattleMe:
 	.string "MAY: ¡Vamos, lucha conmigo para que\n"
@@ -437,7 +437,7 @@ LilycoveCity_Text_MayWontBeBeaten:
 	.string "vencidos por los tuyos, {PLAYER}{KUN}!$"
 
 LilycoveCity_Text_MayDefeat:
-	.string "… … … … … … … …\p"
+	.string "... ... ... ... ... ... ... ...\p"
 	.string "Recuerdo la batalla que tuve contigo,\n"
 	.string "{PLAYER}{KUN}, en la RUTA 103.\p"
 	.string "Esa batalla te ayudó a ser así de\n"
@@ -617,13 +617,13 @@ LilycoveCity_Text_SomeonePuntedTeamAquaOut:
 
 LilycoveCity_Text_SomeoneStoleMyPokemon:
 	.string "Tomaba una siesta relajante en la\n"
-	.string "posada del mar con el sonido del mar…\p"
+	.string "posada del mar con el sonido del mar...\p"
 	.string "¡Cuando alguien robó mi POKéMON!\p"
 	.string "¿Quién es el secuestrador?\n"
 	.string "¿EL EQUIPO AQUA? ¿Fue el EQUIPO AQUA?$"
 
 LilycoveCity_Text_MissingPokemonCameBack:
-	.string "Mi POKéMON perdido…\n"
+	.string "Mi POKéMON perdido...\n"
 	.string "¡Regresó sin que me diera cuenta!$"
 
 LilycoveCity_Text_ImArtDealer:
@@ -631,19 +631,19 @@ LilycoveCity_Text_ImArtDealer:
 	.string "Compro y vendo obras de arte finas,\n"
 	.string "especialmente las pinturas.\p"
 	.string "He oído que el MUSEO de aquí tiene\n"
-	.string "obras magníficas en exhibición…$"
+	.string "obras magníficas en exhibición...$"
 
 LilycoveCity_Text_SeaRemainsForeverYoung:
 	.string "Aunque envejezcamos y nos arruguemos,\n"
 	.string "el mar siempre sigue siendo joven con\l"
-	.string "el brillo vívido de la vida…\p"
-	.string "Fwohoho fwohohohoho…$"
+	.string "el brillo vívido de la vida...\p"
+	.string "Fwohoho fwohohohoho...$"
 
 LilycoveCity_Text_SixtyYearsAgoHusbandProposed:
 	.string "Hace sesenta años que mi esposo me\n"
 	.string "pidió matrimonio aquí.\l"
 	.string "El mar sigue tan bello como siempre.\p"
-	.string "Mufufufu mufufufufufu…$"
+	.string "Mufufufu mufufufufufu...$"
 
 LilycoveCity_Text_TeamAquaRenovatedCavern:
 	.string "Hm, conoces la caverna peculiar\n"
@@ -702,7 +702,7 @@ LilycoveCity_Text_HarborSign:
 LilycoveCity_Text_TrainerFanClubSign:
 	.string "CLUB DE FANS DE ENTRENADORES\p"
 	.string "Hay nombres de ENTRENADORES\n"
-	.string "escritos por todo el cartel…$"
+	.string "escritos por todo el cartel...$"
 
 LilycoveCity_Text_DepartmentStoreSign:
 	.string "ALMACENES DE CIUDAD VERALTO\p"
@@ -739,7 +739,7 @@ LilycoveCity_Text_HeardTowerCalledSkyPillar:
 LilycoveCity_Text_SawTallTowerOnRoute131:
 	.string "Vi una torre alta en algún lugar\n"
 	.string "cerca de la RUTA 131.\p"
-	.string "¿Podría ser esa…?$"
+	.string "¿Podría ser esa...?$"
 
 LilycoveCity_Text_JustArrivedAndSawRarePokemon:
 	.string "Acabamos de llegar aquí para nuestra\n"

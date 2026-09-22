@@ -21,9 +21,9 @@ CeladonCity_GameCorner_Text_PrintIsReadyCheckTrainerCard::
 	.string "Revisa tu TARJETA DE ENTRENADOR.$"
 
 FourIsland_House2_Text_WishICouldShowOffStickers::
-	.string "Jejeje…\n"
+	.string "Jejeje...\n"
 	.string "Coleccioné un montón de CALCOMANÍAS.\l"
-	.string "Desearía poder presumirlos…$"
+	.string "Desearía poder presumirlos...$"
 
 FourIsland_House2_Text_GiveYouStickerIfYouBrag::
 	.string "¡Oh, excelente!\n"
@@ -77,7 +77,7 @@ FourIsland_House2_Text_HoFStickerApplied::
 	.string "La PEGATINA del SALÓN DE LA FAMA\nse puso en la TARJETA DE ENTRENADOR.$"
 
 FourIsland_House2_Text_ComeBackWithBetterStoryHoF::
-	.string "Hmm…\p"
+	.string "Hmm...\p"
 	.string "Vuelve con una mejor historia la\n"
 	.string "próxima vez, ¿vale?$"
 
@@ -116,7 +116,7 @@ FourIsland_House2_Text_EggStickerApplied::
 	.string "en la TARJETA DE ENTRENADOR.$"
 
 FourIsland_House2_Text_ComeBackWithBetterStoryEggs::
-	.string "Hmm…\p"
+	.string "Hmm...\p"
 	.string "Vuelve con una mejor historia la\n"
 	.string "próxima vez, ¿vale?$"
 
@@ -144,13 +144,13 @@ FourIsland_House2_Text_WowLinkWinsHigh::
 	.string "Te daré una de estas.$"
 
 FourIsland_House2_Text_WowLinkWinsHighest::
-	.string "¿Q… Qué barbaridad!\n¡Has ganado muchísimas veces!\pMe deja alucinado pensar\nen lo fuerte que eres.\p¡Eres la pesadilla hecha realidad!\nYa basta, tengo que darte esto.$"
+	.string "¿Q... Qué barbaridad!\n¡Has ganado muchísimas veces!\pMe deja alucinado pensar\nen lo fuerte que eres.\p¡Eres la pesadilla hecha realidad!\nYa basta, tengo que darte esto.$"
 
 FourIsland_House2_Text_VictoryStickerApplied::
 	.string "La PEGATINA DE VICTORIA se puso\nen la TARJETA DE ENTRENADOR.$"
 
 FourIsland_House2_Text_ComeBackWithBetterStoryLinkWins::
-	.string "Hmm…\p"
+	.string "Hmm...\p"
 	.string "Vuelve con una mejor historia la\n"
 	.string "próxima vez, ¿vale?$"
 

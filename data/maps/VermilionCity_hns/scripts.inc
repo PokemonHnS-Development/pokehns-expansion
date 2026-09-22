@@ -324,7 +324,7 @@ VermilionCity_Text_MachopOwner:
 	.string "Mi POKéMON está preparando el\n"
 	.string "terreno para la construcción.\p"
 	.string "Pero no tengo dinero para iniciar\n"
-	.string "el proyecto…$"
+	.string "el proyecto...$"
 
 VermilionCity_Text_Machop1:
 	.string "MACHOP: Guooh gogogoh!$"
@@ -339,12 +339,12 @@ VermilionCity_Text_SuperNerd:
 	.string "GIMNASIO de VERMILION.$"
 
 VermilionCity_Text_SnorlaxSleeping:
-	.string "SNORLAX ronca tranquilamente…$"
+	.string "SNORLAX ronca tranquilamente...$"
 
 VermilionCity_Text_RadioNearSnorlax:
 	.string "El POKéGEAR fue puesto cerca del\n"
-	.string "SNORLAX que dormía…\p"
-	.string "…\p"
+	.string "SNORLAX que dormía...\p"
+	.string "...\p"
 	.string "¡SNORLAX despertó!$"
 
 VermilionCity_Text_BadgeGuy_Trainer:

@@ -150,13 +150,13 @@ Route4_PokemonCenter_1F_EventScript_Newspaper::
 
 Route4_PokemonCenter_1F_Text_CanHaveSixMonsWithYou::
 	.string "Okay, set six POKé BALLS in my\n"
-	.string "belt…\p"
+	.string "belt...\p"
 	.string "Sí, eso bastará. A lo sumo, tú\n"
 	.string "can have six POKéMON with you.$"
 
 Route4_PokemonCenter_1F_Text_TeamRocketAttacksCerulean::
 	.string "TEAM ROCKET attacks CERULEAN\n"
-	.string "citizens…\p"
+	.string "citizens...\p"
 	.string "No pasa un día sin que el EQUIP\n"
 	.string "O ROCKET salga en las noticias.$"
 
@@ -176,7 +176,7 @@ Route4_PokemonCenter_1F_Text_SweetieBuyMagikarpForJust500::
 
 Route4_PokemonCenter_1F_Text_PaidOutrageouslyForMagikarp::
 	.string "{PLAYER} pagó ¥500, un robo,\n"
-	.string "y compró el MAGIKARP…$"
+	.string "y compró el MAGIKARP...$"
 
 Route4_PokemonCenter_1F_Text_OnlyDoingThisAsFavorToYou::
 	.string "¿No? ¿Dices que no? Solo lo hago\n"

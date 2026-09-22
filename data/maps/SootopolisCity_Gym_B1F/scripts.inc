@@ -56,7 +56,7 @@ SootopolisCity_Gym_B1F_Text_AndreaIntro:
 	.string "que aprendí del LÍDER JUAN!$"
 
 SootopolisCity_Gym_B1F_Text_AndreaDefeat:
-	.string "Perdóname, JUAN…$"
+	.string "Perdóname, JUAN...$"
 
 SootopolisCity_Gym_B1F_Text_AndreaPostBattle:
 	.string "Mira lo que pasa si rompes todas\n"
@@ -77,18 +77,18 @@ SootopolisCity_Gym_B1F_Text_CrissyPostBattle:
 
 SootopolisCity_Gym_B1F_Text_DaphneIntro:
 	.string "La vista de JUAN dirigiendo\n"
-	.string "una batalla…\p"
+	.string "una batalla...\p"
 	.string "Su belleza me obligó a\n"
 	.string "ser ENTRENADOR.$"
 
 SootopolisCity_Gym_B1F_Text_DaphneDefeat:
 	.string "Luchaste con más belleza de la\n"
-	.string "que yo pude lograr…$"
+	.string "que yo pude lograr...$"
 
 SootopolisCity_Gym_B1F_Text_DaphnePostBattle:
 	.string "La gracia que traes al combate es\n"
 	.string "fabulosa.\p"
-	.string "Oh… Qué suerte haberte encontrado\n"
+	.string "Oh... Qué suerte haberte encontrado\n"
 	.string "POKéMON.$"
 
 SootopolisCity_Gym_B1F_Text_ConnieIntro:
@@ -106,7 +106,7 @@ SootopolisCity_Gym_B1F_Text_ConniePostBattle:
 
 SootopolisCity_Gym_B1F_Text_BridgetIntro:
 	.string "El GIMNASIO POKéMON de nivel más\n"
-	.string "alto de la región de HOENN…\p"
+	.string "alto de la región de HOENN...\p"
 	.string "Es el GIMNASIO de CALAGIRI.$"
 
 SootopolisCity_Gym_B1F_Text_BridgetDefeat:
@@ -124,7 +124,7 @@ SootopolisCity_Gym_B1F_Text_OliviaIntro:
 	.string "No creas que soy un debilucho.$"
 
 SootopolisCity_Gym_B1F_Text_OliviaDefeat:
-	.string "Me han golpeado…$"
+	.string "Me han golpeado...$"
 
 SootopolisCity_Gym_B1F_Text_OliviaPostBattle:
 	.string "Creo que tienes potencial.\n"
@@ -170,7 +170,7 @@ SootopolisCity_Gym_B1F_Text_AnnikaPostBattle:
 	.string "cuando era más joven...$"
 
 SootopolisCity_Gym_B1F_Text_BriannaIntro:
-	.string "Jejeje…\n"
+	.string "Jejeje...\n"
 	.string "Tu mirada seria es encantadora.$"
 
 SootopolisCity_Gym_B1F_Text_BriannaDefeat:
@@ -179,5 +179,5 @@ SootopolisCity_Gym_B1F_Text_BriannaDefeat:
 
 SootopolisCity_Gym_B1F_Text_BriannaPostBattle:
 	.string "No pudiste tocar a JUAN,\n"
-	.string "Estoy segura. Jiji…$"
+	.string "Estoy segura. Jiji...$"
 

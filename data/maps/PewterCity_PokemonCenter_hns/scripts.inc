@@ -15,7 +15,7 @@ PewterCity_PokemonCenter_EventScript_BugCatcher::
 	end
 
 PewterCity_PokemonCenter1F_Text_Teacher:
-	.string "…Sí, el GIMNASIO de ISLA CRESPO\nya no existe.\pMe quedé muy\nsorprendido.\p…¿Sí? Estoy al teléfono.\n¡Vete!$"
+	.string "...Sí, el GIMNASIO de ISLA CRESPO\nya no existe.\pMe quedé muy\nsorprendido.\p...¿Sí? Estoy al teléfono.\n¡Vete!$"
 
 PewterCity_PokemonCenter1F_Text_Jigglypuff:
 	.string "JIGGLYPUFF: Puu pupuu.$"
@@ -53,7 +53,7 @@ PewterCity_PokemonCenter_Text_TakeCare:
 	.string "¡Cuida mucho a mi {STR_VAR_1}!$"
 
 PewterCity_PokemonCenter_Text_DeclineTrade:
-	.string "¿No? Qué lástima…\nCreo que te gustaría mi HAUNTER.$"
+	.string "¿No? Qué lástima...\nCreo que te gustaría mi HAUNTER.$"
 
 PewterCity_PokemonCenter_Text_NotRequestedMon:
 	.string "Mmm, eso no es un {STR_VAR_1}.\nEso no es lo que busco.$"

@@ -53,7 +53,7 @@ Route11_Text_DillonIntro::
 	.string "Pero creo que puedo ganar.$"
 
 Route11_Text_DillonDefeat::
-	.string "My POKéMON couldn't win…\n"
+	.string "My POKéMON couldn't win...\n"
 	.string "¿No han crecido lo suficiente?$"
 
 Route11_Text_DillonPostBattle::
@@ -71,10 +71,10 @@ Route11_Text_DirkPostBattle::
 	.string "Solo tuviste suerte, eso es todo.$"
 
 Route11_Text_DarianIntro::
-	.string "Nunca había ganado antes…$"
+	.string "Nunca había ganado antes...$"
 
 Route11_Text_DarianDefeat::
-	.string "Lo veía venir…$"
+	.string "Lo veía venir...$"
 
 Route11_Text_DarianPostBattle::
 	.string "Tuve mala suerte, como siempre.$"
@@ -112,7 +112,7 @@ Route11_Text_DaveDefeat::
 	.string "¡Gracias y adiós!$"
 
 Route11_Text_DavePostBattle::
-	.string "Tch…\n"
+	.string "Tch...\n"
 	.string "¡Mejor busco unos más fuertes!$"
 
 Route11_Text_DiglettsCave::

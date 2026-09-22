@@ -262,7 +262,7 @@ MahoganyTown_Text_RageCandyBarMerchantNotEnoughMoney:
     .string "No tienes suficiente dinero.$"
 
 MahoganyTown_Text_RageCandyBarMerchantRefused:
-    .string "Oh, está bien entonces…$"
+    .string "Oh, está bien entonces...$"
 
 MahoganyTown_Text_RageCandyBarMerchantSoldOut:
     .string "Se agotaron las RAGECANDYBAR.\p"

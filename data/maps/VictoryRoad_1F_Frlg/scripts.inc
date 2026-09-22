@@ -48,18 +48,18 @@ VictoryRoad_1F_Text_NaomiIntro::
 	.string "por mí?$"
 
 VictoryRoad_1F_Text_NaomiDefeat::
-	.string "I lost out…$"
+	.string "I lost out...$"
 
 VictoryRoad_1F_Text_NaomiPostBattle::
 	.string "Nunca quise perder con nadie,\n"
-	.string "menos con un niño menor…$"
+	.string "menos con un niño menor...$"
 
 VictoryRoad_1F_Text_RolandoIntro::
 	.string "Veo que eres bueno.\n"
 	.string "¡A ver qué tan bueno eres!$"
 
 VictoryRoad_1F_Text_RolandoDefeat::
-	.string "Tuve una oportunidad…$"
+	.string "Tuve una oportunidad...$"
 
 VictoryRoad_1F_Text_RolandoPostBattle::
 	.string "¡Tch!\n"

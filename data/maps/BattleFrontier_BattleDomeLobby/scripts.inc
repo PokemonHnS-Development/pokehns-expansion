@@ -631,7 +631,7 @@ BattleFrontier_BattleDomeLobby_Text_WinnersGainReputation:
 BattleFrontier_BattleDomeLobby_Text_TrashedInFirstRound:
 	.string "Me topé con uno de los favoritos\n"
 	.string "del torneo en la primera ronda.\p"
-	.string "Claro que me aplastaron…$"
+	.string "Claro que me aplastaron...$"
 
 BattleFrontier_BattleDomeLobby_Text_NeedToCheckOpponentCarefully:
 	.string "Habría ganado si hubiera usado este\n"

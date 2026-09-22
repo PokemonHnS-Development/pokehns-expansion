@@ -43,9 +43,9 @@ FallarborTown_BattleTentCorridor_Movement_AttendantEnterDoor:
 @ Unused
 FallarborTown_ContestHall_Text_DoAllRightInPreliminary:
 	.string "Nos va bien en la ronda preliminar,\n"
-	.string "pero nunca ganamos las apelaciones…\p"
+	.string "pero nunca ganamos las apelaciones...\p"
 	.string "Tal vez deba observar lo que hacen\n"
-	.string "los otros concursantes…$"
+	.string "los otros concursantes...$"
 
 @ Unused
 FallarborTown_ContestHall_Text_MonAllTheseRibbons:
@@ -56,10 +56,10 @@ FallarborTown_ContestHall_Text_MonAllTheseRibbons:
 
 @ Unused
 FallarborTown_ContestHall_Text_CantWinEverywhere:
-	.string "No puedo vencer a los LÍDERES…\p"
-	.string "No puedo ganar ningún CONCURSO…\p"
+	.string "No puedo vencer a los LÍDERES...\p"
+	.string "No puedo ganar ningún CONCURSO...\p"
 	.string "He estado aquí, allá y en todo lado,\n"
-	.string "y todo ha sido en vano…$"
+	.string "y todo ha sido en vano...$"
 
 @ Unused
 FallarborTown_ContestHall_Text_SuperRankStage:

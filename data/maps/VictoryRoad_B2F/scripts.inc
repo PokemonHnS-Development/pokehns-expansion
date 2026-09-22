@@ -83,11 +83,11 @@ VictoryRoad_B2F_Text_JuliePostBattle:
 
 VictoryRoad_B2F_Text_FelixIntro:
 	.string "Llegué hasta aquí, pero la tensión\n"
-	.string "me da un dolor de estómago horrible…$"
+	.string "me da un dolor de estómago horrible...$"
 
 VictoryRoad_B2F_Text_FelixDefeat:
-	.string "Ooh…\n"
-	.string "Me duele…$"
+	.string "Ooh...\n"
+	.string "Me duele...$"
 
 VictoryRoad_B2F_Text_FelixPostBattle:
 	.string "Me pongo tenso al saber que ya\n"

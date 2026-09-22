@@ -42,5 +42,5 @@ SlateportCity_Mart_Text_GreatBallIsBetter:
 	.string "Una GREAT BALL es mejor que una\n"
 	.string "POKé BALL para capturar POKéMON.\p"
 	.string "Con esto, debería poder atrapar a\n"
-	.string "ese POKéMON esquivo…$"
+	.string "ese POKéMON esquivo...$"
 

@@ -553,8 +553,8 @@ MtChimney_Text_MeteoriteWillActivateVolcano:
 MtChimney_Text_MaxieIntro:
 	.string "MAXIE: ¿Hm?\n"
 	.string "¿Quién eres?\p"
-	.string "… … … … … …\n"
-	.string "… … … … … …\p"
+	.string "... ... ... ... ... ...\n"
+	.string "... ... ... ... ... ...\p"
 	.string "Oí a ARCHIE quejarse de un niño\n"
 	.string "que se ha metido en los asuntos\l"
 	.string "del TEAM AQUA.\p"
@@ -631,7 +631,7 @@ MtChimney_Text_Grunt1Intro:
 	.string "¡La haré sobre lava endurecida!$"
 
 MtChimney_Text_Grunt1Defeat:
-	.string "Mi sueño de una gran casa…$"
+	.string "Mi sueño de una gran casa...$"
 
 MtChimney_Text_Grunt1PostBattle:
 	.string "Un chico como tú debería estar\n"
@@ -676,7 +676,7 @@ MtChimney_Text_ArchieGoStopTeamMagma:
 	.string "erupción del volcán!$"
 
 MtChimney_Text_ArchieIHaveMyHandsFull:
-	.string "ARCHIE: Grrr…\p"
+	.string "ARCHIE: Grrr...\p"
 	.string "Quiero detener a ese MAXIE,\n"
 	.string "¡pero no puedo!\p"
 	.string "¡No mientras lucho contra\n"
@@ -728,13 +728,13 @@ MtChimney_Text_OhFineThen:
 
 MtChimney_Text_MetoriteFittedOnMachine:
 	.string "Un METEORITO está puesto en una\n"
-	.string "máquina misteriosa…\p"
+	.string "máquina misteriosa...\p"
 	.string "La máquina parece estar guardando\n"
 	.string "energía en el METEORITO.$"
 
 MtChimney_Text_RemoveTheMeteorite:
 	.string "Un METEORITO está puesto en una\n"
-	.string "máquina misteriosa…\p"
+	.string "máquina misteriosa...\p"
 	.string "¿Quieres quitar el METEORITO?$"
 
 MtChimney_Text_PlayerRemovedMeteorite:

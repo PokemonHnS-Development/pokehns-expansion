@@ -75,7 +75,7 @@ SaffronCity_Gym_Text_SabrinaWinLoss:
 	.string "SABRINA: Tu poder...\p"
 	.string "Supera mucho lo que preví...\p"
 	.string "Tal vez no sea posible predecir\n"
-	.string "totalmente lo que traerá el futuro…\p"
+	.string "totalmente lo que traerá el futuro...\p"
 	.string "Está bien, ganaste. Te has ganado\n"
 	.string "la MEDALLA MARJA.$"
 
@@ -84,7 +84,7 @@ SaffronCity_Gym_Text_ReceivedMarshBadge:
 
 SaffronCity_Gym_Text_MarshBadgeInfo:
 	.string "SABRINA: La MEDALLA MARJA saca\n"
-	.string "tus poderes subliminales…\p"
+	.string "tus poderes subliminales...\p"
 	.string "Aunque no pude predecir con\n"
 	.string "exactitud tu poder, esto sí lo\l"
 	.string "sé que es verdad.\p"
@@ -117,14 +117,14 @@ SaffronCity_Gym_Text_SabrinaRematch:
 SaffronCity_Gym_Text_SabrinaRematchDefeat:
 	.string "SABRINA: El amor por tus\n"
 	.string "POKéMON volvió a abrumar mi\l"
-	.string "poder psíquico…$"
+	.string "poder psíquico...$"
 
 SaffronCity_Gym_Text_MediumRebeccaSeen:
 	.string "¡El poder de todos los que\n"
 	.string "derrotaste ahora es mío!$"
 
 SaffronCity_Gym_Text_MediumRebeccaBeaten:
-	.string "Fuerte… Demasiado fuerte…$"
+	.string "Fuerte... Demasiado fuerte...$"
 
 SaffronCity_Gym_Text_MediumRebeccaAfter:
 	.string "¿Cuál es la fuente de tu poder?$"
@@ -146,7 +146,7 @@ SaffronCity_Gym_Text_MediumDorisSeen:
 	.string "¡Puedo ver dentro de tu alma!$"
 
 SaffronCity_Gym_Text_MediumDorisBeaten:
-	.string "Te leí, pero aun así perdí…$"
+	.string "Te leí, pero aun así perdí...$"
 
 SaffronCity_Gym_Text_MediumDorisAfter:
 	.string "¡Rayos! Olvidé que predije que\n"
@@ -157,7 +157,7 @@ SaffronCity_Gym_Text_PsychicJaredSeen:
 	.string "alguna vez el GIMNASIO de aquí.$"
 
 SaffronCity_Gym_Text_PsychicJaredBeaten:
-	.string "No fui rival…$"
+	.string "No fui rival...$"
 
 SaffronCity_Gym_Text_PsychicJaredAfter:
 	.string "El REY DEL KARATE, maestro del\n"

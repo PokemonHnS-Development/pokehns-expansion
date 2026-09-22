@@ -111,7 +111,7 @@ SINGLE_BATTLE_TEST("Galvanize doesn't affect Natural Gift's type")
         TURN { MOVE(player, MOVE_NATURAL_GIFT); }
     } SCENE {
         NOT { ANIMATION(ANIM_TYPE_MOVE, MOVE_NATURAL_GIFT, player); }
-        MESSAGE("It doesn't affect the opposing Beldum…");
+        MESSAGE("It doesn't affect the opposing Beldum...");
     }
 }
 
@@ -192,7 +192,7 @@ SINGLE_BATTLE_TEST("Galvanize doesn't change Tera Blast's type when Terastallize
         TURN { MOVE(player, MOVE_TERA_BLAST, gimmick: GIMMICK_TERA); }
     } SCENE {
         ANIMATION(ANIM_TYPE_MOVE, MOVE_TERA_BLAST, player);
-        NOT { MESSAGE("It doesn't affect the opposing Sandshrew…"); }
+        NOT { MESSAGE("It doesn't affect the opposing Sandshrew..."); }
     }
 }
 

@@ -33,7 +33,7 @@ Text_BodySlamTeach::
 	.string "Tenemos un combate de GOLPE\n"
 	.string "to see who wimps out first.\p"
 	.string "If you were to join us, you'd be\n"
-	.string "squashed like a bug, though…\p"
+	.string "squashed like a bug, though...\p"
 	.string "¿Qué tal si le enseño GOLPE CUERPO a\n"
 	.string "a POKéMON of yours instead?$"
 
@@ -60,8 +60,8 @@ FourIsland_PokemonCenter_1F_Text_RareIceMonsInCave::
 
 FourIsland_PokemonCenter_1F_Text_DayCarePeopleFoundEggBefore::
 	.string "Oh? A POKéMON EGG?\n"
-	.string "…No tengo idea.\p"
-	.string "…Ah, espera. La gente de la\n"
+	.string "...No tengo idea.\p"
+	.string "...Ah, espera. La gente de la\n"
 	.string "GUARDERÍA decía algo.\p"
 	.string "Dijeron que habían encontrado\n"
 	.string "HUEVOS antes en su terreno.$"

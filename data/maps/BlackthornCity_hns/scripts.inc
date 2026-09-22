@@ -219,7 +219,7 @@ BlackthornYoungsterText:
 	.string "CIUDAD ENDRINO.$"
 
 BlackthornCity_MeetSantosText:
-	.string "SANTOS: …\p"
+	.string "SANTOS: ...\p"
 	.string "Soy SANTOS, de la familia semanal.\p"
 	.string "Adivina.$"
 
@@ -227,15 +227,15 @@ BlackthornCity_SantosGivesGiftText:
 	.string "Puedes quedarte con esto...$"
 
 BlackthornCity_SantosGaveGiftText:
-	.string "SANTOS: …\p"
-	.string "ETIQUETA AMULETO…\p"
-	.string "Los ataques tipo FANTASMA son más…\p"
-	.string "Te dará escalofríos…$"
+	.string "SANTOS: ...\p"
+	.string "ETIQUETA AMULETO...\p"
+	.string "Los ataques tipo FANTASMA son más...\p"
+	.string "Te dará escalofríos...$"
 
 BlackthornCity_SantosSaturdayText:
-	.string "SANTOS: …\p"
-	.string "Nos vemos otro sábado…\p"
-	.string "Ya no tendré más regalos…$"
+	.string "SANTOS: ...\p"
+	.string "Nos vemos otro sábado...\p"
+	.string "Ya no tendré más regalos...$"
 
 BlackthornCity_SantosNopeText:
 	.string "SANTOS: No.$"

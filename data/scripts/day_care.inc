@@ -294,7 +294,7 @@ Route117_Text_IllKeepIt:
 	.string "¡Gracias!$"
 
 Route117_Text_YouHaveNoRoomForIt:
-	.string "No tienes espacio para ello…\nVuelve cuando hagas espacio.$"
+	.string "No tienes espacio para ello...\nVuelve cuando hagas espacio.$"
 
 Route117_Text_ReceivedEgg:
 	.string "{PLAYER} recibió el HUEVO de\nparte del HOMBRE de la GUARDERÍA.$"
@@ -342,7 +342,7 @@ Route117_PokemonDayCare_Text_FineThenComeAgain:
 	.string "Vuelve pronto.$"
 
 Route117_PokemonDayCare_Text_NotEnoughMoney:
-	.string "No tienes suficiente dinero…$"
+	.string "No tienes suficiente dinero...$"
 
 Route117_PokemonDayCare_Text_TakeOtherOneBackToo:
 	.string "¿Recuperarás el otro,\nlas pinturas?$"

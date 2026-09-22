@@ -19,9 +19,9 @@ GoldenrodCity_House3_EventScript_Twin::
 
 GoldenrodHappinessRater_Text_PokefanM:
     .string "Sigo perdiendo batallas y mis\n"
-    .string "POKéMON terminan debilitados…\p"
+    .string "POKéMON terminan debilitados...\p"
     .string "Tal vez por eso a mis POKéMON no\n"
-    .string "les gusto mucho…$"
+    .string "les gusto mucho...$"
 
 GoldenrodHappinessRater_Text_Twin:
     .string "Cuando uso un objeto en mi POKéMON,\n"

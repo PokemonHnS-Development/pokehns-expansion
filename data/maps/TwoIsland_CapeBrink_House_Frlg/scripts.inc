@@ -5,15 +5,15 @@ TwoIsland_CapeBrink_House_Frlg_MapScripts::
 
 Text_UltimateMoveThatMon::
 	.string "Perfeccioné el movimiento\n"
-	.string "its type…\p"
+	.string "its type...\p"
 	.string "Pero ¿nadie lo tomará\n"
 	.string "future use?\p"
-	.string "…Hm? Hmmm!\p"
-	.string "¿T-tú…?\n"
-	.string "E-ese {STR_VAR_1}…$"
+	.string "...Hm? Hmmm!\p"
+	.string "¿T-tú...?\n"
+	.string "E-ese {STR_VAR_1}...$"
 
 Text_JustMistaken::
-	.string "…No…\n"
+	.string "...No...\n"
 	.string "Solo me equivoqué.$"
 
 Text_AllowMeToTeachMonUltimateMove::
@@ -36,16 +36,16 @@ Text_LetMeConferUltimateMove::
 	.string "Ggggrah-awooo!$"
 
 Text_TaughtMove::
-	.string "Gasp, gasp, gasp…\p"
+	.string "Gasp, gasp, gasp...\p"
 	.string "No pensé que pudiera enseñar\n"
-	.string "move while I still lived…$"
+	.string "move while I still lived...$"
 
 Text_MakeBestUseOfMove::
 	.string "Te imploro que aproveches al\n"
 	.string "máximo ese movimiento y ganes poder!$"
 
 Text_PassedOnEverythingIKnow::
-	.string "Gasp, gasp, gasp…\p"
+	.string "Gasp, gasp, gasp...\p"
 	.string "Ya no tengo arrepentimientos.\n"
 	.string "He transmitido todo lo que sé.\p"
 	.string "Ahora puedo vivir sabiendo\n"

@@ -185,43 +185,43 @@ BattleFrontier_Lounge1_Text_OutstandingAbility_hns:
 
 BattleFrontier_Lounge1_Text_BestAspectHP_hns:
 	.string "Por cierto, su mejor aspecto,\n"
-	.string "diría que son sus PS…$"
+	.string "diría que son sus PS...$"
 
 BattleFrontier_Lounge1_Text_BestAspectAtk_hns:
 	.string "Por cierto, su mejor aspecto,\n"
-	.string "diría que es su ATAQUE…$"
+	.string "diría que es su ATAQUE...$"
 
 BattleFrontier_Lounge1_Text_BestAspectDef_hns:
 	.string "Por cierto, su mejor aspecto,\n"
-	.string "diría que es su DEFENSA…$"
+	.string "diría que es su DEFENSA...$"
 
 BattleFrontier_Lounge1_Text_BestAspectSpAtk_hns:
 	.string "Por cierto, su mejor aspecto,\n"
-	.string "diría que es su ATQ. ESPECIAL…$"
+	.string "diría que es su ATQ. ESPECIAL...$"
 
 BattleFrontier_Lounge1_Text_BestAspectSpDef_hns:
 	.string "Por cierto, su mejor aspecto,\n"
-	.string "diría que es su DEF. ESPECIAL…$"
+	.string "diría que es su DEF. ESPECIAL...$"
 
 BattleFrontier_Lounge1_Text_BestAspectSpeed_hns:
 	.string "Por cierto, su mejor aspecto,\n"
-	.string "Diría que es su VELOCIDAD…$"
+	.string "Diría que es su VELOCIDAD...$"
 
 BattleFrontier_Lounge1_Text_StatRelativelyGood_hns:
 	.string "Esa estadística es bastante buena.\n"
-	.string "…Hm… Así es como lo llamo.$"
+	.string "...Hm... Así es como lo llamo.$"
 
 BattleFrontier_Lounge1_Text_StatImpressive_hns:
 	.string "Esa estadística es impresionante.\n"
-	.string "…Hm… Así es como lo llamo.$"
+	.string "...Hm... Así es como lo llamo.$"
 
 BattleFrontier_Lounge1_Text_StatOutstanding_hns:
 	.string "¡Esa estadística es sobresaliente!\n"
-	.string "…Hm… Así es como lo llamo.$"
+	.string "...Hm... Así es como lo llamo.$"
 
 BattleFrontier_Lounge1_Text_StatFlawless_hns:
 	.string "¡Es impecable! ¡Es perfección!\n"
-	.string "…Hm… Así es como lo llamo.$"
+	.string "...Hm... Así es como lo llamo.$"
 
 BattleFrontier_Lounge1_Text_NoTimeForMyAdvice_hns:
 	.string "¿Qué?\n"

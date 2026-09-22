@@ -32,9 +32,9 @@ SSAnne_Deck_Text_ScrubbingDecksHardWork::
 	.string "¡Fregar cubiertas es duro!$"
 
 SSAnne_Deck_Text_FeelSeasick::
-	.string "Urf… I feel ill…\p"
+	.string "Urf... I feel ill...\p"
 	.string "Me dio mareo, así que salí\n"
-	.string "a tomar aire…$"
+	.string "a tomar aire...$"
 
 SSAnne_Deck_Text_EdmondIntro::
 	.string "Hey, matey!\p"

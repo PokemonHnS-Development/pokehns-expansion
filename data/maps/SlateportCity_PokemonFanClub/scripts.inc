@@ -271,7 +271,7 @@ SlateportCity_PokemonFanClub_Text_MeetChairman:
 
 SlateportCity_PokemonFanClub_Text_LikeToSeeEnteredContestPokemon:
 	.string "Los POKéMON de un ENTRENADOR que\n"
-	.string "ha entrado en un CONCURSO POKéMON…\l"
+	.string "ha entrado en un CONCURSO POKéMON...\l"
 	.string "Eso es lo que me gustaría ver.$"
 
 SlateportCity_PokemonFanClub_Text_AllowMeToExamineYourPokemon:
@@ -297,7 +297,7 @@ SlateportCity_PokemonFanClub_Text_HowIsYourPokemonGrowing:
 	.string "Permíteme examinarlo.$"
 
 SlateportCity_PokemonFanClub_Text_HmHmISee:
-	.string "Hm, hm…\n"
+	.string "Hm, hm...\n"
 	.string "Ya veo...$"
 
 SlateportCity_PokemonFanClub_Text_GiveMonMorePokeblocks:
@@ -309,7 +309,7 @@ SlateportCity_PokemonFanClub_Text_GiveMonMorePokeblocks:
 	.string "más {POKEBLOCK}S?$"
 
 SlateportCity_PokemonFanClub_Text_NoSpaceForReward:
-	.string "Oh, cielos…\p"
+	.string "Oh, cielos...\p"
 	.string "Tu POKéMON crece muy bien,\n"
 	.string "así que mereces un premio.\p"
 	.string "Lamentablemente, no tienes espacio\n"
@@ -386,10 +386,10 @@ SlateportCity_PokemonFanClub_Text_MonEnjoyedProtein:
 	.string "di PROTEÍNA.$"
 
 SlateportCity_PokemonFanClub_Text_Skitty:
-	.string "SKITTY: Fffnyaaaah…$"
+	.string "SKITTY: Fffnyaaaah...$"
 
 SlateportCity_PokemonFanClub_Text_Zigzagoon:
-	.string "ZIGZAGOON: Kyuuu…$"
+	.string "ZIGZAGOON: Kyuuu...$"
 
 SlateportCity_PokemonFanClub_Text_Azumarill:
 	.string "AZUMARILL: Marimari?$"

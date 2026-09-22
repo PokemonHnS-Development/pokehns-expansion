@@ -151,7 +151,7 @@ Route24_Text_RocketAfter:
 	.string "venganza.$"
 
 Route24_Text_RocketDisappears:
-	.string "…\p"
+	.string "...\p"
 	.string "¿Qué dices? ¿El TEAM ROCKET se\n"
 	.string "¿Adiós a dónde? Dice que está roto\l"
 	.string "contigo?\p"

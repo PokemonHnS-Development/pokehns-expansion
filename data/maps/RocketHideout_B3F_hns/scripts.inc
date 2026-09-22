@@ -278,14 +278,14 @@ RocketHideout_B3F_Text_B3FLockedDoorOpenSesame:
     .string "¡La puerta se abrió!$"
 
 RocketHideout_B3F_Text_Rival:
-    .string "…\p"
+    .string "...\p"
     .string "¿No te dije que yo iba\n"
     .string "a destruir al TEAM ROCKET?\p"
     .string "...Dime, ¿quién era el tipo de la\n"
     .string "capa que usaba POKéMON dragón?\p"
     .string "Mis POKéMON no fueron rivales.\p"
     .string "Lo que me molesta es lo que dijo.\n"
-    .string "me…\p"
+    .string "me...\p"
     .string "Me dijo que no amo ni confío\n"
     .string "suficiente en mis POKéMON.\p"
     .string "No es mi culpa que mi equipo sea\n"
@@ -671,11 +671,11 @@ RocketHideout_B3F_Text_ScientistRossSeen:
     .string "ser castigado.$"
 
 RocketHideout_B3F_Text_ScientistRossBeaten:
-    .string "Un simple error táctico me costó…$"
+    .string "Un simple error táctico me costó...$"
 
 RocketHideout_B3F_Text_ScientistRossAfter:
     .string "Una señal de radio que vuelve\n"
-    .string "locos a los POKéMON…\p"
+    .string "locos a los POKéMON...\p"
     .string "Mi experimento es un éxito\n"
     .string "total.\p"
     .string "Mi ascenso está asegurado. Esta\n"

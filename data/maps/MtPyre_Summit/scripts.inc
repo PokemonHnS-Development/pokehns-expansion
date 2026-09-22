@@ -451,7 +451,7 @@ MtPyre_Summit_Text_Grunt2PostBattle:
 	.string "¿Entonces por qué nos molestas?$"
 
 MtPyre_Summit_Text_Grunt3Intro:
-	.string "Tú…\n"
+	.string "Tú...\n"
 	.string "Te vimos en el MT. CHIMNEY.\p"
 	.string "No perteneces a ningún TEAM,\n"
 	.string "¿así que por qué estás aquí?$"
@@ -475,7 +475,7 @@ MtPyre_Summit_Text_Grunt4Intro:
 
 MtPyre_Summit_Text_Grunt4Defeat:
 	.string "Si tantas ganas tienes de unirte\n"
-	.string "al TEAM AQUA, lo pensaremos…$"
+	.string "al TEAM AQUA, lo pensaremos...$"
 
 MtPyre_Summit_Text_Grunt4PostBattle:
 	.string "Tenemos una gran combinación\n"
@@ -484,7 +484,7 @@ MtPyre_Summit_Text_Grunt4PostBattle:
 MtPyre_Summit_Text_ArchieWeGotTheOrbLetsGo:
 	.string "ARCHIE: MAXIE del TEAM MAGMA nos\n"
 	.string "ganó, pero logramos lo que queríamos.\p"
-	.string "El ORBE ROJO del MONTE CENIZA…\n"
+	.string "El ORBE ROJO del MONTE CENIZA...\n"
 	.string "¡Yo, ARCHIE, ya lo tengo conmigo!\p"
 	.string "Fufufu... ¡Ahora podemos hacer\n"
 	.string "realidad nuestro objetivo final!\p"
@@ -492,7 +492,7 @@ MtPyre_Summit_Text_ArchieWeGotTheOrbLetsGo:
 	.string "¡Nos retiramos!$"
 
 MtPyre_Summit_Text_BothOrbsTakenMagmaLeftThis:
-	.string "Oh, no…\n"
+	.string "Oh, no...\n"
 	.string "Esto no puede pasar...\p"
 	.string "No solo el ORBE AZUL, sino que\n"
 	.string "también se llevaron el ORBE ROJO...\p"
@@ -500,8 +500,8 @@ MtPyre_Summit_Text_BothOrbsTakenMagmaLeftThis:
 	.string "deben separarse. Van juntos.\p"
 	.string "¿Qué intentan hacer esos hombres\n"
 	.string "con los dos ORBES?\p"
-	.string "… … … … … …\n"
-	.string "… … … … … …\p"
+	.string "... ... ... ... ... ...\n"
+	.string "... ... ... ... ... ...\p"
 	.string "Ah, sí. ¿Fue el TEAM MAGMA quien vino\n"
 	.string "y se llevó el ORBE AZUL primero?\p"
 	.string "Bueno, con las prisas, dejaron esto\n"
@@ -546,28 +546,28 @@ MtPyre_Summit_Text_SuperAncientPokemonTaughtUs:
 	.string "POKéMON tienen vida, nuestro mundo\l"
 	.string "también está vivo...\p"
 	.string "Los POKéMON superantiguos tienen\n"
-	.string "nos enseñó que…$"
+	.string "nos enseñó que...$"
 
 MtPyre_Summit_Text_WillYouHearOutMyTale:
 	.string "en el MONTE CENIZA calmamos los\n"
-	.string "espíritus de POKéMON que partieron…\p"
+	.string "espíritus de POKéMON que partieron...\p"
 	.string "Este es un lugar elevado donde se\n"
-	.string "puede ver todo HOENN…\p"
+	.string "puede ver todo HOENN...\p"
 	.string "Los espíritus de los POKéMON\n"
-	.string "deben hallar consuelo aquí…\p"
-	.string "¿Es coincidencia que estés aquí…?\p"
+	.string "deben hallar consuelo aquí...\p"
+	.string "¿Es coincidencia que estés aquí...?\p"
 	.string "¿Escucharás mi historia? Una que se\n"
 	.string "cuenta mucho en la región de HOENN?$"
 
 MtPyre_Summit_Text_GroudonKyogreTale:
-	.string "Pasó hace muchísimo tiempo…\p"
+	.string "Pasó hace muchísimo tiempo...\p"
 	.string "El mundo fue azotado por una feroz\n"
 	.string "choque entre los POKéMON de tierra\l"
-	.string "y los POKéMON del mar…\p"
+	.string "y los POKéMON del mar...\p"
 	.string "Los POKéMON de tierra alzaron\n"
-	.string "montañas y crearon continentes…\p"
+	.string "montañas y crearon continentes...\p"
 	.string "Los POKéMON del mar alzaron huge\n"
-	.string "olas y esculpieron los océanos…\p"
+	.string "olas y esculpieron los océanos...\p"
 	.string "Su feroz duelo no tenía final.\p"
 	.string "El mundo fue envuelto en masivos\n"
 	.string "infernos y tormentas feroces.\p"
@@ -577,34 +577,34 @@ MtPyre_Summit_Text_GroudonKyogreTale:
 	.string "calmó a los adversarios furiosos.\p"
 	.string "La pareja, ya dócil, se sumergió\n"
 	.string "en el mar donde finalmente\l"
-	.string "desaparecieron…$"
+	.string "desaparecieron...$"
 
 MtPyre_Summit_Text_WellThatTooIsFine:
 	.string "Ya veo...\n"
-	.string "Bueno, eso también está bien…$"
+	.string "Bueno, eso también está bien...$"
 
 MtPyre_Summit_Text_MaxieSilence:
-	.string "MAXIE: {PLAYER}…\p"
-	.string "… … … … … …\n"
-	.string "… … … … … …$"
+	.string "MAXIE: {PLAYER}...\p"
+	.string "... ... ... ... ... ...\n"
+	.string "... ... ... ... ... ...$"
 
 MtPyre_Summit_Text_HearTheNewLegendOfHoenn:
 	.string "Es mi deber pasar las leyendas\n"
 	.string "de HOENN a futuras generaciones.\p"
 	.string "Y la crisis que acaba de terminar en\n"
-	.string "CIUDAD CALMA reescribió una leyenda…\p"
+	.string "CIUDAD CALMA reescribió una leyenda...\p"
 	.string "¿Tienes tiempo de escuchar la nueva\n"
 	.string "leyenda de HOENN?$"
 
 MtPyre_Summit_Text_HoennTrioTale:
-	.string "Pasó hace muchísimo tiempo…\p"
+	.string "Pasó hace muchísimo tiempo...\p"
 	.string "El mundo fue azotado por una feroz\n"
 	.string "choque entre los POKéMON de tierra\l"
-	.string "y los POKéMON del mar…\p"
+	.string "y los POKéMON del mar...\p"
 	.string "Los POKéMON de tierra alzaron\n"
-	.string "montañas y crearon continentes…\p"
+	.string "montañas y crearon continentes...\p"
 	.string "Los POKéMON del mar alzaron huge\n"
-	.string "olas y esculpieron los océanos…\p"
+	.string "olas y esculpieron los océanos...\p"
 	.string "Su feroz duelo no tenía final.\p"
 	.string "El mundo fue envuelto en masivos\n"
 	.string "fuegos y tormentas feroces.\p"
@@ -613,5 +613,5 @@ MtPyre_Summit_Text_HoennTrioTale:
 	.string "El POKéMON, de un verde brillante,\n"
 	.string "calmó a los dos POKéMON enfurecidos.\p"
 	.string "Luego, cumplido su deber, el POKéMON\n"
-	.string "verde voló hacia el azul infinito…$"
+	.string "verde voló hacia el azul infinito...$"
 

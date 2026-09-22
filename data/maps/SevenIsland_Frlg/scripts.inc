@@ -22,7 +22,7 @@ Text_SwordsDanceTeach::
 	.string "Poca gente viene por aquí.\p"
 	.string "If I train here, I'm convinced that\n"
 	.string "me haré cada vez más fuerte.\p"
-	.string "Sí, cada vez más fuerte…\p"
+	.string "Sí, cada vez más fuerte...\p"
 	.string "¿Cómo te gustaría aprender un\n"
 	.string "movimiento así? Es DANZA ESPADA.$"
 
@@ -44,7 +44,7 @@ SevenIsland_Text_IslandSign::
 SevenIsland_Text_IslandsMadeInSevenDays::
 	.string "Estas islas se llaman las ISLAS\n"
 	.string "SEVII porque son siete.\p"
-	.string "…O al menos eso dicen los\n"
+	.string "...O al menos eso dicen los\n"
 	.string "people believe.\p"
 	.string "La verdad es que estas islas\n"
 	.string "llevan ese nombre porque dicen\l"

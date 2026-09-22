@@ -183,7 +183,7 @@ MauvilleCity_BikeShop_Text_RydelGreeting:
 	.string "Soy el dueño de esta tienda.$"
 
 MauvilleCity_BikeShop_Text_DidYouComeFromFarAway:
-	.string "RYDEL: Tus ZAPATOS DE CORRER…\n"
+	.string "RYDEL: Tus ZAPATOS DE CORRER...\n"
 	.string "Están terriblemente sucios.\p"
 	.string "¿Vienes de muy lejos?$"
 
@@ -193,7 +193,7 @@ MauvilleCity_BikeShop_Text_GuessYouDontNeedBike:
 	.string "ninguna de mis BICICLETAS.$"
 
 MauvilleCity_BikeShop_Text_ExplainBikesChooseWhichOne:
-	.string "RYDEL: Hm, hm… … … … …\p"
+	.string "RYDEL: Hm, hm... ... ... ... ...\p"
 	.string "Dices que viniste hasta aquí\n"
 	.string "desde PUEBLO RAÍZ?\p"
 	.string "¡Cielos!\n"

@@ -22,9 +22,9 @@ RustboroCity_CuttersHouse_EventScript_Lass::
 	end
 
 RustboroCity_CuttersHouse_Text_YouCanPutThisHMToGoodUse:
-	.string "Esa expresión decidida…\n"
-	.string "Esa forma tan ágil de moverte…\l"
-	.string "Y tus POKéMON tan entrenados…\p"
+	.string "Esa expresión decidida...\n"
+	.string "Esa forma tan ágil de moverte...\l"
+	.string "Y tus POKéMON tan entrenados...\p"
 	.string "¡Eres un TRAINER muy hábil!\p"
 	.string "No, espera, no digas nada.\n"
 	.string "Lo noto solo con mirarte.\p"

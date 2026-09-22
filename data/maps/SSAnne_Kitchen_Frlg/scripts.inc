@@ -63,9 +63,9 @@ SSAnne_Kitchen_Text_SoBusyImDizzy::
 	.string "¡Debes darme espacio aquí!$"
 
 SSAnne_Kitchen_Text_PeelSpudsEveryDay::
-	.string "Hum-de-hum-de-ho…\p"
+	.string "Hum-de-hum-de-ho...\p"
 	.string "I peel spuds every day!\n"
-	.string "Hum-hum…$"
+	.string "Hum-hum...$"
 
 SSAnne_Kitchen_Text_HearAboutSnorlaxItsAGlutton::
 	.string "¿Oíste hablar de SNORLAX?\n"
@@ -74,8 +74,8 @@ SSAnne_Kitchen_Text_HearAboutSnorlaxItsAGlutton::
 	.string "¡como puede y lo hace SNORLAX!$"
 
 SSAnne_Kitchen_Text_OnlyGetToPeelOnions::
-	.string "Snivel… Sniff…\p"
-	.string "Solo puedo pelar cebollas…\n"
+	.string "Snivel... Sniff...\p"
+	.string "Solo puedo pelar cebollas...\n"
 	.string "Snif...$"
 
 SSAnne_Kitchen_Text_IAmLeChefMainCourseIs::

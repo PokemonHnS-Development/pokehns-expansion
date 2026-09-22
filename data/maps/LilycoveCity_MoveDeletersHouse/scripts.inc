@@ -67,7 +67,7 @@ LilycoveCity_MoveDeletersHouse_EventScript_LastMonWithSurf::
 	end
 
 LilycoveCity_MoveDeletersHouse_Text_ICanMakeMonForgetMove:
-	.string "Uh…\n"
+	.string "Uh...\n"
 	.string "Oh, sí, soy el BORRADOR DE MOVS.\p"
 	.string "Hago que los POKéMON olviden movs.\p"
 	.string "¿Quieres que haga eso?$"
@@ -80,7 +80,7 @@ LilycoveCity_MoveDeletersHouse_Text_WhichMoveShouldBeForgotten:
 
 LilycoveCity_MoveDeletersHouse_Text_MonOnlyKnowsOneMove:
 	.string "{STR_VAR_1} solo sabe un movimiento,\n"
-	.string "así que no puede olvidarlo…$"
+	.string "así que no puede olvidarlo...$"
 
 LilycoveCity_MoveDeletersHouse_Text_MonsMoveShouldBeForgotten:
 	.string "¡Hm! ¿{STR_VAR_2} de {STR_VAR_1}?\n"

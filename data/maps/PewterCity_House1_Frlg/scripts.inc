@@ -43,5 +43,5 @@ PewterCity_House1_Text_TradeMonsAreFinicky::
 	.string "en un intercambio.\p"
 	.string "Crece rápido, pero puede ignorar\n"
 	.string "a un ENTRENADOR novato en combate.\p"
-	.string "Si tuviéramos algunas MEDALLAS…$"
+	.string "Si tuviéramos algunas MEDALLAS...$"
 

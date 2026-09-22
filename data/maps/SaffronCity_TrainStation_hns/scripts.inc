@@ -320,7 +320,7 @@ SaffronMagnetTrainStation_Text_Officer_TrainNotOperating:
 	.string "no está funcionando ahora.$"
 
 SaffronMagnetTrainStation_Text_GymGuide:
-	.string "El MAGNET TRAIN es un tren\nsúper moderno que funciona con\pelectricidad e imanes para alcanzar\nuna velocidad increíble.\pSin embargo, si no hay\nelectricidad…$"
+	.string "El MAGNET TRAIN es un tren\nsúper moderno que funciona con\pelectricidad e imanes para alcanzar\nuna velocidad increíble.\pSin embargo, si no hay\nelectricidad...$"
 
 SaffronMagnetTrainStation_Text_GymGuide_ReturnedPart:
 	.string "Uff...\p¿Cuántas veces he ido y venido\nentre KANTO y JOHTO?$"

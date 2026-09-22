@@ -12,7 +12,7 @@ SINGLE_BATTLE_TEST("Oblivious prevents Infatuation")
     } SCENE {
         ABILITY_POPUP(player, ABILITY_OBLIVIOUS);
         NONE_OF { ANIMATION(ANIM_TYPE_STATUS, B_ANIM_STATUS_INFATUATION, player); }
-        MESSAGE("It doesn't affect Slowpoke…");
+        MESSAGE("It doesn't affect Slowpoke...");
     }
 }
 
@@ -27,7 +27,7 @@ SINGLE_BATTLE_TEST("Oblivious prevents Captivate")
     } SCENE {
         ABILITY_POPUP(player, ABILITY_OBLIVIOUS);
         NONE_OF { ANIMATION(ANIM_TYPE_GENERAL, B_ANIM_STATS_CHANGE, player); }
-        MESSAGE("It doesn't affect Slowpoke…");
+        MESSAGE("It doesn't affect Slowpoke...");
     }
 }
 
@@ -48,14 +48,14 @@ SINGLE_BATTLE_TEST("Oblivious prevents Taunt (Gen6+)")
         if (gen == GEN_6) {
             NONE_OF { ANIMATION(ANIM_TYPE_MOVE, MOVE_TAUNT, opponent); }
             ABILITY_POPUP(player, ABILITY_OBLIVIOUS);
-            MESSAGE("It doesn't affect Slowpoke…");
+            MESSAGE("It doesn't affect Slowpoke...");
             ANIMATION(ANIM_TYPE_MOVE, MOVE_SPORE, player);
             ANIMATION(ANIM_TYPE_STATUS, B_ANIM_STATUS_SLP, opponent);
         } else {
             ANIMATION(ANIM_TYPE_MOVE, MOVE_TAUNT, opponent);
             NONE_OF {
                 ABILITY_POPUP(player, ABILITY_OBLIVIOUS);
-                MESSAGE("It doesn't affect Slowpoke…");
+                MESSAGE("It doesn't affect Slowpoke...");
                 ANIMATION(ANIM_TYPE_MOVE, MOVE_SPORE, player);
                 ANIMATION(ANIM_TYPE_STATUS, B_ANIM_STATUS_SLP, opponent);
             }

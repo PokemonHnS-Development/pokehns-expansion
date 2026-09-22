@@ -75,7 +75,7 @@ Route10_PokemonCenter_1F_Text_HeardGhostsHauntLavender::
 	.string "LAVENDER TOWN.$"
 
 Route10_PokemonCenter_1F_Text_GiveEverstoneIfCaught20Mons::
-	.string "Oh… {PLAYER}!\n"
+	.string "Oh... {PLAYER}!\n"
 	.string "¡Te estaba buscando!\p"
 	.string "Soy yo, uno de los siempre\n"
 	.string "presentes AYUDANTES del PROF. OAK.\p"

@@ -20,7 +20,7 @@ PacifidlogTown_House5_EventScript_Gentleman::
 	end
 
 PacifidlogTown_House5_Text_CantSeeMirageIslandToday:
-	.string "Hoy no veo la ISLA ESPEJO…$"
+	.string "Hoy no veo la ISLA ESPEJO...$"
 
 PacifidlogTown_House5_Text_CanSeeMirageIslandToday:
 	.string "¡Oh! ¡Dios mío!\n"

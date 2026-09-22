@@ -117,7 +117,7 @@ Route24_Text_JoinTeamRocket::
 	.string "¿Estás seguro?\p"
 	.string "¡Vamos, únete a nosotros!\p"
 	.string "¡Te digo que te unas!\p"
-	.string "…Vale, necesitas convencerte.\p"
+	.string "...Vale, necesitas convencerte.\p"
 	.string "Te haré una oferta que no\n"
 	.string "refuse!$"
 

@@ -24,7 +24,7 @@ DayCare_Text_IllKeepIt::
 	.string "¡Gracias!$"
 
 DayCare_Text_YouHaveNoRoomForIt::
-	.string "No tienes espacio para él…\nVuelve cuando tengas espacio.$"
+	.string "No tienes espacio para él...\nVuelve cuando tengas espacio.$"
 
 DayCare_Text_ReceivedEgg::
 	.string "{PLAYER} recibió el HUEVO de\nparte del CUIDADOR.$"
@@ -69,7 +69,7 @@ DayCare_Text_FineThenComeAgain::
 	.string "Vuelve pronto.$"
 
 DayCare_Text_NotEnoughMoney::
-	.string "No tienes suficiente dinero…$"
+	.string "No tienes suficiente dinero...$"
 
 DayCare_Text_TakeOtherOneBackToo::
 	.string "¿Vas a recuperar al otro,\nlas pinturas?$"

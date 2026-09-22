@@ -94,7 +94,7 @@ PokemonFanClub_Text_Chairman_Rapidash:
 	.string "Es... lindo... adorable... listo...\n"
 	.string "insoportablemente...\l"
 	.string "además... increíble... oh... crees\l"
-	.string "so?…\l"
+	.string "so?...\l"
 	.string "que es mucho... salvaje... bello...\l"
 	.string "amable...\l"
 	.string "¡Me encanta!\p"
@@ -146,7 +146,7 @@ PokemonFanClub_Text_ClefairyGuy_MakingDo:
 
 PokemonFanClub_Text_ClefairyGuy_ReturnDoll:
 	.string "Ah, ya veo. La niña que perdió\n"
-	.string "este MUÑECO POKéMON está triste…\p"
+	.string "este MUÑECO POKéMON está triste...\p"
 	.string "Vale. ¿Podrías llevar este\n"
 	.string "MUÑECO POKéMON a esa pobre niña?\p"
 	.string "Algún día haré amigo a un\n"

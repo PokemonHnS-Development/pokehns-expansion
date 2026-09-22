@@ -120,19 +120,19 @@ Route11_EastEntrance_2F_Text_ExplainItemfinder::
 
 Route11_EastEntrance_2F_Text_BigMonAsleepOnRoad::
 	.string "Veamos qué tienen los\n"
-	.string "prismáticos…\p"
+	.string "prismáticos...\p"
 	.string "A big POKéMON is asleep on a road!$"
 
 Route11_EastEntrance_2F_Text_WhatABreathtakingView::
 	.string "Veamos qué tienen los\n"
-	.string "prismáticos…\p"
+	.string "prismáticos...\p"
 	.string "¡Qué vista tan impresionante!$"
 
 Route11_EastEntrance_2F_Text_RockTunnelGoodRouteToLavender::
 	.string "Veamos qué tienen los\n"
-	.string "prismáticos…\p"
+	.string "prismáticos...\p"
 	.string "Para llegar a PUEBLO LAVANDA,\n"
-	.string "CERULEAN CITY…\p"
+	.string "CERULEAN CITY...\p"
 	.string "parece buena opción ir por el\n"
 	.string "camino a seguir.$"
 

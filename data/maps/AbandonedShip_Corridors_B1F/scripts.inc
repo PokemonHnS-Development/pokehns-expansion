@@ -65,7 +65,7 @@ AbandonedShip_Corridors_B1F_Text_DuncanPostBattle:
 	.string "El fondo del barco se hundió en las\n"
 	.string "profundidades.\p"
 	.string "Si un POKéMON supiera ir bajo el agua,\n"
-	.string "podríamos avanzar un poco…$"
+	.string "podríamos avanzar un poco...$"
 
 AbandonedShip_Corridors_B1F_Text_YayItsAShip:
 	.string "¡Súper!\n"

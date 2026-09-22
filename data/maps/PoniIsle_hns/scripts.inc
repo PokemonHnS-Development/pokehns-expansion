@@ -395,7 +395,7 @@ Alola_Poni_TotemBattle_Text_0:
 
 Alola_Poni_TotemBattle_Text_1:
 	.string "¡El ELECTIVIRE Tótem fue derrotado!\n"
-	.string "Salió corriendo a algún lugar…$"
+	.string "Salió corriendo a algún lugar...$"
 
 PoniIsle_hns_Movement_FacePlayerUpAfterTotemWarp:
 	face_up
@@ -404,7 +404,7 @@ PoniIsle_hns_Movement_FacePlayerUpAfterTotemWarp:
 
 Alola_Poni_Totem_sign_Text_0:
 	.string "El tótem emana una energía\n"
-	.string "muy fuerte…\p"
+	.string "muy fuerte...\p"
 	.string "¿Tocas el tótem para teletransportarte\n"
 	.string "a otra isla?$"
 
@@ -422,7 +422,7 @@ Alola_Poni_Totem_sign_Text_4:
 
 Alola_Poni_Totem_sign_Text_5:
 	.string "Hay un tótem extraño aquí,\n"
-	.string "emana un gran poder de él…$"
+	.string "emana un gran poder de él...$"
 
 Alola_Poni_BattleVsTapuFini_Text_0:
 	.string "¡Fiiin!$"
@@ -431,7 +431,7 @@ Alola_Poni_TrainerBattleSwimmer1_Text_0:
 	.string "¡Agua más tibia, no hay problema!$"
 
 Alola_Poni_TrainerBattleSwimmer1_Text_1:
-	.string "Gah, olvidé mi protector solar…$"
+	.string "Gah, olvidé mi protector solar...$"
 
 Alola_Poni_TrainerBattleSwimmer1_Text_2:
 	.string "¡Nadé junto a muchos POKéMON!\n"
@@ -441,7 +441,7 @@ Alola_Poni_TrainerBattleSwimmer2_Text_0:
 	.string "¡Oye, no bloquees mi corriente!$"
 
 Alola_Poni_TrainerBattleSwimmer2_Text_1:
-	.string "Ugh, está bien,\nsolo déjame nadar…$"
+	.string "Ugh, está bien,\nsolo déjame nadar...$"
 
 Alola_Poni_TrainerBattleSwimmer2_Text_2:
 	.string "La corriente es ideal para flotar.\n¡No pienso flotar en otro lugar!$"

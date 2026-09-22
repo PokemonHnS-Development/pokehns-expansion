@@ -354,7 +354,7 @@ PetalburgWoods_Text_YouveGotSomeNerve:
 	.string "meterte con el TEAM AQUA!\l"
 	.string "¡Ven y lucha contra mí otra vez!\p"
 	.string "Quisiera decir que sí, pero me he\n"
-	.string "POKéMON…\p"
+	.string "POKéMON...\p"
 	.string "Y, oye, nosotros del TEAM AQUA también\n"
 	.string "algo en FUNDAHOJA.\p"
 	.string "¡Te dejaré ir hoy!$"
@@ -387,7 +387,7 @@ PetalburgWoods_Text_GoBugPokemonTeam:
 
 PetalburgWoods_Text_ICouldntWin:
 	.string "Tengo todos estos POKéMON,\n"
-	.string "pero no pude ganar…$"
+	.string "pero no pude ganar...$"
 
 PetalburgWoods_Text_ImOutOfPokeBalls:
 	.string "Atrapé varios POKéMON.\n"

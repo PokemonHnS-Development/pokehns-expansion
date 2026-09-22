@@ -39,7 +39,7 @@ Route40_Text_SwimmermRandallSeen:
 	.string "¡Nada!$"
 
 Route40_Text_SwimmermRandallBeaten:
-	.string "Uh-oh. I lost…$"
+	.string "Uh-oh. I lost...$"
 
 Route40_Text_SwimmermRandallAfter:
 	.string "Nadar ejercita todo\n"
@@ -147,7 +147,7 @@ Route40_Text_MonicaMonday:
 
 Route40_Text_MonicaNotMonday:
 	.string "MONICA: No creo que hoy\n"
-	.string "sea lunes. Qué triste…$"
+	.string "sea lunes. Qué triste...$"
 
 Route40_Text_MonicaNope:
 	.string "Ese no.$"

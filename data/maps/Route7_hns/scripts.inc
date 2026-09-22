@@ -17,7 +17,7 @@ Route7_EventScript_Door::
 
 Route7_Text_UndergroundPathSign:
 	.string "¿Qué es este volante?\p"
-	.string "… Entrenadores rudos han\n"
+	.string "... Entrenadores rudos han\n"
 	.string "estado luchando en el\l"
 	.string "CAMINO SUBTERRÁNEO.\p"
 	.string "Por las quejas de los\n"
@@ -26,5 +26,5 @@ Route7_Text_UndergroundPathSign:
 	.string "POLICÍA DE CELADON$"
 
 Route7_Text_LockedDoor:
-	.string "Está cerrado con llave…$"
+	.string "Está cerrado con llave...$"
 

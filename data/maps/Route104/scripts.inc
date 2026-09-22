@@ -1094,7 +1094,7 @@ Route104_Text_MayHowsYourPokedex:
 
 Route104_Text_MayMinesDecentLetsBattle:
 	.string "La mía se ve bastante bien.\n"
-	.string "So…\l"
+	.string "So...\l"
 	.string "¿Qué tal una pequeña batalla?$"
 
 Route104_Text_MayHaventRaisedPokemon:
@@ -1148,7 +1148,7 @@ Route104_Text_BrendanIntro:
 	.string "ENTRENADOR, ¡pero no tendré piedad!$"
 
 Route104_Text_BrendanDefeat:
-	.string "Hmm…\n"
+	.string "Hmm...\n"
 	.string "Eres bastante bueno.$"
 
 Route104_Text_BrendanPostBattle:
