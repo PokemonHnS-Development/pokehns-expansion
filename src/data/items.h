@@ -13163,7 +13163,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = COMPOUND_STRING(
             "Guarda Bayas\n"
             "Polvo hecho usando\n"
-            "a Berry Crusher."),
+            "una Trituradora de Bayas."),
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_BAG_MENU,
@@ -13208,7 +13208,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = COMPOUND_STRING(
             "Un estuche para guardar\n"
             "{POKEBLOCK}s hechos con\n"
-            "a Berry Blender."),
+            "una Licuadora de Bayas."),
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_PBLOCK_CASE,
