@@ -345,7 +345,7 @@ BattleFrontier_BattlePikeLobby_Text_SaveBeforeChallenge_hns:
 	.string "¿Te parece bien?$"
 
 BattleFrontier_BattlePikeLobby_Text_StepThisWay_hns:
-	.string "Please step this way…$"
+	.string "Pase por aquí, por favor…$"
 
 BattleFrontier_BattlePikeLobby_Text_ChallengeEndedRecordResults_hns:
 	.string "Tu desafío ha terminado…\p"
@@ -383,7 +383,7 @@ BattleFrontier_BattlePikeLobby_Text_FailedToSaveBeforeQuitting_hns:
 
 BattleFrontier_BattlePikeLobby_Text_SnatchedVictoryFromQueen_hns:
 	.string "Felicidades…\p"
-	.string "Le has arrebatado la victoria a la\n"
+	.string "Le has robado la victoria a la\n"
 	.string "REINA CARPA y ganaste el evento…$"
 
 BattleFrontier_BattlePikeLobby_Text_AwardYouTheseBattlePoints_hns:

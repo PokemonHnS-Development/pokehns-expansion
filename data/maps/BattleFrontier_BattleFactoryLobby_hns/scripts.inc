@@ -368,14 +368,14 @@ BattleFrontier_BattleFactoryLobby_Text_WillHoldMonsForSafekeeping_hns:
 	.string "mientras compites.$"
 
 BattleFrontier_BattleFactoryLobby_Text_StepThisWay_hns:
-	.string "Please step this way.$"
+	.string "Pase por aquí, por favor.$"
 
 BattleFrontier_BattleFactoryLobby_Text_ReturnMons_hnsSaveResults_hns:
 	.string "¡Gracias por participar!\p"
 	.string "Te devolveré tus POKéMON a cambio\n"
 	.string "de nuestros POKéMON de alquiler.\p"
 	.string "También debo guardar los resultados.\n"
-	.string "Please wait.$"
+	.string "Espere un momento.$"
 
 @ Unused
 BattleFrontier_BattleFactoryLobby_Text_ReturnMons_hns:
@@ -406,7 +406,7 @@ BattleFrontier_BattleFactoryLobby_Text_WaitingForYouToResume_hns:
 BattleFrontier_BattleFactoryLobby_Text_DidntSaveBeforeQuitting_hns:
 	.string "Siento decirte que no guardaste\n"
 	.string "la partida la última vez que jugaste.\p"
-	.string "Por eso, has sido descalificado\n"
+	.string "Por eso has sido descalificado\n"
 	.string "de tu desafío.$"
 
 @ Unused

@@ -111,14 +111,14 @@ GoldenrodCity_FlowerShop_EventScript_Floria3::
 GoldenrodCity_FlowerShop_Text_Floria:
 	.string "Cuando le hablé a mi hermana del\n"
 	.string "árbol, dijo que es peligroso.\p"
-	.string "Si venzo a WHITNEY, me pregunto\n"
+	.string "Si le gano a WHITNEY, me pregunto\n"
 	.string "si me prestará su regadera...$"
 
 GoldenrodCity_FlowerShop_Text_Owner1:
 .string "Al parecer, hay un árbol raro\n"
 .string "en la RUTA 36.\p"
 .string "Dicen que baila al regarlo\n"
-.string "it...\p"
+.string "que será...\p"
 .string "¡Oh, claro que no!\p"
 .string "Esta es una floristería, así que\n"
 .string "sí tenemos regaderas...\p"
@@ -132,7 +132,7 @@ GoldenrodCity_FlowerShop_Text_Owner2:
 .string "Al parecer, hay un árbol raro\n"
 .string "en la RUTA 36.\p"
 .string "Dicen que baila al regarlo\n"
-.string "it...\p"
+.string "que será...\p"
 .string "¡Oh, es una MEDALLA PLANICIE del\n"
 .string "GIMNASIO de CIUDAD TRIGAL!\p"
 .string "¡¿Venciste a WHITNEY?!\p"
@@ -152,7 +152,7 @@ GoldenrodCity_FlowerShop_Text_Owner4:
     .string "agua, mi cielo!$"
 
 GoldenrodCity_FlowerShop_Text_FloriaYouBeatWhitney:
-    .string "Wow, you beat WHITNEY? Cool!$"
+    .string "¿Venciste a WHITNEY? ¡Genial!$"
 
 GoldenrodCity_FlowerShop_Text_FloriaItWasAMon:
     .string "So it really was a POKéMON!$"

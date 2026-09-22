@@ -75,7 +75,7 @@ Gate_Route43_Rocket_Text_TollFee:
     .string "pasar.$"
 
 Gate_Route43_Rocket_Text_ThankYou:
-    .string "Thank you very much!$"
+    .string "¡Muchas gracias!$"
 
 Gate_Route43_Rocket_Text_AllYouGot:
     .string "Paga lo que tengas, por favor.$"

@@ -171,7 +171,7 @@ Route39_Text_BarnTotallyHealthy:
 	.string "¡está sano!$"
 
 Route39_Text_BarnNoBerries:
-	.string "{PLAYER} has no ORAN BERRIES…$"
+	.string "{PLAYER} no tiene BAYAS ARAN…$"
 
 Route39_Text_BarnRefusedBerry:
 	.string "{PLAYER} no quiso darle una\n"

@@ -606,7 +606,7 @@ Route111_Text_ViviIntro:
 	.string "¡En serio! ¡De verdad!$"
 
 Route111_Text_ViviDefeat:
-	.string "Huh? Did I just lose?$"
+	.string "¿Eh? ¿Acabo de perder?$"
 
 Route111_Text_ViviPostBattle:
 	.string "Esto es horrible...\p"

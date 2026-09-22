@@ -120,7 +120,7 @@ RuinsOfAlph_Outside_Text_PsychicNathan_Beaten:
 	.string "…$"
 
 RuinsOfAlph_Outside_Text_PsychicNathan_After:
-	.string "I like thinking here.$"
+	.string "Me gusta pensar aquí.$"
 
 RuinsOfAlph_Outside_Text_MysteryChamberSign:
 	.string "MYSTERY STONE PANEL CHAMBER$"

@@ -204,7 +204,7 @@ DragonsDen_Shrine_Text_Question5:
     .string "¿Cuál es más importante?$"
 
 DragonsDen_Shrine_Text_WrongAnswer1:
-    .string "Hah? I didn't quite catch that…$"
+    .string "¿Eh? No te escuché bien…$"
 
 DragonsDen_Shrine_Text_WrongAnswer2:
     .string "¿Qué fue lo que dijiste?$"

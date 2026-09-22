@@ -66,7 +66,7 @@ MirageTower_4F_Text_TakeRootFossil:
 	.string "¿Tomas el FÓSIL RAÍZ igual?$"
 
 MirageTower_4F_Text_LeftRootFossilAlone:
-	.string "{PLAYER} left the ROOT FOSSIL alone.$"
+	.string "{PLAYER} dejó el FÓSIL RAÍZ.$"
 
 MirageTower_4F_Text_TakeClawFossil:
 	.string "Encontraste el FÓSIL GARRA.\p"
@@ -75,5 +75,5 @@ MirageTower_4F_Text_TakeClawFossil:
 	.string "¿Tomas el FÓSIL GARRA igual?$"
 
 MirageTower_4F_Text_LeaveClawFossilAlone:
-	.string "{PLAYER} left the CLAW FOSSIL alone.$"
+	.string "{PLAYER} dejó el FÓSIL GARRA.$"
 

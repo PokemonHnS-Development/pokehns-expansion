@@ -1168,7 +1168,7 @@ PetalburgCity_Gym_Text_WallyIveNeverCaughtAPokemon:
 	.string "No sé cómo hacerlo...$"
 
 PetalburgCity_Gym_Text_DadHmISee:
-	.string "DAD: Hm. I see.$"
+	.string "PAPÁ: Hm. Ya veo.$"
 
 PetalburgCity_Gym_Text_DadPlayerGoWithWally:
 	.string "PAPÁ: {PLAYER}, ya escuchaste,\n"
@@ -1189,14 +1189,14 @@ PetalburgCity_Gym_Text_WallyThankYouAndDadGivesPokeBall:
 
 PetalburgCity_Gym_Text_WallyOhWowThankYou:
 	.string "WALLY: ¡Oh, guau!\n"
-	.string "Thank you!$"
+	.string "¡Gracias!$"
 
 PetalburgCity_Gym_Text_WouldYouReallyComeWithMe:
 	.string "{PLAYER}... ¿De verdad vendrías\n"
 	.string "conmigo?$"
 
 PetalburgCity_Gym_Text_DadSoDidItWorkOut:
-	.string "DAD: So, did it work out?$"
+	.string "PAPÁ: ¿Y funcionó?$"
 
 PetalburgCity_Gym_Text_WallyThankYouBye:
 	.string "WALLY: Gracias, sí, funcionó.\n"
@@ -1251,7 +1251,7 @@ PetalburgCity_Gym_Text_YouHaveGottenStronger:
 	.string "PAPÁ: Hm... {PLAYER}, veo que ya\n"
 	.string "corazón sea más fuerte.\p"
 	.string "por la cantidad de MEDALLAS\n"
-	.string "que has conseguido.$"
+	.string "que has logrado.$"
 
 PetalburgCity_Gym_Text_NormanIntro:
 	.string "PAPÁ: Hm...\n"
@@ -1463,7 +1463,7 @@ PetalburgCity_Gym_Text_AlexiaIntro:
 	.string "temerario puedo ser al atacar.$"
 
 PetalburgCity_Gym_Text_AlexiaDefeat:
-	.string "Our defenses weren't enough…$"
+	.string "Nuestras defensas no bastaron…$"
 
 PetalburgCity_Gym_Text_AlexiaPostBattle:
 	.string "Creo que me has dado una lección\n"
@@ -1485,7 +1485,7 @@ PetalburgCity_Gym_Text_JodyIntro:
 	.string "¡El hijo del LÍDER!$"
 
 PetalburgCity_Gym_Text_JodyDefeat:
-	.string "But… I went all out!$"
+	.string "¡Pero… me esforcé al máximo!$"
 
 PetalburgCity_Gym_Text_JodyPostBattle:
 	.string "La forma en que usas tus POKéMON…\n"

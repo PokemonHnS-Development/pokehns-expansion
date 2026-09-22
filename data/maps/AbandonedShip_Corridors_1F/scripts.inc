@@ -15,7 +15,7 @@ AbandonedShip_Corridors_1F_Text_CharlieIntro:
 	.string "flotador en el barco?$"
 
 AbandonedShip_Corridors_1F_Text_CharlieDefeat:
-	.string "Whoa, you overwhelmed me!$"
+	.string "¡Vaya, me superaste!$"
 
 AbandonedShip_Corridors_1F_Text_CharliePostBattle:
 	.string "¡No es fácil lanzar POKé BALLS\n"

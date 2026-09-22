@@ -42,7 +42,7 @@ AbandonedShip_Rooms_1F_Text_ThaliaIntro:
 	.string "hasta aquí? ¡Debes ser curioso!$"
 
 AbandonedShip_Rooms_1F_Text_ThaliaDefeat:
-	.string "Not just curious, but also strong…$"
+	.string "No solo curioso, sino fuerte…$"
 
 AbandonedShip_Rooms_1F_Text_ThaliaPostBattle:
 	.string "El hombre de al lado...\p"
@@ -58,7 +58,7 @@ AbandonedShip_Rooms_1F_Text_ThaliaRematchIntro:
 	.string "¿Vuelves? ¡Debes tener curiosidad!$"
 
 AbandonedShip_Rooms_1F_Text_ThaliaRematchDefeat:
-	.string "Aren't you too strong?$"
+	.string "¿No eres demasiado fuerte?$"
 
 AbandonedShip_Rooms_1F_Text_ThaliaPostRematch:
 	.string "¡Seguro que ese hombre trama algo!\n"

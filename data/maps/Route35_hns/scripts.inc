@@ -113,7 +113,7 @@ Route35_Text_CamperIvanSeen:
 	.string "mi radio. ¡Creo que estoy listo!$"
 
 Route35_Text_CamperIvanBeaten:
-	.string "I give!$"
+	.string "¡Me rindo!$"
 
 Route35_Text_CamperIvanAfter:
 	.string "La música de la radio cambia el\n"
@@ -135,7 +135,7 @@ Route35_Text_PicnickerBrookeSeen:
 	.string "confiar en él.$"
 
 Route35_Text_PicnickerBrookeBeaten:
-	.string "Oh, my! You're so strong!$"
+	.string "¡Oh, cielos! ¡Eres muy fuerte!$"
 
 Route35_Text_PicnickerBrookeAfter:
 	.string "Confío más en mis POKéMON que en\n"
@@ -155,7 +155,7 @@ Route35_Text_BirdKeeperBryanSeen:
 	.string "¿Qué tipo de BALLS usas?$"
 
 Route35_Text_BirdKeeperBryanBeaten:
-	.string "Yikes! Not fast enough!$"
+	.string "¡Ay! ¡No fui lo bastante rápida!$"
 
 Route35_Text_BirdKeeperBryanAfter:
 	.string "Algunos POKéMON huyen rápido.\p"
@@ -166,7 +166,7 @@ Route35_Text_BirdKeeperBryanAfter:
 	.string "Él lo convierte en una BALL única.$"
 
 Route35_Text_JugglerIrwinSeen:
-	.string "Behold my graceful BALL dexterity!$"
+	.string "¡Contempla mi destreza con la PELOTA!$"
 
 Route35_Text_JugglerIrwinBeaten:
 	.string "¡Uf! ¡Qué descarga!$"
@@ -212,7 +212,7 @@ Route35_Text_BugCatcherArnieYanma:
 	.string "Estoy tan impactado que no me muevo.$"
 
 Route35_Text_FirebreatherWaltSeen:
-	.string "I'm practicing my fire breathing.$"
+	.string "Practico mi aliento de fuego.$"
 
 Route35_Text_FirebreatherWaltBeaten:
 	.string "¡Ay! ¡Me quemé la punta de la nariz!$"
@@ -222,7 +222,7 @@ Route35_Text_FirebreatherWaltAfter:
 	.string "atrae POKéMON salvajes.$"
 
 Route35_Text_OfficerDirkSeen:
-	.string "Danger lurks in the night!$"
+	.string "¡El peligro acecha en la noche!$"
 
 Route35_Text_OfficerDirkBeaten:
 	.string "Whoops!$"

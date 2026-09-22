@@ -152,5 +152,5 @@ PalletTown_Lab_Text_OaksLabPC:
 	.string "Sigo trabajando duro en ella.\p"
 	.string "Oí rumores de que {PLAYER} se\n"
 	.string "está haciendo famoso.\p"
-	.string "Me alegra mucho escuchar eso.\p"
+	.string "Me alegra mucho oír eso.\p"
 	.string "ELM en PUEBLO PRIMAVERA 8-)$"

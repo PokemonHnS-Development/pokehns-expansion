@@ -291,7 +291,7 @@ WhirlIslands_LugiaChamber_EventScript_KuniAfter::
 WhirlIslands_LugiaChamber_Text_Kimono_AfterNotCaught:
 	.string "No solo has traído a LUGIA\n"
 	.string "aparezca, sino que también\l"
-	.string "it...\p"
+	.string "es que...\p"
 	.string "No hay nada más que podamos\n"
 	.string "decir. Cuídate mucho en tu\l"
 	.string "viaje...$"	
@@ -299,7 +299,7 @@ WhirlIslands_LugiaChamber_Text_Kimono_AfterNotCaught:
 WhirlIslands_LugiaChamber_Text_Kimono_AfterCaught:
 	.string "No solo has traído a LUGIA\n"
 	.string "aparezca, sino que lo capturaste\l"
-	.string "it...\p"
+	.string "es que...\p"
 	.string "No hay nada más que podamos\n"
 	.string "decir. Cuídate mucho en tu\l"
 	.string "viaje...$"

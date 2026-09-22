@@ -155,7 +155,7 @@ JaggedPass_Text_EricIntro:
 	.string "¡Me llega al alma!$"
 
 JaggedPass_Text_EricDefeat:
-	.string "Losing left me bitter!$"
+	.string "¡Perder me dejó amargado!$"
 
 JaggedPass_Text_EricPostBattle:
 	.string "Sí, perdí en las batallas POKéMON…\p"

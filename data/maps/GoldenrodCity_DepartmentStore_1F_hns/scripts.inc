@@ -39,7 +39,7 @@ GoldenrodDeptStore1_EventScript_Directory::
 	end
 
 GoldenrodDeptStor1_Text_Receptionist:
-    .string "Welcome to GOLDENROD DEPT.STORE.$"
+    .string "Bienvenido a TIENDA CIUDAD TRIGAL.$"
 
 GoldenrodDeptStore1_Text_Gentleman:
     .string "Los ALMACENES tienen una\n"
@@ -48,7 +48,7 @@ GoldenrodDeptStore1_Text_Gentleman:
     .string "en el GAME CORNER.$"
 
 GoldenrodDeptStore1_Text_PokefanF:
-    .string "I'm raring to shop again today!$"
+    .string "¡Hoy tengo ganas de ir de compras!$"
 
 GoldenrodDeptStore1_Text_BugCatcher:
     .string "Mamá es buena buscando ofertas.\p"

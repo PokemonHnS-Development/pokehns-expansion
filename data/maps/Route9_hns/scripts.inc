@@ -107,7 +107,7 @@ Route9_Text_HikerSidneySeen:
 	.string "¡Pero primero, luchamos!$"
 
 Route9_Text_HikerSidneyBeaten:
-	.string "Oh, dang! I lost that…$"
+	.string "¡Ay, no! Perdí eso…$"
 
 Route9_Text_HikerSidneyAfter:
 	.string "La CENTRAL ELÉCTRICA está tras un\n"

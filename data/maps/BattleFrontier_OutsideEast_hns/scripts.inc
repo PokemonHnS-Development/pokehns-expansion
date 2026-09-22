@@ -286,7 +286,7 @@ BattleFrontier_OutsideEast_Text_ThriveInDarkness_hns:
 BattleFrontier_OutsideEast_Text_PutTogetherUltimateTeam_hns:
 	.string "No dormí por una semana, ¡pero\n"
 	.string "armé el equipo definitivo!\p"
-	.string "No me veo perdiendo, en serio.\n"
+	.string "No creo que pueda perder, en serio.\n"
 	.string "¡Asaltaremos la ARENA BATALLA!$"
 
 BattleFrontier_OutsideEast_Text_DidScottBringYouHere_hns:
@@ -294,7 +294,7 @@ BattleFrontier_OutsideEast_Text_DidScottBringYouHere_hns:
 	.string "¿Qué pasa con ese tipo?\p"
 	.string "Parece que realmente sabe\n"
 	.string "cómo hallar TRAINERS con talento,\p"
-	.string "pero nunca lo he visto luchar\n"
+	.string "pero nunca lo he visto pelear\n"
 	.string "en persona.$"
 
 BattleFrontier_OutsideEast_Text_BelieveInYouBuddy_hns:

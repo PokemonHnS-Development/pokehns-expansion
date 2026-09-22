@@ -717,7 +717,7 @@ IlexForest_Text_ShrineCelebiEvent:
 	.string "¿Quieres poner la GS BALL aquí?$"
 
 IlexForest_Text_InsertGSBall:
-	.string "{PLAYER} put in the GS BALL.$"
+	.string "{PLAYER} puso la GS BALL.$"
 
 IlexForest_Text_KurtCaughtCelebi:
 	.string "¡Uff, eso fue increíble!\p"
@@ -763,4 +763,4 @@ IlexForest_Text_Kimono_Girl4:
 	.string "¡Eres un POKéMON muy listo!$"
 
 IlexForest_Text_Kimono_Girl5:
-	.string "See you.$"
+	.string "Nos vemos.$"

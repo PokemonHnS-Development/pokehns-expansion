@@ -198,7 +198,7 @@ FortreeCity_Gym_Text_AshleyIntro:
 	.string "¡No me ganarás fácilmente!$"
 
 FortreeCity_Gym_Text_AshleyDefeat:
-	.string "I was beaten…$"
+	.string "Fui derrotado…$"
 
 FortreeCity_Gym_Text_AshleyPostBattle:
 	.string "Gracias a WINONA, la gente de\n"
@@ -289,7 +289,7 @@ FortreeCity_Gym_Text_WinonaPreRematch:
 	.string "escapar de la gravedad del suelo.\p"
 	.string "Pero al buscar la excelencia,\n"
 	.string "¡tenemos el poder de volar!\p"
-	.string "Has escalado la cima como el\n"
+	.string "Has llegado a la cima como el\n"
 	.string "CAMPEÓN actual.\p"
 	.string "¡Por favor, deja que vea tu poder\n"
 	.string "en pleno vuelo!$"
@@ -305,7 +305,7 @@ FortreeCity_Gym_Text_WinonaRematchNeedTwoMons:
 	.string "escapar de la gravedad del suelo.\p"
 	.string "Pero al buscar la excelencia,\n"
 	.string "¡tenemos el poder de volar!\p"
-	.string "Has escalado la cima como el\n"
+	.string "Has llegado a la cima como el\n"
 	.string "CAMPEÓN actual.\p"
 	.string "¡Por favor, deja que vea tu poder\n"
 	.string "¡en pleno vuelo!\p"

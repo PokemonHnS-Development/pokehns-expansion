@@ -127,7 +127,7 @@ Route43_Text_PokemaniacRonSeen:
     .string "¡Rayos! ¡Mi POKéMON es genial!$"
 
 Route43_Text_PokemaniacRonBeaten:
-    .string "My NIDOKING did pretty right on!$"
+    .string "¡Mi NIDOKING lo hizo muy bien!$"
 
 Route43_Text_PokemaniacRonAfter:
     .string "Está bien que a la gente le guste\n"
@@ -154,7 +154,7 @@ Route43_Text_CamperSpencerSeen:
     .string "POKéMON... ¡es superdivertido!$"
 
 Route43_Text_CamperSpencerBeaten:
-    .string "Losing isn't fun at all…$"
+    .string "Perder no es nada divertido…$"
 
 Route43_Text_CamperSpencerAfter:
     .string "¿Qué pasa en el LAGO DE la FURIA?\p"
@@ -165,7 +165,7 @@ Route43_Text_PicnickerTiffanySeen:
     .string "¡Juguemos un rato!$"
 
 Route43_Text_PicnickerTiffanyBeaten:
-    .string "I played too much!$"
+    .string "¡Jugué demasiado!$"
 
 Route43_Text_PicnickerTiffanyWantsPicnic:
     .string "Hago un picnic con POKéMON.\p"
@@ -180,7 +180,7 @@ Route43_Text_TiffanyRematchIntro:
     .string "¡Juguemos un rato!$"
 
 Route43_Text_TiffanyRematchDefeat:
-    .string "I played too much!$"
+    .string "¡Jugué demasiado!$"
 
 Route43_Text_TiffanyPostRematch:
     .string "Hago un picnic con POKéMON.\p"

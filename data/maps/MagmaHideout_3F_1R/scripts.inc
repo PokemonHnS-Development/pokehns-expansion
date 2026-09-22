@@ -33,7 +33,7 @@ MagmaHideout_3F_1R_Text_Grunt16Intro:
 
 MagmaHideout_3F_1R_Text_Grunt16Defeat:
 	.string "Oh, no!\n"
-	.string "You're not to be trusted at all!$"
+	.string "¡No se puede confiar en ti!$"
 
 MagmaHideout_3F_1R_Text_Grunt16PostBattle:
 	.string "Escúchame.\n"

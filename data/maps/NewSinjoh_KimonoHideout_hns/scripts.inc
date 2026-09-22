@@ -180,7 +180,7 @@ NewSinjoh_KimonoHideout_EventScript_MiharuFinal::
 	end
 
 NewSinjoh_KimonoHideout_Text_MiharuFinal:
-	.string "MIHARU: Le has hecho un gran\n"
+	.string "MIHARU: Hiciste un gran\n"
 	.string "servicio al pueblo, {PLAYER}.\p"
 	.string "No olvidaremos esto.$"
 
@@ -282,7 +282,7 @@ NewSinjoh_KimonoHideout_Text_ShizukoBeforeBattle:
 NewSinjoh_KimonoHideout_Text_ShizukoAfter:
 	.string "SHIZUKO: El vínculo que tienes\n"
 	.string "con tu POKéMON es muy fuerte.\p"
-	.string "Te has ganado esta PLACA.$"
+	.string "Te ganaste esta PLACA.$"
 
 NewSinjoh_KimonoHideout_EventScript_ShizukoFinal::
 	msgbox NewSinjoh_KimonoHideout_Text_ShizukoFinal, MSGBOX_AUTOCLOSE
@@ -311,6 +311,6 @@ NewSinjoh_KimonoHideout_Text_OldMan:
 	.string "si llegas a luchar con ellos.$"
 
 NewSinjoh_KimonoHideout_Text_OldManAfter:
-    .string "Has vencido a los campeones de\n"
+    .string "Venciste a los campeones de\n"
 	.string "nuestra aldea.\p"
 	.string "¿Qué significa eso, jovencito?$"

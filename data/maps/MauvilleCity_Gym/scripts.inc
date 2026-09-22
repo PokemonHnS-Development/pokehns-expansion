@@ -288,7 +288,7 @@ MauvilleCity_Gym_Text_ShawnIntro:
 	.string "¡No hay forma de que pierda fácil!$"
 
 MauvilleCity_Gym_Text_ShawnDefeat:
-	.string "Unplugged and turned off…$"
+	.string "Desconectado y apagado...$"
 
 MauvilleCity_Gym_Text_ShawnPostBattle:
 	.string "WATTSON, nuestro LÍDER de GIMNASIO,\n"
@@ -301,7 +301,7 @@ MauvilleCity_Gym_Text_BenIntro:
 	.string "¿No es divertido?$"
 
 MauvilleCity_Gym_Text_BenDefeat:
-	.string "It's no fun to lose…$"
+	.string "Perder no es divertido...$"
 
 MauvilleCity_Gym_Text_BenPostBattle:
 	.string "WATTSON dice que le gusta poner\n"
@@ -312,7 +312,7 @@ MauvilleCity_Gym_Text_VivianIntro:
 	.string "POKéMON, ¡quedarás impactado!$"
 
 MauvilleCity_Gym_Text_VivianDefeat:
-	.string "I'm shocked by your power!$"
+	.string "¡Tu poder me sorprende!$"
 
 MauvilleCity_Gym_Text_VivianPostBattle:
 	.string "He oído que MALVILLAR fue fundada\n"

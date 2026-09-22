@@ -63,14 +63,14 @@ Route110_TrickHousePuzzle6_Text_BennyIntro:
 	.string "volar sobre el muro…$"
 
 Route110_TrickHousePuzzle6_Text_BennyDefeat:
-	.string "Gwaaah! I blew it!$"
+	.string "¡Guaaah! ¡Lo arruiné!$"
 
 Route110_TrickHousePuzzle6_Text_BennyPostBattle:
 	.string "Ehehehe… Supongo que perdí porque\n"
 	.string "Intentaba hacer trampa.$"
 
 Route110_TrickHousePuzzle6_Text_SebastianIntro:
-	.string "Me mareo con estas puertas\n"
+	.string "Me marea estas puertas\n"
 	.string "giratorias…$"
 
 Route110_TrickHousePuzzle6_Text_SebastianDefeat:

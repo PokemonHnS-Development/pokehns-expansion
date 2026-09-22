@@ -414,7 +414,7 @@ AzaleaTown_Text_Kurt1:
 	.string "¿Qué está pasando?$"
 
 AzaleaTown_Text_Kurt2:
-	.string "{PLAYER}, here's your GS BALL back!$"
+	.string "{PLAYER} ¡aquí está tu GS BALL!$"
 
 AzaleaTown_Text_Kurt3:
 	.string "¿Podrías ver qué pasa en el BOSQUE\n"

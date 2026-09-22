@@ -400,10 +400,10 @@ MossdeepCity_Gym_Text_PrestonPostBattle:
 	.string "Esa es mi advertencia para ti.$"
 
 MossdeepCity_Gym_Text_VirgilIntro:
-	.string "Let me see your talent!$"
+	.string "¡Muéstrame tu talento!$"
 
 MossdeepCity_Gym_Text_VirgilDefeat:
-	.string "You possess spectacular talent!$"
+	.string "¡Tienes un talento espectacular!$"
 
 MossdeepCity_Gym_Text_VirgilPostBattle:
 	.string "Si existen prodigios en el mundo,\n"
@@ -437,7 +437,7 @@ MossdeepCity_Gym_Text_HannahIntro:
 	.string "soy muy fuerte!$"
 
 MossdeepCity_Gym_Text_HannahDefeat:
-	.string "You're just too strong!$"
+	.string "¡Eres demasiado fuerte!$"
 
 MossdeepCity_Gym_Text_HannahPostBattle:
 	.string "No me desanimaré por haber\n"
@@ -495,11 +495,11 @@ MossdeepCity_Gym_Text_NateIntro:
 	.string "el tipo PSÍQUICO puede ser.$"
 
 MossdeepCity_Gym_Text_NateDefeat:
-	.string "Oh! My, my!\n"
+	.string "¡Oh! Vaya, vaya!\n"
 	.string "¡Tu estilo de combate es genial!$"
 
 MossdeepCity_Gym_Text_NatePostBattle:
-	.string "I… I don't let defeat rattle m-me,\n"
+	.string "Yo... no dejo que la derrota me\n"
 	.string "aunque sea m-muy mal.$"
 
 MossdeepCity_Gym_Text_KathleenIntro:

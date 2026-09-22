@@ -16,7 +16,7 @@ SSAqua_RoomNE_Text_HikerNolandSeen:
     .string "¡Entonces luchemos!$"
 
 SSAqua_RoomNE_Text_HikerNolandBeaten:
-    .string "That's too much to handle!$"
+    .string "¡Es demasiado para mí!$"
 
 SSAqua_RoomNE_Text_HikerNolandAfterBattle:
     .string "Me pregunto si habrá\n"

@@ -971,7 +971,7 @@ BattleFrontier_BattleTowerLobby_Text_ThankYouForPlaying:
 
 BattleFrontier_BattleTowerLobby_Text_RecordWillBeSaved:
 	.string "Tu récord será guardado.\n"
-	.string "Please wait.$"
+	.string "Espera un momento.$"
 
 BattleFrontier_BattleTowerLobby_Text_WeveBeenWaitingForYou:
 	.string "¡Te estábamos esperando!\p"

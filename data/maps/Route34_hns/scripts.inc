@@ -124,7 +124,7 @@ Route34_EventScript_Item_Embargo::
 
 
 Route34_Text_YoungsterSamuel_Seen:
-	.string "Hey! I'm looking for MANKEY!$"
+	.string "¡Oye! ¡Busco a MANKEY!$"
 
 Route34_Text_YoungsterSamuel_Beaten:
 	.string "Beaten by a passing stranger!$"
@@ -150,7 +150,7 @@ Route34_Text_CamperTodd_Seen:
 	.string "¿Quieres verlo?$"
 
 Route34_Text_CamperTodd_Beaten:
-	.string "Did I screw up my training?$"
+	.string "¿Arruiné mi entrenamiento?$"
 
 Route34_Text_CamperTodd_After:
 	.string "Quizá lleve uno a la GUARDERÍA,\n"
@@ -166,7 +166,7 @@ Route34_Text_ToddRematchIntro:
 	.string "¿Quieres verlo?$"
 
 Route34_Text_ToddRematchDefeat:
-	.string "Did I screw up my training?$"
+	.string "¿Arruiné mi entrenamiento?$"
 
 Route34_Text_ToddPostRematch:
 	.string "Quizá lleve uno a la GUARDERÍA,\n"
@@ -181,7 +181,7 @@ Route34_Text_PicnickerGina_Seen:
 	.string "Tengamos una batalla de práctica.$"
 
 Route34_Text_PicnickerGina_Beaten:
-	.string "Oh, no! I just can't win…$"
+	.string "¡Oh, no! No puedo ganar…$"
 
 Route34_Text_PicnickerGina_After:
 	.string "Eres demasiado fuerte para ser un\n"
@@ -192,7 +192,7 @@ Route34_Text_OfficerKeith_Seen:
 	.string "¿Qué estás tramando?$"
 
 Route34_Text_OfficerKeith_Win:
-	.string "You're a tough little kid.$"
+	.string "Eres un niño muy fuerte.$"
 
 Route34_Text_OfficerKeith_After:
 	.string "Sí, hoy todo está en orden.\p"
@@ -234,7 +234,7 @@ Route34_Text_CooltrainerIrene_Seen:
 	.string "IRENE: ¿Quién eres?$"
 
 Route34_Text_CooltrainerIrene_Beaten:
-	.string "IRENE: Ohhh! You're too strong!$"
+	.string "IRENE: ¡Ahh! ¡Eres muy fuerte!$"
 
 Route34_Text_CooltrainerIrene_After1:
 	.string "IRENE: ¡Mi hermana KATE te hará\n"
@@ -249,7 +249,7 @@ Route34_Text_CooltrainerJenn_Seen:
 	.string "¿Qué estás haciendo?$"
 
 Route34_Text_CooltrainerJenn_Beaten:
-	.string "JENN: So sorry, IRENE! Dear Sis!$"
+	.string "JENN: ¡Perdón, IRENE! ¡Querida$"
 
 Route34_Text_CooltrainerJenn_After1:
 	.string "JENN: ¡No te confíes! Mi hermana\n"
@@ -264,7 +264,7 @@ Route34_Text_CooltrainerKate_Seen:
 	.string "¡cuidar de mis hermanas!$"
 
 Route34_Text_CooltrainerKate_Beaten:
-	.string "KATE: No! I can't believe I lost.$"
+	.string "KATE: ¡No! ¡No puedo creer que perdí!$"
 
 Route34_Text_CooltrainerKate_GiveSoftSand:
 	.string "KATE: Eres muy fuerte.\n"

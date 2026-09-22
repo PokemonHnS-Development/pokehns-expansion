@@ -23,7 +23,7 @@ SSAqua_RoomSE_Text_PokefanmColinSeen:
     .string "conmigo?$"
 
 SSAqua_RoomSE_Text_PokefanmColinBeaten:
-    .string "You're strong!$"
+    .string "¡Eres fuerte!$"
 
 SSAqua_RoomSE_Text_PokefanmColinAfter:
     .string "¿Viajas tú solo?\n"
@@ -34,7 +34,7 @@ SSAqua_RoomSE_Text_TwinsMegandpeg1Seen:
     .string "¡Eso no es justo!$"
 
 SSAqua_RoomSE_Text_TwinsMegandpeg1Beaten:
-    .string "Oh! We lost!$"
+    .string "¡Oh! ¡Perdimos!$"
 
 SSAqua_RoomSE_Text_TwinsMegandpeg1After:
     .string "¡Llamarnos bebés es muy grosero\n"
@@ -45,7 +45,7 @@ SSAqua_RoomSE_Text_TwinsMegandpeg2Seen:
     .string "¡No es amable decirle eso a una dama!$"
 
 SSAqua_RoomSE_Text_TwinsMegandpeg2Beaten:
-    .string "Oh! We lost!$"
+    .string "¡Oh! ¡Perdimos!$"
 
 SSAqua_RoomSE_Text_TwinsMegandpeg2After:
     .string "¡A veces los niños son más listos\n"

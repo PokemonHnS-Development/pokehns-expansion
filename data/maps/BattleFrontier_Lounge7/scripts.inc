@@ -359,7 +359,7 @@ BattleFrontier_Lounge7_Text_RightTutorIntro:
 	.string "Sé que es difícil verlo ahora, pero\n"
 	.string "fui un ENTRENADOR fantástico.\p"
 	.string "Tenía fama de ser el NADADOR más\n"
-	.string "invincible SWIMMER around, I tell you!\p"
+	.string "¡un NADADOR invencible, te digo!\p"
 	.string "… … … … … …\p"
 	.string "¿Qué pasa?\n"
 	.string "No me crees.\p"

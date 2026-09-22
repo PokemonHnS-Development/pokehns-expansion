@@ -103,7 +103,7 @@ CeladonCity_Text_Youngster2:
 	.string "Hacen un concurso de comida en\n"
 	.string "el restaurante.\p"
 	.string "Solo verlos comer ya me hace\n"
-	.string "me siento hinchado…$"
+	.string "sentir hinchada…$"
 
 CeladonCity_Text_Teacher2:
 	.string "TIENDAS CELADON tiene la mayor\n"

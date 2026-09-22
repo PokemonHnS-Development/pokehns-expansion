@@ -368,7 +368,7 @@ RivalsHouse_2F_Text_MayJustCheckingMyPokedex:
 	.string "MAY: ¡{PLAYER}{KUN}!\p"
 	.string "Solo revisaba mi POKéDEX.\p"
 	.string "Aún hay muchos POKéMON que\n"
-	.string "vi, pero no he atrapado.\p"
+	.string "vi, pero no atrapé.\p"
 	.string "Y hay muchos otros que\n"
 	.string "creo que evolucionarán.\p"
 	.string "Me pregunto dónde ir a atrapar\n"

@@ -43,7 +43,7 @@ PokefanM_Text_RexSeen:
 	.string "mundo.$"
 
 PokefanM_Text_RexBeaten:
-	.string "My STANTLER!$"
+	.string "¡Mi STANTLER!$"
 
 PokefanM_Text_RexAfter:
 	.string "¡Mira qué adorable es mi\n"
@@ -56,7 +56,7 @@ PokefanM_Text_AllanSeen:
 	.string "mundo.$"
 
 PokefanM_Text_AllanBeaten:
-	.string "My GRANBULL!$"
+	.string "¡Mi GRANBULL!$"
 
 PokefanM_Text_AllanAfter:
 	.string "Mira qué adorable es mi GRANBULL\n"

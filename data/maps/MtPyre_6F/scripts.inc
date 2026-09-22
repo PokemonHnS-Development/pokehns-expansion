@@ -60,7 +60,7 @@ MtPyre_6F_Text_CedricIntro:
 	.string "¡No temas, que yo estoy aquí!$"
 
 MtPyre_6F_Text_CedricDefeat:
-	.string "Weren't you lost?$"
+	.string "¿No estabas perdido?$"
 
 MtPyre_6F_Text_CedricPostBattle:
 	.string "Sentía que un ENTRENADOR perdido\n"

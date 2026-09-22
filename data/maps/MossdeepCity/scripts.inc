@@ -409,7 +409,7 @@ MossdeepCity_Text_ScottSomethingWrongWithTown:
 	.string "Oí que el LÍDER del GIMNASIO de\n"
 	.string "FONDO MARINO es muy fuerte, así que\l"
 	.string "vine a verlo por mí mismo.\p"
-	.string "Pero hay algo que no me cuadra\n"
+	.string "Pero algo no me cuadra\n"
 	.string "de este pueblo.\p"
 	.string "La gente habla de una advertencia\n"
 	.string "carta y el CENTRO ESPACIAL…\p"

@@ -631,7 +631,7 @@ MtChimney_Text_Grunt1Intro:
 	.string "¡La haré sobre lava endurecida!$"
 
 MtChimney_Text_Grunt1Defeat:
-	.string "My dream of a big house…$"
+	.string "Mi sueño de una gran casa…$"
 
 MtChimney_Text_Grunt1PostBattle:
 	.string "Un chico como tú debería estar\n"
@@ -660,7 +660,7 @@ MtChimney_Text_DouseThemInFire:
 	.string "¡Quémalos con fuego!$"
 
 MtChimney_Text_KeepMakingMoreLand:
-	.string "We're going to keep making more land!$"
+	.string "¡Seguiremos creando más tierra!$"
 
 MtChimney_Text_Bufoh:
 	.string "Bufoh!$"
@@ -712,19 +712,19 @@ MtChimney_Text_Bushaa:
 	.string "Bushaa!$"
 
 MtChimney_Text_LavaCookiesJust200:
-	.string "LAVA COOKIES are MT. CHIMNEY's local\n"
+	.string "Las GALLETAS DE LAVA son típicas\n"
 	.string "del MT. CHIMNEY.\p"
 	.string "Prueba uno. Solo cuesta ¥200.$"
 
 MtChimney_Text_ThankYouDear:
-	.string "Thank you, dear!$"
+	.string "¡Gracias, querido!$"
 
 MtChimney_Text_YouveNotGotTheMoney:
 	.string "Ay, cielo. No puedes comprar nada si\n"
 	.string "no tienes el dinero.$"
 
 MtChimney_Text_OhFineThen:
-	.string "Oh, fine then.$"
+	.string "Ah, está bien.$"
 
 MtChimney_Text_MetoriteFittedOnMachine:
 	.string "Un METEORITO está puesto en una\n"
@@ -830,7 +830,7 @@ MtChimney_Text_SawyerIntro:
 	.string "gente fogosa para hacer compañía!$"
 
 MtChimney_Text_SawyerDefeat:
-	.string "Oh, you're a real firebrand, too!$"
+	.string "¡Vaya, tú también eres todo fuego!$"
 
 MtChimney_Text_SawyerPostBattle:
 	.string "¡Necesito un baño en las AGUAS\n"

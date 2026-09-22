@@ -637,7 +637,7 @@ RocketHideout_B3F_Text_GruntF5Seen:
     .string "it!$"
 
 RocketHideout_B3F_Text_GruntF5Beaten:
-    .string "All right. Stop. I'll tell you.$"
+    .string "Está bien. Basta. Te lo diré.$"
 
 RocketHideout_B3F_Text_GruntF5After:
     .string "La contraseña del cuarto del jefe\n"
@@ -657,7 +657,7 @@ RocketHideout_B3F_Text_GruntM28Seen:
     .string "cuarto del jefe!$"
 
 RocketHideout_B3F_Text_GruntM28Beaten:
-    .string "Hyuck-hyuck-hyuck! You're good!$"
+    .string "¡Ji-ji-ji! ¡Eres bueno!$"
 
 RocketHideout_B3F_Text_GruntM28After:
     .string "¡Ji-ji-ji!\p"
@@ -671,7 +671,7 @@ RocketHideout_B3F_Text_ScientistRossSeen:
     .string "ser castigado.$"
 
 RocketHideout_B3F_Text_ScientistRossBeaten:
-    .string "A mere tactical error cost me…$"
+    .string "Un simple error táctico me costó…$"
 
 RocketHideout_B3F_Text_ScientistRossAfter:
     .string "Una señal de radio que vuelve\n"

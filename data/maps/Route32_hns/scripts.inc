@@ -464,7 +464,7 @@ Route32_Text_YoungsterAlbert_Seen:
 	.string "¿Así que crees que eres fuerte?$"
 
 Route32_Text_YoungsterAlbert_Beaten:
-	.string "You're strong!$"
+	.string "¡Eres fuerte!$"
 
 Route32_Text_YoungsterAlbert_After:
 	.string "Intentaré ser el mejor\n"
@@ -478,7 +478,7 @@ Route32_Text_YoungsterGordon_Seen:
 	.string "¡Creo que lo harán por mí!$"
 
 Route32_Text_YoungsterGordon_Beaten:
-	.string "Darn. I thought I could win.$"
+	.string "Maldición. Pensé que ganaría.$"
 
 Route32_Text_YoungsterGordon_After:
 	.string "La hierba está llena de\n"
@@ -504,10 +504,10 @@ Route32_Text_PicnickerLiz1_Beaten:
 	.string "¡mi furia!$"
 
 Route32_Text_PicnickerLiz1_After:
-	.string "I was having a nice chat too.$"
+	.string "Estaba en una charla agradable.$"
 
 Route32_Text_LizRegister:
-	.string "I was having a nice chat too.$"
+	.string "Estaba en una charla agradable.$"
 
 Route32_Text_LizRematchIntro:
 	.string "Ajá. Sí, y ya sabes...\p"
@@ -519,7 +519,7 @@ Route32_Text_LizRematchDefeat:
 	.string "¡mi furia!$"
 
 Route32_Text_LizPostRematch:
-	.string "I was having a nice chat too.$"
+	.string "Estaba en una charla agradable.$"
 
 Route32_Text_BirdKeeperPeter_Seen:
 	.string "¡Esa MEDALLA! ¡Es de CIUDAD MALVA!\n"
@@ -550,7 +550,7 @@ Route32_Text_MeetFrieda:
 	.string "te daré una recompensa.$"
 
 Route32_Text_FriedaGivesGift:
-	.string "Here's a POISON BARB for you!$"
+	.string "¡Toma una PLUMA VENENO!$"
 
 Route32_Text_FriedaGaveGift:
 	.string "FRIEDA: Dáselo a un POKéMON\n"

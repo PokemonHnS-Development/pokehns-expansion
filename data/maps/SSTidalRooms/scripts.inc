@@ -102,7 +102,7 @@ SSTidalRooms_Text_ThomasPostBattle:
 	.string "el código del GENTLEMAN.$"
 
 SSTidalRooms_Text_JedIntro:
-	.string "JED: Me da un poco de pena, pero...\n"
+	.string "JED: Me da algo de pena, pero...\n"
 	.string "¡Te mostraremos nuestro poder amoroso!$"
 
 SSTidalRooms_Text_JedDefeat:
@@ -118,7 +118,7 @@ SSTidalRooms_Text_JedNotEnoughMons:
 	.string "¿No es eso demasiado solitario?$"
 
 SSTidalRooms_Text_LeaIntro:
-	.string "LEA: Me siento un poco tonta, pero…\n"
+	.string "LEA: Me siento algo tonta, pero…\n"
 	.string "¡Te mostraremos nuestro poder amoroso!$"
 
 SSTidalRooms_Text_LeaDefeat:

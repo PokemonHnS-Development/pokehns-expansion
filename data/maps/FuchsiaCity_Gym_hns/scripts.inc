@@ -224,7 +224,7 @@ FuchsiaCity_Gym_Text_LassAlice_After:
 	.string "LÍDER?$"
 
 FuchsiaCity_Gym_Text_LassLinda_Before:
-	.string "Fooled you! Hahaha!$"
+	.string "¡Te engañé! ¡Jajaja!$"
 
 FuchsiaCity_Gym_Text_LassLinda_Beaten:
 	.string "Oh… Perdí… No eres débil…$"
@@ -238,7 +238,7 @@ FuchsiaCity_Gym_Text_PicnickerCindy_Before:
 	.string "¡A luchar!$"
 
 FuchsiaCity_Gym_Text_PicnickerCindy_Beaten:
-	.string "Darn it! I wanted to win!$"
+	.string "¡Maldición! ¡Quería ganar!$"
 
 FuchsiaCity_Gym_Text_PicnickerCindy_After:
 	.string "Debes estar cansándote.$"

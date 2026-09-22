@@ -21,7 +21,7 @@ MauvilleCity_House1_EventScript_ReceivedRockSmash::
 MauvilleCity_House1_Text_ImRockSmashDudeTakeThis:
 	.string "¡Yujuu!\p"
 	.string "Dicen que soy el TIPO ROCA ROMPER,\n"
-	.string "pero me parece algo degradante.\p"
+	.string "pero me parece degradante.\p"
 	.string "Creo que merezco más respeto,\n"
 	.string "como el TIPO ROCA ROMPER GENIAL.\p"
 	.string "¡Yujuu!\p"

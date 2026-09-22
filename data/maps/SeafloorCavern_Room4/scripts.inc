@@ -16,7 +16,7 @@ SeafloorCavern_Room4_Text_Grunt3Intro:
 	.string "¿Por dónde entraste?$"
 
 SeafloorCavern_Room4_Text_Grunt3Defeat:
-	.string "Lost it…$"
+	.string "Lo perdí…$"
 
 SeafloorCavern_Room4_Text_Grunt3PostBattle:
 	.string "¡No encuentro la salida!\p"
@@ -27,7 +27,7 @@ SeafloorCavern_Room4_Text_Grunt4Intro:
 	.string "¿A dónde crees que vas?$"
 
 SeafloorCavern_Room4_Text_Grunt4Defeat:
-	.string "I failed to win!$"
+	.string "¡No pude ganar!$"
 
 SeafloorCavern_Room4_Text_Grunt4PostBattle:
 	.string "Mi compañero olvidó el mapa en aquel\n"

@@ -27,7 +27,7 @@ Route25_EventScript_MistyRematch::
 
 Route25_Text_Misty:
     .string "MISTY: ¡Amo el atardecer aquí!\n"
-	.string "Me da el valor para seguir,\l"
+	.string "Me da valor para seguir,\l"
 	.string "trabajo duro, ¿sabes?\p"
 	.string "¡Así es!\p"
 	.string "Si estás listo para un chapuzón,\n"
@@ -418,7 +418,7 @@ Route25_Text_LassEllenSeen:
 	.string "¡Ahora esto va en serio!$"
 
 Route25_Text_LassEllenBeaten:
-	.string "How could I lose?$"
+	.string "¿Cómo pude perder?$"
 
 Route25_Text_LassEllenAfter:
 	.string "Hice mi mejor esfuerzo.\n"
@@ -440,7 +440,7 @@ Route25_Text_LassLauraSeen:
 	.string "¿Te estás cansando?$"
 
 Route25_Text_LassLauraBeaten:
-	.string "I lost too…$"
+	.string "Yo también perdí…$"
 
 Route25_Text_LassLauraAfter:
 	.string "Hice mi mejor esfuerzo.\n"
@@ -451,7 +451,7 @@ Route25_Text_CamperLloydSeen:
 	.string "¡Te voy a aplastar!$"
 
 Route25_Text_CamperLloydBeaten:
-	.string "Whoa! Too much.$"
+	.string "¡Uau! Demasiado.$"
 
 Route25_Text_CamperLloydAfter:
 	.string "Hice mi mejor esfuerzo.\n"
@@ -462,7 +462,7 @@ Route25_Text_LassShannonSeen:
 	.string "¡te digo que soy fuerte!$"
 
 Route25_Text_LassShannonBeaten:
-	.string "You're kidding.$"
+	.string "Estás bromeando, ¿verdad?$"
 
 Route25_Text_LassShannonAfter:
 	.string "Hice mi mejor esfuerzo.\n"
@@ -477,7 +477,7 @@ Route25_Text_SupernerdPatSeen:
 	.string "batallas.$"
 
 Route25_Text_SupernerdPatBeaten:
-	.string "Aren't you tired at all?$"
+	.string "¿No estás cansado en absoluto?$"
 
 Route25_Text_SupernerdPatAfter:
 	.string "Lo siento... No volveré a hacer\n"

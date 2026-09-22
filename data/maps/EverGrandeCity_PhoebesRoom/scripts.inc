@@ -71,7 +71,7 @@ EverGrandeCity_PhoebesRoom_Text_IntroSpeech:
 
 EverGrandeCity_PhoebesRoom_Text_Defeat:
 	.string "Oh, rayos.\n"
-	.string "He terminado perdiendo.$"
+	.string "Terminé perdiendo.$"
 
 EverGrandeCity_PhoebesRoom_Text_PostBattleSpeech:
 	.string "Hay un vínculo claro entre tú\n"

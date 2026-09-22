@@ -103,7 +103,7 @@ CianwoodCity_Text_ManiacAskReturn:
 	.string "lo puedes devolver?$"
 
 CianwoodCity_Text_ManiacThankYou:
-	.string "Thank you!$"
+	.string "¡Gracias!$"
 
 CianwoodCity_Text_ManiacShuckleNotThere:
 	.string "Oye, no tienes mi POKéMON\n"
@@ -115,7 +115,7 @@ CianwoodCity_Text_ManiacShuckleLikesYou:
 	.string "¡Pero promete cuidarlo bien!$"
 
 CianwoodCity_Text_ManiacRobbed:
-	.string "Huh, something's not right.$"
+	.string "Huy, algo no anda bien.$"
 
 CianwoodCity_Text_ManiacRobbed2:
 	.string "Oh, no, no... Eso es lo mismo que\n"

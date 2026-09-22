@@ -652,7 +652,7 @@ MauvilleCity_Text_ExplainTV:
 	.string "Hola, ¿ves la TV a veces?\p"
 	.string "Han agregado varios programas\n"
 	.string "nuevos y geniales hace poco.\p"
-	.string "La TV es genial. He visto amigos en\n"
+	.string "La TV es genial. Vi amigos en\n"
 	.string "la TV de la nada.\p"
 	.string "Y a veces, hasta te ponen en la TV\n"
 	.string "sin avisarte.\p"

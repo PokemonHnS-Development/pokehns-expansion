@@ -111,7 +111,7 @@ GraniteCave_StevensRoom_Text_RegisteredSteven:
 	.string "en el POKéNAV.$"
 
 GraniteCave_StevensRoom_Text_IveGotToHurryAlong:
-	.string "Now, I've got to hurry along.$"
+	.string "Ahora tengo que apurarme.$"
 
 GraniteCave_StevensRoom_Text_OhBagIsFull:
 	.string "Oh, tu MOCHILA está llena…\n"

@@ -60,7 +60,7 @@ CeladonDeptStore3F_Text_GameboyKid2:
 	.string "un POKéMON diferente!$"
 
 CeladonDeptStore3F_Text_SuperNerd:
-	.string "The TM SHOP sells some rare moves.$"
+	.string "La TIENDA MT vende movimientos raros.$"
 
 CeladonDeptStore3F_Text_Directory:
 	.string "3F: TIENDA DE MT\p"

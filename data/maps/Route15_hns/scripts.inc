@@ -107,7 +107,7 @@ Route15_Text_TeacherHillarySeen:
 	.string "que estudiar en clase.$"
 
 Route15_Text_TeacherHillaryBeaten:
-	.string "I didn't want to lose…$"
+	.string "No quería perder…$"
 
 Route15_Text_TeacherHillaryAfterBattle:
 	.string "Estudiar es importante, pero el\n"
@@ -131,14 +131,14 @@ Route15_Text_SchoolboyKippSeen:
 	.string "Espera. Tengo que llamar a mi mamá.$"
 
 Route15_Text_SchoolboyKippBeaten:
-	.string "Sorry, Mom! I was beaten!$"
+	.string "¡Perdón, mamá! ¡Me vencieron!$"
 
 Route15_Text_SchoolboyKippAfterBattle:
 	.string "Mi mamá se preocupa tanto que\n"
 	.string "debo llamarla a cada rato.$"
 
 Route15_Text_SchoolboyTommySeen:
-	.string "Let's battle. I won't lose!$"
+	.string "¡Batallamos! ¡No perderé!$"
 
 Route15_Text_SchoolboyTommyBeaten:
 	.string "¡Olvidé hacer mi tarea!$"
@@ -152,7 +152,7 @@ Route15_Text_SchoolboyJohnnySeen:
 	.string "RADIO de LAVANDA por estudios.$"
 
 Route15_Text_SchoolboyJohnnyBeaten:
-	.string "You're wickedly tough!$"
+	.string "¡Eres durísimo!$"
 
 Route15_Text_SchoolboyJohnnyAfterBattle:
 	.string "Estoy cansado de caminar. Necesito\n"
@@ -162,7 +162,7 @@ Route15_Text_SchoolboyBillySeen:
 	.string "My favorite class is Gym!$"
 
 Route15_Text_SchoolboyBillyBeaten:
-	.string "Oh, no! How could I lose?$"
+	.string "¡Oh, no! ¿Cómo pude perder?$"
 
 Route15_Text_SchoolboyBillyAfterBattle:
 	.string "Si los POKéMON fueran una materia\n"

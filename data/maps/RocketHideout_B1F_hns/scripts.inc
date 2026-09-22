@@ -271,7 +271,7 @@ RocketHideout_B1F_Text_ScientistJedSeen:
     .string "intrusos como tú.$"
 
 RocketHideout_B1F_Text_ScientistJedBeaten:
-    .string "I get it…$"
+    .string "Ya entiendo…$"
 
 RocketHideout_B1F_Text_ScientistJedAfter:
     .string "Está bien. Revelaré un secreto\n"
@@ -315,7 +315,7 @@ RocketHideout_B1F_EventScript_Persian::
 	end
 
 RocketHideout_B1F_Text_SecurityCameraStatue:
-    .string "It's a PERSIAN statue…$"
+    .string "Es una estatua PERSIAN…$"
 
 RocketHideout_B1F_EventScript_DummyPanel::
 	msgbox RocketHideout_B1F_Text_NothingThere, MSGBOX_SIGN
@@ -358,7 +358,7 @@ RocketHideout_B1F_EventScript_TurnOffSwitch::
 	end
 
 RocketHideout_B1F_Text_NothingThere:
-	.string "A strange panel... Nothing here.$"
+	.string "Un panel extraño... Nada aquí.$"
 
 RocketHideout_B1F_Text_SecretSwitch:
     .string "A secret switch! Better press it.$"

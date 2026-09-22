@@ -175,7 +175,7 @@ Route13_Text_BirdKeeperBretSeen:
 	.string "plumaje.$"
 
 Route13_Text_BirdKeeperBretBeaten:
-	.string "Shoot! Not good enough!$"
+	.string "¡Rayos! ¡No fue suficiente!$"
 
 Route13_Text_BirdKeeperBretAfterBattle:
 	.string "Si los cuidas, los POKéMON se\n"

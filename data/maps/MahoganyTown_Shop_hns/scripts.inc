@@ -233,7 +233,7 @@ MahoganyTown_Shop_Text_Granny:
 	.string "en este momento.$"
 
 MahoganyMart1F_Text_Pharmacist_Lance:
-    .string "ROCKETS have hijacked my basement!$"
+    .string "¡Los ROCKETS secuestraron mi sótano!$"
 
 MahoganyMart1F_Text_BlackBelt:
     .string "¡Jeje! El experimento funcionó\n"

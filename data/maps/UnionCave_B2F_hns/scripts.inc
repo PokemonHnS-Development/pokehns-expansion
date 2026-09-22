@@ -56,7 +56,7 @@ UnionCave_B2F_Text_CooltrainermNickSeen:
 	.string "¿Qué tipo de persona eres tú?$"
 
 UnionCave_B2F_Text_CooltrainermNickBeaten:
-	.string "You've got dazzling style!$"
+	.string "¡Qué estilo deslumbrante!$"
 
 UnionCave_B2F_Text_CooltrainermNickAfter:
 	.string "Tu estilo POKéMON es deslumbrante y\n"
@@ -64,14 +64,14 @@ UnionCave_B2F_Text_CooltrainermNickAfter:
 	.string "¡Seguirás mejorando cada vez más!$"
 
 UnionCave_B2F_Text_CooltrainerfGwenSeen:
-	.string "I'm in training. Care for a round?$"
+	.string "Estoy entrenando. ¿Una ronda?$"
 
 UnionCave_B2F_Text_CooltrainerfGwenBeaten:
-	.string "Aww, no! You're too good for me.$"
+	.string "¡Ay, no! Eres muy bueno para mí.$"
 
 UnionCave_B2F_Text_CooltrainerfGwenAfter:
 	.string "Entrenaré por mi cuenta hasta que\n"
-	.string "me mejore.$"
+	.string "mejoré.$"
 
 UnionCave_B2F_Text_CooltrainerfEmmaSeen:
 	.string "Si los POKéMON que me gustan\n"

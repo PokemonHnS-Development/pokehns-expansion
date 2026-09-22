@@ -800,7 +800,7 @@ Route110_Text_BrendanExplainItemfinder:
 	.string "no son visibles.\p"
 	.string "Si detecta algo, emitirá\n"
 	.string "un sonido.\p"
-	.string "En fin, me voy a buscar nuevos\n"
+	.string "Bueno, me voy a buscar nuevos\n"
 	.string "POKéMON.$"
 
 Route110_Text_RideBikeAtFullSpeed:

@@ -665,7 +665,7 @@ BattlePyramid_Text_ZeroTrainersRemaining4::
 
 BattlePyramid_Text_SevenTrainersRemaining5::
 	.string "Puede que tengas lo necesario para\n"
-	.string "the seven expert TRAINERS who remain.$"
+	.string "a los siete expertos que quedan.$"
 
 BattlePyramid_Text_SixTrainersRemaining5::
 	.string "Puede que tengas lo necesario para\n"
@@ -673,11 +673,11 @@ BattlePyramid_Text_SixTrainersRemaining5::
 
 BattlePyramid_Text_FiveTrainersRemaining5::
 	.string "Puede que tengas lo necesario para\n"
-	.string "the five expert TRAINERS who remain.$"
+	.string "los 5 ENTRENADORES que quedan.$"
 
 BattlePyramid_Text_FourTrainersRemaining5::
 	.string "Puede que tengas lo necesario para\n"
-	.string "the four expert TRAINERS who remain.$"
+	.string "los 4 ENTRENADORES que quedan.$"
 
 BattlePyramid_Text_ThreeTrainersRemaining5::
 	.string "Puede que tengas lo necesario para\n"

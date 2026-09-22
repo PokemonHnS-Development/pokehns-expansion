@@ -59,7 +59,7 @@ Route110_TrickHousePuzzle1_Text_EddieIntro:
 	.string "por accidente…$"
 
 Route110_TrickHousePuzzle1_Text_EddieDefeat:
-	.string "And now I've lost…$"
+	.string "Y ahora he perdido…$"
 
 Route110_TrickHousePuzzle1_Text_EddiePostBattle:
 	.string "Me perdí, perdí una batalla y ahora\n"
@@ -69,7 +69,7 @@ Route110_TrickHousePuzzle1_Text_RobinIntro:
 	.string "¿Quién es el MAESTRO DE TRUCOS?$"
 
 Route110_TrickHousePuzzle1_Text_RobinDefeat:
-	.string "I lost while I was lost in thought!$"
+	.string "¡Perdí mientras pensaba!$"
 
 Route110_TrickHousePuzzle1_Text_RobinPostBattle:
 	.string "¡Eres fuerte!\n"

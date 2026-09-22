@@ -46,7 +46,7 @@ UnionCave_B1F_Text_HikerLeonardSeen:
 	.string "¡No me digas! ¡Una visita!$"
 
 UnionCave_B1F_Text_HikerLeonardBeaten:
-	.string "Wahahah! You're a feisty one!$"
+	.string "¡Wahajaj! ¡Qué feroz eres!$"
 
 UnionCave_B1F_Text_HikerLeonardAfter:
 	.string "Vivo aquí abajo.\p"

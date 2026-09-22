@@ -213,7 +213,7 @@ GoldenrodCity_Gym_Text_BeautyVictoriaSeen:
     .string "¡Me caes bien, pero no me rendiré!$"
 
 GoldenrodCity_Gym_Text_BeautyVictoriaBeaten:
-    .string "Let's see… Oops, it's over?$"
+    .string "A ver... ¿Ya se acabó?$"
 
 GoldenrodCity_Gym_Text_BeautyVictoriaAfter:
     .string "¡Vaya, debes ser bueno para vencerme!\n"
@@ -224,7 +224,7 @@ GoldenrodCity_Gym_Text_BeautySamanthaSeen:
     .string "por completo!$"
 
 GoldenrodCity_Gym_Text_BeautySamanthaBeaten:
-    .string "No! Oh, MEOWTH, I'm so sorry!$"
+    .string "¡No! ¡Oh, MEOWTH, lo siento!$"
 
 GoldenrodCity_Gym_Text_BeautySamanthaAfter:
     .string "Le enseñé a MEOWTH movimientos para\n"

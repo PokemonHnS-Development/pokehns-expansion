@@ -97,7 +97,7 @@ CeladonCity_Gym_Text_LassMichelleBeaten:
 	.string "Oh, bleah!$"
 
 CeladonCity_Gym_Text_LassMichelleAfter:
-	.string "I just got careless, that's all!$"
+	.string "¡Solo fui descuidado, nada más!$"
 
 
 CeladonCity_Gym_EventScript_Tanya::
@@ -123,7 +123,7 @@ CeladonCity_Gym_EventScript_Julia::
 
 CeladonCity_Gym_Text_BeautyJuliaSeen:
 	.string "¿Estabas mirando estas flores?\n"
-	.string "or at me?$"
+	.string "¿o a mí?$"
 
 CeladonCity_Gym_Text_BeautyJuliaBeaten:
 	.string "How annoying!$"
@@ -148,19 +148,19 @@ CeladonCity_Gym_Text_TwinsJoAndZoe1Seen:
 	.string "que ERIKA nos enseñó!$"
 
 CeladonCity_Gym_Text_TwinsJoAndZoe1Beaten:
-	.string "Oh… We lost…$"
+	.string "Oh… Perdimos…$"
 
 CeladonCity_Gym_Text_TwinsJoAndZoe1After:
 	.string "¡ERIKA te las hará pagar por nosotros!$"
 
 CeladonCity_Gym_Text_TwinsJoAndZoe2Seen:
-	.string "We're going to protect ERIKA!$"
+	.string "¡Vamos a proteger a ERIKA!$"
 
 CeladonCity_Gym_Text_TwinsJoAndZoe2Beaten:
-	.string "We couldn't win…$"
+	.string "No pudimos ganar…$"
 
 CeladonCity_Gym_Text_TwinsJoAndZoe2After:
-	.string "ERIKA is much, much stronger!$"
+	.string "¡ERIKA es mucho más fuerte!$"
 
 CeladonCity_Gym_EventScript_GymStatue::
 	lockall

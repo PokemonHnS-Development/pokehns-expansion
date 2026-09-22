@@ -39,7 +39,7 @@ MtPyre_3F_Text_WilliamIntro:
 	.string "¿Sueñas con ganar?$"
 
 MtPyre_3F_Text_WilliamDefeat:
-	.string "I drown in self-pity…$"
+	.string "Me hundo en la lástima…$"
 
 MtPyre_3F_Text_WilliamPostBattle:
 	.string "Mis poderes psíquicos seguro\n"
@@ -51,14 +51,14 @@ MtPyre_3F_Text_KaylaIntro:
 	.string "¡y menos para ti!$"
 
 MtPyre_3F_Text_KaylaDefeat:
-	.string "I lost that cleanly…$"
+	.string "Perdí eso limpiamente…$"
 
 MtPyre_3F_Text_KaylaPostBattle:
 	.string "Esto significa que mi entreno no\n"
 	.string "Suficiente...\p"
 	.string "Debo seguir trabajando para llegar\n"
 	.string "a la cima...\p"
-	.string "Go, me!$"
+	.string "¡Vamos, yo!$"
 
 MtPyre_3F_Text_GabrielleIntro:
 	.string "¿Por qué viniste aquí?$"

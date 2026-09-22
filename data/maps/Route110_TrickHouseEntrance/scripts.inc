@@ -695,7 +695,7 @@ Route110_TrickHouseEntrance_EventScript_DoHidingSpotSparkle::
 	return
 
 Route110_TrickHouseEntrance_Text_YoureBeingWatched:
-	.string "You're being watched…$"
+	.string "Te están observando…$"
 
 Route110_TrickHouseEntrance_Text_ConcealedBeneathDesk:
 	.string "Hah? Grrr…\p"
@@ -756,7 +756,7 @@ Route110_TrickHouseEntrance_Text_ComeToChallengeTrickHouse:
 	.string "¡Esperaré en la parte de atrás!$"
 
 Route110_TrickHouseEntrance_Text_ItsAScroll:
-	.string "It's a scroll.$"
+	.string "Es un pergamino.$"
 
 Route110_TrickHouseEntrance_Text_GoInHoleBehindScroll:
 	.string "¡Hay un gran hueco tras el pergamino!\p"
@@ -765,12 +765,12 @@ Route110_TrickHouseEntrance_Text_GoInHoleBehindScroll:
 Route110_TrickHouseEntrance_Text_LeavingOnJourneyNote:
 	.string "Hay una nota pegada al pergamino…\p"
 	.string "“Me voy de viaje.\n"
-	.string "No me busques. MAESTRO TRUCO”$"
+	.string "No me busquen. MAESTRO TRUCO”$"
 
 Route110_TrickHouseEntrance_Text_NextTimeUseThisTrick:
 	.string "La próxima vez, usaré este truco,\n"
 	.string "ese plan y aquellas artimañas…\p"
-	.string "Mufufufu… Si me permiten decir,\n"
+	.string "Mufufufu… Si se me permite\n"
 	.string "¡es difícil hasta para mí!$"
 
 Route110_TrickHouseEntrance_Text_InMidstOfDevisingNewChallenges:
@@ -802,7 +802,7 @@ Route110_TrickHouseEntrance_Text_MechadollWhichTent:
 	.string "¿CUÁL PREFIERES?$"
 
 Route110_TrickHouseEntrance_Text_ThenFarewell:
-	.string "THEN FAREWELL.$"
+	.string "ENTONCES ADIÓS.$"
 
 Route110_TrickHouseEntrance_Text_PCFullAgain:
 	.string "ESTADO DE TU PC: LLENO OTRA VEZ.\n"

@@ -88,7 +88,7 @@ PokemonLeague_KarensRoom_Text_Before:
     .string "¡Vamos!$"
 
 PokemonLeague_KarensRoom_Text_Beaten:
-    .string "Vaya, eres bueno. Eso me gusta\n"
+    .string "Vaya, eres bueno. Eso me\n"
     .string "de un ENTRENADOR.$"
 
 PokemonLeague_KarensRoom_Text_Defeat:

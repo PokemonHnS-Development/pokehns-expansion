@@ -191,7 +191,7 @@ OlivineLighthouse_Text_SailorKentSeen:
 	.string "Ya ni siquiera sonríe hoy en día.$"
 
 OlivineLighthouse_Text_SailorKentBeaten:
-	.string "I can't manage a smile either…$"
+	.string "Yo tampoco puedo sonreír…$"
 
 OlivineLighthouse_Text_SailorKentAfter:
 	.string "Hablando de salud, oí que hay\n"
@@ -229,7 +229,7 @@ OlivineLighthouse_Text_SailorErnestSeen:
 	.string "Entonces, ¿qué tal tú?$"
 
 OlivineLighthouse_Text_SailorErnestBeaten:
-	.string "Whoa, whoa. You're overwhelming!$"
+	.string "¡Uau, uau! ¡Qué abrumador!$"
 
 OlivineLighthouse_Text_SailorErnestAfter:
 	.string "Ser LÍDER de GIMNASIO no es solo\n"
@@ -242,7 +242,7 @@ OlivineLighthouse_Text_BirdKeeperDenisSeen:
 	.string "están en su mejor forma.$"
 
 OlivineLighthouse_Text_BirdKeeperDenisBeaten:
-	.string "Oops… They crashed…$"
+	.string "Ups… Se chocaron…$"
 
 OlivineLighthouse_Text_BirdKeeperDenisAfter:
 	.string "Mi POKéMON aprendió a usar VUELO en\n"
@@ -299,7 +299,7 @@ OlivineLighthouse_Text_JasmineCianwoodPharmacy:
 	.string "…Pero enfermó de repente… No\n"
 	.string "puede respirar…\p"
 	.string "…Tengo entendido que hay un\n"
-	.string "wonderful PHARMACY in CIANWOOD…\p"
+	.string "maravillosa FARMACIA en PUEBLO\p"
 	.string "Pero eso es cruzando el mar...\n"
 	.string "Y no puedo dejar a AMPHY solo...$"
 

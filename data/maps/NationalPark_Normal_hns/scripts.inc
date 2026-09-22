@@ -184,7 +184,7 @@ NationalPark_Normal_Text_SchoolboyJack1_Seen:
 	.string "¡Pero yo sé más que tú!$"
 
 NationalPark_Normal_Text_SchoolboyJack1_Beaten:
-	.string "Wha-wha-what?$"
+	.string "¿Qué-qué-qué?$"
 
 NationalPark_Normal_Text_SchoolboyJack_After:
 	.string "Hay mucho que aprender.\p"
@@ -203,7 +203,7 @@ NationalPark_Normal_Text_JackRematchIntro:
 	.string "nuestra última batalla! ¡Vamos!$"
 
 NationalPark_Normal_Text_JackRematchDefeat:
-	.string "Wha-wha-what?$"
+	.string "¿Qué-qué-qué?$"
 
 NationalPark_Normal_Text_JackPostRematch:
 	.string "Hay mucho que aprender.\p"

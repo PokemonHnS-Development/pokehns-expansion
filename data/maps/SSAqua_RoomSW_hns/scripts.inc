@@ -16,7 +16,7 @@ SSAqua_RoomSW_Text_BeautyCassieSeen:
     .string "¡A luchar!$"
 
 SSAqua_RoomSW_Text_BeautyCassieBeaten:
-    .string "My heart weeps…$"
+    .string "Mi corazón llora…$"
 
 SSAqua_RoomSW_Text_BeautyCassieAfterBattle:
     .string "Un viaje es lo mejor para sanar\n"

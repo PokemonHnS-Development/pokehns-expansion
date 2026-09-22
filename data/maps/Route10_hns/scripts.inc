@@ -80,7 +80,7 @@ Route10_Text_HikerJimBeaten:
 	.string "Hahaha-hachoo!$"
 
 Route10_Text_HikerJimAfter:
-	.string "Hay fever is making me sneeze!\n"
+	.string "¡La fiebre del heno me hace\n"
 	.string "¡Ahahah-CHOO!$"
 
 Route10_Text_PokefanmRobertSeen:

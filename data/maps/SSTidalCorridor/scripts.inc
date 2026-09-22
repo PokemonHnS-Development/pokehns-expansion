@@ -290,13 +290,13 @@ SSTidalCorridor_Text_CanRestInCabin2:
 	.string "Todavía falta para llegar a tierra,\nsupongo.\pPuedes descansar en tu camarote\nsi quieres. Es el camarote 2.\pLa cama de ahí es suave y esponjosa.\n¡Te aseguro que es cómoda!$"
 
 SSTidalCorridor_Text_WeveArrived:
-	.string "We've arrived!$"
+	.string "¡Ya llegamos!$"
 
 SSTidalCorridor_Text_VisitOtherCabins:
 	.string "Ve a visitar otros camarotes.\nLos ENTRENADORES aburridos\ldel viaje querrán combatir.$"
 
 SSTidalCorridor_Text_EnjoyYourCruise:
-	.string "Enjoy your cruise!$"
+	.string "¡Disfruta el crucero!$"
 
 SSTidalCorridor_Text_HorizonSpreadsBeyondPorthole:
 	.string "El horizonte se extiende más allá\n"

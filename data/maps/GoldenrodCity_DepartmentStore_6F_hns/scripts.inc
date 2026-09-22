@@ -65,7 +65,7 @@ GoldenrodCity_DepartmentStore_6F_Text_YouWontTradeMe:
 	.string "¿No quieres intercambiar? Ohh...$"
 
 GoldenrodCity_DepartmentStore_6F_Text_After:
-	.string "Hi, how's my old MACHOP doing?$"
+	.string "Hola, ¿cómo está mi viejo MACHOP?$"
 
 
 GoldenrodDeptStore6_EventScript_Lass::

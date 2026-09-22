@@ -27,17 +27,17 @@ CeladonDept6_EventScript_Directory::
 
 
 CeladonDeptStore6F_Text_Vending:
-	.string "A vending machine! Here's the menu.$"
+	.string "¡Una máquina expendedora! El menú:$"
 
 CeladonDeptStore6F_Text_Clang:
 	.string "¡Clang!\p"
 	.string "Salió {STRING}.$"
 
 CeladonDeptStore6F_Text_VendingNoMoney:
-	.string "Oops, not enough money…$"
+	.string "Vaya, no hay dinero suficiente…$"
 
 CeladonDeptStore6F_Text_VendingNoSpace:
-	.string "There's no more room for stuff…$"
+	.string "Ya no hay espacio para cosas…$"
 
 CeladonDeptStore6F_Text_SuperNerd:
 	.string "Una máquina expendedora con un\n"

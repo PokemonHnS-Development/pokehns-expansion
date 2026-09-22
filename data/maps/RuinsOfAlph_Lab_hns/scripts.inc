@@ -635,7 +635,7 @@ RuinsOfAlph_Lab_Text_WeFinallyMadeNewBalls:
 
 RuinsOfAlph_Lab_Text_IMadePokenav:
 	.string "¡Yo hice el POKéNAV!\p"
-	.string "Como ingeniero, me siento bendecido\n"
+	.string "Como ingeniero, me siento\nbendecido"
 	.string "¡de haber creado algo tan genial!$"
 
 RuinsOfAlph_Lab_Text_WowThatsAPokenav:

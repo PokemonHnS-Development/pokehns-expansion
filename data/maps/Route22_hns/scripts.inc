@@ -328,7 +328,7 @@ Route22_Text_Silver4:
 	.string "¡yo solo!$"
 
 Route22_Text_Silver5:
-	.string "ALL BY MYSELF!$"
+	.string "¡TODO SOLO!$"
 
 Route22_Text_Silver6:
 	.string "{RIVAL}: ... ¿Qué estás mirando?$"

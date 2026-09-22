@@ -476,7 +476,7 @@ EcruteakCity_Theater_Text_Girl:
 	.string "ellas algún día!$"
 
 EcruteakCity_Theater_Text_GirlBefore:
-	.string "I like that funny dance!$"
+	.string "¡Me gusta ese baile gracioso!$"
 
 EcruteakCity_Theater_Text_FancyPanel:
 	.string "Es un panel elegante que está\n"

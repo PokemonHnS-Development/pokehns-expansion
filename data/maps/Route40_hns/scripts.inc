@@ -22,7 +22,7 @@ Route40_Text_SwimmermSimonSeen:
 	.string "Es lo básico.$"
 
 Route40_Text_SwimmermSimonBeaten:
-	.string "OK! Uncle! I give!$"
+	.string "¡OK! ¡Tío! ¡Me rindo!$"
 
 Route40_Text_SwimmermSimonAfter:
 	.string "CIUDAD ORQUIDEA está a una\n"
@@ -56,7 +56,7 @@ Route40_Text_SwimmerfElaineSeen:
 	.string "primero?$"
 
 Route40_Text_SwimmerfElaineBeaten:
-	.string "I lost that one!$"
+	.string "¡Perdí esa!$"
 
 Route40_Text_SwimmerfElaineAfter:
 	.string "Diría que soy mejor nadador\n"

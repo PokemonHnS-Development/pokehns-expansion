@@ -20,10 +20,10 @@ PacifidlogTown_House5_EventScript_Gentleman::
 	end
 
 PacifidlogTown_House5_Text_CantSeeMirageIslandToday:
-	.string "I can't see MIRAGE ISLAND today…$"
+	.string "Hoy no veo la ISLA ESPEJO…$"
 
 PacifidlogTown_House5_Text_CanSeeMirageIslandToday:
-	.string "Oh! Oh my!\n"
+	.string "¡Oh! ¡Dios mío!\n"
 	.string "¡Veo la ISLA ESPEJISMO hoy!$"
 
 PacifidlogTown_House5_Text_MirageIslandAppearDependingOnWeather:

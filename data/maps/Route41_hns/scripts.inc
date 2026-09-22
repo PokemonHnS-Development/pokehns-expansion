@@ -21,7 +21,7 @@ Route41_Text_SwimmermCharlieSeen:
 	.string "¡Claro, pelearé contigo!$"
 
 Route41_Text_SwimmermCharlieBeaten:
-	.string "Yikes! I've got prune skin!$"
+	.string "¡Ay! ¡Tengo piel de pasa!$"
 
 Route41_Text_SwimmermCharlieAfter:
 	.string "¿No es relajante flotar\n"
@@ -93,7 +93,7 @@ Route41_Text_SwimmermMathewSeen:
 	.string "de las ISLAS REMOLINO?$"
 
 Route41_Text_SwimmermMathewBeaten:
-	.string "Ooh, you've got great endurance!$"
+	.string "¡Ooh, tienes gran resistencia!$"
 
 Route41_Text_SwimmermMathewAfter:
 	.string "Un secreto de ISLAS REMOLINO...\p"

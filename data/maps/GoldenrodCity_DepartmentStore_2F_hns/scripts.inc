@@ -219,7 +219,7 @@ GoldenrodDeptStore_Text_ExtraDrinkClankedDown:
 	.string "¡ha caído!$"
 
 GoldenrodDeptStore_Text_NotEnoughMoney:
-	.string "Not enough money…$"
+	.string "No tienes dinero suficiente…$"
 
 GoldenrodDeptStore_Text_DecidedAgainstBuyingDrink:
 	.string "Decided against buying a drink.$"

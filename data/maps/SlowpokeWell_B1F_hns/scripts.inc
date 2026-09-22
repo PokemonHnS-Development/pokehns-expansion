@@ -160,7 +160,7 @@ SlowpokeWell_B1F_Text_GruntF1Seen:
 	.string "¿Que deje de quitar colas?\p¡Sí, solo\nintenta vencernos!$"
 
 SlowpokeWell_B1F_Text_GruntF1Beaten:
-	.string "You rotten brat!$"
+	.string "¡Mocoso detestable!$"
 
 SlowpokeWell_B1F_Text_GruntF1After:
 	.string "¡Las COLAS DE SLOWPOKE crecen rápido!\p"

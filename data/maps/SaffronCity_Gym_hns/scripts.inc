@@ -124,7 +124,7 @@ SaffronCity_Gym_Text_MediumRebeccaSeen:
 	.string "derrotaste ahora es mío!$"
 
 SaffronCity_Gym_Text_MediumRebeccaBeaten:
-	.string "Strong… Far too strong…$"
+	.string "Fuerte… Demasiado fuerte…$"
 
 SaffronCity_Gym_Text_MediumRebeccaAfter:
 	.string "¿Cuál es la fuente de tu poder?$"
@@ -146,7 +146,7 @@ SaffronCity_Gym_Text_MediumDorisSeen:
 	.string "¡Puedo ver dentro de tu alma!$"
 
 SaffronCity_Gym_Text_MediumDorisBeaten:
-	.string "Though I read you, I still lost…$"
+	.string "Te leí, pero aun así perdí…$"
 
 SaffronCity_Gym_Text_MediumDorisAfter:
 	.string "¡Rayos! Olvidé que predije que\n"
@@ -157,7 +157,7 @@ SaffronCity_Gym_Text_PsychicJaredSeen:
 	.string "alguna vez el GIMNASIO de aquí.$"
 
 SaffronCity_Gym_Text_PsychicJaredBeaten:
-	.string "I was no match…$"
+	.string "No fui rival…$"
 
 SaffronCity_Gym_Text_PsychicJaredAfter:
 	.string "El REY DEL KARATE, maestro del\n"

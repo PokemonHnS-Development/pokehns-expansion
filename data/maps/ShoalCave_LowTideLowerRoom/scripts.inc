@@ -54,5 +54,5 @@ ShoalCave_LowTideLowerRoom_Text_CanOvercomeColdWithFocus:
 	.string "y resiste el frío!$"
 
 ShoalCave_LowTideLowerRoom_Text_EverythingStartsWithFocus:
-	.string "Everything starts with focus!$"
+	.string "¡Todo empieza con foco!$"
 

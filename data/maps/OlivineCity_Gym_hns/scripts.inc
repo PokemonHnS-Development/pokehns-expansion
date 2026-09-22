@@ -201,7 +201,7 @@ OlivineCity_Gym_Text_GymGuideText:
 	.string "El segundo es una serpiente hierro\n"
 	.string "con muchos movimientos fuertes.\p"
 	.string "Acércate con mucha precaución.\p"
-	.string "Parece lento, pero lo he visto\n"
+	.string "Parece lento, pero lo vi\n"
 	.string "atacar primero con despliegues\l"
 	.string "de VELOCIDAD.$"
 
@@ -311,7 +311,7 @@ OlivineCity_Gym_Text_JasmineGoodLuck:
 OlivineCity_Gym_Text_JasmineRematchText:
 	.string "…Felicidades, CAMPEÓN DE JOHTO.\p"
 	.string "Te has vuelto muy fuerte…\p"
-	.string "Me pregunto si he mejorado.\p"
+	.string "Me pregunto si mejoré.\p"
 	.string "¿Quieres ponerlo a prueba?\p"
 	.string "¿Quieres otra revancha conmigo?$"
 

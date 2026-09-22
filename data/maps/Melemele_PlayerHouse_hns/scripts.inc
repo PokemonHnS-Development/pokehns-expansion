@@ -714,7 +714,7 @@ Alola_Melemele_SamsonOakVilla_Dialogue_Text_24:
 	.string "¡en ISLA AKALA!$"
 
 Alola_Melemele_SamsonOakVilla_Dialogue_Text_25:
-	.string "Ahora que me ayudaste a validar que\n"
+	.string "Ahora que me ayudaste a validar\n"
 	.string "todas las variantes de Alola están\l"
 	.string "en las ISLAS ALOLA.\p"
 	.string "Quisiera que me ayudes con algo más.\n"

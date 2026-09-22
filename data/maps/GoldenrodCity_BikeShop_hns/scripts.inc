@@ -87,4 +87,4 @@ GoldenrodCity_BikeShop_Text_JustReleasedCompact:
     .string "¡BICICLETAS compactas de primera!$"
 
 GoldenrodCity_BikeShop_Text_Bicycle:
-    .string "It's a shiny new BICYCLE!$"
+    .string "¡Es una BICICLETA nueva y brillante!$"

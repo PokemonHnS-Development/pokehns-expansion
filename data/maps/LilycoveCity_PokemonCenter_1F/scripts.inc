@@ -62,5 +62,5 @@ LilycoveCity_PokemonCenter_1F_Text_HeardAboutRottenScoundrels:
 LilycoveCity_PokemonCenter_1F_Text_HaventSeenRottenScoundrels:
 	.string "Esos canallas que roban\n"
 	.string "POKéMON y saquean METEORITOS...\p"
-	.string "No los he visto hace tiempo.$"
+	.string "No los veo hace tiempo.$"
 

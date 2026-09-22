@@ -45,7 +45,7 @@ SSAqua_RoomNW_Text_SailorStanlySeen:
 	.string "¡Ah, olvídalo! ¡Luchemos!$"
 
 SSAqua_RoomNW_Text_SailorStanlyBeaten:
-	.string "Sorry! It's all my fault!$"
+	.string "¡Perdón! ¡Todo es mi culpa!$"
 
 SSAqua_RoomNW_Text_SailorStanlyAfterBattle:
 	.string "Como marinero, tengo que hacer\n"

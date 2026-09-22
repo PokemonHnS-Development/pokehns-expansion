@@ -576,7 +576,7 @@ GoldenrodUnderground_Text_GruntM25Seen:
     .string "puedes vencerme!$"
 
 GoldenrodUnderground_Text_GruntM25Beaten:
-    .string "Uwww… I blew it.$"
+    .string "Uwww… la regué.$"
 
 GoldenrodUnderground_Text_GruntM25After:
     .string "Está bien. ¡Una pista!\p"
@@ -585,7 +585,7 @@ GoldenrodUnderground_Text_GruntM25After:
     .string "persianas se abren y cierran.$"
 
 GoldenrodUnderground_Text_BurglarDuncanSeen:
-    .string "Fork over your goodies!$"
+    .string "¡Entrega tus premios!$"
 
 GoldenrodUnderground_Text_BurglarDuncanBeaten:
     .string "Mercy!$"
@@ -600,7 +600,7 @@ GoldenrodUnderground_Text_BurglarEddieSeen:
     .string "Busco botín que haya quedado.$"
 
 GoldenrodUnderground_Text_BurglarEddieBeaten:
-    .string "Over the top!$"
+    .string "¡Por las nubes!$"
 
 GoldenrodUnderground_Text_BurglarEddieAfter:
     .string "¿ALMACÉN SUBTERRÁNEO?\p"
@@ -613,7 +613,7 @@ GoldenrodUnderground_Text_GruntM13Seen:
     .string "¡una víctima!$"
 
 GoldenrodUnderground_Text_GruntM13Beaten:
-    .string "Urk! Yeah, think you're cool, huh?$"
+    .string "¡Urk! ¿Te crees muy genial, ¿eh?$"
 
 GoldenrodUnderground_Text_GruntM13After:
     .string "Debes tener sangre fría para\n"

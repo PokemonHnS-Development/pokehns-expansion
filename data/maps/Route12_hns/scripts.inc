@@ -97,7 +97,7 @@ Route12_Text_FisherMartinBeaten:
 	.string "Gwaaah!$"
 
 Route12_Text_FisherMartinAfterBattle:
-	.string "I'm too impatient for fishing…$"
+	.string "Soy muy impaciente para pescar…$"
 
 Route12_Text_FisherStephenSeen:
 	.string "Me siento feliz pescando mientras\n"
@@ -105,7 +105,7 @@ Route12_Text_FisherStephenSeen:
 	.string "radio.$"
 
 Route12_Text_FisherStephenBeaten:
-	.string "My stupid radio distracted me!$"
+	.string "¡Mi radio tonta me distrajo!$"
 
 Route12_Text_FisherStephenAfterBattle:
 	.string "¿Has escuchado la radio de KANTO?\n"

@@ -281,7 +281,7 @@ CeruleanGym_Text_SwimmerfDianaBeaten:
 	.string "¡Me rindo! ¡Tú ganas!$"
 
 CeruleanGym_Text_SwimmerfDianaAfter:
-	.string "I'll be swimming quietly.$"
+	.string "Nadaré tranquilamente.$"
 
 CeruleanGym_Text_SwimmerfBrianaSeen:
 	.string "Que mi nado elegante no te\n"
@@ -321,7 +321,7 @@ CeruleanGym_Text_GuideWin:
 	.string "batalla increíble!$"
 
 CeruleanGym_Text_Misty_GiveTM:
-	.string "Here, take this too.$"
+	.string "Toma, lleva esto también.$"
 
 CeruleanGym_Text_Misty_ExplainTM:
 	.string "Es la MT de PULSO AGUA.\p"

@@ -173,7 +173,7 @@ MagmaHideout_4F_Text_TabithaIntro:
 	.string "¡Jeje! ¡Jejeje!$"
 
 MagmaHideout_4F_Text_TabithaDefeat:
-	.string "Me derrotaron otra vez…\n"
+	.string "Me derrotaron otra vez...\n"
 	.string "Jeje…$"
 
 MagmaHideout_4F_Text_TabithaPostBattle:

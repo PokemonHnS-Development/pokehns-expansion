@@ -406,7 +406,7 @@ SinjohRuins_Lab_Text_GeologistDuring:
 	.string "equipo hacia abajo para ver\l"
 	.string "el subsuelo.\p"
 	.string "Cuando debí haber apuntado...\n"
-	.string "it up!$"
+	.string "¡a por ello!$"
 SinjohRuins_Lab_Text_GeologistAfter:
 	.string "¿Esas PLACAS se relacionan con\n"
 	.string "el POKéMON más poderoso??\p"
@@ -646,7 +646,7 @@ SinjohRuins_Lab_Text_Note4:
 	.string "Hallamos una fuente termal cerca de\n"
 	.string "un pueblo...\p"
 	.string "Y tomamos lo que necesitábamos...\p"
-	.string "I'm not proud of it. But sacrifices\n"
+	.string "No estoy orgulloso, pero los\n"
 	.string "son necesarios para el progreso.\p"
 	.string "Así que el hielo desapareció.\p"
 	.string "Hay 6 cámaras y un templo sellado\n"

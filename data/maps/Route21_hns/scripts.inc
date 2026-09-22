@@ -35,17 +35,17 @@ Route21_Text_SwimmerfNikkiSeen:
 	.string "¡Si gano, me tienes que ayudar con\nmi crema bronceadora!$"
 
 Route21_Text_SwimmerfNikkiBeaten:
-	.string "I'm worried about sunburn…$"
+	.string "Me preocupa quemarme con el sol…$"
 
 Route21_Text_SwimmerfNikkiAfterBattle:
 	.string "Tengo que cuidarme de las manchas\nque causa el sol.$"
 
 Route21_Text_FisherArnoldSeen:
-	.string "I'm bored by fishing. Let's battle!$"
+	.string "La pesca me aburre. ¡Batallamos!$"
 
 Route21_Text_FisherArnoldBeaten:
 	.string "Utter failure…$"
 
 Route21_Text_FisherArnoldAfterBattle:
-	.string "I'll just go back to fishing…$"
+	.string "Volveré a pescar mejor…$"
 

@@ -283,7 +283,7 @@ BattleFrontier_BattlePyramidTop_Text_LookForwardToNextMeeting_hns:
 	.string "¡Espero nuestro próximo encuentro!$"
 
 BattleFrontier_BattlePyramidTop_Text_BrandonYouveReturned_hns:
-	.string "BRANDON: ...Finalmente has vuelto,\n"
+	.string "BRANDON: ...Al fin has vuelto,\n"
 	.string "joven explorador…\p"
 	.string "Tu amor por la aventura parece venir\n"
 	.string "desde lo más profundo del corazón…\p"

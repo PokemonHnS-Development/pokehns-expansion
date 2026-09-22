@@ -110,7 +110,7 @@ Route45_Text_HikerErikSeen:
     .string "entrenados correctamente!$"
 
 Route45_Text_HikerErikBeaten:
-    .string "Oh, I lost that!$"
+    .string "¡Oh, perdí esa!$"
 
 Route45_Text_HikerErikAfter:
     .string "Volveré a la SENDA HELADA de\n"
@@ -134,7 +134,7 @@ Route45_Text_HikerParrySeen:
 	.string "¡Mis POKéMON están llenos de poder!$"
 
 Route45_Text_HikerParryBeaten:
-    .string "Wahahah! I'm the big loser!$"
+    .string "¡Wahahah! ¡Soy el gran perdedor!$"
 
 Route45_Text_HikerParryAfter:
     .string "No soy muy bueno pensando,\n"
@@ -150,7 +150,7 @@ Route45_Text_ParryRematchIntro:
 	.string "¡Mis POKéMON están llenos de poder!$"
 
 Route45_Text_ParryRematchDefeat:
-    .string "Wahahah! I'm the big loser!$"
+    .string "¡Wahahah! ¡Soy el gran perdedor!$"
 
 Route45_Text_ParryPostRematch:
     .string "No soy muy bueno pensando,\n"
@@ -235,7 +235,7 @@ Route45_Text_CooltrainermRyanSeen:
     .string "criar POKéMON?$"
 
 Route45_Text_CooltrainermRyanBeaten:
-    .string "You've won my respect.$"
+    .string "Has ganado mi respeto.$"
 
 Route45_Text_CooltrainermRyanAfter:
     .string "Veo que crías a tus POKéMON\n"

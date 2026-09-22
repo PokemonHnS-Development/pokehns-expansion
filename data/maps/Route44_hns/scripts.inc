@@ -170,7 +170,7 @@ Route44_Text_BirdKeeperVance1Seen:
     .string "POKéMON ave?$"
 
 Route44_Text_BirdKeeperVance1Beaten:
-    .string "Whew! You're hot stuff.$"
+    .string "¡Uf! Eres todo un experto.$"
 
 Route44_Text_BirdKeeperVanceBirds:
     .string "ARTICUNO, ZAPDOS y MOLTRES son\n"
@@ -189,7 +189,7 @@ Route44_Text_VanceRematchIntro:
     .string "POKéMON ave?$"
 
 Route44_Text_VanceRematchDefeat:
-    .string "Whew! You're hot stuff.$"
+    .string "¡Uf! Eres todo un experto.$"
 
 Route44_Text_VancePostRematch:
     .string "ARTICUNO, ZAPDOS y MOLTRES son\n"
@@ -198,10 +198,10 @@ Route44_Text_VancePostRematch:
     .string "legendarias, sin embargo.$"
 
 Route44_Text_PsychicPhilSeen:
-    .string "I'm gonna win, for sure!$"
+    .string "¡Voy a ganar, seguro!$"
 
 Route44_Text_PsychicPhilBeaten:
-    .string "Arrgh… That's a shocking loss…$"
+    .string "Ugh… Qué derrota tan dura…$"
 
 Route44_Text_PsychicPhilAfter:
     .string "Es importante tener convicción\n"
@@ -227,14 +227,14 @@ Route44_Text_CooltrainermAllenSeen:
     .string "veo que tú también lo eres.$"
 
 Route44_Text_CooltrainermAllenBeaten:
-    .string "Tch! It's a total loss on my part.$"
+    .string "¡Tch! Perdí por completo.$"
 
 Route44_Text_CooltrainermAllenAfter:
     .string "Vaya. Tienes muchas MEDALLAS.\p"
     .string "No me extraña que seas tan fuerte.\p"
     .string "Me pregunto si MORTY, del\n"
     .string "GIMNASIO de CIUDAD IRIS, sigue\p"
-    .string "entrenando. Me dio una paliza.$"
+    .string "entrenamiento, me dio una paliza.$"
 
 Route44_Text_CooltrainerfCybilSeen:
     .string "Pareces fuerte.\p"

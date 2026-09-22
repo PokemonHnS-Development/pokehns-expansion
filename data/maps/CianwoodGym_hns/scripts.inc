@@ -210,7 +210,7 @@ CianwoodGym_Text_BlackbeltLaoSeen:
 	.string "We martial artists fear nothing!$"
 
 CianwoodGym_Text_BlackbeltLaoBeaten:
-	.string "That's shocking!$"
+	.string "¡Qué impactante!$"
 
 CianwoodGym_Text_BlackbeltLaoAfter:
 	.string "Los POKéMON lucha temen a los\n"
@@ -242,7 +242,7 @@ CianwoodGym_Text_BlackbeltLungSeen:
 	.string "POKéMON!$"
 
 CianwoodGym_Text_BlackbeltLungBeaten:
-	.string "I got shattered!$"
+	.string "¡Quedé hecho añicos!$"
 
 CianwoodGym_Text_BlackbeltLungAfter:
 	.string "Mi POKéMON perdió…\n"

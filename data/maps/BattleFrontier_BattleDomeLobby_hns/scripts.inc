@@ -540,7 +540,7 @@ BattleFrontier_BattleDomeLobby_Text_ThankYouForPlaying_hns:
 
 BattleFrontier_BattleDomeLobby_Text_RecordWillBeSaved_hns:
 	.string "Tu récord será guardado.\n"
-	.string "Please wait.$"
+	.string "Espera, por favor.$"
 
 BattleFrontier_BattleDomeLobby_Text_WeveBeenWaitingForYou_hns:
 	.string "¡Te estuvimos esperando!$"

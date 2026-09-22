@@ -111,7 +111,7 @@ MtMoon_Cave_Text_Rival_After:
 
 MtMoon_Cave_Text_Rival_Loss:
 	.string "..................................\p"
-	.string "Ya he pagado mi deuda contigo.\p"
+	.string "Ya pagué mi deuda contigo.\p"
 	.string "Con mis POKéMON, venceré al\n"
 	.string "CAMPEÓN y el mejor del mundo\n"
 	.string "ENTRENADOR común.$"

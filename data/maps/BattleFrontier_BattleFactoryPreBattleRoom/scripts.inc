@@ -619,11 +619,11 @@ BattleFrontier_BattleFactoryPreBattleRoom_Text_YourSwapIsComplete:
 	.string "El cambio de POKéMON terminó.$"
 
 BattleFrontier_BattleFactoryPreBattleRoom_Text_RightThisWay:
-	.string "Right this way, please!$"
+	.string "¡Por aquí, por favor!$"
 
 BattleFrontier_BattleFactoryPreBattleRoom_Text_SavingDataPleaseWait:
 	.string "Guardando tus datos.\n"
-	.string "Please wait.$"
+	.string "Espere un momento.$"
 
 BattleFrontier_BattleFactoryPreBattleRoom_Text_RecordLatestBattle:
 	.string "¿Quieres grabar tu última\n"
@@ -638,7 +638,7 @@ BattleFrontier_BattleFactoryPreBattleRoom_Text_UnderstoodSirWillDo:
 	.string "¡Entendido, señor! ¡Lo haré!$"
 
 BattleFrontier_BattleFactoryPreBattleRoom_Text_MessageFromHeadComeRightNow:
-	.string "Oh, my…\n"
+	.string "Oh, Dios…\n"
 	.string "¡Siento haberte hecho esperar!\p"
 	.string "Tengo un mensaje del jefe de este\n"
 	.string "lugar, el JEFE DE FÁBRICA.\p"

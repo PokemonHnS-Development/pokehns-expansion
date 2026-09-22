@@ -226,7 +226,7 @@ SlateportCity_OceanicMuseum_1F_Text_WouldYouLikeToEnter:
 	.string "Bienvenido al MUSEO OCEÁNICO.\pLa entrada cuesta ¥50.\n¿Quieres entrar?$"
 
 SlateportCity_OceanicMuseum_1F_Text_PleaseEnjoyYourself:
-	.string "Please enjoy yourself.$"
+	.string "Disfruta tu estancia.$"
 
 SlateportCity_OceanicMuseum_1F_Text_NotEnoughMoney:
 	.string "¿Oh? Lo siento, pero no pareces\ntener dinero suficiente.$"

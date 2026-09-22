@@ -129,11 +129,11 @@ Route20_Text_NicoleRematchDefeat:
 	.string "Me han arrastrado otra vez...$"
 
 Route20_Text_NicolePostRematch:
-	.string "Gane o pierda, me pongo en forma y\n"
+	.string "Gane o pierda, me pongo en forma\n"
 	.string "¡mis POKéMON también!$"
 
 Route20_Text_SwimmerfNicoleSeen:
-	.string "I feel so much lighter in water.$"
+	.string "En el agua me siento tan ligero.$"
 
 Route20_Text_SwimmerfNicoleBeaten:
 	.string "Oh, no!$"

@@ -353,7 +353,7 @@ GoldenrodCity_RadioTower_5F_Text_RocketBossSeen:
 	.string "nuestros meticulosos planes!$"
 
 GoldenrodCity_RadioTower_5F_Text_RocketBossBeaten:
-	.string "No! Forgive me, GIOVANNI!$"
+	.string "¡No! ¡Perdóname, GIOVANNI!$"
 
 GoldenrodCity_RadioTower_5F_Text_RocketBossAfter:
 	.string "¿Cómo puede ser esto?\p"

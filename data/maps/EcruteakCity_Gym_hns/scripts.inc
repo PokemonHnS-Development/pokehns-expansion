@@ -107,7 +107,7 @@ MortyWinLossText:
 	.string "Está bien. Esta MEDALLA es tuya.$"
 
 Text_ReceivedFogBadge:
-	.string "{PLAYER} received the MEDALLA NIEBLA.$"
+	.string "{PLAYER} obtuvo la MEDALLA NIEBLA.$"
 
 MortyText_FogBadgeSpeech:
 	.string "Con la MEDALLA NIEBLA, los\n"
@@ -190,7 +190,7 @@ MediumGraceSeenText:
 	.string "¡Vénceme si quieres una pista!$"
 
 MediumGraceBeatenText:
-	.string "Wha-what?$"
+	.string "¿Q-qué?$"
 
 MediumGraceAfterBattleText:
 	.string "Está bien. Te diré el secreto\n"

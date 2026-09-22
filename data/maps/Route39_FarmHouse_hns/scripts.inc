@@ -108,10 +108,10 @@ Route39FarmHouse_Text_WouldYouLikeAnother:
 	.string "How bout another?$"
 
 Route39_Text_GotMilk:
-	.string "{PLAYER} got MOOMOO MILK.$"
+	.string "{PLAYER} obtuvo LECHE MOOMOO.$"
 
 Route39_Text_FarmerMMilking:
-	.string "I best go do my milkin'.$"
+	.string "Mejor voy a ordeñar.$"
 
 Route39_Text_FarmerFInTrouble:
 	.string "Nuestra leche llega hasta\nKANTO.\pAsí que si nuestro MILTANK\nno nos da leche, es un problema.$"

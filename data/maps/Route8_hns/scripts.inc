@@ -50,7 +50,7 @@ Route8_Text_BikerHarrisSeen:
 	.string "¡Eso me enfurece!$"
 
 Route8_Text_BikerHarrisBeaten:
-	.string "F-forgive me!$"
+	.string "¡P-perdóname!$"
 
 Route8_Text_BikerHarrisAfter:
 	.string "Derrotado por un novato de\n"
@@ -82,14 +82,14 @@ Route8_Text_SupernerdTomSeen:
 	.string "Hm… You've got many GYM BADGES.$"
 
 Route8_Text_SupernerdTomBeaten:
-	.string "Just as I thought… You're tough!$"
+	.string "Tal como pensé… ¡Eres fuerte!$"
 
 Route8_Text_SupernerdTomAfter:
 	.string "Las MEDALLAS dan ventajas en\n"
 	.string "batallas.$"
 
 Route8_Text_LockedDoor:
-	.string "It's locked…$"
+	.string "Está cerrado…$"
 
 Route8_Text_UndergroundPathSign:
 	.string "El volante está roto.\p"

@@ -330,7 +330,7 @@ Alola_Ulaula_TrainerBattlePicnicker_Text_2:
 	.string "¿Podría ser un POKéMON?$"
 
 Alola_Ulaula_TrainerBattleYoungster_Text_0:
-	.string "Hey, I'm going to be the first to climb\nMT. LANIKALA!$"
+	.string "¡Seré el primero en escalar\n¡el MONTE LANIKALA!$"
 
 Alola_Ulaula_TrainerBattleYoungster_Text_1:
 	.string "No es el verdadero MT. LANIKALA…$"

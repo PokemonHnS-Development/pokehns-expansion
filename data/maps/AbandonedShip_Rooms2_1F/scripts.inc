@@ -71,7 +71,7 @@ AbandonedShip_Rooms2_1F_Text_KiraIntro:
 	.string "¡Pero encontramos a un ENTRENADOR!$"
 
 AbandonedShip_Rooms2_1F_Text_KiraDefeat:
-	.string "KIRA: Ooh, so strong!$"
+	.string "KIRA: ¡Oh, qué fuerte!$"
 
 AbandonedShip_Rooms2_1F_Text_KiraPostBattle:
 	.string "KIRA: ¿Dónde estarán los tesoros?\p"
@@ -93,7 +93,7 @@ AbandonedShip_Rooms2_1F_Text_DanRematchIntro:
 	.string "¡Te lo demostraremos!$"
 
 AbandonedShip_Rooms2_1F_Text_DanRematchDefeat:
-	.string "DAN: You're strong, as usual!$"
+	.string "DAN: ¡Eres fuerte, como siempre!$"
 
 AbandonedShip_Rooms2_1F_Text_DanPostRematch:
 	.string "DAN: No hallamos ningún tesoro,\n"
@@ -113,7 +113,7 @@ AbandonedShip_Rooms2_1F_Text_KiraRematchIntro:
 	.string "que dejar de buscar?$"
 
 AbandonedShip_Rooms2_1F_Text_KiraRematchDefeat:
-	.string "KIRA: Oh, we lost again…$"
+	.string "KIRA: Oh, perdimos otra vez…$"
 
 AbandonedShip_Rooms2_1F_Text_KiraPostRematch:
 	.string "KIRA: No nos iremos hasta que\n"

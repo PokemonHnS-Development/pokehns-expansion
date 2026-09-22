@@ -774,7 +774,7 @@ LittlerootTown_ProfessorBirchsLab_Text_CatchCutePokemonWithPokeBalls:
 	.string "¡atraparé con POKé BALLS!$"
 
 LittlerootTown_ProfessorBirchsLab_Text_OhYourBagsFull:
-	.string "Oh? Your BAG's full.$"
+	.string "¿Eh? Tu MOCHILA está llena.$"
 
 LittlerootTown_ProfessorBirchsLab_Text_MayWhereShouldIGoNext:
 	.string "MAY: Me pregunto dónde buscar\n"
@@ -795,7 +795,7 @@ LittlerootTown_ProfessorBirchsLab_Text_CatchCoolPokemonWithPokeBalls:
 	.string "¡lo atraparé con POKé BALLS!$"
 
 LittlerootTown_ProfessorBirchsLab_Text_HeyYourBagsFull:
-	.string "Hey, your BAG's full.$"
+	.string "¡Oye, tu MOCHILA está llena!$"
 
 LittlerootTown_ProfessorBirchsLab_Text_BrendanWhereShouldIGoNext:
 	.string "BRENDAN: ¿Dónde debería buscar\n"
@@ -847,7 +847,7 @@ LittlerootTown_ProfessorBirchsLab_Text_BrendanYouCanThankMe:
 	.string "Sí, ¡tienes suerte, {PLAYER}!$"
 
 LittlerootTown_ProfessorBirchsLab_Text_OkayAllDone:
-	.string "PROF. BIRCH: Okay, all done!$"
+	.string "PROF. ABEDUL: ¡Listo, ya está!$"
 
 LittlerootTown_ProfessorBirchsLab_Text_PokedexUpgradedToNational:
 	.string "La POKéDEX de {PLAYER} cambió\n"
@@ -870,7 +870,7 @@ LittlerootTown_ProfessorBirchsLab_Text_MayTakeBreakFromFieldwork:
 
 LittlerootTown_ProfessorBirchsLab_Text_BrendanTakeBreakFromFieldwork:
 	.string "BRENDAN: Por ahora,\n"
-	.string "Me tomo un descanso del campo.\p"
+	.string "Tomo un descanso del campo.\p"
 	.string "Ayudaré al PROF. aquí.\n"
 	.string "fuego por un tiempo.$"
 

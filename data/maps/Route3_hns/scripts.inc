@@ -32,10 +32,10 @@ Route3_EventScript_Sign::
 	end
 
 Route3_Text_FirebreatherOtis_Seen:
-	.string "Ah! The weather's as fine as ever.$"
+	.string "¡Ah! El clima está espléndido.$"
 
 Route3_Text_FirebreatherOtis_Beaten:
-	.string "It's sunny, but I'm all wet…$"
+	.string "Hay sol, pero estoy empapado…$"
 
 Route3_Text_FirebreatherOtis_AfterBattle:
 	.string "Cuando llueve, es difícil lograr\n"
@@ -62,10 +62,10 @@ Route3_Text_YoungsterJimmy_AfterBattle:
 	.string "Esa es mi política de moda.$"
 
 Route3_Text_FirebreatherBurt_Seen:
-	.string "Step right up and take a look!$"
+	.string "¡Pase y eche un vistazo!$"
 
 Route3_Text_FirebreatherBurt_Beaten:
-	.string "Yow! That's hot!$"
+	.string "¡Ay! ¡Qué calor!$"
 
 Route3_Text_FirebreatherBurt_AfterBattle:
 	.string "El mejor lanzallamas de KANTO,\n"

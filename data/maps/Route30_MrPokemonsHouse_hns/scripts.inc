@@ -185,7 +185,7 @@ MrPokemonHouse_Text_Heal:
 	.string "descansar un poco.$"
 
 MrPokemonHouse_Text_DependingOnYou:
-	.string "I'm depending on you!$"
+	.string "¡Dependo de ti!$"
 
 MrPokemonHouse_Text_AlwaysNewDiscoveries:
 	.string "¡La vida es maravillosa!\n"

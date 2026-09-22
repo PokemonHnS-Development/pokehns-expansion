@@ -69,7 +69,7 @@ RS_MysteryEventsHouse_Text_SaveYourProgress:
 	.string "guardar su progreso.$"
 
 RS_MysteryEventsHouse_Text_HopeToSeeAGoodMatch:
-	.string "I hope to see a good match!$"
+	.string "¡Espero ver un buen combate!$"
 
 RS_MysteryEventsHouse_Text_BattleTie:
 	.string "Así que quedó en un empate.\p"

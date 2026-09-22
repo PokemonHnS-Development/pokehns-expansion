@@ -195,7 +195,7 @@ Route27_Text_CooltrainermBrianSeen:
     .string "¿Mmm? Eres bueno, ¿no?$"
 
 Route27_Text_CooltrainermBrianBeaten:
-    .string "Just as I thought!$"
+    .string "¡Como lo pensaba!$"
 
 Route27_Text_CooltrainermBrianAfter:
     .string "Un buen entrenador reconoce a\n"
@@ -206,7 +206,7 @@ Route27_Text_CooltrainerfReenaSeen:
     .string "POKéMON salvajes de esta zona.$"
 
 Route27_Text_CooltrainerfReenaBeaten:
-    .string "Oh! You're much too strong!$"
+    .string "¡Oh! ¡Eres demasiado fuerte!$"
 
 Route27_Text_CooltrainerfReenaAfter:
     .string "Solo eres un niño, pero tú\n"
@@ -221,7 +221,7 @@ Route27_Text_ReenaRematchIntro:
     .string "POKéMON salvajes de esta zona.$"
 
 Route27_Text_ReenaRematchDefeat:
-    .string "Oh! You're much too strong!$"
+    .string "¡Oh! ¡Eres demasiado fuerte!$"
 
 Route27_Text_ReenaPostRematch:
     .string "Solo eres un niño, pero tú\n"
@@ -232,7 +232,7 @@ Route27_Text_CooltrainerfMeganSeen:
     .string "¿Entrenas por tu cuenta?$"
 
 Route27_Text_CooltrainerfMeganBeaten:
-    .string "Oh! You're really strong!$"
+    .string "¡Oh! ¡Eres realmente fuerte!$"
 
 Route27_Text_CooltrainerfMeganAfter:
     .string "Estoy revisando el antes y el\n"
@@ -250,7 +250,7 @@ Route27_Text_PsychicGilbertSeen:
     .string "la LIGA POKéMON!$"
 
 Route27_Text_PsychicGilbertBeaten:
-    .string "You're too much!$"
+    .string "¡Eres demasiado!$"
 
 Route27_Text_PsychicGilbertAfter:
     .string "Con tu habilidad, te irá bien en\n"

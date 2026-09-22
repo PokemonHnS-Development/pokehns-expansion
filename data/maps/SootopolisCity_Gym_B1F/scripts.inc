@@ -56,7 +56,7 @@ SootopolisCity_Gym_B1F_Text_AndreaIntro:
 	.string "que aprendí del LÍDER JUAN!$"
 
 SootopolisCity_Gym_B1F_Text_AndreaDefeat:
-	.string "Please forgive me, JUAN…$"
+	.string "Perdóname, JUAN…$"
 
 SootopolisCity_Gym_B1F_Text_AndreaPostBattle:
 	.string "Mira lo que pasa si rompes todas\n"
@@ -124,7 +124,7 @@ SootopolisCity_Gym_B1F_Text_OliviaIntro:
 	.string "No creas que soy un debilucho.$"
 
 SootopolisCity_Gym_B1F_Text_OliviaDefeat:
-	.string "I was beaten…$"
+	.string "Me han golpeado…$"
 
 SootopolisCity_Gym_B1F_Text_OliviaPostBattle:
 	.string "Creo que tienes potencial.\n"
@@ -137,7 +137,7 @@ SootopolisCity_Gym_B1F_Text_TiffanyIntro:
 	.string "sería elegantemente hermoso!$"
 
 SootopolisCity_Gym_B1F_Text_TiffanyDefeat:
-	.string "Well, excuse me?!$"
+	.string "¡Vaya, ¡perdón?!$"
 
 SootopolisCity_Gym_B1F_Text_TiffanyPostBattle:
 	.string "Es obvio, pero lo fuerte que seas\n"

@@ -107,7 +107,7 @@ Route19_Text_SwimmermJeromeSeen:
 	.string "aguas poco profundas.$"
 
 Route19_Text_SwimmermJeromeBeaten:
-	.string "I thought I could win.$"
+	.string "Pensé que podía ganar.$"
 
 Route19_Text_SwimmermJeromeAfterBattle:
 	.string "Seré mala nadando, pero\n"
@@ -124,7 +124,7 @@ Route19_Text_Kingler:
 	.string "KINGLER: KEEEEEEEEEEEE$"
 
 Route19_Text_Fisher1_RocksCleared:
-	.string "I'm all sweaty. Time for a swim!$"
+	.string "Estoy sudado. ¡Hora de nadar!$"
 
 Route19_Text_Fisher2:
 	.string "Rayos, un KINGLER está bloqueando\n"

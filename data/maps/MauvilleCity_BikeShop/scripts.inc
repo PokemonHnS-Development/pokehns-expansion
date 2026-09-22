@@ -217,7 +217,7 @@ MauvilleCity_BikeShop_Text_ExplainBikesChooseWhichOne:
 	.string "¿Cuál vas a elegir?$"
 
 MauvilleCity_BikeShop_Text_ChoseMachBike:
-	.string "{PLAYER} chose the MACH BIKE.$"
+	.string "{PLAYER} eligió la BICI MACH.$"
 
 MauvilleCity_BikeShop_Text_ChoseAcroBike:
 	.string "{PLAYER} eligió la ACRO BIKE.$"

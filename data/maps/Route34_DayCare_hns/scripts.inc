@@ -171,7 +171,7 @@ Route34_DayCare_Text_Rejection:
 	.string "Hmm, este HUEVO no es para ti.\pSería\nirresponsable de mi parte\ndar un HUEVO tan precioso\la alguien que\nno sabe tanto\lsobre los POKéMON bebé!$"
 
 Route34_DayCare_Text_ReceivedOddEgg:
-	.string "{PLAYER} Received the ODD EGG.$"
+	.string "{PLAYER} recibió el HUEVO RARO.$"
 
 Route34_DayCare_Text_TakeCare:
 	.string "Sabía que eras el entrenador ideal\n"

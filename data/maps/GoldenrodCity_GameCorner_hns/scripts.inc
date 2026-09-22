@@ -585,7 +585,7 @@ GoldenrodCity_GameCorner_PrizeRoom_Text_YouWantPrize:
 	.string "¿{STR_VAR_1} es lo que quieres?$"
 
 GoldenrodCity_GameCorner_Text_PlayerObtainedTheMon:
-	.string "{PLAYER} got {STR_VAR_1}!$"
+	.string "¡{PLAYER} obtuvo {STR_VAR_1}!$"
 
 GoldenrodGamecorner_Text_GiveNicknameToThisMon:
 	.string "Nickname {STR_VAR_1}?$"
@@ -599,7 +599,7 @@ GoldenrodCity_GameCorner_Text_PrizeVendorWhichPrize:
     .string "¿Qué premio quieres?$"
 
 GoldenrodCity_GameCorner_Text_PrizeVendorHereYouGo:
-    .string "Here you go!$"
+    .string "¡Toma, aquí tienes!$"
 
 GoldenrodCity_GameCorner_Text_PrizeVendorNeedMoreCoins:
 	.string "¡Lo siento! Te faltan monedas.$"
@@ -620,7 +620,7 @@ GoldenrodCity_GameCorner_Text_Pharmacist:
     .string "las otras.$"
 
 GoldenrodCity_GameCorner_Text_Woman:
-    .string "I can't stop winning!$"
+    .string "¡No dejo de ganar!$"
 
 GoldenrodCity_GameCorner_Text_PokefanM1:
     .string "Amo esta nueva máquina tragamonedas.\p"

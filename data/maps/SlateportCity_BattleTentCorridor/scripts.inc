@@ -194,7 +194,7 @@ SlateportCity_ContestHall_Text_ExplainTorment:
 
 @ Unused
 SlateportCity_ContestHall_Text_MCStepUpTakePartInContest:
-	.string "MC: Oh, my, my!\n"
+	.string "MC: ¡Oh, vaya, vaya!\n"
 	.string "¿No es ese un POKéMON estupendo?\p"
 	.string "¡Por favor! Acércate y participa\n"
 	.string "¡en nuestros espléndidos CONCURSOS!\p"

@@ -54,7 +54,7 @@ Route11_Text_YoungsterJasonSeen:
 	.string "Pica y da cosquillas cuando\nllevo shorts en el pasto.$"
 
 Route11_Text_YoungsterJasonBeaten:
-	.string "Aiyaaah! I got stomped!$"
+	.string "¡Aaaah! ¡Me aplastaste!$"
 
 Route11_Text_YoungsterJasonAfterBattle:
 	.string "Atraparé más POKéMON en\n"
@@ -74,7 +74,7 @@ Route11_Text_PsychicFidelSeen:
 	.string "Puedo verlo…\pTodo lo que hay que ver de ti…$"
 
 Route11_Text_PsychicFidelBeaten:
-	.string "I couldn't foresee your power…$"
+	.string "No pude prever tu poder…$"
 
 Route11_Text_PsychicFidelAfterBattle:
 	.string "Fuerza en la convicción…\p"

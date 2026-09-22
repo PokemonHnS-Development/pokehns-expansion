@@ -318,7 +318,7 @@ LilycoveCity_ContestHall_Text_TodayWonSmartnessContest_hns:
 	.string "Mis habilidades me asustan hasta a mí…$"
 
 LilycoveCity_ContestHall_Text_EnteredBunchOfContests_hns:
-	.string "He entrado en varios CONCURSOS,\n"
+	.string "He entrado en varios\n"
 	.string "así que veo cómo funcionan las cosas.\p"
 	.string "Si estás en un CONCURSO GENIALIDAD,\n"
 	.string "Los buenos movimientos son atractivos.\p"
@@ -376,7 +376,7 @@ LilycoveCity_ContestHall_Text_DontAppreciateCuteLeechLife_hns:
 	.string "aprecia para nada!$"
 
 LilycoveCity_ContestHall_Text_YoureBeautifulGrandpa_hns:
-	.string "Kiyaaah! You're beautiful, Grandpa!$"
+	.string "¡Kiyaaah! ¡Qué bello, abuelo!$"
 
 LilycoveCity_ContestHall_Text_AllSeemToUseDifferentMoves_hns:
 	.string "Incluso cuando los ENTRENADORES usan\n"

@@ -683,7 +683,7 @@ BattleFrontier_BattlePikeRoomNormal_Text_BestOfLuckFarewell2:
 	.string "Adiós.$"
 
 BattleFrontier_BattlePikeRoomNormal_Text_WatchOut:
-	.string "Oh, my!\p"
+	.string "¡Oh, cielos!\p"
 	.string "¡Cuidado!$"
 
 BattleFrontier_BattlePikeRoomNormal_Text_KirliaStop:
@@ -704,10 +704,10 @@ BattleFrontier_BattlePikeRoomNormal_Text_KirliaUsedThunderWave:
 	.string "KIRLIA used THUNDER WAVE!$"
 
 BattleFrontier_BattlePikeRoomNormal_Text_KirliaUsedWillOWisp:
-	.string "KIRLIA used WILL-O-WISP!$"
+	.string "KIRLIA usó LÁSIGO!$"
 
 BattleFrontier_BattlePikeRoomNormal_Text_DusclopsUsedWillOWisp:
-	.string "DUSCLOPS used WILL-O-WISP!$"
+	.string "DUSCLOPS usó LÁSIGO!$"
 
 BattleFrontier_BattlePikeRoomNormal_Text_DusclopsUsedIceBeam:
 	.string "DUSCLOPS used ICE BEAM!$"

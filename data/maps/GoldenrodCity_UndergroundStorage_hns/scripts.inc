@@ -53,7 +53,7 @@ RadioTowerBasement_Text_GruntM24Seen:
     .string "me encargaré de ti.$"
 
 RadioTowerBasement_Text_GruntM24Beaten:
-    .string "I got disposed of…$"
+    .string "Me derrotaron…$"
 
 RadioTowerBasement_Text_GruntM24After:
     .string "EL TEAM ROCKET seguirá, esperando\n"
@@ -66,7 +66,7 @@ RadioTowerBasement_Text_GruntM14Seen:
     .string "¡ni siquiera con mocosos!$"
 
 RadioTowerBasement_Text_GruntM14Beaten:
-    .string "Blast it!$"
+    .string "Maldición!$"
 
 RadioTowerBasement_Text_GruntM14After:
     .string "Perdí...\p"

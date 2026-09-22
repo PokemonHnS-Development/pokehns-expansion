@@ -375,7 +375,7 @@ VermilionGym_Text_JugglerHortonSeen:
 	.string "¡Prepárate para el impacto!$"
 
 VermilionGym_Text_JugglerHortonBeaten:
-	.string "Gwaaah! I was overpowered…$"
+	.string "¡Guaah! Me dominaron…$"
 
 VermilionGym_Text_JugglerHortonAfter:
 	.string "No te confíes demasiado por\n"

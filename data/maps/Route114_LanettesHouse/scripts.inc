@@ -85,7 +85,7 @@ Route114_LanettesHouse_Text_ResearchNotesPage3:
 	.string "a la que se envían los POKéMON.$"
 
 Route114_LanettesHouse_Text_ClosedTheNotebook:
-	.string "{PLAYER} closed the notebook.$"
+	.string "{PLAYER} cerró el cuaderno.$"
 
 Route114_LanettesHouse_Text_EmailFromBill:
 	.string "Hay un correo de alguien en la\n"
@@ -95,7 +95,7 @@ Route114_LanettesHouse_Text_EmailFromBill:
 	.string "conveniente que el mío.\p"
 	.string "“Tiene funciones muy fáciles de usar\n"
 	.string "que lo hacen divertido y útil.\p"
-	.string "“Me enorgullece haber formado parte\n"
+	.string "“Me enorgullece haber formado\n"
 	.string "de su desarrollo.”\p"
 	.string "“Espero que continúes con tu\n"
 	.string "estudio de los Sistemas de Almacén.\p"

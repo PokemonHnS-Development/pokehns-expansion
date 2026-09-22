@@ -204,7 +204,7 @@ MahoganyTown_Gym_Text_BoarderRonaldSeen:
     .string "para que no puedas hacer nada!$"
 
 MahoganyTown_Gym_Text_BoarderRonaldBeaten:
-    .string "Darn. I couldn't do a thing.$"
+    .string "Maldición. No pude hacer nada.$"
 
 MahoganyTown_Gym_Text_BoarderRonaldAfter:
     .string "Creo que hay un movimiento a\n"
@@ -226,10 +226,10 @@ MahoganyTown_Gym_Text_BoarderBradAfter:
     .string "POKéMON!$"
 
 MahoganyTown_Gym_Text_BoarderDouglasSeen:
-    .string "I know PRYCE's secret.$"
+    .string "Conozco el secreto de PRYCE.$"
 
 MahoganyTown_Gym_Text_BoarderDouglasBeaten:
-    .string "OK. I'll tell you PRYCE's secret.$"
+    .string "Bien. Te contaré el secreto de PRYCE.$"
 
 MahoganyTown_Gym_Text_BoarderDouglasAfter:
     .string "El secreto del poder de PRYCE...\p"
@@ -242,7 +242,7 @@ MahoganyTown_Gym_Text_SkierRoxanneSeen:
     .string "GIMNASIO, piensa antes de esquiar.$"
 
 MahoganyTown_Gym_Text_SkierRoxanneBeaten:
-    .string "I wouldn't lose to you in skiing!$"
+    .string "¡No te ganaría en esquí!$"
 
 MahoganyTown_Gym_Text_SkierRoxanneAfter:
     .string "Si no esquías con precisión,\n"

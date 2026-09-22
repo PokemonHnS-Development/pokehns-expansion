@@ -101,7 +101,7 @@ TinTower_1F_Sage6_Text2:
 TinTower_1F_EusineHoOh_Text:
 	.string "Lo sabía.\p"
 	.string "Sabía que verías al POKéMON\n"
-	.string "of rainbow colors, <PLAYER>.\p"
+	.string "de colores de arcoíris, <PLAYER>.\p"
 	.string "Pasó justo como lo imaginé.\n"
 	.string "Mi investigación no es mala, diría.\p"
 	.string "Seguiré estudiando a los POKéMON\n"
@@ -112,7 +112,7 @@ TinTower_1F_EusineSuicune_Text:
 	.string "Nunca vi una batalla tan increíble.\p"
 	.string "Fue realmente inspirador verlo.\n"
 	.string "SUICUNE fue duro, pero tú fuiste\p"
-	.string "more incredible, <PLAYER>.\n"
+	.string "más increíble, <PLAYER>.\n"
 	.string "Oí que el poder místico de SUICUNE\p"
 	.string "atrae a un POKéMON color arcoíris.\n"
 	.string "Tal vez, solo tal vez, lo de hoy\p"

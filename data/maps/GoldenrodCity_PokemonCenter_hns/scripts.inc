@@ -220,7 +220,7 @@ GoldenrodPokeCenter_LinkReceptionistPleaseAcceptGSBallText:
     .string "¡Por favor, acéptalo!$"
 
 GoldenrodPokeCenter_LinkReceptionistPleaseDoComeAgainText:
-    .string "Please do come again!$"
+    .string "¡Vuelva pronto, por favor!$"
 
 GoldenrodCity_PokemonCenter_PokefanFDoYouHaveEonMailText:
     .string "¡Vaya, tu mochila se ve pesada!\p"
@@ -230,7 +230,7 @@ GoldenrodCity_PokemonCenter_PokefanFDoYouHaveEonMailText:
     .string "Puedes darme uno, ¿verdad?$"
 
 GoldenrodCity_PokemonCenter_AskGiveAwayAnEonMailText:
-    .string "Give away an EON MAIL?$"
+    .string "¿Regalar la CARTA EON?$"
 
 GoldenrodCity_PokemonCenter_PokefanFThisIsForYouText:
     .string "¡Oh, genial! ¡Muchas gracias,\n"
@@ -238,13 +238,13 @@ GoldenrodCity_PokemonCenter_PokefanFThisIsForYouText:
     .string "¡Toma, esto es para ti a cambio!$"
 
 GoldenrodCity_PokemonCenter_PokefanFDaughterWillBeDelightedText:
-    .string "My daughter will be delighted!$"
+    .string "¡Mi hija estará encantada!$"
 
 GoldenrodCity_PokemonCenter_PokefanFTooBadText:
     .string "¿Ah? ¿No tienes uno? Qué lástima.$"
 
 GoldenrodCity_PokemonCenter_PokefanFAnotherTimeThenText:
-    .string "Oh… Well, another time, then.$"
+    .string "Oh… Bueno, será otra vez.$"
 
 GoldenrodCity_PokemonCenter_PlayerGaveAwayTheEonMailText:
-    .string "{PLAYER} gave away the EON MAIL.$"
+    .string "{PLAYER} regaló la CARTA EON.$"

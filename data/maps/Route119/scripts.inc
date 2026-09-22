@@ -584,7 +584,7 @@ Route119_Text_ThoughtFlyByCatchingBirdMons:
 
 Route119_Text_TallGrassSnaresBikeTires:
 	.string "Tch…\n"
-	.string "It's a no-go…\p"
+	.string "No se puede…\p"
 	.string "La hierba alta atrapa la BICICLETA.\n"
 	.string "No puedes ir en bici por aquí.$"
 

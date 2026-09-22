@@ -291,7 +291,7 @@ BattleFrontier_BattleDomePreBattleRoom_Text_ChooseTwoMons:
 	.string "que lucharán en el combate.$"
 
 BattleFrontier_BattleDomePreBattleRoom_Text_RightThisWay:
-	.string "Right this way, please.$"
+	.string "Por aquí, por favor.$"
 
 BattleFrontier_BattleDomePreBattleRoom_Text_RestoreMonsToFullHealth:
 	.string "¡Gracias por competir!\p"
@@ -360,7 +360,7 @@ BattleFrontier_BattleDomePreBattleRoom_Text_RetireYourChallenge:
 
 BattleFrontier_BattleDomePreBattleRoom_Text_SavingDataPleaseWait:
 	.string "Guardando tus datos.\n"
-	.string "Please wait.$"
+	.string "Espere un momento.$"
 
 BattleFrontier_BattleDomePreBattleRoom_Text_RecordLastMatch:
 	.string "¿Registro tu último combate\n"

@@ -673,7 +673,7 @@ AzaleaTown_Gym_Text_BugsyIntro:
 	.string "¡Mi estudio me hará la autoridad\n"
 	.string "en POKéMON bicho!\p"
 	.string "¡Déjame demostrar todo lo que\n"
-	.string "he aprendido en mis estudios!$"
+	.string "¡lo aprendí en mis estudios!$"
 
 AzaleaTown_Gym_Text_BugsyBeaten:
 	.string "¡Vaya, increíble! Eres un\n"
@@ -727,7 +727,7 @@ AzaleaTown_Gym_Text_BugCatcherBennySeen:
 	.string "Así se vuelven fuertes más rápido.$"
 
 AzaleaTown_Gym_Text_BugCatcherBennyBeaten:
-	.string "Just evolving isn't enough!$"
+	.string "¡Evolucionar no es suficiente!$"
 
 AzaleaTown_Gym_Text_BugCatcherBennyAfter:
 	.string "Los POKéMON se vuelven más fuertes\n"

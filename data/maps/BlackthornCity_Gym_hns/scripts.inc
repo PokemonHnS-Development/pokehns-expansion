@@ -348,7 +348,7 @@ BlackthornGym_Text_CooltrainermMikeSeenText:
     .string "por ciento!$"
 
 BlackthornGym_Text_CooltrainermMikeBeatenText:
-    .string "That's odd.$"
+    .string "Qué raro.$"
 
 BlackthornGym_Text_CooltrainermMikeAfterBattleText:
     .string "Ya conozco mis debilidades.\p"
@@ -361,7 +361,7 @@ BlackthornGym_Text_CooltrainerfLolaSeenText:
     .string "vencerlos.$"
 
 BlackthornGym_Text_CooltrainerfLolaBeatenText:
-    .string "Way to go!$"
+    .string "¡Bien hecho!$"
 
 BlackthornGym_Text_CooltrainerfLolaAfterBattleText:
     .string "Los dragones son débiles ante los\n"

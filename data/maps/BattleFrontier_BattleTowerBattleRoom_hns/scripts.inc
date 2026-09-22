@@ -479,7 +479,7 @@ BattleFrontier_BattleTowerBattleRoom_Text_SaveAndQuitGame_hns:
 
 BattleFrontier_BattleTowerBattleRoom_Text_SavingPleaseWait_hns:
 	.string "Guardando datos de batalla.\n"
-	.string "Please wait.$"
+	.string "Espera, por favor.$"
 
 BattleFrontier_BattleTowerBattleRoom_Text_CancelYourChallenge_hns:
 	.string "¿Quieres cancelar tu desafío de\n"
@@ -507,7 +507,7 @@ BattleFrontier_BattleTowerBattleRoom_Text_GreetingsImAnabel_hns:
 	.string "He oído varios rumores\n"
 	.string "sobre ti…\p"
 	.string "Sinceramente, lo que he oído no\n"
-	.string "me parece atractivo en absoluto…\p"
+	.string "absoluto…\p"
 	.string "La razón por la que vine a verte…\n"
 	.string "Bueno, solo hay una razón…$"
 

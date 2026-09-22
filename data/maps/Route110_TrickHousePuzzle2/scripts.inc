@@ -122,7 +122,7 @@ Route110_TrickHousePuzzle2_Text_PaulIntro:
 	.string "TRICK HOUSE!$"
 
 Route110_TrickHousePuzzle2_Text_PaulDefeat:
-	.string "You're good at battling too?$"
+	.string "¿También eres buen combate?$"
 
 Route110_TrickHousePuzzle2_Text_PaulPostBattle:
 	.string "El TRICK MASTER armó todas las\n"

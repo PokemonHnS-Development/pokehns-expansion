@@ -153,7 +153,7 @@ RustboroCity_Gym_Text_TommyIntro:
 	.string "oportunidad contra ROXANNE!$"
 
 RustboroCity_Gym_Text_TommyDefeat:
-	.string "Wow! You've got some potential!$"
+	.string "¡Vaya! ¡Tienes potencial!$"
 
 RustboroCity_Gym_Text_TommyPostBattle:
 	.string "ROXANNE es mucho más fuerte que\n"

@@ -158,7 +158,7 @@ NationalPark_BugContest_Movement_AttendantSide:
 	step_end
 
 NationalPark_BugContest_Text_Trash:
-	.string "Nothing here.$"
+	.string "Nada por aquí.$"
 
 NationlParkBugContest_Text_EnjoyTheContest:
 	.string "ATTENDANT: Enjoy the Contest!$"

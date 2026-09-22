@@ -50,7 +50,7 @@ Route32_Pokecenter_Text_FishingGuruGiveRod:
 	.string "¡Pescar es genial!\pSi hay agua, ya sea el mar o\nun río, prueba tu CAÑA.$"
 
 Route32_Pokecenter_Text_FishingGuruNo:
-	.string "Oh. That's rather disappointing…$"
+	.string "Oh. Eso es bastante decepcionante…$"
 
 Route32_Pokecenter_Text_FishingGuruAfter:
 	.string "Oye, chico. ¿Cómo pican?$"

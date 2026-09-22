@@ -127,7 +127,7 @@ EverGrandeCity_PokemonLeague_1F_Text_MustHaveAllGymBadges:
 	.string "todas las MEDALLAS de GYM.$"
 
 EverGrandeCity_PokemonLeague_1F_Text_HaventObtainedAllBadges:
-	.string "No has obtenido todas las MEDALLAS.\p"
+	.string "No obtuviste todas las MEDALLAS.\p"
 	.string "Si vas camino a la LIGA POKéMON,\n"
 	.string "debes volver cuando las tengas.$"
 

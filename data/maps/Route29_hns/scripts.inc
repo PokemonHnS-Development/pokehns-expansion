@@ -34,7 +34,7 @@ Route29_Trigger_Monview::
 	end
 
 Route29_Text_PressAorB:
-	.string "Press A or B to stop viewing.$"
+	.string "Presiona A o B para dejar de ver.$"
 
 Route29_EventScript_OldMan::
 	lock
@@ -219,7 +219,7 @@ Route29_Text_MeetTuscany:
 	.string "te daré una recompensa.$"
 
 Route29_Text_TuscanyNope:
-	.string "Not quite!$"
+	.string "¡Ni de cerca!$"
 
 Route29_Text_TuscanyGivesGift:
 	.string "¡Sí! Para presentarnos,\n"

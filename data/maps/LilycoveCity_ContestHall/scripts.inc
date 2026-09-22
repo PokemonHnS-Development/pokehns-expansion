@@ -376,7 +376,7 @@ LilycoveCity_ContestHall_Text_DontAppreciateCuteLeechLife:
 	.string "aprecia para nada!$"
 
 LilycoveCity_ContestHall_Text_YoureBeautifulGrandpa:
-	.string "Kiyaaah! You're beautiful, Grandpa!$"
+	.string "¡Kiyaaah! ¡Qué bello, abuelo!$"
 
 LilycoveCity_ContestHall_Text_AllSeemToUseDifferentMoves:
 	.string "Incluso cuando los ENTRENADORES usan\n"

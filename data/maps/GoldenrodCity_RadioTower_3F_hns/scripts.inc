@@ -134,7 +134,7 @@ GoldenrodCity_RadioTower_3F_Text_CardKeySlot:
 	.string "Es la ranura de LLAVE MAGNÉTICA.$"
 
 GoldenrodCity_RadioTower_3F_Text_InsertedCardKey:
-	.string "{PLAYER} inserted the CARD KEY.$"
+	.string "{PLAYER} insertó la TARJETA LLAVE.$"
  
 GoldenrodCity_RadioTower_3F_Text_Open:
 	.string "La reja está abierta.$"
@@ -191,7 +191,7 @@ GoldenrodCity_RadioTower_3F_Text_GruntM7Seen:
 	.string "TEAM ROCKET!$"
 
 GoldenrodCity_RadioTower_3F_Text_GruntM7Beaten:
-	.string "What?!$"
+	.string "¿Qué?!$"
 
 GoldenrodCity_RadioTower_3F_Text_GruntM7After:
 	.string "Fallé en mis deberes...\p"
@@ -202,7 +202,7 @@ GoldenrodCity_RadioTower_3F_Text_GruntM8Seen:
 	.string "que cometan crímenes.$"
 
 GoldenrodCity_RadioTower_3F_Text_GruntM8Beaten:
-	.string "You're kidding!$"
+	.string "¡No puede ser!$"
 
 GoldenrodCity_RadioTower_3F_Text_GruntM8After:
 	.string "¡Me siento fatal por perder!\p"
@@ -213,7 +213,7 @@ GoldenrodCity_RadioTower_3F_Text_GruntM9Seen:
 	.string "algo que ver con esto?$"
 
 GoldenrodCity_RadioTower_3F_Text_GruntM9Beaten:
-	.string "I'm done for!$"
+	.string "¡Estoy acabado!$"
 
 GoldenrodCity_RadioTower_3F_Text_GruntM9After:
 	.string "¿¡Qué!? ¿Pasaste a nuestros hombres\n"
@@ -225,7 +225,7 @@ GoldenrodCity_RadioTower_3F_Text_ScientistMarcSeen:
 	.string "¿Quién eres?$"
 
 GoldenrodCity_RadioTower_3F_Text_ScientistMarcBeaten:
-	.string "Tch! I took you too lightly!$"
+	.string "¡Tch! ¡Te subestimé!$"
 
 GoldenrodCity_RadioTower_3F_Text_ScientistMarcAfter:
 	.string "Bwahahaha…\p"

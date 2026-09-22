@@ -52,7 +52,7 @@ PewterCity_Museum_1F_Text_FossilWoman:
 
 PewterCity_Museum_1F_Text_FossilWomanAfter:
 	.string "Solemos compartir investigaciones\n"
-	.string "con los de RUINS OF ALPH.\p"
+	.string "con los de RUINAS ALFA.\p"
 	.string "¡Incluso compartimos fósiles\n"
 	.string "a través de la PC!$"
 

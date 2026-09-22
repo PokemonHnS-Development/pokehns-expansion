@@ -294,7 +294,7 @@ MeteorFalls_1F_1R_Text_MeetProfCozmo:
 	.string "EL EQUIPO MAGMA me pidió guiarlos\n"
 	.string "hacia LAS CATARATAS METEORO...\p"
 	.string "Pero me engañaron.\n"
-	.string "Incluso me quitaron mi METEORITO...\p"
+	.string "Hasta me quitaron mi METEORITO...\p"
 	.string "Y luego apareció otro grupo igual,\n"
 	.string "el EQUIPO AQUA.\p"
 	.string "Después de eso...\n"

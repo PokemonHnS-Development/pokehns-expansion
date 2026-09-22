@@ -332,7 +332,7 @@ GoldenrodUnderground_Text_YoungerBrotherAskWhich:
 	.string "OK, ¿qué POKéMON hago?$"
 
 GoldenrodUnderground_Text_YoungerBrotherLookCool:
-    .string "OK! I'll make it look cool!$"
+    .string "¡OK! ¡Lo haré ver genial!$"
 
 GoldenrodUnderground_Text_YoungerBrotherAllDone:
     .string "¡Eso es! ¡Ya está!$"
@@ -341,7 +341,7 @@ GoldenrodUnderground_Text_YoungerBrotherDisappointed:
     .string "No? How disappointing!$"
 
 GoldenrodUnderground_Text_YoungerBrotherShortOnFunds:
-    .string "You're a little short on funds.$"
+    .string "Te falta un poco de dinero.$"
 
 GoldenrodUnderground_Text_YoungerBrotherOnePerDay:
     .string "Solo hago un corte al día.\p"
@@ -362,10 +362,10 @@ GoldenrodUnderground_Text_OlderBrotherAskWhich:
 	.string "¿Con qué POKéMON trabajo?$"
 
 GoldenrodUnderground_Text_OlderBrotherWatchItBeautiful:
-    .string "OK! Watch it become beautiful!$"
+    .string "¡OK! ¡Mira cómo se vuelve hermoso!$"
 
 GoldenrodUnderground_Text_OlderBrotherAllDone:
-    .string "There! All done!$"
+    .string "¡Listo! ¡Todo terminado!$"
 
 GoldenrodUnderground_Text_OlderBrotherThatsAShame:
     .string "¿En serio? ¡Qué lástima!$"
@@ -419,7 +419,7 @@ GoldenrodUnderground_Text_PokemaniacDonaldSeen:
     .string "¡Déjame verlos!$"
 
 GoldenrodUnderground_Text_PokemaniacDonaldBeaten:
-    .string "Gaah! I lost! That makes me mad!$"
+    .string "¡Gah! ¡Perdí! ¡Eso me enfurece!$"
 
 GoldenrodUnderground_Text_PokemaniacDonaldAfterBattle:
 	.string "Anoche, al caminar cerca de la\n"
@@ -435,7 +435,7 @@ GoldenrodUnderground_Text_PokemaniacDonaldAfterBattleOld:
     .string "POKéMON.$"
 
 GoldenrodUnderground_Text_DoorsLocked:
-    .string "The door's locked…$"
+    .string "La puerta está cerrada…$"
 
 GoldenrodUnderground_Text_DoorIsOpen:
     .string "La puerta está abierta.$"
@@ -444,4 +444,4 @@ GoldenrodUnderground_Text_KeyOpenedDoor:
     .string "La LLAVE DEL SÓTANO abrió la puerta.$"
 
 GoldenrodUnderground_Text_NoEntry:
-    .string "NO ENTRY BEYOND THIS POINT$"
+    .string "PROHIBIDO EL PASO A PARTIR DE AQUÍ$"

@@ -39,7 +39,7 @@ Route4_Text_BirdKeeperHank_Seen:
 	.string "conmigo?$"
 
 Route4_Text_BirdKeeperHank_Beaten:
-	.string "Ack! I lost that one…$"
+	.string "¡Ay! Perdí esa…$"
 
 Route4_Text_BirdKeeperHank_AfterBattle:
 	.string "Si tienes un POKéMON específico que\n"
@@ -65,7 +65,7 @@ Route4_Text_PicnickerSharon_Beaten:
 	.string "…$"
 
 Route4_Text_PicnickerSharon_AfterBattle:
-	.string "……I'll go train some more…$"
+	.string "…Entrenaré un poco más…$"
 
 Route4_Text_MtMoonSquareSign:
 	.string "NUEVA ENTRADA MT.MOON\n"

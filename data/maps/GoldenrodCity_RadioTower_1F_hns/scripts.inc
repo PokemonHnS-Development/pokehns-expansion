@@ -164,7 +164,7 @@ GoldenrodCity_RadioTower_1F_EventScript_Sign::
 	end
 
 RadioTower1F_Text_ReceptionistWelcome:
-    .string "Welcome!$"
+    .string "¡Bienvenido!$"
 
 RadioTower1F_Text_ReceptionistNoTours:
     .string "Hola. Lo siento, pero no estamos\n"
@@ -376,10 +376,10 @@ GoldenrodCity_RadioTower_1F_Text_LotteryCornerDrawTicket:
 	.string "¿TICKET LOTO?$"
 
 GoldenrodCity_RadioTower_1F_Text_ComeBackTomorrow:
-	.string "Please come back tomorrow.$"
+	.string "Vuelva mañana, por favor.$"
 
 GoldenrodCity_RadioTower_1F_Text_PleaseVisitAgain:
-	.string "Please do visit again.$"
+	.string "Vuelva pronto, por favor.$"
 
 GoldenrodCity_RadioTower_1F_Text_PleasePickTicket:
 	.string "Elige un TICKET LOTO, por favor.\n"
@@ -441,6 +441,6 @@ GoldenrodCity_RadioTower_1F_Text_PrizeWeveBeenHolding:
 	.string "útil para ti.$"
 
 GoldenrodCity_RadioTower_1F_Text_PleaseVisitAgain2:
-	.string "Please do visit again.$"
+	.string "Vuelva pronto, por favor.$"
 
 

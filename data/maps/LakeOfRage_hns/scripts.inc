@@ -325,7 +325,7 @@ LakeOfRage_Text_FisherRaymondSeen:
     .string "los mismos POKéMON…$"
 
 LakeOfRage_Text_FisherRaymondBeaten:
-    .string "My line's all tangled up…$"
+    .string "Mi línea está toda enredada…$"
 
 LakeOfRage_Text_FisherRaymondAfter:
     .string "¿Por qué no puedo atrapar buenos\n"
@@ -424,7 +424,7 @@ LakeOfRage_Text_WesleyWednesday:
     .string "¿O solo tuviste suerte?$"
 
 LakeOfRage_Text_WesleyNotWednesday:
-    .string "WESLEY: Not exactly...$"
+    .string "WESLEY: No exactamente...$"
 
 LakeOfRage_EventScript_Sign1::
 	msgbox LakeOfRage_Text_Sign, MSGBOX_SIGN

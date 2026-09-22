@@ -67,7 +67,7 @@ Route26_Text_CooltrainermJakeSeen:
     .string "para la LIGA POKéMON.$"
 
 Route26_Text_CooltrainermJakeBeaten:
-    .string "I blew it!$"
+    .string "¡Lo arruiné!$"
 
 Route26_Text_CooltrainermJakeAfter:
     .string "Será difícil ganar en la\n"
@@ -81,7 +81,7 @@ Route26_Text_CooltrainermGavenSeen:
     .string "ganas poder.$"
 
 Route26_Text_CooltrainermGavenBeaten:
-    .string "Gaah! Life is even tougher!$"
+    .string "¡Ah! ¡La vida es aún más dura!$"
 
 Route26_Text_CooltrainermGavenAfter:
     .string "Para ir a la LIGA POKéMON, debes\n"
@@ -100,7 +100,7 @@ Route26_Text_GavenRematchIntro:
     .string "ganas poder.$"
 
 Route26_Text_GavenRematchDefeat:
-    .string "Gaah! Life is even tougher!$"
+    .string "¡Ah! ¡La vida es aún más dura!$"
 
 Route26_Text_GavenPostRematch:
     .string "Para ir a la LIGA POKéMON, debes\n"

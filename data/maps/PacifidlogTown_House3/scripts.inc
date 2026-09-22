@@ -43,7 +43,7 @@ PacifidlogTown_House3_Text_ItsSubtlyDifferentThankYou:
 	.string "¿Oh, así que esto es un {STR_VAR_1}?\p"
 	.string "Es algo parecido a un {STR_VAR_2},\n"
 	.string "pero es sutilmente diferente.\p"
-	.string "Thank you!$"
+	.string "¡Gracias!$"
 
 PacifidlogTown_House3_Text_WontAcceptAnyLessThanRealMon:
 	.string "¡No, no, no! ¡No aceptaré nada\n"

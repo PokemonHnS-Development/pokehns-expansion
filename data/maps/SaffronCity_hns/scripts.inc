@@ -134,7 +134,7 @@ SaffronCity_Text_Fisher_ReturnedPart:
 
 SaffronCity_Text_Youngster1:
 	.string "Entrar en un callejón por primera\n"
-	.string "vez me pone algo ansioso.$"
+	.string "me pone algo ansioso.$"
 
 SaffronCity_Text_Youngster2:
 	.string "Hay un lugar llamado SALÓN de\n"

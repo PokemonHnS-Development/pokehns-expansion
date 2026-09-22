@@ -250,7 +250,7 @@ Route14_Text_PokefanmTrevorSeen:
 	.string "recuerden.$"
 
 Route14_Text_PokefanmTrevorBeaten:
-	.string "Where did I meet this SCIZOR?$"
+	.string "¿Dónde conocí a este SCIZOR?$"
 
 Route14_Text_PokefanmTrevorAfterBattle:
 	.string "Ojalá hubiera una forma fácil de\n"
@@ -399,9 +399,9 @@ Route14_Movement_StuckPidgeottoJump:
 Route14_Text_Pidgeotto:
 	.string "PIDGEOTTO: Kaaaaa!$"
 Route14_Text_PidgeottoBerry:
-	.string "Give the PIDGEOTTO a BERRY?$"
+	.string "¿Dar una BAYA al PIDGEOTTO?$"
 Route14_Text_PidgeottoAteBerry:
 	.string "PIDGEOTTO enjoyed the QUALOT BERRY!$"
 Route14_Text_PidgeottoTurnedAway:
-	.string "PIDGEOTTO doesn't like it!$"
+	.string "¡A PIDGEOTTO no le gusta!$"
 

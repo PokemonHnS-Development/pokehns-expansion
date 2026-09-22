@@ -198,7 +198,7 @@ TohjoFalls_GiovanniRoom_Text_GiovanniIntro:
 	.string "este no es lugar para niños como\l"
 	.string "vencerte.\p"
 	.string "Tienes una mirada especial.\n"
-	.string "Me recuerdas al chico que estuvo\l"
+	.string "estuvo\l"
 	.string "frente a mí hace tres años...\p"
 	.string "Tienes los mismos ojos...\p"
 	.string "...\p"

@@ -240,7 +240,7 @@ RustboroCity_DevonCorp_3F_Text_MrStoneGoWithCautionAndCare:
 	.string "¡ve con mucha precaución!$"
 
 RustboroCity_DevonCorp_3F_Text_CountingOnYou:
-	.string "MR. STONE: I'm counting on you!$"
+	.string "SR. PIEDRA: ¡Cuento contigo!$"
 
 RustboroCity_DevonCorp_3F_Text_ThankYouForDeliveringLetter:
 	.string "SR. STONE: ¿Entregaste mi CARTA?\n"
@@ -258,7 +258,7 @@ RustboroCity_DevonCorp_3F_Text_ExplainExpShare:
 	.string "para subir POKéMON débiles.$"
 
 RustboroCity_DevonCorp_3F_Text_NotFamiliarWithTrends:
-	.string "SR. STONE: Desde joven, me he\n"
+	.string "SR. PIEDRA: Desde joven, me he\n"
 	.string "dedicado solo al trabajo.\p"
 	.string "Por eso, no estoy al tanto de las\n"
 	.string "modas y cosas así.\p"
@@ -287,7 +287,7 @@ RustboroCity_DevonCorp_3F_Text_WordWithPresidentComeWithMe:
 	.string "Nuestro PRESIDENTE quiere\nhablar contigo.\pAcompáñame, por favor.$"
 
 RustboroCity_DevonCorp_3F_Text_PleaseGoAhead:
-	.string "Please, go ahead.$"
+	.string "Por favor, adelante.$"
 
 RustboroCity_DevonCorp_3F_Text_VisitCaptSternShipyard:
 	.string "Si vas al ASTILLERO de CIUDAD\nPORTUAL, visita al CAP. STERN.$"

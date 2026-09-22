@@ -539,7 +539,7 @@ BattleFrontier_BattleArenaBattleRoom_Text_RetireFromChallenge:
 
 BattleFrontier_BattleArenaBattleRoom_Text_SavingPleaseWait:
 	.string "Guardando los datos de juego.\n"
-	.string "Please wait.$"
+	.string "Espera.$"
 
 BattleFrontier_BattleArenaBattleRoom_Text_RecordLastBattle:
 	.string "¿Quieres grabar tu última batalla\n"

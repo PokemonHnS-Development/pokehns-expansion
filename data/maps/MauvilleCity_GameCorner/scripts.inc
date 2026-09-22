@@ -1023,7 +1023,7 @@ MauvilleCity_GameCorner_Text_SoYourChoiceIsX:
 	.string "¿Así que eliges {STR_VAR_1}?$"
 
 MauvilleCity_GameCorner_Text_HereYouGo:
-	.string "Here you go!$"
+	.string "¡Toma!$"
 
 @ Unused
 MauvilleCity_GameCorner_Text_CantCarryAnyMore:
@@ -1035,7 +1035,7 @@ MauvilleCity_GameCorner_Text_GotTwoOfSameDollWantOne:
 	.string "¿Quieres uno de ellos?$"
 
 MauvilleCity_GameCorner_Text_HereYouGo2:
-	.string "Here you go!$"
+	.string "¡Toma!$"
 
 MauvilleCity_GameCorner_Text_YouWantItButNotNow:
 	.string "¿Eh?\n"

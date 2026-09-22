@@ -311,7 +311,7 @@ PlayersHouse_1F_Text_OhComeQuickly:
 	.string "¡Rápido! ¡Ven pronto!$"
 
 PlayersHouse_1F_Text_MaybeDadWillBeOn:
-	.string "MOM: Look! It's PETALBURG GYM!\n"
+	.string "MAMÁ: ¡Mira! ¡Es el GIMNASIO de\n"
 	.string "¡Quizás PAPÁ salga en TV!$"
 
 PlayersHouse_1F_Text_ItsOverWeMissedHim:
@@ -327,7 +327,7 @@ PlayersHouse_1F_Text_GoIntroduceYourselfNextDoor:
 	.string "ir a presentarte.$"
 
 PlayersHouse_1F_Text_SeeYouHoney:
-	.string "MOM: See you, honey!$"
+	.string "MAMÁ: ¡Nos vemos, querido!$"
 
 PlayersHouse_1F_Text_DidYouMeetProfBirch:
 	.string "MAMÁ: ¿Ya te presentaste ante el\n"
@@ -339,7 +339,7 @@ PlayersHouse_1F_Text_YouShouldRestABit:
 	.string "Creo que deberías descansar un poco.$"
 
 PlayersHouse_1F_Text_TakeCareHoney:
-	.string "MOM: Take care, honey!$"
+	.string "MAMÁ: ¡Cuídate, querido!$"
 
 PlayersHouse_1F_Text_GotDadsBadgeHeresSomethingFromMom:
 	.string "MAMÁ: ¿Ah? ¿PAPÁ te dio esa MEDALLA?\p"

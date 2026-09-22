@@ -194,14 +194,14 @@ SootopolisCity_MysteryEventsHouse_1F_Text_SaveProgressBeforeBattle:
 	.string "guardar su progreso.$"
 
 SootopolisCity_MysteryEventsHouse_1F_Text_HopeToSeeGoodMatch:
-	.string "I hope to see a good match!$"
+	.string "¡Espero ver un buen combate!$"
 
 @ Unused
 SootopolisCity_MysteryEventsHouse_1F_Text_StrVar1Tie:
 	.string "{STR_VAR_1}$"
 
 SootopolisCity_MysteryEventsHouse_B1F_Text_MatchEndedUpDraw:
-	.string "The match ended up a draw.$"
+	.string "El combate terminó en empate.$"
 
 SootopolisCity_MysteryEventsHouse_1F_Text_BrilliantStandoff:
 	.string "Así que quedó en un empate.\p"

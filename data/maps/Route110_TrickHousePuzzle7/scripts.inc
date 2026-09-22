@@ -342,7 +342,7 @@ Route110_TrickHousePuzzle7_Text_PatriciaDefeat:
 	.string "Es una mala señal...$"
 
 Route110_TrickHousePuzzle7_Text_PatriciaPostBattle:
-	.string "He dado diez vueltas al mismo sitio\n"
+	.string "Di diez vueltas al mismo lugar\n"
 	.string "veces ya... Es mala suerte...$"
 
 Route110_TrickHousePuzzle7_Text_AlexisIntro:
@@ -369,10 +369,10 @@ Route110_TrickHousePuzzle7_Text_MarielaPostBattle:
 	.string "¡Yo no!$"
 
 Route110_TrickHousePuzzle7_Text_AlvaroIntro:
-	.string "I ever so closely watched you coming!$"
+	.string "¡Te vi venir de cerca!$"
 
 Route110_TrickHousePuzzle7_Text_AlvaroDefeat:
-	.string "This outcome I didn't see coming…$"
+	.string "No vi venir este final…$"
 
 Route110_TrickHousePuzzle7_Text_AlvaroPostBattle:
 	.string "Bueno, igual, ambos elegimos un lugar\n"
@@ -381,7 +381,7 @@ Route110_TrickHousePuzzle7_Text_AlvaroPostBattle:
 	.string "¡demos lo mejor de nosotros!$"
 
 Route110_TrickHousePuzzle7_Text_EverettIntro:
-	.string "It's awfully cramped in here…$"
+	.string "Qué estrecho está aquí…$"
 
 Route110_TrickHousePuzzle7_Text_EverettDefeat:
 	.string "Oh, sí, eres fuerte.$"

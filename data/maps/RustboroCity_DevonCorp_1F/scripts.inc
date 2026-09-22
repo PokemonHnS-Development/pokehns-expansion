@@ -121,7 +121,7 @@ RustboroCity_DevonCorp_1F_Text_RocksMetalDisplay:
 	.string "Hay muestras de rocas y metal\n"
 	.string "en la vitrina de cristal.\p"
 	.string "Hay un panel con un texto\n"
-	.string "on it…\p"
+	.string "en ello…\p"
 	.string "“DEVON CORPORATION comenzó como\n"
 	.string "productor de piedras de canteras.\p"
 	.string "“La empresa también producía hierro\n"

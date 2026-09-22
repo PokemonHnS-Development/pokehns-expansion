@@ -206,7 +206,7 @@ GoldenrodCity_RadioTower_2F_Text_GruntM6Seen:
 	.string "¡Oye, oye! ¡Apártense!$"
 
 GoldenrodCity_RadioTower_2F_Text_GruntM6Beaten:
-	.string "Arggh. I give up.$"
+	.string "Arggh. Me rindo.$"
 
 GoldenrodCity_RadioTower_2F_Text_GruntM6After:
 	.string "Nuestros EJECUTIVOS intentan tomar\n"

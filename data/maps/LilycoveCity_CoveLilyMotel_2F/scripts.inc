@@ -128,7 +128,7 @@ LilycoveCity_CoveLilyMotel_2F_Text_GirlsAreCute:
 	.string "¡Uau, es increíblemente divertido!$"
 
 LilycoveCity_CoveLilyMotel_2F_Text_SeaBreezeTicklesHeart:
-	.string "La brisa marina me alegra el alma.\n"
+	.string "La brisa marina alegra mi alma.\n"
 	.string "¡Se siente maravilloso aquí!$"
 
 LilycoveCity_CoveLilyMotel_2F_Text_NeverLeaveWithoutGameBoy:

@@ -652,7 +652,7 @@ LilycoveCity_Text_TeamAquaRenovatedCavern:
 	.string "pero luego llegó la gente del\l"
 	.string "TEAM AQUA y la remodelaron.\p"
 	.string "Se hacen llamar\n"
-	.string "the “nature-loving TEAM AQUA”!\p"
+	.string "¡el “ecologista EQUIPO AQUA“!\p"
 	.string "¡Pero lo que hacen y lo que dicen\n"
 	.string "no coinciden para nada!$"
 

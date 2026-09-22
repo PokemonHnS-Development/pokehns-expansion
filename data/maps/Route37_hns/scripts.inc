@@ -110,7 +110,7 @@ Route37_Text_PsychicGreg_Seen:
 	.string "¡Te mostraré lo aterrador que es!$"
 
 Route37_Text_PsychicGreg_Beaten:
-	.string "I lost. That's pretty sad…$"
+	.string "Perdí. Qué triste…$"
 
 Route37_Text_PsychicGreg_After:
 	.string "Dormir o paralizar a los POKéMON\n"

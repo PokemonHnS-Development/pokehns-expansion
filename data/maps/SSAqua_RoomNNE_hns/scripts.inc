@@ -16,7 +16,7 @@ SSAqua_RoomNNE_Text_CooltrainermSeanSeen:
     .string "para probar mi nivel.$"
 
 SSAqua_RoomNNE_Text_CooltrainermSeanBeaten:
-    .string "I wanted to win!$"
+    .string "¡Yo quería ganar!$"
 
 SSAqua_RoomNNE_Text_CooltrainermSeanAfterBattle:
     .string "Los ENTRENADORES de JOHTO\n"

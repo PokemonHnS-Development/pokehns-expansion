@@ -132,7 +132,7 @@ Route109_SeashoreHouse_Text_WantToBuySodaPop:
 	.string "¡Compra algunos!$"
 
 Route109_SeashoreHouse_Text_HereYouGo:
-	.string "Here you go!$"
+	.string "¡Toma!$"
 
 Route109_SeashoreHouse_Text_NotEnoughMoney:
 	.string "No tienes dinero.$"
@@ -160,10 +160,10 @@ Route109_SeashoreHouse_Text_JohannaIntro:
 	.string "ENTRENADORES y POKéMON!$"
 
 Route109_SeashoreHouse_Text_JohannaDefeated:
-	.string "That's hot!$"
+	.string "¡Qué calor!$"
 
 Route109_SeashoreHouse_Text_JohannaPostBattle:
-	.string "Uff, me dio sed.\n"
+	.string "Uf, tenía sed.\n"
 	.string "Tal vez tome un REFRESCO.$"
 
 Route109_SeashoreHouse_Text_SimonIntro:
@@ -171,7 +171,7 @@ Route109_SeashoreHouse_Text_SimonIntro:
 	.string "son mis POKéMON, ¡no llores!$"
 
 Route109_SeashoreHouse_Text_SimonDefeated:
-	.string "…I lost, but I won't cry…$"
+	.string "…Perdí, pero no lloraré…$"
 
 Route109_SeashoreHouse_Text_SimonPostBattle:
 	.string "Si uno de mis POKéMON supiera el\n"

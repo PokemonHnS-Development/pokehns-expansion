@@ -607,7 +607,7 @@ Route25_BillsHouse_Text_Appreciation:
 	.string "aprecio.$"
 
 Route25_BillsHouse_Text_ComeAgain:
-	.string "Come visit again sometime.$"
+	.string "Vuelve a visitarme pronto.$"
 
 Route25_BillsHouse_Text_ShownAll:
 	.string "Gracias por mostrarme tantos\n"

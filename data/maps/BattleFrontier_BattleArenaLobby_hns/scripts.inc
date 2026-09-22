@@ -451,7 +451,7 @@ BattleFrontier_BattleArenaLobby_Text_CongratsOnSevenWins_hns:
 
 BattleFrontier_BattleArenaLobby_Text_RecordAchievement_hns:
 	.string "Tu logro quedará registrado.\n"
-	.string "Please wait while I save the game.$"
+	.string "Espera mientras guardo la partida.$"
 
 @ Unused
 BattleFrontier_BattleArenaLobby_Text_PresentYouWithPrize_hns:
@@ -472,7 +472,7 @@ BattleFrontier_BattleArenaLobby_Text_BagFullReturnForPrize_hns:
 
 BattleFrontier_BattleArenaLobby_Text_ThankYouWaitWhileSave_hns:
 	.string "¡Muchas gracias por participar!\p"
-	.string "Please wait while I save the game.$"
+	.string "Espera mientras guardo la partida.$"
 
 BattleFrontier_BattleArenaLobby_Text_AwaitAnotherChallenge_hns2_hns:
 	.string "¡Esperaremos tu desafío en\n"
@@ -483,7 +483,7 @@ BattleFrontier_BattleArenaLobby_Text_LookingForwardToArrivalSaveGame_hns:
 	.string "tu llegada.\p"
 	.string "Antes de ir a la BATTLE ARENA,\n"
 	.string "debo guardar la partida.\l"
-	.string "Please wait.$"
+	.string "Espera, por favor.$"
 
 BattleFrontier_BattleArenaLobby_Text_RecordLastMatch_hns:
 	.string "¿Registro tu último combate de la\n"
@@ -548,7 +548,7 @@ BattleFrontier_BattleArenaLobby_Text_ExplainSkillRules_hns:
 	.string "Si fue un ataque, la Habilidad\n"
 	.string "Sube si el movimiento fue “muy\l"
 	.string "efectivo” y baja si fue\l"
-	.string "“not very effective.”\p"
+	.string "«no es muy eficaz.»\p"
 	.string "La Habilidad no subirá si\n"
 	.string "movimientos como PROTECT y DETECT.\p"
 	.string "Si el rival usó PROTECCIÓN o\n"

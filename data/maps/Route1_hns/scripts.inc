@@ -26,7 +26,7 @@ Route1_Text_SchoolboyDanny_Seen:
 	.string "lo primero es luchar.$"
 
 Route1_Text_SchoolboyDanny_Beaten:
-	.string "Awww… I've got a losing record…$"
+	.string "Awww… tengo más derrotas…$"
 
 Route1_Text_SchoolboyDanny_AfterBattle:
 	.string "Para los entrenadores, es obvio\n"

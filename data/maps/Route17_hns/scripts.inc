@@ -100,13 +100,13 @@ Route17_Text_BikerRileySeen:
 	.string "¡Oye, tú! Eres de JOHTO, ¿no?$"
 
 Route17_Text_BikerRileyBeaten:
-	.string "Whoa, you kick!$"
+	.string "¡Vaya, pateas fuerte!$"
 
 Route17_Text_BikerRileyAfterBattle:
 	.string "No te confíes, chico de JOHTO.$"
 
 Route17_Text_BikerJoelSeen:
-	.string "Wow. That's a cool BICYCLE!$"
+	.string "Vaya. ¡Qué BICICLETA tan genial!$"
 
 Route17_Text_BikerJoelBeaten:
 	.string "Pero no solo pareces genial…$"
@@ -120,17 +120,17 @@ Route17_Text_BikerGlennSeen:
 	.string "¡Oye! ¿Quieres un duelo de velocidad?$"
 
 Route17_Text_BikerGlennBeaten:
-	.string "Yikes! You've got awesome torque!$"
+	.string "¡Cielos! ¡Qué torque tan genial!$"
 
 Route17_Text_BikerGlennAfterBattle:
 	.string "Andar sin manos se considera\n"
 	.string "genial en la RUTA CICLISTA.$"
 
 Route17_Text_BikerCharlesSeen:
-	.string "We're fearless highway stars!$"
+	.string "¡Somos estrellas de la ruta sin miedo!$"
 
 Route17_Text_BikerCharlesBeaten:
-	.string "Arrrgh! Crash and burn!$"
+	.string "¡Argh! ¡Choque y quemado!$"
 
 Route17_Text_BikerCharlesAfterBattle:
 	.string "¡Manejar así causa accidentes!\n"

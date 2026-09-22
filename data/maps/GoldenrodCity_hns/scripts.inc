@@ -354,7 +354,7 @@ GoldenrodCity_Text_CooltrainerF2_GotCard:
 	.string "como radio!$"
 
 GoldenrodCity_Text_Youngster2:
-	.string "E-he-he-he…\p"
+	.string "E-je-je-je…\p"
 	.string "Me regañaron por jugar en el\n"
 	.string "sótano del CENTRO COMERCIAL.$"
 
@@ -449,7 +449,7 @@ GoldenrodCity_Text_MoveTutorCost:
 	.string "¿De acuerdo?$"
 
 GoldenrodCity_Text_MoveTutorDecline:
-	.string "Aww… But these moves are great!$"
+	.string "Ay… ¡Pero son geniales!$"
 
 GoldenrodCity_Text_MoveTutorWhich:
 	.string "¡Jajaja! ¡No te arrepentirás!\p"
@@ -467,7 +467,7 @@ GoldenrodCity_Text_MoveTutorFarewell:
 	.string "Wahahah! Farewell, kid!$"
 
 GoldenrodCity_Text_MoveTutorBut:
-	.string "B-but…$"
+	.string "P-pero…$"
 
 GoldenrodCity_Text_MoveTutorNotEnoughCoins:
 	.string "…No tienes suficientes monedas…$"

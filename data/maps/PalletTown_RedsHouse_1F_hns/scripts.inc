@@ -34,7 +34,7 @@ RedsHouse_Text_Mom1:
 RedsHouse_Text_Mom2:
 	.string "Temo que RED se lastime o enferme,\n"
 	.string "pero es un chico.\p"
-	.string "Me enorgullece que haga lo que\n"
+	.string "Me enorgullece que haga lo\n"
 	.string "él desea hacer.$"
 
 RedsHouse_Text_TV:

@@ -199,7 +199,7 @@ LavaridgeTown_Gym_1F_Text_ColeIntro:
 	.string "¡Cielos, quema!$"
 
 LavaridgeTown_Gym_1F_Text_ColeDefeat:
-	.string "I'm blinded by sweat in my eyes…$"
+	.string "El sudor me ciega los ojos…$"
 
 LavaridgeTown_Gym_1F_Text_ColePostBattle:
 	.string "Enterrarse en arena caliente ayuda\n"
@@ -212,7 +212,7 @@ LavaridgeTown_Gym_1F_Text_AxleIntro:
 	.string "¡No vengas a estresarme más!$"
 
 LavaridgeTown_Gym_1F_Text_AxleDefeat:
-	.string "I hope FLANNERY flames you good!$"
+	.string "¡Ojalá FLANNERY te queme bien!$"
 
 LavaridgeTown_Gym_1F_Text_AxlePostBattle:
 	.string "Haaah… Uff…\p"
@@ -241,7 +241,7 @@ LavaridgeTown_Gym_1F_Text_GeraldIntro:
 	.string "un calor de 392 grados?$"
 
 LavaridgeTown_Gym_1F_Text_GeraldDefeat:
-	.string "It didn't burn hotly enough…$"
+	.string "No ardió con suficiente calor…$"
 
 LavaridgeTown_Gym_1F_Text_GeraldPostBattle:
 	.string "La temperatura del magma es\n"
@@ -254,7 +254,7 @@ LavaridgeTown_Gym_1F_Text_DanielleIntro:
 	.string "Está bien, lucharé contigo.$"
 
 LavaridgeTown_Gym_1F_Text_DanielleDefeat:
-	.string "Oh, but you're too strong.$"
+	.string "Ah, pero eres demasiado fuerte.$"
 
 LavaridgeTown_Gym_1F_Text_DaniellePostBattle:
 	.string "Seré una ENTRENADORA linda y\n"

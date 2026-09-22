@@ -35,7 +35,7 @@ Route47_Text_CamperBeaten::
 	.string "montaña...$"
 
 Route47_Text_CamperAfter::
-	.string "See ya!$"
+	.string "¡Hasta luego!$"
 
 Route47_EventScript_Thom::
 	trainerbattle_double TRAINER_THOM_AND_KAE_HNS, Route47_Text_Couple1Seen, Route47_Text_Couple1Beaten, Route104_Text_GinaNotEnoughMons

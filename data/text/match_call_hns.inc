@@ -539,7 +539,7 @@ MatchCall_HNS_Brent_General2::
 	.string "POKéMON muy raro en\l"
 	.string "un intercambio hace tiempo.\p"
 	.string "¿Quieres saber cuál?\n"
-	.string "it is?\p"
+	.string "¿lo es?\p"
 	.string "Jeje, lo mantengo muy\n"
 	.string "secreto!$"
 

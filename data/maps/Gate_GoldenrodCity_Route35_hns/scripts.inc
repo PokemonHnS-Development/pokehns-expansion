@@ -103,7 +103,7 @@ Route35GoldenrodGate_Text_CantCarryMoreMon:
 	.string "You can't carry another POKéMON…$"
 
 Route35GoldenrodGate_Text_RandyNeverMind:
-	.string "Oh… Never mind, then…$"
+	.string "Oh… entonces, olvídalo…$"
 
 Route35GoldenrodGate_Text_ThanksForDelivery:
 	.string "¡Gracias, chico! Hiciste la entrega\n"

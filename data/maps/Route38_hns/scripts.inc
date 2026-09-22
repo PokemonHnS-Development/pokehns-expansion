@@ -123,14 +123,14 @@ Route38_Text_SchoolboyChadAfter:
 	.string "exámenes que no tengo tiempo\l"
 	.string "hora de POKéMON.\p"
 	.string "Así que cuando juego,\n"
-	.string "me concentro mucho.$"
+	.string "Me concentro mucho.$"
 
 Route38_Text_ChadRegister:
 	.string "Tengo que hacer tantos\n"
 	.string "exámenes que no tengo tiempo\l"
 	.string "hora de POKéMON.\p"
 	.string "Así que cuando juego,\n"
-	.string "me concentro mucho.$"
+	.string "Me concentro mucho.$"
 
 Route38_Text_ChadRematchIntro:
 	.string "Dejadme intentar algo\n"
@@ -145,13 +145,13 @@ Route38_Text_ChadPostRematch:
 	.string "exámenes que no tengo tiempo\l"
 	.string "hora de POKéMON.\p"
 	.string "Así que cuando juego,\n"
-	.string "me concentro mucho.$"
+	.string "Me concentro mucho.$"
 
 Route38_Text_LassDana1Seen:
 	.string "Pareces ser bueno en eso.\n"
 	.string "POKéMON planta.\p"
 	.string "Si es así, ¿qué tal si\n"
-	.string "me das algunos consejos?$"
+	.string "¿me das algunos consejos?$"
 
 Route38_Text_LassDana1Beaten:
 	.string "Ya veo. Así puedes luchar\nde esa forma.$"
@@ -221,7 +221,7 @@ Route38_Text_DanaRematchIntro:
 	.string "Pareces ser bueno en eso.\n"
 	.string "POKéMON planta.\p"
 	.string "Si es así, ¿qué tal si\n"
-	.string "me das algunos consejos?$"
+	.string "¿me das algunos consejos?$"
 
 Route38_Text_DanaRematchDefeat:
 	.string "Ya veo. Así puedes luchar\nde esa forma.$"

@@ -312,7 +312,7 @@ VermilionCity_Text_Eusine:
 	.string "EUSINE: ¡Estuvo muy cerca!\nPensé que podría acorralarlo\lemboscándolo aquí.\pPero correr sobre el agua es demasiado\npara mí.\pAun así, empiezo a ver\nun patrón.\p¡SUICUNE prefiere el agua!\pEso significa...$"
 
 VermilionCity_Text_Eusine2:
-	.string "Sorry {PLAYER}, I've got to go!$"
+	.string "¡Perdón {PLAYER}, me tengo que ir!$"
 
 VermilionCity_Text_Teacher:
 	.string "EL PUERTO VERMILIAN es la puerta\n"
@@ -339,7 +339,7 @@ VermilionCity_Text_SuperNerd:
 	.string "GIMNASIO de VERMILION.$"
 
 VermilionCity_Text_SnorlaxSleeping:
-	.string "SNORLAX is snoring peacefully…$"
+	.string "SNORLAX ronca tranquilamente…$"
 
 VermilionCity_Text_RadioNearSnorlax:
 	.string "El POKéGEAR fue puesto cerca del\n"
@@ -575,7 +575,7 @@ VermilionCity_Text_Samson:
 	.string "pronto hacia las ISLAS, y\l"
 	.string "¡tengo que subirme!\p"
 	.string "Uff... Uff...\p"
-	.string "He corrido todo el camino desde\n"
+	.string "Corrí todo el camino desde\n"
 	.string "el MT. MOON.\p"
 	.string "¿Ves este adornito de aquí?\p"
 	.string "Recogí este EXTRAÑO RECUERDO\n"

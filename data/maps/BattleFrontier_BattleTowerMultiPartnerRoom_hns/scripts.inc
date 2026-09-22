@@ -464,7 +464,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice6Intro_hns::
 	.string "Soy {STR_VAR_3} y soy TRIATLETA.\n"
 	.string "Estoy ocupado todo el día trotando,\l"
 	.string "entrenando y rapeando.\p"
-	.string "I also happen to be {STR_VAR_1}'s\n"
+	.string "También soy aprendiz de {STR_VAR_1}\n"
 	.string "no. {STR_VAR_2} apprentice.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice6Mon1_hns::
@@ -751,7 +751,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice16Reject_hns::
 	.string "¿Crees que esto es una broma?$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_LassIntro_hns::
-	.string "I'm {STR_VAR_1}, and I'm a LASS!$"
+	.string "Soy {STR_VAR_1}, ¡y soy una NIÑA!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_LassMon1_hns::
 	.string "Tengo un {STR_VAR_2}\n"
@@ -854,7 +854,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_FishermanAccept_hns::
 	.string "Iré a registrarnos ahora mismo.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_FishermanReject_hns::
-	.string "We matched up perfectly, too…$"
+	.string "Habríamos hecho buena pareja…$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_LadyIntro_hns::
 	.string "Gusto en conocerte.\n"
@@ -1265,7 +1265,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_DragonTamerIntro_hns::
 	.string "I'm DRAGON TAMER {STR_VAR_1}!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_DragonTamerMon1_hns::
-	.string "El equipo que he estado entrenando es\n"
+	.string "El equipo que he entrenado es\n"
 	.string "un {STR_VAR_2} con {STR_VAR_1} y$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_DragonTamerMon2Ask_hns::
@@ -1579,7 +1579,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_KindlerReject_hns::
 	.string "la próxima vez que nos veamos.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_CamperIntro_hns::
-	.string "I'm {STR_VAR_1}, and I'm a CAMPER!$"
+	.string "Soy {STR_VAR_1}, y soy un CAMPER!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_CamperMon1_hns::
 	.string "He criado un {STR_VAR_1}-\n"
@@ -1763,7 +1763,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_SwimmingTriathleteMReject_hns::
 	.string "¿Qué tal la próxima vez?$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SwimmingTriathleteFIntro_hns::
-	.string "I'm the TRIATHLETE {STR_VAR_1}!$"
+	.string "¡Soy el TRIATLETA {STR_VAR_1}!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SwimmingTriathleteFMon1_hns::
 	.string "Un {STR_VAR_2} con {STR_VAR_1} y$"

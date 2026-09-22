@@ -1152,7 +1152,7 @@ Route104_Text_BrendanDefeat:
 	.string "Eres bastante bueno.$"
 
 Route104_Text_BrendanPostBattle:
-	.string "BRENDAN: Te has vuelto bastante\n"
+	.string "BRENDAN: Has cambiado mucho\n"
 	.string "bueno manejando POKéMON.\p"
 	.string "Pero, ya sabes, no deberías solo\n"
 	.string "hacer batallas POKéMON.\p"

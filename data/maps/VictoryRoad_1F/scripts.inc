@@ -160,7 +160,7 @@ VictoryRoad_1F_Text_EdgarIntro:
 	.string "pero el tramo final es muy largo...$"
 
 VictoryRoad_1F_Text_EdgarDefeat:
-	.string "My dream ends here again…$"
+	.string "Mi sueño termina aquí otra vez…$"
 
 VictoryRoad_1F_Text_EdgarPostBattle:
 	.string "Tú has llegado hasta aquí. Sigue\n"

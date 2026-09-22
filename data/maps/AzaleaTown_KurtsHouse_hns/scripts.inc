@@ -295,7 +295,7 @@ KurtsHouse_Text_KurtHonoredToMakeBalls:
 KurtsHouse_Text_KurtBallsFromApricorns:
 	.string "KURT: Hago BALLS con BAYAS.\p"
 	.string "Recógelas de los árboles y tráelas\n"
-	.string "'em to me.\p"
+	.string "para mí.\p"
 	.string "Haré POKé BALLS con ellas.$"
 
 KurtsHouse_Text_KurtAskYouHaveAnApricorn:
@@ -333,10 +333,10 @@ KurtsHouse_Text_KurtWhatIsThat:
 	.string "Déjame revisarla por ti.$"
 
 KurtsHouse_Text_KurtImCheckingItNow:
-	.string "I'm checking it now.$"
+	.string "Lo reviso ahora.$"
 
 KurtsHouse_Text_KurtAhHaISee:
-	.string "Ah-ha! I see! So…$"
+	.string "¡Ajá! ¡Ya veo! Así que…$"
 
 KurtsHouse_Text_KurtThisBallStartedToShake:
 	.string "¡{PLAYER}!\p"
@@ -353,7 +353,7 @@ KurtsHouse_Text_GranddaughterSlowpokeGone:
 	.string "¿Se los llevaron personas malas?$"
 
 KurtsHouse_Text_GranddaughterLonely:
-	.string "Grandpa's gone… I'm so lonely…$"
+	.string "El abuelo se fue… Qué soledad…$"
 
 KurtsHouse_Text_GranddaughterSlowpokeBack:
 	.string "¡Volvió el SLOWPOKE que me dio papá!\p"
@@ -371,7 +371,7 @@ KurtsHouse_Text_GranddaughterHelp:
 	.string "para ti, ¡así que espera!$"
 
 KurtsHouse_Text_GranddaughterFun:
-	.string "It's fun to make BALLS!$"
+	.string "¡Es divertido hacer PELOTAS!$"
 
 KurtsHouse_Text_GranddaughterSound:
 	.string "¿Ese sonido vino del\n"

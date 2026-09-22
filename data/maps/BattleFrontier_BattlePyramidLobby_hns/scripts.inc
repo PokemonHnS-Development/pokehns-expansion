@@ -677,7 +677,7 @@ BattleFrontier_BattlePyramidLobby_Text_UsedBattleBagWillBeKept_hns:
 
 BattleFrontier_BattlePyramidLobby_Text_RecordResultsWait_hns:
 	.string "Debo registrar tus resultados.\n"
-	.string "Please wait.$"
+	.string "Espera.$"
 
 @ Unused
 BattleFrontier_BattlePyramidLobby_Text_ForConqueringPyramidTakeThis_hns:

@@ -1526,7 +1526,7 @@ SootopolisCity_Text_LeadSuperiorTrainerToCave:
 	.string "ENTRENADOR hasta esta CUEVA.$"
 
 SootopolisCity_Text_AwakenedPokemonClash:
-	.string "Oh, my…\p"
+	.string "Oh, dios…\p"
 	.string "El choque entre los dos POKéMON\n"
 	.string "despertados fue calmado por el\l"
 	.string "despertar de un tercer POKéMON…$"

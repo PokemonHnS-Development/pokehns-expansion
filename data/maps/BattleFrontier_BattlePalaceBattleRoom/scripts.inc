@@ -529,7 +529,7 @@ BattleFrontier_BattlePalaceBattleRoom_Text_SpenserThisTimeWontHoldBack:
 	.string "¿Luchaste para subir de nuevo?\p"
 	.string "Debes haber creado un vínculo\n"
 	.string "formidable con tu POKéMON.\p"
-	.string "So be it!\p"
+	.string "¡Así sea!\p"
 	.string "Esta vez no presumiré ni me detendré.\n"
 	.string "Esta vez no habrá juegos.\p"
 	.string "¿Estás listo?\n"

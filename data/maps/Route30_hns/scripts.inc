@@ -168,7 +168,7 @@ Route30_Text_BugCatcherDonSeen:
 	.string "¡Encontré un entrenador!$"
 
 Route30_Text_BugCatcherDonBeaten:
-	.string "Argh! You're too strong!$"
+	.string "¡Ah! ¡Eres muy fuerte!$"
 
 Route30_Text_BugCatcherDonAfter:
 	.string "Me quedé sin POKé BALLS mientras\n"

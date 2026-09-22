@@ -120,5 +120,5 @@ PewterCity_Text_MtMoonGiftShopSign:
 	.string "¡TIENDA DEL MT.MOON YA ABIERTA!$"
 
 PewterCity_Text_WelcomeSign:
-	.string "WELCOME TO PEWTER CITY!$"
+	.string "¡BIENVENIDO A CIUDAD PEWTER!$"
 

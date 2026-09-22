@@ -256,13 +256,13 @@ MahoganyTown_Text_RageCandyBarMerchantTryOne:
 	.string "¡¥300! ¿Quieres una?$"
 
 MahoganyTown_Text_RageCandyBarMerchantSavorIt:
-    .string "Good! Savor it!$"
+    .string "¡Bien! ¡Disfrútalo!$"
 
 MahoganyTown_Text_RageCandyBarMerchantNotEnoughMoney:
     .string "No tienes suficiente dinero.$"
 
 MahoganyTown_Text_RageCandyBarMerchantRefused:
-    .string "Oh, fine then…$"
+    .string "Oh, está bien entonces…$"
 
 MahoganyTown_Text_RageCandyBarMerchantSoldOut:
     .string "Se agotaron las RAGECANDYBAR.\p"

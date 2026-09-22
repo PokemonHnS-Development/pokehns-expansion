@@ -87,7 +87,7 @@ CeruleanCity_Text_CooltrainerF1:
 	.string "¡combinación!$"
 
 CeruleanCity_Text_CooltrainerF2:
-	.string "SLOWBRO, show me your CONFUSION!$"
+	.string "¡SLOWBRO, muéstrame tu CONFUSIÓN!$"
 
 CeruleanCity_Text_CooltrainerF3:
 	.string "…$"
@@ -168,5 +168,5 @@ CeruleanCity_Text_CapeSign:
 	.string "ADELANTE$"
 
 CeruleanCity_Text_LockedDoor:
-	.string "It's locked…$"
+	.string "Está cerrado con llave…$"
 

@@ -1131,7 +1131,7 @@ SlateportCity_Text_CaptainComeBackWithBigFish:
 
 SlateportCity_Text_AmIOnTV:
 	.string "¡Oye! ¿Estás mirando?\n"
-	.string "Am I on TV?$"
+	.string "¿Estoy en la TV?$"
 
 SlateportCity_Text_CaptainsACelebrity:
 	.string "¡Una entrevista de TV! ¡Aquí!\n"

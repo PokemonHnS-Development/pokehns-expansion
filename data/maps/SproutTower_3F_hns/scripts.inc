@@ -180,7 +180,7 @@ SproutTower_Text_RivalOnlyCaresStrong:
 	.string "hablan de ser buenos con POKéMON.\p"
 	.string "Solo me importan los POKéMON\n"
 	.string "fuertes que pueden ganar.\p"
-	.string "Realmente no me importan\n"
+	.string "Realmente no me importa\n"
 	.string "los POKéMON débiles.$"
 
 SproutTower_Text_RivalUsedEscapeRope:
@@ -217,7 +217,7 @@ SproutTower_Text_SageJin_Seen:
 	.string "¡en los POKéMON!$"
 
 SproutTower_Text_SageJin_Beaten:
-	.string "My training is incomplete…$"
+	.string "Mi entrenamiento está incompleto…$"
 
 SproutTower_Text_SageJin_AfterBattle:
 	.string "Cuando los POKéMON se hacen fuertes,\n"

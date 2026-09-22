@@ -90,7 +90,7 @@ MeteorFalls_1F_2R_Text_NicolasRematchDefeat:
 	.string "¡No esperaba que fueras tan fuerte!$"
 
 MeteorFalls_1F_2R_Text_NicolasPostRematch:
-	.string "Es obvio que no has dejado\n"
+	.string "Es obvio que no dejaste\n"
 	.string "tu entrenamiento POKéMON.\p"
 	.string "Si tú sigues siendo fuerte, yo\n"
 	.string "¡también podré serlo!$"

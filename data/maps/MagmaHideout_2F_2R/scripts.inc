@@ -70,7 +70,7 @@ MagmaHideout_2F_2R_Text_Grunt8Intro:
 	.string "¿Fuiste tú quien lo encontró?$"
 
 MagmaHideout_2F_2R_Text_Grunt8Defeat:
-	.string "I'm having trouble believing this…$"
+	.string "Me cuesta creer esto…$"
 
 MagmaHideout_2F_2R_Text_Grunt8PostBattle:
 	.string "Tengo el presentimiento de que el plan\n"

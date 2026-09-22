@@ -148,7 +148,7 @@ GoldenrodCity_RadioTower_4F4_Text_ExecutiveM2Seen:
 	.string "¡No darás ni un paso más!$"
 
 GoldenrodCity_RadioTower_4F4_Text_ExecutiveM2Beaten:
-	.string "The fortress came down!$"
+	.string "¡La fortaleza cayó!$"
 
 GoldenrodCity_RadioTower_4F4_Text_ExecutiveM2After:
 	.string "Te has ganado mi respeto, así que\n"
@@ -162,7 +162,7 @@ GoldenrodCity_RadioTower_4F4_Text_GruntF4Seen:
 	.string "¡después de que venzan a los tuyos!$"
 
 GoldenrodCity_RadioTower_4F4_Text_GruntF4Beaten:
-	.string "Oh, no! They're so useless!$"
+	.string "¡Oh, no! ¡Son tan inútiles!$"
 
 GoldenrodCity_RadioTower_4F4_Text_GruntF4After:
 	.string "¡Amo mi hermosa apariencia!\p"

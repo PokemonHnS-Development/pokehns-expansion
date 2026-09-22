@@ -236,7 +236,7 @@ Route36_Text_UseSquirtbottle:
 	.string "Use SQUIRTBOTTLE?$"
 
 Route36_Text_UsedSquirtbottle:
-	.string "{PLAYER} used the SQUIRTBOTTLE.$"
+	.string "{PLAYER} usó la BOTELLA DE AGUA.$"
 
 Route36_Text_SudowoodoAttacked:
 	.string "¡Al árbol raro no le gusta la\n"
@@ -268,7 +268,7 @@ Route36_Text_Lass1:
 	.string "¡Cuidado de noche en esta ruta!\p"
 	.string "Vi un POKéMON parecido a\n"
 	.string "GROWLITHE, pero tenía un aura\l"
-	.string "to it.$"
+	.string "a eso.$"
 
 Route36_Text_Lass2_ClearedSudowoodo:
 	.string "Ese árbol raro desapareció sin\n"
@@ -277,10 +277,10 @@ Route36_Text_Lass2_ClearedSudowoodo:
 	.string "POKéMON?$"
 
 Route36_Text_PsychicMarkSeen:
-	.string "I'm going to read your thoughts!$"
+	.string "¡Leeré tus pensamientos!$"
 
 Route36_Text_PsychicMarkBeaten:
-	.string "I misread you!$"
+	.string "¡Te leí mal!$"
 
 Route36_Text_PsychicMarkAfter:
 	.string "Sería fuerte si pudiera saber\n"
@@ -305,7 +305,7 @@ Route36_Text_MeetArthur:
 	.string "te daré una recompensa.$"
 
 Route36_Text_ArthurNope:
-	.string "Not quite!$"
+	.string "¡Casi!$"
 
 Route36_Text_ArthurGivesGift:
 	.string "Toma. Puedes quedarte con esto.$"

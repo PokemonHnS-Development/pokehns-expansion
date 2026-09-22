@@ -476,7 +476,7 @@ VioletCity_Text_Elm_Call:
 	.string "¿Podrías hablar con él?$"
 
 VioletCity_Text_Kimono_Girl1:
-.string "Me oh my...\n"
+.string "Dios mío...\n"
 .string "¡Ese HUEVO debe ser...!$"
 
 VioletCity_Text_Kimono_Girl2:

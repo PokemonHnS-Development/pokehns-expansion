@@ -309,7 +309,7 @@ SlateportCity_PokemonFanClub_Text_GiveMonMorePokeblocks:
 	.string "más {POKEBLOCK}S?$"
 
 SlateportCity_PokemonFanClub_Text_NoSpaceForReward:
-	.string "Oh, my…\p"
+	.string "Oh, cielos…\p"
 	.string "Tu POKéMON crece muy bien,\n"
 	.string "así que mereces un premio.\p"
 	.string "Lamentablemente, no tienes espacio\n"

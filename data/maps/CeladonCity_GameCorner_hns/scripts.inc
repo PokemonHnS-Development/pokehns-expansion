@@ -129,4 +129,4 @@ CeladonGameCorner_Text_Gramps:
 	.string "pero... ¿qué hacer?$"
 
 CeladonGameCorner_Text_Woman:
-	.string "I can't stop winning!$"
+	.string "¡No puedo dejar de ganar!$"

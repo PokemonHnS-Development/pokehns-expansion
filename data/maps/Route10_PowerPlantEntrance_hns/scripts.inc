@@ -144,7 +144,7 @@ Route10_PowerPlantEntrance_Text_Engineer2PowerPlantUpAndRunning:
 	.string "MAGNETIC.$"
 
 Route10_PowerPlantEntrance_Text_Engineer2GeneratorIsRunningAgain:
-	.string "The generator's running again!$"
+	.string "¡El generador funciona otra vez!$"
 
 Route10_PowerPlantEntrance_Text_Officer2ManagerHasBeenSadAndFurious:
 	.string "El GERENTE de la CENTRAL ELÉCTRICA\n"

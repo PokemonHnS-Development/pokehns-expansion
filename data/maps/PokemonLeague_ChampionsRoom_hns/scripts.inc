@@ -365,7 +365,7 @@ PokemonLeague_ChampionsRoom_Text_BattleWin:
 
 PokemonLeague_ChampionsRoom_Text_BattleAfter:
     .string "...Uff.\p"
-    .string "Te has vuelto realmente poderoso,\n"
+    .string "Te has vuelto realmente\n"
     .string "{PLAYER}.\p"
     .string "Tus POKéMON han respondido a tu\n"
     .string "naturaleza fuerte y ejemplar.\p"
@@ -391,7 +391,7 @@ PokemonLeague_ChampionsRoom_Text_OakCongratulations:
 
 PokemonLeague_ChampionsRoom_Text_RematchOakCongratulations:
     .string "PROF.OAK: ¡Ah, {PLAYER}!\p"
-    .string "He seguido tu progreso desde que\n"
+    .string "He seguido tu progreso\n"
     .string "el PROF.ELM te envió a tu\l"
     .string "viaje.\p"
     .string "Ciertamente te has vuelto más\n"

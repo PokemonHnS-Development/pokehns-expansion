@@ -1003,7 +1003,7 @@ LilycoveCity_ContestLobby_Text_IllTakePaintingToMuseum_hns:
 	.string "Espero que les guste y consideren\n"
 	.string "exhibirla.\p"
 	.string "Por favor, mira si la aceptaron.\n"
-	.string "Thank you!$"
+	.string "¡Gracias!$"
 
 LilycoveCity_ContestLobby_Text_TakeMementoOfPainting_hns:
 	.string "¡Ah, es verdad!\p"
@@ -1018,10 +1018,10 @@ LilycoveCity_ContestLobby_Text_PutTheRibbonOnMon_hns:
 	.string "{STR_VAR_1}.$"
 
 LilycoveCity_ContestLobby_Text_OkaySeeYou_hns:
-	.string "Okay, see you!$"
+	.string "Bueno, ¡nos vemos!$"
 
 LilycoveCity_ContestLobby_Text_TakeHomeButIdLikeToTakeToMuseum_hns:
-	.string "Oh... Entonces, supongo que me\n"
+	.string "Oh... Entonces supongo que me\n"
 	.string "llevaré esto a casa...\p"
 	.string "Pero, sabes, me gustaría llevar\n"
 	.string "esto al museo de arte... ¿Vale?$"

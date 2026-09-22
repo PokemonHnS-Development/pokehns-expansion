@@ -103,7 +103,7 @@ CharcoalKiln_Text_Apprentice1:
 	.string "¿Estarán jugando en algún lado?$"
 
 CharcoalKiln_Text_Apprentice2:
-	.string "The SLOWPOKE came back!$"
+	.string "¡El SLOWPOKE regresó!$"
 
 CharcoalKiln_Text_Apprentice3:
 	.string "Lo siento, olvidé darte las gracias.\p"

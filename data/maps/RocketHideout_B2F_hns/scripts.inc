@@ -771,7 +771,7 @@ RocketHideout_B2F_Text_GruntM17Seen:
     .string "conoce.$"
 
 RocketHideout_B2F_Text_GruntM17Beaten:
-    .string "What? I lost?$"
+    .string "¿Qué? ¿Perdí?$"
 
 RocketHideout_B2F_Text_GruntM17After:
     .string "Je, solo soy un RECLUTA.\p"
@@ -804,7 +804,7 @@ RocketHideout_B2F_EventScript_Grunt15::
 	end
 
 RocketHideout_B2F_Text_GruntM19Seen:
-    .string "You rotten little pest!$"
+    .string "¡Mocoso repugnante!$"
 
 RocketHideout_B2F_Text_GruntM19Beaten:
     .string "Grrrr…$"

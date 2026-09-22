@@ -46,5 +46,5 @@ Route12_House_Text_GaveSuperRod:
 	.string "POKéMON usando distintas CAÑAS.$"
 
 Route12_House_Text_DontWantSuperRod:
-	.string "Huh? My own eyes deceived me?$"
+	.string "¿Eh? ¿Mis ojos me engañaron?$"
 

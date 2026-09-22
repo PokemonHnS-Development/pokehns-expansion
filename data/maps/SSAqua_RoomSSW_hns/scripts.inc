@@ -27,7 +27,7 @@ SSAqua_RoomSSW_Text_BugCatcherKenSeen:
     .string "¡atrapar algunos bichos!$"
 
 SSAqua_RoomSSW_Text_BugCatcherKenBeaten:
-    .string "Ooh, wow. You're tough!$"
+    .string "Vaya, eres duro!$"
 
 SSAqua_RoomSSW_Text_BugCatcherKenAfterBattle:
     .string "¡Hay muchos POKéMON\n"

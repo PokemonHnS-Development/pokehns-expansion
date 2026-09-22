@@ -209,7 +209,7 @@ Route119_WeatherInstitute_2F_Text_Grunt2Intro:
 	.string "el clima. ¡Vinimos por ellos!$"
 
 Route119_WeatherInstitute_2F_Text_Grunt2Defeat:
-	.string "Our plan's being spoiled by a kid?$"
+	.string "¿Un niño arruina nuestro plan?$"
 
 Route119_WeatherInstitute_2F_Text_Grunt2PostBattle:
 	.string "Si el POKéMON que hicieron aquí\n"
@@ -222,7 +222,7 @@ Route119_WeatherInstitute_2F_Text_Grunt3Intro:
 	.string "poco común!$"
 
 Route119_WeatherInstitute_2F_Text_Grunt3Defeat:
-	.string "You got me!$"
+	.string "¡Me atrapaste!$"
 
 Route119_WeatherInstitute_2F_Text_Grunt3PostBattle:
 	.string "¡No tienes idea de lo que el\n"

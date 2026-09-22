@@ -93,10 +93,10 @@ SSAqua_B1F_EventScript_Debra::
 	end
 
 SSAqua_B1F_Text_PicnickerDebraSeen:
-	.string "I'm so bored. Want to battle?$"
+	.string "Qué aburrido. ¿Quieres batallar?$"
 
 SSAqua_B1F_Text_PicnickerDebraBeaten:
-	.string "Yow! You're too strong!$"
+	.string "¡Ay! ¡Eres demasiado fuerte!$"
 
 SSAqua_B1F_Text_PicnickerDebraAfter:
 	.string "Saffron, Celadon... He oído que\n"
@@ -111,7 +111,7 @@ SSAqua_B1F_Text_JugglerFritzSeen:
 	.string "Urrf… I'm seasick!$"
 
 SSAqua_B1F_Text_JugglerFritzBeaten:
-	.string "I can't move anymore…$"
+	.string "Ya no puedo moverme…$"
 
 SSAqua_B1F_Text_JugglerFritzAfter:
 	.string "No más barcos para mí.\n"
@@ -145,7 +145,7 @@ SSAqua_B1F_Text_FisherJonahSeen:
 	.string "¡Qué aburrimiento! ¡Luchemos!$"
 
 SSAqua_B1F_Text_FisherJonahBeaten:
-	.string "I… I'm not bored anymore…$"
+	.string "Ya… ya no estoy aburrida…$"
 
 SSAqua_B1F_Text_FisherJonahAfter:
 	.string "Pienso pescar desde\n"
@@ -162,7 +162,7 @@ SSAqua_B1F_Text_BlackbeltWaiSeen:
 	.string "¡el balanceo del barco!$"
 
 SSAqua_B1F_Text_BlackbeltWaiBeaten:
-	.string "Rocked and rolled over!$"
+	.string "¡Bailando y rodando!$"
 
 SSAqua_B1F_Text_BlackbeltWaiAfter:
 	.string "No hallé al REY KARATE\n"
@@ -230,7 +230,7 @@ SSAqua_B1F_Text_SchoolboyRickySeen:
 	.string "en las RUINAS ALFA.$"
 
 SSAqua_B1F_Text_SchoolboyRickyBeaten:
-	.string "I was done in!$"
+	.string "¡Estoy agotada!$"
 
 SSAqua_B1F_Text_SchoolboyRickyAfter:
 	.string "Leí que hay cuatro de\n"
