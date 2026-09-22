@@ -650,7 +650,7 @@ static void SpriteCB_ReelTimeDuck(struct Sprite *);
 static void SpriteCB_ReelTimeSmoke(struct Sprite *);
 static void SpriteCB_PikaPowerBolt(struct Sprite *);
 
-static const u8 sText_QuitTheGame[] = _("Quit the game?");
+static const u8 sText_QuitTheGame[] = _("¿Salir del juego?");
 static const u8 sText_YouveGot9999Coins[] = _("You've got 9,999 COINS.");
 static const u8 sText_YouveRunOutOfCoins[] = _("No te quedan FICHAS.\n¡Fin del juego!");
 static const u8 sText_YouDontHaveThreeCoins[] = _("No tienes tres MONEDAS.");

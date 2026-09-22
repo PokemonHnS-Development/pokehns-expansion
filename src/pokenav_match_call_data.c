@@ -1164,7 +1164,7 @@ static const struct MatchCallCheckPageOverride sCheckPageOverrides[] = {
             [CHECK_PAGE_STRATEGY] = gText_MatchCallSteven_Strategy,
             [CHECK_PAGE_POKEMON]  = gText_MatchCallSteven_Pokemon,
             [CHECK_PAGE_INTRO_1]  = COMPOUND_STRING("I'd climb even waterfalls"),
-            [CHECK_PAGE_INTRO_2]  = COMPOUND_STRING("to find a rare stone!")
+            [CHECK_PAGE_INTRO_2]  = COMPOUND_STRING("de encontrar una piedra rara!")
         }
     },
     {
@@ -1201,7 +1201,7 @@ static const struct MatchCallCheckPageOverride sCheckPageOverrides[] = {
             [CHECK_PAGE_STRATEGY] = gText_MatchCallSteven_Strategy,
             [CHECK_PAGE_POKEMON]  = gText_MatchCallSteven_Pokemon,
             [CHECK_PAGE_INTRO_1]  = COMPOUND_STRING("I'd climb even waterfalls"),
-            [CHECK_PAGE_INTRO_2]  = COMPOUND_STRING("to find a rare stone!")
+            [CHECK_PAGE_INTRO_2]  = COMPOUND_STRING("de encontrar una piedra rara!")
         }
     },
     {

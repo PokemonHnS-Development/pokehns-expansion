@@ -13,9 +13,9 @@ const u8 gRibbonDescriptionPart1_Winning[] = _("For clearing LV50");
 const u8 gRibbonDescriptionPart2_Winning[] = _("en la TORRE BATALLA.");
 const u8 gRibbonDescriptionPart1_Victory[] = _("Por superar Nivel Abierto");
 const u8 gRibbonDescriptionPart2_Victory[] = _("en la TORRE BATALLA.");
-const u8 gRibbonDescriptionPart1_Artist[] = _("RIBBON for being chosen");
+const u8 gRibbonDescriptionPart1_Artist[] = _("CINTA por ser elegido");
 const u8 gRibbonDescriptionPart2_Artist[] = _("as a super sketch model.");
-const u8 gRibbonDescriptionPart1_Effort[] = _("RIBBON awarded for");
+const u8 gRibbonDescriptionPart1_Effort[] = _("CINTA otorgada por");
 const u8 gRibbonDescriptionPart2_Effort[] = _("being a hard worker.");
 
 const u8 *const gRibbonDescriptionPointers[][2] =

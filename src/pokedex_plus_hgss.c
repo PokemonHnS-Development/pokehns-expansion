@@ -207,13 +207,13 @@ static const u8 sText_EVO_Buttons_Decapped[] = _("{DPAD_UPDOWN}Evos  {A_BUTTON}C
 static const u8 sText_EVO_Buttons_PE[] = _("{DPAD_UPDOWN}EVOs  {A_BUTTON}CHECK  {START_BUTTON}FORMs");
 static const u8 sText_EVO_Buttons_Decapped_PE[] = _("{DPAD_UPDOWN}Evos  {A_BUTTON}Ver  {START_BUTTON}Formas");
 static const u8 sText_EVO_Name[] = _("{STR_VAR_3}:");
-static const u8 sText_EVO_PreEvo[] = _("{STR_VAR_1} evolves from {STR_VAR_2}");
+static const u8 sText_EVO_PreEvo[] = _("{STR_VAR_1} evoluciona de {STR_VAR_2}");
 static const u8 sText_EVO_PreEvo_PE_Mega[] = _("{STR_VAR_1} Megaevoluciona con {STR_VAR_2}");
 static const u8 sText_EVO_LEVEL_SILCOON[] = _("{LV}{UP_ARROW} a {STR_VAR_2}, forma Silcoon");
 static const u8 sText_EVO_LEVEL_CASCOON[] = _("{LV}{UP_ARROW} a {STR_VAR_2}, forma Cascoon");
 static const u8 sText_EVO_MOVE[] = _("{LV}{UP_ARROW}, conoce {STR_VAR_2}");
 static const u8 sText_EVO_LEVEL_RAIN[] = _("{LV}{UP_ARROW} a {STR_VAR_2} bajo lluvia");
-static const u8 sText_EVO_TRADE_SPECIFIC_MON[] = _("Traded for {STR_VAR_2}");
+static const u8 sText_EVO_TRADE_SPECIFIC_MON[] = _("Intercambiado por {STR_VAR_2}");
 static const u8 sText_EVO_CRITICAL_HITS[] = _("Logra {STR_VAR_2} golpes críticos en\nuna sola batalla");
 static const u8 sText_EVO_SCRIPT_TRIGGER_DMG[] = _("Recibe al menos {STR_VAR_2} PS de daño");
 static const u8 sText_EVO_DARK_SCROLL[] = _("Se usó ScrllOfDrknss");
@@ -6743,21 +6743,21 @@ static void PrintEvolutionTargetSpeciesAndMethod(u8 taskId, u16 species, u8 dept
                     StringAppend(gStringVar4, gStringVar2);
                 }
                 if ((enum EvolutionMethods)evolutions[i].method == EVO_LEVEL_BATTLE_ONLY)
-                    StringAppend(gStringVar4, COMPOUND_STRING(", in battle"));
+                    StringAppend(gStringVar4, COMPOUND_STRING(", en combate"));
                 break;
             case EVO_TRADE:
                 StringExpandPlaceholders(gStringVar4, COMPOUND_STRING("Trading"));
                 break;
             case EVO_ITEM:
                 CopyItemName(evolutions[i].param, gStringVar2);
-                StringExpandPlaceholders(gStringVar4, COMPOUND_STRING("{STR_VAR_2} is used"));
+                StringExpandPlaceholders(gStringVar4, COMPOUND_STRING("Se usa {STR_VAR_2}"));
                 break;
             case EVO_SPLIT_FROM_EVO:
-                StringCopy(gStringVar4, COMPOUND_STRING("Splits from "));
+                StringCopy(gStringVar4, COMPOUND_STRING("Se separa de"));
                 StringAppend(gStringVar4, GetSpeciesName(evolutions[i].param)); //mon name
                 break;
             case EVO_BATTLE_END:
-                StringExpandPlaceholders(gStringVar4, COMPOUND_STRING("End battle"));
+                StringExpandPlaceholders(gStringVar4, COMPOUND_STRING("Termina el combate"));
                 break;
             case EVO_SPIN:
                 StringCopy(gStringVar4, COMPOUND_STRING("Spin "));
@@ -6868,7 +6868,7 @@ static void PrintEvolutionTargetSpeciesAndMethod(u8 taskId, u16 species, u8 dept
                 // Gen 4
                 case IF_SPECIES_IN_PARTY:
                     StringAppend(gStringVar4, GetSpeciesName(evolutions[i].params[j].arg1)); //mon name
-                    StringAppend(gStringVar4, COMPOUND_STRING(" in party"));
+                    StringAppend(gStringVar4, COMPOUND_STRING("en el equipo"));
                     break;
                 case IF_IN_MAPSEC:
                     StringAppend(gStringVar4, COMPOUND_STRING("in "));
@@ -6886,13 +6886,13 @@ static void PrintEvolutionTargetSpeciesAndMethod(u8 taskId, u16 species, u8 dept
                     break;
                 // Gen 5
                 case IF_TRADE_PARTNER_SPECIES:
-                    StringAppend(gStringVar4, COMPOUND_STRING("traded with "));
+                    StringAppend(gStringVar4, COMPOUND_STRING("intercambiado con"));
                     StringAppend(gStringVar4, GetSpeciesName(evolutions[i].params[j].arg1));
                     break;
                 // Gen 6
                 case IF_TYPE_IN_PARTY:
                     StringAppend(gStringVar4, gTypesInfo[evolutions[i].params[j].arg1].name); //type name
-                    StringAppend(gStringVar4, COMPOUND_STRING("-type in party"));
+                    StringAppend(gStringVar4, COMPOUND_STRING("-tipo en el equipo"));
                     break;
                 case IF_WEATHER:
                     StringAppend(gStringVar4, COMPOUND_STRING("weather "));
@@ -6972,7 +6972,7 @@ static void PrintEvolutionTargetSpeciesAndMethod(u8 taskId, u16 species, u8 dept
                     StringAppend(gStringVar4, gStringVar2);
                     StringAppend(gStringVar4, COMPOUND_STRING(" "));
                     StringAppend(gStringVar4, GetSpeciesName(evolutions[i].params[j].arg1));
-                    StringAppend(gStringVar4, COMPOUND_STRING(" that hold "));
+                    StringAppend(gStringVar4, COMPOUND_STRING("que tengan"));
                     CopyItemName(evolutions[i].params[j].arg2, gStringVar2);
                     StringAppend(gStringVar4, gStringVar2);
                     break;

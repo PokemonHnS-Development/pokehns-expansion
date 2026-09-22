@@ -16,7 +16,7 @@
 #include "constants/rgb.h"
 
 enum {
-    WIN_TITLE,          // "Berry Program Update" header on the first screen
+    WIN_TITLE,          // "Actualización de Bayas" header on the first screen
     WIN_MSG_BODY,
     WIN_GAME_NAMES,     // The labels under the GBA graphics on the link screen
     WIN_TURN_OFF_TITLE, // "Ruby/Sapphire" at the top of the "turn off the power" screen
@@ -35,7 +35,7 @@ static int BerryFix_TrySetScene(int);
 static void BerryFix_SetScene(int);
 static void BerryFix_HideScene(void);
 
-static const u8 sText_BerryProgramUpdate[] = _("Berry Program Update");
+static const u8 sText_BerryProgramUpdate[] = _("Actualización de Bayas");
 static const u8 sText_RubySapphire[] = _("Ruby/Sapphire");
 static const u8 sText_Emerald[] = _("Emerald");
 static const u8 sText_BerryProgramWillBeUpdatedPressA[] = _("El programa de BAYAS de tu\nPOKéMON se actualizará.\n{COLOR RED}{SHADOW LIGHT_RED}Presiona el botón A.");

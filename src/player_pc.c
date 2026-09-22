@@ -176,7 +176,7 @@ static const u8 sText_Mailbox[] = _("MAILBOX");
 static const u8 sText_WithdrawHowManyItems[] = _("¿Cuántos retiras?\n¿{STR_VAR_1}?");
 static const u8 sText_WithdrawXItems[] = _("Withdrew {STR_VAR_2}\n{STR_VAR_1}.");
 static const u8 sText_NoRoomInBag[] = _("No hay más\nespacio en la MOCHILA.");
-static const u8 sText_TooImportantToToss[] = _("That's much too\nimportant to toss\nout!");
+static const u8 sText_TooImportantToToss[] = _("¡Eso es demasiado\nimportante para\ntirarlo!");
 
 static const u8 *const sItemStorage_OptionDescriptions[] =
 {

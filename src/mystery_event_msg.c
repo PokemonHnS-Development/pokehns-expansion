@@ -8,6 +8,6 @@ const u8 gText_MysteryEventNationalDex[] = _("La POKéDEX fue mejorada\ncon el M
 const u8 gText_MysteryEventRareWord[] = _("Se ha añadido una palabra rara.");
 const u8 gText_MysteryEventSentOver[] = _("{STR_VAR_1} was sent over!");
 const u8 gText_MysteryEventFullParty[] = _("Tu equipo está lleno.\nNo se pudo enviar a {STR_VAR_1}.");
-const u8 gText_MysteryEventNewTrainer[] = _("A new TRAINER has arrived in\nHOENN.");
+const u8 gText_MysteryEventNewTrainer[] = _("Un nuevo ENTRENADOR ha llegado\na HOENN.");
 const u8 gText_MysteryEventNewAdversaryInBattleTower[] = _("Un nuevo rival llegó a la\nTORRE BATALLA.");
 const u8 gText_MysteryEventCantBeUsed[] = _("Estos datos no se pueden usar\nen esta versión.");

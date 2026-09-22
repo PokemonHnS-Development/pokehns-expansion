@@ -16,7 +16,7 @@ static const struct MenuAction MultichoiceList_EnterInfo[] =
 static const struct MenuAction MultichoiceList_ContestInfo[] =
 {
     {COMPOUND_STRING("What's a CONTEST?")},
-    {COMPOUND_STRING("Types of CONTESTS")},
+    {COMPOUND_STRING("Tipos de CONCURSOS")},
     {COMPOUND_STRING("Ranks")},
     {gText_Cancel2},
 };
@@ -759,7 +759,7 @@ static const struct MenuAction MultichoiceList_TVLati[] =
 
 static const struct MenuAction MultichoiceList_BattleTowerFeelings[] =
 {
-    {COMPOUND_STRING("I'll battle now!")},
+    {COMPOUND_STRING("¡Batallaré ahora!")},
     {COMPOUND_STRING("I won!")},
     {COMPOUND_STRING("I lost!")},
     {COMPOUND_STRING("I won't tell.")},

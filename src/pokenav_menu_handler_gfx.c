@@ -335,7 +335,7 @@ static const struct WindowTemplate sOptionDescWindowTemplate =
 
 #if IS_HNS
 static const u8 *const sHnSMapPageDescriptionJohto = COMPOUND_STRING("Mira el mapa de la región JOHTO");
-static const u8 *const sHnSMapPageDescriptionJohtoKanto = COMPOUND_STRING("Check the combined region map");
+static const u8 *const sHnSMapPageDescriptionJohtoKanto = COMPOUND_STRING("Mira el mapa de las dos regiones");
 #endif
 
 static const u8 *const sPageDescriptions[] =

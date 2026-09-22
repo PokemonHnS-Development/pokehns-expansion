@@ -2315,7 +2315,7 @@ static const struct NamingScreenTemplate sWaldaWordsScreenTemplate =
     .addGenderIcon = FALSE,
     .initialPage = KBPAGE_LETTERS_UPPER,
     .unused = 11,
-    .title = COMPOUND_STRING("Tell him the words."),
+    .title = COMPOUND_STRING("Dile las palabras."),
 };
 
 static const struct NamingScreenTemplate sCodeScreenTemplate =

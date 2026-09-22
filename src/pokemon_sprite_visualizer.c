@@ -471,8 +471,8 @@ static const struct SubmenuText sSubmenuText[] =
 {
     [SUBMENU_SPECIES] =
     {
-        .instructions = COMPOUND_STRING("{START_BUTTON} Shiny\n{B_BUTTON} Exit  {A_BUTTON} Anims and BG$"),
-        .instructionsGender = COMPOUND_STRING("{START_BUTTON} Shiny {SELECT_BUTTON} Gender\n{B_BUTTON} Exit  {A_BUTTON} Anims and BG$"),
+        .instructions = COMPOUND_STRING("{START_BUTTON} Variocolor\n{B_BUTTON} Salir {A_BUTTON} Anims y Fondo$"),
+        .instructionsGender = COMPOUND_STRING("{START_BUTTON} Shiny {SELECT_BUTTON} Sexo\n{B_BUTTON} Salir {A_BUTTON} Anim. y Fondo$"),
     },
 
     [SUBMENU_ANIMS_BG] =
