@@ -85,7 +85,7 @@
  * 2. Battle a wild Oddish.
  * 3. Use Stun Spore.
  * 4. Check that the move animation does not play.
- * 5. Check that a "It doesn't affect Foe Oddish..." message is shown.
+ * 5. Check that a "It doesn't affect Foe Oddish…" message is shown.
  *
  * This can again be translated as follows:
  *
@@ -100,7 +100,7 @@
  *           TURN { MOVE(player, MOVE_STUN_SPORE); } // 3.
  *       } SCENE {
  *           NOT ANIMATION(ANIM_TYPE_MOVE, MOVE_STUN_SPORE, player); // 4.
- *           MESSAGE("It doesn't affect the opposing Oddish..."); // 5.
+ *           MESSAGE("It doesn't affect the opposing Oddish…"); // 5.
  *       }
  *   }
  *
@@ -469,7 +469,7 @@
  * Spaces in pattern match newlines (\n, \l, and \p) in the message.
  * Often used to check that a battler took its turn but it failed, e.g.:
  *     MESSAGE("Wobbuffet used Dream Eater!");
- *     MESSAGE("It doesn't affect the opposing Wobbuffet...");
+ *     MESSAGE("It doesn't affect the opposing Wobbuffet…");
  *
  * STATUS_ICON(battler, status1 | none: | sleep: | poison: | burn: | freeze: | paralysis:, badPoison:)
  * Causes the test to fail if the battler's status is not changed to the

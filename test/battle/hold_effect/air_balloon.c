@@ -20,7 +20,7 @@ SINGLE_BATTLE_TEST("Air Balloon prevents the holder from taking damage from grou
         MESSAGE("Wobbuffet floats in the air with its Air Balloon!");
         MESSAGE("The opposing Wobbuffet used Earthquake!");
         NOT ANIMATION(ANIM_TYPE_MOVE, MOVE_EARTHQUAKE, opponent);
-        MESSAGE("It doesn't affect Wobbuffet...");
+        MESSAGE("It doesn't affect Wobbuffet…");
     }
 }
 
@@ -66,7 +66,7 @@ SINGLE_BATTLE_TEST("Air Balloon no longer prevents the holder from taking damage
         MESSAGE("Wobbuffet's Air Balloon popped!");
         MESSAGE("The opposing Wobbuffet used Earthquake!");
         ANIMATION(ANIM_TYPE_MOVE, MOVE_EARTHQUAKE, opponent);
-        NOT MESSAGE("It doesn't affect Wobbuffet...");
+        NOT MESSAGE("It doesn't affect Wobbuffet…");
     }
 }
 

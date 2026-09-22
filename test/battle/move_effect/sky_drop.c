@@ -183,7 +183,7 @@ DOUBLE_BATTLE_TEST("Sky Drop will be canceled if it is electrified and holding a
     } SCENE {
         ANIMATION(ANIM_TYPE_MOVE, MOVE_SKY_DROP, playerLeft);
         ANIMATION(ANIM_TYPE_MOVE, MOVE_ELECTRIFY, opponentRight);
-        NOT MESSAGE("It doesn't affect the opposing Wattrel...");
+        NOT MESSAGE("It doesn't affect the opposing Wattrel…");
         ABILITY_POPUP(opponentLeft, ABILITY_VOLT_ABSORB);
         NOT HP_BAR(opponentLeft);
     }

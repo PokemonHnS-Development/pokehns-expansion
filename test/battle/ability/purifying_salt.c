@@ -78,7 +78,7 @@ SINGLE_BATTLE_TEST("Purifying Salt grants immunity to status effects")
         if (move != MOVE_POWDER_SNOW) {
             NOT ANIMATION(ANIM_TYPE_MOVE, move, opponent);
             ABILITY_POPUP(player, ABILITY_PURIFYING_SALT);
-            MESSAGE("It doesn't affect Wobbuffet...");
+            MESSAGE("It doesn't affect Wobbuffet…");
             NOT STATUS_ICON(player, status);
         } else {
             NONE_OF {

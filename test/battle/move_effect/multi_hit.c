@@ -184,7 +184,7 @@ SINGLE_BATTLE_TEST("Scale Shot is immune to Fairy types and will end the move co
         TURN { MOVE(player, MOVE_SCALE_SHOT); }
     } SCENE {
         NOT ANIMATION(ANIM_TYPE_MOVE, MOVE_SCALE_SHOT, player);
-        MESSAGE("It doesn't affect the opposing Fidough...");
+        MESSAGE("It doesn't affect the opposing Fidough…");
     }
 }
 

@@ -117,7 +117,7 @@ SINGLE_BATTLE_TEST("Future Sight is affected by type effectiveness (Gen 5+)")
         ANIMATION(ANIM_TYPE_MOVE, FUTURE_SIGHT_EQUIVALENT, player);
         HP_BAR(opponent);
         MESSAGE("The opposing Houndoom took the Future Sight attack!");
-        MESSAGE("It doesn't affect the opposing Houndoom...");
+        MESSAGE("It doesn't affect the opposing Houndoom…");
         NOT HP_BAR(opponent);
     }
 }

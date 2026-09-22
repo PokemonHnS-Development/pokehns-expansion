@@ -120,7 +120,7 @@ SINGLE_BATTLE_TEST("Aerilate doesn't affect Natural Gift's type")
     } SCENE {
         ANIMATION(ANIM_TYPE_MOVE, move, opponent);
         NOT { ANIMATION(ANIM_TYPE_MOVE, MOVE_NATURAL_GIFT, player); }
-        MESSAGE("It doesn't affect the opposing Salamence...");
+        MESSAGE("It doesn't affect the opposing Salamence…");
     }
 }
 
@@ -152,7 +152,7 @@ SINGLE_BATTLE_TEST("Aerilate doesn't affect Judgment / Techno Blast / Multi-Atta
     } SCENE {
         ANIMATION(ANIM_TYPE_MOVE, MOVE_SKILL_SWAP, opponent);
         NOT { ANIMATION(ANIM_TYPE_MOVE, move, player); }
-        MESSAGE("It doesn't affect the opposing Diglett...");
+        MESSAGE("It doesn't affect the opposing Diglett…");
     }
 }
 
@@ -168,7 +168,7 @@ SINGLE_BATTLE_TEST("Aerilate doesn't affect Hidden Power's type")
         TURN { MOVE(player, MOVE_HIDDEN_POWER, gimmick: GIMMICK_MEGA); }
     } SCENE {
         NOT { ANIMATION(ANIM_TYPE_MOVE, MOVE_HIDDEN_POWER, player); }
-        MESSAGE("It doesn't affect the opposing Diglett...");
+        MESSAGE("It doesn't affect the opposing Diglett…");
     }
 }
 
@@ -184,7 +184,7 @@ SINGLE_BATTLE_TEST("Aerilate doesn't override Electrify")
     } SCENE {
         ANIMATION(ANIM_TYPE_MOVE, MOVE_ELECTRIFY, opponent);
         NOT { ANIMATION(ANIM_TYPE_MOVE, MOVE_SCRATCH, player); }
-        MESSAGE("It doesn't affect the opposing Sandshrew...");
+        MESSAGE("It doesn't affect the opposing Sandshrew…");
     }
 }
 
@@ -238,7 +238,7 @@ SINGLE_BATTLE_TEST("Aerilate doesn't change Tera Blast's type when Terastallized
         TURN { SWITCH(opponent, 1); MOVE(player, MOVE_TERA_BLAST, gimmick: GIMMICK_TERA); }
     } SCENE {
         NOT { ANIMATION(ANIM_TYPE_MOVE, MOVE_TERA_BLAST, player); }
-        MESSAGE("It doesn't affect the opposing Misdreavus...");
+        MESSAGE("It doesn't affect the opposing Misdreavus…");
     }
 }
 
@@ -258,7 +258,7 @@ SINGLE_BATTLE_TEST("Aerilate doesn't affect Terrain Pulse's type")
     } SCENE {
         ANIMATION(ANIM_TYPE_MOVE, MOVE_ELECTRIC_TERRAIN, player);
         NOT { ANIMATION(ANIM_TYPE_MOVE, MOVE_TERRAIN_PULSE, player); }
-        MESSAGE("It doesn't affect the opposing Sandshrew...");
+        MESSAGE("It doesn't affect the opposing Sandshrew…");
     }
 }
 

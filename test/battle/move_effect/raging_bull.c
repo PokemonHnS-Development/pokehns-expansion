@@ -155,6 +155,6 @@ SINGLE_BATTLE_TEST("Move Raging Bull changes it's type depending on the Tauros F
     } SCENE {
         ANIMATION(ANIM_TYPE_MOVE, MOVE_RAGING_BULL, player);
         HP_BAR(opponent);
-        MESSAGE("It's not very effective...");
+        MESSAGE("It's not very effective…");
     }
 }

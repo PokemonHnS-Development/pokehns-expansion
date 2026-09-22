@@ -152,7 +152,7 @@ SINGLE_BATTLE_TEST("(TERA) Transform does not copy the target's Tera Type, and i
         ANIMATION(ANIM_TYPE_MOVE, MOVE_CELEBRATE, opponent);
         // turn 3
         MESSAGE("Wobbuffet used Earthquake!");
-        MESSAGE("It doesn't affect the opposing Ditto...");
+        MESSAGE("It doesn't affect the opposing Ditto…");
         NOT { HP_BAR(opponent); }
     }
 }

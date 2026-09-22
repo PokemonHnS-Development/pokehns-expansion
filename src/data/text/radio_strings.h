@@ -154,8 +154,8 @@ static const u8 sRadioText_LC5[] = _("El Número Suerte de la semana es");
 static const u8 sRadioText_LC_Repeat[] = _("¡Lo repito!");
 static const u8 sRadioText_LC_Match[] = _("¡Si coinciden, vayan a la");
 static const u8 sRadioText_LC_Tower[] = _("TORRE RADIO!");
-static const u8 sRadioText_LC_Drag1[] = _("...Repetirme a mí mismo");
-static const u8 sRadioText_LC_Drag2[] = _("es un fastidio...");
+static const u8 sRadioText_LC_Drag1[] = _("…Repetirme a mí mismo");
+static const u8 sRadioText_LC_Drag2[] = _("es un fastidio…");
 
 // ==========================================================
 // Places and People
@@ -208,7 +208,7 @@ static const u8 *const sRadioText_PnP_PeopleAdj[] =
 // ==========================================================
 
 static const u8 sRadioStationName_Rocket[] = _("TEAM ROCKET");
-static const u8 sRadioText_Rocket1[]  = _("... ...Ejem, nosotros somos");
+static const u8 sRadioText_Rocket1[]  = _("… …Ejem, nosotros somos");
 static const u8 sRadioText_Rocket2[]  = _("¡el TEAM ROCKET!");
 static const u8 sRadioText_Rocket3[]  = _("Tras tres años");
 static const u8 sRadioText_Rocket4[]  = _("de preparación, nosotros");

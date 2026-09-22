@@ -65,7 +65,7 @@ SINGLE_BATTLE_TEST("Telekinesis makes the target immune to Ground-type attacks")
             ANIMATION(ANIM_TYPE_MOVE, MOVE_BULLDOZE, player);
             HP_BAR(opponent);
         }
-        MESSAGE("It doesn't affect the opposing Wynaut...");
+        MESSAGE("It doesn't affect the opposing Wynaut…");
     }
 }
 

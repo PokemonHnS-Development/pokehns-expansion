@@ -24,12 +24,12 @@ SINGLE_BATTLE_TEST("Normalize turns a move into a Normal-type move")
         if (ability == ABILITY_CUTE_CHARM)
         {
             ANIMATION(ANIM_TYPE_MOVE, MOVE_WATER_GUN, opponent);
-            NOT { MESSAGE("It doesn't affect Gastly..."); }
+            NOT { MESSAGE("It doesn't affect Gastly…"); }
         }
         else
         {
             NOT { ANIMATION(ANIM_TYPE_MOVE, MOVE_WATER_GUN, opponent); }
-            MESSAGE("It doesn't affect Gastly...");
+            MESSAGE("It doesn't affect Gastly…");
         }
     }
 }
@@ -226,7 +226,7 @@ SINGLE_BATTLE_TEST("Normalize doesn't affect Natural Gift's type")
         TURN { MOVE(player, MOVE_NATURAL_GIFT); }
     } SCENE {
         NOT { ANIMATION(ANIM_TYPE_MOVE, MOVE_NATURAL_GIFT, player); }
-        MESSAGE("It doesn't affect the opposing Beldum...");
+        MESSAGE("It doesn't affect the opposing Beldum…");
     }
 }
 
@@ -254,7 +254,7 @@ SINGLE_BATTLE_TEST("Normalize doesn't affect Judgment / Techno Blast / Multi-Att
         TURN { MOVE(player, move); }
     } SCENE {
         NOT { ANIMATION(ANIM_TYPE_MOVE, move, player); }
-        MESSAGE("It doesn't affect the opposing Diglett...");
+        MESSAGE("It doesn't affect the opposing Diglett…");
     }
 }
 
@@ -270,7 +270,7 @@ SINGLE_BATTLE_TEST("Normalize doesn't affect Hidden Power's type")
         TURN { MOVE(player, MOVE_HIDDEN_POWER); }
     } SCENE {
         NOT { ANIMATION(ANIM_TYPE_MOVE, MOVE_HIDDEN_POWER, player); }
-        MESSAGE("It doesn't affect the opposing Diglett...");
+        MESSAGE("It doesn't affect the opposing Diglett…");
     }
 }
 
@@ -304,9 +304,9 @@ SINGLE_BATTLE_TEST("Normalize makes Flying Press do Normal/Flying damage")
     } SCENE {
         ANIMATION(ANIM_TYPE_MOVE, MOVE_FLYING_PRESS, player);
         if (ability == ABILITY_NORMALIZE)
-            MESSAGE("It's not very effective...");
+            MESSAGE("It's not very effective…");
         else
-            NOT { MESSAGE("It's not very effective..."); }
+            NOT { MESSAGE("It's not very effective…"); }
     }
 }
 
@@ -324,7 +324,7 @@ SINGLE_BATTLE_TEST("Normalize doesn't affect Terrain Pulse's type")
     } SCENE {
         ANIMATION(ANIM_TYPE_MOVE, MOVE_ELECTRIC_TERRAIN, opponent);
         NOT { ANIMATION(ANIM_TYPE_MOVE, MOVE_TERRAIN_PULSE, player); }
-        MESSAGE("It doesn't affect the opposing Sandshrew...");
+        MESSAGE("It doesn't affect the opposing Sandshrew…");
     }
 }
 

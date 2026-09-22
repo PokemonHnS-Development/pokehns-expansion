@@ -60,10 +60,10 @@ static void UpdateStairsMovement(s16, s16, s16*, s16*, s16*);
 static void Task_StairWarp(u8);
 static void ForceStairsMovement(u32, s16*, s16*);
 
-static const u8 sText_PlayerScurriedToCenter[] = _("{PLAYER} corrió a un POKéMON CENTER,\nprotegiendo a los POKéMON agotados\ny debilitados de más daño...\p");
-static const u8 sText_PlayerScurriedBackHome[] = _("{PLAYER} volvió a casa, protegiendo\na los POKéMON agotados y debilitados\nde más daño...\p");
-static const u8 sText_PlayerRegroupCenter[] = _("{PLAYER} corrió a un POKéMON CENTER,\npara reagruparse y replantear la\nestrategia de batalla...\p");
-static const u8 sText_PlayerRegroupHome[] = _("{PLAYER} volvió a casa para reagruparse\ny replantear la estrategia de batalla...\p");
+static const u8 sText_PlayerScurriedToCenter[] = _("{PLAYER} corrió a un POKéMON CENTER,\nprotegiendo a los POKéMON agotados\ny debilitados de más daño…\p");
+static const u8 sText_PlayerScurriedBackHome[] = _("{PLAYER} volvió a casa, protegiendo\na los POKéMON agotados y debilitados\nde más daño…\p");
+static const u8 sText_PlayerRegroupCenter[] = _("{PLAYER} corrió a un POKéMON CENTER,\npara reagruparse y replantear la\nestrategia de batalla…\p");
+static const u8 sText_PlayerRegroupHome[] = _("{PLAYER} volvió a casa para reagruparse\ny replantear la estrategia de batalla…\p");
 
 // data[0] is used universally by tasks in this file as a state for switches
 #define tState       data[0]

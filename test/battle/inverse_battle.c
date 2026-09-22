@@ -116,7 +116,7 @@ SINGLE_BATTLE_TEST("Inverse battle reverses type matchups")
         ANIMATION(ANIM_TYPE_MOVE, move, player);
         HP_BAR(opponent);
         if (gTypeEffectivenessTable[GetMoveType(move)][GetSpeciesType(species, 0)] == Q_4_12(2))
-            MESSAGE("It's not very effective...");
+            MESSAGE("It's not very effective…");
         if (gTypeEffectivenessTable[GetMoveType(move)][GetSpeciesType(species, 0)] == Q_4_12(0.5))
             MESSAGE("It's super effective!");
     }

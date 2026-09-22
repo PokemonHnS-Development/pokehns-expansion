@@ -116,7 +116,7 @@ AI_SINGLE_BATTLE_TEST("Trainer Slide: Singles: Enemy Mon Unaffected")
         TURN { MOVE(player, MOVE_SHEER_COLD); }
     } SCENE {
         NOT ANIMATION(ANIM_TYPE_MOVE, MOVE_SHEER_COLD, player);
-        MESSAGE("It doesn't affect the opposing Glalie...");
+        MESSAGE("It doesn't affect the opposing Glalie…");
         MESSAGE("Trainer A: Player attacked enemy with ineffective move.{PAUSE_UNTIL_PRESS}");
     }
 }
@@ -364,7 +364,7 @@ AI_DOUBLE_BATTLE_TEST("Trainer Slide: Doubles: Enemy Mon Unaffected")
         TURN { MOVE(playerLeft, MOVE_SHEER_COLD); }
     } SCENE {
         NOT ANIMATION(ANIM_TYPE_MOVE, MOVE_SHEER_COLD, playerLeft);
-        MESSAGE("It doesn't affect the opposing Glalie...");
+        MESSAGE("It doesn't affect the opposing Glalie…");
         MESSAGE("Trainer A: Player attacked enemy with ineffective move.{PAUSE_UNTIL_PRESS}");
         NONE_OF {
             MESSAGE("Trainer A: Player attacked enemy with ineffective move.{PAUSE_UNTIL_PRESS}");
@@ -668,8 +668,8 @@ AI_MULTI_BATTLE_TEST("Trainer Slide: Multi: Enemy Mon Unaffected")
         TURN { MOVE(playerLeft, MOVE_BOOMBURST); }
     } SCENE {
         NOT ANIMATION(ANIM_TYPE_MOVE, MOVE_BOOMBURST, playerLeft);
-        MESSAGE("It doesn't affect the opposing Gengar and Haunter...");
-        MESSAGE("It doesn't affect Gastly...");
+        MESSAGE("It doesn't affect the opposing Gengar and Haunter…");
+        MESSAGE("It doesn't affect Gastly…");
         MESSAGE("Trainer A: Player attacked enemy with ineffective move.{PAUSE_UNTIL_PRESS}");
         MESSAGE("Trainer B: Player attacked enemy with ineffective move.{PAUSE_UNTIL_PRESS}");
         // Note: Planned PR for additional slides will change slides from using "Player/Opponent" side to "Attacker/Target" side

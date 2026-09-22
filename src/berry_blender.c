@@ -266,7 +266,7 @@ static const u8 *const sBlenderOpponentsNames[] =
     [BLENDER_MISS]   = COMPOUND_STRING("MISS"),
 };
 
-static const u8 sText_CommunicationStandby[] = _("Communication standby...");
+static const u8 sText_CommunicationStandby[] = _("Communication standby…");
 static const u8 sText_WouldLikeToBlendAnotherBerry[] = _("¿Quieres licuar otra BAYA?");
 static const u8 sText_RunOutOfBerriesForBlending[] = _("Ya no te quedan BAYAS para\nlicuar en la LICUADORA.\p");
 static const u8 sText_YourPokeblockCaseIsFull[] = _("Tu {POKEBLOCK} CASE está lleno.\p");
@@ -286,7 +286,7 @@ static const u8 sText_TheLevelIs[] = _("El nivel es ");
 static const u8 sText_TheFeelIs[] = _(", y la sensación es ");
 static const u8 sText_Dot2[] = _(".");
 
-static const u8 sText_SavingDontTurnOff2[] = _("GUARDANDO...\nNO APAGUES LA CONSOLA.");
+static const u8 sText_SavingDontTurnOff2[] = _("GUARDANDO…\nNO APAGUES LA CONSOLA.");
 static const u8 sText_BlenderMaxSpeedRecord[] = _("BERRY BLENDER\nMAXIMUM SPEED RECORD!");
 static const u8 sText_234Players[] = _("2 PLAYERS\n3 PLAYERS\n4 PLAYERS");
 

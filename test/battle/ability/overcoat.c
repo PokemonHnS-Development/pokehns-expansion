@@ -17,12 +17,12 @@ SINGLE_BATTLE_TEST("Overcoat blocks powder and spore moves (Gen6+)")
         if (gen == GEN_6) {
             ABILITY_POPUP(opponent, ABILITY_OVERCOAT);
             NOT ANIMATION(ANIM_TYPE_MOVE, MOVE_STUN_SPORE, player);
-            MESSAGE("It doesn't affect the opposing Pineco...");
+            MESSAGE("It doesn't affect the opposing Pineco…");
         } else {
             ANIMATION(ANIM_TYPE_MOVE, MOVE_STUN_SPORE, player);
             NONE_OF {
                 ABILITY_POPUP(opponent, ABILITY_OVERCOAT);
-                MESSAGE("It doesn't affect the opposing Pineco...");
+                MESSAGE("It doesn't affect the opposing Pineco…");
             }
         }
     }

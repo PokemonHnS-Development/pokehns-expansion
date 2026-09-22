@@ -89,7 +89,7 @@ SINGLE_BATTLE_TEST("Refrigerate doesn't affect Natural Gift's type")
         TURN { MOVE(player, MOVE_NATURAL_GIFT); }
     } SCENE {
         NOT { ANIMATION(ANIM_TYPE_MOVE, MOVE_NATURAL_GIFT, player); }
-        MESSAGE("It doesn't affect the opposing Beldum...");
+        MESSAGE("It doesn't affect the opposing Beldum…");
     }
 }
 
@@ -117,7 +117,7 @@ SINGLE_BATTLE_TEST("Refrigerate doesn't affect Judgment / Techno Blast / Multi-A
         TURN { MOVE(player, move); }
     } SCENE {
         NOT { ANIMATION(ANIM_TYPE_MOVE, move, player); }
-        MESSAGE("It doesn't affect the opposing Diglett...");
+        MESSAGE("It doesn't affect the opposing Diglett…");
     }
 }
 
@@ -133,7 +133,7 @@ SINGLE_BATTLE_TEST("Refrigerate doesn't affect Hidden Power's type")
         TURN { MOVE(player, MOVE_HIDDEN_POWER); }
     } SCENE {
         NOT { ANIMATION(ANIM_TYPE_MOVE, MOVE_HIDDEN_POWER, player); }
-        MESSAGE("It doesn't affect the opposing Diglett...");
+        MESSAGE("It doesn't affect the opposing Diglett…");
     }
 }
 
@@ -149,7 +149,7 @@ SINGLE_BATTLE_TEST("Refrigerate doesn't override Electrify")
     } SCENE {
         ANIMATION(ANIM_TYPE_MOVE, MOVE_ELECTRIFY, opponent);
         NOT { ANIMATION(ANIM_TYPE_MOVE, MOVE_SCRATCH, player); }
-        MESSAGE("It doesn't affect the opposing Sandshrew...");
+        MESSAGE("It doesn't affect the opposing Sandshrew…");
     }
 }
 
@@ -181,7 +181,7 @@ SINGLE_BATTLE_TEST("Refrigerate changes Tera Blast's type when not Terastallized
         TURN { MOVE(player, MOVE_TERA_BLAST); }
     } SCENE {
         ANIMATION(ANIM_TYPE_MOVE, MOVE_TERA_BLAST, player);
-        MESSAGE("It's not very effective...");
+        MESSAGE("It's not very effective…");
     }
 }
 
@@ -197,7 +197,7 @@ SINGLE_BATTLE_TEST("Refrigerate doesn't change Tera Blast's type when Terastalli
         TURN { MOVE(player, MOVE_TERA_BLAST, gimmick: GIMMICK_TERA); }
     } SCENE {
         NOT { ANIMATION(ANIM_TYPE_MOVE, MOVE_TERA_BLAST, player); }
-        MESSAGE("It doesn't affect the opposing Misdreavus...");
+        MESSAGE("It doesn't affect the opposing Misdreavus…");
     }
 }
 
@@ -215,7 +215,7 @@ SINGLE_BATTLE_TEST("Refrigerate doesn't affect Terrain Pulse's type")
     } SCENE {
         ANIMATION(ANIM_TYPE_MOVE, MOVE_ELECTRIC_TERRAIN, opponent);
         NOT { ANIMATION(ANIM_TYPE_MOVE, MOVE_TERRAIN_PULSE, player); }
-        MESSAGE("It doesn't affect the opposing Sandshrew...");
+        MESSAGE("It doesn't affect the opposing Sandshrew…");
     }
 }
 

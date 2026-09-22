@@ -32,7 +32,7 @@ SINGLE_BATTLE_TEST("Thousand Arrows does neutral damage to non-grounded Flying t
         }
         else
         {
-            MESSAGE("It's not very effective...");
+            MESSAGE("It's not very effective…");
         }
     }
 }

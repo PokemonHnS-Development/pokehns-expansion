@@ -336,7 +336,7 @@ SINGLE_BATTLE_TEST("Fling's secondary effects are blocked by Shield Dust")
                     MESSAGE("The opposing Wobbuffet was burned!");
                     STATUS_ICON(opponent, STATUS1_BURN);
                 }
-                MESSAGE("The Flame Orb was used up...");
+                MESSAGE("The Flame Orb was used up…");
             }
             break;
         case ITEM_LIGHT_BALL:
@@ -345,7 +345,7 @@ SINGLE_BATTLE_TEST("Fling's secondary effects are blocked by Shield Dust")
                     MESSAGE("The opposing Wobbuffet is paralyzed, so it may be unable to move!");
                     STATUS_ICON(opponent, STATUS1_PARALYSIS);
                 }
-                MESSAGE("The Light Ball was used up...");
+                MESSAGE("The Light Ball was used up…");
             }
             break;
         case ITEM_POISON_BARB:
@@ -354,7 +354,7 @@ SINGLE_BATTLE_TEST("Fling's secondary effects are blocked by Shield Dust")
                     MESSAGE("The opposing Wobbuffet was poisoned!");
                     STATUS_ICON(opponent, STATUS1_POISON);
                 }
-                MESSAGE("The Poison Barb was used up...");
+                MESSAGE("The Poison Barb was used up…");
             }
             break;
         case ITEM_TOXIC_ORB:
@@ -363,7 +363,7 @@ SINGLE_BATTLE_TEST("Fling's secondary effects are blocked by Shield Dust")
                     MESSAGE("The opposing Wobbuffet was badly poisoned!");
                     STATUS_ICON(opponent, STATUS1_TOXIC_POISON);
                 }
-                MESSAGE("The Toxic Orb was used up...");
+                MESSAGE("The Toxic Orb was used up…");
             }
             break;
         case ITEM_RAZOR_FANG:
@@ -375,10 +375,10 @@ SINGLE_BATTLE_TEST("Fling's secondary effects are blocked by Shield Dust")
                 switch (item)
                 {
                     case ITEM_RAZOR_FANG:
-                        MESSAGE("The Razor Fang was used up...");
+                        MESSAGE("The Razor Fang was used up…");
                         break;
                     case ITEM_KINGS_ROCK:
-                        MESSAGE("The King's Rock was used up...");
+                        MESSAGE("The King's Rock was used up…");
                         break;
                     default:
                         break;

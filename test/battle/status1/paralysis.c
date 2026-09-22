@@ -84,7 +84,7 @@ SINGLE_BATTLE_TEST("Thunder Wave doesn't affect Electric types (Gen6+)")
                 ANIMATION(ANIM_TYPE_STATUS, B_ANIM_STATUS_PRZ, opponent);
                 STATUS_ICON(opponent, paralysis: TRUE);
             }
-            MESSAGE("It doesn't affect the opposing Pikachu...");
+            MESSAGE("It doesn't affect the opposing Pikachu…");
         } else {
             ANIMATION(ANIM_TYPE_STATUS, B_ANIM_STATUS_PRZ, opponent);
             STATUS_ICON(opponent, paralysis: TRUE);

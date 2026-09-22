@@ -30,13 +30,13 @@ SINGLE_BATTLE_TEST("Revelation Dance changes its type depending on the user's 1s
         if (speciesPlayer == SPECIES_ORICORIO_BAILE) {
             ANIMATION(ANIM_TYPE_MOVE, MOVE_REVELATION_DANCE, player);
             HP_BAR(opponent);
-            MESSAGE("It's not very effective...");
+            MESSAGE("It's not very effective…");
         }
         else {
             NONE_OF {
                 ANIMATION(ANIM_TYPE_MOVE, MOVE_REVELATION_DANCE, player);
                 HP_BAR(opponent);
-                MESSAGE("It's not very effective...");
+                MESSAGE("It's not very effective…");
             }
         }
     }
@@ -54,12 +54,12 @@ SINGLE_BATTLE_TEST("Revelation Dance changes its type depending on the user's 2n
         ANIMATION(ANIM_TYPE_MOVE, MOVE_BURN_UP, player);
         HP_BAR(opponent);
         NONE_OF {
-            MESSAGE("It's not very effective...");
+            MESSAGE("It's not very effective…");
             MESSAGE("It's super effective!");
         }
         ANIMATION(ANIM_TYPE_MOVE, MOVE_REVELATION_DANCE, player);
         HP_BAR(opponent);
-        MESSAGE("It's not very effective...");
+        MESSAGE("It's not very effective…");
     }
 }
 
@@ -78,7 +78,7 @@ SINGLE_BATTLE_TEST("Revelation Dance changes its type depending on the user's 3r
         ANIMATION(ANIM_TYPE_MOVE, MOVE_FORESTS_CURSE, opponent);
         ANIMATION(ANIM_TYPE_MOVE, MOVE_REVELATION_DANCE, player);
         HP_BAR(opponent);
-        MESSAGE("It's not very effective...");
+        MESSAGE("It's not very effective…");
     }
 }
 
@@ -105,7 +105,7 @@ SINGLE_BATTLE_TEST("Revelation Dance becomes Typeless if its user is Typeless")
         ANIMATION(ANIM_TYPE_MOVE, MOVE_REVELATION_DANCE, player);
         HP_BAR(opponent);
         NONE_OF {
-            MESSAGE("It's not very effective...");
+            MESSAGE("It's not very effective…");
             MESSAGE("It's super effective!");
         }
     }
@@ -136,13 +136,13 @@ SINGLE_BATTLE_TEST("Revelation Dance becomes Normal type if used by a Typeless P
         if (speciesOpponent == SPECIES_AGGRON) {
             ANIMATION(ANIM_TYPE_MOVE, MOVE_REVELATION_DANCE, player);
             HP_BAR(opponent);
-            MESSAGE("It's not very effective...");
+            MESSAGE("It's not very effective…");
         }
         else {
             NONE_OF {
                 ANIMATION(ANIM_TYPE_MOVE, MOVE_REVELATION_DANCE, player);
                 HP_BAR(opponent);
-                MESSAGE("It's not very effective...");
+                MESSAGE("It's not very effective…");
             }
         }
     }
