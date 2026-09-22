@@ -7879,62 +7879,53 @@ const struct ItemInfo gItemsInfo[] =
         .iconPalette = gItemIconPalette_SoulDew,
     },
 
-    [ITEM_ADAMANT_ORB] =
-    {
+    [ITEM_ADAMANT_ORB] = {
         .name = ITEM_NAME("DIAMANSFERA"),
         .price = (I_PRICE >= GEN_7) ? 0 : 10000,
         .holdEffect = HOLD_EFFECT_ADAMANT_ORB,
         .holdEffectParam = 20,
-        .description = COMPOUND_STRING(
-            "Potencia a Dialga\n"
+        "Potencia a Dialga\n"
             "Dragón y Acero-\n"
-            "tipo."),
+            "tipo.""Potencia los movimientos\nde tipo Dragón."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_SPECIAL_HELD_ITEM,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 60,
         .iconPic = gItemIcon_AdamantOrb,
-        .iconPalette = gItemIconPalette_AdamantOrb,
-    },
+        .iconPalette = gItemIconPalette_AdamantOrb,},
 
-    [ITEM_LUSTROUS_ORB] =
-    {
+    [ITEM_LUSTROUS_ORB] = {
         .name = ITEM_NAME("LUSTRESFERA"),
         .price = (I_PRICE >= GEN_7) ? 0 : 10000,
         .holdEffect = HOLD_EFFECT_LUSTROUS_ORB,
         .holdEffectParam = 20,
-        .description = COMPOUND_STRING(
-            "Potencia el poder de Palkia\n"
+        "Potencia el poder de Palkia\n"
             "Dragón y Agua-\n"
-            "tipo."),
+            "tipo.""Potencia los movimientos\nde tipo Agua."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_SPECIAL_HELD_ITEM,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 60,
         .iconPic = gItemIcon_LustrousOrb,
-        .iconPalette = gItemIconPalette_LustrousOrb,
-    },
+        .iconPalette = gItemIconPalette_LustrousOrb,},
 
-    [ITEM_GRISEOUS_ORB] =
-    {
+    [ITEM_GRISEOUS_ORB] = {
         .name = ITEM_NAME("GRISEOSFERA"),
         .price = (I_PRICE >= GEN_7) ? 0 : 10000,
         .holdEffect = HOLD_EFFECT_GRISEOUS_ORB,
         .holdEffectParam = 20,
-        .description = COMPOUND_STRING(
-            "Potencia el poder de Giratina\n"
+        "Potencia el poder de Giratina\n"
             "Dragón y Fantasma-\n"
-            "tipo."),
+            "tipo.""Potencia los movimientos\nde tipo Fantasma."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_SPECIAL_HELD_ITEM,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 60,
         .iconPic = gItemIcon_GriseousOrb,
-        .iconPalette = gItemIconPalette_GriseousOrb,
-    },
+        .iconPalette = gItemIconPalette_GriseousOrb,},
 
 // Incenses
 
@@ -7955,17 +7946,15 @@ const struct ItemInfo gItemsInfo[] =
         .iconPalette = gItemIconPalette_SeaIncense,
     },
 
-    [ITEM_LAX_INCENSE] =
-    {
+    [ITEM_LAX_INCENSE] = {
         .name = ITEM_NAME("INCIENSO SUAVE"),
         .price = (I_PRICE >= GEN_7) ? 5000 : 9600,
         .holdEffect = HOLD_EFFECT_EVASION_UP,
     #if I_LAX_INCENSE_BOOST >= GEN_4
         .holdEffectParam = 10,
-        .description = COMPOUND_STRING(
-            "Objeto equipado que\n"
+        "Objeto equipado que\n"
             "baja el\n"
-            "la Precisión del rival."),
+            "la Precisión del rival.""Potencia los movimientos\nde tipo Normal."),
     #else
         .holdEffectParam = 5,
         .description = COMPOUND_STRING(
@@ -7979,8 +7968,7 @@ const struct ItemInfo gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 10,
         .iconPic = gItemIcon_LaxIncense,
-        .iconPalette = gItemIconPalette_LaxIncense,
-    },
+        .iconPalette = gItemIconPalette_LaxIncense,},
 
     [ITEM_ODD_INCENSE] =
     {
@@ -8338,14 +8326,13 @@ const struct ItemInfo gItemsInfo[] =
         #define TYPE_BOOSTING_PRICE 100
     #endif
 
-    [ITEM_SILK_SCARF] =
-    {
+    [ITEM_SILK_SCARF] = {
         .name = ITEM_NAME("PAÑUELO DE SEDA"),
         .pluralName = ITEM_PLURAL_NAME("Silk Scarves"),
         .price = TYPE_BOOSTING_PRICE,
         .holdEffect = HOLD_EFFECT_TYPE_POWER,
         .holdEffectParam = TYPE_BOOST_PARAM,
-        .description = COMPOUND_STRING("Objeto equipado que sube el poder de movimientos TIERRA."),
+        "Objeto equipado que sube el poder de movimientos TIERRA.""Potencia los movimientos\nde tipo Normal."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_TYPE_BOOST_HELD_ITEM,
         .type = ITEM_USE_BAG_MENU,
@@ -8353,11 +8340,9 @@ const struct ItemInfo gItemsInfo[] =
         .secondaryId = TYPE_NORMAL,
         .flingPower = 10,
         .iconPic = gItemIcon_SilkScarf,
-        .iconPalette = gItemIconPalette_SilkScarf,
-    },
+        .iconPalette = gItemIconPalette_SilkScarf,},
 
-    [ITEM_CHARCOAL] =
-    {
+    [ITEM_CHARCOAL] = {
         .name = ITEM_NAME("CARBÓN"),
     #if I_PRICE >= GEN_9
         .price = 3000,
@@ -8368,7 +8353,7 @@ const struct ItemInfo gItemsInfo[] =
     #endif
         .holdEffect = HOLD_EFFECT_TYPE_POWER,
         .holdEffectParam = TYPE_BOOST_PARAM,
-        .description = COMPOUND_STRING("Objeto equipado que sube el poder de movimientos TIERRA."),
+        "Objeto equipado que sube el poder de movimientos TIERRA.""Potencia los movimientos\nde tipo Fuego."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_TYPE_BOOST_HELD_ITEM,
         .type = ITEM_USE_BAG_MENU,
@@ -8376,16 +8361,14 @@ const struct ItemInfo gItemsInfo[] =
         .secondaryId = TYPE_FIRE,
         .flingPower = 30,
         .iconPic = gItemIcon_Charcoal,
-        .iconPalette = gItemIconPalette_Charcoal,
-    },
+        .iconPalette = gItemIconPalette_Charcoal,},
 
-    [ITEM_MYSTIC_WATER] =
-    {
+    [ITEM_MYSTIC_WATER] = {
         .name = ITEM_NAME("AGUA MÍSTICA"),
         .price = TYPE_BOOSTING_PRICE,
         .holdEffect = HOLD_EFFECT_TYPE_POWER,
         .holdEffectParam = TYPE_BOOST_PARAM,
-        .description = COMPOUND_STRING("Objeto equipado que sube el poder de movimientos TIERRA."),
+        "Objeto equipado que sube el poder de movimientos TIERRA.""Potencia los movimientos\nde tipo Agua."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_TYPE_BOOST_HELD_ITEM,
         .type = ITEM_USE_BAG_MENU,
@@ -8393,19 +8376,16 @@ const struct ItemInfo gItemsInfo[] =
         .secondaryId = TYPE_WATER,
         .flingPower = 30,
         .iconPic = gItemIcon_MysticWater,
-        .iconPalette = gItemIconPalette_MysticWater,
-    },
+        .iconPalette = gItemIconPalette_MysticWater,},
 
-    [ITEM_MAGNET] =
-    {
+    [ITEM_MAGNET] = {
         .name = ITEM_NAME("IMÁN"),
         .price = TYPE_BOOSTING_PRICE,
         .holdEffect = HOLD_EFFECT_TYPE_POWER,
         .holdEffectParam = TYPE_BOOST_PARAM,
-        .description = COMPOUND_STRING(
-            "Objeto equipado que\n"
+        "Objeto equipado que\n"
             "potencia el tipo Eléctrico-\n"
-            "tipo."),
+            "tipo.""Potencia los movimientos\nde tipo Eléctrico."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_TYPE_BOOST_HELD_ITEM,
         .type = ITEM_USE_BAG_MENU,
@@ -8413,8 +8393,7 @@ const struct ItemInfo gItemsInfo[] =
         .secondaryId = TYPE_ELECTRIC,
         .flingPower = 30,
         .iconPic = gItemIcon_Magnet,
-        .iconPalette = gItemIconPalette_Magnet,
-    },
+        .iconPalette = gItemIconPalette_Magnet,},
 
     [ITEM_MIRACLE_SEED] =
     {
@@ -8433,13 +8412,12 @@ const struct ItemInfo gItemsInfo[] =
         .iconPalette = gItemIconPalette_MiracleSeed,
     },
 
-    [ITEM_NEVER_MELT_ICE] =
-    {
+    [ITEM_NEVER_MELT_ICE] = {
         .name = ITEM_NAME("HIELO PERPETUO"),
         .price = TYPE_BOOSTING_PRICE,
         .holdEffect = HOLD_EFFECT_TYPE_POWER,
         .holdEffectParam = TYPE_BOOST_PARAM,
-        .description = COMPOUND_STRING("Objeto equipado que sube el poder de movimientos TIERRA."),
+        "Objeto equipado que sube el poder de movimientos TIERRA.""Potencia los movimientos\nde tipo Hielo."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_TYPE_BOOST_HELD_ITEM,
         .type = ITEM_USE_BAG_MENU,
@@ -8447,19 +8425,16 @@ const struct ItemInfo gItemsInfo[] =
         .secondaryId = TYPE_ICE,
         .flingPower = 30,
         .iconPic = gItemIcon_NeverMeltIce,
-        .iconPalette = gItemIconPalette_NeverMeltIce,
-    },
+        .iconPalette = gItemIconPalette_NeverMeltIce,},
 
-    [ITEM_BLACK_BELT] =
-    {
+    [ITEM_BLACK_BELT] = {
         .name = ITEM_NAME("CINTURÓN NEGRO"),
         .price = TYPE_BOOSTING_PRICE,
         .holdEffect = HOLD_EFFECT_TYPE_POWER,
         .holdEffectParam = TYPE_BOOST_PARAM,
-        .description = COMPOUND_STRING(
-            "Objeto equipado que\n"
+        "Objeto equipado que\n"
             "potencia el tipo Lucha-\n"
-            "tipo."),
+            "tipo.""Potencia los movimientos\nde tipo Lucha."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_TYPE_BOOST_HELD_ITEM,
         .type = ITEM_USE_BAG_MENU,
@@ -8467,16 +8442,14 @@ const struct ItemInfo gItemsInfo[] =
         .secondaryId = TYPE_FIGHTING,
         .flingPower = 30,
         .iconPic = gItemIcon_BlackBelt,
-        .iconPalette = gItemIconPalette_BlackTypeEnhancingItem,
-    },
+        .iconPalette = gItemIconPalette_BlackTypeEnhancingItem,},
 
-    [ITEM_POISON_BARB] =
-    {
+    [ITEM_POISON_BARB] = {
         .name = ITEM_NAME("FLECHA VENENOSA"),
         .price = TYPE_BOOSTING_PRICE,
         .holdEffect = HOLD_EFFECT_TYPE_POWER,
         .holdEffectParam = TYPE_BOOST_PARAM,
-        .description = COMPOUND_STRING("Objeto equipado que sube el poder de movimientos TIERRA."),
+        "Objeto equipado que sube el poder de movimientos TIERRA.""Potencia los movimientos\nde tipo Veneno."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_TYPE_BOOST_HELD_ITEM,
         .type = ITEM_USE_BAG_MENU,
@@ -8484,17 +8457,15 @@ const struct ItemInfo gItemsInfo[] =
         .secondaryId = TYPE_POISON,
         .flingPower = 70,
         .iconPic = gItemIcon_PoisonBarb,
-        .iconPalette = gItemIconPalette_PoisonBarb,
-    },
+        .iconPalette = gItemIconPalette_PoisonBarb,},
 
-    [ITEM_SOFT_SAND] =
-    {
+    [ITEM_SOFT_SAND] = {
         .name = ITEM_NAME("ARENA FINA"),
         .pluralName = ITEM_PLURAL_NAME("Soft Sand"),
         .price = TYPE_BOOSTING_PRICE,
         .holdEffect = HOLD_EFFECT_TYPE_POWER,
         .holdEffectParam = TYPE_BOOST_PARAM,
-        .description = COMPOUND_STRING("Objeto equipado que sube el poder de movimientos TIERRA."),
+        "Objeto equipado que sube el poder de movimientos TIERRA.""Potencia los movimientos\nde tipo Tierra."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_TYPE_BOOST_HELD_ITEM,
         .type = ITEM_USE_BAG_MENU,
@@ -8502,16 +8473,14 @@ const struct ItemInfo gItemsInfo[] =
         .secondaryId = TYPE_GROUND,
         .flingPower = 10,
         .iconPic = gItemIcon_Sand,
-        .iconPalette = gItemIconPalette_SoftSand,
-    },
+        .iconPalette = gItemIconPalette_SoftSand,},
 
-    [ITEM_SHARP_BEAK] =
-    {
+    [ITEM_SHARP_BEAK] = {
         .name = ITEM_NAME("PICO AFILADO"),
         .price = TYPE_BOOSTING_PRICE,
         .holdEffect = HOLD_EFFECT_TYPE_POWER,
         .holdEffectParam = TYPE_BOOST_PARAM,
-        .description = COMPOUND_STRING("Objeto equipado que sube el poder de movimientos TIERRA."),
+        "Objeto equipado que sube el poder de movimientos TIERRA.""Potencia los movimientos\nde tipo Volador."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_TYPE_BOOST_HELD_ITEM,
         .type = ITEM_USE_BAG_MENU,
@@ -8519,8 +8488,7 @@ const struct ItemInfo gItemsInfo[] =
         .secondaryId = TYPE_FLYING,
         .flingPower = 50,
         .iconPic = gItemIcon_SharpBeak,
-        .iconPalette = gItemIconPalette_SharpBeak,
-    },
+        .iconPalette = gItemIconPalette_SharpBeak,},
 
     [ITEM_TWISTED_SPOON] =
     {
@@ -8539,13 +8507,12 @@ const struct ItemInfo gItemsInfo[] =
         .iconPalette = gItemIconPalette_TwistedSpoon,
     },
 
-    [ITEM_SILVER_POWDER] =
-    {
+    [ITEM_SILVER_POWDER] = {
         .name = ITEM_NAME("POLVO PLATA"),
         .price = TYPE_BOOSTING_PRICE,
         .holdEffect = HOLD_EFFECT_TYPE_POWER,
         .holdEffectParam = TYPE_BOOST_PARAM,
-        .description = COMPOUND_STRING("Objeto equipado que sube el poder de movimientos TIERRA."),
+        "Objeto equipado que sube el poder de movimientos TIERRA.""Potencia los movimientos\nde tipo Bicho."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_TYPE_BOOST_HELD_ITEM,
         .type = ITEM_USE_BAG_MENU,
@@ -8553,8 +8520,7 @@ const struct ItemInfo gItemsInfo[] =
         .secondaryId = TYPE_BUG,
         .flingPower = 10,
         .iconPic = gItemIcon_SilverPowder,
-        .iconPalette = gItemIconPalette_SilverPowder,
-    },
+        .iconPalette = gItemIconPalette_SilverPowder,},
 
     [ITEM_HARD_STONE] =
     {
@@ -8573,13 +8539,12 @@ const struct ItemInfo gItemsInfo[] =
         .iconPalette = gItemIconPalette_HardStone,
     },
 
-    [ITEM_SPELL_TAG] =
-    {
+    [ITEM_SPELL_TAG] = {
         .name = ITEM_NAME("HECHIZO"),
         .price = TYPE_BOOSTING_PRICE,
         .holdEffect = HOLD_EFFECT_TYPE_POWER,
         .holdEffectParam = TYPE_BOOST_PARAM,
-        .description = COMPOUND_STRING("Objeto equipado que sube el poder de movimientos TIERRA."),
+        "Objeto equipado que sube el poder de movimientos TIERRA.""Potencia los movimientos\nde tipo Fantasma."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_TYPE_BOOST_HELD_ITEM,
         .type = ITEM_USE_BAG_MENU,
@@ -8587,16 +8552,14 @@ const struct ItemInfo gItemsInfo[] =
         .secondaryId = TYPE_GHOST,
         .flingPower = 30,
         .iconPic = gItemIcon_SpellTag,
-        .iconPalette = gItemIconPalette_SpellTag,
-    },
+        .iconPalette = gItemIconPalette_SpellTag,},
 
-    [ITEM_DRAGON_FANG] =
-    {
+    [ITEM_DRAGON_FANG] = {
         .name = ITEM_NAME("COLMILLO DE DRAGÓN"),
         .price = TYPE_BOOSTING_PRICE,
         .holdEffect = HOLD_EFFECT_TYPE_POWER,
         .holdEffectParam = TYPE_BOOST_PARAM,
-        .description = COMPOUND_STRING("Objeto equipado que sube el poder de movimientos TIERRA."),
+        "Objeto equipado que sube el poder de movimientos TIERRA.""Potencia los movimientos\nde tipo Dragón."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_TYPE_BOOST_HELD_ITEM,
         .type = ITEM_USE_BAG_MENU,
@@ -8604,17 +8567,15 @@ const struct ItemInfo gItemsInfo[] =
         .secondaryId = TYPE_DRAGON,
         .flingPower = 70,
         .iconPic = gItemIcon_DragonFang,
-        .iconPalette = gItemIconPalette_DragonFang,
-    },
+        .iconPalette = gItemIconPalette_DragonFang,},
 
-    [ITEM_BLACK_GLASSES] =
-    {
+    [ITEM_BLACK_GLASSES] = {
         .name = ITEM_NAME("GAFAS DE SOL"),
         .pluralName = ITEM_PLURAL_NAME("Black Glasses"),
         .price = TYPE_BOOSTING_PRICE,
         .holdEffect = HOLD_EFFECT_TYPE_POWER,
         .holdEffectParam = TYPE_BOOST_PARAM,
-        .description = COMPOUND_STRING("Objeto equipado que sube el poder de movimientos TIERRA."),
+        "Objeto equipado que sube el poder de movimientos TIERRA.""Potencia los movimientos\nde tipo Siniestro."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_TYPE_BOOST_HELD_ITEM,
         .type = ITEM_USE_BAG_MENU,
@@ -8622,11 +8583,9 @@ const struct ItemInfo gItemsInfo[] =
         .secondaryId = TYPE_DARK,
         .flingPower = 30,
         .iconPic = gItemIcon_BlackGlasses,
-        .iconPalette = gItemIconPalette_BlackTypeEnhancingItem,
-    },
+        .iconPalette = gItemIconPalette_BlackTypeEnhancingItem,},
 
-    [ITEM_METAL_COAT] =
-    {
+    [ITEM_METAL_COAT] = {
         .name = ITEM_NAME("REVEST. METÁLICO"),
         //#if I_PRICE >= GEN_9
         //    .price = 3000,
@@ -8638,7 +8597,7 @@ const struct ItemInfo gItemsInfo[] =
         .price = 20000,
         .holdEffect = HOLD_EFFECT_TYPE_POWER,
         .holdEffectParam = TYPE_BOOST_PARAM,
-        .description = COMPOUND_STRING("Objeto equipado que sube el poder de movimientos TIERRA."),
+        "Objeto equipado que sube el poder de movimientos TIERRA.""Potencia los movimientos\nde tipo Acero."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_TYPE_BOOST_HELD_ITEM,
         .type = EVO_HELD_ITEM_TYPE,
@@ -8647,8 +8606,7 @@ const struct ItemInfo gItemsInfo[] =
         .secondaryId = TYPE_STEEL,
         .flingPower = 30,
         .iconPic = gItemIcon_MetalCoat,
-        .iconPalette = gItemIconPalette_MetalCoat,
-    },
+        .iconPalette = gItemIconPalette_MetalCoat,},
 
 // Choice Items
 
@@ -14378,13 +14336,12 @@ const struct ItemInfo gItemsInfo[] =
         .iconPalette = gItemIconPalette_BerserkGene,
     },
 
-    [ITEM_FAIRY_FEATHER] =
-    {
+    [ITEM_FAIRY_FEATHER] = {
         .name = ITEM_NAME("PLUMA FEÉRICA"),
         .price = 1000,
         .holdEffect = HOLD_EFFECT_TYPE_POWER,
         .holdEffectParam = TYPE_BOOST_PARAM,
-        .description = COMPOUND_STRING("Objeto equipado que sube el poder de movimientos TIERRA."),
+        "Objeto equipado que sube el poder de movimientos TIERRA.""Potencia los movimientos\nde tipo Hada."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_TYPE_BOOST_HELD_ITEM,
         .type = ITEM_USE_BAG_MENU,
@@ -14392,8 +14349,7 @@ const struct ItemInfo gItemsInfo[] =
         .secondaryId = TYPE_FAIRY,
         .flingPower = 10,
         .iconPic = gItemIcon_FairyFeather,
-        .iconPalette = gItemIconPalette_FairyFeather,
-    },
+        .iconPalette = gItemIconPalette_FairyFeather,},
 
     [ITEM_SYRUPY_APPLE] =
     {
