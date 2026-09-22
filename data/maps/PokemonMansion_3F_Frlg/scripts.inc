@@ -37,21 +37,21 @@ PokemonMansion_1F_Text_SimonDefeat::
 	.string "Ayah!$"
 
 PokemonMansion_1F_Text_SimonPostBattle::
-	.string "I wonder where my partner went.$"
+	.string "¿Dónde habrá ido mi compañero?$"
 
 PokemonMansion_1F_Text_BraydonIntro::
-	.string "My mentor once lived here.$"
+	.string "Mi mentor vivió aquí.$"
 
 PokemonMansion_1F_Text_BraydonDefeat::
 	.string "¡Uff!\n"
 	.string "Overwhelming!$"
 
 PokemonMansion_1F_Text_BraydonPostBattle::
-	.string "So, you're stuck?\n"
-	.string "Try jumping off over there!$"
+	.string "¿Estás atascado?\n"
+	.string "¡Trata de saltar por allá!$"
 
 PokemonMansion_1F_Text_MewGaveBirthToMewtwo::
 	.string "Diary: Feb. 6\n"
 	.string "MEW gave birth.\p"
-	.string "We named the newborn MEWTWO.$"
+	.string "Nombramos MEWTWO al recién nacido.$"
 

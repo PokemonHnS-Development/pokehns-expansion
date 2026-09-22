@@ -35,28 +35,28 @@ Route18_Text_WiltonDefeat::
 	.string "Tch!$"
 
 Route18_Text_WiltonPostBattle::
-	.string "I wish I had a BIKE!$"
+	.string "¡Ojalá tuviera una BICI!$"
 
 Route18_Text_RamiroIntro::
 	.string "Kurukkoo!\n"
-	.string "How do you like my birdcall?$"
+	.string "¿Qué tal mi canto de pájaro?$"
 
 Route18_Text_RamiroDefeat::
 	.string "¡Tenía que molestarte!$"
 
 Route18_Text_RamiroPostBattle::
 	.string "I collect sea POKéMON on weekends\n"
-	.string "because the sea is so close.$"
+	.string "porque el mar está tan cerca.$"
 
 Route18_Text_JacobIntro::
-	.string "This is my turf!\n"
-	.string "Get out of here!$"
+	.string "¡Este es mi territorio!\n"
+	.string "¡Fuera de aquí!$"
 
 Route18_Text_JacobDefeat::
 	.string "Darn!$"
 
 Route18_Text_JacobPostBattle::
-	.string "This is my fave area for catching\n"
+	.string "Este es mi lugar favorito para\n"
 	.string "POKéMON.$"
 
 Route18_Text_RouteSign::
@@ -65,5 +65,5 @@ Route18_Text_RouteSign::
 
 Route18_Text_CyclingRoadSign::
 	.string "CICLOVÍA\n"
-	.string "No pedestrians permitted!$"
+	.string "¡Prohibido el paso a peatones!$"
 

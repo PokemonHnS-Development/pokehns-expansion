@@ -10,104 +10,104 @@ SixIsland_WaterPath_EventScript_RouteSign::
 	end
 
 SixIsland_WaterPath_Text_RoseIntro::
-	.string "I let a pleasant breeze lead me\n"
-	.string "all the way here.$"
+	.string "Dejé que una brisa agradable\n"
+	.string "todo el camino hasta aquí.$"
 
 SixIsland_WaterPath_Text_RoseDefeat::
-	.string "Giggle… You're so cute when you're\n"
+	.string "Ji, ji… Qué lindo eres cuando\n"
 	.string "determined.$"
 
 SixIsland_WaterPath_Text_RosePostBattle::
-	.string "I want to go to the woods over\n"
-	.string "there, but…\p"
+	.string "Quiero ir al bosque que está\n"
+	.string "allá, pero…\p"
 	.string "There are lots of BUG POKéMON.\n"
-	.string "They scare me a little.$"
+	.string "Me dan un poco de miedo.$"
 
 SixIsland_WaterPath_Text_EdwardIntro::
-	.string "I'm practicing in secret so no one\n"
-	.string "can see me.$"
+	.string "Estoy practicando en secreto\n"
+	.string "para que nadie me vea.$"
 
 SixIsland_WaterPath_Text_EdwardDefeat::
-	.string "Nobody saw me losing, right?$"
+	.string "Nadie me vio perder, ¿verdad?$"
 
 SixIsland_WaterPath_Text_EdwardPostBattle::
-	.string "As a performer, I don't want people\n"
-	.string "to know about the effort I put in.$"
+	.string "Como artista, no quiero que\n"
+	.string "sepan el esfuerzo que hago.$"
 
 SixIsland_WaterPath_Text_SamirIntro::
-	.string "What, you're suggesting that you're\n"
-	.string "sick of seeing SWIMMERS like me?\p"
-	.string "Aww, don't be hatin'!$"
+	.string "¿Qué, insinuas que ya estás\n"
+	.string "harto de ver NADADORES como yo?\p"
+	.string "¡Vamos, no me odies!$"
 
 SixIsland_WaterPath_Text_SamirDefeat::
 	.string "Oh, no, no, no.$"
 
 SixIsland_WaterPath_Text_SamirPostBattle::
-	.string "I couldn't lift the stigma of being\n"
-	.string "a SWIMMER…$"
+	.string "No podría soportar el estigma de\n"
+	.string "un NADADOR…$"
 
 SixIsland_WaterPath_Text_DeniseIntro::
-	.string "My boyfriend's always busy, so I\n"
+	.string "Mi novio siempre está ocupado,\n"
 	.string "come swimming by myself.$"
 
 SixIsland_WaterPath_Text_DeniseDefeat::
 	.string "Ay, ¡sabía que esto pasaría!$"
 
 SixIsland_WaterPath_Text_DenisePostBattle::
-	.string "When I can't be with my boyfriend,\n"
+	.string "Cuando no puedo estar con mi\n"
 	.string "I spend time with the POKéMON he\l"
-	.string "gave me.$"
+	.string "me dio.$"
 
 SixIsland_WaterPath_Text_EarlIntro::
-	.string "Tell me, where are the mountains\n"
+	.string "Dime, ¿dónde están las montañas\n"
 	.string "around these parts?$"
 
 SixIsland_WaterPath_Text_EarlDefeat::
-	.string "I lost my way while I was busy\n"
+	.string "Me perdí mientras estaba ocupada\n"
 	.string "battling!$"
 
 SixIsland_WaterPath_Text_EarlPostBattle::
-	.string "Aren't there any mountains around\n"
+	.string "¿No hay montañas por aquí?\n"
 	.string "these parts?$"
 
 SixIsland_WaterPath_Text_MiuIntro::
 	.string "MIU: ¡Hola, POKéMON!\n"
-	.string "It's time to play!$"
+	.string "¡Es hora de jugar!$"
 
 SixIsland_WaterPath_Text_MiuDefeat::
-	.string "MIU: Oh, no!\n"
+	.string "MIU: ¡Oh, no!\n"
 	.string "Mommy!$"
 
 SixIsland_WaterPath_Text_MiuPostBattle::
-	.string "MIU: It makes me all sad inside\n"
-	.string "when we lose…$"
+	.string "MIU: Me pone muy triste\n"
+	.string "cuando perdemos…$"
 
 SixIsland_WaterPath_Text_MiuNotEnoughMons::
-	.string "MIU: MIA and I are TWINS.\n"
-	.string "We want to battle together.$"
+	.string "MIU: MIA y yo somos GEMELAS.\n"
+	.string "Queremos pelear juntas.$"
 
 SixIsland_WaterPath_Text_MiaIntro::
 	.string "MIA: ¡Hola, POKéMON!\n"
-	.string "It's time to battle!$"
+	.string "¡Es hora de pelear!$"
 
 SixIsland_WaterPath_Text_MiaDefeat::
-	.string "MIA: You're mean!\n"
-	.string "You're bad for winning!$"
+	.string "MIA: ¡Qué mala eres!\n"
+	.string "¡Eres malo por ganar!$"
 
 SixIsland_WaterPath_Text_MiaPostBattle::
 	.string "MIA: Ohh…\n"
 	.string "I'm sorry, my POKéMON…$"
 
 SixIsland_WaterPath_Text_MiaNotEnoughMons::
-	.string "MIA: Oh, you only have one\n"
+	.string "MIA: Oh, solo tienes uno\n"
 	.string "con los POKéMON?\p"
-	.string "Don't you feel lonesome?$"
+	.string "¿No te sientes solo?$"
 
 SixIsland_WaterPath_Text_WantedUltimateHorn::
 	.string "Wanted!\n"
-	.string "The Ultimate Horn!$"
+	.string "¡El Cuerno Definitivo!$"
 
 SixIsland_WaterPath_Text_RouteSign::
 	.string "WATER PATH\n"
-	.string "Leads to RUIN VALLEY$"
+	.string "Conduce al VALLE RUINA$"
 

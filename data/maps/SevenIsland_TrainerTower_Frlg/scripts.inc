@@ -18,26 +18,26 @@ SevenIsland_TrainerTower_Text_DarioIntro::
 	.string "Sentí que te acercabas.$"
 
 SevenIsland_TrainerTower_Text_DarioDefeat::
-	.string "Give up…$"
+	.string "Ríndete…$"
 
 SevenIsland_TrainerTower_Text_DarioPostBattle::
-	.string "In your future, I sense that you\n"
-	.string "will meet many others.\p"
-	.string "I think you will be linked to each\n"
-	.string "other by a strange power.$"
+	.string "En tu futuro, veo que conocerás\n"
+	.string "a muchas otras personas.\p"
+	.string "Creo que estarán unidos entre\n"
+	.string "sí por un poder extraño.$"
 
 SevenIsland_TrainerTower_Text_RodetteIntro::
 	.string "En algún lugar de esta isla, hay\n"
 	.string "POKéMON peculiares durmiendo.$"
 
 SevenIsland_TrainerTower_Text_RodetteDefeat::
-	.string "What an amazing TRAINER!$"
+	.string "¡Qué ENTRENADOR tan increíble!$"
 
 SevenIsland_TrainerTower_Text_RodettePostBattle::
 	.string "En algún lugar de esta isla, hay\n"
 	.string "POKéMON are sleeping.\p"
-	.string "Could it be that they're waiting\n"
-	.string "for you?$"
+	.string "¿Será que están esperando\n"
+	.string "a ti?$"
 
 SevenIsland_TrainerTower_Text_TrainerTowerSign::
 	.string "TRAINER TOWER ENTRANCE\n"

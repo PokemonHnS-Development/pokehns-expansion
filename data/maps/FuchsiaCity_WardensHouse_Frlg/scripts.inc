@@ -69,45 +69,45 @@ FuchsiaCity_WardensHouse_Text_AhHowheeHoHoo::
 
 FuchsiaCity_WardensHouse_Text_HeOhayHeHaHoo::
 	.string "Ha?\n"
-	.string "He ohay heh ha hoo ee haheh!$"
+	.string "¡E ohay je ja ju i jaje!$"
 
 FuchsiaCity_WardensHouse_Text_GaveGoldTeethToWarden::
-	.string "{PLAYER} gave the GOLD TEETH\n"
-	.string "to the WARDEN.$"
+	.string "{PLAYER} entregó los DIENTES\n"
+	.string "DE ORO al ALCAIDE.$"
 
 FuchsiaCity_WardensHouse_Text_WardenPoppedInHisTeeth::
 	.string "¡El GUARDA se puso los dientes!$"
 
 FuchsiaCity_WardensHouse_Text_ThanksSonGiveYouSomething::
 	.string "WARDEN: Thanks, son!\n"
-	.string "You're a real lifesaver!\p"
-	.string "No one could understand a word\n"
-	.string "that I said, not a one!\p"
-	.string "I was too ashamed to show my face\n"
-	.string "around the OFFICE, even.\p"
-	.string "Let me give you something for your\n"
+	.string "¡Salvaste mi vida!\p"
+	.string "Nadie entendía ni una\n"
+	.string "de lo que dije, ¡ni uno!\p"
+	.string "Me daba vergüenza mostrar\n"
+	.string "la cara, ¡ni en la OFICINA!\p"
+	.string "Déjame darte algo por tu\n"
 	.string "problemas.$"
 
 FuchsiaCity_WardensHouse_Text_ThanksLassieGiveYouSomething::
-	.string "WARDEN: Thank you, lassie!\n"
-	.string "You're a real lifesaver!\p"
-	.string "No one could understand a word\n"
-	.string "that I said, not a one!\p"
-	.string "I was too ashamed to show my face\n"
-	.string "around the OFFICE, even.\p"
-	.string "Let me give you something for your\n"
+	.string "WARDEN: ¡Gracias, muchacha!\n"
+	.string "¡Salvaste mi vida!\p"
+	.string "Nadie entendía ni una\n"
+	.string "de lo que dije, ¡ni uno!\p"
+	.string "Me daba vergüenza mostrar\n"
+	.string "la cara, ¡ni en la OFICINA!\p"
+	.string "Déjame darte algo por tu\n"
 	.string "problemas.$"
 
 FuchsiaCity_WardensHouse_Text_ReceivedHM04FromWarden::
 	.string "{PLAYER} received HM04\n"
-	.string "from the WARDEN.$"
+	.string "del ALCAIDE.$"
 
 FuchsiaCity_WardensHouse_Text_ExplainStrength::
-	.string "WARDEN: Inside HM04 you'll find\n"
+	.string "ALCAIDE: Dentro de la MO04\n"
 	.string "STRENGTH.\p"
 	.string "It lets POKéMON move boulders when\n"
-	.string "you're outside of battle.\p"
-	.string "Oh yes, did you find the SECRET\n"
+	.string "encontrarás...\p"
+	.string "Ah sí, ¿encontraste el SECRETO\n"
 	.string "HOUSE in the SAFARI ZONE?$"
 
 @ Unused

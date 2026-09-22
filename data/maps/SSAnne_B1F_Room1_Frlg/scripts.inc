@@ -12,28 +12,28 @@ SSAnne_B1F_Room1_EventScript_Phillip::
 	end
 
 SSAnne_B1F_Room1_Text_PhillipIntro::
-	.string "Matey, you're walking the plank if\n"
-	.string "you lose!$"
+	.string "Dicen que hasta enseña CORTAR\n"
+	.string "¡perdiste!$"
 
 SSAnne_B1F_Room1_Text_PhillipDefeat::
 	.string "Argh!\n"
-	.string "Beaten by a kid!$"
+	.string "¡Vencido por un niño!$"
 
 SSAnne_B1F_Room1_Text_PhillipPostBattle::
-	.string "When we're out at sea, jellyfish\n"
+	.string "Cuando estamos en alta mar, las\n"
 	.string "POKéMON sometimes drift by.$"
 
 SSAnne_B1F_Room1_Text_BarnyIntro::
 	.string "Hello, stranger!\p"
-	.string "I can't tell if you're from the seas\n"
+	.string "No sé si vienes del mar o de\n"
 	.string "or mountains, but stop and chat.\p"
 	.string "All my POKéMON are from the sea.$"
 
 SSAnne_B1F_Room1_Text_BarnyDefeat::
 	.string "Darn!\n"
-	.string "I let that one get away!$"
+	.string "¡Dejé que escapara!$"
 
 SSAnne_B1F_Room1_Text_BarnyPostBattle::
-	.string "I was going to make you my\n"
+	.string "Iba a hacerte mi\n"
 	.string "assistant, too!$"
 

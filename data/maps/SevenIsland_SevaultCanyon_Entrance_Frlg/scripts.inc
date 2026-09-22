@@ -11,38 +11,38 @@ SevenIsland_SevaultCanyon_Entrance_Text_MiahIntro::
 
 SevenIsland_SevaultCanyon_Entrance_Text_MiahDefeat::
 	.string "¡Tch!\n"
-	.string "Too strong for me!$"
+	.string "¡Demasiado fuerte para mí!$"
 
 SevenIsland_SevaultCanyon_Entrance_Text_MiahPostBattle::
 	.string "¿Qué es eso?\n"
-	.string "I don't act the way I look?\p"
-	.string "Heh, that's a part of my strategy!$"
+	.string "¿No actúo como aparento?\p"
+	.string "¡Je, es parte de mi estrategia!$"
 
 SevenIsland_SevaultCanyon_Entrance_Text_MasonIntro::
 	.string "Howdy!\n"
-	.string "Are you a member of my fan club?$"
+	.string "¿Eres de mi club de fans?$"
 
 SevenIsland_SevaultCanyon_Entrance_Text_MasonDefeat::
-	.string "Oh, so you're not a fan…\p"
-	.string "Well, I can change that.\n"
-	.string "Let me sing for you!$"
+	.string "Ah, no eres fan…\p"
+	.string "Bueno, eso puedo cambiarlo.\n"
+	.string "¡Déjame cantar para ti!$"
 
 SevenIsland_SevaultCanyon_Entrance_Text_MasonPostBattle::
 	.string "Lalalah…\n"
 	.string "My POKéMON, I send them out,\l"
-	.string "all the girls scream and shout!$"
+	.string "¡todas las chicas gritan y aplauden!$"
 
 SevenIsland_SevaultCanyon_Entrance_Text_NicolasIntro::
 	.string "Esta isla es muy extensa...\n"
-	.string "It's not easy patrolling the place.$"
+	.string "No es fácil patrullar el lugar.$"
 
 SevenIsland_SevaultCanyon_Entrance_Text_NicolasDefeat::
 	.string "Uh-huh…$"
 
 SevenIsland_SevaultCanyon_Entrance_Text_NicolasPostBattle::
-	.string "TRAINERS like you from cities,\n"
-	.string "they sure are tough.\p"
-	.string "You'll be headed for the TOWER,\n"
+	.string "Los ENTRENADORES como tú, de las\n"
+	.string "ciudades, son muy duros.\p"
+	.string "Irás hacia la TORRE,\n"
 	.string "¿verdad?$"
 
 SevenIsland_SevaultCanyon_Entrance_Text_MadelineIntro::
@@ -50,51 +50,51 @@ SevenIsland_SevaultCanyon_Entrance_Text_MadelineIntro::
 	.string "POKéMON!$"
 
 SevenIsland_SevaultCanyon_Entrance_Text_MadelineDefeat::
-	.string "You don't seem to be a problem\n"
+	.string "No pareces ser un problema\n"
 	.string "ENTRENADOR.$"
 
 SevenIsland_SevaultCanyon_Entrance_Text_MadelinePostBattle::
 	.string "If you treat your POKéMON with\n"
-	.string "kindness, they'll understand.$"
+	.string "amabilidad, lo entenderán.$"
 
 SevenIsland_SevaultCanyon_Entrance_Text_EveIntro::
 	.string "EVE: Me aliaré con JON y\n"
 	.string "POKéMON luchen juntos.$"
 
 SevenIsland_SevaultCanyon_Entrance_Text_EveDefeat::
-	.string "EVE: Me and JON, we lost.\n"
+	.string "EVE: JON y yo perdimos.\n"
 	.string "Ehehe.$"
 
 SevenIsland_SevaultCanyon_Entrance_Text_EvePostBattle::
-	.string "EVE: I'm going to work harder with\n"
+	.string "EVE: Voy a esforzarme más con\n"
 	.string "JON.$"
 
 SevenIsland_SevaultCanyon_Entrance_Text_EveNotEnoughMons::
-	.string "EVE: I want to team up with JON\n"
-	.string "when I battle you.\p"
+	.string "EVE: Quiero hacer equipo con JON\n"
+	.string "cuando batalla contra ti.\p"
 	.string "Come back with two POKéMON, okay?$"
 
 SevenIsland_SevaultCanyon_Entrance_Text_JonIntro::
 	.string "JON: Cuando estoy con EVE, siento\n"
-	.string "like we could never lose.$"
+	.string "¡como si nunca pudiéramos perder!$"
 
 SevenIsland_SevaultCanyon_Entrance_Text_JonDefeat::
-	.string "JON: When I'm with EVE,\n"
-	.string "it doesn't feel like I've lost!$"
+	.string "JON: Cuando estoy con EVE,\n"
+	.string "¡no siento que haya perdido!$"
 
 SevenIsland_SevaultCanyon_Entrance_Text_JonPostBattle::
-	.string "JON: When I'm with EVE, I feel\n"
+	.string "JON: Cuando estoy con EVE,\n"
 	.string "giddy whether I win or lose.\p"
-	.string "It's magical!$"
+	.string "¡es mágico!$"
 
 SevenIsland_SevaultCanyon_Entrance_Text_JonNotEnoughMons::
-	.string "JON: If it's with EVE, I'll be\n"
-	.string "happy to battle with you.\p"
-	.string "So, I'd like to make it a\n"
+	.string "JON: Si es con EVE, pelearé\n"
+	.string "contigo con gusto.\p"
+	.string "Así que me gustaría hacer\n"
 	.string "two-on-two battle, if I may.$"
 
 SevenIsland_SevaultCanyon_Entrance_Text_RouteSign::
 	.string "SEVAULT CANYON ENTRANCE\p"
-	.string "TRAINERS are asked to refrain from\n"
-	.string "damaging plants in the CANYON.$"
+	.string "Se pide a los ENTRENADORES que no\n"
+	.string "dañen las plantas del CAÑÓN.$"
 

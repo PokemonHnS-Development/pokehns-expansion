@@ -53,37 +53,37 @@ RockTunnel_1F_Text_LennyDefeat::
 	.string "¡Tú ganas!$"
 
 RockTunnel_1F_Text_LennyPostBattle::
-	.string "Watch for ONIX.\n"
-	.string "They appear only occasionally.\p"
-	.string "High-level ones can put the\n"
-	.string "squeeze on you!$"
+	.string "Cuidado con ONIX.\n"
+	.string "Solo aparecen de vez en cuando.\p"
+	.string "¡Los de nivel alto pueden\n"
+	.string "apretarlos mucho!$"
 
 RockTunnel_1F_Text_OliverIntro::
 	.string "Hmm.\n"
-	.string "Maybe I'm lost in here…$"
+	.string "Quizá estoy perdido aquí…$"
 
 RockTunnel_1F_Text_OliverDefeat::
 	.string "Ease up!\n"
-	.string "What am I doing?\l"
-	.string "Which way is out?$"
+	.string "¿Qué estoy haciendo?\l"
+	.string "¿Por dónde se sale?$"
 
 RockTunnel_1F_Text_OliverPostBattle::
 	.string "That sleeping POKéMON on ROUTE 12\n"
-	.string "forced me to take this detour.$"
+	.string "me obligó a tomar este desvío.$"
 
 RockTunnel_1F_Text_LucasIntro::
-	.string "Outsiders like you need to show me\n"
+	.string "Los de fuera como tú deben\n"
 	.string "some respect!$"
 
 RockTunnel_1F_Text_LucasDefeat::
-	.string "I give!$"
+	.string "¡Me rindo!$"
 
 RockTunnel_1F_Text_LucasPostBattle::
 	.string "You're talented enough to hike!$"
 
 RockTunnel_1F_Text_AshtonIntro::
 	.string "POKéMON fight!\n"
-	.string "Ready, go!$"
+	.string "¡Listo, ya!$"
 
 RockTunnel_1F_Text_AshtonDefeat::
 	.string "Game over!$"
@@ -93,14 +93,14 @@ RockTunnel_1F_Text_AshtonPostBattle::
 
 RockTunnel_1F_Text_LeahIntro::
 	.string "Eek!\p"
-	.string "Don't try anything funny in the\n"
+	.string "No intentes nada raro en el\n"
 	.string "dark!$"
 
 RockTunnel_1F_Text_LeahDefeat::
 	.string "Estaba muy oscuro…$"
 
 RockTunnel_1F_Text_LeahPostBattle::
-	.string "I saw a MACHOP in this tunnel.$"
+	.string "Vi un MACHOP en este túnel.$"
 
 RockTunnel_1F_Text_DanaIntro::
 	.string "I came this far looking for wild\n"
@@ -110,15 +110,15 @@ RockTunnel_1F_Text_DanaDefeat::
 	.string "I'm out of POKéMON!$"
 
 RockTunnel_1F_Text_DanaPostBattle::
-	.string "You looked cute and harmless.\n"
-	.string "Was I ever wrong!$"
+	.string "Parecías tierno e inofensivo.\n"
+	.string "¡Qué equivocada estaba!$"
 
 RockTunnel_1F_Text_ArianaIntro::
 	.string "You have POKéMON!\n"
-	.string "Let's start!$"
+	.string "¡Empecemos!$"
 
 RockTunnel_1F_Text_ArianaDefeat::
-	.string "You play hard!$"
+	.string "¡Juegas duro!$"
 
 RockTunnel_1F_Text_ArianaPostBattle::
 	.string "¡Uff!\n"

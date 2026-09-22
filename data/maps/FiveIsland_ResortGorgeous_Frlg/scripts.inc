@@ -45,14 +45,14 @@ FiveIsland_ResortGorgeous_EventScript_SelphysHouseSign::
 
 FiveIsland_ResortGorgeous_Text_DaisyIntro::
 	.string "Con estas manos, crearé\n"
-	.string "my victory!$"
+	.string "¡mi victoria!$"
 
 FiveIsland_ResortGorgeous_Text_DaisyDefeat::
-	.string "The shame of this…\n"
+	.string "La vergüenza de esto…\n"
 	.string "I'm red-faced…$"
 
 FiveIsland_ResortGorgeous_Text_DaisyPostBattle::
-	.string "Uh-oh, my paint tubes have\n"
+	.string "Ay no, mis tubos de pintura\n"
 	.string "scattered everywhere!$"
 
 FiveIsland_ResortGorgeous_Text_CelinaIntro::
@@ -61,49 +61,49 @@ FiveIsland_ResortGorgeous_Text_CelinaIntro::
 	.string "¡Por favor, no me molestes!$"
 
 FiveIsland_ResortGorgeous_Text_CelinaDefeat::
-	.string "This loss…\n"
+	.string "Esta derrota…\n"
 	.string "I feel like I'm whiting out…$"
 
 FiveIsland_ResortGorgeous_Text_CelinaPostBattle::
 	.string "GILLIAN?\n"
-	.string "Please tilt your head slightly…\l"
-	.string "There! That's the look I want!$"
+	.string "Inclina un poco la cabeza…\l"
+	.string "¡Ahí! ¡Ese look que quiero!$"
 
 FiveIsland_ResortGorgeous_Text_RaynaIntro::
 	.string "Hmm…\n"
-	.string "The angle, it is not quite there…$"
+	.string "El ángulo, aún no está…$"
 
 FiveIsland_ResortGorgeous_Text_RaynaDefeat::
 	.string "Oh…\n"
-	.string "My feelings, they are blue…$"
+	.string "Mis sentimientos son tristes…$"
 
 FiveIsland_ResortGorgeous_Text_RaynaPostBattle::
-	.string "The sky and the sea…\n"
-	.string "They are so fickle.\p"
-	.string "Their changing expressions make\n"
-	.string "them difficult to capture.$"
+	.string "El cielo y el mar…\n"
+	.string "Son tan cambiantes.\p"
+	.string "Sus expresiones cambiantes hacen\n"
+	.string "difícil atraparlos.$"
 
 FiveIsland_ResortGorgeous_Text_JackiIntro::
-	.string "I am visiting my friend's retreat,\n"
-	.string "if you must know.$"
+	.string "Estoy visitando el retiro de un\n"
+	.string "amigo, si quieres saberlo.$"
 
 FiveIsland_ResortGorgeous_Text_JackiDefeat::
-	.string "Oh, my, so strong.$"
+	.string "Oh, vaya, qué fuerte.$"
 
 FiveIsland_ResortGorgeous_Text_JackiPostBattle::
-	.string "I find it pleasurable to leisurely\n"
-	.string "battle in the gentle sea breeze.$"
+	.string "Me resulta agradable combatir con\n"
+	.string "calma en la brisa del mar.$"
 
 FiveIsland_ResortGorgeous_Text_GillianIntro::
-	.string "I'm thinking of having a pool\n"
+	.string "Estoy pensando en poner una alberca\n"
 	.string "made specially for POKéMON.$"
 
 FiveIsland_ResortGorgeous_Text_GillianDefeat::
-	.string "Oh, my goodness gracious!$"
+	.string "¡Oh, por Dios mío!$"
 
 FiveIsland_ResortGorgeous_Text_GillianPostBattle::
-	.string "A pool would be nice, but I must\n"
-	.string "say, a sun-room may be sublime.$"
+	.string "Una alberca estaría bien, pero\n"
+	.string "una sala de sol puede ser sublime.$"
 
 FiveIsland_ResortGorgeous_Text_DestinIntro::
 	.string "Soy un buen corredor.\n"
@@ -114,24 +114,24 @@ FiveIsland_ResortGorgeous_Text_DestinDefeat::
 	.string "I rushed things!$"
 
 FiveIsland_ResortGorgeous_Text_DestinPostBattle::
-	.string "When I run with the wind, it feels\n"
-	.string "like I could fly!$"
+	.string "Cuando corro con el viento, siento\n"
+	.string "que podría volar!$"
 
 FiveIsland_ResortGorgeous_Text_TobyIntro::
-	.string "I say, this marine life here at\n"
-	.string "this resort agrees with me.$"
+	.string "Esta vida marina del resort me\n"
+	.string "queda muy bien.$"
 
 FiveIsland_ResortGorgeous_Text_TobyDefeat::
-	.string "That's a shocker!\n"
-	.string "You must be joking.$"
+	.string "¡Qué sorpresa!\n"
+	.string "Debes estar bromeando.$"
 
 FiveIsland_ResortGorgeous_Text_TobyPostBattle::
-	.string "Getting so serious over this…\n"
+	.string "Ponerse tan serio por esto…\n"
 	.string "How nonsensical.$"
 
 FiveIsland_ResortGorgeous_Text_SelphyThanksYouMayGoNow::
-	.string "SELPHY: Thank you.\p"
-	.string "You may go now.$"
+	.string "SELPHY: Gracias.\p"
+	.string "Puedes irte ya.$"
 
 FiveIsland_ResortGorgeous_Text_SelphysHouse::
 	.string "SELPHY'S HOUSE$"

@@ -15,36 +15,36 @@ Route13_EventScript_RouteSign::
 
 Route13_Text_SebastianIntro::
 	.string "My bird POKéMON want to battle\n"
-	.string "with you!$"
+	.string "¡contigo!$"
 
 Route13_Text_SebastianDefeat::
-	.string "My PIDGEY and PIDGEOTTO combo\n"
+	.string "Mi combo de PIDGEY y PIDGEOTTO\n"
 	.string "lost?$"
 
 Route13_Text_SebastianPostBattle::
 	.string "My POKéMON look happy even though\n"
-	.string "they lost.$"
+	.string "perdieron.$"
 
 Route13_Text_SusieIntro::
-	.string "I'm told I'm good for a kid.$"
+	.string "Dicen que soy bueno para un niño.$"
 
 Route13_Text_SusieDefeat::
 	.string "Ohh!\n"
 	.string "I lost!$"
 
 Route13_Text_SusiePostBattle::
-	.string "I want to become a good TRAINER.\n"
+	.string "Quiero ser un buen ENTRENADOR.\n"
 	.string "I'll train hard, just watch.$"
 
 Route13_Text_ValerieIntro::
 	.string "¡Guau!\n"
-	.string "Your BADGES are too cool!$"
+	.string "¡Tus MEDALLAS son geniales!$"
 
 Route13_Text_ValerieDefeat::
-	.string "Not enough!$"
+	.string "¡No son suficientes!$"
 
 Route13_Text_ValeriePostBattle::
-	.string "You got those BADGES from GYM\n"
+	.string "Esas MEDALLAS las ganaste en\n"
 	.string "LEADERS. I know!$"
 
 Route13_Text_GwenIntro::
@@ -53,30 +53,30 @@ Route13_Text_GwenIntro::
 
 Route13_Text_GwenDefeat::
 	.string "Good going!\n"
-	.string "You totally won!$"
+	.string "¡Ganaste totalmente!$"
 
 Route13_Text_GwenPostBattle::
 	.string "You have to make POKéMON battle\n"
-	.string "to toughen them up.$"
+	.string "GIMNASIOS para fortalecerlas.$"
 
 Route13_Text_AlmaIntro::
-	.string "I found CARBOS in a cave once\n"
-	.string "while I was spelunking.$"
+	.string "Una vez encontré CARBOS en una cueva\n"
+	.string "cuando exploraba grutas.$"
 
 Route13_Text_AlmaDefeat::
 	.string "Oh, too bad!\n"
 	.string "I just messed up!$"
 
 Route13_Text_AlmaPostBattle::
-	.string "CARBOS boosted the SPEED of my\n"
+	.string "CARBOS aumentó la VELOCIDAD de mi\n"
 	.string "POKéMON.$"
 
 Route13_Text_PerryIntro::
-	.string "I'm not going to lose.\n"
-	.string "Not when the wind's blowing my way!$"
+	.string "No pienso perder.\n"
+	.string "¡No cuando el viento me favorece!$"
 
 Route13_Text_PerryDefeat::
-	.string "The wind turned!$"
+	.string "¡El viento cambió!$"
 
 Route13_Text_PerryPostBattle::
 	.string "I'm beat.\n"
@@ -87,24 +87,24 @@ Route13_Text_LolaIntro::
 
 Route13_Text_LolaDefeat::
 	.string "Oh!\n"
-	.string "You little beast!$"
+	.string "¡Maldita bestia!$"
 
 Route13_Text_LolaPostBattle::
-	.string "I wonder which is stronger, male or\n"
+	.string "¿Quién será más fuerte, el macho\n"
 	.string "female POKéMON?$"
 
 Route13_Text_SheilaIntro::
-	.string "Do you want to battle some\n"
+	.string "¿Quieres combatir un poco\n"
 	.string "POKéMON with me?$"
 
 Route13_Text_SheilaDefeat::
-	.string "It's over already?$"
+	.string "¿Ya terminó?$"
 
 Route13_Text_SheilaPostBattle::
 	.string "I don't know anything about\n"
 	.string "POKéMON actually.\p"
-	.string "The ones I use… I picked them\n"
-	.string "for their looks!$"
+	.string "Los que uso… los elegí\n"
+	.string "por su apariencia!$"
 
 Route13_Text_JaredIntro::
 	.string "¿Qué estás mirando?$"
@@ -114,30 +114,30 @@ Route13_Text_JaredDefeat::
 	.string "Stripped gears!$"
 
 Route13_Text_JaredPostBattle::
-	.string "Get lost!$"
+	.string "¡Lárgate!$"
 
 Route13_Text_RobertIntro::
 	.string "Siempre uso POKéMON ave.\n"
 	.string "Me he dedicado a ellos.$"
 
 Route13_Text_RobertDefeat::
-	.string "Out of power!$"
+	.string "¡Sin energía!$"
 
 Route13_Text_RobertPostBattle::
-	.string "I wish I could fly like PIDGEY and\n"
+	.string "Ojalá pudiera volar como PIDGEY y\n"
 	.string "PIDGEOTTO…$"
 
 Route13_Text_LookToLeftOfThatPost::
 	.string "CONSEJOS DE ENTRENADOR\p"
 	.string "Look, look!\n"
-	.string "Look to the left of that post!$"
+	.string "¡Mira a la izquierda del poste!$"
 
 Route13_Text_SelectToSwitchItems::
 	.string "CONSEJOS DE ENTRENADOR\p"
-	.string "Use SELECT to switch items in the\n"
+	.string "Usa SELECT para cambiar objetos\n"
 	.string "ITEMS window.$"
 
 Route13_Text_RouteSign::
 	.string "ROUTE 13\n"
-	.string "North to SILENCE BRIDGE$"
+	.string "Al norte, PUENTE SILENCIO$"
 

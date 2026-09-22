@@ -224,30 +224,30 @@ TrainerTower_Lobby_EventScript_BaldingMan::
 
 TrainerTower_Lobby_Text_WelcomeToTrainerTower::
 	.string "¡Hola!\p"
-	.string "Welcome to TRAINER TOWER where\n"
+	.string "Bienvenido a la TORRE ENTRENADOR,\n"
 	.string "TRAINERS gather from all over!$"
 
 TrainerTower_Lobby_Text_TrainersUpToFloorNum::
-	.string "TRAINERS from all over the world\n"
-	.string "gather here to battle.\p"
+	.string "ENTRENADORES de todo el mundo\n"
+	.string "se reúnen aquí para batallar.\p"
 	.string "Déjame ver...\p"
-	.string "Right now, there are TRAINERS only\n"
-	.string "up to Floor {STR_VAR_1}.$"
+	.string "Por ahora solo hay ENTRENADORES\n"
+	.string "hasta el Piso {STR_VAR_1}.$"
 
 TrainerTower_Lobby_Text_TrainersUpEighthFloor::
-	.string "TRAINERS are awaiting your\n"
-	.string "challenge up to the eighth floor.$"
+	.string "ENTRENADORES esperan tu\n"
+	.string "supera hasta el octavo piso.$"
 
 TrainerTower_Lobby_Text_LikeToChallengeTrainers::
 	.string "¿Quieres desafiar a los\n"
 	.string "ENTRENADORES que esperan?$"
 
 TrainerTower_Lobby_Text_StartClockGetSetGo::
-	.string "Okay, I'll get the clock started,\n"
-	.string "so give it everything you have.\p"
+	.string "Bien, pondré el reloj en marcha,\n"
+	.string "así que da todo lo que tienes.\p"
 	.string "En sus marcas...\p"
 	.string "Listos...\p"
-	.string "Go!$"
+	.string "¡Vamos!$"
 
 TrainerTower_Lobby_Text_PleaseVisitUsAgain::
 	.string "¡Vuelve a visitarnos!$"
@@ -270,13 +270,13 @@ TrainerTower_Lobby_Text_MoveCounterHereWhenTrainersSwitch::
 
 TrainerTower_Roof_Text_ImOwnerBattledPerfectly::
 	.string "Hello…\p"
-	.string "I am the owner of this TOWER…\p"
-	.string "How the sky soars above this\n"
+	.string "Soy el dueño de esta TORRE…\p"
+	.string "Cómo el cielo se extiende\n"
 	.string "rooftop…\p"
-	.string "The caress of the winds up here…\p"
-	.string "It's all so perfect…\p"
-	.string "The way you battled…\n"
-	.string "It, too, was perfection…$"
+	.string "La caricia del viento aquí…\p"
+	.string "Todo es tan perfecto…\p"
+	.string "La forma en que luchaste…\n"
+	.string "También fue perfección…$"
 
 TrainerTower_Roof_Text_ThisIsForYou::
 	.string "Esto es para ti…$"
@@ -284,20 +284,20 @@ TrainerTower_Roof_Text_ThisIsForYou::
 TrainerTower_Roof_Text_DoneItInRecordTime::
 	.string "Oh!\n"
 	.string "Stupendous!\p"
-	.string "It's marvelous how you've come up\n"
-	.string "here so quickly.\p"
-	.string "The fact is, you've done it in\n"
+	.string "Es maravilloso cómo has llegado\n"
+	.string "tan rápido.\p"
+	.string "La verdad es que lo has hecho en\n"
 	.string "record time…\p"
-	.string "I'll have your record posted at\n"
-	.string "the reception counter.$"
+	.string "Publicaré tu récord en el\n"
+	.string "mostrador de recepción.$"
 
 TrainerTower_Roof_Text_TookSweetTimeGettingHere::
-	.string "You seem to have taken your sweet\n"
-	.string "time getting here…$"
+	.string "Parece que te has tomado tu\n"
+	.string "tiempo en llegar…$"
 
 TrainerTower_Roof_Text_IdLikeToSeeBetterTime::
-	.string "What I would like to see is a\n"
-	.string "better time out of you…\p"
+	.string "Lo que me gustaría ver es un\n"
+	.string "mejor tiempo de tu parte…\p"
 	.string "Cuento contigo.\p"
 	.string "Until then, farewell…$"
 
@@ -308,35 +308,35 @@ TrainerTower_Lobby_Text_HereAreTheResults::
 	.string "せいせきひょうです$"
 
 TrainerTower_Lobby_Text_NeedTwoMonsForDouble::
-	.string "This is a two-on-two battle.\p"
-	.string "You may not battle unless you have\n"
+	.string "Esta es una batalla dos contra dos.\p"
+	.string "No puedes combatir a menos que\n"
 	.string "at least two POKéMON.$"
 
 TrainerTower_Lobby_Text_ExplainTrainerTower::
-	.string "Here at TRAINER TOWER, there is an\n"
+	.string "Aquí en la TORRE ENTRENADOR\n"
 	.string "event called TIME ATTACK.\p"
-	.string "You will be timed on how quickly\n"
-	.string "you can get from the reception\l"
-	.string "counter to the OWNER on the roof.\p"
-	.string "The best times will be recorded on\n"
-	.string "the Time Board.\p"
-	.string "Try competing with friends to see\n"
-	.string "who can beat it the fastest.\p"
-	.string "You will not earn any EXP. Points\n"
+	.string "Se medirá tu velocidad para ver\n"
+	.string "cuánto tardas desde la recepción\l"
+	.string "hasta el DUEÑO en la azotea.\p"
+	.string "Los mejores tiempos se registrarán\n"
+	.string "en el Tablero de Tiempos.\p"
+	.string "Intenta competir con amigos para\n"
+	.string "ver quién lo supera más rápido.\p"
+	.string "No ganarás puntos de EXP.\n"
 	.string "or money by beating TRAINERS here.$"
 
 TrainerTower_Lobby_Text_ThanksForCompeting::
-	.string "Thank you for competing!$"
+	.string "¡Gracias por competir!$"
 
 TrainerTower_Lobby_Text_WonderWhatKindsOfTrainers::
-	.string "I'm here to see how good I am.\p"
-	.string "I wonder what kinds of TRAINERS\n"
-	.string "are waiting for me?\p"
-	.string "It's nerve-racking!$"
+	.string "Vine a ver qué tan bueno soy.\p"
+	.string "Me pregunto qué tipos de ENTRENADORES\n"
+	.string "me esperarán?\p"
+	.string "¡Es de los nervios!$"
 
 TrainerTower_Lobby_Text_StairsTougherThanAnyBattle::
 	.string "Gasp, gasp…\n"
 	.string "Gasp…\p"
 	.string "Never mind battling! These stairs…\n"
-	.string "They're tougher than any battle…$"
+	.string "Son más duros que cualquier batalla…$"
 

@@ -37,26 +37,26 @@ Route1_EventScript_RouteSign::
 Route1_Text_WorkAtPokeMartTakeSample::
 	.string "Hi!\n"
 	.string "Trabajo en un POKéMON MART.\p"
-	.string "It's part of a convenient chain\n"
-	.string "selling all sorts of items.\p"
-	.string "Please, visit us in VIRIDIAN CITY.\p"
-	.string "I know, I'll give you a sample.\n"
-	.string "Here you go!$"
+	.string "Es parte de una cadena muy\n"
+	.string "práctica que vende de todo.\p"
+	.string "Visítanos en CIUDAD VERDE.\p"
+	.string "¡Ya sé! Te daré una muestra.\n"
+	.string "¡Toma esto!$"
 
 Route1_Text_ComeSeeUsIfYouNeedPokeBalls::
-	.string "Please come see us if you need\n"
+	.string "Ven a vernos si lo necesitas.\n"
 	.string "POKé BALLS for catching POKéMON.$"
 
 Route1_Text_PutPotionAway::
-	.string "{PLAYER} put the POTION away in\n"
-	.string "the BAG's ITEMS POCKET.$"
+	.string "{PLAYER} guardó la POCIÓN en\n"
+	.string "el BOLSILLO de OBJETOS de la BOLSA.$"
 
 Route1_Text_CanJumpFromLedges::
-	.string "See those ledges along the road?\p"
-	.string "It's a bit scary, but you can jump\n"
-	.string "from them.\p"
-	.string "You can get back to PALLET TOWN\n"
-	.string "quicker that way.$"
+	.string "¿Ves esos riscos en el camino?\p"
+	.string "Da un poco de miedo, pero puedes\n"
+	.string "saltar desde ellas.\p"
+	.string "Así puedes volver a PUEBLO PALETA\n"
+	.string "más rápido.$"
 
 Route1_Text_RouteSign::
 	.string "ROUTE 1\n"

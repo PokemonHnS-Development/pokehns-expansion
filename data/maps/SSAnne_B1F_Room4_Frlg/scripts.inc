@@ -12,8 +12,8 @@ SSAnne_B1F_Room4_EventScript_Duncan::
 	end
 
 SSAnne_B1F_Room4_Text_LeonardIntro::
-	.string "You know what they say about\n"
-	.string "sailors and battling!$"
+	.string "Ya sabes lo que dicen sobre\n"
+	.string "los marineros y las batallas!$"
 
 SSAnne_B1F_Room4_Text_LeonardDefeat::
 	.string "Right!\n"
@@ -21,16 +21,16 @@ SSAnne_B1F_Room4_Text_LeonardDefeat::
 
 SSAnne_B1F_Room4_Text_LeonardPostBattle::
 	.string "¡Jajaja!\n"
-	.string "Want to be a sailor, mate?$"
+	.string "¿Quieres ser marinero, amigo?$"
 
 SSAnne_B1F_Room4_Text_DuncanIntro::
-	.string "Come on, then!\n"
+	.string "¡Vamos, entonces!\n"
 	.string "My sailor's pride is at stake!$"
 
 SSAnne_B1F_Room4_Text_DuncanDefeat::
-	.string "Your spirit sank me!$"
+	.string "¡Tu espíritu me hundió!$"
 
 SSAnne_B1F_Room4_Text_DuncanPostBattle::
-	.string "Did you see the FISHING GURU in\n"
+	.string "¿Viste al GURÚ PESCADOR en\n"
 	.string "VERMILION CITY?$"
 

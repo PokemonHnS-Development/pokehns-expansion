@@ -44,24 +44,24 @@ VictoryRoad_1F_EventScript_Rolando::
 	end
 
 VictoryRoad_1F_Text_NaomiIntro::
-	.string "I wonder if you are good enough\n"
+	.string "Me pregunto si eres lo bastante\n"
 	.string "por mí?$"
 
 VictoryRoad_1F_Text_NaomiDefeat::
 	.string "I lost out…$"
 
 VictoryRoad_1F_Text_NaomiPostBattle::
-	.string "I never wanted to lose to anybody,\n"
-	.string "especially to a younger kid…$"
+	.string "Nunca quise perder con nadie,\n"
+	.string "menos con un niño menor…$"
 
 VictoryRoad_1F_Text_RolandoIntro::
-	.string "I can see you're good.\n"
-	.string "Let me see exactly how good!$"
+	.string "Veo que eres bueno.\n"
+	.string "¡A ver qué tan bueno eres!$"
 
 VictoryRoad_1F_Text_RolandoDefeat::
-	.string "I had a chance…$"
+	.string "Tuve una oportunidad…$"
 
 VictoryRoad_1F_Text_RolandoPostBattle::
 	.string "¡Tch!\n"
-	.string "I concede, you are better than I!$"
+	.string "¡Me rindo, eres mejor que yo!$"
 

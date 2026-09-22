@@ -62,49 +62,49 @@ Route10_PokemonCenter_1F_EventScript_GetAideRequestInfo::
 
 Route10_PokemonCenter_1F_Text_EveryTypeStrongerThanOthers::
 	.string "The types of POKéMON match up\n"
-	.string "differently with each other.\p"
-	.string "Every type is stronger than some\n"
-	.string "types and weaker than others.$"
+	.string "diferente entre sí.\p"
+	.string "Cada tipo es más fuerte que\n"
+	.string "algunos y más débil que otros.$"
 
 Route10_PokemonCenter_1F_Text_NuggetUselessSoldFor5000::
-	.string "A NUGGET is totally useless.\n"
-	.string "So I sold it for ¥5000.$"
+	.string "Una PEPITA es totalmente\n"
+	.string "Así que lo vendí por ¥5000.$"
 
 Route10_PokemonCenter_1F_Text_HeardGhostsHauntLavender::
-	.string "I heard that ghosts haunt\n"
+	.string "Escuché que hay fantasmas que\n"
 	.string "LAVENDER TOWN.$"
 
 Route10_PokemonCenter_1F_Text_GiveEverstoneIfCaught20Mons::
 	.string "Oh… {PLAYER}!\n"
-	.string "I've been looking for you!\p"
-	.string "It's me, one of the ever-present\n"
-	.string "AIDES to PROF. OAK.\p"
+	.string "¡Te estaba buscando!\p"
+	.string "Soy yo, uno de los siempre\n"
+	.string "presentes AYUDANTES del PROF. OAK.\p"
 	.string "If your POKéDEX has complete data\n"
-	.string "on twenty species, I'm supposed to\l"
-	.string "give you a reward from PROF. OAK.\p"
-	.string "He entrusted me with this\n"
+	.string "en veinte especies, se supone que debo\l"
+	.string "darte una recompensa del PROF. OAK.\p"
+	.string "Me encargó esto\n"
 	.string "EVERSTONE.\p"
-	.string "So, {PLAYER}, let me ask you.\p"
-	.string "Have you gathered data on at least\n"
+	.string "Bueno, {PLAYER}, déjame preguntarte.\p"
+	.string "¿Has reunido datos de al menos\n"
 	.string "twenty kinds of POKéMON?$"
 
 Route10_PokemonCenter_1F_Text_GreatHereYouGo::
-	.string "Great! You have caught or owned\n"
+	.string "¡Genial! Has capturado o tenido\n"
 	.string "{STR_VAR_3} tipos de POKéMON!\p"
 	.string "¡Felicidades!\n"
-	.string "Here you go!$"
+	.string "¡Toma!$"
 
 Route10_PokemonCenter_1F_Text_ReceivedEverstoneFromAide::
-	.string "{PLAYER} received the EVERSTONE\n"
-	.string "from the AIDE.$"
+	.string "{PLAYER} recibió la PIEDRAEterna\n"
+	.string "del AYUDANTE.$"
 
 Route10_PokemonCenter_1F_Text_ExplainEverstone::
 	.string "Making POKéMON evolve certainly\n"
 	.string "can add to the POKéDEX.\p"
-	.string "However, at times, you may not\n"
+	.string "Sin embargo, a veces puede que\n"
 	.string "want a certain POKéMON to evolve.\p"
-	.string "In that case, give the EVERSTONE\n"
+	.string "En ese caso, dale la PIEDRAEterna\n"
 	.string "to that POKéMON.\p"
-	.string "It will prevent evolution according\n"
-	.string "to the PROFESSOR.$"
+	.string "Evitará la evolución según\n"
+	.string "lo que diga el PROFESOR.$"
 

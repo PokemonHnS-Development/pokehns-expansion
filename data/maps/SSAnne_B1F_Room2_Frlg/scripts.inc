@@ -14,5 +14,5 @@ SSAnne_B1F_Room2_Text_HueyDefeat::
 
 SSAnne_B1F_Room2_Text_HueyPostBattle::
 	.string "We caught all our POKéMON while\n"
-	.string "we were out at sea.$"
+	.string "estábamos en alta mar.$"
 

@@ -17,7 +17,7 @@ PokemonTower_4F_EventScript_Jody::
 	end
 
 PokemonTower_4F_Text_PaulaIntro::
-	.string "Ghost! No!\n"
+	.string "¡Un fantasma! ¡No!\n"
 	.string "Kwaaah!$"
 
 PokemonTower_4F_Text_PaulaDefeat::
@@ -27,23 +27,23 @@ PokemonTower_4F_Text_PaulaPostBattle::
 	.string "Debo haber estado soñando…$"
 
 PokemonTower_4F_Text_LaurelIntro::
-	.string "Be cursed with me!\n"
+	.string "¡Sé maldito conmigo!\n"
 	.string "Kwaaah!$"
 
 PokemonTower_4F_Text_LaurelDefeat::
-	.string "What!$"
+	.string "¡¿Qué?!$"
 
 PokemonTower_4F_Text_LaurelPostBattle::
-	.string "We can't determine the identity of\n"
-	.string "the ghosts…$"
+	.string "No podemos determinar la identidad\n"
+	.string "los fantasmas…$"
 
 PokemonTower_4F_Text_JodyIntro::
 	.string "Huhuhu…\n"
-	.string "Beat me not!$"
+	.string "¡No me pegues!$"
 
 PokemonTower_4F_Text_JodyDefeat::
 	.string "¿Eh?\n"
-	.string "Who? What?$"
+	.string "¿Quién? ¿Qué?$"
 
 PokemonTower_4F_Text_JodyPostBattle::
 	.string "May the departed POKéMON rest in\n"

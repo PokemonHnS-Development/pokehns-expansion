@@ -46,12 +46,12 @@ VermilionCity_House2_Text_ThatsTooBad::
 
 VermilionCity_House2_Text_ThisIsNoMon::
 	.string "...Esto no es un {STR_VAR_1}.\p"
-	.string "If you get one, please trade it\n"
-	.string "to me!$"
+	.string "Si consigues uno, cámbialo\n"
+	.string "¡a mí!$"
 
 VermilionCity_House2_Text_ThankYou::
-	.string "Thank you!$"
+	.string "¡Gracias!$"
 
 VermilionCity_House2_Text_HowIsMyOldMon::
-	.string "How is my old {STR_VAR_2}?\p"
+	.string "¿Cómo está mi viejo {STR_VAR_2}?\p"
 	.string "¡Mi {STR_VAR_1} está genial!$"

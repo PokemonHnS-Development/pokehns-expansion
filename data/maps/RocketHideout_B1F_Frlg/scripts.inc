@@ -64,26 +64,26 @@ RocketHideout_B1F_EventScript_RemoveBarrier::
 
 RocketHideout_B1F_Text_Grunt1Intro::
 	.string "¿Quién eres?\n"
-	.string "How did you get here?$"
+	.string "¿Cómo llegaste aquí?$"
 
 RocketHideout_B1F_Text_Grunt1Defeat::
 	.string "Oww!\n"
 	.string "Beaten!$"
 
 RocketHideout_B1F_Text_Grunt1PostBattle::
-	.string "Blast it… You're dissing TEAM\n"
-	.string "ROCKET, aren't you?$"
+	.string "Maldición… Estás insultando al\n"
+	.string "EQUIPO ROCKET, ¿verdad?$"
 
 RocketHideout_B1F_Text_Grunt2Intro::
-	.string "You broke into TEAM ROCKET's\n"
-	.string "operation? What nerve!$"
+	.string "Entraste sin permiso al\n"
+	.string "¿Operación? ¡Qué descaro!$"
 
 RocketHideout_B1F_Text_Grunt2Defeat::
 	.string "Boom!$"
 
 RocketHideout_B1F_Text_Grunt2PostBattle::
-	.string "You're not going to get away with\n"
-	.string "this, brat!$"
+	.string "No vas a salirte con la tuya,\n"
+	.string "mocoso!$"
 
 RocketHideout_B1F_Text_Grunt3Intro::
 	.string "¡Alerta de intruso!$"
@@ -93,17 +93,17 @@ RocketHideout_B1F_Text_Grunt3Defeat::
 
 RocketHideout_B1F_Text_Grunt3PostBattle::
 	.string "SILPH SCOPE? Humph!\n"
-	.string "I don't know where it is.$"
+	.string "No sé dónde está.$"
 
 RocketHideout_B1F_Text_Grunt4Intro::
-	.string "Why did you come here?$"
+	.string "¿Por qué viniste aquí?$"
 
 RocketHideout_B1F_Text_Grunt4Defeat::
 	.string "¡Esto no sirve!$"
 
 RocketHideout_B1F_Text_Grunt4PostBattle::
 	.string "Okay, I'll talk…\n"
-	.string "Take the elevator to see my BOSS.$"
+	.string "Toma el ascensor para ver a mi JEFE.$"
 
 RocketHideout_B1F_Text_Grunt5Intro::
 	.string "¿Estás perdido, ratoncito?$"
@@ -112,6 +112,6 @@ RocketHideout_B1F_Text_Grunt5Defeat::
 	.string "Why…?$"
 
 RocketHideout_B1F_Text_Grunt5PostBattle::
-	.string "Uh-oh, that ruckus somehow opened\n"
-	.string "the door!$"
+	.string "Oh-oh, ese alboroto abrió de\n"
+	.string "alguna forma la puerta!$"
 

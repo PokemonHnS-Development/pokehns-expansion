@@ -27,15 +27,15 @@ ViridianCity_PokemonCenter_1F_EventScript_Youngster::
 	end
 
 ViridianCity_PokemonCenter_1F_Text_FeelFreeToUsePC::
-	.string "Please feel free to use that PC in\n"
-	.string "the corner.\p"
-	.string "The receptionist told me so.\n"
-	.string "It's so kind of her!$"
+	.string "Puedes usar esa PC de la\n"
+	.string "esquina con toda confianza.\p"
+	.string "Me lo dijo la recepcionista.\n"
+	.string "¡Qué amable de su parte!$"
 
 ViridianCity_PokemonCenter_1F_Text_PokeCenterInEveryTown::
 	.string "There's a POKéMON CENTER in every\n"
 	.string "town ahead.\p"
-	.string "They charge no money, so don't\n"
+	.string "No cobran nada, así que no\n"
 	.string "be shy about healing POKéMON.$"
 
 ViridianCity_PokemonCenter_1F_Text_PokeCentersHealMons::

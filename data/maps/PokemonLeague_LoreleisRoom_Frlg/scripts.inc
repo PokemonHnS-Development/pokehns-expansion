@@ -94,34 +94,34 @@ PokemonLeague_LoreleisRoom_EventScript_DefeatedLorelei::
 
 PokemonLeague_LoreleisRoom_Text_Intro::
 	.string "Welcome to the POKéMON LEAGUE.\p"
-	.string "I am LORELEI of the ELITE FOUR.\p"
+	.string "Soy LORELEI del ALTO MANDO.\p"
 	.string "Nadie puede superarme al criar\n"
 	.string "to icy POKéMON.\p"
-	.string "Freezing moves are powerful.\p"
+	.string "Los movimientos de hielo son\p"
 	.string "Your POKéMON will be at my mercy\n"
-	.string "when they are frozen solid.\p"
+	.string "poderosos cuando están congelados.\p"
 	.string "¡Jajaja!\n"
-	.string "Are you ready?{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
+	.string "¿Estás listo?{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
 
 PokemonLeague_LoreleisRoom_Text_RematchIntro::
 	.string "Welcome to the POKéMON LEAGUE.\p"
-	.string "I, LORELEI of the ELITE FOUR,\n"
-	.string "have returned!\p"
-	.string "You know how it goes.\n"
-	.string "No one can best me when it comes\l"
+	.string "¡Yo, LORELEI del ALTO MANDO,\n"
+	.string "he vuelto!\p"
+	.string "Así son las cosas.\n"
+	.string "Nadie me supera cuando se\l"
 	.string "to icy POKéMON.\p"
-	.string "Freezing moves are powerful.\p"
+	.string "Los movimientos de hielo son\p"
 	.string "Your POKéMON will be at my mercy\n"
-	.string "when they are frozen solid.\p"
+	.string "poderosos cuando están congelados.\p"
 	.string "¡Jajaja!\n"
-	.string "Are you ready?{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
+	.string "¿Estás listo?{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
 
 PokemonLeague_LoreleisRoom_Text_Defeat::
-	.string "…Things shouldn't be this way!$"
+	.string "¡Las cosas no deberían ser así!$"
 
 PokemonLeague_LoreleisRoom_Text_PostBattle::
-	.string "You're better than I thought.\n"
-	.string "Go on ahead.\p"
-	.string "You only got a taste of the\n"
+	.string "Eres mejor de lo que pensaba.\n"
+	.string "Sigue adelante.\p"
+	.string "Solo has probado una parte\n"
 	.string "POKéMON LEAGUE's power.$"
 

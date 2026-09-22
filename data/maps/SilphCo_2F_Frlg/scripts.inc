@@ -37,72 +37,72 @@ SilphCo_2F_EventScript_Grunt2::
 
 SilphCo_2F_Text_ConnorIntro::
 	.string "Help!\n"
-	.string "I'm a SILPH employee.$"
+	.string "Soy empleado de SILPH.$"
 
 SilphCo_2F_Text_ConnorDefeat::
-	.string "How did you know\n"
-	.string "I was a ROCKET?$"
+	.string "¿Cómo supiste que\n"
+	.string "fui un ROCKET?$"
 
 SilphCo_2F_Text_ConnorPostBattle::
-	.string "I work for both SILPH and TEAM\n"
+	.string "Trabajo para SILPH y para el\n"
 	.string "ROCKET.$"
 
 SilphCo_2F_Text_JerryIntro::
-	.string "It's off-limits here!\n"
-	.string "Go home!$"
+	.string "¡Aquí está prohibido pasar!\n"
+	.string "¡Vete a casa!$"
 
 SilphCo_2F_Text_JerryDefeat::
-	.string "You're good.$"
+	.string "Eres bueno.$"
 
 SilphCo_2F_Text_JerryPostBattle::
-	.string "Can you solve the maze in here?\n"
-	.string "It's not easy, I tell you!$"
+	.string "¿Puedes resolver el laberinto?\n"
+	.string "¡No es fácil, te lo digo!$"
 
 SilphCo_2F_Text_Grunt1Intro::
-	.string "No kids are allowed in here!$"
+	.string "¡Aquí no se permiten niños!$"
 
 SilphCo_2F_Text_Grunt1Defeat::
 	.string "Tough!$"
 
 SilphCo_2F_Text_Grunt1PostBattle::
-	.string "Diamond-shaped tiles are teleport\n"
+	.string "Las baldosas en forma de diamante\n"
 	.string "blocks.\p"
-	.string "They're transporters for this\n"
+	.string "Son transportadores de este lugar\n"
 	.string "high-tech building.$"
 
 SilphCo_2F_Text_Grunt2Intro::
 	.string "Hey, kid!\n"
-	.string "What are you wandering here for?$"
+	.string "¿Qué haces vagando por aquí?$"
 
 SilphCo_2F_Text_Grunt2Defeat::
 	.string "I goofed!$"
 
 SilphCo_2F_Text_Grunt2PostBattle::
-	.string "SILPH CO. will be associated with\n"
+	.string "SILPH CO. se asociará con\n"
 	.string "TEAM ROCKET!$"
 
 Text_ThunderWaveTeach::
 	.string "Eeek!\n"
-	.string "No! Stop! Help!\p"
-	.string "Oh, you're not with TEAM ROCKET.\n"
+	.string "¡No! ¡Alto! ¡Auxilio!\p"
+	.string "Oh, no eres del TEAM ROCKET.\n"
 	.string "I'm sorry, I thought…\p"
-	.string "Will you forgive me if I teach\n"
-	.string "you the THUNDER WAVE technique?$"
+	.string "¿Me perdonarás si te enseño\n"
+	.string "la técnica ONDA TRUENO?$"
 
 Text_ThunderWaveDeclined::
 	.string "Oh…\n"
-	.string "But THUNDER WAVE is convenient…$"
+	.string "Pero ONDA TRUENO es útil…$"
 
 Text_ThunderWaveWhichMon::
 	.string "¿A qué POKéMON le enseño\n"
 	.string "THUNDER WAVE?$"
 
 Text_ThunderWaveTaught::
-	.string "THUNDER WAVE causes paralysis in\n"
+	.string "ONDA TRUENO causa parálisis en\n"
 	.string "the target POKéMON.\p"
 	.string "A paralyzed POKéMON may be unable\n"
-	.string "to move in battle.\p"
-	.string "It's an ELECTRIC-type move, so it\n"
+	.string "para moverse en batalla.\p"
+	.string "Es un movimiento tipo ELÉCTRICO, así\n"
 	.string "won't work on some POKéMON.$"
 
 SilphCo_2F_Text_FloorSign::

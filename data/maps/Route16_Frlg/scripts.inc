@@ -80,12 +80,12 @@ Route16_Text_LaoDefeat::
 	.string "¡No te atrevas a reír!$"
 
 Route16_Text_LaoPostBattle::
-	.string "We like just hanging here.\n"
-	.string "What's it to you?$"
+	.string "Nos gusta quedarnos aquí.\n"
+	.string "¿Qué te importa?$"
 
 Route16_Text_KojiIntro::
 	.string "¡Linda BICICLETA!\n"
-	.string "Hand it over!$"
+	.string "¡Entrega eso!$"
 
 Route16_Text_KojiDefeat::
 	.string "Knockout!$"
@@ -94,59 +94,59 @@ Route16_Text_KojiPostBattle::
 	.string "¡Olvídalo, quién quiere tu BICICLETA!$"
 
 Route16_Text_LukeIntro::
-	.string "Come out and play, little mouse!$"
+	.string "¡Ven a jugar, ratoncito!$"
 
 Route16_Text_LukeDefeat::
-	.string "You little rat!$"
+	.string "¡Rata maldita!$"
 
 Route16_Text_LukePostBattle::
 	.string "I hate losing!\n"
-	.string "Get out of my face!$"
+	.string "¡Fuera de mi vista!$"
 
 Route16_Text_HideoIntro::
-	.string "Hey, you just bumped me!$"
+	.string "¡Oye, me empujaste!$"
 
 Route16_Text_HideoDefeat::
 	.string "Kaboom!$"
 
 Route16_Text_HideoPostBattle::
-	.string "We'll always be hanging around here\n"
-	.string "even if you don't like it.\p"
-	.string "You can detour to VERMILION from\n"
-	.string "FUCHSIA going along the coast.$"
+	.string "Siempre estaremos por aquí\n"
+	.string "aunque no te guste.\p"
+	.string "Puedes desviarte a AZULONA\n"
+	.string "desde FUUCSIA por la costa.$"
 
 Route16_Text_CamronIntro::
 	.string "¡Tengo hambre y estoy de mal humor!\n"
-	.string "I need a punching bag!$"
+	.string "¡Necesito un saco de boxeo!$"
 
 Route16_Text_CamronDefeat::
 	.string "Bad, bad, bad!$"
 
 Route16_Text_CamronPostBattle::
 	.string "If I'm going to have POKéMON, they\n"
-	.string "may as well be ferocious.\p"
-	.string "I'd use them to leave my enemies\n"
-	.string "in tatters.$"
+	.string "igual pueden ser feroces.\p"
+	.string "Los usaría para dejar a mis\n"
+	.string "en pedazos.$"
 
 Route16_Text_RubenIntro::
 	.string "¡Hola!\n"
-	.string "Let's have ourselves a good time!$"
+	.string "¡Vamos a divertirnos bien!$"
 
 Route16_Text_RubenDefeat::
-	.string "Don't make me mad!$"
+	.string "¡No me hagas enojarte!$"
 
 Route16_Text_RubenPostBattle::
-	.string "I get my kicks by harassing people\n"
+	.string "Me divierto molestando a la gente\n"
 	.string "with my stinking POKéMON.\p"
-	.string "They're great for startling people.\n"
-	.string "And, they bite, too.$"
+	.string "Son geniales para asustar.\n"
+	.string "Y además muerden.$"
 
 Route16_Text_MonSprawledOutInSlumber::
 	.string "A POKéMON is sprawled out in\n"
-	.string "a deep and comfortable slumber.$"
+	.string "un sueño profundo y placentero.$"
 
 Route16_Text_CyclingRoadSign::
-	.string "Enjoy the slope!\n"
+	.string "¡Disfruta la pendiente!\n"
 	.string "CYCLING ROAD$"
 
 Route16_Text_RouteSign::
@@ -154,20 +154,20 @@ Route16_Text_RouteSign::
 	.string "CIUDAD CELADON - CIUDAD FUXIA$"
 
 Route16_Text_JedIntro::
-	.string "JED: Our love knows no bounds.\n"
-	.string "We're in love and we show it!$"
+	.string "límites.\n"
+	.string "demostramos!$"
 
 Route16_Text_JedDefeat::
-	.string "JED: Oh, no!\n"
-	.string "My love has seen me as a loser!$"
+	.string "JED: ¡Oh, no!\n"
+	.string "¡Mi amor me vio como un perdedor!$"
 
 Route16_Text_JedPostBattle::
 	.string "JED: Listen, LEA.\n"
-	.string "You need to focus less on me.$"
+	.string "Debes fijarte menos en mí.$"
 
 Route16_Text_JedNotEnoughMons::
 	.string "JED: You have just one POKéMON?\n"
-	.string "Is there no love in your heart?$"
+	.string "¿No hay amor en tu corazón?$"
 
 Route16_Text_LeaIntro::
 	.string "LEA: A veces, la intensidad de\n"
@@ -175,14 +175,14 @@ Route16_Text_LeaIntro::
 
 Route16_Text_LeaDefeat::
 	.string "LEA: Ohh! But JED looks cool\n"
-	.string "even in a loss!$"
+	.string "¡incluso en una derrota!$"
 
 Route16_Text_LeaPostBattle::
 	.string "LEA: Ehehe, I'm sorry.\n"
-	.string "JED is so cool.$"
+	.string "JED es muy genial.$"
 
 Route16_Text_LeaNotEnoughMons::
-	.string "LEA: Oh, you don't have two\n"
+	.string "LEA: Oh, no tienes dos\n"
 	.string "POKéMON contigo?\p"
-	.string "Doesn't it feel lonely for you or\n"
+	.string "¿No te sientes solo, o\n"
 	.string "tu POKéMON?$"

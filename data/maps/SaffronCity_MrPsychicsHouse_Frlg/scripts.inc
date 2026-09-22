@@ -25,20 +25,20 @@ SaffronCity_MrPsychicsHouse_EventScript_AlreadyGotTM29::
 	end
 
 SaffronCity_MrPsychicsHouse_Text_YouWantedThis::
-	.string "…Wait! Don't say a word!\p"
+	.string "¡Espera! ¡No digas nada!\p"
 	.string "¡Querías esto!$"
 
 SaffronCity_MrPsychicsHouse_Text_ReceivedTM29FromMrPsychic::
 	.string "{PLAYER} received TM29\n"
-	.string "from MR. PSYCHIC.$"
+	.string "del SR. PSÍQUICO.$"
 
 SaffronCity_MrPsychicsHouse_Text_ExplainTM29::
-	.string "You already know, don't you?\n"
+	.string "Ya lo sabes, ¿verdad?\n"
 	.string "La MT29 es PSÍQUICO.\p"
-	.string "It's an attack that may also lower\n"
+	.string "Es un ataque que también puede\n"
 	.string "the target's special stats.$"
 
 SaffronCity_MrPsychicsHouse_Text_YouveNoRoom::
-	.string "Where do you plan to put this?\n"
-	.string "You've no room.$"
+	.string "¿Dónde piensas poner esto?\n"
+	.string "No tienes espacio.$"
 

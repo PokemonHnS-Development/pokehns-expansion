@@ -11,16 +11,16 @@ SixIsland_GreenPath_EventScript_LeftRouteSign::
 
 SixIsland_GreenPath_Text_JaclynIntro::
 	.string "…¿Eh?\p"
-	.string "I was envisioning my house, but\n"
-	.string "this is where I TELEPORT?$"
+	.string "Me imaginaba mi casa, pero\n"
+	.string "¿aquí es donde TELETRANSPORTO?$"
 
 SixIsland_GreenPath_Text_JaclynDefeat::
 	.string "Big boo-boo!$"
 
 SixIsland_GreenPath_Text_JaclynPostBattle::
 	.string "I am so scatterbrained!\p"
-	.string "I need to focus so I can TELEPORT\n"
-	.string "properly to my house!$"
+	.string "Debo concentrarme para poder\n"
+	.string "teletransportarme bien a mi casa!$"
 
 SixIsland_GreenPath_Text_LeftRouteSign::
 	.string "GREEN PATH\n"

@@ -31,7 +31,7 @@ CinnabarIsland_PokemonLab_Entrance_EventScript_TestingRoomSign::
 	end
 
 CinnabarIsland_Gym_Text_PhotoOfBlaineAndFuji::
-	.string "It's a photo of BLAINE and\n"
+	.string "Es una foto de BLAINE y\n"
 	.string "SR. FUJI.\p"
 	.string "Están hombro con hombro\n"
 	.string "con grandes sonrisas.$"
@@ -40,10 +40,10 @@ CinnabarIsland_PokemonLab_Entrance_Text_StudyMonsExtensively::
 	.string "We study POKéMON extensively\n"
 	.string "every day.\p"
 	.string "People often bring us rare POKéMON\n"
-	.string "for examination.$"
+	.string "para examinarla.$"
 
 CinnabarIsland_PokemonLab_Entrance_Text_PhotoOfLabFounderDrFuji::
-	.string "A photo of the LAB's founder…\n"
+	.string "Una foto del fundador del LAB…\n"
 	.string "DR. FUJI?!$"
 
 CinnabarIsland_PokemonLab_Entrance_Text_MeetingRoomSign::

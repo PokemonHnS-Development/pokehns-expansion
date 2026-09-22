@@ -96,26 +96,26 @@ Route8_WestEntrance_Movement_BlockPlayerEntry::
 	step_end
 
 Route8_WestEntrance_Text_ThirstyOnGuardDuty::
-	.string "I'm on guard duty.\n"
+	.string "Estoy de guardia.\n"
 	.string "Gee, I'm thirsty, though!\p"
-	.string "Oh, wait there, the road's closed.$"
+	.string "Ah, espera, el camino está cerrado.$"
 
 Route8_WestEntrance_Text_ThatTeaLooksTasty::
-	.string "Oh, that TEA…\n"
-	.string "It looks awfully tasty…$"
+	.string "Oh, ese TÉ…\n"
+	.string "Se ve delicioso…$"
 
 Route8_WestEntrance_Text_ThanksIllShareTeaWithGuards::
-	.string "Huh? I can have this drink?\n"
+	.string "¿Eh? ¿Puedo tomar esta bebida?\n"
 	.string "Gee, thanks!\l"
 	.string "… …\l"
 	.string "Glug, glug…\l"
 	.string "… …\l"
 	.string "Gulp…\l"
-	.string "If you want to go to SAFFRON\l"
+	.string "Si quieres ir a AZUL\l"
 	.string "CITY…\l"
 	.string "… …\l"
-	.string "You can go on through.\p"
-	.string "I'll share this TEA with the other\n"
+	.string "puedes pasar.\p"
+	.string "Compartiré este TÉ con los demás\n"
 	.string "guards!$"
 
 Route8_WestEntrance_Text_HiHowsItGoing::

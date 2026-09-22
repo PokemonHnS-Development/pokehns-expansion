@@ -30,42 +30,42 @@ PewterCity_Museum_2F_EventScript_MoonStone::
 	end
 
 Text_SeismicTossTeach::
-	.string "The secrets of space…\n"
-	.string "The mysteries of earth…\p"
-	.string "There are so many things about\n"
-	.string "which we know so little.\p"
-	.string "But that should spur us to study\n"
-	.string "harder, not toss in the towel.\p"
-	.string "The only thing you should toss…\p"
+	.string "Los secretos del espacio…\n"
+	.string "Los misterios de la tierra…\p"
+	.string "Hay tantas cosas que\n"
+	.string "conocemos tan poco.\p"
+	.string "Pero eso debe impulsarnos a estudiar\n"
+	.string "más, no a tirar la toalla.\p"
+	.string "Lo único que deberías tirar…\p"
 	.string "Well, how about SEISMIC TOSS?\n"
 	.string "Should I teach that to a POKéMON?$"
 
 Text_SeismicTossDeclined::
 	.string "¿De verdad?\n"
-	.string "I'm sure you'll be back for it.$"
+	.string "Seguro volverás por ella.$"
 
 Text_SeismicTossWhichMon::
 	.string "Which POKéMON wants to learn\n"
 	.string "SEISMIC TOSS?$"
 
 Text_SeismicTossTaught::
-	.string "I hope you won't toss in the towel.\n"
-	.string "Keep it up.$"
+	.string "Espero que no tires la toalla.\n"
+	.string "Sigue así.$"
 
 PewterCity_Museum_1F_Text_WhatsSpecialAboutMoonStone::
 	.string "MOON STONE, huh?\p"
-	.string "What's so special about it?\n"
-	.string "Looks like an ordinary rock to me.$"
+	.string "¿Qué tiene de especial?\n"
+	.string "Para mí es una roca común.$"
 
 PewterCity_Museum_1F_Text_BoughtColorTVForMoonLanding::
 	.string "July 20, 1969!\p"
-	.string "Humankind first set foot on the\n"
-	.string "moon that day.\p"
-	.string "I bought a color TV just so I\n"
-	.string "could watch that news.$"
+	.string "La humanidad pisó la Luna\n"
+	.string "aquel día.\p"
+	.string "Compré un televisor a color solo\n"
+	.string "para ver esas noticias.$"
 
 PewterCity_Museum_1F_Text_RunningSpaceExhibitThisMonth::
-	.string "This month, we're running a space\n"
+	.string "Este mes tenemos una promo\n"
 	.string "exhibit.$"
 
 PewterCity_Museum_1F_Text_AskedDaddyToCatchPikachu::
@@ -74,7 +74,7 @@ PewterCity_Museum_1F_Text_AskedDaddyToCatchPikachu::
 	.string "¡Le pedí a mi papi que atrape uno!$"
 
 PewterCity_Museum_1F_Text_PikachuSoonIPromise::
-	.string "Yeah, a PIKACHU soon, I promise!$"
+	.string "¡Sí, un PIKACHU pronto, lo prometo!$"
 
 PewterCity_Museum_1F_Text_SpaceShuttle::
 	.string "Space Shuttle$"

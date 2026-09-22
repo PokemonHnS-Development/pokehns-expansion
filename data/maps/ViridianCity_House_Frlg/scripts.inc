@@ -24,8 +24,8 @@ ViridianCity_House_EventScript_NicknameSign::
 	end
 
 ViridianCity_House_Text_NicknamingIsFun::
-	.string "Coming up with nicknames is fun,\n"
-	.string "but it's not so easy to do.\p"
+	.string "Poner apodos es divertido,\n"
+	.string "pero no es tan fácil de hacer.\p"
 	.string "Clever names are nice, but simple\n"
 	.string "names are easier to remember.$"
 

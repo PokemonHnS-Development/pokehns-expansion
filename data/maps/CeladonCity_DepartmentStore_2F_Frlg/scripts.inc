@@ -63,18 +63,18 @@ CeladonCity_DepartmentStore_2F_TMs::
 CeladonCity_DepartmentStore_2F_Text_SuperRepelMorePowerfulRepel::
 	.string "SUPER REPEL keeps weak POKéMON at\n"
 	.string "bay…\p"
-	.string "Hmm, it's a more powerful REPEL.$"
+	.string "Mmm, es un REPELENTE más potente."
 
 CeladonCity_DepartmentStore_2F_Text_BuyReviveForLongOutings::
-	.string "For long outings, you should buy\n"
+	.string "Para salidas largas, deberías comprar\n"
 	.string "REVIVE.$"
 
 CeladonCity_DepartmentStore_2F_Text_FloorSign::
-	.string "Top-Grade Items for TRAINERS!\p"
+	.string "¡Objetos de primera calidad para ENTRENADORES!\p"
 	.string "2F: MERCADO DE ENTRENADORES$"
 
 CeladonCity_DepartmentStore_2F_Text_LanceComesToBuyCapes::
-	.string "We have a customer, LANCE, who\n"
+	.string "Tenemos un cliente, LANCE, que\n"
 	.string "viene de vez en cuando.\p"
 	.string "Siempre compra capas.\p"
 	.string "Me pregunto... ¿Tendrá muchas?\n"

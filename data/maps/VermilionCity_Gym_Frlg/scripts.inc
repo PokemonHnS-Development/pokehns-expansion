@@ -286,33 +286,33 @@ VermilionCity_Gym_EventScript_GymStatuePostVictory::
 	end
 
 VermilionCity_Gym_Text_LtSurgeIntro::
-	.string "Hey, kid! What do you think you're\n"
-	.string "doing here?\p"
-	.string "You won't live long in combat!\n"
-	.string "Not with your puny power!\p"
+	.string "¡Oye, niño! ¿Qué crees que\n"
+	.string "haces aquí?\p"
+	.string "¡No durarás mucho en combate!\n"
+	.string "¡No con tu débil poder!\p"
 	.string "I tell you, kid, electric POKéMON\n"
-	.string "saved me during the war!\p"
-	.string "They zapped my enemies into\n"
+	.string "¡me salvó durante la guerra!\p"
+	.string "Convertí a mis enemigos en\n"
 	.string "paralysis!\p"
-	.string "The same as I'll do to you!{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
+	.string "¡Igual que haré contigo!{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
 
 VermilionCity_Gym_Text_LtSurgePostBattle::
-	.string "A little word of advice, kid!\p"
+	.string "¡Un consejo, muchacho!\p"
 	.string "Electricity is sure powerful!\p"
-	.string "But, it's useless against GROUND-\n"
+	.string "Pero es inútil contra tipo\n"
 	.string "POKéMON tipo DRAGÓN!$"
 
 VermilionCity_Gym_Text_ExplainThunderBadgeTakeThis::
-	.string "The MEDALLA TRUENO cranks up your\n"
+	.string "La MEDALLA TRUENO aumenta\n"
 	.string "POKéMON's SPEED!\p"
 	.string "It also lets your POKéMON FLY\n"
 	.string "lightning-quick anytime, kid!\p"
-	.string "You're special, kid!\n"
-	.string "Take this!$"
+	.string "¡Eres especial, niño!\n"
+	.string "¡Toma esto!$"
 
 VermilionCity_Gym_Text_ReceivedTM34FromLtSurge::
 	.string "{PLAYER} received TM34\n"
-	.string "from LT. SURGE.$"
+	.string "del LT. SURGE.$"
 
 VermilionCity_Gym_Text_ExplainTM34::
 	.string "TM34 contains SHOCK WAVE!\p"
@@ -322,52 +322,52 @@ VermilionCity_Gym_Text_MakeRoomInYourBag::
 	.string "Yo, kid, make room in your BAG!$"
 
 VermilionCity_Gym_Text_LtSurgeDefeat::
-	.string "Now that's a shocker!\p"
-	.string "You're the real deal, kid!\p"
-	.string "Fine, then, take the MEDALLA TRUENO!$"
+	.string "¡Vaya que sorpresa!\p"
+	.string "¡Eres de verdad, chico!\p"
+	.string "Bien, toma la MEDALLA TRUENO!$"
 
 VermilionCity_Gym_Text_TuckerIntro::
-	.string "When I was in the Army, LT. SURGE\n"
+	.string "Cuando estaba en el Ejército,\n"
 	.string "TEN. SURGE era mi superior.\p"
 	.string "Era un jefe muy exigente.$"
 
 VermilionCity_Gym_Text_TuckerDefeat::
 	.string "Stop!\n"
-	.string "You're very good!$"
+	.string "¡Eres muy bueno!$"
 
 VermilionCity_Gym_Text_TuckerPostBattle::
-	.string "It's not easy opening that door.\p"
-	.string "LT. SURGE was always famous for\n"
+	.string "No es fácil abrir esa puerta.\p"
+	.string "El TENIENTE SURGE siempre fue\n"
 	.string "por ser cauteloso en el ejército.$"
 
 VermilionCity_Gym_Text_BailyIntro::
-	.string "I'm a lightweight, but I'm good\n"
-	.string "with electricity!\p"
-	.string "That's why I joined this GYM.$"
+	.string "Soy ligero, pero soy bueno\n"
+	.string "¡con la electricidad!\p"
+	.string "Por eso entré a este GYM.$"
 
 VermilionCity_Gym_Text_BailyDefeat::
 	.string "Fried!$"
 
 VermilionCity_Gym_Text_BailyPostBattle::
 	.string "Okay, I'll talk!\p"
-	.string "LT. SURGE said he hid door\n"
+	.string "El TTE. SURGE dijo que escondió\n"
 	.string "switches inside something.$"
 
 VermilionCity_Gym_Text_DwayneIntro::
-	.string "This is no place for kids!\n"
-	.string "Not even if you're good!$"
+	.string "¡Este no es lugar para niños!\n"
+	.string "¡Ni siquiera si eres bueno!$"
 
 VermilionCity_Gym_Text_DwayneDefeat::
 	.string "¡Guau!\n"
-	.string "Surprised me!$"
+	.string "¡Me sorprendiste!$"
 
 VermilionCity_Gym_Text_DwaynePostBattle::
-	.string "LT. SURGE installed the traps in\n"
+	.string "LT. SURGE instaló las trampas\n"
 	.string "GIMNASIO él mismo.\p"
-	.string "He set up double locks everywhere.\n"
-	.string "Let me give you a hint.\p"
-	.string "When you open the first lock, the\n"
-	.string "second lock is right next to it.$"
+	.string "lugar.\n"
+	.string "Te daré una pista.\p"
+	.string "Cuando abres el primer candado,\n"
+	.string "el segundo está justo al lado.$"
 
 VermilionCity_Gym_Text_GymGuyAdvice::
 	.string "Yo!\n"
@@ -386,7 +386,7 @@ VermilionCity_Gym_Text_GymGuyAdvice::
 
 VermilionCity_Gym_Text_GymGuyPostVictory::
 	.string "¡Uff!\n"
-	.string "That match was electric!$"
+	.string "¡Ese partido fue electrizante!$"
 
 VermilionCity_Gym_Text_GymStatue::
 	.string "GIMNASIO POKéMON VERMILIAN\n"

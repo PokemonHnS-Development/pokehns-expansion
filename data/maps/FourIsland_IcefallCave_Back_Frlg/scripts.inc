@@ -191,32 +191,32 @@ FourIsland_IcefallCave_Back_EventScript_Lorelei::
 	end
 
 FourIsland_IcefallCave_Back_Text_LoreleiKeepHandsOffMons::
-	.string "LORELEI: Keep your filthy hands\n"
+	.string "LORELEI: Suelta tus sucias\n"
 	.string "off the POKéMON in the cave!\p"
-	.string "Do as I say, or you'll have me to\n"
-	.string "answer to!$"
+	.string "Haz lo que digo, o tendrás\n"
+	.string "que vértelas conmigo!$"
 
 FourIsland_IcefallCave_Back_Text_ShutItLadyLeaveUsBe::
-	.string "Aww, shut it, lady, and leave\n"
-	.string "us be.\p"
-	.string "Don't let your glasses get all\n"
+	.string "Cállate ya, señora, y\n"
+	.string "Seamos.\p"
+	.string "No dejes que tus lentes se\n"
 	.string "steamed up!$"
 
 FourIsland_IcefallCave_Back_Text_LoreleiPlayerHelpMeKickPoachersOut::
 	.string "LORELEI: {PLAYER}?!\n"
 	.string "¿Qué haces aquí?\p"
-	.string "No, we can catch up later.\n"
-	.string "Right now, I need your help.\p"
-	.string "Help me kick these poachers out\n"
-	.string "before they do anything else.\p"
+	.string "No, podemos hablar luego.\n"
+	.string "Ahora necesito tu ayuda.\p"
+	.string "Ayúdame a echar a estos\n"
+	.string "antes de hacer cualquier otra cosa.\p"
 	.string "They've been catching POKéMON\n"
-	.string "here, then selling them off!\p"
-	.string "Are you ready?\n"
-	.string "You take that one, please!$"
+	.string "¡y luego venderlos!\p"
+	.string "¿Estás listo?\n"
+	.string "¡Tú toma ese, por favor!$"
 
 FourIsland_IcefallCave_Back_Text_GruntIntro::
-	.string "W-what?!\p"
-	.string "Who says we can't do what we want\n"
+	.string "¡¿Q-qué?!\p"
+	.string "¿Quién dice que no podemos hacer\n"
 	.string "with the POKéMON we catch?$"
 
 FourIsland_IcefallCave_Back_Text_GruntDefeat::
@@ -225,41 +225,41 @@ FourIsland_IcefallCave_Back_Text_GruntDefeat::
 FourIsland_IcefallCave_Back_Text_LoreleiWhereHaveYouTakenMons::
 	.string "LORELEI: Humph.\n"
 	.string "So despicably weak.\p"
-	.string "You!\n"
-	.string "Tell me!\p"
-	.string "Where have you taken the captured\n"
+	.string "¡Tú!\n"
+	.string "¡Dímelo!\p"
+	.string "¿Dónde llevaste a los capturados\n"
 	.string "con los POKéMON?\p"
-	.string "I'm smashing your ring once and\n"
-	.string "for all!$"
+	.string "Destruiré tu anillo de una vez\n"
+	.string "¡para todos!$"
 
 FourIsland_IcefallCave_Back_Text_NotTellingYouThat::
-	.string "N-no way!\n"
-	.string "I'm not telling you that!$"
+	.string "¡N-no puede ser!\n"
+	.string "¡No te lo voy a decir!$"
 
 FourIsland_IcefallCave_Back_Text_LoreleiWellDeepFreezeYou::
-	.string "LORELEI: If you won't confess,\n"
-	.string "we'll deep-freeze you.\p"
-	.string "My LAPRAS is furious for what\n"
-	.string "you've done to its friends.\p"
-	.string "Go, LAPRAS!\n"
+	.string "LORELEI: Si no confiesas,\n"
+	.string "te congelaremos.\p"
+	.string "Mi LAPRAS está furioso por lo\n"
+	.string "que les hiciste a sus amigos.\p"
+	.string "¡Vamos, LAPRAS!\n"
 	.string "ICE BEAM…$"
 
 FourIsland_IcefallCave_Back_Text_OkayRocketWareHouseFiveIsland::
 	.string "Wawaah! Okay!\n"
 	.string "I'll talk!\p"
 	.string "The POKéMON are in the ROCKET\n"
-	.string "WAREHOUSE on FIVE ISLAND.\p"
-	.string "There! I said it!\n"
-	.string "We'll be going now!\p"
-	.string "…But I doubt you'll ever make it\n"
-	.string "into the ROCKET WAREHOUSE!\p"
+	.string "ALMACÉN en la ISLA CINCO.\p"
+	.string "¡Ahí lo dije!\n"
+	.string "Ya nos vamos!\p"
+	.string "…Pero dudo que lo logres\n"
+	.string "¡al ALMACÉN COHETE!\p"
 	.string "Heheheheh!$"
 
 FourIsland_IcefallCave_Back_Text_ThankYouThisIsAwful::
 	.string "{PLAYER}, gracias.\n"
-	.string "But this is awful…\p"
-	.string "I was born and raised here on\n"
+	.string "Pero esto es horrible...\p"
+	.string "Nací y crecí aquí en\n"
 	.string "these islands.\p"
-	.string "I had no idea that those horrible\n"
+	.string "No tenía idea de que esos\n"
 	.string "criminals were loose here…$"
 

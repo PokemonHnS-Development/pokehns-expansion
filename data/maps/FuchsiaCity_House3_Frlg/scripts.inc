@@ -68,7 +68,7 @@ FuchsiaCity_House3_Text_WhichMoveShouldBeForgotten::
 	.string "¿Qué movimiento se debe olvidar?$"
 
 FuchsiaCity_House3_Text_MonOnlyKnowsOneMove::
-	.string "{STR_VAR_1} seems to know only one\n"
+	.string "{STR_VAR_1} parece conocer solo\n"
 	.string "move…$"
 
 FuchsiaCity_House3_Text_MonsMoveShouldBeForgotten::
@@ -81,8 +81,8 @@ FuchsiaCity_House3_Text_MonHasForgottenMoveCompletely::
 	.string "{STR_VAR_2} por completo.$"
 
 FuchsiaCity_House3_Text_ComeAgainToForgetOtherMoves::
-	.string "Come again if there are other\n"
-	.string "moves to be forgotten.$"
+	.string "Vuelve si hay otros\n"
+	.string "movimientos que olvidar.$"
 
 FuchsiaCity_House3_Text_NoEggShouldKnowMoves::
 	.string "¿Qué?\n"

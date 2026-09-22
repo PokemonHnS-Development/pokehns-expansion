@@ -72,11 +72,11 @@ LavenderTown_House2_Text_CritiqueWhichMonsNickname::
 	.string "debo criticar?$"
 
 LavenderTown_House2_Text_GiveItANicerName::
-	.string "{STR_VAR_1}, is it?\n"
-	.string "That is a decent nickname!\p"
-	.string "But, would you like me to give it\n"
-	.string "a nicer name?\p"
-	.string "How about it?$"
+	.string "¿{STR_VAR_1}, verdad?\n"
+	.string "¡Es un buen apodo!\p"
+	.string "Pero, ¿quieres que le ponga\n"
+	.string "un nombre mejor?\p"
+	.string "¿Qué dices?$"
 
 LavenderTown_House2_Text_WhatShallNewNicknameBe::
 	.string "Ah, bien. Entonces, ¿cuál será el\n"
@@ -100,9 +100,9 @@ LavenderTown_House2_Text_FromNowOnShallBeKnownAsSameName::
 	.string "¡Qué suerte tienes!$"
 
 LavenderTown_House2_Text_TrulyImpeccableName::
-	.string "{STR_VAR_1}, is it?\n"
+	.string "¿{STR_VAR_1}, verdad?\n"
 	.string "That is a truly impeccable name!\p"
-	.string "Take good care of {STR_VAR_1}!$"
+	.string "¡Cuida bien de {STR_VAR_1}!$"
 
 LavenderTown_House2_Text_ThatIsMerelyAnEgg::
 	.string "Ya, ya.\n"

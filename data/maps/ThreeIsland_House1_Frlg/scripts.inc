@@ -15,8 +15,8 @@ ThreeIsland_House1_EventScript_DisplayCase::
 
 ThreeIsland_House1_Text_YoureAlwaysSoCool::
 	.string "LOSTELLE: Hi, {PLAYER}!\n"
-	.string "You're always so cool!\p"
-	.string "I'll make lunch for you, too, one\n"
+	.string "¡Siempre eres tan genial!\p"
+	.string "También prepararé el almuerzo\n"
 	.string "day, {PLAYER}.$"
 
 ThreeIsland_House1_Text_RareRocksGemsDisplayed::

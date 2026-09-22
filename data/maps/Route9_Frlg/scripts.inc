@@ -7,33 +7,33 @@ Route9_EventScript_RouteSign::
 
 Route9_Text_AliciaIntro::
 	.string "You have POKéMON with you!\n"
-	.string "You're mine!$"
+	.string "¡Eres mío!$"
 
 Route9_Text_AliciaDefeat::
-	.string "You deceived me…$"
+	.string "Me engañaste…$"
 
 Route9_Text_AliciaPostBattle::
-	.string "The tunnel coming up is pitch-black\n"
+	.string "El túnel que viene es negro\n"
 	.string "por dentro.\p"
-	.string "You'll need FLASH to get through\n"
+	.string "Necesitas FLASH para cruzar\n"
 	.string "raras allí.$"
 
 Route9_Text_ChrisIntro::
-	.string "Who's that walking there with those\n"
+	.string "¿Quién anda ahí con esos?\n"
 	.string "good-looking POKéMON?$"
 
 Route9_Text_ChrisDefeat::
-	.string "Out like a light!$"
+	.string "¡Fuera de combate!$"
 
 Route9_Text_ChrisPostBattle::
 	.string "Keep walking!$"
 
 Route9_Text_DrewIntro::
-	.string "I'm taking the ROCK TUNNEL to\n"
-	.string "go to LAVENDER…$"
+	.string "Voy por el TÚNEL ROCOSO\n"
+	.string "para ir a LAVANDA…$"
 
 Route9_Text_DrewDefeat::
-	.string "Can't measure up…$"
+	.string "No le llego a los talones…$"
 
 Route9_Text_DrewPostBattle::
 	.string "¿Tú también vas a TÚNEL ROCA?$"
@@ -42,48 +42,48 @@ Route9_Text_CaitlinIntro::
 	.string "¡No me trates con condescendencia!$"
 
 Route9_Text_CaitlinDefeat::
-	.string "No!\n"
-	.string "You're too much.$"
+	.string "¡No!\n"
+	.string "¡Eres demasiado!$"
 
 Route9_Text_CaitlinPostBattle::
-	.string "You're obviously talented.\n"
-	.string "Good luck to you!$"
+	.string "Claramente tienes talento.\n"
+	.string "¡Buena suerte!$"
 
 Route9_Text_JeremyIntro::
 	.string "¡Bwahaha!\n"
-	.string "Great! I was bored, eh!$"
+	.string "¡Genial! Estaba aburrido, ¡eh!$"
 
 Route9_Text_JeremyDefeat::
-	.string "Keep it coming, eh!\p"
+	.string "¡Sigue así, eh!\p"
 	.string "Oh wait.\n"
 	.string "I'm out of POKéMON!$"
 
 Route9_Text_JeremyPostBattle::
-	.string "You sure had guts standing up to\n"
-	.string "me there, eh?$"
+	.string "Vaya valor tienes al plantarme\n"
+	.string "cara, ¿eh?$"
 
 Route9_Text_BriceIntro::
 	.string "¡Jajaja!\n"
-	.string "Aren't you a little toughie!$"
+	.string "¡Qué valiente eres!$"
 
 Route9_Text_BriceDefeat::
 	.string "¿Qué es eso?$"
 
 Route9_Text_BricePostBattle::
 	.string "¡Jajaja!\n"
-	.string "Kids should be tough!$"
+	.string "¡Los niños deben ser fuertes!$"
 
 Route9_Text_BrentIntro::
-	.string "I got up early every day to raise\n"
+	.string "Me levantaba temprano cada día\n"
 	.string "entrenar mis POKéMON capullos!$"
 
 Route9_Text_BrentDefeat::
-	.string "WHAT?\p"
-	.string "What a total waste of time!$"
+	.string "¿QUÉ?\p"
+	.string "¡Qué pérdida de tiempo!$"
 
 Route9_Text_BrentPostBattle::
-	.string "I have to collect more than bugs\n"
-	.string "to get stronger…$"
+	.string "Tengo que recolectar más que bichos\n"
+	.string "para hacerme más fuerte…$"
 
 Route9_Text_AlanIntro::
 	.string "¡Jajajaja!\n"
@@ -91,7 +91,7 @@ Route9_Text_AlanIntro::
 
 Route9_Text_AlanDefeat::
 	.string "¡Jajajaja!\n"
-	.string "You beat me fair!$"
+	.string "¡Me venciste limpio!$"
 
 Route9_Text_AlanPostBattle::
 	.string "¡Jajajaja!\n"
@@ -101,11 +101,11 @@ Route9_Text_ConnerIntro::
 	.string "Go, my super BUG POKéMON!$"
 
 Route9_Text_ConnerDefeat::
-	.string "My bugs…$"
+	.string "Mis bichos…$"
 
 Route9_Text_ConnerPostBattle::
 	.string "If you don't like BUG POKéMON,\n"
-	.string "you bug me!$"
+	.string "¡me molestas!$"
 
 Route9_Text_RouteSign::
 	.string "ROUTE 9\n"

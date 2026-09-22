@@ -194,14 +194,14 @@ SeafoamIslands_B4F_EventScript_FastCurrentSign::
 	end
 
 Text_RockSlideTeach::
-	.string "When you're up on a rocky mountain\n"
-	.string "like this, rockslides are a threat.\p"
-	.string "Can you imagine?\n"
-	.string "Boulders tumbling down on you?\p"
-	.string "That'd be, like, waaaaaaaaaaah!\n"
+	.string "Cuando estás en una montaña\n"
+	.string "rocosa, hay riesgo de derrumbe.\p"
+	.string "¿Te lo imaginas?\n"
+	.string "¿Rocas cayendo sobre ti?\p"
+	.string "¡Sería como, guaaaaaah!\n"
 	.string "Total terror!\p"
-	.string "You don't seem to be scared.\n"
-	.string "Want to try using ROCK SLIDE?$"
+	.string "Parece que no tienes miedo.\n"
+	.string "¿Quieres probar AVALANCHA?$"
 
 Text_RockSlideDeclined::
 	.string "Vaya, sí que tienes miedo.$"
@@ -211,12 +211,12 @@ Text_RockSlideWhichMon::
 	.string "ROCK SLIDE?$"
 
 Text_RockSlideTaught::
-	.string "It might be scary to use it in this\n"
+	.string "Podría dar miedo usarla aquí\n"
 	.string "tunnel…$"
 
 SeafoamIslands_B4F_Text_BouldersMightChangeWaterFlow::
-	.string "Hint: Boulders might change the\n"
-	.string "flow of water.$"
+	.string "Pista: Las rocas podrían cambiar\n"
+	.string "del agua.$"
 
 SeafoamIslands_B4F_Text_DangerFastCurrent::
 	.string "PELIGRO\n"

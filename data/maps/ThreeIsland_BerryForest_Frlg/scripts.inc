@@ -64,41 +64,41 @@ ThreeIsland_BerryForest_Text_HelpScaryPokemon::
 	.string "Oh! Please, help!\p"
 	.string "A scary POKéMON appeared there\n"
 	.string "llegó hace poco.\p"
-	.string "It kept scaring.\n"
-	.string "It made LOSTELLE scared.\p"
+	.string "Seguía asustando.\n"
+	.string "Puso a LOSTELLE asustada.\p"
 	.string "I'm too scared to move!\n"
-	.string "But I want to go home…$"
+	.string "Pero quiero ir a casa…$"
 
 ThreeIsland_BerryForest_Text_HereItComesAgain::
-	.string "Oh! Here it comes again!\n"
-	.string "No! Go away! It's scaring me!\p"
+	.string "¡Oh! ¡Ahí viene otra vez!\n"
+	.string "¡No! ¡Vete! ¡Me da miedo!\p"
 	.string "¡Buaaaaaaa!\n"
-	.string "I want my daddy!$"
+	.string "¡Quiero a mi papá!$"
 
 ThreeIsland_BerryForest_Text_ThankYouHaveThis::
-	.string "Ohh! That was so scary!\n"
+	.string "¡Ohh! ¡Qué susto me llevé!\n"
 	.string "¡Gracias!\p"
-	.string "LOSTELLE came to pick some\n"
+	.string "LOSTELLE vino a recoger\n"
 	.string "comer BAYAS.\p"
 	.string "¡Puedes quedarte con esto!$"
 
 ThreeIsland_BerryForest_Text_LetsGoHome::
-	.string "What's your name?\p"
-	.string "LOSTELLE's scared, so can I go\n"
-	.string "with you to my daddy's house?\p"
+	.string "¿Cómo te llamas?\p"
+	.string "LOSTELLE está asustada, ¿puedo\n"
+	.string "ir contigo a casa de mi papá?\p"
 	.string "¡Está bien!\n"
-	.string "Let's go home!$"
+	.string "¡Vamos a casa!$"
 
 ThreeIsland_BerryForest_Text_BerryPouchIsFull::
-	.string "Your BERRY POUCH is full.\n"
-	.string "I guess you don't want this.$"
+	.string "Tu BOLSA BERRIES está llena.\n"
+	.string "Supongo que no lo quieres.$"
 
 ThreeIsland_BerryForest_Text_WelcomeToBerryForest::
-	.string "Welcome to the BERRY FOREST\p"
-	.string "Be friendly and share BERRIES with\n"
+	.string "Bienvenido al BOSQUE BAYAS\p"
+	.string "Sé amable y comparte BAYAS con\n"
 	.string "others and POKéMON.$"
 
 ThreeIsland_BerryForest_Text_BewareWildBerryLovingMons::
-	.string "Beware of wild, BERRY-loving\n"
+	.string "Cuidado con los BERRIES\n"
 	.string "POKéMON!$"
 

@@ -114,18 +114,18 @@ Route16_NorthEntrance_1F_EventScript_OldMan::
 	end
 
 Route16_NorthEntrance_1F_Text_NoPedestriansOnCyclingRoad::
-	.string "No pedestrians are allowed on\n"
+	.string "No se permiten peatones en\n"
 	.string "CICLOVÍA!$"
 
 Route16_NorthEntrance_1F_Text_CyclingRoadIsDownhillCourse::
-	.string "CYCLING ROAD is a downhill course\n"
-	.string "by the sea. It's a great ride.$"
+	.string "la RUTA CICLISMO, es bajada\n"
+	.string "junto al mar. Es un gran paseo.$"
 
 Route16_NorthEntrance_1F_Text_ExcuseMeWaitUp::
 	.string "¡Disculpa!\n"
 	.string "Wait up, please!$"
 
 Route16_NorthEntrance_1F_Text_HowdYouGetInGoodEffort::
-	.string "How'd you get in?\n"
+	.string "¿Cómo entraste?\n"
 	.string "Good effort!$"
 

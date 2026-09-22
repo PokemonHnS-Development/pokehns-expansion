@@ -81,26 +81,26 @@ LavenderTown_VolunteerPokemonHouse_EventScript_Bookshelf::
 	end
 
 LavenderTown_PokemonCenter_1F_Text_HearMrFujiNotFromAroundHere::
-	.string "I recently moved to this town.\p"
-	.string "I hear that MR. FUJI's not from\n"
+	.string "Hace poco me mudé a este pueblo.\p"
+	.string "Dicen que el SR. FUJI no es de\n"
 	.string "originario de estas tierras.$"
 
 LavenderTown_VolunteerPokemonHouse_Text_WhereDidMrFujiGo::
-	.string "That's odd, MR. FUJI isn't here.\n"
-	.string "Where'd he go?$"
+	.string "Qué extraño, el SR. FUJI no está.\n"
+	.string "¿A dónde habrá ido?$"
 
 LavenderTown_VolunteerPokemonHouse_Text_MrFujiWasPrayingForCubonesMother::
-	.string "MR. FUJI had been praying alone\n"
-	.string "for CUBONE's mother.$"
+	.string "El SR. FUJI estaba rezando solo\n"
+	.string "por la madre de CUBONE.$"
 
 LavenderTown_VolunteerPokemonHouse_Text_MrFujiLooksAfterOrphanedMons::
-	.string "This is really MR. FUJI's house.\p"
-	.string "He's really kind.\p"
+	.string "Esta es la casa del SR. FUJI.\p"
+	.string "Es muy amable.\p"
 	.string "Cuida de POKéMON abandonados y\n"
 	.string "huérfanos.$"
 
 LavenderTown_VolunteerPokemonHouse_Text_MonsNiceToHug::
-	.string "It's so warm!\n"
+	.string "¡Qué calidez!\n"
 	.string "POKéMON are so nice to hug.$"
 
 LavenderTown_VolunteerPokemonHouse_Text_Nidorino::
@@ -114,13 +114,13 @@ LavenderTown_VolunteerPokemonHouse_Text_IdLikeYouToHaveThis::
 	.string "Your POKéDEX quest is one that\n"
 	.string "requires strong dedication.\p"
 	.string "Without deep love for POKéMON,\n"
-	.string "your quest may fail.\p"
-	.string "I'm not sure if this will help you,\n"
-	.string "but I'd like you to have it.$"
+	.string "tu misión puede fallar.\p"
+	.string "No sé si esto te servirá,\n"
+	.string "pero me gustaría que lo tuvieras.$"
 
 LavenderTown_VolunteerPokemonHouse_Text_ReceivedPokeFluteFromMrFuji::
 	.string "{PLAYER} received a POKé FLUTE\n"
-	.string "from MR. FUJI.$"
+	.string "del SR. FUJI.$"
 
 LavenderTown_VolunteerPokemonHouse_Text_ExplainPokeFlute::
 	.string "Upon hearing the POKé FLUTE,\n"
@@ -133,7 +133,7 @@ LavenderTown_VolunteerPokemonHouse_Text_MustMakeRoomForThis::
 
 LavenderTown_VolunteerPokemonHouse_Text_HasPokeFluteHelpedYou::
 	.string "MR. FUJI: Has my POKé FLUTE\n"
-	.string "helped you?$"
+	.string "te ayudó?$"
 
 LavenderTown_VolunteerPokemonHouse_Text_GrandPrizeDrawingClipped::
 	.string "POKéMON FAN MAGAZINE\n"

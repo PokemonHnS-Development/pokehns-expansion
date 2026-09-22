@@ -9,19 +9,19 @@ Route21_North_Text_RonaldDefeat::
 	.string "Dang!$"
 
 Route21_North_Text_RonaldPostBattle::
-	.string "I can't catch anything good.\n"
+	.string "No pesco nada bueno.\n"
 	.string "Not one good POKéMON to be had!$"
 
 Route21_North_Text_WadeIntro::
-	.string "I got a big haul!\n"
-	.string "Wanna go for it?$"
+	.string "¡Gran pesca!\n"
+	.string "¿Lo intentamos?$"
 
 Route21_North_Text_WadeDefeat::
 	.string "Heheh, MAGIKARP just don't make\n"
-	.string "the grade, do they?$"
+	.string "el nivel, ¿verdad?$"
 
 Route21_North_Text_WadePostBattle::
-	.string "I seem to only catch MAGIKARP!$"
+	.string "¡Solo pesco MAGIKARP!$"
 
 Route21_North_Text_SpencerIntro::
 	.string "¡El mar limpia mi cuerpo y alma!$"
@@ -30,8 +30,8 @@ Route21_North_Text_SpencerDefeat::
 	.string "Ayah!$"
 
 Route21_North_Text_SpencerPostBattle::
-	.string "The sea is great and all, but I\n"
-	.string "like the mountains, too.$"
+	.string "El mar está bien, pero también\n"
+	.string "me gustan las montañas.$"
 
 @ Below is the battle text for the Cue Ball that was on Route 21 in Gen 1.
 @ This trainer wasnt used in Gen 3 so their text goes unused/untranslated

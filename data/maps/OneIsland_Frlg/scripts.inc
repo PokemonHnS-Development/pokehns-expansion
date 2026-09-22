@@ -106,50 +106,50 @@ OneIsland_EventScript_PokemonNetCenterSign::
 	end
 
 OneIsland_Text_BillLetsGoSeeCelio::
-	.string "BILL: Here we are!\n"
-	.string "This is ONE ISLAND.\p"
-	.string "There are several islands around\n"
-	.string "here, and this is one of them.\p"
-	.string "My friend CELIO sent the boat to\n"
-	.string "fetch me here.\p"
-	.string "He's in charge of the island's PC\n"
-	.string "network by his lonesome.\p"
-	.string "…Why am I telling you this now?\n"
-	.string "Let's just go see CELIO!$"
+	.string "BILL: ¡Aquí estamos!\n"
+	.string "Esta es la ISLA UNO.\p"
+	.string "Hay varias islas por aquí\n"
+	.string "alrededor, y esta es una de ellas.\p"
+	.string "Mi amigo CELIO envió el bote\n"
+	.string "para buscarme.\p"
+	.string "Él se encarga de la PC de la isla\n"
+	.string "la red por su cuenta.\p"
+	.string "…¿Por qué te cuento esto ahora?\n"
+	.string "¡Vamos a ver a CELIO!$"
 
 Text_WhereDoYouWantToSail::
 	.string "¡Hola, marinero!\n"
-	.string "Where do you want to sail?$"
+	.string "¿A dónde quieres navegar?$"
 
 OneIsland_Text_LuckyToHaveCelioHere::
-	.string "Here we are on an island smack in\n"
-	.string "the middle of nowhere.\p"
-	.string "We're lucky to have an upstanding\n"
-	.string "young man like CELIO here.\p"
-	.string "My granddaughter was in a tizzy\n"
+	.string "Aquí estamos en una isla en pleno\n"
+	.string "en medio de la nada.\p"
+	.string "Somos afortunados de tener\n"
+	.string "un joven íntegro como CELIO.\p"
+	.string "Mi nieta estaba muy agitada\n"
 	.string "over CELIO's friend.\p"
-	.string "Something about a famous\n"
+	.string "Algo sobre un famoso\n"
 	.string "POKéMANIAC?\p"
-	.string "I'm not sure what that means, but\n"
-	.string "CELIO is quite the man!$"
+	.string "No sé qué significa eso, pero\n"
+	.string "¡CELIO es todo un hombre!$"
 
 OneIsland_Text_HavePCLinkageWithKanto::
-	.string "My granddaughter was in a tizzy\n"
-	.string "over a new breakthrough.\p"
-	.string "She said we now have PC linkage\n"
-	.string "with people in KANTO.\p"
-	.string "I'm not sure what that means, but\n"
-	.string "CELIO is quite the man!$"
+	.string "Mi nieta estaba muy agitada\n"
+	.string "por un nuevo avance.\p"
+	.string "Dijo que ahora tenemos conexión\n"
+	.string "con gente de KANTO.\p"
+	.string "No sé qué significa eso, pero\n"
+	.string "¡CELIO es todo un hombre!$"
 
 OneIsland_Text_HavePCLinkageWithHoenn::
-	.string "My granddaughter was in a tizzy\n"
-	.string "over a new breakthrough.\p"
-	.string "She said we finally have PC linkage\n"
-	.string "with people in HOENN.\p"
-	.string "I'm not sure what that means, but\n"
-	.string "CELIO is quite the man.\p"
-	.string "He would make a fine husband for\n"
-	.string "my granddaughter!$"
+	.string "Mi nieta estaba muy agitada\n"
+	.string "por un nuevo avance.\p"
+	.string "Dijo que por fin tenemos enlace\n"
+	.string "de PC con gente de HOENN.\p"
+	.string "No sé qué significa eso, pero\n"
+	.string "CELIO es todo un hombre.\p"
+	.string "Sería un buen esposo para\n"
+	.string "¡mi nieta!$"
 
 OneIsland_Text_IslandSign::
 	.string "ONE ISLAND\n"
@@ -164,6 +164,6 @@ OneIsland_Text_ReturnToCinnabar::
 	.string "グレンタウンに　もどりますか？$"
 
 OneIsland_Text_IsntWarmClimateHereGreat::
-	.string "Hi, sight-seeing, are you?\n"
+	.string "Hola, ¿turisteando, verdad?\n"
 	.string "Isn't the warm climate here great?$"
 

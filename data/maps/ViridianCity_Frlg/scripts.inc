@@ -235,103 +235,103 @@ ViridianCity_EventScript_DoTutorialBattle::
 ViridianCity_Text_CanCarryMonsAnywhere::
 	.string "Those POKé BALLS at your waist!\n"
 	.string "You have POKéMON, don't you?\p"
-	.string "It's great that you can carry and\n"
+	.string "Es genial que puedas llevar y\n"
 	.string "use POKéMON anytime, anywhere.$"
 
 ViridianCity_Text_GymClosedWonderWhoLeaderIs::
 	.string "This POKéMON GYM is always closed.\p"
-	.string "I wonder who the LEADER is?$"
+	.string "¿Quién será el LÍDER?$"
 
 ViridianCity_Text_ViridiansGymLeaderReturned::
 	.string "VIRIDIAN GYM's LEADER returned!$"
 
 ViridianCity_Text_WantToKnowAboutCaterpillarMons::
-	.string "You want to know about the two\n"
+	.string "¿Quieres saber sobre los dos\n"
 	.string "kinds of caterpillar POKéMON?$"
 
 ViridianCity_Text_OhOkayThen::
 	.string "Oh, okay then!$"
 
 ViridianCity_Text_ExplainCaterpieWeedle::
-	.string "CATERPIE has no poison,\n"
-	.string "but WEEDLE does.\p"
+	.string "CATERPIE no tiene veneno,\n"
+	.string "pero WEEDLE sí.\p"
 	.string "Watch that your POKéMON aren't\n"
 	.string "stabbed by WEEDLE's POISON STING.$"
 
 ViridianCity_Text_GrandpaHasntHadCoffeeYet::
 	.string "Oh, Grandpa!\n"
-	.string "Don't be so mean!\p"
+	.string "¡No seas tan cruel!\p"
 	.string "I'm so sorry.\n"
-	.string "He hasn't had his coffee yet.$"
+	.string "Aún no ha tomado su café.$"
 
 ViridianCity_Text_GoShoppingInPewterOccasionally::
-	.string "I go shopping in PEWTER CITY\n"
+	.string "Voy de compras a CIUDAD\n"
 	.string "occasionally.\p"
-	.string "I have to take the winding trail in\n"
-	.string "VIRIDIAN FOREST when I go.$"
+	.string "Tengo que tomar el sendero\n"
+	.string "sinuoso del BOSQUE VERDE.$"
 
 ViridianCity_Text_ThisIsPrivateProperty::
-	.string "I absolutely forbid you from\n"
-	.string "going through here!\p"
-	.string "This is private property!$"
+	.string "Te prohibo totalmente\n"
+	.string "pasar por aquí!\p"
+	.string "¡Esta es propiedad privada!$"
 
 ViridianCity_Text_ShowYouHowToCatchMons::
-	.string "Well, now, I've had my coffee, and\n"
-	.string "that's what I need to get going!\p"
+	.string "Bueno, ya me tomé mi café, y\n"
+	.string "¡eso es lo que necesito para irme!\p"
 	.string "Hm?\n"
 	.string "What is that red box you have?\p"
-	.string "Ah, so you're working on your\n"
+	.string "Ah, así que estás trabajando\n"
 	.string "POKéDEX.\p"
-	.string "Then let me give you a word of\n"
+	.string "Entonces déjame darte unas\npalabras de"
 	.string "advice.\p"
 	.string "Whenever you catch a POKéMON,\n"
 	.string "the POKéDEX automatically updates\l"
 	.string "its data.\p"
-	.string "…You don't know how to catch\n"
+	.string "…No sabes cómo atrapar\n"
 	.string "un POKéMON?\p"
-	.string "I suppose I had better show you\n"
+	.string "Supongo que será mejor\nmostrártelo"
 	.string "then!$"
 
 ViridianCity_Text_ThatWasEducationalTakeThis::
-	.string "There! Now tell me, that was\n"
-	.string "educational, was it not?\p"
-	.string "And here, take this, too.$"
+	.string "¡Listo! Ahora dime, eso fue\n"
+	.string "instructivo, ¿verdad?\p"
+	.string "Y aquí, toma esto también.$"
 
 ViridianCity_Text_WatchThatToLearnBasics::
-	.string "If there's something you don't\n"
-	.string "understand, watch that.\p"
-	.string "It will teach you about the basics\n"
+	.string "Si hay algo que no entiendas,\n"
+	.string "mira eso.\p"
+	.string "Te enseñará lo básico\n"
 	.string "of being a POKéMON TRAINER.$"
 
 ViridianCity_Text_WeakenMonsFirstToCatch::
-	.string "Well, now, I've had my coffee, and\n"
-	.string "that's what I need to get going!\p"
-	.string "But I made it too strong.\n"
-	.string "It gave me a headache…\p"
-	.string "Incidentally, are you filling your\n"
+	.string "Bueno, ya me tomé mi café, y\n"
+	.string "¡eso es lo que necesito para irme!\p"
+	.string "Pero lo hice demasiado fuerte.\n"
+	.string "Me dio dolor de cabeza…\p"
+	.string "Por cierto, ¿ya estás llenando\n"
 	.string "POKéDEX?\p"
-	.string "At first, focus on weakening the\n"
+	.string "Al principio, enfócate en debilitar\n"
 	.string "POKéMON before trying to catch it.$"
 
 ViridianCity_Text_HowsTeachyTVHelping::
-	.string "Well, now, I've had my coffee, and\n"
-	.string "that's what I need to get going!\p"
-	.string "But I made it too strong.\n"
-	.string "It gave me a headache…\p"
-	.string "Incidentally, is my old TEACHY TV\n"
-	.string "helping you?$"
+	.string "Bueno, ya me tomé mi café, y\n"
+	.string "¡eso es lo que necesito para irme!\p"
+	.string "Pero lo hice demasiado fuerte.\n"
+	.string "Me dio dolor de cabeza…\p"
+	.string "Por cierto, ¿mi vieja TV\n"
+	.string "¿Te ayudo?$"
 
 ViridianCity_Text_MyGrandsonOnTheShow::
 	.string "Wahaha!\n"
-	.string "It's my grandson on the show!\p"
-	.string "Since he's the one doing the\n"
-	.string "teaching, you're bound to learn.$"
+	.string "¡Es mi nieto en el programa!\p"
+	.string "Como es él quien da las\n"
+	.string "clases, seguro aprenderás.$"
 
 ViridianCity_Text_TooBusyForTeachyTV::
-	.string "Hm… You're too busy to not even\n"
-	.string "have the time for TEACHY TV…\p"
-	.string "Time is money, and neither should\n"
-	.string "be ill spent…$"
+	.string "Hm… Estás tan ocupado que no\n"
+	.string "tienes tiempo para TV ENSEÑA…\p"
+	.string "El tiempo es dinero, y ninguno\n"
+	.string "se gastarán mal…$"
 
 ViridianCity_Text_CitySign::
 	.string "VIRIDIAN CITY \n"
@@ -341,14 +341,14 @@ ViridianCity_Text_CatchMonsForEasierBattles::
 	.string "CONSEJOS DE ENTRENADOR\p"
 	.string "Catch POKéMON and expand your\n"
 	.string "collection.\p"
-	.string "The more you have, the easier it\n"
-	.string "is to battle.$"
+	.string "Cuanto más tengas, más fácil\n"
+	.string "es batallar.$"
 
 ViridianCity_Text_MovesLimitedByPP::
 	.string "CONSEJOS DE ENTRENADOR\p"
 	.string "The battle moves of POKéMON are\n"
-	.string "limited by their POWER POINTS, PP.\p"
-	.string "To replenish PP, rest your tired\n"
+	.string "limitados por sus PUNTOS DE PODER, PP.\p"
+	.string "Para reponer PP, descansa a tu\n"
 	.string "POKéMON at a POKéMON CENTER.$"
 
 ViridianCity_Text_GymSign::

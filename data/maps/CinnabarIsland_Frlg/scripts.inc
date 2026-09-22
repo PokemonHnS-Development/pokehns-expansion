@@ -355,7 +355,7 @@ CinnabarIsland_Text_DoorIsLocked::
 	.string "La puerta está cerrada…$"
 
 CinnabarIsland_Text_BlaineLivedHereSinceBeforeLab::
-	.string "CINNABAR GYM's BLAINE is quite the\n"
+	.string "BLAINE del GIMNASIO ISLA\n"
 	.string "tipo muy extraño.\p"
 	.string "Vive en la isla desde mucho\n"
 	.string "antes de que hicieran el LAB.$"
@@ -363,7 +363,7 @@ CinnabarIsland_Text_BlaineLivedHereSinceBeforeLab::
 CinnabarIsland_Text_ScientistsExperimentInMansion::
 	.string "Scientists conduct experiments \n"
 	.string "in the burned-out building.\p"
-	.string "You know, the one they call the\n"
+	.string "quemado. Sabes, al que llaman\n"
 	.string "POKéMON MANSION.$"
 
 CinnabarIsland_Text_IslandSign::
@@ -380,49 +380,49 @@ CinnabarIsland_Text_GymSign::
 
 CinnabarIsland_Text_HeyIfItIsntPlayer::
 	.string "¿Eh?\n"
-	.string "Hey, if it isn't {PLAYER}!$"
+	.string "¡Vaya, si es {PLAYER}!$"
 
 CinnabarIsland_Text_ComeWithMeToOneIsland::
-	.string "Look, it's me, BILL.\n"
-	.string "Long time no see!\p"
-	.string "I hope you're still using my\n"
+	.string "Mira, soy yo, BILL.\n"
+	.string "¡Cuánto tiempo sin verte!\p"
+	.string "Espero que sigas usando mi\n"
 	.string "PC system.\p"
-	.string "Well, listen, since we met up here,\n"
+	.string "Bueno, escucha, ya que nos\n"
 	.string "how about spending time with me?\p"
-	.string "There's this little island in the far\n"
+	.string "Hay una pequeña isla muy lejana,\n"
 	.string "south called ONE ISLAND.\p"
-	.string "A friend invited me, so I'm on my\n"
-	.string "way out there.\p"
+	.string "Un amigo me invitó, así que voy\n"
+	.string "para allá.\p"
 	.string "¿Qué te parece?\n"
-	.string "Do you feel like coming with me?$"
+	.string "¿Quieres venir conmigo?$"
 
 CinnabarIsland_Text_AllRightLetsGo::
 	.string "Muy bien, entonces.\n"
 	.string "¡Vamos!$"
 
 CinnabarIsland_Text_IllBeWaitingInPokeCenter::
-	.string "What, are you too busy?\p"
+	.string "¿Qué, estás muy ocupado?\p"
 	.string "Well, all right.\n"
-	.string "The boat hasn't arrived yet anyway.\p"
+	.string "El barco aún no ha llegado.\p"
 	.string "I'll be waiting at the POKéMON\n"
-	.string "CENTER over there.\p"
-	.string "Come see me when you're done with\n"
-	.string "your business here.$"
+	.string "CENTER está allá.\p"
+	.string "Ven a verme cuando termines\n"
+	.string "tus asuntos aquí.$"
 
 CinnabarIsland_Text_MyPalsBoatArrived::
-	.string "Looks like my pal's boat arrived,\n"
+	.string "Parece que llegó el barco de mi\n"
 	.string "también nos iremos.\p"
-	.string "He sent it specially here to\n"
-	.string "CINNABAR to pick me up.$"
+	.string "Lo envió especialmente aquí a\n"
+	.string "CINNABAR para recogerme.$"
 
 CinnabarIsland_Text_IfYouHaveTriPassYouCanGoAgain::
-	.string "Hey, wasn't that a long cruise?\p"
-	.string "My buddy CELIO seemed to enjoy\n"
+	.string "Oye, ¿no fue largo el viaje?\p"
+	.string "Mi amigo CELIO pareció disfrutar\n"
 	.string "tu compañía.\p"
-	.string "I'm sure he'd welcome you if you\n"
-	.string "were to visit him again.\p"
-	.string "If you have a TRI-PASS, you can\n"
-	.string "always take a ferry there from\l"
+	.string "Seguro que te recibirá si\n"
+	.string "para visitarlo otra vez.\p"
+	.string "Si tienes un TRIPASE, siempre\n"
+	.string "puedes tomar un ferry desde allá\l"
 	.string "VERMILION PORT.\p"
-	.string "All right, thanks for your company!$"
+	.string "¡Bien, gracias por tu compañía!$"
 

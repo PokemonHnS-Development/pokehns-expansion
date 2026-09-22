@@ -6,31 +6,31 @@ Route19_EventScript_RouteSign::
 	end
 
 Route19_Text_RichardIntro::
-	.string "I have to exercise and warm up\n"
-	.string "before going out for a swim.$"
+	.string "Tengo que ejercitarme y entrar\n"
+	.string "antes de salir a nadar.$"
 
 Route19_Text_RichardDefeat::
 	.string "All warmed up!$"
 
 Route19_Text_RichardPostBattle::
 	.string "Thanks, kid!\n"
-	.string "I'm ready for a swim.$"
+	.string "Estoy listo para nadar.$"
 
 Route19_Text_ReeceIntro::
 	.string "¡Espera! ¡Ve más despacio!\n"
-	.string "You'll have a heart attack!$"
+	.string "¡Tendrás un infarto!$"
 
 Route19_Text_ReeceDefeat::
 	.string "Ooh!\n"
-	.string "That's chilly!$"
+	.string "¡Qué frío!$"
 
 Route19_Text_ReecePostBattle::
-	.string "Watch out for TENTACOOL.\n"
-	.string "They sting so painfully.$"
+	.string "Cuidado con TENTACOOL.\n"
+	.string "Pican con mucho dolor.$"
 
 Route19_Text_MatthewIntro::
 	.string "¡Me encanta nadar!\n"
-	.string "What about you?$"
+	.string "¿Y tú qué?$"
 
 Route19_Text_MatthewDefeat::
 	.string "Belly flop!$"
@@ -46,43 +46,43 @@ Route19_Text_DouglasDefeat::
 	.string "¡Glub!$"
 
 Route19_Text_DouglasPostBattle::
-	.string "I see a couple of islands over\n"
+	.string "Veo un par de islas por allá\n"
 	.string "yonder!$"
 
 Route19_Text_DavidIntro::
 	.string "I tried diving for POKéMON, but it\n"
-	.string "was a no-go.$"
+	.string "era zona prohibida.$"
 
 Route19_Text_DavidDefeat::
 	.string "Help!$"
 
 Route19_Text_DavidPostBattle::
-	.string "I guess you have to fish for sea\n"
+	.string "Supongo que hay que pescar en\n"
 	.string "POKéMON.$"
 
 Route19_Text_TonyIntro::
 	.string "Miro el mar para olvidar todas\n"
-	.string "the bad things that happened.$"
+	.string "las cosas malas que pasaron.$"
 
 Route19_Text_TonyDefeat::
 	.string "Ooh!\n"
 	.string "Traumatic!$"
 
 Route19_Text_TonyPostBattle::
-	.string "I'm looking at the sea to forget\n"
-	.string "the bad thing that happened!$"
+	.string "Miro el mar para olvidar\n"
+	.string "lo malo que pasó!$"
 
 Route19_Text_AnyaIntro::
-	.string "Oh, I just love your ride!\n"
+	.string "¡Me encanta tu vehículo!\n"
 	.string "¿Me lo das si gano?$"
 
 Route19_Text_AnyaDefeat::
 	.string "Oh! I lost!$"
 
 Route19_Text_AnyaPostBattle::
-	.string "It's still a long way to go to\n"
+	.string "Todavía falta mucho para\n"
 	.string "SEAFOAM ISLANDS…\p"
-	.string "I want to go back to FUCHSIA…$"
+	.string "Quiero volver a FUCSIA…$"
 
 Route19_Text_AliceIntro::
 	.string "¡Nadar es genial!\n"
@@ -92,19 +92,19 @@ Route19_Text_AliceDefeat::
 	.string "Shocker!$"
 
 Route19_Text_AlicePostBattle::
-	.string "My boyfriend wanted to swim to\n"
+	.string "Mi novio quiso nadar hacia\n"
 	.string "SEAFOAM ISLANDS.$"
 
 Route19_Text_AxleIntro::
 	.string "¡Hola, marinero!\n"
-	.string "These waters are treacherous!$"
+	.string "¡Estas aguas son traicioneras!$"
 
 Route19_Text_AxleDefeat::
 	.string "Ooh!\n"
 	.string "Dangerous!$"
 
 Route19_Text_AxlePostBattle::
-	.string "M-my legs! They cramped up!\n"
+	.string "acalambraron!\n"
 	.string "Glub, glub…$"
 
 Route19_Text_ConnieIntro::
@@ -116,46 +116,46 @@ Route19_Text_ConnieDefeat::
 
 Route19_Text_ConniePostBattle::
 	.string "If I were to ride a POKéMON on\n"
-	.string "the sea, I'd like a LAPRAS.\p"
-	.string "LAPRAS is so big, I bet it\n"
-	.string "would keep me dry on water.$"
+	.string "el mar, me gustaría un LAPRAS.\p"
+	.string "LAPRAS es tan grande que\n"
+	.string "me mantendría seco en el agua.$"
 
 Route19_Text_RouteSign::
 	.string "SEA ROUTE 19\n"
 	.string "CIUDAD FUXIA - ISLAS CANELA$"
 
 Route19_Text_LiaIntro::
-	.string "LIA: I'm looking after my brother.\n"
-	.string "He just became a TRAINER.$"
+	.string "LIA: Cuido a mi hermano.\n"
+	.string "Recién se hizo ENTRENADOR.$"
 
 Route19_Text_LiaDefeat::
-	.string "LIA: That's no way to treat my\n"
+	.string "LIA: ¡No se trata así a mi\n"
 	.string "little brother!$"
 
 Route19_Text_LiaPostBattle::
-	.string "LIA: Do you have a younger\n"
+	.string "LIA: ¿Tienes un hermano\n"
 	.string "brother?\p"
-	.string "I hope you're teaching him all\n"
-	.string "sorts of things.$"
+	.string "Espero que le enseñes todo\n"
+	.string "tipo de cosas.$"
 
 Route19_Text_LiaNotEnoughMons::
-	.string "LIA: I want to battle together\n"
-	.string "with my little brother.\p"
+	.string "LIA: Quiero batallar junto\n"
+	.string "a mi hermanito.\p"
 	.string "Don't you have two POKéMON?$"
 
 Route19_Text_LucIntro::
-	.string "LUC: My big sis taught me how\n"
+	.string "LUC: Mi hermana me enseñó a\n"
 	.string "to swim and train POKéMON.$"
 
 Route19_Text_LucDefeat::
 	.string "LUC: Oh, wow!\n"
-	.string "Someone tougher than my big sis!$"
+	.string "¡Alguien más fuerte que ella!$"
 
 Route19_Text_LucPostBattle::
-	.string "LUC: My big sis is strong and nice.\n"
-	.string "I think she's awesome!$"
+	.string "LUC: Mi hermana es fuerte y amable.\n"
+	.string "¡Me parece genial!$"
 
 Route19_Text_LucNotEnoughMons::
-	.string "LUC: I don't want to if I can't\n"
-	.string "battle you with my big sis.\p"
+	.string "LUC: No quiero si no puedo\n"
+	.string "batalla junto a mi hermana.\p"
 	.string "Don't you have two POKéMON?$"

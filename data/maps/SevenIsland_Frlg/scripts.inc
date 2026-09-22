@@ -19,40 +19,40 @@ SevenIsland_EventScript_Scientist::
 	end
 
 Text_SwordsDanceTeach::
-	.string "Not many people come out here.\p"
+	.string "Poca gente viene por aquí.\p"
 	.string "If I train here, I'm convinced that\n"
-	.string "I'll get stronger and stronger.\p"
-	.string "Yep, stronger and stronger…\p"
-	.string "How would you like to learn a move\n"
-	.string "like that? It's SWORDS DANCE.$"
+	.string "me haré cada vez más fuerte.\p"
+	.string "Sí, cada vez más fuerte…\p"
+	.string "¿Cómo te gustaría aprender un\n"
+	.string "movimiento así? Es DANZA ESPADA.$"
 
 Text_SwordsDanceDeclined::
-	.string "Well, that's fine, too.$"
+	.string "Bueno, también está bien.$"
 
 Text_SwordsDanceWhichMon::
 	.string "All right, pick which POKéMON\n"
-	.string "I should teach it to.$"
+	.string "Debería enseñárselo.$"
 
 Text_SwordsDanceTaught::
-	.string "If only we could keep getting\n"
-	.string "stronger and stronger, eh?$"
+	.string "Si tan solo pudiéramos seguir\n"
+	.string "cada vez más fuerte, ¿eh?$"
 
 SevenIsland_Text_IslandSign::
 	.string "SEVEN ISLAND\n"
-	.string "Quest Island of Infinity$"
+	.string "Isla del Infinito$"
 
 SevenIsland_Text_IslandsMadeInSevenDays::
-	.string "These islands are called the SEVII\n"
-	.string "ISLANDS because there are seven.\p"
-	.string "…Or at least that's what the young\n"
+	.string "Estas islas se llaman las ISLAS\n"
+	.string "SEVII porque son siete.\p"
+	.string "…O al menos eso dicen los\n"
 	.string "people believe.\p"
-	.string "The truth is, these islands are so\n"
-	.string "named because they are said to\l"
-	.string "have been made in seven days.$"
+	.string "La verdad es que estas islas\n"
+	.string "llevan ese nombre porque dicen\l"
+	.string "que fueron creadas en 7 días.$"
 
 SevenIsland_Text_IslandVirtuallyUntouched::
-	.string "This island has been left virtually\n"
-	.string "untouched in its natural state.\p"
-	.string "It could be a little difficult to\n"
-	.string "hike around because of that.$"
+	.string "Esta isla se ha dejado casi\n"
+	.string "intacta en su estado natural.\p"
+	.string "Podría ser un poco difícil\n"
+	.string "caminar por ahí por eso.$"
 

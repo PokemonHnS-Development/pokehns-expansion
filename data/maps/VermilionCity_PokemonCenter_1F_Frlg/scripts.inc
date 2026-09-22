@@ -44,46 +44,46 @@ VermilionCity_PokemonCenter_1F_EventScript_ExplainVSSeeker::
 	end
 
 VermilionCity_PokemonCenter_1F_Text_TrainerMonsStrongerThanWild::
-	.string "Even if they are the same level,\n"
+	.string "Aunque sean del mismo nivel,\n"
 	.string "POKéMON can have very different\l"
-	.string "stats and abilities.\p"
+	.string "estadísticas y habilidades.\p"
 	.string "A POKéMON raised by a TRAINER is\n"
-	.string "stronger than one in the wild.$"
+	.string "más fuerte que uno salvaje.$"
 
 VermilionCity_PokemonCenter_1F_Text_PoisonedMonFaintedWhileWalking::
 	.string "My POKéMON was poisoned!\n"
-	.string "It fainted while we were walking!$"
+	.string "¡Se desmayó mientras caminábamos!$"
 
 VermilionCity_PokemonCenter_1F_Text_AllMonWeakToSpecificTypes::
-	.string "It is true that a higher-level\n"
+	.string "Es cierto que uno de nivel\n"
 	.string "POKéMON will be more powerful…\p"
 	.string "But, all POKéMON will have weak\n"
 	.string "points against specific types.\p"
-	.string "So, there appears to be no\n"
+	.string "Así que parece que no hay\n"
 	.string "universally strong POKéMON.$"
 
 VermilionCity_PokemonCenter_1F_Text_UrgeToBattleSomeoneAgain::
-	.string "The urge to battle with someone\n"
-	.string "you've tangled with before…\p"
-	.string "Have you ever had that urge?\n"
-	.string "I'm sure you have.\p"
-	.string "I wanted to battle certain people\n"
-	.string "again over and over, too.\p"
-	.string "So, I've been giving these away.\n"
-	.string "Please, take one!$"
+	.string "Las ganas de batallar con alguien\n"
+	.string "con quien ya te has enfrentado…\p"
+	.string "Alguna vez tuviste esas ganas?\n"
+	.string "Seguro que sí.\p"
+	.string "Yo también quise batirme con\n"
+	.string "ciertas personas una y otra vez.\p"
+	.string "He estado regalando estos.\n"
+	.string "¡Toma uno, por favor!$"
 
 VermilionCity_PokemonCenter_1F_Text_UseDeviceForRematches::
-	.string "Use that device and you'll find\n"
-	.string "TRAINERS looking for a rematch.\p"
-	.string "You have to charge its battery to\n"
-	.string "use it, though.$"
+	.string "Usa ese aparato y encontrarás\n"
+	.string "ENTRENADORES que buscan revancha.\p"
+	.string "Debes cargar su batería para\n"
+	.string "usarlo, aunque sea.$"
 
 VermilionCity_PokemonCenter_1F_Text_ExplainVSSeeker::
-	.string "How do you use the VS SEEKER?\n"
-	.string "There's nothing to it.\p"
-	.string "Use it like beep-beep-beep, and\n"
-	.string "TRAINERS around you will notice.\p"
+	.string "¿Cómo se usa el BUSCA VS?\n"
+	.string "No tiene ciencia.\p"
+	.string "Úsalo como pi-pi-pi, y los\n"
+	.string "ENTRENADORES cerca te notarán.\p"
 	.string "If any TRAINER wants a rematch,\n"
-	.string "it will let you know immediately.\p"
-	.string "Charge its battery and use it\n"
-	.string "while you're on a road.$"
+	.string "te lo avisará de inmediato.\p"
+	.string "Carga su batería y úsalo\n"
+	.string "cuando estés en un camino.$"

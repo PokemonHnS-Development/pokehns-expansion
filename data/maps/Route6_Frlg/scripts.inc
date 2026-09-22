@@ -6,11 +6,11 @@ Route6_EventScript_UndergroundPathSign::
 	end
 
 Route6_Text_RickyIntro::
-	.string "Who's there?\n"
-	.string "Quit listening in on us!$"
+	.string "¿Quién anda ahí?\n"
+	.string "¡Deja de espiarnos!$"
 
 Route6_Text_RickyDefeat::
-	.string "I just can't win!$"
+	.string "¡Nunca me sale nada bien!$"
 
 Route6_Text_RickyPostBattle::
 	.string "Whisper…\n"
@@ -18,7 +18,7 @@ Route6_Text_RickyPostBattle::
 
 Route6_Text_NancyIntro::
 	.string "¡Disculpa!\n"
-	.string "This is a private conversation!$"
+	.string "¡Esta es una conversación privada!$"
 
 Route6_Text_NancyDefeat::
 	.string "Ugh!\n"
@@ -29,50 +29,50 @@ Route6_Text_NancyPostBattle::
 	.string "Whisper…$"
 
 Route6_Text_KeigoIntro::
-	.string "There aren't many bugs out here.$"
+	.string "No hay muchos bichos por aquí.$"
 
 Route6_Text_KeigoDefeat::
-	.string "No!\n"
-	.string "You're kidding!$"
+	.string "¡No!\n"
+	.string "¡Estás bromeando!$"
 
 Route6_Text_KeigoPostBattle::
-	.string "I like bugs, so I'm going back to\n"
+	.string "Me gustan los bichos, así que vuelvo\n"
 	.string "VIRIDIAN FOREST.$"
 
 Route6_Text_JeffIntro::
 	.string "¿Eh?\n"
-	.string "You want to talk to me?$"
+	.string "¿Quieres hablar conmigo?$"
 
 Route6_Text_JeffDefeat::
-	.string "This stinks…\n"
-	.string "I couldn't beat your challenge…$"
+	.string "Esto apesta…\n"
+	.string "No pude vencer tu desafío…$"
 
 Route6_Text_JeffPostBattle::
 	.string "I should bring more POKéMON with\n"
-	.string "me. I'll feel safer that way.$"
+	.string "yo. Así me sentiré más seguro.$"
 
 Route6_Text_IsabelleIntro::
-	.string "Me?\n"
+	.string "¿Yo?\n"
 	.string "Well, okay. I'll play!$"
 
 Route6_Text_IsabelleDefeat::
 	.string "Things just didn't work…$"
 
 Route6_Text_IsabellePostBattle::
-	.string "I want to get stronger.\n"
-	.string "What's your secret?$"
+	.string "Quiero hacerme más fuerte.\n"
+	.string "¿Cuál es tu secreto?$"
 
 Route6_Text_ElijahIntro::
-	.string "I've never seen you around.\n"
-	.string "Are you good?$"
+	.string "Nunca te había visto por aquí.\n"
+	.string "¿Eres bueno?$"
 
 Route6_Text_ElijahDefeat::
-	.string "You're too good!$"
+	.string "¡Eres demasiado bueno!$"
 
 Route6_Text_ElijahPostBattle::
 	.string "Are my POKéMON weak?\n"
 	.string "Or, am I just bad?\l"
-	.string "Which do you think?$"
+	.string "¿Qué crees tú?$"
 
 Route6_Text_UndergroundPathSign::
 	.string "UNDERGROUND PATH\n"

@@ -11,101 +11,101 @@ OneIsland_KindleRoad_EventScript_EmberSpaSign::
 
 OneIsland_KindleRoad_Text_MariaIntro::
 	.string "¡El clima está hermoso!\n"
-	.string "Perfect for a battle!$"
+	.string "¡Perfecto para batallar!$"
 
 OneIsland_KindleRoad_Text_MariaDefeat::
 	.string "Aiyeeeeh!$"
 
 OneIsland_KindleRoad_Text_MariaPostBattle::
-	.string "Please don't splash my face!\n"
-	.string "You'll ruin the makeup.$"
+	.string "¡No me salpiques la cara!\n"
+	.string "¡Arruinarás el maquillaje!$"
 
 OneIsland_KindleRoad_Text_AbigailIntro::
-	.string "I'm beginning to get a sunburn…$"
+	.string "Me está saliendo una quemadura…$"
 
 OneIsland_KindleRoad_Text_AbigailDefeat::
-	.string "Oh, you're so awful.$"
+	.string "Oh, qué terrible eres.$"
 
 OneIsland_KindleRoad_Text_AbigailPostBattle::
-	.string "I like that cap you have.\n"
+	.string "Me gusta tu gorra.\n"
 	.string "Maybe I should wear one, too…$"
 
 OneIsland_KindleRoad_Text_FinnIntro::
-	.string "Seen from here, MT. EMBER towers\n"
-	.string "into the sky.$"
+	.string "Desde aquí, el MT. EMBER se\n"
+	.string "al cielo.$"
 
 OneIsland_KindleRoad_Text_FinnDefeat::
-	.string "Well, aren't you tough?$"
+	.string "Vaya, qué duro eres, ¿eh?$"
 
 OneIsland_KindleRoad_Text_FinnPostBattle::
-	.string "The sky is immense around these\n"
+	.string "El cielo es inmenso por aquí.\n"
 	.string "parts.$"
 
 OneIsland_KindleRoad_Text_GarrettIntro::
-	.string "I took a break from swimming,\n"
-	.string "only to have you challenge me?$"
+	.string "Tomé un descanso de nadar,\n"
+	.string "¿y tú me retas?$"
 
 OneIsland_KindleRoad_Text_GarrettDefeat::
-	.string "Hey, what the…\n"
-	.string "You're good, you!$"
+	.string "Oye, ¿qué…?\n"
+	.string "¡Eres bueno, tú!$"
 
 OneIsland_KindleRoad_Text_GarrettPostBattle::
-	.string "Instead of using SURF all the time,\n"
-	.string "you should swim some.$"
+	.string "En vez de usar SURF todo el tiempo,\n"
+	.string "deberías nadar algo.$"
 
 OneIsland_KindleRoad_Text_TommyIntro::
 	.string "¡Espera! ¡Espera un segundo!\n"
-	.string "I think I've hooked a big one!$"
+	.string "¡Creo que piqué uno grande!$"
 
 OneIsland_KindleRoad_Text_TommyDefeat::
-	.string "I've lost it all again…$"
+	.string "Lo he perdido todo otra vez…$"
 
 OneIsland_KindleRoad_Text_TommyPostBattle::
-	.string "Not only did I lose, the big one\n"
-	.string "got away from me, too!$"
+	.string "No solo perdí, sino que el grande\n"
+	.string "¡también se me escapó!$"
 
 OneIsland_KindleRoad_Text_SharonIntro::
-	.string "Could you help me out with my\n"
+	.string "¿Podrías ayudarme con mi\n"
 	.string "training?$"
 
 OneIsland_KindleRoad_Text_SharonDefeat::
 	.string "Fuiste superior a mí.$"
 
 OneIsland_KindleRoad_Text_SharonPostBattle::
-	.string "It's clear that you're skilled.\n"
-	.string "I like you!$"
+	.string "Está claro que eres hábil.\n"
+	.string "¡Me caes bien!$"
 
 OneIsland_KindleRoad_Text_TanyaIntro::
-	.string "There isn't a day in which we don't\n"
+	.string "No hay un solo día en que no\n"
 	.string "train!$"
 
 OneIsland_KindleRoad_Text_TanyaDefeat::
-	.string "I'm such a fool!$"
+	.string "¡Qué tonto soy!$"
 
 OneIsland_KindleRoad_Text_TanyaPostBattle::
 	.string "I'll train even harder from now on!$"
 
 OneIsland_KindleRoad_Text_SheaIntro::
 	.string "Cada mañana, antes del desayuno,\n"
-	.string "I swim around this island.$"
+	.string "Nado alrededor de esta isla.$"
 
 OneIsland_KindleRoad_Text_SheaDefeat::
 	.string "Gasp…\n"
 	.string "Gasp…$"
 
 OneIsland_KindleRoad_Text_SheaPostBattle::
-	.string "I lost because I'm pooped from all\n"
-	.string "the running I did…$"
+	.string "Perdí porque estoy agotado de\n"
+	.string "tanto correr…$"
 
 OneIsland_KindleRoad_Text_HughIntro::
 	.string "¡Vístete bien para la batalla!\n"
-	.string "Lose that frivolous outfit!$"
+	.string "¡Quítate ese atuendo frívolo!$"
 
 OneIsland_KindleRoad_Text_HughDefeat::
-	.string "Why me?!$"
+	.string "¿Por qué yo?!$"
 
 OneIsland_KindleRoad_Text_HughPostBattle::
-	.string "Even martial artists are becoming\n"
+	.string "Hasta los artistas marciales se\n"
 	.string "fashion conscious these days…$"
 
 OneIsland_KindleRoad_Text_BryceIntro::
@@ -116,60 +116,60 @@ OneIsland_KindleRoad_Text_BryceDefeat::
 	.string "Awww, blown!$"
 
 OneIsland_KindleRoad_Text_BrycePostBattle::
-	.string "The water in volcanic regions is\n"
+	.string "El agua de las regiones volcánicas\n"
 	.string "delicious.$"
 
 OneIsland_KindleRoad_Text_ClaireIntro::
-	.string "My lunch filled us up, so will you\n"
+	.string "Mi almuerzo nos llenó, así que\n"
 	.string "luchar para hacer ejercicio?$"
 
 OneIsland_KindleRoad_Text_ClaireDefeat::
-	.string "That made me all sweaty.$"
+	.string "Eso me dejó sudando.$"
 
 OneIsland_KindleRoad_Text_ClairePostBattle::
-	.string "What should I do?\n"
+	.string "¿Qué debería hacer?\n"
 	.string "I feel famished again.$"
 
 OneIsland_KindleRoad_Text_KiaIntro::
 	.string "KIA: Mi hermano mayor y yo\n"
-	.string "an awesome combination!$"
+	.string "¡una combinación genial!$"
 
 OneIsland_KindleRoad_Text_KiaDefeat::
 	.string "KIA: Huh?!\n"
-	.string "I can't believe it!$"
+	.string "¡No lo puedo creer!$"
 
 OneIsland_KindleRoad_Text_KiaPostBattle::
-	.string "KIA: How could there be anyone\n"
-	.string "better than my big brother?$"
+	.string "KIA: ¿Cómo podría haber alguien\n"
+	.string "mejor que mi hermano mayor?$"
 
 OneIsland_KindleRoad_Text_KiaNotEnoughMons::
-	.string "KIA: If you want to battle with\n"
-	.string "us, you have to bring at least two\l"
+	.string "KIA: Si quieres batirte con\n"
+	.string "nosotros, trae al menos a dos\l"
 	.string "POKéMON with you.$"
 
 OneIsland_KindleRoad_Text_MikIntro::
-	.string "MIK: Together with KIA, I'm afraid\n"
-	.string "of nothing!$"
+	.string "MIK: Junto a KIA, me temo\n"
+	.string "¡de nada!$"
 
 OneIsland_KindleRoad_Text_MikDefeat::
 	.string "MIK: Whoa!\n"
-	.string "That's too much!$"
+	.string "¡Eso es demasiado!$"
 
 OneIsland_KindleRoad_Text_MikPostBattle::
-	.string "MIK: How could my combination\n"
-	.string "with KIA fail?$"
+	.string "MIK: ¿Cómo pudo mi combinación\n"
+	.string "con KIA fallar?$"
 
 OneIsland_KindleRoad_Text_MikNotEnoughMons::
-	.string "MIK: Hey, do you want to battle\n"
-	.string "with us two?\p"
+	.string "MIK: Oye, ¿quieres pelear\n"
+	.string "con nosotros dos?\p"
 	.string "Bring two or more POKéMON with\n"
-	.string "you, then.$"
+	.string "tú, entonces.$"
 
 OneIsland_KindleRoad_Text_RouteSign::
-	.string "This is KINDLE ROAD.\p"
-	.string "Go straight for MT. EMBER.$"
+	.string "Esta es la RUTA ASCUAS.\p"
+	.string "Sigue derecho al MONTE BRASA.$"
 
 OneIsland_KindleRoad_Text_EmberSpaSign::
-	.string "Light the Fire in Your Heart!\n"
+	.string "¡Enciende el fuego de tu corazón!\n"
 	.string "EMBER SPA$"
 
