@@ -19818,9 +19818,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("FRÍA ACOGIDA"),
         #if B_PREFERRED_ICE_WEATHER == B_ICE_WEATHER_HAIL
-        .description = COMPOUND_STRING("Un mal chiste trae nieve.\n"),
+        .description = COMPOUND_STRING("Un mal chiste trae nieve."),
         #else
-        .description = COMPOUND_STRING("Un mal chiste trae nieve.\n"),
+        .description = COMPOUND_STRING("Un mal chiste trae nieve."),
         #endif
         .effect = EFFECT_WEATHER_AND_SWITCH,
         .power = 0,
@@ -19937,7 +19937,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     [MOVE_CHILLING_WATER] =
     {
         .name = COMPOUND_STRING("AGUA FRÍA"),
-        .description = COMPOUND_STRING("Una ducha de agua helada\n"),
+        .description = COMPOUND_STRING("Una ducha de agua helada"),
         .effect = EFFECT_HIT,
         .power = 50,
         .type = TYPE_WATER,
@@ -20103,7 +20103,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     [MOVE_COMEUPPANCE] =
     {
         .name = COMPOUND_STRING("RESARCIMIENTO"),
-        .description = COMPOUND_STRING("Contraataca con fuerza ante\n"),
+        .description = COMPOUND_STRING("Contraataca con fuerza ante"),
         .effect = EFFECT_REFLECT_DAMAGE,
         .power = 1,
         .type = TYPE_DARK,
@@ -20381,7 +20381,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     [MOVE_SYRUP_BOMB] =
     {
         .name = COMPOUND_STRING("BOMBA CARAMELO"),
-        .description = COMPOUND_STRING("Baja la velocidad del rival\ncada turno durante 3 turnos.\n"),
+        .description = COMPOUND_STRING("Baja la velocidad del rival\ncada turno durante 3 turnos."),
         .effect = EFFECT_HIT,
         .power = 60,
         .type = TYPE_GRASS,
@@ -20593,7 +20593,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     [MOVE_ALLURING_VOICE] =
     {
         .name = COMPOUND_STRING("CANTO ENCANTADOR"),
-        .description = COMPOUND_STRING("Confunde si sus stats fueron\naumentados este turno.\n"),
+        .description = COMPOUND_STRING("Confunde si sus stats fueron\naumentados este turno."),
         .effect = EFFECT_HIT,
         .power = 80,
         .type = TYPE_FAIRY,
