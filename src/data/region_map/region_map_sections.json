@@ -459,7 +459,7 @@
     },
     {
       "id": "MAPSEC_SAFARI_ZONE",
-      "name": "SAFARI ZONE",
+      "name": "ZONA SAFARI",
       "x": 16,
       "y": 2,
       "width": 1,
@@ -566,7 +566,7 @@
     },
     {
       "id": "MAPSEC_VICTORY_ROAD",
-      "name": "VICTORY ROAD",
+      "name": "CALLE VICTORIA",
       "x": 27,
       "y": 9,
       "width": 1,
@@ -699,7 +699,7 @@
     },
     {
       "id": "MAPSEC_PALLET_TOWN",
-      "name": "PALLET TOWN",
+      "name": "PUEBLO PALETA",
       "x": 4,
       "y": 11,
       "width": 1,
@@ -708,7 +708,7 @@
     },
     {
       "id": "MAPSEC_VIRIDIAN_CITY",
-      "name": "VIRIDIAN CITY",
+      "name": "CIUDAD VERDE",
       "x": 4,
       "y": 8,
       "width": 1,
@@ -717,7 +717,7 @@
     },
     {
       "id": "MAPSEC_PEWTER_CITY",
-      "name": "PEWTER CITY",
+      "name": "CIUDAD PLATEADA",
       "x": 4,
       "y": 4,
       "width": 1,
@@ -726,7 +726,7 @@
     },
     {
       "id": "MAPSEC_CERULEAN_CITY",
-      "name": "CERULEAN CITY",
+      "name": "CIUDAD CELESTE",
       "x": 14,
       "y": 3,
       "width": 1,
@@ -735,7 +735,7 @@
     },
     {
       "id": "MAPSEC_LAVENDER_TOWN",
-      "name": "LAVENDER TOWN",
+      "name": "PUEBLO LAVANDA",
       "x": 18,
       "y": 6,
       "width": 1,
@@ -744,7 +744,7 @@
     },
     {
       "id": "MAPSEC_VERMILION_CITY",
-      "name": "VERMILION CITY",
+      "name": "CIUDAD CARMIN",
       "x": 14,
       "y": 9,
       "width": 1,
@@ -753,7 +753,7 @@
     },
     {
       "id": "MAPSEC_CELADON_CITY",
-      "name": "CELADON CITY",
+      "name": "CIUDAD AZULONA",
       "x": 11,
       "y": 6,
       "width": 1,
@@ -762,7 +762,7 @@
     },
     {
       "id": "MAPSEC_FUCHSIA_CITY",
-      "name": "FUCHSIA CITY",
+      "name": "CIUDAD FUCSIA",
       "x": 12,
       "y": 12,
       "width": 1,
@@ -771,7 +771,7 @@
     },
     {
       "id": "MAPSEC_CINNABAR_ISLAND",
-      "name": "CINNABAR ISLAND",
+      "name": "ISLA CANELA",
       "x": 4,
       "y": 14,
       "width": 1,
@@ -780,7 +780,7 @@
     },
     {
       "id": "MAPSEC_INDIGO_PLATEAU",
-      "name": "INDIGO PLATEAU",
+      "name": "MESETA ANIL",
       "x": 2,
       "y": 3,
       "width": 1,
@@ -789,7 +789,7 @@
     },
     {
       "id": "MAPSEC_SAFFRON_CITY",
-      "name": "SAFFRON CITY",
+      "name": "CIUDAD AZAFRAN",
       "x": 14,
       "y": 6,
       "width": 1,
@@ -1038,7 +1038,7 @@
     },
     {
       "id": "MAPSEC_VIRIDIAN_FOREST",
-      "name": "VIRIDIAN FOREST",
+      "name": "BOSQUE VERDE",
       "x": 4,
       "y": 6,
       "width": 1,
@@ -1047,7 +1047,7 @@
     },
     {
       "id": "MAPSEC_MT_MOON",
-      "name": "MT. MOON",
+      "name": "MONTE MOON",
       "x": 9,
       "y": 3,
       "width": 1,
@@ -1089,7 +1089,7 @@
     },
     {
       "id": "MAPSEC_KANTO_VICTORY_ROAD",
-      "name": "VICTORY ROAD",
+      "name": "CALLE VICTORIA",
       "x": 2,
       "y": 4,
       "width": 1,
@@ -1097,7 +1097,7 @@
     },
     {
       "id": "MAPSEC_ROCKET_HIDEOUT",
-      "name": "ROCKET HIDEOUT",
+      "name": "GUARIDA ROCKET",
       "x": 11,
       "y": 6,
       "width": 1,
@@ -1106,7 +1106,7 @@
     },
     {
       "id": "MAPSEC_SILPH_CO",
-      "name": "SILPH CO.",
+      "name": "SILPH S.A.",
       "x": 14,
       "y": 6,
       "width": 1,
@@ -1114,7 +1114,7 @@
     },
     {
       "id": "MAPSEC_POKEMON_MANSION",
-      "name": "POKéMON MANSION",
+      "name": "MANSION POKEMON",
       "x": 4,
       "y": 14,
       "width": 1,
@@ -1122,7 +1122,7 @@
     },
     {
       "id": "MAPSEC_KANTO_SAFARI_ZONE",
-      "name": "SAFARI ZONE",
+      "name": "ZONA SAFARI",
       "x": 12,
       "y": 12,
       "width": 1,
@@ -1138,7 +1138,7 @@
     },
     {
       "id": "MAPSEC_ROCK_TUNNEL",
-      "name": "ROCK TUNNEL",
+      "name": "TUNEL ROCA",
       "x": 18,
       "y": 5,
       "width": 1,
@@ -1147,7 +1147,7 @@
     },
     {
       "id": "MAPSEC_SEAFOAM_ISLANDS",
-      "name": "SEAFOAM ISLANDS",
+      "name": "ISLAS ESPUMA",
       "x": 8,
       "y": 14,
       "width": 1,
@@ -1164,7 +1164,7 @@
     },
     {
       "id": "MAPSEC_CERULEAN_CAVE",
-      "name": "CERULEAN CAVE",
+      "name": "CUEVA CELESTE",
       "x": 13,
       "y": 3,
       "width": 1,
@@ -1173,7 +1173,7 @@
     },
     {
       "id": "MAPSEC_POWER_PLANT",
-      "name": "POWER PLANT",
+      "name": "CENTRAL ENERGETICA",
       "x": 18,
       "y": 4,
       "width": 1,
