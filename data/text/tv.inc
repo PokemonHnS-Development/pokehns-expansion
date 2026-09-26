@@ -1530,7 +1530,7 @@ gTVSecretBaseVisitText12::
 	.string "Los POKéMON del ENTRENADOR mostraron\n"
 	.string "gran promesa de crecimiento futuro.\p"
 	.string "They represented {STR_VAR_1}'s\n"
-	.string "hopes and dreams.\p"
+	.string "Dieron sobrada prueba de la\n"
 	.string "Que {STR_VAR_2} conociera el movimiento\n"
 	.string "{STR_VAR_3} salvaje...\p"
 	.string "muestra qué clase de ENTRENADOR\n"
@@ -1590,7 +1590,7 @@ gTVThePokemonBattleSeminarText04::
 	.string "{STR_VAR_2}.$"
 
 gTVThePokemonBattleSeminarText05::
-	.string "the move {STR_VAR_2}.$"
+	.string "el RINCÓN DE LA LOTERÍA POKéMON en\l"
 
 gTVThePokemonBattleSeminarText06::
 	.string "Entonces, en este caso, ¿qué debería\n"
@@ -2037,7 +2037,7 @@ TVSecretBaseSecrets_Text_Intro::
 	.string "¡SECRETOS DE LA BASE SECRETA!\p"
 	.string "¿Qué hacen los ENTRENADORES en el\n"
 	.string "secreto de las SECRET BASES?\p"
-	.string "Today, we investigate {STR_VAR_1}'s\n"
+	.string "cuando sea y como sea!$"
 	.string "SECRET BASE.\p"
 	.string "¡Oh! Parece que {STR_VAR_2} ha venido\n"
 	.string "de visita.\p"
@@ -2126,7 +2126,7 @@ TVSecretBaseSecrets_Text_BattledWon::
 	.string "¡{STR_VAR_1}!\p"
 	.string "¡Parece que van a tener\n"
 	.string "una batalla!\p"
-	.string "And...\p"
+	.string "¿La BASE SECRETA de {STR_VAR_1}\n"
 	.string "¡Es el visitante!\n"
 	.string "¡El visitante ganó un partido!\p"
 	.string "El visitante está haciendo\n"
@@ -2137,7 +2137,7 @@ TVSecretBaseSecrets_Text_BattledLost::
 	.string "¡{STR_VAR_1}!\p"
 	.string "¡Parece que van a tener\n"
 	.string "una batalla!\p"
-	.string "And...\p"
+	.string "¡El visitante está sentado!\p"
 	.string "¡Es {STR_VAR_1}!\n"
 	.string "¡El visitante ha perdido!\p"
 	.string "¡El visitante se ve abatido!$"
@@ -2147,7 +2147,7 @@ TVSecretBaseSecrets_Text_DeclinedBattle::
 	.string "¡{STR_VAR_1}!\p"
 	.string "¡Parece que van a tener\n"
 	.string "una batalla!\p"
-	.string "And...\p"
+	.string "el ruido repentino!$"
 	.string "¡No, el visitante se ha negado!\p"
 	.string "¡Al final no habrá batalla!\p"
 	.string "¿El visitante encontró {STR_VAR_1}\n"
@@ -2171,7 +2171,7 @@ TVSecretBaseSecrets_Text_BattledDraw::
 	.string "¡{STR_VAR_1}!\p"
 	.string "¡Parece que van a tener\n"
 	.string "una batalla!\p"
-	.string "And...\p"
+	.string "¡El visitante abrió mucho los ojos!$"
 	.string "¡Es un empate!\n"
 	.string "¡No se resolvió nada!\p"
 	.string "¡Ambos ENTRENADORES parecen estar\n"
@@ -2237,7 +2237,7 @@ TVSecretBaseSecrets_Text_UsedStand::
 	.string "¡El visitante subió a un SOPORTE!\p"
 	.string "El visitante mira desde lo alto\n"
 	.string "¡la BASE de {STR_VAR_1}!\p"
-	.string "And...\p"
+	.string "Y…\p"
 	.string "¡Lanzaremos un rugido!\n"
 	.string "¡El visitante está rugiendo!$"
 
@@ -2261,7 +2261,7 @@ TVSecretBaseSecrets_Text_UsedSlide::
 TVSecretBaseSecrets_Text_UsedSlideButDidntGoDown::
 	.string "El visitante sube la escalera\n"
 	.string "¡de un TOBOGÁN!\p"
-	.string "And...\p"
+	.string "Y...\p"
 	.string "El visitante bajó\n"
 	.string "¡por la escalera!\p"
 	.string "¿Se acobardó el visitante?$"
@@ -2440,7 +2440,7 @@ ContestLiveUpdates_Text_GotStartled::
 	.string "asustó por otro POKéMON,\l"
 	.string "estuve a punto de llorar.\p"
 	.string "{STR_VAR_2}, ¡fuiste resistente!\n"
-	.string "Way to go!$"
+	.string "MC: ¡Gracias por acompañarnos!\p"
 
 ContestLiveUpdates_Text_MoveWonderful::
 	.string "Espectador: Oh...\n"
