@@ -111,10 +111,10 @@ GoldenrodCity_UndergroundTunnel_Movement_Kimono_Leave2:
 
 
 GoldenrodCity_UndergroundTunnel_Text_Kimono1:
-	.string "Miembros del Team Rocket de traje\n"
+	.string "Miembros del EQUIPO ROCKET de traje\n"
 	.string "han estado corriendo por aquí...\p"
 	.string "Me preguntaba qué pasaba.\n"
-	.string "¿Así que enfrentaste al Team Rocket?\l"
+	.string "¿Así que enfrentaste al EQUIPO ROCKET?\l"
 	.string "¡Eres impresionante!\p"
 	.string "Tal vez puedas enfrentar al\n"
 	.string "legendario POKé...$"
@@ -338,7 +338,7 @@ GoldenrodUnderground_Text_YoungerBrotherAllDone:
     .string "¡Eso es! ¡Ya está!$"
 
 GoldenrodUnderground_Text_YoungerBrotherDisappointed:
-    .string "No? How disappointing!$"
+    .string "¿No? ¡Qué decepción!$"
 
 GoldenrodUnderground_Text_YoungerBrotherShortOnFunds:
     .string "Te falta un poco de dinero.$"
@@ -383,7 +383,7 @@ GoldenrodUnderground_Text_SupernerdEricSeen:
     .string "POKéMON...$"
 
 GoldenrodUnderground_Text_SupernerdEricBeaten:
-    .string "...Grumble...$"
+    .string "...Grrr...$"
 
 GoldenrodUnderground_Text_SupernerdEricAfterBattle:
     .string "Supongo que debo hacer las cosas de\n"
@@ -396,7 +396,7 @@ GoldenrodUnderground_Text_SupernerdTeruSeen:
     .string "te irá mejor en la batalla.$"
 
 GoldenrodUnderground_Text_SupernerdTeruBeaten:
-    .string "Ow, ow, ow!$"
+    .string "¡Ay, ay, ay!$"
 
 GoldenrodUnderground_Text_SupernerdTeruAfterBattle:
     .string "Conozco los tipos de mis POKéMON.\p"
@@ -407,7 +407,7 @@ GoldenrodUnderground_Text_PokemaniacIssacSeen:
     .string "pelo! ¡Mira qué fuerte es!$"
 
 GoldenrodUnderground_Text_PokemaniacIssacBeaten:
-    .string "Aiyeeee!$"
+    .string "¡Aaaay!$"
 
 GoldenrodUnderground_Text_PokemaniacIssacAfterBattle:
     .string "Tu POKéMON te querrá más si\n"

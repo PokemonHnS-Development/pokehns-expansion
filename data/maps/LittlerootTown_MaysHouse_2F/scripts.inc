@@ -317,7 +317,7 @@ RivalsHouse_2F_Text_MayWhoAreYou:
 	.string "Así que hoy era tu mudanza.\p"
 	.string "Este... yo soy MAY.\n"
 	.string "¡Mucho gusto!\p"
-	.string "I...\n"
+	.string "Yo...\n"
 	.string "Tengo el sueño de ser amiga de los\l"
 	.string "POKéMON de todo el mundo.\p"
 	.string "Yo... escuché sobre ti, {PLAYER}{KUN}, de\n"

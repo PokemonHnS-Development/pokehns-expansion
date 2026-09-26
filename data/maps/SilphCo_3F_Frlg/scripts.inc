@@ -40,7 +40,7 @@ SilphCo_3F_Text_WhatAmIToDo::
 
 SilphCo_3F_Text_YouAndYourMonsSavedUs::
 	.string "¡{PLAYER}!\n"
-	.string "You and your POKéMON saved us!$"
+	.string "¡Tú y tus POKéMON nos salvaron!$"
 
 SilphCo_3F_Text_GruntIntro::
 	.string "¡Deja de meterte con nosotros, chico!$"
@@ -53,8 +53,8 @@ SilphCo_3F_Text_GruntPostBattle::
 	.string "¡UNA TARJETA LLAVE!$"
 
 SilphCo_3F_Text_JoseIntro::
-	.string "I support TEAM ROCKET more than\n"
-	.string "I support SILPH CO.!$"
+	.string "Apoyo al TEAM ROCKET más que\n"
+	.string "¡Apoyo a SILPH CO.!$"
 
 SilphCo_3F_Text_JoseDefeat::
 	.string "¡Me venciste!$"
@@ -62,7 +62,7 @@ SilphCo_3F_Text_JoseDefeat::
 SilphCo_3F_Text_JosePostBattle::
 	.string "Humph...\p"
 	.string "El EQUIPO ROCKET dijo que si\n"
-	.string "them, they'd let me study POKéMON.$"
+	.string "me dejaban estudiar POKéMON.$"
 
 SilphCo_3F_Text_FloorSign::
 	.string "SILPH CO. HEAD OFFICE\n"

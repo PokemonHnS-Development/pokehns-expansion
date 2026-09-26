@@ -16,8 +16,8 @@ SSAnne_B1F_Room4_Text_LeonardIntro::
 	.string "los marineros y las batallas!$"
 
 SSAnne_B1F_Room4_Text_LeonardDefeat::
-	.string "Right!\n"
-	.string "Good battle, mate!$"
+	.string "¡Exacto!\n"
+	.string "¡Buena batalla, amigo!$"
 
 SSAnne_B1F_Room4_Text_LeonardPostBattle::
 	.string "¡Jajaja!\n"
@@ -25,12 +25,12 @@ SSAnne_B1F_Room4_Text_LeonardPostBattle::
 
 SSAnne_B1F_Room4_Text_DuncanIntro::
 	.string "¡Vamos, entonces!\n"
-	.string "My sailor's pride is at stake!$"
+	.string "¡Mi orgullo de marino está en juego!$"
 
 SSAnne_B1F_Room4_Text_DuncanDefeat::
 	.string "¡Tu espíritu me hundió!$"
 
 SSAnne_B1F_Room4_Text_DuncanPostBattle::
 	.string "¿Viste al GURÚ PESCADOR en\n"
-	.string "VERMILION CITY?$"
+	.string "¿CIUDAD CARMÍN?$"
 

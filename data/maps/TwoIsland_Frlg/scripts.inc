@@ -216,19 +216,19 @@ TwoIsland_EventScript_FastCurrentSign::
 	end
 
 TwoIsland_Text_IslandSign::
-	.string "TWO ISLAND\n"
+	.string "ISLA DOS\n"
 	.string "Isla del Favor para Dos$"
 
 TwoIsland_Text_JoyfulGameCornerSign::
-	.string "Skip & Chomp!\n"
-	.string "Joyful GAME CORNER$"
+	.string "¡Salta y Muerde!\n"
+	.string "ALEGRE SALA DE JUEGOS$"
 
 TwoIsland_Text_DangerFastCurrent::
-	.string "DANGER! FAST CURRENT!\n"
+	.string "¡PELIGRO! ¡CORRIENTE RÁPIDA!\n"
 	.string "¡Prohibido pescar y surfear!$"
 
 TwoIsland_Text_WelcomeToShopMerchandiseLimited::
-	.string "Oh!\n"
+	.string "¡Oh!\n"
 	.string "¡Hola, bienvenido a mi tienda!\p"
 	.string "Recién hemos abierto.\p"
 	.string "Nuestra mercancía es limitada,\n"
@@ -239,7 +239,7 @@ TwoIsland_Text_AddedMerchandiseForLostelle::
 	.string "que estoy por rescatar a LOSTELLE.\p"
 	.string "Gracias a tu hazaña, la gente\n"
 	.string "de ISLA TRES ha cambiado su\l"
-	.string "attitudes about KANTO people.\p"
+	.string "actitud hacia la gente de KANTO.\p"
 	.string "Y soy de KANTO, ya sabes.\p"
 	.string "La gente de TRES ISLAS\n"
 	.string "me ayudó a ampliar mi mercancía.$"
@@ -249,10 +249,10 @@ TwoIsland_Text_HopeYouGiveItYourBest::
 	.string "Espero que tú también, {PLAYER}.$"
 
 TwoIsland_Text_BringingItemsFromDistantLands::
-	.string "Oh, hello, {PLAYER}!\n"
+	.string "¡Oh, hola, {PLAYER}!\n"
 	.string "¡Bienvenido!\p"
 	.string "He empezado a traer objetos\n"
-	.string "distant lands.\p"
+	.string "de tierras lejanas.\p"
 	.string "También tengo objetos raros.\n"
 	.string "¡Echa un vistazo!$"
 
@@ -288,13 +288,13 @@ TwoIsland_Text_BuyRareItemsHere::
 TwoIsland_Text_OldWomanLivesOutOnCape::
 	.string "Hay una anciana que vive en\n"
 	.string "una cabaña en el cabo.\p"
-	.string "She gives the eye to POKéMON.\n"
+	.string "Les hace ojitos a los POKéMON.\n"
 	.string "Es un poco inquietante.$"
 
 TwoIsland_Text_HaveYouTriedJumpingGame::
 	.string "Boing! Boing!\n"
 	.string "¿Probaste el juego de saltar?\p"
-	.string "The POKéMON you can enter...\n"
+	.string "Los POKéMON que puedes llevar...\n"
 	.string "Boing!\p"
 	.string "Unos hacen ¡boing!\p"
 	.string "¡Y otros hacen booooooing!\p"

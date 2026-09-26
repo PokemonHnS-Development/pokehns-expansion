@@ -36,10 +36,10 @@ Route20_Text_BarryIntro::
 	.string "Hay mucha gente nadando.$"
 
 Route20_Text_BarryDefeat::
-	.string "Splash!$"
+	.string "¡Chof!$"
 
 Route20_Text_BarryPostBattle::
-	.string "I wish I could ride my POKéMON.\n"
+	.string "Ojalá pudiera montar mi POKéMON.\n"
 	.string "Apuesto a que no estás cansado.$"
 
 Route20_Text_ShirleyIntro::
@@ -58,7 +58,7 @@ Route20_Text_TiffanyIntro::
 	.string "aquí entre las olas.$"
 
 Route20_Text_TiffanyDefeat::
-	.string "Yowch!$"
+	.string "¡Auch!$"
 
 Route20_Text_TiffanyPostBattle::
 	.string "¿Quieres flotar conmigo?$"
@@ -77,7 +77,7 @@ Route20_Text_DeanIntro::
 	.string "¡Mira mi físico musculoso!$"
 
 Route20_Text_DeanDefeat::
-	.string "Wimpy!$"
+	.string "¡Cobarde!$"
 
 Route20_Text_DeanPostBattle::
 	.string "Debí haber estado fortaleciendo\n"
@@ -89,7 +89,7 @@ Route20_Text_DarrinIntro::
 
 Route20_Text_DarrinDefeat::
 	.string "¡Ay!\n"
-	.string "Torpedoed!$"
+	.string "¡Torpedeado!$"
 
 Route20_Text_DarrinPostBattle::
 	.string "Riding a POKéMON sure looks fun!$"
@@ -114,20 +114,20 @@ Route20_Text_NoraDefeat::
 
 Route20_Text_NoraPostBattle::
 	.string "¿Mis perlas crecerán más dentro\n"
-	.string "CLOYSTER?$"
+	.string "¿CLOYSTER?$"
 
 Route20_Text_MissyIntro::
 	.string "Nadé desde ISLA CANELA hasta aquí.\n"
 	.string "No fue fácil, te lo digo.$"
 
 Route20_Text_MissyDefeat::
-	.string "I'm so disappointed!$"
+	.string "¡Qué decepción!$"
 
 Route20_Text_MissyPostBattle::
-	.string "POKéMON have taken over an\n"
+	.string "POKéMON se han apoderado de una\n"
 	.string "mansión abandonada de ISLA C.\p"
-	.string "They call it the POKéMON MANSION\n"
-	.string "now.$"
+	.string "La llaman la MANSIÓN POKéMON\n"
+	.string "ahora.$"
 
 Route20_Text_MelissaIntro::
 	.string "En CANELA, al oeste, hay un LAB\n"
@@ -144,10 +144,10 @@ Route20_Text_MelissaPostBattle::
 	.string "cuando un volcán hizo erupción.$"
 
 Route20_Text_SeafoamIslands::
-	.string "SEAFOAM ISLANDS$"
+	.string "ISLAS ESPUMA$"
 
 Route20_Text_MistyTrainsHere::
-	.string "Strong TRAINERS and WATER POKéMON\n"
+	.string "ENTRENADORES fuertes y POKéMON de\n"
 	.string "de AGUA abundan por aquí.\p"
 	.string "Dicen que MISTY, del\n"
 	.string "GIMNASIO CERULEAN, entrena aquí.$"

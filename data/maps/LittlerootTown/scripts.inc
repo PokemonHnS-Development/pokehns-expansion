@@ -917,7 +917,7 @@ LittlerootTown_Text_OurNewHomeLetsGoInside:
 	.string "Entremos.$"
 
 LittlerootTown_Text_WaitPlayer:
-	.string "MOM: Wait, {PLAYER}!$"
+	.string "MAMÁ: ¡Espera, {PLAYER}!$"
 
 LittlerootTown_Text_WearTheseRunningShoes:
 	.string "MAMÁ: {PLAYER}! {PLAYER}! ¿Acaso\n"
@@ -974,12 +974,12 @@ LittlerootTown_Text_DangerousIfYouDontHavePokemon:
 	.string "tu propio POKéMON.$"
 
 LittlerootTown_Text_CanYouGoSeeWhatsHappening:
-	.string "Um, hi!\p"
-	.string "¡Hay POKéMON aterradores fuera!\n"
-	.string "¡Puedo oír sus gritos!\p"
-	.string "Quiero ir a ver qué pasa,\n"
+	.string "¡Hola!\p"
+	.string "¡Hay POKéMON aterradores afuera!\n"
+	.string "¡Oigo sus gritos!\p"
+	.string "Quiero ver qué pasa,\n"
 	.string "pero no tengo POKéMON...\p"
-	.string "¿Puedes ir a ver qué ocurre\n"
+	.string "¿Puedes ir a ver qué pasa\n"
 	.string "por mí?$"
 
 LittlerootTown_Text_YouSavedBirch:
@@ -995,13 +995,13 @@ LittlerootTown_Text_TownSign:
 	.string "“Un pueblo que no tiene matices”.$"
 
 LittlerootTown_Text_ProfBirchsLab:
-	.string "PROF. BIRCH'S POKéMON LAB$"
+	.string "LAB. POKéMON DEL PROF. BIRCH$"
 
 LittlerootTown_Text_PlayersHouse:
 	.string "CASA DE {PLAYER}$"
 
 LittlerootTown_Text_ProfBirchsHouse:
-	.string "PROF. BIRCH'S HOUSE$"
+	.string "CASA DEL PROF. BIRCH$"
 
 LittlerootTown_Text_BirchSomethingToShowYouAtLab:
 	.string "PROF. BIRCH: ¡Vaya, vaya, {PLAYER}{KUN}!\n"

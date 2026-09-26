@@ -37,27 +37,27 @@ CeruleanCity_PokemonCenter_1F_EventScript_Lass::
 CeruleanCity_PokemonCenter_1F_Text_BillDoesWhateverForRareMons::
 	.string "¡Ese BILL!\p"
 	.string "Me dijeron que hará lo que sea\n"
-	.string "takes to get rare POKéMON.\p"
+	.string "para conseguir POKéMON raros.\p"
 	.string "No le detiene hacer todo tipo\n"
 	.string "de cosas, según escuché.$"
 
 CeruleanCity_PokemonCenter_1F_Text_EveryoneCallsBillPokemaniac::
 	.string "¿Sabes algo de BILL?\p"
-	.string "Everyone calls him a POKéMANIAC!\p"
+	.string "¡Todos lo llaman POKéMANÍACO!\p"
 	.string "Creo que la gente solo tiene\n"
-	.string "BILL, though.\p"
+	.string "BILL, digo.\p"
 	.string "¿Quién no querría presumir de\n"
-	.string "their POKéMON?$"
+	.string "sus POKéMON?$"
 
 CeruleanCity_PokemonCenter_1F_Text_BillCollectsRareMons::
-	.string "BILL has lots of POKéMON!\n"
+	.string "¡BILL tiene muchos POKéMON!\n"
 	.string "¡También colecciona los raros!$"
 
 CeruleanCity_PokemonCenter_1F_Text_TryTradingUpstairs::
 	.string "¿Por qué no subes y pruebas?\n"
-	.string "trading POKéMON with your friends?\p"
+	.string "intercambiar POKéMON con amigos?\p"
 	.string "Podrías tener más variedad\n"
-	.string "by trading.\p"
-	.string "The POKéMON you get in trades grow\n"
-	.string "quickly, too.$"
+	.string "intercambiando.\p"
+	.string "Los POKéMON que cambias crecen\n"
+	.string "rápido, también.$"
 

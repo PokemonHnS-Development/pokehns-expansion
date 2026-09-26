@@ -85,7 +85,7 @@ Route5_SouthEntrance_Movement_BlockPlayerEntry::
 
 Route5_SouthEntrance_Text_ThirstyOnGuardDuty::
 	.string "Estoy de guardia.\n"
-	.string "Gee, I'm thirsty, though!\p"
+	.string "¡Vaya, qué sed tengo!\p"
 	.string "Ah, espera, el camino está cerrado.$"
 
 Route5_SouthEntrance_Text_ThatTeaLooksTasty::
@@ -94,17 +94,17 @@ Route5_SouthEntrance_Text_ThatTeaLooksTasty::
 
 Route5_SouthEntrance_Text_ThanksIllShareTeaWithGuards::
 	.string "¿Eh? ¿Puedo tomar esta bebida?\n"
-	.string "Gee, thanks!\l"
+	.string "¡Vaya, gracias!\l"
 	.string "... ...\l"
 	.string "Glug, glug...\l"
 	.string "... ...\l"
 	.string "Gulp...\l"
 	.string "Si quieres ir a AZULONA\l"
-	.string "CITY...\l"
+	.string "CIUDAD...\l"
 	.string "... ...\l"
 	.string "Puedes pasar.\p"
 	.string "Compartiré este TÉ con los demás\n"
-	.string "guards!$"
+	.string "guardias!$"
 
 Route5_SouthEntrance_Text_HiHowsItGoing::
 	.string "Hola, ¿qué tal?$"

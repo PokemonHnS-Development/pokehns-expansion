@@ -449,19 +449,19 @@ PalletTown_EventScript_SignLadyStartShowSign::
 	end
 
 PalletTown_Text_OakDontGoOut::
-	.string "OAK: Hey! Wait!\n"
+	.string "OAK: ¡Oye! ¡Espera!\n"
 	.string "¡No salgas!$"
 
 PalletTown_Text_OakGrassUnsafeNeedMon::
 	.string "OAK: ¡Es peligroso!\n"
-	.string "Wild POKéMON live in tall grass!\p"
-	.string "You need your own POKéMON for\n"
+	.string "¡Viven POKéMON salvajes en la hierba!\p"
+	.string "Necesitas tu propio POKéMON para\n"
 	.string "tu protección.\p"
-	.string "I know!\n"
+	.string "¡Lo sé!\n"
 	.string "¡Ven conmigo!$"
 
 PalletTown_Text_RaisingMonsToo::
-	.string "I'm raising POKéMON, too.\p"
+	.string "Yo también crío POKéMON.\p"
 	.string "Cuando se hacen fuertes, pueden\n"
 	.string "protegerme.$"
 
@@ -471,16 +471,16 @@ PalletTown_Text_CanStoreItemsAndMonsInPC::
 	.string "and POKéMON as data via PC.$"
 
 PalletTown_Text_OakPokemonResearchLab::
-	.string "OAK POKéMON RESEARCH LAB$"
+	.string "LABORATORIO POKéMON DE OAK$"
 
 PalletTown_Text_PlayersHouse::
-	.string "{PLAYER}'s house$"
+	.string "CASA DE {PLAYER}$"
 
 PalletTown_Text_RivalsHouse::
-	.string "{RIVAL}'s house$"
+	.string "CASA DE {RIVAL}$"
 
 PalletTown_Text_TownSign::
-	.string "PALLET TOWN\n"
+	.string "PUEBLO PALETA\n"
 	.string "objetos. ¡Tu viaje te espera!$"
 
 PalletTown_Text_OakLetMeSeePokedex::
@@ -503,7 +503,7 @@ PalletTown_Text_CaughtXImpressiveFollowMe::
 	.string "¡Esto es impresionante!\p"
 	.string "Hay algo que quería preguntar\n"
 	.string "te, {PLAYER}.\p"
-	.string "Come.\n"
+	.string "Ven.\n"
 	.string "Sígueme.$"
 
 PalletTown_Text_OakYouEnjoyingTraveling::
@@ -511,18 +511,18 @@ PalletTown_Text_OakYouEnjoyingTraveling::
 	.string "Parece que disfrutas viajar.\p"
 	.string "Conociéndote, {PLAYER}, es fácil\n"
 	.string "imaginarte saliendo a explorar\l"
-	.string "exotic locales.\p"
+	.string "lugares exóticos.\p"
 	.string "Bien por ti, bien por ti.\n"
 	.string "Hohoho.$"
 
 @ For the NPC in Pallet Town that talks about the Trainer Tips sign
 PalletTown_Text_HmmIsThatRight::
-	.string "Hmm...\n"
+	.string "Mmm...\n"
 	.string "¿En serio...?$"
 
 PalletTown_Text_OhLookLook::
 	.string "Oh!\n"
-	.string "Look, look!$"
+	.string "¡Mira, mira!$"
 
 PalletTown_Text_ReadItReadIt::
 	.string "¡Léelo, léelo!$"
@@ -536,13 +536,13 @@ PalletTown_Text_SignsAreUsefulArentThey::
 	.string "Los carteles son útiles, ¿no?$"
 
 PalletTown_Text_LookCopiedTrainerTipsSign::
-	.string "Look, look!\p"
+	.string "¡Mira, mira!\p"
 	.string "Copié lo que decía en uno de\n"
-	.string "those TRAINER TIPS signs!$"
+	.string "¡esos carteles de CONSEJOS!$"
 
 @ Used by NPC
 PalletTown_Text_PressStartToOpenMenuCopy::
-	.string "TRAINER TIPS!\p"
+	.string "¡CONSEJOS!\p"
 	.string "¡Presiona START para abrir el MENÚ!$"
 
 

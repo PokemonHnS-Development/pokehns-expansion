@@ -20,17 +20,17 @@ SSAnne_1F_Room2_Text_TylerIntro::
 	.string "¿Tú sí?$"
 
 SSAnne_1F_Room2_Text_TylerDefeat::
-	.string "Wow! \n"
+	.string "¡Vaya! \n"
 	.string "¡Eres genial!$"
 
 SSAnne_1F_Room2_Text_TylerPostBattle::
 	.string "¡Escucha, escucha!\n"
 	.string "Sé mi amigo, ¿de acuerdo?\p"
-	.string "Then we can trade POKéMON and\n"
-	.string "hacer cosas.$"
+	.string "Así podremos intercambiar POKéMON\n"
+	.string "y hacer cosas.$"
 
 SSAnne_1F_Room2_Text_AnnIntro::
-	.string "I collected these POKéMON\n"
+	.string "Recogí estos POKéMON\n"
 	.string "¡de todo el mundo!$"
 
 SSAnne_1F_Room2_Text_AnnDefeat::

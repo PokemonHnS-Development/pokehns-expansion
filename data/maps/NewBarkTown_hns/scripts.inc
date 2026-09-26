@@ -225,7 +225,7 @@ NewBarkTown_Movement_FaceDown:
 	step_end
 
 NewBarkTown_Text_LabSign:
-	.string "PROF.ELM'S LAB$"
+	.string "LAB. DEL PROF. ELM$"
 
 NewBarkTown_Text_Door:
 	.string "La puerta está cerrada.$"
@@ -284,8 +284,8 @@ NewBarkTown_EventScript_ElmsHouseMailbox::
 	end
 
 NewBarkTown_Text_PlayersHouse:
-	.string "{PLAYER}'S HOUSE$"
+	.string "CASA DE {PLAYER}$"
 
 NewBarkTown_Text_ElmsHouse:
-	.string "PROF.ELM'S HOUSE$"
+	.string "CASA DEL PROF. ELM$"
 

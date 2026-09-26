@@ -281,7 +281,7 @@ LakeOfRage_Text_LanceRefused:
 
 LakeOfRage_Text_LanceAskHelp:
     .string "LANCE: ¿Hm? ¿Vas a ayudar?\n"
-    .string "us?$"
+    .string "¿nosotros?$"
 
 LakeOfRage_Text_GyaradosCry:
     .string "GYARADOS: Gyashaa!$"
@@ -337,7 +337,7 @@ LakeOfRage_Text_CooltrainermAaronSeen:
     .string "Ese es nuestro destino.$"
 
 LakeOfRage_Text_CooltrainermAaronBeaten:
-    .string "Whew... Good battle.$"
+    .string "Uf... Buen combate.$"
 
 LakeOfRage_Text_CooltrainermAaronAfter:
     .string "Los POKéMON y su ENTRENADOR se\n"
@@ -352,7 +352,7 @@ LakeOfRage_Text_CooltrainerfLoisSeen:
     .string "Ya sé... ¡luchemos!$"
 
 LakeOfRage_Text_CooltrainerfLoisBeaten:
-    .string "Good going!$"
+    .string "¡Bien hecho!$"
 
 LakeOfRage_Text_CooltrainerfLoisAfter:
     .string "Ahora que lo pienso, vi un\n"
@@ -439,4 +439,4 @@ LakeOfRage_Text_Sign:
     .string "también llamado LAGO GYARADOS.$"
 
 LakeOfRage_Text_FishingGuruSign:
-    .string "FISHING GURU'S HOUSE$"
+    .string "CASA DEL GURU DE PESCA$"

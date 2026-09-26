@@ -65,7 +65,7 @@ VerdanturfTown_FriendshipRatersHouse_EventScript_Pikachu::
 VerdanturfTown_FriendshipRatersHouse_Text_SeeHowMuchPokemonLikesYou:
 	.string "Déjame ver a tu POKéMON.\n"
 	.string "Veré cuánto cariño te tiene.\p"
-	.string "Oh.\n"
+	.string "Vaya.\n"
 	.string "Tu POKéMON...$"
 
 VerdanturfTown_FriendshipRatersHouse_Text_AdoresYou:

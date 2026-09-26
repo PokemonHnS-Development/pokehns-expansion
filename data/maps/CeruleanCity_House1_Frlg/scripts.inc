@@ -80,67 +80,67 @@ CeruleanCity_House1_Text_BadgesHaveAmazingSecrets::
 	.string "increíbles, ¿sabías?$"
 
 CeruleanCity_House1_Text_DescribeWhichBadge::
-	.string "Now then...\p"
+	.string "Entonces...\p"
 	.string "¿Cuál de las ocho MEDALLAS\n"
-	.string "I describe?$"
+	.string "te describo?$"
 
 CeruleanCity_House1_Text_ComeVisitAnytime::
 	.string "Visítame cuando quieras.$"
 
 CeruleanCity_House1_Text_AttackStatFlash::
-	.string "El ATQUE de todos tus\n"
-	.string "POKéMON increases a little bit.\p"
+	.string "El ATAQUE de todos tus\n"
+	.string "POKéMON aumenta un poco.\p"
 	.string "También te permite usar\n"
 	.string "DESTELLO fuera de combate.$"
 
 CeruleanCity_House1_Text_ObeyLv30Cut::
-	.string "POKéMON up to Lv. 30 will obey\n"
-	.string "vencerte.\p"
+	.string "Los POKéMON de hasta Nv. 30 te\n"
+	.string "obedecerán.\p"
 	.string "Eso incluye a los externos\n"
 	.string "obtenerse en intercambios.\p"
-	.string "POKéMON of higher levels will\n"
-	.string "ser indisciplinado en combate.\p"
+	.string "Los POKéMON de mayor nivel\n"
+	.string "desobedecerán en combate.\p"
 	.string "También te permite usar\n"
 	.string "CORTE fuera de combate.$"
 
 CeruleanCity_House1_Text_SpeedStatFly::
 	.string "La estadística VELOCIDAD de todos tus\n"
-	.string "POKéMON increases a little bit.\p"
+	.string "POKéMON aumenta un poco.\p"
 	.string "También te permite usar\n"
 	.string "VUELO fuera de combate.$"
 
 CeruleanCity_House1_Text_ObeyLv50Strength::
-	.string "POKéMON up to Lv. 50 will obey\n"
-	.string "vencerte.\p"
+	.string "Los POKéMON de hasta Nv. 50 te\n"
+	.string "obedecerán.\p"
 	.string "Eso incluye a los externos\n"
 	.string "obtenerse en intercambios.\p"
-	.string "POKéMON of higher levels will\n"
-	.string "ser indisciplinado en combate.\p"
+	.string "Los POKéMON de mayor nivel\n"
+	.string "desobedecerán en combate.\p"
 	.string "También te permite usar\n"
 	.string "FUERZA fuera de combate.$"
 
 CeruleanCity_House1_Text_DefenseStatSurf::
 	.string "La estadística DEFENSA de todos\n"
-	.string "POKéMON increases a little bit.\p"
+	.string "POKéMON aumenta un poco.\p"
 	.string "También te permite usar\n"
 	.string "SURF fuera de combate.$"
 
 CeruleanCity_House1_Text_ObeyLv70RockSmash::
-	.string "POKéMON up to Lv. 70 will obey\n"
-	.string "vencerte.\p"
+	.string "Los POKéMON de hasta Nv. 70 te\n"
+	.string "obedecerán.\p"
 	.string "Eso incluye a los externos\n"
 	.string "obtenerse en intercambios.\p"
-	.string "POKéMON of higher levels will\n"
-	.string "ser indisciplinado en combate.\p"
+	.string "Los POKéMON de mayor nivel\n"
+	.string "desobedecerán en combate.\p"
 	.string "También te permite usar\n"
 	.string "GOLPE ROCA fuera del combate.$"
 
 CeruleanCity_House1_Text_SpStatsWaterfall::
-	.string "Los stats de AT. ESP y DEF. ESP\n"
-	.string "all your POKéMON rise a little bit.\p"
+	.string "Los stats de AT. ESP. y DEF. ESP. de\n"
+	.string "todos tus POKéMON suben un poco.\p"
 	.string "También te permite usar\n"
 	.string "CASCADA fuera de combate.$"
 
 CeruleanCity_House1_Text_AllMonsWillObeyYou::
-	.string "All POKéMON will obey you!$"
+	.string "¡Todos los POKéMON te obedecerán!$"
 

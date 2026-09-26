@@ -42,7 +42,7 @@ SproutTower_Text_SageEdmond_Seen:
 	.string "...Se mece como hoja al viento...$"
 
 SproutTower_Text_SageEdmond_Beaten:
-	.string "Oh, I'm weak!$"
+	.string "¡Ay, soy débil!$"
 
 SproutTower_Text_SageEdmond_AfterBattle:
 	.string "Traté de copiar los suaves\n"

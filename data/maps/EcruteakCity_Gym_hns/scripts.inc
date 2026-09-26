@@ -77,7 +77,7 @@ EcruteakCity_Gym_EventScript_Statue2::
 	end
 
 EcruteakCity_Gym_Text_GymStatue:
-	.string "ECRUTEAK CITY POKéMON GYM$"
+	.string "GIMNASIO POKéMON CIUDAD IRIS$"
 
 EcruteakCity_Gym_Text_GymStatueCertified:
 	.string "GIMNASIO POKéMON CIUDAD IRIS\p"
@@ -161,14 +161,14 @@ SageJeffreyBeatenText:
 	.string "conocido ambas.$"
 
 SageJeffreyAfterBattleText:
-	.string "Where did POKéMON come from?$"
+	.string "¿De dónde vienen los POKéMON?$"
 
 SagePingSeenText:
 	.string "¿Puedes hacerle algún daño\n"
 	.string "a nuestros POKéMON?$"
 
 SagePingBeatenText:
-	.string "Ah! Well done!$"
+	.string "¡Ah! ¡Bien hecho!$"
 
 SagePingAfterBattleText:
 	.string "Usamos POKéMON tipo FANTASMA.\p"
@@ -176,10 +176,10 @@ SagePingAfterBattleText:
 	.string "puede dañarlos!$"
 
 MediumMarthaSeenText:
-	.string "I shall win!$"
+	.string "¡Voy a ganar!$"
 
 MediumMarthaBeatenText:
-	.string "I... I... I lost!$"
+	.string "Yo... Yo... ¡Yo perdí!$"
 
 MediumMarthaAfterBattleText:
 	.string "¡Quien más desea ganar,\n"

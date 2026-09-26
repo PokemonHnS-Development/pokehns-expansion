@@ -186,7 +186,7 @@ FortreeCity_Gym_Text_FlintIntro:
 
 FortreeCity_Gym_Text_FlintDefeat:
 	.string "WINONA, yo...\n"
-	.string "I lost!$"
+	.string "¡Perdí!$"
 
 FortreeCity_Gym_Text_FlintPostBattle:
 	.string "WINONA es linda y es fuerte.\n"
@@ -277,7 +277,7 @@ FortreeCity_Gym_Text_WinonaPostBattle:
 	.string "dedicada a los POKéMON ave.$"
 
 FortreeCity_Gym_Text_GymStatue:
-	.string "FORTREE CITY POKéMON GYM$"
+	.string "GIMNASIO POKéMON CIUDAD BOSQUE$"
 
 FortreeCity_Gym_Text_GymStatueCertified:
 	.string "GIMNASIO POKéMON CIUDAD BOSQUE\p"

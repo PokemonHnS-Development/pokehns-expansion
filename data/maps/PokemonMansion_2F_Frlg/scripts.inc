@@ -34,14 +34,14 @@ PokemonMansion_Text_PressSecretSwitch::
 	.string "¿Lo presiono?$"
 
 PokemonMansion_Text_WhoWouldnt::
-	.string "Who wouldn't?$"
+	.string "¿Quién no?$"
 
 PokemonMansion_Text_NotQuiteYet::
 	.string "¡Todavía no!$"
 
 PokemonMansion_1F_Text_ArnieIntro::
 	.string "¡No puedo salir!\n"
-	.string "This old place is one big puzzle.$"
+	.string "Este viejo lugar es un gran enigma.$"
 
 PokemonMansion_1F_Text_ArnieDefeat::
 	.string "¡Oh, no!\n"
@@ -52,13 +52,13 @@ PokemonMansion_1F_Text_ArniePostBattle::
 	.string "grupos alternos de puertas.$"
 
 PokemonMansion_1F_Text_NewMonDiscoveredInGuyanaJungle::
-	.string "Diary: July 5\n"
-	.string "Guyana, South America\p"
-	.string "A new POKéMON was discovered deep\n"
+	.string "Diario: 5 de julio\n"
+	.string "Guyana, Sudamérica\p"
+	.string "Se descubrió un nuevo POKéMON\n"
 	.string "en la jungla.$"
 
 PokemonMansion_1F_Text_ChristenedDiscoveredMonMew::
-	.string "Diary: July 10\n"
+	.string "Diario: 10 de julio\n"
 	.string "Bautizamos al recién descubierto\l"
 	.string "POKéMON, MEW.$"
 

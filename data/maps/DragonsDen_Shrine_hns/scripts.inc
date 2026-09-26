@@ -210,7 +210,7 @@ DragonsDen_Shrine_Text_WrongAnswer2:
     .string "¿Qué fue lo que dijiste?$"
 
 DragonsDen_Shrine_Text_RightAnswer:
-    .string "Oh, I understand...$"
+    .string "Oh, ya entiendo...$"
 
 DragonsDen_Shrine_Text_PassedTest:
     .string "Hm... ya veo...\p"
@@ -358,7 +358,7 @@ DragonsDen_Shrine_Text_MustIInformLance:
     .string "¿O debo informarle a LANCE?$"
 
 DragonsDen_Shrine_Text_IUnderstand:
-    .string "I-I understand...$"
+    .string "E-entiendo...$"
 
 DragonsDen_Shrine_Text_HereRisingBadge:
     .string "Toma, es la INSIGNIA ASCENDENTE...\p"

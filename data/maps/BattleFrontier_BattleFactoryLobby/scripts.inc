@@ -411,7 +411,7 @@ BattleFrontier_BattleFactoryLobby_Text_DidntSaveBeforeQuitting:
 
 @ Unused
 BattleFrontier_BattleFactoryLobby_Text_WellReturnMons:
-	.string "We'll return your personal POKéMON.$"
+	.string "Te devolveremos tus POKéMON personales.$"
 
 @ Unused
 BattleFrontier_BattleFactoryLobby_Text_ReceivedPrizeItem:
@@ -466,7 +466,7 @@ BattleFrontier_BattleFactoryLobby_Text_ExchangeMonsAndSave:
 BattleFrontier_BattleFactoryLobby_Text_RecordLastMatch:
 	.string "¿Quieres grabar tu última batalla\n"
 	.string "Combate de BATTLE FACTORY en tu\l"
-	.string "BATALLA en tu PASA FRONTERA?$"
+	.string "PASA FRONTERA?$"
 
 BattleFrontier_BattleFactoryLobby_Text_NeedKnowledgeOfMonsMoves:
 	.string "Hi!\n"

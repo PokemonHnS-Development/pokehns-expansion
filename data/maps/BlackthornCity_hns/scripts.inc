@@ -254,8 +254,8 @@ BlackthornGymSignText:
 	.string "La bendecida usuaria de POKéMON Dragón$"
 
 BlackthornCity_Text_MoveDeletersHouseSign:
-	.string "MOVE BROS' HOUSE$"
+	.string "CASA DE MOVE BROS.$"
 
 BlackthornCity_Text_DragonDenSign:
-	.string "DRAGON'S DEN AHEAD$"
+	.string "GUARIDA DRAGÓN ADELANTE$"
 

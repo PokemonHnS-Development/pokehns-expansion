@@ -40,28 +40,28 @@ CeladonCity_Restaurant_EventScript_FatMan::
 	end
 
 CeladonCity_Restaurant_Text_TakingBreakRightNow::
-	.string "Hi!\p"
+	.string "¡Hola!\p"
 	.string "Lo siento, pero estamos tomando un descanso\n"
 	.string "en este momento.$"
 
 CeladonCity_Restaurant_Text_OftenGoToDrugstore::
-	.string "My POKéMON are weak, so I often\n"
+	.string "Mis POKéMON son débiles, así que\n"
 	.string "Tengo que ir a la FARMACIA.$"
 
 CeladonCity_Restaurant_Text_PsstBasementUnderGameCorner::
 	.string "¡Pst! Hay un sótano debajo del\n"
-	.string "GAME CORNER, I hear.$"
+	.string "GAME CORNER, escuché.$"
 
 CeladonCity_Restaurant_Text_ManLostItAllAtSlots::
-	.string "Munch...\p"
+	.string "Ñam...\p"
 	.string "El hombre de esa mesa lo perdió todo\n"
 	.string "en las tragamonedas.$"
 
 CeladonCity_Restaurant_Text_TakeThisImBusted::
 	.string "¡Adelante! ¡Ríete!\n"
-	.string "I'm flat-out busted!\p"
+	.string "¡Estoy quebrado!\p"
 	.string "¡Ya no me quedan espacios!\n"
-	.string "I'm going straight!\p"
+	.string "¡Me voy a reformar!\p"
 	.string "¡Toma!\n"
 	.string "¡Ya no necesitaré esto!$"
 

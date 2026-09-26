@@ -403,7 +403,7 @@ MossdeepCity_SpaceCenter_1F_Text_Grunt2Intro:
 	.string "pasará por delante de mí!$"
 
 MossdeepCity_SpaceCenter_1F_Text_Grunt2Defeat:
-	.string "Ack! Ack! Aaack!$"
+	.string "¡Ay! ¡Ay! ¡Aaaay!$"
 
 MossdeepCity_SpaceCenter_1F_Text_Grunt2PostBattle:
 	.string "Por favor, dile al líder que\n"

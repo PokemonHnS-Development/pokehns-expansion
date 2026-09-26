@@ -29,14 +29,14 @@ SaffronCity_MrPsychicsHouse_Text_YouWantedThis::
 	.string "¡Querías esto!$"
 
 SaffronCity_MrPsychicsHouse_Text_ReceivedTM29FromMrPsychic::
-	.string "{PLAYER} received TM29\n"
+	.string "{PLAYER} recibió MT29\n"
 	.string "del SR. PSÍQUICO.$"
 
 SaffronCity_MrPsychicsHouse_Text_ExplainTM29::
 	.string "Ya lo sabes, ¿verdad?\n"
 	.string "La MT29 es PSÍQUICO.\p"
 	.string "Es un ataque que también puede\n"
-	.string "the target's special stats.$"
+	.string "bajar las estadísticas del rival.$"
 
 SaffronCity_MrPsychicsHouse_Text_YouveNoRoom::
 	.string "¿Dónde piensas poner esto?\n"

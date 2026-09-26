@@ -386,11 +386,11 @@ ThreeIsland_EventScript_Biker6::
 	end
 
 ThreeIsland_Text_IslandSign::
-	.string "THREE ISLAND\n"
+	.string "ISLA TERCERA\n"
 	.string "Isla Kin del Vínculo Familiar$"
 
 ThreeIsland_Text_IslandBelongsToUs::
-	.string "Hyahoo!\p"
+	.string "¡Hyahoo!\p"
 	.string "Desde hoy, esta isla\n"
 	.string "¡es nuestra!$"
 
@@ -405,7 +405,7 @@ ThreeIsland_Text_BossIsOnHisWay::
 	.string "Nuestro jefe está en camino.\p"
 	.string "Cuando llegue, te daremos\n"
 	.string "un espectáculo de motos muy\l"
-	.string "soon forget!$"
+	.string "¡será inolvidable!$"
 
 ThreeIsland_Text_GetOffIslandNow::
 	.string "¡¿Q-qué?! ¡Ni lo pienses!\n"
@@ -459,11 +459,11 @@ ThreeIsland_Text_Biker1Intro::
 	.string "Perderás dinero conmigo, pero...$"
 
 ThreeIsland_Text_Biker1Defeat::
-	.string "Wha...\n"
+	.string "¿Qué...?\n"
 	.string "¿Qué es esto, niño?!$"
 
 ThreeIsland_Text_Biker1PostBattle::
-	.string "Aww, man...\n"
+	.string "Ay, hombre...\n"
 	.string "¡No te atrevas a reír!$"
 
 ThreeIsland_Text_Biker2Intro::
@@ -471,12 +471,12 @@ ThreeIsland_Text_Biker2Intro::
 	.string "¡Deberías estar de nuestro lado!$"
 
 ThreeIsland_Text_Biker2Defeat::
-	.string "Stop fooling around!$"
+	.string "¡Deja de hacer tonterías!$"
 
 ThreeIsland_Text_Biker2PostBattle::
 	.string "¿Qué te pasa,\n"
 	.string "ponerte así de caliente?\p"
-	.string "Totally uncool, man!$"
+	.string "¡Nada genial, tío!$"
 
 ThreeIsland_Text_Biker3Intro::
 	.string "Invitamos al jefe aquí,\n"
@@ -494,12 +494,12 @@ ThreeIsland_Text_PaxtonIntro::
 	.string "Te he estado observando y diría\n"
 	.string "que ya hiciste suficiente.\p"
 	.string "¿Qué eres, su amigo o\n"
-	.string "something?\p"
+	.string "¿algo?\p"
 	.string "Entonces supongo que pelearás\n"
 	.string "conmigo en su lugar.$"
 
 ThreeIsland_Text_PaxtonDefeat::
-	.string "All right, enough!\n"
+	.string "¡Muy bien, basta!\n"
 	.string "¡Nos iremos como querías!\p"
 	.string "Será un gusto ver el final\n"
 	.string "¡esta aburrida isla!$"
@@ -510,8 +510,8 @@ ThreeIsland_Text_PaxtonPostBattle::
 
 ThreeIsland_Text_ThankYouOhYourMonGotHurt::
 	.string "¡Gracias! Esos matones\n"
-	.string "nothing but bad trouble.\p"
-	.string "Oh, look, your POKéMON got hurt\n"
+	.string "nada más que problemas.\p"
+	.string "Mira, tu POKéMON salió herido\n"
 	.string "iban por mi cuenta.$"
 
 ThreeIsland_Text_GivenFullRestore::
@@ -519,12 +519,12 @@ ThreeIsland_Text_GivenFullRestore::
 	.string "un RESTAURAR TODO.$"
 
 ThreeIsland_Text_OhYourBagIsFull::
-	.string "Oh?\n"
+	.string "¿Eh?\n"
 	.string "Tu MOCHILA está llena.$"
 
 ThreeIsland_Text_YouveGotImpressiveMons::
 	.string "Tienes unas habilidades realmente\n"
-	.string "POKéMON with you.$"
+	.string "POKéMON contigo.$"
 
 ThreeIsland_Text_LostelleWentOffTowardsBondBridge::
 	.string "Sería fantástico que alguien tan\n"
@@ -533,19 +533,19 @@ ThreeIsland_Text_LostelleWentOffTowardsBondBridge::
 	.string "un rato.\p"
 	.string "...¿Perdón?\n"
 	.string "¿Buscas a LOSTELLE?\p"
-	.string "LOSTELLE went off towards BOND\n"
+	.string "LOSTELLE se fue hacia el PUENTE\n"
 	.string "PUENTE hace un rato.$"
 
 ThreeIsland_Text_WouldntWantToSeeBikersHereAgain::
 	.string "TRES ISLA es en realidad la más\n"
 	.string "poblada de las islas de aquí.\p"
-	.string "Still, it could be less sleepy.\p"
-	.string "But I wouldn't want to see goons\n"
+	.string "Aun así, podría ser menos tranquila.\p"
+	.string "Pero no querría ver matones\n"
 	.string "como esos MOTOCICLISTAS de aquí.$"
 
 ThreeIsland_Text_WhenDodouEvolvesGoingToPlayGame::
 	.string "Voy a entrenar a mi DODUO en el\n"
-	.string "BERRY FOREST.\p"
+	.string "BOSQUE BAYA.\p"
 	.string "Cuando evolucione, voy a jugar\n"
 	.string "un juego en la ISLA DOS.$"
 

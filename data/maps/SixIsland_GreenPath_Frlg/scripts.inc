@@ -15,18 +15,18 @@ SixIsland_GreenPath_Text_JaclynIntro::
 	.string "¿aquí es donde TELETRANSPORTO?$"
 
 SixIsland_GreenPath_Text_JaclynDefeat::
-	.string "Big boo-boo!$"
+	.string "¡Gran error!$"
 
 SixIsland_GreenPath_Text_JaclynPostBattle::
-	.string "I am so scatterbrained!\p"
+	.string "¡Soy tan despistada!\p"
 	.string "Debo concentrarme para poder\n"
 	.string "teletransportarme bien a mi casa!$"
 
 SixIsland_GreenPath_Text_LeftRouteSign::
-	.string "GREEN PATH\n"
-	.string "PATTERN BUSH AHEAD$"
+	.string "CAMINO VERDE\n"
+	.string "ARBUSTO MÁS ADELANTE$"
 
 SixIsland_GreenPath_Text_RightRouteSign::
-	.string "GREEN PATH\n"
-	.string "Think Green, Keep Nature Clean!$"
+	.string "CAMINO VERDE\n"
+	.string "¡Cuida la naturaleza!$"
 

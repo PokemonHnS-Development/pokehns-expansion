@@ -469,7 +469,7 @@ MossdeepCity_SpaceCenter_2F_Text_MaxieWeFailedIsAquaAlsoMisguided:
 	.string "expandir la tierra?\p"
 	.string "... ... ... ... ... ...\n"
 	.string "... ... ... ... ... ...\p"
-	.string "If...\n"
+	.string "Si...\n"
 	.string "Si nosotros, TEAM MAGMA, nos\l"
 	.string "... ... ... ... ... ...\p"
 	.string "equivocamos... ¿será que la meta\n"

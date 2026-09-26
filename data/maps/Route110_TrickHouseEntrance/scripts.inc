@@ -698,42 +698,42 @@ Route110_TrickHouseEntrance_Text_YoureBeingWatched:
 	.string "Te están observando...$"
 
 Route110_TrickHouseEntrance_Text_ConcealedBeneathDesk:
-	.string "Hah? Grrr...\p"
+	.string "¿Eh? Grrr...\p"
 	.string "¿Cómo supiste que me escondía\n"
 	.string "bajo este escritorio? ¡Eres listo!$"
 
 Route110_TrickHouseEntrance_Text_ConcealedBehindTree:
-	.string "Hah? Grrr...\p"
+	.string "¿Eh? Grrr...\p"
 	.string "¿Cómo supiste que me escondía\n"
 	.string "tras este árbol? ¡Eres listo!$"
 
 Route110_TrickHouseEntrance_Text_ConcealedInDresser:
-	.string "Hah? Grrr...\p"
+	.string "¿Eh? Grrr...\p"
 	.string "¿Cómo supiste que me escondía\n"
 	.string "en esta cómoda? ¡Eres listo!$"
 
 Route110_TrickHouseEntrance_Text_ConealedBeyondWindow:
-	.string "Hah? Grrr...\p"
+	.string "¿Eh? Grrr...\p"
 	.string "¿Cómo supiste que me escondía\n"
 	.string "tras esta ventana? ¡Eres listo!$"
 
 Route110_TrickHouseEntrance_Text_ConcealedInPlanter:
-	.string "Hah? Grrr...\p"
+	.string "¿Eh? Grrr...\p"
 	.string "¿Cómo supiste que me escondía\n"
 	.string "en esta maceta? ¡Eres listo!$"
 
 Route110_TrickHouseEntrance_Text_ConcealedInCupboard:
-	.string "Hah? Grrr...\p"
+	.string "¿Eh? Grrr...\p"
 	.string "¿Cómo supiste que me escondía\n"
 	.string "en este armario? ¡Eres listo!$"
 
 Route110_TrickHouseEntrance_Text_ConcealedBehindWindow:
-	.string "Hah? Grrr...\p"
+	.string "¿Eh? Grrr...\p"
 	.string "¿Cómo supiste que me escondía\n"
 	.string "tras esta ventana? ¡Eres listo!$"
 
 Route110_TrickHouseEntrance_Text_ConcealedBeneathCushion:
-	.string "Hah? Grrr...\p"
+	.string "¿Eh? Grrr...\p"
 	.string "¿Cómo supiste que me escondía\n"
 	.string "bajo este cojín? ¡Eres listo!$"
 
@@ -809,7 +809,7 @@ Route110_TrickHouseEntrance_Text_PCFullAgain:
 	.string "ERES MALVADO.$"
 
 Route110_TrickHousePuzzle_Text_FoundAScroll:
-	.string "{PLAYER} found a scroll.$"
+	.string "{PLAYER} halló un pergamino.$"
 
 Route110_TrickHousePuzzle_Text_MemorizedSecretCode:
 	.string "{PLAYER} memorizó el código secreto\n"

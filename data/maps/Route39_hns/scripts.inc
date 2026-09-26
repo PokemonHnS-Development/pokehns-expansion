@@ -309,7 +309,7 @@ Route39_Text_PokefanFRuthSeen:
 	.string "juntos al mismo tiempo.$"
 
 Route39_Text_PokefanFRuthBeaten:
-	.string "I don't mind losing.$"
+	.string "No me importa perder.$"
 
 Route39_Text_PokefanFRuthAfter:
 	.string "¿Sabes sobre los bebés\n"
@@ -345,7 +345,7 @@ Route39_Text_PokefanFJaimeSeen:
 	.string "Llegaste en el momento\njusto.\p¡A luchar!$"
 
 Route39_Text_PokefanFJaimeBeaten:
-	.string "Oh, how disappointing...$"
+	.string "Oh, qué decepción...$"
 
 Route39_Text_PokefanFJaimeAfter:
 	.string "Conocí a UMBREON de noche\naquí, en la RUTA 39.\pNo sé por qué, pero parece\nque le gusta que entrene\laquí.\pParece volverse más amistoso\nentrenando aquí que en\lcualquier otro lugar.$"

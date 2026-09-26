@@ -24,7 +24,7 @@ EverGrandeCity_EventScript_SetVisitedEverGrande::
 	end
 
 EverGrandeCity_Text_EnteringVictoryRoad:
-	.string "ENTERING VICTORY ROAD$"
+	.string "ENTRANDO EN CALLE VICTORIA$"
 
 EverGrandeCity_Text_EnteringPokemonLeague:
 	.string "ENTRANDO A LA LIGA POKéMON\n"

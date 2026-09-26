@@ -234,7 +234,7 @@ BattleFrontier_OutsideEast_EventScript_Camper::
 BattleFrontier_OutsideEast_Text_BattleTowerSign:
 	.string "¡Esta es la TORRE DE COMBATE!\n"
 	.string "¡Sé el más fuerte en racha!\l"
-	.string "TRAINER!$"
+	.string "¡ENTRENADOR!$"
 
 BattleFrontier_OutsideEast_Text_BattlePalaceSign:
 	.string "¡Este es el PALACIO DE COMBATE!\n"
@@ -304,7 +304,7 @@ BattleFrontier_OutsideEast_Text_BelieveInYouBuddy:
 	.string "favoritos si ganas!$"
 
 BattleFrontier_OutsideEast_Text_ZigzagoonLooksVacant:
-	.string "ZIGZAGOON looks vacant...$"
+	.string "ZIGZAGOON mira al vacío...$"
 
 BattleFrontier_OutsideEast_Text_PeopleCallMeBusybody:
 	.string "Dicen que soy un entrometido,\n"
@@ -429,7 +429,7 @@ BattleFrontier_OutsideEast_Text_OnceAnOddTreePastHere:
 	.string "había un árbol raro por aquí.$"
 
 BattleFrontier_OutsideEast_Text_StickyMonWithLongTail:
-	.string "I...\n"
+	.string "Yo...\n"
 	.string "¡Lo vi!\p"
 	.string "Había un POKéMON pegajoso\n"
 	.string "con una cola larga más adelante!\p"

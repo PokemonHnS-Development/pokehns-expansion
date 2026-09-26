@@ -19,22 +19,22 @@ Route13_Text_SebastianIntro::
 
 Route13_Text_SebastianDefeat::
 	.string "Mi combo de PIDGEY y PIDGEOTTO\n"
-	.string "lost?$"
+	.string "¿perdió?$"
 
 Route13_Text_SebastianPostBattle::
-	.string "My POKéMON look happy even though\n"
+	.string "Mis POKéMON se ven felices aunque\n"
 	.string "perdieron.$"
 
 Route13_Text_SusieIntro::
 	.string "Dicen que soy bueno para un niño.$"
 
 Route13_Text_SusieDefeat::
-	.string "Ohh!\n"
-	.string "I lost!$"
+	.string "¡Ohh!\n"
+	.string "¡Perdí!$"
 
 Route13_Text_SusiePostBattle::
 	.string "Quiero ser un buen ENTRENADOR.\n"
-	.string "I'll train hard, just watch.$"
+	.string "Entrenaré duro, ya verás.$"
 
 Route13_Text_ValerieIntro::
 	.string "¡Guau!\n"
@@ -45,18 +45,18 @@ Route13_Text_ValerieDefeat::
 
 Route13_Text_ValeriePostBattle::
 	.string "Esas MEDALLAS las ganaste en\n"
-	.string "LEADERS. I know!$"
+	.string "los LÍDERES. ¡Lo sé!$"
 
 Route13_Text_GwenIntro::
-	.string "My cute POKéMON wish to make your\n"
-	.string "acquaintance.$"
+	.string "Mis lindos POKéMON desean\n"
+	.string "conocerte.$"
 
 Route13_Text_GwenDefeat::
-	.string "Good going!\n"
+	.string "¡Bien hecho!\n"
 	.string "¡Ganaste totalmente!$"
 
 Route13_Text_GwenPostBattle::
-	.string "You have to make POKéMON battle\n"
+	.string "Debes hacer que tus POKéMON luchen en\n"
 	.string "GIMNASIOS para fortalecerlas.$"
 
 Route13_Text_AlmaIntro::
@@ -64,8 +64,8 @@ Route13_Text_AlmaIntro::
 	.string "cuando exploraba grutas.$"
 
 Route13_Text_AlmaDefeat::
-	.string "Oh, too bad!\n"
-	.string "I just messed up!$"
+	.string "¡Oh, qué lástima!\n"
+	.string "¡La arruiné!$"
 
 Route13_Text_AlmaPostBattle::
 	.string "CARBOS aumentó la VELOCIDAD de mi\n"
@@ -79,19 +79,19 @@ Route13_Text_PerryDefeat::
 	.string "¡El viento cambió!$"
 
 Route13_Text_PerryPostBattle::
-	.string "I'm beat.\n"
-	.string "I guess I'll FLY home.$"
+	.string "Estoy agotado.\n"
+	.string "Creo que volveré a casa con VUELO.$"
 
 Route13_Text_LolaIntro::
 	.string "Claro, juego contigo, cariño.$"
 
 Route13_Text_LolaDefeat::
-	.string "Oh!\n"
+	.string "¡Oh!\n"
 	.string "¡Maldita bestia!$"
 
 Route13_Text_LolaPostBattle::
-	.string "¿Quién será más fuerte, el macho\n"
-	.string "female POKéMON?$"
+	.string "¿Quién será más fuerte, el macho o\n"
+	.string "la hembra POKéMON?$"
 
 Route13_Text_SheilaIntro::
 	.string "¿Quieres combatir un poco\n"
@@ -101,8 +101,8 @@ Route13_Text_SheilaDefeat::
 	.string "¿Ya terminó?$"
 
 Route13_Text_SheilaPostBattle::
-	.string "I don't know anything about\n"
-	.string "POKéMON actually.\p"
+	.string "En realidad no sé nada\n"
+	.string "de POKéMON.\p"
 	.string "Los que uso... los elegí\n"
 	.string "por su apariencia!$"
 
@@ -110,8 +110,8 @@ Route13_Text_JaredIntro::
 	.string "¿Qué estás mirando?$"
 
 Route13_Text_JaredDefeat::
-	.string "Dang!\n"
-	.string "Stripped gears!$"
+	.string "¡Rayos!\n"
+	.string "¡Se me pelaron los engranajes!$"
 
 Route13_Text_JaredPostBattle::
 	.string "¡Lárgate!$"
@@ -129,15 +129,15 @@ Route13_Text_RobertPostBattle::
 
 Route13_Text_LookToLeftOfThatPost::
 	.string "CONSEJOS DE ENTRENADOR\p"
-	.string "Look, look!\n"
+	.string "¡Mira, mira!\n"
 	.string "¡Mira a la izquierda del poste!$"
 
 Route13_Text_SelectToSwitchItems::
 	.string "CONSEJOS DE ENTRENADOR\p"
 	.string "Usa SELECT para cambiar objetos\n"
-	.string "ITEMS window.$"
+	.string "de la ventana OBJETOS.$"
 
 Route13_Text_RouteSign::
-	.string "ROUTE 13\n"
+	.string "RUTA 13\n"
 	.string "Al norte, PUENTE SILENCIO$"
 

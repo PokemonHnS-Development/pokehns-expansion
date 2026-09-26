@@ -63,8 +63,8 @@ LavenderTown_House2_EventScript_ChoseNewNickname::
 
 LavenderTown_House2_Text_WantMeToRateNicknames::
 	.string "¡Hola, hola!\n"
-	.string "I am the official NAME RATER!\p"
-	.string "Want me to rate the nicknames of\n"
+	.string "¡Soy el APODADOR oficial!\p"
+	.string "¿Quieres que evalúe los apodos de\n"
 	.string "tu POKéMON?$"
 
 LavenderTown_House2_Text_CritiqueWhichMonsNickname::
@@ -101,7 +101,7 @@ LavenderTown_House2_Text_FromNowOnShallBeKnownAsSameName::
 
 LavenderTown_House2_Text_TrulyImpeccableName::
 	.string "¿{STR_VAR_1}, verdad?\n"
-	.string "That is a truly impeccable name!\p"
+	.string "¡Es un nombre realmente impecable!\p"
 	.string "¡Cuida bien de {STR_VAR_1}!$"
 
 LavenderTown_House2_Text_ThatIsMerelyAnEgg::

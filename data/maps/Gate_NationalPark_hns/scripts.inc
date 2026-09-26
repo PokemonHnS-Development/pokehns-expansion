@@ -327,10 +327,10 @@ Route35NationalParkGate_Text_Rocker:
 	.string "¡anoche!$"
 
 Route35NationalParkGate_Text_BC2:
-	.string "I caught a whopping SCYTHER!$"
+	.string "¡Atrapé un SCYTHER enorme!$"
 
 Route35NationalParkGate_Text_Beauty:
-	.string "He always wins these contests!$"
+	.string "¡Él siempre gana estos concursos!$"
 
 Route35NationalParkGate_Text_WeHoldContests:
 	.string "Hacemos Concursos seguido en el\n"

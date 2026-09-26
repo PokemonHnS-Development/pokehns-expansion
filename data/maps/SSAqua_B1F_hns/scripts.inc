@@ -81,7 +81,7 @@ SSAqua_B1F_Text_SailorJeffSeen:
 	.string "estoy en mi descanso.$"
 
 SSAqua_B1F_Text_SailorJeffBeaten:
-	.string "Win or lose, my break's over!$"
+	.string "Gane o pierda, ¡se acabó el recreo!$"
 
 SSAqua_B1F_Text_SailorJeffAfter:
 	.string "Supongo que no ganaré si no me\n"
@@ -108,7 +108,7 @@ SSAqua_B1F_EventScript_Fritz::
 	end
 
 SSAqua_B1F_Text_JugglerFritzSeen:
-	.string "Urrf... I'm seasick!$"
+	.string "Uf... ¡Me mareo!$"
 
 SSAqua_B1F_Text_JugglerFritzBeaten:
 	.string "Ya no puedo moverme...$"
@@ -199,7 +199,7 @@ SSAqua_B1F_Text_TeacherShirleySeen:
 	.string "estudiantes!$"
 
 SSAqua_B1F_Text_TeacherShirleyBeaten:
-	.string "Aaack!$"
+	.string "¡Aaaah!$"
 
 SSAqua_B1F_Text_TeacherShirleyAfter:
 	.string "Estamos de excursión en las\n"
@@ -214,7 +214,7 @@ SSAqua_B1F_Text_SchoolboyNateSeen:
 	.string "¿Conoces las RUINAS ALFA?$"
 
 SSAqua_B1F_Text_SchoolboyNateBeaten:
-	.string "Yaargh!$"
+	.string "¡Aaargh!$"
 
 SSAqua_B1F_Text_SchoolboyNateAfter:
 	.string "Las radios captan señales raras\n"

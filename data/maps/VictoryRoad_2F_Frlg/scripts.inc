@@ -82,7 +82,7 @@ VictoryRoad_2F_Text_DawsonIntro::
 
 VictoryRoad_2F_Text_DawsonDefeat::
 	.string "¡No!\n"
-	.string "Unbelievable!$"
+	.string "¡Increíble!$"
 
 VictoryRoad_2F_Text_DawsonPostBattle::
 	.string "Puedo vencerte en cuanto a\n"
@@ -90,10 +90,10 @@ VictoryRoad_2F_Text_DawsonPostBattle::
 
 VictoryRoad_2F_Text_DaisukeIntro::
 	.string "Este es el CAMINO DE LA VICTORIA.\n"
-	.string "It's the final test for TRAINERS!$"
+	.string "¡Es la prueba final para ENTRENADORES!$"
 
 VictoryRoad_2F_Text_DaisukeDefeat::
-	.string "Atcho!$"
+	.string "¡Achís!$"
 
 VictoryRoad_2F_Text_DaisukePostBattle::
 	.string "Si te atascas, prueba a mover\n"
@@ -132,5 +132,5 @@ VictoryRoad_2F_Text_GregoryPostBattle::
 
 @ Unused, old text for Moltres
 VictoryRoad_2F_Text_Gyaoo::
-	.string "ギヤーオ！$"
+	.string "¡Gyaaa!$"
 

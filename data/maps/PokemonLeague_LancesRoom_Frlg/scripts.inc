@@ -199,13 +199,13 @@ PokemonLeague_LancesRoom_Text_RematchIntro::
 PokemonLeague_LancesRoom_Text_Defeat::
 	.string "¡Eso es!\p"
 	.string "Odio admitirlo, pero tú eres un\n"
-	.string "POKéMON master!$"
+	.string "¡maestro POKéMON!$"
 
 PokemonLeague_LancesRoom_Text_PostBattle::
 	.string "Aún no puedo creer que mis dragones\n"
 	.string "perdieran contra ti, {PLAYER}.\p"
-	.string "You are now the POKéMON LEAGUE\n"
-	.string "CAMPEÓN de KANTO!\p"
+	.string "¡Ahora eres el CAMPEÓN de la\n"
+	.string "LIGA POKéMON de KANTO!\p"
 	.string "...O eso habrías sido, pero\n"
 	.string "te queda un último desafío.\p"
 	.string "¡Falta un ENTRENADOR por enfrentar!\n"
@@ -213,6 +213,6 @@ PokemonLeague_LancesRoom_Text_PostBattle::
 	.string "{RIVAL}!\p"
 	.string "Venció al ALTO MANDO antes\n"
 	.string "vencerte.\p"
-	.string "He is the real POKéMON LEAGUE\n"
-	.string "CHAMPION.$"
+	.string "Él es el verdadero CAMPEÓN de la\n"
+	.string "LIGA POKéMON.$"
 

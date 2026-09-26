@@ -98,7 +98,7 @@ Route24_Movement_WalkDown::
 
 Route24_Text_JustEarnedFabulousPrize::
 	.string "¡Felicitaciones! Venciste a\n"
-	.string "five contest TRAINERS!\p"
+	.string "¡a nuestros cinco ENTRENADORES!\p"
 	.string "¡Acabas de ganar un premio fabuloso!$"
 
 Route24_Text_ReceivedNuggetFromMysteryTrainer::
@@ -110,16 +110,16 @@ Route24_Text_YouDontHaveAnyRoom::
 
 Route24_Text_JoinTeamRocket::
 	.string "Por cierto, ¿te gustaría\n"
-	.string "join TEAM ROCKET?\p"
+	.string "unirte al EQUIPO ROCKET?\p"
 	.string "Somos un grupo de profesionales\n"
-	.string "criminals specializing in POKéMON!\p"
+	.string "criminales especializados en POKéMON!\p"
 	.string "¿Quieres unirte?\p"
 	.string "¿Estás seguro?\p"
 	.string "¡Vamos, únete a nosotros!\p"
 	.string "¡Te digo que te unas!\p"
 	.string "...Vale, necesitas convencerte.\p"
 	.string "Te haré una oferta que no\n"
-	.string "refuse!$"
+	.string "¡rechazar!$"
 
 Route24_Text_RocketDefeat::
 	.string "¡Arrgh!\n"
@@ -147,10 +147,10 @@ Route24_Text_EthanIntro::
 
 Route24_Text_EthanDefeat::
 	.string "¡Vaya!\n"
-	.string "Too much!$"
+	.string "¡Demasiado!$"
 
 Route24_Text_EthanPostBattle::
-	.string "I did my best. I have no regrets!$"
+	.string "¡Lo di todo. No me arrepiento de nada!$"
 
 Route24_Text_ReliIntro::
 	.string "¡Soy el número 4!\n"
@@ -160,28 +160,28 @@ Route24_Text_ReliDefeat::
 	.string "¡Yo también perdí!$"
 
 Route24_Text_ReliPostBattle::
-	.string "I did my best, so I've no regrets!$"
+	.string "¡Lo di todo, así que no me arrepiento!$"
 
 Route24_Text_TimmyIntro::
 	.string "¡Aquí llega el No. 3!\n"
 	.string "¡No será fácil!$"
 
 Route24_Text_TimmyDefeat::
-	.string "Ow!\n"
-	.string "Stomped flat!$"
+	.string "¡Ay!\n"
+	.string "¡Aplastado!$"
 
 Route24_Text_TimmyPostBattle::
-	.string "I did my best. I have no regrets!$"
+	.string "¡Lo di todo. No me arrepiento de nada!$"
 
 Route24_Text_AliIntro::
-	.string "I'm second!\n"
+	.string "¡Soy el segundo!\n"
 	.string "¡Ahora esto va en serio!$"
 
 Route24_Text_AliDefeat::
 	.string "¿Cómo pude perder?$"
 
 Route24_Text_AliPostBattle::
-	.string "I did my best. I have no regrets!$"
+	.string "¡Lo di todo. No me arrepiento de nada!$"
 
 Route24_Text_CaleIntro::
 	.string "¡La gente llama a esto el PUENTE\n"
@@ -191,8 +191,8 @@ Route24_Text_CaleIntro::
 	.string "¿Crees que puedes lograrlo?$"
 
 Route24_Text_CaleDefeat::
-	.string "Whoo!\n"
-	.string "Good stuff!$"
+	.string "¡Uf!\n"
+	.string "¡Buen combate!$"
 
 Route24_Text_CalePostBattle::
-	.string "I did my best. I have no regrets!$"
+	.string "¡Lo di todo. No me arrepiento de nada!$"

@@ -407,7 +407,7 @@ Route25_Text_SchoolboyDudleySeen:
 	.string "¿Crees que puedes lograrlo?$"
 
 Route25_Text_SchoolboyDudleyBeaten:
-	.string "Whoo! Good stuff.$"
+	.string "¡Uf! ¡Qué bien!$"
 
 Route25_Text_SchoolboyDudleyAfter:
 	.string "Hice mi mejor esfuerzo.\n"
@@ -436,7 +436,7 @@ Route25_Text_SchoolboyJoeAfter:
 	.string "No me arrepiento de nada.$"
 
 Route25_Text_LassLauraSeen:
-	.string "I'm No. 4!\n"
+	.string "¡Soy el No. 4!\n"
 	.string "¿Te estás cansando?$"
 
 Route25_Text_LassLauraBeaten:
@@ -447,7 +447,7 @@ Route25_Text_LassLauraAfter:
 	.string "No me arrepiento de nada.$"
 
 Route25_Text_CamperLloydSeen:
-	.string "OK! I'm No. 5.\n"
+	.string "¡Vale! Soy el No. 5.\n"
 	.string "¡Te voy a aplastar!$"
 
 Route25_Text_CamperLloydBeaten:
@@ -493,7 +493,7 @@ Route25_Text_CooltrainerKevinSeen:
 	.string "Pero tras ver cómo luchas,\n"
 	.string "quiero ver cómo me va a mí.\p"
 	.string "¿Qué dices? Déjame retarte\n"
-	.string "on.$"
+	.string "que te rete.$"
 
 Route25_Text_CooltrainerKevinBeaten:
 	.string "¡Nunca he tenido una batalla tan\n"
@@ -506,5 +506,5 @@ Route25_Text_CooltrainerKevinAfter:
 
 Route25_Text_BillsHouseSign:
 	.string "CABAÑA DEL MAR\n"
-	.string "BILL'S HOUSE$"
+	.string "CASA DE BILL$"
 

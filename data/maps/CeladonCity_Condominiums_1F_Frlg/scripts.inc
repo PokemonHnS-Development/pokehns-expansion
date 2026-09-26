@@ -62,7 +62,7 @@ CeladonCity_Condominiums_1F_EventScript_SuiteSign::
 	end
 
 CeladonCity_Condominiums_1F_Text_Meowth::
-	.string "MEOWTH: Meow!$"
+	.string "MEOWTH: ¡Miau!$"
 
 CeladonCity_Condominiums_1F_Text_TryThisDrinkInstead::
 	.string "No deberías gastar todo tu dinero\n"
@@ -70,16 +70,16 @@ CeladonCity_Condominiums_1F_Text_TryThisDrinkInstead::
 	.string "Prueba con esto.$"
 
 CeladonCity_Condominiums_1F_Text_NothingBeatsThirstLikeTea::
-	.string "Nothing beats thirst like some hot\n"
-	.string "TEA.\p"
+	.string "Nada quita la sed como un buen TÉ\n"
+	.string "caliente.\p"
 	.string "Realmente es el mejor.$"
 
 CeladonCity_Condominiums_1F_Text_MyDearMonsKeepMeCompany::
-	.string "My dear POKéMON keep me company.\n"
-	.string "MEOWTH even brings money home!$"
+	.string "Mis queridos POKéMON me hacen compañía.\n"
+	.string "¡MEOWTH incluso trae dinero a casa!$"
 
 CeladonCity_Condominiums_1F_Text_DaisyComesToBuyTea::
-	.string "Oh, hello, dearie.\n"
+	.string "Oh, hola, cariño.\n"
 	.string "¿Disfrutaste mi TÉ?\p"
 	.string "Por cierto, cariño. ¿Tú, por casualidad\n"
 	.string "¿Chance, de PUEBLO PALETA?\p"
@@ -92,9 +92,9 @@ CeladonCity_Condominiums_1F_Text_Clefairy::
 	.string "CLEFAIRY: Pi pippippi!$"
 
 CeladonCity_Condominiums_1F_Text_Nidoran::
-	.string "NIDORAN♀: Kya kyaoo!$"
+	.string "NIDORAN♀: ¡Kya kyaoo!$"
 
 CeladonCity_Condominiums_1F_Text_ManagersSuite::
-	.string "CELADON MANSION\n"
-	.string "Manager's Suite$"
+	.string "MANSION CELADON\n"
+	.string "Suite del Gerente$"
 

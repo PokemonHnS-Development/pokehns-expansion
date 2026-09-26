@@ -34,16 +34,16 @@ Route10_Text_ClarkIntro::
 Route10_Text_ClarkDefeat::
 	.string "Ha-haha!\n"
 	.string "¡No me río!\l"
-	.string "Ha-hay fever! Haha-ha-choo!$"
+	.string "¡Ha-tengo fiebre! ¡Ha-ha-achús!$"
 
 Route10_Text_ClarkPostBattle::
 	.string "Haha-ha-choo!\n"
 	.string "Ha-choo!\l"
-	.string "Snort! Snivel!$"
+	.string "¡Resuello! ¡Moqueo!$"
 
 Route10_Text_HermanIntro::
 	.string "¡Hola, chico!\n"
-	.string "Want to see my POKéMON?$"
+	.string "¿Quieres ver a mi POKéMON?$"
 
 Route10_Text_HermanDefeat::
 	.string "¡Oh, no!\n"
@@ -51,20 +51,20 @@ Route10_Text_HermanDefeat::
 
 Route10_Text_HermanPostBattle::
 	.string "No me caes bien.\n"
-	.string "I don't like anyone better than me!$"
+	.string "¡No me cae bien nadie mejor que yo!$"
 
 Route10_Text_HeidiIntro::
-	.string "I've been out at a POKéMON GYM\n"
+	.string "He estado en un GIMNASIO\n"
 	.string "algunas veces.\p"
-	.string "...But I always lose.$"
+	.string "...Pero siempre pierdo.$"
 
 Route10_Text_HeidiDefeat::
 	.string "Ohh!\n"
-	.string "After all my training!$"
+	.string "¡Tras tanto entrenar!$"
 
 Route10_Text_HeidiPostBattle::
-	.string "I noticed some POKéMANIACS\n"
-	.string "prowling around.\p"
+	.string "Vi a unos POKéMANIACOS\n"
+	.string "merodeando por aquí.\p"
 	.string "¿Te lo imaginas? ¿Ellos?\n"
 	.string "¿Aquí arriba en las montañas?$"
 
@@ -83,22 +83,22 @@ Route10_Text_CarolIntro::
 	.string "No salgo a caminar hace tiempo.$"
 
 Route10_Text_CarolDefeat::
-	.string "I'm too tired.\n"
+	.string "Estoy muy cansado.\n"
 	.string "No tenía ganas de hacerlo.$"
 
 Route10_Text_CarolPostBattle::
-	.string "The POKéMON here in the mountains\n"
+	.string "Los POKéMON de estas montañas\n"
 	.string "son tan gruesos...\p"
-	.string "I wish there were pink POKéMON\n"
+	.string "Ojalá hubiera POKéMON rosas\n"
 	.string "¡con un patrón floral!$"
 
 Route10_Text_RockTunnelDetourToLavender::
-	.string "ROCK TUNNEL\n"
+	.string "TÚNEL ROCA\n"
 	.string "Desvío a PUEBLO LAVANDA$"
 
 Route10_Text_RockTunnel::
-	.string "ROCK TUNNEL$"
+	.string "TÚNEL ROCA$"
 
 Route10_Text_PowerPlant::
-	.string "POWER PLANT$"
+	.string "CENTRAL ENERGÍA$"
 

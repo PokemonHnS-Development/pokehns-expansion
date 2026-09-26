@@ -75,15 +75,15 @@ SixIsland_WaterPath_House1_EventScript_SizeRecordNonEmpty::
 	end
 
 SixIsland_WaterPath_House1_Text_LoveItNeedItHeracross::
-	.string "Hera, hera, HERACROSS!\n"
-	.string "Big and shiny, it's the bug boss!\l"
+	.string "¡Hera, hera, HERACROSS!\n"
+	.string "¡Grande y brillante, jefe bicho!\l"
 	.string "Lo amo, lo necesito, ¡HERACROSS!$"
 
 SixIsland_WaterPath_House1_Text_MayIMeasureHeracross::
-	.string "Eeeeek!\n"
+	.string "¡Iiiih!\n"
 	.string "¡Es un HERACROSS!\p"
-	.string "Please, please, may I measure how\n"
-	.string "¿Grande es?$"
+	.string "Por favor, por favor, ¿puedo medir\n"
+	.string "cuán grande es?$"
 
 SixIsland_WaterPath_House1_Text_ItsXInchesDeserveReward::
 	.string "¡Aah, mide {STR_VAR_2} pulgadas!\n"
@@ -94,7 +94,7 @@ SixIsland_WaterPath_House1_Text_WantToSeeBiggerOne::
 	.string "Quiero ver uno mucho, mucho más\n"
 	.string "grande que ese HERACROSS.\p"
 	.string "Oh, cómo los adoro, tan\n"
-	.string "HERACROSS!$"
+	.string "¡HERACROSS!$"
 
 SixIsland_WaterPath_House1_Text_ItsXInchesSameAsBefore::
 	.string "¿Eh? Mide {STR_VAR_2} pulgadas...\n"
@@ -108,8 +108,8 @@ SixIsland_WaterPath_House1_Text_ItsXInchesYInchesWasBiggest::
 
 SixIsland_WaterPath_House1_Text_ThisWontDo::
 	.string "¡Oh, no! ¡Esto no sirve!\p"
-	.string "HERACROSS looks much more macho\n"
-	.string "and cool, and has a lovely horn!$"
+	.string "HERACROSS se ve mucho más macho\n"
+	.string "y genial, ¡y tiene un cuerno bello!$"
 
 SixIsland_WaterPath_House1_Text_YourBagIsFull::
 	.string "Tu BOLSA está llena.\n"
@@ -118,7 +118,7 @@ SixIsland_WaterPath_House1_Text_YourBagIsFull::
 SixIsland_WaterPath_House1_Text_BiggestHeracrossIsXInches::
 	.string "El HERACROSS más grande que he\n"
 	.string "visto jamás mide:\p"
-	.string "{STR_VAR_3} inches!$"
+	.string "¡{STR_VAR_3} pulgadas!$"
 
 SixIsland_WaterPath_House1_Text_BlankChartOfSomeSort::
 	.string "Es una tabla en blanco.\p"

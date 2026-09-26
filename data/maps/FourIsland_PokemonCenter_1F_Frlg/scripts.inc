@@ -28,21 +28,21 @@ FourIsland_PokemonCenter_1F_EventScript_Gentleman::
 
 @ The 5 texts below are supposed to be in FourIsland_House1
 Text_BodySlamTeach::
-	.string "Ready?\n"
+	.string "¿Listo?\n"
 	.string "Boing!\p"
 	.string "Tenemos un combate de GOLPE\n"
-	.string "to see who wimps out first.\p"
-	.string "If you were to join us, you'd be\n"
-	.string "squashed like a bug, though...\p"
+	.string "a ver quién se rinde primero.\p"
+	.string "Si te unieras a nosotros, serías\n"
+	.string "aplastado como un insecto...\p"
 	.string "¿Qué tal si le enseño GOLPE CUERPO a\n"
-	.string "a POKéMON of yours instead?$"
+	.string "a un POKéMON tuyo?$"
 
 Text_BodySlamDeclined::
-	.string "Come again!\n"
+	.string "¡Vuelve pronto!\n"
 	.string "Boing!$"
 
 Text_BodySlamWhichMon::
-	.string "Which POKéMON wants to learn how\n"
+	.string "¿Qué POKéMON quiere aprender\n"
 	.string "GOLPE CUERPO?$"
 
 Text_BodySlamTaught::
@@ -53,10 +53,10 @@ FourIsland_House1_Text_FatMan::
 	.string "おまえ　おもいなあー！$"
 
 FourIsland_PokemonCenter_1F_Text_RareIceMonsInCave::
-	.string "There's a rare kind of ICE POKéMON\n"
+	.string "Hay un raro POKéMON de HIELO\n"
 	.string "que vive en la cueva.\p"
 	.string "Recibimos muchos visitantes que\n"
-	.string "see that POKéMON.$"
+	.string "ver a ese POKéMON.$"
 
 FourIsland_PokemonCenter_1F_Text_DayCarePeopleFoundEggBefore::
 	.string "Oh? A POKéMON EGG?\n"
@@ -68,6 +68,6 @@ FourIsland_PokemonCenter_1F_Text_DayCarePeopleFoundEggBefore::
 
 FourIsland_PokemonCenter_1F_Text_NewPokemonJournalHasntArrived::
 	.string "¿Qué es esto?\p"
-	.string "The new POKéMON JOURNAL hasn't\n"
-	.string "llegaste a esta isla?$"
+	.string "La nueva REVISTA POKéMON no\n"
+	.string "llegó a esta isla?$"
 

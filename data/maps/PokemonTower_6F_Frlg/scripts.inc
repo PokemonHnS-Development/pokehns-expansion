@@ -47,20 +47,20 @@ PokemonTower_6F_EventScript_Jennifer::
 
 PokemonTower_6F_Text_AngelicaIntro::
 	.string "Dame...\n"
-	.string "blood...$"
+	.string "sangre...$"
 
 PokemonTower_6F_Text_AngelicaDefeat::
-	.string "Groan!$"
+	.string "¡Uuuh!$"
 
 PokemonTower_6F_Text_AngelicaPostBattle::
 	.string "Me siento débil y anémico...$"
 
 PokemonTower_6F_Text_EmiliaIntro::
-	.string "Urff...\n"
-	.string "Kwaah!$"
+	.string "Uf...\n"
+	.string "¡Kwaah!$"
 
 PokemonTower_6F_Text_EmiliaDefeat::
-	.string "Something fell out!$"
+	.string "¡Algo se cayó!$"
 
 PokemonTower_6F_Text_EmiliaPostBattle::
 	.string "¡Mi pelo no se cayó!\n"
@@ -71,14 +71,14 @@ PokemonTower_6F_Text_JenniferIntro::
 	.string "ke...ke...ke!$"
 
 PokemonTower_6F_Text_JenniferDefeat::
-	.string "Keee!$"
+	.string "¡Kiii!$"
 
 PokemonTower_6F_Text_JenniferPostBattle::
 	.string "¿Qué pasa aquí?$"
 
 PokemonTower_6F_Text_BeGoneIntruders::
 	.string "Vete...\n"
-	.string "Intruders...$"
+	.string "Intrusos...$"
 
 PokemonTower_6F_Text_GhostWasCubonesMother::
 	.string "¡El fantasma era el espíritu\n"

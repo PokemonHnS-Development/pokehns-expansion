@@ -32,7 +32,7 @@ Route5_PokemonDayCare_Text_MonNeedsToSpendMoreTime::
 
 Route5_PokemonDayCare_Text_OweMeXForMonsReturn::
 	.string "Me debes ¥{STR_VAR_2} por el\n"
-	.string "of this POKéMON.$"
+	.string "de este POKéMON.$"
 
 Route5_PokemonDayCare_Text_ThankYouHeresMon::
 	.string "¡Gracias!\n"
@@ -58,7 +58,7 @@ Route5_PokemonDayCare_Text_MonHasGrownByXLevels::
 	.string "Aren't I great?$"
 
 Route5_PokemonDayCare_Text_YouveGotNoRoomForIt::
-	.string "You can't take this POKéMON back\n"
+	.string "No puedes llevarte este POKéMON\n"
 	.string "si no tienes espacio para él.$"
 
 Route5_PokemonDayCare_Text_DontHaveEnoughMoney::

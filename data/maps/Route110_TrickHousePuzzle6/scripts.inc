@@ -53,7 +53,7 @@ Route110_TrickHousePuzzle6_Text_SophiaIntro:
 	.string "Cuando supe de una casa extraña,\ntuve que venir a verla.$"
 
 Route110_TrickHousePuzzle6_Text_SophiaDefeat:
-	.string "I've discovered a tough TRAINER!$"
+	.string "¡He descubierto a un ENTRENADOR fuerte!$"
 
 Route110_TrickHousePuzzle6_Text_SophiaPostBattle:
 	.string "La verdad me lo estoy pasando\ngenial explorando este lugar.\p¡Es un reto que vale la pena\nrepetir!$"

@@ -289,7 +289,7 @@ Route119_WeatherInstitute_2F_Text_NoRoomForPokemon:
 	.string "para este POKéMON.$"
 
 Route119_WeatherInstitute_2F_Text_PlayerReceivedCastform:
-	.string "{PLAYER} received CASTFORM!$"
+	.string "{PLAYER} recibió a CASTFORM!$"
 
 Route119_WeatherInstitute_2F_Text_PokemonChangesWithWeather:
 	.string "Ese POKéMON cambia su forma según\n"

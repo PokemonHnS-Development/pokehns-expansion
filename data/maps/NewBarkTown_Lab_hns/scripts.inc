@@ -654,7 +654,7 @@ NewBarkTown_Lab_Movement_ElmStepForward:
 	step_end
 
 NewBarkTown_Lab_Text_ShouldntTouch:
-	.string "Probably shouldn't touch!$"
+	.string "¡Mejor no tocarlo!$"
 
 NewBarkTown_Lab_Text_ElmIntro:
 	.string "ELM: {PLAYER}! ¡Aquí estás!\p"
@@ -668,7 +668,7 @@ NewBarkTown_Lab_Text_ElmIntro:
 	.string "para presentarlo en un congreso.\p"
 	.string "Pero hay algunas cosas que\n"
 	.string "aún no entiendo del todo.\p"
-	.string "So!\p"
+	.string "¡Entonces!\p"
 	.string "Me gustaría que entrenes a un\n"
 	.string "POKéMON que atrapé hace poco.$"
 
@@ -741,7 +741,7 @@ NewBarkTown_Lab_Text_ChoseStarter:
 	.string "también es genial!$"
 
 NewBarkTown_Lab_Text_ReceivedStarter:
-	.string "{PLAYER} received {STR_VAR_1}!$"
+	.string "{PLAYER} recibió {STR_VAR_1}!$"
 
 NewBarkTown_Lab_Text_Nickname:
 	.string "¿Quieres ponerle un apodo a\n"
@@ -810,7 +810,7 @@ NewBarkTown_Lab_Text_ElmAfterTheft2:
 	.string "al PROF.ELM.$"
 
 NewBarkTown_Lab_Text_ElmAfterTheft3:
-	.string "ELM: This?$"
+	.string "ELM: ¿Esto?$"
 
 NewBarkTown_Lab_Text_ElmAfterTheft4:
 	.string "Pero... ¿es un HUEVO POKéMON?\p"
@@ -859,7 +859,7 @@ NewBarkTown_Lab_Text_ElmThoughtEggHatched:
 	.string "¿Dónde está el POKéMON?$"
 
 NewBarkTown_Lab_Text_ShowTogepi1:
-	.string "ELM: {PLAYER}, you look great!$"
+	.string "ELM: {PLAYER}, ¡te ves genial!$"
 
 NewBarkTown_Lab_Text_ShowTogepi2:
 	.string "¿Qué? ¡¿Ese POKéMON?!?$"

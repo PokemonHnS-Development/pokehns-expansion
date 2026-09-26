@@ -34,4 +34,4 @@ HiddenPowerGuy_Text_Explanation:
     .string "dependen del POKéMON que lo use.$"
 
 HiddenPowerGuy_Text_Meditating:
-    .string "I am meditating...$"
+    .string "Estoy meditando...$"

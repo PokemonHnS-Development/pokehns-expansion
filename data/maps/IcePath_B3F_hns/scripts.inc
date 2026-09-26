@@ -151,7 +151,7 @@ IcePath_B3F_Text_Swinub:
 IcePath_B3F_Text_SwinubBerry:
 	.string "¿Darle un BAYA a SWINUB?$"
 IcePath_B3F_Text_SwinubAteBerry:
-	.string "SWINUB enjoyed the ASPEAR BERRY!$"
+	.string "¡SWINUB disfrutó de la BAYA ASPEAR!$"
 IcePath_B3F_Text_SwinubTurnedAway:
 	.string "¡A SWINUB no le gusta!$"
 
@@ -160,6 +160,6 @@ IcePath_B3F_Text_Delibird:
 IcePath_B3F_Text_DelibirdBerry:
 	.string "¿Darle una BAYA al DELIBIRD?$"
 IcePath_B3F_Text_DelibirdAteBerry:
-	.string "DELIBIRD enjoyed the ASPEAR BERRY!$"
+	.string "¡DELIBIRD disfrutó de la BAYA ASPEAR!$"
 IcePath_B3F_Text_DelibirdTurnedAway:
 	.string "¡A DELIBIRD no le gusta!$"

@@ -740,7 +740,7 @@ LittlerootTown_ProfessorBirchsLab_Text_HeardYouBeatRivalTakePokedex:
 	.string "tener esta POKéDEX.$"
 
 LittlerootTown_ProfessorBirchsLab_Text_ReceivedPokedex:
-	.string "{PLAYER} received the POKéDEX!$"
+	.string "{PLAYER} recibió la POKéDEX!$"
 
 LittlerootTown_ProfessorBirchsLab_Text_ExplainPokedex:
 	.string "PROF. BIRCH: La POKéDEX es una\n"
@@ -810,7 +810,7 @@ LittlerootTown_ProfessorBirchsLab_Text_PCUsedForResearch:
 	.string "Mejor no tocar nada aquí.$"
 
 LittlerootTown_ProfessorBirchsLab_Text_CrammedWithBooksOnPokemon:
-	.string "It's crammed with books on POKéMON.$"
+	.string "Está repleto de libros de POKéMON.$"
 
 LittlerootTown_ProfessorBirchsLab_Text_BookTooHardToRead:
 	.string "Es un libro demasiado difícil de leer.$"
@@ -958,7 +958,7 @@ LittlerootTown_ProfessorBirchsLab_Text_MayWhatNextImStayingHere:
 	.string "¿Seguirás luchando para\n"
 	.string "mejorar tus habilidades?\p"
 	.string "¿O vas a intentar completar\n"
-	.string "la NATIONAL POKéDEX?\p"
+	.string "¿la POKéDEX NACIONAL?\p"
 	.string "Me quedo aquí para ayudar al PROF.$"
 
 LittlerootTown_ProfessorBirchsLab_Text_BrendanPreferCollectingSlowly:

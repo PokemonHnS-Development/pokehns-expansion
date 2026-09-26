@@ -98,12 +98,12 @@ SilphCo_6F_Text_BetterGetBackToWork::
 	.string "Bueno, mejor vuelvo al trabajo.$"
 
 SilphCo_6F_Text_HelpMePlease::
-	.string "Oh dear, oh dear.\n"
+	.string "Ay, ay, ay.\n"
 	.string "¡Ayúdenme, por favor!$"
 
 SilphCo_6F_Text_WeGotEngaged::
 	.string "Nos comprometimos.\n"
-	.string "Heheh!$"
+	.string "¡Jeje!$"
 
 SilphCo_6F_Text_ThatManIsSuchACoward::
 	.string "Ese hombre a mi lado...\n"
@@ -115,7 +115,7 @@ SilphCo_6F_Text_NeedsMeToLookAfterHim::
 
 SilphCo_6F_Text_RocketsTryingToConquerWorld::
 	.string "El EQUIPO ROCKET intenta conquistar\n"
-	.string "the world with POKéMON.$"
+	.string "el mundo con POKéMON.$"
 
 SilphCo_6F_Text_RocketsRanAwayBecauseOfYou::
 	.string "El EQUIPO ROCKET huyó, y todo\n"
@@ -123,7 +123,7 @@ SilphCo_6F_Text_RocketsRanAwayBecauseOfYou::
 
 SilphCo_6F_Text_TargetedSilphForOurMonProducts::
 	.string "Debieron atacar a SILPH por\n"
-	.string "our POKéMON products.$"
+	.string "nuestros productos POKéMON.$"
 
 SilphCo_6F_Text_ComeWorkForSilphWhenYoureOlder::
 	.string "Ven a trabajar para SILPH\n"
@@ -131,10 +131,10 @@ SilphCo_6F_Text_ComeWorkForSilphWhenYoureOlder::
 
 SilphCo_6F_Text_Grunt1Intro::
 	.string "Soy uno de los cuatro del\n"
-	.string "BROTHERS!$"
+	.string "¡Cuarteto de HERMANOS!$"
 
 SilphCo_6F_Text_Grunt1Defeat::
-	.string "Flame out!$"
+	.string "¡Extinguido!$"
 
 SilphCo_6F_Text_Grunt1PostBattle::
 	.string "¡No importa!\n"
@@ -144,18 +144,18 @@ SilphCo_6F_Text_TaylorIntro::
 	.string "¡Ese PRESIDENTE podrido!\p"
 	.string "Bien tiene por enviarme\n"
 	.string "a la SUCURSAL TIKSI!\p"
-	.string "That's why TEAM ROCKET came after\n"
-	.string "¡Estoy seguro!$"
+	.string "Por eso el TEAM ROCKET vino a por\n"
+	.string "nosotros. ¡Estoy seguro!$"
 
 SilphCo_6F_Text_TaylorDefeat::
-	.string "Shoot!$"
+	.string "¡Rayos!$"
 
 SilphCo_6F_Text_TaylorPostBattle::
-	.string "TIKSI BRANCH?\n"
+	.string "¿La SUCURSAL TIKSI?\n"
 	.string "¡Está en tierra de nadie rusa!$"
 
 SilphCo_6F_Text_Grunt2Intro::
-	.string "You dare betray TEAM ROCKET?$"
+	.string "¿Te atreves a traicionar al TEAM ROCKET?$"
 
 SilphCo_6F_Text_Grunt2Defeat::
 	.string "¡Traidor!$"

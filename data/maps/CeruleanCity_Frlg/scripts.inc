@@ -358,11 +358,11 @@ CeruleanCity_EventScript_GymSign::
 	end
 
 CeruleanCity_Text_RivalIntro::
-	.string "{RIVAL}: Yo! {PLAYER}!\p"
+	.string "{RIVAL}: ¡Eh, {PLAYER}!\p"
 	.string "¿Sigues batallando allá\n"
 	.string "atrás?\p"
 	.string "¡Me va genial! Atrapé un montón\n"
-	.string "of strong and smart POKéMON!\p"
+	.string "de POKéMON fuertes y listos!\p"
 	.string "Ven, déjame ver qué atrapaste,\n"
 	.string "¡{PLAYER}!$"
 
@@ -387,7 +387,7 @@ CeruleanCity_Text_RivalPostBattle::
 	.string "Smell ya later!$"
 
 CeruleanCity_Text_OhRightLittlePresentAsFavor::
-	.string "Oh, yeah, right.\p"
+	.string "Ah, sí, claro.\p"
 	.string "Siento lástima por ti. De verdad.\n"
 	.string "Siempre vas arrastrándote detrás\p"
 	.string "de mí. Así que aquí, te doy un\n"
@@ -399,10 +399,10 @@ CeruleanCity_Text_ExplainFameCheckerSmellYa::
 	.string "No lo necesito porque no me\n"
 	.string "importan los demás.\p"
 	.string "Está bien, esta vez sí voy\n"
-	.string "gone. Smell ya!$"
+	.string "irme. ¡Hasta luego!$"
 
 CeruleanCity_Text_GruntIntro::
-	.string "Hey! Stay out!\n"
+	.string "¡Oye! ¡Lárgate!\n"
 	.string "¡No es tu patio!\p"
 	.string "...¿Eh?\n"
 	.string "¿Yo?\p"
@@ -411,10 +411,10 @@ CeruleanCity_Text_GruntIntro::
 
 CeruleanCity_Text_GruntDefeat::
 	.string "GRUNT: ¡Alto! ¡Me rindo!\n"
-	.string "I'll leave quietly!$"
+	.string "¡Me iré sin hacer ruido!$"
 
 CeruleanCity_Text_OkayIllReturnStolenTM::
-	.string "...Okay.\n"
+	.string "...Está bien.\n"
 	.string "Devolveré la MT que robé.$"
 
 CeruleanCity_Text_RecoveredTM28FromGrunt::
@@ -430,15 +430,15 @@ CeruleanCity_Text_MakeRoomForThisCantRun::
 	.string "¡No puedo correr hasta dártelo!$"
 
 CeruleanCity_Text_TrainerLifeIsToughIsntIt::
-	.string "You're a TRAINER, too?\p"
-	.string "Collecting, battling...\n"
+	.string "¿Tú también eres ENTRENADOR?\p"
+	.string "Coleccionar, batallar...\n"
 	.string "Es una vida dura, ¿verdad?$"
 
 CeruleanCity_Text_YouCanCutDownSmallTrees::
 	.string "¿Sabías que puedes TALAR\n"
-	.string "small trees?\p"
+	.string "árboles pequeños?\p"
 	.string "Incluso ese árbol pequeño\n"
-	.string "the shop can be CUT down.\p"
+	.string "el de la tienda se puede CORTAR.\p"
 	.string "Creo que hay otra forma,\n"
 	.string "su voz.$"
 
@@ -446,13 +446,13 @@ CeruleanCity_Text_IfSlowbroWasntThereCouldCutTree::
 	.string "Si ese SLOWBRO no estuviera ahí,\n"
 	.string "podrías usar CORTE en el árbol.\p"
 	.string "Así podrías llegar a la\n"
-	.string "other side.\p"
+	.string "otro lado.\p"
 	.string "Creo que hay otra forma,\n"
 	.string "su voz.$"
 
 CeruleanCity_Text_PokemonEncyclopediaAmusing::
 	.string "Estás haciendo una enciclopedia\n"
-	.string "POKéMON? That sounds amusing.$"
+	.string "POKéMON? Suena divertido.$"
 
 CeruleanCity_Text_PeopleHereWereRobbed::
 	.string "A la gente de aquí la robaron.\p"
@@ -462,14 +462,14 @@ CeruleanCity_Text_PeopleHereWereRobbed::
 	.string "¡problemas con el EQUIPO ROCKET!$"
 
 CeruleanCity_Text_SlowbroUseSonicboom::
-	.string "Okay! SLOWBRO!\n"
-	.string "Use SONICBOOM!$"
+	.string "¡Bien! ¡SLOWBRO!\n"
+	.string "¡Usa SONICBOOM!$"
 
 CeruleanCity_Text_SlowbroPayAttention::
 	.string "¡Vamos, SLOWBRO, presta atención!$"
 
 CeruleanCity_Text_SlowbroPunch::
-	.string "SLOWBRO, punch!$"
+	.string "¡SLOWBRO, golpea!$"
 
 CeruleanCity_Text_NoYouBlewItAgain::
 	.string "¡No!\n"
@@ -480,8 +480,8 @@ CeruleanCity_Text_SlowbroWithdraw::
 
 CeruleanCity_Text_HardToControlMonsObedience::
 	.string "¡No! ¡Eso está mal!\n"
-	.string "It's so hard to control POKéMON!\p"
-	.string "Your POKéMON's obedience depends\n"
+	.string "¡Es tan difícil controlar POKéMON!\p"
+	.string "La obediencia de tu POKéMON depende\n"
 	.string "en tus habilidades como ENTRENADOR.$"
 
 CeruleanCity_Text_SlowbroTookSnooze::
@@ -491,15 +491,15 @@ CeruleanCity_Text_SlowbroLoafingAround::
 	.string "SLOWBRO está holgazaneando...$"
 
 CeruleanCity_Text_SlowbroTurnedAway::
-	.string "SLOWBRO turned away...$"
+	.string "SLOWBRO se dio la vuelta...$"
 
 CeruleanCity_Text_SlowbroIgnoredOrders::
-	.string "SLOWBRO ignored orders...$"
+	.string "SLOWBRO ignoró las órdenes...$"
 
 CeruleanCity_Text_WantBrightRedBicycle::
 	.string "Quiero una bicicleta roja\p"
 	.string "brillante. La guardaré en casa,\n"
-	.string "ensuciarse.$"
+	.string "para que no se ensucie.$"
 
 CeruleanCity_Text_ThisIsCeruleanCave::
 	.string "Esta es la CAVERNA AZUL.\p"
@@ -508,7 +508,7 @@ CeruleanCity_Text_ThisIsCeruleanCave::
 	.string "Se requiere un ENTRENADOR muy\n"
 	.string "especial para entrar allí.\p"
 	.string "Tendrías que ser lo bastante\n"
-	.string "become the POKéMON LEAGUE\l"
+	.string "campeón de la\l"
 	.string "LIGA POKéMON de KANTO primero.\p"
 	.string "Y tendrías que haber logrado\n"
 	.string "un gran hazaña.$"
@@ -516,21 +516,21 @@ CeruleanCity_Text_ThisIsCeruleanCave::
 CeruleanCity_Text_CitySign::
 	.string "CIUDAD MALVA\n"
 	.string "Un aura azul misteriosa rodea\l"
-	.string "It$"
+	.string "la ciudad.$"
 
 CeruleanCity_Text_TrainerTipsHeldItems::
 	.string "CONSEJOS DE ENTRENADOR\p"
-	.string "A POKéMON can be made to hold\n"
+	.string "Puedes hacer que un POKéMON lleve\n"
 	.string "un objeto.\p"
 	.string "Algunos objetos incluso pueden ser\n"
-	.string "the holding POKéMON in battle.$"
+	.string "usados por el POKéMON en batalla.$"
 
 CeruleanCity_Text_BikeShopSign::
 	.string "¡Hierba y cuevas sin problema!\n"
 	.string "TIENDA DE BICICLETAS$"
 
 CeruleanCity_Text_GymSign::
-	.string "CERULEAN CITY POKéMON GYM\n"
+	.string "GIMNASIO POKéMON CIUDAD CERULEAN\n"
 	.string "LÍDER: MISTY\l"
 	.string "¡La sirena marimacho!$"
 

@@ -39,8 +39,8 @@ PokemonMansion_1F_Text_TedDefeat::
 	.string "¡Ay!$"
 
 PokemonMansion_1F_Text_TedPostBattle::
-	.string "¿Una llave? No sé nada de eso.\n"
-	.string "talking about.$"
+	.string "¿Una llave? No sé de qué\n"
+	.string "me estás hablando.$"
 
 PokemonMansion_1F_Text_JohnsonIntro::
 	.string "¡P-p-paaah! ¡Me asustaste!\n"
@@ -52,6 +52,6 @@ PokemonMansion_1F_Text_JohnsonDefeat::
 
 PokemonMansion_1F_Text_JohnsonPostBattle::
 	.string "Estaba explorando aquí solo,\n"
-	.string "but I feel spooked.\p"
+	.string "pero me siento inquieto.\p"
 	.string "Debería irme pronto.$"
 

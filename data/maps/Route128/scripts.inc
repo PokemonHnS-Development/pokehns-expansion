@@ -247,7 +247,7 @@ Route128_Text_ArchieWhatHappened:
 	.string "¿Acaso... cometí un error horrible?$"
 
 Route128_Text_ArchieIOnlyWanted:
-	.string "I...\n"
+	.string "Yo...\n"
 	.string "Yo solo quería...$"
 
 Route128_Text_MaxieDoYouUnderstandNow:

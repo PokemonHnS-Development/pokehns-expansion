@@ -361,10 +361,10 @@ CinnabarIsland_Text_BlaineLivedHereSinceBeforeLab::
 	.string "antes de que hicieran el LAB.$"
 
 CinnabarIsland_Text_ScientistsExperimentInMansion::
-	.string "Scientists conduct experiments \n"
-	.string "in the burned-out building.\p"
-	.string "quemado. Sabes, al que llaman\n"
-	.string "POKéMON MANSION.$"
+	.string "Los científicos hacían experimentos \n"
+	.string "en el edificio quemado.\p"
+	.string "Sabes, ese al que llaman\n"
+	.string "MANSIÓN POKéMON.$"
 
 CinnabarIsland_Text_IslandSign::
 	.string "CINNABAR ISLAND\n"
@@ -374,7 +374,7 @@ CinnabarIsland_Text_PokemonLab::
 	.string "POKéMON LAB$"
 
 CinnabarIsland_Text_GymSign::
-	.string "CINNABAR ISLAND POKéMON GYM\n"
+	.string "GIMNASIO POKéMON DE CINNABAR\n"
 	.string "LÍDER: BLAINE\l"
 	.string "¡El impulsivo Maestro Quiz!$"
 
@@ -388,9 +388,9 @@ CinnabarIsland_Text_ComeWithMeToOneIsland::
 	.string "Espero que sigas usando mi\n"
 	.string "PC system.\p"
 	.string "Bueno, escucha, ya que nos\n"
-	.string "how about spending time with me?\p"
+	.string "¿qué tal si pasas un rato conmigo?\p"
 	.string "Hay una pequeña isla muy lejana,\n"
-	.string "south called ONE ISLAND.\p"
+	.string "al sur llamada ONE ISLAND.\p"
 	.string "Un amigo me invitó, así que voy\n"
 	.string "para allá.\p"
 	.string "¿Qué te parece?\n"
@@ -402,10 +402,10 @@ CinnabarIsland_Text_AllRightLetsGo::
 
 CinnabarIsland_Text_IllBeWaitingInPokeCenter::
 	.string "¿Qué, estás muy ocupado?\p"
-	.string "Well, all right.\n"
+	.string "Bueno, está bien.\n"
 	.string "El barco aún no ha llegado.\p"
-	.string "I'll be waiting at the POKéMON\n"
-	.string "CENTER está allá.\p"
+	.string "Estaré esperando en el\n"
+	.string "CENTRO POKéMON de allá.\p"
 	.string "Ven a verme cuando termines\n"
 	.string "tus asuntos aquí.$"
 

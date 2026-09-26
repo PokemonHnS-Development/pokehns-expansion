@@ -87,7 +87,7 @@ GoldenrodDeptStore_Text_RoofTwin:
     .string "por aquí.$"
 
 GoldenrodDeptStore_Text_RoofSuperNerdOhWow:
-    .string "Oh, wow!$"
+    .string "¡Oh, vaya!$"
 
 GoldenrodDeptStore_Text_RoofSuperNerdQuitBotheringMe:
     .string "¿Dejarás de molestarme?$"
@@ -100,7 +100,7 @@ GoldenrodDeptStore_Text_RoofPokefanM:
 
 GoldenrodDeptStore_Text_RoofTeacher:
     .string "¡Oh, todo es tan barato!\p"
-    .string "I bought so much, my PACK's crammed!$"
+    .string "¡Compré tanto que mi MOCHILA rebosa!$"
 
 GoldenrodDeptStore_Text_RoofBugCatcher:
     .string "Mis POKéMON siempre se paralizan o\n"

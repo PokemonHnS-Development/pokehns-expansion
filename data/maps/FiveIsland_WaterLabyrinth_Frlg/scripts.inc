@@ -66,18 +66,18 @@ FiveIsland_WaterLabyrinth_EventScript_ReturnForEgg::
 FiveIsland_WaterLabyrinth_Text_LetMeTakeLookAtMons::
 	.string "Viajas por todas partes,\n"
 	.string "tipo PLANTA, ¿verdad?\p"
-	.string "You're not driving your POKéMON\n"
+	.string "No estás exigiendo a tus POKéMON\n"
 	.string "demasiado duro, ¿verdad?\p"
 	.string "Déjame ver.\n"
 	.string "... ... ...   ... ... ...$"
 
 FiveIsland_WaterLabyrinth_Text_HmmISeeIsee::
-	.string "Ah, hmm...\n"
-	.string "I see, I see...$"
+	.string "Ah, mmm...\n"
+	.string "Ya veo, ya veo...$"
 
 FiveIsland_WaterLabyrinth_Text_TreatMonRightHaveThis::
-	.string "Oh, impressive.\n"
-	.string "You treat your POKéMON right.\p"
+	.string "Oh, impresionante.\n"
+	.string "Tratas bien a tus POKéMON.\p"
 	.string "Creo que puedo confiarte\n"
 	.string "esto.\p"
 	.string "Por favor, quiero que tengas esto.$"
@@ -90,7 +90,7 @@ FiveIsland_WaterLabyrinth_Text_DontHaveSpaceInYourParty::
 	.string "...Lamentablemente, no tienes\n"
 	.string "espacio para esto en tu equipo.\p"
 	.string "Será mejor que vuelvas por él\n"
-	.string "another time.$"
+	.string "otra ocasión.$"
 
 @ Unused
 FiveIsland_WaterLabyrinth_Text_YouveComeBackForTheEgg::
@@ -100,26 +100,26 @@ FiveIsland_WaterLabyrinth_Text_YouveComeBackForTheEgg::
 
 FiveIsland_WaterLabyrinth_Text_GladIMetSomeoneLikeYou::
 	.string "Recibí ese HUEVO cuando estaba\n"
-	.string "traveling.\p"
+	.string "viajando.\p"
 	.string "Me alegra haberte conocido.$"
 
 FiveIsland_WaterLabyrinth_Text_CuteMonRemindsMeOfDaisy::
 	.string "Oh, hola.\n"
 	.string "Qué lindo {STR_VAR_2}.\p"
 	.string "Verlo me recuerda a un dulce\n"
-	.string "little girl I met while traveling.\p"
-	.string "She was gently grooming POKéMON...\n"
+	.string "de una niña que conocí viajando.\p"
+	.string "Cepillaba suavemente a POKéMON...\n"
 	.string "Era como un angelito.\p"
 	.string "El nombre de esa niña...\n"
 	.string "creo que era DAISY.$"
 
 FiveIsland_WaterLabyrinth_Text_AlizeIntro::
 	.string "Este es un excelente entorno\n"
-	.string "for raising POKéMON.$"
+	.string "para criar POKéMON.$"
 
 FiveIsland_WaterLabyrinth_Text_AlizeDefeat::
-	.string "Your POKéMON are growing up\n"
-	.string "admirably well!$"
+	.string "¡Tus POKéMON están creciendo\n"
+	.string "de forma admirable!$"
 
 FiveIsland_WaterLabyrinth_Text_AlizePostBattle::
 	.string "Sabes, creo que tienes el\n"

@@ -17,7 +17,7 @@ CianwoodGym_EventScript_Statue2::
 	end
 
 CianwoodGym_Text_GymStatue:
-	.string "CIANWOOD CITY POKéMON GYM$"
+	.string "GIMNASIO POKéMON CIUDAD ROCA$"
 
 CianwoodGym_Text_GymStatueCertified:
 	.string "GIMNASIO POKéMON CIUDAD ROCA\p"
@@ -207,7 +207,7 @@ CianwoodGym_EventScript_Lao::
 	end
 
 CianwoodGym_Text_BlackbeltLaoSeen:
-	.string "We martial artists fear nothing!$"
+	.string "¡Los artistas marciales no tememos nada!$"
 
 CianwoodGym_Text_BlackbeltLaoBeaten:
 	.string "¡Qué impactante!$"
@@ -230,7 +230,7 @@ CianwoodGym_Text_BlackbeltNobBeaten:
 	.string "...$"
 
 CianwoodGym_Text_BlackbeltNobAfter:
-	.string "I lost! I'm speechless!$"
+	.string "¡Perdí! ¡Me quedé sin palabras!$"
 
 CianwoodGym_EventScript_Lung::
 	trainerbattle_single TRAINER_LUNG_HNS, CianwoodGym_Text_BlackbeltLungSeen, CianwoodGym_Text_BlackbeltLungBeaten

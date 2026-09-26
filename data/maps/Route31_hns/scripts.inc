@@ -220,4 +220,4 @@ Route31_Text_WadeNoRoom:
 	.string "cuarto del jefe!$"
 
 Route31_Text_DarkCaveSign:
-	.string "DARK CAVE$"
+	.string "CUEVA OSCURA$"

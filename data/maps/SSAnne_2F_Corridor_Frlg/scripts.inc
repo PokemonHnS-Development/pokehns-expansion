@@ -172,15 +172,15 @@ SSAnne_2F_Corridor_Text_ThisShipIsLuxuryLiner::
 	.string "Este barco es un crucero de lujo\n"
 	.string "¡Entrenadores del mundo!\p"
 	.string "En cada puerto hacemos fiestas\n"
-	.string "invited TRAINERS.$"
+	.string "a los ENTRENADORES invitados.$"
 
 SSAnne_2F_Corridor_Text_RivalIntro::
 	.string "{RIVAL}: Bonjour!\n"
 	.string "¡{PLAYER}!\p"
 	.string "¡Imagínate verte aquí!\n"
 	.string "{PLAYER}, ¿de verdad te invitaron?\p"
-	.string "So how's your POKéDEX coming?\p"
-	.string "I already caught 40 kinds, pal.\n"
+	.string "¿Y cómo va tu POKéDEX?\p"
+	.string "Ya atrapé 40 especies, amigo.\n"
 	.string "Hay de todo por aquí.\p"
 	.string "Rebúscate en las zonas con hierba,\n"
 	.string "y búscalos bien.$"
@@ -199,9 +199,9 @@ SSAnne_2F_Corridor_Text_RivalVictory::
 SSAnne_2F_Corridor_Text_RivalPostBattle::
 	.string "{RIVAL}: Dicen que hay un maestro\n"
 	.string "de CORTE a bordo.\p"
-	.string "But he was just a seasick old man!\p"
-	.string "CUT en sí es muy útil.\n"
+	.string "¡Pero era solo un viejo mareado!\p"
+	.string "CORTE en sí es muy útil.\n"
 	.string "Sí, será muy práctico.\p"
 	.string "Tú también deberías verlo.\n"
-	.string "Smell ya!$"
+	.string "¡Nos vemos!$"
 

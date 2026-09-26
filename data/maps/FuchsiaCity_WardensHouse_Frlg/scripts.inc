@@ -59,16 +59,16 @@ FuchsiaCity_WardensHouse_EventScript_DisplaySign2::
 	end
 
 FuchsiaCity_WardensHouse_Text_HifFuffHefifoo::
-	.string "WARDEN: Hif fuff hefifoo!\p"
-	.string "Ha lof ha feef ee hafahi ho.\n"
-	.string "Heff hee fwee!$"
+	.string "ALCAIDE: ¡Ñif fuf fefiñó!\p"
+	.string "Ña lof ña feef ee ñafaji ño.\n"
+	.string "¡Ñeff ñee fwee!$"
 
 FuchsiaCity_WardensHouse_Text_AhHowheeHoHoo::
-	.string "Ah howhee ho hoo!\n"
-	.string "Eef ee hafahi ho!$"
+	.string "¡Ña jowee ño ñoo!\n"
+	.string "¡Eef ee ñafaji ño!$"
 
 FuchsiaCity_WardensHouse_Text_HeOhayHeHaHoo::
-	.string "Ha?\n"
+	.string "¿Ña?\n"
 	.string "¡E ohay je ja ju i jaje!$"
 
 FuchsiaCity_WardensHouse_Text_GaveGoldTeethToWarden::
@@ -79,7 +79,7 @@ FuchsiaCity_WardensHouse_Text_WardenPoppedInHisTeeth::
 	.string "¡El GUARDA se puso los dientes!$"
 
 FuchsiaCity_WardensHouse_Text_ThanksSonGiveYouSomething::
-	.string "WARDEN: Thanks, son!\n"
+	.string "ALCAIDE: ¡Gracias, hijo!\n"
 	.string "¡Salvaste mi vida!\p"
 	.string "Nadie entendía ni una\n"
 	.string "de lo que dije, ¡ni uno!\p"
@@ -99,27 +99,27 @@ FuchsiaCity_WardensHouse_Text_ThanksLassieGiveYouSomething::
 	.string "problemas.$"
 
 FuchsiaCity_WardensHouse_Text_ReceivedHM04FromWarden::
-	.string "{PLAYER} received HM04\n"
+	.string "{PLAYER} recibió la MO04\n"
 	.string "del ALCAIDE.$"
 
 FuchsiaCity_WardensHouse_Text_ExplainStrength::
 	.string "ALCAIDE: Dentro de la MO04\n"
 	.string "STRENGTH.\p"
-	.string "It lets POKéMON move boulders when\n"
+	.string "Permite a los POKéMON mover rocas\n"
 	.string "encontrarás...\p"
 	.string "Ah sí, ¿encontraste el SECRETO\n"
-	.string "HOUSE in the SAFARI ZONE?$"
+	.string "CASA en la ZONA SAFARI?$"
 
 @ Unused
 FuchsiaCity_WardensHouse_Text_YouHaveTooMuchStuff::
-	.string "なんや　にもつ\n"
-	.string "いっぱいやんけ！$"
+	.string "¡Pero bueno! ¡Tu mochila\n"
+	.string "¡está llena!$"
 
 FuchsiaCity_WardensHouse_Text_MonPhotosFossilsOnDisplay::
-	.string "POKéMON photos and fossils are on\n"
-	.string "display.$"
+	.string "Fotos y fósiles de POKéMON están\n"
+	.string "en exhibición.$"
 
 FuchsiaCity_WardensHouse_Text_OldMonMerchandiseOnDisplay::
-	.string "Old POKéMON merchandise is on\n"
-	.string "display.$"
+	.string "Artículos antiguos de POKéMON están\n"
+	.string "en exhibición.$"
 

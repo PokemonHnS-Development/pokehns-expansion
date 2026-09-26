@@ -246,7 +246,7 @@ JaggedPass_Text_JulioIntro:
 	.string "montaña de un solo golpe!$"
 
 JaggedPass_Text_JulioDefeat:
-	.string "I feel like I'm falling apart...$"
+	.string "Siento que me estoy desmoronando...$"
 
 JaggedPass_Text_JulioPostBattle:
 	.string "Mi BICICLETA saltó tanto que\n"

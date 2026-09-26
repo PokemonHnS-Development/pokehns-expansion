@@ -59,7 +59,7 @@ AbandonedShip_Corridors_B1F_Text_DuncanIntro:
 	.string "¿Qué tal una batalla rápida?$"
 
 AbandonedShip_Corridors_B1F_Text_DuncanDefeat:
-	.string "Whoops, I'm sunk!$"
+	.string "¡Ay, me hundo!$"
 
 AbandonedShip_Corridors_B1F_Text_DuncanPostBattle:
 	.string "El fondo del barco se hundió en las\n"

@@ -452,7 +452,7 @@ MossdeepCity_Gym_Text_SamanthaIntro:
 	.string "cuál es tu futuro!$"
 
 MossdeepCity_Gym_Text_SamanthaDefeat:
-	.string "I surrender!$"
+	.string "¡Me rindo!$"
 
 MossdeepCity_Gym_Text_SamanthaPostBattle:
 	.string "Librarás una batalla intensamente\n"
@@ -598,7 +598,7 @@ MossdeepCity_Gym_Text_GymStatue:
 
 MossdeepCity_Gym_Text_GymStatueCertified:
 	.string "GIMNASIO POKéMON CIUDAD FONDO MAR\p"
-	.string "LIZA AND TATE'S CERTIFIED TRAINERS:\n"
+	.string "ENTRENADORES CERTIFICADOS DE TATE Y LIZA:\n"
 	.string "{PLAYER}$"
 
 MossdeepCity_Gym_Text_TateAndLizaPreRematch:

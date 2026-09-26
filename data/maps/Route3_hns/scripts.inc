@@ -45,7 +45,7 @@ Route3_Text_YoungsterWarren_Seen:
 	.string "Mmm... No sé qué hacer...$"
 
 Route3_Text_YoungsterWarren_Beaten:
-	.string "I knew I'd lose...$"
+	.string "Sabía que perdería...$"
 
 Route3_Text_YoungsterWarren_AfterBattle:
 	.string "Te veías fuerte.\p"
@@ -55,7 +55,7 @@ Route3_Text_YoungsterJimmy_Seen:
 	.string "¡Puedo correr como el viento!$"
 
 Route3_Text_YoungsterJimmy_Beaten:
-	.string "Blown away!$"
+	.string "¡Arrasado!$"
 
 Route3_Text_YoungsterJimmy_AfterBattle:
 	.string "Uso shorts todo el año.\p"

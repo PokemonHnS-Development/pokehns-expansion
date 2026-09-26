@@ -1493,11 +1493,11 @@ SootopolisCity_Text_PrettyMonCameFromSky:
 	.string "el cielo...$"
 
 SootopolisCity_Text_SootopolisWillBeWrecked:
-	.string "Oh, no!\n"
+	.string "¡Oh, no!\n"
 	.string "¡CIUDAD HUMEDAL quedará en ruinas!$"
 
 SootopolisCity_Text_SootopolisDidntGetWrecked:
-	.string "SOOTOPOLIS CITY didn't get wrecked!$"
+	.string "¡CIUDAD HUMEDAL no fue destruida!$"
 
 SootopolisCity_Text_NoOrdinaryTourist:
 	.string "Hm!\n"

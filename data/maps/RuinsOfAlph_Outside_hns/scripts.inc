@@ -123,7 +123,7 @@ RuinsOfAlph_Outside_Text_PsychicNathan_After:
 	.string "Me gusta pensar aquí.$"
 
 RuinsOfAlph_Outside_Text_MysteryChamberSign:
-	.string "MYSTERY STONE PANEL CHAMBER$"
+	.string "CÁMARA DE PANELES MISTERIOSOS$"
 
 RuinsOfAlph_Outside_Text_MainSign:
 	.string "RUINAS ALFA\n"

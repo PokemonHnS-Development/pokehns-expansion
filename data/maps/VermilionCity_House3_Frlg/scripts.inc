@@ -28,10 +28,10 @@ VermilionCity_House3_Text_PidgeyFlyLetterToSaffron::
 	.string "lleve una carta a PALDEA al norte.$"
 
 VermilionCity_House3_Text_Pidgey::
-	.string "PIDGEY: Kurukkoo!$"
+	.string "PIDGEY: ¡Kurukkoo!$"
 
 VermilionCity_House3_Text_DearPippiLetter::
-	.string "Dear PIPPI,\n"
+	.string "Querida PIPPI,\n"
 	.string "Espero verte pronto.\p"
 	.string "Oí que AZULONA tiene problemas\n"
 	.string "TEAM ROCKET.\p"

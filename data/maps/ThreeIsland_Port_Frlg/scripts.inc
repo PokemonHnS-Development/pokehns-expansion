@@ -40,11 +40,11 @@ ThreeIsland_Port_Text_WereKantoRiderFederation::
 	.string "¡Somos la FEDERACIÓN JINETE KANTO!\n"
 	.string "Vroom! Vavavavooom! Vroom!\p"
 	.string "Mi bici es débil, así que tengo\n"
-	.string "make exhaust noises myself!$"
+	.string "que hacer ruidos de motor yo mismo!$"
 
 ThreeIsland_Port_Text_ForkOverMoney::
-	.string "Hey, hey, lady!\n"
-	.string "Fork over some spending money!$"
+	.string "¡Oye, oye, señorita!\n"
+	.string "¡Suéltame dinero para gastos!$"
 
 ThreeIsland_Port_Text_IllCallThePolice::
 	.string "Aiyeeh!\p"
@@ -52,9 +52,9 @@ ThreeIsland_Port_Text_IllCallThePolice::
 	.string "¡...llamaré a la policía!$"
 
 ThreeIsland_Port_Text_ThankGoodnessBikersGone::
-	.string "Those BIKERS...\n"
+	.string "Esos MOTORISTAS...\n"
 	.string "¿Ya se fueron?\p"
-	.string "Oh, thank goodness!\n"
+	.string "¡Oh, gracias a Dios!\n"
 	.string "¡Me aterraron de verdad!$"
 
 ThreeIsland_Port_Text_EverythingTurnedOutForBest::

@@ -123,7 +123,7 @@ RocketHideout_B4F_EventScript_RemoveBarrier::
 RocketHideout_B4F_Text_GiovanniIntro::
 	.string "¡Vaya! Debo decir que me\n"
 	.string "impresiona que llegaras.\p"
-	.string "TEAM ROCKET captures POKéMON from\n"
+	.string "El TEAM ROCKET captura POKéMON de\n"
 	.string "todo el mundo.\p"
 	.string "Son herramientas clave para que\n"
 	.string "nuestro imperio criminal siga.\p"
@@ -136,8 +136,8 @@ RocketHideout_B4F_Text_GiovanniDefeat::
 	.string "¡No puede ser!$"
 
 RocketHideout_B4F_Text_GiovanniPostBattle::
-	.string "I see that you raise POKéMON with\n"
-	.string "utmost care.\p"
+	.string "Veo que críais a los POKéMON con\n"
+	.string "sumo cuidado.\p"
 	.string "Un niño como tú jamás\n"
 	.string "entendería lo que busco.\p"
 	.string "¡Esta vez me apartaré!\p"
@@ -145,10 +145,10 @@ RocketHideout_B4F_Text_GiovanniPostBattle::
 
 RocketHideout_B4F_Text_Grunt2Intro::
 	.string "¡Te conozco!\n"
-	.string "You ruined our plans at MT. MOON!$"
+	.string "¡Arruinaste nuestros planes en el MT. MOON!$"
 
 RocketHideout_B4F_Text_Grunt2Defeat::
-	.string "Burned again!$"
+	.string "¡Quemado otra vez!$"
 
 RocketHideout_B4F_Text_Grunt2PostBattle::
 	.string "¿Tienes algo contra el EQUIP\n"
@@ -167,12 +167,12 @@ RocketHideout_B4F_Text_Grunt3PostBattle::
 
 RocketHideout_B4F_Text_Grunt1Intro::
 	.string "¿El ascensor no funciona?\n"
-	.string "Who has the LIFT KEY?$"
+	.string "¿Quién tiene la LLAVE?$"
 
 RocketHideout_B4F_Text_Grunt1Defeat::
 	.string "¡No!$"
 
 RocketHideout_B4F_Text_Grunt1PostBattle::
 	.string "¡Oh, no!\n"
-	.string "I dropped the LIFT KEY!$"
+	.string "¡Se me cayó la LLAVE!$"
 

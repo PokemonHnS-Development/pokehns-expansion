@@ -417,7 +417,7 @@ BattleFrontier_BattlePalaceLobby_Text_ReturnWhenFortified_hns:
 	.string "y a tus POKéMON, debes volver.$"
 
 BattleFrontier_BattlePalaceLobby_Text_WhichChallenge_hns:
-	.string "Hay dos BATTLE HALLS,\n"
+	.string "Hay dos SALAS DE BATALLA,\n"
 	.string "Nivel 50 y Nivel Abierto.\l"
 	.string "¿Cuál desafío eliges?$"
 

@@ -6,7 +6,7 @@ Route9_EventScript_RouteSign::
 	end
 
 Route9_Text_AliciaIntro::
-	.string "You have POKéMON with you!\n"
+	.string "¡Tienes POKéMON contigo!\n"
 	.string "¡Eres mío!$"
 
 Route9_Text_AliciaDefeat::
@@ -20,13 +20,13 @@ Route9_Text_AliciaPostBattle::
 
 Route9_Text_ChrisIntro::
 	.string "¿Quién anda ahí con esos?\n"
-	.string "good-looking POKéMON?$"
+	.string "¿POKéMON tan guapos?$"
 
 Route9_Text_ChrisDefeat::
 	.string "¡Fuera de combate!$"
 
 Route9_Text_ChrisPostBattle::
-	.string "Keep walking!$"
+	.string "¡Sigue caminando!$"
 
 Route9_Text_DrewIntro::
 	.string "Voy por el TÚNEL ROCOSO\n"
@@ -55,8 +55,8 @@ Route9_Text_JeremyIntro::
 
 Route9_Text_JeremyDefeat::
 	.string "¡Sigue así, eh!\p"
-	.string "Oh wait.\n"
-	.string "I'm out of POKéMON!$"
+	.string "Ah, espera.\n"
+	.string "¡Me quedé sin POKéMON!$"
 
 Route9_Text_JeremyPostBattle::
 	.string "Vaya valor tienes al plantarme\n"
@@ -95,19 +95,19 @@ Route9_Text_AlanDefeat::
 
 Route9_Text_AlanPostBattle::
 	.string "¡Jajajaja!\n"
-	.string "Us hearty guys always laugh!$"
+	.string "¡Los fuertes siempre reímos!$"
 
 Route9_Text_ConnerIntro::
-	.string "Go, my super BUG POKéMON!$"
+	.string "¡Adelante, mi super POKéMON bicho!$"
 
 Route9_Text_ConnerDefeat::
 	.string "Mis bichos...$"
 
 Route9_Text_ConnerPostBattle::
-	.string "If you don't like BUG POKéMON,\n"
+	.string "Si no te gustan los POKéMON bicho,\n"
 	.string "¡me molestas!$"
 
 Route9_Text_RouteSign::
-	.string "ROUTE 9\n"
+	.string "RUTA 9\n"
 	.string "CIUDAD CERULEAN - TÚNEL ROCA$"
 

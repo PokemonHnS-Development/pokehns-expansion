@@ -48,7 +48,7 @@ VictoryRoad_1F_Text_NaomiIntro::
 	.string "por mí?$"
 
 VictoryRoad_1F_Text_NaomiDefeat::
-	.string "I lost out...$"
+	.string "Perdí...$"
 
 VictoryRoad_1F_Text_NaomiPostBattle::
 	.string "Nunca quise perder con nadie,\n"

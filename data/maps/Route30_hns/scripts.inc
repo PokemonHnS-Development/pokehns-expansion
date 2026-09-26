@@ -122,7 +122,7 @@ Route30_EventScript_Mailbox::
 	end
 
 Route30_Text_Mailbox:
-	.string "MR.POKéMON's House$"
+	.string "Casa del SR. POKéMON$"
 
 Route30_Text_UseTackle:
 	.string "¡Ve, RATTATA!\p"
@@ -198,7 +198,7 @@ Route30_Text_MrPokemonsHouseDirectionsSign:
 	.string "¡SIGUE TODO RECTO!$"
 
 Route30_Text_MrPokemonsHouseSign:
-	.string "MR. POKéMON'S HOUSE$"
+	.string "CASA DEL SR. POKéMON$"
 
 Route30_Text_TrainerTips:
 	.string "CONSEJOS DE ENTRENADOR\p"

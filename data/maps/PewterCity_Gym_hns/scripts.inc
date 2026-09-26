@@ -61,7 +61,7 @@ PewterCity_Gym_Text_Brock_GiveTM:
 	.string "Toma, llévate esta MT.$"
 
 PewterCity_Gym_Text_Brock_ExplainTM:
-	.string "Contiene ROCK SLIDE.\p"
+	.string "Contiene AVALANCHA.\p"
 	.string "Lanza rocas a los oponentes\n"
 	.string "y puede hacer que retrocedan.\p"
 	.string "Úsala para detenerlos en seco.$"

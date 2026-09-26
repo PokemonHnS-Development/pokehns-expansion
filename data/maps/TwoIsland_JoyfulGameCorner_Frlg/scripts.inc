@@ -189,10 +189,10 @@ TwoIsland_JoyfulGameCorner_EventScript_Lostelle::
 	end
 
 TwoIsland_JoyfulGameCorner_Text_WhereHasLostelleGottenTo::
-	.string "LOSTELLE?\n"
-	.string "today?\p"
+	.string "¿LOSTELLE?\n"
+	.string "¿hoy?\p"
 	.string "Siempre me trae el almuerzo\n"
-	.string "day right about now...$"
+	.string "a esta hora más o menos...$"
 
 TwoIsland_JoyfulGameCorner_Text_PleaseHelpFindLostelle::
 	.string "¿Eh? ¡Tú, ahí!\n"
@@ -203,14 +203,14 @@ TwoIsland_JoyfulGameCorner_Text_PleaseHelpFindLostelle::
 	.string "LOSTELLE es una linda chica, me\n"
 	.string "encanta. ¿Y si alguien...\p"
 	.string "¿Y si algo le pasó a mi\n"
-	.string "LOSTELLE?!\p"
+	.string "¿LOSTELLE?!\p"
 	.string "¡Por favor, ayúdenme a\n"
 	.string "Ve a buscar en ISLA TRES!$"
 
 TwoIsland_JoyfulGameCorner_Text_IsThisOnlyThreeIsland::
 	.string "Eh? ¿Qué es este CASINO?\n"
 	.string "¿Qué tan triste puede ser esto?\p"
-	.string "Those clowns...\p"
+	.string "Esos payasos...\p"
 	.string "Dijeron que esperarían en la\n"
 	.string "isla, ¿dónde están?\p"
 	.string "¡Oye, tú! ¿Es esta la única\n"
@@ -224,9 +224,9 @@ TwoIsland_JoyfulGameCorner_Text_ThisIsTwoIslandMoveIt::
 	.string "de mi local.$"
 
 TwoIsland_JoyfulGameCorner_Text_TheseIslandsAreConfusing::
-	.string "Huh...\n"
-	.string "Oh, oh, gotcha.\p"
-	.string "Tch...\n"
+	.string "Eh...\n"
+	.string "Ah, ah, ya veo.\p"
+	.string "Puf...\n"
 	.string "Estas islas son confusas...$"
 
 TwoIsland_JoyfulGameCorner_Text_PunkScuffedUpMyFloor::
@@ -288,13 +288,13 @@ TwoIsland_JoyfulGameCorner_Text_ReceivedMoonStoneFromLostellesDaddy::
 
 TwoIsland_JoyfulGameCorner_Text_NotGoingToFitInBag::
 	.string "Tu MOCHILA no tiene espacio\n"
-	.string "thing...$"
+	.string "cosa...$"
 
 TwoIsland_JoyfulGameCorner_Text_IllGetGameCornerRunning::
 	.string "Está bien, iré a la SALA DE\n"
-	.string "running right away.\p"
+	.string "juegos de inmediato.\p"
 	.string "Debes venir a visitar con un\n"
-	.string "friend.$"
+	.string "amigo.$"
 
 TwoIsland_JoyfulGameCorner_Text_PleaseShowMeYouBeingCool::
 	.string "¡Escucha, escucha!\p"

@@ -190,20 +190,20 @@ SaffronCity_FightingDojo_Text_Pidgeot:
 	.string "PIDGEOT: GEEEE!$"
 
 SaffronCity_FightingDojo_Text_HP:
-	.string "HP$"
+	.string "PS$"
 SaffronCity_FightingDojo_Text_Attack:
-	.string "ATK$"
+	.string "ATAQUE$"
 SaffronCity_FightingDojo_Text_Defense:
-	.string "DEF$"
+	.string "DEFENSA$"
 SaffronCity_FightingDojo_Text_SpecialAttack:
-	.string "SP.ATK$"
+	.string "AT.ESP.$"
 SaffronCity_FightingDojo_Text_SpecialDefense:
-	.string "SP.DEF$"
+	.string "DEF.ESP.$"
 SaffronCity_FightingDojo_Text_Speed:
-	.string "SPD$"
+	.string "VELOC.$"
 
 SaffronCity_FightingDojo_Text_WouldYouLikeToBattle:
-	.string "Battle {STR_VAR_1} for 3 {STR_VAR_2} EVs?$"
+	.string "¿Luchar contra {STR_VAR_1} por 3 {STR_VAR_2} PE?$"
 
 SaffronCity_FightingDojo_Text_BlackBelt:
 	.string "¡Entras al DOJO DE LUCHA!\p"

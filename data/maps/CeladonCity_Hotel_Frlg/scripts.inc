@@ -28,7 +28,7 @@ CeladonCity_Hotel_Text_OnVacationWithBrotherAndBoyfriend::
 	.string "¡CIUDAD CELEDÓN es una ciudad muy bonita!$"
 
 CeladonCity_Hotel_Text_WhyDidSheBringBrother::
-	.string "Why?\n"
+	.string "¿Por qué?\n"
 	.string "¿Por qué trajo a su hermano?$"
 
 CeladonCity_Hotel_Text_SisBroughtMeOnVacation::

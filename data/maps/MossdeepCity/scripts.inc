@@ -323,7 +323,7 @@ MossdeepCity_Text_WhatToDoWithWeirdRock:
 	.string "hace con una roca rara?$"
 
 MossdeepCity_Text_WailmerWatching:
-	.string "Cerca de FONDO MARIN, verás wild\n"
+	.string "Cerca de FONDO MARÍN, verás\n"
 	.string "WAILMER.\p"
 	.string "Se llama, eh...\n"
 	.string "Cómo era...\p"

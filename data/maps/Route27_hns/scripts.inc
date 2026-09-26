@@ -170,7 +170,7 @@ Route27_EventScript_TohjoFallsSign::
     end
 
 Route27_Text_FisherHey:
-    .string "Hey!$"
+    .string "¡Oye!$"
 
 Route27_Text_FisherMessage:
     .string "¿Sabes lo que acabas de hacer?\p"
@@ -183,7 +183,7 @@ Route27_Text_CooltrainermBlakeSeen:
     .string "¡Lucha contra mí!$"
 
 Route27_Text_CooltrainermBlakeBeaten:
-    .string "Yow!$"
+    .string "¡Au!$"
 
 Route27_Text_CooltrainermBlakeAfter:
     .string "Si vences en este duro viaje,\n"
@@ -258,10 +258,10 @@ Route27_Text_PsychicGilbertAfter:
     .string "Eso es lo que dice mi premonición.$"
 
 Route27_Text_BirdKeeperJoseSeen:
-    .string "Tweet! Tweet! Tetweet!$"
+    .string "¡Pío! ¡Pío! ¡Piopío!$"
 
 Route27_Text_BirdKeeperJoseBeaten:
-    .string "Tweet!$"
+    .string "¡Pío!$"
 
 Route27_Text_BirdKeeperJoseAfter:
     .string "Los CUIDADORES de aves como yo\n"
@@ -272,10 +272,10 @@ Route27_Text_JoseRegister:
     .string "imitan silbidos para mandar.$"
 
 Route27_Text_JoseRematchIntro:
-    .string "Tweet! Tweet! Tetweet!$"
+    .string "¡Pío! ¡Pío! ¡Piopío!$"
 
 Route27_Text_JoseRematchDefeat:
-    .string "Tweet!$"
+    .string "¡Pío!$"
 
 Route27_Text_JosePostRematch:
     .string "Los CUIDADORES de aves como yo\n"

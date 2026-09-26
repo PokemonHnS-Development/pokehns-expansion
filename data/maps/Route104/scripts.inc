@@ -1053,7 +1053,7 @@ Route104_Text_FlowerShopSellingSaplings:
 	.string "compras. ¿Dónde los pongo?$"
 
 Route104_Text_MrBrineysCottage:
-	.string "MR. BRINEY'S COTTAGE$"
+	.string "CASA DEL SR. BRINEY$"
 
 Route104_Text_RouteSignPetalburg:
 	.string "RUTA 104\n"
@@ -1064,7 +1064,7 @@ Route104_Text_RouteSignRustboro:
 	.string "{UP_ARROW} CIUDAD FONDOVISTA$"
 
 Route104_Text_PrettyPetalFlowShop:
-	.string "PRETTY PETAL FLOWER SHOP$"
+	.string "FLORERÍA PÉTALO LINDO$"
 
 Route104_Text_TrainerTipsDoubleBattles:
 	.string "CONSEJOS DE ENTRENADOR\p"
@@ -1148,7 +1148,7 @@ Route104_Text_BrendanIntro:
 	.string "ENTRENADOR, ¡pero no tendré piedad!$"
 
 Route104_Text_BrendanDefeat:
-	.string "Hmm...\n"
+	.string "Mmm...\n"
 	.string "Eres bastante bueno.$"
 
 Route104_Text_BrendanPostBattle:

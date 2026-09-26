@@ -93,8 +93,8 @@ ViridianCity_Mart_Text_TakeThisToProfOak::
 	.string "¿Puedes llevárselo?$"
 
 ViridianCity_Mart_Text_ReceivedOaksParcelFromClerk::
-	.string "{PLAYER} received OAK'S PARCEL\n"
-	.string "from the POKéMON MART clerk.$"
+	.string "{PLAYER} recibió el PAQUETE DE OAK\n"
+	.string "del empleado de la TIENDA POKéMON.$"
 
 ViridianCity_Mart_Text_SayHiToOakForMe::
 	.string "¡Vale, gracias! Salúdame a\n"
@@ -102,10 +102,10 @@ ViridianCity_Mart_Text_SayHiToOakForMe::
 
 ViridianCity_Mart_Text_ShopDoesGoodBusinessInAntidotes::
 	.string "Este negocio va muy bien en\n"
-	.string "ANTIDOTES, I've heard.$"
+	.string "ANTÍDOTOS, he oído.$"
 
 ViridianCity_Mart_Text_GotToBuySomePotions::
 	.string "Tengo que comprar unas POCIONES.\p"
-	.string "You never know when your POKéMON\n"
-	.string "necesitaré curarme rápido.$"
+	.string "Nunca sabes cuándo tu POKéMON\n"
+	.string "necesitará que lo cure rápido.$"
 

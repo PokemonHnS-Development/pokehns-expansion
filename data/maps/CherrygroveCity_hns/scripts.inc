@@ -381,7 +381,7 @@ CherrygroveCity_Text_CitySign:
 	.string "lindas y fragantes$"
 
 CherrygroveCity_Text_GuideGentsHouseSign:
-	.string "GUIDE GENT'S HOUSE$"
+	.string "CASA DEL GUÍA$"
 
 CherryGroveCity_Text_Staryu:
 	.string "STARYU: Yuuuuuuuu.$"

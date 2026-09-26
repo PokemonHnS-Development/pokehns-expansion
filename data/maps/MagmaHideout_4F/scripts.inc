@@ -129,7 +129,7 @@ MagmaHideout_4F_Text_Grunt11Intro:
 	.string "Yo también quiero ver a GROUDON, pero\n"
 	.string "no me dejan ver ni su cola...\p"
 	.string "Me siento muy frustrado por eso.\p"
-	.string "Oh, no!\n"
+	.string "¡Oh, no!\n"
 	.string "¡Hablé de más sobre GROUDON!$"
 
 MagmaHideout_4F_Text_Grunt11Defeat:
@@ -216,7 +216,7 @@ MagmaHideout_4F_Text_MaxieImGoingAfterGroudon:
 	.string "¿verdad?\p"
 	.string "... ... ... ... ... ...\n"
 	.string "... ... ... ... ... ...\p"
-	.string "Humph...\n"
+	.string "Buf...\n"
 	.string "¿Crees que yo no lo sabía?\p"
 	.string "Sin GROUDON, ya no hay\n"
 	.string "necesidad de este maldito volcán.\p"

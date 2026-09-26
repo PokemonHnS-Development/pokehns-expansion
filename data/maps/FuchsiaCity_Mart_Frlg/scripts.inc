@@ -34,10 +34,10 @@ FuchsiaCity_Mart_Items::
 FuchsiaCity_Mart_Text_DontTheyHaveSafariZonePennants::
 	.string "¿No tienen banderines\n"
 	.string "promocionar la ZONA SAFARI?\p"
-	.string "How about some paper lanterns?\n"
+	.string "¿Qué tal unas linternas de papel?\n"
 	.string "¿Acaso no hay ni calendarios?$"
 
 FuchsiaCity_Mart_Text_DidYouTryXSpeed::
 	.string "¿Probaste la VELOCIDAD X?\n"
-	.string "It speeds up a POKéMON in battle.$"
+	.string "Acelera a un POKéMON en batalla.$"
 

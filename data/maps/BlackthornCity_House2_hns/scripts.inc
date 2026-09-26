@@ -44,4 +44,4 @@ BlackthornCity_House2_Text_YouWontTradeMe:
 	.string "¿No quieres intercambiar? Ohh...$"
 
 BlackthornCity_House2_Text_After:
-	.string "Hi, how's my old MR MIME doing?$"
+	.string "¿Qué tal mi viejo MR MIME?$"

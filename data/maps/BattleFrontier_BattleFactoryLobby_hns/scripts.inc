@@ -411,7 +411,7 @@ BattleFrontier_BattleFactoryLobby_Text_DidntSaveBeforeQuitting_hns:
 
 @ Unused
 BattleFrontier_BattleFactoryLobby_Text_WellReturnMons_hns:
-	.string "We'll return your personal POKéMON.$"
+	.string "Te devolveremos tus POKéMON.$"
 
 @ Unused
 BattleFrontier_BattleFactoryLobby_Text_ReceivedPrizeItem_hns:
@@ -469,7 +469,7 @@ BattleFrontier_BattleFactoryLobby_Text_RecordLastMatch_hns:
 	.string "BATALLA en tu PASA FRONTERA?$"
 
 BattleFrontier_BattleFactoryLobby_Text_NeedKnowledgeOfMonsMoves_hns:
-	.string "Hi!\n"
+	.string "¡Hola!\n"
 	.string "¡Tú, ahí!\p"
 	.string "¿Crees que los eventos de aquí\n"
 	.string "son fáciles porque no necesitas\l"

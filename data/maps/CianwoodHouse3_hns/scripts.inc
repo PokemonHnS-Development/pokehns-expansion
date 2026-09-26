@@ -95,7 +95,7 @@ CianwoodCity_Text_ManiacIfHeComesBack:
 	.string "regresa?$"
 
 CianwoodCity_Text_ManiacHowsdoing:
-	.string "Hi! How's my POKéMON?$"
+	.string "¡Hola! ¿Cómo está mi POKéMON?$"
 
 CianwoodCity_Text_ManiacAskReturn:
 	.string "¡Hola! ¿Cómo está mi POKéMON?\p"

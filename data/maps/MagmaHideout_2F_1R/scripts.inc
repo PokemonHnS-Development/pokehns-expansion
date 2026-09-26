@@ -32,7 +32,7 @@ MagmaHideout_2F_1R_Text_Grunt14Intro:
 
 MagmaHideout_2F_1R_Text_Grunt14Defeat:
 	.string "Aiyiyi...\n"
-	.string "My pride as a TEAM MAGMA member...$"
+	.string "Mi orgullo de miembro del TEAM MAGMA...$"
 
 MagmaHideout_2F_1R_Text_Grunt14PostBattle:
 	.string "Si tienes escalofríos, deberías\n"
@@ -71,5 +71,5 @@ MagmaHideout_2F_1R_Text_Grunt5Defeat:
 	.string "Mutter...$"
 
 MagmaHideout_2F_1R_Text_Grunt5PostBattle:
-	.string "Actually, I'm no expert at battling...$"
+	.string "En realidad, no soy experto luchando...$"
 

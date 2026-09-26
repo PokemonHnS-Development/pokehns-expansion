@@ -330,7 +330,7 @@ Route34_DayCare_EventScript_ClosedForChallenge::
 Route34_DayCare_Text_ClosedForChallenge:
 	.string "Lo siento, no podemos cuidar tu\n"
 	.string "POKéMON si hay un límite de grupo\l"
-	.string "TRICK HOUSE!$"
+	.string "¡CASITA TRUCO!$"
 
 Route34_DayCare_EventScript_OnlyOneMon::
 	msgbox Route34_DayCare_Text_YouHaveJustOneMon, MSGBOX_DEFAULT

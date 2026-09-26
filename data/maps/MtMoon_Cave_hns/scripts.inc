@@ -117,4 +117,4 @@ MtMoon_Cave_Text_Rival_Loss:
 	.string "ENTRENADOR común.$"
 
 MtMoon_Cave_Text_Sign:
-	.string "MT MOON SQUARE ->$"
+	.string "PLAZA MONTE MOON ->$"

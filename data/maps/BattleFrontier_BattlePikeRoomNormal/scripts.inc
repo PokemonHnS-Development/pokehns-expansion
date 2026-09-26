@@ -695,13 +695,13 @@ BattleFrontier_BattlePikeRoomNormal_Text_DusclopsStop:
 	.string "¡DUSCLOPS, detente!$"
 
 BattleFrontier_BattlePikeRoomNormal_Text_KirliaUsedToxic:
-	.string "KIRLIA used TOXIC!$"
+	.string "¡KIRLIA usó TÓXICO!$"
 
 BattleFrontier_BattlePikeRoomNormal_Text_KirliaUsedHypnosis:
-	.string "KIRLIA used HYPNOSIS!$"
+	.string "¡KIRLIA usó HIPNOSIS!$"
 
 BattleFrontier_BattlePikeRoomNormal_Text_KirliaUsedThunderWave:
-	.string "KIRLIA used THUNDER WAVE!$"
+	.string "¡KIRLIA usó ONDA TRUENO!$"
 
 BattleFrontier_BattlePikeRoomNormal_Text_KirliaUsedWillOWisp:
 	.string "KIRLIA usó LÁSIGO!$"
@@ -710,7 +710,7 @@ BattleFrontier_BattlePikeRoomNormal_Text_DusclopsUsedWillOWisp:
 	.string "DUSCLOPS usó LÁSIGO!$"
 
 BattleFrontier_BattlePikeRoomNormal_Text_DusclopsUsedIceBeam:
-	.string "DUSCLOPS used ICE BEAM!$"
+	.string "¡DUSCLOPS usó RAYO HIELO!$"
 
 BattleFrontier_BattlePikeRoomNormal_Text_ThatsEnough:
 	.string "¡Mira aquí!\n"

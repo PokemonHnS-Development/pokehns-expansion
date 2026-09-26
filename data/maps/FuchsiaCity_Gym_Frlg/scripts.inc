@@ -90,17 +90,17 @@ FuchsiaCity_Gym_EventScript_GymStatuePostVictory::
 	end
 
 FuchsiaCity_Gym_Text_KogaIntro::
-	.string "KOGA: Fwahahaha!\p"
+	.string "KOGA: ¡Jajajaja!\p"
 	.string "¿Un niño como tú se atreve a\n"
 	.string "desafiarme?\p"
 	.string "La sola idea me hace estremecer\n"
 	.string "de risa!\p"
 	.string "Muy bien, te mostraré el verdadero\n"
 	.string "terror como maestro ninja.\p"
-	.string "Poison brings steady doom.\n"
-	.string "Sleep renders foes helpless.\p"
+	.string "El veneno trae una muerte lenta.\n"
+	.string "El sueño los deja indefensos.\p"
 	.string "Desesperad ante el horror\n"
-	.string "POISON-type POKéMON!{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
+	.string "¡de los POKéMON de tipo VENENO!{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
 
 FuchsiaCity_Gym_Text_KogaDefeat::
 	.string "¡Hmph!\n"
@@ -109,7 +109,7 @@ FuchsiaCity_Gym_Text_KogaDefeat::
 	.string "¡Toma la MEDALLA ALMA!$"
 
 FuchsiaCity_Gym_Text_KogaPostBattle::
-	.string "When afflicted by TOXIC, a POKéMON\n"
+	.string "Cuando un POKéMON sufre de TÓXICO,\n"
 	.string "sufre cada vez más.\p"
 	.string "Sufre un daño cada vez mayor\n"
 	.string "mientras avanza la batalla!\p"
@@ -117,7 +117,7 @@ FuchsiaCity_Gym_Text_KogaPostBattle::
 
 FuchsiaCity_Gym_Text_KogaExplainSoulBadge::
 	.string "Ahora que tienes la MEDALLA\nALMA,"
-	.string "the DEFENSE of your POKéMON rises.\p"
+	.string "la DEFENSA de tus POKéMON aumenta.\p"
 	.string "También te permite usar SURF fuera de\n"
 	.string "fantástica.\p"
 	.string "Ah!\n"
@@ -129,19 +129,19 @@ FuchsiaCity_Gym_Text_ReceivedTM06FromKoga::
 
 FuchsiaCity_Gym_Text_KogaExplainTM06::
 	.string "Sellada en esa MT06 hay\n"
-	.string "TOXIC!\p"
+	.string "¡TÓXICO!\p"
 	.string "Es una técnica secreta que data\n"
-	.string "back some four hundred years.$"
+	.string "de hace unos cuatrocientos años.$"
 
 FuchsiaCity_Gym_Text_MakeSpaceForThis::
 	.string "¡Hazte a un lado, niño!$"
 
 FuchsiaCity_Gym_Text_KaydenIntro::
-	.string "Strength isn't the key for POKéMON.\n"
+	.string "La fuerza no es la clave para los POKéMON.\n"
 	.string "¿Entiendes esto?\p"
-	.string "POKéMON is about strategy!\p"
+	.string "¡Los POKéMON son estrategia!\p"
 	.string "Te mostraré cómo la estrategia\n"
-	.string "beat brute strength.$"
+	.string "vence a la fuerza bruta.$"
 
 FuchsiaCity_Gym_Text_KaydenDefeat::
 	.string "¿Qué?\n"
@@ -149,7 +149,7 @@ FuchsiaCity_Gym_Text_KaydenDefeat::
 
 FuchsiaCity_Gym_Text_KaydenPostBattle::
 	.string "¿Mezclas fuerza con inteligencia?\n"
-	.string "Good strategy!\p"
+	.string "¡Buena estrategia!\p"
 	.string "Eso es notable para un niño\n"
 	.string "ENTRENADOR.$"
 
@@ -224,14 +224,14 @@ FuchsiaCity_Gym_Text_GymGuyAdvice::
 	.string "¡Un futuro campeón!\p"
 	.string "El GIMNASIO FUCSIA está lleno\n"
 	.string "de trucos.\p"
-	.string "KOGA might appear close, but he's\n"
-	.string "blocked off.\p"
 	.string "KOGA puede parecer cercano, pero\n"
-	.string "to reach him.$"
+	.string "no lograrás alcanzarlo.\p"
+	.string "KOGA puede parecer cercano, pero\n"
+	.string "bloqueado.$"
 
 FuchsiaCity_Gym_Text_GymGuyPostVictory::
 	.string "Es increíble cómo asustan los\nninja."
-	.string "even now!$"
+	.string "¡incluso ahora!$"
 
 FuchsiaCity_Gym_Text_GymStatue::
 	.string "GIMNASIO POKéMON DE Fucsia\n"

@@ -11,14 +11,14 @@ Route11_EastEntrance_1F_EventScript_BottomGuard::
 
 @ Unclear where this is originally from
 Route11_EastEntrance_1F_Text_BagIsFull::
-	.string "{PLAYER}{KUN}の　バッグ\n"
-	.string "いっぱい　みたい　だね$"
+	.string "{PLAYER}{KUN}: La MOCHILA parece\n"
+	.string "estar llena.$"
 
 Route11_EastEntrance_1F_Text_ManInLavenderRatesNames::
 	.string "¿No crees que es difícil\n"
-	.string "up good names for POKéMON?\p"
+	.string "poner buenos nombres a POKéMON?\p"
 	.string "pensar en ello? Especialmente\n"
-	.string "whole bunch?\p"
+	.string "si atrapaste un montón?\p"
 	.string "si atrapaste uno. En PUEBLO\n"
 	.string "who rates POKéMON nicknames.\p"
 	.string "Hasta puede ayudarte a cambiar el\n"
@@ -28,5 +28,5 @@ Route11_EastEntrance_1F_Text_RockTunnelToReachLavender::
 	.string "Si quieres llegar a CIUDAD\n"
 	.string "LAVANDA, toma el TÚNEL ROCA.\p"
 	.string "Puedes llegar al TÚNEL ROCA desde\n"
-	.string "CERULEAN CITY.$"
+	.string "CIUDAD CELESTE.$"
 

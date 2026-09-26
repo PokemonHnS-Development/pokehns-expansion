@@ -22,7 +22,7 @@ PalletTown_RedsHouse_1F_EventScript_TV::
 	end
 
 RedsHouse_Text_Mom1:
-	.string "Hi!\p"
+	.string "¡Hola!\p"
 	.string "RED se fue hace mucho tiempo.\p"
 	.string "Tampoco ha llamado, así que no\n"
 	.string "tengo idea de dónde está ni de\l"

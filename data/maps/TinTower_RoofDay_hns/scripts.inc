@@ -544,15 +544,15 @@ TinTower_RoofDay_Movement_Kimono_Dance_Shift_Right2:
 	step_end
 
 TinTower_RoofDay_Text_Zuki_Before::
-	.string "ZUKI: Go, face HO-OH. $"
+	.string "ZUKI: Ve, enfrenta a HO-OH. $"
 TinTower_RoofDay_Text_Naoko_Before::
-	.string "NAOKO: Go, face HO-OH. $"
+	.string "NAOKO: Ve, enfrenta a HO-OH. $"
 TinTower_RoofDay_Text_Miki_Before::
-	.string "MIKI: Go, face HO-OH. $"
+	.string "MIKI: Ve, enfrenta a HO-OH. $"
 TinTower_RoofDay_Text_Sayo_Before::
-	.string "SAYO: Go, face HO-OH. $"
+	.string "SAYO: Ve, enfrenta a HO-OH. $"
 TinTower_RoofDay_Text_Kuni_Before::
-	.string "KUNI: Go, face HO-OH. $"
+	.string "KUNI: Ve, enfrenta a HO-OH. $"
 
 TinTower_RoofDay_Text_Kimono_Opening::
 	.string "KIMONO GIRL: Así es.\nAquí es donde recibimos a HO-OH.\pCuando el baile que practicamos\ndurante días se una al sonido de la\pCAMPANA CLARA que te confiamos,\nentonces HO-OH bajará del gran\larco del cielo una vez más. $"

@@ -83,14 +83,14 @@ Route19_Text_SwimmermTuckerSeen:
 	.string "más... hasta... FUCHSIA...$"
 
 Route19_Text_SwimmermTuckerBeaten:
-	.string "I'm drowning!$"
+	.string "¡Me ahogo!$"
 
 Route19_Text_SwimmermTuckerAfterBattle:
 	.string "Le... pedí a mi novia que nadara\n"
 	.string "hasta FUCHSIA... Jadeo...$"
 
 Route19_Text_SwimmerfDawnSeen:
-	.string "I'm disgusted by wimpy people!$"
+	.string "¡Me repugna la gente débil!$"
 
 Route19_Text_SwimmerfDawnBeaten:
 	.string "Podría ganarte nadando...$"

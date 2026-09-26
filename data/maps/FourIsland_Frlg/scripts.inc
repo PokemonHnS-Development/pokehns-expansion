@@ -161,13 +161,13 @@ FourIsland_EventScript_LoreleisHouseSign::
 	end
 
 FourIsland_Text_IslandSign::
-	.string "FOUR ISLAND\n"
+	.string "ISLA CUATRO\n"
 	.string "La cálida y azul Isla Floe$"
 
 FourIsland_Text_LoreleiHasReturned::
 	.string "LORELEI ha regresado.\p"
 	.string "¿Le resultó demasiado la vida\n"
-	.string "stressful, I wonder?$"
+	.string "estresante, me pregunto.$"
 
 FourIsland_Text_LoreleiMetLaprasAsChild::
 	.string "LORELEI ha vuelto.\p"
@@ -179,40 +179,40 @@ FourIsland_Text_LoreleiMetLaprasAsChild::
 	.string "ella desde entonces.$"
 
 FourIsland_Text_RivalAlreadyGotEggBeSmellingYa::
-	.string "{RIVAL}: Hey!\n"
+	.string "{RIVAL}: ¡Oye!\n"
 	.string "¡{PLAYER}!\p"
 	.string "¿Qué haces aquí en\n"
 	.string "SEVII ISLANDS?\p"
 	.string "Deberías dejar de copiarme,\n"
 	.string "trabajo duro, ¿sabes?\p"
-	.string "Anyways, I already got my POKéMON\n"
-	.string "EGG, so I'm done with this island.\p"
-	.string "Je, apuesto a que ni siquiera\nsabes"
-	.string "about POKéMON EGGS.\p"
+	.string "En fin, ya tengo mi HUEVO\n"
+	.string "POKéMON, así que dejo esta isla.\p"
+	.string "Je, apuesto a que ni siquiera\n"
+	.string "sabes sobre HUEVOS POKéMON.\p"
 	.string "Nunca llenarás tu NACIONAL\n"
-	.string "POKéDEX that way.\p"
+	.string "POKéDEX así.\p"
 	.string "Por cierto, vi a alguien que\n"
 	.string "ambos conocemos en esta isla.\p"
 	.string "¿Por qué no das una vuelta si\n"
 	.string "te da curiosidad?\p"
 	.string "Yo no tengo tiempo para\n"
-	.string "waste.\p"
+	.string "perder el tiempo.\p"
 	.string "¡Nos olemos luego!"
 
 FourIsland_Text_LoreleiHasLotsOfStuffedDolls::
 	.string "¡Oh, me encontraste!\n"
-	.string "Please don't tell LORELEI.\p"
+	.string "Por favor, no le digas a LORELEI.\p"
 	.string "¿Sabías que LORELEI tiene muchos\n"
 	.string "muñecos de peluche?\p"
 	.string "¡Cada vez que vuelve a la\n"
 	.string "ISLA CUATRO, su colección crece!$"
 
 FourIsland_Text_MadeSlushieUsingIcefallCaveIce::
-	.string "Ooh, chilly!\p"
+	.string "¡Oh, qué frío!\p"
 	.string "Hice un raspado con hielo que\n"
-	.string "shaved inside ICEFALL CAVE.\p"
+	.string "raspé en la CUEVA HELADA.\p"
 	.string "¡Es frío y delicioso!$"
 
 FourIsland_Text_LoreleisHouse::
-	.string "LORELEI'S HOUSE$"
+	.string "CASA DE LORELEI$"
 

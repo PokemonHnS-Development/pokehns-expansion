@@ -22,7 +22,7 @@ PokemonTower_3F_Text_HopeIntro::
 
 PokemonTower_3F_Text_HopeDefeat::
 	.string "Hwa!\n"
-	.string "I'm saved!$"
+	.string "¡Estoy a salvo!$"
 
 PokemonTower_3F_Text_HopePostBattle::
 	.string "Los fantasmas pueden ser\n"
@@ -42,7 +42,7 @@ PokemonTower_3F_Text_CarlyPostBattle::
 
 PokemonTower_3F_Text_PatriciaIntro::
 	.string "¡Fuera de aquí!\n"
-	.string "Malevolent spirit!$"
+	.string "¡Espíritu malévolo!$"
 
 PokemonTower_3F_Text_PatriciaDefeat::
 	.string "¡Uff!\n"

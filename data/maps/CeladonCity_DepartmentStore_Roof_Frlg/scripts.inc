@@ -281,7 +281,7 @@ CeladonCity_DepartmentStore_Roof_EventScript_ExitVendingMachine::
 	end
 
 CeladonCity_DepartmentStore_Roof_Text_ImThirstyGiveHerDrink::
-	.string "I'm thirsty!\n"
+	.string "¡Tengo sed!\n"
 	.string "¡Quiero algo de beber!\p"
 	.string "{FONT_NORMAL}¿Darle algo de beber?$"
 
@@ -289,8 +289,8 @@ CeladonCity_DepartmentStore_Roof_Text_GiveWhichDrink::
 	.string "¿Qué bebida le doy?$"
 
 CeladonCity_DepartmentStore_Roof_Text_YayFreshWaterHaveThis::
-	.string "Yay!\p"
-	.string "FRESH WATER!\p"
+	.string "¡Bien!\p"
+	.string "¡AGUA FRESCA!\p"
 	.string "¡Gracias!\n"
 	.string "¡Puedes quedarte con esto!"
 
@@ -299,29 +299,29 @@ Text_ReceivedItemFromLittleGirl::
 	.string "de la niña.$"
 
 CeladonCity_DepartmentStore_Roof_Text_ExplainTM16::
-	.string "TM16 contains LIGHT SCREEN.\p"
+	.string "La MT16 contiene PANTALLA LUZ.\p"
 	.string "Es un movimiento que debilita el poder\n"
 	.string "de los ataques especiales del rival.$"
 
 CeladonCity_DepartmentStore_Roof_Text_YaySodaPopHaveThis::
-	.string "Yay!\p"
-	.string "SODA POP!\p"
+	.string "¡Bien!\p"
+	.string "¡REFRESCO!\p"
 	.string "¡Gracias!\n"
 	.string "¡Puedes quedarte con esto!"
 
 CeladonCity_DepartmentStore_Roof_Text_ExplainTM20::
-	.string "TM20 contains SAFEGUARD.\p"
+	.string "La MT20 contiene VELO SAGRADO.\p"
 	.string "Es un movimiento que previene los estados\n"
-	.string "problems among your POKéMON.$"
+	.string "problemas entre tus POKéMON.$"
 
 CeladonCity_DepartmentStore_Roof_Text_YayLemonadeHaveThis::
-	.string "Yay!\p"
-	.string "LEMONADE!\p"
+	.string "¡Bien!\p"
+	.string "¡LIMONADA!\p"
 	.string "¡Gracias!\n"
 	.string "¡Puedes quedarte con esto!"
 
 CeladonCity_DepartmentStore_Roof_Text_ExplainTM33::
-	.string "TM33 contains REFLECT.\p"
+	.string "La MT33 contiene REFLEJO.\p"
 	.string "Es un movimiento que debilita el poder\n"
 	.string "de los ataques físicos de tu rival.$"
 
@@ -339,12 +339,12 @@ CeladonCity_DepartmentStore_Roof_Text_MySisterIsImmature::
 	.string "¡Mis nueces!$"
 
 CeladonCity_DepartmentStore_Roof_Text_ImThirstyIWantDrink::
-	.string "I'm thirsty!\n"
+	.string "¡Tengo sed!\n"
 	.string "¡Quiero algo de beber!$"
 
 CeladonCity_DepartmentStore_Roof_Text_FloorSign::
-	.string "ROOFTOP SQUARE:\n"
-	.string "VENDING MACHINES$"
+	.string "PLAZA DE LA AZOTEA:\n"
+	.string "MÁQUINAS EXPENDEDORAS$"
 
 CeladonCity_DepartmentStore_Roof_Text_VendingMachineWhatDoesItHave::
 	.string "¡Una máquina expendedora!\n"

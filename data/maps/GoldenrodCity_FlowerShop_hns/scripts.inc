@@ -155,7 +155,7 @@ GoldenrodCity_FlowerShop_Text_FloriaYouBeatWhitney:
     .string "¿Venciste a WHITNEY? ¡Genial!$"
 
 GoldenrodCity_FlowerShop_Text_FloriaItWasAMon:
-    .string "So it really was a POKéMON!$"
+    .string "¡Así que de verdad era un POKéMON!$"
 
 
 GoldenrodCity_FlowerShop_EventScript_RandomBerryGirl::

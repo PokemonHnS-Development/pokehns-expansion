@@ -426,7 +426,7 @@ AzaleaTown_Text_Sign:
 	.string "Feliz Armonía.$"
 
 AzaleaTown_Text_KurtsHouseSign:
-	.string "KURT'S HOUSE$"
+	.string "CASA DE KURT$"
 
 AzaleaTown_Text_GymSign:
 	.string "PUEBLO AZALEA\n"
@@ -444,7 +444,7 @@ AzaleaTown_Text_SlowpokeWellSign:
 	.string "Yawn acabó una sequía hace 400 años.$"
 
 AzaleaTown_Text_CharcoalKilnSign:
-	.string "CHARCOAL KILN$"
+	.string "HORNO DE CARBÓN$"
 
 AzaleaTown_Text_IlexForestSign:
 	.string "BOSQUE VERDE\p"

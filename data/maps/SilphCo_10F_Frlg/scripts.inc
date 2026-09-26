@@ -38,11 +38,11 @@ SilphCo_10F_Text_GruntIntro::
 	.string "¡Qué bueno que vinieron!$"
 
 SilphCo_10F_Text_GruntDefeat::
-	.string "I'm stunned!$"
+	.string "¡Estoy pasmado!$"
 
 SilphCo_10F_Text_GruntPostBattle::
 	.string "Buen intento, pero la sala de juntas\n"
-	.string "one more floor.$"
+	.string "una planta más arriba.$"
 
 SilphCo_10F_Text_TravisIntro::
 	.string "¡Basta de tus juegos tontos!$"
@@ -56,13 +56,13 @@ SilphCo_10F_Text_TravisPostBattle::
 
 SilphCo_10F_Text_WaaaImScared::
 	.string "Waaaaa!\n"
-	.string "I'm scared!$"
+	.string "¡Tengo miedo!$"
 
 SilphCo_10F_Text_KeepMeCryingASecret::
 	.string "Sobre que yo llorara...\n"
 	.string "Guárdalo en secreto, por favor.$"
 
 SilphCo_10F_Text_FloorSign::
-	.string "SILPH CO. HEAD OFFICE\n"
+	.string "SEDE DE SILPH CO.\n"
 	.string "10F$"
 

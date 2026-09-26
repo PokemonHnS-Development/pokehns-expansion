@@ -11,16 +11,16 @@ Route25_EventScript_Man::
 
 Route25_Text_JoeyIntro::
 	.string "Los ENTRENADORES locales vienen\n"
-	.string "practice.$"
+	.string "practicar.$"
 
 Route25_Text_JoeyDefeat::
 	.string "No estás mal.$"
 
 Route25_Text_JoeyPostBattle::
-	.string "All POKéMON have weaknesses.\n"
+	.string "Todo POKéMON tiene su debilidad.\n"
 	.string "Incluso los más fuertes.\p"
 	.string "Por eso es mejor entrenar\n"
-	.string "POKéMON of different types.$"
+	.string "POKéMON de distintos tipos.$"
 
 Route25_Text_DanIntro::
 	.string "Papá me llevó a una gran fiesta en\n"
@@ -38,14 +38,14 @@ Route25_Text_FlintIntro::
 	.string "¡Tengo novia!$"
 
 Route25_Text_FlintDefeat::
-	.string "Aww, darn...$"
+	.string "Ay, rayos...$"
 
 Route25_Text_FlintPostBattle::
 	.string "Oh, bueno.\n"
 	.string "Mi novia me animará.$"
 
 Route25_Text_KelseyIntro::
-	.string "Hi!\n"
+	.string "¡Hola!\n"
 	.string "¡Mi novio es genial!$"
 
 Route25_Text_KelseyDefeat::
@@ -57,13 +57,13 @@ Route25_Text_KelseyPostBattle::
 
 Route25_Text_ChadIntro::
 	.string "Tenía este presentimiento...\n"
-	.string "I knew I had to battle you!$"
+	.string "¡Sabía que debía combatirte!$"
 
 Route25_Text_ChadDefeat::
-	.string "I knew I'd lose, too!$"
+	.string "¡Sabía que perdería también!$"
 
 Route25_Text_ChadPostBattle::
-	.string "If your POKéMON gets confused,\n"
+	.string "Si tu POKéMON se confunde,\n"
 	.string "cámbialo.\p"
 	.string "¡Buena táctica!$"
 
@@ -86,22 +86,22 @@ Route25_Text_FranklinDefeat::
 	.string "¡Trabajaste duro!$"
 
 Route25_Text_FranklinPostBattle::
-	.string "Drat!\n"
+	.string "¡Rayos!\n"
 	.string "Un ZUBAT me mordió en esa cueva.$"
 
 Route25_Text_NobIntro::
-	.string "I'm off to see a POKéMANIAC's\n"
-	.string "colección en el cabo.$"
+	.string "Voy a ver la colección de un\n"
+	.string "POKéMANÍACO en el cabo.$"
 
 Route25_Text_NobDefeat::
 	.string "Me atrapaste, y muy bien,\n"
-	.string "too!$"
+	.string "¡también!$"
 
 Route25_Text_NobPostBattle::
-	.string "The POKéMANIAC sure lives up to\n"
+	.string "El POKéMANÍACO hace honor a\n"
 	.string "su nombre.\p"
 	.string "Su colección incluye muchos\n"
-	.string "species of POKéMON.$"
+	.string "tipos de POKéMON.$"
 
 Route25_Text_WayneIntro::
 	.string "¿Vas a ver a BILL?\n"
@@ -112,14 +112,14 @@ Route25_Text_WayneDefeat::
 
 Route25_Text_WaynePostBattle::
 	.string "El sendero de abajo es un atajo\n"
-	.string "CERULEAN CITY.$"
+	.string "a CIUDAD CERULEAN.$"
 
 Route25_Text_SeaCottageSign::
 	.string "CABAÑA DEL MAR\n"
 	.string "¡BILL vive aquí!$"
 
 Route25_Text_MistyHighHopesAboutThisPlace::
-	.string "This cape is a famous date spot.\p"
+	.string "Este cabo es famoso para citas.\p"
 	.string "MISTY, la LÍDER, tiene grandes\n"
 	.string "esperanzas en este lugar.$"
 

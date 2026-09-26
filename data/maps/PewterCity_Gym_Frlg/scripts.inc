@@ -83,10 +83,10 @@ PewterCity_Gym_EventScript_GymStatuePostVictory::
 
 PewterCity_Gym_Text_BrockIntro::
 	.string "Así que estás aquí. Soy BROCK.\n"
-	.string "I'm PEWTER's GYM LEADER.\p"
+	.string "Soy el LÍDER de PLATEADA.\p"
 	.string "Mi voluntad de roca es evidente\n"
-	.string "even in my POKéMON.\p"
-	.string "My POKéMON are all rock hard, and\n"
+	.string "incluso en mis POKéMON.\p"
+	.string "Mis POKéMON son duros como\n"
 	.string "roca y tienen gran determinación.\p"
 	.string "Así es, ¡todos mis POKéMON son\n"
 	.string "¡en el tipo Roca!\p"
@@ -94,22 +94,22 @@ PewterCity_Gym_Text_BrockIntro::
 	.string "sabiendo que perderás?\p"
 	.string "Ese es el honor de ENTRENADOR\n"
 	.string "que te impulsa a desafiarme.\p"
-	.string "Fine, then!\n"
+	.string "¡Muy bien, entonces!\n"
 	.string "¡Muéstrame lo mejor que tienes!{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
 
 PewterCity_Gym_Text_BrockDefeat::
 	.string "Te tuve por sentado, y por eso\n"
 	.string "Perdí.\p"
 	.string "Como prueba de tu victoria, te doy\n"
-	.string "on you this...the official POKéMON\l"
-	.string "LEAGUE MEDALLA ROCA.\p"
+	.string "a ti esto... la MEDALLA ROCA\l"
+	.string "oficial de la LIGA POKéMON.\p"
 	.string "{FONT_NORMAL}{PLAYER} recibió la MEDALLA ROCA\n"
 	.string "de BROCK!{PAUSE_MUSIC}{PLAY_BGM}{MUS_OBTAIN_BADGE}{PAUSE 0xFE}{PAUSE 0x56}{RESUME_MUSIC}\p"
 	.string "{FONT_MALE}Con solo la MEDALLA ROCA\n"
-	.string "your POKéMON more powerful.\p"
+	.string "tus POKéMON más poderosos.\p"
 	.string "También permite usar el movimiento\n"
 	.string "DESTELLO fuera de combate.\p"
-	.string "Of course, a POKéMON must know the\n"
+	.string "Claro, un POKéMON debe saber el\n"
 	.string "DESTELLO para usarlo.$"
 
 PewterCity_Gym_Text_TakeThisWithYou::
@@ -117,7 +117,7 @@ PewterCity_Gym_Text_TakeThisWithYou::
 	.string "Llévate esto contigo.$"
 
 PewterCity_Gym_Text_ReceivedTM39FromBrock::
-	.string "{PLAYER} received TM39\n"
+	.string "{PLAYER} recibió MT39\n"
 	.string "de BROCK.$"
 
 PewterCity_Gym_Text_ExplainTM39::
@@ -128,10 +128,10 @@ PewterCity_Gym_Text_ExplainTM39::
 	.string "Una MT solo puede usarse una vez.\p"
 	.string "Así que, al usar una, elige la\n"
 	.string "POKéMON carefully.\p"
-	.string "Anyways...\n"
-	.string "TM39 contains ROCK TOMB.\p"
+	.string "Bueno...\n"
+	.string "La MT39 contiene TUMBA ROCA.\p"
 	.string "Lanza rocas al rival y puede\n"
-	.string "lowers its SPEED.$"
+	.string "reduce su VELOCIDAD.$"
 
 PewterCity_Gym_Text_BrockPostBattle::
 	.string "Hay todo tipo de ENTRENADORES en\n"
@@ -151,8 +151,8 @@ PewterCity_Gym_Text_LiamIntro::
 	.string "de enfrentar a BROCK!$"
 
 PewterCity_Gym_Text_LiamDefeat::
-	.string "Darn!\p"
-	.string "Light-years isn't time...\n"
+	.string "¡Rayos!\p"
+	.string "Un año luz no es tiempo...\n"
 	.string "¡Mide la distancia!$"
 
 PewterCity_Gym_Text_LiamPostBattle::
@@ -163,7 +163,7 @@ PewterCity_Gym_Text_LetMeTakeYouToTheTop::
 	.string "¡Hola!\n"
 	.string "¿Quieres soñar en grande?\p"
 	.string "¿Te atreves a soñar con convertirte\n"
-	.string "the POKéMON champ?\p"
+	.string "¿el campeón POKéMON?\p"
 	.string "No soy ENTRENADOR, pero puedo\n"
 	.string "aconsejarte para ganar.\p"
 	.string "¡Te llevaré a la cima!$"
@@ -173,20 +173,20 @@ PewterCity_Gym_Text_LetsGetHappening::
 	.string "¡Vamos a la acción!$"
 
 PewterCity_Gym_Text_TryDifferentPartyOrders::
-	.string "The first POKéMON out in a match is\n"
-	.string "at the left of the POKéMON LIST.\p"
-	.string "By changing the order of POKéMON,\n"
+	.string "El primer POKéMON que sale en un\n"
+	.string "combate es el de la izquierda de\p"
+	.string "Al cambiar el orden de POKéMON,\n"
 	.string "puedes obtener una ventaja.\p"
 	.string "Prueba distintos órdenes para\n"
-	.string "opponent's party.$"
+	.string "vencer al equipo rival.$"
 
 PewterCity_Gym_Text_ItsFreeLetsGetHappening::
 	.string "¡Es un servicio gratis!\n"
 	.string "¡Vamos a la acción!$"
 
 PewterCity_Gym_Text_YoureChampMaterial::
-	.string "Just as I thought!\n"
-	.string "You're POKéMON champ material!$"
+	.string "¡Tal como pensaba!\n"
+	.string "¡Tienes madera de campeón!$"
 
 PewterCity_Gym_Text_GymStatue::
 	.string "GIMNASIO POKéMON DE PIEDRA\n"

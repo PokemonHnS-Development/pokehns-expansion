@@ -61,8 +61,8 @@ Route10_PokemonCenter_1F_EventScript_GetAideRequestInfo::
 	return
 
 Route10_PokemonCenter_1F_Text_EveryTypeStrongerThanOthers::
-	.string "The types of POKéMON match up\n"
-	.string "diferente entre sí.\p"
+	.string "Los tipos de POKéMON se enfrentan\n"
+	.string "de forma distinta entre sí.\p"
 	.string "Cada tipo es más fuerte que\n"
 	.string "algunos y más débil que otros.$"
 
@@ -72,21 +72,21 @@ Route10_PokemonCenter_1F_Text_NuggetUselessSoldFor5000::
 
 Route10_PokemonCenter_1F_Text_HeardGhostsHauntLavender::
 	.string "Escuché que hay fantasmas que\n"
-	.string "LAVENDER TOWN.$"
+	.string "CIUDAD LAVANDA.$"
 
 Route10_PokemonCenter_1F_Text_GiveEverstoneIfCaught20Mons::
 	.string "Oh... {PLAYER}!\n"
 	.string "¡Te estaba buscando!\p"
 	.string "Soy yo, uno de los siempre\n"
 	.string "presentes AYUDANTES del PROF. OAK.\p"
-	.string "If your POKéDEX has complete data\n"
+	.string "Si tu POKéDEX tiene datos completos\n"
 	.string "en veinte especies, se supone que debo\l"
 	.string "darte una recompensa del PROF. OAK.\p"
 	.string "Me encargó esto\n"
-	.string "EVERSTONE.\p"
+	.string "PIEDRA ETERNA.\p"
 	.string "Bueno, {PLAYER}, déjame preguntarte.\p"
 	.string "¿Has reunido datos de al menos\n"
-	.string "twenty kinds of POKéMON?$"
+	.string "¿veinte tipos de POKéMON?$"
 
 Route10_PokemonCenter_1F_Text_GreatHereYouGo::
 	.string "¡Genial! Has capturado o tenido\n"
@@ -99,12 +99,12 @@ Route10_PokemonCenter_1F_Text_ReceivedEverstoneFromAide::
 	.string "del AYUDANTE.$"
 
 Route10_PokemonCenter_1F_Text_ExplainEverstone::
-	.string "Making POKéMON evolve certainly\n"
-	.string "can add to the POKéDEX.\p"
+	.string "Hacer evolucionar a los POKéMON\n"
+	.string "sin duda amplía la POKéDEX.\p"
 	.string "Sin embargo, a veces puede que\n"
-	.string "want a certain POKéMON to evolve.\p"
-	.string "En ese caso, dale la PIEDRAEterna\n"
-	.string "to that POKéMON.\p"
+	.string "quieras que un POKéMON evolucione.\p"
+	.string "En ese caso, dale la PIEDRA ETERNA\n"
+	.string "a ese POKéMON.\p"
 	.string "Evitará la evolución según\n"
 	.string "lo que diga el PROFESOR.$"
 

@@ -140,12 +140,12 @@ CinnabarIsland_PokemonCenter_1F_Movement_PlayerExitWest::
 	step_end
 
 CinnabarIsland_PokemonCenter_1F_Text_CinnabarGymLocked::
-	.string "I came to visit the CINNABAR GYM,\n"
-	.string "but the door is locked tight.\p"
+	.string "Vine a visitar el GIMNASIO CINNABAR,\n"
+	.string "pero la puerta está cerrada.\p"
 	.string "Debería haber una llave\n"
-	.string "somewhere.\p"
+	.string "en algún lugar.\p"
 	.string "¿Podría estar en ese\n"
-	.string "mansion?\p"
+	.string "mansión?\p"
 	.string "El amigo del LÍDER de GYM\n"
 	.string "vivía ahí, dicen.$"
 
@@ -154,15 +154,15 @@ CinnabarIsland_PokemonCenter_1F_Text_VisitUnionRoom::
 	.string "Salir con los amigos de siempre\n"
 	.string "es divertido, claro.\p"
 	.string "Pero ¿qué tal visitar las\n"
-	.string "UNION ROOM every so often?\p"
+	.string "SALA UNIÓN de vez en cuando?\p"
 	.string "Quién sabe, quizá termines\n"
-	.string "new friends.\p"
+	.string "con nuevos amigos.\p"
 	.string "Creo que valdría la pena\n"
 	.string "para revisar la SALA UNION.$"
 
 CinnabarIsland_PokemonCenter_1F_Text_EvolutionCanWaitForNewMoves::
-	.string "POKéMON can still learn techniques\n"
-	.string "after canceling evolution.\p"
+	.string "Los POKéMON aún pueden aprender\n"
+	.string "técnicas tras cancelar la evolución.\p"
 	.string "La evolución puede esperar hasta\n"
 	.string "que aprenda nuevos movimientos.$"
 

@@ -38,7 +38,7 @@ Route8_Text_BikerDwayneSeen:
 	.string "¡Te pasaremos por encima!$"
 
 Route8_Text_BikerDwayneBeaten:
-	.string "S-sorry!$"
+	.string "¡P-perdón!$"
 
 Route8_Text_BikerDwayneAfter:
 	.string "¡La FEDERACIÓN POKéMON de KANTO\n"
@@ -62,7 +62,7 @@ Route8_Text_BikerZekeSeen:
 	.string "¡Exacto!$"
 
 Route8_Text_BikerZekeBeaten:
-	.string "Yikes! Sorry!$"
+	.string "¡Ay! ¡Perdón!$"
 
 Route8_Text_BikerZekeAfter:
 	.string "Trataremos de no molestar a nadie\n"
@@ -79,7 +79,7 @@ Route8_Text_SupernerdSamAfter:
 	.string "¡El poder de los imanes es increíble!$"
 
 Route8_Text_SupernerdTomSeen:
-	.string "Hm... You've got many GYM BADGES.$"
+	.string "Hm... Tienes muchas MEDALLAS.$"
 
 Route8_Text_SupernerdTomBeaten:
 	.string "Tal como pensé... ¡Eres fuerte!$"

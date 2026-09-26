@@ -16,6 +16,6 @@ Route2_ViridianForest_SouthEntrance_Text_ForestIsMaze::
 
 Route2_ViridianForest_SouthEntrance_Text_RattataHasWickedBite::
 	.string "RATTATA es pequeño, pero no\n"
-	.string "underestimate its wicked bite.\p"
+	.string "subestimes su mordida feroz.\p"
 	.string "¿Ya atrapaste uno?$"
 

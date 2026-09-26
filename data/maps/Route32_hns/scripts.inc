@@ -450,7 +450,7 @@ Route32_Text_RalphPostRematch:
 	.string "¡Los POKéMON son amigos eternos!$"
 
 Route32_Text_FisherHenry_Seen:
-	.string "My POKéMON? Freshly caught!$"
+	.string "¿Mis POKéMON? ¡Recién atrapados!$"
 
 Route32_Text_FisherHenry_Beaten:
 	.string "SPLASH?$"

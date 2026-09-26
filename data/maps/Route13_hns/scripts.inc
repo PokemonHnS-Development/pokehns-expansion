@@ -123,7 +123,7 @@ Route13_EventScript_DirectionsSign::
 	end
 
 Route13_Text_PokefanmAlexSeen:
-	.string "Bow down before my regal POKéMON!$"
+	.string "¡Inclínate ante mi POKéMON real!$"
 
 Route13_Text_PokefanmAlexBeaten:
 	.string "¿Cómo...? ¡No insultes a la realeza!$"
@@ -186,7 +186,7 @@ Route13_Text_HikerKennySeen:
 	.string "atrapar un ONIX.$"
 
 Route13_Text_HikerKennyBeaten:
-	.string "I lost...$"
+	.string "Perdí...$"
 
 Route13_Text_HikerKennyAfterBattle:
 	.string "Parece que las formaciones\n"

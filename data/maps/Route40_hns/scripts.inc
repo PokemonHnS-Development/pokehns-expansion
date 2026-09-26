@@ -39,7 +39,7 @@ Route40_Text_SwimmermRandallSeen:
 	.string "¡Nada!$"
 
 Route40_Text_SwimmermRandallBeaten:
-	.string "Uh-oh. I lost...$"
+	.string "Uh-oh. Perdí...$"
 
 Route40_Text_SwimmermRandallAfter:
 	.string "Nadar ejercita todo\n"
@@ -73,7 +73,7 @@ Route40_Text_SwimmerfPaulaSeen:
 	.string "POKéMON!$"
 
 Route40_Text_SwimmerfPaulaBeaten:
-	.string "Ooh, I'm feeling dizzy!$"
+	.string "¡Uy, me siento mareado!$"
 
 Route40_Text_SwimmerfPaulaAfter:
 	.string "Mientras floto así,\n"

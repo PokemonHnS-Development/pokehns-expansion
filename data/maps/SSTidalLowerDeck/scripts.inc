@@ -17,7 +17,7 @@ SSTidalLowerDeck_Text_PhillipIntro:
 	.string "¡Tengamos una batalla rápida!$"
 
 SSTidalLowerDeck_Text_PhillipDefeat:
-	.string "Little bro, I lost!$"
+	.string "¡Hermanito, perdí!$"
 
 SSTidalLowerDeck_Text_PhillipPostBattle:
 	.string "¡Somos los HERMANOS LIMPIEZA!\p"
@@ -30,7 +30,7 @@ SSTidalLowerDeck_Text_LeonardIntro:
 	.string "Estará bien para una batalla POKéMON.$"
 
 SSTidalLowerDeck_Text_LeonardDefeat:
-	.string "Big bro, I lost!$"
+	.string "¡Hermano, perdí!$"
 
 SSTidalLowerDeck_Text_LeonardPostBattle:
 	.string "¡Somos los HERMANOS LIMPIEZA!\p"

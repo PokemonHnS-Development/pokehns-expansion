@@ -28,7 +28,7 @@ CeladonCity_Apartments_RoofHouse_EventScript_BlackBeltAfter::
 	end
 
 CeladonMansionRoofHouse_Text_PharmacistIntro:
-	.string "Let me recount a terrifying tale...$"
+	.string "Déjame contarte una historia aterradora...$"
 
 CeladonMansionRoofHouse_Text_PharmacistNotNight:
 	.string "Aunque no da tanto miedo\n"

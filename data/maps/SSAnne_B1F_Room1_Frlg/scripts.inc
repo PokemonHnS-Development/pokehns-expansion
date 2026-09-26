@@ -20,20 +20,20 @@ SSAnne_B1F_Room1_Text_PhillipDefeat::
 	.string "¡Vencido por un niño!$"
 
 SSAnne_B1F_Room1_Text_PhillipPostBattle::
-	.string "Cuando estamos en alta mar, las\n"
-	.string "POKéMON sometimes drift by.$"
+	.string "Cuando estamos en alta mar, los\n"
+	.string "POKéMON pasan a la deriva.$"
 
 SSAnne_B1F_Room1_Text_BarnyIntro::
-	.string "Hello, stranger!\p"
+	.string "¡Hola, desconocido!\p"
 	.string "No sé si vienes del mar o de\n"
-	.string "or mountains, but stop and chat.\p"
-	.string "All my POKéMON are from the sea.$"
+	.string "las montañas, pero nos detenemos a charlar.\p"
+	.string "Todos mis POKéMON son del mar.$"
 
 SSAnne_B1F_Room1_Text_BarnyDefeat::
-	.string "Darn!\n"
+	.string "¡Rayos!\n"
 	.string "¡Dejé que escapara!$"
 
 SSAnne_B1F_Room1_Text_BarnyPostBattle::
 	.string "Iba a hacerte mi\n"
-	.string "assistant, too!$"
+	.string "ayudante!$"
 

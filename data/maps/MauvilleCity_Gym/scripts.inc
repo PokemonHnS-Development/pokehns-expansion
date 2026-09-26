@@ -322,7 +322,7 @@ MauvilleCity_Gym_Text_VivianPostBattle:
 	.string "¡Debe saber todo tipo de cosas!$"
 
 MauvilleCity_Gym_Text_AngeloIntro:
-	.string "I love shiny things!$"
+	.string "¡Adoro lo brillante!$"
 
 MauvilleCity_Gym_Text_AngeloDefeat:
 	.string "Oh...\n"
@@ -372,7 +372,7 @@ MauvilleCity_Gym_Text_WattsonGoForthAndEndeavor:
 	.string "¡Sigue esforzándote, muchacho!$"
 
 MauvilleCity_Gym_Text_GymStatue:
-	.string "MAUVILLE CITY POKéMON GYM$"
+	.string "GIMNASIO POKéMON DE MALVILLAR$"
 
 MauvilleCity_Gym_Text_GymStatueCertified:
 	.string "GIMNASIO POKéMON DE MALVALA\p"

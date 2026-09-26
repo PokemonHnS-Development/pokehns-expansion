@@ -189,7 +189,7 @@ BlackthornCity_MoveRelearnersHouse_Text_ThatsAHeartScaleWantMeToTeachMove:
 	.string "enseñe un movimiento?$"
 
 BlackthornCity_MoveRelearnersHouse_Text_TutorWhichMon:
-	.string "Which POKéMON needs tutoring?$"
+	.string "¿Qué POKéMON necesita tutoría?$"
 
 BlackthornCity_MoveRelearnersHouse_Text_TeachWhichMove:
 	.string "¿Qué movimiento debo enseñar?$"

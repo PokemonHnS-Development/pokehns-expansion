@@ -102,8 +102,8 @@ SlowpokeWell_B1F_Text_KurtAfter:
 
 SlowpokeWell_B1F_Text_GruntM29Seen:
 	.string "¡Rayos! Vigilaba arriba\n"
-	.string "cuando un viejo gritó.\l"
-	.string "at me.\p"
+	.string "cuando un viejo me gritó\l"
+	.string "a mí.\p"
 	.string "Me asustó tanto que\n"
 	.string "caí hasta aquí abajo.\p"
 	.string "¡Descargaré mi rabia\n"

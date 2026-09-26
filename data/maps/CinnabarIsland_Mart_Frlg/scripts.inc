@@ -39,5 +39,5 @@ CinnabarIsland_Mart_Text_DontTheyHaveXAttack::
 
 CinnabarIsland_Mart_Text_ExtraItemsNeverHurt::
 	.string "Nunca está de más tener objetos\n"
-	.string "You never know what might happen.$"
+	.string "Nunca sabes lo que puede pasar.$"
 

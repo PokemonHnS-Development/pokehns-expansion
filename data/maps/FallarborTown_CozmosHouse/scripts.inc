@@ -68,8 +68,8 @@ FallarborTown_CozmosHouse_Text_MeteoriteWillNeverBeMineNow:
 	.string "PROF. COZMO: Oh...\n"
 	.string "No debí dejar que me engañaran\l"
 	.string "para decirle al TEAM MAGMA dónde\l"
-	.string "hallar METEORITES...\p"
-	.string "Ese METEORITE de METEOR FALLS...\n"
+	.string "hallar METEORITOS...\p"
+	.string "Ese METEORITO de METEOR FALLS...\n"
 	.string "Ya nunca será mío...$"
 
 FallarborTown_CozmosHouse_Text_IsThatMeteoriteMayIHaveIt:

@@ -97,11 +97,11 @@ PokemonLeague_AgathasRoom_Text_Intro::
 	.string "Pero eso fue hace décadas.\n"
 	.string "Es la sombra de lo que era.\p"
 	.string "Ahora solo quiere jugar con\n"
-	.string "his POKéDEX.\p"
+	.string "su POKéDEX.\p"
 	.string "Está equivocado.\n"
-	.string "POKéMON are for battling!\p"
+	.string "¡Los POKéMON son para luchar!\p"
 	.string "{PLAYER}! Te mostraré lo que\n"
-	.string "TRAINER battles!{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
+	.string "¡combates de ENTRENADORES!{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
 
 PokemonLeague_AgathasRoom_Text_RematchIntro::
 	.string "Soy AGATHA del ALTO MANDO.\p"
@@ -112,11 +112,11 @@ PokemonLeague_AgathasRoom_Text_RematchIntro::
 	.string "Pero eso fue hace décadas.\n"
 	.string "Es la sombra de lo que era.\p"
 	.string "Ahora solo quiere jugar con\n"
-	.string "his POKéDEX.\p"
+	.string "su POKéDEX.\p"
 	.string "Está equivocado.\n"
-	.string "POKéMON are for battling!\p"
+	.string "¡Los POKéMON son para luchar!\p"
 	.string "{PLAYER}! Te mostraré lo que\n"
-	.string "TRAINER battles!{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
+	.string "¡combates de ENTRENADORES!{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
 
 PokemonLeague_AgathasRoom_Text_Defeat::
 	.string "¡Oh, cielos!\n"
@@ -127,5 +127,5 @@ PokemonLeague_AgathasRoom_Text_PostBattle::
 	.string "Ya veo lo que ve en ti ese\n"
 	.string "viejo.\p"
 	.string "No tengo nada más que decir.\n"
-	.string "Run along now, child!$"
+	.string "¡Vete ya, niña!$"
 

@@ -391,7 +391,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice3Intro::
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice3Mon1::
 	.string "Le pedí consejo a {STR_VAR_3}.\n"
-	.string "One {STR_VAR_1}-using {STR_VAR_2}$"
+	.string "Un {STR_VAR_2} que usa {STR_VAR_1}$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice3Mon2Ask::
 	.string "y un {STR_VAR_2} con {STR_VAR_1},\n"
@@ -464,12 +464,12 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice6Intro::
 	.string "Soy {STR_VAR_3} y soy TRIATLETA.\n"
 	.string "Estoy ocupado todo el día trotando,\l"
 	.string "entrenando y rapeando.\p"
-	.string "También soy el {STR_VAR_1}\n"
-	.string "no. {STR_VAR_2} apprentice.$"
+	.string "También soy el aprendiz\n"
+	.string "n.º {STR_VAR_2} de {STR_VAR_1}.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice6Mon1::
 	.string "Esto es lo que {STR_VAR_3} sugirió.\n"
-	.string "One {STR_VAR_1}-using {STR_VAR_2}$"
+	.string "Un {STR_VAR_2} que usa {STR_VAR_1}$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice6Mon2Ask::
 	.string "y un usuario de {STR_VAR_1}\n"
@@ -488,10 +488,10 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice6Reject::
 	.string "para venir! ¡Dame un respiro!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice7Intro::
-	.string "Hi!\n"
+	.string "¡Hola!\n"
 	.string "¿Cómo va todo?\p"
-	.string "I'm {STR_VAR_3}, {STR_VAR_1}'s\n"
-	.string "no. {STR_VAR_2} apprentice. Glad to meet you!$"
+	.string "Soy {STR_VAR_3}, el aprendiz\n"
+	.string "n.º {STR_VAR_2} de {STR_VAR_1}. ¡Encantado!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice7Mon1::
 	.string "¡Oye, escucha! Tienes que saber\n"
@@ -515,8 +515,8 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice7Reject::
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice8Intro::
 	.string "Permíteme presentarme.\n"
 	.string "Soy {STR_VAR_3}.\p"
-	.string "Sirvo como el {STR_VAR_1} de\n"
-	.string "no. {STR_VAR_2} apprentice.$"
+	.string "Sirvo como aprendiz de\n"
+	.string "{STR_VAR_1}, n.º {STR_VAR_2}.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice8Mon1::
 	.string "Busqué el sabio consejo de\n"
@@ -540,8 +540,8 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice8Reject::
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice9Intro::
 	.string "¡Ay! ¡Me hablaste!\n"
 	.string "¡Estoy... estoy feliz!\p"
-	.string "I'm {STR_VAR_3}! I'm {STR_VAR_1}'s\n"
-	.string "no. {STR_VAR_2} apprentice!$"
+	.string "¡Soy {STR_VAR_3}! Soy el aprendiz\n"
+	.string "n.º {STR_VAR_2} de {STR_VAR_1}!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice9Mon1::
 	.string "Por consejo de {STR_VAR_3}, entrené\n"
@@ -627,7 +627,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice12Intro::
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice12Mon1::
 	.string "Con el consejo de {STR_VAR_3} yo\n"
 	.string "seguí, ¡y mi equipo así surgió!\l"
-	.string "One {STR_VAR_1}-using {STR_VAR_2}$"
+	.string "Un {STR_VAR_2} que usa {STR_VAR_1}$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice12Mon2Ask::
 	.string "y un usuario de {STR_VAR_1}\n"
@@ -878,7 +878,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_LadyReject::
 	.string "tenerme como tu pareja.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_CyclingTriathleteFIntro::
-	.string "I'm TRIATHLETE {STR_VAR_1}!$"
+	.string "¡Soy el TRIATLETA {STR_VAR_1}!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_CyclingTriathleteFMon1::
 	.string "Lo que tengo...\nUn {STR_VAR_2} con {STR_VAR_1} y$"
@@ -921,7 +921,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_BugCatcherReject::
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SchoolKidMIntro::
 	.string "¡Buen día!\n"
-	.string "I'm SCHOOL KID {STR_VAR_1}!$"
+	.string "¡Soy el ESCOLAR {STR_VAR_1}!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SchoolKidMMon1::
 	.string "He estado criando un\n"
@@ -1050,7 +1050,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_PkmnBreederMReject::
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_RunningTriathleteFIntro::
 	.string "¡Hola, qué tal!\n"
-	.string "I'm TRIATHLETE {STR_VAR_1}!$"
+	.string "¡Soy el TRIATLETA {STR_VAR_1}!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_RunningTriathleteFMon1::
 	.string "¿Quieres ver qué POKéMON tengo?\n"
@@ -1092,7 +1092,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_RunningTriathleteMReject::
 	.string "compañero de equipo doble...$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_BattleGirlIntro::
-	.string "I'm BATTLE GIRL {STR_VAR_1}!$"
+	.string "¡Soy CHICA BATALLA {STR_VAR_1}!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_BattleGirlMon1::
 	.string "He estado entrenando a mi\n"
@@ -1113,7 +1113,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_BattleGirlReject::
 	.string "el mejor equipo doble...$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_CyclingTriathleteMIntro::
-	.string "I'm TRIATHLETE {STR_VAR_1}!$"
+	.string "¡Soy el TRIATLETA {STR_VAR_1}!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_CyclingTriathleteMMon1::
 	.string "Tengo un {STR_VAR_2}\n"
@@ -1262,7 +1262,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_ExpertFReject::
 	.string "próxima vez que nos veamos.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_DragonTamerIntro::
-	.string "I'm DRAGON TAMER {STR_VAR_1}!$"
+	.string "¡Soy DOMADRAGONES {STR_VAR_1}!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_DragonTamerMon1::
 	.string "El equipo que he entrenado es\n"
@@ -1282,7 +1282,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_DragonTamerReject::
 	.string "fuertes que yo!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_BirdKeeperIntro::
-	.string "I'm BIRD KEEPER {STR_VAR_1}!$"
+	.string "¡Soy CUIDA AVES {STR_VAR_1}!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_BirdKeeperMon1::
 	.string "¿Qué POKéMON tengo?\n"
@@ -1302,7 +1302,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_BirdKeeperReject::
 	.string "Qué decepción.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_NinjaBoyIntro::
-	.string "I'm NINJA BOY {STR_VAR_1}!$"
+	.string "¡Soy el NINJA {STR_VAR_1}!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_NinjaBoyMon1::
 	.string "Mi equipo POKéMON consiste en uno\n"
@@ -1495,7 +1495,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_RuinManiacReject::
 	.string "Creo que mis POKéMON son fuertes...$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_CoolTrainerMIntro::
-	.string "I'm COOLTRAINER {STR_VAR_1}!$"
+	.string "¡Soy ENTRENADOR GUAY {STR_VAR_1}!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_CoolTrainerMMon1::
 	.string "Los POKéMON que tengo ahora son\n"
@@ -1516,7 +1516,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_CoolTrainerMReject::
 	.string "el mejor equipo de la historia.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_CoolTrainerFIntro::
-	.string "I'm COOLTRAINER {STR_VAR_1}!$"
+	.string "¡Soy ENTRENADOR GUAY {STR_VAR_1}!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_CoolTrainerFMon1::
 	.string "El equipo que he criado tiene\n"
@@ -1620,7 +1620,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_PicnickerReject::
 	.string "en otra ocasión.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PsychicMIntro::
-	.string "I'm PSYCHIC {STR_VAR_1}!$"
+	.string "¡Soy MÉDIUM {STR_VAR_1}!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PsychicMMon1::
 	.string "La pareja que he criado es\n"
@@ -1661,10 +1661,10 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_PsychicFReject::
 	.string "de forjar una alianza.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SchoolKidFIntro::
-	.string "I'm SCHOOL KID {STR_VAR_1}!$"
+	.string "¡Soy el ESCOLAR {STR_VAR_1}!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SchoolKidFMon1::
-	.string "One {STR_VAR_1}-using {STR_VAR_2}$"
+	.string "Un {STR_VAR_2} que usa {STR_VAR_1}$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SchoolKidFMon2Ask::
 	.string "y un usuario de {STR_VAR_1}\n"
@@ -1723,10 +1723,10 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_PokefanFReject::
 	.string "te lo advierto. ¡Qué molesto!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SwimmerFIntro::
-	.string "Hi, I'm SWIMMER {STR_VAR_1}.$"
+	.string "¡Hola! Soy NADADOR {STR_VAR_1}.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SwimmerFMon1::
-	.string "One {STR_VAR_1}-using {STR_VAR_2}$"
+	.string "Un {STR_VAR_2} que usa {STR_VAR_1}$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SwimmerFMon2Ask::
 	.string "y un usuario de {STR_VAR_1}\n"

@@ -66,7 +66,7 @@ GoldenrodCity_BikeShop_Text_ClerkAgreed:
     .string "y te prestaré una BICICLETA.$"
 
 GoldenrodCity_BikeShop_Text_BorrowedBicycle:
-    .string "{PLAYER} borrowed a BICYCLE.$"
+    .string "{PLAYER} tomó prestada una BICICLETA.$"
 
 GoldenrodCity_BikeShop_Text_Mainshop:
 	.string "El negocio ha estado difícil\n"

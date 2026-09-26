@@ -47,45 +47,45 @@ SSAnne_CaptainsOffice_EventScript_Book::
 	end
 
 SSAnne_CaptainsOffice_Text_CaptainIFeelSeasick::
-	.string "CAPTAIN: Ooargh...\n"
-	.string "I feel hideous...\l"
-	.string "Urrp! Seasick...$"
+	.string "CAPITÁN: Ooargh...\n"
+	.string "Me siento fatal...\l"
+	.string "¡Urrp! Mareo...$"
 
 SSAnne_CaptainsOffice_Text_RubbedCaptainsBack::
-	.string "{PLAYER} frotó el CAPITÁN\n"
-	.string "back!\p"
-	.string "Rub-rub...\n"
-	.string "Rub-rub...$"
+	.string "{PLAYER} le frotó la espalda\n"
+	.string "al CAPITÁN!\p"
+	.string "Frota-frota...\n"
+	.string "Frota-frota...$"
 
 SSAnne_CaptainsOffice_Text_ThankYouHaveHMForCut::
 	.string "CAPITÁN: ¡Uf! ¡Gracias!\n"
-	.string "I'm feeling much better now.\p"
-	.string "¿Quieres ver mi CUT oculto\n"
-	.string "technique?\p"
-	.string "Podría mostrarte mi preciado\n"
-	.string "technique if I weren't so ill...\p"
+	.string "Ahora me siento mucho mejor.\p"
+	.string "¿Quieres ver mi técnica de\n"
+	.string "CORTE secreta?\p"
+	.string "Podría mostrarte mi preciada\n"
+	.string "técnica si no estuviera tan enfermo...\p"
 	.string "¡Ya sé! ¡Puedes tener esto!\n"
 	.string "¡Esta MÁQUINA OCULTA!\p"
-	.string "Teach CUT to your POKéMON, and\n"
-	.string "you can see it CUT anytime!$"
+	.string "¡Enséñale CORTE a tus POKéMON y\n"
+	.string "podrás cortar cuando quieras!$"
 
 SSAnne_CaptainsOffice_Text_ObtainedHM01FromCaptain::
-	.string "{PLAYER} obtained HM01\n"
+	.string "{PLAYER} obtuvo HM01\n"
 	.string "¡del CAPITÁN!$"
 
 SSAnne_CaptainsOffice_Text_ExplainCut::
 	.string "Con CORTE puedes talar los\n"
 	.string "árboles pequeños.\p"
-	.string "Why not try it with the trees\n"
-	.string "around VERMILION CITY?$"
+	.string "¿Por qué no probarlo con los árboles\n"
+	.string "de los alrededores de VERMILION?$"
 
 SSAnne_CaptainsOffice_Text_SSAnneWillSetSailSoon::
-	.string "CAPTAIN: ...Whew!\p"
+	.string "CAPITÁN: ...¡Uf!\p"
 	.string "Ahora que ya no estoy enfermo,\n"
 	.string "creo que es el momento.\p"
 	.string "¡El S.S. ANNE zarpará pronto!\p"
 	.string "Adiós, hasta que volvamos a\n"
-	.string "VERMILION CITY!$"
+	.string "¡VERMILION!$"
 
 SSAnne_CaptainsOffice_Text_YouHaveNoRoomForThis::
 	.string "¡Oh, no!\n"

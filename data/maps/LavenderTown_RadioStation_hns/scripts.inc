@@ -71,7 +71,7 @@ LavenderTown_RadioStation_Text_SuperNerd1:
 	.string "para dar buenos shows.$"
 
 LavenderTown_RadioStation_Text_Gentleman:
-	.string "Oh, no, no, no!\p"
+	.string "¡Oh, no, no, no!\p"
 	.string "Hemos estado fuera del aire desde\n"
 	.string "que cerró la CENTRAL ELÉCTRICA.\p"
 	.string "Todo mi esfuerzo por iniciar esta\n"

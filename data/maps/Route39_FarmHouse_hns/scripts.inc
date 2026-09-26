@@ -98,14 +98,14 @@ Route39_Text_FarmerMNoMoney:
 	.string "¡Sin dinero no hay venta!$"
 
 Route39_Text_FarmerMNoRoom:
-	.string "I reckon yer PACK's full.$"
+	.string "Diría que tu MOCHILA está llena.$"
 
 Route39_Text_FarmerMNoSale:
 	.string "¿No lo quieres?\n"
 	.string "¡Vuelve pronto, ¿eh?$"
 
 Route39FarmHouse_Text_WouldYouLikeAnother:
-	.string "How bout another?$"
+	.string "¿Qué tal otra?$"
 
 Route39_Text_GotMilk:
 	.string "{PLAYER} obtuvo LECHE MOOMOO.$"

@@ -34,5 +34,5 @@ TwoIsland_PokemonCenter_1F_Text_OldLadyLivesOutOnCape::
 	.string "Hay una anciana que vive\n"
 	.string "en el cabo.\p"
 	.string "Ha vivido ahí desde no sé\n"
-	.string "when.$"
+	.string "cuándo.$"
 

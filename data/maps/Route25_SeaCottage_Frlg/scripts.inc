@@ -296,28 +296,28 @@ Route25_SeaCottage_Movement_BillExitTeleporter::
 	step_end
 
 Route25_SeaCottage_Text_ImBillHelpMeOutPal::
-	.string "Hiya! I'm a POKéMON...\n"
+	.string "¡Holi! Soy un POKéMON...\n"
 	.string "¡...No, no lo soy!\p"
 	.string "¡Llámame BILL!\n"
-	.string "I'm a true-blue POKéMANIAC!\p"
+	.string "¡Soy un POKéMANÍACO de verdad!\p"
 	.string "¡Hola!\n"
-	.string "What's with that skeptical look?\p"
+	.string "¿Y esa cara de escepticismo?\p"
 	.string "No te estoy bromeando, amigo.\p"
 	.string "Arruiné un experimento y\n"
-	.string "combined with a POKéMON!\p"
+	.string "¡combinado con un POKéMON!\p"
 	.string "Entonces, ¿qué dices?\n"
 	.string "¡Ayúdame con esto!$"
 
 Route25_SeaCottage_Text_ImBillHelpMeOutLady::
-	.string "Hiya! I'm a POKéMON...\n"
+	.string "¡Holi! Soy un POKéMON...\n"
 	.string "¡...No, no lo soy!\p"
 	.string "¡Llámame BILL!\n"
-	.string "I'm a true-blue POKéMANIAC!\p"
+	.string "¡Soy un POKéMANÍACO de verdad!\p"
 	.string "¡Hola!\n"
-	.string "What's with that skeptical look?\p"
+	.string "¿Y esa cara de escepticismo?\p"
 	.string "No te estoy burlando, señora.\p"
 	.string "Arruiné un experimento y\n"
-	.string "combined with a POKéMON!\p"
+	.string "¡combinado con un POKéMON!\p"
 	.string "Entonces, ¿qué dices?\n"
 	.string "¡Ayúdame con esto!$"
 
@@ -331,21 +331,21 @@ Route25_SeaCottage_Text_NoPleaseChief::
 	.string "¡No!?\n"
 	.string "¡No seas tan frío!\p"
 	.string "Vamos, ayúdame con esto,\n"
-	.string "deep, deep trouble!\p"
+	.string "¡en graves, graves problemas!\p"
 	.string "¿Qué dices, jefe?\n"
-	.string "Please?\l"
-	.string "Okay?\l"
-	.string "All right!$"
+	.string "¿Por favor?\l"
+	.string "¿Vale?\l"
+	.string "¡Muy bien!$"
 
 Route25_SeaCottage_Text_NoPleaseBeautiful::
 	.string "¡No!?\n"
 	.string "¡No seas tan frío!\p"
 	.string "Vamos, ayúdame con esto,\n"
-	.string "deep, deep trouble!\p"
+	.string "¡en graves, graves problemas!\p"
 	.string "¿Qué dices, hermosa?\n"
-	.string "Please?\l"
-	.string "Okay?\l"
-	.string "All right!$"
+	.string "¿Por favor?\l"
+	.string "¿Vale?\l"
+	.string "¡Muy bien!$"
 
 Route25_SeaCottage_Text_ThanksBudTakeThis::
 	.string "BILL: Yeehah!\n"
@@ -385,8 +385,8 @@ Route25_SeaCottage_Text_SSAnnePartyYouGoInstead::
 	.string "Ve y diviértete.$"
 
 Route25_SeaCottage_Text_CheckOutRareMonsOnPC::
-	.string "BILL: Feel like checking out some\n"
-	.string "of my rare POKéMON on my PC?\p"
+	.string "BILL: ¿Quieres ver algunos de\n"
+	.string "mis POKéMON raros en mi PC?\p"
 	.string "Vamos, revisa mi PC.$"
 
 Route25_SeaCottage_Text_TeleporterIsDisplayed::
@@ -395,11 +395,11 @@ Route25_SeaCottage_Text_TeleporterIsDisplayed::
 
 Route25_SeaCottage_Text_InitiatedTeleportersCellSeparator::
 	.string "{PLAYER} inició el TELEPORTER\n"
-	.string "Cell Separator.$"
+	.string "Separador Celular.$"
 
 Route25_SeaCottage_Text_BillsFavoriteMonList::
 	.string "BILL's favorite POKéMON list!$"
 
 Route25_SeaCottage_Text_SeeWhichMon::
-	.string "Which POKéMON do you want to see?$"
+	.string "¿Qué POKéMON quieres ver?$"
 

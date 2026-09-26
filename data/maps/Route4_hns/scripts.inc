@@ -58,8 +58,8 @@ Route4_Text_PicnickerHope_AfterBattle:
 	.string "Pero, ¿dónde podrían estar?$"
 
 Route4_Text_PicnickerSharon_Seen:
-	.string "Um...\n"
-	.string "I...$"
+	.string "Em...\n"
+	.string "Yo...$"
 
 Route4_Text_PicnickerSharon_Beaten:
 	.string "...$"

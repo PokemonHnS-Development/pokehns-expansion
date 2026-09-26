@@ -352,7 +352,7 @@ SlateportCity_OceanicMuseum_2F_Text_SternIveGotToGo:
 	.string "Debemos partir pronto en nuestra\n"
 	.string "expedición al fondo del mar.\p"
 	.string "Gracias de nuevo, pero ahora debo\n"
-	.string "to go!\p"
+	.string "irme!\p"
 	.string "Siéntete libre de explorar y ver\n"
 	.string "pero recorran las instalaciones.$"
 

@@ -90,7 +90,7 @@ UnionCave_1F_Text_PokemaniacLarrySeen:
 	.string "¡Entonces eres mi rival de captura!$"
 
 UnionCave_1F_Text_PokemaniacLarryBeaten:
-	.string "Ugh. My poor POKéMON...$"
+	.string "Uf. Mis pobres POKéMON...$"
 
 UnionCave_1F_Text_PokemaniacLarryAfter:
 	.string "A veces se oyen rugidos de POKéMON\n"
@@ -101,7 +101,7 @@ UnionCave_1F_Text_HikerDanielSeen:
 	.string "¡No esperaba ver a nadie aquí!$"
 
 UnionCave_1F_Text_HikerDanielBeaten:
-	.string "Whoa! I'm beaten big time!$"
+	.string "¡Uau! ¡Me ganaron por mucho!$"
 
 UnionCave_1F_Text_HikerDanielAfter:
 	.string "Me engañaron para que comprara una\n"
@@ -114,7 +114,7 @@ UnionCave_1F_Text_FirebreatherBillSeen:
 	.string "¡Eso me molesta muchísimo!$"
 
 UnionCave_1F_Text_FirebreatherBillBeaten:
-	.string "I flamed out!$"
+	.string "¡Me apagué como una llama!$"
 
 UnionCave_1F_Text_FirebreatherBillAfter:
 	.string "Los fines de semana se oyen rugidos\n"

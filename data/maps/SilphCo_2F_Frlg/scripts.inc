@@ -36,7 +36,7 @@ SilphCo_2F_EventScript_Grunt2::
 	end
 
 SilphCo_2F_Text_ConnorIntro::
-	.string "Help!\n"
+	.string "¡Auxilio!\n"
 	.string "Soy empleado de SILPH.$"
 
 SilphCo_2F_Text_ConnorDefeat::
@@ -62,50 +62,50 @@ SilphCo_2F_Text_Grunt1Intro::
 	.string "¡Aquí no se permiten niños!$"
 
 SilphCo_2F_Text_Grunt1Defeat::
-	.string "Tough!$"
+	.string "¡Duro!$"
 
 SilphCo_2F_Text_Grunt1PostBattle::
 	.string "Las baldosas en forma de diamante\n"
-	.string "blocks.\p"
+	.string "bloques.\p"
 	.string "Son transportadores de este lugar\n"
-	.string "high-tech building.$"
+	.string "edificio de tecnología.$"
 
 SilphCo_2F_Text_Grunt2Intro::
-	.string "Hey, kid!\n"
+	.string "¡Oye, niño!\n"
 	.string "¿Qué haces vagando por aquí?$"
 
 SilphCo_2F_Text_Grunt2Defeat::
-	.string "I goofed!$"
+	.string "¡La fastidié!$"
 
 SilphCo_2F_Text_Grunt2PostBattle::
 	.string "SILPH CO. se asociará con\n"
 	.string "TEAM ROCKET!$"
 
 Text_ThunderWaveTeach::
-	.string "Eeek!\n"
+	.string "¡Iik!\n"
 	.string "¡No! ¡Alto! ¡Auxilio!\p"
 	.string "Oh, no eres del TEAM ROCKET.\n"
-	.string "I'm sorry, I thought...\p"
+	.string "Perdón, pensé...\p"
 	.string "¿Me perdonarás si te enseño\n"
 	.string "la técnica ONDA TRUENO?$"
 
 Text_ThunderWaveDeclined::
-	.string "Oh...\n"
+	.string "Ah...\n"
 	.string "Pero ONDA TRUENO es útil...$"
 
 Text_ThunderWaveWhichMon::
 	.string "¿A qué POKéMON le enseño\n"
-	.string "THUNDER WAVE?$"
+	.string "¿ONDA TRUENO?$"
 
 Text_ThunderWaveTaught::
 	.string "ONDA TRUENO causa parálisis en\n"
-	.string "the target POKéMON.\p"
-	.string "A paralyzed POKéMON may be unable\n"
+	.string "el POKéMON objetivo.\p"
+	.string "Un POKéMON paralizado quizá no\n"
 	.string "para moverse en batalla.\p"
 	.string "Es un movimiento tipo ELÉCTRICO, así\n"
-	.string "won't work on some POKéMON.$"
+	.string "no funciona en algunos POKéMON.$"
 
 SilphCo_2F_Text_FloorSign::
-	.string "SILPH CO. HEAD OFFICE\n"
+	.string "OFICINAS DE SILPH CO.\n"
 	.string "2F$"
 

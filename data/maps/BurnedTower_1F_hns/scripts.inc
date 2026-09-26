@@ -214,4 +214,4 @@ BurnedTower_Text_RichardoBeaten:
 	.string "Pfffffffffffffff.$"
 BurnedTower_Text_RichardoAfter:
 	.string "Tal vez la vida criminal no es\n"
-	.string "me...$"
+	.string "mí...$"

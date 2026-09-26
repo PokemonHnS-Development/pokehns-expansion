@@ -133,7 +133,7 @@ Route110_TrickHousePuzzle2_Text_GeorgiaIntro:
 	.string "Así que estudio cómo poner trampas.$"
 
 Route110_TrickHousePuzzle2_Text_GeorgiaDefeat:
-	.string "I didn't study battling enough!$"
+	.string "¡No estudié lo suficiente sobre combates!$"
 
 Route110_TrickHousePuzzle2_Text_GeorgiaPostBattle:
 	.string "Eres fuerte, ¿verdad?\n"

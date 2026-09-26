@@ -290,36 +290,36 @@ VermilionCity_Gym_Text_LtSurgeIntro::
 	.string "haces aquí?\p"
 	.string "¡No durarás mucho en combate!\n"
 	.string "¡No con tu débil poder!\p"
-	.string "I tell you, kid, electric POKéMON\n"
-	.string "¡me salvó durante la guerra!\p"
+	.string "Te lo digo, niño, los POKéMON\n"
+	.string "eléctricos me salvaron en la guerra!\p"
 	.string "Convertí a mis enemigos en\n"
-	.string "paralysis!\p"
+	.string "¡en paralizados!\p"
 	.string "¡Igual que haré contigo!{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
 
 VermilionCity_Gym_Text_LtSurgePostBattle::
 	.string "¡Un consejo, muchacho!\p"
-	.string "Electricity is sure powerful!\p"
+	.string "¡La electricidad es muy potente!\p"
 	.string "Pero es inútil contra tipo\n"
 	.string "POKéMON tipo DRAGÓN!$"
 
 VermilionCity_Gym_Text_ExplainThunderBadgeTakeThis::
 	.string "La MEDALLA TRUENO aumenta\n"
-	.string "POKéMON's SPEED!\p"
-	.string "It also lets your POKéMON FLY\n"
-	.string "lightning-quick anytime, kid!\p"
+	.string "la VELOCIDAD de tus POKéMON!\p"
+	.string "También hace que tus POKéMON VUELEN\n"
+	.string "como un rayo, ¡cuando sea, niño!\p"
 	.string "¡Eres especial, niño!\n"
 	.string "¡Toma esto!$"
 
 VermilionCity_Gym_Text_ReceivedTM34FromLtSurge::
-	.string "{PLAYER} received TM34\n"
+	.string "{PLAYER} recibió MT34\n"
 	.string "del LT. SURGE.$"
 
 VermilionCity_Gym_Text_ExplainTM34::
-	.string "TM34 contains SHOCK WAVE!\p"
-	.string "Teach it to an ELECTRIC POKéMON!$"
+	.string "¡La MT34 contiene ONDA DE CHOQUE!\p"
+	.string "¡Enséñaselo a un POKéMON ELÉCTRICO!$"
 
 VermilionCity_Gym_Text_MakeRoomInYourBag::
-	.string "Yo, kid, make room in your BAG!$"
+	.string "¡Oye, niño, haz sitio en tu MOCHILA!$"
 
 VermilionCity_Gym_Text_LtSurgeDefeat::
 	.string "¡Vaya que sorpresa!\p"
@@ -332,7 +332,7 @@ VermilionCity_Gym_Text_TuckerIntro::
 	.string "Era un jefe muy exigente.$"
 
 VermilionCity_Gym_Text_TuckerDefeat::
-	.string "Stop!\n"
+	.string "¡Alto!\n"
 	.string "¡Eres muy bueno!$"
 
 VermilionCity_Gym_Text_TuckerPostBattle::
@@ -346,12 +346,12 @@ VermilionCity_Gym_Text_BailyIntro::
 	.string "Por eso entré a este GYM.$"
 
 VermilionCity_Gym_Text_BailyDefeat::
-	.string "Fried!$"
+	.string "¡Frito!$"
 
 VermilionCity_Gym_Text_BailyPostBattle::
-	.string "Okay, I'll talk!\p"
+	.string "¡Está bien, hablaré!\p"
 	.string "El TTE. SURGE dijo que escondió\n"
-	.string "switches inside something.$"
+	.string "interruptores dentro de algo.$"
 
 VermilionCity_Gym_Text_DwayneIntro::
 	.string "¡Este no es lugar para niños!\n"
@@ -370,15 +370,15 @@ VermilionCity_Gym_Text_DwaynePostBattle::
 	.string "el segundo está justo al lado.$"
 
 VermilionCity_Gym_Text_GymGuyAdvice::
-	.string "Yo!\n"
+	.string "¡Hola!\n"
 	.string "¡Un futuro campeón!\p"
 	.string "LT. SURGE tiene un apodo.\p"
 	.string "La gente lo llama el\n"
 	.string "¡Americano Relámpago!\p"
 	.string "Es un experto en tipos eléctrico.\n"
 	.string "POKéMON planta.\p"
-	.string "BIRD/WATER-type POKéMON match\n"
-	.string "están en desventaja ante el ELÉCTRICO.\p"
+	.string "POKéMON de tipo AVE/AGUA llevan\n"
+	.string "las de perder contra el ELÉCTRICO.\p"
 	.string "Cuidado también con la parálisis.\p"
 	.string "LT. SURGE es muy cauteloso.\p"
 	.string "Se encerró, así que no será\n"

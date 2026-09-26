@@ -278,7 +278,7 @@ BattleFrontier_Lounge2_Text_PalaceMavenSilverMons::
 	.string "antes?\p"
 	.string "PALACIO? Cuando pone a prueba el\n"
 	.string "espíritu, usa estos POKéMON:\p"
-	.string "A POISON & FLYING-type BAT POKéMON,\n"
+	.string "Un POKéMON MURCIÉLAGO tipo VENENO\n"
 	.string "un POKéMON PEREZOSO tipo NORMAL y un\l"
 	.string "POKéMON TRANSPORTE AGUA e HIELO.$"
 

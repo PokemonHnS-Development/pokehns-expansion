@@ -42,13 +42,13 @@ ThreeIsland_Mart_Text_TrueThatCeldadonDeptStoreBigger::
 
 ThreeIsland_Mart_Text_PeopleHealWithBerriesFromForest::
 	.string "A veces compro medicina aquí.\p"
-	.string "But a lot of people heal POKéMON\n"
+	.string "Pero mucha gente cura a sus POKéMON\n"
 	.string "con BAYAS del BOSQUE BAYA.\p"
-	.string "After all, BERRIES are free and\n"
+	.string "Después de todo, las BAYAS son gratis\n"
 	.string "nunca se acaban.$"
 
 ThreeIsland_Mart_Text_BikersWereAboutToTrashMart::
 	.string "Esos MOTOCICLISTAS iban a destrozar\n"
-	.string "this POKéMON MART.\p"
+	.string "esta TIENDA POKéMON.\p"
 	.string "¡Qué bueno que decidieron irse!$"
 

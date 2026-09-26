@@ -1183,7 +1183,7 @@ PetalburgCity_Gym_Text_IllLoanYouMyZigzagoon:
 PetalburgCity_Gym_Text_WallyThankYouAndDadGivesPokeBall:
 	.string "WALLY: ¡Oh, guau!\n"
 	.string "¡Un POKéMON!\p"
-	.string "DAD: Hm. I'll give you a POKé BALL, too.\n"
+	.string "PAPÁ: Yo también te daré una POKé BALL.\n"
 	.string "¡Ve a por ello!\p"
 	.string "¡WALLY recibió una POKé BALL!$"
 
@@ -1541,7 +1541,7 @@ PetalburgCity_Gym_Text_EnterGymLeadersRoom:
 	.string "SALA DEL LÍDER DEL GIMNASIO\p“¡Comprueba\npor ti mismo lo\nduros que son mis POKéMON!”\ndice el cartel.\p¿Quieres entrar?$"
 
 PetalburgCity_Gym_Text_GymStatue:
-	.string "PETALBURG CITY POKéMON GYM$"
+	.string "GIMNASIO POKéMON DE FUNDA$"
 
 PetalburgCity_Gym_Text_GymStatueCertified:
 	.string "GIMNASIO POKéMON DE CIUDAD PETALIA\p"

@@ -375,7 +375,7 @@ EcruteakCity_Text_GymSign:
 	.string "El Vidente Místico del Futuro$"
 
 EcruteakCity_Text_DanceTheaterSign:
-	.string "ECRUTEAK DANCE THEATER$"
+	.string "TEATRO DE DANZA ECRUTEAK$"
 
 EcruteakCity_Text_BurnedTowerSign:
 	.string "TORRE QUEMADA\p"

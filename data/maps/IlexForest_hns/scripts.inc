@@ -665,7 +665,7 @@ IlexForest_Text_ApprenticeAfter:
 	.string "porque no tengo ninguna MEDALLA.$"
 
 IlexForest_Text_ItsTheMissingPokemon:
-	.string "It's the missing POKéMON!$"
+	.string "¡Es el POKéMON perdido!$"
 
 IlexForest_Text_Kwaaaa:
 	.string "FARFETCH'D: Kwaa!$"
@@ -703,13 +703,13 @@ IlexForest_Text_Signpost:
 
 IlexForest_Text_Shrine:
 	.string "SANTUARIO DEL BOSQUE VERDE...\p"
-	.string "Es en honor al protector\n"
+	.string "Es en honor al\n"
 	.string "del bosque...$"
 
 IlexForest_Text_ShrineCelebiEvent:
 	.string "SANTUARIO DEL BOSQUE VERDE...\p"
-	.string "Es en honor al protector\n"
-	.string "protector...\p"
+	.string "Es en honor al\n"
+	.string "protector del bosque...\p"
 	.string "¡¿Oh?! ¿Qué es esto?\p"
 	.string "Es un hueco.\n"
 	.string "Parece que la GS BALL cabría\l"
@@ -733,7 +733,7 @@ IlexForest_Text_BugCatcherWayneSeen:
 	.string "¡Ahuyentaste a un POKéMON!$"
 
 IlexForest_Text_BugCatcherWayneBeaten:
-	.string "I hadn't seen that POKéMON before...$"
+	.string "No había visto ese POKéMON antes...$"
 
 IlexForest_Text_BugCatcherWayneAfter:
 	.string "Un POKéMON que nunca había visto\n"

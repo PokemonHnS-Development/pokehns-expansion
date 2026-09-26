@@ -25,7 +25,7 @@ SafariZone_SecretHouse_EventScript_ExplainSurf::
 	end
 
 SafariZone_SecretHouse_Text_CongratsYouveWon::
-	.string "Ah! Finally!\p"
+	.string "¡Ah! ¡Por fin!\p"
 	.string "¡Eres la primera persona en\nllegar a"
 	.string "la CASA SECRETA!\p"
 	.string "Aunque hice una campaña\npara nuestra"
@@ -41,14 +41,14 @@ SafariZone_SecretHouse_Text_ReceivedHM03FromAttendant::
 
 SafariZone_SecretHouse_Text_ExplainSurf::
 	.string "MO03 es SURF.\p"
-	.string "POKéMON will be able to ferry you\n"
+	.string "los POKéMON podrán llevarte\n"
 	.string "sobre el agua usándolo.\p"
 	.string "Y esta MO no es desechable, así\n"
 	.string "que puedes usarla una y otra vez.\p"
 	.string "Tienes mucha suerte por ganar esto\n"
-	.string "fabulous prize!$"
+	.string "¡un premio fabuloso!$"
 
 SafariZone_SecretHouse_Text_DontHaveRoomForPrize::
 	.string "No tienes espacio para esto\n"
-	.string "fabulous prize!$"
+	.string "¡un premio fabuloso!$"
 

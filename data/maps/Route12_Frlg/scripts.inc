@@ -61,19 +61,19 @@ Route12_Text_MonSprawledOutInSlumber::
 	.string "un sueño profundo y cómodo.$"
 
 Text_SnorlaxWokeUp::
-	.string "SNORLAX woke up!\p"
+	.string "¡SNORLAX se despertó!\p"
 	.string "¡Atacó con furia enojada!$"
 
 Text_SnorlaxReturnedToMountains::
-	.string "SNORLAX calmed down.\n"
+	.string "SNORLAX se calmó.\n"
 	.string "Bostezó muy fuerte...\l"
 	.string "Y volvió a las montañas.$"
 
 Text_WantToUsePokeFlute::
-	.string "Want to use the POKé FLUTE?$"
+	.string "¿Quieres usar la FLAUTA POKé?$"
 
 Text_PlayedPokeFlute::
-	.string "{PLAYER} played the POKé FLUTE.$"
+	.string "{PLAYER} tocó la FLAUTA POKé.$"
 
 Route12_Text_NedIntro::
 	.string "¡Sí!\n"
@@ -103,10 +103,10 @@ Route12_Text_JustinIntro::
 	.string "¿Tú has encontrado una?$"
 
 Route12_Text_JustinDefeat::
-	.string "Oww!$"
+	.string "¡Ay!$"
 
 Route12_Text_JustinPostBattle::
-	.string "I could have made my POKéMON\n"
+	.string "Podría haber hecho\n"
 	.string "evolucionar con una PIEDRA LUNAR.\p"
 	.string "Seguro habría ganado entonces.$"
 
@@ -116,18 +116,18 @@ Route12_Text_LucaIntro::
 	.string "del mar, sin embargo.$"
 
 Route12_Text_LucaDefeat::
-	.string "Unplugged!$"
+	.string "¡Desconectado!$"
 
 Route12_Text_LucaPostBattle::
-	.string "El agua conduce electricidad, así\n"
-	.string "should zap sea POKéMON.$"
+	.string "El agua conduce la electricidad, así\n"
+	.string "que freiría a los POKéMON marinos.$"
 
 Route12_Text_HankIntro::
-	.string "The FISHING FOOL versus POKéMON\n"
-	.string "KID!$"
+	.string "EL LOCO DE LA PESCA contra POKéMON\n"
+	.string "¡CHICO!$"
 
 Route12_Text_HankDefeat::
-	.string "Touch too much!$"
+	.string "¡No me toques tanto!$"
 
 Route12_Text_HankPostBattle::
 	.string "Supongo que uno es bueno en\n"
@@ -137,8 +137,8 @@ Route12_Text_HankPostBattle::
 
 Route12_Text_ElliotIntro::
 	.string "Amo pescar, no me malinterpretes.\p"
-	.string "Pero sería mejor si también\ntuviera más"
-	.string "work.$"
+	.string "Pero sería mejor si también tuviera más\n"
+	.string "trabajo.$"
 
 Route12_Text_ElliotDefeat::
 	.string "No es fácil...$"
@@ -150,7 +150,7 @@ Route12_Text_ElliotPostBattle::
 Route12_Text_AndrewIntro::
 	.string "¿Qué estás pescando?\p"
 	.string "Nunca se sabe lo que se puede\n"
-	.string "catch!$"
+	.string "¡atrapar!$"
 
 Route12_Text_AndrewDefeat::
 	.string "¡Lo perdí!$"
@@ -161,11 +161,11 @@ Route12_Text_AndrewPostBattle::
 	.string "Pero son bien débiles.$"
 
 Route12_Text_RouteSign::
-	.string "ROUTE 12 \n"
+	.string "RUTA 12 \n"
 	.string "Norte a LAVANDA$"
 
 Route12_Text_SportfishingArea::
-	.string "SPORTFISHING AREA$"
+	.string "ZONA DE PESCA$"
 
 Route12_Text_JesIntro::
 	.string "JES: Si gano, voy a\n"
@@ -181,16 +181,16 @@ Route12_Text_JesPostBattle::
 
 Route12_Text_JesNotEnoughMons::
 	.string "JES: GIA y yo seremos\n"
-	.string "together forever.\p"
+	.string "juntos por siempre.\p"
 	.string "No lucharemos a menos que\n"
-	.string "two POKéMON of your own.$"
+	.string "dos POKéMON tuyos.$"
 
 Route12_Text_GiaIntro::
-	.string "GIA: Hey, JES...\p"
+	.string "GIA: ¡Oye, JES...\p"
 	.string "¡Si ganamos, te casarás conmigo!$"
 
 Route12_Text_GiaDefeat::
-	.string "GIA: Oh, but why?$"
+	.string "GIA: ¿Oh, pero por qué?$"
 
 Route12_Text_GiaPostBattle::
 	.string "GIA: ¡JES, tonto!\n"
@@ -199,4 +199,4 @@ Route12_Text_GiaPostBattle::
 Route12_Text_GiaNotEnoughMons::
 	.string "GIA: No soporto pelear\n"
 	.string "sin mi JES.\p"
-	.string "Don't you have one more POKéMON?$"
+	.string "¿No tienes otro POKéMON más?$"

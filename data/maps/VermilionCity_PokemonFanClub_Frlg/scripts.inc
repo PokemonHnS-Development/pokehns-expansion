@@ -120,7 +120,7 @@ VermilionCity_PokemonFanClub_EventScript_RulesSign2::
 
 VermilionCity_PokemonFanClub_Text_AdmirePikachusTail::
 	.string "¿No admiras a mi PIKACHU?\n"
-	.string "adorable tail?$"
+	.string "¿su linda colita?$"
 
 VermilionCity_PokemonFanClub_Text_PikachuTwiceAsCute::
 	.string "¡Hmph!\p"
@@ -145,18 +145,18 @@ VermilionCity_PokemonFanClub_Text_Seel::
 	.string "SEEL: Kyuoo!$"
 
 VermilionCity_PokemonFanClub_Text_DidYouComeToHearAboutMyMons::
-	.string "I chair the POKéMON Fan Club!\p"
+	.string "¡Presido el FAN CLUB POKéMON!\p"
 	.string "Crío más de un centenar\n"
 	.string "exóticos POKéMON!\p"
 	.string "Soy muy exigente en cuanto a\n"
-	.string "POKéMON! I surely am!\p"
-	.string "So...\p"
+	.string "¡POKéMON! ¡Y mucho!\p"
+	.string "Entonces...\p"
 	.string "¿Vienes a escuchar sobre mí?\n"
 	.string "de mis POKéMON?$"
 
 VermilionCity_PokemonFanClub_Text_ChairmansStory::
 	.string "¡Bien!\n"
-	.string "Then listen up!\p"
+	.string "¡Entonces escucha!\p"
 	.string "Mi RAPIDASH favorito...\p"
 	.string "Es...lindo...hermoso...listo...\n"
 	.string "además...increíble...¿no crees?...\l"
@@ -164,7 +164,7 @@ VermilionCity_PokemonFanClub_Text_ChairmansStory::
 	.string "amablemente...¡me encanta!\p"
 	.string "Abrázalo...cuando...duerme...cálido\n"
 	.string "y acogedor...espectacular...\l"
-	.string "ravishing...\l"
+	.string "fascinante...\l"
 	.string "...¡Ups! ¡Mira la hora!\l"
 	.string "¡Te he retenido demasiado!\p"
 	.string "¡Gracias por escucharme!\n"
@@ -175,13 +175,13 @@ VermilionCity_PokemonFanClub_Text_ReceivedBikeVoucherFromChairman::
 	.string "BICICLETA del PRESIDENTE.$"
 
 VermilionCity_PokemonFanClub_Text_ExplainBikeVoucher::
-	.string "Lleva ese BONO DE BICICLETA\n"
-	.string "BIKE SHOP in CERULEAN CITY.\p"
+	.string "Lleva ese BONO a la TIENDA DE\n"
+	.string "BICIS de CIUDAD CERULEAN.\p"
 	.string "Cámbialo por una BICICLETA\n"
 	.string "¡gratis!\p"
 	.string "No te preocupes, mi SPEAROW\n"
-	.string "will FLY me anywhere I need to go.\p"
-	.string "quiera ir.\p"
+	.string "me llevará a donde necesite ir.\p"
+	.string "¡Donde sea que quiera!\p"
 	.string "¡Espero que te guste el ciclismo!$"
 
 VermilionCity_PokemonFanClub_Text_ComeBackToHearStory::
@@ -207,7 +207,7 @@ VermilionCity_PokemonFanClub_Text_ListenPolitelyToOtherTrainers::
 	.string "¡ENTRENADORES!$"
 
 VermilionCity_PokemonFanClub_Text_SomeoneBragsBragBack::
-	.string "If someone brags, brag right back!$"
+	.string "¡Si alguien presume, presume tú más!$"
 
 VermilionCity_PokemonFanClub_Text_ChairmanReallyAdoresHisMons::
 	.string "A nuestro PRESIDENTE le encanta\n"

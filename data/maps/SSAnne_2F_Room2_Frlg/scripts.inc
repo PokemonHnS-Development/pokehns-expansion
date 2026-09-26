@@ -16,8 +16,8 @@ SSAnne_2F_Room2_Text_BrooksIntro::
 	.string "mantiene joven.$"
 
 SSAnne_2F_Room2_Text_BrooksDefeat::
-	.string "Good match!\n"
-	.string "Ah, I feel young again!$"
+	.string "¡Buen combate!\n"
+	.string "Ah, me siento joven otra vez!$"
 
 SSAnne_2F_Room2_Text_BrooksPostBattle::
 	.string "Hace quince años, yo\n"
@@ -27,10 +27,10 @@ SSAnne_2F_Room2_Text_DaleIntro::
 	.string "¡Mira lo que pesqué!$"
 
 SSAnne_2F_Room2_Text_DaleDefeat::
-	.string "I'm all out!$"
+	.string "¡Me quedé sin nada!$"
 
 SSAnne_2F_Room2_Text_DalePostBattle::
 	.string "Party?\p"
 	.string "La fiesta del crucero debería\n"
-	.string "over by now.$"
+	.string "terminó ya.$"
 

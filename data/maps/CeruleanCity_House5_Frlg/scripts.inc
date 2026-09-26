@@ -187,9 +187,9 @@ CeruleanCity_House1_Text_HaveJustTheThing::
 
 CeruleanCity_House1_Text_GoCrushBerriesAtDirectCorner::
 	.string "Hay algo nuevo en el segundo\n"
-	.string "floor of POKéMON CENTERS, at the\l"
+	.string "piso de los CENTROS POKéMON, en el\l"
 	.string "DIRECT CORNER.\p"
-	.string "They installed a Wireless Adapter\n"
+	.string "Instalaron un nuevo aparato\n"
 	.string "una máquina para triturar BAYAS.\p"
 	.string "Aquí es donde tú entras.\p"
 	.string "Tengo un favor que pedirte, uno\n"
@@ -200,7 +200,7 @@ CeruleanCity_House1_Text_GoCrushBerriesAtDirectCorner::
 	.string "DIRECT CORNER of POKéMON CENTERS.\p"
 	.string "Prepararé medicina para ti si\n"
 	.string "me traes POLVO DE BAYA.\p"
-	.string "Don't forget, crush BERRIES into\n"
+	.string "No olvides triturar BAYAS para\n"
 	.string "POLVO DE BAYA y tráemelo.$"
 
 CeruleanCity_House1_Text_WhyMustYouLieNoBerries::

@@ -45,7 +45,7 @@ RockTunnel_B1F_Text_SofiaIntro::
 	.string "¿Sabes cómo puedes evitar\n"
 	.string "¿perderse en las montañas?\p"
 	.string "Puedes doblar ramitas como\nseñal de camino"
-	.string "markers.$"
+	.string "marcas.$"
 
 RockTunnel_B1F_Text_SofiaDefeat::
 	.string "Ohhh!\n"
@@ -60,38 +60,38 @@ RockTunnel_B1F_Text_DudleyIntro::
 
 RockTunnel_B1F_Text_DudleyDefeat::
 	.string "¡Ups!\n"
-	.string "Outmuscled!$"
+	.string "¡Me superaste!$"
 
 RockTunnel_B1F_Text_DudleyPostBattle::
 	.string "Voy por poder porque odio\n"
-	.string "thinking.$"
+	.string "pensar.$"
 
 RockTunnel_B1F_Text_CooperIntro::
-	.string "You have a POKéDEX?\n"
-	.string "I want one, too.$"
+	.string "¿Tienes una POKéDEX?\n"
+	.string "¡Quiero una también!$"
 
 RockTunnel_B1F_Text_CooperDefeat::
-	.string "Shoot!\n"
-	.string "I am so jealous!$"
+	.string "¡Rayos!\n"
+	.string "¡Qué envidia me das!$"
 
 RockTunnel_B1F_Text_CooperPostBattle::
-	.string "When you finish your POKéDEX,\n"
+	.string "Cuando acabes tu POKéDEX,\n"
 	.string "¿me lo das?$"
 
 RockTunnel_B1F_Text_SteveIntro::
-	.string "Um... Do you know about POKéMON\n"
-	.string "cosplay?$"
+	.string "Em... ¿Sabes algo del\n"
+	.string "cosplay POKéMON?$"
 
 RockTunnel_B1F_Text_SteveDefeat::
 	.string "Bueno, eso es todo.$"
 
 RockTunnel_B1F_Text_StevePostBattle::
-	.string "POKéMON cosplay is dressing up as\n"
-	.string "POKéMON for fun.\p"
+	.string "El cosplay POKéMON es disfrazarse\n"
+	.string "de POKéMON por diversión.\p"
 	.string "CLEFAIRY es un favorito.$"
 
 RockTunnel_B1F_Text_AllenIntro::
-	.string "My POKéMON techniques will leave\n"
+	.string "¡Mis técnicas POKéMON te dejarán\n"
 	.string "¡llorando!$"
 
 RockTunnel_B1F_Text_AllenDefeat::
@@ -107,30 +107,30 @@ RockTunnel_B1F_Text_MarthaIntro::
 	.string "pero lucharé contigo.$"
 
 RockTunnel_B1F_Text_MarthaDefeat::
-	.string "Oh!\n"
-	.string "I lost!$"
+	.string "¡Oh!\n"
+	.string "¡Perdí!$"
 
 RockTunnel_B1F_Text_MarthaPostBattle::
-	.string "I like tiny POKéMON.\n"
+	.string "Me gustan los POKéMON pequeños.\n"
 	.string "¡Los grandes dan miedo!$"
 
 RockTunnel_B1F_Text_EricIntro::
 	.string "¡Dame lo mejor que tengas!$"
 
 RockTunnel_B1F_Text_EricDefeat::
-	.string "Fired away!$"
+	.string "¡Me venciste!$"
 
 RockTunnel_B1F_Text_EricPostBattle::
-	.string "I'll raise my POKéMON to beat\n"
-	.string "yours, kid.$"
+	.string "Entrenaré a mis POKéMON para\n"
+	.string "vencerte, chico.$"
 
 RockTunnel_B1F_Text_WinstonIntro::
-	.string "I draw illustrations of POKéMON\n"
-	.string "when I'm home.$"
+	.string "Dibujo ilustraciones de POKéMON\n"
+	.string "al volver a casa.$"
 
 RockTunnel_B1F_Text_WinstonDefeat::
 	.string "Uff...\n"
-	.string "I'm exhausted...$"
+	.string "Estoy agotado...$"
 
 RockTunnel_B1F_Text_WinstonPostBattle::
 	.string "Soy artista, no peleador.\n"

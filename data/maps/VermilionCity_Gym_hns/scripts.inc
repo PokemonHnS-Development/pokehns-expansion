@@ -362,7 +362,7 @@ VermilionGym_Text_GuitaristVincentSeen:
 	.string "¿Crees que puedes vencerme?$"
 
 VermilionGym_Text_GuitaristVincentBeaten:
-	.string "Ooh, how shocking!$"
+	.string "¡Oh, qué impactante!$"
 
 VermilionGym_Text_GuitaristVincentAfter:
 	.string "Mamá me dijo que no dejara mi\n"

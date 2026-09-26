@@ -127,7 +127,7 @@ OneIsland_Text_LuckyToHaveCelioHere::
 	.string "Somos afortunados de tener\n"
 	.string "un joven íntegro como CELIO.\p"
 	.string "Mi nieta estaba muy agitada\n"
-	.string "over CELIO's friend.\p"
+	.string "por el amigo de CELIO.\p"
 	.string "Algo sobre un famoso\n"
 	.string "POKéMANIAC?\p"
 	.string "No sé qué significa eso, pero\n"
@@ -152,11 +152,11 @@ OneIsland_Text_HavePCLinkageWithHoenn::
 	.string "¡mi nieta!$"
 
 OneIsland_Text_IslandSign::
-	.string "ONE ISLAND\n"
-	.string "Friends Gather at Knot Island$"
+	.string "ISLA PRIMERA\n"
+	.string "Amigos se reúnen en Isla Nudo$"
 
 OneIsland_Text_PokemonNetCenterSign::
-	.string "Expanding the POKéMON World!\n"
+	.string "¡Expandiendo el Mundo POKéMON!\n"
 	.string "POKéMON NET CENTER$"
 
 @ Unused
@@ -165,5 +165,5 @@ OneIsland_Text_ReturnToCinnabar::
 
 OneIsland_Text_IsntWarmClimateHereGreat::
 	.string "Hola, ¿turisteando, verdad?\n"
-	.string "Isn't the warm climate here great?$"
+	.string "¿No es genial el clima cálido?$"
 

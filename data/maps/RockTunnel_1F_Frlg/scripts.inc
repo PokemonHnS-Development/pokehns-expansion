@@ -46,7 +46,7 @@ RockTunnel_1F_EventScript_Dana::
 	end
 
 RockTunnel_1F_Text_LennyIntro::
-	.string "This tunnel goes a long way, kid!$"
+	.string "¡Este túnel es muy largo, chico!$"
 
 RockTunnel_1F_Text_LennyDefeat::
 	.string "Doh!\n"
@@ -63,33 +63,33 @@ RockTunnel_1F_Text_OliverIntro::
 	.string "Quizá estoy perdido aquí...$"
 
 RockTunnel_1F_Text_OliverDefeat::
-	.string "Ease up!\n"
+	.string "¡Calma!\n"
 	.string "¿Qué estoy haciendo?\l"
 	.string "¿Por dónde se sale?$"
 
 RockTunnel_1F_Text_OliverPostBattle::
-	.string "That sleeping POKéMON on ROUTE 12\n"
+	.string "Ese POKéMON dormido en la RUTA 12\n"
 	.string "me obligó a tomar este desvío.$"
 
 RockTunnel_1F_Text_LucasIntro::
 	.string "Los de fuera como tú deben\n"
-	.string "some respect!$"
+	.string "mostrar algo de respeto!$"
 
 RockTunnel_1F_Text_LucasDefeat::
 	.string "¡Me rindo!$"
 
 RockTunnel_1F_Text_LucasPostBattle::
-	.string "You're talented enough to hike!$"
+	.string "¡Tienes talento para caminar!$"
 
 RockTunnel_1F_Text_AshtonIntro::
 	.string "POKéMON fight!\n"
 	.string "¡Listo, ya!$"
 
 RockTunnel_1F_Text_AshtonDefeat::
-	.string "Game over!$"
+	.string "¡Fin del juego!$"
 
 RockTunnel_1F_Text_AshtonPostBattle::
-	.string "Oh well, I'll get a ZUBAT as I go!$"
+	.string "¡Bueno, atraparé un ZUBAT en el camino!$"
 
 RockTunnel_1F_Text_LeahIntro::
 	.string "Eek!\p"
@@ -103,18 +103,18 @@ RockTunnel_1F_Text_LeahPostBattle::
 	.string "Vi un MACHOP en este túnel.$"
 
 RockTunnel_1F_Text_DanaIntro::
-	.string "I came this far looking for wild\n"
-	.string "POKéMON.$"
+	.string "Vine hasta aquí buscando\n"
+	.string "POKéMON salvajes.$"
 
 RockTunnel_1F_Text_DanaDefeat::
-	.string "I'm out of POKéMON!$"
+	.string "¡Me quedé sin POKéMON!$"
 
 RockTunnel_1F_Text_DanaPostBattle::
 	.string "Parecías tierno e inofensivo.\n"
 	.string "¡Qué equivocada estaba!$"
 
 RockTunnel_1F_Text_ArianaIntro::
-	.string "You have POKéMON!\n"
+	.string "¡Tú tienes POKéMON!\n"
 	.string "¡Empecemos!$"
 
 RockTunnel_1F_Text_ArianaDefeat::
@@ -122,9 +122,9 @@ RockTunnel_1F_Text_ArianaDefeat::
 
 RockTunnel_1F_Text_ArianaPostBattle::
 	.string "¡Uff!\n"
-	.string "I'm all sweaty now.$"
+	.string "Ahora estoy todo sudado.$"
 
 RockTunnel_1F_Text_RouteSign::
-	.string "ROCK TUNNEL\n"
+	.string "TÚNEL ROCA\n"
 	.string "CIUDAD CEREZO - PUEBLO LAVANDA$"
 

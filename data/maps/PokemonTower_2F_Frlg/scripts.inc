@@ -101,9 +101,9 @@ PokemonTower_2F_Movement_RivalExitDown::
 	step_end
 
 PokemonTower_2F_Text_RivalIntro::
-	.string "{RIVAL}: Hey, {PLAYER}!\n"
+	.string "{RIVAL}: ¡Eh, {PLAYER}!\n"
 	.string "¿Qué te trae aquí?\l"
-	.string "Is your POKéMON dead?\p"
+	.string "¿Tu POKéMON está muerto?\p"
 	.string "¡Oye! ¡Está vivo!\p"
 	.string "¡Al menos puedo dejarlos K.O.!\n"
 	.string "¡Vamos!$"
@@ -111,10 +111,10 @@ PokemonTower_2F_Text_RivalIntro::
 PokemonTower_2F_Text_RivalDefeat::
 	.string "¿Qué?\n"
 	.string "¡Maldito!\p"
-	.string "I took it easy on you, too!$"
+	.string "¡Yo también te lo puse fácil!$"
 
 PokemonTower_2F_Text_RivalPostBattle::
-	.string "How's your POKéDEX coming?\n"
+	.string "¿Cómo va tu POKéDEX?\n"
 	.string "¡Atrapé un CUBONE!\p"
 	.string "No encuentro al MAROWAK grande.\n"
 	.string "¿Dónde podrían estar?\p"
@@ -122,11 +122,11 @@ PokemonTower_2F_Text_RivalPostBattle::
 	.string "Bueno, mejor me voy.\n"
 	.string "Tengo mucho por lograr,\l"
 	.string "a diferencia de ti.\p"
-	.string "Smell ya later!$"
+	.string "¡Hasta luego!$"
 
 PokemonTower_2F_Text_SilphScopeCouldUnmaskGhosts::
 	.string "Ni nosotros pudimos identificar\n"
-	.string "wayward ghosts.\p"
+	.string "a los fantasmas.\p"
 	.string "El SCOPE SILPH podría\n"
 	.string "desenmascararlos.$"
 

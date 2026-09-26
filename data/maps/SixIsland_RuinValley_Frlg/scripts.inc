@@ -74,10 +74,10 @@ SixIsland_RuinValley_Text_StanlyDefeat::
 SixIsland_RuinValley_Text_StanlyPostBattle::
 	.string "Te sugiero que tú también,\n"
 	.string "pienses una vez al día en los\l"
-	.string "mysteries of our world once a day.$"
+	.string "misterios que guarda nuestro mundo.$"
 
 SixIsland_RuinValley_Text_FosterIntro::
-	.string "I'm curious, what compelled you to\n"
+	.string "Soy curioso, ¿qué te impulsó a\n"
 	.string "¿vienes?$"
 
 SixIsland_RuinValley_Text_FosterDefeat::
@@ -97,7 +97,7 @@ SixIsland_RuinValley_Text_LarryIntro::
 	.string "con las ruinas de aquí.$"
 
 SixIsland_RuinValley_Text_LarryDefeat::
-	.string "Oh, interesting.$"
+	.string "Oh, interesante.$"
 
 SixIsland_RuinValley_Text_LarryPostBattle::
 	.string "Aquellas ruinas de allá...\p"

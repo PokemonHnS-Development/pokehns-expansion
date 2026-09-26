@@ -13,10 +13,10 @@ RocketHideout_B3F_EventScript_Grunt2::
 
 RocketHideout_B3F_Text_Grunt1Intro::
 	.string "Deja de entrometerte en el\n"
-	.string "affairs or else!$"
+	.string "asuntos, ¡o si no!$"
 
 RocketHideout_B3F_Text_Grunt1Defeat::
-	.string "Oof!\n"
+	.string "¡Uf!\n"
 	.string "¡Me derrotaron!$"
 
 RocketHideout_B3F_Text_Grunt1PostBattle::

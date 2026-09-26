@@ -28,19 +28,19 @@ FuchsiaCity_PokemonCenter_1F_EventScript_Youngster::
 
 FuchsiaCity_PokemonCenter_1F_Text_CantBecomeGoodTrainerWithOneMon::
 	.string "No puedes ser un buen\n"
-	.string "with just one strong POKéMON.\p"
-	.string "But raising many POKéMON evenly\n"
-	.string "ENTRENADOR sin esfuerzo.$"
+	.string "ENTRENADOR con un solo POKéMON fuerte.\p"
+	.string "Pero criar muchos POKéMON parejo\n"
+	.string "no es tarea fácil.$"
 
 FuchsiaCity_PokemonCenter_1F_Text_PokemonLeagueWestOfViridian::
-	.string "Hay un sendero angosto al oeste\n"
-	.string "VIRIDIAN CITY.\p"
-	.string "It goes to the POKéMON LEAGUE HQ.\n"
-	.string "The HQ governs all TRAINERS.$"
+	.string "Hay un sendero angosto al oeste de\n"
+	.string "CIUDAD VERDE.\p"
+	.string "Lleva a la SEDE de la LIGA POKéMON.\n"
+	.string "La SEDE rige a los ENTRENADORES.$"
 
 FuchsiaCity_PokemonCenter_1F_Text_VisitSafariZoneForPokedex::
-	.string "If you're working on a POKéDEX,\n"
+	.string "Si estás completando una POKéDEX,\n"
 	.string "visita la ZONA SAFARI.\p"
-	.string "All sorts of rare POKéMON breed\n"
-	.string "raras allí.$"
+	.string "Muchos POKéMON raros se crían\n"
+	.string "allí.$"
 

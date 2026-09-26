@@ -266,7 +266,7 @@ SootopolisCity_Gym_1F_Text_GoGetFortreeBadge:
 	.string "MEDALLA del GIMNASIO de FORTREE.$"
 
 SootopolisCity_Gym_1F_Text_GymStatue:
-	.string "SOOTOPOLIS CITY POKéMON GYM$"
+	.string "GIMNASIO POKéMON DE CIUDAD SOOTOPOLIS$"
 
 SootopolisCity_Gym_1F_Text_GymStatueCertified:
 	.string "GIMNASIO POKéMON DE CIUDAD SOOTOPOLIS\p"

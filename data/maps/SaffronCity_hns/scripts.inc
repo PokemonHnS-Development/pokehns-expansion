@@ -95,7 +95,7 @@ SaffronCity_EventScript_Elli::
 	end
 
 SaffronCity_Text_Elli:
-	.string "I love VULPIX! :D$"
+	.string "¡Me encanta VULPIX! :D$"
 
 SaffronCity_Text_Lass1:
 	.string "Aquí vive una niña experta\nen imitar a la gente.\pIncluso imita a las personas\ncon las que conversa. Es confuso.$"

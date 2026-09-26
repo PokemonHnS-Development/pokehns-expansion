@@ -424,7 +424,7 @@ BattleFrontier_Lounge7_Text_TeachMoveToWhichMon_hns:
 
 BattleFrontier_Lounge7_Text_HaventGotEnoughPoints_hns:
 	.string "Pero qué...\n"
-	.string "You haven't got enough Battle Points!$"
+	.string "¡No tienes suficientes Puntos de Batalla!$"
 
 BattleFrontier_Lounge7_Text_IllTakeBattlePoints_hns:
 	.string "¿Ves lo hábil que soy ahora?\n"

@@ -264,7 +264,7 @@ MeteorFalls_1F_1R_Text_ArchieSeenYouBefore:
 	.string "Ah, así que te llamas {PLAYER}.\p"
 	.string "En ese momento, pensé que eras un\n"
 	.string "matón del TEAM MAGMA.\p"
-	.string "Humph...\n"
+	.string "Buf...\n"
 	.string "Eres un chico muy raro.\p"
 	.string "TEAM MAGMA es un grupo peligroso de\n"
 	.string "fanáticos totales.\p"

@@ -680,7 +680,7 @@ Route111_Text_MirageTowerClearlyVisible:
 	.string "La torre de arena que llamaban\n"
 	.string "¡se ve claramente!\p"
 	.string "Pero parece tan frágil...\n"
-	.string "It could crumble away anytime...\p"
+	.string "Podría derrumbarse en cualquier momento...\p"
 	.string "Quiero entrar, pero no puedo\n"
 	.string "armarme de valor...$"
 

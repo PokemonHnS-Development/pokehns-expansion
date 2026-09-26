@@ -86,15 +86,15 @@ Route11_EastEntrance_2F_EventScript_GetAideRequestInfo::
 
 Route11_EastEntrance_2F_Text_GiveItemfinderIfCaught30::
 	.string "¡Hola! ¿Me recuerdas?\n"
-	.string "I'm one of PROF. OAK's AIDES.\p"
-	.string "If your POKéDEX has complete data\n"
-	.string "on {STR_VAR_1} species, I'm supposed to\l"
+	.string "Soy uno de los AYUDANTES del PROF. OAK.\p"
+	.string "Si tu POKéDEX tiene datos completos\n"
+	.string "de {STR_VAR_1} especies, debo darte\l"
 	.string "una recompensa.\p"
-	.string "PROF. OAK entrusted me with the\n"
+	.string "El PROF. OAK me confió el\n"
 	.string "{STR_VAR_2} para ti.\p"
 	.string "Bueno, {PLAYER}, déjame preguntarte.\p"
 	.string "¿Has reunido datos de al menos\n"
-	.string "{STR_VAR_1} kinds of POKéMON?$"
+	.string "¿las {STR_VAR_1} clases de POKéMON?$"
 
 Route11_EastEntrance_2F_Text_GreatHereYouGo::
 	.string "¡Genial! Has atrapado o tenido\n"
@@ -121,7 +121,7 @@ Route11_EastEntrance_2F_Text_ExplainItemfinder::
 Route11_EastEntrance_2F_Text_BigMonAsleepOnRoad::
 	.string "Veamos qué tienen los\n"
 	.string "prismáticos...\p"
-	.string "A big POKéMON is asleep on a road!$"
+	.string "¡Un gran POKéMON duerme en el camino!$"
 
 Route11_EastEntrance_2F_Text_WhatABreathtakingView::
 	.string "Veamos qué tienen los\n"

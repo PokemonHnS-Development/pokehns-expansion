@@ -193,5 +193,5 @@ Route123_Text_RouteSignMtPyre:
 	.string "{UP_ARROW} MONTE PYRE\n“Prohibido a los débiles de corazón.”$"
 
 Route123_Text_BerryMastersHouse:
-	.string "BERRY MASTER'S HOUSE$"
+	.string "CASA DEL MAESTRO BAYA$"
 

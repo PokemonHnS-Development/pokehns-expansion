@@ -82,5 +82,5 @@ Route11_Text_PsychicFidelAfterBattle:
 	.string "en tus POKéMON.$"
 
 Route11_Text_Sign:
-	.string "ROUTE 11$"
+	.string "RUTA 11$"
 

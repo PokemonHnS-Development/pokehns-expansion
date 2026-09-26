@@ -252,7 +252,7 @@ NewMauville_Inside_Text_GeneratorRadiatingHeat:
 	.string "lo antes posible.$"
 
 NewMauville_Inside_Text_GeneratorQuietedDown:
-	.string "The generator quieted down.$"
+	.string "El generador se ha calmado.$"
 
 NewMauville_Inside_Text_SteppedOnSwitchGeneratorStopped:
 	.string "{PLAYER} pisó el interruptor.\p"

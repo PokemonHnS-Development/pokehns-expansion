@@ -520,7 +520,7 @@ BattleFrontier_BattleTowerBattleRoom_Text_AnabelTalentShallBeRecognized:
 	.string "Tu talento será reconocido.$"
 
 BattleFrontier_BattleTowerBattleRoom_Text_ReceivedAbilitySymbol:
-	.string "El Símbolo de Habilidad estaba en\n"
+	.string "El Símbolo de Habilidad estaba\n"
 	.string "en el FRONTIER PASS!$"
 
 BattleFrontier_BattleTowerBattleRoom_Text_UntilNextTime:

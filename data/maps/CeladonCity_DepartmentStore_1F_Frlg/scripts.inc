@@ -22,11 +22,11 @@ CeladonCity_DepartmentStore_1F_Text_WelcomeToDeptStore::
 CeladonCity_DepartmentStore_1F_Text_FloorDescriptions::
 	.string "1F: MOSTRADOR DE SERVICIOS\p"
 	.string "2F: MERCADO PARA ENTRENADORES\p"
-	.string "3F: TV GAME SHOP\p"
-	.string "4F: WISE MAN GIFTS\p"
-	.string "5F: DRUGSTORE\p"
-	.string "ROOFTOP SQUARE: VENDING MACHINES$"
+	.string "3F: TIENDA DE JUEGOS\p"
+	.string "4F: REGALOS DEL SABIO\p"
+	.string "5F: FARMACIA\p"
+	.string "AZOTEA: MÁQUINAS EXPENDEDORAS$"
 
 CeladonCity_DepartmentStore_1F_Text_ServiceCounter::
-	.string "1F: SERVICE COUNTER$"
+	.string "1F: MOSTRADOR DE SERVICIOS$"
 

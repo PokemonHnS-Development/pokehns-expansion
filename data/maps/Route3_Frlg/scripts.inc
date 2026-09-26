@@ -23,12 +23,12 @@ Route3_Text_ColtonDefeat::
 	.string "¡Me venciste otra vez!$"
 
 Route3_Text_ColtonPostBattle::
-	.string "There are other kinds of POKéMON\n"
+	.string "Hay otros tipos de POKéMON\n"
 	.string "que los que hay en bosques.$"
 
 Route3_Text_BenIntro::
-	.string "Hi!\n"
-	.string "I like shorts!\p"
+	.string "¡Hola!\n"
+	.string "¡Me gustan los cortos!\p"
 	.string "Son muy cómodos y\n"
 	.string "fáciles de poner!$"
 
@@ -36,8 +36,8 @@ Route3_Text_BenDefeat::
 	.string "¡No lo puedo creer!$"
 
 Route3_Text_BenPostBattle::
-	.string "Are you using a POKéMON CENTER's\n"
-	.string "PC for storing your POKéMON?\p"
+	.string "¿Usas el PC de un CENTRO POKéMON\n"
+	.string "para guardar tus POKéMON?\p"
 	.string "Cada CAJA puede contener hasta\n"
 	.string "30 POKéMON.$"
 
@@ -57,11 +57,11 @@ Route3_Text_GregIntro::
 	.string "¡Vamos a luchar ahora mismo!$"
 
 Route3_Text_GregDefeat::
-	.string "If I had new POKéMON, I would've\n"
+	.string "¡Si tuviera POKéMON nuevos,\n"
 	.string "won!$"
 
 Route3_Text_GregPostBattle::
-	.string "If a POKéMON BOX on the PC gets\n"
+	.string "Si una CAJA de POKéMON del PC se\n"
 	.string "llena, cambia a otra CAJA.$"
 
 Route3_Text_SallyIntro::
@@ -89,13 +89,13 @@ Route3_Text_CalvinPostBattle::
 
 Route3_Text_JamesIntro::
 	.string "Lucharé contra ti con el POKéMON\n"
-	.string "I just caught.$"
+	.string "que acabo de atrapar.$"
 
 Route3_Text_JamesDefeat::
-	.string "Done like dinner!$"
+	.string "¡Pan comido!$"
 
 Route3_Text_JamesPostBattle::
-	.string "Trained POKéMON are stronger than\n"
+	.string "Los POKéMON entrenados son más\n"
 	.string "los salvajes.$"
 
 Route3_Text_RobinIntro::
@@ -107,9 +107,9 @@ Route3_Text_RobinDefeat::
 
 Route3_Text_RobinPostBattle::
 	.string "La RUTA 4 está al pie del\n"
-	.string "MT. MOON.$"
+	.string "MONTE LUNA.$"
 
 Route3_Text_RouteSign::
-	.string "ROUTE 3\n"
-	.string "MT. MOON AHEAD$"
+	.string "RUTA 3\n"
+	.string "MONTE LUNA ADELANTE$"
 

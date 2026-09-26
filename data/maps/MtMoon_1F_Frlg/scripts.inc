@@ -46,13 +46,13 @@ MtMoon_1F_EventScript_Robby::
 	end
 
 MtMoon_1F_Text_MarcosIntro::
-	.string "WHOA!\n"
+	.string "¡VAYA!\n"
 	.string "¡Me sorprendiste!\l"
 	.string "...¡Ah, eres solo un niño!$"
 
 MtMoon_1F_Text_MarcosDefeat::
 	.string "¡Guau!\n"
-	.string "Shocked again!$"
+	.string "¡Sorprendido otra vez!$"
 
 MtMoon_1F_Text_MarcosPostBattle::
 	.string "Chicos como tú no deberían\n"
@@ -63,7 +63,7 @@ MtMoon_1F_Text_JoshIntro::
 	.string "las pinturas?$"
 
 MtMoon_1F_Text_JoshDefeat::
-	.string "Losing stinks!\n"
+	.string "¡Perder apesta!\n"
 	.string "Qué poco genial.$"
 
 MtMoon_1F_Text_JoshPostBattle::
@@ -72,7 +72,7 @@ MtMoon_1F_Text_JoshPostBattle::
 
 MtMoon_1F_Text_MiriamIntro::
 	.string "¡Guau! Es mucho más grande aquí\n"
-	.string "I thought!$"
+	.string "que pensaba!$"
 
 MtMoon_1F_Text_MiriamDefeat::
 	.string "Oh!\n"
@@ -87,10 +87,10 @@ MtMoon_1F_Text_JovanIntro::
 	.string "¡No me asustes así!$"
 
 MtMoon_1F_Text_JovanDefeat::
-	.string "My POKéMON won't do!$"
+	.string "¡Mis POKéMON no sirven!$"
 
 MtMoon_1F_Text_JovanPostBattle::
-	.string "I have to find stronger POKéMON.\n"
+	.string "Debo hallar POKéMON más fuertes.\n"
 	.string "¿Dónde estarán?$"
 
 MtMoon_1F_Text_IrisIntro::
@@ -121,7 +121,7 @@ MtMoon_1F_Text_RobbyIntro::
 	.string "para llegar a CIUDAD CELESTE.$"
 
 MtMoon_1F_Text_RobbyDefeat::
-	.string "I lost.$"
+	.string "Perdí.$"
 
 MtMoon_1F_Text_RobbyPostBattle::
 	.string "¡ZUBAT es fuerte!\n"
@@ -129,7 +129,7 @@ MtMoon_1F_Text_RobbyPostBattle::
 	.string "poder contar con él.$"
 
 MtMoon_1F_Text_ZubatIsABloodsucker::
-	.string "Beware!\n"
+	.string "¡Cuidado!\n"
 	.string "¡ZUBAT es un chupasangre!$"
 
 MtMoon_1F_Text_BrockHelpsExcavateFossils::

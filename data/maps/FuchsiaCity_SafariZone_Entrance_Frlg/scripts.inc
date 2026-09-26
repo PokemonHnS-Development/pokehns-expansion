@@ -218,21 +218,21 @@ FuchsiaCity_SafariZone_Entrance_Text_PlaySafariGameFor500::
 FuchsiaCity_SafariZone_Entrance_Text_ThatllBe500WeOnlyUseSpecialBalls::
 	.string "¡Serán ¥500, por favor!\p"
 	.string "Solo usamos un tipo especial de \n"
-	.string "POKé BALLS here.$"
+	.string "POKé BALLS aquí.$"
 
 FuchsiaCity_SafariZone_Entrance_Text_PlayerReceived30SafariBalls::
-	.string "{PLAYER} received 30 SAFARI BALLS\n"
+	.string "{PLAYER} recibió 30 SAFARI BALLS\n"
 	.string "del empleado.$"
 
 FuchsiaCity_SafariZone_Entrance_Text_CallYouOnPAWhenYouRunOut::
 	.string "Te avisaremos por altavoz cuando\n"
 	.string "run out of time or SAFARI BALLS.\p"
 	.string "Bueno, te deseo lo mejor.\n"
-	.string "luck!$"
+	.string "¡mucha suerte!$"
 
 FuchsiaCity_SafariZone_Entrance_Text_OkayPleaseComeAgain::
 	.string "Está bien.\n"
-	.string "Please come again!$"
+	.string "¡Vuelve pronto!$"
 
 FuchsiaCity_SafariZone_Entrance_Text_OopsNotEnoughMoney::
 	.string "¡Ups!\n"
@@ -243,15 +243,15 @@ FuchsiaCity_SafariZone_Entrance_Text_GoingToLeaveSafariZoneEarly::
 	.string "SAFARI ZONE early?$"
 
 FuchsiaCity_SafariZone_Entrance_Text_PleaseReturnSafariBalls::
-	.string "Please return any SAFARI BALLS\n"
-	.string "quizá hayas dejado.$"
+	.string "Devuelve las SAFARI BALLS\n"
+	.string "que quizá tengas.$"
 
 FuchsiaCity_SafariZone_Entrance_Text_GoodLuck::
 	.string "¡Buena suerte!$"
 
 FuchsiaCity_SafariZone_Entrance_Text_CatchFairShareComeAgain::
 	.string "¿Atrapaste tu parte justa?\n"
-	.string "Come again!$"
+	.string "¡Vuelve!$"
 
 FuchsiaCity_SafariZone_Entrance_Text_FirstTimeAtSafariZone::
 	.string "¡Hola! ¿Es tu primera vez en\n"
@@ -261,15 +261,15 @@ FuchsiaCity_SafariZone_Entrance_Text_ExplainSafariZone::
 	.string "La ZONA SAFARI en realidad tiene\n"
 	.string "cuatro zonas.\p"
 	.string "Cada zona tiene diferentes tipos\n"
-	.string "POKéMON, even some rare ones.\p"
+	.string "POKéMON, incluso algunos raros.\p"
 	.string "Usa las SAFARI BALLS provistas\n"
 	.string "para atraparlos.\p"
 	.string "También puedes lanzar CEBOS o ROCAS\n"
 	.string "además de las SAFARI BALLS.\p"
-	.string "If you throw BAIT, the POKéMON\n"
+	.string "Si lanzas CEBOS, el POKéMON\n"
 	.string "será menos probable que huya, pero\l"
 	.string "será más difícil de atrapar.\p"
-	.string "If you throw ROCKS, the POKéMON\n"
+	.string "Si lanzas ROCAS, el POKéMON\n"
 	.string "será más probable que huya, pero\l"
 	.string "más fácil de atrapar.\p"
 	.string "Cuando se te acabe el tiempo o las\n"

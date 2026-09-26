@@ -46,10 +46,10 @@ Route9_EventScript_Item_Flash_Cannon::
     end
 
 Route9_Text_CamperDeanSeen:
-	.string "I came to explore ROCK TUNNEL.$"
+	.string "Vine a explorar el TÚNEL ROCA.$"
 
 Route9_Text_CamperDeanBeaten:
-	.string "Whoa! Danger, man.$"
+	.string "¡Vaya! Peligro, amigo.$"
 
 Route9_Text_CamperDeanAfter:
 	.string "Mis POKéMON se hirieron incluso\n"
@@ -84,7 +84,7 @@ Route9_Text_PicnickerEdnaSeen:
 	.string "tirada.$"
 
 Route9_Text_PicnickerEdnaBeaten:
-	.string "Ohh... I lost...$"
+	.string "Uy... perdí...$"
 
 Route9_Text_PicnickerEdnaAfter:
 	.string "Ahorrar energía es importante,\n"
@@ -97,7 +97,7 @@ Route9_Text_HikerTimSeen:
 	.string "MT.SILVER está en JOHTO, ¿verdad?$"
 
 Route9_Text_HikerTimBeaten:
-	.string "I was too busy singing...$"
+	.string "Estaba muy ocupado cantando...$"
 
 Route9_Text_HikerTimAfter:
 	.string "Las batallas son de concentración.$"

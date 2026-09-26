@@ -43,4 +43,4 @@ OlivineCity_PortOutside_Text_PortFisherman1:
 	.string "¡ahora viaja casi todo el tiempo!$"
 
 OlivineCity_PortOutside_Text_Fisherman2:
-	.string "Aw yeah, I'm fishin'.$"
+	.string "Ah, sí, estoy pescando.$"

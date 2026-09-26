@@ -52,15 +52,15 @@ Route15_WestEntrance_2F_EventScript_GetAideRequestInfo::
 
 Route15_WestEntrance_2F_Text_GiveItemIfCaughtEnough::
 	.string "¡Hola! ¿Te acuerdas de mí?\n"
-	.string "I'm one of PROF. OAK's AIDES.\p"
-	.string "If your POKéDEX has complete data\n"
+	.string "Soy AYUDANTE del PROF. OAK.\p"
+	.string "Si tu POKéDEX tiene datos completos\n"
 	.string "según la especie {STR_VAR_1}, se\l"
 	.string "supone que te dé una recompensa.\p"
 	.string "El PROF. OAK me encargó\n"
 	.string "el {STR_VAR_2} para ti.\p"
 	.string "Así que, {PLAYER}, déjame preguntarte.\p"
 	.string "¿Ya reuniste datos de al menos\n"
-	.string "{STR_VAR_1} kinds of POKéMON?$"
+	.string "¿{STR_VAR_1} tipos de POKéMON?$"
 
 Route15_WestEntrance_2F_Text_GreatHereYouGo::
 	.string "¡Genial! Has capturado o tenido\n"
@@ -74,8 +74,8 @@ Route15_WestEntrance_2F_Text_ReceivedItemFromAide::
 
 Route15_WestEntrance_2F_Text_ExplainExpShare::
 	.string "El Reparto Exp. es un objeto que\n"
-	.string "by a POKéMON.\p"
-	.string "The POKéMON will receive a share\n"
+	.string "por un POKéMON.\p"
+	.string "El POKéMON recibirá una parte\n"
 	.string "se lleva y otorga Puntos de Exp.\l"
 	.string "sin combatir.$"
 

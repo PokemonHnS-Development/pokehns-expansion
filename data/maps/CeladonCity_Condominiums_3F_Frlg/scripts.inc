@@ -61,7 +61,7 @@ CeladonCity_Condominiums_3F_Text_ImTheGraphicArtist::
 
 CeladonCity_Condominiums_3F_Text_IWroteTheStory::
 	.string "¡Escribí la historia!\n"
-	.string "Isn't ERIKA cute?\p"
+	.string "¿No es tierna ERIKA?\p"
 	.string "¡Misty también me cae muy bien!\n"
 	.string "Oh, y SABRINA, ¡me gusta!$"
 
@@ -69,12 +69,12 @@ CeladonCity_Condominiums_3F_Text_ImGameDesignerShowMeFinishedPokedex::
 	.string "¿De verdad?\p"
 	.string "¡Soy el diseñador del juego!\p"
 	.string "Llenar la POKéDEX es difícil,\n"
-	.string "but don't quit!\p"
+	.string "¡pero no te rindas!\p"
 	.string "Cuando termines, ven a decírmelo!$"
 
 CeladonCity_Condominiums_3F_Text_CompletedPokedexCongratulations::
-	.string "Wow! Excellent!\n"
-	.string "You completed your POKéDEX!\l"
+	.string "¡Guau! ¡Excelente!\n"
+	.string "¡Completaste tu POKéDEX!\l"
 	.string "¡Felicidades!\l"
 	.string "...$"
 
@@ -84,7 +84,7 @@ CeladonCity_Condominiums_3F_Text_ItsTheGameProgram::
 
 CeladonCity_Condominiums_3F_Text_SomeonesPlayingGame::
 	.string "Alguien está jugando un juego en lugar de\n"
-	.string "working!$"
+	.string "¡trabajar!$"
 
 CeladonCity_Condominiums_3F_Text_ItsScriptBetterNotLookAtEnding::
 	.string "¡Es el guion!\n"

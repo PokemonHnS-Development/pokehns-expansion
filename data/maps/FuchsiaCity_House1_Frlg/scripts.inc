@@ -18,12 +18,12 @@ FuchsiaCity_House1_EventScript_LittleBoy::
 	end
 
 FuchsiaCity_House1_Text_WardenIsOldHasFalseTeeth::
-	.string "El GUARDA de la ZONA SAFARI\nes anciano,"
-	.string "pero sigue muy activo.\p"
-	.string "All his teeth are false, though.$"
+	.string "El GUARDA de la ZONA SAFARI es\n"
+	.string "anciano, pero sigue muy activo.\p"
+	.string "aunque todos sus dientes son falsos.$"
 
 FuchsiaCity_House1_Text_BillIsMyGrandson::
-	.string "Hmm?\n"
+	.string "¿Mmm?\n"
 	.string "¿Conoces a BILL?\p"
 	.string "¡Es mi nieto!\p"
 	.string "Siempre le gustó coleccionar cosas,\n"

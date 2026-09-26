@@ -159,7 +159,7 @@ Route15_Text_SchoolboyJohnnyAfterBattle:
 	.string "tomar un descanso.$"
 
 Route15_Text_SchoolboyBillySeen:
-	.string "My favorite class is Gym!$"
+	.string "¡Mi clase favorita es Gimnasio!$"
 
 Route15_Text_SchoolboyBillyBeaten:
 	.string "¡Oh, no! ¿Cómo pude perder?$"

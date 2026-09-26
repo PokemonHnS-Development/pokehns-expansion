@@ -161,7 +161,7 @@ NationalPark_BugContest_Text_Trash:
 	.string "Nada por aquí.$"
 
 NationlParkBugContest_Text_EnjoyTheContest:
-	.string "ATTENDANT: Enjoy the Contest!$"
+	.string "ASISTENTE: ¡Disfruta el Concurso!$"
 
 NationalParkBugContest_Text_Attendant:
 	.string "ASISTENTE: ¿Quieres terminar\n"

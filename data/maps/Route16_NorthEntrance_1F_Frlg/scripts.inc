@@ -123,9 +123,9 @@ Route16_NorthEntrance_1F_Text_CyclingRoadIsDownhillCourse::
 
 Route16_NorthEntrance_1F_Text_ExcuseMeWaitUp::
 	.string "¡Disculpa!\n"
-	.string "Wait up, please!$"
+	.string "¡Espérame, por favor!$"
 
 Route16_NorthEntrance_1F_Text_HowdYouGetInGoodEffort::
 	.string "¿Cómo entraste?\n"
-	.string "Good effort!$"
+	.string "¡Buen intento!$"
 

@@ -110,10 +110,10 @@ NewSinjoh_MilkMan_NoSale:
 	.string "Tiene lo que el mundo merece.$"
 
 NewSinjoh_MilkMan_Text_WouldYouLikeAnother:
-	.string "How bout another?$"
+	.string "¿Qué tal otra?$"
 
 NewSinjoh_Text_GotMilk:
-	.string "{PLAYER} got MOOMOO MILK.$"
+	.string "{PLAYER} obtuvo LECHE MOOMOO.$"
 
 MilkMan_EventScript_Battle:: 
     msgbox MilkMan_Battle_text

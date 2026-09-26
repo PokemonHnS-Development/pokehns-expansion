@@ -34,7 +34,7 @@ FuchsiaCity_House2_EventScript_NoRoomForGoodRod::
 FuchsiaCity_House2_Text_DoYouLikeToFish::
 	.string "Soy el hermano mayor del GURÚ\n"
 	.string "EXPERTO EN PESCA.\p"
-	.string "I simply looove fishing!\n"
+	.string "¡Simplemente me encanta pescar!\n"
 	.string "No puedo soportar ir sin él.\p"
 	.string "Dime, te gusta pescar?$"
 
@@ -53,7 +53,7 @@ FuchsiaCity_House2_Text_GoodRodCanCatchBetterMons::
 	.string "Una VIEJA CAÑA mala solo\n"
 	.string "atrapaba MAGIKARP, ¿verdad?\p"
 	.string "Pero con una CAÑA BUENA puedes\n"
-	.string "catch much better POKéMON.$"
+	.string "atrapar POKéMON mucho mejores.$"
 
 FuchsiaCity_House2_Text_OhThatsDisappointing::
 	.string "Oh...\n"

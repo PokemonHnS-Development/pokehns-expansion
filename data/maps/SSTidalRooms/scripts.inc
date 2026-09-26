@@ -122,7 +122,7 @@ SSTidalRooms_Text_LeaIntro:
 	.string "¡Te mostraremos nuestro poder amoroso!$"
 
 SSTidalRooms_Text_LeaDefeat:
-	.string "LEA: Oh, boo!$"
+	.string "LEA: ¡Oh, qué pena!$"
 
 SSTidalRooms_Text_LeaPostBattle:
 	.string "LEA: ¡No puedo creerlo!\n"

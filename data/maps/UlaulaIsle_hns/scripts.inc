@@ -630,7 +630,7 @@ Alola_Ulaula_Text_TutorMove_BrutalSwing:
 	.string "GOLPE BRUTAL$"
 
 Alola_Ulaula_Text_TutorMove_Bulldoze:
-	.string "BULLDOZE$"
+	.string "TERRATEMBLOR$"
 
 Alola_Ulaula_Text_TutorMove_Confide:
 	.string "CONFIDENZA$"
@@ -654,7 +654,7 @@ Alola_Ulaula_Text_TutorMove_Infestation:
 	.string "INFESTACIÓN$"
 
 Alola_Ulaula_Text_TutorMove_LeechLife:
-	.string "LEECH LIFE$"
+	.string "CHUPAVIDAS$"
 
 Alola_Ulaula_Text_TutorMove_LowSweep:
 	.string "BARRIDO BAJO$"
@@ -699,5 +699,5 @@ Alola_Ulaula_Text_TutorMove_WorkUp:
 	.string "MAXIMIZAR$"
 
 Alola_Ulaula_Text_TutorMove_Cancel:
-	.string "CANCEL$"
+	.string "CANCELAR$"
 

@@ -22,7 +22,7 @@ Route4_Text_TrippedOverGeodude::
 
 Route4_Text_CrissyIntro::
 	.string "Vine al MONTE LUNA en busca\n"
-	.string "mushroom POKéMON.$"
+	.string "de POKéMON hongo.$"
 
 Route4_Text_CrissyDefeat::
 	.string "¡Con lo que me costó atraparlos!$"
@@ -34,11 +34,11 @@ Route4_Text_CrissyPostBattle::
 
 Route4_Text_MtMoonEntrance::
 	.string "MT. MOON\n"
-	.string "Tunnel Entrance$"
+	.string "Entrada del túnel$"
 
 Route4_Text_RouteSign::
-	.string "ROUTE 4\n"
-	.string "MT. MOON - CERULEAN CITY$"
+	.string "RUTA 4\n"
+	.string "MT. MOON - CIUDAD CERULEAN$"
 
 Text_MegaPunchTeach::
 	.string "¡Un puñetazo rugiente!\p"
@@ -47,7 +47,7 @@ Text_MegaPunchTeach::
 	.string "definitivo!\l"
 	.string "¿Aceptas, verdad?\p"
 	.string "¡Ahora!\n"
-	.string "Let me teach it to your POKéMON!$"
+	.string "¡Déjame enseñárselo a tu POKéMON!$"
 
 Text_MegaPunchDeclined::
 	.string "Volverás cuando entiendas\n"
@@ -55,11 +55,11 @@ Text_MegaPunchDeclined::
 
 Text_MegaPunchWhichMon::
 	.string "¡Bien!\n"
-	.string "Which POKéMON will learn it?$"
+	.string "¿Qué POKéMON lo aprenderá?$"
 
 Text_MegaPunchTaught::
 	.string "Ahora somos camaradas en el\n"
-	.string "punching!\p"
+	.string "arte del puñetazo!\p"
 	.string "Vete antes de que te vean\n"
 	.string "por el necio equivocado que entrena\l"
 	.string "solo su tonto patadón allá.$"
@@ -68,10 +68,10 @@ Text_MegaKickTeach::
 	.string "¡Patada de ferocidad brutal!\p"
 	.string "¡Lleno de poder destructivo!\p"
 	.string "Cuando llegues al fondo del asunto,\n"
-	.string "MEGA KICK is the ultimate attack!\l"
+	.string "¡MEGA PATADA es el ataque definitivo!\l"
 	.string "¿No crees?\p"
 	.string "¡Está bien!\n"
-	.string "I'll teach it to your POKéMON!$"
+	.string "¡Te lo enseñaré a tu POKéMON!$"
 
 Text_MegaKickDeclined::
 	.string "Volverás arrastrándote cuando\n"
@@ -79,13 +79,13 @@ Text_MegaKickDeclined::
 
 Text_MegaKickWhichMon::
 	.string "¡Muy bien!\n"
-	.string "Which POKéMON wants to learn it?$"
+	.string "¿Qué POKéMON quiere aprenderlo?$"
 
 Text_MegaKickTaught::
 	.string "Ahora somos almas gemelas en\n"
 	.string "¡de dar patadas!\p"
 	.string "Será mejor que corras antes de que\n"
-	.string "by the deluded nitwit who trains\l"
+	.string "por el necio que solo entrena\l"
 	.string "solo entrena puñetazos allá.$"
 
 Route4_Text_PeopleLikeAndRespectBrock::

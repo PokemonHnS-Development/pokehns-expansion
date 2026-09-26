@@ -31,14 +31,14 @@ FuchsiaCity_SafariZone_Office_Text_WardenIsVeryKnowledgeable::
 
 FuchsiaCity_SafariZone_Office_Text_CouldntUnderstandWarden::
 	.string "El GUARDIA SLOWPOKE entró, pero\n"
-	.string "I couldn't understand him.\p"
-	.string "I think he's got a speech problem!$"
+	.string "No pude entenderlo.\p"
+	.string "¡Creo que tiene un problema de habla!$"
 
 FuchsiaCity_SafariZone_Office_Text_PrizeInSafariZone::
 	.string "El GUARDIA SLOWPOKE está\n"
-	.string "promotion campaign right now.\p"
+	.string "una campaña promocional ahora.\p"
 	.string "Intenta llegar a la esquina más\n"
 	.string "lejana de la ZONA SAFARI.\p"
 	.string "Si lo logras, ganarás un\n"
-	.string "very convenient prize.$"
+	.string "un premio muy conveniente.$"
 

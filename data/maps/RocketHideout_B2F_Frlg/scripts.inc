@@ -11,10 +11,10 @@ RocketHideout_B2F_Text_GruntIntro::
 	.string "fantasmas con la SILPH SCOPE.$"
 
 RocketHideout_B2F_Text_GruntDefeat::
-	.string "I surrender!$"
+	.string "¡Me rindo!$"
 
 RocketHideout_B2F_Text_GruntPostBattle::
 	.string "El CUARTEL del EQUIPO ROCKET\n"
-	.string "underground floors.\p"
+	.string "tiene varios sótanos.\p"
 	.string "¿Crees que llegarás al JEFE?$"
 

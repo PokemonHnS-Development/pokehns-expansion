@@ -61,8 +61,8 @@ SootopolisCity_PokemonCenter_1F_Text_EveryoneTakenRefuge:
 SootopolisCity_PokemonCenter_1F_Text_AlwaysBeFriendsWithPokemon:
 	.string "Cuando sea, donde sea y lo que sea\n"
 	.string "pase, siempre seré amigo de\l"
-	.string "POKéMON planta.\p"
-	.string "Because it's fun to be with POKéMON!$"
+	.string "POKéMON.\p"
+	.string "¡Porque es divertido estar con POKéMON!$"
 
 SootopolisCity_PokemonCenter_1F_Text_ArentPokemonOurFriends:
 	.string "¿No son los POKéMON nuestros\namigos?\p¿Por qué se comportan así?$"

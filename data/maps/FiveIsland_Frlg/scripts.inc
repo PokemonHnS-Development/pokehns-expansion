@@ -19,18 +19,18 @@ FiveIsland_EventScript_Fisher::
 	end
 
 FiveIsland_Text_IslandSign::
-	.string "FIVE ISLAND\n"
-	.string "Chrono Island: Where Time Goes$"
+	.string "ISLA CINCO\n"
+	.string "Isla del Tiempo: Donde el tiempo pasa$"
 
 FiveIsland_Text_WeirdBuildingInMeadow::
 	.string "Oh, qué asco. Quería jugar en\n"
 	.string "la PRADERA.\p"
 	.string "Pero pusieron un edificio raro\n"
-	.string "on it, so I can't play there.$"
+	.string "encima, así que no puedo jugar ahí.$"
 
 FiveIsland_Text_BeenGettingBusierAroundHere::
 	.string "Se ha estado llenando más gente\n"
-	.string "these parts lately.\p"
+	.string "estas partes últimamente.\p"
 	.string "No he pescado muchos buenos\n"
-	.string "fish lately, either.$"
+	.string "peces últimamente, tampoco.$"
 

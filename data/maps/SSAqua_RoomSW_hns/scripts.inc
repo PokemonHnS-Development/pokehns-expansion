@@ -29,7 +29,7 @@ SSAqua_RoomSW_Text_GuitaristClydeSeen:
     .string "canciones en la RADIO de TRIGAL.$"
 
 SSAqua_RoomSW_Text_GuitaristClydeBeaten:
-    .string "Yowza! Total distortion!$"
+    .string "¡Uala! ¡Distorsión total!$"
 
 SSAqua_RoomSW_Text_GuitaristClydeAfterBattleMobile:
     .string "Iba a hacer mi debut en la\n"

@@ -141,14 +141,14 @@ FiveIsland_ResortGorgeous_House_EventScript_Butler::
 	end
 
 FiveIsland_ResortGorgeous_House_Text_PleaseHearMyWish::
-	.string "SELPHY: Oh?\n"
+	.string "SELPHY: ¿Oh?\n"
 	.string "¿Te conozco de algún lado?\p"
 	.string "Ah, pero eso no importa.\p"
-	.string "I am exquisitely bored.\n"
+	.string "Estoy exquisitamente aburrida.\n"
 	.string "Por favor, escucha mi deseo.$"
 
 FiveIsland_ResortGorgeous_House_Text_WishToSeeMonPlease::
-	.string "I wish to see a POKéMON.\n"
+	.string "Deseo ver un POKéMON.\n"
 	.string "Un encanto de {STR_VAR_1}.\p"
 	.string "Quiero ver uno ahora mismo.\n"
 	.string "Por favor, cumple mi deseo.$"
@@ -170,7 +170,7 @@ FiveIsland_ResortGorgeous_House_Text_MonYouCaughtForMeThankYou::
 	.string "¿Pasa algo?\p"
 	.string "Puedes retirarte.\p"
 	.string "... ...  ... ...  ... ...\n"
-	.string "Oh, fine. I understand now.\p"
+	.string "Oh, está bien. Ya entiendo.\p"
 	.string "SEBASTIAN!\n"
 	.string "¡Necesito que estés aquí ahora!$"
 
@@ -187,20 +187,20 @@ FiveIsland_ResortGorgeous_House_Text_ButlerIShallDoAsYouBid::
 
 FiveIsland_ResortGorgeous_House_Text_ButlerPleaseAcceptThisAsHerThanks::
 	.string "Mayordomo: Le agradezco de\n"
-	.string "pleasing Lady SELPHY.\p"
-	.string "corazón...$"
+	.string "corazón, SEÑORITA SELPHY.\p"
+	.string "Acepte esto en su nombre...$"
 
 FiveIsland_ResortGorgeous_House_Text_ButlerBagAppearsToBeFull::
 	.string "Mayordomo: Su BOLSA parece estar\n"
-	.string "unfortunately full.$"
+	.string "lamentablemente llena.$"
 
 FiveIsland_ResortGorgeous_House_Text_OhHowDisappointing::
 	.string "Oh...\n"
-	.string "How disappointing.$"
+	.string "Qué decepción.$"
 
 FiveIsland_ResortGorgeous_House_Text_SelphyWishYouBestOfLuck::
 	.string "SELPHY: Le deseo lo mejor de\n"
-	.string "luck.$"
+	.string "suerte.$"
 
 FiveIsland_ResortGorgeous_House_Text_LadySelphySmileHasBrillianceOfSun::
 	.string "Mayordomo: La sonrisa de SELPHY\n"

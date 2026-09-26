@@ -86,7 +86,7 @@ CeladonCity_House1_Text_TeacherCrunchCrunch:
 
 CeladonCity_House1_Text_TeacherNoCoinCase:
 	.string "Nadie aquí te dará una MONEDA\n"
-	.string "CASE. Busca en JOHTO.$"
+	.string "MONEDERO. Busca en JOHTO.$"
 
 CeladonCity_House1_Text_TeacherKeepEating:
 	.string "Crunch... Crunch...\p"

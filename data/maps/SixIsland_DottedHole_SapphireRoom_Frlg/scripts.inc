@@ -243,22 +243,22 @@ SixIsland_DottedHole_SapphireRoom_Text_FoundSapphire::
 
 SixIsland_DottedHole_SapphireRoom_Text_IWasRightInTailingYou::
 	.string "Fufu... Fufufufu...\n"
-	.string "I guessed right.\p"
+	.string "Acerté.\p"
 	.string "¡Tenía razón al seguirte!$"
 
 SixIsland_DottedHole_SapphireRoom_Text_SellToTeamRocketTellPassword::
 	.string "Sabía que había un ZAFIRO\n"
 	.string "aquí, ¡así que es mío!\p"
 	.string "Lo venderé al EQUIPO ROCKET\n"
-	.string "serious money.\p"
+	.string "por mucho dinero.\p"
 	.string "¡N-no me mires así!\p"
 	.string "Si lo quieres de vuelta, ¿por qué\n"
 	.string "no vas a buscarlo tras venderlo?\p"
 	.string "Te diré una de las\n"
 	.string "contraseñas del EQUIPO ROCKET\l"
-	.string "WAREHOUSE.\p"
+	.string "ALMACÉN.\p"
 	.string "La contraseña del ALMACÉN que sé es\n"
 	.string "“Sí, sí, CHANSEY.”\p"
-	.string "I'm done.\n"
+	.string "Ya está.\n"
 	.string "¡No pienses mal de mí!$"
 

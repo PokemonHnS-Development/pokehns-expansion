@@ -52,7 +52,7 @@ VioletCity_House1_Text_YouWontTradeMe:
 	.string "¿No quieres intercambiar? Ohh...$"
 
 VioletCity_House1_Text_After:
-	.string "Hi, how's my old ONIX doing?$"
+	.string "¿Qué tal mi viejo ONIX?$"
 
 VioletCity_House1_Text_PokefanM:
 	.string "Un POKéMON obtenido por intercambio\n"

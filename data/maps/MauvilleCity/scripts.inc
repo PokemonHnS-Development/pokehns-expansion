@@ -514,7 +514,7 @@ MauvilleCity_Text_WallyHereICome:
 MauvilleCity_Text_WallyDefeat:
 	.string "WALLY: ... ... ... ... ... ... ...\p"
 	.string "... ... ... ... ... ... ... ...\p"
-	.string "I lost...$"
+	.string "Perdí...$"
 
 MauvilleCity_Text_WallyIllGoBackToVerdanturf:
 	.string "WALLY: TÍO...\n"

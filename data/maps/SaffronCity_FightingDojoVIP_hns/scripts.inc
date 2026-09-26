@@ -707,7 +707,7 @@ SaffronCity_FightingDojoVIP_EvetScript_Statue::
 	end
 
 SaffronCity_FightingDojoVIP_Text_Statue:
-	.string "FIGHTING DOJO VIP LOUNGE$"
+	.string "SALÓN VIP DEL DOJO KARATE$"
 
 SaffronCity_FightingDojoVIP_Text_Falkner_Rematch:
 	.string "Felicidades por derrotar a\n"
@@ -766,7 +766,7 @@ SaffronCity_FightingDojoVIP_Text_Chuck_Rematch:
 	.string "¿Listo para ver quién es más fuerte?$"
 
 SaffronCity_FightingDojoVIP_Text_Chuck_RematchDefeat:
-	.string "Wha? Huh? I lost? Again?$"
+	.string "¿Qué? ¿Eh? ¿Perdí? ¿Otra vez?$"
 
 SaffronCity_FightingDojoVIP_Text_Jasmine_Rematch:
 	.string "...Felicidades, CAMPEÓN\n"

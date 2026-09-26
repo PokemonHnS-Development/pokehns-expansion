@@ -246,7 +246,7 @@ RadioTower1F_Text_GruntM3Seen:
     .string "¡Verán lo aterradores que somos!$"
 
 RadioTower1F_Text_GruntM3Beaten:
-    .string "Too strong! I'm sorry boss...$"
+	.string "¡Demasiado fuerte! Lo siento, jefe...$"
 
 RadioTower1F_Text_GruntM3After:
     .string "Eres demasiado fuerte.\p"

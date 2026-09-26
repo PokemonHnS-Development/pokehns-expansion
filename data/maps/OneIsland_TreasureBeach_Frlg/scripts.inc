@@ -15,11 +15,11 @@ OneIsland_TreasureBeach_Text_AmaraDefeat::
 
 OneIsland_TreasureBeach_Text_AmaraPostBattle::
 	.string "El mar está agradablemente cálido\n"
-	.string "parts.$"
+	.string "zonas.$"
 
 OneIsland_TreasureBeach_Text_GoodThingsWashUpOnBeach::
 	.string "Las cosas buenas llegan a esta\n"
 	.string "playa por la corriente marina.\p"
 	.string "Por eso vengo a menudo aquí\n"
-	.string "some beachcombing.$"
+	.string "a recoger tesoros.$"
 

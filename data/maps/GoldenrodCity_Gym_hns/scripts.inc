@@ -187,7 +187,7 @@ GoldenrodCity_Gym_Text_LassCarrieBeaten:
     .string "Vaya... creía que eras débil...$"
 
 GoldenrodCity_Gym_Text_LassCarrieAfter:
-    .string "Do my POKéMON think I'm cute?$"
+    .string "¿Mis POKéMON me ven linda?$"
 
 GoldenrodCity_Gym_Text_LassBridgetSeen:
     .string "Prefiero los POKéMON lindos que\n"

@@ -264,23 +264,23 @@ VermilionCity_EventScript_HarborSign::
 	end
 
 VermilionCity_Text_GrimerMultipliesInSludge::
-	.string "We're careful about pollution here.\p"
-	.string "We've heard GRIMER multiplies in\n"
-	.string "toxic sludge.$"
+	.string "Aquí cuidamos la contaminación.\p"
+	.string "Dicen que los GRIMER se multiplican\n"
+	.string "en el lodo tóxico.$"
 
 VermilionCity_Text_DidYouSeeSSAnneInHarbor::
-	.string "Did you see the S.S. ANNE moored\n"
+	.string "¿Viste al S.S. ANNE atracado\n"
 	.string "en el puerto?$"
 
 VermilionCity_Text_SSAnneHasDepartedForYear::
-	.string "So, the S.S. ANNE has departed?\p"
+	.string "¿Así que el S.S. ANNE ya zarpó?\p"
 	.string "Ella volverá a VERMILIÓN en\n"
 	.string "esta época el próximo año.$"
 
 VermilionCity_Text_BuildingOnThisLand::
 	.string "Estoy construyendo un edificio\n"
 	.string "en este terreno. Es todo mío.\p"
-	.string "My POKéMON is tamping the land\n"
+	.string "Mi POKéMON está apisonando el suelo\n"
 	.string "para colocar los cimientos.$"
 
 VermilionCity_Text_Machop::
@@ -299,24 +299,24 @@ VermilionCity_Text_CitySign::
 	.string "El Puerto de los Atardeceres$ $"
 
 VermilionCity_Text_SnorlaxBlockingRoute12::
-	.string "NOTICE!\p"
+	.string "¡AVISO!\p"
 	.string "La RUTA 12 puede estar bloqueada\n"
-	.string "despertar POKéMON dormidos.\p"
-	.string "por un árbol. Desviate por el TÚNEL\n"
-	.string "LAVENDER TOWN.\p"
-	.string "VERMILION POLICE$"
+	.string "por un POKéMON dormido.\p"
+	.string "Desvíate por el TÚNEL ROCA\n"
+	.string "hasta PUEBLO LAVANDA.\p"
+	.string "POLICÍA VERMILION$"
 
 VermilionCity_Text_PokemonFanClubSign::
 	.string "CLUB DE FANS POKéMON\n"
-	.string "All POKéMON fans welcome!$"
+	.string "¡Todos los fans son bienvenidos!$"
 
 VermilionCity_Text_GymSign::
-	.string "VERMILION CITY POKéMON GYM\n"
+	.string "GIMNASIO POKéMON VERMILIAN\n"
 	.string "LÍDER: TENIENTE SURGE\l"
 	.string "¡El Americano Relámpago!$"
 
 VermilionCity_Text_VermilionHarbor::
-	.string "VERMILION HARBOR$"
+	.string "PUERTO VERMILION$"
 
 VermilionCity_Text_WelcomeToTheSSAnne::
 	.string "¡Bienvenido al S.S. ANNE!$"
@@ -326,14 +326,14 @@ VermilionCity_Text_DoYouHaveATicket::
 	.string "Disculpe, ¿tiene un boleto?$"
 
 VermilionCity_Text_FlashedSSTicket::
-	.string "{FONT_NORMAL}{PLAYER} flashed the S.S. TICKET!\p"
-	.string "{FONT_MALE}Great!\n"
+	.string "{FONT_NORMAL}{PLAYER} mostró el BOLETO del S.S. ANNE!\p"
+	.string "{FONT_MALE}¡Genial!\n"
 	.string "¡Bienvenido al S.S. ANNE!$"
 
 VermilionCity_Text_DontHaveNeededSSTicket::
-	.string "{FONT_NORMAL}{PLAYER} no tiene lo\nnecesario"
-	.string "S.S. TICKET.\p"
-	.string "{FONT_MALE}Sorry!\p"
+	.string "{FONT_NORMAL}{PLAYER} no tiene el\nBOLETO"
+	.string "necesario del S.S. ANNE.\p"
+	.string "{FONT_MALE}¡Lo siento!\p"
 	.string "Necesitas un boleto para subir.$"
 
 VermilionCity_Text_TheShipSetSail::
@@ -358,13 +358,13 @@ VermilionCity_Text_OhMysticTicketTakeYouToNavelRock::
 	.string "¡Oh! ¡Es un BOLETOMISTICO!\n"
 	.string "Eso sí que es raro.\p"
 	.string "Será un placer llevarte a\n"
-	.string "NAVEL ROCK anytime.$"
+	.string "ROCA NAVEL cuando quieras.$"
 
 VermilionCity_Text_OhAuroraTicketTakeYouToBirthIsland::
 	.string "¡Oh! ¡Es un BOLETOAURORA!\n"
 	.string "Eso sí que es raro.\p"
 	.string "Será un placer llevarte a\n"
-	.string "BIRTH ISLAND anytime.$"
+	.string "ISLA NACIMIENTO cuando quieras.$"
 
 VermilionCity_Text_BoardSeagallopFerry::
 	.string "¿Quieres abordar\n"
@@ -383,14 +383,14 @@ VermilionCity_Text_Seagallop12Departing::
 	.string "departing immediately.$"
 
 VermilionCity_Text_Route2AideHasPackageForYou::
-	.string "Oh, hello, {PLAYER}!\n"
+	.string "¡Oh, hola, {PLAYER}!\n"
 	.string "¿Cómo estás?\p"
 	.string "Soy yo, un AYUDANTE del PROF.\p"
 	.string "¿Conociste al otro AYUDANTE?\p"
 	.string "Tenía un paquete del PROF. OAK\n"
 	.string "para ti, {PLAYER}.\p"
 	.string "Dijo que te buscaría por\n"
-	.string "ROUTE 2, {PLAYER}.\p"
+	.string "la RUTA 2, {PLAYER}.\p"
 	.string "Si estás por la RUTA 2,\n"
 	.string "búscalo, por favor.$"
 

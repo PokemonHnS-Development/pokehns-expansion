@@ -6,12 +6,12 @@ Route8_EventScript_UndergroundPathSign::
 	end
 
 Route8_Text_AidanIntro::
-	.string "You look good at POKéMON, but how\n"
-	.string "está tu nota de química?$"
+	.string "Eres bueno con los POKéMON, ¿y\n"
+	.string "qué tal tu nota de química?$"
 
 Route8_Text_AidanDefeat::
-	.string "Ow!\n"
-	.string "Meltdown!$"
+	.string "¡Ay!\n"
+	.string "¡Colapso total!$"
 
 Route8_Text_AidanPostBattle::
 	.string "¡Soy mejor en la escuela que en esto!$"
@@ -21,11 +21,11 @@ Route8_Text_StanIntro::
 	.string "¡Juguemos un juego!$"
 
 Route8_Text_StanDefeat::
-	.string "Drat!\n"
-	.string "Came up short!$"
+	.string "¡Rayos!\n"
+	.string "¡Me quedé corto!$"
 
 Route8_Text_StanPostBattle::
-	.string "Things didn't work today.$"
+	.string "Hoy las cosas no salieron bien.$"
 
 Route8_Text_GlennIntro::
 	.string "Deberías estar informado.\n"
@@ -39,18 +39,18 @@ Route8_Text_GlennPostBattle::
 	.string "...y...luego...$"
 
 Route8_Text_PaigeIntro::
-	.string "I like NIDORAN, so I collect them!$"
+	.string "¡Adoro los NIDORAN y los colecciono!$"
 
 Route8_Text_PaigeDefeat::
-	.string "Why?\n"
-	.string "Why??$"
+	.string "¿Por qué?\n"
+	.string "¿Por qué??$"
 
 Route8_Text_PaigePostBattle::
-	.string "When POKéMON grow up, they get\n"
-	.string "¡feos! No deberían evolucionar.$"
+	.string "Cuando los POKéMON crecen, se\n"
+	.string "¡vuelven feos! No deberían evolucionar.$"
 
 Route8_Text_LeslieIntro::
-	.string "School is fun, but so are POKéMON.$"
+	.string "La escuela es divertida. ¡Y los POKéMON!$"
 
 Route8_Text_LeslieDefeat::
 	.string "Me dejaste bien claro que\n"
@@ -60,18 +60,18 @@ Route8_Text_LesliePostBattle::
 	.string "Planeaba salir a tomar un\n"
 	.string "poco de aire fresco, pero...\p"
 	.string "Estamos atrapados aquí por\n"
-	.string "gates at SAFFRON.$"
+	.string "las puertas de AZAFRÁN.$"
 
 Route8_Text_AndreaIntro::
 	.string "MEOWTH es tan lindo, miau, miau,\n"
-	.string "meow!$"
+	.string "¡miau!$"
 
 Route8_Text_AndreaDefeat::
-	.string "Meeeeyow!$"
+	.string "¡Miaaaau!$"
 
 Route8_Text_AndreaPostBattle::
 	.string "Creo que PIDGEY y RATTATA son\n"
-	.string "cute, too!$"
+	.string "¡también lindos!$"
 
 Route8_Text_MeganIntro::
 	.string "Debemos parecer tontos parados\n"
@@ -88,48 +88,48 @@ Route8_Text_MeganPostBattle::
 	.string "me parece cruel.$"
 
 Route8_Text_RichIntro::
-	.string "I'm a rambling, gaming dude!$"
+	.string "¡Soy un tipo parlanchín y jugador!$"
 
 Route8_Text_RichDefeat::
 	.string "hablador!$"
 
 Route8_Text_RichPostBattle::
-	.string "Playing games and POKéMON are like\n"
-	.string "eating peanuts! I just can't stop!$"
+	.string "Jugar videojuegos y criar POKéMON es\n"
+	.string "como comer cacahuates: ¡no puedo parar!$"
 
 Route8_Text_JuliaIntro::
 	.string "¿Qué es lindo, redondo y suave?\n"
 	.string "POKéMON?$"
 
 Route8_Text_JuliaDefeat::
-	.string "Stop!\p"
-	.string "Don't be so mean to my CLEFAIRY!$"
+	.string "¡Alto!\p"
+	.string "¡No seas tan malo con mi CLEFAIRY!$"
 
 Route8_Text_JuliaPostBattle::
 	.string "Leí que CLEFAIRY evoluciona\n"
-	.string "it's exposed to a MOON STONE.\p"
-	.string "I read that in a POKéMON JOURNAL.\n"
+	.string "si se expone a una PIEDRA LUNAR.\p"
+	.string "Lo leí en una REVISTA POKéMON.\n"
 	.string "¿Será verdad?$"
 
 Route8_Text_UndergroundPathSign::
-	.string "UNDERGROUND PATH\n"
-	.string "CELADON CITY - LAVENDER TOWN$"
+	.string "PASO SUBTERRÁNEO\n"
+	.string "CIUDAD CELADON - PUEBLO LAVANDA$"
 
 Route8_Text_EliIntro::
 	.string "ELI: El poder gemelo es genial.\n"
 	.string "¿Sabías que?$"
 
 Route8_Text_EliDefeat::
-	.string "ELI: But...\n"
+	.string "ELI: Pero...\n"
 	.string "Usamos nuestro poder gemelo...$"
 
 Route8_Text_EliPostBattle::
-	.string "ELI: I caught my POKéMON with\n"
+	.string "ELI: Atrapé mis POKéMON con\n"
 	.string "ANNE!$"
 
 Route8_Text_EliNotEnoughMons::
 	.string "ELI: No podemos luchar si no\n"
-	.string "have two POKéMON.$"
+	.string "tenemos dos POKéMON.$"
 
 Route8_Text_AnneIntro::
 	.string "ANNE: Te sorprenderemos con nuestro\n"
@@ -139,27 +139,27 @@ Route8_Text_AnneDefeat::
 	.string "ANNE: Nuestro poder gemelo...$"
 
 Route8_Text_AnnePostBattle::
-	.string "ANNE: I'm raising POKéMON with\n"
+	.string "ANNE: Estoy criando POKéMON con\n"
 	.string "ELI.$"
 
 Route8_Text_AnneNotEnoughMons::
 	.string "ANNE: ¡Hola, hola! ¡A batir!\n"
-	.string "But bring two POKéMON.$"
+	.string "Pero trae dos POKéMON.$"
 
 Route8_Text_RicardoIntro::
 	.string "Mi bici falla, amigo.$"
 
 Route8_Text_RicardoDefeat::
-	.string "Aww, man.\n"
+	.string "Ay, hombre.\n"
 	.string "No me interesa esto.$"
 
 Route8_Text_RicardoPostBattle::
-	.string "Tengo pasto atascado en mi\n"
-	.string "spokes, man.$"
+	.string "Tengo pasto atascado en los\n"
+	.string "rayos, amigo.$"
 
 Route8_Text_JarenIntro::
-	.string "Quita el paso o te atropello\n"
-	.string "down!$"
+	.string "¡Quita el paso o te atropello\n"
+	.string "sin frenos!$"
 
 Route8_Text_JarenDefeat::
 	.string "¿En serio, chico?$"

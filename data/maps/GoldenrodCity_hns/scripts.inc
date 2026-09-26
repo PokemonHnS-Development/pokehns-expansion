@@ -399,10 +399,10 @@ GoldenrodCity_Text_Rocket6:
 	.string "TEAM ROCKET!$"
 
 GoldenrodCity_Text_StationSign:
-	.string "GOLDENROD CITY STATION$"
+	.string "ESTACIÓN DE CIUDAD TRIGAL$"
 
 GoldenrodCity_Text_RadioTowerSign:
-	.string "GOLDENROD CITY RADIO TOWER$"
+	.string "TORRE RADIO DE CIUDAD TRIGAL$"
 
 GoldenrodCity_Text_DeptStoreSign:
 	.string "¡Gran variedad de artículos POKéMON!\p"
@@ -430,14 +430,14 @@ GoldenrodCity_Text_NameRaterSign:
 	.string "Califica los apodos de tus POKéMON$"
 
 GoldenrodCity_Text_UndergroundNorthSign:
-	.string "UNDERGROUND ENTRANCE$"
+	.string "ENTRADA AL SUBTERRÁNEO$"
 
 GoldenrodCity_Text_UndergroundSouthSign:
-	.string "UNDERGROUND ENTRANCE$"
+	.string "ENTRADA AL SUBTERRÁNEO$"
 
 
 GoldenrodCity_Text_FlowerShopSign:
-	.string "Blooming Beautiful FLOWER SHOP$"
+	.string "FLORERÍA BLOOMING BEAUTIFUL$"
 
 GoldenrodCity_Text_MoveTutorAsk:
 	.string "Puedo enseñar a tus POKéMON algunos\n"
@@ -464,7 +464,7 @@ GoldenrodCity_Text_MoveTutorUnderstand:
 	.string "ya eres un gran entrenador.$"
 
 GoldenrodCity_Text_MoveTutorFarewell:
-	.string "Wahahah! Farewell, kid!$"
+	.string "¡Jajajá! ¡Adiós, chico!$"
 
 GoldenrodCity_Text_MoveTutorBut:
 	.string "P-pero...$"

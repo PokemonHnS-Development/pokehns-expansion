@@ -8,5 +8,5 @@ Route15_WestEntrance_1F_EventScript_Guard::
 Route15_WestEntrance_1F_Text_OaksAideCameByHere::
 	.string "¿Eres el chico que está\n"
 	.string "a POKéDEX?\p"
-	.string "PROF. OAK's AIDE came by here.$"
+	.string "El AYUDANTE del PROF. OAK pasó.$"
 

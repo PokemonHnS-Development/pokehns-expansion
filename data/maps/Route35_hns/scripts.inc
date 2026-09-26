@@ -145,7 +145,7 @@ Route35_Text_PicnickerKimSeen:
 	.string "¿Vas al GIMNASIO? ¡Yo también!$"
 
 Route35_Text_PicnickerKimBeaten:
-	.string "Oh. I couldn't win...$"
+	.string "Oh. No pude ganar...$"
 
 Route35_Text_PicnickerKimAfter:
 	.string "Las MEDALLAS son lindas. Las\n"
@@ -225,7 +225,7 @@ Route35_Text_OfficerDirkSeen:
 	.string "¡El peligro acecha en la noche!$"
 
 Route35_Text_OfficerDirkBeaten:
-	.string "Whoops!$"
+	.string "¡Ups!$"
 
 Route35_Text_OfficerDirkAfter:
 	.string "Sabes, la noche es divertida a su\n"
@@ -237,7 +237,7 @@ Route35_Text_OfficerDirkTough:
 	.string "Podrías ir a cualquier lugar seguro.$"
 
 Route35_Text_Sign:
-	.string "ROUTE 35$"
+	.string "RUTA 35$"
 
 Route35_Text_Sign2:
-	.string "NATIONAL PARK GATE$"
+	.string "ENTRADA DEL PARQUE NACIONAL$"

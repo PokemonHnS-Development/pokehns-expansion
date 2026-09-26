@@ -1011,7 +1011,7 @@ LilycoveCity_ContestLobby_Text_TakeMementoOfPainting_hns:
 	.string "POKéMON, toma esto, por favor.$"
 
 LilycoveCity_ContestLobby_Text_ReceivedARibbon_hns:
-	.string "{PLAYER} received a RIBBON.$"
+	.string "{PLAYER} recibió un LISTÓN.$"
 
 LilycoveCity_ContestLobby_Text_PutTheRibbonOnMon_hns:
 	.string "{PLAYER} le puso la CINTA a\n"

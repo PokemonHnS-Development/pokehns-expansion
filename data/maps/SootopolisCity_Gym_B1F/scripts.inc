@@ -96,7 +96,7 @@ SootopolisCity_Gym_B1F_Text_ConnieIntro:
 	.string "pueden ser las batallas.$"
 
 SootopolisCity_Gym_B1F_Text_ConnieDefeat:
-	.string "Oh.\n"
+	.string "Ah.\n"
 	.string "Eres fuerte.$"
 
 SootopolisCity_Gym_B1F_Text_ConniePostBattle:
@@ -149,7 +149,7 @@ SootopolisCity_Gym_B1F_Text_BethanyIntro:
 	.string "pasa volando antes de decir ¡Ups!$"
 
 SootopolisCity_Gym_B1F_Text_BethanyDefeat:
-	.string "Oops!$"
+	.string "¡Ups!$"
 
 SootopolisCity_Gym_B1F_Text_BethanyPostBattle:
 	.string "Quisiera olvidar las causas perdidas\n"

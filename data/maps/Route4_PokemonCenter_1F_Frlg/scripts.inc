@@ -149,28 +149,28 @@ Route4_PokemonCenter_1F_EventScript_Newspaper::
 	end
 
 Route4_PokemonCenter_1F_Text_CanHaveSixMonsWithYou::
-	.string "Okay, set six POKé BALLS in my\n"
-	.string "belt...\p"
+	.string "Bien, pon seis POKé BALL en mi\n"
+	.string "cinturón...\p"
 	.string "Sí, eso bastará. A lo sumo, tú\n"
-	.string "can have six POKéMON with you.$"
+	.string "puedes llevar seis POKéMON contigo.$"
 
 Route4_PokemonCenter_1F_Text_TeamRocketAttacksCerulean::
-	.string "TEAM ROCKET attacks CERULEAN\n"
-	.string "citizens...\p"
+	.string "El EQUIPO ROCKET ataca a los\n"
+	.string "ciudadanos...\p"
 	.string "No pasa un día sin que el EQUIP\n"
 	.string "O ROCKET salga en las noticias.$"
 
 Route4_PokemonCenter_1F_Text_LaddieBuyMagikarpForJust500::
 	.string "HOMBRE: ¡Hola, muchacho!\n"
 	.string "¡Tengo una oferta para ti!\p"
-	.string "I'll let you have a secret POKéMON\n"
+	.string "Te daré un POKéMON secreto\n"
 	.string "¡Un MAGIKARP por solo ¥500!\p"
 	.string "¿Lo comprarás, verdad?$"
 
 Route4_PokemonCenter_1F_Text_SweetieBuyMagikarpForJust500::
 	.string "HOMBRE: ¡Hola, cielo!\n"
 	.string "¡Tengo una oferta para ti!\p"
-	.string "I'll let you have a secret POKéMON\n"
+	.string "Te daré un POKéMON secreto\n"
 	.string "¡Un MAGIKARP por solo ¥500!\p"
 	.string "¿Lo comprarás, verdad?$"
 
@@ -184,20 +184,20 @@ Route4_PokemonCenter_1F_Text_OnlyDoingThisAsFavorToYou::
 
 Route4_PokemonCenter_1F_Text_NoRoomForMorePokemon::
 	.string "Ya no hay espacio para más\n"
-	.string "POKéMON, it looks like.$"
+	.string "POKéMON más, por lo visto.$"
 
 Route4_PokemonCenter_1F_Text_YoullNeedMoreMoney::
 	.string "¡Necesitarás más dinero que eso!$"
 
 Route4_PokemonCenter_1F_Text_IDontGiveRefunds::
 	.string "HOMBRE: Bueno, no hago\n"
-	.string "You knew what you were getting!$"
+	.string "¡Sabías lo que comprabas!$"
 
 Route4_PokemonCenter_1F_Text_ShouldStoreMonsUsingPC::
 	.string "A veces tendrás demasiados\n"
-	.string "POKéMON with you to add any more.\p"
+	.string "POKéMON contigo para añadir más.\p"
 	.string "En ese caso, simplemente\n"
-	.string "store some using any PC.$"
+	.string "guarda algunos con cualquier PC.$"
 
 Route4_PokemonCenter_1F_Text_ItsANewspaper::
 	.string "Es un periódico.$"

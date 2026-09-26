@@ -88,7 +88,7 @@ IcePath_Movement_KimonoLeave:
 	step_end
 
 IcePath_1F_Text_Leave:
-	.string "KIMONO GIRL: .....................$"
+	.string "CHICA KIMONO: .....................$"
 
 IcePath_1F_Text_Stuck1:
     .string "Cielos... ¿Eres tú, {PLAYER}?\n"
@@ -114,7 +114,7 @@ IcePath_1F_Text_Stuck2:
     .string "¿Me empujarías la espalda?$"
 
 IcePath_1F_Text_Shove:
-    .string "....SHOVE!....$"
+    .string "....¡EMPUJÓN!....$"
 
 IcePath_1F_Text_Cruel:
     .string "No seas tan cruel.\n"

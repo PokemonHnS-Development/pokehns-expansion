@@ -403,7 +403,7 @@ VermilionCity_Text_FanClubSign:
 	.string "¡Fans de POKéMON bienvenidos!$"
 
 VermilionCity_Text_DiglettsCaveSign:
-	.string "DIGLETT'S CAVE$"
+	.string "CUEVA DIGLETT$"
 
 VermilionCity_Text_PortSign:
 	.string "PUERTO VERMILIÓN\n"

@@ -126,7 +126,7 @@ CeladonCity_Gym_Text_BeautyJuliaSeen:
 	.string "¿o a mí?$"
 
 CeladonCity_Gym_Text_BeautyJuliaBeaten:
-	.string "How annoying!$"
+	.string "¡Qué molesto!$"
 
 CeladonCity_Gym_Text_BeautyJuliaAfter:
 	.string "¿Cómo puedo llegar a ser\n"

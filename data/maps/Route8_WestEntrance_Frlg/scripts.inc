@@ -97,7 +97,7 @@ Route8_WestEntrance_Movement_BlockPlayerEntry::
 
 Route8_WestEntrance_Text_ThirstyOnGuardDuty::
 	.string "Estoy de guardia.\n"
-	.string "Gee, I'm thirsty, though!\p"
+	.string "¡Qué sed tengo, de verdad!\p"
 	.string "Ah, espera, el camino está cerrado.$"
 
 Route8_WestEntrance_Text_ThatTeaLooksTasty::
@@ -106,17 +106,17 @@ Route8_WestEntrance_Text_ThatTeaLooksTasty::
 
 Route8_WestEntrance_Text_ThanksIllShareTeaWithGuards::
 	.string "¿Eh? ¿Puedo tomar esta bebida?\n"
-	.string "Gee, thanks!\l"
+	.string "¡Vaya, gracias!\l"
 	.string "... ...\l"
 	.string "Glug, glug...\l"
 	.string "... ...\l"
 	.string "Gulp...\l"
-	.string "Si quieres ir a AZUL\l"
-	.string "CITY...\l"
+	.string "Si quieres ir a CIUDAD\l"
+	.string "AZULONA...\l"
 	.string "... ...\l"
 	.string "puedes pasar.\p"
 	.string "Compartiré este TÉ con los demás\n"
-	.string "guards!$"
+	.string "¡guardias!$"
 
 Route8_WestEntrance_Text_HiHowsItGoing::
 	.string "Hola, ¿qué tal?$"

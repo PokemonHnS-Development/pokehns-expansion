@@ -885,7 +885,7 @@ Route110_Text_SlateportCitySign:
 	.string "{DOWN_ARROW} CIUDAD PORTAL$"
 
 Route110_Text_CyclingRoadSign:
-	.string "SEASIDE CYCLING ROAD$"
+	.string "CICLOVÍA COSTERA$"
 
 Route110_Text_AquaWasHere:
 	.string "“¡EL EQUIPO AQUA estuvo aquí!”\pAlguien lo pintó en este letrero,\npero alguien más lo volvió a pintar.\p“¡EL EQUIPO MAGMA manda!” es lo\nque ahora dice.$"
@@ -895,7 +895,7 @@ Route110_Text_Route103Sign:
 	.string "{LEFT_ARROW} RUTA 103$"
 
 Route110_Text_SeasideParkingSign:
-	.string "SEASIDE PARKING$"
+	.string "ESTACIONAMIENTO COSTERO$"
 
 Route110_Text_MauvilleCitySign:
 	.string "RUTA 110\n"

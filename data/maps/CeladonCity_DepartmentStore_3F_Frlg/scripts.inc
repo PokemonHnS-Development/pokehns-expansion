@@ -50,26 +50,26 @@ CeladonCity_DepartmentStore_3F_EventScript_Poster::
 	end
 
 CeladonCity_DepartmentStore_3F_Text_OTStandsForOriginalTrainer::
-	.string "Captured POKéMON are registered\n"
+	.string "Los POKéMON capturados se registran\n"
 	.string "con un No. de ID y el OE.\p"
 	.string "OT significa “Entrenador Original” -\n"
 	.string "el ENTRENADOR que lo atrapó primero.$"
 
 CeladonCity_DepartmentStore_3F_Text_BuddyTradingKangaskhanForHaunter::
-	.string "All right!\p"
+	.string "¡De acuerdo!\p"
 	.string "Mi amigo me va a intercambiar su\n"
 	.string "KANGASKHAN por mi HAUNTER!$"
 
 CeladonCity_DepartmentStore_3F_Text_HaunterEvolvedOnTrade::
 	.string "¡Vamos, HAUNTER!\p"
-	.string "I love HAUNTER!\n"
+	.string "¡Me encanta HAUNTER!\n"
 	.string "¡Los colecciono!\p"
-	.string "Huh?\p"
-	.string "HAUNTER se transformó en uno diferente\n"
-	.string "POKéMON while being traded!$"
+	.string "¿Eh?\p"
+	.string "HAUNTER se transformó en otro\n"
+	.string "¡POKéMON al ser intercambiado!$"
 
 CeladonCity_DepartmentStore_3F_Text_CanIdentifyTradeMonsByID::
-	.string "You can identify POKéMON you get\n"
+	.string "Puedes identificar los POKéMON que\n"
 	.string "en los intercambios por su número de ID.$"
 
 CeladonCity_DepartmentStore_3F_Text_ItsSuperNES::
@@ -85,26 +85,26 @@ CeladonCity_DepartmentStore_3F_Text_SportsGame::
 
 CeladonCity_DepartmentStore_3F_Text_PuzzleGame::
 	.string "¡Un juego de rompecabezas!\n"
-	.string "Looks addictive!$"
+	.string "¡Parece adictivo!$"
 
 CeladonCity_DepartmentStore_3F_Text_FightingGame::
 	.string "¡Un juego de lucha!\n"
-	.string "Looks tough!$"
+	.string "¡Parece difícil!$"
 
 CeladonCity_DepartmentStore_3F_Text_TVGameShop::
-	.string "3F: TV GAME SHOP$"
+	.string "3F: TIENDA DE VIDEOJUEGOS$"
 
 CeladonCity_DepartmentStore_3F_Text_RedGreenBothArePokemon::
 	.string "¡Rojo y Verde!\n"
-	.string "Both are POKéMON!$"
+	.string "¡Ambos son POKéMON!$"
 
 Text_CounterTeach::
-	.string "Oh, hi!\n"
-	.string "I finally finished POKéMON.\p"
+	.string "¡Oh, hola!\n"
+	.string "¡Por fin terminé POKéMON!\p"
 	.string "¿Aún no terminas? ¿Qué tal si te enseño\n"
 	.string "¿Quieres aprender un buen movimiento?\p"
 	.string "El movimiento que tengo en mente es\n"
-	.string "COUNTER.\p"
+	.string "CONTRAATAQUE.\p"
 	.string "No como el que me apoyo,\n"
 	.string "¡Ojo!$"
 
@@ -118,4 +118,4 @@ Text_CounterWhichMon::
 
 Text_CounterTaught::
 	.string "¿Estás usando ese movimiento CONTRAATAQUE\n"
-	.string "I taught your POKéMON?$"
+	.string "¿Le enseñé a tu POKéMON?$"

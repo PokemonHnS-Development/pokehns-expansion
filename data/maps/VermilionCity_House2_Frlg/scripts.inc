@@ -36,7 +36,7 @@ VermilionCity_House2_EventScript_AlreadyTraded::
 	end
 
 VermilionCity_House2_Text_DoYouHaveMonWantToTradeForMyMon::
-	.string "Hi!\n"
+	.string "¡Hola!\n"
 	.string "¿Tienes un {STR_VAR_1}?\p"
 	.string "¿Quieres cambiarlo por mi\n"
 	.string "{STR_VAR_2}?$"

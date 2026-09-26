@@ -5,9 +5,9 @@ TwoIsland_CapeBrink_House_Frlg_MapScripts::
 
 Text_UltimateMoveThatMon::
 	.string "Perfeccioné el movimiento\n"
-	.string "its type...\p"
+	.string "de su tipo...\p"
 	.string "Pero ¿nadie lo tomará\n"
-	.string "future use?\p"
+	.string "¿para usarlo en el futuro?\p"
 	.string "...Hm? Hmmm!\p"
 	.string "¿T-tú...?\n"
 	.string "E-ese {STR_VAR_1}...$"
@@ -18,7 +18,7 @@ Text_JustMistaken::
 
 Text_AllowMeToTeachMonUltimateMove::
 	.string "¡Oh! ¡Este es!\n"
-	.string "This is the POKéMON!\p"
+	.string "¡Este es el POKéMON!\p"
 	.string "Este {STR_VAR_1} es digno de\n"
 	.string "¡aprendiendo mi movimiento final!\p"
 	.string "¿Lo permitirás?\p"
@@ -36,9 +36,9 @@ Text_LetMeConferUltimateMove::
 	.string "Ggggrah-awooo!$"
 
 Text_TaughtMove::
-	.string "Gasp, gasp, gasp...\p"
+	.string "Jadeo, jadeo, jadeo...\p"
 	.string "No pensé que pudiera enseñar\n"
-	.string "move while I still lived...$"
+	.string "un movimiento en toda mi vida...$"
 
 Text_MakeBestUseOfMove::
 	.string "Te imploro que aproveches al\n"

@@ -933,7 +933,7 @@ SlateportCity_Text_PleaseGiveItThisEffortRibbon:
 	.string "CINTA ESFUERZO.$"
 
 SlateportCity_Text_ReceivedEffortRibbon:
-	.string "{PLAYER} received the EFFORT RIBBON.$"
+	.string "{PLAYER} recibió la CINTA ESFUERZO.$"
 
 SlateportCity_Text_PutEffortRibbonOnMon:
 	.string "{PLAYER} le puso la CINTA ESFUERZO\n"
@@ -1005,7 +1005,7 @@ SlateportCity_Text_WhatsLongLineOverThere:
 
 SlateportCity_Text_VisitedMuseumOften:
 	.string "Cuando era niño, visitaba\n"
-	.string "el MUSEUM a menudo.\p"
+	.string "el MUSEO a menudo.\p"
 	.string "Soñaba con los misterios del\n"
 	.string "mar al ver las exhibiciones.$"
 
@@ -1228,7 +1228,7 @@ SlateportCity_Text_CitySign:
 
 SlateportCity_Text_MarketSign:
 	.string "MERCADO DE PORTALA\n"
-	.string "“Unique items found nowhere else!”$"
+	.string "“¡Artículos únicos e inigualables!”$"
 
 SlateportCity_Text_HarborFerryUnderConstruction:
 	.string "PUERTO DE PORTALA\p"

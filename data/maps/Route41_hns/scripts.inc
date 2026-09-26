@@ -77,7 +77,7 @@ Route41_Text_SwimmermKirkSeen:
 	.string "puedes nadar.$"
 
 Route41_Text_SwimmermKirkBeaten:
-	.string "I'm beat!$"
+	.string "¡Estoy agotado!$"
 
 Route41_Text_SwimmermKirkAfter:
 	.string "Las corrientes no me dejan\n"
@@ -126,7 +126,7 @@ Route41_Text_SwimmerfSusieSeen:
 	.string "montando tu POKéMON.$"
 
 Route41_Text_SwimmerfSusieBeaten:
-	.string "I'm crushed...$"
+	.string "¡Estoy hecho polvo...$"
 
 Route41_Text_SwimmerfSusieAfter:
 	.string "¿No había una canción famosa\n"
@@ -177,7 +177,7 @@ Route41_Text_SwimmerfWendySeen:
 	.string "cerca de la superficie.$"
 
 Route41_Text_SwimmerfWendyBeaten:
-	.string "Oh, dear...$"
+	.string "Ay, cielos...$"
 
 Route41_Text_SwimmerfWendyAfter:
 	.string "Los grupos de STARYU se iluminan\nal mismo tiempo.\pEs tan hermoso que da miedo.$"

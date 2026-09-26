@@ -115,7 +115,7 @@ Route20_Text_Dewgong:
 	.string "DEWGONG: Goooong!$"
 
 Route20_Text_SeafoamSign:
-	.string "SEAFOAM ISLANDS$"
+	.string "ISLAS ESPUMA$"
 
 Route20_Text_NicoleRegister:
 	.string "¡Tu POKéMON nada rápido!\n"

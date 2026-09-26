@@ -37,28 +37,28 @@ Text_SeismicTossTeach::
 	.string "Pero eso debe impulsarnos a estudiar\n"
 	.string "más, no a tirar la toalla.\p"
 	.string "Lo único que deberías tirar...\p"
-	.string "Well, how about SEISMIC TOSS?\n"
-	.string "Should I teach that to a POKéMON?$"
+	.string "Bueno, ¿qué tal SÍSMICO?\n"
+	.string "¿Debería enseñárselo a un POKéMON?$"
 
 Text_SeismicTossDeclined::
 	.string "¿De verdad?\n"
 	.string "Seguro volverás por ella.$"
 
 Text_SeismicTossWhichMon::
-	.string "Which POKéMON wants to learn\n"
-	.string "SEISMIC TOSS?$"
+	.string "¿Qué POKéMON quiere aprender\n"
+	.string "SÍSMICO?$"
 
 Text_SeismicTossTaught::
 	.string "Espero que no tires la toalla.\n"
 	.string "Sigue así.$"
 
 PewterCity_Museum_1F_Text_WhatsSpecialAboutMoonStone::
-	.string "MOON STONE, huh?\p"
+	.string "¿MOON STONE, eh?\p"
 	.string "¿Qué tiene de especial?\n"
 	.string "Para mí es una roca común.$"
 
 PewterCity_Museum_1F_Text_BoughtColorTVForMoonLanding::
-	.string "July 20, 1969!\p"
+	.string "¡20 de julio de 1969!\p"
 	.string "La humanidad pisó la Luna\n"
 	.string "aquel día.\p"
 	.string "Compré un televisor a color solo\n"
@@ -66,7 +66,7 @@ PewterCity_Museum_1F_Text_BoughtColorTVForMoonLanding::
 
 PewterCity_Museum_1F_Text_RunningSpaceExhibitThisMonth::
 	.string "Este mes tenemos una promo\n"
-	.string "exhibit.$"
+	.string "exposición.$"
 
 PewterCity_Museum_1F_Text_AskedDaddyToCatchPikachu::
 	.string "¡Quiero un PIKACHU!\n"
@@ -77,7 +77,7 @@ PewterCity_Museum_1F_Text_PikachuSoonIPromise::
 	.string "¡Sí, un PIKACHU pronto, lo prometo!$"
 
 PewterCity_Museum_1F_Text_SpaceShuttle::
-	.string "Space Shuttle$"
+	.string "Transbordador espacial$"
 
 PewterCity_Museum_1F_Text_MeteoriteThatFellOnMtMoon::
 	.string "Un meteorito caído en MONTE LUNA.\n"

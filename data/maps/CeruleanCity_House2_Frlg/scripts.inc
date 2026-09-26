@@ -23,18 +23,18 @@ CeruleanCity_House2_EventScript_WallHole::
 	end
 
 CeruleanCity_House2_Text_RocketsStoleTMForDig::
-	.string "Those miserable ROCKETS!\p"
+	.string "¡Esos miserables ROCKETS!\p"
 	.string "Mira lo que le han hecho a mi\n"
-	.string "house!\p"
+	.string "casa!\p"
 	.string "Robaron una MT que enseña\n"
-	.string "POKéMON how to DIG holes!\p"
+	.string "a los POKéMON a CAVAR hoyos!\p"
 	.string "Iba a usarla en un\n"
 	.string "MANKEY o un SANDSHREW...\p"
 	.string "¡Eso me costó un dineral!$"
 
 CeruleanCity_House2_Text_TeachDiglettDigWithoutTM::
 	.string "Supongo que lo perdido,\p"
-	.string "I decided to teach DIGLETT how to\n"
+	.string "Decidí enseñarle a DIGLETT a\n"
 	.string "CAVAR sin una MT.$"
 
 CeruleanCity_House2_Text_TeamRocketTryingToDigIntoNoGood::

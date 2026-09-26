@@ -182,7 +182,7 @@ EcruteakCity_Theater_Text_RocketSeen:
 	.string "¿Te atreves a estorbarme?$"
 
 EcruteakCity_Theater_Text_RocketBeaten:
-	.string "Oh, no!\n"
+	.string "¡Oh, no!\n"
 	.string "¡Haces que parezca un\l"
 	.string "villano!$"
 

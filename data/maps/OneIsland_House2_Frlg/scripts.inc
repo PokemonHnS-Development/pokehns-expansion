@@ -7,6 +7,6 @@ OneIsland_House2_EventScript_Lass::
 
 OneIsland_House2_Text_IWantToStayHereForever::
 	.string "Los jóvenes quieren irse lejos\n"
-	.string "big cities.\p"
-	.string "But I want to stay here forever!$"
+	.string "ciudades grandes.\p"
+	.string "¡Pero quiero quedarme aquí por siempre!$"
 

@@ -53,17 +53,17 @@ Route2_Text_BugCatcherEd_Seen:
 	.string "shorts, ¿te haces cortes y raspones?$"
 
 Route2_Text_BugCatcherEd_Beaten:
-	.string "Ouch, ouch, ouch!$"
+	.string "¡Ay, ay, ay!$"
 
 Route2_Text_BugCatcherEd_AfterBattle:
 	.string "¡Arderán mucho al ponerte un\n"
 	.string "baño.$"
 
 Route2_Text_BugCatcherDoug_Seen:
-	.string "Why don't girls like bug POKéMON?$"
+	.string "¿Por qué no les gustan los POKéMON bicho?$"
 
 Route2_Text_BugCatcherDoug_Beaten:
-	.string "No good!$"
+	.string "¡No sirve!$"
 
 Route2_Text_BugCatcherDoug_AfterBattle:
 	.string "Los POKéMON bicho son como peluches\n"
@@ -75,5 +75,5 @@ Route2_Text_Sign:
 	.string "CIUDAD VERIDIAN - CIUDAD PLATEADA$"
 
 Route2_Text_DiglettsCaveSign:
-	.string "DIGLETT'S CAVE$"
+	.string "CUEVA DIGLETT$"
 

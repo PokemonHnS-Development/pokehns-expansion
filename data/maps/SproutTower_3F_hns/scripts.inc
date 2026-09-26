@@ -184,7 +184,7 @@ SproutTower_Text_RivalOnlyCaresStrong:
 	.string "los POKéMON débiles.$"
 
 SproutTower_Text_RivalUsedEscapeRope:
-	.string "{RIVAL} used an ESCAPE ROPE!$"
+	.string "¡{RIVAL} usó una CUERDA HUIDA!$"
 
 SproutTower_Text_SageLi_Seen:
 	.string "¡Qué bueno que hayas venido!\p"
@@ -198,7 +198,7 @@ SproutTower_Text_SageLi_Seen:
 	.string "entre tú y tu POKéMON!$"
 
 SproutTower_Text_SageLi_Beaten:
-	.string "Ah, excellent!$"
+	.string "¡Ah, excelente!$"
 
 SproutTower_Text_SageLi_TakeFlash:
 	.string "Tú y tu POKéMON no deberían\n"

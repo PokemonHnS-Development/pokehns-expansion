@@ -49,7 +49,7 @@ MountMortar2_Text_PokemaniacMillerSeen:
 	.string "¡Esta vez no pierdo!$"
 
 MountMortar2_Text_PokemaniacMillerBeaten:
-	.string "I lost to some kid...?$"
+	.string "¿Perdí contra un niño...?$"
 
 MountMortar2_Text_PokemaniacMillerAfter:
 	.string "Hace tiempo, un tipo de karate\n"
@@ -61,7 +61,7 @@ MountMortar2_Text_PokemaniacMillerAfter:
 	.string "¿Me pregunto cómo estará?$"
 
 MountMortar2_Text_SupernerdMarkusSeen:
-	.string "Hey! HUGH!$"
+	.string "¡Oye! ¡HUGH!$"
 
 MountMortar2_Text_SupernerdMarkusBeaten:
 	.string "Te confundí con otra\n"

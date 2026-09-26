@@ -140,10 +140,10 @@ GoldenrodCity_RadioTower_3F_Text_Open:
 	.string "La reja está abierta.$"
 
 GoldenrodCity_RadioTower_3F_Text_PersonnelSign:
-	.string "3F PERSONNEL$"
+	.string "3F: PERSONAL$"
 
 GoldenrodCity_RadioTower_3F_Text_PokemonMusicSign:
-	.string "POKéMON MUSIC with Host DJ BEN$"
+	.string "MÚSICA POKéMON con el DJ BEN$"
 
 GoldenrodCity_RadioTower_3F_Text_SuperNerd:
 	.string "Tenemos grabaciones de los gritos\n"

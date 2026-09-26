@@ -72,7 +72,7 @@ MtPyre_2F_Text_LukeIntro:
 	.string "lo genial que soy!$"
 
 MtPyre_2F_Text_LukeDefeat:
-	.string "LUKE: Whoopsie!$"
+	.string "LUKE: ¡Ups!$"
 
 MtPyre_2F_Text_LukePostBattle:
 	.string "LUKE: Bueno, perdimos, ¡pero no pasa!\n"
@@ -94,7 +94,7 @@ MtPyre_2F_Text_DezIntro:
 	.string "genial venciéndote!$"
 
 MtPyre_2F_Text_DezDefeat:
-	.string "DEZ: Waaaah! I'm scared!$"
+	.string "DEZ: ¡Buaaah! ¡Tengo miedo!$"
 
 MtPyre_2F_Text_DezPostBattle:
 	.string "DEZ: Estamos muy enamorados, ¡así que\n"

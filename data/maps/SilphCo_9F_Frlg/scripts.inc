@@ -55,8 +55,8 @@ SilphCo_9F_Text_ThankYouSoMuch::
 	.string "Muchas gracias.$"
 
 SilphCo_9F_Text_Grunt1Intro::
-	.string "Your POKéMON seem to adore you,\n"
-	.string "kid!$"
+	.string "Tus POKéMON parecen adorarte,\n"
+	.string "¡niño!$"
 
 SilphCo_9F_Text_Grunt1Defeat::
 	.string "Ghaaah!$"
@@ -66,7 +66,7 @@ SilphCo_9F_Text_Grunt1PostBattle::
 	.string "a tu edad...$"
 
 SilphCo_9F_Text_EdIntro::
-	.string "Your POKéMON have weak points!\n"
+	.string "¡Tus POKéMON tienen puntos débiles!\n"
 	.string "¡Puedo clavarlos!$"
 
 SilphCo_9F_Text_EdDefeat::
@@ -74,20 +74,20 @@ SilphCo_9F_Text_EdDefeat::
 
 SilphCo_9F_Text_EdPostBattle::
 	.string "Explotar puntos débiles funciona.\n"
-	.string "Think about type advantages.$"
+	.string "Piensa en las ventajas de tipo.$"
 
 SilphCo_9F_Text_Grunt2Intro::
 	.string "Soy uno de los cuatro COHETE\n"
-	.string "BROTHERS!$"
+	.string "¡HERMANOS!$"
 
 SilphCo_9F_Text_Grunt2Defeat::
 	.string "Warg!\n"
-	.string "Brothers, I lost!$"
+	.string "¡Hermanos, perdí!$"
 
 SilphCo_9F_Text_Grunt2PostBattle::
 	.string "¡Mis hermanos me vengarán!$"
 
 SilphCo_9F_Text_FloorSign::
-	.string "SILPH CO. HEAD OFFICE\n"
+	.string "OFICINAS DE SILPH CO.\n"
 	.string "9F$"
 

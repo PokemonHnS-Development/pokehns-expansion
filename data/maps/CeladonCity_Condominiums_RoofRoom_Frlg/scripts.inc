@@ -106,10 +106,10 @@ CeladonCity_Condominiums_RoofRoom_EventScript_ExitBlackboard::
 CeladonCity_Condominiums_RoofRoom_Text_TheresNothingIDontKnow::
 	.string "No hay nada que no sepa,\n"
 	.string "como escribí en el pizarrón.\p"
-	.string "I know about the world of POKéMON\n"
+	.string "Conozco el mundo de los POKéMON\n"
 	.string "en tu GAME BOY ADVANCE!\p"
 	.string "Júntense con sus amigos y\n"
-	.string "enjoy trading POKéMON!$"
+	.string "¡disfruten intercambiando POKéMON!$"
 
 CeladonCity_Condominiums_RoofRoom_Text_ObtainedAnEevee::
 	.string "{PLAYER} obtuvo un EEVEE!$"
@@ -119,7 +119,7 @@ CeladonCity_Condominiums_RoofRoom_Text_BoxIsFull::
 	.string "ボックスを　かえて　きなさい$"
 
 CeladonCity_Condominiums_RoofRoom_Text_WirelessAdapterLecture::
-	.string "POKéMON Lecture\p"
+	.string "Charla POKéMON\p"
 	.string "Jugando con el Adaptador Inalámbrico$"
 
 CeladonCity_Condominiums_RoofRoom_Text_ReadWhichHeading::
@@ -127,7 +127,7 @@ CeladonCity_Condominiums_RoofRoom_Text_ReadWhichHeading::
 
 CeladonCity_Condominiums_RoofRoom_Text_ExplainWirelessClub::
 	.string "El CLUB INALÁMBRICO POKéMON es\n"
-	.string "upstairs at any POKéMON CENTER.\p"
+	.string "arriba en cualquier CENTRO POKéMON.\p"
 	.string "Visita uno para conectar con amigos\n"
 	.string "usando tu Adaptador Inalámbrico.$"
 
@@ -140,12 +140,12 @@ CeladonCity_Condominiums_RoofRoom_Text_ExplainDirectCorner::
 	.string "COLISEO con tu amigo.$"
 
 CeladonCity_Condominiums_RoofRoom_Text_ExplainUnionRoom::
-	.string "Para enlazar y comunicarse con\n"
+	.string "Para enlazar y comunicarte con\n"
 	.string "Alguien, ve a la SALA UNIÓN.\p"
 	.string "Es el mostrador de la izquierda en el\n"
 	.string "POKéMON WIRELESS CLUB.\p"
 	.string "Ve a la SALA UNIÓN y disfruta\n"
-	.string "meeting other TRAINERS.$"
+	.string "de conocer a otros ENTRENADORES.$"
 
 CeladonCity_Condominiums_RoofRoom_Text_PamphletOnTMs::
 	.string "Es un folleto sobre las MT.\p"

@@ -59,18 +59,18 @@ SSAnne_Kitchen_Text_SawOddBerryInTrash::
 	.string "¿Qué sería eso?$"
 
 SSAnne_Kitchen_Text_SoBusyImDizzy::
-	.string "I'm so busy I'm getting dizzy!\n"
+	.string "¡Estoy tan ocupado que me marea!\n"
 	.string "¡Debes darme espacio aquí!$"
 
 SSAnne_Kitchen_Text_PeelSpudsEveryDay::
 	.string "Hum-de-hum-de-ho...\p"
-	.string "I peel spuds every day!\n"
+	.string "¡Pelo papas todos los días!\n"
 	.string "Hum-hum...$"
 
 SSAnne_Kitchen_Text_HearAboutSnorlaxItsAGlutton::
 	.string "¿Oíste hablar de SNORLAX?\n"
 	.string "Es un glotón.\p"
-	.string "No other POKéMON eats and sleeps\n"
+	.string "Ningún otro POKéMON come y duerme\n"
 	.string "¡como puede y lo hace SNORLAX!$"
 
 SSAnne_Kitchen_Text_OnlyGetToPeelOnions::
@@ -86,7 +86,7 @@ SSAnne_Kitchen_Text_IAmLeChefMainCourseIs::
 SSAnne_Kitchen_Text_SalmonDuSalad::
 	.string "Salmon du Salad!\p"
 	.string "Los invitados pueden quejarse\n"
-	.string "again, however!$"
+	.string "otra vez, ¡pero da igual!$"
 
 SSAnne_Kitchen_Text_EelsAuBarbecue::
 	.string "Eels au Barbecue!\p"

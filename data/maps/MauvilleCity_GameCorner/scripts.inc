@@ -979,7 +979,7 @@ MauvilleCity_GameCorner_Text_NoRoomFor50Coins:
 	.string "de volver!$"
 
 MauvilleCity_GameCorner_Text_NoRoomForCoins:
-	.string "Oh?\n"
+	.string "¿Eh?\n"
 	.string "Tus MONEDAS no caben en el MONEDERO...$"
 
 MauvilleCity_GameCorner_Text_DontNeedCoinsThen:

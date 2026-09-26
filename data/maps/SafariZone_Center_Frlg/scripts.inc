@@ -24,8 +24,8 @@ SafariZone_Center_Text_RestHouse::
 SafariZone_Center_Text_PressStartToCheckTime::
 	.string "CONSEJOS DE ENTRENADOR\p"
 	.string "Presiona START para ver\n"
-	.string "remaining time.$"
+	.string "el tiempo restante.$"
 
 SafariZone_Center_Text_CenterArea::
-	.string "CENTER AREA$"
+	.string "ÁREA CENTRAL$"
 

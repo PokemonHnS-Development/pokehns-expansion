@@ -249,7 +249,7 @@ RocketHideout_B1F_Text_CameraGrunt1Seen:
     .string "¡Alerta de intruso!$"
 
 RocketHideout_B1F_Text_CameraGrunt1Beaten:
-    .string "Dang... I failed...$"
+    .string "Rayos... Fallé...$"
 
 RocketHideout_B1F_Text_CameraGrunt2Seen:
     .string "¡Es mi turno! ¡No hay escapatoria!$"
@@ -282,10 +282,10 @@ RocketHideout_B1F_Text_ScientistJedAfter:
     .string "teletransportado a la entrada.$"
 
 RocketHideout_B1F_Text_GruntM16Seen:
-    .string "Heheh. Feeling lucky, punk?$"
+    .string "Jeje. ¿Te sientes con suerte, chico?$"
 
 RocketHideout_B1F_Text_GruntM16Beaten:
-    .string "Kaboom!$"
+    .string "¡Boom!$"
 
 RocketHideout_B1F_Text_GruntM16After:
     .string "Ni siquiera sé dónde están\n"
@@ -361,7 +361,7 @@ RocketHideout_B1F_Text_NothingThere:
 	.string "Un panel extraño... Nada aquí.$"
 
 RocketHideout_B1F_Text_SecretSwitch:
-    .string "A secret switch! Better press it.$"
+    .string "¡Un interruptor secreto! Mejor pulsarlo.$"
 
 RocketHideout_B1F_Text_SwitchOff:
     .string "El interruptor está apagado.$"

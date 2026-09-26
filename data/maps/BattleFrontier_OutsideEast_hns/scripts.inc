@@ -304,7 +304,7 @@ BattleFrontier_OutsideEast_Text_BelieveInYouBuddy_hns:
 	.string "favoritos si ganas!$"
 
 BattleFrontier_OutsideEast_Text_ZigzagoonLooksVacant_hns:
-	.string "ZIGZAGOON looks vacant...$"
+	.string "ZIGZAGOON parece distraído...$"
 
 BattleFrontier_OutsideEast_Text_PeopleCallMeBusybody_hns:
 	.string "Dicen que soy un entrometido,\n"

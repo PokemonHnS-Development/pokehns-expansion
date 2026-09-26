@@ -28,7 +28,7 @@ CeladonMansion2F_Text_Computer:
 	.string "...$"
 
 CeladonMansion2F_Text_DevOfficeSign:
-	.string "HEART & SOUL DEVELOPMENT OFFICE$"
+	.string "OFICINA DE DESARROLLO HEART & SOUL$"
 
 CeladonMansion2F_EventScript_LilDill::
 	msgbox CeladonMansion2F_Text_LilDill, MSGBOX_NPC

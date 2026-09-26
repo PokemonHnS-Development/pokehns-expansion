@@ -45,7 +45,7 @@ Route1_Text_WorkAtPokeMartTakeSample::
 
 Route1_Text_ComeSeeUsIfYouNeedPokeBalls::
 	.string "Ven a vernos si lo necesitas.\n"
-	.string "POKé BALLS for catching POKéMON.$"
+	.string "POKé BALLS para atrapar POKéMON.$"
 
 Route1_Text_PutPotionAway::
 	.string "{PLAYER} guardó la POCIÓN en\n"
@@ -59,6 +59,6 @@ Route1_Text_CanJumpFromLedges::
 	.string "más rápido.$"
 
 Route1_Text_RouteSign::
-	.string "ROUTE 1\n"
+	.string "RUTA 1\n"
 	.string "PUEBLO PALETA - CIUDAD VERIDIAN$"
 

@@ -168,7 +168,7 @@ VioletCity_Gym_EventScript_Statue2::
 	end
 
 VioletCity_Gym_Text_GymStatue:
-	.string "VIOLET CITY POKéMON GYM$"
+	.string "GIMNASIO POKéMON DE CIUDAD MALVA$"
 
 VioletCity_Gym_Text_GymStatueCertified:
 	.string "GIMNASIO POKéMON CIUDAD MALVA\p"

@@ -1141,7 +1141,7 @@ RustboroCity_Text_MayPassedBrineyWantToBattle:
 	.string "su cabaña junto al mar.\p"
 	.string "¿Cómo va tu POKéDEX,\n"
 	.string "{PLAYER}{KUN}? ¡La mía va muy bien!\p"
-	.string "So...\n"
+	.string "Entonces...\n"
 	.string "¿Qué tal una pequeña batalla?$"
 
 RustboroCity_Text_MayOhHaventRaisedPokemonEnough:
@@ -1204,7 +1204,7 @@ RustboroCity_Text_BrendanIWontGoEasy:
 	.string "ENTRENADOR, ¡pero no tendré piedad!$"
 
 RustboroCity_Text_BrendanDefeat:
-	.string "Hmm...\n"
+	.string "Mmm...\n"
 	.string "Eres bastante bueno.$"
 
 RustboroCity_Text_BrendanMrBrineyHint:
@@ -1222,7 +1222,7 @@ RustboroCity_Text_TunnelNearingCompletion:
 	.string "pintada en rojo encima...$"
 
 RustboroCity_Text_DevonCorpSign:
-	.string "DEVON CORPORATION\p"
+	.string "CORPORACIÓN DEVON\p"
 	.string "“Para todas sus necesidades, lo\n"
 	.string "hacemos todo.”$"
 
@@ -1247,7 +1247,7 @@ RustboroCity_Text_TrainersSchoolSign:
 	.string "POKéMON!$"
 
 RustboroCity_Text_CuttersHouse:
-	.string "CUTTER'S HOUSE$"
+	.string "CASA DEL CORTADOR$"
 
 RustboroCity_Text_DevelopedNewPokenavFeature:
 	.string "He estado creando una función extra\n"
@@ -1269,7 +1269,7 @@ RustboroCity_Text_AddedMatchCallPleaseCallMrStone:
 	.string "Por favor, llama al PRESIDENTE.$"
 
 RustboroCity_Text_PleaseSelectPokenav:
-	.string "Please select the POKéNAV.$"
+	.string "Selecciona el POKéNAV, por favor.$"
 
 RustboroCity_Text_IdBetterGetBackToWork:
 	.string "Bien, mejor vuelvo al trabajo.\n"

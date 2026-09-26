@@ -278,7 +278,7 @@ LavaridgeTown_Gym_B1F_Text_JeffIntro:
 	.string "¡Brillan anticipando mi victoria!$"
 
 LavaridgeTown_Gym_B1F_Text_JeffDefeat:
-	.string "Something didn't go right.$"
+	.string "Algo no salió bien.$"
 
 LavaridgeTown_Gym_B1F_Text_JeffPostBattle:
 	.string "Bueno, ¿y qué? ¡Digo, ¿y qué?\n"

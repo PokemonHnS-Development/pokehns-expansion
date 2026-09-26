@@ -101,7 +101,7 @@ Route12_FishingHouse_EventScript_MagikarpRecordSignRecordSet::
 Route12_FishingHouse_Text_DoYouLikeToFish::
 	.string "Soy el hermano menor del\n"
 	.string "EXPERTO EN PESCA.\p"
-	.string "I simply looove fishing!\n"
+	.string "¡Me encanta, encanta pescar!\n"
 	.string "No soporto ir sin él.\p"
 	.string "Dime, ¿te gusta pescar?$"
 
@@ -123,7 +123,7 @@ Route12_FishingHouse_Text_IfYouCatchBigMagikarpShowMe::
 	.string "Si pescas un MAGIKARP grande \n"
 	.string "con esa CAÑA, quiero verlo.\p"
 	.string "Por más que me encanta pescar,\n"
-	.string "love seeing gigantic MAGIKARP.$"
+	.string "me fascina ver MAGIKARP gigantes.$"
 
 Route12_FishingHouse_Text_OhThatsDisappointing::
 	.string "Oh...\n"
@@ -134,10 +134,10 @@ Route12_FishingHouse_Text_TryFishingBringMeMagikarp::
 	.string "¿Has estado pescando?\p"
 	.string "Prueba a pescar con la\n"
 	.string "CAÑA SÚPER en cualquier agua.\p"
-	.string "You'll find different POKéMON in\n"
+	.string "Encontrarás distintos POKéMON en\n"
 	.string "otros lugares.\p"
 	.string "Ah, y no olvides traerme\n"
-	.string "gigantic MAGIKARP.$"
+	.string "MAGIKARP gigantescos.$"
 
 Route12_FishingHouse_Text_OhMagikarpAllowMeToSee::
 	.string "Oh? {PLAYER}?\n"
@@ -146,11 +146,11 @@ Route12_FishingHouse_Text_OhMagikarpAllowMeToSee::
 
 Route12_FishingHouse_Text_WhoaXInchesTakeThis::
 	.string "... ... ...Whoa!\n"
-	.string "{STR_VAR_2} inches!\p"
+	.string "¡{STR_VAR_2} pulgadas!\p"
 	.string "Tienes un aprecio poco común\n"
 	.string "por lo poético de la pesca!\p"
 	.string "Debes llevarte esto.\n"
-	.string "I insist!$"
+	.string "¡Insisto!$"
 
 Route12_FishingHouse_Text_LookForwardToGreaterRecords::
 	.string "¡Espero ver mejores\n"
@@ -158,15 +158,15 @@ Route12_FishingHouse_Text_LookForwardToGreaterRecords::
 
 Route12_FishingHouse_Text_HuhXInchesSameSizeAsLast::
 	.string "¿Eh?\n"
-	.string "{STR_VAR_2} inches?\p"
+	.string "¿{STR_VAR_2} pulgadas?\p"
 	.string "Es del mismo tamaño que el\n"
-	.string "I saw before.$"
+	.string "que vi antes.$"
 
 Route12_FishingHouse_Text_HmmXInchesDoesntMeasureUp::
 	.string "Hmm...\n"
 	.string "Este mide {STR_VAR_2} pulgadas.\p"
 	.string "No llega a medir lo\n"
-	.string "{STR_VAR_3}-inch one you brought before.$"
+	.string "de {STR_VAR_3} pulgadas de antes.$"
 
 Route12_FishingHouse_Text_DoesntLookLikeMagikarp::
 	.string "Eh... Eso no parece muy\n"
@@ -180,7 +180,7 @@ Route12_FishingHouse_Text_NoRoomForGift::
 Route12_FishingHouse_Text_MostGiganticMagikarpXInches::
 	.string "El MAGIKARP más gigantesco\n"
 	.string "que he visto jamás...\p"
-	.string "{STR_VAR_3} inches!$"
+	.string "¡{STR_VAR_3} pulgadas!$"
 
 Route12_FishingHouse_Text_BlankChartOfSomeSort::
 	.string "Es una tabla en blanco.\p"

@@ -14,7 +14,7 @@ Route47_Text_HikerSeen::
 	.string "¡así que vamos!$"
 
 Route47_Text_HikerBeaten::
-	.string "Wahaha!$"
+	.string "¡Jajaja!$"
 
 Route47_Text_HikerAfter::
 	.string "Tras una batalla siempre debes irte\n"

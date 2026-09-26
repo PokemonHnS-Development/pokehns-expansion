@@ -95,7 +95,7 @@ Route10_Text_PokefanmRobertAfter:
 	.string "No olvidaré esto...$"
 
 Route10_Text_PowerPlant:
-	.string "POWER PLANT$"
+	.string "CENTRAL ENERGÍA$"
 
 Route10_Text_Sign:
 	.string "RUTA 10\p"

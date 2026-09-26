@@ -19,7 +19,7 @@ SixIsland_EventScript_IslandSign::
 	end
 
 SixIsland_Text_IslandSign::
-	.string "SIX ISLAND\n"
+	.string "ISLA SEIS\n"
 	.string "Isla Fortuna de la Sabiduría$"
 
 SixIsland_Text_ThatWayToWaterPathRuinValley::
@@ -30,5 +30,5 @@ SixIsland_Text_ThatWayToWaterPathRuinValley::
 
 SixIsland_Text_SkyAtNightIsFantastic::
 	.string "Cuando estás tan lejos de la\n"
-	.string "city, the sky at night is fantastic.$"
+	.string "ciudad, el cielo nocturno es fantástico.$"
 

@@ -26,7 +26,7 @@ SaffronCity_House_EventScript_Letter::
 SaffronCity_House_Text_DontLookAtMyLetter::
 	.string "...Gracias por escribir.\n"
 	.string "¡Espero verte pronto!\p"
-	.string "...Hey!\n"
+	.string "¡...Oye!\n"
 	.string "¡No mires mi carta!$"
 
 SaffronCity_House_Text_Pidgey::
@@ -34,7 +34,7 @@ SaffronCity_House_Text_Pidgey::
 
 SaffronCity_House_Text_GettingCopycatPokeDoll::
 	.string "¡La IMITADORA es linda!\n"
-	.string "I'm getting her a POKé DOLL.$"
+	.string "Le compraré un POKé MUÑECO.$"
 
 SaffronCity_House_Text_ExplainPPUp::
 	.string "Me regalaron un PP UP.\p"

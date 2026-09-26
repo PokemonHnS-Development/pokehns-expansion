@@ -51,7 +51,7 @@ FuchsiaCity_PokemonCenter1F_Text_CooltrainerF:
 	.string "se veían idénticas.$"
 
 FuchsiaCity_PokemonCenter1F_Text_JanineImpersonator1:
-	.string "I'm JANINE! Hocus-pocus... Poof!$"
+	.string "¡Soy JANINE! Abracadabra... ¡Puf!$"
 
 FuchsiaCity_PokemonCenter1F_Text_JanineImpersonator2:
 	.string "¿Ves? ¡Ahora me veo igual que ella!$"

@@ -949,7 +949,7 @@ Route110_TrickHousePuzzle5_Text_Mechadoll2Quiz1:
 Route110_TrickHousePuzzle5_Text_Mechadoll2Quiz2:
 	.string "CUESTIONARIO MECHADOLL 2.\p"
 	.string "¿Cuál de estos POKéMON perseguía\n"
-	.string "PROF. BIRCH?$"
+	.string "¿PROF. BIRCH?$"
 
 Route110_TrickHousePuzzle5_Text_Mechadoll2Quiz3:
 	.string "CUESTIONARIO MECHADOLL 2.\p"
@@ -962,7 +962,7 @@ Route110_TrickHousePuzzle5_Text_Mechadoll3Intro:
 Route110_TrickHousePuzzle5_Text_Mechadoll3Quiz1:
 	.string "TRIVIA DE MECHADOLL 3.\p"
 	.string "¿Qué cuesta más?\n"
-	.string "Three HARBOR MAILS or one BURN HEAL?$"
+	.string "¿Tres CARTAS PUERTO o un ANTIQUEMAR?$"
 
 Route110_TrickHousePuzzle5_Text_Mechadoll3Quiz2:
 	.string "CONCURSO DE MECHADOLL 3.\pVende una SUPER BALL y compra\nuna POCIÓN. ¿Cuánto dinero queda?$"

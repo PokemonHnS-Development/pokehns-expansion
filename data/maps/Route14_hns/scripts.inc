@@ -401,7 +401,7 @@ Route14_Text_Pidgeotto:
 Route14_Text_PidgeottoBerry:
 	.string "¿Dar una BAYA al PIDGEOTTO?$"
 Route14_Text_PidgeottoAteBerry:
-	.string "PIDGEOTTO enjoyed the QUALOT BERRY!$"
+	.string "¡PIDGEOTTO disfrutó la BAYA QUALOT!$"
 Route14_Text_PidgeottoTurnedAway:
 	.string "¡A PIDGEOTTO no le gusta!$"
 

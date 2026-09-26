@@ -10,9 +10,9 @@ Route2_EventScript_DiglettsCaveSign::
 	end
 
 Route2_Text_RouteSign::
-	.string "ROUTE 2\n"
+	.string "RUTA 2\n"
 	.string "CIUDAD VERIDIAN - CIUDAD PLATEADA$"
 
 Route2_Text_DiglettsCave::
-	.string "DIGLETT'S CAVE$"
+	.string "CUEVA DIGLETT$"
 

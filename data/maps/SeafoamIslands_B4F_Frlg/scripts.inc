@@ -199,7 +199,7 @@ Text_RockSlideTeach::
 	.string "¿Te lo imaginas?\n"
 	.string "¿Rocas cayendo sobre ti?\p"
 	.string "¡Sería como, guaaaaaah!\n"
-	.string "Total terror!\p"
+	.string "¡Terror total!\p"
 	.string "Parece que no tienes miedo.\n"
 	.string "¿Quieres probar AVALANCHA?$"
 
@@ -208,11 +208,11 @@ Text_RockSlideDeclined::
 
 Text_RockSlideWhichMon::
 	.string "¿A qué POKéMON le enseño\n"
-	.string "ROCK SLIDE?$"
+	.string "¿AVALANCHA?$"
 
 Text_RockSlideTaught::
 	.string "Podría dar miedo usarla aquí\n"
-	.string "tunnel...$"
+	.string "túnel...$"
 
 SeafoamIslands_B4F_Text_BouldersMightChangeWaterFlow::
 	.string "Pista: Las rocas podrían cambiar\n"
@@ -220,5 +220,5 @@ SeafoamIslands_B4F_Text_BouldersMightChangeWaterFlow::
 
 SeafoamIslands_B4F_Text_DangerFastCurrent::
 	.string "PELIGRO\n"
-	.string "Fast current!$"
+	.string "¡Corriente rápida!$"
 

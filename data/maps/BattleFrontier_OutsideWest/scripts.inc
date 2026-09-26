@@ -453,23 +453,23 @@ BattleFrontier_OutsideWest_Text_FinallyArrivedAtFrontier:
 	.string "mi aspecto y habilidad!$"
 
 BattleFrontier_OutsideWest_Text_SquareFilledWithToughPeople:
-	.string "Munch, munch...\p"
+	.string "Ñam, ñam...\p"
 	.string "Parece que esta plaza está llena\n"
 	.string "de gente fuerte.\p"
-	.string "Munch, munch...$"
+	.string "Ñam, ñam...$"
 
 BattleFrontier_OutsideWest_Text_MetOlderGirlAtPike:
-	.string "Crunch, munch...\p"
+	.string "Ñam, ñam...\p"
 	.string "Hace poco conocí a una chica mayor\n"
 	.string "en el BATTLE PIKE.\p"
 	.string "Tenía unos ojos que daban miedo\n"
 	.string "de una forma muy malhumorada.\p"
-	.string "Crunch, munch...\p"
+	.string "Ñam, ñam...\p"
 	.string "Se puso furiosa: “¿Vas a dejar de\n"
 	.string "¡comiendo!”. Luego me dio una paliza.\p"
 	.string "Fue una experiencia aterradora\n"
 	.string "y espeluznante, la verdad.\p"
-	.string "Crunch, munch...$"
+	.string "Ñam, ñam...$"
 
 BattleFrontier_OutsideWest_Text_LastTimeOurEyesMet:
 	.string "¿Eh? ¿Te escuchas a ti mismo?\n"

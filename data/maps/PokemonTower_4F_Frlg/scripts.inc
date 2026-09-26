@@ -38,7 +38,7 @@ PokemonTower_4F_Text_LaurelPostBattle::
 	.string "los fantasmas...$"
 
 PokemonTower_4F_Text_JodyIntro::
-	.string "Huhuhu...\n"
+	.string "Jujuju...\n"
 	.string "¡No me pegues!$"
 
 PokemonTower_4F_Text_JodyDefeat::
@@ -46,6 +46,6 @@ PokemonTower_4F_Text_JodyDefeat::
 	.string "¿Quién? ¿Qué?$"
 
 PokemonTower_4F_Text_JodyPostBattle::
-	.string "May the departed POKéMON rest in\n"
-	.string "peace...$"
+	.string "Que los POKéMON difuntos descansen\n"
+	.string "en paz...$"
 

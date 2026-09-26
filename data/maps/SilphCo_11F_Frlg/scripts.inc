@@ -133,23 +133,23 @@ SilphCo_11F_EventScript_Grunt2::
 	end
 
 SilphCo_11F_Text_ThanksForSavingMeDearBoy::
-	.string "PRESIDENT: Oh, dear boy!\n"
+	.string "PRESIDENTE: ¡Oh, buen chico!\n"
 	.string "Gracias por salvar a SILPH.\p"
 	.string "Nunca olvidaré que nos\n"
 	.string "salvaste en el peligro.\p"
 	.string "de peligro.\p"
 	.string "Como soy rico, puedo darte\n"
-	.string "anything.\p"
+	.string "cualquier cosa.\p"
 	.string "Toma, quizás esto sirva.$"
 
 SilphCo_11F_Text_ThanksForSavingMeDearGirl::
-	.string "PRESIDENT: Oh, dear girl!\n"
+	.string "PRESIDENTE: ¡Oh, buena chica!\n"
 	.string "Gracias por salvar a SILPH.\p"
 	.string "Nunca olvidaré que nos\n"
 	.string "salvaste en el peligro.\p"
 	.string "de peligro.\p"
 	.string "Como soy rico, puedo darte\n"
-	.string "anything.\p"
+	.string "cualquier cosa.\p"
 	.string "Toma, quizás esto sirva.$"
 
 SilphCo_11F_Text_ObtainedMasterBallFromPresident::
@@ -158,11 +158,11 @@ SilphCo_11F_Text_ObtainedMasterBallFromPresident::
 
 SilphCo_11F_Text_ThatsOurSecretPrototype::
 	.string "PRESIDENTE: No puedes comprar\n"
-	.string "anywhere.\p"
+	.string "en ningún sitio.\p"
 	.string "Es nuestro prototipo secreto\n"
 	.string "BALL.\p"
-	.string "It will catch any POKéMON without\n"
-	.string "fail!\p"
+	.string "Atrapará a cualquier POKéMON sin\n"
+	.string "¡fallar!\p"
 	.string "Mejor no hables de usarlo,\n"
 	.string "su voz.$"
 
@@ -181,27 +181,27 @@ SilphCo_11F_Text_GiovanniIntro::
 	.string "El PRESIDENTE y yo estamos\n"
 	.string "un asunto de negocios vital.\p"
 	.string "No te metas en asuntos de\n"
-	.string "matters...\p"
+	.string "adultos...\p"
 	.string "adultos, ¡o sufrirás!$"
 
 SilphCo_11F_Text_GiovanniDefeat::
-	.string "Arrgh!!\n"
-	.string "I lost again!?$"
+	.string "¡Arrgh!\n"
+	.string "¿¡Perdí otra vez!?$"
 
 SilphCo_11F_Text_GiovanniPostBattle::
 	.string "¡Maldición!\n"
 	.string "¡Arruinaste los planes de SILPH!\p"
 	.string "¡Pero el EQUIPO ROCKET jamás\p"
-	.string "{PLAYER}! Never forget that all\n"
-	.string "POKéMON exist for TEAM ROCKET!\p"
-	.string "I must go, but I shall return!$"
+	.string "{PLAYER}! ¡Nunca olvides que todos\n"
+	.string "¡los POKéMON existen por el TEAM ROCKET!\p"
+	.string "¡Debo irme, pero volveré!$"
 
 SilphCo_11F_Text_Grunt2Intro::
-	.string "Stop right there!\n"
-	.string "Don't you move!$"
+	.string "¡Alto ahí!\n"
+	.string "¡No te muevas!$"
 
 SilphCo_11F_Text_Grunt2Defeat::
-	.string "Don't...\n"
+	.string "No...\n"
 	.string "¡Por favor!$"
 
 SilphCo_11F_Text_Grunt2PostBattle::
@@ -217,7 +217,7 @@ SilphCo_11F_Text_Grunt1Defeat::
 
 SilphCo_11F_Text_Grunt1PostBattle::
 	.string "Cuidado por donde pisas...\n"
-	.string "My BOSS likes his POKéMON tough!$"
+	.string "¡A mi JEFE le gustan los POKéMON duros!$"
 
 SilphCo_11F_Text_MonitorHasMonsOnIt::
 	.string "The monitor has POKéMON on it!$"

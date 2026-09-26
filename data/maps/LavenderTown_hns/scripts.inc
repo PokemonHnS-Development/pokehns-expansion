@@ -43,7 +43,7 @@ LavenderTown_Text_PokefanM:
 	.string "Es la TORRE RADIO de KANTO.$"
 
 LavenderTown_Text_Teacher:
-	.string "KANTO has many good radio shows.$"
+	.string "KANTO tiene buenos programas de radio.$"
 
 LavenderTown_Text_Gramps:
 	.string "La gente viene de todas partes para\n"

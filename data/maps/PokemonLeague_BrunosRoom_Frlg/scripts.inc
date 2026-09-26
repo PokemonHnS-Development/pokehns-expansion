@@ -114,32 +114,32 @@ PokemonLeague_BrunosRoom_EventScript_BrunoLookAwayDown::
 
 PokemonLeague_BrunosRoom_Text_Intro::
 	.string "¡Soy BRUNO del ALTO MANDO!\p"
-	.string "Through rigorous training, people\n"
-	.string "and POKéMON can become stronger\l"
-	.string "without limit.\p"
+	.string "Con un entrenamiento riguroso, la gente\n"
+	.string "y los POKéMON pueden volverse más\l"
+	.string "fuertes sin límite.\p"
 	.string "He vivido y entrenado con mi\n"
-	.string "fighting POKéMON!\l"
+	.string "¡POKéMON luchador!\l"
 	.string "¡Y eso nunca cambiará!\p"
 	.string "¡{PLAYER}!\p"
 	.string "Te desgastaremos con nuestra\n"
-	.string "superior power!\p"
-	.string "Hoo hah!{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
+	.string "¡fuerza superior!\p"
+	.string "¡Jua, ja!{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
 
 PokemonLeague_BrunosRoom_Text_RematchIntro::
 	.string "¡Soy BRUNO del ALTO MANDO!\p"
-	.string "Through rigorous training, people\n"
-	.string "and POKéMON can become stronger\l"
-	.string "without limit.\p"
+	.string "Con un entrenamiento riguroso, la gente\n"
+	.string "y los POKéMON pueden volverse más\l"
+	.string "fuertes sin límite.\p"
 	.string "He vivido y entrenado con mi\n"
-	.string "fighting POKéMON!\l"
+	.string "¡POKéMON luchador!\l"
 	.string "¡Y eso nunca cambiará!\p"
 	.string "¡{PLAYER}!\p"
 	.string "Te desgastaremos con nuestra\n"
-	.string "superior power!\p"
-	.string "Hoo hah!{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
+	.string "¡fuerza superior!\p"
+	.string "¡Jua, ja!{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
 
 PokemonLeague_BrunosRoom_Text_Defeat::
-	.string "Why?\n"
+	.string "¿Por qué?\n"
 	.string "¿Cómo pude perder?$"
 
 PokemonLeague_BrunosRoom_Text_PostBattle::

@@ -111,7 +111,7 @@ VerdanturfTown_Text_TownSign:
 	.string "con dulce fragancia a hierba.$"
 
 VerdanturfTown_Text_WandasHouse:
-	.string "WANDA'S HOUSE$"
+	.string "CASA DE WANDA$"
 
 VerdanturfTown_Text_BattleTentSign:
 	.string "TIENDA BATALLA CAMPO VERDE\n"

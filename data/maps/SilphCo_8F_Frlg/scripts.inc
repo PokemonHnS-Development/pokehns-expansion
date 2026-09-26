@@ -63,7 +63,7 @@ SilphCo_8F_Text_ParkerDefeat::
 
 SilphCo_8F_Text_ParkerPostBattle::
 	.string "¿Qué te parece SILPH?\n"
-	.string "BUILDING's maze?$"
+	.string "laberinto del edificio?$"
 
 SilphCo_8F_Text_Grunt2Intro::
 	.string "Soy uno de los cuatro ROCKET\n"
@@ -71,7 +71,7 @@ SilphCo_8F_Text_Grunt2Intro::
 
 SilphCo_8F_Text_Grunt2Defeat::
 	.string "Whoo!\n"
-	.string "Oh, Brothers!$"
+	.string "¡Oh, hermanos!$"
 
 SilphCo_8F_Text_Grunt2PostBattle::
 	.string "Te dejo en manos de mis hermanos.$"

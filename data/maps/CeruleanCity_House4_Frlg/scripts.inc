@@ -94,7 +94,7 @@ CeruleanCity_House4_Text_NothingEntertaining::
 	.string "Suspiro...\n"
 	.string "Tanto tiempo, tan poco que hacer...\p"
 	.string "¿No pasa nada interesante\n"
-	.string "anywhere?$"
+	.string "en ningún sitio?$"
 
 CeruleanCity_House4_Text_NewNewsInformativeHaveThis::
 	.string "Ah!\n"
@@ -110,8 +110,8 @@ CeruleanCity_House4_Text_NewNewsInformativeHaveThis::
 CeruleanCity_House4_Text_IncredibleNewsHaveBerries::
 	.string "Oh, oh!\n"
 	.string "¡E-esta noticia!\p"
-	.string "Hmm...\p"
-	.string "Amazing!\n"
+	.string "Hum...\p"
+	.string "¡Increíble!\n"
 	.string "¡Qué noticia tan increíble!\p"
 	.string "No he visto una noticia tan\n"
 	.string "increíble en mucho tiempo!\p"
@@ -126,21 +126,21 @@ CeruleanCity_House4_Text_WishCouldShareNewsWithOthers::
 
 CeruleanCity_House4_Text_ThanksForSpreadingNewsTakeThis::
 	.string "Ah, ¿esparciste la noticia por mí?\p"
-	.string "Good news becomes worthwhile when\n"
+	.string "Una buena noticia vale la pena cuando\n"
 	.string "toda clase de gente la comparte.\p"
 	.string "Como agradecimiento por correr\n"
 	.string "la voz, ¡toma esto!$"
 
 CeruleanCity_House4_Text_MagnificentNewsSpreadHaveBerries::
 	.string "¿Sigues corriendo la voz?\n"
-	.string "Magnificent!\p"
+	.string "¡Magnífico!\p"
 	.string "Esa noticia debe estar\n"
 	.string "encantada de circular tanto.\p"
 	.string "¡Así es!\p"
 	.string "Considera esto una muestra\n"
-	.string "appreciation from me and the news.\p"
-	.string "I'll give you more BERRIES than\n"
-	.string "I usually do.$"
+	.string "de agradecimiento mío y de las noticias.\p"
+	.string "Te daré más BAYAS de lo que\n"
+	.string "suelo dar.$"
 
 CeruleanCity_House4_Text_EnjoyingMyselfWithAllSortsOfNews::
 	.string "Me la estoy pasando muy bien con\n"

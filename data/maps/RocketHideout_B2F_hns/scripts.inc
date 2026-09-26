@@ -788,7 +788,7 @@ RocketHideout_B2F_Text_GruntM18Seen:
     .string "esto, pero debo eliminarte.$"
 
 RocketHideout_B2F_Text_GruntM18Beaten:
-    .string "I knew I'd lose...$"
+    .string "Sabía que iba a perder...$"
 
 RocketHideout_B2F_Text_GruntM18After:
     .string "Me barrieron en la última\n"

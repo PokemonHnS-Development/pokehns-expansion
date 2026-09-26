@@ -64,7 +64,7 @@ ThreeIsland_DunsparceTunnel_Text_StruckGoldThisIsForYou::
 	.string "Te acordabas de que estaba\n"
 	.string "buscando oro, ¿verdad?\p"
 	.string "No puedes ni imaginar\n"
-	.string "how happy I am.\p"
+	.string "lo feliz que soy.\p"
 	.string "¡Así que te lo mostraré!\n"
 	.string "¡Esto es para ti!$"
 

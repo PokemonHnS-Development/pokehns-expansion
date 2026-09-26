@@ -325,7 +325,7 @@ TrainerHill_Entrance_Text_TimeProgessGetSetGo:
 	.string "¡Mucha suerte!\p"
 	.string "En sus marcas...\p"
 	.string "Listos...\p"
-	.string "Go!$"
+	.string "¡Ya!$"
 
 TrainerHill_Entrance_Text_PleaseVisitUsAgain:
 	.string "¡Vuelve a visitarnos pronto!$"
@@ -351,7 +351,7 @@ TrainerHill_Entrance_Text_ThankYouForPlaying:
 
 TrainerHill_Entrance_Text_ExplainTrainerHill:
 	.string "Aquí en TRAINER HILL, hacemos\n"
-	.string "un evento llamado Time Attack.\p"
+	.string "un evento llamado contrarreloj.\p"
 	.string "Es una carrera que mide cuánto\n"
 	.string "tardas en llegar al dueño en\l"
 	.string "la azotea desde este mostrador.\p"

@@ -76,7 +76,7 @@ BillHouse_Text_CountingOnYou:
     .string "¡Cuídalo bien!$"
 
 BillHouse_Text_ReceivedEevee:
-    .string "{PLAYER} received EEVEE!$"
+    .string "{PLAYER} recibió a EEVEE!$"
 
 BillHouse_Text_EeveeMayEvolve:
     .string "BILL: El PROF.ELM dice que EEVEE\n"
@@ -114,7 +114,7 @@ BillHouse_Text_SisterUsefulNumber:
     .string "útil para ti.$"
 
 BillHouse_Text_RecordedBillsNumber:
-    .string "{PLAYER} recorded BILL's number.$"
+    .string "{PLAYER} registró el número de BILL.$"
 
 BillHouse_Text_SisterRefusedNumber:
     .string "Mi hermano creó el PC POKéMON\n"

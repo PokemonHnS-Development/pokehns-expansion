@@ -508,7 +508,7 @@ GoldenrodCity_GameCorner_PrizeRoom_Text_TM35:
 	.string "LANZALLAMAS{CLEAR_TO 0x58}4,000 C.$"
 
 GoldenrodCity_GameCorner_PrizeRoom_Text_Cancel:
-	.string "EXIT$"
+	.string "SALIR$"
 
 GoldenrodCity_GameCorner_PrizeRoom_Text_SoYourChoiceIsTM:
 	.string "Entonces tu elección es\n"
@@ -588,7 +588,7 @@ GoldenrodCity_GameCorner_Text_PlayerObtainedTheMon:
 	.string "¡{PLAYER} obtuvo {STR_VAR_1}!$"
 
 GoldenrodGamecorner_Text_GiveNicknameToThisMon:
-	.string "Nickname {STR_VAR_1}?$"
+	.string "¿Apodo {STR_VAR_1}?$"
 
 GoldenrodCity_GameCorner_Text_PrizeVendorIntro:
     .string "¡Bienvenido!\p"
@@ -817,7 +817,7 @@ GoldenrodCity_GameCorner_Text_VF_OptAboutNotes:
 	.string "SOBRE NOTAS$"
 
 GoldenrodCity_GameCorner_Text_VF_OptReturn:
-	.string "RETURN$"
+	.string "VOLVER$"
 
 @ Voltorb Flip Dialogue Strings
 GoldenrodCity_GameCorner_Text_VF_Welcome:

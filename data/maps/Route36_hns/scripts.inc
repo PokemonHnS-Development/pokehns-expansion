@@ -233,14 +233,14 @@ Route36_Movement_SudoWoodo:
 	step_end
 
 Route36_Text_UseSquirtbottle:
-	.string "Use SQUIRTBOTTLE?$"
+	.string "¿Usar SQUIRTBOTTLE?$"
 
 Route36_Text_UsedSquirtbottle:
 	.string "{PLAYER} usó la BOTELLA DE AGUA.$"
 
 Route36_Text_SudowoodoAttacked:
 	.string "¡Al árbol raro no le gusta la\n"
-	.string "SQUIRTBOTTLE!\p"
+	.string "¡SQUIRTBOTTLE!\p"
 	.string "¡El árbol raro atacó!$"
 
 Route36_Text_RockSmashGuy1:
@@ -291,7 +291,7 @@ Route36_Text_SchoolboyAlan1Seen:
 	.string "listo para cualquier POKéMON!$"
 
 Route36_Text_SchoolboyAlan1Beaten:
-	.string "Oops! Computation error?$"
+	.string "¡Ups! ¿Error de cálculo?$"
 
 Route36_Text_SchoolboyAlanAfter:
 	.string "Rayos. Estudio cinco horas al día.\p"
@@ -320,7 +320,7 @@ Route36_Text_ArthurThursday:
 	.string "Soy el quinto hijo de siete.$"
 
 Route36_Text_Sign:
-	.string "ROUTE 36$"
+	.string "RUTA 36$"
 
 Route36_Text_Sign_RuinsNorth:
 	.string "RUINAS ALFA\n"
@@ -351,7 +351,7 @@ Route36_Text_AlanRematchIntro:
 	.string "listo para cualquier POKéMON!$"
 
 Route36_Text_AlanRematchDefeat:
-	.string "Oops! Computation error?$"
+	.string "¡Ups! ¿Error de cálculo?$"
 
 Route36_Text_AlanPostRematch:
 	.string "Rayos. Estudio cinco horas al día.\p"

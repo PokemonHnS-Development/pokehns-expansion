@@ -222,7 +222,7 @@ GoldenrodDeptStore_Text_NotEnoughMoney:
 	.string "No tienes dinero suficiente...$"
 
 GoldenrodDeptStore_Text_DecidedAgainstBuyingDrink:
-	.string "Decided against buying a drink.$"
+	.string "Decidiste no comprar una bebida.$"
 
 GoldenrodDeptStore_Text_2FDirectory:
     .string "Tu Compañero de Viaje\p"

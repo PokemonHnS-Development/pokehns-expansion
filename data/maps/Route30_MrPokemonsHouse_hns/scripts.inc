@@ -159,7 +159,7 @@ MrPokemonHouse_Text_Intro2:
 	.string "PROF.ELM examine.$"
 
 MrPokemonHouse_Text_GotEgg:
-	.string "{PLAYER} received MYSTERY EGG.$"
+	.string "{PLAYER} recibió el HUEVO MISTERIOSO.$"
 
 MrPokemonHouse_Text_Intro3:
 	.string "Conozco a una pareja que tiene\n"
@@ -219,7 +219,7 @@ MrPokemonHouse_Text_OakIntro:
 	.string "evolucionan y sus movimientos.$"
 
 MrPokemonHouse_Text_GetDex:
-	.string "{PLAYER} received POKéDEX!$"
+	.string "{PLAYER} recibió la POKéDEX!$"
 
 MrPokemonHouse_Text_OakParting:
 	.string "¡Busca muchos tipos de POKéMON y\n"

@@ -118,7 +118,7 @@ CeladonCity_Text_GameCornerIsBadForCitysImage::
 	.string "Es malo para la imagen de nuestra ciudad.$"
 
 CeladonCity_Text_BlewItAllAtSlots::
-	.string "Moan...\n"
+	.string "Uf...\n"
 	.string "¡Me lo gasté todo en las tragamonedas!\p"
 	.string "Sabía que debería haber canjeado mi\n"
 	.string "MONEDAS por premios!$"
@@ -145,23 +145,23 @@ CeladonCity_Text_ExplainXAccuracyDireHit::
 	.string "GOLPE CRÍTICO aumenta la probabilidad\n"
 	.string "de golpes críticos.\p"
 	.string "Consigue tus objetos en CELESTE\n"
-	.string "DEPT. STORE!$"
+	.string "¡GRAN ALMACÉN!$"
 
 CeladonCity_Text_CitySign::
-	.string "CELADON CITY\n"
+	.string "CIUDAD CELESTE\n"
 	.string "La Ciudad de los Sueños Arcoíris$"
 
 CeladonCity_Text_GymSign::
-	.string "CELADON CITY POKéMON GYM\n"
+	.string "GIMNASIO POKéMON DE CIUDAD CELESTE\n"
 	.string "LÍDER: ERIKA\l"
 	.string "¡La Princesa Amante Naturaleza!$"
 
 CeladonCity_Text_MansionSign::
-	.string "CELADON MANSION$"
+	.string "MANSIÓN CELESTE$"
 
 CeladonCity_Text_DeptStoreSign::
 	.string "Encuentra lo que necesitas en el\n"
-	.string "CELADON DEPT. STORE!$"
+	.string "¡GRAN ALMACÉN CELESTE!$"
 
 CeladonCity_Text_GuardSpecProtectsFromStatus::
 	.string "CONSEJOS DE ENTRENADOR\p"
@@ -169,18 +169,18 @@ CeladonCity_Text_GuardSpecProtectsFromStatus::
 	.string "de movimientos que reducen características durante\l"
 	.string "fantástica.\p"
 	.string "Obtén tus objetos en el\n"
-	.string "CELADON DEPT. STORE!$"
+	.string "¡GRAN ALMACÉN CELESTE!$"
 
 CeladonCity_Text_PrizeExchangeSign::
 	.string "¡MONEDAS canjeadas por premios!\n"
-	.string "PRIZE EXCHANGE$"
+	.string "CANJE DE PREMIOS$"
 
 CeladonCity_Text_GameCornerSign::
-	.string "ROCKET GAME CORNER\n"
+	.string "CASINO ROCKET\n"
 	.string "¡El parque de diversiones para adultos!$"
 
 CeladonCity_Text_ScaldedTongueOnTea::
-	.string "Aaaagh, ow...\n"
+	.string "Aaay, ay...\n"
 	.string "¡Me quemé la lengua!\p"
 	.string "Esta simpática señora mayor en la MANSIÓN\n"
 	.string "me dio un poco de TÉ.\p"
@@ -202,7 +202,7 @@ Text_SoftboiledDeclined::
 	.string "Espero que podamos charlar de nuevo.$"
 
 Text_SoftboiledWhichMon::
-	.string "So, who's the POKéMON that gets\n"
+	.string "Entonces, ¿a qué POKéMON le daré\n"
 	.string "la oportunidad de aprender HUEVO BLANDO?$"
 
 Text_SoftboiledTaught::

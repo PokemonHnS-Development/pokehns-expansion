@@ -69,12 +69,12 @@ OneIsland_KindleRoad_EmberSpa_Text_EnjoyBowlOfChowder::
 OneIsland_KindleRoad_EmberSpa_Text_WaterExquisiteFullyRefreshed::
 	.string "El agua está perfecta.\n"
 	.string "Se siente exquisito...\p"
-	.string "{PLAYER} and the POKéMON were\n"
-	.string "fully refreshed!$"
+	.string "{PLAYER} y los POKéMON se\n"
+	.string "¡sintieron totalmente renovados!$"
 
 OneIsland_KindleRoad_EmberSpa_Text_HotSpringIsTherapeutic::
 	.string "Remojarse en un agua termal es\n"
-	.string "therapeutic, people say.$"
+	.string "terapéutico, según dicen.$"
 
 OneIsland_KindleRoad_EmberSpa_Text_SeeHowSmoothMySkinIs::
 	.string "Mira mi cara.\n"
@@ -84,20 +84,20 @@ OneIsland_KindleRoad_EmberSpa_Text_SeeHowSmoothMySkinIs::
 
 OneIsland_KindleRoad_EmberSpa_Text_BrunoVisitsSpaOnOccasion::
 	.string "Después de un día de duro\n"
-	.string "nothing beats a relaxing soak in\l"
-	.string "the hot spring pool.\p"
-	.string "BRUNO, who's a senior ahead of me,\n"
+	.string "nada mejor que un baño relajante\l"
+	.string "en las termas.\p"
+	.string "BRUNO, que es más veterano,\n"
 	.string "visita el SPA ocasionalmente.\p"
-	.string "BRUNO, que es mayor que yo,\n"
-	.string "suyas como las de sus POKéMON.$"
+	.string "Dice que lo hace para mantener\n"
+	.string "su cuerpo como el de sus POKéMON.$"
 
 OneIsland_KindleRoad_EmberSpa_Text_UsedThisToMakeEmberSpa::
 	.string "Las aguas termales van de la\n"
-	.string "volcanoes.\p"
-	.string "mano con el SPA EMBER, que yo\n"
-	.string "construí hace años.\p"
-	.string "Tallé la piscina de la roca\n"
-	.string "gigantic boulder by hand.\p"
+	.string "mano con los volcanes.\p"
+	.string "Construí el SPA EMBER yo\n"
+	.string "mismo hace ya años.\p"
+	.string "Tallé la piscina de una roca\n"
+	.string "gigante con mis propias manos.\p"
 	.string "Lo usaba en ese entonces.\n"
 	.string "Supongo que puedo cederlo.$"
 

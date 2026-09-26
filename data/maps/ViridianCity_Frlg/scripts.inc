@@ -233,35 +233,35 @@ ViridianCity_EventScript_DoTutorialBattle::
 	return
 
 ViridianCity_Text_CanCarryMonsAnywhere::
-	.string "Those POKé BALLS at your waist!\n"
-	.string "You have POKéMON, don't you?\p"
+	.string "¡Esas POKé BALLS en tu cintura!\n"
+	.string "Tienes POKéMON, ¿verdad?\p"
 	.string "Es genial que puedas llevar y\n"
-	.string "use POKéMON anytime, anywhere.$"
+	.string "usar POKéMON donde y cuando quieras.$"
 
 ViridianCity_Text_GymClosedWonderWhoLeaderIs::
-	.string "This POKéMON GYM is always closed.\p"
+	.string "Este GIMNASIO POKéMON está cerrado.\p"
 	.string "¿Quién será el LÍDER?$"
 
 ViridianCity_Text_ViridiansGymLeaderReturned::
-	.string "VIRIDIAN GYM's LEADER returned!$"
+	.string "¡Volvió el LÍDER del GIMNASIO VERDE!$"
 
 ViridianCity_Text_WantToKnowAboutCaterpillarMons::
 	.string "¿Quieres saber sobre los dos\n"
-	.string "kinds of caterpillar POKéMON?$"
+	.string "tipos de POKéMON oruga?$"
 
 ViridianCity_Text_OhOkayThen::
-	.string "Oh, okay then!$"
+	.string "¡Ah, bueno!$"
 
 ViridianCity_Text_ExplainCaterpieWeedle::
 	.string "CATERPIE no tiene veneno,\n"
 	.string "pero WEEDLE sí.\p"
-	.string "Watch that your POKéMON aren't\n"
-	.string "stabbed by WEEDLE's POISON STING.$"
+	.string "Cuida que tus POKéMON no sean\n"
+	.string "picados por el PICOTAZO de WEEDLE.$"
 
 ViridianCity_Text_GrandpaHasntHadCoffeeYet::
-	.string "Oh, Grandpa!\n"
+	.string "¡Oh, abuelo!\n"
 	.string "¡No seas tan cruel!\p"
-	.string "I'm so sorry.\n"
+	.string "Lo siento mucho.\n"
 	.string "Aún no ha tomado su café.$"
 
 ViridianCity_Text_GoShoppingInPewterOccasionally::
@@ -279,18 +279,18 @@ ViridianCity_Text_ShowYouHowToCatchMons::
 	.string "Bueno, ya me tomé mi café, y\n"
 	.string "¡eso es lo que necesito para irme!\p"
 	.string "Hm?\n"
-	.string "What is that red box you have?\p"
+	.string "¿Qué es esa caja roja que llevas?\p"
 	.string "Ah, así que estás trabajando\n"
 	.string "POKéDEX.\p"
-	.string "Entonces déjame darte unas\npalabras de"
-	.string "advice.\p"
-	.string "Whenever you catch a POKéMON,\n"
-	.string "the POKéDEX automatically updates\l"
-	.string "its data.\p"
+	.string "Entonces déjame darte unos\nconsejos de"
+	.string "entrenador.\p"
+	.string "Cada vez que atrapas un POKéMON,\n"
+	.string "la POKéDEX se actualiza\l"
+	.string "automáticamente.\p"
 	.string "...No sabes cómo atrapar\n"
 	.string "un POKéMON?\p"
 	.string "Supongo que será mejor\nmostrártelo"
-	.string "then!$"
+	.string "¡entonces!$"
 
 ViridianCity_Text_ThatWasEducationalTakeThis::
 	.string "¡Listo! Ahora dime, eso fue\n"
@@ -301,7 +301,7 @@ ViridianCity_Text_WatchThatToLearnBasics::
 	.string "Si hay algo que no entiendas,\n"
 	.string "mira eso.\p"
 	.string "Te enseñará lo básico\n"
-	.string "of being a POKéMON TRAINER.$"
+	.string "de ser un ENTRENADOR POKéMON.$"
 
 ViridianCity_Text_WeakenMonsFirstToCatch::
 	.string "Bueno, ya me tomé mi café, y\n"
@@ -311,7 +311,7 @@ ViridianCity_Text_WeakenMonsFirstToCatch::
 	.string "Por cierto, ¿ya estás llenando\n"
 	.string "POKéDEX?\p"
 	.string "Al principio, enfócate en debilitar\n"
-	.string "POKéMON before trying to catch it.$"
+	.string "al POKéMON antes de intentar atraparlo.$"
 
 ViridianCity_Text_HowsTeachyTVHelping::
 	.string "Bueno, ya me tomé mi café, y\n"
@@ -339,21 +339,21 @@ ViridianCity_Text_CitySign::
 
 ViridianCity_Text_CatchMonsForEasierBattles::
 	.string "CONSEJOS DE ENTRENADOR\p"
-	.string "Catch POKéMON and expand your\n"
-	.string "collection.\p"
+	.string "Atrapa POKéMON y amplía tu\n"
+	.string "colección.\p"
 	.string "Cuanto más tengas, más fácil\n"
 	.string "es batallar.$"
 
 ViridianCity_Text_MovesLimitedByPP::
 	.string "CONSEJOS DE ENTRENADOR\p"
-	.string "The battle moves of POKéMON are\n"
+	.string "Los movimientos de los POKéMON están\n"
 	.string "limitados por sus PUNTOS DE PODER, PP.\p"
 	.string "Para reponer PP, descansa a tu\n"
-	.string "POKéMON at a POKéMON CENTER.$"
+	.string "POKéMON en un CENTRO POKéMON.$"
 
 ViridianCity_Text_GymSign::
-	.string "VIRIDIAN CITY POKéMON GYM$"
+	.string "GIMNASIO POKéMON VERDIANA$"
 
 ViridianCity_Text_GymDoorsAreLocked::
-	.string "VIRIDIAN GYM's doors are locked...$"
+	.string "El GIMNASIO VERDE está cerrado...$"
 

@@ -45,56 +45,56 @@ SaffronCity_CopycatsHouse_2F_EventScript_Game::
 	end
 
 SaffronCity_CopycatsHouse_2F_Text_MimickingFavoriteHobbyMale::
-	.string "{PLAYER}: Hi!\n"
-	.string "Do you like POKéMON?\p"
+	.string "{PLAYER}: ¡Hola!\n"
+	.string "¿Te gustan los POKéMON?\p"
 	.string "{PLAYER}: Eh, no, solo te preguntaba.\p"
-	.string "{PLAYER}: Huh?\n"
+	.string "{PLAYER}: ¿Eh?\n"
 	.string "¡Qué raro eres!\p"
-	.string "COPYCAT: Hmm? Quit mimicking?\n"
+	.string "IMITADORA: ¿Mmm? ¿Dejar de imitar?\n"
 	.string "¡Pero ese es mi pasatiempo favorito!$"
 
 SaffronCity_CopycatsHouse_2F_Text_MimickingFavoriteHobbyFemale::
-	.string "{PLAYER}: Hi.\n"
-	.string "You must like POKéMON.\p"
+	.string "{PLAYER}: Hola.\n"
+	.string "Debes de querer a los POKéMON.\p"
 	.string "{PLAYER}: No, yo no.\n"
 	.string "Te pregunté a ti.\p"
-	.string "{PLAYER}: Pardon?\n"
+	.string "{PLAYER}: ¿Perdón?\n"
 	.string "¡Qué raro eres!\l"
 	.string " \l"
-	.string "COPYCAT: Hmm? Quit mimicking?\l"
+	.string "IMITADORA: ¿Mmm? ¿Dejar de imitar?\l"
 	.string "¡Pero si es mi pasatiempo favorito!$"
 
 Text_MimicTeach::
-	.string "Oh wow!\n"
-	.string "A POKé DOLL!\p"
+	.string "¡Oh, vaya!\n"
+	.string "¡Un POKé MUÑECO!\p"
 	.string "¿Para mí?\n"
 	.string "¡Gracias!\p"
 	.string "¿Sabes qué?\n"
-	.string "I can teach the move MIMIC.$"
+	.string "Puedo enseñarle MIMÉTICO.$"
 
 Text_MimicDeclined::
 	.string "¿No te gusta MIMÉTICO?$"
 
 Text_MimicWhichMon::
-	.string "I really love MIMIC!\n"
+	.string "¡Me encanta MIMÉTICO!\n"
 	.string "¿Quién lo aprenderá?$"
 
 Text_MimicTaughtMale::
-	.string "{PLAYER}: Hi!\n"
+	.string "{PLAYER}: ¡Hola!\n"
 	.string "¡Gracias por lo de antes!\p"
 	.string "{PLAYER}: ¿Perdón?\p"
-	.string "{PLAYER}: ¿Es tan divertido imitar\nmi forma de hablar?"
-	.string "every move?\p"
-	.string "IMITADOR: ¡Claro que sí!\n"
+	.string "{PLAYER}: ¿Es tan divertido imitar\n"
+	.string "cada movimiento mío?\p"
+	.string "IMITADORA: ¡Claro que sí!\n"
 	.string "¡Es divertidísimo!$"
 
 Text_MimicTaughtFemale::
-	.string "{PLAYER}: Hi!\n"
-	.string "Thanks for what you did for us.\p"
+	.string "{PLAYER}: ¡Hola!\n"
+	.string "Gracias por lo que hiciste por mí.\p"
 	.string "{PLAYER}: ¿Perdón?\p"
 	.string "{PLAYER}: ¿De verdad es tan\n"
-	.string "copy what I say and do?\p"
-	.string "IMITADOR: ¡Claro que sí!\n"
+	.string "¿divertido copiarme?\p"
+	.string "IMITADORA: ¡Claro que sí!\n"
 	.string "¡Es divertidísimo!$"
 
 SaffronCity_CopycatsHouse_2F_Text_Doduo::
@@ -103,7 +103,7 @@ SaffronCity_CopycatsHouse_2F_Text_Doduo::
 	.string "¿VES LO LINDA QUE SOY?$"
 
 SaffronCity_CopycatsHouse_2F_Text_RareMonOnlyDoll::
-	.string "This is a rare POKéMON!\n"
+	.string "¡Este es un POKéMON raro!\n"
 	.string "¿Eh? ¡Es solo una muñeca!$"
 
 SaffronCity_CopycatsHouse_2F_Text_MarioWearingABucket::
@@ -113,7 +113,7 @@ SaffronCity_CopycatsHouse_2F_Text_MarioWearingABucket::
 SaffronCity_CopycatsHouse_2F_Text_MySecrets::
 	.string "...\p"
 	.string "Mis secretos!\p"
-	.string "Skill: Mimicry!\n"
-	.string "Hobby: Collecting dolls!\l"
-	.string "Favorite POKéMON: CLEFAIRY!$"
+	.string "¡Habilidad: imitación!\n"
+	.string "Afición: coleccionar muñecos!\l"
+	.string "POKéMON favorito: ¡CLEFAIRY!$"
 

@@ -339,7 +339,7 @@ SlateportCity_PokemonFanClub_Text_ExplainGreenScarf:
 	.string "inteligencia del POKéMON!$"
 
 SlateportCity_PokemonFanClub_Text_ExplainYellowScarf:
-	.string "Let a POKéMON hold that YELLOW SCARF.\p"
+	.string "Que un POKéMON lleve esa BUFANDA AMARILLA.\p"
 	.string "¡Aumentará mucho más la\n"
 	.string "resistencia de tu POKéMON!$"
 

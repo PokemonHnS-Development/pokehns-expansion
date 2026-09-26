@@ -15,12 +15,12 @@ SixIsland_WaterPath_Text_RoseIntro::
 
 SixIsland_WaterPath_Text_RoseDefeat::
 	.string "Ji, ji... Qué lindo eres cuando\n"
-	.string "determined.$"
+	.string "eres decidido.$"
 
 SixIsland_WaterPath_Text_RosePostBattle::
 	.string "Quiero ir al bosque que está\n"
 	.string "allá, pero...\p"
-	.string "There are lots of BUG POKéMON.\n"
+	.string "Hay muchos POKéMON bicho.\n"
 	.string "Me dan un poco de miedo.$"
 
 SixIsland_WaterPath_Text_EdwardIntro::
@@ -48,7 +48,7 @@ SixIsland_WaterPath_Text_SamirPostBattle::
 
 SixIsland_WaterPath_Text_DeniseIntro::
 	.string "Mi novio siempre está ocupado,\n"
-	.string "come swimming by myself.$"
+	.string "vengo a nadar sola.$"
 
 SixIsland_WaterPath_Text_DeniseDefeat::
 	.string "Ay, ¡sabía que esto pasaría!$"
@@ -60,7 +60,7 @@ SixIsland_WaterPath_Text_DenisePostBattle::
 
 SixIsland_WaterPath_Text_EarlIntro::
 	.string "Dime, ¿dónde están las montañas\n"
-	.string "around these parts?$"
+	.string "por estos rumbos?$"
 
 SixIsland_WaterPath_Text_EarlDefeat::
 	.string "Me perdí mientras estaba ocupada\n"
@@ -68,7 +68,7 @@ SixIsland_WaterPath_Text_EarlDefeat::
 
 SixIsland_WaterPath_Text_EarlPostBattle::
 	.string "¿No hay montañas por aquí?\n"
-	.string "these parts?$"
+	.string "por aquí?$"
 
 SixIsland_WaterPath_Text_MiuIntro::
 	.string "MIU: ¡Hola, POKéMON!\n"
@@ -76,7 +76,7 @@ SixIsland_WaterPath_Text_MiuIntro::
 
 SixIsland_WaterPath_Text_MiuDefeat::
 	.string "MIU: ¡Oh, no!\n"
-	.string "Mommy!$"
+	.string "¡Mami!$"
 
 SixIsland_WaterPath_Text_MiuPostBattle::
 	.string "MIU: Me pone muy triste\n"
@@ -96,7 +96,7 @@ SixIsland_WaterPath_Text_MiaDefeat::
 
 SixIsland_WaterPath_Text_MiaPostBattle::
 	.string "MIA: Ohh...\n"
-	.string "I'm sorry, my POKéMON...$"
+	.string "Perdón, mi POKéMON...$"
 
 SixIsland_WaterPath_Text_MiaNotEnoughMons::
 	.string "MIA: Oh, solo tienes uno\n"
@@ -104,10 +104,10 @@ SixIsland_WaterPath_Text_MiaNotEnoughMons::
 	.string "¿No te sientes solo?$"
 
 SixIsland_WaterPath_Text_WantedUltimateHorn::
-	.string "Wanted!\n"
+	.string "¡Se busca!\n"
 	.string "¡El Cuerno Definitivo!$"
 
 SixIsland_WaterPath_Text_RouteSign::
-	.string "WATER PATH\n"
+	.string "SENDA AGUA\n"
 	.string "Conduce al VALLE RUINA$"
 

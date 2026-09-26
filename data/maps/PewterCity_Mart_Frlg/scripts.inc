@@ -35,12 +35,12 @@ PewterCity_Mart_Items::
 
 PewterCity_Mart_Text_BoughtWeirdFishFromShadyGuy::
 	.string "Un viejo sospechoso me metió en\n"
-	.string "buying this weird fish POKéMON!\p"
+	.string "comprar este pez POKéMON raro!\p"
 	.string "¡Es debilísimo y costó ¥500!$"
 
 PewterCity_Mart_Text_GoodThingsIfRaiseMonsDiligently::
 	.string "Pueden pasar cosas buenas si subes\n"
-	.string "POKéMON diligently.\p"
+	.string "POKéMON con esmero.\p"
 	.string "Hasta los débiles pueden sorprender\n"
 	.string "si no los abandonas.$"
 

@@ -276,7 +276,7 @@ Route110_TrickHouseEnd_Text_AllNightToShoveBoulders:
 	.string "¡en uno, dos, tres lugares!$"
 
 Route110_TrickHouseEnd_Text_AllNightToMakeMechadolls:
-	.string "It took me all night to make MECHADOLLS\n"
+	.string "Tardé toda la noche en hacer MECHADOLLS\n"
 	.string "y otra en pensar el cuestionario...\p"
 	.string "¡Casi eres tan grande como yo por\n"
 	.string "¡en uno, dos lugares!$"

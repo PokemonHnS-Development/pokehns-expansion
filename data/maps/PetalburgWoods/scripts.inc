@@ -382,7 +382,7 @@ PetalburgWoods_Text_YoureLoadedWithItems:
 
 PetalburgWoods_Text_GoBugPokemonTeam:
 	.string "¡Atrapé muchísimos POKéMON!\p"
-	.string "Go, go, go!\n"
+	.string "¡Vamos, vamos, vamos!\n"
 	.string "¡Mi equipo de POKéMON bicho!$"
 
 PetalburgWoods_Text_ICouldntWin:
@@ -447,8 +447,8 @@ PetalburgWoods_Text_TryUsingThisItem:
 
 PetalburgWoods_Text_MiracleSeedExplanation:
 	.string "Es una SEMILLA MILAGRO.\n"
-	.string "Si un POKéMON lo lleva, su\l"
-	.string "GRASS-type moves become stronger.\p"
+	.string "Si un POKéMON lo lleva, sus\l"
+	.string "movimientos de tipo PLANTA suben.\p"
 	.string "Además de la SEMILLA MILAGRO, creo\n"
 	.string "que hay otros objetos útiles para que\l"
 	.string "los POKéMON los lleven.$"
@@ -465,7 +465,7 @@ PetalburgWoods_Text_TrainerTipsExperience:
 
 PetalburgWoods_Text_TrainerTipsPP:
 	.string "CONSEJOS DE ENTRENADOR\p"
-	.string "In addition to Hit Points (HP), POKéMON\n"
+	.string "Además de los Puntos de Salud (PS), los\n"
 	.string "tienen Puntos de Poder (PP) que se\l"
 	.string "usan para hacer ataques en batalla.\p"
 	.string "Si un POKéMON se queda sin PP, debe\n"

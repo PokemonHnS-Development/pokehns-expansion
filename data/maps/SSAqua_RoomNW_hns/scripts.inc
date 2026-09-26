@@ -64,10 +64,10 @@ SSAqua_RoomNW_Text_GentlemanEdwardAfterBattle:
 	.string "¡Solo olvídalo!$"
 
 SSAqua_RoomNW_Text_BurglarCoreySeen:
-	.string "Yeehaw! Lucky!$"
+	.string "¡Yuju! ¡Qué suerte!$"
 
 SSAqua_RoomNW_Text_BurglarCoreyBeaten:
-	.string "How unlucky! I lost!$"
+	.string "¡Qué mala suerte! ¡Perdí!$"
 
 SSAqua_RoomNW_Text_BurglarCoreyAfterBattle:
 	.string "Hallé una moneda linda aquí.\p"

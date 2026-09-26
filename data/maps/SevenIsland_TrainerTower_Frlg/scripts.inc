@@ -35,14 +35,14 @@ SevenIsland_TrainerTower_Text_RodetteDefeat::
 
 SevenIsland_TrainerTower_Text_RodettePostBattle::
 	.string "En algún lugar de esta isla, hay\n"
-	.string "POKéMON are sleeping.\p"
+	.string "POKéMON que duermen.\p"
 	.string "¿Será que están esperando\n"
 	.string "a ti?$"
 
 SevenIsland_TrainerTower_Text_TrainerTowerSign::
-	.string "TRAINER TOWER ENTRANCE\n"
-	.string "Rise to the Challenge, TRAINERS!$"
+	.string "ENTRADA A LA TORRE ENTRENADOR\n"
+	.string "¡Acepta el reto, ENTRENADORES!$"
 
 SevenIsland_TrainerTower_Text_TrainerTowerAhead::
-	.string "TRAINER TOWER AHEAD$"
+	.string "TORRE ENTRENADOR MÁS ADELANTE$"
 

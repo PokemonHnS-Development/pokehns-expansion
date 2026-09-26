@@ -37,11 +37,11 @@ SevenIsland_PokemonCenter_1F_Text_DidYouRideSeagallopHere::
 	.string "¿Montaste en un ferry SEAGALLOP?\n"
 	.string "para llegar acá?\p"
 	.string "Hay al menos diez de esos\n"
-	.string "high-speed ships.\p"
+	.string "barcos de alta velocidad.\p"
 	.string "No sé a dónde van todos,\n"
 	.string "su voz.$"
 
 SevenIsland_PokemonCenter_1F_Text_CheckOutTrainerTower::
 	.string "Si estás seguro, deberías\n"
-	.string "check out TRAINER TOWER.$"
+	.string "visitar la TORRE ENTRENADORES.$"
 

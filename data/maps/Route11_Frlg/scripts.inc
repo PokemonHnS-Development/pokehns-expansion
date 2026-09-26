@@ -6,7 +6,7 @@ Route11_EventScript_DiglettsCaveSign::
 	end
 
 Route11_Text_HugoIntro::
-	.string "Win, lose, or draw!$"
+	.string "¡Ganar, perder o empatar!$"
 
 Route11_Text_HugoDefeat::
 	.string "Atcha!\n"
@@ -17,7 +17,7 @@ Route11_Text_HugoPostBattle::
 	.string "¡Y vivir es jugar!$"
 
 Route11_Text_JasperIntro::
-	.string "Competition!\n"
+	.string "¡Competencia!\n"
 	.string "¡No me canso de esto!$"
 
 Route11_Text_JasperDefeat::
@@ -39,8 +39,8 @@ Route11_Text_EddiePostBattle::
 	.string "No me arrepiento de nada.$"
 
 Route11_Text_BraxtonIntro::
-	.string "Careful!\n"
-	.string "I'm laying down some cables!$"
+	.string "¡Cuidado!\n"
+	.string "¡Estoy tendiendo cables!$"
 
 Route11_Text_BraxtonDefeat::
 	.string "¡Eso fue electrizante!$"
@@ -53,7 +53,7 @@ Route11_Text_DillonIntro::
 	.string "Pero creo que puedo ganar.$"
 
 Route11_Text_DillonDefeat::
-	.string "My POKéMON couldn't win...\n"
+	.string "Mis POKéMON no pudieron ganar...\n"
 	.string "¿No han crecido lo suficiente?$"
 
 Route11_Text_DillonPostBattle::
@@ -81,14 +81,14 @@ Route11_Text_DarianPostBattle::
 
 Route11_Text_YasuIntro::
 	.string "Soy el mejor de mi clase.\n"
-	.string "I train every morning.$"
+	.string "Entreno cada mañana.$"
 
 Route11_Text_YasuDefeat::
-	.string "Darn!\n"
-	.string "My POKéMON need to be stronger!$"
+	.string "¡Rayos!\n"
+	.string "¡Mis POKéMON deben ser más fuertes!$"
 
 Route11_Text_YasuPostBattle::
-	.string "There's a fat POKéMON that comes\n"
+	.string "Hay un POKéMON gordo que baja\n"
 	.string "de las montañas.\p"
 	.string "Apuesto a que sería fuerte si\n"
 	.string "lo atrapas.$"
@@ -108,7 +108,7 @@ Route11_Text_DaveIntro::
 	.string "¡Ya deberían estar listos!$"
 
 Route11_Text_DaveDefeat::
-	.string "Bye-bye!\n"
+	.string "¡Adiós!\n"
 	.string "¡Gracias y adiós!$"
 
 Route11_Text_DavePostBattle::
@@ -116,5 +116,5 @@ Route11_Text_DavePostBattle::
 	.string "¡Mejor busco unos más fuertes!$"
 
 Route11_Text_DiglettsCave::
-	.string "DIGLETT'S CAVE$"
+	.string "CUEVA DIGLETT$"
 

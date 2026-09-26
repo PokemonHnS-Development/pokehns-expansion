@@ -1094,7 +1094,7 @@ BattleFrontier_BattleDomeBattleRoom_Text_SeeYourFrontierPass_hns:
 	.string "Muéstrame tu PASE FRONTERA.$"
 
 BattleFrontier_BattleDomeBattleRoom_Text_ReceivedTacticsSymbol_hns:
-	.string "Se grabó el Símbolo de Táctica en\n"
+	.string "Se grabó el Símbolo de Táctica\n"
 	.string "en el FRONTIER PASS!$"
 
 BattleFrontier_BattleDomeBattleRoom_Text_WontUnderestimateYouNextTime_hns:

@@ -26,5 +26,5 @@ SafariZone_East_Text_PrizeInDeepestPartOfSafariZone::
 SafariZone_East_Text_MyEeveeEvolvedIntoFlareon::
 	.string "Mi EEVEE evolucionó a FLAREON.\p"
 	.string "Pero, el EEVEE de un amigo se\ntornó en un..."
-	.string "VAPOREON. I wonder why?$"
+	.string "VAPOREON. ¿Por qué será?$"
 

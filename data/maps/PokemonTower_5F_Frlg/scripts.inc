@@ -42,7 +42,7 @@ PokemonTower_5F_EventScript_Janae::
 	end
 
 PokemonTower_5F_Text_RestHereInPurifiedSpace::
-	.string "Come, child!\n"
+	.string "¡Ven, niño!\n"
 	.string "He purificado este lugar.\l"
 	.string "Puedes descansar aquí.$"
 
@@ -67,7 +67,7 @@ PokemonTower_5F_Text_RuthPostBattle::
 	.string "Estaba poseído.$"
 
 PokemonTower_5F_Text_KarinaIntro::
-	.string "Zombies!$"
+	.string "¡Zombis!$"
 
 PokemonTower_5F_Text_KarinaDefeat::
 	.string "Ha?$"
@@ -89,6 +89,6 @@ PokemonTower_5F_Text_JanaePostBattle::
 PokemonTower_5F_Text_PurifiedZoneMonsFullyHealed::
 	.string "Entré en el lugar purificado y\nprotegido"
 	.string "zone.\p"
-	.string "{PLAYER}'s POKéMON were fully\n"
-	.string "healed.$"
+	.string "Los POKéMON de {PLAYER} fueron\n"
+	.string "curados.$"
 

@@ -129,7 +129,7 @@ SaffronCity_Text_WhatDoYouWantGetLost::
 
 SaffronCity_Text_BossTakeTownForTeamRocket::
 	.string "El JEFE dijo que tomará esta\n"
-	.string "in the name of TEAM ROCKET!$"
+	.string "¡en nombre del TEAM ROCKET!$"
 
 SaffronCity_Text_DontGetDefiantOrIllHurtYou::
 	.string "¡No te pongas desafiante!\n"
@@ -140,15 +140,15 @@ SaffronCity_Text_SaffronBelongsToTeamRocket::
 
 SaffronCity_Text_CriminalLifeMakesMeFeelAlive::
 	.string "Mi vida criminal me hace sentir\n"
-	.string "so alive!$"
+	.string "¡tan vivo!$"
 
 SaffronCity_Text_WatchWhereYoureWalking::
-	.string "Ow!\n"
+	.string "¡Ay!\n"
 	.string "¡Mira por dónde caminas!$"
 
 SaffronCity_Text_WeCanExploitMonsAroundWorld::
 	.string "Con SILPH bajo control, podremos\n"
-	.string "exploit POKéMON around the world!\p"
+	.string "¡explotar a los POKéMON del mundo!\p"
 	.string "¡Seremos riquísimos, yeahah!$"
 
 SaffronCity_Text_YouBeatTeamRocket::
@@ -161,22 +161,22 @@ SaffronCity_Text_SafeToGoOutAgain::
 
 SaffronCity_Text_PeopleComingBackToSaffron::
 	.string "La gente huyó de aquí en masa\n"
-	.string "when those ROCKETS came.\p"
+	.string "cuando llegaron esos ROCKETS.\p"
 	.string "Deberían estar volviendo en masa\n"
-	.string "SAFFRON now.$"
+	.string "a AZAFRÁN ahora.$"
 
 SaffronCity_Text_FlewHereOnPidgeot::
 	.string "Vine volando en mi PIDGEOT cuando\n"
-	.string "I read about SILPH.\p"
+	.string "leí sobre SILPH.\p"
 	.string "¿Ya terminó?\n"
 	.string "Me perdí la acción mediática...$"
 
 SaffronCity_Text_Pidgeot::
-	.string "PIDGEOT: Bi bibii!$"
+	.string "PIDGEOT: ¡Bi bibii!$"
 
 SaffronCity_Text_SawRocketBossEscaping::
 	.string "Vi al JEFE del TEAM ROCKET escapar\n"
-	.string "SILPH's building.$"
+	.string "del edificio de SILPH.$"
 
 SaffronCity_Text_ImASecurityGuard::
 	.string "Soy guardia de seguridad.\p"
@@ -184,7 +184,7 @@ SaffronCity_Text_ImASecurityGuard::
 
 SaffronCity_Text_HesTakingASnooze::
 	.string "...\n"
-	.string "Snore...\p"
+	.string "Zzz...\p"
 	.string "¡Ja! ¡Está echando una siesta!$"
 
 SaffronCity_Text_CitySign::
@@ -201,27 +201,27 @@ SaffronCity_Text_GymSign::
 
 SaffronCity_Text_FullHealCuresStatus::
 	.string "CONSEJOS DE ENTRENADOR\p"
-	.string "FULL HEAL cures all ailments like\n"
-	.string "burns, paralysis, poisoning,\l"
-	.string "congelado, y dormir.\p"
+	.string "La CURA TOTAL cura males como\n"
+	.string "quemaduras, parálisis, envenenamiento,\l"
+	.string "congelación y sueño.\p"
 	.string "Cuesta un poco más, pero es más\n"
-	.string "convenient than buying other items.$"
+	.string "cómoda que comprar otros objetos.$"
 
 SaffronCity_Text_GreatBallImprovedCatchRate::
 	.string "CONSEJOS DE ENTRENADOR\p"
 	.string "La nueva GRAN POKÉBALL ofrece\n"
-	.string "catching rates.\p"
+	.string "mejores tasas de captura.\p"
 	.string "Pruébala con esos difíciles\n"
 	.string "POKéMON.$"
 
 SaffronCity_Text_SilphCoSign::
-	.string "SILPH CO. OFFICE BUILDING$"
+	.string "EDIFICIO DE SILPH CO.$"
 
 SaffronCity_Text_MrPsychicsHouse::
-	.string "MR. PSYCHIC'S HOUSE$"
+	.string "CASA DEL SR. PSÍQUICO$"
 
 SaffronCity_Text_SilphsLatestProduct::
-	.string "SILPH's latest product!\n"
+	.string "¡El último producto de SILPH!\n"
 	.string "Lanzamiento por determinar...$"
 
 SaffronCity_Text_TrainerFanClubSign::

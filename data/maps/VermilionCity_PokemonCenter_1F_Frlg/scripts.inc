@@ -45,22 +45,22 @@ VermilionCity_PokemonCenter_1F_EventScript_ExplainVSSeeker::
 
 VermilionCity_PokemonCenter_1F_Text_TrainerMonsStrongerThanWild::
 	.string "Aunque sean del mismo nivel,\n"
-	.string "POKéMON can have very different\l"
+	.string "los POKéMON pueden tener muy distintas\l"
 	.string "estadísticas y habilidades.\p"
-	.string "A POKéMON raised by a TRAINER is\n"
+	.string "Un POKéMON criado por un ENTRENADOR es\n"
 	.string "más fuerte que uno salvaje.$"
 
 VermilionCity_PokemonCenter_1F_Text_PoisonedMonFaintedWhileWalking::
-	.string "My POKéMON was poisoned!\n"
+	.string "¡Mi POKéMON estaba envenenado!\n"
 	.string "¡Se desmayó mientras caminábamos!$"
 
 VermilionCity_PokemonCenter_1F_Text_AllMonWeakToSpecificTypes::
 	.string "Es cierto que uno de nivel\n"
-	.string "POKéMON will be more powerful...\p"
-	.string "But, all POKéMON will have weak\n"
-	.string "points against specific types.\p"
+	.string "un POKéMON de nivel alto será más fuerte...\p"
+	.string "Pero todos los POKéMON tienen puntos\n"
+	.string "débiles contra tipos específicos.\p"
 	.string "Así que parece que no hay\n"
-	.string "universally strong POKéMON.$"
+	.string "POKéMON universalmente fuertes.$"
 
 VermilionCity_PokemonCenter_1F_Text_UrgeToBattleSomeoneAgain::
 	.string "Las ganas de batallar con alguien\n"
@@ -83,7 +83,7 @@ VermilionCity_PokemonCenter_1F_Text_ExplainVSSeeker::
 	.string "No tiene ciencia.\p"
 	.string "Úsalo como pi-pi-pi, y los\n"
 	.string "ENTRENADORES cerca te notarán.\p"
-	.string "If any TRAINER wants a rematch,\n"
+	.string "Si algún ENTRENADOR quiere revancha,\n"
 	.string "te lo avisará de inmediato.\p"
 	.string "Carga su batería y úsalo\n"
 	.string "cuando estés en un camino.$"

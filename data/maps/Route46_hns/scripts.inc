@@ -65,7 +65,7 @@ Route46_Text_CamperTedSeen:
 	.string "¿Luchas contra mí?$"
 
 Route46_Text_CamperTedBeaten:
-	.string "Wha...?$"
+	.string "¿Qué...?$"
 
 Route46_Text_CamperTedAfterBattle:
 	.string "Hice lo que pude, pero no fue\n"
@@ -77,7 +77,7 @@ Route46_Text_PicnickerErinSeen:
 	.string "¿Luchas contra mí?$"
 
 Route46_Text_PicnickerErinBeaten:
-	.string "Oh, rats!$"
+	.string "¡Qué fastidio!$"
 
 Route46_Text_PicnickerErinAfterBattle:
 	.string "He ido a muchos GIMNASIOS, pero el\n"
@@ -94,7 +94,7 @@ Route46_Text_ErinRematchIntro:
 	.string "¿Luchas contra mí?$"
 
 Route46_Text_ErinRematchDefeat:
-	.string "Oh, rats!$"
+	.string "¡Qué fastidio!$"
 
 Route46_Text_ErinPostRematch:
 	.string "He ido a muchos GIMNASIOS, pero el\n"

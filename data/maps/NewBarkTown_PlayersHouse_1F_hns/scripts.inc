@@ -309,7 +309,7 @@ NewBarkTown_PlayersHouse_1F_Text_ElmsLookingForYou:
 	.string "algo por él.\p"
 	.string "¡Oh! ¡Casi lo olvido! Tu POKéGEAR\n"
 	.string "ya volvió del taller de reparaciones.\p"
-	.string "Here you go!$"
+	.string "¡Aquí tienes!$"
 
 NewBarkTown_PlayersHouse_1F_Text_ObtainedPokeGear:
 	.string "{PLAYER} obtained the POKéGEAR.$"

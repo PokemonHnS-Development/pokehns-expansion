@@ -173,11 +173,11 @@ SevenIsland_House_Room1_EventScript_Box::
 SevenIsland_House_Room1_Text_OnlyEnjoymentWatchingBattles::
 	.string "Puede que no lo parezca ahora,\n"
 	.string "pero cuando era joven...\p"
-	.string "I flew everywhere, challenging\n"
+	.string "Volaba a todo lugar, retando\n"
 	.string "ENTRENADORES donde los hallara.\p"
 	.string "Ahora, mi única alegría\n"
 	.string "es recordar el pasado mientras\l"
-	.string "watching battles.$"
+	.string "ver batallas.$"
 
 SevenIsland_House_Room1_Text_SlightBreezeAroundBox::
 	.string "Hay una leve brisa que sopla\n"
@@ -191,12 +191,12 @@ SevenIsland_House_Room1_Text_ChallengeVisitingTrainer::
 	.string "Un ENTRENADOR llamado {STR_VAR_1}\n"
 	.string "esperándote ahí ahora.\p"
 	.string "Dime, ¿viniste a desafiarme?\n"
-	.string "{STR_VAR_1}, am I right?$"
+	.string "¿{STR_VAR_1}, cierto?$"
 
 SevenIsland_House_Room1_Text_OhYouWontBattle::
-	.string "Oh...\n"
+	.string "Ah...\n"
 	.string "No batallarás...\p"
-	.string "I see, I see.\n"
+	.string "Ya veo, ya veo.\n"
 	.string "... ...\p"
 	.string "Bueno, quizá si cambias de\n"
 	.string "opinión, vuelve.$"
@@ -205,13 +205,13 @@ SevenIsland_House_Room1_Text_LimitThreeMonsPerSide::
 	.string "Ah!\n"
 	.string "¿Lucharás por mí?\p"
 	.string "Valió la pena moverme\n"
-	.string "box aside, then.\p"
+	.string "la caja.\p"
 	.string "... ...\n"
 	.string "Pero hay un pequeño problema.\p"
 	.string "Esta habitación oculta no está muy\n"
-	.string "sturdy.\p"
+	.string "resistente.\p"
 	.string "¿Podrías limitarlo a\n"
-	.string "battles of three POKéMON per side?$"
+	.string "batallas de tres POKéMON por bando?$"
 
 SevenIsland_House_Room1_Text_SaveProgressBeforeBattle::
 	.string "¡Bien! Antes de tu batalla,\n"
@@ -219,7 +219,7 @@ SevenIsland_House_Room1_Text_SaveProgressBeforeBattle::
 
 SevenIsland_House_Room1_Text_DontHoldAnythingBack::
 	.string "Está bien.\n"
-	.string "Don't hold anything back!$"
+	.string "¡No te contengas!$"
 
 @ Unused
 SevenIsland_House_Room1_Text_StrVar1_1::
@@ -241,12 +241,12 @@ SevenIsland_House_Room1_Text_StrVar1_2::
 
 SevenIsland_House_Room1_Text_AstoundingBattle::
 	.string "¡Bravo!\p"
-	.string "Bravo, indeed!\n"
+	.string "¡Bravo, en verdad!\n"
 	.string "¡Qué batalla tan asombrosa!\p"
 	.string "Fue tan asombrosa que aún\n"
 	.string "me llena los ojos de lágrimas!\p"
 	.string "El ataque y la defensa de expertos\n"
-	.string "used techniques!\p"
+	.string "usaron técnicas!\p"
 	.string "¡El choque de poder contra poder!\p"
 	.string "¡Sí!\n"
 	.string "¡Fue pura magnificencia!$"

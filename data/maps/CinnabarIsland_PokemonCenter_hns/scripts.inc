@@ -15,7 +15,7 @@ CinnabarIsland_PokemonCenter_EventScript_Fisher::
 	end
 
 CinnabarIsland_PokemonCenter1F_Text_CooltrainerF:
-	.string "CINNABAR GYM's BLAINE apparently\n"
+	.string "Al parecer, BLAINE del GIMNASIO de\n"
 	.string "vive solo en las ISLAS CANELA\l"
 	.string "en la cueva...$"
 

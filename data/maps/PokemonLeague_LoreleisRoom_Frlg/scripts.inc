@@ -93,25 +93,25 @@ PokemonLeague_LoreleisRoom_EventScript_DefeatedLorelei::
 	end
 
 PokemonLeague_LoreleisRoom_Text_Intro::
-	.string "Welcome to the POKéMON LEAGUE.\p"
+	.string "Bienvenido a la LIGA POKéMON.\p"
 	.string "Soy LORELEI del ALTO MANDO.\p"
 	.string "Nadie puede superarme al criar\n"
-	.string "to icy POKéMON.\p"
+	.string "POKéMON de hielo.\p"
 	.string "Los movimientos de hielo son\p"
-	.string "Your POKéMON will be at my mercy\n"
+	.string "Tus POKéMON estarán a mi merced\n"
 	.string "poderosos cuando están congelados.\p"
 	.string "¡Jajaja!\n"
 	.string "¿Estás listo?{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
 
 PokemonLeague_LoreleisRoom_Text_RematchIntro::
-	.string "Welcome to the POKéMON LEAGUE.\p"
+	.string "Bienvenido a la LIGA POKéMON.\p"
 	.string "¡Yo, LORELEI del ALTO MANDO,\n"
 	.string "he vuelto!\p"
 	.string "Así son las cosas.\n"
 	.string "Nadie me supera cuando se\l"
-	.string "to icy POKéMON.\p"
+	.string "POKéMON de hielo.\p"
 	.string "Los movimientos de hielo son\p"
-	.string "Your POKéMON will be at my mercy\n"
+	.string "Tus POKéMON estarán a mi merced\n"
 	.string "poderosos cuando están congelados.\p"
 	.string "¡Jajaja!\n"
 	.string "¿Estás listo?{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
@@ -123,5 +123,5 @@ PokemonLeague_LoreleisRoom_Text_PostBattle::
 	.string "Eres mejor de lo que pensaba.\n"
 	.string "Sigue adelante.\p"
 	.string "Solo has probado una parte\n"
-	.string "POKéMON LEAGUE's power.$"
+	.string "del poder de la LIGA POKéMON.$"
 

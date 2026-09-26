@@ -22,16 +22,16 @@ SafariZone_West_Text_KogaPatrolsSafariEverySoOften::
 	.string "sabiendo que estamos a salvo.$"
 
 SafariZone_West_Text_RocksMakeMonRunButEasierCatch::
-	.string "Tossing ROCKS at POKéMON might\n"
+	.string "Lanzar ROCAS a los POKéMON puede\n"
 	.string "hacerlos correr, pero será\l"
 	.string "más fácil atraparlos.$"
 
 SafariZone_West_Text_BaitMakesMonStickAround::
-	.string "Using BAIT will make POKéMON more\n"
+	.string "Usar CEBO hará que los POKéMON\n"
 	.string "probablemente se queden si les\l"
-	.string "busy eating.$"
+	.string "ocupados comiendo.$"
 
 SafariZone_West_Text_HikedLotsDidntSeeMonIWanted::
 	.string "Caminé mucho, pero no vi ningún\n"
-	.string "POKéMON I wanted.$"
+	.string "los POKéMON que quería.$"
 

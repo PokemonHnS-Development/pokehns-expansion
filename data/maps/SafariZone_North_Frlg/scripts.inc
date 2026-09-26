@@ -29,16 +29,16 @@ SafariZone_North_Text_SecretHouseStillAhead::
 	.string "La CASA SECRETA sigue adelante.$"
 
 SafariZone_North_Text_Area2::
-	.string "AREA 2$"
+	.string "ZONA 2$"
 
 SafariZone_North_Text_ZigzagThroughTallGrass::
 	.string "CONSEJOS DE ENTRENADOR\p"
-	.string "POKéMON hide in tall grass.\p"
+	.string "Se ocultan en la hierba alta.\p"
 	.string "Zigzaguea por zonas de hierba\n"
 	.string "para hacerlos salir.$"
 
 SafariZone_North_Text_WinFreeHMFindSecretHouse::
 	.string "CONSEJOS DE ENTRENADOR\p"
 	.string "Gana una MO gratis por encontrar\n"
-	.string "SECRET HOUSE.$"
+	.string "CASA SECRETA.$"
 

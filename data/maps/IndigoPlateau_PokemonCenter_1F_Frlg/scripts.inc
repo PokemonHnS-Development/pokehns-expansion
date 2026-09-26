@@ -69,38 +69,38 @@ IndigoPlateau_PokemonCenter_1F_EventScript_Nurse::
 	end
 
 IndigoPlateau_PokemonCenter_1F_Text_GymGuyAdvice::
-	.string "Yo!\n"
+	.string "¡Ey!\n"
 	.string "¡Un futuro campeón!\p"
-	.string "At the POKéMON LEAGUE, you will\n"
-	.string "face the ELITE FOUR all in a row.\p"
+	.string "En la LIGA POKéMON te enfrentarás\n"
+	.string "al ALTO MANDO uno tras otro.\p"
 	.string "Si pierdes, tienes que empezar\n"
-	.string "over again!\p"
+	.string "¡desde el principio!\p"
 	.string "¡Es ahora!\n"
 	.string "¡Ve a por ello!$"
 
 IndigoPlateau_PokemonCenter_1F_Text_FaceEliteFourGoodLuck::
 	.string "De aquí en adelante, te\n"
-	.string "ELITE FOUR one by one.\p"
+	.string "enfrentarás al ALTO MANDO uno a uno.\p"
 	.string "Si ganas, se abre una puerta\n"
-	.string "next TRAINER. Good luck!$"
+	.string "al siguiente ENTRENADOR. ¡Buena suerte!$"
 
 IndigoPlateau_PokemonCenter_1F_Text_LoreleiIsAbsentClosedForTimeBeing::
 	.string "Lo siento mucho, pero has\n"
-	.string "your time coming here.\p"
-	.string "LORELEI of the ELITE FOUR is\n"
-	.string "absent, you see.\p"
-	.string "As a result, the POKéMON LEAGUE is\n"
-	.string "cerrado por el momento.$"
+	.string "perdido el tiempo viniendo aquí.\p"
+	.string "LORELEI del ALTO MANDO está\n"
+	.string "ausente, como ves.\p"
+	.string "Por eso, la LIGA POKéMON está\n"
+	.string "cerrada por el momento.$"
 
 IndigoPlateau_PokemonCenter_1F_Text_AgathaWhuppedUs::
-	.string "AGATHA's GHOST-type POKéMON are\n"
-	.string "espantosos en dureza.\p"
-	.string "I took my FIGHTING-type POKéMON\n"
-	.string "y los subió al máximo.\p"
-	.string "I went at AGATHA feeling pretty\n"
-	.string "confiados, pero nos venció.\p"
+	.string "Los POKéMON de tipo FANTASMA de AGATHA\n"
+	.string "son espantosamente duros.\p"
+	.string "Entrené a mis POKéMON de tipo LUCHA\n"
+	.string "y los subí al máximo.\p"
+	.string "Fui contra AGATHA sintiéndome muy\n"
+	.string "confiado, pero nos venció.\p"
 	.string "Esa anciana también tiene un\n"
-	.string "también es impulsiva.\p"
+	.string "genio muy impulsivo.\p"
 	.string "No hace falta casi nada para\n"
 	.string "que esa señora empiece a gritar.$"
 

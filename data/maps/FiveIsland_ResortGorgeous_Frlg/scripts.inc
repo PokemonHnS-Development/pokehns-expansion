@@ -49,11 +49,11 @@ FiveIsland_ResortGorgeous_Text_DaisyIntro::
 
 FiveIsland_ResortGorgeous_Text_DaisyDefeat::
 	.string "La vergüenza de esto...\n"
-	.string "I'm red-faced...$"
+	.string "Estoy sonrojada...$"
 
 FiveIsland_ResortGorgeous_Text_DaisyPostBattle::
 	.string "Ay no, mis tubos de pintura\n"
-	.string "scattered everywhere!$"
+	.string "regados por todas partes!$"
 
 FiveIsland_ResortGorgeous_Text_CelinaIntro::
 	.string "¡Disculpa!\n"
@@ -62,7 +62,7 @@ FiveIsland_ResortGorgeous_Text_CelinaIntro::
 
 FiveIsland_ResortGorgeous_Text_CelinaDefeat::
 	.string "Esta derrota...\n"
-	.string "I feel like I'm whiting out...$"
+	.string "Siento que me desmayo...$"
 
 FiveIsland_ResortGorgeous_Text_CelinaPostBattle::
 	.string "GILLIAN?\n"
@@ -96,7 +96,7 @@ FiveIsland_ResortGorgeous_Text_JackiPostBattle::
 
 FiveIsland_ResortGorgeous_Text_GillianIntro::
 	.string "Estoy pensando en poner una alberca\n"
-	.string "made specially for POKéMON.$"
+	.string "hecha para POKéMON.$"
 
 FiveIsland_ResortGorgeous_Text_GillianDefeat::
 	.string "¡Oh, por Dios mío!$"
@@ -107,11 +107,11 @@ FiveIsland_ResortGorgeous_Text_GillianPostBattle::
 
 FiveIsland_ResortGorgeous_Text_DestinIntro::
 	.string "Soy un buen corredor.\n"
-	.string "I'm really fast!$"
+	.string "¡Soy muy rápido!$"
 
 FiveIsland_ResortGorgeous_Text_DestinDefeat::
 	.string "¡Ups!\n"
-	.string "I rushed things!$"
+	.string "¡Me precipité!$"
 
 FiveIsland_ResortGorgeous_Text_DestinPostBattle::
 	.string "Cuando corro con el viento, siento\n"
@@ -127,12 +127,12 @@ FiveIsland_ResortGorgeous_Text_TobyDefeat::
 
 FiveIsland_ResortGorgeous_Text_TobyPostBattle::
 	.string "Ponerse tan serio por esto...\n"
-	.string "How nonsensical.$"
+	.string "Qué tontería.$"
 
 FiveIsland_ResortGorgeous_Text_SelphyThanksYouMayGoNow::
 	.string "SELPHY: Gracias.\p"
 	.string "Puedes irte ya.$"
 
 FiveIsland_ResortGorgeous_Text_SelphysHouse::
-	.string "SELPHY'S HOUSE$"
+	.string "CASA DE SELPHY$"
 

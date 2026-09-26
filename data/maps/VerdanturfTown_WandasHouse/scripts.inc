@@ -98,7 +98,7 @@ VerdanturfTown_WandasHouse_Text_StrongerSpeechShort:
 	.string "WALLY: Mírame, {PLAYER}.\nVoy a ser más fuerte que tú.\pCuando lo consiga, te retaré\na otro combate.$"
 
 VerdanturfTown_WandasHouse_Text_WallysNextDoor:
-	.string "UNCLE: Oh! {PLAYER}{KUN}!\n"
+	.string "TÍO: ¡Oh, {PLAYER}{KUN}!\n"
 	.string "WALLY está al lado.\p"
 	.string "Pero, niño, hay algo que tengo que\n"
 	.string "decirte.\p"

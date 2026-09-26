@@ -642,7 +642,7 @@ MtChimney_Text_TeamAquaAlwaysMessingWithPlans:
 	.string "¡Siempre arruinan nuestros planes!$"
 
 MtChimney_Text_MeteoritesPackAmazingPower:
-	.string "METEORITES pack amazing power!$"
+	.string "¡Los METEORITOS son puro poder!$"
 
 MtChimney_Text_YouBetterNotMessWithUs:
 	.string "¡Mejor no te metas con nosotros!\p"

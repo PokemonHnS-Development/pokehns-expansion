@@ -56,7 +56,7 @@ Route16_NorthEntrance_2F_Text_OnBikeRideWithGirlfriend::
 
 Route16_NorthEntrance_2F_Text_RidingTogetherOnNewBikes::
 	.string "Vamos a pasear juntos en\n"
-	.string "new bikes.$"
+	.string "bicis nuevas.$"
 
 Route16_NorthEntrance_2F_Text_ItsCeladonDeptStore::
 	.string "Veamos qué tienen los prismáticos\n"
@@ -71,15 +71,15 @@ Route16_NorthEntrance_2F_Text_LongPathOverWater::
 
 Route16_NorthEntrance_2F_Text_GiveAmuletCoinIfCaught40::
 	.string "¡Hola! ¿Me recuerdas?\n"
-	.string "I'm one of PROF. OAK's AIDES.\p"
-	.string "If your POKéDEX has complete data\n"
+	.string "Soy ayudante del PROF. OAK.\p"
+	.string "Si tu POKéDEX tiene datos completos\n"
 	.string "con 40 especies, se supone que\l"
 	.string "te daré una recompensa.\p"
 	.string "El PROF. OAK me encargó un\n"
 	.string "AMULETO para ti.\p"
 	.string "Así que, {PLAYER}, te pregunto.\p"
 	.string "¿Ya reuniste datos de al menos\n"
-	.string "40 kinds of POKéMON?$"
+	.string "de 40 clases de POKéMON?$"
 
 Route16_NorthEntrance_2F_Text_GreatHereYouGo::
 	.string "¡Genial! Has capturado o tenido\n"
@@ -93,7 +93,7 @@ Route16_NorthEntrance_2F_Text_ReceivedAmuletCoinFromAide::
 
 Route16_NorthEntrance_2F_Text_ExplainAmuletCoin::
 	.string "La MONEDA AMULETO es un objeto\n"
-	.string "held by a POKéMON.\p"
-	.string "If the POKéMON appears in a winning\n"
+	.string "que lleva un POKéMON.\p"
+	.string "Si el POKéMON que la lleva participa\n"
 	.string "que da más dinero al batallar.$"
 

@@ -225,7 +225,7 @@ TrainerTower_Lobby_EventScript_BaldingMan::
 TrainerTower_Lobby_Text_WelcomeToTrainerTower::
 	.string "¡Hola!\p"
 	.string "Bienvenido a la TORRE ENTRENADOR,\n"
-	.string "TRAINERS gather from all over!$"
+	.string "¡ENTRENADORES de todo el mundo!$"
 
 TrainerTower_Lobby_Text_TrainersUpToFloorNum::
 	.string "ENTRENADORES de todo el mundo\n"
@@ -269,10 +269,10 @@ TrainerTower_Lobby_Text_MoveCounterHereWhenTrainersSwitch::
 	.string "Siento los inconvenientes.$"
 
 TrainerTower_Roof_Text_ImOwnerBattledPerfectly::
-	.string "Hello...\p"
+	.string "Hola...\p"
 	.string "Soy el dueño de esta TORRE...\p"
 	.string "Cómo el cielo se extiende\n"
-	.string "rooftop...\p"
+	.string "azotea...\p"
 	.string "La caricia del viento aquí...\p"
 	.string "Todo es tan perfecto...\p"
 	.string "La forma en que luchaste...\n"
@@ -282,12 +282,12 @@ TrainerTower_Roof_Text_ThisIsForYou::
 	.string "Esto es para ti...$"
 
 TrainerTower_Roof_Text_DoneItInRecordTime::
-	.string "Oh!\n"
-	.string "Stupendous!\p"
+	.string "¡Ah!\n"
+	.string "¡Estupendo!\p"
 	.string "Es maravilloso cómo has llegado\n"
 	.string "tan rápido.\p"
 	.string "La verdad es que lo has hecho en\n"
-	.string "record time...\p"
+	.string "tiempo récord...\p"
 	.string "Publicaré tu récord en el\n"
 	.string "mostrador de recepción.$"
 
@@ -299,7 +299,7 @@ TrainerTower_Roof_Text_IdLikeToSeeBetterTime::
 	.string "Lo que me gustaría ver es un\n"
 	.string "mejor tiempo de tu parte...\p"
 	.string "Cuento contigo.\p"
-	.string "Until then, farewell...$"
+	.string "Hasta entonces, adiós...$"
 
 TrainerTower_Text_XMinYZSec::
 	.string "{STR_VAR_1} min. {STR_VAR_2}.{STR_VAR_3} sec.$"
@@ -310,11 +310,11 @@ TrainerTower_Lobby_Text_HereAreTheResults::
 TrainerTower_Lobby_Text_NeedTwoMonsForDouble::
 	.string "Esta es una batalla dos contra dos.\p"
 	.string "No puedes combatir a menos que\n"
-	.string "at least two POKéMON.$"
+	.string "tengas al menos dos POKéMON.$"
 
 TrainerTower_Lobby_Text_ExplainTrainerTower::
 	.string "Aquí en la TORRE ENTRENADOR\n"
-	.string "event called TIME ATTACK.\p"
+	.string "un evento llamado CONTRARRELOJ.\p"
 	.string "Se medirá tu velocidad para ver\n"
 	.string "cuánto tardas desde la recepción\l"
 	.string "hasta el DUEÑO en la azotea.\p"
@@ -323,7 +323,7 @@ TrainerTower_Lobby_Text_ExplainTrainerTower::
 	.string "Intenta competir con amigos para\n"
 	.string "ver quién lo supera más rápido.\p"
 	.string "No ganarás puntos de EXP.\n"
-	.string "or money by beating TRAINERS here.$"
+	.string "ni dinero al vencer ENTRENADORES aquí.$"
 
 TrainerTower_Lobby_Text_ThanksForCompeting::
 	.string "¡Gracias por competir!$"
@@ -335,8 +335,8 @@ TrainerTower_Lobby_Text_WonderWhatKindsOfTrainers::
 	.string "¡Es de los nervios!$"
 
 TrainerTower_Lobby_Text_StairsTougherThanAnyBattle::
-	.string "Gasp, gasp...\n"
-	.string "Gasp...\p"
-	.string "Never mind battling! These stairs...\n"
+	.string "Uf, uf...\n"
+	.string "Uf...\p"
+	.string "¡Ni batallas! Estas escaleras...\n"
 	.string "Son más duros que cualquier batalla...$"
 

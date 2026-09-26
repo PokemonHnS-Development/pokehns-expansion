@@ -261,7 +261,7 @@ AzaleaTown_KurtsHouse_Movement_KurtWalkDown:
 	step_end
 
 KurtsHouse_Text_KurtGetStarted:
-	.string "KURT: I'll get started right now!$"
+	.string "KURT: ¡Empezaré ahora mismo!$"
 
 KurtsHouse_Text_KurtMakingBallsMustWait:
 	.string "¿Hm? ¿Quién eres?\p"
@@ -385,7 +385,7 @@ KurtsHouse_Text_Slowpoke:
 	.string "SLOWPOKE: ... Yawn?$"
 
 KurtsHouse_Text_OakPhoto:
-	.string "...A young PROF. OAK?$"
+	.string "...¿Un joven PROF. OAK?$"
 
 KurtsHouse_Text_CelebiStatue:
 	.string "Es una estatua del protector\n"

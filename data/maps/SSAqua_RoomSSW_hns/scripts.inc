@@ -12,11 +12,11 @@ SSAqua_RoomSSW_EventScript_Ken::
 	end
 
 SSAqua_RoomSSW_Text_FirebreatherLyleSeen:
-    .string "Voy a KANTO para dar\n"
-    .string "¡shows de fuego!$"
+	.string "Voy a KANTO para dar\n"
+	.string "¡espectáculos de fuego!$"
 
 SSAqua_RoomSSW_Text_FirebreatherLyleBeaten:
-    .string "Fizzle... The flame's tiny...$"
+	.string "Fsss... La llama es diminuta...$"
 
 SSAqua_RoomSSW_Text_FirebreatherLyleAfterBattle:
     .string "El fuego es débil en el mar.\n"

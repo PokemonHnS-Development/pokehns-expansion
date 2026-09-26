@@ -1355,7 +1355,7 @@ BattleFrontier_BattleTowerLobby_Text_AwardYouTheseBattlePoints_hns:
 	.string "Te damos estos Puntos de Batalla.$"
 
 BattleFrontier_Text_ObtainedXBattlePoints_hns:
-	.string "{PLAYER} obtained {STR_VAR_1} Battle Point(s).$"
+	.string "{PLAYER} obtuvo {STR_VAR_1} Punto(s) de Batalla.$"
 
 BattleFrontier_BattleTowerLobby_Text_RulesAreListed_hns:
 	.string "Reglas de la TORRE BATALLA.$"
@@ -1369,7 +1369,7 @@ BattleFrontier_BattleTowerLobby_Text_ExplainTowerRules_hns:
 	.string "BATALLA INDIVIDUAL, DOBLE, MULTI\l"
 	.string "y BATALLA MULTI por enlace.\p"
 	.string "Para cada tipo, existen\n"
-	.string "BATTLE ROOMS separadas.\p"
+	.string "SALAS DE BATALLA separadas.\p"
 	.string "Habla con el guía que ofrece\n"
 	.string "el tipo de batalla que quieras.$"
 

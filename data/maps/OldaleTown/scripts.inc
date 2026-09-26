@@ -344,7 +344,7 @@ OldaleTown_Text_SavingMyProgress:
 	.string "progreso.$"
 
 OldaleTown_Text_IWorkAtPokemonMart:
-	.string "Hi!\n"
+	.string "¡Hola!\n"
 	.string "Trabajo en un POKéMON MART.\p"
 	.string "¿Podrías venir conmigo?$"
 

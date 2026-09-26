@@ -20,7 +20,7 @@ SevenIsland_EventScript_Scientist::
 
 Text_SwordsDanceTeach::
 	.string "Poca gente viene por aquí.\p"
-	.string "If I train here, I'm convinced that\n"
+	.string "Si entreno aquí, estoy seguro de que\n"
 	.string "me haré cada vez más fuerte.\p"
 	.string "Sí, cada vez más fuerte...\p"
 	.string "¿Cómo te gustaría aprender un\n"
@@ -30,7 +30,7 @@ Text_SwordsDanceDeclined::
 	.string "Bueno, también está bien.$"
 
 Text_SwordsDanceWhichMon::
-	.string "All right, pick which POKéMON\n"
+	.string "Muy bien, elige a qué POKéMON\n"
 	.string "Debería enseñárselo.$"
 
 Text_SwordsDanceTaught::
@@ -38,14 +38,14 @@ Text_SwordsDanceTaught::
 	.string "cada vez más fuerte, ¿eh?$"
 
 SevenIsland_Text_IslandSign::
-	.string "SEVEN ISLAND\n"
+	.string "ISLA SIETE\n"
 	.string "Isla del Infinito$"
 
 SevenIsland_Text_IslandsMadeInSevenDays::
 	.string "Estas islas se llaman las ISLAS\n"
 	.string "SEVII porque son siete.\p"
-	.string "...O al menos eso dicen los\n"
-	.string "people believe.\p"
+	.string "...O al menos eso es lo que\n"
+	.string "cree la gente.\p"
 	.string "La verdad es que estas islas\n"
 	.string "llevan ese nombre porque dicen\l"
 	.string "que fueron creadas en 7 días.$"

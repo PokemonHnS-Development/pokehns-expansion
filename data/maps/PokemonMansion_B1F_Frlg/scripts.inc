@@ -32,10 +32,10 @@ PokemonMansion_B1F_EventScript_Ivan::
 
 PokemonMansion_B1F_Text_LewisIntro::
 	.string "Uh-oh...\n"
-	.string "Where am I now?$"
+	.string "¿Dónde estoy ahora?$"
 
 PokemonMansion_B1F_Text_LewisDefeat::
-	.string "Awooh!$"
+	.string "¡Auuu!$"
 
 PokemonMansion_B1F_Text_LewisPostBattle::
 	.string "Puedes hallar cosas tiradas.\n"
@@ -53,8 +53,8 @@ PokemonMansion_B1F_Text_IvanPostBattle::
 	.string "Es ideal para mis estudios.$"
 
 PokemonMansion_B1F_Text_MewtwoIsFarTooPowerful::
-	.string "Diary: Sept. 1\n"
+	.string "Diario: 1 sept.\n"
 	.string "MEWTWO es demasiado poderoso.\p"
 	.string "No logramos frenar su\n"
-	.string "tendencies...$"
+	.string "tendencias...$"
 

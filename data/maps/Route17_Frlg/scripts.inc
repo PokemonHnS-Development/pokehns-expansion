@@ -27,10 +27,10 @@ Route17_EventScript_CyclingRoadSign::
 
 Route17_Text_RaulIntro::
 	.string "No hay forma de hacerse rico\n"
-	.string "battling kids.$"
+	.string "con los chicos.$"
 
 Route17_Text_RaulDefeat::
-	.string "Burned out!$"
+	.string "¡Quemado!$"
 
 Route17_Text_RaulPostBattle::
 	.string "Puedes encontrar cosas buenas\n"
@@ -56,14 +56,14 @@ Route17_Text_VirgilDefeat::
 	.string "¡Chocar y arder!$"
 
 Route17_Text_VirgilPostBattle::
-	.string "I love racing downhill!$"
+	.string "¡Adoro bajar en picada!$"
 
 Route17_Text_BillyIntro::
 	.string "¡Somos MOTEROS!\n"
 	.string "¡Mandamos en las rutas, amigo!$"
 
 Route17_Text_BillyDefeat::
-	.string "Smoked!$"
+	.string "¡Derretido!$"
 
 Route17_Text_BillyPostBattle::
 	.string "¿Buscas aventura?$"
@@ -72,21 +72,21 @@ Route17_Text_NikolasIntro::
 	.string "¡VOLTORB te electrificará!$"
 
 Route17_Text_NikolasDefeat::
-	.string "Grounded out!$"
+	.string "¡Puesto a tierra!$"
 
 Route17_Text_NikolasPostBattle::
-	.string "I got my VOLTORB at the abandoned\n"
+	.string "Conseguí mi VOLTORB en la\n"
 	.string "CENTRAL ELÉCTRICA.$"
 
 Route17_Text_ZeekIntro::
 	.string "Subí el nivel de mi POKéMON, pero\n"
-	.string "won't evolve. Why?$"
+	.string "no evoluciona. ¿Por qué?$"
 
 Route17_Text_ZeekDefeat::
 	.string "¡Pero, tú!$"
 
 Route17_Text_ZeekPostBattle::
-	.string "Maybe some POKéMON need element\n"
+	.string "Quizás algunos POKéMON necesitan\n"
 	.string "PIEDRAS para evolucionar.$"
 
 Route17_Text_JamalIntro::
@@ -94,7 +94,7 @@ Route17_Text_JamalIntro::
 
 Route17_Text_JamalDefeat::
 	.string "¡Uff!\n"
-	.string "Good workout!$"
+	.string "¡Buen entrenamiento!$"
 
 Route17_Text_JamalPostBattle::
 	.string "¡Seguro que adelgacé allí!$"
@@ -106,14 +106,14 @@ Route17_Text_CoreyDefeat::
 	.string "Aaaargh!$"
 
 Route17_Text_CoreyPostBattle::
-	.string "Be ready to fight for your beliefs!$"
+	.string "¡Prepárate a luchar por tus ideas!$"
 
 Route17_Text_JaxonIntro::
 	.string "¡Linda BICICLETA!\n"
 	.string "¿Cómo se maneja?$"
 
 Route17_Text_JaxonDefeat::
-	.string "Shoot!$"
+	.string "¡Rayos!$"
 
 Route17_Text_JaxonPostBattle::
 	.string "La pendiente dificulta el control.$"
@@ -134,8 +134,8 @@ Route17_Text_WatchOutForDiscardedItems::
 
 Route17_Text_SameSpeciesGrowDifferentRates::
 	.string "CONSEJOS DE ENTRENADOR\p"
-	.string "All POKéMON are unique.\p"
-	.string "Even POKéMON of the same species\n"
+	.string "Todos los POKéMON son únicos.\p"
+	.string "Incluso POKéMON de la misma especie\n"
 	.string "y los niveles crecen a distinto ritmo.$"
 
 Route17_Text_PressBToStayInPlace::
@@ -149,8 +149,8 @@ Route17_Text_RouteSign::
 
 Route17_Text_DontThrowGameThrowBalls::
 	.string "¡Es un aviso!\p"
-	.string "Don't throw the game, throw POKé\n"
-	.string "BALLS instead!$"
+	.string "No tires el juego, ¡lanza POKé\n"
+	.string "BALLS!$"
 
 Route17_Text_CyclingRoadSign::
 	.string "CICLOVÍA\n"

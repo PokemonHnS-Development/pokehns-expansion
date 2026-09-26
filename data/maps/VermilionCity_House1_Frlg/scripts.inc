@@ -34,14 +34,14 @@ VermilionCity_House1_EventScript_NoRoomForOldRod::
 
 VermilionCity_House1_Text_ImFishingGuruDoYouLikeToFish::
 	.string "¡Soy el GURÚ DE LA PESCA!\p"
-	.string "I simply looove fishing!\n"
+	.string "¡Simplemente aaaamo pescar!\n"
 	.string "No soporto salir sin él.\p"
 	.string "Dime, ¿te gusta pescar?$"
 
 VermilionCity_House1_Text_TakeThisAndFish::
 	.string "¡Genial! Me gusta tu estilo.\n"
 	.string "Creo que podemos ser amigos.\p"
-	.string "Take this and fish, young friend!$"
+	.string "¡Toma esto y pesca, amigo!$"
 
 VermilionCity_House1_Text_ReceivedOldRodFromFishingGuru::
 	.string "{PLAYER} recibió una CAÑA\n"
@@ -54,7 +54,7 @@ VermilionCity_House1_Text_FishingIsAWayOfLife::
 	.string "a pescar el grande, amigo.$"
 
 VermilionCity_House1_Text_OhThatsSoDisappointing::
-	.string "Oh...\n"
+	.string "Ah...\n"
 	.string "Qué decepción...$"
 
 VermilionCity_House1_Text_HowAreTheFishBiting::

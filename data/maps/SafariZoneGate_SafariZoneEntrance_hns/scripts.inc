@@ -241,7 +241,7 @@ SafariZoneGate_SafariZoneEntrance_Text_BaobaDeclined:
 	.string "¡Nunca alcanzaremos a DEVON!$"
 
 SafariZoneGate_SafariZoneEntrance_Text_BaobaLastMon:
-	.string "I can't take your last POKéMON!$"
+	.string "¡No puedo quitarte tu último POKéMON!$"
 
 SafariZoneGate_SafariZoneEntrance_Text_BaobaDone:
 	.string "¡Ah, {PLAYER}!\p"
@@ -401,7 +401,7 @@ SafariZoneGate_SafariZoneEntrance_Text_BaobaPokeblocks:
 SafariZoneGate_SafariZoneEntrance_Text_Baoba:
 	.string "¡Hola {PLAYER}!\p"
 	.string "¿Qué tal te parece la SAFARI\n"
-	.string "ZONE?$"
+	.string "ZONA?$"
 
 SafariZoneGate_SafariZoneEntrance_Text_Boy:
 	.string "¿Sabes qué son los comedores\n"

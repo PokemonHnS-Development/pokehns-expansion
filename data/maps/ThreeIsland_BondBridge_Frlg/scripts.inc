@@ -15,11 +15,11 @@ ThreeIsland_BondBridge_Text_NikkiIntro::
 
 ThreeIsland_BondBridge_Text_NikkiDefeat::
 	.string "...Sniff, sniff...\n"
-	.string "Something smells unpleasant...$"
+	.string "Algo huele mal...$"
 
 ThreeIsland_BondBridge_Text_NikkiPostBattle::
 	.string "Quizá ese olor es tu sudor\n"
-	.string "POKéMON's body odor...$"
+	.string "o el del cuerpo de un POKéMON...$"
 
 ThreeIsland_BondBridge_Text_VioletIntro::
 	.string "¿A dónde vas con tanta\n"
@@ -31,7 +31,7 @@ ThreeIsland_BondBridge_Text_VioletDefeat::
 
 ThreeIsland_BondBridge_Text_VioletPostBattle::
 	.string "Si sigues así,\n"
-	.string "eventually reach BERRY FOREST.$"
+	.string "llegarás al BOSQUE BAYA.$"
 
 ThreeIsland_BondBridge_Text_AmiraIntro::
 	.string "Mamá dijo que no puedo nadar\n"
@@ -65,13 +65,13 @@ ThreeIsland_BondBridge_Text_TishaDefeat::
 	.string "¿Podrían irse ya, por favor?$"
 
 ThreeIsland_BondBridge_Text_TishaPostBattle::
-	.string "A POKéMON bit through my \n"
-	.string "swimsuit.\p"
+	.string "Un POKéMON mordió mi\n"
+	.string "traje de baño.\p"
 	.string "¡No puedo salir del agua!$"
 
 ThreeIsland_BondBridge_Text_JoyIntro::
 	.string "JOY: Te enseñaremos lo que\n"
-	.string "favorite POKéMON is!$"
+	.string "es un POKéMON favorito!$"
 
 ThreeIsland_BondBridge_Text_JoyDefeat::
 	.string "JOY: Ohh...\n"
@@ -84,7 +84,7 @@ ThreeIsland_BondBridge_Text_JoyPostBattle::
 ThreeIsland_BondBridge_Text_JoyNotEnoughMons::
 	.string "JOY: Realmente quiero batallar\n"
 	.string "MEG.\p"
-	.string "One POKéMON isn't enough.$"
+	.string "Un POKéMON no es suficiente.$"
 
 ThreeIsland_BondBridge_Text_MegIntro::
 	.string "MEG: Te mostraremos nuestro\n"
@@ -100,13 +100,13 @@ ThreeIsland_BondBridge_Text_MegPostBattle::
 ThreeIsland_BondBridge_Text_MegNotEnoughMons::
 	.string "MEG: Quiero batallar juntos\n"
 	.string "con ALEGRÍA.\p"
-	.string "One POKéMON isn't enough.$"
+	.string "Un POKéMON no es suficiente.$"
 
 ThreeIsland_BondBridge_Text_BerryForestAhead::
-	.string "BERRY FOREST AHEAD$"
+	.string "BOSQUE BAYA ADELANTE$"
 
 ThreeIsland_BondBridge_Text_BondBridgeSign::
 	.string "BOND BRIDGE\n"
 	.string "Por favor, haz silencio al cruzar.\p"
-	.string "BERRY FOREST AHEAD$"
+	.string "BOSQUE BAYA ADELANTE$"
 

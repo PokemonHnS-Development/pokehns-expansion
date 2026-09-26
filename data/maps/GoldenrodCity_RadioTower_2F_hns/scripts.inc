@@ -184,7 +184,7 @@ GoldenrodCity_RadioTower_2F_Text_GruntM4Seen:
 	.string "¡Pero regresaremos con fuerza!$"
 
 GoldenrodCity_RadioTower_2F_Text_GruntM4Beaten:
-	.string "Gwah! Don't get cute!$"
+	.string "¡Gwah! ¡No seas tierno!$"
 
 GoldenrodCity_RadioTower_2F_Text_GruntM4After:
 	.string "¡No dejaremos que arruines los\n"

@@ -99,7 +99,7 @@ Route43_Text_PokemaniacBrentSeen:
     .string "POKéMON?$"
 
 Route43_Text_PokemaniacBrentBeaten:
-    .string "Oh, my poor POKéMON! Darlings!$"
+    .string "¡Oh, mis pobres POKéMON! ¡Queridos!$"
 
 Route43_Text_PokemaniacBrentAfter:
     .string "Sería feliz solo con tener un\n"
@@ -114,7 +114,7 @@ Route43_Text_BrentRematchIntro:
     .string "POKéMON?$"
 
 Route43_Text_BrentRematchDefeat:
-    .string "Oh, my poor POKéMON! Darlings!$"
+    .string "¡Oh, mis pobres POKéMON! ¡Queridos!$"
 
 Route43_Text_BrentPostRematch:
     .string "Sería feliz solo con tener un\n"
@@ -141,7 +141,7 @@ Route43_Text_FisherMarvinSeen:
     .string "¡Luchemos para cambiar el ritmo!$"
 
 Route43_Text_FisherMarvinBeaten:
-    .string "I lost, but I feel better anyway.$"
+    .string "Perdí, pero me siento mejor igual.$"
 
 Route43_Text_FisherMarvinAfter:
     .string "La LURE BALL de KURT es la mejor\n"

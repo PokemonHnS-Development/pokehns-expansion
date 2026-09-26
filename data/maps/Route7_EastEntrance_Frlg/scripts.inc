@@ -85,8 +85,8 @@ Route7_EastEntrance_Movement_BlockPlayerEntry::
 
 Route7_EastEntrance_Text_ThirstyOnGuardDuty::
 	.string "Estoy de guardia.\n"
-	.string "Gee, I'm thirsty, though!\p"
-	.string "Oh, wait there, the road's closed.$"
+	.string "¡Uf, qué sed tengo!\p"
+	.string "Ah, espera, la carretera está cerrada.$"
 
 Route7_EastEntrance_Text_ThatTeaLooksTasty::
 	.string "Ah, ese TÉ...\n"
@@ -94,17 +94,17 @@ Route7_EastEntrance_Text_ThatTeaLooksTasty::
 
 Route7_EastEntrance_Text_ThanksIllShareTeaWithGuards::
 	.string "¿Eh? ¿Puedo tomar esta bebida?\n"
-	.string "Gee, thanks!\l"
+	.string "¡Vaya, gracias!\l"
 	.string "... ...\l"
-	.string "Glug, glug...\l"
+	.string "Glu, glu...\l"
 	.string "... ...\l"
-	.string "Gulp...\l"
+	.string "¡Gulp!\l"
 	.string "Si quieres ir a AZULONA\l"
-	.string "CITY...\l"
+	.string "CIUDAD...\l"
 	.string "... ...\l"
 	.string "Puedes seguir adelante.\p"
 	.string "Compartiré este TÉ con los otros\n"
-	.string "guards!$"
+	.string "¡guardias!$"
 
 Route7_EastEntrance_Text_HiHowsItGoing::
 	.string "Hola, ¿qué tal?$"

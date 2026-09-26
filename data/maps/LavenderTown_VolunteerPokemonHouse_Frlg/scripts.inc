@@ -101,7 +101,7 @@ LavenderTown_VolunteerPokemonHouse_Text_MrFujiLooksAfterOrphanedMons::
 
 LavenderTown_VolunteerPokemonHouse_Text_MonsNiceToHug::
 	.string "¡Qué calidez!\n"
-	.string "POKéMON are so nice to hug.$"
+	.string "Los POKéMON son tan lindos de abrazar.$"
 
 LavenderTown_VolunteerPokemonHouse_Text_Nidorino::
 	.string "NIDORINO: Gaoo!$"
@@ -111,22 +111,22 @@ LavenderTown_VolunteerPokemonHouse_Text_Psyduck::
 
 LavenderTown_VolunteerPokemonHouse_Text_IdLikeYouToHaveThis::
 	.string "MR. FUJI: {PLAYER}...\p"
-	.string "Your POKéDEX quest is one that\n"
-	.string "requires strong dedication.\p"
-	.string "Without deep love for POKéMON,\n"
+	.string "Tu misión de la POKéDEX\n"
+	.string "exige gran dedicación.\p"
+	.string "Sin un amor profundo por los POKéMON,\n"
 	.string "tu misión puede fallar.\p"
 	.string "No sé si esto te servirá,\n"
 	.string "pero me gustaría que lo tuvieras.$"
 
 LavenderTown_VolunteerPokemonHouse_Text_ReceivedPokeFluteFromMrFuji::
-	.string "{PLAYER} received a POKé FLUTE\n"
+	.string "{PLAYER} recibió una POKé FLAUTA\n"
 	.string "del SR. FUJI.$"
 
 LavenderTown_VolunteerPokemonHouse_Text_ExplainPokeFlute::
-	.string "Upon hearing the POKé FLUTE,\n"
-	.string "sleeping POKéMON will spring awake.\p"
-	.string "Try using it on POKéMON that are\n"
-	.string "sleeping obstacles.$"
+	.string "Al oír la POKé FLAUTA,\n"
+	.string "los POKéMON dormidos despertarán.\p"
+	.string "Úsala con POKéMON que sean\n"
+	.string "obstáculos dormidos.$"
 
 LavenderTown_VolunteerPokemonHouse_Text_MustMakeRoomForThis::
 	.string "¡Debes hacer espacio para esto!$"
@@ -136,14 +136,14 @@ LavenderTown_VolunteerPokemonHouse_Text_HasPokeFluteHelpedYou::
 	.string "te ayudó?$"
 
 LavenderTown_VolunteerPokemonHouse_Text_GrandPrizeDrawingClipped::
-	.string "POKéMON FAN MAGAZINE\n"
+	.string "REVISTA POKéMON FAN\n"
 	.string "¡Sorteo Mensual del Gran Premio!\p"
 	.string "El formulario de solicitud es...\p"
 	.string "¡Se fue! Lo han recortado.\n"
 	.string "Alguien ya debió aplicarlo.$"
 
 LavenderTown_VolunteerPokemonHouse_Text_PokemonMagazinesLineShelf::
-	.string "POKéMON magazines line the shelf.\p"
+	.string "Revistas POKéMON llenan el estante.\p"
 	.string "POKéMON INSIDER...\p"
 	.string "POKéMON FAN...$"
 

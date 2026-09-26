@@ -59,25 +59,25 @@ CeladonCity_DepartmentStore_5F_Vitamins::
 	end
 
 CeladonCity_DepartmentStore_5F_Text_ExplainStatEnhancers::
-	.string "POKéMON stat enhancers can be\n"
-	.string "Solo se compra aquí.\p"
+	.string "Los potenciadores de estadísticas\n"
+	.string "POKéMON solo se venden aquí.\p"
 	.string "MÁS PS aumenta los PS base de un\n"
 	.string "POKéMON planta.\p"
 	.string "CALCIO aumenta el AT. ESP. base\n"
-	.string "stat of one POKéMON.\p"
+	.string "de un POKéMON.\p"
 	.string "Cinc aumenta la estadística base de Def. Esp.\n"
-	.string "of one POKéMON.\p"
-	.string "CARBOS aumenta la VELOCIDAD base\n"
-	.string "stat.$"
+	.string "de un POKéMON.\p"
+	.string "CARBOS aumenta la VELOCIDAD\n"
+	.string "base.$"
 
 CeladonCity_DepartmentStore_5F_Text_HereForStatEnhancers::
-	.string "I'm here for POKéMON stat\n"
-	.string "enhancers.\p"
+	.string "Vengo por los potenciadores\n"
+	.string "de estadísticas POKéMON.\p"
 	.string "PROTEÍNA aumenta el ATAQUE base\n"
 	.string "poder.\p"
-	.string "HIERRO aumenta la DEFENSA base\n"
-	.string "stat.$"
+	.string "HIERRO aumenta la DEFENSA\n"
+	.string "base.$"
 
 CeladonCity_DepartmentStore_5F_Text_Drugstore::
-	.string "5F: DRUGSTORE$"
+	.string "5F: FARMACIA$"
 

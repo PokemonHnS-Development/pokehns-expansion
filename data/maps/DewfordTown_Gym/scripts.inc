@@ -335,7 +335,7 @@ DewfordTown_Gym_Text_LauraIntro:
 
 DewfordTown_Gym_Text_LauraDefeat:
 	.string "¡Buaaaaaaa!\n"
-	.string "I lost!$"
+	.string "¡Perdí!$"
 
 DewfordTown_Gym_Text_LauraPostBattle:
 	.string "Lucho en la oscuridad para que mi\n"
@@ -424,7 +424,7 @@ DewfordTown_Gym_Text_BrawlyPostBattle:
 	.string "ENTRENADORES algún día!$"
 
 DewfordTown_Gym_Text_GymStatue:
-	.string "DEWFORD TOWN POKéMON GYM$"
+	.string "GIMNASIO POKéMON DE PUEBLO DEWFORD$"
 
 DewfordTown_Gym_Text_GymStatueCertified:
 	.string "GIMNASIO POKéMON DE PUEBLO DEWFORD\p"

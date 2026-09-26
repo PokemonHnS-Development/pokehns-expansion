@@ -6,18 +6,18 @@ Route21_North_Text_RonaldIntro::
 	.string "están picando?$"
 
 Route21_North_Text_RonaldDefeat::
-	.string "Dang!$"
+	.string "¡Rayos!$"
 
 Route21_North_Text_RonaldPostBattle::
 	.string "No pesco nada bueno.\n"
-	.string "Not one good POKéMON to be had!$"
+	.string "¡Ni un solo POKéMON bueno!$"
 
 Route21_North_Text_WadeIntro::
 	.string "¡Gran pesca!\n"
 	.string "¿Lo intentamos?$"
 
 Route21_North_Text_WadeDefeat::
-	.string "Heheh, MAGIKARP just don't make\n"
+	.string "Jeje, los MAGIKARP no dan\n"
 	.string "el nivel, ¿verdad?$"
 
 Route21_North_Text_WadePostBattle::
@@ -27,7 +27,7 @@ Route21_North_Text_SpencerIntro::
 	.string "¡El mar limpia mi cuerpo y alma!$"
 
 Route21_North_Text_SpencerDefeat::
-	.string "Ayah!$"
+	.string "¡Ay!$"
 
 Route21_North_Text_SpencerPostBattle::
 	.string "El mar está bien, pero también\n"

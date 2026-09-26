@@ -34,14 +34,14 @@ ThreeIsland_PokemonCenter_1F_Text_PCNetworkCanLinkWithKanto::
 	.string "¡pero es fantástico!$"
 
 ThreeIsland_PokemonCenter_1F_Text_ImpossibleToSurfBetweenIslands::
-	.string "Es imposible hacer SURF entre el\n"
-	.string "islands around these parts.\p"
+	.string "Es imposible hacer SURF entre las\n"
+	.string "islas de estos lares.\p"
 	.string "Las mareas son muy rápidas\n"
-	.string "treacherous.$"
+	.string "y traicioneras.$"
 
 ThreeIsland_PokemonCenter_1F_Text_AlwaysBerriesInBerryForest::
 	.string "¡Aplastemos BAYAS!\n"
-	.string "...That'd be wasting BERRIES?\p"
+	.string "...¿Eso sería desperdiciar BAYAS?\p"
 	.string "Siempre puedes encontrar BAYAS\n"
 	.string "en el suelo del BOSQUE BAYA.$"
 

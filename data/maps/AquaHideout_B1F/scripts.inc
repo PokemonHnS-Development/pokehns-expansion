@@ -127,7 +127,7 @@ AquaHideout_B1F_Text_Grunt3Intro:
 	.string "combate a este entrometido!$"
 
 AquaHideout_B1F_Text_Grunt3Defeat:
-	.string "I took a serious licking!$"
+	.string "¡Me dieron una paliza seria!$"
 
 AquaHideout_B1F_Text_Grunt3PostBattle:
 	.string "¡Hmph!\n"

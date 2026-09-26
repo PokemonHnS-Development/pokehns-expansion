@@ -190,13 +190,13 @@ NationalPark_Normal_Text_SchoolboyJack_After:
 	.string "Hay mucho que aprender.\p"
 	.string "Por ejemplo...\p"
 	.string "Hay 92 tipos de MT.\p"
-	.string "Traded POKéMON level up faster.$"
+	.string "Los POKéMON cambiados suben rápido.$"
 
 NationalPark_Normal_Text_JackRegister:
 	.string "Hay mucho que aprender.\p"
 	.string "Por ejemplo...\p"
 	.string "Hay 92 tipos de MT.\p"
-	.string "Traded POKéMON level up faster.$"
+	.string "Los POKéMON cambiados suben rápido.$"
 
 NationalPark_Normal_Text_JackRematchIntro:
 	.string "¡He aprendido mucho desde\n"
@@ -209,7 +209,7 @@ NationalPark_Normal_Text_JackPostRematch:
 	.string "Hay mucho que aprender.\p"
 	.string "Por ejemplo...\p"
 	.string "Hay 92 tipos de MT.\p"
-	.string "Traded POKéMON level up faster.$"
+	.string "Los POKéMON cambiados suben rápido.$"
 
 NationalPark_Normal_Text_PokefanFBeverly1_Seen:
 	.string "Mis POKéMON son adorables.\p"
@@ -229,7 +229,7 @@ NationalPark_Normal_Text_PokefanmWilliam_Seen:
 	.string "¡De eso se trata ser un FAN!$"
 
 NationalPark_Normal_Text_PokefanmWilliam_Beaten:
-	.string "M-my POKéMON!$"
+	.string "¡M-mi POKéMON!$"
 
 NationalPark_Normal_Text_PokefanmWilliam_After:
 	.string "Perdí la batalla, pero mis POKéMON\n"

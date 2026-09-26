@@ -17,6 +17,6 @@ SSAnne_2F_Room1_EventScript_Gentleman::
 SSAnne_2F_Room1_Text_SleepingMonLookedLikeThis::
 	.string "He viajado por todas partes,\n"
 	.string "en todos mis viajes jamás vi\l"
-	.string "any POKéMON sleep like this one!\p"
+	.string "¡algún POKéMON dormir así!\p"
 	.string "¡Era algo como esto!$"
 

@@ -44,4 +44,4 @@ OlivineCity_House1_Text_YouWontTradeMe:
 	.string "¿No quieres intercambiar? Ohh...$"
 
 OlivineCity_House1_Text_After:
-	.string "Hi, how's my old VOLTORB doing?$"
+	.string "Hola, ¿cómo está mi viejo VOLTORB?$"
