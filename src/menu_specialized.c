@@ -826,7 +826,10 @@ static void MoveRelearnerMenuLoadContestMoveDescription(u32 chosenMove)
     AddTextPrinterParameterized(RELEARNERWIN_DESC_CONTEST, FONT_NORMAL, str, x, 1, TEXT_SKIP_DRAW, NULL);
 
     str = gText_MoveRelearnerAppeal;
-    x = GetStringRightAlignXOffset(FONT_NORMAL, str, 92);
+    // 108 en vez de 92: "ATRACTIVO" (9 caracteres) alineado a la derecha en 92 empezaba en
+    // x=38 y se montaba sobre el nombre de la categoria (CARISMA/BELLEZA... = 7 caracteres
+    // desde x=4, termina en x=45).
+    x = GetStringRightAlignXOffset(FONT_NORMAL, str, 108);
     AddTextPrinterParameterized(RELEARNERWIN_DESC_CONTEST, FONT_NORMAL, str, x, 25, TEXT_SKIP_DRAW, NULL);
 
     str = gText_MoveRelearnerJam;
