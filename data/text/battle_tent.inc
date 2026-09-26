@@ -98,7 +98,7 @@ FallarborTown_BattleTentLobby_Text_BeatThreeTrainers:
 	.string "¡tres ENTRENADORES seguidos!$"
 
 FallarborTown_BattleTentLobby_Text_WaitWhileSaveGame:
-	.string "Please wait while I save the game.$"
+	.string "Espera mientras guardo la partida.$"
 
 FallarborTown_BattleTentLobby_Text_PresentYouWithPrize:
 	.string "Por tu racha de 3 victorias,\n"
@@ -116,7 +116,7 @@ FallarborTown_BattleTentLobby_Text_BagFullReturnForPrize:
 
 FallarborTown_BattleTentLobby_Text_ThankYouWaitWhileSaving:
 	.string "¡Muchas gracias por participar!\p"
-	.string "Please wait while I save the game.$"
+	.string "Espera mientras guardo la partida.$"
 
 FallarborTown_BattleTentLobby_Text_AwaitAnotherChallenge2:
 	.string "¡Esperaremos tu desafío en\n"

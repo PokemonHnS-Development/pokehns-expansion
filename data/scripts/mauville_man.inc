@@ -290,7 +290,7 @@ MauvilleCity_PokemonCenter_1F_Text_SavedGameTitle::
 	.string "The Save-Happy TRAINER$"
 
 MauvilleCity_PokemonCenter_1F_Text_SavedGameAction::
-	.string "Saved the game$"
+	.string "Guardó la partida$"
 
 MauvilleCity_PokemonCenter_1F_Text_SavedGameStory::
 	.string "Es la historia de un ENTRENADOR\n"

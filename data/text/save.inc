@@ -10,7 +10,7 @@ gText_SavingDontTurnOff::
 	.string "NO APAGUES LA CONSOLA.$"
 
 gText_PlayerSavedGame::
-	.string "{PLAYER} saved the game.$"
+	.string "{PLAYER} guardó la partida.$"
 
 gText_DifferentSaveFile::
 	.string "¡ADVERTENCIA!\p"
