@@ -587,7 +587,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice10Reject::
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice11Intro::
 	.string "¡Oye! ¡Hay un gran problema! Es\n"
-	.string "¡el último día de la BATTLE TOWER!\p"
+	.string "¡el último día de la TORRE BATALLA!\p"
 	.string "... ... ... ... ... ...\n"
 	.string "¡Solo estoy bromeando!\p"
 	.string "Me llaman {STR_VAR_3} ¡y yo también!\n"
@@ -613,7 +613,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice11Accept::
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice11Reject::
 	.string "¡Qué frío! ¡Tendré que arrasar\n"
-	.string "la BATTLE TOWER por eso!\p"
+	.string "la TORRE BATALLA por eso!\p"
 	.string "¡Claro que no lo haré!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice12Intro::
@@ -751,7 +751,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice16Reject::
 	.string "¿Crees que esto es una broma?$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_LassIntro::
-	.string "Soy {STR_VAR_1}, ¡una LASS!$"
+	.string "Soy {STR_VAR_1}, ¡una NIÑA!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_LassMon1::
 	.string "Tengo un {STR_VAR_2}\n"
@@ -814,7 +814,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_HikerReject::
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_BeautyIntro::
 	.string "¡Hola!\n"
-	.string "¡Soy {STR_VAR_1} y soy una BEAUTY!$"
+	.string "¡Soy {STR_VAR_1} y soy una BELLA!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_BeautyMon1::
 	.string "¿Sabes qué he estado criando?\n"
@@ -1134,7 +1134,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_CyclingTriathleteMReject::
 	.string "¡el equipo doble más fuerte!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_TuberMIntro::
-	.string "Me?\n"
+	.string "¿Yo?\n"
 	.string "¡Soy TUBER {STR_VAR_1}!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_TuberMMon1::
@@ -1157,7 +1157,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_TuberMReject::
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_GuitaristIntro::
 	.string "¡Siii-hey!\n"
-	.string "¡Llámame GUITARIST {STR_VAR_1}!$"
+	.string "¡Llámame GUITARRISTA {STR_VAR_1}!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_GuitaristMon1::
 	.string "¡Mira mi séquito!\n"
@@ -1411,7 +1411,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_CollectorReject::
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PkmnRangerMIntro::
 	.string "Hola, soy {STR_VAR_1}.\n"
-	.string "Soy un POKéMON RANGER.$"
+	.string "Soy un GUARDA POKéMON.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PkmnRangerMMon1::
 	.string "Me acompañan algunos\n"
@@ -1432,7 +1432,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_PkmnRangerMReject::
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PkmnRangerFIntro::
 	.string "Mi nombre es {STR_VAR_1}.\n"
-	.string "¡Soy un POKéMON RANGER!$"
+	.string "¡Soy un GUARDA POKéMON!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PkmnRangerFMon1::
 	.string "Te hablaré de mi equipo. Tengo\n"
@@ -1559,7 +1559,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_PokemaniacReject::
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_KindlerIntro::
 	.string "¡Hola, tú!\n"
-	.string "¡Soy KINDLER {STR_VAR_1}!$"
+	.string "¡Soy el FOGONERO {STR_VAR_1}!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_KindlerMon1::
 	.string "¿Sabes qué logró mi entrenamiento?\n"

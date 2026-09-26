@@ -11452,9 +11452,9 @@ const struct ItemInfo gItemsInfo[] =
             "Lanza un rayo gélido\n"
             "que puede\n"
         #if B_USE_FROSTBITE == TRUE
-            "inflict frostbite."),
+            "causar congelación."),
         #else
-            "freeze the foe."),
+            "congelar al rival."),
         #endif
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
