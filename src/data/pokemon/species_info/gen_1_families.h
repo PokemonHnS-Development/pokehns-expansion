@@ -1318,8 +1318,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .description = COMPOUND_STRING(
             "Tiene una gran habilidad para buscar\n"
             "miel deliciosa en las flores. Puede\n"
-            "buscar, extraer y llevar la miel.\n"
-            "blooming over six miles away."),
+            "buscar, extraer y llevar la miel\n"
+            "de flores a kilómetros de distancia."),
         .pokemonScale = 312,
         .pokemonOffset = 2,
         .trainerScale = 256,
@@ -1938,7 +1938,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             "Este POKéMON tiene plumas hermosas\n"
             "y brillantes. Muchos Entrenadores\n"
             "quedan cautivados por sus plumas.\n"
-            "they choose Pidgeot as their Pokémon."),
+            "Lo eligen como su POKéMON."),
         .pokemonScale = 269,
         .pokemonOffset = 0,
         .trainerScale = 256,
@@ -2264,7 +2264,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             "Con sus incisivos, roe las puertas\n"
             "y se infiltra en las casas.\n"
             "Luego, con un tic en sus bigotes,\n"
-            "it steals whatever food it finds."),
+            "roba cualquier comida que halle."),
         .pokemonScale = 481,
         .pokemonOffset = 21,
         .trainerScale = 256,
@@ -2561,7 +2561,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             "Su cuello largo y pico alargado son\n"
             "ideales para cazar en tierra o agua.\n"
             "Mueve con destreza este pico largo\n"
-            "beak to pluck prey."),
+            "para arrancar a su presa."),
         .pokemonScale = 278,
         .pokemonOffset = 1,
         .trainerScale = 256,
@@ -4712,7 +4712,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             "Usa sus grandes garras curvas para\n"
             "abrirse paso en la nieve profunda.\n"
             "En montes nevados, este Sandslash\n"
-            "is faster than any other Pokémon."),
+            "es más rápido que ningún otro POKéMON."),
         .pokemonScale = 341,
         .pokemonOffset = 11,
         .trainerScale = 256,
@@ -7567,7 +7567,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .categoryName = _("Gato Elegante"),
         .height = 11,
         .weight = 330,
-        .description = COMPOUND_STRING("Mira a todos por debajo del hombro,\nitself. A diferencia de su bella cara,\nes tan brutal que tortura a sus\npresas en vez de rematarlas."),
+        .description = COMPOUND_STRING("Mira a todos por debajo del hombro,\nincluso a sí mismo. A diferencia de su bella cara,\nes tan brutal que tortura a sus\npresas en vez de rematarlas."),
         .pokemonScale = 320,
         .pokemonOffset = 10,
         .trainerScale = 256,
@@ -11188,7 +11188,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             "Las unidades a sus lados son imanes\n"
             "muy potentes. Generan magnetismo\n"
             "para atraer objetos de hierro\n"
-            "over 300 feet away."),
+            "a más de 90 metros."),
         .pokemonScale = 288,
         .pokemonOffset = -9,
         .trainerScale = 256,
@@ -13192,7 +13192,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             "Krabby vive en hoyos en las playas.\n"
             "En costas arenosas con poca\n"
             "comida, se les ve peleando por ella.\n"
-            "each other over territory."),
+            "También luchan por territorio."),
         .pokemonScale = 469,
         .pokemonOffset = 20,
         .trainerScale = 256,
@@ -14326,7 +14326,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             "Sus piernas se estiran y contraen.\n"
             "Usa sus extremidades como resortes\n"
             "rivales con patadas devastadoras. Tras\n"
-            "it rubs down its tired legs."),
+            "el combate, se masajea las piernas."),
         .pokemonScale = 256,
         .pokemonOffset = 3,
         .trainerScale = 259,
@@ -15001,7 +15001,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             "Su cuerno, que gira como un taladro,\n"
             "destruye edificios con un golpe.\n"
             "Se apoya en sus patas traseras y su\n"
-            "is well developed."),
+            "cerebro está muy desarrollado."),
         .pokemonScale = 256,
         .pokemonOffset = 1,
         .trainerScale = 299,
@@ -16316,7 +16316,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             "Para intentar confundir al rival,\n"
             "imita los movimientos del enemigo.\n"
             "Si es imitado, el rival no puede\n"
-            "its eyes off this Pokémon."),
+            "dejar de mirar a este Pokémon."),
         .pokemonScale = 422,
         .pokemonOffset = 14,
         .trainerScale = 256,
@@ -16723,7 +16723,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             "Scizor tiene un cuerpo con la dureza\n"
             "del acero. No le afectan los ataques\n"
             "comunes. Agita sus alas para\n"
-            "regulate its body temperature."),
+            "regular su temperatura corporal."),
         .pokemonScale = 278,
         .pokemonOffset = 1,
         .trainerScale = 256,
@@ -17095,7 +17095,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             "Si toca metal y descarga la\n"
             "electricidad de su cuerpo, un\n"
             "Elekid empieza a girar sus brazos\n"
-            "to recharge itself."),
+            "para recargarse."),
         .pokemonScale = 363,
         .pokemonOffset = 14,
         .trainerScale = 256,
@@ -19232,7 +19232,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             "Puede revertirse totalmente\n"
             "a datos de programa para entrar\n"
             "al ciberespacio. Porygon es una copia\n"
-            "protected so it cannot be duplicated."),
+            "protegida que no se puede duplicar."),
         .pokemonScale = 328,
         .pokemonOffset = 15,
         .trainerScale = 256,

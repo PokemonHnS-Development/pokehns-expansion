@@ -598,7 +598,7 @@ const struct ItemInfo gItemsInfo[] =
             "Restaura los PS de\n"
             "un POKéMON en\n"
         #if I_HEALTH_RECOVERY >= GEN_7
-            "60 points."),
+            "60 puntos."),
         #else
             "50 points."),
         #endif
@@ -622,7 +622,7 @@ const struct ItemInfo gItemsInfo[] =
             "Restaura los PS de\n"
             "un POKéMON en\n"
         #if I_HEALTH_RECOVERY >= GEN_7
-            "120 points."),
+            "120 puntos."),
         #else
             "200 points."),
         #endif
@@ -713,11 +713,11 @@ const struct ItemInfo gItemsInfo[] =
         .holdEffectParam = 30,
         .description = COMPOUND_STRING(
             "Agua mineral\n"
-            "que recupera PS\n"
+            "que recupera\n"
         #if I_HEALTH_RECOVERY >= GEN_7
-            "by 30 points."),
+            "30 puntos de PS."),
         #else
-            "by 50 points."),
+            "50 puntos de PS."),
         #endif
         .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_HEALTH_RECOVERY,
@@ -737,11 +737,11 @@ const struct ItemInfo gItemsInfo[] =
         .holdEffectParam = 50,
         .description = COMPOUND_STRING(
             "Bebida gaseosa\n"
-            "que recupera PS\n"
+            "que recupera\n"
         #if I_HEALTH_RECOVERY >= GEN_7
-            "by 50 points."),
+            "50 puntos de PS."),
         #else
-            "by 60 points."),
+            "60 puntos de PS."),
         #endif
         .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_HEALTH_RECOVERY,
@@ -761,9 +761,9 @@ const struct ItemInfo gItemsInfo[] =
         .holdEffectParam = 70,
         .description = COMPOUND_STRING(
             "Bebida muy dulce\n"
-            "que recupera PS\n"
+            "que recupera\n"
         #if I_HEALTH_RECOVERY >= GEN_7
-            "by 70 points."),
+            "70 puntos de PS."),
         #else
             "by 80 points."),
         #endif
@@ -801,11 +801,11 @@ const struct ItemInfo gItemsInfo[] =
         .price = 500,
         .description = COMPOUND_STRING(
             "Polvo amargo\n"
-            "que recupera PS\n"
+            "que recupera\n"
         #if I_HEALTH_RECOVERY >= GEN_7
-            "by 60 points."),
+            "60 puntos de PS."),
         #else
-            "by 50 points."),
+            "50 puntos de PS."),
         #endif
         .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_HEALTH_RECOVERY,
@@ -824,9 +824,9 @@ const struct ItemInfo gItemsInfo[] =
         .price = (I_PRICE >= GEN_7) ? 1200 : 800,
         .description = COMPOUND_STRING(
             "Raíz amarga\n"
-            "que recupera PS\n"
+            "que recupera\n"
         #if I_HEALTH_RECOVERY >= GEN_7
-            "by 120 points."),
+            "120 puntos de PS."),
         #else
             "by 200 points."),
         #endif
@@ -2217,7 +2217,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = COMPOUND_STRING(
             "Sirve para escapar\n"
             "al instante de un\n"
-            "cave or a dungeon."),
+            "lugar o mazmorra."),
     #if I_KEY_ESCAPE_ROPE >= GEN_8
         .price = 0,
         .importance = 1,
@@ -12813,7 +12813,7 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_REINS_OF_UNITY] =
     {
         .name = ITEM_NAME("RIENDAS UNIÓN"),
-        .pluralName = ITEM_PLURAL_NAME("Reins of Unity"),
+        .pluralName = ITEM_PLURAL_NAME("Riendas de la unión"),
         .price = 0,
         .importance = 1,
         .description = COMPOUND_STRING(
@@ -13055,7 +13055,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = COMPOUND_STRING(
             "Este dispositivo da\n"
             "acceso al {PKMN}\n"
-            "Storage System."),
+            "Sistema de guardado."),
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_FIELD,
@@ -13392,7 +13392,7 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_KEY_TO_ROOM_1] =
     {
         .name = ITEM_NAME("LL. HABITACIÓN 1"),
-        .pluralName = ITEM_PLURAL_NAME("Keys to Room 1"),
+        .pluralName = ITEM_PLURAL_NAME("Llaves hab. 1"),
         .price = 0,
         .description = sKeyToRoomDesc,
         .importance = 1,
@@ -13406,7 +13406,7 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_KEY_TO_ROOM_2] =
     {
         .name = ITEM_NAME("LL. HABITACIÓN 2"),
-        .pluralName = ITEM_PLURAL_NAME("Keys to Room 2"),
+        .pluralName = ITEM_PLURAL_NAME("Llaves hab. 2"),
         .price = 0,
         .description = sKeyToRoomDesc,
         .importance = 1,
@@ -13420,7 +13420,7 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_KEY_TO_ROOM_4] =
     {
         .name = ITEM_NAME("LL. HABITACIÓN 4"),
-        .pluralName = ITEM_PLURAL_NAME("Keys to Room 4"),
+        .pluralName = ITEM_PLURAL_NAME("Llaves hab. 4"),
         .price = 0,
         .description = sKeyToRoomDesc,
         .importance = 1,
@@ -13434,7 +13434,7 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_KEY_TO_ROOM_6] =
     {
         .name = ITEM_NAME("LL. HABITACIÓN 6"),
-        .pluralName = ITEM_PLURAL_NAME("Keys to Room 6"),
+        .pluralName = ITEM_PLURAL_NAME("Llaves hab. 6"),
         .price = 0,
         .description = sKeyToRoomDesc,
         .importance = 1,
@@ -13886,7 +13886,7 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_SCROLL_OF_DARKNESS] =
     {
         .name = ITEM_NAME("MANUSCRITO SOMBRAS"),
-        .pluralName = ITEM_PLURAL_NAME("Scrolls of Darkness"),
+        .pluralName = ITEM_PLURAL_NAME("Manuscritos de sombras"),
         .price = 0,
         .description = COMPOUND_STRING("Un pergamino peculiar\ncon secretos del\ncamino oscuro."),
         .importance = 1,
@@ -13902,7 +13902,7 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_SCROLL_OF_WATERS] =
     {
         .name = ITEM_NAME("MANUSCRITO AGUAS"),
-        .pluralName = ITEM_PLURAL_NAME("Scrolls of Waters"),
+        .pluralName = ITEM_PLURAL_NAME("Manuscritos de agua"),
         .price = 0,
         .description = COMPOUND_STRING("Un pergamino peculiar\ncon secretos del\ncamino del agua."),
         .importance = 1,
@@ -14505,7 +14505,7 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_FRESH_START_MOCHI] =
     {
         .name = ITEM_NAME("FRESH-START-MOCHI"),
-        .pluralName = ITEM_PLURAL_NAME("Fresh-Start Mochi"),
+        .pluralName = ITEM_PLURAL_NAME("Mochis de inicio"),
         .price = 300,
         .description = COMPOUND_STRING(
             "Objeto que reinicia\n"
@@ -14601,11 +14601,11 @@ const struct ItemInfo gItemsInfo[] =
         .price = 150,
         .description = COMPOUND_STRING(
             "Polvo amargo\n"
-            "que recupera PS\n"
+            "que recupera\n"
         #if I_HEALTH_RECOVERY >= GEN_7
-            "by 60 points."),
+            "60 puntos de PS."),
         #else
-            "by 50 points."),
+            "50 puntos de PS."),
         #endif
         .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_HEALTH_RECOVERY,
@@ -14625,9 +14625,9 @@ const struct ItemInfo gItemsInfo[] =
         .price = 750,
         .description = COMPOUND_STRING(
             "Polvo amargo\n"
-            "que recupera PS\n"
+            "que recupera\n"
         #if I_HEALTH_RECOVERY >= GEN_7
-            "by 120 points."),
+            "120 puntos de PS."),
         #else
             "by 200 points."),
         #endif

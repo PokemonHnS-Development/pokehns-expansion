@@ -254,7 +254,7 @@ static const u16 sEmpty_Pal[16 * 14] = {0};
 
 static const u8 sText_BerryBlenderStart[] = _("Encendiendo la LICUADORA DE\nBAYAS.\pElige una BAYA de tu BOLSA para\nponerla en la LICUADORA.\p");
 static const u8 sText_NewParagraph[] = _("\p");
-static const u8 sText_WasMade[] = _(" was made!");
+static const u8 sText_WasMade[] = _(" fue creado!");
 
 static const u8 *const sBlenderOpponentsNames[] =
 {
@@ -272,7 +272,7 @@ static const u8 sText_RunOutOfBerriesForBlending[] = _("Ya no te quedan BAYAS pa
 static const u8 sText_YourPokeblockCaseIsFull[] = _("Tu {POKEBLOCK} CASE está lleno.\p");
 static const u8 sText_HasNoBerriesToPut[] = _("no tiene BAYAS para poner\nen la LICUADORA DE BAYAS.");
 static const u8 sText_ApostropheSPokeblockCaseIsFull[] = _("El ESTUCHE de {POKEBLOCK} está lleno.\p");
-static const u8 sText_BlendingResults[] = _("RESULTS OF BLENDING");
+static const u8 sText_BlendingResults[] = _("RESULTADOS DEL LICUADO");
 static const u8 sText_SpaceBerry[] = _(" BERRY");
 static const u8 sText_Time[] = _("Time:");
 static const u8 sText_Min[] = _(" min. ");

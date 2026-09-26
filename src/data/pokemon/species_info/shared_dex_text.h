@@ -10,7 +10,7 @@ const u8 gRaticateAlolaPokedexText[] = _(
     "Forma grupos de Rattata, de los que\n"
     "toma el mando. Cada grupo\n"
     "tiene su territorio y disputas\n"
-    "over food happen often.");
+    "por comida son frecuentes.");
 
 const u8 gPichuPokedexText[] = _(
     "Aún no sabe retener electricidad.\n"
@@ -78,7 +78,7 @@ const u8 gZygarde50PokedexText[] = _(
     "Dicen que vigila el ecosistema desde\n"
     "lo profundo de las cuevas donde vive.\n"
     "Hay rumores de que posee un poder\n"
-    "lies hidden within its cells.");
+    "que se esconde en sus células.");
 
 const u8 gZygarde10PokedexText[] = _("Este es Zygarde cuando cerca del 10%\nde sus piezas han sido ensambladas.\nSalta hacia el pecho de su rival y\nclava sus afilados colmillos en él.\n");
 
@@ -104,8 +104,8 @@ const u8 gAraquanidPokedexText[] = _("Pese a lo que sugiere su apariencia,\ncuid
 const u8 gLurantisPokedexText[] = _(
     "Mantener los colores vivos de\n"
     "Lurantis requiere mucho esfuerzo, pero\n"
-    "algunos coleccionistas lo disfrutan.\n"
-    "as their hobby.");
+    "algunos coleccionistas lo disfrutan,\n"
+    "como pasatiempo.");
 
 const u8 gSalazzlePokedexText[] = _("Por alguna razón, solo se han hallado\nhembras. Crea un harén inverso de\nSalandit machos. Su gas venenoso\nestá lleno de feromonas.");
 

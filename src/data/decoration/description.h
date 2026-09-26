@@ -28,7 +28,7 @@ const u8 DecorDesc_CAMP_DESK[] = _("Un escritorio enorme\nde troncos. Lleno de\n
 const u8 DecorDesc_HARD_DESK[] = _(
     "Un escritorio enorme\n"
         "de rocas. Cabe\n"
-        "many decorations.");
+        "muchas decoraciones.");
 
 const u8 DecorDesc_SMALL_CHAIR[] = _(
     "Una silla pequeña\n"
@@ -110,25 +110,25 @@ const u8 DecorDesc_BLUE_BRICK[] = _(
 
 const u8 DecorDesc_RED_BALLOON[] = _(
     "Un globo rojo lleno\n"
-        "de agua. Explota.\n"
-        "if stepped on.");
+        "de agua. Explota\n"
+        "si lo pisas.");
 
 const u8 DecorDesc_BLUE_BALLOON[] = _(
     "Un globo azul lleno\n"
-        "de agua. Explota.\n"
-        "if stepped on.");
+        "de agua. Explota\n"
+        "si lo pisas.");
 
 const u8 DecorDesc_YELLOW_BALLOON[] = _("Un globo amarillo\nlleno de agua.\nSe revienta al pisarlo.");
 
 const u8 DecorDesc_RED_TENT[] = _(
     "Una carpa roja grande.\n"
-        "Puedes esconderte dentro.\n"
-        "it.");
+        "Puedes esconderte\n"
+        "dentro de ella.");
 
 const u8 DecorDesc_BLUE_TENT[] = _(
     "Una carpa azul grande.\n"
-        "Puedes esconderte dentro.\n"
-        "it.");
+        "Puedes esconderte\n"
+        "dentro de ella.");
 
 const u8 DecorDesc_SOLID_BOARD[] = _(
     "Ponlo sobre un hueco\n"
@@ -448,7 +448,7 @@ const u8 DecorDesc_KISS_CUSHION[] = _(
 const u8 DecorDesc_ZIGZAG_CUSHION[] = _(
     "Un ZIGZAGOON\n"
         "SMOOCHUM. Ponlo en\n"
-        "a mat or a desk.");
+        "un tapete o un escritorio.");
 
 const u8 DecorDesc_SPIN_CUSHION[] = _(
     "Un cojín de SPINDA.\n"
@@ -468,17 +468,17 @@ const u8 DecorDesc_BALL_CUSHION[] = _(
 const u8 DecorDesc_GRASS_CUSHION[] = _(
     "Una marca de planta\n"
         "SMOOCHUM. Ponlo en\n"
-        "a mat or a desk.");
+        "un tapete o un escritorio.");
 
 const u8 DecorDesc_FIRE_CUSHION[] = _(
     "Una marca de fuego\n"
         "SMOOCHUM. Ponlo en\n"
-        "a mat or a desk.");
+        "un tapete o un escritorio.");
 
 const u8 DecorDesc_WATER_CUSHION[] = _(
     "Una marca de agua\n"
         "SMOOCHUM. Ponlo en\n"
-        "a mat or a desk.");
+        "un tapete o un escritorio.");
 
 const u8 DecorDesc_SNORLAX_DOLL[] = _(
     "Un muñeco grande.\n"

@@ -743,7 +743,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
             "Un tajo de sus espadas marinas\n"
             "su armadura puede derribar rivales.\n"
             "Una simple mirada de ellos es\n"
-            "enough to intimidate most enemies."),
+            "suficiente para amedrentar a casi todos."),
         .pokemonScale = 268,
         .pokemonOffset = 2,
         .trainerScale = 271,
@@ -1106,7 +1106,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
             "Su denso pelaje negro crece siempre.\n"
             "El alto costo de mantener su pelo\n"
             "bien arreglado lo hace un\n"
-            "troublesome Pokémon to train."),
+            "POKéMON difícil de entrenar."),
         .pokemonScale = 338,
         .pokemonOffset = 9,
         .trainerScale = 256,
@@ -1459,7 +1459,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
             "Es malhumorado y ataca al enemigo\n"
             "agitando su cola espinosa con furia.\n"
             "La hoja que crece en su cabeza es\n"
-            "very bitter."),
+            "muy amarga."),
         .pokemonScale = 320,
         .pokemonOffset = 7,
         .trainerScale = 256,
@@ -3112,7 +3112,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
             "Fortalecen su cuerpo cargando\n"
             "vigas de acero. Es tan musculoso\n"
             "y fuerte que incluso un grupo de\n"
-            "wrestlers could not make it budge an inch."),
+            "luchadores no podría moverlo ni un ápice."),
         .pokemonScale = 282,
         .pokemonOffset = 3,
         .trainerScale = 256,
@@ -3322,7 +3322,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
             "Vive tanto en el agua como en tierra.\n"
             "Al hacer vibrar los bultos de su\n"
             "cabeza, crea ondas en el agua.\n"
-            "or earthquake-like vibrations on land."),
+            "o vibraciones sísmicas en tierra."),
         .pokemonScale = 366,
         .pokemonOffset = 10,
         .trainerScale = 257,
@@ -3823,7 +3823,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
             "Usa los sensores de cabeza y cola\n"
             "para captar vibraciones del aire y\n"
             "ubica y analiza el estado de su presa.\n"
-            "It is brutally aggressive."),
+            "Es brutalmente agresivo."),
         .pokemonScale = 491,
         .pokemonOffset = 16,
         .trainerScale = 256,
@@ -4258,7 +4258,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
             "Podando las hojas de su cabeza con\n"
             "frecuencia, este POKéMON puede\n"
             "crecer con una forma redonda. Estas\n"
-            "leaves refresh those who eat them."),
+            "hojas refrescan a quien las come."),
         .pokemonScale = 432,
         .pokemonOffset = 13,
         .trainerScale = 256,
@@ -4615,7 +4615,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
             "Aunque esta forma antigua de Basculin\n"
             "comparte muchas cualidades con otras,\n"
             "difiere en varios aspectos, incluyendo\n"
-            "demeanor, being much gentler than others."),
+            "su carácter, más dócil que los demás."),
         .pokemonScale = 316,
         .pokemonOffset = 7,
         .trainerScale = 257,
@@ -5603,7 +5603,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
             "Pelean por territorio, Crustle lucha\n"
             "ferozmente. Aquel cuya roca es\n"
             "rota pierde la batalla y...\n"
-            "begins to weaken."),
+            "empieza a debilitarse."),
         .pokemonScale = 265,
         .pokemonOffset = 2,
         .trainerScale = 262,
@@ -7589,7 +7589,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
             "Estos POKéMON ave son grandes buzos.\n"
             "Nadan mejor de lo que vuelan,\n"
             "y comen felices su comida favorita.\n"
-            "peat moss, as they dive underwater."),
+            "musgo, mientras bucean."),
         .pokemonScale = 432,
         .pokemonOffset = 14,
         .trainerScale = 256,
@@ -8144,7 +8144,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
             "El aroma de Deerling cambia con las\n"
             "estaciones, pero cuando el POKéMON\n"
             "es su Forma Invierno, casi no tiene\n"
-            "scent at all."),
+            "ningún aroma."),
         .pokemonScale = 422,
         .pokemonOffset = 14,
         .trainerScale = 256,
@@ -8406,7 +8406,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
             "Aunque hay muchos entusiastas\n"
             "para Sawsbuck como especie, esta\n"
             "forma estacional no es\n"
-            "very popular."),
+            "muy popular."),
         .pokemonScale = 256,
         .pokemonOffset = 1,
         .trainerScale = 326,
@@ -9556,8 +9556,8 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .description = COMPOUND_STRING(
             "Estos POKéMON viajan en bancos.\n"
             "Uno solo emite apenas un hilo de\n"
-            "para generar una descarga fuerte.\n"
-            "to unleash a powerful electric shock."),
+            "electricidad, pero juntos pueden\n"
+            "liberar una descarga eléctrica potente."),
         .pokemonScale = 682,
         .pokemonOffset = 24,
         .trainerScale = 256,
@@ -11100,7 +11100,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
             "Calienta su cuerpo absorbiendo el sol\n"
             "con sus alas. Si su temperatura\n"
             "baja, ya no puede moverse. Usa sus\n"
-            "sharp claws to catch prey."),
+            "garras afiladas para cazar."),
         .pokemonScale = 259,
         .pokemonOffset = 1,
         .trainerScale = 296,

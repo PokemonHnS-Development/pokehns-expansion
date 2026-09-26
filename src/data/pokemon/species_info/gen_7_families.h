@@ -376,7 +376,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
             "Lleva una campana de fuego al cuello.\n"
             "Suena fuerte cuando este POKéMON\n"
             "escupe fuego. De un golpe puede doblar\n"
-            "an iron bar right over."),
+            "una barra de hierro."),
         .pokemonScale = 365,
         .pokemonOffset = 12,
         .trainerScale = 256,
@@ -501,7 +501,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
             "Este POKéMON expulsa fluidos por\n"
             "creando globos para lanzar al rival\n"
             "sus rivales. Practica con esmero para\n"
-            "learn to make big bubbles."),
+            "aprender a hacer burbujas grandes."),
         .pokemonScale = 491,
         .pokemonOffset = 12,
         .trainerScale = 256,
@@ -3203,7 +3203,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
             "Los bosques donde vive Shiinotic son\n"
             "peligrosos de entrar por la noche.\n"
             "La gente se confunde con sus luces\n"
-            "can never find their way home again."),
+            "y no vuelve a encontrar su camino."),
         .pokemonScale = 305,
         .pokemonOffset = 7,
         .trainerScale = 257,
@@ -4325,7 +4325,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
             "Vive en mares poco profundos, como\n"
             "cerca de una playa. El moco pegajoso\n"
             "de su cuerpo sirve para calmar\n"
-            "sunburned skin. How convenient!"),
+            "las quemaduras de sol. ¡Qué práctico!"),
         .pokemonScale = 530,
         .pokemonOffset = 13,
         .trainerScale = 256,
@@ -4662,8 +4662,8 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .description = COMPOUND_STRING(
             "Nace dormido y muere dormido.\n"
             "Sus movimientos parecen ser solo\n"
-            "el resultado de darse vueltas.\n"
-            "in its dreams."),
+            "el resultado de darse vueltas\n"
+            "en sus sueños."),
         .pokemonScale = 491,
         .pokemonOffset = 12,
         .trainerScale = 256,
@@ -5772,7 +5772,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
             "Un fragante aroma a flores lo sigue.\n"
             "Al revolotear, esparce sus\n"
             "escamas que brillan. Al tocarlas\n"
-            "is said to restore good health."),
+            "se dice que devuelven la salud."),
         .pokemonScale = 282,
         .pokemonOffset = 4,
         .trainerScale = 256,
@@ -5985,7 +5985,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
             "Hace tiempo, lo llamaban el hijo de\n"
             "las estrellas. Dicen que es un Pokémon\n"
             "de otro mundo, pero no hay detalles\n"
-            "are known."),
+            "que se conozcan."),
         .pokemonScale = 682,
         .pokemonOffset = 24,
         .trainerScale = 256,
@@ -6324,8 +6324,8 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .description = COMPOUND_STRING(
             "Esta forma de vida llamada Ultraente\n"
             "vino de otro mundo. Presume de su\n"
-            "de su cuerpo, pero si esa muestra\n"
-            "is a boast or a threat remains unclear."),
+            "cuerpo, pero no se sabe\n"
+            "si esa muestra es bravata o amenaza."),
         .pokemonScale = 256,
         .pokemonOffset = 3,
         .trainerScale = 369,

@@ -1146,12 +1146,12 @@ static const u8 gText_MatchCallSteven_Pokemon[] = _("Ultimate STEEL POKéMON.");
 
 static const u8 gText_MatchCallBrendan_Strategy[] = _("¡Combate con conocimiento!");
 static const u8 gText_MatchCallBrendan_Pokemon[] = _("Usaré varios POKéMON.");
-static const u8 gText_MatchCallBrendan_Intro1[] = _("I'll be a better POKéMON");
+static const u8 gText_MatchCallBrendan_Intro1[] = _("Seré un mejor POKéMON");
 static const u8 gText_MatchCallBrendan_Intro2[] = _("profesor que mi padre!");
 
 static const u8 gText_MatchCallMay_Strategy[] = _("I'm not so good at battles.");
-static const u8 gText_MatchCallMay_Pokemon[] = _("I'll use any POKéMON!");
-static const u8 gText_MatchCallMay_Intro1[] = _("My POKéMON and I help");
+static const u8 gText_MatchCallMay_Pokemon[] = _("¡Usaré cualquier POKéMON!");
+static const u8 gText_MatchCallMay_Intro1[] = _("Mis POKéMON y yo ayudamos");
 static const u8 gText_MatchCallMay_Intro2[] = _("my father's research.");
 
 #if IS_HNS

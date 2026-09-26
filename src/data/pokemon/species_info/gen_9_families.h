@@ -722,7 +722,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
             "Es un POKéMON meticuloso que\n"
             "ama mantener todo ordenado. Se\n"
             "rodea de un aroma floral que\n"
-            "soothes the Pokémon around it."),
+            "calma a los POKéMON cercanos."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -1098,7 +1098,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
             "Si atacan a su grupo, Pawmo es el\n"
             "primero en saltar al combate y\n"
             "derrotando enemigos con un ataque\n"
-            "technique that utilizes electric shocks."),
+            "que usa descargas eléctricas."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -3978,7 +3978,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
             "Bombirdier usa el delantal de su\n"
             "pecho para envolver comida y\n"
             "lleva a su nido. Le gusta\n"
-            "dropping things that make loud noises."),
+            "tirar cosas que hacen mucho ruido."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -4294,8 +4294,8 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .description = COMPOUND_STRING(
             "Crea un gas de veneno y minerales\n"
             "de las rocas. Luego los usa.\n"
-            "detona el gas de sus cilindros ahora\n"
-            "numbering eight-to generate energy."),
+            "detona el gas de sus cilindros,\n"
+            "que ya son ocho, para generar energía."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -6313,7 +6313,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
             "Este POKéMON vive en bosques y\n"
             "zonas rocosas. Usa el poder de su\n"
             "aleta dorsal para enfriar su interior\n"
-            "nest like a refrigerator."),
+            "y anidar como un refrigerador."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -6684,7 +6684,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
             "Tiene un cuerpo robusto formado por\n"
             "monedas apiladas. Gholdengo vence a\n"
             "a sus enemigos lanzando monedas\n"
-            "at them in quick succession."),
+            "sobre ellos en rápida sucesión."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -6749,7 +6749,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
             "El rencor de alguien castigado por\n"
             "escribir los males del rey en tablas\n"
             "tablillas de madera se ha cubierto\n"
-            "dead leaves to become a Pokémon."),
+            "de hojas muertas y se volvió un Pokémon."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -8024,8 +8024,8 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .description = COMPOUND_STRING(
             "Se parece a un POKéMON que fue\n"
             "tema popular por un tiempo tras\n"
-            "una revista paranormal.\n"
-            "touted it as Raikou's ancestor."),
+            "una revista paranormal\n"
+            "que lo proclamaba ancestro de Raikou."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 345,
@@ -8091,7 +8091,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .description = COMPOUND_STRING(
             "Su nombre viene de un objeto\n"
             "misterioso de un libro antiguo.\n"
-            "Its body seems to be metallic."),
+            "Parece que su cuerpo es metálico."),
         .pokemonScale = 256,
         .pokemonOffset = 1,
         .trainerScale = 336,

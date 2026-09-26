@@ -6797,13 +6797,13 @@ static void PrintEvolutionTargetSpeciesAndMethod(u8 taskId, u16 species, u8 dept
                     StringAppend(gStringVar4, COMPOUND_STRING("{UP_ARROW_2}friendship"));
                     break;
                 case IF_ATK_GT_DEF:
-                    StringAppend(gStringVar4, COMPOUND_STRING("Atk > Def"));
+                    StringAppend(gStringVar4, COMPOUND_STRING("Ata > Def"));
                     break;
                 case IF_ATK_EQ_DEF:
                     StringAppend(gStringVar4, COMPOUND_STRING("Atk = Def"));
                     break;
                 case IF_ATK_LT_DEF:
-                    StringAppend(gStringVar4, COMPOUND_STRING("Atk < Def"));
+                    StringAppend(gStringVar4, COMPOUND_STRING("Ata < Def"));
                     break;
                 case IF_TIME:
                     switch (evolutions[i].params[j].arg1)

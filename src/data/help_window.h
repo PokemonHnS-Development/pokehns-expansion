@@ -5,7 +5,7 @@ const struct HelpWindow gHelpWindowInfo[] =
 {
     [HELP_DEMO_WINDOW] =
     {
-        .header = COMPOUND_STRING("Information: Help Windows"),
+        .header = COMPOUND_STRING("Información: Ventanas de ayuda"),
         .desc = COMPOUND_STRING("Esta es una ventana de ayuda.\nPuedes poner mucho texto en\npantalla ¡y nadie lo leerá!\n\n¡Qué genial!"),
         .headerFont = FONT_NORMAL,
         .descFont = FONT_NORMAL,
@@ -13,7 +13,7 @@ const struct HelpWindow gHelpWindowInfo[] =
     },
     [HELP_GAMESTART_WINDOW] =
     {
-        .header = COMPOUND_STRING("Information: More Options"),
+        .header = COMPOUND_STRING("Información: Más opciones"),
         .desc = COMPOUND_STRING("El reloj se puede cambiar en\ncualquier CENTRO POKéMON sin\npenalización. Revisa los OBJETOS\nCLAVE de tu BOLSA y el MENÚ de\nOPCIONES para más opciones.\n¡Disfruta!"),
         .headerFont = FONT_NORMAL,
         .descFont = FONT_NORMAL,
@@ -82,7 +82,7 @@ const struct HelpWindow gHelpWindowInfo[] =
     [HELP_DAYCARE3_WINDOW] =
     {
         .header = COMPOUND_STRING("BABY POKéMON CRIES"),
-        .desc = COMPOUND_STRING("PICHU says WAAAH.\n"
+        .desc = COMPOUND_STRING("PICHU dice WAAAH.\n"
                                 "CLEFFA dice EEK.\n"
                                 "IGGLYBUFF dice LALALA.\n"
                                 "TYROGUE dice HIYAH.\n"
@@ -119,7 +119,7 @@ const struct HelpWindow gHelpWindowInfo[] =
                                 "IND: PS,PAE,VEL   BRN: DEF,VEL,VEL\n"
                                 "LBL: PAE,VEL,VEL  OLV: ATA,DEF,VEL\n"
                                 "GRIS: PS,ATK,A.ESP\n"
-                                "Every POKéBLOCK attracts HIDDEN ABILITY."
+                                "Cada POKéBLOCK atrae una HABILIDAD OCULTA."
 
                             ),
         .headerFont = FONT_NORMAL,
@@ -128,14 +128,14 @@ const struct HelpWindow gHelpWindowInfo[] =
     },
     [HELP_GOLD_POKEBLOCK_WINDOW] =
     {
-        .header = COMPOUND_STRING("FEEDERS: GOLD POKéBLOCKS"),
+        .header = COMPOUND_STRING("COMEDEROS: POKéBLOCKS ORO"),
         .desc = COMPOUND_STRING("GOLD POKéBLOCKS attract POKéMON with\n"
                                 "5 IVs perfectos. El sabor decide cuál\n"
                                 "IV no es perfecto.\n"
                                 "PICANTE: sin A.ESP   SECO: sin ATK\n"
                                 "DULCE: sin D.ESP   AMARGO: sin VEL\n"
                                 "ÁCIDO: sin PS\n"
-                                "Every POKéBLOCK attracts HIDDEN ABILITY."
+                                "Cada POKéBLOCK atrae una HABILIDAD OCULTA."
                             ),
         .headerFont = FONT_NORMAL,
         .descFont = FONT_SMALL,

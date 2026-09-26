@@ -318,7 +318,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
             "Si lo atacan, contraataca escupiendo\n"
             "bolas de fuego creadas en su vientre.\n"
             "A Torchic no le gusta la oscuridad\n"
-            "can't see its surroundings."),
+            "porque no ve lo que lo rodea."),
         .pokemonScale = 566,
         .pokemonOffset = 19,
         .trainerScale = 256,
@@ -402,8 +402,8 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .description = COMPOUND_STRING(
             "Lanza hasta 10 patadas por segundo.\n"
             "Su instinto luchador lo obliga a\n"
-            "mantener la ofensiva hasta el final.\n"
-            "opponent gives up."),
+            "mantener la ofensiva hasta que\n"
+            "el rival se rinda."),
         .pokemonScale = 343,
         .pokemonOffset = 5,
         .trainerScale = 256,
@@ -1403,7 +1403,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
             "Su voz tiene un volumen asombroso.\n"
             "Obstagoon suele adoptar una postura\n"
             "amenazante y gritar; este movimiento\n"
-            "is known as Obstruct."),
+            "se conoce como Obstrucción."),
         .pokemonScale = 259,
         .pokemonOffset = 1,
         .trainerScale = 296,
@@ -2686,7 +2686,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
             "Ralts puede sentir las emociones de\n"
             "personas y POKéMON con los cuernos de\n"
             "su cabeza. Se oculta si siente...\n"
-            "senses any hostility."),
+            "cualquier hostilidad."),
         .pokemonScale = 457,
         .pokemonOffset = -3,
         .trainerScale = 256,
@@ -5235,7 +5235,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
             "Con un entrenamiento de yoga muy duro,\n"
             "obtuvo el poder de predecir los\n"
             "movimientos rivales. Lucha con un\n"
-            "like movement."),
+            "movimiento parecido a un baile."),
         .pokemonScale = 298,
         .pokemonOffset = 5,
         .trainerScale = 256,
@@ -6345,7 +6345,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
             "Carvanha atacan en grupo, haciendo que\n"
             "los barcos se hundan. Dicen que es un\n"
             "POKéMON feroz, pero huye con timidez\n"
-            "as it finds itself alone."),
+            "si se queda solo."),
         .pokemonScale = 362,
         .pokemonOffset = 0,
         .trainerScale = 256,
@@ -6575,7 +6575,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
             "Aunque este POKéMON vive en el mar,\n"
             "puede sobrevivir en tierra, aunque no\n"
             "Pierde vitalidad si su cuerpo se\n"
-            "dried out."),
+            "seca."),
         .pokemonScale = 256,
         .pokemonOffset = 2,
         .trainerScale = 493,
@@ -6722,7 +6722,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
             "Numel guarda magma hirviendo en la\n"
             "joroba de su espalda. Es un POKéMON\n"
             "fuerte que carga 100 kg. Ha servido\n"
-            "humans at work since long ago."),
+            "a los humanos desde hace mucho."),
         .pokemonScale = 342,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -7886,7 +7886,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
             "Al luchar, se apoya en sus patas\n"
             "traseras y ataca con sus garras\n"
             "afiladas. Su pelaje se eriza si ve a\n"
-            "any Seviper."),
+            "algún Seviper."),
         .pokemonScale = 256,
         .pokemonOffset = 3,
         .trainerScale = 256,
@@ -8959,8 +8959,8 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .description = COMPOUND_STRING(
             "Feebas vive en estanques llenos de\n"
             "maleza. Debido a su\n"
-            "aspecto muy descuidado, es\n"
-            "seems as if few Trainers raise it."),
+            "aspecto muy descuidado, parece\n"
+            "que pocos Entrenadores lo crían."),
         .pokemonScale = 423,
         .pokemonOffset = -4,
         .trainerScale = 256,
@@ -9821,7 +9821,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
             "Se cree que su cuerpo es hueco y que\n"
             "solo arde una bola de fuego espectral.\n"
             "Sin embargo, nadie ha podido\n"
-            "confirm this theory as fact."),
+            "confirmar esta teoría."),
         .pokemonScale = 256,
         .pokemonOffset = 3,
         .trainerScale = 299,
@@ -13329,7 +13329,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .description = COMPOUND_STRING(
             "Al cambiar de forma, aparece una\n"
             "aurora. Absorbe ataques mediante\n"
-            "altering its cellular structure."),
+            "la alteración de su estructura celular."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 290,

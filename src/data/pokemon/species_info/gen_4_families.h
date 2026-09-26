@@ -247,8 +247,8 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .description = COMPOUND_STRING(
             "Su cola de fuego se alimenta de gas\n"
             "creado en su vientre. Antes de dormir,\n"
-            "Chimchar apaga la llama de su cola.\n"
-            "tails to prevent fires."),
+            "Chimchar apaga la llama de su cola,\n"
+            "para evitar incendios."),
         .pokemonScale = 432,
         .pokemonOffset = 15,
         .trainerScale = 256,
@@ -401,8 +401,8 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .description = COMPOUND_STRING(
             "Su corona de fuego indica su\n"
             "naturaleza ardiente. Usa un tipo de\n"
-            "artes marciales que usan sus extremid\n"
-            "take on any opponent."),
+            "artes marciales con sus extremidades\n"
+            "para enfrentar a cualquier rival."),
         .pokemonScale = 282,
         .pokemonOffset = 3,
         .trainerScale = 256,
@@ -3695,7 +3695,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
             "Es un bruto que irrumpe en el nido\n"
             "de otro POKéMON y lo reclama como\n"
             "propio. Envuelve su cuerpo con su\n"
-            "tails to make itself look bigger."),
+            "cola para parecer más grande."),
         .pokemonScale = 305,
         .pokemonOffset = 7,
         .trainerScale = 257,
@@ -4305,7 +4305,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
             "Le apasionan los objetos brillantes.\n"
             "hallado en su cueva, casi sin moverse,\n"
             "mirando las joyas que ha acumulado\n"
-            "or Carbink it has caught."),
+            "o los Carbink que ha capturado."),
         .pokemonScale = 265,
         .pokemonOffset = 2,
         .trainerScale = 262,
@@ -5066,7 +5066,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
             "Sujeta a su presa con las pinzas de\n"
             "su cola e inyecta veneno. No la suelta\n"
             "hasta que el veneno hace efecto.\n"
-            "It can survive a year without food."),
+            "Puede sobrevivir un año sin comer."),
         .pokemonScale = 366,
         .pokemonOffset = 12,
         .trainerScale = 257,
@@ -6192,7 +6192,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
             "El primer aparato que Rotom pudo\n"
             "poseer fue el ventilador. Usa su\n"
             "poder sobre el viento en sus bromas.\n"
-            "blowing any important documents it finds."),
+            "Sopla los documentos que encuentra."),
         .pokemonScale = 530,
         .pokemonOffset = 13,
         .trainerScale = 256,
@@ -7193,7 +7193,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
             "Giratina pierde sus patas al cambiar a\n"
             "esta forma. Creen que viene de un\n"
             "mundo donde el cielo y la tierra\n"
-            "are as one."),
+            "son uno solo."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 614,
@@ -7436,7 +7436,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
             "El agua es el 80% de su cuerpo.\n"
             "Inicia su vida con un gran poder\n"
             "que le permite unirse a cualquier tipo\n"
-            "of Pokémon."),
+            "de POKéMON."),
         .pokemonScale = 530,
         .pokemonOffset = 13,
         .trainerScale = 256,

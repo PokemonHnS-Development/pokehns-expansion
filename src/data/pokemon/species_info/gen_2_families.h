@@ -2682,7 +2682,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
             "Este POKéMON flota y se desplaza con\n"
             "viento. Si siente que se acercan\n"
             "fuertes vientos, Hoppip se une a otros\n"
-            "to prepare against being blown away."),
+            "para no ser arrastrado por el viento."),
         .pokemonScale = 562,
         .pokemonOffset = -7,
         .trainerScale = 256,
@@ -3229,7 +3229,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
             "Ve 360 grados sin mover\n"
             "un gran volador capaz de volar muy\n"
             "hace frenados bruscos y giros en el\n"
-            "quickly chase down targeted prey."),
+            "aire para alcanzar rápido a su presa."),
         .pokemonScale = 274,
         .pokemonOffset = -1,
         .trainerScale = 256,
@@ -3868,7 +3868,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
             "Misdreavus asusta a la gente con un\n"
             "llanto espeluznante. Al parecer usa\n"
             "sus esferas rojas para absorber miedo\n"
-            "as its nutrition."),
+            "como alimento."),
         .pokemonScale = 407,
         .pokemonOffset = -8,
         .trainerScale = 256,
@@ -4861,7 +4861,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
             "Gliscor observa a su presa colgado\n"
             "de las ramas. Su vuelo es silencioso.\n"
             "Cuando se presenta la oportunidad\n"
-            "itself, it swoops!"),
+            "se lanza en picada."),
         .pokemonScale = 261,
         .pokemonOffset = 1,
         .trainerScale = 334,
@@ -6320,7 +6320,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
             "Busca comida frotando su hocico\n"
             "contra el suelo. Su comida favorita es\n"
             "un hongo que crece bajo el pasto seco.\n"
-            "It occasionally roots out hot springs."),
+            "A veces desentierra aguas termales."),
         .pokemonScale = 324,
         .pokemonOffset = 20,
         .trainerScale = 256,
@@ -7696,7 +7696,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
             "Las astas de Stantler fueron\n"
             "vendidas caras como obras de arte.\n"
             "Por eso, este POKéMON fue cazado\n"
-            "close to extinction."),
+            "casi hasta la extinción."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 256,

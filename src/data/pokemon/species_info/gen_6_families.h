@@ -630,7 +630,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             "Lanza guijarros cubiertos de burbujas\n"
             "con gran control, golpeando latas a\n"
             "cien pies de distancia. Es veloz.\n"
-            "is unparalleled."),
+            "Su rapidez no tiene igual."),
         .pokemonScale = 422,
         .pokemonOffset = 12,
         .trainerScale = 256,
@@ -2128,7 +2128,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             "Este POKéMON puede extraer el\n"
             "poder oculto en flores amarillas.\n"
             "Este poder potencia los ataques\n"
-            "Floette uses to protect itself."),
+            "que Floette usa para protegerse."),
         .randomizerMode = MON_RANDOMIZER_INVALID,
     },
 
@@ -3134,7 +3134,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             "Al evolucionar Honedge, se divide en\n"
             "dos espadas. Sus complejos ataques\n"
             "con ambas espadas son imparables,\n"
-            "against those skilled at swordplay."),
+            "incluso para hábiles espadachines."),
         .pokemonScale = 366,
         .pokemonOffset = 7,
         .trainerScale = 257,
@@ -4103,7 +4103,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             "Su veneno es tan fuerte que puede\n"
             "por el casco de un petrolero. Dicen\n"
             "historias de barcos que vagan por\n"
-            "Dragalge live, never to return."),
+            "donde vive Dragalge, sin volver jamás."),
         .pokemonScale = 267,
         .pokemonOffset = 2,
         .trainerScale = 286,
@@ -4725,8 +4725,8 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .description = COMPOUND_STRING(
             "Usa los cristales de su cuerpo para\n"
             "crear al instante un muro de hielo y\n"
-            "bloquear ataques o encerrar al rival.\n"
-            "them in ice."),
+            "bloquear ataques o encerrar al rival\n"
+            "en hielo."),
         .pokemonScale = 275,
         .pokemonOffset = 7,
         .trainerScale = 256,
@@ -5671,7 +5671,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             "La luz que sale de los agujeros\n"
             "de la calabaza puede hipnotizar\n"
             "y controlar a las personas y\n"
-            "Pokémon that see it."),
+            "POKéMON que la ven."),
         .pokemonScale = 491,
         .pokemonOffset = 12,
         .trainerScale = 256,

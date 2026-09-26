@@ -985,7 +985,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
             "Suficientemente listos para usar\n"
             "objetos en batalla, se ha visto a\n"
             "estos POKéMON lanzar rocas o usar\n"
-            "to wrap up enemies."),
+            "cuerdas para envolver a sus rivales."),
         .pokemonScale = 366,
         .pokemonOffset = 7,
         .trainerScale = 257,
@@ -4600,7 +4600,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .speciesName = _("GRIMMSNARL"),
         .cryId = CRY_GRIMMSNARL,
         .natDexNum = NATIONAL_DEX_GRIMMSNARL,
-        .categoryName = _("Bulk Up"),
+        .categoryName = _("Músculo"),
         .height = 15,
         .weight = 610,
         .description = COMPOUND_STRING(
@@ -4665,7 +4665,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .speciesName = _("GRIMMSNARL"),
         .cryId = CRY_GRIMMSNARL,
         .natDexNum = NATIONAL_DEX_GRIMMSNARL,
-        .categoryName = _("Bulk Up"),
+        .categoryName = _("Músculo"),
         .height = 320,
         .weight = 0,
         .description = COMPOUND_STRING(
@@ -5803,7 +5803,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
             "Al comer las semillas guardadas en\n"
             "sus bolsas, este POKéMON no solo\n"
             "sacia su hambre constante. Es\n"
-            "also generating electricity."),
+            "también capaz de generar electricidad."),
         .pokemonScale = 530,
         .pokemonOffset = 13,
         .trainerScale = 256,
@@ -7359,7 +7359,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
             "Esta forma de Urshifu es un fuerte\n"
             "Esta forma de Urshifu cree que lo\n"
             "mejor es derrotar al rival con una\n"
-            "strikes are nonstop, flowing like a river."),
+            "serie de golpes incesante, como un río."),
         .pokemonScale = 256,
         .pokemonOffset = 1,
         .trainerScale = 326,

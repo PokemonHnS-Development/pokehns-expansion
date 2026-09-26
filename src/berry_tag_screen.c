@@ -145,10 +145,10 @@ static const struct WindowTemplate sWindowTemplates[] =
 static const u8 *const sBerryFirmnessStrings[] =
 {
     [BERRY_FIRMNESS_UNKNOWN]    = COMPOUND_STRING("???"),
-    [BERRY_FIRMNESS_VERY_SOFT]  = COMPOUND_STRING("Very soft"),
+    [BERRY_FIRMNESS_VERY_SOFT]  = COMPOUND_STRING("Muy blanda"),
     [BERRY_FIRMNESS_SOFT]       = COMPOUND_STRING("Soft"),
     [BERRY_FIRMNESS_HARD]       = COMPOUND_STRING("Hard"),
-    [BERRY_FIRMNESS_VERY_HARD]  = COMPOUND_STRING("Very hard"),
+    [BERRY_FIRMNESS_VERY_HARD]  = COMPOUND_STRING("Muy dura"),
     [BERRY_FIRMNESS_SUPER_HARD] = COMPOUND_STRING("Super hard")
 };
 

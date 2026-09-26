@@ -158,7 +158,7 @@ static void SpriteCB_Condition(struct Sprite *);
 
 static const u8 sText_GetsAPokeBlockQuestion[] = _(" gets a {POKEBLOCK}?");
 static const u8 sText_WasEnhanced[] = _("was enhanced!");
-static const u8 sText_NothingChanged[] = _("Nothing changed!");
+static const u8 sText_NothingChanged[] = _("¡No cambió nada!");
 static const u8 sText_WontEatAnymore[] = _("Ya no comerá más...");
 static const u8 sText_NatureSlash[] = _("NATURE/");
 
