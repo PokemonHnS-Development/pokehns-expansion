@@ -55,7 +55,7 @@ enum
 // Windows displayed in the facilities map view.
 enum
 {
-    MAP_WINDOW_UNUSED, // Overlaps the "Battle Frontier" title area of the map
+    MAP_WINDOW_UNUSED, // Overlaps the "Frente de Batalla" title area of the map
     MAP_WINDOW_NAME,
     MAP_WINDOW_DESCRIPTION,
     MAP_WINDOW_COUNT

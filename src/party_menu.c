@@ -8422,7 +8422,7 @@ void CursorCb_MoveItem(u8 taskId)
     {
         gPartyMenu.action = PARTY_ACTION_SWITCH;
 
-        // show "Move item to where" in bottom left
+        // show "¿A dónde mover el objeto?" in bottom left
         DisplayPartyMenuStdMessage(PARTY_MSG_MOVE_ITEM_WHERE);
         // update color of first selected box
         AnimatePartySlot(gPartyMenu.slotId, 1);

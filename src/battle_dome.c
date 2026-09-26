@@ -858,32 +858,32 @@ static const u8 sTournamentIdToPairedTrainerIds[DOME_TOURNAMENT_TRAINERS_COUNT] 
 static const u8 *const sBattleDomePotentialTexts[DOME_TOURNAMENT_TRAINERS_COUNT + 1] =
 {
     COMPOUND_STRING("¡El mejor candidato a campeón!"), // Highest potential
-    COMPOUND_STRING("A sure-finalist team."),
-    COMPOUND_STRING("A likely top-three finisher."),
+    COMPOUND_STRING("Un equipo finalista seguro."),
+    COMPOUND_STRING("Probable finalista del top 3."),
     COMPOUND_STRING("Candidato a quedar en primer lugar."),
     COMPOUND_STRING("Un equipo con potencial de primera."),
     COMPOUND_STRING("El equipo sorpresa de este torneo."),
-    COMPOUND_STRING("A better-than-average team."),
-    COMPOUND_STRING("This tournament's average team."),
+    COMPOUND_STRING("Un equipo mejor que el promedio."),
+    COMPOUND_STRING("Un equipo promedio en este torneo."),
     COMPOUND_STRING("Un equipo con potencial normal."),
-    COMPOUND_STRING("A weaker-than-average team."),
+    COMPOUND_STRING("Un equipo más débil que el promedio."),
     COMPOUND_STRING("Un equipo que busca su primera\nvictoria."),
     COMPOUND_STRING("Ganar hará orgulloso a este equipo."),
-    COMPOUND_STRING("Overall, a weak team."),
+    COMPOUND_STRING("En general, un equipo débil."),
     COMPOUND_STRING("Un equipo con potencial muy bajo."),
     COMPOUND_STRING("Un equipo con pocas chances de ganar."),
     COMPOUND_STRING("El equipo con menos chances de ganar."), // Lowest potential
-    COMPOUND_STRING("The perfect, invincible superstar!"), // Dome Ace Tucker
+    COMPOUND_STRING("¡La superestrella invencible!"), // Dome Ace Tucker
 };
 
 // The second line of text on a trainers info card. It gives information about their battle style (dependent on their party's moves).
 static const u8 *const sBattleDomeOpponentStyleTexts[NUM_BATTLE_STYLES] =
 {
     [DOME_BATTLE_STYLE_RISKY]           = COMPOUND_STRING("A veces arriesga un desastre total."),
-    [DOME_BATTLE_STYLE_STALL]           = COMPOUND_STRING("Skilled at enduring long battles."),
+    [DOME_BATTLE_STYLE_STALL]           = COMPOUND_STRING("Experto en batallas prolongadas."),
     [DOME_BATTLE_STYLE_VARIED]          = COMPOUND_STRING("Cambia de táctica según el rival."),
-    [DOME_BATTLE_STYLE_COMBO_HIGH]      = COMPOUND_STRING("Has a tough winning pattern."),
-    [DOME_BATTLE_STYLE_RARE_MOVES]      = COMPOUND_STRING("Occasionally uses a very rare move."),  // Seems like the text for these two was swapped
+    [DOME_BATTLE_STYLE_COMBO_HIGH]      = COMPOUND_STRING("Tiene un patrón de victoria duro."),
+    [DOME_BATTLE_STYLE_RARE_MOVES]      = COMPOUND_STRING("A veces usa un movimiento raro."),  // Seems like the text for these two was swapped
     [DOME_BATTLE_STYLE_RARE_MOVE]       = COMPOUND_STRING("Usa movimientos que desconciertan."), //
     [DOME_BATTLE_STYLE_HP]              = COMPOUND_STRING("Vigila siempre los PS en combate."),
     [DOME_BATTLE_STYLE_STORE_POWER]     = COMPOUND_STRING("Bueno para acumular y soltar poder."),
@@ -892,7 +892,7 @@ static const u8 *const sBattleDomeOpponentStyleTexts[NUM_BATTLE_STYLES] =
     [DOME_BATTLE_STYLE_REGAL]           = COMPOUND_STRING("Ataca con aire majestuoso."),
     [DOME_BATTLE_STYLE_LOW_PP]          = COMPOUND_STRING("Usa movimientos potentes de bajo PP."),
     [DOME_BATTLE_STYLE_STATUS_ATK]      = COMPOUND_STRING("Experto en debilitar y atacar."),
-    [DOME_BATTLE_STYLE_ENDURE]          = COMPOUND_STRING("Battles while enduring all attacks."),
+    [DOME_BATTLE_STYLE_ENDURE]          = COMPOUND_STRING("Lucha resistiendo todo ataque."),
     [DOME_BATTLE_STYLE_STATUS]          = COMPOUND_STRING("Experto en desestabilizar al rival."),
     [DOME_BATTLE_STYLE_STRAIGHTFORWARD] = COMPOUND_STRING("Usa movimientos fuertes y directos."),
     [DOME_BATTLE_STYLE_AGGRESSIVE]      = COMPOUND_STRING("Usa movimientos fuertes sin dudar."),
@@ -931,12 +931,12 @@ static const u8 *const sBattleDomeOpponentStatsTexts[] =
     COMPOUND_STRING("Realza VELOCIDAD y ATQ.ESP."),       // DOME_TEXT_SPEED starts here
     COMPOUND_STRING("Prioriza VELOCIDAD y DEF.ESP."),
     COMPOUND_STRING("Realza ATQ.ESP. y DEF.ESP."), // DOME_TEXT_SPATK starts here
-    COMPOUND_STRING("Emphasizes HP."),                         // DOME_TEXT_ONE_GOOD_STAT starts here
-    COMPOUND_STRING("Emphasizes ATTACK."),
-    COMPOUND_STRING("Emphasizes DEFENSE."),
-    COMPOUND_STRING("Emphasizes SPEED."),
-    COMPOUND_STRING("Emphasizes SP. ATTACK."),
-    COMPOUND_STRING("Emphasizes SP. DEFENSE."),
+    COMPOUND_STRING("Prioriza PS."),                         // DOME_TEXT_ONE_GOOD_STAT starts here
+    COMPOUND_STRING("Prioriza ATAQUE."),
+    COMPOUND_STRING("Prioriza DEFENSA."),
+    COMPOUND_STRING("Prioriza VELOCIDAD."),
+    COMPOUND_STRING("Prioriza AT. ESP."),
+    COMPOUND_STRING("Prioriza DEF. ESP."),
     COMPOUND_STRING("Descuida PS y ATAQUE."),                // DOME_TEXT_TWO_BAD_STATS starts here
     COMPOUND_STRING("Ignora PS y DEFENSA."),
     COMPOUND_STRING("Ignora PS y VELOCIDAD."),
@@ -952,13 +952,13 @@ static const u8 *const sBattleDomeOpponentStatsTexts[] =
     COMPOUND_STRING("Descuida VELOCIDAD y AT. ESP."),
     COMPOUND_STRING("Ignora VELOCIDAD y DEF. ESP."),
     COMPOUND_STRING("Descuida AT. ESP. y DEF. ESP."),
-    COMPOUND_STRING("Neglects HP."),                           // DOME_TEXT_ONE_BAD_STAT starts here
-    COMPOUND_STRING("Neglects ATTACK."),
-    COMPOUND_STRING("Neglects DEFENSE."),
-    COMPOUND_STRING("Neglects SPEED."),
-    COMPOUND_STRING("Neglects SP. ATTACK."),
-    COMPOUND_STRING("Neglects SP. DEFENSE."),
-    [DOME_TEXT_WELL_BALANCED] = COMPOUND_STRING("Raises POKéMON in a well-balanced way."),
+    COMPOUND_STRING("Descuida PS."),                           // DOME_TEXT_ONE_BAD_STAT starts here
+    COMPOUND_STRING("Descuida ATAQUE."),
+    COMPOUND_STRING("Descuida DEFENSA."),
+    COMPOUND_STRING("Descuida VELOCIDAD."),
+    COMPOUND_STRING("Descuida AT. ESP."),
+    COMPOUND_STRING("Descuida DEF. ESP."),
+    [DOME_TEXT_WELL_BALANCED] = COMPOUND_STRING("Cria POKéMON de forma equilibrada."),
 };
 
 static const u8 sInfoTrainerMonX[FRONTIER_PARTY_SIZE] = {104, 136, 104};
@@ -998,11 +998,11 @@ static const u8 *const sBattleDomeMatchNumberTexts[DOME_TOURNAMENT_MATCHES_COUNT
 static const u8 *const sBattleDomeWinTexts[] =
 {
     [DOME_TEXT_NO_WINNER_YET]    = COMPOUND_STRING("¡Que empiece la batalla!"),
-    [DOME_TEXT_WON_USING_MOVE]   = COMPOUND_STRING("{STR_VAR_1} won using {STR_VAR_2}!"),
+    [DOME_TEXT_WON_USING_MOVE]   = COMPOUND_STRING("{STR_VAR_1} ganó usando {STR_VAR_2}!"),
     [DOME_TEXT_CHAMP_USING_MOVE] = COMPOUND_STRING("¡{STR_VAR_1} es el campeón!"),
-    [DOME_TEXT_WON_ON_FORFEIT]   = COMPOUND_STRING("{STR_VAR_1} won by default!"),
-    [DOME_TEXT_CHAMP_ON_FORFEIT] = COMPOUND_STRING("{STR_VAR_1} won outright by default!"),
-    [DOME_TEXT_WON_NO_MOVES]     = COMPOUND_STRING("{STR_VAR_1} won without using a move!"),
+    [DOME_TEXT_WON_ON_FORFEIT]   = COMPOUND_STRING("¡{STR_VAR_1} ganó por defecto!"),
+    [DOME_TEXT_CHAMP_ON_FORFEIT] = COMPOUND_STRING("{STR_VAR_1} ganó por defecto!"),
+    [DOME_TEXT_WON_NO_MOVES]     = COMPOUND_STRING("{STR_VAR_1} ganó sin usar ataques!"),
     [DOME_TEXT_CHAMP_NO_MOVES]   = COMPOUND_STRING("¡{STR_VAR_1} ganó sin usar movimientos!"),
 };
 

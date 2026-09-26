@@ -1,79 +1,79 @@
 const struct EasyChatWordInfo gEasyChatGroup_Trainer[] = {
     [EC_INDEX(EC_WORD_I_CHOOSE_YOU)] =
     {
-        .text = COMPOUND_STRING("I CHOOSE YOU"),
+        .text = COMPOUND_STRING("TE ELIJO"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_BAG),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_GOTCHA)] =
     {
-        .text = COMPOUND_STRING("GOTCHA"),
+        .text = COMPOUND_STRING("¡TE PILLÉ!"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_CENTER),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_TRADE)] =
     {
-        .text = COMPOUND_STRING("TRADE"),
+        .text = COMPOUND_STRING("INTERCAMBIAR"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_EGG),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_SAPPHIRE)] =
     {
-        .text = COMPOUND_STRING("SAPPHIRE"),
+        .text = COMPOUND_STRING("ZAFIRO"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_EMERALD),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_EVOLVE)] =
     {
-        .text = COMPOUND_STRING("EVOLVE"),
+        .text = COMPOUND_STRING("EVOLUCIONAR"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_ENCYCLOPEDIA),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_ENCYCLOPEDIA)] =
     {
-        .text = COMPOUND_STRING("ENCYCLOPEDIA"),
+        .text = COMPOUND_STRING("ENCICLOPEDIA"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_EVOLVE),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_NATURE)] =
     {
-        .text = COMPOUND_STRING("NATURE"),
+        .text = COMPOUND_STRING("NATURALEZA"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_FLAME),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_CENTER)] =
     {
-        .text = COMPOUND_STRING("CENTER"),
+        .text = COMPOUND_STRING("CENTRO"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_GET),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_EGG)] =
     {
-        .text = COMPOUND_STRING("EGG"),
+        .text = COMPOUND_STRING("HUEVO"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_GOLD),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_LINK)] =
     {
-        .text = COMPOUND_STRING("LINK"),
+        .text = COMPOUND_STRING("ENLACE"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_GOTCHA),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_SP_ABILITY)] =
     {
-        .text = COMPOUND_STRING("SP. ABILITY"),
+        .text = COMPOUND_STRING("HAB. ESP."),
         .alphabeticalOrder = EC_INDEX(EC_WORD_GREEN),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_TRAINER)] =
     {
-        .text = COMPOUND_STRING("TRAINER"),
+        .text = COMPOUND_STRING("ENTRENADOR"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_I_CHOOSE_YOU),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_VERSION)] =
     {
-        .text = COMPOUND_STRING("VERSION"),
+        .text = COMPOUND_STRING("VERSIÓN"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_LEAF),
         .enabled = TRUE,
     },
@@ -91,7 +91,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Trainer[] = {
     },
     [EC_INDEX(EC_WORD_GET)] =
     {
-        .text = COMPOUND_STRING("GET"),
+        .text = COMPOUND_STRING("OBTENER"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_NATURE),
         .enabled = TRUE,
     },
@@ -103,61 +103,61 @@ const struct EasyChatWordInfo gEasyChatGroup_Trainer[] = {
     },
     [EC_INDEX(EC_WORD_RUBY)] =
     {
-        .text = COMPOUND_STRING("RUBY"),
+        .text = COMPOUND_STRING("RUBÍ"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_POKEMON),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_LEVEL)] =
     {
-        .text = COMPOUND_STRING("LEVEL"),
+        .text = COMPOUND_STRING("NIVEL"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_POKENAV),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_RED)] =
     {
-        .text = COMPOUND_STRING("RED"),
+        .text = COMPOUND_STRING("ROJO"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_RED),
         .enabled = FALSE,
     },
     [EC_INDEX(EC_WORD_GREEN)] =
     {
-        .text = COMPOUND_STRING("GREEN"),
+        .text = COMPOUND_STRING("VERDE"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_RUBY),
         .enabled = FALSE,
     },
     [EC_INDEX(EC_WORD_BAG)] =
     {
-        .text = COMPOUND_STRING("BAG"),
+        .text = COMPOUND_STRING("MOCHILA"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_SAPPHIRE),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_FLAME)] =
     {
-        .text = COMPOUND_STRING("FLAME"),
+        .text = COMPOUND_STRING("LLAMA"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_SILVER),
         .enabled = FALSE,
     },
     [EC_INDEX(EC_WORD_GOLD)] =
     {
-        .text = COMPOUND_STRING("GOLD"),
+        .text = COMPOUND_STRING("ORO"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_SP_ABILITY),
         .enabled = FALSE,
     },
     [EC_INDEX(EC_WORD_LEAF)] =
     {
-        .text = COMPOUND_STRING("LEAF"),
+        .text = COMPOUND_STRING("HOJA"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_TRADE),
         .enabled = FALSE,
     },
     [EC_INDEX(EC_WORD_SILVER)] =
     {
-        .text = COMPOUND_STRING("SILVER"),
+        .text = COMPOUND_STRING("PLATA"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_TRAINER),
         .enabled = FALSE,
     },
     [EC_INDEX(EC_WORD_EMERALD)] =
     {
-        .text = COMPOUND_STRING("EMERALD"),
+        .text = COMPOUND_STRING("ESMERALDA"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_VERSION),
         .enabled = TRUE,
     },
