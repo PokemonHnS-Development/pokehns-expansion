@@ -135,7 +135,7 @@ static const u16 sSizeScreenSilhouette_Pal[] = INCBIN_U16("graphics/pokedex/size
 
 static const u8 sText_Stats_Buttons[] = _("{A_BUTTON}TOGGLE   {DPAD_UPDOWN}MOVES");
 static const u8 sText_Stats_Buttons_Decapped[] = _("{A_BUTTON}Toggle   {DPAD_UPDOWN}Moves");
-static const u8 sText_Stats_HP[] = _("HP");
+static const u8 sText_Stats_HP[] = _("PS");
 static const u8 sText_Stats_Attack[] = _("ATK");
 static const u8 sText_Stats_Defense[] = _("DEF");
 static const u8 sText_Stats_Speed[] = _("SPE");
