@@ -1,5 +1,5 @@
 Text_BootUpPC:
-	.string "{PLAYER} booted up the PC.$"
+	.string "{PLAYER} encendió el PC.$"
 
 gText_WhichPCShouldBeAccessed::
 	.string "¿A qué PC quieres acceder?$"

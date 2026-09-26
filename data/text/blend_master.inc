@@ -64,7 +64,7 @@ BerryBlender_Text_WickedlyFast:
 	.string "Wickedly fast!$"
 
 BerryBlender_Text_WhatAnExpert:
-	.string "What an expert!$"
+	.string "¡Qué experto!$"
 
 BerryBlender_Text_MadeAmazingPokeblocksWithMaster:
 	.string "Cuando me mezclé con el MAESTRO,\n"

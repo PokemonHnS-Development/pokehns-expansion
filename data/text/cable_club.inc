@@ -22,7 +22,7 @@ CableClub_Text_RecordCornerUsingLinkCable::
 
 @ Unused
 CableClub_Text_CloseThisMenu:
-	.string "Close this menu.$"
+	.string "Cerrar este menú.$"
 
 CableClub_Text_NeedTwoMonsForDoubleBattle:
 	.string "Para un COMBATE DOBLE, debes\n"
@@ -60,7 +60,7 @@ CableClub_Text_OkayToSaveProgress::
 	.string "de conectar. ¿Quieres guardar?$"
 
 CableClub_Text_PleaseEnter:
-	.string "Please enter.$"
+	.string "Pase, por favor.$"
 
 CableClub_Text_DirectYouToYourRoom:
 	.string "Te llevaré a tu habitación ahora.$"
@@ -79,7 +79,7 @@ Text_PlayersMadeDifferentSelections:
 	.string "enlace eligieron cosas distintas.$"
 
 CableClub_Text_PleaseVisitAgain:
-	.string "Please do visit again.$"
+	.string "¡Vuelva pronto!$"
 
 CableClub_Text_IncorrectNumberOfParticipants:
 	.string "El número de participantes es\n"
@@ -115,11 +115,11 @@ CableClub_Text_TooBusyToNotice:
 	.string "para notar...$"
 
 CableClub_Text_GotToLookAtTrainerCard:
-	.string "Score! Got to look at {STR_VAR_1}'s\n"
-	.string "TRAINER CARD!$"
+	.string "¡Qué bien! ¡Pude ver la de {STR_VAR_1}!\n"
+	.string "¡TARJETA DE ENTRENADOR!$"
 
 CableClub_Text_GotToLookAtColoredTrainerCard:
-	.string "Score! Got to look at {STR_VAR_1}'s\n"
+	.string "¡Qué bien! ¡Pude ver la de {STR_VAR_1}!\n"
 	.string "¡TARJETA DE ENTRENADOR!\p"
 	.string "¡Es una tarjeta {STR_VAR_2}!$"
 
@@ -132,7 +132,7 @@ TradeCenter_Text_TakeSeatStartTrade:
 	.string "tu intercambio.$"
 
 RecordCorner_Text_ThanksForComing:
-	.string "Thanks for coming.$"
+	.string "Gracias por venir.$"
 
 CableClub_Text_TrainerCardDataOverwritten:
 	.string "Los datos de la TARJETA de\n"
@@ -179,11 +179,11 @@ CableClub_Text_ParticipantsStepUpToCounter:
 
 @ Unused
 CableClub_Text_Hello:
-	.string "Hello!$"
+	.string "¡Hola!$"
 
 @ Unused
 CableClub_Text_PleaseWait:
-	.string "Please wait.$"
+	.string "Un momento, por favor.$"
 
 CableClub_Text_YouMayTradeHere::
 	.string "Puedes intercambiar POKéMON aquí\n"
@@ -238,7 +238,7 @@ CableClub_Text_UnionRoomAdapterNotConnected:
 
 @ Unused
 CableClub_Text_OhExcuseMe:
-	.string "Oh...\n"
+	.string "¡Oh...!\n"
 	.string "¡Disculpa!$"
 
 CableClub_Text_PlayerIsWaiting:
@@ -284,7 +284,7 @@ MossdeepCity_GameCorner_1F_Text_WelcomeCanYouWait:
 	.string "¿Puedes esperar un momento?$"
 
 MossdeepCity_GameCorner_1F_Text_ComeAgain:
-	.string "All right, come again!$"
+	.string "¡Muy bien, vuelve pronto!$"
 
 MossdeepCity_GameCorner_1F_Text_AdapterNotConnected:
 	.string "El Adaptador Inalámbrico no está\n"
@@ -415,7 +415,7 @@ CableClub_Text_FirstTimeRightThisWay:
 	.string "Sistema de Comunicación Inalámbrica.\p"
 	.string "Primero, debo mostrarte este\n"
 	.string "piso de nuestro CENTRO POKéMON.\p"
-	.string "Right this way, please.$"
+	.string "Por aquí, por favor.$"
 
 CableClub_Text_ExplainWirelessClubFirstTime:
 	.string "En el piso superior, hay dos\n"

@@ -372,7 +372,7 @@ gNationalDexRatingText_LessThan350::
 	.string "reunirse en la Zona Safari$"
 
 gNationalDexRatingText_LessThan400::
-@	.string "Music on the radio might also\n"
+@	.string "La música de la radio también\n"
 @	.string "entice POKéMON to leap out$"
 	.string "Hay lugares ocultos por todo\n"
 	.string "el mundo con POKéMON raros e\p"

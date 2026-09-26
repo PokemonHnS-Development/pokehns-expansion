@@ -3,7 +3,7 @@ EventTicket_Text_ShowOldSeaMap:
 	.string "¿Perdón?\n"
 	.string "¿Podemos ir a este lugar del mapa?\p"
 	.string "Conozco a alguien que te ayudará.\n"
-	.string "Please wait.$"
+	.string "Un momento, por favor.$"
 
 EventTicket_Text_ThatPass:
 	.string "El ferry a PORTALAGUNA es...\p"

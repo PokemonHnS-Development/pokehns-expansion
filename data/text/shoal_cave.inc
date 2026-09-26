@@ -11,7 +11,7 @@ ShoalCave_LowTideEntranceRoom_Text_BringMe4ShoalSaltAndShells:
 	.string "SAL MARINA y CONCHAS MARINAS,\l"
 	.string "puedo hacerte un CAMPANA CONCHA...\p"
 	.string "Puedes hallar esos ingredientes\n"
-	.string "every day.$"
+	.string "cada día.$"
 
 ShoalCave_LowTideEntranceRoom_Text_WouldYouLikeShellBell:
 	.string "¡Oh, mira! ¡SAL y CONCHAS MARINAS!\n"

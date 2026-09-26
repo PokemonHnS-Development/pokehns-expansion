@@ -1,5 +1,5 @@
 gText_ObtainedTheItem::
-	.string "Obtained the {STR_VAR_2}!$"
+	.string "¡Obtuviste {STR_VAR_2}!$"
 
 gText_TheBagIsFull::
 	.string "La MOCHILA está llena...$"
@@ -9,7 +9,7 @@ gText_PutItemInPocket::
 	.string "en el BOLSILLO {STR_VAR_3}.$"
 
 gText_PlayerFoundOneItem::
-	.string "{PLAYER} found one {STR_VAR_2}!$"
+	.string "¡{PLAYER} encontró {STR_VAR_2}!$"
 
 gText_TooBadBagIsFull::
 	.string "¡Qué mal!\n"
@@ -20,7 +20,7 @@ gText_PlayerPutItemInBag::
 	.string "en la MOCHILA.$"
 
 gText_ObtainedTheDecor::
-	.string "Obtained the {STR_VAR_2}!$"
+	.string "¡Obtuviste {STR_VAR_2}!$"
 
 gText_NoRoomLeftForAnother::
 	.string "¡Qué mal! Ya no hay espacio para\n"

@@ -15,7 +15,7 @@ MoveRelearner_Text_TutormoveMoves:
 	.string "Movs. de Tutor$"
 
 MoveRelearner_Text_SeeYa:
-	.string "See ya!$"
+	.string "¡Nos vemos!$"
 
 MoveRelearner_Text_AnythingElse:
 	.string "¿Hay algo más que pueda hacer por ti?$"
@@ -55,4 +55,4 @@ MoveRelearner_Text_WhichXmoveShouldTeach:
 
 MoveRelearner_Text_ThankYouComeAgain:
 	.string "Gracias por usar nuestros servicios.\n"
-	.string "Please come again!$"
+	.string "¡Vuelve pronto!$"

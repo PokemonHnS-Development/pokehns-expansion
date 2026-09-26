@@ -296,14 +296,14 @@ SlateportCity_BattleTentLobby_Text_HoldMonsForSafekeeping:
 	.string "mientras compites.$"
 
 SlateportCity_BattleTentLobby_Text_StepThisWay:
-	.string "Please step this way.$"
+	.string "Pase por aquí, por favor.$"
 
 SlateportCity_BattleTentLobby_Text_ReturnRentalMonsSaveResults:
 	.string "¡Gracias por participar!\p"
 	.string "Te devolveré tus POKéMON a cambio\n"
 	.string "de nuestros POKéMON de alquiler.\p"
 	.string "Debo guardar tus resultados.\n"
-	.string "Please wait.$"
+	.string "Un momento, por favor.$"
 
 @ Unused
 SlateportCity_BattleTentLobby_Text_ReturnMonsExchangeRentals:
@@ -316,7 +316,7 @@ SlateportCity_BattleTentLobby_Text_WonThreeMatchesReturnMons:
 	.string "Te devolveré tus POKéMON a cambio\n"
 	.string "de nuestros POKéMON de alquiler.\p"
 	.string "Debo guardar tus resultados.\n"
-	.string "Please wait.$"
+	.string "Un momento, por favor.$"
 
 SlateportCity_BattleTentLobby_Text_AwardYouThisPrize:
 	.string "Por tu racha de 3 victorias,\n"

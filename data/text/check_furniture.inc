@@ -14,7 +14,7 @@ Text_Vase:
 	.string "Este jarrón parece caro...\nMiré dentro...\pPero estaba vacío.$"
 
 Text_EmptyTrashCan:
-	.string "It's empty.$"
+	.string "Está vacío.$"
 
 Text_ShopShelf:
 	.string "Los estantes rebosan de todo tipo de\n"

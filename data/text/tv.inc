@@ -1135,13 +1135,13 @@ gTVTodaysRivalTrainerText00::
 	.string "¡analizaremos a uno de los rivales!$"
 
 gTVTodaysRivalTrainerText07::
-	.string "El TRAINER rival de hoy es {STR_VAR_1},\n"
+	.string "El ENTRENADOR rival de hoy es {STR_VAR_1},\n"
 	.string "quién está cerca de {STR_VAR_3} ahora.\p"
 	.string "{STR_VAR_1} ha registrado hasta ahora\n"
 	.string "{STR_VAR_2} POKéMON en la POKéDEX.$"
 
 gTVTodaysRivalTrainerText08::
-	.string "El TRAINER rival de hoy es {STR_VAR_1},\n"
+	.string "El ENTRENADOR rival de hoy es {STR_VAR_1},\n"
 	.string "quién está en una BASE SECRETA ahora.\p"
 	.string "{STR_VAR_1} ha registrado hasta ahora\n"
 	.string "{STR_VAR_2} POKéMON en la POKéDEX.$"
@@ -1152,7 +1152,7 @@ gTVTodaysRivalTrainerText09::
 	.string "{STR_VAR_2} POKéMON en la POKéDEX.$"
 
 gTVTodaysRivalTrainerText10::
-	.string "El TRAINER rival de hoy es {STR_VAR_1},\n"
+	.string "El ENTRENADOR rival de hoy es {STR_VAR_1},\n"
 	.string "quién está en un ferry ahora.\p"
 	.string "{STR_VAR_1} ha registrado hasta ahora\n"
 	.string "{STR_VAR_2} POKéMON en la POKéDEX.$"
@@ -1529,7 +1529,7 @@ gTVSecretBaseVisitText12::
 	.string "Debo reconocerlo con {STR_VAR_1}.\p"
 	.string "Los POKéMON del ENTRENADOR mostraron\n"
 	.string "gran promesa de crecimiento futuro.\p"
-	.string "They represented {STR_VAR_1}'s\n"
+	.string "Encarnaban de {STR_VAR_1} las\n"
 	.string "esperanzas y sueños.\p"
 	.string "Que {STR_VAR_2} conociera el movimiento\n"
 	.string "{STR_VAR_3} salvaje...\p"
@@ -1711,7 +1711,7 @@ TVSpotTheCuties_Text_RibbonsLow::
 TVSpotTheCuties_Text_RibbonsMid::
 	.string "{STR_VAR_2} lleva unas\n"
 	.string "CINTAS {STR_VAR_3} increíbles!\p"
-	.string "It speaks volumes about {STR_VAR_1}'s\n"
+	.string "Dice mucho sobre {STR_VAR_1} y su\n"
 	.string "compromiso con los POKéMON!$"
 
 TVSpotTheCuties_Text_RibbonsHigh::

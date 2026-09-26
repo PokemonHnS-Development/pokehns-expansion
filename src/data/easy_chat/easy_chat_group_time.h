@@ -7,7 +7,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Time[] = {
     },
     [EC_INDEX(EC_WORD_MORNING)] =
     {
-        .text = COMPOUND_STRING("MAÑANA"),
+        .text = COMPOUND_STRING("POR LA MAÑANA"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_ALMOST),
         .enabled = TRUE,
     },

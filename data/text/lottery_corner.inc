@@ -9,10 +9,10 @@ LilycoveCity_DepartmentStore_1F_Text_LotteryCornerDrawTicket:
 	.string "¿TICKET LOTO?$"
 
 LilycoveCity_DepartmentStore_1F_Text_ComeBackTomorrow:
-	.string "Please come back tomorrow.$"
+	.string "Vuelva mañana, por favor.$"
 
 LilycoveCity_DepartmentStore_1F_Text_PleaseVisitAgain:
-	.string "Please do visit again.$"
+	.string "¡Vuelva pronto!$"
 
 LilycoveCity_DepartmentStore_1F_Text_PleasePickTicket:
 	.string "Elige un TICKET LOTO, por favor.\n"
@@ -74,4 +74,4 @@ LilycoveCity_DepartmentStore_1F_Text_PrizeWeveBeenHolding:
 	.string "útil para ti.$"
 
 LilycoveCity_DepartmentStore_1F_Text_PleaseVisitAgain2:
-	.string "Please do visit again.$"
+	.string "¡Vuelva pronto!$"

@@ -22,7 +22,7 @@ SecretBase_Text_Trainer5Intro:
 	.string "Hay muchos lugares donde\npuedes hacer una BASE SECRETA.\pPero este sitio es mi favorito.\n¿No crees que es lindo?\pOh, ¿te gustaría combatir?$"
 
 SecretBase_Text_Trainer5AcceptBattle:
-	.string "Okay, here goes!$"
+	.string "¡Bien, allá voy!$"
 
 SecretBase_Text_Trainer5DeclineBattle:
 	.string "Oh...\nAhora no, ¿está bien?$"
@@ -48,7 +48,7 @@ SecretBase_Text_Trainer1DeclineBattle:
 
 SecretBase_Text_Trainer1Defeated::
 	.string "¡No puedo seguir así!\n"
-	.string "I surrender!$"
+	.string "¡Me rindo!$"
 
 SecretBase_Text_Trainer1PostBattle:
 	.string "Bien, cuando me mude algún día,\n¡este lugar será tuyo!$"
@@ -63,7 +63,7 @@ SecretBase_Text_Trainer6Intro:
 	.string "¿Quieres ver qué tan fuerte soy?$"
 
 SecretBase_Text_Trainer6AcceptBattle:
-	.string "I'm going to go all out!$"
+	.string "¡Voy a darlo todo!$"
 
 SecretBase_Text_Trainer6DeclineBattle:
 	.string "Oh.\n"
@@ -124,7 +124,7 @@ SecretBase_Text_Trainer7DeclineBattle:
 	.string "Qué decepción...$"
 
 SecretBase_Text_Trainer7Defeated::
-	.string "I concede...$"
+	.string "Me doy por vencido...$"
 
 SecretBase_Text_Trainer7PostBattle:
 	.string "¡Todo fue en broma!\nAhora debería ir de compras.$"
@@ -139,13 +139,13 @@ SecretBase_Text_Trainer3Intro:
 	.string "Algunos hacen sus BASES SECRETAS en\nlugares difíciles de encontrar.\l¿Quieren pasar desapercibidos?\pPero ya que me encontraste,\n¿qué tal si batallamos?$"
 
 SecretBase_Text_Trainer3AcceptBattle:
-	.string "I'm not going down easily!$"
+	.string "¡No me rendiré tan fácil!$"
 
 SecretBase_Text_Trainer3DeclineBattle:
 	.string "Oh... ¿Quizá estás cansado de buscar\neste lugar?$"
 
 SecretBase_Text_Trainer3Defeated::
-	.string "I went down...$"
+	.string "He perdido...$"
 
 SecretBase_Text_Trainer3PostBattle:
 	.string "¿Dónde está tu BASE SECRETA?\n"
@@ -223,7 +223,7 @@ SecretBase_Text_Trainer9Intro:
 	.string "¿Quieres ver mi gusto al luchar?$"
 
 SecretBase_Text_Trainer9AcceptBattle:
-	.string "There's no holding back!$"
+	.string "¡No me voy a contener!$"
 
 SecretBase_Text_Trainer9DeclineBattle:
 	.string "Estaré feliz de mostrar mi estilo\n"

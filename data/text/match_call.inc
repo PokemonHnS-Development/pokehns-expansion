@@ -170,7 +170,7 @@ MatchCall_NegativeBattleText7::
 	.string "Ayer perdí una batalla,\n"
 	.string "y no dejo de pensar en ello.\p"
 	.string "Tengo que idear un plan...\n"
-	.string "See you.$"
+	.string "¡Nos vemos!$"
 
 MatchCall_NegativeBattleText8::
 	.string "Oh, {PLAYER}{KUN}, ¿cómo estás?\n"
@@ -1265,7 +1265,7 @@ MatchCall_PersonalizedText57::
 	.string "¡Jaj! ¡Jaj! ¡Jaj!$"
 
 MatchCall_PersonalizedText58::
-	.string "Oh, hi!\p"
+	.string "¡Ah, hola!\p"
 	.string "Sigo buscando tesoros\n"
 	.string "¡con KIRA!\p"
 	.string "Tal vez no haya ningún tesoro\n"
@@ -1326,7 +1326,7 @@ MatchCall_PersonalizedText61::
 	.string "si ganamos o perdemos!\p"
 	.string "{PLAYER}{KUN}, ¿podrías decirle\n"
 	.string "algo la próxima vez?\p"
-	.string "Okay, see you!$"
+	.string "¡Bien, nos vemos!$"
 
 MatchCall_PersonalizedText62::
 	.string "Aquí {STR_VAR_1}, sí.\n"
@@ -2207,7 +2207,7 @@ MatchCall_Text_Drake::
 MatchCall_Text_Wallace::
 	.string "WALLACE: Hola, {PLAYER}{KUN}.\n"
 	.string "¿Ya conociste a STEVEN?\p"
-	.string "He is...\n"
+	.string "Él es...\n"
 	.string "En realidad es muy habilidoso.\p"
 	.string "Sin embargo, es un alma rara que\n"
 	.string "rara vez lucha.\p"
@@ -2545,7 +2545,7 @@ MatchCall_Text_Wally7::
 	.string "Pero ahora, estoy de aventura con\n"
 	.string "mi propio POKéMON...\p"
 	.string "{PLAYER}...\n"
-	.string "Thank you...$"
+	.string "Gracias...$"
 
 MatchCall_Text_Scott1::
 	.string "SCOTT: ¡Hola, {PLAYER}{KUN}!\p"

@@ -50,7 +50,7 @@ gText_ApprenticeChallenge12::
 	.string "¡Yupi-yuju! Soy lo que se dice\nel aprendiz nro. {STR_VAR_2} de {STR_VAR_1}!$"
 
 gText_ApprenticeChallenge13::
-	.string "Cough! I'm {STR_VAR_1}'s no. {STR_VAR_2} apprentice.\n"
+	.string "¡Cof! Soy el aprendiz nro. {STR_VAR_2} de {STR_VAR_1}.\n"
 	.string "¡Gusto en conocerte! ¡Cof!$"
 
 gText_ApprenticeChallenge14::
@@ -63,7 +63,7 @@ gText_ApprenticePleaseTeach0::
 	.string "¿Tú eres... {PLAYER}?\n"
 	.string "¡Oh! ·Snif·... ·bua·...\p"
 	.string "¡Oh! L-lo siento...\n"
-	.string "I'm so nervous, I can't help crying...\p"
+	.string "¡Estoy tan nervioso que lloro sin querer!\p"
 	.string "Soy {STR_VAR_1}, y realmente te admiro,\n"
 	.string "{PLAYER}.\p"
 	.string "Yo... soñaba con conocerte algún día\n"
@@ -409,7 +409,7 @@ gText_ApprenticeWhichLevelMode9::
 
 gText_ApprenticeLevelModeThanks9::
 	.string "¡Ajá, {STR_VAR_1} será!\n"
-	.string "OK, A-OK!\l"
+	.string "¡Okey, A-OK!\l"
 	.string "¡Iré a demostrar mi valor, ya verás!\p"
 	.string "¡Bien, te veré como mi mentor!\n"
 	.string "¡Adiós!$"
@@ -459,7 +459,7 @@ gText_ApprenticePleaseTeach11::
 	.string "A-H-O-Y!\n"
 	.string "¡Se escribe ahoy y significa hola!\p"
 	.string "Soy {STR_VAR_1}, el MARINERO rapero\n"
-	.string "am I!\p"
+	.string "¿o no?\p"
 	.string "Ahora es tu turno, cuéntame un poco\n"
 	.string "sobre ti, ¡inténtalo!\p"
 	.string "¡Ajá, ajá!\n"
@@ -739,13 +739,13 @@ gText_ApprenticeThanksNoHeldItem3::
 	.string "Entiendo...\n"
 	.string "Dices que no debo usar objetos.\l"
 	.string "¡Haré lo posible por no hacerlo!\p"
-	.string "Thank you very much!$"
+	.string "¡Muchas gracias!$"
 
 gText_ApprenticeThanksHeldItem3::
 	.string "El objeto {STR_VAR_1}, entiendo.\n"
 	.string "No sé si podré conseguir uno...\l"
 	.string "¡No! Haré lo posible por tenerlo.\p"
-	.string "Thank you very much!$"
+	.string "¡Muchas gracias!$"
 
 gText_ApprenticeItemAlreadyRecommended3::
 	.string "Oh, pero...\n"
@@ -1371,7 +1371,7 @@ gText_ApprenticeWhichMonFirst9::
 
 gText_ApprenticeMonFirstThanks9::
 	.string "¡Ajá, mi {STR_VAR_1} empezará!\n"
-	.string "OK, A-OK!\l"
+	.string "¡Okey, A-OK!\l"
 	.string "¡Reordenaré el equipo, así, pum!\p"
 	.string "¡Está bien, gracias, como siempre!\n"
 	.string "¡Adiós!$"
@@ -1663,7 +1663,7 @@ gText_ApprenticeWhichMon9::
 
 gText_ApprenticeMonThanks9::
 	.string "¡Ajá, será un {STR_VAR_1}!\n"
-	.string "OK, A-OK!\l"
+	.string "¡Okey, A-OK!\l"
 	.string "¡Atraparé uno en una BALL, ya verás!\p"
 	.string "¡Está bien, gracias, como siempre!\n"
 	.string "¡Adiós!$"
@@ -1848,7 +1848,7 @@ gText_ApprenticeMoveThanks3::
 	.string "Pero, ¿estará dispuesto a aprender\n"
 	.string "{STR_VAR_1} por mí...?\l"
 	.string "¡No! ¡Daré lo mejor de mí!\p"
-	.string "Thank you!$"
+	.string "¡Gracias!$"
 
 gText_ApprenticeWhichMove4::
 	.string "¡Oh, {PLAYER}{KUN}!\n"
