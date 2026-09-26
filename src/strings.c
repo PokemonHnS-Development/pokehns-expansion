@@ -218,13 +218,13 @@ const u8 *const gPocketNamesStringsTable[] =
 {
     [POCKET_ITEMS] =        COMPOUND_STRING("OBJETOS"),
     [POCKET_POKE_BALLS] =   COMPOUND_STRING("POKé BALLS"),
-    [POCKET_TM_HM]  =       COMPOUND_STRING("TMs & HMs"),
-    [POCKET_BERRIES] =      COMPOUND_STRING("BERRIES"),
+    [POCKET_TM_HM]  =       COMPOUND_STRING("MT y MO"),
+    [POCKET_BERRIES] =      COMPOUND_STRING("BAYAS"),
     [POCKET_KEY_ITEMS] =    COMPOUND_STRING("OBJ. CLAVE"),
-    [POCKET_MEDICINE] =     COMPOUND_STRING("MEDICINE"),
+    [POCKET_MEDICINE] =     COMPOUND_STRING("MEDICINAS"),
 #if I_COMBINE_BAG_POCKETS == FALSE
     [POCKET_BATTLE_ITEMS] = COMPOUND_STRING("COMBATE"),
-    [POCKET_TREASURES] =    COMPOUND_STRING("TREASURES"),
+    [POCKET_TREASURES] =    COMPOUND_STRING("TESOROS"),
 #endif
 };
 
@@ -493,7 +493,7 @@ const u8 gText_MomMatchCallDesc[] = _("CALMADO Y AMABLE");
 const u8 gText_MomMatchCallName[] = _("MAMÁ");
 const u8 gText_MomMenuCheckSavings[] = _("VER AHORROS");
 const u8 gText_MomMenuDeposit[] = _("DEPOSITAR");
-const u8 gText_MomMenuWithdraw[] = _("WITHDRAW");
+const u8 gText_MomMenuWithdraw[] = _("RETIRAR");
 const u8 gText_MomMenuToggleSaving[] = _("AHORRO");
 const u8 gText_MomMenuExit[] = _("SALIR");
 const u8 gText_Info2[] = _("INFO");
@@ -1263,7 +1263,7 @@ const u8 gText_Berries[] = _("BAYAS");
 const u8 gText_Obtained999RareCandies[] = _("¡Obtuviste 999\nCARAMELOS RAROS!{PAUSE_UNTIL_PRESS}");
 const u8 gText_ExpShareOn[] = _("Se activó el Repartir Exp.{PAUSE_UNTIL_PRESS}");
 const u8 gText_ExpShareOff[] = _("Se desactivó el Repartir Exp.{PAUSE_UNTIL_PRESS}");
-ALIGNED(4) const u8 gText_Ghost[] = _("GHOST");
+ALIGNED(4) const u8 gText_Ghost[] = _("FANTASMA");
 const u8 gText_Boulderbadge[] = _("MEDALLA ROCA");
 const u8 gText_Cascadebadge[] = _("MEDALLA CASCADA");
 const u8 gText_Thunderbadge[] = _("MEDALLA RAYO");
