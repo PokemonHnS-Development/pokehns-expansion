@@ -6883,7 +6883,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
             "Baja lentamente su cabeza\n"
             "extremadamente pesada hacia el suelo,\n"
             "abriendo la tierra con su gran\n"
-            "fissures that run over 160 feet deep."),
+            "grietas de más de 160 pies de profundidad."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,

@@ -456,7 +456,7 @@ void CB2_FlashNotDetectedScreen(void)
         "Flash 1Mb/128K y recarga la ROM.\n"
         "\n"
         "Si usas hardware, tu cartucho\n"
-        "does not have a working flash chip.");
+        "no tiene un chip de memoria flash que funcione.");
     SaveFailedScreenTextPrint(saveFailedMessage, 1, 0);
     TransferPlttBuffer();
     *(u16*)PLTT = RGB(17, 18, 31);

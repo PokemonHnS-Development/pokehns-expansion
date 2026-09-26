@@ -1188,7 +1188,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .description = COMPOUND_STRING(
             "Un recolector constante de datos,\n"
             "Este POKéMON es muy listo y fuerte.\n"
-            "is what it isn't."),
+            "Fuerte no es precisamente lo que es."),
         .pokemonScale = 491,
         .pokemonOffset = 12,
         .trainerScale = 256,
@@ -1514,7 +1514,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
             "Marca objetivos con un aroma secreto.\n"
             "Siguiendo el rastro, acecha a sus\n"
             "víctimas y les roba sus cosas.\n"
-            "when they least expect it."),
+            "cuando menos se lo esperan."),
         .pokemonScale = 282,
         .pokemonOffset = 4,
         .trainerScale = 256,
@@ -4098,7 +4098,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .description = COMPOUND_STRING(
             "Vive en teteras antiguas.\n"
             "Casi todas son falsas, pero en casos\n"
-            "occasions, an authentic work is found."),
+            "ocasiones, se encuentra una obra auténtica."),
         .pokemonScale = 682,
         .pokemonOffset = 24,
         .trainerScale = 256,

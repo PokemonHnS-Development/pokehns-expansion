@@ -2938,7 +2938,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
             "De día, duerme y absorbe la luz.\n"
             "Desprenden un aroma dulce y fresco.\n"
             "Cutiefly suelen reunirse cerca.\n"
-            "grass where Fomantis are hiding."),
+            "de la hierba donde se esconden los Fomantis."),
         .pokemonScale = 530,
         .pokemonOffset = 13,
         .trainerScale = 256,

@@ -2757,7 +2757,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
             "Florece cuando la temperatura sube de\n"
             "18 grados C. Como su flor cambia al\n"
             "variar la temperatura,\n"
-            "it is sometimes used as a thermometer."),
+            "a veces se usa como termómetro."),
         .pokemonScale = 387,
         .pokemonOffset = 0,
         .trainerScale = 256,
@@ -2843,7 +2843,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
             "Jumpluff usa vientos cálidos del sur\n"
             "cruzan el mar y vuelan muy lejos.\n"
             "Este POKéMON aterriza al encontrar\n"
-            "cold air while it is floating."),
+            "el aire frío mientras flota."),
         .pokemonScale = 418,
         .pokemonOffset = -4,
         .trainerScale = 256,
@@ -6395,7 +6395,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
             "Piloswine tiene un pelaje grueso\n"
             "de pelo largo para soportar el frío.\n"
             "Usa sus colmillos para excavar comida\n"
-            "been buried under ice."),
+            "que ha sido enterrada bajo el hielo."),
         .pokemonScale = 306,
         .pokemonOffset = 10,
         .trainerScale = 256,

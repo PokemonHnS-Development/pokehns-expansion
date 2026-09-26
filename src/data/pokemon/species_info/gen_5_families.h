@@ -892,7 +892,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
             "Muy cautelosos, se turnan para\n"
             "vigilar su nido constantemente.\n"
             "Usan comida de sus mejillas,\n"
-            "they can keep watch for days."),
+            "pueden montar guardia durante días."),
         .pokemonScale = 432,
         .pokemonOffset = 14,
         .trainerScale = 256,
@@ -5305,7 +5305,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
             "En días de ventiscas\n"
             "depende de dónde viva la gente.\n"
             "Guarda comida en la bola de nieve.\n"
-            "its head, taking it home for later."),
+            "en su cabeza, llevándola a casa para después."),
         .pokemonScale = 272,
         .pokemonOffset = 3,
         .trainerScale = 256,
@@ -5676,7 +5676,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
             "Su piel es elástica, así que puede\n"
             "reducir el daño subiendo su piel\n"
             "defensivamente hasta el cuello.\n"
-            "Its skull is massively thick."),
+            "Su cráneo es enormemente grueso."),
         .pokemonScale = 422,
         .pokemonOffset = 14,
         .trainerScale = 256,
@@ -11932,7 +11932,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
             "Se adornan hermosamente con\n"
             "huesos. Se dice que es un esfuerzo\n"
             "para atraer machos, pero ningún\n"
-            "have ever been found."),
+            "macho se ha encontrado jamás."),
         .pokemonScale = 282,
         .pokemonOffset = 4,
         .trainerScale = 256,

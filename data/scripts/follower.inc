@@ -5,7 +5,7 @@ gText_FollowerLostInThought::
 	.string "{STR_VAR_1} seems lost in thought.$"
 
 gText_FollowerDefault::
-	.string "ERROR 404: Script not found.$"
+	.string "ERROR 404: Script no encontrado.$"
 
 gText_WantsToFly::
 	.string "{STR_VAR_1} mira al cielo\ntodo el rato.\p¿Quieres usar VUELO?$"

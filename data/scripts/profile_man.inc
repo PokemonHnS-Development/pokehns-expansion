@@ -156,7 +156,7 @@ ProfileMan_Text_FantasticProfile:
 	.string "Dice mucho sobre quién eres.\p"
 	.string "¡Cualquiera que lea este perfil\n"
 	.string "quedaría cautivado por ti!\p"
-	.string "Thank you!$"
+	.string "¡Gracias!$"
 
 @ Unused
 ProfileMan_Text_YouKnowSecretSaying:

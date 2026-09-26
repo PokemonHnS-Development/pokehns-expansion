@@ -323,7 +323,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
             "Controla con cuidado la intensidad de\n"
             "la llama de su cola, para mantener su\n"
             "rivales a una distancia adecuada.\n"
-            "Its fiery tail is but one weapon."),
+            "Su cola ardiente es solo una de sus armas."),
         .pokemonScale = 338,
         .pokemonOffset = 9,
         .trainerScale = 256,
@@ -1182,7 +1182,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
             "Sacude la cabeza de atrás hacia adel\n"
             "haciendo que sus antenas choquen\n"
             "y suenen como un xilófono.\n"
-            "These sounds are fall hallmarks."),
+            "Estos sonidos son señal del otoño."),
         .pokemonScale = 530,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -3334,7 +3334,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
             "Aun bajo observación cuidadosa,\n"
             "grandes bandadas de Drifblim al ocaso\n"
             "desaparecerán inexplicablemente.\n"
-            "No one knows where they go."),
+            "Nadie sabe adónde van."),
         .pokemonScale = 282,
         .pokemonOffset = 4,
         .trainerScale = 256,

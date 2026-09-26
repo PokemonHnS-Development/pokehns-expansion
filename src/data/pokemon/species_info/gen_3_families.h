@@ -10060,7 +10060,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
             "Tiene un orbe dentro de la boca.\n"
             "Al saltar, el orbe rebota por\n"
             "doquier y suena como una campana.\n"
-            "It can cry for an awfully long time."),
+            "Puede llorar durante muchísimo tiempo."),
         .pokemonScale = 682,
         .pokemonOffset = 24,
         .trainerScale = 256,

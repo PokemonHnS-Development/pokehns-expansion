@@ -1363,7 +1363,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         #else
             "Evita que el rival use...\n"
         #endif
-            "from using last used move."),
+            "el último movimiento que usó."),
         #if B_UPDATED_MOVE_DATA >= GEN_5
             .accuracy = 100,
         #elif B_UPDATED_MOVE_DATA == GEN_4
@@ -6183,7 +6183,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .description = COMPOUND_STRING(
         #if B_HIDDEN_POWER_DMG >= GEN_6
             "El tipo varía\n"
-            "with the user."),
+            "según el usuario."),
         #else
             "El tipo y la efectividad\n"
             "vary with the user."),
@@ -12538,7 +12538,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("ECO VOZ"),
         .description = COMPOUND_STRING(
             "Hace más daño cada turno\n"
-            "it is used."),
+            "que se usa."),
         .effect = EFFECT_ECHOED_VOICE,
         .power = 40,
         .type = TYPE_NORMAL,

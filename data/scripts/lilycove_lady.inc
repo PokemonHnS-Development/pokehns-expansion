@@ -742,7 +742,7 @@ LilycoveCity_PokemonCenter_1F_Text_NoChangeThanks:
 	.string "en absoluto...\p"
 	.string "Hmm...\p"
 	.string "¡Bueno, ni modo!\n"
-	.string "Thank you very much!$"
+	.string "¡Muchas gracias!$"
 
 LilycoveCity_PokemonCenter_1F_Text_ReallyImprovedThanks:
 	.string "¡Oh, genial!\n"

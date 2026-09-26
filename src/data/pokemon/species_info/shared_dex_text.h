@@ -125,13 +125,13 @@ const u8 gTogedemaruPokedexText[] = _(
     "El pelaje espinoso de su espalda\n"
     "está tranquilo. Si este POKéMON se\n"
     "agita, su pelo se eriza y pincha\n"
-    "into its attackers.");
+    "a sus atacantes.");
 
 const u8 gMimikyuDisguisedPokedexText[] = _(
     "Un POKéMON solitario que oculta su\n"
     "aspecto bajo un trapo viejo para poder\n"
     "acercarse a personas y otros POKéMON.\n"
-    "Its actual appearance is unknown.");
+    "Su verdadera apariencia es desconocida.");
 
 const u8 gMimikyuBustedPokedexText[] = _(
     "Tras esforzarse tanto en\n"

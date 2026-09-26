@@ -6680,7 +6680,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             "Paras tiene hongos parásitos\n"
             "en su espalda. Estos crecen\n"
             "robando nutrientes del huésped.\n"
-            "are valued as a medicine for long life."),
+            "se valoran como medicina para una vida larga."),
         .pokemonScale = 593,
         .pokemonOffset = 22,
         .trainerScale = 256,
