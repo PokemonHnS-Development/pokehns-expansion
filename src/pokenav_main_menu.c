@@ -38,6 +38,15 @@ struct CompressedSpriteSheetNoSize
 
 static void CleanupPokenavMainMenuResources(void);
 static void LoadLeftHeaderGfxForSubMenu(u32);
+// NOTA DE TRADUCCION (es) --- ROTULOS DEL POKEGEAR ---
+// Los textos de los left headers (MAIN MENU, RIBBONS, CALL, HOENN MAP...) NO se dibujan
+// con las fuentes del juego. NO estan en graphics/fonts/ (se probaron las 9 familias:
+// ninguna coincide). El autor uso un ALFABETO PROPIO MONOESPACIADO: un glifo por celda de
+// 5x6 px, letra de 8 px de alto mas bisel (1 px gris a la derecha y abajo).
+// Medido en graphics/pokenav/left_headers/ribbons.png: 7 letras en x=22..62, paso 6.
+// Para traducir un rotulo: editar el PNG, borrar la banda completa y escribir con celda de 5x6.
+// Detalle y herramientas: hns-traduccion/auditoria-206/bloque15/ y GLOSARIO-2.0.6.md
+
 static void LoadLeftHeaderGfxForMenu(u32);
 static void HideLeftHeaderSubmenuSprites(bool32);
 static void HideLeftHeaderSprites(bool32);
