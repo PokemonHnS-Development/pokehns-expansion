@@ -38,7 +38,7 @@ const struct ContestEffect gContestEffects[] =
     },
     [CONTEST_EFFECT_AVOID_STARTLE_ONCE] =
     {
-        .description = COMPOUND_STRING("Can avoid being startled\nby others once."),
+        .description = COMPOUND_STRING("Puede evitar que otros\nlo asusten una vez."),
         .effectType = CONTEST_EFFECT_TYPE_AVOID_STARTLE,
         .appeal = 20,
         .jam = 0,
@@ -46,7 +46,7 @@ const struct ContestEffect gContestEffects[] =
     },
     [CONTEST_EFFECT_AVOID_STARTLE] =
     {
-        .description = COMPOUND_STRING("Can avoid being startled\nby others."),
+        .description = COMPOUND_STRING("Puede evitar que otros\nlo asusten."),
         .effectType = CONTEST_EFFECT_TYPE_AVOID_STARTLE,
         .appeal = 10,
         .jam = 0,
@@ -54,7 +54,7 @@ const struct ContestEffect gContestEffects[] =
     },
     [CONTEST_EFFECT_AVOID_STARTLE_SLIGHTLY] =
     {
-        .description = COMPOUND_STRING("Can avoid being startled\nby others a little."),
+        .description = COMPOUND_STRING("Evita asustarse un poco\npor otros."),
         .effectType = CONTEST_EFFECT_TYPE_AVOID_STARTLE,
         .appeal = 30,
         .jam = 0,
@@ -178,7 +178,7 @@ const struct ContestEffect gContestEffects[] =
     },
     [CONTEST_EFFECT_STARTLE_MONS_COOL_APPEAL] =
     {
-        .description = COMPOUND_STRING("Badly startles POKéMON\nthat made COOL appeals."),
+        .description = COMPOUND_STRING("Sorprende mucho a los\nPOKéMON de CARISMA."),
         .effectType = CONTEST_EFFECT_TYPE_STARTLE_MONS,
         .appeal = 20,
         .jam = 10,
@@ -186,7 +186,7 @@ const struct ContestEffect gContestEffects[] =
     },
     [CONTEST_EFFECT_STARTLE_MONS_BEAUTY_APPEAL] =
     {
-        .description = COMPOUND_STRING("Badly startles POKéMON\nthat made BEAUTY appeals."),
+        .description = COMPOUND_STRING("Sorprende mucho a los\nPOKéMON de BELLEZA."),
         .effectType = CONTEST_EFFECT_TYPE_STARTLE_MONS,
         .appeal = 20,
         .jam = 10,
@@ -194,7 +194,7 @@ const struct ContestEffect gContestEffects[] =
     },
     [CONTEST_EFFECT_STARTLE_MONS_CUTE_APPEAL] =
     {
-        .description = COMPOUND_STRING("Badly startles POKéMON\nthat made CUTE appeals."),
+        .description = COMPOUND_STRING("Sorprende mucho a los\nPOKéMON de DULZURA."),
         .effectType = CONTEST_EFFECT_TYPE_STARTLE_MONS,
         .appeal = 20,
         .jam = 10,
@@ -202,7 +202,7 @@ const struct ContestEffect gContestEffects[] =
     },
     [CONTEST_EFFECT_STARTLE_MONS_SMART_APPEAL] =
     {
-        .description = COMPOUND_STRING("Badly startles POKéMON\nthat made SMART appeals."),
+        .description = COMPOUND_STRING("Sorprende mucho a los\nPOKéMON de INGENIO."),
         .effectType = CONTEST_EFFECT_TYPE_STARTLE_MONS,
         .appeal = 20,
         .jam = 10,
@@ -210,7 +210,7 @@ const struct ContestEffect gContestEffects[] =
     },
     [CONTEST_EFFECT_STARTLE_MONS_TOUGH_APPEAL] =
     {
-        .description = COMPOUND_STRING("Badly startles POKéMON\nthat made TOUGH appeals."),
+        .description = COMPOUND_STRING("Sorprende mucho a los\nPOKéMON de DUREZA."),
         .effectType = CONTEST_EFFECT_TYPE_STARTLE_MONS,
         .appeal = 20,
         .jam = 10,
@@ -246,7 +246,7 @@ const struct ContestEffect gContestEffects[] =
     },
     [CONTEST_EFFECT_BADLY_STARTLES_MONS_IN_GOOD_CONDITION] =
     {
-        .description = COMPOUND_STRING("Badly startles POKéMON in\ngood condition."),
+        .description = COMPOUND_STRING("Sorprende mucho a los\nPOKéMON en buen estado."),
         .effectType = CONTEST_EFFECT_TYPE_STARTLE_MONS,
         .appeal = 30,
         .jam = 10,
@@ -398,7 +398,7 @@ const struct ContestEffect gContestEffects[] =
     },
     [CONTEST_EFFECT_BADLY_STARTLE_MONS_WITH_GOOD_APPEALS] =
     {
-        .description = COMPOUND_STRING("Badly startles all POKéMON\nthat made good appeals."),
+        .description = COMPOUND_STRING("Sorprende mucho a los\nque hicieron buen acto."),
         .effectType = CONTEST_EFFECT_TYPE_STARTLE_MONS,
         .appeal = 20,
         .jam = 10,
