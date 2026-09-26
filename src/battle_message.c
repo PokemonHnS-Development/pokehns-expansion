@@ -193,7 +193,7 @@ static const u8 sText_TerrainReturnedToNormal[] = _("¡El terreno volvió a la n
 const u8 *const gBattleStringsTable[STRINGID_COUNT] =
 {
     [STRINGID_TRAINER1LOSETEXT]                     = COMPOUND_STRING("{B_TRAINER1_LOSE_TEXT}"),
-    [STRINGID_PKMNGAINEDEXP]                        = COMPOUND_STRING("{B_BUFF1} gained{B_BUFF2} {B_BUFF3} Exp. Points!\p"),
+    [STRINGID_PKMNGAINEDEXP]                        = COMPOUND_STRING("{B_BUFF1} ganó{B_BUFF2} {B_BUFF3} puntos de EXP.\p"),
     [STRINGID_PKMNGREWTOLV]                         = COMPOUND_STRING("{B_BUFF1} subió al Nv. {B_BUFF2}!{WAIT_SE}\p"),
     [STRINGID_PKMNLEARNEDMOVE]                      = COMPOUND_STRING("{B_BUFF1} learned {B_BUFF2}!{WAIT_SE}\p"),
     [STRINGID_TRYTOLEARNMOVE1]                      = COMPOUND_STRING("{B_BUFF1} quiere aprender el movimiento {B_BUFF2}.\p"),
@@ -495,7 +495,7 @@ const u8 *const gBattleStringsTable[STRINGID_COUNT] =
     [STRINGID_PKMNSXMADEYUSELESS]                   = COMPOUND_STRING("{B_SCR_NAME_WITH_PREFIX}'s {B_SCR_ABILITY} made {B_CURRENT_MOVE} useless!"), //not in gen 5+, ability popup
     [STRINGID_PKMNTRAPPEDBYSANDTOMB]                = COMPOUND_STRING("¡{B_DEF_NAME_WITH_PREFIX} quedó atrapado en la arena movediza!"),
     [STRINGID_EMPTYSTRING4]                         = COMPOUND_STRING(""),
-    [STRINGID_ABOOSTED]                             = COMPOUND_STRING(" a boosted"),
+    [STRINGID_ABOOSTED]                             = COMPOUND_STRING(" un extra de"),
     [STRINGID_PKMNSXINTENSIFIEDSUN]                 = COMPOUND_STRING("¡{B_SCR_ABILITY} de {B_SCR_NAME_WITH_PREFIX} intensificó los rayos del sol!"), //not in gen 5+, ability popup
     [STRINGID_YOUTHROWABALLNOWRIGHT]                = COMPOUND_STRING("¿Lanzas una Ball? Yo… ¡daré lo mejor!"),
     [STRINGID_PKMNSXTOOKATTACK]                     = COMPOUND_STRING("¡{B_DEF_ABILITY} de {B_DEF_NAME_WITH_PREFIX} recibió el ataque!"), //In gen 5+ but without naming the ability

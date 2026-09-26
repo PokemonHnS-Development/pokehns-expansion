@@ -1460,7 +1460,7 @@ gText_PokemonCenterSign::
 	.string "POKéMON CENTER$"
 
 gText_MomOrDadMightLikeThisProgram::
-	.string "{STR_VAR_1} might like this program.\n"
+	.string "{STR_VAR_1} podría disfrutar de\neste programa.\n"
 	.string "… … … … … … … … … … … … … … … …\p"
 	.string "Better get going!$"
 
@@ -1547,11 +1547,11 @@ gText_MomExplainHPGetPotions::
 
 #if IS_HNS
 gText_RegisteredTrainerinPokeNav::
-	.string "Registered {STR_VAR_1} {STR_VAR_2}\n"
-	.string "in the POKéGEAR.$"
+	.string "Se ha registrado a {STR_VAR_1} {STR_VAR_2}\n"
+	.string "en el POKéGEAR.$"
 #else
 gText_RegisteredTrainerinPokeNav::
-	.string "Registered {STR_VAR_1} {STR_VAR_2}\n"
+	.string "Se ha registrado a {STR_VAR_1} {STR_VAR_2}\n"
 	.string "in the POKéNAV.$"
 #endif
 
