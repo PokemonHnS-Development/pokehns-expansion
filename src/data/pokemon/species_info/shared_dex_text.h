@@ -70,7 +70,7 @@ const u8 gSpewpaPokedexText[] = _(
     "pelaje de su cuerpo para intentar\n"
     "threaten them.");
 
-const u8 gFurfrouPokedexText[] = _("Cortar su pelaje esponjoso no solo\nhace más elegante, sino que aumenta la\nrapidez de sus movimientos. Estos\nPokémon eran guardianes de reyes.");
+const u8 gFurfrouPokedexText[] = _("Cortar su pelaje esponjoso no solo\nhace más elegante, sino que aumenta\nla rapidez de sus movimientos. Estos\nPokémon eran guardianes de reyes.");
 
 const u8 gXerneasPokedexText[] = _("Dicen que cuando los cuernos de su\ncabeza brillan en siete colores, da\nvida eterna. Durmió durante un\nmilenio en forma de árbol.");
 
@@ -95,7 +95,7 @@ const u8 gVikavoltPokedexText[] = _(
     "Somete a POKéMON ave con descargas.\n"
     "rayos de energía eléctrica.");
 
-const u8 gRibombeePokedexText[] = _("Ribombee enrolla polen en pompones. Crea muchas variedades, algunas como alimento y otras para luchar. A veces se venden como suplementos.");
+const u8 gRibombeePokedexText[] = _("Ribombee enrolla polen en pompones.\nCrea muchas variedades, algunas\ncomo alimento y otras para luchar. A\nveces se venden como suplementos.");
 
 const u8 gRockruffPokedexText[] = _("Este POKéMON vive con humanos\ndesde hace mucho tiempo. Siente\ncuando su Entrenador está triste\ny lo acompaña siempre a su lado.");
 
