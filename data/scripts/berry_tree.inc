@@ -467,7 +467,7 @@ BerryTree_Text_PickedTheBerry_Mutation:
 	.string "{PLAYER} recogió {STR_VAR_2} {STR_VAR_1}\ny {STR_VAR_3}.$"
 
 BerryTree_Text_PutAwayBerry_Mutation:
-	.string "{PLAYER} guardó {STR_VAR_1}\ny {STR_VAR_3} en el BOLSILLO\lde BAYAS de la MOCHILA.\pLa tierra volvió a estar blanda\ny suelta.$"
+	.string "{PLAYER} guardó {STR_VAR_1}\ny {STR_VAR_3} en el BOLSILLO\lde BAYAS de la BOLSA.\pLa tierra volvió a estar blanda\ny suelta.$"
 .endif
 
 .if OW_BERRY_MULCH_USAGE == TRUE

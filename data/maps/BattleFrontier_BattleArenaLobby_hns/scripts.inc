@@ -466,7 +466,7 @@ BattleFrontier_BattleArenaLobby_Text_ReceivedPrize_hns:
 @ Unused
 BattleFrontier_BattleArenaLobby_Text_BagFullReturnForPrize_hns:
 	.string "Oh?\n"
-	.string "Tu MOCHILA parece estar llena.\p"
+	.string "Tu BOLSA parece estar llena.\p"
 	.string "Te pido que hagas espacio y\n"
 	.string "vuelvas por tu premio.$"
 

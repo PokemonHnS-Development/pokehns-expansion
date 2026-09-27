@@ -313,7 +313,7 @@ Route124_DivingTreasureHuntersHouse_Text_TradeSomethingElse:
 	.string "¿Quieres intercambiar algo más?$"
 
 Route124_DivingTreasureHuntersHouse_Text_BagFull:
-	.string "Vaya, tu MOCHILA está llena.\n"
+	.string "Vaya, tu BOLSA está llena.\n"
 	.string "¡Tira algunas cosas, amigo!$"
 
 Route124_DivingTreasureHuntersHouse_Text_ComeBackIfYouChangeMind:

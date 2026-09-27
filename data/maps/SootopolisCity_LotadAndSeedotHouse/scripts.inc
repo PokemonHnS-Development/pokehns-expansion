@@ -129,7 +129,7 @@ SootopolisCity_LotadAndSeedotHouse_Text_ReceivedPotion1:
 
 SootopolisCity_LotadAndSeedotHouse_Text_BagCrammedFull1:
 	.string "¿Eh?\n"
-	.string "Tu MOCHILA está llena.$"
+	.string "Tu BOLSA está llena.$"
 
 SootopolisCity_LotadAndSeedotHouse_Text_SeenBiggerSeedot:
 	.string "¿Es {STR_VAR_2}, verdad?\p"
@@ -177,7 +177,7 @@ SootopolisCity_LotadAndSeedotHouse_Text_ReceivedPotion2:
 
 SootopolisCity_LotadAndSeedotHouse_Text_BagCrammedFull2:
 	.string "¿Eh?\n"
-	.string "Tu MOCHILA está llena.$"
+	.string "Tu BOLSA está llena.$"
 
 SootopolisCity_LotadAndSeedotHouse_Text_SeenBiggerLotad:
 	.string "¿{STR_VAR_2}?\p"

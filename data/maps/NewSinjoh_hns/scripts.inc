@@ -103,7 +103,7 @@ NewSinjoh_MilkMan_NoMoney:
 	.string "¡Consigue dinero y compra algo!$"
 
 NewSinjoh_MilkMan_NoRoom:
-	.string "Parece que tu MOCHILA está llena.$"
+	.string "Parece que tu BOLSA está llena.$"
 
 NewSinjoh_MilkMan_NoSale:
 	.string "¿No lo quieres?\n"

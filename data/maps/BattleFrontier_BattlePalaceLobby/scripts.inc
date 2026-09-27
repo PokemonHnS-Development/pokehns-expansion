@@ -483,7 +483,7 @@ BattleFrontier_BattlePalaceLobby_Text_NoSpaceForPrize:
 	.string "Parece que no tienes espacio para\n"
 	.string "nuestro premio.\p"
 	.string "Vuelve cuando hayas organizado\n"
-	.string "tu MOCHILA.$"
+	.string "tu BOLSA.$"
 
 BattleFrontier_BattlePalaceLobby_Text_WeHaveBeenWaiting:
 	.string "Te hemos estado esperando...$"

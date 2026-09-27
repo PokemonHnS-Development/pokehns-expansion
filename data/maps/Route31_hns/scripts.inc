@@ -214,7 +214,7 @@ Route31_Text_WadeGaveItem:
 	.string "¡Te aviso si encuentro\nalgo más!$"
 
 Route31_Text_WadeNoRoom:
-	.string "Hmm, parece que tu MOCHILA\n"
+	.string "Hmm, parece que tu BOLSA\n"
 	.string "está llena.\p"
 	.string "Vuelve cuando tengas espacio.\n"
 	.string "cuarto del jefe!$"

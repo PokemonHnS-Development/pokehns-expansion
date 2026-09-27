@@ -431,7 +431,7 @@ GoldenrodCity_RadioTower_1F_Text_AllFiveDigitsMatched:
 GoldenrodCity_RadioTower_1F_Text_NoRoomForThis:
 	.string "Oh?\n"
 	.string "Parece que no tienes espacio.\p"
-	.string "Haz espacio en tu MOCHILA y\n"
+	.string "Haz espacio en tu BOLSA y\n"
 	.string "avísame.$"
 
 GoldenrodCity_RadioTower_1F_Text_PrizeWeveBeenHolding:

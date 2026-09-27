@@ -163,7 +163,7 @@ const u8 gMenuText_Give2[] = _("DAR");
 const u8 gText_xVar1[] = _("×{STR_VAR_1}");
 const u8 gText_Berry2[] = _(" BAYA"); // Unused
 const u8 gText_Coins[] = _("{STR_VAR_1} MONEDAS");
-const u8 gText_CloseBag[] = _("CERRAR MOCHILA");
+const u8 gText_CloseBag[] = _("CERRAR BOLSA");
 const u8 gText_Var1IsSelected[] = _("{STR_VAR_1} ha sido\nseleccionado.");
 const u8 gText_CantWriteMail[] = _("No puedes escribir\nCARTA aquí.");
 const u8 gText_NoPokemon[] = _("No hay ningún\nPOKéMON.");
@@ -483,7 +483,7 @@ const u8 gText_NoItems[] = _("No hay objetos.{PAUSE_UNTIL_PRESS}");
 const u8 gText_NoMailHere[] = _("Aquí no hay CORREO.{PAUSE_UNTIL_PRESS}");
 const u8 gText_WhatToDoWithVar1sMail[] = _("¿Qué quieres hacer con\nla CARTA de {STR_VAR_1}?");
 const u8 gText_MessageWillBeLost[] = _("El mensaje se perderá.\n¿Está bien?");
-const u8 gText_BagIsFull[] = _("La MOCHILA está llena.{PAUSE_UNTIL_PRESS}");
+const u8 gText_BagIsFull[] = _("La BOLSA está llena.{PAUSE_UNTIL_PRESS}");
 const u8 gText_MailToBagMessageErased[] = _("El MAIL volvió a la BOLSA\ncon el mensaje borrado.{PAUSE_UNTIL_PRESS}");
 const u8 gText_Dad[] = _("PAPÁ");
 const u8 gText_Mom[] = _("MAMÁ");
@@ -555,7 +555,7 @@ const u8 gText_Multi[] = _("MULTI");
 const u8 gText_MultiLink[] = _("MULTI-LINK");
 const u8 gText_MenuOptionPokedex[] = _("POKéDEX");
 const u8 gText_MenuOptionPokemon[] = _("POKéMON");
-const u8 gText_MenuOptionBag[] = _("MOCHILA");
+const u8 gText_MenuOptionBag[] = _("BOLSA");
 #if IS_HNS
 const u8 gText_MenuOptionPokenav[] = _("POKéGEAR");
 #else

@@ -11,7 +11,7 @@ Route11_EastEntrance_1F_EventScript_BottomGuard::
 
 @ Unclear where this is originally from
 Route11_EastEntrance_1F_Text_BagIsFull::
-	.string "{PLAYER}{KUN}: La MOCHILA parece\n"
+	.string "{PLAYER}{KUN}: La BOLSA parece\n"
 	.string "estar llena.$"
 
 Route11_EastEntrance_1F_Text_ManInLavenderRatesNames::

@@ -520,7 +520,7 @@ ThreeIsland_Text_GivenFullRestore::
 
 ThreeIsland_Text_OhYourBagIsFull::
 	.string "¿Eh?\n"
-	.string "Tu MOCHILA está llena.$"
+	.string "Tu BOLSA está llena.$"
 
 ThreeIsland_Text_YouveGotImpressiveMons::
 	.string "Tienes unas habilidades realmente\n"

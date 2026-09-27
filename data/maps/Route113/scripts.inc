@@ -148,7 +148,7 @@ Route113_Text_RouteSignFallarbor:
 	.string "{LEFT_ARROW} PUEBLO FALLARBOR$"
 
 Route113_Text_TrainerTipsRegisterKeyItems:
-	.string "CONSEJOS DE ENTRENADOR\pPuedes registrar uno de los OBJETOS\nCLAVE en tu MOCHILA con SELECT.\pSolo presiona SELECT para usar\nel objeto registrado fácilmente.$"
+	.string "CONSEJOS DE ENTRENADOR\pPuedes registrar uno de los OBJETOS\nCLAVE en tu BOLSA con SELECT.\pSolo presiona SELECT para usar\nel objeto registrado fácilmente.$"
 
 Route113_Text_GlassWorkshopSign:
 	.string "TALLER DE VIDRIO\n"

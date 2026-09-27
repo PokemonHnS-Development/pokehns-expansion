@@ -100,7 +100,7 @@ GoldenrodDeptStore_Text_RoofPokefanM:
 
 GoldenrodDeptStore_Text_RoofTeacher:
     .string "¡Oh, todo es tan barato!\p"
-    .string "¡Compré tanto que mi MOCHILA rebosa!$"
+    .string "¡Compré tanto que mi BOLSA rebosa!$"
 
 GoldenrodDeptStore_Text_RoofBugCatcher:
     .string "Mis POKéMON siempre se paralizan o\n"

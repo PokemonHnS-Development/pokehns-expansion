@@ -602,20 +602,20 @@ BattleFrontier_BattlePyramidLobby_Text_ShowYouIntoPyramid_hns:
 	.string "PIRÁMIDE BATALLA.$"
 
 BattleFrontier_BattlePyramidLobby_Text_WeWillHoldBagForSafekeeping_hns:
-	.string "Guardaremos tu MOCHILA por seguridad,\n"
+	.string "Guardaremos tu BOLSA por seguridad,\n"
 	.string "{PLAYER}, mientras exploras.$"
 
 BattleFrontier_BattlePyramidLobby_Text_PleaseTakePreviousBattleBag_hns:
-	.string "A cambio, toma esta MOCHILA BATALLA,\n"
+	.string "A cambio, toma esta BOLSA BATALLA,\n"
 	.string "la misma que usaste antes.$"
 
 BattleFrontier_BattlePyramidLobby_Text_PleaseTakeThisBattleBag_hns:
 	.string "A cambio, por favor toma esta\n"
-	.string "MOCHILA BATALLA.$"
+	.string "BOLSA BATALLA.$"
 
 BattleFrontier_BattlePyramidLobby_Text_ExchangedBagForBattleBag_hns:
-	.string "{PLAYER} cambió la MOCHILA por la\n"
-	.string "MOCHILA BATALLA.$"
+	.string "{PLAYER} cambió la BOLSA por la\n"
+	.string "BOLSA BATALLA.$"
 
 BattleFrontier_BattlePyramidLobby_Text_StepOnFloorPanel_hns:
 	.string "Cuando pises este panel del suelo,\n"
@@ -694,7 +694,7 @@ BattleFrontier_BattlePyramidLobby_Text_BagIsFull_hns:
 	.string "...Ah...\n"
 	.string "Tu BAG parece estar llena.\p"
 	.string "Vuelve cuando hayas organizado\n"
-	.string "el contenido de tu MOCHILA.$"
+	.string "el contenido de tu BOLSA.$"
 
 BattleFrontier_BattlePyramidLobby_Text_DisappointingHereIsBag_hns:
 	.string "Qué decepcionante para ti...\p"
@@ -896,7 +896,7 @@ BattleFrontier_BattlePyramidLobby_Text_ExplainMazeRules_hns:
 	.string "vence a un POKéMON o ENTRENADOR.$"
 
 BattleFrontier_BattlePyramidLobby_Text_ExplainBagRules_hns:
-	.string "La BATTLE BAG sirve como tu MOCHILA\n"
+	.string "La BATTLE BAG sirve como tu BOLSA\n"
 	.string "mientras estés en la PIRÁMIDE.\p"
 	.string "Hay dos BATTLE BAG separadas--\n"
 	.string "una para el Nivel 50 y otra para\l"

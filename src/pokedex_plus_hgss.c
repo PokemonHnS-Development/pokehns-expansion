@@ -7002,7 +7002,7 @@ static void PrintEvolutionTargetSpeciesAndMethod(u8 taskId, u16 species, u8 dept
                     StringAppend(gStringVar4, COMPOUND_STRING(" "));
                     CopyItemNameHandlePlural(evolutions[i].params[j].arg1, gStringVar2, evolutions[i].params[j].arg2);
                     StringAppend(gStringVar4, gStringVar2);
-                    StringAppend(gStringVar4, COMPOUND_STRING(" en la mochila"));
+                    StringAppend(gStringVar4, COMPOUND_STRING(" en la BOLSA"));
                     break;
                 case CONDITIONS_END:
                     break;

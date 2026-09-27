@@ -187,7 +187,7 @@ PalletTown_RivalsHouse_Text_ReceivedTownMapFromDaisy::
 
 PalletTown_RivalsHouse_Text_DontHaveSpaceForThis::
 	.string "No tienes espacio para esto en\n"
-	.string "tu MOCHILA.$"
+	.string "tu BOLSA.$"
 
 PalletTown_RivalsHouse_Text_ExplainTownMap::
 	.string "Con el MAPA puedes ver dónde\n"

@@ -78,7 +78,7 @@ ApricornTree_Text_PickedTheApricorn:
 ApricornTree_Text_PutAwayApricorn:
 	.string "{PLAYER} guardó la\n"
 	.string "{STR_VAR_1} en\l"
-	.string "el BOLSILLO {STR_VAR_3} de la MOCHILA.$"
+	.string "el BOLSILLO {STR_VAR_3} de la BOLSA.$"
 
 ApricornTree_Text_PocketFull:
 	.string "El BOLSILLO {STR_VAR_3} está lleno.\p"

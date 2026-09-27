@@ -403,5 +403,5 @@ Route39_Text_DerekGaveItem:
 	.string "¿No estás de acuerdo?$"
 
 Route39_Text_DerekNoRoom:
-	.string "Hmm, tu MOCHILA está llena.\p"
+	.string "Hmm, tu BOLSA está llena.\p"
 	.string "Vuelve cuando tengas espacio.$"

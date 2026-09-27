@@ -259,7 +259,7 @@ GoldenrodCity_RadioTower_2F_Text_BuenaAlreadyPlayed:
 
 GoldenrodCity_RadioTower_2F_Text_BuenaBagFull:
 	.string "BUENA: Acertaste, pero\n"
-	.string "¡tu MOCHILA está llena!\p"
+	.string "¡tu BOLSA está llena!\p"
 	.string "¡Haz espacio y vuelve a\n"
 	.string "hablar conmigo!$"
 

@@ -44,7 +44,7 @@ GoldenrodCity_BikeShop_EventScript_Bike::
 GoldenrodCity_BikeShop_Text_Clerk2:
 	.string "Usar la BICICLETA es tan simple como\n"
 	.string "presionar un botón si la\l"
-	.string "REGISTRAS desde la MOCHILA.\p"
+	.string "REGISTRAS desde la BOLSA.\p"
 	.string "Si necesitas ir más rápido,\n"
 	.string "¡primero debes detenerte!\p"
 	.string "Puede parecer un consejo\n"

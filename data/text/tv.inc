@@ -2012,7 +2012,7 @@ gTVWhatsNo1InHoennTodayText05::
 gTVWhatsNo1InHoennTodayText06::
 	.string "En un solo día, {STR_VAR_1} recogió\n"
 	.string "¡{STR_VAR_2} BAYAS!\p"
-	.string "La MOCHILA de {STR_VAR_1} se llenó\n"
+	.string "La BOLSA de {STR_VAR_1} se llenó\n"
 	.string "de BAYAS, ¡que el ENTRENADOR\l"
 	.string "apenas podía caminar después!$"
 

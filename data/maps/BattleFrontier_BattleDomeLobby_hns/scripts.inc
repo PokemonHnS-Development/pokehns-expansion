@@ -531,8 +531,8 @@ BattleFrontier_BattleDomeLobby_Text_ReceivedPrize_hns:
 
 @ Unused
 BattleFrontier_BattleDomeLobby_Text_BagFullMakeRoom_hns:
-	.string "Oh, parece que tu MOCHILA está llena.\p"
-	.string "Haz espacio en tu MOCHILA y luego\n"
+	.string "Oh, parece que tu BOLSA está llena.\p"
+	.string "Haz espacio en tu BOLSA y luego\n"
 	.string "vuelve a verme.$"
 
 BattleFrontier_BattleDomeLobby_Text_ThankYouForPlaying_hns:

@@ -909,7 +909,7 @@ Route110_Text_TrainerTipsPrlzSleep:
 	.string "combates POKéMON.$"
 
 Route110_Text_TrainerTipsRegisterItems:
-	.string "CONSEJOS DE ENTRENADOR\pLos objetos de la MOCHILA se pueden\nreorganizar pulsando SELECT.$"
+	.string "CONSEJOS DE ENTRENADOR\pLos objetos de la BOLSA se pueden\nreorganizar pulsando SELECT.$"
 
 Route110_Text_TrickHouseSign:
 	.string "“Tres pasos {RIGHT_ARROW} y dos pasos {UP_ARROW}\npara llegar a la CASA DE LOS TRUCOS.”$"

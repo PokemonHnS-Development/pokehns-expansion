@@ -98,7 +98,7 @@ Route39_Text_FarmerMNoMoney:
 	.string "¡Sin dinero no hay venta!$"
 
 Route39_Text_FarmerMNoRoom:
-	.string "Diría que tu MOCHILA está llena.$"
+	.string "Diría que tu BOLSA está llena.$"
 
 Route39_Text_FarmerMNoSale:
 	.string "¿No lo quieres?\n"

@@ -287,7 +287,7 @@ TwoIsland_JoyfulGameCorner_Text_ReceivedMoonStoneFromLostellesDaddy::
 	.string "del papá de LOSTELLE.$"
 
 TwoIsland_JoyfulGameCorner_Text_NotGoingToFitInBag::
-	.string "Tu MOCHILA no tiene espacio\n"
+	.string "Tu BOLSA no tiene espacio\n"
 	.string "cosa...$"
 
 TwoIsland_JoyfulGameCorner_Text_IllGetGameCornerRunning::

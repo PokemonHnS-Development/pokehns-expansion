@@ -588,7 +588,7 @@ LilycoveCity_PokemonCenter_1F_Text_YouDontHaveSpaceForIt:
 	.string "Oh, no puedes tenerlo si no tienes\n"
 	.string "espacio suficiente.\p"
 	.string "Vuelve a verme cuando hayas\n"
-	.string "organizado tu MOCHILA...$"
+	.string "organizado tu BOLSA...$"
 
 LilycoveCity_PokemonCenter_1F_Text_ImTheQuizLady:
 	.string "¡Soy la SEÑORA TRIVIA!\n"
@@ -642,7 +642,7 @@ LilycoveCity_PokemonCenter_1F_Text_XReceivedOneY:
 	.string "¡un {STR_VAR_2}!$"
 
 LilycoveCity_PokemonCenter_1F_Text_YourBagIsFilledUp:
-	.string "¡Oh? ¡Tu MOCHILA está llena!\n"
+	.string "¡Oh? ¡Tu BOLSA está llena!\n"
 	.string "Vuelve cuando tengas espacio.$"
 
 LilycoveCity_PokemonCenter_1F_Text_WrongTheCorrectAnswerIs:

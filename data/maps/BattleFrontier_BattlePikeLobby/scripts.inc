@@ -422,7 +422,7 @@ BattleFrontier_BattlePikeLobby_Text_ReadWhichHeading:
 	.string "¿Qué sección quieres leer?$"
 
 BattleFrontier_BattlePikeLobby_Text_ExplainPokenavBagRules:
-	.string "No se pueden usar la MOCHILA ni el\n"
+	.string "No se pueden usar la BOLSA ni el\n"
 	.string "POKéNAV en un reto Battle Choice.$"
 
 BattleFrontier_BattlePikeLobby_Text_ExplainHeldItemRules:

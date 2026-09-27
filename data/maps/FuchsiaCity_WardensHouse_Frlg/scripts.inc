@@ -112,7 +112,7 @@ FuchsiaCity_WardensHouse_Text_ExplainStrength::
 
 @ Unused
 FuchsiaCity_WardensHouse_Text_YouHaveTooMuchStuff::
-	.string "¡Pero bueno! ¡Tu mochila\n"
+	.string "¡Pero bueno! ¡Tu BOLSA\n"
 	.string "¡está llena!$"
 
 FuchsiaCity_WardensHouse_Text_MonPhotosFossilsOnDisplay::

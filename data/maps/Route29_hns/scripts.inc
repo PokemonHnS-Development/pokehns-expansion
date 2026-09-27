@@ -171,7 +171,7 @@ Route29_Text_OldManExplanation:
 	.string "Si los debilitas primero,\n"
 	.string "Es más fácil capturar POKéMON.\p"
 	.string "¡Luego, lanza una BALL de tu\n"
-	.string "mochila! Cualquier BALL sirve.\p"
+	.string "BOLSA! Cualquier BALL sirve.\p"
 	.string "Si quieres aprender más,\n"
 	.string "¡Ve a la ACADEMIA de CIUDAD MALVA!\p"
 	.string "Los alumnos de allí saben mucho\n"

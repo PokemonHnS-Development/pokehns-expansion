@@ -774,7 +774,7 @@ LittlerootTown_ProfessorBirchsLab_Text_CatchCutePokemonWithPokeBalls:
 	.string "¡atraparé con POKé BALLS!$"
 
 LittlerootTown_ProfessorBirchsLab_Text_OhYourBagsFull:
-	.string "¿Eh? Tu MOCHILA está llena.$"
+	.string "¿Eh? Tu BOLSA está llena.$"
 
 LittlerootTown_ProfessorBirchsLab_Text_MayWhereShouldIGoNext:
 	.string "MAY: Me pregunto dónde buscar\n"
@@ -795,7 +795,7 @@ LittlerootTown_ProfessorBirchsLab_Text_CatchCoolPokemonWithPokeBalls:
 	.string "¡lo atraparé con POKé BALLS!$"
 
 LittlerootTown_ProfessorBirchsLab_Text_HeyYourBagsFull:
-	.string "¡Oye, tu MOCHILA está llena!$"
+	.string "¡Oye, tu BOLSA está llena!$"
 
 LittlerootTown_ProfessorBirchsLab_Text_BrendanWhereShouldIGoNext:
 	.string "BRENDAN: ¿Dónde debería buscar\n"

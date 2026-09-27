@@ -336,7 +336,7 @@ Route113_GlassWorkshop_Text_IveFinishedGlassItem:
 
 Route113_GlassWorkshop_Text_NoRoomInBag:
 	.string "Oh?\n"
-	.string "No hay espacio en tu MOCHILA, ·jadeo·.\p"
+	.string "No hay espacio en tu BOLSA, ·jadeo·.\p"
 	.string "Yo lo guardaré, vuelve más tarde,\n"
 	.string "·jadeo·.$"
 

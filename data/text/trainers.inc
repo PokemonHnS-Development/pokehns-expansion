@@ -1469,7 +1469,7 @@ Route112_Text_TrentDefeat:
 Route112_Text_TrentPostBattle:
 	.string "Prueba el senderismo, y me refiero a\n"
 	.string "recorrer estas rutas de montaña\l"
-	.string "con una mochila pesada de decenas de\l"
+	.string "con una BOLSA pesada de decenas de\l"
 	.string "kilos.\p"
 	.string "Eso, amigo, pondrá tu cuerpo\n"
 	.string "en muy buena forma.$"
@@ -1477,7 +1477,7 @@ Route112_Text_TrentPostBattle:
 Route112_Text_TrentRegister:
 	.string "Ay, se me acalamparon las piernas.\n"
 	.string "¿Puedes traerme vendas de mi\l"
-	.string "mochila?\p"
+	.string "BOLSA?\p"
 	.string "¡No, ese es mi POKéNAV!\n"
 	.string "Oh, está bien, te registraré.$"
 
@@ -2842,7 +2842,7 @@ Route119_Text_RachelDefeat:
 	.string "Eso no es justo.$"
 
 Route119_Text_RachelPostBattle:
-	.string "¿Me preguntas si pesa mi sombrilla?\nTu MOCHILA lleva más cachivaches\lde los que yo llevo encima.$"
+	.string "¿Me preguntas si pesa mi sombrilla?\nTu BOLSA lleva más cachivaches\lde los que yo llevo encima.$"
 
 Route120_Text_ColinIntro:
 	.string "¿Tienes algún movimiento que pueda\n"
@@ -3199,7 +3199,7 @@ Route121_Text_CalePostBattle:
 	.string "Compré demasiadas cosas en los\n"
 	.string "ALMACENES DE CIUDAD VERALTO.\p"
 	.string "Están siguiendo este camino.\n"
-	.string "¡Quisiera una MOCHILA como la tuya!$"
+	.string "¡Quisiera una BOLSA como la tuya!$"
 
 Route121_Text_MylesIntro:
 	.string "¡No hay nada que me guste más que\n"

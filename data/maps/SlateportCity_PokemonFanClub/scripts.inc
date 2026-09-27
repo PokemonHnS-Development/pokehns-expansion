@@ -313,7 +313,7 @@ SlateportCity_PokemonFanClub_Text_NoSpaceForReward:
 	.string "Tu POKéMON crece muy bien,\n"
 	.string "así que mereces un premio.\p"
 	.string "Lamentablemente, no tienes espacio\n"
-	.string "en tu MOCHILA para esto.$"
+	.string "en tu BOLSA para esto.$"
 
 SlateportCity_PokemonFanClub_Text_MonMostImpressiveGiveItThis:
 	.string "Tu {STR_VAR_1} está creciendo\nde forma impresionante!\l¡Es un ejemplar magnífico!\p¡Pero! Si le dieras esto,\ncrecería aún mejor! ¡Vaya!$"

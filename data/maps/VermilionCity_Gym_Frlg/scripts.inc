@@ -319,7 +319,7 @@ VermilionCity_Gym_Text_ExplainTM34::
 	.string "¡Enséñaselo a un POKéMON ELÉCTRICO!$"
 
 VermilionCity_Gym_Text_MakeRoomInYourBag::
-	.string "¡Oye, niño, haz sitio en tu MOCHILA!$"
+	.string "¡Oye, niño, haz sitio en tu BOLSA!$"
 
 VermilionCity_Gym_Text_LtSurgeDefeat::
 	.string "¡Vaya que sorpresa!\p"
