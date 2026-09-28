@@ -71,17 +71,17 @@ static const u8 sGarchompiteDesc[]    = _("Esta piedra permite a\nGarchomp megae
 
 static const u8 sLucarioniteDesc[]    = _("Esta piedra permite a\nLucario megaevolucionar\nen combate.");
 
-static const u8 sSeaIncenseDesc[]     = _("Objeto que aumenta\nligeramente los\nmovimientos de tipo Agua.");
+static const u8 sSeaIncenseDesc[]     = _("Un incienso que sube\nel poder de los\nmovs. tipo Agua.");
 
-static const u8 sOddIncenseDesc[]     = _("Objeto que aumenta\nlos movimientos de\ntipo Psíquico.");
+static const u8 sOddIncenseDesc[]     = _("Un incienso que sube\nel poder de los\nmovs. tipo Psíquico.");
 
-static const u8 sRockIncenseDesc[]    = _("Objeto que aumenta\nel poder de movimientos \nde tipo Roca.");
+static const u8 sRockIncenseDesc[]    = _("Un incienso que sube\nel poder de los\nmovs. tipo Roca.");
 
-static const u8 sFullIncenseDesc[]    = _("Objeto que hace que\nel portador se mueva \nmás lento.");
+static const u8 sFullIncenseDesc[]    = _("Objeto que hace que\nel portador se mueva\nmás lento.");
 
-static const u8 sRoseIncenseDesc[]    = _("Objeto que aumenta\nel poder de movimientos \nde tipo Planta.");
+static const u8 sRoseIncenseDesc[]    = _("Un incienso que sube\nel poder de los\nmovs. tipo Planta.");
 
-static const u8 sLuckIncenseDesc[]    = _("Duplica el dinero en las\nluchas si el portador\nparticipa.");
+static const u8 sLuckIncenseDesc[]    = _("Duplica el dinero en\nlas luchas si el\nportador participa.");
 
 static const u8 sPureIncenseDesc[]    = _("Objeto que\nayuda a repele\na los POKéMON.");
 
@@ -1359,8 +1359,8 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_CARBOS] =
     {
-        .name = ITEM_NAME("CARBURANTE"),
-        .pluralName = ITEM_PLURAL_NAME("Carbos"),
+        .name = ITEM_NAME("CARBOHIDRATOS"),
+        .pluralName = ITEM_PLURAL_NAME("Carbohidratos"),
         .price = (I_PRICE >= GEN_7) ? 10000 : 9800,
         .description = COMPOUND_STRING(
             "Sube el valor\n"

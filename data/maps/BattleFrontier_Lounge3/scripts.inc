@@ -215,10 +215,10 @@ BattleFrontier_Lounge3_Text_YouLookToughExplainGambling::
 	.string "en la BATTLE FRONTIER.\p"
 	.string "Luego, cada uno elige un TRAINER\n"
 	.string "que esté haciendo el desafío,\l"
-	.string "y apostamos Battle Points.\p"
+	.string "y apostamos Puntos de Batalla.\p"
 	.string "Quien apueste por el TRAINER con\n"
 	.string "el mejor récord se lleva todos los\l"
-	.string "Battle Points del pozo.\p"
+	.string "Puntos de Batalla del pozo.\p"
 	.string "Suena simple, ¿no?\n"
 	.string "En fin...$"
 
@@ -411,7 +411,7 @@ BattleFrontier_Lounge3_Text_GetToBattlePike::
 
 BattleFrontier_Lounge3_Text_GetToBattlePyramid::
 	.string "Ve al BATTLE PYRAMID\n"
-	.string "¡Battle Quest pronto!\p"
+	.string "¡Búsqueda de Batalla pronto!\p"
 	.string "¡Es una situación de ganar o morir!\n"
 	.string "¡No desperdicies tu oportunidad!\l"
 	.string "¡Nuestros futuros dependen de ti!$"
@@ -420,7 +420,7 @@ BattleFrontier_Lounge3_Text_NiceTryCantReturnPoints::
 	.string "Oh, eres tú...\n"
 	.string "Buen intento...\p"
 	.string "Siento decirte que no puedo\n"
-	.string "devolverte tus Battle Points...\p"
+	.string "devolverte tus Puntos de Batalla...\p"
 	.string "¡Que esto nos motive a esforzarnos\n"
 	.string "más la próxima vez!$"
 

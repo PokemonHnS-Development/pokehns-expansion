@@ -122,6 +122,6 @@ BattleFrontier_ExchangeServiceCorner_Text_GoGetYourOwnDoll_hns:
 
 BattleFrontier_ExchangeServiceCorner_Text_MoreBattlePointsForRecord_hns:
 	.string "¿Sabías esto?\p"
-	.string "Si extiendes tu récord en cualquier\n"
-	.string "las instalaciones de BATALLA,\l"
+	.string "Si extiendes tu récord en cualquiera\n"
+	.string "de las instalaciones de BATALLA,\l"
 	.string "te dan cada vez más Puntos de Batalla.$"

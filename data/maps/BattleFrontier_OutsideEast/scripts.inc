@@ -254,7 +254,7 @@ BattleFrontier_OutsideEast_Text_RankingHallSign:
 
 BattleFrontier_OutsideEast_Text_ExchangeCornerSign:
 	.string "CANJE DE PUNTOS DE COMBATE\n"
-	.string "¡Canjea tus Puntos de Combate!$"
+	.string "¡Canjea tus Puntos de Batalla!$"
 
 BattleFrontier_OutsideEast_Text_BattleTowerFeelsSpecial:
 	.string "¡Guau!\n"

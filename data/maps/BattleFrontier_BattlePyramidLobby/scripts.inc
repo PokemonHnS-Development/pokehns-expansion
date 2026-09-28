@@ -864,10 +864,10 @@ BattleFrontier_BattlePyramidLobby_Text_YouveDefeatedPyramidKing:
 BattleFrontier_BattlePyramidLobby_Text_GiveYouTheseBattlePoints:
 	.string "¡Joven explorador!\n"
 	.string "En honor a tu gran valentía,\l"
-	.string "¡te damos estos Puntos de Combate!$"
+	.string "¡te damos estos Puntos de Batalla!$"
 
 BattleFrontier_BattlePyramidLobby_Text_RulesAreListed:
-	.string "Las reglas de Battle Quest se listan.$"
+	.string "Las reglas de la misión están aquí.$"
 
 BattleFrontier_BattlePyramidLobby_Text_ReadWhichHeading:
 	.string "¿Qué sección quieres leer?$"

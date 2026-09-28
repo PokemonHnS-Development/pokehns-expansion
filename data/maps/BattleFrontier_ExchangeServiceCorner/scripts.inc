@@ -380,7 +380,7 @@ BattleFrontier_ExchangeServiceCorner_Text_HereIsYourPrize:
 	.string "¡Aquí tienes tu premio!$"
 
 BattleFrontier_ExchangeServiceCorner_Text_DontHaveEnoughPoints:
-	.string "Lo siento mucho...\nTe faltan Puntos de Combate...$"
+	.string "Lo siento mucho...\nTe faltan Puntos de Batalla...$"
 
 BattleFrontier_ExchangeServiceCorner_Text_PCIsFull:
 	.string "Lo siento mucho...\n"
@@ -424,8 +424,8 @@ BattleFrontier_ExchangeServiceCorner_Text_GoGetYourOwnDoll:
 
 BattleFrontier_ExchangeServiceCorner_Text_MoreBattlePointsForRecord:
 	.string "¿Sabías esto?\p"
-	.string "Si extiendes tu récord en cualquier\n"
-	.string "las instalaciones de BATALLA,\l"
+	.string "Si extiendes tu récord en cualquiera\n"
+	.string "de las instalaciones de BATALLA,\l"
 	.string "te dan cada vez más Puntos de Batalla.$"
 
 BattleFrontier_ExchangeServiceCorner_Text_KissPosterDesc::
@@ -499,8 +499,8 @@ BattleFrontier_ExchangeServiceCorner_Text_LeftoversDesc::
 	.string "PS en combate.$"
 
 BattleFrontier_ExchangeServiceCorner_Text_WhiteHerbDesc::
-	.string "Objeto equipado que cura cualquier\n"
-	.string "bajó su estadística.$"
+	.string "Objeto que restaura cualquier\n"
+	.string "estadística bajada.$"
 
 BattleFrontier_ExchangeServiceCorner_Text_QuickClawDesc::
 	.string "Objeto que a veces permite\n"
@@ -511,8 +511,8 @@ BattleFrontier_ExchangeServiceCorner_Text_MentalHerbDesc::
 	.string "el estado de enamorado.$"
 
 BattleFrontier_ExchangeServiceCorner_Text_BrightpowderDesc::
-	.string "Objeto que lanza una mirada para\n"
-	.string "reducir la precisión.$"
+	.string "Objeto equipado que baja la\n"
+	.string "Precisión del rival.$"
 
 BattleFrontier_ExchangeServiceCorner_Text_ChoiceBandDesc::
 	.string "Sube el poder de un movimiento, pero\n"

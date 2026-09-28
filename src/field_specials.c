@@ -173,14 +173,14 @@ static u16 SampleResortGorgeousReward(void);
 static void Task_ShakeScreen(u8 taskId);
 static void Task_EndScreenShake(u8 taskId);
 
-static const u8 sText_BigGuy[] = _("Big guy");
-static const u8 sText_BigGirl[] = _("Big girl");
-static const u8 sText_Son[] = _("son");
-static const u8 sText_Daughter[] = _("daughter");
-static const u8 sText_99TimesPlus[] = _("99 times +");
-static const u8 sText_1MinutePlus[] = _("1 minute +");
-static const u8 sText_SpaceSeconds[] = _(" seconds");
-static const u8 sText_SpaceTimes[] = _(" time(s)");
+static const u8 sText_BigGuy[] = _("Grandullón");
+static const u8 sText_BigGirl[] = _("Niña grande");
+static const u8 sText_Son[] = _("hijo");
+static const u8 sText_Daughter[] = _("hija");
+static const u8 sText_99TimesPlus[] = _("99 veces +");
+static const u8 sText_1MinutePlus[] = _("1 minuto +");
+static const u8 sText_SpaceSeconds[] = _(" segundos");
+static const u8 sText_SpaceTimes[] = _(" vez/veces");
 
 static const u8 sText_Wallace[] = _("WALLACE");
 static const u8 sText_Steven[] = _("STEVEN");
@@ -2555,13 +2555,13 @@ static const u8 *const sScrollableMultichoiceOptions[][MAX_SCROLL_MULTI_LENGTH] 
     },
     [SCROLL_MULTI_GLASS_WORKSHOP_VENDOR] =
     {
-        COMPOUND_STRING("BLUE FLUTE"),
-        COMPOUND_STRING("YELLOW FLUTE"),
-        COMPOUND_STRING("RED FLUTE"),
-        COMPOUND_STRING("WHITE FLUTE"),
-        COMPOUND_STRING("BLACK FLUTE"),
-        COMPOUND_STRING("PRETTY CHAIR"),
-        COMPOUND_STRING("PRETTY DESK"),
+        COMPOUND_STRING("FLAUTA AZUL"),
+        COMPOUND_STRING("FLAUTA AMARILLA"),
+        COMPOUND_STRING("FLAUTA ROJA"),
+        COMPOUND_STRING("FLAUTA BLANCA"),
+        COMPOUND_STRING("FLAUTA NEGRA"),
+        COMPOUND_STRING("SILLA LINDA"),
+        COMPOUND_STRING("ESCRITORIO LINDO"),
         gText_Exit
     },
     [SCROLL_MULTI_POKEMON_FAN_CLUB_RATER] =
@@ -5411,8 +5411,6 @@ static void Task_ElevatorShake(u8 taskId)
     }
 }
 
-static const u8 sText_NowOn[] = _("Now on:");
-
 void DrawElevatorCurrentFloorWindow(void)
 {
     const u8 *floorname;
@@ -5421,7 +5419,7 @@ void DrawElevatorCurrentFloorWindow(void)
     sElevatorCurrentFloorWindowId = AddWindow(&sElevatorCurrentFloorWindowTemplate);
     LoadUserWindowBorderGfx(sElevatorCurrentFloorWindowId, 0x21D, BG_PLTT_ID(13));
     DrawStdFrameWithCustomTileAndPalette(sElevatorCurrentFloorWindowId, FALSE, 0x21D, 13);
-    AddTextPrinterParameterized(sElevatorCurrentFloorWindowId, FONT_NORMAL, sText_NowOn, 0, 2, 0xFF, NULL);
+    AddTextPrinterParameterized(sElevatorCurrentFloorWindowId, FONT_NORMAL, gText_ElevatorNowOn, 0, 2, 0xFF, NULL);
     floorname = sFloorNamePointers[gSpecialVar_0x8005];
     strwidth = GetStringWidth(FONT_NORMAL, floorname, 0);
     AddTextPrinterParameterized(sElevatorCurrentFloorWindowId, FONT_NORMAL, floorname, 56 - strwidth, 16, 0xFF, NULL);

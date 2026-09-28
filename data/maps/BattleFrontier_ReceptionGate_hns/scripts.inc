@@ -351,7 +351,7 @@ BattleFrontier_ReceptionGate_Text_LearnAboutWhich2_hns:
 BattleFrontier_ReceptionGate_Text_BattleTowerInfo_hns:
 	.string "Es la torre gigante considerada\n"
 	.string "el símbolo de la BATTLE FRONTIER.\p"
-	.string "Hay cuatro tipos de BATTLE ROOMS\n"
+	.string "Hay cuatro tipos de SALAS DE BATALLA\n"
 	.string "para COMBATES INDIVIDUAL, DOBLE,\l"
 	.string "MULTI y LINK MULTI.$"
 
@@ -396,8 +396,8 @@ BattleFrontier_ReceptionGate_Text_BattlePikeInfo_hns:
 BattleFrontier_ReceptionGate_Text_BattlePyramidInfo_hns:
 	.string "La PIRÁMIDE DE BATALLA es la enorme\n"
 	.string "pirámide.\p"
-	.string "Un evento llamado Battle Quest\n"
-	.string "Elección de Batalla.$"
+	.string "Un evento llamado Búsqueda de Batalla\n"
+	.string "se lleva a cabo allí.$"
 
 BattleFrontier_ReceptionGate_Text_RankingHallInfo_hns:
 	.string "El RANKING HALL está ubicado cerca\n"
@@ -410,7 +410,7 @@ BattleFrontier_ReceptionGate_Text_RankingHallInfo_hns:
 BattleFrontier_ReceptionGate_Text_ExchangeCornerInfo_hns:
 	.string "El EXCHANGE SERVICE CORNER está cerca\n"
 	.string "de la BATTLE TOWER.\p"
-	.string "Los Battle Points que ganaste en la\n"
+	.string "Los Puntos de Batalla ganados en la\n"
 	.string "BATTLE FRONTIER pueden canjearse\l"
 	.string "por premios fabulosos allí.$"
 
@@ -499,7 +499,7 @@ BattleFrontier_ReceptionGate_Text_RecordedBattleInfo_hns:
 	.string "al final de la batalla.$"
 
 BattleFrontier_ReceptionGate_Text_BattlePointsInfo_hns:
-	.string "Los Battle Points son premios que\n"
+	.string "Los Puntos de Batalla son premios para\n"
 	.string "ENTRENADORES que lucharon muy bien\l"
 	.string "en la FRONTERA DE BATALLA.\p"
 	.string "Puedes canjear tus Puntos de Batalla\n"
