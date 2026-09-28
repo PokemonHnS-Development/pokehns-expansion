@@ -304,7 +304,7 @@ NewSinjoh_HotSprings_Text_PLAMove_PowerShift:
 	.string "CAMBIO PODER$"
 
 NewSinjoh_HotSprings_Text_PLAMove_Cancel:
-	.string "CANCEL$"
+	.string "CANCELAR$"
 
 
 NewSinjoh_HotSprings_EventScript_ActivateArcanine::
