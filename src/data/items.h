@@ -4519,9 +4519,9 @@ const struct ItemInfo gItemsInfo[] =
         .holdEffect = HOLD_EFFECT_PLATE,
         .holdEffectParam = 20,
         .description = COMPOUND_STRING(
-            "Una tabla que\n"
-            "sube el poder de\n"
-            "Movs. tipo Fuego."),
+            "Una tabla que sube\n"
+            "el poder de los\n"
+            "movs. tipo Fuego."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_PLATE,
         .type = ITEM_USE_BAG_MENU,
@@ -4538,7 +4538,10 @@ const struct ItemInfo gItemsInfo[] =
         .price = 1000,
         .holdEffect = HOLD_EFFECT_PLATE,
         .holdEffectParam = 20,
-        .description = COMPOUND_STRING("Una tabla que sube\nel poder de los\nmovimientos tipo Agua."),
+        .description = COMPOUND_STRING(
+            "Una tabla que sube\n"
+            "el poder de los\n"
+            "movs. tipo Agua."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_PLATE,
         .type = ITEM_USE_BAG_MENU,
@@ -4558,7 +4561,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = COMPOUND_STRING(
             "Una tabla que sube\n"
             "el poder de los\n"
-            "movs. eléctricos."),
+            "movs. tipo Eléctrico."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_PLATE,
         .type = ITEM_USE_BAG_MENU,
@@ -4575,7 +4578,10 @@ const struct ItemInfo gItemsInfo[] =
         .price = 1000,
         .holdEffect = HOLD_EFFECT_PLATE,
         .holdEffectParam = 20,
-        .description = COMPOUND_STRING("Una tabla que sube\nel poder de los\nmovimientos tipo Planta."),
+        .description = COMPOUND_STRING(
+            "Una tabla que sube\n"
+            "el poder de los\n"
+            "movs. tipo Planta."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_PLATE,
         .type = ITEM_USE_BAG_MENU,
@@ -4593,9 +4599,9 @@ const struct ItemInfo gItemsInfo[] =
         .holdEffect = HOLD_EFFECT_PLATE,
         .holdEffectParam = 20,
         .description = COMPOUND_STRING(
-            "Una tabla que\n"
-            "sube el poder de\n"
-            "Movs. tipo Hielo."),
+            "Una tabla que sube\n"
+            "el poder de los\n"
+            "movs. tipo Hielo."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_PLATE,
         .type = ITEM_USE_BAG_MENU,
@@ -4615,7 +4621,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = COMPOUND_STRING(
             "Una tabla que sube\n"
             "el poder de los\n"
-            "movs. de Lucha."),
+            "movs. tipo Lucha."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_PLATE,
         .type = ITEM_USE_BAG_MENU,
@@ -4634,8 +4640,8 @@ const struct ItemInfo gItemsInfo[] =
         .holdEffectParam = 20,
         .description = COMPOUND_STRING(
             "Una tabla que sube\n"
-            "el poder de\n"
-            "Movs. tipo Veneno."),
+            "el poder de los\n"
+            "movs. tipo Veneno."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_PLATE,
         .type = ITEM_USE_BAG_MENU,
@@ -4654,8 +4660,8 @@ const struct ItemInfo gItemsInfo[] =
         .holdEffectParam = 20,
         .description = COMPOUND_STRING(
             "Una tabla que sube\n"
-            "el poder de\n"
-            "Movs. tipo Tierra."),
+            "el poder de los\n"
+            "movs. tipo Tierra."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_PLATE,
         .type = ITEM_USE_BAG_MENU,
@@ -4674,8 +4680,8 @@ const struct ItemInfo gItemsInfo[] =
         .holdEffectParam = 20,
         .description = COMPOUND_STRING(
             "Una tabla que sube\n"
-            "el poder de\n"
-            "Movs. tipo Volador."),
+            "el poder de los\n"
+            "movs. tipo Volador."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_PLATE,
         .type = ITEM_USE_BAG_MENU,
@@ -4695,7 +4701,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = COMPOUND_STRING(
             "Una tabla que sube\n"
             "el poder de los\n"
-            "movs. psíquicos."),
+            "movs. tipo Psíquico."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_PLATE,
         .type = ITEM_USE_BAG_MENU,
@@ -4714,8 +4720,8 @@ const struct ItemInfo gItemsInfo[] =
         .holdEffectParam = 20,
         .description = COMPOUND_STRING(
             "Una tabla que sube\n"
-            "el poder de\n"
-            "Movimientos tipo BICHO."),
+            "el poder de los\n"
+            "movs. tipo Bicho."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_PLATE,
         .type = ITEM_USE_BAG_MENU,
@@ -4734,8 +4740,8 @@ const struct ItemInfo gItemsInfo[] =
         .holdEffectParam = 20,
         .description = COMPOUND_STRING(
             "Una tabla que sube\n"
-            "el poder de\n"
-            "Movimientos tipo ROCA."),
+            "el poder de los\n"
+            "movs. tipo Roca."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_PLATE,
         .type = ITEM_USE_BAG_MENU,
@@ -4754,8 +4760,8 @@ const struct ItemInfo gItemsInfo[] =
         .holdEffectParam = 20,
         .description = COMPOUND_STRING(
             "Una tabla que sube\n"
-            "el poder de\n"
-            "Movimientos tipo FANTASMA."),
+            "el poder de los\n"
+            "movs. tipo Fantasma."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_PLATE,
         .type = ITEM_USE_BAG_MENU,
@@ -4774,8 +4780,8 @@ const struct ItemInfo gItemsInfo[] =
         .holdEffectParam = 20,
         .description = COMPOUND_STRING(
             "Una tabla que sube\n"
-            "el poder de\n"
-            "Movimientos tipo DRAGÓN."),
+            "el poder de los\n"
+            "movs. tipo Dragón."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_PLATE,
         .type = ITEM_USE_BAG_MENU,
@@ -4794,8 +4800,8 @@ const struct ItemInfo gItemsInfo[] =
         .holdEffectParam = 20,
         .description = COMPOUND_STRING(
             "Una tabla que sube\n"
-            "el poder de\n"
-            "Movimientos tipo SINIESTRO."),
+            "el poder de los\n"
+            "movs. tipo Siniestro."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_PLATE,
         .type = ITEM_USE_BAG_MENU,
@@ -4814,8 +4820,8 @@ const struct ItemInfo gItemsInfo[] =
         .holdEffectParam = 20,
         .description = COMPOUND_STRING(
             "Una tabla que sube\n"
-            "el poder de\n"
-            "Movimientos tipo ACERO."),
+            "el poder de los\n"
+            "movs. tipo Acero."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_PLATE,
         .type = ITEM_USE_BAG_MENU,
@@ -4834,8 +4840,8 @@ const struct ItemInfo gItemsInfo[] =
         .holdEffectParam = 20,
         .description = COMPOUND_STRING(
             "Una tabla que sube\n"
-            "el poder de\n"
-            "Movimientos tipo HADA."),
+            "el poder de los\n"
+            "movs. tipo Hada."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_PLATE,
         .type = ITEM_USE_BAG_MENU,
