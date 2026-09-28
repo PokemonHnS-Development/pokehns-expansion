@@ -8995,7 +8995,10 @@ static void CreateSearchParameterScrollArrows(u8 taskId)
 
 static void EraseAndPrintSearchTextBox(const u8 *str)
 {
-    ClearSearchMenuRect(8, 120, 224, 32);
+    // Clears down to the bottom edge of the screen (120+40 = 160) so that a text line that
+    // overflows the 2-line detail box (y 121 y 137) cannot stay on screen as garbage:
+    // the old rect (8,120,224,32) stopped at y 151 and never erased a third line at y 153.
+    ClearSearchMenuRect(8, 120, 224, 40);
     PrintSearchText(str, 8, 121);
 }
 
