@@ -21,7 +21,7 @@
 
 static const u8 sFullHealDesc[]       = _("Cura todos los\nproblemas de estado\nde un Pokémon.");
 
-static const u8 sPokeDollDesc[]       = _("Sirve para huir de\ncualquier batalla con\nun Pokémon salvaje.");
+static const u8 sPokeDollDesc[]       = _("Huye de cualquier\nbatalla contra un\nPokémon salvaje.");
 
 static const u8 sMaxReviveDesc[]      = _("Revive a un POKéMON\n"
                                           "debilitado con todos\n"
@@ -43,11 +43,11 @@ static const u8 sBigMushroomDesc[]    = _("Un hongo raro\n"
                                           "que se vendería\n"
                                           "a un precio alto.");
 
-static const u8 sShardsDesc[]         = _("Fragmento de un objeto\nantiguo. Se puede\nvender barato.");
+static const u8 sShardsDesc[]         = _("Fragmento de un\nobjeto antiguo. Se\npuede vender barato.");
 
 static const u8 sRootFossilDesc[]     = _("Fósil de un Pokémon\nque vivió en el fondo\ndel mar.");
 
-static const u8 sFossilizedFishDesc[] = _("Un fósil de un antiguo\nPokémon marino\nque habitaba el mar.");
+static const u8 sFossilizedFishDesc[] = _("Un fósil de un\nantiguo Pokémon\nque habitaba el mar.");
 
 static const u8 sBeadMailDesc[]       = _("Carta con un boceto\n"
                                           "del POKéMON que\n"
@@ -59,17 +59,17 @@ static const u8 sEvolutionStoneDesc[] = _("Hace que cierta\n"
 
 static const u8 sNectarDesc[]         = _("Néctar floral que\ncambia la forma de\nciertos Pokémon.");
 
-static const u8 sCharizarditeDesc[]   = _("Esta piedra permite\na Charizard Mega\nEvolucionar en combate.");
+static const u8 sCharizarditeDesc[]   = _("Hace que Charizard\nMega Evolucione\nen combate.");
 
-static const u8 sMewtwoniteDesc[]     = _("Esta piedra permite\na Mewtwo Mega\nEvolucionar en combate.");
+static const u8 sMewtwoniteDesc[]     = _("Hace que Mewtwo\nMega Evolucione\nen combate.");
 
-static const u8 sRaichuniteDesc[]     = _("Esta piedra permite\na Raichu Mega\nEvolucionar en combate.");
+static const u8 sRaichuniteDesc[]     = _("Hace que Raichu\nMega Evolucione\nen combate.");
 
-static const u8 sAbsoliteDesc[]       = _("Esta piedra permite a\nAbsol megaevolucionar\nen combate.");
+static const u8 sAbsoliteDesc[]       = _("Hace que Absol\nMega Evolucione\nen combate.");
 
-static const u8 sGarchompiteDesc[]    = _("Esta piedra permite a\nGarchomp megaevolucionar\nen combate.");
+static const u8 sGarchompiteDesc[]    = _("Hace que Garchomp\nMega Evolucione\nen combate.");
 
-static const u8 sLucarioniteDesc[]    = _("Esta piedra permite a\nLucario megaevolucionar\nen combate.");
+static const u8 sLucarioniteDesc[]    = _("Hace que Lucario\nMega Evolucione\nen combate.");
 
 static const u8 sSeaIncenseDesc[]     = _("Un incienso que sube\nel poder de los\nmovs. tipo Agua.");
 
@@ -83,7 +83,7 @@ static const u8 sRoseIncenseDesc[]    = _("Un incienso que sube\nel poder de los
 
 static const u8 sLuckIncenseDesc[]    = _("Duplica el dinero en\nlas luchas si el\nportador participa.");
 
-static const u8 sPureIncenseDesc[]    = _("Objeto que\nayuda a repele\na los POKéMON.");
+static const u8 sPureIncenseDesc[]    = _("Objeto que\nayuda a repeler\na los POKéMON.");
 
 static const u8 sKingsRockDesc[]      = _("Objeto que puede\ncausar retroceso\nal golpear al rival.");
 
@@ -95,7 +95,7 @@ static const u8 sQuestionMarksDesc[]  = _("?????");
 
 static const u8 sKeyToRoomDesc[]      = _("Llave que abre una\npuerta dentro del \nBarco Abandonado.");
 
-static const u8 sTeraShardDesc[]      = _("Estos fragmentos pueden\nformarse cuando un\nPokémon Tera debilita.");
+static const u8 sTeraShardDesc[]      = _("Se forman cuando\nun Pokémon Tera\nse debilita.");
 
 static const u8 sGenericMulchDesc[]   = _("Un fertilizante que\nno es apto para el\nsuelo local.");
 

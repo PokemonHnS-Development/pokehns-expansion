@@ -105,7 +105,7 @@ const u8 DecorDesc_YELLOW_BRICK[] = _(
 
 const u8 DecorDesc_BLUE_BRICK[] = _(
     "Un ladrillo de\n"
-        "color amarillo.\n"
+        "color azul.\n"
         "decorations on top.");
 
 const u8 DecorDesc_RED_BALLOON[] = _(
