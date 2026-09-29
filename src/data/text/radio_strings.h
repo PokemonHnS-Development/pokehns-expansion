@@ -16,7 +16,7 @@ static const u8 sRadioStationName_BuenasPassword[]  = _("CONTRASEÑA DE BUENA");
 static const u8 sRadioStationName_Unown[]           = _("?????");
 static const u8 sRadioStationName_PlacesAndPeople[] = _("Lugares y Gente");
 static const u8 sRadioStationName_LetsAllSing[]     = _("¡Cantemos todos!");
-static const u8 sRadioStationName_PokeFlute[]       = _("POKé FLUTE");
+static const u8 sRadioStationName_PokeFlute[]       = _("POKé FLAUTA");
 
 static const u8 sRadioStationName_HoennSound[]  = _("Sonido de Hoenn");
 
@@ -148,7 +148,7 @@ static const u8 sRadioText_BenFern_Lullaby[] = _("¡Canción de cuna POKéMON!")
 static const u8 sRadioText_LC1[] = _("REED: ¡Yeehaw! ¿Cómo están");
 static const u8 sRadioText_LC2[] = _("todos hoy? No importa si");
 static const u8 sRadioText_LC3[] = _("están bien o mal, ¡no se");
-static const u8 sRadioText_LC4[] = _("pierdan el SHOW DEL NÚMERO!");
+static const u8 sRadioText_LC4[] = _("pierdan el NÚMERO DE LA SUERTE!");
 static const u8 sRadioText_LC5[] = _("El Número Suerte de la semana es");
 // "{number}!" built dynamically
 static const u8 sRadioText_LC_Repeat[] = _("¡Lo repito!");
@@ -239,9 +239,9 @@ static const u8 sRadioText_Buena6[] = _("¡la TORRE RADIO de CIUDAD TRIGAL!");
 static const u8 sRadioBuenaPassword_NewBarkTown[]     = _("PUEBLO PRIMAVERA");
 static const u8 sRadioBuenaPassword_CherrygroveCity[]  = _("CIUDAD CEREZO");
 static const u8 sRadioBuenaPassword_AzaleaTown[]      = _("PUEBLO AZALEA");
-static const u8 sRadioBuenaPassword_Flying[]          = _("FLYING");
-static const u8 sRadioBuenaPassword_Bug[]             = _("BUG");
-static const u8 sRadioBuenaPassword_Grass[]           = _("GRASS");
+static const u8 sRadioBuenaPassword_Flying[]          = _("VOLADOR");
+static const u8 sRadioBuenaPassword_Bug[]             = _("BICHO");
+static const u8 sRadioBuenaPassword_Grass[]           = _("PLANTA");
 static const u8 sRadioBuenaPassword_PkmnTalk[]        = _("Charla POKéMON");
 static const u8 sRadioBuenaPassword_PkmnMusic[]       = _("Música POKéMON");
 static const u8 sRadioBuenaPassword_LuckyChannel[]    = _("Canal Suerte");
@@ -273,7 +273,7 @@ static const u8 sOPT_Report_Lapras_8[]  = _("OAK: Dicen que sus canciones");
 static const u8 sOPT_Report_Lapras_9[]  = _("calman el alma del mar.");
 
 static const u8 sOPT_Report_Ampharos_0[]  = _("MARY: ¡Bienvenidos todos!");
-static const u8 sOPT_Report_Ampharos_1[]  = _("¡Es hora de POKéMON TALK!");
+static const u8 sOPT_Report_Ampharos_1[]  = _("¡Es hora de CHARLA POKéMON!");
 static const u8 sOPT_Report_Ampharos_2[]  = _("OAK: ¡Hablemos un poco sobre");
 static const u8 sOPT_Report_Ampharos_3[]  = _("nuestro amigo AMPHAROS!");
 static const u8 sOPT_Report_Ampharos_4[]  = _("Su cola brilla entre la niebla");

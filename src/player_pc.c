@@ -174,7 +174,7 @@ static const u8 sText_TossItem[] = _("TIRAR OBJETO");
 static const u8 sText_Mailbox[] = _("CORREO");
 
 static const u8 sText_WithdrawHowManyItems[] = _("¿Cuántos retiras?\n¿{STR_VAR_1}?");
-static const u8 sText_WithdrawXItems[] = _("Withdrew {STR_VAR_2}\n{STR_VAR_1}.");
+static const u8 sText_WithdrawXItems[] = _("Retiraste {STR_VAR_2}\n{STR_VAR_1}.");
 static const u8 sText_NoRoomInBag[] = _("No hay más\nespacio en la BOLSA.");
 static const u8 sText_TooImportantToToss[] = _("¡Eso es demasiado\nimportante para\ntirarlo!");
 
@@ -190,7 +190,7 @@ static const struct MenuAction sPlayerPCMenuActions[] =
 {
     [MENU_ITEMSTORAGE] = { COMPOUND_STRING("OBJETOS"), {PlayerPC_ItemStorage} },
     [MENU_MAILBOX]     = { sText_Mailbox,                   {PlayerPC_Mailbox} },
-    [MENU_DECORATION]  = { COMPOUND_STRING("DECORATION"),   {PlayerPC_Decoration} },
+    [MENU_DECORATION]  = { gText_Decoration2,               {PlayerPC_Decoration} },
     [MENU_TURNOFF]     = { COMPOUND_STRING("APAGAR"),     {PlayerPC_TurnOff} }
 };
 
@@ -227,9 +227,9 @@ static const u16 sNewGamePCItems[][2] =
 
 const struct MenuAction gMailboxMailOptions[] =
 {
-    { COMPOUND_STRING("READ"),        {Mailbox_DoMailRead} },
+    { COMPOUND_STRING("LEER"),        {Mailbox_DoMailRead} },
     { COMPOUND_STRING("MOVER A BOLSA"), {Mailbox_MoveToBag} },
-    { COMPOUND_STRING("GIVE"),        {Mailbox_Give} },
+    { COMPOUND_STRING("DAR"),         {Mailbox_Give} },
     { gText_Cancel2,                  {Mailbox_Cancel} }
 };
 

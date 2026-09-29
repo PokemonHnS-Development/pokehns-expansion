@@ -805,7 +805,7 @@ GoldenrodCity_GameCorner_Text_VF_OptGameInfo:
 	.string "INFO JUEGO$"
 
 GoldenrodCity_GameCorner_Text_VF_OptQuit:
-	.string "QUIT$"
+	.string "SALIR$"
 
 GoldenrodCity_GameCorner_Text_VF_OptHowToPlay:
 	.string "CÓMO JUGAR$"
