@@ -364,7 +364,7 @@ VermilionCity_Text_OhAuroraTicketTakeYouToBirthIsland::
 	.string "¡Oh! ¡Es un BOLETOAURORA!\n"
 	.string "Eso sí que es raro.\p"
 	.string "Será un placer llevarte a\n"
-	.string "ISLA NACIMIENTO cuando quieras.$"
+	.string "ISLA ORIGEN cuando quieras.$"
 
 VermilionCity_Text_BoardSeagallopFerry::
 	.string "¿Quieres abordar\n"

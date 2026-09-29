@@ -24,7 +24,7 @@ PewterCity_Museum_2F_EventScript_Meteor::
 
 PewterCity_Museum_2F_Text_Nerd:
 	.string "Dicen que meteoritos cayeron en\n"
-	.string "ISLA NACIMIENTO.\p"
+	.string "ISLA ORIGEN.\p"
 	.string "Nos encantaría exhibirlos aquí\n"
 	.string "en nuestro museo, pero...\p"
 	.string "Dicen que estos meteoritos emiten\n"
