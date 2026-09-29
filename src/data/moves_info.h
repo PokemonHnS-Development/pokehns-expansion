@@ -362,7 +362,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
 
     [MOVE_VISE_GRIP] =
     {
-        .name = COMPOUND_STRING("VISE GRIP"),
+        .name = COMPOUND_STRING("AGARRE"),
         .description = COMPOUND_STRING(
             "Sujeta al rival con grandes\n"
             "y powerful pincers."),
@@ -18794,7 +18794,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
 
     [MOVE_STONE_AXE] =
     {
-        .name = COMPOUND_STRING("STONE AXE"),
+        .name = COMPOUND_STRING("HACHAZO PÉTREO"),
         .description = COMPOUND_STRING(
             "Pone rocas que dañan\n"
             "al rival. el rival."),
