@@ -258,26 +258,26 @@ static const u8 sText_WasMade[] = _(" fue creado!");
 
 static const u8 *const sBlenderOpponentsNames[] =
 {
-    [BLENDER_MISTER] = COMPOUND_STRING("MISTER"),
-    [BLENDER_LADDIE] = COMPOUND_STRING("LADDIE"),
-    [BLENDER_LASSIE] = COMPOUND_STRING("LASSIE"),
-    [BLENDER_MASTER] = COMPOUND_STRING("MASTER"),
-    [BLENDER_DUDE]   = COMPOUND_STRING("DUDE"),
-    [BLENDER_MISS]   = COMPOUND_STRING("MISS"),
+    [BLENDER_MISTER] = COMPOUND_STRING("SEÑOR"),
+    [BLENDER_LADDIE] = COMPOUND_STRING("CHICO"),
+    [BLENDER_LASSIE] = COMPOUND_STRING("CHICA"),
+    [BLENDER_MASTER] = COMPOUND_STRING("MAESTRO"),
+    [BLENDER_DUDE]   = COMPOUND_STRING("TIPO"),
+    [BLENDER_MISS]   = COMPOUND_STRING("SEÑORITA"),
 };
 
-static const u8 sText_CommunicationStandby[] = _("Communication standby…");
+static const u8 sText_CommunicationStandby[] = _("Comunicación en espera...");
 static const u8 sText_WouldLikeToBlendAnotherBerry[] = _("¿Quieres licuar otra BAYA?");
 static const u8 sText_RunOutOfBerriesForBlending[] = _("Ya no te quedan BAYAS para\nlicuar en la LICUADORA.\p");
-static const u8 sText_YourPokeblockCaseIsFull[] = _("Tu {POKEBLOCK} CASE está lleno.\p");
+static const u8 sText_YourPokeblockCaseIsFull[] = _("Tu ESTUCHE {POKEBLOCK} está lleno.\p");
 static const u8 sText_HasNoBerriesToPut[] = _("no tiene BAYAS para poner\nen la LICUADORA DE BAYAS.");
 static const u8 sText_ApostropheSPokeblockCaseIsFull[] = _("El ESTUCHE de {POKEBLOCK} está lleno.\p");
 static const u8 sText_BlendingResults[] = _("RESULTADOS DEL LICUADO");
-static const u8 sText_SpaceBerry[] = _(" BERRY");
-static const u8 sText_Time[] = _("Time:");
+static const u8 sText_SpaceBerry[] = _(" BAYA");
+static const u8 sText_Time[] = _("Tiempo:");
 static const u8 sText_Min[] = _(" min. ");
-static const u8 sText_Sec[] = _(" sec.");
-static const u8 sText_MaximumSpeed[] = _("MAXIMUM SPEED");
+static const u8 sText_Sec[] = _(" seg.");
+static const u8 sText_MaximumSpeed[] = _("VELOCIDAD MÁXIMA");
 static const u8 sText_RPM[] = _(" RPM");
 static const u8 sText_Dot[] = _(".");
 static const u8 sText_NewLine[] = _("\n");
@@ -287,8 +287,8 @@ static const u8 sText_TheFeelIs[] = _(", y la sensación es ");
 static const u8 sText_Dot2[] = _(".");
 
 static const u8 sText_SavingDontTurnOff2[] = _("GUARDANDO…\nNO APAGUES LA CONSOLA.");
-static const u8 sText_BlenderMaxSpeedRecord[] = _("BERRY BLENDER\nMAXIMUM SPEED RECORD!");
-static const u8 sText_234Players[] = _("2 PLAYERS\n3 PLAYERS\n4 PLAYERS");
+static const u8 sText_BlenderMaxSpeedRecord[] = _("LICUADORA DE BAYAS\n¡RÉCORD DE VELOCIDAD!");
+static const u8 sText_234Players[] = _("2 JUGADORES\n3 JUGADORES\n4 JUGADORES");
 
 static const struct BgTemplate sBgTemplates[3] =
 {

@@ -174,15 +174,15 @@ static void Task_DisplayAnotherBerry(u8 taskId);
 static void TryChangeDisplayedBerry(u8 taskId, s8 toMove);
 static void HandleBagCursorPositionChange(s8 toMove);
 
-static const u8 sText_SizeSlash[] = _("SIZE /");
-static const u8 sText_FirmSlash[] = _("FIRM /");
+static const u8 sText_SizeSlash[] = _("TAMAÑO /");
+static const u8 sText_FirmSlash[] = _("FIRME /");
 static const u8 sText_Var1DotVar2[] = {PLACEHOLDER_BEGIN, 0x02, CHAR_PERIOD, PLACEHOLDER_BEGIN, 0x03, CHAR_DBL_QUOTE_RIGHT, EOS};
 static const u8 sText_Var1DotVar2_Metric[] = {PLACEHOLDER_BEGIN, 0x02, CHAR_PERIOD, PLACEHOLDER_BEGIN, 0x03, CHAR_c, CHAR_m, EOS};
 static const u8 sText_NumberVar1Var2[] = _("{NO}{STR_VAR_1} {STR_VAR_2}");
-static const u8 sText_BerryTag[] = _("BERRY TAG");
+static const u8 sText_BerryTag[] = _("ETIQUETA BAYA");
 static const u8 sText_ThreeMarks[] = _("???");
-static const u8 sText_WatmelDesc1_Metric[] = _("Una baya enorme, con más de media");
-static const u8 sText_WatmelDesc2_Metric[] = _("meter discovered. Exceedingly sweet.");
+static const u8 sText_WatmelDesc1_Metric[] = _("Baya enorme; algunas miden más de");
+static const u8 sText_WatmelDesc2_Metric[] = _("medio metro. Es sumamente dulce.");
 
 // code
 void DoBerryTagScreen(void)
