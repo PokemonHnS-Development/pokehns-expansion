@@ -49,7 +49,7 @@ Text_WantToCut:
 	.string "¿Quieres CORTARLO?$"
 
 Text_MonUsedFieldMove:
-	.string "{STR_VAR_1} used {STR_VAR_2}!$"
+	.string "{STR_VAR_1} usó {STR_VAR_2}!$"
 
 Text_CantCut:
 	.string "Parece que este árbol se puede\n"
@@ -318,7 +318,7 @@ Text_WantToWaterfall:
 	.string "¿Quieres usar CASCADA?$"
 
 Text_MonUsedWaterfall:
-	.string "{STR_VAR_1} used WATERFALL.$"
+	.string "{STR_VAR_1} usó CASCADA.$"
 
 EventScript_UseDive::
 	lockall
@@ -427,7 +427,7 @@ EventScript_FailSweetScent::
 	end
 
 Text_FailSweetScent:
-	.string "Looks like there's nothing here...$"
+	.string "Parece que no hay nada aquí...$"
 
 EventScript_UseDefog::
 	lockall

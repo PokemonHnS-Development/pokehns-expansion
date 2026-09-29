@@ -255,7 +255,7 @@ SafariZone_North_Text_Man:
 	.string "aquí y los cambiaré con mis amigos!$"
 
 SafariZone_South_Text_Youngster:
-	.string "I put a {POKEBLOCK} on the {POKEBLOCK} FEEDER.\n"
+	.string "He puesto un {POKEBLOCK} en el COMEDERO de {POKEBLOCK}S.\n"
 	.string "Pero parece que ha desaparecido.\p"
 	.string "Creo que un POKéMON se lo comió\n"
 	.string "sin que me diera cuenta.$"

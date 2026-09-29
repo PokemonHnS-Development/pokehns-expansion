@@ -418,14 +418,14 @@ static void SpriteCB_Taillow(struct Sprite *);
 
 static const u8 Roulette_Text_PlayMinimumWagerIsX[] = _("La apuesta mínima en esta mesa\nes {STR_VAR_1}. ¿Quieres jugar?");
 static const u8 Roulette_Text_NotEnoughCoins[] = _("No tienes suficientes MONEDAS.");
-static const u8 Roulette_Text_SpecialRateTable[] = _("Special rate table right now!");
+static const u8 Roulette_Text_SpecialRateTable[] = _("¡Ahora hay una tarifa especial!");
 static const u8 Roulette_Text_ControlsInstruction[] = _("Apuesta con el botón + del\ncontrol y luego presiona A.");
 static const u8 Roulette_Text_ItsAHit[] = _("¡Diste en el blanco!");
-static const u8 Roulette_Text_Jackpot[] = _("Jackpot!");
+static const u8 Roulette_Text_Jackpot[] = _("¡Premio gordo!");
 static const u8 Roulette_Text_NothingDoing[] = _("¡No hubo suerte!");
-static const u8 Roulette_Text_YouveWonXCoins[] = _("You've won {STR_VAR_1} COINS!");
-static const u8 Roulette_Text_NoCoinsLeft[] = _("No COINS left…");
-static const u8 Roulette_Text_KeepPlaying[] = _("Keep playing?");
+static const u8 Roulette_Text_YouveWonXCoins[] = _("¡Ganaste {STR_VAR_1} MONEDAS!");
+static const u8 Roulette_Text_NoCoinsLeft[] = _("No te quedan MONEDAS…");
+static const u8 Roulette_Text_KeepPlaying[] = _("¿Quieres seguir jugando?");
 static const u8 Roulette_Text_BoardWillBeCleared[] = _("Se limpiará el tablero de la RULETA.");
 static const u8 Roulette_Text_CoinCaseIsFull[] = _("¡Tu MONEDERO está lleno!\nCanjea las monedas por premios.");
 

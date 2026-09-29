@@ -151,7 +151,7 @@ EventScript_EndHeadbutt::
 	end
 
 Text_MonUsedHeadbutt::
-	.string "{STR_VAR_1} used HEADBUTT!$"
+	.string "¡{STR_VAR_1} usó CABEZAZO!$"
 
 
 EventScript_FollowerFieldMove:
@@ -373,7 +373,7 @@ Text_WantToStrength:
 	.string "¿Quieres usar FUERZA?$"
 
 Text_MonUsedStrength:
-	.string "{STR_VAR_1} used STRENGTH!$"
+	.string "¡{STR_VAR_1} usó FUERZA!$"
 
 Text_CantStrength:
 	.string "Es una roca grande, pero un POKéMON\n"
@@ -415,7 +415,7 @@ Text_WantToWaterfall:
 	.string "¿Quieres usar CASCADA?$"
 
 Text_MonUsedWaterfall:
-	.string "{STR_VAR_1} used WATERFALL.$"
+	.string "{STR_VAR_1} usó CASCADA.$"
 
 EventScript_UseDive::
 	lockall
@@ -545,7 +545,7 @@ Text_WantToDive:
 	.string "¿Quieres usar BUCEO?$"
 
 Text_MonUsedDive:
-	.string "{STR_VAR_1} used WHIRLPOOL.$"
+	.string "{STR_VAR_1} usó TORBELLINO.$"
 
 Text_CantSurface:
 	.string "La luz se filtra desde arriba.\n"

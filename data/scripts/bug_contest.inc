@@ -146,7 +146,7 @@ BugContest_Text_DidntCatch:
 	.string "Recuperarás a tu equipo ahora.$"
 
 BugContest_Text_TimesUp:
-	.string "Ding-dong! Time's up!$"
+	.string "¡Ding, dong! ¡Se acabó el tiempo!$"
 
 BugContest_Text_WhiteOut:
 	.string "{PLAYER} no tiene POKéMON aptos.\n"

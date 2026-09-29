@@ -1490,7 +1490,7 @@ gText_PokemonTrainerSchoolEmail::
 	.string "… … … … … …$"
 
 gText_PlayerHouseBootPC::
-	.string "{PLAYER} booted up the PC.$"
+	.string "{PLAYER} encendió el PC.$"
 
 gText_PokeblockLinkCanceled::
 	.string "The link was canceled.$"
@@ -1500,8 +1500,8 @@ gText_UnusedNicknameReceivedPokemon::
 	.string "the {STR_VAR_2} you received?$"
 
 gText_PlayerWhitedOut::
-	.string "{PLAYER} is out of usable\n"
-	.string "POKéMON!\p{PLAYER} whited out!$"
+	.string "¡A {PLAYER} no le quedan\n"
+	.string "POKéMON!\p¡{PLAYER} perdió el conocimiento!$"
 
 gText_FirstShouldRestoreMonsHealth::
 	.string "First, you should restore your\n"
@@ -1565,13 +1565,13 @@ gText_ComeBackWithSecretPower::
 	.string "you good stuff in secrecy.$"
 
 gText_PokerusExplanation::
-	.string "Your POKéMON may be infected with\n"
-	.string "POKéRUS.\p"
-	.string "Little is known about the POKéRUS\n"
-	.string "except that they are microscopic life-\l"
-	.string "forms that attach to POKéMON.\p"
-	.string "While infected, POKéMON are said to\n"
-	.string "grow exceptionally well.$"
+	.string "Es posible que algún POKéMON esté\n"
+	.string "infectado por el POKéRUS.\p"
+	.string "No se sabe gran cosa del POKéRUS, salvo\n"
+	.string "que son formas de vida microscópicas\l"
+	.string "que infectan a los POKéMON.\p"
+	.string "Al parecer, los POKéMON infectados\n"
+	.string "mejoran de una forma extraordinaria.$"
 
 	.include "data/text/surf.inc"
 
@@ -1610,20 +1610,20 @@ gText_ThankYouForAccessingMysteryGift::
 	.string "MYSTERY GIFT System.$"
 
 gText_PlayerFoundOneTMHM::
-	.string "{PLAYER} found one {STR_VAR_1}\n"
+	.string "¡{PLAYER} encontró {STR_VAR_1}\n"
 	.string "{STR_VAR_2}!$"
 
 gText_PlayerFoundTMHMs::
-	.string "{PLAYER} found {STR_VAR_3} {STR_VAR_1}\n"
+	.string "¡{PLAYER} encontró {STR_VAR_3} {STR_VAR_1}\n"
 	.string "{STR_VAR_2}!$"
 
 gText_Sudowoodo_Attacked::
-	.string "The weird tree doesn't like the\n"
-	.string "WAILMER PAIL!\p"
-	.string "The weird tree attacked!$"
+	.string "¡Al árbol extraño no le gusta\n"
+	.string "el CUBO WAILMER!\p"
+	.string "¡El árbol extraño atacó!$"
 
 gText_LegendaryFlewAway::
-	.string "The {STR_VAR_1} flew away!$"
+	.string "¡El {STR_VAR_1} se ha marchado!$"
 
 gText_WantWhichFloor::
 	.string "Which floor do you want?$"

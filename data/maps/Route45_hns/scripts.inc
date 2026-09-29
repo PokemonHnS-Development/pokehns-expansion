@@ -264,7 +264,7 @@ Route45_Text_CamperQuentinBeaten:
     .string "Era duro en la COLINA DEL ENTRENADOR...$"
 
 Route45_Text_CamperQuentinAfter:
-    .string "¿Has ido a TRAINER HILL?\p"
+    .string "¿Has ido a la COLINA ENTRENADOR?\p"
     .string "Nunca pierdo allí, pero...$"
 
 Route45_Text_Sign:

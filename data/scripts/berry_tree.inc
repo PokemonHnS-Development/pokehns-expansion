@@ -67,13 +67,13 @@ BerryTree_Text_Hns_NotRipe:
 	.string "Estas BAYAS aún no están maduras.$"
 
 BerryTree_Text_Hns_Picked:
-	.string "{PLAYER} picked the {STR_VAR_2} {STR_VAR_1}.$"
+	.string "{PLAYER} recogió la {STR_VAR_2} {STR_VAR_1}.$"
 
 BerryTree_Text_Hns_BagFull:
 	.string "El BOLSILLO de BAYAS está lleno.\pNo se puede llevar {STR_VAR_1}.$"
 
 BerryTree_Text_Hns_Sprouted:
-	.string "The berry tree suddenly sprouted!$"
+	.string "¡El árbol de bayas brotó de repente!$"
 
 #else
 
@@ -396,7 +396,7 @@ BerryTree_Text_WantToPick:
 	.string "¿{STR_VAR_1}?$"
 
 BerryTree_Text_PickedTheBerry:
-	.string "{PLAYER} picked the {STR_VAR_2} {STR_VAR_1}.$"
+	.string "{PLAYER} recogió la {STR_VAR_2} {STR_VAR_1}.$"
 
 BerryTree_Text_PutAwayBerry:
 	.string "{PLAYER} guardó {STR_VAR_1}\nen el BOLSILLO BAYAS.\pLa tierra volvió a estar suave\ny esponjosa.$"
