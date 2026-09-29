@@ -119,7 +119,7 @@ BattleFrontier_BattleTowerLobby_Text_HowDidBattleTowerTurnOut::
 	.string "¡Gracias!\l"
 	.string "Entonces, eh...\p"
 	.string "¿Cómo resultaron las cosas en\n"
-	.string "la BATTLE TOWER hoy?\p"
+	.string "la TORRE BATALLA hoy?\p"
 	.string "¿Quedaste satisfecho con la lucha?\n"
 	.string "¿O no estás contento?$"
 
@@ -127,7 +127,7 @@ BattleFrontier_BattleTowerLobby_Text_SorryWeDisturbedYou::
 	.string "Oh...\n"
 	.string "Siento haberte molestado.\p"
 	.string "Por favor, danos una entrevista la\n"
-	.string "que visites la TORRE COMBATE.$"
+	.string "que visites la TORRE BATALLA.$"
 
 BattleFrontier_BattleTowerLobby_Text_ObviousYouHadGreatBattle::
 	.string "¡Bueno, claro que sí!\p"
@@ -168,7 +168,7 @@ BravoTrainerBattleTower_Text_Intro::
 	.string "¡Sí!\n"
 	.string "¡Es hora del ENTRENADOR BRAVO!\p"
 	.string "Hoy analizaremos a {STR_VAR_1},\n"
-	.string "¡quien retó a la TORRE COMBATE!\p"
+	.string "¡quien retó a la TORRE BATALLA!\p"
 	.string "Para el reto, {STR_VAR_1} usó\n"
 	.string "un increíble {STR_VAR_2}.$"
 
@@ -1169,17 +1169,17 @@ gTVTodaysRivalTrainerText02::
 
 gTVTodaysRivalTrainerText03::
 	.string "Nuestro rival no ha obtenido ni una\n"
-	.string "Símbolo de BATTLE FRONTIER aún.$"
+	.string "Símbolo del FRENTE DE BATALLA aún.$"
 
 gTVTodaysRivalTrainerText04::
 	.string "Veamos cuántos Símbolos de\n"
-	.string "BATTLE FRONTIER tiene el rival.\p"
+	.string "FRENTE DE BATALLA tiene el rival.\p"
 	.string "Símbolos Oro: {STR_VAR_1}!\n"
 	.string "Símbolos Plata: {STR_VAR_2}!$"
 
 gTVTodaysRivalTrainerText05::
 	.string "El rival ha ganado {STR_VAR_1} Puntos\n"
-	.string "de BATTLE FRONTIER.$"
+	.string "del FRENTE DE BATALLA.$"
 
 gTVTodaysRivalTrainerText06::
 	.string "Y bien, ¿cómo te comparas\n"
@@ -1788,7 +1788,7 @@ TVSpotTheCuties_Text_RibbonWinning::
 	.string "La CINTA GANADORA es ideal para\n"
 	.string "obteniendo.\p"
 	.string "{STR_VAR_2} la recibió por sus hazañas\n"
-	.string "en la TORRE DE COMBATE.\p"
+	.string "en la TORRE BATALLA.\p"
 	.string "Resalta la gran potencia de\n"
 	.string "de {STR_VAR_2}.\p"
 	.string "{STR_VAR_2} ¡y la CINTA GANADORA!\n"
@@ -1798,7 +1798,7 @@ TVSpotTheCuties_Text_RibbonVictory::
 	.string "La CINTA VICTORIA es ideal para\n"
 	.string "obteniendo.\p"
 	.string "{STR_VAR_2} la recibió por sus hazañas\n"
-	.string "en la TORRE DE COMBATE.\p"
+	.string "en la TORRE BATALLA.\p"
 	.string "Resalta la increíble potencia\n"
 	.string "de {STR_VAR_2}.\p"
 	.string "{STR_VAR_2} ¡y la CINTA VICTORIA!\n"
@@ -1835,34 +1835,34 @@ gTVPokemonNewsBattleFrontierText00::
 	.string "¡Saludos!\n"
 	.string "Es hora de las NOTICIAS POKéMON.\p"
 	.string "Tenemos noticias alentadoras de\n"
-	.string "BATTLE FRONTIER.$"
+	.string "FRENTE DE BATALLA.$"
 
 gTVPokemonNewsBattleFrontierText01::
 	.string "El ENTRENADOR {STR_VAR_1} logró un\n"
 	.string "récord de {STR_VAR_2} victorias en\l"
 	.string "el RETO INDIVIDUAL de la\l"
-	.string "BATTLE TOWER.\p"
+	.string "TORRE BATALLA.\p"
 	.string "¡Brindemos por {STR_VAR_1}!$"
 
 gTVPokemonNewsBattleFrontierText02::
 	.string "El ENTRENADOR {STR_VAR_1} logró un\n"
 	.string "récord de {STR_VAR_2} victorias en\l"
-	.string "el RETO DOBLE de la BATTLE TOWER\l"
-	.string "BATTLE TOWER.\p"
+	.string "el RETO DOBLE de la TORRE BATALLA\l"
+	.string "TORRE BATALLA.\p"
 	.string "¡Brindemos por {STR_VAR_1}!$"
 
 gTVPokemonNewsBattleFrontierText03::
 	.string "El ENTRENADOR {STR_VAR_1} logró un\n"
 	.string "récord de {STR_VAR_2} victorias en\l"
-	.string "el RETO MULTI de la BATTLE TOWER\l"
-	.string "BATTLE TOWER.\p"
+	.string "el RETO MULTI de la TORRE BATALLA\l"
+	.string "TORRE BATALLA.\p"
 	.string "¡Brindemos por {STR_VAR_1}!$"
 
 gTVPokemonNewsBattleFrontierText04::
 	.string "El ENTRENADOR {STR_VAR_1} logró un\n"
 	.string "récord de {STR_VAR_2} victorias en\l"
-	.string "el RETO MULTI LINK de BATTLE TOWER\l"
-	.string "BATTLE TOWER.\p"
+	.string "el RETO MULTI LINK de TORRE BATALLA\l"
+	.string "TORRE BATALLA.\p"
 	.string "¡Brindemos por {STR_VAR_1}!$"
 
 gTVPokemonNewsBattleFrontierText05::
@@ -1883,7 +1883,7 @@ gTVPokemonNewsBattleFrontierText07::
 	.string "El ENTRENADOR {STR_VAR_1} logró un\n"
 	.string "récord de {STR_VAR_2} victorias en\l"
 	.string "el desafío de Cambio Simple de la\l"
-	.string "BATTLE FACTORY.\p"
+	.string "FÁBRICA BATALLA.\p"
 	.string "¡Brindemos por {STR_VAR_1}!$"
 
 gTVPokemonNewsBattleFrontierText08::
@@ -1903,7 +1903,7 @@ gTVPokemonNewsBattleFrontierText09::
 gTVPokemonNewsBattleFrontierText10::
 	.string "El ENTRENADOR {STR_VAR_1} logró un\n"
 	.string "récord de {STR_VAR_2} victorias\l"
-	.string "en la ARENA DE BATALLA\l"
+	.string "en el DOJO BATALLA\l"
 	.string "Fijar Torneos KO.\p"
 	.string "¡Brindemos por {STR_VAR_1}!$"
 
@@ -1911,21 +1911,21 @@ gTVPokemonNewsBattleFrontierText11::
 	.string "El ENTRENADOR {STR_VAR_1} logró un\n"
 	.string "récord de {STR_VAR_2} victorias en\l"
 	.string "el COMBATE INDIVIDUAL del\l"
-	.string "PALACIO DE COMBATE.\p"
+	.string "PALACIO BATALLA.\p"
 	.string "¡Brindemos por {STR_VAR_1}!$"
 
 gTVPokemonNewsBattleFrontierText12::
 	.string "El ENTRENADOR {STR_VAR_1} logró un\n"
 	.string "récord de {STR_VAR_2} victorias en\l"
 	.string "el COMBATE DOBLE del\l"
-	.string "PALACIO DE COMBATE.\p"
+	.string "PALACIO BATALLA.\p"
 	.string "¡Brindemos por {STR_VAR_1}!$"
 
 gTVPokemonNewsBattleFrontierText13::
 	.string "El ENTRENADOR {STR_VAR_1} logró un\n"
 	.string "récord de {STR_VAR_2} pisos\l"
 	.string "en la BÚSQUEDA DE COMBATE de la\l"
-	.string "PIRÁMIDE DE COMBATE.\p"
+	.string "PIRÁMIDE BATALLA.\p"
 	.string "¡Brindemos por {STR_VAR_1}!$"
 
 gTVPokemonNewsBattleFrontierText14::

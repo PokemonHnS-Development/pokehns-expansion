@@ -246,7 +246,7 @@ BattleFrontier_BattleFactoryBattleRoom_Text_GetAMoveOn_hns:
 BattleFrontier_BattleFactoryBattleRoom_Text_NolandImFactoryHead_hns:
 	.string "¡Hola, me llamo NOLAND!\n"
 	.string "Básicamente mando en este lugar,\l"
-	.string "¡por eso soy el JEFE DE FÁBRICA!\p"
+	.string "¡por eso soy el JEFE DE LA FÁBRICA!\p"
 	.string "Vi tus datos de Battle Swap.\p"
 	.string "Parece que vas por buen camino,\n"
 	.string "¡pero sigues siendo muy cuadrado!\p"
@@ -266,11 +266,11 @@ BattleFrontier_BattleFactoryBattleRoom_Text_ShakeOutKnowledgeBringItOn_hns:
 
 BattleFrontier_BattleFactoryBattleRoom_Text_NolandLetsSeeFrontierPass_hns:
 	.string "NOLAND: ¡Buena jugada!\n"
-	.string "Enséñame tu FRONTIER PASS.$"
+	.string "Enséñame tu PASE DEL FRENTE.$"
 
 BattleFrontier_BattleFactoryBattleRoom_Text_ReceivedKnowledgeSymbol_hns:
 	.string "¡El Símbolo del Conocimiento quedó\n"
-	.string "grabado en el FRONTIER PASS!$"
+	.string "grabado en el PASE DEL FRENTE!$"
 
 BattleFrontier_BattleFactoryBattleRoom_Text_NextTimeNoHoldsBarred_hns:
 	.string "Je...\n"
@@ -296,7 +296,7 @@ BattleFrontier_BattleFactoryBattleRoom_Text_OutOfMyLeagueLetsSeePass_hns:
 	.string "NOLAND: Pero qué...\n"
 	.string "¡Te estás volviendo muy fuerte!\p"
 	.string "¡Cielos!\n"
-	.string "¡Enséñame el PASE FRONTERA!$"
+	.string "¡Enséñame el PASE DEL FRENTE!$"
 
 BattleFrontier_BattleFactoryBattleRoom_Text_KnowledgeSymbolTookGoldenShine_hns:
 	.string "El Símbolo del Saber enfrentó a\n"

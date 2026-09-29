@@ -101,18 +101,18 @@ BattleFrontier_RankingHall_EventScript_Boy_hns::
 	end
 
 BattleFrontier_RankingHall_Text_ExplainRankingHall_hns:
-	.string "Este es el SALÓN DE RANKING.\p"
+	.string "Este es el HALL\nDE LAS CLASIFICACIONES.\p"
 	.string "Aquí reconocemos a los\n"
 	.string "ENTRENADORES con grandes récords en\l"
-	.string "eventos de BATTLE FRONTIER.$"
+	.string "eventos del FRENTE DE BATALLA.$"
 
 BattleFrontier_RankingHall_Text_DomePikeFactoryRecords_hns:
-	.string "Récords de BATTLE DOME, PIKE\n"
-	.string "y BATTLE FACTORY$"
+	.string "Récords de CÚPULA\nBATALLA, SIERPE BATALLA\n"
+	.string "y FÁBRICA BATALLA$"
 
 BattleFrontier_RankingHall_Text_PalaceArenaPyramidRecords_hns:
-	.string "Récords de BATTLE PALACE, ARENA\n"
-	.string "y BATTLE PYRAMID$"
+	.string "Récords de PALACIO\nBATALLA, DOJO BATALLA\n"
+	.string "y PIRÁMIDE BATALLA$"
 
 BattleFrontier_RankingHall_Text_IsYourNameOnThisList_hns:
 	.string "Hola, ¿tu nombre está en esta lista?$"

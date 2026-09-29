@@ -364,13 +364,13 @@ BattleFrontier_BattleDomePreBattleRoom_Text_SavingDataPleaseWait_hns:
 
 BattleFrontier_BattleDomePreBattleRoom_Text_RecordLastMatch_hns:
 	.string "¿Registro tu último combate\n"
-	.string "en tu FRONTIER PASS?$"
+	.string "en tu PASE DEL FRENTE?$"
 
 BattleFrontier_BattleDomePreBattleRoom_Text_ReadyForTuckerSilver_hns:
 	.string "Felicidades por avanzar\n"
 	.string "al duelo final.\p"
 	.string "En la final, te enfrentarás a\n"
-	.string "el AS DEL DOMO, TUCKER.\p"
+	.string "el ASTRO DE LA CÚPULA, TUCKER.\p"
 	.string "¿Estás listo?$"
 
 @ Identical to ReadyForTuckerSilver
@@ -378,7 +378,7 @@ BattleFrontier_BattleDomePreBattleRoom_Text_ReadyForTuckerGold_hns:
 	.string "Felicidades por avanzar\n"
 	.string "al duelo final.\p"
 	.string "En la final, te enfrentarás a\n"
-	.string "el AS DEL DOMO, TUCKER.\p"
+	.string "el ASTRO DE LA CÚPULA, TUCKER.\p"
 	.string "¿Estás listo?$"
 
 BattleFrontier_BattleDomePreBattleRoom_Text_ReadyForTuckerSilver_hnsShort_hns:

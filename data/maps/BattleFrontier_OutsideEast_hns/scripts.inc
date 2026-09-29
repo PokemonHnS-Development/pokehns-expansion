@@ -232,46 +232,46 @@ BattleFrontier_OutsideEast_EventScript_Camper_hns::
 	end
 
 BattleFrontier_OutsideEast_Text_BattleTowerSign_hns:
-	.string "¡Esta es la TORRE DE COMBATE!\n"
+	.string "¡Ésta es la TORRE BATALLA!\n"
 	.string "¡Sé el más fuerte en racha!\l"
 	.string "TRAINER!$"
 
 BattleFrontier_OutsideEast_Text_BattlePalaceSign_hns:
-	.string "¡Este es el PALACIO DE COMBATE!\n"
+	.string "¡Éste es el PALACIO BATALLA!\n"
 	.string "¡Enfócate en las batallas POKéMON!$"
 
 BattleFrontier_OutsideEast_Text_BattleArenaSign_hns:
-	.string "¡Esta es la ARENA DE COMBATE!\n"
+	.string "¡Éste es el DOJO BATALLA!\n"
 	.string "¡Que se reúnan los mejores equipos!$"
 
 BattleFrontier_OutsideEast_Text_BattlePyramidSign_hns:
-	.string "¡Esta es la PIRÁMIDE DE COMBATE!\n"
-	.string "¡Avanza en la Misión de Combate!$"
+	.string "¡Ésta es la PIRÁMIDE BATALLA!\n"
+	.string "¡Avanza en la Búsqueda de Batalla!$"
 
 BattleFrontier_OutsideEast_Text_RankingHallSign_hns:
-	.string "SALÓN DE RÁNKINGS DE LA FRONTERA\n"
+	.string "HALL DE LAS CLASIFICACIONES\n"
 	.string "¡Busca romper nuevos récords!$"
 
 BattleFrontier_OutsideEast_Text_ExchangeCornerSign_hns:
-	.string "CANJE DE PUNTOS DE COMBATE\n"
+	.string "CENTRO DEL SERVICIO DE CANJE\n"
 	.string "¡Canjea tus Puntos de Batalla!$"
 
 BattleFrontier_OutsideEast_Text_BattleTowerFeelsSpecial_hns:
 	.string "¡Guau!\n"
 	.string "¡Es enorme!\p"
-	.string "La BATTLE TOWER es especial.\n"
+	.string "La TORRE BATALLA es especial.\n"
 	.string "Es distinta a las demás.$"
 
 BattleFrontier_OutsideEast_Text_ConquerLeagueAndFrontier_hns:
 	.string "Mi gran ambición es conquistar\n"
-	.string "la BATTLE FRONTIER y la LIGA\l"
+	.string "el FRENTE DE BATALLA y la LIGA\l"
 	.string "POKéMON planta.\p"
 	.string "Y si mi sueño se hace realidad...\p"
 	.string "le preguntaré a MIMI, la vecina,\n"
 	.string "¡si quiere ser mi amiga!$"
 
 BattleFrontier_OutsideEast_Text_PyramidTooHarsh_hns:
-	.string "¡La BATTLE PYRAMID es muy dura!\n"
+	.string "¡La PIRÁMIDE BATALLA es muy dura!\n"
 	.string "¡No logro llegar a la cima!\p"
 	.string "Como no tengo opciones, tal vez\n"
 	.string "pueda escalar por fuera...$"
@@ -287,7 +287,7 @@ BattleFrontier_OutsideEast_Text_PutTogetherUltimateTeam_hns:
 	.string "No dormí por una semana, ¡pero\n"
 	.string "armé el equipo definitivo!\p"
 	.string "No creo que pueda perder, en serio.\n"
-	.string "¡Asaltaremos la ARENA BATALLA!$"
+	.string "¡Asaltaremos el DOJO BATALLA!$"
 
 BattleFrontier_OutsideEast_Text_DidScottBringYouHere_hns:
 	.string "¿SCOTT también te trajo aquí?\n"
@@ -313,7 +313,7 @@ BattleFrontier_OutsideEast_Text_PeopleCallMeBusybody_hns:
 	.string "¡Oh, no, basura en el suelo!\l"
 	.string "¡Uy, ya casi es hora de cenar!\p"
 	.string "No sé si pueda soportar solo\n"
-	.string "mirar en el BATTLE PALACE...$"
+	.string "mirar en el PALACIO BATALLA...$"
 
 BattleFrontier_OutsideEast_Text_OnceBeatGymLeader_hns:
 	.string "Quizá no luzca muy impresionante,\n"
@@ -340,7 +340,7 @@ BattleFrontier_OutsideEast_Text_GoRackUpSomeWinsForDaddy_hns:
 BattleFrontier_OutsideEast_Text_HeardPrettyGirlAtBattleArena_hns:
 	.string "No fue fácil llegar aquí,\n"
 	.string "pero oí de una chica preciosa\l"
-	.string "en la BATTLE ARENA.\p"
+	.string "en el DOJO BATALLA.\p"
 	.string "En vez de ella, ¿sabes qué\n"
 	.string "¿Encontré?\p"
 	.string "¡Una multitud de artistas marciales\n"
@@ -375,10 +375,10 @@ BattleFrontier_OutsideEast_Text_GotWipedOut_hns:
 BattleFrontier_OutsideEast_Text_ToughTrainerInBattleTower_hns:
 	.string "Este tipo se topó con un\n"
 	.string "ENTRENADOR muy duro en el reto de\l"
-	.string "la TORRE DE COMBATE.\p"
+	.string "la TORRE BATALLA.\p"
 	.string "Míralo ahora...\p"
 	.string "Debes tener cuidado si alguna vez\n"
-	.string "vas a la TORRE DE COMBATE.$"
+	.string "vas a la TORRE BATALLA.$"
 
 BattleFrontier_OutsideEast_Text_EnoughBattlePointsForDoll_hns:
 	.string "¡Sí!\n"
@@ -388,7 +388,7 @@ BattleFrontier_OutsideEast_Text_EnoughBattlePointsForDoll_hns:
 
 BattleFrontier_OutsideEast_Text_LikeToHaveNameRecordedHere_hns:
 	.string "¡Ah, sí, está bien!\n"
-	.string "¡Así que este es el SALÓN DE RANKING!\p"
+	.string "¡Así que este es el\nHALL DE LAS CLASIFICACIONES!\p"
 	.string "Quiero pasar a la historia como\n"
 	.string "un súper campeón y que mi nombre\l"
 	.string "quede registrado aquí para siempre.$"
@@ -401,14 +401,14 @@ BattleFrontier_OutsideEast_Text_PowerOfOurLoveWillOvercome_hns:
 	.string "¡Ay, ya no puedo esperar más!\p"
 	.string "¡Vamos a una SALA MULTI\n"
 	.string "en este mismo instante!\p"
-	.string "Si nos unimos en el BATTLE SALON,\n"
+	.string "Si nos unimos en el SALÓN BATALLA,\n"
 	.string "el poder de nuestro amor vencerá\l"
 	.string "a todo el que encontremos.\p"
 	.string "¡Ante nosotros, cariño, todo\n"
 	.string "caerá como fichas de dominó!$"
 
 BattleFrontier_OutsideEast_Text_FrontierNotExclusivelyForToughTrainers_hns:
-	.string "El BATTLE FRONTIER no es solo\n"
+	.string "El FRENTE DE BATALLA no es solo\n"
 	.string "para ENTRENADORES rudos.\p"
 	.string "Parece que han invitado a mucha\n"
 	.string "gente con habilidades especiales.\p"

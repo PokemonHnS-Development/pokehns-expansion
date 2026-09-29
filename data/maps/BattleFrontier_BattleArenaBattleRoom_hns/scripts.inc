@@ -543,20 +543,20 @@ BattleFrontier_BattleArenaBattleRoom_Text_SavingPleaseWait_hns:
 
 BattleFrontier_BattleArenaBattleRoom_Text_RecordLastBattle_hns:
 	.string "¿Quieres grabar tu última batalla\n"
-	.string "en tu FRONTIER PASS?$"
+	.string "en tu PASE DEL FRENTE?$"
 
 BattleFrontier_BattleArenaBattleRoom_Text_NowFaceTycoon_hns:
 	.string "¡Mi querido retador!\p"
 	.string "¡Tu nivel es asombroso!\p"
 	.string "Ahora queremos que te enfrentes a\n"
-	.string "nuestro líder, ¡el TYCOON DEL ARENA!$"
+	.string "nuestra líder, ¡la MAESTRA DEL DOJO!$"
 
 BattleFrontier_BattleArenaBattleRoom_Text_PreparedForTycoon_hns:
-	.string "¡Una batalla con el TYCOON!\n"
+	.string "¡Una batalla con la MAESTRA DEL DOJO!\n"
 	.string "¿Estás preparado?$"
 
 BattleFrontier_BattleArenaBattleRoom_Text_MakeWayForGreta_hns:
-	.string "ÁRBITRO: ¡El TYCOON DEL ARENA!\n"
+	.string "ÁRBITRO: ¡La MAESTRA DEL DOJO!\n"
 	.string "¡Abran paso a GRETA!$"
 
 BattleFrontier_BattleArenaBattleRoom_Text_GretaYoureChallenger_hns:
@@ -584,11 +584,11 @@ BattleFrontier_BattleArenaBattleRoom_Text_GretaYoureToughAfterAll_hns:
 	.string "GRETA: ¡Ay, espera un segundo!\n"
 	.string "¡Después de todo eres fuerte!\p"
 	.string "¡Me caes bien!\n"
-	.string "Enséñame tu FRONTIER PASS.$"
+	.string "Enséñame tu PASE DEL FRENTE.$"
 
 BattleFrontier_BattleArenaBattleRoom_Text_ReceivedGutsSymbol_hns:
 	.string "¡El Símbolo Agallas ha sido grabado\n"
-	.string "en el FRONTIER PASS!$"
+	.string "en el PASE DEL FRENTE!$"
 
 BattleFrontier_BattleArenaBattleRoom_Text_GoingToBeFunNextTime_hns:
 	.string "Mmm...\p"
@@ -616,7 +616,7 @@ BattleFrontier_BattleArenaBattleRoom_Text_LetsGetThisStarted_hns:
 
 BattleFrontier_BattleArenaBattleRoom_Text_GretaBlownAway_hns:
 	.string "GRETA: ¡Gaaah! ¡Me arrasó!\n"
-	.string "¡Enseña tu FRONTIER PASS!$"
+	.string "¡Enseña tu PASE DEL FRENTE!$"
 
 BattleFrontier_BattleArenaBattleRoom_Text_GutsSymbolTookGoldenShine_hns:
 	.string "¡El Símbolo de Agallas\n"

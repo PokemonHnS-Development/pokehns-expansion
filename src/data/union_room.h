@@ -483,8 +483,8 @@ ALIGNED(4) static const u8 sText_ChooseLeaderBeautyContest[] = _("¡Salta con el
 ALIGNED(4) static const u8 sText_ChooseLeaderCuteContest[] = _("¡Salta con el mini POKéMON!\nElige al LÍDER.");
 ALIGNED(4) static const u8 sText_ChooseLeaderSmartContest[] = _("¡Salta con el mini POKéMON!\nElige al LÍDER.");
 ALIGNED(4) static const u8 sText_ChooseLeaderToughContest[] = _("¡Salta con el mini POKéMON!\nElige al LÍDER.");
-ALIGNED(4) static const u8 sText_ChooseLeaderBattleTowerLv50[] = _("¡TORRE DE COMBATE NIVEL 50!\nPor favor, elige al LÍDER.");
-ALIGNED(4) static const u8 sText_ChooseLeaderBattleTowerOpenLv[] = _("¡NIVEL DE TORRE DE COMBATE!\nPor favor, elige al LÍDER.");
+ALIGNED(4) static const u8 sText_ChooseLeaderBattleTowerLv50[] = _("¡TORRE BATALLA NIVEL 50!\nPor favor, elige al LÍDER.");
+ALIGNED(4) static const u8 sText_ChooseLeaderBattleTowerOpenLv[] = _("¡NIVEL DE TORRE BATALLA!\nPor favor, elige al LÍDER.");
 
 static const u8 *const sChooseTrainerTexts[NUM_LINK_GROUP_TYPES] =
 {
@@ -552,8 +552,8 @@ ALIGNED(4) static const u8 sText_BeautyContest[] = _("BEAUTY CONTEST");
 ALIGNED(4) static const u8 sText_CuteContest[] = _("CUTE CONTEST");
 ALIGNED(4) static const u8 sText_SmartContest[] = _("SMART CONTEST");
 ALIGNED(4) static const u8 sText_ToughContest[] = _("TOUGH CONTEST");
-ALIGNED(4) static const u8 sText_BattleTowerLv50[] = _("BATTLE TOWER NIV. 50");
-ALIGNED(4) static const u8 sText_BattleTowerOpenLv[] = _("NIVEL DE TORRE DE COMBATE");
+ALIGNED(4) static const u8 sText_BattleTowerLv50[] = _("TORRE BATALLA NIV. 50");
+ALIGNED(4) static const u8 sText_BattleTowerOpenLv[] = _("NIVEL DE TORRE BATALLA");
 ALIGNED(4) static const u8 sText_ItsNormalCard[] = _("Es una TARJETA NORMAL.");
 ALIGNED(4) static const u8 sText_ItsBronzeCard[] = _("¡Es una TARJETA de BRONCE!");
 ALIGNED(4) static const u8 sText_ItsCopperCard[] = _("¡Es una TARJETA de COBRE!");

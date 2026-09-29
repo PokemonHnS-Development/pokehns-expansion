@@ -754,7 +754,7 @@ BattleFrontier_BattlePikeRoomNormal_Text_EnjoyRestOfChallenge_hns2_hns:
 BattleFrontier_BattlePikeRoomNormal_Text_ImThePikeQueen_hns:
 	.string "Yo soy LUCY...\n"
 	.string "Aquí mando yo...\l"
-	.string "Pues soy la REINA PIKE...\p"
+	.string "Pues soy la REINA DE LA SIERPE...\p"
 	.string "Ya lo sabes, pero para avanzar,\n"
 	.string "debes derrotarme...\p"
 	.string "...No soy de hablar mucho.\n"
@@ -766,11 +766,11 @@ BattleFrontier_BattlePikeRoomNormal_Text_HopeYouDidntUseUpLuck_hns:
 
 BattleFrontier_BattlePikeRoomNormal_Text_LucyShowMeFrontierPass_hns:
 	.string "LUCY: ... ... ... ... ... ...\n"
-	.string "Muéstrame tu FRONTIER PASS...$"
+	.string "Muéstrame tu PASE DEL FRENTE...$"
 
 BattleFrontier_BattlePikeRoomNormal_Text_ReceivedLuckSymbol_hns:
 	.string "El Símbolo Suerte estaba grabado en\n"
-	.string "en el FRONTIER PASS!$"
+	.string "en el PASE DEL FRENTE!$"
 
 BattleFrontier_BattlePikeRoomNormal_Text_AllThereIsDisappear_hns:
 	.string "...Eso es todo...\n"
@@ -792,7 +792,7 @@ BattleFrontier_BattlePikeRoomNormal_Text_NowComeOn_hns:
 
 BattleFrontier_BattlePikeRoomNormal_Text_LucyFrontierPass_hns:
 	.string "LUCY: ... ... ... ... ... ...\p"
-	.string "...PASE FRONTERA...$"
+	.string "...PASE DEL FRENTE...$"
 
 BattleFrontier_BattlePikeRoomNormal_Text_LuckSymbolTookGoldenShine_hns:
 	.string "El Símbolo Suerte tomó la\n"

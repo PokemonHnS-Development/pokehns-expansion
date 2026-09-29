@@ -209,10 +209,10 @@ BattleFrontier_Lounge3_Text_YouLookToughExplainGambling_hns::
 	.string "Escucha, tengo una propuesta.\p"
 	.string "Tenemos un pequeño grupo aquí,\n"
 	.string "y jugamos un juego sobre lo que\l"
-	.string "pasa en la BATTLE FRONTIER.\p"
+	.string "pasa en el FRENTE DE BATALLA.\p"
 	.string "Las reglas son muy simples.\p"
 	.string "Primero, elegimos una instalación\n"
-	.string "en la BATTLE FRONTIER.\p"
+	.string "en el FRENTE\nDE BATALLA.\p"
 	.string "Luego, cada uno elige un TRAINER\n"
 	.string "que esté haciendo el desafío,\l"
 	.string "y apostamos Puntos de Batalla.\p"
@@ -224,21 +224,21 @@ BattleFrontier_Lounge3_Text_YouLookToughExplainGambling_hns::
 
 BattleFrontier_Lounge3_Text_ChallengeBattleTowerSingle_hns::
 	.string "Busco a un TRAINER que vaya a\n"
-	.string "desafiar las SALAS DE COMBATE\l"
-	.string "INDIVIDUAL de la BATTLE TOWER.\p"
+	.string "desafiar las SALAS BATALLA\l"
+	.string "INDIVIDUAL de la TORRE BATALLA.\p"
 	.string "Pero hasta ahora, no he visto a un\n"
 	.string "ENTRENADOR con esa chispa.$"
 
 BattleFrontier_Lounge3_Text_ChallengeBattleTowerDouble_hns::
 	.string "Busco a un TRAINER que vaya a\n"
-	.string "desafiar las SALAS DE COMBATE\l"
+	.string "desafiar las SALAS BATALLA\l"
 	.string "SALAS DOBLES de la TORRE.\p"
 	.string "Pero hasta ahora, no he visto a un\n"
 	.string "ENTRENADOR con esa chispa.$"
 
 BattleFrontier_Lounge3_Text_ChallengeBattleTowerMulti_hns::
 	.string "Busco a un TRAINER que vaya a\n"
-	.string "desafiar las SALAS DE COMBATE\l"
+	.string "desafiar las SALAS BATALLA\l"
 	.string "SALAS MULTI de la TORRE.\p"
 	.string "Pero hasta ahora, no he visto a un\n"
 	.string "ENTRENADOR con esa chispa.$"
@@ -273,14 +273,14 @@ BattleFrontier_Lounge3_Text_ChallengeBattleFactoryDouble_hns::
 
 BattleFrontier_Lounge3_Text_ChallengeBattlePalaceSingle_hns::
 	.string "Busco a un TRAINER que vaya a\n"
-	.string "desafiar las SALAS DE COMBATE\l"
+	.string "desafiar las SALAS BATALLA\l"
 	.string "SALAS INDIVIDUALES del PALACIO.\p"
 	.string "Pero hasta ahora, no he visto a un\n"
 	.string "ENTRENADOR con esa chispa.$"
 
 BattleFrontier_Lounge3_Text_ChallengeBattlePalaceDouble_hns::
 	.string "Busco a un TRAINER que vaya a\n"
-	.string "desafiar las SALAS DE COMBATE\l"
+	.string "desafiar las SALAS BATALLA\l"
 	.string "SALAS DOBLES del PALACIO.\p"
 	.string "Pero hasta ahora, no he visto a un\n"
 	.string "ENTRENADOR con esa chispa.$"
@@ -288,21 +288,21 @@ BattleFrontier_Lounge3_Text_ChallengeBattlePalaceDouble_hns::
 BattleFrontier_Lounge3_Text_ChallengeBattleArena_hns::
 	.string "Busco a un TRAINER que vaya a\n"
 	.string "va a entrar al torneo de\l"
-	.string "Torneo Set KO de la ARENA.\p"
+	.string "Torneo Set KO del DOJO BATALLA.\p"
 	.string "Pero hasta ahora, no he visto a un\n"
 	.string "ENTRENADOR con esa chispa.$"
 
 BattleFrontier_Lounge3_Text_ChallengeBattlePike_hns::
 	.string "Busco a un TRAINER que vaya a\n"
-	.string "entrar en la Selección de Batalla\l"
-	.string "del BATTLE PIKE.\p"
+	.string "entrar en la Elección de Batalla\l"
+	.string "de la SIERPE BATALLA.\p"
 	.string "Pero hasta ahora, no he visto a un\n"
 	.string "ENTRENADOR con esa chispa.$"
 
 BattleFrontier_Lounge3_Text_ChallengeBattlePyramid_hns::
 	.string "Busco a un TRAINER que vaya a\n"
 	.string "va a entrar al torneo de\l"
-	.string "la Búsqueda de Batalla de la PYRAMID.\p"
+	.string "la Búsqueda de Batalla de la PIRÁMIDE.\p"
 	.string "Pero hasta ahora, no he visto a un\n"
 	.string "ENTRENADOR con esa chispa.$"
 
@@ -333,84 +333,84 @@ BattleFrontier_Lounge3_Text_ThanksOffYouGo_hns::
 	.string "¡Ahora, vete ya!$"
 
 BattleFrontier_Lounge3_Text_GetToBattleTowerSingle_hns::
-	.string "¡Ve a las SALAS DE BATALLA\n"
-	.string "¡SALAS DE BATALLA INDIVIDUAL pronto!\p"
+	.string "¡Ve a las SALAS BATALLA\n"
+	.string "¡SALAS BATALLA INDIVIDUAL pronto!\p"
 	.string "¡Es una situación de ganar o morir!\n"
 	.string "¡No desperdicies tu oportunidad!\l"
 	.string "¡Nuestros futuros dependen de ti!$"
 
 BattleFrontier_Lounge3_Text_GetToBattleTowerDouble_hns::
-	.string "¡Ve a las SALAS DE BATALLA\n"
-	.string "¡SALAS DE BATALLA DOBLE pronto!\p"
+	.string "¡Ve a las SALAS BATALLA\n"
+	.string "¡SALAS BATALLA DOBLE pronto!\p"
 	.string "¡Es una situación de ganar o morir!\n"
 	.string "¡No desperdicies tu oportunidad!\l"
 	.string "¡Nuestros futuros dependen de ti!$"
 
 BattleFrontier_Lounge3_Text_GetToBattleTowerMulti_hns::
-	.string "¡Ve a las SALAS DE BATALLA\n"
+	.string "¡Ve a las SALAS BATALLA\n"
 	.string "¡SALA MULTI BATALLA pronto!\p"
 	.string "¡Es una situación de ganar o morir!\n"
 	.string "¡No desperdicies tu oportunidad!\l"
 	.string "¡Nuestros futuros dependen de ti!$"
 
 BattleFrontier_Lounge3_Text_GetToBattleDomeSingle_hns::
-	.string "Ve al BATTLE DOME,\n"
+	.string "Ve a la CÚPULA BATALLA,\n"
 	.string "¡Torneo BATALLA INDIVIDUAL pronto!\p"
 	.string "¡Es una situación de ganar o morir!\n"
 	.string "¡No desperdicies tu oportunidad!\l"
 	.string "¡Nuestros futuros dependen de ti!$"
 
 BattleFrontier_Lounge3_Text_GetToBattleDomeDouble_hns::
-	.string "Ve al BATTLE DOME,\n"
+	.string "Ve a la CÚPULA BATALLA,\n"
 	.string "¡Torneo BATALLA DOBLE pronto!\p"
 	.string "¡Es una situación de ganar o morir!\n"
 	.string "¡No desperdicies tu oportunidad!\l"
 	.string "¡Nuestros futuros dependen de ti!$"
 
 BattleFrontier_Lounge3_Text_GetToBattleFactorySingle_hns::
-	.string "Ve al BATTLE FACTORY,\n"
+	.string "Ve a la FÁBRICA BATALLA,\n"
 	.string "¡Torneo Intercambio Individual!\p"
 	.string "¡Es una situación de ganar o morir!\n"
 	.string "¡No desperdicies tu oportunidad!\l"
 	.string "¡Nuestros futuros dependen de ti!$"
 
 BattleFrontier_Lounge3_Text_GetToBattleFactoryDouble_hns::
-	.string "Ve al BATTLE FACTORY,\n"
+	.string "Ve a la FÁBRICA BATALLA,\n"
 	.string "¡Torneo Intercambio Doble!\p"
 	.string "¡Es una situación de ganar o morir!\n"
 	.string "¡No desperdicies tu oportunidad!\l"
 	.string "¡Nuestros futuros dependen de ti!$"
 
 BattleFrontier_Lounge3_Text_GetToBattlePalaceSingle_hns::
-	.string "Ve al BATTLE PALACE,\n"
+	.string "Ve al PALACIO BATALLA,\n"
 	.string "¡SALA BATALLA INDIVIDUAL pronto!\p"
 	.string "¡Es una situación de ganar o morir!\n"
 	.string "¡No desperdicies tu oportunidad!\l"
 	.string "¡Nuestros futuros dependen de ti!$"
 
 BattleFrontier_Lounge3_Text_GetToBattlePalaceDouble_hns::
-	.string "Ve al BATTLE PALACE,\n"
+	.string "Ve al PALACIO BATALLA,\n"
 	.string "¡SALA BATALLA DOBLE pronto!\p"
 	.string "¡Es una situación de ganar o morir!\n"
 	.string "¡No desperdicies tu oportunidad!\l"
 	.string "¡Nuestros futuros dependen de ti!$"
 
 BattleFrontier_Lounge3_Text_GetToBattleArena_hns::
-	.string "Ve al BATTLE ARENA,\n"
+	.string "Ve al DOJO BATALLA,\n"
 	.string "¡Torneo Set KO pronto!\p"
 	.string "¡Es una situación de ganar o morir!\n"
 	.string "¡No desperdicies tu oportunidad!\l"
 	.string "¡Nuestros futuros dependen de ti!$"
 
 BattleFrontier_Lounge3_Text_GetToBattlePike_hns::
-	.string "Ve al BATTLE PIKE\n"
+	.string "Ve a la SIERPE BATALLA\n"
 	.string "¡Battle Choice pronto!\p"
 	.string "¡Es una situación de ganar o morir!\n"
 	.string "¡No desperdicies tu oportunidad!\l"
 	.string "¡Nuestros futuros dependen de ti!$"
 
 BattleFrontier_Lounge3_Text_GetToBattlePyramid_hns::
-	.string "Ve al BATTLE PYRAMID\n"
+	.string "Ve a la PIRÁMIDE BATALLA\n"
 	.string "¡Búsqueda de Batalla pronto!\p"
 	.string "¡Es una situación de ganar o morir!\n"
 	.string "¡No desperdicies tu oportunidad!\l"
@@ -456,7 +456,7 @@ BattleFrontier_Lounge3_Text_BackedWrongTrainer_hns::
 BattleFrontier_Lounge3_Text_TrainerGoodButRattled_hns::
 	.string "Ese ENTRENADOR...\p"
 	.string "Es bueno, pero se pone nervioso\n"
-	.string "sobrevivir fácil al BATTLE DOME...$"
+	.string "sobrevivir fácil a la\nCÚPULA BATALLA...$"
 
 BattleFrontier_Lounge3_Text_KnowWinnerWhenISeeOne_hns::
 	.string "¡Jeje!\n"

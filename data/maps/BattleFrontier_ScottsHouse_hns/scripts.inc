@@ -213,7 +213,7 @@ BattleFrontier_ScottsHouse_Text_WelcomeToBattleFrontier_hns:
 	.string "SCOTT: ¡Hola y bienvenido!\n"
 	.string "Jeje... Perdón por el espacio tan\p"
 	.string "En fin, {PLAYER}{KUN}, déjame decirte\n"
-	.string "dé la bienvenida al BATTLE FRONTIER.\p"
+	.string "dé la bienvenida al\nFRENTE DE BATALLA.\p"
 	.string "Este es mi sueño hecho realidad.\n"
 	.string "Me tomó muchísimos años, pero al\l"
 	.string "fin le di forma a mi sueño.$"
@@ -241,9 +241,9 @@ BattleFrontier_ScottsHouse_Text_ObtainedXBattlePoints_hns:
 
 BattleFrontier_ScottsHouse_Text_ExplainBattlePoints_hns:
 	.string "SCOTT: Puedes ver tus Puntos de\n"
-	.string "Batalla en tu FRONTIER PASS.\p"
+	.string "Batalla en tu PASE DEL FRENTE.\p"
 	.string "Cuanto más éxito tengas aquí en\n"
-	.string "en la BATTLE FRONTIER, más Puntos\l"
+	.string "en el FRENTE DE BATALLA, más Puntos\l"
 	.string "de Batalla podrás recolectar.\p"
 	.string "Usa tus Puntos de Batalla como\n"
 	.string "quieras, como canjearlos por objetos.$"
@@ -265,10 +265,10 @@ BattleFrontier_ScottsHouse_Text_WhyIGoSeekingTrainers_hns:
 
 BattleFrontier_ScottsHouse_Text_HaveYouMetFrontierBrain_hns:
 	.string "SCOTT: ¿Has conocido a alguno de\n"
-	.string "los FRONTIER BRAINS?\p"
+	.string "los ASES DEL FRENTE?\p"
 	.string "Mejor aún, ¿has obtenido algún\n"
 	.string "símbolo de ellos?\p"
-	.string "Elegí a los FRONTIER BRAINS por ser\n"
+	.string "Elegí a los ASES DEL FRENTE por ser\n"
 	.string "los ENTRENADORES más fuertes.\p"
 	.string "¡Pero estoy seguro de que tu fuerza\n"
 	.string "los sorprenderá incluso a ellos!$"
@@ -280,15 +280,15 @@ BattleFrontier_ScottsHouse_Text_MayFindWildMonsInFrontier_hns:
 	.string "trabajabas en una POKéDEX.\p"
 	.string "Bueno, ¿adivina qué?\p"
 	.string "Puede que encuentres POKéMON\n"
-	.string "salvajes en la BATTLE FRONTIER...\l"
+	.string "salvajes en el FRENTE DE BATALLA...\l"
 	.string "¡Fufufu!$"
 
 BattleFrontier_ScottsHouse_Text_YouveCollectedAllSilverSymbols_hns:
 	.string "SCOTT: ¿Te gusta todo en la\n"
-	.string "BATTLE FRONTIER?\p"
+	.string "FRENTE DE BATALLA?\p"
 	.string "...Espera un segundo...\n"
 	.string "Oh!\p"
-	.string "¡Tu FRONTIER PASS!\n"
+	.string "¡Tu PASE DEL FRENTE!\n"
 	.string "Has reunido el set completo\l"
 	.string "¡de símbolos de plata!\p"
 	.string "¡Eso es más que impresionante!\n"
@@ -300,10 +300,10 @@ BattleFrontier_ScottsHouse_Text_YouveCollectedAllSilverSymbols_hns:
 
 BattleFrontier_ScottsHouse_Text_YouveCollectedAllGoldSymbols_hns:
 	.string "SCOTT: Espero que estés disfrutando\n"
-	.string "todo en la BATTLE FRONTIER.\p"
+	.string "todo en el FRENTE DE BATALLA.\p"
 	.string "...Espera un segundo...\n"
 	.string "¡No puedo creer lo que veo!\p"
-	.string "¡Tu FRONTIER PASS!\n"
+	.string "¡Tu PASE DEL FRENTE!\n"
 	.string "Has reunido el set completo\l"
 	.string "de símbolos de oro!\p"
 	.string "¡Eso es más que estupendo!\n"
@@ -325,14 +325,14 @@ BattleFrontier_ScottsHouse_Text_BerryPocketStuffed_hns:
 
 BattleFrontier_ScottsHouse_Text_Beat50TrainersInARow_hns:
 	.string "SCOTT: ¡Oh, he oído hablar de ti!\n"
-	.string "¡Dominaste la TORRE COMBATE!\l"
+	.string "¡Dominaste la TORRE BATALLA!\l"
 	.string "¿Venciste a más de 50 ENTRENADORES?\p"
 	.string "¡Eso es fantástico!\n"
 	.string "¡Quiero que tengas esto!$"
 
 BattleFrontier_ScottsHouse_Text_Beat100TrainersInARow_hns:
 	.string "SCOTT: ¡Vaya! ¡He oído hablar de ti!\n"
-	.string "¡Cómo arrasaste la TORRE COMBATE!\l"
+	.string "¡Cómo arrasaste la TORRE BATALLA!\l"
 	.string "¿Venciste a más de 100 ENTRENADORES?\p"
 	.string "¡Es ridículamente espectacular!\n"
 	.string "¡Tienes que llevarte esto!$"

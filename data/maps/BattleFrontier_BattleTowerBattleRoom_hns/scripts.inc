@@ -467,11 +467,11 @@ BattleFrontier_BattleTowerBattleRoom_Text_ReadyFor7thOpponent_hns:
 
 BattleFrontier_BattleTowerBattleRoom_Text_RecordYourBattle_hns:
 	.string "Graba tu batalla en tu\n"
-	.string "BATALLA en tu PASA FRONTERA?$"
+	.string "PASE DEL FRENTE?$"
 
 BattleFrontier_BattleTowerLobby_Text_BattleRecordedOnPass_hns:
 	.string "La batalla de {PLAYER} fue grabada\n"
-	.string "en el PASE FRONTERA.$"
+	.string "en el PASE DEL FRENTE.$"
 
 BattleFrontier_BattleTowerBattleRoom_Text_SaveAndQuitGame_hns:
 	.string "¿Quieres guardar y\n"
@@ -483,7 +483,7 @@ BattleFrontier_BattleTowerBattleRoom_Text_SavingPleaseWait_hns:
 
 BattleFrontier_BattleTowerBattleRoom_Text_CancelYourChallenge_hns:
 	.string "¿Quieres cancelar tu desafío de\n"
-	.string "SALA DE BATALLA?$"
+	.string "SALA BATALLA?$"
 
 BattleFrontier_BattleTowerBattleRoom_Text_RecordCouldntBeSaved_hns::
 	.string "Ocurrió un error de algún tipo.\n"
@@ -491,19 +491,19 @@ BattleFrontier_BattleTowerBattleRoom_Text_RecordCouldntBeSaved_hns::
 
 BattleFrontier_BattleTowerBattleRoom_Text_SalonMaidenOnHerWay_hns:
 	.string "Disculpa, pero...\p"
-	.string "Nuestra líder, la DONCELLA DEL\n"
-	.string "SALÓN, viene en camino para luchar.\p"
+	.string "Nuestra líder, la DAMA DE LA TORRE\n"
+	.string "viene en camino para luchar.\p"
 	.string "Llegará en muy poco tiempo.$"
 
 BattleFrontier_BattleTowerBattleRoom_Text_ReadyForSalonMaiden_hns:
-	.string "Te enfrentarás a la DONCELLA DEL\n"
+	.string "Te enfrentarás a la DAMA DE LA TORRE\n"
 	.string "¿Estás preparado?$"
 
 BattleFrontier_BattleTowerBattleRoom_Text_GreetingsImAnabel_hns:
 	.string "Saludos...\n"
 	.string "Mi nombre es ANABEL.\p"
-	.string "Soy la DONCELLA DEL SALÓN, y estoy\n"
-	.string "encargada de la TORRE COMBATE...\p"
+	.string "Soy la DAMA DE LA TORRE, y estoy\n"
+	.string "encargada de la TORRE BATALLA...\p"
 	.string "He oído varios rumores\n"
 	.string "sobre ti...\p"
 	.string "Sinceramente, lo que he oído no\n"
@@ -517,12 +517,12 @@ BattleFrontier_BattleTowerBattleRoom_Text_LetMeSeeYourTalent_hns:
 
 BattleFrontier_BattleTowerBattleRoom_Text_AnabelTalentShallBeRecognized_hns:
 	.string "ANABEL: Fufufu, bien hecho...\p"
-	.string "Tu PASE FRONTERA, por favor...\n"
+	.string "Tu PASE DEL FRENTE, por favor...\n"
 	.string "Tu talento será reconocido.$"
 
 BattleFrontier_BattleTowerBattleRoom_Text_ReceivedAbilitySymbol_hns:
 	.string "El Símbolo de Habilidad estaba en\n"
-	.string "en el FRONTIER PASS!$"
+	.string "en el PASE DEL FRENTE!$"
 
 BattleFrontier_BattleTowerBattleRoom_Text_UntilNextTime_hns:
 	.string "... ... ... ... ... ...\p"
@@ -548,7 +548,7 @@ BattleFrontier_BattleTowerBattleRoom_Text_LetsBeginShallWe_hns:
 
 BattleFrontier_BattleTowerBattleRoom_Text_AnabelCongratsYourPassPlease_hns:
 	.string "ANABEL: Fufu, felicidades...\n"
-	.string "Tu FRONTIER PASS, por favor...$"
+	.string "Tu PASE DEL FRENTE, por favor...$"
 
 BattleFrontier_BattleTowerBattleRoom_Text_AbilitySymbolTookGoldenShine_hns:
 	.string "El Símbolo de Habilidad se obtuvo\n"

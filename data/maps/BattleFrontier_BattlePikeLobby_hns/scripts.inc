@@ -276,8 +276,8 @@ BattleFrontier_BattlePike_EventScript_CloseCurtain_hns::
 BattleFrontier_BattlePikeLobby_Text_WelcomeToBattlePike_hns:
 	.string "Donde la suerte de los ENTRENADORES\n"
 	.string "se pone a prueba...\p"
-	.string "Bienvenido al BATTLE PIKE...\p"
-	.string "Soy tu guía del BATTLE PIKE...$"
+	.string "Bienvenido a la SIERPE BATALLA...\p"
+	.string "Soy tu guía de la SIERPE BATALLA...$"
 
 BattleFrontier_BattlePikeLobby_Text_TakeChallenge_hns:
 	.string "¿Te gustaría aceptar el desafío\n"
@@ -290,7 +290,7 @@ BattleFrontier_BattlePikeLobby_Text_ExplainBattlePike_hns:
 	.string "son muy simples...\p"
 	.string "Elige uno de tres caminos y llega\n"
 	.string "a la sala final al terminar el\l"
-	.string "BATTLE PIKE. Así de simple.\p"
+	.string "SIERPE BATALLA. Así de simple.\p"
 	.string "Pero lo que pase en el camino\n"
 	.string "elegido dependerá totalmente de\l"
 	.string "la suerte del retador...\p"
@@ -384,7 +384,7 @@ BattleFrontier_BattlePikeLobby_Text_FailedToSaveBeforeQuitting_hns:
 BattleFrontier_BattlePikeLobby_Text_SnatchedVictoryFromQueen_hns:
 	.string "Felicidades...\p"
 	.string "Le has robado la victoria a la\n"
-	.string "REINA CARPA y ganaste el evento...$"
+	.string "REINA DE LA SIERPE\ny ganaste el evento...$"
 
 BattleFrontier_BattlePikeLobby_Text_AwardYouTheseBattlePoints_hns:
 	.string "Por tu increíble suerte,\n"

@@ -33,7 +33,7 @@ SSAqua_RoomSW_Text_GuitaristClydeBeaten:
 
 SSAqua_RoomSW_Text_GuitaristClydeAfterBattleMobile:
     .string "Iba a hacer mi debut en la\n"
-    .string "BATTLE TOWER...\p"
+    .string "TORRE BATALLA...\p"
     .string "Debería volver a VERMILION y\n"
     .string "repetir mi entrenamiento...$"
 

@@ -360,19 +360,19 @@ BattleFrontier_BattleArenaLobby_EventScript_ExitRules_hns::
 BattleFrontier_BattleArenaLobby_Text_WelcomeToBattleArena_hns:
 	.string "¡Donde el espíritu de lucha de los\n"
 	.string "ENTRENADORES es puesto a prueba!\p"
-	.string "¡Bienvenidos a la BATTLE ARENA!\p"
+	.string "¡Bienvenidos al DOJO BATALLA!\p"
 	.string "¡Soy tu guía del Torneo Set KO!$"
 
 BattleFrontier_BattleArenaLobby_Text_WishToTakeChallenge_hns:
 	.string "Ahora, ¿deseas aceptar el\n"
-	.string "desafío de la BATTLE ARENA?$"
+	.string "desafío del DOJO BATALLA?$"
 
 BattleFrontier_BattleArenaLobby_Text_AwaitAnotherChallenge_hns:
 	.string "¡Esperaremos tu desafío en\n"
 	.string "otra ocasión!$"
 
 BattleFrontier_BattleArenaLobby_Text_ExplainChallenge_hns:
-	.string "En la BATTLE ARENA, realizamos\n"
+	.string "En el DOJO BATALLA, realizamos\n"
 	.string "el Torneo Set KO.\p"
 	.string "Todos entran con un equipo de\n"
 	.string "tres POKéMON.\p"
@@ -393,11 +393,11 @@ BattleFrontier_BattleArenaLobby_Text_ExplainChallenge_hns:
 	.string "te daremos Puntos de Batalla.$"
 
 BattleFrontier_BattleArenaLobby_Text_OkayToSave_hns:
-	.string "Antes de ir a la ARENA DE BATALLA,\n"
+	.string "Antes de ir al DOJO BATALLA,\n"
 	.string "debes guardar. ¿Está bien?$"
 
 BattleFrontier_BattleArenaLobby_Text_WhichLevelMode_hns:
-	.string "La ARENA DE BATALLA tiene dos\n"
+	.string "El DOJO BATALLA tiene dos\n"
 	.string "niveles: Nivel 50 y Nivel Abierto.\l"
 	.string "¿Cuál eliges?$"
 
@@ -433,7 +433,7 @@ BattleFrontier_BattleArenaLobby_Text_NotEnoughValidMonsLv50_hns:
 
 BattleFrontier_BattleArenaLobby_Text_GuideYouToArena_hns:
 	.string "Ahora te guiaré hacia\n"
-	.string "la BATTLE ARENA.$"
+	.string "el DOJO BATALLA.$"
 
 BattleFrontier_BattleArenaLobby_Text_DidntSaveBeforeShuttingDown_hns:
 	.string "¡Mi querido retador!\p"
@@ -481,13 +481,13 @@ BattleFrontier_BattleArenaLobby_Text_AwaitAnotherChallenge_hns2_hns:
 BattleFrontier_BattleArenaLobby_Text_LookingForwardToArrivalSaveGame_hns:
 	.string "Hemos estado esperando\n"
 	.string "tu llegada.\p"
-	.string "Antes de ir a la BATTLE ARENA,\n"
+	.string "Antes de ir al DOJO BATALLA,\n"
 	.string "debo guardar la partida.\l"
 	.string "Espera, por favor.$"
 
 BattleFrontier_BattleArenaLobby_Text_RecordLastMatch_hns:
 	.string "¿Registro tu último combate de la\n"
-	.string "BATTLE ARENA en tu FRONTIER PASS?$"
+	.string "DOJO BATALLA en tu PASE DEL FRENTE?$"
 
 BattleFrontier_BattleArenaLobby_Text_BadIdeaToNotAttack_hns:
 	.string "Perdí por decisión del ÁRBITRO...\p"
@@ -506,7 +506,7 @@ BattleFrontier_BattleArenaLobby_Text_MatchWasDeclaredDraw_hns:
 	.string "casi los mismos PS.$"
 
 BattleFrontier_BattleArenaLobby_Text_OrderOfMonsImportant_hns:
-	.string "En la ARENA DE COMBATE, el orden\n"
+	.string "En el DOJO BATALLA, el orden\n"
 	.string "de los POKéMON es muy importante.\p"
 	.string "Por ejemplo, si tu primer POKéMON\n"
 	.string "tiene desventajas de tipo,\l"
@@ -565,8 +565,8 @@ BattleFrontier_BattleArenaLobby_Text_ExplainBodyRules_hns:
 	.string "cuántos quedaron al final.$"
 
 BattleFrontier_BattleArenaLobby_Text_CongratsOnDefeatingTycoon_hns:
-	.string "Una victoria lograda en la ARENA\n"
-	.string "¡TYCOON, y venciste a 7 ENTRENADORES!\p"
+	.string "Una victoria lograda\nen el DOJO BATALLA\n"
+	.string "¡Venciste a la MAESTRA DEL DOJO\ny a 7 ENTRENADORES!\p"
 	.string "¡Te felicitamos por tu desafío\n"
 	.string "más espléndido!$"
 

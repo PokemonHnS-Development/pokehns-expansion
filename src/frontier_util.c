@@ -147,7 +147,7 @@ const struct FrontierBrain gFrontierBrainInfo[NUM_FRONTIER_FACILITIES] =
             COMPOUND_STRING(
                 "¡Jajaja! ¿No te da vergüenza?\n"
                 "Everyone's watching!"),                              //Silver
-            COMPOUND_STRING("¡Mi título AS DEL DOMO no es adorno!") //Gold
+            COMPOUND_STRING("¡Mi título de ASTRO DE LA\nCÚPULA no es adorno!") //Gold
         },
         .battledBit = {1 << 2, 1 << 3},
         .streakAppearances = {4, 9, 5, 0},

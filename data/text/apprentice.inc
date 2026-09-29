@@ -83,7 +83,7 @@ gText_ApprenticeWhichLevelMode0::
 	.string "Oh... lo siento...\n"
 	.string "Estoy tan feliz que lloro...\p"
 	.string "Eh... ¡Entonces dime, por favor!\n"
-	.string "Es sobre la TORRE DE COMBATE.\p"
+	.string "Es sobre la TORRE BATALLA.\p"
 	.string "¿Qué sería mejor para mí: Nivel 50\n"
 	.string "o el Nivel Abierto?$"
 
@@ -108,7 +108,7 @@ gText_ApprenticeRejectTeaching1::
 gText_ApprenticeWhichLevelMode1::
 	.string "¡Súper! ¡Genial!\p"
 	.string "Lo primero que quería preguntarte es\n"
-	.string "¡sobre la TORRE DE COMBATE!\p"
+	.string "¡sobre la TORRE BATALLA!\p"
 	.string "Las salas Nivel 50 y Nivel Abierto...\n"
 	.string "¿Cuál sería perfecta para mí?$"
 
@@ -133,7 +133,7 @@ gText_ApprenticeRejectTeaching2::
 gText_ApprenticeWhichLevelMode2::
 	.string "¡Gracias!\n"
 	.string "¡Aquí va mi primera pregunta!\p"
-	.string "La TORRE DE COMBATE tiene dos niveles,\n"
+	.string "La TORRE BATALLA tiene dos niveles,\n"
 	.string "Nivel 50 y Nivel Abierto, ¿verdad?\p"
 	.string "¿Cuál crees que es el nivel más\n"
 	.string "adecuado para mí?$"
@@ -185,7 +185,7 @@ gText_ApprenticeWhichLevelMode3::
 	.string "Yo... estoy tan feliz...\p"
 	.string "Lo que quiero preguntarte es muy\n"
 	.string "trivial, pero no puedo decidirme...\p"
-	.string "En la BATTLE TOWER, te dejan\n"
+	.string "En la TORRE BATALLA, te dejan\n"
 	.string "Elige Nivel 50 o Nivel Abierto.\p"
 	.string "¿En qué curso crees que alguien\n"
 	.string "como yo tendría oportunidad?$"
@@ -200,7 +200,7 @@ gText_ApprenticePleaseTeach4::
 	.string "¡Yo soy {STR_VAR_1}!\n"
 	.string "¡Seré tu amigo!\p"
 	.string "¿Sabías esto?\p"
-	.string "No ganarás en la BATTLE FRONTIER\n"
+	.string "No ganarás en el FRENTE DE BATALLA\n"
 	.string "si solo sabes lo que enseñan en\l"
 	.string "la ESCUELA de ENTRENADORES.\p"
 	.string "Estoy dispuesto a oír tus consejos.\n"
@@ -214,7 +214,7 @@ gText_ApprenticeRejectTeaching4::
 gText_ApprenticeWhichLevelMode4::
 	.string "Bien, pasa lo siguiente.\n"
 	.string "Quiero que lo decidas por mí.\p"
-	.string "Sabes que la BATTLE TOWER tiene\n"
+	.string "Sabes que la TORRE BATALLA tiene\n"
 	.string "¿Nivel 50 o Habitaciones Abiertas?\p"
 	.string "¿Cuál crees que sería mejor\n"
 	.string "para mí, {PLAYER}{KUN}?$"
@@ -252,7 +252,7 @@ gText_ApprenticeRejectTeaching5::
 gText_ApprenticeWhichLevelMode5::
 	.string "¡Gracias! ¡Así está mejor!\n"
 	.string "¡Bueno, empecemos con una fácil!\p"
-	.string "Sabes que la BATTLE TOWER tiene\n"
+	.string "Sabes que la TORRE BATALLA tiene\n"
 	.string "dos rutas, ¿verdad?\l"
 	.string "Ya sabes, Nivel 50 y Nivel Abierto.\p"
 	.string "Como soy alguien muy ocupado, ¿para\n"
@@ -291,7 +291,7 @@ gText_ApprenticeWhichLevelMode6::
 	.string "¡Redoble de tambores, por favor!\n"
 	.string "La pregunta que tengo es...\p"
 	.string "Si fuera a aceptar un reto en la\n"
-	.string "BATTLE TOWER, ¿por dónde voy?\p"
+	.string "TORRE BATALLA, ¿por dónde voy?\p"
 	.string "¿Nivel 50 o Nivel Abierto?\n"
 	.string "¿Cuál me queda mejor?$"
 
@@ -331,7 +331,7 @@ gText_ApprenticeWhichLevelMode7::
 	.string "No quiero hacerte perder el tiempo,\n"
 	.string "así que por favor, aconséjame.\p"
 	.string "Planeo aceptar un desafío de la\n"
-	.string "BATTLE TOWER pronto.\p"
+	.string "TORRE BATALLA pronto.\p"
 	.string "Pero hay dos niveles...\p"
 	.string "¿Cuál sería el más apto para mí?\n"
 	.string "¿Nivel 50 o Nivel Abierto?$"
@@ -370,7 +370,7 @@ gText_ApprenticeWhichLevelMode8::
 	.string "No podré dormir esta noche...\n"
 	.string "¡Muchísimas gracias!\p"
 	.string "¡Entonces, aquí va mi pregunta!\p"
-	.string "En la BATTLE TOWER, ¿qué es lo\n"
+	.string "En la TORRE BATALLA, ¿qué es lo\n"
 	.string "¿Nivel 50 o Nivel Abierto para mí?$"
 
 gText_ApprenticeLevelModeThanks8::
@@ -403,7 +403,7 @@ gText_ApprenticeWhichLevelMode9::
 	.string "¡Oh, sí! ¡Esa es una respuesta firme!\n"
 	.string "¡Y excelente, debo añadir!\p"
 	.string "Entonces, ¿qué tal un primer consejo?\n"
-	.string "¿en la TORRE DE COMBATE?\p"
+	.string "¿en la TORRE BATALLA?\p"
 	.string "Si fuera, ¿qué sería mejor?\n"
 	.string "¿Nivel 50 o Nivel Abierto?$"
 
@@ -442,7 +442,7 @@ gText_ApprenticeWhichLevelMode10::
 	.string "¡Claro que miento otra vez!\n"
 	.string "Pero... ¡gracias, maestro!\p"
 	.string "Sabes que hay un Nivel 50 y un\n"
-	.string "Nivel Abierto en la TORRE COMBATE,\p"
+	.string "Nivel Abierto en la TORRE BATALLA,\p"
 	.string "pero no puedo decidir a qué\n"
 	.string "nivel debería retar...\p"
 	.string "¿Puedes decidirlo tú, maestro?$"
@@ -484,7 +484,7 @@ gText_ApprenticeWhichLevelMode11::
 	.string "{PLAYER}, ¡tienes espíritu!\p"
 	.string "Así que aquí va mi primera duda\n"
 	.string "¡y necesito tu sugerencia!\p"
-	.string "Es sobre la TORRE DE COMBATE,\n"
+	.string "Es sobre la TORRE BATALLA,\n"
 	.string "¡y depende de mi poder!\p"
 	.string "Hay Nivel 50 y Nivel Abierto,\n"
 	.string "¿Cuál es el mejor para mí?$"
@@ -547,7 +547,7 @@ gText_ApprenticeWhichLevelMode13::
 	.string "Gracias. ¡Eres muy amable!\n"
 	.string "...¡Cof! ¡Cof!\p"
 	.string "Uff, debo ponerme fuerte rápido...\p"
-	.string "Iré a la BATTLE TOWER\n"
+	.string "Iré a la TORRE BATALLA\n"
 	.string "ahora mismo, pero ¿qué sería mejor\l"
 	.string "para mí? ¿Nivel 50 o Nivel Abierto?$"
 
@@ -566,7 +566,7 @@ gText_ApprenticePleaseTeach14::
 	.string "Me da mucha vergüenza decir esto,\n"
 	.string "pero exploro ruinas antiguas y eso.\p"
 	.string "Me da más vergüenza admitir que\n"
-	.string "me interesa la BATTLE FRONTIER.\p"
+	.string "me interesa el FRENTE DE BATALLA.\p"
 	.string "{PLAYER}{KUN}, tienes fama de ser\n"
 	.string "un ENTRENADOR fuerte...\p"
 	.string "Es difícil para mí decir esto,\n"
@@ -586,7 +586,7 @@ gText_ApprenticeWhichLevelMode14::
 	.string "Me pone muy nervioso.\p"
 	.string "Por favor, respóndeme sin mirar\n"
 	.string "mis ojos.\p"
-	.string "En la TORRE DE COMBATE...\n"
+	.string "En la TORRE BATALLA...\n"
 	.string "¿Qué nivel debería intentar?$"
 
 gText_ApprenticeLevelModeThanks14::
@@ -623,7 +623,7 @@ gText_ApprenticeWhichLevelMode15::
 	.string "No quiero celebrar antes de tiempo.\p"
 	.string "Si es verdad, te pido perdón.\n"
 	.string "Pero ahora necesito tu consejo.\p"
-	.string "Si fuera a entrar en la BATTLE TOWER,\n"
+	.string "Si fuera a entrar en la TORRE BATALLA,\n"
 	.string "¿qué sería digno de mí?\l"
 	.string "¿Nivel 50 o Nivel Abierto?$"
 

@@ -302,22 +302,22 @@ BattleFrontier_ReceptionGate_Text_FirstTimeHereThisWay_hns:
 
 BattleFrontier_ReceptionGate_Text_WelcomeToBattleFrontier_hns:
 	.string "¡La vanguardia de las batallas\n"
-	.string "¡Bienvenido a la BATTLE FRONTIER!$"
+	.string "¡Bienvenido al FRENTE DE BATALLA!$"
 
 BattleFrontier_ReceptionGate_Text_IssueFrontierPass_hns:
 	.string "A los visitantes primerizos les\n"
-	.string "damos el FRONTIER PASS.\p"
+	.string "damos el PASE DEL FRENTE.\p"
 	.string "Sirve para todas las instalaciones.\n"
-	.string "en la BATTLE FRONTIER.\p"
+	.string "en el FRENTE\nDE BATALLA.\p"
 	.string "¡Aquí tienes!$"
 
 BattleFrontier_ReceptionGate_Text_ObtainedFrontierPass_hns:
 	.string "{PLAYER} obtuvo\n"
-	.string "el FRONTIER PASS.$"
+	.string "el PASE DEL FRENTE.$"
 
 BattleFrontier_ReceptionGate_Text_PlacedTrainerCardInFrontierPass_hns:
-	.string "{PLAYER} puso su TRAINER CARD\n"
-	.string "en el FRONTIER PASS.$"
+	.string "{PLAYER} puso su\nFICHA DE ENTRENADOR\n"
+	.string "en el PASE DEL FRENTE.$"
 
 BattleFrontier_ReceptionGate_Text_EnjoyBattleFrontier_hns:
 	.string "Esperamos que disfrutes todo lo que\n"
@@ -343,20 +343,20 @@ BattleFrontier_ReceptionGate_Text_ScottGreatToSeeYouHere_hns:
 
 BattleFrontier_ReceptionGate_Text_YourGuideToFacilities_hns:
 	.string "Soy tu guía de las instalaciones\n"
-	.string "de la BATTLE FRONTIER.$"
+	.string "del FRENTE DE BATALLA.$"
 
 BattleFrontier_ReceptionGate_Text_LearnAboutWhich2_hns:
 	.string "¿Sobre cuál te gustaría aprender?$"
 
 BattleFrontier_ReceptionGate_Text_BattleTowerInfo_hns:
 	.string "Es la torre gigante considerada\n"
-	.string "el símbolo de la BATTLE FRONTIER.\p"
-	.string "Hay cuatro tipos de SALAS DE BATALLA\n"
+	.string "el símbolo del FRENTE DE BATALLA.\p"
+	.string "Hay cuatro tipos de SALAS BATALLA\n"
 	.string "para COMBATES INDIVIDUAL, DOBLE,\l"
 	.string "MULTI y LINK MULTI.$"
 
 BattleFrontier_ReceptionGate_Text_BattleDomeInfo_hns:
-	.string "El BATTLE DOME es el edificio\n"
+	.string "La CÚPULA BATALLA es el edificio\n"
 	.string "con forma de huevo gigante.\p"
 	.string "Se hacen eventos llamados Torneos\n"
 	.string "en estas instalaciones.\p"
@@ -365,20 +365,20 @@ BattleFrontier_ReceptionGate_Text_BattleDomeInfo_hns:
 	.string "y DOBLES.$"
 
 BattleFrontier_ReceptionGate_Text_BattlePalaceInfo_hns:
-	.string "El PALACIO DE COMBATE es el edificio\n"
-	.string "rojo a la derecha de la FRONTERA.\p"
-	.string "Hay dos tipos de SALAS DE COMBATE\n"
+	.string "El PALACIO BATALLA es el edificio\n"
+	.string "rojo al este del FRENTE DE BATALLA.\p"
+	.string "Hay dos tipos de SALAS BATALLA\n"
 	.string "para COMBATES INDIV. y DOBLES.$"
 
 BattleFrontier_ReceptionGate_Text_BattleArenaInfo_hns:
-	.string "La ARENA DE COMBATE es el edificio\n"
+	.string "El DOJO BATALLA es el edificio\n"
 	.string "tipo dojo en el centro-derecha de\l"
-	.string "la FRONTERA DE BATALLA.\p"
+	.string "el FRENTE DE BATALLA.\p"
 	.string "Un evento llamado Torneo de KO Fijo\n"
-	.string "es en la ARENA DE BATALLA.$"
+	.string "es en el DOJO BATALLA.$"
 
 BattleFrontier_ReceptionGate_Text_BattleFactoryInfo_hns:
-	.string "La FÁBRICA DE BATALLA es el gran\n"
+	.string "La FÁBRICA BATALLA es el gran\n"
 	.string "el edificio más cercano a nosotros.\p"
 	.string "Allí se realiza un evento llamado\n"
 	.string "se lleva a cabo allí.\p"
@@ -389,29 +389,29 @@ BattleFrontier_ReceptionGate_Text_BattleFactoryInfo_hns:
 BattleFrontier_ReceptionGate_Text_BattlePikeInfo_hns:
 	.string "La LANZA DE BATALLA es el edificio\n"
 	.string "como un POKéMON al centro-izquierda\l"
-	.string "la FRONTERA DE BATALLA.\p"
+	.string "el FRENTE DE BATALLA.\p"
 	.string "Allí se realiza un evento llamado\n"
 	.string "Elección de Batalla.$"
 
 BattleFrontier_ReceptionGate_Text_BattlePyramidInfo_hns:
-	.string "La PIRÁMIDE DE BATALLA es la enorme\n"
+	.string "La PIRÁMIDE BATALLA es la enorme\n"
 	.string "pirámide.\p"
 	.string "Un evento llamado Búsqueda de Batalla\n"
 	.string "se lleva a cabo allí.$"
 
 BattleFrontier_ReceptionGate_Text_RankingHallInfo_hns:
-	.string "El RANKING HALL está ubicado cerca\n"
-	.string "de la BATTLE TOWER.\p"
+	.string "El HALL DE LAS\nCLASIFICACIONES está cerca\n"
+	.string "de la TORRE BATALLA.\p"
 	.string "Allí verás los récords más increíbles\n"
 	.string "dejados por los ENTRENADORES que\l"
 	.string "superaron los retos de la\l"
-	.string "BATTLE FRONTIER.$"
+	.string "FRENTE DE BATALLA.$"
 
 BattleFrontier_ReceptionGate_Text_ExchangeCornerInfo_hns:
-	.string "El EXCHANGE SERVICE CORNER está cerca\n"
-	.string "de la BATTLE TOWER.\p"
+	.string "El CENTRO DEL\nSERVICIO DE CANJE está cerca\n"
+	.string "de la TORRE BATALLA.\p"
 	.string "Los Puntos de Batalla ganados en la\n"
-	.string "BATTLE FRONTIER pueden canjearse\l"
+	.string "FRENTE DE BATALLA pueden canjearse\l"
 	.string "por premios fabulosos allí.$"
 
 BattleFrontier_ReceptionGate_Text_YourGuideToRules_hns:
@@ -424,7 +424,7 @@ BattleFrontier_ReceptionGate_Text_LearnAboutWhat_hns:
 	.string "¿Sobre qué te gustaría aprender?$"
 
 BattleFrontier_ReceptionGate_Text_LevelModeInfo_hns:
-	.string "Los retos de la BATTLE FRONTIER\n"
+	.string "Los retos del FRENTE DE BATALLA\n"
 	.string "se dividen en dos categorías:\l"
 	.string "Nivel 50 y Nivel Abierto.$"
 
@@ -435,7 +435,7 @@ BattleFrontier_ReceptionGate_Text_Level50Info_hns:
 	.string "ningún ENTRENADOR tendrá\l"
 	.string "POKéMON por debajo del Nivel 50.\p"
 	.string "Este curso es el nivel básico para\n"
-	.string "luchar en la BATTLE FRONTIER.\p"
+	.string "luchar en el FRENTE DE BATALLA.\p"
 	.string "Para empezar, esperamos que aceptes\n"
 	.string "este desafío.$"
 
@@ -469,14 +469,14 @@ BattleFrontier_ReceptionGate_Text_HoldItemsInfo_hns:
 	.string "objetos diferentes.$"
 
 BattleFrontier_ReceptionGate_Text_YourGuideToFrontierPass_hns:
-	.string "Soy tu guía para el PASE FRONTERA.$"
+	.string "Soy tu guía para el PASE DEL FRENTE.$"
 
 BattleFrontier_ReceptionGate_Text_LearnAboutWhich1_hns:
 	.string "¿Sobre cuál te gustaría aprender?$"
 
 BattleFrontier_ReceptionGate_Text_SymbolsInfo_hns:
 	.string "Hay siete instalaciones en el\n"
-	.string "la FRONTERA DE BATALLA.\p"
+	.string "el FRENTE DE BATALLA.\p"
 	.string "ENTRENADORES que demuestren su\n"
 	.string "habilidad podrán ganar\l"
 	.string "símbolos de cada instalación.\p"
@@ -488,20 +488,20 @@ BattleFrontier_ReceptionGate_Text_SymbolsInfo_hns:
 
 BattleFrontier_ReceptionGate_Text_RecordedBattleInfo_hns:
 	.string "Es posible grabar una batalla\n"
-	.string "en tu FRONTIER PASS.\p"
+	.string "en tu PASE DEL FRENTE.\p"
 	.string "Puedes grabar una batalla que hayas\n"
 	.string "tenido con amigos.\p"
 	.string "O puedes grabar una batalla hecha\n"
-	.string "en la BATTLE FRONTIER, excepto\l"
-	.string "combates en la BATTLE PIKE o\l"
-	.string "en la BATTLE PYRAMID.\p"
+	.string "en el FRENTE DE BATALLA, excepto\l"
+	.string "combates en la SIERPE\nBATALLA o\l"
+	.string "en la PIRÁMIDE BATALLA.\p"
 	.string "Puedes elegir grabar tu combate\n"
 	.string "al final de la batalla.$"
 
 BattleFrontier_ReceptionGate_Text_BattlePointsInfo_hns:
 	.string "Los Puntos de Batalla son premios para\n"
 	.string "ENTRENADORES que lucharon muy bien\l"
-	.string "en la FRONTERA DE BATALLA.\p"
+	.string "en el FRENTE DE BATALLA.\p"
 	.string "Puedes canjear tus Puntos de Batalla\n"
 	.string "por premios en el SERVICIO DE\l"
 	.string "CANJE.$"

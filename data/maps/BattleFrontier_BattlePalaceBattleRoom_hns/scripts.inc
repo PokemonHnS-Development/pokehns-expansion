@@ -481,7 +481,7 @@ BattleFrontier_BattlePalaceBattleRoom_Text_SavingData_hns:
 
 BattleFrontier_BattlePalaceBattleRoom_Text_RecordLastMatch_hns:
 	.string "¿Quieres registrar tu último\n"
-	.string "BATTLE ARENA en tu FRONTIER PASS?$"
+	.string "DOJO BATALLA en tu PASE DEL FRENTE?$"
 
 BattleFrontier_BattlePalaceBattleRoom_Text_ChallengingPalaceMaven_hns:
 	.string "Y ahora...\p"
@@ -512,11 +512,11 @@ BattleFrontier_BattlePalaceBattleRoom_Text_SpenserPostSilverBattle_hns:
 	.string "¡Tráeme el objeto!$"
 
 BattleFrontier_BattlePalaceBattleRoom_Text_LetsSeeFrontierPass_hns:
-	.string "Vaya, vaya, ojalá mantuvieras esa\nfachada de autoridad\ndistinguida...\p¡Toma!\n¡Enseña tu FRONTIER PASS!$"
+	.string "Vaya, vaya, ojalá mantuvieras esa\nfachada de autoridad\ndistinguida...\p¡Toma!\n¡Enseña tu PASE DEL FRENTE!$"
 
 BattleFrontier_BattlePalaceBattleRoom_Text_ReceivedSpiritsSymbol_hns:
 	.string "El Símbolo Espíritu estaba grabado\n"
-	.string "en el FRONTIER PASS!$"
+	.string "en el PASE DEL FRENTE!$"
 
 BattleFrontier_BattlePalaceBattleRoom_Text_SpenserAwaitNextTime_hns:
 	.string "SPENSER: Los ojos de tu POKéMON \n"
@@ -550,7 +550,7 @@ BattleFrontier_BattlePalaceBattleRoom_Text_HurryWithFrontierPass_hns:
 	.string "Vaya, si tan solo pudieras mantener\n"
 	.string "cierto nivel de decoro...\p"
 	.string "¡Gaaah, ten!\n"
-	.string "¡Date prisa con el FRONTIER PASS!$"
+	.string "¡Date prisa con el PASE DEL FRENTE!$"
 
 BattleFrontier_BattlePalaceBattleRoom_Text_SpiritsSymbolTookGoldenShine_hns:
 	.string "El Símbolo de los Espíritus tomó\n"

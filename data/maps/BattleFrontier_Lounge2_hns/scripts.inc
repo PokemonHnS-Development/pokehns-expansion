@@ -114,13 +114,13 @@ BattleFrontier_Lounge2_EventScript_TriathleteF_hns::
 
 BattleFrontier_Lounge2_Text_FrontierManiacIntro_hns::
 	.string "¡Hola! Cuando se trata de noticias\n"
-	.string "de la BATTLE FRONTIER, soy el n.º 1.\p"
+	.string "del FRENTE DE BATALLA, soy el n.º 1.\p"
 	.string "Puedes verme como\n"
 	.string "el MANÍACO DE LA FRONTIER.\p"
 	.string "Solo confirmo, eres ENTRENADOR,\n"
 	.string "¿no es cierto?\p"
 	.string "Compartiré con gusto las noticias\n"
-	.string "de la BATTLE FRONTIER que reuní.$"
+	.string "del FRENTE DE BATALLA que reuní.$"
 
 BattleFrontier_Lounge2_Text_SwingByForTheLatestWord_hns::
 	.string "¡Hola! ¿Vienes a preguntarme\n"
@@ -139,18 +139,18 @@ BattleFrontier_Lounge2_Text_FacilityIsHottest_hns::
 
 BattleFrontier_Lounge2_Text_BattleTowerIsHottest_hns::
 	.string "Veamos...\p"
-	.string "Parece que la BATTLE TOWER\n"
+	.string "Parece que la TORRE BATALLA\n"
 	.string "{STR_VAR_1} es lo más popular.$"
 
 BattleFrontier_Lounge2_Text_SalonMaidenIsThere_hns::
 	.string "¡Apuesto a que no sabías esto!\p"
 	.string "Uno de los mejores ENTRENADORES que\n"
-	.string "SCOTT llama FRONTIER BRAINS está ahí.\p"
+	.string "SCOTT llama ASES DEL FRENTE está ahí.\p"
 	.string "Es un ENTRENADOR misterioso llamado\n"
-	.string "SALON MAIDEN, quien dirige el lugar.$"
+	.string "la DAMA DE LA TORRE,\nquien dirige el lugar.$"
 
 BattleFrontier_Lounge2_Text_SalonMaidenSilverMons_hns::
-	.string "¿Has luchado contra SALON MAIDEN?\p"
+	.string "¿Has luchado contra la\nDAMA DE LA TORRE?\p"
 	.string "Cuando mide a su oponente,\n"
 	.string "al parecer usa estos POKéMON:\p"
 	.string "un POKéMON PSI tipo PSÍQUICO,\n"
@@ -158,7 +158,7 @@ BattleFrontier_Lounge2_Text_SalonMaidenSilverMons_hns::
 	.string "y un POKéMON DURMIENTE tipo NORMAL.$"
 
 BattleFrontier_Lounge2_Text_SalonMaidenGoldMons_hns::
-	.string "¿Has luchado contra la DONCELLA\n"
+	.string "¿Has luchado contra la\nDAMA DE LA TORRE\n"
 	.string "cuando se pone seria?\p"
 	.string "Cuando lucha con todo,\n"
 	.string "al parecer usa estos POKéMON:\p"
@@ -169,12 +169,12 @@ BattleFrontier_Lounge2_Text_SalonMaidenGoldMons_hns::
 BattleFrontier_Lounge2_Text_DomeAceIsThere_hns::
 	.string "¡Apuesto a que no sabías esto!\p"
 	.string "Uno de los mejores ENTRENADORES que\n"
-	.string "SCOTT llama FRONTIER BRAINS está ahí.\p"
+	.string "SCOTT llama ASES DEL FRENTE está ahí.\p"
 	.string "Es ese ENTRENADOR llamativo\n"
-	.string "el AS DE LA CÚPULA quien manda.$"
+	.string "el ASTRO DE LA CÚPULA quien manda.$"
 
 BattleFrontier_Lounge2_Text_DomeAceSilverMons_hns::
-	.string "¿Luchaste contra el AS DEL DOME?\p"
+	.string "¿Luchaste contra el\nASTRO DE LA CÚPULA?\p"
 	.string "Cuando no se toma en serio\n"
 	.string "al rival, usa estos tres POKéMON:\p"
 	.string "Un POKéMON DRAGÓN y VOLADOR,\n"
@@ -182,7 +182,7 @@ BattleFrontier_Lounge2_Text_DomeAceSilverMons_hns::
 	.string "y un POKéMON FUEGO y VOLADOR.$"
 
 BattleFrontier_Lounge2_Text_DomeAceGoldMons_hns::
-	.string "¿Luchaste contra el AS DEL DOME\n"
+	.string "¿Luchaste contra el\nASTRO DE LA CÚPULA\n"
 	.string "cuando se puso serio?\p"
 	.string "Para mostrar su estrategia,\n"
 	.string "usa estos tres POKéMON:\p"
@@ -194,13 +194,13 @@ BattleFrontier_Lounge2_Text_DomeAceGoldMons_hns::
 BattleFrontier_Lounge2_Text_FactoryHeadIsThere_hns::
 	.string "¡Apuesto a que no sabías esto!\p"
 	.string "Uno de los mejores ENTRENADORES que\n"
-	.string "SCOTT llama FRONTIER BRAINS está ahí.\p"
+	.string "SCOTT llama ASES DEL FRENTE está ahí.\p"
 	.string "Es un TRAINER muy raro llamado\n"
-	.string "el JEFE DE FÁBRICA, quien manda.$"
+	.string "el JEFE DE LA FÁBRICA, quien manda.$"
 
 BattleFrontier_Lounge2_Text_FactoryHeadSilverMons_hns::
 	.string "¿Ya luchaste contra el\n"
-	.string "JEFE DE FÁBRICA?\p"
+	.string "JEFE DE LA FÁBRICA?\p"
 	.string "Déjame pensar... Al luchar,\n"
 	.string "usa tres POKéMON de alquiler.\p"
 	.string "Lucha bajo condiciones casi\n"
@@ -208,7 +208,7 @@ BattleFrontier_Lounge2_Text_FactoryHeadSilverMons_hns::
 
 BattleFrontier_Lounge2_Text_FactoryHeadGoldMons_hns::
 	.string "¿Ya luchaste contra el\n"
-	.string "cuando se puso serio?\p"
+	.string "JEFE DE LA FÁBRICA\ncuando se puso serio?\p"
 	.string "Cuando lucha en serio,\n"
 	.string "también usa tres POKéMON de alquiler.\p"
 	.string "Lucha bajo condiciones casi iguales\n"
@@ -217,12 +217,12 @@ BattleFrontier_Lounge2_Text_FactoryHeadGoldMons_hns::
 BattleFrontier_Lounge2_Text_PikeQueenIsThere_hns::
 	.string "¡Apuesto a que no sabías esto!\p"
 	.string "Uno de los mejores ENTRENADORES que\n"
-	.string "SCOTT llama FRONTIER BRAINS está ahí.\p"
+	.string "SCOTT llama ASES DEL FRENTE está ahí.\p"
 	.string "Es un TRAINER aterrador llamado\n"
-	.string "la REINA PIKE que manda aquí.$"
+	.string "la REINA DE LA SIERPE que manda aquí.$"
 
 BattleFrontier_Lounge2_Text_PikeQueenSilverMons_hns::
-	.string "¿Has luchado contra la REINA PIKE\n"
+	.string "¿Has luchado contra la\nREINA DE LA SIERPE\n"
 	.string "antes?\p"
 	.string "Dicen que cuando está de buen humor\n"
 	.string "usa estos tres POKéMON:\p"
@@ -231,7 +231,7 @@ BattleFrontier_Lounge2_Text_PikeQueenSilverMons_hns::
 	.string "y un TENDER de tipo AGUA.$"
 
 BattleFrontier_Lounge2_Text_PikeQueenGoldMons_hns::
-	.string "¿Has luchado contra la REINA PIKE\n"
+	.string "¿Has luchado contra la\nREINA DE LA SIERPE\n"
 	.string "cuando se pone seria?\p"
 	.string "Si está muy molesta, dicen que usa\n"
 	.string "usa estos tres POKéMON:\p"
@@ -243,12 +243,12 @@ BattleFrontier_Lounge2_Text_PikeQueenGoldMons_hns::
 BattleFrontier_Lounge2_Text_ArenaTycoonIsThere_hns::
 	.string "¡Apuesto a que no sabías esto!\p"
 	.string "Uno de los mejores ENTRENADORES que\n"
-	.string "SCOTT llama FRONTIER BRAINS está ahí.\p"
+	.string "SCOTT llama ASES DEL FRENTE está ahí.\p"
 	.string "Es una linda ENTRENADORA llamada\n"
-	.string "el MAGNATE DEL ARENA que manda aquí.$"
+	.string "la MAESTRA DEL DOJO que manda aquí.$"
 
 BattleFrontier_Lounge2_Text_ArenaTycoonSilverMons_hns::
-	.string "¿Has luchado contra el MAGNATE?\n"
+	.string "¿Has luchado contra la\nMAESTRA DEL DOJO?\n"
 	.string "antes?\p"
 	.string "Cuando evalúa la habilidad rival,\n"
 	.string "se dice que usa estos POKéMON:\p"
@@ -257,7 +257,7 @@ BattleFrontier_Lounge2_Text_ArenaTycoonSilverMons_hns::
 	.string "y un POKéMON Bicho y Fantasma.$"
 
 BattleFrontier_Lounge2_Text_ArenaTycoonGoldMons_hns::
-	.string "¿Has luchado contra el MAGNATE?\n"
+	.string "¿Has luchado contra la\nMAESTRA DEL DOJO?\n"
 	.string "cuando se pone seria?\p"
 	.string "Cuando lucha en serio,\n"
 	.string "se dice que usa estos POKéMON:\p"
@@ -269,21 +269,21 @@ BattleFrontier_Lounge2_Text_ArenaTycoonGoldMons_hns::
 BattleFrontier_Lounge2_Text_PalaceMavenIsThere_hns::
 	.string "¡Apuesto a que no sabías esto!\p"
 	.string "Uno de los mejores ENTRENADORES que\n"
-	.string "SCOTT llama FRONTIER BRAINS está ahí.\p"
+	.string "SCOTT llama ASES DEL FRENTE está ahí.\p"
 	.string "Es un ENTRENADOR siniestro llamado\n"
-	.string "la EXPERTA DEL PALACIO que manda.$"
+	.string "el AMO DEL PALACIO que manda.$"
 
 BattleFrontier_Lounge2_Text_PalaceMavenSilverMons_hns::
-	.string "¿Has luchado con la EXPERTA DEL\n"
+	.string "¿Has luchado con el AMO DEL PALACIO\n"
 	.string "antes?\p"
-	.string "PALACIO? Cuando pone a prueba el\n"
+	.string "Cuando pone a prueba el\n"
 	.string "espíritu, usa estos POKéMON:\p"
 	.string "A POISON & FLYING-type BAT POKéMON,\n"
 	.string "un POKéMON PEREZOSO tipo NORMAL y un\l"
 	.string "POKéMON TRANSPORTE AGUA e HIELO.$"
 
 BattleFrontier_Lounge2_Text_PalaceMavenGoldMons_hns::
-	.string "¿Has luchado con la EXPERTA DEL\n"
+	.string "¿Has luchado con el AMO DEL PALACIO\n"
 	.string "cuando se puso serio?\p"
 	.string "Cuando pone todo su poder en la\n"
 	.string "batalla, usa estos POKéMON:\p"
@@ -294,12 +294,12 @@ BattleFrontier_Lounge2_Text_PalaceMavenGoldMons_hns::
 BattleFrontier_Lounge2_Text_PyramidKingIsThere_hns::
 	.string "¡Apuesto a que no sabías esto!\p"
 	.string "Uno de los mejores ENTRENADORES que\n"
-	.string "SCOTT llama FRONTIER BRAINS está ahí.\p"
+	.string "SCOTT llama ASES DEL FRENTE está ahí.\p"
 	.string "Es un ENTRENADOR ardiente llamado\n"
-	.string "el REY PIRÁMIDE, quien manda allí.$"
+	.string "el REY DE LA PIRÁMIDE,\nquien manda allí.$"
 
 BattleFrontier_Lounge2_Text_PyramidKingSilverMons_hns::
-	.string "¿Has luchado contra el REY PIRÁMIDE?\n"
+	.string "¿Has luchado contra el\nREY DE LA PIRÁMIDE?\n"
 	.string "antes?\p"
 	.string "Cuando mide el poder del rival,\n"
 	.string "al parecer usa estos POKéMON:\p"
@@ -308,7 +308,7 @@ BattleFrontier_Lounge2_Text_PyramidKingSilverMons_hns::
 	.string "y un POKéMON IRON tipo ACERO.$"
 
 BattleFrontier_Lounge2_Text_PyramidKingGoldMons_hns::
-	.string "¿Has luchado contra el REY PIRÁMIDE?\n"
+	.string "¿Has luchado contra el\nREY DE LA PIRÁMIDE?\n"
 	.string "cuando se puso serio?\p"
 	.string "Cuando se llena de poder ardiente,\n"
 	.string "al parecer usa estos POKéMON:\p"
@@ -320,11 +320,11 @@ BattleFrontier_Lounge2_Text_PyramidKingGoldMons_hns::
 BattleFrontier_Lounge2_Text_DoubleBattleAdvice1_hns::
 	.string "Claro, hay varios lugares donde\n"
 	.string "puedes tener COMBATES DOBLES.\p"
-	.string "Pero las SALAS DE COMBATE DOBLE de\n"
-	.string "la TORRE DE COMBATE son básicas.\p"
+	.string "Pero las SALAS BATALLA DOBLE de\n"
+	.string "la TORRE BATALLA son básicas.\p"
 	.string "Ahí es donde debes aprender cómo\n"
 	.string "se juegan los COMBATES DOBLES aquí\l"
-	.string "en la FRONTERA DE COMBATE.$"
+	.string "en el FRENTE DE BATALLA.$"
 
 BattleFrontier_Lounge2_Text_DoubleBattleAdvice2_hns::
 	.string "Ten cuidado en los combates aquí.\p"
@@ -340,14 +340,14 @@ BattleFrontier_Lounge2_Text_DoubleBattleAdvice3_hns::
 
 BattleFrontier_Lounge2_Text_MultiBattleAdvice_hns::
 	.string "Todo tipo de ENTRENADORES se reúnen\n"
-	.string "en el SALÓN DE COMBATE.\p"
+	.string "en el SALÓN BATALLA.\p"
 	.string "¡Piensa que podrías encontrarte con\n"
 	.string "tus amigos o seguidores!\l"
 	.string "¡Mira con atención!$"
 
 BattleFrontier_Lounge2_Text_LinkMultiBattleAdvice_hns::
 	.string "Si estás con un amigo, ve a la\n"
-	.string "SALA DE COMBATE MULTI-VÍNCULO.\p"
+	.string "SALA BATALLA MULTI-VÍNCULO.\p"
 	.string "Si juegas con un amigo fuerte,\n"
 	.string "¡Verás rivales muy fuertes!$"
 

@@ -498,5 +498,5 @@ gText_LinkStandby3_hns::
 
 gText_YourPartnerHasRetired_hns::
 	.string "Tu compañero se ha retirado.\p"
-	.string "Tu desafío de BATTLE ROOM\n"
+	.string "Tu desafío de SALA BATALLA\n"
 	.string "será cancelado.$"

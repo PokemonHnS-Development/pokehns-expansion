@@ -257,19 +257,19 @@ BattleFrontier_OutsideWest_EventScript_PokefanF_hns::
 	end
 
 BattleFrontier_OutsideWest_Text_BattleDomeSign_hns:
-	.string "¡Este es el BATTLE DOME!\n"
+	.string "¡Ésta es la CÚPULA BATALLA!\n"
 	.string "¡Tu camino a ser una superestrella!$"
 
 BattleFrontier_OutsideWest_Text_BattleFactorySign_hns:
-	.string "¡Esta es la BATTLE FACTORY!\n"
+	.string "¡Ésta es la FÁBRICA BATALLA!\n"
 	.string "¡Busca a los POKéMON más fuertes!$"
 
 BattleFrontier_OutsideWest_Text_BattlePikeSign_hns:
-	.string "¡Este es el BATTLE PIKE!\n"
+	.string "¡Ésta es la SIERPE BATALLA!\n"
 	.string "¡Elige uno de los tres caminos!$"
 
 BattleFrontier_OutsideWest_Text_ThisIsBattleTower_hns:
-	.string "Esta es la BATTLE TOWER.\p"
+	.string "Esta es la TORRE BATALLA.\p"
 	.string "Los ENTRENADORES traen a sus\n"
 	.string "POKéMON para luchar por eliminación.$"
 
@@ -310,9 +310,9 @@ BattleFrontier_OutsideWest_Text_BestOutOfAllMyFriends_hns:
 	.string "¡He sido un inútil!$"
 
 BattleFrontier_OutsideWest_Text_CantFindBattleTower_hns:
-	.string "Quiero ir a la BATTLE TOWER,\n"
+	.string "Quiero ir a la TORRE BATALLA,\n"
 	.string "pero no la encuentro aunque tengo\l"
-	.string "un mapa de la BATTLE FRONTIER.\p"
+	.string "un mapa del FRENTE DE BATALLA.\p"
 	.string "¡Este lugar es demasiado grande!$"
 
 BattleFrontier_OutsideWest_Text_GotSeasickOnWayHere_hns:
@@ -327,7 +327,7 @@ BattleFrontier_OutsideWest_Text_OnlyToughTrainersBroughtHere_hns:
 	.string "Solo los ENTRENADORES que han sido\n"
 	.string "reconocidos como fuertes vienen aquí.\p"
 	.string "Por eso muchos ENTRENADORES ni\n"
-	.string "saben del BATTLE FRONTIER.$"
+	.string "saben del FRENTE DE BATALLA.$"
 
 BattleFrontier_OutsideWest_Text_SureWeCanChallengeWithNoMons_hns:
 	.string "Oye, hermano...\p"
@@ -342,7 +342,7 @@ BattleFrontier_OutsideWest_Text_BigGuySaidIllLendYouMons_hns:
 	.string "Dijo: ¡Les prestaré POKéMON!$"
 
 BattleFrontier_OutsideWest_Text_WhosRaisingThoseRentalMons_hns:
-	.string "Esa es la FÁBRICA DE COMBATE.\n"
+	.string "Esa es la FÁBRICA BATALLA.\n"
 	.string "Puedes alquilar POKéMON fuertes.\p"
 	.string "Pero me pregunto algo.\n"
 	.string "¿Quién cría esos POKéMON de alquiler?$"
@@ -383,19 +383,19 @@ BattleFrontier_OutsideWest_Text_KeepBattlingUntilIGetSymbol_hns:
 
 BattleFrontier_OutsideWest_Text_YoureOffToChallengeDome_hns:
 	.string "¿Oh? ¿Vas a desafiar\n"
-	.string "el BATTLE DOME?\p"
+	.string "la CÚPULA BATALLA?\p"
 	.string "Te deseo mucha suerte.\n"
 	.string "Ganemos ambos para encontrarnos\l"
 	.string "en los desafíos.$"
 
 BattleFrontier_OutsideWest_Text_DomeIsHereGrandpa_hns:
 	.string "¡Abuelo, por aquí!\n"
-	.string "¡El BATTLE DOME está aquí!\l"
+	.string "¡La CÚPULA BATALLA está aquí!\l"
 	.string "¡Ve por ellos, abuelo!$"
 
 BattleFrontier_OutsideWest_Text_WontLetGentlemenBeatMe_hns:
-	.string "Ah, ¿así que esto es el BATTLE DOME?\n"
-	.string "¡No dejaré que los GENTLEMEN ganen!\p"
+	.string "Ah, ¿así que esta es\nla CÚPULA BATALLA?\n"
+	.string "¡No dejaré que los CABALLEROS ganen!\p"
 	.string "Pero, ¿dónde está la entrada?$"
 
 BattleFrontier_OutsideWest_Text_NothingHereNotLongAgo_hns:
@@ -406,7 +406,7 @@ BattleFrontier_OutsideWest_Text_NothingHereNotLongAgo_hns:
 
 BattleFrontier_OutsideWest_Text_FinallyArrivedAtFrontier_hns:
 	.string "¡Al fin llegué a la\n"
-	.string "¡BATTLE FRONTIER!\p"
+	.string "¡FRENTE DE BATALLA!\p"
 	.string "¡Seguro llamaré la atención con\n"
 	.string "mi aspecto y habilidad!$"
 
@@ -419,7 +419,7 @@ BattleFrontier_OutsideWest_Text_SquareFilledWithToughPeople_hns:
 BattleFrontier_OutsideWest_Text_MetOlderGirlAtPike_hns:
 	.string "Crunch, munch...\p"
 	.string "Hace poco conocí a una chica mayor\n"
-	.string "en el BATTLE PIKE.\p"
+	.string "en la SIERPE BATALLA.\p"
 	.string "Tenía unos ojos que daban miedo\n"
 	.string "de una forma muy malhumorada.\p"
 	.string "Crunch, munch...\p"
@@ -440,7 +440,7 @@ BattleFrontier_OutsideWest_Text_DomeAceLookedBecauseOfMyCheering_hns:
 	.string "¡Pfft!\p"
 	.string "Eso solo pasó porque\n"
 	.string "¡estaba sentado junto a ti!\p"
-	.string "El AS DEL DOMO solo nos miró\n"
+	.string "El ASTRO DE LA CÚPULA solo nos miró\n"
 	.string "¡porque grité muy fuerte!$"
 
 BattleFrontier_OutsideWest_Text_DomeAceIsMine_hns:
@@ -448,7 +448,7 @@ BattleFrontier_OutsideWest_Text_DomeAceIsMine_hns:
 	.string "¡Deja de hacer tanto ruido!\p"
 	.string "Fans así deberían limitarse a\n"
 	.string "¡animar a algún LÍDER de GIMNASIO!\p"
-	.string "¡El AS DEL DOMO es mío!\n"
+	.string "¡El ASTRO DE LA CÚPULA es mío!\n"
 	.string "¡Es mi único ídolo!$"
 
 BattleFrontier_OutsideWest_Text_FansOverThereUsedToBeTrainers_hns:
@@ -463,12 +463,12 @@ BattleFrontier_OutsideWest_Text_FansOverThereUsedToBeTrainers_hns:
 	.string "quedaron prendados del ENTRENADOR.\p"
 	.string "Ahora solo son fans del ENTRENADOR.\n"
 	.string "Van a animar a su ídolo al\l"
-	.string "CÚPULA DE BATALLA cada día.$"
+	.string "CÚPULA BATALLA cada día.$"
 
 BattleFrontier_OutsideWest_Text_MonWithLongTailInFrontier_hns:
 	.string "Oí un rumor de que alguien vio\n"
 	.string "un POKéMON con una cola muy larga\l"
-	.string "en algún lugar de BATTLE FRONTIER.\p"
+	.string "en algún lugar del\nFRENTE DE BATALLA.\p"
 	.string "Debe ser adorable. Estoy segura...\p"
 	.string "Oh, los retos pueden esperar. ¡Siento\n"
 	.string "que debo hallar a esa criatura!$"

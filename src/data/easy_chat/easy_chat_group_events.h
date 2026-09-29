@@ -10,9 +10,9 @@ const u8 gEasyChatWord_Stage[] = _("ESCENARIO");
 const u8 gEasyChatWord_HallOfFame[] = _("SALÓN DE LA FAMA");
 const u8 gEasyChatWord_Evolution[] = _("EVOLUCIÓN");
 const u8 gEasyChatWord_Hyper[] = _("HYPER");
-const u8 gEasyChatWord_BattleTower[] = _("BATTLE TOWER");
+const u8 gEasyChatWord_BattleTower[] = _("TORRE BATALLA");
 const u8 gEasyChatWord_Leaders[] = _("LÍDERES");
-const u8 gEasyChatWord_BattleRoom[] = _("SALA DE BATALLA");
+const u8 gEasyChatWord_BattleRoom[] = _("SALA BATALLA");
 const u8 gEasyChatWord_Hidden[] = _("OCULTO");
 const u8 gEasyChatWord_SecretBase[] = _("SECRET BASE");
 const u8 gEasyChatWord_Blend[] = _("MEZCLA");
@@ -26,7 +26,7 @@ const u8 gEasyChatWord_Tower[] = _("TORRE");
 const u8 gEasyChatWord_Union[] = _("UNIÓN");
 const u8 gEasyChatWord_Room[] = _("SALA");
 const u8 gEasyChatWord_Wireless[] = _("INALÁMBRICO");
-const u8 gEasyChatWord_Frontier[] = _("FRONTERA");
+const u8 gEasyChatWord_Frontier[] = _("FRENTE");
 
 const struct EasyChatWordInfo gEasyChatGroup_Events[] = {
     [EC_INDEX(EC_WORD_APPEAL)] =
@@ -115,7 +115,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Events[] = {
     },
     [EC_INDEX(EC_WORD_BATTLE_ROOM)] =
     {
-        .text = COMPOUND_STRING("SALA DE BATALLA"),
+        .text = COMPOUND_STRING("SALA BATALLA"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_JUDGE),
         .enabled = TRUE,
     },
@@ -199,7 +199,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Events[] = {
     },
     [EC_INDEX(EC_WORD_FRONTIER)] =
     {
-        .text = COMPOUND_STRING("FRONTERA"),
+        .text = COMPOUND_STRING("FRENTE"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_WIRELESS),
         .enabled = TRUE,
     },

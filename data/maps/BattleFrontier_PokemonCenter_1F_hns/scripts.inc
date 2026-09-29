@@ -46,7 +46,7 @@ BattleFrontier_PokemonCenter_1F_Text_NeverSeenPokemon_hns:
 	.string "POKéMON así.$"
 
 BattleFrontier_PokemonCenter_1F_Text_NextStopBattleArena_hns:
-	.string "¡Bien! ¡Siguiente parada, la ARENA!\n"
+	.string "¡Bien! ¡Siguiente parada, el DOJO!\n"
 	.string "Será mejor sacar los POKéMON\l"
 	.string "del sistema de almacenamiento PC.$"
 

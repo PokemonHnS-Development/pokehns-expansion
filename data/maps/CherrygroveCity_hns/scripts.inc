@@ -346,7 +346,7 @@ CherrygroveCity_Text_RivalAfter:
 
 CherrygroveCity_Text_RivalID:
 	.string "¡Devuélvemelo!\n"
-	.string "¡Esa es mi TRAINER CARD!\p"
+	.string "¡Esa es mi FICHA DE ENTRENADOR!\p"
 	.string "Oh no!\n"
 	.string "Ya viste mi nombre...$"
 

@@ -387,12 +387,12 @@ BattleFrontier_BattlePalaceLobby_Text_WelcomeForSingleBattle_hns:
 
 BattleFrontier_BattlePalaceLobby_Text_TakeSingleBattleChallenge_hns:
 	.string "¿Quieres aceptar el reto de la\n"
-	.string "SALA DE BATALLA INDIVIDUAL?$"
+	.string "SALA BATALLA INDIVIDUAL?$"
 
 BattleFrontier_BattlePalaceLobby_Text_ExplainSingleBattleChallenge_hns:
 	.string "En el PALACIO BATALLA hay\n"
 	.string "varios auditorios de BATALLAS\l"
-	.string "llamados SALAS DE BATALLA INDIV.\p"
+	.string "llamados SALAS BATALLA INDIV.\p"
 	.string "Las BATALLAS INDIVIDUALES son\n"
 	.string "como siempre, salvo un detalle clave\l"
 	.string "regla que debe obedecerse.\p"
@@ -417,7 +417,7 @@ BattleFrontier_BattlePalaceLobby_Text_ReturnWhenFortified_hns:
 	.string "y a tus POKéMON, debes volver.$"
 
 BattleFrontier_BattlePalaceLobby_Text_WhichChallenge_hns:
-	.string "Hay dos SALAS DE BATALLA,\n"
+	.string "Hay dos SALAS BATALLA,\n"
 	.string "Nivel 50 y Nivel Abierto.\l"
 	.string "¿Cuál desafío eliges?$"
 
@@ -453,7 +453,7 @@ BattleFrontier_BattlePalaceLobby_Text_NowSelectThreeMons_hns:
 
 BattleFrontier_BattlePalaceLobby_Text_MustSaveBeforeChallenge_hns2_hns:
 	.string "Debo guardar antes de llevarte al\n"
-	.string "BATTLE HALL. ¿Está bien?$"
+	.string "SALA BATALLA. ¿Está bien?$"
 
 BattleFrontier_BattlePalaceLobby_Text_FollowMe_hns:
 	.string "Bien.\n"
@@ -490,7 +490,7 @@ BattleFrontier_BattlePalaceLobby_Text_WeHaveBeenWaiting_hns:
 
 BattleFrontier_BattlePalaceLobby_Text_MustSaveBeforeChallenge_hns:
 	.string "Debo guardar antes de llevarte al\n"
-	.string "BATTLE HALL. ¿Está bien?$"
+	.string "SALA BATALLA. ¿Está bien?$"
 
 BattleFrontier_BattlePalaceLobby_Text_FailedToSaveBeforeEndingChallenge_hns:
 	.string "Suspiro...\p"
@@ -535,7 +535,7 @@ BattleFrontier_BattlePalaceLobby_Text_NatureAndMovesKeyHere_hns:
 
 BattleFrontier_BattlePalaceLobby_Text_MonDocileButTransforms_hns:
 	.string "Mi POKéMON suele ser muy dócil.\p"
-	.string "Pero cuando está en el BATTLE HALL,\n"
+	.string "Pero cuando está en la SALA BATALLA,\n"
 	.string "¡a veces parece transformarse\l"
 	.string "en algo malvado!\p"
 	.string "Se vuelve totalmente intimidante.\n"
@@ -557,12 +557,12 @@ BattleFrontier_BattlePalaceLobby_Text_WelcomeForDoubleBattle_hns:
 
 BattleFrontier_BattlePalaceLobby_Text_TakeDoubleBattleChallenge_hns:
 	.string "¿Quieres aceptar el reto de la\n"
-	.string "¿el reto del SALÓN DE BATALLA DOBLE?$"
+	.string "¿el reto del SALÓN BATALLA DOBLE?$"
 
 BattleFrontier_BattlePalaceLobby_Text_ExplainDoubleBattleChallenge_hns:
 	.string "En el PALACIO BATALLA hay\n"
 	.string "varios auditorios para BATALLAS DOBLES\l"
-	.string "llamados SALONES DE BATALLA DOBLE.\p"
+	.string "llamados SALONES BATALLA DOBLE.\p"
 	.string "Las BATALLAS DOBLES se hacen en\n"
 	.string "como siempre, salvo un detalle clave\l"
 	.string "regla que debe obedecerse.\p"
@@ -583,7 +583,7 @@ BattleFrontier_BattlePalaceLobby_Text_ExplainDoubleBattleChallenge_hns:
 	.string "quedarás descalificado.$"
 
 BattleFrontier_BattlePalaceLobby_Text_ToDefeatMavenAnd7Trainers_hns:
-	.string "Para vencer al EXPERTO DEL PALACIO\n"
+	.string "Para vencer al AMO DEL PALACIO\n"
 	.string "y a siete ENTRENADORES seguidos...$"
 
 BattleFrontier_BattlePalaceLobby_Text_PresentYouWithBattlePoints_hns:
@@ -593,8 +593,8 @@ BattleFrontier_BattlePalaceLobby_Text_PresentYouWithBattlePoints_hns:
 
 BattleFrontier_BattlePalaceLobby_Text_LikeToRecordMatch_hns:
 	.string "¿Quieres grabar tu última\n"
-	.string "combate del PALACIO DE BATALLA en tu\l"
-	.string "BATALLA en tu PASA FRONTERA?$"
+	.string "combate del PALACIO BATALLA\l"
+	.string "en tu PASE DEL FRENTE?$"
 
 BattleFrontier_BattlePalaceLobby_Text_RulesAreListed_hns:
 	.string "Se listan las reglas de SALA BATALLA.$"

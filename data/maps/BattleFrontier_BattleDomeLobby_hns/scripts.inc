@@ -440,7 +440,7 @@ BattleFrontier_BattleDomeLobby_EventScript_ExitRules_hns::
 BattleFrontier_BattleDomeLobby_Text_WelcomeSingleBattle_hns:
 	.string "¡Donde las estrategias de los\n"
 	.string "ENTRENADORES se ponen a prueba!\p"
-	.string "¡Bienvenido al BATTLE DOME!\p"
+	.string "¡Bienvenido a la CÚPULA BATALLA!\p"
 	.string "Soy tu guía para el Torneo de\n"
 	.string "BATALLA INDIVIDUAL.$"
 
@@ -473,7 +473,7 @@ BattleFrontier_BattleDomeLobby_Text_ExplainSinglesChallenge_hns:
 	.string "quedarás descalificado.$"
 
 BattleFrontier_BattleDomeLobby_Text_OkayToSaveBeforeChallenge_hns:
-	.string "Antes de ir al BATTLE DOME,\n"
+	.string "Antes de ir a la CÚPULA BATALLA,\n"
 	.string "debo guardar los datos. ¿Está bien?$"
 
 BattleFrontier_BattleDomeLobby_Text_WhichLevelMode_hns:
@@ -506,7 +506,7 @@ BattleFrontier_BattleDomeLobby_Text_NotEnoughValidMonsLv50_hns:
 
 BattleFrontier_BattleDomeLobby_Text_ShowYouToBattleDome_hns:
 	.string "Ahora te llevaré\n"
-	.string "al BATTLE DOME.$"
+	.string "a la CÚPULA BATALLA.$"
 
 BattleFrontier_BattleDomeLobby_Text_DidntSaveBeforeQuitting_hns:
 	.string "¡Disculpa!\p"
@@ -546,13 +546,13 @@ BattleFrontier_BattleDomeLobby_Text_WeveBeenWaitingForYou_hns:
 	.string "¡Te estuvimos esperando!$"
 
 BattleFrontier_BattleDomeLobby_Text_OkayToSaveBeforeChallenge_hns2_hns:
-	.string "Antes de ir al BATTLE DOME,\n"
+	.string "Antes de ir a la CÚPULA BATALLA,\n"
 	.string "debo guardar los datos. ¿Está bien?$"
 
 BattleFrontier_BattleDomeLobby_Text_WelcomeDoubleBattle_hns:
 	.string "¡Donde las estrategias de los\n"
 	.string "ENTRENADORES se ponen a prueba!\p"
-	.string "¡Bienvenido al BATTLE DOME!\p"
+	.string "¡Bienvenido a la CÚPULA BATALLA!\p"
 	.string "Soy tu guía para el TORNEO DE\n"
 	.string "BATALLA INDIVIDUAL.$"
 
@@ -606,12 +606,12 @@ BattleFrontier_BattleDomeLobby_Text_LastWinnerWasTough_hns:
 	.string "en el monitor junto a la PC.$"
 
 BattleFrontier_OutsideWest_Text_LongDreamedAboutBattleFrontier_hns:
-	.string "La BATTLE FRONTIER...\n"
+	.string "La FRENTE DE BATALLA...\n"
 	.string "Siempre soñé con un lugar así.$"
 
 @ Functionally unused
 BattleFrontier_OutsideWest_Text_BattleDomeSign2_hns:
-	.string "El BATTLE DOME\n"
+	.string "La CÚPULA BATALLA\n"
 	.string "¡Sé la Superestrella Invicta!$"
 
 @ Functionally unused
@@ -621,10 +621,10 @@ BattleFrontier_OutsideWest_Text_QuestionMarkUnderConstruction_hns:
 
 BattleFrontier_BattleDomeLobby_Text_WinnersGainReputation_hns:
 	.string "Cuando un ENTRENADOR gana varios\n"
-	.string "torneos en el BATTLE DOME, él o ella\l"
+	.string "torneos en la CÚPULA\nBATALLA, él o ella\l"
 	.string "gana fama como una estrella.\p"
 	.string "ENTRENADORES fuertes vienen al\n"
-	.string "BATTLE DOME por esa fama.\p"
+	.string "CÚPULA BATALLA por esa fama.\p"
 	.string "Una superestrella es un ENTRENADOR\n"
 	.string "que siempre gana torneos.$"
 
@@ -642,7 +642,7 @@ BattleFrontier_BattleDomeLobby_Text_NeedToCheckOpponentCarefully_hns:
 
 BattleFrontier_BattleDomeLobby_Text_CongratsDefeatedTucker_hns:
 	.string "¡Felicidades!\p"
-	.string "Venciste al AS DEL DOME y ganaste\n"
+	.string "Venciste al ASTRO DE LA\nCÚPULA y ganaste\n"
 	.string "¡el Torneo de Batalla!$"
 
 BattleFrontier_BattleDomeLobby_Text_AwardTheseBattlePoints_hns:
@@ -652,8 +652,8 @@ BattleFrontier_BattleDomeLobby_Text_AwardTheseBattlePoints_hns:
 
 BattleFrontier_BattleDomeLobby_Text_RecordLastMatch_hns:
 	.string "¿Quieres registrar tu\n"
-	.string "último combate de la CÚPULA de\l"
-	.string "BATALLA en tu PASA FRONTERA?$"
+	.string "último combate de la CÚPULA BATALLA\l"
+	.string "en tu PASE DEL FRENTE?$"
 
 BattleFrontier_BattleDomeLobby_Text_RulesAreListed_hns:
 	.string "Las reglas del Torneo de Batalla\n"

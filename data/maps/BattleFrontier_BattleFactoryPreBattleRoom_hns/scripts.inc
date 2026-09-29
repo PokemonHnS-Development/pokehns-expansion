@@ -627,7 +627,7 @@ BattleFrontier_BattleFactoryPreBattleRoom_Text_SavingDataPleaseWait_hns:
 
 BattleFrontier_BattleFactoryPreBattleRoom_Text_RecordLatestBattle_hns:
 	.string "¿Quieres grabar tu última\n"
-	.string "en tu FRONTIER PASS?$"
+	.string "en tu PASE DEL FRENTE?$"
 
 BattleFrontier_BattleFactoryPreBattleRoom_Text_WaitFewMoments_hns:
 	.string "¡Disculpa! ¡Disculpa, por favor!\n"
@@ -641,14 +641,14 @@ BattleFrontier_BattleFactoryPreBattleRoom_Text_MessageFromHeadComeRightNow_hns:
 	.string "Oh, Dios...\n"
 	.string "¡Siento haberte hecho esperar!\p"
 	.string "Tengo un mensaje del jefe de este\n"
-	.string "lugar, el JEFE DE FÁBRICA.\p"
+	.string "lugar, el JEFE DE LA FÁBRICA.\p"
 	.string "Él dice: “¡Lo vamos a lograr!\n"
 	.string "¡Ven aquí ahora mismo!”$"
 
 BattleFrontier_BattleFactoryPreBattleRoom_Text_PreparedToFaceHead_hns:
-	.string "El JEFE DE FÁBRICA te busca.\n"
+	.string "El JEFE DE LA FÁBRICA te busca.\n"
 	.string "¿Estás listo para enfrentarlo?$"
 
 BattleFrontier_BattleFactoryPreBattleRoom_Text_CantTellAnythingAboutHead_hns:
 	.string "Lo siento mucho, pero no puedo decirte\n"
-	.string "nada sobre el JEFE DE FÁBRICA.$"
+	.string "nada sobre el JEFE DE LA FÁBRICA.$"

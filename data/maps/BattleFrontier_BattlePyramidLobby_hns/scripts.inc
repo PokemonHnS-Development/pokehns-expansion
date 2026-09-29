@@ -553,7 +553,7 @@ BattleFrontier_BattlePyramidLobby_Text_ExplainBattlePyramid_hns:
 	.string "Debes entrar con tres POKéMON,\n"
 	.string "ninguno puede llevar un objeto.\p"
 	.string "Al subir, se te dará una\n"
-	.string "Bolsa de Batalla para objetos.\p"
+	.string "MOCHILA PIRÁMIDE para objetos.\p"
 	.string "Si fallas el desafío, cualquier\n"
 	.string "objeto en la bolsa desaparecerá.\p"
 	.string "Si quieres interrumpir tu\n"
@@ -670,9 +670,9 @@ BattleFrontier_BattlePyramidLobby_Text_ReturnedEverythingMonsHeld_hns:
 	.string "llevaban los POKéMON.$"
 
 BattleFrontier_BattlePyramidLobby_Text_UsedBattleBagWillBeKept_hns:
-	.string "La BATTLE BAG que usaste quedará\n"
+	.string "La MOCHILA PIRÁMIDE\nque usaste quedará\n"
 	.string "lista para tu próximo desafío.\p"
-	.string "{PLAYER} devolvió la BATTLE BAG\n"
+	.string "{PLAYER} devolvió la MOCHILA PIRÁMIDE\n"
 	.string "para recuperar su BAG.$"
 
 BattleFrontier_BattlePyramidLobby_Text_RecordResultsWait_hns:
@@ -682,7 +682,7 @@ BattleFrontier_BattlePyramidLobby_Text_RecordResultsWait_hns:
 @ Unused
 BattleFrontier_BattlePyramidLobby_Text_ForConqueringPyramidTakeThis_hns:
 	.string "Como recuerdo por conquistar la\n"
-	.string "BATTLE PYRAMID, toma esto.$"
+	.string "PIRÁMIDE BATALLA, toma esto.$"
 
 @ Unused
 BattleFrontier_BattlePyramidLobby_Text_ReceivedPrizeItem_hns:
@@ -896,13 +896,13 @@ BattleFrontier_BattlePyramidLobby_Text_ExplainMazeRules_hns:
 	.string "vence a un POKéMON o ENTRENADOR.$"
 
 BattleFrontier_BattlePyramidLobby_Text_ExplainBagRules_hns:
-	.string "La BATTLE BAG sirve como tu BOLSA\n"
+	.string "La MOCHILA PIRÁMIDE\nsirve como tu BOLSA\n"
 	.string "mientras estés en la PIRÁMIDE.\p"
-	.string "Hay dos BATTLE BAG separadas--\n"
+	.string "Hay dos MOCHILAS\nPIRÁMIDE separadas--\n"
 	.string "una para el Nivel 50 y otra para\l"
 	.string "las aventuras de Nivel Abierto.\p"
 	.string "Cada una puede llevar hasta 99\n"
 	.string "objetos de diez tipos distintos.\p"
-	.string "El contenido de la BATTLE BAG se\n"
+	.string "El contenido de la\nMOCHILA PIRÁMIDE se\n"
 	.string "perderá si fallas en tu misión.$"
 

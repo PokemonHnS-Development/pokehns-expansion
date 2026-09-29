@@ -325,7 +325,7 @@ BattleFrontier_BattleFactoryLobby_EventScript_ExitRules_hns::
 BattleFrontier_BattleFactoryLobby_Text_WelcomeForSingleBattle_hns:
 	.string "Donde la inteligencia de ENTRENADORES\n"
 	.string "ENTRENADORES es puesto a prueba!\p"
-	.string "¡Bienvenido a la FÁBRICA DE COMBATE!\p"
+	.string "¡Bienvenido a la FÁBRICA BATALLA!\p"
 	.string "Soy tu guía del Intercambio de Combate\n"
 	.string "Torneo Individual.$"
 
@@ -421,7 +421,7 @@ BattleFrontier_BattleFactoryLobby_Text_ReceivedPrizeItem_hns:
 BattleFrontier_BattleFactoryLobby_Text_WelcomeForDoubleBattle_hns:
 	.string "Donde la inteligencia de ENTRENADORES\n"
 	.string "ENTRENADORES es puesto a prueba!\p"
-	.string "¡Bienvenido a la FÁBRICA DE COMBATE!\p"
+	.string "¡Bienvenido a la FÁBRICA BATALLA!\p"
 	.string "Soy tu guía del Intercambio de Combate\n"
 	.string "Torneo Doble.$"
 
@@ -449,7 +449,7 @@ BattleFrontier_BattleFactoryLobby_Text_ExplainDoublesChallenge_hns:
 
 BattleFrontier_BattleFactoryLobby_Text_CongratsForDefeatingHead_hns:
 	.string "Felicidades por derrotar al\n"
-	.string "JEFE DE FÁBRICA y ganar\l"
+	.string "JEFE DE LA FÁBRICA y ganar\l"
 	.string "¡siete combates seguidos!$"
 
 BattleFrontier_BattleFactoryLobby_Text_AwardBattlePoints_hns:
@@ -464,9 +464,9 @@ BattleFrontier_BattleFactoryLobby_Text_ExchangeMonsAndSave_hns:
 	.string "así que espera, por favor.$"
 
 BattleFrontier_BattleFactoryLobby_Text_RecordLastMatch_hns:
-	.string "¿Quieres grabar tu última batalla\n"
-	.string "Combate de BATTLE FACTORY en tu\l"
-	.string "BATALLA en tu PASA FRONTERA?$"
+	.string "¿Quieres grabar tu último\n"
+	.string "combate de FÁBRICA BATALLA\l"
+	.string "en tu PASE DEL FRENTE?$"
 
 BattleFrontier_BattleFactoryLobby_Text_NeedKnowledgeOfMonsMoves_hns:
 	.string "¡Hola!\n"

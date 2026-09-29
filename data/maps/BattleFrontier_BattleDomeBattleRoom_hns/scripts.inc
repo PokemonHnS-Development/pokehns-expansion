@@ -924,7 +924,7 @@ BattleFrontier_BattleDomeBattleRoom_Movement_RefereeExit_hns:
 	step_end
 
 BattleFrontier_BattleDomeBattleRoom_Text_PlayerHasEnteredDome_hns:
-	.string "{PLAYER} ha entrado al DOMO BATALLA!$"
+	.string "{PLAYER} ha entrado a la CÚPULA BATALLA!$"
 
 BattleFrontier_BattleDomeBattleRoom_Text_PlayerVersusTrainer_hns:
 	.string "{STR_VAR_1}\n"
@@ -1056,8 +1056,8 @@ BattleFrontier_BattleDomeBattleRoom_Text_MakeWayForDomeAceTucker_hns:
 	.string "Y ahora... ¡El ENTRENADOR que\n"
 	.string "está en la ruta de {PLAYER}!\p"
 	.string "¡Sí! ¡El único e irrepetible!\n"
-	.string "¡EL COMISIONADO DEL BATTLE DOME!\l"
-	.string "¡Nuestro propio AS DEL DOME!\l"
+	.string "¡EL COMISIONADO DE LA\nCÚPULA BATALLA!\l"
+	.string "¡Nuestro propio ASTRO DE LA CÚPULA!\l"
 	.string "¡Abran paso a TUCKER!$"
 
 BattleFrontier_BattleDomeBattleRoom_Text_SpectatorTuckerChant_hns:
@@ -1072,9 +1072,9 @@ BattleFrontier_BattleDomeBattleRoom_Text_TuckerSilverIntro_hns:
 	.string "Apuesto a que estás temblando por\n"
 	.string "¡la tensión de luchar contra mí!\p"
 	.string "¡Pero no te preocupes por nada!\p"
-	.string "¡Soy la estrella del BATTLE DOME!\n"
-	.string "¡Yo, TUCKER, el AS DEL DOME, te\l"
-	.string "bañaré con mi brillo radiante!$"
+	.string "¡Soy la estrella de la CÚPULA BATALLA!\n"
+	.string "¡Yo, TUCKER, el ASTRO DE LA CÚPULA,\l"
+	.string "te bañaré con mi brillo radiante!$"
 
 BattleFrontier_BattleDomeBattleRoom_Text_LetsSeeYourStrategy_hns:
 	.string "¡Tu estrategia!\n"
@@ -1086,16 +1086,16 @@ BattleFrontier_BattleDomeBattleRoom_Text_IncredibleVictorIsPlayer_hns:
 
 BattleFrontier_BattleDomeBattleRoom_Text_WinnerIsTucker_hns:
 	.string "¡El ganador es TUCKER!\n"
-	.string "¡El AS DE LA CÚPULA venció!\p"
+	.string "¡El ASTRO DE LA CÚPULA venció!\p"
 	.string "¡Felicidades, TUCKER!$"
 
 BattleFrontier_BattleDomeBattleRoom_Text_SeeYourFrontierPass_hns:
 	.string "TUCKER: ¡Las reglas son reglas!\n"
-	.string "Muéstrame tu PASE FRONTERA.$"
+	.string "Muéstrame tu PASE DEL FRENTE.$"
 
 BattleFrontier_BattleDomeBattleRoom_Text_ReceivedTacticsSymbol_hns:
 	.string "Se grabó el Símbolo de Táctica\n"
-	.string "en el FRONTIER PASS!$"
+	.string "en el PASE DEL FRENTE!$"
 
 BattleFrontier_BattleDomeBattleRoom_Text_WontUnderestimateYouNextTime_hns:
 	.string "... ... ... ... ... ...\p"
@@ -1112,7 +1112,7 @@ BattleFrontier_BattleDomeBattleRoom_Text_LegendHasReturnedDomeAceTucker_hns:
 	.string "¡Al fin!\n"
 	.string "¡Al fin volvió la leyenda!\p"
 	.string "¡Sí, el nombre de esa leyenda!\n"
-	.string "¡Nuestro propio AS DEL DOME!\l"
+	.string "¡Nuestro propio ASTRO DE LA CÚPULA!\l"
 	.string "¡No es otro que TUCKER!$"
 
 BattleFrontier_BattleDomeBattleRoom_Text_TuckerGoldIntro_hns:
@@ -1120,7 +1120,7 @@ BattleFrontier_BattleDomeBattleRoom_Text_TuckerGoldIntro_hns:
 	.string "El rugido atronador del público...\l"
 	.string "Su calor ardiente de emoción...\l"
 	.string "Este es un lugar maravilloso...\p"
-	.string "Para ellos, soy el AS DEL DOME...\n"
+	.string "Para ellos,\nsoy el ASTRO DE LA CÚPULA...\n"
 	.string "Represento sus sueños y esperanzas...\l"
 	.string "Jamás debo desaparecer de su vista...\p"
 	.string "¡Debo arder!\n"
@@ -1136,7 +1136,7 @@ BattleFrontier_BattleDomeBattleRoom_Text_NeverLostWhenPowerUnleashed_hns:
 	.string "¡Jamás! Nunca había perdido al\n"
 	.string "desatar todo mi poder.\p"
 	.string "¡Sí, eres fantástico!\n"
-	.string "¿Tu FRONTIER PASS, por favor?$"
+	.string "¿Tu PASE DEL FRENTE, por favor?$"
 
 BattleFrontier_BattleDomeBattleRoom_Text_TacticsSymbolTookGoldenShine_hns:
 	.string "El Símbolo de Táctica tomó\n"
@@ -1164,7 +1164,7 @@ BattleFrontier_BattleDomeBattleRoom_Text_PlayerIsLvOpenChamp_hns2_hns:
 
 BattleFrontier_BattleDomeBattleRoom_Text_PlayerVersusTucker_hns:
 	.string "¡El combate final!\p"
-	.string "{PLAYER} contra el AS DEL DOME, TUCKER!\p"
+	.string "{PLAYER} contra el\nASTRO DE LA CÚPULA, TUCKER!\p"
 	.string "¡Que empiece la batalla!$"
 
 BattleFrontier_BattleDomeBattleRoom_Text_RefereesDecidedWinnerTucker_hns:
@@ -1172,7 +1172,7 @@ BattleFrontier_BattleDomeBattleRoom_Text_RefereesDecidedWinnerTucker_hns:
 	.string "una decisión!\p"
 	.string "El ganador es...\n"
 	.string "¡Cielos!\l"
-	.string "¡El ganador es nuestro AS DEL DOME!\l"
+	.string "¡El ganador es nuestro\nASTRO DE LA CÚPULA!\l"
 	.string "¡Es TUCKER!\p"
 	.string "¡Felicidades! ¡Y gracias!\n"
-	.string "¡Aplausos para el AS DEL DOMO, TUCKER!$"
+	.string "¡Aplausos para el\nASTRO DE LA CÚPULA, TUCKER!$"

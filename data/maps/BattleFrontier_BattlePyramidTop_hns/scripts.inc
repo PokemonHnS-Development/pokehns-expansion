@@ -216,7 +216,7 @@ BattleFrontier_BattlePyramidTop_Movement_CameraPanUp_hns:
 BattleFrontier_BattlePyramidTop_Text_ReachedSummitUpYouGo_hns:
 	.string "¡Es un placer verte por aquí!\n"
 	.string "Has llegado a la cima de\l"
-	.string "¡la PIRÁMIDE DE BATALLA!\p"
+	.string "¡la PIRÁMIDE BATALLA!\p"
 	.string "Más arriba está el punto de\n"
 	.string "vigilancia de la PIRÁMIDE.\p"
 	.string "Es un lugar abierto solo a quienes\n"
@@ -272,11 +272,11 @@ BattleFrontier_BattlePyramidTop_Text_BrandonFrontierPassPlease_hns:
 	.string "BRANDON: ¡Jajaja! ¡Fue grandioso!\n"
 	.string "¡Grandioso, sí, sin duda!\p"
 	.string "¡Bien hecho! ¡Te has ganado el honor!\n"
-	.string "¡Tu FRONTIER PASS, por favor!$"
+	.string "¡Tu PASE DEL FRENTE, por favor!$"
 
 BattleFrontier_BattlePyramidTop_Text_ReceivedBraveSymbol_hns:
 	.string "El Símbolo Valiente fue grabado en\n"
-	.string "en el FRONTIER PASS!$"
+	.string "en el PASE DEL FRENTE!$"
 
 BattleFrontier_BattlePyramidTop_Text_LookForwardToNextMeeting_hns:
 	.string "¡Joven explorador!\n"

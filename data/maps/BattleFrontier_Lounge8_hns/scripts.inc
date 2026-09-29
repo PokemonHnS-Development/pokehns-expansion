@@ -28,14 +28,14 @@ BattleFrontier_Lounge8_Text_WhatATrainerNeeds_hns:
 	.string "¿Qué es eso?$"
 
 BattleFrontier_Lounge8_Text_KnowAboutFrontierBrains_hns:
-	.string "¿Sabes quiénes son los CEREBROS\n"
-	.string "DE LA FRONTERA?\p"
+	.string "¿Sabes quiénes son los ASES\n"
+	.string "DEL FRENTE?\p"
 	.string "Así llama SCOTT a los siete\n"
 	.string "ENTRENADORES especiales que\l"
-	.string "mandan en la BATTLE FRONTIER.$"
+	.string "mandan en el FRENTE DE BATALLA.$"
 
 BattleFrontier_Lounge8_Text_ToldMeIHaveTalentForBattling_hns:
-	.string "En la BATTLE TOWER, una chica\n"
+	.string "En la TORRE BATALLA, una chica\n"
 	.string "me dijo que tengo mucho talento\l"
 	.string "para las batallas!\p"
 	.string "¡A mí me gustan más los\p"

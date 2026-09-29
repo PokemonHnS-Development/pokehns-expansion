@@ -293,7 +293,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_PleaseFindPartner_hns2_hns:
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_ThankYouForChoosingPartner_hns::
 	.string "Gracias por elegir un compañero.\p"
 	.string "Ahora te llevaré a tu\n"
-	.string "SALA DE BATALLA MÚLTIPLE.$"
+	.string "SALA BATALLA MÚLTIPLE.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_UnusedApprentice1Intro_hns::
 	.string "Soy el aprendiz nro. {STR_VAR_2} de {STR_VAR_1}.\n"

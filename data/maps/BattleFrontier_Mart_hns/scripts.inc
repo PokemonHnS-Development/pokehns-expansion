@@ -58,7 +58,7 @@ BattleFrontier_Mart_Text_ProteinMakeNiceGift_hns:
 
 BattleFrontier_Mart_Text_FacilitiesDontAllowItems_hns:
 	.string "Muchas instalaciones de la\n"
-	.string "BATTLE FRONTIER no permiten usar\l"
+	.string "FRENTE DE BATALLA no permiten usar\l"
 	.string "objetos durante las batallas.\p"
 	.string "Esa regla hace que todo sea más\n"
 	.string "¡Ya lo están!$"

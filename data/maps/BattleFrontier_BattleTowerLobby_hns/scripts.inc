@@ -935,7 +935,7 @@ BattleFrontier_BattleTowerLobby_EventScript_ExitRules_hns::
 
 @ Unused
 BattleFrontier_BattleTowerLobby_Text_DirectYouToBattleRoom_hns:
-	.string "Te llevaré a tu SALA DE COMBATE.$"
+	.string "Te llevaré a tu SALA BATALLA.$"
 
 BattleFrontier_BattleTowerLobby_Text_DidntSaveBeforeQuitting_hns:
 	.string "¡Disculpa!\p"
@@ -978,7 +978,7 @@ BattleFrontier_BattleTowerLobby_Text_WeveBeenWaitingForYou_hns:
 	.string "$"
 
 BattleFrontier_BattleTowerLobby_Text_ProgressWillBeSaved_hns:
-	.string "Antes de entrar a una SALA DE BATALLA,\n"
+	.string "Antes de entrar a una SALA BATALLA,\n"
 	.string "se guardará tu progreso. Espera.$"
 
 BattleFrontier_BattleTowerLobby_Text_AboutToFace50thTrainer_hns:
@@ -1037,7 +1037,7 @@ BattleFrontier_BattleTowerLobby_Text_WinsInRowRecorded_hns:
 	.string "de forma vergonzosa!$"
 
 BattleFrontier_BattleTowerLobby_Text_CanLeaveUntilLossOrSevenWins_hns:
-	.string "Al entrar en la TORRE COMBATE,\n"
+	.string "Al entrar en la TORRE BATALLA,\n"
 	.string "no podrás salir hasta que pierdas\l"
 	.string "o venzas a siete ENTRENADORES.\p"
 	.string "Asegúrate de estar listo para\n"
@@ -1045,7 +1045,7 @@ BattleFrontier_BattleTowerLobby_Text_CanLeaveUntilLossOrSevenWins_hns:
 
 @ Unused
 BattleFrontier_BattleTowerLobby_Text_DoubleBattleRoomConstruction_hns:
-	.string "¡Bienvenido a la TORRE COMBATE,\n"
+	.string "¡Bienvenido a la TORRE BATALLA,\n"
 	.string "ZONA DE COMBATES DOBLES!\p"
 	.string "Lamentablemente, las SALAS DE\n"
 	.string "COMBATE siguen en construcción.\p"
@@ -1054,7 +1054,7 @@ BattleFrontier_BattleTowerLobby_Text_DoubleBattleRoomConstruction_hns:
 
 @ Unused
 BattleFrontier_BattleTowerLobby_Text_MultiBattleRoomConstruction_hns:
-	.string "¡Bienvenido a la TORRE COMBATE,\n"
+	.string "¡Bienvenido a la TORRE BATALLA,\n"
 	.string "¡RINCÓN DE BATALLA MÚLTIPLE!\p"
 	.string "Lamentablemente, las SALAS DE\n"
 	.string "COMBATE siguen en construcción.\p"
@@ -1066,7 +1066,7 @@ BattleFrontier_BattleTowerLobby_Text_LookForwardToAnotherChallenge_hns:
 	.string "otro desafío!$"
 
 BattleFrontier_BattleTowerLobby_Text_WhichLevelMode_hns:
-	.string "La SALA DE BATALLA tiene dos niveles\n"
+	.string "La SALA BATALLA tiene dos niveles\n"
 	.string "niveles: Nivel 50 y Nivel Abierto.\l"
 	.string "¿Cuál eliges?$"
 
@@ -1076,16 +1076,16 @@ BattleFrontier_BattleTowerLobby_Text_PleaseSelectMons_hns:
 	.string "usar.$"
 
 BattleFrontier_BattleTowerLobby_Text_OkayToSaveBeforeEntering_hns:
-	.string "Antes de entrar a una SALA DE BATALLA,\n"
+	.string "Antes de entrar a una SALA BATALLA,\n"
 	.string "Debes guardar la partida. ¿Está bien?$"
 
 BattleFrontier_BattleTowerLobby_Text_ShowYouToBattleRoom_hns:
 	.string "Ahora te llevaré a la\n"
-	.string "SALA DE BATALLA {STR_VAR_1}.$"
+	.string "SALA BATALLA {STR_VAR_1}.$"
 
 BattleFrontier_BattleTowerLobby_Text_RecordLastMatch_hns:
-	.string "¿Registro tu última BATALLA TORRE?\n"
-	.string "BATTLE ARENA en tu FRONTIER PASS?$"
+	.string "¿Registro tu última TORRE BATALLA?\n"
+	.string "DOJO BATALLA en tu PASE DEL FRENTE?$"
 
 @ Unused
 BattleFrontier_BattleTowerLobby_Text_NotEnoughValidMonsLv50_hns:
@@ -1167,21 +1167,21 @@ BattleFrontier_BattleTowerLobby_Text_NotEnoughValidMonsLvOpen_hnsMultis_hns:
 BattleFrontier_BattleTowerLobby_Text_WelcomSingleBattle_hns:
 	.string "Donde el talento de ENTRENADORES\n"
 	.string "ENTRENADORES se ponen a prueba!\p"
-	.string "¡Bienvenido a la TORRE COMBATE!\p"
+	.string "¡Bienvenido a la TORRE BATALLA!\p"
 	.string "Soy tu guía para las SALAS DE\n"
 	.string "COMBATE INDIVIDUAL.$"
 
 BattleFrontier_BattleTowerLobby_Text_TakeSinglesChallenge_hns:
 	.string "¿Quieres ir a la SALA INDIVIDUAL?\n"
-	.string "¿Reto de SALA DE BATALLA?$"
+	.string "¿Reto de SALA BATALLA?$"
 
 BattleFrontier_BattleTowerLobby_Text_ExplainSinglesChallenge_hns:
-	.string "Las SALAS de BATALLA INDIVIDUAL\n"
-	.string "de la TORRE DE BATALLA son para\l"
+	.string "Las SALAS BATALLA INDIVIDUAL\n"
+	.string "de la TORRE BATALLA son para\l"
 	.string "BATALLAS INDIVIDUALES con 3 POKéMON.\p"
-	.string "Hay muchas SALAS DE BATALLA\n"
-	.string "en la TORRE DE BATALLA para equipos.\p"
-	.string "En cada SALA DE BATALLA INDIVIDUAL,\n"
+	.string "Hay muchas SALAS BATALLA\n"
+	.string "en la TORRE BATALLA para equipos.\p"
+	.string "En cada SALA BATALLA INDIVIDUAL,\n"
 	.string "7 ENTRENADORES esperan tu reto.\p"
 	.string "Si logras derrotar a los siete,\n"
 	.string "ganarás Puntos de Batalla.\p"
@@ -1197,21 +1197,21 @@ BattleFrontier_BattleTowerLobby_Text_SelectThreeMons_hns:
 BattleFrontier_BattleTowerLobby_Text_WelcomeDoubleBattle_hns:
 	.string "Donde el talento de ENTRENADORES\n"
 	.string "ENTRENADORES se ponen a prueba!\p"
-	.string "¡Bienvenido a la TORRE COMBATE!\p"
+	.string "¡Bienvenido a la TORRE BATALLA!\p"
 	.string "Soy tu guía para el DOBLE\n"
 	.string "COMBATE INDIVIDUAL.$"
 
 BattleFrontier_BattleTowerLobby_Text_TakeDoublesChallenge_hns:
 	.string "¿Quieres intentar el DOBLE?\n"
-	.string "¿Reto de SALA DE BATALLA?$"
+	.string "¿Reto de SALA BATALLA?$"
 
 BattleFrontier_BattleTowerLobby_Text_ExplainDoublesChallenge_hns:
 	.string "El COMBATE DOBLE de la TORRE\n"
-	.string "de la TORRE DE BATALLA son para\l"
+	.string "de la TORRE BATALLA son para\l"
 	.string "COMBATES DOBLES con cuatro POKéMON.\p"
-	.string "Hay muchas SALAS DE COMBATE DOBLE\n"
-	.string "en la TORRE DE BATALLA para equipos.\p"
-	.string "En cada SALA DE COMBATE DOBLE,\n"
+	.string "Hay muchas SALAS BATALLA DOBLE\n"
+	.string "en la TORRE BATALLA para equipos.\p"
+	.string "En cada SALA BATALLA DOBLE,\n"
 	.string "7 ENTRENADORES esperan tu reto.\p"
 	.string "Si logras derrotar a los siete,\n"
 	.string "ganarás Puntos de Batalla.\p"
@@ -1227,29 +1227,29 @@ BattleFrontier_BattleTowerLobby_Text_PleaseSelectFourMons_hns:
 BattleFrontier_BattleTowerLobby_Text_WelcomeMultiBattle_hns:
 	.string "Donde el talento de ENTRENADORES\n"
 	.string "ENTRENADORES se ponen a prueba!\p"
-	.string "¡Bienvenido a la TORRE COMBATE!\p"
+	.string "¡Bienvenido a la TORRE BATALLA!\p"
 	.string "Soy tu guía para el MULTI\n"
 	.string "COMBATE INDIVIDUAL.$"
 
 BattleFrontier_BattleTowerLobby_Text_TakeMultisChallenge_hns:
 	.string "¿Quieres intentar el MULTI?\n"
-	.string "¿Reto de SALA DE BATALLA?$"
+	.string "¿Reto de SALA BATALLA?$"
 
 BattleFrontier_BattleTowerLobby_Text_ExplainMultisChallenge_hns:
 	.string "El COMBATE MULTI de la TORRE\n"
-	.string "de la TORRE DE BATALLA son para\l"
+	.string "de la TORRE BATALLA son para\l"
 	.string "COMBATES MULTI.\p"
 	.string "Para COMBATES MULTI, debes aliarte\n"
 	.string "con un ENTRENADOR en la TORRE y entrar\l"
 	.string "con dos POKéMON cada uno.\p"
 	.string "En la TORRE hay una sala llamada\n"
-	.string "el SALÓN DE BATALLA, donde podrás\l"
+	.string "el SALÓN BATALLA, donde podrás\l"
 	.string "conocer a otros ENTRENADORES.\p"
 	.string "Allí debes buscar un ENTRENADOR que\n"
 	.string "sea tu pareja en BATALLAS DOBLES.\p"
 	.string "Cuando tengas pareja, te llevarán\n"
-	.string "a una SALA DE BATALLA DOBLE.\p"
-	.string "En la SALA DE BATALLA DOBLE, siete\n"
+	.string "a una SALA BATALLA DOBLE.\p"
+	.string "En la SALA BATALLA DOBLE, siete\n"
 	.string "parejas esperan tu desafío.\p"
 	.string "Si logras derrotar a las siete\n"
 	.string "equipos, ganarás Puntos de Batalla.\p"
@@ -1265,17 +1265,17 @@ BattleFrontier_BattleTowerLobby_Text_PleaseSelectTwoMons_hns:
 BattleFrontier_BattleTowerLobby_Text_WelcomeLinkMultiBattle_hns:
 	.string "Donde el talento de ENTRENADORES\n"
 	.string "ENTRENADORES se ponen a prueba!\p"
-	.string "¡Bienvenido a la TORRE COMBATE!\p"
+	.string "¡Bienvenido a la TORRE BATALLA!\p"
 	.string "Soy tu guía del LINK MULTI\n"
 	.string "COMBATE INDIVIDUAL.$"
 
 BattleFrontier_BattleTowerLobby_Text_TakeLinkMultisChallenge_hns:
 	.string "¿Quieres usar el LINK MULTI\n"
-	.string "¿Reto de SALA DE BATALLA?$"
+	.string "¿Reto de SALA BATALLA?$"
 
 BattleFrontier_BattleTowerLobby_Text_ExplainLinkMultisChallenge_hns:
 	.string "El COMBATE MULTI de la TORRE\n"
-	.string "de la TORRE DE BATALLA son para\l"
+	.string "de la TORRE BATALLA son para\l"
 	.string "MULTI BATALLAS con un amigo?\p"
 	.string "Debes conectarte con tu amigo usando\n"
 	.string "Adaptadores Inalámbricos o un cable\l"
@@ -1283,7 +1283,7 @@ BattleFrontier_BattleTowerLobby_Text_ExplainLinkMultisChallenge_hns:
 	.string "Debes aliarte con tu amigo y\n"
 	.string "usar dos tipos de POKéMON distintos.\p"
 	.string "Hay muchas SALAS MULTI BATALLA\n"
-	.string "en la TORRE DE BATALLA para equipos.\p"
+	.string "en la TORRE BATALLA para equipos.\p"
 	.string "En una SALA MULTI BATALLA, siete\n"
 	.string "Tú y tu amigo esperan equipos\l"
 	.string "para un desafío de combate doble.\p"
@@ -1347,7 +1347,7 @@ BattleFrontier_BattleTowerLobby_Text_SaveGameBeforeShowingIn_hns:
 
 BattleFrontier_BattleTowerLobby_Text_CongratsDefeatedMaiden_hns:
 	.string "¡Felicidades!\n"
-	.string "¡Venciste a la DONCELLA DEL SALÓN\l"
+	.string "¡Venciste a la DAMA DE LA TORRE\l"
 	.string "y derrotaste a siete ENTRENADORES!$"
 
 BattleFrontier_BattleTowerLobby_Text_AwardYouTheseBattlePoints_hns:
@@ -1364,12 +1364,12 @@ BattleFrontier_BattleTowerLobby_Text_ReadWhichHeading_hns:
 	.string "¿Qué sección quieres leer?$"
 
 BattleFrontier_BattleTowerLobby_Text_ExplainTowerRules_hns:
-	.string "La BATTLE TOWER es un lugar donde\n"
+	.string "La TORRE BATALLA es un lugar donde\n"
 	.string "se libran cuatro tipos de batallas:\l"
 	.string "BATALLA INDIVIDUAL, DOBLE, MULTI\l"
 	.string "y BATALLA MULTI por enlace.\p"
 	.string "Para cada tipo, existen\n"
-	.string "SALAS DE BATALLA separadas.\p"
+	.string "SALAS BATALLA separadas.\p"
 	.string "Habla con el guía que ofrece\n"
 	.string "el tipo de batalla que quieras.$"
 
@@ -1383,9 +1383,9 @@ BattleFrontier_BattleTowerLobby_Text_ExplainMonRules_hns:
 	.string "y los modos MULTI piden dos cada uno.$"
 
 BattleFrontier_BattleTowerLobby_Text_ExplainSalonRules_hns:
-	.string "En el SALÓN DE COMBATE debes\n"
+	.string "En el SALÓN BATALLA debes\n"
 	.string "buscar un compañero para formar un\l"
-	.string "equipo en la SALA DE COMBATE MULTI.\p"
+	.string "equipo en la SALA BATALLA MULTI.\p"
 	.string "Elige al mejor compañero\n"
 	.string "viendo los POKéMON y los\l"
 	.string "movimientos de otros ENTRENADORES.\p"
