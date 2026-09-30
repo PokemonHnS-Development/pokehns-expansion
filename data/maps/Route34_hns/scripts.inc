@@ -127,7 +127,7 @@ Route34_Text_YoungsterSamuel_Seen:
 	.string "¡Oye! ¡Busco a MANKEY!$"
 
 Route34_Text_YoungsterSamuel_Beaten:
-	.string "Beaten by a passing stranger!$"
+	.string "¡Me venció un desconocido!$"
 
 Route34_Text_YoungsterSamuel_After:
 	.string "Entrenaré aún más duro.\p"

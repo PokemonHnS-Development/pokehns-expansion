@@ -1235,8 +1235,8 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .description = COMPOUND_STRING(
             "En el fervor de una gran batalla,\n"
             "lanza brasas entre sus plumas y\n"
-            "sale volando. Así termina el combate.\n"
-            "a su presa con una patada enorme."),
+            "sale volando. Así termina el combate:\n"
+            "le da una patada enorme a su presa."),
         .pokemonScale = 282,
         .pokemonOffset = 4,
         .trainerScale = 256,
@@ -2603,7 +2603,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .description = COMPOUND_STRING(
             "Presume de una fuerza física suprema.\n"
             "Quienes quieran ser el Entrenador de\n"
-            "un Pangoro deberán hablar con él.\n"
+            "un Pangoro deberán hablar con él\n"
             "con sus puños."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
@@ -3557,7 +3557,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .description = COMPOUND_STRING(
             "Slurpuff distingue hasta el aroma\n"
             "más tenue. Usa su sensible olfato\n"
-            "para ayudar a los reposteros.\n"
+            "para ayudar a los reposteros\n"
             "en su labor."),
         .pokemonScale = 366,
         .pokemonOffset = 7,
@@ -3628,8 +3628,8 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .description = COMPOUND_STRING(
             "Lanza destellos desde su cuerpo,\n"
             "quitando al rival las ganas de\n"
-            "luchar. Así aprovecha el momento.\n"
-            "escapan corriendo y se esconden."),
+            "luchar. Así aprovecha el momento\n"
+            "en que escapan y se esconden."),
         .pokemonScale = 491,
         .pokemonOffset = 12,
         .trainerScale = 256,
@@ -4028,7 +4028,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .description = COMPOUND_STRING(
             "Se camufla como alga podrida para\n"
             "ocultarse y ganar poder para su\n"
-            "evolución. Rocían veneno líquido.\n"
+            "evolución. Rocían veneno líquido\n"
             "a las presas que se acercan."),
         .pokemonScale = 432,
         .pokemonOffset = 13,
@@ -4101,8 +4101,8 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .weight = 815,
         .description = COMPOUND_STRING(
             "Su veneno es tan fuerte que puede\n"
-            "por el casco de un petrolero. Dicen\n"
-            "historias de barcos que vagan por\n"
+            "corroer el casco de un petrolero.\n"
+            "Dicen que hay barcos que vagan por\n"
             "donde vive Dragalge, sin volver jamás."),
         .pokemonScale = 267,
         .pokemonOffset = 2,
@@ -4306,7 +4306,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .description = COMPOUND_STRING(
             "Al expulsar agua por la boquilla de\n"
             "su enorme garra, puede moverse a\n"
-            "a una velocidad de 60 nudos. Lanzan\n"
+            "una velocidad de 60 nudos. Lanzan\n"
             "balas de cañón hechas de agua."),
         .pokemonScale = 272,
         .pokemonOffset = 3,
@@ -4515,8 +4515,8 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .description = COMPOUND_STRING(
             "Sus mandíbulas tienen fuerza\n"
             "para triturar un auto. Si algo\n"
-            "no le gusta, reacciona con furia.\n"
-            "berrinche y se vuelve salvaje."),
+            "no le gusta, hace un berrinche\n"
+            "y se vuelve salvaje."),
         .pokemonScale = 366,
         .pokemonOffset = 7,
         .trainerScale = 257,
@@ -5001,7 +5001,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .description = COMPOUND_STRING(
             "Nace de las altas temperaturas y\n"
             "presiones subterráneas, se defiende\n"
-            "lanzando rayos desde su joya.\n"
+            "lanzando rayos desde la joya\n"
             "de su cuerpo."),
         .pokemonScale = 530,
         .pokemonOffset = 13,
@@ -5152,7 +5152,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .description = COMPOUND_STRING(
             "La mucosa de este POKéMON puede\n"
             "disolverlo todo. Sin dientes, rocía\n"
-            "mucosa en su presa para disolverla.\n"
+            "mucosa en su presa para disolverla\n"
             "y luego absorbe lo disuelto."),
         .pokemonScale = 366,
         .pokemonOffset = 7,
@@ -5299,7 +5299,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .description = COMPOUND_STRING(
             "Una criatura dada a la melancolía.\n"
             "Su caparazón metálico surgió por la\n"
-            "reacción de la mucosidad de su piel.\n"
+            "reacción de la mucosidad de su piel\n"
             "con el hierro del agua de Hisui."),
         .pokemonScale = 366,
         .pokemonOffset = 7,
@@ -5380,8 +5380,8 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .description = COMPOUND_STRING(
             "Odia la soledad y es muy apegado.\n"
             "Se enfurece y hace caos si quienes\n"
-            "más quiere lo dejan solo.\n"
-            "side."),
+            "más quiere lo dejan solo\n"
+            "de lado."),
         .pokemonScale = 261,
         .pokemonOffset = 1,
         .trainerScale = 334,
