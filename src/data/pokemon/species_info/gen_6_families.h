@@ -502,8 +502,8 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .description = COMPOUND_STRING(
             "Usa ramas llameantes para\n"
             "deslumbrar a sus rivales antes de\n"
-            "incinerarlos con un\n"
-            "huge fireball."),
+            "incinerarlos con una\n"
+            "gran bola de fuego."),
         .frontPic = gMonFrontPic_DelphoxMega,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
@@ -2335,8 +2335,8 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .description = COMPOUND_STRING(
             "La Flor Eterna ha absorbido\n"
             "toda la energía de la Mega\n"
-            "Evolución. Ahora la flor ataca.\n"
-            "enemies on its own."),
+            "Evolución. Ahora la flor ataca\n"
+            "a los enemigos por su cuenta."),
         .frontPic = gMonFrontPic_FloetteMega,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
@@ -2531,7 +2531,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             "La hoja de su boca no tiene utilidad,\n"
             "solo intenta verse genial. Es muy\n"
             "travieso, así que no es apto para\n"
-            "inexperienced Trainers."),
+            "ENTRENADORES novatos."),
         .pokemonScale = 422,
         .pokemonOffset = 12,
         .trainerScale = 256,
@@ -2949,7 +2949,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             "Mega Meowstic usa su poder psíquico\n"
             "para comprimir o expandir todo. Así\n"
             "vence al rival deformando el espacio\n"
-            "itself."),
+            "mismo."),
         .frontPic = gMonFrontPic_MeowsticMega,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
@@ -3007,7 +3007,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             "Mega Meowstic usa su poder psíquico\n"
             "para comprimir o expandir todo. Así\n"
             "vence al rival deformando el espacio\n"
-            "itself."),
+            "mismo."),
         .frontPic = gMonFrontPic_MeowsticMega,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
@@ -3064,7 +3064,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             "Si alguien osa tocar su empuñadura,\n"
             "envuelve el brazo de esa persona con\n"
             "una tela azul y absorbe su energía\n"
-            "energy completely."),
+            "por completo."),
         .pokemonScale = 366,
         .pokemonOffset = 7,
         .trainerScale = 257,
@@ -3414,8 +3414,8 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .description = COMPOUND_STRING(
             "Su aroma es tan fuerte que,\n"
             "si un Entrenador no disfruta\n"
-            "el olor, le costará soportarlo.\n"
-            "walking alongside it."),
+            "el olor, le costará soportarlo\n"
+            "al caminar a su lado."),
         .pokemonScale = 366,
         .pokemonOffset = 7,
         .trainerScale = 257,
@@ -3482,8 +3482,8 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .description = COMPOUND_STRING(
             "Como solo come dulces, su pelaje\n"
             "es pegajoso como el algodón de azúcar.\n"
-            "Para enredar rivales en batalla, el\n"
-            "extrudes sticky white threads."),
+            "Para enredar rivales en batalla,\n"
+            "escupe hebras blancas y pegajosas."),
         .pokemonScale = 491,
         .pokemonOffset = 12,
         .trainerScale = 256,
@@ -4235,7 +4235,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             "Mediante expulsiones controladas de\n"
             "gas, lanza agua como un disparo.\n"
             "De cerca, puede incluso destrozar\n"
-            "large rocks."),
+            "rocas grandes."),
         .pokemonScale = 432,
         .pokemonOffset = 13,
         .trainerScale = 256,
@@ -4380,8 +4380,8 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .description = COMPOUND_STRING(
             "Hacen su hogar en los desiertos.\n"
             "Generan su propia energía al tomar\n"
-            "bajo el sol, así que no necesitan\n"
-            "a requirement."),
+            "el sol, así que no necesitan\n"
+            "alimento alguno."),
         .pokemonScale = 432,
         .pokemonOffset = 13,
         .trainerScale = 256,
@@ -4585,8 +4585,8 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .description = COMPOUND_STRING(
             "Sus mandíbulas pueden destrozar\n"
             "placas de metal como si fueran\n"
-            "papel; era invencible en el pasado.\n"
-            "world it once inhabited."),
+            "papel; era invencible en el\n"
+            "mundo que habitaba antaño."),
         .pokemonScale = 257,
         .pokemonOffset = 10,
         .trainerScale = 423,
@@ -4875,7 +4875,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .description = COMPOUND_STRING(
             "la Megaevolución ha potenciado\n"
             "sus músculos. Hawlucha presume de\n"
-            "show off its strength."),
+            "su fuerza."),
         .frontPic = gMonFrontPic_HawluchaMega,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 2,
@@ -5078,8 +5078,8 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .description = COMPOUND_STRING(
             "Se protege con su mucosa viscosa\n"
             "y llena de gérmenes. Quien lo\n"
-            "toque necesitará un buen lavado.\n"
-            "hand-washing."),
+            "toque necesitará un buen lavado\n"
+            "de manos."),
         .pokemonScale = 530,
         .pokemonOffset = 13,
         .trainerScale = 256,
@@ -6132,8 +6132,8 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .description = COMPOUND_STRING(
             "Un Pumpkaboo enorme evoluciona\n"
             "en un Gourgeist enorme. Sus\n"
-            "las proporciones físicas también se\n"
-            "its descendants."),
+            "proporciones físicas también se\n"
+            "transmiten a sus descendientes."),
         .pokemonScale = 338,
         .pokemonOffset = 8,
         .trainerScale = 256,
@@ -6206,7 +6206,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             "Bloquea ataques con el hielo que\n"
             "protege su cuerpo. Usa aire frío para\n"
             "reparar grietas con hielo nuevo. Viven\n"
-            "in herds on snowy mountains."),
+            "en grupos en montañas nevadas."),
         .pokemonScale = 305,
         .pokemonOffset = 7,
         .trainerScale = 257,
@@ -6434,7 +6434,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             "Viven en cuevas oscuras. Incluso un\n"
             "luchador robusto se marearía y\n"
             "no podría sostenerse ante sus\n"
-            "200,000-hertz ultrasonic waves."),
+            "ondas ultrasónicas de 200 000 Hz."),
         .pokemonScale = 432,
         .pokemonOffset = 13,
         .trainerScale = 256,
@@ -7039,7 +7039,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
             "Es la forma perfecta de Zygarde.\n"
             "Desde el orificio de su pecho,\n"
             "irradia energía de gran potencia que\n"
-            "eliminates everything."),
+            "lo elimina todo."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 721,

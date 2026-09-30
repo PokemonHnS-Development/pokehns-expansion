@@ -312,8 +312,8 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .description = COMPOUND_STRING(
             "Ama comer bayas tostadas, pero a veces\n"
             "se emociona y las quema por completo.\n"
-            "Lanza fuego a través de su nariz.\n"
-            "its nose."),
+            "Lanza fuego a través de su\n"
+            "nariz."),
         .pokemonScale = 432,
         .pokemonOffset = 15,
         .trainerScale = 256,
@@ -1032,8 +1032,8 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .description = COMPOUND_STRING(
             "Enfrenta a rivales fuertes con gran\n"
             "valor. Como no ladra, es muy\n"
-            "querido por los Entrenadores.\n"
-            "in apartment buildings."),
+            "querido por los Entrenadores\n"
+            "que viven en apartamentos."),
         .pokemonScale = 491,
         .pokemonOffset = 15,
         .trainerScale = 256,
@@ -2538,7 +2538,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
             "Vive en bosques oscuros y cuevas.\n"
             "La succión de su nariz le permite\n"
             "pegarse a las cuevas al dormir.\n"
-            "It leaves a heart-shaped mark behind."),
+            "Deja una marca con forma de corazón."),
         .pokemonScale = 491,
         .pokemonOffset = 12,
         .trainerScale = 256,
@@ -2623,8 +2623,8 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .description = COMPOUND_STRING(
             "Quien entra en contacto con las\n"
             "ondas ultrasónicas que emite un\n"
-            "macho en cortejo siente placer.\n"
-            "mood shift."),
+            "macho en cortejo siente un\n"
+            "cambio de humor positivo."),
         .pokemonScale = 338,
         .pokemonOffset = 8,
         .trainerScale = 256,
@@ -2697,8 +2697,8 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .description = COMPOUND_STRING(
             "Cava el suelo a 30 mph girando\n"
             "su cuerpo rápidamente.\n"
-            "Podría mover un auto por la superficie\n"
-            "a good race."),
+            "Podría darle una buena carrera a un\n"
+            "coche que circule por la superficie."),
         .pokemonScale = 530,
         .pokemonOffset = 13,
         .trainerScale = 256,
@@ -4052,7 +4052,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .description = COMPOUND_STRING(
             "Su veneno mortal emite un tenue\n"
             "brillo. El veneno afecta a Scolipede\n"
-            "mind, honing its viciousness."),
+            "y agudiza su crueldad."),
         .frontPic = gMonFrontPic_ScolipedeMega,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
@@ -4111,8 +4111,8 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .description = COMPOUND_STRING(
             "Cuando halla otros de su especie, se\n"
             "unen todos. Cuando hay suficientes\n"
-            "recolectado, la masa se parece a un\n"
-            "cumulonimbus cloud."),
+            "de ellos, la masa se parece a un\n"
+            "cumulonimbo."),
         .pokemonScale = 530,
         .pokemonOffset = 15,
         .trainerScale = 256,
@@ -4816,8 +4816,8 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .description = COMPOUND_STRING(
             "Se oculta en la arena y muerde las\n"
             "patas de cualquier presa que pase\n"
-            "sin cuidado sobre él. Su favorita\n"
-            "food is Trapinch."),
+            "sin cuidado sobre él. Su comida\n"
+            "favorita son los Trapinch."),
         .pokemonScale = 365,
         .pokemonOffset = 14,
         .trainerScale = 256,
@@ -4957,7 +4957,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
             "POKéMON muy violento, nunca deja\n"
             "que su presa escape. Sus mandíbulas\n"
             "son tan fuertes que pueden aplastar\n"
-            "an automobile."),
+            "la carrocería de un coche."),
         .pokemonScale = 268,
         .pokemonOffset = 2,
         .trainerScale = 271,
@@ -5225,7 +5225,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
             "Cuanto más frío sienten, más\n"
             "energía tienen. Congelan su\n"
             "aliento para hacer bolas de nieve\n"
-            "as ammo for playful snowball fights."),
+            "y usarlas como munición al jugar."),
         .pokemonScale = 422,
         .pokemonOffset = 14,
         .trainerScale = 256,
@@ -5823,7 +5823,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
             "la Megaevolución hizo que la piel\n"
             "de Scrafty se vuelva blanca, siendo\n"
             "más resistente y flexible. Claro,\n"
-            "Pokémon is still as feisty as ever."),
+            "este POKéMON sigue igual de bravo."),
         .frontPic = gMonFrontPic_ScraftyMega,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 1,
@@ -6023,7 +6023,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
             "Los ladrones que los confunden con\n"
             "ataúdes reales y se acercan demasiado\n"
             "quedan atrapados en sus cuerpos. Sus\n"
-            "are covered in pure gold."),
+            "cuerpos están bañados en oro puro."),
         .pokemonScale = 259,
         .pokemonOffset = 0,
         .trainerScale = 290,
@@ -6100,7 +6100,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
             "Una losa de arcilla con grabados\n"
             "poseyó a un Yamask. Se dice que la\n"
             "losa está absorbiendo la\n"
-            "Yamask's dark power."),
+            "energía oscura de Yamask."),
         .pokemonScale = 432,
         .pokemonOffset = 13,
         .trainerScale = 256,
@@ -6446,7 +6446,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
             "Son inteligentes y cooperan para\n"
             "cazar presas. Cuando un Archeops\n"
             "tenía a la presa acorralada, otro\n"
-            "swoop on it."),
+            "se lanzaba en picado sobre ella."),
         .pokemonScale = 265,
         .pokemonOffset = 2,
         .trainerScale = 262,
@@ -6871,7 +6871,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
             "Obtiene poder del resentimiento,\n"
             "que sube como energía a su cabeza y\n"
             "toma la forma de sus enemigos. En\n"
-            "way, Zorua vents lingering malice."),
+            "cierto modo, Zorua libera su rencor."),
         .pokemonScale = 365,
         .pokemonOffset = 12,
         .trainerScale = 256,
@@ -6951,8 +6951,8 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .description = COMPOUND_STRING(
             "Sin importar su propia seguridad,\n"
             "Zoroark ataca con una energía amarga\n"
-            "energía tan intensa que lacera\n"
-            "Zoroark's own body."),
+            "tan intensa que lacera\n"
+            "el propio cuerpo de Zoroark."),
         .pokemonScale = 259,
         .pokemonOffset = 1,
         .trainerScale = 296,
@@ -7093,8 +7093,8 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .description = COMPOUND_STRING(
             "Su pelaje blanco es suave al tacto.\n"
             "El cuerpo de Cinccino tiene un aceite\n"
-            "que repele el polvo y la suciedad.\n"
-            "attacks, such as punches."),
+            "que repele el polvo y la suciedad,\n"
+            "ayudándolo a desviar los golpes."),
         .pokemonScale = 432,
         .pokemonOffset = 13,
         .trainerScale = 256,
@@ -7447,7 +7447,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
             "Cuando sus mentes, ya divididas,\n"
             "tienen los mismos pensamientos,\n"
             "estos Pokémon muestran su máximo\n"
-            "psychic power."),
+            "poder psíquico."),
         .pokemonScale = 422,
         .pokemonOffset = 12,
         .trainerScale = 256,
@@ -8339,9 +8339,9 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .weight = 925,
         .description = COMPOUND_STRING(
             "Sawsbuck en su Forma Otoño son\n"
-            "conocidos por tener un temperamento\n"
-            "caracteres. Los machos pelean entre sí\n"
-            "incessantly."),
+            "conocidos por tener muy poco\n"
+            "genio. Los machos pelean entre sí\n"
+            "sin cesar."),
         .pokemonScale = 256,
         .pokemonOffset = 1,
         .trainerScale = 326,
@@ -8682,7 +8682,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
             "Atrae POKéMON con su patrón que\n"
             "parece una POKé BALL, y luego\n"
             "suelta esporas venenosas.\n"
-            "Poké Ball is unknown."),
+            "Aún se desconoce la razón."),
         .pokemonScale = 682,
         .pokemonOffset = 24,
         .trainerScale = 256,
@@ -10395,7 +10395,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
             "Son amables, pero implacables\n"
             "al defender su territorio. Sus\n"
             "colmillos no pierden el filo al cortar\n"
-            "steel beams."),
+            "vigas de acero."),
         .pokemonScale = 267,
         .pokemonOffset = 2,
         .trainerScale = 286,
@@ -11312,7 +11312,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .description = COMPOUND_STRING(
             "La energía interna de Golurk ha sido\n"
             "estimulada por la Megaevolución.\n"
-            "The Pokémon could explode at any moment."),
+            "Podría explotar en cualquier momento."),
         .frontPic = gMonFrontPic_GolurkMega,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
@@ -11643,7 +11643,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
             "Con sus garras, este POKéMON perfora\n"
             "a su presa y luego la picotea.\n"
             "Aunque come bayas, es un\n"
-            "carnivore at heart."),
+            "carnívoro de corazón."),
         .pokemonScale = 432,
         .pokemonOffset = 13,
         .trainerScale = 256,
@@ -11861,8 +11861,8 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .description = COMPOUND_STRING(
             "Aún no vuela, debe esperar a que sus\n"
             "alas se desarrollen. Protegen su\n"
-            "trasero con huesos que reúnen los\n"
-            "Mandibuzz."),
+            "trasero con huesos que las\n"
+            "Mandibuzz les regalan."),
         .pokemonScale = 432,
         .pokemonOffset = 13,
         .trainerScale = 256,
@@ -13269,8 +13269,8 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .description = COMPOUND_STRING(
             "Landorus vuela por el cielo en\n"
             "esta forma, otorgando cosechas\n"
-            "cosechas en la tierra y ganando el\n"
-            "people's reverence."),
+            "en la tierra y ganando el\n"
+            "respeto de la gente."),
         .pokemonScale = 268,
         .pokemonOffset = 2,
         .trainerScale = 271,

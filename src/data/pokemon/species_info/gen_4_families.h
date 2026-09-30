@@ -100,8 +100,8 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .description = COMPOUND_STRING(
             "Dicen que el Grotle del bosque tiene\n"
             "su propio pozo de agua secreta.\n"
-            "Lleva a otros POKéMON allí.\n"
-            "its back."),
+            "Lleva a otros POKéMON allí\n"
+            "en su lomo."),
         .pokemonScale = 320,
         .pokemonOffset = 9,
         .trainerScale = 256,
@@ -546,7 +546,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
             "Como cada Prinplup se cree que es\n"
             "el más importante, nunca pueden\n"
             "forman grupos. Buscan presas en\n"
-            "icy seas."),
+            "aguas heladas."),
         .pokemonScale = 366,
         .pokemonOffset = 10,
         .trainerScale = 257,
@@ -961,7 +961,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
             "Mega Staraptor es un gran volador.\n"
             "Puede volar fácilmente por el cielo\n"
             "sujetando a un Steelix que pesa más\n"
-            "880 lbs."),
+            "de 400 kg."),
         .frontPic = gMonFrontPic_StaraptorMega,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
@@ -1531,8 +1531,8 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .description = COMPOUND_STRING(
             "Tiene ojos que pueden ver a través\n"
             "de cualquier cosa. La habilidad de\n"
-            "Luxray es útil para ver objetos.\n"
-            "it's scouting for danger."),
+            "Luxray es útil para ver objetos\n"
+            "cuando acecha el peligro."),
         .pokemonScale = 265,
         .pokemonOffset = 2,
         .trainerScale = 262,
@@ -1758,7 +1758,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
             "Este POKéMON vivió en selvas primigeni\n"
             "Pocos enemigos habrían querido\n"
             "enfrentarse a su pesada armadura\n"
-            "face, so it's thought."),
+            "facial, según se cree."),
         .pokemonScale = 432,
         .pokemonOffset = 16,
         .trainerScale = 256,
@@ -2612,7 +2612,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
             "Infla su saco para flotar y así se\n"
             "la cara fuera del agua y vigilar el\n"
             "movimiento de sus presas. Nada girando\n"
-            "two tails like a screw."),
+            "sus dos colas como un tornillo."),
         .pokemonScale = 365,
         .pokemonOffset = 12,
         .trainerScale = 256,
@@ -3552,7 +3552,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
             "La Megaevolución despierta su instinto\n"
             "instintos. Perdió el pelaje que\n"
             "estorbaba sus ataques.\n"
-            "crescent."),
+            "Sus orejas tienen forma de media luna."),
         .pokemonScale = 282,
         .pokemonOffset = 4,
         .trainerScale = 256,
@@ -3769,7 +3769,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
             "Se protege rociando un fluido\n"
             "apestoso desde su parte trasera\n"
             "para ahuyentar atacantes. Huele mal\n"
-            "for 24 hours."),
+            "durante 24 horas."),
         .pokemonScale = 491,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -4151,8 +4151,8 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .description = COMPOUND_STRING(
             "Un POKéMON formado por 108 espíritus.\n"
             "Sus constantes travesuras y maldades\n"
-            "hicieron que fuera sellado en un\n"
-            "Odd Keystone by a mysterious spell."),
+            "hicieron que fuera sellado en una\n"
+            "Piedra Espíritu con un hechizo oculto."),
         .pokemonScale = 305,
         .pokemonOffset = 7,
         .trainerScale = 257,
@@ -4558,8 +4558,8 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .description = COMPOUND_STRING(
             "Garchomp ha logrado una nueva forma\n"
             "forma. Vuela velozmente hacia el rival\n"
-            "y los desgarra con sus siniestros\n"
-            "wing claws."),
+            "y los desgarra con las siniestras\n"
+            "garras de sus alas."),
         //.frontPic = gMonBackPic_CircledQuestionMark,
         //.frontPicSize = MON_COORDS_SIZE(40, 40),
         //.frontPicYOffset = 12,
@@ -4616,8 +4616,8 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .description = COMPOUND_STRING(
             "Puede discernir el estado físico y\n"
             "emocional de personas, POKéMON y\n"
-            "otras cosas naturales por su forma.\n"
-            "aura waves."),
+            "otras cosas naturales por la forma\n"
+            "de sus ondas de aura."),
         .pokemonScale = 365,
         .pokemonOffset = 13,
         .trainerScale = 256,
@@ -4841,7 +4841,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
             "Al cubrirse totalmente con su aura,\n"
             "Mega Lucario Z puede desviar todo tipo\n"
             "ataca, luchando con mucha elegancia\n"
-            "dancing."),
+            "como si bailara."),
         .frontPic = gMonFrontPic_LucarioMegaZ,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
@@ -5312,7 +5312,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
             "Se balancea y esquiva los ataques\n"
             "de sus rivales, mueve su cuerpo\n"
             "se acerca y luego arremete con sus\n"
-            "poisonous claws."),
+            "garras venenosas."),
         .pokemonScale = 272,
         .pokemonOffset = 3,
         .trainerScale = 256,
@@ -6116,7 +6116,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
             "En esta forma, a Rotom le gusta hacer\n"
             "bromas gélidas. ¡Podría convertir el\n"
             "baño que acabas de llenar en hielo!\n"
-            "It battles by spewing cold air."),
+            "Combate lanzando aire gélido."),
         .pokemonScale = 530,
         .pokemonOffset = 13,
         .trainerScale = 256,
@@ -6823,7 +6823,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
             "Vuela por el cielo con una forma que\n"
             "se parece al creador de todo.\n"
             "Tal vez esta imitación sea una\n"
-            "strategy for gaining Arceus's powers."),
+            "estrategia para obtener su poder."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 650,
@@ -7605,7 +7605,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
             "Su poder oscuro bloquea el sol,\n"
             "sumiendo el área circundante en la\n"
             "oscuridad. No hay escapatoria de\n"
-            "evil eye."),
+            "su ojo maligno."),
         .frontPic = gMonFrontPic_DarkraiMega,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
