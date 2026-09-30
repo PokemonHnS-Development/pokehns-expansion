@@ -638,7 +638,7 @@ GoldenrodCity_GameCorner_Text_PokefanF:
     .string "Pero el premio es mucho menor.$"
 
 GoldenrodCity_GameCorner_Text_CooltrainerF:
-    .string "I won't quit until I win!$"
+    .string "¡No me rendiré hasta ganar!$"
 
 GoldenrodCity_GameCorner_Text_Gentleman:
     .string "Le enseñé RAYO HIELO a mi POKéMON.\p"
@@ -652,7 +652,7 @@ GoldenrodCity_GameCorner_Text_PokefanM2:
     .string "MONEDERO en el SUBTERRÁNEO.$"
 
 GoldenrodCity_GameCorner_Text_MoveTutorInside:
-    .string "Wahahah! The coins keep rolling in!$"
+    .string "¡Jajajá! ¡Las monedas no dejan de caer!$"
 
 GoldenrodCity_GameCorner_Text_LeftTheirDrink:
     .string "Alguien dejó su bebida.\p"

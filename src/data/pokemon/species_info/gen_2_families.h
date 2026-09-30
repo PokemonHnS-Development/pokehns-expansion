@@ -388,7 +388,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
             "Intimida rivales con ráfagas intensas\n"
             "de llamas y aire caliente. Su agilidad\n"
             "le permite esquivar los ataques.\n"
-            "while scorching an enemy."),
+            "mientras abrasa al rival."),
         .pokemonScale = 329,
         .pokemonOffset = 11,
         .trainerScale = 256,
@@ -611,7 +611,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
             "Pese a su cuerpo, las mandíbulas de\n"
             "son muy fuertes. Aunque crea que es\n"
             "solo juega, su mordida es lo bastante\n"
-            "strength to cause serious injury."),
+            "fuerte para herir de gravedad."),
         .pokemonScale = 487,
         .pokemonOffset = 20,
         .trainerScale = 256,
@@ -685,7 +685,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
             "Si muerde a su rival, no lo soltará\n"
             "por nada del mundo. Como las puntas de\n"
             "sus colmillos son como anzuelos,\n"
-            "they become irremovably embedded."),
+            "se clavan y no se sueltan."),
         .pokemonScale = 378,
         .pokemonOffset = 13,
         .trainerScale = 256,
@@ -1836,7 +1836,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
             "Sube árboles cortos de la sabana\n"
             "para picotear los brotes nuevos.\n"
             "Los ojos de Natu parecen estar\n"
-            "always observing something."),
+            "siempre observando algo."),
         .pokemonScale = 610,
         .pokemonOffset = 25,
         .trainerScale = 256,
@@ -2448,7 +2448,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
             "Vive en el agua casi todo el día.\n"
             "Su color y patrón corporal sirven de\n"
             "camuflaje, lo que dificulta que lo\n"
-            "enemies to spot in water."),
+            "vean los rivales en el agua."),
         .pokemonScale = 448,
         .pokemonOffset = 16,
         .trainerScale = 256,
@@ -2520,7 +2520,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
             "Bonsly prefiere el clima árido.\n"
             "Para ajustar el nivel de fluidos\n"
             "de su cuerpo, llora agua por los ojos.\n"
-            "This makes it appear to be crying."),
+            "Parece que esté llorando."),
         .pokemonScale = 432,
         .pokemonOffset = 13,
         .trainerScale = 256,
@@ -5080,7 +5080,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
             "Qwilfish usa la presión del agua\n"
             "que traga para lanzar púas tóxicas\n"
             "por todo su cuerpo a la vez.\n"
-            "swimming to be somewhat challenging."),
+            "Nadar le resulta todo un desafío."),
         .pokemonScale = 430,
         .pokemonOffset = 0,
         .trainerScale = 256,
@@ -5240,7 +5240,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
             "Sus púas como lanzas y su ferocidad\n"
             "temperamento le ha valido el\n"
             "apodo “Demonio del Mar”.\n"
-            "It slurps up poison to nourish itself."),
+            "Sorbe veneno para alimentarse."),
         .pokemonScale = 257,
         .pokemonOffset = 10,
         .trainerScale = 423,
@@ -5313,7 +5313,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
             "Shuckle se oculta bajo rocas, con\n"
             "su cuerpo dentro del caparazón\n"
             "comiendo bayas guardadas. Estas\n"
-            "its body fluids to become a juice."),
+            "se mezclan con sus fluidos."),
         .pokemonScale = 485,
         .pokemonOffset = 18,
         .trainerScale = 256,
@@ -5957,7 +5957,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
             "Dicen que en los bosques hay muchos\n"
             "arroyos y árboles donde un\n"
             "Ursaring busca comida. Camina por\n"
-            "its forest collecting food every day."),
+            "su bosque buscando comida a diario."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 256,
@@ -6245,7 +6245,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
             "El caparazón de su espalda es de\n"
             "magma. Miles de años viviendo\n"
             "en cráteres volcánicos lo han vuelto\n"
-            "Magcargo's bodies into magma."),
+            "en un cuerpo de puro magma."),
         .pokemonScale = 332,
         .pokemonOffset = 15,
         .trainerScale = 256,
@@ -6869,7 +6869,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
             "Atrapa al rival con su succión-\n"
             "antes de lanzar el ataque final.\n"
             "resulta ser un enemigo fuerte,\n"
-            "too strong, it spews ink to escape."),
+            "le escupe tinta para escapar."),
         .pokemonScale = 296,
         .pokemonOffset = 3,
         .trainerScale = 256,
@@ -6954,7 +6954,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
             "Lleva la comida envuelta en su cola.\n"
             "Hubo un explorador famoso que\n"
             "logró escalar el Mt. Everest gracias\n"
-            "to a Delibird sharing its food."),
+            "a los alimentos de un Delibird."),
         .pokemonScale = 293,
         .pokemonOffset = 11,
         .trainerScale = 256,
@@ -7251,7 +7251,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
             "Por los efectos de la Megaevolución,\n"
             "sus pinzas han tomado una forma más\n"
             "diabólica, desgarrando cualquier cosa\n"
-            "they pierce to shreds."),
+            "que atraviesan, hecha trizas."),
         .frontPic = gMonFrontPic_SkarmoryMega,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
@@ -7377,7 +7377,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
             "En una manada, el de cuernos más\n"
             "curvados hacia atrás es el líder.\n"
             "Eligen a su líder luchando entre sí.\n"
-            "among themselves."),
+            "entre ellos mismos."),
         .pokemonScale = 256,
         .pokemonOffset = 4,
         .trainerScale = 256,
@@ -7462,7 +7462,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .description = COMPOUND_STRING(
             "Sus garras rojas y la punta de su cola\n"
             "fundiéndose por su alta temperatura\n"
-            "that are painful to Houndoom itself.\n"),
+            "que le causan dolor a sí mismo.\n"),
         .pokemonScale = 256,
         .pokemonOffset = 4,
         .trainerScale = 256,
@@ -7984,7 +7984,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
             "Raikou encarna la velocidad del rayo.\n"
             "Sus rugidos envían ondas de choque\n"
             "por el aire y el suelo como si\n"
-            "lightning bolts were crashing down."),
+            "cayeran auténticos rayos."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 345,
@@ -8066,7 +8066,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
             "Entei encarna la pasión del magma.\n"
             "Se cree que nació durante la\n"
             "erupción de un volcán. Lanza fuego que\n"
-            "consumes all that it touches."),
+            "devora todo lo que toca."),
         .pokemonScale = 259,
         .pokemonOffset = 0,
         .trainerScale = 345,
@@ -8147,7 +8147,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
             "Suicune encarna la compasión de\n"
             "un manantial de agua pura. Corre por\n"
             "la tierra con elegancia. Tiene la\n"
-            "power to purify dirty water."),
+            "capacidad de purificar el agua."),
         .pokemonScale = 269,
         .pokemonOffset = 0,
         .trainerScale = 345,
@@ -8360,7 +8360,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
             "Tyranitar es tan poderoso\n"
             "que puede derribar una montaña para\n"
             "su nido. Ronda montañas buscando\n"
-            "new opponents to fight."),
+            "nuevos rivales a los que retar."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 345,

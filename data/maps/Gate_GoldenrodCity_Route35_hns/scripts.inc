@@ -100,7 +100,7 @@ Route35GoldenrodGate_Text_RandyWeirdTree:
 	.string "¿Me pregunto si ya lo quitaron?$"
 
 Route35GoldenrodGate_Text_CantCarryMoreMon:
-	.string "You can't carry another POKéMON...$"
+	.string "No puedes llevar otro POKéMON...$"
 
 Route35GoldenrodGate_Text_RandyNeverMind:
 	.string "Oh... entonces, olvídalo...$"

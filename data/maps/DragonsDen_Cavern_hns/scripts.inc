@@ -245,7 +245,7 @@ DragonsDen_Cavern_Text_CooltrainerfCaraSeen:
     .string "¡No deberías estar aquí!$"
 
 DragonsDen_Cavern_Text_CooltrainerfCaraBeaten:
-    .string "Oh yikes, I lost!$"
+    .string "¡Vaya, he perdido!$"
 
 DragonsDen_Cavern_Text_CooltrainerfCaraAfter:
     .string "Pronto tendré el permiso\n"

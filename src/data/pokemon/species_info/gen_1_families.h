@@ -34,7 +34,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             "Bulbasaur puede verse durmiendo bajo\n"
             "luz solar. Tiene una semilla atrás.\n"
             "Al absorber los rayos del sol, la\n"
-            "grows progressively larger."),
+            "semilla crece cada vez más."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -338,7 +338,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             "Lanza mucho polen como un volcán.\n"
             "Respirarlo mucho causa desmayos.\n"
             "En batalla, agita dos lianas gruesas\n"
-            "that can easily topple 10-story buildings."),
+            "que derriban un edificio entero."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 388,
@@ -759,7 +759,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             "La llama en su cuerpo arde a más\n"
             "de 2,000 grados Celsius.\n"
             "Cuando Charizard ruge, ese\n"
-            "temperature climbs even higher."),
+            "calor aumenta todavía más."),
         .pokemonScale = 256,
         .pokemonOffset = 1,
         .trainerScale = 302,
@@ -1108,7 +1108,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             "No es muy preciso al\n"
             "disparar. Al atacar, dispara\n"
             "sus 31 cañones una y otra vez y\n"
-            "over."),
+            "sin detenerse jamás."),
         .pokemonScale = 256,
         .pokemonOffset = -1,
         .trainerScale = 293,
@@ -2011,7 +2011,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .description = COMPOUND_STRING(
             "Con su fuerza muscular muy aumentada,\n"
             "puede volar continuamente.\n"
-            "for two weeks without resting."),
+            "durante dos semanas sin descansar."),
         .pokemonScale = 269,
         .pokemonOffset = 0,
         .trainerScale = 256,
@@ -3451,7 +3451,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             "Este Pikachu usa la gorra de su amigo,\n"
             "prueba el fuerte vínculo de Pikachu y\n"
             "su amigo formaron en sus aventuras\n"
-            "across many different regions."),
+            "a lo largo de muchas regiones."),
         .pokemonScale = 479,
         .pokemonOffset = 19,
         .trainerScale = 256,
@@ -3896,7 +3896,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             "Este Pikachu usa la gorra de su amigo,\n"
             "prueba el fuerte vínculo de Pikachu y\n"
             "su amigo formaron al superar juntos\n"
-            "many hardships together."),
+            "muchas dificultades juntos."),
         .pokemonScale = 479,
         .pokemonOffset = 19,
         .trainerScale = 256,
@@ -5578,7 +5578,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             "Se dice que cada una de sus nueve\n"
             "colas encierra un poder encantado.\n"
             "Un Ninetales longevo tendrá un pelaje\n"
-            "shines like gold."),
+            "que brilla como el oro."),
         .pokemonScale = 339,
         .pokemonOffset = 10,
         .trainerScale = 256,
@@ -5736,7 +5736,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             "Guía a los viajeros que se han perdido\n"
             "en una montaña nevada hasta la\n"
             "base, no perdonará a nadie\n"
-            "who harms nature."),
+            "que dañe a la naturaleza."),
         .pokemonScale = 339,
         .pokemonOffset = 10,
         .trainerScale = 256,
@@ -6058,7 +6058,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             "Al vivir en cavernas oscuras, sus\n"
             "ojos se cerraron y perdieron la\n"
             "visión. Usan ondas ultrasónicas\n"
-            "to detect obstacles."),
+            "para detectar obstáculos."),
         .pokemonScale = 362,
         .pokemonOffset = -5,
         .trainerScale = 256,
@@ -6254,7 +6254,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             "Con la evolución, sus patas traseras\n"
             "se volvieron alas. Al alternarlas,\n"
             "puede volar durante todo el día\n"
-            "without having to stop."),
+            "sin tener que parar."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 281,
@@ -6411,7 +6411,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             "Una miel muy tóxica gotea de su\n"
             "boca. Un aroma a miel puede provocar\n"
             "pérdida de memoria. Dicen que algunos\n"
-            "enjoy this overwhelming stink, however."),
+            "disfrutan con su hedor."),
         .pokemonScale = 329,
         .pokemonOffset = 13,
         .trainerScale = 256,
@@ -6772,7 +6772,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             "Parasect suelen infestar raíces de\n"
             "árboles grandes y absorber nutrientes.\n"
             "Si el árbol muere, se mudan.\n"
-            "onto another tree all at once."),
+            "al siguiente al instante."),
         .pokemonScale = 307,
         .pokemonOffset = 8,
         .trainerScale = 256,
@@ -6849,7 +6849,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             "Su pelaje de pelo fino y rígido que\n"
             "cubre su cuerpo evolucionó\n"
             "para protegerlo. Sus ojos son grandes.\n"
-            "to spot even miniscule prey."),
+            "No hay presa que se les escape."),
         .pokemonScale = 360,
         .pokemonOffset = 0,
         .trainerScale = 256,
@@ -7014,7 +7014,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             "Diglett se crían en casi toda granja.\n"
             "La razón es simple: donde sea que\n"
             "excavan, el suelo queda bien labrado\n"
-            "for growing delicious crops."),
+            "para sembrar ricas verduras."),
         .pokemonScale = 833,
         .pokemonOffset = 25,
         .trainerScale = 256,
@@ -7490,7 +7490,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             "Está acostumbrado al lujo pues vivió\n"
             "con la realeza de Alola. Muy listo\n"
             "y orgulloso, es famoso por ser difícil\n"
-            "handle, but that also makes it popular."),
+            "de manejar, lo que lo hace popular."),
         .pokemonScale = 480,
         .pokemonOffset = 19,
         .trainerScale = 256,
@@ -8064,7 +8064,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             "Al enfurecerse, su circulación\n"
             "sanguínea se vuelve más robusta y\n"
             "sus músculos se fortalecen. Pero\n"
-            "also becomes much less intelligent."),
+            "también pierde inteligencia."),
         .pokemonScale = 326,
         .pokemonOffset = 10,
         .trainerScale = 256,
@@ -8503,7 +8503,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             "Se pueden ver los órganos internos\n"
             "de este POKéMON por su piel fina.\n"
             "Sin embargo, su piel es muy flexible.\n"
-            "Even sharp fangs bounce right off it."),
+            "Hasta los colmillos rebotan en ella."),
         .pokemonScale = 369,
         .pokemonOffset = 20,
         .trainerScale = 256,
@@ -8821,7 +8821,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             "Un POKéMON que duerme 18 horas al día.\n"
             "Se observó que usa Teletransporte\n"
             "para cambiar su ubicación una vez.\n"
-            "every hour."),
+            "cada hora."),
         .pokemonScale = 363,
         .pokemonOffset = 14,
         .trainerScale = 256,
@@ -8894,7 +8894,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             "Dicen que un chico con poderes\n"
             "psíquicos se transformó de repente\n"
             "en Kadabra mientras ayudaba en un\n"
-            "into extrasensory powers."),
+            "estudio de poderes psíquicos."),
         .pokemonScale = 256,
         .pokemonOffset = 3,
         .trainerScale = 256,
@@ -9086,7 +9086,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .description = COMPOUND_STRING(
             "Al cambiar sus músculos, el verdadero\n"
             "poder de Alakazam se ha liberado. Con\n"
-            "psychic powers, it can foresee all things."),
+            "sus poderes prevén el futuro."),
         .pokemonScale = 256,
         .pokemonOffset = 3,
         .trainerScale = 256,
@@ -9465,7 +9465,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             "El cuerpo flexible de Bellsprout le\n"
             "permite doblarse para evitar ataques,\n"
             "sin importar qué tan fuertes sean.\n"
-            "it leaks a fluid that melts even iron."),
+            "Escupe un fluido que funde el hierro."),
         .pokemonScale = 354,
         .pokemonOffset = 16,
         .trainerScale = 256,
@@ -9824,7 +9824,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             "Vive en rocas complejas en el fondo\n"
             "del océano y atrapa presas usando sus\n"
             "80 tentáculos. Sus orbes rojos brillan\n"
-            "grows excited or agitated."),
+            "cuando se altera o se excita."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 312,
@@ -9904,7 +9904,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             "Sube caminos de montaña usando solo el\n"
             "poder de sus brazos. Como parecen\n"
             "rocas en el camino, los excursionistas\n"
-            "on them without noticing."),
+            "tropiezan con él sin darse cuenta."),
         .pokemonScale = 347,
         .pokemonOffset = 18,
         .trainerScale = 256,
@@ -10500,7 +10500,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             "Su cuerno oculta un poder curativo.\n"
             "Este POKéMON te mirará a los ojos y\n"
             "leerá el contenido de tu corazón. Si\n"
-            "finds evil there, it promptly hides away."),
+            "detecta maldad, desaparece."),
         .pokemonScale = 283,
         .pokemonOffset = 8,
         .trainerScale = 256,
@@ -10580,7 +10580,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             "Pocos resisten su tajo psíquico.\n"
             "Lanzado desde el cuerno de este\n"
             "POKéMON, el ataque abrirá un hueco\n"
-            "through a thick metal sheet."),
+            "en una gruesa plancha de metal."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 289,
@@ -10654,7 +10654,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             "Caza presas mojando su cola en el\n"
             "agua junto al río. Pero suele\n"
             "olvidar qué hace y pasa horas así.\n"
-            "days just loafing at water's edge."),
+            "Pasa días enteros en la orilla."),
         .pokemonScale = 256,
         .pokemonOffset = 10,
         .trainerScale = 256,
@@ -10946,7 +10946,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             "Suele estar distraído, pero a veces\n"
             "su expresión se vuelve muy aguda.\n"
             "La causa parece estar en su dieta,\n"
-            "which also give their tails a spicy flavor."),
+            "que da a su cola sabor picante."),
         .pokemonScale = 256,
         .pokemonOffset = 10,
         .trainerScale = 256,
@@ -11260,7 +11260,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             "Son tres Magnemite unidos\n"
             "por magnetismo. Genera potentes\n"
             "ondas que suben la temperatura 3.6\n"
-            "degrees F within a 3,300-foot radius."),
+            "grados F en un radio de 3.300 pies."),
         .pokemonScale = 292,
         .pokemonOffset = 1,
         .trainerScale = 256,
@@ -11660,7 +11660,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             "Incluso al comer o dormir, una de sus\n"
             "cabezas vigila cualquier señal de\n"
             "peligro. Si se siente amenazado, huye.\n"
-            "over 60 miles per hour."),
+            "a más de 100 km por hora."),
         .pokemonScale = 256,
         .pokemonOffset = 3,
         .trainerScale = 257,
@@ -12955,7 +12955,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             "Sus células, cristalizadas por la\n"
             "energía de la Megaevolución,\n"
             "son más fuertes que cualquier mineral\n"
-            "to withstand any temperature."),
+            "y soportan cualquier temperatura."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 516,
@@ -13336,7 +13336,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             "El flujo de energía Gigamax ha\n"
             "estimulado la pinza izquierda de\n"
             "este POKéMON para que crezca mucho.\n"
-            "claw can pulverize anything."),
+            "Su pinza puede pulverizarlo todo."),
         .pokemonScale = 256,
         .pokemonOffset = 2,
         .trainerScale = 256,
@@ -13554,7 +13554,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             "Parece un diseño antiguo de Poké Ball.\n"
             "Al emocionarse, descarga la corriente\n"
             "guarda ahora mismo en su vientre, y\n"
-            "lets out a great, uproarious laugh."),
+            "suelta una sonora carcajada."),
         .pokemonScale = 364,
         .pokemonOffset = -8,
         .trainerScale = 256,
@@ -13633,7 +13633,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             "El tejido de su cuerpo es\n"
             "similar en composición a una Bellota.\n"
             "Si se irrita, suelta una descarga\n"
-            "current equal to 20 lightning bolts."),
+            "más potente que veinte rayos."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 256,
@@ -13869,7 +13869,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             "Alola es el mejor entorno para\n"
             "este POKéMON. La gente local se\n"
             "en su apariencia, diciendo que así es\n"
-            "Exeggutor ought to look."),
+            "como debería ser Exeggutor."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 309,
@@ -15621,7 +15621,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             "Cuando la madre ve la espalda de su\n"
             "hijo Megaevolucionado, recuerda\n"
             "el día en que su hijo inevitablemente\n"
-            "leave her."),
+            "tendría que dejarla."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 387,
@@ -15699,7 +15699,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             "Moviendo las aletas de su espalda\n"
             "se mueve hacia cualquier dirección\n"
             "mirando al frente. Escupe tinta para\n"
-            "escape if it senses danger."),
+            "escapar si detecta peligro."),
         .pokemonScale = 399,
         .pokemonOffset = -1,
         .trainerScale = 256,
@@ -15859,7 +15859,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             "Duerme tranquilo en el fondo del mar.\n"
             "Cuando sube a la superficie, este\n"
             "crea un remolino enorme que puede\n"
-            "even ships."),
+            "tragarse barcos enteros."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 287,
@@ -16397,7 +16397,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             "Mr. Mime es maestro del mimo. Puede\n"
             "convence a otros de lo invisible\n"
             "realmente existe. Una vez creído, el\n"
-            "imaginary object does become real."),
+            "objeto imaginario se hace real."),
         .pokemonScale = 258,
         .pokemonOffset = 6,
         .trainerScale = 256,
@@ -17021,7 +17021,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             "Jynx se mueve rítmicamente como si\n"
             "estuviera bailando. Sus movimientos\n"
             "son tan atractivos que quien lo ve\n"
-            "shake their hips without noticing."),
+            "mueve las caderas sin darse cuenta."),
         .pokemonScale = 256,
         .pokemonOffset = 3,
         .trainerScale = 300,
@@ -17462,7 +17462,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             "Según se sabe, una sola pareja de\n"
             "de machos y hembras Magmortar viven en\n"
             "un volcán. Desde su brazo, lanza\n"
-            "fireballs hotter than 3,600ºF."),
+            "bolas de fuego de más de 2.000 ºC."),
         .pokemonScale = 259,
         .pokemonOffset = 1,
         .trainerScale = 296,
@@ -17760,7 +17760,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .weight = 1150,
         .description = COMPOUND_STRING(
             "Este POKéMON tiene un cuerpo musculoso\n"
-            "and excels at close-quarters combat.\n"
+            "y destaca en el cuerpo a cuerpo.\n"
             "Usa sus cuernos cortos para golpear\n"
             "los puntos débiles del rival."),
         .pokemonScale = 256,
@@ -18313,7 +18313,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             "Más de 5,000 personas pueden ir en su\n"
             "caparazón a la vez. Es un viaje muy\n"
             "cómodo, sin el menor problema.\n"
-            "shaking or swaying."),
+            "sin balancearse con el oleaje."),
         .pokemonScale = 257,
         .pokemonOffset = 10,
         .trainerScale = 423,
@@ -19025,7 +19025,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             "Su composición celular es más parecida\n"
             "más de planta que de animal. Usa la\n"
             "fotosíntesis para crear energía\n"
-            "supply without eating food."),
+            "sin necesidad de comer."),
         .pokemonScale = 305,
         .pokemonOffset = 8,
         .trainerScale = 257,
@@ -20032,7 +20032,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             "La energía Gigamax ha afectado\n"
             "semillas y piedras sueltas que\n"
             "se pegó a Snorlax, haciéndolos crecer\n"
-            "to a huge size."),
+            "hasta alcanzar gran tamaño."),
         .pokemonScale = 256,
         .pokemonOffset = 4,
         .trainerScale = 423,
@@ -20177,7 +20177,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             "Lanza rayos que inmovilizan rivales\n"
             "como si se hubieran congelado.\n"
             "Sus hojas de energía psíquica\n"
-            "rip through thick iron sheets like paper."),
+            "cortan el acero como papel."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 309,
@@ -20875,7 +20875,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             "Un POKéMON creado mediante\n"
             "manipulación genética. Aunque el\n"
             "poder humano creó su cuerpo,\n"
-            "they failed to give it a warm heart."),
+            "no lograron darle buen corazón."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 309,
@@ -21107,7 +21107,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             "Dicen que Mew posee los genes de todos\n"
             "POKéMON. Puede volverse invisible a\n"
             "voluntad, evitando así ser visto.\n"
-            "notice even if it approaches people."),
+            "y pasa inadvertido entre la gente."),
         .pokemonScale = 457,
         .pokemonOffset = -2,
         .trainerScale = 256,

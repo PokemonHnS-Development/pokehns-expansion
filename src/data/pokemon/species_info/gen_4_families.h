@@ -783,7 +783,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
             "Al saber que son débiles, ellos\n"
             "viven en bandadas enormes. Hay\n"
             "fuertes peleas entre bandadas.\n"
-            "When alone, a Staravia cries noisily."),
+            "Si está solo, llora a gritos."),
         .pokemonScale = 422,
         .pokemonOffset = 12,
         .trainerScale = 256,
@@ -2779,7 +2779,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
             "La bola tiene los nutrientes que se\n"
             "para evolucionar. Al parecer, también\n"
             "es dulce y rico. POKéMON como Starly y\n"
-            "Taillow try to peck it off."),
+            "Taillow intentan comérsela."),
         .pokemonScale = 491,
         .pokemonOffset = 12,
         .trainerScale = 256,
@@ -3261,7 +3261,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
             "Como flota sin rumbo fijo,\n"
             "un cuento dice que es un “Guía para\n"
             "Espíritus Errantes”. Los niños que\n"
-            "them sometimes vanish."),
+            "lo sostienen a veces desaparecen."),
         .pokemonScale = 491,
         .pokemonOffset = 12,
         .trainerScale = 256,
@@ -3408,7 +3408,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
             "Sabes cómo se siente por la forma en\n"
             "enrolla sus orejas. Si tiene miedo,\n"
             "las enrolla ambas. Cuando siente\n"
-            "danger, it perks them up."),
+            "peligro, las levanta."),
         .pokemonScale = 491,
         .pokemonOffset = 16,
         .trainerScale = 256,
@@ -3624,8 +3624,8 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .description = COMPOUND_STRING(
             "Es un POKéMON muy caprichoso y\n"
             "muy popular. Araña la nariz de su\n"
-            "la nariz del Entrenador si no come y\n"
-            "purrs when affectionate."),
+            "Entrenador si no come, y ronronea\n"
+            "cuando está cariñoso."),
         .pokemonScale = 432,
         .pokemonOffset = 13,
         .trainerScale = 256,
@@ -3841,7 +3841,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
             "Ataca rociando un fluido fétido\n"
             "desde la punta de su cola. El fluido\n"
             "huele peor cuanto más tiempo pasa\n"
-            "to fester."),
+            "al pudrirse."),
         .pokemonScale = 305,
         .pokemonOffset = 9,
         .trainerScale = 257,
@@ -3989,9 +3989,9 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .weight = 1870,
         .description = COMPOUND_STRING(
             "Antaño, este POKéMON era venerado como\n"
-            "a bringer of rain. One caused a news stir\n"
-            "al ser hallado en una zona de obras\n"
-            "after a 2000-year sleep."),
+            "el que trae la lluvia. Uno causó\n"
+            "un gran revuelo al ser hallado\n"
+            "tras 2.000 años durmiendo."),
         .pokemonScale = 272,
         .pokemonOffset = 3,
         .trainerScale = 256,
@@ -5398,7 +5398,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
             "Cuelga de las ramas usando sus\n"
             "tentáculos; parece una planta.\n"
             "Atrae presas con su dulce aroma\n"
-            "saliva, then chomps down."),
+            "saliva y luego las muerde."),
         .pokemonScale = 265,
         .pokemonOffset = 2,
         .trainerScale = 262,
@@ -6980,7 +6980,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
             "Dicen que si da todo su poder,\n"
             "puede calentar su cuerpo hasta\n"
             "más de 1.8 millones de grados F.\n"
-            "This heat keeps enemies at bay."),
+            "Ese calor ahuyenta a sus rivales."),
         .frontPic = gMonFrontPic_HeatranMega,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,

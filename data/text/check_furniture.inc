@@ -1,5 +1,5 @@
 Text_PictureBookShelf:
-	.string "There's a set of POKéMON picture books.$"
+	.string "Hay una colección de libros\nilustrados de POKéMON.$"
 
 Text_BookShelf:
 	.string "Está lleno de todo tipo de libros.$"

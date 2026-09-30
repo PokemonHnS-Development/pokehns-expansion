@@ -401,7 +401,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
             "Hace malabares con una piedra,\n"
             "convirtiéndola en un balón ardiente.\n"
             "Sus tiros golpean fuerte al rival y\n"
-            "leave them scorched."),
+            "lo dejan chamuscado."),
         .pokemonScale = 265,
         .pokemonOffset = 2,
         .trainerScale = 262,
@@ -529,7 +529,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
             "Llora cuando tiene miedo.\n"
             "Sus lágrimas tienen el efecto de 100\n"
             "cebollas; el rival no podrá atacar.\n"
-            "able to resist weeping."),
+            "sin echarse a llorar."),
         .pokemonScale = 530,
         .pokemonOffset = 13,
         .trainerScale = 256,
@@ -2343,7 +2343,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
             "Su cuerpo es un horno colosal. Con\n"
             "la energía Gigamax avivando el fuego,\n"
             "su llama arde con más intensidad\n"
-            "than 3,600 degrees Fahrenheit."),
+            "que 3.600 grados Fahrenheit."),
         .pokemonScale = 275,
         .pokemonOffset = 7,
         .trainerScale = 256,
@@ -2537,7 +2537,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
             "Bajo la influencia de la energía\n"
             "Gigamax, produce mucho más néctar\n"
             "dulce y su forma ha cambiado.\n"
-            "to resemble a giant apple."),
+            "hasta parecer una manzana gigante."),
         .pokemonScale = 530,
         .pokemonOffset = 13,
         .trainerScale = 256,
@@ -2714,7 +2714,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .description = COMPOUND_STRING(
             "Dipplin son dos seres en un POKéMON.\n"
             "Su evolución fue causada por un objeto\n"
-            "apple grown only in one place."),
+            "manzana de una sola zona."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -3149,7 +3149,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
             "Este Cramorant ha tenido un\n"
             "Pikachu atascado en su garganta.\n"
             "Cramorant se atraganta un poco, pero\n"
-            "isn't really bothered."),
+            "no parece importarle."),
         .pokemonScale = 366,
         .pokemonOffset = 7,
         .trainerScale = 257,
@@ -3778,7 +3778,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
             "El calor que emana un\n"
             "Centiskorch Gigamax puede\n"
             "desestabilizar el aire. A veces\n"
-            "it can even cause storms."),
+            "incluso provoca tormentas."),
         .pokemonScale = 275,
         .pokemonOffset = 7,
         .trainerScale = 256,
@@ -4477,8 +4477,8 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .description = COMPOUND_STRING(
             "Succiona por la nariz las emanaciones\n"
             "que producen las personas y los\n"
-            "POKéMON cuando están molestos. Es\n"
-            "thrives off this negative energy."),
+            "POKéMON cuando están molestos.\n"
+            "Se alimenta de esa energía negativa."),
         .pokemonScale = 491,
         .pokemonOffset = 12,
         .trainerScale = 256,
@@ -5350,8 +5350,8 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .description = COMPOUND_STRING(
             "Escupe hilos con una energía fría\n"
             "y los usa para unir su cuerpo\n"
-            "ramas, camuflándose como una\n"
-            "icicle while it sleeps."),
+            "a las ramas, camuflándose como un\n"
+            "carámbano mientras duerme."),
         .pokemonScale = 530,
         .pokemonOffset = 13,
         .trainerScale = 256,
@@ -5930,7 +5930,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
             "Cava la tierra con su trompa.\n"
             "También es muy fuerte, pues puede\n"
             "cargar más de cinco toneladas sin\n"
-            "problem at all."),
+            "problema alguno."),
         .pokemonScale = 282,
         .pokemonOffset = 4,
         .trainerScale = 256,
@@ -6442,7 +6442,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
             "La dureza de sus células es\n"
             "excepcional, aun entre los Acero.\n"
             "También tiene una estructura\n"
-            "resistant to earthquakes."),
+            "resistente a los terremotos."),
         .pokemonScale = 267,
         .pokemonOffset = 2,
         .trainerScale = 286,
@@ -6965,7 +6965,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
             "Puede desviar cualquier ataque.\n"
             "llevó a que se conociera como el\n"
             "Escudo del Maestro. Era temido y\n"
-            "respected by all."),
+            "venerado por todos."),
         .pokemonScale = 275,
         .pokemonOffset = 7,
         .trainerScale = 256,
@@ -7036,7 +7036,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
             "El núcleo de su pecho absorbe la\n"
             "energía de las tierras de la\n"
             "región de Galar. Esta energía es la\n"
-            "Eternatus to stay active."),
+            "que mantiene activo a Eternatus."),
         .pokemonScale = 230,
         .pokemonOffset = 0,
         .trainerScale = 4852,
@@ -7428,7 +7428,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
             "Mientras espera el momento justo para\n"
             "liberar su poder Gigamax, este\n"
             "Pokémon mantiene un equilibrio\n"
-            "legged stance. It won't even twitch."),
+            "sobre una pierna sin moverse."),
         .pokemonScale = 256,
         .pokemonOffset = 1,
         .trainerScale = 326,
@@ -7556,7 +7556,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
             "La fuerza especial de este Zarude\n"
             "viene del amor y cuidado hacia un\n"
             "niño humano huérfano que el Pokémon\n"
-            "has raised."),
+            "ha criado."),
         .pokemonScale = 267,
         .pokemonOffset = 2,
         .trainerScale = 286,
@@ -7763,7 +7763,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .description = COMPOUND_STRING(
             "Glastrier emite un frío intenso desde\n"
             "pezuñas. Es un POKéMON agresivo--\n"
-            "anything it wants, it takes by force."),
+            "Toma a la fuerza lo que quiere."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 348,

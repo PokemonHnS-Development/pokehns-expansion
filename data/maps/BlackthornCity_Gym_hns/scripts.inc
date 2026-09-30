@@ -326,7 +326,7 @@ BlackthornGym_Text_CooltrainerfFranSeenText:
     .string "¡CLAIR se enfurecería si lo hago!$"
 
 BlackthornGym_Text_CooltrainerfFranBeatenText:
-    .string "Awww... I lost...$"
+    .string "Ohhh... He perdido...$"
 
 BlackthornGym_Text_CooltrainerfFranAfterBattleText:
 	.string "Ay, no... CLAIR se va a enfadar...$"
@@ -336,7 +336,7 @@ BlackthornGym_Text_CooltrainermPaulSeenText:
     .string "¡Te mostraré lo fuertes que son!$"
 
 BlackthornGym_Text_CooltrainermPaulBeatenText:
-    .string "My dragon POKéMON lost?$"
+    .string "¿Mi POKéMON dragón ha perdido?$"
 
 BlackthornGym_Text_CooltrainermPaulAfterBattleText:
     .string "¿LANCE te dijo que le gustaría\n"

@@ -341,7 +341,7 @@ SlateportCity_BattleTentLobby_Text_DidntSaveBeforeQuitting:
 
 @ Unused
 SlateportCity_BattleTentLobby_Text_ReturnPersonalMons:
-	.string "We'll return your personal POKéMON.$"
+	.string "Te devolveremos tus POKéMON.$"
 
 @ Unused
 SlateportCity_BattleTentLobby_Text_ReceivedPrize:

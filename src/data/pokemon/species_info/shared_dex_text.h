@@ -16,7 +16,7 @@ const u8 gPichuPokedexText[] = _(
     "Aún no sabe retener electricidad.\n"
     "Si se asusta, descarga energía\n"
     "por accidente. Mejora al guardar\n"
-    "power as it grows older.");
+    "energía a medida que crece.");
 
 const u8 gPikachuPokedexText[] = _(
     "Guarda electricidad en los sacos\n"
@@ -62,7 +62,7 @@ const u8 gScatterbugPokedexText[] = _(
     "Si lo atacan POKéMON pájaro,\n"
     "lanza un polvo negro venenoso que\n"
     "paraliza al contacto. Scatterbug\n"
-    "can live in any region or climate.");
+    "puede vivir en cualquier clima.");
 
 const u8 gSpewpaPokedexText[] = _(
     "Vive oculto en las sombras del bosque.\n"
@@ -137,7 +137,7 @@ const u8 gMimikyuBustedPokedexText[] = _(
     "Tras esforzarse tanto en\n"
     "disfrazarse, su cuello se\n"
     "rompió. Lo que hay dentro es probable\n"
-    "unharmed, but it's still feeling sad.");
+    "resultó ileso, pero sigue triste.");
 
 const u8 gKommoOPokedexText[] = _(
     "Sus escamas rígidas sirven de ataque y\n"

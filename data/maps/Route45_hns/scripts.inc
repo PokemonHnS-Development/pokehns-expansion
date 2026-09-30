@@ -249,7 +249,7 @@ Route45_Text_CooltrainerfKellySeen:
     .string "sin discriminación.$"
 
 Route45_Text_CooltrainerfKellyBeaten:
-    .string "Fine. I lost.$"
+    .string "Está bien. He perdido.$"
 
 Route45_Text_CooltrainerfKellyAfter:
     .string "No estoy a favor de los ataques\n"

@@ -37,7 +37,7 @@ PewterCity_Museum_2F_Text_AskedDaddyToCatchPikachu::
     .string "¡Le pedí a mi papi que atrape uno!$"
 
 PewterCity_Museum_2F_Text_PikachuSoonIPromise::
-    .string "Yeah, a PIKACHU soon, I promise!$"
+    .string "¡Sí, tendré un PIKACHU pronto!$"
 
 PewterCity_Museum_2F_Text_SpaceShuttle::
     .string "Space Shuttle$"

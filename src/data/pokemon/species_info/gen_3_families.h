@@ -490,7 +490,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
             "Aprende artes marciales de puñetazos\n"
             "y patadas. Cada ciertos años, sus\n"
             "plumas viejas se queman y nacen\n"
-            "feathers grow back in their place."),
+            "otras nuevas en su lugar."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 301,
@@ -1622,7 +1622,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
             "Sus alas de colores llamativos son su\n"
             "rasgo más notable. Vuela por campos\n"
             "llenos de flores recolectando polen.\n"
-            "It attacks ferociously when angered."),
+            "Si le molestan, ataca sin dudar."),
         .pokemonScale = 298,
         .pokemonOffset = -1,
         .trainerScale = 256,
@@ -2030,7 +2030,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
             "Al oír música festiva, todas las\n"
             "células de su cuerpo se estimulan.\n"
             "se mueve al ritmo. No se detiene\n"
-            "quail even when it faces a tough opponent."),
+            "ante el rival más fuerte."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 268,
@@ -4565,7 +4565,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
             "Cava túneles en cuevas usando sus\n"
             "garras buscando comida: gemas puras.\n"
             "Sableye acecha en la oscuridad y se ve\n"
-            "only rarely."),
+            "muy pocas veces."),
         .pokemonScale = 451,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -4793,9 +4793,9 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .weight = 235,
         .description = COMPOUND_STRING(
             "Sus dos mandíbulas se agitan\n"
-            "violento, como si cada uno tuviera\n"
-            "voluntad propia. Un mordisco es fatal.\n"
-            "boulder to dust."),
+            "con violencia, como si tuvieran\n"
+            "voluntad propia. Pueden hacer\n"
+            "pedazos una roca de un mordisco."),
         .pokemonScale = 466,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -5080,8 +5080,8 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .description = COMPOUND_STRING(
             "Cuando Aggron Megaevoluciona a\n"
             "Mega Aggron, la capacidad destructiva\n"
-            "sus cuernos puede romper el acero.\n"
-            "tank into so much scrap metal."),
+            "de sus cuernos puede romper el acero.\n"
+            "y convertir un tanque en chatarra."),
         .pokemonScale = 256,
         .pokemonOffset = -1,
         .trainerScale = 350,
@@ -5150,10 +5150,10 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .height = 6,
         .weight = 112,
         .description = COMPOUND_STRING(
-            "medita continuamente por horas cada\n"
-            "día. Gracias a un rigor y dedicación\n"
-            "riguroso y dedicado, ha templado su\n"
-            "spiritual power so much it can fly."),
+            "Medita sin parar durante muchas horas\n"
+            "al día. Su práctica del yoga es\n"
+            "rigurosa; así logra canalizar su\n"
+            "energía espiritual hasta volar."),
         .pokemonScale = 465,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -6499,10 +6499,10 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .height = 25,
         .weight = 1303,
         .description = COMPOUND_STRING(
-            "The yellow patterns it bears are old scars.\n"
+            "Las marcas amarillas son cicatrices\n"
             "La energía de la Megaevolución fluye\n"
             "por ellos, causándole un dolor agudo y\n"
-            "suffering."),
+            "le hacen volver a doler."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 317,
@@ -6970,9 +6970,9 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .weight = 804,
         .description = COMPOUND_STRING(
             "Lucha usando la energía que obtiene\n"
-            "carbón ardiente. Al soltar humo de su\n"
+            "quemando carbón. Al soltar humo de su\n"
             "nariz, emite un sonido que es\n"
-            "similar to a locomotive's horn."),
+            "similar al de una locomotora."),
         .pokemonScale = 390,
         .pokemonOffset = 9,
         .trainerScale = 256,
@@ -7043,8 +7043,8 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .description = COMPOUND_STRING(
             "Un POKéMON que usa poderes psíquicos\n"
             "a voluntad. No deja de rebotar ni aun\n"
-            "Está dormido. Ama comer hongos\n"
-            "that grow underground."),
+            "estando dormido. Ama comer hongos\n"
+            "que crecen bajo tierra."),
         .pokemonScale = 423,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -7276,8 +7276,8 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .description = COMPOUND_STRING(
             "Sus grandes mandíbulas trituran rocas.\n"
             "Como su cabeza es tan grande, le es\n"
-            "tiempo en enderezarse si se cae\n"
-            "onto its back."),
+            "difícil enderezarse si se cae\n"
+            "de espaldas."),
         .pokemonScale = 298,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -7349,7 +7349,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
             "Lanza ondas ultrasónicas al frotar\n"
             "sus alas. Como las alas de Vibrava\n"
             "aún están creciendo, puede\n"
-            "only fly short distances."),
+            "volar solo distancias cortas."),
         .pokemonScale = 370,
         .pokemonOffset = 11,
         .trainerScale = 256,
@@ -8360,7 +8360,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
             "Si atrapa a su presa con sus pinzas,\n"
             "no lo soltará, pase lo que pase.\n"
             "Es un POKéMON resistente que puede\n"
-            "in any environment."),
+            "vivir en cualquier medio."),
         .pokemonScale = 484,
         .pokemonOffset = 19,
         .trainerScale = 256,
@@ -9668,7 +9668,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .description = COMPOUND_STRING(
             "Una energía extraordinaria amplifica\n"
             "su poder de maldición a tal punto que\n"
-            "can't help but curse its own Trainer."),
+            "maldice a su propio Entrenador."),
         .pokemonScale = 262,
         .pokemonOffset = 9,
         .trainerScale = 256,
@@ -10371,7 +10371,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
             "Al llenarse con la Megaevolución,\n"
             "su pelaje se eriza. Lo que ves atrás\n"
             "no son alas reales, y este POKéMON no\n"
-            "able to fly."),
+            "puede volar."),
         .pokemonScale = 301,
         .pokemonOffset = 3,
         .trainerScale = 256,
@@ -10658,7 +10658,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .description = COMPOUND_STRING(
             "El poder de la Megaevolución fue tal\n"
             "que rompió su mandíbula. Por eso no\n"
-            "to eat very well leaves Glalie irritated."),
+            "puede comer bien y eso lo enfurece."),
         .pokemonScale = 256,
         .pokemonOffset = 3,
         .trainerScale = 344,
@@ -11523,10 +11523,10 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .height = 11,
         .weight = 1105,
         .description = COMPOUND_STRING(
-            "It hardly eats while it awaits evolution.\n"
+            "Apenas come cuando va a evolucionar.\n"
             "Se hace más fuerte al pasar hambre.\n"
             "Su caparazón se desprende al instante\n"
-            "to evolve."),
+            "al empezar a evolucionar."),
         .pokemonScale = 311,
         .pokemonOffset = 12,
         .trainerScale = 256,
@@ -11825,7 +11825,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
             "Las garras de sus brazos poseen el\n"
             "poder destructivo para romper gruesas\n"
             "láminas de hierro como si fueran seda.\n"
-            "at over 60 miles per hour."),
+            "Vuela a más de 100 km por hora."),
         .pokemonScale = 256,
         .pokemonOffset = 6,
         .trainerScale = 256,
@@ -12298,7 +12298,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
             "Forman una manada pequeña de solo unos\n"
             "miembros. Rara vez contactan con\n"
             "personas u otros POKéMON. Desaparecen\n"
-            "if they sense enemies."),
+            "si sienten al enemigo."),
         .pokemonScale = 304,
         .pokemonOffset = 3,
         .trainerScale = 256,
@@ -12377,7 +12377,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
             "Su cuerpo es más pequeño que el de\n"
             "Mega Latios. Es más ágil y puede hacer\n"
             "giros bruscos. Al Megaevolucionar, su\n"
-            "defensive strength grows substantially."),
+            "defensa aumenta mucho."),
         .pokemonScale = 304,
         .pokemonOffset = 3,
         .trainerScale = 256,
@@ -12458,7 +12458,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
             "Aun oculto, detecta la ubicación de\n"
             "otros y siente sus emociones ya que\n"
             "tiene telepatía. Su inteligencia le da\n"
-            "it to understand human languages."),
+            "para entender el lenguaje humano."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 294,
@@ -12841,7 +12841,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
             "Cuando Groudon aulló, la tierra creció\n"
             "y el suelo se expandió. El sol brilló\n"
             "en todo el mundo alrededor del ser\n"
-            "was enveloped in incandescent heat."),
+            "que fue envuelto en calor ardiente."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 515,
@@ -12923,7 +12923,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
             "Un POKéMON que vuela sin fin en la\n"
             "capa de ozono. Dicen que bajaría al\n"
             "suelo si Kyogre y Groudon pelearan\n"
-            "were to fight."),
+            "de verdad."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 448,

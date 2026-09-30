@@ -2285,10 +2285,10 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .height = 8,
         .weight = 250,
         .description = COMPOUND_STRING(
-            "Estos POKéMON son tranquilos y\n"
-            "cualidades feroces. Se dice que\n"
+            "Su carácter es tranquilo y feroz a\n"
+            "la vez. Se dice que esta forma\n"
             "esta forma de Lycanroc es la más\n"
-            "troublesome to raise."),
+            "es la más difícil de criar."),
         .pokemonScale = 366,
         .pokemonOffset = 7,
         .trainerScale = 257,
@@ -2548,7 +2548,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
             "Quien sea atacado por el veneno de\n"
             "Toxapex sufrirá un dolor intenso por\n"
             "de tres estrellas. Tras recuperarse,\n"
-            "some aftereffects."),
+            "quedan secuelas."),
         .pokemonScale = 365,
         .pokemonOffset = 12,
         .trainerScale = 256,
@@ -5307,7 +5307,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
             "Las células de Drampa se han\n"
             "vigorizado, permitiéndole recuperar\n"
             "su juventud. Manipula el\n"
-            "atmosphere to summon storms."),
+            "clima para invocar tormentas."),
         .frontPic = gMonFrontPic_DrampaMega,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
@@ -6055,7 +6055,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
             "Inmóvil como si estuviera muerto, su\n"
             "cuerpo se siente tibio al tacto. Hay\n"
             "algo que se acumula en el núcleo negro\n"
-            "within its hard shell."),
+            "dentro de su duro caparazón."),
         .pokemonScale = 682,
         .pokemonOffset = 24,
         .trainerScale = 256,
@@ -6392,7 +6392,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
             "Uno de los peligrosos Ultraentes,\n"
             "se niega a tocar cualquier cosa,\n"
             "quizás porque siente suciedad.\n"
-            "in this world."),
+            "en todo lo de este mundo."),
         .pokemonScale = 267,
         .pokemonOffset = 2,
         .trainerScale = 286,
@@ -6459,7 +6459,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
             "Una de las misteriosas formas de vida\n"
             "como Ultraentes. Eléctricos y\n"
             "descargas emanan de todo su cuerpo,\n"
-            "according to witnesses."),
+            "según los testigos."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 610,
@@ -7404,7 +7404,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .description = COMPOUND_STRING(
             "Almacena cientos de litros de líquido\n"
             "venenoso en su cuerpo. Es uno de los\n"
-            "organisms known as UBs."),
+            "organismos conocidos como UE."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 405,
