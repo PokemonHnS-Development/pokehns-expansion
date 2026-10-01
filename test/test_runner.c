@@ -408,37 +408,37 @@ top:
             case TEST_RESULT_FAIL:
                 if (gTestRunnerState.expectedResult == TEST_RESULT_KNOWN_FAIL)
                 {
-                    result = "KNOWN_FAILING";
+                    result = "FALLO_CONOCIDO";
                     color = "\e[33m";
                 }
                 else if (expectedFailOnCorrectLine)
                 {
                     color = "\e[32m";
-                    result = "EXPECTED_FAIL";
+                    result = "FALLO_ESPERADO";
                 }
                 else if (gTestRunnerState.expectedResult == TEST_RESULT_FAIL
                  && gTestRunnerState.expectedFailState != EXPECT_FAIL_SUCCESS)
                 {
                     // Failed on wrong line
-                    result = "UNEXPECTED_FAIL_LINE";
+                    result = "LINEA_FALLO_INESPERADO";
                 }
                 else
                 {
-                    result = "FAIL";
+                    result = "FALLO";
                 }
                 break;
             case TEST_RESULT_PASS:
                 if (gTestRunnerState.result != gTestRunnerState.expectedResult
                  && gTestRunnerState.expectedFailLine == 0)
-                    result = "KNOWN_FAILING_PASS";
+                    result = "FALLO_CONOCIDO_PASO";
                 else if (gTestRunnerState.result != gTestRunnerState.expectedResult
                  && gTestRunnerState.expectedFailLine != 0)
-                    result = "EXPECTED_FAIL_PASS";
+                    result = "FALLO_ESPERADO_PASO";
                 else
                     result = "PASS";
                 break;
             case TEST_RESULT_ASSUMPTION_FAIL:
-                result = "ASSUMPTION_FAIL";
+                result = "FALLO_SUPOSICION";
                 color = "\e[33m";
                 break;
             case TEST_RESULT_TODO:
@@ -446,16 +446,16 @@ top:
                 color = "\e[33m";
                 break;
             case TEST_RESULT_INVALID:
-                result = "INVALID";
+                result = "INVALIDO";
                 break;
             case TEST_RESULT_ERROR:
                 result = "ERROR";
                 break;
             case TEST_RESULT_TIMEOUT:
-                result = "TIMEOUT";
+                result = "TIEMPO_AGOTADO";
                 break;
             case TEST_RESULT_CRASH:
-                result = "CRASH";
+                result = "BLOQUEO";
                 break;
             default:
                 result = "UNKNOWN";

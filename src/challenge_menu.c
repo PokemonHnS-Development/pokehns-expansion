@@ -43,7 +43,7 @@ enum {
 };
 
 // =============================================================================
-// Per-tab item enums — placeholder items for skeleton testing
+// Per-tab item enums - placeholder items for skeleton testing
 // =============================================================================
 
 enum {
@@ -137,10 +137,13 @@ enum {
 // Maximum items in any single tab
 #define MAX_ITEMS_PER_TAB 20
 #define ITEMS_VISIBLE 5
+#define CHOICE_GAP 6      // separacion entre las 2 opciones visibles
+#define VALUE_X_START 104   // inicio de la zona de valores
+#define VALUE_X_END   198   // fin (se usa toda la ventana)
 #define Y_DIFF 16
 
 // =============================================================================
-// Menu item descriptor — one per option row
+// Menu item descriptor - one per option row
 // =============================================================================
 
 struct ChallengeMenuItem
@@ -180,8 +183,8 @@ enum {
 };
 
 static const u8 sMidGameLockPolicy[TAB_COUNT * MAX_ITEMS_PER_TAB] = {
-    // TAB_MODE — all free
-    // TAB_FEATURES — all free
+    // TAB_MODE - all free
+    // TAB_FEATURES - all free
     // TAB_RANDOMIZER
     [TAB_RANDOMIZER * MAX_ITEMS_PER_TAB + ITEM_RANDOM_OFF_ON]      = LOCK_ONEWAY_DOWN,
     [TAB_RANDOMIZER * MAX_ITEMS_PER_TAB + ITEM_RANDOM_STARTER]     = LOCK_ONEWAY_DOWN,
@@ -303,7 +306,7 @@ static const struct BgTemplate sBgTemplates[] = {
 static const u16 sBgPal[] = {RGB(14, 20, 24)};
 static const u16 sTextPal[] = INCBIN_U16("graphics/interface/option_menu_text_custom.gbapal");
 
-// Frame tile IDs — loaded from window frame tileset at base 0x1A2
+// Frame tile IDs - loaded from window frame tileset at base 0x1A2
 #define TILE_TOP_CORNER_L 0x1A2
 #define TILE_TOP_EDGE     0x1A3
 #define TILE_TOP_CORNER_R 0x1A4
@@ -334,77 +337,77 @@ static const u16 sTextPal[] = INCBIN_U16("graphics/interface/option_menu_text_cu
 // =============================================================================
 
 static const u8 *const sChoices_OffOn[] = {
-    COMPOUND_STRING("OFF"),
-    COMPOUND_STRING("ON"),
+    COMPOUND_STRING("NO"),
+    COMPOUND_STRING("SÍ"),
 };
 
 static const u8 *const sChoices_OnOff[] = {
-    COMPOUND_STRING("ON"),
-    COMPOUND_STRING("OFF"),
+    COMPOUND_STRING("SÍ"),
+    COMPOUND_STRING("NO"),
 };
 
 static const u8 *const sChoices_Gamemode[] = {
-    COMPOUND_STRING("RECOMMENDED"),
-    COMPOUND_STRING("CUSTOM"),
+    COMPOUND_STRING("RECOMENDADO"),
+    COMPOUND_STRING("PERSONALIZADO"),
 };
 
 static const u8 *const sChoices_OriginalModern[] = {
     COMPOUND_STRING("ORIGINAL"),
-    COMPOUND_STRING("MODERN"),
+    COMPOUND_STRING("MODERNO"),
 };
 
-static const u8 sText_TopBar_Left[]   = _("{L_BUTTON}PREVIOUS");
-static const u8 sText_TopBar_Right[]  = _("{R_BUTTON}NEXT");
-static const u8 sText_TopBar_Save[]   = _("{R_BUTTON}SAVE");
-static const u8 sText_TopBar_Cancel[] = _("{B_BUTTON}CANCEL");
+static const u8 sText_TopBar_Left[]   = _("{L_BUTTON}ANTERIOR");
+static const u8 sText_TopBar_Right[]  = _("{R_BUTTON}SIGUIENTE");
+static const u8 sText_TopBar_Save[]   = _("{R_BUTTON}GUARDAR");
+static const u8 sText_TopBar_Cancel[] = _("{B_BUTTON}CANCELAR");
 
 // =============================================================================
-// Tab item tables — skeleton placeholders
+// Tab item tables - skeleton placeholders
 // =============================================================================
 
 static const u8 *const sDesc_Gamemode[] = {
-    COMPOUND_STRING("Recommended settings."),
-    COMPOUND_STRING("Choose your own rules."),
+    COMPOUND_STRING("Ajustes recomendados."),
+    COMPOUND_STRING("Elige tus propias reglas."),
 };
 static const u8 *const sDesc_ModernMoves[] = {
-    COMPOUND_STRING("Generation 3 LEARNSETS and EGG\n MOVES with no changes."),
-    COMPOUND_STRING("Generation 7 LEARNSETS and EGG\n MOVES + minor changes."),
+    COMPOUND_STRING("Movs. y conjuntos de GEN 3\nsin cambios."),
+    COMPOUND_STRING("Movs. y conjuntos de GEN 7\ncon cambios menores."),
 };
 static const u8 *const sDesc_Synchronize[] = {
-    COMPOUND_STRING("SYNCHRONIZE works as in GEN III.\n50% chance to copy nature."),
-    COMPOUND_STRING("SYNCHRONIZE works as in GEN VIII+.\n100% chance to copy nature."),
+    COMPOUND_STRING("SINCRONÍA como en GEN III.\n50% de copiar la natura."),
+    COMPOUND_STRING("SINCRONÍA como en GEN VIII+.\n100% de copiar la natura."),
 };
 static const u8 *const sDesc_Sturdy[] = {
-    COMPOUND_STRING("STURDY works as in GEN III. Only\nnegates OHKO moves (GUILLOTINE, etc.)"),
-    COMPOUND_STRING("STURDY works as in GEN V+.\n{PKMN} survive lethal hits with 1HP."),
+    COMPOUND_STRING("ROBUSTEZ como en GEN III.\nSolo anula movs. de KO."),
+    COMPOUND_STRING("ROBUSTEZ como en GEN V+.\nSobrevive con 1 PS."),
 };
 static const u8 *const sDesc_NewCitrus[] = {
-    COMPOUND_STRING("SITRUS BERRY restores 30HP.\nSame as GEN III."),
-    COMPOUND_STRING("SITRUS BERRY restores 25% of\ntotal HP. Same as GEN IV and up."),
+    COMPOUND_STRING("La BAYA SITRUS da 30 PS.\nIgual que en GEN III."),
+    COMPOUND_STRING("La BAYA SITRUS da el 25% de\nlos PS. Como desde GEN IV."),
 };
 static const u8 *const sDesc_FairyTypes[] = {
-    COMPOUND_STRING("FAIRY TYPE isn't added to {PKMN}\nthat got it in GEN VI."),
-    COMPOUND_STRING("FAIRY TYPE is added / changed to\ncertain {PKMN}, as in GEN VI."),
+    COMPOUND_STRING("El TIPO HADA no se añade a\nlos {PKMN} de GEN VI."),
+    COMPOUND_STRING("Se añade o cambia el TIPO\nHADA a ciertos {PKMN},\ncomo en GEN VI."),
 };
 static const u8 *const sDesc_LegAbilities[] = {
-    COMPOUND_STRING("PRESSURE stays as the main\nability of some legendaries."),
-    COMPOUND_STRING("Legendaries have PRESSURE changed\nfor a better ability."),
+    COMPOUND_STRING("PRESIÓN sigue como hab.\nprincipal de legendarios."),
+    COMPOUND_STRING("Los legendarios cambian\nPRESIÓN por otra mejor."),
 };
 static const u8 *const sDesc_InfiniteTMs[] = {
-    COMPOUND_STRING("TMs are not reusable.\nLike in the original."),
-    COMPOUND_STRING("TMs are reusable."),
+    COMPOUND_STRING("Las MT no son reusables.\nComo en el original."),
+    COMPOUND_STRING("Las MT son reusables."),
 };
 static const u8 *const sDesc_Mints[] = {
-    COMPOUND_STRING("Mints are not available ingame until\nfinishing the game."),
-    COMPOUND_STRING("Mints can be bought at the\nFLOWER SHOP after the 3rd badge."),
+    COMPOUND_STRING("Las mentas no aparecen\nhasta acabar el juego."),
+    COMPOUND_STRING("Las mentas se venden en la\nFLORERÍA tras la 3ª medalla."),
 };
 static const u8 *const sDesc_SurvivePoison[] = {
-    COMPOUND_STRING("Your {PKMN} will faint if they are\nPOISONED."),
-    COMPOUND_STRING("Your {PKMN} will survive the POISON\nstatus with 1HP."),
+    COMPOUND_STRING("Tus {PKMN} se debilitan\nsi quedan ENVENENADOS."),
+    COMPOUND_STRING("Tus {PKMN} sobreviven al\nVENENO con 1 PS."),
 };
 static const u8 *const sDesc_Split[] = {
-    COMPOUND_STRING("PHYSICAL and SPECIAL MOVES\ndepend on the {PKMN} TYPE."),
-    COMPOUND_STRING("PHYSICAL and SPECIAL MOVES\nare MOVE specific."),
+    COMPOUND_STRING("Los movs. FÍSICOS y ESP.\nvan según el TIPO del {PKMN}."),
+    COMPOUND_STRING("Los movs. FÍSICOS y ESP.\nvan por movimiento."),
 };
 static const u8 *const sChoices_Gen3Gen7[] = {
     COMPOUND_STRING("GEN 3"),
@@ -415,104 +418,104 @@ static const u8 *const sChoices_Gen3Gen1[] = {
     COMPOUND_STRING("GEN 1"),
 };
 static const u8 *const sDesc_GenOneRecharge[] = {
-    COMPOUND_STRING("RECHARGE MOVES like HYPER BEAM will\nalways need to recharge after use."),
-    COMPOUND_STRING("If a RECHARGE MOVE KO's the opponent,\nno recharge turn is needed."),
+    COMPOUND_STRING("Movs. de recarga como\nHIPERRRAYO recargan siempre."),
+    COMPOUND_STRING("Si un mov. de recarga debilita,\nno hay turno de recarga."),
 };
 static const u8 *const sDesc_Next[] = {
-    COMPOUND_STRING("Continue to the next page."),
+    COMPOUND_STRING("Sigue a la página siguiente."),
 };
 
 static const struct ChallengeMenuItem sTabItems_Mode[] = {
     [ITEM_MODE_GAMEMODE] = {
-        .name         = COMPOUND_STRING("GAMEMODE"),
+        .name         = COMPOUND_STRING("MODO DE JUEGO"),
         .descriptions = sDesc_Gamemode,
         .numChoices   = 2,
         .choiceNames  = sChoices_Gamemode,
     },
     [ITEM_MODE_MODERN_MOVES] = {
-        .name         = COMPOUND_STRING("{PKMN} MOVEPOOL"),
+        .name         = COMPOUND_STRING("MOVS. DE {PKMN}"),
         .descriptions = sDesc_ModernMoves,
         .numChoices   = 2,
         .choiceNames  = sChoices_Gen3Gen7,
     },
     [ITEM_MODE_SYNCHRONIZE] = {
-        .name         = COMPOUND_STRING("SYNCHRONIZE"),
+        .name         = COMPOUND_STRING("SINCRONÍA"),
         .descriptions = sDesc_Synchronize,
         .numChoices   = 2,
         .choiceNames  = sChoices_OriginalModern,
     },
     [ITEM_MODE_STURDY] = {
-        .name         = COMPOUND_STRING("STURDY"),
+        .name         = COMPOUND_STRING("ROBUSTEZ"),
         .descriptions = sDesc_Sturdy,
         .numChoices   = 2,
         .choiceNames  = sChoices_OriginalModern,
     },
     [ITEM_MODE_NEW_CITRUS] = {
-        .name         = COMPOUND_STRING("SITRUS BERRY"),
+        .name         = COMPOUND_STRING("BAYA SITRUS"),
         .descriptions = sDesc_NewCitrus,
         .numChoices   = 2,
         .choiceNames  = sChoices_OriginalModern,
     },
     [ITEM_MODE_FAIRY_TYPES] = {
-        .name         = COMPOUND_STRING("ADD FAIRY TYPE"),
+        .name         = COMPOUND_STRING("AÑADIR TIPO HADA"),
         .descriptions = sDesc_FairyTypes,
         .numChoices   = 2,
         .choiceNames  = sChoices_OffOn,
     },
     [ITEM_MODE_LEGENDARY_ABILITIES] = {
-        .name         = COMPOUND_STRING("LEGEN. ABILITIES"),
+        .name         = COMPOUND_STRING("HAB. LEGENDARIOS"),
         .descriptions = sDesc_LegAbilities,
         .numChoices   = 2,
         .choiceNames  = sChoices_OffOn,
     },
     [ITEM_MODE_INFINITE_TMS] = {
-        .name         = COMPOUND_STRING("REUSABLE TMS"),
+        .name         = COMPOUND_STRING("MT REUTILIZABLES"),
         .descriptions = sDesc_InfiniteTMs,
         .numChoices   = 2,
         .choiceNames  = sChoices_OffOn,
     },
     [ITEM_MODE_MINTS] = {
-        .name         = COMPOUND_STRING("NATURE MINTS"),
+        .name         = COMPOUND_STRING("MENTAS NATURALEZA"),
         .descriptions = sDesc_Mints,
         .numChoices   = 2,
         .choiceNames  = sChoices_OffOn,
     },
     [ITEM_MODE_SURVIVE_POISON] = {
-        .name         = COMPOUND_STRING("SURVIVE POISON"),
+        .name         = COMPOUND_STRING("SOBREVIVIR VENENO"),
         .descriptions = sDesc_SurvivePoison,
         .numChoices   = 2,
         .choiceNames  = sChoices_OffOn,
     },
     [ITEM_MODE_SPLIT] = {
-        .name         = COMPOUND_STRING("PHYS/SP SPLIT"),
+        .name         = COMPOUND_STRING("SEPARAR FÍS/ESP"),
         .descriptions = sDesc_Split,
         .numChoices   = 2,
         .choiceNames  = sChoices_OffOn,
     },
     [ITEM_MODE_GEN_ONE_RECHARGE] = {
-        .name         = COMPOUND_STRING("RECHARGE MOVES"),
+        .name         = COMPOUND_STRING("MOVS. DE RECARGA"),
         .descriptions = sDesc_GenOneRecharge,
         .numChoices   = 2,
         .choiceNames  = sChoices_Gen3Gen1,
     },
     [ITEM_MODE_NEXT] = {
-        .name         = COMPOUND_STRING("NEXT"),
+        .name         = COMPOUND_STRING("SIGUIENTE"),
         .descriptions = sDesc_Next,
         .numChoices   = 0,
         .choiceNames  = NULL,
     },
 };
 
-static const u8 *const sDesc_SaveExit[] = { COMPOUND_STRING("Save choices and continue...") };
-static const u8 sText_ConfirmSave[] = COMPOUND_STRING("Confirm your choices?");
+static const u8 *const sDesc_SaveExit[] = { COMPOUND_STRING("Guardar y continuar...") };
+static const u8 sText_ConfirmSave[] = COMPOUND_STRING("¿Confirmas tus ajustes?");
 
 // =============================================================================
-// Choice strings — shared across tabs
+// Choice strings - shared across tabs
 // =============================================================================
 
 static const u8 *const sChoices_OffRandom[] = {
-    COMPOUND_STRING("OFF"),
-    COMPOUND_STRING("RANDOM"),
+    COMPOUND_STRING("NO"),
+    COMPOUND_STRING("ALEATORIO"),
 };
 
 static const u8 *const sChoices_GenScope[] = {
@@ -521,23 +524,23 @@ static const u8 *const sChoices_GenScope[] = {
 };
 
 static const u8 *const sChoices_OffChaos[] = {
-    COMPOUND_STRING("OFF"),
-    COMPOUND_STRING("CHAOS"),
+    COMPOUND_STRING("NO"),
+    COMPOUND_STRING("CAOS"),
 };
 
 static const u8 *const sChoices_YesNo[] = {
-    COMPOUND_STRING("YES"),
+    COMPOUND_STRING("SÍ"),
     COMPOUND_STRING("NO"),
 };
 
 static const u8 *const sChoices_BanUnban[] = {
-    COMPOUND_STRING("BAN"),
-    COMPOUND_STRING("UNBAN"),
+    COMPOUND_STRING("PROHIBIR"),
+    COMPOUND_STRING("PERMITIR"),
 };
 
 static const u8 *const sChoices_RtcFake[] = {
     COMPOUND_STRING("RTC"),
-    COMPOUND_STRING("FAKE RTC"),
+    COMPOUND_STRING("RTC FALSO"),
 };
 
 static const u8 *const sChoices_ShinyChance[] = {
@@ -549,19 +552,19 @@ static const u8 *const sChoices_ShinyChance[] = {
 };
 
 static const u8 *const sChoices_Nuzlocke[] = {
-    COMPOUND_STRING("OFF"),
-    COMPOUND_STRING("EASY"),
+    COMPOUND_STRING("NO"),
+    COMPOUND_STRING("FÁCIL"),
     COMPOUND_STRING("NORMAL"),
-    COMPOUND_STRING("HARD"),
+    COMPOUND_STRING("DIFÍCIL"),
 };
 
 static const u8 *const sChoices_CemeteryRelease[] = {
-    COMPOUND_STRING("CEMETERY"),
-    COMPOUND_STRING("RELEASE"),
+    COMPOUND_STRING("CEMENTERIO"),
+    COMPOUND_STRING("LIBERAR"),
 };
 
 static const u8 *const sChoices_PartyLimit[] = {
-    COMPOUND_STRING("OFF"),
+    COMPOUND_STRING("NO"),
     COMPOUND_STRING("5"),
     COMPOUND_STRING("4"),
     COMPOUND_STRING("3"),
@@ -570,9 +573,9 @@ static const u8 *const sChoices_PartyLimit[] = {
 };
 
 static const u8 *const sChoices_LevelCap[] = {
-    COMPOUND_STRING("OFF"),
+    COMPOUND_STRING("NO"),
     COMPOUND_STRING("NORMAL"),
-    COMPOUND_STRING("HARD"),
+    COMPOUND_STRING("DIFÍCIL"),
 };
 
 static const u8 *const sChoices_ExpMult[] = {
@@ -583,44 +586,44 @@ static const u8 *const sChoices_ExpMult[] = {
 };
 
 static const u8 *const sChoices_TrainerIVs[] = {
-    COMPOUND_STRING("OFF"),
-    COMPOUND_STRING("SCALE"),
-    COMPOUND_STRING("HARD"),
+    COMPOUND_STRING("NO"),
+    COMPOUND_STRING("ESCALA"),
+    COMPOUND_STRING("DIFÍCIL"),
 };
 
 static const u8 *const sChoices_TrainerEVs[] = {
-    COMPOUND_STRING("OFF"),
-    COMPOUND_STRING("SCALE"),
-    COMPOUND_STRING("HARD"),
-    COMPOUND_STRING("EXTREM"),
+    COMPOUND_STRING("NO"),
+    COMPOUND_STRING("ESCALA"),
+    COMPOUND_STRING("DIFÍCIL"),
+    COMPOUND_STRING("EXTREMO"),
 };
 
 static const u8 *const sChoices_PlayerIVs[] = {
-    COMPOUND_STRING("YES"),
+    COMPOUND_STRING("SÍ"),
     COMPOUND_STRING("NO"),
-    COMPOUND_STRING("NO (HP)"),
+    COMPOUND_STRING("NO (PS)"),
 };
 
 static const u8 *const sChoices_PkmnCenter[] = {
-    COMPOUND_STRING("YES"),
+    COMPOUND_STRING("SÍ"),
     COMPOUND_STRING("NO"),
 };
 
 static const u8 *const sChoices_Expensive[] = {
-    COMPOUND_STRING("OFF"),
+    COMPOUND_STRING("NO"),
     COMPOUND_STRING("x5"),
     COMPOUND_STRING("x10"),
     COMPOUND_STRING("x50!"),
 };
 
 static const u8 *const sChoices_EvoLimit[] = {
-    COMPOUND_STRING("OFF"),
-    COMPOUND_STRING("FIRST"),
-    COMPOUND_STRING("ALL"),
+    COMPOUND_STRING("NO"),
+    COMPOUND_STRING("PRIMERO"),
+    COMPOUND_STRING("TODOS"),
 };
 
 static const u8 *const sChoices_BstEqual[] = {
-    COMPOUND_STRING("OFF"),
+    COMPOUND_STRING("NO"),
     COMPOUND_STRING("100"),
     COMPOUND_STRING("255"),
     COMPOUND_STRING("500"),
@@ -631,65 +634,65 @@ static const u8 *const sChoices_BstEqual[] = {
 // =============================================================================
 
 static const u8 *const sDesc_RtcType[] = {
-    COMPOUND_STRING("Use vanilla Real Time Clock."),
-    COMPOUND_STRING("Use a fake Real Time Clock.\n1h in real life = 1 day in-game."),
+    COMPOUND_STRING("Usa el Reloj Tiempo Real orig."),
+    COMPOUND_STRING("Usa un reloj falso.\n1 h real = 1 día de juego."),
 };
 static const u8 *const sDesc_ShinyChance[] = {
-    COMPOUND_STRING("Very low chance of SHINY encounter.\nDefault chance from Generation III."),
-    COMPOUND_STRING("Low chance of SHINY encounter.\nDefault chance from Generation VI+."),
-    COMPOUND_STRING("Decent chance of SHINY encounter."),
-    COMPOUND_STRING("High chance of SHINY encounter."),
-    COMPOUND_STRING("Very high chance of SHINY encounter."),
+    COMPOUND_STRING("Prob. mínima de SHINY\nLa de GEN III por defecto."),
+    COMPOUND_STRING("Prob. baja de SHINY\nLa de GEN VI+ por defecto."),
+    COMPOUND_STRING("Prob. media de SHINY"),
+    COMPOUND_STRING("Prob. alta de SHINY"),
+    COMPOUND_STRING("Prob. muy alta de SHINY"),
 };
 static const u8 *const sDesc_ItemDrop[] = {
-    COMPOUND_STRING("Wild {PKMN} items will be only\nobtainable via capture or THIEF."),
-    COMPOUND_STRING("Wild {PKMN} will drop their hold\nitem after defeating them."),
+    COMPOUND_STRING("Los obj. de {PKMN} salvajes\nsolo con captura o LADRÓN."),
+    COMPOUND_STRING("Los {PKMN} salvajes sueltan\nsu objeto al vencerlos."),
 };
 static const u8 *const sDesc_FrontierBans[] = {
-    COMPOUND_STRING("Powerful legendary {PKMN} are banned\nin the BATTLE FRONTIER. Default."),
-    COMPOUND_STRING("All legendaries are allowed to\nparticipate in the BATTLE FRONTIER."),
+    COMPOUND_STRING("Los legendarios fuertes no\nentran al FRENTE. Por def."),
+    COMPOUND_STRING("Todos los legendarios\nentran al FRENTE BATALLA."),
 };
 static const u8 *const sDesc_ShinyColor[] = {
-    COMPOUND_STRING("Original shiny color palette for\nall {PKMN}. Default."),
-    COMPOUND_STRING("Some shiny {PKMN} have brand new\ncolor palettes."),
+    COMPOUND_STRING("Paleta shiny original\npara todos. Por defecto."),
+    COMPOUND_STRING("Algunos {PKMN} shiny\ntienen paletas nuevas."),
 };
 static const u8 *const sDesc_FeaturesNext[] = {
-    COMPOUND_STRING("Continue to Randomizer options."),
+    COMPOUND_STRING("Sigue a las opciones de Aleatorizador."),
 };
 
 static const struct ChallengeMenuItem sTabItems_Features[] = {
     [ITEM_FEATURES_RTC_TYPE] = {
-        .name         = COMPOUND_STRING("CLOCK TYPE"),
+        .name         = COMPOUND_STRING("TIPO DE RELOJ"),
         .descriptions = sDesc_RtcType,
         .numChoices   = 2,
         .choiceNames  = sChoices_RtcFake,
     },
     [ITEM_FEATURES_SHINY_CHANCE] = {
-        .name         = COMPOUND_STRING("SHINY CHANCE"),
+        .name         = COMPOUND_STRING("PROB. SHINY"),
         .descriptions = sDesc_ShinyChance,
         .numChoices   = 5,
         .choiceNames  = sChoices_ShinyChance,
     },
     [ITEM_FEATURES_SHINY_COLOR] = {
-        .name         = COMPOUND_STRING("ALT SHINY"),
+        .name         = COMPOUND_STRING("SHINY ALTERNO"),
         .descriptions = sDesc_ShinyColor,
         .numChoices   = 2,
         .choiceNames  = sChoices_OffOn,
     },
     [ITEM_FEATURES_ITEM_DROP] = {
-        .name         = COMPOUND_STRING("ITEM DROP"),
+        .name         = COMPOUND_STRING("OBJETOS CAÍDOS"),
         .descriptions = sDesc_ItemDrop,
         .numChoices   = 2,
         .choiceNames  = sChoices_OffOn,
     },
     [ITEM_FEATURES_FRONTIER_BANS] = {
-        .name         = COMPOUND_STRING("FRONTIER BANS"),
+        .name         = COMPOUND_STRING("PROHIB. FRONTERA"),
         .descriptions = sDesc_FrontierBans,
         .numChoices   = 2,
         .choiceNames  = sChoices_BanUnban,
     },
     [ITEM_FEATURES_NEXT] = {
-        .name         = COMPOUND_STRING("NEXT"),
+        .name         = COMPOUND_STRING("SIGUIENTE"),
         .descriptions = sDesc_FeaturesNext,
         .numChoices   = 0,
         .choiceNames  = NULL,
@@ -701,182 +704,182 @@ static const struct ChallengeMenuItem sTabItems_Features[] = {
 // =============================================================================
 
 static const u8 *const sDesc_RandomOffOn[] = {
-    COMPOUND_STRING("Game will not be randomized."),
-    COMPOUND_STRING("Play the game randomized.\nSettings below!"),
+    COMPOUND_STRING("El juego no se aleatoriza."),
+    COMPOUND_STRING("Juega con aleatorización.\n¡Ajustes abajo!"),
 };
 static const u8 *const sDesc_RandomStarter[] = {
-    COMPOUND_STRING("Standard starter {PKMN}."),
-    COMPOUND_STRING("Randomize starter {PKMN}."),
+    COMPOUND_STRING("{PKMN} inicial normal."),
+    COMPOUND_STRING("Aleatoriza el {PKMN} inicial."),
 };
 static const u8 *const sDesc_RandomWild[] = {
-    COMPOUND_STRING("Same wild encounter as in the\nbase game."),
-    COMPOUND_STRING("Randomize wild {PKMN}."),
+    COMPOUND_STRING("Encuentros salvajes como\nen el juego base."),
+    COMPOUND_STRING("Aleatoriza los {PKMN} salvajes."),
 };
 static const u8 *const sDesc_RandomMapBased[] = {
-    COMPOUND_STRING("Wild encounters are fully random\nevery time."),
-    COMPOUND_STRING("Wild encounters are seeded per map.\nSame area always has the same {PKMN}."),
+    COMPOUND_STRING("Encuentros totalmente\nal azar cada vez."),
+    COMPOUND_STRING("Encuentros con semilla por mapa.\nMisma zona, mismos {PKMN}."),
 };
 static const u8 *const sDesc_RandomTrainer[] = {
-    COMPOUND_STRING("Trainer will have their expected\nparty."),
-    COMPOUND_STRING("Randomize enemy trainer parties."),
+    COMPOUND_STRING("Los entrenadores llevan\nsu equipo esperado."),
+    COMPOUND_STRING("Aleatoriza los equipos rivales."),
 };
 static const u8 *const sDesc_RandomStatic[] = {
-    COMPOUND_STRING("Static encounters will be the same\nas in the base game."),
-    COMPOUND_STRING("Named {PKMN}, casino {PKMN}, roamers, and\nsome other special {PKMN} won't change."),
+    COMPOUND_STRING("Encuentros fijos como en\nel juego base."),
+    COMPOUND_STRING("Los {PKMN} con nombre, de casino,\nerrantes y otros no cambian."),
 };
 static const u8 *const sDesc_RandomSimilar[] = {
-    COMPOUND_STRING("{PKMN} replaced with similar tiered\nones. Currently based on evo stages."),
-    COMPOUND_STRING("Distribution of {PKMN} not balanced\naround their strength!"),
+    COMPOUND_STRING("Se cambian por otros de\nnivel similar según su evo."),
+    COMPOUND_STRING("¡La distribución de {PKMN}\nno es según su fuerza!"),
 };
 static const u8 *const sDesc_RandomLegendaries[] = {
-    COMPOUND_STRING("Legendary {PKMN} will not be\nincluded and randomized."),
-    COMPOUND_STRING("Include legendary {PKMN} in\nrandomization!"),
+    COMPOUND_STRING("Los {PKMN} legendarios no\nse incluyen."),
+    COMPOUND_STRING("¡Incluye legendarios en\nla aleatorización!"),
 };
 static const u8 *const sDesc_RandomGenScope[] = {
-    COMPOUND_STRING("Randomize into {PKMN} from every\ngeneration."),
-    COMPOUND_STRING("Only GEN 1-3 {PKMN} and their\ncross-gen evolutions."),
+    COMPOUND_STRING("Aleatoriza con {PKMN} de\ntodas las generaciones."),
+    COMPOUND_STRING("Solo {PKMN} de GEN 1-3 y sus\nevoluciones entre gen."),
 };
 static const u8 *const sDesc_RandomType[] = {
-    COMPOUND_STRING("{PKMN} types stay the same as in\nthe base game."),
-    COMPOUND_STRING("Randomize all {PKMN} types."),
+    COMPOUND_STRING("Los TIPOS quedan como en\nel juego base."),
+    COMPOUND_STRING("Aleatoriza los TIPOS de {PKMN}."),
 };
 static const u8 *const sDesc_RandomMoves[] = {
-    COMPOUND_STRING("{PKMN} moves stay the same as in\nthe base game."),
-    COMPOUND_STRING("Randomize all {PKMN} moves."),
+    COMPOUND_STRING("Los movs. quedan como en\nel juego base."),
+    COMPOUND_STRING("Aleatoriza todos los movs."),
 };
 static const u8 *const sDesc_RandomAbilities[] = {
-    COMPOUND_STRING("{PKMN} abilities stay the same as\nin the base game."),
-    COMPOUND_STRING("Randomize all {PKMN} abilities."),
+    COMPOUND_STRING("Las habs. quedan como en\nel juego base."),
+    COMPOUND_STRING("Aleatoriza todas las habs."),
 };
 static const u8 *const sDesc_RandomEvolutions[] = {
-    COMPOUND_STRING("{PKMN} evolutions stay the same as\nin the base game."),
-    COMPOUND_STRING("Randomize all {PKMN} evolutions."),
+    COMPOUND_STRING("Las evoluciones quedan como\nen el juego base."),
+    COMPOUND_STRING("Aleatoriza las evoluciones."),
 };
 static const u8 *const sDesc_RandomEvoMethods[] = {
-    COMPOUND_STRING("The {PKMN} that can potentially\nevolve are unchanged."),
-    COMPOUND_STRING("Randomize evolution lines. Allows\nnew evolution lines to occur!"),
+    COMPOUND_STRING("Los {PKMN} que pueden\nevolucionar no cambian."),
+    COMPOUND_STRING("Aleatoriza líneas evo.\n¡Permite líneas nuevas!"),
 };
 static const u8 *const sDesc_RandomTypeEffec[] = {
-    COMPOUND_STRING("Type effectiveness chart will remain\nthe same as in the base game."),
-    COMPOUND_STRING("Randomize type effectiveness.\nWARNING: CAN BE BUGGY!"),
+    COMPOUND_STRING("La tabla de tipos queda\ncomo en el juego base."),
+    COMPOUND_STRING("Aleatoriza la tabla de tipos.\n¡AVISO: PUEDE FALLAR!"),
 };
 static const u8 *const sDesc_RandomItems[] = {
-    COMPOUND_STRING("All found or received items are the\nsame as in the base game."),
-    COMPOUND_STRING("Randomize found, hidden and received\nitems. KEY items are excluded!"),
+    COMPOUND_STRING("Los objetos hallados o\nrecibidos son los mismos."),
+    COMPOUND_STRING("Aleatoriza objetos hallados y\nrecibidos. ¡Sin los CLAVE!"),
 };
 static const u8 *const sDesc_RandomChaos[] = {
-    COMPOUND_STRING("Chaos mode disabled."),
-    COMPOUND_STRING("Every above chosen option will be\nvery chaotic. NOT recommended!"),
+    COMPOUND_STRING("Modo caos desactivado."),
+    COMPOUND_STRING("Todo lo elegido arriba será\nmuy caótico. ¡No recomendado!"),
 };
 static const u8 *const sDesc_RandomNext[] = {
-    COMPOUND_STRING("Continue to Nuzlocke options."),
+    COMPOUND_STRING("Sigue a las opciones de Nuzlocke."),
 };
 
 static const struct ChallengeMenuItem sTabItems_Randomizer[] = {
     [ITEM_RANDOM_OFF_ON] = {
-        .name         = COMPOUND_STRING("RANDOMIZER"),
+        .name         = COMPOUND_STRING("ALEATORIZADOR"),
         .descriptions = sDesc_RandomOffOn,
         .numChoices   = 2,
         .choiceNames  = sChoices_OffRandom,
     },
     [ITEM_RANDOM_STARTER] = {
-        .name         = COMPOUND_STRING("STARTER {PKMN}"),
+        .name         = COMPOUND_STRING("{PKMN} INICIAL"),
         .descriptions = sDesc_RandomStarter,
         .numChoices   = 2,
         .choiceNames  = sChoices_OffRandom,
     },
     [ITEM_RANDOM_WILD_PKMN] = {
-        .name         = COMPOUND_STRING("WILD {PKMN}"),
+        .name         = COMPOUND_STRING("{PKMN} SALVAJE"),
         .descriptions = sDesc_RandomWild,
         .numChoices   = 2,
         .choiceNames  = sChoices_OffRandom,
     },
     [ITEM_RANDOM_MAP_BASED] = {
-        .name         = COMPOUND_STRING("MAP SEEDED"),
+        .name         = COMPOUND_STRING("SEMILLA POR MAPA"),
         .descriptions = sDesc_RandomMapBased,
         .numChoices   = 2,
         .choiceNames  = sChoices_OffOn,
     },
     [ITEM_RANDOM_TRAINER] = {
-        .name         = COMPOUND_STRING("TRAINER"),
+        .name         = COMPOUND_STRING("ENTRENADOR"),
         .descriptions = sDesc_RandomTrainer,
         .numChoices   = 2,
         .choiceNames  = sChoices_OffRandom,
     },
     [ITEM_RANDOM_STATIC] = {
-        .name         = COMPOUND_STRING("STATIC {PKMN}"),
+        .name         = COMPOUND_STRING("{PKMN} FIJO"),
         .descriptions = sDesc_RandomStatic,
         .numChoices   = 2,
         .choiceNames  = sChoices_OffRandom,
     },
     [ITEM_RANDOM_SIMILAR] = {
-        .name         = COMPOUND_STRING("BALANCING"),
+        .name         = COMPOUND_STRING("EQUILIBRIO"),
         .descriptions = sDesc_RandomSimilar,
         .numChoices   = 2,
         .choiceNames  = sChoices_OnOff,
     },
     [ITEM_RANDOM_LEGENDARIES] = {
-        .name         = COMPOUND_STRING("LEGENDARIES"),
+        .name         = COMPOUND_STRING("LEGENDARIOS"),
         .descriptions = sDesc_RandomLegendaries,
         .numChoices   = 2,
         .choiceNames  = sChoices_OffOn,
     },
     [ITEM_RANDOM_GEN_SCOPE] = {
-        .name         = COMPOUND_STRING("GEN SCOPE"),
+        .name         = COMPOUND_STRING("GENERACIONES"),
         .descriptions = sDesc_RandomGenScope,
         .numChoices   = 2,
         .choiceNames  = sChoices_GenScope,
     },
     [ITEM_RANDOM_TYPE] = {
-        .name         = COMPOUND_STRING("TYPE"),
+        .name         = COMPOUND_STRING("TIPO"),
         .descriptions = sDesc_RandomType,
         .numChoices   = 2,
         .choiceNames  = sChoices_OffRandom,
     },
     [ITEM_RANDOM_MOVES] = {
-        .name         = COMPOUND_STRING("MOVES"),
+        .name         = COMPOUND_STRING("MOVIMIENTOS"),
         .descriptions = sDesc_RandomMoves,
         .numChoices   = 2,
         .choiceNames  = sChoices_OffRandom,
     },
     [ITEM_RANDOM_ABILITIES] = {
-        .name         = COMPOUND_STRING("ABILITIES"),
+        .name         = COMPOUND_STRING("HABILIDADES"),
         .descriptions = sDesc_RandomAbilities,
         .numChoices   = 2,
         .choiceNames  = sChoices_OffRandom,
     },
     [ITEM_RANDOM_EVOLUTIONS] = {
-        .name         = COMPOUND_STRING("EVOLUTIONS"),
+        .name         = COMPOUND_STRING("EVOLUCIONES"),
         .descriptions = sDesc_RandomEvolutions,
         .numChoices   = 2,
         .choiceNames  = sChoices_OffRandom,
     },
     [ITEM_RANDOM_EVO_METHODS] = {
-        .name         = COMPOUND_STRING("EVO LINES"),
+        .name         = COMPOUND_STRING("LÍNEAS EVO."),
         .descriptions = sDesc_RandomEvoMethods,
         .numChoices   = 2,
         .choiceNames  = sChoices_OffRandom,
     },
     [ITEM_RANDOM_TYPE_EFFEC] = {
-        .name         = COMPOUND_STRING("EFFECTIVENESS"),
+        .name         = COMPOUND_STRING("EFECTIVIDAD"),
         .descriptions = sDesc_RandomTypeEffec,
         .numChoices   = 2,
         .choiceNames  = sChoices_OffRandom,
     },
     [ITEM_RANDOM_ITEMS] = {
-        .name         = COMPOUND_STRING("ITEMS"),
+        .name         = COMPOUND_STRING("OBJETOS"),
         .descriptions = sDesc_RandomItems,
         .numChoices   = 2,
         .choiceNames  = sChoices_OffRandom,
     },
     [ITEM_RANDOM_CHAOS] = {
-        .name         = COMPOUND_STRING("CHAOS MODE"),
+        .name         = COMPOUND_STRING("MODO CAOS"),
         .descriptions = sDesc_RandomChaos,
         .numChoices   = 2,
         .choiceNames  = sChoices_OffChaos,
     },
     [ITEM_RANDOM_NEXT] = {
-        .name         = COMPOUND_STRING("NEXT"),
+        .name         = COMPOUND_STRING("SIGUIENTE"),
         .descriptions = sDesc_RandomNext,
         .numChoices   = 0,
         .choiceNames  = NULL,
@@ -888,33 +891,33 @@ static const struct ChallengeMenuItem sTabItems_Randomizer[] = {
 // =============================================================================
 
 static const u8 *const sDesc_Nuzlocke[] = {
-    COMPOUND_STRING("Nuzlocke mode is disabled."),
-    COMPOUND_STRING("Fainted {PKMN} can't be used anymore!\nNo more rules are enforced."),
-    COMPOUND_STRING("One catch per route! Fainted {PKMN}\ncan't be used anymore."),
-    COMPOUND_STRING("Same rules as NORMAL but also\ndeletes SAVE on battle loss!"),
+    COMPOUND_STRING("El modo Nuzlocke está desactivado."),
+    COMPOUND_STRING("¡Los {PKMN} debilitados no se usan.\nSin más reglas."),
+    COMPOUND_STRING("¡Una captura por ruta!\nSin usar los debilitados."),
+    COMPOUND_STRING("Igual que NORMAL pero\nborra la PARTIDA si pierdes."),
 };
 static const u8 *const sDesc_SpeciesClause[] = {
-    COMPOUND_STRING("Only not prior caught {PKMN} count\nas first encounter. RECOMMENDED!"),
-    COMPOUND_STRING("The player always has to catch the\nfirst {PKMN} per route."),
+    COMPOUND_STRING("Solo cuenta como primero\nel {PKMN} no capturado antes."),
+    COMPOUND_STRING("Siempre debes capturar el\nprimer {PKMN} de la ruta."),
 };
 static const u8 *const sDesc_ShinyClause[] = {
-    COMPOUND_STRING("The player can always catch shiny\n{PKMN}. RECOMMENDED!"),
-    COMPOUND_STRING("The player can only catch a shiny\n{PKMN} if it's the first encounter."),
+    COMPOUND_STRING("Siempre puedes capturar\n{PKMN} shiny."),
+    COMPOUND_STRING("Solo capturas shiny\nsi es el primer encuentro."),
 };
 static const u8 *const sDesc_Nicknaming[] = {
-    COMPOUND_STRING("Forces the player to nickname every\n{PKMN}. RECOMMENDED!"),
-    COMPOUND_STRING("Nicknames are optional."),
+    COMPOUND_STRING("Obliga a apodar a todos\nlos {PKMN}."),
+    COMPOUND_STRING("Los apodos son opcionales."),
 };
 static const u8 *const sDesc_Deletion[] = {
-    COMPOUND_STRING("Fainted {PKMN} are sent to the PC\nafter battle and can't be retrieved."),
-    COMPOUND_STRING("Fainted {PKMN} are released after\nbattle!"),
+    COMPOUND_STRING("Los {PKMN} debilitados van\nal PC y no se recuperan."),
+    COMPOUND_STRING("¡Los {PKMN} debilitados se\nliberan tras el combate!"),
 };
 static const u8 *const sDesc_RareCandy[] = {
-    COMPOUND_STRING("Infinite Rare Candy will be in the\nplayer's PC at game start."),
-    COMPOUND_STRING("Player will not have access to\nInfinite Rare Candy."),
+    COMPOUND_STRING("Caramelos Raros infinitos\nen tu PC al empezar."),
+    COMPOUND_STRING("No tendrás Caramelos\nRaros infinitos."),
 };
 static const u8 *const sDesc_NuzlockeNext[] = {
-    COMPOUND_STRING("Continue to difficulty options."),
+    COMPOUND_STRING("Sigue a las opciones de dificultad."),
 };
 
 static const struct ChallengeMenuItem sTabItems_Nuzlocke[] = {
@@ -925,37 +928,37 @@ static const struct ChallengeMenuItem sTabItems_Nuzlocke[] = {
         .choiceNames  = sChoices_Nuzlocke,
     },
     [ITEM_NUZLOCKE_SPECIES_CLAUSE] = {
-        .name         = COMPOUND_STRING("DUPES CLAUSE"),
+        .name         = COMPOUND_STRING("REGLA DUPLICADOS"),
         .descriptions = sDesc_SpeciesClause,
         .numChoices   = 2,
         .choiceNames  = sChoices_OnOff,
     },
     [ITEM_NUZLOCKE_SHINY_CLAUSE] = {
-        .name         = COMPOUND_STRING("SHINY CLAUSE"),
+        .name         = COMPOUND_STRING("REGLA SHINY"),
         .descriptions = sDesc_ShinyClause,
         .numChoices   = 2,
         .choiceNames  = sChoices_OnOff,
     },
     [ITEM_NUZLOCKE_NICKNAMING] = {
-        .name         = COMPOUND_STRING("NICKNAMES"),
+        .name         = COMPOUND_STRING("APODOS"),
         .descriptions = sDesc_Nicknaming,
         .numChoices   = 2,
         .choiceNames  = sChoices_OnOff,
     },
     [ITEM_NUZLOCKE_DELETION] = {
-        .name         = COMPOUND_STRING("FAINTING"),
+        .name         = COMPOUND_STRING("DEBILITADOS"),
         .descriptions = sDesc_Deletion,
         .numChoices   = 2,
         .choiceNames  = sChoices_CemeteryRelease,
     },
     [ITEM_NUZLOCKE_RARE_CANDY] = {
-        .name         = COMPOUND_STRING("INF. RARE CANDY"),
+        .name         = COMPOUND_STRING("CARAMELO RARO INF."),
         .descriptions = sDesc_RareCandy,
         .numChoices   = 2,
         .choiceNames  = sChoices_OnOff,
     },
     [ITEM_NUZLOCKE_NEXT] = {
-        .name         = COMPOUND_STRING("NEXT"),
+        .name         = COMPOUND_STRING("SIGUIENTE"),
         .descriptions = sDesc_NuzlockeNext,
         .numChoices   = 0,
         .choiceNames  = NULL,
@@ -966,131 +969,131 @@ static const struct ChallengeMenuItem sTabItems_Nuzlocke[] = {
 // DIFFICULTY descriptions + table
 // =============================================================================
 
-static const u8 sText_Desc_PartyLimit[] = _("Limits the amount of {PKMN} in the\nparty. 1 has visual bugs in DOUBLES.");
+static const u8 sText_Desc_PartyLimit[] = _("Limita la cantidad de {PKMN} en el\nequipo. 1 tiene errores en DOBLES.");
 static const u8 *const sDesc_PartyLimit[] = {
     sText_Desc_PartyLimit, sText_Desc_PartyLimit, sText_Desc_PartyLimit,
     sText_Desc_PartyLimit, sText_Desc_PartyLimit, sText_Desc_PartyLimit,
 };
 static const u8 *const sDesc_LevelCap[] = {
-    COMPOUND_STRING("No level cap. Overleveling possible."),
-    COMPOUND_STRING("Maximum level is based on the next\ngym's highest {PKMN} level."),
-    COMPOUND_STRING("Maximum level is based on the next\ngym's lowest {PKMN} level."),
+    COMPOUND_STRING("Sin límite de nivel.\nPuedes subir de más."),
+    COMPOUND_STRING("El nivel máximo es el del\n{PKMN} más fuerte del gimnasio."),
+    COMPOUND_STRING("El nivel máximo es el del\n{PKMN} más débil del gimnasio."),
 };
 static const u8 *const sDesc_ExpMult[] = {
-    COMPOUND_STRING("{PKMN} gain normal EXP. Points.\nStacks with HARD MODE EXP."),
-    COMPOUND_STRING("{PKMN} gain 50 percent more EXP.\nPoints! Stacks with HARD MODE EXP."),
-    COMPOUND_STRING("{PKMN} gain double EXP. Points!\nStacks with HARD MODE EXP."),
-    COMPOUND_STRING("{PKMN} gain ZERO EXP. Points!!!\nApplies to HARD MODE EXP. as well."),
+    COMPOUND_STRING("Tus {PKMN} ganan EXP. normal.\nSe suma a la EXP de DIFÍCIL."),
+    COMPOUND_STRING("¡Tus {PKMN} ganan 50% más EXP!\nSe suma a la de DIFÍCIL."),
+    COMPOUND_STRING("¡Tus {PKMN} ganan doble EXP!\nSe suma a la de DIFÍCIL."),
+    COMPOUND_STRING("¡¡Tus {PKMN} ganan CERO EXP!!\nTambién en EXP de DIFÍCIL."),
 };
 static const u8 *const sDesc_ItemPlayer[] = {
-    COMPOUND_STRING("The player can use battle items."),
-    COMPOUND_STRING("The player can NOT use battle items.\nHold items are allowed!"),
+    COMPOUND_STRING("Puedes usar objetos en combate."),
+    COMPOUND_STRING("No puedes usar objetos en\ncombate. ¡Sí los equipados!"),
 };
 static const u8 *const sDesc_ItemTrainer[] = {
-    COMPOUND_STRING("Enemy trainers can use battle items."),
-    COMPOUND_STRING("Enemy trainers can NOT use battle\nitems."),
+    COMPOUND_STRING("Los rivales usan objetos en combate."),
+    COMPOUND_STRING("Los rivales NO usan\nobjetos en combate."),
 };
 static const u8 *const sDesc_NoEVs[] = {
-    COMPOUND_STRING("The player's {PKMN} gain effort\nvalues as expected."),
-    COMPOUND_STRING("The player's {PKMN} do NOT gain any\neffort values!"),
+    COMPOUND_STRING("Tus {PKMN} ganan puntos de\nesfuerzo como siempre."),
+    COMPOUND_STRING("¡Tus {PKMN} NO ganan\npuntos de esfuerzo!"),
 };
 static const u8 *const sDesc_ScalingIVs[] = {
-    COMPOUND_STRING("The {PKMN} of enemy Trainer have\nthe expected IVs."),
-    COMPOUND_STRING("The IVs of Trainer {PKMN} increase\nwith gym badges!"),
-    COMPOUND_STRING("All Trainer {PKMN} have perfect IVs!"),
+    COMPOUND_STRING("Los {PKMN} rivales tienen\nlos IV esperados."),
+    COMPOUND_STRING("¡Los IV de los {PKMN} rivales\nsuben con las medallas!"),
+    COMPOUND_STRING("¡Todos los {PKMN} rivales\ntienen IV perfectos!"),
 };
 static const u8 *const sDesc_ScalingEVs[] = {
-    COMPOUND_STRING("The {PKMN} of enemy Trainer have\nno EVs."),
-    COMPOUND_STRING("The EVs of Trainer {PKMN} increase\nwith gym badges!"),
-    COMPOUND_STRING("All Trainer {PKMN} have high EVs!"),
-    COMPOUND_STRING("All Trainer {PKMN} have 252 EVs!\nVery Hard!"),
+    COMPOUND_STRING("Los {PKMN} rivales no\ntienen EV."),
+    COMPOUND_STRING("¡Los EV de los {PKMN} rivales\nsuben con las medallas!"),
+    COMPOUND_STRING("¡Todos los {PKMN} rivales\ntienen EV altos!"),
+    COMPOUND_STRING("¡Todos los {PKMN} rivales tienen\n252 EV! ¡Muy difícil!"),
 };
 static const u8 *const sDesc_MaxPartyIVs[] = {
-    COMPOUND_STRING("Your {PKMN} have the expected IVs\n(between 0 and 31)."),
-    COMPOUND_STRING("The IVs of your {PKMN} are set\nalways to the maximum (31)."),
-    COMPOUND_STRING("IVs are set between 30 and 31 to\nallow different Hidden Powers."),
+    COMPOUND_STRING("Tus {PKMN} tienen los IV\nesperados (entre 0 y 31)."),
+    COMPOUND_STRING("Los IV de tus {PKMN} van\nsiempre al máximo (31)."),
+    COMPOUND_STRING("IV entre 30 y 31 para\npermitir Poderes Ocultos."),
 };
 static const u8 *const sDesc_LessEscapes[] = {
-    COMPOUND_STRING("The player can easily run away from\nbattles, as usual."),
-    COMPOUND_STRING("The player can't easily run away\nfrom battles. Use repels!"),
+    COMPOUND_STRING("Puedes huir de los combates\ncon facilidad, como siempre."),
+    COMPOUND_STRING("No puedes huir fácil de\nlos combates. ¡Usa repelentes!"),
 };
 static const u8 *const sDesc_EscapeRopeDig[] = {
-    COMPOUND_STRING("ESCAPE ROPE and DIG can be used to\nexit dungeons."),
-    COMPOUND_STRING("ESCAPE ROPE and DIG can't be used\nto exit dungeons."),
+    COMPOUND_STRING("Puedes salir de cuevas con\nCUERDA HUIDA y EXCAVAR."),
+    COMPOUND_STRING("No puedes salir de cuevas\ncon CUERDA HUIDA ni EXCAVAR."),
 };
 static const u8 *const sDesc_DifficultyNext[] = {
-    COMPOUND_STRING("Continue to challenge options."),
+    COMPOUND_STRING("Sigue a las opciones de retos."),
 };
 
 static const struct ChallengeMenuItem sTabItems_Difficulty[] = {
     [ITEM_DIFFICULTY_PARTY_LIMIT] = {
-        .name         = COMPOUND_STRING("PARTY LIMIT"),
+        .name         = COMPOUND_STRING("LÍMITE EQUIPO"),
         .descriptions = sDesc_PartyLimit,
         .numChoices   = 6,
         .choiceNames  = sChoices_PartyLimit,
     },
     [ITEM_DIFFICULTY_LEVEL_CAP] = {
-        .name         = COMPOUND_STRING("LEVEL CAP"),
+        .name         = COMPOUND_STRING("LÍMITE NIVEL"),
         .descriptions = sDesc_LevelCap,
         .numChoices   = 3,
         .choiceNames  = sChoices_LevelCap,
     },
     [ITEM_DIFFICULTY_EXP_MULTIPLIER] = {
-        .name         = COMPOUND_STRING("EXP. MULTIPLIER"),
+        .name         = COMPOUND_STRING("MULT. DE EXP."),
         .descriptions = sDesc_ExpMult,
         .numChoices   = 4,
         .choiceNames  = sChoices_ExpMult,
     },
     [ITEM_DIFFICULTY_ITEM_PLAYER] = {
-        .name         = COMPOUND_STRING("PLAYER ITEMS"),
+        .name         = COMPOUND_STRING("OBJ. JUGADOR"),
         .descriptions = sDesc_ItemPlayer,
         .numChoices   = 2,
         .choiceNames  = sChoices_YesNo,
     },
     [ITEM_DIFFICULTY_ITEM_TRAINER] = {
-        .name         = COMPOUND_STRING("TRAINER ITEMS"),
+        .name         = COMPOUND_STRING("OBJ. RIVAL"),
         .descriptions = sDesc_ItemTrainer,
         .numChoices   = 2,
         .choiceNames  = sChoices_YesNo,
     },
     [ITEM_DIFFICULTY_MAX_PARTY_IVS] = {
-        .name         = COMPOUND_STRING("PLAYER IVs"),
+        .name         = COMPOUND_STRING("IV JUGADOR"),
         .descriptions = sDesc_MaxPartyIVs,
         .numChoices   = 3,
         .choiceNames  = sChoices_PlayerIVs,
     },
     [ITEM_DIFFICULTY_SCALING_IVS] = {
-        .name         = COMPOUND_STRING("TRAINER IVs"),
+        .name         = COMPOUND_STRING("IV RIVAL"),
         .descriptions = sDesc_ScalingIVs,
         .numChoices   = 3,
         .choiceNames  = sChoices_TrainerIVs,
     },
     [ITEM_DIFFICULTY_NO_EVS] = {
-        .name         = COMPOUND_STRING("PLAYER EVs"),
+        .name         = COMPOUND_STRING("EV JUGADOR"),
         .descriptions = sDesc_NoEVs,
         .numChoices   = 2,
         .choiceNames  = sChoices_YesNo,
     },
     [ITEM_DIFFICULTY_SCALING_EVS] = {
-        .name         = COMPOUND_STRING("TRAINER EVs"),
+        .name         = COMPOUND_STRING("EV RIVAL"),
         .descriptions = sDesc_ScalingEVs,
         .numChoices   = 4,
         .choiceNames  = sChoices_TrainerEVs,
     },
     [ITEM_DIFFICULTY_LESS_ESCAPES] = {
-        .name         = COMPOUND_STRING("LESS ESCAPES"),
+        .name         = COMPOUND_STRING("HUIDAS DIFÍCILES"),
         .descriptions = sDesc_LessEscapes,
         .numChoices   = 2,
         .choiceNames  = sChoices_OffOn,
     },
     [ITEM_DIFFICULTY_ESCAPE_ROPE_DIG] = {
-        .name         = COMPOUND_STRING("ESC. ROPE / DIG"),
+        .name         = COMPOUND_STRING("CUERDA / EXCAVAR"),
         .descriptions = sDesc_EscapeRopeDig,
         .numChoices   = 2,
         .choiceNames  = sChoices_YesNo,
     },
     [ITEM_DIFFICULTY_NEXT] = {
-        .name         = COMPOUND_STRING("NEXT"),
+        .name         = COMPOUND_STRING("SIGUIENTE"),
         .descriptions = sDesc_DifficultyNext,
         .numChoices   = 0,
         .choiceNames  = NULL,
@@ -1102,25 +1105,25 @@ static const struct ChallengeMenuItem sTabItems_Difficulty[] = {
 // =============================================================================
 
 static const u8 *const sDesc_Pokecenter[] = {
-    COMPOUND_STRING("The player can visit {PKMN}centers\nand other locations to heal."),
-    COMPOUND_STRING("The player CAN'T visit {PKMN}centers\nor other locations to heal."),
+    COMPOUND_STRING("Puedes curar en CENTROS\n{PKMN} y otros sitios."),
+    COMPOUND_STRING("NO puedes curar en CENTROS\n{PKMN} ni en otros sitios."),
 };
 static const u8 *const sDesc_Expensive[] = {
-    COMPOUND_STRING("Everything has the usual cost."),
-    COMPOUND_STRING("Everything is 5 times more\nexpensive!"),
-    COMPOUND_STRING("Everything is 10 times more\nexpensive! Good ol' capitalism."),
-    COMPOUND_STRING("Everything is 50 times more\nexpensive! Ultra capitalism!"),
+    COMPOUND_STRING("Todo cuesta lo habitual."),
+    COMPOUND_STRING("¡Todo cuesta 5 veces\nmás!"),
+    COMPOUND_STRING("¡Todo cuesta 10 veces más!\nEl buen capitalismo."),
+    COMPOUND_STRING("¡Todo cuesta 50 veces más!\n¡Ultracapitalismo!"),
 };
 static const u8 *const sDesc_EvoLimit[] = {
-    COMPOUND_STRING("{PKMN} evolve as expected."),
-    COMPOUND_STRING("{PKMN} can only evolve into their\nfirst evolution."),
-    COMPOUND_STRING("{PKMN} can NOT evolve at all!"),
+    COMPOUND_STRING("Los {PKMN} evolucionan normal."),
+    COMPOUND_STRING("Solo evolucionan a su\nprimera evolución."),
+    COMPOUND_STRING("¡Los {PKMN} NO evolucionan!"),
 };
 #define NUM_ONE_TYPE_CHOICES 20
 #define ONE_TYPE_OFF 31
 #define EVO_LINE_TYPE_SEARCH_DEPTH 4 // deepest evolution chain worth walking
 
-static const u8 sText_Desc_OneType[] = _("Allow only one {PKMN} type the\nplayer can capture and use.");
+static const u8 sText_Desc_OneType[] = _("Permite solo un tipo de {PKMN} que\nel jugador pueda capturar y usar.");
 static const u8 *const sDesc_OneType[] = {
     sText_Desc_OneType, sText_Desc_OneType, sText_Desc_OneType, sText_Desc_OneType,
     sText_Desc_OneType, sText_Desc_OneType, sText_Desc_OneType, sText_Desc_OneType,
@@ -1129,65 +1132,65 @@ static const u8 *const sDesc_OneType[] = {
     sText_Desc_OneType, sText_Desc_OneType, sText_Desc_OneType, sText_Desc_OneType,
 };
 static const u8 *const sDesc_BstEqualizer[] = {
-    COMPOUND_STRING("All {PKMN} have their original\nbase stats."),
-    COMPOUND_STRING("{PKMN} stats are calculated with\n100 of each base stat."),
-    COMPOUND_STRING("{PKMN} stats are calculated with\n255 of each base stat."),
-    COMPOUND_STRING("{PKMN} stats are calculated with\n500 of each base stat."),
+    COMPOUND_STRING("Todos los {PKMN} tienen\nsus estadísticas base."),
+    COMPOUND_STRING("Estadísticas calculadas con\n100 en cada base."),
+    COMPOUND_STRING("Estadísticas calculadas con\n255 en cada base."),
+    COMPOUND_STRING("Estadísticas calculadas con\n500 en cada base."),
 };
 static const u8 *const sDesc_Mirror[] = {
-    COMPOUND_STRING("The player uses their own party."),
-    COMPOUND_STRING("In Trainer battles, the player gets\na copy of the enemy's party!"),
+    COMPOUND_STRING("Usas tu propio equipo."),
+    COMPOUND_STRING("¡En combates, obtienes una\ncopia del equipo rival!"),
 };
 static const u8 *const sDesc_MirrorThief[] = {
-    COMPOUND_STRING("The player gets their own party\nback after battles."),
-    COMPOUND_STRING("The player keeps the enemies party\nafter battle!"),
+    COMPOUND_STRING("Recuperas tu equipo\ntras los combates."),
+    COMPOUND_STRING("¡Te quedas con el equipo\nrival tras el combate!"),
 };
 
 static const struct ChallengeMenuItem sTabItems_Challenges[] = {
     [ITEM_CHALLENGES_POKECENTER] = {
-        .name         = COMPOUND_STRING("{PKMN}CENTER"),
+        .name         = COMPOUND_STRING("CENTRO {PKMN}"),
         .descriptions = sDesc_Pokecenter,
         .numChoices   = 2,
         .choiceNames  = sChoices_PkmnCenter,
     },
     [ITEM_CHALLENGES_EXPENSIVE] = {
-        .name         = COMPOUND_STRING("ULTRA EXPENSIVE!"),
+        .name         = COMPOUND_STRING("¡ULTRACARO!"),
         .descriptions = sDesc_Expensive,
         .numChoices   = 4,
         .choiceNames  = sChoices_Expensive,
     },
     [ITEM_CHALLENGES_EVO_LIMIT] = {
-        .name         = COMPOUND_STRING("EVO LIMIT"),
+        .name         = COMPOUND_STRING("LÍMITE EVO."),
         .descriptions = sDesc_EvoLimit,
         .numChoices   = 3,
         .choiceNames  = sChoices_EvoLimit,
     },
     [ITEM_CHALLENGES_ONE_TYPE] = {
-        .name         = COMPOUND_STRING("ONE TYPE ONLY"),
+        .name         = COMPOUND_STRING("UN SOLO TIPO"),
         .descriptions = sDesc_OneType,
         .numChoices   = NUM_ONE_TYPE_CHOICES,
         .choiceNames  = NULL,
     },
     [ITEM_CHALLENGES_BST_EQUALIZER] = {
-        .name         = COMPOUND_STRING("BST EQUALIZER"),
+        .name         = COMPOUND_STRING("IGUALAR ESTADÍS."),
         .descriptions = sDesc_BstEqualizer,
         .numChoices   = 4,
         .choiceNames  = sChoices_BstEqual,
     },
     [ITEM_CHALLENGES_MIRROR] = {
-        .name         = COMPOUND_STRING("MIRROR MODE"),
+        .name         = COMPOUND_STRING("MODO ESPEJO"),
         .descriptions = sDesc_Mirror,
         .numChoices   = 2,
         .choiceNames  = sChoices_OffOn,
     },
     [ITEM_CHALLENGES_MIRROR_THIEF] = {
-        .name         = COMPOUND_STRING("MIRROR THIEF"),
+        .name         = COMPOUND_STRING("LADRÓN ESPEJO"),
         .descriptions = sDesc_MirrorThief,
         .numChoices   = 2,
         .choiceNames  = sChoices_OffOn,
     },
     [ITEM_CHALLENGES_SAVE] = {
-        .name         = COMPOUND_STRING("SAVE"),
+        .name         = COMPOUND_STRING("GUARDAR"),
         .descriptions = sDesc_SaveExit,
         .numChoices   = 0,
         .choiceNames  = NULL,
@@ -1206,12 +1209,12 @@ struct TabDef
 };
 
 static const struct TabDef sTabs[TAB_COUNT] = {
-    [TAB_MODE]       = { COMPOUND_STRING("MODE"),       sTabItems_Mode,       ITEM_MODE_COUNT },
-    [TAB_FEATURES]   = { COMPOUND_STRING("FEATURES"),   sTabItems_Features,   ITEM_FEATURES_COUNT },
-    [TAB_RANDOMIZER] = { COMPOUND_STRING("RANDOMIZER"), sTabItems_Randomizer, ITEM_RANDOM_COUNT },
+    [TAB_MODE]       = { COMPOUND_STRING("MODO"),       sTabItems_Mode,       ITEM_MODE_COUNT },
+    [TAB_FEATURES]   = { COMPOUND_STRING("AJUSTES"),   sTabItems_Features,   ITEM_FEATURES_COUNT },
+    [TAB_RANDOMIZER] = { COMPOUND_STRING("ALEATORIZADOR"), sTabItems_Randomizer, ITEM_RANDOM_COUNT },
     [TAB_NUZLOCKE]   = { COMPOUND_STRING("NUZLOCKE"),   sTabItems_Nuzlocke,   ITEM_NUZLOCKE_COUNT },
-    [TAB_DIFFICULTY] = { COMPOUND_STRING("DIFFICULTY"),  sTabItems_Difficulty, ITEM_DIFFICULTY_COUNT },
-    [TAB_CHALLENGES] = { COMPOUND_STRING("CHALLENGES"), sTabItems_Challenges, ITEM_CHALLENGES_COUNT },
+    [TAB_DIFFICULTY] = { COMPOUND_STRING("DIFICULTAD"),  sTabItems_Difficulty, ITEM_DIFFICULTY_COUNT },
+    [TAB_CHALLENGES] = { COMPOUND_STRING("RETOS"), sTabItems_Challenges, ITEM_CHALLENGES_COUNT },
 };
 
 // =============================================================================
@@ -1332,7 +1335,7 @@ static bool8 CheckConditions(u8 tab, u8 itemIndex)
         case ITEM_NUZLOCKE_RARE_CANDY:
             return nuzSel > 0;
         default:
-            if (nuzSel == 1) // EASY — lock all sub-options except RARE_CANDY
+            if (nuzSel == 1) // EASY - lock all sub-options except RARE_CANDY
                 return FALSE;
             return nuzSel > 0;
         }
@@ -1392,9 +1395,14 @@ static void VBlankCB(void)
 static void HighlightRow(void)
 {
     u16 scrollOffset, selectedRow;
+    u8 rowH, rowY;
     ListMenuGetScrollAndRow(sMenu->listTaskId, &scrollOffset, &selectedRow);
+    // La fila no siempre mide Y_DIFF: las opciones pueden ocupar dos lineas.
+    // Usamos la misma Y que el motor de listas para que la barra siga al texto.
+    rowH = GetFontAttribute(FONT_SHORT, FONTATTR_MAX_LETTER_HEIGHT);
+    rowY = ListMenuGetYCoordForPrintingArrowCursor(sMenu->listTaskId);
     SetGpuReg(REG_OFFSET_WIN0H, WIN_RANGE(Y_DIFF, 224));
-    SetGpuReg(REG_OFFSET_WIN0V, WIN_RANGE(selectedRow * Y_DIFF + 24, selectedRow * Y_DIFF + 40));
+    SetGpuReg(REG_OFFSET_WIN0V, WIN_RANGE(rowY + 23, rowY + 23 + rowH));
 }
 
 // =============================================================================
@@ -1415,65 +1423,26 @@ static void DrawRightSideChoiceText(const u8 *text, int x, int y, bool8 chosen, 
         color[1] = chosen ? TEXT_COLOR_OPTIONS_RED_DARK_FG : TEXT_COLOR_OPTIONS_GRAY_LIGHT_FG;
         color[2] = chosen ? TEXT_COLOR_OPTIONS_RED_DARK_SHADOW : TEXT_COLOR_OPTIONS_GRAY_SHADOW;
     }
-    AddTextPrinterParameterized4(WIN_OPTIONS, FONT_NORMAL, x, y, 0, 0, color, TEXT_SKIP_DRAW, text);
+    AddTextPrinterParameterized4(WIN_OPTIONS, FONT_SHORT, x, y + 1, 0, 0, color, TEXT_SKIP_DRAW, text);
 }
 
-static int GetMiddleX(const u8 *txt1, const u8 *txt2, const u8 *txt3)
+// Muestra como mucho DOS opciones: el valor seleccionado y un vecino.
+// Si las dos no caben en el ancho disponible, muestra solo la seleccionada.
+static void DrawChoices_Adaptive(const u8 *const *strings, int count, int selection, int y, bool8 active)
 {
-    int widthLeft = GetStringWidth(FONT_NORMAL, txt1, 0);
-    int widthMid = GetStringWidth(FONT_NORMAL, txt2, 0);
-    int widthRight = GetStringWidth(FONT_NORMAL, txt3, 0);
-    widthMid -= (198 - 104);
-    return (widthLeft - widthMid - widthRight) / 2 + 104;
-}
+    int wSel = GetStringWidth(FONT_SHORT, strings[selection], 0);
+    int xSel = GetStringRightAlignXOffset(FONT_SHORT, strings[selection], VALUE_X_END);
+    int other = (selection + 1 < count) ? (selection + 1) : (selection - 1);
 
-static void DrawChoices_Two(const u8 *const *strings, int selection, int y, bool8 active, int leftX)
-{
-    DrawRightSideChoiceText(strings[0], leftX, y + 1, selection == 0, active);
-    DrawRightSideChoiceText(strings[1], GetStringRightAlignXOffset(FONT_NORMAL, strings[1], 198), y + 1, selection == 1, active);
+    if (other >= 0 && other != selection)
+    {
+        int wOth = GetStringWidth(FONT_SHORT, strings[other], 0);
+        int xOth = xSel - CHOICE_GAP - wOth;
+        if (xOth >= VALUE_X_START)
+            DrawRightSideChoiceText(strings[other], xOth, y + 1, FALSE, active);
+    }
+    DrawRightSideChoiceText(strings[selection], xSel, y + 1, TRUE, active);
 }
-
-static void DrawChoices_Three(const u8 *const *strings, int selection, int y, bool8 active)
-{
-    static const u8 orders[][2] = { {0, 1}, {1, 2}, {1, 2} };
-    const u8 *order = orders[selection];
-    DrawRightSideChoiceText(strings[order[0]], 104, y + 1, selection == order[0], active);
-    DrawRightSideChoiceText(strings[order[1]], GetStringRightAlignXOffset(FONT_NORMAL, strings[order[1]], 198), y + 1, selection == order[1], active);
-}
-
-static void DrawChoices_Four(const u8 *const *strings, int selection, int y, bool8 active)
-{
-    static const u8 orders[][3] = { {0, 1, 2}, {0, 1, 2}, {1, 2, 3}, {1, 2, 3} };
-    const u8 *order = orders[selection];
-    int xMid = GetMiddleX(strings[order[0]], strings[order[1]], strings[order[2]]);
-    DrawRightSideChoiceText(strings[order[0]], 104, y + 1, selection == order[0], active);
-    DrawRightSideChoiceText(strings[order[1]], xMid, y + 1, selection == order[1], active);
-    DrawRightSideChoiceText(strings[order[2]], GetStringRightAlignXOffset(FONT_NORMAL, strings[order[2]], 198), y + 1, selection == order[2], active);
-}
-
-static void DrawChoices_Five(const u8 *const *strings, int selection, int y, bool8 active)
-{
-    static const u8 orders[][3] = { {0, 1, 2}, {0, 1, 2}, {1, 2, 3}, {2, 3, 4}, {2, 3, 4} };
-    const u8 *order = orders[selection];
-    int xMid = GetMiddleX(strings[order[0]], strings[order[1]], strings[order[2]]);
-    DrawRightSideChoiceText(strings[order[0]], 104, y + 1, selection == order[0], active);
-    DrawRightSideChoiceText(strings[order[1]], xMid, y + 1, selection == order[1], active);
-    DrawRightSideChoiceText(strings[order[2]], GetStringRightAlignXOffset(FONT_NORMAL, strings[order[2]], 198), y + 1, selection == order[2], active);
-}
-
-static void DrawChoices_Six(const u8 *const *strings, int selection, int y, bool8 active)
-{
-    static const u8 orders[][3] = { {0, 1, 2}, {0, 1, 2}, {1, 2, 3}, {2, 3, 4}, {3, 4, 5}, {3, 4, 5} };
-    const u8 *order = orders[selection];
-    int xMid = GetMiddleX(strings[order[0]], strings[order[1]], strings[order[2]]);
-    DrawRightSideChoiceText(strings[order[0]], 104, y + 1, selection == order[0], active);
-    DrawRightSideChoiceText(strings[order[1]], xMid, y + 1, selection == order[1], active);
-    DrawRightSideChoiceText(strings[order[2]], GetStringRightAlignXOffset(FONT_NORMAL, strings[order[2]], 198), y + 1, selection == order[2], active);
-}
-
-// =============================================================================
-// ListMenu callbacks
-// =============================================================================
 
 static void ChallengeMenu_MoveCursorFunc(s32 itemIndex, bool8 onInit, struct ListMenu *list)
 {
@@ -1498,7 +1467,7 @@ static void ChallengeMenu_ItemPrintFunc(u8 windowId, u32 itemId, u8 y)
     if (!active)
     {
         u8 color[3] = { TEXT_COLOR_TRANSPARENT, TEXT_COLOR_OPTIONS_GRAY_LIGHT_FG, TEXT_COLOR_OPTIONS_GRAY_SHADOW };
-        AddTextPrinterParameterized4(windowId, FONT_NORMAL, 8, y + 1, 0, 0, color, TEXT_SKIP_DRAW, items[itemId].name);
+        AddTextPrinterParameterized4(windowId, FONT_SHORT, 8, y + 1, 0, 0, color, TEXT_SKIP_DRAW, items[itemId].name);
     }
 
     u8 sel = *GetSelectionPtr(sMenu->currentTab, itemId);
@@ -1508,8 +1477,8 @@ static void ChallengeMenu_ItemPrintFunc(u8 windowId, u32 itemId, u8 y)
     {
         u8 n = sel;
         const u8 *text;
-        static const u8 sText_Random[] = _("RANDOM");
-        static const u8 sText_Off[] = _("OFF");
+        static const u8 sText_Random[] = _("ALEATORIO");
+        static const u8 sText_Off[] = _("NO");
         if (n > 18)
             text = sText_Off;
         else if (n == 18)
@@ -1518,7 +1487,7 @@ static void ChallengeMenu_ItemPrintFunc(u8 windowId, u32 itemId, u8 y)
             text = gTypesInfo[n + 2].name;
         else
             text = gTypesInfo[n + 1].name;
-        DrawRightSideChoiceText(text, GetStringRightAlignXOffset(FONT_NORMAL, text, 198), y + 1, TRUE, active);
+        DrawRightSideChoiceText(text, GetStringRightAlignXOffset(FONT_SHORT, text, VALUE_X_END), y + 1, TRUE, active);
         return;
     }
 
@@ -1531,30 +1500,13 @@ static void ChallengeMenu_ItemPrintFunc(u8 windowId, u32 itemId, u8 y)
     switch (items[itemId].numChoices)
     {
     case 2:
-    {
-        int leftX = (sMenu->currentTab == TAB_MODE && itemId == ITEM_MODE_GAMEMODE) ? 74 : 104;
-        DrawChoices_Two(items[itemId].choiceNames, sel, y, active, leftX);
-        break;
-    }
     case 3:
-        DrawChoices_Three(items[itemId].choiceNames, sel, y, active);
-        break;
     case 4:
-        DrawChoices_Four(items[itemId].choiceNames, sel, y, active);
-        break;
     case 5:
-        DrawChoices_Five(items[itemId].choiceNames, sel, y, active);
-        break;
     case 6:
-        DrawChoices_Six(items[itemId].choiceNames, sel, y, active);
-        break;
     default:
-    {
-        const u8 *choiceStr = items[itemId].choiceNames[sel];
-        u8 x = GetStringRightAlignXOffset(FONT_NORMAL, choiceStr, 198);
-        DrawRightSideChoiceText(choiceStr, x, y + 1, TRUE, active);
+        DrawChoices_Adaptive(items[itemId].choiceNames, items[itemId].numChoices, sel, y, active);
         break;
-    }
     }
 }
 
@@ -1591,7 +1543,7 @@ static void InitListMenu(void)
     template.lettersSpacing = 0;
     template.itemVerticalPadding = 0;
     template.scrollMultiple = LIST_NO_MULTIPLE_SCROLL;
-    template.fontId = FONT_NORMAL;
+    template.fontId = FONT_SHORT;
     template.cursorKind = CURSOR_INVISIBLE;
 
     sMenu->listTaskId = ListMenuInit(&template,
@@ -1686,7 +1638,7 @@ static void DrawDescription(void)
 
 static void DrawBgFrames(void)
 {
-    // Outer frame — top edge at row 2, shared side edges rows 3-18
+    // Outer frame - top edge at row 2, shared side edges rows 3-18
     FillBgTilemapBufferRect(1, TILE_TOP_CORNER_L,  1,  2,  1,  1,  7);
     FillBgTilemapBufferRect(1, TILE_TOP_EDGE,      2,  2, 26,  1,  7);
     FillBgTilemapBufferRect(1, TILE_TOP_CORNER_R, 28,  2,  1,  1,  7);
@@ -1821,7 +1773,7 @@ static void ProcessLeftRight(void)
         if (sMenu->currentTab == TAB_MODE && itemIndex == ITEM_MODE_GAMEMODE && *sel == 0)
             ApplyRecommendedPresets();
 
-        // Nuzlocke OFF or EASY — reset sub-options to defaults
+        // Nuzlocke OFF or EASY - reset sub-options to defaults
         if (sMenu->currentTab == TAB_NUZLOCKE && itemIndex == ITEM_NUZLOCKE_NUZLOCKE
             && (*sel == 0 || *sel == 1))
         {
@@ -1980,7 +1932,7 @@ static void Task_ConfirmSaveYes(u8 taskId)
     cs->tx_Features_FrontierBans   = *GetSelectionPtr(TAB_FEATURES, ITEM_FEATURES_FRONTIER_BANS);
     cs->tx_Features_ShinyColors    = *GetSelectionPtr(TAB_FEATURES, ITEM_FEATURES_SHINY_COLOR);
 
-    // Randomizer tab — if master toggle is OFF, clear all sub-fields
+    // Randomizer tab - if master toggle is OFF, clear all sub-fields
     if (*GetSelectionPtr(TAB_RANDOMIZER, ITEM_RANDOM_OFF_ON) == 0)
     {
         cs->tx_Random_Starter          = 0;
@@ -1990,7 +1942,7 @@ static void Task_ConfirmSaveYes(u8 taskId)
         cs->tx_Random_Static           = 0;
         cs->tx_Random_Similar          = 0;
         cs->tx_Random_IncludeLegendaries = 0;
-        // Not cleared to 0 like the rest: 0 means "all generations", so zeroing
+        // Not cleared to 0 like the rest: 0 means "todas las generaciones", so zeroing
         // it here would quietly drop the default the next time the randomizer is
         // switched back on. It is inert while the randomizer is off, and it is
         // not part of the master-toggle derivation on load.
@@ -2024,27 +1976,27 @@ static void Task_ConfirmSaveYes(u8 taskId)
         cs->tx_Random_Chaos            = *GetSelectionPtr(TAB_RANDOMIZER, ITEM_RANDOM_CHAOS);
     }
 
-    // Nuzlocke tab — decompose selection back to 3 bits (matches HnS encoding)
+    // Nuzlocke tab - decompose selection back to 3 bits (matches HnS encoding)
     {
         u8 nuzSel = *GetSelectionPtr(TAB_NUZLOCKE, ITEM_NUZLOCKE_NUZLOCKE);
         cs->tx_Challenges_Nuzlocke         = (nuzSel >= 2) ? 1 : 0;
         cs->tx_Nuzlocke_EasyMode           = (nuzSel == 1) ? 1 : 0;
         cs->tx_Challenges_NuzlockeHardcore = (nuzSel == 3) ? 1 : 0;
 
-        if (nuzSel == 0) // OFF — clear sub-options
+        if (nuzSel == 0) // OFF - clear sub-options
         {
             cs->tx_Nuzlocke_SpeciesClause = 0;
             cs->tx_Nuzlocke_ShinyClause   = 0;
             cs->tx_Nuzlocke_Nicknaming    = 0;
         }
-        else if (nuzSel == 1) // EASY — save RareCandy, clear clauses
+        else if (nuzSel == 1) // EASY - save RareCandy, clear clauses
         {
             cs->tx_Nuzlocke_RareCandy     = !(*GetSelectionPtr(TAB_NUZLOCKE, ITEM_NUZLOCKE_RARE_CANDY));
             cs->tx_Nuzlocke_SpeciesClause = 0;
             cs->tx_Nuzlocke_ShinyClause   = 0;
             cs->tx_Nuzlocke_Nicknaming    = 0;
         }
-        else // NORMAL or HARD — save all sub-options with polarity inversion
+        else // NORMAL or HARD - save all sub-options with polarity inversion
         {
             cs->tx_Nuzlocke_SpeciesClause = !(*GetSelectionPtr(TAB_NUZLOCKE, ITEM_NUZLOCKE_SPECIES_CLAUSE));
             cs->tx_Nuzlocke_ShinyClause   = !(*GetSelectionPtr(TAB_NUZLOCKE, ITEM_NUZLOCKE_SHINY_CLAUSE));
@@ -2184,7 +2136,7 @@ void CB2_InitChallengeMenu(void)
         {
             struct ChallengeSettings *cs = &gSaveBlock3Ptr->challengeSettings;
 
-            // Mode tab — load sub-items, then derive GAMEMODE from whether they match recommended
+            // Mode tab - load sub-items, then derive GAMEMODE from whether they match recommended
             *GetSelectionPtr(TAB_MODE, ITEM_MODE_MODERN_MOVES)       = cs->tx_Mode_Modern_Moves;
             *GetSelectionPtr(TAB_MODE, ITEM_MODE_SYNCHRONIZE)        = cs->tx_Mode_Synchronize;
             *GetSelectionPtr(TAB_MODE, ITEM_MODE_STURDY)             = cs->tx_Mode_Sturdy;
@@ -2219,7 +2171,7 @@ void CB2_InitChallengeMenu(void)
             *GetSelectionPtr(TAB_FEATURES, ITEM_FEATURES_FRONTIER_BANS)= cs->tx_Features_FrontierBans;
             *GetSelectionPtr(TAB_FEATURES, ITEM_FEATURES_SHINY_COLOR)  = cs->tx_Features_ShinyColors;
 
-            // Randomizer tab — derive master toggle from whether any sub-field is active
+            // Randomizer tab - derive master toggle from whether any sub-field is active
             *GetSelectionPtr(TAB_RANDOMIZER, ITEM_RANDOM_OFF_ON) =
                 (cs->tx_Random_Starter || cs->tx_Random_WildPokemon
               || cs->tx_Random_Trainer || cs->tx_Random_Static
@@ -2244,7 +2196,7 @@ void CB2_InitChallengeMenu(void)
             *GetSelectionPtr(TAB_RANDOMIZER, ITEM_RANDOM_ITEMS)       = cs->tx_Random_Items;
             *GetSelectionPtr(TAB_RANDOMIZER, ITEM_RANDOM_CHAOS)       = cs->tx_Random_Chaos;
 
-            // Nuzlocke tab — 3 bits → 4 selection states (matches HnS encoding)
+            // Nuzlocke tab - 3 bits → 4 selection states (matches HnS encoding)
             if (cs->tx_Challenges_Nuzlocke && cs->tx_Challenges_NuzlockeHardcore)
                 *GetSelectionPtr(TAB_NUZLOCKE, ITEM_NUZLOCKE_NUZLOCKE) = 3; // HARD
             else if (cs->tx_Challenges_Nuzlocke)

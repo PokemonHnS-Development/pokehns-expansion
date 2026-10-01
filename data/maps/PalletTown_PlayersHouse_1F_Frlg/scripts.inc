@@ -54,39 +54,39 @@ PalletTown_PlayersHouse_1F_EventScript_TVScreenFemale::
 	return
 
 PalletTown_PlayersHouse_1F_Text_AllBoysLeaveOakLookingForYou::
-	.string "MOM: …Right.\n"
-	.string "All boys leave home someday.\l"
-	.string "It said so on TV.\p"
-	.string "Oh, yes. PROF. OAK, next door, was\n"
-	.string "looking for you.$"
+	.string "MAMÁ: ...Cierto.\n"
+	.string "Todo chico deja el hogar algún día.\l"
+	.string "Lo dijeron en la tele.\p"
+	.string "Ah, sí. El PROF. OAK, de al lado,\n"
+	.string "te buscaba.$"
 
 PalletTown_PlayersHouse_1F_Text_AllGirlsLeaveOakLookingForYou::
-	.string "MOM: …Right.\n"
-	.string "All girls dream of traveling.\l"
-	.string "It said so on TV.\p"
-	.string "Oh, yes. PROF. OAK, next door, was\n"
-	.string "looking for you.$"
+	.string "MAMÁ: ...Cierto.\n"
+	.string "Todas las chicas sueñan con viajar.\l"
+	.string "Lo dijeron en la tele.\p"
+	.string "Ah, sí. El PROF. OAK, de al lado,\n"
+	.string "te buscaba.$"
 
 PalletTown_PlayersHouse_1F_Text_YouShouldTakeQuickRest::
-	.string "MOM: {PLAYER}!\n"
-	.string "You should take a quick rest.$"
+	.string "MAMÁ: ¡{PLAYER}!\n"
+	.string "Deberías descansar un rato.$"
 
 PalletTown_PlayersHouse_1F_Text_LookingGreatTakeCare::
-	.string "MOM: Oh, good! You and your\n"
-	.string "POKéMON are looking great.\l"
-	.string "Take care now!$"
+	.string "MAMÁ: ¡Oh, qué bien! Tú y tu\n"
+	.string "POKéMON se ven geniales.\l"
+	.string "¡Cuídate!$"
 
 PalletTown_PlayersHouse_1F_Text_MovieOnTVFourBoysOnRailroad::
-	.string "There's a movie on TV.\n"
-	.string "Four boys are walking on railroad\l"
+	.string "Hay una película en la TV.\n"
+	.string "Cuatro chicos caminan por la vía\l"
 	.string "tracks.\p"
-	.string "…I better go, too.$"
+	.string "...Mejor me voy también.$"
 
 PalletTown_PlayersHouse_1F_Text_MovieOnTVGirlOnBrickRoad::
-	.string "There's a movie on TV.\n"
-	.string "A girl with her hair in pigtails is\l"
-	.string "walking up a brick road.\p"
-	.string "…I better go, too.$"
+	.string "Hay una película en la TV.\n"
+	.string "Una niña con trenzas camina\l"
+	.string "por un camino de ladrillos.\p"
+	.string "...Mejor me voy también.$"
 
 PalletTown_PlayersHouse_1F_Text_OopsWrongSide::
-	.string "Oops, wrong side…$"
+	.string "Ups, lado equivocado...$"

@@ -252,43 +252,43 @@ static const u16 sBlenderOuter_Pal[] = INCBIN_U16("graphics/berry_blender/outer.
 static const u16 sUnused_Pal[] = INCBIN_U16("graphics/berry_blender/unused.gbapal");
 static const u16 sEmpty_Pal[16 * 14] = {0};
 
-static const u8 sText_BerryBlenderStart[] = _("Starting up the BERRY BLENDER.\pPlease select a BERRY from your BAG\nto put in the BERRY BLENDER.\p");
+static const u8 sText_BerryBlenderStart[] = _("Encendiendo la LICUADORA DE\nBAYAS.\pElige una BAYA de tu BOLSA para\nponerla en la LICUADORA.\p");
 static const u8 sText_NewParagraph[] = _("\p");
-static const u8 sText_WasMade[] = _(" was made!");
+static const u8 sText_WasMade[] = _(" fue creado!");
 
 static const u8 *const sBlenderOpponentsNames[] =
 {
-    [BLENDER_MISTER] = COMPOUND_STRING("MISTER"),
-    [BLENDER_LADDIE] = COMPOUND_STRING("LADDIE"),
-    [BLENDER_LASSIE] = COMPOUND_STRING("LASSIE"),
-    [BLENDER_MASTER] = COMPOUND_STRING("MASTER"),
-    [BLENDER_DUDE]   = COMPOUND_STRING("DUDE"),
-    [BLENDER_MISS]   = COMPOUND_STRING("MISS"),
+    [BLENDER_MISTER] = COMPOUND_STRING("SEÑOR"),
+    [BLENDER_LADDIE] = COMPOUND_STRING("CHICO"),
+    [BLENDER_LASSIE] = COMPOUND_STRING("CHICA"),
+    [BLENDER_MASTER] = COMPOUND_STRING("MAESTRO"),
+    [BLENDER_DUDE]   = COMPOUND_STRING("TIPO"),
+    [BLENDER_MISS]   = COMPOUND_STRING("SEÑORITA"),
 };
 
-static const u8 sText_CommunicationStandby[] = _("Communication standby…");
-static const u8 sText_WouldLikeToBlendAnotherBerry[] = _("Would you like to blend another BERRY?");
-static const u8 sText_RunOutOfBerriesForBlending[] = _("You've run out of BERRIES for\nblending in the BERRY BLENDER.\p");
-static const u8 sText_YourPokeblockCaseIsFull[] = _("Your {POKEBLOCK} CASE is full.\p");
-static const u8 sText_HasNoBerriesToPut[] = _(" has no BERRIES to put in\nthe BERRY BLENDER.");
-static const u8 sText_ApostropheSPokeblockCaseIsFull[] = _("'s {POKEBLOCK} CASE is full.\p");
-static const u8 sText_BlendingResults[] = _("RESULTS OF BLENDING");
-static const u8 sText_SpaceBerry[] = _(" BERRY");
-static const u8 sText_Time[] = _("Time:");
+static const u8 sText_CommunicationStandby[] = _("Comunicación en espera...");
+static const u8 sText_WouldLikeToBlendAnotherBerry[] = _("¿Quieres licuar otra BAYA?");
+static const u8 sText_RunOutOfBerriesForBlending[] = _("Ya no te quedan BAYAS para\nlicuar en la LICUADORA.\p");
+static const u8 sText_YourPokeblockCaseIsFull[] = _("Tu ESTUCHE {POKEBLOCK} está lleno.\p");
+static const u8 sText_HasNoBerriesToPut[] = _("no tiene BAYAS para poner\nen la LICUADORA DE BAYAS.");
+static const u8 sText_ApostropheSPokeblockCaseIsFull[] = _("El ESTUCHE de {POKEBLOCK} está lleno.\p");
+static const u8 sText_BlendingResults[] = _("RESULTADOS DEL LICUADO");
+static const u8 sText_SpaceBerry[] = _(" BAYA");
+static const u8 sText_Time[] = _("Tiempo:");
 static const u8 sText_Min[] = _(" min. ");
-static const u8 sText_Sec[] = _(" sec.");
-static const u8 sText_MaximumSpeed[] = _("MAXIMUM SPEED");
+static const u8 sText_Sec[] = _(" seg.");
+static const u8 sText_MaximumSpeed[] = _("VELOCIDAD MÁXIMA");
 static const u8 sText_RPM[] = _(" RPM");
 static const u8 sText_Dot[] = _(".");
 static const u8 sText_NewLine[] = _("\n");
 static const u8 sText_Ranking[] = _("RANKING");
-static const u8 sText_TheLevelIs[] = _("The level is ");
-static const u8 sText_TheFeelIs[] = _(", and the feel is ");
+static const u8 sText_TheLevelIs[] = _("El nivel es ");
+static const u8 sText_TheFeelIs[] = _(", y la sensación es ");
 static const u8 sText_Dot2[] = _(".");
 
-static const u8 sText_SavingDontTurnOff2[] = _("SAVING…\nDON'T TURN OFF THE POWER.");
-static const u8 sText_BlenderMaxSpeedRecord[] = _("BERRY BLENDER\nMAXIMUM SPEED RECORD!");
-static const u8 sText_234Players[] = _("2 PLAYERS\n3 PLAYERS\n4 PLAYERS");
+static const u8 sText_SavingDontTurnOff2[] = _("GUARDANDO…\nNO APAGUES LA CONSOLA.");
+static const u8 sText_BlenderMaxSpeedRecord[] = _("LICUADORA DE BAYAS\n¡RÉCORD DE VELOCIDAD!");
+static const u8 sText_234Players[] = _("2 JUGADORES\n3 JUGADORES\n4 JUGADORES");
 
 static const struct BgTemplate sBgTemplates[3] =
 {

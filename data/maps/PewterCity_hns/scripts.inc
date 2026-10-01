@@ -58,28 +58,28 @@ PewterCity_EventScript_Cooltrainer::
 	end
 
 PewterCity_Text_CooltrainerF:
-	.string "Have you visited PEWTER GYM?\p"
-	.string "The LEADER uses ROCK-type POKéMON.$"
+	.string "¿Visitaste el GIMNASIO PIEDRA?\p"
+	.string "El LÍDER usa POKéMON de roca.$"
 
 PewterCity_Text_BugCatcher:
-	.string "At night, CLEFAIRY come out to play at\n"
-	.string "MT.MOON.\p"
-	.string "But not every night.$"
+	.string "De noche, CLEFAIRY salen a jugar en\n"
+	.string "el MT.MOON.\p"
+	.string "Pero no todas las noches.$"
 
 PewterCity_Text_Gramps:
-	.string "Ah, you came all the way out here from\n"
+	.string "Ah, ¿viniste desde tan lejos, desde\n"
 	.string "JOHTO?\p"
-	.string "That brings back memories. When I was\n"
-	.string "young, I went to JOHTO to train.\p"
-	.string "You remind me so much of what I was like\n"
-	.string "as a young man.\p"
-	.string "Here. I want you to have this item I\n"
-	.string "found in JOHTO.$"
+	.string "Eso me trae recuerdos. De joven,\n"
+	.string "fui a JOHTO para entrenar.\p"
+	.string "Me recuerdas mucho a cómo era yo\n"
+	.string "cuando era joven.\p"
+	.string "Toma. Quiero que tengas este objeto\n"
+	.string "se encuentran en JOHTO.$"
 
 PewterCity_Text_Gramps_GotSilverWing:
-	.string "Going to new, unknown places and seeing\n"
-	.string "new people…\p"
-	.string "Those are the joys of travel.$"
+	.string "Ir a lugares nuevos y desconocidos\n"
+	.string "y conocer gente...\p"
+	.string "Esas son las alegrías de viajar.$"
 
 PewterCity_EventScript_CitySign::
 	msgbox PewterCity_Text_Sign, MSGBOX_NPC
@@ -102,23 +102,23 @@ PewterCity_EventScript_WelcomeSign::
 	end
 
 PewterCity_Text_Sign:
-	.string "PEWTER CITY\n"
-	.string "A Stone Gray City$"
+	.string "CIUDAD PLATEA\n"
+	.string "Una ciudad gris de piedra$"
 
 PewterCity_Text_GymSign:
-	.string "PEWTER CITY POKéMON GYM\n"
-	.string "LEADER: BROCK\p"
-	.string "The Rock Solid POKéMON Trainer$"
+	.string "GIMNASIO POKéMON DE CIUDAD PLATEA\n"
+	.string "LÍDER: BROCK\p"
+	.string "El Entrenador POKéMON sólido como roca$"
 
 PewterCity_Text_MuseumSign:
-	.string "There's a notice here…\p"
-	.string "PEWTER MUSEUM OF SCIENCE is closed for\n"
-	.string "renovations…$"
+	.string "Hay un aviso aquí...\p"
+	.string "El MUSEO DE CIUDAD PLATEA está cerrado\n"
+	.string "por renovaciones...$"
 
 PewterCity_Text_MtMoonGiftShopSign:
-	.string "There's a notice here…\p"
-	.string "MT.MOON GIFT SHOP NOW OPEN!$"
+	.string "Hay un aviso aquí...\p"
+	.string "¡TIENDA DEL MT.MOON YA ABIERTA!$"
 
 PewterCity_Text_WelcomeSign:
-	.string "WELCOME TO PEWTER CITY!$"
+	.string "¡BIENVENIDO A CIUDAD PEWTER!$"
 

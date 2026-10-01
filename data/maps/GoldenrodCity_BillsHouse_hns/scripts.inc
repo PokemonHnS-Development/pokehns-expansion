@@ -60,71 +60,71 @@ GoldenrodCity_BillsHouse_EventScript_Bill_Refused::
 	end
 
 BillHouse_Text_TakeThisEevee:
-    .string "BILL: Hi, {PLAYER}! Do us a favor and\n"
-    .string "take this EEVEE.\p"
-    .string "It was left in our care while\n"
-    .string "I was away working on my system.\p"
-    .string "Someone has to take care of it,\n"
-    .string "but I don't like being outside.\p"
-    .string "Can I count on you to play with it,\n"
-    .string "{PLAYER}?$"
+    .string "BILL: ¡Hola, {PLAYER}! Hazme un favor\n"
+    .string "y llévate a este EEVEE.\p"
+    .string "Lo dejaron a nuestro cuidado\n"
+    .string "mientras trabajaba en mi sistema.\p"
+    .string "Alguien debe cuidarlo,\n"
+    .string "pero no me gusta estar fuera.\p"
+    .string "Puedo contar contigo para jugar\n"
+    .string "con él, {PLAYER}?$"
 
 BillHouse_Text_CountingOnYou:
-    .string "BILL: I knew you'd come through!\p"
-    .string "Way to go! You're the real deal!\p"
-    .string "OK, I'm counting on you.\p"
-    .string "Take good care of it!$"
+    .string "BILL: ¡Sabía que lo lograrías!\p"
+    .string "¡Así se hace! ¡Eres el mejor!\p"
+    .string "Bien, cuento contigo.\p"
+    .string "¡Cuídalo bien!$"
 
 BillHouse_Text_ReceivedEevee:
-    .string "{PLAYER} received EEVEE!$"
+    .string "{PLAYER} recibió a EEVEE!$"
 
 BillHouse_Text_EeveeMayEvolve:
-    .string "BILL: PROF.ELM claims EEVEE may\n"
-    .string "evolve in new and unknown ways.$"
+    .string "BILL: El PROF.ELM dice que EEVEE\n"
+    .string "puede evolucionar de formas nuevas.$"
 
 BillHouse_Text_PartyFull:
-    .string "Whoa, wait. You can't carry any\n"
-    .string "more POKéMON.$"
+    .string "Espera. No puedes llevar más\n"
+    .string "POKéMON.$"
 
 BillHouse_Text_NoEevee:
-    .string "Oh… Now what to do?$"
+    .string "Oh... ¿Y ahora qué hago?$"
 
 BillHouse_Text_PopWontWork:
-    .string "BILL: My pop, he won't work. All he\n"
-    .string "does is goof off all day long.\p"
-    .string "He's getting to be a real headache…$"
+    .string "BILL: Mi padre no trabaja. Solo\n"
+    .string "se pasa el día perdiendo el tiempo.\p"
+    .string "Se está volviendo un dolor de cabeza...$"
 
 BillHouse_Text_MomBeforeEcruteak:
-    .string "Oh, you collect POKéMON? My son\n"
-    .string "BILL is an expert.\p"
-    .string "He just got called to the POKéMON\n"
-    .string "CENTER in ECRUTEAK CITY.\p"
-    .string "My husband went off to the GAME\n"
-    .string "CORNER without being called…$"
+    .string "Oh, ¿coleccionas POKéMON? Mi hijo\n"
+    .string "BILL es un experto.\p"
+    .string "Lo acaban de llamar los POKéMON\n"
+    .string "CENTRO en CIUDAD IRIS.\p"
+    .string "Mi esposo se fue a la TIENDA\n"
+    .string "de JUEGOS sin que lo llamaran...$"
 
 BillHouse_Text_MomAfterEcruteak:
-    .string "My husband was once known as a\n"
-    .string "POKéMANIAC.\p"
-    .string "BILL must have taken after his\n"
-    .string "father.$"
+    .string "Mi esposo fue conocido alguna vez\n"
+    .string "como un POKéMANÍACO.\p"
+    .string "BILL debe haber salido a su\n"
+    .string "padre.$"
 
 BillHouse_Text_SisterUsefulNumber:
-    .string "Are you a TRAINER?\p"
-    .string "I've got a useful phone number\n"
-    .string "for you.$"
+    .string "¿Eres un ENTRENADOR?\p"
+    .string "Tengo un número de teléfono\n"
+    .string "útil para ti.$"
 
 BillHouse_Text_RecordedBillsNumber:
-    .string "{PLAYER} recorded BILL's number.$"
+    .string "{PLAYER} registró el número de BILL.$"
 
 BillHouse_Text_SisterRefusedNumber:
-    .string "My brother made the PC POKéMON\n"
-    .string "storage system.\p"
-    .string "I was going to give you BILL's\n"
-    .string "number…$"
+    .string "Mi hermano creó el PC POKéMON\n"
+    .string "sistema de almacenamiento.\p"
+    .string "Iba a darte el número de BILL\n"
+    .string "...$"
 
 BillHouse_Text_SisterPhoneFull:
-    .string "You can't record any more numbers.$"
+    .string "No puedes registrar más números.$"
 
 BillHouse_Text_SisterStorageSystem:
-    .string "My big brother BILL made the PC\n"
-    .string "POKéMON storage system.$"
+    .string "Mi hermano BILL creó el sistema\n"
+    .string "de almacenamiento de POKéMON.$"

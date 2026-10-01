@@ -1141,18 +1141,18 @@ static void (*const sMatchCall_GetNameAndDescFunctions[])(match_call_t, const u8
     MatchCall_GetNameAndDesc_Birch
 };
 
-static const u8 gText_MatchCallSteven_Strategy[] = _("Attack the weak points!");
+static const u8 gText_MatchCallSteven_Strategy[] = _("¡Ataca los puntos débiles!");
 static const u8 gText_MatchCallSteven_Pokemon[] = _("Ultimate STEEL POKéMON.");
 
-static const u8 gText_MatchCallBrendan_Strategy[] = _("Battle with knowledge!");
-static const u8 gText_MatchCallBrendan_Pokemon[] = _("I will use various POKéMON.");
-static const u8 gText_MatchCallBrendan_Intro1[] = _("I'll be a better POKéMON");
-static const u8 gText_MatchCallBrendan_Intro2[] = _("prof than my father is!");
+static const u8 gText_MatchCallBrendan_Strategy[] = _("¡Combate con conocimiento!");
+static const u8 gText_MatchCallBrendan_Pokemon[] = _("Usaré varios POKéMON.");
+static const u8 gText_MatchCallBrendan_Intro1[] = _("Seré un mejor POKéMON");
+static const u8 gText_MatchCallBrendan_Intro2[] = _("profesor que mi padre!");
 
-static const u8 gText_MatchCallMay_Strategy[] = _("I'm not so good at battles.");
-static const u8 gText_MatchCallMay_Pokemon[] = _("I'll use any POKéMON!");
-static const u8 gText_MatchCallMay_Intro1[] = _("My POKéMON and I help");
-static const u8 gText_MatchCallMay_Intro2[] = _("my father's research.");
+static const u8 gText_MatchCallMay_Strategy[] = _("No se me dan muy bien los combates.");
+static const u8 gText_MatchCallMay_Pokemon[] = _("¡Usaré cualquier POKéMON!");
+static const u8 gText_MatchCallMay_Intro1[] = _("Mis POKéMON y yo ayudamos");
+static const u8 gText_MatchCallMay_Intro2[] = _("a mi padre con su investigación.");
 
 #if IS_HNS
 static const struct MatchCallCheckPageOverride sCheckPageOverrides[] = {
@@ -1163,8 +1163,8 @@ static const struct MatchCallCheckPageOverride sCheckPageOverrides[] = {
         .flavorTexts = {
             [CHECK_PAGE_STRATEGY] = gText_MatchCallSteven_Strategy,
             [CHECK_PAGE_POKEMON]  = gText_MatchCallSteven_Pokemon,
-            [CHECK_PAGE_INTRO_1]  = COMPOUND_STRING("I'd climb even waterfalls"),
-            [CHECK_PAGE_INTRO_2]  = COMPOUND_STRING("to find a rare stone!")
+            [CHECK_PAGE_INTRO_1]  = COMPOUND_STRING("Podría subir incluso cascadas"),
+            [CHECK_PAGE_INTRO_2]  = COMPOUND_STRING("de encontrar una piedra rara!")
         }
     },
     {
@@ -1174,8 +1174,8 @@ static const struct MatchCallCheckPageOverride sCheckPageOverrides[] = {
         .flavorTexts = {
             [CHECK_PAGE_STRATEGY] = gText_MatchCallSteven_Strategy,
             [CHECK_PAGE_POKEMON]  = gText_MatchCallSteven_Pokemon,
-            [CHECK_PAGE_INTRO_1]  = COMPOUND_STRING("I'm the strongest and most"),
-            [CHECK_PAGE_INTRO_2]  = COMPOUND_STRING("energetic after all!")
+            [CHECK_PAGE_INTRO_1]  = COMPOUND_STRING("Soy el más fuerte y más"),
+            [CHECK_PAGE_INTRO_2]  = COMPOUND_STRING("¡y el que más energía tiene!")
         }
     },
     {
@@ -1200,8 +1200,8 @@ static const struct MatchCallCheckPageOverride sCheckPageOverrides[] = {
         .flavorTexts = {
             [CHECK_PAGE_STRATEGY] = gText_MatchCallSteven_Strategy,
             [CHECK_PAGE_POKEMON]  = gText_MatchCallSteven_Pokemon,
-            [CHECK_PAGE_INTRO_1]  = COMPOUND_STRING("I'd climb even waterfalls"),
-            [CHECK_PAGE_INTRO_2]  = COMPOUND_STRING("to find a rare stone!")
+            [CHECK_PAGE_INTRO_1]  = COMPOUND_STRING("Podría subir incluso cascadas"),
+            [CHECK_PAGE_INTRO_2]  = COMPOUND_STRING("de encontrar una piedra rara!")
         }
     },
     {
@@ -1211,8 +1211,8 @@ static const struct MatchCallCheckPageOverride sCheckPageOverrides[] = {
         .flavorTexts = {
             [CHECK_PAGE_STRATEGY] = gText_MatchCallSteven_Strategy,
             [CHECK_PAGE_POKEMON]  = gText_MatchCallSteven_Pokemon,
-            [CHECK_PAGE_INTRO_1]  = COMPOUND_STRING("I'm the strongest and most"),
-            [CHECK_PAGE_INTRO_2]  = COMPOUND_STRING("energetic after all!")
+            [CHECK_PAGE_INTRO_1]  = COMPOUND_STRING("Soy el más fuerte y el más"),
+            [CHECK_PAGE_INTRO_2]  = COMPOUND_STRING("¡y el que más energía tiene!")
         }
     },
     {

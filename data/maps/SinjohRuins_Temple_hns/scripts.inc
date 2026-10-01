@@ -12,8 +12,7 @@ SinjohRuins_Temple_OpenDoor::
 	return
 
 SinjohRuins_Temple_Text_Mon:
-	.string "Some kind of ancient sensor.\n"
-	.string "What is it looking for?$"
+	.string "Algún tipo de sensor antiguo.\n¿Qué está buscando?$"
 
 SinjohRuins_Temple_EventScript_RegiceScanner::
 	lock
@@ -103,11 +102,11 @@ SinjohRuins_Temple_EventScript_ScannerAlreadyDone::
 	end
 
 SinjohRuins_Temple_Text_ScannerAlreadyDone:
-	.string "This sensor has already been activated.$"
+	.string "Este sensor ya ha sido activado.$"
 
 SinjohRuins_Temple_Text_Responds:
-	.string "The temple responds to your actions.$"
+	.string "El templo responde a tus acciones.$"
 
 SinjohRuins_Temple_Text_Door:
-	.string "The way is open.$"
+	.string "El camino está abierto.$"
 

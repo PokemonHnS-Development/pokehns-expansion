@@ -17,81 +17,81 @@ Route4_EventScript_RouteSign::
 	end
 
 Route4_Text_TrippedOverGeodude::
-	.string "Ouch! I tripped over a rocky\n"
+	.string "¡Ay! Tropecé con una roca\n"
 	.string "POKéMON, GEODUDE!$"
 
 Route4_Text_CrissyIntro::
-	.string "I came to MT. MOON in search of\n"
-	.string "mushroom POKéMON.$"
+	.string "Vine al MONTE LUNA en busca\n"
+	.string "de POKéMON hongo.$"
 
 Route4_Text_CrissyDefeat::
-	.string "After all I did to catch them!$"
+	.string "¡Con lo que me costó atraparlos!$"
 
 Route4_Text_CrissyPostBattle::
-	.string "There might not be any more\n"
-	.string "mushrooms here.\p"
-	.string "I think I got them all.$"
+	.string "Puede que no queden más\n"
+	.string "hongos aquí.\p"
+	.string "¡Creo que los tengo todos.$"
 
 Route4_Text_MtMoonEntrance::
 	.string "MT. MOON\n"
-	.string "Tunnel Entrance$"
+	.string "Entrada del túnel$"
 
 Route4_Text_RouteSign::
-	.string "ROUTE 4\n"
-	.string "MT. MOON - CERULEAN CITY$"
+	.string "RUTA 4\n"
+	.string "MT. MOON - CIUDAD CERULEAN$"
 
 Text_MegaPunchTeach::
-	.string "A punch of roaring ferocity!\p"
-	.string "Packed with destructive power!\p"
-	.string "When the chips are down,\n"
-	.string "MEGA PUNCH is the ultimate attack!\l"
-	.string "You agree, yes?\p"
-	.string "Now!\n"
-	.string "Let me teach it to your POKéMON!$"
+	.string "¡Un puñetazo rugiente!\p"
+	.string "¡Lleno de poder destructivo!\p"
+	.string "Cuando todo va mal,\n"
+	.string "definitivo!\l"
+	.string "¿Aceptas, verdad?\p"
+	.string "¡Ahora!\n"
+	.string "¡Déjame enseñárselo a tu POKéMON!$"
 
 Text_MegaPunchDeclined::
-	.string "You'll be back when you understand\n"
-	.string "the worth of MEGA PUNCH.$"
+	.string "Volverás cuando entiendas\n"
+	.string "el valor del MEGA PUÑO.$"
 
 Text_MegaPunchWhichMon::
-	.string "Fine!\n"
-	.string "Which POKéMON will learn it?$"
+	.string "¡Bien!\n"
+	.string "¿Qué POKéMON lo aprenderá?$"
 
 Text_MegaPunchTaught::
-	.string "Now, we are comrades in the way of\n"
-	.string "punching!\p"
-	.string "You should go before you're seen\n"
-	.string "by the misguided fool who trains\l"
-	.string "only his silly kicking over there.$"
+	.string "Ahora somos camaradas en el\n"
+	.string "arte del puñetazo!\p"
+	.string "Vete antes de que te vean\n"
+	.string "por el necio equivocado que entrena\l"
+	.string "solo su tonto patadón allá.$"
 
 Text_MegaKickTeach::
-	.string "A kick of brutal ferocity!\p"
-	.string "Packed with destructive power!\p"
-	.string "When you get right down to it,\n"
-	.string "MEGA KICK is the ultimate attack!\l"
-	.string "Don't you agree?\p"
-	.string "Okay!\n"
-	.string "I'll teach it to your POKéMON!$"
+	.string "¡Patada de ferocidad brutal!\p"
+	.string "¡Lleno de poder destructivo!\p"
+	.string "Cuando llegues al fondo del asunto,\n"
+	.string "¡MEGA PATADA es el ataque definitivo!\l"
+	.string "¿No crees?\p"
+	.string "¡Está bien!\n"
+	.string "¡Te lo enseñaré a tu POKéMON!$"
 
 Text_MegaKickDeclined::
-	.string "You'll come crawling back when you\n"
-	.string "realize the value of MEGA KICK.$"
+	.string "Volverás arrastrándote cuando\n"
+	.string "veas el valor de MEGA PATADA.$"
 
 Text_MegaKickWhichMon::
-	.string "All right!\n"
-	.string "Which POKéMON wants to learn it?$"
+	.string "¡Muy bien!\n"
+	.string "¿Qué POKéMON quiere aprenderlo?$"
 
 Text_MegaKickTaught::
-	.string "Now, we are soul mates in the way\n"
-	.string "of kicking!\p"
-	.string "You should run before you're seen\n"
-	.string "by the deluded nitwit who trains\l"
-	.string "only simple punching over there.$"
+	.string "Ahora somos almas gemelas en\n"
+	.string "¡de dar patadas!\p"
+	.string "Será mejor que corras antes de que\n"
+	.string "por el necio que solo entrena\l"
+	.string "solo entrena puñetazos allá.$"
 
 Route4_Text_PeopleLikeAndRespectBrock::
-	.string "Oh, wow, that's the BOULDERBADGE!\n"
-	.string "You got it from BROCK, didn't you?\p"
-	.string "BROCK is cool. He's not just tough.\n"
-	.string "People like and respect him.\p"
-	.string "I want to become a GYM LEADER\n"
-	.string "like him.$"
+	.string "¡Vaya, es la MEDALLA ROCA!\n"
+	.string "Te lo dio BROCK, ¿verdad?\p"
+	.string "BROCK es genial. No solo es fuerte.\n"
+	.string "La gente lo quiere y respeta.\p"
+	.string "Quiero ser un LÍDER de GIMNASIO\n"
+	.string "como él.$"

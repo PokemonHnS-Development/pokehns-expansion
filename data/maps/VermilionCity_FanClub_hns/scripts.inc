@@ -80,100 +80,100 @@ VermilionCity_FanClub_EventScript_Bayleef::
 
 
 PokemonFanClub_Text_Chairman_Intro:
-	.string "I'm the CHAIRMAN of the POKéMON\n"
-	.string "FAN CLUB.\p"
-	.string "I've raised over 150 POKéMON.\p"
-	.string "I'm very fussy when it comes to\n"
-	.string "POKéMON.\p"
-	.string "Did you visit just to hear about\n"
-	.string "my POKéMON?$"
+	.string "Soy el PRESIDENTE del CLUB\n"
+	.string "de FANS de POKéMON.\p"
+	.string "He criado más de 150 POKéMON.\p"
+	.string "Soy muy exigente en cuanto a\n"
+	.string "POKéMON planta.\p"
+	.string "¿Viniste solo para oír hablar\n"
+	.string "de mis POKéMON?$"
 
 PokemonFanClub_Text_Chairman_Rapidash:
-	.string "Good! Then listen up!\p"
-	.string "So… my favorite RAPIDASH…\p"
-	.string "It… cute… lovely… smart…\n"
-	.string "unbearably…\l"
-	.string "plus… amazing… oh… you think\l"
-	.string "so?…\l"
-	.string "Too much… wild… beautiful…\l"
-	.string "kindly…\l"
-	.string "love it!\p"
-	.string "Hug it… when… sleeping… warm\n"
-	.string "and cuddly…\l"
-	.string "Oh, and… spectacular…\l"
-	.string "ravishing… simply divine…\p"
-	.string "Oops! Look at the time!\n"
-	.string "I've kept you too long!$"
+	.string "¡Bien! ¡Entonces escucha!\p"
+	.string "Así que... mi RAPIDASH favorito...\p"
+	.string "Es... lindo... adorable... listo...\n"
+	.string "insoportablemente...\l"
+	.string "además... increíble... oh... crees\l"
+	.string "so?...\l"
+	.string "que es mucho... salvaje... bello...\l"
+	.string "amable...\l"
+	.string "¡Me encanta!\p"
+	.string "Abrazarlo... al... dormir... cálido\n"
+	.string "y cariñoso...\l"
+	.string "Ah, y... espectacular...\l"
+	.string "radiante... simplemente divino...\p"
+	.string "¡Uy! ¡Mira la hora!\n"
+	.string "¡Te he retenido demasiado tiempo!$"
 
 PokemonFanClub_Text_Chairman_Gift:
-	.string "Thanks for hearing me out.\n"
-	.string "I want you to have this!$"
+	.string "Gracias por escucharme.\n"
+	.string "¡Quiero que tengas esto!$"
 
 PokemonFanClub_Text_Chairman_Candy:
-	.string "It's a RARE CANDY that makes\n"
-	.string "POKéMON stronger.\p"
-	.string "I prefer making my POKéMON\n"
-	.string "stronger by battling, so you\l"
-	.string "can have it.$"
+	.string "Es un CARAMELO RARO que hace\n"
+	.string "POKéMON más fuertes.\p"
+	.string "Prefiero que mis POKéMON sean\n"
+	.string "fuertes luchando, así que tú\l"
+	.string "puedes quedártelo.$"
 
 PokemonFanClub_Text_Chairman_MoreTales:
-	.string "Hello, {PLAYER}!\p"
-	.string "Did you come see me about my\n"
-	.string "POKéMON again?\p"
-	.string "No? Oh… I had more tales to\n"
-	.string "tell…$"
+	.string "¡Hola, {PLAYER}!\p"
+	.string "¿Vienes a verme por mi\n"
+	.string "POKéMON otra vez?\p"
+	.string "¿No? Oh... Tenía más historias\n"
+	.string "que contar...$"
 
 PokemonFanClub_Text_Chairman_Disappointed:
-	.string "How disappointing…\p"
-	.string "Come back if you want to listen.$"
+	.string "Qué decepción...\p"
+	.string "Vuelve si quieres escuchar.$"
 
 PokemonFanClub_Text_Receptionist:
-	.string "Our CHAIRMAN is very vocal when\n"
-	.string "it comes to POKéMON…$"
+	.string "Nuestro PRESIDENTE es muy vocal\n"
+	.string "cuando habla de POKéMON...$"
 
 @=Clefairy=Guy=========================================================================================================
 PokemonFanClub_Text_ClefairyGuy_Adorable:
-	.string "I love the way CLEFAIRY waggles\n"
-	.string "its finger when it's trying to\l"
-	.string "use METRONOME.\p"
-	.string "It's so adorable!$"
+	.string "Amo cómo CLEFAIRY mueve el\n"
+	.string "dedo cuando intenta usar\l"
+	.string "METRÓNOMO.\p"
+	.string "¡Es tan adorable!$"
 
 PokemonFanClub_Text_ClefairyGuy_MakingDo:
-	.string "I love CLEFAIRY, but I could\n"
-	.string "never catch one.\p"
-	.string "So I'm making do with a\n"
-	.string "POKé DOLL that I found.$"
+	.string "Amo a CLEFAIRY, pero jamás\n"
+	.string "podría atrapar uno.\p"
+	.string "Así que me conformo con un\n"
+	.string "MUÑECO POKéMON que encontré.$"
 
 PokemonFanClub_Text_ClefairyGuy_ReturnDoll:
-	.string "Oh, I see now. The girl who lost\n"
-	.string "this POKé DOLL is sad…\p"
-	.string "OK. Could you take this POKé DOLL\n"
-	.string "back to that poor little girl?\p"
-	.string "I'll befriend a real CLEFAIRY on\n"
-	.string "my own one day. No worries!$"
+	.string "Ah, ya veo. La niña que perdió\n"
+	.string "este MUÑECO POKéMON está triste...\p"
+	.string "Vale. ¿Podrías llevar este\n"
+	.string "MUÑECO POKéMON a esa pobre niña?\p"
+	.string "Algún día haré amigo a un\n"
+	.string "CLEFAIRY real por mi cuenta!$"
 
 PokemonFanClub_Text_ClefairyGuy_GoingToGetOne:
-	.string "You watch. I'm going to get a\n"
-	.string "real CLEFAIRY as my friend.$"
+	.string "Ya verás. Voy a conseguir un\n"
+	.string "un CLEFAIRY real como amigo.$"
 
 @============================================================================================================================
 
 PokemonFanClub_Text_Teacher:
-	.string "Look at my darling BAYLEEF!\p"
-	.string "The leaf on its head is so cute!$"
+	.string "¡Mira a mi querido BAYLEEF!\p"
+	.string "¡La hoja de su cabeza es linda!$"
 
 PokemonFanClub_Text_ClefairyDoll:
-	.string "It's a CLEFAIRY! Huh?\p"
-	.string "Oh, right. It's a CLEFAIRY POKé\n"
-	.string "DOLL.$"
+	.string "¡Es un CLEFAIRY! ¿Eh?\p"
+	.string "Ah, cierto. Es un MUÑECO\n"
+	.string "POKé de CLEFAIRY.$"
 
 PokemonFanClub_Text_Bayleef:
 	.string "BAYLEEF: Li liif!$"
 
 PokemonFanClub_Text_Listen:
-	.string "Let's all listen politely to\n"
-	.string "other trainers.$"
+	.string "Escuchemos todos con respeto a\n"
+	.string "otros entrenadores.$"
 
 PokemonFanClub_Text_Bragging:
-	.string "If someone brags, brag right\n"
-	.string "back!$"
+	.string "¡Si alguien presume, presume\n"
+	.string "tú también!$"

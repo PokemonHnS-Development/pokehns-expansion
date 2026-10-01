@@ -24,22 +24,22 @@ VermilionCity_House3_EventScript_Letter::
 	end
 
 VermilionCity_House3_Text_PidgeyFlyLetterToSaffron::
-	.string "I'm getting my PIDGEY to fly a\n"
-	.string "letter to SAFFRON in the north.$"
+	.string "Estoy haciendo que mi PIDGEY\n"
+	.string "lleve una carta a PALDEA al norte.$"
 
 VermilionCity_House3_Text_Pidgey::
-	.string "PIDGEY: Kurukkoo!$"
+	.string "PIDGEY: ¡Kurukkoo!$"
 
 VermilionCity_House3_Text_DearPippiLetter::
-	.string "Dear PIPPI,\n"
-	.string "I hope to see you soon.\p"
-	.string "I heard SAFFRON has problems with\n"
+	.string "Querida PIPPI,\n"
+	.string "Espero verte pronto.\p"
+	.string "Oí que AZULONA tiene problemas\n"
 	.string "TEAM ROCKET.\p"
-	.string "VERMILION appears to be safe.$"
+	.string "CARMEÍN parece estar segura.$"
 
 VermilionCity_House3_Text_SendMyPidgeyToUnionRoom::
-	.string "I want to exchange MAIL with all\n"
-	.string "sorts of people.\p"
-	.string "I send my PIDGEY to a UNION ROOM\n"
-	.string "to exchange MAIL for me.$"
+	.string "Quiero intercambiar CORREO con\n"
+	.string "toda clase de personas.\p"
+	.string "Envío mi PIDGEY a una SALA\n"
+	.string "UNIÓN para cambiar CORREO por mí.$"
 

@@ -27,6 +27,7 @@
 #define PALTAG_OPTIONS_PINK 6
 #define PALTAG_OPTIONS_BEIGE 7
 #define PALTAG_OPTIONS_RED 8
+#define PALTAG_OPTIONS_YELLOW 9 // DUREZA (Tough): el amarillo oficial de la categoria, que en HnS falta en los indices 4-6
 
 #define PALTAG_OPTIONS_START PALTAG_OPTIONS_DEFAULT
 
@@ -121,7 +122,7 @@ static const u32 sPokenavDeviceBgTilemap[] = INCBIN_U32("graphics/pokenav/device
 static const u16 sMatchCallBlueLightPal[] = INCBIN_U16("graphics/pokenav/blue_light.gbapal");
 static const u32 sMatchCallBlueLightTiles[] = INCBIN_U32("graphics/pokenav/blue_light.4bpp.smol");
 
-static const u8 gText_NoRibbonWinners[] = _("There are no RIBBON winners.");
+static const u8 gText_NoRibbonWinners[] = _("No hay ganadores de CINTAS.");
 
 static const struct BgTemplate sPokenavMainMenuBgTemplates[] = {
     {
@@ -189,6 +190,7 @@ static const struct SpritePalette sPokenavOptionsSpritePalettes[] =
     {&gPokenavOptions_Pal[0x20], PALTAG_OPTIONS_PINK},
     {&gPokenavOptions_Pal[0x30], PALTAG_OPTIONS_BEIGE},
     {&gPokenavOptions_Pal[0x40], PALTAG_OPTIONS_RED},
+    {&gPokenavOptions_Pal[0x50], PALTAG_OPTIONS_YELLOW}, // DUREZA: banco propio con el amarillo (indices 4-6 y 8-10)
     {sMatchCallBlueLightPal, PALTAG_BLUE_LIGHT},
     {}
 };
@@ -205,7 +207,7 @@ static const u16 sOptionsLabelGfx_Cool[]      = {0x0E0, PALTAG_OPTIONS_RED - PAL
 static const u16 sOptionsLabelGfx_Beauty[]    = {0x100, PALTAG_OPTIONS_BLUE - PALTAG_OPTIONS_START};
 static const u16 sOptionsLabelGfx_Cute[]      = {0x120, PALTAG_OPTIONS_PINK - PALTAG_OPTIONS_START};
 static const u16 sOptionsLabelGfx_Smart[]     = {0x140, PALTAG_OPTIONS_DEFAULT - PALTAG_OPTIONS_START};
-static const u16 sOptionsLabelGfx_Tough[]     = {0x160, PALTAG_OPTIONS_DEFAULT - PALTAG_OPTIONS_START};
+static const u16 sOptionsLabelGfx_Tough[]     = {0x160, PALTAG_OPTIONS_YELLOW - PALTAG_OPTIONS_START};
 static const u16 sOptionsLabelGfx_Cancel[]    = {0x180, PALTAG_OPTIONS_BEIGE - PALTAG_OPTIONS_START};
 #if IS_HNS
 static const u16 sOptionsLabelGfx_Radio[]     = {0x1A0, PALTAG_OPTIONS_DEFAULT - PALTAG_OPTIONS_START};
@@ -334,32 +336,32 @@ static const struct WindowTemplate sOptionDescWindowTemplate =
 };
 
 #if IS_HNS
-static const u8 *const sHnSMapPageDescriptionJohto = COMPOUND_STRING("Check the map of the JOHTO region");
-static const u8 *const sHnSMapPageDescriptionJohtoKanto = COMPOUND_STRING("Check the combined region map");
+static const u8 *const sHnSMapPageDescriptionJohto = COMPOUND_STRING("Mira el mapa de la región JOHTO");
+static const u8 *const sHnSMapPageDescriptionJohtoKanto = COMPOUND_STRING("Mira el mapa de las dos regiones");
 #endif
 
 static const u8 *const sPageDescriptions[] =
 {
-    [POKENAV_MENUITEM_MAP]                     = COMPOUND_STRING("Check the map of the HOENN region"),
-    [POKENAV_MENUITEM_CONDITION]               = COMPOUND_STRING("Check POKéMON in detail."),
-    [POKENAV_MENUITEM_MATCH_CALL]              = COMPOUND_STRING("Call a registered TRAINER."),
-    [POKENAV_MENUITEM_RIBBONS]                 = COMPOUND_STRING("Check obtained RIBBONS."),
+    [POKENAV_MENUITEM_MAP]                     = COMPOUND_STRING("Mira el mapa de la región HOENN"),
+    [POKENAV_MENUITEM_CONDITION]               = COMPOUND_STRING("Mira tus POKéMON en detalle."),
+    [POKENAV_MENUITEM_MATCH_CALL]              = COMPOUND_STRING("Llama a un ENTRENADOR registrado."),
+    [POKENAV_MENUITEM_RIBBONS]                 = COMPOUND_STRING("Consulta las CINTAS obtenidas."),
 #if IS_HNS
-    [POKENAV_MENUITEM_RADIO]                   = COMPOUND_STRING("Listen to the radio."),
-    [POKENAV_MENUITEM_SWITCH_OFF]              = COMPOUND_STRING("Put away the POKéGEAR."),
-    [POKENAV_MENUITEM_CONDITION_CANCEL]        = COMPOUND_STRING("Return to the POKéGEAR menu."),
+    [POKENAV_MENUITEM_RADIO]                   = COMPOUND_STRING("Escuchar la radio."),
+    [POKENAV_MENUITEM_SWITCH_OFF]              = COMPOUND_STRING("Guarda el POKéGEAR."),
+    [POKENAV_MENUITEM_CONDITION_CANCEL]        = COMPOUND_STRING("Volver al menú del POKéGEAR."),
 #else
-    [POKENAV_MENUITEM_SWITCH_OFF]              = COMPOUND_STRING("Put away the POKéNAV."),
-    [POKENAV_MENUITEM_CONDITION_CANCEL]        = COMPOUND_STRING("Return to the POKéNAV menu."),
+    [POKENAV_MENUITEM_SWITCH_OFF]              = COMPOUND_STRING("Guarda el POKéNAV."),
+    [POKENAV_MENUITEM_CONDITION_CANCEL]        = COMPOUND_STRING("Vuelve al menú del POKéNAV."),
 #endif
-    [POKENAV_MENUITEM_CONDITION_PARTY]         = COMPOUND_STRING("Check party POKéMON in detail."),
-    [POKENAV_MENUITEM_CONDITION_SEARCH]        = COMPOUND_STRING("Check all POKéMON in detail."),
-    [POKENAV_MENUITEM_CONDITION_SEARCH_COOL]   = COMPOUND_STRING("Find cool POKéMON."),
-    [POKENAV_MENUITEM_CONDITION_SEARCH_BEAUTY] = COMPOUND_STRING("Find beautiful POKéMON."),
-    [POKENAV_MENUITEM_CONDITION_SEARCH_CUTE]   = COMPOUND_STRING("Find cute POKéMON."),
-    [POKENAV_MENUITEM_CONDITION_SEARCH_SMART]  = COMPOUND_STRING("Find smart POKéMON."),
-    [POKENAV_MENUITEM_CONDITION_SEARCH_TOUGH]  = COMPOUND_STRING("Find tough POKéMON."),
-    [POKENAV_MENUITEM_CONDITION_SEARCH_CANCEL] = COMPOUND_STRING("Return to the CONDITION menu.")
+    [POKENAV_MENUITEM_CONDITION_PARTY]         = COMPOUND_STRING("Mira los POKéMON de tu equipo."),
+    [POKENAV_MENUITEM_CONDITION_SEARCH]        = COMPOUND_STRING("Mira todos los POKéMON."),
+    [POKENAV_MENUITEM_CONDITION_SEARCH_COOL]   = COMPOUND_STRING("Busca POKéMON geniales."),
+    [POKENAV_MENUITEM_CONDITION_SEARCH_BEAUTY] = COMPOUND_STRING("Busca POKéMON bellos."),
+    [POKENAV_MENUITEM_CONDITION_SEARCH_CUTE]   = COMPOUND_STRING("Busca POKéMON lindos."),
+    [POKENAV_MENUITEM_CONDITION_SEARCH_SMART]  = COMPOUND_STRING("Busca POKéMON listos."),
+    [POKENAV_MENUITEM_CONDITION_SEARCH_TOUGH]  = COMPOUND_STRING("Busca POKéMON duros."),
+    [POKENAV_MENUITEM_CONDITION_SEARCH_CANCEL] = COMPOUND_STRING("Volver al menú de ESTADO.")
 };
 
 static const u8 sOptionDescTextColors[]  = {TEXT_COLOR_GREEN, TEXT_COLOR_BLUE, TEXT_COLOR_LIGHT_GREEN};
@@ -883,6 +885,7 @@ static void FreeAndDestroyMainMenuSprites(void)
     FreeSpritePaletteByTag(PALTAG_OPTIONS_PINK);
     FreeSpritePaletteByTag(PALTAG_OPTIONS_BEIGE);
     FreeSpritePaletteByTag(PALTAG_OPTIONS_RED);
+    FreeSpritePaletteByTag(PALTAG_OPTIONS_YELLOW);
     FreeSpritePaletteByTag(PALTAG_BLUE_LIGHT);
     DestroyMenuOptionSprites();
     DestroyRematchBlueLightSprite();

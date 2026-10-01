@@ -84,28 +84,28 @@ Route5_SouthEntrance_Movement_BlockPlayerEntry::
 	step_end
 
 Route5_SouthEntrance_Text_ThirstyOnGuardDuty::
-	.string "I'm on guard duty.\n"
-	.string "Gee, I'm thirsty, though!\p"
-	.string "Oh, wait there, the road's closed.$"
+	.string "Estoy de guardia.\n"
+	.string "¡Vaya, qué sed tengo!\p"
+	.string "Ah, espera, el camino está cerrado.$"
 
 Route5_SouthEntrance_Text_ThatTeaLooksTasty::
-	.string "Oh, that TEA…\n"
-	.string "It looks awfully tasty…$"
+	.string "Ah, ese TÉ...\n"
+	.string "Se ve delicioso...$"
 
 Route5_SouthEntrance_Text_ThanksIllShareTeaWithGuards::
-	.string "Huh? I can have this drink?\n"
-	.string "Gee, thanks!\l"
-	.string "… …\l"
-	.string "Glug, glug…\l"
-	.string "… …\l"
-	.string "Gulp…\l"
-	.string "If you want to go to SAFFRON\l"
-	.string "CITY…\l"
-	.string "… …\l"
-	.string "You can go on through.\p"
-	.string "I'll share this TEA with the other\n"
-	.string "guards!$"
+	.string "¿Eh? ¿Puedo tomar esta bebida?\n"
+	.string "¡Vaya, gracias!\l"
+	.string "... ...\l"
+	.string "Glug, glug...\l"
+	.string "... ...\l"
+	.string "Gulp...\l"
+	.string "Si quieres ir a AZULONA\l"
+	.string "CIUDAD...\l"
+	.string "... ...\l"
+	.string "Puedes pasar.\p"
+	.string "Compartiré este TÉ con los demás\n"
+	.string "guardias!$"
 
 Route5_SouthEntrance_Text_HiHowsItGoing::
-	.string "Hi, how's it going?$"
+	.string "Hola, ¿qué tal?$"
 

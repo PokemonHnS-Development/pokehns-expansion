@@ -27,33 +27,33 @@ NewSinjoh_Cafe_Pokemart_Resturant:
 	end
 
 NewSinjoh_Cafe_Text_ResturantGreeting:
-	.string "H-hello! Welcome to our Cafe!\n"
-	.string "How can I help you today?$"
+	.string "¡H-hola! ¡Bienvenidos al café!\n"
+	.string "¿En qué puedo ayudarte hoy?$"
 
 NewSinjoh_Cafe_Text_ResturantEnd:
-	.string "Please come again!$"
+	.string "¡Vuelve pronto!$"
 
 NewSinjoh_Cafe_EventScript_BaldingMan::
 	msgbox NewSinjoh_Cafe_Text_BaldingMan, MSGBOX_NPC
 	end
 
 NewSinjoh_Cafe_Text_BaldingMan:
-	.string "A local family has run this\n"
-	.string "cafe for as long as anyone\l"
-	.string "can remember.\p"
-	.string "Their youngest girl over there\n"
-	.string "isn't used to serving so many\l"
-	.string "strangers.$"
+	.string "Una familia local ha llevado este\n"
+	.string "café desde hace muchísimo\l"
+	.string "tiempo.\p"
+	.string "Su hija menor, la de allá,\n"
+	.string "no está acostumbrada a atender a\l"
+	.string "tantos desconocidos.$"
 
 NewSinjoh_Cafe_EventScript_ScientistF::
 	msgbox NewSinjoh_Cafe_Text_ScientistF, MSGBOX_NPC
 	end
 
 NewSinjoh_Cafe_Text_ScientistF:
-	.string "This drink is so goo--ood!\n"
+	.string "¡Esta bebida está tan bu-uena!\n"
 	.string ".......\p"
 	.string ".......\p"
-	.string "Hahaha\p"
+	.string "Jajaja\p"
 	.string ".......$"
 
 NewSinjoh_Cafe_EventScript_ScientistM::
@@ -65,22 +65,22 @@ NewSinjoh_Cafe_EventScript_ScientistM::
 	end
 
 NewSinjoh_Cafe_Text_ScientistM:
-	.string "Please forgive my colleague...\p"
-	.string "The drinks here are stronger than\n"
-	.string "what we're used to in HOENN.\p"
-	.string "I tried to warn her, but she said\n"
-	.string "she needed to unwind.\p"
-	.string "This research expedition has been\n"
-	.string "hard on us all.$"
+	.string "Perdona a mi colega...\p"
+	.string "Las bebidas aquí son más fuertes que\n"
+	.string "las que usamos en HOENN.\p"
+	.string "Traté de advertirle, pero dijo que\n"
+	.string "necesitaba relajarse.\p"
+	.string "Esta expedición de investigación\n"
+	.string "ha sido dura para todos.$"
 
 NewSinjoh_Cafe_EventScript_Gentleman::
 	msgbox NewSinjoh_Cafe_Text_Gentleman, MSGBOX_NPC
 	end
 
 NewSinjoh_Cafe_Text_Gentleman:
-	.string "What are you staring at, kid?\p"
-	.string "Nothin' wrong with a man and his\n"
-	.string "POKéMON eating at the same table.$"
+	.string "¿Qué miras, niño?\p"
+	.string "No hay nada de malo en que un hombre\n"
+	.string "y su POKéMON coman en la misma mesa.$"
 
 NewSinjoh_EventScript_Scyther::
 	lock
@@ -93,4 +93,4 @@ NewSinjoh_EventScript_Scyther::
 	end
 
 NewSinjoh_Text_Scyther:
-	.string "Scyyy!$"
+	.string "¡Scyyy!$"

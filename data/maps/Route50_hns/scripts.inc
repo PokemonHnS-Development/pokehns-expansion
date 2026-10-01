@@ -6,19 +6,19 @@ Route50_EventScript_BlackBelt1::
 	end
 
 Route50_Text_BlackBelt1::
-	.string "The body must be hardened\n"
-    .string "and the mind strengthened\l"
-    .string "in the harshest of conditions!$"
+	.string "El cuerpo debe endurecerse\ny la mente fortalecerse\l¡en las condiciones más duras!$"
+    .string "y la mente fortalecerse\l"
+    .string "¡en las peores condiciones!$"
 
 Route50_EventScript_BlackBelt2::
 	msgbox Route50_Text_BlackBelt2, MSGBOX_NPC
 	end
 
 Route50_Text_BlackBelt2::
-    .string "Phew!\p"
-    .string "I'm not as hardcore as he is.\p"
-	.string "There's really not much else\n"
-    .string "to do here but train.$"
+    .string "¡Uff!\p"
+    .string "No soy tan duro como él.\p"
+	.string "Realmente no hay mucho más\n"
+    .string "que hacer aquí que entrenar.$"
   
 
 Route50_EventScript_Wessel::
@@ -49,27 +49,24 @@ Route50_EventScript_WesselAfter::
 	end
 
 Route50_Text_WesselBefore:
-	.string "Incredible, A VOLTORB!\p"
-    .string "But it appears to be made\n"
-    .string "of... Wood?\p"
-    .string "My hypothesis that this route\n"
-    .string "would contain many STEEL TYPE\l"
-    .string "POKéMON is disproven yet again.\p"
-    .string "But why else would I have found\n"
-    .string "this STEEL PLATE here?\p"
-    .string "I must collect more data!$"
+	.string "¡Increíble, un VOLTORB!\p"
+    .string "Pero parece estar hecho\n"
+    .string "de... ¿madera?\p"
+    .string "Mi hipótesis de que esta ruta\n"
+    .string "tendría muchos TIPO ACERO\l"
+    .string "Los POKéMON fallan otra vez.\p"
+    .string "Pero, ¿por qué más habría\n"
+    .string "hallado esta PLACA DE ACERO?\p"
+    .string "¡Debo recolectar más datos!$"
 
 Route50_Text_WesselBeforeBattle:
-	.string "You want this PLATE?\n"
-	.string "But I haven't analyzed it yet!\p"
-	.string "Fine, we will battle for it.$"
+	.string "¿Quieres esta TABLA?\n¡Pero aún no la he analizado!\pEstá bien, lucharemos por ella.$"
 
 Route50_Text_WesselDefeat:
-	.string "My hypothesis was wrong...$"
+	.string "Mi hipótesis era errónea...$"
 
 Route50_Text_WesselAfter:
-	.string "Take the PLATE. I don't want to\n"
-	.string "talk about it.$"
+	.string "Toma la TABLA. No quiero\nhablar de esto.$"
 
 Route50_EventScript_Finley::
 	goto_if_defeated TRAINER_FINLEY_HNS, Route50_EventScript_FinleyAfter
@@ -99,32 +96,28 @@ Route50_EventScript_FinleyAfter::
 	end
 
 Route50_Text_FinleyBefore:
-	.string "How are the villagers treating\n"
-    .string "you?\p"
-    .string "They can be very unwelcoming to\n"
-    .string "strangers.\p"
-    .string "But meeting new people is one\n"
-    .string "of life's greatest joys.\p"
-    .string "One day, I hope to meet CHAMPION\n"
-    .string "LANCE.\p"
-    .string "He is a legendary dragon tamer,\n"
-    .string "much like myself.\l"
-    .string "Who am I?\p"
-    .string "Well, I am FINLEY, keeper of the\n"
-    .string "DRACO PLATE.$"
+	.string "¿Cómo te están tratando\nlos aldeanos?\pPueden ser muy poco amables\ncon los extraños.\pPero conocer gente nueva es\nuna de las mayores alegrías.\pAlgún día, espero conocer al\nCAMPEÓN LANCE.\pEs un legendario domador\nde dragones, igual que yo.\l¿Quién soy?\pBueno, soy FINLEY, el guardián\nde la TABLA DRACO.$"
+    .string "contigo?\p"
+    .string "Pueden ser muy hostiles con\n"
+    .string "desconocidos.\p"
+    .string "Pero conocer gente nueva es una\n"
+    .string "de las mayores alegrías vida.\p"
+    .string "Algún día espero conocer al\n"
+    .string "CAMPEÓN LANCE.\p"
+    .string "Es un domador de dragones\n"
+    .string "legendario, como yo.\l"
+    .string "¿Quién soy yo?\p"
+    .string "Bueno, soy FINLEY, guardián de la\n"
+    .string "PLACA DRACO.$"
 
 Route50_Text_FinleyBeforeBattle:
-	.string "I know the KIMONO's have sent you\n"
-	.string "to collect these PLATES.\p"
-	.string "They say you are worthy...\n"
-	.string "But can you conquer my dragons?$"
+	.string "Sé que los KIMONO te enviaron\na reunir estas TABLAS.\pDicen que eres digno...\n¿Pero puedes vencer a mis dragones?$"
 
 Route50_Text_FinleyDefeat:
-	.string "My dragons fought well.$"
+	.string "Mis dragones lucharon bien.$"
 
 Route50_Text_FinleyAfter:
-	.string "Perhaps you are even strong enough\n"
-	.string "to beat LANCE...$"
+	.string "Quizá seas lo bastante fuerte\npara vencer a LANCE...$"
 
 Route50_EventScript_Item_ULtraBall::
     finditem ITEM_ULTRA_BALL

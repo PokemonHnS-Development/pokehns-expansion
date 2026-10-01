@@ -12,24 +12,24 @@ SSAnne_2F_Room4_EventScript_Dawn::
 	end
 
 SSAnne_2F_Room4_Text_LamarIntro::
-	.string "Which do you find more worthy,\n"
+	.string "¿Cuál te parece más digno,\n"
 	.string "a strong or a rare POKéMON?$"
 
 SSAnne_2F_Room4_Text_LamarDefeat::
-	.string "I must salute you!$"
+	.string "¡Debo saludarte!$"
 
 SSAnne_2F_Room4_Text_LamarPostBattle::
-	.string "Personally, I prefer strong and\n"
-	.string "rare POKéMON.$"
+	.string "Personalmente, prefiero a los\n"
+	.string "POKéMON raros.$"
 
 SSAnne_2F_Room4_Text_DawnIntro::
-	.string "I don't believe I saw you at the\n"
+	.string "No creo haberte visto por ahí.\n"
 	.string "party?$"
 
 SSAnne_2F_Room4_Text_DawnDefeat::
-	.string "Take it easy!$"
+	.string "¡Tómalo con calma!$"
 
 SSAnne_2F_Room4_Text_DawnPostBattle::
 	.string "Oh, I adore your strong POKéMON!\n"
-	.string "Oh, how I envy you for them!$"
+	.string "¡Oh, cómo los envidio!$"
 

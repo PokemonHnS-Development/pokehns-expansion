@@ -1765,7 +1765,7 @@ static void MoveSelectionDisplayMoveDescription(enum BattlerId battler)
     }
 
     u8 pwr_num[3], acc_num[3];
-    u8 cat_desc[7] = _("CAT: ");
+    u8 cat_desc[7] = _("GAT: ");
     u8 pwr_desc[7] = _("PWR: ");
     u8 acc_desc[7] = _("ACC: ");
     u8 cat_start[] = _("{CLEAR_TO 0x03}");
@@ -1999,8 +1999,8 @@ static void HandleChooseActionAfterDma3(enum BattlerId battler)
         {
             if (DEBUG_AI_DELAY_TIMER)
             {
-                static const u8 sFramesText[] = _(" frames thinking\n");
-                static const u8 sCyclesText[] = _(" cycles");
+                static const u8 sFramesText[] = _(" cuadros pensando\n");
+                static const u8 sCyclesText[] = _(" ciclos");
                 ConvertIntToDecimalStringN(gDisplayedStringBattle, gBattleStruct->aiDelayFrames, STR_CONV_MODE_RIGHT_ALIGN, 3);
                 u8* end = StringAppend(gDisplayedStringBattle, sFramesText);
                 ConvertIntToDecimalStringN(end, gBattleStruct->aiDelayCycles, STR_CONV_MODE_RIGHT_ALIGN, 8);

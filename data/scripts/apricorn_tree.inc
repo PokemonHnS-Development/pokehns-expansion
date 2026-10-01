@@ -61,30 +61,30 @@ ApricornTree_EventScript_CancelPickingApricorn::
 	end
 
 ApricornTree_Text_Intro:
-	.string "It's an Apricorn Tree!$"
+	.string "¡Es un árbol de Bellotas!$"
 
 ApricornTree_Text_Empty:
-	.string "There are no Apricorns…$"
+	.string "No hay Bellotas...$"
 
 ApricornTree_Text_WantToPick:
-	.string "…It's {STR_VAR_2} {STR_VAR_1}!\n"
-	.string "Do you want to pick the\l"
-	.string "{STR_VAR_1}?$"
+	.string "...¡Es {STR_VAR_2} {STR_VAR_1}!\n"
+	.string "¿Quieres recoger la\l"
+	.string "¿{STR_VAR_1}?$"
 
 ApricornTree_Text_PickedTheApricorn:
-	.string "{PLAYER} obtained\n"
+	.string "{PLAYER} obtuvo\n"
 	.string "{STR_VAR_2} {STR_VAR_1}.$"
 
 ApricornTree_Text_PutAwayApricorn:
-	.string "{PLAYER} put away the\n"
-	.string "{STR_VAR_1} in\l"
-	.string "the BAG's {STR_VAR_3} POCKET.$"
+	.string "{PLAYER} guardó la\n"
+	.string "{STR_VAR_1} en\l"
+	.string "el BOLSILLO {STR_VAR_3} de la BOLSA.$"
 
 ApricornTree_Text_PocketFull:
-	.string "The BAG's {STR_VAR_3} POCKET is full.\p"
-	.string "{PLAYER} gave up on the\n"
-	.string "{STR_VAR_1}…$"
+	.string "El BOLSILLO {STR_VAR_3} está lleno.\p"
+	.string "{PLAYER} desistió de la\n"
+	.string "{STR_VAR_1}...$"
 
 ApricornTree_Text_ApricornLeftUnpicked:
-	.string "{PLAYER} gave up on the\n"
-	.string "{STR_VAR_1}…$"
+	.string "{PLAYER} desistió de la\n"
+	.string "{STR_VAR_1}...$"

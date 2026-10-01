@@ -75,53 +75,53 @@ SixIsland_WaterPath_House1_EventScript_SizeRecordNonEmpty::
 	end
 
 SixIsland_WaterPath_House1_Text_LoveItNeedItHeracross::
-	.string "Hera, hera, HERACROSS!\n"
-	.string "Big and shiny, it's the bug boss!\l"
-	.string "Love it, need it, HERACROSS!$"
+	.string "¡Hera, hera, HERACROSS!\n"
+	.string "¡Grande y brillante, jefe bicho!\l"
+	.string "Lo amo, lo necesito, ¡HERACROSS!$"
 
 SixIsland_WaterPath_House1_Text_MayIMeasureHeracross::
-	.string "Eeeeek!\n"
-	.string "That's a HERACROSS!\p"
-	.string "Please, please, may I measure how\n"
-	.string "big it is?$"
+	.string "¡Iiiih!\n"
+	.string "¡Es un HERACROSS!\p"
+	.string "Por favor, por favor, ¿puedo medir\n"
+	.string "cuán grande es?$"
 
 SixIsland_WaterPath_House1_Text_ItsXInchesDeserveReward::
-	.string "Eeeek, it's {STR_VAR_2} inches!\n"
-	.string "I've never seen anything like this!\l"
-	.string "You deserve a reward!$"
+	.string "¡Aah, mide {STR_VAR_2} pulgadas!\n"
+	.string "¡Nunca he visto algo así!\l"
+	.string "¡Mereces una recompensa!$"
 
 SixIsland_WaterPath_House1_Text_WantToSeeBiggerOne::
-	.string "I want to see a much, much bigger\n"
-	.string "HERACROSS than that one.\p"
-	.string "Oh, how I adore them, big\n"
-	.string "HERACROSS!$"
+	.string "Quiero ver uno mucho, mucho más\n"
+	.string "grande que ese HERACROSS.\p"
+	.string "Oh, cómo los adoro, tan\n"
+	.string "¡HERACROSS!$"
 
 SixIsland_WaterPath_House1_Text_ItsXInchesSameAsBefore::
-	.string "Huh? This {STR_VAR_2}-inch measurement…\n"
-	.string "Oh, boo! It's the same as before.$"
+	.string "¿Eh? Mide {STR_VAR_2} pulgadas...\n"
+	.string "¡Bah! ¡Es igual que antes!$"
 
 SixIsland_WaterPath_House1_Text_ItsXInchesYInchesWasBiggest::
-	.string "Oh, it's just {STR_VAR_2} inches.\n"
-	.string "The HERACROSS before was bigger.\p"
-	.string "It was {STR_VAR_3} inches, the biggest\n"
-	.string "HERACROSS you've brought me.$"
+	.string "Oh, solo son {STR_VAR_2} pulgadas.\n"
+	.string "El HERACROSS anterior era más grande.\p"
+	.string "Medía {STR_VAR_3} pulgadas, la más\n"
+	.string "¡HERACROSS me has traído!$"
 
 SixIsland_WaterPath_House1_Text_ThisWontDo::
-	.string "Oh, no! This won't do!\p"
-	.string "HERACROSS looks much more macho\n"
-	.string "and cool, and has a lovely horn!$"
+	.string "¡Oh, no! ¡Esto no sirve!\p"
+	.string "HERACROSS se ve mucho más macho\n"
+	.string "y genial, ¡y tiene un cuerno bello!$"
 
 SixIsland_WaterPath_House1_Text_YourBagIsFull::
-	.string "Your BAG is full.\n"
-	.string "My reward won't fit.$"
+	.string "Tu BOLSA está llena.\n"
+	.string "Mi recompensa no cabe.$"
 
 SixIsland_WaterPath_House1_Text_BiggestHeracrossIsXInches::
-	.string "The biggest HERACROSS that I have\n"
-	.string "ever seen measured so far is:\p"
-	.string "{STR_VAR_3} inches!$"
+	.string "El HERACROSS más grande que he\n"
+	.string "visto jamás mide:\p"
+	.string "¡{STR_VAR_3} pulgadas!$"
 
 SixIsland_WaterPath_House1_Text_BlankChartOfSomeSort::
-	.string "It's a blank chart of some sort.\p"
-	.string "It has spaces for writing in\n"
-	.string "records of some kind.$"
+	.string "Es una tabla en blanco.\p"
+	.string "Tiene espacios para anotar\n"
+	.string "registros de algún tipo.$"
 

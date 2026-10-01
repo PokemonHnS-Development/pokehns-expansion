@@ -9,13 +9,13 @@ NewSinjoh_House2_EventScripts_DeskLady::
 	end
 
 NewSinjoh_House2_DeskLady_Text::
-    .string "Hello, little one..\p"
-	.string "Welcome to New Sinjoh's...\n"
-	.string "Well, you might call it a library.\p"
-	.string "Really, this is where we keep all\n"
-	.string "the records of our town's history,\l"
-	.string "as well as any literature we\l"
-	.string "import from other regions..$"
+    .string "Hola, pequeño..\p"
+	.string "Bienvenido a Nueva Sinjoh...\n"
+	.string "Bueno, podrías llamarlo biblioteca.\p"
+	.string "En realidad, aquí guardamos todos\n"
+	.string "los registros de la historia local,\l"
+	.string "así como la literatura que\l"
+	.string "traemos de otras regiones..$"
 
 NewSinjoh_House2_EventScript_Torkoal::
 	lock
@@ -28,7 +28,7 @@ NewSinjoh_House2_EventScript_Torkoal::
 	end
 
 NewSinjoh_Hosue2_Text_CryTorkoal:
-	.string "Tooor?$"
+	.string "¿Tooor?$"
 
 NewSinjoh_House2_EventScript_BookShelf_North::
     lock
@@ -37,9 +37,9 @@ NewSinjoh_House2_EventScript_BookShelf_North::
 	end
 
 NewSinjoh_House2_Text_Bookshelf_North:
-    .string "It's crammed full of ancient\n"
-	.string "leather-bound books.\p"
-	.string "The language is unrecognizeable.$"
+    .string "Está lleno de libros antiguos\n"
+	.string "encuadernados en cuero.\p"
+	.string "El idioma es irreconocible.$"
 
 NewSinjoh_House2_EventScript_BookShelf_South::
     lock
@@ -48,6 +48,6 @@ NewSinjoh_House2_EventScript_BookShelf_South::
 	end
 
 NewSinjoh_House2_Text_Bookshelf_South:
-    .string "It's crammed full of POKéMON\n"
-	.string "books.\p"
-	.string "These look newer and more familiar.$"
+    .string "Está repleto de POKéMON\n"
+	.string "libros.\p"
+	.string "Estos parecen más nuevos y conocidos.$"

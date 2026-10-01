@@ -4221,7 +4221,7 @@ static void Cmd_getexp(void)
             {
                 if (viaSentIn == 1 && viaExpShare <= 1)
                 {
-                    // Solo party member gets full exp — no sharing penalty.
+                    // Solo party member gets full exp - no sharing penalty.
                     *exp = SAFE_DIV(calculatedExp, viaSentIn);
                 }
                 else

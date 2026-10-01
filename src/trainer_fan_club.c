@@ -279,7 +279,7 @@ void Script_BufferFanClubTrainerName(void)
 #endif //FREE_LINK_BATTLE_RECORDS
 }
 
-static const u8 sText_LtSurge[] = _("LT. SURGE");
+static const u8 sText_LtSurge[] = _("TEN. SURGE");
 static const u8 sText_Koga[] = _("KOGA");
 
 #if FREE_LINK_BATTLE_RECORDS == FALSE

@@ -31,30 +31,30 @@ CinnabarIsland_PokemonLab_Entrance_EventScript_TestingRoomSign::
 	end
 
 CinnabarIsland_Gym_Text_PhotoOfBlaineAndFuji::
-	.string "It's a photo of BLAINE and\n"
-	.string "MR. FUJI.\p"
-	.string "They're standing shoulder to\n"
-	.string "shoulder with big grins.$"
+	.string "Es una foto de BLAINE y\n"
+	.string "SR. FUJI.\p"
+	.string "Están hombro con hombro\n"
+	.string "con grandes sonrisas.$"
 
 CinnabarIsland_PokemonLab_Entrance_Text_StudyMonsExtensively::
-	.string "We study POKéMON extensively\n"
-	.string "every day.\p"
-	.string "People often bring us rare POKéMON\n"
-	.string "for examination.$"
+	.string "Estudiamos POKéMON a fondo\n"
+	.string "todos los días.\p"
+	.string "A menudo nos traen POKéMON raros\n"
+	.string "para examinarla.$"
 
 CinnabarIsland_PokemonLab_Entrance_Text_PhotoOfLabFounderDrFuji::
-	.string "A photo of the LAB's founder…\n"
+	.string "Una foto del fundador del LAB...\n"
 	.string "DR. FUJI?!$"
 
 CinnabarIsland_PokemonLab_Entrance_Text_MeetingRoomSign::
 	.string "POKéMON LAB\n"
-	.string "Meeting Room$"
+	.string "Sala de reuniones$"
 
 CinnabarIsland_PokemonLab_Entrance_Text_RAndDRoomSign::
 	.string "POKéMON LAB\n"
-	.string "R & D Room$"
+	.string "Sala de investigación$"
 
 CinnabarIsland_PokemonLab_Entrance_Text_TestingRoomSign::
 	.string "POKéMON LAB\n"
-	.string "Testing Room$"
+	.string "Sala de pruebas$"
 

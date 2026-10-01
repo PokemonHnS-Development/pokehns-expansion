@@ -16,8 +16,8 @@ RustboroCity_Flat2_1F_EventScript_Skitty::
 	end
 
 RustboroCity_Flat2_1F_Text_DevonWorkersLiveHere:
-	.string "DEVON CORPORATION's workers live in\n"
-	.string "this building.$"
+	.string "Los empleados de DEVON CORP viven en\n"
+	.string "este edificio.$"
 
 RustboroCity_Flat2_1F_Text_Skitty:
 	.string "SKITTY: Gyaaaah!$"

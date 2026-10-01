@@ -17,13 +17,13 @@ SaffronCity_House1_EventScript_MrPsychicAfter::
 	end
 
 MrPsychic_Text_1:
-	.string "…\p"
-	.string "…\p"
-	.string "…\p"
-	.string "…I got it!\p"
-	.string "You wanted this!$"
+	.string "...\p"
+	.string "...\p"
+	.string "...\p"
+	.string "...¡Lo tengo!\p"
+	.string "¡Querías esto!$"
 
 MrPsychic_Text_2:
-	.string "TM29 is PSYCHIC.\p"
-	.string "It may lower the target's\n"
-	.string "SP.DEF.$"
+	.string "La MT29 es PSÍQUICO.\p"
+	.string "Puede bajar la\n"
+	.string "DEF.ESP. del rival.$"

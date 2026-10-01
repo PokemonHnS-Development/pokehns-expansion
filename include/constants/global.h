@@ -171,7 +171,7 @@ enum ContestCategories
 };
 
 // string lengths
-#define ITEM_NAME_LENGTH 20
+#define ITEM_NAME_LENGTH 26
 #define ITEM_NAME_PLURAL_LENGTH ITEM_NAME_LENGTH + 2 // 2 is used for the instance where a word's suffix becomes y->ies
 #define POKEMON_NAME_LENGTH 12
 #define VANILLA_POKEMON_NAME_LENGTH 10
@@ -179,15 +179,15 @@ enum ContestCategories
 #define PLAYER_NAME_LENGTH 7
 #define MAIL_WORDS_COUNT 9
 #define EASY_CHAT_BATTLE_WORDS_COUNT 6
-#define MOVE_NAME_LENGTH 16
+#define MOVE_NAME_LENGTH 24
 #define NUM_QUESTIONNAIRE_WORDS 4
 #define QUIZ_QUESTION_LEN 9
 #define WONDER_CARD_TEXT_LENGTH 40
 #define WONDER_NEWS_TEXT_LENGTH 40
 #define WONDER_CARD_BODY_TEXT_LINES 4
 #define WONDER_NEWS_BODY_TEXT_LINES 10
-#define TYPE_NAME_LENGTH 8
-#define ABILITY_NAME_LENGTH 16
+#define TYPE_NAME_LENGTH 10
+#define ABILITY_NAME_LENGTH 24
 #define TRAINER_NAME_LENGTH 10
 #define CODE_NAME_LENGTH 11
 

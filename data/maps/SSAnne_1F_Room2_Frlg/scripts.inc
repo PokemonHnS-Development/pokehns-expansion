@@ -16,33 +16,33 @@ SSAnne_1F_Room2_EventScript_Tyler::
 	end
 
 SSAnne_1F_Room2_Text_TylerIntro::
-	.string "I love POKéMON!\n"
-	.string "Do you?$"
+	.string "¡Amo a los POKéMON!\n"
+	.string "¿Tú sí?$"
 
 SSAnne_1F_Room2_Text_TylerDefeat::
-	.string "Wow! \n"
-	.string "You're great!$"
+	.string "¡Vaya! \n"
+	.string "¡Eres genial!$"
 
 SSAnne_1F_Room2_Text_TylerPostBattle::
-	.string "Listen, listen!\n"
-	.string "Let me be your friend, okay?\p"
-	.string "Then we can trade POKéMON and\n"
-	.string "do stuff.$"
+	.string "¡Escucha, escucha!\n"
+	.string "Sé mi amigo, ¿de acuerdo?\p"
+	.string "Así podremos intercambiar POKéMON\n"
+	.string "y hacer cosas.$"
 
 SSAnne_1F_Room2_Text_AnnIntro::
-	.string "I collected these POKéMON\n"
-	.string "from all around the world!$"
+	.string "Recogí estos POKéMON\n"
+	.string "¡de todo el mundo!$"
 
 SSAnne_1F_Room2_Text_AnnDefeat::
-	.string "Oh, no!\n"
-	.string "I went around the world for these!$"
+	.string "¡Oh, no!\n"
+	.string "¡Di la vuelta al mundo por esto!$"
 
 SSAnne_1F_Room2_Text_AnnPostBattle::
 	.string "You hurt my poor POKéMON!\p"
-	.string "I demand that you heal them at a\n"
+	.string "Exijo que los cures en un\n"
 	.string "POKéMON CENTER!$"
 
 SSAnne_1F_Room2_Text_CruisingAroundWorld::
-	.string "We are cruising around the world,\n"
-	.string "my children and I.$"
+	.string "Estamos dando la vuelta al mundo,\n"
+	.string "mis hijos y yo.$"
 

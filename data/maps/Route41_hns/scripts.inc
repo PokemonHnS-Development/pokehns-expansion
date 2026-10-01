@@ -16,16 +16,16 @@ Route41_EventScript_Charlie::
 	end
 
 Route41_Text_SwimmermCharlieSeen:
-	.string "The water's warm here.\n"
-	.string "I'm loose and limber.\p"
-	.string "Sure, I'll take you on!$"
+	.string "El agua está tibia aquí.\n"
+	.string "Estoy ágil y flexible.\p"
+	.string "¡Claro, pelearé contigo!$"
 
 Route41_Text_SwimmermCharlieBeaten:
-	.string "Yikes! I've got prune skin!$"
+	.string "¡Ay! ¡Tengo piel de pasa!$"
 
 Route41_Text_SwimmermCharlieAfter:
-	.string "Isn't it relaxing just floating\n"
-	.string "like this?$"
+	.string "¿No es relajante flotar\n"
+	.string "así?$"
 
 Route41_EventScript_George::
 	trainerbattle_single TRAINER_GEORGE_HNS, Route41_Text_SwimmermGeorgeSeen, Route41_Text_SwimmermGeorgeBeaten
@@ -33,17 +33,17 @@ Route41_EventScript_George::
 	end
 
 Route41_Text_SwimmermGeorgeSeen:
-	.string "I'm a bit tired.\n"
-	.string "If I win, lend me your POKéMON.$"
+	.string "Estoy un poco cansado.\n"
+	.string "Si gano, préstame tu POKéMON.$"
 
 Route41_Text_SwimmermGeorgeBeaten:
-	.string "Pant, pant…$"
+	.string "Pant, pant...$"
 
 Route41_Text_SwimmermGeorgeAfter:
-	.string "It's so far to CIANWOOD.\p"
-	.string "But it's no easy return trip\n"
-	.string "to OLIVINE either.\p"
-	.string "What should I do?$"
+	.string "CIUDAD ORQUIDEA está muy lejos.\p"
+	.string "Pero volver a CIUDAD OLIVO\n"
+	.string "tampoco es fácil.\p"
+	.string "¿Qué debo hacer?$"
 
 Route41_EventScript_Berke::
 	trainerbattle_single TRAINER_BERKE_HNS, Route41_Text_SwimmermBerkeSeen, Route41_Text_SwimmermBerkeBeaten
@@ -51,20 +51,20 @@ Route41_EventScript_Berke::
 	end
 
 Route41_Text_SwimmermBerkeSeen:
-	.string "See those islands that are\n"
-	.string "blocked by whirlpools?\p"
-	.string "There just has to be a secret!$"
+	.string "¿Ves esas islas que están\n"
+	.string "bloqueadas por remolinos?\p"
+	.string "¡Seguro que hay un secreto!$"
 
 Route41_Text_SwimmermBerkeBeaten:
-	.string "What's the secret to your\n"
-	.string "strength?$"
+	.string "¿Cuál es el secreto de tu\n"
+	.string "fuerza?$"
 
 Route41_Text_SwimmermBerkeAfter:
-	.string "It was a dark and stormy night…\p"
-	.string "I saw this giant POKéMON flying\n"
-	.string "from the islands.\p"
-	.string "It was scattering feathers\n"
-	.string "from its silver wings.$"
+	.string "Era una noche oscura y tormentosa...\p"
+	.string "Vi a un POKéMON gigante volando\n"
+	.string "desde las islas.\p"
+	.string "Soltaba plumas de sus\n"
+	.string "alas plateadas.$"
 
 Route41_EventScript_Kirk::
 	trainerbattle_single TRAINER_KIRK_HNS, Route41_Text_SwimmermKirkSeen, Route41_Text_SwimmermKirkBeaten
@@ -72,16 +72,16 @@ Route41_EventScript_Kirk::
 	end
 
 Route41_Text_SwimmermKirkSeen:
-	.string "The waves are wild here.\p"
-	.string "They tire you out while\n"
-	.string "you swim.$"
+	.string "Las olas son fuertes aquí.\p"
+	.string "Te agotan mientras\n"
+	.string "puedes nadar.$"
 
 Route41_Text_SwimmermKirkBeaten:
-	.string "I'm beat!$"
+	.string "¡Estoy agotado!$"
 
 Route41_Text_SwimmermKirkAfter:
-	.string "The currents keep me from\n"
-	.string "reaching that island.$"
+	.string "Las corrientes no me dejan\n"
+	.string "llegar a esa isla.$"
 
 Route41_EventScript_Mathew::
 	trainerbattle_single TRAINER_MATHEW_HNS, Route41_Text_SwimmermMathewSeen, Route41_Text_SwimmermMathewBeaten
@@ -89,15 +89,15 @@ Route41_EventScript_Mathew::
 	end
 
 Route41_Text_SwimmermMathewSeen:
-	.string "Are you seeking the secrets\n"
-	.string "of WHIRL ISLANDS?$"
+	.string "¿Buscas los secretos\n"
+	.string "de las ISLAS REMOLINO?$"
 
 Route41_Text_SwimmermMathewBeaten:
-	.string "Ooh, you've got great endurance!$"
+	.string "¡Ooh, tienes gran resistencia!$"
 
 Route41_Text_SwimmermMathewAfter:
-	.string "A secret about WHIRL ISLANDS…\p"
-	.string "It's pitch-black inside!$"
+	.string "Un secreto de ISLAS REMOLINO...\p"
+	.string "¡Está oscuro como la noche!$"
 
 Route41_EventScript_Kaylee::
 	trainerbattle_single TRAINER_KAYLEE_HNS, Route41_Text_SwimmerfKayleeSeen, Route41_Text_SwimmerfKayleeBeaten
@@ -105,16 +105,16 @@ Route41_EventScript_Kaylee::
 	end
 
 Route41_Text_SwimmerfKayleeSeen:
-	.string "I'm on my way to WHIRL ISLANDS.\p"
-	.string "I'm going exploring with friends.$"
+	.string "Voy camino a ISLAS REMOLINO.\p"
+	.string "Iré a explorar con amigos.$"
 
 Route41_Text_SwimmerfKayleeBeaten:
-	.string "Is that how you do it?$"
+	.string "¿Así se hace?$"
 
 Route41_Text_SwimmerfKayleeAfter:
-	.string "There's supposed to be a big\n"
-	.string "POKéMON deep beneath WHIRL ISLANDS.\p"
-	.string "I wonder what it could be?$"
+	.string "Se supone que hay un gran\n"
+	.string "POKéMON bajo LAS ISLAS REMOLINO.\p"
+	.string "¿Me pregunto cuál será?$"
 
 Route41_EventScript_Susie::
 	trainerbattle_single TRAINER_SUSIE_HNS, Route41_Text_SwimmerfSusieSeen, Route41_Text_SwimmerfSusieBeaten
@@ -122,15 +122,15 @@ Route41_EventScript_Susie::
 	end
 
 Route41_Text_SwimmerfSusieSeen:
-	.string "You look so elegant,\n"
-	.string "riding your POKéMON.$"
+	.string "Te ves muy elegante\n"
+	.string "montando tu POKéMON.$"
 
 Route41_Text_SwimmerfSusieBeaten:
-	.string "I'm crushed…$"
+	.string "¡Estoy hecho polvo...$"
 
 Route41_Text_SwimmerfSusieAfter:
-	.string "Wasn't there a hit song about\n"
-	.string "a boy riding a LAPRAS?$"
+	.string "¿No había una canción famosa\n"
+	.string "sobre un chico en un LAPRAS?$"
 
 Route41_EventScript_Denise::
 	trainerbattle_single TRAINER_DENISE_HNS, Route41_Text_SwimmerfDeniseSeen, Route41_Text_SwimmerfDeniseBeaten
@@ -138,16 +138,16 @@ Route41_EventScript_Denise::
 	end
 
 Route41_Text_SwimmerfDeniseSeen:
-	.string "The weather is so beautiful,\n"
-	.string "I'm in a daze!$"
+	.string "¡El clima es tan hermoso\n"
+	.string "que estoy distraído!$"
 
 Route41_Text_SwimmerfDeniseBeaten:
 	.string "Ohhh!$"
 
 Route41_Text_SwimmerfDeniseAfter:
-	.string "A sunburn is the worst for skin.\p"
-	.string "But I don't use a sunblock.\p"
-	.string "I won't pollute the water.$"
+	.string "Las quemaduras son malísimas.\p"
+	.string "Pero no uso protector solar.\p"
+	.string "No contaminaré el agua.$"
 
 Route41_EventScript_Kara::
 	trainerbattle_single TRAINER_KARA_HNS, Route41_Text_SwimmerfKaraSeen, Route41_Text_SwimmerfKaraBeaten
@@ -155,17 +155,17 @@ Route41_EventScript_Kara::
 	end
 
 Route41_Text_SwimmerfKaraSeen:
-	.string "If you need to rest,\n"
-	.string "just tread water.\p"
-	.string "You'll get your wind back,\n"
-	.string "so you can keep on going strong.$"
+	.string "Si necesitas descansar,\n"
+	.string "solo flota en el agua.\p"
+	.string "Recuperarás el aliento,\n"
+	.string "así podrás seguir con fuerza.$"
 
 Route41_Text_SwimmerfKaraBeaten:
-	.string "Oh! You have more energy than I do.$"
+	.string "¡Oh! Tienes más energía que yo.$"
 
 Route41_Text_SwimmerfKaraAfter:
-	.string "I heard roars from deep inside\n"
-	.string "the ISLANDS.$"
+	.string "Oí rugidos desde lo profundo\n"
+	.string "de las ISLAS.$"
 
 Route41_EventScript_Wendy::
 	trainerbattle_single TRAINER_WENDY_HNS, Route41_Text_SwimmerfWendySeen, Route41_Text_SwimmerfWendyBeaten
@@ -173,16 +173,14 @@ Route41_EventScript_Wendy::
 	end
 
 Route41_Text_SwimmerfWendySeen:
-	.string "At night, STARYU gather near\n"
-	.string "the water's surface.$"
+	.string "De noche, STARYU se juntan\n"
+	.string "cerca de la superficie.$"
 
 Route41_Text_SwimmerfWendyBeaten:
-	.string "Oh, dear…$"
+	.string "Ay, cielos...$"
 
 Route41_Text_SwimmerfWendyAfter:
-	.string "The clusters of STARYU light up\n"
-	.string "at the same time.\p"
-	.string "It's so beautiful, it's scary.$"
+	.string "Los grupos de STARYU se iluminan\nal mismo tiempo.\pEs tan hermoso que da miedo.$"
 
 Route41_EventScript_Tentacruel1::
 	lock
@@ -291,5 +289,4 @@ Route41_Text_TentacruelAttack:
 	.string "TENTACRUEL: CRUOOOOOO!$"
 
 Route41_Text_TentacruelHeal:
-	.string "The TENTACRUEL used RECOVER!\n"
-	.string "It is fully healed!$"
+	.string "TENTACRUEL usó RECUPERACIÓN!\n¡Está completamente curado!$"

@@ -2553,7 +2553,7 @@ void TestRunner_Battle_CheckBattleRecordActionType(enum BattlerId battlerId, u32
                 actualMacro = sBattleActionNames[DATA.recordedBattle.battleRecord[battlerId][recordIndex]];
                 break;
             case RECORDED_PARTY_INDEX:
-                actualMacro = "SEND_OUT";
+                actualMacro = "LANZAR";
                 break;
             }
 

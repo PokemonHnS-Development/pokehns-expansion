@@ -173,139 +173,139 @@ FiveIsland_RocketWarehouse_Movement_AdminWalkToSwitch::
 	step_end
 
 FiveIsland_RocketWarehouse_Text_ManyMonsLockedInPen::
-	.string "There are many POKéMON locked\n"
-	.string "away in the pen…$"
+	.string "Hay muchos POKéMON encerrados\n"
+	.string "lejos en el corral...$"
 
 FiveIsland_RocketWarehouse_Text_PenUnlockedMonsFled::
-	.string "The pen door is unlocked.\n"
-	.string "The POKéMON appear to have fled.$"
+	.string "La puerta del corral está\n"
+	.string "Los POKéMON parecen haber huido.$"
 
 FiveIsland_RocketWarehouse_Text_Grunt2Intro::
-	.string "Did you come here knowing it's\n"
-	.string "TEAM ROCKET's WAREHOUSE?$"
+	.string "¿Viniste sabiendo que\n"
+	.string "¿EL ALMACÉN DE ROCKET?$"
 
 FiveIsland_RocketWarehouse_Text_Grunt2Defeat::
-	.string "What do you think you're doing?!$"
+	.string "¿¡Qué te crees que estás haciendo!?$"
 
 FiveIsland_RocketWarehouse_Text_Grunt2PostBattle::
-	.string "TEAM ROCKET broke up?\n"
-	.string "What planet are you from?$"
+	.string "¿El EQUIPO ROCKET acabó?\n"
+	.string "¿De qué planeta vienes?$"
 
 FiveIsland_RocketWarehouse_Text_Grunt1Intro::
-	.string "Oh, now your POKéMON look strong.\n"
-	.string "You're willing to sell them?\p"
-	.string "Oh?\n"
-	.string "You wanted to battle?$"
+	.string "Oh, tus POKéMON se ven fuertes.\n"
+	.string "¿Estás dispuesto a venderlos?\p"
+	.string "¿Eh?\n"
+	.string "¿Querías batallar?$"
 
 FiveIsland_RocketWarehouse_Text_Grunt1Defeat::
-	.string "Oh, but…\n"
-	.string "Too much!$"
+	.string "Oh, pero...\n"
+	.string "¡Demasiado!$"
 
 FiveIsland_RocketWarehouse_Text_Grunt1PostBattle::
-	.string "We can give you a great price.\n"
-	.string "Sell us your POKéMON!$"
+	.string "Podemos darte un buen precio.\n"
+	.string "¡Véndenos tus POKéMON!$"
 
 FiveIsland_RocketWarehouse_Text_Grunt3Intro::
-	.string "I got word about you from the\n"
-	.string "others.\p"
-	.string "But there's no way a kid like you'd\n"
-	.string "know our BOSS GIOVANNI!$"
+	.string "Recibí información sobre ti\n"
+	.string "otros.\p"
+	.string "Pero no hay forma de que un niño\n"
+	.string "¡conoce a nuestro JEFE GIOVANNI!$"
 
 FiveIsland_RocketWarehouse_Text_Grunt3Defeat::
-	.string "Don't…you…dare…laugh…$"
+	.string "No...te...atrevas...a...reír...$"
 
 FiveIsland_RocketWarehouse_Text_Grunt3PostBattle::
-	.string "Don't mess in the doings of adults,\n"
-	.string "you jumped-up pip-squeak!$"
+	.string "No te metas en asuntos de adultos,\n"
+	.string "¡mocoso presumido!$"
 
 FiveIsland_RocketWarehouse_Text_Admin1Intro::
-	.string "I don't know or care if what I'm\n"
-	.string "doing is right or wrong…\p"
-	.string "I just put my faith in GIOVANNI\n"
-	.string "and do as I am told.$"
+	.string "No sé ni me importa si lo que hago\n"
+	.string "está bien o mal...\p"
+	.string "Solo deposito mi fe en GIOVANNI\n"
+	.string "y hago lo que me ordenan.$"
 
 FiveIsland_RocketWarehouse_Text_Admin1Defeat::
-	.string "I…\n"
-	.string "I'm shattered…$"
+	.string "I...\n"
+	.string "Estoy destrozado...$"
 
 FiveIsland_RocketWarehouse_Text_Admin1PostBattle::
-	.string "You're doing things according to\n"
-	.string "your beliefs and morals.\p"
-	.string "I understand now…$"
+	.string "Tú haces las cosas según\n"
+	.string "tus creencias y moral.\p"
+	.string "Ahora lo entiendo...$"
 
 FiveIsland_RocketWarehouse_Text_MadeItSoYouCanComeBackThrough::
-	.string "I've made it so you can come back\n"
-	.string "in through there.\p"
-	.string "Why don't you go get rested and\n"
-	.string "refreshed for what lies ahead?\p"
-	.string "The ADMIN after me outranks me\n"
-	.string "thoroughly as a TRAINER.\p"
-	.string "You'd better steel yourself for one\n"
-	.string "harsh challenge.$"
+	.string "He hecho que puedas volver\n"
+	.string "por ahí.\p"
+	.string "¿Por qué no vas a descansar\n"
+	.string "y recuperarte para lo que viene?\p"
+	.string "El ADMIN que sigue me supera\n"
+	.string "ampliamente como ENTRENADOR.\p"
+	.string "Mejor prepárate para lo que\n"
+	.string "un reto muy duro.$"
 
 FiveIsland_RocketWarehouse_Text_Admin2Intro::
-	.string "That's quite enough of you \n"
-	.string "playing the hero, kid.\p"
-	.string "Spreading lies about how TEAM\n"
-	.string "ROCKET has disbanded…\p"
-	.string "It's such an obvious attempt to\n"
-	.string "cause confusion in our ranks.\p"
-	.string "Fortunately, we're not so ignorant\n"
-	.string "to fall for the lies of a child!\p"
-	.string "And now, I'll show you how scary\n"
-	.string "an angry adult can be!$"
+	.string "Ya es suficiente con que tú \n"
+	.string "quieras ser el héroe, niño.\p"
+	.string "Difundes mentiras de que el TEAM\n"
+	.string "El EQUIPO ROCKET se disolvió...\p"
+	.string "Es un intento tan obvio de\n"
+	.string "causar confusión en nuestras filas.\p"
+	.string "Por suerte, no somos tan ingenuos\n"
+	.string "de caer en las mentiras de un niño!\p"
+	.string "Y ahora, les mostraré qué tan\n"
+	.string "temible es un adulto furioso!$"
 
 FiveIsland_RocketWarehouse_Text_Admin2Defeat::
-	.string "Urgh…\n"
-	.string "You were too strong…\p"
-	.string "…\n"
-	.string "Th-that's GIOVANNI's BADGE!\p"
-	.string "So it's true?\n"
-	.string "TEAM ROCKET really has disbanded?$"
+	.string "Uf...\n"
+	.string "Eras demasiado fuerte...\p"
+	.string "...\n"
+	.string "¡Esa es la MEDALLA de GIOVANNI!\p"
+	.string "¿Así que es verdad?\n"
+	.string "¿El EQUIPO ROCKET se disolvió?$"
 
 FiveIsland_RocketWarehouse_Text_Admin2PostBattle::
-	.string "We will abandon this WAREHOUSE…\p"
-	.string "But don't think this is over.\n"
-	.string "I won't let this be the end.\p"
-	.string "I will find GIOVANNI.\n"
-	.string "And I will resurrect TEAM ROCKET!\l"
-	.string "I will…\p"
-	.string "Until then, farewell!$"
+	.string "Abandonaremos este ALMACÉN...\p"
+	.string "Pero no creas que esto ha terminado.\n"
+	.string "No dejaré que esto sea el fin.\p"
+	.string "Encontraré a GIOVANNI.\n"
+	.string "¡Y resucitaré al EQUIPO ROCKET!\l"
+	.string "Yo...\p"
+	.string "¡Hasta entonces, adiós!$"
 
 FiveIsland_RocketWarehouse_Text_ReportWithGraphsAndText::
-	.string "A report with graphs and text is on\n"
-	.string "the PC monitor.\p"
-	.string "“The Influence of Magnetic Waves\n"
-	.string "on POKéMON Evolution”…\p"
-	.string "… … … … … …\p"
-	.string "It's too difficult to understand…$"
+	.string "Un informe con gráficos y texto está\n"
+	.string "la pantalla de la PC.\p"
+	.string "“La influencia de las ondas\n"
+	.string "en la Evolución POKéMON”...\p"
+	.string "... ... ... ... ... ...\p"
+	.string "Es muy difícil de entender...$"
 
 FiveIsland_RocketWarehouse_Text_GideonIntro::
-	.string "I almost managed to sell the\n"
-	.string "SAPPHIRE for huge money…\p"
-	.string "Then, you just had to come along\n"
-	.string "and blow the whole deal apart!\p"
-	.string "Fufu… Fufufufu…\n"
-	.string "There's no forgiveness for you!$"
+	.string "Casi logré vender el\n"
+	.string "ZAFIRO por mucho dinero...\p"
+	.string "Entonces, tú solo tuviste que venir\n"
+	.string "¡y arruinar todo el trato!\p"
+	.string "Fufu... Fufufufu...\n"
+	.string "¡No hay perdón para ti!$"
 
 FiveIsland_RocketWarehouse_Text_GideonDefeat::
-	.string "Gah! Darn!\n"
-	.string "Darn! Darn!$"
+	.string "¡Gah! ¡Rayos!\n"
+	.string "¡Rayos! ¡Rayos!$"
 
 FiveIsland_RocketWarehouse_Text_GideonPostBattle::
-	.string "If I can't sell it, it's worthless!\n"
-	.string "Go ahead, take it!$"
+	.string "Si no puedo venderlo, no vale nada!\n"
+	.string "¡Adelante, tómalo!$"
 
 FiveIsland_RocketWarehouse_Text_GetLostLeaveMeBe::
-	.string "What do you want now?\n"
-	.string "Go on, get lost, leave me be.$"
+	.string "¿Qué quieres ahora?\n"
+	.string "Vamos, vete y déjame en paz.$"
 
 FiveIsland_RocketWarehouse_Text_GiovannisKidHasRedHair::
-	.string "What, you again?\p"
-	.string "You… You're not GIOVANNI's kid,\n"
-	.string "are you?\p"
-	.string "No, that can't be right!\n"
-	.string "GIOVANNI's kid has red hair.\p"
-	.string "You don't have any reasons for\n"
-	.string "bugging me. Leave me alone!$"
+	.string "¿Qué, otra vez tú?\p"
+	.string "Tú... Tú no eres el hijo\nde GIOVANNI,"
+	.string "¿verdad?\p"
+	.string "¡No, eso no puede ser!\n"
+	.string "El hijo de GIOVANNI es pelirrojo.\p"
+	.string "No tienes ninguna razón para\n"
+	.string "molestarme. ¡Déjame en paz!$"
 

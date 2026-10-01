@@ -1411,7 +1411,7 @@ static void ExitEasyChatScreen(MainCallback callback)
     SetMainCallback2(callback);
 }
 
-// HnS: Odd Egg interview passwords — 4 Easy Chat words → species index 1..7
+// HnS: Odd Egg interview passwords - 4 Easy Chat words → species index 1..7
 static const u16 sInterviewPasswords[11][4] = {
     { EC_WORD_STATIC, EC_WORD_ELECTRIC, EC_WORD_WAAAH, EC_WORD_PLAY },
     { EC_WORD_CUTE_CHARM, EC_WORD_NORMAL, EC_WORD_EEK, EC_WORD_LOOKS },

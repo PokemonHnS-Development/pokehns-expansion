@@ -84,28 +84,28 @@ ViridianCity_Mart_EventScript_Youngster::
 	end
 
 ViridianCity_Mart_Text_YouCameFromPallet::
-	.string "Hey!\n"
-	.string "You came from PALLET TOWN?$"
+	.string "¡Hola!\n"
+	.string "¿Vienes de PUEBLO PALETA?$"
 
 ViridianCity_Mart_Text_TakeThisToProfOak::
-	.string "You know PROF. OAK, right?\p"
-	.string "His order came in.\n"
-	.string "Can I get you to take it to him?$"
+	.string "Conoces al PROF. OAK, ¿verdad?\p"
+	.string "Llegó su pedido.\n"
+	.string "¿Puedes llevárselo?$"
 
 ViridianCity_Mart_Text_ReceivedOaksParcelFromClerk::
-	.string "{PLAYER} received OAK'S PARCEL\n"
-	.string "from the POKéMON MART clerk.$"
+	.string "{PLAYER} recibió el PAQUETE DE OAK\n"
+	.string "del empleado de la TIENDA POKéMON.$"
 
 ViridianCity_Mart_Text_SayHiToOakForMe::
-	.string "Okay, thanks! Please say hi to\n"
-	.string "PROF. OAK for me, too.$"
+	.string "¡Vale, gracias! Salúdame a\n"
+	.string "PROF. OAK de mi parte.$"
 
 ViridianCity_Mart_Text_ShopDoesGoodBusinessInAntidotes::
-	.string "This shop does good business in\n"
-	.string "ANTIDOTES, I've heard.$"
+	.string "Este negocio va muy bien en\n"
+	.string "ANTÍDOTOS, he oído.$"
 
 ViridianCity_Mart_Text_GotToBuySomePotions::
-	.string "I've got to buy some POTIONS.\p"
-	.string "You never know when your POKéMON\n"
-	.string "will need quick healing.$"
+	.string "Tengo que comprar unas POCIONES.\p"
+	.string "Nunca sabes cuándo tu POKéMON\n"
+	.string "necesitará que lo cure rápido.$"
 

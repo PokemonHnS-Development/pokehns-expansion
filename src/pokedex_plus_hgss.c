@@ -133,9 +133,9 @@ static const u8 sText_TenDashes[] = _("----------");
 ALIGNED(4) static const u8 sExpandedPlaceholder_PokedexDescription[] = _("");
 static const u16 sSizeScreenSilhouette_Pal[] = INCBIN_U16("graphics/pokedex/size_silhouette.gbapal");
 
-static const u8 sText_Stats_Buttons[] = _("{A_BUTTON}TOGGLE   {DPAD_UPDOWN}MOVES");
-static const u8 sText_Stats_Buttons_Decapped[] = _("{A_BUTTON}Toggle   {DPAD_UPDOWN}Moves");
-static const u8 sText_Stats_HP[] = _("HP");
+static const u8 sText_Stats_Buttons[] = _("{A_BUTTON}CAMBIA   {DPAD_UPDOWN}MOVIMIENTOS");
+static const u8 sText_Stats_Buttons_Decapped[] = _("{A_BUTTON}Cambia   {DPAD_UPDOWN}Movimientos");
+static const u8 sText_Stats_HP[] = _("PS");
 static const u8 sText_Stats_Attack[] = _("ATK");
 static const u8 sText_Stats_Defense[] = _("DEF");
 static const u8 sText_Stats_Speed[] = _("SPE");
@@ -156,10 +156,10 @@ static const u8 sText_Stats_Gender_87_5[] = _("♀ 7/1 ♂");
 static const u8 sText_Stats_Gender_100[] = _("♀");
 static const u8 sText_Stats_CatchRate[] = _("CATCH{0x5B}: ");
 static const u8 sText_Stats_CatchRate_Legend[] = _("LEGENDARY");
-static const u8 sText_Stats_CatchRate_VeryHard[] = _("VERY HARD");
-static const u8 sText_Stats_CatchRate_Difficult[] = _("DIFFICULT");
-static const u8 sText_Stats_CatchRate_Medium[] = _("MEDIUM");
-static const u8 sText_Stats_CatchRate_Relaxed[] = _("RELAXED");
+static const u8 sText_Stats_CatchRate_VeryHard[] = _("MUY DIFÍCIL");
+static const u8 sText_Stats_CatchRate_Difficult[] = _("DIFÍCIL");
+static const u8 sText_Stats_CatchRate_Medium[] = _("MEDIA");
+static const u8 sText_Stats_CatchRate_Relaxed[] = _("RELAJADA");
 static const u8 sText_Stats_CatchRate_Easy[] = _("EASY");
 static const u8 sText_Stats_ExpYield[] = _("EXP YIELD: ");
 static const u8 sText_Stats_EggCycles[] = _("HATCH STEPS:");
@@ -204,31 +204,31 @@ static const u8 sText_Dex_OWN[] = _("OWN");
 
 static const u8 sText_EVO_Buttons[] = _("{DPAD_UPDOWN}EVOs  {A_BUTTON}CHECK");
 static const u8 sText_EVO_Buttons_Decapped[] = _("{DPAD_UPDOWN}Evos  {A_BUTTON}Check");
-static const u8 sText_EVO_Buttons_PE[] = _("{DPAD_UPDOWN}EVOs  {A_BUTTON}CHECK  {START_BUTTON}FORMs");
-static const u8 sText_EVO_Buttons_Decapped_PE[] = _("{DPAD_UPDOWN}Evos  {A_BUTTON}Check  {START_BUTTON}Forms");
+static const u8 sText_EVO_Buttons_PE[] = _("{DPAD_UPDOWN}EVOs  {A_BUTTON}VER  {START_BUTTON}FORMAS");
+static const u8 sText_EVO_Buttons_Decapped_PE[] = _("{DPAD_UPDOWN}Evos  {A_BUTTON}Ver  {START_BUTTON}Formas");
 static const u8 sText_EVO_Name[] = _("{STR_VAR_3}:");
-static const u8 sText_EVO_PreEvo[] = _("{STR_VAR_1} evolves from {STR_VAR_2}");
-static const u8 sText_EVO_PreEvo_PE_Mega[] = _("{STR_VAR_1} Mega Evolves with {STR_VAR_2}");
-static const u8 sText_EVO_LEVEL_SILCOON[] = _("{LV}{UP_ARROW} to {STR_VAR_2}, Silcoon persona");
-static const u8 sText_EVO_LEVEL_CASCOON[] = _("{LV}{UP_ARROW} to {STR_VAR_2}, Cascoon persona");
-static const u8 sText_EVO_MOVE[] = _("{LV}{UP_ARROW}, knows {STR_VAR_2}");
-static const u8 sText_EVO_LEVEL_RAIN[] = _("{LV}{UP_ARROW} to {STR_VAR_2} while raining");
-static const u8 sText_EVO_TRADE_SPECIFIC_MON[] = _("Traded for {STR_VAR_2}");
-static const u8 sText_EVO_CRITICAL_HITS[] = _("Land {STR_VAR_2} critical hits in\nsingle battle");
-static const u8 sText_EVO_SCRIPT_TRIGGER_DMG[] = _("Takes at least {STR_VAR_2} HP in damage");
-static const u8 sText_EVO_DARK_SCROLL[] = _("ScrllOfDrknss is used");
-static const u8 sText_EVO_WATER_SCROLL[] = _("ScrollOfWatrs is used");
-static const u8 sText_EVO_USE_MOVE_TWENTY_TIMES[] = _("{LV}{UP_ARROW} after 20x {STR_VAR_2}");
-static const u8 sText_EVO_RECOIL_DAMAGE_MALE[] = _("{LV}{UP_ARROW} with {STR_VAR_2} recoil, male");
-static const u8 sText_EVO_RECOIL_DAMAGE_FEMALE[] = _("{LV}{UP_ARROW} with {STR_VAR_2} recoil, female");
-static const u8 sText_EVO_DEFEAT_THREE_WITH_ITEM[] = _("{LV}{UP_ARROW} defeating 3 {STR_VAR_3} holding {STR_VAR_2}");
-static const u8 sText_EVO_NONE[] = _("{STR_VAR_1} has no evolution.");
+static const u8 sText_EVO_PreEvo[] = _("{STR_VAR_1} evoluciona de {STR_VAR_2}");
+static const u8 sText_EVO_PreEvo_PE_Mega[] = _("{STR_VAR_1} Megaevoluciona con {STR_VAR_2}");
+static const u8 sText_EVO_LEVEL_SILCOON[] = _("{LV}{UP_ARROW} a {STR_VAR_2}, forma Silcoon");
+static const u8 sText_EVO_LEVEL_CASCOON[] = _("{LV}{UP_ARROW} a {STR_VAR_2}, forma Cascoon");
+static const u8 sText_EVO_MOVE[] = _("{LV}{UP_ARROW}, conoce {STR_VAR_2}");
+static const u8 sText_EVO_LEVEL_RAIN[] = _("{LV}{UP_ARROW} a {STR_VAR_2} bajo lluvia");
+static const u8 sText_EVO_TRADE_SPECIFIC_MON[] = _("Intercambiado por {STR_VAR_2}");
+static const u8 sText_EVO_CRITICAL_HITS[] = _("Logra {STR_VAR_2} golpes críticos en\nuna sola batalla");
+static const u8 sText_EVO_SCRIPT_TRIGGER_DMG[] = _("Recibe al menos {STR_VAR_2} PS de daño");
+static const u8 sText_EVO_DARK_SCROLL[] = _("Se usó ScrllOfDrknss");
+static const u8 sText_EVO_WATER_SCROLL[] = _("Se usó ScrollOfWatrs");
+static const u8 sText_EVO_USE_MOVE_TWENTY_TIMES[] = _("{LV}{UP_ARROW} tras 20x {STR_VAR_2}");
+static const u8 sText_EVO_RECOIL_DAMAGE_MALE[] = _("{LV}{UP_ARROW} con {STR_VAR_2} retroceso, macho");
+static const u8 sText_EVO_RECOIL_DAMAGE_FEMALE[] = _("{LV}{UP_ARROW} con {STR_VAR_2} retroceso, hembra");
+static const u8 sText_EVO_DEFEAT_THREE_WITH_ITEM[] = _("{LV}{UP_ARROW} venciendo 3 {STR_VAR_3} con {STR_VAR_2}");
+static const u8 sText_EVO_NONE[] = _("{STR_VAR_1} no tiene evolución.");
 
 static const u8 sText_FORMS_Buttons_PE[] = _("{A_BUTTON}FORM MODE  {START_BUTTON}EVOs");
 static const u8 sText_FORMS_Buttons_Decapped_PE[] = _("{START_BUTTON}Evos");
-static const u8 sText_FORMS_Buttons_Submenu_PE[] = _("{DPAD_NONE}FORMs {A_BUTTON}CHECK {START_BUTTON}EVOs");
+static const u8 sText_FORMS_Buttons_Submenu_PE[] = _("{DPAD_NONE}FORMAS {A_BUTTON}VER {START_BUTTON}EVOs");
 static const u8 sText_FORMS_Buttons_Submenu_Decapped_PE[] = _("{START_BUTTON}Evos");
-static const u8 sText_FORMS_NONE[] = _("{STR_VAR_1} has no alternate forms.");
+static const u8 sText_FORMS_NONE[] = _("{STR_VAR_1} no tiene formas alternativas.");
 static const u8 sText_PlusSymbol[] = _("+");
 
 // static .rodata graphics
@@ -3108,6 +3108,22 @@ static u32 CreatePokedexMonSprite(u16 num, s16 x, s16 y)
 #define LIST_RIGHT_SIDE_TEXT_X 204
 #define LIST_RIGHT_SIDE_TEXT_X_OFFSET 15
 #define LIST_RIGHT_SIDE_TEXT_Y_OFFSET 13
+// HnS-ES (bloque 32): CAPTURADOS mide 45 px en la fuente estrecha del panel y su contador
+// ocupa 20-22 px pegados al borde derecho: no caben en la misma fila (45+22 > 50 px de panel).
+// Se le da al contador de CAPTURADOS su propia fila (los dos rotulos quedan a la MISMA fuente
+// de 7 filas, ocupando la fila entera) y el panel se reempaqueta. La 'x' de todo esto no cambia.
+// Bandas: rotulos OAM 64x32 (tinta en y-10..y-4, sombra en y-3), cifras OAM 8x16 (tinta en
+// y-3..y+2, sombra en y+3), cabeceras OAM 32x16 (letras en y-4..y+3, regla en y+4..y+5).
+#define DEX_TXT_HDR1    19    // cabecera 1a seccion (HOENN en PAGE_MAIN, NATIONAL en BUSCAR)
+#define DEX_TXT_ROW1    35    // rotulo VISTOS de la 1a seccion
+#define DEX_TXT_NUM1    29    // contador de VISTOS de la 1a seccion (comparte fila)
+#define DEX_TXT_ROW2    43    // rotulo CAPTURADOS de la 1a seccion
+#define DEX_TXT_NUM2    44    // contador de CAPTURADOS de la 1a seccion (fila propia)
+#define DEX_TXT_HDR2    52    // cabecera 2a seccion (NACIONAL)
+#define DEX_TXT_ROW3    68    // rotulo VISTOS de la 2a seccion
+#define DEX_TXT_NUM3    62    // contador de VISTOS de la 2a seccion (comparte fila)
+#define DEX_TXT_ROW4    76    // rotulo CAPTURADOS de la 2a seccion
+#define DEX_TXT_NUM4    77    // contador de CAPTURADOS de la 2a seccion (fila propia)
 static void CreateInterfaceSprites(u8 page)
 {
     u8 spriteId;
@@ -3126,16 +3142,16 @@ static void CreateInterfaceSprites(u8 page)
     if ((!IsNationalPokedexEnabled() || sPokedexView->dexMode == DEX_MODE_HOENN) && (page == PAGE_MAIN || page == PAGE_SEARCH_RESULTS))
     {
         // Hoenn text
-        CreateSprite(&sHoennNationalTextSpriteTemplate, LIST_RIGHT_SIDE_TEXT_X, 40 - LIST_RIGHT_SIDE_TEXT_Y_OFFSET - 6, 1);
+        CreateSprite(&sHoennNationalTextSpriteTemplate, LIST_RIGHT_SIDE_TEXT_X, DEX_TXT_HDR1, 1);
         // Hoenn seen
-        CreateSprite(&sSeenOwnTextSpriteTemplate, LIST_RIGHT_SIDE_TEXT_X, 45 - LIST_RIGHT_SIDE_TEXT_Y_OFFSET + 6, 1);
+        CreateSprite(&sSeenOwnTextSpriteTemplate, LIST_RIGHT_SIDE_TEXT_X, DEX_TXT_ROW1, 1);
         // Hoenn own
-        spriteId = CreateSprite(&sSeenOwnTextSpriteTemplate, LIST_RIGHT_SIDE_TEXT_X, 55 - LIST_RIGHT_SIDE_TEXT_Y_OFFSET + 7, 1);
+        spriteId = CreateSprite(&sSeenOwnTextSpriteTemplate, LIST_RIGHT_SIDE_TEXT_X, DEX_TXT_ROW2, 1);
         StartSpriteAnim(&gSprites[spriteId], 1);
 
         // Hoenn seen value - 100s
         drawNextDigit = FALSE;
-        spriteId = CreateSprite(&sNationalDexSeenOwnNumberSpriteTemplate, LIST_RIGHT_SIDE_TEXT_X + LIST_RIGHT_SIDE_TEXT_X_OFFSET, 45 - LIST_RIGHT_SIDE_TEXT_Y_OFFSET, 1);
+        spriteId = CreateSprite(&sNationalDexSeenOwnNumberSpriteTemplate, LIST_RIGHT_SIDE_TEXT_X + LIST_RIGHT_SIDE_TEXT_X_OFFSET, DEX_TXT_NUM1, 1);
         digitNum = sPokedexView->seenCount / 100;
         StartSpriteAnim(&gSprites[spriteId], digitNum);
         if (digitNum != 0)
@@ -3144,7 +3160,7 @@ static void CreateInterfaceSprites(u8 page)
             gSprites[spriteId].invisible = TRUE;
 
         // Hoenn seen value - 10s
-        spriteId = CreateSprite(&sNationalDexSeenOwnNumberSpriteTemplate, LIST_RIGHT_SIDE_TEXT_X + LIST_RIGHT_SIDE_TEXT_X_OFFSET + 7, 45 - LIST_RIGHT_SIDE_TEXT_Y_OFFSET, 1);
+        spriteId = CreateSprite(&sNationalDexSeenOwnNumberSpriteTemplate, LIST_RIGHT_SIDE_TEXT_X + LIST_RIGHT_SIDE_TEXT_X_OFFSET + 7, DEX_TXT_NUM1, 1);
         digitNum = (sPokedexView->seenCount % 100) / 10;
         if (digitNum != 0 || drawNextDigit)
             StartSpriteAnim(&gSprites[spriteId], digitNum);
@@ -3152,13 +3168,13 @@ static void CreateInterfaceSprites(u8 page)
             gSprites[spriteId].invisible = TRUE;
 
         // Hoenn seen value - 1s
-        spriteId = CreateSprite(&sNationalDexSeenOwnNumberSpriteTemplate, LIST_RIGHT_SIDE_TEXT_X + LIST_RIGHT_SIDE_TEXT_X_OFFSET + 14, 45 - LIST_RIGHT_SIDE_TEXT_Y_OFFSET, 1);
+        spriteId = CreateSprite(&sNationalDexSeenOwnNumberSpriteTemplate, LIST_RIGHT_SIDE_TEXT_X + LIST_RIGHT_SIDE_TEXT_X_OFFSET + 14, DEX_TXT_NUM1, 1);
         digitNum = (sPokedexView->seenCount % 100) % 10;
         StartSpriteAnim(&gSprites[spriteId], digitNum);
 
         // Hoenn owned value - 100s
         drawNextDigit = FALSE;
-        spriteId = CreateSprite(&sNationalDexSeenOwnNumberSpriteTemplate, LIST_RIGHT_SIDE_TEXT_X + LIST_RIGHT_SIDE_TEXT_X_OFFSET, 55 - LIST_RIGHT_SIDE_TEXT_Y_OFFSET, 1);
+        spriteId = CreateSprite(&sNationalDexSeenOwnNumberSpriteTemplate, LIST_RIGHT_SIDE_TEXT_X + LIST_RIGHT_SIDE_TEXT_X_OFFSET, DEX_TXT_NUM2, 1);
         digitNum = sPokedexView->ownCount / 100;
         StartSpriteAnim(&gSprites[spriteId], digitNum);
         if (digitNum != 0)
@@ -3167,7 +3183,7 @@ static void CreateInterfaceSprites(u8 page)
             gSprites[spriteId].invisible = TRUE;
 
         // Hoenn owned value - 10s
-        spriteId = CreateSprite(&sNationalDexSeenOwnNumberSpriteTemplate, LIST_RIGHT_SIDE_TEXT_X + LIST_RIGHT_SIDE_TEXT_X_OFFSET + 7, 55 - LIST_RIGHT_SIDE_TEXT_Y_OFFSET, 1);
+        spriteId = CreateSprite(&sNationalDexSeenOwnNumberSpriteTemplate, LIST_RIGHT_SIDE_TEXT_X + LIST_RIGHT_SIDE_TEXT_X_OFFSET + 7, DEX_TXT_NUM2, 1);
         digitNum = (sPokedexView->ownCount % 100) / 10;
         if (digitNum != 0 || drawNextDigit)
             StartSpriteAnim(&gSprites[spriteId], digitNum);
@@ -3175,7 +3191,7 @@ static void CreateInterfaceSprites(u8 page)
             gSprites[spriteId].invisible = TRUE;
 
         // Hoenn owned value - 1s
-        spriteId = CreateSprite(&sNationalDexSeenOwnNumberSpriteTemplate, LIST_RIGHT_SIDE_TEXT_X + LIST_RIGHT_SIDE_TEXT_X_OFFSET + 14, 55 - LIST_RIGHT_SIDE_TEXT_Y_OFFSET, 1);
+        spriteId = CreateSprite(&sNationalDexSeenOwnNumberSpriteTemplate, LIST_RIGHT_SIDE_TEXT_X + LIST_RIGHT_SIDE_TEXT_X_OFFSET + 14, DEX_TXT_NUM2, 1);
         digitNum = (sPokedexView->ownCount % 100) % 10;
         StartSpriteAnim(&gSprites[spriteId], digitNum);
     }
@@ -3189,26 +3205,26 @@ static void CreateInterfaceSprites(u8 page)
         u8 counterX1000s = counterX100s - counterXDist;
 
         // Hoenn text
-        CreateSprite(&sHoennNationalTextSpriteTemplate, LIST_RIGHT_SIDE_TEXT_X, 40 - LIST_RIGHT_SIDE_TEXT_Y_OFFSET - 6, 1);
+        CreateSprite(&sHoennNationalTextSpriteTemplate, LIST_RIGHT_SIDE_TEXT_X, DEX_TXT_HDR1, 1);
         // Hoenn seen
-        CreateSprite(&sSeenOwnTextSpriteTemplate, LIST_RIGHT_SIDE_TEXT_X, 45 - LIST_RIGHT_SIDE_TEXT_Y_OFFSET + 6, 1);
+        CreateSprite(&sSeenOwnTextSpriteTemplate, LIST_RIGHT_SIDE_TEXT_X, DEX_TXT_ROW1, 1);
         // Hoenn own
-        spriteId = CreateSprite(&sSeenOwnTextSpriteTemplate, LIST_RIGHT_SIDE_TEXT_X, 55 - LIST_RIGHT_SIDE_TEXT_Y_OFFSET + 7, 1);
+        spriteId = CreateSprite(&sSeenOwnTextSpriteTemplate, LIST_RIGHT_SIDE_TEXT_X, DEX_TXT_ROW2, 1);
         StartSpriteAnim(&gSprites[spriteId], 1);
 
         // National text
-        spriteId = CreateSprite(&sHoennNationalTextSpriteTemplate, LIST_RIGHT_SIDE_TEXT_X, 73 - LIST_RIGHT_SIDE_TEXT_Y_OFFSET - 6, 1);
+        spriteId = CreateSprite(&sHoennNationalTextSpriteTemplate, LIST_RIGHT_SIDE_TEXT_X, DEX_TXT_HDR2, 1);
         StartSpriteAnim(&gSprites[spriteId], 1);
         // National seen
-        CreateSprite(&sSeenOwnTextSpriteTemplate, LIST_RIGHT_SIDE_TEXT_X, 78 - LIST_RIGHT_SIDE_TEXT_Y_OFFSET + 6, 1);
+        CreateSprite(&sSeenOwnTextSpriteTemplate, LIST_RIGHT_SIDE_TEXT_X, DEX_TXT_ROW3, 1);
         // National own
-        spriteId = CreateSprite(&sSeenOwnTextSpriteTemplate, LIST_RIGHT_SIDE_TEXT_X, 88 - LIST_RIGHT_SIDE_TEXT_Y_OFFSET + 6, 1);
+        spriteId = CreateSprite(&sSeenOwnTextSpriteTemplate, LIST_RIGHT_SIDE_TEXT_X, DEX_TXT_ROW4, 1);
         StartSpriteAnim(&gSprites[spriteId], 1);
 
         // Hoenn seen value - 100s
         seenOwnedCount = GetRegionalPokedexCount(FLAG_GET_SEEN);
         drawNextDigit = FALSE;
-        spriteId = CreateSprite(&sNationalDexSeenOwnNumberSpriteTemplate, counterX100s, 45 - LIST_RIGHT_SIDE_TEXT_Y_OFFSET, 3);
+        spriteId = CreateSprite(&sNationalDexSeenOwnNumberSpriteTemplate, counterX100s, DEX_TXT_NUM1, 3);
         digitNum = seenOwnedCount / 100;
         StartSpriteAnim(&gSprites[spriteId], digitNum);
         if (digitNum != 0)
@@ -3217,7 +3233,7 @@ static void CreateInterfaceSprites(u8 page)
             gSprites[spriteId].invisible = TRUE;
 
         // Hoenn seen value - 10s
-        spriteId = CreateSprite(&sNationalDexSeenOwnNumberSpriteTemplate, counterX10s, 45 - LIST_RIGHT_SIDE_TEXT_Y_OFFSET, 2);
+        spriteId = CreateSprite(&sNationalDexSeenOwnNumberSpriteTemplate, counterX10s, DEX_TXT_NUM1, 2);
         digitNum = (seenOwnedCount % 100) / 10;
         if (digitNum != 0 || drawNextDigit)
             StartSpriteAnim(&gSprites[spriteId], digitNum);
@@ -3225,14 +3241,14 @@ static void CreateInterfaceSprites(u8 page)
             gSprites[spriteId].invisible = TRUE;
 
         // Hoenn seen value - 1s
-        spriteId = CreateSprite(&sNationalDexSeenOwnNumberSpriteTemplate, counterX1s, 45 - LIST_RIGHT_SIDE_TEXT_Y_OFFSET, 1);
+        spriteId = CreateSprite(&sNationalDexSeenOwnNumberSpriteTemplate, counterX1s, DEX_TXT_NUM1, 1);
         digitNum = (seenOwnedCount % 100) % 10;
         StartSpriteAnim(&gSprites[spriteId], digitNum);
 
         seenOwnedCount = GetRegionalPokedexCount(FLAG_GET_CAUGHT);
         // Hoenn owned value - 100s
         drawNextDigit = FALSE;
-        spriteId = CreateSprite(&sNationalDexSeenOwnNumberSpriteTemplate, counterX100s, 55 - LIST_RIGHT_SIDE_TEXT_Y_OFFSET, 3);
+        spriteId = CreateSprite(&sNationalDexSeenOwnNumberSpriteTemplate, counterX100s, DEX_TXT_NUM2, 3);
         digitNum = seenOwnedCount / 100;
         StartSpriteAnim(&gSprites[spriteId], digitNum);
         if (digitNum != 0)
@@ -3241,7 +3257,7 @@ static void CreateInterfaceSprites(u8 page)
             gSprites[spriteId].invisible = TRUE;
 
         // Hoenn owned value - 10s
-        spriteId = CreateSprite(&sNationalDexSeenOwnNumberSpriteTemplate, counterX10s, 55 - LIST_RIGHT_SIDE_TEXT_Y_OFFSET, 2);
+        spriteId = CreateSprite(&sNationalDexSeenOwnNumberSpriteTemplate, counterX10s, DEX_TXT_NUM2, 2);
         digitNum = (seenOwnedCount % 100) / 10;
         if (digitNum != 0 || drawNextDigit)
             StartSpriteAnim(&gSprites[spriteId], digitNum);
@@ -3249,14 +3265,14 @@ static void CreateInterfaceSprites(u8 page)
             gSprites[spriteId].invisible = TRUE;
 
         // Hoenn owned value - 1s
-        spriteId = CreateSprite(&sNationalDexSeenOwnNumberSpriteTemplate, counterX1s, 55 - LIST_RIGHT_SIDE_TEXT_Y_OFFSET, 1);
+        spriteId = CreateSprite(&sNationalDexSeenOwnNumberSpriteTemplate, counterX1s, DEX_TXT_NUM2, 1);
         digitNum = (seenOwnedCount % 100) % 10;
         StartSpriteAnim(&gSprites[spriteId], digitNum);
 
         //****************************
         // National seen value - 1000s
         drawNextDigit = FALSE;
-        spriteId = CreateSprite(&sNationalDexSeenOwnNumberSpriteTemplate, counterX1000s, 78 - LIST_RIGHT_SIDE_TEXT_Y_OFFSET, 4);
+        spriteId = CreateSprite(&sNationalDexSeenOwnNumberSpriteTemplate, counterX1000s, DEX_TXT_NUM3, 4);
         digitNum = sPokedexView->seenCount / 1000;
         StartSpriteAnim(&gSprites[spriteId], digitNum);
         if (digitNum != 0)
@@ -3265,7 +3281,7 @@ static void CreateInterfaceSprites(u8 page)
             gSprites[spriteId].invisible = TRUE;
 
         // National seen value - 100s
-        spriteId = CreateSprite(&sNationalDexSeenOwnNumberSpriteTemplate, counterX100s, 78 - LIST_RIGHT_SIDE_TEXT_Y_OFFSET, 3);
+        spriteId = CreateSprite(&sNationalDexSeenOwnNumberSpriteTemplate, counterX100s, DEX_TXT_NUM3, 3);
         digitNum = (sPokedexView->seenCount % 1000) / 100;
         if (digitNum != 0 || drawNextDigit)
         {
@@ -3276,7 +3292,7 @@ static void CreateInterfaceSprites(u8 page)
             gSprites[spriteId].invisible = TRUE;
 
         // National seen value - 10s
-        spriteId = CreateSprite(&sNationalDexSeenOwnNumberSpriteTemplate, counterX10s, 78 - LIST_RIGHT_SIDE_TEXT_Y_OFFSET, 2);
+        spriteId = CreateSprite(&sNationalDexSeenOwnNumberSpriteTemplate, counterX10s, DEX_TXT_NUM3, 2);
         digitNum = ((sPokedexView->seenCount % 1000) % 100) / 10;
         if (digitNum != 0 || drawNextDigit)
             StartSpriteAnim(&gSprites[spriteId], digitNum);
@@ -3284,13 +3300,13 @@ static void CreateInterfaceSprites(u8 page)
             gSprites[spriteId].invisible = TRUE;
 
         // National seen value - 1s
-        spriteId = CreateSprite(&sNationalDexSeenOwnNumberSpriteTemplate, counterX1s, 78 - LIST_RIGHT_SIDE_TEXT_Y_OFFSET, 1);
+        spriteId = CreateSprite(&sNationalDexSeenOwnNumberSpriteTemplate, counterX1s, DEX_TXT_NUM3, 1);
         digitNum = ((sPokedexView->seenCount % 1000) % 100) % 10;
         StartSpriteAnim(&gSprites[spriteId], digitNum);
 
         // National owned value - 1000s
         drawNextDigit = FALSE;
-        spriteId = CreateSprite(&sNationalDexSeenOwnNumberSpriteTemplate, counterX1000s, 88 - LIST_RIGHT_SIDE_TEXT_Y_OFFSET, 4);
+        spriteId = CreateSprite(&sNationalDexSeenOwnNumberSpriteTemplate, counterX1000s, DEX_TXT_NUM4, 4);
         digitNum = sPokedexView->ownCount / 1000;
         StartSpriteAnim(&gSprites[spriteId], digitNum);
         if (digitNum != 0)
@@ -3299,7 +3315,7 @@ static void CreateInterfaceSprites(u8 page)
             gSprites[spriteId].invisible = TRUE;
 
         // National owned value - 100s
-        spriteId = CreateSprite(&sNationalDexSeenOwnNumberSpriteTemplate, counterX100s, 88 - LIST_RIGHT_SIDE_TEXT_Y_OFFSET, 3);
+        spriteId = CreateSprite(&sNationalDexSeenOwnNumberSpriteTemplate, counterX100s, DEX_TXT_NUM4, 3);
         digitNum = (sPokedexView->ownCount % 1000) / 100;
         if (digitNum != 0 || drawNextDigit)
         {
@@ -3310,7 +3326,7 @@ static void CreateInterfaceSprites(u8 page)
             gSprites[spriteId].invisible = TRUE;
 
         // National owned value - 10s
-        spriteId = CreateSprite(&sNationalDexSeenOwnNumberSpriteTemplate, counterX10s, 88 - LIST_RIGHT_SIDE_TEXT_Y_OFFSET, 2);
+        spriteId = CreateSprite(&sNationalDexSeenOwnNumberSpriteTemplate, counterX10s, DEX_TXT_NUM4, 2);
         digitNum = ((sPokedexView->ownCount % 1000) % 100) / 10;
         if (digitNum != 0 || drawNextDigit)
             StartSpriteAnim(&gSprites[spriteId], digitNum);
@@ -3318,7 +3334,7 @@ static void CreateInterfaceSprites(u8 page)
             gSprites[spriteId].invisible = TRUE;
 
         // National owned value - 1s
-        spriteId = CreateSprite(&sNationalDexSeenOwnNumberSpriteTemplate, counterX1s, 88 - LIST_RIGHT_SIDE_TEXT_Y_OFFSET, 1);
+        spriteId = CreateSprite(&sNationalDexSeenOwnNumberSpriteTemplate, counterX1s, DEX_TXT_NUM4, 1);
         digitNum = ((sPokedexView->ownCount % 1000) % 100) % 10;
         StartSpriteAnim(&gSprites[spriteId], digitNum);
     }
@@ -3332,19 +3348,19 @@ static void CreateInterfaceSprites(u8 page)
         u8 counterX1000s = counterX100s - counterXDist;
 
         // National only text
-        spriteId = CreateSprite(&sHoennNationalTextSpriteTemplate, LIST_RIGHT_SIDE_TEXT_X, 40 - LIST_RIGHT_SIDE_TEXT_Y_OFFSET - 6, 1);
+        spriteId = CreateSprite(&sHoennNationalTextSpriteTemplate, LIST_RIGHT_SIDE_TEXT_X, DEX_TXT_HDR1, 1);
         StartSpriteAnim(&gSprites[spriteId], 1);
 
         // National seen
-        CreateSprite(&sSeenOwnTextSpriteTemplate, LIST_RIGHT_SIDE_TEXT_X, 45 - LIST_RIGHT_SIDE_TEXT_Y_OFFSET + 6, 1);
+        CreateSprite(&sSeenOwnTextSpriteTemplate, LIST_RIGHT_SIDE_TEXT_X, DEX_TXT_ROW1, 1);
         // National owned
-        spriteId = CreateSprite(&sSeenOwnTextSpriteTemplate, LIST_RIGHT_SIDE_TEXT_X, 55 - LIST_RIGHT_SIDE_TEXT_Y_OFFSET + 7, 1);
+        spriteId = CreateSprite(&sSeenOwnTextSpriteTemplate, LIST_RIGHT_SIDE_TEXT_X, DEX_TXT_ROW2, 1);
         StartSpriteAnim(&gSprites[spriteId], 1);
 
         // National seen value - 1000s
         seenOwnedCount = sPokedexView->seenCount;
         drawNextDigit = FALSE;
-        spriteId = CreateSprite(&sNationalDexSeenOwnNumberSpriteTemplate, counterX1000s, 45 - LIST_RIGHT_SIDE_TEXT_Y_OFFSET, 4);
+        spriteId = CreateSprite(&sNationalDexSeenOwnNumberSpriteTemplate, counterX1000s, DEX_TXT_NUM1, 4);
         digitNum = seenOwnedCount / 1000;
         StartSpriteAnim(&gSprites[spriteId], digitNum);
         if (digitNum != 0)
@@ -3353,7 +3369,7 @@ static void CreateInterfaceSprites(u8 page)
             gSprites[spriteId].invisible = TRUE;
 
         // National seen value - 100s
-        spriteId = CreateSprite(&sNationalDexSeenOwnNumberSpriteTemplate, counterX100s, 45 - LIST_RIGHT_SIDE_TEXT_Y_OFFSET, 3);
+        spriteId = CreateSprite(&sNationalDexSeenOwnNumberSpriteTemplate, counterX100s, DEX_TXT_NUM1, 3);
         digitNum = (seenOwnedCount % 1000) / 100;
         if (digitNum != 0 || drawNextDigit)
         {
@@ -3364,7 +3380,7 @@ static void CreateInterfaceSprites(u8 page)
             gSprites[spriteId].invisible = TRUE;
 
         // National seen value - 10s
-        spriteId = CreateSprite(&sNationalDexSeenOwnNumberSpriteTemplate, counterX10s, 45 - LIST_RIGHT_SIDE_TEXT_Y_OFFSET, 2);
+        spriteId = CreateSprite(&sNationalDexSeenOwnNumberSpriteTemplate, counterX10s, DEX_TXT_NUM1, 2);
         digitNum = ((seenOwnedCount % 1000) % 100) / 10;
         if (digitNum != 0 || drawNextDigit)
             StartSpriteAnim(&gSprites[spriteId], digitNum);
@@ -3372,14 +3388,14 @@ static void CreateInterfaceSprites(u8 page)
             gSprites[spriteId].invisible = TRUE;
 
         // National seen value - 1s
-        spriteId = CreateSprite(&sNationalDexSeenOwnNumberSpriteTemplate, counterX1s, 45 - LIST_RIGHT_SIDE_TEXT_Y_OFFSET, 1);
+        spriteId = CreateSprite(&sNationalDexSeenOwnNumberSpriteTemplate, counterX1s, DEX_TXT_NUM1, 1);
         digitNum = ((seenOwnedCount % 1000) % 100) % 10;
         StartSpriteAnim(&gSprites[spriteId], digitNum);
 
         // National owned value - 1000s
         seenOwnedCount = sPokedexView->ownCount;
         drawNextDigit = FALSE;
-        spriteId = CreateSprite(&sNationalDexSeenOwnNumberSpriteTemplate, counterX1000s, 55 - LIST_RIGHT_SIDE_TEXT_Y_OFFSET, 4);
+        spriteId = CreateSprite(&sNationalDexSeenOwnNumberSpriteTemplate, counterX1000s, DEX_TXT_NUM2, 4);
         digitNum = seenOwnedCount / 1000;
         StartSpriteAnim(&gSprites[spriteId], digitNum);
         if (digitNum != 0)
@@ -3388,7 +3404,7 @@ static void CreateInterfaceSprites(u8 page)
             gSprites[spriteId].invisible = TRUE;
 
         // National owned value - 100s
-        spriteId = CreateSprite(&sNationalDexSeenOwnNumberSpriteTemplate, counterX100s, 55 - LIST_RIGHT_SIDE_TEXT_Y_OFFSET, 3);
+        spriteId = CreateSprite(&sNationalDexSeenOwnNumberSpriteTemplate, counterX100s, DEX_TXT_NUM2, 3);
         digitNum = (seenOwnedCount % 1000) / 100;
         if (digitNum != 0 || drawNextDigit)
         {
@@ -3399,7 +3415,7 @@ static void CreateInterfaceSprites(u8 page)
             gSprites[spriteId].invisible = TRUE;
 
         // National owned value - 10s
-        spriteId = CreateSprite(&sNationalDexSeenOwnNumberSpriteTemplate, counterX10s, 55 - LIST_RIGHT_SIDE_TEXT_Y_OFFSET, 2);
+        spriteId = CreateSprite(&sNationalDexSeenOwnNumberSpriteTemplate, counterX10s, DEX_TXT_NUM2, 2);
         digitNum = ((seenOwnedCount % 1000) % 100) / 10;
         if (digitNum != 0 || drawNextDigit)
             StartSpriteAnim(&gSprites[spriteId], digitNum);
@@ -3407,7 +3423,7 @@ static void CreateInterfaceSprites(u8 page)
             gSprites[spriteId].invisible = TRUE;
 
         // National owned value - 1s
-        spriteId = CreateSprite(&sNationalDexSeenOwnNumberSpriteTemplate, counterX1s, 55 - LIST_RIGHT_SIDE_TEXT_Y_OFFSET, 1);
+        spriteId = CreateSprite(&sNationalDexSeenOwnNumberSpriteTemplate, counterX1s, DEX_TXT_NUM2, 1);
         digitNum = ((seenOwnedCount % 1000) % 100) % 10;
         StartSpriteAnim(&gSprites[spriteId], digitNum);
     }
@@ -6743,21 +6759,21 @@ static void PrintEvolutionTargetSpeciesAndMethod(u8 taskId, u16 species, u8 dept
                     StringAppend(gStringVar4, gStringVar2);
                 }
                 if ((enum EvolutionMethods)evolutions[i].method == EVO_LEVEL_BATTLE_ONLY)
-                    StringAppend(gStringVar4, COMPOUND_STRING(", in battle"));
+                    StringAppend(gStringVar4, COMPOUND_STRING(", en combate"));
                 break;
             case EVO_TRADE:
                 StringExpandPlaceholders(gStringVar4, COMPOUND_STRING("Trading"));
                 break;
             case EVO_ITEM:
                 CopyItemName(evolutions[i].param, gStringVar2);
-                StringExpandPlaceholders(gStringVar4, COMPOUND_STRING("{STR_VAR_2} is used"));
+                StringExpandPlaceholders(gStringVar4, COMPOUND_STRING("Se usa {STR_VAR_2}"));
                 break;
             case EVO_SPLIT_FROM_EVO:
-                StringCopy(gStringVar4, COMPOUND_STRING("Splits from "));
+                StringCopy(gStringVar4, COMPOUND_STRING("Se separa de"));
                 StringAppend(gStringVar4, GetSpeciesName(evolutions[i].param)); //mon name
                 break;
             case EVO_BATTLE_END:
-                StringExpandPlaceholders(gStringVar4, COMPOUND_STRING("End battle"));
+                StringExpandPlaceholders(gStringVar4, COMPOUND_STRING("Termina el combate"));
                 break;
             case EVO_SPIN:
                 StringCopy(gStringVar4, COMPOUND_STRING("Spin "));
@@ -6789,45 +6805,45 @@ static void PrintEvolutionTargetSpeciesAndMethod(u8 taskId, u16 species, u8 dept
                 case IF_GENDER:
                     switch (evolutions[i].params[j].arg1)
                     {
-                    case MON_MALE:   StringAppend(gStringVar4, COMPOUND_STRING("Male"));   break;
-                    case MON_FEMALE: StringAppend(gStringVar4, COMPOUND_STRING("Female")); break;
+                    case MON_MALE:   StringAppend(gStringVar4, COMPOUND_STRING("Macho"));   break;
+                    case MON_FEMALE: StringAppend(gStringVar4, COMPOUND_STRING("Hembra")); break;
                     }
                     break;
                 case IF_MIN_FRIENDSHIP:
                     StringAppend(gStringVar4, COMPOUND_STRING("{UP_ARROW_2}friendship"));
                     break;
                 case IF_ATK_GT_DEF:
-                    StringAppend(gStringVar4, COMPOUND_STRING("Atk > Def"));
+                    StringAppend(gStringVar4, COMPOUND_STRING("Ata > Def"));
                     break;
                 case IF_ATK_EQ_DEF:
                     StringAppend(gStringVar4, COMPOUND_STRING("Atk = Def"));
                     break;
                 case IF_ATK_LT_DEF:
-                    StringAppend(gStringVar4, COMPOUND_STRING("Atk < Def"));
+                    StringAppend(gStringVar4, COMPOUND_STRING("Ata < Def"));
                     break;
                 case IF_TIME:
                     switch (evolutions[i].params[j].arg1)
                     {
-                    case TIME_MORNING: StringAppend(gStringVar4, COMPOUND_STRING("Morning")); break;
-                    case TIME_DAY:     StringAppend(gStringVar4, COMPOUND_STRING("Day"));     break;
-                    case TIME_EVENING: StringAppend(gStringVar4, COMPOUND_STRING("Evening")); break;
-                    case TIME_NIGHT:   StringAppend(gStringVar4, COMPOUND_STRING("Night"));   break;
+                    case TIME_MORNING: StringAppend(gStringVar4, COMPOUND_STRING("Mañana")); break;
+                    case TIME_DAY:     StringAppend(gStringVar4, COMPOUND_STRING("Día"));     break;
+                    case TIME_EVENING: StringAppend(gStringVar4, COMPOUND_STRING("Tarde")); break;
+                    case TIME_NIGHT:   StringAppend(gStringVar4, COMPOUND_STRING("Noche"));   break;
                     }
                     break;
                 case IF_NOT_TIME:
                     switch (evolutions[i].params[j].arg1)
                     {
-                    case TIME_MORNING: StringAppend(gStringVar4, COMPOUND_STRING("NOT Morning")); break;
-                    case TIME_DAY:     StringAppend(gStringVar4, COMPOUND_STRING("NOT Day"));     break;
-                    case TIME_EVENING: StringAppend(gStringVar4, COMPOUND_STRING("NOT Evening")); break;
-                    case TIME_NIGHT:   StringAppend(gStringVar4, COMPOUND_STRING("Day"));         break; // More intuitive than "NOT Night"
+                    case TIME_MORNING: StringAppend(gStringVar4, COMPOUND_STRING("NO Mañana")); break;
+                    case TIME_DAY:     StringAppend(gStringVar4, COMPOUND_STRING("NO Día"));     break;
+                    case TIME_EVENING: StringAppend(gStringVar4, COMPOUND_STRING("NO Tarde")); break;
+                    case TIME_NIGHT:   StringAppend(gStringVar4, COMPOUND_STRING("Día"));         break; // More intuitive than "NO Noche"
                     }
                     break;
                 case IF_HOLD_ITEM:
-                    StringAppend(gStringVar4, COMPOUND_STRING("holds "));
+                    StringAppend(gStringVar4, COMPOUND_STRING("lleva "));
                     if (isAlcremie && IsItemSweet(evolutions[i].params[j].arg1))
                     {
-                        StringAppend(gStringVar4, COMPOUND_STRING("Sweet")); //item
+                        StringAppend(gStringVar4, COMPOUND_STRING("Dulce")); //item
                     }
                     else
                     {
@@ -6847,11 +6863,11 @@ static void PrintEvolutionTargetSpeciesAndMethod(u8 taskId, u16 species, u8 dept
                              && arg < 10 && arg >= 0)
                             arg = 1;
                     ConvertIntToDecimalStringN(gStringVar2, arg * 10, STR_CONV_MODE_LEFT_ALIGN, 3);
-                    StringAppend(gStringVar4, COMPOUND_STRING("random %"));
+                    StringAppend(gStringVar4, COMPOUND_STRING("aleatorio %"));
                     StringAppend(gStringVar4, gStringVar2);
                     break;
                 case IF_MIN_BEAUTY:
-                    StringAppend(gStringVar4, COMPOUND_STRING("{UP_ARROW_2}beauty"));
+                    StringAppend(gStringVar4, COMPOUND_STRING("{UP_ARROW_2}belleza"));
                     break;
                 case IF_MIN_COOLNESS:
                     StringAppend(gStringVar4, COMPOUND_STRING("{UP_ARROW_2}coolness"));
@@ -6868,47 +6884,47 @@ static void PrintEvolutionTargetSpeciesAndMethod(u8 taskId, u16 species, u8 dept
                 // Gen 4
                 case IF_SPECIES_IN_PARTY:
                     StringAppend(gStringVar4, GetSpeciesName(evolutions[i].params[j].arg1)); //mon name
-                    StringAppend(gStringVar4, COMPOUND_STRING(" in party"));
+                    StringAppend(gStringVar4, COMPOUND_STRING("en el equipo"));
                     break;
                 case IF_IN_MAPSEC:
-                    StringAppend(gStringVar4, COMPOUND_STRING("in "));
+                    StringAppend(gStringVar4, COMPOUND_STRING("en "));
                     StringCopy(gStringVar2, GetActiveRegionMapEntries()[evolutions[i].params[j].arg1].name);
                     StringAppend(gStringVar4, gStringVar2);
                     break;
                 case IF_IN_MAP:
-                    StringAppend(gStringVar4, COMPOUND_STRING("in "));
+                    StringAppend(gStringVar4, COMPOUND_STRING("en "));
                     GetMapName(gStringVar2, Overworld_GetMapHeaderByGroupAndId(evolutions[i].params[j].arg1 >> 8, evolutions[i].params[j].arg1 & 0xFF)->regionMapSectionId, 0);
                     StringAppend(gStringVar4, gStringVar2);
                     break;
                 case IF_KNOWS_MOVE:
-                    StringAppend(gStringVar4, COMPOUND_STRING("knows "));
+                    StringAppend(gStringVar4, COMPOUND_STRING("sabe "));
                     StringAppend(gStringVar4, GetMoveName(evolutions[i].params[j].arg1));
                     break;
                 // Gen 5
                 case IF_TRADE_PARTNER_SPECIES:
-                    StringAppend(gStringVar4, COMPOUND_STRING("traded with "));
+                    StringAppend(gStringVar4, COMPOUND_STRING("intercambiado con"));
                     StringAppend(gStringVar4, GetSpeciesName(evolutions[i].params[j].arg1));
                     break;
                 // Gen 6
                 case IF_TYPE_IN_PARTY:
                     StringAppend(gStringVar4, gTypesInfo[evolutions[i].params[j].arg1].name); //type name
-                    StringAppend(gStringVar4, COMPOUND_STRING("-type in party"));
+                    StringAppend(gStringVar4, COMPOUND_STRING("-tipo en el equipo"));
                     break;
                 case IF_WEATHER:
-                    StringAppend(gStringVar4, COMPOUND_STRING("weather "));
+                    StringAppend(gStringVar4, COMPOUND_STRING("clima "));
                     StringAppend(gStringVar4, GetWeatherName(evolutions[i].params[j].arg1));
                     break;
                 case IF_KNOWS_MOVE_TYPE:
                     StringAppend(gStringVar4, gTypesInfo[evolutions[i].params[j].arg1].name);
-                    StringAppend(gStringVar4, COMPOUND_STRING(" move"));
+                    StringAppend(gStringVar4, COMPOUND_STRING("-tipo"));
                     break;
                 case IF_REGION:
                 case IF_NOT_REGION:
                 {
                     if (condition == IF_REGION)
-                        StringAppend(gStringVar4, COMPOUND_STRING("in "));
+                        StringAppend(gStringVar4, COMPOUND_STRING("en "));
                     else if (condition == IF_NOT_REGION)
-                        StringAppend(gStringVar4, COMPOUND_STRING("out of "));
+                        StringAppend(gStringVar4, COMPOUND_STRING("se quedó sin "));
 
                     switch ((enum Region)evolutions[i].params[j].arg1)
                     {
@@ -6931,15 +6947,15 @@ static void PrintEvolutionTargetSpeciesAndMethod(u8 taskId, u16 species, u8 dept
                 }
                 // Gen 8
                 case IF_NATURE:
+                    StringAppend(gStringVar4, COMPOUND_STRING("naturaleza "));
                     StringCopy(gStringVar2, gNaturesInfo[evolutions[i].params[j].arg1].name);
                     StringAppend(gStringVar4, gStringVar2);
-                    StringAppend(gStringVar4, COMPOUND_STRING(" nature"));
                     break;
                 case IF_AMPED_NATURE:
-                    StringAppend(gStringVar4, COMPOUND_STRING("amped natures"));
+                    StringAppend(gStringVar4, COMPOUND_STRING("naturalezas intensas"));
                     break;
                 case IF_LOW_KEY_NATURE:
-                    StringAppend(gStringVar4, COMPOUND_STRING("low-Key natures"));
+                    StringAppend(gStringVar4, COMPOUND_STRING("naturalezas discretas"));
                     break;
                 case IF_RECOIL_DAMAGE_GE:
                     StringAppend(gStringVar4, COMPOUND_STRING("takes >= "));
@@ -6958,7 +6974,7 @@ static void PrintEvolutionTargetSpeciesAndMethod(u8 taskId, u16 species, u8 dept
                     StringAppend(gStringVar4, COMPOUND_STRING(" critical hits"));
                     break;
                 case IF_USED_MOVE_X_TIMES:
-                    StringAppend(gStringVar4, COMPOUND_STRING("use move "));
+                    StringAppend(gStringVar4, COMPOUND_STRING("usar el movimiento "));
                     StringAppend(gStringVar4, GetMoveName(evolutions[i].params[j].arg1));
                     StringAppend(gStringVar4, COMPOUND_STRING(" "));
                     ConvertIntToDecimalStringN(gStringVar2, evolutions[i].params[j].arg2, STR_CONV_MODE_LEFT_ALIGN, 3);
@@ -6972,7 +6988,7 @@ static void PrintEvolutionTargetSpeciesAndMethod(u8 taskId, u16 species, u8 dept
                     StringAppend(gStringVar4, gStringVar2);
                     StringAppend(gStringVar4, COMPOUND_STRING(" "));
                     StringAppend(gStringVar4, GetSpeciesName(evolutions[i].params[j].arg1));
-                    StringAppend(gStringVar4, COMPOUND_STRING(" that hold "));
+                    StringAppend(gStringVar4, COMPOUND_STRING("que tengan"));
                     CopyItemName(evolutions[i].params[j].arg2, gStringVar2);
                     StringAppend(gStringVar4, gStringVar2);
                     break;
@@ -7002,7 +7018,7 @@ static void PrintEvolutionTargetSpeciesAndMethod(u8 taskId, u16 species, u8 dept
                     StringAppend(gStringVar4, COMPOUND_STRING(" "));
                     CopyItemNameHandlePlural(evolutions[i].params[j].arg1, gStringVar2, evolutions[i].params[j].arg2);
                     StringAppend(gStringVar4, gStringVar2);
-                    StringAppend(gStringVar4, COMPOUND_STRING(" in bag"));
+                    StringAppend(gStringVar4, COMPOUND_STRING(" en la BOLSA"));
                     break;
                 case CONDITIONS_END:
                     break;
@@ -8979,7 +8995,10 @@ static void CreateSearchParameterScrollArrows(u8 taskId)
 
 static void EraseAndPrintSearchTextBox(const u8 *str)
 {
-    ClearSearchMenuRect(8, 120, 224, 32);
+    // Clears down to the bottom edge of the screen (120+40 = 160) so that a text line that
+    // overflows the 2-line detail box (y 121 y 137) cannot stay on screen as garbage:
+    // the old rect (8,120,224,32) stopped at y 151 and never erased a third line at y 153.
+    ClearSearchMenuRect(8, 120, 224, 40);
     PrintSearchText(str, 8, 121);
 }
 

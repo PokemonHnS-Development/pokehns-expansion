@@ -39,51 +39,51 @@ SilphCo_8F_EventScript_Grunt2::
 	end
 
 SilphCo_8F_Text_WonderIfSilphIsFinished::
-	.string "I wonder if SILPH is finished…$"
+	.string "Me pregunto si SILPH ya terminó...$"
 
 SilphCo_8F_Text_ThanksForSavingUs::
-	.string "Thanks for saving us!$"
+	.string "¡Gracias por salvarnos!$"
 
 SilphCo_8F_Text_Grunt1Intro::
-	.string "That's as far as you'll go!$"
+	.string "¡Hasta aquí llegaste!$"
 
 SilphCo_8F_Text_Grunt1Defeat::
-	.string "Not enough grit!$"
+	.string "¡No tienes agallas!$"
 
 SilphCo_8F_Text_Grunt1PostBattle::
-	.string "If you don't turn back…\n"
-	.string "I'll call for backup!$"
+	.string "Si no te das la vuelta...\n"
+	.string "¡Llamaré a refuerzos!$"
 
 SilphCo_8F_Text_ParkerIntro::
-	.string "You're causing us problems!$"
+	.string "¡Nos estás causando problemas!$"
 
 SilphCo_8F_Text_ParkerDefeat::
-	.string "Huh?\n"
-	.string "I lost?$"
+	.string "¿Eh?\n"
+	.string "¿Perdí?$"
 
 SilphCo_8F_Text_ParkerPostBattle::
-	.string "So, what do you think of SILPH\n"
-	.string "BUILDING's maze?$"
+	.string "¿Qué te parece SILPH?\n"
+	.string "laberinto del edificio?$"
 
 SilphCo_8F_Text_Grunt2Intro::
-	.string "I am one of the four ROCKET\n"
+	.string "Soy uno de los cuatro ROCKET\n"
 	.string "BROTHERS!$"
 
 SilphCo_8F_Text_Grunt2Defeat::
 	.string "Whoo!\n"
-	.string "Oh, Brothers!$"
+	.string "¡Oh, hermanos!$"
 
 SilphCo_8F_Text_Grunt2PostBattle::
-	.string "I'll leave you up to my brothers.$"
+	.string "Te dejo en manos de mis hermanos.$"
 
 SilphCo_8F_Text_FloorSign::
 	.string "SILPH CO. HEAD OFFICE\n"
 	.string "8F$"
 
 SilphCo_8F_Text_ToRocketBossMonsAreTools::
-	.string "TEAM ROCKET's BOSS is terribly\n"
+	.string "El JEFE del TEAM ROCKET es terrible\n"
 	.string "cruel!\p"
-	.string "To him, POKéMON are just tools to\n"
-	.string "be used.\p"
-	.string "What will happen if that tyrant\n"
-	.string "takes over our company…$"
+	.string "Para él, los POKéMON son solo\n"
+	.string "de ser usado.\p"
+	.string "¿Qué pasará si ese tirano\n"
+	.string "toma el control de nuestra empresa...$"

@@ -17,38 +17,38 @@ PokemonTower_3F_EventScript_Hope::
 	end
 
 PokemonTower_3F_Text_HopeIntro::
-	.string "Urrg… Awaa…\n"
-	.string "Huhu… Graa…$"
+	.string "Urrg... Awaa...\n"
+	.string "Huhu... Graa...$"
 
 PokemonTower_3F_Text_HopeDefeat::
 	.string "Hwa!\n"
-	.string "I'm saved!$"
+	.string "¡Estoy a salvo!$"
 
 PokemonTower_3F_Text_HopePostBattle::
-	.string "The ghosts can be identified by\n"
-	.string "the SILPH SCOPE.$"
+	.string "Los fantasmas pueden ser\n"
+	.string "identificados con el SCOPE SILPH.$"
 
 PokemonTower_3F_Text_CarlyIntro::
-	.string "Kekeke…\n"
+	.string "Kekeke...\n"
 	.string "Kwaaah!$"
 
 PokemonTower_3F_Text_CarlyDefeat::
 	.string "Hmm?\n"
-	.string "What am I doing?$"
+	.string "¿Qué estoy haciendo?$"
 
 PokemonTower_3F_Text_CarlyPostBattle::
-	.string "Sorry!\n"
-	.string "I was possessed!$"
+	.string "¡Lo siento!\n"
+	.string "¡Estaba poseído!$"
 
 PokemonTower_3F_Text_PatriciaIntro::
-	.string "Be gone!\n"
-	.string "Malevolent spirit!$"
+	.string "¡Fuera de aquí!\n"
+	.string "¡Espíritu malévolo!$"
 
 PokemonTower_3F_Text_PatriciaDefeat::
-	.string "Whew!\n"
-	.string "The spirit left!$"
+	.string "¡Uff!\n"
+	.string "¡El espíritu se fue!$"
 
 PokemonTower_3F_Text_PatriciaPostBattle::
-	.string "The others above…\n"
-	.string "They must have been possessed.$"
+	.string "Los demás arriba...\n"
+	.string "Debieron estar poseídos.$"
 

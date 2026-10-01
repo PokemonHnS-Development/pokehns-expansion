@@ -218,7 +218,7 @@ static void Vprintf(const void *return1, const void *return0, const char *fmt, v
 
     x = 3;
     y = 19;
-    static const char footer[] = "Press START to continue.";
+    static const char footer[] = "Presiona START para continuar.";
     for (u32 i = 0; i < sizeof(footer) - 1; i++)
         Putc(&x, &y, footer[i]);
 

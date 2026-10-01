@@ -416,18 +416,18 @@ static const struct ListMenuItem sSideStatusListItems[] =
     {COMPOUND_STRING("Lucky Chant"),      LIST_SIDE_LUCKY_CHANT},
     {COMPOUND_STRING("Damage Non-Types"), LIST_SIDE_DAMAGE_NON_TYPES},
     {COMPOUND_STRING("Rainbow"),          LIST_SIDE_RAINBOW},
-    {COMPOUND_STRING("Sea of Fire"),      LIST_SIDE_SEA_OF_FIRE},
+    {COMPOUND_STRING("Mar de Fuego"),      LIST_SIDE_SEA_OF_FIRE},
     {COMPOUND_STRING("Swamp"),            LIST_SIDE_SWAMP},
 };
 
 static const struct ListMenuItem sAIListItems[] =
 {
     {COMPOUND_STRING("Check Bad Move"),             LIST_AI_CHECK_BAD_MOVE},
-    {COMPOUND_STRING("Try to Faint"),               LIST_AI_TRY_TO_FAINT},
+    {COMPOUND_STRING("Intentar Debilitar"),               LIST_AI_TRY_TO_FAINT},
     {COMPOUND_STRING("Check Viability"),            LIST_AI_CHECK_VIABILITY},
     {COMPOUND_STRING("Force Setup First Turn"),     LIST_AI_FORCE_SETUP_FIRST_TURN},
     {COMPOUND_STRING("Risky"),                      LIST_AI_RISKY},
-    {COMPOUND_STRING("Try to 2HKO"),                LIST_AI_TRY_TO_2HKO},
+    {COMPOUND_STRING("Intentar 2 Golpes"),                LIST_AI_TRY_TO_2HKO},
     {COMPOUND_STRING("Prefer Baton Pass"),          LIST_AI_PREFER_BATON_PASS},
     {COMPOUND_STRING("Double Battle"),              LIST_AI_DOUBLE_BATTLE},
     {COMPOUND_STRING("HP Aware"),                   LIST_AI_HP_AWARE},
@@ -775,7 +775,7 @@ static void PutMovesPointsText(struct BattleDebugMenu *data)
     {
         struct Pokemon *party = GetBattlerParty(data->aiBattlerId);
         u32 switchMon = GetMonData(&party[gAiLogicData->mostSuitableMonId[data->aiBattlerId]], MON_DATA_SPECIES);
-        AddTextPrinterParameterized3(data->aiMovesWindowId, FONT_NORMAL, 74, 79, sTextColorTable[COLORID_RED], 0, COMPOUND_STRING("Switching to "));
+        AddTextPrinterParameterized3(data->aiMovesWindowId, FONT_NORMAL, 74, 79, sTextColorTable[COLORID_RED], 0, COMPOUND_STRING("Cambiando a"));
         AddTextPrinterParameterized3(data->aiMovesWindowId, FONT_NORMAL, 74 + 68, 79, sTextColorTable[COLORID_RED], 0, gSpeciesInfo[switchMon].speciesName);
     }
 
@@ -2240,16 +2240,16 @@ static const u8 *const sHoldEffectNames[HOLD_EFFECT_COUNT] =
     [HOLD_EFFECT_ADAMANT_ORB]      = COMPOUND_STRING("Adamant Orb"),
     [HOLD_EFFECT_LUSTROUS_ORB]     = COMPOUND_STRING("Lustrous Orb"),
     [HOLD_EFFECT_GRISEOUS_ORB]     = COMPOUND_STRING("Griseous Orb"),
-    [HOLD_EFFECT_ENIGMA_BERRY]     = COMPOUND_STRING("Enigma Berry"),
-    [HOLD_EFFECT_RESIST_BERRY]     = COMPOUND_STRING("Resist Berry"),
+    [HOLD_EFFECT_ENIGMA_BERRY]     = COMPOUND_STRING("Baya Enigma"),
+    [HOLD_EFFECT_RESIST_BERRY]     = COMPOUND_STRING("Baya Resist"),
     [HOLD_EFFECT_POWER_ITEM]       = COMPOUND_STRING("Power Item"),
     [HOLD_EFFECT_RESTORE_PCT_HP]   = COMPOUND_STRING("Restore Pct Hp"),
-    [HOLD_EFFECT_MICLE_BERRY]      = COMPOUND_STRING("Micle Berry"),
-    [HOLD_EFFECT_CUSTAP_BERRY]     = COMPOUND_STRING("Custap Berry"),
-    [HOLD_EFFECT_JABOCA_BERRY]     = COMPOUND_STRING("Jaboca Berry"),
-    [HOLD_EFFECT_ROWAP_BERRY]      = COMPOUND_STRING("Rowap Berry"),
-    [HOLD_EFFECT_KEE_BERRY]        = COMPOUND_STRING("Kee Berry"),
-    [HOLD_EFFECT_MARANGA_BERRY]    = COMPOUND_STRING("Maranga Berry"),
+    [HOLD_EFFECT_MICLE_BERRY]      = COMPOUND_STRING("Baya Micle"),
+    [HOLD_EFFECT_CUSTAP_BERRY]     = COMPOUND_STRING("Baya Custap"),
+    [HOLD_EFFECT_JABOCA_BERRY]     = COMPOUND_STRING("Baya Jaboca"),
+    [HOLD_EFFECT_ROWAP_BERRY]      = COMPOUND_STRING("Baya Rowa"),
+    [HOLD_EFFECT_KEE_BERRY]        = COMPOUND_STRING("Baya Kee"),
+    [HOLD_EFFECT_MARANGA_BERRY]    = COMPOUND_STRING("Baya Maranga"),
     [HOLD_EFFECT_PLATE]            = COMPOUND_STRING("Plate"),
     [HOLD_EFFECT_FLOAT_STONE]      = COMPOUND_STRING("Float Stone"),
     [HOLD_EFFECT_EVIOLITE]         = COMPOUND_STRING("Eviolite"),

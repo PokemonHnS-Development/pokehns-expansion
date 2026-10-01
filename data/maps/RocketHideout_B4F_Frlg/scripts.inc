@@ -121,58 +121,58 @@ RocketHideout_B4F_EventScript_RemoveBarrier::
 	return
 
 RocketHideout_B4F_Text_GiovanniIntro::
-	.string "So! I must say, I am impressed you\n"
-	.string "got here.\p"
-	.string "TEAM ROCKET captures POKéMON from\n"
-	.string "around the world.\p"
-	.string "They're important tools for keeping\n"
-	.string "our criminal enterprise going.\p"
-	.string "I am the leader, GIOVANNI!\p"
-	.string "For your insolence, you will feel a\n"
-	.string "world of pain!$"
+	.string "¡Vaya! Debo decir que me\n"
+	.string "impresiona que llegaras.\p"
+	.string "El TEAM ROCKET captura POKéMON de\n"
+	.string "todo el mundo.\p"
+	.string "Son herramientas clave para que\n"
+	.string "nuestro imperio criminal siga.\p"
+	.string "¡Soy el líder, GIOVANNI!\p"
+	.string "Por tu insolencia sentirás\n"
+	.string "mundo de dolor!$"
 
 RocketHideout_B4F_Text_GiovanniDefeat::
-	.string "WHAT!\n"
-	.string "This can't be!$"
+	.string "¡QUÉ!\n"
+	.string "¡No puede ser!$"
 
 RocketHideout_B4F_Text_GiovanniPostBattle::
-	.string "I see that you raise POKéMON with\n"
-	.string "utmost care.\p"
-	.string "A child like you would never\n"
-	.string "understand what I hope to achieve.\p"
-	.string "I shall step aside this time!\p"
-	.string "I hope we meet again…$"
+	.string "Veo que críais a los POKéMON con\n"
+	.string "sumo cuidado.\p"
+	.string "Un niño como tú jamás\n"
+	.string "entendería lo que busco.\p"
+	.string "¡Esta vez me apartaré!\p"
+	.string "Espero que volvamos a vernos...$"
 
 RocketHideout_B4F_Text_Grunt2Intro::
-	.string "I know you!\n"
-	.string "You ruined our plans at MT. MOON!$"
+	.string "¡Te conozco!\n"
+	.string "¡Arruinaste nuestros planes en el MT. MOON!$"
 
 RocketHideout_B4F_Text_Grunt2Defeat::
-	.string "Burned again!$"
+	.string "¡Quemado otra vez!$"
 
 RocketHideout_B4F_Text_Grunt2PostBattle::
-	.string "Do you have something against TEAM\n"
+	.string "¿Tienes algo contra el EQUIP\n"
 	.string "ROCKET?$"
 
 RocketHideout_B4F_Text_Grunt3Intro::
-	.string "How can you not see the beauty of\n"
-	.string "our evil?$"
+	.string "¿Cómo no ves la belleza de\n"
+	.string "¿nuestro mal?$"
 
 RocketHideout_B4F_Text_Grunt3Defeat::
 	.string "Ayaya!$"
 
 RocketHideout_B4F_Text_Grunt3PostBattle::
 	.string "BOSS!\n"
-	.string "I'm sorry I failed you!$"
+	.string "¡Perdón por fallarte!$"
 
 RocketHideout_B4F_Text_Grunt1Intro::
-	.string "The elevator doesn't work?\n"
-	.string "Who has the LIFT KEY?$"
+	.string "¿El ascensor no funciona?\n"
+	.string "¿Quién tiene la LLAVE?$"
 
 RocketHideout_B4F_Text_Grunt1Defeat::
-	.string "No!$"
+	.string "¡No!$"
 
 RocketHideout_B4F_Text_Grunt1PostBattle::
-	.string "Oh, no!\n"
-	.string "I dropped the LIFT KEY!$"
+	.string "¡Oh, no!\n"
+	.string "¡Se me cayó la LLAVE!$"
 

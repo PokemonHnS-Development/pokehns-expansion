@@ -185,35 +185,35 @@ LilycoveCity_DepartmentStoreRooftop_EventScript_ExitVendingMachine::
 	end
 
 LilycoveCity_DepartmentStoreRooftop_Text_SetDatesForClearOutSales:
-	.string "Don't they have set dates for their\n"
-	.string "clear-out sales?\p"
-	.string "I watch TV, but they never show any\n"
-	.string "commercials.$"
+	.string "¿No tienen fechas fijas para sus\n"
+	.string "ventas de liquidación?\p"
+	.string "Veo la TV, pero nunca pasan\n"
+	.string "comerciales.$"
 
 LilycoveCity_DepartmentStoreRooftop_Text_BeenWaitingForClearOutSale:
-	.string "Yes! I've been waiting a long time for\n"
-	.string "this clear-out sale.\p"
-	.string "They have items that you can only get\n"
-	.string "here. I'm going to load up, that I am!$"
+	.string "¡Sí! He esperado mucho tiempo por\n"
+	.string "esta liquidación.\p"
+	.string "Tienen cosas que solo consigues\n"
+	.string "aquí. ¡Voy a comprar de todo!$"
 
 LilycoveCity_DepartmentStoreRooftop_Text_BoneDryThirsty:
-	.string "Ohh… I'm bone-dry thirsty!$"
+	.string "Uf... ¡estoy seco de sed!$"
 
 LilycoveCity_DepartmentStoreRooftop_Text_WhichDrinkWouldYouLike:
-	.string "It's a VENDING MACHINE.\n"
-	.string "Which drink would you like?$"
+	.string "Es una MÁQUINA EXPENDEDORA.\n"
+	.string "¿Qué bebida quieres?$"
 
 LilycoveCity_DepartmentStoreRooftop_Text_CanOfDrinkDroppedDown:
-	.string "Clang!\p"
-	.string "A can of {STR_VAR_1} dropped down.$"
+	.string "¡Clang!\p"
+	.string "Cayó una lata de {STR_VAR_1}.$"
 
 LilycoveCity_DepartmentStoreRooftop_Text_ExtraCanOfDrinkDroppedDown:
-	.string "Clang!\p"
-	.string "Score! An extra can of {STR_VAR_1}\n"
-	.string "dropped down!$"
+	.string "¡Clang!\p"
+	.string "¡Gol! Una lata extra de {STR_VAR_1}\n"
+	.string "¡ha caído!$"
 
 LilycoveCity_DepartmentStoreRooftop_Text_NotEnoughMoney:
-	.string "Not enough money…$"
+	.string "No tienes suficiente dinero...$"
 
 LilycoveCity_DepartmentStoreRooftop_Text_DecidedAgainstBuyingDrink:
-	.string "Decided against buying a drink.$"
+	.string "Decidiste no comprar una bebida.$"

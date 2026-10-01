@@ -995,174 +995,166 @@ Route104_EventScript_Darian::
 	end
 
 Route104_Text_BrineyLivesInSeasideCottage:
-	.string "That seaside cottage is where\n"
-	.string "MR. BRINEY lives.\p"
-	.string "He was once a mighty sailor who never\n"
-	.string "feared the sea, however stormy.$"
+	.string "Esa cabaña junto al mar es donde\n"
+	.string "vive el SR. BRINEY.\p"
+	.string "Fue un gran marinero que nunca\n"
+	.string "temió al mar, aun en tormentas.$"
 
 Route104_Text_WhatsItLikeAtBottomOfSea:
-	.string "The sea, huh?\p"
-	.string "I wonder what it's like at the bottom\n"
-	.string "of the sea?$"
+	.string "¿El mar, eh?\p"
+	.string "Me pregunto cómo será el fondo\n"
+	.string "del mar...$"
 
 Route104_Text_ThrowBallAtWeakenedPokemon:
-	.string "If you're going to throw a POKé BALL,\n"
-	.string "weaken the wild POKéMON first.\p"
-	.string "It will be easier to catch if it's been\n"
-	.string "poisoned, burned, or lulled to sleep.$"
+	.string "Si vas a lanzar una POKé BALL,\n"
+	.string "debilita al POKéMON salvaje primero.\p"
+	.string "Será más fácil capturarlo si está\n"
+	.string "envenenado, quemado o dormido.$"
 
 Route104_Text_OnlyThrowBallAtWildPokemon:
-	.string "You're a thief if you try to steal\n"
-	.string "someone else's POKéMON.\p"
-	.string "You should throw POKé BALLS only at\n"
-	.string "wild POKéMON.$"
+	.string "Eres un ladrón si intentas robar\n"
+	.string "el POKéMON de otra persona.\p"
+	.string "Lanza POKé BALLS solo a\n"
+	.string "POKéMON salvajes.$"
 
 Route104_Text_ImNotATrainer:
-	.string "Oh, no, I'm not a TRAINER.\p"
-	.string "But that's right, if TRAINERS lock eyes,\n"
-	.string "it's a challenge to battle.\p"
-	.string "If you don't want to battle, stay out\n"
-	.string "of their sight.$"
+	.string "Oh, no, yo no soy ENTRENADOR.\p"
+	.string "Pero es cierto, si los ENTRENADORES\n"
+	.string "se miran, es un desafío de batalla.\p"
+	.string "Si no quieres luchar, no te pongas\n"
+	.string "en su camino.$"
 
 Route104_Text_LikeFillingMouthWithSeedsTakeThis:
-	.string "I like filling my mouth with seeds,\n"
-	.string "then spitting them out fast!\p"
-	.string "You can have this, so you try it out!\p"
-	.string "Use it on a POKéMON, and it will learn\n"
-	.string "a move for firing seeds rapidly.$"
+	.string "¡Me gusta llenarme la boca de semillas\n"
+	.string "y luego escupirlas rápido!\p"
+	.string "¡Toma esto para que lo pruebes!\p"
+	.string "Úsalo en un POKéMON y aprenderá\n"
+	.string "Lanza semillas rápidamente.$"
 
 Route104_Text_TMsAreOneTimeUse:
-	.string "A word of advice!\p"
-	.string "A TM, TECHNICAL MACHINE, is good only\n"
-	.string "for one-time use.\p"
-	.string "Once you use it, it's gone.\n"
-	.string "Think twice before using it!$"
+	.string "¡Un consejo!\p"
+	.string "Una MT, MÁQUINA TÉCNICA, solo sirve\n"
+	.string "para usarse una vez.\p"
+	.string "Una vez usada, desaparecerá.\n"
+	.string "¡Piénsalo bien antes de usarla!$"
 
 Route104_Text_DontNeedThisTakeIt:
-	.string "This FLOWER SHOP started selling\n"
-	.string "saplings recently.\p"
-	.string "It made me so happy, I went overboard\n"
-	.string "shopping.\p"
-	.string "I don't need this WHITE HERB anymore.\n"
-	.string "Would you take it, please?$"
+	.string "Esta FLORISTERÍA empezó a vender\n"
+	.string "plantones hace poco.\p"
+	.string "Me puse tan feliz que compré de más\n"
+	.string "en las compras.\p"
+	.string "Ya no necesito esta HIERBA BLANCA.\n"
+	.string "¿Te la llevarías, por favor?$"
 
 Route104_Text_FlowerShopSellingSaplings:
-	.string "This FLOWER SHOP started selling\n"
-	.string "saplings recently.\p"
-	.string "It made me so happy, I went overboard\n"
-	.string "shopping. Where should I put them?$"
+	.string "Esta FLORISTERÍA empezó a vender\n"
+	.string "plantones hace poco.\p"
+	.string "Me puse tan feliz que compré de más\n"
+	.string "compras. ¿Dónde los pongo?$"
 
 Route104_Text_MrBrineysCottage:
-	.string "MR. BRINEY'S COTTAGE$"
+	.string "CASA DEL SR. BRINEY$"
 
 Route104_Text_RouteSignPetalburg:
-	.string "ROUTE 1O4\n"
-	.string "{RIGHT_ARROW} PETALBURG CITY$"
+	.string "RUTA 104\n"
+	.string "{RIGHT_ARROW} CIUDAD PETALBURGIA$"
 
 Route104_Text_RouteSignRustboro:
-	.string "ROUTE 1O4\n"
-	.string "{UP_ARROW} RUSTBORO CITY$"
+	.string "RUTA 104\n"
+	.string "{UP_ARROW} CIUDAD FONDOVISTA$"
 
 Route104_Text_PrettyPetalFlowShop:
-	.string "PRETTY PETAL FLOWER SHOP$"
+	.string "FLORERÍA PÉTALO LINDO$"
 
 Route104_Text_TrainerTipsDoubleBattles:
-	.string "TRAINER TIPS\p"
-	.string "In the HOENN region there are pairs\n"
-	.string "of TRAINERS who challenge others\l"
-	.string "for 2-on-2 POKéMON battles called\l"
-	.string "DOUBLE BATTLES.\p"
-	.string "In a DOUBLE BATTLE, the TRAINER must\n"
-	.string "send out two POKéMON, the one at the\l"
-	.string "left of the list and the top one.\l"
-	.string "Watch how POKéMON are lined up.$"
+	.string "CONSEJOS DE ENTRENADOR\p"
+	.string "En la región de HOENN hay parejas\n"
+	.string "de ENTRENADORES que desafían a\l"
+	.string "otros en batallas de 2 contra 2\l"
+	.string "llamadas BATALLAS DOBLES.\p"
+	.string "En una BATALLA DOBLE, el ENTRENADOR\n"
+	.string "envía dos POKéMON: el de la\l"
+	.string "izquierda y el primero de la lista.\l"
+	.string "Mira cómo están los POKéMON.$"
 
 Route104_Text_MayWeShouldRegister:
-	.string "MAY: Oh, hi, {PLAYER}{KUN}!\p"
-	.string "DEVON upgraded your POKéNAV with\n"
-	.string "the MATCH CALL system, huh?\p"
-	.string "We should register each other so we\n"
-	.string "can get in contact anytime.$"
+	.string "MAY: ¡Hola, {PLAYER}{KUN}!\p"
+	.string "DEVON mejoró tu POKéNAV con\n"
+	.string "el sistema MATCH CALL, ¿eh?\p"
+	.string "Registrémonos para que podamos\n"
+	.string "contactarnos en cualquier momento.$"
 
 Route104_Text_RegisteredMay:
-	.string "{PLAYER} registered MAY\n"
-	.string "in the POKéNAV.$"
+	.string "{PLAYER} registró a MAY\n"
+	.string "en el POKéNAV.$"
 
 Route104_Text_MayHowsYourPokedex:
-	.string "MAY: Oh, by the way, {PLAYER}{KUN},\n"
-	.string "how's your POKéDEX coming along?$"
+	.string "MAY: Ah, por cierto, {PLAYER}{KUN},\n"
+	.string "¿cómo va tu POKéDEX?$"
 
 Route104_Text_MayMinesDecentLetsBattle:
-	.string "Mine's looking pretty decent.\n"
-	.string "So…\l"
-	.string "How about a little battle?$"
+	.string "La mía se ve bastante bien.\n"
+	.string "So...\l"
+	.string "¿Qué tal una pequeña batalla?$"
 
 Route104_Text_MayHaventRaisedPokemon:
-	.string "MAY: Oh, what's the matter?\p"
-	.string "Haven't you caught or raised your\n"
-	.string "POKéMON very much?\p"
-	.string "That's not very good for a TRAINER!$"
+	.string "MAY: Oh, ¿qué sucede?\p"
+	.string "¿No has capturado ni criado tus\n"
+	.string "¿Tantos POKéMON?\p"
+	.string "¡Eso no es bueno para un TRAINER!$"
 
 Route104_Text_MayLetsBattle:
-	.string "MAY: So, what do you think?\n"
-	.string "How about a little battle here?$"
+	.string "MAY: Y bien, ¿qué te parece?\n"
+	.string "¿Qué tal una pequeña batalla aquí?$"
 
 Route104_Text_MayIntro:
-	.string "MAY: You just became a TRAINER,\n"
-	.string "{PLAYER}{KUN}. I'm not going to lose!$"
+	.string "MAY: Acabas de ser un TRAINER,\n"
+	.string "{PLAYER}{KUN}. ¡No voy a perder!$"
 
 Route104_Text_MayDefeat:
-	.string "Yikes!\n"
-	.string "You're better than I expected!$"
+	.string "¡Cielos!\n"
+	.string "¡Eres mejor de lo que esperaba!$"
 
 Route104_Text_MayPostBattle:
-	.string "MAY: I can tell you've gotten pretty\n"
-	.string "good with the way you handle POKéMON.\p"
-	.string "But instead of only making them\n"
-	.string "battle, you should be like MR. BRINEY.\p"
-	.string "It's important to become friends with\n"
-	.string "POKéMON, too.$"
+	.string "MAY: Noto que te has vuelto muy\nbueno manejando a los POKéMON.\pPero en\nvez de solo hacerlos\nluchar, deberías ser como MR.\nBRINEY.\ptambién es importante hacerse\namigo\nde los POKéMON.$"
 
 Route104_Text_BrendanWeShouldRegister:
-	.string "BRENDAN: Oh, hey, {PLAYER}!\p"
-	.string "Cool, you had DEVON install the MATCH\n"
-	.string "CALL system on your POKéNAV!\p"
-	.string "Let's register each other in our\n"
-	.string "POKéNAVS so we can keep in touch.$"
+	.string "BRENDAN: ¡Hola, {PLAYER}!\p"
+	.string "¡Genial! Hiciste que DEVON instalara\n"
+	.string "el sistema MATCH CALL en tu POKéNAV!\p"
+	.string "Registrémonos en nuestros POKéNAVS\n"
+	.string "para estar en contacto.$"
 
 Route104_Text_RegisteredBrendan:
-	.string "{PLAYER} registered BRENDAN\n"
-	.string "in the POKéNAV.$"
+	.string "{PLAYER} registró a BRENDAN\n"
+	.string "en el POKéNAV.$"
 
 Route104_Text_BrendanHowsYourPokedex:
-	.string "BRENDAN: {PLAYER}, how's your POKéDEX?\n"
-	.string "Have you filled in any pages yet?$"
+	.string "BRENDAN: {PLAYER}, ¿cómo va tu POKéDEX?\n"
+	.string "¿Ya llenaste algunas páginas?$"
 
 Route104_Text_BrendanDoingGreatLetsBattle:
-	.string "Me, I'm doing great!\p"
-	.string "Want to check out how good I am with\n"
-	.string "a battle?$"
+	.string "¡Yo estoy genial!\p¿Quieres ver qué tan bueno soy\nen una batalla?$"
 
 Route104_Text_BrendanNoConfidence:
-	.string "BRENDAN: What's the matter? Don't have\n"
-	.string "any confidence in your POKéMON?$"
+	.string "BRENDAN: ¿Qué pasa? ¿No tienes\n"
+	.string "confianza en tus POKéMON?$"
 
 Route104_Text_BrendanLetsBattle:
-	.string "BRENDAN: What's up?\n"
-	.string "Want to have a battle with me?$"
+	.string "BRENDAN: ¿Qué pasa?\n¿Quieres combatir conmigo?$"
 
 Route104_Text_BrendanIntro:
-	.string "BRENDAN: I know you just became\n"
-	.string "a TRAINER, but I won't go easy!$"
+	.string "BRENDAN: Sé que acabas de ser\n"
+	.string "ENTRENADOR, ¡pero no tendré piedad!$"
 
 Route104_Text_BrendanDefeat:
-	.string "Hmm…\n"
-	.string "You're pretty good.$"
+	.string "Mmm...\n"
+	.string "Eres bastante bueno.$"
 
 Route104_Text_BrendanPostBattle:
-	.string "BRENDAN: You've gotten pretty decent\n"
-	.string "at handling POKéMON.\p"
-	.string "But, you know, you shouldn't just be\n"
-	.string "making POKéMON battle.\p"
-	.string "Like MR. BRINEY, it's important to\n"
-	.string "become friends with your POKéMON.$"
+	.string "BRENDAN: Has cambiado mucho\n"
+	.string "bueno manejando POKéMON.\p"
+	.string "Pero, ya sabes, no deberías solo\n"
+	.string "hacer batallas POKéMON.\p"
+	.string "Como el SR. BRINEY, es importante\n"
+	.string "ser amigo de tus POKéMON.$"

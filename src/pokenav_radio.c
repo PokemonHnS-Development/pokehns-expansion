@@ -1369,7 +1369,7 @@ void CheckRadioStation(void)
 }
 
 // ========================================
-// Buena's Password Show — NPC specials
+// Buena's Password Show - NPC specials
 // ========================================
 
 static EWRAM_DATA u8 sBuenaPasswordStrBuf[3][20] = {};

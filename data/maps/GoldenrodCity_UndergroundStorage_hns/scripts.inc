@@ -48,64 +48,64 @@ GoldenrodCity_UndergroundStorage_EventScript_Item_MaxEther::
     end
 
 RadioTowerBasement_Text_GruntM24Seen:
-    .string "How did you get this far?\p"
-    .string "I guess it can't be helped. I'll\n"
-    .string "dispose of you.$"
+    .string "¿Cómo llegaste hasta aquí?\p"
+    .string "Supongo que no hay remedio. Yo\n"
+    .string "me encargaré de ti.$"
 
 RadioTowerBasement_Text_GruntM24Beaten:
-    .string "I got disposed of…$"
+    .string "Me derrotaron...$"
 
 RadioTowerBasement_Text_GruntM24After:
-    .string "TEAM ROCKET will keep going, waiting\n"
-    .string "for the return of GIOVANNI.\p"
-    .string "We'll do whatever it takes.$"
+    .string "EL TEAM ROCKET seguirá, esperando\n"
+    .string "el regreso de GIOVANNI.\p"
+    .string "Haremos lo que sea necesario.$"
 
 RadioTowerBasement_Text_GruntM14Seen:
-    .string "You're not going any farther!\p"
-    .string "I don't show mercy to my enemies,\n"
-    .string "not even brats!$"
+    .string "¡No pasarás de aquí!\p"
+    .string "No tengo piedad con mis enemigos,\n"
+    .string "¡ni siquiera con mocosos!$"
 
 RadioTowerBasement_Text_GruntM14Beaten:
-    .string "Blast it!$"
+    .string "Maldición!$"
 
 RadioTowerBasement_Text_GruntM14After:
-    .string "I lost…\p"
-    .string "Please forgive me, GIOVANNI!$"
+    .string "Perdí...\p"
+    .string "¡Perdóneme, GIOVANNI!$"
 
 RadioTowerBasement_Text_GruntM15Seen:
-    .string "Hyuck-hyuck-hyuck! Look who it is!\p"
-    .string "Ready? I'm really tough now!$"
+    .string "¡Je-je-je! ¡Mira quién es!\p"
+    .string "¿Listo? ¡Ahora soy muy fuerte!$"
 
 RadioTowerBasement_Text_GruntM15Beaten:
-    .string "Hyuck-hyuck-hyuck! You're so good!\p"
-    .string "This TEAM ROCKET thing is just\n"
-    .string "a job, but I can see it hurts others.\p"
-    .string "That's it, I'm leaving.\p"
-    .string "Thank you so much. Sorry GIOVANNI!$"
+    .string "¡Je-je-je! ¡Eres muy bueno!\p"
+    .string "Esto del TEAM ROCKET es solo\n"
+    .string "un trabajo, pero veo que daña a otros.\p"
+    .string "Ya está, me largo.\p"
+    .string "Muchas gracias. ¡Lo siento, GIOVANNI!$"
 
 RadioTowerBasement_Text_GruntM15After:
-    .string "Hyuck-hyuck-hyuck! That was a blast!\n"
-    .string "I'll remember you!$"
+    .string "¡Je-je-je! ¡Fue genial!\n"
+    .string "¡Te recordaré!$"
 
 RadioTowerBasement_Text_DirectorIntro:
-    .string "DIRECTOR: Who? What? You came to\n"
-    .string "rescue me?\p"
-    .string "Thank you!\p"
-    .string "The RADIO TOWER!\p"
-    .string "What's happening there?\p"
-    .string "Taken over by TEAM ROCKET?\p"
-    .string "Here. Take this CARD KEY.$"
+    .string "DIRECTOR: ¿Quién? ¿Qué? ¿Viniste a\n"
+    .string "rescatarme?\p"
+    .string "¡Gracias!\p"
+    .string "¡La TORRE RADIO!\p"
+    .string "¿Qué está pasando ahí?\p"
+    .string "¿El TEAM ROCKET lo tomó?\p"
+    .string "Toma. Ten esta CARD KEY.$"
 
 RadioTowerBasement_Text_DirectorCardKey:
-    .string "DIRECTOR: Use that to open the\n"
-    .string "shutters on 3F.$"
+    .string "DIRECTOR: Úsala para abrir las\n"
+    .string "persianas del 3F.$"
 
 RadioTowerBasement_Text_DirectorAfter:
-    .string "I'm begging you to help.\p"
-    .string "There's no telling what they'll do if\n"
-    .string "they control the transmitter.\p"
-    .string "They may even be able to control\n"
-    .string "POKéMON using a special signal!\p"
-    .string "You're the only one I can call on.\p"
-    .string "Please save the RADIO TOWER…\p"
-    .string "And all the POKéMON nationwide!$"
+    .string "Te ruego que nos ayudes.\p"
+    .string "No sabemos qué harán si\n"
+    .string "controlan el transmisor.\p"
+    .string "¡Podrían controlar a los\n"
+    .string "POKéMON con una señal especial!\p"
+    .string "Eres el único al que puedo acudir.\p"
+    .string "Por favor, salva la RADIO TOWER...\p"
+    .string "¡Y todos los POKéMON del país!$"

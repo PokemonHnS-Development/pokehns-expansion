@@ -79,4 +79,4 @@ Alola_Ulaula_Cave_FindItem2::
 
 
 Alola_Ulaula_BattleSandslash_Text_0:
-	.string "Graah!$"
+	.string "¡Graah!$"

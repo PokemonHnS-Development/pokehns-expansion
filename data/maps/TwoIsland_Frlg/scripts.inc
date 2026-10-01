@@ -216,88 +216,88 @@ TwoIsland_EventScript_FastCurrentSign::
 	end
 
 TwoIsland_Text_IslandSign::
-	.string "TWO ISLAND\n"
-	.string "Boon Island for Two$"
+	.string "ISLA DOS\n"
+	.string "Isla del Favor para Dos$"
 
 TwoIsland_Text_JoyfulGameCornerSign::
-	.string "Skip & Chomp!\n"
-	.string "Joyful GAME CORNER$"
+	.string "¡Salta y Muerde!\n"
+	.string "ALEGRE SALA DE JUEGOS$"
 
 TwoIsland_Text_DangerFastCurrent::
-	.string "DANGER! FAST CURRENT!\n"
-	.string "Fishing and surfing prohibited!$"
+	.string "¡PELIGRO! ¡CORRIENTE RÁPIDA!\n"
+	.string "¡Prohibido pescar y surfear!$"
 
 TwoIsland_Text_WelcomeToShopMerchandiseLimited::
-	.string "Oh!\n"
-	.string "Hello, welcome to my shop!\p"
-	.string "We've only opened up recently.\p"
-	.string "Our merchandise is limited, but I\n"
-	.string "hope we can serve your needs.$"
+	.string "¡Oh!\n"
+	.string "¡Hola, bienvenido a mi tienda!\p"
+	.string "Recién hemos abierto.\p"
+	.string "Nuestra mercancía es limitada,\n"
+	.string "espero poder servirte.$"
 
 TwoIsland_Text_AddedMerchandiseForLostelle::
-	.string "I can't tell you how grateful I am\n"
-	.string "for your rescue of LOSTELLE.\p"
-	.string "Thanks to your feat, the people of\n"
-	.string "THREE ISLAND have changed their\l"
-	.string "attitudes about KANTO people.\p"
-	.string "And, I'm from KANTO, you see.\p"
-	.string "The people of THREE ISLAND\n"
-	.string "helped me add to my merchandise.$"
+	.string "No puedo decirte lo agradecido\n"
+	.string "que estoy por rescatar a LOSTELLE.\p"
+	.string "Gracias a tu hazaña, la gente\n"
+	.string "de ISLA TRES ha cambiado su\l"
+	.string "actitud hacia la gente de KANTO.\p"
+	.string "Y soy de KANTO, ya sabes.\p"
+	.string "La gente de TRES ISLAS\n"
+	.string "me ayudó a ampliar mi mercancía.$"
 
 TwoIsland_Text_HopeYouGiveItYourBest::
-	.string "Hi! I'm giving it my best here.\n"
-	.string "I hope you do too, {PLAYER}.$"
+	.string "¡Hola! Me esfuerzo al máximo aquí.\n"
+	.string "Espero que tú también, {PLAYER}.$"
 
 TwoIsland_Text_BringingItemsFromDistantLands::
-	.string "Oh, hello, {PLAYER}!\n"
-	.string "Welcome!\p"
-	.string "I've started bringing in items from\n"
-	.string "distant lands.\p"
-	.string "I've got some rare items in, too.\n"
-	.string "Please have a look!$"
+	.string "¡Oh, hola, {PLAYER}!\n"
+	.string "¡Bienvenido!\p"
+	.string "He empezado a traer objetos\n"
+	.string "de tierras lejanas.\p"
+	.string "También tengo objetos raros.\n"
+	.string "¡Echa un vistazo!$"
 
 TwoIsland_Text_FellowMovedFromCeladonCity::
-	.string "That fellow there, he moved here\n"
-	.string "from CELADON CITY.\p"
-	.string "He started up a shop with his\n"
-	.string "younger brother.\p"
-	.string "You have to wonder if he knew what\n"
-	.string "he was getting into.$"
+	.string "Ese muchacho se mudó aquí\n"
+	.string "de CIUDAD CELESTE.\p"
+	.string "Abrió una tienda con su\n"
+	.string "menor del PRESIDENTE.\p"
+	.string "Uno se pregunta si él sabía qué\n"
+	.string "se estaba metiendo.$"
 
 TwoIsland_Text_ShopkeepersBrotherWorksGameCorner::
-	.string "The shopkeeper's brother took\n"
-	.string "a job at the GAME CORNER.\p"
-	.string "He's trying to pull together money\n"
-	.string "so they can buy more merchandise.$"
+	.string "El hermano del tendero tomó\n"
+	.string "un trabajo en la ESQUINA DEL JUEGO.\p"
+	.string "Está intentando reunir dinero\n"
+	.string "para que puedan comprar más artículos.$"
 
 TwoIsland_Text_BrunoCameToIslandWhileBack::
 	.string "Listen, listen.\n"
-	.string "Did you know?\p"
-	.string "A famous TRAINER came to the\n"
-	.string "ISLAND a little while back.\p"
-	.string "He's one of the ELITE FOUR.\n"
-	.string "His name is BRUNO.\p"
-	.string "He went away disappointed when he\n"
-	.string "found out that they were all sold\l"
-	.string "out of Rage Candybars.$"
+	.string "¿Sabías esto?\p"
+	.string "Un ENTRENADOR famoso vino a\n"
+	.string "la ISLA hace un tiempo.\p"
+	.string "Es uno del ALTO MANDO.\n"
+	.string "Su nombre es BRUNO.\p"
+	.string "Se fue decepcionado cuando supo\n"
+	.string "que ya no quedaban\l"
+	.string "Chocolates Rabia.$"
 
 TwoIsland_Text_BuyRareItemsHere::
-	.string "The discerning TRAINER knows to\n"
-	.string "buy rare items here!$"
+	.string "El ENTRENADOR perspicaz sabe\n"
+	.string "comprar artículos raros aquí!$"
 
 TwoIsland_Text_OldWomanLivesOutOnCape::
-	.string "There's an old woman who lives in\n"
-	.string "a cottage out on the cape.\p"
-	.string "She gives the eye to POKéMON.\n"
-	.string "It's a bit unnerving.$"
+	.string "Hay una anciana que vive en\n"
+	.string "una cabaña en el cabo.\p"
+	.string "Les hace ojitos a los POKéMON.\n"
+	.string "Es un poco inquietante.$"
 
 TwoIsland_Text_HaveYouTriedJumpingGame::
 	.string "Boing! Boing!\n"
-	.string "Have you tried the jumping game?\p"
-	.string "The POKéMON you can enter…\n"
+	.string "¿Probaste el juego de saltar?\p"
+	.string "Los POKéMON que puedes llevar...\n"
 	.string "Boing!\p"
-	.string "Some go boing!\p"
-	.string "And some go boooooooing!\p"
-	.string "Did you know that?\n"
+	.string "Unos hacen ¡boing!\p"
+	.string "¡Y otros hacen booooooing!\p"
+	.string "¿Sabías eso?\n"
 	.string "Boing!$"
 

@@ -342,110 +342,110 @@ AzaleaTown_Movement_KurtLeave:
 	step_end
 
 AzaleaTown_Text_RivalBefore:
-	.string "…Tell me something.\p"
-	.string "Is it true that TEAM ROCKET\n"
-	.string "has returned?\p"
-	.string "What? You beat them? Hah! Quit\n"
-	.string "lying.\p"
-	.string "You're not joking?\n"
-	.string "Then let's see how good you are.$"
+	.string "...Dime una cosa.\p"
+	.string "¿Es verdad que el TEAM ROCKET\n"
+	.string "ha regresado?\p"
+	.string "¿Qué? ¿Les ganaste? ¡Ja! Deja\n"
+	.string "de mentir.\p"
+	.string "¿No estás bromeando?\n"
+	.string "¡Veamos qué tan bueno eres!$"
 
 AzaleaTown_Text_RivalWin:
-	.string "…Humph! Useless POKéMON!\p"
-	.string "Listen, you. You only won because\n"
-	.string "my POKéMON were weak.$"
+	.string "...¡Humph! ¡POKéMON inútiles!\p"
+	.string "Escucha. Solo ganaste porque\n"
+	.string "mis POKéMON estaban débiles.$"
 
 AzaleaTown_Text_RivalAfter:
-	.string "I hate the weak.\p"
-	.string "POKéMON, trainers. It doesn't\n"
-	.string "matter who or what.\p"
-	.string "I'm going to be strong and wipe\n"
-	.string "out the weak.\p"
-	.string "That goes for TEAM ROCKET too.\p"
-	.string "They act big and tough in a group.\p"
-	.string "But get them alone, and they're weak.\n"
-	.string "I hate them all.\p"
-	.string "You stay out of my way. A weakling\n"
-	.string "like you is only a distraction.$"
+	.string "Odio a los débiles.\p"
+	.string "POKéMON, entrenadores. No\n"
+	.string "importa quién o qué sea.\p"
+	.string "Seré fuerte y borraré\n"
+	.string "a los débiles.\p"
+	.string "Eso incluye al TEAM ROCKET.\p"
+	.string "Se creen fuertes en grupo.\p"
+	.string "Pero solos, son débiles.\n"
+	.string "Los odio a todos.\p"
+	.string "No te cruces en mi camino. Un débil\n"
+	.string "alguien como tú es un distractor.$"
 
 AzaleaTown_Text_RivalLoss:
-	.string "…Humph! I knew you were lying.$"
+	.string "...¡Hum! Sabía que mentías.$"
 
 AzaleaTown_Text_Rocket1:
-	.string "It's unsafe to go in there,\n"
-	.string "so I'm standing guard.\p"
-	.string "Aren't I a good Samaritan?$"
+	.string "Es peligroso entrar ahí,\n"
+	.string "así que estoy vigilando.\p"
+	.string "¿No soy un buen samaritano?$"
 
 AzaleaTown_Text_Rocket2:
-	.string "Do you know about SLOWPOKETAIL?\n"
-	.string "I heard it's tasty!\p"
-	.string "Aren't you glad I told you that?$"
+	.string "¿Sabes de la COLA DE SLOWPOKE?\n"
+	.string "¡He oído que es deliciosa!\p"
+	.string "¿No te alegra que te lo dijera?$"
 
 AzaleaTown_Text_GrampsBefore:
-	.string "The SLOWPOKE have disappeared\n"
-	.string "from town…\p"
-	.string "I heard their TAILS are being\n"
-	.string "sold somewhere.$"
+	.string "Los SLOWPOKE han desaparecido\n"
+	.string "del pueblo...\p"
+	.string "Oí que venden sus COLAS\n"
+	.string "en algún lugar.$"
 
 AzaleaTown_Text_GrampsAfter:
-	.string "The SLOWPOKE have returned.\p"
-	.string "Knowing them, they could've just\n"
-	.string "been goofing off somewhere.$"
+	.string "Los SLOWPOKE han vuelto.\p"
+	.string "Conociéndolos, seguro que solo\n"
+	.string "estaban perdiendo el tiempo.$"
 
 AzaleaTown_Text_Teacher:
-	.string "Did you come to get KURT to make\n"
-	.string "some BALLS?\p"
-	.string "A lot of people do just that.$"
+	.string "¿Vienes a que KURT te fabrique\n"
+	.string "unas BALLS?\p"
+	.string "Mucha gente hace eso.$"
 
 AzaleaTown_Text_Youngster:
-	.string "Cut through AZALEA and you'll be\n"
-	.string "in ILEX FOREST.\p"
-	.string "But these skinny trees make it\n"
-	.string "impossible to get through.\p"
-	.string "The CHARCOAL MAN's POKéMON\n"
-	.string "can CUT down trees.$"
+	.string "Cruza PUEBLO AZALEA y llegarás\n"
+	.string "al BOSQUE VERDE.\p"
+	.string "Pero estos árboles delgados hacen\n"
+	.string "imposible pasar por aquí.\p"
+	.string "El POKéMON del HOMBRE DEL CARBÓN\n"
+	.string "puede usar CORTE en árboles.$"
 
 AzaleaTown_Text_Slowpoke1:
 	.string "SLOWPOKE:..........\p"
-	.string "...............YAWN?$"
+	.string "...............¿Bostezo?$"
 
 AzaleaTown_Text_Kurt1:
-	.string "ILEX FOREST is restless!\p"
-	.string "What is going on?$"
+	.string "¡El BOSQUE VERDE está inquieto!\p"
+	.string "¿Qué está pasando?$"
 
 AzaleaTown_Text_Kurt2:
-	.string "{PLAYER}, here's your GS BALL back!$"
+	.string "{PLAYER} ¡aquí está tu GS BALL!$"
 
 AzaleaTown_Text_Kurt3:
-	.string "Could you go see why ILEX FOREST\n"
-	.string "is so restless?$"
+	.string "¿Podrías ver qué pasa en el BOSQUE\n"
+	.string "¿está tan inquieto?$"
 
 AzaleaTown_Text_Sign:
-	.string "AZALEA TOWN\n"
-	.string "Where People and POKéMON Live in\l"
-	.string "Happy Harmony.$"
+	.string "PUEBLO AZALEA\n"
+	.string "Donde Gente y POKéMON Viven en\l"
+	.string "Feliz Armonía.$"
 
 AzaleaTown_Text_KurtsHouseSign:
-	.string "KURT'S HOUSE$"
+	.string "CASA DE KURT$"
 
 AzaleaTown_Text_GymSign:
-	.string "AZALEA TOWN\n"
-	.string "POKéMON GYM\p"
-	.string "LEADER: BUGSY\p"
-	.string "The Walking Bug POKéMON\n"
-	.string "Encyclopedia$"
+	.string "PUEBLO AZALEA\n"
+	.string "GIMNASIO POKéMON\p"
+	.string "LÍDER: BUGSY\p"
+	.string "Enciclopedia de POKéMON\n"
+	.string "Bicho Caminante$"
 
 AzaleaTown_Text_SlowpokeWellSign:
-	.string "SLOWPOKE WELL\p"
-	.string "Also known as the RAINMAKER WELL.\p"
-	.string "Locals believe that a SLOWPOKE's\n"
-	.string "yawn summons rain.\p"
-	.string "Records show that a SLOWPOKE's\n"
-	.string "yawn ended a drought 400 years ago.$"
+	.string "POZO SLOWPOKE\p"
+	.string "También llamado POZO LLUVIOSO.\p"
+	.string "La gente cree que el bostezo\n"
+	.string "de un SLOWPOKE trae la lluvia.\p"
+	.string "Los registros dicen que un\n"
+	.string "Yawn acabó una sequía hace 400 años.$"
 
 AzaleaTown_Text_CharcoalKilnSign:
-	.string "CHARCOAL KILN$"
+	.string "HORNO DE CARBÓN$"
 
 AzaleaTown_Text_IlexForestSign:
-	.string "ILEX FOREST\p"
-	.string "Enter through the gate.$"
+	.string "BOSQUE VERDE\p"
+	.string "Entra por la puerta.$"

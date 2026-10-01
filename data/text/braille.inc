@@ -4,7 +4,7 @@
 @       section by editing ScrCmd_braillemessage.
 Underwater_SealedChamber_Braille_GoUpHere:
 	brailleformat 4, 6, 26, 13, 7, 9
-	.braille "GO UP HERE.$"
+	.braille "SUBE AQUI.$"
 
 SealedChamber_OuterRoom_Braille_ABC:
 	brailleformat 7, 6, 21, 13, 10, 9
@@ -48,94 +48,94 @@ SealedChamber_OuterRoom_Braille_Comma:
 
 SealedChamber_OuterRoom_Braille_DigHere:
 	brailleformat 7, 4, 23, 15, 10, 7
-	.braille "DIG HERE.$"
+	.braille "CAVA AQUI.$"
 
 SealedChamber_InnerRoom_Braille_FirstWailordLastRelicanth:
 	brailleformat 0, 0, 29, 19, 3, 3
-	.braille "FIRST COMES\n"
+	.braille "PRIMERO VA\n"
 	.braille "WAILORD.\n"
-	.braille "LAST COMES\n"
+	.braille "AL FINAL VA\n"
 	.braille "RELICANTH.$"
 
 SealedChamber_InnerRoom_Braille_InThisCaveWeHaveLived:
 	brailleformat 2, 0, 26, 19, 5, 3
-	.braille "IN THIS\n"
-	.braille "CAVE WE\n"
-	.braille "HAVE\n"
-	.braille "LIVED.$"
+	.braille "EN ESTA\n"
+	.braille "CUEVA\n"
+	.braille "HEMOS\n"
+	.braille "VIVIDO.$"
 
 SealedChamber_InnerRoom_Braille_WeOweAllToThePokemon:
 	brailleformat 7, 2, 23, 17, 10, 5
-	.braille "WE OWE ALL\n"
-	.braille "TO THE\n"
+	.braille "SE LO DEBEMOS\n"
+	.braille "TODO A LOS\n"
 	.braille "POKEMON.$"
 
 SealedChamber_InnerRoom_Braille_ButWeSealedThePokemonAway:
 	brailleformat 3, 0, 25, 19, 6, 3
-	.braille "BUT, WE\n"
-	.braille "SEALED THE\n"
+	.braille "PERO\n"
+	.braille "ENCERRAMOS\n"
 	.braille "POKEMON\n"
-	.braille "AWAY.$"
+	.braille "PARA SIEMPRE.$"
 
 SealedChamber_InnerRoom_Braille_WeFearedIt:
 	brailleformat 5, 6, 25, 13, 8, 9
-	.braille "WE FEARED IT.$"
+	.braille "LO TEMIAMOS.$"
 
 SealedChamber_InnerRoom_Braille_ThoseWithCourageHope:
 	brailleformat 6, 0, 24, 19, 9, 3
-	.braille "THOSE WITH\n"
-	.braille "COURAGE,\n"
-	.braille "THOSE WITH\n"
-	.braille "HOPE.$"
+	.braille "QUIEN TENGA\n"
+	.braille "VALOR,\n"
+	.braille "QUIEN TENGA\n"
+	.braille "ESPERANZA.$"
 
 SealedChamber_InnerRoom_Braille_OpenDoorEternalPokemonWaits:
 	brailleformat 3, 2, 27, 17, 6, 5
-	.braille "OPEN A DOOR.\n"
-	.braille "AN ETERNAL\n"
+	.braille "ABRE UNA PUERTA.\n"
+	.braille "UN ETERNO\n"
 	.braille "POKEMON\n"
-	.braille "WAITS.$"
+	.braille "TE ESPERA.$"
 
 DesertRuins_Braille_UseRockSmash:
 	brailleformat 1, 0, 27, 19, 4, 3
-	.braille "LEFT, LEFT,\n"
-	.braille "DOWN, DOWN.\n"
-	.braille "THEN, USE\n"
-	.braille "ROCK SMASH.$"
+	.braille "IZQUIERDA IZQUIERDA,\n"
+	.braille "ABAJO ABAJO.\n"
+	.braille "LUEGO, USA\n"
+	.braille "GOLPE ROCA.$"
 
 IslandCave_Braille_RunLapAroundWall:
 	brailleformat 5, 0, 25, 19, 8, 3
-	.braille "STAY CLOSE\n"
-	.braille "TO THE WALL.\n"
-	.braille "RUN AROUND\n"
-	.braille "ONE LAP.$"
+	.braille "MANTENTE\n"
+	.braille "PEGADO AL\n"
+	.braille "MURO. DA\n"
+	.braille "UNA VUELTA.$"
 
 AncientTomb_Braille_ShineInTheMiddle:
 	brailleformat 3, 0, 25, 19, 6, 3
-	.braille "THOSE WHO\n"
-	.braille "INHERIT OUR\n"
-	.braille "WILL, SHINE\n"
-	.braille "IN THE MIDDLE.$"
+	.braille "QUIENES\n"
+	.braille "HEREDEN\n"
+	.braille "NUESTRA LUZ,\n"
+	.braille "BRILLEN AL CENTRO.$"
 
 @ FRLG
 Braille_Text_Up::
 	brailleformat 3, 0, 25, 19, 6, 3
-	.braille "UP$"
+	.braille "ARRIBA$"
 
 Braille_Text_Down::
 	brailleformat 3, 0, 25, 19, 6, 3
-	.braille "DOWN$"
+	.braille "ABAJO$"
 
 Braille_Text_Right::
 	brailleformat 3, 0, 25, 19, 6, 3
-	.braille "RIGHT$"
+	.braille "DERECHA$"
 
 Braille_Text_Left::
 	brailleformat 3, 0, 25, 19, 6, 3
-	.braille "LEFT$"
+	.braille "IZQUIERDA$"
 
 Braille_Text_Cut::
 	brailleformat 3, 0, 25, 19, 6, 3
-	.braille "CUT$"
+	.braille "CORTE$"
 
 Braille_Text_ABC::
 	brailleformat 3, 0, 25, 19, 6, 3
@@ -179,97 +179,97 @@ Braille_Text_Comma::
 
 Braille_Text_Everything::
 	brailleformat 3, 0, 25, 19, 6, 3
-	.braille "EVERYTHING$"
+	.braille "TODO$"
 
 Braille_Text_HasMeaning1::
 	brailleformat 3, 0, 25, 19, 6, 3
-	.braille "HAS MEANING$"
+	.braille "TIENE SENTIDO$"
 
 Braille_Text_Existence::
 	brailleformat 3, 0, 25, 19, 6, 3
-	.braille "EXISTENCE$"
+	.braille "LA EXISTENCIA$"
 
 Braille_Text_HasMeaning2::
 	brailleformat 3, 0, 25, 19, 6, 3
-	.braille "HAS MEANING$"
+	.braille "TIENE SENTIDO$"
 
 Braille_Text_BeingAlive::
 	brailleformat 3, 0, 25, 19, 6, 3
-	.braille "BEING ALIVE$"
+	.braille "ESTAR VIVO$"
 
 Braille_Text_HasMeaning3::
 	brailleformat 3, 0, 25, 19, 6, 3
-	.braille "HAS MEANING$"
+	.braille "TIENE SENTIDO$"
 
 Braille_Text_HaveDreams::
 	brailleformat 3, 0, 25, 19, 6, 3
-	.braille "HAVE DREAMS$"
+	.braille "TEN DESEOS$"
 
 Braille_Text_UsePower::
 	brailleformat 3, 0, 25, 19, 6, 3
-	.braille "USE POWER.$"
+	.braille "USA EL PODER.$"
 
 Braille_Text_LetTheTwo::
 	brailleformat 3, 0, 25, 19, 6, 3
-	.braille "LET THE TWO$"
+	.braille "DEJA QUE LAS DOS$"
 
 Braille_Text_Glittering::
 	brailleformat 3, 0, 25, 19, 6, 3
-	.braille "GLITTERING$"
+	.braille "PIEDRAS$"
 
 Braille_Text_Stones::
 	brailleformat 3, 0, 25, 19, 6, 3
-	.braille "STONES$"
+	.braille "BRILLANTES,$"
 
 Braille_Text_OneInRed::
 	brailleformat 3, 0, 25, 19, 6, 3
-	.braille "ONE IN RED$"
+	.braille "UNA ROJA,$"
 
 Braille_Text_OneInBlue::
 	brailleformat 3, 0, 25, 19, 6, 3
-	.braille "ONE IN BLUE$"
+	.braille "OTRA AZUL,$"
 
 Braille_Text_ConnectThe::
 	brailleformat 3, 0, 25, 19, 6, 3
-	.braille "CONNECT THE$"
+	.braille "CONECTEN EL$"
 
 Braille_Text_Past::
 	brailleformat 3, 0, 25, 19, 6, 3
-	.braille "PAST.$"
+	.braille "PASADO.$"
 
 Braille_Text_TwoFriends::
 	brailleformat 3, 0, 25, 19, 6, 3
-	.braille "TWO FRIENDS$"
+	.braille "DOS AMIGOS$"
 
 Braille_Text_Sharing::
 	brailleformat 3, 0, 25, 19, 6, 3
-	.braille "SHARING$"
+	.braille "COMPARTIENDO$"
 
 Braille_Text_PowerOpen::
 	brailleformat 3, 0, 25, 19, 6, 3
-	.braille "POWER OPEN$"
+	.braille "SU PODER ABRE$"
 
 Braille_Text_AWindowTo::
 	brailleformat 3, 0, 25, 19, 6, 3
-	.braille "A WINDOW TO$"
+	.braille "UNA VENTANA A$"
 
 Braille_Text_ANewWorld::
 	brailleformat 3, 0, 25, 19, 6, 3
-	.braille "A NEW WORLD$"
+	.braille "UN MUNDO NUEVO$"
 
 Braille_Text_ThatGlows::
 	brailleformat 3, 0, 25, 19, 6, 3
-	.braille "THAT GLOWS.$"
+	.braille "QUE BRILLA.$"
 
 Braille_Text_TheNext::
 	brailleformat 3, 0, 25, 19, 6, 3
-	.braille "THE NEXT$"
+	.braille "EL PROXIMO$"
 
 Braille_Text_WorldWaits::
 	brailleformat 3, 0, 25, 19, 6, 3
-	.braille "WORLD WAITS$"
+	.braille "MUNDO ESPERA$"
 
 Braille_Text_ForYou::
 	brailleformat 3, 0, 25, 19, 6, 3
-	.braille "FOR YOU.$"
+	.braille "PARA TI.$"
 

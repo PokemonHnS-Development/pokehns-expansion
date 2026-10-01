@@ -16,7 +16,7 @@
 #include "constants/rgb.h"
 
 enum {
-    WIN_TITLE,          // "Berry Program Update" header on the first screen
+    WIN_TITLE,          // "Actualización de Bayas" header on the first screen
     WIN_MSG_BODY,
     WIN_GAME_NAMES,     // The labels under the GBA graphics on the link screen
     WIN_TURN_OFF_TITLE, // "Ruby/Sapphire" at the top of the "turn off the power" screen
@@ -35,25 +35,16 @@ static int BerryFix_TrySetScene(int);
 static void BerryFix_SetScene(int);
 static void BerryFix_HideScene(void);
 
-static const u8 sText_BerryProgramUpdate[] = _("Berry Program Update");
+static const u8 sText_BerryProgramUpdate[] = _("Actualización de Bayas");
 static const u8 sText_RubySapphire[] = _("Ruby/Sapphire");
 static const u8 sText_Emerald[] = _("Emerald");
-static const u8 sText_BerryProgramWillBeUpdatedPressA[] = _("The Berry Program on your POKéMON\n"
-                                                            "Ruby/Sapphire Game Pak will be updated.\n"
-                                                            "{COLOR RED}{SHADOW LIGHT_RED}Press the A Button.");
-static const u8 sText_EnsureGBAConnectionMatches[] = _("Please ensure the connection of your\n"
-                                                       "Game Boy Advance system matches this.\n"
-                                                       "{COLOR RED}{SHADOW LIGHT_RED}YES: Press the A Button.\n"
-                                                       "NO: Turn off the power and try again.");
-static const u8 sText_TurnOffPowerHoldingStartSelect[] = _("Please turn on the power of POKéMON\n"
-                                                           "Ruby/Sapphire while holding START and\n"
-                                                           "SELECT simultaneously. Then, ensure\n"
-                                                           "the picture above appears.");
+static const u8 sText_BerryProgramWillBeUpdatedPressA[] = _("El programa de BAYAS de tu\nPOKéMON se actualizará.\n{COLOR RED}{SHADOW LIGHT_RED}Presiona el botón A.");
+static const u8 sText_EnsureGBAConnectionMatches[] = _("Verifica la conexión de tu\nEl sistema GBA es compatible.\n{COLOR RED}{SHADOW LIGHT_RED}SÍ: Presiona el Botón A.\nNO: Apaga y vuelve a intentarlo.");
+static const u8 sText_TurnOffPowerHoldingStartSelect[] = _("Enciende el poder de POKéMON\nRuby/Sapphire pulsando START y\nSELECT a la vez. Luego verifica\nque aparezca la imagen de arriba.");
 static const u8 sText_TransmittingPleaseWait[] = _("Transmitting. Please wait.\n"
-                                                   "{COLOR RED}{SHADOW LIGHT_RED}Please do not turn off the power or\n"
-                                                   "unplug the Game Boy Advance Game\nLink Cable.");
-static const u8 sText_PleaseFollowInstructionsOnScreen[] = _("Please follow the instructions on your\n"
-                                                             "POKéMON Ruby/Sapphire screen.");
+                                                   "{COLOR RED}{SHADOW LIGHT_RED}No apagues la consola ni\n"
+                                                   "el Cable Game Link de Game Boy\nAdvance.");
+static const u8 sText_PleaseFollowInstructionsOnScreen[] = _("Sigue las instrucciones que aparezcan\nen la pantalla de POKéMON Rubí/Zafiro.");
 static const u8 sText_TransmissionFailureTryAgain[] = _("Transmission failure.\n"
                                                         "{COLOR RED}{SHADOW LIGHT_RED}Please try again.");
 

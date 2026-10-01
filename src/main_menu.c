@@ -256,25 +256,25 @@ static const u32 sBirchSpeechShadowGfx[] = INCBIN_U32("graphics/birch_speech/sha
 static const u32 sBirchSpeechBgMap[] = INCBIN_U32("graphics/birch_speech/map.bin.smolTM");
 static const u16 sBirchSpeechBgGradientPal[] = INCBIN_U16("graphics/birch_speech/bg2.gbapal");
 
-static const u8 gText_SaveFileCorrupted[] = _("The save file is corrupted. The\nprevious save file will be loaded.");
-static const u8 gText_SaveFileErased[] = _("The save file has been erased\ndue to corruption or damage.");
+static const u8 gText_SaveFileCorrupted[] = _("El archivo de guardado está\ndañado. Se cargará el anterior.");
+static const u8 gText_SaveFileErased[] = _("El archivo de guardado fue\nborrado por daño o corrupción.");
 static const u8 gJPText_No1MSubCircuit[] = _("1Mサブきばんが ささっていません！");
-static const u8 gText_BatteryRunDry[] = _("The internal battery has run dry.\nThe game can be played.\pHowever, clock-based events will\nno longer occur.");
+static const u8 gText_BatteryRunDry[] = _("La batería interna se agotó.\nEl juego se puede jugar.\pPero los eventos basados en el\nreloj ya no ocurrirán.");
 
-static const u8 gText_MainMenuNewGame[] = _("NEW GAME");
-static const u8 gText_MainMenuContinue[] = _("CONTINUE");
-static const u8 gText_MainMenuOption[] = _("OPTION");
-static const u8 gText_MainMenuMysteryGift[] = _("MYSTERY GIFT");
-static const u8 gText_MainMenuMysteryGift2[] = _("MYSTERY GIFT");
-static const u8 gText_MainMenuMysteryEvents[] = _("MYSTERY EVENTS");
-static const u8 gText_WirelessNotConnected[] = _("The Wireless Adapter is not\nconnected.");
-static const u8 gText_MysteryGiftCantUse[] = _("MYSTERY GIFT can't be used while\nthe Wireless Adapter is attached.");
-static const u8 gText_MysteryEventsCantUse[] = _("MYSTERY EVENTS can't be used while\nthe Wireless Adapter is attached.");
+static const u8 gText_MainMenuNewGame[] = _("NUEVA PARTIDA");
+static const u8 gText_MainMenuContinue[] = _("CONTINUAR");
+static const u8 gText_MainMenuOption[] = _("OPCIÓN");
+static const u8 gText_MainMenuMysteryGift[] = _("REGALO MISTERIOSO");
+static const u8 gText_MainMenuMysteryGift2[] = _("REGALO MISTERIOSO");
+static const u8 gText_MainMenuMysteryEvents[] = _("EVENTOS MISTERIOSOS");
+static const u8 gText_WirelessNotConnected[] = _("El Adaptador Inalámbrico no\nestá conectado.");
+static const u8 gText_MysteryGiftCantUse[] = _("No se puede usar REGALO MISTERIO\ncon el Adaptador Inalámbrico.");
+static const u8 gText_MysteryEventsCantUse[] = _("No se pueden usar EVENTOS\nMISTERIO con el Adaptador.");
 
-static const u8 gText_ContinueMenuPlayer[] = _("PLAYER");
-static const u8 gText_ContinueMenuTime[] = _("TIME");
+static const u8 gText_ContinueMenuPlayer[] = _("JUGADOR");
+static const u8 gText_ContinueMenuTime[] = _("HORA");
 static const u8 gText_ContinueMenuPokedex[] = _("POKéDEX");
-static const u8 gText_ContinueMenuBadges[] = _("BADGES");
+static const u8 gText_ContinueMenuBadges[] = _("MEDALLAS");
 
 #define MENU_LEFT 2
 #define MENU_TOP_WIN0 1

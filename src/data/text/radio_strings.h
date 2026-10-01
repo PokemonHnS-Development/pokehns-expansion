@@ -8,65 +8,65 @@
 // Station Names (displayed at top of radio UI)
 // ==========================================================
 
-static const u8 sRadioStationName_OaksPkmnTalk[]    = _("OAK's POKéMON Talk");
-static const u8 sRadioStationName_PokedexShow[]     = _("POKéDEX Show");
-static const u8 sRadioStationName_PokemonMusic[]    = _("POKéMON Music");
-static const u8 sRadioStationName_LuckyChannel[]    = _("Lucky Channel");
-static const u8 sRadioStationName_BuenasPassword[]  = _("BUENA'S PASSWORD");
+static const u8 sRadioStationName_OaksPkmnTalk[]    = _("Charla POKéMON de OAK");
+static const u8 sRadioStationName_PokedexShow[]     = _("Show de la POKéDEX");
+static const u8 sRadioStationName_PokemonMusic[]    = _("Música POKéMON");
+static const u8 sRadioStationName_LuckyChannel[]    = _("Canal Suerte");
+static const u8 sRadioStationName_BuenasPassword[]  = _("CONTRASEÑA DE BUENA");
 static const u8 sRadioStationName_Unown[]           = _("?????");
-static const u8 sRadioStationName_PlacesAndPeople[] = _("Places & People");
-static const u8 sRadioStationName_LetsAllSing[]     = _("Let's All Sing!");
-static const u8 sRadioStationName_PokeFlute[]       = _("POKé FLUTE");
+static const u8 sRadioStationName_PlacesAndPeople[] = _("Lugares y Gente");
+static const u8 sRadioStationName_LetsAllSing[]     = _("¡Cantemos todos!");
+static const u8 sRadioStationName_PokeFlute[]       = _("POKé FLAUTA");
 
-static const u8 sRadioStationName_HoennSound[]  = _("Hoenn Sound");
+static const u8 sRadioStationName_HoennSound[]  = _("Sonido de Hoenn");
 
 // ==========================================================
 // Hoenn Sound
 // ==========================================================
 
-static const u8 sRadioText_Hoenn1[] = _("A POKéMON melody from a");
-static const u8 sRadioText_Hoenn2[] = _("faraway region called HOENN!");
-static const u8 sRadioText_Hoenn3[] = _("Wild POKéMON from that region");
-static const u8 sRadioText_Hoenn4[] = _("may appear nearby!");
+static const u8 sRadioText_Hoenn1[] = _("Una melodía POKéMON de una");
+static const u8 sRadioText_Hoenn2[] = _("¡región lejana llamada HOENN!");
+static const u8 sRadioText_Hoenn3[] = _("POKéMON salvajes de esa región");
+static const u8 sRadioText_Hoenn4[] = _("¡podría aparecer cerca!");
 
 // ==========================================================
 // POKéDEX Show
 // ==========================================================
 
-static const u8 sRadioText_PokedexShow_Intro[] = _("OAK's POKéDEX SHOW!");
-static const u8 sRadioText_PokedexShow_TodaysPrefix[] = _("OAK: Today's POKéMON is ");
+static const u8 sRadioText_PokedexShow_Intro[] = _("¡LA POKéDEX DE OAK!");
+static const u8 sRadioText_PokedexShow_TodaysPrefix[] = _("OAK: El POKéMON de hoy es ");
 
 // ==========================================================
 // Oak's POKéMON Talk
 // ==========================================================
 
-static const u8 sRadioText_OPT_Intro[] = _("MARY: PROF.OAK's POKéMON TALK!");
-static const u8 sRadioText_OPT_WithMeMary[] = _("With me, MARY!");
+static const u8 sRadioText_OPT_Intro[] = _("MARY: ¡CHARLA POKéMON DE OAK!");
+static const u8 sRadioText_OPT_WithMeMary[] = _("¡Conmigo, MARY!");
 static const u8 sRadioText_OPT_OakPrefix[] = _("OAK: ");
-static const u8 sRadioText_OPT_SeenAround[] = _("may be seen around");
+static const u8 sRadioText_OPT_SeenAround[] = _("puede verse por");
 static const u8 sRadioText_OPT_MaryPrefix[] = _("MARY: ");
 static const u8 sRadioText_OPT_MaryIs[] = _("'s ");
 
 // Pokemon Channel interlude
-static const u8 sRadioText_OPT_PokemonChannel[] = _("POKéMON Channel");
+static const u8 sRadioText_OPT_PokemonChannel[] = _("Canal POKéMON");
 
 // Adverbs (randomly selected)
-static const u8 sRadioText_OPT_Adverb_SweetAdorably[]      = _("sweet and adorably");
-static const u8 sRadioText_OPT_Adverb_WigglySlickly[]      = _("wiggly and slickly");
-static const u8 sRadioText_OPT_Adverb_AptlyNamed[]         = _("aptly named and");
-static const u8 sRadioText_OPT_Adverb_UndeniablyKindOf[]   = _("undeniably kind of");
-static const u8 sRadioText_OPT_Adverb_Unbearably[]         = _("so, so unbearably");
-static const u8 sRadioText_OPT_Adverb_WowImpressively[]    = _("wow, impressively");
-static const u8 sRadioText_OPT_Adverb_AlmostPoisonously[]  = _("almost poisonously");
-static const u8 sRadioText_OPT_Adverb_Sensually[]          = _("ooh, so sensually");
-static const u8 sRadioText_OPT_Adverb_Mischievously[]      = _("so mischievously");
-static const u8 sRadioText_OPT_Adverb_Topically[]          = _("so very topically");
-static const u8 sRadioText_OPT_Adverb_Addictively[]        = _("sure addictively");
-static const u8 sRadioText_OPT_Adverb_LooksInWater[]       = _("looks in water is");
-static const u8 sRadioText_OPT_Adverb_EvolutionMustBe[]    = _("evolution must be");
-static const u8 sRadioText_OPT_Adverb_Provocatively[]      = _("provocatively");
-static const u8 sRadioText_OPT_Adverb_FlippedOut[]         = _("so flipped out and");
-static const u8 sRadioText_OPT_Adverb_HeartMeltingly[]     = _("heart-meltingly");
+static const u8 sRadioText_OPT_Adverb_SweetAdorably[]      = _("dulce y adorablemente");
+static const u8 sRadioText_OPT_Adverb_WigglySlickly[]      = _("ondulante y resbaladizo");
+static const u8 sRadioText_OPT_Adverb_AptlyNamed[]         = _("bien nombrado y");
+static const u8 sRadioText_OPT_Adverb_UndeniablyKindOf[]   = _("indudablemente amable");
+static const u8 sRadioText_OPT_Adverb_Unbearably[]         = _("tan, tan insoportable");
+static const u8 sRadioText_OPT_Adverb_WowImpressively[]    = _("vaya, impresionante");
+static const u8 sRadioText_OPT_Adverb_AlmostPoisonously[]  = _("casi venenosamente");
+static const u8 sRadioText_OPT_Adverb_Sensually[]          = _("oh, tan sensual");
+static const u8 sRadioText_OPT_Adverb_Mischievously[]      = _("tan travieso");
+static const u8 sRadioText_OPT_Adverb_Topically[]          = _("muy acorde al tema");
+static const u8 sRadioText_OPT_Adverb_Addictively[]        = _("seguro que es adictivo");
+static const u8 sRadioText_OPT_Adverb_LooksInWater[]       = _("su aspecto en agua es");
+static const u8 sRadioText_OPT_Adverb_EvolutionMustBe[]    = _("su evolución debe ser");
+static const u8 sRadioText_OPT_Adverb_Provocatively[]      = _("provocativamente");
+static const u8 sRadioText_OPT_Adverb_FlippedOut[]         = _("tan alterado y");
+static const u8 sRadioText_OPT_Adverb_HeartMeltingly[]     = _("tiernamente");
 
 static const u8 *const sRadioText_OPT_Adverbs[] =
 {
@@ -89,22 +89,22 @@ static const u8 *const sRadioText_OPT_Adverbs[] =
 };
 
 // Adjectives (randomly selected)
-static const u8 sRadioText_OPT_Adj_Cute[]           = _("cute.");
-static const u8 sRadioText_OPT_Adj_Weird[]          = _("weird.");
-static const u8 sRadioText_OPT_Adj_Pleasant[]       = _("pleasant.");
-static const u8 sRadioText_OPT_Adj_BoldSortOf[]     = _("bold, sort of.");
-static const u8 sRadioText_OPT_Adj_Frightening[]    = _("frightening.");
-static const u8 sRadioText_OPT_Adj_SuaveDebonair[]  = _("suave & debonair!");
-static const u8 sRadioText_OPT_Adj_Powerful[]        = _("powerful.");
-static const u8 sRadioText_OPT_Adj_Exciting[]        = _("exciting.");
-static const u8 sRadioText_OPT_Adj_Groovy[]          = _("groovy!");
-static const u8 sRadioText_OPT_Adj_Inspiring[]       = _("inspiring.");
-static const u8 sRadioText_OPT_Adj_Friendly[]        = _("friendly.");
-static const u8 sRadioText_OPT_Adj_HotHotHot[]       = _("hot, hot, hot!");
-static const u8 sRadioText_OPT_Adj_Stimulating[]     = _("stimulating.");
-static const u8 sRadioText_OPT_Adj_Guarded[]         = _("guarded.");
-static const u8 sRadioText_OPT_Adj_Lovely[]          = _("lovely.");
-static const u8 sRadioText_OPT_Adj_Speedy[]          = _("speedy.");
+static const u8 sRadioText_OPT_Adj_Cute[]           = _("lindo.");
+static const u8 sRadioText_OPT_Adj_Weird[]          = _("raro.");
+static const u8 sRadioText_OPT_Adj_Pleasant[]       = _("agradable.");
+static const u8 sRadioText_OPT_Adj_BoldSortOf[]     = _("audaz, más o menos.");
+static const u8 sRadioText_OPT_Adj_Frightening[]    = _("aterrador.");
+static const u8 sRadioText_OPT_Adj_SuaveDebonair[]  = _("¡elegante y galán!");
+static const u8 sRadioText_OPT_Adj_Powerful[]        = _("poderoso.");
+static const u8 sRadioText_OPT_Adj_Exciting[]        = _("emocionante.");
+static const u8 sRadioText_OPT_Adj_Groovy[]          = _("¡genial!");
+static const u8 sRadioText_OPT_Adj_Inspiring[]       = _("inspirador.");
+static const u8 sRadioText_OPT_Adj_Friendly[]        = _("amigable.");
+static const u8 sRadioText_OPT_Adj_HotHotHot[]       = _("¡muy, muy sexy!");
+static const u8 sRadioText_OPT_Adj_Stimulating[]     = _("estimulante.");
+static const u8 sRadioText_OPT_Adj_Guarded[]         = _("protegido.");
+static const u8 sRadioText_OPT_Adj_Lovely[]          = _("encantador.");
+static const u8 sRadioText_OPT_Adj_Speedy[]          = _("veloz.");
 
 static const u8 *const sRadioText_OPT_Adjectives[] =
 {
@@ -130,58 +130,58 @@ static const u8 *const sRadioText_OPT_Adjectives[] =
 // POKéMON Music Channel (Ben & Fern)
 // ==========================================================
 
-static const u8 sRadioText_BenIntro[] = _("BEN: POKéMON MUSIC CHANNEL!");
-static const u8 sRadioText_BenIntro2[] = _("It's me, DJ BEN!");
-static const u8 sRadioText_FernIntro[] = _("FERN: POKéMUSIC!");
-static const u8 sRadioText_FernIntro2[] = _("With DJ FERN!");
+static const u8 sRadioText_BenIntro[] = _("BEN: ¡CANAL MUSICAL POKéMON!");
+static const u8 sRadioText_BenIntro2[] = _("¡Soy yo, el DJ BEN!");
+static const u8 sRadioText_FernIntro[] = _("FERN: ¡POKéMÚSICA!");
+static const u8 sRadioText_FernIntro2[] = _("¡Con el DJ FERN!");
 // "Today's {DAY}," built dynamically
-static const u8 sRadioText_BenFern_TodayIs[] = _("Today's ");
-static const u8 sRadioText_BenFern_JamTo[] = _("so let us jam to");
-static const u8 sRadioText_BenFern_ChillTo[] = _("so chill out to");
-static const u8 sRadioText_BenFern_March[] = _("POKéMON March!");
-static const u8 sRadioText_BenFern_Lullaby[] = _("POKéMON Lullaby!");
+static const u8 sRadioText_BenFern_TodayIs[] = _("Hoy es ");
+static const u8 sRadioText_BenFern_JamTo[] = _("así que vamos a sonar");
+static const u8 sRadioText_BenFern_ChillTo[] = _("así que relájate con");
+static const u8 sRadioText_BenFern_March[] = _("¡Marcha POKéMON!");
+static const u8 sRadioText_BenFern_Lullaby[] = _("¡Canción de cuna POKéMON!");
 
 // ==========================================================
 // Lucky Channel
 // ==========================================================
 
-static const u8 sRadioText_LC1[] = _("REED: Yeehaw! How y'all doin'");
-static const u8 sRadioText_LC2[] = _("now? Whether you're up or way");
-static const u8 sRadioText_LC3[] = _("down low, don't you miss the");
-static const u8 sRadioText_LC4[] = _("LUCKY NUMBER SHOW!");
-static const u8 sRadioText_LC5[] = _("This week's Lucky Number is");
+static const u8 sRadioText_LC1[] = _("REED: ¡Yeehaw! ¿Cómo están");
+static const u8 sRadioText_LC2[] = _("todos hoy? No importa si");
+static const u8 sRadioText_LC3[] = _("están bien o mal, ¡no se");
+static const u8 sRadioText_LC4[] = _("pierdan el NÚMERO DE LA SUERTE!");
+static const u8 sRadioText_LC5[] = _("El Número Suerte de la semana es");
 // "{number}!" built dynamically
-static const u8 sRadioText_LC_Repeat[] = _("I'll repeat that!");
-static const u8 sRadioText_LC_Match[] = _("Match it and go to");
-static const u8 sRadioText_LC_Tower[] = _("the RADIO TOWER!");
-static const u8 sRadioText_LC_Drag1[] = _("…Repeating myself");
-static const u8 sRadioText_LC_Drag2[] = _("gets to be a drag…");
+static const u8 sRadioText_LC_Repeat[] = _("¡Lo repito!");
+static const u8 sRadioText_LC_Match[] = _("¡Si coinciden, vayan a la");
+static const u8 sRadioText_LC_Tower[] = _("TORRE RADIO!");
+static const u8 sRadioText_LC_Drag1[] = _("…Repetirme a mí mismo");
+static const u8 sRadioText_LC_Drag2[] = _("es un fastidio…");
 
 // ==========================================================
 // Places and People
 // ==========================================================
 
-static const u8 sRadioText_PnP_Intro[] = _("PLACES AND PEOPLE! Brought");
-static const u8 sRadioText_PnP_Intro2[] = _("to you by me, DJ LILY!");
+static const u8 sRadioText_PnP_Intro[] = _("¡LUGARES Y GENTE! Traído");
+static const u8 sRadioText_PnP_Intro2[] = _("para ustedes por mí, ¡DJ LILY!");
 static const u8 sRadioText_PnP_Space[] = _(" ");
 
 // People adjectives
-static const u8 sRadioText_PnP_Cute[]       = _("is cute.");
-static const u8 sRadioText_PnP_Lazy[]       = _("is sort of lazy.");
-static const u8 sRadioText_PnP_Happy[]      = _("is always happy.");
-static const u8 sRadioText_PnP_Noisy[]      = _("is quite noisy.");
-static const u8 sRadioText_PnP_Precocious[] = _("is precocious.");
-static const u8 sRadioText_PnP_Bold[]       = _("is somewhat bold.");
-static const u8 sRadioText_PnP_Picky[]      = _("is too picky!");
-static const u8 sRadioText_PnP_SortOfOK[]   = _("is sort of OK.");
-static const u8 sRadioText_PnP_SoSo[]       = _("is just so-so.");
-static const u8 sRadioText_PnP_Great[]       = _("is actually great.");
-static const u8 sRadioText_PnP_MyType[]      = _("is just my type.");
-static const u8 sRadioText_PnP_Cool[]        = _("is so cool, no?");
-static const u8 sRadioText_PnP_Inspiring[]   = _("is inspiring!");
-static const u8 sRadioText_PnP_Weird[]       = _("is kind of weird.");
-static const u8 sRadioText_PnP_RightForMe[]  = _("is right for me?");
-static const u8 sRadioText_PnP_Odd[]         = _("is definitely odd!");
+static const u8 sRadioText_PnP_Cute[]       = _("es lindo.");
+static const u8 sRadioText_PnP_Lazy[]       = _("es algo perezoso.");
+static const u8 sRadioText_PnP_Happy[]      = _("siempre está feliz.");
+static const u8 sRadioText_PnP_Noisy[]      = _("es bastante ruidoso.");
+static const u8 sRadioText_PnP_Precocious[] = _("es precoz.");
+static const u8 sRadioText_PnP_Bold[]       = _("es algo audaz.");
+static const u8 sRadioText_PnP_Picky[]      = _("¡es muy exigente!");
+static const u8 sRadioText_PnP_SortOfOK[]   = _("está más o menos bien.");
+static const u8 sRadioText_PnP_SoSo[]       = _("es simplemente regular.");
+static const u8 sRadioText_PnP_Great[]       = _("en realidad es genial.");
+static const u8 sRadioText_PnP_MyType[]      = _("es justo mi tipo.");
+static const u8 sRadioText_PnP_Cool[]        = _("es genial, ¿no?");
+static const u8 sRadioText_PnP_Inspiring[]   = _("¡es inspirador!");
+static const u8 sRadioText_PnP_Weird[]       = _("es algo raro.");
+static const u8 sRadioText_PnP_RightForMe[]  = _("¿es el ideal para mí?");
+static const u8 sRadioText_PnP_Odd[]         = _("¡definitivamente es raro!");
 
 static const u8 *const sRadioText_PnP_PeopleAdj[] =
 {
@@ -208,14 +208,14 @@ static const u8 *const sRadioText_PnP_PeopleAdj[] =
 // ==========================================================
 
 static const u8 sRadioStationName_Rocket[] = _("TEAM ROCKET");
-static const u8 sRadioText_Rocket1[]  = _("… …Ahem, we are");
-static const u8 sRadioText_Rocket2[]  = _("TEAM ROCKET!");
-static const u8 sRadioText_Rocket3[]  = _("After three years");
-static const u8 sRadioText_Rocket4[]  = _("of preparation, we");
-static const u8 sRadioText_Rocket5[]  = _("have risen again");
-static const u8 sRadioText_Rocket6[]  = _("from the ashes!");
-static const u8 sRadioText_Rocket7[]  = _("GIOVANNI!");
-static const u8 sRadioText_Rocket8[]  = _("Can you hear?");
+static const u8 sRadioText_Rocket1[]  = _("… …Ejem, nosotros somos");
+static const u8 sRadioText_Rocket2[]  = _("¡el TEAM ROCKET!");
+static const u8 sRadioText_Rocket3[]  = _("Tras tres años");
+static const u8 sRadioText_Rocket4[]  = _("de preparación, nosotros");
+static const u8 sRadioText_Rocket5[]  = _("hemos resurgido");
+static const u8 sRadioText_Rocket6[]  = _("¡de las cenizas!");
+static const u8 sRadioText_Rocket7[]  = _("¡GIOVANNI!");
+static const u8 sRadioText_Rocket8[]  = _("¿Puedes oírnos?");
 static const u8 sRadioText_Rocket9[]  = _("");
 static const u8 sRadioText_Rocket10[] = _("");
 
@@ -223,142 +223,142 @@ static const u8 sRadioText_Rocket10[] = _("");
 // Buena's Password
 // ==========================================================
 
-static const u8 sRadioText_Buena1[] = _("BUENA: BUENA here!");
-static const u8 sRadioText_Buena2[] = _("Today's password!");
-static const u8 sRadioText_Buena3[] = _("Let me think… It's");
+static const u8 sRadioText_Buena1[] = _("BUENA: ¡Aquí BUENA!");
+static const u8 sRadioText_Buena2[] = _("¡La clave de hoy!");
+static const u8 sRadioText_Buena3[] = _("Déjame pensar... Es");
 // "{password}!" built dynamically with STR_VAR_1
-static const u8 sRadioText_Buena4[] = _("{STR_VAR_1}!");
-static const u8 sRadioText_Buena5[] = _("Don't forget it! I'm in");
-static const u8 sRadioText_Buena6[] = _("GOLDENROD's RADIO TOWER!");
+static const u8 sRadioText_Buena4[] = _("¡{STR_VAR_1}!");
+static const u8 sRadioText_Buena5[] = _("¡No la olvides! Estoy en");
+static const u8 sRadioText_Buena6[] = _("¡la TORRE RADIO de CIUDAD TRIGAL!");
 
 
 // ==========================================================
 // Buena's Password Categories & Options
 // ==========================================================
 
-static const u8 sRadioBuenaPassword_NewBarkTown[]     = _("NEW BARK TOWN");
-static const u8 sRadioBuenaPassword_CherrygroveCity[]  = _("CHERRYGROVE CITY");
-static const u8 sRadioBuenaPassword_AzaleaTown[]      = _("AZALEA TOWN");
-static const u8 sRadioBuenaPassword_Flying[]          = _("FLYING");
-static const u8 sRadioBuenaPassword_Bug[]             = _("BUG");
-static const u8 sRadioBuenaPassword_Grass[]           = _("GRASS");
-static const u8 sRadioBuenaPassword_PkmnTalk[]        = _("POKéMON Talk");
-static const u8 sRadioBuenaPassword_PkmnMusic[]       = _("POKéMON Music");
-static const u8 sRadioBuenaPassword_LuckyChannel[]    = _("Lucky Channel");
+static const u8 sRadioBuenaPassword_NewBarkTown[]     = _("PUEBLO PRIMAVERA");
+static const u8 sRadioBuenaPassword_CherrygroveCity[]  = _("CIUDAD CEREZO");
+static const u8 sRadioBuenaPassword_AzaleaTown[]      = _("PUEBLO AZALEA");
+static const u8 sRadioBuenaPassword_Flying[]          = _("VOLADOR");
+static const u8 sRadioBuenaPassword_Bug[]             = _("BICHO");
+static const u8 sRadioBuenaPassword_Grass[]           = _("PLANTA");
+static const u8 sRadioBuenaPassword_PkmnTalk[]        = _("Charla POKéMON");
+static const u8 sRadioBuenaPassword_PkmnMusic[]       = _("Música POKéMON");
+static const u8 sRadioBuenaPassword_LuckyChannel[]    = _("Canal Suerte");
 
 // ==========================================================
 // Oak's POKéMON Talk - Special Reports
 // ==========================================================
 
-static const u8 sOPT_Report_Clefairy_0[]  = _("MARY: Tonight, a rare moonlight");
-static const u8 sOPT_Report_Clefairy_1[]  = _("moment on POKéMON TALK!");
-static const u8 sOPT_Report_Clefairy_2[]  = _("OAK: We're spotlighting the");
-static const u8 sOPT_Report_Clefairy_3[]  = _("mystical CLEFAIRY!");
-static const u8 sOPT_Report_Clefairy_4[]  = _("They gather at MT.MOON");
-static const u8 sOPT_Report_Clefairy_5[]  = _("under full moons.");
-static const u8 sOPT_Report_Clefairy_6[]  = _("MARY: They DANCE in circles!");
-static const u8 sOPT_Report_Clefairy_7[]  = _("So adorably weird!");
-static const u8 sOPT_Report_Clefairy_8[]  = _("OAK: A timeless mystery");
-static const u8 sOPT_Report_Clefairy_9[]  = _("and a sight to behold!");
+static const u8 sOPT_Report_Clefairy_0[]  = _("MARY: ¡Esta noche, un raro momento");
+static const u8 sOPT_Report_Clefairy_1[]  = _("de luna en CHARLA POKéMON!");
+static const u8 sOPT_Report_Clefairy_2[]  = _("OAK: ¡Hablaremos sobre el");
+static const u8 sOPT_Report_Clefairy_3[]  = _("místico CLEFAIRY!");
+static const u8 sOPT_Report_Clefairy_4[]  = _("Se reúnen en el MT.MOON");
+static const u8 sOPT_Report_Clefairy_5[]  = _("bajo las lunas llenas.");
+static const u8 sOPT_Report_Clefairy_6[]  = _("MARY: ¡BAILAN en círculos!");
+static const u8 sOPT_Report_Clefairy_7[]  = _("¡Qué raro y adorable!");
+static const u8 sOPT_Report_Clefairy_8[]  = _("OAK: Un misterio eterno");
+static const u8 sOPT_Report_Clefairy_9[]  = _("¡y un espectáculo increíble!");
 
-static const u8 sOPT_Report_Lapras_0[]  = _("MARY: A gentle giant takes");
-static const u8 sOPT_Report_Lapras_1[]  = _("the stage on today's show!");
-static const u8 sOPT_Report_Lapras_2[]  = _("OAK: It's the ocean ferry,");
-static const u8 sOPT_Report_Lapras_3[]  = _("our beloved LAPRAS!");
-static const u8 sOPT_Report_Lapras_4[]  = _("Seen in UNION CAVE, but");
-static const u8 sOPT_Report_Lapras_5[]  = _("nowhere else. How curious!");
-static const u8 sOPT_Report_Lapras_6[]  = _("MARY: So rare and peaceful!");
-static const u8 sOPT_Report_Lapras_7[]  = _("And it sings, too!");
-static const u8 sOPT_Report_Lapras_8[]  = _("OAK: Some say its songs calm");
-static const u8 sOPT_Report_Lapras_9[]  = _("the soul of the sea.");
+static const u8 sOPT_Report_Lapras_0[]  = _("MARY: ¡Un gigante gentil");
+static const u8 sOPT_Report_Lapras_1[]  = _("está hoy en nuestro show!");
+static const u8 sOPT_Report_Lapras_2[]  = _("OAK: Es el ferry del océano,");
+static const u8 sOPT_Report_Lapras_3[]  = _("¡nuestro querido LAPRAS!");
+static const u8 sOPT_Report_Lapras_4[]  = _("Se ve en la CUEVA UNIÓN, pero");
+static const u8 sOPT_Report_Lapras_5[]  = _("en ningún otro lugar. ¡Curioso!");
+static const u8 sOPT_Report_Lapras_6[]  = _("MARY: ¡Tan raro y pacífico!");
+static const u8 sOPT_Report_Lapras_7[]  = _("¡Y también canta!");
+static const u8 sOPT_Report_Lapras_8[]  = _("OAK: Dicen que sus canciones");
+static const u8 sOPT_Report_Lapras_9[]  = _("calman el alma del mar.");
 
-static const u8 sOPT_Report_Ampharos_0[]  = _("MARY: Welcome back, everyone!");
-static const u8 sOPT_Report_Ampharos_1[]  = _("Time for POKéMON TALK!");
-static const u8 sOPT_Report_Ampharos_2[]  = _("OAK: Let's shine a light on");
-static const u8 sOPT_Report_Ampharos_3[]  = _("our friend AMPHAROS!");
-static const u8 sOPT_Report_Ampharos_4[]  = _("Its bright tail glows through");
-static const u8 sOPT_Report_Ampharos_5[]  = _("fog to guide lost folks.");
-static const u8 sOPT_Report_Ampharos_6[]  = _("MARY: Powerful, elegant,");
-static const u8 sOPT_Report_Ampharos_7[]  = _("and undeniably friendly!");
-static const u8 sOPT_Report_Ampharos_8[]  = _("OAK: A key part of many");
-static const u8 sOPT_Report_Ampharos_9[]  = _("lighthouse stories!");
+static const u8 sOPT_Report_Ampharos_0[]  = _("MARY: ¡Bienvenidos todos!");
+static const u8 sOPT_Report_Ampharos_1[]  = _("¡Es hora de CHARLA POKéMON!");
+static const u8 sOPT_Report_Ampharos_2[]  = _("OAK: ¡Hablemos un poco sobre");
+static const u8 sOPT_Report_Ampharos_3[]  = _("nuestro amigo AMPHAROS!");
+static const u8 sOPT_Report_Ampharos_4[]  = _("Su cola brilla entre la niebla");
+static const u8 sOPT_Report_Ampharos_5[]  = _("para guiar a los perdidos.");
+static const u8 sOPT_Report_Ampharos_6[]  = _("MARY: ¡Poderoso, elegante");
+static const u8 sOPT_Report_Ampharos_7[]  = _("y muy amigable!");
+static const u8 sOPT_Report_Ampharos_8[]  = _("OAK: ¡Es clave en muchas");
+static const u8 sOPT_Report_Ampharos_9[]  = _("historias de faros!");
 
-static const u8 sOPT_Report_Sudowoodo_0[]  = _("MARY: Up next, a real oddball");
-static const u8 sOPT_Report_Sudowoodo_1[]  = _("on ROUTE 36...");
-static const u8 sOPT_Report_Sudowoodo_2[]  = _("OAK: SUDOWOODO! Looks like a");
-static const u8 sOPT_Report_Sudowoodo_3[]  = _("tree, but isn't one!");
-static const u8 sOPT_Report_Sudowoodo_4[]  = _("It blocks the road and won't");
-static const u8 sOPT_Report_Sudowoodo_5[]  = _("budge without water.");
-static const u8 sOPT_Report_Sudowoodo_6[]  = _("MARY: It only reacts to a");
+static const u8 sOPT_Report_Sudowoodo_0[]  = _("MARY: Ahora, alguien muy raro");
+static const u8 sOPT_Report_Sudowoodo_1[]  = _("en la RUTA 36...");
+static const u8 sOPT_Report_Sudowoodo_2[]  = _("OAK: ¡SUDOWOODO! Parece un");
+static const u8 sOPT_Report_Sudowoodo_3[]  = _("árbol, ¡pero no lo es!");
+static const u8 sOPT_Report_Sudowoodo_4[]  = _("Bloquea el camino y no se");
+static const u8 sOPT_Report_Sudowoodo_5[]  = _("mueve sin agua.");
+static const u8 sOPT_Report_Sudowoodo_6[]  = _("MARY: Solo reacciona a un");
 static const u8 sOPT_Report_Sudowoodo_7[]  = _("SQUIRTBOTTLE!");
-static const u8 sOPT_Report_Sudowoodo_8[]  = _("OAK: That's no bush, it's a");
-static const u8 sOPT_Report_Sudowoodo_9[]  = _("ROCK-type in disguise!");
+static const u8 sOPT_Report_Sudowoodo_8[]  = _("OAK: No es un arbusto, ¡es un");
+static const u8 sOPT_Report_Sudowoodo_9[]  = _("tipo ROCA disfrazado!");
 
-static const u8 sOPT_Report_RedGyarados_0[]  = _("MARY: Today's story is a");
-static const u8 sOPT_Report_RedGyarados_1[]  = _("shocking one from JOHTO!");
-static const u8 sOPT_Report_RedGyarados_2[]  = _("OAK: Trainers spotted a RED");
-static const u8 sOPT_Report_RedGyarados_3[]  = _("GYARADOS at LAKE OF RAGE!");
-static const u8 sOPT_Report_RedGyarados_4[]  = _("Unlike the usual blue ones,");
-static const u8 sOPT_Report_RedGyarados_5[]  = _("this one's bright crimson!");
-static const u8 sOPT_Report_RedGyarados_6[]  = _("MARY: People say it's linked");
-static const u8 sOPT_Report_RedGyarados_7[]  = _("to some strange radio waves!");
-static const u8 sOPT_Report_RedGyarados_8[]  = _("OAK: A mysterious evolution…");
-static const u8 sOPT_Report_RedGyarados_9[]  = _("Possibly unnatural.");
+static const u8 sOPT_Report_RedGyarados_0[]  = _("MARY: ¡La historia de hoy es");
+static const u8 sOPT_Report_RedGyarados_1[]  = _("impactante y viene de JOHTO!");
+static const u8 sOPT_Report_RedGyarados_2[]  = _("OAK: Entrenadores vieron un RED");
+static const u8 sOPT_Report_RedGyarados_3[]  = _("¡GYARADOS en el LAGO DE LA FURIA!");
+static const u8 sOPT_Report_RedGyarados_4[]  = _("A diferencia de los azules,");
+static const u8 sOPT_Report_RedGyarados_5[]  = _("¡este es de un rojo brillante!");
+static const u8 sOPT_Report_RedGyarados_6[]  = _("MARY: Dicen que está ligado");
+static const u8 sOPT_Report_RedGyarados_7[]  = _("¡a unas ondas de radio extrañas!");
+static const u8 sOPT_Report_RedGyarados_8[]  = _("OAK: Una evolución misteriosa...");
+static const u8 sOPT_Report_RedGyarados_9[]  = _("Posiblemente artificial.");
 
-static const u8 sOPT_Report_Unown_0[]  = _("MARY: Ever visited the RUINS");
-static const u8 sOPT_Report_Unown_1[]  = _("OF ALPH? Spooky stuff!");
-static const u8 sOPT_Report_Unown_2[]  = _("OAK: Strange symbols line the");
-static const u8 sOPT_Report_Unown_3[]  = _("walls, like ancient runes.");
-static const u8 sOPT_Report_Unown_4[]  = _("Inside, you'll find UNOWN…");
-static const u8 sOPT_Report_Unown_5[]  = _("each shaped like letters!");
-static const u8 sOPT_Report_Unown_6[]  = _("MARY: They spell things,");
-static const u8 sOPT_Report_Unown_7[]  = _("maybe? Or just freak us out!");
-static const u8 sOPT_Report_Unown_8[]  = _("OAK: A true puzzle of nature,");
-static const u8 sOPT_Report_Unown_9[]  = _("still unsolved to this day.");
+static const u8 sOPT_Report_Unown_0[]  = _("MARY: ¿Has ido a las RUINAS");
+static const u8 sOPT_Report_Unown_1[]  = _("DE ALFA? ¡Dan mucho miedo!");
+static const u8 sOPT_Report_Unown_2[]  = _("OAK: Hay símbolos extraños en");
+static const u8 sOPT_Report_Unown_3[]  = _("los muros, como runas antiguas.");
+static const u8 sOPT_Report_Unown_4[]  = _("Dentro hallarás a UNOWN...");
+static const u8 sOPT_Report_Unown_5[]  = _("¡cada una tiene forma de letra!");
+static const u8 sOPT_Report_Unown_6[]  = _("MARY: Forman palabras,");
+static const u8 sOPT_Report_Unown_7[]  = _("¡¿quizás?! ¡O solo nos asustan!");
+static const u8 sOPT_Report_Unown_8[]  = _("OAK: Un enigma de la naturaleza,");
+static const u8 sOPT_Report_Unown_9[]  = _("aún sin resolver hoy en día.");
 
-static const u8 sOPT_Report_Snubbull_0[]  = _("MARY: GOLDENROD residents are");
-static const u8 sOPT_Report_Snubbull_1[]  = _("searching high and low!");
-static const u8 sOPT_Report_Snubbull_2[]  = _("OAK: A SNUBBULL has gone rogue");
-static const u8 sOPT_Report_Snubbull_3[]  = _("and is on the run!");
-static const u8 sOPT_Report_Snubbull_4[]  = _("Usually shy and fussy, it's");
-static const u8 sOPT_Report_Snubbull_5[]  = _("been seen near the station.");
-static const u8 sOPT_Report_Snubbull_6[]  = _("MARY: Maybe it's chasing");
-static const u8 sOPT_Report_Snubbull_7[]  = _("love… or just adventure!");
-static const u8 sOPT_Report_Snubbull_8[]  = _("OAK: Keep your eyes peeled,");
-static const u8 sOPT_Report_Snubbull_9[]  = _("and your leash ready.");
+static const u8 sOPT_Report_Snubbull_0[]  = _("MARY: ¡La gente de CIUDAD TRIGAL");
+static const u8 sOPT_Report_Snubbull_1[]  = _("lo busca por todas partes!");
+static const u8 sOPT_Report_Snubbull_2[]  = _("OAK: Un SNUBBULL se ha rebelado");
+static const u8 sOPT_Report_Snubbull_3[]  = _("¡y anda escapando!");
+static const u8 sOPT_Report_Snubbull_4[]  = _("Suele ser tímido y quisquilloso,");
+static const u8 sOPT_Report_Snubbull_5[]  = _("lo vieron cerca de la estación.");
+static const u8 sOPT_Report_Snubbull_6[]  = _("MARY: Tal vez esté persiguiendo");
+static const u8 sOPT_Report_Snubbull_7[]  = _("¡amor... o solo aventura!");
+static const u8 sOPT_Report_Snubbull_8[]  = _("OAK: Mantén los ojos abiertos,");
+static const u8 sOPT_Report_Snubbull_9[]  = _("y tu correa lista.");
 
-static const u8 sOPT_Report_Slowpoke_0[]  = _("MARY: Big news from AZALEA");
-static const u8 sOPT_Report_Slowpoke_1[]  = _("TOWN this week!");
-static const u8 sOPT_Report_Slowpoke_2[]  = _("OAK: SLOWPOKE have returned");
-static const u8 sOPT_Report_Slowpoke_3[]  = _("to their well after a crisis!");
-static const u8 sOPT_Report_Slowpoke_4[]  = _("TEAM ROCKET had been cutting");
-static const u8 sOPT_Report_Slowpoke_5[]  = _("off their tails! Horrible!");
-static const u8 sOPT_Report_Slowpoke_6[]  = _("MARY: But a brave young");
-static const u8 sOPT_Report_Slowpoke_7[]  = _("trainer shut them down!");
-static const u8 sOPT_Report_Slowpoke_8[]  = _("OAK: The SLOWPOKE are safe");
-static const u8 sOPT_Report_Slowpoke_9[]  = _("and happily dozing again.");
+static const u8 sOPT_Report_Slowpoke_0[]  = _("MARY: ¡Grandes noticias de");
+static const u8 sOPT_Report_Slowpoke_1[]  = _("PUEBLO AZALEA esta semana!");
+static const u8 sOPT_Report_Slowpoke_2[]  = _("OAK: ¡Los SLOWPOKE volvieron");
+static const u8 sOPT_Report_Slowpoke_3[]  = _("a su pozo tras una crisis!");
+static const u8 sOPT_Report_Slowpoke_4[]  = _("¡El TEAM ROCKET les cortaba");
+static const u8 sOPT_Report_Slowpoke_5[]  = _("las colas! ¡Horrible!");
+static const u8 sOPT_Report_Slowpoke_6[]  = _("MARY: ¡Pero un joven y");
+static const u8 sOPT_Report_Slowpoke_7[]  = _("valiente ENTRENADOR los detuvo!");
+static const u8 sOPT_Report_Slowpoke_8[]  = _("OAK: Los SLOWPOKE están a salvo");
+static const u8 sOPT_Report_Slowpoke_9[]  = _("y vuelve a dormir felizmente.");
 
-static const u8 sOPT_Report_LavenderTower_0[]  = _("MARY: LAVENDER TOWN's tower");
-static const u8 sOPT_Report_LavenderTower_1[]  = _("has changed tunes!");
-static const u8 sOPT_Report_LavenderTower_2[]  = _("OAK: The old ghost tower is");
-static const u8 sOPT_Report_LavenderTower_3[]  = _("now a RADIO STATION!");
-static const u8 sOPT_Report_LavenderTower_4[]  = _("Some locals say it still");
-static const u8 sOPT_Report_LavenderTower_5[]  = _("feels… spooky.");
-static const u8 sOPT_Report_LavenderTower_6[]  = _("MARY: I swear I saw a GASTLY");
-static const u8 sOPT_Report_LavenderTower_7[]  = _("near the mic booth!");
-static const u8 sOPT_Report_LavenderTower_8[]  = _("OAK: Might be static…");
-static const u8 sOPT_Report_LavenderTower_9[]  = _("or specters!");
+static const u8 sOPT_Report_LavenderTower_0[]  = _("MARY: La torre de PUEBLO LAVANDA");
+static const u8 sOPT_Report_LavenderTower_1[]  = _("¡ha cambiado su sintonía!");
+static const u8 sOPT_Report_LavenderTower_2[]  = _("OAK: La vieja torre fantasma");
+static const u8 sOPT_Report_LavenderTower_3[]  = _("¡ahora es una ESTACIÓN DE RADIO!");
+static const u8 sOPT_Report_LavenderTower_4[]  = _("Algunos locales dicen que aún");
+static const u8 sOPT_Report_LavenderTower_5[]  = _("se siente... espeluznante.");
+static const u8 sOPT_Report_LavenderTower_6[]  = _("MARY: ¡Juro que vi un GASTLY");
+static const u8 sOPT_Report_LavenderTower_7[]  = _("cerca de la cabina del micro!");
+static const u8 sOPT_Report_LavenderTower_8[]  = _("OAK: Podría ser estática...");
+static const u8 sOPT_Report_LavenderTower_9[]  = _("¡o espectros!");
 
-static const u8 sOPT_Report_Tentacruel_0[]  = _("MARY: Weird news from the");
-static const u8 sOPT_Report_Tentacruel_1[]  = _("WHIRL ISLANDS today!");
-static const u8 sOPT_Report_Tentacruel_2[]  = _("OAK: TENTACRUEL have been");
-static const u8 sOPT_Report_Tentacruel_3[]  = _("surrounding cave entrances!");
-static const u8 sOPT_Report_Tentacruel_4[]  = _("They're massive, and acting");
-static const u8 sOPT_Report_Tentacruel_5[]  = _("almost territorial.");
-static const u8 sOPT_Report_Tentacruel_6[]  = _("MARY: They block the way");
-static const u8 sOPT_Report_Tentacruel_7[]  = _("without attacking…");
-static const u8 sOPT_Report_Tentacruel_8[]  = _("OAK: As if guarding something");
-static const u8 sOPT_Report_Tentacruel_9[]  = _("deep beneath the waves.");
+static const u8 sOPT_Report_Tentacruel_0[]  = _("MARY: Noticias raras de la");
+static const u8 sOPT_Report_Tentacruel_1[]  = _("¡ISLAS REMOLINO hoy!");
+static const u8 sOPT_Report_Tentacruel_2[]  = _("OAK: Los TENTACRUEL han");
+static const u8 sOPT_Report_Tentacruel_3[]  = _("rodeado las cuevas!");
+static const u8 sOPT_Report_Tentacruel_4[]  = _("Son enormes y actúan");
+static const u8 sOPT_Report_Tentacruel_5[]  = _("como si fueran territoriales.");
+static const u8 sOPT_Report_Tentacruel_6[]  = _("MARY: Bloquean el camino");
+static const u8 sOPT_Report_Tentacruel_7[]  = _("sin atacar...");
+static const u8 sOPT_Report_Tentacruel_8[]  = _("OAK: Como si guardaran algo");
+static const u8 sOPT_Report_Tentacruel_9[]  = _("bajo las profundidades.");
 
 #define OPT_REPORT_LINES 10
 #define NUM_OPT_REPORTS 10

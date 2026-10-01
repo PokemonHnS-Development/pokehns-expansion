@@ -512,11 +512,11 @@ static void Task_FirstBattleEnterParty_RunPrinterMsg2(u8 taskId);
 static void Task_FirstBattleEnterParty_FadeNormal(u8 taskId);
 static void Task_FirstBattleEnterParty_WaitFadeNormal(u8 taskId);
 
-static const u8 sText_askText[] = _("Would you like to change {STR_VAR_1}'s\nability to {STR_VAR_2}?");
-static const u8 sText_doneText[] = _("{STR_VAR_1}'s ability became\n{STR_VAR_2}!{PAUSE_UNTIL_PRESS}");
-static const u8 sText_BasePointsResetToZero[] = _("{STR_VAR_1}'s base points\nwere all reset to zero!{PAUSE_UNTIL_PRESS}");
-static const u8 sText_CannotSendMonToBoxHM[] = _("Cannot send that mon to the box,\nbecause it knows a HM move.{PAUSE_UNTIL_PRESS}");
-static const u8 sText_CannotSendMonToBoxPartner[] = _("Cannot send a mon that doesn't\nbelong to you to the box.{PAUSE_UNTIL_PRESS}");
+static const u8 sText_askText[] = _("¿Quieres cambiar la habilidad\nde {STR_VAR_1} a {STR_VAR_2}?");
+static const u8 sText_doneText[] = _("La habilidad de {STR_VAR_1}\n¡pasó a ser {STR_VAR_2}!{PAUSE_UNTIL_PRESS}");
+static const u8 sText_BasePointsResetToZero[] = _("Los puntos base de {STR_VAR_1}\n¡se han reiniciado a cero!{PAUSE_UNTIL_PRESS}");
+static const u8 sText_CannotSendMonToBoxHM[] = _("No puedes enviar ese POKéMON\nal PC, pues sabe un movimiento MO.{PAUSE_UNTIL_PRESS}");
+static const u8 sText_CannotSendMonToBoxPartner[] = _("No puedes enviar al PC un\nPOKéMON que no sea tuyo.{PAUSE_UNTIL_PRESS}");
 
 // static const data
 #include "data/party_menu.h"
@@ -5197,8 +5197,8 @@ void ItemUseCB_AbilityPatch(u8 taskId, TaskFunc task)
 
 void Task_Mint(u8 taskId)
 {
-    static const u8 sText_askText[] = _("It might affect {STR_VAR_1}'s stats.\nAre you sure you want to use it?");
-    static const u8 sText_doneText[] = _("{STR_VAR_1}'s stats may have changed due\nto the effects of the {STR_VAR_2}!{PAUSE_UNTIL_PRESS}");
+    static const u8 sText_askText[] = _("Podría afectar los stats de {STR_VAR_1}.\n¿Seguro que quieres usarlo?");
+    static const u8 sText_doneText[] = _("Los stats de {STR_VAR_1} pudieron\n¡a los efectos de {STR_VAR_2}!{PAUSE_UNTIL_PRESS}");
     s16 *data = gTasks[taskId].data;
 
     switch (tState)
@@ -6144,7 +6144,7 @@ static void BufferMonStatsToTaskData(struct Pokemon *mon, s16 *data)
 
 void Task_DynamaxCandy(u8 taskId)
 {
-    static const u8 sText_doneText[] = _("{STR_VAR_1}'s Dynamax Level\nincreased by 1!{PAUSE_UNTIL_PRESS}");
+    static const u8 sText_doneText[] = _("¡El Nivel Dynamax de {STR_VAR_1}\nha subido en 1!{PAUSE_UNTIL_PRESS}");
     s16 *data = gTasks[taskId].data;
 
     switch (tState)
@@ -6997,7 +6997,7 @@ void ItemUseCB_PokeBall(u8 taskId, TaskFunc task)
     struct Pokemon *mon = &gPlayerParty[gPartyMenu.slotId];
     u16 currBall = GetMonData(mon, MON_DATA_POKEBALL);
     u16 newBall = ItemIdToBallId(gSpecialVar_ItemId);
-    static const u8 sText_MonBallWasChanged[] = _("{STR_VAR_1} was put in the {STR_VAR_2}.{PAUSE_UNTIL_PRESS}");
+    static const u8 sText_MonBallWasChanged[] = _("{STR_VAR_1} se guardó en {STR_VAR_2}.{PAUSE_UNTIL_PRESS}");
 
     if (currBall == newBall)
     {
@@ -8422,7 +8422,7 @@ void CursorCb_MoveItem(u8 taskId)
     {
         gPartyMenu.action = PARTY_ACTION_SWITCH;
 
-        // show "Move item to where" in bottom left
+        // show "¿A dónde mover el objeto?" in bottom left
         DisplayPartyMenuStdMessage(PARTY_MSG_MOVE_ITEM_WHERE);
         // update color of first selected box
         AnimatePartySlot(gPartyMenu.slotId, 1);

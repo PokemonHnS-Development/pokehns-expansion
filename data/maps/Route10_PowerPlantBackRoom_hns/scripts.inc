@@ -60,41 +60,31 @@ Route10_PowerPlantBackRoom_EventScript_Engineer::
 	end
 
 Route10_PowerPlantBackRoom_Text_ManagerWhoWouldRuinMyGenerator:
-	.string "MANAGER: I, I, I'm ready to blast\n"
-	.string "someone!\p"
-	.string "Who would dare ruin my\n"
-	.string "generator?\p"
-	.string "I spent so much time on it!\p"
-	.string "If I catch him, he's going to\n"
-	.string "get a taste of my ZAP CANNON!$"
+	.string "ENCARGADO: ¡E, e, estoy listo para\nelectrocutar a alguien!\p¿Quién se atrevió a arruinar\nmi generador?\p¡Le dediqué muchísimo tiempo!\pSi lo atrapo, ¡va a probar\nmi ELECTROCAÑÓN!$"
 
 Route10_PowerPlantBackRoom_Text_ManagerIWontForgiveCulprit:
-	.string "MANAGER: I won't forgive him!\p"
-	.string "The culprit can cry and\n"
-	.string "apologize,\p"
-	.string "but I'll still hammer him!\p"
-	.string "Gahahahah!$"
+	.string "ENCARGADO: ¡No lo perdonaré!\pEl culpable puede llorar y\ndisculparse,\p¡pero igual lo machacaré!\p¡Jajajajá!$"
 
 Route10_PowerPlantBackRoom_Text_ManagerThatsThePart:
-	.string "MANAGER: Ah! Yeah!\p"
-	.string "That's the missing PART from my\n"
-	.string "beloved generator! You found it?$"
+	.string "GERENTE: ¡Ah! ¡Sí!\p"
+	.string "¡Es la PIEZA que le faltaba a mi\n"
+	.string "querido generador! ¿La hallaste?$"
 
 Route10_PowerPlantBackRoom_Text_ManagerTakeThisTM:
-	.string "Wahah! Thanks!\p"
-	.string "Here! Take this TM as a reward!$"
+	.string "¡Jajaja! ¡Gracias!\p"
+	.string "¡Toma esta MT como recompensa!$"
 
 Route10_PowerPlantBackRoom_Text_ManagerTM07IsZapCannon:
-	.string "MANAGER: That TM is THUNDER.\p"
-	.string "It's a powerful technique!\p"
-	.string "It's not what anyone would\n"
-	.string "consider accurate, but it packs a\l"
-	.string "wallop!$"
+	.string "GERENTE: Esa MT es RAYO.\p"
+	.string "¡Es una técnica muy poderosa!\p"
+	.string "No es lo que cualquiera\n"
+	.string "consideraría preciso, ¡pero tiene\l"
+	.string "mucha fuerza!$"
 
 Route10_PowerPlantBackRoom_Text_ManagerMyBelovedGenerator:
-	.string "MANAGER: My beloved generator!\p"
-	.string "Keep pumping the electricity out!$"
+	.string "GERENTE: ¡Mi querido generador!\p"
+	.string "¡Sigue bombeando electricidad!$"
 
 Route10_PowerPlantBackRoom_Text_Engineer:
-	.string "This door is unsafe without power.$"
+	.string "Esta puerta no es segura sin energía.$"
 

@@ -76,6 +76,9 @@ enum {
 
 #define MAX_ITEMS_PER_TAB 16
 #define ITEMS_VISIBLE 5
+#define CHOICE_GAP 6      // separacion entre las 2 opciones visibles
+#define VALUE_X_START 104   // donde empiezan los valores
+#define VALUE_X_END   198   // fin de la zona de valores (ventana completa)
 #define Y_DIFF 16
 
 // =============================================================================
@@ -200,18 +203,18 @@ static const u16 sTextPal[] = INCBIN_U16("graphics/interface/option_menu_text_cu
 // =============================================================================
 
 static const u8 *const sChoices_OnOff[] = {
-    COMPOUND_STRING("ON"),
-    COMPOUND_STRING("OFF"),
+    COMPOUND_STRING("SÍ"),
+    COMPOUND_STRING("NO"),
 };
 
 static const u8 *const sChoices_ShiftSet[] = {
-    COMPOUND_STRING("SHIFT"),
-    COMPOUND_STRING("SET"),
+    COMPOUND_STRING("CAMBIO"),
+    COMPOUND_STRING("FIJO"),
 };
 
 static const u8 *const sChoices_MonoStereo[] = {
     COMPOUND_STRING("MONO"),
-    COMPOUND_STRING("STEREO"),
+    COMPOUND_STRING("ESTÉREO"),
 };
 
 static const u8 *const sChoices_ButtonMode[] = {
@@ -221,20 +224,20 @@ static const u8 *const sChoices_ButtonMode[] = {
 };
 
 static const u8 *const sChoices_TextSpeed[] = {
-    COMPOUND_STRING("SLOW"),
-    COMPOUND_STRING("MID"),
-    COMPOUND_STRING("FAST"),
-    COMPOUND_STRING("FASTER"),
+    COMPOUND_STRING("LENTA"),
+    COMPOUND_STRING("MEDIA"),
+    COMPOUND_STRING("RÁPIDA"),
+    COMPOUND_STRING("MÁS RÁPIDA"),
 };
 
 static const u8 *const sChoices_MetricImperial[] = {
-    COMPOUND_STRING("METRIC"),
+    COMPOUND_STRING("MÉTRICO"),
     COMPOUND_STRING("IMPERIAL"),
 };
 
 static const u8 *const sChoices_OldModern[] = {
-    COMPOUND_STRING("OLD"),
-    COMPOUND_STRING("MODERN"),
+    COMPOUND_STRING("CLÁSICO"),
+    COMPOUND_STRING("MODERNO"),
 };
 
 static const u8 *const sChoices_Gen3Gen4[] = {
@@ -253,7 +256,7 @@ static const u8 sText_TopBar_Left[]  = _("{L_BUTTON}");
 static const u8 sText_TopBar_Right[] = _("{R_BUTTON}");
 
 // =============================================================================
-// Frame type — special: draws "TYPE  N" instead of choice text
+// Frame type - special: draws "TYPE  N" instead of choice text
 // =============================================================================
 
 // numChoices = 0 signals special handling; we use WINDOW_FRAMES_COUNT for cycling
@@ -263,7 +266,7 @@ static const u8 sText_TopBar_Right[] = _("{R_BUTTON}");
 // Descriptions
 // =============================================================================
 
-static const u8 sText_Desc_TextSpeed[] = _("Choose one of the four text-display\nspeeds.");
+static const u8 sText_Desc_TextSpeed[] = _("Elige una de las cuatro\nvelocidades de texto.");
 static const u8 *const sDesc_TextSpeed[] = {
     sText_Desc_TextSpeed,
     sText_Desc_TextSpeed,
@@ -271,98 +274,98 @@ static const u8 *const sDesc_TextSpeed[] = {
     sText_Desc_TextSpeed,
 };
 static const u8 *const sDesc_BattleScene[] = {
-    COMPOUND_STRING("Show the {PKMN} animations\nand attack animations."),
-    COMPOUND_STRING("Skip the {PKMN} animations\nand attack animations."),
+    COMPOUND_STRING("Muestra animaciones de\n{PKMN} y de ataques."),
+    COMPOUND_STRING("Omite animaciones de\n{PKMN} y de ataques."),
 };
 static const u8 *const sDesc_BattleStyle[] = {
-    COMPOUND_STRING("Get the option to switch your\n{PKMN} after the enemies faints."),
-    COMPOUND_STRING("No free switch after fainting the\nenemies {PKMN}."),
+    COMPOUND_STRING("Podrás cambiar tu {PKMN}\ntras debilitar al rival."),
+    COMPOUND_STRING("Sin cambio gratis tras\ndebilitar al {PKMN} rival."),
 };
 static const u8 *const sDesc_ButtonMode[] = {
-    COMPOUND_STRING("All buttons work as normal."),
-    COMPOUND_STRING("On some screens the L and R buttons\nact as left and right."),
-    COMPOUND_STRING("The L button acts as another A\nbutton for one-handed play."),
+    COMPOUND_STRING("Todos los botones funcionan\ncomo siempre."),
+    COMPOUND_STRING("En algunas pantallas, L y R\nvan a izquierda y derecha."),
+    COMPOUND_STRING("L actúa como otro botón A\npara jugar con una mano."),
 };
 static const u8 *const sDesc_Follower[] = {
-    COMPOUND_STRING("Let the first {PKMN} in your\nparty follow you."),
-    COMPOUND_STRING("Walk alone."),
+    COMPOUND_STRING("El primer {PKMN} de tu\nequipo te sigue."),
+    COMPOUND_STRING("Caminas solo."),
 };
 static const u8 *const sDesc_LargeFollower[] = {
-    COMPOUND_STRING("Enable large {PKMN} followers.\nCan cause graphical issues."),
-    COMPOUND_STRING("Disable large {PKMN} followers.\nRecommended."),
+    COMPOUND_STRING("Activa seguidores {PKMN}\ngrandes. Puede dar fallos."),
+    COMPOUND_STRING("Desactiva seguidores {PKMN}\ngrandes. Recomendado."),
 };
 static const u8 *const sDesc_Autorun[] = {
-    COMPOUND_STRING("Run without pressing B."),
-    COMPOUND_STRING("Press and hold B to run."),
+    COMPOUND_STRING("Corres sin pulsar B."),
+    COMPOUND_STRING("Mantén B para correr."),
 };
 static const u8 *const sDesc_AutorunSurf[] = {
-    COMPOUND_STRING("Surf faster without pressing B."),
-    COMPOUND_STRING("Press and hold B to surf faster."),
+    COMPOUND_STRING("Surfeas más rápido sin B."),
+    COMPOUND_STRING("Mantén B para surfear\nmás rápido."),
 };
 static const u8 *const sDesc_Fishing[] = {
-    COMPOUND_STRING("Automatically reel while fishing."),
-    COMPOUND_STRING("Manually reel while fishing.\nFish like you always fished!"),
+    COMPOUND_STRING("Recoges la caña solo\nal pescar."),
+    COMPOUND_STRING("Recoges la caña a mano.\n¡Pesca como siempre!"),
 };
 static const u8 *const sDesc_FasterJoy[] = {
-    COMPOUND_STRING("NURSE JOY heals you faster."),
-    COMPOUND_STRING("NURSE JOY heals you with the\nusual animation."),
+    COMPOUND_STRING("LA ENFERMERA JOY te cura\nmás rápido."),
+    COMPOUND_STRING("LA ENFERMERA JOY te cura\ncon la animación normal."),
 };
 static const u8 *const sDesc_UnitType[] = {
-    COMPOUND_STRING("Display BERRY and {PKMN} weight\nand size in kilograms and meters."),
-    COMPOUND_STRING("Display BERRY and {PKMN} weight\nand size in pounds and inches."),
+    COMPOUND_STRING("Peso y talla de BAYAS y\n{PKMN} en kilos y metros."),
+    COMPOUND_STRING("Peso y talla de BAYAS y\n{PKMN} en libras y pulgadas."),
 };
 static const u8 *const sDesc_MatchCall[] = {
-    COMPOUND_STRING("TRAINERs will be able to call you,\noffering rematches and info."),
-    COMPOUND_STRING("You will not receive calls.\nSpecial events will still occur."),
+    COMPOUND_STRING("Los ENTRENADORES podrán\nllamarte con retos e info."),
+    COMPOUND_STRING("No recibirás llamadas.\nLos eventos especiales sí."),
 };
 static const u8 *const sDesc_FrameType[] = {
-    COMPOUND_STRING("Choose the frame surrounding the\nwindows."),
+    COMPOUND_STRING("Elige el marco que rodea\nlas ventanas."),
 };
 static const u8 *const sDesc_FastIntro[] = {
-    COMPOUND_STRING("Skip the sliding animation\nand enter battles faster."),
-    COMPOUND_STRING("Battles load at the usual speed."),
+    COMPOUND_STRING("Omite la animación y entra\nantes en los combates."),
+    COMPOUND_STRING("Los combates cargan a la\nvelocidad normal."),
 };
 static const u8 *const sDesc_FastBattles[] = {
-    COMPOUND_STRING("Skips all delays in battles, which\nmakes them faster."),
-    COMPOUND_STRING("Manual delay skipping. You can\npress A or B to skip delays."),
+    COMPOUND_STRING("Omite las pausas, así los\ncombates son más rápidos."),
+    COMPOUND_STRING("Omites las pausas a mano\ncon A o B."),
 };
 static const u8 *const sDesc_NewBackgrounds[] = {
-    COMPOUND_STRING("Original battle terrain backgrounds."),
-    COMPOUND_STRING("Modernized battle terrain\nbackgrounds, from HnS."),
+    COMPOUND_STRING("Fondos de combate\noriginales."),
+    COMPOUND_STRING("Fondos de combate\nmodernizados, de HnS."),
 };
 static const u8 *const sDesc_NewBattleUI[] = {
-    COMPOUND_STRING("Original GEN III Battle UI."),
-    COMPOUND_STRING("Modernized GEN IV Battle UI."),
+    COMPOUND_STRING("Interfaz de combate\nGEN III original."),
+    COMPOUND_STRING("Interfaz de combate\nGEN IV modernizada."),
 };
 static const u8 *const sDesc_BallPrompt[] = {
-    COMPOUND_STRING("Press {R_BUTTON} in battle to use Pokeballs.\nHold {L_BUTTON}/{R_BUTTON} to swap {PKMN}BALLS."),
-    COMPOUND_STRING("Disables the prompt to use\n{PKMN}BALLS quickly."),
+    COMPOUND_STRING("R usa Poké Balls en combate.\nL/R cambia {PKMN}BALLS."),
+    COMPOUND_STRING("Desactiva el aviso para\nusar {PKMN}BALLS rápido."),
 };
 static const u8 *const sDesc_RunType[] = {
-    COMPOUND_STRING("No quick running from battles."),
-    COMPOUND_STRING("Hold {L_BUTTON}+{R_BUTTON}, then {A_BUTTON} to run from\nbattles before they start."),
-    COMPOUND_STRING("Press {B_BUTTON} to move the cursor to the RUN\noption after the battle started."),
-    COMPOUND_STRING("Press {B_BUTTON} to run from battles before\nthey start."),
+    COMPOUND_STRING("Sin huida rápida en\ncombates."),
+    COMPOUND_STRING("L+R y luego A para huir\nantes de empezar."),
+    COMPOUND_STRING("B mueve el cursor a HUIR\ntras empezar el combate."),
+    COMPOUND_STRING("B huye de los combates\nantes de empezar."),
 };
 static const u8 *const sDesc_LRRun[] = {
-    COMPOUND_STRING("Enables a prompt to show that you\ncan run away from battles."),
-    COMPOUND_STRING("Disables said prompt to flee.\nButton combo still works."),
+    COMPOUND_STRING("Activa un aviso de que\npuedes huir del combate."),
+    COMPOUND_STRING("Desactiva ese aviso.\nLa combinación sigue."),
 };
 static const u8 *const sDesc_Sound[] = {
-    COMPOUND_STRING("Sound is the same in all speakers.\nRecommended for original hardware."),
-    COMPOUND_STRING("Play the left and right audio channel\nseparately. Great with headphones."),
+    COMPOUND_STRING("Mismo sonido en ambos\nauriculares. Recomendado."),
+    COMPOUND_STRING("Canales izquierdo y derecho\nseparados. Ideal con audífonos."),
 };
 static const u8 *const sDesc_Music[] = {
-    COMPOUND_STRING("Enables music playback.\nChange maps to take effect."),
-    COMPOUND_STRING("Disables music playback.\nChange maps to take effect."),
+    COMPOUND_STRING("Activa la música.\nCambia de mapa para aplicarlo."),
+    COMPOUND_STRING("Desactiva la música.\nCambia de mapa para aplicarlo."),
 };
 static const u8 *const sDesc_BikeMusic[] = {
-    COMPOUND_STRING("Enables BIKE music."),
-    COMPOUND_STRING("Disables BIKE music."),
+    COMPOUND_STRING("Activa la música de BICI."),
+    COMPOUND_STRING("Desactiva la música de BICI."),
 };
 static const u8 *const sDesc_SurfMusic[] = {
-    COMPOUND_STRING("Enables SURF music."),
-    COMPOUND_STRING("Disables SURF music."),
+    COMPOUND_STRING("Activa la música de SURF."),
+    COMPOUND_STRING("Desactiva la música de SURF."),
 };
 
 // =============================================================================
@@ -371,79 +374,79 @@ static const u8 *const sDesc_SurfMusic[] = {
 
 static const struct OptionMenuItem sTabItems_Main[] = {
     [ITEM_MAIN_TEXTSPEED] = {
-        .name         = COMPOUND_STRING("TEXT SPEED"),
+        .name         = COMPOUND_STRING("VELOCIDAD TEXTO"),
         .descriptions = sDesc_TextSpeed,
         .numChoices   = 4,
         .choiceNames  = sChoices_TextSpeed,
     },
     [ITEM_MAIN_BATTLESCENE] = {
-        .name         = COMPOUND_STRING("BATTLE SCENE"),
+        .name         = COMPOUND_STRING("ESCENA COMBATE"),
         .descriptions = sDesc_BattleScene,
         .numChoices   = 2,
         .choiceNames  = sChoices_OnOff,
     },
     [ITEM_MAIN_BATTLESTYLE] = {
-        .name         = COMPOUND_STRING("BATTLE STYLE"),
+        .name         = COMPOUND_STRING("ESTILO COMBATE"),
         .descriptions = sDesc_BattleStyle,
         .numChoices   = 2,
         .choiceNames  = sChoices_ShiftSet,
     },
     [ITEM_MAIN_BUTTONMODE] = {
-        .name         = COMPOUND_STRING("BUTTON MODE"),
+        .name         = COMPOUND_STRING("MODO BOTONES"),
         .descriptions = sDesc_ButtonMode,
         .numChoices   = 3,
         .choiceNames  = sChoices_ButtonMode,
     },
     [ITEM_MAIN_FOLLOWER] = {
-        .name         = COMPOUND_STRING("FOLLOWER"),
+        .name         = COMPOUND_STRING("SEGUIDOR"),
         .descriptions = sDesc_Follower,
         .numChoices   = 2,
         .choiceNames  = sChoices_OnOff,
     },
     [ITEM_MAIN_LARGE_FOLLOWER] = {
-        .name         = COMPOUND_STRING("BIG FOLLOWERS"),
+        .name         = COMPOUND_STRING("SEGUIDORES GRANDES"),
         .descriptions = sDesc_LargeFollower,
         .numChoices   = 2,
         .choiceNames  = sChoices_OnOff,
     },
     [ITEM_MAIN_AUTORUN] = {
-        .name         = COMPOUND_STRING("AUTORUN"),
+        .name         = COMPOUND_STRING("CORRER AUTO"),
         .descriptions = sDesc_Autorun,
         .numChoices   = 2,
         .choiceNames  = sChoices_OnOff,
     },
     [ITEM_MAIN_AUTORUN_SURF] = {
-        .name         = COMPOUND_STRING("AUTORUN (SURF)"),
+        .name         = COMPOUND_STRING("CORRER AUTO (SURF)"),
         .descriptions = sDesc_AutorunSurf,
         .numChoices   = 2,
         .choiceNames  = sChoices_OnOff,
     },
     [ITEM_MAIN_FISHING] = {
-        .name         = COMPOUND_STRING("EASIER FISHING"),
+        .name         = COMPOUND_STRING("PESCA FÁCIL"),
         .descriptions = sDesc_Fishing,
         .numChoices   = 2,
         .choiceNames  = sChoices_OnOff,
     },
     [ITEM_MAIN_FASTER_JOY] = {
-        .name         = COMPOUND_STRING("FASTER JOY"),
+        .name         = COMPOUND_STRING("JOY RÁPIDA"),
         .descriptions = sDesc_FasterJoy,
         .numChoices   = 2,
         .choiceNames  = sChoices_OnOff,
     },
     [ITEM_MAIN_UNIT_TYPE] = {
-        .name         = COMPOUND_STRING("UNIT SYSTEM"),
+        .name         = COMPOUND_STRING("SISTEMA UNIDADES"),
         .descriptions = sDesc_UnitType,
         .numChoices   = 2,
         .choiceNames  = sChoices_MetricImperial,
     },
     [ITEM_MAIN_MATCHCALL] = {
-        .name         = COMPOUND_STRING("MATCH CALLS"),
+        .name         = COMPOUND_STRING("LLAMADAS"),
         .descriptions = sDesc_MatchCall,
         .numChoices   = 2,
         .choiceNames  = sChoices_OnOff,
     },
     [ITEM_MAIN_FRAMETYPE] = {
-        .name         = COMPOUND_STRING("FRAME"),
+        .name         = COMPOUND_STRING("MARCO"),
         .descriptions = sDesc_FrameType,
         .numChoices   = FRAME_TYPE_SPECIAL,
         .choiceNames  = NULL,
@@ -452,43 +455,43 @@ static const struct OptionMenuItem sTabItems_Main[] = {
 
 static const struct OptionMenuItem sTabItems_Battle[] = {
     [ITEM_BATTLE_FAST_INTRO] = {
-        .name         = COMPOUND_STRING("FAST INTRO"),
+        .name         = COMPOUND_STRING("INTRO RÁPIDA"),
         .descriptions = sDesc_FastIntro,
         .numChoices   = 2,
         .choiceNames  = sChoices_OnOff,
     },
     [ITEM_BATTLE_FAST_BATTLES] = {
-        .name         = COMPOUND_STRING("FAST BATTLES"),
+        .name         = COMPOUND_STRING("COMBATES RÁPIDOS"),
         .descriptions = sDesc_FastBattles,
         .numChoices   = 2,
         .choiceNames  = sChoices_OnOff,
     },
     [ITEM_BATTLE_NEW_BACKGROUNDS] = {
-        .name         = COMPOUND_STRING("BATTLE TERRAIN"),
+        .name         = COMPOUND_STRING("FONDO COMBATE"),
         .descriptions = sDesc_NewBackgrounds,
         .numChoices   = 2,
         .choiceNames  = sChoices_OldModern,
     },
     [ITEM_BATTLE_NEW_BATTLEUI] = {
-        .name         = COMPOUND_STRING("BATTLE UI"),
+        .name         = COMPOUND_STRING("INTERFAZ COMBATE"),
         .descriptions = sDesc_NewBattleUI,
         .numChoices   = 2,
         .choiceNames  = sChoices_Gen3Gen4,
     },
     [ITEM_BATTLE_BALL_PROMPT] = {
-        .name         = COMPOUND_STRING("BALL PROMPT"),
+        .name         = COMPOUND_STRING("AVISO POKé BALL"),
         .descriptions = sDesc_BallPrompt,
         .numChoices   = 2,
         .choiceNames  = sChoices_OnOff,
     },
     [ITEM_BATTLE_RUN_TYPE] = {
-        .name         = COMPOUND_STRING("QUICK RUN"),
+        .name         = COMPOUND_STRING("HUIDA RÁPIDA"),
         .descriptions = sDesc_RunType,
         .numChoices   = 4,
         .choiceNames  = sChoices_RunType,
     },
     [ITEM_BATTLE_LR_RUN] = {
-        .name         = COMPOUND_STRING("RUN PROMPT"),
+        .name         = COMPOUND_STRING("AVISO HUIDA"),
         .descriptions = sDesc_LRRun,
         .numChoices   = 2,
         .choiceNames  = sChoices_OnOff,
@@ -497,25 +500,25 @@ static const struct OptionMenuItem sTabItems_Battle[] = {
 
 static const struct OptionMenuItem sTabItems_Sound[] = {
     [ITEM_SOUND_SOUND] = {
-        .name         = COMPOUND_STRING("SOUND"),
+        .name         = COMPOUND_STRING("SONIDO"),
         .descriptions = sDesc_Sound,
         .numChoices   = 2,
         .choiceNames  = sChoices_MonoStereo,
     },
     [ITEM_SOUND_MUSIC] = {
-        .name         = COMPOUND_STRING("MUSIC"),
+        .name         = COMPOUND_STRING("MÚSICA"),
         .descriptions = sDesc_Music,
         .numChoices   = 2,
         .choiceNames  = sChoices_OnOff,
     },
     [ITEM_SOUND_BIKE_MUSIC] = {
-        .name         = COMPOUND_STRING("BIKE MUSIC"),
+        .name         = COMPOUND_STRING("MÚSICA BICI"),
         .descriptions = sDesc_BikeMusic,
         .numChoices   = 2,
         .choiceNames  = sChoices_OnOff,
     },
     [ITEM_SOUND_SURF_MUSIC] = {
-        .name         = COMPOUND_STRING("SURF MUSIC"),
+        .name         = COMPOUND_STRING("MÚSICA SURF"),
         .descriptions = sDesc_SurfMusic,
         .numChoices   = 2,
         .choiceNames  = sChoices_OnOff,
@@ -534,9 +537,9 @@ struct TabDef
 };
 
 static const struct TabDef sTabs[TAB_COUNT] = {
-    [TAB_MAIN]   = { COMPOUND_STRING("OPTIONS"),        sTabItems_Main,   ITEM_MAIN_COUNT },
-    [TAB_BATTLE] = { COMPOUND_STRING("BATTLE OPTIONS"), sTabItems_Battle, ITEM_BATTLE_COUNT },
-    [TAB_SOUND]  = { COMPOUND_STRING("SOUND"),          sTabItems_Sound,  ITEM_SOUND_COUNT },
+    [TAB_MAIN]   = { COMPOUND_STRING("OPCIONES"),        sTabItems_Main,   ITEM_MAIN_COUNT },
+    [TAB_BATTLE] = { COMPOUND_STRING("OPCIONES COMBATE"), sTabItems_Battle, ITEM_BATTLE_COUNT },
+    [TAB_SOUND]  = { COMPOUND_STRING("SONIDO"),          sTabItems_Sound,  ITEM_SOUND_COUNT },
 };
 
 // =============================================================================
@@ -620,9 +623,14 @@ static void VBlankCB(void)
 static void HighlightRow(void)
 {
     u16 scrollOffset, selectedRow;
+    u8 rowH, rowY;
     ListMenuGetScrollAndRow(sMenu->listTaskId, &scrollOffset, &selectedRow);
+    // La fila no siempre mide Y_DIFF: las opciones pueden ocupar dos lineas.
+    // Usamos la misma Y que el motor de listas para que la barra siga al texto.
+    rowH = GetFontAttribute(FONT_SHORT, FONTATTR_MAX_LETTER_HEIGHT);
+    rowY = ListMenuGetYCoordForPrintingArrowCursor(sMenu->listTaskId);
     SetGpuReg(REG_OFFSET_WIN0H, WIN_RANGE(Y_DIFF, 224));
-    SetGpuReg(REG_OFFSET_WIN0V, WIN_RANGE(selectedRow * Y_DIFF + 24, selectedRow * Y_DIFF + 40));
+    SetGpuReg(REG_OFFSET_WIN0V, WIN_RANGE(rowY + 23, rowY + 23 + rowH));
 }
 
 // =============================================================================
@@ -643,40 +651,7 @@ static void DrawRightSideChoiceText(const u8 *text, int x, int y, bool8 chosen, 
         color[1] = chosen ? TEXT_COLOR_OPTIONS_RED_DARK_FG : TEXT_COLOR_OPTIONS_GRAY_LIGHT_FG;
         color[2] = chosen ? TEXT_COLOR_OPTIONS_RED_DARK_SHADOW : TEXT_COLOR_OPTIONS_GRAY_SHADOW;
     }
-    AddTextPrinterParameterized4(WIN_OPTIONS, FONT_NORMAL, x, y, 0, 0, color, TEXT_SKIP_DRAW, text);
-}
-
-static int GetMiddleX(const u8 *txt1, const u8 *txt2, const u8 *txt3)
-{
-    int widthLeft = GetStringWidth(FONT_NORMAL, txt1, 0);
-    int widthMid = GetStringWidth(FONT_NORMAL, txt2, 0);
-    int widthRight = GetStringWidth(FONT_NORMAL, txt3, 0);
-    widthMid -= (198 - 104);
-    return (widthLeft - widthMid - widthRight) / 2 + 104;
-}
-
-static void DrawChoices_Two(const u8 *const *strings, int selection, int y, bool8 active)
-{
-    DrawRightSideChoiceText(strings[0], 104, y + 1, selection == 0, active);
-    DrawRightSideChoiceText(strings[1], GetStringRightAlignXOffset(FONT_NORMAL, strings[1], 198), y + 1, selection == 1, active);
-}
-
-static void DrawChoices_Three(const u8 *const *strings, int selection, int y, bool8 active)
-{
-    int xMid = GetMiddleX(strings[0], strings[1], strings[2]);
-    DrawRightSideChoiceText(strings[0], 104, y + 1, selection == 0, active);
-    DrawRightSideChoiceText(strings[1], xMid, y + 1, selection == 1, active);
-    DrawRightSideChoiceText(strings[2], GetStringRightAlignXOffset(FONT_NORMAL, strings[2], 198), y + 1, selection == 2, active);
-}
-
-static void DrawChoices_Four(const u8 *const *strings, int selection, int y, bool8 active)
-{
-    static const u8 orders[][3] = { {0, 1, 2}, {0, 1, 2}, {1, 2, 3}, {1, 2, 3} };
-    const u8 *order = orders[selection];
-    int xMid = GetMiddleX(strings[order[0]], strings[order[1]], strings[order[2]]);
-    DrawRightSideChoiceText(strings[order[0]], 104, y + 1, selection == order[0], active);
-    DrawRightSideChoiceText(strings[order[1]], xMid, y + 1, selection == order[1], active);
-    DrawRightSideChoiceText(strings[order[2]], GetStringRightAlignXOffset(FONT_NORMAL, strings[order[2]], 198), y + 1, selection == order[2], active);
+    AddTextPrinterParameterized4(WIN_OPTIONS, FONT_SHORT, x, y + 1, 0, 0, color, TEXT_SKIP_DRAW, text);
 }
 
 // Frame type: draws "TYPE  N" on the right side
@@ -698,13 +673,27 @@ static void DrawFrameTypeChoice(u8 selection, int y, bool8 active)
     }
     text[i] = EOS;
 
-    DrawRightSideChoiceText(COMPOUND_STRING("TYPE"), 104, y + 1, FALSE, active);
+    DrawRightSideChoiceText(COMPOUND_STRING("TIPO"), 104, y + 1, FALSE, active);
     DrawRightSideChoiceText(text, 128, y + 1, TRUE, active);
 }
 
-// =============================================================================
-// ListMenu callbacks
-// =============================================================================
+// Muestra como mucho DOS opciones: el valor seleccionado y un vecino.
+// Si las dos no caben en el ancho disponible, muestra solo la seleccionada.
+static void DrawChoices_Adaptive(const u8 *const *strings, int count, int selection, int y, bool8 active)
+{
+    int wSel = GetStringWidth(FONT_SHORT, strings[selection], 0);
+    int xSel = GetStringRightAlignXOffset(FONT_SHORT, strings[selection], VALUE_X_END);
+    int other = (selection + 1 < count) ? (selection + 1) : (selection - 1);
+
+    if (other >= 0 && other != selection)
+    {
+        int wOth = GetStringWidth(FONT_SHORT, strings[other], 0);
+        int xOth = xSel - CHOICE_GAP - wOth;
+        if (xOth >= VALUE_X_START)
+            DrawRightSideChoiceText(strings[other], xOth, y + 1, FALSE, active);
+    }
+    DrawRightSideChoiceText(strings[selection], xSel, y + 1, TRUE, active);
+}
 
 static void OptionMenu_MoveCursorFunc(s32 itemIndex, bool8 onInit, struct ListMenu *list)
 {
@@ -731,7 +720,7 @@ static void OptionMenu_ItemPrintFunc(u8 windowId, u32 itemId, u8 y)
         AddTextPrinterParameterized4(windowId, FONT_NORMAL, 8, y + 1, 0, 0, color, TEXT_SKIP_DRAW, items[itemId].name);
     }
 
-    // Frame type is special — no choiceNames array
+    // Frame type is special - no choiceNames array
     if (sMenu->currentTab == TAB_MAIN && itemId == ITEM_MAIN_FRAMETYPE)
     {
         DrawFrameTypeChoice(*GetSelectionPtr(sMenu->currentTab, itemId), y, active);
@@ -748,13 +737,12 @@ static void OptionMenu_ItemPrintFunc(u8 windowId, u32 itemId, u8 y)
     switch (items[itemId].numChoices)
     {
     case 2:
-        DrawChoices_Two(items[itemId].choiceNames, sel, y, active);
-        break;
     case 3:
-        DrawChoices_Three(items[itemId].choiceNames, sel, y, active);
-        break;
     case 4:
-        DrawChoices_Four(items[itemId].choiceNames, sel, y, active);
+    case 5:
+    case 6:
+    default:
+        DrawChoices_Adaptive(items[itemId].choiceNames, items[itemId].numChoices, sel, y, active);
         break;
     }
 }
@@ -792,7 +780,7 @@ static void InitListMenu(void)
     template.lettersSpacing = 0;
     template.itemVerticalPadding = 0;
     template.scrollMultiple = LIST_NO_MULTIPLE_SCROLL;
-    template.fontId = FONT_NORMAL;
+    template.fontId = FONT_SHORT;
     template.cursorKind = CURSOR_INVISIBLE;
 
     sMenu->listTaskId = ListMenuInit(&template,
@@ -1062,7 +1050,7 @@ static void Task_ProcessInput(u8 taskId)
 
 static void Task_Save(u8 taskId)
 {
-    // SaveBlock2 — original options
+    // SaveBlock2 - original options
     gSaveBlock2Ptr->optionsTextSpeed        = *GetSelectionPtr(TAB_MAIN, ITEM_MAIN_TEXTSPEED);
     gSaveBlock2Ptr->optionsBattleSceneOff   = *GetSelectionPtr(TAB_MAIN, ITEM_MAIN_BATTLESCENE);
     gSaveBlock2Ptr->optionsBattleStyle      = *GetSelectionPtr(TAB_MAIN, ITEM_MAIN_BATTLESTYLE);
@@ -1070,7 +1058,7 @@ static void Task_Save(u8 taskId)
     gSaveBlock2Ptr->optionsWindowFrameType  = *GetSelectionPtr(TAB_MAIN, ITEM_MAIN_FRAMETYPE);
     gSaveBlock2Ptr->optionsSound            = *GetSelectionPtr(TAB_SOUND, ITEM_SOUND_SOUND);
 
-    // SaveBlock3 — HnS options plus
+    // SaveBlock3 - HnS options plus
     struct ChallengeSettings *cs = &gSaveBlock3Ptr->challengeSettings;
     cs->followerEnable     = *GetSelectionPtr(TAB_MAIN, ITEM_MAIN_FOLLOWER);
     cs->followerLargeEnable= *GetSelectionPtr(TAB_MAIN, ITEM_MAIN_LARGE_FOLLOWER);

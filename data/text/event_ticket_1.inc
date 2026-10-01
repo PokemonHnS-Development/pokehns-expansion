@@ -1,49 +1,45 @@
 EventTicket_Text_ShowOldSeaMap:
-	.string "The ferry to SLATEPORT is…\p"
-	.string "I beg your pardon?\n"
-	.string "Can we sail to this place on the map?\p"
-	.string "I know someone who will help you better.\n"
-	.string "Please wait.$"
+	.string "El ferry a PORTALAGUNA es...\p"
+	.string "¿Perdón?\n"
+	.string "¿Podemos ir a este lugar del mapa?\p"
+	.string "Conozco a alguien que te ayudará.\n"
+	.string "Un momento, por favor.$"
 
 EventTicket_Text_ThatPass:
-	.string "The ferry to SLATEPORT is…\p"
+	.string "El ferry a PORTALAGUNA es...\p"
 	.string "Oh?\n"
-	.string "That PASS…$"
+	.string "Ese PASE...$"
 
 EventTicket_Text_ShowEonTicket:
-	.string "Aye, mate, are you the one who brought\n"
-	.string "that mighty odd PASS?\p"
-	.string "I'll tell you, you're trying to reach a\n"
-	.string "tiny spit of an island far in the south.\p"
-	.string "There's no telling what we'll encounter\n"
-	.string "once we reach there, aye.\l"
-	.string "That shivers my timbers!\p"
-	.string "All aboard!$"
+	.string "¡Hola! ¿Tú eres quien trajo\n"
+	.string "ese PASE tan extraño?\p"
+	.string "Te diré, buscas llegar a una\n"
+	.string "isla muy pequeña al sur.\p"
+	.string "No sabemos qué encontraremos\n"
+	.string "cuando lleguemos allá.\l"
+	.string "¡Eso me da escalofríos!\p"
+	.string "¡Todos a bordo!$"
 
 #if IS_HNS
 EventTicket_Text_SouthernIslandSailBack:
-	.string "Aye, mate, there's nothing here to\n"
-	.string "see or do on this forgettable island.\p"
-	.string "What say we sail back to OLIVINE?$"
+	.string "Oye, amigo, no hay nada que\nver ni hacer en esta isla olvidable.\p¿Qué tal si navegamos a OLIVO?$"
 #else
 EventTicket_Text_SouthernIslandSailBack:
-	.string "Aye, mate, there's nothing here to\n"
-	.string "see or do on this forgettable island.\p"
-	.string "What say we sail back to LILYCOVE?$"
+	.string "Sí, amigo, no hay nada que\n"
+	.string "ver ni hacer en esta isla olvidada.\p"
+	.string "¿Qué tal si volvemos a CALAGUA?$"
 #endif 
 
 
 EventTicket_Text_SailHome:
-	.string "Aye, right, then!\n"
-	.string "Sail home we will!$"
+	.string "¡Muy bien, entonces!\n¡A casa navegaremos!$"
 
 EventTicket_Text_AsYouLike:
-	.string "Aye, right, as you like, then.$"
+	.string "Está bien, como tú digas.$"
 
 SouthernIsland_Interior_Text_Sign:
-	.string "“All dreams are but another reality.\n"
-	.string "Never forget…”$"
+	.string "“Todos los sueños son otra realidad.\n"
+	.string "Nunca lo olvides...”$"
 
 SouthernIsland_Exterior_Text_Sign:
-	.string "“Those whose memories fade seek to\n"
-	.string "carve them in their hearts…”$"
+	.string "“Aquellos cuyas memorias se borran\nbuscan grabarlas en sus corazones...”$"

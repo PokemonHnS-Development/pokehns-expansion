@@ -14,19 +14,19 @@ CeladonCity_DepartmentStore_1F_EventScript_FloorSign::
 	end
 
 CeladonCity_DepartmentStore_1F_Text_WelcomeToDeptStore::
-	.string "Hello!\n"
-	.string "Welcome to CELADON DEPT. STORE.\p"
-	.string "The board on the right describes\n"
-	.string "the store layout.$"
+	.string "¡Hola!\n"
+	.string "Bienvenido a la TIENDA DEPARTAMENTAL CÉLEDON.\p"
+	.string "El tablero de la derecha describe\n"
+	.string "la distribución de la tienda.$"
 
 CeladonCity_DepartmentStore_1F_Text_FloorDescriptions::
-	.string "1F: SERVICE COUNTER\p"
-	.string "2F: TRAINER'S MARKET\p"
-	.string "3F: TV GAME SHOP\p"
-	.string "4F: WISE MAN GIFTS\p"
-	.string "5F: DRUGSTORE\p"
-	.string "ROOFTOP SQUARE: VENDING MACHINES$"
+	.string "1F: MOSTRADOR DE SERVICIOS\p"
+	.string "2F: MERCADO PARA ENTRENADORES\p"
+	.string "3F: TIENDA DE JUEGOS\p"
+	.string "4F: REGALOS DEL SABIO\p"
+	.string "5F: FARMACIA\p"
+	.string "AZOTEA: MÁQUINAS EXPENDEDORAS$"
 
 CeladonCity_DepartmentStore_1F_Text_ServiceCounter::
-	.string "1F: SERVICE COUNTER$"
+	.string "1F: MOSTRADOR DE SERVICIOS$"
 

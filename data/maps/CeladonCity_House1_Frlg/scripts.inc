@@ -14,18 +14,18 @@ CeladonCity_House1_EventScript_Rocket2::
 	end
 
 CeladonCity_House1_Text_SlotsReelInTheDough::
-	.string "Hehehe!\p"
-	.string "The slots just reel in the dough,\n"
-	.string "big-time!$"
+	.string "¡Jejeje!\p"
+	.string "Las tragamonedas solo atraen la pasta,\n"
+	.string "¡a lo grande!$"
 
 CeladonCity_House1_Text_ShippedMonsAsSlotPrizes::
-	.string "CHIEF!\p"
-	.string "We just shipped two thousand\n"
-	.string "more POKéMON as slot prizes\l"
-	.string "again today!$"
+	.string "¡JEFE!\p"
+	.string "Acabamos de enviar dos mil\n"
+	.string "POKéMON más como premios\l"
+	.string "¡otra vez hoy!$"
 
 CeladonCity_House1_Text_DontTouchGameCornerPoster::
-	.string "Don't touch the poster at the GAME\n"
-	.string "CORNER!\p"
-	.string "There's no secret switch behind it!$"
+	.string "No toques el póster del SALÓN\n"
+	.string "¡DE JUEGOS!\p"
+	.string "¡No hay ningún interruptor secreto detrás!$"
 

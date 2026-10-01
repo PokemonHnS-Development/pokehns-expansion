@@ -41,22 +41,22 @@ SilphCo_4F_EventScript_Grunt2::
 
 SilphCo_4F_Text_CantYouSeeImHiding::
 	.string "Sssh!\n"
-	.string "Can't you see I'm hiding?$"
+	.string "¿No ves que me escondo?$"
 
 SilphCo_4F_Text_TeamRocketIsGone::
-	.string "Huh?\n"
-	.string "TEAM ROCKET is gone?$"
+	.string "¿Eh?\n"
+	.string "¿El EQUIPO ROCKET se fue?$"
 
 SilphCo_4F_Text_Grunt1Intro::
-	.string "TEAM ROCKET has taken control\n"
-	.string "of SILPH CO.!$"
+	.string "El EQUIPO ROCKET tomó el control\n"
+	.string "de ¡SILPH CO.!$"
 
 SilphCo_4F_Text_Grunt1Defeat::
 	.string "Arrgh!$"
 
 SilphCo_4F_Text_Grunt1PostBattle::
 	.string "Fwahahaha!\n"
-	.string "My BOSS has been after this place!$"
+	.string "¡Mi JEFE ha querido este lugar!$"
 
 SilphCo_4F_Text_RodneyIntro::
 	.string "My POKéMON is my loyal servant.$"
@@ -66,19 +66,19 @@ SilphCo_4F_Text_RodneyDefeat::
 	.string "You weak POKéMON!$"
 
 SilphCo_4F_Text_RodneyPostBattle::
-	.string "The doors are electronically\n"
+	.string "Las puertas son electrónicas\n"
 	.string "locked.\p"
-	.string "It takes a CARD KEY to open the\n"
-	.string "doors here.$"
+	.string "Se necesita una TARJETA para\n"
+	.string "puertas.$"
 
 SilphCo_4F_Text_Grunt2Intro::
 	.string "Intruder spotted!$"
 
 SilphCo_4F_Text_Grunt2Defeat::
-	.string "Who are you?$"
+	.string "¿Quién eres?$"
 
 SilphCo_4F_Text_Grunt2PostBattle::
-	.string "I better tell the BOSS on 11F!$"
+	.string "Mejor le aviso al JEFE en el 11º PISO!$"
 
 SilphCo_4F_Text_FloorSign::
 	.string "SILPH CO. HEAD OFFICE\n"

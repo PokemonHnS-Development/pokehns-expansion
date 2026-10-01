@@ -24,37 +24,37 @@ SSAnne_Deck_EventScript_Trevor::
 	end
 
 SSAnne_Deck_Text_ShipDepartingSoon::
-	.string "The party's over.\n"
-	.string "The ship will be departing soon.$"
+	.string "La fiesta terminó.\n"
+	.string "El barco partirá pronto.$"
 
 SSAnne_Deck_Text_ScrubbingDecksHardWork::
-	.string "Whew!\n"
-	.string "Scrubbing decks is hard work!$"
+	.string "¡Uff!\n"
+	.string "¡Fregar cubiertas es duro!$"
 
 SSAnne_Deck_Text_FeelSeasick::
-	.string "Urf… I feel ill…\p"
-	.string "I got seasick, so I stepped out to\n"
-	.string "get some air…$"
+	.string "Uf... me siento mal...\p"
+	.string "Me dio mareo, así que salí\n"
+	.string "a tomar aire...$"
 
 SSAnne_Deck_Text_EdmondIntro::
-	.string "Hey, matey!\p"
-	.string "Let's do a little jig!$"
+	.string "¡Hola, amigo!\p"
+	.string "¡Bailemos un ratito!$"
 
 SSAnne_Deck_Text_EdmondDefeat::
-	.string "You're impressive!$"
+	.string "¡Eres impresionante!$"
 
 SSAnne_Deck_Text_EdmondPostBattle::
-	.string "How many kinds of POKéMON do you\n"
-	.string "think there are in this big world?$"
+	.string "¿Cuántos tipos de POKéMON\n"
+	.string "piensan que hay en este gran mundo?$"
 
 SSAnne_Deck_Text_TrevorIntro::
-	.string "Ahoy, there!\n"
-	.string "Are you seasick?$"
+	.string "¡Hola, marinero!\n"
+	.string "¿Tienes mareo?$"
 
 SSAnne_Deck_Text_TrevorDefeat::
-	.string "I was just careless!$"
+	.string "¡Solo fui descuidado!$"
 
 SSAnne_Deck_Text_TrevorPostBattle::
-	.string "My pa said there are 100 kinds of\n"
-	.string "POKéMON. I think there are more.$"
+	.string "Mi papá dijo que hay 100 tipos de\n"
+	.string "POKéMON. Creo que hay más.$"
 

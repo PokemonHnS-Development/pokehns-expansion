@@ -123,104 +123,102 @@ Route13_EventScript_DirectionsSign::
 	end
 
 Route13_Text_PokefanmAlexSeen:
-	.string "Bow down before my regal POKéMON!$"
+	.string "¡Inclínate ante mi POKéMON real!$"
 
 Route13_Text_PokefanmAlexBeaten:
-	.string "How… How dare you mock royalty!$"
+	.string "¿Cómo...? ¡No insultes a la realeza!$"
 
 Route13_Text_PokefanmAlexAfterBattle:
-	.string "Doesn't everyone wish to someday\n"
-	.string "be a king?$"
+	.string "¿Acaso no todos desean algún día\n"
+	.string "ser un rey?$"
 
 Route13_Text_AlexRegister:
-	.string "You're not royalty but you're good.\n"
-	.string "Let me get your number.$"
+	.string "No eres noble, pero eres bueno.\n"
+	.string "Dame tu número.$"
 
 Route13_Text_AlexRematchIntro:
-	.string "I've added knights to my court!\n"
-	.string "Let's battle!$"
+	.string "¡He sumado caballeros a mi corte!\n"
+	.string "¡A luchar!$"
 
 Route13_Text_AlexRematchDefeat:
-	.string "Dethroned again…$"
+	.string "Destronado otra vez...$"
 
 Route13_Text_AlexPostRematch:
-	.string "Maybe I'm just a pawn after all.$"
+	.string "Tal vez solo soy un peón al final.$"
 
 Route13_Text_PokefanmJoshuaSeen:
-	.string "Nihihi! Would you like to battle\n"
-	.string "my PIKACHU gang?$"
+	.string "¡Nihihi! ¿Quieres luchar contra\n"
+	.string "mi banda de PIKACHU?$"
 
 Route13_Text_PokefanmJoshuaBeaten:
 	.string "PI-PIKACHU!$"
 
 Route13_Text_PokefanmJoshuaAfterBattle:
-	.string "You look like you have many\n"
-	.string "POKéMON, but PIKACHU\l"
-	.string "is still the best.$"
+	.string "Parece que tienes muchos\n"
+	.string "POKéMON, pero PIKACHU\l"
+	.string "sigue siendo el mejor.$"
 
 Route13_Text_BirdKeeperPerrySeen:
-	.string "Agility is the key attribute of\n"
-	.string "bird POKéMON.$"
+	.string "La agilidad es la clave de los\n"
+	.string "POKéMON ave.$"
 
 Route13_Text_BirdKeeperPerryBeaten:
-	.string "You beat me with your speed…$"
+	.string "Me ganaste con tu velocidad...$"
 
 Route13_Text_BirdKeeperPerryAfterBattle:
-	.string "Your POKéMON are remarkably well-\n"
-	.string "trained.$"
+	.string "Tus POKéMON están muy bien\n"
+	.string "entrenados.$"
 
 Route13_Text_BirdKeeperBretSeen:
-	.string "Check out my POKéMON. Just look\n"
-	.string "at their coloring and their\l"
-	.string "plumage.$"
+	.string "Mira mis POKéMON. Mira sus\n"
+	.string "colores y su\l"
+	.string "plumaje.$"
 
 Route13_Text_BirdKeeperBretBeaten:
-	.string "Shoot! Not good enough!$"
+	.string "¡Rayos! ¡No fue suficiente!$"
 
 Route13_Text_BirdKeeperBretAfterBattle:
-	.string "If you groom them, POKéMON get\n"
-	.string "happy.$"
+	.string "Si los cuidas, los POKéMON se\n"
+	.string "Seguro que eso los hará felices.$"
 
 Route13_Text_HikerKennySeen:
-	.string "I should go to ROCK TUNNEL to get\n"
-	.string "myself an ONIX.$"
+	.string "Debo ir al TÚNEL ROCA para\n"
+	.string "atrapar un ONIX.$"
 
 Route13_Text_HikerKennyBeaten:
-	.string "I lost…$"
+	.string "Perdí...$"
 
 Route13_Text_HikerKennyAfterBattle:
-	.string "Geological features don't appear\n"
-	.string "to change.\p"
-	.string "But they actually change, little\n"
-	.string "by little.$"
+	.string "Parece que las formaciones\n"
+	.string "geológicas no cambian.\p"
+	.string "Pero en realidad cambian,\n"
+	.string "poco a poco.$"
 
 Route13_Text_KennyRegister:
-	.string "Maybe POKéMON change over time too.\n"
-	.string "Let's battle again sometime!$"
+	.string "Quizá los POKéMON también cambian.\n"
+	.string "¡Luchemos otra vez algún día!$"
 
 Route13_Text_KennyRematchIntro:
-	.string "I've learned from geology!\n"
-	.string "Let's go!$"
+	.string "¡He aprendido de la geología!\n"
+	.string "¡Vamos!$"
 
 Route13_Text_KennyRematchDefeat:
-	.string "Still not enough…$"
+	.string "Aún no es suficiente...$"
 
 Route13_Text_KennyPostRematch:
-	.string "The power of POKéMON is like\n"
-	.string "erosion. We will persevere!$"
+	.string "El poder POKéMON es como la\n"
+	.string "erosión. ¡Perseveraremos!$"
 
 Route13_Text_TrainerTips:
-	.string "TRAINER TIPS\p"
-	.string "Look! Right there, at the left\n"
-	.string "side of the post.$"
+	.string "CONSEJOS DE ENTRENADOR\p¡Mira! Justo ahí, a la\nizquierda del poste.$"
 
 Route13_Text_Sign:
-	.string "ROUTE 13\p"
-	.string "NORTH TO SILENCE BRIDGE$"
+	.string "RUTA 13\p"
+	.string "NORTE AL PUENTE SILENCIO$"
 
 Route13_Text_DirectionsSign:
-	.string "NORTH TO LAVENDER TOWN\p"
-	.string "WEST TO FUCHSIA CITY$"
+	.string "NORTE A PUEBLO LAVANDA\p"
+	.string "OESTE A CIUDAD FUCHSIA$"
 
 Route13_GetOffBoat::
 	lock
@@ -423,33 +421,29 @@ Route13_Movement_BoatArrive:
 	step_end
 
 Route13_GetOffBoat_Text_0:
-	.string "Welcome back to mainland Kanto!\p"
-	.string "Come back if you'd like to take a trip\n"
-	.string "to the ALOLA ISLES!$"
+	.string "¡Bienvenido a Kanto continental!\p"
+	.string "Vuelve si quieres hacer un viaje\n"
+	.string "¡a las ISLAS ALOLA!$"
 
 Route13_TravelToAlola_Text_0:
-	.string "Ahoy there!\p"
-	.string "That's one strange souvenir.\n"
-	.string "You must be from the ISLES!$"
+	.string "¡Hola!\pQué recuerdo tan raro.\n¡Debes ser de las ISLAS!$"
 Route13_TravelToAlola_Text_0_5:
-	.string "Would you like to take the next ship?\n"
-	.string "It departs shortly!$"
+	.string "¿Quieres tomar el próximo barco?\n¡Zarpa en un momento!$"
 
 Route13_TravelToAlola_Text_1:
-	.string "Ahoy! Let's get you on board!$"
+	.string "¡Ahoy! ¡Sube a bordo!$"
 
 Route13_TravelToAlola_Text_2:
-	.string "Ahoy!\n"
-	.string "Come back when you'd like to set sail.$"
+	.string "¡Ahoy!\n"
+	.string "Vuelve cuando quieras zarpar.$"
 
 Route13_TravelToAlola_Text_3:
-	.string "Ah, it's you again!\n"
-	.string "Do you want to go to the ALOLA ISLES?$"
+	.string "¡Ah, eres tú de nuevo!\n¿Quieres ir a las ISLAS ALOLA?$"
 
 Route13_TravelToAlola_Text_4:
-	.string "Ahoy!\n"
-	.string "This port is for residents only.\p"
-	.string "All of the residents of these ISLES\n"
-	.string "carry some… {PAUSE 30}strange souvenirs.\p"
-	.string "It makes them so easy to identify,\n"
-	.string "I don't even need to check tickets!$"
+	.string "¡Ahoy!\n"
+	.string "Este puerto es solo residentes.\p"
+	.string "Todos los residentes de estas ISLAS\n"
+	.string "llevan algunos... {PAUSE 30}recuerdos raros.\p"
+	.string "Es muy fácil identificarlos,\n"
+	.string "¡ni necesito revisar boletos!$"

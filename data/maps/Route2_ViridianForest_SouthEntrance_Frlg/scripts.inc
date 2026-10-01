@@ -10,12 +10,12 @@ Route2_ViridianForest_SouthEntrance_EventScript_Woman2::
 	end
 
 Route2_ViridianForest_SouthEntrance_Text_ForestIsMaze::
-	.string "Are you going to VIRIDIAN FOREST?\n"
-	.string "It's a natural maze in there.\l"
-	.string "Be careful you don't get lost.$"
+	.string "¿Vas al BOSQUE VERDE?\n"
+	.string "Es un laberinto natural.\l"
+	.string "Cuidado con perderte.$"
 
 Route2_ViridianForest_SouthEntrance_Text_RattataHasWickedBite::
-	.string "RATTATA may be small, but don't\n"
-	.string "underestimate its wicked bite.\p"
-	.string "Have you caught one already?$"
+	.string "RATTATA es pequeño, pero no\n"
+	.string "subestimes su mordida feroz.\p"
+	.string "¿Ya atrapaste uno?$"
 

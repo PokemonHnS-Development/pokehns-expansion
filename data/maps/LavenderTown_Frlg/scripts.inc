@@ -47,42 +47,42 @@ LavenderTown_EventScript_PokemonTowerSign::
 	end
 
 LavenderTown_Text_DoYouBelieveInGhosts::
-	.string "Do you believe in ghosts?$"
+	.string "¿Crees en fantasmas?$"
 
 LavenderTown_Text_SoThereAreBelievers::
-	.string "Really?\n"
-	.string "So there are believers…$"
+	.string "¿De verdad?\n"
+	.string "Así que hay creyentes...$"
 
 LavenderTown_Text_JustImaginingWhiteHand::
-	.string "Hahaha, I guess not.\p"
-	.string "That white hand on your shoulder…\n"
-	.string "I'm just imagining it.$"
+	.string "Jajaja, supongo que no.\p"
+	.string "Esa mano blanca en tu hombro...\n"
+	.string "Solo me lo estoy imaginando.$"
 
 LavenderTown_Text_TownKnownAsMonGraveSite::
-	.string "This town is known as the grave\n"
-	.string "site of POKéMON.\p"
-	.string "Memorial services are held in\n"
+	.string "Este pueblo es conocido como la tumba\n"
+	.string "de POKéMON.\p"
+	.string "Se realizan servicios conmemorativos\n"
 	.string "POKéMON TOWER.$"
 
 LavenderTown_Text_GhostsAppearedInTower::
-	.string "Ghosts appeared in POKéMON TOWER.\p"
-	.string "I think they're the spirits of\n"
-	.string "POKéMON that the ROCKETS killed.$"
+	.string "Aparecieron fantasmas en la TORRE POKéMON.\p"
+	.string "Creo que son los espíritus de\n"
+	.string "POKéMON que los ROCKET mataron.$"
 
 LavenderTown_Text_TownSign::
-	.string "LAVENDER TOWN\n"
-	.string "The Noble Purple Town$"
+	.string "PUEBLO LAVANDA\n"
+	.string "El Noble Pueblo Púrpura$"
 
 LavenderTown_Text_SilphScopeNotice::
-	.string "New SILPH SCOPE!\n"
-	.string "Make the Invisible Plain to See!\p"
+	.string "¡Nuevo SILPH SCOPE!\n"
+	.string "¡Haz visible lo invisible!\p"
 	.string "SILPH CO.$"
 
 LavenderTown_Text_VolunteerPokemonHouse::
-	.string "LAVENDER VOLUNTEER\n"
-	.string "POKéMON HOUSE$"
+	.string "VOLUNTARIOS DE LAVANDA\n"
+	.string "CASA POKéMON$"
 
 LavenderTown_Text_PokemonTowerSign::
-	.string "POKéMON TOWER\n"
-	.string "Becalm the Spirits of POKéMON$"
+	.string "TORRE POKéMON\n"
+	.string "Calma los espíritus de los POKéMON$"
 

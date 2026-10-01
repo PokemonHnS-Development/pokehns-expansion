@@ -6,115 +6,115 @@ Route11_EventScript_DiglettsCaveSign::
 	end
 
 Route11_Text_HugoIntro::
-	.string "Win, lose, or draw!$"
+	.string "¡Ganar, perder o empatar!$"
 
 Route11_Text_HugoDefeat::
 	.string "Atcha!\n"
-	.string "Didn't go my way!$"
+	.string "¡No salió como quería!$"
 
 Route11_Text_HugoPostBattle::
 	.string "POKéMON is life!\n"
-	.string "And to live is to play games!$"
+	.string "¡Y vivir es jugar!$"
 
 Route11_Text_JasperIntro::
-	.string "Competition!\n"
-	.string "I can't get enough!$"
+	.string "¡Competencia!\n"
+	.string "¡No me canso de esto!$"
 
 Route11_Text_JasperDefeat::
-	.string "I had a chance!$"
+	.string "¡Tenía una oportunidad!$"
 
 Route11_Text_JasperPostBattle::
-	.string "You can't be a coward in the world\n"
-	.string "of POKéMON!$"
+	.string "No puedes ser cobarde en el mundo\n"
+	.string "¡evolución POKéMON!$"
 
 Route11_Text_EddieIntro::
-	.string "Let's go, but don't cheat!$"
+	.string "¡Vamos, pero no hagas trampa!$"
 
 Route11_Text_EddieDefeat::
-	.string "Huh?\n"
-	.string "That's not right!$"
+	.string "¿Eh?\n"
+	.string "¡Eso no está bien!$"
 
 Route11_Text_EddiePostBattle::
-	.string "I did my best.\n"
-	.string "I have no regrets.$"
+	.string "Hice mi mejor esfuerzo.\n"
+	.string "No me arrepiento de nada.$"
 
 Route11_Text_BraxtonIntro::
-	.string "Careful!\n"
-	.string "I'm laying down some cables!$"
+	.string "¡Cuidado!\n"
+	.string "¡Estoy tendiendo cables!$"
 
 Route11_Text_BraxtonDefeat::
-	.string "That was electric!$"
+	.string "¡Eso fue electrizante!$"
 
 Route11_Text_BraxtonPostBattle::
-	.string "Spread the word to save energy!$"
+	.string "¡Corre la voz para ahorrar energía!$"
 
 Route11_Text_DillonIntro::
-	.string "I just became a TRAINER.\n"
-	.string "But, I think I can win.$"
+	.string "Acabo de ser ENTRENADOR.\n"
+	.string "Pero creo que puedo ganar.$"
 
 Route11_Text_DillonDefeat::
-	.string "My POKéMON couldn't win…\n"
-	.string "Haven't they grown enough?$"
+	.string "Mis POKéMON no pudieron ganar...\n"
+	.string "¿No han crecido lo suficiente?$"
 
 Route11_Text_DillonPostBattle::
-	.string "What now?\n"
-	.string "Leave me alone!$"
+	.string "¿Y ahora qué?\n"
+	.string "¡Déjame en paz!$"
 
 Route11_Text_DirkIntro::
-	.string "Fwahaha!\n"
-	.string "I have never lost!$"
+	.string "¡Fwahaha!\n"
+	.string "¡Nunca había perdido!$"
 
 Route11_Text_DirkDefeat::
-	.string "My first loss!$"
+	.string "¡Mi primera derrota!$"
 
 Route11_Text_DirkPostBattle::
-	.string "You were just lucky, that's all.$"
+	.string "Solo tuviste suerte, eso es todo.$"
 
 Route11_Text_DarianIntro::
-	.string "I have never won before…$"
+	.string "Nunca había ganado antes...$"
 
 Route11_Text_DarianDefeat::
-	.string "I saw this coming…$"
+	.string "Lo veía venir...$"
 
 Route11_Text_DarianPostBattle::
-	.string "I was unlucky, as always.$"
+	.string "Tuve mala suerte, como siempre.$"
 
 Route11_Text_YasuIntro::
-	.string "I'm the best in my class.\n"
-	.string "I train every morning.$"
+	.string "Soy el mejor de mi clase.\n"
+	.string "Entreno cada mañana.$"
 
 Route11_Text_YasuDefeat::
-	.string "Darn!\n"
-	.string "My POKéMON need to be stronger!$"
+	.string "¡Rayos!\n"
+	.string "¡Mis POKéMON deben ser más fuertes!$"
 
 Route11_Text_YasuPostBattle::
-	.string "There's a fat POKéMON that comes\n"
-	.string "down from the mountains.\p"
-	.string "I bet it'd be strong if you can\n"
-	.string "catch it.$"
+	.string "Hay un POKéMON gordo que baja\n"
+	.string "de las montañas.\p"
+	.string "Apuesto a que sería fuerte si\n"
+	.string "lo atrapas.$"
 
 Route11_Text_BernieIntro::
-	.string "Watch out for live wires!$"
+	.string "¡Cuidado con los cables vivos!$"
 
 Route11_Text_BernieDefeat::
-	.string "Whoa!\n"
-	.string "You spark plug!$"
+	.string "¡Vaya!\n"
+	.string "¡Bujía que eres!$"
 
 Route11_Text_BerniePostBattle::
-	.string "Well, better get back to work.$"
+	.string "Bueno, mejor vuelvo al trabajo.$"
 
 Route11_Text_DaveIntro::
-	.string "I raised my POKéMON carefully.\n"
-	.string "They should be ready by now!$"
+	.string "Crié a mis POKéMON con cuidado.\n"
+	.string "¡Ya deberían estar listos!$"
 
 Route11_Text_DaveDefeat::
-	.string "Bye-bye!\n"
-	.string "Thank you, and good-bye!$"
+	.string "¡Adiós!\n"
+	.string "¡Gracias y adiós!$"
 
 Route11_Text_DavePostBattle::
-	.string "Tch…\n"
-	.string "I better go find stronger ones!$"
+	.string "Tch...\n"
+	.string "¡Mejor busco unos más fuertes!$"
 
 Route11_Text_DiglettsCave::
-	.string "DIGLETT'S CAVE$"
+	.string "CUEVA DIGLETT$"
 

@@ -36,44 +36,44 @@ Route33_EventScript_Lass::
 	end
 
 Route33_Text_HikerAnthony2Seen:
-	.string "I came through the tunnel,\n"
-	.string "but I still have plenty\l"
-	.string "of energy left.$"
+	.string "Vine por el túnel,\n"
+	.string "pero aún me queda mucha\l"
+	.string "energía.$"
 
 Route33_Text_HikerAnthony2Beaten:
-	.string "Whoa! You've got more zip\n"
-	.string "than me!$"
+	.string "¡Vaya! ¡Tienes más chispa\n"
+	.string "que yo!$"
 
 Route33_Text_HikerAnthony2After:
-	.string "We HIKERS are at our best\n"
-	.string "in the mountains.$"
+	.string "Los EXCURSIONISTAS damos\n"
+	.string "lo mejor en las montañas.$"
 
 Route33_Text_AnthonyRegister:
-	.string "We HIKERS are at our best\n"
-	.string "in the mountains.$"
+	.string "Los EXCURSIONISTAS damos\n"
+	.string "lo mejor en las montañas.$"
 
 Route33_Text_AnthonyRematchIntro:
-	.string "I came through the tunnel,\n"
-	.string "but I still have plenty\l"
-	.string "of energy left.$"
+	.string "Vine por el túnel,\n"
+	.string "pero aún me queda mucha\l"
+	.string "energía.$"
 
 Route33_Text_AnthonyRematchDefeat:
-	.string "Whoa! You've got more zip\n"
-	.string "than me!$"
+	.string "¡Vaya! ¡Tienes más chispa\n"
+	.string "que yo!$"
 
 Route33_Text_AnthonyPostRematch:
-	.string "We HIKERS are at our best\n"
-	.string "in the mountains.$"
+	.string "Los EXCURSIONISTAS damos\n"
+	.string "lo mejor en las montañas.$"
 
 Route33_Text_HikerAnthonyDunsparce:
-	.string "Hey, did you get a DUNSPARCE?\p"
-	.string "I caught one too.\p"
-	.string "Take a look at it in the light.\n"
-	.string "It's got a funny face!$"
+	.string "Oye, ¿conseguiste un DUNSPARCE?\p"
+	.string "Yo también atrapé uno.\p"
+	.string "Míralo bien con la luz.\n"
+	.string "¡Tiene una cara muy graciosa!$"
 
 Route33_Text_Lass:
-	.string "Pant, pant…\p"
-	.string "That cave was bigger than\n"
-	.string "I'd expected.\p"
-	.string "I got too tired exploring\n"
-	.string "for MARILL, so I came outside.$"
+	.string "Jadeo, jadeo...\p"
+	.string "Esa cueva era más grande que\n"
+	.string "Era lo que esperaba.\p"
+	.string "Me cansé de explorar\n"
+	.string "por MARILL, así que salí.$"
