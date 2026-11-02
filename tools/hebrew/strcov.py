@@ -188,12 +188,36 @@ def _key_symbol(key):
     return m.group(1)
 
 
+# headers the build generates from a source audit.py also reads: their strings are counted once,
+# under the source file, and located in the objects that include the generated header
+GENERATED = {'src/data/region_map/region_map_entries.h': 'src/data/region_map/region_map_sections.json'}
+
+
+def generated_from(tree, rel):
+    """The source a generated header is made from (X.h <- X.party, region_map_entries.h <- the json)."""
+    if rel in GENERATED:
+        return GENERATED[rel] if os.path.exists(os.path.join(tree, GENERATED[rel])) else None
+    if rel.endswith('.h') and os.path.exists(os.path.join(tree, rel[:-2] + '.party')):
+        return rel[:-2] + '.party'
+    return None
+
+
+def generated_header(tree, rel):
+    """The generated header of a .party / .json source, or None."""
+    for h, src in GENERATED.items():
+        if src == rel:
+            return h
+    if rel.endswith('.party'):
+        return rel[:-6] + '.h'
+    return None
+
+
 def translated_entries(tree):
     import audit
     hebrew = audit.HEBREW_RE
     out = []
     for e in audit.extract_tree(tree, only=['src']):
-        if e.source in ('c', 'json', 'party') and e.text:
+        if e.source in ('c', 'json', 'party') and e.text and not generated_from(tree, e.file):
             out.append(e)
     out += macro_if_entries(tree)
     inc = os.path.join(tree, 'include')
@@ -371,8 +395,9 @@ def build_index(tree, elf_path, rom_path, map_path, objdir):
     c_objs = [o for o in by_obj if o.startswith('src/')]
 
     def regions_for(e):
-        if e.source == 'c':
-            objs = deps.get(e.file, set())
+        rel = e.file if e.source == 'c' else generated_header(tree, e.file)
+        objs = deps.get(rel, set()) if rel else set()
+        if objs:
             return [r for o in sorted(objs) for r in by_obj.get(o, [])], sorted(objs)
         return [r for o in c_objs for r in by_obj[o]], ['(all C objects)']
 
@@ -410,7 +435,7 @@ def build_index(tree, elf_path, rom_path, map_path, objdir):
                 rec['how'] = 'symbol'
         if not hits:
             hits = find_all(needle, regions)
-            rec['how'] = 'object' if e.source == 'c' else 'global'
+            rec['how'] = 'global' if objs == ['(all C objects)'] else 'object'
         if not hits and macros[i] != '__':
             hits = find_all(b, regions)                 # a size-limited array that dropped its terminator
             if hits:
