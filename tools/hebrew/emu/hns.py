@@ -284,6 +284,8 @@ class Emu:
         self.gMain = self.elf.sym("gMain")
         self.CB1 = self.gMain + OFF["Main.callback1"]
         self.CB2 = self.gMain + OFF["Main.callback2"]
+        if os.environ.get("HNS_STRCOV") and "gRtlStringSet" in self.elf.byname:
+            strings_hook(self, os.environ["HNS_STRCOV"])
 
     # -- plumbing
     def _reader(self):
@@ -2097,6 +2099,19 @@ def clip_hook(emu, outdir):
         raise HnsError(str(e))
 
 
+def strings_hook(emu, logdir):
+    """HNS_STRCOV=LOGDIR or `tour --strings LOGDIR`: log the ROM strings an RTL_STRING_REPORT build
+    copied or printed, after every screenshot (tools/hebrew/strcov.py)."""
+    sys.path.insert(0, os.path.dirname(HERE))
+    import strcov
+    if getattr(emu, "strcov", None) is not None:
+        return emu.strcov
+    try:
+        return strcov.install(emu, os.path.abspath(logdir))
+    except RuntimeError as e:
+        raise HnsError(str(e))
+
+
 def clip_count(emu):
     rep = getattr(emu, "clip", None)
     return rep.total() if rep else None
@@ -2416,6 +2431,9 @@ def main():
     p.add_argument("--clip", action="store_true",
                    help="RTL_CLIP_REPORT build: report glyphs drawn outside their window per screenshot "
                         "(tools/hebrew/cliptour.py; OUTDIR/TOUR/clip.json)")
+    p.add_argument("--strings", metavar="LOGDIR",
+                   help="RTL_STRING_REPORT build: log the ROM strings copied or printed per screenshot "
+                        "(tools/hebrew/strcov.py; LOGDIR/*.jsonl; same as HNS_STRCOV=LOGDIR)")
     p = sub.add_parser("tourdiff", help="compare the screenshots of two tour OUTDIRs")
     p.add_argument("a"); p.add_argument("b")
     p = sub.add_parser("sheet", help="tile screenshots into one PNG (a contact sheet)")
@@ -2450,6 +2468,10 @@ def main():
         if args.cmd == "tour":
             rom = args.tour_rom
             elf_path = args.elf or os.path.splitext(rom)[0] + ".elf"
+            if args.strings:
+                if "gRtlStringSet" not in Elf(elf_path).byname:
+                    raise HnsError("%s is not an RTL_STRING_REPORT build (make hns RTL_STRING_REPORT=1)" % elf_path)
+                os.environ["HNS_STRCOV"] = os.path.abspath(args.strings)
             return run_tours(rom, Elf(elf_path), args.outdir, args.only, args.rtc, args.verbose,
                              args.reuse_saves, args.tours, args.clip)
         elf = Elf(elf_path)

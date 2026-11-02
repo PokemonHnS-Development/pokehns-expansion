@@ -22,6 +22,11 @@
 #ifndef RTL_CLIP_REPORT
 #define RTL_CLIP_REPORT              FALSE
 #endif
+// Diagnostic build only: record the ROM address of every string copied, expanded or printed
+// (see tools/hebrew/strcov.py).
+#ifndef RTL_STRING_REPORT
+#define RTL_STRING_REPORT            FALSE
+#endif
 
 // Battle text names a foe's Pokémon as nickname + suffix ("{nickname} פראי") instead of
 // prefix + nickname ("The wild {nickname}"), as Hebrew word order needs.

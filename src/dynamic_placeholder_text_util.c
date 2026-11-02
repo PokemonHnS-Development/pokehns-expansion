@@ -30,6 +30,9 @@ void DynamicPlaceholderTextUtil_SetPlaceholderPtr(u8 idx, const u8 *ptr)
 
 u8 *DynamicPlaceholderTextUtil_ExpandPlaceholders(u8 *dest, const u8 *src)
 {
+#if RTL_STRING_REPORT
+    RtlStringReport(src);
+#endif
     while (*src != EOS)
     {
         if (*src != CHAR_DYNAMIC)

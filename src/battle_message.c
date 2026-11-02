@@ -3173,6 +3173,9 @@ u32 BattleStringExpandPlaceholders(const u8 *src, u8 *dst, u32 dstSize)
         dstID++;
     }
 
+#if RTL_STRING_REPORT
+    RtlStringReport(src);
+#endif
     dstID = 0;
     while (*src != EOS)
     {
@@ -3185,6 +3188,10 @@ u32 BattleStringExpandPlaceholders(const u8 *src, u8 *dst, u32 dstSize)
             u32 nameLength = 0;
             const u8 *classString;
             const u8 *nameString;
+#if RTL_STRING_REPORT
+            classString = NULL;
+            nameString = NULL;
+#endif
             switch (*src)
             {
             case B_TXT_BUFF1:
@@ -3747,6 +3754,11 @@ u32 BattleStringExpandPlaceholders(const u8 *src, u8 *dst, u32 dstSize)
                 break;
             }
 
+#if RTL_STRING_REPORT
+            RtlStringReport(toCpy);
+            RtlStringReport(classString);
+            RtlStringReport(nameString);
+#endif
             if (toCpy != NULL)
             {
                 while (*toCpy != EOS)

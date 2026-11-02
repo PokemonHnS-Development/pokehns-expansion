@@ -24,6 +24,9 @@ enum TextColorType
     TEXT_COLOR_TYPE_BACKGROUND,
 };
 
+#if RTL_STRING_REPORT
+void RtlStringReport(const u8 *str);
+#endif
 u8 *StringCopy_Nickname(u8 *dest, const u8 *src);
 u8 *StringGet_Nickname(u8 *str);
 u8 *StringCopy_PlayerName(u8 *dest, const u8 *src);
