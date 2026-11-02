@@ -126,8 +126,8 @@ static const u8 sText_PkmnThatsEnough[] = _("{B_BUFF1}, מספיק! חזור!");
 static const u8 sText_PkmnComeBack[] = _("{B_BUFF1}, חזור!");
 static const u8 sText_PkmnOkComeBack[] = _("בסדר, {B_BUFF1}! חזור!");
 static const u8 sText_PkmnGoodComeBack[] = _("כל הכבוד, {B_BUFF1}! חזור!");
-static const u8 sText_Trainer1WithdrewPkmn[] = _("{B_TRAINER1_NAME_WITH_CLASS} החזיר\nאת {B_BUFF1}!");
-static const u8 sText_Trainer2WithdrewPkmn[] = _("{B_TRAINER2_NAME_WITH_CLASS} החזיר\nאת {B_BUFF1}!");
+static const u8 sText_Trainer1WithdrewPkmn[] = _("הפוקימון של {B_TRAINER1_NAME_WITH_CLASS}, {B_BUFF1}, חוזר!");
+static const u8 sText_Trainer2WithdrewPkmn[] = _("הפוקימון של {B_TRAINER2_NAME_WITH_CLASS}, {B_BUFF1}, חוזר!");
 static const u8 sText_LinkTrainer1WithdrewPkmn[] = _("{B_LINK_OPPONENT1_NAME} החזיר את {B_BUFF1}!");
 static const u8 sText_LinkTrainer2WithdrewPkmn[] = _("{B_LINK_OPPONENT2_NAME} החזיר את {B_BUFF1}!");
 static const u8 sText_WildPkmnPrefix[] = _(" הפראי");
@@ -1488,8 +1488,8 @@ static const u8 sText_InGamePartnerSentOutZGoN[] = _("הפוקימון של {B_P
 static const u8 sText_InGamePartnerSentOutNGoZ[] = _("הפוקימון של {B_PARTNER_NAME_WITH_CLASS}, {B_PLAYER_MON1_NAME}, יוצא לקרב! צא, {B_PLAYER_MON2_NAME}!");
 static const u8 sText_InGamePartnerSentOutPkmn1[] = _("הפוקימון של {B_PARTNER_NAME_WITH_CLASS}, {B_PLAYER_MON1_NAME}, יוצא לקרב!");
 static const u8 sText_InGamePartnerSentOutPkmn2[] = _("הפוקימון של {B_PARTNER_NAME_WITH_CLASS}, {B_PLAYER_MON2_NAME}, יוצא לקרב!");
-static const u8 sText_InGamePartnerWithdrewPkmn1[] = _("{B_PARTNER_NAME_WITH_CLASS} החזיר\nאת {B_PLAYER_MON1_NAME}!");
-static const u8 sText_InGamePartnerWithdrewPkmn2[] = _("{B_PARTNER_NAME_WITH_CLASS} החזיר\nאת {B_PLAYER_MON2_NAME}!");
+static const u8 sText_InGamePartnerWithdrewPkmn1[] = _("הפוקימון של {B_PARTNER_NAME_WITH_CLASS}, {B_PLAYER_MON1_NAME}, חוזר!");
+static const u8 sText_InGamePartnerWithdrewPkmn2[] = _("הפוקימון של {B_PARTNER_NAME_WITH_CLASS}, {B_PLAYER_MON2_NAME}, חוזר!");
 
 const u16 gBattlePalaceFlavorTextTable[] =
 {
