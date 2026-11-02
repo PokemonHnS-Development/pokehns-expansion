@@ -3455,6 +3455,32 @@ static void SetSummaryLabelWindowsRtl(void)
     SetWindowRtlMode(PSS_LABEL_WINDOW_POKEMON_SKILLS_STATS_RIGHT, WINDOW_RTL_IN_PLACE);
 }
 
+// The four quote marks a name can hold (“ ” ‘ ’, the last one also the geresh) are the only
+// glyphs that reach row 1, a row above the ל ascender, so at PORTRAIT_NICKNAME_Y they touch the
+// portrait box's bottom edge (y 95). The extra-symbol cells F9 19-1C hold the same four marks one
+// row lower, at the same widths, in the three fonts GetFontIdToFit can pick for this window
+// (normal, narrow, narrower). The name keeps its baseline; only the marks move down.
+#define CHAR_LOWERED_QUOTE_FIRST 0x19
+
+static void LowerNicknameQuoteMarks(u8 *dest, const u8 *src, struct Pokemon *mon)
+{
+    bool32 japanese = GetMonData(mon, MON_DATA_LANGUAGE) == LANGUAGE_JAPANESE;
+
+    for (; *src != EOS; src++)
+    {
+        if (!japanese && *src >= CHAR_DBL_QUOTE_LEFT && *src <= CHAR_SGL_QUOTE_RIGHT)
+        {
+            *dest++ = CHAR_EXTRA_SYMBOL;
+            *dest++ = CHAR_LOWERED_QUOTE_FIRST + (*src - CHAR_DBL_QUOTE_LEFT);
+        }
+        else
+        {
+            *dest++ = *src;
+        }
+    }
+    *dest = EOS;
+}
+
 // Data windows are added and removed as the pages change, which resets their mode.
 static void SetSummaryDataWindowRtl(const struct WindowTemplate *template, u8 templateId, u32 windowId)
 {
@@ -3569,7 +3595,16 @@ static void PrintNotEggInfo(void)
     StringAppend(gStringVar1, gStringVar2);
     PrintTextOnWindow(PSS_LABEL_WINDOW_PORTRAIT_SPECIES, gStringVar1, 24, 17, 0, 1);
     GetMonNickname(mon, gStringVar1);
+#if TEXT_RTL
+    {
+        u8 nickname[POKEMON_NAME_LENGTH * 2 + 1];
+
+        LowerNicknameQuoteMarks(nickname, gStringVar1, mon);
+        PrintTextOnWindowToFitPx(PSS_LABEL_WINDOW_PORTRAIT_NICKNAME, nickname, 0, PORTRAIT_NICKNAME_Y, 0, 1, WindowWidthPx(PSS_LABEL_WINDOW_PORTRAIT_NICKNAME) - 9);
+    }
+#else
     PrintTextOnWindowToFitPx(PSS_LABEL_WINDOW_PORTRAIT_NICKNAME, gStringVar1, 0, PORTRAIT_NICKNAME_Y, 0, 1, WindowWidthPx(PSS_LABEL_WINDOW_PORTRAIT_NICKNAME) - 9);
+#endif
     PrintTextOnWindow(PSS_LABEL_WINDOW_PORTRAIT_SPECIES, gText_Slash, 0, 1, 0, 1);
 #if TEXT_RTL
     // Mirrored about the narrower axis, the name after the slash must end before the window's left edge.
