@@ -66,6 +66,9 @@ Each entry is one open question from the review of the first release candidate: 
 | [Q124](#q124) | The line for an opponent using an item, '{X} השתמש ב{ITEM}!', uses the masculine verb for every trainer, so Rocket Admin Ariana reads… | A. No verb: '{X}: שימוש ב{ITEM}!' | changed |
 | [Q125](#q125) | Lines that put a count before an item name print the singular for every item without a Hebrew plural name ('זרקת 3 שיקוי.', 'לזרוק כמה נוצת שרירים?')… | A. A Hebrew plural for every stackable item, with the Pyramid bag and the put-away lines following | changed |
 | [Q126](#q126) | The NORMAL contest rank has three names in one contest ('דרגה רגילה', 'בדרגת רגיל', 'דרגת בסיס'), and the MC's 'בדרגת רגיל' is not Hebrew. | A. 'נורמל', a rank name like סופר / היפר / מאסטר, wherever the rank is named | changed |
+| [Q127](#q127) | The withdraw lines with a trainer or partner as the subject use the masculine 'החזיר' for every trainer, so women and pairs read as masc… | A. Reword so the verb agrees with the Pokémon: 'הפוקימון של X, Y, חוזר!' | changed |
+| [Q128](#q128) | Summary screen: a geresh or quote mark in the portrait nickname (ג'ימי, טיפלוז'ן) touches the bottom of the portrait box. | D. Lowered copies of the four quote marks, used only by that window | changed |
+| [Q129](#q129) | EXEGGUTOR-A is אקזגיוטר-א, without the ק of its base form אקזגקיוטר, because the base plus -א was measured at 56 px against the 50 px Pokédex list column. | B. The full form אקזגקיוטר-א, with the TEXT_RTL fits, a Pokédex CRY page fit and one PC panel fallback | changed |
 
 ## K1
 
@@ -1479,6 +1482,85 @@ The English and the Japanese (ノーマル, スーパー, ハイパー, マス�
 
 *Glossary:* `TERM_CONTEST_RANK_NORMAL`, `TERM_CONTEST_RANK_SUPER`, `TERM_CONTEST_RANK_HYPER`, `TERM_CONTEST_RANK_MASTER`
 
+## Q127
+
+**Question.** The battle lines that say a trainer withdraws a Pokémon use the masculine 'החזיר' for every trainer: 'מטיילת ארין החזיר / את רפידאש!', 'מאמן על רינה החזיר / את סטארמי!', 'תאומים לאה ופיה החזיר / את דרגונייר!', and in a Battle Tower multi battle the second opponent and the lobby partner, 'גברת שמשייה יוליאנה החזיר / את קלידול!' and 'עלמה סיביל החזיר / את היטמונטופ!'. Q123 and Q124 left these lines masculine because they were not part of those reviews. The Hebrew also breaks the line by hand where the English has no break.
+
+*Source:* screen review, round 11 (trainer withdraw, finding 1: the Twins pair with a singular verb), the open lines of Q123 and Q124, and round 13 (a woman as the Tower lobby partner).
+
+**Analysis.** The strings are src/battle_message.c sText_Trainer1WithdrewPkmn, sText_Trainer2WithdrewPkmn, sText_InGamePartnerWithdrewPkmn1 and sText_InGamePartnerWithdrewPkmn2, which BufferStringBattle picks for STRINGID_RETURNMON by the battler's side and position. Every AI trainer that switches prints them: field trainers of both genders, a pair in a one-trainer double battle (Twins, couples), both opponents of a multi battle (the Rocket Hideout B2F battle; Battle Tower multis) and the in-game partner (Lance; a Tower lobby partner, who may be a woman, so Q123's 'only male partners' no longer holds once the Frontier partners are counted).
+- The English 'X withdrew Y!' carries no gender or number and has no manual line break.
+- As in Q123, the trainer data cannot pick a form (630 of the 651 trainers in src/data/trainers_hns.party are 'Gender: Male', the women included), a class noun is shared by men and women, and a table of female trainers would also have to cover the Frontier trainers and partners.
+- A search of battle_message.c for {B_TRAINER1_NAME_WITH_CLASS}, {B_TRAINER2_NAME_WITH_CLASS}, {B_PARTNER_NAME_WITH_CLASS} and {B_ATK_TRAINER_NAME_WITH_CLASS}, and for the bare name tokens ({B_TRAINER1_NAME}, {B_TRAINER2_NAME}, {B_ATK_TRAINER_NAME}, {B_PARTNER_NAME}), followed by a verb finds no other line that reaches the screen: the send-out lines follow Q123 and the item line Q124. sText_Trainer1Fled ('{B_TRAINER1_NAME_WITH_CLASS} ברח!') is defined but never referenced, so the compiler drops it (no symbol in pokehns.elf) and it is left as it is.
+- The link lines (sText_LinkTrainer1WithdrewPkmn, sText_LinkPartnerWithdrewPkmn1 and their siblings) name real players, as Q123 noted, and keep their wording.
+- The move WITHDRAW is 'נסיגה' (glossary MOVE_WITHDRAW), so the verb 'נסוג' would read as the move.
+
+| Option | How | Risk |
+|---|---|---|
+| A. Reword so the Pokémon is the subject, as Q123 did | 'הפוקימון של {X}, {Y}, חוזר!' for all four strings, the partner lines with {B_PLAYER_MON1_NAME} / {B_PLAYER_MON2_NAME} in place of {B_BUFF1}. Token order unchanged; no manual break, as in English, so the battle text breaks the line automatically. The present 'חוזר' pairs with the send-out line that follows it, '… יוצא לקרב!'. | Low. Four strings, one form for every trainer and partner, pairs included. The line is longer than before; the battle text keeps it on one line when it fits and wraps it to a second when it does not. |
+| B. Feminine variants chosen in code | Under TEXT_RTL, pick 'החזירה' / 'החזירו' from a table of female trainer pics and pair classes. | Medium. The hand-kept table rejected in Q123 and Q124, with the Frontier trainers and partners on top; 'מאמן על רינה החזירה' would still clash with the masculine class noun. |
+| C. Keep and list as a known issue | No change. | Every woman, pair and woman partner who switches shows the clash. |
+
+**Chosen:** A. It closes the withdraw lines Q123 and Q124 left open, with the wording of the send-out lines, and no trainer data or table. With it no line of src/battle_message.c that reaches the screen gives an opponent or partner trainer a gendered verb; the link lines are the exception noted above, and the player is masculine by STYLE §2. A class noun before a trainer's name keeps the gender the trainer data gives it: Ariana's shared 'מנהל רוקט' (Q124) and the other classes shared by men and women are trainer data, which is out of scope.
+
+*Changed:* `src/battle_message.c`
+
+## Q128
+
+**Question.** On the summary screen, a geresh in the portrait nickname (ג'ימי, and species names used as nicknames such as טיפלוז'ן, פיקאצ'ו and צ'אנסי) is drawn on y 96, directly under the portrait box's last row, y 95. The 1.0 release notes list it as a known issue, a side effect of K5.
+
+*Source:* K5 review ('Review of the changed screens' below); round 5 rejected a fix that moved the name; retried in round 14.
+
+**Analysis.** The name prints at PORTRAIT_NICKNAME_Y = 7 in a window whose top is y 88, so glyph row 0 is y 95. Hebrew letters have their body on rows 4-11, the ל ascender on row 2, and descenders to row 13 with the shadow on row 14. The frame under the name on the move pages is y 109. The four quote marks a name can hold, “ ” ‘ ’ (0xB1-0xB4; ’ is also the geresh, CHAR_SGL_QUOTE_RIGHT, on the Hebrew keyboard), are the only glyphs whose foreground starts on row 1, in all three fonts this window can use (FONT_NORMAL and its GetFontIdToFit fallbacks FONT_NARROW and FONT_NARROWER). Round 5 showed that no y clears both the box and the frame (13 free rows, 14 needed), and that a page-dependent y makes the name jump.
+
+| Option | How | Risk |
+|---|---|---|
+| A. Keep it as a known issue | No change. | The geresh stays against the box. |
+| B. Lower or shorten the marks in the fonts | Redraw 0xB1-0xB4 one row lower, or one row shorter, in latin_normal/narrow/narrower.png. | Changes every apostrophe, geresh and quote mark in every text in those fonts, including dialogue and the Easy Chat words, which are out of scope. Lowering only the geresh would put it below the gershayim (נ”ח). |
+| C. A per-window y offset in the renderer for glyphs above the x-height | New window state in src/text.c. | An engine change, with its own drift and review, for one window. |
+| D. Lowered copies used only by this window | Write the four marks one row lower, at the same widths, into the blank extra-symbol cells F9 19-1C of the three fonts (and their width tables in src/fonts.c). Under TEXT_RTL, PrintNotEggInfo prints a copy of the nickname with the four marks replaced by those cells. | Low. Nothing else uses the cells, so no other text changes. The cells are neutral to the renderer like the marks (RtlClassAt), so the reading order is the same. A Japanese-language nickname is left as it is. drift.py reports STRUCTURE for src/pokemon_summary_screen.c and src/fonts.c until the same changes are on he/renderer. |
+
+**Chosen:** D. The marks keep their shape and are 1 row below the box. The name's baseline and its lowest rows do not move, so what the forget-move frame shows is unchanged, as round 5 required. In the 71 regression tours, 15 shots differ, each only in the 3 x 6 px of a geresh. They are the Typhlosion, ג'ימי and Chansey summary pages.
+
+*Changed:* `src/pokemon_summary_screen.c`, `src/fonts.c`, `graphics/fonts/latin_normal.png`, `graphics/fonts/latin_narrow.png`, `graphics/fonts/latin_narrower.png`, `tools/hebrew/release/notes.json`
+
+## Q129
+
+**Question.** EXEGGUTOR-A is אקזגיוטר-א, without the ק of the base form אקזגקיוטר (SPECIES_EXEGGUTOR, FireRed's spelling). Every other Alolan form is its base name plus -א (סנדסלאש-א, ניינטיילס-א, מארוואק-א), and the Pokédex shows the two spellings side by side on EXEGGCUTE's EVOLUTION page. The ק was dropped because the base plus -א is 56 px against the 50 px Pokédex list column. The 1.0 release notes list it as a known issue.
+
+*Source:* 1.0 known issue (tools/hebrew/release/notes.json), retried in round 14.
+
+**Analysis.** אקזגקיוטר-א is 11 letters (the species limit is 12 bytes) and measures 61 px in FONT_NORMAL, 56 in FONT_NARROW and 49 in FONT_NARROWER (tools/hebrew/textwidth.py). It would be the widest species name by 1 to 3 px: the widest today is MEOWSCARADA מיאוסקראדה, 60 / 53 / 46. The 56 px figure is the FONT_NARROW width. The list itself does not stop there: under TEXT_RTL, src/pokedex_plus_hgss.c CreateMonName prints with GetFontIdToFit(name, FONT_NARROW, 0, 50), which falls back to FONT_NARROWER at 49 px. That fit dates from a1c5d26885. The audit's budget file was written later but still called the column "no fit" (tools/hebrew/data/budgets.json, and the dex entry of tools/hebrew/glossary_widths.py). Every window that draws the name, with the width it allows:
+
+| Window | Code | Full form |
+|---|---|---|
+| Pokédex list | CreateMonName, FONT_NARROW fitted to 50 | FONT_NARROWER, 49 px |
+| Pokédex INFO banner | PrintInfoScreenTextWhite, FONT_NORMAL inside x 119-237 | 61 px |
+| Pokédex STATS | FONT_SMALL up to 55, else FONT_SMALL_NARROWER | 49 px |
+| Pokédex EVOLUTION | FONT_SMALL, the method text after it | fits on both pages |
+| Summary | nickname line fitted to 63, species line to 58 | 61 px normal; 56 px narrow |
+| Party menu | FONT_SMALL fitted to 50, then FitNameToWidth | FONT_SMALL_NARROWER, 49 px, nothing cut |
+| Healthbox, Gen 3 and Gen 4 UI | name and gender sign fitted to 55, then FitNameToWidth | FONT_SMALL_NARROWER, 53 px with ♂, nothing cut |
+| Ability pop-up | the battler's name on the pop-up's first line | 56 px, inside the pop-up |
+| Naming screen title | WrapFontIdToFit(name, FONT_NORMAL, 64) | 61 px |
+| Pokédex CRY page | FONT_NORMAL with no fit in the x 81-142 gap between the mon box and the VU meter | 61 px would touch the box at x 80; under TEXT_RTL the name is fitted to 60 px, so it falls back to FONT_NARROW, 56 px |
+| PC panel, nickname line | FONT_NORMAL fitted to 66 | 61 px |
+| PC panel, species line | '/' + name in the font fitted to the nickname (English code) | 62 px after no nickname; 67 px after a short one, which would start at x 5, 1 px inside the 6 px margin the 78 px mirror axis keeps |
+| Contest | FONT_NARROW fitted to 50 | FONT_NARROWER, 49 px (not seen on screen) |
+| Messages | dialogue and battle boxes | fits |
+
+| Option | How | Risk |
+|---|---|---|
+| A. Keep אקזגיוטר-א | No change. | The only regional form that is not its base plus the suffix, shown next to the base form in the Pokédex. |
+| B. The full form, with the TEXT_RTL fits | The glossary row first, then the species name. On the Pokédex CRY page, under TEXT_RTL, the name is fitted to the 60 px that keep a 1 px gap to the mon box. In the PC panel, under TEXT_RTL, the species line keeps the nickname's font unless the line is wider than the 66 px the mirrored panel leaves; then it falls back to a narrower font. Correct the dex list entry of budgets.json and glossary_widths.py to the fit the code has. | Low. The name is drawn in a narrower font in the list, the party, the healthbox, STATS and the summary species line, as long names already are. The CRY page and PC fallbacks fire for no other species: every other name is 60 px or less in FONT_NORMAL, and every other '/' + name is 66 px or less in FONT_SHORT. drift.py reports STRUCTURE for src/pokemon_storage_system.c and src/pokedex_plus_hgss.c until the same block is on he/renderer. |
+| C. Shorten the base another way | For example drop the י (אקזגקוטר-א, 53 px in FONT_NARROW). | It still differs from the base form, and it loses the /ju/ that the base and the row 184 note keep. |
+
+**Chosen:** B. The Alolan form follows the same rule as the other -א forms, and the Pokédex shows one base spelling on both entries. Every window in the table except the contest was seen on screen before and after (tours scripts/r14_fix_b/tours/r14b_exeggutor_menus, r14b_exeggutor_battle and r14b_dex_cry). The first review found the CRY page touching the box, which the fit then fixed.
+
+*Changed:* `src/data/pokemon/species_info/gen_1_families.h`, `src/pokedex_plus_hgss.c`, `src/pokemon_storage_system.c`, `tools/hebrew/data/budgets.json`, `tools/hebrew/glossary_widths.py`, `tools/hebrew/release/notes.json`
+
+*Glossary:* `SPECIES_EXEGGUTOR_ALOLA`
+
 ## Proposed names
 
 The 1,851 glossary names with status "proposed" (Gen 4+ Pokémon, NPCs, places, trainer classes) were checked against the transliteration rules, the official English pronunciation and consistency with related names, and every proposed change was then argued against by a second reviewer. 23 changes survived. The table gives the result in the tree; the full reasons are in the glossary notes.
@@ -1500,7 +1582,7 @@ The 1,851 glossary names with status "proposed" (Gen 4+ Pokémon, NPCs, places, 
 | `NAME_THE_ROYAL_PINK_PRINCESS_(DIANCIE_MEGA_EPITHET)` | the Royal Pink Princess (Diancie Mega epithet) | הנסיכה | הנסיכה הוורודה המלכותית | הנסיכה הוורודה המלכותית | The row is cut off after its first word: הנסיכה alone means 'the princess'. |
 | `NAME_THE_BLOOD-SOAKED_CRESCENT_(SALAMENCE_MEGA_EPITHET)` | the blood-soaked crescent (Salamence Mega epithet) | הסהר | הסהר הספוג בדם | הסהר הספוג בדם | The row is cut off after its first word: הסהר alone means 'the crescent'. |
 | `SPECIES_ANNIHILAPE` | ANNIHILAPE | אנייהיליפ | אנייאליפ | אנייאליפ | Annihilape is said like 'annihilate' (/əˈnaɪəleɪt/): uh-NYE-uh-layp. |
-| `SPECIES_EXEGGUTOR_ALOLA` | EXEGGUTOR-A | אקזגוטר-א | אקזגיוטר-א | אקזגיוטר-א | Pronunciation: EXEGGUTOR is said eg-ZEG-yoo-ter, and the row 184 note says the same. |
+| `SPECIES_EXEGGUTOR_ALOLA` | EXEGGUTOR-A | אקזגוטר-א | אקזגיוטר-א | אקזגקיוטר-א | Pronunciation: EXEGGUTOR is said eg-ZEG-yoo-ter, and the row 184 note says the same. Later given the full base form (Q129). |
 | `SPECIES_KRICKETUNE` | KRICKETUNE | קריקטיון | קריקטון | קריקטון | The binding pronunciation is TPC's English, which is US English: KRIK-eh-toon, with /tuːn/ (no y-glide after t). |
 | `SPECIES_PAWMI` | PAWMI | פאומי | פומי | פומי | PAW-mee: medial aw /ɔː/ before a consonant is written ו everywhere in FireRed: CRAWDAUNT קרודונט (species_names.h:329), DAWN דון (trainers.h:1269), SHAWN שון (trainers.h:2889). |
 | `SPECIES_PAWMO` | PAWMO | פאומו | פומו | פומו | PAW-moh. |
@@ -1523,6 +1605,6 @@ Every screen these decisions changed was reviewed on the release candidate (60 t
 | A blank line was left inside a Hiker text (Q84) | Removed |
 | MIMI: "להיות חברה שלי" reads first as "my girlfriend" | "להיות ידידה שלי" |
 | The nickname tour still typed with the old cursor rule (K4) | The tour was updated; the ROM was right |
-| A geresh in a summary nickname touches the portrait box (a side effect of K5) | Listed as a known issue |
+| A geresh in a summary nickname touches the portrait box (a side effect of K5) | Listed as a known issue; fixed later (Q128) |
 | A page ending in a colon draws it against the continue arrow | Listed as a known issue |
 
