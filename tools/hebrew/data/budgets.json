@@ -9121,7 +9121,8 @@
    "per_screen_px": {
     "list(FONT_NARROW->NARROWER, TEXT_RTL CreateMonName)": 50,
     "info page(FONT_NORMAL, to screen edge, UNVERIFIED)": 83,
-    "stats page(FONT_SMALL->SMALL_NARROWER)": 55
+    "stats page(FONT_SMALL->SMALL_NARROWER)": 55,
+    "cry page(FONT_NORMAL->NARROWER, TEXT_RTL PrintCryScreenSpeciesName)": 60
    },
    "evidence": [
     "src/pokedex_plus_hgss.c:2629-2636 x=left*8-13",
@@ -9590,6 +9591,12 @@
     "where": "HGSS dex stats",
     "font": "FONT_SMALL->SMALL_NARROWER",
     "px": 55,
+    "ref": "dex_species_name"
+   },
+   {
+    "where": "HGSS dex cry page",
+    "font": "FONT_NORMAL->NARROWER",
+    "px": 60,
     "ref": "dex_species_name"
    },
    {
