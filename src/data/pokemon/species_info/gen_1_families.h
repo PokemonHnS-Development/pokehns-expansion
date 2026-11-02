@@ -13968,7 +13968,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .bodyColor = BODY_COLOR_YELLOW,
         .noFlip = TRUE,
 #if P_SEPARATE_REGIONAL_FORMS
-        .speciesName = _("אקזגיוטר-א"),
+        .speciesName = _("אקזגקיוטר-א"),
 #else
         .speciesName = _("אקזגקיוטר"),
 #endif
