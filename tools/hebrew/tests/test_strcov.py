@@ -67,6 +67,9 @@ class FakeEmu(object):
     def tap(self, keys, idle=20):
         pass
 
+    def send(self, line):
+        self.sent = getattr(self, 'sent', []) + [line]
+
     def game_insert(self, addr):
         """What RtlStringReport does (src/string_util.c), minus the hash: any free slot will do."""
         e = self.elf
@@ -115,6 +118,16 @@ class HookTest(unittest.TestCase):
         self.assertEqual(polls[1]['new'], ['08100020'])
         self.assertEqual(recs[-1]['distinct'], 3)
         self.assertEqual(rep.lost, 0)
+
+    def test_savestate_load_is_preceded_by_a_poll(self):
+        emu = FakeEmu(os.path.join(self.tmp, 'out', 'tour_c'))
+        strcov.install(emu, os.path.join(self.tmp, 'logs'))
+        emu.game_insert(0x08100040)
+        emu.send('sl state.ss')
+        polls = [r for _, r in strcov.read_logs([os.path.join(self.tmp, 'logs')]) if 'new' in r]
+        self.assertEqual(polls[0]['shot'], 'before:sl:_boot')
+        self.assertEqual(polls[0]['new'], ['08100040'])
+        self.assertEqual(emu.sent, ['sl state.ss'])
 
     def test_session_file_is_not_hidden(self):
         emu = FakeEmu(os.path.join(self.tmp, 'out', 'tour_b'))

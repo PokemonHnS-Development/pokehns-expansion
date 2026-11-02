@@ -7,7 +7,9 @@ Usage:
   strcov.py index  [--tree T] [--elf E] [--rom R] --out INDEX.json
                                                     every translated C string and where it lies in the ROM
   strcov.py report --index INDEX.json --logs LOGDIR [--logs LOGDIR2 ...] --json OUT.json [--md OUT.md]
-                                                    map the logged ROM addresses to source strings
+                                                    map the logged ROM addresses to source strings: OUT.json
+                                                    holds one record per translated string, OUT_meta.json the
+                                                    per-file table, sessions and unmatched ROM text
   strcov.py runall RUNLIST.json --rom STRREP.gba --out OUTROOT --logs LOGROOT [--jobs N] [--only RE]
                                                     run driver jobs in parallel, each with HNS_STRCOV set
 
@@ -21,9 +23,9 @@ expansion or text printer in an open-addressed set in EWRAM (src/string_util.c, 
   u32 gRtlStringClear       set to 1 by the harness after a read: the next insert empties the set first
   u32 gRtlStringTotal       new entries since boot (a drop means the game reset and RAM was cleared)
 
-The hook (install()) reads the set after every screenshot, before the session closes, and between
-frame commands once it holds more than DRAIN entries, then sets gRtlStringCount = 0 and
-gRtlStringClear = 1. Each poll appends one JSON line to LOGDIR/<session>.jsonl:
+The hook (install()) reads the set after every screenshot, before every savestate load (which
+restores EWRAM), before the session closes, and between frame commands once it holds more than
+DRAIN entries, then sets gRtlStringCount = 0 and gRtlStringClear = 1. Each poll appends one JSON line to LOGDIR/<session>.jsonl:
   {"tour": NAME, "shot": LABEL, "new": ["08ABCDEF", ...], "count": n, "lost": d, "reset": bool}
 
 Mapping (index): the translated strings are the C strings audit.py extracts from src/ (and include/)
@@ -161,7 +163,16 @@ def install(emu, logdir, tour=None):
                     'distinct': len(rep.seen)})
         return close()
 
+    send = emu.send
+
+    def send_and_poll(line):
+        # a savestate load restores EWRAM: read what the set holds before it is overwritten
+        if line.startswith(('sl ', 'reset')) and not rep.busy:
+            rep.poll('before:' + line.split()[0] + ':' + state['last'])
+        return send(line)
+
     emu.shot, emu.close, emu.frames, emu.tap = shot_and_poll, poll_and_close, frames_and_check, tap_and_check
+    emu.send = send_and_poll
     emu.strcov = rep
     return rep
 
@@ -527,6 +538,7 @@ def make_report(index, logs, elf_path=None):
             ses['polls'], ses['distinct'] = rec.get('polls', 0), rec.get('distinct', 0)
             continue
         ses['lost'] += rec.get('lost', 0) or 0
+        ses['max_count'] = max(ses.get('max_count', 0), rec.get('count', 0) or 0)
         ses['resets'] += 1 if rec.get('reset') else 0
         for h in rec.get('new', ()):
             a = int(h, 16)
@@ -602,6 +614,16 @@ def write_md(path, res, notes=None, max_text=70):
     L.append('| not located in the ROM (compiled out, unused, or not encodable) | %d |' % st['not_located'])
     L.append('| ROM addresses logged that map to no translated C string | %d |' % res.get('unmapped_pointers', 0))
     L.append('')
+    ses = res.get('sessions', {})
+    if ses:
+        L.append('Harness: %d emulator sessions, %d polls, largest set fill %d of %d usable slots, '
+                 '%d inserts refused (set full), %d EWRAM restores or resets seen between polls, '
+                 '%d sessions without a closing poll.' % (
+                     len(ses), sum(v.get('polls', 0) for v in ses.values()),
+                     max([v.get('max_count', 0) for v in ses.values()] or [0]), SLOTS * 3 // 4,
+                     sum(v.get('lost', 0) for v in ses.values()), sum(v.get('resets', 0) for v in ses.values()),
+                     sum(1 for v in ses.values() if not v.get('end'))))
+        L.append('')
     if notes:
         L += [open(notes, encoding='utf-8').read().rstrip(), '']
     kinds = {}
@@ -620,6 +642,14 @@ def write_md(path, res, notes=None, max_text=70):
     def clean(t):
         t = t.replace('|', '\\|').replace('\n', ' ').replace('\\n', ' / ').replace('\\l', ' / ').replace('\\p', ' // ')
         return t if len(t) <= max_text else t[:max_text] + '…'
+    orph = res.get('unmatched_rom_text') or []
+    if orph:
+        L += ['', '## Hebrew text in C objects that no extracted string accounts for', '',
+              'Heuristic scan (FF-terminated runs that read as Hebrew, see strcov.py _texty); some rows are '
+              'graphics or code bytes that happen to decode as letters. Not counted in the totals above.', '',
+              '| address | object | seen | text |', '| --- | --- | --- | --- |']
+        for o in orph:
+            L.append('| %s | %s | %s | %s |' % (o['addr'], o['object'], 'yes' if o['seen'] else 'no', clean(o['text'])))
     for status, title in (('unseen', 'Unseen strings (located in the ROM, never logged)'),
                           ('not_located', 'Strings not located in the ROM')):
         L += ['', '## ' + title, '']
@@ -744,8 +774,11 @@ def main(argv=None):
                'sessions': {os.path.relpath(k, os.path.commonpath(a.logs)): v for k, v in sessions.items()},
                'unmapped_pointers': len(unmapped), 'unmapped_kinds': unm,
                'unmatched_rom_text': orphans}
-        with open(a.json, 'w', encoding='utf-8') as fh:
-            json.dump(res, fh, ensure_ascii=False, indent=1)
+        with open(a.json, 'w', encoding='utf-8') as fh:            # one record per translated string
+            json.dump(out, fh, ensure_ascii=False, indent=1)
+        meta = os.path.splitext(a.json)[0] + '_meta.json'
+        with open(meta, 'w', encoding='utf-8') as fh:
+            json.dump({k: v for k, v in res.items() if k != 'strings'}, fh, ensure_ascii=False, indent=1)
         if a.md:
             write_md(a.md, res, a.notes)
         n = len(out)
