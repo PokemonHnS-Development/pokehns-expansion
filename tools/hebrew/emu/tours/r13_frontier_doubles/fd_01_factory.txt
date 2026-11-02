@@ -1,0 +1,138 @@
+# r13 Battle Factory doubles, Lv.50 (the Factory rents 3 in doubles too: FRONTIER_PARTY_SIZE,
+# src/battle_factory_screen.c). The doubles attendant (14,7): welcome, CHALLENGE, Lv.50, the save;
+# the rental screen in doubles mode (3 rented, r5 _f_rent3); the battle room and its opponent
+# (pinned to Dragon Tamer ROBERTO, 152); double battle 1 by hand (both battlers' action and move
+# menus, the target selection), the win; GO ON, the swap question YES and the swap screen after a
+# doubles win (my three rentals, the menu, SWAP, the opponent's three, the accept question YES);
+# battle 2; then from battle 2's savestate with the battle number poked: the 7th win in the lobby
+# (BP award, record prompt) and the doubles results board (11,7).
+start saves/r13/palace_doubles/factory_base.sav
+include ../../scripts/continue.txt
+ev setflag FLAG_SYS_FRONTIER_PASS; setvar VAR_HAS_ENTERED_BATTLE_FRONTIER, 1; end
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_FACTORY_LOBBY_HNS 14 8
+waitnotask Task_MapNamePopUpWindow 600
+face UP
+snap fd_00_lobby
+tap A 0
+drive fd_in menu
+pick 0
+drive fd_lv menu
+pick 0
+drivex fd_save menu 10
+pick 0
+saveyes fd_savebox
+drivex fd_pre cb2:CB2_InitSelectScreen 30 9000
+waittaskdata Select_Task_HandleChooseMons 0 1 900
+waitquiet
+snap fd_rent_00
+include ../r5_factory/_f_rent3.txt
+waitcb2 CB2_Overworld 1200
+fastbattles off
+pin @gTrainerBattleParameter+2@ 9800
+drivex fd_br1 battle 30 9000
+unpin
+oppname
+bwalk fd_b1a input:HandleInputChooseAction
+bsetmoves 0 MOVE_TACKLE
+bsetmoves 2 MOVE_TACKLE
+bfoe1
+snapq fd_b1_act0
+baction FIGHT
+waitbinput HandleInputChooseMove
+waitquiet
+snap fd_b1_move0
+tap A 4
+waitbinput HandleInputChooseTarget
+waitquiet
+snap fd_b1_target0
+tap A 4
+waitbinputb 2 HandleInputChooseAction
+waitquiet
+snap fd_b1_act2
+bactionb 2 FIGHT
+waitbinputb 2 HandleInputChooseMove
+waitquiet
+snap fd_b1_move2
+tap A 4
+waitbinputb 2 HandleInputChooseTarget
+waitquiet
+snap fd_b1_target2
+tap A 4
+bwin2 fd_b1
+# ---- win 1: GO ON, swap YES, the swap screen
+drivex fd_w1 menu 30 9000
+pick 0
+drivex fd_w1_swq menu 20
+pick 0
+drivex fd_w1_swgo cb2:CB2_InitSwapScreen 20 6000
+waittaskdata Swap_Task_HandleChooseMons 0 1 900
+waitquiet
+snap fd_sw_mine1
+tap RIGHT 4
+waitquiet
+snap fd_sw_mine2
+tap RIGHT 4
+waitquiet
+snap fd_sw_mine3
+tap RIGHT 4
+waitquiet
+snap fd_sw_cancel
+tap LEFT 4
+waitquiet
+tap LEFT 4
+waitquiet
+tap LEFT 4
+waitquiet
+tap A 4
+waittaskdata Swap_Task_HandleMenu 0 3 300
+waitquiet
+snap fd_sw_menu_r0
+tap DOWN 4
+waitquiet
+snap fd_sw_menu_r1
+tap A 4
+120 -
+waittaskdata Swap_Task_HandleChooseMons 0 1 900
+waitquiet
+snap fd_sw_opp1
+tap RIGHT 4
+waitquiet
+snap fd_sw_opp2
+tap RIGHT 4
+waitquiet
+snap fd_sw_opp3
+tap LEFT 4
+waitquiet
+tap LEFT 4
+waitquiet
+tap A 4
+60 -
+waitquiet
+snap fd_sw_accept
+tap A 4
+drivex fd_w1_go battle 30 9000
+tstate save fd_b2
+bwin2 fd_b2
+drivex fd_b2_after menu 30 9000
+# ---- the 7th win
+tstate load fd_b2
+sb2w16 CB2 6
+bwin2 fd_b7
+drivex fd_won menu 40 12000
+tstate save fd_won_rec
+pick 0
+drivex fd_won_yes free 20 6000
+snap fd_won_yes_end
+tstate load fd_won_rec
+pick 1
+drivex fd_won_no free 10
+snap fd_won_no_end
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_FACTORY_LOBBY_HNS 11 8
+waitnotask Task_MapNamePopUpWindow 600
+face UP
+tap A 0
+30 -
+waitquiet
+snap fd_res_doubles
+tap A 4
+waitctl 300

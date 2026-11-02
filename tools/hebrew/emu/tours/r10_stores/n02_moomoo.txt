@@ -1,0 +1,8 @@
+# Route 39 farm house milk (Route39_FarmHouse_EventScript_FarmerM): YES, another? NO; then NO.
+start saves/st_l6.sav
+include _base.txt
+visit MAP_ROUTE39_FARM_HOUSE_HNS
+clerk 4 4 n02_hi
+chat n02_yes A B
+clerk 4 4 n02_hi2
+chat n02_no B

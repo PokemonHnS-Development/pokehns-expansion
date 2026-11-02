@@ -1,0 +1,29 @@
+# Repro in a category MARCUS belongs to: a postgame Hyper-rank TOUGH contest (his pools are Cute and Tough)
+# with MARCUS (gContestOpponents[66], SQUIRTLE) as contestant 0, i.e. the first opponent SetContestants
+# picks. Result: the Hebrew rc12 release ROM runs on here (the stop needs the injected COOL contest of r9d_f).
+start saves/ladder6_postgame.sav
+include ../../scripts/continue.txt
+ev createmon 0, 0, SPECIES_SCIZOR, 50, move1=MOVE_AERIAL_ACE, move2=MOVE_QUICK_ATTACK, move3=MOVE_METAL_CLAW, move4=MOVE_FURY_CUTTER; additem ITEM_POKEBLOCK_CASE, 1; end
+w8 @gContestMonPartyIndex@ 0
+ev setvar VAR_CONTEST_CATEGORY, 4; setvar VAR_CONTEST_RANK, 0; special GiveMonContestRibbon; setvar VAR_CONTEST_RANK, 1; special GiveMonContestRibbon; end
+warpto MAP_LILYCOVE_CITY_CONTEST_LOBBY_HNS 14 3
+waitnotask Task_MapNamePopUpWindow 600
+pinrng
+face UP
+tap A 4
+fieldwatch recep menu 6000
+pick 0
+fieldwatch rank menu 3000
+pick 2
+fieldwatch type menu 3000
+pick 4
+fieldwatch which cb2:CB2_UpdatePartyMenu 3000
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap party_pick
+tap A 4
+waitkey 3000
+setopps 66
+oppnames
+snap entry_msg
+fieldwatch entry cb2:CB2_StartContest 3000 0

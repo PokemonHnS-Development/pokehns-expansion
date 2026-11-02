@@ -1,0 +1,9 @@
+# shared Cherrygrove clerk (MAP_SAFFRON_CITY_MART_HNS).
+start saves/st_l6.sav
+include _base.txt
+visit MAP_SAFFRON_CITY_MART_HNS
+clerk 2 3 m12_hi
+buyopen m12_buy
+listshots m12_list
+buyclose m12_menu
+shopquit m12_bye

@@ -1,0 +1,9 @@
+# Trainer Hill entrance, badge list ('pokemart 0') (MAP_TRAINER_HILL_ENTRANCE_HNS).
+start saves/st_l6.sav
+include _base.txt
+visit MAP_TRAINER_HILL_ENTRANCE_HNS
+clerk 12 9 m32_hi
+buyopen m32_buy
+listshots m32_list
+buyclose m32_menu
+shopquit m32_bye

@@ -1,0 +1,7 @@
+# the bag opened on ITEMS with the save's own items, every pocket going RIGHT and back LEFT.
+start saves/bp_menuA.sav
+include ../../scripts/continue.txt
+snap field
+bagopen ITEMS
+pocketcycle pc
+bagclose

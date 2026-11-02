@@ -1,0 +1,5 @@
+# r10 travel (gen_tours.py): GATE_ROUTE29_ROUTE46 on tr_l4
+start saves/tr_l4.sav
+include _base.txt
+visit MAP_GATE_ROUTE29_ROUTE46_HNS
+area

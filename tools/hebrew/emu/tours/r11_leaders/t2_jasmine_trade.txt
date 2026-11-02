@@ -1,0 +1,40 @@
+# r11: Jasmine's trade after the Mineral Badge (OlivineCity_Gym_EventScript_Jasmine_Trade, once Jasmine
+# is at the dojo: FLAG_HIDE_DOJO_JASMINE clear; data/maps/OlivineCity_Gym_hns/scripts.inc:340-370,
+# INGAME_TRADE_STEELIX, any Pokemon): NO (JasmineDeclineTrade); YES with the Rhyhorn (trade scene, JasmineTakeCare);
+# again (JasmineTradeCompleted).
+start saves/ladder6_postgame.sav
+include _base.txt
+ev clearflag FLAG_HIDE_DOJO_JASMINE; clearflag FLAG_OLIVINE_GYM_NPC_TRADE_COMPLETED; callnative ZeroPlayerPartyMons; givemon SPECIES_TYPHLOSION, 60; givemon SPECIES_RHYHORN, 20; special CalculatePlayerPartyCount; end
+warpto MAP_OLIVINE_CITY_GYM_HNS 8 5
+face UP
+snap t2_room
+tap A 4
+scene t2_ask1 20000
+yesno t2_yesno1 NO
+drive t2_decline
+face UP
+tap A 4
+scene t2_ask3 20000
+yesno t2_yesno3 YES
+waitcb2x CB2_PokeStorage 900
+waittaskx Task_PokeStorageMain 900
+waitpmem 8 pokemon_storage_system:sStorage 0 0 900
+seek 8 @pokemon_storage_system:sCursorArea@ 3 UP 6
+waitpmem 8 pokemon_storage_system:sStorage 0 0 300
+press A
+waittaskx Task_PokeStorageMain 300
+waitpmem 8 pokemon_storage_system:sStorage 0 0 300
+seek 8 @pokemon_storage_system:sCursorPosition@ 1 DOWN 8
+waitpmem 8 pokemon_storage_system:sStorage 0 0 300
+snap t2_party_rhyhorn
+press A
+waittaskx Task_OnSelectedMon 300
+waitpmem 8 pokemon_storage_system:sStorage 0 2 300
+press A
+waitcb2x CB2_InGameTrade 900
+scenewatch t2_trade_scene CB2_Overworld 5000 110 160 A 150
+waitcb2x CB2_Overworld 900
+drive t2_takecare
+face UP
+tap A 4
+drive t2_completed

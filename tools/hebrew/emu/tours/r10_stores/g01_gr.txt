@@ -1,0 +1,20 @@
+# Game Corner on MAP_GOLDENROD_CITY_GAME_CORNER_HNS: coins clerk (buy 50 / 500), prize Pokemon menu, TM prize menu, buy,
+# not enough coins.
+start saves/st_l6.sav
+include _base.txt
+ev additem ITEM_COIN_CASE; end
+setcoins 9000
+visit MAP_GOLDENROD_CITY_GAME_CORNER_HNS
+clerk 3 2 g01_coin
+chat g01_c50 A
+clerk 3 2 g01_coinb
+chat g01_c500 d1
+clerk 16 2 g01_mon
+chat g01_mon1 A B
+clerk 18 2 g01_tm
+chat g01_tm1 A A
+clerk 18 2 g01_tmb
+chat g01_tm2 d3 B
+setcoins 10
+clerk 16 2 g01_monp
+chat g01_mon2 A A

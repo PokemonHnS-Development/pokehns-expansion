@@ -1,0 +1,59 @@
+# r13 Dome doubles, round 1 menu: OPPONENT (the 'next opponent' line and the info card), TOURNEY
+# TREE (round line, the tree, the 16 trainer info cards, the match cards). Ends at the menu and
+# saves state r1ready.
+start saves/r13/dome_doubles/base.sav
+dstate load r1menu
+pick 0
+drivex dd_r1opp cb2:CB2_TourneyTree 10 3000
+waittaskdata Task_HandleInfoCardInput 0 2 900
+waitquiet
+snap dd_r1opp_card
+tap B 0
+drivex dd_r1back menu 10 3000
+pick 1
+drivex dd_r1tree cb2:CB2_TourneyTree 10 3000
+waittaskdata Task_HandleTourneyTreeInput 0 2 900
+waitquiet
+snap dd_r1tree_full
+domecards dd_r1card 0
+snap dd_r1tree_cursor
+tap A 0
+waittaskdata Task_HandleInfoCardInput 0 2 900
+waitquiet
+snap dd_r1match_00
+tapstate Task_HandleInfoCardInput 0 2 RIGHT
+snap dd_r1match_01
+tapstate Task_HandleInfoCardInput 0 2 DOWN
+snap dd_r1match_02
+tapstate Task_HandleInfoCardInput 0 2 DOWN
+snap dd_r1match_03
+tapstate Task_HandleInfoCardInput 0 2 DOWN
+snap dd_r1match_04
+tapstate Task_HandleInfoCardInput 0 2 DOWN
+snap dd_r1match_05
+tapstate Task_HandleInfoCardInput 0 2 DOWN
+snap dd_r1match_06
+tapstate Task_HandleInfoCardInput 0 2 DOWN
+snap dd_r1match_07
+tapstate Task_HandleInfoCardInput 0 2 DOWN
+snap dd_r1match_08
+tapstate Task_HandleInfoCardInput 0 2 DOWN
+snap dd_r1match_09
+tapstate Task_HandleInfoCardInput 0 2 DOWN
+snap dd_r1match_10
+tapstate Task_HandleInfoCardInput 0 2 DOWN
+snap dd_r1match_11
+tapstate Task_HandleInfoCardInput 0 2 DOWN
+snap dd_r1match_12
+tapstate Task_HandleInfoCardInput 0 2 DOWN
+snap dd_r1match_13
+tapstate Task_HandleInfoCardInput 0 2 DOWN
+snap dd_r1match_14
+tapstate Task_HandleInfoCardInput 0 2 DOWN
+snap dd_r1match_15
+tap B 0
+waittaskdata Task_HandleTourneyTreeInput 0 2 900
+waitquiet
+tap B 0
+drivex dd_r1back2 menu 10 3000
+dstate save r1ready

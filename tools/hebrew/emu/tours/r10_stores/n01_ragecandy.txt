@@ -1,0 +1,7 @@
+# Mahogany Rage Candy Bar merchant (MahoganyTown_EventScript_Merchant) in the post-game state (VAR_MAHOGANY_TOWN_STATE
+# 17: MerchantAfter); the selling branches were toured in r6.
+start saves/st_l6.sav
+include _base.txt
+visit MAP_MAHOGANYTOWN_HNS 31 11
+clerk 30 11 n01_hi
+chat n01_x

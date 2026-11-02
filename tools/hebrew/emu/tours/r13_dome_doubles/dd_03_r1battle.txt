@@ -1,0 +1,82 @@
+# r13 Dome doubles, round 1: READY TO START, the pick of 2, the battle room, the double battle
+# with every menu shown once (action menus of both battlers, the in-battle party menu and its
+# 'already in battle' line, the real move menu, a single-target move's target cursor on both
+# foes, a spread move's target display), the win, the pre-battle room, the static tree, the
+# round-2 menu. Saves state r2menu.
+start saves/r13/dome_doubles/base.sav
+dstate load r1ready
+pick 2
+drivex dd_r1pre task:Task_HandleChooseMonInput 30 9000
+pfx dd_r1
+include _dd_pick2.txt
+drivex dd_r1go battle 40 12000
+domeinfo
+bwalk dd_r1b_intro input:HandleInputChooseAction
+bshot dd_r1b_act0
+# the in-battle party menu (both Pokemon are out)
+bactionb 0 POKEMON
+waittask Task_HandleChooseMonInput 600
+waitquiet
+snap dd_r1b_party
+seek 8 @gPartyMenu+9@ 1 DOWN
+tap A 0
+waittask Task_HandleSelectionMenuInput 120
+waitquiet
+snap dd_r1b_party_menu
+pick 0
+30 -
+waitquiet
+snap dd_r1b_party_inbattle
+tap A 0
+waittask Task_HandleChooseMonInput 300
+waitquiet
+tap B 0
+waitbinput HandleInputChooseAction 1200
+# the real move menu, then Ice Shard (single target) for battler 0
+bactionb 0 FIGHT
+waitbinputb 0 HandleInputChooseMove
+snap dd_r1b_move0_real
+tap B 0
+waitbinputb 0 HandleInputChooseAction
+bmove0 0 MOVE_ICE_SHARD
+bhp4 1 max max
+bactionb 0 FIGHT
+waitbinputb 0 HandleInputChooseMove
+snap dd_r1b_move0
+bmoveb 0 0
+waitbinputb 0 HandleInputChooseTarget
+snap dd_r1b_target0_a
+tap RIGHT 4
+waitquiet
+snap dd_r1b_target0_b
+tap LEFT 4
+waitquiet
+snap dd_r1b_target0_c
+tap A 4
+# battler 2: the real move menu, then Rock Slide (both foes)
+waitbinputb 2 HandleInputChooseAction
+snap dd_r1b_act2
+bactionb 2 FIGHT
+waitbinputb 2 HandleInputChooseMove
+snap dd_r1b_move2_real
+tap B 0
+waitbinputb 2 HandleInputChooseAction
+bmove0 2 MOVE_ROCK_SLIDE
+bactionb 2 FIGHT
+waitbinputb 2 HandleInputChooseMove
+snap dd_r1b_move2
+bmoveb 2 0
+waitbinputb 2 HandleInputShowTargets
+snap dd_r1b_target2
+tap A 4
+bwin dd_r1b 30
+drivemap dd_r1after MAP_BATTLE_FRONTIER_BATTLE_DOME_PRE_BATTLE_ROOM_HNS 40 12000
+domesync dumpif r1done
+drivex dd_r1win task:Task_HandleStaticTourneyTreeInput 30 9000
+waitquiet
+120 -
+snap dd_r1static
+tap A 0
+drivex dd_r2menu menu 30 9000
+domeinfo
+dstate save r2menu

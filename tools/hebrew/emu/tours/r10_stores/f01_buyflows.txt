@@ -1,0 +1,40 @@
+# Violet Mart buy flows: 10/20 POKE BALL (1/2 Premier Balls), 10 GREAT BALL and 30 ULTRA BALL
+# (I_PREMIER_BALL_BONUS GEN_LATEST: any ball), 9 (no bonus), 2 POTION, FULL RESTORE at the max quantity
+# (NO, then YES with P9999999), not enough money (P150), no room (balls and medicine pockets full).
+start saves/st_l6.sav
+include _base.txt
+visit MAP_VIOLET_CITY_MART_HNS
+clerk 2 3 f1_hi
+buyopen f1_buy
+buy f1_pb10 0 9 YES
+buy f1_pb20 0 19 YES
+buy f1_gb10 1 9 YES
+buy f1_ub30 2 29 YES
+buy f1_pb9 0 8 YES
+buy f1_pot2 3 1 YES
+buymax f1_frmax 7 NO
+buyclose f1_menu
+shopquit f1_bye
+setmoney 9999999
+clerk 2 3 f2_hi
+buyopen f2_buy
+buymax f2_frmax 7 YES
+buyclose f2_menu
+shopquit f2_bye
+setmoney 150
+clerk 2 3 f3_hi
+buyopen f3_buy
+buy f3_pb 0 0 YES
+buy f3_gb 1 0 YES
+buy f3_fr 7 0 YES
+buyclose f3_menu
+shopquit f3_bye
+setmoney 351300
+fillfull POCKET_POKE_BALLS ITEM_MASTER_BALL 999
+fillfull POCKET_MEDICINE ITEM_MAX_ELIXIR 999
+clerk 2 3 f4_hi
+buyopen f4_buy
+buy f4_pb 0 0 YES
+buy f4_pot 3 0 YES
+buyclose f4_menu
+shopquit f4_bye

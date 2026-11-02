@@ -1,0 +1,12 @@
+# r10 names: the move relearner list (FONT_NORMAL, 72 px, fit chain) and description with the
+# 16 widest learnable move names (static/widest.txt), each row under the cursor.
+start saves/ladder6_postgame.sav
+include ../../scripts/continue.txt
+
+ev .set ROM_SIZE, 0; createmon 0, 0, SPECIES_MEW, 100; special CalculatePlayerPartyCount; end
+evstart setvar VAR_0x8004, 0; special TeachMoveRelearnerMove; waitstate; release; end
+waitcb2x CB2_MoveRelearnerMain 900
+waitpmem 8 move_relearner:sMoveRelearnerStruct 0 4 900
+waitquiet
+relpoke 667,626,847,567,807,834,592,734,570,560,837,689,435,793,658,120
+relwalk n_rel 16

@@ -1,0 +1,13 @@
+# Route 39 farm house milk with VAR_ROUTE39_BARN 5 (the cow healed): YES, another YES, another NO; NO; not enough
+# money (P100).
+start saves/st_l6.sav
+include _base.txt
+ev setvar VAR_ROUTE39_BARN, 5; end
+visit MAP_ROUTE39_FARM_HOUSE_HNS
+clerk 4 4 n02b_hi
+chat n02b_yes A A B
+clerk 4 4 n02b_hi2
+chat n02b_no B
+setmoney 100
+clerk 4 4 n02b_poor
+chat n02b_poor2 A

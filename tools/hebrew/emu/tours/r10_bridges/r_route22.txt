@@ -1,0 +1,5 @@
+# r10 travel (gen_tours.py): ROUTE22 on tr_l6
+start saves/tr_l6.sav
+include _base.txt
+visit MAP_ROUTE22_HNS
+town

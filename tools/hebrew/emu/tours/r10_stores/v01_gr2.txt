@@ -1,0 +1,15 @@
+# Vending machine on MAP_GOLDENROD_CITY_DEPARTMENT_STORE_2F_HNS: money box + MULTI_VENDING_MACHINE, a drink bought; every drink, not enough money, bag full.
+start saves/st_l6.sav
+include _base.txt
+visit MAP_GOLDENROD_CITY_DEPARTMENT_STORE_2F_HNS
+signat 12 5 UP v01_hi
+chat v01_fw A B
+signat 12 5 UP v01_hi2
+chat v01_sp d1 d2 B
+setmoney 100
+signat 12 5 UP v01_poor
+chat v01_poor2 d2
+setmoney 351300
+fillfull POCKET_MEDICINE ITEM_MAX_ELIXIR 999
+signat 12 5 UP v01_full
+chat v01_full2 A

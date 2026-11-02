@@ -1,0 +1,18 @@
+# Fuchsia Safari Zone upgrade man (FuchsiaCity_SafariZoneEntrance_UpgradeGuy): level 1 YES (P200,000), level 2
+# not enough money, level 2 NO, level 3 YES (P400,000), max level.
+start saves/st_l6.sav
+include _base.txt
+visit MAP_FUCHSIA_CITY_SAFARI_ZONE_ENTRANCE_HNS
+ev setvar VAR_KANTO_SAFARI_ZONE_PROGRESS, 1; end
+clerk 2 10 n04_l1
+chat n04_l1y A
+clerk 2 10 n04_l2
+chat n04_l2y A
+clerk 2 10 n04_l2b
+chat n04_l2n B
+setmoney 9999999
+ev setvar VAR_KANTO_SAFARI_ZONE_PROGRESS, 3; end
+clerk 2 10 n04_l3
+chat n04_l3y A
+clerk 2 10 n04_max
+chat n04_max2
