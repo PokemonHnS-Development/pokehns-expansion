@@ -1,0 +1,95 @@
+# fix_b item 1: quote marks in the portrait nickname (src/pokemon_summary_screen.c PrintNotEggInfo,
+# LowerNicknameQuoteMarks) in all three fonts GetFontIdToFit can pick for the window. The steps are
+# scripts/r5_known/tours/k3_summary_geresh.txt with other names (nick12, scripts/r14_fix_b/r14fixb.py):
+#   slot 0 Typhlosion  ”ג'ימי”         gershayim-style double quotes and a geresh, FONT_NORMAL
+#   slot 1 Pikachu     ג'אאאאאאאא     10 letters, 64 px normal -> FONT_NARROW (56 px)
+#   slot 2 Ampharos    ג'ששש'שששש'ש   12 letters, 70 px narrow -> FONT_NARROWER (59 px), 3 geresh
+#   slot 3 Gyarados    ‘ג'ק’           single quotes, a geresh and the qof descender
+# then TM24 on slot 2 for the forget-move page, whose dark frame runs under the name.
+# Run with scripts/r14_fix_b/r14fixb.py; the save is saves_screens/r5/menuA_base.sav.
+start saves/menuA_base.sav
+include ../../continue.txt
+nick12 0 ”ג'ימי” “JIM'S”
+nick12 1 ג'אאאאאאאא J'AAAAAAAA
+nick12 2 ג'ששש'שששש'ש J'WWW'WWWW'W
+nick12 3 ‘ג'ק’ ‘JAQ’
+startmenu POKEMON
+waitcb2x CB2_UpdatePartyMenu 600
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap r14q_party
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+tap A 4
+waittaskx pokemon_summary_screen:Task_HandleInput 900
+waitnotask Task_PrintInfoPage 120
+snap r14q_sum_0_quotes
+tap DOWN 4
+waittaskx pokemon_summary_screen:Task_HandleInput 300
+waitquiet
+snap r14q_sum_1_narrow
+tap DOWN 4
+waittaskx pokemon_summary_screen:Task_HandleInput 300
+waitquiet
+snap r14q_sum_2_narrower
+tap DOWN 4
+waittaskx pokemon_summary_screen:Task_HandleInput 300
+waitquiet
+snap r14q_sum_3_single
+tap UP 4
+waittaskx pokemon_summary_screen:Task_HandleInput 300
+waitquiet
+tap B 4
+waittaskx Task_HandleSelectionMenuInput 900
+waitquiet
+tap B 4
+waittaskx Task_HandleChooseMonInput 300
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600
+
+# TM24 (TMs & HMs pocket, index 23) on ג'ימי (party slot 2): YES, the forget-move page, then B
+w8 @gBagPosition+5@ 3
+w16 @gBagPosition+E@ 3
+w16 @gBagPosition+1A@ 14
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 60
+waitquiet
+tap A 4                                   # USE
+waittaskx Task_ShowTMHMContainedMessage 300
+waitquiet
+tap A 4
+waitkey 600
+tap A 4
+waittaskx Task_CallYesOrNoCallback 600
+waitquiet
+tap A 4                                   # YES
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+seek 8 @gPartyMenu+9@ 2 DOWN
+tap A 4
+talk r14q_tm_wants 6 - Task_HandleReplaceMoveYesNoInput
+tap A 4                                   # YES
+waitkey 600
+tap A 4
+waittaskx Task_HandleReplaceMoveInput 900
+waitquiet
+snap r14q_forget_2_narrower
+tap B 4
+waitcb2x CB2_UpdatePartyMenu 900
+waitkey 900
+tap A 4
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 600
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600
