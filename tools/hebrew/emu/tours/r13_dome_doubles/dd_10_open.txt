@@ -1,0 +1,105 @@
+# r13 Dome doubles, OPEN LEVEL: a whole tourney won from the battery (the entry with the
+# OPEN LEVEL row, four rounds with the pick of 2 and a won battle each, the static trees), the
+# Open Level champion line, the lobby prize, then the previous-tourney board ('the last Open
+# Level DOUBLE BATTLE Tournament') and the doubles results window with the Open Level row.
+start saves/r13/dome_doubles/base.sav
+include ../../scripts/continue.txt
+ev setflag FLAG_SYS_FRONTIER_PASS; setvar VAR_HAS_ENTERED_BATTLE_FRONTIER, 1; end
+fastbattles off
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_DOME_LOBBY_HNS 17 11
+waitnotask Task_MapNamePopUpWindow 600
+face UP
+tap A 0
+drive dd_oin menu
+pick 0
+drive dd_olv menu
+pick 1
+drive dd_osel task:Task_HandleChooseMonInput 20
+include ../../scripts/r2_battle_frontier_facilities/_bf_enter3.txt
+drive dd_osave menu 10
+pick 0
+saveyes
+drivex dd_ogo menu 30 9000
+domesync dumpif o1
+pick 1
+drivex dd_otree cb2:CB2_TourneyTree 10 3000
+waittaskdata Task_HandleTourneyTreeInput 0 2 900
+waitquiet
+snap dd_otree_full
+tap B 0
+drivex dd_oback menu 10 3000
+# round 1
+pick 2
+drivex dd_o1pre task:Task_HandleChooseMonInput 30 9000
+pfx dd_o1
+include _dd_pick2.txt
+drivex dd_o1go battle 40 12000
+domeinfo
+bwin dd_o1b 30
+drivemap dd_o1after MAP_BATTLE_FRONTIER_BATTLE_DOME_PRE_BATTLE_ROOM_HNS 40 12000
+domesync dumpif o1done
+drivex dd_o1win task:Task_HandleStaticTourneyTreeInput 30 9000
+waitquiet
+120 -
+snap dd_o1static
+tap A 0
+drivex dd_o1menu menu 30 9000
+# round 2
+pick 2
+drivex dd_o2pre task:Task_HandleChooseMonInput 30 9000
+pfx dd_o2
+include _dd_pick2.txt
+drivex dd_o2go battle 40 12000
+domeinfo
+bwin dd_o2b 30
+drivemap dd_o2after MAP_BATTLE_FRONTIER_BATTLE_DOME_PRE_BATTLE_ROOM_HNS 40 12000
+domesync dumpif o2done
+drivex dd_o2win task:Task_HandleStaticTourneyTreeInput 30 9000
+waitquiet
+120 -
+snap dd_o2static
+tap A 0
+drivex dd_o2menu menu 30 9000
+# round 3
+pick 2
+drivex dd_o3pre task:Task_HandleChooseMonInput 30 9000
+pfx dd_o3
+include _dd_pick2.txt
+drivex dd_o3go battle 40 12000
+domeinfo
+bwin dd_o3b 30
+drivemap dd_o3after MAP_BATTLE_FRONTIER_BATTLE_DOME_PRE_BATTLE_ROOM_HNS 40 12000
+domesync dumpif o3done
+drivex dd_o3win task:Task_HandleStaticTourneyTreeInput 30 9000
+waitquiet
+120 -
+snap dd_o3static
+tap A 0
+drivex dd_o3menu menu 30 9000
+# round 4
+pick 2
+drivex dd_o4pre task:Task_HandleChooseMonInput 30 9000
+pfx dd_o4
+include _dd_pick2.txt
+drivex dd_o4go battle 40 12000
+domeinfo
+bwin dd_o4b 30
+drivex dd_owin menu 60 20000
+pick 1
+drivex dd_oend free 20 6000
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_DOME_LOBBY_HNS 7 11
+waitnotask Task_MapNamePopUpWindow 600
+face UP
+tap A 0
+drivex dd_oprev cb2:CB2_TourneyTree 10 3000
+waittaskdata Task_HandleTourneyTreeInput 0 2 900
+waitquiet
+snap dd_oprev_tree
+tap B 0
+drivex dd_oprevend free 10 3000
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_DOME_LOBBY_HNS 18 11
+waitnotask Task_MapNamePopUpWindow 600
+face UP
+tap A 0
+drivex dd_ores free 10 3000
+keepsave dd_open_won

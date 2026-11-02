@@ -1,0 +1,32 @@
+# Whirl Islands from Route 41 (the cave mouth the player surfs to): 1F, B1F, B1F inner, B2F,
+# B3F, the descent and Lugia's chamber. Each floor: arrival pop-up, savestate, visit (item balls,
+# the Strength boulder, Tentacruel, Lugia, the Kimono girls if shown), a wild encounter.
+start saves/r10pg_base.sav
+include _base.txt
+arrive MAP_WHIRL_ISLANDS_1F_HNS 8 16 wi1
+ss wi1
+visit wi1
+wild wi1_wild
+arrive MAP_WHIRL_ISLANDS_B1F_HNS 71 8 wib1
+ss wib1
+visit wib1
+wild wib1_wild
+arrive MAP_WHIRL_ISLANDS_B1F_INNER_HNS 8 23 wibi
+ss wibi
+visit wibi
+wild wibi_wild
+arrive MAP_WHIRL_ISLANDS_B2F_HNS 60 16 wib2
+ss wib2
+visit wib2
+wild wib2_wild
+arrive MAP_WHIRL_ISLANDS_B3F_HNS 9 16 wib3
+ss wib3
+visit wib3
+wild wib3_wild
+arrive MAP_WHIRL_ISLANDS_DESCENT_HNS 57 92 wid
+ss wid
+visit wid
+wild wid_wild
+arrive MAP_WHIRL_ISLANDS_LUGIA_CHAMBER_HNS 29 34 wil
+ss wil
+visit wil

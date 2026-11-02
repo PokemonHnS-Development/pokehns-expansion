@@ -1,0 +1,18 @@
+# r11: the PC MAILBOX with no mail (ladder 6 has none): 'there's no mail here' (gText_NoMailHere,
+# src/player_pc.c:465, src/strings.c:484).
+start saves/ladder6_postgame.sav
+include _base.txt
+evstart lockall; special PlayerPC; waitstate; releaseall; end
+waittaskx PlayerPCProcessMenuInput 900
+waitquiet
+press DOWN
+snap m2a_pc_menu_mailbox
+tap A 4
+waitkey 600
+snap m2a_no_mail
+tap A 4
+waittaskx PlayerPCProcessMenuInput 900
+waitquiet
+snap m2a_pc_menu_back
+tap B 4
+waitctl 900 B

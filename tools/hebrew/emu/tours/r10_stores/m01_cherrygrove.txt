@@ -1,0 +1,9 @@
+# Cherrygrove_Pokemart_EventScript_Clerk: badge list ('pokemart 0') (MAP_CHERRYGROVE_CITY_MART_HNS).
+start saves/st_l6.sav
+include _base.txt
+visit MAP_CHERRYGROVE_CITY_MART_HNS
+clerk 2 3 m01_hi
+buyopen m01_buy
+listshots m01_list
+buyclose m01_menu
+shopquit m01_bye

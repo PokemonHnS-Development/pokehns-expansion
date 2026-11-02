@@ -1,0 +1,15 @@
+# Vending machine on MAP_CELADON_CITY_DEPARTMENT_STORE_ROOF_DAY_HNS: money box + MULTI_VENDING_MACHINE, a drink bought; every drink, not enough money, bag full.
+start saves/st_l6.sav
+include _base.txt
+visit MAP_CELADON_CITY_DEPARTMENT_STORE_ROOF_DAY_HNS
+signat 10 3 UP v06_hi
+chat v06_fw A B
+signat 10 3 UP v06_hi2
+chat v06_sp d1 d2 B
+setmoney 100
+signat 10 3 UP v06_poor
+chat v06_poor2 d2
+setmoney 351300
+fillfull POCKET_MEDICINE ITEM_MAX_ELIXIR 999
+signat 10 3 UP v06_full
+chat v06_full2 A

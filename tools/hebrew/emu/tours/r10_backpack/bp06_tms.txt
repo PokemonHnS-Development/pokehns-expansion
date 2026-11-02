@@ -1,0 +1,7 @@
+# Field bag, TMs & HMs pocket, the 100 machines with a move: row (number + move name, description) and the context menu with the move panel (PrintTMHMMoveData, type, power, accuracy, PP).
+start saves/bp_menuA.sav
+include ../../scripts/continue.txt
+fillpocket TM_HM 1 0 160
+bagopen TM_HM
+bagrows tm ctx 200
+bagclose

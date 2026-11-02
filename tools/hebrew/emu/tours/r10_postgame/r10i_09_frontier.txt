@@ -1,0 +1,17 @@
+# Battle Frontier island arrival: the Olivine port sailor's BATTLE FRONTIER row, the ship, the
+# arrival at the west harbour (pop-up), then every NPC and sign outside on the west and east
+# halves (facility signs, Pokemon Center / Mart signs), the Pokemon Center (nurse YES, wall clock)
+# and the mart (BUY list). The facilities' insides belong to the frontier groups.
+start saves/r10pg_base.sav
+include _base.txt
+arrive MAP_OLIVINE_CITY_PORT_INSIDE_HNS 8 14 port
+talkobj 1 port_bf pick=4
+ss bfw
+visit bfw
+arrive MAP_BATTLE_FRONTIER_OUTSIDE_EAST_HNS 12 46 bfe
+ss bfe
+visit bfe
+arrive MAP_BATTLE_FRONTIER_POKEMON_CENTER_1F_HNS 7 7 bfpc
+visit bfpc yes=1
+arrive MAP_BATTLE_FRONTIER_MART_HNS 3 6 bfm
+visit bfm

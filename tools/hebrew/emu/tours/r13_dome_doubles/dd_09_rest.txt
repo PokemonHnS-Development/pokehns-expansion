@@ -1,0 +1,33 @@
+# r13 Dome doubles, REST at the round-1 menu: 'save and quit?' YES, 'saving data', the soft
+# reset, CONTINUE, then the lobby's resume lines ('we've been waiting', the save), the corridor
+# and the round-1 menu again. Runs the entry from the battery (a savestate's flash would not
+# match the battery: the game then reports a corrupted save), with the dome tourney synced.
+start saves/r13/dome_doubles/base.sav
+include ../../scripts/continue.txt
+ev setflag FLAG_SYS_FRONTIER_PASS; setvar VAR_HAS_ENTERED_BATTLE_FRONTIER, 1; end
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_DOME_LOBBY_HNS 17 11
+waitnotask Task_MapNamePopUpWindow 600
+face UP
+tap A 0
+drive dd_r9in menu
+pick 0
+drive dd_r9lv menu
+pick 0
+drive dd_r9sel task:Task_HandleChooseMonInput 20
+include ../../scripts/r2_battle_frontier_facilities/_bf_enter3.txt
+drive dd_r9save menu 10
+pick 0
+saveyes
+drivex dd_r9go menu 30 9000
+domesync load r1
+# MULTI_TOURNEY_NO_RECORD (no match yet): REST is row 3
+pick 3
+drive dd_rq menu 10
+pick 0
+drivex dd_rsave task:Task_HandleExpansionIntro 10 6000
+waitcb2 CB2_MainMenu 4000 START
+waittask Task_HandleMainMenuInput 600
+snap dd_rmain
+tap A 30
+waitcb2 CB2_Overworld 1200
+drivex dd_rresume menu 30 12000

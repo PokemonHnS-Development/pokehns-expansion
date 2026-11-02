@@ -1,0 +1,19 @@
+# r10 travel: Route 24 bridge with the Rocket scene (Route24_Trigger_GruntScene at (16..18,11) while
+# VAR_KANTO_ROCKET_STORY_STATE is 3, data/maps/Route24_hns/scripts.inc:51-61), the grunt's battle
+# and exit (Route24_EventScript_Grunt:73-95), the onlookers during (state 4) and after (state 5).
+start saves/tr_l6.sav
+include _base.txt
+clearflag FLAG_HIDE_CERULEAN_CAPE_ROCKET
+setvar VAR_KANTO_ROCKET_STORY_STATE 3
+visit MAP_ROUTE24_HNS 17 16
+walkto 17 11
+periodic route24_scene 150 15
+drive route24_scene
+npcs
+prefix route24_after
+setvar VAR_KANTO_ROCKET_STORY_STATE 5
+visit MAP_ROUTE24_HNS 17 16
+prefix route24_after
+forget
+walkto 17 6
+npcs

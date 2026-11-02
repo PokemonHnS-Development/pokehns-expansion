@@ -1,0 +1,44 @@
+# Violet Mart SELL: every pocket in sell mode; NUGGET x2 YES, BIG NUGGET NO, TINY MUSHROOM x12 YES,
+# EXP SHARE (held item), a key item and a TM (can't sell: price 0 or important,
+# src/item_menu.c Task_ItemContext_Sell), a berry, POKE BALL x5 NO, a medicine, and with P9999000 a
+# STAR PIECE (the money box near the cap).
+start saves/st_l6.sav
+include _base.txt
+setpocket POCKET_ITEMS ITEM_NUGGET:3 ITEM_BIG_NUGGET:1 ITEM_TINY_MUSHROOM:12 ITEM_STAR_PIECE:2 ITEM_EXP_SHARE:1 ITEM_HEART_SCALE:5 ITEM_RARE_BONE:1
+visit MAP_VIOLET_CITY_MART_HNS
+clerk 2 3 s1_hi
+sellopen s1_bag POCKET_ITEMS
+sellpockets s1_pk
+sellclose s1_menu
+sellopen s2_bag POCKET_ITEMS ITEM_NUGGET
+sell s2 1 YES
+sellclose s2_menu
+sellopen s3_bag POCKET_ITEMS ITEM_BIG_NUGGET
+sell s3 0 NO
+sellclose s3_menu
+sellopen s4_bag POCKET_ITEMS ITEM_TINY_MUSHROOM
+sell s4 11 YES
+sellclose s4_menu
+sellopen s5_bag POCKET_ITEMS ITEM_EXP_SHARE
+sell s5 0 YES
+sellclose s5_menu
+sellopen s6_bag POCKET_KEY_ITEMS
+sell s6 0 YES
+sellclose s6_menu
+sellopen s7_bag POCKET_TM_HM
+sell s7 0 YES
+sellclose s7_menu
+sellopen s8_bag POCKET_BERRIES
+sell s8 0 YES
+sellclose s8_menu
+sellopen s9_bag POCKET_POKE_BALLS
+sell s9 4 NO
+sellclose s9_menu
+sellopen s10_bag POCKET_MEDICINE
+sell s10 0 YES
+sellclose s10_menu
+setmoney 9999000
+sellopen s11_bag POCKET_ITEMS ITEM_STAR_PIECE
+sell s11 1 YES
+sellclose s11_menu
+shopquit s_bye

@@ -1,0 +1,23 @@
+# Alola, Ula'ula Isle (after the first visit): arrival next to the island sign, every NPC and sign
+# (trainers, the lass, the move tutor, Phantonomy outside, Mt. Lanakila sign), a wild encounter;
+# then Phantonomy's house, the forest (totem / Tapu Bulu, sign) and both caves (Sandslash-A,
+# Ninetales-A, Muk-A, items).
+start saves/r10pg_base.sav
+include _base.txt
+ev setflag FLAG_VISITED_ALOLA; end
+arrive MAP_ULAULA_ISLE_HNS 6 58 ul
+ss ul
+visit ul
+wild ul_wild
+arrive MAP_ULA_ULA_HOUSE_HNS 10 12 ulh
+visit ulh
+arrive MAP_ULA_ULA_FOREST_HNS 12 15 ulf
+ss ulf
+visit ulf
+arrive MAP_ULA_ULA_CAVE_HNS 17 38 ulc
+ss ulc
+visit ulc
+wild ulc_wild
+arrive MAP_ULA_ULA_CAVE_2_HNS 17 13 ulc2
+ss ulc2
+visit ulc2

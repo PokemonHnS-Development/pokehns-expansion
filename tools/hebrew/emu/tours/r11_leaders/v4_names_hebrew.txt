@@ -1,0 +1,23 @@
+# r11: the {PLAYER} lines of this group with a player named in Hebrew (Latin twin on the English ROM):
+# a Johto statue (certified trainers: GOLD -> רון), a Kanto statue (winning trainers 'בלו, רד, {PLAYER}'),
+# and the Jasmine / Brock trade offers (dojo flags clear), answered NO.
+start saves/ladder6_postgame.sav
+include _base.txt
+setname רון RON
+ev clearflag FLAG_HIDE_DOJO_JASMINE; clearflag FLAG_HIDE_DOJO_BROCK; end
+warpto MAP_VIOLET_CITY_GYM_HNS 6 18
+talkdir v4_violet_statue UP
+warpto MAP_PEWTER_CITY_GYM_HNS 4 13
+talkdir v4_pewter_statue UP
+warpto MAP_PEWTER_CITY_GYM_HNS 6 6
+face UP
+tap A 4
+scene v4_brock_ask 20000
+yesno v4_brock_yesno NO
+drive v4_brock_no
+warpto MAP_OLIVINE_CITY_GYM_HNS 8 5
+face UP
+tap A 4
+scene v4_jasmine_ask 20000
+yesno v4_jasmine_yesno NO
+drive v4_jasmine_no

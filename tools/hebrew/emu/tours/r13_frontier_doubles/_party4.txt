@@ -1,0 +1,3 @@
+# Party for a four-Pokemon Frontier entry: slot 2 Ampharos (Leftovers), slot 3 Golem (Hard Stone),
+# slot 4 Machamp (Quick Claw), slot 5 Lugia (banned, NOT ABLE).
+ev createmon 0, 2, SPECIES_AMPHAROS, 50, item=ITEM_LEFTOVERS; createmon 0, 3, SPECIES_GOLEM, 50, item=ITEM_HARD_STONE; createmon 0, 4, SPECIES_MACHAMP, 50, item=ITEM_QUICK_CLAW; createmon 0, 5, SPECIES_LUGIA, 50; end

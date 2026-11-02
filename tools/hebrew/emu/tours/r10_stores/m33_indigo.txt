@@ -1,0 +1,10 @@
+# Indigo Plateau Pokemon Center mart (BattleFrontier_Mart_Pokemart) (MAP_INDIGO_PLATEAU_POKEMON_CENTER_HNS).
+start saves/st_l6.sav
+include _base.txt
+visit MAP_INDIGO_PLATEAU_POKEMON_CENTER_HNS
+clerk 10 10 m33_hi
+buyopen m33_buy
+listshots m33_list
+buyeach m33_ask
+buyclose m33_menu
+shopquit m33_bye

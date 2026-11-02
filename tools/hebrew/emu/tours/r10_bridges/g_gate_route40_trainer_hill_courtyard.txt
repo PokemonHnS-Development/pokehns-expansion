@@ -1,0 +1,5 @@
+# r10 travel (gen_tours.py): GATE_ROUTE40_TRAINER_HILL_COURTYARD on tr_l4
+start saves/tr_l4.sav
+include _base.txt
+visit MAP_GATE_ROUTE40_TRAINER_HILL_COURTYARD_HNS
+area

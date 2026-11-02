@@ -1,0 +1,5 @@
+# r10 travel (gen_tours.py): GATE_SAFFRON_CITY_ROUTE6 on tr_l6
+start saves/tr_l6.sav
+include _base.txt
+visit MAP_GATE_SAFFRON_CITY_ROUTE6_HNS
+area

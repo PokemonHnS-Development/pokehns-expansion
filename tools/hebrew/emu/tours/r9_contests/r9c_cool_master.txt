@@ -1,0 +1,37 @@
+# A Master-rank COOL contest from the H&S contest lobby (MAP_LILYCOVE_CITY_CONTEST_LOBBY_HNS), entry to ribbon.
+# Party slot 0 becomes a level-50 LUCARIO made by this ROM with SKY_UPPERCUT, DYNAMIC_PUNCH, TRUMP_CARD, EXTREME_SPEED; appeals 30122 (move-list index per round):
+# Extreme Speed (next appeal earlier), Sky Uppercut (startle the same type), Dynamic Punch (startle the one with the judge's attention), Trump Card twice (better when later; repeated).
+# Master rank needs the COOL Normal, Super and Hyper ribbons (GetContestEntryEligibility), given with
+# GiveMonContestRibbon on gContestMonPartyIndex 0.
+# Round 1 points are set to 2000 (gContestMonRound1Points[3], the player), so the player wins and gets
+# the ribbon. gRngValue is pinned from the lobby on, so the HE and EN runs pair up by shot name.
+start saves/ladder6_postgame.sav
+include ../../scripts/continue.txt
+ev createmon 0, 0, SPECIES_LUCARIO, 50, move1=MOVE_SKY_UPPERCUT, move2=MOVE_DYNAMIC_PUNCH, move3=MOVE_TRUMP_CARD, move4=MOVE_EXTREME_SPEED; additem ITEM_POKEBLOCK_CASE, 1; end
+w8 @gContestMonPartyIndex@ 0
+ev setvar VAR_CONTEST_CATEGORY, 0; setvar VAR_CONTEST_RANK, 0; special GiveMonContestRibbon; setvar VAR_CONTEST_RANK, 1; special GiveMonContestRibbon; setvar VAR_CONTEST_RANK, 2; special GiveMonContestRibbon; end
+warpto MAP_LILYCOVE_CITY_CONTEST_LOBBY_HNS 14 3
+waitnotask Task_MapNamePopUpWindow 600
+pinrng
+face UP
+tap A 4
+fieldwatch recep menu 6000
+pick 0
+fieldwatch rank menu 3000
+pick 3
+fieldwatch type menu 3000
+pick 0
+fieldwatch which cb2:CB2_UpdatePartyMenu 3000
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap party_pick
+tap A 4
+fieldwatch entry cb2:CB2_StartContest 40000 45
+w16s gContestMonRound1Points 3 2000
+contestplay5 app 30122
+fieldwatch judge cb2:CB2_StartShowContestResults 20000 45
+waitcb2x CB2_ShowContestResults 600
+burstuntil res CB2_ShowContestResults 16 9000 A 240
+fieldwatch prize free 30000 45
+loc
+snap lobby_after

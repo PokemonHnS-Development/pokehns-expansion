@@ -1,0 +1,11 @@
+# Kurt's apricorn ball shop (CreateKurtBallShop): list, every row asked (ASPEAR missing = 'no apricorn').
+start saves/st_l6.sav
+include _base.txt
+setpocket POCKET_BERRIES ITEM_PECHA_BERRY:3 ITEM_RAWST_BERRY:1 ITEM_CHERI_BERRY:5 ITEM_ORAN_BERRY:2 ITEM_CHESTO_BERRY:1 ITEM_PERSIM_BERRY:4
+visit MAP_AZALEA_TOWN_KURTS_HOUSE_HNS
+clerk 15 3 k_hi
+buywait k_buy
+listshots k_list
+buyeach k_ask
+press B
+chat k_end

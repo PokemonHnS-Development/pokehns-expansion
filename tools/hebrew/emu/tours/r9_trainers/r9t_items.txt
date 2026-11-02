@@ -1,0 +1,16 @@
+# r9 field trainers: the opponent item line (Q124) in field trainer battles. Run with
+# scripts/r9_trainers/r9trainers.py. Each trainer: the AI gets one FULL HEAL and its first Pokemon
+# falls asleep at the first action prompt, so it uses the item.
+start saves/ladder6_postgame.sav
+include ../r6_league/_base.txt
+tbase
+itemuse ITEM_FULL_HEAL
+trainer Route27_hns 4
+itemuse ITEM_FULL_HEAL
+trainer Route27_hns 9
+itemuse ITEM_FULL_HEAL
+trainer Route12_hns 3
+itemuse ITEM_FULL_HEAL
+trainer AzaleaTown_Gym_hns 3
+itemuse ITEM_FULL_HEAL
+trainer Route47_hns 4

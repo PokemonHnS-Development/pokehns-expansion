@@ -1,0 +1,18 @@
+# r11 (gen_tours.py): MAP_SEAFOAM_ISLANDS_GYM_HNS after its badge, on ladder6_postgame. Statue SeafoamIslands_Gym_EventScript_GymStatue, guide SeafomIslands2_EventScript_GymGuide, leader SeafoamIslands_Gym_EventScript_Blaine (data/maps/SeafoamIslands_Gym_hns/scripts.inc).
+start saves/ladder6_postgame.sav
+include _base.txt
+warpto MAP_SEAFOAM_ISLANDS_GYM_HNS 15 24
+face UP
+snap gk7_room
+talkdir gk7_statue UP
+approach 11
+tap A 4
+drive gk7_guide
+approach 11
+tap A 4
+drive gk7_guide2
+warpto MAP_SEAFOAM_ISLANDS_GYM_HNS 18 11
+face UP
+snap gk7_leader_room
+talkdir gk7_leader UP
+talkdir gk7_leader_again UP

@@ -1,0 +1,11 @@
+# Field bag, KEY ITEMS pocket (capacity 60 < 99 key items): 0-59, then 60-98; row + context menu.
+start saves/bp_menuA.sav
+include ../../scripts/continue.txt
+fillpocket KEY_ITEMS 1 0 60
+bagopen KEY_ITEMS
+bagrows key ctx 100
+bagclose
+fillpocket KEY_ITEMS 1 60 60
+bagopen KEY_ITEMS
+bagrows key ctx 100
+bagclose

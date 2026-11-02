@@ -1,0 +1,9 @@
+# shared Cherrygrove clerk (MAP_VIRIDIAN_CITY_MART_HNS).
+start saves/st_l6.sav
+include _base.txt
+visit MAP_VIRIDIAN_CITY_MART_HNS
+clerk 2 3 m07_hi
+buyopen m07_buy
+listshots m07_list
+buyclose m07_menu
+shopquit m07_bye

@@ -1,0 +1,15 @@
+# r11 (gen_tours.py): MAP_VERMILION_CITY_GYM_HNS after its badge, on ladder6_postgame. Statue VermilionCity_Gym_EventScript_GymStatue, guide VermilionCity_Gym_EventScript_GymGuy, leader VermilionCity_Gym_EventScript_Surge (data/maps/VermilionCity_Gym_hns/scripts.inc).
+start saves/ladder6_postgame.sav
+include _base.txt
+warpto MAP_VERMILION_CITY_GYM_HNS 3 18
+face UP
+snap gk3_room
+talkdir gk3_statue UP
+approach 5
+tap A 4
+drive gk3_guide
+warpto MAP_VERMILION_CITY_GYM_HNS 5 3
+face UP
+snap gk3_leader_room
+talkdir gk3_leader UP
+talkdir gk3_leader_again UP

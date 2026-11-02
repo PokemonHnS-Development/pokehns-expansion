@@ -1,0 +1,15 @@
+# r11 (gen_tours.py): MAP_FUCHSIA_CITY_GYM_HNS after its badge, on ladder6_postgame. Statue FuchsiaCity_Gym_EventScript_GymStatue, guide FuchsiaCity_Gym_EventScript_GymGuy, leader FuchsiaCity_Gym_EventScript_Janine (data/maps/FuchsiaCity_Gym_hns/scripts.inc).
+start saves/ladder6_postgame.sav
+include _base.txt
+warpto MAP_FUCHSIA_CITY_GYM_HNS 4 20
+face UP
+snap gk5_room
+talkdir gk5_statue UP
+approach 6
+tap A 4
+drive gk5_guide
+warpto MAP_FUCHSIA_CITY_GYM_HNS 2 12
+face UP
+snap gk5_leader_room
+talkdir gk5_leader UP
+talkdir gk5_leader_again UP

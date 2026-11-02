@@ -1,0 +1,20 @@
+# r13 Dome doubles, a lost round-2 match: the pick of 2, the battle lost (both Pokemon faint),
+# the battle room's winner line for the opponent, the lobby (thank you, record will be saved,
+# record question NO, see you again), then the doubles results window with the broken streak.
+start saves/r13/dome_doubles/base.sav
+dstate load r2menu
+pick 2
+drivex dd_lpre task:Task_HandleChooseMonInput 30 9000
+pfx dd_l
+include _dd_pick2.txt
+drivex dd_lgo battle 40 12000
+domeinfo
+blose dd_lb 30
+drivex dd_llost menu 60 20000
+pick 1
+drivex dd_lend free 20 6000
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_DOME_LOBBY_HNS 18 11
+waitnotask Task_MapNamePopUpWindow 600
+face UP
+tap A 0
+drivex dd_lres free 10 3000

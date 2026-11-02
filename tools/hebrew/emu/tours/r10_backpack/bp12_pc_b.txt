@@ -1,0 +1,66 @@
+# PC item storage, WITHDRAW list (src/player_pc.c ItemStorage_*): every item a player can hold, 50 per batch
+# (pcfill writes the 50 pcItems slots between batches while the ITEM STORAGE menu is open), a shot per row
+# with the description window and icon, and the CANCEL row. Batches: 6 7 8 9 10 11 (of 0-17, 889 items).
+start saves/bp_menuA.sav
+include ../../scripts/continue.txt
+# The PC is at (11,1) of the Center; stand below it facing up (as tours/r7_count_fix/r7c_pc.txt)
+go RIGHT 4
+go UP 2
+talk pc_boot 10                           # SOMEONE'S PC / GOLD's PC / ...
+tap DOWN 4
+tap A 0                                   # GOLD's PC
+talk pc_player_open 10 - PlayerPCProcessMenuInput
+waittaskx PlayerPCProcessMenuInput 600
+waitquiet
+tap A 0                                   # ITEM STORAGE: WITHDRAW / DEPOSIT / TOSS / CANCEL
+waittaskx ItemStorageMenuProcessInput 600
+waitquiet
+snap pc_itemstorage_menu
+pcfill 300 50
+tap A 0                                   # WITHDRAW
+waittaskx ItemStorage_ProcessInput 600
+waitquiet
+pcrows pw 60
+press B
+waittaskx ItemStorageMenuProcessInput 600
+waitquiet
+pcfill 350 50
+tap A 0                                   # WITHDRAW
+waittaskx ItemStorage_ProcessInput 600
+waitquiet
+pcrows pw 60
+press B
+waittaskx ItemStorageMenuProcessInput 600
+waitquiet
+pcfill 400 50
+tap A 0                                   # WITHDRAW
+waittaskx ItemStorage_ProcessInput 600
+waitquiet
+pcrows pw 60
+press B
+waittaskx ItemStorageMenuProcessInput 600
+waitquiet
+pcfill 450 50
+tap A 0                                   # WITHDRAW
+waittaskx ItemStorage_ProcessInput 600
+waitquiet
+pcrows pw 60
+press B
+waittaskx ItemStorageMenuProcessInput 600
+waitquiet
+pcfill 500 50
+tap A 0                                   # WITHDRAW
+waittaskx ItemStorage_ProcessInput 600
+waitquiet
+pcrows pw 60
+press B
+waittaskx ItemStorageMenuProcessInput 600
+waitquiet
+pcfill 550 50
+tap A 0                                   # WITHDRAW
+waittaskx ItemStorage_ProcessInput 600
+waitquiet
+pcrows pw 60
+press B
+waittaskx ItemStorageMenuProcessInput 600
+waitquiet

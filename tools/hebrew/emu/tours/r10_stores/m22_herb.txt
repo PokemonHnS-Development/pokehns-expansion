@@ -1,0 +1,10 @@
+# Goldenrod Underground herb shop (LavaridgeTown_HerbShop_EventScript_Clerk) (MAP_GOLDENROD_CITY_UNDERGROUND_TUNNEL_HNS).
+start saves/st_l6.sav
+include _base.txt
+visit MAP_GOLDENROD_CITY_UNDERGROUND_TUNNEL_HNS
+clerk 6 24 m22_hi
+buyopen m22_buy
+listshots m22_list
+buyeach m22_ask
+buyclose m22_menu
+shopquit m22_bye

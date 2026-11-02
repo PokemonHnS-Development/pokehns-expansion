@@ -1,0 +1,5 @@
+# r10 travel (gen_tours.py): GATE_AZALEA_TOWN_ILEX_FOREST on tr_l4
+start saves/tr_l4.sav
+include _base.txt
+visit MAP_GATE_AZALEA_TOWN_ILEX_FOREST_HNS
+area

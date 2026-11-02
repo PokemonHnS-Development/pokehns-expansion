@@ -1,0 +1,9 @@
+# shared Cherrygrove clerk (MAP_VERMILION_CITY_MART_HNS).
+start saves/st_l6.sav
+include _base.txt
+visit MAP_VERMILION_CITY_MART_HNS
+clerk 2 3 m10_hi
+buyopen m10_buy
+listshots m10_list
+buyclose m10_menu
+shopquit m10_bye
