@@ -1484,10 +1484,10 @@ const u8 gText_Judgment[] = _("{B_BUFF1}{CLEAR 13}שיפוט{CLEAR 13}{B_BUFF2}"
 static const u8 sText_TwoTrainersSentPkmn[] = _("הפוקימון של {B_TRAINER1_NAME_WITH_CLASS}, {B_OPPONENT_MON1_NAME}, יוצא לקרב!\pהפוקימון של {B_TRAINER2_NAME_WITH_CLASS}, {B_OPPONENT_MON2_NAME}, יוצא לקרב!");
 static const u8 sText_Trainer2SentOutPkmn[] = _("הפוקימון של {B_TRAINER2_NAME_WITH_CLASS}, {B_BUFF1}, יוצא לקרב!");
 static const u8 sText_TwoTrainersWantToBattle[] = _("קיבלת אתגר\nמ{B_TRAINER1_NAME_WITH_CLASS}\lומ{B_TRAINER2_NAME_WITH_CLASS}!\p");
-static const u8 sText_InGamePartnerSentOutZGoN[] = _("{B_PARTNER_NAME_WITH_CLASS} שלח את\n{B_PLAYER_MON2_NAME}! צא, {B_PLAYER_MON1_NAME}!");
-static const u8 sText_InGamePartnerSentOutNGoZ[] = _("{B_PARTNER_NAME_WITH_CLASS} שלח את\n{B_PLAYER_MON1_NAME}! צא, {B_PLAYER_MON2_NAME}!");
-static const u8 sText_InGamePartnerSentOutPkmn1[] = _("{B_PARTNER_NAME_WITH_CLASS} שלח\nאת {B_PLAYER_MON1_NAME}!");
-static const u8 sText_InGamePartnerSentOutPkmn2[] = _("{B_PARTNER_NAME_WITH_CLASS} שלח\nאת {B_PLAYER_MON2_NAME}!");
+static const u8 sText_InGamePartnerSentOutZGoN[] = _("הפוקימון של {B_PARTNER_NAME_WITH_CLASS}, {B_PLAYER_MON2_NAME}, יוצא לקרב! צא, {B_PLAYER_MON1_NAME}!");
+static const u8 sText_InGamePartnerSentOutNGoZ[] = _("הפוקימון של {B_PARTNER_NAME_WITH_CLASS}, {B_PLAYER_MON1_NAME}, יוצא לקרב! צא, {B_PLAYER_MON2_NAME}!");
+static const u8 sText_InGamePartnerSentOutPkmn1[] = _("הפוקימון של {B_PARTNER_NAME_WITH_CLASS}, {B_PLAYER_MON1_NAME}, יוצא לקרב!");
+static const u8 sText_InGamePartnerSentOutPkmn2[] = _("הפוקימון של {B_PARTNER_NAME_WITH_CLASS}, {B_PLAYER_MON2_NAME}, יוצא לקרב!");
 static const u8 sText_InGamePartnerWithdrewPkmn1[] = _("{B_PARTNER_NAME_WITH_CLASS} החזיר\nאת {B_PLAYER_MON1_NAME}!");
 static const u8 sText_InGamePartnerWithdrewPkmn2[] = _("{B_PARTNER_NAME_WITH_CLASS} החזיר\nאת {B_PLAYER_MON2_NAME}!");
 
