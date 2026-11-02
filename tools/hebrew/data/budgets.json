@@ -9119,7 +9119,7 @@
    "align": "left",
    "mode": "in-place",
    "per_screen_px": {
-    "list(FONT_NARROW, no fit)": 50,
+    "list(FONT_NARROW->NARROWER, TEXT_RTL CreateMonName)": 50,
     "info page(FONT_NORMAL, to screen edge, UNVERIFIED)": 83,
     "stats page(FONT_SMALL->SMALL_NARROWER)": 55
    },
@@ -9581,8 +9581,8 @@
     "ref": "summary_nickname_species"
    },
    {
-    "where": "HGSS dex list (no fit)",
-    "font": "FONT_NARROW",
+    "where": "HGSS dex list",
+    "font": "FONT_NARROW->NARROWER",
     "px": 50,
     "ref": "dex_species_name"
    },

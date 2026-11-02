@@ -1,0 +1,10 @@
+# r14 fix_a: the Battle Dome doubles results window (lobby sign at 18,10, ShowDomeResultsWindow)
+# from the battery kept after an Open Level doubles tourney win (r13 verify_dd_results v_open):
+# 'Clear streak' rows and a 'Championships' row in each level block.
+start saves/r14/fix_a/dd_open_won.sav
+include ../../scripts/continue.txt
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_DOME_LOBBY_HNS 18 11
+waitnotask Task_MapNamePopUpWindow 600
+face UP
+tap A 0
+drivex dd_open_res free 10 3000

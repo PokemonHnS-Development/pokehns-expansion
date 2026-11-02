@@ -1,0 +1,103 @@
+# r14 fix_a: every Frontier results window (lobby signs), with distinct 1-4 digit records poked
+# into the save (bfrecords, scripts/r2_battle_frontier_facilities/bffops.py: Lv.50 = current, Open =
+# previous), to check that each window's counts share one number column. The Dome window mixes
+# 'Clear streak' and 'Championships' rows, the Pike window 'Rooms cleared' and 'Times cleared' rows.
+# Each window is opened by its own sign script, as the sign would (the r2 bf01_results flow, without
+# the Ranking Hall).
+start saves/r14/fix_a/results_base.sav
+include ../../scripts/continue.txt
+ev setvar VAR_HAS_ENTERED_BATTLE_FRONTIER, 1; end
+bfrecords
+
+# tower lobby
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_TOWER_LOBBY_HNS 12 8
+waitnotask map_name_popup:Task_MapNamePopUpWindow 600
+evstart goto 0x@BattleFrontier_BattleTowerLobby_EventScript_ShowSinglesResults_hns@
+30 -
+snap res_tower_singles
+tap A 0
+waitctl 600
+evstart goto 0x@BattleFrontier_BattleTowerLobby_EventScript_ShowDoublesResults_hns@
+30 -
+snap res_tower_doubles
+tap A 0
+waitctl 600
+evstart goto 0x@BattleFrontier_BattleTowerLobby_EventScript_ShowMultisResults_hns@
+30 -
+snap res_tower_multis
+tap A 0
+waitctl 600
+evstart goto 0x@BattleFrontier_BattleTowerLobby_EventScript_ShowLinkMultisResults_hns@
+30 -
+snap res_tower_linkmultis
+tap A 0
+waitctl 600
+
+# dome lobby
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_DOME_LOBBY_HNS 11 14
+waitnotask map_name_popup:Task_MapNamePopUpWindow 600
+evstart goto 0x@BattleFrontier_BattleDomeLobby_EventScript_ShowSinglesResults_hns@
+30 -
+snap res_dome_singles
+tap A 0
+waitctl 600
+evstart goto 0x@BattleFrontier_BattleDomeLobby_EventScript_ShowDoublesResults_hns@
+30 -
+snap res_dome_doubles
+tap A 0
+waitctl 600
+
+# palace lobby
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_PALACE_LOBBY_HNS 12 10
+waitnotask map_name_popup:Task_MapNamePopUpWindow 600
+evstart goto 0x@BattleFrontier_BattlePalaceLobby_EventScript_ShowSinglesResults_hns@
+30 -
+snap res_palace_singles
+tap A 0
+waitctl 600
+evstart goto 0x@BattleFrontier_BattlePalaceLobby_EventScript_ShowDoublesResults_hns@
+30 -
+snap res_palace_doubles
+tap A 0
+waitctl 600
+
+# arena lobby
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_ARENA_LOBBY_HNS 7 11
+waitnotask map_name_popup:Task_MapNamePopUpWindow 600
+evstart goto 0x@BattleFrontier_BattleArenaLobby_EventScript_ShowResults_hns@
+30 -
+snap res_arena
+tap A 0
+waitctl 600
+
+# factory lobby
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_FACTORY_LOBBY_HNS 9 10
+waitnotask map_name_popup:Task_MapNamePopUpWindow 600
+evstart goto 0x@BattleFrontier_BattleFactoryLobby_EventScript_ShowSinglesResults_hns@
+30 -
+snap res_factory_singles
+tap A 0
+waitctl 600
+evstart goto 0x@BattleFrontier_BattleFactoryLobby_EventScript_ShowDoublesResults_hns@
+30 -
+snap res_factory_doubles
+tap A 0
+waitctl 600
+
+# pike lobby
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_PIKE_LOBBY_HNS 5 11
+waitnotask map_name_popup:Task_MapNamePopUpWindow 600
+evstart goto 0x@BattleFrontier_BattlePikeLobby_EventScript_ShowResults_hns@
+30 -
+snap res_pike
+tap A 0
+waitctl 600
+
+# pyramid lobby
+warptoloose MAP_BATTLE_FRONTIER_BATTLE_PYRAMID_LOBBY_HNS 7 16
+waitnotask map_name_popup:Task_MapNamePopUpWindow 600
+evstart goto 0x@BattleFrontier_BattlePyramidLobby_EventScript_ShowResults_hns@
+30 -
+snap res_pyramid
+tap A 0
+waitctl 600

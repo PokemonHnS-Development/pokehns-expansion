@@ -1,0 +1,229 @@
+# The link trade screen (src/trade.c CB2_StartCreateTradeMenu / CB2_CreateTradeMenu / CB2_TradeMenu) on one
+# emulator. The partner is faked in RAM the way a cable link leaves it:
+#   gReceivedRemoteLinkPlayers = 1 (CB2_CreateTradeMenu state 1 then skips the link-up and goes to state 4),
+#   gLinkPlayers[1] = the partner (name, gender), GetMultiplayerId() is 0 without SIO, so the player is the
+#   leader and Leader_HandleCommunication runs locally;
+#   at state 4..6 the link block exchange (BufferTradeParties) is skipped: the partner's party is written
+#   into gEnemyParty and gMain.state set to 7 (the state after the exchange).
+# The partner's answers are the statuses a received block would set (Leader_ReadLinkBuffer,
+# src/trade.c:1196-1236): sTradeMenu+0x78 playerSelectStatus, +0x79 partnerSelectStatus,
+# +0x7A playerConfirmStatus, +0x7B partnerConfirmStatus, +0x7E partnerCursorPosition (6..11);
+# STATUS_READY 1, STATUS_CANCEL 2. Offsets from the struct at src/trade.c:179-213 (filler_6A, neverRead_70 and
+# filler_7C mark 0x6A / 0x70 / 0x7C).
+start saves/r14/link/base.sav
+include ../../scripts/continue.txt
+
+# the partner's party: built in the player's party slots, stashed, then the player's party is restored
+stashparty me
+ev callnative ZeroPlayerPartyMons; special CalculatePlayerPartyCount; givemon SPECIES_VOLCANION, 70; givemon SPECIES_SQUAWKABILLY, 31, item=ITEM_ORAN_BERRY; givemon SPECIES_CROBAT, 45; givemon SPECIES_MEW, 12; givemon SPECIES_EEVEE_STARTER, 5; end
+giveegg SPECIES_TOGEPI
+partyinfo
+stashparty partner
+otname partner he:דנה,en:DANA
+loadparty me player
+partyinfo
+linkplayers he:דנה,en:DANA 1
+
+w8 @gReceivedRemoteLinkPlayers@ 1
+setcb2 CB2_StartCreateTradeMenu
+waitstate 4,5,6 600
+loadparty partner enemy
+w8 @gMain+438@ 7
+waitcb2x CB2_TradeMenu 900
+waitquiet
+40 -
+snap t01_menu
+# cursor moves (sCursorMoveDestinations, src/data/trade.h:190): slot 0 LEFT -> partner slot 7 (wraps),
+# 7 UP -> CANCEL (12), 12 DOWN -> 7, 7 RIGHT -> 0
+tap LEFT 6
+waitquiet
+ptrread sTradeMenu 35 1
+snap t02_cursor_partner
+tap UP 6
+waitquiet
+ptrread sTradeMenu 35 1
+snap t03_cursor_cancel
+
+# --- the CANCEL prompt, NO
+tap A 6
+waitquiet
+40 -
+snap t04_cancel_prompt
+tap DOWN 6
+tap A 6
+waitquiet
+snap t05_cancel_no
+
+# --- a player Pokemon: SUMMARY / TRADE menu, SUMMARY, back
+tap DOWN 6
+tap RIGHT 6
+waitquiet
+ptrread sTradeMenu 35 1
+snap t06_cursor_mine
+tap A 6
+waitquiet
+snap t07_action_menu
+tap DOWN 6
+waitquiet
+snap t07_action_menu_trade
+tap UP 6
+tap A 6
+waitcb2x CB2_InitSummaryScreen 600
+waitcb2x pokemon_summary_screen:MainCB2 600
+waitquiet
+40 -
+snap t08_summary_mine
+waitcb2 CB2_TradeMenu 900 B
+waitquiet
+40 -
+snap t09_back_menu
+
+# --- a partner Pokemon (A opens its summary directly)
+tap LEFT 6
+tap A 6
+waitcb2x CB2_InitSummaryScreen 600
+waitcb2x pokemon_summary_screen:MainCB2 600
+waitquiet
+40 -
+snap t10_summary_partner
+tap RIGHT 6
+waitquiet
+40 -
+snap t10_summary_partner_p2
+waitcb2 CB2_TradeMenu 900 B
+waitquiet
+40 -
+tap RIGHT 6
+ptrread sTradeMenu 35 1
+
+# --- TRADE: standby, the partner picks slot 6+2 (CROBAT): the selected-Pokemon screen, 'Is this trade okay?',
+# YES/NO; NO -> the trade is canceled (playerConfirmStatus CANCEL as the leader's own block would set it)
+tap A 6
+waitquiet
+tap DOWN 6
+tap A 6
+waitquiet
+snap t11_standby
+ptrpoke 8 sTradeMenu 7E 8
+ptrpoke 8 sTradeMenu 79 1
+waitquiet
+snap t12_selected
+burst t13_isthisokay 6 30
+waitpmem 8 sTradeMenu 6F 3 600
+waitquiet
+snap t14_yesno
+tap DOWN 6
+tap A 6
+waitquiet
+snap t15_no_standby
+ptrpoke 8 sTradeMenu 7A 2
+ptrpoke 8 sTradeMenu 7B 1
+waitquiet
+20 -
+snap t16_canceled
+tap A 6
+waitquiet
+20 -
+snap t17_back_menu
+
+# --- the partner cancels while the player is ready (MSG_CANCELED)
+tap A 6
+waitquiet
+tap DOWN 6
+tap A 6
+waitquiet
+snap t18_standby
+ptrpoke 8 sTradeMenu 79 2
+waitquiet
+20 -
+snap t19_partner_canceled
+tap A 6
+waitquiet
+20 -
+
+# --- the player cancels while the partner is ready: CANCEL > YES (MSG_WAITING_FOR_FRIEND), then the leader
+# sees player CANCEL + partner READY (MSG_FRIEND_WANTS_TO_TRADE)
+tap LEFT 6
+tap UP 6
+tap A 6
+waitquiet
+tap A 6
+waitquiet
+20 -
+snap t20_waiting_for_friend
+ptrpoke 8 sTradeMenu 78 2
+ptrpoke 8 sTradeMenu 79 1
+waitquiet
+20 -
+snap t21_friend_wants_to_trade
+tap A 6
+waitquiet
+20 -
+snap t22_back_menu
+tap DOWN 6
+tap RIGHT 6
+ptrread sTradeMenu 35 1
+
+# --- the partner offers a Pokemon that cannot be traded (slot 6+4, EEVEE_STARTER, cannotBeTraded): YES ->
+# gText_OtherTrainersPkmnCantBeTraded (CheckMonsBeforeTrade, src/trade.c:1593)
+tap A 6
+waitquiet
+tap DOWN 6
+tap A 6
+waitquiet
+ptrpoke 8 sTradeMenu 7E 10
+ptrpoke 8 sTradeMenu 79 1
+waitpmem 8 sTradeMenu 6F 3 600
+waitquiet
+snap t23_yesno_invalid
+tap A 6
+waitquiet
+20 -
+snap t24_partner_mon_invalid
+tap A 6
+ptrpoke 8 sTradeMenu 7A 2
+ptrpoke 8 sTradeMenu 7B 2
+waitquiet
+20 -
+snap t25_canceled
+tap A 6
+waitquiet
+20 -
+
+# --- a valid pair, YES: both confirm, the fade to the trade (CB_FADE_TO_START_TRADE .. CB_START_LINK_TRADE); with
+# gReceivedRemoteLinkPlayers cleared the menu hands over to CB2_LinkTrade
+tap A 6
+waitquiet
+tap DOWN 6
+tap A 6
+waitquiet
+ptrpoke 8 sTradeMenu 7E 8
+ptrpoke 8 sTradeMenu 79 1
+waitpmem 8 sTradeMenu 6F 3 600
+waitquiet
+snap t26_yesno_valid
+tap A 6
+waitquiet
+20 -
+snap t27_yes_standby
+ptrpoke 8 sTradeMenu 7A 1
+ptrpoke 8 sTradeMenu 7B 1
+waitpmem 8 sTradeMenu 6F 13 600
+w8 @gReceivedRemoteLinkPlayers@ 0
+waitcb2x CB2_LinkTrade 600
+# the trade sequence (CB2_LinkTrade -> CB2_UpdateLinkTrade, the cable animation and its text): the link stays
+# 'connected' (gReceivedRemoteLinkPlayers 1, so state 1 skips OpenLink), state 4's player-data check is skipped
+w8 @gReceivedRemoteLinkPlayers@ 1
+waitstate 4 120
+w8 @gMain+438@ 5
+waitcb2x CB2_UpdateLinkTrade 600
+regionwatch t29_seq 6000 118 160 0 240 CB2_WaitTradeComplete
+# the end of a link trade (CB2_SaveAndEndTrade: gText_CommunicationStandby5, gText_SavingDontTurnOffPower and the
+# link save), reached in the game after LINKCMD_CONFIRM_FINISH_TRADE and CB2_TryLinkTradeEvolution
+setcb2 CB2_SaveAndEndTrade
+burst t30_save_end 4 20
+# states 100/101 wait for the link standby task; without a partner it never ends, so go on to state 2 (the save)
+waitstate 100,101 300
+w8 @gMain+438@ 2
+burst t31_saving 10 10
+showtasks

@@ -1,0 +1,40 @@
+# Link battle lines with two opponents (src/battle_message.c: STRINGID_INTROMSG with BATTLE_TYPE_MULTI ->
+# sText_TwoLinkTrainersWantToBattle; STRINGID_BATTLEEND with MULTI -> sText_TwoLinkTrainersDefeated /
+# sText_PlayerLostToTwo / sText_PlayerBattledToDrawVsTwo), in the same single trainer battle as l07 with
+# BATTLE_TYPE_RECORDED_LINK set, and BATTLE_TYPE_MULTI (1 << 6) set only until each of these lines is prepared
+# (kept on through the send-out, the battle stalls).
+# gLinkPlayers: [1] opponent 1 (id 1), [2] the player's partner (id 2), [3] opponent 2 (id 3), so
+# B_LINK_OPPONENT2_NAME = gLinkPlayers[GetBattlerMultiplayerId(BATTLE_PARTNER(BATTLE_OPPOSITE(0)))] (:3405).
+start saves/r14/link/base.sav
+include ../../scripts/continue.txt
+ev callnative ZeroPlayerPartyMons; special CalculatePlayerPartyCount; givemon SPECIES_PIKACHU, 60, move1=MOVE_THUNDERBOLT, move2=MOVE_QUICK_ATTACK; givemon SPECIES_CYNDAQUIL, 12; end
+linkplayers he:דנה,en:DANA 1 he:יואב,en:YOAV 0 he:אלכסנדר,en:ALEXAND 0
+warpto MAP_ROUTE30_HNS 23 25
+fastbattles off
+pinrng
+evstart trainerbattle_no_intro TRAINER_MIKEY_HNS, 0x@CableClub_Text_PleaseVisitAgain@; end
+waitbattle
+orw32 gBattleTypeFlags 2000040
+waittext 600
+andnotw32 gBattleTypeFlags 40
+burst m0_intro 40 3
+bwalk m1_intro input:HandleInputChooseAction
+baction FIGHT
+bmove 0
+bwalk m2_turn1 input:HandleInputChooseAction|prompt:Cmd_yesnobox
+baction FIGHT
+bmove 0
+ss l08_turn2
+waitnz gBattleOutcome 3000 A
+orw32 gBattleTypeFlags 40
+bwalk m3_won free
+sl l08_turn2
+waitnz gBattleOutcome 3000 A
+orw32 gBattleTypeFlags 40
+w8 @gBattleOutcome@ 2
+bwalk m4_lost free
+sl l08_turn2
+waitnz gBattleOutcome 3000 A
+orw32 gBattleTypeFlags 40
+w8 @gBattleOutcome@ 3
+bwalk m5_drew free

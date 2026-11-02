@@ -1,0 +1,87 @@
+# Battle Frontier Pokemon Center 2F (data/maps/BattleFrontier_PokemonCenter_2F_hns/events.inc): the three
+# wireless counters and the Mystery Gift man, talked to with no Wireless Adapter (hnsrun has no SIO peer,
+# IsWirelessAdapterConnected is FALSE), then the parts after the adapter check run in RAM at the same
+# counter (the same script labels, entered past `specialvar VAR_RESULT, IsWirelessAdapterConnected`).
+#   u  Union Room attendant (6,2)     CableClub_EventScript_UnionRoomAttendant, data/scripts/cable_club.inc:853
+#   w  Wireless Club attendant (2,2)  CableClub_EventScript_WirelessClubAttendant :939
+#   d  Direct Corner attendant (10,2) CableClub_EventScript_DirectCornerAttendant :954 (no adapter: the cable
+#                                     club welcome and room menu, :246-277)
+#   g  Mystery Gift man (1,2)         CableClub_EventScript_MysteryGiftMan :21 (hidden unless a Wonder Card is
+#                                     saved; the flag is cleared here)
+start saves/r14/link/base.sav
+include ../../scripts/continue.txt
+
+# --- u1: Union Room attendant, no adapter
+warpto MAP_BATTLE_FRONTIER_POKEMON_CENTER_2F_HNS 6 3
+face UP
+tap A 4
+fieldwatch u1_noadapter free 6000
+
+# --- u2: past the adapter check: welcome, YES/NO/INFO menu, INFO, NO
+evstart lock; faceplayer; copyvar VAR_0x8007, VAR_LAST_TALKED; message 0x@CableClub_Text_WelcomeUnionRoomEnter@; waitmessage; goto 0x@CableClub_EventScript_UnionRoomSelect@
+fieldwatch u2_welcome menu 6000
+pick 2
+fieldwatch u2_info menu 6000
+pick 1
+fieldwatch u2_no free 6000
+
+# --- u3: YES with one Pokemon (CableClub_Text_NeedTwoMonsForUnionRoom)
+ev callnative ZeroPlayerPartyMons; special CalculatePlayerPartyCount; givemon SPECIES_PIKACHU, 20; end
+evstart lock; faceplayer; message 0x@CableClub_Text_WelcomeUnionRoomEnter@; waitmessage; goto 0x@CableClub_EventScript_UnionRoomSelect@
+fieldwatch u3_welcome menu 6000
+pick 0
+fieldwatch u3_need_two free 6000
+
+# --- u4: YES with an Enigma Berry held (CableClub_Text_NoEnigmaBerryInUnionRoom)
+ev givemon SPECIES_EEVEE, 20, item=ITEM_ENIGMA_BERRY_E_READER; end
+partyinfo
+evstart lock; faceplayer; message 0x@CableClub_Text_WelcomeUnionRoomEnter@; waitmessage; goto 0x@CableClub_EventScript_UnionRoomSelect@
+fieldwatch u4_welcome menu 6000
+pick 0
+fieldwatch u4_enigma free 6000
+
+# --- w1: Wireless Club attendant: YES (explanation), then NO
+warpto MAP_BATTLE_FRONTIER_POKEMON_CENTER_2F_HNS 2 3
+face UP
+tap A 4
+fieldwatch w1_ask menu 6000
+pick 0
+fieldwatch w1_explain free 6000
+face UP
+tap A 4
+fieldwatch w2_ask menu 6000
+pick 1
+fieldwatch w2_no free 6000
+
+# --- w3: before the Pokedex (FLAG_SYS_POKEDEX_GET clear): gText_SorryWirelessClubAdjustments
+clearflag FLAG_SYS_POKEDEX_GET
+face UP
+tap A 4
+fieldwatch w3_adjustments free 6000
+setflag FLAG_SYS_POKEDEX_GET
+
+# --- d1: Direct Corner attendant, no adapter: the cable club welcome + room menu, then EXIT
+warpto MAP_BATTLE_FRONTIER_POKEMON_CENTER_2F_HNS 10 3
+face UP
+tap A 4
+fieldwatch d1_noadapter menu 6000
+pick 2
+fieldwatch d1_exit free 6000
+
+# --- d2: the room menu with the Record Corner (MULTI_CABLE_CLUB_WITH_RECORD_MIX). The script picks it when
+# FLAG_VISITED_MAUVILLE_CITY is set, but H&S builds with include/constants/flags_frlg.h:2508 where that flag is
+# 0 (FlagGet(0) is FALSE), so no H&S player sees it; shown here with the same message and menu call.
+evstart lock; faceplayer; message 0x@CableClub_Text_WelcomeWhichCableClubService@; waitmessage; multichoice 0, 0, MULTI_CABLE_CLUB_WITH_RECORD_MIX, FALSE; release; end
+fieldwatch d2_recordmenu menu 6000
+pick 2 nopress
+snap d2_recordmenu_record
+pick 3
+fieldwatch d2_exit free 6000
+
+# --- g1: the Mystery Gift man. CableClub_OnTransition hides him again unless a Wonder Card is saved
+# (CableClub_EventScript_HideOrShowMysteryGiftMan :5), so his script runs in RAM at his counter: with no
+# Wonder Card script, trywondercardscript falls through to gText_ThankYouForAccessingMysteryGift.
+warpto MAP_BATTLE_FRONTIER_POKEMON_CENTER_2F_HNS 1 3
+face UP
+evstart lock; goto 0x@CableClub_EventScript_MysteryGiftMan@
+fieldwatch g1_thanks free 6000

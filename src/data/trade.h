@@ -569,7 +569,13 @@ static const struct WindowTemplate sWindowTemplates[] =
     },
     {
         .bg = 0,
+#if TEXT_RTL
+        // Mirrored inside the moves box, so the right-aligned moves end 8 px inside it as the
+        // English moves start 8 px inside it.
+        .tilemapLeft = 1,
+#else
         .tilemapLeft = 3,
+#endif
         .tilemapTop = 8,
         .width = 11,
         .height = 8,
@@ -587,7 +593,11 @@ static const struct WindowTemplate sWindowTemplates[] =
     },
     {
         .bg = 0,
+#if TEXT_RTL
+        .tilemapLeft = 16,
+#else
         .tilemapLeft = 18,
+#endif
         .tilemapTop = 8,
         .width = 11,
         .height = 8,

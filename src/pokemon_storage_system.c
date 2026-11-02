@@ -4118,7 +4118,21 @@ static void PrintDisplayMonInfo(void)
     if (sStorage->boxOption != OPTION_MOVE_ITEMS)
     {
         AddTextPrinterParameterized(WIN_DISPLAY_INFO, GetFontIdToFit(sStorage->displayMonNameText, FONT_NORMAL, 0, WindowWidthPx(WIN_DISPLAY_INFO) - 6), sStorage->displayMonNameText, 6, 0, TEXT_SKIP_DRAW, NULL);
+#if TEXT_RTL
+        {
+            // The species line takes the font fitted to the nickname, as in English. Mirrored
+            // around the 78 px panel (SetWindowRtlMirrorWidth in InitPokeStorageWindows), it can
+            // run to 66 px with a 6 px margin on both sides; a species name wider than that after
+            // a short nickname (EXEGGUTOR-A, 11 letters) falls back to a narrower font instead of
+            // crowding the left edge.
+            u32 fontId = GetFontIdToFit(sStorage->displayMonNameText, FONT_SHORT, 0, WindowWidthPx(WIN_DISPLAY_INFO) - 12);
+
+            fontId = GetFontIdToFit(sStorage->displayMonSpeciesName, fontId, 0, 78 - 12);
+            AddTextPrinterParameterized(WIN_DISPLAY_INFO, fontId, sStorage->displayMonSpeciesName, 6, 15, TEXT_SKIP_DRAW, NULL);
+        }
+#else
         AddTextPrinterParameterized(WIN_DISPLAY_INFO, GetFontIdToFit(sStorage->displayMonNameText, FONT_SHORT, 0, WindowWidthPx(WIN_DISPLAY_INFO) - 12), sStorage->displayMonSpeciesName, 6, 15, TEXT_SKIP_DRAW, NULL);
+#endif
         AddTextPrinterParameterized(WIN_DISPLAY_INFO, FONT_SHORT, sStorage->displayMonGenderLvlText, 10, 29, TEXT_SKIP_DRAW, NULL);
         AddTextPrinterParameterized(WIN_DISPLAY_INFO, GetFontIdToFit(sStorage->displayMonItemName, FONT_SMALL, 0, WindowWidthPx(WIN_DISPLAY_INFO) - 6), sStorage->displayMonItemName, 6, 43, TEXT_SKIP_DRAW, NULL);
     }

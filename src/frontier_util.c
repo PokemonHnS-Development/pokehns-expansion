@@ -1210,11 +1210,47 @@ static u16 DomeGetWinStreak(u8 battleMode, enum FrontierLevelMode lvlMode)
         return winStreak;
 }
 
+#if TEXT_RTL
+// A results row ends in a count field, so mirrored, the count starts where the row's label ends.
+// Where one window mixes labels of different widths, the English lines their counts up by hand:
+// the Dome prints Championships at x 112 and Clear streak at x 121, the Pike pads Times cleared
+// with {CLEAR 0x05} to the width of Rooms cleared. The Hebrew labels have other widths, so such a
+// row is moved to end where its window's reference row ends, and every count of the window starts
+// in one column, the mirror of the English one.
+static const struct
+{
+    const u8 *str;
+    const u8 *refStr;
+    u8 refX;
+} sRtlCountColumns[] =
+{
+    { gText_Championships, gText_ClearStreak, 121 },
+    { gText_TimesCleared, gText_RoomsCleared, 114 },
+};
+
+static u8 RtlCountColumnX(const u8 *str, u8 x)
+{
+    u32 i;
+
+    // Both strings take the count from gStringVar1, so the difference is that of the labels
+    for (i = 0; i < ARRAY_COUNT(sRtlCountColumns); i++)
+    {
+        if (str == sRtlCountColumns[i].str)
+            return sRtlCountColumns[i].refX + GetStringWidth(FONT_NORMAL, sRtlCountColumns[i].refStr, 0)
+                 - GetStringWidth(FONT_NORMAL, str, 0);
+    }
+    return x;
+}
+#endif
+
 static void PrintTwoStrings(const u8 *str1, const u8 *str2, u16 num, u8 x1, u8 x2, u8 y)
 {
     AddTextPrinterParameterized(gRecordsWindowId, FONT_NORMAL, str1, x1, y, TEXT_SKIP_DRAW, NULL);
     ConvertIntToDecimalStringN(gStringVar1, num, STR_CONV_MODE_RIGHT_ALIGN, 4);
     StringExpandPlaceholders(gStringVar4, str2);
+#if TEXT_RTL
+    x2 = RtlCountColumnX(str2, x2);
+#endif
     AddTextPrinterParameterized(gRecordsWindowId, FONT_NORMAL, gStringVar4, x2, y, TEXT_SKIP_DRAW, NULL);
 }
 
@@ -1358,6 +1394,9 @@ static void PikePrintCleared(const u8 *str1, const u8 *str2, u16 num, u8 x1, u8 
     AddTextPrinterParameterized(gRecordsWindowId, FONT_NORMAL, str1, x1, y, TEXT_SKIP_DRAW, NULL);
     ConvertIntToDecimalStringN(gStringVar1, num, STR_CONV_MODE_RIGHT_ALIGN, 4);
     StringExpandPlaceholders(gStringVar4, str2);
+#if TEXT_RTL
+    x2 = RtlCountColumnX(str2, x2);
+#endif
     AddTextPrinterParameterized(gRecordsWindowId, FONT_NORMAL, gStringVar4, x2, y, TEXT_SKIP_DRAW, NULL);
 }
 

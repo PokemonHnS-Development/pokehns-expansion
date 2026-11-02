@@ -4835,7 +4835,15 @@ static u8 PrintCryScreenSpeciesName(u8 windowId, u16 num, u8 left, u8 top)
             str[i] = CHAR_HYPHEN;
         break;
     }
+#if TEXT_RTL
+    {
+        // The gap between the mon box and the VU meter holds 60 px with a 1 px margin.
+        u8 color[3] = {TEXT_COLOR_TRANSPARENT, TEXT_DYNAMIC_COLOR_6, TEXT_COLOR_LIGHT_GRAY};
+        AddTextPrinterParameterized4(windowId, GetFontIdToFit(str, FONT_NORMAL, 0, 60), left, top, 0, 0, color, TEXT_SKIP_DRAW, str);
+    }
+#else
     PrintInfoSubMenuText(windowId, str, left, top);
+#endif
     return i;
 }
 

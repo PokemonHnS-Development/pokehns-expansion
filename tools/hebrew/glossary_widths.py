@@ -11,7 +11,7 @@ import paths
 
 GLOSSARY = paths.GLOSSARY
 B = {
-    'species': [('party_nickname', 'FONT_SMALL', 50, 'FONT_SMALL_NARROWER'), ('dex_species_name', 'FONT_NARROW', 50, None),
+    'species': [('party_nickname', 'FONT_SMALL', 50, 'FONT_SMALL_NARROWER'), ('dex_species_name', 'FONT_NARROW', 50, 'FONT_NARROWER'),
                 ('healthbox_name', 'FONT_SMALL', 48, 'FONT_SMALL_NARROWER'), ('summary', 'FONT_NORMAL', 63, None)],
     'move': [('battle_move_name', 'FONT_NARROW', 64, 'FONT_NARROWER'), ('summary_move_name', 'FONT_NORMAL', 72, None)],
     'item': [('bag_item_name', 'FONT_NARROW', 88, None), ('shop_item_name', 'FONT_NARROW', 84, None)],
