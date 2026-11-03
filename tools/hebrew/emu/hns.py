@@ -273,6 +273,24 @@ class RunLog(list):
             del self[:len(self) - self.MAX_LINES // 2]
 
 
+FRAME_AT = re.compile(r" @(\d+)$")          # the runner's frame count after 'shot', 'pc' and 'wait32'
+
+
+def command_frames(line):
+    """The most frames the runner steps for one command line (hnsrun.c): '<frames> <keys>',
+    'tap <keys> [idle]' (3 held + idle, default 20) and 'wait32 ADDR VAL MAXFRAMES [keys]'.
+    HNS_MAX_FRAMES adds these up and resets the sum to the runner's own count on every answer
+    that carries it, so a wait that ends early is not charged its whole MAXFRAMES."""
+    m = re.match(r"(\d+)\s+\S", line)
+    if m:
+        return int(m.group(1))
+    m = re.match(r"tap\s+\S+(?:\s+(\d+))?\s*$", line)
+    if m:
+        return 3 + int(m.group(1) or 20)
+    m = re.match(r"wait32\s+\S+\s+\S+\s+(\d+)", line)
+    return int(m.group(1)) if m else 0
+
+
 class Emu:
     """One live hnsrun process. Every method returns after the runner has executed it."""
 
@@ -283,6 +301,8 @@ class Emu:
         os.makedirs(self.outdir, exist_ok=True)
         self.echo = echo
         self.log = RunLog()
+        self.max_frames = int(os.environ.get("HNS_MAX_FRAMES") or 0)
+        self.frames_asked = 0
         env = dict(os.environ)
         if rtc is not None:
             env["HNS_RTC"] = str(rtc)
@@ -303,9 +323,38 @@ class Emu:
             strings_hook(self, os.environ["HNS_STRCOV"])
 
     # -- plumbing
+    LOG_RUN_MAX = 1000
+    INVALID_CODE = ("Illegal opcode", "Jumped to invalid address")
+    INVALID_TAG = " (invalid code)"
+
+    def _dropped(self, n, bad):
+        return "LOG ... %d more log lines in a row dropped%s" % (n, self.INVALID_TAG if bad else "")
+
     def _reader(self):
+        """Queue the runner's lines. A crashed game can make mGBA log millions of lines ('Illegal
+        opcode', 'Jumped to invalid address') during one command, faster than they are read off the
+        queue: after LOG_RUN_MAX log lines in a row the rest of the run is only counted. Such a run
+        about invalid code ends the tour as a CRASH (expect), as the PC may stay in the BIOS, which
+        the runner's own PC check accepts."""
+        run = dropped = 0
+        bad = False
         for line in self.p.stdout:
-            self.q.put(line.rstrip("\n"))
+            line = line.rstrip("\n")
+            if line.startswith("LOG["):
+                run += 1
+                if run > self.LOG_RUN_MAX:
+                    dropped += 1
+                    if not bad:
+                        bad = any(s in line for s in self.INVALID_CODE)
+                    continue
+            else:
+                if dropped:
+                    self.q.put(self._dropped(dropped, bad))
+                run = dropped = 0
+                bad = False
+            self.q.put(line)
+        if dropped:
+            self.q.put(self._dropped(dropped, bad))
         self.q.put(None)
 
     def expect(self, pattern, timeout=600):
@@ -323,6 +372,12 @@ class Emu:
                 sys.stderr.write(line + "\n")
             if line.startswith("CRASH"):
                 raise HnsError(line)
+            if line.startswith("LOG ... ") and line.endswith(self.INVALID_TAG):
+                raise HnsError("CRASH: the CPU runs invalid code (%s)" % line)
+            if line.startswith(("shot ", "PC ", "WAIT ")):
+                f = FRAME_AT.search(line)
+                if f:                       # every command sent so far has run: the real count
+                    self.frames_asked = int(f.group(1))
             m = rx.search(line)
             if m:
                 return m
@@ -330,6 +385,11 @@ class Emu:
     def send(self, line):
         if self.p.poll() is not None:
             raise HnsError("runner is not running (exit %s)" % self.p.returncode)
+        n = command_frames(line) if self.max_frames else 0
+        if n and self.frames_asked + n > self.max_frames:
+            raise TourTimeout("frame limit: '%s' would pass HNS_MAX_FRAMES=%d (%d frames asked so far)"
+                              % (line, self.max_frames, self.frames_asked))
+        self.frames_asked += n
         self.p.stdin.write(line + "\n")
         self.p.stdin.flush()
 

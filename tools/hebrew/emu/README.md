@@ -59,6 +59,7 @@ printf '60 -\nshot boot\nquit\n' | tools/hebrew/emu/hnsrun pokehns.gba build/heb
 | `DEVKITARM` | `arm-none-eabi-readelf`/`nm`/`as`/`ld`/`cpp` for symbols and `evasm.py` | `/opt/devkitpro/devkitARM` |
 | `HNS_RTC` | fake RTC start, Unix seconds (`--rtc` sets it) | 2026-01-01 12:00 UTC |
 | `HNS_LOG` | `1` echoes every mGBA log line | off |
+| `HNS_MAX_FRAMES` | frame limit per runner process (one tour): a command that would step past it ends the tour as TIMEOUT | none |
 
 The ROM must be built and keep its `.elf` next to it, because every address is resolved by name
 from the ELF. The saves are battery files (`.sav`). Do not commit them, and do not commit ROMs or
