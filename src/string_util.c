@@ -23,10 +23,10 @@ EWRAM_DATA u32 gRtlStringLost = 0;
 EWRAM_DATA u32 gRtlStringClear = 0;
 EWRAM_DATA u32 gRtlStringTotal = 0;
 
-// RAM copies of ROM data that hold strings (a facility's floors copied whole into the heap): a
-// string read from such a copy is recorded at its ROM address, if the copy still holds the ROM
-// bytes (the heap block may have been freed and reused since).
-#define RTL_STRING_RAM_MAPS 8
+// RAM copies of ROM data that hold strings (facility floors in the heap, contest opponents and hall
+// winners): a string read from such a copy is recorded at its ROM address, if the copy still holds
+// the ROM bytes (the block may have been freed and reused, or the save's copy changed, since).
+#define RTL_STRING_RAM_MAPS 16
 struct RtlStringRamMap
 {
     const u8 *ram;

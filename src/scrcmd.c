@@ -1455,6 +1455,11 @@ bool8 ScrCmd_givenamedmon(struct ScriptContext *ctx)
             SetBoxMonIVs(&mon->box, USE_RANDOM_IVS);
             GiveBoxMonInitialMoveset(&mon->box);
 
+#if RTL_STRING_REPORT
+            RtlStringReport(nickname);
+            RtlStringReport(otName);
+#endif
+#line 1458
             if (nickname != NULL)
                 SetMonData(mon, MON_DATA_NICKNAME, nickname);
             SetMonData(mon, MON_DATA_OT_NAME, otName);
