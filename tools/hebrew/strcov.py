@@ -55,6 +55,7 @@ DRAIN = 1024                  # entries that trigger a read between frame comman
 CHECK_FRAMES = 240            # frames between those checks
 SYMS = ('gRtlStringSet', 'gRtlStringCount', 'gRtlStringLost', 'gRtlStringClear', 'gRtlStringTotal')
 EOS = 0xFF
+STATUSES = ('seen', 'unseen', 'not_located', 'compiled_out', 'hook_blind')
 
 
 # ---------------------------------------------------------------------------- live hook
@@ -291,6 +292,50 @@ def macro_of(tree, e, _cache={}):
     return '__' if re.search(r'(?<![A-Za-z0-9_])__\(', line) and not re.search(r'(?<![A-Za-z0-9_])_\(', line) else '_'
 
 
+LIT_START_RE = re.compile(r'"((?:[^"\\\n]|\\.)*)"')
+
+
+def _skip_blank(src, i):
+    """Index of the next character that is not whitespace or a comment."""
+    while i < len(src):
+        if src[i].isspace():
+            i += 1
+        elif src.startswith('//', i):
+            j = src.find('\n', i)
+            i = len(src) if j < 0 else j
+        elif src.startswith('/*', i):
+            j = src.find('*/', i + 2)
+            i = len(src) if j < 0 else j + 2
+        else:
+            break
+    return i
+
+
+def continues_after(src, line_starts, e):
+    """True when the string macro argument goes on after the literals audit.py extracted (a macro
+    such as BINDING_TURNS, or an #if block): the compiled string then only starts with e.text."""
+    if not 0 < e.line <= len(line_starts):
+        return False
+    lo = line_starts[e.line - 1]
+    hi = line_starts[min(e.line + 4, len(line_starts) - 1)]
+    for m in LIT_START_RE.finditer(src, lo, hi):
+        if not e.text.startswith(m.group(1)):
+            continue
+        got, i = '', m.start()
+        while i < len(src) and src[i] == '"':
+            lm = LIT_START_RE.match(src, i)
+            if not lm:
+                break
+            got += lm.group(1)
+            i = _skip_blank(src, lm.end())
+            if len(got) >= len(e.text):
+                break
+        if got != e.text:
+            continue
+        return i < len(src) and src[i] not in '),};'
+    return False
+
+
 def encode_all(tree, texts):
     """Encode source-form strings with tools/preproc (exactly as the build does). Returns a list of
     bytes or None (the string does not encode)."""
@@ -367,6 +412,73 @@ def dep_map(objdir):
     return deps
 
 
+def cpp_command(tree):
+    """The build's C preprocessor command for the string-report build, without the file name
+    (asked from make, so it carries the Makefile's flags)."""
+    probe = None
+    for d in sorted(glob.glob(os.path.join(tree, 'build', 'hns-strrep', 'src', '*.d'))):
+        probe = 'build/hns-strrep/src/' + os.path.basename(d)[:-2] + '.o'
+        break
+    if probe:
+        r = subprocess.run(['make', '--no-print-directory', '-n', '-B', 'BUILD=hns', 'RTL_STRING_REPORT=1', probe],
+                           cwd=tree, capture_output=True, text=True)
+        src = 'src/' + os.path.basename(probe)[:-2] + '.c'
+        for line in r.stdout.splitlines():
+            if ' | ' in line and ('cpp ' in line.split(' | ')[0]) and line.split(' | ')[0].rstrip().endswith(src):
+                cmd = line.split(' | ')[0].split()
+                return cmd[:-1]
+    raise RuntimeError('could not read the C preprocessor command from make -n')
+
+
+MARKER_RE = re.compile(r'^# (\d+) "([^"]*)"')
+
+
+def preprocessed_lines(tree, units, files, jobs=12):
+    """{file: {line: text}} of the preprocessed output of the translation units UNITS (src/x.c),
+    for the lines attributed to FILES (tree-relative). A string in a branch the build leaves out
+    never reaches this output."""
+    import concurrent.futures
+    cmd = cpp_command(tree)
+    want = set(files)
+    out = {}
+
+    def one(unit):
+        r = subprocess.run(cmd + [unit], cwd=tree, capture_output=True)
+        got = {}
+        cur, ln = None, 0
+        for raw in r.stdout.decode('utf-8', 'replace').split('\n'):
+            m = MARKER_RE.match(raw)
+            if m:
+                cur, ln = os.path.normpath(m.group(2)), int(m.group(1))
+                continue
+            if cur in want and '"' in raw:
+                got.setdefault(cur, {}).setdefault(ln, []).append(raw)
+            ln += 1
+        return r.returncode, unit, got
+
+    with concurrent.futures.ThreadPoolExecutor(max_workers=jobs) as ex:
+        for rc, unit, got in ex.map(one, sorted(units)):
+            if rc != 0:
+                raise RuntimeError('cpp failed on %s' % unit)
+            for f, lines in got.items():
+                d = out.setdefault(f, {})
+                for ln, texts in lines.items():
+                    d.setdefault(ln, []).extend(texts)
+    return out
+
+
+def first_literal(src, line_starts, e):
+    """(the first source literal of entry E with its quotes, its line), or (None, None)."""
+    if not 0 < e.line <= len(line_starts):
+        return None, None
+    lo = line_starts[e.line - 1]
+    hi = line_starts[min(e.line + 4, len(line_starts) - 1)]
+    for m in LIT_START_RE.finditer(src, lo, hi):
+        if m.group(1) and e.text.startswith(m.group(1)):
+            return m.group(0), bisect.bisect_right(line_starts, m.start())
+    return None, None
+
+
 def _texty(t):
     """Decoded bytes that read as Hebrew text, not graphics or code that happens to hold the bytes."""
     if '{0x' in t:
@@ -411,37 +523,113 @@ def build_index(tree, elf_path, rom_path, map_path, objdir):
                 i = rom.find(needle, i + 1, hi)
         return hits
 
+    from textwidth import read_text
+    sources = {}
+
+    def source_of(rel):
+        if rel not in sources:
+            try:
+                src = read_text(os.path.join(tree, rel))
+            except OSError:
+                src = ''
+            starts = [0] + [m.end() for m in re.finditer('\n', src)]
+            sources[rel] = (src, starts)
+        return sources[rel]
+
+    def in_define(src, starts, line):
+        """The line is part of a #define (its literal is compiled where the macro is used)."""
+        k = line - 1
+        while k > 0 and src[starts[k - 1]:starts[k]].rstrip('\n').endswith('\\'):
+            k -= 1
+        return src[starts[k]:starts[k] + 200].lstrip().startswith(('#define', '# define'))
+
+    # which source lines the build compiles: run the build's preprocessor over the translation
+    # units that include each file holding a translated C string
+    linked = set(by_obj)
+    units, want = set(), set()
+    for e in entries:
+        if e.source != 'c':
+            continue
+        objs = sorted(o for o in deps.get(e.file, set()) if o in linked)
+        if objs:
+            want.add(e.file)
+            units.update(o[:-2] + '.c' for o in objs)
+    pre = preprocessed_lines(tree, units, want)
+
+    def logical_line(rel, line):
+        """The line number the compiler gives LINE: a '#line N' after a string-report hook block
+        restores the numbering of the file without the hooks, which is also the release source's."""
+        if not rel.endswith('.c'):
+            return line
+        src, starts = source_of(rel)
+        last = None
+        for m in re.finditer(r'^#line (\d+)\s*$', src, re.M):
+            phys = bisect.bisect_right(starts, m.start())
+            if phys >= line:
+                break
+            last = (phys, int(m.group(1)))
+        return line if last is None else last[1] + line - last[0] - 1
+
     recs = []
     for i, e in enumerate(entries):
         b = enc[i]
-        rec = {'id': i, 'file': e.file, 'line': e.line, 'symbol': e.key, 'kind': e.kind, 'lang': e.note,
-               'text': e.text, 'bytes': len(b) if b is not None else None, 'copies': [], 'how': None}
+        key = re.sub(r':L(\d+)\b', lambda m: ':L%d' % logical_line(e.file, int(m.group(1))), e.key)
+        rec = {'id': i, 'file': e.file, 'line': logical_line(e.file, e.line), 'symbol': key, 'kind': e.kind,
+               'lang': e.note,
+               'text': e.text, 'bytes': len(b) if b is not None else None, 'copies': [], 'how': None,
+               'compiled': None}
         recs.append(rec)
+        src, starts = source_of(e.file) if e.source == 'c' else ('', [])
+        if e.file in pre and not in_define(src, starts, e.line):
+            lit, lit_line = first_literal(src, starts, e)
+            if lit:
+                # a macro call spanning lines is expanded on the line where it starts
+                lines = pre[e.file]
+                rec['compiled'] = any(lit in t for ln in range(lit_line - 60, lit_line + 1) for t in lines.get(ln, ()))
         if not b:
             rec['how'] = 'not encodable' if b is None else 'empty'
             continue
         regions, objs = regions_for(e)
         rec['objects'] = objs
         needle = b if macros[i] == '__' else b + bytes([EOS])
-        hits = []
+        hits, ends = [], None
         # the symbol audit.py names, when the string lies inside it (a char array, or a struct with
         # an inline array); a table of pointers holds the string elsewhere in the object
         sym = _key_symbol(e.key)
+        symr = []
         if sym and sym in elf.byname:
+            ram = [val for val, size, typ, bind in elf.byname[sym] if size and 0x02000000 <= val < 0x04000000]
             symr = [(val, val + size) for val, size, typ, bind in elf.byname[sym]
                     if size and any(a <= val < bb for a, bb in regions)]
+            decl = src[starts[e.line - 1]:starts[e.line - 1] + 300] if 0 < e.line <= len(starts) else ''
+            if ram and not symr and re.match(r'[^;]*\b%s\s*(\[[^\]]*\]\s*)?=' % re.escape(sym), decl):
+                rec['how'] = 'ram_data'                 # a non-const array: the game reads its RAM copy
+                rec['ram'] = ['%08X' % v for v in ram]
+                continue
             hits = find_all(needle, symr) if symr else []
             if hits:
                 rec['how'] = 'symbol'
         if not hits:
             hits = find_all(needle, regions)
             rec['how'] = 'global' if objs == ['(all C objects)'] else 'object'
-        if not hits and macros[i] != '__':
-            hits = find_all(b, regions)                 # a size-limited array that dropped its terminator
+        if not hits and macros[i] != '__' and symr:
+            # an array sized to its text, without room for the terminator
+            hits = [h for h in find_all(b, symr) if any(h + len(b) == t for s, t in symr)]
             if hits:
-                rec['how'] += '+noterm'
-        rec['copies'] = [[h, h + len(b)] for h in hits]
+                rec['how'] = 'symbol+noterm'
+        if not hits and macros[i] != '__' and (re.search(r'#if\d+$', e.key) or continues_after(src, starts, e)):
+            # the macro argument goes on after the extracted literals (an #if block, a macro such as
+            # BINDING_TURNS): the compiled string starts with them and ends at its own terminator
+            hits = find_all(b, regions)
+            if hits:
+                rec['how'] += '+prefix'
+                ends = [rom.find(bytes([EOS]), h - 0x08000000 + len(b)) + 0x08000000 for h in hits]
+        rec['copies'] = [[h, (ends[k] if ends else h + len(b))] for k, h in enumerate(hits)]
 
+    # a string in a branch the build leaves out: its bytes, if found, belong to another string
+    for r in recs:
+        if r['compiled'] is False and r['copies']:
+            r['copies_text_match'], r['copies'] = r['copies'], []
     # drop copies that lie inside a longer located copy (a suffix of another string)
     spans = sorted((c[0], c[1], r['id']) for r in recs for c in r['copies'])
     starts = [s[0] for s in spans]
@@ -490,8 +678,14 @@ def build_index(tree, elf_path, rom_path, map_path, objdir):
     import textwidth as tw
     cm = tw.Charmap(os.path.join(tree, 'charmap.txt'))
     heb = set(cm.hebrew_bytes)
-    ends = {t for r in recs for c in r['copies'] for t in (c[1],)}
-    ends |= {t for r in recs for c in r.get('suffix_copies', []) for t in (c[1],)}
+    # every terminator inside a located copy (a string with '$' in it holds several)
+    ends = set()
+    for r in recs:
+        for s, t in r['copies'] + r.get('suffix_copies', []):
+            k = rom.find(bytes([EOS]), s - 0x08000000, t - 0x08000000 + 1)
+            while k >= 0:
+                ends.add(0x08000000 + k)
+                k = rom.find(bytes([EOS]), k + 1, t - 0x08000000 + 1)
     orphans = []
     for obj in c_objs:
         for a, bb in by_obj[obj]:
@@ -551,6 +745,7 @@ def make_report(index, logs, elf_path=None):
     maxlen = max([t - s for s, t, _ in spans] or [1])
     seen = {}
     unmapped = {}
+    logged = {}
     sessions = {}
     for path, rec in logs:
         ses = sessions.setdefault(path, {'tour': None, 'polls': 0, 'lost': 0, 'resets': 0, 'end': False,
@@ -565,8 +760,11 @@ def make_report(index, logs, elf_path=None):
         ses['lost'] += rec.get('lost', 0) or 0
         ses['max_count'] = max(ses.get('max_count', 0), rec.get('count', 0) or 0)
         ses['resets'] += 1 if rec.get('reset') else 0
+        where = {'job': os.path.basename(os.path.dirname(path)), 'session': os.path.basename(path),
+                 'outdir': ses['outdir'], 'tour': rec.get('tour'), 'shot': rec.get('shot')}
         for h in rec.get('new', ()):
             a = int(h, 16)
+            logged.setdefault(a, where)
             j = bisect.bisect_right(starts, a) - 1
             hit = False
             while j >= 0 and spans[j][0] > a - maxlen:
@@ -574,28 +772,31 @@ def make_report(index, logs, elf_path=None):
                 if s <= a < t:
                     hit = True
                     if rid not in seen:
-                        seen[rid] = {'tour': rec.get('tour'), 'shot': rec.get('shot'),
-                                     'session': os.path.basename(path), 'addr': h}
+                        seen[rid] = dict(where, addr=h)
                 j -= 1
             if not hit:
-                unmapped.setdefault(a, {'tour': rec.get('tour'), 'shot': rec.get('shot')})
+                unmapped.setdefault(a, where)
     orph = sorted((o['addr'], o['end'], k) for k, o in enumerate(index.get('orphans', [])))
     ostarts = [o[0] for o in orph]
     orphan_seen = {}
-    for a, where in list(unmapped.items()):
+    for a, where in sorted(logged.items()):           # every logged address, mapped or not
         j = bisect.bisect_right(ostarts, a) - 1
         if j >= 0 and orph[j][0] <= a < orph[j][1]:
             orphan_seen.setdefault(orph[j][2], where)
-            del unmapped[a]
+            unmapped.pop(a, None)
     out = []
     for r in recs:
         if r['lang'] != 'he':
             continue
-        status = 'seen' if r['id'] in seen else ('unseen' if r['copies'] else 'not_located')
+        if r.get('compiled') is False:
+            status = 'compiled_out'                   # the build's preprocessor drops this line
+        elif r['how'] == 'ram_data':
+            status = 'hook_blind'                     # read from its RAM copy, which is not logged
+        else:
+            status = 'seen' if r['id'] in seen else ('unseen' if r['copies'] else 'not_located')
         o = {'id': r['id'], 'file': r['file'], 'line': r['line'], 'symbol': r['symbol'], 'kind': r['kind'],
-             'text': r['text'], 'seen': r['id'] in seen, 'status': status,
-             'first_seen': ({'tour': seen[r['id']]['tour'], 'shot': seen[r['id']]['shot']}
-                            if r['id'] in seen else None),
+             'text': r['text'], 'seen': status == 'seen', 'status': status,
+             'first_seen': seen[r['id']] if status == 'seen' else None,
              'rom': ['%08X' % c[0] for c in r['copies']], 'located_by': r['how']}
         if r.get('shares_copy_with'):
             o['shares_copy_with'] = r['shares_copy_with']
@@ -617,7 +818,7 @@ def make_report(index, logs, elf_path=None):
 def by_file(out):
     files = {}
     for o in out:
-        f = files.setdefault(o['file'], {'file': o['file'], 'strings': 0, 'seen': 0, 'unseen': 0, 'not_located': 0})
+        f = files.setdefault(o['file'], dict({'file': o['file'], 'strings': 0}, **{k: 0 for k in STATUSES}))
         f['strings'] += 1
         f[o['status']] += 1
     return sorted(files.values(), key=lambda f: (-f['strings'], f['file']))
@@ -626,7 +827,7 @@ def by_file(out):
 def write_md(path, res, notes=None, max_text=70):
     out = res['strings']
     n = len(out)
-    st = {k: sum(1 for o in out if o['status'] == k) for k in ('seen', 'unseen', 'not_located')}
+    st = {k: sum(1 for o in out if o['status'] == k) for k in STATUSES}
     loc = st['seen'] + st['unseen']
     L = ['# Translated C strings drawn by the tours', '']
     L.append('| | strings |')
@@ -636,7 +837,10 @@ def write_md(path, res, notes=None, max_text=70):
     L.append('| seen (copied, expanded or printed during a tour) | %d (%.1f%% of located) |' % (
         st['seen'], 100.0 * st['seen'] / max(loc, 1)))
     L.append('| unseen | %d |' % st['unseen'])
-    L.append('| not located in the ROM (compiled out, unused, or not encodable) | %d |' % st['not_located'])
+    L.append('| hook-blind (drawn from a RAM copy the hook does not log) | %d |' % st['hook_blind'])
+    L.append('| compiled out (a preprocessor branch the H&S build leaves out) | %d |' % st['compiled_out'])
+    L.append('| compiled in but not located in the ROM (unused data the compiler or linker drops) | %d |'
+             % st['not_located'])
     L.append('| ROM addresses logged that map to no translated C string | %d |' % res.get('unmapped_pointers', 0))
     L.append('')
     ses = res.get('sessions', {})
@@ -653,16 +857,18 @@ def write_md(path, res, notes=None, max_text=70):
         L += [open(notes, encoding='utf-8').read().rstrip(), '']
     kinds = {}
     for o in out:
-        k = kinds.setdefault(o['kind'], [0, 0, 0])
-        k[0] += 1
-        k[1] += o['status'] == 'seen'
-        k[2] += o['status'] == 'unseen'
-    L += ['## By kind (audit.py classification)', '', '| kind | strings | seen | unseen |', '| --- | ---: | ---: | ---: |']
-    for k, v in sorted(kinds.items(), key=lambda kv: -kv[1][0]):
-        L.append('| %s | %d | %d | %d |' % (k, v[0], v[1], v[2]))
-    L += ['', '## By file', '', '| file | strings | seen | unseen | not located |', '| --- | ---: | ---: | ---: | ---: |']
+        k = kinds.setdefault(o['kind'], dict({'n': 0}, **{s: 0 for s in STATUSES}))
+        k['n'] += 1
+        k[o['status']] += 1
+    cols = '| strings | seen | unseen | hook-blind | compiled out | not located |'
+    L += ['## By kind (audit.py classification)', '', '| kind ' + cols, '| --- ' + '| ---: ' * 6 + '|']
+    for k, v in sorted(kinds.items(), key=lambda kv: -kv[1]['n']):
+        L.append('| %s | %d | %d | %d | %d | %d | %d |' % (k, v['n'], v['seen'], v['unseen'], v['hook_blind'],
+                                                          v['compiled_out'], v['not_located']))
+    L += ['', '## By file', '', '| file ' + cols, '| --- ' + '| ---: ' * 6 + '|']
     for f in res['by_file']:
-        L.append('| %s | %d | %d | %d | %d |' % (f['file'], f['strings'], f['seen'], f['unseen'], f['not_located']))
+        L.append('| %s | %d | %d | %d | %d | %d | %d |' % (f['file'], f['strings'], f['seen'], f['unseen'],
+                                                          f['hook_blind'], f['compiled_out'], f['not_located']))
 
     def clean(t):
         t = t.replace('|', '\\|').replace('\n', ' ').replace('\\n', ' / ').replace('\\l', ' / ').replace('\\p', ' // ')
@@ -671,12 +877,16 @@ def write_md(path, res, notes=None, max_text=70):
     if orph:
         L += ['', '## Hebrew text in C objects that no extracted string accounts for', '',
               'Heuristic scan (FF-terminated runs that read as Hebrew, see strcov.py _texty); some rows are '
-              'graphics or code bytes that happen to decode as letters. Not counted in the totals above.', '',
+              'graphics or code bytes that happen to decode as letters. Not counted in the totals above. '
+              '%d runs; %d of them hold a logged address (every logged address is tested, mapped or not).'
+              % (len(orph), sum(1 for o in orph if o['seen'])), '',
               '| address | object | seen | text |', '| --- | --- | --- | --- |']
         for o in orph:
             L.append('| %s | %s | %s | %s |' % (o['addr'], o['object'], 'yes' if o['seen'] else 'no', clean(o['text'])))
     for status, title in (('unseen', 'Unseen strings (located in the ROM, never logged)'),
-                          ('not_located', 'Strings not located in the ROM')):
+                          ('hook_blind', 'Hook-blind strings (drawn from RAM, never logged)'),
+                          ('not_located', 'Strings compiled in but not located in the ROM'),
+                          ('compiled_out', 'Strings compiled out of the H&S build')):
         L += ['', '## ' + title, '']
         cur = None
         for o in sorted((o for o in out if o['status'] == status), key=lambda o: (o['file'], o['line'])):
@@ -807,10 +1017,9 @@ def main(argv=None):
         if a.md:
             write_md(a.md, res, a.notes)
         n = len(out)
-        s = sum(1 for o in out if o['seen'])
-        print('%d translated C strings: %d seen, %d unseen, %d not located; %d sessions, %d unmapped pointers'
-              % (n, s, sum(1 for o in out if o['status'] == 'unseen'),
-                 sum(1 for o in out if o['status'] == 'not_located'), len(sessions), len(unmapped)))
+        print('%d translated C strings: %s; %d sessions, %d unmapped pointers'
+              % (n, ', '.join('%d %s' % (sum(1 for o in out if o['status'] == k), k) for k in STATUSES),
+                 len(sessions), len(unmapped)))
         return 0
     ap.print_usage()
     return 2

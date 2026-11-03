@@ -23,11 +23,69 @@ EWRAM_DATA u32 gRtlStringLost = 0;
 EWRAM_DATA u32 gRtlStringClear = 0;
 EWRAM_DATA u32 gRtlStringTotal = 0;
 
+// RAM copies of ROM data that hold strings (a facility's floors copied whole into the heap): a
+// string read from such a copy is recorded at its ROM address, if the copy still holds the ROM
+// bytes (the heap block may have been freed and reused since).
+#define RTL_STRING_RAM_MAPS 8
+struct RtlStringRamMap
+{
+    const u8 *ram;
+    const u8 *rom;
+    u32 size;
+};
+EWRAM_DATA static struct RtlStringRamMap sRtlStringRamMaps[RTL_STRING_RAM_MAPS] = {0};
+EWRAM_DATA static u32 sRtlStringRamMapNext = 0;
+
+void RtlStringMapRam(const void *ram, const void *rom, u32 size)
+{
+    u32 i;
+
+    for (i = 0; i < RTL_STRING_RAM_MAPS; i++)
+    {
+        if (sRtlStringRamMaps[i].ram == ram)
+            break;
+    }
+    if (i == RTL_STRING_RAM_MAPS)
+    {
+        i = sRtlStringRamMapNext;
+        sRtlStringRamMapNext = (sRtlStringRamMapNext + 1) % RTL_STRING_RAM_MAPS;
+    }
+    sRtlStringRamMaps[i].ram = ram;
+    sRtlStringRamMaps[i].rom = rom;
+    sRtlStringRamMaps[i].size = size;
+}
+
+static u32 RtlStringRomAddress(u32 addr)
+{
+    u32 i, n;
+
+    for (i = 0; i < RTL_STRING_RAM_MAPS; i++)
+    {
+        const struct RtlStringRamMap *map = &sRtlStringRamMaps[i];
+        if (map->size && addr >= (u32)map->ram && addr < (u32)map->ram + map->size)
+        {
+            const u8 *ram = (const u8 *)addr;
+            const u8 *rom = map->rom + (addr - (u32)map->ram);
+            for (n = 0; n < 0x100; n++)
+            {
+                if (ram[n] != rom[n])
+                    return 0;
+                if (ram[n] == EOS)
+                    break;
+            }
+            return (u32)rom;
+        }
+    }
+    return 0;
+}
+
 void RtlStringReport(const u8 *str)
 {
     u32 addr = (u32)str;
     u32 i, slot;
 
+    if (addr >= 0x02000000 && addr < 0x04000000)
+        addr = RtlStringRomAddress(addr);
     if (addr < 0x08000000 || addr >= 0x0A000000)
         return;
     if (gRtlStringClear)

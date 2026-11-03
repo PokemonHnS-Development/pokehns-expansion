@@ -2680,6 +2680,10 @@ void CopyFrontierBrainTrainerName(u8 *dst)
     trainerName = GetTrainerNameFromId(gFrontierBrainInfo[facility].trainerId);
     for (i = 0; i < PLAYER_NAME_LENGTH; i++)
         dst[i] = trainerName[i];
+#if RTL_STRING_REPORT
+    RtlStringReport(trainerName);
+#endif
+#line 2683
 
     dst[i] = EOS;
 }
@@ -3284,11 +3288,19 @@ void GetFrontierTrainerName(u8 *dst, u16 trainerId)
     {
         for (i = 0; gBattlePartners[difficulty][trainerId - TRAINER_PARTNER(PARTNER_NONE)].trainerName[i] != EOS; i++)
             dst[i] = gBattlePartners[difficulty][trainerId - TRAINER_PARTNER(PARTNER_NONE)].trainerName[i];
+#if RTL_STRING_REPORT
+        RtlStringReport(gBattlePartners[difficulty][trainerId - TRAINER_PARTNER(PARTNER_NONE)].trainerName);
+#endif
+#line 3287
     }
     else if (trainerId < FRONTIER_TRAINERS_COUNT)
     {
         for (i = 0; i < PLAYER_NAME_LENGTH; i++)
             dst[i] = gFacilityTrainers[trainerId].trainerName[i];
+#if RTL_STRING_REPORT
+        RtlStringReport(gFacilityTrainers[trainerId].trainerName);
+#endif
+#line 3292
     }
     else if (trainerId < TRAINER_RECORD_MIXING_APPRENTICE)
     {

@@ -26,6 +26,7 @@ enum TextColorType
 
 #if RTL_STRING_REPORT
 void RtlStringReport(const u8 *str);
+void RtlStringMapRam(const void *ram, const void *rom, u32 size);
 #endif
 u8 *StringCopy_Nickname(u8 *dest, const u8 *src);
 u8 *StringGet_Nickname(u8 *str);

@@ -4221,6 +4221,10 @@ static void DisplayTrainerInfoOnCard(u8 flags, u8 trainerTourneyId)
 
     for (;gTrainerClasses[j].name[i] != EOS; i++)
         gStringVar1[i] = gTrainerClasses[j].name[i];
+#if RTL_STRING_REPORT
+    RtlStringReport(gTrainerClasses[j].name);
+#endif
+#line 4224
     gStringVar1[i] = CHAR_SPACE;
     gStringVar1[i + 1] = EOS;
 
@@ -6019,6 +6023,10 @@ static void CopyDomeTrainerName(u8 *str, u16 trainerId)
         {
             for (i = 0; i < PLAYER_NAME_LENGTH; i++)
                 str[i] = gFacilityTrainers[trainerId].trainerName[i];
+#if RTL_STRING_REPORT
+            RtlStringReport(gFacilityTrainers[trainerId].trainerName);
+#endif
+#line 6022
         }
         str[i] = EOS;
     }

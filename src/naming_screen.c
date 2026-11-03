@@ -2008,6 +2008,10 @@ static void DrawMonTextEntryBox(void)
     const u8 *title = sNamingScreen->template->title;
     u8 *dest = buffer;
     u8 *end = StringCopy(name, GetSpeciesName(sNamingScreen->monSpecies));
+#if RTL_STRING_REPORT
+    RtlStringReport(title);
+#endif
+#line 2011
 
     WrapFontIdToFit(name, end, FONT_NORMAL, 128 - 64);
     while (*title != EOS && dest < buffer + sizeof(buffer) - 1)

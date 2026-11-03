@@ -145,18 +145,25 @@ class ReportTest(unittest.TestCase):
             {'id': 2, 'lang': 'he', 'file': 'src/b.c', 'line': 3, 'symbol': 'src/b.c:L3', 'kind': 'k',
              'text': 'C', 'copies': [], 'how': 'object'},
             {'id': 3, 'lang': 'en', 'file': 'src/b.c', 'line': 4, 'symbol': 'src/b.c:L4', 'kind': 'k',
-             'text': 'D', 'copies': [[0x08100020, 0x08100024]], 'how': 'object'}],
-            'orphans': [{'addr': 0x08100030, 'end': 0x08100038, 'object': 'src/b.o', 'text': 'E'}]}
+             'text': 'D', 'copies': [[0x08100020, 0x08100024]], 'how': 'object'},
+            {'id': 4, 'lang': 'he', 'file': 'src/b.c', 'line': 5, 'symbol': 'src/b.c:L5', 'kind': 'k',
+             'text': 'F', 'copies': [], 'how': 'object', 'compiled': False},
+            {'id': 5, 'lang': 'he', 'file': 'src/b.c', 'line': 6, 'symbol': 'src/b.c:sG', 'kind': 'k',
+             'text': 'G', 'copies': [], 'how': 'ram_data'}],
+            'orphans': [{'addr': 0x08100030, 'end': 0x08100038, 'object': 'src/b.o', 'text': 'E'},
+                        {'addr': 0x08100000, 'end': 0x08100008, 'object': 'src/a.o', 'text': 'A'}]}
 
     def test_mid_string_pointer_counts_and_terminator_does_not(self):
-        logs = [('s.jsonl', {'session': 't'}),
-                ('s.jsonl', {'tour': 't', 'shot': 'x', 'new': ['08100004', '08100018', '08100021', '08100031']})]
+        logs = [('logs/job1/s.jsonl', {'session': 't', 'outdir': '/o/t'}),
+                ('logs/job1/s.jsonl', {'tour': 't', 'shot': 'x', 'new': ['08100004', '08100018', '08100021', '08100031']})]
         out, ses, unmapped, unm, orph = strcov.make_report(self.index(), logs)
         st = {o['id']: o['status'] for o in out}
-        self.assertEqual(st, {0: 'seen', 1: 'unseen', 2: 'not_located'})
-        self.assertEqual(out[0]['first_seen'], {'tour': 't', 'shot': 'x'})
+        self.assertEqual(st, {0: 'seen', 1: 'unseen', 2: 'not_located', 4: 'compiled_out', 5: 'hook_blind'})
+        self.assertEqual(out[0]['first_seen'], {'job': 'job1', 'session': 's.jsonl', 'outdir': '/o/t',
+                                                'tour': 't', 'shot': 'x', 'addr': '08100004'})
         self.assertEqual(sorted(unmapped), [0x08100018])      # the FF of B: nothing drawn
         self.assertTrue(orph[0]['seen'])
+        self.assertTrue(orph[1]['seen'])                      # a mapped address is tested as well
         self.assertNotIn(3, st)                               # English strings are not reported
 
     def test_by_file(self):
@@ -164,6 +171,27 @@ class ReportTest(unittest.TestCase):
         files = {f['file']: f for f in strcov.by_file(out)}
         self.assertEqual(files['src/a.c']['unseen'], 2)
         self.assertEqual(files['src/b.c']['not_located'], 1)
+        self.assertEqual(files['src/b.c']['compiled_out'], 1)
+        self.assertEqual(files['src/b.c']['hook_blind'], 1)
+
+
+class PrefixTest(unittest.TestCase):
+    def entry(self, src, line, text):
+        import audit
+        starts = [0] + [m.end() for m in __import__('re').finditer('\n', src)]
+        return strcov.continues_after(src, starts, audit.Entry('src/x.h', line, 'k', 'k', text, source='c'))
+
+    def test_macro_and_if_continue_a_string(self):
+        src = '.d = COMPOUND_STRING(\n    "a\\n"\n    "b "BINDING_TURNS" c"),\n'
+        self.assertTrue(self.entry(src, 1, 'a\\nb '))
+        src = '.d = COMPOUND_STRING(\n    "a\\n"\n#if X\n    "b"),\n#endif\n'
+        self.assertTrue(self.entry(src, 1, 'a\\n'))
+
+    def test_complete_string_does_not(self):
+        src = 'static const u8 sText_SpaceIs[] = _(" x"); // c\n'
+        self.assertFalse(self.entry(src, 1, ' x'))
+        src = '.d = COMPOUND_STRING(\n    "a"\n    /* c */ "b"),\n'
+        self.assertFalse(self.entry(src, 1, 'ab'))
 
 
 @unittest.skipUnless(os.path.exists(PREPROC), 'tools/preproc is not built')
