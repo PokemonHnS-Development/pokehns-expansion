@@ -258,6 +258,21 @@ def map_constants(src_dir):
 
 # ---------------------------------------------------------------------------- runner
 
+class RunLog(list):
+    """The runner's output kept for run.log and error messages. Bounded, so a tour that
+    crashes into a loop of memory dumps cannot fill RAM: long lines are cut and only the
+    newest lines are kept."""
+    MAX_LINES = 100000
+    MAX_CHARS = 2000
+
+    def append(self, line):
+        if len(line) > self.MAX_CHARS:
+            line = "%s ...[%d chars]" % (line[:self.MAX_CHARS], len(line))
+        super().append(line)
+        if len(self) > self.MAX_LINES:
+            del self[:len(self) - self.MAX_LINES // 2]
+
+
 class Emu:
     """One live hnsrun process. Every method returns after the runner has executed it."""
 
@@ -267,7 +282,7 @@ class Emu:
         self.outdir = os.path.abspath(outdir)
         os.makedirs(self.outdir, exist_ok=True)
         self.echo = echo
-        self.log = []
+        self.log = RunLog()
         env = dict(os.environ)
         if rtc is not None:
             env["HNS_RTC"] = str(rtc)
