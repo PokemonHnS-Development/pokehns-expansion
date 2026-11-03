@@ -1,0 +1,15 @@
+# (b) The cave entrance of the H&S Battle Frontier east side, (28,7) (BattleFrontier_OutsideEast_hns
+# warp 12 -> MAP_ARTISAN_CAVE_1F warp 0). The tiles below it, (28,8)-(29,8), lie above a one-way
+# ledge row (y 9) and an Engineer stands on (28,8): walk up to the ledge from below and press UP.
+start saves/ladder6_postgame.sav
+include ../../scripts/continue.txt
+warpto MAP_BATTLE_FRONTIER_OUTSIDE_EAST_HNS 28 10
+where start
+snap elb_00_start
+trystep UP 3
+where below_ledge
+snap elb_01_below_ledge
+warpto MAP_BATTLE_FRONTIER_OUTSIDE_EAST_HNS 29 10
+trystep UP 3
+where below_ledge_29
+snap elb_02_below_ledge_29
