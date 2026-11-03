@@ -32,15 +32,21 @@ Mapping (index): the translated strings are the C strings audit.py extracts from
 that hold Hebrew. Each is encoded with the tree's own tools/preproc and charmap.txt and located in
 the ROM inside the sections of the object files that compile it (linker map + the build's .d files),
 narrowed to the named symbol when audit.py's key names one that the ELF has. A copy found inside a
-longer located string (a suffix) is dropped. An address maps to every located copy that contains it,
-so a printer resuming mid-string counts for that string.
+longer located string (a suffix) is dropped. A copy at a named symbol, or held by the string's own
+element of an item or species table (the name/pluralName pointers of gItemsInfo[ITEM_X], the
+categoryName/speciesName arrays of gSpeciesInfo[SPECIES_X]), belongs to that string only. An address
+maps to every located copy that contains it, so a printer resuming mid-string counts for that string;
+the report marks the seen strings whose every hit fell on a copy other strings hold as well
+(seen_shared_only).
 """
 import argparse
 import bisect
+import collections
 import glob
 import json
 import os
 import re
+import shutil
 import subprocess
 import sys
 import tempfile
@@ -126,6 +132,28 @@ class StringReporter(object):
                              'count': count, 'lost': dlost, 'reset': reset})
         finally:
             self.busy = False
+
+
+RAM_MAP_SIZE = 12            # struct RtlStringRamMap: const u8 *ram, *rom; u32 size
+
+
+def map_ram(emu, ram, rom, size):
+    """What RtlStringMapRam (src/string_util.c) does, for harness ops that copy ROM data into RAM
+    themselves: a string the game then reads from RAM..RAM+SIZE is logged at its ROM address (while
+    the RAM bytes still equal the ROM bytes). Same slot for the same RAM address, else the oldest.
+    Returns False on a build without the table (not a string-report build)."""
+    elf = emu.elf
+    if 'sRtlStringRamMaps' not in elf.byname or 'sRtlStringRamMapNext' not in elf.byname:
+        return False
+    base, nxt = elf.sym('sRtlStringRamMaps'), elf.sym('sRtlStringRamMapNext')
+    n = elf.size('sRtlStringRamMaps') // RAM_MAP_SIZE
+    slot = next((i for i in range(n) if emu.r32(base + RAM_MAP_SIZE * i) == ram), None)
+    if slot is None:
+        slot = emu.r32(nxt) % n
+        emu.w32(nxt, (slot + 1) % n)
+    for k, v in enumerate((ram, rom, size)):
+        emu.w32(base + RAM_MAP_SIZE * slot + 4 * k, v)
+    return True
 
 
 def install(emu, logdir, tour=None):
@@ -420,9 +448,11 @@ def cpp_command(tree):
         probe = 'build/hns-strrep/src/' + os.path.basename(d)[:-2] + '.o'
         break
     if probe:
-        r = subprocess.run(['make', '--no-print-directory', '-n', '-B', 'BUILD=hns', 'RTL_STRING_REPORT=1', probe],
-                           cwd=tree, capture_output=True, text=True)
+        # -W (the source is new) rather than -B: -B also remakes order-only generated files such as
+        # all_learnables.json, even with -n, and the regenerated file changes the normal ROM
         src = 'src/' + os.path.basename(probe)[:-2] + '.c'
+        r = subprocess.run(['make', '--no-print-directory', '-n', '-W', src, 'BUILD=hns', 'RTL_STRING_REPORT=1',
+                            probe], cwd=tree, capture_output=True, text=True)
         for line in r.stdout.splitlines():
             if ' | ' in line and ('cpp ' in line.split(' | ')[0]) and line.split(' | ')[0].rstrip().endswith(src):
                 cmd = line.split(' | ')[0].split()
@@ -441,9 +471,13 @@ def preprocessed_lines(tree, units, files, jobs=12):
     cmd = cpp_command(tree)
     want = set(files)
     out = {}
+    env = dict(os.environ)
+    dka = os.environ.get('DEVKITARM')
+    if dka and os.path.isdir(os.path.join(dka, 'bin')):      # the Makefile puts devkitARM first, too
+        env['PATH'] = os.path.join(dka, 'bin') + os.pathsep + env.get('PATH', '')
 
     def one(unit):
-        r = subprocess.run(cmd + [unit], cwd=tree, capture_output=True)
+        r = subprocess.run(cmd + [unit], cwd=tree, capture_output=True, env=env)
         got = {}
         cur, ln = None, 0
         for raw in r.stdout.decode('utf-8', 'replace').split('\n'):
@@ -487,6 +521,135 @@ def _texty(t):
     hs = re.findall('[א-ת]', body)
     n = len(body.replace(' ', ''))
     return len(hs) >= 4 and len(set(hs)) >= 3 and n and len(hs) / n >= 0.75 and not re.search(r'(.)\1\1', body)
+
+
+# Tables whose elements audit.py's key designates by a constant ('[ITEM_X].name'): the element's
+# own field gives the string's copy, so strings with identical text in one object (an item whose
+# name and plural are the same, species that share a category, a category that is another
+# species' name) are told apart. (table, file or folder of the records, constant prefix, fields)
+STRUCT_TABLES = (
+    ('gItemsInfo', 'src/data/items.h', 'ITEM_', ('name', 'pluralName')),
+    ('gSpeciesInfo', 'src/data/pokemon/species_info/', 'SPECIES_', ('categoryName', 'speciesName')),
+)
+ELEM_KEY_RE = re.compile(r'\[([A-Z][A-Z0-9_]*)\]\.(\w+)(?:#\w+)?$')
+
+
+def resolve_constants(tree, names, devkitarm):
+    """{NAME: value} of the C constants NAMES (ITEM_X is an enum, SPECIES_X a #define), compiled
+    against TREE/include as hns.resolve_const does, many per compile. Unknown names are left out."""
+    gcc = os.path.join(devkitarm, 'bin', 'arm-none-eabi-gcc')
+    objcopy = os.path.join(devkitarm, 'bin', 'arm-none-eabi-objcopy')
+    out = {}
+
+    def run(batch):
+        d = tempfile.mkdtemp(prefix='strcovk')
+        try:
+            c = os.path.join(d, 'k.c')
+            with open(c, 'w') as fh:
+                fh.write('#include "gba/types.h"\n#include "constants/global.h"\n'
+                         '#include "constants/species.h"\n#include "constants/items.h"\n'
+                         'const unsigned int gK[] = {\n%s\n};\n'
+                         % ',\n'.join('(unsigned int)(%s)' % n for n in batch))
+            r = subprocess.run([gcc, '-iquote', os.path.join(tree, 'include'), '-Wno-trigraphs', '-DMODERN=1',
+                                '-DTESTING=0', '-DPOKEMON_HNS', '-std=gnu17', '-mthumb', '-mabi=apcs-gnu', '-O2',
+                                '-c', c, '-o', os.path.join(d, 'k.o')], capture_output=True)
+            if r.returncode:
+                return False
+            subprocess.run([objcopy, '-O', 'binary', '-j', '.rodata', os.path.join(d, 'k.o'),
+                            os.path.join(d, 'k.bin')], check=True)
+            raw = open(os.path.join(d, 'k.bin'), 'rb').read()
+            for k, n in enumerate(batch):
+                out[n] = int.from_bytes(raw[4 * k:4 * k + 4], 'little')
+            return True
+        finally:
+            shutil.rmtree(d, ignore_errors=True)
+
+    def chunk(batch):
+        if batch and not run(batch) and len(batch) > 1:
+            h = len(batch) // 2
+            chunk(batch[:h])
+            chunk(batch[h:])
+
+    names = sorted(set(names))
+    for s in range(0, len(names), 1500):
+        chunk(names[s:s + 1500])
+    return out
+
+
+def struct_layout(pairs):
+    """(element size, field offset, share of the elements that agree) from [(element index, byte
+    offset of the field's string or pointer in the table)], or None."""
+    pairs = sorted(set(pairs))
+    sizes = collections.Counter()
+    for k, (i1, p1) in enumerate(pairs):
+        for i2, p2 in pairs[k + 1:k + 21]:
+            if i2 > i1 and p2 > p1 and (p2 - p1) % (i2 - i1) == 0:
+                sizes[(p2 - p1) // (i2 - i1)] += 1
+    if not sizes:
+        return None
+    size = sizes.most_common(1)[0][0]
+    off = collections.Counter(p - i * size for i, p in pairs).most_common(1)[0][0]
+    good = {i for i, p in pairs if p - i * size == off}
+    return size, off, len(good) / float(len({i for i, p in pairs}))
+
+
+def struct_claims(recs, elf, rom, tree, devkitarm, min_agree=0.9):
+    """{copy start: record id} for the records of STRUCT_TABLES whose element's field holds one of
+    their copies: the field's pointer (const u8 *name) or its inline array (u8 categoryName[13]).
+    The element size and the field offset are measured from the records that have one copy only,
+    and a field is used only when at least MIN_AGREE of them agree. Also returns the layout found."""
+    def rd32(a):
+        o = a - 0x08000000
+        return int.from_bytes(rom[o:o + 4], 'little') if 0 <= o < len(rom) - 3 else None
+
+    todo = {}
+    for r in recs:
+        if not r['copies']:
+            continue
+        m = ELEM_KEY_RE.search(r['symbol'])
+        if not m:
+            continue
+        for table, where, prefix, fields in STRUCT_TABLES:
+            if m.group(1).startswith(prefix) and m.group(2) in fields and r['file'].startswith(where):
+                todo.setdefault((table, m.group(2)), []).append((r, m.group(1)))
+    consts = resolve_constants(tree, [c for v in todo.values() for _, c in v], devkitarm) if todo else {}
+    claims, layout = {}, {}
+    for (table, field), items in sorted(todo.items()):
+        if table not in elf.byname:
+            continue
+        base, total = elf.sym(table), elf.size(table)
+        words = {}
+        for o in range(0, total - 3, 4):
+            words.setdefault(rd32(base + o), []).append(o)
+        best = None
+        for kind in ('inline', 'pointer'):
+            pairs = []
+            for r, c in items:
+                if c in consts and len(r['copies']) == 1:
+                    s = r['copies'][0][0]
+                    for p in ([s - base] if kind == 'inline' else words.get(s, ())):
+                        if 0 <= p < total:
+                            pairs.append((consts[c], p))
+            lay = struct_layout(pairs) if pairs else None
+            if lay and lay[2] >= min_agree and total % lay[0] == 0 and (best is None or lay[2] > best[1][2]):
+                best = (kind, lay)
+        if best is None:
+            layout['%s.%s' % (table, field)] = None
+            continue
+        kind, (size, off, agree) = best
+        n = 0
+        for r, c in items:
+            if c not in consts or not 0 <= consts[c] * size + off < total:
+                continue
+            at = base + consts[c] * size + off
+            addr = at if kind == 'inline' else rd32(at)
+            if any(s == addr for s, t in r['copies']):
+                claims.setdefault(addr, set()).add(r['id'])
+                r['struct'] = {'table': table, 'index': consts[c], 'field': field, 'addr': '%08X' % addr}
+                n += 1
+        layout['%s.%s' % (table, field)] = {'kind': kind, 'element_size': size, 'offset': off,
+                                             'agree': round(agree, 4), 'records': len(items), 'claimed': n}
+    return claims, layout
 
 
 def build_index(tree, elf_path, rom_path, map_path, objdir):
@@ -650,16 +813,17 @@ def build_index(tree, elf_path, rom_path, map_path, objdir):
             else:
                 r.setdefault('suffix_copies', []).append([s, t])
         r['copies'] = keep
-    # a copy found at a named symbol's own address belongs to that string only
-    claimed = {}
+    # a copy found at a named symbol's own address, or held by the string's own table element
+    # (STRUCT_TABLES), belongs to that string only
+    claimed, layout = struct_claims(recs, elf, rom, tree, hns.DEVKITARM)
     for r in recs:
         if r['how'] and r['how'].startswith('symbol'):
             for s, t in r['copies']:
-                claimed[s] = r['id']
+                claimed[s] = {r['id']}
     for r in recs:
         if r['how'] and r['how'].startswith('symbol'):
             continue
-        mine = [c for c in r['copies'] if claimed.get(c[0], r['id']) == r['id']]
+        mine = [c for c in r['copies'] if r['id'] in claimed.get(c[0], {r['id']})]
         if mine and len(mine) < len(r['copies']):
             r['claimed_elsewhere'] = [c for c in r['copies'] if c not in mine]
             r['copies'] = mine
@@ -704,7 +868,7 @@ def build_index(tree, elf_path, rom_path, map_path, objdir):
                 prev = i + 1
                 i = rom.find(bytes([EOS]), i + 1, hi)
     return {'tree': os.path.abspath(tree), 'elf': os.path.abspath(elf_path), 'rom': os.path.abspath(rom_path),
-            'records': recs, 'orphans': orphans}
+            'records': recs, 'orphans': orphans, 'struct_layout': layout}
 
 
 # ---------------------------------------------------------------------------- report
@@ -743,7 +907,11 @@ def make_report(index, logs, elf_path=None):
     spans = sorted((c[0], c[1], r['id']) for r in recs for c in r['copies'])
     starts = [s[0] for s in spans]
     maxlen = max([t - s for s, t, _ in spans] or [1])
+    owners = {}                                       # copy start -> records that hold that copy
+    for s, t, rid in spans:
+        owners.setdefault(s, set()).add(rid)
     seen = {}
+    seen_own = set()                                  # records hit on a copy no other record holds
     unmapped = {}
     logged = {}
     sessions = {}
@@ -773,6 +941,8 @@ def make_report(index, logs, elf_path=None):
                     hit = True
                     if rid not in seen:
                         seen[rid] = dict(where, addr=h)
+                    if len(owners[s]) == 1:
+                        seen_own.add(rid)
                 j -= 1
             if not hit:
                 unmapped.setdefault(a, where)
@@ -800,6 +970,9 @@ def make_report(index, logs, elf_path=None):
              'rom': ['%08X' % c[0] for c in r['copies']], 'located_by': r['how']}
         if r.get('shares_copy_with'):
             o['shares_copy_with'] = r['shares_copy_with']
+        if status == 'seen':
+            # every hit fell on a copy that other records hold as well (identical text, one copy)
+            o['seen_shared_only'] = r['id'] not in seen_own
         out.append(o)
     unm = {}
     if elf_path and unmapped:
@@ -821,6 +994,7 @@ def by_file(out):
         f = files.setdefault(o['file'], dict({'file': o['file'], 'strings': 0}, **{k: 0 for k in STATUSES}))
         f['strings'] += 1
         f[o['status']] += 1
+        f['seen_shared_only'] = f.get('seen_shared_only', 0) + (1 if o.get('seen_shared_only') else 0)
     return sorted(files.values(), key=lambda f: (-f['strings'], f['file']))
 
 
@@ -836,6 +1010,10 @@ def write_md(path, res, notes=None, max_text=70):
     L.append('| located in the ROM | %d |' % loc)
     L.append('| seen (copied, expanded or printed during a tour) | %d (%.1f%% of located) |' % (
         st['seen'], 100.0 * st['seen'] / max(loc, 1)))
+    shared = sum(1 for o in out if o.get('seen_shared_only'))
+    L.append('| of which seen only through a copy shared with other records (shares_copy_with) | %d |' % shared)
+    L.append('| seen without those | %d (%.1f%% of located) |' % (
+        st['seen'] - shared, 100.0 * (st['seen'] - shared) / max(loc, 1)))
     L.append('| unseen | %d |' % st['unseen'])
     L.append('| hook-blind (drawn from a RAM copy the hook does not log) | %d |' % st['hook_blind'])
     L.append('| compiled out (a preprocessor branch the H&S build leaves out) | %d |' % st['compiled_out'])
@@ -1020,6 +1198,9 @@ def main(argv=None):
         print('%d translated C strings: %s; %d sessions, %d unmapped pointers'
               % (n, ', '.join('%d %s' % (sum(1 for o in out if o['status'] == k), k) for k in STATUSES),
                  len(sessions), len(unmapped)))
+        shared = sum(1 for o in out if o.get('seen_shared_only'))
+        print('seen only through a shared copy: %d; seen without them: %d'
+              % (shared, sum(1 for o in out if o['status'] == 'seen') - shared))
         return 0
     ap.print_usage()
     return 2

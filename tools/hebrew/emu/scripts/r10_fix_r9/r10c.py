@@ -12,6 +12,8 @@ the round-10 fix proofs (tours/r10_fix_r9; the round-9 originals are tours/r9_co
                      the receptionist's 'entry No. 4' message waits for a key. With keepgfx
                      the slot keeps its trainerGfxId (offset 23), so the hall objects stay the
                      ones SetContestants picked and only the names, species and moves change.
+                     On a string-report build each slot is registered as a RAM copy of its
+                     opponent (strcov.map_ram), so the names are logged at their ROM address.
     fullpocket POCKET ITEM [QTY]
                      fill every slot of gBagPockets[POCKET] with ITEM x QTY (the op of
                      scripts/r5_npcsvc/npcsvc.py), so giveitem of that pocket fails (bag full)
@@ -29,8 +31,10 @@ import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.join(HERE, "..", ".."))                       # tools/hebrew/emu
+sys.path.insert(0, os.path.join(HERE, "..", "..", ".."))                 # tools/hebrew
 sys.path.insert(0, os.path.join(HERE, "..", "r5_contests"))
 import hns  # noqa: E402
+import strcov  # noqa: E402
 import rc5  # noqa: E402,F401  (registers rc.py, hilltent_ops and the r5 contest ops)
 from hns import script_op, HnsError, TourTimeout  # noqa: E402
 
@@ -64,6 +68,7 @@ def _op_setopps(emu, f, path):
             emu.w32(dst + k, int.from_bytes(data[k:k + 4], "little"))
         if emu.read(dst, size) != data[:size]:
             raise HnsError("setopps: slot %d did not read back" % slot)
+        strcov.map_ram(emu, dst, src0 + oid * size, size)          # as SetContestants does
     print("setopps %s%s (struct %d bytes, %d opponents) @%d" % ("keepgfx " if keepgfx else "", " ".join(map(str, ids)), size, nopp, emu.sync()))
 
 

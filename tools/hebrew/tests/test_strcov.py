@@ -175,6 +175,90 @@ class ReportTest(unittest.TestCase):
         self.assertEqual(files['src/b.c']['hook_blind'], 1)
 
 
+class SharedCopyTest(unittest.TestCase):
+    def test_seen_only_through_a_shared_copy_is_marked(self):
+        idx = {'records': [
+            {'id': 0, 'lang': 'he', 'file': 'src/a.c', 'line': 1, 'symbol': 'src/a.c:L1', 'kind': 'k', 'text': 'A',
+             'copies': [[0x08100000, 0x08100004]], 'how': 'object', 'shares_copy_with': [1]},
+            {'id': 1, 'lang': 'he', 'file': 'src/a.c', 'line': 2, 'symbol': 'src/a.c:L2', 'kind': 'k', 'text': 'A',
+             'copies': [[0x08100000, 0x08100004], [0x08100010, 0x08100014]], 'how': 'object',
+             'shares_copy_with': [0]}]}
+        logs = [('logs/j/s.jsonl', {'tour': 't', 'shot': 'x', 'new': ['08100000']})]
+        out, _, _, _, _ = strcov.make_report(idx, logs)
+        self.assertEqual([o['seen_shared_only'] for o in out], [True, True])
+        logs.append(('logs/j/s.jsonl', {'tour': 't', 'shot': 'y', 'new': ['08100011']}))
+        out, _, _, _, _ = strcov.make_report(idx, logs)
+        self.assertEqual([o['seen_shared_only'] for o in out], [True, False])
+        self.assertEqual(strcov.by_file(out)[0]['seen_shared_only'], 1)
+
+
+class StructClaimTest(unittest.TestCase):
+    def test_layout_from_single_copy_records(self):
+        pairs = [(1, 64), (5, 240), (9, 416), (2, 999)]           # element size 44, field at 20; one outlier
+        self.assertEqual(strcov.struct_layout(pairs)[:2], (44, 20))
+        self.assertEqual(strcov.struct_layout(pairs)[2], 0.75)
+
+    def test_name_and_plural_with_the_same_text_get_their_own_pointer(self):
+        base, esize = 0x08200000, 16                            # element: u32 x; name ptr +4; plural ptr +8
+        rom = bytearray(0x300010)
+        name_a, name_b, plural_b = 0x08100000, 0x08100010, 0x08100020
+        for idx, (n, pl) in ((1, (name_a, name_a)), (2, (name_b, plural_b))):
+            o = base + idx * esize - 0x08000000
+            rom[o + 4:o + 8] = n.to_bytes(4, 'little')
+            rom[o + 8:o + 12] = pl.to_bytes(4, 'little')
+        for idx in range(3, 8):                                 # more single-copy names for the layout
+            o = base + idx * esize - 0x08000000
+            rom[o + 4:o + 8] = (0x08100100 + 16 * idx).to_bytes(4, 'little')
+
+        class Elf(object):
+            byname = {'gItemsInfo': [(base, 8 * esize, 'OBJECT', 'GLOBAL')]}
+
+            def sym(self, n):
+                return base
+
+            def size(self, n):
+                return 8 * esize
+
+        def rec(i, item, field, copies):
+            return {'id': i, 'file': 'src/data/items.h', 'symbol': 'src/data/items.h:gItemsInfo[%s].%s' % (item, field),
+                    'copies': copies}
+        recs = [rec(0, 'ITEM_B', 'name', [[name_b, name_b + 4], [plural_b, plural_b + 4]]),
+                rec(1, 'ITEM_B', 'pluralName', [[name_b, name_b + 4], [plural_b, plural_b + 4]]),
+                rec(2, 'ITEM_A', 'name', [[name_a, name_a + 4]])]
+        recs += [rec(10 + k, 'ITEM_%d' % k, 'name', [[0x08100100 + 16 * k, 0x08100104 + 16 * k]]) for k in range(3, 8)]
+        consts = dict({'ITEM_A': 1, 'ITEM_B': 2}, **{'ITEM_%d' % k: k for k in range(3, 8)})
+        real = strcov.resolve_constants
+        strcov.resolve_constants = lambda tree, names, dka: {n: consts[n] for n in names if n in consts}
+        try:
+            claims, layout = strcov.struct_claims(recs, Elf(), bytes(rom), '.', '')
+        finally:
+            strcov.resolve_constants = real
+        self.assertEqual(layout['gItemsInfo.name']['kind'], 'pointer')
+        self.assertEqual((layout['gItemsInfo.name']['element_size'], layout['gItemsInfo.name']['offset']), (16, 4))
+        self.assertEqual(claims[name_b], {0})
+        self.assertEqual(claims[name_a], {2})
+        self.assertNotIn(plural_b, claims)                      # too few plurals to measure the field: not used
+        self.assertIsNone(layout['gItemsInfo.pluralName'])
+
+
+class MapRamTest(unittest.TestCase):
+    def test_same_ram_reuses_its_slot_else_the_oldest(self):
+        emu = FakeEmu('/tmp/x')
+        emu.elf.byname['sRtlStringRamMaps'] = [(0x02050000, 2 * strcov.RAM_MAP_SIZE, 'OBJECT', 'LOCAL')]
+        emu.elf.byname['sRtlStringRamMapNext'] = [(0x02050100, 4, 'OBJECT', 'LOCAL')]
+        emu.elf.size = lambda n: emu.elf.byname[n][0][1]
+        self.assertTrue(strcov.map_ram(emu, 0x02001000, 0x08300000, 24))
+        self.assertTrue(strcov.map_ram(emu, 0x02002000, 0x08300100, 24))
+        self.assertTrue(strcov.map_ram(emu, 0x02001000, 0x08300200, 24))      # same RAM: slot 0 again
+        self.assertEqual([emu.r32(0x02050000 + 4 * k) for k in range(6)],
+                         [0x02001000, 0x08300200, 24, 0x02002000, 0x08300100, 24])
+        self.assertTrue(strcov.map_ram(emu, 0x02003000, 0x08300300, 8))       # new RAM: the oldest slot (0)
+        self.assertEqual(emu.r32(0x02050000), 0x02003000)
+
+    def test_not_a_string_report_build(self):
+        self.assertFalse(strcov.map_ram(FakeEmu('/tmp/x'), 0x02001000, 0x08300000, 24))
+
+
 class PrefixTest(unittest.TestCase):
     def entry(self, src, line, text):
         import audit
