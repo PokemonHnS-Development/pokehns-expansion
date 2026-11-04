@@ -7290,14 +7290,14 @@
  {
   "file": "data/text/pokemon_news.inc",
   "kind": "text_common",
-  "strings": 12,
+  "strings": 0,
   "reachable": true,
   "batch": "B30",
   "priority": 4,
   "notes": "",
   "reach_class": "live",
   "strings_total": 12,
-  "strings_live": 12,
+  "strings_live": 0,
   "strings_debug_only": 0,
   "strings_metatile_only": 0,
   "chars_live": 3910,
@@ -7305,7 +7305,8 @@
   "stage": "decorations, ribbons, trades, misc side",
   "order": 48,
   "es_touched": true,
-  "evidence": []
+  "evidence": [],
+  "strings_flag_off": 12
  },
  {
   "file": "data/text/questionnaire.inc",

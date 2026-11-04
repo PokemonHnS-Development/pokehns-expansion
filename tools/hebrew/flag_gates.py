@@ -10,12 +10,14 @@ their own key, each with a reason:
   flag_off   * match-call contacts whose header .flag (src/pokenav_match_call_data.c, the IS_HNS
                branch) is defined as 0 in include/constants/flags_hns.h. FlagGet(0) is FALSE, so
                the contact is never enabled and none of its calls can ring.
-             * TV show text: the labels of data/text/tv.inc that only src/tv.c's sTV*TextGroup
-               tables name. Those tables are read only by the DoTVShow* functions, which only the
-               specials DoTVShow and DoTVShowInSearchOfTrainers reach, and each show special sits
-               in a label of data/scripts/tv.inc that the script reaches only through the lines
-               below `goto_if_unset FLAG_SYS_TV_START` (followed jump by jump, not by line
-               order), with FLAG_SYS_TV_START defined as 0.
+             * TV text: the labels of data/text/tv.inc that only src/tv.c's sTV*TextGroup tables
+               name, and of data/text/pokemon_news.inc that only its sPokeNewsTextGroup_* tables
+               name. Those tables are read only by the TV functions (DoTVShow*, DoPokeNews), which
+               tv.c calls only from each other, and which the specials DoTVShow, DoPokeNews and
+               DoTVShowInSearchOfTrainers reach. Each of those specials sits in a label of
+               data/scripts/tv.inc that the script reaches only through the lines below
+               `goto_if_unset FLAG_SYS_TV_START` (followed jump by jump, not by line order), with
+               FLAG_SYS_TV_START defined as 0.
   not_built  labels with no symbol in the ELF given with --elf: not assembled into this build.
              Without --elf the not_built lists already in the file are kept as they are.
 
@@ -48,14 +50,20 @@ MATCH_CALL_C = 'src/pokenav_match_call_data.c'
 MATCH_CALL_INC = 'data/text/match_call.inc'
 TV_C = 'src/tv.c'
 TV_TEXT = 'data/text/tv.inc'
+NEWS_TEXT = 'data/text/pokemon_news.inc'
 TV_SCRIPT = 'data/scripts/tv.inc'
 TV_GATE = 'goto_if_unset FLAG_SYS_TV_START,'
 TV_SPECIALS = ('DoTVShow', 'DoPokeNews', 'DoTVShowInSearchOfTrainers')
+# tv.c's text tables for the two text files, and the TV functions, the only code that may read them
+TV_TABLE = r'sTV\w*TextGroup|sPokeNewsTextGroup_\w+'
+TV_FUNC = r'DoTVShow\w*|DoPokeNews'
 
 REASON_MATCH_CALL = ('match-call contact whose header flag is defined as 0 in %s: FlagGet(0) is FALSE, '
                      'so the contact is never enabled' % FLAGS_H)
 REASON_TV = ('TV show text: every show runs after `goto_if_unset FLAG_SYS_TV_START` in %s, and '
              'FLAG_SYS_TV_START is defined as 0' % TV_SCRIPT)
+REASON_NEWS = ('PokeNews text: DoPokeNews, the only reader of its tables, runs after `goto_if_unset '
+               'FLAG_SYS_TV_START` in %s, and FLAG_SYS_TV_START is defined as 0' % TV_SCRIPT)
 REASON_NOT_BUILT = 'no symbol in the build\'s ELF: not assembled into this build'
 
 LABEL_RE = re.compile(r'^([A-Za-z_]\w*)::?', re.M)
@@ -277,8 +285,9 @@ def gated_labels(script, gate):
 
 
 def tv_off(tree, flags, texts, tokens):
-    """Labels of tv.inc that only the TV show tables of tv.c name, after checking the gate.
-    texts: {rel: text} of every script and C file; tokens: {rel: set of its identifiers}."""
+    """{text file: labels} of tv.inc and pokemon_news.inc that only the TV tables of tv.c name,
+    after checking the gate. texts: {rel: text} of every script and C file; tokens: {rel: set of its
+    identifiers}."""
     if flags.get('FLAG_SYS_TV_START') != 0:
         raise ShapeError('FLAG_SYS_TV_START is not defined as 0 in %s' % FLAGS_H)
     script = texts[TV_SCRIPT].split('\n')
@@ -303,26 +312,32 @@ def tv_off(tree, flags, texts, tokens):
         if hit:
             raise ShapeError('%s names %s, a TV script behind the gate in %s' % (rel, hit[0], TV_SCRIPT))
     tvc = texts[TV_C]
-    labels = LABEL_RE.findall(texts[TV_TEXT])
     owners = top_level_owners(tvc, r'\b[A-Za-z_]\w*\b')
-    groups = top_level_owners(tvc, r'\bsTV\w*TextGroup\b')
-    shows = top_level_owners(tvc, r'\bDoTVShow\w*\b')
+    groups = top_level_owners(tvc, r'\b(?:%s)\b' % TV_TABLE)
+    shows = top_level_owners(tvc, r'\b(?:%s)\b' % TV_FUNC)
+
+    def tv_code(name):
+        name = name or ''
+        return bool(re.fullmatch(TV_FUNC, name)) or name.startswith(('sTV', 'sPokeNewsTextGroup'))
+
     for g, users in groups.items():
-        bad = sorted(u for u in users - {g} if not (u or '').startswith(('DoTVShow', 'sTV')))
+        bad = sorted(u for u in users - {g} if not tv_code(u))
         if bad:
-            raise ShapeError('%s: %s is read outside the DoTVShow* functions, by %s' % (TV_C, g, ', '.join(bad)))
+            raise ShapeError('%s: %s is read outside the TV functions, by %s' % (TV_C, g, ', '.join(bad)))
     for f, users in shows.items():
-        bad = sorted(u for u in users - {f} if not (u or '').startswith('DoTVShow'))
+        bad = sorted(u for u in users - {f} if not re.fullmatch(TV_FUNC, u or ''))
         if bad:
             raise ShapeError('%s: %s is called outside the TV shows, by %s' % (TV_C, f, ', '.join(bad)))
-    off = set()
-    for L in labels:
-        where = owners.get(L)
-        if not where or not all(re.fullmatch(r'sTV\w*TextGroup', w or '') for w in where):
-            continue
-        if any(L in toks for rel, toks in tokens.items() if rel not in (TV_C, TV_TEXT)):
-            continue
-        off.add(L)
+    off = {}
+    for text in (TV_TEXT, NEWS_TEXT):
+        off[text] = set()
+        for L in LABEL_RE.findall(texts.get(text, '')):
+            where = owners.get(L)
+            if not where or not all(re.fullmatch(TV_TABLE, w or '') for w in where):
+                continue
+            if any(L in toks for rel, toks in tokens.items() if rel not in (TV_C, text)):
+                continue
+            off[text].add(L)
     return off
 
 
@@ -407,11 +422,12 @@ def gate(labels_doc, tree, elf=None):
     # a label any other file names stays live (the IS_HNS tables are the only roots counted)
     mc = {L for L in mc & mc_inc
           if not any(L in toks for rel, toks in tokens.items() if rel not in (MATCH_CALL_C, MATCH_CALL_INC))}
-    off = {MATCH_CALL_INC: mc, TV_TEXT: tv_off(tree, flags, texts, tokens)}
+    off = {MATCH_CALL_INC: mc}
+    off.update(tv_off(tree, flags, texts, tokens))
+    reasons = {MATCH_CALL_INC: REASON_MATCH_CALL, TV_TEXT: REASON_TV, NEWS_TEXT: REASON_NEWS}
     for rel, entry in labels_doc.items():
         if rel in off or entry.get('flag_off'):
-            if move(entry, 'flag_off', REASON_MATCH_CALL if rel == MATCH_CALL_INC else REASON_TV,
-                    off.get(rel, set())):
+            if move(entry, 'flag_off', reasons.get(rel, REASON_TV), off.get(rel, set())):
                 changed.append(rel)
     if elf:
         syms = elf_symbols(elf)

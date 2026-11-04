@@ -37,8 +37,8 @@ equal the shipped ones.
    story order and the 40 translation batches. `es_touched` marks the files the Spanish fork
    changed (`git diff 167aa6d537...268113861f`; `--es-ref` names another commit).
 5. `tools/hebrew/flag_gates.py` takes out of `live` the labels the build still cannot show:
-   match calls and TV shows behind flags defined as 0, and labels with no symbol in the ELF
-   (`--elf`, default the release ELF). See its docstring.
+   match calls, TV shows and PokéNews behind flags defined as 0, and labels with no symbol in the
+   ELF (`--elf`, default the release ELF). See its docstring.
 
 `--no-gates` stops after step 4.
 

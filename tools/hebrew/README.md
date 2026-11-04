@@ -61,7 +61,7 @@ runs from any working directory. The style guide and glossary are in `translatio
 | `checkunits.py` | validates translated chunks before they are applied |
 | `cliptour.py` | reads the RTL clip log of a clip build between harness steps (`hns.py tour --clip`) |
 | `drift.py` | checks that a translated file changed only inside its strings |
-| `flag_gates.py` | takes match calls and TV shows behind flags defined as 0, and labels that are not built (`--elf`), out of the live list of `data/live_labels.json`; `--check` exits 1 when the file is stale (CI) |
+| `flag_gates.py` | takes match calls, TV shows and PokéNews behind flags defined as 0, and labels that are not built (`--elf`), out of the live list of `data/live_labels.json`; `--check` exits 1 when the file is stale (CI) |
 | `fontcells.py` | shows, per Latin font, whether each glyph cell is blank and how wide it is (`fontcells.py TREE [HEX...]`) |
 | `gen_dex_alpha.py` | regenerates the Hebrew alphabetical Pokédex order from the glossary; `--check` exits 1 when the header is stale (CI) |
 | `glossary_widths.py` | glossary names wider than their screen budget and than the English name |

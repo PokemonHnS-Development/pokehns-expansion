@@ -69,7 +69,7 @@ MATCH_CALL_INC = ''.join('MatchCall_Text_%s::\n\t.string "Hello.$"\n\n' % n
 TV_SCRIPT = '''EventScript_TV::
 \tlockall
 \tgoto_if_unset FLAG_SYS_TV_START, EventScript_NoShow
-\tgoto EventScript_TryDoTVShow
+\tgoto EventScript_TryDoPokeNews
 \tend
 
 EventScript_NoShow::
@@ -78,6 +78,12 @@ EventScript_NoShow::
 
 EventScript_TryDoTVShow::
 \tspecial DoTVShow
+\treleaseall
+\tend
+
+EventScript_TryDoPokeNews::
+\tspecial DoPokeNews
+\tgoto_if_eq VAR_RESULT, FALSE, EventScript_TryDoTVShow
 \treleaseall
 \tend
 '''
@@ -98,6 +104,13 @@ TV_Text_Unused::
 \t.string "Nobody shows this.$"
 '''
 
+NEWS_TEXT = '''gPokeNewsTextFair_Upcoming::
+\t.string "The fair opens in {STR_VAR_1} days.$"
+
+gPokeNewsTextFair_Ongoing::
+\t.string "The fair is on today.$"
+'''
+
 TV_C = '''// TV_Text_Unused is named only in this comment
 static const u8 *const sTVShowTextGroup[] = {
     TV_Text_Show1,
@@ -113,6 +126,24 @@ static void DoTVShowOne(void)
 void DoTVShow(void)
 {
     DoTVShowOne();
+}
+
+static const u8 *const sPokeNewsTextGroup_Upcoming[] = {
+    NULL,
+    gPokeNewsTextFair_Upcoming,
+};
+
+static const u8 *const sPokeNewsTextGroup_Ongoing[] = {
+    NULL,
+    gPokeNewsTextFair_Ongoing,
+};
+
+void DoPokeNews(void)
+{
+    if (gSpecialVar_Result)
+        ShowFieldMessage(sPokeNewsTextGroup_Ongoing[1]);
+    else
+        ShowFieldMessage(sPokeNewsTextGroup_Upcoming[1]);
 }
 '''
 
@@ -136,6 +167,8 @@ LIVE_LABELS = {
                                  'debug_only': [], 'dead': []},
     'data/text/tv.inc': {'live': ['TV_Text_Show1', 'TV_Text_Show2', 'Lobby_Text_Reporter', 'TV_Text_Rerun'],
                          'debug_only': [], 'dead': ['TV_Text_Unused']},
+    'data/text/pokemon_news.inc': {'live': ['gPokeNewsTextFair_Upcoming', 'gPokeNewsTextFair_Ongoing'],
+                                   'debug_only': [], 'dead': []},
     'data/maps/Kanto_Frlg/scripts.inc': {'live': ['Kanto_Text_Built', 'Kanto_Text_NotBuilt'],
                                          'debug_only': [], 'dead': []},
 }
@@ -143,6 +176,7 @@ LIVE_LABELS = {
 INVENTORY = [
     {'file': 'data/text/match_call.inc', 'strings': 6, 'strings_live': 6, 'chars_live': 60},
     {'file': 'data/text/tv.inc', 'strings': 4, 'strings_live': 4, 'chars_live': 40},
+    {'file': 'data/text/pokemon_news.inc', 'strings': 2, 'strings_live': 2, 'chars_live': 20},
     {'file': 'data/maps/Kanto_Frlg/scripts.inc', 'strings': 2, 'strings_live': 2, 'chars_live': 20},
     {'file': 'src/strings.c', 'strings': 9, 'strings_live': 9, 'chars_live': 90},
 ]
@@ -184,8 +218,11 @@ class FlagGatesTest(unittest.TestCase):
             'data/scripts/tv.inc': TV_SCRIPT,
             'data/text/tv.inc': TV_TEXT,
             'src/tv.c': TV_C,
+            'data/text/pokemon_news.inc': NEWS_TEXT,
+            'include/event_scripts.h': ('extern const u8 gPokeNewsTextFair_Upcoming[];\n'
+                                        'extern const u8 gPokeNewsTextFair_Ongoing[];\n'),
             'include/strings.h': 'extern const u8 TV_Text_Show1[];\nextern const u8 MatchCall_Text_A1[];\n',
-            'data/specials.inc': '\tdef_special DoTVShow\n',
+            'data/specials.inc': '\tdef_special DoTVShow\n\tdef_special DoPokeNews\n',
             'data/maps/Lobby/scripts.inc': LOBBY,
             'data/scripts/other.inc': OTHER,
         }
@@ -239,10 +276,16 @@ class FlagGatesTest(unittest.TestCase):
         self.assertEqual(tv['live'], ['Lobby_Text_Reporter', 'TV_Text_Rerun'])
         self.assertEqual(tv['dead'], ['TV_Text_Unused'])
         self.assertIn('FLAG_SYS_TV_START', tv['flag_off_reason'])
+        # PokeNews: only DoPokeNews reads its tables, and the special runs behind the same gate
+        news = labels['data/text/pokemon_news.inc']
+        self.assertEqual(news['flag_off'], ['gPokeNewsTextFair_Upcoming', 'gPokeNewsTextFair_Ongoing'])
+        self.assertEqual(news['live'], [])
+        self.assertIn('DoPokeNews', news['flag_off_reason'])
+        self.assertEqual(inv['data/text/pokemon_news.inc']['strings_flag_off'], 2)
         self.assertNotIn('not_built', labels['data/maps/Kanto_Frlg/scripts.inc'])
         self.assertEqual((inv['data/text/tv.inc']['strings_live'], inv['data/text/tv.inc']['strings'],
                           inv['data/text/tv.inc']['strings_flag_off']), (2, 2, 2))
-        self.assertEqual(inv['src/strings.c'], INVENTORY[3])
+        self.assertEqual(inv['src/strings.c'], INVENTORY[4])
         self.assertEqual(self.run_tool('--check')[0], 0)
 
     def test_not_built(self):
@@ -304,6 +347,23 @@ class FlagGatesTest(unittest.TestCase):
                 self.assertEqual(code, 2, out)
                 self.assertIn(message, out)
         self.assertEqual(self.run_tool('--check')[0], 1)
+
+    def test_news_outside_the_gate_stops(self):
+        cases = [
+            ('a table read outside DoPokeNews',
+             'void TV_Debug(void)\n{\n    ShowFieldMessage(sPokeNewsTextGroup_Ongoing[1]);\n}\n',
+             'is read outside the TV functions'),
+            ('DoPokeNews called outside the TV code', 'void TV_Debug(void)\n{\n    DoPokeNews();\n}\n',
+             'is called outside the TV shows'),
+        ]
+        p = os.path.join(self.tree, 'src/tv.c')
+        for name, extra, message in cases:
+            with self.subTest(name):
+                with open(p, 'w', encoding='utf-8') as f:
+                    f.write(TV_C + '\n' + extra)
+                code, out = self.run_tool('--check')
+                self.assertEqual(code, 2, out)
+                self.assertIn(message, out)
 
     def test_tv_flag_set_stops(self):
         p = os.path.join(self.tree, 'include/constants/flags_hns.h')

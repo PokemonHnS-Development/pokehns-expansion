@@ -13061,7 +13061,10 @@
 ]
 },
 "data/text/pokemon_news.inc": {
-"live": [
+"live": [],
+"debug_only": [],
+"dead": [],
+"flag_off": [
 "gPokeNewsTextSlateport_Upcoming",
 "gPokeNewsTextSlateport_Ongoing",
 "gPokeNewsTextSlateport_Ending",
@@ -13075,8 +13078,7 @@
 "gPokeNewsTextBlendMaster_Ongoing",
 "gPokeNewsTextBlendMaster_Ending"
 ],
-"debug_only": [],
-"dead": []
+"flag_off_reason": "PokeNews text: DoPokeNews, the only reader of its tables, runs after `goto_if_unset FLAG_SYS_TV_START` in data/scripts/tv.inc, and FLAG_SYS_TV_START is defined as 0"
 },
 "data/text/questionnaire.inc": {
 "live": [
