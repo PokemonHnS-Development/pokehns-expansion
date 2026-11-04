@@ -135,6 +135,7 @@ echo "== ladder"
 # validation script. Each log ends in the script's exit status, which make_testing_md.py checks.
 for s in "$SAVES"/ladder*.sav; do
   n=$(basename "$s" .sav); v=scripts/ladder_validate.txt
+  rm -rf "$OUT/ladder/$n"                     # hns.py run adds to OUTDIR, so a re-run would mix shots
   [ "$n" = ladder1_newgame ] && v=scripts/ladder_validate_newgame.txt
   python3 ladder.py --rom "$ROM" run "$v" "$OUT/ladder/$n" --save "$s" > "$OUT/ladder_$n.log" 2>&1; rc=$?
   echo "exit $rc" >> "$OUT/ladder_$n.log"
