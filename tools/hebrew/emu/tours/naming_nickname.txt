@@ -68,6 +68,12 @@ press A
 waitcb2x CB2_Overworld 900
 talk naming_nick_rater_done 10 -
 waitctl 900
+expect8 @gPlayerParty+08@ 3C                # slot 1 (struct Pokemon 0x64, nickname +8): gimel
+expect8 @gPlayerParty+09@ B4                # geresh
+expect8 @gPlayerParty+0A@ 43                # yod
+expect8 @gPlayerParty+0B@ 46                # mem
+expect8 @gPlayerParty+0C@ 43                # yod
+expect8 @gPlayerParty+0D@ FF                # end of the name
 
 # --- Pikachu (party slot 2)
 face UP
@@ -131,8 +137,13 @@ press A
 waitcb2x CB2_Overworld 900
 talk naming_nick_rater2_done 10 -
 waitctl 900
-expect8 @gPlayerParty+70@ 00                # slot 2 (struct Pokemon 0x64, nickname +8): byte 4 is the space
-expect8 @gPlayerParty+71@ A3                # byte 5 is the '2' from the symbols page
+expect8 @gPlayerParty+6C@ 4A                # slot 2: pe
+expect8 @gPlayerParty+6D@ 43                # yod
+expect8 @gPlayerParty+6E@ 4C                # qof
+expect8 @gPlayerParty+6F@ 3E                # he
+expect8 @gPlayerParty+70@ 00                # the space
+expect8 @gPlayerParty+71@ A3                # the '2' from the symbols page
+expect8 @gPlayerParty+72@ FF                # end of the name
 
 # --- Ampharos (party slot 3)
 face UP
@@ -170,6 +181,7 @@ waitctl 900
 expect8 @gPlayerParty+D0@ BB                # slot 3 nickname: A
 expect8 @gPlayerParty+D1@ BC                # B
 expect8 @gPlayerParty+D2@ BD                # C
+expect8 @gPlayerParty+D3@ FF                # end of the name
 
 # --- The names elsewhere: party menu, summary of slots 1-3
 startmenu POKEMON
