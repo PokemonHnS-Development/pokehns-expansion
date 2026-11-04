@@ -227,9 +227,9 @@ static const u16 sNewGamePCItems[][2] =
 
 const struct MenuAction gMailboxMailOptions[] =
 {
-    { COMPOUND_STRING("קרא"),        {Mailbox_DoMailRead} },
-    { COMPOUND_STRING("העבר לתיק"), {Mailbox_MoveToBag} },
-    { COMPOUND_STRING("תן"),        {Mailbox_Give} },
+    { COMPOUND_STRING("קריאה"),        {Mailbox_DoMailRead} },
+    { COMPOUND_STRING("העברה לתיק"), {Mailbox_MoveToBag} },
+    { COMPOUND_STRING("נתינה"),        {Mailbox_Give} },
     { gText_Cancel2,                  {Mailbox_Cancel} }
 };
 
