@@ -1,10 +1,16 @@
 #!/usr/bin/env python3
-"""Compare crosscore frame dumps between cores, after reducing every pixel to RGB565 (cores differ
-in pixel format, and XRGB8888 rounding is not a difference).
+"""Compare crosscore frame dumps between cores, after reducing every pixel to RGB555, the GBA's own
+15-bit colour. Cores hand frames over as RGB565 or XRGB8888 and each widens the 15 bits its own
+way (on the same frame, VBA-Next sets the low bit of the 6-bit green where mGBA leaves it clear),
+so only the 15 bits are compared.
 
   ccdiff.py REF_DIR DIR... -> per shot: differing pixel count against REF_DIR, and PNGs of each
+
+Exit status 0 when the table was printed, 2 for wrong arguments; -h or --help prints this text.
 """
 import os, struct, sys, zlib
+
+USAGE = 'usage: ccdiff.py REF_DIR DIR...   (--help for details)'
 
 def load(path):
     d = open(path, 'rb').read()
@@ -12,16 +18,16 @@ def load(path):
     out = []
     for i in range(w * h):
         b, g, r = px[i * 4], px[i * 4 + 1], px[i * 4 + 2]
-        out.append(((r >> 3) << 11) | ((g >> 2) << 5) | (b >> 3))
+        out.append(((r >> 3) << 10) | ((g >> 3) << 5) | (b >> 3))
     return w, h, out
 
-def png(path, w, h, pix565):
+def png(path, w, h, pix555):
     rows = []
     for y in range(h):
         row = bytearray([0])
         for x in range(w):
-            v = pix565[y * w + x]
-            row += bytes([((v >> 11) & 31) << 3, ((v >> 5) & 63) << 2, (v & 31) << 3])
+            v = pix555[y * w + x]
+            row += bytes([((v >> 10) & 31) << 3, ((v >> 5) & 31) << 3, (v & 31) << 3])
         rows.append(bytes(row))
     def chunk(t, data):
         c = t + data
@@ -29,11 +35,17 @@ def png(path, w, h, pix565):
     open(path, 'wb').write(b'\x89PNG\r\n\x1a\n' + chunk(b'IHDR', struct.pack('>IIBBBBB', w, h, 8, 2, 0, 0, 0))
                           + chunk(b'IDAT', zlib.compress(b''.join(rows), 9)) + chunk(b'IEND', b''))
 
-if len(sys.argv) < 3 or sys.argv[1] in ('-h', '--help'):
-    sys.exit('usage: ccdiff.py REF_DIR DIR...')
+if sys.argv[1:2] in (['-h'], ['--help']):
+    print(__doc__.strip())
+    sys.exit(0)
+if len(sys.argv) < 3:
+    print(USAGE, file=sys.stderr)
+    sys.exit(2)
 for d in sys.argv[1:]:
     if not os.path.isdir(d):
-        sys.exit('ccdiff.py: %s is not a directory' % d)
+        print('ccdiff.py: %s is not a directory' % d, file=sys.stderr)
+        print(USAGE, file=sys.stderr)
+        sys.exit(2)
 ref = sys.argv[1]
 for d in [ref] + sys.argv[2:]:
     for f in sorted(os.listdir(d)):

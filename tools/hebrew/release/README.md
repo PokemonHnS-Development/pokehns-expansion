@@ -11,7 +11,7 @@ to the private builds repository (`ronyeh2/pokehns-hebrew-builds`).
 | `run_release_tests.sh` | Runs the screen tours, clip-report tours, dialogue sweep, self-check, save ladder, map walk, cross-core frames and ROM sweep on the worktree copies of those files. Output goes to `RCDIR/tests`. |
 | `make_testing_md.py` | Writes `TESTING.md` from the candidate folder and `notes.json`. |
 | `notes.json` | The text that belongs to one release: known issues, the visual review, static checks, what was not tested. |
-| `ccdiff.py` | Compares cross-core frame dumps after reducing every pixel to RGB565. |
+| `ccdiff.py` | Compares cross-core frame dumps after reducing every pixel to RGB555, the GBA's own 15-bit colour. |
 | `crosscore_menus.txt` | The input that `crosscore` plays on every core. |
 
 Each script prints its usage with `--help`. The two shell scripts also take `--check`, which
@@ -36,7 +36,6 @@ as unset.
 | `HNS_RUNNER` | tests | `tools/hebrew/emu/hnsrun` (build it as described in `emu/README.md`) |
 | `HNS_UNITS` | tests (sweep labels) | `$HNS_WORK/units` |
 | `HNS_EN_ROM` | tests (ROM sweep) | `../pokehns-en/pokehns.gba`, with its `.elf` next to it |
-| `HNS_CROSSCORE` | tests | `$HNS_WORK/crosscore` |
 | `HNS_CORES` | tests | `$HNS_WORK/cores` |
 | `HNS_MGBA_CORE` | tests | `~/Library/Application Support/RetroArch/cores/mgba_libretro.dylib` |
 | `HNS_EN_MAPWALK` | TESTING.md | `$HNS_WORK/mapwalk_en/mapwalk.json` |
@@ -54,10 +53,10 @@ The scripts have only been run on macOS. The cross-core step loads `.dylib` core
 4. **The sweep's labels.** Run `python3 tools/hebrew/make_chunks.py all`, which writes
    `build/hebrew/units`. This command gives the same 7,209 labels that release 0.2 was swept
    with.
-5. **Cross-core.** Build the frontend with `cc -O2 tools/hebrew/emu/crosscore.c -o build/hebrew/crosscore`.
-   Put `vbam`, `vba_next`, `gpsp`, `mednafen_gba` and `skyemu` `_libretro.dylib` in
-   `build/hebrew/cores`. The mGBA core is RetroArch's own. The source of the cores that release
-   0.2 used was not recorded.
+5. **Cross-core.** `run_release_tests.sh` builds the frontend from `tools/hebrew/emu/crosscore.c`
+   with `cc -O2` into `RCDIR/tests/bin` on every run, so nothing is installed for it. Put `vbam`,
+   `vba_next`, `gpsp`, `mednafen_gba` and `skyemu` `_libretro.dylib` in `build/hebrew/cores`. The
+   mGBA core is RetroArch's own. The source of the cores that release 0.2 used was not recorded.
 6. **The English map walk.** Run it once per upstream version. It tells which held maps also hold
    in English:
    `python3 tools/hebrew/emu/mapwalk.py "$HNS_EN_ROM" "$HNS_SAVES/ladder6_postgame.sav" build/hebrew/mapwalk_en`.
@@ -116,10 +115,7 @@ status 1 when:
 
 - `gbafix.log` does not end in `gbafix: header already valid`.
 - `selfcheck.log` does not end in `all checks passed`.
+- A save-ladder log (`tests/ladder_*.log`) does not end in `exit 0`.
 - The sweep has a CLIP, CRASH, HANG or ABNORMAL label.
 - A map in the map walk ends in a status other than OK or HELD.
 - The maps held only in Hebrew differ from `map_walk.hebrew_only_held`.
-
-## Known gap
-
-`../emu/tours/naming_nickname.txt` expects the mirrored naming-screen cursor (the Hebrew page and a Latin page swap columns c and 7-c); an older copy that kept the column typed `CDE` instead of `ABC`.

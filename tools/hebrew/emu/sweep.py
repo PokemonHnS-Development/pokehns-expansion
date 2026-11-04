@@ -23,6 +23,9 @@ Label selection (default: every live script text label in HNS_UNITS/*/*.json (--
     --translated (the unit file has a Hebrew text) | --hebrew-only (the string in THIS ROM has
     Hebrew letters; run only) | --sample N [--seed S]
     --offset N | --limit N
+With no --label or --labels-file and no unit files, run and list exit 2. selftest takes no
+selection option but --label; with no --label it tries every unit label, and exits 2 when there
+are no unit files.
 
 How one label runs:
   1. Once per run: boot with the save, CONTINUE, walk out if the save stands in a Pokemon
@@ -111,6 +114,14 @@ def load_units(units_dir=UNITS_DIR):
     return out
 
 
+def no_units(a):
+    """No --label or --labels-file and no unit files to take labels from: a setup error, exit 2.
+    (A filter that matches nothing in existing units is not one; that selection is just empty.)"""
+    sys.stderr.write("sweep: no script units in %s (make_chunks.py writes them there; "
+                     "--units or HNS_UNITS points elsewhere)\n" % a.units)
+    raise SystemExit(2)
+
+
 def select_labels(a):
     units = load_units(a.units)
     by = {u["label"]: u for u in units}
@@ -123,10 +134,9 @@ def select_labels(a):
     if explicit:
         sel = [by.get(n, dict(label=n, files=[], batch="", translated=False)) for n in explicit]
     else:
-        sel = units
         if not units:
-            sys.stderr.write("sweep: no script units in %s (make_chunks.py writes them there; "
-                             "--units or HNS_UNITS points elsewhere)\n" % a.units)
+            no_units(a)
+        sel = units
     if a.match:
         sel = [u for u in sel if re.search(a.match, u["label"])]
     if a.file:
@@ -1018,7 +1028,10 @@ def selftest(a):
     outdir = os.path.abspath(a.outdir)
     os.makedirs(outdir, exist_ok=True)
     units = {u["label"]: u for u in load_units(a.units)}
-    cands = [a.label] if a.label else [u["label"] for u in units.values() if u["translated"]]
+    if not a.label and not units:
+        no_units(a)
+    # the loop below keeps only labels whose string in this ROM has Hebrew letters
+    cands = list(a.label) if a.label else [u["label"] for u in units.values()]
     pick = None
     for lab in cands:
         addr = target.label_addr(lab)
@@ -1039,7 +1052,7 @@ def selftest(a):
             pick = (lab, addr, nl[0], raw)
             break
     if not pick:
-        raise SystemExit("selftest: no translated label with a long enough two-row page")
+        raise SystemExit("selftest: no label with Hebrew letters and a long enough two-row page")
     lab, addr, nloff, raw = pick
     patched = os.path.join(outdir, "selftest_patched.gba")
     data = bytearray(target.rom_bytes)
@@ -1123,7 +1136,8 @@ def main(argv=None):
     p.add_argument("outdir")
     p = sub.add_parser("selftest", help="prove the clip detector on a patched copy of a clip ROM")
     add_common(p)
-    add_selection(p)
+    p.add_argument("--label", action="append",
+                   help="a label to patch (repeatable; the first that qualifies is used)")
     p = sub.add_parser("list", help="print the selected labels")
     p.add_argument("--units", default=UNITS_DIR)
     add_selection(p)

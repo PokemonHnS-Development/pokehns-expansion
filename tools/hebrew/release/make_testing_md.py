@@ -17,8 +17,9 @@ Environment:
                   (HNS_WORK: tools/hebrew/paths.py, default build/hebrew).
 
 Exit status 2 when an input is missing, 1 when the inputs contradict a sentence of the report
-(a failing self-check, a clipped or crashed label, a crashed map, a changed header, held maps
-that notes.json does not explain), 0 when OUT.md was written.
+(a tour or clip tour that is not OK, a failing self-check, a clipped or crashed label, a crashed map, a changed header, held maps
+that notes.json does not explain, a save-ladder rung whose validation did not exit 0, a cross-core
+table with a missing core or a cell that is not a pixel count), 0 when OUT.md was written.
 """
 import argparse
 import collections
@@ -35,6 +36,7 @@ import paths  # noqa: E402
 
 CHECK_TESTS = os.path.join(TOOLS, 'check_tests.py')
 EN_MAPWALK = os.environ.get('HNS_EN_MAPWALK', '').strip() or os.path.join(paths.WORK, 'mapwalk_en', 'mapwalk.json')
+CC_CORES = ('vbam', 'vba_next', 'gpsp', 'mednafen_gba', 'skyemu')     # run_release_tests.sh, against mGBA
 NOTE_KEYS = ('release', 'upstream_version', 'branch', 'toolchain', 'static_checks', 'visual_review',
              'crosscore_notes', 'map_walk', 'known_issues_intro', 'known_issues', 'not_tested')
 
@@ -102,12 +104,22 @@ def main():
     chk = subprocess.run([sys.executable, CHECK_TESTS, os.path.join(RC, 'make_check.log')],
                          capture_output=True, text=True).stdout.strip()
     cc = open(os.path.join(T, 'crosscore.txt')).read().strip()
-    ladder = {}
+    # ccdiff.py's table: 'shot' and one column per core in the header, then per shot one right-aligned
+    # 14-character cell per core, a pixel count or 'missing' / 'size WxH'
+    cc_lines = cc.split('\n')
+    cc_cores = cc_lines[0].split()[1:] if cc_lines[0].startswith('shot') else []
+    cc_bad = []
+    for row in cc_lines[1:]:
+        n = len(cc_cores)
+        cells = [row[len(row) - 14 * (n - i):len(row) - 14 * (n - i - 1)].strip() for i in range(n)]
+        cc_bad += ['%s %s: %s' % (core, row[:len(row) - 14 * n].strip(), c) for core, c in zip(cc_cores, cells) if not c.isdigit()]
+    ladder, ladder_exit = {}, {}
     for f in sorted(os.listdir(T)):
         m = re.match(r'ladder_(ladder\d_\w+)\.log', f)
         if m:
             shots = len([x for x in os.listdir(os.path.join(T, 'ladder', m.group(1))) if x.endswith('.png')]) if os.path.isdir(os.path.join(T, 'ladder', m.group(1))) else 0
             ladder[m.group(1)] = shots
+            ladder_exit[m.group(1)] = last_line(os.path.join(T, f))
     vis = os.path.exists(os.path.join(RC, 'visual_findings.json'))
     rom = info['pokehns.gba']; clip = info.get('pokehns-clip.gba', {})
     en_held = {r['map'] for r in json.load(open(EN_MAPWALK)) if r['status'] != 'OK'}
@@ -121,6 +133,15 @@ def main():
         wrong.append('gbafix.log does not end in "gbafix: header already valid"; the report says gbafix changes nothing')
     if last_line(os.path.join(T, 'selfcheck.log')) != 'all checks passed':
         wrong.append('selfcheck.log does not end in "all checks passed"')
+    for what, tt in (('tours', tours), ('tours_clip', ctours)):
+        bad_tours = sorted('%s %s' % (k, v['status']) for k, v in tt.items() if v['status'] != 'OK')
+        if bad_tours:
+            wrong.append('%s/tour_report.json has tours that are not OK (%s); every tour must pass'
+                         % (what, ', '.join(bad_tours)))
+    for n, last in ladder_exit.items():
+        if last != 'exit 0':
+            wrong.append('ladder_%s.log does not end in "exit 0" (run_release_tests.sh appends the validation '
+                         'script\'s exit status); the Save ladder row reports every rung as loaded' % n)
     bad_sweep = {k: v for k, v in sweep['summary'].items() if k not in ('OK', 'SKIP', 'warnings') and v}
     if bad_sweep:
         wrong.append('the sweep has %s; the report says 0 clipped' % bad_sweep)
@@ -130,6 +151,12 @@ def main():
     if sorted(only) != sorted(walk.get('hebrew_only_held') or []):
         wrong.append('maps held in Hebrew but not in English are %s; notes map_walk.hebrew_only_held lists %s: '
                      'look at them and update the notes' % (only, walk.get('hebrew_only_held')))
+    if cc_cores != list(CC_CORES) or len(cc_lines) < 2:
+        wrong.append('crosscore.txt is not a ccdiff.py table of shots for %s; the report describes those cores'
+                     % ', '.join(CC_CORES))
+    elif cc_bad:
+        wrong.append('crosscore.txt has cells that are not pixel counts (%s): a core wrote no frame or one of '
+                     'another size, and the report describes every core' % '; '.join(cc_bad))
     if vis and not notes['visual_review']:
         wrong.append('%s exists but the notes have no visual_review text' % os.path.join(RC, 'visual_findings.json'))
     if wrong:
@@ -156,9 +183,9 @@ def main():
     w('| Clip-report tours | the same tours on the clip-report build, which logs every glyph drawn outside its window | %d OK of %d, %d glyphs outside a window |' % (sum(1 for v in ctours.values() if v['status'] == 'OK'), len(ctours), sum(v.get('clipped', 0) or 0 for v in ctours.values())))
     w('| Dialogue sweep | every reachable dialogue label rendered in the message box on the clip-report build, page by page | %s OK, %s skipped (labels not built into the ROM), 0 clipped |' % (sweep['summary'].get('OK'), sweep['summary'].get('SKIP')))
     w('| Map walk | warp into every Heart & Soul map from a post-game save, fight any battle, read any text | %d maps: %d OK, %d held, 0 crashes |' % (len(mw), mwc.get('OK', 0), mwc.get('HELD', 0)))
-    w('| Save ladder | six saves (new game, badge 1, Ecruteak, League, Kanto, post-game) made with the **English** %s ROM, loaded in this ROM: continue, walk out, Pokédex, party, bag, trainer card, PokéGear | %s |' % (notes['upstream_version'], ', '.join('%s: %d screenshots' % kv for kv in ladder.items())))
+    w('| Save ladder | six saves (new game, badge 1, Ecruteak, League, Kanto, post-game) made with the **English** %s ROM, loaded in this ROM. Rung 1 (a new game in the bedroom): continue, bag, trainer card. Rungs 2-6: continue, walk out of the Pokémon Center, Pokédex, party, bag, trainer card, PokéGear | %s |' % (notes['upstream_version'], ', '.join('%s: %d screenshots' % kv for kv in ladder.items())))
     w('| Harness self-check | struct offsets the harness pokes, checked against the ELF and a live game | all checks passed |')
-    w('| Cross-core | the same input on RetroArch\'s mGBA core and the VBA-M, VBA-Next, gpSP, Mednafen-GBA and SkyEmu libretro cores, frames compared with mGBA after RGB565 reduction | see below |')
+    w('| Cross-core | the same input on RetroArch\'s mGBA core and the VBA-M, VBA-Next, gpSP, Mednafen-GBA and SkyEmu libretro cores, frames compared with mGBA in RGB555, the GBA\'s own 15-bit colour | see below |')
     w('| Static checks | drift (only strings differ from the English engine baseline), layout audit (widths, lines, buffers, byte limits), glossary checks | %s |' % notes['static_checks'])
     if vis:
         w('| Visual review | every tour screenshot compared with the English build, side by side, by reviewers looking for clipping, overlap, mirroring, digit order, glyphs, English left and visible translation errors | %s |' % notes['visual_review'])

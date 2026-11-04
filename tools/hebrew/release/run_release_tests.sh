@@ -10,7 +10,9 @@
 # copies in the release worktree, which must be byte-identical to the files in RCDIR. Steps: screen
 # tours, clip-report tours, dialogue sweep, harness self-check, save ladder, map walk, cross-core
 # frames, ROM sweep. A failing step does not stop the later ones: read the logs. macOS only (the
-# libretro cores are .dylib files).
+# libretro cores are .dylib files). The cross-core step builds its libretro frontend from
+# $HNS_EMU/crosscore.c with cc into RCDIR/tests/bin on every run, so its table always comes from
+# that source.
 #
 # Environment (an empty variable counts as unset; tools/hebrew/paths.py resolves the ones it knows):
 #   HNS_RELEASE_WORKTREE  the worktree build_release.sh built in   default: ../pokehns-release
@@ -21,8 +23,6 @@
 #                                                                  default: $HNS_WORK/units
 #   HNS_EN_ROM            English ROM for the ROM sweep, its .elf next to it
 #                                                                  default: ../pokehns-en/pokehns.gba
-#   HNS_CROSSCORE         the libretro frontend built from emu/crosscore.c
-#                                                                  default: $HNS_WORK/crosscore
 #   HNS_CORES             vbam, vba_next, gpsp, mednafen_gba and skyemu _libretro.dylib
 #                                                                  default: $HNS_WORK/cores
 #   HNS_MGBA_CORE         RetroArch's mGBA core
@@ -57,7 +57,7 @@ SAVES="$(p SAVES)" || SAVES=""
 RUNNER="$(p RUNNER)" || RUNNER=""
 UNITS="$(p UNITS)" || UNITS=""
 EN_ROM="$(p EN_ROM)" || EN_ROM=""
-CROSSCORE="$(abs "${HNS_CROSSCORE:-$WORK/crosscore}")"
+CROSSCORE=$OUT/bin/crosscore
 C="$(abs "${HNS_CORES:-$WORK/cores}")"
 RA="$(abs "${HNS_MGBA_CORE:-$HOME/Library/Application Support/RetroArch/cores/mgba_libretro.dylib}")"
 export DEVKITARM="${DEVKITARM:-/opt/devkitpro/devkitARM}"
@@ -83,7 +83,9 @@ if [ -d "$WT" ]; then
 else
   bad+=("no release worktree $WT (build_release.sh makes it; HNS_RELEASE_WORKTREE points elsewhere)")
 fi
-for f in hns.py sweep.py ladder.py mapwalk.py scripts/ladder_validate.txt; do need_file "$EMU/$f" "the harness, HNS_EMU"; done
+for f in hns.py sweep.py ladder.py mapwalk.py scripts/ladder_validate.txt scripts/ladder_validate_newgame.txt; do
+  need_file "$EMU/$f" "the harness, HNS_EMU"
+done
 if [ -z "$SAVES" ]; then
   bad+=("HNS_SAVES is not set (the save ladder; emu/scripts/make_ladder.sh builds it)")
 else
@@ -99,7 +101,8 @@ if [ -z "$EN_ROM" ]; then
 else
   need_file "$EN_ROM" "the English ROM, HNS_EN_ROM"; need_file "${EN_ROM%.gba}.elf" "the English ELF, next to HNS_EN_ROM"
 fi
-[ -x "$CROSSCORE" ] || bad+=("no crosscore at $CROSSCORE (cc -O2 tools/hebrew/emu/crosscore.c -o \"$CROSSCORE\"; or set HNS_CROSSCORE)")
+need_file "$EMU/crosscore.c" "the cross-core frontend's source, HNS_EMU"
+command -v cc >/dev/null || bad+=("no C compiler cc on PATH (the cross-core step builds emu/crosscore.c)")
 for core in vbam vba_next gpsp mednafen_gba skyemu; do need_file "$C/${core}_libretro.dylib" "a libretro core, HNS_CORES"; done
 need_file "$RA" "RetroArch's mGBA core, HNS_MGBA_CORE"
 need_file "$HERE/crosscore_menus.txt" "the cross-core input script"
@@ -117,7 +120,7 @@ if [ $CHECK = 1 ]; then
   echo "saves      $SAVES"
   echo "units      $UNITS"
   echo "English    $EN_ROM"
-  echo "crosscore  $CROSSCORE, cores in $C, mGBA $RA"
+  echo "crosscore  built from $EMU/crosscore.c into $CROSSCORE, cores in $C, mGBA $RA"
   echo "inputs OK"
   exit 0
 fi
@@ -128,14 +131,28 @@ echo "== clip tours"; python3 hns.py --rom "$CLIP" tour "$CLIP" "$OUT/tours_clip
 echo "== sweep";      python3 sweep.py run "$CLIP" "$OUT/sweep" --save "$SAVES/ladder4_league.sav" --shots clip > "$OUT/sweep.log" 2>&1; grep "totals" "$OUT/sweep.log" | tail -1
 echo "== selfcheck";  python3 hns.py --rom "$ROM" selfcheck --save "$SAVES/ladder4_league.sav" > "$OUT/selfcheck.log" 2>&1; tail -1 "$OUT/selfcheck.log"
 echo "== ladder"
-for s in "$SAVES"/ladder*.sav; do n=$(basename "$s" .sav); python3 ladder.py --rom "$ROM" run scripts/ladder_validate.txt "$OUT/ladder/$n" --save "$s" > "$OUT/ladder_$n.log" 2>&1; echo "  $n exit $? $(ls "$OUT/ladder/$n" 2>/dev/null | grep -c png) shots"; done
+# Rung 1 is a new game saved in the bedroom (no Center, Pokedex or party yet), so it has its own
+# validation script. Each log ends in the script's exit status, which make_testing_md.py checks.
+for s in "$SAVES"/ladder*.sav; do
+  n=$(basename "$s" .sav); v=scripts/ladder_validate.txt
+  rm -rf "$OUT/ladder/$n"                     # hns.py run adds to OUTDIR, so a re-run would mix shots
+  [ "$n" = ladder1_newgame ] && v=scripts/ladder_validate_newgame.txt
+  python3 ladder.py --rom "$ROM" run "$v" "$OUT/ladder/$n" --save "$s" > "$OUT/ladder_$n.log" 2>&1; rc=$?
+  echo "exit $rc" >> "$OUT/ladder_$n.log"
+  echo "  $n exit $rc $(ls "$OUT/ladder/$n" 2>/dev/null | grep -c png) shots"
+done
 echo "== map walk";   python3 mapwalk.py "$ROM" "$SAVES/ladder6_postgame.sav" "$OUT/mapwalk" > "$OUT/mapwalk.log" 2>&1; tail -1 "$OUT/mapwalk.log"
 echo "== cross-core"
-for core in mgba vbam vba_next gpsp mednafen_gba skyemu; do
-  dl="$C/${core}_libretro.dylib"; [ $core = mgba ] && dl="$RA"
-  d="$OUT/crosscore/$core"; rm -rf "$d"; mkdir -p "$d"; cp "$SAVES/ladder4_league.sav" "$d/save.sav"
-  (cd "$d" && "$CROSSCORE" "$dl" "$ROM" "$d" "$d/save.sav" < "$HERE/crosscore_menus.txt" > "$d/log.txt" 2>&1); echo "  $core exit $?"
-done
-(cd "$OUT/crosscore" && python3 "$HERE/ccdiff.py" mgba vbam vba_next gpsp mednafen_gba) > "$OUT/crosscore.txt" 2>&1; cat "$OUT/crosscore.txt"
+rm -f "$OUT/crosscore.txt"; mkdir -p "$OUT/bin"
+if cc -O2 "$EMU/crosscore.c" -o "$CROSSCORE" > "$OUT/crosscore_build.log" 2>&1; then
+  for core in mgba vbam vba_next gpsp mednafen_gba skyemu; do
+    dl="$C/${core}_libretro.dylib"; [ $core = mgba ] && dl="$RA"
+    d="$OUT/crosscore/$core"; rm -rf "$d"; mkdir -p "$d"; cp "$SAVES/ladder4_league.sav" "$d/save.sav"
+    (cd "$d" && "$CROSSCORE" "$dl" "$ROM" "$d" "$d/save.sav" < "$HERE/crosscore_menus.txt" > "$d/log.txt" 2>&1); echo "  $core exit $?"
+  done
+  (cd "$OUT/crosscore" && python3 "$HERE/ccdiff.py" mgba vbam vba_next gpsp mednafen_gba skyemu) > "$OUT/crosscore.txt" 2>&1; cat "$OUT/crosscore.txt"
+else
+  echo "  the frontend did not build, so there is no crosscore.txt: $OUT/crosscore_build.log"
+fi
 echo "== rom sweep";  python3 "$TOOLS/rom_sweep.py" "$ROM" --en "$EN_ROM" > "$OUT/rom_sweep.txt" 2>&1; tail -5 "$OUT/rom_sweep.txt"
 echo "done"
