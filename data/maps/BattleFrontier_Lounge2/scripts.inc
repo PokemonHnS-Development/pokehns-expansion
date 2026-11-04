@@ -258,7 +258,7 @@ BattleFrontier_Lounge2_Text_ArenaTycoonGoldMons::
 	.string "שמעתי שהיא משתמשת בפוקימונים האלה:\p"
 	.string "פוקימון אור ירח מסוג אפל,\n"
 	.string "פוקימון צל מסוג רוח ורעל,\p"
-	.string "ופוקימון פטריה מסוג עשב וקרב.$"
+	.string "ופוקימון פטרייה מסוג עשב וקרב.$"
 
 BattleFrontier_Lounge2_Text_PalaceMavenIsThere::
 	.string "בטוח שלא ידעת את זה!\p"

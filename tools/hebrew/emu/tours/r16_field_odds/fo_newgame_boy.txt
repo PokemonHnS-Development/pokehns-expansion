@@ -1,0 +1,22 @@
+# New game as the boy: the naming screen (empty) and, with OK on the empty name, the confirmation with the preset
+# name (NewGameHnsSpeech_SetDefaultPlayerName, src/oak_speech_hns.c:666-677: 'גולד', src/oak_speech_hns.c:209).
+start empty
+waitcb2 CB2_MainMenu 4000 START
+waittask Task_HandleMainMenuInput 600
+tap A 30                                  # NEW GAME
+waittask Task_NewGameHnsSpeech_ChooseGender 4000 A
+10 -
+snap fo_ngb_01_gender
+30 -
+tap A 30                                  # BOY
+waittask Task_NewGameHnsSpeech_WaitPressBeforeNameChoice 600
+tap A 30
+waitcb2x CB2_NamingScreen 900
+waitnaming
+snap fo_ngb_03_naming_preset
+press START                               # cursor to OK
+waitnaming
+press A
+waittask Task_NewGameHnsSpeech_ProcessNameYesNoMenu 900
+10 -
+snap fo_ngb_04_confirm

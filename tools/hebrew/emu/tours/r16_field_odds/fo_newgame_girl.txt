@@ -1,0 +1,26 @@
+# New game as the girl: the naming screen opens with the preset name (NewGameHnsSpeech_SetDefaultPlayerName,
+# src/oak_speech_hns.c:666-677: 'קריס', src/oak_speech_hns.c:213) in the buffer: the naming screen opens empty, and OK
+# on the empty name keeps the preset, which the confirmation shows ('So you're קריס?').
+start empty
+waitcb2 CB2_MainMenu 4000 START
+waittask Task_HandleMainMenuInput 600
+tap A 30                                  # NEW GAME
+waittask Task_NewGameHnsSpeech_ChooseGender 4000 A
+10 -
+snap fo_ng_01_gender
+tap DOWN 10
+waittask Task_NewGameHnsSpeech_ChooseGender 600
+30 -
+snap fo_ng_02_girl
+tap A 30                                  # GIRL
+waittask Task_NewGameHnsSpeech_WaitPressBeforeNameChoice 600
+tap A 30
+waitcb2x CB2_NamingScreen 900
+waitnaming
+snap fo_ng_03_naming_preset
+press START                               # cursor to OK
+waitnaming
+press A
+waittask Task_NewGameHnsSpeech_ProcessNameYesNoMenu 900
+10 -
+snap fo_ng_04_confirm

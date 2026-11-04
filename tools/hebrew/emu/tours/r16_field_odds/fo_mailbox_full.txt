@@ -1,0 +1,59 @@
+# Kenya's Retro Mail (givenamedmon 1, the only mail an H&S player gets without a link) taken to the PC
+# (party > MAIL > TAKE > YES), the ITEMS pocket filled to capacity (999 of every slot), then PC > MAILBOX >
+# the mail > MOVE TO BAG > YES (the message is lost): 'The bag is full' (gText_BagIsFull, src/player_pc.c:879).
+start saves/ladder6_postgame.sav
+include ../../scripts/continue.txt
+partyfree 5
+ev givenamedmon 1; end
+w32 @gMenuCallback@ 0
+startmenu POKEMON
+waitcb2x CB2_UpdatePartyMenu 600
+waittaskx Task_HandleChooseMonInput 600
+seek 8 @gPartyMenu+9@ 5 DOWN
+waitquiet
+tap A 0
+waittaskx Task_HandleSelectionMenuInput 300
+waitquiet
+tap DOWN 4
+tap DOWN 4
+tap DOWN 4
+waitquiet
+snap fo_mb_01_actions_mail
+tap A 0
+waittaskx Task_HandleSelectionMenuInput 300
+waitquiet
+snap fo_mb_02_mail_menu
+tap DOWN 4
+waitquiet
+tap A 0
+waitquiet
+snap fo_mb_03_send_to_pc
+tap A 0
+waitquiet
+snap fo_mb_04_sent
+waitkey 300
+tap A 0
+waitquiet
+partyexit
+fillpocket ITEMS 999 0 236
+warpto MAP_NEW_BARK_TOWN_PLAYERS_HOUSE_2F_HNS 1 2
+face UP
+talk fo_mb_05_pc 10 A PlayerPCProcessMenuInput
+waittaskx PlayerPCProcessMenuInput 600
+waitquiet
+press DOWN
+tap A 0                                   # MAILBOX
+waitquiet
+snap fo_mb_06_mailbox
+tap A 0
+waitquiet
+snap fo_mb_07_mail_ctx
+tap DOWN 4
+waitquiet
+tap A 0
+waitquiet
+snap fo_mb_08_lose_message
+tap A 0
+waitkey 600
+waitquiet
+snap fo_mb_09_bag_full

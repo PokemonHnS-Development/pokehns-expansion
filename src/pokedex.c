@@ -4310,6 +4310,10 @@ static u8* ReplaceDecimalSeparator(const u8* originalString)
     bool32 replaced = FALSE;
     u32 length = StringLength(originalString), i;
     u8* modifiedString = Alloc(WEIGHT_HEIGHT_STR_MEM);
+#if RTL_STRING_REPORT
+    RtlStringReport(originalString);
+#endif
+#line 4313
 
     for (i = 0; i < length; i++)
     {
@@ -4804,6 +4808,10 @@ static u8 PrintCryScreenSpeciesName(u8 windowId, u16 num, u8 left, u8 top)
     default:
         for (i = 0; GetSpeciesName(num)[i] != EOS && i < POKEMON_NAME_LENGTH; i++)
             str[i] = GetSpeciesName(num)[i];
+#if RTL_STRING_REPORT
+        RtlStringReport(GetSpeciesName(num));
+#endif
+#line 4807
         WrapFontIdToFit(str, str + i, FONT_NORMAL, 60);
         break;
     case 0:

@@ -71,6 +71,7 @@ runs from any working directory. The style guide and glossary are in `translatio
 | `paths.py` | the locations above |
 | `plurals.py` | every stackable item has a Hebrew plural row that `src/data/items.h` prints (DECISIONS.md Q125) |
 | `rom_sweep.py` | finds English strings that are still in a built Hebrew ROM |
+| `strcov.py` | string coverage: maps the logs of the string-report build (`make hns RTL_STRING_REPORT=1`) to the translated C strings and lists the ones no tour has shown |
 | `strchars.py` | counts the non-ASCII characters and `{TOKENS}` used in string literals (`[TREE]`, default `HNS_TREE`) |
 | `textwidth.py` | pixel width model of the RTL renderer (CLI and library) |
 | `translit_stats.py` | statistics on FireRed transliteration choices, for `transliteration_rules.md` |

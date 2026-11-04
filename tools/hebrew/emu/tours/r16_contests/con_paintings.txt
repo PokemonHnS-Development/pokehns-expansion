@@ -1,0 +1,47 @@
+# Contest Hall paintings: the six default winners (gDefaultContestWinners, src/data/contest_opponents.h)
+# that a new game copies into the save (ClearContestWinnerPicsInContestHall, src/contest.c:5664-5669).
+# The ladder saves were made on the English ROM and hold the English winners, so the copy is made again
+# here; then each hall sign's command (showcontestpainting CONTEST_WINNER_HALL_1..6, the lobby signs,
+# LilycoveCity_ContestLobby_hns/scripts.inc:487-528) shows the painting with its two caption lines
+# (contest_painting.c:255-286).
+# Run: scripts/r16_contests/con16.py tour ROM OUT --tours tools/hebrew/emu/tours/r16_contests [--clip]
+# Save: ladder6_postgame.sav (HNS_SAVES=hns-tools/emu/saves_all).
+start saves/ladder6_postgame.sav
+include ../../scripts/continue.txt
+ev callnative ClearContestWinnerPicsInContestHall; end
+evstart showcontestpainting CONTEST_WINNER_HALL_1; end
+waitcb2 CB2_HoldContestPainting 900
+60 -
+snap cp_hall_1
+tap B 30
+waitctl 900 B
+evstart showcontestpainting CONTEST_WINNER_HALL_2; end
+waitcb2 CB2_HoldContestPainting 900
+60 -
+snap cp_hall_2
+tap B 30
+waitctl 900 B
+evstart showcontestpainting CONTEST_WINNER_HALL_3; end
+waitcb2 CB2_HoldContestPainting 900
+60 -
+snap cp_hall_3
+tap B 30
+waitctl 900 B
+evstart showcontestpainting CONTEST_WINNER_HALL_4; end
+waitcb2 CB2_HoldContestPainting 900
+60 -
+snap cp_hall_4
+tap B 30
+waitctl 900 B
+evstart showcontestpainting CONTEST_WINNER_HALL_5; end
+waitcb2 CB2_HoldContestPainting 900
+60 -
+snap cp_hall_5
+tap B 30
+waitctl 900 B
+evstart showcontestpainting CONTEST_WINNER_HALL_6; end
+waitcb2 CB2_HoldContestPainting 900
+60 -
+snap cp_hall_6
+tap B 30
+waitctl 900 B

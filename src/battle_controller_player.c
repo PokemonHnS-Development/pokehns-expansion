@@ -1766,8 +1766,20 @@ static void MoveSelectionDisplayMoveDescription(enum BattlerId battler)
 
     u8 pwr_num[3], acc_num[3];
     // Sized by their initializers: the translated labels are longer than the English ones.
+#if RTL_STRING_REPORT
+    static const
+#endif
+#line 1769
     u8 cat_desc[] = _("סיווג: ");
+#if RTL_STRING_REPORT
+    static const
+#endif
+#line 1770
     u8 pwr_desc[] = _("עוצמה: ");
+#if RTL_STRING_REPORT
+    static const
+#endif
+#line 1771
     u8 acc_desc[] = _("דיוק: ");
     u8 cat_start[] = _("{CLEAR_TO 0x03}");
 #if TEXT_RTL

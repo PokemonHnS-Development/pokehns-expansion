@@ -576,6 +576,10 @@ static const u8 *FindWordEnd(const u8 *text)
 static u32 WrapDexTextIntoLines(struct Pokenav_Radio *radio, const u8 *text, u32 *n, u32 *buf)
 {
     u32 linesAdded = 0;
+#if RTL_STRING_REPORT
+    RtlStringReport(text);
+#endif
+#line 579
 
     text = SkipRadioBreakChars(text);
 

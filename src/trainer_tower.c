@@ -455,6 +455,11 @@ static void SetUpTrainerTowerDataStruct(void)
         {
             *(sTrainerTowerState->data.floors + i) = *(floors_p[i]); // manual pointer arithmetic needed to match
         }
+#if RTL_STRING_REPORT
+        for (i = 0; i < MAX_TRAINER_TOWER_FLOORS; i++)
+            RtlStringMapRam(sTrainerTowerState->data.floors + i, floors_p[i], sizeof(*floors_p[i]));
+#endif
+#line 458
         sTrainerTowerState->data.checksum = CalcByteArraySum((void *)sTrainerTowerState->data.floors, sizeof(sTrainerTowerState->data.floors));
         ValidateOrResetCurTrainerTowerRecord();
     // }

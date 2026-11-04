@@ -1,0 +1,11 @@
+# Pokegear radio during the Team Rocket takeover: every Johto station plays the ten Rocket lines
+# (RADIO_STATION_ROCKET while FLAG_HIDE_GOLDENROD_ROCKETS is clear, src/pokenav_radio.c:1066-1077;
+# lines sRadioText_Rocket1..10, :905-916), one line per 90 frames, in the 28x4 radio window.
+# menuA_base is before the Radio Tower, so the flag is clear and the station is the real one.
+# Run: scripts/r16_pokegear/gear16.py tour ROM OUT --tours tools/hebrew/emu/tours/r16_pokegear [--clip]
+# Save: menuA_base.sav (HNS_SAVES=hns-tools/emu/saves_all).
+start saves/menuA_base.sav
+include ../../scripts/continue.txt
+gearradio
+radiotune 13
+radiocycle rr_rocket 12

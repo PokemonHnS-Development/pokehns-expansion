@@ -452,6 +452,12 @@ void GetTrainerHillTrainerName(u8 *dst, u16 trainerId)
 
     for (i = 0; i < TRAINER_NAME_LENGTH + 1; i++)
         dst[i] = sFloorTrainers->name[id][i];
+#if RTL_STRING_REPORT
+#if FREE_TRAINER_HILL == FALSE && IS_HNS
+    RtlStringReport(sFloorData[gSaveBlock1Ptr->trainerHill.mode][gMapHeader.mapLayoutId - LAYOUT_TRAINER_HILL_1F_HNS].trainers[id].name);
+#endif
+#endif
+#line 455
 }
 
 u8 GetTrainerHillTrainerFrontSpriteId(u16 trainerId)
@@ -505,6 +511,10 @@ static void SetUpDataStruct(void)
 
     CpuCopy32(sChallengeData[gSaveBlock1Ptr->trainerHill.mode], &sHillData->challenge, sizeof(sHillData->challenge));
     CpuCopy32(sFloorData[gSaveBlock1Ptr->trainerHill.mode], &sHillData->floors, sizeof(sHillData->floors));
+#if RTL_STRING_REPORT
+    RtlStringMapRam(&sHillData->floors, sFloorData[gSaveBlock1Ptr->trainerHill.mode], sizeof(sHillData->floors));
+#endif
+#line 508
 #endif // FREE_TRAINER_HILL
 }
 

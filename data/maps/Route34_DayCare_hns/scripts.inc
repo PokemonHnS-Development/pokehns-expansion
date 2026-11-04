@@ -559,7 +559,7 @@ Route34_DayCare_Text_ComeAgain:
 
 Route34_DayCare_Text_GoodToSeeYou:
 	.string "אה, זה אתה! טוב לראות אותך.\n"
-	.string "הפוקימון שלך בטח מרגיש מצוין!$"
+	.string "אצלנו לפוקימונים תמיד טוב!$"
 
 Route34_DayCare_Text_YourMonHasGrownXLevels:
 	.string "{STR_VAR_1} שלך עלה\n"

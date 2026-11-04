@@ -1,0 +1,19 @@
+# Real-window check of the category stand-in (scripts/r16_items/dexcat.py): two first catches with a
+# MASTER BALL show the caught-Pokemon Pokedex page (Cmd_displaydexinfo, src/battle_script_commands.c
+# :11274-11292 > PrintMonInfo, src/pokedex_plus_hgss.c:4713-4770) of VIKAVOLT (the widest category
+# line of the set, 'פוקימון חיפושית צבת') and of the ORICORIO POM-POM form (formSpecies).
+# Driver: scripts/r5_legends/r5leg.py (bcatch: the throw, the dex page, the nickname prompt NO).
+# Run: scripts/r5_legends/r5leg.py tour ROM OUT --tours tools/hebrew/emu/tours/r16_items --only '^ct_catch_dexpage$'
+# Save: ladder6_postgame.sav (HNS_SAVES=hns-tools/emu/saves_all; neither species caught).
+start saves/ladder6_postgame.sav
+include ../../scripts/continue.txt
+pinrng
+ev additem ITEM_MASTER_BALL, 10; end
+evstart setwildbattle SPECIES_VIKAVOLT, 30; dowildbattle; end
+waitbattle
+bwalk ck_vikavolt_intro input:HandleInputChooseAction
+bcatch ck_vikavolt
+evstart setwildbattle SPECIES_ORICORIO_POM_POM, 30; dowildbattle; end
+waitbattle
+bwalk ck_oricorio_pompom_intro input:HandleInputChooseAction
+bcatch ck_oricorio_pompom

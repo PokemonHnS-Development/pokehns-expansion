@@ -141,6 +141,15 @@ void SetContestWinnerForPainting(int contestWinnerId)
     u8 *saveIdx = &gCurContestWinnerSaveIdx;
     u8 *isForArtist = &gCurContestWinnerIsForArtist;
     gCurContestWinner = gSaveBlock1Ptr->contestWinners[contestWinnerId - 1];
+#if RTL_STRING_REPORT
+    {
+        // the Contest Hall paintings show this copy of the save's copy of the default winners
+        extern const struct ContestWinner gDefaultContestWinners[];
+        if ((u32)(contestWinnerId - 1) < MUSEUM_CONTEST_WINNERS_START)
+            RtlStringMapRam(&gCurContestWinner, &gDefaultContestWinners[contestWinnerId - 1], sizeof(gCurContestWinner));
+    }
+#endif
+#line 144
     *saveIdx = contestWinnerId - 1;
     *isForArtist = FALSE;
 }

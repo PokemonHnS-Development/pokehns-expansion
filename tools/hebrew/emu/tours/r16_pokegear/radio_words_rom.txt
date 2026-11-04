@@ -1,0 +1,27 @@
+# Oak's POKEMON Talk: the 16 adverbs and 16 adjectives (src/data/text/radio_strings.h), each on a
+# radio line of its own that points at the ROM string (radiolines), so a string-report build logs
+# every word at its ROM address; GenerateOPTSegment composes the pair in a RAM buffer
+# (src/pokenav_radio.c:505-515), which the hook cannot map back. The composed pairs of the round-2
+# tour (_advadj.txt, radiocat) follow, for the width of the widest pair.
+# Run: scripts/r2_pokegear_radio/radio.py tour ROM OUT --tours tools/hebrew/emu/tours/r16_pokegear [--clip]
+# Save: ladder4_league.sav (HNS_SAVES).
+start saves/ladder4_league.sav
+include ../../scripts/r2_pokegear_radio/_johto.txt
+radiotune 13
+radiolines 0 sRadioText_OPT_Adverb_SweetAdorably sRadioText_OPT_Adverb_WigglySlickly sRadioText_OPT_Adverb_AptlyNamed sRadioText_OPT_Adverb_UndeniablyKindOf sRadioText_OPT_Adverb_Unbearably sRadioText_OPT_Adverb_WowImpressively sRadioText_OPT_Adverb_AlmostPoisonously sRadioText_OPT_Adverb_Sensually
+radionum 8
+radiojump 255
+radiocycle rf_word0 8
+radiolines 0 sRadioText_OPT_Adverb_Mischievously sRadioText_OPT_Adverb_Topically sRadioText_OPT_Adverb_Addictively sRadioText_OPT_Adverb_LooksInWater sRadioText_OPT_Adverb_EvolutionMustBe sRadioText_OPT_Adverb_Provocatively sRadioText_OPT_Adverb_FlippedOut sRadioText_OPT_Adverb_HeartMeltingly
+radionum 8
+radiojump 255
+radiocycle rf_word1 8
+radiolines 0 sRadioText_OPT_Adj_Cute sRadioText_OPT_Adj_Weird sRadioText_OPT_Adj_Pleasant sRadioText_OPT_Adj_BoldSortOf sRadioText_OPT_Adj_Frightening sRadioText_OPT_Adj_SuaveDebonair sRadioText_OPT_Adj_Powerful sRadioText_OPT_Adj_Exciting
+radionum 8
+radiojump 255
+radiocycle rf_word2 8
+radiolines 0 sRadioText_OPT_Adj_Groovy sRadioText_OPT_Adj_Inspiring sRadioText_OPT_Adj_Friendly sRadioText_OPT_Adj_HotHotHot sRadioText_OPT_Adj_Stimulating sRadioText_OPT_Adj_Guarded sRadioText_OPT_Adj_Lovely sRadioText_OPT_Adj_Speedy
+radionum 8
+radiojump 255
+radiocycle rf_word3 8
+include ../../scripts/r2_pokegear_radio/_advadj.txt

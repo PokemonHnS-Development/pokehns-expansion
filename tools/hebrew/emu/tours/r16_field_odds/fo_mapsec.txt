@@ -1,0 +1,151 @@
+# Map names in the start-menu SAVE info box (the location row): SS Aqua, Akala Cave, Akala Forest, Poni
+# Cave, Rocket Hideout B1F (MAPSEC_ROCKET_HIDEOUT_HNS), Cliff Edge Cave, on the post-game save
+# (FLAG_VISITED_KANTO set: sRegionMapEntries_Johto, src/region_map.c:280-291) and again with the flag
+# cleared (the JSON gRegionMapEntries). Each map is entered at its warp 0 (warptoloose).
+start saves/ladder6_postgame.sav
+include ../../scripts/continue.txt
+warptoloose MAP_SSAQUA_1F_HNS 29 2
+waitnotask Task_MapNamePopUpWindow 600
+waitctl 600 B
+20 -
+w32 @gMenuCallback@ 0
+startmenu SAVE
+waitptr sSaveDialogCallback SaveConfirmInputCallback 900
+waitquiet
+snap fo_ms_kanto_ssaqua
+tap B 4
+waitctl 900 B
+w32 @sSaveDialogCallback@ 0
+warptoloose MAP_AKALA_CAVE_HNS 22 36
+waitnotask Task_MapNamePopUpWindow 600
+waitctl 600 B
+20 -
+w32 @gMenuCallback@ 0
+startmenu SAVE
+waitptr sSaveDialogCallback SaveConfirmInputCallback 900
+waitquiet
+snap fo_ms_kanto_akala_cave
+tap B 4
+waitctl 900 B
+w32 @sSaveDialogCallback@ 0
+warptoloose MAP_AKALA_FOREST_HNS 2 22
+waitnotask Task_MapNamePopUpWindow 600
+waitctl 600 B
+20 -
+w32 @gMenuCallback@ 0
+startmenu SAVE
+waitptr sSaveDialogCallback SaveConfirmInputCallback 900
+waitquiet
+snap fo_ms_kanto_akala_forest
+tap B 4
+waitctl 900 B
+w32 @sSaveDialogCallback@ 0
+warptoloose MAP_PONI_CAVE_HNS 15 22
+waitnotask Task_MapNamePopUpWindow 600
+waitctl 600 B
+20 -
+w32 @gMenuCallback@ 0
+startmenu SAVE
+waitptr sSaveDialogCallback SaveConfirmInputCallback 900
+waitquiet
+snap fo_ms_kanto_poni_cave
+tap B 4
+waitctl 900 B
+w32 @sSaveDialogCallback@ 0
+warptoloose MAP_ROCKET_HIDEOUT_B1F_HNS 48 2
+waitnotask Task_MapNamePopUpWindow 600
+waitctl 600 B
+20 -
+w32 @gMenuCallback@ 0
+startmenu SAVE
+waitptr sSaveDialogCallback SaveConfirmInputCallback 900
+waitquiet
+snap fo_ms_kanto_rocket_b1f
+tap B 4
+waitctl 900 B
+w32 @sSaveDialogCallback@ 0
+warptoloose MAP_CLIFF_EDGE_CAVE_HNS 10 11
+waitnotask Task_MapNamePopUpWindow 600
+waitctl 600 B
+20 -
+w32 @gMenuCallback@ 0
+startmenu SAVE
+waitptr sSaveDialogCallback SaveConfirmInputCallback 900
+waitquiet
+snap fo_ms_kanto_cliff_cave
+tap B 4
+waitctl 900 B
+w32 @sSaveDialogCallback@ 0
+clearflag FLAG_VISITED_KANTO
+warptoloose MAP_SSAQUA_1F_HNS 29 2
+waitnotask Task_MapNamePopUpWindow 600
+waitctl 600 B
+20 -
+w32 @gMenuCallback@ 0
+startmenu SAVE
+waitptr sSaveDialogCallback SaveConfirmInputCallback 900
+waitquiet
+snap fo_ms_json_ssaqua
+tap B 4
+waitctl 900 B
+w32 @sSaveDialogCallback@ 0
+warptoloose MAP_AKALA_CAVE_HNS 22 36
+waitnotask Task_MapNamePopUpWindow 600
+waitctl 600 B
+20 -
+w32 @gMenuCallback@ 0
+startmenu SAVE
+waitptr sSaveDialogCallback SaveConfirmInputCallback 900
+waitquiet
+snap fo_ms_json_akala_cave
+tap B 4
+waitctl 900 B
+w32 @sSaveDialogCallback@ 0
+warptoloose MAP_AKALA_FOREST_HNS 2 22
+waitnotask Task_MapNamePopUpWindow 600
+waitctl 600 B
+20 -
+w32 @gMenuCallback@ 0
+startmenu SAVE
+waitptr sSaveDialogCallback SaveConfirmInputCallback 900
+waitquiet
+snap fo_ms_json_akala_forest
+tap B 4
+waitctl 900 B
+w32 @sSaveDialogCallback@ 0
+warptoloose MAP_PONI_CAVE_HNS 15 22
+waitnotask Task_MapNamePopUpWindow 600
+waitctl 600 B
+20 -
+w32 @gMenuCallback@ 0
+startmenu SAVE
+waitptr sSaveDialogCallback SaveConfirmInputCallback 900
+waitquiet
+snap fo_ms_json_poni_cave
+tap B 4
+waitctl 900 B
+w32 @sSaveDialogCallback@ 0
+warptoloose MAP_ROCKET_HIDEOUT_B1F_HNS 48 2
+waitnotask Task_MapNamePopUpWindow 600
+waitctl 600 B
+20 -
+w32 @gMenuCallback@ 0
+startmenu SAVE
+waitptr sSaveDialogCallback SaveConfirmInputCallback 900
+waitquiet
+snap fo_ms_json_rocket_b1f
+tap B 4
+waitctl 900 B
+w32 @sSaveDialogCallback@ 0
+warptoloose MAP_CLIFF_EDGE_CAVE_HNS 10 11
+waitnotask Task_MapNamePopUpWindow 600
+waitctl 600 B
+20 -
+w32 @gMenuCallback@ 0
+startmenu SAVE
+waitptr sSaveDialogCallback SaveConfirmInputCallback 900
+waitquiet
+snap fo_ms_json_cliff_cave
+tap B 4
+waitctl 900 B
+w32 @sSaveDialogCallback@ 0

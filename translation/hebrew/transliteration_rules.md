@@ -175,7 +175,8 @@ for example `python3 tools/hebrew/translit_stats.py 'EON$'`.
 - Berries: `גרגר צ'רי` (CHERI BERRY) and `פירות אורן` (ORAN BERRY); BERRY POUCH is `נרתיק פירות`.
 - TM CASE: the item is `תיק מ”מ` and the menu is `קופסת מ”מ`.
 - COOLTRAINER: `מאמן על` and `מאמן-על`. The glossary takes the constant-matched form, `מאמן על`.
-- Pokédex categories: `מקדחה`/`מקדח` (Drill) and `פטריה`/`פטרייה` (Mushroom).
+- Pokédex categories: `מקדחה`/`מקדח` (Drill). The Mushroom split (`פטריה`/`פטרייה`) is resolved: the
+  category is `פטרייה`, as every other use of the word in the game.
 - SAFARI ZONE: the map uses `אזור הספארי` and dialogue uses `איזור ספארי`. EXP: `נסיון` and `ניסיון`.
 - Initial W, medial V and ow /oʊ/ (§2, §3) vary between the Gen 1 and Gen 2–3 batches, which had
   different authors.

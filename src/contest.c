@@ -2971,6 +2971,10 @@ void SetContestants(enum ContestCategories contestType, u8 rank)
         s32 j;
 
         gContestMons[i] = gContestOpponents[opponents[rnd]];
+#if RTL_STRING_REPORT
+        RtlStringMapRam(&gContestMons[i], &gContestOpponents[opponents[rnd]], sizeof(gContestMons[i]));
+#endif
+#line 2974
         for (j = rnd; opponents[j] != CONTESTANT_NONE; j++)
             opponents[j] = opponents[j + 1];
         opponentsCount--;
@@ -3019,6 +3023,10 @@ void SetLinkAIContestants(enum ContestCategories contestType, u8 rank, bool32 is
         u16 rnd = GetContestRand() % opponentsCount;
 
         gContestMons[gNumLinkContestPlayers + i] = gContestOpponents[opponents[rnd]];
+#if RTL_STRING_REPORT
+        RtlStringMapRam(&gContestMons[gNumLinkContestPlayers + i], &gContestOpponents[opponents[rnd]], sizeof(gContestMons[0]));
+#endif
+#line 3022
         StripPlayerNameForLinkContest(gContestMons[gNumLinkContestPlayers + i].trainerName);
         StripMonNameForLinkContest(gContestMons[gNumLinkContestPlayers + i].nickname, GAME_LANGUAGE);
         for (j = rnd; opponents[j] != CONTESTANT_NONE; j++)
@@ -5667,6 +5675,10 @@ void ClearContestWinnerPicsInContestHall(void)
 
     for (i = 0; i < MUSEUM_CONTEST_WINNERS_START; i++)
         gSaveBlock1Ptr->contestWinners[i] = gDefaultContestWinners[i];
+#if RTL_STRING_REPORT
+    RtlStringMapRam(gSaveBlock1Ptr->contestWinners, gDefaultContestWinners, sizeof(gDefaultContestWinners));
+#endif
+#line 5670
 }
 
 static void SetContestLiveUpdateFlags(u8 contestant)

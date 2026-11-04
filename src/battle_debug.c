@@ -1462,6 +1462,10 @@ static void PadString(const u8 *src, u8 *dst)
 {
     u32 i;
 
+#if RTL_STRING_REPORT
+    RtlStringReport(src);
+#endif
+#line 1465
     for (i = 0; i < 19 && src[i] != EOS; i++)
         dst[i] = src[i];
 

@@ -2076,6 +2076,10 @@ static enum Item BerryTypeToItemId(u16 berry)
 
 void GetBerryNameByBerryType(u8 berry, u8 *string)
 {
+#if RTL_STRING_REPORT
+    RtlStringReport(GetBerryInfo(berry)->name);
+#endif
+#line 2079
     memcpy(string, GetBerryInfo(berry)->name, BERRY_NAME_LENGTH);
     string[BERRY_NAME_LENGTH] = EOS;
 }

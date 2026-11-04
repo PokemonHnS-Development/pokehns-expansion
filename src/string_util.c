@@ -11,6 +11,110 @@ EWRAM_DATA u8 gStringVar3[0x100] = {0};
 EWRAM_DATA u8 gStringVar4[0x3E8] = {0};
 EWRAM_DATA static u8 sUnknownStringVar[16] = {0};
 
+#if RTL_STRING_REPORT
+// Read back by the harness (tools/hebrew/strcov.py): every ROM address that reached a string copy,
+// an expansion or a text printer, once each, in an open-addressed set (0 = empty slot). Inserts are
+// refused at 3/4 full and counted in gRtlStringLost. The harness empties the set after each read by
+// setting gRtlStringCount to 0 and gRtlStringClear to 1; the next insert then clears the slots.
+#define RTL_STRING_SLOTS 2048
+EWRAM_DATA u32 gRtlStringSet[RTL_STRING_SLOTS] = {0};
+EWRAM_DATA u32 gRtlStringCount = 0;
+EWRAM_DATA u32 gRtlStringLost = 0;
+EWRAM_DATA u32 gRtlStringClear = 0;
+EWRAM_DATA u32 gRtlStringTotal = 0;
+
+// RAM copies of ROM data that hold strings (facility floors in the heap, contest opponents and hall
+// winners): a string read from such a copy is recorded at its ROM address, if the copy still holds
+// the ROM bytes (the block may have been freed and reused, or the save's copy changed, since).
+#define RTL_STRING_RAM_MAPS 16
+struct RtlStringRamMap
+{
+    const u8 *ram;
+    const u8 *rom;
+    u32 size;
+};
+EWRAM_DATA static struct RtlStringRamMap sRtlStringRamMaps[RTL_STRING_RAM_MAPS] = {0};
+EWRAM_DATA static u32 sRtlStringRamMapNext = 0;
+
+void RtlStringMapRam(const void *ram, const void *rom, u32 size)
+{
+    u32 i;
+
+    for (i = 0; i < RTL_STRING_RAM_MAPS; i++)
+    {
+        if (sRtlStringRamMaps[i].ram == ram)
+            break;
+    }
+    if (i == RTL_STRING_RAM_MAPS)
+    {
+        i = sRtlStringRamMapNext;
+        sRtlStringRamMapNext = (sRtlStringRamMapNext + 1) % RTL_STRING_RAM_MAPS;
+    }
+    sRtlStringRamMaps[i].ram = ram;
+    sRtlStringRamMaps[i].rom = rom;
+    sRtlStringRamMaps[i].size = size;
+}
+
+static u32 RtlStringRomAddress(u32 addr)
+{
+    u32 i, n;
+
+    for (i = 0; i < RTL_STRING_RAM_MAPS; i++)
+    {
+        const struct RtlStringRamMap *map = &sRtlStringRamMaps[i];
+        if (map->size && addr >= (u32)map->ram && addr < (u32)map->ram + map->size)
+        {
+            const u8 *ram = (const u8 *)addr;
+            const u8 *rom = map->rom + (addr - (u32)map->ram);
+            for (n = 0; n < 0x100; n++)
+            {
+                if (ram[n] != rom[n])
+                    return 0;
+                if (ram[n] == EOS)
+                    break;
+            }
+            return (u32)rom;
+        }
+    }
+    return 0;
+}
+
+void RtlStringReport(const u8 *str)
+{
+    u32 addr = (u32)str;
+    u32 i, slot;
+
+    if (addr >= 0x02000000 && addr < 0x04000000)
+        addr = RtlStringRomAddress(addr);
+    if (addr < 0x08000000 || addr >= 0x0A000000)
+        return;
+    if (gRtlStringClear)
+    {
+        for (i = 0; i < RTL_STRING_SLOTS; i++)
+            gRtlStringSet[i] = 0;
+        gRtlStringCount = 0;
+        gRtlStringClear = 0;
+    }
+    slot = (addr * 2654435761u) >> 21;
+    for (i = 0; i < RTL_STRING_SLOTS; i++)
+    {
+        if (gRtlStringSet[slot] == addr)
+            return;
+        if (gRtlStringSet[slot] == 0)
+            break;
+        slot = (slot + 1) & (RTL_STRING_SLOTS - 1);
+    }
+    if (gRtlStringCount >= RTL_STRING_SLOTS / 4 * 3)
+    {
+        gRtlStringLost++;
+        return;
+    }
+    gRtlStringSet[slot] = addr;
+    gRtlStringCount++;
+    gRtlStringTotal++;
+}
+#endif
+
 static const u8 sDigits[] = __("0123456789ABCDEF");
 
 static const s32 sPowersOfTen[] =
@@ -29,6 +133,9 @@ static const s32 sPowersOfTen[] =
 
 u8 *StringCopy_Nickname(u8 *dest, const u8 *src)
 {
+#if RTL_STRING_REPORT
+    RtlStringReport(src);
+#endif
     u8 i;
     u32 limit = POKEMON_NAME_LENGTH;
 
@@ -59,6 +166,9 @@ u8 *StringGet_Nickname(u8 *str)
 
 u8 *StringCopy_PlayerName(u8 *dest, const u8 *src)
 {
+#if RTL_STRING_REPORT
+    RtlStringReport(src);
+#endif
     s32 i;
     s32 limit = PLAYER_NAME_LENGTH;
 
@@ -76,6 +186,9 @@ u8 *StringCopy_PlayerName(u8 *dest, const u8 *src)
 
 u8 *StringCopy(u8 *dest, const u8 *src)
 {
+#if RTL_STRING_REPORT
+    RtlStringReport(src);
+#endif
     while (*src != EOS)
     {
         *dest = *src;
@@ -97,6 +210,9 @@ u8 *StringAppend(u8 *dest, const u8 *src)
 
 u8 *StringCopyN(u8 *dest, const u8 *src, u8 n)
 {
+#if RTL_STRING_REPORT
+    RtlStringReport(src);
+#endif
     u32 i;
 
     for (i = 0; i < n; i++)
@@ -398,6 +514,9 @@ u8 *ConvertIntToHexStringN(u8 *dest, s32 value, enum StringConvertMode mode, u8 
 
 u8 *StringExpandPlaceholders(u8 *dest, const u8 *src)
 {
+#if RTL_STRING_REPORT
+    RtlStringReport(src);
+#endif
     for (;;)
     {
         u8 c = *src++;
@@ -449,6 +568,9 @@ u8 *StringExpandPlaceholders(u8 *dest, const u8 *src)
 
 u8 *StringBraille(u8 *dest, const u8 *src)
 {
+#if RTL_STRING_REPORT
+    RtlStringReport(src);
+#endif
     const u8 setBrailleFont[] = {
         EXT_CTRL_CODE_BEGIN,
         EXT_CTRL_CODE_FONT,
@@ -621,6 +743,9 @@ u8 *StringFill(u8 *dest, u8 c, u16 n)
 
 u8 *StringCopyPadded(u8 *dest, const u8 *src, u8 c, u16 n)
 {
+#if RTL_STRING_REPORT
+    RtlStringReport(src);
+#endif
     while (*src != EOS)
     {
         *dest++ = *src++;
@@ -648,6 +773,9 @@ u8 *StringFillWithTerminator(u8 *dest, u16 n)
 
 u8 *StringCopyN_Multibyte(u8 *dest, u8 *src, u32 n)
 {
+#if RTL_STRING_REPORT
+    RtlStringReport(src);
+#endif
     u32 i;
 
     for (i = n - 1; i != (u32)-1; i--)
@@ -879,6 +1007,9 @@ void StripExtCtrlCodes(u8 *str)
 
 u8 *StringCopyUppercase(u8 *dest, const u8 *src)
 {
+#if RTL_STRING_REPORT
+    RtlStringReport(src);
+#endif
     while (*src != EOS)
     {
         if (*src >= CHAR_a && *src <= CHAR_z)
@@ -903,3 +1034,57 @@ bool32 DoesStringProperlyTerminate(const u8 *str, u32 last)
 
     return FALSE;
 }
+
+#if RTL_STRING_REPORT
+// Linked with --wrap (Makefile): every call from another file to these printers in text.c comes
+// here first.
+bool32 __real_AddTextPrinter(struct TextPrinterTemplate *printerTemplate, u8 speed, void (*callback)(struct TextPrinterTemplate *, u16));
+u16 __real_AddTextPrinterParameterized(u8 windowId, u8 fontId, const u8 *str, u8 x, u8 y, u8 speed, void (*callback)(struct TextPrinterTemplate *, u16));
+u16 __real_AddSpriteTextPrinterParametrerized(u8 spriteId, u8 fontId, const u8 *str, u8 x, u8 y, u8 speed, void (*callback)(struct TextPrinterTemplate *, u16));
+void __real_AddSpriteTextPrinterParameterized3(u8 spriteId, u8 fontId, u8 left, u8 top, const u8 *color, s8 speed, const u8 *str);
+void __real_AddSpriteTextPrinterParameterized4(u8 spriteId, u8 fontId, u8 left, u8 top, u8 letterSpacing, u8 lineSpacing, const u8 *color, s8 speed, const u8 *str);
+void __real_AddSpriteTextPrinterParameterized6(u8 spriteId, u8 fontId, u8 left, u8 top, u8 letterSpacing, u8 lineSpacing, const union TextColor color, s8 speed, const u8 *str);
+u8 __real_RenderTextHandleBold(u8 *pixels, u8 fontId, u8 *str);
+
+bool32 __wrap_AddTextPrinter(struct TextPrinterTemplate *printerTemplate, u8 speed, void (*callback)(struct TextPrinterTemplate *, u16))
+{
+    RtlStringReport(printerTemplate->currentChar);
+    return __real_AddTextPrinter(printerTemplate, speed, callback);
+}
+
+u16 __wrap_AddTextPrinterParameterized(u8 windowId, u8 fontId, const u8 *str, u8 x, u8 y, u8 speed, void (*callback)(struct TextPrinterTemplate *, u16))
+{
+    RtlStringReport(str);
+    return __real_AddTextPrinterParameterized(windowId, fontId, str, x, y, speed, callback);
+}
+
+u16 __wrap_AddSpriteTextPrinterParametrerized(u8 spriteId, u8 fontId, const u8 *str, u8 x, u8 y, u8 speed, void (*callback)(struct TextPrinterTemplate *, u16))
+{
+    RtlStringReport(str);
+    return __real_AddSpriteTextPrinterParametrerized(spriteId, fontId, str, x, y, speed, callback);
+}
+
+void __wrap_AddSpriteTextPrinterParameterized3(u8 spriteId, u8 fontId, u8 left, u8 top, const u8 *color, s8 speed, const u8 *str)
+{
+    RtlStringReport(str);
+    __real_AddSpriteTextPrinterParameterized3(spriteId, fontId, left, top, color, speed, str);
+}
+
+void __wrap_AddSpriteTextPrinterParameterized4(u8 spriteId, u8 fontId, u8 left, u8 top, u8 letterSpacing, u8 lineSpacing, const u8 *color, s8 speed, const u8 *str)
+{
+    RtlStringReport(str);
+    __real_AddSpriteTextPrinterParameterized4(spriteId, fontId, left, top, letterSpacing, lineSpacing, color, speed, str);
+}
+
+void __wrap_AddSpriteTextPrinterParameterized6(u8 spriteId, u8 fontId, u8 left, u8 top, u8 letterSpacing, u8 lineSpacing, const union TextColor color, s8 speed, const u8 *str)
+{
+    RtlStringReport(str);
+    __real_AddSpriteTextPrinterParameterized6(spriteId, fontId, left, top, letterSpacing, lineSpacing, color, speed, str);
+}
+
+u8 __wrap_RenderTextHandleBold(u8 *pixels, u8 fontId, u8 *str)
+{
+    RtlStringReport(str);
+    return __real_RenderTextHandleBold(pixels, fontId, str);
+}
+#endif

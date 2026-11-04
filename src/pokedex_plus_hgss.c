@@ -4829,6 +4829,10 @@ static u8 PrintCryScreenSpeciesName(u8 windowId, u16 num, u8 left, u8 top)
     default:
         for (i = 0; GetSpeciesName(num)[i] != EOS && i < POKEMON_NAME_LENGTH; i++)
             str[i] = GetSpeciesName(num)[i];
+#if RTL_STRING_REPORT
+        RtlStringReport(GetSpeciesName(num));
+#endif
+#line 4832
         break;
     case 0:
         for (i = 0; i < 5; i++)
