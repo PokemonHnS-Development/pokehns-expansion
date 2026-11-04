@@ -1509,6 +1509,9 @@ and the round screenshots. Freeing that disk is the owner's call.
   above at 3 pixel columns, where English touches at 2 with the same spacing: the game's layout,
   not a translation defect.
 - Leaving Birth Island with Fly works on both ROMs (section 8.2).
+- `make_chunks.py all` on this tree gives the sweep 6,611 labels (section 2.6), and the static steps
+  of the worked example in section 3.4 (`textwidth.py`, `wrap.py`, `make_chunks.py B21`,
+  `checkunits.py`, `drift.py`, `audit.py`) print the outputs shown there.
 
 **Not verified:**
 
@@ -1523,7 +1526,7 @@ and the round screenshots. Freeing that disk is the owner's call.
 - The state that makes the English full map walk crash in the Dome pre-battle room (section 4.6).
 - A mid-game or post-game save written by the Hebrew ROM, loaded in the English ROM.
 - Pre-2.0 (1.2.1) saves: they do not load, by a code trace only (section 6.6).
-- The next candidate's sweep: 6,611 labels and no SKIP is expected.
+- That the next candidate's sweep skips none of its 6,611 labels.
 - Why the local audit counts 41,539 strings and CI 39,059 on the same commit (section 4.2).
 - The two name fixes of Q136 on screen: SONIC BOOM in the fight menu and EARLY BIRD on the summary
   page.
