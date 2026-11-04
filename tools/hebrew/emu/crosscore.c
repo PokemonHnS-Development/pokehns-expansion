@@ -23,6 +23,8 @@
 #define ENV_SET_CORE_OPTIONS_INTL    54
 #define ENV_SET_CORE_OPTIONS_V2      67
 #define ENV_SET_CORE_OPTIONS_V2_INTL 68
+#define ENV_EXPERIMENTAL      0x10000
+#define ENV_GET_AUDIO_VIDEO_ENABLE (47 | ENV_EXPERIMENTAL)
 #define PIXFMT_XRGB8888       1
 #define MEM_SAVE_RAM          0
 
@@ -109,6 +111,9 @@ static bool envcb(unsigned cmd, void *data) {
             const char *x = opt_default(d->default_value, d->values); if (x) opt_set(d->key, x, strlen(x)); }
         return true; }
     case ENV_GET_VARIABLE_UPDATE: *(bool*)data = false; return true;
+    // Video and audio on, as RetroArch answers while a game runs. SkyEmu reads the value every frame
+    // without checking the return, so a refused call would leave its video flag uninitialised.
+    case ENV_GET_AUDIO_VIDEO_ENABLE: if (data) *(int*)data = 3; return true;
     case ENV_GET_INPUT_BITMASKS: return true;
     case ENV_SET_SUPPORT_NO_GAME: return true;
     default: return false;
