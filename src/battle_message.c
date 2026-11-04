@@ -3993,6 +3993,14 @@ void BattlePutTextOnWindow(const u8 *text, u8 windowId)
         else
             printerTemplate.fontId = GetFontIdToFit(text, printerTemplate.fontId, printerTemplate.letterSpacing, 8 * TILE_WIDTH);
     }
+#if TEXT_RTL
+    // The link VS screen's name windows are 48 px wide, and a name of seven 7 px Hebrew letters
+    // is 49 px. The Battle Arena uses these ids for other windows.
+    if (gBattleScripting.windowsType != B_WIN_TYPE_ARENA
+     && B_WIN_VS_PLAYER <= windowId && windowId <= B_WIN_VS_MULTI_PLAYER_4)
+        printerTemplate.fontId = GetFontIdToFit(text, printerTemplate.fontId, printerTemplate.letterSpacing,
+                                                GetBattleWindowTemplatePixelWidth(gBattleScripting.windowsType, windowId));
+#endif
 
     if (printerTemplate.x == 0xFF)
     {
