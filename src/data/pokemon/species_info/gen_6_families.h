@@ -438,7 +438,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .description = COMPOUND_STRING(
             "הוא מתבונן בלהבה שבקצה הענף שלו ומגיע\n"
             "לריכוז שמאפשר לו לראות את העתיד. הוא שורף\n"
-            "את אויביו עד אפר בכוח על-חושי."),
+            "את אויביו עד אפר בכוח פסיכי."),
         .pokemonScale = 268,
         .pokemonOffset = 2,
         .trainerScale = 271,
@@ -2727,9 +2727,9 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .height = 3,
         .weight = 35,
         .description = COMPOUND_STRING(
-            "יש בו די אנרגיה על-חושית כדי לפוצץ כל דבר\n"
+            "יש בו די אנרגיה פסיכית כדי לפוצץ כל דבר\n"
             "ברדיוס של 300 רגל ממנו. אוזניו מגינות על\n"
-            "האיבר שפולט את כוחו העל-חושי העז."),
+            "האיבר שפולט את כוחו הפסיכי העז."),
         .pokemonScale = 530,
         .pokemonOffset = 13,
         .trainerScale = 256,
@@ -2866,7 +2866,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .description = COMPOUND_STRING(
             "הנקבות קצת יותר אנוכיות ותוקפניות מהזכרים.\n"
             "אם הן לא מקבלות את מה שהן רוצות, הן\n"
-            "ייסרו אותך ביכולות העל-חושיות שלהן."),
+            "ייסרו אותך ביכולות הפסיכיות שלהן."),
         .pokemonScale = 422,
         .pokemonOffset = 12,
         .trainerScale = 256,
