@@ -389,6 +389,24 @@ enum {
     WIN_INPUT_SELECT, // Word groups, word list, and keyboard
 };
 
+#if TEXT_RTL
+// WIN_INPUT_SELECT (tiles 1-28) is mirrored around the frame drawn behind it, not around its own
+// width. The keyboard frame (DrawLowerWindowFrame states 10 and 18: BufferLowerWindowFrame(1, 10,
+// 23, 10)) spans tiles 1-23, so its inside is screen x 16-184. The word list's frame (state 17:
+// BufferLowerWindowFrame(0, 10, 30, 10)) spans tiles 0-29, inside x 8-232, as wide as the window.
+#define RTL_INPUT_SELECT_LEFT        (1 * 8)
+#define RTL_KEYBOARD_INSIDE_LEFT     ((1 + 1) * 8)
+#define RTL_KEYBOARD_INSIDE_RIGHT    ((1 + 23 - 1) * 8)
+#define RTL_WORD_SELECT_INSIDE_LEFT  ((0 + 1) * 8)
+#define RTL_WORD_SELECT_INSIDE_RIGHT ((0 + 30 - 1) * 8)
+// The window's mirror width that maps a frame's inside onto itself, and the screen x a cursor
+// sprite moves to.
+#define RTL_KEYBOARD_MIRROR_WIDTH    (RTL_KEYBOARD_INSIDE_LEFT + RTL_KEYBOARD_INSIDE_RIGHT - 2 * RTL_INPUT_SELECT_LEFT)
+#define RTL_WORD_SELECT_MIRROR_WIDTH (RTL_WORD_SELECT_INSIDE_LEFT + RTL_WORD_SELECT_INSIDE_RIGHT - 2 * RTL_INPUT_SELECT_LEFT)
+#define RTL_KEYBOARD_SPRITE_X(x)     (RTL_KEYBOARD_INSIDE_LEFT + RTL_KEYBOARD_INSIDE_RIGHT - (x))
+#define RTL_WORD_SELECT_SPRITE_X(x)  (RTL_WORD_SELECT_INSIDE_LEFT + RTL_WORD_SELECT_INSIDE_RIGHT - (x))
+#endif
+
 // Values for text frame tilemap
 #define FRAME_OFFSET_ORANGE 0x1000 // Orange frame, for phrase text
 #define FRAME_OFFSET_GREEN  0x4000 // Green frame, for keyboard/word select
@@ -1908,11 +1926,21 @@ static u16 HandleEasyChatInput_Keyboard(void)
     if (JOY_REPEAT(DPAD_DOWN))
         return MoveKeyboardCursor(INPUT_DOWN);
 
+#if TEXT_RTL
+    // The keys are mirrored, so the next column is to the left and the button window, past the
+    // first column, to the right.
+    if (JOY_REPEAT(DPAD_LEFT))
+        return MoveKeyboardCursor(INPUT_RIGHT);
+
+    if (JOY_REPEAT(DPAD_RIGHT))
+        return MoveKeyboardCursor(INPUT_LEFT);
+#else
     if (JOY_REPEAT(DPAD_LEFT))
         return MoveKeyboardCursor(INPUT_LEFT);
 
     if (JOY_REPEAT(DPAD_RIGHT))
         return MoveKeyboardCursor(INPUT_RIGHT);
+#endif
 
     return ECFUNC_NONE;
 }
@@ -4211,6 +4239,9 @@ static void InitLowerWindowText(u32 whichText)
 {
     ResetLowerWindowScroll();
     FillWindowPixelBuffer(WIN_INPUT_SELECT, PIXEL_FILL(1));
+#if TEXT_RTL
+    SetWindowRtlMirrorWidth(WIN_INPUT_SELECT, whichText == TEXT_WORD_SELECT ? RTL_WORD_SELECT_MIRROR_WIDTH : RTL_KEYBOARD_MIRROR_WIDTH);
+#endif
     switch (whichText)
     {
     case TEXT_GROUPS:
@@ -4704,6 +4735,14 @@ static void UpdateRectangleCursorPos(void)
             SetRectangleCursorPos_GroupMode(column, row);
         else
             SetRectangleCursorPos_AlphabetMode(column, row);
+#if TEXT_RTL
+        // The keys are mirrored inside the keyboard frame; the button window is not.
+        if (column != -1)
+        {
+            sScreenControl->rectangleCursorSpriteRight->x = RTL_KEYBOARD_SPRITE_X(sScreenControl->rectangleCursorSpriteRight->x);
+            sScreenControl->rectangleCursorSpriteLeft->x = RTL_KEYBOARD_SPRITE_X(sScreenControl->rectangleCursorSpriteLeft->x);
+        }
+#endif
     }
 }
 
@@ -4955,8 +4994,13 @@ static void SetScrollIndicatorXPos(bool32 inWordSelect)
     if (!inWordSelect)
     {
         // Keyboard (only relevant for group mode, can't scroll in alphabet mode)
+#if TEXT_RTL
+        sScreenControl->scrollIndicatorUpSprite->x = RTL_KEYBOARD_SPRITE_X(96);
+        sScreenControl->scrollIndicatorDownSprite->x = RTL_KEYBOARD_SPRITE_X(96);
+#else
         sScreenControl->scrollIndicatorUpSprite->x = 96;
         sScreenControl->scrollIndicatorDownSprite->x = 96;
+#endif
     }
     else
     {
