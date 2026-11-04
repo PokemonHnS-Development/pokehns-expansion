@@ -15584,8 +15584,8 @@ const struct ItemInfo gItemsInfo[] =
         .price = 0,
         .description = COMPOUND_STRING(
             "כרטיס למעבורות בין\n"
-            "האיים One, Two\n"
-            "ו-Three."),
+            "האיים אחד, שתיים\n"
+            "ושלוש."),
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_BAG_MENU,
@@ -15602,7 +15602,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = COMPOUND_STRING(
             "למעבורות בין\n"
             "ורמיליון לבין\n"
-            "Sevii Islands."),
+            "איי סבי."),
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_BAG_MENU,
