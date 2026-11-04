@@ -1,0 +1,9 @@
+# party menu -> slot 0 -> SUMMARY, INFO page reading input (the second half of _sum_open.txt);
+# close with scripts/r2_summary_info_page_variants/_sum_close.txt
+seek 8 @gPartyMenu+9@ 0 UP
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+tap A 4
+waitcb2x pokemon_summary_screen:MainCB2 900
+sumwait

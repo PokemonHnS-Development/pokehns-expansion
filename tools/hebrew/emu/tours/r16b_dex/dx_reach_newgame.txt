@@ -1,0 +1,75 @@
+# Reach check, part 1: a real New Game with the randomizer on. Challenge menu (src/challenge_menu.c):
+# RANDOMIZER tab, master switch ON (row 0), starter/gift ON (row 1), wild Pokemon ON (row 2), then
+# GEN SCOPE (row 8) from the new-game default 'Gen 1-3' (RANDOMIZER_DEFAULT_GEN_SCOPE_1_3,
+# src/challenge_menu.c:2035) to 'Gen 1-9' (sChoices_GenScope[0], :518-521). Nuzlocke and difficulty
+# stay at their defaults. Ends saved in the bedroom: keepsave dx_rand.
+# Driver: scripts/r16b_dex/dexreach.py (run with dx_reach_play: --only '^dx_reach').
+start empty
+waitcb2 CB2_MainMenu 4000 START
+waittask Task_HandleMainMenuInput 600
+tap A 30                                         # NEW GAME
+waitkey 3000
+talk dxn_01_intro 40 -
+waittask Task_NewGameHnsSpeech_ChooseGender 3000
+10 -
+tap A 30                                         # BOY
+waittask Task_NewGameHnsSpeech_WaitPressBeforeNameChoice 600
+tap A 30
+waitcb2 CB2_NamingScreen 600
+waittask naming_screen:Task_HandleInput 600
+30 -
+tap START 30
+tap A 30
+waittask Task_NewGameHnsSpeech_ProcessNameYesNoMenu 900
+10 -
+tap A 30                                         # YES
+waitkey 1200
+talk dxn_05_disclaimer 12 -
+waittask Task_NewGameHnsSpeech_WaitPressDisclaimer 600
+tap A 30
+waittask challenge_menu:Task_ProcessInput 900
+waitquiet
+
+press R
+press R
+# ---- RANDOMIZER: master ON, starter/gift ON, wild ON
+press ROWNEXT
+snap dxn_rand_r00_on
+press DOWN
+press ROWNEXT
+snap dxn_rand_r01_starter
+press DOWN
+press ROWNEXT
+snap dxn_rand_r02_wild
+# ---- GEN SCOPE (row 8): Gen 1-3 -> Gen 1-9
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+press DOWN
+snap dxn_rand_r08_genscope_default
+press ROWNEXT
+snap dxn_rand_r08_genscope_1_9
+press R
+press R
+press R
+snap dxn_chal_page
+press R
+waittask Task_CallYesOrNoCallback 120
+10 -
+snap dxn_confirm
+tap A 30                                         # YES
+waittask Task_NewGameHnsSpeech_WaitForTextAfterChallengeMenu 600
+waitquiet
+20 -
+tap A 30
+waitkey 1200
+talk dxn_ready 20 -
+waitkey 1200
+talk dxn_areyouready 20 -
+waitcb2 CB2_Overworld 3000 A
+waitctl 1200
+snap dxn_bedroom
+savegame
+keepsave dx_rand
