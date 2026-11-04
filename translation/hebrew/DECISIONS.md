@@ -69,6 +69,7 @@ Each entry is one open question from the review of the first release candidate: 
 | [Q127](#q127) | The withdraw lines with a trainer or partner as the subject use the masculine 'החזיר' for every trainer, so women and pairs read as masc… | A. Reword so the verb agrees with the Pokémon: 'הפוקימון של X, Y, חוזר!' | changed |
 | [Q128](#q128) | Summary screen: a geresh or quote mark in the portrait nickname (ג'ימי, טיפלוז'ן) touches the bottom of the portrait box. | D. Lowered copies of the four quote marks, used only by that window | changed |
 | [Q129](#q129) | EXEGGUTOR-A is אקזגיוטר-א, without the ק of its base form אקזגקיוטר, because the base plus -א was measured at 56 px against the 50 px Pokédex list column. | B. The full form אקזגקיוטר-א, with the TEXT_RTL fits, a Pokédex CRY page fit and one PC panel fallback | changed |
+| [Q130](#q130) | The battle intro attaches מ to the trainer class, and 'ממלכת השביל', 'מאס הכיפה', 'משומר פוקימון' read as other words. | A. 'קיבלת אתגר מאת' before the class | changed |
 
 ## K1
 
@@ -1560,6 +1561,24 @@ The English and the Japanese (ノーマル, スーパー, ハイパー, マス�
 *Changed:* `src/data/pokemon/species_info/gen_1_families.h`, `src/pokedex_plus_hgss.c`, `src/pokemon_storage_system.c`, `tools/hebrew/data/budgets.json`, `tools/hebrew/glossary_widths.py`, `tools/hebrew/release/notes.json`
 
 *Glossary:* `SPECIES_EXEGGUTOR_ALOLA`
+
+## Q130
+
+**Question.** The battle intro 'קיבלת אתגר\nמ{B_TRAINER1_NAME_WITH_CLASS}!' attaches the prefix מ to the trainer class, and for some classes the joined word reads as another word: 'ממלכת השביל לוסי!' (PIKE QUEEN: 'kingdom of the Pike'), 'מאס הכיפה טאקר!' (DOME ACE: the verb מאס), 'משומר פוקימון קורנליה!' (PKMN RANGER: 'preserved'), more weakly 'מילד עשיר', 'מצעיר', 'ממנהל רוקט'.
+
+*Source:* screen review, round 16 (Frontier Brain intros; Trainer Hill Rangers), confirmed by the refute pass.
+
+**Analysis.** The strings are src/battle_message.c sText_Trainer1WantsToBattle and sText_TwoTrainersWantToBattle, which every field, Frontier, Trainer Hill and Tower trainer prints when the battle starts; the Frontier Brains take their class from GetFrontierBrainTrainerClass, so the brain lines are the ones in play. STYLE §4 attaches a prefix by default; no decision covered a prefix that changes the word. The link templates name only the player ('קיבלת אתגר מ{B_LINK_OPPONENT1_NAME}!') and are not affected by a class.
+
+| Option | How | Risk |
+|---|---|---|
+| A. 'מאת' before the class | 'קיבלת אתגר\nמאת {B_TRAINER1_NAME_WITH_CLASS}!\p' and 'קיבלת אתגר\nמאת {B_TRAINER1_NAME_WITH_CLASS}\lומאת {B_TRAINER2_NAME_WITH_CLASS}!\p'. Token order and breaks unchanged. | Low. The class is never joined to a letter. Worst case (a 12-letter class and a 10-letter name, the widest glyph): 185 px +8 arrow on one trainer's line, 181 and 188 px on the two-trainer lines, inside 200 px (tools/hebrew/textwidth.py). |
+| B. Rename the classes that collide | Change PIKE QUEEN, DOME ACE, PKMN RANGER and the others. | Trainer-class names are glossary terms used in many lines; a rename for one template is out of proportion, and a new class could collide again. |
+| C. Keep | No change. | The intros of three Frontier Brains and the Rangers read as other words. |
+
+**Chosen:** A. Seen on screen on the rc17 clip build and the fixed clip build: the Pike Queen and Dome Ace intros, the Trainer Hill Rangers (one trainer and a pair), Youngster Mikey, the Twins, the gym leader and the Rocket Hideout multi battle ('מאת מנהל רוקט אריאנה / ומאת רוקט גראנט!'), with 0 clip records.
+
+*Changed:* `src/battle_message.c`
 
 ## Proposed names
 
