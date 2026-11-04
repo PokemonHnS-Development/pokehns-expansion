@@ -13,7 +13,7 @@ BIOS, ROM or RAM. The Python files drive it with addresses taken from the build'
 | `evasm.py` | assembles an event script with the source tree's own macros, to run it in RAM |
 | `sweep.py` | shows every live script text label in the message box and reports CLIP / CRASH / HANG / ABNORMAL |
 | `mapwalk.py` | warps into every H&S map, fights or reads through whatever starts, takes a screenshot of each |
-| `tours/` | screen tours (`menu_*`, `battle_*`, `naming_*`, `dex_*`, `cardgear_*`); `_*.txt` are includes |
+| `tours/` | the 71 release tours (`pbi_*` 17, `menu_*` 12, `bv_*` 11, `chr_*` 10, `battle_*` 6, `cardgear_*`, `ncm_*`, `btw_*` 3 each, `naming_*`, `bfm_*` 2 each, `dex_forms`, `field_*`); `_*.txt` are includes; the subfolders hold the review rounds' tours, which the release does not run |
 | `tours_mapwalk/` | the map walk as one scripted tour (warp, wait, snap per map) |
 | `scripts/` | boot, new game, continue, the save-ladder scripts (`ladder*.txt`, `ladder/*.inc`), `make_ladder.sh` |
 | `probe/` | `measure.sh` + `offsets.c`: re-measure the struct offsets `hns.py` uses when `selfcheck` fails |
@@ -51,7 +51,7 @@ printf '60 -\nshot boot\nquit\n' | tools/hebrew/emu/hnsrun pokehns.gba build/heb
 | `HNS_ROM` | the ROM `hns.py`, `ladder.py` and `cliptour.py run` boot; the ELF is taken from next to it | `$HNS_TREE/pokehns.gba` |
 | `HNS_ELF` | a different ELF for `hns.py` (only when `--rom` is not given) and `evasm.py` | none |
 | `HNS_SRC` | source tree for `MAP_*`/`FLAG_*` constants, event-script macros and labels | the ELF's directory |
-| `HNS_SAVES` | the save ladder: `start saves/NAME` in a tour, the `selfcheck` save, the sweep's default save | none |
+| `HNS_SAVES` | the saves a tour starts from (`start saves/NAME`): the save ladder and the tour base saves `menuA_base.sav`, `pif2_base.sav`, `r1field_menuA_base.sav` and others (`<builds>/saves`, the private builds repository); the `selfcheck` save; the sweep's default save | none |
 | `HNS_RUNNER` | the `hnsrun` binary | `tools/hebrew/emu/hnsrun` |
 | `HNS_WORK` | `selfcheck` output, `evasm.py` host tools and headers (`evasm/`), `probe/`, `ladder_run/` | `build/hebrew` |
 | `HNS_UNITS` | the unit chunks `sweep.py` takes its labels from | `$HNS_WORK/units` |
@@ -95,7 +95,17 @@ python3 $E/hns.py sheet OUT/sheet.png OUT/menu_bag           # contact sheet
 
 A tour starts with `start saves/NAME.sav`, which is a file in `HNS_SAVES`. It can also start
 with `start save:NAME`, a save that an earlier tour exported with `keepsave NAME`, or with
-`start empty`.
+`start empty`. The release tours (`tours/*.txt`) start from saves at the top of the builds
+repository's `saves/`. A round tour (`tours/<round>/`) that names a save found only in a subfolder
+needs `HNS_SAVES` set to the folder that holds it: `saves/r8` for round 8, a folder under
+`saves/r10/` or `saves/r11/` for those rounds, and `saves/r7/saves_aug` for rounds 3-7 and
+`verify_ctxdpad` (the builds repository's README).
+
+**On the English ROM** (`hns.py tour "$HNS_EN_ROM" OUT`, for side-by-side review): 70 of the 71
+tours report OK and `naming_nickname` stops with ERROR at its first check of the typed Hebrew
+bytes. Both `naming_*` tours type on the Hebrew keyboard, so they are Hebrew-only by design:
+`naming_player` reports OK on English only because it has no byte checks, and its screenshots
+show nothing useful there. The other 69 run on English.
 
 **The save ladder** (`HNS_SAVES` must point at a writable folder). Rung 1 is a new game saved in
 the bedroom. Rungs 2-6 are built from it on the English ROM, and the script validates each rung:
@@ -132,6 +142,15 @@ python3 $E/hns.py tour pokehns.gba OUT --tours $E/tours_mapwalk
 that starts, and writes `OUT/mapwalk.json`. The scripted tour warps, waits and takes a screenshot
 per map. It does not fight, so it stops with TIMEOUT at the first map that starts a battle on
 entry (the Battle Arena battle room).
+
+**Cross-core** (`crosscore.c`, a minimal libretro frontend; `run_release_tests.sh` builds it on
+every run). It answers every core option with the core's own default, with one override
+(`gba_use_mednafen_save_method=libretro`, so that Mednafen-GBA exposes its save RAM), and it
+copies the 131088-byte `.sav` into the core's save RAM up to its size: mGBA, VBA-M, gpSP and
+SkyEmu load 131072 of 131072 bytes (the 16-byte RTC footer is dropped), Mednafen-GBA and
+VBA-Next 131088 of 139264. `../release/ccdiff.py` compares the frames after reducing each pixel to
+RGB555, the GBA's own colour depth. Whether RetroArch's own `.srm` loader accepts the 131088-byte
+file was not tried.
 
 **Other**
 

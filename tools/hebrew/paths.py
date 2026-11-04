@@ -10,6 +10,8 @@ repository (REPO = two directories above tools/hebrew). An empty variable counts
                   compare against and extract from)
   HNS_UPSTREAM    upstream English tree                      default: ../pokehns-en next to REPO,
                                                              if that directory exists
+  HNS_FIRERED     the FireRed Hebrew tree (namecheck.py      default: ../pokefirered-heb next to
+                  --fr-sync compares names with it)          REPO, if that directory exists
   HNS_FONTS_TREE  tree whose src/fonts.c and charmap.txt     default: HNS_TREE
                   the width model reads
   HNS_DATA        data files the tools read                  default: tools/hebrew/data
@@ -51,6 +53,7 @@ def _join(base, *parts):
 TREE = _env('HNS_TREE', REPO)
 BASELINE = _env('HNS_BASELINE', _sibling('pokehns-heb-engine'))
 UPSTREAM = _env('HNS_UPSTREAM', _sibling('pokehns-en'))
+FIRERED = _env('HNS_FIRERED', _sibling('pokefirered-heb'))
 FONTS_TREE = _env('HNS_FONTS_TREE', TREE)
 DATA = _env('HNS_DATA', os.path.join(HERE, 'data'))
 GLOSSARY = _env('HNS_GLOSSARY', os.path.join(REPO, 'translation', 'hebrew', 'glossary.csv'))
@@ -70,7 +73,7 @@ C_STRINGS = os.path.join(DATA, 'c_strings.json')
 INVENTORY = os.path.join(DATA, 'inventory.json')
 FONT_DRAFTS = os.path.join(DATA, 'font_drafts')
 
-NAMES = ('REPO', 'TREE', 'BASELINE', 'UPSTREAM', 'FONTS_TREE', 'DATA', 'GLOSSARY', 'WORK', 'UNITS',
+NAMES = ('REPO', 'TREE', 'BASELINE', 'UPSTREAM', 'FIRERED', 'FONTS_TREE', 'DATA', 'GLOSSARY', 'WORK', 'UNITS',
          'ROM', 'EN_ROM', 'SAVES', 'RUNNER')
 _ENV = {n: 'HNS_' + n for n in NAMES if n != 'REPO'}
 

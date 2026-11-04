@@ -97,7 +97,7 @@ _DRAFT_BUILTIN = {
 # src/text.c:94-112 sKeypadIcons widths, indexed by the byte after F8
 KEYPAD_WIDTHS = {0x00: 8, 0x01: 8, 0x02: 16, 0x03: 16, 0x04: 24, 0x05: 24, 0x06: 8, 0x07: 8, 0x08: 8,
                  0x09: 8, 0x0A: 8, 0x0B: 8, 0x0C: 8}
-PROMPT_ARROW_PX = 8          # src/text.c:1175-1215, 8x16 down arrow drawn after the last glyph
+PROMPT_ARROW_PX = 8          # TextPrinterDrawDownArrow (src/text.c; 2.0.6 :1175-1215): 8x16 arrow after the last glyph; RtlDownArrowX under TEXT_RTL
 
 EOS, NEWLINE, PLACEHOLDER, CTRL, PROMPT_CLEAR, PROMPT_SCROLL = 0xFF, 0xFE, 0xFD, 0xFC, 0xFB, 0xFA
 EXTRA_SYMBOL, KEYPAD_ICON, DYNAMIC = 0xF9, 0xF8, 0xF7

@@ -57,7 +57,7 @@ jobs:
         run: python3 tools/hebrew/audit.py --baseline ../pokehns-en --report audit.txt; status=$?; head -40 audit.txt; exit $status
 
       - name: Glossary (byte limits, final letters, duplicates)
-        run: python3 tools/hebrew/namecheck.py --all
+        run: python3 tools/hebrew/namecheck.py --all --warnings
 
       - name: Pokédex A-Z order matches the glossary names
         run: python3 tools/hebrew/gen_dex_alpha.py --check

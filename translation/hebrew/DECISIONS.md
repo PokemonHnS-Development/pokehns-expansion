@@ -75,7 +75,9 @@ Each entry is one open question from the review of the first release candidate: 
 | [Q133](#q133) | Five Pokédex terms have Hebrew names with no official source: HISUI היסואי, MT. CORONET הר הנזר, Ultra Wormhole חור תולעת אולטרה, TEAM PLASMA צוות פלזמה, ROSE רוז. | A. Keep all five | no change |
 | [Q134](#q134) | 'psychic power' in Pokédex prose is כוח פסיכי in most entries and כוח על-חושי in nine. | A. כוח פסיכי and its forms in every entry; על-חושי stays in Kadabra's 'extrasensory' and in the move names that have it | changed |
 | [Q135](#q135) | 482 of the 999 Easy Chat words were still English, so trainer phrases mixed the two directions, and three Odd Egg hints named words the list no longer has. | a. Translate every word, a text of its own for every word the game compares and shared texts only where Hebrew has one word, Hebrew order for the group lists, hints that quote the list words, a Hebrew ABC keyboard and the screen mirrored inside its frames | changed |
+| [Q136](#q136) | Names inherited from or modelled on the FireRed translation differ from FireRed's current names in 34 rows; which ones should follow FireRed? | B. Take FireRed's name only where H&S's has an error (two lost letters fixed); list the rest with a reason | changed |
 | [Q137](#q137) | In the Gen 4 battle interface the frostbite tag is a copy of the burn tag and reads כויה, as in English. | B. Redraw it as קור, the word of the H&S sheets | changed |
+| [Q138](#q138) | The brief says a ROM nobody has played by hand is not committed, but 0.1, 0.2 and every 1.0 update were committed with hand play declared as not tested. | B. Publish to the private builds repository, with hand play always declared in the release notes | no change |
 
 ## K1
 
@@ -1737,6 +1739,42 @@ The English and the Japanese (ノーマル, スーパー, ハイパー, マス�
 
 *Glossary:* `TERM_POKENAV`
 
+## Q136
+
+**Question.** Many glossary names were inherited from the FireRed translation or follow its pattern, and FireRed has changed some of its own names since. Comparing the glossary with FireRed's names as they are now gives 34 differences. Which should follow FireRed?
+
+*Source:* HANDOFF section 3.5 (the proposed names were never checked for consistency); `tools/hebrew/namecheck.py --fr-sync`.
+
+**Analysis.** `namecheck.py --fr-sync` compares each glossary name with the FireRed Hebrew tree (`HNS_FIRERED`, default `../pokefirered-heb`), within the same kind, ignoring spaces and hyphens and undoing FireRed's reversed digit runs and `$` padding. With the two other new checks, `--translit` (transliteration slips) and `--dupes` (one English person name with two Hebrew spellings), it gave 61 warnings on this tree: 34 FRSYNC, 26 TRANSLIT and 1 SAMENAME. All three print warnings only and never change the exit status; CI runs `namecheck.py --all --warnings`.
+- Two differences point at an error in H&S's name:
+  - MOVE_SONIC_BOOM בום עלקול: עלקול is not a word; על-קולי (supersonic) lost its final י. FireRed has בוםעל-קולי.
+  - ABILITY_EARLY_BIRD ציפור מקדים: ציפור is feminine, so the adjective lost its ה. FireRed now has the idiom משכימת קום, a new wording, which is not taken; the row stays on the allowlist with the fixed name.
+- The other differences are choices, not errors:
+
+| Names | H&S | FireRed now | Why H&S keeps its name |
+|---|---|---|---|
+| JUMP KICK, TRIPLE KICK | קפוץ בעיטה, משולש בעיטה | בעיטתקפיצה, תלת בעיטה | word-for-word calques, but readable; 1 use each |
+| COUNTER | נגידה | מתקפת נגד | a coined noun; 2 uses |
+| HUSTLE | המולה | חריצות | המולה (commotion) misses the sense, but it is a wording choice; 3 uses |
+| SKILL SWAP | חילוף סגולה | חילוףיכולת | סגולה or יכולת for 'ability'; 2 uses |
+| EXP. SHARE, ELITE FOUR | חולק נסיון, רביעיית עלית | חולק ניסיון, רביעיית עילית | a spelling policy, not one name: the tree writes נסיון 51 times (13 files) and ניסיון 16 times (12 files), and עלית in all 4 uses |
+| GHOST, PSYCHIC (types) | רוח, פסיכי | רפאים, על-חושי | inherited rows whose labels are drawn in `graphics/types/*.png`; H&S does not follow FireRed's later type renames |
+| CHESTO BERRY | פרי צ'סטו | פרי צ'סטרו | H&S is right (Chesto); FireRed adds an R |
+| PAY DAY, ROLLING KICK, PSYCHIC (move), SELF-DESTRUCT, SWIFT, CONSTRICT, KINESIS, SOFT-BOILED, SLASH, SCARY FACE, MAGNITUDE, GRASS WHISTLE, SKY UPPERCUT, CLOUD NINE, TRACE, BERRY JUICE, BERRY POUCH, KINDLER | | | FireRed changed its own wording |
+| IAPAPA BERRY, EXEGGUTOR, AERODACTYL, POKéBLOCK CASE | | | transliteration or token-order choices (EXEGGUTOR: -tor is /tər/; AERODACTYL: -tyl is /tɪl/) |
+
+- The 26 transliteration warnings are each explained by the row's glossary note (for example MEOWTH מיאו, FARFETCH'D ג'ד, MIME JR. translated, and the unused in-game trade names kept in English): no fix. The one same-name warning is LTSURGE: סמל סרג' in dialogue and סרג' in the 7-byte Frontier and trade fields, which cannot hold the rank: kept.
+
+| Option | How | Risk |
+|---|---|---|
+| A. Take every FireRed change | Change 34 rows and their text. | Rewrites wording choices that H&S text already uses, and the type labels drawn in graphics. |
+| B. Fix only the errors | Take FireRed's fix where H&S's name is misspelt or lost a letter; list every other difference in `tools/hebrew/data/namecheck_allow.json` with its reason. | Low; an allow entry pins both names, so a later change on either side warns again. |
+| C. Change nothing | Allow all 61 warnings. | Ships two broken names. |
+
+**Chosen:** B. בום על-קולי and ציפור מקדימה, glossary rows first, then one file per commit. 60 warnings are allowlisted with their reasons and `namecheck.py --all --warnings` prints `warnings 0, allowlisted 60`. The new names fit (57 and 65 px in FONT_NORMAL; namecheck 0 problems; no audit finding), and no test expectation names them. Not yet seen on screen: the move name in the fight menu and the ability on the summary page. The roughly 3,000 rows translated by meaning stay 'proposed' until a native speaker reads them.
+
+*Changed:* `translation/hebrew/glossary.csv`, `src/data/moves_info.h`, `src/data/abilities.h`, `src/data/easy_chat/easy_chat_group_status.h`, `tools/hebrew/data/namecheck_allow.json`
+
 ## Q137
 
 **Question.** In the Gen 4 battle interface, the frostbite tag is a copy of the burn tag, so a frostbitten Pokémon shows a blue pill reading כויה. English 2.0.6 has the same copy (BRN). The handoff asked the owner whether to redraw it or list it in the release notes.
@@ -1757,6 +1795,22 @@ The English and the Japanese (ノーマル, スーパー, ハイパー, マス�
 **Chosen:** B. Pure art with no behaviour change, the word the H&S sheets already use, and the smallest diff.
 
 *Changed:* `graphics/battle_interface/gen4/status.png`, `graphics/battle_interface/gen4/status2.png`, `graphics/battle_interface/gen4/status3.png`, `graphics/battle_interface/gen4/status4.png`
+
+## Q138
+
+**Question.** The original brief says a ROM that has not been played by hand is not committed. Releases 0.1 and 0.2 and every update of 1.0 were committed to the private builds repository with hand play listed under "Not tested". The handoff asked the owner not to change this silently.
+
+*Source:* HANDOFF section 5 (an open policy question for the project owner).
+
+**Analysis.** Nobody can play by hand inside this project's harness, and every update's `TESTING.md` already states the gap (`tools/hebrew/release/notes.json`, `not_tested`). The builds repository is private, and its README says each update replaces 1.0 in place.
+
+| Option | How | Risk |
+|---|---|---|
+| A. Block publishing until a person plays to the first badge | No update until then. | 1.0 stays frozen; the harness cannot lift the block. |
+| B. Publish, and declare it | A candidate that passes the release steps is committed to the private builds repository; `not_tested` always says that nobody played it by hand. | A tester may trust the ROM more than the tests justify; the declaration in `TESTING.md` is the guard. |
+| C. Publish only after the owner confirms each update | Ask before each builds-repository commit. | Slower; the same evidence either way. |
+
+**Chosen:** B. The rule's intent, no claim of play that did not happen, is met by the declaration, and the repository stays private. Recorded so the practice is explicit.
 
 ## Proposed names
 

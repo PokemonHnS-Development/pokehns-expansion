@@ -32,7 +32,7 @@ as unset.
 | `DEVKITPRO`, `DEVKITARM` | build, tests | `/opt/devkitpro`, `$DEVKITPRO/devkitARM` |
 | `CPATH`, `LIBRARY_PATH` | build (libpng for the host tools) | `/opt/homebrew/include`, `/opt/homebrew/lib` |
 | `HNS_EMU` | tests | `tools/hebrew/emu` |
-| `HNS_SAVES` | tests | none. The save ladder `ladder1_newgame.sav` ... `ladder6_postgame.sav` (`emu/README.md`), and every save a screen tour starts from (`start saves/NAME` in `emu/tours/*.txt`). |
+| `HNS_SAVES` | tests | none. The saves a tour starts from (`start saves/NAME` is read as `$HNS_SAVES/NAME`): the save ladder `ladder1_newgame.sav` ... `ladder6_postgame.sav` and the tour base saves `menuA_base.sav`, `pif2_base.sav`, `r1field_menuA_base.sav` and others, at the top of the builds repository's `saves/`; the `selfcheck` save; the sweep's default save. |
 | `HNS_RUNNER` | tests | `tools/hebrew/emu/hnsrun` (build it as described in `emu/README.md`) |
 | `HNS_UNITS` | tests (sweep labels) | `$HNS_WORK/units`, with a folder for every batch of `data/inventory.json` (`make_chunks.py all`) |
 | `HNS_EN_ROM` | tests (ROM sweep) | `../pokehns-en/pokehns.gba`, with its `.elf` next to it |
@@ -48,8 +48,9 @@ The scripts have only been run on macOS. The cross-core step loads `.dylib` core
 1. **The English tree.** Check out `Release-v2.0.6` as `../pokehns-en` and run `make hns` in it.
    This gives `HNS_EN_ROM` and its ELF.
 2. **The runner.** Build `hnsrun` as described in `../emu/README.md`.
-3. **The save ladder.** Build it as described in `../emu/README.md` (`scripts/make_ladder.sh`), then
-   set `HNS_SAVES` to its folder.
+3. **The saves.** Point `HNS_SAVES` at the builds repository's `saves/`, which holds the save ladder
+   and every save a release tour starts from. To make the ladder again, follow `../emu/README.md`
+   (`scripts/make_ladder.sh`).
 4. **The sweep's labels.** Run `python3 tools/hebrew/make_chunks.py all`, which writes
    `build/hebrew/units`. This command gives 6,611 labels: the 7,209 that release 0.2 was swept
    with, less the 451 match-call, TV and PokéNews lines behind flags defined as 0 and the 147
@@ -57,12 +58,14 @@ The scripts have only been run on macOS. The cross-core step loads `.dylib` core
 5. **Cross-core.** `run_release_tests.sh` builds the frontend from `tools/hebrew/emu/crosscore.c`
    with `cc -O2` into `RCDIR/tests/bin` on every run, so nothing is installed for it. Put `vbam`,
    `vba_next`, `gpsp`, `mednafen_gba` and `skyemu` `_libretro.dylib` in `build/hebrew/cores`. The
-   mGBA core is RetroArch's own. The source of the cores that release 0.2 used was not recorded.
+   mGBA core is RetroArch's own. Copies of the five cores, with their SHA-1 and inferred source,
+   are in the builds repository's `reference/cores/`; unzip them into `HNS_CORES`.
 6. **The English map walk.** Run it once per upstream version. It tells which held maps also hold
    in English:
    `python3 tools/hebrew/emu/mapwalk.py "$HNS_EN_ROM" "$HNS_SAVES/ladder6_postgame.sav" build/hebrew/mapwalk_en`.
    The exact command behind the 0.2 English run was not recorded. Its output has the same form
-   (`mapwalk.json`, 543 maps).
+   (`mapwalk.json`, 543 maps), and it is kept as `reference/mapwalk_en.json` in the builds
+   repository; point `HNS_EN_MAPWALK` at it.
 
 ## Making a release
 
@@ -81,20 +84,30 @@ Then:
 
 1. **Review the screenshots.** Compare the tour screenshots of `RC/tests` with the English build
    (`../pairsheets.py` makes side-by-side sheets), and record the findings in
-   `RC/visual_findings.json`. `TESTING.md` gets a visual-review row only when that file exists.
+   `RC/visual_findings.json`. `REVIEW.md` gives the lenses, the finding format, the refuting step
+   and the prompts. `TESTING.md` gets a visual-review row only when that file exists.
    The row's text comes from `notes.json`.
 2. **Edit `notes.json`** for the new release (see the table below). The static-check result comes
    from the CI run of the release commit (`.github/workflows/hebrew.yml`: drift, layout audit,
-   `namecheck.py`), because these scripts do not run those checks.
+   `namecheck.py --all --warnings`, the generator `--check`s and `flag_gates.py --check`), because
+   these scripts do not run those checks.
 3. **Write the report** with
-   `HNS_EN_MAPWALK=... python3 tools/hebrew/release/make_testing_md.py "$RC" pokehns-he-2.0.6-X.Y.gba "$RC/TESTING.md"`.
-4. **Publish in the private builds repository.** Copy `RC/pokehns.gba` under the release name.
-   Add its line to `SHA1SUMS`. Rename the previous `TESTING.md` to `TESTING-<previous>.md` and add
-   the new one. Add the row to its `README.md`. Commit only there. Never commit a ROM to the fork.
+   `HNS_EN_MAPWALK=... python3 tools/hebrew/release/make_testing_md.py "$RC" pokehns-he-2.0.6-1.0.gba "$RC/TESTING.md"`.
+4. **Publish in the private builds repository.** There is one release, 1.0, replaced in place:
+   replace `pokehns-he-2.0.6-1.0.gba` with `RC/pokehns.gba`, and replace its line in `SHA1SUMS`
+   (check with `shasum -c SHA1SUMS`) and `TESTING.md`. The commit message names the `he/main`
+   commit: `Update 1.0 to the build of he/main <short sha>`. Commit only there. Never commit a ROM
+   to the fork. A candidate is published although nobody has played it by hand; `not_tested` says
+   so (`translation/hebrew/DECISIONS.md` Q138).
 
 The 0.2 `make_check.log` ends in `make: *** [check] Segmentation fault: 11`, and
-`check_tests.py` still read 5,074 results from it. What counts is the comparison with
-`../data/known_test_failures.txt`, not the exit status of `make`. On a runner with little
+`check_tests.py` still read 5,074 results from it. The cause: the hydra runner's summary lists
+hold 1,600 rows but were written at the running failure count, so with 15 runners the later ones
+wrote past them. The guard is on branch `he/fix-upstream-hydra` (from `he/upstream-fixes`); with it,
+`make check BUILD=hns -j8` printed the whole summary and no segfault. `make` still exits 2,
+because upstream fails its own tests. What counts is the comparison with
+`../data/known_test_failures.txt`, not the exit status of `make`. Plain `make check` (without
+`BUILD=hns`) builds the Emerald tests and stops at a compile error in `src/braille_puzzles.c`. On a runner with little
 memory, use `../check_chunked.py` the way CI does.
 
 ## notes.json

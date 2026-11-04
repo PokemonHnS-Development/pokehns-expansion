@@ -1397,7 +1397,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
 
     [MOVE_SONIC_BOOM] =
     {
-        .name = COMPOUND_STRING("בום עלקול"),
+        .name = COMPOUND_STRING("בום על-קולי"),
         .description = COMPOUND_STRING(
             "משגר גלי הדף שתמיד\n"
             "גורמים נזק של 20 נ”ח."),

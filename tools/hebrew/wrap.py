@@ -6,7 +6,7 @@ Usage:
   wrap.py [options] --stdin        one string per input line
 Options:
   --kind KIND       budget from data/budgets.json via audit.py (default overworld_dialogue:
-                    FONT_NORMAL, 216 px, 208 px on lines that end in \\l or \\p, 2 lines a page)
+                    FONT_NORMAL, 208 px, 200 px on lines that end in \\l or \\p, 2 lines a page)
   --px N            line budget in px (overrides --kind)
   --prompt-px N     budget for lines that end in \\l or \\p (default: --px - 8 when --px is given)
   --lines N         lines per page (default: from --kind)

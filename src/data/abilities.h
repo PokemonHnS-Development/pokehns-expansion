@@ -368,7 +368,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
 
     [ABILITY_EARLY_BIRD] =
     {
-        .name = _("ציפור מקדים"),
+        .name = _("ציפור מקדימה"),
         .description = COMPOUND_STRING("מתעורר מהר משינה."),
         .aiRating = 4,
     },
