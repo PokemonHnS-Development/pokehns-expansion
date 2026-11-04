@@ -5,8 +5,12 @@ way (on the same frame, VBA-Next sets the low bit of the 6-bit green where mGBA 
 so only the 15 bits are compared.
 
   ccdiff.py REF_DIR DIR... -> per shot: differing pixel count against REF_DIR, and PNGs of each
+
+Exit status 0 when the table was printed, 2 for wrong arguments; -h or --help prints this text.
 """
 import os, struct, sys, zlib
+
+USAGE = 'usage: ccdiff.py REF_DIR DIR...   (--help for details)'
 
 def load(path):
     d = open(path, 'rb').read()
@@ -31,11 +35,17 @@ def png(path, w, h, pix555):
     open(path, 'wb').write(b'\x89PNG\r\n\x1a\n' + chunk(b'IHDR', struct.pack('>IIBBBBB', w, h, 8, 2, 0, 0, 0))
                           + chunk(b'IDAT', zlib.compress(b''.join(rows), 9)) + chunk(b'IEND', b''))
 
-if len(sys.argv) < 3 or sys.argv[1] in ('-h', '--help'):
-    sys.exit('usage: ccdiff.py REF_DIR DIR...')
+if sys.argv[1:2] in (['-h'], ['--help']):
+    print(__doc__.strip())
+    sys.exit(0)
+if len(sys.argv) < 3:
+    print(USAGE, file=sys.stderr)
+    sys.exit(2)
 for d in sys.argv[1:]:
     if not os.path.isdir(d):
-        sys.exit('ccdiff.py: %s is not a directory' % d)
+        print('ccdiff.py: %s is not a directory' % d, file=sys.stderr)
+        print(USAGE, file=sys.stderr)
+        sys.exit(2)
 ref = sys.argv[1]
 for d in [ref] + sys.argv[2:]:
     for f in sorted(os.listdir(d)):
