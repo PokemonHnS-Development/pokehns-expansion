@@ -71,13 +71,13 @@ const u8 gEasyChatWord_Understands[] = _("מבין");
 const struct EasyChatWordInfo gEasyChatGroup_Feelings[] = {
     [EC_INDEX(EC_WORD_MEET)] =
     {
-        .text = COMPOUND_STRING("MEET"),
+        .text = COMPOUND_STRING("לפגוש"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_ADORE),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_PLAY)] =
     {
-        .text = COMPOUND_STRING("PLAY"),
+        .text = COMPOUND_STRING("לשחק"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_ALL_RIGHT),
         .enabled = TRUE,
     },
@@ -89,19 +89,19 @@ const struct EasyChatWordInfo gEasyChatGroup_Feelings[] = {
     },
     [EC_INDEX(EC_WORD_GOES)] =
     {
-        .text = COMPOUND_STRING("GOES"),
+        .text = COMPOUND_STRING("נמשך"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_ANGRY),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_GIDDY)] =
     {
-        .text = COMPOUND_STRING("GIDDY"),
+        .text = COMPOUND_STRING("סחרחר"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_BAD),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_HAPPY)] =
     {
-        .text = COMPOUND_STRING("HAPPY"),
+        .text = COMPOUND_STRING("שמח"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_BEAT),
         .enabled = TRUE,
     },
@@ -125,13 +125,13 @@ const struct EasyChatWordInfo gEasyChatGroup_Feelings[] = {
     },
     [EC_INDEX(EC_WORD_FUNNY)] =
     {
-        .text = COMPOUND_STRING("FUNNY"),
+        .text = COMPOUND_STRING("מצחיק"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_DANGER),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_GOT)] =
     {
-        .text = COMPOUND_STRING("GOT"),
+        .text = COMPOUND_STRING("השיג"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_DARN),
         .enabled = TRUE,
     },
@@ -155,43 +155,43 @@ const struct EasyChatWordInfo gEasyChatGroup_Feelings[] = {
     },
     [EC_INDEX(EC_WORD_SAD)] =
     {
-        .text = COMPOUND_STRING("SAD"),
+        .text = COMPOUND_STRING("עצוב"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_DISAPPOINTS),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_TRY)] =
     {
-        .text = COMPOUND_STRING("TRY"),
+        .text = COMPOUND_STRING("לנסות"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_DISASTER),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_TRIES)] =
     {
-        .text = COMPOUND_STRING("TRIES"),
+        .text = COMPOUND_STRING("מנסה"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_DISLIKE),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_HEARS)] =
     {
-        .text = COMPOUND_STRING("HEARS"),
+        .text = COMPOUND_STRING("שומע"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_DISLIKES),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_THINK)] =
     {
-        .text = COMPOUND_STRING("THINK"),
+        .text = COMPOUND_STRING("לחשוב"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_DONE),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_HEAR)] =
     {
-        .text = COMPOUND_STRING("HEAR"),
+        .text = COMPOUND_STRING("לשמוע"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_DOWNCAST),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_WANTS)] =
     {
-        .text = COMPOUND_STRING("WANTS"),
+        .text = COMPOUND_STRING("מעוניין"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_DRINK),
         .enabled = TRUE,
     },
@@ -209,19 +209,19 @@ const struct EasyChatWordInfo gEasyChatGroup_Feelings[] = {
     },
     [EC_INDEX(EC_WORD_ANGRY)] =
     {
-        .text = COMPOUND_STRING("ANGRY"),
+        .text = COMPOUND_STRING("כועס"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_ENJOYS),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_ANGER)] =
     {
-        .text = COMPOUND_STRING("ANGER"),
+        .text = COMPOUND_STRING("כעס"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_EXCITE),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_SCARY)] =
     {
-        .text = COMPOUND_STRING("SCARY"),
+        .text = COMPOUND_STRING("מפחיד"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_FEAR),
         .enabled = TRUE,
     },
@@ -239,25 +239,25 @@ const struct EasyChatWordInfo gEasyChatGroup_Feelings[] = {
     },
     [EC_INDEX(EC_WORD_JOY)] =
     {
-        .text = COMPOUND_STRING("JOY"),
+        .text = COMPOUND_STRING("שמחה"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_GIDDY),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_GETS)] =
     {
-        .text = COMPOUND_STRING("GETS"),
+        .text = COMPOUND_STRING("מקבל"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_GO_HOME),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_NEVER)] =
     {
-        .text = COMPOUND_STRING("NEVER"),
+        .text = COMPOUND_STRING("לעולם לא"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_GOES),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_DARN)] =
     {
-        .text = COMPOUND_STRING("DARN"),
+        .text = COMPOUND_STRING("לעזאזל"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_GOT),
         .enabled = TRUE,
     },
@@ -275,7 +275,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Feelings[] = {
     },
     [EC_INDEX(EC_WORD_LIKES)] =
     {
-        .text = COMPOUND_STRING("LIKES"),
+        .text = COMPOUND_STRING("אוהב"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_HAPPY),
         .enabled = TRUE,
     },
@@ -293,13 +293,13 @@ const struct EasyChatWordInfo gEasyChatGroup_Feelings[] = {
     },
     [EC_INDEX(EC_WORD_CARE)] =
     {
-        .text = COMPOUND_STRING("CARE"),
+        .text = COMPOUND_STRING("אכפת"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_HEARS),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_CARES)] =
     {
-        .text = COMPOUND_STRING("CARES"),
+        .text = COMPOUND_STRING("דואג"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_HURRIED),
         .enabled = TRUE,
     },
@@ -311,7 +311,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Feelings[] = {
     },
     [EC_INDEX(EC_WORD_ADORE)] =
     {
-        .text = COMPOUND_STRING("ADORE"),
+        .text = COMPOUND_STRING("מעריץ"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_INCREDIBLE),
         .enabled = TRUE,
     },
@@ -323,7 +323,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Feelings[] = {
     },
     [EC_INDEX(EC_WORD_ENJOY)] =
     {
-        .text = COMPOUND_STRING("ENJOY"),
+        .text = COMPOUND_STRING("ליהנות"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_LACKING),
         .enabled = TRUE,
     },
@@ -335,7 +335,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Feelings[] = {
     },
     [EC_INDEX(EC_WORD_EAT)] =
     {
-        .text = COMPOUND_STRING("EAT"),
+        .text = COMPOUND_STRING("לאכול"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_LONESOME),
         .enabled = TRUE,
     },
@@ -347,13 +347,13 @@ const struct EasyChatWordInfo gEasyChatGroup_Feelings[] = {
     },
     [EC_INDEX(EC_WORD_BAD)] =
     {
-        .text = COMPOUND_STRING("BAD"),
+        .text = COMPOUND_STRING("רע"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_MISHEARD),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_HARD)] =
     {
-        .text = COMPOUND_STRING("HARD"),
+        .text = COMPOUND_STRING("קשה"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_NEGATIVE),
         .enabled = TRUE,
     },
@@ -365,19 +365,19 @@ const struct EasyChatWordInfo gEasyChatGroup_Feelings[] = {
     },
     [EC_INDEX(EC_WORD_SHOULD)] =
     {
-        .text = COMPOUND_STRING("צריך"),
+        .text = COMPOUND_STRING("אמור"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_NICE),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_NICE)] =
     {
-        .text = COMPOUND_STRING("NICE"),
+        .text = COMPOUND_STRING("נחמד"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_PLAY),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_DRINK)] =
     {
-        .text = COMPOUND_STRING("DRINK"),
+        .text = COMPOUND_STRING("לשתות"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_QUESTION),
         .enabled = TRUE,
     },
@@ -389,19 +389,19 @@ const struct EasyChatWordInfo gEasyChatGroup_Feelings[] = {
     },
     [EC_INDEX(EC_WORD_FEAR)] =
     {
-        .text = COMPOUND_STRING("FEAR"),
+        .text = COMPOUND_STRING("פחד"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_ROMANTIC),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_WANT)] =
     {
-        .text = COMPOUND_STRING("WANT"),
+        .text = COMPOUND_STRING("רוצה"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_SAD),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_WAIT)] =
     {
-        .text = COMPOUND_STRING("WAIT"),
+        .text = COMPOUND_STRING("לחכות"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_SATISFIED),
         .enabled = TRUE,
     },
@@ -413,13 +413,13 @@ const struct EasyChatWordInfo gEasyChatGroup_Feelings[] = {
     },
     [EC_INDEX(EC_WORD_SEE)] =
     {
-        .text = COMPOUND_STRING("SEE"),
+        .text = COMPOUND_STRING("לראות"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_SEE),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_RARE)] =
     {
-        .text = COMPOUND_STRING("RARE"),
+        .text = COMPOUND_STRING("נדיר"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_SHOULD),
         .enabled = TRUE,
     },
@@ -431,7 +431,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Feelings[] = {
     },
     [EC_INDEX(EC_WORD_DONE)] =
     {
-        .text = COMPOUND_STRING("DONE"),
+        .text = COMPOUND_STRING("גמור"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_TERRIBLE),
         .enabled = TRUE,
     },
@@ -449,13 +449,13 @@ const struct EasyChatWordInfo gEasyChatGroup_Feelings[] = {
     },
     [EC_INDEX(EC_WORD_BEAT)] =
     {
-        .text = COMPOUND_STRING("BEAT"),
+        .text = COMPOUND_STRING("להביס"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_TRY),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_GREAT)] =
     {
-        .text = COMPOUND_STRING("GREAT"),
+        .text = COMPOUND_STRING("נהדר"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_UNDERSTAND),
         .enabled = TRUE,
     },
