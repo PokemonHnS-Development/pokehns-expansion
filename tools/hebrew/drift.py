@@ -294,10 +294,15 @@ def main():
             print('%s %s' % ('FAIL' if errors else 'ok  ', f))
             for e in errors:
                 print('   E', e)
-            for w in warnings[:40]:
+            # LATIN warnings are never capped: a capped list hid whole files of them.
+            latin = [w for w in warnings if w.startswith('LATIN ')]
+            other = [w for w in warnings if not w.startswith('LATIN ')]
+            for w in other[:40]:
                 print('   w', w)
-            if len(warnings) > 40:
-                print('   w ... %d more warnings' % (len(warnings) - 40))
+            if len(other) > 40:
+                print('   w ... %d more warnings' % (len(other) - 40))
+            for w in latin:
+                print('   w', w)
     sys.exit(1 if bad else 0)
 
 
