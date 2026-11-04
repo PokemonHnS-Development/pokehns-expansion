@@ -1194,6 +1194,9 @@ static const u8 *const sFooterTextOptions[NUM_FOOTER_TYPES][4] = {
 
 #include "data/easy_chat/easy_chat_groups.h"
 #include "data/easy_chat/easy_chat_words_by_letter.h"
+#if TEXT_RTL
+#include "data/easy_chat/easy_chat_order_rtl.h"
+#endif
 
 static const u16 sDefaultProfileWords[EASY_CHAT_BATTLE_WORDS_COUNT - 2] = {
     EC_WORD_I_AM,
@@ -5741,7 +5744,9 @@ static u16 SetSelectedWordGroup_GroupMode(u16 groupId)
     u32 i;
     int totalWords;
     const u16 *list;
+#if !TEXT_RTL
     const struct EasyChatWordInfo *wordInfo;
+#endif
     u16 numWords = gEasyChatGroups[groupId].numWords;
 
     if (groupId == EC_GROUP_POKEMON || groupId == EC_GROUP_POKEMON_NATIONAL
@@ -5758,6 +5763,15 @@ static u16 SetSelectedWordGroup_GroupMode(u16 groupId)
     }
     else
     {
+#if TEXT_RTL
+        // The group lists follow the order of the Hebrew texts (tools/hebrew/gen_ec_order.py).
+        list = sEasyChatRtlOrder[groupId];
+        for (i = 0, totalWords = 0; i < numWords; i++)
+        {
+            if (IsEasyChatIndexAndGroupUnlocked(list[i], groupId))
+                sWordData->selectedGroupWords[totalWords++] = EC_WORD(groupId, list[i]);
+        }
+#else
         wordInfo = gEasyChatGroups[groupId].wordData.words;
         for (i = 0, totalWords = 0; i < numWords; i++)
         {
@@ -5765,6 +5779,7 @@ static u16 SetSelectedWordGroup_GroupMode(u16 groupId)
             if (IsEasyChatIndexAndGroupUnlocked(alphabeticalOrder, groupId))
                 sWordData->selectedGroupWords[totalWords++] = EC_WORD(groupId, alphabeticalOrder);
         }
+#endif
 
         return totalWords;
     }
