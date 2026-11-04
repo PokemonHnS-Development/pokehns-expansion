@@ -699,6 +699,21 @@ static const struct EasyChatScreenTemplate sEasyChatScreenTemplates[] = {
     },
 };
 
+#if TEXT_RTL
+// The Hebrew keyboard, in reading order (the window is mirrored, so a row's first key is on the
+// right). 0 is 'Others', 1-22 are the letters alef to tav, the lists of
+// data/easy_chat/easy_chat_words_by_letter_rtl.h. Like the English one, the first row has six
+// letters and 'Others' and the second row six letters; the third row has seven and the last row
+// three (resh, shin, tav). The four keys after tav have no letter: they are blank, the cursor skips
+// them (GetLastAlphabetColumn) and they map to 'Others'.
+static const u8 sAlphabetGroupIdMap[NUM_ALPHABET_ROWS][NUM_ALPHABET_COLUMNS] = {
+    { 1,  2,  3,  4,  5,  6,  0},
+    { 7,  8,  9, 10, 11, 12,  0},
+    {13, 14, 15, 16, 17, 18, 19},
+    {20, 21, 22,  0,  0,  0,  0},
+};
+#define RTL_LAST_ALPHABET_ROW_COLUMNS 3
+#else
 // IDs are used indirectly as indexes into gEasyChatWordsByLetterPointers
 // 0 is 'Others', 1-26 are the letters A-Z
 // This array maps the group IDs to the alphabet keyboard
@@ -708,6 +723,7 @@ static const u8 sAlphabetGroupIdMap[NUM_ALPHABET_ROWS][NUM_ALPHABET_COLUMNS] = {
     {13, 14, 15, 16, 17, 18, 19},
     {20, 21, 22, 23, 24, 25, 26},
 };
+#endif
 
 static const u16 sMysteryGiftPhrase[NUM_QUESTIONNAIRE_WORDS] = {
     EC_WORD_LINK,
@@ -887,6 +903,7 @@ static const struct WindowTemplate sEasyChatYesNoWindowTemplate = {
 
 static const u8 sText_Clear17[] = _("{CLEAR 17}");
 
+#if !TEXT_RTL
 static const u8 *const sEasyChatKeyboardAlphabet[NUM_ALPHABET_ROWS] =
 {
     gText_EasyChatKeyboard_ABCDEFothers,
@@ -894,6 +911,7 @@ static const u8 *const sEasyChatKeyboardAlphabet[NUM_ALPHABET_ROWS] =
     gText_EasyChatKeyboard_MNOPQRS,
     gText_EasyChatKeyboard_TUVWXYZ,
 };
+#endif
 
 static const struct SpriteSheet sSpriteSheets[] = {
     {
@@ -1211,9 +1229,12 @@ static const u8 *const sFooterTextOptions[NUM_FOOTER_TYPES][4] = {
 };
 
 #include "data/easy_chat/easy_chat_groups.h"
-#include "data/easy_chat/easy_chat_words_by_letter.h"
 #if TEXT_RTL
+// The alphabet keyboard's lists by Hebrew letter (tools/hebrew/gen_ec_letters.py).
+#include "data/easy_chat/easy_chat_words_by_letter_rtl.h"
 #include "data/easy_chat/easy_chat_order_rtl.h"
+#else
+#include "data/easy_chat/easy_chat_words_by_letter.h"
 #endif
 
 static const u16 sDefaultProfileWords[EASY_CHAT_BATTLE_WORDS_COUNT - 2] = {
@@ -2654,6 +2675,10 @@ static u8 GetLastAlphabetColumn(u8 row)
     case 1:
         return NUM_ALPHABET_COLUMNS - 2; // At 6 letters, only the 2nd row (index 1) has less than the max columns
                                          // The 3rd and 4th row have 7 letters, the 1st row has 6 letters and 'Others'
+#if TEXT_RTL
+    case NUM_ALPHABET_ROWS - 1:
+        return RTL_LAST_ALPHABET_ROW_COLUMNS - 1;
+#endif
     }
 }
 
@@ -4291,6 +4316,41 @@ static void PrintKeyboardGroupNames(void)
     }
 }
 
+#if TEXT_RTL
+// Each key is printed on its own, centred on the cursor box that SetRectangleCursorPos_AlphabetMode
+// draws over it (screen x 32 plus the column offset, 'Others' at 158; the window starts at x 8).
+// The window is mirrored, so letter and box land on the same mirrored x. A string's width counts
+// the one-pixel gap after its last letter, which the mirrored window draws right of the letter;
+// rounding the half width up moves the letter itself into the middle of its box.
+static void PrintKeyboardAlphabet(void)
+{
+    u32 row, column;
+    u8 letter[2];
+
+    letter[1] = EOS;
+    for (row = 0; row < NUM_ALPHABET_ROWS; row++)
+    {
+        for (column = 0; column <= GetLastAlphabetColumn(row); column++)
+        {
+            const u8 *str;
+            int center;
+
+            if (row == 0 && column == NUM_ALPHABET_COLUMNS - 1)
+            {
+                str = gText_EasyChatKeyboard_Others;
+                center = 158 - 8;
+            }
+            else
+            {
+                letter[0] = CHAR_HEB_ALEF + sAlphabetGroupIdMap[row][column] - 1;
+                str = letter;
+                center = 32 + sAlphabetKeyboardColumnOffsets[column] - 8;
+            }
+            PrintEasyChatText(WIN_INPUT_SELECT, FONT_NORMAL, str, center - (GetStringWidth(FONT_NORMAL, str, 0) + 1) / 2, 97 + row * 16, TEXT_SKIP_DRAW, NULL);
+        }
+    }
+}
+#else
 static void PrintKeyboardAlphabet(void)
 {
     u32 i;
@@ -4298,6 +4358,7 @@ static void PrintKeyboardAlphabet(void)
     for (i = 0; i < ARRAY_COUNT(sEasyChatKeyboardAlphabet); i++)
         PrintEasyChatText(WIN_INPUT_SELECT, FONT_NORMAL, sEasyChatKeyboardAlphabet[i], 10, 97 + i * 16, TEXT_SKIP_DRAW, NULL);
 }
+#endif
 
 static void PrintInitialWordSelectText(void)
 {
