@@ -217,7 +217,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Conditions[] = {
     },
     [EC_INDEX(EC_WORD_ELSE)] =
     {
-        .text = COMPOUND_STRING("אחרת"),
+        .text = COMPOUND_STRING("אחר"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_LOUSY),
         .enabled = TRUE,
     },
@@ -385,7 +385,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Conditions[] = {
     },
     [EC_INDEX(EC_WORD_WELL)] =
     {
-        .text = COMPOUND_STRING("היטב"),
+        .text = COMPOUND_STRING("טוב"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_UNAVOIDABLE),
         .enabled = TRUE,
     },

@@ -151,7 +151,7 @@ const struct EasyChatWordInfo gEasyChatGroup_TrendySaying[] = {
     },
     [EC_INDEX(EC_WORD_WINNER)] =
     {
-        .text = COMPOUND_STRING("המנצח"),
+        .text = COMPOUND_STRING("מנצח"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_SMELL_YA),
         .enabled = TRUE,
     },

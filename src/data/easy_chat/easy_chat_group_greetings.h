@@ -205,7 +205,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Greetings[] = {
     },
     [EC_INDEX(EC_WORD_HEY)] =
     {
-        .text = COMPOUND_STRING("הי"),
+        .text = COMPOUND_STRING("היי"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_WELCOME),
         .enabled = TRUE,
     },
