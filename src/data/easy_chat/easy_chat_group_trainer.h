@@ -13,7 +13,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Trainer[] = {
     },
     [EC_INDEX(EC_WORD_TRADE)] =
     {
-        .text = COMPOUND_STRING("TRADE"),
+        .text = COMPOUND_STRING("החלפה"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_EGG),
         .enabled = TRUE,
     },
@@ -49,13 +49,13 @@ const struct EasyChatWordInfo gEasyChatGroup_Trainer[] = {
     },
     [EC_INDEX(EC_WORD_EGG)] =
     {
-        .text = COMPOUND_STRING("EGG"),
+        .text = COMPOUND_STRING("ביצה"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_GOLD),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_LINK)] =
     {
-        .text = COMPOUND_STRING("LINK"),
+        .text = COMPOUND_STRING("קישור"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_GOTCHA),
         .enabled = TRUE,
     },
@@ -79,7 +79,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Trainer[] = {
     },
     [EC_INDEX(EC_WORD_POKENAV)] =
     {
-        .text = COMPOUND_STRING("POKéNAV"),
+        .text = COMPOUND_STRING("פוקינאב"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_LEVEL),
         .enabled = TRUE,
     },
@@ -91,7 +91,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Trainer[] = {
     },
     [EC_INDEX(EC_WORD_GET)] =
     {
-        .text = COMPOUND_STRING("GET"),
+        .text = COMPOUND_STRING("להשיג"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_NATURE),
         .enabled = TRUE,
     },
@@ -103,49 +103,49 @@ const struct EasyChatWordInfo gEasyChatGroup_Trainer[] = {
     },
     [EC_INDEX(EC_WORD_RUBY)] =
     {
-        .text = COMPOUND_STRING("RUBY"),
+        .text = COMPOUND_STRING("אודם"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_POKEMON),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_LEVEL)] =
     {
-        .text = COMPOUND_STRING("LEVEL"),
+        .text = COMPOUND_STRING("רמה"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_POKENAV),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_RED)] =
     {
-        .text = COMPOUND_STRING("RED"),
+        .text = COMPOUND_STRING("אדום"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_RED),
         .enabled = FALSE,
     },
     [EC_INDEX(EC_WORD_GREEN)] =
     {
-        .text = COMPOUND_STRING("GREEN"),
+        .text = COMPOUND_STRING("ירוק"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_RUBY),
         .enabled = FALSE,
     },
     [EC_INDEX(EC_WORD_BAG)] =
     {
-        .text = COMPOUND_STRING("BAG"),
+        .text = COMPOUND_STRING("תיק"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_SAPPHIRE),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_FLAME)] =
     {
-        .text = COMPOUND_STRING("FLAME"),
+        .text = COMPOUND_STRING("להבה"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_SILVER),
         .enabled = FALSE,
     },
     [EC_INDEX(EC_WORD_GOLD)] =
     {
-        .text = COMPOUND_STRING("GOLD"),
+        .text = COMPOUND_STRING("זהב"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_SP_ABILITY),
         .enabled = FALSE,
     },
     [EC_INDEX(EC_WORD_LEAF)] =
     {
-        .text = COMPOUND_STRING("LEAF"),
+        .text = COMPOUND_STRING("עלה"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_TRADE),
         .enabled = FALSE,
     },
@@ -157,7 +157,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Trainer[] = {
     },
     [EC_INDEX(EC_WORD_EMERALD)] =
     {
-        .text = COMPOUND_STRING("EMERALD"),
+        .text = COMPOUND_STRING("ברקת"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_VERSION),
         .enabled = TRUE,
     },
