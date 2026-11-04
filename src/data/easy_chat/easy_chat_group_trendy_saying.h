@@ -37,7 +37,7 @@ const struct EasyChatWordInfo gEasyChatGroup_TrendySaying[] = {
     },
     [EC_INDEX(EC_WORD_MEGA)] =
     {
-        .text = COMPOUND_STRING("MEGA"),
+        .text = COMPOUND_STRING("מגה"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_DESTINY),
         .enabled = TRUE,
     },
@@ -61,7 +61,7 @@ const struct EasyChatWordInfo gEasyChatGroup_TrendySaying[] = {
     },
     [EC_INDEX(EC_WORD_NEW)] =
     {
-        .text = COMPOUND_STRING("NEW"),
+        .text = COMPOUND_STRING("חדש"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_HASSLE),
         .enabled = TRUE,
     },
@@ -79,7 +79,7 @@ const struct EasyChatWordInfo gEasyChatGroup_TrendySaying[] = {
     },
     [EC_INDEX(EC_WORD_LOSER)] =
     {
-        .text = COMPOUND_STRING("LOSER"),
+        .text = COMPOUND_STRING("לוזר"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_KIDDING),
         .enabled = TRUE,
     },
@@ -103,13 +103,13 @@ const struct EasyChatWordInfo gEasyChatGroup_TrendySaying[] = {
     },
     [EC_INDEX(EC_WORD_SHAKE)] =
     {
-        .text = COMPOUND_STRING("SHAKE"),
+        .text = COMPOUND_STRING("לנער"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_LOSING),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_SHADY)] =
     {
-        .text = COMPOUND_STRING("SHADY"),
+        .text = COMPOUND_STRING("חשוד"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_MEGA),
         .enabled = TRUE,
     },
@@ -133,7 +133,7 @@ const struct EasyChatWordInfo gEasyChatGroup_TrendySaying[] = {
     },
     [EC_INDEX(EC_WORD_BANG)] =
     {
-        .text = COMPOUND_STRING("BANG"),
+        .text = COMPOUND_STRING("בום"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_OLD),
         .enabled = TRUE,
     },
@@ -151,13 +151,13 @@ const struct EasyChatWordInfo gEasyChatGroup_TrendySaying[] = {
     },
     [EC_INDEX(EC_WORD_WINNER)] =
     {
-        .text = COMPOUND_STRING("מנצח"),
+        .text = COMPOUND_STRING("המנצח"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_SMELL_YA),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_FEVER)] =
     {
-        .text = COMPOUND_STRING("FEVER"),
+        .text = COMPOUND_STRING("קדחת"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_UGLY),
         .enabled = TRUE,
     },
@@ -169,31 +169,31 @@ const struct EasyChatWordInfo gEasyChatGroup_TrendySaying[] = {
     },
     [EC_INDEX(EC_WORD_BABY)] =
     {
-        .text = COMPOUND_STRING("BABY"),
+        .text = COMPOUND_STRING("תינוק"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_WANNABE),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_HEART)] =
     {
-        .text = COMPOUND_STRING("HEART"),
+        .text = COMPOUND_STRING("לב"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_WINNER),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_OLD)] =
     {
-        .text = COMPOUND_STRING("OLD"),
+        .text = COMPOUND_STRING("זקן"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_YEEHAW_EXCL),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_YOUNG)] =
     {
-        .text = COMPOUND_STRING("YOUNG"),
+        .text = COMPOUND_STRING("צעיר"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_YES_SIR_EXCL),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_UGLY)] =
     {
-        .text = COMPOUND_STRING("UGLY"),
+        .text = COMPOUND_STRING("מכוער"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_YOUNG),
         .enabled = TRUE,
     },
