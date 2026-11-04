@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""dbgmenu.py ROM OUTDIR --setup FILE --save SAV [--clip] [--only info,party,switch]
+"""dbgmenu.py ROM OUTDIR --setup FILE --save SAV [--clip] [--only info,party,switch] [--party-pages K,K]
 
 The battle debug menu's AI pages with every hold-effect name (src/battle_debug.c sHoldEffectNames,
 printed by GetHoldEffectName) and the AI's "switching to" line. E (tools/hebrew/emu) is this script's
@@ -16,7 +16,9 @@ Main list rows (src/battle_debug.c): 12 AI points, 13 AI info, 14 AI party.
   party   row 14, six hold effects per page: gAiPartyData->mons[side][0..5].heldEffect and
           count[side] = 6 for both sides; PutAiPartyText prints the first 7 bytes of each name with
           FONT_SMALL_NARROW in 41 px columns (opened once as is first: its first drawing is
-          garbled in both builds).
+          garbled in both builds). Only the first page with six Pokemon in a battle draws its
+          text (both builds; the icons still come up on the later ones), so --party-pages K
+          draws only page K (effects 6K+1 .. 6K+6): one run per page shows each page's text.
 Struct offsets (tools/hebrew/emu/probe style probe, the Hebrew and English trees agree):
 AiLogicData holdEffects +0x10 (u8 each), mostSuitableMonId +0x378, shouldSwitch bits 0-3 of
 +0x3C5; AiPartyData mons +0 (AiPartyMon 0x1C bytes, heldEffect +4), count +0x150.
@@ -62,6 +64,7 @@ def main():
     ap.add_argument("--save", required=True)
     ap.add_argument("--clip", action="store_true")
     ap.add_argument("--only", default="switch,info,party")
+    ap.add_argument("--party-pages", default="", help="the six-effect party pages to draw (k numbers, default all)")
     a = ap.parse_args()
     rom = os.path.abspath(a.rom)
     out = os.path.abspath(a.out)
@@ -126,7 +129,10 @@ def main():
             # the first opening of the page draws over the AI-info page left in the window (both
             # builds), so it is opened once as is before the pokes
             view("Task_ShowAiParty", "dbg_p14_party_asis", [])
+            pages = {int(x) for x in a.party_pages.split(",") if x}
             for k in range(0, len(effects), 6):
+                if pages and k // 6 not in pages:
+                    continue
                 grp = effects[k:k + 6]
                 for side in (0, 1):
                     for i in range(6):

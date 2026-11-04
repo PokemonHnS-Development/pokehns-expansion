@@ -1,0 +1,22 @@
+# The frostbite tag on all four healthboxes of a double battle with the Gen 4 battle UI: battlers 0-3 draw
+# it from graphics/battle_interface/gen4/status.png, status2.png, status3.png and status4.png
+# (GetStatusIconForBattlerId, src/battle_interface.c). A wild double battle (setwildbattle with a second
+# species, src/scrcmd.c ScrCmd_setwildbattle); the player's two Pokemon get the status from setstatus1,
+# the two wild ones in gEnemyParty (struct Pokemon status, +0x50, outside the encrypted substructs) after
+# setwildbattle has created them and before the battle reads them.
+# Save: ladder1_newgame.sav (HNS_SAVES). Run with scripts/r4_battle_options/r4opt.py tour (opt).
+start saves/ladder1_newgame.sav
+include ../_battle_base.txt
+opt newBattleUI=1
+ev givemon SPECIES_TYPHLOSION, 50, move1=MOVE_TACKLE; givemon SPECIES_FERALIGATR, 50, move1=MOVE_TACKLE; end
+ev setstatus1 STATUS1_FROSTBITE, PARTY_SIZE; end
+pinrng
+ev setwildbattle SPECIES_RATTATA, 3, ITEM_NONE, SPECIES_PIDGEY, 3; end
+w32 @gEnemyParty+50@ 1000
+w32 @gEnemyParty+B4@ 1000
+evstart dowildbattle; end
+waitbattle
+bwalk frb_g4d_intro input:HandleInputChooseAction
+snap frb_g4d_healthboxes
+baction RUN
+bwalk frb_g4d_run free
