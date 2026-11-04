@@ -5280,7 +5280,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .description = COMPOUND_STRING(
             "יצור שנוטה למלנכוליה. השריון המתכתי שלו\n"
             "התפתח כשהריר שעל עורו הגיב עם הברזל\n"
-            "שבמימי Hisui."),
+            "שבמימי היסואי."),
         .pokemonScale = 366,
         .pokemonOffset = 7,
         .trainerScale = 257,

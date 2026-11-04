@@ -539,7 +539,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
             "אומרים שהוא מטהר בלהבותיו נשמות אבודות\n"
             "ונטושות ומוליך אותן לעולם הבא.\n"
             "מאמינים שבימי קדם צורתו הושפעה\n"
-            "מהאנרגיה של Mt. Coronet."),
+            "מהאנרגיה של הר הנזר."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 268,

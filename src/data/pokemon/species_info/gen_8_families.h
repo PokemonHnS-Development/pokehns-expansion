@@ -7131,7 +7131,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .height = 1000,
         .weight = 0,
         .description = COMPOUND_STRING(
-            "בעקבות ההתערבות של Rose, אטרנטוס\n"
+            "בעקבות ההתערבות של רוז, אטרנטוס\n"
             "ספג את כל האנרגיה באזור גלאר.\n"
             "כעת הוא נמצא בעומס יתר של כוח."),
         .pokemonScale = 230,
