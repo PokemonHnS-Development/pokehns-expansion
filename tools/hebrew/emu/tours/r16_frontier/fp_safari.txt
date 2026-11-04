@@ -1,0 +1,16 @@
+# START in Safari mode: the Safari balls / steps side window (ShowSafariBallsWindow src/start_menu.c:463-473,
+# gText_MenuSafariStats '{STR_VAR_1}/{STR_VAR_2}\nכדורים  {STR_VAR_3}'). EnterSafariMode is the special the
+# H&S Safari gate runs (FuchsiaCity_SafariZoneEntrance_hns/scripts.inc:133), called from RAM in the Safari
+# Zone (Fuchsia, H&S map).
+start saves/ladder6_postgame.sav
+include ../../scripts/continue.txt
+warptoloose MAP_FUCHSIA_CITY_SAFARI_ZONE_BEACH_HNS 19 38
+waitnotask map_name_popup:Task_MapNamePopUpWindow 600
+waitctl 600 B
+ev special EnterSafariMode; end
+w32 @gMenuCallback@ 0
+startmenux 0 nopress
+waitquiet
+snap fp_sf_01_startmenu_safari
+tap B 4
+waitctl 300 B
