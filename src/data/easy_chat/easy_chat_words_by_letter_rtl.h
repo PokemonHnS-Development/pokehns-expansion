@@ -106,11 +106,12 @@ static const u16 sEasyChatWordsByLetterRtl_Alef[] = {
     EC_WORD_DUDE,
     EC_WORD_STICKY_HOLD,
     EC_WORD_SIBLINGS,
+    DOUBLE_SPECIES_NAME
+    EC_WORD_ELSE,
     EC_WORD_OTHER,
     EC_WORD_LAST,
     EC_WORD_AFTER,
     EC_WORD_LATER,
-    EC_WORD_ELSE,
     EC_WORD_AN,
     EC_WORD_SOUNDPROOF,
     DOUBLE_SPECIES_NAME
@@ -128,7 +129,6 @@ static const u16 sEasyChatWordsByLetterRtl_Alef[] = {
     EC_POKEMON(ILLUMISE),
     EC_WORD_HAVEN_T,
     EC_WORD_ISN_T,
-    EC_WORD_AREN_T,
     EC_WORD_PICKUP,
     EC_WORD_WHERE,
     EC_WORD_EVER,
@@ -138,10 +138,10 @@ static const u16 sEasyChatWordsByLetterRtl_Alef[] = {
     EC_WORD_EVENTS,
     EC_WORD_MAN,
     EC_WORD_WOMAN,
+    EC_WORD_OWN,
     EC_WORD_STURDY,
     EC_WORD_TRULY,
     EC_WORD_CARE,
-    EC_WORD_DON_T,
     EC_WORD_THESE,
     EC_WORD_THESE_WERE,
     EC_WORD_THOSE,
@@ -179,7 +179,9 @@ static const u16 sEasyChatWordsByLetterRtl_Alef[] = {
     EC_WORD_SIGH,
     EC_WORD_WE,
     EC_POKEMON_NATIONAL(ENTEI),
+    DOUBLE_SPECIES_NAME
     EC_WORD_I,
+    EC_WORD_I_AM,
     EC_WORD_I_CHOOSE_YOU,
     EC_WORD_ANIME,
     EC_WORD_ENCYCLOPEDIA,
@@ -187,6 +189,7 @@ static const u16 sEasyChatWordsByLetterRtl_Alef[] = {
     EC_WORD_DISASTER,
     EC_WORD_STRATEGY,
     EC_POKEMON_NATIONAL(ESPEON),
+    EC_WORD_NONE,
     EC_WORD_DARK,
     EC_MOVE(SKY_UPPERCUT),
     EC_POKEMON_NATIONAL(EXEGGCUTE),
@@ -207,8 +210,9 @@ static const u16 sEasyChatWordsByLetterRtl_Alef[] = {
     EC_MOVE(SACRED_FIRE),
     EC_MOVE(WILL_O_WISP),
     EC_WORD_CHALLENGE,
+    DOUBLE_SPECIES_NAME
     EC_WORD_YOU,
-    EC_WORD_IT,
+    EC_WORD_YOU_RE,
     EC_WORD_YESTERDAY,
     EC_WORD_WHOM,
 };
@@ -457,9 +461,10 @@ static const u16 sEasyChatWordsByLetterRtl_He[] = {
     EC_MOVE2(IRON_DEFENSE),
     EC_WORD_I_VE_ARRIVED,
     EC_WORD_TIGHT,
-    EC_WORD_THAT,
     EC_WORD_OPPOSITE,
+    DOUBLE_SPECIES_NAME
     EC_WORD_HE,
+    EC_WORD_IS,
     EC_WORD_MESSAGE,
     EC_WORD_HOO_HAH,
     EC_POKEMON_NATIONAL(HO_OH),
@@ -479,7 +484,6 @@ static const u16 sEasyChatWordsByLetterRtl_He[] = {
     EC_WORD_TRADE,
     EC_MOVE2(SOFT_BOILED),
     EC_MOVE2(FAKE_OUT),
-    EC_WORD_HEY,
     EC_WORD_SHE,
     EC_WORD_SHE_WAS,
     EC_WORD_YAY,
@@ -491,19 +495,17 @@ static const u16 sEasyChatWordsByLetterRtl_He[] = {
     EC_WORD_WERE,
     EC_WORD_TODAY,
     EC_WORD_BEING,
-    EC_WORD_WELL,
     EC_POKEMON_NATIONAL(HITMONTOP),
     EC_POKEMON_NATIONAL(HITMONLEE),
     EC_POKEMON_NATIONAL(HITMONCHAN),
+    DOUBLE_SPECIES_NAME
+    EC_WORD_HEY,
     EC_WORD_HI,
     EC_WORD_HEY_QUES,
     EC_WORD_HIYAH,
     EC_WORD_I_WAS,
     EC_WORD_HALL_OF_FAME,
     EC_WORD_SHE_IS,
-    EC_WORD_IS,
-    EC_WORD_YOU_RE,
-    EC_WORD_ARE,
     EC_MOVE(REVERSAL),
     EC_POKEMON_NATIONAL(HYPNO),
     EC_MOVE(HYPNOSIS),
@@ -515,13 +517,14 @@ static const u16 sEasyChatWordsByLetterRtl_He[] = {
     EC_WORD_OI,
     EC_WORD_WALKING,
     EC_WORD_WENT,
+    DOUBLE_SPECIES_NAME
+    EC_WORD_ARE,
     EC_WORD_THEY,
     EC_WORD_THEY_WERE,
     EC_WORD_HUSTLE,
     EC_WORD_SHOCKED,
     EC_WORD_A_LOT,
     EC_WORD_HMM,
-    EC_WORD_WINNER,
     EC_MOVE2(CONVERSION),
     EC_MOVE2(CONVERSION_2),
     EC_WORD_HERE_I_COME,
@@ -529,7 +532,6 @@ static const u16 sEasyChatWordsByLetterRtl_He[] = {
     EC_WORD_HERE_GOES,
     EC_WORD_HE_S,
     EC_WORD_THEY_RE,
-    EC_WORD_I_AM,
     EC_MOVE2(CAMOUFLAGE),
     EC_MOVE2(BATON_PASS),
     EC_MOVE(MIRROR_MOVE),
@@ -546,12 +548,12 @@ static const u16 sEasyChatWordsByLetterRtl_He[] = {
     EC_WORD_DESTROYED,
     EC_WORD_AWAY,
     EC_POKEMON(HARIYAMA),
-    EC_WORD_THAT_S,
     EC_MOVE2(TOXIC),
     EC_WORD_ADVENTURE,
     DOUBLE_SPECIES_NAME
     EC_POKEMON(HERACROSS),
     EC_POKEMON_NATIONAL(HERACROSS),
+    EC_WORD_LEFT,
     EC_MOVE(DISABLE),
     EC_MOVE(SHARPEN),
     EC_WORD_GOT,
@@ -630,6 +632,10 @@ static const u16 sEasyChatWordsByLetterRtl_Vav[] = {
 
 static const u16 sEasyChatWordsByLetterRtl_Zayin[] = {
     EC_POKEMON_NATIONAL(ZAPDOS),
+    EC_WORD_THAT,
+    EC_EMPTY_WORD, 3,
+    EC_WORD_IT,
+    EC_WORD_THAT_S,
     EC_WORD_THIS,
     EC_WORD_GOLD,
     EC_WORD_THAT_WAS,
@@ -680,7 +686,6 @@ static const u16 sEasyChatWordsByLetterRtl_Het[] = {
     EC_MOVE(OVERHEAT),
     EC_MOVE2(ACID),
     EC_WORD_VACATION,
-    EC_WORD_RULE,
     EC_MOVE(ODOR_SLEUTH),
     EC_WORD_WINTER,
     EC_WORD_SENSE,
@@ -737,7 +742,9 @@ static const u16 sEasyChatWordsByLetterRtl_Tet[] = {
     EC_POKEMON_NATIONAL(TAUROS),
     EC_WORD_NATURAL,
     EC_POKEMON_NATIONAL(TEDDIURSA),
+    DOUBLE_SPECIES_NAME
     EC_WORD_GOOD,
+    EC_WORD_WELL,
     EC_POKEMON_NATIONAL(TOGETIC),
     EC_POKEMON_NATIONAL(TOGEPI),
     EC_POKEMON_NATIONAL(TOTODILE),
@@ -888,8 +895,11 @@ static const u16 sEasyChatWordsByLetterRtl_Kaf[] = {
 
 static const u16 sEasyChatWordsByLetterRtl_Lamed[] = {
     EC_WORD_TO,
-    EC_WORD_NOT,
+    EC_EMPTY_WORD, 4,
+    EC_WORD_AREN_T,
+    EC_WORD_DON_T,
     EC_WORD_NO,
+    EC_WORD_NOT,
     EC_WORD_DISLIKE,
     EC_WORD_WASN_T,
     EC_WORD_WEREN_T,
@@ -904,9 +914,9 @@ static const u16 sEasyChatWordsByLetterRtl_Lamed[] = {
     EC_WORD_UNBELIEVABLE,
     EC_WORD_DISLIKES,
     EC_WORD_COLLECT,
+    EC_WORD_WON_T,
     EC_WORD_DOESN_T,
     EC_WORD_DIDN_T,
-    EC_WORD_WON_T,
     EC_WORD_HEART,
     EC_WORD_ALONE,
     EC_POKEMON(LUVDISC),
@@ -937,7 +947,6 @@ static const u16 sEasyChatWordsByLetterRtl_Lamed[] = {
     EC_WORD_GUARD,
     EC_WORD_CONCEDE,
     EC_WORD_APPEAR,
-    EC_WORD_OWN,
     EC_WORD_RESUSCITATE,
     EC_WORD_DECIDE,
     EC_WORD_SLIDE,
@@ -992,7 +1001,6 @@ static const u16 sEasyChatWordsByLetterRtl_Lamed[] = {
     EC_POKEMON_NATIONAL(LICKITUNG),
     EC_POKEMON(LAIRON),
     EC_WORD_SLEEP,
-    EC_WORD_NONE,
     EC_WORD_NON_STOP,
     EC_WORD_GO,
     EC_WORD_GO_HOME,
@@ -1212,6 +1220,8 @@ static const u16 sEasyChatWordsByLetterRtl_Mem[] = {
     EC_WORD_MC,
     EC_POKEMON_NATIONAL(MANTINE),
     EC_WORD_TRIES,
+    DOUBLE_SPECIES_NAME
+    EC_WORD_WINNER,
     EC_WORD_WINS,
     EC_POKEMON(MANECTRIC),
     EC_WORD_AROUND,
@@ -1253,7 +1263,6 @@ static const u16 sEasyChatWordsByLetterRtl_Mem[] = {
     EC_WORD_CASE,
     EC_WORD_LISTENS,
     EC_WORD_MR,
-    EC_WORD_LOOK,
     EC_WORD_EXCITING,
     EC_WORD_SHREDDED,
     EC_WORD_SATISFIED,
@@ -1506,6 +1515,7 @@ static const u16 sEasyChatWordsByLetterRtl_Ayin[] = {
     EC_WORD_NEARLY,
     EC_WORD_EXCESS,
     EC_WORD_WORLD,
+    EC_WORD_WILL,
     EC_MOVE(STRENGTH),
     EC_MOVE2(MAGNITUDE),
     EC_WORD_ROUGH_SKIN,
@@ -1548,7 +1558,6 @@ static const u16 sEasyChatWordsByLetterRtl_Ayin[] = {
     EC_WORD_DID,
     EC_WORD_WOULD,
     EC_WORD_WHITE_SMOKE,
-    EC_WORD_WILL,
     EC_WORD_OLDEN,
 };
 
@@ -1866,6 +1875,7 @@ static const u16 sEasyChatWordsByLetterRtl_Shin[] = {
     EC_MOVE(TAIL_WHIP),
     EC_WORD_LAY,
     EC_WORD_FORGETS,
+    EC_WORD_RULE,
     EC_WORD_THICK_FAT,
     EC_WORD_HEARS,
     EC_WORD_DIFFERENT,
@@ -1904,7 +1914,6 @@ static const u16 sEasyChatWordsByLetterRtl_Shin[] = {
     EC_WORD_WHOSE,
     EC_WORD_OUR,
     EC_WORD_THERE,
-    EC_WORD_LEFT,
     EC_WORD_HAPPY,
     EC_WORD_JOY,
     EC_WORD_HEARING,
@@ -1961,6 +1970,7 @@ static const u16 sEasyChatWordsByLetterRtl_Tav[] = {
     EC_WORD_GOTCHA,
     EC_WORD_GO_EASY,
     EC_WORD_LISTEN,
+    EC_WORD_LOOK,
 };
 
 // The keyboard uses the first 23 alphabet groups; the others stay empty.
@@ -2059,7 +2069,7 @@ const struct EasyChatWordsByLetter gEasyChatWordsByLetterPointers[EC_NUM_ALPHABE
     },
 };
 
-// The longest list offers 240 words; the screen copies a list into a buffer of
+// The longest list offers 239 words; the screen copies a list into a buffer of
 // EC_MAX_WORDS_IN_GROUP words.
-STATIC_ASSERT(240 <= EC_MAX_WORDS_IN_GROUP, EasyChatWordsByLetterRtlFit);
+STATIC_ASSERT(239 <= EC_MAX_WORDS_IN_GROUP, EasyChatWordsByLetterRtlFit);
 STATIC_ASSERT(23 <= EC_NUM_ALPHABET_GROUPS, EasyChatWordsByLetterRtlCount);
