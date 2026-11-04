@@ -1018,7 +1018,8 @@ def selftest(a):
     outdir = os.path.abspath(a.outdir)
     os.makedirs(outdir, exist_ok=True)
     units = {u["label"]: u for u in load_units(a.units)}
-    cands = [a.label] if a.label else [u["label"] for u in units.values() if u["translated"]]
+    # the loop below keeps only labels whose string in this ROM has Hebrew letters
+    cands = list(a.label) if a.label else [u["label"] for u in units.values()]
     pick = None
     for lab in cands:
         addr = target.label_addr(lab)
@@ -1039,7 +1040,7 @@ def selftest(a):
             pick = (lab, addr, nl[0], raw)
             break
     if not pick:
-        raise SystemExit("selftest: no translated label with a long enough two-row page")
+        raise SystemExit("selftest: no label with Hebrew letters and a long enough two-row page")
     lab, addr, nloff, raw = pick
     patched = os.path.join(outdir, "selftest_patched.gba")
     data = bytearray(target.rom_bytes)
