@@ -71,7 +71,11 @@ order and printed left to right in its English position.
   back to the narrower font when a name is wider than its column; the A–Z order is generated from
   the Hebrew names (`gen_dex_alpha.py`).
 - The Easy Chat group lists follow the Hebrew order of the words, generated from the word texts
-  (`gen_ec_order.py`, `src/data/easy_chat/easy_chat_order_rtl.h`).
+  (`gen_ec_order.py`, `src/data/easy_chat/easy_chat_order_rtl.h`). The ABC keyboard shows the
+  Hebrew letters, each opening the words, species and moves whose Hebrew text starts with it
+  (`gen_ec_letters.py`, `src/data/easy_chat/easy_chat_words_by_letter_rtl.h`). The keyboard and
+  the word list are mirrored inside the frame drawn behind them, the cursors stand right of their
+  word and point left, and the YES/NO box sits at the mirrored place in the phrase frame.
 - The healthbox drops the level glyph when glyph and digits do not fit (level 100).
 - Lists sorted by name (the bag's A–Z sort, the move relearner) use `StringCompareAlphabetical`:
   final letters sort with their ordinary forms, and a name sorts before the longer names that
@@ -114,6 +118,7 @@ message under 424.
 | `rom_sweep.py` | Finds English left in a built ROM |
 | `gen_dex_alpha.py` | Regenerates the Pokédex A–Z order |
 | `gen_ec_order.py` | Regenerates the Hebrew order of the Easy Chat group lists |
+| `gen_ec_letters.py` | Regenerates the Easy Chat ABC keyboard's lists by Hebrew letter |
 | `emu/` | Headless mGBA harness, the save ladder, the screen tours (`hns.py tour`), the dialogue sweep (`sweep.py`), the map walk (`mapwalk.py`) and the libretro frontend for other cores (`crosscore.c`) |
 | `check_tests.py` | Compares a `make check` log with the tests upstream already fails (`data/known_test_failures.txt`) |
 | `check_chunked.py` | Runs the `make check` suite one test-name prefix at a time, so that it fits the memory of a CI runner; a test in `data/crashing_tests.txt` runs alone |
@@ -151,8 +156,9 @@ Each build's `TESTING.md` lists what was tested on that exact ROM and what was n
   English column of the default names.
 - **Easy Chat.** All 999 Easy Chat words are Hebrew: 517 from the first translation and 482 from
   FireRed's words and the glossary (the other 9 entries of the lists are punctuation). Trainer
-  phrases put the words in English order, one word after another. The ABC keyboard files the words
-  by the initial of their English spelling (`DECISIONS.md` Q135).
+  phrases put the words in English order, one word after another. The ABC keyboard shows the 22
+  Hebrew letters and files every word, species and move under the first letter of its Hebrew text
+  (`DECISIONS.md` Q135).
 - **Kept in English on purpose:** the debug menus, the credits, the Odd Egg name list (the game
   compares it with the player's name).
 - **Graphics.** The PNGs in `graphics/` are the source of truth; the scripts that drew the Hebrew

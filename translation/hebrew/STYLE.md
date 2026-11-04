@@ -87,8 +87,9 @@ Only characters in `charmap.txt`. In particular:
   and 12 bytes, like the widest English word; no two enabled words may print the same text
   (English has no such pair); glossary names and terms keep their glossary form; the Odd Egg hint
   windows (`src/data/help_window.h`) quote the password words exactly. After changing a word, run
-  `tools/hebrew/gen_ec_order.py` (the Hebrew order of the group lists);
-  `tools/hebrew/tests/test_easy_chat.py` checks the rest.
+  `tools/hebrew/gen_ec_order.py` (the Hebrew order of the group lists) and
+  `tools/hebrew/gen_ec_letters.py` (the ABC keyboard's lists, which a species or move rename also
+  changes); `tools/hebrew/tests/test_easy_chat.py` checks the rest.
 
 ## 6. Length and width (checked by `tools/hebrew/audit.py`)
 
