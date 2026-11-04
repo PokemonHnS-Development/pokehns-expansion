@@ -1,5 +1,6 @@
 # Validate a ladder save the way the 2.0.x upgrade procedure wants it used:
-#   ladder.py run scripts/ladder_validate.txt OUT --save $HNS_SAVES/ladderN_*.sav
+#   ladder.py run scripts/ladder_validate.txt OUT --save $HNS_SAVES/ladderN_*.sav   (N = 2-6;
+#   rung 1, the new game in the bedroom, uses ladder_validate_newgame.txt)
 # Cold boot, CONTINUE, walk OUT of the Pokemon Center first, walk around the town, then
 # open the Pokedex, the party, the bag and the trainer card from the start menu. Every
 # step waits on game state; B closes whatever is open. Look at the screenshots.

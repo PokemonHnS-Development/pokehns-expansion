@@ -116,6 +116,7 @@ status 1 when:
 
 - `gbafix.log` does not end in `gbafix: header already valid`.
 - `selfcheck.log` does not end in `all checks passed`.
+- A save-ladder log (`tests/ladder_*.log`) does not end in `exit 0`.
 - The sweep has a CLIP, CRASH, HANG or ABNORMAL label.
 - A map in the map walk ends in a status other than OK or HELD.
 - The maps held only in Hebrew differ from `map_walk.hebrew_only_held`.

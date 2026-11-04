@@ -83,7 +83,9 @@ if [ -d "$WT" ]; then
 else
   bad+=("no release worktree $WT (build_release.sh makes it; HNS_RELEASE_WORKTREE points elsewhere)")
 fi
-for f in hns.py sweep.py ladder.py mapwalk.py scripts/ladder_validate.txt; do need_file "$EMU/$f" "the harness, HNS_EMU"; done
+for f in hns.py sweep.py ladder.py mapwalk.py scripts/ladder_validate.txt scripts/ladder_validate_newgame.txt; do
+  need_file "$EMU/$f" "the harness, HNS_EMU"
+done
 if [ -z "$SAVES" ]; then
   bad+=("HNS_SAVES is not set (the save ladder; emu/scripts/make_ladder.sh builds it)")
 else
@@ -128,7 +130,15 @@ echo "== clip tours"; python3 hns.py --rom "$CLIP" tour "$CLIP" "$OUT/tours_clip
 echo "== sweep";      python3 sweep.py run "$CLIP" "$OUT/sweep" --save "$SAVES/ladder4_league.sav" --shots clip > "$OUT/sweep.log" 2>&1; grep "totals" "$OUT/sweep.log" | tail -1
 echo "== selfcheck";  python3 hns.py --rom "$ROM" selfcheck --save "$SAVES/ladder4_league.sav" > "$OUT/selfcheck.log" 2>&1; tail -1 "$OUT/selfcheck.log"
 echo "== ladder"
-for s in "$SAVES"/ladder*.sav; do n=$(basename "$s" .sav); python3 ladder.py --rom "$ROM" run scripts/ladder_validate.txt "$OUT/ladder/$n" --save "$s" > "$OUT/ladder_$n.log" 2>&1; echo "  $n exit $? $(ls "$OUT/ladder/$n" 2>/dev/null | grep -c png) shots"; done
+# Rung 1 is a new game saved in the bedroom (no Center, Pokedex or party yet), so it has its own
+# validation script. Each log ends in the script's exit status, which make_testing_md.py checks.
+for s in "$SAVES"/ladder*.sav; do
+  n=$(basename "$s" .sav); v=scripts/ladder_validate.txt
+  [ "$n" = ladder1_newgame ] && v=scripts/ladder_validate_newgame.txt
+  python3 ladder.py --rom "$ROM" run "$v" "$OUT/ladder/$n" --save "$s" > "$OUT/ladder_$n.log" 2>&1; rc=$?
+  echo "exit $rc" >> "$OUT/ladder_$n.log"
+  echo "  $n exit $rc $(ls "$OUT/ladder/$n" 2>/dev/null | grep -c png) shots"
+done
 echo "== map walk";   python3 mapwalk.py "$ROM" "$SAVES/ladder6_postgame.sav" "$OUT/mapwalk" > "$OUT/mapwalk.log" 2>&1; tail -1 "$OUT/mapwalk.log"
 echo "== cross-core"
 for core in mgba vbam vba_next gpsp mednafen_gba skyemu; do

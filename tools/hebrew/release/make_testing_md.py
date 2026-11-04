@@ -18,7 +18,8 @@ Environment:
 
 Exit status 2 when an input is missing, 1 when the inputs contradict a sentence of the report
 (a failing self-check, a clipped or crashed label, a crashed map, a changed header, held maps
-that notes.json does not explain), 0 when OUT.md was written.
+that notes.json does not explain, a save-ladder rung whose validation did not exit 0), 0 when
+OUT.md was written.
 """
 import argparse
 import collections
@@ -102,12 +103,13 @@ def main():
     chk = subprocess.run([sys.executable, CHECK_TESTS, os.path.join(RC, 'make_check.log')],
                          capture_output=True, text=True).stdout.strip()
     cc = open(os.path.join(T, 'crosscore.txt')).read().strip()
-    ladder = {}
+    ladder, ladder_exit = {}, {}
     for f in sorted(os.listdir(T)):
         m = re.match(r'ladder_(ladder\d_\w+)\.log', f)
         if m:
             shots = len([x for x in os.listdir(os.path.join(T, 'ladder', m.group(1))) if x.endswith('.png')]) if os.path.isdir(os.path.join(T, 'ladder', m.group(1))) else 0
             ladder[m.group(1)] = shots
+            ladder_exit[m.group(1)] = last_line(os.path.join(T, f))
     vis = os.path.exists(os.path.join(RC, 'visual_findings.json'))
     rom = info['pokehns.gba']; clip = info.get('pokehns-clip.gba', {})
     en_held = {r['map'] for r in json.load(open(EN_MAPWALK)) if r['status'] != 'OK'}
@@ -121,6 +123,10 @@ def main():
         wrong.append('gbafix.log does not end in "gbafix: header already valid"; the report says gbafix changes nothing')
     if last_line(os.path.join(T, 'selfcheck.log')) != 'all checks passed':
         wrong.append('selfcheck.log does not end in "all checks passed"')
+    for n, last in ladder_exit.items():
+        if last != 'exit 0':
+            wrong.append('ladder_%s.log does not end in "exit 0" (run_release_tests.sh appends the validation '
+                         'script\'s exit status); the Save ladder row reports every rung as loaded' % n)
     bad_sweep = {k: v for k, v in sweep['summary'].items() if k not in ('OK', 'SKIP', 'warnings') and v}
     if bad_sweep:
         wrong.append('the sweep has %s; the report says 0 clipped' % bad_sweep)
@@ -156,7 +162,7 @@ def main():
     w('| Clip-report tours | the same tours on the clip-report build, which logs every glyph drawn outside its window | %d OK of %d, %d glyphs outside a window |' % (sum(1 for v in ctours.values() if v['status'] == 'OK'), len(ctours), sum(v.get('clipped', 0) or 0 for v in ctours.values())))
     w('| Dialogue sweep | every reachable dialogue label rendered in the message box on the clip-report build, page by page | %s OK, %s skipped (labels not built into the ROM), 0 clipped |' % (sweep['summary'].get('OK'), sweep['summary'].get('SKIP')))
     w('| Map walk | warp into every Heart & Soul map from a post-game save, fight any battle, read any text | %d maps: %d OK, %d held, 0 crashes |' % (len(mw), mwc.get('OK', 0), mwc.get('HELD', 0)))
-    w('| Save ladder | six saves (new game, badge 1, Ecruteak, League, Kanto, post-game) made with the **English** %s ROM, loaded in this ROM: continue, walk out, Pokédex, party, bag, trainer card, PokéGear | %s |' % (notes['upstream_version'], ', '.join('%s: %d screenshots' % kv for kv in ladder.items())))
+    w('| Save ladder | six saves (new game, badge 1, Ecruteak, League, Kanto, post-game) made with the **English** %s ROM, loaded in this ROM. Rung 1 (a new game in the bedroom): continue, bag, trainer card. Rungs 2-6: continue, walk out of the Pokémon Center, Pokédex, party, bag, trainer card, PokéGear | %s |' % (notes['upstream_version'], ', '.join('%s: %d screenshots' % kv for kv in ladder.items())))
     w('| Harness self-check | struct offsets the harness pokes, checked against the ELF and a live game | all checks passed |')
     w('| Cross-core | the same input on RetroArch\'s mGBA core and the VBA-M, VBA-Next, gpSP, Mednafen-GBA and SkyEmu libretro cores, frames compared with mGBA after RGB565 reduction | see below |')
     w('| Static checks | drift (only strings differ from the English engine baseline), layout audit (widths, lines, buffers, byte limits), glossary checks | %s |' % notes['static_checks'])
