@@ -66,9 +66,11 @@ Only characters in `charmap.txt`. In particular:
 
 - Preserve every `{...}` token byte for byte and **in the same order** as the English string:
   `{PLAYER}`, `{RIVAL}`, `{STR_VAR_1..3}`, `{B_*}`, `{COLOR ...}`, `{PAUSE ...}`, `{PLAY_SE ...}`,
-  `{PKMN}`, `{POKE}`, `{LV}`, `{KUN}`, etc. If Hebrew word order needs a placeholder elsewhere in the
-  sentence, rephrase so the order stays the same; if that is impossible, report the string instead
-  of reordering.
+  `{PKMN}`, `{POKE}`, `{LV}`, `{KUN}`, etc. One exception: the battle text buffers `{B_BUFF1}`,
+  `{B_BUFF2}` and `{B_BUFF3}` are each filled from their own buffer, so they may swap places with
+  each other; every other placeholder keeps its place. If Hebrew word order needs another
+  placeholder elsewhere in the sentence, rephrase so the order stays the same; if that is
+  impossible, report the string instead of reordering.
 - Keep `$` exactly where the English has it (end of each text block). Never touch labels, script
   commands, `msgbox`/`goto`/flags, C code, `#if` lines, or non-text string literals (file paths,
   INCBIN, asm).
@@ -79,7 +81,9 @@ Only characters in `charmap.txt`. In particular:
 - `{POKE}` / `{PKMN}` render the Latin "POKé"/"PKMN" glyph pairs. In Hebrew text replace them with the
   Hebrew word (`פוקי`, `פוקימון`). `drift.py` ignores these glyph-pair tokens (`{POKE}`, `{PKMN}`,
   `{POKEBLOCK}`, the `{ID}{NO}` pair and the `{PK}` of the Easy Chat word `{PK}RS`), so dropping
-  them is the one allowed token change.
+  them is the one allowed token change besides the battle buffers' swap. `drift.py`
+  (`DROPPABLE_TOKENS`, `REORDERABLE_TOKENS`, `same_tokens`) defines this rule, and `units.py` and
+  `checkunits.py` use the same one.
 - Do not translate: braille text (`.braille`), the R+START debug menu (`src/debug.c`, and `data/scripts/debug.inc` except `Debug_Text_ArianaDefeat` and `Debug_Text_Grunt23Defeat`, which the Rocket Hideout story battle uses), Latin literals
   compared by code (the "SampleCode" check, Walda's phrase, the Odd Egg name list), and anything
   in an `#if 0` / unused block. The battle debug menu (`src/battle_debug.c`, opened with SELECT in any battle) is translated and uses the glossary's terms.
@@ -99,7 +103,7 @@ Only characters in `charmap.txt`. In particular:
 ## 6. Length and width (checked by `tools/hebrew/audit.py`)
 
 - Hebrew is one byte per letter. Byte limits are hard (overflow corrupts memory or fails the build):
-  species 12 (10 preferred), move 16, ability 16, item 20 (plural 22), type 8, trainer name 10,
+  species 12 (10 preferred), move 16, ability 16, item 19 (plural 21), type 8, trainer name 10,
   trainer class 12, berry 6, map name 19 (region map) / 20 (pop-up), Pokédex category 12.
 - Pixel budgets per kind are in `tools/hebrew/data/budgets.json`. The most common ones: dialogue 208 px per line
   (200 on a line ending in `\p` or `\l`), 2 lines per page; battle text 208 px, 2 lines; item
