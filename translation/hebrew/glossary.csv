@@ -4400,10 +4400,10 @@ item,ITEM_CORNERSTONE_MASK,CORNERSTONE MASK,,מסכת אבן הפינה,proposed
 item,ITEM_WELLSPRING_MASK,WELLSPRING MASK,,מסכת המעיין,proposed,meaning; reviewed
 item,ITEM_HEARTHFLAME_MASK,HEARTHFLAME MASK,,מסכת אש האח,proposed,meaning (hearth = אח); reviewed
 item,ITEM_HEALTH_MOCHI,HEALTH MOCHI,,מוצ'י בריאות,proposed,"MOCHI translit (ch = צ'); stat word shared with ITEM_HEALTH_FEATHER (item_01), align; reviewed"
-item,ITEM_MUSCLE_MOCHI,MUSCLE MOCHI,,מוצ'י שריר,proposed,"stat word shared with ITEM_MUSCLE_FEATHER (item_01), align; reviewed: aligned to ITEM_MUSCLE_FEATHER נוצת שריר (item_01, same Attack-stat family), was מוצ'י שרירים; note item_03 MUSCLE BAND uses שרירים"
+item,ITEM_MUSCLE_MOCHI,MUSCLE MOCHI,,מוצ'י שרירים,proposed,"MUSCLE = שרירים, as in ITEM_MUSCLE_FEATHER נוצת שרירים (item_01) and ITEM_MUSCLE_BAND רצועת שרירים (item_03); the two reviews had swapped values, now one word for the family; reviewed"
 item,ITEM_RESIST_MOCHI,RESIST MOCHI,,מוצ'י עמידות,proposed,"stat word shared with ITEM_RESIST_FEATHER (item_01), align; reviewed"
 item,ITEM_GENIUS_MOCHI,GENIUS MOCHI,,מוצ'י גאונות,proposed,"stat word shared with ITEM_GENIUS_FEATHER (item_01), align; reviewed"
-item,ITEM_CLEVER_MOCHI,CLEVER MOCHI,,מוצ'י פיקחות,proposed,"stat word shared with ITEM_CLEVER_FEATHER (item_01), align; reviewed: aligned to ITEM_CLEVER_FEATHER נוצת פיקחות (item_01, same Sp. Def family), was מוצ'י תבונה"
+item,ITEM_CLEVER_MOCHI,CLEVER MOCHI,,מוצ'י תבונה,proposed,"CLEVER = תבונה, as in ITEM_CLEVER_FEATHER נוצת תבונה (item_01); the two reviews had swapped values, now one word for the family; reviewed"
 item,ITEM_SWIFT_MOCHI,SWIFT MOCHI,,מוצ'י מהירות,proposed,"stat word shared with ITEM_SWIFT_FEATHER (item_01), align; reviewed"
 item,ITEM_FRESH_START_MOCHI,FRESH-START MOCHI,,מוצ'י דף חדש,proposed,meaning via the idiom לפתוח דף חדש (fresh start); resets EVs; reviewed
 item,ITEM_GLIMMERING_CHARM,GLIMMERING CHARM,,קמע מנצנץ,proposed,meaning; glimmer = מנצנץ as FR GLITTER MAIL דואר מנצנץ; distinct from SHINY CHARM קמע נוצץ; reviewed
@@ -4620,10 +4620,10 @@ item_plural,ITEM_BOOSTER_ENERGY,Booster Energies,,אנרגיות דחף,proposed
 item_plural,ITEM_SCROLL_OF_DARKNESS,Scrolls of Darkness,,מגילות החושך,proposed,construct plural; singular: מגילת החושך (item_04); reviewed
 item_plural,ITEM_SCROLL_OF_WATERS,Scrolls of Waters,,מגילות המים,proposed,construct plural; singular: מגילת המים (item_04); reviewed
 item_plural,ITEM_HEALTH_MOCHI,Health Mochi,,מוצ'י בריאות,proposed,"same as singular; Japanese loan מוצ'י is invariant, as in English; singular: מוצ'י בריאות (item_04); reviewed"
-item_plural,ITEM_MUSCLE_MOCHI,Muscle Mochi,,מוצ'י שריר,proposed,"same as singular; Japanese loan מוצ'י is invariant; follows the item_04 singular מוצ'י שריר, which conflicts with item_01 MUSCLE FEATHER נוצת שרירים (both say they aligned to the other); fix singular and plural together; singular: מוצ'י שריר (item_04); reviewed; reviewer: item_01 MUSCLE FEATHER is now נוצת שרירים and MUSCLE BAND is רצועת שרירים (item_03), so מוצ'י שרירים (11 bytes) would make the family consistent; change the item_04 singular and this row together"
+item_plural,ITEM_MUSCLE_MOCHI,Muscle Mochi,,מוצ'י שרירים,proposed,"same as singular; Japanese loan מוצ'י is invariant; singular: מוצ'י שרירים (MUSCLE = שרירים, as MUSCLE FEATHER and MUSCLE BAND); reviewed"
 item_plural,ITEM_RESIST_MOCHI,Resist Mochi,,מוצ'י עמידות,proposed,"same as singular; Japanese loan מוצ'י is invariant, as in English; singular: מוצ'י עמידות (item_04); reviewed"
 item_plural,ITEM_GENIUS_MOCHI,Genius Mochi,,מוצ'י גאונות,proposed,"same as singular; Japanese loan מוצ'י is invariant, as in English; singular: מוצ'י גאונות (item_04); reviewed"
-item_plural,ITEM_CLEVER_MOCHI,Clever Mochi,,מוצ'י פיקחות,proposed,"same as singular; Japanese loan מוצ'י is invariant; follows the item_04 singular מוצ'י פיקחות, which conflicts with item_01 CLEVER FEATHER נוצת תבונה (both say they aligned to the other); fix singular and plural together; singular: מוצ'י פיקחות (item_04); reviewed; reviewer: item_01 CLEVER FEATHER is now נוצת תבונה while item_04 has מוצ'י פיקחות (the two reviews swapped values); pick one word for both, then set this row to the same"
+item_plural,ITEM_CLEVER_MOCHI,Clever Mochi,,מוצ'י תבונה,proposed,"same as singular; Japanese loan מוצ'י is invariant; singular: מוצ'י תבונה (CLEVER = תבונה, as CLEVER FEATHER); reviewed"
 item_plural,ITEM_SWIFT_MOCHI,Swift Mochi,,מוצ'י מהירות,proposed,"same as singular; Japanese loan מוצ'י is invariant, as in English; singular: מוצ'י מהירות (item_04); reviewed"
 item_plural,ITEM_FRESH_START_MOCHI,Fresh-Start Mochi,,מוצ'י דף חדש,proposed,"same as singular; Japanese loan מוצ'י is invariant, as in English; singular: מוצ'י דף חדש (item_04); reviewed"
 item_plural,ITEM_REMEDY,Remedies,,מנות מרפא,proposed,"meaning: מרפא is not countable (מרפאים reads as healers), so the plural counts doses; alt מרפא unchanged; singular: מרפא (item_04); reviewed; reviewer: style call, counted as doses (מנות) while English mass-noun items (HONEY, MULCH, MAIL) keep the singular; FINE/SUPERB follow"

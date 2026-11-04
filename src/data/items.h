@@ -16577,8 +16577,8 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_MUSCLE_MOCHI] =
     {
-        .name = ITEM_NAME("מוצ'י שריר"),
-        .pluralName = ITEM_PLURAL_NAME("מוצ'י שריר"),
+        .name = ITEM_NAME("מוצ'י שרירים"),
+        .pluralName = ITEM_PLURAL_NAME("מוצ'י שרירים"),
         .price = 500,
         .description = sMuscleFeatherDesc,
         .pocket = POCKET_ITEMS,
@@ -16625,8 +16625,8 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_CLEVER_MOCHI] =
     {
-        .name = ITEM_NAME("מוצ'י פיקחות"),
-        .pluralName = ITEM_PLURAL_NAME("מוצ'י פיקחות"),
+        .name = ITEM_NAME("מוצ'י תבונה"),
+        .pluralName = ITEM_PLURAL_NAME("מוצ'י תבונה"),
         .price = 500,
         .description = sCleverFeatherDesc,
         .pocket = POCKET_ITEMS,
