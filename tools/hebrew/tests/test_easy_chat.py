@@ -1,14 +1,16 @@
 """The Easy Chat word lists: no Latin, only the listed shared texts, the Hebrew order of the group
-lists, a text of its own for every word the game compares, and the Odd Egg interview's passwords and
-hint windows."""
+lists, a text of its own for every word the game compares, fixed phrases that fit their window, and
+the Odd Egg interview's passwords and hint windows."""
 import os
 import re
 import sys
 import unittest
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+import gen_ec_letters  # noqa: E402
 import gen_ec_order  # noqa: E402
 import paths  # noqa: E402
+import textwidth  # noqa: E402
 
 TREE = paths.TREE
 ENTRY = re.compile(r'\[EC_INDEX\(EC_WORD_(\w+)\)\]\s*=\s*\{\s*\.text\s*=\s*COMPOUND_STRING\("((?:[^"\\]|\\.)*)"\)'
@@ -17,6 +19,17 @@ HINT_WINDOWS = ['HELP_DAYCARE1_WINDOW', 'HELP_DAYCARE2_WINDOW', 'HELP_DAYCARE3_W
 # The phrases src/easy_chat.c compares word by word with the player's: the Odd Egg passwords, the
 # questionnaire's Mystery Gift phrase and the Berry Master's wife's phrases.
 COMPARED = ['sInterviewPasswords', 'sMysteryGiftPhrase', 'sBerryMasterWifePhrases']
+# Fixed phrases the game builds from word lists: six-word speeches of the Frontier, tent, Trainer Hill
+# and Pike trainers and the record-mix defaults, and the nine-word in-game trade mails and Kenya's mail.
+SPEECH_FILES = [os.path.join('src', 'data', 'battle_frontier', 'battle_frontier_trainers.h'),
+                os.path.join('src', 'data', 'battle_frontier', 'battle_tent.h'),
+                os.path.join('src', 'data', 'battle_frontier', 'trainer_hill.h'),
+                os.path.join('src', 'battle_pike.c'), os.path.join('src', 'battle_tower.c')]
+MAIL_FILES = [os.path.join('src', 'data', 'trade.h'), os.path.join('src', 'scrcmd.c')]
+TOKEN = r'(?:EC_WORD_\w+|EC_EMPTY_WORD|EC_POKEMON(?:_NATIONAL)?\(\w+\)|EC_MOVE2?\(\w+\))'
+PHRASE = re.compile(r'\{\s*(' + TOKEN + r'(?:\s*,\s*' + TOKEN + r')+)\s*,?\s*\}')
+# src/frontier_util.c FrontierSpeechToString: three words a line, two a line above this width
+SPEECH_SWITCH_PX = 204
 # Texts that several enabled words print on purpose, where Hebrew has one word for several English
 # ones. Either word prints the same phrase, and no compared word is among them. Any other shared
 # text fails, and so does a row that no longer matches the lists.
@@ -116,6 +129,69 @@ class Lists(unittest.TestCase):
             old, new = gen_ec_order.blocks(current), gen_ec_order.blocks(fresh)
             stale = sorted(g for g in set(old) | set(new) if old.get(g) != new.get(g)) or ['the comment or table']
             self.fail('%s is stale (%s); run tools/hebrew/gen_ec_order.py' % (gen_ec_order.HEADER, ', '.join(stale)))
+
+
+def fixed_phrases(rel, n):
+    """The brace lists of exactly N word tokens in a source file."""
+    out = []
+    for m in PHRASE.finditer(read(rel)):
+        tokens = [t.strip() for t in m.group(1).split(',')]
+        if len(tokens) == n:
+            out.append(tokens)
+    return out
+
+
+def mail_lines():
+    """(words per line, widest line in px) of the mail layout the game uses (src/mail.c): the
+    'Tall' layouts in the 26-tile text window, text from wordsXPos of the layout."""
+    text = read(os.path.join('src', 'mail.c'))
+    lines = text[text.index('sLineLayouts_Tall[]'):]
+    lines = [int(x) for x in re.findall(r'numEasyChatWords = (\d+)', lines[:lines.index('};')])]
+    layouts = text[text.index('sMailLayouts_Tall[]'):]
+    x = max(int(v) for v in re.findall(r'wordsXPos = (\d+)', layouts[:layouts.index('\n};')]))
+    window = text[text.index('sWindowTemplates[]'):]
+    width = int(re.search(r'\.width = (\d+)', window).group(1)) * 8
+    return lines, width - x
+
+
+class FixedPhrases(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        tree = TREE
+        cls.words = gen_ec_letters.word_texts(tree)
+        cls.species = gen_ec_letters.species_names(tree)
+        cls.moves = gen_ec_letters.table_names(gen_ec_letters.read(tree, gen_ec_letters.MOVES),
+                                               gen_ec_letters.MOVE_NAME)
+        cls.model = textwidth.TextModel(tree=paths.FONTS_TREE)
+
+    def lines(self, tokens, per_line):
+        out, i = [], 0
+        for n in per_line:
+            texts = [gen_ec_letters.text_of(t, self.words, self.species, self.moves)
+                     for t in tokens[i:i + n] if t != 'EC_EMPTY_WORD']
+            out.append(' '.join(texts))
+            i += n
+        return out
+
+    def test_speeches_keep_three_words_a_line(self):
+        count = 0
+        for rel in SPEECH_FILES:
+            for tokens in fixed_phrases(rel, 6):
+                count += 1
+                for line in self.lines(tokens, [3, 3]):
+                    self.assertLessEqual(self.model.width(line), SPEECH_SWITCH_PX, '%s: %s' % (rel, line))
+        self.assertGreater(count, 1400)
+
+    def test_mails_fit_their_window(self):
+        per_line, px = mail_lines()
+        self.assertEqual(sum(per_line), 9)
+        count = 0
+        for rel in MAIL_FILES:
+            for tokens in fixed_phrases(rel, 9):
+                count += 1
+                for line in self.lines(tokens, per_line):
+                    self.assertLessEqual(self.model.width(line), px, '%s: %s' % (rel, line))
+        self.assertGreaterEqual(count, 5)
 
 
 class OddEgg(unittest.TestCase):
