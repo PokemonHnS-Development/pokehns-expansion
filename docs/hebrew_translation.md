@@ -75,7 +75,7 @@ order and printed left to right in its English position.
   Hebrew letters, each opening the words, species and moves whose Hebrew text starts with it
   (`gen_ec_letters.py`, `src/data/easy_chat/easy_chat_words_by_letter_rtl.h`). The keyboard and
   the word list are mirrored inside the frame drawn behind them, the cursors stand right of their
-  word and point left, and the YES/NO box sits at the mirrored place in the phrase frame.
+  word and point left, and the YES/NO box sits over the footer's OK option at the left end.
 - The healthbox drops the level glyph when glyph and digits do not fit (level 100).
 - Lists sorted by name (the bag's A–Z sort, the move relearner) use `StringCompareAlphabetical`:
   final letters sort with their ordinary forms, and a name sorts before the longer names that
@@ -155,8 +155,11 @@ Each build's `TESTING.md` lists what was tested on that exact ROM and what was n
   Latin letters, the word for "Congratulations", quotation marks around move names, the
   English column of the default names.
 - **Easy Chat.** All 999 Easy Chat words are Hebrew: 517 from the first translation and 482 from
-  FireRed's words and the glossary (the other 9 entries of the lists are punctuation). Trainer
-  phrases put the words in English order, one word after another. The ABC keyboard shows the 22
+  FireRed's words and the glossary (the other 9 entries of the lists are punctuation). Where
+  Hebrew has one word for several English ones, they print the same text (I and I AM אני, NOT
+  and DON'T לא); the words the game compares (the Odd Egg passwords, the Mystery Gift phrase)
+  each have a text of their own. Trainer phrases put the words in English order, one word after
+  another. The ABC keyboard shows the 22
   Hebrew letters and files every word, species and move under the first letter of its Hebrew text
   (`DECISIONS.md` Q135).
 - **Kept in English on purpose:** the debug menus, the credits, the Odd Egg name list (the game
