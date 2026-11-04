@@ -34,13 +34,15 @@ REORDERABLE_TOKENS = {'{B_BUFF1}', '{B_BUFF2}', '{B_BUFF3}'}
 
 
 def same_tokens(t_en, t_tr):
-    def fixed(ts):
-        return [t for t in ts if t not in REORDERABLE_TOKENS]
+    """t_tr has the tokens of t_en in the same order, except that the battle buffers may trade
+    places with each other (never with another token)."""
+    def slots(ts):
+        return ['{B_BUFF}' if t in REORDERABLE_TOKENS else t for t in ts]
 
     def free(ts):
         return sorted(t for t in ts if t in REORDERABLE_TOKENS)
 
-    return fixed(t_en) == fixed(t_tr) and free(t_en) == free(t_tr)
+    return slots(t_en) == slots(t_tr) and free(t_en) == free(t_tr)
 
 
 LATIN_WORD_RE = re.compile(r'[A-Za-z][A-Za-z]+')
