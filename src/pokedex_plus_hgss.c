@@ -6673,6 +6673,26 @@ static void HandleTargetSpeciesPrintText(u32 targetSpecies, u32 base_x, u32 base
     PrintInfoScreenTextSmall(gStringVar3, fontId, base_x, base_y + base_y_offset*base_i + numLines); //evolution mon name
 }
 
+#if TEXT_RTL
+// The method after a target's name is placed 5 px per name byte (the small font's widest letter)
+// plus a margin past the name's x. Many Hebrew names are wider than that, and the method would
+// cover their colon and last letters. This is the first x past the 'NAME:' that
+// HandleTargetSpeciesPrintText draws at nameX, plus a space's width.
+#define EVO_METHOD_NAME_GAP 3
+static u32 GetEvoMethodMinX(u32 targetSpecies, u32 nameX)
+{
+    bool32 seen = GetSetPokedexFlag(SpeciesToNationalPokedexNum(targetSpecies), FLAG_GET_SEEN);
+    u32 fontId = GetSpeciesNameFontId(GetSpeciesNameWidthInChars(GetSpeciesName(targetSpecies)));
+
+    if (seen || !HGSS_HIDE_UNSEEN_EVOLUTION_NAMES)
+        StringCopy(gStringVar3, GetSpeciesName(targetSpecies));
+    else
+        StringCopy(gStringVar3, gText_ThreeQuestionMarks);
+    StringExpandPlaceholders(gStringVar3, sText_EVO_Name);
+    return nameX + GetStringWidth(fontId, gStringVar3, 0) + EVO_METHOD_NAME_GAP;
+}
+#endif
+
 static void HandleTargetSpeciesPrintIcon(u8 taskId, u16 targetSpecies, u8 base_i, u8 iterations)
 {
     u32 personality = GetPokedexMonPersonality(targetSpecies);
@@ -7003,6 +7023,9 @@ static void PrintEvolutionTargetSpeciesAndMethod(u8 taskId, u16 species, u8 dept
 
         u32 speciesNameWidth = (speciesNameWidthInChars * speciesNameCharWidth);
         u32 base_x_offset = speciesNameWidth + base_x + depth_offset; // for evo method info
+#if TEXT_RTL
+        base_x_offset = max(base_x_offset, GetEvoMethodMinX(targetSpecies, base_x + depth_x*depth));
+#endif
         u32 maxScreenWidth = 230 - base_x_offset;
 
         for (u32 j = 0; j < MAX_EVOLUTION_ICONS; j++)
