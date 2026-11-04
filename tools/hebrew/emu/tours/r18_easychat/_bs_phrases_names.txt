@@ -1,0 +1,7 @@
+# Names file for scripts/r16_battle_sweep/bsweep.py --names: the trainer's win and loss speech.
+# Run (Frontier trainers; for the Verdanturf tent use _bs_phrases_tent.txt and _bs_phrases_tent.json):
+#   bsweep.py ROM OUT --setup tools/hebrew/emu/tours/r18_easychat/_bs_phrases_frontier.txt
+#             --save "$HNS_SAVES/ladder1_newgame.sav" --names tools/hebrew/emu/tours/r18_easychat/_bs_phrases_names.txt
+#             --variants tools/hebrew/emu/tours/r18_easychat/_bs_phrases_frontier.json [--clip]
+STRINGID_TRAINER1WINTEXT
+STRINGID_TRAINER1LOSETEXT
