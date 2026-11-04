@@ -1,0 +1,132 @@
+# PC storage (src/pokemon_storage_system.c): the main menu line when WITHDRAW is chosen with a full
+# party (gText_PartyFull, :1610-1616); in DEPOSIT, A on the party panel's close slot asks 'Exit the box?'
+# (MSG_EXIT_BOX, Task_OnCloseBoxPressed :3704-3723, :7661-7666), answered NO, then B > 'continue?' NO; in
+# MOVE POKEMON, the box
+# title menu > WALLPAPER > SCENERY 2, SCENERY 3 and ETC, each list of four wallpapers on screen
+# (AddWallpapersMenu, :4478-4508), left by choosing its first wallpaper (the game is not saved).
+# The PC main menu order is MOVE, DEPOSIT, WITHDRAW (OW_PC_MOVE_ORDER, :61-79). Five gift Pokemon make
+# sure the party is full (the rest go to a box).
+# Run: scripts/r16_menus/menu16.py tour ROM OUT --tours tools/hebrew/emu/tours/r16_menus [--clip]
+# Save: pcs_postgame.sav (HNS_SAVES=hns-tools/emu/saves_all).
+start saves/pcs_postgame.sav
+include ../../scripts/continue.txt
+ev givemon SPECIES_PIDGEY, 5; givemon SPECIES_PIDGEY, 5; givemon SPECIES_PIDGEY, 5; givemon SPECIES_PIDGEY, 5; givemon SPECIES_PIDGEY, 5; end
+warpto MAP_CHERRYGROVE_CITY_POKEMON_CENTER_HNS 7 4
+waitctl 600
+go RIGHT 4
+go UP 2
+talk ps_pc_boot 10
+tap A 0
+talk ps_storage_open 10 - Task_PCMainMenu
+waittaskdata Task_PCMainMenu 0 2 600
+snap ps_menu_move
+press DOWN
+press DOWN
+snap ps_menu_withdraw
+tap A 4
+40 -
+waitquiet
+snap ps_party_full
+tap A 4
+40 -
+waittaskdata Task_PCMainMenu 0 2 600
+snap ps_menu_back
+press UP
+tap A 0                                   # DEPOSIT
+waitcb2x CB2_PokeStorage 900
+pcwait
+snap ps_dep_open
+pcgoto party 6
+snap ps_dep_close_slot
+press A
+waittaskx Task_OnCloseBoxPressed 300
+waitquiet
+12 -
+snap ps_exit_box
+press DOWN
+press A
+pcwait
+snap ps_exit_box_no
+press B
+waittaskx Task_OnBPressed 300
+waitquiet
+12 -
+snap ps_dep_continue
+press DOWN
+press A
+waitcb2x CB2_Overworld 900
+waittaskdata Task_PCMainMenu 0 2 900
+press UP
+tap A 0                                   # MOVE POKEMON
+waitcb2x CB2_PokeStorage 900
+pcwait
+pcgoto title 0
+press A
+waittaskx Task_HandleBoxOptions 300
+12 -
+snap ps_box_options
+press DOWN
+12 -
+snap ps_box_options_wallpaper
+press A
+12 -
+waitquiet
+snap ps_wall_sets
+press DOWN
+12 -
+snap ps_wall_sets_scenery2
+press A
+12 -
+waitquiet
+snap ps_wall_scenery2
+press A                                   # A on the first wallpaper: the box takes it, the menu closes
+waittaskx Task_PokeStorageMain 600
+pcwait
+snap ps_wall_scenery2_set
+pcgoto title 0
+press A
+waittaskx Task_HandleBoxOptions 300
+press DOWN
+press A
+12 -
+waitquiet
+press DOWN
+press DOWN
+12 -
+snap ps_wall_sets_scenery3
+press A
+12 -
+waitquiet
+snap ps_wall_scenery3
+press A                                   # A on the first wallpaper: the box takes it, the menu closes
+waittaskx Task_PokeStorageMain 600
+pcwait
+snap ps_wall_scenery3_set
+pcgoto title 0
+press A
+waittaskx Task_HandleBoxOptions 300
+press DOWN
+press A
+12 -
+waitquiet
+press DOWN
+press DOWN
+press DOWN
+12 -
+snap ps_wall_sets_etc
+press A
+12 -
+waitquiet
+snap ps_wall_etc
+press A                                   # A on the first wallpaper: the box takes it, the menu closes
+waittaskx Task_PokeStorageMain 600
+pcwait
+snap ps_wall_etc_set
+snap ps_end
+press B
+waittaskx Task_OnBPressed 300
+waitquiet
+12 -
+press DOWN
+press A
+waitcb2x CB2_Overworld 900
