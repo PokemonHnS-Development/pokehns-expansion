@@ -1,0 +1,19 @@
+# Emerald-leak step 2 stand-in: the white-out recovery screen (Task_RushInjuredPokemonToCenter,
+# src/field_screen_effect.c:1433-1480, window sWindowTemplate_WhiteoutText, text at x=2 y=8) that H&S never
+# shows (every H&S heal location has no respawn NPC, so IsWhiteoutCutscene() is false), started with
+# callnative FieldCB_RushInjuredPokemonToCenter in the player's house: sText_PlayerScurriedToCenter.
+# lastHealLocation = HEAL_LOCATION_PALLET_TOWN (IsLastHealLocationPlayerHouse, src/heal_location.c:68-77) for
+# the home variants.
+start saves/ladder6_postgame.sav
+include ../../scripts/continue.txt
+warpto MAP_NEW_BARK_TOWN_PLAYERS_HOUSE_1F_HNS 9 7
+waitnotask Task_MapNamePopUpWindow 600
+waitctl 600 B
+
+
+evstart callnative FieldCB_RushInjuredPokemonToCenter; end
+waitkey 900
+waitquiet
+snap ems2_wo_center_01
+tap A 4
+talk ems2_wo_center_02 12 -
