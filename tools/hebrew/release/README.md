@@ -36,7 +36,6 @@ as unset.
 | `HNS_RUNNER` | tests | `tools/hebrew/emu/hnsrun` (build it as described in `emu/README.md`) |
 | `HNS_UNITS` | tests (sweep labels) | `$HNS_WORK/units` |
 | `HNS_EN_ROM` | tests (ROM sweep) | `../pokehns-en/pokehns.gba`, with its `.elf` next to it |
-| `HNS_CROSSCORE` | tests | `$HNS_WORK/crosscore` |
 | `HNS_CORES` | tests | `$HNS_WORK/cores` |
 | `HNS_MGBA_CORE` | tests | `~/Library/Application Support/RetroArch/cores/mgba_libretro.dylib` |
 | `HNS_EN_MAPWALK` | TESTING.md | `$HNS_WORK/mapwalk_en/mapwalk.json` |
@@ -54,10 +53,10 @@ The scripts have only been run on macOS. The cross-core step loads `.dylib` core
 4. **The sweep's labels.** Run `python3 tools/hebrew/make_chunks.py all`, which writes
    `build/hebrew/units`. This command gives the same 7,209 labels that release 0.2 was swept
    with.
-5. **Cross-core.** Build the frontend with `cc -O2 tools/hebrew/emu/crosscore.c -o build/hebrew/crosscore`.
-   Put `vbam`, `vba_next`, `gpsp`, `mednafen_gba` and `skyemu` `_libretro.dylib` in
-   `build/hebrew/cores`. The mGBA core is RetroArch's own. The source of the cores that release
-   0.2 used was not recorded.
+5. **Cross-core.** `run_release_tests.sh` builds the frontend from `tools/hebrew/emu/crosscore.c`
+   with `cc -O2` into `RCDIR/tests/bin` on every run, so nothing is installed for it. Put `vbam`,
+   `vba_next`, `gpsp`, `mednafen_gba` and `skyemu` `_libretro.dylib` in `build/hebrew/cores`. The
+   mGBA core is RetroArch's own. The source of the cores that release 0.2 used was not recorded.
 6. **The English map walk.** Run it once per upstream version. It tells which held maps also hold
    in English:
    `python3 tools/hebrew/emu/mapwalk.py "$HNS_EN_ROM" "$HNS_SAVES/ladder6_postgame.sav" build/hebrew/mapwalk_en`.
