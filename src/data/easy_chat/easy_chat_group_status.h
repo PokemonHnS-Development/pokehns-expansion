@@ -433,7 +433,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Status[] = {
     },
     [EC_INDEX(EC_WORD_EARLY_BIRD)] =
     {
-        .text = COMPOUND_STRING("ציפור מקדים"),
+        .text = COMPOUND_STRING("ציפור מקדימה"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_ROUGH_SKIN),
         .enabled = TRUE,
     },
