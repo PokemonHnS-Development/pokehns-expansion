@@ -26,8 +26,9 @@ EN_ROOT = paths.BASELINE  # engine baseline: English strings, Hebrew engine
 TREE_ROOT = paths.TREE
 
 TOKEN_RE = re.compile(r'\{[^}]*\}')
-# Latin glyph-pair tokens that Hebrew text may replace with the Hebrew word (POKé, PKMN, the IDNo pair).
-DROPPABLE_TOKENS = {'{POKE}', '{PKMN}', '{POKEBLOCK}', '{ID}', '{NO}'}
+# Latin glyph-pair tokens that Hebrew text may replace with the Hebrew word (POKé, PKMN, the IDNo pair,
+# and the PK of the Easy Chat word {PK}RS).
+DROPPABLE_TOKENS = {'{POKE}', '{PKMN}', '{POKEBLOCK}', '{ID}', '{NO}', '{PK}'}
 # Battle text buffers, each expanded from its own buffer, so Hebrew word order may move them
 # relative to each other; every other token keeps the English order.
 REORDERABLE_TOKENS = {'{B_BUFF1}', '{B_BUFF2}', '{B_BUFF3}'}

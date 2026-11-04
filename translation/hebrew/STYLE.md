@@ -77,8 +77,9 @@ Only characters in `charmap.txt`. In particular:
   pages close to the English. Battle strings without any manual break in English are auto-wrapped:
   keep them without breaks.
 - `{POKE}` / `{PKMN}` render the Latin "POKé"/"PKMN" glyph pairs. In Hebrew text replace them with the
-  Hebrew word (`פוקי`, `פוקימון`). `drift.py` ignores these three tokens (`{POKE}`, `{PKMN}`,
-  `{POKEBLOCK}`), so dropping them is the one allowed token change.
+  Hebrew word (`פוקי`, `פוקימון`). `drift.py` ignores these glyph-pair tokens (`{POKE}`, `{PKMN}`,
+  `{POKEBLOCK}`, the `{ID}{NO}` pair and the `{PK}` of the Easy Chat word `{PK}RS`), so dropping
+  them is the one allowed token change.
 - Do not translate: braille text (`.braille`), the R+START debug menu (`src/debug.c`, and `data/scripts/debug.inc` except `Debug_Text_ArianaDefeat` and `Debug_Text_Grunt23Defeat`, which the Rocket Hideout story battle uses), easy-chat/mail
   word lists unless your batch says so, Latin literals compared by code (the "SampleCode"
   check, Walda's phrase, the Odd Egg name list), and anything in an `#if 0` / unused block. The battle debug menu (`src/battle_debug.c`, opened with SELECT in any battle) is translated and uses the glossary's terms.
