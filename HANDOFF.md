@@ -1338,6 +1338,11 @@ Ask the owner before you:
   referrer outside their own definitions, `tools/hebrew/data/inventory.json` marks the file dead,
   and the Pyramid's live text comes from `src/battle_pyramid.c` and `src/start_menu.c`, which are
   Hebrew.
+- **The battle debug menu's AI party page cuts its last column** (an English 2.0.6 limit, kept).
+  Column i starts at x = i × 41 (`src/battle_debug.c:976-978`), so column 6 starts at x 205 of the
+  232 px window and its 7-byte hold-effect copies run past the edge: Hebrew loses the מ' of
+  התק' מ' and the מ of רצועת מ, English shows 'Sp Att' for 'Sp Atta'. The clip build records these
+  glyphs. Debug-only; no change.
 
 ### 8.3 Stale documentation (fix in docs-only commits)
 
