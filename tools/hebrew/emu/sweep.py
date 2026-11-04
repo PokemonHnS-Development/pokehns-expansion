@@ -23,7 +23,9 @@ Label selection (default: every live script text label in HNS_UNITS/*/*.json (--
     --translated (the unit file has a Hebrew text) | --hebrew-only (the string in THIS ROM has
     Hebrew letters; run only) | --sample N [--seed S]
     --offset N | --limit N
-With no --label or --labels-file and no unit files, run, list and selftest exit 2.
+With no --label or --labels-file and no unit files, run and list exit 2. selftest takes no
+selection option but --label; with no --label it tries every unit label, and exits 2 when there
+are no unit files.
 
 How one label runs:
   1. Once per run: boot with the save, CONTINUE, walk out if the save stands in a Pokemon
@@ -1134,7 +1136,8 @@ def main(argv=None):
     p.add_argument("outdir")
     p = sub.add_parser("selftest", help="prove the clip detector on a patched copy of a clip ROM")
     add_common(p)
-    add_selection(p)
+    p.add_argument("--label", action="append",
+                   help="a label to patch (repeatable; the first that qualifies is used)")
     p = sub.add_parser("list", help="print the selected labels")
     p.add_argument("--units", default=UNITS_DIR)
     add_selection(p)
