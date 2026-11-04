@@ -5,7 +5,8 @@
 
 Per unit (skipping "fixed" name units):
   EMPTY       no Hebrew yet
-  TOKENS      {PLACEHOLDER}/{CONTROL} sequence differs from English ({POKE}/{PKMN}/{POKEBLOCK} may go)
+  TOKENS      {PLACEHOLDER}/{CONTROL} sequence differs from English (drift.py's rule: {POKE} {PKMN}
+              {POKEBLOCK} {ID} {NO} may go, {B_BUFF1}..{B_BUFF3} may change places)
   TERMINATOR  script text gained or lost its trailing $
   ESCAPE      a bare " or an unknown backslash escape (\\n \\l \\p only)
   CHARSET     a character the charmap cannot encode
@@ -21,9 +22,9 @@ import argparse, json, os, re, sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import paths  # noqa: E402
+from drift import DROPPABLE_TOKENS as DROPPABLE, same_tokens  # noqa: E402  the CI gate's token rule
 
 TOKEN_RE = re.compile(r'\{[^}]*\}')
-DROPPABLE = {'{POKE}', '{PKMN}', '{POKEBLOCK}'}
 LATIN_OK = {
     'PP', 'HP', 'TM', 'HM', 'Lv', 'LV', 'OK', 'ID', 'No', 'PC', 'TV', 'CD', 'GBA', 'EXP', 'IV', 'IVs',
     'EV', 'EVs', 'BP', 'GTS', 'HnS', 'DS', 'Wi', 'Fi', 'vs', 'VS', 'KO', 'SP', 'ATK', 'DEF', 'SPD',
@@ -104,7 +105,7 @@ def check(u):
         return ['EMPTY'], warns
     t_en = [t for t in TOKEN_RE.findall(en) if t not in DROPPABLE]
     t_he = [t for t in TOKEN_RE.findall(he) if t not in DROPPABLE]
-    if t_en != t_he:
+    if not same_tokens(t_en, t_he):
         errs.append('TOKENS %s -> %s' % (t_en, t_he))
     if u['kind'] == 'script' and en.endswith('$') != he.endswith('$'):
         errs.append('TERMINATOR')

@@ -25,6 +25,7 @@ The tree is HNS_TREE (this repository) unless --tree is given.
 import argparse, csv, json, os, re, sys
 
 import paths
+from drift import DROPPABLE_TOKENS, same_tokens  # the CI gate's token rule
 
 TREE = paths.TREE
 LIVE_LABELS = paths.LIVE_LABELS
@@ -32,7 +33,6 @@ C_STRINGS = paths.C_STRINGS
 GLOSSARY = paths.GLOSSARY
 
 TOKEN_RE = re.compile(r'\{[^}]*\}')
-DROPPABLE_TOKENS = {'{POKE}', '{PKMN}', '{POKEBLOCK}'}
 
 # ---------------------------------------------------------------------------------------------
 # Script files
@@ -300,7 +300,7 @@ def apply_c(path, rel, units, dry):
 def check_unit(u):
     t_en = [t for t in TOKEN_RE.findall(u['en']) if t not in DROPPABLE_TOKENS]
     t_he = [t for t in TOKEN_RE.findall(u['he']) if t not in DROPPABLE_TOKENS]
-    if t_en != t_he:
+    if not same_tokens(t_en, t_he):
         raise SystemExit('TOKENS %s: %s -> %s' % (u['id'], t_en, t_he))
     if u['kind'] == 'script' and u['en'].endswith('$') != u['he'].endswith('$'):
         raise SystemExit('TERMINATOR %s' % u['id'])
