@@ -552,7 +552,7 @@ blocked: 19 | seen on screen: 510 | translated: 132
 | `src/berry.c` | 204 | 204 | translated |
 | `src/berry_blender.c` | 27 | 27 | translated |
 | `src/berry_fix_program.c` | 9 | 7 | translated (2 kept in Latin: the Ruby/Sapphire berry-fix program) |
-| `src/berry_tag_screen.c` | 10 | 10 | translated |
+| `src/berry_tag_screen.c` | 11 | 11 | translated |
 | `src/challenge_menu.c` | 265 | 265 | translated |
 | `src/contest.c` | 48 | 48 | translated |
 | `src/contest_painting.c` | 26 | 26 | translated |
@@ -564,7 +564,7 @@ blocked: 19 | seen on screen: 510 | translated: 132
 | `src/data/contest_moves.h` | 51 | 51 | translated |
 | `src/data/contest_opponents.h` | 208 | 208 | translated |
 | `src/data/contest_text_tables.h` | 58 | 58 | translated |
-| `src/data/credits_hns.h` | 194 | 29 | translated (165 kept in Latin: people's names in the credits) |
+| `src/data/credits_hns.h` | 194 | 29 | translated (165 kept in Latin: the names of people, teams and organisations, and the game titles) |
 | `src/data/decoration/description.h` | 120 | 120 | translated |
 | `src/data/decoration/header.h` | 121 | 121 | translated |
 | `src/data/easy_chat/easy_chat_group_actions.h` | 78 | 36 | blocked (Easy Chat word lists stay English: the chat keyboard indexes them by letter) |
@@ -587,7 +587,7 @@ blocked: 19 | seen on screen: 510 | translated: 132
 | `src/data/easy_chat/easy_chat_group_voices.h` | 54 | 19 | blocked (Easy Chat word lists stay English: the chat keyboard indexes them by letter) |
 | `src/data/easy_chat/easy_chat_groups.h` | 22 | 20 | blocked (Easy Chat word lists stay English: the chat keyboard indexes them by letter) |
 | `src/data/help_window.h` | 24 | 24 | translated |
-| `src/data/items.h` | 1883 | 1876 | translated (7 kept in Latin: description branches this build does not compile) |
+| `src/data/items.h` | 2224 | 2217 | translated (7 kept in Latin: description branches this build does not compile) |
 | `src/data/lilycove_lady.h` | 16 | 16 | translated |
 | `src/data/moves_info.h` | 1807 | 1807 | translated |
 | `src/data/party_menu.h` | 29 | 29 | translated |
@@ -602,13 +602,13 @@ blocked: 19 | seen on screen: 510 | translated: 132
 | `src/data/pokemon/species_info/gen_8_families.h` | 367 | 367 | translated |
 | `src/data/pokemon/species_info/gen_9_families.h` | 392 | 392 | translated |
 | `src/data/pokemon/species_info/shared_dex_text.h` | 46 | 46 | translated |
-| `src/data/script_menu.h` | 223 | 217 | translated (6 kept in Latin: Emerald ferry destinations and BP amounts) |
+| `src/data/script_menu.h` | 224 | 218 | translated (6 kept in Latin: Emerald ferry destinations and BP amounts) |
 | `src/data/speaker_names.h` | 1 | 1 | translated |
 | `src/data/text/follower_messages.h` | 138 | 138 | translated |
 | `src/data/text/gift_ribbon_descriptions.h` | 46 | 46 | translated |
 | `src/data/text/radio_strings.h` | 213 | 213 | translated |
 | `src/data/text/ribbon_descriptions.h` | 19 | 19 | translated |
-| `src/data/trade.h` | 68 | 68 | translated |
+| `src/data/trade.h` | 69 | 69 | translated |
 | `src/data/types_info.h` | 41 | 41 | translated |
 | `src/data/union_room.h` | 195 | 195 | translated |
 | `src/dexnav.c` | 4 | 4 | translated |
@@ -644,7 +644,7 @@ blocked: 19 | seen on screen: 510 | translated: 132
 | `src/pokenav_conditions_search_results.c` | 1 | 1 | translated |
 | `src/pokenav_list.c` | 3 | 3 | translated |
 | `src/pokenav_main_menu.c` | 17 | 17 | translated |
-| `src/pokenav_match_call_data.c` | 66 | 40 | translated (26 kept in Latin: Emerald PokéNav contacts, replaced by the PokéGear in Heart & Soul) |
+| `src/pokenav_match_call_data.c` | 66 | 41 | translated (25 kept in Latin: Emerald PokéNav contacts, replaced by the PokéGear in Heart & Soul) |
 | `src/pokenav_match_call_gfx.c` | 7 | 7 | translated |
 | `src/pokenav_match_call_list.c` | 1 | 1 | translated |
 | `src/pokenav_menu_handler_gfx.c` | 19 | 17 | translated (2 kept in Latin: Emerald PokéNav strings, replaced by the PokéGear in Heart & Soul) |
