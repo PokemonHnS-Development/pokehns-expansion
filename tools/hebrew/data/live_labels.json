@@ -3234,8 +3234,6 @@
 "data/maps/CeladonCity_Frlg/scripts.inc": {
 "live": [
 "CeladonCity_Text_Poliwrath",
-"CeladonCity_Text_CitySign",
-"CeladonCity_Text_GymSign",
 "CeladonCity_Text_MansionSign",
 "CeladonCity_Text_DeptStoreSign",
 "CeladonCity_Text_GameCornerSign"
@@ -3258,7 +3256,12 @@
 "Text_SoftboiledWhichMon",
 "Text_SoftboiledTaught",
 "CeladonCity_Text_SomeoneStoleSilphScope"
-]
+],
+"not_built": [
+"CeladonCity_Text_CitySign",
+"CeladonCity_Text_GymSign"
+],
+"not_built_reason": "no symbol in the build's ELF: not assembled into this build"
 },
 "data/maps/CeladonCity_GameCorner_hns/scripts.inc": {
 "live": [
@@ -3278,13 +3281,6 @@
 },
 "data/maps/CeladonCity_Gym_Frlg/scripts.inc": {
 "live": [
-"CeladonCity_Gym_Text_ErikaIntro",
-"CeladonCity_Gym_Text_ErikaDefeat",
-"CeladonCity_Gym_Text_ErikaPostBattle",
-"CeladonCity_Gym_Text_ExplainRainbowBadgeTakeThis",
-"CeladonCity_Gym_Text_ReceivedTM19FromErika",
-"CeladonCity_Gym_Text_ExplainTM19",
-"CeladonCity_Gym_Text_ShouldMakeRoomForThis",
 "CeladonCity_Gym_Text_GymStatue",
 "CeladonCity_Gym_Text_GymStatuePlayerWon"
 ],
@@ -3311,7 +3307,17 @@
 "CeladonCity_Gym_Text_MaryIntro",
 "CeladonCity_Gym_Text_MaryDefeat",
 "CeladonCity_Gym_Text_MaryPostBattle"
-]
+],
+"not_built": [
+"CeladonCity_Gym_Text_ErikaIntro",
+"CeladonCity_Gym_Text_ErikaDefeat",
+"CeladonCity_Gym_Text_ErikaPostBattle",
+"CeladonCity_Gym_Text_ExplainRainbowBadgeTakeThis",
+"CeladonCity_Gym_Text_ReceivedTM19FromErika",
+"CeladonCity_Gym_Text_ExplainTM19",
+"CeladonCity_Gym_Text_ShouldMakeRoomForThis"
+],
+"not_built_reason": "no symbol in the build's ELF: not assembled into this build"
 },
 "data/maps/CeladonCity_Gym_hns/scripts.inc": {
 "live": [
@@ -3398,11 +3404,6 @@
 },
 "data/maps/CeruleanCity_Frlg/scripts.inc": {
 "live": [
-"CeruleanCity_Text_TrainerLifeIsToughIsntIt",
-"CeruleanCity_Text_SlowbroTookSnooze",
-"CeruleanCity_Text_SlowbroLoafingAround",
-"CeruleanCity_Text_SlowbroTurnedAway",
-"CeruleanCity_Text_SlowbroIgnoredOrders",
 "CeruleanCity_Text_ThisIsCeruleanCave",
 "CeruleanCity_Text_BikeShopSign",
 "CeruleanCity_Text_GymSign"
@@ -3433,18 +3434,18 @@
 "CeruleanCity_Text_WantBrightRedBicycle",
 "CeruleanCity_Text_CitySign",
 "CeruleanCity_Text_TrainerTipsHeldItems"
-]
+],
+"not_built": [
+"CeruleanCity_Text_TrainerLifeIsToughIsntIt",
+"CeruleanCity_Text_SlowbroTookSnooze",
+"CeruleanCity_Text_SlowbroLoafingAround",
+"CeruleanCity_Text_SlowbroTurnedAway",
+"CeruleanCity_Text_SlowbroIgnoredOrders"
+],
+"not_built_reason": "no symbol in the build's ELF: not assembled into this build"
 },
 "data/maps/CeruleanCity_Gym_Frlg/scripts.inc": {
 "live": [
-"CeruleanCity_Gym_Text_MistyIntro",
-"CeruleanCity_Gym_Text_ExplainTM03",
-"CeruleanCity_Gym_Text_ExplainCascadeBadge",
-"CeruleanCity_Gym_Text_ReceivedTM03FromMisty",
-"CeruleanCity_Gym_Text_BetterMakeRoomForThis",
-"CeruleanCity_Gym_Text_MistyDefeat",
-"CeruleanCity_Gym_Text_GymGuyAdvice",
-"CeruleanCity_Gym_Text_WeMakePrettyGoodTeam",
 "CeruleanCity_Gym_Text_GymStatue",
 "CeruleanCity_Gym_Text_GymStatuePlayerWon"
 ],
@@ -3456,7 +3457,18 @@
 "CeruleanCity_Gym_Text_LuisIntro",
 "CeruleanCity_Gym_Text_LuisDefeat",
 "CeruleanCity_Gym_Text_LuisPostBattle"
-]
+],
+"not_built": [
+"CeruleanCity_Gym_Text_MistyIntro",
+"CeruleanCity_Gym_Text_ExplainTM03",
+"CeruleanCity_Gym_Text_ExplainCascadeBadge",
+"CeruleanCity_Gym_Text_ReceivedTM03FromMisty",
+"CeruleanCity_Gym_Text_BetterMakeRoomForThis",
+"CeruleanCity_Gym_Text_MistyDefeat",
+"CeruleanCity_Gym_Text_GymGuyAdvice",
+"CeruleanCity_Gym_Text_WeMakePrettyGoodTeam"
+],
+"not_built_reason": "no symbol in the build's ELF: not assembled into this build"
 },
 "data/maps/CeruleanCity_Gym_hns/scripts.inc": {
 "live": [
@@ -4079,8 +4091,6 @@
 },
 "data/maps/FuchsiaCity_Frlg/scripts.inc": {
 "live": [
-"FuchsiaCity_Text_ItemBallInThere",
-"FuchsiaCity_Text_CitySign",
 "FuchsiaCity_Text_GymSign"
 ],
 "debug_only": [],
@@ -4104,12 +4114,15 @@
 "Text_SubstituteWhichMon",
 "Text_SubstituteTaught",
 "FuchsiaCity_Text_MyFatherIsGymLeader"
-]
+],
+"not_built": [
+"FuchsiaCity_Text_ItemBallInThere",
+"FuchsiaCity_Text_CitySign"
+],
+"not_built_reason": "no symbol in the build's ELF: not assembled into this build"
 },
 "data/maps/FuchsiaCity_Gym_Frlg/scripts.inc": {
 "live": [
-"FuchsiaCity_Gym_Text_GymGuyAdvice",
-"FuchsiaCity_Gym_Text_GymGuyPostVictory",
 "FuchsiaCity_Gym_Text_GymStatue",
 "FuchsiaCity_Gym_Text_GymStatuePlayerWon"
 ],
@@ -4140,7 +4153,12 @@
 "FuchsiaCity_Gym_Text_ShawnIntro",
 "FuchsiaCity_Gym_Text_ShawnDefeat",
 "FuchsiaCity_Gym_Text_ShawnPostBattle"
-]
+],
+"not_built": [
+"FuchsiaCity_Gym_Text_GymGuyAdvice",
+"FuchsiaCity_Gym_Text_GymGuyPostVictory"
+],
+"not_built_reason": "no symbol in the build's ELF: not assembled into this build"
 },
 "data/maps/FuchsiaCity_Gym_hns/scripts.inc": {
 "live": [
@@ -5259,9 +5277,7 @@
 ]
 },
 "data/maps/LavenderTown_Frlg/scripts.inc": {
-"live": [
-"LavenderTown_Text_TownSign"
-],
+"live": [],
 "debug_only": [],
 "dead": [
 "LavenderTown_Text_DoYouBelieveInGhosts",
@@ -5272,7 +5288,11 @@
 "LavenderTown_Text_SilphScopeNotice",
 "LavenderTown_Text_VolunteerPokemonHouse",
 "LavenderTown_Text_PokemonTowerSign"
-]
+],
+"not_built": [
+"LavenderTown_Text_TownSign"
+],
+"not_built_reason": "no symbol in the build's ELF: not assembled into this build"
 },
 "data/maps/LavenderTown_House1_hns/scripts.inc": {
 "live": [
@@ -5291,14 +5311,16 @@
 "dead": []
 },
 "data/maps/LavenderTown_Mart_Frlg/scripts.inc": {
-"live": [
-"LavenderTown_Mart_Text_DidYouBuyRevives"
-],
+"live": [],
 "debug_only": [],
 "dead": [
 "LavenderTown_Mart_Text_SearchingForStatRaiseItems",
 "LavenderTown_Mart_Text_TrainerDuosCanChallengeYou"
-]
+],
+"not_built": [
+"LavenderTown_Mart_Text_DidYouBuyRevives"
+],
+"not_built_reason": "no symbol in the build's ELF: not assembled into this build"
 },
 "data/maps/LavenderTown_Mart_hns/scripts.inc": {
 "live": [
@@ -6580,10 +6602,7 @@
 ]
 },
 "data/maps/PalletTown_Frlg/scripts.inc": {
-"live": [
-"PalletTown_Text_OakPokemonResearchLab",
-"PalletTown_Text_TownSign"
-],
+"live": [],
 "debug_only": [],
 "dead": [
 "PalletTown_Text_OakDontGoOut",
@@ -6603,7 +6622,12 @@
 "PalletTown_Text_SignsAreUsefulArentThey",
 "PalletTown_Text_LookCopiedTrainerTipsSign",
 "PalletTown_Text_PressStartToOpenMenuCopy"
-]
+],
+"not_built": [
+"PalletTown_Text_OakPokemonResearchLab",
+"PalletTown_Text_TownSign"
+],
+"not_built_reason": "no symbol in the build's ELF: not assembled into this build"
 },
 "data/maps/PalletTown_House2_hns/scripts.inc": {
 "live": [
@@ -6668,9 +6692,7 @@
 },
 "data/maps/PewterCity_Frlg/scripts.inc": {
 "live": [
-"PewterCity_Text_MuseumOfScience",
-"PewterCity_Text_GymSign",
-"PewterCity_Text_CitySign"
+"PewterCity_Text_GymSign"
 ],
 "debug_only": [],
 "dead": [
@@ -6698,10 +6720,25 @@
 "PewterCity_Text_ExplainRunningShoes",
 "PewterCity_Text_MustBeGoingBackToLab",
 "PewterCity_Text_RunningShoesLetterFromMom"
-]
+],
+"not_built": [
+"PewterCity_Text_MuseumOfScience",
+"PewterCity_Text_CitySign"
+],
+"not_built_reason": "no symbol in the build's ELF: not assembled into this build"
 },
 "data/maps/PewterCity_Gym_Frlg/scripts.inc": {
 "live": [
+"PewterCity_Gym_Text_GymStatue",
+"PewterCity_Gym_Text_GymStatuePlayerWon"
+],
+"debug_only": [],
+"dead": [
+"PewterCity_Gym_Text_LiamIntro",
+"PewterCity_Gym_Text_LiamDefeat",
+"PewterCity_Gym_Text_LiamPostBattle"
+],
+"not_built": [
 "PewterCity_Gym_Text_BrockIntro",
 "PewterCity_Gym_Text_BrockDefeat",
 "PewterCity_Gym_Text_TakeThisWithYou",
@@ -6713,16 +6750,9 @@
 "PewterCity_Gym_Text_LetsGetHappening",
 "PewterCity_Gym_Text_TryDifferentPartyOrders",
 "PewterCity_Gym_Text_ItsFreeLetsGetHappening",
-"PewterCity_Gym_Text_YoureChampMaterial",
-"PewterCity_Gym_Text_GymStatue",
-"PewterCity_Gym_Text_GymStatuePlayerWon"
+"PewterCity_Gym_Text_YoureChampMaterial"
 ],
-"debug_only": [],
-"dead": [
-"PewterCity_Gym_Text_LiamIntro",
-"PewterCity_Gym_Text_LiamDefeat",
-"PewterCity_Gym_Text_LiamPostBattle"
-]
+"not_built_reason": "no symbol in the build's ELF: not assembled into this build"
 },
 "data/maps/PewterCity_Gym_hns/scripts.inc": {
 "live": [
@@ -6776,13 +6806,15 @@
 "dead": []
 },
 "data/maps/PewterCity_Mart_Frlg/scripts.inc": {
-"live": [
-"PewterCity_Mart_Text_BoughtWeirdFishFromShadyGuy"
-],
+"live": [],
 "debug_only": [],
 "dead": [
 "PewterCity_Mart_Text_GoodThingsIfRaiseMonsDiligently"
-]
+],
+"not_built": [
+"PewterCity_Mart_Text_BoughtWeirdFishFromShadyGuy"
+],
+"not_built_reason": "no symbol in the build's ELF: not assembled into this build"
 },
 "data/maps/PewterCity_Mart_hns/scripts.inc": {
 "live": [
@@ -6847,13 +6879,16 @@
 },
 "data/maps/PokemonLeague_BrunosRoom_Frlg/scripts.inc": {
 "live": [
-"PokemonLeague_BrunosRoom_Text_Intro",
-"PokemonLeague_BrunosRoom_Text_RematchIntro",
-"PokemonLeague_BrunosRoom_Text_Defeat",
-"PokemonLeague_BrunosRoom_Text_PostBattle"
+"PokemonLeague_BrunosRoom_Text_Defeat"
 ],
 "debug_only": [],
-"dead": []
+"dead": [],
+"not_built": [
+"PokemonLeague_BrunosRoom_Text_Intro",
+"PokemonLeague_BrunosRoom_Text_RematchIntro",
+"PokemonLeague_BrunosRoom_Text_PostBattle"
+],
+"not_built_reason": "no symbol in the build's ELF: not assembled into this build"
 },
 "data/maps/PokemonLeague_BrunosRoom_hns/scripts.inc": {
 "live": [
@@ -6899,11 +6934,13 @@
 "dead": []
 },
 "data/maps/PokemonLeague_HallOfFame_Frlg/scripts.inc": {
-"live": [
+"live": [],
+"debug_only": [],
+"dead": [],
+"not_built": [
 "PokemonLeague_HallOfFame_Text_OakCongratulations"
 ],
-"debug_only": [],
-"dead": []
+"not_built_reason": "no symbol in the build's ELF: not assembled into this build"
 },
 "data/maps/PokemonLeague_HallOfFame_hns/scripts.inc": {
 "live": [
@@ -7420,9 +7457,7 @@
 ]
 },
 "data/maps/Route12_Frlg/scripts.inc": {
-"live": [
-"Route12_Text_SportfishingArea"
-],
+"live": [],
 "debug_only": [],
 "dead": [
 "Route12_Text_MonSprawledOutInSlumber",
@@ -7460,7 +7495,11 @@
 "Route12_Text_GiaDefeat",
 "Route12_Text_GiaPostBattle",
 "Route12_Text_GiaNotEnoughMons"
-]
+],
+"not_built": [
+"Route12_Text_SportfishingArea"
+],
+"not_built_reason": "no symbol in the build's ELF: not assembled into this build"
 },
 "data/maps/Route12_House_hns/scripts.inc": {
 "live": [
@@ -7499,12 +7538,7 @@
 "dead": []
 },
 "data/maps/Route13_Frlg/scripts.inc": {
-"live": [
-"Route13_Text_PerryIntro",
-"Route13_Text_PerryDefeat",
-"Route13_Text_PerryPostBattle",
-"Route13_Text_RouteSign"
-],
+"live": [],
 "debug_only": [],
 "dead": [
 "Route13_Text_SebastianIntro",
@@ -7536,7 +7570,14 @@
 "Route13_Text_RobertPostBattle",
 "Route13_Text_LookToLeftOfThatPost",
 "Route13_Text_SelectToSwitchItems"
-]
+],
+"not_built": [
+"Route13_Text_PerryIntro",
+"Route13_Text_PerryDefeat",
+"Route13_Text_PerryPostBattle",
+"Route13_Text_RouteSign"
+],
+"not_built_reason": "no symbol in the build's ELF: not assembled into this build"
 },
 "data/maps/Route13_hns/scripts.inc": {
 "live": [
@@ -7579,11 +7620,7 @@
 ]
 },
 "data/maps/Route14_Frlg/scripts.inc": {
-"live": [
-"Route14_Text_CarterIntro",
-"Route14_Text_CarterDefeat",
-"Route14_Text_CarterPostBattle"
-],
+"live": [],
 "debug_only": [],
 "dead": [
 "Route14_Text_MitchIntro",
@@ -7622,7 +7659,13 @@
 "Route14_Text_JanDefeat",
 "Route14_Text_JanPostBattle",
 "Route14_Text_JanNotEnoughMons"
-]
+],
+"not_built": [
+"Route14_Text_CarterIntro",
+"Route14_Text_CarterDefeat",
+"Route14_Text_CarterPostBattle"
+],
+"not_built_reason": "no symbol in the build's ELF: not assembled into this build"
 },
 "data/maps/Route14_hns/scripts.inc": {
 "live": [
@@ -9468,8 +9511,6 @@
 },
 "data/maps/SaffronCity_Frlg/scripts.inc": {
 "live": [
-"SaffronCity_Text_CitySign",
-"SaffronCity_Text_FightingDojo",
 "SaffronCity_Text_GymSign",
 "SaffronCity_Text_SilphCoSign"
 ],
@@ -9496,19 +9537,17 @@
 "SaffronCity_Text_SilphsLatestProduct",
 "SaffronCity_Text_TrainerFanClubSign",
 "SaffronCity_Text_HowCanClubNotRecognizeLance"
-]
+],
+"not_built": [
+"SaffronCity_Text_CitySign",
+"SaffronCity_Text_FightingDojo"
+],
+"not_built_reason": "no symbol in the build's ELF: not assembled into this build"
 },
 "data/maps/SaffronCity_Gym_Frlg/scripts.inc": {
 "live": [
 "SaffronCity_Gym_Text_SabrinaIntro",
-"SaffronCity_Gym_Text_SabrinaDefeat",
 "SaffronCity_Gym_Text_SabrinaPostBattle",
-"SaffronCity_Gym_Text_ExplainMarshBadgeTakeThis",
-"SaffronCity_Gym_Text_ReceivedTM04FromSabrina",
-"SaffronCity_Gym_Text_ExplainTM04",
-"SaffronCity_Gym_Text_BagFullOfOtherItems",
-"SaffronCity_Gym_Text_GymGuyAdvice",
-"SaffronCity_Gym_Text_GymGuyPostVictory",
 "SaffronCity_Gym_Text_GymStatue",
 "SaffronCity_Gym_Text_GymStatuePlayerWon"
 ],
@@ -9535,7 +9574,17 @@
 "SaffronCity_Gym_Text_PrestonIntro",
 "SaffronCity_Gym_Text_PrestonDefeat",
 "SaffronCity_Gym_Text_PrestonPostBattle"
-]
+],
+"not_built": [
+"SaffronCity_Gym_Text_SabrinaDefeat",
+"SaffronCity_Gym_Text_ExplainMarshBadgeTakeThis",
+"SaffronCity_Gym_Text_ReceivedTM04FromSabrina",
+"SaffronCity_Gym_Text_ExplainTM04",
+"SaffronCity_Gym_Text_BagFullOfOtherItems",
+"SaffronCity_Gym_Text_GymGuyAdvice",
+"SaffronCity_Gym_Text_GymGuyPostVictory"
+],
+"not_built_reason": "no symbol in the build's ELF: not assembled into this build"
 },
 "data/maps/SaffronCity_Gym_hns/scripts.inc": {
 "live": [
@@ -10317,9 +10366,6 @@
 },
 "data/maps/VermilionCity_Frlg/scripts.inc": {
 "live": [
-"VermilionCity_Text_Machop",
-"VermilionCity_Text_MachopStompingLandFlat",
-"VermilionCity_Text_CitySign",
 "VermilionCity_Text_GymSign"
 ],
 "debug_only": [],
@@ -10346,7 +10392,13 @@
 "VermilionCity_Text_Seagallop10Departing",
 "VermilionCity_Text_Seagallop12Departing",
 "VermilionCity_Text_Route2AideHasPackageForYou"
-]
+],
+"not_built": [
+"VermilionCity_Text_Machop",
+"VermilionCity_Text_MachopStompingLandFlat",
+"VermilionCity_Text_CitySign"
+],
+"not_built_reason": "no symbol in the build's ELF: not assembled into this build"
 },
 "data/maps/VermilionCity_Gym_Frlg/scripts.inc": {
 "live": [
@@ -10646,10 +10698,6 @@
 },
 "data/maps/ViridianCity_Frlg/scripts.inc": {
 "live": [
-"ViridianCity_Text_WantToKnowAboutCaterpillarMons",
-"ViridianCity_Text_OhOkayThen",
-"ViridianCity_Text_ExplainCaterpieWeedle",
-"ViridianCity_Text_CitySign",
 "ViridianCity_Text_GymSign"
 ],
 "debug_only": [],
@@ -10670,12 +10718,17 @@
 "ViridianCity_Text_CatchMonsForEasierBattles",
 "ViridianCity_Text_MovesLimitedByPP",
 "ViridianCity_Text_GymDoorsAreLocked"
-]
+],
+"not_built": [
+"ViridianCity_Text_WantToKnowAboutCaterpillarMons",
+"ViridianCity_Text_OhOkayThen",
+"ViridianCity_Text_ExplainCaterpieWeedle",
+"ViridianCity_Text_CitySign"
+],
+"not_built_reason": "no symbol in the build's ELF: not assembled into this build"
 },
 "data/maps/ViridianCity_Gym_Frlg/scripts.inc": {
 "live": [
-"ViridianCity_Gym_Text_GymGuyAdvice",
-"ViridianCity_Gym_Text_GymGuyPostVictory",
 "ViridianCity_Gym_Text_GymStatue",
 "ViridianCity_Gym_Text_GymStatuePlayerWon"
 ],
@@ -10712,7 +10765,12 @@
 "ViridianCity_Gym_Text_SamuelIntro",
 "ViridianCity_Gym_Text_SamuelDefeat",
 "ViridianCity_Gym_Text_SamuelPostBattle"
-]
+],
+"not_built": [
+"ViridianCity_Gym_Text_GymGuyAdvice",
+"ViridianCity_Gym_Text_GymGuyPostVictory"
+],
+"not_built_reason": "no symbol in the build's ELF: not assembled into this build"
 },
 "data/maps/ViridianCity_Gym_hns/scripts.inc": {
 "live": [
@@ -10785,11 +10843,7 @@
 ]
 },
 "data/maps/ViridianForest_Frlg/scripts.inc": {
-"live": [
-"ViridianForest_Text_DougIntro",
-"ViridianForest_Text_DougDefeat",
-"ViridianForest_Text_DougPostBattle"
-],
+"live": [],
 "debug_only": [],
 "dead": [
 "ViridianForest_Text_FriendsItchingToBattle",
@@ -10812,7 +10866,13 @@
 "ViridianForest_Text_CantCatchOwnedMons",
 "ViridianForest_Text_WeakenMonsBeforeCapture",
 "ViridianForest_Text_LeavingViridianForest"
-]
+],
+"not_built": [
+"ViridianForest_Text_DougIntro",
+"ViridianForest_Text_DougDefeat",
+"ViridianForest_Text_DougPostBattle"
+],
+"not_built_reason": "no symbol in the build's ELF: not assembled into this build"
 },
 "data/maps/ViridianForest_hns/scripts.inc": {
 "live": [
@@ -10903,7 +10963,13 @@
 "live": [
 "BerryTree_Text_Hns_NotRipe",
 "BerryTree_Text_Hns_Picked",
-"BerryTree_Text_Hns_BagFull",
+"BerryTree_Text_Hns_BagFull"
+],
+"debug_only": [],
+"dead": [
+"BerryTree_Text_Hns_Sprouted"
+],
+"not_built": [
 "BerryTree_Text_ItsSoftLoamySoil",
 "BerryTree_Text_WantToPlant",
 "BerryTree_Text_PlantedOneBerry",
@@ -10935,10 +11001,7 @@
 "BerryTree_Text_PulledOutTheWeed",
 "BerryTree_Text_APokemonAppeared"
 ],
-"debug_only": [],
-"dead": [
-"BerryTree_Text_Hns_Sprouted"
-]
+"not_built_reason": "no symbol in the build's ELF: not assembled into this build"
 },
 "data/scripts/bug_contest.inc": {
 "live": [
@@ -10964,46 +11027,7 @@
 "dead": []
 },
 "data/scripts/cable_club_frlg.inc": {
-"live": [
-"CableClub_Text_WelcomeWhichCableClubService_Frlg",
-"CableClub_Text_NeedTwoMonsForDoubleBattle_Frlg",
-"CableClub_Text_NeedTwoMonsToTrade_Frlg",
-"CableClub_Text_CantTradeEnigmaBerry_Frlg",
-"CableClub_Text_PleaseWaitBCancel_Frlg",
-"CableClub_Text_PleaseEnter_Frlg",
-"CableClub_Text_DirectYouToYourRoom_Frlg",
-"CableClub_Text_SomeoneIsNotReadyToLink_Frlg",
-"CableClub_Text_LinkErrorPleaseReset_Frlg",
-"CableClub_Text_PlayersMadeDifferentSelections_Frlg",
-"CableClub_Text_PleaseVisitAgain_Frlg",
-"CableClub_Text_IncorrectNumberOfParticipants_Frlg",
-"CableClub_Text_CantSingleBattleWithXPlayers_Frlg",
-"CableClub_Text_CantDoubleBattleWithXPlayers_Frlg",
-"CableClub_Text_NeedFourPlayers_Frlg",
-"CableClub_Text_PleaseConfirmNumberAndRestart_Frlg",
-"CableClub_Text_NotSetUpForFarAwayRegion_Frlg",
-"CableClub_Text_OtherTrainerNotReady_Frlg",
-"CableClub_Text_YouHaveAMonThatCantBeTaken_Frlg",
-"CableClub_Text_NeedBerryForBerryCrush_Frlg",
-"CableClub_Text_NeedTwoMonsForUnionRoom_Frlg",
-"CableClub_Text_NoEnigmaBerryInUnionRoom_Frlg",
-"CableClub_Text_UnionRoomAdapterNotConnected_Frlg",
-"CableClub_Text_WelcomeWhichDirectCornerRoom_Frlg",
-"CableClub_Text_TradePokemon_Frlg",
-"CableClub_Text_PlayWhichBattleMode_Frlg",
-"CableClub_Text_UseBerryCrush_Frlg",
-"CableClub_Text_ExplainBattleModes_Frlg",
-"CableClub_Text_ChooseGroupLeaderOfTwo_Frlg",
-"CableClub_Text_ChooseGroupLeaderOfFour_Frlg",
-"CableClub_Text_ChooseGroupLeader_Frlg",
-"CableClub_Text_WelcomeUnionRoomEnter_Frlg",
-"CableClub_Text_UnionRoomInfo_Frlg",
-"CableClub_Text_EnjoyUnionRoom_Frlg",
-"CableClub_Text_AskAboutLinking_Frlg",
-"CableClub_Text_ExplainWirelessClub_Frlg",
-"CableClub_Text_HopeYouEnjoyWirelessSystem_Frlg",
-"Text_WirelessClubUndergoingAdjustments"
-],
+"live": [],
 "debug_only": [],
 "dead": [
 "CableClub_Text_WhichService_Frlg",
@@ -11044,7 +11068,48 @@
 "CableClub_Text_FirstTimeRightThisWay_Frlg",
 "CableClub_Text_ExplainWirelessClubFirstTime_Frlg",
 "Text_AppearsToBeUndergoingAdjustments"
-]
+],
+"not_built": [
+"CableClub_Text_WelcomeWhichCableClubService_Frlg",
+"CableClub_Text_NeedTwoMonsForDoubleBattle_Frlg",
+"CableClub_Text_NeedTwoMonsToTrade_Frlg",
+"CableClub_Text_CantTradeEnigmaBerry_Frlg",
+"CableClub_Text_PleaseWaitBCancel_Frlg",
+"CableClub_Text_PleaseEnter_Frlg",
+"CableClub_Text_DirectYouToYourRoom_Frlg",
+"CableClub_Text_SomeoneIsNotReadyToLink_Frlg",
+"CableClub_Text_LinkErrorPleaseReset_Frlg",
+"CableClub_Text_PlayersMadeDifferentSelections_Frlg",
+"CableClub_Text_PleaseVisitAgain_Frlg",
+"CableClub_Text_IncorrectNumberOfParticipants_Frlg",
+"CableClub_Text_CantSingleBattleWithXPlayers_Frlg",
+"CableClub_Text_CantDoubleBattleWithXPlayers_Frlg",
+"CableClub_Text_NeedFourPlayers_Frlg",
+"CableClub_Text_PleaseConfirmNumberAndRestart_Frlg",
+"CableClub_Text_NotSetUpForFarAwayRegion_Frlg",
+"CableClub_Text_OtherTrainerNotReady_Frlg",
+"CableClub_Text_YouHaveAMonThatCantBeTaken_Frlg",
+"CableClub_Text_NeedBerryForBerryCrush_Frlg",
+"CableClub_Text_NeedTwoMonsForUnionRoom_Frlg",
+"CableClub_Text_NoEnigmaBerryInUnionRoom_Frlg",
+"CableClub_Text_UnionRoomAdapterNotConnected_Frlg",
+"CableClub_Text_WelcomeWhichDirectCornerRoom_Frlg",
+"CableClub_Text_TradePokemon_Frlg",
+"CableClub_Text_PlayWhichBattleMode_Frlg",
+"CableClub_Text_UseBerryCrush_Frlg",
+"CableClub_Text_ExplainBattleModes_Frlg",
+"CableClub_Text_ChooseGroupLeaderOfTwo_Frlg",
+"CableClub_Text_ChooseGroupLeaderOfFour_Frlg",
+"CableClub_Text_ChooseGroupLeader_Frlg",
+"CableClub_Text_WelcomeUnionRoomEnter_Frlg",
+"CableClub_Text_UnionRoomInfo_Frlg",
+"CableClub_Text_EnjoyUnionRoom_Frlg",
+"CableClub_Text_AskAboutLinking_Frlg",
+"CableClub_Text_ExplainWirelessClub_Frlg",
+"CableClub_Text_HopeYouEnjoyWirelessSystem_Frlg",
+"Text_WirelessClubUndergoingAdjustments"
+],
+"not_built_reason": "no symbol in the build's ELF: not assembled into this build"
 },
 "data/scripts/config.inc": {
 "live": [
@@ -12228,111 +12293,7 @@
 "live": [
 "MatchCall_Text_Mom3",
 "MatchCall_Text_Baoba1",
-"MatchCall_Text_Baoba2",
-"MatchCall_Text_Roxanne1",
-"MatchCall_Text_Roxanne2",
-"MatchCall_Text_Roxanne3",
-"MatchCall_Text_Roxanne4",
-"MatchCall_Text_Brawly1",
-"MatchCall_Text_Brawly2",
-"MatchCall_Text_Brawly3",
-"MatchCall_Text_Brawly4",
-"MatchCall_Text_Wattson1",
-"MatchCall_Text_Wattson2",
-"MatchCall_Text_Wattson3",
-"MatchCall_Text_Wattson4",
-"MatchCall_Text_Flannery1",
-"MatchCall_Text_Flannery2",
-"MatchCall_Text_Flannery3",
-"MatchCall_Text_Flannery4",
-"MatchCall_Text_Winona1",
-"MatchCall_Text_Winona2",
-"MatchCall_Text_Winona3",
-"MatchCall_Text_Winona4",
-"MatchCall_Text_TateLiza1",
-"MatchCall_Text_TateLiza2",
-"MatchCall_Text_TateLiza3",
-"MatchCall_Text_TateLiza4",
-"MatchCall_Text_Juan1",
-"MatchCall_Text_Juan2",
-"MatchCall_Text_Juan3",
-"MatchCall_Text_Juan4",
-"MatchCall_Text_Sidney",
-"MatchCall_Text_Phoebe",
-"MatchCall_Text_Glacia",
-"MatchCall_Text_Drake",
-"MatchCall_Text_Wallace",
-"MatchCall_Text_May1",
-"MatchCall_Text_May2",
-"MatchCall_Text_May3",
-"MatchCall_Text_May4",
-"MatchCall_Text_May5",
-"MatchCall_Text_May6",
-"MatchCall_Text_May7",
-"MatchCall_Text_May8",
-"MatchCall_Text_May9",
-"MatchCall_Text_May10",
-"MatchCall_Text_May11",
-"MatchCall_Text_May12",
-"MatchCall_Text_May13",
-"MatchCall_Text_May14",
-"MatchCall_Text_May15",
-"MatchCall_Text_Brendan1",
-"MatchCall_Text_Brendan2",
-"MatchCall_Text_Brendan3",
-"MatchCall_Text_Brendan4",
-"MatchCall_Text_Brendan5",
-"MatchCall_Text_Brendan6",
-"MatchCall_Text_Brendan7",
-"MatchCall_Text_Brendan8",
-"MatchCall_Text_Brendan9",
-"MatchCall_Text_Brendan10",
-"MatchCall_Text_Brendan11",
-"MatchCall_Text_Brendan12",
-"MatchCall_Text_Brendan13",
-"MatchCall_Text_Brendan14",
-"MatchCall_Text_Brendan15",
-"MatchCall_Text_Wally1",
-"MatchCall_Text_Wally2",
-"MatchCall_Text_Wally3",
-"MatchCall_Text_Wally4",
-"MatchCall_Text_Wally5",
-"MatchCall_Text_Wally6",
-"MatchCall_Text_Wally7",
-"MatchCall_Text_Scott1",
-"MatchCall_Text_Scott2",
-"MatchCall_Text_Scott3",
-"MatchCall_Text_Scott4",
-"MatchCall_Text_Scott5",
-"MatchCall_Text_Scott6",
-"MatchCall_Text_Scott7",
-"MatchCall_Text_Norman1",
-"MatchCall_Text_Norman2",
-"MatchCall_Text_Norman3",
-"MatchCall_Text_Norman4",
-"MatchCall_Text_Norman5",
-"MatchCall_Text_Norman6",
-"MatchCall_Text_Norman7",
-"MatchCall_Text_Norman8",
-"MatchCall_Text_Norman9",
-"MatchCall_Text_Steven1",
-"MatchCall_Text_Steven2",
-"MatchCall_Text_Steven3",
-"MatchCall_Text_Steven4",
-"MatchCall_Text_Steven5",
-"MatchCall_Text_Steven6",
-"MatchCall_Text_Steven7",
-"MatchCall_Text_MrStone1",
-"MatchCall_Text_MrStone2",
-"MatchCall_Text_MrStone3",
-"MatchCall_Text_MrStone4",
-"MatchCall_Text_MrStone5",
-"MatchCall_Text_MrStone6",
-"MatchCall_Text_MrStone7",
-"MatchCall_Text_MrStone8",
-"MatchCall_Text_MrStone9",
-"MatchCall_Text_MrStone10",
-"MatchCall_Text_MrStone11"
+"MatchCall_Text_Baoba2"
 ],
 "debug_only": [],
 "dead": [
@@ -12548,7 +12509,114 @@
 "MatchCall_Text_BirchRegisterCall",
 "MatchCall_Text_RegisteredBirch",
 "MatchCall_Text_UnusedProfBirch"
-]
+],
+"flag_off": [
+"MatchCall_Text_Roxanne1",
+"MatchCall_Text_Roxanne2",
+"MatchCall_Text_Roxanne3",
+"MatchCall_Text_Roxanne4",
+"MatchCall_Text_Brawly1",
+"MatchCall_Text_Brawly2",
+"MatchCall_Text_Brawly3",
+"MatchCall_Text_Brawly4",
+"MatchCall_Text_Wattson1",
+"MatchCall_Text_Wattson2",
+"MatchCall_Text_Wattson3",
+"MatchCall_Text_Wattson4",
+"MatchCall_Text_Flannery1",
+"MatchCall_Text_Flannery2",
+"MatchCall_Text_Flannery3",
+"MatchCall_Text_Flannery4",
+"MatchCall_Text_Winona1",
+"MatchCall_Text_Winona2",
+"MatchCall_Text_Winona3",
+"MatchCall_Text_Winona4",
+"MatchCall_Text_TateLiza1",
+"MatchCall_Text_TateLiza2",
+"MatchCall_Text_TateLiza3",
+"MatchCall_Text_TateLiza4",
+"MatchCall_Text_Juan1",
+"MatchCall_Text_Juan2",
+"MatchCall_Text_Juan3",
+"MatchCall_Text_Juan4",
+"MatchCall_Text_Sidney",
+"MatchCall_Text_Phoebe",
+"MatchCall_Text_Glacia",
+"MatchCall_Text_Drake",
+"MatchCall_Text_Wallace",
+"MatchCall_Text_May1",
+"MatchCall_Text_May2",
+"MatchCall_Text_May3",
+"MatchCall_Text_May4",
+"MatchCall_Text_May5",
+"MatchCall_Text_May6",
+"MatchCall_Text_May7",
+"MatchCall_Text_May8",
+"MatchCall_Text_May9",
+"MatchCall_Text_May10",
+"MatchCall_Text_May11",
+"MatchCall_Text_May12",
+"MatchCall_Text_May13",
+"MatchCall_Text_May14",
+"MatchCall_Text_May15",
+"MatchCall_Text_Brendan1",
+"MatchCall_Text_Brendan2",
+"MatchCall_Text_Brendan3",
+"MatchCall_Text_Brendan4",
+"MatchCall_Text_Brendan5",
+"MatchCall_Text_Brendan6",
+"MatchCall_Text_Brendan7",
+"MatchCall_Text_Brendan8",
+"MatchCall_Text_Brendan9",
+"MatchCall_Text_Brendan10",
+"MatchCall_Text_Brendan11",
+"MatchCall_Text_Brendan12",
+"MatchCall_Text_Brendan13",
+"MatchCall_Text_Brendan14",
+"MatchCall_Text_Brendan15",
+"MatchCall_Text_Wally1",
+"MatchCall_Text_Wally2",
+"MatchCall_Text_Wally3",
+"MatchCall_Text_Wally4",
+"MatchCall_Text_Wally5",
+"MatchCall_Text_Wally6",
+"MatchCall_Text_Wally7",
+"MatchCall_Text_Scott1",
+"MatchCall_Text_Scott2",
+"MatchCall_Text_Scott3",
+"MatchCall_Text_Scott4",
+"MatchCall_Text_Scott5",
+"MatchCall_Text_Scott6",
+"MatchCall_Text_Scott7",
+"MatchCall_Text_Norman1",
+"MatchCall_Text_Norman2",
+"MatchCall_Text_Norman3",
+"MatchCall_Text_Norman4",
+"MatchCall_Text_Norman5",
+"MatchCall_Text_Norman6",
+"MatchCall_Text_Norman7",
+"MatchCall_Text_Norman8",
+"MatchCall_Text_Norman9",
+"MatchCall_Text_Steven1",
+"MatchCall_Text_Steven2",
+"MatchCall_Text_Steven3",
+"MatchCall_Text_Steven4",
+"MatchCall_Text_Steven5",
+"MatchCall_Text_Steven6",
+"MatchCall_Text_Steven7",
+"MatchCall_Text_MrStone1",
+"MatchCall_Text_MrStone2",
+"MatchCall_Text_MrStone3",
+"MatchCall_Text_MrStone4",
+"MatchCall_Text_MrStone5",
+"MatchCall_Text_MrStone6",
+"MatchCall_Text_MrStone7",
+"MatchCall_Text_MrStone8",
+"MatchCall_Text_MrStone9",
+"MatchCall_Text_MrStone10",
+"MatchCall_Text_MrStone11"
+],
+"flag_off_reason": "match-call contact whose header flag is defined as 0 in include/constants/flags_hns.h: FlagGet(0) is FALSE, so the contact is never enabled"
 },
 "data/text/match_call_hns.inc": {
 "live": [
@@ -14267,7 +14335,6 @@
 },
 "data/text/trainers_frlg.inc": {
 "live": [
-"Route13_Text_PerryRematchIntro",
 "Route14_Text_CarterRematchIntro"
 ],
 "debug_only": [],
@@ -14504,7 +14571,11 @@
 "SevenIsland_TanobyRuins_Text_BenjaminRematchIntro",
 "SevenIsland_TanobyRuins_Text_EdnaRematchIntro",
 "SevenIsland_TanobyRuins_Text_CliffordRematchIntro"
-]
+],
+"not_built": [
+"Route13_Text_PerryRematchIntro"
+],
+"not_built_reason": "no symbol in the build's ELF: not assembled into this build"
 },
 "data/text/tv.inc": {
 "live": [
@@ -14513,7 +14584,71 @@
 "LilycoveCity_ContestLobby_Text_WhatImageWhenYouHearX",
 "LilycoveCity_ContestLobby_Text_ThatsAllForInterview",
 "LilycoveCity_ContestLobby_Text_PleaseDoShareStoryWithMe",
-"LilycoveCity_ContestLobby_Text_LookingForwardToNextContest",
+"LilycoveCity_ContestLobby_Text_LookingForwardToNextContest"
+],
+"debug_only": [],
+"dead": [
+"BattleFrontier_BattleTowerLobby_Text_InterviewRequest",
+"BattleFrontier_BattleTowerLobby_Text_HowDidBattleTowerTurnOut",
+"BattleFrontier_BattleTowerLobby_Text_SorryWeDisturbedYou",
+"BattleFrontier_BattleTowerLobby_Text_ObviousYouHadGreatBattle",
+"BattleFrontier_BattleTowerLobby_Text_DifficultToMakeBattleTurnOutAsPlanned",
+"BattleFrontier_BattleTowerLobby_Text_DescribeYourBattle",
+"BattleFrontier_BattleTowerLobby_Text_ThatsGreatLine",
+"BattleFrontier_BattleTowerLobby_Text_SilentType",
+"BattleFrontier_BattleTowerLobby_Text_LookingForwardToNextBattle",
+"SlateportCity_PokemonFanClub_Text_InterviewRequestHasName",
+"SlateportCity_PokemonFanClub_Text_HereGoesQuickAnswers",
+"SlateportCity_PokemonFanClub_Text_DescribeFeelingsFirstMetMon",
+"SlateportCity_PokemonFanClub_Text_LikenMonToSomethingYouLike",
+"SlateportCity_PokemonFanClub_Text_WhatAttractedYouAboutMon",
+"SlateportCity_PokemonFanClub_Text_WhatDoPokemonMeanToYou",
+"SlateportCity_PokemonFanClub_Text_ThatsAllForInterview",
+"SlateportCity_PokemonFanClub_Text_HereIfYouGetUrgeToTellMe",
+"SlateportCity_PokemonFanClub_Text_EnjoyDoingInterviews",
+"SlateportCity_PokemonFanClub_Text_InterviewRequest",
+"SlateportCity_PokemonFanClub_Text_TellMeAnythingAboutYourMon",
+"SlateportCity_PokemonFanClub_Text_ThatsAllForInterview2",
+"SlateportCity_OceanicMuseum_1F_Text_InterviewRequest",
+"SlateportCity_OceanicMuseum_1F_Text_InterviewRequestShort",
+"SlateportCity_OceanicMuseum_1F_Text_TellMeExperienceInvolvingPokemon",
+"SlateportCity_OceanicMuseum_1F_Text_LetMeKnowIfYouHaveStory",
+"SlateportCity_OceanicMuseum_1F_Text_ThatsAllForInterview",
+"SlateportCity_OceanicMuseum_1F_Text_BetterWriteUpStory",
+"LilycoveCity_PokemonTrainerFanClub_Text_WhatsYourOpinionOfTrainer",
+"LilycoveCity_PokemonTrainerFanClub_Text_ThatsWhatYouThink",
+"LilycoveCity_PokemonTrainerFanClub_Text_HaveYouForgottenTrainer",
+"LilycoveCity_PokemonTrainerFanClub_Text_WhatsYourOpinionOfTrainer2",
+"LilycoveCity_PokemonTrainerFanClub_Text_HowStrongRateTrainer",
+"LilycoveCity_PokemonTrainerFanClub_Text_HaveYouForgottenTrainer2",
+"LilycoveCity_PokemonTrainerFanClub_Text_YouShouldMeetTrainer",
+"LilycoveCity_PokemonTrainerFanClub_Text_ThankYouIllShareThisInfo",
+"LilycoveCity_PokemonTrainerFanClub_HopeYouCatchTVSpecial",
+"GabbyAndTy_Text_GabbyPreFirstBattle",
+"GabbyAndTy_Text_GabbyIntro",
+"GabbyAndTy_Text_GabbyDefeatFirstTime",
+"GabbyAndTy_Text_WhoAreYouInterview",
+"GabbyAndTy_Text_QuoteFromLastInterview",
+"GabbyAndTy_Text_YouStompedUsInterviewAgain",
+"GabbyAndTy_Text_YouThrewABallAtUsInterviewAgain",
+"GabbyAndTy_Text_CleverItemSkillsInterviewAgain",
+"GabbyAndTy_Text_WeLookedRespectableInterviewAgain",
+"GabbyAndTy_Text_InterviewAgain",
+"GabbyAndTy_Text_DescribeYourFeelings",
+"GabbyAndTy_Text_PerfectWellBeSeeingYou",
+"GabbyAndTy_Text_DontGiveUpKeepingEyeOut",
+"GabbyAndTy_Text_KeepingAnEyeOutForYou",
+"GabbyAndTy_Text_GabbyNotEnoughMons",
+"GabbyAndTy_Text_GiveUsAnInterviewThisTime",
+"GabbyAndTy_Text_GabbyDefeat",
+"GabbyAndTy_Text_TyPreFirstBattle",
+"GabbyAndTy_Text_TyIntro",
+"GabbyAndTy_Text_TyPostBattle",
+"GabbyAndTy_Text_TyNotEnoughMons",
+"GabbyAndTy_Text_TyDefeatFirstTime",
+"GabbyAndTy_Text_TyDefeat"
+],
+"flag_off": [
 "gTVBravoTrainerText00",
 "gTVBravoTrainerText01",
 "gTVBravoTrainerText02",
@@ -14850,67 +14985,6 @@
 "ContestLadyShow_Text_Lost",
 "ContestLadyShow_Text_LostBadly"
 ],
-"debug_only": [],
-"dead": [
-"BattleFrontier_BattleTowerLobby_Text_InterviewRequest",
-"BattleFrontier_BattleTowerLobby_Text_HowDidBattleTowerTurnOut",
-"BattleFrontier_BattleTowerLobby_Text_SorryWeDisturbedYou",
-"BattleFrontier_BattleTowerLobby_Text_ObviousYouHadGreatBattle",
-"BattleFrontier_BattleTowerLobby_Text_DifficultToMakeBattleTurnOutAsPlanned",
-"BattleFrontier_BattleTowerLobby_Text_DescribeYourBattle",
-"BattleFrontier_BattleTowerLobby_Text_ThatsGreatLine",
-"BattleFrontier_BattleTowerLobby_Text_SilentType",
-"BattleFrontier_BattleTowerLobby_Text_LookingForwardToNextBattle",
-"SlateportCity_PokemonFanClub_Text_InterviewRequestHasName",
-"SlateportCity_PokemonFanClub_Text_HereGoesQuickAnswers",
-"SlateportCity_PokemonFanClub_Text_DescribeFeelingsFirstMetMon",
-"SlateportCity_PokemonFanClub_Text_LikenMonToSomethingYouLike",
-"SlateportCity_PokemonFanClub_Text_WhatAttractedYouAboutMon",
-"SlateportCity_PokemonFanClub_Text_WhatDoPokemonMeanToYou",
-"SlateportCity_PokemonFanClub_Text_ThatsAllForInterview",
-"SlateportCity_PokemonFanClub_Text_HereIfYouGetUrgeToTellMe",
-"SlateportCity_PokemonFanClub_Text_EnjoyDoingInterviews",
-"SlateportCity_PokemonFanClub_Text_InterviewRequest",
-"SlateportCity_PokemonFanClub_Text_TellMeAnythingAboutYourMon",
-"SlateportCity_PokemonFanClub_Text_ThatsAllForInterview2",
-"SlateportCity_OceanicMuseum_1F_Text_InterviewRequest",
-"SlateportCity_OceanicMuseum_1F_Text_InterviewRequestShort",
-"SlateportCity_OceanicMuseum_1F_Text_TellMeExperienceInvolvingPokemon",
-"SlateportCity_OceanicMuseum_1F_Text_LetMeKnowIfYouHaveStory",
-"SlateportCity_OceanicMuseum_1F_Text_ThatsAllForInterview",
-"SlateportCity_OceanicMuseum_1F_Text_BetterWriteUpStory",
-"LilycoveCity_PokemonTrainerFanClub_Text_WhatsYourOpinionOfTrainer",
-"LilycoveCity_PokemonTrainerFanClub_Text_ThatsWhatYouThink",
-"LilycoveCity_PokemonTrainerFanClub_Text_HaveYouForgottenTrainer",
-"LilycoveCity_PokemonTrainerFanClub_Text_WhatsYourOpinionOfTrainer2",
-"LilycoveCity_PokemonTrainerFanClub_Text_HowStrongRateTrainer",
-"LilycoveCity_PokemonTrainerFanClub_Text_HaveYouForgottenTrainer2",
-"LilycoveCity_PokemonTrainerFanClub_Text_YouShouldMeetTrainer",
-"LilycoveCity_PokemonTrainerFanClub_Text_ThankYouIllShareThisInfo",
-"LilycoveCity_PokemonTrainerFanClub_HopeYouCatchTVSpecial",
-"GabbyAndTy_Text_GabbyPreFirstBattle",
-"GabbyAndTy_Text_GabbyIntro",
-"GabbyAndTy_Text_GabbyDefeatFirstTime",
-"GabbyAndTy_Text_WhoAreYouInterview",
-"GabbyAndTy_Text_QuoteFromLastInterview",
-"GabbyAndTy_Text_YouStompedUsInterviewAgain",
-"GabbyAndTy_Text_YouThrewABallAtUsInterviewAgain",
-"GabbyAndTy_Text_CleverItemSkillsInterviewAgain",
-"GabbyAndTy_Text_WeLookedRespectableInterviewAgain",
-"GabbyAndTy_Text_InterviewAgain",
-"GabbyAndTy_Text_DescribeYourFeelings",
-"GabbyAndTy_Text_PerfectWellBeSeeingYou",
-"GabbyAndTy_Text_DontGiveUpKeepingEyeOut",
-"GabbyAndTy_Text_KeepingAnEyeOutForYou",
-"GabbyAndTy_Text_GabbyNotEnoughMons",
-"GabbyAndTy_Text_GiveUsAnInterviewThisTime",
-"GabbyAndTy_Text_GabbyDefeat",
-"GabbyAndTy_Text_TyPreFirstBattle",
-"GabbyAndTy_Text_TyIntro",
-"GabbyAndTy_Text_TyPostBattle",
-"GabbyAndTy_Text_TyNotEnoughMons",
-"GabbyAndTy_Text_TyDefeatFirstTime",
-"GabbyAndTy_Text_TyDefeat"
-]
+"flag_off_reason": "TV show text: every show runs after `goto_if_unset FLAG_SYS_TV_START` in data/scripts/tv.inc, and FLAG_SYS_TV_START is defined as 0"
 }
 }
