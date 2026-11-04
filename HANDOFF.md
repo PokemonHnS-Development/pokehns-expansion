@@ -27,10 +27,10 @@ fresh clone.
 | [`docs/hebrew_translation.md`](docs/hebrew_translation.md) | how Hebrew is stored and drawn (RTL renderer, window modes, fonts, budgets) |
 | [`tools/hebrew/README.md`](tools/hebrew/README.md) | every tool and the `HNS_*` locations |
 | [`tools/hebrew/emu/README.md`](tools/hebrew/emu/README.md) | the headless emulator harness, tours, sweep, map walk, save ladder |
-| [`tools/hebrew/release/README.md`](tools/hebrew/release/README.md) | the release scripts |
+| [`tools/hebrew/release/README.md`](tools/hebrew/release/README.md) | the release scripts; [`REVIEW.md`](tools/hebrew/release/REVIEW.md) there is the screenshot review |
 | [`tools/hebrew/testmsgs/README.md`](tools/hebrew/testmsgs/README.md) | the Hebrew battle-test message table |
 | [`translation/hebrew/STYLE.md`](translation/hebrew/STYLE.md) | the binding style rules |
-| [`translation/hebrew/DECISIONS.md`](translation/hebrew/DECISIONS.md) | 58 recorded decisions and the names review |
+| [`translation/hebrew/DECISIONS.md`](translation/hebrew/DECISIONS.md) | 74 recorded decisions, up to Q138, and the names review |
 | [`translation/hebrew/transliteration_rules.md`](translation/hebrew/transliteration_rules.md) | how names are transliterated |
 | [`translation/hebrew/STATUS.md`](translation/hebrew/STATUS.md) | per-file state (generated) |
 | [`translation/hebrew/glossary.csv`](translation/hebrew/glossary.csv) | every name and fixed term |
@@ -38,26 +38,27 @@ fresh clone.
 
 ---
 
-## 0. State at handoff (2026-10-22)
+## 0. State at handoff (2026-11-05)
 
 | Item | Value | Check |
 | --- | --- | --- |
-| `he/main` | `4a9c6858b1` | `git rev-parse --short he/main` |
+| `he/main` | `85705e4bc9` (on GitHub too), before the merge of this documentation pass and the two name fixes (`he/wip-r18e`) | `git rev-parse --short he/main` |
 | Release | One release, 1.0, replaced in place on each update (ROM, `SHA1SUMS`, `TESTING.md`); the builds repo's commit history keeps the older builds. Current 1.0: built from `he/main` `651e35c35b` | `<builds>/README.md` |
 | 1.0 ROM | `pokehns-he-2.0.6-1.0.gba`: 33554432 bytes, SHA-1 `6438a720bfbdec7c666ccbd54e5b6a9d6755d770`, CRC32 `A2523184` | `<builds>/SHA1SUMS` |
-| Releasing | Build a candidate with `tools/hebrew/release/`, then replace the three files in the builds repo and say in the commit message which `he/main` commit it was built from; keep `tools/hebrew/release/notes.json` at `"release": "1.0"` | section 5 |
-| CI | the last two runs on `he/main` are green (39494370746, 39496758687) | `gh run list -R ronyeh2/pokehns-expansion-heb --workflow hebrew.yml` |
-| Static checks on `he/main` | drift 0 FAIL; audit 0 errors and 48 warnings; namecheck 0 problems; plurals 0 problems; 67 tool tests OK | section 4.2 |
-| Translation status | every live file is translated: 510 seen on screen, 132 translated, 19 blocked | `translation/hebrew/STATUS.md:5` |
+| Releasing | Build a candidate with `tools/hebrew/release/`, then replace the three files in the builds repo and say in the commit message which `he/main` commit it was built from; keep `tools/hebrew/release/notes.json` at `"release": "1.0"`. A candidate is published with hand play declared as not tested (`DECISIONS.md` Q138) | section 5 |
+| CI | the last three runs on `he/main` are green (41817213782, 41849306564, 41918360015 at `85705e4bc9`) | `gh run list -R ronyeh2/pokehns-expansion-heb --workflow hebrew.yml --branch he/main` |
+| Static checks | drift 0 FAIL (708 files); audit 0 errors and 48 warnings; namecheck 0 problems and 0 warnings (60 allowlisted); plurals 0 problems; the Pokédex A–Z, Easy Chat and live-label generators up to date; 132 tool tests OK on Python 3.9.6, 3.11.9 and 3.14.7 | section 4.2 |
+| Translation status | every live file is translated: 650 files, 525 seen on screen, 125 translated, none blocked | `translation/hebrew/STATUS.md:5` |
 
-**First things to pick up**, in order (details in section 8):
+**What remains** (details in section 8):
 
-1. Port the fixed nickname tour into the fork. The fork's copy is stale: it types `CDE` for
-   `ABC` and still reports OK.
-2. Regenerate the Hebrew A–Z Pokédex order. 4 species are out of place.
-3. Settle Easy Chat: the docs say English, but the tree is about half Hebrew.
-4. Fix the doc lags listed in section 8.3.
-5. Still never done: hand play from a new game to the first badge, and real hardware.
+1. **Declared, not doable here:** hand play from a new game to the first badge (it needs a
+   person), real hardware (a 32 MiB flash cart with FLASH 128 KB and an RTC), and a read of the
+   shipped wording by a native speaker. All three are in `notes.json` `not_tested`, so every
+   `TESTING.md` says so; section 8.5 lists the lines reviewers flagged for a native read.
+2. Merge `he/fix-upstream-hydra` (`8d52b4cccf`, the hydra summary guard) through
+   `he/upstream-fixes` into `he/main` (section 8.1).
+3. The small open rows of section 8.1.
 
 ---
 
@@ -77,10 +78,10 @@ pokeemerald-expansion 1.15.2. Upstream is `PokemonHnS-Development/pokehns-expans
 
 | Repository | Visibility | Holds | Notes |
 | --- | --- | --- | --- |
-| `ronyeh2/pokehns-expansion-heb` (this repo) | public | engine, text, graphics, tools, docs | default branch `master`; **no tags** (`git ls-remote` on 2026-10-22) |
+| `ronyeh2/pokehns-expansion-heb` (this repo) | public | engine, text, graphics, tools, docs | default branch `master`; **no tags** (`git ls-remote` on 2026-11-05) |
 | `PokemonHnS-Development/pokehns-expansion` | public | upstream | `Release-v2.0.6` = its `master` = `167aa6d537` |
-| `ronyeh2/pokehns-hebrew-builds` | **private** | the ROMs, `SHA1SUMS`, `TESTING.md` per release, a README table | `.gitattributes` has `*.gba binary`; one ROM per milestone |
-| `<private>` (no remote) | local only | the translated unit chunks (`translation/units/B01..B40`, `G01`), release candidates `release/rc1..rc5`, the built `emu/hnsrun`, the mGBA 0.10.5 build (`mgba/`), the save ladder (`emu/saves`), the libretro cores (`cores/`), the English reference runs (`runs/tour_en`, `runs/mapwalk_en`), working notes (`notes/*.md`) | nothing in it is version-controlled or backed up. Section 2.6 says how to rebuild each piece from the fork |
+| `ronyeh2/pokehns-hebrew-builds` | **private** | the one release 1.0 (ROM, `SHA1SUMS`, `TESTING.md`), replaced in place; `saves/`, `reference/` (libretro cores, English map walk), `records/rcNN/` (each candidate's logs and review JSON), `archive/` (history only) | `.gitattributes` has `*.gba`, `*.sav`, `*.zip`, `*.tar.gz` binary; git history keeps the older builds |
+| `<private>` (no remote) | local only | the mGBA 0.10.5 build (`mgba/`), `emu/hnsrun`, the candidates' ROMs, ELFs and screenshots (`release/rc1..rc20`, 7.5 GB), the round screenshots (`scratch/`, 136 GB) | everything the release needs is in the fork or `<builds>` (section 8.4); the rest is rebuilt (section 2.6) |
 
 The Spanish (`SergioBonet/hns_es`) and French (`nhykola/HeartAndSoul-FR`) forks were used only
 as a cross-check, never as source text (`STYLE.md` §1).
@@ -92,14 +93,16 @@ as a cross-check, never as source text (`STYLE.md` §1).
 | `master` | identical to upstream `167aa6d537` | never commit to it |
 | `he/main` | the translation; the release branch | feature branches merge into it with `--no-ff` |
 | `he/renderer` | the Hebrew engine with the **English** strings. It is the drift baseline (`HNS_BASELINE`) and the chunk source | every engine or graphics commit is cherry-picked onto it; text commits never are |
-| `he/fonts`, `he/graphics`, `he/naming-keyboard`, `he/preview`, `he/upstream-fixes` | feature branches, already merged | kept for history |
+| `he/upstream-fixes` | upstream bug fixes, kept apart from text and engine work | `he/fix-upstream-hydra` (local, `8d52b4cccf`) waits to merge into it |
+| `he/fonts`, `he/graphics`, `he/naming-keyboard`, `he/preview` | feature branches, already merged | kept for history |
 | `he/fix-*` | one fix topic each (for example `he/fix-k5-cosmetics`, `he/fix-vr-dex`), already merged | merge title `Merge he/<branch>: <what it brings>` |
 
-On GitHub (2026-10-22): `master` `167aa6d537`, `he/main` `4a9c6858b1`, `he/renderer` `9e9e82ab14`,
-and the 16 other `he/*` branches.
+On GitHub (2026-11-05): `master` `167aa6d537`, `he/main` `85705e4bc9`, `he/renderer` `384104fb15`,
+`he/upstream-fixes` `f96cb7a4f9`, and 39 other `he/*` branches.
 
-The local branch `he/fix-screens` (worktree `../pokehns-heb-screens`, at `he/main`) is **not** on
-GitHub. Whether it holds work in progress is unverified.
+The local branch `he/fix-screens` is merged into `he/main`. 16 other local-only branches
+(`he/wip-screens-*`, `he/fix-screens-r3`, `-r4`) have commits that `git cherry` does not find in
+`he/main`; they were probably squashed when merged (**unverified**). They are history only.
 
 ### 1.3 Worktrees the tools expect
 
@@ -109,6 +112,7 @@ GitHub. Whether it holds work in progress is unverified.
 | `../pokehns-heb-engine` | `he/renderer` | `drift.py`, `make_chunks.py`, `units.py --tree` (`HNS_BASELINE`) |
 | `../pokehns-en` | detached at `Release-v2.0.6`, with `make hns` built | `audit.py --baseline`, `rom_sweep.py`, the save ladder (`HNS_UPSTREAM`, `HNS_EN_ROM`) |
 | `../pokehns-release` | detached at the release commit | `tools/hebrew/release/*.sh` (`HNS_RELEASE_WORKTREE`); the build script removes and re-creates it |
+| `../pokefirered-heb` | the FireRed Hebrew translation, optional | `namecheck.py --fr-sync` (`HNS_FIRERED`); without it the check prints `FRSYNC skipped` |
 
 `python3 tools/hebrew/paths.py` prints every location the tools resolved.
 
@@ -117,7 +121,7 @@ GitHub. Whether it holds work in progress is unverified.
 - **ROMs, ELFs and maps** (`*.gba`, `*.elf`, `*.map`) and **saves** (`*.sa*`). A built ROM is
   the copyrighted game, and a DMCA notice can take the public fork down with it. They are
   git-ignored (`.gitignore:4-5, 26, 29`), and `build/` is ignored too (`.gitignore:31`). A ROM
-  goes only to the private builds repository, one per milestone. The CI workflow never uploads
+  goes only to the private builds repository, as the one release 1.0, replaced in place. The CI workflow never uploads
   a ROM (`hebrew.yml:3-4`).
 - **Screenshots of a whole run.** `tools/hebrew/emu/README.md` says not to commit them. Put run
   output under `build/hebrew/` (`HNS_WORK`).
@@ -140,23 +144,26 @@ Reference machine: Apple Silicon, macOS.
 | libpng, pkg-config | Homebrew libpng 1.6.58 | `brew install libpng pkg-config`; Linux: `libpng-dev` |
 | GNU make | macOS ships 3.81 | 3.81 builds fine but has no `-O` (section 6.1) |
 | git | any | the build refuses to run without git history (section 6.1) |
-| Python 3 | 3.11.9 (CI: Ubuntu 24.04's python3) | standard library only, except `tools/hebrew/fontcells.py` |
-| Pillow | 12.2.0 | `python3 -m pip install Pillow`. Only `fontcells.py` needs it; the harness writes PNGs itself |
+| Python 3 | 3.9 or newer: the 132 tool tests pass on 3.9.6, 3.11.9 and 3.14.7, and every script under `tools/hebrew` compiles on 3.9.6 and 3.14.7 (CI: Ubuntu 26.04's python3) | standard library only, except the picture tools |
+| Pillow | 12.2.0 | `python3 -m pip install Pillow`. Needed by `fontcells.py`, `tools/hebrew/graphics/`, the font previews and the review-sheet scripts; the harness writes PNGs itself |
+| numpy | any recent | only `tools/hebrew/inventory/` |
 | cmake | 4.4.3 | only for building mGBA for the harness |
 
-**Linux (what CI installs, `hebrew.yml:22-25`):**
+**Linux (what CI installs, `hebrew.yml:24-27`):**
 
 ```bash
 sudo apt-get install -y --no-install-recommends binutils-arm-none-eabi gcc-arm-none-eabi \
      libnewlib-arm-none-eabi libpng-dev python3
 ```
 
-On ubuntu-24.04 this gives gcc-arm-none-eabi 13.2. It builds and tests fine, but it is **not the
-release toolchain**: its ROM differs from the release ROM (for example, EWRAM 248320 B against
-248324 B with devkitARM). Releases are always built locally with devkitARM.
+On ubuntu-26.04 (CI pins it) this gives gcc-arm-none-eabi 14.2 (`15:14.2.rel1-1`, run
+41918360015). It builds and tests fine, but it is **not the release toolchain**: its ROM differs
+from the release ROM (ubuntu-24.04's 13.2 gave, for example, EWRAM 248320 B against 248324 B with
+devkitARM). Releases are always built locally with devkitARM.
 
-Not tried: a Linux host build with devkitPro pacman, and the minimum Python version (only 3.11.9
-and Ubuntu 24.04's python3 have run the tools).
+Not tried: a Linux host build with devkitPro pacman. On Python 3.14 one old round script,
+`tools/hebrew/emu/scripts/r5_latin/r5lat.py:17`, gives a `SyntaxWarning` for `\p` in a docstring;
+it still runs.
 
 ### 2.2 Environment (macOS)
 
@@ -185,8 +192,8 @@ git worktree add --detach ../pokehns-en Release-v2.0.6
 python3 tools/hebrew/paths.py             # prints HNS_BASELINE, HNS_UPSTREAM, ...
 ```
 
-**Unverified:** this exact sequence has not been run end to end on a fresh machine. The 0.2
-rebuild in section 2.7 was run from a `git clone --shared` of the reference repository.
+This sequence was followed end to end on a fresh clone on the reference machine ("Notes from the
+fresh-clone test" at the end); a fresh machine was never tried (**unverified**).
 
 `.git` is about 677 MB on the reference machine, including three extra remotes.
 
@@ -205,8 +212,8 @@ rebuild in section 2.7 was run from a `git clone --shared` of the reference repo
 | `make hns -j12` | `pokehns.gba`, `.elf`, `.map` | `build/hns` | the release ROM. `hns` is detected only when `$(BUILD)` or the **whole** goal list is exactly `hns` (`Makefile:21`). Not a `RELEASE=1` build, so asserts stay live (`Makefile:63`, `Makefile:632`) |
 | `make hns RTL_CLIP_REPORT=1 -j12` | `pokehns-clip.gba`, `.elf`, `.map` | `build/hns-clip` | diagnostic ROM that logs every glyph drawn outside its window (`Makefile:36-41, 176-177`; `src/text.c:1047`). **Never shipped.** Builds next to the release build without a clean |
 | `make hns RTL_STRING_REPORT=1 -j12` | `pokehns-strrep.gba`, `.elf`, `.map` | `build/hns-strrep` | diagnostic ROM that records every ROM string copied or printed, read by `tools/hebrew/strcov.py` (`Makefile:42-47, 185-187, 632-643`; hooks in `src/string_util.c`). **Never shipped.** Every hook is under `#if RTL_STRING_REPORT` and followed by `#line`, so the release ROM is byte-identical with or without them |
-| `make check BUILD=hns -j12` | `pokehns-test.elf`, `pokehns-test-headless.elf`, results on stdout | `build/hns-test` | the upstream test suite. Judge the result with `check_tests.py` (section 4.3) |
-| `make BUILD=hns -j2 pokehns-test.elf` | test ELF only | `build/hns-test` | what CI builds (`hebrew.yml:80`) |
+| `make check BUILD=hns -j12` | `pokehns-test.elf`, `pokehns-test-headless.elf`, results on stdout | `build/hns-test` | the upstream test suite. Judge the result with `check_tests.py` (section 4.3). Plain `make check` builds the Emerald tests and stops at a compile error in `src/braille_puzzles.c:379` |
+| `make BUILD=hns -j2 pokehns-test.elf` | test ELF only | `build/hns-test` | what CI builds (`hebrew.yml:93`) |
 | `make clean` / `make tidy` | | | `tidy` keeps the tools and the graphics |
 
 > **Never type `make hns check` or `make hns <file>`.** The goal list is then not exactly `hns`,
@@ -263,21 +270,30 @@ rebuild in section 2.7 was run from a `git clone --shared` of the reference repo
   `70df00d417`: in `test/test_runner.c`, `#include "global.h"` goes before `fake_rtc.h`. On the
   reference machine it is a staged, uncommitted change in `../pokehns-en`.
 - The local English build has CRC32 `FB9F58C5`, but the official 2.0.6 UPS output is `01713508`.
-  Why they differ was never recorded (**unverified**).
+  This was not investigated: the release rests on source identity with `167aa6d537` plus drift,
+  not on matching the official binary, and section 2.7 already says another compiler gives
+  another binary. Whether the official build is a `RELEASE=1` build (which would also hide the
+  no-flash assert screen, section 8.2) is **unverified**; the official file is not on the
+  reference machine.
 
 ### 2.6 Harness and the pieces that are not in the fork
 
-| Piece | How to get it from the fork | Reference machine |
+| Piece | How to get it from the fork | Where it is kept |
 | --- | --- | --- |
-| `hnsrun` (headless libmgba runner) | build mGBA 0.10.5 in a **permanent** folder, then the runner (`tools/hebrew/emu/README.md:21-45`); set `HNS_RUNNER` if you keep it outside `tools/hebrew/emu/` | `<private>/emu/hnsrun`, rpath to `<private>/mgba/build` |
-| save ladder `ladder1_newgame.sav` … `ladder6_postgame.sav` | on the **English** ROM: `hns.py --rom "$HNS_EN_ROM" run $E/scripts/ladder1_newgame.txt OUT --save OUT/none.sav --save-out "$HNS_SAVES/ladder1_newgame.sav"`, then `$E/scripts/make_ladder.sh` (`emu/README.md:99-109`) | `<private>/emu/saves` (each 131088 B = 128 KiB flash + 16-byte RTC footer) |
-| unit chunks (the sweep's labels) | `python3 tools/hebrew/make_chunks.py all` → `build/hebrew/units`, 7,209 labels, the same set 0.2 was swept with | `<private>/translation/units` (these also hold the Hebrew) |
-| **translated** unit chunks | none: only `<private>` has them. `sweep.py selftest` and `sweep.py --translated` need them | `<private>/translation/units` |
+| `hnsrun` (headless libmgba runner) | build mGBA 0.10.5 in a **permanent** folder, then the runner (`tools/hebrew/emu/README.md:21-45`); set `HNS_RUNNER` if you keep it outside `tools/hebrew/emu/` | rebuilt; on the reference machine `<private>/emu/hnsrun`, rpath to `<private>/mgba/build` |
+| save ladder `ladder1_newgame.sav` … `ladder6_postgame.sav` and the tour base saves | the ladder on the **English** ROM: `hns.py --rom "$HNS_EN_ROM" run $E/scripts/ladder1_newgame.txt OUT --save OUT/none.sav --save-out "$HNS_SAVES/ladder1_newgame.sav"`, then `$E/scripts/make_ladder.sh` (`emu/README.md`); no script in the fork makes `pif2_base` or `r1field_menuA_base` | `<builds>/saves` (`HNS_SAVES`): at the top the ladder and every save a release tour starts from (`menuA_base`, `pif2_base`, `r1field_menuA_base` and others); the round tours' saves in subfolders (section 4.5). Each is 131088 B = 128 KiB flash + 16-byte RTC footer |
+| unit chunks (the sweep's labels) | `python3 tools/hebrew/make_chunks.py all` → `build/hebrew/units`, 6,611 labels (the 7,209 that 0.2 was swept with, less the 451 flag-gated and 147 unbuilt labels that `flag_gates.py` takes out) | rebuilt; never stored |
 | `crosscore` (libretro frontend) | nothing to install: `run_release_tests.sh` builds `tools/hebrew/emu/crosscore.c` with `cc -O2` into `RCDIR/tests/bin` on every run | |
-| libretro cores | `vbam`, `vba_next`, `gpsp`, `mednafen_gba`, `skyemu` `_libretro.dylib` in `build/hebrew/cores`; the mGBA core is RetroArch's own (`$HOME/Library/Application Support/RetroArch/cores/mgba_libretro.dylib`). **Where the 0.2 cores were downloaded from was not recorded** | `<private>/cores` |
-| English map walk | `python3 tools/hebrew/emu/mapwalk.py "$HNS_EN_ROM" "$HNS_SAVES/ladder6_postgame.sav" build/hebrew/mapwalk_en` | `<private>/runs/mapwalk_en` |
-| English tour run (for side-by-side review) | `python3 tools/hebrew/emu/hns.py tour "$HNS_EN_ROM" build/hebrew/tour_en`. **Unverified:** whether all 24 tours run on the English ROM; the 0.2 reference run held 18 (no naming, cardgear or dex_forms tours) | `<private>/runs/tour_en` |
-| width budgets | `tools/hebrew/data/budgets.json` is the canonical source; `docs/hebrew_translation.md:86` still cites the private `notes/budgets.md` | `<private>/notes/budgets.md` |
+| libretro cores | `vbam`, `vba_next`, `gpsp`, `mednafen_gba`, `skyemu` `_libretro.dylib` in `HNS_CORES` (`build/hebrew/cores`); the mGBA core is RetroArch's own (`$HOME/Library/Application Support/RetroArch/cores/mgba_libretro.dylib`) | `<builds>/reference/cores/`: copies of the five, with their SHA-1 and inferred source (the libretro buildbot's macOS arm64 nightlies, files dated 2026-10-17; `SOURCE.md`). RetroArch's mGBA core is not stored |
+| English map walk | `python3 tools/hebrew/emu/mapwalk.py "$HNS_EN_ROM" "$HNS_SAVES/ladder6_postgame.sav" build/hebrew/mapwalk_en` | `<builds>/reference/mapwalk_en.json` (`HNS_EN_MAPWALK`) |
+| English tour run (for side-by-side review) | `python3 tools/hebrew/emu/hns.py tour "$HNS_EN_ROM" build/hebrew/tour_en`: 70 of the 71 tours report OK in 2:37; the two `naming_*` tours are Hebrew-only by design (section 4.5) | regenerated; not stored |
+| graphics drawing scripts | `tools/hebrew/graphics/` (its README; `gpaths.LATER_EDITS` protects the 17 files fixed by hand later) | — |
+| Hebrew glyph designs and installer | `tools/hebrew/fonts/` | — |
+| inventory builder (`live_labels.json`, `inventory.json`, `c_strings.json`) | `python3 tools/hebrew/inventory/build.py --release <English release ROM> --compare` (`inventory/README.md`) | — |
+
+`<private>/translation` held the translated unit chunks and the pre-fork drafts. Both are archived
+in `<builds>/archive` (history only) and must not be used: an old chunk would undo later fixes.
+`sweep.py selftest` no longer needs them (it picks a label whose string in the ROM has Hebrew).
 
 The mGBA build that 0.2 used is tag 0.10.5 (`26b7884`), with Qt, SDL, GL, FFmpeg and Lua off.
 
@@ -294,12 +310,12 @@ printf '60 -\nshot boot\nquit\n' | "${HNS_RUNNER:-tools/hebrew/emu/hnsrun}" poke
 **Unverified:**
 
 - whether `make_ladder.sh` gives byte-identical saves on another machine (its header says
-  "Deterministic: the same ROM gives byte-identical saves");
+  "Deterministic: the same ROM gives byte-identical saves"). The ladder is stored in
+  `<builds>/saves`, so this matters only for making it again;
 - building mGBA, `hnsrun` and `crosscore` on Linux.
 
 The fork's `tools/hebrew/` copies are canonical. `<private>/emu` and `<private>/tools` hold older
-copies with hard-coded paths. The one exception is `tours/naming_nickname.txt`, where the private
-copy is newer (section 8.1).
+copies with hard-coded paths; do not use them.
 
 ### 2.7 Check that your toolchain reproduces the release
 
@@ -315,8 +331,8 @@ git status --porcelain                  # empty: the build leaves the tree clean
 
 Both SHA-1s were reproduced from a fresh clone of `40279b7f5f` with devkitARM r68.
 
-- A different compiler gives a different SHA-1 (CI's GCC 13, any other devkitARM). Record the
-  toolchain with every build.
+- A different compiler gives a different SHA-1 (CI's Ubuntu arm-none-eabi-gcc 14.2, any other
+  devkitARM). Record the toolchain with every build.
 - 0.1 (`6202f6bd3f1d317cc3a24d27d6883ff963b9a203`) was built from `19bb11a3da`.
 - **Unverified:** another machine with the same devkitARM r68 was never tried.
 
@@ -343,7 +359,7 @@ Every live file is already in Hebrew. New work is therefore one of three things:
 | `src/data/trainers_hns.party`, `battle_partners.party` | trainer `Name:` lines | `apply_names.py` (glossary `trainer_name` rows) | 2 |
 | `src/data/region_map/region_map_sections.json` | map-section names | `apply_names.py` (glossary `mapsec` rows) | 1 |
 | `src/data/pokemon/pokedex_orders.h` | Hebrew A–Z dex order (the `#if TEXT_RTL` branch) | `gen_dex_alpha.py` | 1 |
-| `graphics/**` | labels drawn into PNGs (and a few `.bin` tilemaps) | edited PNGs, committed as engine or asset commits; the drawing scripts are not in the fork | 129 |
+| `graphics/**` | labels drawn into PNGs (and a few `.bin` tilemaps) | edited PNGs, committed as engine or asset commits; the drawing scripts are in `tools/hebrew/graphics/` | 129 |
 | `test/hebrew_battle_messages.h`, `test/bag.c`, `test/text.c` | test expectations that depend on the Hebrew | `tools/hebrew/testmsgs/`, or a direct edit | 3 |
 
 **Left in English on purpose:**
@@ -355,7 +371,7 @@ Every live file is already in Hebrew. New work is therefore one of three things:
 - braille;
 - Latin literals that code compares (the Odd Egg names, the mystery-gift sample code).
 
-`status_report.py:23-51` (`KEPT_LATIN`) lists the deliberate Latin per file.
+`status_report.py:22-50` (`KEPT_LATIN`) lists the deliberate Latin per file.
 
 **Find which file prints a line:** search the English in the baseline worktree. The label is the
 same in both trees; the line number can differ.
@@ -398,7 +414,8 @@ The glossary wins for names, STYLE.md for everything else (`STYLE.md:3-4`). In s
   - `\n` is the next line, `\l` scrolls one line, `\p` is a new page.
   - You may move `\n`/`\l`. Add or remove `\p` only when a page would not fit otherwise.
   - Placeholders keep the English order. Hebrew may drop only `{POKE} {PKMN} {POKEBLOCK} {ID}
-    {NO}`, and may reorder only `{B_BUFF1..3}` among themselves (`drift.py:30-33`).
+    {NO}` and the `{PK}` of the Easy Chat word `{PK}RS`, and `{B_BUFF1..3}` may swap places with
+    each other (`drift.py:32-47`; `units.py` and `checkunits.py` import the same rule).
 - **Battle grammar:** "wild" and "opposing" are definite suffixes (` הפראי`, ` היריב`), and verbs
   are masculine.
 - **Engine-coupled strings** (STYLE §9): the battle prefixes, the Pokédex search letter groups
@@ -411,7 +428,12 @@ The glossary wins for names, STYLE.md for everything else (`STYLE.md:3-4`). In s
   - berries as פרי / פירות (K6);
   - מזל טוב for Congratulations (Q6);
   - צוות זוגי for tag team (Q12, Q17, Q62);
-  - the battle debug menu translated and the R+START menu English (Q118, Q120).
+  - the battle debug menu translated and the R+START menu English (Q118, Q120);
+  - the link battle lines without the player's gender (Q132);
+  - the five Pokédex terms היסואי, הר הנזר, חור תולעת אולטרה, צוות פלזמה, רוז (Q133);
+  - 'psychic power' as כוח פסיכי in Pokédex prose (Q134);
+  - Easy Chat in Hebrew, with the Hebrew-letter keyboard (Q135);
+  - only errors in a name follow FireRed's later changes (Q136).
 
 ### 3.3 Width: what the renderer does and how to measure
 
@@ -429,7 +451,7 @@ The common budgets (`tools/hebrew/data/budgets.json`, 61 kinds):
 
 | Kind | Font | Budget |
 | --- | --- | --- |
-| overworld dialogue, signs, battle text | normal | 208 px per line, **200 px on a line ending in `\l` or `\p`** (the down arrow sits inside the box, `src/text.c:1862-1866`), 2 lines |
+| overworld dialogue, signs, battle text | normal | 208 px per line, **200 px on a line ending in `\l` or `\p`** (the down arrow sits inside the box: `TextPrinterDrawDownArrow`, placed by `RtlDownArrowX` in `src/text.c`), 2 lines |
 | phone call | normal | 192 / 184 px, 2 lines |
 | item description | normal | 102 px × 3 |
 | summary move description | normal | 152 px × 2 |
@@ -437,7 +459,7 @@ The common budgets (`tools/hebrew/data/budgets.json`, 61 kinds):
 | bag item name / shop item name / battle move name | narrow | 88 / 84 / 64 px |
 | healthbox name / party nickname | small | 55 / 40 px |
 
-**Hard byte limits** (`namecheck.py:18-22`):
+**Hard byte limits** (`namecheck.py:34-38`, letters without the terminator):
 
 | Field | Bytes |
 | --- | --- |
@@ -454,6 +476,10 @@ The common budgets (`tools/hebrew/data/budgets.json`, 61 kinds):
 | category | 12 |
 | nature | 12 |
 | speaker | 16 |
+
+With devkitARM's GCC 16 an over-long species (13 letters) or item (20) is a compile error
+(`excess elements in array initializer`, `-Werror`); a move name has no compile-time limit
+(`include/move.h:77` is a pointer), so `namecheck.py` and the audit's `BYTES` are its only guard.
 
 Buffers: an expanded field message must stay under 999 bytes (`gStringVar4`), a battle message
 under 424. Placeholders are measured at worst case: `{PLAYER}`/`{RIVAL}` 7 glyphs, species 12,
@@ -588,10 +614,9 @@ git -C <main worktree> merge --no-ff he/fix-<topic> -m "Merge he/fix-<topic>: <w
 **Files**
 
 - `translation/hebrew/glossary.csv`: columns `kind,constant,english,firered_hebrew,proposed_hebrew,status,notes`;
-  6,525 rows. The tools read `proposed_hebrew`.
-  - Status `inherited` (1,946) comes from the FireRed fork.
-  - Status `proposed` (4,578) is new and has not been checked against an official Hebrew source.
-  - One row is `todo`.
+  7,092 rows, with CRLF line ends. The tools read `proposed_hebrew`.
+  - Status `inherited` (1,940) comes from the FireRed fork.
+  - Status `proposed` (5,152) is new and has not been checked against an official Hebrew source.
 - `translation/hebrew/glossary_sources.csv`: `kind,constant,english,source,pattern` (5,529 rows).
   `make_chunks.py` uses it to pre-fill name fields.
 
@@ -606,16 +631,31 @@ Keep families together; `python3 tools/hebrew/translit_stats.py 'EON$'` lists th
 **Renaming or adding a name** is a checklist; no tool propagates a rename:
 
 1. Commit `glossary.csv` alone, **before** any text that uses the name.
-2. `python3 tools/hebrew/namecheck.py --all` should print `rows 6524, still empty 0, problems 0`;
-   then run `python3 tools/hebrew/glossary_widths.py` (`0 over budget`).
+2. `python3 tools/hebrew/namecheck.py --all --warnings` should print `rows 7092, still empty 0,
+   problems 0` and `warnings 0, allowlisted 60`; then run `python3 tools/hebrew/glossary_widths.py`
+   (today `1 over budget`: the EXEGGUTOR-A healthbox name, 49 px against 48, decided in Q129).
 3. Change every dialogue use (`git grep` the old Hebrew and the English), one file per commit.
 4. For trainer or map names, run `python3 tools/hebrew/apply_names.py --dry-run`, then without
    `--dry-run`.
 5. For species, run `python3 tools/hebrew/gen_dex_alpha.py` and commit `pokedex_orders.h` alone.
+   Its `TEXT_RTL` list is engine data, so cherry-pick that commit onto `he/renderer` too
+   (`f47c725548` there); drift fails until the baseline has it. For a species, move or Easy Chat
+   word, run `gen_ec_order.py` and `gen_ec_letters.py` (CI runs all three with `--check`).
 6. Update test expectations where order or text changes. For example, `4c6ba54599` updated
    `test/bag.c` for the berry names.
 7. After a bulk glossary edit, diff the row **keys** between revisions (section 6.2): a rewrite
    once dropped 5 rows silently.
+
+**Consistency warnings** (`namecheck.py --warnings`; they never change the exit status):
+
+- `--fr-sync` compares each name with the FireRed Hebrew tree as it is now (`HNS_FIRERED`, default
+  `../pokefirered-heb`), within the same kind. Take FireRed's name only when it fixes an error in
+  ours (`DECISIONS.md` Q136); type names stay.
+- `--translit` flags transliteration slips in `proposed` rows; `--dupes` flags one English person
+  name with two Hebrew spellings.
+- `tools/hebrew/data/namecheck_allow.json` lists every difference kept on purpose, with the reason.
+  An entry pins both names, so a later change on either side warns again, and an entry that no
+  longer matches is reported `STALE`.
 
 ### 3.6 How a decision is made
 
@@ -639,24 +679,21 @@ Apply a decision in this order:
 
 ### 3.7 Pitfalls in the text tools
 
-- **`units.py apply` overwrites Hebrew without comparing.** It checks a unit's `en` against the
-  tree only when the tree string has no Hebrew (`units.py:167, 269`). Re-applying an old chunk
-  silently undoes later fixes, such as the review decisions. For a fix to existing Hebrew, edit
-  the file directly.
-- **The token rules differ between tools.** `units.py` and `checkunits.py` allow only `{POKE}`,
-  `{PKMN}` and `{POKEBLOCK}` to be dropped, and no reordering (`units.py:35`,
-  `checkunits.py:26`). `drift.py` also allows dropping `{ID}{NO}` and reordering the B_BUFFs.
-  Strings that use those freedoms (`src/battle_message.c` #486, #488, #517, #573) cannot go
-  through `units.py apply`; edit them directly.
+- `units.py apply` refuses a tree string that changed since extraction, and one that already
+  holds Hebrew other than the unit's `he` (an old chunk would undo a later fix).
+  `--overwrite-hebrew` replaces such Hebrew on purpose.
+- **One token rule.** `drift.py` defines it (`DROPPABLE_TOKENS`, `REORDERABLE_TOKENS`,
+  `same_tokens`), and `units.py` and `checkunits.py` import it: `{POKE}` `{PKMN}` `{POKEBLOCK}`
+  `{ID}` `{NO}` `{PK}` may go; `{B_BUFF1}`..`{B_BUFF3}` may trade places with each other (also
+  across another token), never with another token.
 - `units.py` handles `.inc`, `.s`, `.c` and `.h` only. `.party` and `.json` go through
   `apply_names.py`.
 - A blank line inside a `.string` block ends the unit (`b81dddd2b3`).
-- `gen_dex_alpha.py --check` only prints the first 15 entries; it compares nothing. To check,
-  copy `src/data/pokemon/pokedex_orders.h` into `SCRATCH/src/data/pokemon/`, run
-  `gen_dex_alpha.py --tree SCRATCH`, and `diff` the two.
-- `namecheck.py --all` keys rows on `(kind, constant)` (`namecheck.py:102`), so a duplicate key
-  hides a row. It reports 6,524 of 6,525 rows, and it cannot detect a lost row or a truncated
-  Hebrew value.
+- `gen_dex_alpha.py --check` regenerates the order in memory, lists each entry that would move and
+  exits 1 when the header is stale (CI). Of the five entries its last regeneration moved, only
+  EXEGGUTOR-A is visible in H&S's list.
+- `namecheck.py --all` keys rows on `(kind, constant)` and reports a key that appears twice in
+  `glossary.csv` as `DUPKEY` (exit 1). It cannot detect a lost row or a truncated Hebrew value.
 - **Battle text has test expectations.** Changing a string listed in
   `test/hebrew_battle_messages.h` (66 entries) gives a `NEW FAILURE` in `make check` until the
   table is rebuilt (`tools/hebrew/testmsgs/README.md`).
@@ -671,18 +708,19 @@ Apply a decision in this order:
 | --- | --- | --- | --- |
 | one string | `textwidth.py`, `wrap.py` | px width, rows, bytes | instant |
 | one chunk | `checkunits.py` | tokens, `$`, escapes, charset, digits, Latin, width, lines | instant |
-| one file vs English | `drift.py` | anything changed outside strings, token order, `$`, charset | 3 s for 683 files |
+| one file vs English | `drift.py` | anything changed outside strings, token order, `$`, charset | 3 s for 708 files |
 | whole tree | `audit.py --baseline ../pokehns-en` | WIDTH, LINES, BUFFER, BYTES, TERMINATOR, CHARSET | 28 s |
-| glossary | `namecheck.py --all` | byte limits, final letters, duplicates | instant |
-| tool tests | `python3 -m unittest discover -s tools/hebrew/tests` | the tools themselves (40 tests) | 4 s |
-| game logic | `make check BUILD=hns` + `check_tests.py` | a test that passes upstream but fails in Hebrew | about 15 min locally (inferred from file times), 21 min in CI |
-| screens | `hns.py tour` (24 tours) | crashes, timeouts; screenshots for review | 40 s |
-| glyphs outside windows | `hns.py tour --clip`, `sweep.py` on the clip ROM | every glyph drawn outside its window | about 2 min for 7,209 labels |
+| glossary | `namecheck.py --all --warnings` | byte limits, final letters, duplicates; warnings for FireRed differences, transliteration slips, two-way names | instant |
+| generated data | `gen_dex_alpha.py`, `gen_ec_order.py`, `gen_ec_letters.py`, `flag_gates.py`, each `--check` | a stale A–Z order, Easy Chat list or live-label list | instant |
+| tool tests | `python3 -m unittest discover -s tools/hebrew/tests` | the tools themselves (132 tests) | 9 s |
+| game logic | `make check BUILD=hns` + `check_tests.py` | a test that passes upstream but fails in Hebrew | about 4 min at `-j12` in the release worktree (rc5, rc20: `make_check.log` created to last written; 15 hydra runners), 13 min in CI |
+| screens | `hns.py tour` (71 tours) | crashes, timeouts, wrong typed bytes; screenshots for review | about 3 min |
+| glyphs outside windows | `hns.py tour --clip`, `sweep.py` on the clip ROM | every glyph drawn outside its window | about 2 min (7,209 labels in rc20; 6,611 since `flag_gates.py`, not timed) |
 | every map | `mapwalk.py` | CRASH, maps that never give control back | 329 s for 543 maps |
 | saves | `ladder.py run scripts/ladder_validate.txt` | English 2.0.x saves still load and work | about 1.5 s per save |
 | other emulators | `crosscore` + libretro cores + `ccdiff.py` | renderer differences between cores | about 2 s per core |
 | English left in ROM | `rom_sweep.py` | English runs in the binary | 4 s |
-| eyes | `pairsheets.py`, `hns.py tourdiff`, reviewers plus refuters | overlap, mirroring, digit order, glyph shapes, wrong translation | per release |
+| eyes | `pairsheets.py`, `hns.py tourdiff`, reviewers plus refuters (`tools/hebrew/release/REVIEW.md`) | overlap, mirroring, digit order, glyph shapes, wrong translation | per release |
 
 Two rules from the original brief:
 
@@ -691,42 +729,53 @@ Two rules from the original brief:
 
 ### 4.2 Static checks: the CI `audit` job, run locally
 
-CI creates the two worktrees from `origin/he/renderer` and `origin/master` (`hebrew.yml:41-46`).
-Locally, the tag `Release-v2.0.6` (fetched in section 2.3) stands in for CI's `origin/master`.
+CI creates the two worktrees from `origin/he/renderer` and `origin/master` (`hebrew.yml:43-48`).
+Locally, the tag `Release-v2.0.6` (fetched in section 2.3) stands in for CI's `origin/master`. The
+expected output below is a local run on `he/wip-r18e` (2026-11-05).
 
 ```bash
 set -o pipefail
-# 1. drift (hebrew.yml:48-52): only strings may differ from he/renderer
-git diff --name-only Release-v2.0.6...HEAD -- data src | grep -E '\.(inc|s|c|h)$' | xargs python3 tools/hebrew/drift.py --quiet
-#    he/main: exit 0; 683 files, 0 FAIL, 384 files with warnings only (LATIN / UNTRANSLATED)
-# 2. layout audit (hebrew.yml:54-55)
-mkdir -p build/hebrew && python3 tools/hebrew/audit.py --baseline ../pokehns-en --report build/hebrew/audit.txt; head -3 build/hebrew/audit.txt   # nothing on stdout with --report
-#    audit ...: 41195 strings (24712 translated)
-#    == translated strings: 0 errors, 42 warnings, 84 suppressed by baseline ../pokehns-en
+# 1. drift (hebrew.yml:50-54): only strings may differ from he/renderer
+git diff --name-only Release-v2.0.6...HEAD -- data src | grep -E '\.(inc|s|c|h|party|json)$' | xargs python3 tools/hebrew/drift.py --quiet
+#    last line: drift: 708 files, 0 FAIL, 336 with warnings only   (exit 0)
+# 2. layout audit (hebrew.yml:56-57); creates build/hebrew; prints the report's two == lines
+python3 tools/hebrew/audit.py --baseline ../pokehns-en --report build/hebrew/audit.txt
+#    == translated strings: 0 errors, 48 warnings, 85 suppressed by baseline ../pokehns-en
 #    == English (untranslated) strings, baseline only: 448 errors, 0 warnings   <- informational
-# 3. glossary (hebrew.yml:57-58)
-python3 tools/hebrew/namecheck.py --all
-#    rows 6524, still empty 0, problems 0
-# 4. tool tests (hebrew.yml:60-61)
+#    line 1 of the report: audit ...: 41539 strings (25592 translated)
+# 3. glossary (hebrew.yml:59-60)
+python3 tools/hebrew/namecheck.py --all --warnings
+#    rows 7092, still empty 0, problems 0
+#    warnings 0, allowlisted 60
+# 4. generated data (hebrew.yml:62-71)
+python3 tools/hebrew/gen_dex_alpha.py --check     # gen_dex_alpha: 1080 entries, the TEXT_RTL list is up to date
+python3 tools/hebrew/gen_ec_order.py --check      # gen_ec_order: 18 groups, the header is up to date
+python3 tools/hebrew/gen_ec_letters.py --check    # gen_ec_letters: 23 lists, the header is up to date
+python3 tools/hebrew/flag_gates.py --check        # total: live 6585, flag_off 451, not_built 147 / no change
+# 5. tool tests (hebrew.yml:73-74)
 python3 -m unittest discover -s tools/hebrew/tests
-#    Ran 40 tests ... OK          (CI: OK (skipped=1), it has no English ROM)
+#    Ran 132 tests ... OK   (no skip with tools/preproc built and ../pokehns-en/pokehns.gba present)
+# not in CI: item plurals
+python3 tools/hebrew/plurals.py                   # items 902, stackable 693, problems 0
 ```
 
 **How to read the results**
 
 - **drift errors** (exit 1) are `STRUCTURE`, `TOKENS`, `TERMINATOR`, `CHARSET` and `SHRUNK`.
   Warnings (`PAGES`, `LATIN`, `UNTRANSLATED`) never fail the run unless you pass `--strict`.
-  Section 6.2 lists every kind.
+  Section 6.2 lists every kind. `.party` and `.json` files are checked too: a renamed `Name:` line
+  counts as a string.
 - **audit:** the exit status is 1 only for a Hebrew error that the baseline does not suppress.
-  - The 42 warnings are `FIT`: 12 item names and 30 move names that fit only after the game falls
-    back to a narrower font.
+  - The 48 warnings are `FIT`: 13 item names, 30 move names and 5 EXEGGUTOR-A rows (Q129) that
+    fit only after the game falls back to a narrower font.
   - A finding reads `w item_name FIT 79 > 72 p1 r1 [summary held item FONT_NORMAL] (...)
     src/data/items.h:3095`: kind, check, measured > budget, page and row, where it is drawn, and
     the source line.
-
-**What CI's drift step skips:** `.json` and `.party` files. Run
-`python3 tools/hebrew/drift.py src/data/region_map/region_map_sections.json` by hand; it passes
-today.
+  - CI counts fewer strings on the same commit (run 41918360015 at `85705e4bc9`: `39059 strings
+    (24836 translated)`, with the same 0 errors, 48 warnings and 85 suppressed). Why the counts
+    differ is **unverified**.
+- **tool tests in CI:** `Ran 126 tests ... OK (skipped=2)` at `85705e4bc9` (no built
+  `tools/preproc`, no English ROM); this branch adds 6.
 
 ### 4.3 The test suite
 
@@ -741,10 +790,18 @@ python3 tools/hebrew/check_tests.py make_check.log
 # 4 known failures now pass                              (0.2 / rc5, exit 0)
 ```
 
-- **Ignore make's exit status.** On macOS the 0.2 log ends with `make: *** [check] Segmentation fault: 11`.
-  The likely cause is the hydra runner's summary arrays: they have room for 50 × 32 entries but
-  are indexed by the running fail count (`tools/mgba-rom-test-hydra/main.c:40-41, 764-765, 819-826`).
-  This was reasoned from the code, not proven (**unverified**).
+- **Ignore make's exit status.** It is 2 whenever a test fails, and upstream fails its own tests.
+- **The hydra segfault.** On macOS the 0.2 log ends with `make: *** [check] Segmentation fault: 11`
+  and prints no summary. The cause: the hydra runner's summary lists hold 32 × 50 = 1,600 rows
+  (`tools/mgba-rom-test-hydra/main.c:40-41`), but each runner's rows are written at the running
+  total of failures, guarded only by the per-runner limit of 50. With one runner per core (15 on
+  the reference machine) and about 1,900 failures, the later runners wrote past the arrays.
+  Branch `he/fix-upstream-hydra` (from `he/upstream-fixes`, commit `8d52b4cccf`) also limits the
+  destination index at `main.c:793`, `:802`, `:812` and `:821`; the counters still count everything
+  and the printed lists are unchanged. With it, `make check BUILD=hns -j8` (12 min 18 s in a fresh
+  worktree) printed the whole summary (`FAILED 1924`, `TOTAL 5135`) and no segfault, with runners
+  12-14 starting past row 1,600; `check_tests.py` found 1,903 failing tests, all known. Only the
+  test tool changes, not the ROM. Merge it into `he/main` through `he/upstream-fixes`.
 - `check_tests.py` parses the `[NN] NAME: RESULT` lines. It counts FAIL, ERROR, TIMEOUT and CRASH
   as failing, prints `NEW FAILURE: <name>` for any name missing from
   `tools/hebrew/data/known_test_failures.txt` (1,903 names), and exits 1 then.
@@ -766,7 +823,9 @@ python3 tools/hebrew/check_tests.py check.log
   report a crash: the emulator spins and eats memory.
 - Exit 3 means a chunk passed `--chunk-timeout`; exit 2 is a setup error (no test ELF, or a
   crashing name that is not in `test/`).
-- `check_chunked.py` was not run locally for this handoff; only its chunk plan was computed.
+- `check_chunked.py` was not run locally for this handoff; only its chunk plan was computed. CI
+  runs it on every push (run 41918360015: `5073 results, 1898 failing, 1898 of them known upstream
+  failures`).
 
 **Hebrew-specific test changes**
 
@@ -783,7 +842,7 @@ with `CRASH` when the PC leaves BIOS, ROM or RAM. `hns.py` drives it and resolve
 by name from the ELF next to the ROM.
 
 ```bash
-export HNS_RUNNER=<path to hnsrun> HNS_SAVES=<save ladder folder>
+export HNS_RUNNER=<path to hnsrun> HNS_SAVES=<builds>/saves
 export HNS_UNITS="$PWD/build/hebrew/units"   # absolute: the sweep runs from another folder
 export HNS_WORK=<a SHORT folder>        # hnsrun keeps 127 characters of a path; sweep.py allows 120
 E=tools/hebrew/emu
@@ -800,19 +859,24 @@ is the source tree for `MAP_*` and `SPECIES_*`, `HNS_RTC` is the fake clock (def
 
 ### 4.5 Tours, clip reports, the dialogue sweep
 
-**Tours.** `tools/hebrew/emu/tours/*.txt` holds 24 tours, one per screen family:
-
-- `menu_*`: bag, Center/PC, fly map, Mart, Name Rater and day care, options, party, Pokédex,
-  PokéGear, save, trainer card;
-- `cardgear_*`, `dex_forms`;
-- `naming_player`, `naming_nickname`;
-- `battle_*`: wild, trainer, catch, level-up, effects, whiteout.
+**Tours.** `tools/hebrew/emu/tours/*.txt` holds the 71 release tours (files starting with `_` are
+includes); its subfolders hold the review rounds' tours, which the release does not run. Families:
+`pbi_*` 17, `menu_*` 12, `bv_*` 11, `chr_*` 10, `battle_*` 6, `cardgear_*` 3, `ncm_*` 3, `btw_*` 3,
+`naming_*` 2, `bfm_*` 2, `dex_forms`, `field_*`.
 
 `menu_00_setup` builds the base save that the menu tours start from. Each file's header says what
-it covers.
+it covers. The release tours start from saves at the top of `<builds>/saves`. A round tour
+(`tours/<round>/`) that names a save found only in a subfolder needs `HNS_SAVES` set to the folder
+that holds it: `saves/r8` for round 8, a folder under `saves/r10/` or `saves/r11/` for those
+rounds, and `saves/r7/saves_aug` for rounds 3-7 and `verify_ctxdpad` (`<builds>/README.md`).
+
+On the English ROM, 70 of the 71 tours report OK. `naming_nickname` stops with ERROR at its first
+check of the typed Hebrew bytes (`tours/naming_nickname.txt:71`), and `naming_player` reports OK
+only because it has no byte checks; both type on the Hebrew keyboard, so they are Hebrew-only by
+design. The other 69 run on English.
 
 ```bash
-python3 $E/hns.py tour pokehns.gba OUT                              # all 24: "24 tour(s): 24 OK, 0 not OK", 40 s
+python3 $E/hns.py tour pokehns.gba OUT                              # all: "71 tour(s): 71 OK", about 3 min (rc20: 188 s)
 python3 $E/hns.py tour pokehns.gba OUT --only '^menu_trainercard$'  # one tour plus its dependency
 python3 $E/hns.py tourdiff PREV_OUT OUT                             # DIFF / ONLY1 / ONLY2 per PNG; exit 1 if any differ
 python3 $E/hns.py sheet OUT/sheet.png OUT/menu_bag --cols 4         # contact sheet
@@ -828,7 +892,8 @@ python3 tools/hebrew/pairsheets.py EN_TOURS OUT SHEETS --per 6 --scale 2   # Eng
 - A failed tour saves `OUT/TOUR/_crash.png` or `_timeout.png`, plus `run.log`.
 - **Tours are deterministic:** the same ROM and tours give byte-identical PNGs. So always
   `tourdiff` a candidate against the previous one, and look at every DIFF. **OK does not mean
-  right**: a stale tour still reports OK (section 8.1).
+  right**: a tour without byte checks reports OK whatever it typed. `naming_nickname` checks every
+  byte of its three typed names (17 `expect8` lines) for this reason.
 
 **Clip reports.** Build `pokehns-clip.gba` (section 2.4), then:
 
@@ -849,16 +914,22 @@ python3 tools/hebrew/cliptour.py run SCRIPT OUT --rom pokehns-clip.gba --save S 
 
 ```bash
 cd <short dir>
-python3 <repo>/tools/hebrew/emu/sweep.py run <repo>/pokehns-clip.gba sw --shots clip   # rc5: 7209 labels, OK 7062, SKIP 147, 121.7 s
+python3 <repo>/tools/hebrew/emu/sweep.py run <repo>/pokehns-clip.gba sw --shots clip   # rc5: 7209 labels, OK 7062, SKIP 147, 121.7 s; since flag_gates.py 6,611 labels
 python3 <repo>/tools/hebrew/emu/sweep.py run CLIP.gba sw --batch B20 --limit 40       # a subset
 python3 <repo>/tools/hebrew/emu/sweep.py report sw         # rebuild sw/sweep.json + sw/report.txt
-python3 <repo>/tools/hebrew/emu/sweep.py selftest CLIP.gba st   # proves the detector; needs TRANSLATED units
+python3 <repo>/tools/hebrew/emu/sweep.py selftest CLIP.gba st   # proves the detector on a label whose string in this ROM has Hebrew
 ```
 
 - **Statuses:** CRASH, HANG, ABNORMAL, CLIP, OK, SKIP. `SKIP` is a label not assembled into
-  this build: 147 Emerald and Kanto labels.
-- **Selections:** `--label`, `--labels-file`, `--match`, `--file`, `--batch`, `--translated`,
-  `--sample`, `--offset/--limit`; add `--resume` to continue a run.
+  this build. rc20's sweep skipped 147 Emerald and Kanto labels; `flag_gates.py` now moves them to
+  `not_built` in `live_labels.json`, so the next candidate's sweep should skip none (**unverified**
+  until it runs).
+- **Selections:** `--label`, `--labels-file`, `--match`, `--file`, `--batch`, `--translated` (the
+  unit file has Hebrew), `--hebrew-only` (the string in this ROM has Hebrew), `--sample`,
+  `--offset/--limit`; add `--resume` to continue a run. `make_chunks.py` writes its units from the
+  English baseline, so with them use `--hebrew-only`, not `--translated`.
+- With no unit files and no `--label`, the sweep stops with `sweep: no script units in ...` and
+  exit 2.
 - **A real CLIP line,** from the selftest's deliberately broken ROM:
   `CLIP gText_Oak_MainSpeech  9 glyph(s) outside the window; page 1 row 1 (translated): 9 glyph(s) past the left edge, up to 38 px (window 216 px, win 0)`
   - A `+placeholder` kind is usually the worst-case `{STR_VAR}`.
@@ -872,7 +943,7 @@ python3 <repo>/tools/hebrew/emu/sweep.py selftest CLIP.gba st   # proves the det
 
 ```bash
 python3 tools/hebrew/status_report.py --sweep RC/tests/sweep/sweep.json
-# 661 files -> ...: {'seen on screen': 510, 'translated': 132, 'blocked': 19}   (rc5 reproduces STATUS.md byte for byte)
+# 650 files -> ...: {'seen on screen': 525, 'translated': 125}   (rc20's sweep, after flag_gates.py)
 ```
 
 - Without `--sweep`, every "seen on screen" row falls back to "translated".
@@ -887,6 +958,8 @@ python3 $E/mapwalk.py pokehns.gba "$HNS_SAVES/ladder6_postgame.sav" OUT [--only 
 # rc5: 543 maps in 329 s: {'OK': 507, 'HELD': 36}
 python3 $E/ladder.py --rom pokehns.gba run $E/scripts/ladder_validate.txt OUT --save "$HNS_SAVES/ladder2_badge1.sav"
 # continue, leave the Center, open Pokédex, party, bag, card, PokéGear: 13 screenshots, exit 0
+python3 $E/ladder.py --rom pokehns.gba run $E/scripts/ladder_validate_newgame.txt OUT --save "$HNS_SAVES/ladder1_newgame.sav"
+# rung 1 (the bedroom): continue, bag, trainer card
 python3 tools/hebrew/rom_sweep.py pokehns.gba --json OUT.json
 # 6283 text runs (6365 candidates), 6255 still English, 4.2s   exit 1 (always, on this build)
 ```
@@ -897,30 +970,45 @@ python3 tools/hebrew/rom_sweep.py pokehns.gba --json OUT.json
     rooms, Pyramid, Tents, Union Room). The other 2 are Battle Arena rooms, where the Hebrew run
     won the first battle.
   - Treat any `CRASH` as real until the English ROM with the same save crashes the same way.
-    The English walk once crashed in the Dome pre-battle room (`pc=0A0E8ECC`); that was never
-    investigated.
-- **Save ladder:** six saves made **on the English ROM**, then loaded in the Hebrew one. Rung 1
-  validation exits 1 by design (`leavecenter: blocked inside 1.4`): the save is in the bedroom,
-  not a Center.
+  - The English walk of 0.2 crashed in the Dome pre-battle room (`pc=0A0E8ECC`, the ROM's
+    wait-state mirror of `0x080E8ECC`, `FillBitmapRect4Bit+0xA0`: valid code reached through a
+    pointer with bit 25 set). Walked alone (`--only DOME_PRE_BATTLE`), the English map is HELD at the
+    room's own "Your 1st-round match is next" text and does not crash, so the crash needs state
+    from earlier in the full walk. Which state is **unverified**; the Hebrew walk holds the map
+    too. No release note.
+- **Save ladder:** six saves made **on the English ROM**, then loaded in the Hebrew one. Rung 1 is
+  in the bedroom, not a Center, so it is validated with its own script
+  (`ladder_validate_newgame.txt`); `run_release_tests.sh` records each rung's exit code and
+  `make_testing_md.py` refuses a rung whose log does not end in `exit 0`.
+- **The other way round:** a save written by the Hebrew ROM (`<builds>/saves/ncm_base_he.sav`, a
+  bedroom save whose player name is the Hebrew גולד) loads in the English ROM, and
+  `ladder_validate_newgame.txt` there exits 0: the bedroom, bag and trainer card work, and the
+  Hebrew name shows as **blank** on CONTINUE and on the card. A save from further into the game
+  was not tried (**unverified**).
 - **ROM sweep:** do not gate on its exit status. Of the 6,255 runs, 0 are on live labels, 3,265
   on dead Emerald labels, 16 debug-only, and 2,974 untracked (mostly `data/event_scripts.o` and
   `src/credits_hns.o`). Compare its `--json` with the previous candidate's.
 - **Cross-core:** `crosscore CORE.dylib ROM OUTDIR [save] < tools/hebrew/release/crosscore_menus.txt`,
-  then `python3 tools/hebrew/release/ccdiff.py REF_DIR DIR...`. Expected differences:
-  - intro, start-menu clock and animation frames differ on every core;
-  - VBA-Next has no RTC, so it shows the "battery has run dry" notice;
-  - SkyEmu segfaults the frontend, also on the English ROM.
+  then `python3 tools/hebrew/release/ccdiff.py REF_DIR DIR...` (frames compared in RGB555). The
+  frontend answers every core option with the core's default, plus
+  `gba_use_mednafen_save_method=libretro` (`tools/hebrew/emu/README.md`, "Cross-core"). All six
+  cores load the save and draw every screen like mGBA. Expected differences, on every core: the
+  intro frame (the animation runs at another point), the start-menu clock, and an animation frame
+  of the bag arrows or party icons; on the main menu the two darkened buttons are one step of the
+  5-bit colour apart (`notes.json` `crosscore_notes`).
 
 ### 4.7 CI
 
 `.github/workflows/hebrew.yml` runs on a push to `he/**`, a pull request to `he/main`, and by
-hand. It uses Ubuntu's gcc-arm-none-eabi.
+hand. Every job names its image, `runs-on: ubuntu-26.04`, and uses Ubuntu's gcc-arm-none-eabi
+(14.2). The actions are `actions/checkout@v5` and `actions/upload-artifact@v6`, which run on
+Node 24; run 41918360015 has no Node 20 annotation.
 
-| Job | Steps | Last green time |
+| Job | Steps | Last green time (run 41918360015) |
 | --- | --- | --- |
-| `build` | `make hns -j$(nproc) -O`, then the clip ROM | 6m34s |
-| `audit` | the two worktrees, drift, audit, namecheck, tool tests | 1m0s |
-| `check` | test ELF at `-j2`, with a `[mon]` memory line every minute; `check_chunked.py --skip-crashing --chunk-timeout 900`; `check_tests.py`; artifact `check-log` (14 days) | 21m5s |
+| `build` | `make hns -j$(nproc) -O`, then the clip ROM | 5m47s |
+| `audit` | the two worktrees, drift (`.inc`, `.s`, `.c`, `.h`, `.party`, `.json`), audit, `namecheck.py --all --warnings`, the `--check` of `gen_dex_alpha.py`, `gen_ec_order.py`, `gen_ec_letters.py` and `flag_gates.py`, tool tests | 49s |
+| `check` | test ELF at `-j2`, with a `[mon]` memory line every minute; `check_chunked.py --skip-crashing --chunk-timeout 900`; `check_tests.py`; artifact `check-log` (14 days) | 13m1s |
 
 ```bash
 gh run list -R ronyeh2/pokehns-expansion-heb --workflow hebrew.yml --limit 8
@@ -929,13 +1017,10 @@ gh run view <id> -R ronyeh2/pokehns-expansion-heb --log | grep -E 'results,|NEW 
 
 - **Push `he/renderer` before `he/main`** when an engine commit is involved. CI's drift
   compares with `origin/he/renderer`, so a missing cherry-pick fails it.
-- **Act on these annotations before they break CI:**
-  - `ubuntu-latest` moves to Ubuntu 26 from 2026-10-19. A new image brings a new
-    gcc-arm-none-eabi; if compiling starts to fail, pin `runs-on: ubuntu-24.04` first.
-  - `actions/checkout@v4` and `upload-artifact@v4` run on Node 20, which is deprecated.
-- The upstream workflow `.github/workflows/build.yml` runs on any pull request with
-  `UNUSED_ERROR: 1`, and does not build `hns`. Whether it would fail a pull request into `he/main`
-  is **unverified**.
+- **A new runner image** brings a new gcc-arm-none-eabi. Move to it by changing the three
+  `runs-on:` lines in one commit and checking that run.
+- The upstream workflow `.github/workflows/build.yml` runs only on pushes and pull requests to
+  `master` and `upcoming`, so a pull request into `he/main` runs only the Hebrew workflow.
 - **CI never runs** the emulator harness, the sweep, the map walk or any visual check.
 
 ### 4.8 Visual review
@@ -956,12 +1041,14 @@ Automated checks cannot see these, so every release candidate gets a screenshot 
 4. **Reviewers and refuters:** several independent reviewers, split by batch. Each finding then
    goes to a second reviewer who tries to refute it. Outcomes are `confirmed_expected`,
    `confirmed` (fix it or list it as a known issue) or `refuted`. 0.2: 8 confirmed, 8 refuted
-   (`DECISIONS.md:1384-1398`).
+   (`DECISIONS.md`, "Review of the changed screens").
 5. **When a screenshot is ambiguous:** dump the pixels, read the string from RAM, or simulate
    the pen. Never argue from a downscaled image.
 
-The review prompts and any script that ran the reviewers are not in the fork or the private
-folder (**not found**).
+The procedure, the lenses, the finding format, the refuter outcomes and one reviewer and one
+refuter prompt are in [`tools/hebrew/release/REVIEW.md`](tools/hebrew/release/REVIEW.md). The
+scripts that ran the earlier reviewers were not kept; the workflow script that translated the G01
+chunks is archived as `<builds>/archive/rounds/hns-translate-g01.js`.
 
 ---
 
@@ -978,10 +1065,11 @@ Ported from `<private>/scratch/release/`, the new `make_testing_md.py` reproduce
 
 - the English tree built;
 - `hnsrun`;
-- the save ladder;
+- `HNS_SAVES` pointed at `<builds>/saves`;
 - `make_chunks.py all`;
-- `crosscore` and the cores;
-- the English map walk at `build/hebrew/mapwalk_en/mapwalk.json` (`HNS_EN_MAPWALK`).
+- the cores from `<builds>/reference/cores/` unzipped into `HNS_CORES` (`crosscore` is built by the
+  test script);
+- `HNS_EN_MAPWALK` pointed at `<builds>/reference/mapwalk_en.json`.
 
 **Steps**
 
@@ -1002,7 +1090,9 @@ Ported from `<private>/scratch/release/`, the new `make_testing_md.py` reproduce
    (cd ../pokehns-release && make check BUILD=hns -j12) > "$RC/make_check.log" 2>&1
    python3 tools/hebrew/check_tests.py "$RC/make_check.log" | tee "$RC/check_tests.txt"
    ```
-   How the 0.2 log was produced was not recorded; this is the README's command.
+   This is the release README's command; the rc5 and rc20 logs start with the test build, hydra
+   ran 15 runners, and each took about 4 min. Until `he/fix-upstream-hydra` is merged the log may
+   end in a segfault (section 4.3).
 
 4. **Every harness test on the exact files:**
    ```bash
@@ -1020,22 +1110,21 @@ Ported from `<private>/scratch/release/`, the new `make_testing_md.py` reproduce
      7. cross-core on six cores, plus `ccdiff.py`;
      8. `rom_sweep`.
    - A failing step does not stop the later ones: read the logs.
-   - **Fix the stale nickname tour first** (section 8.1); otherwise its frames differ from 0.2's
-     while reporting OK.
 
-5. **Visual review** (section 4.8). Record the findings in `RC/visual_findings.json`. A finding
-   that needs a fix means a new candidate, `rcN+1`.
+5. **Visual review** (section 4.8, `tools/hebrew/release/REVIEW.md`). Record the findings in
+   `RC/visual_findings.json`. A finding that needs a fix means a new candidate, `rcN+1`.
 
 6. **Edit `tools/hebrew/release/notes.json`** for the new release.
    - `release` must match the ROM name.
    - Also edit `known_issues`, `not_tested` (never empty), `visual_review` and `crosscore_notes`.
-   - `static_checks` is typed from the CI run of the release commit, because the scripts do not
-     run those checks.
+   - `static_checks` is typed from the CI run of the release commit (drift, audit,
+     `namecheck.py --all --warnings`, the generator and `flag_gates.py` checks), because the
+     scripts do not run those checks.
    - Update `map_walk.hebrew_only_held` to what the data shows.
 
 7. **Write the report:**
    ```bash
-   python3 tools/hebrew/release/make_testing_md.py "$RC" pokehns-he-2.0.6-X.Y.gba "$RC/TESTING.md"
+   python3 tools/hebrew/release/make_testing_md.py "$RC" pokehns-he-2.0.6-1.0.gba "$RC/TESTING.md"
    ```
    It exits 1 instead of writing a sentence that its inputs contradict:
    - a changed header;
@@ -1046,23 +1135,23 @@ Ported from `<private>/scratch/release/`, the new `make_testing_md.py` reproduce
 
    Check every number against the logs anyway.
 
-8. **Publish in the private builds repository** (`<builds>`):
-   - Copy `RC/pokehns.gba` as `pokehns-he-2.0.6-X.Y.gba`.
-   - Append its line to `SHA1SUMS` and check with `shasum -c SHA1SUMS`.
-   - Rename the old `TESTING.md` to `TESTING-<previous>.md` and add the new one.
-   - Add a row to the README table: version, file, source commit, report.
-   - Commit **one ROM per milestone**, authored with the fork owner's GitHub noreply identity
-     (`git config user.email` is set in that clone). The message names the source commit, SHA-1
-     and CRC32, as in `9f6aef6`.
+8. **Publish in the private builds repository** (`<builds>`). There is one release, 1.0, and each
+   update replaces it in place; git history keeps the older builds:
+   - Replace `pokehns-he-2.0.6-1.0.gba` with `RC/pokehns.gba`.
+   - Replace its line in `SHA1SUMS` (check with `shasum -c SHA1SUMS`) and replace `TESTING.md`.
+   - Commit with the message `Update 1.0 to the build of he/main <short sha>`, authored with the
+     fork owner's GitHub noreply identity (`git config user.email` is set in that clone), as in
+     `20b4aad`.
+   - Copy the candidate's small records into `records/rcNN/` and add its row to
+     `records/README.md`.
    - Push as in section 7.3.
 
 9. **Back in the fork,** in separate commits:
    - regenerate `STATUS.md` from `RC/tests/sweep/sweep.json`;
    - record the review outcomes in `DECISIONS.md`.
 
-**Open policy question for the project owner.** The brief says a ROM that has not been played by
-hand is not committed. 0.1 and 0.2 were committed with hand play listed under "Not tested". Do
-not change this silently.
+**Policy** (`DECISIONS.md` Q138): a candidate that passes these steps is published to the private
+builds repository even though nobody has played it by hand; `not_tested` always says so.
 
 ---
 
@@ -1081,10 +1170,11 @@ there is one). Engine fixes exist twice: the commit merged into `he/main`, and i
 | `fatal: no git history found` before anything builds | `git rev-parse --is-inside-work-tree` | `check_history.sh:28-34` refuses a tree that is not a git work tree | build from a clone or worktree; for a `git archive` export, `touch .histignore` | — |
 | Emerald gets built; `.map_version` says `emerald` | `cat .map_version` | `make hns check` / `make hns <file>`: `Makefile:21` compares the whole goal list with `hns` | `make check BUILD=hns`, `make BUILD=hns <target>`; then `make hns` | — |
 | `gSaveBlock3Ptr` undeclared in `fake_rtc.h` during `make check` (also at the upstream tag) | build log | `test/test_runner.c` included `fake_rtc.h` before `global.h` | include `global.h` first; the English worktree needs the same edit | `49adf9cc99`, `70df00d417` |
-| Release SHA-1 differs from `SHA1SUMS` | `arm-none-eabi-gcc --version` | another toolchain (CI's GCC 13, another devkitARM) | build with devkitARM r68 / GCC 16.1.0 in a clean worktree of the named commit | — |
+| Release SHA-1 differs from `SHA1SUMS` | `arm-none-eabi-gcc --version` | another toolchain (CI's Ubuntu arm-none-eabi-gcc 14.2, another devkitARM) | build with devkitARM r68 / GCC 16.1.0 in a clean worktree of the named commit | — |
 | `gbafix.log` says `HEADER CHANGED` | `gbafix.log` | the build did not fix the header | investigate before releasing; never seen so far | — |
 | Harness stops working months later | `otool -L $HNS_RUNNER` (`@rpath/libmgba...`) | the runner's rpath points at a deleted mGBA build | build mGBA in a permanent folder and rebuild `hnsrun`, or set `HNS_RUNNER` | — |
-| Text breaks the compile (seen in the Spanish fork, not here) | the compiler error line | an ASCII `"` in a C literal or `\"` in `.string`; a name longer than its fixed array | the charmap's `”`; `checkunits.py` / `namecheck.py` enforce byte limits before a build | — |
+| Text breaks the compile (seen in the Spanish fork, not here) | the compiler error line | an ASCII `"` in a C literal or `\"` in `.string`; a name longer than its fixed array (GCC 16: `excess elements in array initializer` for a species over 12 or an item over 19 letters; a move name has no compile-time limit) | the charmap's `”`; `checkunits.py` / `namecheck.py` enforce byte limits before a build | — |
+| `make check` stops at `src/braille_puzzles.c:379` (`FLAG_RECEIVED_TOGEPI_EGG`) | the make command | plain `make check` builds the Emerald tests | `make check BUILD=hns` | — |
 
 ### 6.2 Static checks
 
@@ -1092,14 +1182,17 @@ there is one). Engine fixes exist twice: the commit merged into `he/main`, and i
 | --- | --- | --- | --- | --- |
 | drift `E STRUCTURE changed outside strings` | the `-`/`+` lines in the output | an edit outside a string; a raw `"` inside `.string` (also gives `string count 15 -> 14`); an engine commit missing from `he/renderer`, or a stale `../pokehns-heb-engine` | revert it; write `”`; cherry-pick the engine commit onto `he/renderer` and update that worktree | — |
 | drift `STRUCTURE label order A vs B` | | blocks moved or merged | restore the English block order | — |
-| drift `E TOKENS <label>: ['{PLAYER}'] -> []` | | a placeholder was dropped or reordered | keep English order. Droppable: `{POKE} {PKMN} {POKEBLOCK} {ID} {NO}`; reorderable: `{B_BUFF1..3}` | `43e43941b4`, `dbf3d07e01` |
+| drift `E TOKENS <label>: ['{PLAYER}'] -> []` | | a placeholder was dropped or reordered | keep English order. Droppable: `{POKE} {PKMN} {POKEBLOCK} {ID} {NO} {PK}`; `{B_BUFF1..3}` may swap with each other | `43e43941b4`, `dbf3d07e01`, `43acd4d4e3` |
 | drift `E TERMINATOR`, `E CHARSET <label>: €`, `SHRUNK` | | `$` lost or added; a character the charmap cannot encode; the file is under 60% of the English bytes | restore the `$`; use the charmap form; restore the file | — |
-| drift `w PAGES 2 -> 1`, `w LATIN`, `w UNTRANSLATED` | | warnings only | `\p` changes only when a page would not fit; translate the Latin or confirm it is on `LATIN_OK` (`drift.py:48-52`) | — |
-| drift flattened `#if/#else` string branches | | an old drift could not parse literals split by preprocessor lines | translate every branch; drift parses them now | `c3aa635b6a` |
+| drift `w PAGES 2 -> 1`, `w LATIN`, `w UNTRANSLATED` | | warnings only | `\p` changes only when a page would not fit; translate the Latin or confirm it is on `LATIN_OK` (`drift.py:52-62`) | — |
+| drift flattened `#if/#else` string branches | | an old drift could not parse literals split by preprocessor lines | translate every branch; drift parses them now | `98e5af4a55` (parser), `c3aa635b6a` (text restored) |
+| drift `STRUCTURE` on `src/data/pokemon/pokedex_orders.h` only | `git log he/renderer -- src/data/pokemon/pokedex_orders.h` | the regenerated A–Z order is engine data and is not on `he/renderer` yet | cherry-pick the `pokedex_orders.h` commit onto `he/renderer` | `f47c725548` (on `he/renderer`) |
 | audit `E ... WIDTH 278 > 200 ... (prompt line)` | `textwidth.py` | the line is too wide; a line ending in `\l`/`\p` gets 200 px | `wrap.py`, or shorter wording | `57ba9f052e` (prompt budget) |
 | audit or checkunits `BYTES` | `namecheck.py --all` | a hard field limit; for example the Frontier trainer name field is 7 bytes, not 8 | a shorter form for that copy | `ca1e85587c` |
 | audit `FIT` warning | | fits only in the narrower fallback font | allowed; look at it on screen | — |
 | checkunits `w DIGITS ['20'] -> ['02']` | | a number reversed or lost | write digits in reading order | — |
+| namecheck `WARN FRSYNC`, `TRANSLIT`, `SAMENAME` or `STALE` | `namecheck.py --warnings` | a name differs from FireRed's current one, a transliteration slip, one person with two spellings, or an allow entry that no longer matches | fix the name if it is an error (Q136); otherwise add or update its entry, with the reason, in `tools/hebrew/data/namecheck_allow.json` | `49394ba1ad` |
+| `gen_dex_alpha`, `gen_ec_order`, `gen_ec_letters` or `flag_gates` `--check` exits 1 | the entries it lists | a rename or a script change without regenerating | run the tool without `--check` and commit its output alone | `c022422009` |
 | A glossary name went back to Latin; a row vanished | diff the row keys (below) | a bulk rewrite of `glossary.csv` dropped rows: `bb8db5c703` lost 5 (four radio DJs and `TERM_NURSE_JOY`) | restore the rows; review every bulk glossary edit with the key diff | `d8de0c8fd0` |
 | 8 multi-word names held only the first word | read the row | truncation during a rewrite (which commit is unknown) | restored in the names review | `DECISIONS.md:1361-1382` |
 | STATUS.md undercounts, units vanish | `units.py status FILE` | `units.py` skipped any string without a Latin letter | fixed; regenerate STATUS.md with `--sweep` | `29170c3421`, `4a9c6858b1` |
@@ -1123,7 +1216,7 @@ EOF
 
 | Symptom | Check | Cause | Fix | Commit |
 | --- | --- | --- | --- | --- |
-| `make check` ends in `Segmentation fault: 11` and prints no summary (macOS) | `check_tests.py LOG` | probably the hydra summary arrays (section 4.3), **unverified** | ignore make's status; judge with `check_tests.py` | — |
+| `make check` ends in `Segmentation fault: 11` and prints no summary (macOS) | `check_tests.py LOG` | the hydra summary lists written past their 1,600 rows (section 4.3) | judge with `check_tests.py`; merge `he/fix-upstream-hydra` | `8d52b4cccf` (branch `he/fix-upstream-hydra`) |
 | CI `check` killed: exit code 143, "The runner has received a shutdown signal" | `gh run view <id> --log-failed`; the `[mon]` lines | test build at `-j4` exhausted the runner; then memory grew over one long run; then one test spins the Linux emulator (about 1.2 GB a minute) | `-j2`; a separate test-ELF step with a resource log; `check_chunked.py`; `--skip-crashing` and `--chunk-timeout 900` | `77250f4224`, `d04ba18ed2`, `7cf1c4771e`, `8714ee20ef` |
 | later tests in a chunk do not run after a crash | | after a crash the runner rebuilds its share of tests without the name filter (`check_chunked.py:10-14`) | each crashing test gets its own chunk; list new crashers in `crashing_tests.txt` | `7cf1c4771e` |
 | `check_chunked.py` exits 3 / 2 | `== TIMEOUT` in the log / the message | a chunk ran past the timeout / no test ELF, or a crashing name missing from `test/` | look at that chunk; `make BUILD=hns pokehns-test.elf`; fix the list | — |
@@ -1137,24 +1230,24 @@ EOF
 | Symptom | Check | Cause | Fix |
 | --- | --- | --- | --- |
 | `no runner at ...: build emu/hnsrun.c (emu/README.md) or set HNS_RUNNER` | `ls tools/hebrew/emu/hnsrun` | the runner is git-ignored and not built | build it, or set `HNS_RUNNER` |
-| `the save ladder is not set (HNS_SAVES)` | `python3 tools/hebrew/paths.py` | no default for the saves | set `HNS_SAVES` (section 2.6) |
+| `the save ladder is not set (HNS_SAVES)` | `python3 tools/hebrew/paths.py` | no default for the saves | set `HNS_SAVES` to `<builds>/saves` (section 2.6) |
 | tour `ERROR ... constant SPECIES_TYPHLOSION not found in <dir>/include` | where the ROM is | the ROM was copied out of its source tree | set `HNS_SRC=<tree>`, or use the in-tree ROM (the release script does) |
 | `path too long for hnsrun (N chars)` | the length of OUTDIR | hnsrun keeps 127 characters (`hnsrun.c:200`); `sweep.py:367-373` guards at 120 | `cd` to a short folder; the sweep passes relative paths when shorter |
-| `sweep: no script units in .../build/hebrew/units` | `ls $HNS_UNITS` | no units | `python3 tools/hebrew/make_chunks.py all` |
-| `selftest: no translated label with a long enough two-row page` | | the units have no Hebrew (`make_chunks.py` output) | point `HNS_UNITS` at translated chunks (only `<private>` has them) |
-| `sweep.py selftest --label X`: `TypeError: unhashable type: 'list'` | | `--label` is an append list (`sweep.py:1102`), and `sweep.py:1021` wraps it again | omit `--label`, or change line 1021 to `cands = list(a.label)` |
+| `sweep: no script units in .../build/hebrew/units`, exit 2 | `ls $HNS_UNITS` | no units | `python3 tools/hebrew/make_chunks.py all` |
+| `selftest: no label with Hebrew letters and a long enough two-row page` | | the ROM is not the Hebrew build, or `--label` names a label with no two-row Hebrew page | use the Hebrew clip ROM; pick another label |
+| `sweep.py run --translated` selects nothing | | `make_chunks.py` units come from the English baseline and hold no Hebrew | use `--hebrew-only` |
 | `--clip`: `... is not an RTL_CLIP_REPORT build` | | a release ROM | use `pokehns-clip.gba` |
 | `selfcheck` prints FAIL | | a saved struct changed size (`include/global.h`, `main.h`) | `HNS_WORK=<scratch> bash tools/hebrew/emu/probe/measure.sh`, update `OFF`/`SIZES` in `hns.py`. It also misses a field reordered inside an unchanged size, so rerun the probe after any change to those headers |
 | `render`: `'waitcb2' needs hns.py run (not plain hnsrun)` | | a live op in a script for bare hnsrun | use `hns.py run` |
 | tour TIMEOUT or CRASH | `OUT/TOUR/_timeout.png`, `_crash.png`, `run.log`; `hns.py where <pc>` | a wait never matched; a bad pointer | fix the script or the ROM |
-| tour OK, but frames differ from the previous candidate | `hns.py tourdiff` | a stale script, or a real change | look at each DIFF (section 8.1) |
+| tour OK, but frames differ from the previous candidate | `hns.py tourdiff` | a stale script, or a real change | look at each DIFF (section 4.5) |
 | savestate gives plausible nonsense | | `ss`/`sl` states work for the same build only (`hnsrun.c:23`) | cold-boot from the battery `.sav` after a rebuild |
 | values read from the save block are wrong after a warp | | the save block moves on every map load and battle | use `@SB1@`/`@SB2@`/`@POS@`, which are re-read per line; never cache them |
 | a battle differs between runs | | input timing moves `Random()` | `pinrng` (`hns.py:1500-1539`) |
 | map walk `HELD` | the same map on the English ROM | a scripted sequence the B-only walker cannot finish | a harness limit unless English behaves differently |
-| ladder1 validation exits 1 (`leavecenter: blocked inside 1.4`) | | rung 1 is the bedroom, not a Center | expected |
+| ladder1 validation exits 1 (`leavecenter: blocked inside 1.4`) | which script ran | `ladder_validate.txt` leaves a Center; rung 1 is the bedroom | validate rung 1 with `ladder_validate_newgame.txt` (`run_release_tests.sh` does) |
 | `rom_sweep.py` exits 1 with about 6,255 runs | | dead Emerald text compiled in | informational; diff against the previous candidate |
-| cross-core: VBA-Next differs on whole frames; SkyEmu exit 139 | | no RTC in VBA-Next; SkyEmu crashes the minimal frontend | expected |
+| cross-core: VBA-Next differs on whole frames (no RTC); SkyEmu exit 139 | `crosscore` log | an old frontend that answered core options with NULL | use the frontend `run_release_tests.sh` builds from `crosscore.c` (it answers with the defaults) |
 | a tester reports a "crash" | does the screen show an assert message? | `make hns` keeps asserts (`RELEASE ?= 0`, `Makefile:63`); the ROM contains `AssertfCrashScreen` | read the assert. R+START (the debug menu) is compiled in (`include/config/debug.h`); R is also the DexNav button |
 
 ### 6.5 On screen: clipped, misplaced or misordered text
@@ -1185,7 +1278,7 @@ EOF
   never widen a `*_NAME_LENGTH` or any buffer in a saved struct.
 - **Pre-2.0 (1.2.1) saves do not load.** The sector layout differs (SaveBlock3), and 2.0.6
   migrates only 2.0.x saves (`src/save.c:930-980`). This comes from a code trace in
-  `<private>/scratch/save12/REPORT.md`; no 1.2.1 save was ever loaded (**unverified**).
+  `<builds>/archive/rounds/save12/REPORT.md`; no 1.2.1 save was ever loaded (**unverified**).
 - **Leave the Pokémon Center first** after loading a save from another build. This is the
   official upgrade step; see `tools/hebrew/emu/scripts/continue.txt:5-7`.
 
@@ -1195,7 +1288,8 @@ EOF
 
 ### 7.1 Commits
 
-- **One file per text commit.** 959 of the 1,012 non-merge commits on `he/main` touch one file.
+- **One file per text commit.** 1,214 of the 1,368 non-merge commits on `he/main` (at `85705e4bc9`)
+  touch one file.
   Subjects:
   - "Translate `<file>` into Hebrew";
   - "Apply the review decisions to `<file>`";
@@ -1209,7 +1303,7 @@ EOF
   Check with `git cherry -v he/main he/renderer`.
 - **Messages** say what and why, never ticket IDs or history. Code comments say what and why.
   Anything not seen on screen is marked unverified, in the commit, the docs and the release notes.
-- **No AI attribution**: no `Co-Authored-By` trailer, no "Generated with" line. All 1,030 commits
+- **No AI attribution**: no `Co-Authored-By` trailer, no "Generated with" line. All 1,407 commits
   on `he/main` follow this.
 
 ### 7.2 Identity
@@ -1255,7 +1349,7 @@ Ask the owner before you:
 
 - One topic per branch (`he/fix-<topic>`), in its own worktree (`../pokehns-heb-<topic>`).
 - Merge into `he/main` with `git merge --no-ff he/fix-<topic> -m "Merge he/fix-<topic>: <what>"`.
-  `he/main` has 18 such merges.
+  `he/main` has 39 such merges.
 - Keep `master` identical to upstream. Keep upstream bug fixes on `he/upstream-fixes`, separate
   from text and engine work (`00dd646cc1`, `4d5d2b9ada`).
 - Before touching an engine function, `git log -S` it upstream to see why it looks the way it
@@ -1271,68 +1365,87 @@ Ask the owner before you:
 
 | Item | Evidence | What to do |
 | --- | --- | --- |
-| **Stale nickname tour.** `tools/hebrew/emu/tours/naming_nickname.txt:8` still says "a page swap keeps the cursor's column", the rule before `41d363d8ed`. Last changed in `98e5af4a55`. On the 0.2 ROM it reports OK, but 8 of its 35 frames differ from rc5's: it types `CDE` for `ABC`, and the `2` of `פיקה 2` is never typed | `hns.py tour pokehns.gba nn --only '^naming_nickname$'`, then `tourdiff` against rc5 → `30 identical, 8 differ` (run for this handoff; the two frames viewed). The fixed copy is `<private>/emu/tours/naming_nickname.txt` | port that file as its own tools commit, then confirm `tourdiff` shows 0 differences against rc5 |
-| **Hebrew A–Z Pokédex order out of date** for ZACIAN, PAWMI, PAWMO and PAWMOT. `pokedex_orders.h` was generated in `51b35c64fe`, before the names review renamed them (`bb8db5c703`). The 0.2 ROM has this | `gen_dex_alpha.py --tree <scratch copy>` + `diff` → those 4 moved (run for this handoff) | run `python3 tools/hebrew/gen_dex_alpha.py`, commit `pokedex_orders.h` alone; check the Pokédex A–Z list on screen |
-| **`sweep.py selftest --label` crashes** | `sweep.py:1021` vs `:1102` | `cands = list(a.label)` |
-| **`make_testing_md.py` clip-count bug** (old private copy) | fixed in `tools/hebrew/release/make_testing_md.py` | — |
-| Known issues shipped in 0.2 (`tools/hebrew/release/notes.json`) | `<builds>/TESTING.md` | each is a candidate fix: imperial dex height `”` left of the digits (found in code, not seen); dex stat-label shadow touches the border; a nickname geresh touches the portrait box; a colon at a page end touches the continue arrow; EXEGGUTOR-A spelled without the ק |
+| **The hydra guard is not merged.** `make check` can still end in a segfault on a machine with many cores | branch `he/fix-upstream-hydra`, `8d52b4cccf`, tested with one `make check BUILD=hns -j8` (section 4.3) | merge it into `he/upstream-fixes`, then into `he/main` with `--no-ff` |
+| **Pokéblock condition graph labels.** `graphics/pokeblock/use_screen/graph.png` still has the label positions from before `9e489b46a5`; re-running `tools/hebrew/graphics/side/do_graph.py` moves 449 pixels | the run of the script when the graphics tools moved into the fork (not committed) | look at the feeding screen; if the labels touch the pentagon outline, commit the re-run after that screen check and cherry-pick it onto `he/renderer` |
+| `status_report.py:26-27` keep `KEPT_LATIN` reasons for `data/text/match_call.inc` and `data/text/tv.inc` | their live labels are now only the 3 and 6 Hebrew ones (`STATUS.md`) | drop both entries |
+| `sweep.py run --translated` on fresh `make_chunks.py` units selects nothing and says nothing | `sweep.py:146-147` filters on the unit's Hebrew, which those units never have | in `select_labels`, exit 2 with "no unit has Hebrew; use --hebrew-only" |
+| `tools/hebrew/emu/scripts/r5_latin/r5lat.py:17` gives a `SyntaxWarning` on Python 3.14 | `python3.14 -W error::SyntaxWarning`, compiling every script | make the docstring raw |
 
-### 8.2 Content gaps
+### 8.2 Content gaps and decisions
 
-- **Latin left inside Hebrew strings.** The live ones now have glossary rows and Hebrew text
-  (round 17; the 16 new rows are `proposed`). drift prints 133 `w LATIN` lines (it no longer
-  caps them at 40 per file), and each is either kept on purpose or in text H&S does not reach:
+- **Latin left inside Hebrew strings.** The live ones have glossary rows and Hebrew text. drift
+  prints 127 `w LATIN` lines, and each is either kept on purpose or in text H&S does not reach:
   - kept: button names, game titles, the credits' team names, the Odd Egg interview's Easy Chat
     words in `src/data/help_window.h`, and the save-type name on the no-flash screen; the reasons
     are in `tools/hebrew/status_report.py` (KEPT_LATIN) and `tools/hebrew/drift.py` (LATIN_OK);
   - unreachable: Emerald maps and names, the Battle Tents, the TV shows and their PokéNews
-    (`FLAG_SYS_TV_START` is defined as 0, `data/scripts/tv.inc:8`), the PokéNav match calls (66
-    lines; their `FLAG_ENABLE_*_MATCH_CALL` and `FLAG_REGISTERED_*` flags are defined as 0 in
+    (`FLAG_SYS_TV_START` is defined as 0, `data/scripts/tv.inc:8`), the PokéNav match calls (their
+    `FLAG_ENABLE_*_MATCH_CALL` and `FLAG_REGISTERED_*` flags are defined as 0 in
     `include/constants/flags_hns.h`, and `FlagGet(0)` is false), the Ruby/Sapphire berry fix,
     and the item descriptions this build does not compile.
-  - `tools/hebrew/data/live_labels.json` still counts the match-call and TV labels as live: its
-    builder follows references and ignores flags. Only Mom and Baoba can call.
-- **Easy Chat contradicts the docs.**
-  - `docs/hebrew_translation.md:149`, STATUS.md and TESTING.md say Easy Chat stays English, and
-    `make_chunks.py:28` skips `src/data/easy_chat/`.
-  - The tree holds 517 Hebrew and 491 Latin words, from 19 "Translate src/data/easy_chat/..."
-    commits (for example `7a223ace31`, `36040b98f7`).
-  - Why, and how the letter-indexed chat keyboard behaves with them, is **unverified**.
-  - Decide before touching Easy Chat.
-- **Questions for the owner from the string-coverage round** (round 16). None is fixed; each
-  needs a decision:
-  - the battle debug menu: the stat-up hold rows all as 'X +' like the other six, and the AI
-    points page label ('עובר לפוקימון ' at the English width, or the species placed after the
-    label under `TEXT_RTL`);
-  - two faults of H&S 2.0.6 itself, the same in English: the Battle Dome style scoring assigns
-    instead of adding, so only RISKY, RARE_MOVE and BALANCED can show; Scott's Silver and Gold
-    Shields cannot be received. Release-note them, or fix them outside the translation;
-  - with no flash chip the game shows the debug build's English assert screen before the
-    no-flash message: ship an `NDEBUG` build (which changes Q120's debug menu) or keep it;
-  - the Emerald maps outside the Battle Frontier cannot be walked into; the only path found, a
-    poison white-out in the Battle Pike with SURVIVE POISON off, crashes in English too. A lead,
-    **unverified**: the HNS build gives the non-hns maps a NULL map header
-    (`tools/mapjson/mapjson.cpp:470-479`);
-  - an H&S 2.0.6 art fault, the same in English: the Gen 4 battle UI's FROSTBITE tag is a copy of
-    the BURN tag (row 6 of `graphics/battle_interface/gen4/status*.png`), so it would read כויה.
-    Frostbite is off (`B_USE_FROSTBITE` FALSE) and only the debug menus can set it. Redraw the
-    row as קור like `hns/status*.png`, or release-note it.
-- **Questions for the owner from the Pokédex rounds** (rounds 16b and 17). Neither is decided:
-  - the five Pokédex terms round 17 proposed: Hisui היסואי, Mt. Coronet הר הנזר (its glossary
-    note gives the transliterated הר קורונט as the alternative), Ultra Wormhole חור תולעת
-    אולטרה, Team Plasma צוות פלזמה and Rose רוז. None is checked against an official Hebrew
-    source;
-  - 'psychic power' in Pokédex prose: על-חושי (as in the PSY- move names) or פסיכי (as in the
-    type name), applied across the tree.
-- **Proposed names.** The 4,578 `proposed` glossary rows were never checked against an official
-  Hebrew source or by a native speaker on screen.
+  - `tools/hebrew/flag_gates.py` keeps these out of `tools/hebrew/data/live_labels.json`: it moves
+    the match calls (all but Mom and Baoba), the TV shows and PokéNews to `flag_off` (451 labels)
+    and the 147 labels that are not built to `not_built`; 6,585 stay live. CI runs `--check`.
+- **Easy Chat is Hebrew** (`DECISIONS.md` Q135). All 999 words have Hebrew texts; the words the game
+  compares (the Odd Egg passwords, the questionnaire's Mystery Gift phrase) each print a text of
+  their own; the group lists follow the Hebrew order; the ABC keyboard shows the 22 letters and
+  אחר; and the screen mirrors inside its frames, which fixed round 16's three layout faults (the
+  word-select cursor on the other column, the group keyboard hiding a column, the YES/NO box over
+  the phrase). Only phrases from a linked game were not seen.
+- **Decided this round:** the battle debug menu's stat rows and label (Q131), the link battle lines
+  without the player's gender (Q132), the five Pokédex terms (Q133; their rows stay `proposed`),
+  'psychic power' as כוח פסיכי (Q134), the Gen 4 FROSTBITE tag redrawn as קור (Q137), the names
+  compared with FireRed's (Q136) and publishing without hand play (Q138).
+- **Faults of H&S 2.0.6 itself, the same in English, listed as known issues** in `notes.json`,
+  because any fix changes gameplay or belongs upstream (section 7.4):
+  - **Battle Dome style scoring** assigns instead of adding, so a trainer card shows only three of
+    the style descriptions (`src/battle_dome.c:882`, `:887`, `:909`).
+  - **Scott's Silver and Gold Shields** cannot be received: H&S has no ornament inventory
+    (`include/decoration.h:30-52`, `src/decoration_inventory.c:6`), so `GetFirstEmptyDecorSlot(3)`
+    reads past the array, finds 0 and the script always says "come back for this later"
+    (`BattleFrontier_ScottsHouse_hns/scripts.inc:99-106`).
+  - **No flash chip:** `textWin[]` in `src/save_failed_screen.c:417-428` has no
+    `DUMMY_WIN_TEMPLATE` terminator, so `InitWindows` reads the next ROM object and an allocation
+    assert shows the blue English screen before the Hebrew no-flash message (upstream `ad0778722b`).
+    It shows because `make hns` is not a `RELEASE` build (`include/assertf.h:70-77`). An `NDEBUG`
+    build would keep the Q120 debug menus (`DEBUG_OVERWORLD_MENU` and `DEBUG_BATTLE_MENU` are TRUE,
+    `include/config/debug.h:5`, `:11`), but the release keeps the build type all testing compares
+    against. Revisit if the official English build turns out to be a `RELEASE` build (section 8.5).
+  - **Battle Pike poison white-out** with SURVIVE POISON (הישרדות מרעל) off crashes. The HNS build
+    gives every map whose `game_version` is not `hns` a NULL header
+    (`tools/mapjson/mapjson.cpp:712-733`, `:470-479`), `src/overworld.c:684-687` returns it
+    unchecked, and the white-out runs the Emerald retire script (`data/scripts/field_poison.inc:27-32`,
+    `data/scripts/battle_pike.inc:222-226`), which warps to the Emerald Pike lobby. The option is
+    on by default (`src/challenge_menu.c:1364`). A scan of the warps found no walkable warp from an
+    H&S map to an Emerald map except the unreachable Artisan Cave ones.
+  - **Birth Island:** YES to the sailor warps to `MAP_LILYCOVE_CITY_HARBOR`
+    (`data/maps/BirthIsland_Harbor_hns/scripts.inc:17`), an Emerald map with the same NULL header,
+    and the game hangs on a black screen. Leaving with Fly works on both ROMs: the player lands in
+    Cherrygrove City and can move (`tools/hebrew/emu/tours/r16_emerald_leak/eld2_birth_island_fly.txt`).
+  - Not run, as it needs a real link: the Battle Frontier Pokémon Center's link rooms warp to the
+    Emerald colosseum, trade and record rooms, NULL in this build (Goldenrod uses the `_hns`
+    rooms); English is the same.
+- **Ariana's class** מנהל רוקט stays masculine: the class is shared with Archer, Proton, Petrel and
+  Giovanni and is printed before the name, so no text-only form fits (Q124, Q127; a known issue).
+- **The radio's Pokédex Show** wraps two place names across its lines (הר / הנזר in the
+  Typhlosion-H entry, נהרות / היסואי in Basculegion's). Accepted: the ticker breaks between words,
+  nothing clips, and 1.0 and English split at the same places.
+- **Proposed names.** The 5,152 `proposed` glossary rows were never checked against an official
+  Hebrew source. `namecheck.py --warnings` checks them for consistency with FireRed and for
+  transliteration slips (Q136); the roughly 3,000 rows translated by meaning stay `proposed` until
+  a native speaker reads them.
 - **Not seen by a person:**
   - nobody has played from a new game to the first badge;
   - nothing has run on real hardware (needs a 32 MiB cart, FLASH 128 KB save and an RTC);
-  - no real 2.0.x save from a long playthrough has been loaded;
-  - link features have not been tried;
-  - no tour reaches the Frontier facilities, full contests, Trainer Hill, Battle Tents, mail, the
-    credits, the Hall of Fame or every dex form page.
+  - no real 2.0.x save from a long playthrough, and no 1.2.1 save, has been loaded;
+  - a real link with a second GBA was never tried; the trade screen, link battles, the cable
+    club, record mixing and Mystery Gift were seen with the partner faked in memory
+    (`tours/r14_link`, `tours/r16_link`);
+  - the Battle Frontier facilities, full contests, the Trainer Hill, the Battle Tents, mail, the
+    credits, the Hall of Fame and the Pokédex form pages were seen in the rounds' own tours
+    (`tools/hebrew/emu/tours/<round>/`), which the release does not run again. Re-run the matching
+    round tour whenever a change touches those screens;
+  - no native speaker has read the text on screen.
 - **Unreachable English in the ROM** (resolved). `rom_sweep` lists 104 untracked English runs
   sourced to `BattleFrontier_BattlePyramidFloor_hns`. None can print: its 129 text labels have no
   referrer outside their own definitions, `tools/hebrew/data/inventory.json` marks the file dead,
@@ -1344,67 +1457,88 @@ Ask the owner before you:
   התק' מ' and the מ of רצועת מ, English shows 'Sp Att' for 'Sp Atta'. The clip build records these
   glyphs. Debug-only; no change.
 
-### 8.3 Stale documentation (fix in docs-only commits)
+### 8.3 Stale documentation
 
-| Where | Says | Reality |
-| --- | --- | --- |
-| `docs/hebrew_translation.md:86` | budgets come from `notes/budgets.md` | that file is private; the fork's source is `tools/hebrew/data/budgets.json` |
-| `docs/hebrew_translation.md:145-148` | `{ID}{NO}` and `POKéGEAR` are open style calls | settled in 0.2 (K2 `מס'`, K3 פוקיגיר; `DECISIONS.md`) |
-| `docs/hebrew_translation.md:149` | Easy Chat stays English | about half Hebrew (section 8.2) |
-| `docs/hebrew_translation.md`, `tools/hebrew/README.md` | do not mention `tools/hebrew/release/` | they should link it |
-| `tools/hebrew/wrap.py:8-9` (docstring) | dialogue 216 px, 208 on `\l`/`\p` | the code and `budgets.json` use 208 / 200 |
-| `tools/hebrew/textwidth.py:100` | down arrow at `src/text.c:1175-1215` | now `src/text.c:1862-1910` |
-| `STYLE.md:67-71, 80-81` | keep every token in order; three droppable tokens | `drift.py:30-33`: five droppable, B_BUFF1..3 reorderable |
-| `units.py:35`, `checkunits.py:26` | three droppable tokens, no reorder | out of step with `drift.py` (section 3.7) |
-| `<private>/translation/glossary.csv` | | differs from the fork's (first difference at line 184); the fork's is canonical |
+None known at the end of round 18: the rows this table listed are fixed. Every text tool has
+tests: 132 tests in 20 files under `tools/hebrew/tests`, with small committed fixtures in
+`tools/hebrew/tests/data/`. Add a row here when a document and the tree disagree, and fix it in a
+docs-only commit.
 
-Tests are missing for `units.py`, `drift.py`, `checkunits.py`, `make_chunks.py` and
-`namecheck.py`. The 40 tool tests cover audit, check_chunked, cliptour, rom_sweep, textwidth and
-wrap.
+### 8.4 Things only on the reference machine
 
-### 8.4 Things only on the reference machine (bus factor)
+None that the release needs. `<builds>` holds the saves (`saves/`, `HNS_SAVES`), the libretro cores
+(`reference/cores/`, with SHA-1 and inferred source), the English map walk
+(`reference/mapwalk_en.json`, `HNS_EN_MAPWALK`), each candidate's records (`records/rcNN/`, indexed
+by `records/README.md`) and, as history only, the old unit chunks, the pre-fork translation drafts,
+the October notes and the round reports (`archive/`). The fork holds every tool, including the
+graphics scripts (`tools/hebrew/graphics/`), the font designs and installer (`tools/hebrew/fonts/`)
+and the inventory builder (`tools/hebrew/inventory/`).
 
-The private folder is not a git repository and has no backup. It alone holds:
+Rebuilt, never stored: mGBA 0.10.5 and `hnsrun`, `crosscore`, RetroArch's mGBA core, the unit
+chunks (`make_chunks.py all`), the English tour run, and any candidate's ROM, ELF and map (build
+its commit with devkitARM r68 and compare the SHA-1 in `records/README.md`). Regenerable and still
+only local: the latest candidate's tour screenshots (the next `tourdiff` compares against them)
+and the round screenshots. Freeing that disk is the owner's call.
 
-- **the translated unit chunks.** `sweep.py selftest` and `--translated` need them;
-- **release candidates rc1–rc5** (logs, review JSON);
-- **the libretro cores**, with no record of their source;
-- **the English reference runs** (they can be regenerated: section 2.6);
-- **the working notes** (`notes/harness.md`, `sweep.md`, `lessons.md`, `graphics_*.md`). They
-  describe how the graphics labels were drawn; the drawing scripts themselves are not in the fork.
+### 8.5 Facts verified and not verified
 
-Decide whether to move what is still needed into the fork (tools) or into the private builds
-repository (data).
+**Verified for this handoff** (round 18):
 
-### 8.5 Facts not verified for this handoff
+- A fresh clone, followed through section 2.3 on the reference machine, rebuilt 0.2 byte for byte
+  ("Notes from the fresh-clone test"). CI builds and tests on Linux (ubuntu-26.04, Ubuntu's
+  toolchain).
+- The hydra segfault's cause, and the guard on `he/fix-upstream-hydra` (section 4.3). The 0.2 and
+  rc20 `make_check.log` came from `make check BUILD=hns -j12` (the release README), with 15 hydra
+  runners, in about 4 min.
+- Every libretro core loads the 131088-byte `.sav` at the frontend level (section 4.6); copies of
+  the cores are in `<builds>/reference/cores/`, whose source is inferred, not recorded.
+- 69 of the 71 tours run on the English ROM; the two `naming_*` tours are Hebrew-only.
+- A pull request into `he/main` runs only the Hebrew workflow; the ubuntu-26.04 image builds and
+  tests.
+- GCC 16 rejects a species over 12 or an item over 19 letters; move names have no compile-time
+  limit (section 3.3).
+- `he/fix-screens` is merged into `he/main`.
+- The Hebrew A–Z Pokédex order is regenerated and was seen on screen; the imperial height was
+  fixed in `196a1bdc71` and seen in round 5.
+- A Hebrew-written bedroom save loads in the English ROM, with the Hebrew name blank (section 4.6).
+- The 27 evolution-page sheets of round 16b that nobody had viewed (269 pages) were viewed: no
+  clipped line and no line touching a border; the closest is 2 px above the bottom border
+  (Milcery/Alcremie). Kingambit's wrapped line on the Pawniard and Bisharp pages touches the line
+  above at 3 pixel columns, where English touches at 2 with the same spacing: the game's layout,
+  not a translation defect.
+- Leaving Birth Island with Fly works on both ROMs (section 8.2).
 
-- A fresh `git clone` of the fork followed by section 2.3 end to end, and a Linux build with
-  devkitPro pacman.
-- That another machine with devkitARM r68 reproduces the 0.2 SHA-1.
-- Why the local English 2.0.6 build (CRC32 `FB9F58C5`) differs from the official UPS output
-  (`01713508`).
-- The cause of the hydra segfault at the end of a full local `make check`.
-- The command and job count that produced the 0.2 `make_check.log`; the wall time of a full local
-  `make check`.
-- Where the libretro cores came from; whether every core accepts mGBA's 131088-byte `.sav`.
-- That `make_ladder.sh` gives byte-identical saves elsewhere; the harness on Linux.
-- Whether all 24 tours run on the English ROM.
-- Whether a pull request into `he/main` would fail the upstream "CI" workflow (`UNUSED_ERROR=1`).
-- Whether the Ubuntu 26 runner image breaks the CI build.
-- That an over-long species, item or move name is a hard compile error under GCC 16 (not tried).
-- The cause of the English map walk's Dome crash.
-- Whether `he/fix-screens` (local only) holds work in progress.
-- How the stale A–Z entries and the imperial height look on screen.
-- Loading a save written by the Hebrew ROM into the English ROM.
+**Not verified:**
+
+- A Linux build with devkitPro pacman; another machine with devkitARM r68 reproducing the 0.2
+  SHA-1.
+- The official English 2.0.6 binary differs from `make hns` (CRC32 `01713508` against
+  `FB9F58C5`); whether it is a `RELEASE=1` build, which would also hide the no-flash assert
+  screen, is unverified.
+- RetroArch's own `.srm` loader with the 131088-byte save.
+- That `make_ladder.sh` gives byte-identical saves elsewhere (the ladder is stored in
+  `<builds>/saves`; determinism matters only for making it again); the harness on Linux.
+- The state that makes the English full map walk crash in the Dome pre-battle room (section 4.6).
+- A mid-game or post-game save written by the Hebrew ROM, loaded in the English ROM.
+- Pre-2.0 (1.2.1) saves: they do not load, by a code trace only (section 6.6).
+- The next candidate's sweep: 6,611 labels and no SKIP is expected.
+- Why the local audit counts 41,539 strings and CI 39,059 on the same commit (section 4.2).
+- The two name fixes of Q136 on screen: SONIC BOOM in the fight menu and EARLY BIRD on the summary
+  page.
+- In one battle the debug menu draws text only on the first party page that shows six Pokémon, in
+  English too; the cause was not looked into.
+- The out-of-bounds read behind Scott's shields could write through a stray pointer after a link
+  Dodrio Berry Picking game (needs a link).
+- The 16 local-only `he/wip-screens-*` and `he/fix-screens-r3`/`-r4` branches were probably
+  squashed into `he/main`.
+- A native speaker's read. Reviewers asked for one on: the radio's adjective pairs
+  (`src/data/text/radio_strings.h:54-69`), the Ultra Beast Pokédex entries
+  (`src/data/pokemon/species_info/gen_7_families.h`), the Day Care take-back question
+  (`data/maps/Route34_DayCare_hns/scripts.inc:594`), Tucker's line (`DECISIONS.md` Q59) and the
+  Easy Chat words.
 
 ## Notes from the fresh-clone test
 
 This document was followed end to end on a fresh clone; the release ROM it builds matched release 0.2 byte for byte (SHA-1 `07753efc…`, clip build `4d7cfac5…`). Points to keep in mind:
 
-- Give every `HNS_*` variable as an absolute path: a relative one is resolved against the folder a command runs from. A sweep that finds no units prints `sweep: no script units in …`, selects 0 labels and still exits 0, so check that its `totals:` line is not empty.
-- `audit.py --report` prints nothing on stdout; the summary is the head of the report, and `build/hebrew/` must exist first.
-- `drift.py --quiet` prints no summary line: success is exit 0 with only `ok` lines and no `FAIL`.
-- `drift.py` reports every renamed `Name:` line of a `.party` file as STRUCTURE (exit 1), so it is no check for those files.
-- `run_release_tests.sh --check` only tests that some unit chunk exists: confirm `make_chunks.py all` wrote the folders `B01`–`B40`.
-- `ccdiff.py --help` prints its usage line but exits 1.
-- In the troubleshooting table, the drift `#if/#else` row's parsing came with the tools in `98e5af4a55`; `c3aa635b6a` is the text fix.
+- Give every `HNS_*` variable as an absolute path: a relative one is resolved against the folder a command runs from (`paths.py`). A sweep that finds no units prints `sweep: no script units in …` and exits 2.
