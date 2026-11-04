@@ -13,9 +13,6 @@ from fixtures import CHARMAP, TOOLS, copy_data, token_cases  # noqa: E402
 INC = 'data/maps/TestTown/scripts.inc'
 ITEMS = 'src/data/items.h'
 PARTY = 'src/data/partners.party'
-# Whether drift.py reads the Name: lines of a .party file as strings. Until it does, every line of
-# a .party file is structure, so a translated name is reported as STRUCTURE.
-PARTY_NAMES = bool(drift.split_file('t.party', 'Name: A\n')[1])
 
 
 class DriftTest(unittest.TestCase):
@@ -95,12 +92,11 @@ class DriftTest(unittest.TestCase):
         errors, _ = self.check(PARTY)
         self.assertTrue(any(e.startswith('STRUCTURE') and 'Level: 43' in e for e in errors), errors)
         self.write(self.he, PARTY, translated)
-        if not PARTY_NAMES:
-            self.skipTest('drift.py does not read .party Name: lines as strings')
+        # A translated trainer name is a string, not structure.
         self.assertEqual(self.check(PARTY), ([], []))
         self.edit(PARTY, 'Name: סטיבן', 'Name: סטיבן€')
         errors, _ = self.check(PARTY)
-        self.assertEqual([e.split()[0] for e in errors], ['CHARSET'], errors)
+        self.assertEqual(errors, ['CHARSET PARTNER_STEVEN: €'])
         self.write(self.he, PARTY, translated.replace('Name: סטיבן', 'Name: STEVEN'))
         errors, warnings = self.check(PARTY)
         self.assertEqual(errors, [])

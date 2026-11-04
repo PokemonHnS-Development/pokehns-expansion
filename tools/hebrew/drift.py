@@ -4,7 +4,7 @@
 For each file (path relative to the repo root) it compares the translation tree with the English
 reference tree and reports:
   STRUCTURE  anything outside string contents changed (script commands, labels, C code, JSON keys,
-             non-text literals such as INCBIN paths)
+             non-text literals such as INCBIN paths, every .party line but a trainer's Name: value)
   TOKENS     a string's {PLACEHOLDER}/{CONTROL} sequence differs from English (order matters, except
              among the battle buffers {B_BUFF1}..{B_BUFF3})
   TERMINATOR a text block gained or lost its '$'
@@ -207,6 +207,24 @@ def split_json(text):
 TEXT_KEYS = {'name', 'description', 'pluralName', 'hebrew_name', 'text', 'title', 'desc', 'mapsec_name'}
 
 
+def split_party(text):
+    """A trainer file for tools/trainerproc: every line is skeleton, except that the value of a
+    trainer's 'Name: X' line (its name in battle) is a string, keyed by the trainer's '=== ID ==='."""
+    skeleton, strings = [], []
+    trainer = None
+    for line in text.split('\n'):
+        m = re.match(r'^===\s*(\S+)\s*===\s*$', line)
+        if m:
+            trainer = m.group(1)
+        m = re.match(r'^Name[ \t]*:[ \t]*(.*)$', line)
+        if m:
+            skeleton.append('Name: <text>')
+            strings.append((trainer or '#%d' % len(strings), m.group(1)))
+            continue
+        skeleton.append(line)
+    return skeleton, strings
+
+
 def split_file(path, text):
     if path.endswith('.inc') or path.endswith('.s'):
         return split_inc(text)
@@ -214,6 +232,8 @@ def split_file(path, text):
         return split_c(text)
     if path.endswith('.json'):
         return split_json(text)
+    if path.endswith('.party'):
+        return split_party(text)
     return text.split('\n'), []
 
 
