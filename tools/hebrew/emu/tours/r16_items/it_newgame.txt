@@ -1,0 +1,64 @@
+# New game, no Pokemon yet (ladder 1, saved in the bedroom). Bedroom PC (bg event (1,1),
+# BedroomPC src/player_pc.c:374-376) > ITEM STORAGE > WITHDRAW the new-game POTION (sNewGamePCItems,
+# :222-226; a single item is withdrawn without the how-many prompt), then WITHDRAW and TOSS on the
+# empty PC: 'There are no items.' (gText_NoItems, ItemStorage_Withdraw/Toss :597-629). Then START > BAG >
+# MEDICINE > POTION > USE with an empty party: 'You have no Pokemon.' (gText_NoPokemon,
+# PrintThereIsNoPokemon, src/item_menu.c:1965-1968). The tour ends on that message.
+# Run: scripts/r16_items/items16.py tour ROM OUT --tours tools/hebrew/emu/tours/r16_items --only '^it_newgame$'
+# Save: ladder1_newgame.sav (HNS_SAVES=hns-tools/emu/saves_all).
+start saves/ladder1_newgame.sav
+include ../../scripts/continue.txt
+warpto MAP_NEW_BARK_TOWN_PLAYERS_HOUSE_2F_HNS 1 2
+face UP
+talk ng_pc_boot 10 A PlayerPCProcessMenuInput
+waittaskx PlayerPCProcessMenuInput 600
+waitquiet
+snap ng_01_pc_menu
+tap A 0                                   # ITEM STORAGE
+waittaskx ItemStorageMenuProcessInput 600
+waitquiet
+tap A 0                                   # WITHDRAW
+waittaskx ItemStorage_ProcessInput 600
+waitquiet
+snap ng_02_withdraw_list
+tap A 0                                   # the POTION (one): withdrawn at once
+waittaskx ItemStorage_HandleRemoveItem 600
+waitquiet
+snap ng_03_withdrew_potion
+press A
+waittaskx ItemStorage_ProcessInput 600
+waitquiet
+snap ng_04_list_empty
+press B
+waittaskx ItemStorageMenuProcessInput 600
+waitquiet
+tap A 0                                   # WITHDRAW on the empty PC
+waitkey 600
+snap ng_05_withdraw_no_items
+tap A 4
+waittaskx ItemStorageMenuProcessInput 600
+waitquiet
+press DOWN
+press DOWN
+tap A 0                                   # TOSS on the empty PC
+waitkey 600
+snap ng_06_toss_no_items
+tap A 4
+waittaskx ItemStorageMenuProcessInput 600
+waitquiet
+press B                                   # back to the PC menu
+waittaskx PlayerPCProcessMenuInput 600
+waitquiet
+press B                                   # turn the PC off
+waitctl 600
+
+bagopen MEDICINE 0
+snap ng_07_bag_potion
+tap A 4
+waittaskx Task_ItemContext_MultipleRows 120
+waitquiet
+snap ng_08_ctx
+tap A 0                                   # USE
+30 -
+waitquiet
+snap ng_09_no_pokemon

@@ -1,0 +1,45 @@
+# PC ITEM STORAGE > WITHDRAW, the 'how many' prompt of every item whose plural name the r15/r16 coverage
+# had not seen (plural_items.json: the r16 plan's items track groups I_A and I_B plus the item plurals
+# of s0/newly_unseen.json). pcfillc puts 50 items, 2 of each, in the PC between batches while the ITEM
+# STORAGE menu is open; pcwrows takes A on every row ('{how many}\n{plural}?', src/player_pc.c:1346-1350),
+# a shot, B. Batches 0, 50, 100 of 0-400 (431 items).
+# Run: scripts/r16_items/items16.py tour ROM OUT --tours tools/hebrew/emu/tours/r16_items --only '^it_pc_a$'
+# Save: menuA_base.sav (HNS_SAVES=hns-tools/emu/saves_all; Cherrygrove Center, PC at (11,1)).
+start saves/menuA_base.sav
+include ../../scripts/continue.txt
+pclist plural_items.json
+go RIGHT 4
+go UP 2
+talk pc_boot 10                           # SOMEONE'S PC / GOLD's PC / ...
+tap DOWN 4
+tap A 0                                   # GOLD's PC
+talk pc_player_open 10 - PlayerPCProcessMenuInput
+waittaskx PlayerPCProcessMenuInput 600
+waitquiet
+tap A 0                                   # ITEM STORAGE: WITHDRAW / DEPOSIT / TOSS / CANCEL
+waittaskx ItemStorageMenuProcessInput 600
+waitquiet
+pcfillc 0 50 2
+tap A 0                                   # WITHDRAW
+waittaskx ItemStorage_ProcessInput 600
+waitquiet
+pcwrows pw 60
+press B
+waittaskx ItemStorageMenuProcessInput 600
+waitquiet
+pcfillc 50 50 2
+tap A 0                                   # WITHDRAW
+waittaskx ItemStorage_ProcessInput 600
+waitquiet
+pcwrows pw 60
+press B
+waittaskx ItemStorageMenuProcessInput 600
+waitquiet
+pcfillc 100 50 2
+tap A 0                                   # WITHDRAW
+waittaskx ItemStorage_ProcessInput 600
+waitquiet
+pcwrows pw 60
+press B
+waittaskx ItemStorageMenuProcessInput 600
+waitquiet
