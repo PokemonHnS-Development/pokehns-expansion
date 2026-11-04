@@ -23,8 +23,9 @@ GLOSSARY = paths.GLOSSARY
 SOURCES = paths.GLOSSARY_SOURCES
 OUT = paths.UNITS
 
-# Left in English on purpose: the Easy Chat word lists (translating them would break the chat
-# keyboard's letter index, as in the FireRed fork) and the R+START debug menu (src/debug.c).
+# Not cut into chunks: the Easy Chat word lists, which are translated in place (each word is one
+# short literal, checked by tests/test_easy_chat.py), and the R+START debug menu (src/debug.c),
+# which stays English.
 SKIP_FILES = ('src/data/easy_chat/', 'src/debug.c')
 
 # Struct fields whose text is a glossary name, by file pattern.

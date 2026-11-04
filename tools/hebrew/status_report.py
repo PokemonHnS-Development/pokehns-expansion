@@ -6,8 +6,8 @@
 States, as the brief defines them: to do (some live string still English), translated (every live
 string Hebrew), seen on screen (translated, and every live dialogue label of the file was rendered
 by the dialogue sweep with no glyph outside its window), blocked (kept in English on purpose, with
-the reason). C files are never marked seen on screen here: the sweep renders script text only, and
-which C strings the screen tours showed is not tracked per string.
+the reason: the R+START debug menu). C files are never marked seen on screen here: the sweep
+renders script text only, and which C strings the screen tours showed is not tracked per string.
 """
 import argparse, json, os, re, sys
 
@@ -16,19 +16,18 @@ import paths  # noqa: E402
 import units as U  # noqa: E402
 
 BLOCKED = {
-    'src/data/easy_chat/': 'Easy Chat word lists stay English: the chat keyboard indexes them by letter',
     'src/debug.c': 'debug menu, English by design',
 }
 # Files whose remaining Latin is deliberate, and why.
 KEPT_LATIN = {
     'src/data/credits_hns.h': 'the names of people, teams and organisations, and the game titles',
-    'src/data/help_window.h': "the Odd Egg interview's Easy Chat words",
+    'src/data/help_window.h': 'the game title Heart & Soul and the abbreviation IV',
     'src/save_failed_screen.c': 'the emulator save type (Flash 1Mb/128K), its name for the memory, and ROM',
     'data/text/match_call.inc': "PokéNav match calls H&S never enables: their flags are defined as 0",
     'data/text/tv.inc': 'TV shows behind FLAG_SYS_TV_START, which H&S defines as 0',
     'src/data/battle_frontier/apprentice.h': "the other languages' name columns; the English column is Hebrew",
     'src/scrcmd.c': "the Odd Egg name list, which the game compares with the player's typed name",
-    'src/text_input_strings.c': 'the Latin keyboard layouts',
+    'src/text_input_strings.c': 'the Latin keyboard layouts, and the English rows of the Easy Chat keyboard, which the Hebrew build does not print',
     'src/naming_screen.c': 'the Latin keyboard layouts',
     'src/option_menu.c': 'button names (L, R, A, B)',
     'src/start_menu.c': 'the debug entry and AM/PM (the clock is 24-hour)',

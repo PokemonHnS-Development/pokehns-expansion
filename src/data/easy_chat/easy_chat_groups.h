@@ -47,7 +47,7 @@ const struct EasyChatGroup gEasyChatGroups[EC_NUM_GROUPS] = {
     },
     [EC_GROUP_BATTLE] =
     {
-        .name = COMPOUND_STRING("קרב"),
+        .name = COMPOUND_STRING("קרבות"),
         .wordData = {.words = gEasyChatGroup_Battle},
         .numWords = ARRAY_COUNT(gEasyChatGroup_Battle),
         .numEnabledWords = ARRAY_COUNT(gEasyChatGroup_Battle),
@@ -124,14 +124,14 @@ const struct EasyChatGroup gEasyChatGroups[EC_NUM_GROUPS] = {
     },
     [EC_GROUP_TIME] =
     {
-        .name = COMPOUND_STRING("TIME"),
+        .name = COMPOUND_STRING("זמן"),
         .wordData = {.words = gEasyChatGroup_Time},
         .numWords = ARRAY_COUNT(gEasyChatGroup_Time),
         .numEnabledWords = ARRAY_COUNT(gEasyChatGroup_Time),
     },
     [EC_GROUP_MISC] =
     {
-        .name = COMPOUND_STRING("MISC."),
+        .name = COMPOUND_STRING("שונות"),
         .wordData = {.words = gEasyChatGroup_Misc},
         .numWords = ARRAY_COUNT(gEasyChatGroup_Misc),
         .numEnabledWords = ARRAY_COUNT(gEasyChatGroup_Misc),

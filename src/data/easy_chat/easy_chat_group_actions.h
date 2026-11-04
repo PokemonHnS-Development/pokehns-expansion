@@ -1,25 +1,25 @@
 const struct EasyChatWordInfo gEasyChatGroup_Actions[] = {
     [EC_INDEX(EC_WORD_MEETS)] =
     {
-        .text = COMPOUND_STRING("MEETS"),
+        .text = COMPOUND_STRING("פוגש"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_ALLOW),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_CONCEDE)] =
     {
-        .text = COMPOUND_STRING("לוותר"),
+        .text = COMPOUND_STRING("להודות בהפסד"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_ANGERS),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_GIVE)] =
     {
-        .text = COMPOUND_STRING("GIVE"),
+        .text = COMPOUND_STRING("לתת"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_APPEAR),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_GIVES)] =
     {
-        .text = COMPOUND_STRING("GIVES"),
+        .text = COMPOUND_STRING("נותן"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_APPEARS),
         .enabled = TRUE,
     },
@@ -31,7 +31,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Actions[] = {
     },
     [EC_INDEX(EC_WORD_PLAYS)] =
     {
-        .text = COMPOUND_STRING("PLAYS"),
+        .text = COMPOUND_STRING("מנגן"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_BRAG),
         .enabled = TRUE,
     },
@@ -49,25 +49,25 @@ const struct EasyChatWordInfo gEasyChatGroup_Actions[] = {
     },
     [EC_INDEX(EC_WORD_WALKS)] =
     {
-        .text = COMPOUND_STRING("WALKS"),
+        .text = COMPOUND_STRING("צועד"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_CAUSE),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_SAYS)] =
     {
-        .text = COMPOUND_STRING("SAYS"),
+        .text = COMPOUND_STRING("אומר"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_CHANGE),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_WENT)] =
     {
-        .text = COMPOUND_STRING("WENT"),
+        .text = COMPOUND_STRING("הלך"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_CHOOSE),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_SAID)] =
     {
-        .text = COMPOUND_STRING("SAID"),
+        .text = COMPOUND_STRING("אמר"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_COLLECT),
         .enabled = TRUE,
     },
@@ -91,7 +91,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Actions[] = {
     },
     [EC_INDEX(EC_WORD_TEACH)] =
     {
-        .text = COMPOUND_STRING("TEACH"),
+        .text = COMPOUND_STRING("ללמד"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_DISAPPEAR),
         .enabled = TRUE,
     },
@@ -109,7 +109,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Actions[] = {
     },
     [EC_INDEX(EC_WORD_LEARN)] =
     {
-        .text = COMPOUND_STRING("LEARN"),
+        .text = COMPOUND_STRING("ללמוד"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_FAINT),
         .enabled = TRUE,
     },
@@ -121,13 +121,13 @@ const struct EasyChatWordInfo gEasyChatGroup_Actions[] = {
     },
     [EC_INDEX(EC_WORD_STORY)] =
     {
-        .text = COMPOUND_STRING("STORY"),
+        .text = COMPOUND_STRING("סיפור"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_FORGET),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_TRUST)] =
     {
-        .text = COMPOUND_STRING("TRUST"),
+        .text = COMPOUND_STRING("לבטוח"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_FORGETS),
         .enabled = TRUE,
     },
@@ -163,13 +163,13 @@ const struct EasyChatWordInfo gEasyChatGroup_Actions[] = {
     },
     [EC_INDEX(EC_WORD_COME)] =
     {
-        .text = COMPOUND_STRING("COME"),
+        .text = COMPOUND_STRING("לבוא"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_KNOWS),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_CAME)] =
     {
-        .text = COMPOUND_STRING("CAME"),
+        .text = COMPOUND_STRING("בא"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_LAVISH),
         .enabled = TRUE,
     },
@@ -181,25 +181,25 @@ const struct EasyChatWordInfo gEasyChatGroup_Actions[] = {
     },
     [EC_INDEX(EC_WORD_MAKE)] =
     {
-        .text = COMPOUND_STRING("MAKE"),
+        .text = COMPOUND_STRING("ליצור"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_LISTENS),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_CAUSE)] =
     {
-        .text = COMPOUND_STRING("CAUSE"),
+        .text = COMPOUND_STRING("לגרום"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_LOOKS),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_KNOW)] =
     {
-        .text = COMPOUND_STRING("KNOW"),
+        .text = COMPOUND_STRING("לדעת"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_MAKE),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_KNOWS)] =
     {
-        .text = COMPOUND_STRING("KNOWS"),
+        .text = COMPOUND_STRING("יודע"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_MEETS),
         .enabled = TRUE,
     },
@@ -217,7 +217,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Actions[] = {
     },
     [EC_INDEX(EC_WORD_BRAG)] =
     {
-        .text = COMPOUND_STRING("BRAG"),
+        .text = COMPOUND_STRING("להתרברב"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_PLAYED),
         .enabled = TRUE,
     },
@@ -241,31 +241,31 @@ const struct EasyChatWordInfo gEasyChatGroup_Actions[] = {
     },
     [EC_INDEX(EC_WORD_SLIDE)] =
     {
-        .text = COMPOUND_STRING("SLIDE"),
+        .text = COMPOUND_STRING("להחליק"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_PRETEND),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_EATS)] =
     {
-        .text = COMPOUND_STRING("EATS"),
+        .text = COMPOUND_STRING("אוכל"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_REFUSE),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_USE)] =
     {
-        .text = COMPOUND_STRING("USE"),
+        .text = COMPOUND_STRING("להשתמש"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_RELEASE),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_USES)] =
     {
-        .text = COMPOUND_STRING("USES"),
+        .text = COMPOUND_STRING("משתמש"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_RUN),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_USING)] =
     {
-        .text = COMPOUND_STRING("USING"),
+        .text = COMPOUND_STRING("בעזרת"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_RUNS),
         .enabled = TRUE,
     },
@@ -295,25 +295,25 @@ const struct EasyChatWordInfo gEasyChatGroup_Actions[] = {
     },
     [EC_INDEX(EC_WORD_THROW)] =
     {
-        .text = COMPOUND_STRING("THROW"),
+        .text = COMPOUND_STRING("לזרוק"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_SEES),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_WORRY)] =
     {
-        .text = COMPOUND_STRING("WORRY"),
+        .text = COMPOUND_STRING("לדאוג"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_SHOW),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_SLEPT)] =
     {
-        .text = COMPOUND_STRING("SLEPT"),
+        .text = COMPOUND_STRING("ישן"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_SINK),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_SLEEP)] =
     {
-        .text = COMPOUND_STRING("SLEEP"),
+        .text = COMPOUND_STRING("לישון"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_SLEEP),
         .enabled = TRUE,
     },
@@ -331,19 +331,19 @@ const struct EasyChatWordInfo gEasyChatGroup_Actions[] = {
     },
     [EC_INDEX(EC_WORD_RUNS)] =
     {
-        .text = COMPOUND_STRING("RUNS"),
+        .text = COMPOUND_STRING("רץ"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_SMACK),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_RUN)] =
     {
-        .text = COMPOUND_STRING("RUN"),
+        .text = COMPOUND_STRING("לרוץ"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_STORES),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_WORKS)] =
     {
-        .text = COMPOUND_STRING("WORKS"),
+        .text = COMPOUND_STRING("עובד"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_STORY),
         .enabled = TRUE,
     },
@@ -361,19 +361,19 @@ const struct EasyChatWordInfo gEasyChatGroup_Actions[] = {
     },
     [EC_INDEX(EC_WORD_TALK)] =
     {
-        .text = COMPOUND_STRING("TALK"),
+        .text = COMPOUND_STRING("לדבר"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_TALKING),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_SINK)] =
     {
-        .text = COMPOUND_STRING("SINK"),
+        .text = COMPOUND_STRING("לשקוע"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_TEACH),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_SMACK)] =
     {
-        .text = COMPOUND_STRING("SMACK"),
+        .text = COMPOUND_STRING("לסטור"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_TEACHES),
         .enabled = TRUE,
     },
@@ -397,43 +397,43 @@ const struct EasyChatWordInfo gEasyChatGroup_Actions[] = {
     },
     [EC_INDEX(EC_WORD_SHOW)] =
     {
-        .text = COMPOUND_STRING("SHOW"),
+        .text = COMPOUND_STRING("להראות"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_TRUST),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_LOOKS)] =
     {
-        .text = COMPOUND_STRING("LOOKS"),
+        .text = COMPOUND_STRING("מביט"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_USE),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_SEES)] =
     {
-        .text = COMPOUND_STRING("SEES"),
+        .text = COMPOUND_STRING("רואה"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_USES),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_SEEK)] =
     {
-        .text = COMPOUND_STRING("SEEK"),
+        .text = COMPOUND_STRING("מחפש"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_USING),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_OWN)] =
     {
-        .text = COMPOUND_STRING("OWN"),
+        .text = COMPOUND_STRING("אישי"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_WAKE_UP),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_TAKE)] =
     {
-        .text = COMPOUND_STRING("TAKE"),
+        .text = COMPOUND_STRING("לקחת"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_WAKES_UP),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_ALLOW)] =
     {
-        .text = COMPOUND_STRING("ALLOW"),
+        .text = COMPOUND_STRING("להרשות"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_WALKING),
         .enabled = TRUE,
     },
@@ -457,7 +457,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Actions[] = {
     },
     [EC_INDEX(EC_WORD_FAINT)] =
     {
-        .text = COMPOUND_STRING("FAINT"),
+        .text = COMPOUND_STRING("להתעלף"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_WORKS),
         .enabled = TRUE,
     },

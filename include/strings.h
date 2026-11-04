@@ -2128,6 +2128,9 @@ extern const u8 gText_EasyChatKeyboard_ABCDEFothers[];
 extern const u8 gText_EasyChatKeyboard_GHIJKL[];
 extern const u8 gText_EasyChatKeyboard_MNOPQRS[];
 extern const u8 gText_EasyChatKeyboard_TUVWXYZ[];
+#if TEXT_RTL
+extern const u8 gText_EasyChatKeyboard_Others[];
+#endif
 extern const u8 gText_NamingScreenKeyboard_abcdef[];
 extern const u8 gText_NamingScreenKeyboard_ghijkl[];
 extern const u8 gText_NamingScreenKeyboard_mnopqrs[];

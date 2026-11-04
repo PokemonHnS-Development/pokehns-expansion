@@ -77,11 +77,24 @@ Only characters in `charmap.txt`. In particular:
   pages close to the English. Battle strings without any manual break in English are auto-wrapped:
   keep them without breaks.
 - `{POKE}` / `{PKMN}` render the Latin "POKé"/"PKMN" glyph pairs. In Hebrew text replace them with the
-  Hebrew word (`פוקי`, `פוקימון`). `drift.py` ignores these three tokens (`{POKE}`, `{PKMN}`,
-  `{POKEBLOCK}`), so dropping them is the one allowed token change.
-- Do not translate: braille text (`.braille`), the R+START debug menu (`src/debug.c`, and `data/scripts/debug.inc` except `Debug_Text_ArianaDefeat` and `Debug_Text_Grunt23Defeat`, which the Rocket Hideout story battle uses), easy-chat/mail
-  word lists unless your batch says so, Latin literals compared by code (the "SampleCode"
-  check, Walda's phrase, the Odd Egg name list), and anything in an `#if 0` / unused block. The battle debug menu (`src/battle_debug.c`, opened with SELECT in any battle) is translated and uses the glossary's terms.
+  Hebrew word (`פוקי`, `פוקימון`). `drift.py` ignores these glyph-pair tokens (`{POKE}`, `{PKMN}`,
+  `{POKEBLOCK}`, the `{ID}{NO}` pair and the `{PK}` of the Easy Chat word `{PK}RS`), so dropping
+  them is the one allowed token change.
+- Do not translate: braille text (`.braille`), the R+START debug menu (`src/debug.c`, and `data/scripts/debug.inc` except `Debug_Text_ArianaDefeat` and `Debug_Text_Grunt23Defeat`, which the Rocket Hideout story battle uses), Latin literals
+  compared by code (the "SampleCode" check, Walda's phrase, the Odd Egg name list), and anything
+  in an `#if 0` / unused block. The battle debug menu (`src/battle_debug.c`, opened with SELECT in any battle) is translated and uses the glossary's terms.
+- Easy Chat words (`src/data/easy_chat/easy_chat_group_*.h`) are Hebrew. A word is at most 72 px
+  and 12 bytes, like the widest English word. A word the game compares with the player's phrase
+  (the Odd Egg passwords, the questionnaire's Mystery Gift phrase and the Berry Master's wife's
+  phrases in `src/easy_chat.c`) prints a text no other enabled word prints. Other words share a
+  text where Hebrew has one word for several English ones (I and I AM אני, NOT and DON'T לא); each
+  such text is listed in `SHARED_TEXTS` of `tools/hebrew/tests/test_easy_chat.py`. Trainers speak in
+  these words, so they take the spoken forms (אני, הוא, לא), not the formal present (הנני, הינו).
+  Glossary names and terms keep their glossary form; the Odd Egg hint windows
+  (`src/data/help_window.h`) quote the password words exactly. After changing a word, run
+  `tools/hebrew/gen_ec_order.py` (the Hebrew order of the group lists) and
+  `tools/hebrew/gen_ec_letters.py` (the ABC keyboard's lists, which a species or move rename also
+  changes); `tools/hebrew/tests/test_easy_chat.py` checks the rest.
 
 ## 6. Length and width (checked by `tools/hebrew/audit.py`)
 

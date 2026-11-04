@@ -1,0 +1,20 @@
+{
+ "STRINGID_TRAINER1WINTEXT": [
+  [
+   "ve000",
+   {
+    "flags_or": "100",
+    "opponentA": 0
+   }
+  ]
+ ],
+ "STRINGID_TRAINER1LOSETEXT": [
+  [
+   "ve000",
+   {
+    "flags_or": "100",
+    "opponentA": 0
+   }
+  ]
+ ]
+}

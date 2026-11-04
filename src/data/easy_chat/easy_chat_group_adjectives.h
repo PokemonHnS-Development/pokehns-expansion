@@ -25,7 +25,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Adjectives[] = {
     },
     [EC_INDEX(EC_WORD_TIGHT)] =
     {
-        .text = COMPOUND_STRING("TIGHT"),
+        .text = COMPOUND_STRING("הדוק"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_DROOLING),
         .enabled = TRUE,
     },
@@ -61,13 +61,13 @@ const struct EasyChatWordInfo gEasyChatGroup_Adjectives[] = {
     },
     [EC_INDEX(EC_WORD_SILKY)] =
     {
-        .text = COMPOUND_STRING("SILKY"),
+        .text = COMPOUND_STRING("משיי"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_INCREASING),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_SADLY)] =
     {
-        .text = COMPOUND_STRING("SADLY"),
+        .text = COMPOUND_STRING("בעצב"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_LOLLING),
         .enabled = TRUE,
     },
@@ -97,7 +97,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Adjectives[] = {
     },
     [EC_INDEX(EC_WORD_THICK)] =
     {
-        .text = COMPOUND_STRING("THICK"),
+        .text = COMPOUND_STRING("עבה"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_SADLY),
         .enabled = TRUE,
     },
@@ -109,19 +109,19 @@ const struct EasyChatWordInfo gEasyChatGroup_Adjectives[] = {
     },
     [EC_INDEX(EC_WORD_SLIMY)] =
     {
-        .text = COMPOUND_STRING("SLIMY"),
+        .text = COMPOUND_STRING("רירי"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_SHAKY),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_THIN)] =
     {
-        .text = COMPOUND_STRING("THIN"),
+        .text = COMPOUND_STRING("דק"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_SHREDDED),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_BREAK)] =
     {
-        .text = COMPOUND_STRING("BREAK"),
+        .text = COMPOUND_STRING("לשבור"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_SILKY),
         .enabled = TRUE,
     },
@@ -145,7 +145,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Adjectives[] = {
     },
     [EC_INDEX(EC_WORD_WIMPY)] =
     {
-        .text = COMPOUND_STRING("WIMPY"),
+        .text = COMPOUND_STRING("חלשלוש"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_THICK),
         .enabled = TRUE,
     },
@@ -157,7 +157,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Adjectives[] = {
     },
     [EC_INDEX(EC_WORD_SHAKY)] =
     {
-        .text = COMPOUND_STRING("SHAKY"),
+        .text = COMPOUND_STRING("רועד"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_THIRSTY),
         .enabled = TRUE,
     },
@@ -181,7 +181,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Adjectives[] = {
     },
     [EC_INDEX(EC_WORD_YET)] =
     {
-        .text = COMPOUND_STRING("YET"),
+        .text = COMPOUND_STRING("עדיין"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_USELESS),
         .enabled = TRUE,
     },
@@ -193,7 +193,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Adjectives[] = {
     },
     [EC_INDEX(EC_WORD_FIERY)] =
     {
-        .text = COMPOUND_STRING("FIERY"),
+        .text = COMPOUND_STRING("לוהט"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_WANDERING),
         .enabled = TRUE,
     },

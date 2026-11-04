@@ -1,0 +1,17 @@
+# Include (not a tour) for scripts/r16_battle_sweep/bsweep.py --setup: the trainer battle of
+# tours/r16_battle_sweep/_bs_trainer.txt with gFacilityTrainers pointed at gVerdanturfBattleTentTrainers (the Verdanturf tent trainers), so that
+# STRINGID_TRAINER1WINTEXT / STRINGID_TRAINER1LOSETEXT with BATTLE_TYPE_BATTLE_TOWER (flags_or 100)
+# and opponentA print that trainer's speechWin / speechLose (B_TXT_TRAINER1_WIN_TEXT and
+# B_TXT_TRAINER1_LOSE_TEXT -> CopyFrontierTrainerText, src/battle_message.c, src/frontier_util.c)
+# through the battle's own expander, printer and message window. Save: ladder1_newgame.sav.
+start saves/ladder1_newgame.sav
+include ../_battle_base.txt
+ev givemon SPECIES_SANDSLASH_ALOLA, 50, abilityNum=0, move1=MOVE_GROWL, move2=MOVE_ICICLE_CRASH; end
+w32 @gFacilityTrainers@ @gVerdanturfBattleTentTrainers@
+face UP
+pinrng
+8 UP
+waitnotfree 120
+bwalk bs_intro input:HandleInputChooseAction
+baction FIGHT
+bmove 0

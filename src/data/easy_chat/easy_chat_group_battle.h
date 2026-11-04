@@ -1,19 +1,19 @@
 const struct EasyChatWordInfo gEasyChatGroup_Battle[] = {
     [EC_INDEX(EC_WORD_MATCH_UP)] =
     {
-        .text = COMPOUND_STRING("התמודדות"),
+        .text = COMPOUND_STRING("התאמה"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_ACCEPT),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_GO)] =
     {
-        .text = COMPOUND_STRING("GO"),
+        .text = COMPOUND_STRING("ללכת"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_AIM),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_NO_1)] =
     {
-        .text = COMPOUND_STRING("NO. 1"),
+        .text = COMPOUND_STRING("מספר 1"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_ATTACK),
         .enabled = TRUE,
     },
@@ -31,19 +31,19 @@ const struct EasyChatWordInfo gEasyChatGroup_Battle[] = {
     },
     [EC_INDEX(EC_WORD_WINS)] =
     {
-        .text = COMPOUND_STRING("WINS"),
+        .text = COMPOUND_STRING("מנצח"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_CAN_T_WIN),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_WIN)] =
     {
-        .text = COMPOUND_STRING("WIN"),
+        .text = COMPOUND_STRING("לנצח"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_CHALLENGE),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_WON)] =
     {
-        .text = COMPOUND_STRING("WON"),
+        .text = COMPOUND_STRING("ניצח"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_COME_ON),
         .enabled = TRUE,
     },
@@ -115,13 +115,13 @@ const struct EasyChatWordInfo gEasyChatGroup_Battle[] = {
     },
     [EC_INDEX(EC_WORD_SURRENDER)] =
     {
-        .text = COMPOUND_STRING("כניעה"),
+        .text = COMPOUND_STRING("להיכנע"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_GUARD),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_GUTSY)] =
     {
-        .text = COMPOUND_STRING("GUTSY"),
+        .text = COMPOUND_STRING("אמיץ"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_GUTSY),
         .enabled = TRUE,
     },
@@ -139,13 +139,13 @@ const struct EasyChatWordInfo gEasyChatGroup_Battle[] = {
     },
     [EC_INDEX(EC_WORD_SMITE)] =
     {
-        .text = COMPOUND_STRING("SMITE"),
+        .text = COMPOUND_STRING("להכות"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_INVINCIBLE),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_MATCH)] =
     {
-        .text = COMPOUND_STRING("MATCH"),
+        .text = COMPOUND_STRING("התמודדות"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_LEADER),
         .enabled = TRUE,
     },
@@ -163,7 +163,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Battle[] = {
     },
     [EC_INDEX(EC_WORD_SENSE)] =
     {
-        .text = COMPOUND_STRING("SENSE"),
+        .text = COMPOUND_STRING("חוש"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_LOSE),
         .enabled = TRUE,
     },
@@ -181,7 +181,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Battle[] = {
     },
     [EC_INDEX(EC_WORD_POWER)] =
     {
-        .text = COMPOUND_STRING("POWER"),
+        .text = COMPOUND_STRING("כוח"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_MATCH),
         .enabled = TRUE,
     },
@@ -211,7 +211,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Battle[] = {
     },
     [EC_INDEX(EC_WORD_FOE)] =
     {
-        .text = COMPOUND_STRING("FOE"),
+        .text = COMPOUND_STRING("אויב"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_OFFENSIVE),
         .enabled = TRUE,
     },
@@ -235,19 +235,19 @@ const struct EasyChatWordInfo gEasyChatGroup_Battle[] = {
     },
     [EC_INDEX(EC_WORD_AIM)] =
     {
-        .text = COMPOUND_STRING("AIM"),
+        .text = COMPOUND_STRING("מטרה"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_PUSHOVER),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_BATTLE)] =
     {
-        .text = COMPOUND_STRING("קרב"),
+        .text = COMPOUND_STRING("דו-קרב"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_RECEIVED),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_FIGHT)] =
     {
-        .text = COMPOUND_STRING("FIGHT"),
+        .text = COMPOUND_STRING("להילחם"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_REJECT),
         .enabled = TRUE,
     },
@@ -277,7 +277,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Battle[] = {
     },
     [EC_INDEX(EC_WORD_LOSS)] =
     {
-        .text = COMPOUND_STRING("LOSS"),
+        .text = COMPOUND_STRING("הפסד"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_SMITE),
         .enabled = TRUE,
     },
@@ -289,19 +289,19 @@ const struct EasyChatWordInfo gEasyChatGroup_Battle[] = {
     },
     [EC_INDEX(EC_WORD_LOST)] =
     {
-        .text = COMPOUND_STRING("LOST"),
+        .text = COMPOUND_STRING("הפסיד"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_STRATEGY),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_LOSE)] =
     {
-        .text = COMPOUND_STRING("LOSE"),
+        .text = COMPOUND_STRING("להפסיד"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_STRONG),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_GUARD)] =
     {
-        .text = COMPOUND_STRING("GUARD"),
+        .text = COMPOUND_STRING("להגן"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_SURRENDER),
         .enabled = TRUE,
     },
@@ -337,13 +337,13 @@ const struct EasyChatWordInfo gEasyChatGroup_Battle[] = {
     },
     [EC_INDEX(EC_WORD_EASY)] =
     {
-        .text = COMPOUND_STRING("EASY"),
+        .text = COMPOUND_STRING("קל"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_VERSUS),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_WEAK)] =
     {
-        .text = COMPOUND_STRING("WEAK"),
+        .text = COMPOUND_STRING("חלש"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_VICTORY),
         .enabled = TRUE,
     },
@@ -367,13 +367,13 @@ const struct EasyChatWordInfo gEasyChatGroup_Battle[] = {
     },
     [EC_INDEX(EC_WORD_RULE)] =
     {
-        .text = COMPOUND_STRING("RULE"),
+        .text = COMPOUND_STRING("שולט"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_WINS),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_MOVE)] =
     {
-        .text = COMPOUND_STRING("MOVE"),
+        .text = COMPOUND_STRING("מהלך"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_WON),
         .enabled = TRUE,
     },
