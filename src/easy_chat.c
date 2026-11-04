@@ -4083,7 +4083,18 @@ static void PrintEasyChatStdMessage(u8 msgId)
 
 static void CreateEasyChatYesNoMenu(u8 initialCursorPos)
 {
+#if TEXT_RTL
+    // The phrase is mirrored inside its frame, so the words leave the left end of each row free
+    // where English leaves the right end. The box goes to the mirrored place in the frame.
+    struct WindowTemplate template = sEasyChatYesNoWindowTemplate;
+    u8 frameId = GetEasyChatScreenFrameId();
+
+    template.tilemapLeft = 2 * sPhraseFrameDimensions[frameId].left + sPhraseFrameDimensions[frameId].width
+                         - sEasyChatYesNoWindowTemplate.tilemapLeft - sEasyChatYesNoWindowTemplate.width;
+    CreateYesNoMenu(&template, 1, 14, initialCursorPos);
+#else
     CreateYesNoMenu(&sEasyChatYesNoWindowTemplate, 1, 14, initialCursorPos);
+#endif
 }
 
 static void AddPhraseWindow(void)
