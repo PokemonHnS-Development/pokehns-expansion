@@ -1,7 +1,7 @@
 const struct EasyChatWordInfo gEasyChatGroup_Status[] = {
     [EC_INDEX(EC_WORD_DARK)] =
     {
-        .text = COMPOUND_STRING("DARK"),
+        .text = COMPOUND_STRING("אפל"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_AIR_LOCK),
         .enabled = TRUE,
     },
@@ -49,7 +49,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Status[] = {
     },
     [EC_INDEX(EC_WORD_COLOR)] =
     {
-        .text = COMPOUND_STRING("COLOR"),
+        .text = COMPOUND_STRING("צבע"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_CHLOROPHYLL),
         .enabled = TRUE,
     },
@@ -61,7 +61,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Status[] = {
     },
     [EC_INDEX(EC_WORD_ROCK)] =
     {
-        .text = COMPOUND_STRING("ROCK"),
+        .text = COMPOUND_STRING("סלע"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_CLOUD_NINE),
         .enabled = TRUE,
     },
@@ -109,7 +109,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Status[] = {
     },
     [EC_INDEX(EC_WORD_SMART)] =
     {
-        .text = COMPOUND_STRING("SMART"),
+        .text = COMPOUND_STRING("חכם"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_CUTENESS),
         .enabled = TRUE,
     },
@@ -127,7 +127,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Status[] = {
     },
     [EC_INDEX(EC_WORD_COOL)] =
     {
-        .text = COMPOUND_STRING("COOL"),
+        .text = COMPOUND_STRING("מגניב"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_DRAGON),
         .enabled = TRUE,
     },
@@ -145,7 +145,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Status[] = {
     },
     [EC_INDEX(EC_WORD_CUTE)] =
     {
-        .text = COMPOUND_STRING("CUTE"),
+        .text = COMPOUND_STRING("חמוד"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_EARLY_BIRD),
         .enabled = TRUE,
     },
@@ -169,7 +169,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Status[] = {
     },
     [EC_INDEX(EC_WORD_GRASS)] =
     {
-        .text = COMPOUND_STRING("GRASS"),
+        .text = COMPOUND_STRING("עשב"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_FIRE),
         .enabled = TRUE,
     },
@@ -187,19 +187,19 @@ const struct EasyChatWordInfo gEasyChatGroup_Status[] = {
     },
     [EC_INDEX(EC_WORD_GHOST)] =
     {
-        .text = COMPOUND_STRING("GHOST"),
+        .text = COMPOUND_STRING("רוח"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_FLYING),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_ICE)] =
     {
-        .text = COMPOUND_STRING("ICE"),
+        .text = COMPOUND_STRING("קרח"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_FORECAST),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_GUTS)] =
     {
-        .text = COMPOUND_STRING("GUTS"),
+        .text = COMPOUND_STRING("אומץ"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_GHOST),
         .enabled = TRUE,
     },
@@ -223,7 +223,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Status[] = {
     },
     [EC_INDEX(EC_WORD_DAMP)] =
     {
-        .text = COMPOUND_STRING("DAMP"),
+        .text = COMPOUND_STRING("לחות"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_HUGE_POWER),
         .enabled = TRUE,
     },
@@ -301,13 +301,13 @@ const struct EasyChatWordInfo gEasyChatGroup_Status[] = {
     },
     [EC_INDEX(EC_WORD_TYPE)] =
     {
-        .text = COMPOUND_STRING("TYPE"),
+        .text = COMPOUND_STRING("סוג"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_LIQUID_OOZE),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_TOUGH)] =
     {
-        .text = COMPOUND_STRING("TOUGH"),
+        .text = COMPOUND_STRING("קשוח"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_MAGMA_ARMOR),
         .enabled = TRUE,
     },
@@ -379,7 +379,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Status[] = {
     },
     [EC_INDEX(EC_WORD_TRACE)] =
     {
-        .text = COMPOUND_STRING("TRACE"),
+        .text = COMPOUND_STRING("עקבות"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_PLUS),
         .enabled = TRUE,
     },
@@ -421,7 +421,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Status[] = {
     },
     [EC_INDEX(EC_WORD_STEEL)] =
     {
-        .text = COMPOUND_STRING("STEEL"),
+        .text = COMPOUND_STRING("פלדה"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_ROCK),
         .enabled = TRUE,
     },
@@ -445,7 +445,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Status[] = {
     },
     [EC_INDEX(EC_WORD_SHINE)] =
     {
-        .text = COMPOUND_STRING("SHINE"),
+        .text = COMPOUND_STRING("זוהר"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_SAND_STREAM),
         .enabled = TRUE,
     },
@@ -499,7 +499,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Status[] = {
     },
     [EC_INDEX(EC_WORD_PLUS)] =
     {
-        .text = COMPOUND_STRING("PLUS"),
+        .text = COMPOUND_STRING("פלוס"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_SMARTNESS),
         .enabled = TRUE,
     },
@@ -535,13 +535,13 @@ const struct EasyChatWordInfo gEasyChatGroup_Status[] = {
     },
     [EC_INDEX(EC_WORD_PKRS)] =
     {
-        .text = COMPOUND_STRING("{PK}RS"),
+        .text = COMPOUND_STRING("פוקרוס"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_STICKY_HOLD),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_FIRE)] =
     {
-        .text = COMPOUND_STRING("FIRE"),
+        .text = COMPOUND_STRING("אש"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_STURDY),
         .enabled = TRUE,
     },
@@ -553,7 +553,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Status[] = {
     },
     [EC_INDEX(EC_WORD_MINUS)] =
     {
-        .text = COMPOUND_STRING("MINUS"),
+        .text = COMPOUND_STRING("מינוס"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_SWARM),
         .enabled = TRUE,
     },
@@ -571,7 +571,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Status[] = {
     },
     [EC_INDEX(EC_WORD_WATER)] =
     {
-        .text = COMPOUND_STRING("WATER"),
+        .text = COMPOUND_STRING("מים"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_THICK_FAT),
         .enabled = TRUE,
     },
@@ -583,13 +583,13 @@ const struct EasyChatWordInfo gEasyChatGroup_Status[] = {
     },
     [EC_INDEX(EC_WORD_BUG)] =
     {
-        .text = COMPOUND_STRING("BUG"),
+        .text = COMPOUND_STRING("חרק"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_TOUGH),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_SWARM)] =
     {
-        .text = COMPOUND_STRING("SWARM"),
+        .text = COMPOUND_STRING("נחיל"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_TOUGHNESS),
         .enabled = TRUE,
     },
@@ -607,7 +607,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Status[] = {
     },
     [EC_INDEX(EC_WORD_BLAZE)] =
     {
-        .text = COMPOUND_STRING("BLAZE"),
+        .text = COMPOUND_STRING("להבה"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_TYPE),
         .enabled = TRUE,
     },
