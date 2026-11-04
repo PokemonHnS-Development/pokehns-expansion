@@ -89,13 +89,13 @@ const struct HelpWindow gHelpWindowInfo[] =
     [HELP_DAYCARE1_WINDOW] =
     {
         .header = COMPOUND_STRING("יכולות הפוקימונים התינוקות"),
-        .desc = COMPOUND_STRING("פיצ'ו: סטטי (STATIC)\n"
-                                "קלפה: קסם חמוד (CUTE CHARM)\n"
-                                "איגליבאף: קסם חמוד (CUTE CHARM)\n"
-                                "טיירוג: אומץ (GUTS)\n"
-                                "סמוצ'ום: תמים (OBLIVIOUS)\n"
-                                "אלקיד: סטטי (STATIC)\n"
-                                "מגבי: גוף להבה (FLAME BODY)"
+        .desc = COMPOUND_STRING("היכולת של פיצ'ו היא ”סטטי”.\n"
+                                "היכולת של קלפה היא ”קסם חמוד”.\n"
+                                "היכולת של איגליבאף היא ”קסם חמוד”.\n"
+                                "היכולת של טיירוג היא ”אומץ”.\n"
+                                "היכולת של סמוצ'ום היא ”תמים”.\n"
+                                "היכולת של אלקיד היא ”סטטי”.\n"
+                                "היכולת של מגבי היא ”גוף להבה”."
                             ),
         .headerFont = FONT_NORMAL,
         .descFont = FONT_SMALL,
@@ -104,13 +104,13 @@ const struct HelpWindow gHelpWindowInfo[] =
     [HELP_DAYCARE2_WINDOW] =
     {
         .header = COMPOUND_STRING("סוגי הפוקימונים התינוקות"),
-        .desc = COMPOUND_STRING("פיצ'ו הוא מסוג חשמל (ELECTRIC).\n"
-                                "קלפה הוא מסוג רגיל (NORMAL).\n"
-                                "איגליבאף הוא מסוג רגיל (NORMAL).\n"
-                                "טיירוג הוא מסוג קרב (FIGHTING).\n"
-                                "סמוצ'ום הוא מסוג קרח (ICE).\n"
-                                "אלקיד הוא מסוג חשמל (ELECTRIC).\n"
-                                "מגבי הוא מסוג אש (FIRE)."
+        .desc = COMPOUND_STRING("פיצ'ו הוא מסוג ”חשמל”.\n"
+                                "קלפה הוא מסוג ”רגיל”.\n"
+                                "איגליבאף הוא מסוג ”רגיל”.\n"
+                                "טיירוג הוא מסוג ”קרב”.\n"
+                                "סמוצ'ום הוא מסוג ”קרח”.\n"
+                                "אלקיד הוא מסוג ”חשמל”.\n"
+                                "מגבי הוא מסוג ”אש”."
                             ),
         .headerFont = FONT_NORMAL,
         .descFont = FONT_SMALL,
@@ -119,13 +119,13 @@ const struct HelpWindow gHelpWindowInfo[] =
     [HELP_DAYCARE3_WINDOW] =
     {
         .header = COMPOUND_STRING("קריאות הפוקימונים התינוקות"),
-        .desc = COMPOUND_STRING("פיצ'ו אומר WAAAH.\n"
-                                "קלפה אומר EEK.\n"
-                                "איגליבאף אומר LALALA.\n"
-                                "טיירוג אומר HIYAH.\n"
-                                "סמוצ'ום אומר EHEHE.\n"
-                                "אלקיד אומר OI, OI, OI.\n"
-                                "מגבי אומר TCH."
+        .desc = COMPOUND_STRING("פיצ'ו אומר ”וואאה”.\n"
+                                "קלפה אומר ”איק”.\n"
+                                "איגליבאף אומר ”לה-לה-לה”.\n"
+                                "טיירוג אומר ”היי-יה”.\n"
+                                "סמוצ'ום אומר ”היהי”.\n"
+                                "אלקיד אומר ”הי, הי, הי”.\n"
+                                "מגבי אומר ”טסק”."
                             ),
         .headerFont = FONT_NORMAL,
         .descFont = FONT_SMALL,
@@ -134,13 +134,13 @@ const struct HelpWindow gHelpWindowInfo[] =
     [HELP_DAYCARE4_WINDOW] =
     {
         .header = COMPOUND_STRING("פעולות הפוקימונים התינוקות"),
-        .desc = COMPOUND_STRING("פיצ'ו אוהב לשחק (PLAY) כל היום.\n"
-                                "קלפה מביט (LOOKS) בירח.\n"
-                                "איגליבאף מרדים את כולם (SLEEP).\n"
-                                "טיירוג מתאמן (TRAINS) כל הזמן.\n"
-                                "סמוצ'ום אוהב להשוויץ (SHOW).\n"
-                                "אלקיד אוגר (STORES) מטען חשמלי.\n"
-                                "מגבי כועס (ANGERS) לעתים קרובות."
+        .desc = COMPOUND_STRING("פיצ'ו אוהב ”לשחק” כל היום.\n"
+                                "קלפה ”מביט” בירח.\n"
+                                "איגליבאף גורם לכולם ”לישון”.\n"
+                                "טיירוג ”מתאמן” כל הזמן.\n"
+                                "סמוצ'ום אוהב ”להראות” מה הוא שווה.\n"
+                                "אלקיד ”מאחסן” מטען חשמלי.\n"
+                                "מגבי ”מכעיס” לעתים קרובות."
                             ),
         .headerFont = FONT_NORMAL,
         .descFont = FONT_SMALL,
