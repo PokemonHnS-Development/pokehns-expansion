@@ -47,8 +47,9 @@ struct retro_core_options_v2_intl { struct retro_core_options_v2 *us, *local; };
 #define MAX_OPTS 256
 static char *g_optkey[MAX_OPTS], *g_optval[MAX_OPTS]; static int g_nopt;
 static void opt_set(const char *key, const char *val, size_t vlen) {
-    if (!key || !val || g_nopt >= MAX_OPTS) return;
+    if (!key || !val) return;
     for (int i = 0; i < g_nopt; i++) if (!strcmp(g_optkey[i], key)) return;
+    if (g_nopt >= MAX_OPTS) { fprintf(stderr,"OPTIONS table full (%d): %s gets no default\n", MAX_OPTS, key); return; }
     g_optkey[g_nopt] = strdup(key); g_optval[g_nopt] = strndup(val, vlen); g_nopt++;
 }
 // The frontend loads the battery through retro_get_memory_data, so a core must keep its save in
