@@ -60,6 +60,11 @@ jobs:
       - name: Pokédex A-Z order matches the glossary names
         run: python3 tools/hebrew/gen_dex_alpha.py --check
 
+      - name: Easy Chat group order and letter lists match the word texts
+        run: |
+          python3 tools/hebrew/gen_ec_order.py --check
+          python3 tools/hebrew/gen_ec_letters.py --check
+
       - name: Tool tests
         run: python3 -m unittest discover -s tools/hebrew/tests
 
