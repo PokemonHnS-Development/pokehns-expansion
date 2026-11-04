@@ -2349,7 +2349,7 @@ move,MOVE_GROWL,GROWL,נהמה,נהמה,inherited,FR match: constant
 move,MOVE_ROAR,ROAR,שאגה,שאגה,inherited,FR match: constant
 move,MOVE_SING,SING,שירה,שירה,inherited,FR match: constant
 move,MOVE_SUPERSONIC,SUPERSONIC,על-קולי,על-קולי,inherited,FR match: constant
-move,MOVE_SONIC_BOOM,SONIC BOOM,בום עלקול,בום עלקול,inherited,FR match: constant
+move,MOVE_SONIC_BOOM,SONIC BOOM,בום עלקול,בום על-קולי,proposed,"FR match: constant; the inherited עלקול lost the final י of על-קולי (supersonic), as FireRed now writes it (בוםעל-קולי)"
 move,MOVE_DISABLE,DISABLE,השבתה,השבתה,inherited,FR match: constant
 move,MOVE_ACID,ACID,חומצה,חומצה,inherited,FR match: constant
 move,MOVE_EMBER,EMBER,להבה,להבה,inherited,FR match: constant
@@ -3283,7 +3283,7 @@ ability,ABILITY_RAIN_DISH,RAIN DISH,צלחת גשם,צלחת גשם,inherited,FR
 ability,ABILITY_SAND_STREAM,SAND STREAM,זרם חול,זרם חול,inherited,FR match: constant
 ability,ABILITY_PRESSURE,PRESSURE,לחץ,לחץ,inherited,FR match: constant
 ability,ABILITY_THICK_FAT,THICK FAT,שומן עבה,שומן עבה,inherited,FR match: constant
-ability,ABILITY_EARLY_BIRD,EARLY BIRD,ציפור מקדים,ציפור מקדים,inherited,FR match: constant
+ability,ABILITY_EARLY_BIRD,EARLY BIRD,ציפור מקדים,ציפור מקדימה,proposed,"FR match: constant; ציפור is feminine, so the inherited מקדים lost the ה of מקדימה. FireRed now uses the idiom משכימת קום; H&S keeps its wording"
 ability,ABILITY_FLAME_BODY,FLAME BODY,גוף להבה,גוף להבה,inherited,FR match: constant
 ability,ABILITY_RUN_AWAY,RUN AWAY,בריחה,בריחה,inherited,FR match: constant
 ability,ABILITY_KEEN_EYE,KEEN EYE,עין חדה,עין חדה,inherited,FR match: constant
