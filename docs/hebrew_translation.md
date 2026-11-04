@@ -89,7 +89,8 @@ advance is the table value, nothing else. `tools/hebrew/textwidth.py` reads thos
 
 ## Budgets
 
-Measure, do not count characters. The most common budgets (all from `notes/budgets.md`):
+Measure, do not count characters. The most common budgets (all from
+`tools/hebrew/data/budgets.json`, which `audit.py` and `wrap.py` read):
 
 | Kind | Font | Width | Lines |
 | --- | --- | --- | --- |
@@ -116,6 +117,8 @@ message under 424.
 | `apply_names.py` | Writes trainer and map-section names (`.party`, JSON) |
 | `textwidth.py`, `audit.py`, `wrap.py` | The width model, a whole-tree budget audit, a re-wrapper |
 | `rom_sweep.py` | Finds English left in a built ROM |
+| `status_report.py` | Writes `translation/hebrew/STATUS.md`; `--sweep` marks the files the dialogue sweep rendered |
+| `flag_gates.py` | Takes the labels behind flags defined as 0, and the labels that are not built, out of the live list |
 | `gen_dex_alpha.py` | Regenerates the Pokédex A–Z order |
 | `gen_ec_order.py` | Regenerates the Hebrew order of the Easy Chat group lists |
 | `gen_ec_letters.py` | Regenerates the Easy Chat ABC keyboard's lists by Hebrew letter |
@@ -123,6 +126,7 @@ message under 424.
 | `check_tests.py` | Compares a `make check` log with the tests upstream already fails (`data/known_test_failures.txt`) |
 | `check_chunked.py` | Runs the `make check` suite one test-name prefix at a time, so that it fits the memory of a CI runner; a test in `data/crashing_tests.txt` runs alone |
 | `testmsgs/` | Rebuilds the battle tests' Hebrew message table (below) |
+| `release/` | Builds a release candidate from one commit, runs every harness test on the files that ship and writes its `TESTING.md` (`tools/hebrew/release/README.md`; the screenshot review is in `REVIEW.md` there) |
 
 ## Tests
 
@@ -134,7 +138,8 @@ in `test/text.c` run on the Hebrew names; their English-only lists of names know
 not apply.
 
 CI (`.github/workflows/hebrew.yml`) builds the ROM and the clip-report ROM on every push to `he/*`,
-runs the drift check against `he/renderer`, the layout audit, the glossary checks, the tool tests
+runs the drift check against `he/renderer`, the layout audit, the glossary checks, the checks that
+the generated Pokédex A–Z order, Easy Chat lists and live-label list are up to date, the tool tests
 and `make check`. It never uploads a ROM.
 
 ## What is left / what this cannot see
@@ -145,15 +150,18 @@ Each build's `TESTING.md` lists what was tested on that exact ROM and what was n
   sweep, the map walk, the save ladder, cross-core frames, `make check`, and a review of the tour
   screenshots against English. Nobody has played from a new game to the first badge, and nothing
   ran on real hardware.
-- **Screens no tour reaches** (the Battle Frontier facilities, contests from start to finish,
-  mail, the credits, link features) passed the width audit and the code-level budget review but
-  were not seen.
+- **Screens the release tours do not reach.** The Battle Frontier facilities, contests from start
+  to finish, the Trainer Hill, the Battle Tents, mail, the credits and the Hall of Fame were seen in
+  the review rounds' own tours (`tools/hebrew/emu/tours/<round>/`), which each release does not run
+  again. The link screens were seen with the partner faked in memory; a real link with a second
+  GBA was never tried.
 - **Proposed names.** Pokémon from Gen 4 on and many NPCs are transliterations with status
-  `proposed` in the glossary; they have not been checked against an official Hebrew source.
-- **Open style calls** (see the glossary notes and the release notes):
-  the `{ID}{NO}` and `{PP}` glyph labels, `POKéGEAR` in
-  Latin letters, the word for "Congratulations", quotation marks around move names, the
-  English column of the default names.
+  `proposed` in the glossary; they have not been checked against an official Hebrew source, and no
+  native speaker has read the text on screen.
+- **Style calls.** Every open question from the review of the first release candidate is decided in
+  `translation/hebrew/DECISIONS.md`: for example the trainer ID label `מס'` (K2), פוקיגיר for POKéGEAR
+  (K3), move names without quotation marks in dialogue (Q2), 'מזל טוב' for "Congratulations" (Q6) and the
+  apprentices' English name column (Q50). The summary's PP label is נ”כ.
 - **Easy Chat.** All 999 Easy Chat words are Hebrew: 517 from the first translation and 482 from
   FireRed's words and the glossary (the other 9 entries of the lists are punctuation). Where
   Hebrew has one word for several English ones, they print the same text (I and I AM אני, NOT
@@ -162,8 +170,10 @@ Each build's `TESTING.md` lists what was tested on that exact ROM and what was n
   another. The ABC keyboard shows the 22
   Hebrew letters and files every word, species and move under the first letter of its Hebrew text
   (`DECISIONS.md` Q135).
-- **Kept in English on purpose:** the debug menus, the credits, the Odd Egg name list (the game
-  compares it with the player's name).
+- **Kept in English on purpose:** the overworld debug menu (`src/debug.c`, `data/scripts/debug.inc`;
+  DECISIONS.md Q120; the battle debug menu is Hebrew, Q118), the names of people, teams and games in the
+  credits, and the Odd Egg name list (the game compares it with the player's name).
 - **Graphics.** The PNGs in `graphics/` are the source of truth; the scripts that drew the Hebrew
-  labels were working tools and are not in this repository.
+  labels are in `tools/hebrew/graphics/` (its README says which script drew which file, and which
+  files were changed by hand afterwards).
 - **Female address.** The player is addressed in the masculine.
