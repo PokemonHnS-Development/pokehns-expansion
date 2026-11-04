@@ -1,9 +1,11 @@
 # Hebrew translation tools
 
 Python 3 tools for translating Heart & Soul into Hebrew and checking the result. They use only the
-standard library, except `fontcells.py` (Pillow). The tools that read an ELF (`rom_sweep.py`, the
-harness in `emu/`) need devkitARM (`DEVKITARM`, default `/opt/devkitpro/devkitARM`). Every tool
-runs from any working directory. The style guide and glossary are in `translation/hebrew/`.
+standard library, except the ones that draw pictures, which need Pillow: `fontcells.py`, the font
+scripts in `fonts/` that draw, everything in `graphics/` and the review-sheet scripts in
+`emu/scripts/`. `inventory/` needs numpy. The tools that read an ELF (`rom_sweep.py`, the harness
+in `emu/`, `inventory/`) need devkitARM (`DEVKITARM`, default `/opt/devkitpro/devkitARM`). Every
+tool runs from any working directory. The style guide and glossary are in `translation/hebrew/`.
 
 ## Locations
 
