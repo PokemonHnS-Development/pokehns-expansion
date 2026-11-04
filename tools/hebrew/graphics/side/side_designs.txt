@@ -1,0 +1,79 @@
+# Hand-made Hebrew letters for the side-content graphics (heb.py reads this file).
+# Each @set gives top= (index of the first body row) and h= (body rows). '#' = ink.
+# Glyph rows: `top` ascender rows, then the body, then descender rows.
+
+# C9: chunky letters (2-px strokes in both directions) for the Pokéblock UP/DOWN tags,
+# matching the English "UP"/"DOWN" weight.
+@set C9 top=2 h=9
+@glyph ע
+........
+........
+##....##
+##....##
+.##...##
+.##...##
+..##..##
+..##..##
+...####.
+#######.
+######..
+@glyph ל
+##.....
+##.....
+#######
+#######
+.....##
+.....##
+.....##
+.....##
+....##.
+..###..
+..##...
+@glyph ה
+.......
+.......
+#######
+#######
+.....##
+.....##
+##...##
+##...##
+##...##
+##...##
+##...##
+@glyph י
+...
+...
+###
+###
+.##
+.##
+.##
+...
+...
+...
+...
+@glyph ר
+.......
+.......
+######.
+#######
+.....##
+.....##
+.....##
+.....##
+.....##
+.....##
+.....##
+@glyph ד
+.........
+.........
+#########
+#########
+.....##..
+.....##..
+.....##..
+.....##..
+.....##..
+.....##..
+.....##..
