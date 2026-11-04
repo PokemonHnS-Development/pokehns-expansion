@@ -17,8 +17,7 @@
  "known_issues_intro": "The decisions behind the translation are in `translation/hebrew/DECISIONS.md` of the source fork.",
  "known_issues": [
   "Battle Frontier, Battle Tent and Trainer Hill trainers speak in Easy Chat phrases. About half of the Easy Chat words are still English, so many of these lines mix English and Hebrew words and read out of order (for example 'TOO MUCH קניות'). Whether Easy Chat is translated in full or kept English is not decided yet.",
-  "Ariana's class name מנהל רוקט is masculine because she shares the class with Archer, Proton and Petrel; other classes shared by men and women also keep the noun the trainer data gives them (DECISIONS.md Q124, Q127).",
-  "In a link battle, the lines for the other player sending out or withdrawing a Pokémon use the masculine verb whatever character that player chose (DECISIONS.md Q123)."
+  "Ariana's class name מנהל רוקט is masculine because she shares the class with Archer, Proton and Petrel; other classes shared by men and women also keep the noun the trainer data gives them (DECISIONS.md Q124, Q127)."
  ],
  "not_tested": [
   "Real hardware. No flashcart was available. The ROM is 32 MiB and needs a cart that supports 32 MiB images, with the save type set to FLASH 128 KB and a working RTC.",

@@ -62,7 +62,7 @@ runs from any working directory. The style guide and glossary are in `translatio
 | `cliptour.py` | reads the RTL clip log of a clip build between harness steps (`hns.py tour --clip`) |
 | `drift.py` | checks that a translated file changed only inside its strings |
 | `fontcells.py` | shows, per Latin font, whether each glyph cell is blank and how wide it is (`fontcells.py TREE [HEX...]`) |
-| `gen_dex_alpha.py` | regenerates the Hebrew alphabetical Pokédex order from the glossary |
+| `gen_dex_alpha.py` | regenerates the Hebrew alphabetical Pokédex order from the glossary; `--check` exits 1 when the header is stale (CI) |
 | `glossary_widths.py` | glossary names wider than their screen budget and than the English name |
 | `make_chunks.py` | cuts inventory batches into translation chunks |
 | `merge_he.py` | merges `{id: hebrew}` translations into a chunk |

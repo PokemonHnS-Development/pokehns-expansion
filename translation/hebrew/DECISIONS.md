@@ -70,6 +70,11 @@ Each entry is one open question from the review of the first release candidate: 
 | [Q128](#q128) | Summary screen: a geresh or quote mark in the portrait nickname (ג'ימי, טיפלוז'ן) touches the bottom of the portrait box. | D. Lowered copies of the four quote marks, used only by that window | changed |
 | [Q129](#q129) | EXEGGUTOR-A is אקזגיוטר-א, without the ק of its base form אקזגקיוטר, because the base plus -א was measured at 56 px against the 50 px Pokédex list column. | B. The full form אקזגקיוטר-א, with the TEXT_RTL fits, a Pokédex CRY page fit and one PC panel fallback | changed |
 | [Q130](#q130) | The battle intro attaches מ to the trainer class, and 'ממלכת השביל', 'מאס הכיפה', 'משומר פוקימון' read as other words. | A. 'קיבלת אתגר מאת' before the class | changed |
+| [Q131](#q131) | The battle debug menu shows three stat-up hold effects as 'העלאת X' and six as 'X +', and its 'switching to' label leaves a gap before the Pokémon it names. | A. 'X +' for all nine, and the 68 px label 'עובר לפוקימון ' | changed |
+| [Q132](#q132) | The link battle lines for the other player or the link partner sending out or withdrawing a Pokémon, and running, use the masculine verb whatever character that player chose. | A. Reword so the verb agrees with the Pokémon, as Q123 and Q127 did | changed |
+| [Q133](#q133) | Five Pokédex terms have Hebrew names with no official source: HISUI היסואי, MT. CORONET הר הנזר, Ultra Wormhole חור תולעת אולטרה, TEAM PLASMA צוות פלזמה, ROSE רוז. | A. Keep all five | no change |
+| [Q134](#q134) | 'psychic power' in Pokédex prose is כוח פסיכי in most entries and כוח על-חושי in nine. | A. כוח פסיכי and its forms in every entry; על-חושי stays in Kadabra's 'extrasensory' and in the move names that have it | changed |
+| [Q137](#q137) | In the Gen 4 battle interface the frostbite tag is a copy of the burn tag and reads כויה, as in English. | B. Redraw it as קור, the word of the H&S sheets | changed |
 
 ## K1
 
@@ -1579,6 +1584,135 @@ The English and the Japanese (ノーマル, スーパー, ハイパー, マス�
 **Chosen:** A. Seen on screen on the rc17 clip build and the fixed clip build: the Pike Queen and Dome Ace intros, the Trainer Hill Rangers (one trainer and a pair), Youngster Mikey, the Twins, the gym leader and the Rocket Hideout multi battle ('מאת מנהל רוקט אריאנה / ומאת רוקט גראנט!'), with 0 clip records.
 
 *Changed:* `src/battle_message.c`
+
+## Q131
+
+**Question.** The battle debug menu shows the stat-up hold effects in two forms: six as 'X +' ('התקפה +', 'מהירות +', "התק' מ' +", 'קריטיות +', 'נתון מקרי +', 'התחמקות +') and three as 'העלאת X' ('העלאת הגנה', "העלאת הגנ' מ'", 'העלאת חברות'). On the AI points page, the label 'מחליף אל' stands about 19 px away from the Pokémon it names.
+
+*Source:* the string-coverage round (round 16), the battle debug menu; a question for the owner in HANDOFF section 8.2. Q118 keeps this menu in Hebrew and says to finish it.
+
+**Analysis.** The names are src/battle_debug.c sHoldEffectNames. English 2.0.6 uses one form for all nine, 'X Up'.
+- The info page prints a name in FONT_SMALL in a 75 px column per battler (x = 83 + battler × 75). The AI party page copies only the first 7 bytes of the name (StringCopyN(..., 7)) and prints them in FONT_SMALL_NARROW in a 41 px column, so Defense Up and Sp. Def Up both print 'העלאת ה' there, and Friendship Up prints 'העלאת ח'.
+- "הגנ' מ'" is the tree's own short Sp. Def (gText_SpDef4 in src/strings.c), next to "התק' מ'" (gText_SpAtk4), which Sp. Attack Up already uses.
+- The AI points page prints the label at x 74 and the species at the fixed x 74 + 68. The English 'Switching to ' is exactly 68 px, so English has one space between the two. Under TEXT_RTL the window is mirrored, and 'מחליף אל ' (49 px) leaves a hole of 19 px.
+- Labels measured in FONT_NORMAL with the trailing space (tools/hebrew/textwidth.py): 'עובר לפוקימון ' 68 px, 'יחליף לפוקימון ' 71, 'מחליף לפוקימון ' 75, 'החלפה לפוקימון ' 79, 'מחליף אל פוקימון ' 85. A label over 68 px runs into the species.
+
+| Option | How | Risk |
+|---|---|---|
+| A. 'X +' for all nine, and a 68 px label | 'הגנה +', "הגנ' מ' +" and 'חברות +' for the three; 'עובר לפוקימון ' for the label. Text only. | Low. The three are shorter: 32, 45 and 37 px in FONT_SMALL, against 54, 67 and 59. The widest of the nine stays 50 px. Their 7-byte copies, 'הגנה +', "הגנ' מ'" and 'חברות +', differ from each other and measure 30, 30 and 35 px of the 41 px column. |
+| B. 'העלאת X' for all nine | Reword the six 'X +' rows. | It undoes six reviewed rows, "העלאת הגנ' מ'" is 67 px, and the 7-byte copies still read the same. |
+| C. Place the species after the label in code | Under TEXT_RTL, x = 74 + GetStringWidth(label). | An engine change in a file drift.py checks: STRUCTURE until he/renderer has the same block. Not needed when a natural label is exactly 68 px. |
+| D. Keep | No change. | The family stays mixed, and the gap stays. |
+
+**Chosen:** A. One form, as in English, the one most rows already had and the shortest, and the 7-byte party page now tells Defense, Sp. Def and Friendship apart. The label puts the species one space after it, as in English.
+
+*Changed:* `src/battle_debug.c`
+
+## Q132
+
+**Question.** In a link battle, the lines for the other player or the link partner sending out or withdrawing a Pokémon read '{X} שלח את {Y}!' and '{X} החזיר את {Y}!', with the masculine verb whatever character that player chose. The line for a link opponent who runs, '{X} ברח!', has the same fault. The 1.0 release notes listed the send-out and withdraw lines as a known issue.
+
+*Source:* 1.0 known issue (tools/hebrew/release/notes.json); the link lines that Q123 and Q127 left as they were.
+
+**Analysis.** The strings are src/battle_message.c sText_LinkTrainerSentOutPkmn, sText_LinkTrainer2SentOutPkmn2, sText_LinkTrainerSentOutTwoPkmn, sText_TwoLinkTrainersSentOutPkmn, sText_LinkTrainerSentOutPkmn2, sText_LinkTrainerMultiSentOutPkmn, sText_LinkPartnerSentOutPkmn1GoPkmn, sText_LinkPartnerSentOutPkmn2GoPkmn, sText_LinkPartnerSentOutPkmn1, sText_LinkPartnerSentOutPkmn2, sText_LinkPartnerWithdrewPkmn1, sText_LinkPartnerWithdrewPkmn2, sText_LinkTrainer1WithdrewPkmn and sText_LinkTrainer2WithdrewPkmn, and sText_WildFled, which prints when the link opponent runs.
+- Q123 and Q127 kept these lines because they name real players. That is not a reason to keep a gendered verb: the other player may have chosen the girl, and the wording of those two decisions reads the same for both.
+- The English lines carry no gender and have no manual line break. The Hebrew lines for two Pokémon and the partner's lines with 'צא' broke the line by hand.
+- sText_TwoWildFled 'ברחו' is the past plural, which has one form for both genders, so it stays.
+- Widths (tools/hebrew/textwidth.py, worst case a 7-letter player name and a 12-letter Pokémon name): 255 px for one Pokémon sent out, 365 px for two and for the partner's line with 'צא', 229 px for a withdraw, 513 px for the two-player line (two sentences), 175 px for the fled line. The battle text wraps each at 200 px a line and pages it; the trainer lines of Q123 already reach 473 px.
+
+| Option | How | Risk |
+|---|---|---|
+| A. Reword so the Pokémon is the subject, as Q123 and Q127 did | 'הפוקימון של {X}, {Y}, יוצא לקרב!', 'הפוקימונים של {X}, {Y} ו{Z}, יוצאים לקרב!' and 'הפוקימון של {X}, {Y}, חוזר!'; the partner's line keeps 'צא, {Y}!' after its send-out; the fled line becomes 'הקרב הסתיים בבריחה של {X}!'. Token order unchanged; no manual breaks, as in English. | Low. Fifteen strings, text only, one form for every player. |
+| B. Pick the verb by the other player's gender in code | Under TEXT_RTL, read the gender the link sends (gLinkPlayers) and print 'שלחה' / 'החזירה'. | Medium. Engine code for screens only a real link shows, two forms of every line, and no second GBA to check it with. |
+| C. Keep as a known issue | No change. | Every link battle against a girl shows the clash. |
+
+**Chosen:** A. The link lines get the wording the trainer lines already have, with no code. With it, no line of src/battle_message.c that names a link player gives that player a gendered verb. The known issue is removed from the release notes. The player stays masculine by STYLE §2.
+
+*Changed:* `src/battle_message.c`, `tools/hebrew/release/notes.json`
+
+## Q133
+
+**Question.** Round 17 gave Hebrew names to five terms that Pokédex entries printed in Latin: HISUI היסואי, MT. CORONET הר הנזר, Ultra Wormhole חור תולעת אולטרה, TEAM PLASMA צוות פלזמה and ROSE רוז. No official Hebrew source exists for them, and the handoff asked the owner to confirm them.
+
+*Source:* HANDOFF section 8.2, questions for the owner from the Pokédex rounds (16b and 17); glossary rows PLACE_MT_CORONET, NAME_HISUI, PLACE_ULTRA_WORMHOLE, TERM_TEAM_PLASMA and NAME_ROSE.
+
+**Analysis.** The terms appear in src/data/pokemon/species_info: gen_2_families.h:542 (MT. CORONET), gen_5_families.h:822 and :4699, gen_6_families.h:5283 and gen_7_families.h:249 (HISUI), gen_7_families.h:6574, :6640 and :7528 (Ultra Wormhole), shared_dex_text.h:61 (TEAM PLASMA) and gen_8_families.h:7134 (ROSE). How the glossary renders their neighbours:
+
+| Family | Rows | Rule |
+|---|---|---|
+| Mountains | MAPSEC_MT_MOON הר הירח (inherited from FireRed), MAPSEC_MT_MORTAR הר המכתש, MAPSEC_MT_SILVER הר הכסף | MT. = הר; an English common word is translated by its meaning. FireRed also has MT. EMBER הר אמבר, transliterated. |
+| Regions | KANTO קאנטו, JOHTO ג'וטו, GALAR גלאר, SINNOH סינו, PALDEA פלדייה | transliterated; prose says 'אזור X' |
+| Teams | TERM_TEAM_ROCKET צוות רוקט (inherited), TEAM AQUA צוות אקווה, TEAM MAGMA צוות מגמה | TEAM = צוות + the name |
+| People | the NAME_* rows | transliterated, never translated |
+| Ultra | TERM_ULTRA_BEASTS חיות אולטרה, ITEM_ULTRA_BALL אולטרה בול | Ultra = אולטרה; definite 'X האולטרה' |
+
+- היסואי is transliterated like every region; the א marks the break between the two vowels, as in PLACE_HAUOLI_CITY האואולי, and without it היסוי reads 'hisoy'. It matches the -ה ending of the Hisuian forms.
+- 'coronet' is a common English word (נזר), so הר הנזר follows H&S's own mountains. The transliterated הר קורונט is FireRed's minority MT. EMBER pattern; it would also make the entry's last row 113 px instead of 106.
+- חור תולעת is the standard Hebrew physics term; Ultra and the definite form follow חיות האולטרה. The three uses follow the English article: definite at :6574 and :6640, indefinite at :7528.
+- צוות פלזמה follows the three inherited teams; פלזמה is the Hebrew word, as in DEXCAT_PLASMA and MOVE_PLASMA_FISTS.
+- רוז is a person's name, transliterated like every NAME_* row (s as /z/ = ז).
+- No official Hebrew source was found: the Pokémon Israel site (pokemon-il.co.il) refused the request (HTTP 403), and the Hebrew dub's terms were not checked.
+
+| Option | How | Risk |
+|---|---|---|
+| A. Keep all five | No change. | None found; the rows stay 'proposed' until a native speaker or an official source confirms them. |
+| B. Transliterate MT. CORONET as הר קורונט | Change the glossary row and gen_2_families.h:542. | It follows the minority pattern, and the row is 7 px wider. |
+| C. Leave the five in Latin | Revert round 17. | Latin words inside Hebrew prose, which round 17 removed. |
+
+**Chosen:** A. Each term follows the rule of its family in the glossary. The rows stay 'proposed', as no official source or native reading confirms them.
+
+## Q134
+
+**Question.** The English 'psychic power(s)', 'psychic energy' and 'psychic abilities' have two renderings in Pokédex prose: כוח פסיכי in most entries and כוח על-חושי in nine.
+
+*Source:* HANDOFF section 8.2, questions for the owner from the Pokédex rounds (16b and 17).
+
+**Analysis.** Every English 'psychic power', 'energy' or 'ability' in the tree, paired with its Hebrew:
+
+| Where | Count | Rendering |
+|---|---|---|
+| Pokédex entries | 35 | פסיכי in 26; על-חושי in 9 (11 rows): Alolan Raichu, Golduck, Kadabra, Alakazam, Delphox, Espurr, female Meowstic, Pa'u Oricorio, Bruxish |
+| Move descriptions | 3 (Freezing Glare, Eerie Spell, Psyshield Bash) | פסיכי |
+| Dialogue | 10 lines (the Saffron gyms and the fighting dojo) | פסיכי |
+
+- על-חושי stays in Kadabra's 'extrasensory powers' (תפיסה על-חושית) and in the move names that already have it: PSYBEAM קרן על-חוש, PSYWAVE על-חוש, PSYSHOCK הלם על-חושי, PSYSTRIKE מכת על-חוש, ESPER WING כנף על-חושית and PSYBLADE להב על-חוש. Move names are not changed here. Other PSY- names already use פסיכי (PSYCHO CUT חיתוך פסיכי, PSYSHIELD BASH מכת מגן פסיכי), and the move EXTRASENSORY is חוש נוסף.
+- The type name is פסיכי. It is not changed here: TYPE_PSYCHIC is an inherited glossary row, and the type labels are drawn in the art (graphics/types/psychic.png). FireRed's own prose is mixed, and FireRed has since renamed its type to על-חושי.
+- The English ties the prose to the type in the same scenes (in Sabrina's gym, Sabrina's 'psychic powers' and the guide's 'PSYCHIC-type POKéMON').
+- כוחות פסיכיים is ordinary spoken Hebrew for a medium's powers (STYLE §1).
+- Widths (tools/hebrew/textwidth.py, FONT_NORMAL): each of the eleven rows becomes 13 px narrower; the widest is 195 px of the 224 px line. Doing the opposite would also push two פסיכי rows over the line: Gothitelle to 228 px and Rellor to 227 px.
+
+| Option | How | Risk |
+|---|---|---|
+| A. פסיכי in prose | אנרגיה פסיכית, כוחות פסיכיים, כוח פסיכי, כוחו הפסיכי, ביכולות הפסיכיות in the eleven rows; a glossary term row. | Low. Eleven rows, each narrower; no row count changes. |
+| B. על-חושי in prose | Change 27 Pokédex rows, 10 dialogue lines and 3 move descriptions. | Two Pokédex rows over 224 px, and the prose no longer matches the type name. |
+| C. Keep the mix | No change. | The same English reads two ways. |
+
+**Chosen:** A. It is the form 39 of the 48 strings already had, the word of the type, and the smallest change. על-חושי stays in Kadabra's 'extrasensory' and in the move names that already have it.
+
+*Changed:* `src/data/pokemon/species_info/gen_1_families.h`, `src/data/pokemon/species_info/gen_6_families.h`, `src/data/pokemon/species_info/gen_7_families.h`
+
+*Glossary:* `TERM_PSYCHIC_POWER`
+
+## Q137
+
+**Question.** In the Gen 4 battle interface, the frostbite tag is a copy of the burn tag, so a frostbitten Pokémon shows a blue pill reading כויה. English 2.0.6 has the same copy (BRN). The handoff asked the owner whether to redraw it or list it in the release notes.
+
+*Source:* HANDOFF section 8.2, a question for the owner found in the cross-check against the Spanish translation.
+
+**Analysis.** graphics/battle_interface/gen4/status.png, status2.png, status3.png and status4.png (one per battler) are 24 x 48 sheets of six 8-px rows: PSN, PRZ, SLP, FRZ, BRN, FRB (src/battle_interface.c). In all four, row 5 (FRB) is the same as row 4 (BRN), as in the English sheets. The H&S sheets (graphics/battle_interface/hns/) have קור in row 5.
+- Frostbite is off in H&S: B_USE_FROSTBITE is FALSE (include/config/battle.h), so MOVE_EFFECT_FREEZE_OR_FROSTBITE means freeze. Only the debug menus can set it (the battle debug menu, and Inflict Status1 in the R+START menu), and only the Gen 4 interface option (UseGen4BattleUI) draws these sheets. Frostbite draws these tiles in the freeze colour (PAL_STATUS_FRZ).
+- The H&S rows FRZ and FRB differ only inside x 3-17, and the Gen 4 FRZ row equals the H&S FRZ row there, so the H&S glyph fits the Gen 4 pill unchanged.
+
+| Option | How | Risk |
+|---|---|---|
+| A. List it in the release notes | No change. | A note about a debug-only screen tells a player nothing they can act on. |
+| B. Redraw row 5 with the H&S glyph | In each sheet, a pixel of the pill is glyph where the H&S sheet's row 5 has its קור glyph, and the sheet's own body index (76 + battler) elsewhere. Frame, background, the other rows and the palette stay. | Low. 30 pixels per sheet; art only. |
+| C. The same with the H&S body index (60 + battler) | As B. | The same tiles in game, but 135 changed pixels per sheet. |
+| D. Point frostbite at the freeze tiles in code | Change src/battle_interface.c. | An engine change, and the tag would read קפוא, not קור. |
+
+**Chosen:** B. Pure art with no behaviour change, the word the H&S sheets already use, and the smallest diff.
+
+*Changed:* `graphics/battle_interface/gen4/status.png`, `graphics/battle_interface/gen4/status2.png`, `graphics/battle_interface/gen4/status3.png`, `graphics/battle_interface/gen4/status4.png`
 
 ## Proposed names
 

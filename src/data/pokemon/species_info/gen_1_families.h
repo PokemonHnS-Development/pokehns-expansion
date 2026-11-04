@@ -4297,7 +4297,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .weight = 210,
         .description = COMPOUND_STRING(
             "הוא שולט בחשמל בעזרת טלקינזיס.\n"
-            "הוא מרכז אנרגיה על-חושית בזנבו\n"
+            "הוא מרכז אנרגיה פסיכית בזנבו\n"
             "ורוכב עליו כמו על גלשן. כינוי נוסף\n"
             "לפוקימון הזה הוא ”גולש יבשה”."),
         .pokemonScale = 426,
@@ -7985,7 +7985,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .description = COMPOUND_STRING(
             "גולדאק הוא שחיין מיומן. לפעמים הוא מצטרף\n"
             "לאימונים של שחיינים תחרותיים. כשמצחו\n"
-            "מנצנץ באור, הוא משתמש בכוחות על-חושיים."),
+            "מנצנץ באור, הוא משתמש בכוחות פסיכיים."),
         .pokemonScale = 256,
         .pokemonOffset = 1,
         .trainerScale = 273,
@@ -8969,7 +8969,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .height = 13,
         .weight = 565,
         .description = COMPOUND_STRING(
-            "לפי השמועה, ילד בעל כוחות על-חושיים\n"
+            "לפי השמועה, ילד בעל כוחות פסיכיים\n"
             "הפך לפתע לקדברה בזמן שעזר במחקר\n"
             "על תפיסה על-חושית."),
         .pokemonScale = 256,
@@ -9067,9 +9067,9 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .height = 15,
         .weight = 480,
         .description = COMPOUND_STRING(
-            "לאלקזם יש כוחות על-חושיים חזקים\n"
+            "לאלקזם יש כוחות פסיכיים חזקים\n"
             "ואינטליגנציה גבוהה, אבל השרירים שלו חלשים\n"
-            "מאוד. הוא מזיז את גופו בעזרת כוח על-חושי."),
+            "מאוד. הוא מזיז את גופו בעזרת כוח פסיכי."),
         .pokemonScale = 256,
         .pokemonOffset = 3,
         .trainerScale = 256,
