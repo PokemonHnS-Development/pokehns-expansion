@@ -1,5 +1,6 @@
-"""The Easy Chat word lists: one text per word, no Latin, the Hebrew order of the group lists, and
-the Odd Egg interview's passwords and hint windows."""
+"""The Easy Chat word lists: no Latin, only the listed shared texts, the Hebrew order of the group
+lists, a text of its own for every word the game compares, and the Odd Egg interview's passwords and
+hint windows."""
 import os
 import re
 import sys
@@ -13,6 +14,14 @@ TREE = paths.TREE
 ENTRY = re.compile(r'\[EC_INDEX\(EC_WORD_(\w+)\)\]\s*=\s*\{\s*\.text\s*=\s*COMPOUND_STRING\("((?:[^"\\]|\\.)*)"\)'
                    r'\s*,\s*\.alphabeticalOrder\s*=\s*EC_INDEX\(EC_WORD_(\w+)\)\s*,\s*\.enabled\s*=\s*(\w+)')
 HINT_WINDOWS = ['HELP_DAYCARE1_WINDOW', 'HELP_DAYCARE2_WINDOW', 'HELP_DAYCARE3_WINDOW', 'HELP_DAYCARE4_WINDOW']
+# The phrases src/easy_chat.c compares word by word with the player's: the Odd Egg passwords, the
+# questionnaire's Mystery Gift phrase and the Berry Master's wife's phrases.
+COMPARED = ['sInterviewPasswords', 'sMysteryGiftPhrase', 'sBerryMasterWifePhrases']
+# Texts that several enabled words print on purpose, where Hebrew has one word for several English
+# ones. Either word prints the same phrase, and no compared word is among them. Any other shared
+# text fails, and so does a row that no longer matches the lists.
+SHARED_TEXTS = {
+}
 
 
 def read(rel):
@@ -33,12 +42,18 @@ def groups():
     return out
 
 
+def table_rows(name):
+    """The rows of a word table in src/easy_chat.c: the EC_WORD_ names of each {...} row."""
+    text = read(os.path.join('src', 'easy_chat.c'))
+    block = text[text.index(name + '['):]
+    block = block[block.index('{') + 1:block.index('};')]
+    rows = re.findall(r'\{([^}]*)\}', block) or [block]
+    return [re.findall(r'EC_WORD_(\w+)', row) for row in rows]
+
+
 def passwords():
     """sInterviewPasswords in src/easy_chat.c: one list of four words per egg."""
-    text = read(os.path.join('src', 'easy_chat.c'))
-    block = text[text.index('sInterviewPasswords'):]
-    block = block[block.index('{') + 1:block.index('};')]
-    return [re.findall(r'EC_WORD_(\w+)', row) for row in re.findall(r'\{([^}]*)\}', block)]
+    return table_rows('sInterviewPasswords')
 
 
 def hint_lines(window):
@@ -55,15 +70,29 @@ class Lists(unittest.TestCase):
     def setUpClass(cls):
         cls.groups = groups()
 
-    def test_no_two_enabled_words_print_the_same_text(self):
-        # English has no such pair, so a list never shows two equal entries.
-        seen = {}
+    def test_only_the_listed_texts_are_shared(self):
+        by_text = {}
         for group, entries in self.groups.items():
             for word, text, order, enabled in entries:
                 if enabled:
-                    if text in seen:
-                        self.fail('%s and %s both print %s' % (seen[text], word, text))
-                    seen[text] = word
+                    by_text.setdefault(text, set()).add(word)
+        shared = {t: ws for t, ws in by_text.items() if len(ws) > 1}
+        for text, words in sorted(shared.items()):
+            self.assertEqual(words, SHARED_TEXTS.get(text), '%s print %s' % (', '.join(sorted(words)), text))
+        for text in SHARED_TEXTS:
+            self.assertIn(text, shared, 'SHARED_TEXTS lists %s, which one word prints at most' % text)
+
+    def test_every_compared_word_prints_a_text_no_other_word_prints(self):
+        # The game tells these words apart by their ID, so the player must be able to tell them
+        # apart by their text.
+        words = {w: (t, e) for entries in self.groups.values() for w, t, o, e in entries}
+        enabled = [(w, t) for w, (t, e) in words.items() if e]
+        compared = sorted({w for name in COMPARED for row in table_rows(name) for w in row})
+        self.assertGreater(len(compared), 38)
+        for word in compared:
+            text = words[word][0]
+            others = [w for w, t in enabled if t == text and w != word]
+            self.assertEqual(others, [], '%s prints %s, as %s do' % (word, text, others))
 
     def test_no_latin_letters_in_the_words(self):
         for group, entries in self.groups.items():
@@ -89,13 +118,6 @@ class OddEgg(unittest.TestCase):
         self.assertEqual(len(self.passwords), 11)
         for row in self.passwords:
             self.assertEqual(len(row), 4, row)
-
-    def test_every_password_word_prints_a_text_no_other_word_prints(self):
-        enabled = [(w, t) for w, (t, e) in self.words.items() if e]
-        for word in sorted({w for row in self.passwords for w in row}):
-            text = self.words[word][0]
-            others = [w for w, t in enabled if t == text and w != word]
-            self.assertEqual(others, [], '%s prints %s, as %s do' % (word, text, others))
 
     def test_each_hint_quotes_the_password_word_of_its_egg(self):
         # The four windows give the four words of the first seven eggs: window k, line i quotes

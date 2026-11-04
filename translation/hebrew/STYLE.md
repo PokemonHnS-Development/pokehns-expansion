@@ -84,9 +84,14 @@ Only characters in `charmap.txt`. In particular:
   compared by code (the "SampleCode" check, Walda's phrase, the Odd Egg name list), and anything
   in an `#if 0` / unused block. The battle debug menu (`src/battle_debug.c`, opened with SELECT in any battle) is translated and uses the glossary's terms.
 - Easy Chat words (`src/data/easy_chat/easy_chat_group_*.h`) are Hebrew. A word is at most 72 px
-  and 12 bytes, like the widest English word; no two enabled words may print the same text
-  (English has no such pair); glossary names and terms keep their glossary form; the Odd Egg hint
-  windows (`src/data/help_window.h`) quote the password words exactly. After changing a word, run
+  and 12 bytes, like the widest English word. A word the game compares with the player's phrase
+  (the Odd Egg passwords, the questionnaire's Mystery Gift phrase and the Berry Master's wife's
+  phrases in `src/easy_chat.c`) prints a text no other enabled word prints. Other words share a
+  text where Hebrew has one word for several English ones (I and I AM אני, NOT and DON'T לא); each
+  such text is listed in `SHARED_TEXTS` of `tools/hebrew/tests/test_easy_chat.py`. Trainers speak in
+  these words, so they take the spoken forms (אני, הוא, לא), not the formal present (הנני, הינו).
+  Glossary names and terms keep their glossary form; the Odd Egg hint windows
+  (`src/data/help_window.h`) quote the password words exactly. After changing a word, run
   `tools/hebrew/gen_ec_order.py` (the Hebrew order of the group lists) and
   `tools/hebrew/gen_ec_letters.py` (the ABC keyboard's lists, which a species or move rename also
   changes); `tools/hebrew/tests/test_easy_chat.py` checks the rest.
