@@ -70,6 +70,8 @@ order and printed left to right in its English position.
 - The Pokédex name search groups the Hebrew alphabet three letters at a time; the list falls
   back to the narrower font when a name is wider than its column; the A–Z order is generated from
   the Hebrew names (`gen_dex_alpha.py`).
+- The Easy Chat group lists follow the Hebrew order of the words, generated from the word texts
+  (`gen_ec_order.py`, `src/data/easy_chat/easy_chat_order_rtl.h`).
 - The healthbox drops the level glyph when glyph and digits do not fit (level 100).
 - Lists sorted by name (the bag's A–Z sort, the move relearner) use `StringCompareAlphabetical`:
   final letters sort with their ordinary forms, and a name sorts before the longer names that
@@ -111,6 +113,7 @@ message under 424.
 | `textwidth.py`, `audit.py`, `wrap.py` | The width model, a whole-tree budget audit, a re-wrapper |
 | `rom_sweep.py` | Finds English left in a built ROM |
 | `gen_dex_alpha.py` | Regenerates the Pokédex A–Z order |
+| `gen_ec_order.py` | Regenerates the Hebrew order of the Easy Chat group lists |
 | `emu/` | Headless mGBA harness, the save ladder, the screen tours (`hns.py tour`), the dialogue sweep (`sweep.py`), the map walk (`mapwalk.py`) and the libretro frontend for other cores (`crosscore.c`) |
 | `check_tests.py` | Compares a `make check` log with the tests upstream already fails (`data/known_test_failures.txt`) |
 | `check_chunked.py` | Runs the `make check` suite one test-name prefix at a time, so that it fits the memory of a CI runner; a test in `data/crashing_tests.txt` runs alone |
@@ -146,8 +149,12 @@ Each build's `TESTING.md` lists what was tested on that exact ROM and what was n
   the `{ID}{NO}` and `{PP}` glyph labels, `POKéGEAR` in
   Latin letters, the word for "Congratulations", quotation marks around move names, the
   English column of the default names.
-- **Kept in English on purpose:** Easy Chat words (the chat keyboard indexes them by letter), the
-  debug menus, the credits, the Odd Egg name list (the game compares it with the player's name).
+- **Easy Chat.** All 999 Easy Chat words are Hebrew: 517 from the first translation and 482 from
+  FireRed's words and the glossary (the other 9 entries of the lists are punctuation). Trainer
+  phrases put the words in English order, one word after another. The ABC keyboard files the words
+  by the initial of their English spelling (`DECISIONS.md` Q135).
+- **Kept in English on purpose:** the debug menus, the credits, the Odd Egg name list (the game
+  compares it with the player's name).
 - **Graphics.** The PNGs in `graphics/` are the source of truth; the scripts that drew the Hebrew
   labels were working tools and are not in this repository.
 - **Female address.** The player is addressed in the masculine.

@@ -80,9 +80,15 @@ Only characters in `charmap.txt`. In particular:
   Hebrew word (`פוקי`, `פוקימון`). `drift.py` ignores these glyph-pair tokens (`{POKE}`, `{PKMN}`,
   `{POKEBLOCK}`, the `{ID}{NO}` pair and the `{PK}` of the Easy Chat word `{PK}RS`), so dropping
   them is the one allowed token change.
-- Do not translate: braille text (`.braille`), the R+START debug menu (`src/debug.c`, and `data/scripts/debug.inc` except `Debug_Text_ArianaDefeat` and `Debug_Text_Grunt23Defeat`, which the Rocket Hideout story battle uses), easy-chat/mail
-  word lists unless your batch says so, Latin literals compared by code (the "SampleCode"
-  check, Walda's phrase, the Odd Egg name list), and anything in an `#if 0` / unused block. The battle debug menu (`src/battle_debug.c`, opened with SELECT in any battle) is translated and uses the glossary's terms.
+- Do not translate: braille text (`.braille`), the R+START debug menu (`src/debug.c`, and `data/scripts/debug.inc` except `Debug_Text_ArianaDefeat` and `Debug_Text_Grunt23Defeat`, which the Rocket Hideout story battle uses), Latin literals
+  compared by code (the "SampleCode" check, Walda's phrase, the Odd Egg name list), and anything
+  in an `#if 0` / unused block. The battle debug menu (`src/battle_debug.c`, opened with SELECT in any battle) is translated and uses the glossary's terms.
+- Easy Chat words (`src/data/easy_chat/easy_chat_group_*.h`) are Hebrew. A word is at most 72 px
+  and 12 bytes, like the widest English word; no two enabled words may print the same text
+  (English has no such pair); glossary names and terms keep their glossary form; the Odd Egg hint
+  windows (`src/data/help_window.h`) quote the password words exactly. After changing a word, run
+  `tools/hebrew/gen_ec_order.py` (the Hebrew order of the group lists);
+  `tools/hebrew/tests/test_easy_chat.py` checks the rest.
 
 ## 6. Length and width (checked by `tools/hebrew/audit.py`)
 

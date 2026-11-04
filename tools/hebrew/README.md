@@ -38,7 +38,7 @@ runs from any working directory. The style guide and glossary are in `translatio
    `textwidth.py TEXT` measures a string.
 5. **Apply.** `units.py apply CHUNK.json... [--dry-run]` writes the Hebrew into `HNS_TREE`.
    `apply_names.py` writes trainer and map-section names. Run `gen_dex_alpha.py` after the species
-   names change.
+   names change, and `gen_ec_order.py` after an Easy Chat word changes.
 6. **Drift.** `drift.py FILE...` checks that a translated file differs from `HNS_BASELINE` only
    inside its strings.
 7. **Audit.** `audit.py [PATH...] [--baseline "$HNS_UPSTREAM"]` runs a static layout audit of
@@ -63,6 +63,7 @@ runs from any working directory. The style guide and glossary are in `translatio
 | `drift.py` | checks that a translated file changed only inside its strings |
 | `fontcells.py` | shows, per Latin font, whether each glyph cell is blank and how wide it is (`fontcells.py TREE [HEX...]`) |
 | `gen_dex_alpha.py` | regenerates the Hebrew alphabetical Pokédex order from the glossary; `--check` exits 1 when the header is stale (CI) |
+| `gen_ec_order.py` | regenerates the Hebrew order of the Easy Chat group lists (`src/data/easy_chat/easy_chat_order_rtl.h`) from the word texts; `--check` exits 1 when it is stale (also checked by `tests/test_easy_chat.py`) |
 | `glossary_widths.py` | glossary names wider than their screen budget and than the English name |
 | `make_chunks.py` | cuts inventory batches into translation chunks |
 | `merge_he.py` | merges `{id: hebrew}` translations into a chunk |

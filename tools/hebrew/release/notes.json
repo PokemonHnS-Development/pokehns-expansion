@@ -16,7 +16,6 @@
  },
  "known_issues_intro": "The decisions behind the translation are in `translation/hebrew/DECISIONS.md` of the source fork.",
  "known_issues": [
-  "Battle Frontier, Battle Tent and Trainer Hill trainers speak in Easy Chat phrases. About half of the Easy Chat words are still English, so many of these lines mix English and Hebrew words and read out of order (for example 'TOO MUCH קניות'). Whether Easy Chat is translated in full or kept English is not decided yet.",
   "Ariana's class name מנהל רוקט is masculine because she shares the class with Archer, Proton and Petrel; other classes shared by men and women also keep the noun the trainer data gives them (DECISIONS.md Q124, Q127)."
  ],
  "not_tested": [
@@ -27,7 +26,7 @@
   "C strings no tour shows. A diagnostic build lists every translated C string the tours put on screen. The Pokédex entries and species names of Pokémon that only the randomizer brings into the game were shown on Pokédex pages filled in memory, which match the real caught pages pixel for pixel; a randomized new game was played to its first catches, but not every species was rolled. Not shown are 7 evolution-method words that the Pokédex evolution page never prints in H&S, about 35 lines that need a state the tours could not set up, and about 2,300 that H&S 2.0.6 cannot reach (link and wireless screens, switched-off features, Emerald and FireRed leftovers, unused data). Their widths were checked by the layout audit and by reviewers against the code, not on screen.",
   "Female address. The player is addressed in the masculine throughout (a decision of this translation).",
   "The randomizer and challenge options beyond their menus.",
-  "Easy Chat words, which stay English on purpose (the keyboard indexes them by letter).",
+  "Easy Chat in full. The words are Hebrew. Seen on screen: the four Day Care hint windows, the Odd Egg interview with its group and ABC keyboards and the status, voices, feelings and actions lists, Pichu's password giving the egg, the Battle Tower feelings man's start, win and loss screens, and the first Trainer Hill floor's trainer lines. Not seen: mail, the Battle Frontier facility trainers' lines, the other ten Odd Egg passwords, and phrases that come from a linked game.",
   "Cores other than the six listed, and RetroArch builds for Android or handhelds.",
   "Most of the 525 item plural names. The bag, PC, Pyramid and mart count lines were seen on screen with a sample of them, the longest names and the widest counts; the rest were checked against the glossary rules and by tools/hebrew/plurals.py, which fails when a stackable item has no plural.",
   "Names of Pokémon from Gen 4 on, and many trainer names, are transliterations marked \"proposed\" in the glossary. All 1,851 were reviewed against the transliteration rules, the official English pronunciation and consistency with related names, and 22 of the 23 changes it proposed were made (`translation/hebrew/DECISIONS.md`), but none was checked against an official Hebrew source or by a native speaker on screen."
