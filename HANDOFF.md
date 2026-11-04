@@ -1376,9 +1376,10 @@ Ask the owner before you:
 
 - **Latin left inside Hebrew strings.** The live ones have glossary rows and Hebrew text. drift
   prints 127 `w LATIN` lines, and each is either kept on purpose or in text H&S does not reach:
-  - kept: button names, game titles, the credits' team names, the Odd Egg interview's Easy Chat
-    words in `src/data/help_window.h`, and the save-type name on the no-flash screen; the reasons
-    are in `tools/hebrew/status_report.py` (KEPT_LATIN) and `tools/hebrew/drift.py` (LATIN_OK);
+  - kept: button names, game titles, the credits' team names, the abbreviation IV in the help
+    windows (`src/data/help_window.h`), the Odd Egg name list the game compares with the player's
+    name, and the save-type name on the no-flash screen; the reasons are in
+    `tools/hebrew/status_report.py` (KEPT_LATIN) and `tools/hebrew/drift.py` (LATIN_OK);
   - unreachable: Emerald maps and names, the Battle Tents, the TV shows and their PokéNews
     (`FLAG_SYS_TV_START` is defined as 0, `data/scripts/tv.inc:8`), the PokéNav match calls (their
     `FLAG_ENABLE_*_MATCH_CALL` and `FLAG_REGISTERED_*` flags are defined as 0 in
