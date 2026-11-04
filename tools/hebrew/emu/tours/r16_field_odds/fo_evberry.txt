@@ -1,0 +1,25 @@
+# Stand-in (option reach: EV berries come only from the field-item randomizer): a Pomeg Berry on a
+# Pokemon with HP EVs and friendship 255: 'X adores you! Its base HP fell!' (gText_PkmnAdoresBaseVar2Fell,
+# ItemUseCB_ReduceEV src/party_menu.c:5363-5400). The BERRIES pocket holds only the Pomeg Berry.
+start saves/ladder6_postgame.sav
+include ../../scripts/continue.txt
+partyfree 5
+ev givemon SPECIES_TYPHLOSION, 50, hpEv=100; end
+monset 5 friendship=255
+pocketset BERRIES ITEM_POMEG_BERRY:5
+w32 @gMenuCallback@ 0
+bagopen BERRIES 0
+snap fo_ev_01_bag
+tap A 4
+waitquiet
+snap fo_ev_02_ctx
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+seek 8 @gPartyMenu+9@ 5 DOWN
+waitquiet
+snap fo_ev_03_which
+tap A 4
+waitkey 900
+waitquiet
+snap fo_ev_04_adores

@@ -1,0 +1,22 @@
+# Stand-in (no H&S source for DNA Splicers): KEY ITEMS holds only the DNA Splicers, Kyurem in slot 5:
+# USE > Kyurem > 'which Pokemon to fuse with?' (gText_NextFusionMon, ItemUseCB_Fusion src/party_menu.c:6695).
+start saves/ladder6_postgame.sav
+include ../../scripts/continue.txt
+partyfree 4
+ev givemon SPECIES_KYUREM, 70; givemon SPECIES_ZEKROM, 70; end
+pocketset KEY_ITEMS ITEM_DNA_SPLICERS
+w32 @gMenuCallback@ 0
+bagopen KEY_ITEMS 0
+snap fo_dna_01_bag
+tap A 4
+waitquiet
+snap fo_dna_02_ctx
+tap A 4
+waitcb2x CB2_UpdatePartyMenu 900
+waittaskx Task_HandleChooseMonInput 600
+seek 8 @gPartyMenu+9@ 4 DOWN
+waitquiet
+snap fo_dna_03_which
+tap A 4
+waitquiet
+snap fo_dna_04_next
