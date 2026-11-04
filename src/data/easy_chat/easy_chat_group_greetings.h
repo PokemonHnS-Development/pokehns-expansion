@@ -7,7 +7,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Greetings[] = {
     },
     [EC_INDEX(EC_WORD_YES)] =
     {
-        .text = COMPOUND_STRING("YES"),
+        .text = COMPOUND_STRING("כן"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_APPRECIATE),
         .enabled = TRUE,
     },
@@ -31,7 +31,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Greetings[] = {
     },
     [EC_INDEX(EC_WORD_YEAH)] =
     {
-        .text = COMPOUND_STRING("YEAH"),
+        .text = COMPOUND_STRING("בטח"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_COUNT_ON),
         .enabled = TRUE,
     },
@@ -43,7 +43,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Greetings[] = {
     },
     [EC_INDEX(EC_WORD_OI)] =
     {
-        .text = COMPOUND_STRING("OI"),
+        .text = COMPOUND_STRING("הלו"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_EXCUSE_ME),
         .enabled = TRUE,
     },
@@ -67,7 +67,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Greetings[] = {
     },
     [EC_INDEX(EC_WORD_SORRY)] =
     {
-        .text = COMPOUND_STRING("SORRY"),
+        .text = COMPOUND_STRING("מצטער"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_GOOD_BYE),
         .enabled = TRUE,
     },
@@ -91,7 +91,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Greetings[] = {
     },
     [EC_INDEX(EC_WORD_HELLO)] =
     {
-        .text = COMPOUND_STRING("HELLO"),
+        .text = COMPOUND_STRING("שלום"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_HERE_IT_IS),
         .enabled = TRUE,
     },
@@ -157,7 +157,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Greetings[] = {
     },
     [EC_INDEX(EC_WORD_HEY_QUES)] =
     {
-        .text = COMPOUND_STRING("HEY?"),
+        .text = COMPOUND_STRING("היי?"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_NO),
         .enabled = TRUE,
     },
@@ -169,19 +169,19 @@ const struct EasyChatWordInfo gEasyChatGroup_Greetings[] = {
     },
     [EC_INDEX(EC_WORD_HUH_QUES)] =
     {
-        .text = COMPOUND_STRING("HUH?"),
+        .text = COMPOUND_STRING("מה?"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_PARDON),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_NO)] =
     {
-        .text = COMPOUND_STRING("NO"),
+        .text = COMPOUND_STRING("לא!"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_SEE_YA),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_HI)] =
     {
-        .text = COMPOUND_STRING("HI"),
+        .text = COMPOUND_STRING("היי"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_SMELL),
         .enabled = TRUE,
     },
@@ -205,13 +205,13 @@ const struct EasyChatWordInfo gEasyChatGroup_Greetings[] = {
     },
     [EC_INDEX(EC_WORD_HEY)] =
     {
-        .text = COMPOUND_STRING("HEY"),
+        .text = COMPOUND_STRING("הי"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_WELCOME),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_SMELL)] =
     {
-        .text = COMPOUND_STRING("SMELL"),
+        .text = COMPOUND_STRING("ריח"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_WELL_THEN),
         .enabled = TRUE,
     },
@@ -229,13 +229,13 @@ const struct EasyChatWordInfo gEasyChatGroup_Greetings[] = {
     },
     [EC_INDEX(EC_WORD_YAHOO)] =
     {
-        .text = COMPOUND_STRING("YAHOO"),
+        .text = COMPOUND_STRING("יאהו"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_YEAH),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_YO)] =
     {
-        .text = COMPOUND_STRING("YO"),
+        .text = COMPOUND_STRING("יו"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_YEAH_YEAH),
         .enabled = TRUE,
     },
