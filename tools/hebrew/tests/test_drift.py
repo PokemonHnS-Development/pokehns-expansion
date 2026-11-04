@@ -112,20 +112,26 @@ class DriftTest(unittest.TestCase):
         self.write(self.en, rel, ''.join('Latin_Text_%02d:\n\t.string "Hello Bob!$"\n\n' % i for i in range(n)))
         self.write(self.he, rel, ''.join('Latin_Text_%02d:\n\t.string "שלום Bob!$"\n\n' % i for i in range(n)))
         shutil.copy(CHARMAP, os.path.join(self.he, 'charmap.txt'))
-        runs = []
+
+        def run(*args):
+            return subprocess.run([sys.executable, os.path.join(TOOLS, 'drift.py'), '--en', self.en,
+                                   '--tree', self.he] + list(args), capture_output=True, text=True)
+
         for quiet in ([], ['--quiet']):
-            out = subprocess.run([sys.executable, os.path.join(TOOLS, 'drift.py'), '--en', self.en,
-                                  '--tree', self.he] + quiet + [rel], capture_output=True, text=True)
+            out = run(*quiet + [rel])
             self.assertEqual(out.returncode, 0, out.stderr)
             lines = out.stdout.splitlines()
             # A file with warnings only is listed even with --quiet, and no LATIN warning is cut.
             self.assertEqual(lines[0].split(), ['ok', rel])
             self.assertEqual(len([l for l in lines if l.startswith('   w LATIN Latin_Text_')]), n)
-            runs.append(lines)
-        if not any(l.startswith('drift: ') for l in runs[0]):
-            self.skipTest('drift.py prints no summary line')
-        for lines in runs:
-            self.assertRegex(lines[-1], r'^drift: 1 files?, 0 FAIL, 1 with warnings only$')
+            # The last line counts the files, also with --quiet.
+            self.assertEqual(lines[-1], 'drift: 1 file, 0 FAIL, 1 with warnings only')
+        self.edit(INC, 'MSGBOX_NPC', 'MSGBOX_SIGN')
+        out = run('--quiet', rel, INC, ITEMS)
+        self.assertEqual(out.returncode, 1, out.stderr)
+        lines = out.stdout.splitlines()
+        self.assertEqual([l.split()[0] for l in lines if not l.startswith(' ')], ['ok', 'FAIL', 'drift:'])
+        self.assertEqual(lines[-1], 'drift: 3 files, 1 FAIL, 1 with warnings only')
 
 
 if __name__ == '__main__':

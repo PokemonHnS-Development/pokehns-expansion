@@ -14,8 +14,9 @@ reference tree and reports:
   LATIN      a translated string still holds a Latin word (warning; ignores tokens and known terms)
   UNTRANSLATED a string identical to English that contains English words (warning)
 
-Usage: drift.py [--en EN_ROOT] [--tree TREE_ROOT] [--strict] FILE...
+Usage: drift.py [--en EN_ROOT] [--tree TREE_ROOT] [--strict] [--quiet] FILE...
 EN_ROOT defaults to HNS_BASELINE, TREE_ROOT to HNS_TREE (tools/hebrew/paths.py).
+The last line is always 'drift: N files, F FAIL, W with warnings only', also with --quiet.
 Exit status is 1 if any error (not warning) was found.
 """
 import argparse, json, os, re, sys
@@ -286,12 +287,14 @@ def main():
     a = ap.parse_args()
     a.en = a.en or paths.need('BASELINE', 'pass --en')
     charmap = load_charmap(a.tree)
-    bad = 0
+    bad = warned = 0
     for f in a.files:
         f = os.path.relpath(os.path.abspath(f), a.tree) if os.path.isabs(f) else f
         errors, warnings = check(f, a.en, a.tree, charmap, a.strict)
         if errors:
             bad += 1
+        elif warnings:
+            warned += 1
         if errors or warnings or not a.quiet:
             print('%s %s' % ('FAIL' if errors else 'ok  ', f))
             for e in errors:
@@ -305,6 +308,8 @@ def main():
                 print('   w ... %d more warnings' % (len(other) - 40))
             for w in latin:
                 print('   w', w)
+    n = len(a.files)
+    print('drift: %d file%s, %d FAIL, %d with warnings only' % (n, '' if n == 1 else 's', bad, warned))
     sys.exit(1 if bad else 0)
 
 
