@@ -355,7 +355,7 @@ Every live file is already in Hebrew. New work is therefore one of three things:
 - braille;
 - Latin literals that code compares (the Odd Egg names, the mystery-gift sample code).
 
-`status_report.py:23-47` (`KEPT_LATIN`) lists the deliberate Latin per file.
+`status_report.py:23-51` (`KEPT_LATIN`) lists the deliberate Latin per file.
 
 **Find which file prints a line:** search the English in the baseline worktree. The label is the
 same in both trees; the line number can differ.
@@ -1280,13 +1280,18 @@ Ask the owner before you:
 ### 8.2 Content gaps
 
 - **Latin left inside Hebrew strings.** The live ones now have glossary rows and Hebrew text
-  (round 17; the 16 new rows are `proposed`). drift still prints 59 `w LATIN` lines, and each is
-  either kept on purpose or in text H&S does not reach:
+  (round 17; the 16 new rows are `proposed`). drift prints 133 `w LATIN` lines (it no longer
+  caps them at 40 per file), and each is either kept on purpose or in text H&S does not reach:
   - kept: button names, game titles, the credits' team names, the Odd Egg interview's Easy Chat
     words in `src/data/help_window.h`, and the save-type name on the no-flash screen; the reasons
     are in `tools/hebrew/status_report.py` (KEPT_LATIN) and `tools/hebrew/drift.py` (LATIN_OK);
-  - unreachable: Emerald maps and names, the Battle Tents, the PokéNav news, the Ruby/Sapphire
-    berry fix, and the item descriptions this build does not compile.
+  - unreachable: Emerald maps and names, the Battle Tents, the TV shows and their PokéNews
+    (`FLAG_SYS_TV_START` is defined as 0, `data/scripts/tv.inc:8`), the PokéNav match calls (66
+    lines; their `FLAG_ENABLE_*_MATCH_CALL` and `FLAG_REGISTERED_*` flags are defined as 0 in
+    `include/constants/flags_hns.h`, and `FlagGet(0)` is false), the Ruby/Sapphire berry fix,
+    and the item descriptions this build does not compile.
+  - `tools/hebrew/data/live_labels.json` still counts the match-call and TV labels as live: its
+    builder follows references and ignores flags. Only Mom and Baoba can call.
 - **Easy Chat contradicts the docs.**
   - `docs/hebrew_translation.md:149`, STATUS.md and TESTING.md say Easy Chat stays English, and
     `make_chunks.py:28` skips `src/data/easy_chat/`.
@@ -1305,7 +1310,13 @@ Ask the owner before you:
   - with no flash chip the game shows the debug build's English assert screen before the
     no-flash message: ship an `NDEBUG` build (which changes Q120's debug menu) or keep it;
   - the Emerald maps outside the Battle Frontier cannot be walked into; the only path found, a
-    poison white-out in the Battle Pike with SURVIVE POISON off, crashes in English too.
+    poison white-out in the Battle Pike with SURVIVE POISON off, crashes in English too. A lead,
+    **unverified**: the HNS build gives the non-hns maps a NULL map header
+    (`tools/mapjson/mapjson.cpp:470-479`);
+  - an H&S 2.0.6 art fault, the same in English: the Gen 4 battle UI's FROSTBITE tag is a copy of
+    the BURN tag (row 6 of `graphics/battle_interface/gen4/status*.png`), so it would read כויה.
+    Frostbite is off (`B_USE_FROSTBITE` FALSE) and only the debug menus can set it. Redraw the
+    row as קור like `hns/status*.png`, or release-note it.
 - **Questions for the owner from the Pokédex rounds** (rounds 16b and 17). Neither is decided:
   - the five Pokédex terms round 17 proposed: Hisui היסואי, Mt. Coronet הר הנזר (its glossary
     note gives the transliterated הר קורונט as the alternative), Ultra Wormhole חור תולעת
@@ -1322,8 +1333,11 @@ Ask the owner before you:
   - link features have not been tried;
   - no tour reaches the Frontier facilities, full contests, Trainer Hill, Battle Tents, mail, the
     credits, the Hall of Fame or every dex form page.
-- **Unreachable English in the ROM.** `rom_sweep` lists 104 untracked English runs sourced to
-  `BattleFrontier_BattlePyramidFloor_hns`. Whether they are reachable is **unverified**.
+- **Unreachable English in the ROM** (resolved). `rom_sweep` lists 104 untracked English runs
+  sourced to `BattleFrontier_BattlePyramidFloor_hns`. None can print: its 129 text labels have no
+  referrer outside their own definitions, `tools/hebrew/data/inventory.json` marks the file dead,
+  and the Pyramid's live text comes from `src/battle_pyramid.c` and `src/start_menu.c`, which are
+  Hebrew.
 
 ### 8.3 Stale documentation (fix in docs-only commits)
 

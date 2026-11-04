@@ -1099,7 +1099,7 @@ I applied both edits to a scratch copy and ran drift.py: ok, and the LATIN warni
 
 *Source:* reviewer question (chunk B38_05)
 
-**Analysis.** 'demake' appears in UlaUla_House_hns/scripts.inc:187 and UlaulaIsle_hns:323 as 'אני עובד על גרסת רטרו מלאה של\nהאזור, שנקראת ULTRA ECLIPSE.' (English 'I'm working on a full demake of the'). The developer office (CeladonCity_Apartments_2F_hns, CeladonMansion2F_Text_Phant 'I love DEMAKES!') also says DEMAKES. That file is still English and is not tracked in STATUS.md, so it is outside this decision. If it is translated later, it should use the same term.
+**Analysis.** 'demake' appears in UlaUla_House_hns/scripts.inc:187 and UlaulaIsle_hns:323 as 'אני עובד על גרסת רטרו מלאה של\nהאזור, שנקראת אולטרה אקליפס.' (English 'I'm working on a full demake of the'). The developer office (CeladonCity_Apartments_2F_hns, CeladonMansion2F_Text_Phant 'I love DEMAKES!') also says DEMAKES. That file's text is dead: the room has no objects, triggers or signs (its map.json lists none) and none of its 16 labels is referenced outside the file, so it is outside this decision. If upstream adds the NPCs later, they should use the same term.
 
 | Option | How | Risk |
 |---|---|---|
