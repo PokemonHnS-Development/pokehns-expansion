@@ -14,7 +14,8 @@ Usage:
   --fill max|avg      placeholder glyphs: widest (default) or average Hebrew glyph
   --subst NAME=SPEC   override a worst-case placeholder (textwidth.py grammar), e.g. STR_VAR_1=W3
   --json OUT          machine-readable findings ('-' = stdout)
-  --report OUT        readable report (default: stdout)
+  --report OUT        readable report (default: stdout). Its folder is created if missing, and stdout
+                      then gets only the report's '== ' summary lines
   --strict            warnings count as errors for the exit status
   --fail-on-english   errors on untranslated (English) strings also fail the run
   --max-report N      list at most N findings per section in the readable report (default 400)
@@ -738,11 +739,12 @@ def main(argv=None):
         out.append('warning: ' + w)
     text = '\n'.join(out) + '\n'
     if a.report:
+        os.makedirs(os.path.dirname(os.path.abspath(a.report)), exist_ok=True)
         with open(a.report, 'w', encoding='utf-8') as f:
             f.write(text)
-    if a.json != '-' and (not a.report or a.report != '-'):
-        if not a.report:
-            sys.stdout.write(text)
+    if a.json != '-':
+        # With --report the full text goes to the file and stdout gets its '== ' summary lines.
+        sys.stdout.write(''.join(l + '\n' for l in out if l.startswith('== ')) if a.report else text)
     fail = bool(he_err) or (a.fail_on_english and bool(en_err))
     return 1 if fail else 0
 

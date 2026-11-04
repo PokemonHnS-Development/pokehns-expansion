@@ -2,6 +2,7 @@ import json
 import os
 import subprocess
 import sys
+import tempfile
 import unittest
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -98,6 +99,21 @@ class AuditTest(unittest.TestCase):
         self.assertIn('== translated strings:', out.stdout)
         self.assertIn('TestTown_Text_TooWide', out.stdout)
         self.assertEqual(out.returncode, 1)
+
+    def test_report_file(self):
+        with tempfile.TemporaryDirectory(prefix='hns_audit_report_') as d:
+            report = os.path.join(d, 'not', 'yet', 'audit.txt')
+            out = subprocess.run([sys.executable, os.path.join(TOOLS, 'audit.py'), '--tree', self.he, '--fonts-tree',
+                                  self.he, '--hebrew-widths', 'table', '--report', report],
+                                 capture_output=True, text=True)
+            self.assertEqual(out.returncode, 1, out.stderr)
+            with open(report, encoding='utf-8') as f:
+                text = f.read()
+        # The folder was created; the file has the whole report, stdout only its summary lines.
+        self.assertIn('TestTown_Text_TooWide', text)
+        summary = [l for l in text.splitlines() if l.startswith('== ')]
+        self.assertEqual(len(summary), 2)
+        self.assertEqual(out.stdout.splitlines(), summary)
 
 
 if __name__ == '__main__':
