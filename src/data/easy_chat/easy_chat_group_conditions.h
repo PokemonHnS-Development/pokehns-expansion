@@ -283,7 +283,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Conditions[] = {
     },
     [EC_INDEX(EC_WORD_NONE)] =
     {
-        .text = COMPOUND_STRING("ללא"),
+        .text = COMPOUND_STRING("אף אחד"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_NONE),
         .enabled = TRUE,
     },

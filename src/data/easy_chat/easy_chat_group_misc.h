@@ -121,7 +121,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Misc[] = {
     },
     [EC_INDEX(EC_WORD_THAT)] =
     {
-        .text = COMPOUND_STRING("ההוא"),
+        .text = COMPOUND_STRING("זאת"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_OPPOSITE),
         .enabled = TRUE,
     },
@@ -241,7 +241,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Misc[] = {
     },
     [EC_INDEX(EC_WORD_LEFT)] =
     {
-        .text = COMPOUND_STRING("שמאל"),
+        .text = COMPOUND_STRING("השאיר"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_WHERE),
         .enabled = TRUE,
     },

@@ -319,7 +319,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Hobbies[] = {
     },
     [EC_INDEX(EC_WORD_LOOK)] =
     {
-        .text = COMPOUND_STRING("מראה"),
+        .text = COMPOUND_STRING("תראה"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_WALK),
         .enabled = TRUE,
     },

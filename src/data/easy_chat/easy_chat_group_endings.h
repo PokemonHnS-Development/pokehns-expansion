@@ -1,7 +1,7 @@
 const struct EasyChatWordInfo gEasyChatGroup_Endings[] = {
     [EC_INDEX(EC_WORD_WILL)] =
     {
-        .text = COMPOUND_STRING("עתיד"),
+        .text = COMPOUND_STRING("עומד"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_A),
         .enabled = TRUE,
     },
@@ -121,7 +121,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Endings[] = {
     },
     [EC_INDEX(EC_WORD_WON_T)] =
     {
-        .text = COMPOUND_STRING("לא עתיד"),
+        .text = COMPOUND_STRING("לא עומד"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_DOESN_T),
         .enabled = TRUE,
     },

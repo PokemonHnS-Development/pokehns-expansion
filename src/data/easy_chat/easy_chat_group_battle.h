@@ -367,7 +367,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Battle[] = {
     },
     [EC_INDEX(EC_WORD_RULE)] =
     {
-        .text = COMPOUND_STRING("חוק"),
+        .text = COMPOUND_STRING("שולט"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_WINS),
         .enabled = TRUE,
     },
