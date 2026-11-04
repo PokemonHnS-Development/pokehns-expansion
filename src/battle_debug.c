@@ -781,7 +781,7 @@ static void PutMovesPointsText(struct BattleDebugMenu *data)
     {
         struct Pokemon *party = GetBattlerParty(data->aiBattlerId);
         u32 switchMon = GetMonData(&party[gAiLogicData->mostSuitableMonId[data->aiBattlerId]], MON_DATA_SPECIES);
-        AddTextPrinterParameterized3(data->aiMovesWindowId, FONT_NORMAL, 74, 79, sTextColorTable[COLORID_RED], 0, COMPOUND_STRING("מחליף אל "));
+        AddTextPrinterParameterized3(data->aiMovesWindowId, FONT_NORMAL, 74, 79, sTextColorTable[COLORID_RED], 0, COMPOUND_STRING("עובר לפוקימון "));
         AddTextPrinterParameterized3(data->aiMovesWindowId, FONT_NORMAL, 74 + 68, 79, sTextColorTable[COLORID_RED], 0, gSpeciesInfo[switchMon].speciesName);
     }
 
@@ -2221,10 +2221,10 @@ static const u8 *const sHoldEffectNames[HOLD_EFFECT_COUNT] =
     [HOLD_EFFECT_CONFUSE_BITTER]   = COMPOUND_STRING("בלבול מר"),
     [HOLD_EFFECT_CONFUSE_SOUR]     = COMPOUND_STRING("בלבול חמוץ"),
     [HOLD_EFFECT_ATTACK_UP]        = COMPOUND_STRING("התקפה +"),
-    [HOLD_EFFECT_DEFENSE_UP]       = COMPOUND_STRING("העלאת הגנה"),
+    [HOLD_EFFECT_DEFENSE_UP]       = COMPOUND_STRING("הגנה +"),
     [HOLD_EFFECT_SPEED_UP]         = COMPOUND_STRING("מהירות +"),
     [HOLD_EFFECT_SP_ATTACK_UP]     = COMPOUND_STRING("התק' מ' +"),
-    [HOLD_EFFECT_SP_DEFENSE_UP]    = COMPOUND_STRING("העלאת הגנ' מ'"),
+    [HOLD_EFFECT_SP_DEFENSE_UP]    = COMPOUND_STRING("הגנ' מ' +"),
     [HOLD_EFFECT_CRITICAL_UP]      = COMPOUND_STRING("קריטיות +"),
     [HOLD_EFFECT_RANDOM_STAT_UP]   = COMPOUND_STRING("נתון מקרי +"),
     [HOLD_EFFECT_EVASION_UP]       = COMPOUND_STRING("התחמקות +"),
@@ -2232,7 +2232,7 @@ static const u8 *const sHoldEffectNames[HOLD_EFFECT_COUNT] =
     [HOLD_EFFECT_MACHO_BRACE]      = COMPOUND_STRING("רצועת מאצ'ו"),
     [HOLD_EFFECT_EXP_SHARE]        = COMPOUND_STRING("חולק נסיון"),
     [HOLD_EFFECT_QUICK_CLAW]       = COMPOUND_STRING("טופר מהיר"),
-    [HOLD_EFFECT_FRIENDSHIP_UP]    = COMPOUND_STRING("העלאת חברות"),
+    [HOLD_EFFECT_FRIENDSHIP_UP]    = COMPOUND_STRING("חברות +"),
     [HOLD_EFFECT_MENTAL_HERB]      = COMPOUND_STRING("עשב נפשי"),
     [HOLD_EFFECT_CHOICE_BAND]      = COMPOUND_STRING("סרט בחירה"),
     [HOLD_EFFECT_FLINCH]           = COMPOUND_STRING("רתיעה"),
