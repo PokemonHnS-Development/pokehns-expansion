@@ -175,7 +175,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Speech[] = {
     },
     [EC_INDEX(EC_WORD_THAT_S)] =
     {
-        .text = COMPOUND_STRING("הרי זה"),
+        .text = COMPOUND_STRING("זה"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_LIE),
         .enabled = TRUE,
     },

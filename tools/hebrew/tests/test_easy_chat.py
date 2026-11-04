@@ -21,6 +21,12 @@ COMPARED = ['sInterviewPasswords', 'sMysteryGiftPhrase', 'sBerryMasterWifePhrase
 # ones. Either word prints the same phrase, and no compared word is among them. Any other shared
 # text fails, and so does a row that no longer matches the lists.
 SHARED_TEXTS = {
+    'אני': {'I', 'I_AM'},
+    'אתה': {'YOU', 'YOU_RE'},
+    'הוא': {'HE', 'IS'},
+    'הם': {'THEY', 'ARE'},
+    'זה': {'THIS', 'THAT_S', 'IT'},
+    'לא': {'NOT', 'NO', 'DON_T', 'AREN_T'},
 }
 
 

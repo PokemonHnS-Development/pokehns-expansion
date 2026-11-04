@@ -37,7 +37,7 @@ const struct EasyChatWordInfo gEasyChatGroup_People[] = {
     },
     [EC_INDEX(EC_WORD_YOU_RE)] =
     {
-        .text = COMPOUND_STRING("הינך"),
+        .text = COMPOUND_STRING("אתה"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_BOY),
         .enabled = TRUE,
     },
@@ -187,7 +187,7 @@ const struct EasyChatWordInfo gEasyChatGroup_People[] = {
     },
     [EC_INDEX(EC_WORD_AREN_T)] =
     {
-        .text = COMPOUND_STRING("אינם"),
+        .text = COMPOUND_STRING("לא"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_ME),
         .enabled = TRUE,
     },
@@ -247,7 +247,7 @@ const struct EasyChatWordInfo gEasyChatGroup_People[] = {
     },
     [EC_INDEX(EC_WORD_I_AM)] =
     {
-        .text = COMPOUND_STRING("הנני"),
+        .text = COMPOUND_STRING("אני"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_PLACE),
         .enabled = TRUE,
     },

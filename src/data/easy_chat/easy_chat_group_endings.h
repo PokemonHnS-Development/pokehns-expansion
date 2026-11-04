@@ -67,7 +67,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Endings[] = {
     },
     [EC_INDEX(EC_WORD_IS)] =
     {
-        .text = COMPOUND_STRING("הינו"),
+        .text = COMPOUND_STRING("הוא"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_BELONGS_TO),
         .enabled = TRUE,
     },
@@ -91,7 +91,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Endings[] = {
     },
     [EC_INDEX(EC_WORD_ARE)] =
     {
-        .text = COMPOUND_STRING("הינם"),
+        .text = COMPOUND_STRING("הם"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_COULD),
         .enabled = TRUE,
     },
@@ -139,7 +139,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Endings[] = {
     },
     [EC_INDEX(EC_WORD_DON_T)] =
     {
-        .text = COMPOUND_STRING("אל"),
+        .text = COMPOUND_STRING("לא"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_FOR),
         .enabled = TRUE,
     },
@@ -247,7 +247,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Endings[] = {
     },
     [EC_INDEX(EC_WORD_IT)] =
     {
-        .text = COMPOUND_STRING("את זה"),
+        .text = COMPOUND_STRING("זה"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_ON),
         .enabled = TRUE,
     },

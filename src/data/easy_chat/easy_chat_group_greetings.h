@@ -175,7 +175,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Greetings[] = {
     },
     [EC_INDEX(EC_WORD_NO)] =
     {
-        .text = COMPOUND_STRING("לא!"),
+        .text = COMPOUND_STRING("לא"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_SEE_YA),
         .enabled = TRUE,
     },
