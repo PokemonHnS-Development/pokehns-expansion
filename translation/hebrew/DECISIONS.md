@@ -73,7 +73,7 @@ Each entry is one open question from the review of the first release candidate: 
 | [Q131](#q131) | The battle debug menu shows three stat-up hold effects as 'העלאת X' and six as 'X +', and its 'switching to' label leaves a gap before the Pokémon it names. | A. 'X +' for all nine, and the 68 px label 'עובר לפוקימון ' | changed |
 | [Q132](#q132) | The link battle lines for the other player or the link partner sending out or withdrawing a Pokémon, and running, use the masculine verb whatever character that player chose. | A. Reword so the verb agrees with the Pokémon, as Q123 and Q127 did | changed |
 | [Q133](#q133) | Five Pokédex terms have Hebrew names with no official source: HISUI היסואי, MT. CORONET הר הנזר, Ultra Wormhole חור תולעת אולטרה, TEAM PLASMA צוות פלזמה, ROSE רוז. | A. Keep all five | no change |
-| [Q134](#q134) | 'psychic power' in Pokédex prose is כוח פסיכי in most entries and כוח על-חושי in nine. | A. כוח פסיכי and its forms in every entry; על-חושי stays for 'extrasensory' | changed |
+| [Q134](#q134) | 'psychic power' in Pokédex prose is כוח פסיכי in most entries and כוח על-חושי in nine. | A. כוח פסיכי and its forms in every entry; על-חושי stays in Kadabra's 'extrasensory' and in the move names that have it | changed |
 | [Q137](#q137) | In the Gen 4 battle interface the frostbite tag is a copy of the burn tag and reads כויה, as in English. | B. Redraw it as קור, the word of the H&S sheets | changed |
 
 ## K1
@@ -1672,10 +1672,10 @@ The English and the Japanese (ノーマル, スーパー, ハイパー, マス�
 | Where | Count | Rendering |
 |---|---|---|
 | Pokédex entries | 35 | פסיכי in 26; על-חושי in 9 (11 rows): Alolan Raichu, Golduck, Kadabra, Alakazam, Delphox, Espurr, female Meowstic, Pa'u Oricorio, Bruxish |
-| Move descriptions | 2 (Eerie Spell, Psyshield Bash) | פסיכי |
+| Move descriptions | 3 (Freezing Glare, Eerie Spell, Psyshield Bash) | פסיכי |
 | Dialogue | 10 lines (the Saffron gyms and the fighting dojo) | פסיכי |
 
-- על-חושי also renders other English words, which stay: Kadabra's 'extrasensory powers' (תפיסה על-חושית) and the PSY- move names (קרן על-חוש, הלם על-חושי, מכת על-חוש, כנף על-חושית, להב על-חוש).
+- על-חושי stays in Kadabra's 'extrasensory powers' (תפיסה על-חושית) and in the move names that already have it: PSYBEAM קרן על-חוש, PSYWAVE על-חוש, PSYSHOCK הלם על-חושי, PSYSTRIKE מכת על-חוש, ESPER WING כנף על-חושית and PSYBLADE להב על-חוש. Move names are not changed here. Other PSY- names already use פסיכי (PSYCHO CUT חיתוך פסיכי, PSYSHIELD BASH מכת מגן פסיכי), and the move EXTRASENSORY is חוש נוסף.
 - The type name is פסיכי. It is not changed here: TYPE_PSYCHIC is an inherited glossary row, and the type labels are drawn in the art (graphics/types/psychic.png). FireRed's own prose is mixed, and FireRed has since renamed its type to על-חושי.
 - The English ties the prose to the type in the same scenes (in Sabrina's gym, Sabrina's 'psychic powers' and the guide's 'PSYCHIC-type POKéMON').
 - כוחות פסיכיים is ordinary spoken Hebrew for a medium's powers (STYLE §1).
@@ -1684,10 +1684,10 @@ The English and the Japanese (ノーマル, スーパー, ハイパー, マス�
 | Option | How | Risk |
 |---|---|---|
 | A. פסיכי in prose | אנרגיה פסיכית, כוחות פסיכיים, כוח פסיכי, כוחו הפסיכי, ביכולות הפסיכיות in the eleven rows; a glossary term row. | Low. Eleven rows, each narrower; no row count changes. |
-| B. על-חושי in prose | Change 27 Pokédex rows, 10 dialogue lines and 2 move descriptions. | Two Pokédex rows over 224 px, and the prose no longer matches the type name. |
+| B. על-חושי in prose | Change 27 Pokédex rows, 10 dialogue lines and 3 move descriptions. | Two Pokédex rows over 224 px, and the prose no longer matches the type name. |
 | C. Keep the mix | No change. | The same English reads two ways. |
 
-**Chosen:** A. It is the form 38 of the 47 strings already had, the word of the type, and the smallest change. על-חושי stays for 'extrasensory' and in the PSY- move names.
+**Chosen:** A. It is the form 39 of the 48 strings already had, the word of the type, and the smallest change. על-חושי stays in Kadabra's 'extrasensory' and in the move names that already have it.
 
 *Changed:* `src/data/pokemon/species_info/gen_1_families.h`, `src/data/pokemon/species_info/gen_6_families.h`, `src/data/pokemon/species_info/gen_7_families.h`
 
