@@ -1,7 +1,7 @@
 const struct EasyChatWordInfo gEasyChatGroup_Endings[] = {
     [EC_INDEX(EC_WORD_WILL)] =
     {
-        .text = COMPOUND_STRING("WILL"),
+        .text = COMPOUND_STRING("עתיד"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_A),
         .enabled = TRUE,
     },
@@ -13,13 +13,13 @@ const struct EasyChatWordInfo gEasyChatGroup_Endings[] = {
     },
     [EC_INDEX(EC_WORD_OR)] =
     {
-        .text = COMPOUND_STRING("OR"),
+        .text = COMPOUND_STRING("או"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_AFTER),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_TIMES)] =
     {
-        .text = COMPOUND_STRING("TIMES"),
+        .text = COMPOUND_STRING("פעמים"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_ALL),
         .enabled = TRUE,
     },
@@ -37,19 +37,19 @@ const struct EasyChatWordInfo gEasyChatGroup_Endings[] = {
     },
     [EC_INDEX(EC_WORD_BE)] =
     {
-        .text = COMPOUND_STRING("BE"),
+        .text = COMPOUND_STRING("להיות"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_ARE),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_GIMME)] =
     {
-        .text = COMPOUND_STRING("GIMME"),
+        .text = COMPOUND_STRING("תביא"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_AS),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_COULD)] =
     {
-        .text = COMPOUND_STRING("COULD"),
+        .text = COMPOUND_STRING("היה יכול"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_AT),
         .enabled = TRUE,
     },
@@ -61,13 +61,13 @@ const struct EasyChatWordInfo gEasyChatGroup_Endings[] = {
     },
     [EC_INDEX(EC_WORD_WOULD)] =
     {
-        .text = COMPOUND_STRING("WOULD"),
+        .text = COMPOUND_STRING("עשוי"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_BEFORE),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_IS)] =
     {
-        .text = COMPOUND_STRING("IS"),
+        .text = COMPOUND_STRING("הינו"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_BELONGS_TO),
         .enabled = TRUE,
     },
@@ -79,91 +79,91 @@ const struct EasyChatWordInfo gEasyChatGroup_Endings[] = {
     },
     [EC_INDEX(EC_WORD_LET_S)] =
     {
-        .text = COMPOUND_STRING("LET'S"),
+        .text = COMPOUND_STRING("בואו"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_CAN),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_OTHER)] =
     {
-        .text = COMPOUND_STRING("OTHER"),
+        .text = COMPOUND_STRING("אחר"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_CAN_T),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_ARE)] =
     {
-        .text = COMPOUND_STRING("ARE"),
+        .text = COMPOUND_STRING("הינם"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_COULD),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_WAS)] =
     {
-        .text = COMPOUND_STRING("WAS"),
+        .text = COMPOUND_STRING("היה"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_DID),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_WERE)] =
     {
-        .text = COMPOUND_STRING("WERE"),
+        .text = COMPOUND_STRING("היו"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_DIDN_T),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_THOSE)] =
     {
-        .text = COMPOUND_STRING("THOSE"),
+        .text = COMPOUND_STRING("אלו"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_DO),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_ISN_T)] =
     {
-        .text = COMPOUND_STRING("ISN'T"),
+        .text = COMPOUND_STRING("אינו"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_DOES),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_WON_T)] =
     {
-        .text = COMPOUND_STRING("WON'T"),
+        .text = COMPOUND_STRING("לא עתיד"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_DOESN_T),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_CAN_T)] =
     {
-        .text = COMPOUND_STRING("CAN'T"),
+        .text = COMPOUND_STRING("לא יכול"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_DON_T),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_CAN)] =
     {
-        .text = COMPOUND_STRING("CAN"),
+        .text = COMPOUND_STRING("יכול"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_EVER),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_DON_T)] =
     {
-        .text = COMPOUND_STRING("DON'T"),
+        .text = COMPOUND_STRING("אל"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_FOR),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_DO)] =
     {
-        .text = COMPOUND_STRING("DO"),
+        .text = COMPOUND_STRING("לעשות"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_GIMME),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_DOES)] =
     {
-        .text = COMPOUND_STRING("DOES"),
+        .text = COMPOUND_STRING("עושה"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_HAVE),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_WHOM)] =
     {
-        .text = COMPOUND_STRING("WHOM"),
+        .text = COMPOUND_STRING("את מי"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_HAVEN_T),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_WHICH)] =
     {
-        .text = COMPOUND_STRING("WHICH"),
+        .text = COMPOUND_STRING("איזה"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_IN),
         .enabled = TRUE,
     },
@@ -181,7 +181,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Endings[] = {
     },
     [EC_INDEX(EC_WORD_HAVE)] =
     {
-        .text = COMPOUND_STRING("HAVE"),
+        .text = COMPOUND_STRING("יש"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_ISN_T),
         .enabled = TRUE,
     },
@@ -193,103 +193,103 @@ const struct EasyChatWordInfo gEasyChatGroup_Endings[] = {
     },
     [EC_INDEX(EC_WORD_A)] =
     {
-        .text = COMPOUND_STRING("A"),
+        .text = COMPOUND_STRING("אחד"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_IT),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_AN)] =
     {
-        .text = COMPOUND_STRING("AN"),
+        .text = COMPOUND_STRING("אחת"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_LET_S),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_NOT)] =
     {
-        .text = COMPOUND_STRING("NOT"),
+        .text = COMPOUND_STRING("לא"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_LIKE),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_THERE)] =
     {
-        .text = COMPOUND_STRING("THERE"),
+        .text = COMPOUND_STRING("שם"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_LIKELY_TO),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_OK_QUES)] =
     {
-        .text = COMPOUND_STRING("OK?"),
+        .text = COMPOUND_STRING("בסדר?"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_MAYBE),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_SO)] =
     {
-        .text = COMPOUND_STRING("SO"),
+        .text = COMPOUND_STRING("כל כך"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_NOT),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_MAYBE)] =
     {
-        .text = COMPOUND_STRING("MAYBE"),
+        .text = COMPOUND_STRING("אולי"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_OF),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_ABOUT)] =
     {
-        .text = COMPOUND_STRING("ABOUT"),
+        .text = COMPOUND_STRING("לגבי"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_OFF),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_OVER)] =
     {
-        .text = COMPOUND_STRING("OVER"),
+        .text = COMPOUND_STRING("נגמר"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_OK_QUES),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_IT)] =
     {
-        .text = COMPOUND_STRING("IT"),
+        .text = COMPOUND_STRING("את זה"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_ON),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_ALL)] =
     {
-        .text = COMPOUND_STRING("ALL"),
+        .text = COMPOUND_STRING("הכול"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_ONCE),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_FOR)] =
     {
-        .text = COMPOUND_STRING("FOR"),
+        .text = COMPOUND_STRING("בשביל"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_OR),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_ON)] =
     {
-        .text = COMPOUND_STRING("ON"),
+        .text = COMPOUND_STRING("על"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_OTHER),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_OFF)] =
     {
-        .text = COMPOUND_STRING("OFF"),
+        .text = COMPOUND_STRING("הלאה"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_OUT),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_AS)] =
     {
-        .text = COMPOUND_STRING("AS"),
+        .text = COMPOUND_STRING("בתור"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_OVER),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_TO)] =
     {
-        .text = COMPOUND_STRING("TO"),
+        .text = COMPOUND_STRING("ל"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_SINCE),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_WITH)] =
     {
-        .text = COMPOUND_STRING("WITH"),
+        .text = COMPOUND_STRING("עם"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_SO),
         .enabled = TRUE,
     },
@@ -301,19 +301,19 @@ const struct EasyChatWordInfo gEasyChatGroup_Endings[] = {
     },
     [EC_INDEX(EC_WORD_EVER)] =
     {
-        .text = COMPOUND_STRING("EVER"),
+        .text = COMPOUND_STRING("אי פעם"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_THERE),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_SINCE)] =
     {
-        .text = COMPOUND_STRING("SINCE"),
+        .text = COMPOUND_STRING("מאז"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_THOSE),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_OF)] =
     {
-        .text = COMPOUND_STRING("OF"),
+        .text = COMPOUND_STRING("של"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_TIMES),
         .enabled = TRUE,
     },
@@ -325,37 +325,37 @@ const struct EasyChatWordInfo gEasyChatGroup_Endings[] = {
     },
     [EC_INDEX(EC_WORD_AT)] =
     {
-        .text = COMPOUND_STRING("AT"),
+        .text = COMPOUND_STRING("ב"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_TOO),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_IN)] =
     {
-        .text = COMPOUND_STRING("IN"),
+        .text = COMPOUND_STRING("בתוך"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_WAS),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_OUT)] =
     {
-        .text = COMPOUND_STRING("OUT"),
+        .text = COMPOUND_STRING("החוצה"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_WASN_T),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_TOO)] =
     {
-        .text = COMPOUND_STRING("TOO"),
+        .text = COMPOUND_STRING("מדי"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_WERE),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_LIKE)] =
     {
-        .text = COMPOUND_STRING("LIKE"),
+        .text = COMPOUND_STRING("כמו"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_WEREN_T),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_DID)] =
     {
-        .text = COMPOUND_STRING("DID"),
+        .text = COMPOUND_STRING("עשה"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_WHICH),
         .enabled = TRUE,
     },
@@ -379,7 +379,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Endings[] = {
     },
     [EC_INDEX(EC_WORD_AFTER)] =
     {
-        .text = COMPOUND_STRING("AFTER"),
+        .text = COMPOUND_STRING("אחרי"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_WILL_BE_HERE),
         .enabled = TRUE,
     },
@@ -391,19 +391,19 @@ const struct EasyChatWordInfo gEasyChatGroup_Endings[] = {
     },
     [EC_INDEX(EC_WORD_WHILE)] =
     {
-        .text = COMPOUND_STRING("WHILE"),
+        .text = COMPOUND_STRING("בזמן ש"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_WITHOUT),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_THAN)] =
     {
-        .text = COMPOUND_STRING("THAN"),
+        .text = COMPOUND_STRING("מאשר"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_WON_T),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_ONCE)] =
     {
-        .text = COMPOUND_STRING("ONCE"),
+        .text = COMPOUND_STRING("פעם"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_WONDER),
         .enabled = TRUE,
     },
