@@ -283,7 +283,7 @@ static const u8 sText_Dot[] = _(".");
 static const u8 sText_NewLine[] = _("\n");
 static const u8 sText_Ranking[] = _("דירוג");
 static const u8 sText_TheLevelIs[] = _("הרמה היא ");
-static const u8 sText_TheFeelIs[] = _(", והמרקם הוא ");
+static const u8 sText_TheFeelIs[] = _(", והתחושה היא ");
 static const u8 sText_Dot2[] = _(".");
 
 static const u8 sText_SavingDontTurnOff2[] = _("שומר…\nאין לכבות את המכשיר.");

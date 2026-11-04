@@ -7070,3 +7070,4 @@ term,TERM_CONTEST_RANK_NORMAL,NORMAL (contest rank),,נורמל,proposed,"a rank
 term,TERM_CONTEST_RANK_SUPER,SUPER (contest rank),,סופר,proposed,"as used since the first translation (דרגת סופר); see DECISIONS.md Q126"
 term,TERM_CONTEST_RANK_HYPER,HYPER (contest rank),,היפר,proposed,"as used since the first translation (דרגת היפר); see DECISIONS.md Q126"
 term,TERM_CONTEST_RANK_MASTER,MASTER (contest rank),,מאסטר,proposed,"as used since the first translation (דרגת מאסטר); see DECISIONS.md Q126"
+term,TERM_POKEBLOCK_FEEL,FEEL (Pokéblock),,תחושה,proposed,"the label on the Pokéblock case (graphics/pokeblock/menu.png) and the Berry Blender result line (src/berry_blender.c sText_TheFeelIs: והתחושה היא); feminine, so היא"
