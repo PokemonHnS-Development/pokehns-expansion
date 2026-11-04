@@ -5,7 +5,8 @@ Translators never edit source files. They get a JSON chunk of units, fill in "he
 writes the Hebrew back into the tree, refusing anything that would change more than the string.
 
   units.py extract FILE... [--all-labels] > units.json      one unit per string
-  units.py apply UNITS.json [UNITS.json ...] [--dry-run]     write "he" back into the tree
+  units.py apply UNITS.json [UNITS.json ...] [--dry-run] [--overwrite-hebrew]
+                                                              write "he" back into the tree
   units.py status FILE...                                     how many units are translated
 
 A unit:
@@ -20,11 +21,16 @@ the source. Writing back splits it into one .string line per \\n, \\l or \\p, li
 C text: the literal content (adjacent literals joined). Writing back keeps the macro and splits
 after each \\n onto its own line when the English did.
 
+apply refuses a unit whose tree string no longer matches its "en": English that changed, or Hebrew
+that differs from its "he" (a later fix that an old chunk would undo). --overwrite-hebrew replaces
+such Hebrew anyway.
+
 The tree is HNS_TREE (this repository) unless --tree is given.
 """
 import argparse, csv, json, os, re, sys
 
 import paths
+from drift import DROPPABLE_TOKENS, same_tokens  # the CI gate's token rule
 
 TREE = paths.TREE
 LIVE_LABELS = paths.LIVE_LABELS
@@ -32,7 +38,7 @@ C_STRINGS = paths.C_STRINGS
 GLOSSARY = paths.GLOSSARY
 
 TOKEN_RE = re.compile(r'\{[^}]*\}')
-DROPPABLE_TOKENS = {'{POKE}', '{PKMN}', '{POKEBLOCK}'}
+HEBREW_RE = re.compile(r'[\u0590-\u05FF]')
 
 # ---------------------------------------------------------------------------------------------
 # Script files
@@ -154,7 +160,18 @@ def extract_script(path, rel, all_labels):
     return units
 
 
-def apply_script(path, rel, units, dry):
+def stale(u, tree_text, overwrite_hebrew):
+    """Why unit u must not replace tree_text, the string now in the tree, or None."""
+    if tree_text == u['en']:
+        return None
+    if not HEBREW_RE.search(tree_text):
+        return 'changed in the tree since extraction'
+    if tree_text != u['he'] and not overwrite_hebrew:
+        return 'already holds different Hebrew in the tree (--overwrite-hebrew replaces it)'
+    return None
+
+
+def apply_script(path, rel, units, dry, overwrite_hebrew=False):
     text = open(path, encoding='utf-8').read()
     lines, blocks = parse_script(text)
     by_key = {u['key']: u for u in units}
@@ -164,8 +181,9 @@ def apply_script(path, rel, units, dry):
         u = by_key.get(key)
         if not u or not u.get('he'):
             continue
-        if u['en'] != joined and not re.search(r'[\u0590-\u05FF]', joined):
-            raise SystemExit('%s: %s changed in the tree since extraction' % (rel, key))
+        why = stale(u, joined, overwrite_hebrew)
+        if why:
+            raise SystemExit('%s: %s %s' % (rel, key, why))
         check_unit(u)
         payloads = split_script_text(u['he'])
         new = ['%s.string "%s"' % (indent, p) for p in payloads]
@@ -251,7 +269,7 @@ def c_escape_ok(s):
     return True
 
 
-def apply_c(path, rel, units, dry):
+def apply_c(path, rel, units, dry, overwrite_hebrew=False):
     text = open(path, encoding='utf-8').read()
     by_idx = {}
     for u in units:
@@ -266,8 +284,9 @@ def apply_c(path, rel, units, dry):
         u = by_idx.get(idx)
         if not u:
             continue
-        if u['en'] != joined and not re.search(r'[\u0590-\u05FF]', joined):
-            raise SystemExit('%s: literal #%d (line %d) changed since extraction' % (rel, idx, line_no))
+        why = stale(u, joined, overwrite_hebrew)
+        if why:
+            raise SystemExit('%s: literal #%d (line %d) %s' % (rel, idx, line_no, why))
         check_unit(u)
         if not c_escape_ok(u['he']):
             raise SystemExit('%s: unit %s has a bare quote or bad escape' % (rel, u['id']))
@@ -300,7 +319,7 @@ def apply_c(path, rel, units, dry):
 def check_unit(u):
     t_en = [t for t in TOKEN_RE.findall(u['en']) if t not in DROPPABLE_TOKENS]
     t_he = [t for t in TOKEN_RE.findall(u['he']) if t not in DROPPABLE_TOKENS]
-    if t_en != t_he:
+    if not same_tokens(t_en, t_he):
         raise SystemExit('TOKENS %s: %s -> %s' % (u['id'], t_en, t_he))
     if u['kind'] == 'script' and u['en'].endswith('$') != u['he'].endswith('$'):
         raise SystemExit('TERMINATOR %s' % u['id'])
@@ -325,7 +344,7 @@ def extract(files, tree, all_labels):
     return units
 
 
-def apply(unit_files, tree, dry):
+def apply(unit_files, tree, dry, overwrite_hebrew=False):
     by_file = {}
     for uf in unit_files:
         doc = json.load(open(uf, encoding='utf-8'))
@@ -335,9 +354,9 @@ def apply(unit_files, tree, dry):
     for rel, us in sorted(by_file.items()):
         path = os.path.join(tree, rel)
         if us[0]['kind'] == 'script':
-            n = apply_script(path, rel, us, dry)
+            n = apply_script(path, rel, us, dry, overwrite_hebrew)
         else:
-            n = apply_c(path, rel, us, dry)
+            n = apply_c(path, rel, us, dry, overwrite_hebrew)
         total += n
         print('%s %d unit(s) %s' % ('would write' if dry else 'wrote', n, rel))
     return total
@@ -350,11 +369,13 @@ def main():
     ap.add_argument('--tree', default=TREE)
     ap.add_argument('--all-labels', action='store_true', help='include dead labels/literals too')
     ap.add_argument('--dry-run', action='store_true')
+    ap.add_argument('--overwrite-hebrew', action='store_true',
+                    help='replace a tree string that already holds different Hebrew')
     a = ap.parse_args()
     if a.cmd == 'extract':
         json.dump(extract(a.paths, a.tree, a.all_labels), sys.stdout, ensure_ascii=False, indent=1)
     elif a.cmd == 'apply':
-        apply(a.paths, a.tree, a.dry_run)
+        apply(a.paths, a.tree, a.dry_run, a.overwrite_hebrew)
     else:
         us = extract(a.paths, a.tree, False)
         heb = sum(1 for u in us if re.search(r'[֐-׿]', u['en']))

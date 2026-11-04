@@ -4,7 +4,7 @@
 For each file (path relative to the repo root) it compares the translation tree with the English
 reference tree and reports:
   STRUCTURE  anything outside string contents changed (script commands, labels, C code, JSON keys,
-             non-text literals such as INCBIN paths)
+             non-text literals such as INCBIN paths, every .party line but a trainer's Name: value)
   TOKENS     a string's {PLACEHOLDER}/{CONTROL} sequence differs from English (order matters, except
              among the battle buffers {B_BUFF1}..{B_BUFF3})
   TERMINATOR a text block gained or lost its '$'
@@ -14,8 +14,9 @@ reference tree and reports:
   LATIN      a translated string still holds a Latin word (warning; ignores tokens and known terms)
   UNTRANSLATED a string identical to English that contains English words (warning)
 
-Usage: drift.py [--en EN_ROOT] [--tree TREE_ROOT] [--strict] FILE...
+Usage: drift.py [--en EN_ROOT] [--tree TREE_ROOT] [--strict] [--quiet] FILE...
 EN_ROOT defaults to HNS_BASELINE, TREE_ROOT to HNS_TREE (tools/hebrew/paths.py).
+The last line is always 'drift: N files, F FAIL, W with warnings only', also with --quiet.
 Exit status is 1 if any error (not warning) was found.
 """
 import argparse, json, os, re, sys
@@ -35,13 +36,15 @@ REORDERABLE_TOKENS = {'{B_BUFF1}', '{B_BUFF2}', '{B_BUFF3}'}
 
 
 def same_tokens(t_en, t_tr):
-    def fixed(ts):
-        return [t for t in ts if t not in REORDERABLE_TOKENS]
+    """t_tr has the tokens of t_en in the same order, except that the battle buffers may trade
+    places with each other (never with another token)."""
+    def slots(ts):
+        return ['{B_BUFF}' if t in REORDERABLE_TOKENS else t for t in ts]
 
     def free(ts):
         return sorted(t for t in ts if t in REORDERABLE_TOKENS)
 
-    return fixed(t_en) == fixed(t_tr) and free(t_en) == free(t_tr)
+    return slots(t_en) == slots(t_tr) and free(t_en) == free(t_tr)
 
 
 LATIN_WORD_RE = re.compile(r'[A-Za-z][A-Za-z]+')
@@ -205,6 +208,24 @@ def split_json(text):
 TEXT_KEYS = {'name', 'description', 'pluralName', 'hebrew_name', 'text', 'title', 'desc', 'mapsec_name'}
 
 
+def split_party(text):
+    """A trainer file for tools/trainerproc: every line is skeleton, except that the value of a
+    trainer's 'Name: X' line (its name in battle) is a string, keyed by the trainer's '=== ID ==='."""
+    skeleton, strings = [], []
+    trainer = None
+    for line in text.split('\n'):
+        m = re.match(r'^===\s*(\S+)\s*===\s*$', line)
+        if m:
+            trainer = m.group(1)
+        m = re.match(r'^Name[ \t]*:[ \t]*(.*)$', line)
+        if m:
+            skeleton.append('Name: <text>')
+            strings.append((trainer or '#%d' % len(strings), m.group(1)))
+            continue
+        skeleton.append(line)
+    return skeleton, strings
+
+
 def split_file(path, text):
     if path.endswith('.inc') or path.endswith('.s'):
         return split_inc(text)
@@ -212,6 +233,8 @@ def split_file(path, text):
         return split_c(text)
     if path.endswith('.json'):
         return split_json(text)
+    if path.endswith('.party'):
+        return split_party(text)
     return text.split('\n'), []
 
 
@@ -285,12 +308,14 @@ def main():
     a = ap.parse_args()
     a.en = a.en or paths.need('BASELINE', 'pass --en')
     charmap = load_charmap(a.tree)
-    bad = 0
+    bad = warned = 0
     for f in a.files:
         f = os.path.relpath(os.path.abspath(f), a.tree) if os.path.isabs(f) else f
         errors, warnings = check(f, a.en, a.tree, charmap, a.strict)
         if errors:
             bad += 1
+        elif warnings:
+            warned += 1
         if errors or warnings or not a.quiet:
             print('%s %s' % ('FAIL' if errors else 'ok  ', f))
             for e in errors:
@@ -304,6 +329,8 @@ def main():
                 print('   w ... %d more warnings' % (len(other) - 40))
             for w in latin:
                 print('   w', w)
+    n = len(a.files)
+    print('drift: %d file%s, %d FAIL, %d with warnings only' % (n, '' if n == 1 else 's', bad, warned))
     sys.exit(1 if bad else 0)
 
 

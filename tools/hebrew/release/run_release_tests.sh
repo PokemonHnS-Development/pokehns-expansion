@@ -17,9 +17,11 @@
 # Environment (an empty variable counts as unset; tools/hebrew/paths.py resolves the ones it knows):
 #   HNS_RELEASE_WORKTREE  the worktree build_release.sh built in   default: ../pokehns-release
 #   HNS_EMU               the harness                              default: tools/hebrew/emu
-#   HNS_SAVES             the save ladder, ladder1_newgame.sav ... ladder6_postgame.sav   no default
+#   HNS_SAVES             the save ladder, ladder1_newgame.sav ... ladder6_postgame.sav, and
+#                         every save a screen tour starts from (start saves/NAME)   no default
 #   HNS_RUNNER            the hnsrun binary (emu/README.md)        default: tools/hebrew/emu/hnsrun
-#   HNS_UNITS             unit chunks the sweep takes its labels from (make_chunks.py all)
+#   HNS_UNITS             unit chunks the sweep takes its labels from (make_chunks.py all),
+#                         a folder for every batch of inventory.json
 #                                                                  default: $HNS_WORK/units
 #   HNS_EN_ROM            English ROM for the ROM sweep, its .elf next to it
 #                                                                  default: ../pokehns-en/pokehns.gba
@@ -89,12 +91,34 @@ done
 if [ -z "$SAVES" ]; then
   bad+=("HNS_SAVES is not set (the save ladder; emu/scripts/make_ladder.sh builds it)")
 else
-  for n in ladder1_newgame ladder2_badge1 ladder3_ecruteak ladder4_league ladder5_kanto ladder6_postgame; do
+  LADDER=" ladder1_newgame ladder2_badge1 ladder3_ecruteak ladder4_league ladder5_kanto ladder6_postgame "
+  for n in $LADDER; do
     need_file "$SAVES/$n.sav" "the save ladder, HNS_SAVES"
   done
+  # Every other save a screen tour starts from: 'start saves/NAME' as the first command of a tour
+  # in $EMU/tours (files starting with '_' are includes, not tours; hns.py tour_start).
+  while IFS= read -r s; do
+    case "$LADDER" in *" ${s%.sav} "*) continue ;; esac
+    need_file "$SAVES/$s" "a screen tour starts from it, HNS_SAVES"
+  done < <(awk 'FNR == 1 { seen = 0 } seen { next } { sub(/#.*/, "") }
+                NF { seen = 1; if ($1 == "start" && $2 ~ /^saves\//) print substr($2, 7) }' \
+               "$EMU"/tours/[!_]*.txt 2>/dev/null | sort -u)
 fi
 [ -x "$RUNNER" ] || bad+=("no hnsrun at ${RUNNER:-?} (build it from emu/hnsrun.c, emu/README.md; or set HNS_RUNNER)")
-ls "$UNITS"/*/*.json >/dev/null 2>&1 || bad+=("no unit chunks in ${UNITS:-?} (python3 tools/hebrew/make_chunks.py all; or set HNS_UNITS)")
+# make_chunks.py all writes one folder per batch of inventory.json; the sweep takes its labels from them.
+if ! ls "$UNITS"/*/*.json >/dev/null 2>&1; then
+  bad+=("no unit chunks in ${UNITS:-?} (python3 tools/hebrew/make_chunks.py all; or set HNS_UNITS)")
+else
+  INVENTORY="$(p DATA)/inventory.json"
+  if batches="$(python3 -c 'import json, sys
+print("\n".join(sorted({i["batch"] for i in json.load(open(sys.argv[1])) if i.get("batch")})))' "$INVENTORY" 2>/dev/null)"; then
+    for b in $batches; do
+      [ -d "$UNITS/$b" ] || bad+=("no folder $UNITS/$b for batch $b of $INVENTORY (python3 tools/hebrew/make_chunks.py all)")
+    done
+  else
+    bad+=("cannot read the batches of $INVENTORY (HNS_DATA)")
+  fi
+fi
 [ -x "$DEVKITARM/bin/arm-none-eabi-readelf" ] || bad+=("no $DEVKITARM/bin/arm-none-eabi-readelf (set DEVKITARM)")
 if [ -z "$EN_ROM" ]; then
   bad+=("no English ROM (set HNS_EN_ROM, or HNS_UPSTREAM to the English tree)")

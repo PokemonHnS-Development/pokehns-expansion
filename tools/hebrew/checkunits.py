@@ -5,7 +5,8 @@
 
 Per unit (skipping "fixed" name units):
   EMPTY       no Hebrew yet
-  TOKENS      {PLACEHOLDER}/{CONTROL} sequence differs from English ({POKE}/{PKMN}/{POKEBLOCK} may go)
+  TOKENS      {PLACEHOLDER}/{CONTROL} sequence differs from English (drift.py's rule: {POKE} {PKMN}
+              {POKEBLOCK} {ID} {NO} may go, {B_BUFF1}..{B_BUFF3} may change places)
   TERMINATOR  script text gained or lost its trailing $
   ESCAPE      a bare " or an unknown backslash escape (\\n \\l \\p only)
   CHARSET     a character the charmap cannot encode
@@ -21,9 +22,9 @@ import argparse, json, os, re, sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import paths  # noqa: E402
+from drift import DROPPABLE_TOKENS as DROPPABLE, same_tokens  # noqa: E402  the CI gate's token rule
 
 TOKEN_RE = re.compile(r'\{[^}]*\}')
-DROPPABLE = {'{POKE}', '{PKMN}', '{POKEBLOCK}'}
 LATIN_OK = {
     'PP', 'HP', 'TM', 'HM', 'Lv', 'LV', 'OK', 'ID', 'No', 'PC', 'TV', 'CD', 'GBA', 'EXP', 'IV', 'IVs',
     'EV', 'EVs', 'BP', 'GTS', 'HnS', 'DS', 'Wi', 'Fi', 'vs', 'VS', 'KO', 'SP', 'ATK', 'DEF', 'SPD',
@@ -48,26 +49,36 @@ try:
 except Exception:
     TW = None
 
-# Budgets by unit (the values in data/budgets.json), resolved by file/field patterns. Each entry:
-# (predicate, font, px per line, lines per page)
-DIALOGUE = ('FONT_NORMAL', 208, 2)  # 26-tile mirror width (src/menu.c InitStandardTextBoxWindows)
+with open(paths.BUDGETS, encoding='utf-8') as _f:
+    KINDS = json.load(_f)['kinds']
+
+
+def budget_kind(u):
+    """The budgets.json kind of the window that shows a unit's text, by file and field, or None."""
+    f, field, key = u['file'], u.get('field') or '', u.get('key') or ''
+    if u['kind'] == 'script':
+        return 'overworld_dialogue'
+    if f.endswith('battle_message.c'):
+        return 'battle_message'
+    if f.endswith('items.h') and (field == 'description' or key.endswith('Desc')):
+        return 'item_description'
+    if f.endswith('moves_info.h') and (field == 'description' or 'Description' in key):
+        return 'relearner_move_description'
+    if f.endswith('abilities.h') and field == 'description':
+        return 'dex_ability'
+    if '/species_info/' in f and field == 'description':
+        return 'dex_entry'
+    return None
 
 
 def budget_for(u):
-    f, field, key = u['file'], u.get('field') or '', u.get('key') or ''
-    if u['kind'] == 'script':
-        return DIALOGUE
-    if f.endswith('battle_message.c'):
-        return ('FONT_NORMAL', 208, 2)
-    if f.endswith('items.h') and (field == 'description' or key.endswith('Desc')):
-        return ('FONT_NORMAL', 102, 3)
-    if f.endswith('moves_info.h') and (field == 'description' or 'Description' in key):
-        return ('FONT_NARROW', 128, 2)
-    if f.endswith('abilities.h') and field == 'description':
-        return ('FONT_SMALL', 139, 1)
-    if '/species_info/' in f and field == 'description':
-        return ('FONT_NORMAL', 224, 3)
-    return None
+    """(font, px per line, lines per page, px of a line that ends in a prompt arrow), all from the
+    unit's budgets.json kind, or None."""
+    kind = budget_kind(u)
+    if not kind:
+        return None
+    b = KINDS[kind]
+    return b['font'], b['max_px_per_line'], b['max_lines'], b.get('prompt_line_px', b['max_px_per_line'])
 
 
 def digits(s):
@@ -104,7 +115,7 @@ def check(u):
         return ['EMPTY'], warns
     t_en = [t for t in TOKEN_RE.findall(en) if t not in DROPPABLE]
     t_he = [t for t in TOKEN_RE.findall(he) if t not in DROPPABLE]
-    if t_en != t_he:
+    if not same_tokens(t_en, t_he):
         errs.append('TOKENS %s -> %s' % (t_en, t_he))
     if u['kind'] == 'script' and en.endswith('$') != he.endswith('$'):
         errs.append('TERMINATOR')
@@ -126,10 +137,10 @@ def check(u):
     if bad:
         errs.append('CHARSET %r' % ''.join(bad))
     d_en, d_he = digits(en), digits(he)
-    if sorted(d_en) != sorted(d_he):
-        warns.append('DIGITS %s -> %s' % (d_en, d_he))
-    elif any(x[::-1] in d_he and x[::-1] != x and x not in d_he for x in d_en):
+    if any(x[::-1] in d_he and x[::-1] != x and x not in d_he for x in d_en):
         errs.append('DIGITS reversed %s -> %s' % (d_en, d_he))
+    elif sorted(d_en) != sorted(d_he):
+        warns.append('DIGITS %s -> %s' % (d_en, d_he))
     plain = TOKEN_RE.sub(' ', he).replace('\\n', ' ').replace('\\l', ' ').replace('\\p', ' ')
     has_heb = re.search(r'[֐-׿]', plain)
     words = [w for w in re.findall(r'[A-Za-zé]+', plain) if w not in LATIN_OK and len(w) > 1]
@@ -139,13 +150,13 @@ def check(u):
         warns.append('LATIN %s' % ' '.join(words[:6]))
     b = budget_for(u)
     if b:
-        font, px, max_lines = b
+        font, px, max_lines, prompt_px = b
         lines = measure_lines(he, font)
         if lines:
             pages = {}
             for page, row, width, prompt in lines:
                 pages.setdefault(page, []).append(row)
-                limit = px - 8 if (prompt and u['kind'] == 'script') else px
+                limit = prompt_px if prompt else px
                 if width > limit:
                     errs.append('WIDTH page %d line %d: %d px > %d' % (page, row, width, limit))
             # \l scrolls the box one line and keeps the row (src/text.c RENDER_STATE_SCROLL), so a

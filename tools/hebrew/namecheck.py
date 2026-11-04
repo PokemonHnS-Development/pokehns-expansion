@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""Validate glossary rows: encodable characters, byte limits per kind, duplicates within a kind.
+"""Validate glossary rows: encodable characters, byte limits per kind, duplicates within a kind, and
+(with --all) two glossary rows with the same kind and constant (DUPKEY), where one would hide the other.
 
 Usage:
   namecheck.py FILE.csv [FILE.csv ...]   check these chunk files (column proposed_hebrew)
@@ -99,12 +100,18 @@ def duplicates(rows):
 def main():
     args = sys.argv[1:]
     if args == ['--all']:
-        rows = {(r['kind'], r['constant']): r for r in csv.DictReader(open(paths.GLOSSARY, encoding='utf-8'))}
+        rows, dupkeys = {}, []
+        for r in csv.DictReader(open(paths.GLOSSARY, encoding='utf-8')):
+            key = (r['kind'], r['constant'])
+            if key in rows:
+                dupkeys.append('DUPKEY %s %s: "%s" and "%s" share a key; only the last is checked'
+                               % (key + (rows[key]['english'], r['english'])))
+            rows[key] = r
         for f in sorted(glob.glob(os.path.join(ROOT, 'glossary_done', '*.csv'))):
             for r in csv.DictReader(open(f, encoding='utf-8')):
                 rows[(r['kind'], r['constant'])] = r
         rows = list(rows.values())
-        probs = check_rows([r for r in rows if r.get('proposed_hebrew')], 'glossary')
+        probs = dupkeys + check_rows([r for r in rows if r.get('proposed_hebrew')], 'glossary')
         probs += duplicates(rows)
         todo = [r for r in rows if not (r.get('proposed_hebrew') or '').strip()]
         print('\n'.join(probs))

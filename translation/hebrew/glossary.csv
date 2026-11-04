@@ -5977,8 +5977,8 @@ trainer_name,TRNAME_BRUNO,BRUNO,ברונו,ברונו,inherited,FR match: Englis
 trainer_name,TRNAME_KAREN,KAREN,,קארן,proposed,3 trainer(s); translit; א so it does not read as the Hebrew name קרן; as KARL=קארל (FR name choices); reviewed
 trainer_name,TRNAME_KOGA,KOGA,קוגה,קוגה,inherited,FR match: English; 3 trainer(s)
 trainer_name,TRNAME_LANCE,LANCE,לאנס,לאנס,inherited,FR match: English; 4 trainer(s)
-trainer_name,TRNAME_,???,,,todo,3 trainer(s)
-trainer_name,TRNAME_,{B_RIVAL_NAME},,{B_RIVAL_NAME},proposed,"18 trainer(s); kept as is: placeholder token, filled with the rival's name at run time; reviewed"
+trainer_name,TRNAME_QUESTION_MARKS,???,,???,proposed,"3 trainer(s); kept as is: punctuation, the rival's name before the player learns it"
+trainer_name,TRNAME_B_RIVAL_NAME,{B_RIVAL_NAME},,{B_RIVAL_NAME},proposed,"18 trainer(s); kept as is: placeholder token, filled with the rival's name at run time; reviewed"
 trainer_name,TRNAME_RED,RED,רד,רד,inherited,FR match: English; 2 trainer(s)
 trainer_name,TRNAME_EUSINE,EUSINE,,יוסין,proposed,1 trainer(s); translit by sound /ˈjuːsiːn/; eu /ju/ = יו; reviewed
 trainer_name,TRNAME_GIOVANNI,GIOVANNI,ג'ובאני,ג'ובאני,inherited,FR match: English; 1 trainer(s)
