@@ -32,9 +32,9 @@ as unset.
 | `DEVKITPRO`, `DEVKITARM` | build, tests | `/opt/devkitpro`, `$DEVKITPRO/devkitARM` |
 | `CPATH`, `LIBRARY_PATH` | build (libpng for the host tools) | `/opt/homebrew/include`, `/opt/homebrew/lib` |
 | `HNS_EMU` | tests | `tools/hebrew/emu` |
-| `HNS_SAVES` | tests | none. The save ladder `ladder1_newgame.sav` ... `ladder6_postgame.sav` (`emu/README.md`). |
+| `HNS_SAVES` | tests | none. The save ladder `ladder1_newgame.sav` ... `ladder6_postgame.sav` (`emu/README.md`), and every save a screen tour starts from (`start saves/NAME` in `emu/tours/*.txt`). |
 | `HNS_RUNNER` | tests | `tools/hebrew/emu/hnsrun` (build it as described in `emu/README.md`) |
-| `HNS_UNITS` | tests (sweep labels) | `$HNS_WORK/units` |
+| `HNS_UNITS` | tests (sweep labels) | `$HNS_WORK/units`, with a folder for every batch of `data/inventory.json` (`make_chunks.py all`) |
 | `HNS_EN_ROM` | tests (ROM sweep) | `../pokehns-en/pokehns.gba`, with its `.elf` next to it |
 | `HNS_CORES` | tests | `$HNS_WORK/cores` |
 | `HNS_MGBA_CORE` | tests | `~/Library/Application Support/RetroArch/cores/mgba_libretro.dylib` |
