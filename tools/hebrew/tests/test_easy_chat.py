@@ -1,10 +1,12 @@
-"""The Easy Chat word lists against the Odd Egg interview: its passwords and its hint windows."""
+"""The Easy Chat word lists: one text per word, no Latin, the Hebrew order of the group lists, and
+the Odd Egg interview's passwords and hint windows."""
 import os
 import re
 import sys
 import unittest
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+import gen_ec_order  # noqa: E402
 import paths  # noqa: E402
 
 TREE = paths.TREE
@@ -46,6 +48,35 @@ def hint_lines(window):
     desc = block[block.index('.desc'):block.index('.headerFont')]
     joined = ''.join(re.findall(r'"((?:[^"\\]|\\.)*)"', desc))
     return joined.split('\\n')
+
+
+class Lists(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.groups = groups()
+
+    def test_no_two_enabled_words_print_the_same_text(self):
+        # English has no such pair, so a list never shows two equal entries.
+        seen = {}
+        for group, entries in self.groups.items():
+            for word, text, order, enabled in entries:
+                if enabled:
+                    if text in seen:
+                        self.fail('%s and %s both print %s' % (seen[text], word, text))
+                    seen[text] = word
+
+    def test_no_latin_letters_in_the_words(self):
+        for group, entries in self.groups.items():
+            for word, text, order, enabled in entries:
+                self.assertIsNone(re.search('[A-Za-z]', text), '%s: %s' % (word, text))
+
+    def test_hebrew_order_header_is_current(self):
+        # src/easy_chat.c lists a group in this order under TEXT_RTL; gen_ec_order.py writes it.
+        current, fresh = read(gen_ec_order.HEADER), gen_ec_order.render(TREE)
+        if current != fresh:
+            old, new = gen_ec_order.blocks(current), gen_ec_order.blocks(fresh)
+            stale = sorted(g for g in set(old) | set(new) if old.get(g) != new.get(g)) or ['the comment or table']
+            self.fail('%s is stale (%s); run tools/hebrew/gen_ec_order.py' % (gen_ec_order.HEADER, ', '.join(stale)))
 
 
 class OddEgg(unittest.TestCase):
