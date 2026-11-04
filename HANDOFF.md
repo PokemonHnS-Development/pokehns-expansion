@@ -100,9 +100,10 @@ as a cross-check, never as source text (`STYLE.md` §1).
 On GitHub (2026-11-05): `master` `167aa6d537`, `he/main` `85705e4bc9`, `he/renderer` `384104fb15`,
 `he/upstream-fixes` `f96cb7a4f9`, and 39 other `he/*` branches.
 
-The local branch `he/fix-screens` is merged into `he/main`. 16 other local-only branches
-(`he/wip-screens-*`, `he/fix-screens-r3`, `-r4`) have commits that `git cherry` does not find in
-`he/main`; they were probably squashed when merged (**unverified**). They are history only.
+The branch `he/fix-screens` is merged into `he/main`. Nine local-only branches
+(`he/wip-screens-r6` to `-r9`, `-r11`, `-r13`, `-r14`, `-r14b` and `-r17`) and the pushed
+`he/fix-screens-r3` and `-r4` have commits that `git cherry` does not find in `he/main`; they were
+probably squashed when merged (**unverified**). They are history only.
 
 ### 1.3 Worktrees the tools expect
 
@@ -1529,8 +1530,8 @@ and the round screenshots. Freeing that disk is the owner's call.
   English too; the cause was not looked into.
 - The out-of-bounds read behind Scott's shields could write through a stray pointer after a link
   Dodrio Berry Picking game (needs a link).
-- The 16 local-only `he/wip-screens-*` and `he/fix-screens-r3`/`-r4` branches were probably
-  squashed into `he/main`.
+- The nine local-only `he/wip-screens-*` branches and the pushed `he/fix-screens-r3`/`-r4` whose
+  commits `git cherry` does not find were probably squashed into `he/main` (section 1.2).
 - A native speaker's read. Reviewers asked for one on: the radio's adjective pairs
   (`src/data/text/radio_strings.h:54-69`), the Ultra Beast Pokédex entries
   (`src/data/pokemon/species_info/gen_7_families.h`), the Day Care take-back question
