@@ -1,43 +1,43 @@
 const struct EasyChatWordInfo gEasyChatGroup_People[] = {
     [EC_INDEX(EC_WORD_OPPONENT)] =
     {
-        .text = COMPOUND_STRING("יריב"),
+        .text = COMPOUND_STRING("מתחרה"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_ADULT),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_I)] =
     {
-        .text = COMPOUND_STRING("I"),
+        .text = COMPOUND_STRING("אני"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_ALLY),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_YOU)] =
     {
-        .text = COMPOUND_STRING("YOU"),
+        .text = COMPOUND_STRING("אתה"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_AREN_T),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_YOURS)] =
     {
-        .text = COMPOUND_STRING("YOURS"),
+        .text = COMPOUND_STRING("משלך"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_AUNT),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_SON)] =
     {
-        .text = COMPOUND_STRING("SON"),
+        .text = COMPOUND_STRING("בן"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_BABE),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_YOUR)] =
     {
-        .text = COMPOUND_STRING("YOUR"),
+        .text = COMPOUND_STRING("שלך"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_BEEN),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_YOU_RE)] =
     {
-        .text = COMPOUND_STRING("אתה"),
+        .text = COMPOUND_STRING("הינך"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_BOY),
         .enabled = TRUE,
     },
@@ -61,7 +61,7 @@ const struct EasyChatWordInfo gEasyChatGroup_People[] = {
     },
     [EC_INDEX(EC_WORD_UNCLE)] =
     {
-        .text = COMPOUND_STRING("UNCLE"),
+        .text = COMPOUND_STRING("דוד"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_DUDE),
         .enabled = TRUE,
     },
@@ -73,13 +73,13 @@ const struct EasyChatWordInfo gEasyChatGroup_People[] = {
     },
     [EC_INDEX(EC_WORD_BOY)] =
     {
-        .text = COMPOUND_STRING("BOY"),
+        .text = COMPOUND_STRING("נער"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_FATHER),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_ADULT)] =
     {
-        .text = COMPOUND_STRING("ADULT"),
+        .text = COMPOUND_STRING("מבוגר"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_FRIEND),
         .enabled = TRUE,
     },
@@ -103,7 +103,7 @@ const struct EasyChatWordInfo gEasyChatGroup_People[] = {
     },
     [EC_INDEX(EC_WORD_AUNT)] =
     {
-        .text = COMPOUND_STRING("AUNT"),
+        .text = COMPOUND_STRING("דודה"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_HE),
         .enabled = TRUE,
     },
@@ -115,25 +115,25 @@ const struct EasyChatWordInfo gEasyChatGroup_People[] = {
     },
     [EC_INDEX(EC_WORD_MAN)] =
     {
-        .text = COMPOUND_STRING("MAN"),
+        .text = COMPOUND_STRING("איש"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_HER),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_ME)] =
     {
-        .text = COMPOUND_STRING("ME"),
+        .text = COMPOUND_STRING("אותי"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_HERS),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_GIRL)] =
     {
-        .text = COMPOUND_STRING("GIRL"),
+        .text = COMPOUND_STRING("נערה"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_HIM),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_BABE)] =
     {
-        .text = COMPOUND_STRING("BABE"),
+        .text = COMPOUND_STRING("מותק"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_HIS),
         .enabled = TRUE,
     },
@@ -145,25 +145,25 @@ const struct EasyChatWordInfo gEasyChatGroup_People[] = {
     },
     [EC_INDEX(EC_WORD_HER)] =
     {
-        .text = COMPOUND_STRING("HER"),
+        .text = COMPOUND_STRING("אותה"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_I_AM),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_HIM)] =
     {
-        .text = COMPOUND_STRING("HIM"),
+        .text = COMPOUND_STRING("אותו"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_I_WAS),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_HE)] =
     {
-        .text = COMPOUND_STRING("HE"),
+        .text = COMPOUND_STRING("הוא"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_I_VE),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_PLACE)] =
     {
-        .text = COMPOUND_STRING("PLACE"),
+        .text = COMPOUND_STRING("מקום"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_IT_S),
         .enabled = TRUE,
     },
@@ -175,19 +175,19 @@ const struct EasyChatWordInfo gEasyChatGroup_People[] = {
     },
     [EC_INDEX(EC_WORD_HIS)] =
     {
-        .text = COMPOUND_STRING("HIS"),
+        .text = COMPOUND_STRING("שלו"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_LADY),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_HE_S)] =
     {
-        .text = COMPOUND_STRING("HE'S"),
+        .text = COMPOUND_STRING("הנו"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_MAN),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_AREN_T)] =
     {
-        .text = COMPOUND_STRING("לא"),
+        .text = COMPOUND_STRING("אינם"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_ME),
         .enabled = TRUE,
     },
@@ -199,7 +199,7 @@ const struct EasyChatWordInfo gEasyChatGroup_People[] = {
     },
     [EC_INDEX(EC_WORD_KID)] =
     {
-        .text = COMPOUND_STRING("KID"),
+        .text = COMPOUND_STRING("ילד"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_MR),
         .enabled = TRUE,
     },
@@ -211,13 +211,13 @@ const struct EasyChatWordInfo gEasyChatGroup_People[] = {
     },
     [EC_INDEX(EC_WORD_MR)] =
     {
-        .text = COMPOUND_STRING("MR."),
+        .text = COMPOUND_STRING("מר"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_MY),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_MRS)] =
     {
-        .text = COMPOUND_STRING("MRS."),
+        .text = COMPOUND_STRING("גב'"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_MYSELF),
         .enabled = TRUE,
     },
@@ -229,37 +229,37 @@ const struct EasyChatWordInfo gEasyChatGroup_People[] = {
     },
     [EC_INDEX(EC_WORD_I_WAS)] =
     {
-        .text = COMPOUND_STRING("I WAS"),
+        .text = COMPOUND_STRING("הייתי"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_OUR),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_TO_ME)] =
     {
-        .text = COMPOUND_STRING("TO ME"),
+        .text = COMPOUND_STRING("אליי"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_PARENT),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_MY)] =
     {
-        .text = COMPOUND_STRING("MY"),
+        .text = COMPOUND_STRING("שלי"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_PERSON),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_I_AM)] =
     {
-        .text = COMPOUND_STRING("I AM"),
+        .text = COMPOUND_STRING("הנני"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_PLACE),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_I_VE)] =
     {
-        .text = COMPOUND_STRING("I'VE"),
+        .text = COMPOUND_STRING("יש לי"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_RIVAL),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_WHO)] =
     {
-        .text = COMPOUND_STRING("WHO"),
+        .text = COMPOUND_STRING("מי"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_SHE),
         .enabled = TRUE,
     },
@@ -283,7 +283,7 @@ const struct EasyChatWordInfo gEasyChatGroup_People[] = {
     },
     [EC_INDEX(EC_WORD_WHOSE)] =
     {
-        .text = COMPOUND_STRING("WHOSE"),
+        .text = COMPOUND_STRING("של מי"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_SISTER),
         .enabled = TRUE,
     },
@@ -295,13 +295,13 @@ const struct EasyChatWordInfo gEasyChatGroup_People[] = {
     },
     [EC_INDEX(EC_WORD_IT_S)] =
     {
-        .text = COMPOUND_STRING("IT'S"),
+        .text = COMPOUND_STRING("זהו"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_SOMEONE),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_LADY)] =
     {
-        .text = COMPOUND_STRING("LADY"),
+        .text = COMPOUND_STRING("גברת"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_SON),
         .enabled = TRUE,
     },
@@ -313,7 +313,7 @@ const struct EasyChatWordInfo gEasyChatGroup_People[] = {
     },
     [EC_INDEX(EC_WORD_ALLY)] =
     {
-        .text = COMPOUND_STRING("ALLY"),
+        .text = COMPOUND_STRING("בן ברית"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_THEY),
         .enabled = TRUE,
     },
@@ -325,13 +325,13 @@ const struct EasyChatWordInfo gEasyChatGroup_People[] = {
     },
     [EC_INDEX(EC_WORD_DUDE)] =
     {
-        .text = COMPOUND_STRING("DUDE"),
+        .text = COMPOUND_STRING("אחי"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_THEY_RE),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_THEY)] =
     {
-        .text = COMPOUND_STRING("THEY"),
+        .text = COMPOUND_STRING("הם"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_THEY_VE),
         .enabled = TRUE,
     },
@@ -349,13 +349,13 @@ const struct EasyChatWordInfo gEasyChatGroup_People[] = {
     },
     [EC_INDEX(EC_WORD_THEIR)] =
     {
-        .text = COMPOUND_STRING("THEIR"),
+        .text = COMPOUND_STRING("שלהם"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_TO_THEM),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_THEY_RE)] =
     {
-        .text = COMPOUND_STRING("הם"),
+        .text = COMPOUND_STRING("הנם"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_TO_US),
         .enabled = TRUE,
     },
@@ -367,55 +367,55 @@ const struct EasyChatWordInfo gEasyChatGroup_People[] = {
     },
     [EC_INDEX(EC_WORD_WE)] =
     {
-        .text = COMPOUND_STRING("WE"),
+        .text = COMPOUND_STRING("אנחנו"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_UNCLE),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_BEEN)] =
     {
-        .text = COMPOUND_STRING("BEEN"),
+        .text = COMPOUND_STRING("כבר"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_WE),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_TO_US)] =
     {
-        .text = COMPOUND_STRING("TO US"),
+        .text = COMPOUND_STRING("אלינו"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_WE_RE),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_OUR)] =
     {
-        .text = COMPOUND_STRING("OUR"),
+        .text = COMPOUND_STRING("שלנו"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_WE_VE),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_WE_RE)] =
     {
-        .text = COMPOUND_STRING("WE'RE"),
+        .text = COMPOUND_STRING("אנו"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_WHO),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_RIVAL)] =
     {
-        .text = COMPOUND_STRING("RIVAL"),
+        .text = COMPOUND_STRING("יריב"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_WHO_IS),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_WE_VE)] =
     {
-        .text = COMPOUND_STRING("WE'VE"),
+        .text = COMPOUND_STRING("יש לנו"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_WHO_WAS),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_WOMAN)] =
     {
-        .text = COMPOUND_STRING("WOMAN"),
+        .text = COMPOUND_STRING("אישה"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_WHOSE),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_SHE)] =
     {
-        .text = COMPOUND_STRING("SHE"),
+        .text = COMPOUND_STRING("היא"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_WOMAN),
         .enabled = TRUE,
     },
@@ -433,19 +433,19 @@ const struct EasyChatWordInfo gEasyChatGroup_People[] = {
     },
     [EC_INDEX(EC_WORD_HERS)] =
     {
-        .text = COMPOUND_STRING("HERS"),
+        .text = COMPOUND_STRING("שלה"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_YOU_VE),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_SHE_IS)] =
     {
-        .text = COMPOUND_STRING("היא"),
+        .text = COMPOUND_STRING("הינה"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_YOUR),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_SOME)] =
     {
-        .text = COMPOUND_STRING("SOME"),
+        .text = COMPOUND_STRING("כמה"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_YOURS),
         .enabled = TRUE,
     },
