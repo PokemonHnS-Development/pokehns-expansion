@@ -61,6 +61,7 @@ runs from any working directory. The style guide and glossary are in `translatio
 | `checkunits.py` | validates translated chunks before they are applied |
 | `cliptour.py` | reads the RTL clip log of a clip build between harness steps (`hns.py tour --clip`) |
 | `drift.py` | checks that a translated file changed only inside its strings |
+| `flag_gates.py` | takes match calls and TV shows behind flags defined as 0, and labels that are not built (`--elf`), out of the live list of `data/live_labels.json`; `--check` exits 1 when the file is stale (CI) |
 | `fontcells.py` | shows, per Latin font, whether each glyph cell is blank and how wide it is (`fontcells.py TREE [HEX...]`) |
 | `gen_dex_alpha.py` | regenerates the Hebrew alphabetical Pokédex order from the glossary; `--check` exits 1 when the header is stale (CI) |
 | `glossary_widths.py` | glossary names wider than their screen budget and than the English name |
@@ -77,6 +78,12 @@ runs from any working directory. The style guide and glossary are in `translatio
 | `translit_stats.py` | statistics on FireRed transliteration choices, for `transliteration_rules.md` |
 | `units.py` | extracts strings into units and writes translations back |
 | `wrap.py` | wraps a Hebrew string to a kind's pixel budget |
+
+`fonts/` holds the Hebrew glyph designs and the installer that writes them into the nine fonts,
+`graphics/` the scripts that drew the Hebrew labels in `graphics/`, and `inventory/` the builder
+of `live_labels.json`, `inventory.json` and `c_strings.json`; each has a README. The font
+installer's checks need only the standard library, but `graphics/` and the font previews need
+Pillow, and `inventory/` needs numpy and devkitARM.
 
 `emu/` holds the headless mGBA harness (see `emu/README.md`). `data/` holds what the tools read
 at run time: `budgets.json` (pixel budgets per string kind), `live_labels.json` and
