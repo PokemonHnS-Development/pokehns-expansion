@@ -1597,7 +1597,7 @@ category,DEXCAT_BALLOON,Balloon,בלון,בלון,inherited,FR match: same speci
 category,DEXCAT_BAT,Bat,עטלף,עטלף,inherited,FR match: same species; 4 species
 category,DEXCAT_WEED,Weed,עשב,עשב,inherited,FR match: same species; 2 species
 category,DEXCAT_FLOWER,Flower,פרח,פרח,inherited,FR match: same species; 3 species
-category,DEXCAT_MUSHROOM,Mushroom,פטריה,פטריה,inherited,FR match: same species; FR has several renderings: פטריה ×2 / פטרייה ×2; 6 species
+category,DEXCAT_MUSHROOM,Mushroom,פטריה,פטרייה,proposed,"FR has several renderings: פטריה ×2 / פטרייה ×2; 6 species; spelled פטרייה like every other use of the word (TINY/BIG/BALM MUSHROOM פטרייה, WOODEAR פטריית עץ, the Pokédex entries), which resolves the FR split (transliteration_rules.md §7); also in the Arena Tycoon's Breloom line (BattleFrontier_Lounge2)"
 category,DEXCAT_INSECT,Insect,חרק,חרק,inherited,FR match: same species; 1 species
 category,DEXCAT_POISONMOTH,Poison Moth,עש רעיל,עש רעיל,inherited,FR match: same species; 2 species
 category,DEXCAT_MOLE,Mole,חפרפרת,חפרפרת,inherited,FR match: same species; 5 species
@@ -2267,7 +2267,7 @@ category,DEXCAT_BOSS,Boss,,בוס,proposed,1 species; as TRAINER_CLASS_BOSS_FRLG
 category,DEXCAT_TOXICMOUSE,Toxic Mouse,,עכבר רעיל,proposed,"1 species; Toxic = רעיל as in POISONGAS, POISONMOTH; reviewed"
 category,DEXCAT_TOXICMONKEY,Toxic Monkey,,קוף רעיל,proposed,1 species; reviewed
 category,DEXCAT_TUMBLEWEED,Tumbleweed,,שיח מתגלגל,proposed,2 species; meaning; reviewed
-category,DEXCAT_WOODEAR,Woodear,,פטריית עץ,proposed,2 species; wood ear is a tree fungus; chunk shared with MUSHROOM פטריה; reviewed
+category,DEXCAT_WOODEAR,Woodear,,פטריית עץ,proposed,2 species; wood ear is a tree fungus; chunk shared with MUSHROOM פטרייה; reviewed
 category,DEXCAT_AMBUSH,Ambush,,מארב,proposed,1 species; reviewed
 category,DEXCAT_SPICYPEPPER,Spicy Pepper,,פלפל חריף,proposed,2 species; reviewed
 category,DEXCAT_ROLLING,Rolling,,מגלגל,proposed,2 species; rolls a dung ball; reviewed
