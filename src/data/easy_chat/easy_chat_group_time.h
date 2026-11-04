@@ -1,7 +1,7 @@
 const struct EasyChatWordInfo gEasyChatGroup_Time[] = {
     [EC_INDEX(EC_WORD_FALL)] =
     {
-        .text = COMPOUND_STRING("FALL"),
+        .text = COMPOUND_STRING("סתיו"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_AGE),
         .enabled = TRUE,
     },
@@ -19,13 +19,13 @@ const struct EasyChatWordInfo gEasyChatGroup_Time[] = {
     },
     [EC_INDEX(EC_WORD_LAST)] =
     {
-        .text = COMPOUND_STRING("LAST"),
+        .text = COMPOUND_STRING("אחרון"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_ANOTHER),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_DAY)] =
     {
-        .text = COMPOUND_STRING("DAY"),
+        .text = COMPOUND_STRING("יום"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_BEGINNING),
         .enabled = TRUE,
     },
@@ -49,19 +49,19 @@ const struct EasyChatWordInfo gEasyChatGroup_Time[] = {
     },
     [EC_INDEX(EC_WORD_FOREVER)] =
     {
-        .text = COMPOUND_STRING("לנצח"),
+        .text = COMPOUND_STRING("לתמיד"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_DAYS),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_DAYS)] =
     {
-        .text = COMPOUND_STRING("DAYS"),
+        .text = COMPOUND_STRING("ימים"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_DAYTIME),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_END)] =
     {
-        .text = COMPOUND_STRING("END"),
+        .text = COMPOUND_STRING("סוף"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_EARLIER),
         .enabled = TRUE,
     },
@@ -79,7 +79,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Time[] = {
     },
     [EC_INDEX(EC_WORD_TODAY)] =
     {
-        .text = COMPOUND_STRING("TODAY"),
+        .text = COMPOUND_STRING("היום"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_FINAL),
         .enabled = TRUE,
     },
@@ -97,7 +97,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Time[] = {
     },
     [EC_INDEX(EC_WORD_LATER)] =
     {
-        .text = COMPOUND_STRING("LATER"),
+        .text = COMPOUND_STRING("אחר כך"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_FRIDAY),
         .enabled = TRUE,
     },
@@ -115,7 +115,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Time[] = {
     },
     [EC_INDEX(EC_WORD_TIME)] =
     {
-        .text = COMPOUND_STRING("TIME"),
+        .text = COMPOUND_STRING("זמן"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_MONDAY),
         .enabled = TRUE,
     },
@@ -133,49 +133,49 @@ const struct EasyChatWordInfo gEasyChatGroup_Time[] = {
     },
     [EC_INDEX(EC_WORD_SOON)] =
     {
-        .text = COMPOUND_STRING("SOON"),
+        .text = COMPOUND_STRING("בקרוב"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_NEARLY),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_START)] =
     {
-        .text = COMPOUND_STRING("START"),
+        .text = COMPOUND_STRING("להתחיל"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_NEXT),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_MONTH)] =
     {
-        .text = COMPOUND_STRING("MONTH"),
+        .text = COMPOUND_STRING("חודש"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_NIGHT),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_STOP)] =
     {
-        .text = COMPOUND_STRING("STOP"),
+        .text = COMPOUND_STRING("לעצור"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_NIGHTTIME),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_NOW)] =
     {
-        .text = COMPOUND_STRING("NOW"),
+        .text = COMPOUND_STRING("עכשיו"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_NOW),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_FINAL)] =
     {
-        .text = COMPOUND_STRING("FINAL"),
+        .text = COMPOUND_STRING("סופי"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_OLDEN),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_NEXT)] =
     {
-        .text = COMPOUND_STRING("NEXT"),
+        .text = COMPOUND_STRING("הבא"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_SATURDAY),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_AGE)] =
     {
-        .text = COMPOUND_STRING("AGE"),
+        .text = COMPOUND_STRING("גיל"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_SOMETIME),
         .enabled = TRUE,
     },
@@ -223,13 +223,13 @@ const struct EasyChatWordInfo gEasyChatGroup_Time[] = {
     },
     [EC_INDEX(EC_WORD_DAILY)] =
     {
-        .text = COMPOUND_STRING("DAILY"),
+        .text = COMPOUND_STRING("יומי"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_TIME),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_OLDEN)] =
     {
-        .text = COMPOUND_STRING("OLDEN"),
+        .text = COMPOUND_STRING("עתיק"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_TODAY),
         .enabled = TRUE,
     },
@@ -259,13 +259,13 @@ const struct EasyChatWordInfo gEasyChatGroup_Time[] = {
     },
     [EC_INDEX(EC_WORD_NIGHT)] =
     {
-        .text = COMPOUND_STRING("NIGHT"),
+        .text = COMPOUND_STRING("לילה"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_WINTER),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_WEEK)] =
     {
-        .text = COMPOUND_STRING("WEEK"),
+        .text = COMPOUND_STRING("שבוע"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_YESTERDAY),
         .enabled = TRUE,
     },
