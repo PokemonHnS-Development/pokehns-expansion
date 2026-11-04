@@ -67,6 +67,9 @@ jobs:
           python3 tools/hebrew/gen_ec_order.py --check
           python3 tools/hebrew/gen_ec_letters.py --check
 
+      - name: Labels behind flags defined as 0 are out of the live list
+        run: python3 tools/hebrew/flag_gates.py --check
+
       - name: Tool tests
         run: python3 -m unittest discover -s tools/hebrew/tests
 

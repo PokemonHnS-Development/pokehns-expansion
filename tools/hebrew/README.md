@@ -1,9 +1,11 @@
 # Hebrew translation tools
 
 Python 3 tools for translating Heart & Soul into Hebrew and checking the result. They use only the
-standard library, except `fontcells.py` (Pillow). The tools that read an ELF (`rom_sweep.py`, the
-harness in `emu/`) need devkitARM (`DEVKITARM`, default `/opt/devkitpro/devkitARM`). Every tool
-runs from any working directory. The style guide and glossary are in `translation/hebrew/`.
+standard library, except the ones that draw pictures, which need Pillow: `fontcells.py`, the font
+scripts in `fonts/` that draw, everything in `graphics/` and the review-sheet scripts in
+`emu/scripts/`. `inventory/` needs numpy. The tools that read an ELF (`rom_sweep.py`, the harness
+in `emu/`, `inventory/`) need devkitARM (`DEVKITARM`, default `/opt/devkitpro/devkitARM`). Every
+tool runs from any working directory. The style guide and glossary are in `translation/hebrew/`.
 
 ## Locations
 
@@ -64,6 +66,7 @@ runs from any working directory. The style guide and glossary are in `translatio
 | `checkunits.py` | validates translated chunks before they are applied |
 | `cliptour.py` | reads the RTL clip log of a clip build between harness steps (`hns.py tour --clip`) |
 | `drift.py` | checks that a translated file changed only inside its strings |
+| `flag_gates.py` | takes match calls, TV shows and PokéNews behind flags defined as 0, and labels that are not built (`--elf`), out of the live list of `data/live_labels.json`; `--check` exits 1 when the file is stale (CI) |
 | `fontcells.py` | shows, per Latin font, whether each glyph cell is blank and how wide it is (`fontcells.py TREE [HEX...]`) |
 | `gen_dex_alpha.py` | regenerates the Hebrew alphabetical Pokédex order from the glossary; `--check` exits 1 when the header is stale (CI) |
 | `gen_ec_order.py` | regenerates the Hebrew order of the Easy Chat group lists (`src/data/easy_chat/easy_chat_order_rtl.h`) from the word texts; `--check` exits 1 when it is stale (CI, and `tests/test_easy_chat.py`) |
@@ -82,6 +85,12 @@ runs from any working directory. The style guide and glossary are in `translatio
 | `translit_stats.py` | statistics on FireRed transliteration choices, for `transliteration_rules.md` |
 | `units.py` | extracts strings into units and writes translations back |
 | `wrap.py` | wraps a Hebrew string to a kind's pixel budget |
+
+`fonts/` holds the Hebrew glyph designs and the installer that writes them into the nine fonts,
+`graphics/` the scripts that drew the Hebrew labels in `graphics/`, and `inventory/` the builder
+of `live_labels.json`, `inventory.json` and `c_strings.json`; each has a README. The font
+installer's checks need only the standard library, but `graphics/` and the font previews need
+Pillow, and `inventory/` needs numpy and devkitARM.
 
 `emu/` holds the headless mGBA harness (see `emu/README.md`). `data/` holds what the tools read
 at run time: `budgets.json` (pixel budgets per string kind), `live_labels.json` and

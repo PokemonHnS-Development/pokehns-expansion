@@ -51,8 +51,9 @@ The scripts have only been run on macOS. The cross-core step loads `.dylib` core
 3. **The save ladder.** Build it as described in `../emu/README.md` (`scripts/make_ladder.sh`), then
    set `HNS_SAVES` to its folder.
 4. **The sweep's labels.** Run `python3 tools/hebrew/make_chunks.py all`, which writes
-   `build/hebrew/units`. This command gives the same 7,209 labels that release 0.2 was swept
-   with.
+   `build/hebrew/units`. This command gives 6,611 labels: the 7,209 that release 0.2 was swept
+   with, less the 451 match-call, TV and PokéNews lines behind flags defined as 0 and the 147
+   labels that are not assembled into the build (`tools/hebrew/flag_gates.py`).
 5. **Cross-core.** `run_release_tests.sh` builds the frontend from `tools/hebrew/emu/crosscore.c`
    with `cc -O2` into `RCDIR/tests/bin` on every run, so nothing is installed for it. Put `vbam`,
    `vba_next`, `gpsp`, `mednafen_gba` and `skyemu` `_libretro.dylib` in `build/hebrew/cores`. The

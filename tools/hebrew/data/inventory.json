@@ -5519,14 +5519,14 @@
  {
   "file": "data/maps/PokemonLeague_BrunosRoom_Frlg/scripts.inc",
   "kind": "map_script_frlg",
-  "strings": 4,
+  "strings": 1,
   "reachable": true,
   "batch": "B23",
   "priority": 3,
   "notes": "live labels are reused by: PokemonLeague_BrunosRoom_hns",
   "reach_class": "live",
   "strings_total": 4,
-  "strings_live": 4,
+  "strings_live": 1,
   "strings_debug_only": 0,
   "strings_metatile_only": 0,
   "chars_live": 558,
@@ -5539,7 +5539,8 @@
   "es_touched": true,
   "evidence": [
    "header absent from hns build: map.json game_version=\"frlg\" (tools/mapjson/mapjson.cpp:722-733 and :474-478 write NULL in gMapGroups)"
-  ]
+  ],
+  "strings_not_built": 3
  },
  {
   "file": "data/maps/PokemonLeague_BrunosRoom_hns/scripts.inc",
@@ -6272,14 +6273,14 @@
  {
   "file": "data/text/tv.inc",
   "kind": "text_common",
-  "strings": 341,
+  "strings": 6,
   "reachable": true,
   "batch": "B25",
   "priority": 4,
   "notes": "59 dead labels: translate only the labels in live_labels.json",
   "reach_class": "partial",
   "strings_total": 400,
-  "strings_live": 341,
+  "strings_live": 6,
   "strings_debug_only": 0,
   "strings_metatile_only": 0,
   "chars_live": 47175,
@@ -6287,7 +6288,8 @@
   "stage": "Contests",
   "order": 43,
   "es_touched": true,
-  "evidence": []
+  "evidence": [],
+  "strings_flag_off": 335
  },
  {
   "file": "src/contest.c",
@@ -6477,14 +6479,14 @@
  {
   "file": "data/scripts/berry_tree.inc",
   "kind": "script_common",
-  "strings": 33,
+  "strings": 3,
   "reachable": true,
   "batch": "B26",
   "priority": 4,
   "notes": "1 dead labels: translate only the labels in live_labels.json",
   "reach_class": "partial",
   "strings_total": 34,
-  "strings_live": 33,
+  "strings_live": 3,
   "strings_debug_only": 0,
   "strings_metatile_only": 0,
   "chars_live": 1250,
@@ -6492,7 +6494,8 @@
   "stage": "berries, apricorns, Pokeblocks",
   "order": 45,
   "es_touched": true,
-  "evidence": []
+  "evidence": [],
+  "strings_not_built": 30
  },
  {
   "file": "data/text/berries.inc",
@@ -6663,14 +6666,14 @@
  {
   "file": "data/text/match_call.inc",
   "kind": "text_common",
-  "strings": 107,
+  "strings": 3,
   "reachable": true,
   "batch": "B27",
   "priority": 4,
   "notes": "212 dead labels: translate only the labels in live_labels.json",
   "reach_class": "partial",
   "strings_total": 319,
-  "strings_live": 107,
+  "strings_live": 3,
   "strings_debug_only": 0,
   "strings_metatile_only": 0,
   "chars_live": 16435,
@@ -6678,7 +6681,8 @@
   "stage": "phone, radio",
   "order": 46,
   "es_touched": true,
-  "evidence": []
+  "evidence": [],
+  "strings_flag_off": 104
  },
  {
   "file": "src/data/text/radio_strings.h",
@@ -7286,14 +7290,14 @@
  {
   "file": "data/text/pokemon_news.inc",
   "kind": "text_common",
-  "strings": 12,
+  "strings": 0,
   "reachable": true,
   "batch": "B30",
   "priority": 4,
   "notes": "",
   "reach_class": "live",
   "strings_total": 12,
-  "strings_live": 12,
+  "strings_live": 0,
   "strings_debug_only": 0,
   "strings_metatile_only": 0,
   "chars_live": 3910,
@@ -7301,7 +7305,8 @@
   "stage": "decorations, ribbons, trades, misc side",
   "order": 48,
   "es_touched": true,
-  "evidence": []
+  "evidence": [],
+  "strings_flag_off": 12
  },
  {
   "file": "data/text/questionnaire.inc",
@@ -8200,14 +8205,14 @@
  {
   "file": "data/maps/CeladonCity_Frlg/scripts.inc",
   "kind": "map_script_frlg",
-  "strings": 6,
+  "strings": 4,
   "reachable": true,
   "batch": "B31",
   "priority": 5,
   "notes": "live labels are reused by: CeladonCity_hns; 16 dead labels: translate only the labels in live_labels.json",
   "reach_class": "partial",
   "strings_total": 22,
-  "strings_live": 6,
+  "strings_live": 4,
   "strings_debug_only": 0,
   "strings_metatile_only": 0,
   "chars_live": 236,
@@ -8220,7 +8225,8 @@
   "es_touched": true,
   "evidence": [
    "header absent from hns build: map.json game_version=\"frlg\" (tools/mapjson/mapjson.cpp:722-733 and :474-478 write NULL in gMapGroups)"
-  ]
+  ],
+  "strings_not_built": 2
  },
  {
   "file": "data/maps/CeladonCity_GameCorner_hns/scripts.inc",
@@ -8247,14 +8253,14 @@
  {
   "file": "data/maps/CeladonCity_Gym_Frlg/scripts.inc",
   "kind": "map_script_frlg",
-  "strings": 9,
+  "strings": 2,
   "reachable": true,
   "batch": "B31",
   "priority": 5,
   "notes": "live labels are reused by: CeladonCity_Gym_hns; 21 dead labels: translate only the labels in live_labels.json",
   "reach_class": "partial",
   "strings_total": 30,
-  "strings_live": 9,
+  "strings_live": 2,
   "strings_debug_only": 0,
   "strings_metatile_only": 0,
   "chars_live": 965,
@@ -8267,7 +8273,8 @@
   "es_touched": true,
   "evidence": [
    "header absent from hns build: map.json game_version=\"frlg\" (tools/mapjson/mapjson.cpp:722-733 and :474-478 write NULL in gMapGroups)"
-  ]
+  ],
+  "strings_not_built": 7
  },
  {
   "file": "data/maps/CeladonCity_Gym_hns/scripts.inc",
@@ -8360,14 +8367,14 @@
  {
   "file": "data/maps/CeruleanCity_Frlg/scripts.inc",
   "kind": "map_script_frlg",
-  "strings": 8,
+  "strings": 3,
   "reachable": true,
   "batch": "B31",
   "priority": 5,
   "notes": "live labels are reused by: CeruleanCity_hns; 24 dead labels: translate only the labels in live_labels.json",
   "reach_class": "partial",
   "strings_total": 32,
-  "strings_live": 8,
+  "strings_live": 3,
   "strings_debug_only": 0,
   "strings_metatile_only": 0,
   "chars_live": 529,
@@ -8380,19 +8387,20 @@
   "es_touched": true,
   "evidence": [
    "header absent from hns build: map.json game_version=\"frlg\" (tools/mapjson/mapjson.cpp:722-733 and :474-478 write NULL in gMapGroups)"
-  ]
+  ],
+  "strings_not_built": 5
  },
  {
   "file": "data/maps/CeruleanCity_Gym_Frlg/scripts.inc",
   "kind": "map_script_frlg",
-  "strings": 10,
+  "strings": 2,
   "reachable": true,
   "batch": "B31",
   "priority": 5,
   "notes": "live labels are reused by: CeruleanCity_Gym_hns; 6 dead labels: translate only the labels in live_labels.json",
   "reach_class": "partial",
   "strings_total": 16,
-  "strings_live": 10,
+  "strings_live": 2,
   "strings_debug_only": 0,
   "strings_metatile_only": 0,
   "chars_live": 1061,
@@ -8405,7 +8413,8 @@
   "es_touched": true,
   "evidence": [
    "header absent from hns build: map.json game_version=\"frlg\" (tools/mapjson/mapjson.cpp:722-733 and :474-478 write NULL in gMapGroups)"
-  ]
+  ],
+  "strings_not_built": 8
  },
  {
   "file": "data/maps/CeruleanCity_Gym_hns/scripts.inc",
@@ -8680,14 +8689,14 @@
  {
   "file": "data/maps/FuchsiaCity_Frlg/scripts.inc",
   "kind": "map_script_frlg",
-  "strings": 3,
+  "strings": 1,
   "reachable": true,
   "batch": "B31",
   "priority": 5,
   "notes": "live labels are reused by: FuchsiaCity_hns; 19 dead labels: translate only the labels in live_labels.json",
   "reach_class": "partial",
   "strings_total": 22,
-  "strings_live": 3,
+  "strings_live": 1,
   "strings_debug_only": 0,
   "strings_metatile_only": 0,
   "chars_live": 183,
@@ -8700,19 +8709,20 @@
   "es_touched": true,
   "evidence": [
    "header absent from hns build: map.json game_version=\"frlg\" (tools/mapjson/mapjson.cpp:722-733 and :474-478 write NULL in gMapGroups)"
-  ]
+  ],
+  "strings_not_built": 2
  },
  {
   "file": "data/maps/FuchsiaCity_Gym_Frlg/scripts.inc",
   "kind": "map_script_frlg",
-  "strings": 4,
+  "strings": 2,
   "reachable": true,
   "batch": "B31",
   "priority": 5,
   "notes": "live labels are reused by: FuchsiaCity_Gym_hns; 25 dead labels: translate only the labels in live_labels.json",
   "reach_class": "partial",
   "strings_total": 29,
-  "strings_live": 4,
+  "strings_live": 2,
   "strings_debug_only": 0,
   "strings_metatile_only": 0,
   "chars_live": 339,
@@ -8725,7 +8735,8 @@
   "es_touched": true,
   "evidence": [
    "header absent from hns build: map.json game_version=\"frlg\" (tools/mapjson/mapjson.cpp:722-733 and :474-478 write NULL in gMapGroups)"
-  ]
+  ],
+  "strings_not_built": 2
  },
  {
   "file": "data/maps/FuchsiaCity_Gym_hns/scripts.inc",
@@ -9016,14 +9027,14 @@
  {
   "file": "data/maps/LavenderTown_Frlg/scripts.inc",
   "kind": "map_script_frlg",
-  "strings": 1,
+  "strings": 0,
   "reachable": true,
   "batch": "B31",
   "priority": 5,
   "notes": "live labels are reused by: LavenderTown_hns; 8 dead labels: translate only the labels in live_labels.json",
   "reach_class": "partial",
   "strings_total": 9,
-  "strings_live": 1,
+  "strings_live": 0,
   "strings_debug_only": 0,
   "strings_metatile_only": 0,
   "chars_live": 35,
@@ -9036,7 +9047,8 @@
   "es_touched": true,
   "evidence": [
    "header absent from hns build: map.json game_version=\"frlg\" (tools/mapjson/mapjson.cpp:722-733 and :474-478 write NULL in gMapGroups)"
-  ]
+  ],
+  "strings_not_built": 1
  },
  {
   "file": "data/maps/LavenderTown_House1_hns/scripts.inc",
@@ -9085,14 +9097,14 @@
  {
   "file": "data/maps/LavenderTown_Mart_Frlg/scripts.inc",
   "kind": "map_script_frlg",
-  "strings": 1,
+  "strings": 0,
   "reachable": true,
   "batch": "B31",
   "priority": 5,
   "notes": "live labels are reused by: LavenderTown_Mart_hns; 2 dead labels: translate only the labels in live_labels.json",
   "reach_class": "partial",
   "strings_total": 3,
-  "strings_live": 1,
+  "strings_live": 0,
   "strings_debug_only": 0,
   "strings_metatile_only": 0,
   "chars_live": 58,
@@ -9105,7 +9117,8 @@
   "es_touched": true,
   "evidence": [
    "header absent from hns build: map.json game_version=\"frlg\" (tools/mapjson/mapjson.cpp:722-733 and :474-478 write NULL in gMapGroups)"
-  ]
+  ],
+  "strings_not_built": 1
  },
  {
   "file": "data/maps/LavenderTown_Mart_hns/scripts.inc",
@@ -9386,14 +9399,14 @@
  {
   "file": "data/maps/PalletTown_Frlg/scripts.inc",
   "kind": "map_script_frlg",
-  "strings": 2,
+  "strings": 0,
   "reachable": true,
   "batch": "B31",
   "priority": 5,
   "notes": "live labels are reused by: PalletTown_hns; 17 dead labels: translate only the labels in live_labels.json",
   "reach_class": "partial",
   "strings_total": 19,
-  "strings_live": 2,
+  "strings_live": 0,
   "strings_debug_only": 0,
   "strings_metatile_only": 0,
   "chars_live": 65,
@@ -9406,7 +9419,8 @@
   "es_touched": true,
   "evidence": [
    "header absent from hns build: map.json game_version=\"frlg\" (tools/mapjson/mapjson.cpp:722-733 and :474-478 write NULL in gMapGroups)"
-  ]
+  ],
+  "strings_not_built": 2
  },
  {
   "file": "data/maps/PalletTown_House2_hns/scripts.inc",
@@ -9521,14 +9535,14 @@
  {
   "file": "data/maps/PewterCity_Frlg/scripts.inc",
   "kind": "map_script_frlg",
-  "strings": 3,
+  "strings": 1,
   "reachable": true,
   "batch": "B31",
   "priority": 5,
   "notes": "live labels are reused by: PewterCity_hns; 24 dead labels: translate only the labels in live_labels.json",
   "reach_class": "partial",
   "strings_total": 27,
-  "strings_live": 3,
+  "strings_live": 1,
   "strings_debug_only": 0,
   "strings_metatile_only": 0,
   "chars_live": 122,
@@ -9541,19 +9555,20 @@
   "es_touched": true,
   "evidence": [
    "header absent from hns build: map.json game_version=\"frlg\" (tools/mapjson/mapjson.cpp:722-733 and :474-478 write NULL in gMapGroups)"
-  ]
+  ],
+  "strings_not_built": 2
  },
  {
   "file": "data/maps/PewterCity_Gym_Frlg/scripts.inc",
   "kind": "map_script_frlg",
-  "strings": 14,
+  "strings": 2,
   "reachable": true,
   "batch": "B31",
   "priority": 5,
   "notes": "live labels are reused by: PewterCity_Gym_hns; 3 dead labels: translate only the labels in live_labels.json",
   "reach_class": "partial",
   "strings_total": 17,
-  "strings_live": 14,
+  "strings_live": 2,
   "strings_debug_only": 0,
   "strings_metatile_only": 0,
   "chars_live": 1838,
@@ -9566,7 +9581,8 @@
   "es_touched": true,
   "evidence": [
    "header absent from hns build: map.json game_version=\"frlg\" (tools/mapjson/mapjson.cpp:722-733 and :474-478 write NULL in gMapGroups)"
-  ]
+  ],
+  "strings_not_built": 12
  },
  {
   "file": "data/maps/PewterCity_Gym_hns/scripts.inc",
@@ -9662,14 +9678,14 @@
  {
   "file": "data/maps/PewterCity_Mart_Frlg/scripts.inc",
   "kind": "map_script_frlg",
-  "strings": 1,
+  "strings": 0,
   "reachable": true,
   "batch": "B31",
   "priority": 5,
   "notes": "live labels are reused by: PewterCity_Mart_hns; 1 dead labels: translate only the labels in live_labels.json",
   "reach_class": "partial",
   "strings_total": 2,
-  "strings_live": 1,
+  "strings_live": 0,
   "strings_debug_only": 0,
   "strings_metatile_only": 0,
   "chars_live": 98,
@@ -9682,7 +9698,8 @@
   "es_touched": true,
   "evidence": [
    "header absent from hns build: map.json game_version=\"frlg\" (tools/mapjson/mapjson.cpp:722-733 and :474-478 write NULL in gMapGroups)"
-  ]
+  ],
+  "strings_not_built": 1
  },
  {
   "file": "data/maps/PewterCity_Mart_hns/scripts.inc",
@@ -9960,14 +9977,14 @@
  {
   "file": "data/maps/Route12_Frlg/scripts.inc",
   "kind": "map_script_frlg",
-  "strings": 1,
+  "strings": 0,
   "reachable": true,
   "batch": "B32",
   "priority": 5,
   "notes": "live labels are reused by: Route12_hns; 35 dead labels: translate only the labels in live_labels.json",
   "reach_class": "partial",
   "strings_total": 36,
-  "strings_live": 1,
+  "strings_live": 0,
   "strings_debug_only": 0,
   "strings_metatile_only": 0,
   "chars_live": 17,
@@ -9980,7 +9997,8 @@
   "es_touched": true,
   "evidence": [
    "header absent from hns build: map.json game_version=\"frlg\" (tools/mapjson/mapjson.cpp:722-733 and :474-478 write NULL in gMapGroups)"
-  ]
+  ],
+  "strings_not_built": 1
  },
  {
   "file": "data/maps/Route12_House_hns/scripts.inc",
@@ -10029,14 +10047,14 @@
  {
   "file": "data/maps/Route13_Frlg/scripts.inc",
   "kind": "map_script_frlg",
-  "strings": 4,
+  "strings": 0,
   "reachable": true,
   "batch": "B32",
   "priority": 5,
   "notes": "live labels are reused by: Route13_hns; 29 dead labels: translate only the labels in live_labels.json",
   "reach_class": "partial",
   "strings_total": 33,
-  "strings_live": 4,
+  "strings_live": 0,
   "strings_debug_only": 0,
   "strings_metatile_only": 0,
   "chars_live": 138,
@@ -10049,7 +10067,8 @@
   "es_touched": true,
   "evidence": [
    "header absent from hns build: map.json game_version=\"frlg\" (tools/mapjson/mapjson.cpp:722-733 and :474-478 write NULL in gMapGroups)"
-  ]
+  ],
+  "strings_not_built": 4
  },
  {
   "file": "data/maps/Route13_hns/scripts.inc",
@@ -10076,14 +10095,14 @@
  {
   "file": "data/maps/Route14_Frlg/scripts.inc",
   "kind": "map_script_frlg",
-  "strings": 3,
+  "strings": 0,
   "reachable": true,
   "batch": "B32",
   "priority": 5,
   "notes": "live labels are reused by: Route14_hns; 36 dead labels: translate only the labels in live_labels.json",
   "reach_class": "partial",
   "strings_total": 39,
-  "strings_live": 3,
+  "strings_live": 0,
   "strings_debug_only": 0,
   "strings_metatile_only": 0,
   "chars_live": 143,
@@ -10096,7 +10115,8 @@
   "es_touched": true,
   "evidence": [
    "header absent from hns build: map.json game_version=\"frlg\" (tools/mapjson/mapjson.cpp:722-733 and :474-478 write NULL in gMapGroups)"
-  ]
+  ],
+  "strings_not_built": 3
  },
  {
   "file": "data/maps/Route14_hns/scripts.inc",
@@ -10902,14 +10922,14 @@
  {
   "file": "data/maps/SaffronCity_Frlg/scripts.inc",
   "kind": "map_script_frlg",
-  "strings": 4,
+  "strings": 2,
   "reachable": true,
   "batch": "B32",
   "priority": 5,
   "notes": "live labels are reused by: SaffronCity_hns; 21 dead labels: translate only the labels in live_labels.json",
   "reach_class": "partial",
   "strings_total": 25,
-  "strings_live": 4,
+  "strings_live": 2,
   "strings_debug_only": 0,
   "strings_metatile_only": 0,
   "chars_live": 154,
@@ -10922,19 +10942,20 @@
   "es_touched": true,
   "evidence": [
    "header absent from hns build: map.json game_version=\"frlg\" (tools/mapjson/mapjson.cpp:722-733 and :474-478 write NULL in gMapGroups)"
-  ]
+  ],
+  "strings_not_built": 2
  },
  {
   "file": "data/maps/SaffronCity_Gym_Frlg/scripts.inc",
   "kind": "map_script_frlg",
-  "strings": 11,
+  "strings": 4,
   "reachable": true,
   "batch": "B32",
   "priority": 5,
   "notes": "live labels are reused by: SaffronCity_Gym_hns; 21 dead labels: translate only the labels in live_labels.json",
   "reach_class": "partial",
   "strings_total": 32,
-  "strings_live": 11,
+  "strings_live": 4,
   "strings_debug_only": 0,
   "strings_metatile_only": 0,
   "chars_live": 1167,
@@ -10947,7 +10968,8 @@
   "es_touched": true,
   "evidence": [
    "header absent from hns build: map.json game_version=\"frlg\" (tools/mapjson/mapjson.cpp:722-733 and :474-478 write NULL in gMapGroups)"
-  ]
+  ],
+  "strings_not_built": 7
  },
  {
   "file": "data/maps/SaffronCity_Gym_hns/scripts.inc",
@@ -11194,14 +11216,14 @@
  {
   "file": "data/maps/VermilionCity_Frlg/scripts.inc",
   "kind": "map_script_frlg",
-  "strings": 4,
+  "strings": 1,
   "reachable": true,
   "batch": "B33",
   "priority": 5,
   "notes": "live labels are reused by: VermilionCity_hns; 22 dead labels: translate only the labels in live_labels.json",
   "reach_class": "partial",
   "strings_total": 26,
-  "strings_live": 4,
+  "strings_live": 1,
   "strings_debug_only": 0,
   "strings_metatile_only": 0,
   "chars_live": 169,
@@ -11214,7 +11236,8 @@
   "es_touched": true,
   "evidence": [
    "header absent from hns build: map.json game_version=\"frlg\" (tools/mapjson/mapjson.cpp:722-733 and :474-478 write NULL in gMapGroups)"
-  ]
+  ],
+  "strings_not_built": 3
  },
  {
   "file": "data/maps/VermilionCity_Gym_Frlg/scripts.inc",
@@ -11398,14 +11421,14 @@
  {
   "file": "data/maps/ViridianCity_Frlg/scripts.inc",
   "kind": "map_script_frlg",
-  "strings": 5,
+  "strings": 1,
   "reachable": true,
   "batch": "B33",
   "priority": 5,
   "notes": "live labels are reused by: ViridianCity_hns; 16 dead labels: translate only the labels in live_labels.json",
   "reach_class": "partial",
   "strings_total": 21,
-  "strings_live": 5,
+  "strings_live": 1,
   "strings_debug_only": 0,
   "strings_metatile_only": 0,
   "chars_live": 247,
@@ -11418,19 +11441,20 @@
   "es_touched": true,
   "evidence": [
    "header absent from hns build: map.json game_version=\"frlg\" (tools/mapjson/mapjson.cpp:722-733 and :474-478 write NULL in gMapGroups)"
-  ]
+  ],
+  "strings_not_built": 4
  },
  {
   "file": "data/maps/ViridianCity_Gym_Frlg/scripts.inc",
   "kind": "map_script_frlg",
-  "strings": 4,
+  "strings": 2,
   "reachable": true,
   "batch": "B33",
   "priority": 5,
   "notes": "live labels are reused by: ViridianCity_Gym_hns; 31 dead labels: translate only the labels in live_labels.json",
   "reach_class": "partial",
   "strings_total": 35,
-  "strings_live": 4,
+  "strings_live": 2,
   "strings_debug_only": 0,
   "strings_metatile_only": 0,
   "chars_live": 373,
@@ -11443,7 +11467,8 @@
   "es_touched": true,
   "evidence": [
    "header absent from hns build: map.json game_version=\"frlg\" (tools/mapjson/mapjson.cpp:722-733 and :474-478 write NULL in gMapGroups)"
-  ]
+  ],
+  "strings_not_built": 2
  },
  {
   "file": "data/maps/ViridianCity_Gym_hns/scripts.inc",
@@ -11558,14 +11583,14 @@
  {
   "file": "data/maps/ViridianForest_Frlg/scripts.inc",
   "kind": "map_script_frlg",
-  "strings": 3,
+  "strings": 0,
   "reachable": true,
   "batch": "B33",
   "priority": 5,
   "notes": "live labels are reused by: ViridianForest_hns; 20 dead labels: translate only the labels in live_labels.json",
   "reach_class": "partial",
   "strings_total": 23,
-  "strings_live": 3,
+  "strings_live": 0,
   "strings_debug_only": 0,
   "strings_metatile_only": 0,
   "chars_live": 135,
@@ -11578,7 +11603,8 @@
   "es_touched": true,
   "evidence": [
    "header absent from hns build: map.json game_version=\"frlg\" (tools/mapjson/mapjson.cpp:722-733 and :474-478 write NULL in gMapGroups)"
-  ]
+  ],
+  "strings_not_built": 3
  },
  {
   "file": "data/maps/ViridianForest_hns/scripts.inc",
@@ -11605,14 +11631,14 @@
  {
   "file": "data/text/trainers_frlg.inc",
   "kind": "text_common",
-  "strings": 2,
+  "strings": 1,
   "reachable": true,
   "batch": "B33",
   "priority": 5,
   "notes": "reached from maps: Route13_hns, Route14_hns; 232 dead labels: translate only the labels in live_labels.json",
   "reach_class": "partial",
   "strings_total": 234,
-  "strings_live": 2,
+  "strings_live": 1,
   "strings_debug_only": 0,
   "strings_metatile_only": 0,
   "chars_live": 104,
@@ -11620,7 +11646,8 @@
   "stage": "Kanto",
   "order": 51,
   "es_touched": true,
-  "evidence": []
+  "evidence": [],
+  "strings_not_built": 1
  },
  {
   "file": "data/maps/MtSilver_1F_WaterfallRoom_hns/scripts.inc",
@@ -14080,14 +14107,14 @@
  {
   "file": "data/scripts/cable_club_frlg.inc",
   "kind": "script_common",
-  "strings": 38,
+  "strings": 0,
   "reachable": true,
   "batch": "B39",
   "priority": 6,
   "notes": "38 dead labels: translate only the labels in live_labels.json",
   "reach_class": "partial",
   "strings_total": 76,
-  "strings_live": 38,
+  "strings_live": 0,
   "strings_debug_only": 0,
   "strings_metatile_only": 0,
   "chars_live": 3789,
@@ -14095,7 +14122,8 @@
   "stage": "link, Union Room, cable club",
   "order": 60,
   "es_touched": true,
-  "evidence": []
+  "evidence": [],
+  "strings_not_built": 38
  },
  {
   "file": "data/text/cable_club.inc",
@@ -14460,14 +14488,14 @@
  {
   "file": "data/maps/PokemonLeague_HallOfFame_Frlg/scripts.inc",
   "kind": "map_script_frlg",
-  "strings": 1,
+  "strings": 0,
   "reachable": true,
   "batch": "B40",
   "priority": 6,
   "notes": "",
   "reach_class": "live",
   "strings_total": 1,
-  "strings_live": 1,
+  "strings_live": 0,
   "strings_debug_only": 0,
   "strings_metatile_only": 0,
   "chars_live": 304,
@@ -14480,7 +14508,8 @@
   "es_touched": true,
   "evidence": [
    "header absent from hns build: map.json game_version=\"frlg\" (tools/mapjson/mapjson.cpp:722-733 and :474-478 write NULL in gMapGroups)"
-  ]
+  ],
+  "strings_not_built": 1
  },
  {
   "file": "data/maps/Route110_TrickHouseEntrance/scripts.inc",
