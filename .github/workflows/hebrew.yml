@@ -48,7 +48,7 @@ jobs:
       - name: Only strings differ from the English baseline
         run: |
           git diff --name-only origin/master...HEAD -- data src \
-            | grep -E '\.(inc|s|c|h)$' \
+            | grep -E '\.(inc|s|c|h|party|json)$' \
             | xargs python3 tools/hebrew/drift.py --quiet
 
       - name: Layout audit (widths, lines, buffers, byte limits)
