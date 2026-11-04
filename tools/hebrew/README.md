@@ -37,6 +37,8 @@ runs from any working directory. The style guide and glossary are in `translatio
    digits, leftover Latin, width and lines. `wrap.py TEXT` re-wraps a string to its budget.
    `textwidth.py TEXT` measures a string.
 5. **Apply.** `units.py apply CHUNK.json... [--dry-run]` writes the Hebrew into `HNS_TREE`.
+   It refuses a string that changed since the chunk was made, and a string that already holds
+   different Hebrew (an old chunk would undo a later fix) unless `--overwrite-hebrew` is given.
    `apply_names.py` writes trainer and map-section names. Run `gen_dex_alpha.py` after the species
    names change.
 6. **Drift.** `drift.py FILE...` checks that a translated file differs from `HNS_BASELINE` only

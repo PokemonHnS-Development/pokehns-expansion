@@ -6,6 +6,7 @@ nine Latin width tables with round numbers:
   4 (narrower, small_narrower, short_narrower); Hebrew letters 7 / 6 / 5, and 'ש' one wider
   (8 / 7 / 6) so the widest glyph is unambiguous.
 """
+import json
 import os
 import shutil
 import tempfile
@@ -13,6 +14,7 @@ import tempfile
 HERE = os.path.dirname(os.path.abspath(__file__))
 TOOLS = os.path.dirname(HERE)
 CHARMAP = os.path.join(HERE, 'fixtures', 'charmap.txt')
+DATA = os.path.join(HERE, 'data')     # small committed fixture trees, one folder per tool
 
 TABLES = {
     'gFontSmallLatinGlyphWidths': 6, 'gFontNormalLatinGlyphWidths': 6, 'gFontShortLatinGlyphWidths': 6,
@@ -148,3 +150,15 @@ class TempTree(object):
 
     def __exit__(self, *exc):
         shutil.rmtree(self.dir, ignore_errors=True)
+
+
+def copy_data(name, dest):
+    """Copies tests/data/NAME into the folder DEST (created if needed) and returns DEST."""
+    shutil.copytree(os.path.join(DATA, name), dest, dirs_exist_ok=True)
+    return dest
+
+
+def token_cases():
+    """[(english, hebrew, same, why)]: the token-rule table that drift, units and checkunits share."""
+    with open(os.path.join(DATA, 'token_cases.json'), encoding='utf-8') as f:
+        return [(c['en'], c['he'], c['same'], c['why']) for c in json.load(f)]
