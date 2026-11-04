@@ -43,11 +43,11 @@ fresh clone.
 | Item | Value | Check |
 | --- | --- | --- |
 | `he/main` | `4a9c6858b1` | `git rev-parse --short he/main` |
-| Release | One release, 1.0, replaced in place on each update (ROM, `SHA1SUMS`, `TESTING.md`); the builds repo's commit history keeps the older builds. Current 1.0: built from `he/main` `146aeae61b` | `<builds>/README.md` |
-| 1.0 ROM | `pokehns-he-2.0.6-1.0.gba`: 33554432 bytes, SHA-1 `256b8dc5d5aafa665b4305563759e301c9f6ada4`, CRC32 `A0822D24` | `<builds>/SHA1SUMS` |
+| Release | One release, 1.0, replaced in place on each update (ROM, `SHA1SUMS`, `TESTING.md`); the builds repo's commit history keeps the older builds. Current 1.0: built from `he/main` `3341d82f32` | `<builds>/README.md` |
+| 1.0 ROM | `pokehns-he-2.0.6-1.0.gba`: 33554432 bytes, SHA-1 `a930fd878c333a1fff44ff1c05ec72c6833a09d0`, CRC32 `08AE605A` | `<builds>/SHA1SUMS` |
 | Releasing | Build a candidate with `tools/hebrew/release/`, then replace the three files in the builds repo and say in the commit message which `he/main` commit it was built from; keep `tools/hebrew/release/notes.json` at `"release": "1.0"` | section 5 |
 | CI | the last two runs on `he/main` are green (39494370746, 39496758687) | `gh run list -R ronyeh2/pokehns-expansion-heb --workflow hebrew.yml` |
-| Static checks on `he/main` | drift 0 FAIL; audit 0 errors and 42 FIT warnings; namecheck 0 problems; 40 tool tests OK | section 4.2 |
+| Static checks on `he/main` | drift 0 FAIL; audit 0 errors and 48 warnings; namecheck 0 problems; plurals 0 problems; 67 tool tests OK | section 4.2 |
 | Translation status | every live file is translated: 510 seen on screen, 132 translated, 19 blocked | `translation/hebrew/STATUS.md:5` |
 
 **First things to pick up**, in order (details in section 8):
@@ -1300,6 +1300,18 @@ Ask the owner before you:
     commits (for example `7a223ace31`, `36040b98f7`).
   - Why, and how the letter-indexed chat keyboard behaves with them, is **unverified**.
   - Decide before touching Easy Chat.
+- **Questions for the owner from the string-coverage round** (round 16). None is fixed; each
+  needs a decision:
+  - the battle debug menu: the stat-up hold rows all as 'X +' like the other six, and the AI
+    points page label ('עובר לפוקימון ' at the English width, or the species placed after the
+    label under `TEXT_RTL`);
+  - two faults of H&S 2.0.6 itself, the same in English: the Battle Dome style scoring assigns
+    instead of adding, so only RISKY, RARE_MOVE and BALANCED can show; Scott's Silver and Gold
+    Shields cannot be received. Release-note them, or fix them outside the translation;
+  - with no flash chip the game shows the debug build's English assert screen before the
+    no-flash message: ship an `NDEBUG` build (which changes Q120's debug menu) or keep it;
+  - the Emerald maps outside the Battle Frontier cannot be walked into; the only path found, a
+    poison white-out in the Battle Pike with SURVIVE POISON off, crashes in English too.
 - **Proposed names.** The 4,578 `proposed` glossary rows were never checked against an official
   Hebrew source or by a native speaker on screen.
 - **Not seen by a person:**
