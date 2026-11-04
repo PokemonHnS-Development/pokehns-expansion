@@ -43,8 +43,8 @@ fresh clone.
 | Item | Value | Check |
 | --- | --- | --- |
 | `he/main` | `4a9c6858b1` | `git rev-parse --short he/main` |
-| Release | One release, 1.0, replaced in place on each update (ROM, `SHA1SUMS`, `TESTING.md`); the builds repo's commit history keeps the older builds. Current 1.0: built from `he/main` `7b4f3e37b2` | `<builds>/README.md` |
-| 1.0 ROM | `pokehns-he-2.0.6-1.0.gba`: 33554432 bytes, SHA-1 `6d62d1a69b88859f875bfd97767ad3a0b8d58780`, CRC32 `D73F2283` | `<builds>/SHA1SUMS` |
+| Release | One release, 1.0, replaced in place on each update (ROM, `SHA1SUMS`, `TESTING.md`); the builds repo's commit history keeps the older builds. Current 1.0: built from `he/main` `651e35c35b` | `<builds>/README.md` |
+| 1.0 ROM | `pokehns-he-2.0.6-1.0.gba`: 33554432 bytes, SHA-1 `6438a720bfbdec7c666ccbd54e5b6a9d6755d770`, CRC32 `A2523184` | `<builds>/SHA1SUMS` |
 | Releasing | Build a candidate with `tools/hebrew/release/`, then replace the three files in the builds repo and say in the commit message which `he/main` commit it was built from; keep `tools/hebrew/release/notes.json` at `"release": "1.0"` | section 5 |
 | CI | the last two runs on `he/main` are green (39494370746, 39496758687) | `gh run list -R ronyeh2/pokehns-expansion-heb --workflow hebrew.yml` |
 | Static checks on `he/main` | drift 0 FAIL; audit 0 errors and 48 warnings; namecheck 0 problems; plurals 0 problems; 67 tool tests OK | section 4.2 |
@@ -55,11 +55,9 @@ fresh clone.
 1. Port the fixed nickname tour into the fork. The fork's copy is stale: it types `CDE` for
    `ABC` and still reports OK.
 2. Regenerate the Hebrew A–Z Pokédex order. 4 species are out of place.
-3. Translate the Latin names left inside live Hebrew strings (KURT, the weekday siblings, the
-   badge names). Each one needs a glossary row first.
-4. Settle Easy Chat: the docs say English, but the tree is about half Hebrew.
-5. Fix the doc lags listed in section 8.3.
-6. Still never done: hand play from a new game to the first badge, and real hardware.
+3. Settle Easy Chat: the docs say English, but the tree is about half Hebrew.
+4. Fix the doc lags listed in section 8.3.
+5. Still never done: hand play from a new game to the first badge, and real hardware.
 
 ---
 
@@ -1281,18 +1279,14 @@ Ask the owner before you:
 
 ### 8.2 Content gaps
 
-- **Latin names inside live Hebrew strings.** There are 154 distinct words with 478 uses. Most
-  frequent:
-  - KURT, 20 uses (`src/strings.c:260`, the Kurt's House texts);
-  - the weekday siblings TUSCANY, MONICA, WESLEY, ARTHUR, FRIEDA, SANTOS and SUNNY
-    (`data/maps/Route29_hns/scripts.inc:236`);
-  - DAISY, AMPHY;
-  - PLAINBADGE, RISINGBADGE, ZEPHYRBADGE;
-  - many Emerald names in text that may be unreachable.
-
-  None has a glossary row, so STYLE §3 left them in English. Neither the sweep nor STATUS.md
-  flags them; drift prints them as `w LATIN`. Fix: glossary rows first, then text. Which of the
-  478 are reachable is **unverified**.
+- **Latin left inside Hebrew strings.** The live ones now have glossary rows and Hebrew text
+  (round 17; the 16 new rows are `proposed`). drift still prints 59 `w LATIN` lines, and each is
+  either kept on purpose or in text H&S does not reach:
+  - kept: button names, game titles, the credits' team names, the Odd Egg interview's Easy Chat
+    words in `src/data/help_window.h`, and the save-type name on the no-flash screen; the reasons
+    are in `tools/hebrew/status_report.py` (KEPT_LATIN) and `tools/hebrew/drift.py` (LATIN_OK);
+  - unreachable: Emerald maps and names, the Battle Tents, the PokéNav news, the Ruby/Sapphire
+    berry fix, and the item descriptions this build does not compile.
 - **Easy Chat contradicts the docs.**
   - `docs/hebrew_translation.md:149`, STATUS.md and TESTING.md say Easy Chat stays English, and
     `make_chunks.py:28` skips `src/data/easy_chat/`.
@@ -1312,13 +1306,11 @@ Ask the owner before you:
     no-flash message: ship an `NDEBUG` build (which changes Q120's debug menu) or keep it;
   - the Emerald maps outside the Battle Frontier cannot be walked into; the only path found, a
     poison white-out in the Battle Pike with SURVIVE POISON off, crashes in English too.
-- **Questions for the owner from the randomizer-only Pokédex round** (round 16b). Neither is
-  fixed:
-  - Hisui, Team Plasma and Ultra Wormhole have no glossary row, so STYLE §3 keeps them in Latin
-    in eight Pokédex lines: `gen_5_families.h:822, 4699`, `gen_6_families.h:5283`,
-    `gen_7_families.h:249, 6574, 6640, 7528` and `shared_dex_text.h:61`, all under
-    `src/data/pokemon/species_info/` (drift prints them as `w LATIN`). Pick the Hebrew terms,
-    add the rows, then the text;
+- **Questions for the owner from the Pokédex rounds** (rounds 16b and 17). Neither is decided:
+  - the five Pokédex terms round 17 proposed: Hisui היסואי, Mt. Coronet הר הנזר (its glossary
+    note gives the transliterated הר קורונט as the alternative), Ultra Wormhole חור תולעת
+    אולטרה, Team Plasma צוות פלזמה and Rose רוז. None is checked against an official Hebrew
+    source;
   - 'psychic power' in Pokédex prose: על-חושי (as in the PSY- move names) or פסיכי (as in the
     type name), applied across the tree.
 - **Proposed names.** The 4,578 `proposed` glossary rows were never checked against an official
