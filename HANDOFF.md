@@ -1312,6 +1312,15 @@ Ask the owner before you:
     no-flash message: ship an `NDEBUG` build (which changes Q120's debug menu) or keep it;
   - the Emerald maps outside the Battle Frontier cannot be walked into; the only path found, a
     poison white-out in the Battle Pike with SURVIVE POISON off, crashes in English too.
+- **Questions for the owner from the randomizer-only Pokédex round** (round 16b). Neither is
+  fixed:
+  - Hisui, Team Plasma and Ultra Wormhole have no glossary row, so STYLE §3 keeps them in Latin
+    in eight Pokédex lines: `gen_5_families.h:822, 4699`, `gen_6_families.h:5283`,
+    `gen_7_families.h:249, 6574, 6640, 7528` and `shared_dex_text.h:61`, all under
+    `src/data/pokemon/species_info/` (drift prints them as `w LATIN`). Pick the Hebrew terms,
+    add the rows, then the text;
+  - 'psychic power' in Pokédex prose: על-חושי (as in the PSY- move names) or פסיכי (as in the
+    type name), applied across the tree.
 - **Proposed names.** The 4,578 `proposed` glossary rows were never checked against an official
   Hebrew source or by a native speaker on screen.
 - **Not seen by a person:**
