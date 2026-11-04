@@ -6,6 +6,7 @@
  {"en": "{PKMN} {POKEBLOCK} CASE$", "he": "קופסה$", "same": true, "why": "{PKMN} and {POKEBLOCK} may go"},
  {"en": "{B_BUFF1} hit {B_BUFF2}!$", "he": "{B_BUFF2} נפגע מ{B_BUFF1}!$", "same": true, "why": "{B_BUFF1} and {B_BUFF2} change places"},
  {"en": "{B_BUFF1} and {B_BUFF3}$", "he": "{B_BUFF3} ו{B_BUFF1}$", "same": true, "why": "{B_BUFF1} and {B_BUFF3} change places"},
+ {"en": "{B_BUFF1} gave {PLAYER} a {B_BUFF2}!$", "he": "{B_BUFF2} ניתן ל{PLAYER} מ{B_BUFF1}!$", "same": true, "why": "{B_BUFF1} and {B_BUFF2} change places across {PLAYER}, which keeps its place"},
  {"en": "{B_BUFF1} met {PLAYER}$", "he": "{PLAYER} פגש את {B_BUFF1}$", "same": false, "why": "a battle buffer moved past {PLAYER}"},
  {"en": "{PLAYER} got {STR_VAR_1}!$", "he": "{STR_VAR_1} אצל {PLAYER}!$", "same": false, "why": "{PLAYER} and {STR_VAR_1} changed places"},
  {"en": "{B_BUFF1}!$", "he": "{B_BUFF1} {B_BUFF1}!$", "same": false, "why": "a battle buffer added"},
