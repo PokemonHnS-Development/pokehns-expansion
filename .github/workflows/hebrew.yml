@@ -57,6 +57,9 @@ jobs:
       - name: Glossary (byte limits, final letters, duplicates)
         run: python3 tools/hebrew/namecheck.py --all
 
+      - name: Pokédex A-Z order matches the glossary names
+        run: python3 tools/hebrew/gen_dex_alpha.py --check
+
       - name: Tool tests
         run: python3 -m unittest discover -s tools/hebrew/tests
 
