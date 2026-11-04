@@ -1,0 +1,25 @@
+# Real-window check of the INFO stand-in (scripts/r16b_dex/dexinfo.py): three first catches with a
+# MASTER BALL show the caught-Pokemon Pokedex page (Cmd_displaydexinfo, src/battle_script_commands.c
+# :11274-11292 > Task_DisplayCaughtMonDexPageHGSS > PrintMonInfo, src/pokedex_plus_hgss.c:4435,
+# 4713-4770) of three out-of-dex species: CROAGUNK (the widest 4-row Gen 4 entry, 220 px),
+# GENESECT (a 4-row shared_dex_text.h entry with a Latin run) and the HOOPA UNBOUND form (its own
+# name, category and entry through formSpecies, src/pokedex_plus_hgss.c:4410-4416).
+# Driver: scripts/r5_legends/r5leg.py (bcatch: the throw, the dex page, the nickname prompt NO).
+# Run: scripts/r5_legends/r5leg.py tour ROM OUT --tours tools/hebrew/emu/tours/r16b_dex --only '^dx_catch_real$'
+# Save: ladder6_postgame.sav (HNS_SAVES=hns-tools/emu/saves_all; none of the three caught).
+start saves/ladder6_postgame.sav
+include ../../scripts/continue.txt
+pinrng
+ev additem ITEM_MASTER_BALL, 10; end
+evstart setwildbattle SPECIES_CROAGUNK, 30; dowildbattle; end
+waitbattle
+bwalk dxc_croagunk_intro input:HandleInputChooseAction
+bcatch dxc_croagunk
+evstart setwildbattle SPECIES_GENESECT, 30; dowildbattle; end
+waitbattle
+bwalk dxc_genesect_intro input:HandleInputChooseAction
+bcatch dxc_genesect
+evstart setwildbattle SPECIES_HOOPA_UNBOUND, 30; dowildbattle; end
+waitbattle
+bwalk dxc_hoopa_unbound_intro input:HandleInputChooseAction
+bcatch dxc_hoopa_unbound
