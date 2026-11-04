@@ -1517,9 +1517,9 @@ and the round screenshots. Freeing that disk is the owner's call.
 
 - A Linux build with devkitPro pacman; another machine with devkitARM r68 reproducing the 0.2
   SHA-1.
-- The official English 2.0.6 binary differs from `make hns` (CRC32 `01713508` against
-  `FB9F58C5`); whether it is a `RELEASE=1` build, which would also hide the no-flash assert
-  screen, is unverified.
+- Why the official English 2.0.6 binary (CRC32 `01713508`) differs from the local `make hns`
+  (`FB9F58C5`), and whether it is a `RELEASE=1` build, which would also hide the no-flash assert
+  screen (section 2.5).
 - RetroArch's own `.srm` loader with the 131088-byte save.
 - That `make_ladder.sh` gives byte-identical saves elsewhere (the ladder is stored in
   `<builds>/saves`; determinism matters only for making it again); the harness on Linux.
