@@ -119,7 +119,3 @@ status 1 when:
 - The sweep has a CLIP, CRASH, HANG or ABNORMAL label.
 - A map in the map walk ends in a status other than OK or HELD.
 - The maps held only in Hebrew differ from `map_walk.hebrew_only_held`.
-
-## Known gap
-
-`../emu/tours/naming_nickname.txt` expects the mirrored naming-screen cursor (the Hebrew page and a Latin page swap columns c and 7-c); an older copy that kept the column typed `CDE` instead of `ABC`.
