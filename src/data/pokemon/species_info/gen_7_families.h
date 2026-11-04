@@ -6303,7 +6303,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .height = 12,
         .weight = 555,
         .description = COMPOUND_STRING(
-            "אחד מכמה Ultra Beasts מסתוריים. לא ברור\n"
+            "אחת מכמה חיות אולטרה מסתוריות. לא ברור\n"
             "אם לפוקימון הזה יש תודעה, אבל לפעמים\n"
             "אפשר לראות אותו מתנהג כמו נערה צעירה."),
         .pokemonScale = 282,
@@ -6371,7 +6371,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .height = 24,
         .weight = 3336,
         .description = COMPOUND_STRING(
-            "צורת החיים הזו, שנקראת Ultra Beast, הגיעה\n"
+            "היצור הזה, שנקרא חיית אולטרה, הגיע\n"
             "מעולם אחר. הפוקימון מתהדר בגופו, אבל לא\n"
             "ברור אם זו התרברבות או איום."),
         .pokemonScale = 256,
@@ -6437,7 +6437,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .height = 18,
         .weight = 250,
         .description = COMPOUND_STRING(
-            "הוא אחד מה-Ultra Beasts המסוכנים, והוא\n"
+            "הוא אחת מחיות האולטרה המסוכנות, והוא\n"
             "מסרב לגעת בשום דבר, אולי כי הוא חש טומאה\n"
             "כלשהי בעולם הזה."),
         .pokemonScale = 267,
@@ -6503,8 +6503,8 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .height = 38,
         .weight = 1000,
         .description = COMPOUND_STRING(
-            "זו אחת מצורות החיים המסתוריות שנקראות\n"
-            "Ultra Beasts. לפי עדי ראייה, פריקות חשמל\n"
+            "הוא אחד מהיצורים המסתוריים שנקראים\n"
+            "חיות אולטרה. לפי עדי ראייה, פריקות חשמל\n"
             "מדהימות נפלטות מכל גופו."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
@@ -6572,7 +6572,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .weight = 9999,
         .description = COMPOUND_STRING(
             "הוא הגיח מתוך ה-Ultra Wormhole. הוא סוג של\n"
-            "Ultra Beast, ועדי ראייה ראו אותו עף בשמיים\n"
+            "חיית אולטרה, ועדי ראייה ראו אותו עף בשמיים\n"
             "כשהוא פולט גז משתי זרועותיו."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
@@ -6637,7 +6637,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .height = 3,
         .weight = 1,
         .description = COMPOUND_STRING(
-            "ה-Ultra Beast הזה הגיע מה-Ultra Wormhole.\n"
+            "הוא חיית אולטרה, והגיע מה-Ultra Wormhole.\n"
             "נראה שהוא לא תוקף אויבים מיוזמתו, אבל גופו\n"
             "החד הוא נשק מסוכן כשלעצמו."),
         .pokemonScale = 530,
@@ -6704,8 +6704,8 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .height = 55,
         .weight = 8880,
         .description = COMPOUND_STRING(
-            "לפי הדיווחים, ה-Ultra Beast המסוכן הזה זלל\n"
-            "הרים ובלע בניינים שלמים. אבל משום מה,\n"
+            "לפי הדיווחים, היצור המסוכן הזה, חיית אולטרה,\n"
+            "זלל הרים ובלע בניינים שלמים. אבל משום מה,\n"
             "הצואה שלו מעולם לא נמצאה."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
@@ -6772,9 +6772,9 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .height = 24,
         .weight = 2300,
         .description = COMPOUND_STRING(
-            "צורת החיים הזו מזכירה את ה-Ultra Beasts,\n"
-            "ונראה שהיא ישנה מתחת לאדמה. מאמינים שהיא\n"
-            "הגיעה מעולם אחר בימי קדם."),
+            "היצור הזה מזכיר את חיות האולטרה, ונראה\n"
+            "שהוא ישן מתחת לאדמה. מאמינים שהוא\n"
+            "הגיע מעולם אחר בימי קדם."),
         .pokemonScale = 256,
         .pokemonOffset = 3,
         .trainerScale = 369,
@@ -7393,8 +7393,8 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .height = 6,
         .weight = 18,
         .description = COMPOUND_STRING(
-            "ה-Ultra Beast הזה אהוד מספיק כדי שיבחרו\n"
-            "בו כשותף ראשון בעולם שלו."),
+            "היצור הזה, חיית אולטרה, אהוד מספיק כדי\n"
+            "שיבחרו בו כשותף ראשון בעולם שלו."),
         .pokemonScale = 422,
         .pokemonOffset = 12,
         .trainerScale = 256,
@@ -7459,7 +7459,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .weight = 1500,
         .description = COMPOUND_STRING(
             "הוא אוגר בגופו מאות ליטרים של נוזל רעיל.\n"
-            "הוא אחד היצורים שנקראים UBs."),
+            "הוא אחד היצורים שנקראים חיות אולטרה."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 405,
@@ -7593,7 +7593,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .weight = 130,
         .description = COMPOUND_STRING(
             "הוא זוחל לעבר אנשים ומפוצץ את ראשו בלי\n"
-            "אזהרה. הוא סוג של Ultra Beast."),
+            "אזהרה. הוא סוג של חיית אולטרה."),
         .pokemonScale = 267,
         .pokemonOffset = 2,
         .trainerScale = 286,

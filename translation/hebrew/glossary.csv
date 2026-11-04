@@ -6564,7 +6564,7 @@ place,PLACE_ISLE_OF_ARMOR,ISLE OF ARMOR,,אי השריון,proposed,ARMORITE ORE
 place,PLACE_MAX_LAIR,MAX LAIR,,מאורת מקס,proposed,DYNITE ORE description; Max as in the Max moves (מקס)
 place,PLACE_NAVEL_ROCK,NAVEL ROCK,,סלע הטבור,proposed,MYSTIC TICKET description; meaning
 place,PLACE_ENTREE_FOREST,ENTREE FOREST,,יער אנטרה,proposed,"DREAM BALL description, branch not compiled in this build; Entree transliterated"
-place,TERM_ULTRA_BEASTS,Ultra Beasts,,חיות אולטרה,proposed,"BEAST BALL description; beast = חיה as in כדור חיה, Ultra as in אולטרה בול"
+place,TERM_ULTRA_BEASTS,Ultra Beasts,,חיות אולטרה,proposed,"BEAST BALL description and the Ultra Beast Pokédex entries; beast = חיה as in כדור חיה, Ultra as in אולטרה בול; singular חיית אולטרה, definite חיות האולטרה; the noun is feminine, so an entry uses it as a predicate or an apposition and keeps the Pokémon masculine ('הוא סוג של חיית אולטרה', 'היצור הזה, חיית אולטרה, אהוד')"
 term,TERM_FRONTIER_PASS,FRONTIER PASS,,כרטיס חזית הקרב,proposed,the form used in src/strings.c gText_PutAwayFrontierPass and every Frontier dialogue line; not the Magnet Train ITEM_PASS
 contest_nickname,CONTEST_WINNER_HALL_1_MONNAME,ELECTER,,אלקטר,proposed,"src/data/contest_opponents.h:151; coined (ELECTRIKE): ELECT = אלקט as SPECIES_ELECTRIKE אלקטרייק / ELECTRODE אלקטרוד, final -er = ר"
 contest_trainer,CONTEST_WINNER_HALL_1_TRAINERNAME,EZRA,,עזרא,proposed,"src/data/contest_opponents.h:152; familiar Hebrew form (rules §5, as SAMUEL שמואל): Biblical עזרא"
