@@ -27,7 +27,7 @@ KEPT_LATIN = {
     'data/text/tv.inc': 'TV shows behind FLAG_SYS_TV_START, which H&S defines as 0',
     'src/data/battle_frontier/apprentice.h': "the other languages' name columns; the English column is Hebrew",
     'src/scrcmd.c': "the Odd Egg name list, which the game compares with the player's typed name",
-    'src/text_input_strings.c': 'the Latin keyboard layouts',
+    'src/text_input_strings.c': 'the Latin keyboard layouts, and the English rows of the Easy Chat keyboard, which the Hebrew build does not print',
     'src/naming_screen.c': 'the Latin keyboard layouts',
     'src/option_menu.c': 'button names (L, R, A, B)',
     'src/start_menu.c': 'the debug entry and AM/PM (the clock is 24-hour)',

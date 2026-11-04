@@ -659,7 +659,7 @@ seen on screen: 510 | translated: 151
 | `src/slot_machine.c` | 5 | 5 | translated |
 | `src/start_menu.c` | 3 | 0 | translated (3 kept in Latin: the debug entry and AM/PM (the clock is 24-hour)) |
 | `src/strings.c` | 1142 | 1116 | translated (26 kept in Latin: button names, abbreviations (BP), unit placeholders and Emerald-only names) |
-| `src/text_input_strings.c` | 22 | 1 | translated (21 kept in Latin: the Latin keyboard layouts) |
+| `src/text_input_strings.c` | 23 | 2 | translated (21 kept in Latin: the Latin keyboard layouts, and the English rows of the Easy Chat keyboard, which the Hebrew build does not print) |
 | `src/trader.c` | 4 | 4 | translated |
 | `src/trainer_fan_club.c` | 2 | 2 | translated |
 | `src/trainer_tower.c` | 1 | 1 | translated |
