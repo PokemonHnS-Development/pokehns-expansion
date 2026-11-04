@@ -272,6 +272,39 @@ class FlagGatesTest(unittest.TestCase):
         self.assertEqual(code, 2)
         self.assertIn('outside the FLAG_SYS_TV_START gate', out)
 
+    def test_special_reached_before_the_gate_stops(self):
+        # each special sits below the gate line, but the script reaches it without passing the gate
+        script = 'data/scripts/tv.inc'
+        cases = [
+            ('the gate\'s own target', script, 'EventScript_NoShow::\n\treleaseall',
+             'EventScript_NoShow::\n\tspecial DoTVShow\n\treleaseall', 'outside the FLAG_SYS_TV_START gate'),
+            ('a jump above the gate', script, '\tlockall\n',
+             '\tlockall\n\tgoto_if_set FLAG_ENABLE_B, EventScript_Early\n',
+             'outside the FLAG_SYS_TV_START gate'),
+            ('a label that falls through', script, 'EventScript_NoShow::\n\treleaseall\n\tend\n',
+             'EventScript_NoShow::\n\treleaseall\n', 'outside the FLAG_SYS_TV_START gate'),
+            ('a map script that enters a show', 'data/maps/Lobby/scripts.inc', 'Lobby_EventScript_Reporter::\n',
+             'Lobby_EventScript_Reporter::\n\tgoto_if_set FLAG_ENABLE_B, EventScript_TryDoTVShow\n',
+             'EventScript_TryDoTVShow, a TV script behind the gate'),
+        ]
+        for name, rel, old, new, message in cases:
+            with self.subTest(name):
+                p = os.path.join(self.tree, rel)
+                with open(p, encoding='utf-8') as f:
+                    before = f.read()
+                text = before.replace(old, new, 1)
+                if name == 'a jump above the gate':
+                    text += '\nEventScript_Early::\n\tspecial DoTVShow\n\tend\n'
+                self.assertNotEqual(text, before)
+                with open(p, 'w', encoding='utf-8') as f:
+                    f.write(text)
+                code, out = self.run_tool('--check')
+                with open(p, 'w', encoding='utf-8') as f:
+                    f.write(before)
+                self.assertEqual(code, 2, out)
+                self.assertIn(message, out)
+        self.assertEqual(self.run_tool('--check')[0], 1)
+
     def test_tv_flag_set_stops(self):
         p = os.path.join(self.tree, 'include/constants/flags_hns.h')
         with open(p, 'w') as f:

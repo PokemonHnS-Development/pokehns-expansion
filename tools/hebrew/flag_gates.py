@@ -12,9 +12,10 @@ their own key, each with a reason:
                the contact is never enabled and none of its calls can ring.
              * TV show text: the labels of data/text/tv.inc that only src/tv.c's sTV*TextGroup
                tables name. Those tables are read only by the DoTVShow* functions, which only the
-               specials DoTVShow and DoTVShowInSearchOfTrainers reach, and data/scripts/tv.inc runs
-               every show special after `goto_if_unset FLAG_SYS_TV_START`, with
-               FLAG_SYS_TV_START defined as 0.
+               specials DoTVShow and DoTVShowInSearchOfTrainers reach, and each show special sits
+               in a label of data/scripts/tv.inc that the script reaches only through the lines
+               below `goto_if_unset FLAG_SYS_TV_START` (followed jump by jump, not by line
+               order), with FLAG_SYS_TV_START defined as 0.
   not_built  labels with no symbol in the ELF given with --elf: not assembled into this build.
              Without --elf the not_built lists already in the file are kept as they are.
 
@@ -219,6 +220,62 @@ def c_files(tree):
     return out
 
 
+def gated_labels(script, gate):
+    """(gated, owner) for the lines of a script file and the index of its gate line.
+
+    owner[i] is the label line i belongs to (None above the first label). gated holds the labels
+    that run only after the gate: reached from the lines below the gate in the gate's own label,
+    and not from the lines up to the gate (its own target included), from a label that the lines
+    below the gate do not reach, or from anything those reach. A label is reached by a line that
+    names it, and by the label above it when that label's last line is not end, return or goto."""
+    lines = strip_script('\n'.join(script)).split('\n')
+    owner, starts, current = [], [], None
+    for i, line in enumerate(lines):
+        m = LABEL_RE.match(line)
+        if m:
+            current = m.group(1)
+            starts.append((i, current))
+        owner.append(current)
+    if owner[gate] is None:
+        raise ShapeError('%s:%d: the gate line is above the first label' % (TV_SCRIPT, gate + 1))
+    names = {n for _, n in starts}
+    bounds = {n: (i + 1, starts[k + 1][0] if k + 1 < len(starts) else len(lines))
+              for k, (i, n) in enumerate(starts)}
+    following = {n: starts[k + 1][1] for k, (_, n) in enumerate(starts[:-1])}
+
+    def refs(first, end):
+        return {t for line in lines[first:end] for t in re.findall(r'[A-Za-z_]\w*', line) if t in names}
+
+    def falls_through(n):
+        first, end = bounds[n]
+        body = [line.split() for line in lines[first:end] if line.strip()]
+        return n in following and not (body and body[-1][0] in ('end', 'return', 'goto'))
+
+    home = owner[gate]
+    first, end = bounds[home]
+    before = refs(first, gate + 1)
+
+    def reach(roots):
+        seen, todo = set(), list(roots)
+        while todo:
+            n = todo.pop()
+            if n in seen:
+                continue
+            seen.add(n)
+            if n == home:
+                todo += before          # entering the gate's label runs the gate again
+                continue
+            todo += refs(*bounds[n])
+            if falls_through(n):
+                todo.append(following[n])
+        return seen
+
+    after = refs(gate + 1, end) | ({following[home]} if falls_through(home) else set())
+    below = reach(after)
+    open_ = reach(before | (names - below - {home}))
+    return below - open_ - {home}, owner
+
+
 def tv_off(tree, flags, texts, tokens):
     """Labels of tv.inc that only the TV show tables of tv.c name, after checking the gate.
     texts: {rel: text} of every script and C file; tokens: {rel: set of its identifiers}."""
@@ -228,20 +285,23 @@ def tv_off(tree, flags, texts, tokens):
     gate = next((i for i, l in enumerate(script) if l.strip().startswith(TV_GATE)), None)
     if gate is None:
         raise ShapeError('%s: no `%s` line' % (TV_SCRIPT, TV_GATE))
+    gated, owner = gated_labels(script, gate)
     special_re = re.compile(r'^\s*special\s+(%s)\b' % '|'.join(TV_SPECIALS))
     for rel, text in texts.items():
         if not rel.endswith(('.inc', '.s')):
             continue
         for i, line in enumerate(text.split('\n')):
-            if special_re.match(line) and (rel != TV_SCRIPT or i < gate):
-                raise ShapeError('%s:%d runs a TV show special outside the FLAG_SYS_TV_START gate (%s:%d)'
-                                 % (rel, i + 1, TV_SCRIPT, gate + 1))
-    # the labels after the gate (show scripts) must not be entered from anywhere else
-    after = set(LABEL_RE.findall('\n'.join(script[gate:])))
+            if not special_re.match(line):
+                continue
+            if rel == TV_SCRIPT and (owner[i] in gated or (owner[i] == owner[gate] and i > gate)):
+                continue
+            raise ShapeError('%s:%d runs a TV show special outside the FLAG_SYS_TV_START gate (%s:%d)'
+                             % (rel, i + 1, TV_SCRIPT, gate + 1))
+    # the labels that run only after the gate (the show scripts) must not be entered from anywhere else
     for rel, toks in sorted(tokens.items()):
-        hit = sorted(after & toks) if rel != TV_SCRIPT else []
+        hit = sorted(gated & toks) if rel != TV_SCRIPT else []
         if hit:
-            raise ShapeError('%s names %s, a TV script after the gate in %s' % (rel, hit[0], TV_SCRIPT))
+            raise ShapeError('%s names %s, a TV script behind the gate in %s' % (rel, hit[0], TV_SCRIPT))
     tvc = texts[TV_C]
     labels = LABEL_RE.findall(texts[TV_TEXT])
     owners = top_level_owners(tvc, r'\b[A-Za-z_]\w*\b')
