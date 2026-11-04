@@ -1,25 +1,25 @@
 const struct EasyChatWordInfo gEasyChatGroup_Hobbies[] = {
     [EC_INDEX(EC_WORD_IDOL)] =
     {
-        .text = COMPOUND_STRING("IDOL"),
+        .text = COMPOUND_STRING("אליל"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_ADVENTURE),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_ANIME)] =
     {
-        .text = COMPOUND_STRING("ANIME"),
+        .text = COMPOUND_STRING("אנימה"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_ANIME),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_SONG)] =
     {
-        .text = COMPOUND_STRING("SONG"),
+        .text = COMPOUND_STRING("שיר"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_BALL),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_MOVIE)] =
     {
-        .text = COMPOUND_STRING("MOVIE"),
+        .text = COMPOUND_STRING("קולנוע"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_BIKE),
         .enabled = TRUE,
     },
@@ -31,7 +31,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Hobbies[] = {
     },
     [EC_INDEX(EC_WORD_CHAT)] =
     {
-        .text = COMPOUND_STRING("CHAT"),
+        .text = COMPOUND_STRING("צ'אט"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_BOOK),
         .enabled = TRUE,
     },
@@ -43,19 +43,19 @@ const struct EasyChatWordInfo gEasyChatGroup_Hobbies[] = {
     },
     [EC_INDEX(EC_WORD_TOYS)] =
     {
-        .text = COMPOUND_STRING("TOYS"),
+        .text = COMPOUND_STRING("צעצועים"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_CARDS),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_MUSIC)] =
     {
-        .text = COMPOUND_STRING("MUSIC"),
+        .text = COMPOUND_STRING("מוזיקה"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_CHANNEL),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_CARDS)] =
     {
-        .text = COMPOUND_STRING("CARDS"),
+        .text = COMPOUND_STRING("קלפים"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_CHAT),
         .enabled = TRUE,
     },
@@ -91,13 +91,13 @@ const struct EasyChatWordInfo gEasyChatGroup_Hobbies[] = {
     },
     [EC_INDEX(EC_WORD_GAME)] =
     {
-        .text = COMPOUND_STRING("GAME"),
+        .text = COMPOUND_STRING("משחק"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_DATE),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_RPG)] =
     {
-        .text = COMPOUND_STRING("RPG"),
+        .text = COMPOUND_STRING("משחק תפקידים"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_DESIGN),
         .enabled = TRUE,
     },
@@ -121,19 +121,19 @@ const struct EasyChatWordInfo gEasyChatGroup_Hobbies[] = {
     },
     [EC_INDEX(EC_WORD_WALK)] =
     {
-        .text = COMPOUND_STRING("WALK"),
+        .text = COMPOUND_STRING("צעידה"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_FISHING),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_BIKE)] =
     {
-        .text = COMPOUND_STRING("BIKE"),
+        .text = COMPOUND_STRING("אופניים"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_FLOWERS),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_HOBBY)] =
     {
-        .text = COMPOUND_STRING("HOBBY"),
+        .text = COMPOUND_STRING("תחביב"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_GAME),
         .enabled = TRUE,
     },
@@ -151,13 +151,13 @@ const struct EasyChatWordInfo gEasyChatGroup_Hobbies[] = {
     },
     [EC_INDEX(EC_WORD_SONGS)] =
     {
-        .text = COMPOUND_STRING("SONGS"),
+        .text = COMPOUND_STRING("שירים"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_HEROINE),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_DIET)] =
     {
-        .text = COMPOUND_STRING("DIET"),
+        .text = COMPOUND_STRING("דיאטה"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_HOBBY),
         .enabled = TRUE,
     },
@@ -175,7 +175,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Hobbies[] = {
     },
     [EC_INDEX(EC_WORD_DANCE)] =
     {
-        .text = COMPOUND_STRING("DANCE"),
+        .text = COMPOUND_STRING("ריקוד"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_LOCOMOTIVE),
         .enabled = TRUE,
     },
@@ -199,7 +199,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Hobbies[] = {
     },
     [EC_INDEX(EC_WORD_DATE)] =
     {
-        .text = COMPOUND_STRING("DATE"),
+        .text = COMPOUND_STRING("דייט"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_MOVIE),
         .enabled = TRUE,
     },
@@ -223,7 +223,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Hobbies[] = {
     },
     [EC_INDEX(EC_WORD_PC)] =
     {
-        .text = COMPOUND_STRING("PC"),
+        .text = COMPOUND_STRING("מחשב"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_PLANS),
         .enabled = TRUE,
     },
@@ -235,13 +235,13 @@ const struct EasyChatWordInfo gEasyChatGroup_Hobbies[] = {
     },
     [EC_INDEX(EC_WORD_HERO)] =
     {
-        .text = COMPOUND_STRING("HERO"),
+        .text = COMPOUND_STRING("גיבור"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_RPG),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_NAP)] =
     {
-        .text = COMPOUND_STRING("NAP"),
+        .text = COMPOUND_STRING("תנומה"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_SHOPPING),
         .enabled = TRUE,
     },
@@ -265,19 +265,19 @@ const struct EasyChatWordInfo gEasyChatGroup_Hobbies[] = {
     },
     [EC_INDEX(EC_WORD_BOARD)] =
     {
-        .text = COMPOUND_STRING("BOARD"),
+        .text = COMPOUND_STRING("לוח"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_SPECTATOR),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_BALL)] =
     {
-        .text = COMPOUND_STRING("BALL"),
+        .text = COMPOUND_STRING("כדור"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_SPORTS),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_BOOK)] =
     {
-        .text = COMPOUND_STRING("BOOK"),
+        .text = COMPOUND_STRING("ספר"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_SWEETS),
         .enabled = TRUE,
     },
@@ -301,7 +301,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Hobbies[] = {
     },
     [EC_INDEX(EC_WORD_PLANS)] =
     {
-        .text = COMPOUND_STRING("PLANS"),
+        .text = COMPOUND_STRING("תוכניות"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_TRENDY),
         .enabled = TRUE,
     },
@@ -319,7 +319,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Hobbies[] = {
     },
     [EC_INDEX(EC_WORD_LOOK)] =
     {
-        .text = COMPOUND_STRING("LOOK"),
+        .text = COMPOUND_STRING("מראה"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_WALK),
         .enabled = TRUE,
     },
