@@ -1,5 +1,7 @@
 // Minimal libretro frontend: loads a core .dylib, runs a key script, dumps frames.
 // usage: lrrun <core.dylib> <rom.gba> <outdir> [save.sav]   (script on stdin)
+// Exit status 0 when the script ran to its end, 2 for wrong arguments, 3 when a save was given but
+// the core exposes no save RAM or the file could not be read, 1 for any other failure.
 #include <dlfcn.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -197,11 +199,13 @@ int main(int argc, char **argv) {
         void *sram = retro_get_memory_data(MEM_SAVE_RAM);
         size_t ssz = retro_get_memory_size(MEM_SAVE_RAM);
         FILE *s = fopen(argv[4],"rb");
-        if (s && sram && ssz) {
-            size_t n = fread(sram,1,ssz,s);
-            fprintf(stderr,"SAVE loaded %zu of %zu bytes\n", n, ssz);
-            fclose(s);
-        } else fprintf(stderr,"SAVE skipped (sram=%p size=%zu)\n", sram, ssz);
+        size_t n = s && sram && ssz ? fread(sram,1,ssz,s) : 0;
+        if (s) fclose(s);
+        if (!n) {
+            fprintf(stderr,"SAVE not loaded (%s, sram=%p size=%zu)\n", s ? "0 bytes read" : "cannot open the file", sram, ssz);
+            return 3;
+        }
+        fprintf(stderr,"SAVE loaded %zu of %zu bytes\n", n, ssz);
     }
 
     char line[1024]; long total = 0;
