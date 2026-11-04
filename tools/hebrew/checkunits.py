@@ -127,10 +127,10 @@ def check(u):
     if bad:
         errs.append('CHARSET %r' % ''.join(bad))
     d_en, d_he = digits(en), digits(he)
-    if sorted(d_en) != sorted(d_he):
-        warns.append('DIGITS %s -> %s' % (d_en, d_he))
-    elif any(x[::-1] in d_he and x[::-1] != x and x not in d_he for x in d_en):
+    if any(x[::-1] in d_he and x[::-1] != x and x not in d_he for x in d_en):
         errs.append('DIGITS reversed %s -> %s' % (d_en, d_he))
+    elif sorted(d_en) != sorted(d_he):
+        warns.append('DIGITS %s -> %s' % (d_en, d_he))
     plain = TOKEN_RE.sub(' ', he).replace('\\n', ' ').replace('\\l', ' ').replace('\\p', ' ')
     has_heb = re.search(r'[֐-׿]', plain)
     words = [w for w in re.findall(r'[A-Za-zé]+', plain) if w not in LATIN_OK and len(w) > 1]
