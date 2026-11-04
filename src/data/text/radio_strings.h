@@ -51,22 +51,22 @@ static const u8 sRadioText_OPT_MaryIs[] = _(",");
 static const u8 sRadioText_OPT_PokemonChannel[] = _("ערוץ הפוקימון");
 
 // Adverbs (randomly selected)
-static const u8 sRadioText_OPT_Adverb_SweetAdorably[]      = _("באופן מתוק ומלבב");
-static const u8 sRadioText_OPT_Adverb_WigglySlickly[]      = _("באופן מתפתל וחלקלק");
+static const u8 sRadioText_OPT_Adverb_SweetAdorably[]      = _("מתוק ומלבב, וגם");
+static const u8 sRadioText_OPT_Adverb_WigglySlickly[]      = _("מתפתל וחלקלק, וגם");
 static const u8 sRadioText_OPT_Adverb_AptlyNamed[]         = _("ראוי לשמו, וגם");
 static const u8 sRadioText_OPT_Adverb_UndeniablyKindOf[]   = _("ללא ספק די");
 static const u8 sRadioText_OPT_Adverb_Unbearably[]         = _("כל כך, כל כך נורא");
-static const u8 sRadioText_OPT_Adverb_WowImpressively[]    = _("וואו, באופן מרשים");
-static const u8 sRadioText_OPT_Adverb_AlmostPoisonously[]  = _("באופן כמעט ארסי");
-static const u8 sRadioText_OPT_Adverb_Sensually[]          = _("אוו, באופן חושני");
-static const u8 sRadioText_OPT_Adverb_Mischievously[]      = _("באופן שובב כל כך");
-static const u8 sRadioText_OPT_Adverb_Topically[]          = _("באופן אקטואלי מאוד");
-static const u8 sRadioText_OPT_Adverb_Addictively[]        = _("בהחלט באופן ממכר");
+static const u8 sRadioText_OPT_Adverb_WowImpressively[]    = _("וואו, מרשים, וגם");
+static const u8 sRadioText_OPT_Adverb_AlmostPoisonously[]  = _("כמעט ארסי, וגם");
+static const u8 sRadioText_OPT_Adverb_Sensually[]          = _("אוו, חושני, וגם");
+static const u8 sRadioText_OPT_Adverb_Mischievously[]      = _("שובב כל כך, וגם");
+static const u8 sRadioText_OPT_Adverb_Topically[]          = _("אקטואלי מאוד, וגם");
+static const u8 sRadioText_OPT_Adverb_Addictively[]        = _("בהחלט ממכר, וגם");
 static const u8 sRadioText_OPT_Adverb_LooksInWater[]       = _("במים הוא נראה");
 static const u8 sRadioText_OPT_Adverb_EvolutionMustBe[]    = _("כשיתפתח בטח יהיה");
-static const u8 sRadioText_OPT_Adverb_Provocatively[]      = _("באופן מתגרה");
+static const u8 sRadioText_OPT_Adverb_Provocatively[]      = _("מתגרה, וגם");
 static const u8 sRadioText_OPT_Adverb_FlippedOut[]         = _("מטורף לגמרי, וגם");
-static const u8 sRadioText_OPT_Adverb_HeartMeltingly[]     = _("באופן ממיס לב");
+static const u8 sRadioText_OPT_Adverb_HeartMeltingly[]     = _("ממיס לב, וגם");
 
 static const u8 *const sRadioText_OPT_Adverbs[] =
 {
