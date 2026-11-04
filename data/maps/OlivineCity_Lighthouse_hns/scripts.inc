@@ -302,7 +302,7 @@ OlivineLighthouse_Text_JasmineCianwoodPharmacy:
 	.string "…שמעתי שיש בית מרקחת\n"
 	.string "נפלא בסיאנווד…\p"
 	.string "אבל הוא מעבר לים…\n"
-	.string "ואני לא יכולה להשאיר את AMPHY לבד…$"
+	.string "ואני לא יכולה להשאיר את אמפי לבד…$"
 
 OlivineLighthouse_Text_JasmineGetMedicine:
 	.string "…אפשר לבקש ממך להביא\n"
@@ -312,13 +312,13 @@ OlivineLighthouse_Text_JasmineGetMedicine2:
 	.string "יש בית מרקחת נפלא\n"
 	.string "בסיאנווד…\p"
 	.string "אבל הוא מעבר לים…\n"
-	.string "ואני לא יכולה להשאיר את AMPHY לבד…\p"
+	.string "ואני לא יכולה להשאיר את אמפי לבד…\p"
 	.string "…אפשר לבקש ממך להביא\n"
 	.string "לי תרופה? בבקשה?$"
 
 OlivineLighthouse_Text_JasmineCureAmphy:
 	.string "ג'סמין: …התרופה הזאת\n"
-	.string "תרפא את AMPHY?$"
+	.string "תרפא את אמפי?$"
 
 
 OlivineLighthouse_EventScript_JasmineDeliverPotion::
@@ -391,12 +391,12 @@ OlivineLighthouse_Text_PlayerHandedSecretpotion:
 OlivineLighthouse_Text_JasmineDontBeOffended:
 	.string "ג'סמין: …אממ, בבקשה\n"
 	.string "אל תיעלב…\p"
-	.string "…AMPHY לא מקבל שום דבר\n"
+	.string "…אמפי לא מקבל שום דבר\n"
 	.string "מאף אחד חוץ ממני…$"
 
 OlivineLighthouse_Text_JasmineAmphyHowFeeling:
 	.string "ג'סמין: …\p"
-	.string "AMPHY, איך אתה מרגיש?$"
+	.string "אמפי, איך אתה מרגיש?$"
 
 OlivineLighthouse_Text_JasmineThankYou:
 	.string "ג'סמין: …הו, איזו הקלה…\p"
@@ -408,10 +408,10 @@ OlivineLighthouse_Text_JasmineThankYou:
 
 OlivineLighthouse_Text_JasmineISee:
 	.string "ג'סמין: …אני מבינה…\n"
-	.string "…AMPHY, תחזיק מעמד!$"
+	.string "…אמפי, תחזיק מעמד!$"
 
 OlivineLighthouse_Text_AmphyPalPaloo:
-	.string "AMPHY: …\n"
+	.string "אמפי: …\n"
 	.string "…פא… פאלו…$"
 
 OlivineLighthouse_Text_AmphyBreathingLabored:
@@ -419,6 +419,6 @@ OlivineLighthouse_Text_AmphyBreathingLabored:
 	.string "מאוד…$"
 
 OlivineLighthouse_Text_AmphyPaluPalulu:
-	.string "AMPHY: פאלו! פאלולו!$"
+	.string "אמפי: פאלו! פאלולו!$"
 
 

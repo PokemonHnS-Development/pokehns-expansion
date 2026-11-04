@@ -597,7 +597,7 @@ SinjohRuins_Lab_Text_Note4:
     .string "אז הקרח נעלם.\p"
     .string "יש 6 חדרים, ומקדש חתום במרכז.\p"
     .string "לפי הארכיטקטורה, אולי המבנה הראשי\n"
-    .string "שייך לעמי ה-Celestica הקדומים…\p"
+    .string "שייך לעמי סלסטיקה הקדומים…\p"
     .string "אבותינו.\n"
     .string "לפני שעברו צפונה.\p"
     .string "הבוס רוצה שהמקדש\n"

@@ -28,7 +28,7 @@ LavenderTown_House1_Text_Girl:
 	.string "סבא אוסף פוקימונים מסכנים\n"
 	.string "וחסרי בית ומטפל בהם.$"
 LavenderTown_House1_Text_Guy:
-	.string "מר FUJI אכן גר כאן, אבל כרגע הוא\n"
+	.string "מר פוג'י אכן גר כאן, אבל כרגע הוא\n"
 	.string "לא בבית. הוא אמור להיות בבית הנשמות.$"
 LavenderTown_House1_Text_Marowak:
 	.string ".............................$"
