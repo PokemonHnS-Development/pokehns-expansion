@@ -91,6 +91,9 @@ TV_Text_Show2::
 Lobby_Text_Reporter::
 \t.string "May I ask you something?$"
 
+TV_Text_Rerun::
+\t.string "Here is that show again.$"
+
 TV_Text_Unused::
 \t.string "Nobody shows this.$"
 '''
@@ -99,6 +102,7 @@ TV_C = '''// TV_Text_Unused is named only in this comment
 static const u8 *const sTVShowTextGroup[] = {
     TV_Text_Show1,
     TV_Text_Show2,
+    TV_Text_Rerun,
 };
 
 static void DoTVShowOne(void)
@@ -115,6 +119,10 @@ void DoTVShow(void)
 LOBBY = '''Lobby_EventScript_Reporter::
 \tmsgbox Lobby_Text_Reporter, MSGBOX_DEFAULT
 \tend
+
+Lobby_EventScript_Fan::
+\tmsgbox TV_Text_Rerun, MSGBOX_DEFAULT
+\tend
 '''
 
 OTHER = '''Other_EventScript_Phone::
@@ -126,7 +134,7 @@ LIVE_LABELS = {
     'data/text/match_call.inc': {'live': ['MatchCall_Text_A1', 'MatchCall_Text_Shared', 'MatchCall_Text_B1',
                                           'MatchCall_Text_Mom1', 'MatchCall_Text_C1', 'MatchCall_Text_Called'],
                                  'debug_only': [], 'dead': []},
-    'data/text/tv.inc': {'live': ['TV_Text_Show1', 'TV_Text_Show2', 'Lobby_Text_Reporter'],
+    'data/text/tv.inc': {'live': ['TV_Text_Show1', 'TV_Text_Show2', 'Lobby_Text_Reporter', 'TV_Text_Rerun'],
                          'debug_only': [], 'dead': ['TV_Text_Unused']},
     'data/maps/Kanto_Frlg/scripts.inc': {'live': ['Kanto_Text_Built', 'Kanto_Text_NotBuilt'],
                                          'debug_only': [], 'dead': []},
@@ -134,7 +142,7 @@ LIVE_LABELS = {
 
 INVENTORY = [
     {'file': 'data/text/match_call.inc', 'strings': 6, 'strings_live': 6, 'chars_live': 60},
-    {'file': 'data/text/tv.inc', 'strings': 3, 'strings_live': 3, 'chars_live': 30},
+    {'file': 'data/text/tv.inc', 'strings': 4, 'strings_live': 4, 'chars_live': 40},
     {'file': 'data/maps/Kanto_Frlg/scripts.inc', 'strings': 2, 'strings_live': 2, 'chars_live': 20},
     {'file': 'src/strings.c', 'strings': 9, 'strings_live': 9, 'chars_live': 90},
 ]
@@ -225,14 +233,15 @@ class FlagGatesTest(unittest.TestCase):
         self.assertEqual(mc['live'], ['MatchCall_Text_Shared', 'MatchCall_Text_B1', 'MatchCall_Text_Mom1',
                                       'MatchCall_Text_Called'])
         tv = labels['data/text/tv.inc']
-        # the reporter's line is named by a map script, not by a TV table: it stays live
+        # the reporter's line is named by a map script, not by a TV table: it stays live; the rerun
+        # is in a TV table but a map script names it too, so it stays live as well
         self.assertEqual(tv['flag_off'], ['TV_Text_Show1', 'TV_Text_Show2'])
-        self.assertEqual(tv['live'], ['Lobby_Text_Reporter'])
+        self.assertEqual(tv['live'], ['Lobby_Text_Reporter', 'TV_Text_Rerun'])
         self.assertEqual(tv['dead'], ['TV_Text_Unused'])
         self.assertIn('FLAG_SYS_TV_START', tv['flag_off_reason'])
         self.assertNotIn('not_built', labels['data/maps/Kanto_Frlg/scripts.inc'])
         self.assertEqual((inv['data/text/tv.inc']['strings_live'], inv['data/text/tv.inc']['strings'],
-                          inv['data/text/tv.inc']['strings_flag_off']), (1, 1, 2))
+                          inv['data/text/tv.inc']['strings_flag_off']), (2, 2, 2))
         self.assertEqual(inv['src/strings.c'], INVENTORY[3])
         self.assertEqual(self.run_tool('--check')[0], 0)
 
