@@ -1793,7 +1793,12 @@ static u16 HandleEasyChatInput_Phrase(void)
         }
         else if (JOY_NEW(DPAD_LEFT))
         {
+#if TEXT_RTL
+            // The phrase and the footer are mirrored: the next column is to the left.
+            sEasyChatScreen->mainCursorColumn++;
+#else
             sEasyChatScreen->mainCursorColumn--;
+#endif
             break;
         }
         else if (JOY_NEW(DPAD_DOWN))
@@ -1803,7 +1808,11 @@ static u16 HandleEasyChatInput_Phrase(void)
         }
         else if (JOY_NEW(DPAD_RIGHT))
         {
+#if TEXT_RTL
+            sEasyChatScreen->mainCursorColumn--;
+#else
             sEasyChatScreen->mainCursorColumn++;
+#endif
             break;
         }
 
@@ -1876,7 +1885,12 @@ static u16 HandleEasyChatInput_MainScreenButtons(void)
         }
         else if (JOY_NEW(DPAD_LEFT))
         {
+#if TEXT_RTL
+            // The phrase and the footer are mirrored: the next column is to the left.
+            sEasyChatScreen->mainCursorColumn++;
+#else
             sEasyChatScreen->mainCursorColumn--;
+#endif
             break;
         }
         else if (JOY_NEW(DPAD_DOWN))
@@ -1886,7 +1900,11 @@ static u16 HandleEasyChatInput_MainScreenButtons(void)
         }
         else if (JOY_NEW(DPAD_RIGHT))
         {
+#if TEXT_RTL
+            sEasyChatScreen->mainCursorColumn--;
+#else
             sEasyChatScreen->mainCursorColumn++;
+#endif
             break;
         }
 
@@ -3254,6 +3272,10 @@ static bool8 UpdateMainCursor(void)
         ecWord++;
     }
 
+#if TEXT_RTL
+    // The phrase window is mirrored: the cursor stands right of its word, at the mirrored x.
+    x = 8 * (2 * sPhraseFrameDimensions[frameId].left + sPhraseFrameDimensions[frameId].width) - x;
+#endif
     y = 8 * (sPhraseFrameDimensions[frameId].top + cursorRow * 2);
     SetMainCursorPos(x, y + 8);
     return FALSE;
@@ -3262,6 +3284,10 @@ static bool8 UpdateMainCursor(void)
 static bool8 UpdateMainCursorOnButtons(void)
 {
     u8 xOffset = GetFooterOptionXOffset(GetMainCursorColumn());
+#if TEXT_RTL
+    // The footer window (AddMainScreenButtonWindow, tiles 1-28) is mirrored.
+    xOffset = 8 * (2 * 1 + 28) - xOffset;
+#endif
     SetMainCursorPos(xOffset, 96);
     return FALSE;
 }
@@ -4743,9 +4769,19 @@ static void CreateMainCursorSprite(void)
     u8 frameId = GetEasyChatScreenFrameId();
     int x = sPhraseFrameDimensions[frameId].left * 8 + 13;
     int y = sPhraseFrameDimensions[frameId].top * 8 + 8;
+#if TEXT_RTL
+    // The phrase and the footer are mirrored: the cursor stands right of its word and points left.
+    u8 spriteId = CreateSprite(&sSpriteTemplate_TriangleCursor,
+                               8 * (2 * sPhraseFrameDimensions[frameId].left + sPhraseFrameDimensions[frameId].width) - x, y, 2);
+#else
     u8 spriteId = CreateSprite(&sSpriteTemplate_TriangleCursor, x, y, 2);
+#endif
     sScreenControl->mainCursorSprite = &gSprites[spriteId];
     gSprites[spriteId].sAnimateCursor = TRUE;
+#if TEXT_RTL
+    // No animation applies sprite->hFlip to this sprite, so the OAM flip bit is set directly.
+    gSprites[spriteId].oam.matrixNum |= ST_OAM_HFLIP;
+#endif
 }
 
 static void SpriteCB_Cursor(struct Sprite *sprite)
@@ -4755,8 +4791,14 @@ static void SpriteCB_Cursor(struct Sprite *sprite)
         if (++sprite->sDelayTimer > 2)
         {
             sprite->sDelayTimer = 0;
+#if TEXT_RTL
+            // Only the main cursor bounces; it points left and moves left onto its word.
+            if (--sprite->x2 < 0)
+                sprite->x2 = 6;
+#else
             if (++sprite->x2 > 0)
                 sprite->x2 = -6;
+#endif
         }
     }
 }
