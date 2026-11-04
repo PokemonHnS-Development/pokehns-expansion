@@ -1,9 +1,11 @@
 # Hebrew translation tools
 
-Python 3 tools for translating Heart & Soul into Hebrew and checking the result. They use only the
-standard library, except the ones that draw pictures, which need Pillow: `fontcells.py`, the font
-scripts in `fonts/` that draw, everything in `graphics/` and the review-sheet scripts in
-`emu/scripts/`. `inventory/` needs numpy. The tools that read an ELF (`rom_sweep.py`, the harness
+Python 3 tools for translating Heart & Soul into Hebrew and checking the result. They need Python
+3.9 or newer: the tool tests pass on 3.9.6, 3.11.9 and 3.14.7, and every script compiles on 3.9.6
+and 3.14.7; the other scripts have only been run on 3.11.9. They use only the standard library,
+except the ones that draw pictures, which need Pillow: `fontcells.py`, the font scripts in `fonts/`
+that draw, everything in `graphics/` and the review-sheet scripts in `emu/scripts/`. `inventory/`
+needs numpy. The tools that read an ELF (`rom_sweep.py`, the harness
 in `emu/`, `inventory/`) need devkitARM (`DEVKITARM`, default `/opt/devkitpro/devkitARM`). Every
 tool runs from any working directory. The style guide and glossary are in `translation/hebrew/`.
 
@@ -17,13 +19,14 @@ tool runs from any working directory. The style guide and glossary are in `trans
 | `HNS_TREE` | Hebrew source tree | this repository |
 | `HNS_BASELINE` | engine baseline: the Hebrew engine with English strings (drift and chunk source) | `../pokehns-heb-engine`, if it exists |
 | `HNS_UPSTREAM` | upstream English tree | `../pokehns-en`, if it exists |
+| `HNS_FIRERED` | the FireRed Hebrew tree, for `namecheck.py --fr-sync` | `../pokefirered-heb`, if it exists |
 | `HNS_FONTS_TREE` | tree whose `src/fonts.c` and `charmap.txt` set the glyph widths | `HNS_TREE` |
 | `HNS_DATA` | data the tools read | `tools/hebrew/data` |
 | `HNS_GLOSSARY` | glossary (`glossary_sources.csv` sits next to it) | `translation/hebrew/glossary.csv` |
 | `HNS_WORK` | scratch and output folder | `build/hebrew` |
 | `HNS_UNITS` | translation unit chunks | `$HNS_WORK/units` |
 | `HNS_ROM`, `HNS_EN_ROM` | Hebrew and English ROMs (each `.elf` sits next to its ROM) | `$HNS_TREE/pokehns.gba`, `$HNS_UPSTREAM/pokehns.gba` |
-| `HNS_SAVES` | save-ladder folder (`ladder1_newgame.sav` ... `ladder6_postgame.sav`) | none: the saves are not in the repository |
+| `HNS_SAVES` | the saves a tour starts from (`start saves/NAME` is read as `$HNS_SAVES/NAME`): the save ladder (`ladder1_newgame.sav` ... `ladder6_postgame.sav`) and the tour base saves (`menuA_base.sav`, `pif2_base.sav`, `r1field_menuA_base.sav` and others), all at the top of the private builds repository's `saves/`; a round tour (`emu/tours/<round>/`) whose save is only in a subfolder needs `HNS_SAVES` set to that subfolder | none: the saves are not in the repository |
 | `HNS_RUNNER` | the `hnsrun` binary | `tools/hebrew/emu/hnsrun` |
 
 ## Workflow
@@ -48,7 +51,10 @@ tool runs from any working directory. The style guide and glossary are in `trans
    inside its strings.
 7. **Audit.** `audit.py [PATH...] [--baseline "$HNS_UPSTREAM"]` runs a static layout audit of
    every string. For the glossary, `namecheck.py --all` checks bytes, the charset, final letters
-   and duplicates, and `glossary_widths.py` reports names wider than their budget.
+   and duplicates; `--warnings` adds three consistency checks that only warn (`--fr-sync`: a name
+   that differs from the FireRed translation's current one; `--translit`: a transliteration slip;
+   `--dupes`: one English person name with two Hebrew spellings), with the explained cases in
+   `data/namecheck_allow.json`. `glossary_widths.py` reports names wider than their budget.
    `plurals.py` checks that every item a player can hold more than one of has a Hebrew plural
    (an `item_plural` row, and its `pluralName` in `src/data/items.h` when it differs).
 8. **Build.** `make hns`, or `make hns RTL_CLIP_REPORT=1` for the clip-report build
@@ -63,6 +69,8 @@ tool runs from any working directory. The style guide and glossary are in `trans
 | --- | --- |
 | `apply_names.py` | writes glossary names into the `.party` files and `region_map_sections.json` |
 | `audit.py` | static width/lines/buffer/bytes/charset audit of every player-visible string |
+| `check_chunked.py` | runs the `make check` suite one test-name prefix per chunk, as CI does (`data/crashing_tests.txt` runs alone) |
+| `check_tests.py` | compares a `make check` log with the tests upstream already fails (`data/known_test_failures.txt`) |
 | `checkunits.py` | validates translated chunks before they are applied |
 | `cliptour.py` | reads the RTL clip log of a clip build between harness steps (`hns.py tour --clip`) |
 | `drift.py` | checks that a translated file changed only inside its strings |
@@ -74,11 +82,12 @@ tool runs from any working directory. The style guide and glossary are in `trans
 | `glossary_widths.py` | glossary names wider than their screen budget and than the English name |
 | `make_chunks.py` | cuts inventory batches into translation chunks |
 | `merge_he.py` | merges `{id: hebrew}` translations into a chunk |
-| `namecheck.py` | validates glossary rows: bytes, charset, final letters, duplicates |
+| `namecheck.py` | validates glossary rows: bytes, charset, final letters, duplicates; `--warnings` (or `--fr-sync`, `--translit`, `--dupes`) warns on names that differ from FireRed's, transliteration slips and two-way person names, minus `data/namecheck_allow.json` |
 | `pairsheets.py` | side-by-side review sheets of two screenshot runs |
 | `paths.py` | the locations above |
 | `plurals.py` | every stackable item has a Hebrew plural row that `src/data/items.h` prints (DECISIONS.md Q125) |
 | `rom_sweep.py` | finds English strings that are still in a built Hebrew ROM |
+| `status_report.py` | writes `translation/hebrew/STATUS.md` (`--sweep SWEEP.json` marks what the dialogue sweep rendered) |
 | `strcov.py` | string coverage: maps the logs of the string-report build (`make hns RTL_STRING_REPORT=1`) to the translated C strings and lists the ones no tour has shown |
 | `strchars.py` | counts the non-ASCII characters and `{TOKENS}` used in string literals (`[TREE]`, default `HNS_TREE`) |
 | `textwidth.py` | pixel width model of the RTL renderer (CLI and library) |
@@ -92,10 +101,15 @@ of `live_labels.json`, `inventory.json` and `c_strings.json`; each has a README.
 installer's checks need only the standard library, but `graphics/` and the font previews need
 Pillow, and `inventory/` needs numpy and devkitARM.
 
+`release/` builds a release candidate, runs every harness test on the files that ship and writes
+`TESTING.md` (`release/README.md`; the screenshot review is in `release/REVIEW.md`). `testmsgs/`
+rebuilds the battle tests' Hebrew message table (`testmsgs/README.md`).
+
 `emu/` holds the headless mGBA harness (see `emu/README.md`). `data/` holds what the tools read
 at run time: `budgets.json` (pixel budgets per string kind), `live_labels.json` and
 `c_strings.json` (which script labels and C literals the H&S build uses), `inventory.json` (files
-and batches) and `font_drafts/` (draft Hebrew widths for `--hebrew-widths draft`).
+and batches), `namecheck_allow.json` (the name differences kept on purpose, each with its reason)
+and `font_drafts/` (draft Hebrew widths for `--hebrew-widths draft`).
 
-Tests: `python3 -m unittest discover -s tools/hebrew/tests`. The test for the English ROM runs only
-when `HNS_EN_ROM` exists.
+Tests: `python3 -m unittest discover -s tools/hebrew/tests` (132 tests in 20 files). The test for
+the English ROM runs only when `HNS_EN_ROM` exists, and one test needs the built `tools/preproc`.
