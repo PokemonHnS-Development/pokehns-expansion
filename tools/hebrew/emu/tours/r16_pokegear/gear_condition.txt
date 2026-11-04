@@ -1,0 +1,80 @@
+# Pokegear CONDITION: the help line of every row (sPageDescriptions,
+# src/pokenav_menu_handler_gfx.c:343-365): the condition menu's CANCEL, the search menu's
+# COOL..TOUGH and CANCEL; then a SEARCH result: the condition graph in search mode shows the
+# 'No.' index (gText_Number2, src/pokenav_conditions_gfx.c:584-596) and the help bar of the graph
+# (HELPBAR_CONDITION_MON_STATUS); A opens the markings (HELPBAR_CONDITION_MARKINGS).
+# Run: scripts/r16_pokegear/gear16.py tour ROM OUT --tours tools/hebrew/emu/tours/r16_pokegear [--clip]
+# Save: menuA_base.sav (HNS_SAVES=hns-tools/emu/saves_all).
+start saves/menuA_base.sav
+include ../../scripts/continue.txt
+startmenu POKEGEAR
+waitcb2x CB2_Pokenav 600
+waitnav
+press DOWN                                # CONDITION
+waitnav
+press A
+waitnav
+snap gc_menu_party
+press DOWN                                # SEARCH
+waitnav
+snap gc_menu_search
+press DOWN                                # CANCEL
+waitnav
+snap gc_menu_cancel
+press UP
+waitnav
+press A                                   # SEARCH: COOL highlighted
+waitnav
+snap gc_search_cool
+press DOWN
+waitnav
+snap gc_search_beauty
+press DOWN
+waitnav
+snap gc_search_cute
+press DOWN
+waitnav
+snap gc_search_smart
+press DOWN
+waitnav
+snap gc_search_tough
+press DOWN
+waitnav
+snap gc_search_cancel
+press UP
+waitnav
+press UP
+waitnav
+press UP
+waitnav
+press UP
+waitnav
+press UP
+waitnav
+snap gc_search_cool_again
+press A                                   # COOL results
+waitnav
+snap gc_results
+press A                                   # the graph of the first result
+waitnav
+snap gc_graph
+press DOWN
+waitnav
+snap gc_graph_next
+press A                                   # markings
+waitnav
+snap gc_markings
+press B
+waitnav
+snap gc_markings_closed
+press B
+waitnav
+snap gc_back_results
+press B
+waitnav
+press B
+waitnav
+press B
+waitnav
+press B
+waitcb2x CB2_Overworld 900

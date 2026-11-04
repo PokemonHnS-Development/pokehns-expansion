@@ -1,0 +1,41 @@
+# Pokegear RIBBONS: the Winning and Victory ribbons (Battle Tower, AwardBattleTowerRibbons,
+# src/battle_tower.c:1787-1807: a streak above 55 at level 50 / open level) set on party slot 0 with
+# ribbonset (bits 16 and 17 of the ribbon word, include/pokemon.h:205-206), then the ribbon list and
+# the summary walk of that mon (ribbonwalk), each ribbon with its two description lines
+# (gRibbonDescriptionPart1/2_Winning/Victory, src/data/text/ribbon_descriptions.h:12-15).
+# Then menuA_base (no mon has a ribbon) with FLAG_SYS_RIBBON_GET set: RIBBONS shows
+# 'no Pokemon with ribbons' (PrintNoRibbonWinners, src/pokenav_menu_handler_gfx.c:1322-1329).
+# Run: scripts/r16_pokegear/gear16.py tour ROM OUT --tours tools/hebrew/emu/tours/r16_pokegear [--clip]
+# Saves: ladder6_postgame.sav, menuA_base.sav (HNS_SAVES=hns-tools/emu/saves_all).
+start saves/ladder6_postgame.sav
+include ../../scripts/continue.txt
+ribbonset 0 30000
+startmenu POKEGEAR
+waitcb2x CB2_Pokenav 600
+waitnav
+press DOWN
+waitnav
+press DOWN
+waitnav
+press DOWN
+waitnav
+press DOWN
+waitnav
+snap gr_main_ribbons
+press A
+waitnav
+snap gr_list
+press A
+waitnav
+snap gr_sum_m1
+press A
+waitnav
+ribbonwalk gr_m1
+press B
+waitnav
+press B
+waitnav
+press B
+waitnav
+press B
+waitcb2x CB2_Overworld 900
