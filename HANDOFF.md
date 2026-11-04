@@ -206,6 +206,7 @@ rebuild in section 2.7 was run from a `git clone --shared` of the reference repo
 | --- | --- | --- | --- |
 | `make hns -j12` | `pokehns.gba`, `.elf`, `.map` | `build/hns` | the release ROM. `hns` is detected only when `$(BUILD)` or the **whole** goal list is exactly `hns` (`Makefile:21`). Not a `RELEASE=1` build, so asserts stay live (`Makefile:63`, `Makefile:632`) |
 | `make hns RTL_CLIP_REPORT=1 -j12` | `pokehns-clip.gba`, `.elf`, `.map` | `build/hns-clip` | diagnostic ROM that logs every glyph drawn outside its window (`Makefile:36-41, 176-177`; `src/text.c:1047`). **Never shipped.** Builds next to the release build without a clean |
+| `make hns RTL_STRING_REPORT=1 -j12` | `pokehns-strrep.gba`, `.elf`, `.map` | `build/hns-strrep` | diagnostic ROM that records every ROM string copied or printed, read by `tools/hebrew/strcov.py` (`Makefile:42-47, 185-187, 632-643`; hooks in `src/string_util.c`). **Never shipped.** Every hook is under `#if RTL_STRING_REPORT` and followed by `#line`, so the release ROM is byte-identical with or without them |
 | `make check BUILD=hns -j12` | `pokehns-test.elf`, `pokehns-test-headless.elf`, results on stdout | `build/hns-test` | the upstream test suite. Judge the result with `check_tests.py` (section 4.3) |
 | `make BUILD=hns -j2 pokehns-test.elf` | test ELF only | `build/hns-test` | what CI builds (`hebrew.yml:80`) |
 | `make clean` / `make tidy` | | | `tidy` keeps the tools and the graphics |
@@ -221,7 +222,9 @@ rebuild in section 2.7 was run from a `git clone --shared` of the reference repo
   `make TEXT_RTL=0`.
 - `RTL_CLIP_REPORT` defaults to FALSE (`text.h:22-24`); the Makefile passes it with
   `-DRTL_CLIP_REPORT=TRUE`.
-- `TEXT_NAME_SUFFIX_IN_BATTLE` (`text.h:26-28`).
+- `RTL_STRING_REPORT` defaults to FALSE (`text.h:25-29`); the Makefile passes it with
+  `-DRTL_STRING_REPORT=TRUE`.
+- `TEXT_NAME_SUFFIX_IN_BATTLE` (`text.h:31-33`).
 
 **Expected noise, not errors:**
 
