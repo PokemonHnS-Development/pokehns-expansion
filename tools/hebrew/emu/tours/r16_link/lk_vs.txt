@@ -1,0 +1,28 @@
+# The end-of-link-battle VS screen with the outcome words (src/battle_bg.c DrawLinkBattleVsScreenOutcomeText:
+# gText_Win / gText_Loss in B_WIN_VS_OUTCOME_LEFT/RIGHT, gText_Draw in B_WIN_VS_OUTCOME_DRAW), forced: in a
+# trainer battle (Youngster Mikey) with gLinkPlayers filled (r14link.py linkplayers; [0] the player, [1] the
+# opponent, 7-letter names) lkops.py endlink sets gBattleOutcome (1 won, 2 lost, 3 drew) and the callbacks the
+# player controller sets when a cable battle ends; CB2_InitEndLinkBattle (src/battle_main.c) builds the VS screen with data[5] = 1; the words are drawn
+# once the two name panels have slid in (45 frames) and stay up for 255 frames before the fade.
+# A stand-in for the real end of a cable battle (no second cartridge). Run with scripts/r16_link/lkops.py.
+start saves/ladder1_newgame.sav
+include ../_battle_base.txt
+ev givemon SPECIES_SANDSLASH_ALOLA, 50, move1=MOVE_GROWL; end
+linkplayers he:אבשמחתם,en:MAXWELL 1
+face UP
+pinrng
+8 UP
+waitnotfree 120
+bwalk vs_intro input:HandleInputChooseAction
+ss lk_vs_base.ss
+endlink 1
+120 -
+shot vs_won
+sl lk_vs_base.ss
+endlink 2
+120 -
+shot vs_lost
+sl lk_vs_base.ss
+endlink 3
+120 -
+shot vs_drew
