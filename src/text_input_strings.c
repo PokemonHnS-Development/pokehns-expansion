@@ -8,7 +8,7 @@ const u8 gText_EasyChatKeyboard_MNOPQRS[] = _("{CLEAR 11}M{CLEAR 6}N{CLEAR 6}O{C
 const u8 gText_EasyChatKeyboard_TUVWXYZ[] = _("{CLEAR 11}T{CLEAR 6}U{CLEAR 6}V{CLEAR 26}W{CLEAR 6}X{CLEAR 6}Y{CLEAR 6}Z{CLEAR 26} ");
 #if TEXT_RTL
 // The Others key of the Hebrew keyboard, which prints each key on its own (src/easy_chat.c)
-const u8 gText_EasyChatKeyboard_Others[] = _("others");
+const u8 gText_EasyChatKeyboard_Others[] = _("אחר");
 #endif
 
 // Naming Screen keyboard
