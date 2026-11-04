@@ -17,7 +17,7 @@ Environment:
                   (HNS_WORK: tools/hebrew/paths.py, default build/hebrew).
 
 Exit status 2 when an input is missing, 1 when the inputs contradict a sentence of the report
-(a failing self-check, a clipped or crashed label, a crashed map, a changed header, held maps
+(a tour or clip tour that is not OK, a failing self-check, a clipped or crashed label, a crashed map, a changed header, held maps
 that notes.json does not explain, a save-ladder rung whose validation did not exit 0, a cross-core
 table with a missing core or a cell that is not a pixel count), 0 when OUT.md was written.
 """
@@ -133,6 +133,11 @@ def main():
         wrong.append('gbafix.log does not end in "gbafix: header already valid"; the report says gbafix changes nothing')
     if last_line(os.path.join(T, 'selfcheck.log')) != 'all checks passed':
         wrong.append('selfcheck.log does not end in "all checks passed"')
+    for what, tt in (('tours', tours), ('tours_clip', ctours)):
+        bad_tours = sorted('%s %s' % (k, v['status']) for k, v in tt.items() if v['status'] != 'OK')
+        if bad_tours:
+            wrong.append('%s/tour_report.json has tours that are not OK (%s); every tour must pass'
+                         % (what, ', '.join(bad_tours)))
     for n, last in ladder_exit.items():
         if last != 'exit 0':
             wrong.append('ladder_%s.log does not end in "exit 0" (run_release_tests.sh appends the validation '
