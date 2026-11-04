@@ -23,6 +23,7 @@ Label selection (default: every live script text label in HNS_UNITS/*/*.json (--
     --translated (the unit file has a Hebrew text) | --hebrew-only (the string in THIS ROM has
     Hebrew letters; run only) | --sample N [--seed S]
     --offset N | --limit N
+With no --label or --labels-file and no unit files, run, list and selftest exit 2.
 
 How one label runs:
   1. Once per run: boot with the save, CONTINUE, walk out if the save stands in a Pokemon
@@ -111,6 +112,14 @@ def load_units(units_dir=UNITS_DIR):
     return out
 
 
+def no_units(a):
+    """No --label or --labels-file and no unit files to take labels from: a setup error, exit 2.
+    (A filter that matches nothing in existing units is not one; that selection is just empty.)"""
+    sys.stderr.write("sweep: no script units in %s (make_chunks.py writes them there; "
+                     "--units or HNS_UNITS points elsewhere)\n" % a.units)
+    raise SystemExit(2)
+
+
 def select_labels(a):
     units = load_units(a.units)
     by = {u["label"]: u for u in units}
@@ -123,10 +132,9 @@ def select_labels(a):
     if explicit:
         sel = [by.get(n, dict(label=n, files=[], batch="", translated=False)) for n in explicit]
     else:
-        sel = units
         if not units:
-            sys.stderr.write("sweep: no script units in %s (make_chunks.py writes them there; "
-                             "--units or HNS_UNITS points elsewhere)\n" % a.units)
+            no_units(a)
+        sel = units
     if a.match:
         sel = [u for u in sel if re.search(a.match, u["label"])]
     if a.file:
@@ -1018,6 +1026,8 @@ def selftest(a):
     outdir = os.path.abspath(a.outdir)
     os.makedirs(outdir, exist_ok=True)
     units = {u["label"]: u for u in load_units(a.units)}
+    if not a.label and not units:
+        no_units(a)
     # the loop below keeps only labels whose string in this ROM has Hebrew letters
     cands = list(a.label) if a.label else [u["label"] for u in units.values()]
     pick = None
