@@ -23,6 +23,10 @@ the same header with EC_NUM_GROUPS 22, EC_NUM_ALPHABET_GROUPS 27, EC_MAX_WORDS_I
                                  scrolling DOWN to the last row (PREFIX_01..)
     eclist PREFIX [MAX]          word select: shot the first page, then SELECT (page down) until the
                                  list ends (PREFIX_01..)
+
+On a ROM whose src/easy_chat.c mirrors the Easy Chat columns under TEXT_RTL (LEFT moves to the next
+column), ecslot, ecbutton, ecgroup, ecletter and ecword press LEFT for the next column and RIGHT
+for the previous one; `ec` taps the key it is given.
 """
 import os
 import sys
@@ -51,6 +55,32 @@ INPUTSTATES = ["PHRASE", "MAIN_SCREEN_BUTTONS", "KEYBOARD", "WORD_SELECT", "EXIT
 
 
 _EC_CACHE = {}
+_MIRROR_CACHE = {}
+
+
+def ec_mirrored(emu):
+    """True when the tree under test swaps LEFT and RIGHT on the mirrored Easy Chat columns: TEXT_RTL
+    is TRUE in include/config/text.h and src/easy_chat.c maps DPAD_LEFT to the next column."""
+    import re
+    src = hns.src_dir(emu.elf)
+    if src not in _MIRROR_CACHE:
+        try:
+            cfg = open(os.path.join(src, "include", "config", "text.h"), encoding="utf-8").read()
+            ec = open(os.path.join(src, "src", "easy_chat.c"), encoding="utf-8").read()
+        except OSError:
+            cfg = ec = ""
+        _MIRROR_CACHE[src] = bool(re.search(r"#define\s+TEXT_RTL\s+TRUE", cfg)
+                                  and re.search(r"JOY_REPEAT\(DPAD_LEFT\)\)\s*return MoveKeyboardCursor\(INPUT_RIGHT\)", ec))
+    return _MIRROR_CACHE[src]
+
+
+def _next_col(emu):
+    """The key that moves an Easy Chat cursor to the next column."""
+    return "LEFT" if ec_mirrored(emu) else "RIGHT"
+
+
+def _prev_col(emu):
+    return "RIGHT" if ec_mirrored(emu) else "LEFT"
 
 
 def ec_const(emu, name):
@@ -148,7 +178,7 @@ def ec_slot(emu, row, col):
         if r != row:
             ec_tap(emu, "DOWN" if r < row else "UP")
         else:
-            ec_tap(emu, "RIGHT" if c < col else "LEFT")
+            ec_tap(emu, _next_col(emu) if c < col else _prev_col(emu))
     raise HnsError("ecslot: cursor at %d,%d, wanted %d,%d" % (_get(emu, "mainCursorRow"),
                                                              _get(emu, "mainCursorColumn"), row, col))
 
@@ -170,7 +200,7 @@ def _op_ecbutton(emu, f, path):
         if st != 1:
             ec_tap(emu, "UP" if r == 0 else "DOWN")       # UP from row 0 wraps onto the buttons
             continue
-        ec_tap(emu, "RIGHT" if c < want else "LEFT")
+        ec_tap(emu, _next_col(emu) if c < want else _prev_col(emu))
     if _get(emu, "inputState") != 1 or _get(emu, "mainCursorColumn") != want:
         raise HnsError("ecbutton: state %s col %d" % (INPUTSTATES[_get(emu, "inputState")],
                                                        _get(emu, "mainCursorColumn")))
@@ -198,11 +228,11 @@ def ec_group(emu, group):
         if r == row and c == col:
             return idx
         if c == -1:
-            ec_tap(emu, "RIGHT")
+            ec_tap(emu, _next_col(emu))
         elif r != row:
             ec_tap(emu, "DOWN" if r < row else "UP")
         else:
-            ec_tap(emu, "RIGHT" if c < col else "LEFT")
+            ec_tap(emu, _next_col(emu) if c < col else _prev_col(emu))
     raise HnsError("ecgroup: cursor stuck")
 
 
@@ -220,11 +250,11 @@ def _op_ecletter(emu, f, path):
         if (r, c) == (row, col):
             break
         if c == -1:
-            ec_tap(emu, "RIGHT")
+            ec_tap(emu, _next_col(emu))
         elif r != row:
             ec_tap(emu, "DOWN" if r < row else "UP")
         else:
-            ec_tap(emu, "RIGHT" if c < col else "LEFT")
+            ec_tap(emu, _next_col(emu) if c < col else _prev_col(emu))
     print("ecletter %d %d: at %d,%d @%d" % (row, col, _get(emu, "keyboardRow"), _get(emu, "keyboardColumn"), emu.sync()))
 
 
@@ -248,7 +278,7 @@ def ec_word(emu, word):
         if r != row:
             ec_tap(emu, "DOWN" if r < row else "UP")
         else:
-            ec_tap(emu, "RIGHT" if c < col else "LEFT")
+            ec_tap(emu, _next_col(emu) if c < col else _prev_col(emu))
     raise HnsError("ecword: cursor stuck")
 
 
