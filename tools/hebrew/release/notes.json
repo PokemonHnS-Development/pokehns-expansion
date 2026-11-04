@@ -16,7 +16,7 @@
  },
  "known_issues_intro": "The decisions behind the translation are in `translation/hebrew/DECISIONS.md` of the source fork.",
  "known_issues": [
-  "Ariana's class name מנהל רוקט is masculine because she shares the class with Archer, Proton and Petrel; other classes shared by men and women also keep the noun the trainer data gives them (DECISIONS.md Q124, Q127).",
+  "Ariana's class name מנהל רוקט is masculine because she shares the class with Archer, Proton, Petrel and Giovanni; other classes shared by men and women also keep the noun the trainer data gives them (DECISIONS.md Q124, Q127).",
   "Battle Dome: a trainer's info card judges the team's battle style from a single move, so only three of its style descriptions ever appear: 'נכונות להסתכן מדי פעם באסון מוחלט.', 'שימוש במהלכים מפתיעים ומשבשים.' and 'שילוב מאוזן היטב של מהלכים.' English H&S 2.0.6 does the same ('Willing to risk total disaster at times.', 'Uses startling and disruptive moves.', 'Uses a well-balanced mix of moves.'); the other descriptions are translated but cannot appear.",
   "Scott's Silver and Gold Shields, his prizes for 50 and 100 Battle Tower wins in a row, cannot be received: he offers each one and then always says to come back for it later. English H&S 2.0.6 does the same.",
   "If the game finds no 128 KB Flash save (an emulator set to another save type, or a cart without a Flash chip), it first shows a blue English error screen ('OUT OF MEMORY TRYING TO ALLOCATE …'). Press START to see the Hebrew message, then set the save type to Flash 1M/128K and load the ROM again. The English 2.0.6 source built the same way shows the same screen.",
