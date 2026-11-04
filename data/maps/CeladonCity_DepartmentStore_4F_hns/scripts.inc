@@ -13,13 +13,13 @@ CeladonDept_EventScript_Directory::
 	end
 
 CeladonDeptStore4F_Text_SuperNerd:
-	.string "באתי לקנות SURF MAIL כדי לשלוח\n"
+	.string "באתי לקנות דואר גלישה כדי לשלוח\n"
 	.string "לחברה שלי.\p"
 	.string "רגע, נגמר להם המלאי?$"
 
 CeladonDeptStore4F_Text_Youngster:
 	.string "זה המקום היחיד שבו אפשר\n"
-	.string "לקנות LOVELY MAIL.\p"
+	.string "לקנות דואר מקסים.\p"
 	.string "לפחות עד עכשיו. אומרים\n"
 	.string "שנגמר להם המלאי.$"
 

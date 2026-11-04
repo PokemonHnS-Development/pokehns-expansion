@@ -1562,8 +1562,8 @@ gText_ComeBackWithSecretPower::
 
 gText_PokerusExplanation::
 	.string "ייתכן שהפוקימונים שלך נדבקו\n"
-	.string "ב-POKéRUS.\p"
-	.string "על ה-POKéRUS ידוע רק שהם יצורים\n"
+	.string "בפוקרוס.\p"
+	.string "על הפוקרוס ידוע רק שהם יצורים\n"
 	.string "מיקרוסקופיים שנצמדים לפוקימונים.\p"
 	.string "אומרים שכל עוד פוקימונים נגועים,\n"
 	.string "הם גדלים בצורה יוצאת דופן.$"

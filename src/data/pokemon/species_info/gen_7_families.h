@@ -246,7 +246,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .description = COMPOUND_STRING(
             "האוויר האגור בתוך שדרות הנוצות של\n"
             "דסיג'ואיי מבודד את הפוקימון מפני הקור\n"
-            "הקיצוני של אזור Hisui."),
+            "הקיצוני של אזור היסואי."),
         .pokemonScale = 259,
         .pokemonOffset = 1,
         .trainerScale = 296,
@@ -6571,9 +6571,9 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .height = 92,
         .weight = 9999,
         .description = COMPOUND_STRING(
-            "הוא הגיח מתוך ה-Ultra Wormhole. הוא סוג של\n"
-            "חיית אולטרה, ועדי ראייה ראו אותו עף בשמיים\n"
-            "כשהוא פולט גז משתי זרועותיו."),
+            "הוא הגיח מתוך חור תולעת האולטרה.\n"
+            "הוא סוג של חיית אולטרה, ועדי ראייה ראו אותו\n"
+            "עף בשמיים כשהוא פולט גז משתי זרועותיו."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 516,
@@ -6637,7 +6637,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .height = 3,
         .weight = 1,
         .description = COMPOUND_STRING(
-            "הוא חיית אולטרה, והגיע מה-Ultra Wormhole.\n"
+            "הוא חיית אולטרה, והגיע מחור תולעת האולטרה.\n"
             "נראה שהוא לא תוקף אויבים מיוזמתו, אבל גופו\n"
             "החד הוא נשק מסוכן כשלעצמו."),
         .pokemonScale = 530,
@@ -7525,7 +7525,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .height = 55,
         .weight = 8200,
         .description = COMPOUND_STRING(
-            "הוא הגיח מתוך Ultra Wormhole.\n"
+            "הוא הגיח מתוך חור תולעת אולטרה.\n"
             "נראה שכל אחד מהם בנוי מצורות חיים רבות\n"
             "שנערמו זו על גבי זו."),
         .pokemonScale = 256,

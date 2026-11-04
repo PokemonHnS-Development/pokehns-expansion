@@ -49,6 +49,12 @@ LATIN_OK = {
     'PP', 'HP', 'TM', 'HM', 'Lv', 'LV', 'OK', 'ID', 'No', 'PC', 'TV', 'CD', 'GBA', 'EXP', 'IV', 'IVs',
     'EV', 'EVs', 'BP', 'GTS', 'HnS', 'DS', 'Wi', 'Fi', 'vs', 'VS', 'KO', 'SP', 'ATK', 'DEF', 'SPD',
     'SPATK', 'SPDEF', 'STAB', 'UFO', 'DNA', 'XD', 'RNG', 'GO', 'ONLINE',
+    # Button names, acronyms the glossary keeps in Latin (GS BALL, RKS SYSTEM), the NES console and
+    # the game title HEART & SOUL.
+    'START', 'SELECT', 'GS', 'RKS', 'NES', 'HEART', 'SOUL', 'Heart', 'Soul',
+    # The emulator save type as its menus print it (Flash 1Mb/128K), the same name for the memory,
+    # and ROM, on the flash-not-detected screen.
+    'Flash', 'Mb', 'ROM',
 }
 
 

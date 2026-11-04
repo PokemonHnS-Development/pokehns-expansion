@@ -321,7 +321,7 @@ Alola_Ulaula_Phant_outside_Text_0:
 	.string "את החלק הזה של המשחק!\p"
 	.string "מקווה שנהנית מהטעימה הזו מאלולה.\p"
 	.string "אני עובד על גרסת רטרו מלאה של\n"
-	.string "האזור, שנקראת ULTRA ECLIPSE.$"
+	.string "האזור, שנקראת אולטרה אקליפס.$"
 
 Alola_Ulaula_Phant_outside_Text_1:
 	.string "בבקשה, בוא לבקר אותי בבית שלי\n"

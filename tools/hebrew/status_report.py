@@ -21,7 +21,9 @@ BLOCKED = {
 }
 # Files whose remaining Latin is deliberate, and why.
 KEPT_LATIN = {
-    'src/data/credits_hns.h': "people's names in the credits",
+    'src/data/credits_hns.h': 'the names of people, teams and organisations, and the game titles',
+    'src/data/help_window.h': "the Odd Egg interview's Easy Chat words",
+    'src/save_failed_screen.c': 'the emulator save type (Flash 1Mb/128K), its name for the memory, and ROM',
     'src/data/battle_frontier/apprentice.h': "the other languages' name columns; the English column is Hebrew",
     'src/scrcmd.c': "the Odd Egg name list, which the game compares with the player's typed name",
     'src/text_input_strings.c': 'the Latin keyboard layouts',

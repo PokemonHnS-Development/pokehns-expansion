@@ -1,0 +1,22 @@
+# The Pokedex Show with only one Ultra Beast caught, for the three entries that name the Ultra
+# Wormhole: CELESTEELA (797), KARTANA (798) and STAKATAKA (805). The show picks among the caught
+# species (src/pokenav_radio.c:726-776) and WrapDexTextIntoLines (:576-628) wraps the entry into
+# lines of at most 220 px. Same steps and RNG seed as tours/r16b_dex/dx_radio_dexshow.txt.
+# Driver: scripts/r2_pokegear_radio/radio.py
+# Run: radio.py tour ROM OUT --tours tools/hebrew/emu/tours/r17_latin --only '^dx_radio_ub$'
+# Save: ladder4_league.sav (HNS_SAVES=hns-tools/emu/saves_all).
+start saves/ladder4_league.sav
+include ../../scripts/r2_pokegear_radio/_johto.txt
+clockshift 0 -3
+dexonly 797
+radiotune 12
+radiotunepin 13 -1 E98FECA458D0BC5E6600EDB980B34CBC
+radiocycle dxr_797_celesteela 12
+dexonly 798
+radiotune 12
+radiotunepin 13 -1 E98FECA458D0BC5E6600EDB980B34CBC
+radiocycle dxr_798_kartana 12
+dexonly 805
+radiotune 12
+radiotunepin 13 -1 E98FECA458D0BC5E6600EDB980B34CBC
+radiocycle dxr_805_stakataka 12

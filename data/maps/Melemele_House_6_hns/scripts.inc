@@ -28,7 +28,7 @@ Melemele_House6_GameboyKid_Text_0:
 	.string "יש לי משחק בגיים בוי אדוונס שלי\n"
 	.string "שבו אני יכול לחקור את אזור אלולה!\p"
 	.string "זה ממש כמו במציאות.\p"
-	.string "קוראים לו ULTRA ECLIPSE,\n"
+	.string "קוראים לו אולטרה אקליפס,\n"
 	.string "מאת פנטונומי!\p"
 	.string "חה חה, תראה!\n"
 	.string "אני רוכב על נויברן קרחי!$"

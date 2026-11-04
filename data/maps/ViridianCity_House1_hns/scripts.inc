@@ -37,12 +37,12 @@ ViridianCity_House1_Text_PokefanM:
 	.string "לכיף של החלפות עם אחרים.$"
 
 ViridianCity_House1_Text_Lass:
-	.string "קוראים להם SPEARY, הספירו,\n"
-	.string "ו-RATTEY, הרטטה.$"
+	.string "קוראים להם כידי, הספירו,\n"
+	.string "ורטי, הרטטה.$"
 
 ViridianCity_House1_Text_Speary:
-	.string "SPEARY: צ'-צ'ון!$"
+	.string "כידי: צ'-צ'ון!$"
 
 ViridianCity_House1_Text_Rattey:
-	.string "RATTEY: קיקייי!$"
+	.string "רטי: קיקייי!$"
 

@@ -15,7 +15,7 @@ LavenderTownSoulHouse_EventScript_Granny::
 	end
 
 MrFuji_Text_Main:
-	.string "מר FUJI: ברוך הבא.\p"
+	.string "מר פוג'י: ברוך הבא.\p"
 	.string "הממ… נראה שאתה מגדל את\n"
 	.string "הפוקימונים שלך בטוב לב ובאהבה.\p"
 	.string "חובבי פוקימונים באים לכאן לחלוק\n"
@@ -27,7 +27,7 @@ MrFuji_Text_Main:
 SoulHouse_Text_Teacher:
 	.string "יש כאן עוד קברים של פוקימונים,\n"
 	.string "אני חושב.\p"
-	.string "יש הרבה חדרים שרק מר FUJI\n"
+	.string "יש הרבה חדרים שרק מר פוג'י\n"
 	.string "רשאי להיכנס אליהם.$"
 
 SoulHouse_Text_Lass:

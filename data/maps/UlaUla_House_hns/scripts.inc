@@ -185,7 +185,7 @@ Alola_Ulaula_House_Phant_Text_6:
 Alola_Ulaula_House_Phant_Text_7:
 	.string "מקווה שנהנית מהטעימה הזו מאלולה.\p"
 	.string "אני עובד על גרסת רטרו מלאה של\n"
-	.string "האזור, שנקראת ULTRA ECLIPSE.$"
+	.string "האזור, שנקראת אולטרה אקליפס.$"
 
 Alola_Ulaula_House_Noivern_Text_0:
 	.string "סקרייי!$"

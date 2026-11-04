@@ -61,7 +61,7 @@ TinTower_1F_Sage1_Text:
 	.string "בוחנים אותנו, בני האדם?$"
 
 TinTower_1F_Sage2_Text:
-	.string "כשה-BRASS TOWER נשרף, אומרים ששלושה\n"
+	.string "כשמגדל הפליז נשרף, אומרים ששלושה\n"
 	.string "פוקימונים חסרי שם נספו. זה היה טרגי.\p"
 	.string "אולם…\p"
 	.string "פוקימון בצבעי הקשת…\n"

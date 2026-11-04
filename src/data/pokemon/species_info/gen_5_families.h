@@ -819,7 +819,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .description = COMPOUND_STRING(
             "סמורוט קשוח הלב וזריז הלהב הזה הוא צורה\n"
             "נדירה שנוצרה מהתפתחות הפוקימון\n"
-            "באזור Hisui."),
+            "באזור היסואי."),
         .pokemonScale = 268,
         .pokemonOffset = 2,
         .trainerScale = 271,
@@ -4696,7 +4696,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .weight = 1100,
         .description = COMPOUND_STRING(
             "הוא עוטה את נשמות חבריו שמתו לפני שהגיעו\n"
-            "ליעדם במעלה הנהר. אין בכל נהרות Hisui מין\n"
+            "ליעדם במעלה הנהר. אין בכל נהרות היסואי מין\n"
             "אחר שמשתווה לבסקיוליג'ן."),
         .pokemonScale = 275,
         .pokemonOffset = 7,

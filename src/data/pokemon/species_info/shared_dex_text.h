@@ -58,7 +58,7 @@ const u8 gArceusPokedexText[] = _(
 const u8 gGenesectPokedexText[] = _(
     "לפני יותר מ-300 מיליון שנה\n"
     "פחדו ממנו כחזק שבציידים.\n"
-    "Team Plasma שינה אותו\n"
+    "צוות פלזמה שינה אותו\n"
     "והצמיד תותח לגבו.");
 
 // Gen 6 families

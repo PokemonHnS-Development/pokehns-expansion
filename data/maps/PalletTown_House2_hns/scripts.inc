@@ -56,40 +56,40 @@ PalletTown_House2_EventScript_DaisyGrooming::
 	end
 
 PalletTown_House2_Text_Hello:
-	.string "DAISY: היי! אחי הקטן הוא מנהיג\n"
+	.string "דייזי: היי! אחי הקטן הוא מנהיג\n"
 	.string "המכון בעיר וירידיאן.\p"
 	.string "אבל הוא יוצא מהעיר לעתים כל כך\n"
 	.string "קרובות, שזה גורם בעיות למאמנים.$"
 
 PalletTown_House2_Text_OfferGrooming:
-	.string "DAISY: היי! הגעת בזמן טוב.\n"
+	.string "דייזי: היי! הגעת בזמן טוב.\n"
 	.string "אני עומדת לשתות תה.\p"
 	.string "תרצה להצטרף אליי?\p"
 	.string "אוי, הפוקימונים שלך קצת מלוכלכים.\p"
 	.string "תרצה שאטפח אחד מהם?$"
 
 PalletTown_House2_Text_WhichMon:
-	.string "DAISY: את מי מהם לטפח?$"
+	.string "דייזי: את מי מהם לטפח?$"
 
 PalletTown_House2_Text_Alright:
-	.string "DAISY: בסדר, אני אדאג שהוא ייראה\n"
+	.string "דייזי: בסדר, אני אדאג שהוא ייראה\n"
 	.string "נהדר תוך רגע.$"
 
 PalletTown_House2_Text_AllDone:
-	.string "DAISY: הנה! סיימתי.\p"
+	.string "דייזי: הנה! סיימתי.\p"
 	.string "רואה? {STR_VAR_1} נראה נהדר,\n"
 	.string "נכון?\p"
 	.string "זה פוקימון כל כך חמוד.$"
 
 PalletTown_House2_Text_AlreadyGroomed:
-	.string "DAISY: אני תמיד שותה תה\n"
+	.string "דייזי: אני תמיד שותה תה\n"
 	.string "בשעה הזאת. בוא להצטרף אליי.$"
 
 PalletTown_House2_Text_Refused:
-	.string "DAISY: לא רוצה שאטפח\n"
+	.string "דייזי: לא רוצה שאטפח\n"
 	.string "אחד מהם?\p"
 	.string "בסדר, אז רק נשתה תה.$"
 
 PalletTown_House2_Text_CantGroomEgg:
-	.string "DAISY: אוי, סליחה. אני באמת\n"
+	.string "דייזי: אוי, סליחה. אני באמת\n"
 	.string "לא יכולה לטפח ביצה.$"
