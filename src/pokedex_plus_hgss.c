@@ -7348,6 +7348,17 @@ static void PrintEvolutionTargetSpeciesAndMethod(u8 taskId, u16 species, u8 dept
             }
         }
 
+#if TEXT_RTL
+        // The font is fitted to the line with its closing period, the string BreakStringAutomatic
+        // wraps: a line that fits only without the period would keep the wider font and wrap.
+        StringAppend(gStringVar4, COMPOUND_STRING("."));
+        if (isAlcremie)
+            fontId = FONT_SMALL_NARROWER;
+        else
+            fontId = GetFontIdToFit(gStringVar4, FONT_SMALL, 0, maxScreenWidth);
+
+        u32 fontHeight = GetFontAttribute(fontId, FONTATTR_MAX_LETTER_HEIGHT);
+#else
         if (isAlcremie)
             fontId = FONT_SMALL_NARROWER;
         else
@@ -7356,6 +7367,7 @@ static void PrintEvolutionTargetSpeciesAndMethod(u8 taskId, u16 species, u8 dept
         u32 fontHeight = GetFontAttribute(fontId, FONTATTR_MAX_LETTER_HEIGHT);
 
         StringAppend(gStringVar4, COMPOUND_STRING("."));
+#endif
         BreakStringAutomatic(gStringVar4, maxScreenWidth, MAX_EVO_METHOD_LINES, fontId, HIDE_SCROLL_PROMPT);
 
         PrintInfoScreenTextSmall(gStringVar4, fontId, base_x_offset, base_y + base_y_offset*(*depth_i) + numLines); //Print actual instructions
