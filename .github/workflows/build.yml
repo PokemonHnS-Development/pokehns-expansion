@@ -6,6 +6,9 @@ on:
       - master
       - upcoming
   pull_request:
+    branches:
+      - master
+      - upcoming
 
 env:
   GAME_REVISION: 0
