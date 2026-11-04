@@ -74,6 +74,7 @@ Each entry is one open question from the review of the first release candidate: 
 | [Q132](#q132) | The link battle lines for the other player or the link partner sending out or withdrawing a Pokémon, and running, use the masculine verb whatever character that player chose. | A. Reword so the verb agrees with the Pokémon, as Q123 and Q127 did | changed |
 | [Q133](#q133) | Five Pokédex terms have Hebrew names with no official source: HISUI היסואי, MT. CORONET הר הנזר, Ultra Wormhole חור תולעת אולטרה, TEAM PLASMA צוות פלזמה, ROSE רוז. | A. Keep all five | no change |
 | [Q134](#q134) | 'psychic power' in Pokédex prose is כוח פסיכי in most entries and כוח על-חושי in nine. | A. כוח פסיכי and its forms in every entry; על-חושי stays in Kadabra's 'extrasensory' and in the move names that have it | changed |
+| [Q135](#q135) | 482 of the 999 Easy Chat words were still English, so trainer phrases mixed the two directions, and three Odd Egg hints named words the list no longer has. | a. Translate every word, one text per word, Hebrew order for the group lists, and hints that quote the list words | changed |
 | [Q137](#q137) | In the Gen 4 battle interface the frostbite tag is a copy of the burn tag and reads כויה, as in English. | B. Redraw it as קור, the word of the H&S sheets | changed |
 
 ## K1
@@ -1692,6 +1693,41 @@ The English and the Japanese (ノーマル, スーパー, ハイパー, マス�
 *Changed:* `src/data/pokemon/species_info/gen_1_families.h`, `src/data/pokemon/species_info/gen_6_families.h`, `src/data/pokemon/species_info/gen_7_families.h`
 
 *Glossary:* `TERM_PSYCHIC_POWER`
+
+## Q135
+
+**Question.** About half of the Easy Chat words were still English: 482 of the 999 words of the 18 word lists, plus the group names TIME and MISC. Frontier, Tent and Trainer Hill trainers speak in Easy Chat phrases, so many of their lines mixed the two directions ('לבחור YOU CAN / להאמין NOT TO'). The 1.0 release notes listed this as the first known issue and left open whether Easy Chat is translated in full or kept English.
+
+*Source:* 1.0 known issue (tools/hebrew/release/notes.json); HANDOFF section 8.2; the round-16 Trainer Hill review (trainer_hill-002) and the Easy Chat cursor, keyboard and YES/NO findings of the same round (contests_menus-002, -r01, -r02).
+
+**Analysis.**
+- The English words were exactly the short ones: every word of 1 to 5 letters was English and every word of 6 or more was Hebrew. The species and move groups already print the Hebrew name tables.
+- FireRed translated its whole list (997 words) and kept its English letter index. 481 of the 482 English words have a FireRed word; EMERALD has none.
+- A trainer phrase is six words joined with spaces in the English word order, three to a line. The RTL renderer draws a run of Latin letters left to right as one block, so a mixed line reads in two directions, and a ! or ? after a Latin word lands at the wrong end.
+- The Odd Egg interview compares four words with eleven passwords (src/easy_chat.c sInterviewPasswords). Its four Day Care hint windows gave the English word in parentheses, and three named words the list no longer has: the cries LALALA and OI, OI, OI, and the actions STORES and ANGERS. The Tyrogue hint's type word קרב (FIGHTING) was also the text of BATTLE, so a player could pick the wrong one.
+- English never shows two words with the same text. Hebrew has one word for several English ones (a pronoun and the pronoun with 'is', IT, THIS and IT'S, NOT and NO): with FireRed's words as they are, 141 words would share one of 64 texts.
+- A group list is shown in the order of the .alphabeticalOrder fields of its group file, the English alphabetical order. The ABC keyboard (src/data/easy_chat/easy_chat_words_by_letter.h) files every word, species and move under the English initial of its English spelling.
+- Widths: the widest English word is 72 px and 12 bytes; a fixed phrase switches to two words a line above 204 px.
+
+| Option | How | Risk |
+|---|---|---|
+| a. Translate every word | FireRed's word first, the glossary for names and terms, our own where FireRed's misreads or another word already prints it. One text per word. Hebrew order for the group lists. | Word-by-word Hebrew in the English word order is rough, as in FireRed. Text and display order only: word IDs and which words are unlocked do not change. |
+| b. Revert the lists to English | 517 words back to English. | Species and move names stay Hebrew, so phrases stay mixed, and lines of English words still put ! and ? at the wrong end. |
+| c. Leave the lists mixed | No change. | The known issue and the broken Odd Egg hints stay. |
+
+**Chosen:** a.
+- The 482 words: FireRed's word for 347, the glossary for 31 (the types and abilities of the status group, TYPE סוג, NONE ללא, BERRY, BIKE, PC, MONEY, RADIO, RIVAL, EGG, BAG, RUBY אודם, EMERALD ברקת, POKéNAV and the token words {POKEBLOCK} פוקיבלוק and {PK}RS פוקרוס), and our own for 104. POKéNAV is פוקינאב, a new glossary row by the house form POKé = פוקי. Disabled version words take FireRed's colours and metals (RED אדום, GREEN ירוק, GOLD זהב), as SILVER כסף already did. TIME and MISC. are זמן and שונות, FireRed's group names.
+- One text per word, as in English. Where Hebrew has one word, the plain English word keeps it and the other takes a close form: the 'is' words take the formal present (I AM הנני, YOU'RE הינך, HE'S הנו, SHE IS הינה, THEY'RE הנם, WE'RE אנו, IT'S זהו, IS הינו, ARE הינם), A and AN are אחד and אחת, NO is the answer word לא!, ISN'T and AREN'T are אינו and אינם. Fifteen Hebrew words changed for this: BATTLE דו-קרב (קרב is FIGHTING, a password word), MATCH UP התאמה, CONCEDE להודות בהפסד, SURRENDER להיכנע and FRONTIER החזית (their old texts are the moves SUBMISSION and FACADE), SHOULD אמור, SIMPLE בסיסי, FOREVER לתמיד, WINNER המנצח, OPPONENT מתחרה, THAT'S הרי זה, and YOU'RE, SHE IS, THEY'RE and AREN'T above.
+- Two words print the name of a move of the move lists, with glossary names on both sides: FLYING and FLY תעופה, BLAZE and EMBER להבה. They stay as the glossary gives them.
+- Every word is at most 72 px and 12 bytes (the widest, להודות בהפסד, is 71 px); no fixed phrase of the Frontier, Tent, Trainer Hill or Pike trainers passes 204 px (widest line 136 px).
+- The 38 Odd Egg password words each print a text no other word prints. The four hint windows follow the English sentences in Hebrew only and quote the list word with ”…”: היכולת של פיצ'ו היא ”סטטי”, טיירוג הוא מסוג ”קרב”, אלקיד אומר ”הי, הי, הי”, אלקיד ”מאחסן” מטען חשמלי. The passwords do not change.
+- Under TEXT_RTL the group lists take their order from src/data/easy_chat/easy_chat_order_rtl.h, which tools/hebrew/gen_ec_order.py generates from the word texts in Hebrew alphabetical order; the group files keep the English fields, so they differ from the English baseline only in their texts. tools/hebrew/tests/test_easy_chat.py checks one text per word, no Latin, the generated order and the hint quotes.
+- The keyboard and screen layout, in the same batch's engine step: the ABC keyboard indexed by the Hebrew initial of each word, species and move name (22 letters and 'others' on the keys, right to left; EC_MAX_WORDS_IN_GROUP 270 -> 300 for the longest letter, a runtime buffer, not saved), the word-select cursor mirrored onto the word it marks, the keyboard window mirrored against the frame so the right column of group names and the first letters of each row show, and the YES/NO box of the win and loss screens placed so it covers no word. Until then the ABC keyboard files the Hebrew words under their English initials.
+- Seen on the clip build with 0 clip records: the four hint windows, the interview with its keyboards and the status, voices, feelings and actions lists, Pichu's password giving the egg, the Battle Tower feelings man's start, win and loss screens and the first Trainer Hill floor's trainer lines.
+
+*Changed:* `src/data/easy_chat/easy_chat_group_*.h` (18 files), `src/data/easy_chat/easy_chat_groups.h`, `src/data/easy_chat/easy_chat_order_rtl.h`, `src/easy_chat.c`, `src/data/help_window.h`, `tools/hebrew/gen_ec_order.py`, `tools/hebrew/drift.py`, `tools/hebrew/status_report.py`, `tools/hebrew/make_chunks.py`, `tools/hebrew/release/notes.json`
+
+*Glossary:* `TERM_POKENAV`
 
 ## Q137
 
