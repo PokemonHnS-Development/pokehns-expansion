@@ -146,6 +146,6 @@ for core in mgba vbam vba_next gpsp mednafen_gba skyemu; do
   d="$OUT/crosscore/$core"; rm -rf "$d"; mkdir -p "$d"; cp "$SAVES/ladder4_league.sav" "$d/save.sav"
   (cd "$d" && "$CROSSCORE" "$dl" "$ROM" "$d" "$d/save.sav" < "$HERE/crosscore_menus.txt" > "$d/log.txt" 2>&1); echo "  $core exit $?"
 done
-(cd "$OUT/crosscore" && python3 "$HERE/ccdiff.py" mgba vbam vba_next gpsp mednafen_gba) > "$OUT/crosscore.txt" 2>&1; cat "$OUT/crosscore.txt"
+(cd "$OUT/crosscore" && python3 "$HERE/ccdiff.py" mgba vbam vba_next gpsp mednafen_gba skyemu) > "$OUT/crosscore.txt" 2>&1; cat "$OUT/crosscore.txt"
 echo "== rom sweep";  python3 "$TOOLS/rom_sweep.py" "$ROM" --en "$EN_ROM" > "$OUT/rom_sweep.txt" 2>&1; tail -5 "$OUT/rom_sweep.txt"
 echo "done"

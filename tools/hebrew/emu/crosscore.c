@@ -18,6 +18,11 @@
 #define ENV_GET_VARIABLE_UPDATE 17
 #define ENV_SET_SUPPORT_NO_GAME 18
 #define ENV_GET_INPUT_BITMASKS 51
+#define ENV_GET_CORE_OPTIONS_VERSION 52
+#define ENV_SET_CORE_OPTIONS         53
+#define ENV_SET_CORE_OPTIONS_INTL    54
+#define ENV_SET_CORE_OPTIONS_V2      67
+#define ENV_SET_CORE_OPTIONS_V2_INTL 68
 #define PIXFMT_XRGB8888       1
 #define MEM_SAVE_RAM          0
 
@@ -26,6 +31,34 @@ struct retro_game_geometry { unsigned base_width, base_height, max_width, max_he
 struct retro_system_timing { double fps, sample_rate; };
 struct retro_system_av_info { struct retro_game_geometry geometry; struct retro_system_timing timing; };
 struct retro_variable { const char *key, *value; };
+// Core options (libretro.h): every option answers GET_VARIABLE with its default, as a frontend with
+// no saved settings does. Cores such as SkyEmu read the value without checking it for NULL.
+struct retro_core_option_value { const char *value, *label; };
+struct retro_core_option_definition { const char *key, *desc, *info; struct retro_core_option_value values[128]; const char *default_value; };
+struct retro_core_options_intl { struct retro_core_option_definition *us, *local; };
+struct retro_core_option_v2_definition { const char *key, *desc, *desc_categorized, *info, *info_categorized, *category_key;
+    struct retro_core_option_value values[128]; const char *default_value; };
+struct retro_core_options_v2 { void *categories; struct retro_core_option_v2_definition *definitions; };
+struct retro_core_options_v2_intl { struct retro_core_options_v2 *us, *local; };
+#define MAX_OPTS 256
+static char *g_optkey[MAX_OPTS], *g_optval[MAX_OPTS]; static int g_nopt;
+static void opt_set(const char *key, const char *val, size_t vlen) {
+    if (!key || !val || g_nopt >= MAX_OPTS) return;
+    for (int i = 0; i < g_nopt; i++) if (!strcmp(g_optkey[i], key)) return;
+    g_optkey[g_nopt] = strdup(key); g_optval[g_nopt] = strndup(val, vlen); g_nopt++;
+}
+// The frontend loads the battery through retro_get_memory_data, so a core must keep its save in
+// RAM it exposes: Beetle GBA's default ("mednafen") writes its own file and exposes none.
+static const char *const g_override[][2] = { { "gba_use_mednafen_save_method", "libretro" } };
+static const char *opt_get(const char *key) {
+    for (size_t i = 0; key && i < sizeof g_override / sizeof g_override[0]; i++)
+        if (!strcmp(g_override[i][0], key)) return g_override[i][1];
+    for (int i = 0; key && i < g_nopt; i++) if (!strcmp(g_optkey[i], key)) return g_optval[i];
+    return NULL;
+}
+static const char *opt_default(const char *dflt, const struct retro_core_option_value *values) {
+    return dflt ? dflt : values[0].value;
+}
 
 static const uint32_t *g_fb; static unsigned g_w,g_h; static size_t g_pitch;
 static uint32_t g_keys;
@@ -56,10 +89,28 @@ static bool envcb(unsigned cmd, void *data) {
     case ENV_GET_SYSTEM_DIR: case ENV_GET_SAVE_DIR: *(const char**)data = "."; return true;
     case ENV_GET_CAN_DUPE: *(bool*)data = true; return true;
     case ENV_GET_LOG_IFACE: ((struct retro_log_callback*)data)->log = logfn; return true;
-    case ENV_GET_VARIABLE: ((struct retro_variable*)data)->value = NULL; return false;
+    case ENV_GET_VARIABLE: { struct retro_variable *v = data; v->value = opt_get(v->key); return v->value != NULL; }
+    case ENV_GET_CORE_OPTIONS_VERSION: *(unsigned*)data = 2; return true;
+    case ENV_SET_VARIABLES: {   // "Description; first|second|..."; the first is the default
+        for (const struct retro_variable *v = data; v && v->key; v++) {
+            const char *p = v->value ? strstr(v->value, "; ") : NULL;
+            if (p) { p += 2; opt_set(v->key, p, strcspn(p, "|")); }
+        }
+        return true; }
+    case ENV_SET_CORE_OPTIONS: case ENV_SET_CORE_OPTIONS_INTL: {
+        const struct retro_core_option_definition *d = cmd == ENV_SET_CORE_OPTIONS ? data
+            : ((const struct retro_core_options_intl*)data)->us;
+        for (; d && d->key; d++) { const char *x = opt_default(d->default_value, d->values); if (x) opt_set(d->key, x, strlen(x)); }
+        return true; }
+    case ENV_SET_CORE_OPTIONS_V2: case ENV_SET_CORE_OPTIONS_V2_INTL: {
+        const struct retro_core_options_v2 *o = cmd == ENV_SET_CORE_OPTIONS_V2 ? data
+            : ((const struct retro_core_options_v2_intl*)data)->us;
+        for (const struct retro_core_option_v2_definition *d = o ? o->definitions : NULL; d && d->key; d++) {
+            const char *x = opt_default(d->default_value, d->values); if (x) opt_set(d->key, x, strlen(x)); }
+        return true; }
     case ENV_GET_VARIABLE_UPDATE: *(bool*)data = false; return true;
     case ENV_GET_INPUT_BITMASKS: return true;
-    case ENV_SET_VARIABLES: case ENV_SET_SUPPORT_NO_GAME: return true;
+    case ENV_SET_SUPPORT_NO_GAME: return true;
     default: return false;
     }
 }

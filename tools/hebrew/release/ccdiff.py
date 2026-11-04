@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
-"""Compare crosscore frame dumps between cores, after reducing every pixel to RGB565 (cores differ
-in pixel format, and XRGB8888 rounding is not a difference).
+"""Compare crosscore frame dumps between cores, after reducing every pixel to RGB555, the GBA's own
+15-bit colour. Cores hand frames over as RGB565 or XRGB8888 and each widens the 15 bits its own
+way (on the same frame, VBA-Next sets the low bit of the 6-bit green where mGBA leaves it clear),
+so only the 15 bits are compared.
 
   ccdiff.py REF_DIR DIR... -> per shot: differing pixel count against REF_DIR, and PNGs of each
 """
@@ -12,16 +14,16 @@ def load(path):
     out = []
     for i in range(w * h):
         b, g, r = px[i * 4], px[i * 4 + 1], px[i * 4 + 2]
-        out.append(((r >> 3) << 11) | ((g >> 2) << 5) | (b >> 3))
+        out.append(((r >> 3) << 10) | ((g >> 3) << 5) | (b >> 3))
     return w, h, out
 
-def png(path, w, h, pix565):
+def png(path, w, h, pix555):
     rows = []
     for y in range(h):
         row = bytearray([0])
         for x in range(w):
-            v = pix565[y * w + x]
-            row += bytes([((v >> 11) & 31) << 3, ((v >> 5) & 63) << 2, (v & 31) << 3])
+            v = pix555[y * w + x]
+            row += bytes([((v >> 10) & 31) << 3, ((v >> 5) & 31) << 3, (v & 31) << 3])
         rows.append(bytes(row))
     def chunk(t, data):
         c = t + data

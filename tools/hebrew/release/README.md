@@ -11,7 +11,7 @@ to the private builds repository (`ronyeh2/pokehns-hebrew-builds`).
 | `run_release_tests.sh` | Runs the screen tours, clip-report tours, dialogue sweep, self-check, save ladder, map walk, cross-core frames and ROM sweep on the worktree copies of those files. Output goes to `RCDIR/tests`. |
 | `make_testing_md.py` | Writes `TESTING.md` from the candidate folder and `notes.json`. |
 | `notes.json` | The text that belongs to one release: known issues, the visual review, static checks, what was not tested. |
-| `ccdiff.py` | Compares cross-core frame dumps after reducing every pixel to RGB565. |
+| `ccdiff.py` | Compares cross-core frame dumps after reducing every pixel to RGB555, the GBA's own 15-bit colour. |
 | `crosscore_menus.txt` | The input that `crosscore` plays on every core. |
 
 Each script prints its usage with `--help`. The two shell scripts also take `--check`, which

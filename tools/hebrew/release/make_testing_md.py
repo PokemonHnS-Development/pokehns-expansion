@@ -164,7 +164,7 @@ def main():
     w('| Map walk | warp into every Heart & Soul map from a post-game save, fight any battle, read any text | %d maps: %d OK, %d held, 0 crashes |' % (len(mw), mwc.get('OK', 0), mwc.get('HELD', 0)))
     w('| Save ladder | six saves (new game, badge 1, Ecruteak, League, Kanto, post-game) made with the **English** %s ROM, loaded in this ROM. Rung 1 (a new game in the bedroom): continue, bag, trainer card. Rungs 2-6: continue, walk out of the Pokémon Center, Pokédex, party, bag, trainer card, PokéGear | %s |' % (notes['upstream_version'], ', '.join('%s: %d screenshots' % kv for kv in ladder.items())))
     w('| Harness self-check | struct offsets the harness pokes, checked against the ELF and a live game | all checks passed |')
-    w('| Cross-core | the same input on RetroArch\'s mGBA core and the VBA-M, VBA-Next, gpSP, Mednafen-GBA and SkyEmu libretro cores, frames compared with mGBA after RGB565 reduction | see below |')
+    w('| Cross-core | the same input on RetroArch\'s mGBA core and the VBA-M, VBA-Next, gpSP, Mednafen-GBA and SkyEmu libretro cores, frames compared with mGBA in RGB555, the GBA\'s own 15-bit colour | see below |')
     w('| Static checks | drift (only strings differ from the English engine baseline), layout audit (widths, lines, buffers, byte limits), glossary checks | %s |' % notes['static_checks'])
     if vis:
         w('| Visual review | every tour screenshot compared with the English build, side by side, by reviewers looking for clipping, overlap, mirroring, digit order, glyphs, English left and visible translation errors | %s |' % notes['visual_review'])
