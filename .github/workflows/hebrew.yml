@@ -12,9 +12,11 @@ on:
       - 'he/main'
   workflow_dispatch:
 
+# Every job names its runner image instead of ubuntu-latest, so a new image, and the
+# gcc-arm-none-eabi that comes with it, arrives in a reviewed commit.
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-26.04
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -31,7 +33,7 @@ jobs:
         run: make hns RTL_CLIP_REPORT=1 -j$(nproc) -O
 
   audit:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-26.04
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -64,7 +66,7 @@ jobs:
         run: python3 -m unittest discover -s tools/hebrew/tests
 
   check:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-26.04
     steps:
       - name: Checkout
         uses: actions/checkout@v4
