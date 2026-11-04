@@ -1990,11 +1990,20 @@ static u16 HandleEasyChatInput_WordSelect(void)
     if (JOY_REPEAT(DPAD_DOWN))
         return MoveWordSelectCursor(INPUT_DOWN);
 
+#if TEXT_RTL
+    // The two columns are mirrored, the first on the right.
+    if (JOY_REPEAT(DPAD_LEFT))
+        return MoveWordSelectCursor(INPUT_RIGHT);
+
+    if (JOY_REPEAT(DPAD_RIGHT))
+        return MoveWordSelectCursor(INPUT_LEFT);
+#else
     if (JOY_REPEAT(DPAD_LEFT))
         return MoveWordSelectCursor(INPUT_LEFT);
 
     if (JOY_REPEAT(DPAD_RIGHT))
         return MoveWordSelectCursor(INPUT_RIGHT);
+#endif
 
     return ECFUNC_NONE;
 }
@@ -4884,6 +4893,11 @@ static void CreateWordSelectCursorSprite(void)
     sScreenControl->wordSelectCursorSprite = &gSprites[spriteId];
     sScreenControl->wordSelectCursorSprite->callback = SpriteCB_WordSelectCursor;
     sScreenControl->wordSelectCursorSprite->oam.priority = 2;
+#if TEXT_RTL
+    // The words are mirrored: the cursor stands right of its word and points left. The sprite has
+    // no animation that would apply sprite->hFlip, so the OAM flip bit is set directly.
+    sScreenControl->wordSelectCursorSprite->oam.matrixNum |= ST_OAM_HFLIP;
+#endif
     UpdateWordSelectCursorPos();
 }
 
@@ -4892,20 +4906,37 @@ static void SpriteCB_WordSelectCursor(struct Sprite *sprite)
     if (++sprite->sDelayTimer > 2)
     {
         sprite->sDelayTimer = 0;
+#if TEXT_RTL
+        // Mirrored: the cursor moves left onto its word and jumps back right.
+        if (--sprite->x2 < 0)
+            sprite->x2 = 6;
+#else
         if (++sprite->x2 > 0)
             sprite->x2 = -6;
+#endif
     }
 }
 
 static void UpdateWordSelectCursorPos(void)
 {
+#if TEXT_RTL
+    s8 column, row, y;
+#else
     s8 column, row, x, y;
+#endif
 
     GetWordSelectColAndRow(&column, &row);
+#if TEXT_RTL
+    // The word list is mirrored inside its frame, so the cursor goes to the mirrored x: right of
+    // the word in its column, the first column on the right.
+    y = row * 16 + 96;
+    SetWordSelectCursorPos(RTL_WORD_SELECT_SPRITE_X(column * 13 * 8 + 28), y);
+#else
     x = column * 13;
     x = x * 8 + 28;
     y = row * 16 + 96;
     SetWordSelectCursorPos(x, y);
+#endif
 }
 
 static void SetWordSelectCursorPos(u8 x, u8 y)
