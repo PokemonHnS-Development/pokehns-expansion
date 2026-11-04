@@ -4110,13 +4110,15 @@ static void PrintEasyChatStdMessage(u8 msgId)
 static void CreateEasyChatYesNoMenu(u8 initialCursorPos)
 {
 #if TEXT_RTL
-    // The phrase is mirrored inside its frame, so the words leave the left end of each row free
-    // where English leaves the right end. The box goes to the mirrored place in the frame.
+    // The phrase and the footer are mirrored, so the words leave the left end of each row free
+    // and the footer's OK option stands at the left end, where English has them at the right.
+    // English's box covers OK; this one takes the mirrored place on the screen, one tile nearer
+    // its edge, because the mirrored OK label may be wider and starts further out. That covers
+    // the label and its cursor on every phrase frame, as English does.
     struct WindowTemplate template = sEasyChatYesNoWindowTemplate;
-    u8 frameId = GetEasyChatScreenFrameId();
 
-    template.tilemapLeft = 2 * sPhraseFrameDimensions[frameId].left + sPhraseFrameDimensions[frameId].width
-                         - sEasyChatYesNoWindowTemplate.tilemapLeft - sEasyChatYesNoWindowTemplate.width;
+    template.tilemapLeft = DISPLAY_TILE_WIDTH - sEasyChatYesNoWindowTemplate.tilemapLeft
+                         - sEasyChatYesNoWindowTemplate.width - 1;
     CreateYesNoMenu(&template, 1, 14, initialCursorPos);
 #else
     CreateYesNoMenu(&sEasyChatYesNoWindowTemplate, 1, 14, initialCursorPos);
