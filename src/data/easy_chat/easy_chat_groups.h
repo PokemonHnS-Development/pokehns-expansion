@@ -47,7 +47,7 @@ const struct EasyChatGroup gEasyChatGroups[EC_NUM_GROUPS] = {
     },
     [EC_GROUP_BATTLE] =
     {
-        .name = COMPOUND_STRING("קרב"),
+        .name = COMPOUND_STRING("קרבות"),
         .wordData = {.words = gEasyChatGroup_Battle},
         .numWords = ARRAY_COUNT(gEasyChatGroup_Battle),
         .numEnabledWords = ARRAY_COUNT(gEasyChatGroup_Battle),
