@@ -43,7 +43,7 @@ fresh clone.
 | Item | Value | Check |
 | --- | --- | --- |
 | `he/main` | `c1cfd8a30b` (on GitHub too): the merges of round 19 (`he/fix-r19`, `b32c6f117c`) and round 20 (`he/fix-r20`, `c1cfd8a30b`) | `git rev-parse --short he/main` |
-| `he/renderer` | `8cfd524776` (on GitHub too): `384104fb15` plus the four graphics and Easy Chat commits of rounds 19 and 20 (section 1.2) | `git rev-parse --short he/renderer` |
+| `he/renderer` | `67df13ff43` (on GitHub too): `384104fb15` plus the four graphics and Easy Chat commits of rounds 19 and 20 and three older graphics commits (section 1.2) | `git rev-parse --short he/renderer` |
 | Release | One release, 1.0, replaced in place on each update (ROM, `SHA1SUMS`, `TESTING.md`); the builds repo's commit history keeps the older builds. Current 1.0: built from `he/main` `08027d9879` | `<builds>/README.md` |
 | 1.0 ROM | `pokehns-he-2.0.6-1.0.gba`: 33554432 bytes, SHA-1 `d1fd03270572d00e06762fe6c27e1408ed2f323e`, CRC32 `A3648409` | `<builds>/SHA1SUMS` |
 | Releasing | Build a candidate with `tools/hebrew/release/`, then replace the three files in the builds repo and say in the commit message which `he/main` commit it was built from; keep `tools/hebrew/release/notes.json` at `"release": "1.0"`. A candidate is published with hand play declared as not tested (`DECISIONS.md` Q138) | section 5 |
@@ -72,8 +72,7 @@ fresh clone.
    - Add rc21's row and the new candidate's row to `<builds>/records/README.md`. rc21's records
      are in `records/rc21/`, but the index stops at rc20.
    - Then regenerate `STATUS.md` from the candidate's sweep (section 5, step 9).
-3. The open rows of section 8.1: four small rows (three tools, and three graphics commits missing
-   from `he/renderer`), and the Pokéblock case list's three-digit level, which play most likely
+3. The open rows of section 8.1: three small tool rows, and the Pokéblock case list's three-digit level, which play most likely
    never makes (by code reading and a frame model).
 
 ---
@@ -113,7 +112,7 @@ as a cross-check, never as source text (`STYLE.md` §1).
 | `he/fonts`, `he/graphics`, `he/naming-keyboard`, `he/preview` | feature branches, already merged | kept for history |
 | `he/fix-*` | one fix topic each (for example `he/fix-k5-cosmetics`, `he/fix-vr-dex`, and the rounds' `he/fix-r19` and `he/fix-r20`), already merged | merge title `Merge he/<branch>: <what it brings>` |
 
-On GitHub (2026-11-10): `master` `167aa6d537`, `he/main` `c1cfd8a30b`, `he/renderer` `8cfd524776`,
+On GitHub (2026-11-10): `master` `167aa6d537`, `he/main` `c1cfd8a30b`, `he/renderer` `67df13ff43`,
 `he/upstream-fixes` and `he/fix-upstream-hydra` `8d52b4cccf`, `he/fix-r19` `f1d0f9a843`,
 `he/fix-r20` `ffdc529fc7`, and 40 other `he/*` branches (46 `he/*` branches in all).
 
@@ -121,7 +120,11 @@ On GitHub (2026-11-10): `master` `167aa6d537`, `he/main` `c1cfd8a30b`, `he/rende
 in this order: `2f46bee8be` (the Pokéblock graph, from `946ae2f132`), `1057b2f08a` (the Easy Chat
 headers, from `81f9b905db`), `784e76146d` (the GHOST and PSYCHIC plates and `menu_info.png`, from
 `04d59a585c`) and `8cfd524776` (the `menu_info.png` Psychic plate with the short hyphen, from
-`3f2c255dce`). Each pick has the same patch as its source commit (`git patch-id --stable`).
+`3f2c255dce`). Then the three graphics commits of earlier rounds that had not been picked:
+`8c5e324a40` (the paralysis tag, from `d3b59b94fe`), `0b3ccf4430` (the NORMAL rank title, from
+`d41a67ebdf`) and `67df13ff43` (the alphabet mode tab, from `9164440ab9`). Each pick has the same
+patch as its source commit (`git patch-id --stable`), and `graphics/` on `he/renderer` now equals
+`he/main`'s (`git diff --stat he/renderer he/main -- graphics/` prints nothing).
 
 **Checking a pick with an English build.** Build `he/renderer` before and after the picks with
 `TEXT_RTL` set to FALSE (`include/config/text.h:20`, in a scratch worktree) and `make hns`, and
@@ -135,6 +138,8 @@ the picks `384104fb15..8cfd524776` this gave: no symbol added or removed; only
 changed only in `gMenuInfoElements_Gfx` (194 bytes, the `menu_info.png` plates) and in one
 literal of `rfu_MBOOT_CHILD_inheritanceLinkStatus` in librfu, a constant derived from an address
 (`0x057a2b38` → `0x057a2bac`) that grows by `0x74`, the two graphics' growth (20 + 96 bytes).
+For the three older picks (`8cfd524776..67df13ff43`) no symbol was added, removed or resized, and
+content changed only in `gEasyChatMode_Gfx`, `gStatusGfx_Icons` and `gContestResults_Gfx`.
 The script and the builds are in `<private>/scratch/screens/r20/engproof/` (`symdiff.py`,
 `PROOF.md`).
 
@@ -1501,7 +1506,6 @@ Ask the owner before you:
 | Item | Evidence | What to do |
 | --- | --- | --- |
 | **The Pokéblock case list would cut the first digit of a three-digit level.** English shows `Lv255` in full; play most likely never makes such a level | `PutPokeblockListMenuString` (`src/pokeblock.c:750-761`) skips to x 87 and prints `Lv` and the level in the 112 px list window (`WIN_LIST`, 14 tiles, `:322-330`), in the narrow font. Mirrored, the first digit of a three-digit level starts 3 px past the left edge: the clip ROM logs the `2` of a level-255 test block cut on the case list of `tours/r19_fix/pb_feed_graph.txt` (window 1, 112 px, font 7). By code reading, play needs a top speed of about 230 RPM to get there. Only the Berry Blender makes Pokéblocks (`AddPokeblock`, `src/berry_blender.c:3586`), and every H&S blend is with NPCs: the link blender runs only from Emerald's `LilycoveCity_ContestLobby` (`data/maps/LilycoveCity_ContestLobby/map.json:391`, `game_version` emerald), which this build leaves out. The level is the highest flavour (`src/pokeblock.c:1335-1348`), and a repeated berry gives a black block (`src/berry_blender.c:2274-2282`). With the NPCs' berries (`SetOpponentsBerryData`, `:1531-1569`; the Blend Master's for one opponent, since his hide flag is 0, `include/constants/flags_hns.h:1927`) the best blend is an Enigma Berry against the Blend Master: 59 before the speed factor of (max RPM / 333 + 100) % (`:2428`), so level 100 needs 229.77 RPM. A frame model of a perfect two-player blend (a BEST hit at every chance; `:1983-1997`, `:2028-2055`, `:2096-2115`, `:3287-3295`) peaks at 197.64 RPM, level 94 (`<private>/scratch/screens/r19/review/pbspeed.py`, `pbbound.py`). A real blend was not measured (**unverified**) | measure a perfect blend against the Blend Master with an Enigma Berry (`sBerryBlender->maxRPM`). If it can pass 229.77 RPM, place the level so `Lv` and three digits fit inside the window, check it with the tour's level-255 block, and cherry-pick the fix onto `he/renderer` if it is engine code |
-| **`he/renderer` lacks three graphics commits of `he/main`,** against the rule of section 1.2. drift reads only `data/` and `src/`, so no check fails; an English build of `he/renderer` still shows the older art | `git diff --stat he/renderer he/main -- graphics/` lists three files: `graphics/interface/status_icons.png` (`d3b59b94fe`, the paralysis tag, merged with `he/fix-screens-r4b`), `graphics/contest/results_screen/tiles.png` (`d41a67ebdf`, the NORMAL rank title, `he/fix-screens-r10`) and `graphics/easy_chat/mode.png` (`9164440ab9`, the alphabet mode tab, `he/fix-screens-r18b`) | cherry-pick the three onto `he/renderer` in that order, compare English builds as in section 1.2, and push `he/renderer` |
 | The harness shoots the battle debug menu's AI party page before its tilemap reaches the screen, so later six-Pokémon pages look blank (section 8.5) | `scripts/r16_debug_menu/dbgmenu.py` `view()` (`:95-103`) shoots 8 frames after the page's task starts and closes it at once; the page's tilemap copy lands about 22 frames late | wait until `sDma3Requests` has no pending entry, or at least 30 frames, before the shot and before B; then drop the one-page-per-run note in its docstring (`:18-21`) |
 | `status_report.py` marks C literals live by line number, from the English source's lines | `units.py` `c_live_index` (`:208-219`) keys `tools/hebrew/data/c_strings.json` by line, and those lines are `../pokehns-en`'s (`src/data/items.h:11160` there is an English description, `c_strings.json` marks it dead). In the Hebrew tree the lines differ (339 items have a plural name under `#if TEXT_RTL`), so a C file's live count in `STATUS.md` is approximate: round 20 added one line to `items.h` (MEWNIUM Z's description), and STICKY BARB's plural name, now on line 11160, stopped counting (2,224 to 2,223 units) | match the tree's literals to `c_strings.json` by designator and field, not by line, then regenerate `STATUS.md` |
 | `audit.py` on a built tree counts 2,480 more strings than CI (section 4.2) | `walk_tree` (`audit.py:448-464`) also reads the six generated headers | skip `src/data/trainers*.h`, `battle_partners.h`, `debug_trainers.h` and `region_map/region_map_entries.h` in `walk_tree`; the local count should then equal CI's (39,059 at `fe509e0043`) |
