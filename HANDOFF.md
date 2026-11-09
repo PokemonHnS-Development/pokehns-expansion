@@ -30,7 +30,7 @@ fresh clone.
 | [`tools/hebrew/release/README.md`](tools/hebrew/release/README.md) | the release scripts; [`REVIEW.md`](tools/hebrew/release/REVIEW.md) there is the screenshot review |
 | [`tools/hebrew/testmsgs/README.md`](tools/hebrew/testmsgs/README.md) | the Hebrew battle-test message table |
 | [`translation/hebrew/STYLE.md`](translation/hebrew/STYLE.md) | the binding style rules |
-| [`translation/hebrew/DECISIONS.md`](translation/hebrew/DECISIONS.md) | 74 recorded decisions, up to Q138, and the names review |
+| [`translation/hebrew/DECISIONS.md`](translation/hebrew/DECISIONS.md) | 76 recorded decisions, up to Q140, and the names review |
 | [`translation/hebrew/transliteration_rules.md`](translation/hebrew/transliteration_rules.md) | how names are transliterated |
 | [`translation/hebrew/STATUS.md`](translation/hebrew/STATUS.md) | per-file state (generated) |
 | [`translation/hebrew/glossary.csv`](translation/hebrew/glossary.csv) | every name and fixed term |
@@ -509,9 +509,10 @@ The glossary wins for names, STYLE.md for everything else (`STYLE.md:3-4`). In s
   - the battle debug menu translated and the R+START menu English (Q118, Q120);
   - the link battle lines without the player's gender (Q132);
   - the five Pokédex terms היסואי, הר הנזר, חור תולעת אולטרה, צוות פלזמה, רוז (Q133);
-  - 'psychic power' as כוח פסיכי in Pokédex prose (Q134);
+  - Psychic is על-חושי in every name, line and plate (Q139, which supersedes Q134);
   - Easy Chat in Hebrew, with the Hebrew-letter keyboard (Q135);
-  - only errors in a name follow FireRed's later changes (Q136).
+  - names follow the FireRed translation's PR #2 conventions; each name kept apart is listed
+    with its reason (Q140, which supersedes Q136).
 
 ### 3.3 Width: what the renderer does and how to measure
 
@@ -692,9 +693,11 @@ git -C <main worktree> merge --no-ff he/fix-<topic> -m "Merge he/fix-<topic>: <w
 **Files**
 
 - `translation/hebrew/glossary.csv`: columns `kind,constant,english,firered_hebrew,proposed_hebrew,status,notes`;
-  7,092 rows, with CRLF line ends. The tools read `proposed_hebrew`.
-  - Status `inherited` (1,940) comes from the FireRed fork.
-  - Status `proposed` (5,152) is new and has not been checked against an official Hebrew source.
+  7,093 rows, with CRLF line ends. The tools read `proposed_hebrew`.
+  - Status `inherited` (1,915) comes from the FireRed fork.
+  - Status `proposed` (5,178) is new and has not been checked against an official Hebrew source.
+    It includes the 25 inherited rows that round 20 renamed after FireRed's newer names (Q139,
+    Q140); their `firered_hebrew` column still holds the form they were first taken from.
 - `translation/hebrew/glossary_sources.csv`: `kind,constant,english,source,pattern` (5,529 rows).
   `make_chunks.py` uses it to pre-fill name fields.
 
@@ -709,8 +712,8 @@ Keep families together; `python3 tools/hebrew/translit_stats.py 'EON$'` lists th
 **Renaming or adding a name** is a checklist; no tool propagates a rename:
 
 1. Commit `glossary.csv` alone, **before** any text that uses the name.
-2. `python3 tools/hebrew/namecheck.py --all --warnings` should print `rows 7092, still empty 0,
-   problems 0` and `warnings 0, allowlisted 60`; then run `python3 tools/hebrew/glossary_widths.py`
+2. `python3 tools/hebrew/namecheck.py --all --warnings` should print `rows 7093, still empty 0,
+   problems 0` and `warnings 0, allowlisted 34`; then run `python3 tools/hebrew/glossary_widths.py`
    (today `1 over budget`: the EXEGGUTOR-A healthbox name, 49 px against 48, decided in Q129).
 3. Change every dialogue use (`git grep` the old Hebrew and the English), one file per commit.
 4. For trainer or map names, run `python3 tools/hebrew/apply_names.py --dry-run`, then without
@@ -718,7 +721,16 @@ Keep families together; `python3 tools/hebrew/translit_stats.py 'EON$'` lists th
 5. For species, run `python3 tools/hebrew/gen_dex_alpha.py` and commit `pokedex_orders.h` alone.
    Its `TEXT_RTL` list is engine data, so cherry-pick that commit onto `he/renderer` too
    (`f47c725548` there); drift fails until the baseline has it. For a species, move or Easy Chat
-   word, run `gen_ec_order.py` and `gen_ec_letters.py` (CI runs all three with `--check`).
+   word, run `gen_ec_order.py` and `gen_ec_letters.py` (CI runs all three with `--check`). Their
+   two headers (`src/data/easy_chat/easy_chat_order_rtl.h`, `easy_chat_words_by_letter_rtl.h`)
+   are engine data too, picked the same way: drift fails on those two files until the baseline
+   has them. A renamed type also needs its plates redrawn (`graphics/types/<type>.png` and
+   `graphics/interface/menu_info.png`, with `tools/hebrew/graphics/`), in a graphics commit of its
+   own that is picked as well. Round 20's three picks, in order: `81f9b905db` (the Easy Chat
+   headers), `04d59a585c` (the GHOST and PSYCHIC plates and `menu_info.png`) and `3f2c255dce`
+   (`menu_info.png` again, the Psychic plate with the short hyphen; it applies only after
+   `04d59a585c`). They are `1057b2f08a`, `784e76146d` and `8cfd524776` on `he/renderer`
+   (section 1.2).
 6. Update test expectations where order or text changes. For example, `4c6ba54599` updated
    `test/bag.c` for the berry names.
 7. After a bulk glossary edit, diff the row **keys** between revisions (section 6.2): a rewrite
@@ -727,8 +739,10 @@ Keep families together; `python3 tools/hebrew/translit_stats.py 'EON$'` lists th
 **Consistency warnings** (`namecheck.py --warnings`; they never change the exit status):
 
 - `--fr-sync` compares each name with the FireRed Hebrew tree as it is now (`HNS_FIRERED`, default
-  `../pokefirered-heb`), within the same kind. Take FireRed's name only when it fixes an error in
-  ours (`DECISIONS.md` Q136); type names stay.
+  `../pokefirered-heb`), within the same kind. Follow FireRed's current name unless an H&S limit
+  (bytes, width, a duplicate) or a FireRed slip stands in the way (`DECISIONS.md` Q140); every
+  kept difference is in `namecheck_allow.json` with its reason. The type names follow FireRed
+  too (GHOST רפאים, PSYCHIC על-חושי).
 - `--translit` flags transliteration slips in `proposed` rows; `--dupes` flags one English person
   name with two Hebrew spellings.
 - `tools/hebrew/data/namecheck_allow.json` lists every difference kept on purpose, with the reason.
@@ -809,7 +823,8 @@ Two rules from the original brief:
 
 CI creates the two worktrees from `origin/he/renderer` and `origin/master` (`hebrew.yml:43-48`).
 Locally, the tag `Release-v2.0.6` (fetched in section 2.3) stands in for CI's `origin/master`. The
-expected output below is a local run on `he/wip-r19` (2026-11-09).
+expected output below is a local run on `he/main` `c1cfd8a30b` (2026-11-10), with
+`../pokehns-heb-engine` at `he/renderer` `8cfd524776`.
 
 ```bash
 set -o pipefail
@@ -818,13 +833,13 @@ git diff --name-only Release-v2.0.6...HEAD -- data src | grep -E '\.(inc|s|c|h|p
 #    last line: drift: 708 files, 0 FAIL, 336 with warnings only   (exit 0)
 # 2. layout audit (hebrew.yml:56-57); creates build/hebrew; prints the report's two == lines
 python3 tools/hebrew/audit.py --baseline ../pokehns-en --report build/hebrew/audit.txt
-#    == translated strings: 0 errors, 48 warnings, 85 suppressed by baseline ../pokehns-en
+#    == translated strings: 0 errors, 54 warnings, 88 suppressed by baseline ../pokehns-en
 #    == English (untranslated) strings, baseline only: 448 errors, 0 warnings   <- informational
 #    line 1 of the report: audit ...: 41539 strings (25592 translated)
 # 3. glossary (hebrew.yml:59-60)
 python3 tools/hebrew/namecheck.py --all --warnings
-#    rows 7092, still empty 0, problems 0
-#    warnings 0, allowlisted 60
+#    rows 7093, still empty 0, problems 0
+#    warnings 0, allowlisted 34
 # 4. generated data (hebrew.yml:62-71)
 python3 tools/hebrew/gen_dex_alpha.py --check     # gen_dex_alpha: 1080 entries, the TEXT_RTL list is up to date
 python3 tools/hebrew/gen_ec_order.py --check      # gen_ec_order: 18 groups, the header is up to date
@@ -844,14 +859,15 @@ python3 tools/hebrew/plurals.py                   # items 902, stackable 693, pr
   Section 6.2 lists every kind. `.party` and `.json` files are checked too: a renamed `Name:` line
   counts as a string.
 - **audit:** the exit status is 1 only for a Hebrew error that the baseline does not suppress.
-  - The 48 warnings are `FIT`: 13 item names, 30 move names and 5 EXEGGUTOR-A rows (Q129) that
-    fit only after the game falls back to a narrower font.
-  - A finding reads `w item_name FIT 79 > 72 p1 r1 [summary held item FONT_NORMAL] (...)
-    src/data/items.h:3095`: kind, check, measured > budget, page and row, where it is drawn, and
+  - The 54 warnings are `FIT`: 16 item names, 33 move names and 5 EXEGGUTOR-A rows (Q129) that
+    fit only after the game falls back to a narrower font. Six of them came with round 20's
+    Psychic names; Q139 lists them.
+  - A finding reads `w item_name FIT 80 > 72 p1 r1 [summary held item FONT_NORMAL] (...)
+    src/data/items.h:3402`: kind, check, measured > budget, page and row, where it is drawn, and
     the source line.
-  - CI counts fewer strings (run 41933578987 at `fe509e0043`: `39059 strings (24836
-    translated)`), with the same 0 errors, 48 warnings and 85 suppressed. The difference is the
-    build. `walk_tree` (`audit.py:448-464`) reads every `.c` and `.h` under `src/`, and a built tree
+  - CI counts fewer strings. At `fe509e0043` (run 41933578987) it printed `39059 strings (24836
+    translated)` with the same findings as the local run of that commit (0 errors, 48 warnings,
+    85 suppressed, before round 20). The difference is the build. `walk_tree` (`audit.py:448-464`) reads every `.c` and `.h` under `src/`, and a built tree
     has six git-ignored headers that `make` generates:
     - `src/data/trainers.h`, `trainers_hns.h`, `trainers_frlg.h`, `battle_partners.h` and
       `debug_trainers.h`, made from the `.party` files (`trainer_rules.mk:3-12`);
@@ -861,7 +877,7 @@ python3 tools/hebrew/plurals.py                   # items 902, stackable 693, pr
     finding. A clean `git archive` of the commit gives CI's count exactly, with the same findings
     (round 19). Section 8.1 has the fix.
 - **tool tests in CI:** `Ran 132 tests ... OK (skipped=2)` at `fe509e0043` (no built
-  `tools/preproc`, no English ROM); `he/wip-r19` adds 5.
+  `tools/preproc`, no English ROM); round 19 added 5, so `he/main` has 137.
 
 ### 4.3 The test suite
 
@@ -1301,7 +1317,7 @@ there is one). Engine fixes exist twice: the commit merged into `he/main`, and i
 | audit or checkunits `BYTES` | `namecheck.py --all` | a hard field limit; for example the Frontier trainer name field is 7 bytes, not 8 | a shorter form for that copy | `ca1e85587c` |
 | audit `FIT` warning | | fits only in the narrower fallback font | allowed; look at it on screen | — |
 | checkunits `w DIGITS ['20'] -> ['02']` | | a number reversed or lost | write digits in reading order | — |
-| namecheck `WARN FRSYNC`, `TRANSLIT`, `SAMENAME` or `STALE` | `namecheck.py --warnings` | a name differs from FireRed's current one, a transliteration slip, one person with two spellings, or an allow entry that no longer matches | fix the name if it is an error (Q136); otherwise add or update its entry, with the reason, in `tools/hebrew/data/namecheck_allow.json` | `49394ba1ad` |
+| namecheck `WARN FRSYNC`, `TRANSLIT`, `SAMENAME` or `STALE` | `namecheck.py --warnings` | a name differs from FireRed's current one, a transliteration slip, one person with two spellings, or an allow entry that no longer matches | follow FireRed's name unless an H&S limit or a FireRed slip stands in the way (Q140); otherwise add or update its entry, with the reason, in `tools/hebrew/data/namecheck_allow.json` | `49394ba1ad` |
 | `gen_dex_alpha`, `gen_ec_order`, `gen_ec_letters` or `flag_gates` `--check` exits 1 | the entries it lists | a rename or a script change without regenerating | run the tool without `--check` and commit its output alone | `c022422009` |
 | A glossary name went back to Latin; a row vanished | diff the row keys (below) | a bulk rewrite of `glossary.csv` dropped rows: `bb8db5c703` lost 5 (four radio DJs and `TERM_NURSE_JOY`) | restore the rows; review every bulk glossary edit with the key diff | `d8de0c8fd0` |
 | 8 multi-word names held only the first word | read the row | truncation during a rewrite (which commit is unknown) | restored in the names review | `DECISIONS.md:1361-1382` |
@@ -1508,8 +1524,26 @@ Ask the owner before you:
   the phrase). Only phrases from a linked game were not seen.
 - **Decided in round 18:** the battle debug menu's stat rows and label (Q131), the link battle lines
   without the player's gender (Q132), the five Pokédex terms (Q133; their rows stay `proposed`),
-  'psychic power' as כוח פסיכי (Q134), the Gen 4 FROSTBITE tag redrawn as קור (Q137), the names
-  compared with FireRed's (Q136) and publishing without hand play (Q138).
+  'psychic power' as כוח פסיכי (Q134, superseded by Q139), the Gen 4 FROSTBITE tag redrawn as קור
+  (Q137), the names compared with FireRed's (Q136, superseded by Q139 and Q140) and publishing
+  without hand play (Q138).
+- **Decided in round 20:** Psychic is על-חושי (Q139) and names follow FireRed's PR #2 conventions
+  (Q140).
+  - Three Psychic names keep the noun על-חוש where an adjective was possible; the owner left the
+    round's open choices to the project, and these are decided, not open. PSYCHIC SURGE נחשול
+    על-חוש and PSYCHIC SEED זרע על-חוש take the noun as their siblings do (נחשול חשמל, נחשול
+    ערפל, נחשול עשב, זרע חשמל) and as FireRed's PSYBEAM קרן על-חוש; the adjective forms would fit
+    too. PSYCHO SHIFT הסטת על-חוש fits the FIGHT menu, the summary and the relearner in their own
+    fonts and needs the narrower font only in the contest list (60 px of 59, one of the six FIT
+    warnings of Q139). הסטה על-חושית (77 px) would need the narrower font in all four, and
+    `audit.py`, which applies the party field-move budget to every move, would report an error.
+  - Both Psychic plates, `graphics/types/psychic.png` and the plate in
+    `graphics/interface/menu_info.png`, are drawn in FONT_SMALL_NARROWER glyphs with a 2 px hyphen:
+    the word is 30 px wide, with 1 px to spare on each side (`tools/hebrew/graphics/README.md`,
+    Q139).
+  - Kept on purpose and listed with reasons in Q140 and `namecheck_allow.json`: SLASH, CHESTO
+    BERRY, IAPAPA BERRY, POKéBLOCK CASE, EXEGGUTOR and ELITE FOUR differ from FireRed's names
+    because of an H&S limit or a FireRed slip, and PSYCHO BOOST because FireRed left it on פסיכי.
 - **Faults of H&S 2.0.6 itself, the same in English, listed as known issues** in `notes.json`,
   because any fix changes gameplay or belongs upstream (section 7.4):
   - **Battle Dome style scoring** assigns instead of adding, so a trainer card shows only three of
@@ -1565,9 +1599,9 @@ Ask the owner before you:
 - **The radio's Pokédex Show** wraps two place names across its lines (הר / הנזר in the
   Typhlosion-H entry, נהרות / היסואי in Basculegion's). Accepted: the ticker breaks between words,
   nothing clips, and 1.0 and English split at the same places.
-- **Proposed names.** The 5,152 `proposed` glossary rows were never checked against an official
+- **Proposed names.** The 5,178 `proposed` glossary rows were never checked against an official
   Hebrew source. `namecheck.py --warnings` checks them for consistency with FireRed and for
-  transliteration slips (Q136); the roughly 3,000 rows translated by meaning stay `proposed` until
+  transliteration slips (Q140); the roughly 3,000 rows translated by meaning stay `proposed` until
   a native speaker reads them.
 - **Not seen by a person:**
   - nobody has played from a new game to the first badge;
