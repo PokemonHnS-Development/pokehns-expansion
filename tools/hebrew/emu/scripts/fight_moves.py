@@ -3,6 +3,7 @@
 its effectiveness marker, and the START move-info window.
 
   fight_moves.py ROM OUTDIR [--save S] [--clip] [--first N] [--last N] [--no-rotate]
+                 [--moves MOVE_A,MOVE_B,...]
 
 One wild battle (tours/_bfm_base.txt: Smeargle Lv50 vs Geodude Lv10 on Route 30) stays open
 the whole run. Before each FIGHT the four moves to show are written into gBattleMons[0].moves
@@ -14,6 +15,9 @@ cannot be chosen), four per group:
   gNNN_cS   cursor on slot S (0-3): the four names and the PP / type / effectiveness of slot S
   gNNN_iS   the START window of slot S (category, power, accuracy, description)
   gNNN_rR   the same four moves rotated by R (1-3), so every name is drawn in every slot
+
+With --moves only the listed moves are shown, four per group in the order given (the last group
+is filled up with the first listed moves); --first/--last then count these groups.
 
 A last group shows low current PP (1-digit, the PP colours). OUTDIR/manifest.json maps each
 screenshot to its moves; OUTDIR/moves.json lists every move as the ROM holds it (name and
@@ -137,6 +141,7 @@ def main():
     ap.add_argument("--last", type=int, default=None, help="last group (inclusive)")
     ap.add_argument("--no-rotate", action="store_true")
     ap.add_argument("--no-info", action="store_true")
+    ap.add_argument("--moves", default=None, help="comma-separated MOVE_* names: show only these")
     a = ap.parse_args()
 
     src = os.environ.get("HNS_SRC") or os.path.dirname(os.path.abspath(a.rom))
@@ -146,9 +151,16 @@ def main():
     with open(os.path.join(a.outdir, "moves.json"), "w", encoding="utf-8") as fh:
         json.dump(moves, fh, ensure_ascii=False, indent=1)
     ids = sorted(moves)
-    groups = [ids[i:i + 4] for i in range(0, len(ids), 4)]
+    shown = ids
+    if a.moves:
+        by_const = {m["const"]: mid for mid, m in moves.items()}
+        missing = [c for c in a.moves.split(",") if c not in by_const]
+        if missing:
+            raise SystemExit("not in %s: %s" % (src, ", ".join(missing)))
+        shown = [by_const[c] for c in a.moves.split(",")]
+    groups = [shown[i:i + 4] for i in range(0, len(shown), 4)]
     while len(groups[-1]) < 4:
-        groups[-1].append(ids[0])
+        groups[-1].append(shown[len(groups[-1]) % len(shown)] if a.moves else ids[0])
     # The PP group: 1-digit current PP against 1- and 2-digit maxima (PP colours of
     # GetCurrentPpToMaxPpState, src/battle_message.c:4059)
     pp_group = [m for m in ids if moves[m]["pp"] == 5][:1] + [m for m in ids if moves[m]["pp"] == 10][:1] + \
@@ -169,7 +181,7 @@ def main():
     try:
         emu.run_script(os.path.join(EMU, "tours", "_bfm_base.txt"))
         todo = [(gi, groups[gi], None) for gi in range(a.first, last + 1)]
-        if a.last is None:
+        if a.last is None and not a.moves:
             todo.append(("pp", pp_group, LOW_PP))
         for gi, g, low in todo:
             tag = "g%03d" % gi if isinstance(gi, int) else "g_" + gi

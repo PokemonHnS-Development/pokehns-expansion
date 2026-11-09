@@ -1,0 +1,62 @@
+# Round 20 type names in the Pokedex search (run with hns.py tour): SELECT > SEARCH > TYPE opens the type
+# list (gTypesInfo[].name, src/pokedex_plus_hgss.c:1942-1961); the cursor goes down to GHOST (row 8) and
+# PSYCHIC (row 14), one shot per row. Steps as tours/menu_pokedex.txt. Save: menuA_base.sav.
+start saves/menuA_base_copy.sav
+include ../../scripts/continue.txt
+startmenu POKEDEX
+waitcb2x CB2_Pokedex 600
+waittaskx pokedex_plus_hgss:Task_HandlePokedexInput 600
+tap SELECT 4
+waittaskx pokedex_plus_hgss:Task_HandleSearchTopBarInput 600
+tap A 4
+waittaskx pokedex_plus_hgss:Task_HandleSearchMenuInput 120
+tap DOWN 4
+tap DOWN 4
+tap A 4
+waittaskx pokedex_plus_hgss:Task_HandleSearchParameterInput 120
+snap n20_dex_type_00
+tap DOWN 4
+waitquiet
+snap n20_dex_type_01
+tap DOWN 4
+waitquiet
+snap n20_dex_type_02
+tap DOWN 4
+waitquiet
+snap n20_dex_type_03
+tap DOWN 4
+waitquiet
+snap n20_dex_type_04
+tap DOWN 4
+waitquiet
+snap n20_dex_type_05
+tap DOWN 4
+waitquiet
+snap n20_dex_type_06
+tap DOWN 4
+waitquiet
+snap n20_dex_type_07
+tap DOWN 4
+waitquiet
+snap n20_dex_type_08
+tap DOWN 4
+waitquiet
+snap n20_dex_type_09
+tap DOWN 4
+waitquiet
+snap n20_dex_type_10
+tap DOWN 4
+waitquiet
+snap n20_dex_type_11
+tap DOWN 4
+waitquiet
+snap n20_dex_type_12
+tap DOWN 4
+waitquiet
+snap n20_dex_type_13
+tap DOWN 4
+waitquiet
+snap n20_dex_type_14
+tap DOWN 4
+waitquiet
+snap n20_dex_type_15

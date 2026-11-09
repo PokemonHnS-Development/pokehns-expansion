@@ -1,0 +1,2 @@
+slide:sText_Trainer1WantsToBattle
+slide:sText_PlayerDefeatedLinkTrainerTrainer1
