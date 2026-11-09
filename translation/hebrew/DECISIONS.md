@@ -73,11 +73,13 @@ Each entry is one open question from the review of the first release candidate: 
 | [Q131](#q131) | The battle debug menu shows three stat-up hold effects as 'העלאת X' and six as 'X +', and its 'switching to' label leaves a gap before the Pokémon it names. | A. 'X +' for all nine, and the 68 px label 'עובר לפוקימון ' | changed |
 | [Q132](#q132) | The link battle lines for the other player or the link partner sending out or withdrawing a Pokémon, and running, use the masculine verb whatever character that player chose. | A. Reword so the verb agrees with the Pokémon, as Q123 and Q127 did | changed |
 | [Q133](#q133) | Five Pokédex terms have Hebrew names with no official source: HISUI היסואי, MT. CORONET הר הנזר, Ultra Wormhole חור תולעת אולטרה, TEAM PLASMA צוות פלזמה, ROSE רוז. | A. Keep all five | no change |
-| [Q134](#q134) | 'psychic power' in Pokédex prose is כוח פסיכי in most entries and כוח על-חושי in nine. | A. כוח פסיכי and its forms in every entry; על-חושי stays in Kadabra's 'extrasensory' and in the move names that have it | changed |
+| [Q134](#q134) | 'psychic power' in Pokédex prose is כוח פסיכי in most entries and כוח על-חושי in nine. | A. כוח פסיכי and its forms in every entry; על-חושי stays in Kadabra's 'extrasensory' and in the move names that have it | changed; superseded by [Q139](#q139) |
 | [Q135](#q135) | 482 of the 999 Easy Chat words were still English, so trainer phrases mixed the two directions, and three Odd Egg hints named words the list no longer has. | a. Translate every word, a text of its own for every word the game compares and shared texts only where Hebrew has one word, Hebrew order for the group lists, hints that quote the list words, a Hebrew ABC keyboard and the screen mirrored inside its frames | changed |
-| [Q136](#q136) | Names inherited from or modelled on the FireRed translation differ from FireRed's current names in 34 rows; which ones should follow FireRed? | B. Take FireRed's name only where H&S's has an error (two lost letters fixed); list the rest with a reason | changed |
+| [Q136](#q136) | Names inherited from or modelled on the FireRed translation differ from FireRed's current names in 34 rows; which ones should follow FireRed? | B. Take FireRed's name only where H&S's has an error (two lost letters fixed); list the rest with a reason | changed; superseded by [Q139](#q139) and [Q140](#q140) |
 | [Q137](#q137) | In the Gen 4 battle interface the frostbite tag is a copy of the burn tag and reads כויה, as in English. | B. Redraw it as קור, the word of the H&S sheets | changed |
 | [Q138](#q138) | The brief says a ROM nobody has played by hand is not committed, but 0.1, 0.2 and every 1.0 update were committed with hand play declared as not tested. | B. Publish to the private builds repository, with hand play always declared in the release notes | no change |
+| [Q139](#q139) | Psychic is פסיכי in the type, the PSYCHIC and PSYCHO names, the items and the prose; FireRed now writes על-חושי. | A. The על-חושי family everywhere (owner's decision); names too wide for their lists are shortened, and PSYCHIC SURGE and SEED take the noun על-חוש as their siblings do; the plates redrawn in narrower glyphs | changed |
+| [Q140](#q140) | Which naming and wording conventions of the owner's FireRed translation (PR #2) should H&S follow? | B. Follow them; keep H&S's form only where an H&S limit or a FireRed slip stands in the way, each keep listed | changed |
 
 ## K1
 
@@ -1666,6 +1668,8 @@ The English and the Japanese (ノーマル, スーパー, ハイパー, マス�
 
 ## Q134
 
+*Superseded by [Q139](#q139):* the owner decided that Psychic is על-חושי; 'psychic power' is now כוח על-חושי and its forms, and the type is על-חושי. The analysis below is kept as it was.
+
 **Question.** The English 'psychic power(s)', 'psychic energy' and 'psychic abilities' have two renderings in Pokédex prose: כוח פסיכי in most entries and כוח על-חושי in nine.
 
 *Source:* HANDOFF section 8.2, questions for the owner from the Pokédex rounds (16b and 17).
@@ -1741,6 +1745,8 @@ The English and the Japanese (ノーマル, スーパー, ハイパー, マス�
 
 ## Q136
 
+*Superseded by [Q139](#q139) and [Q140](#q140):* the owner decided that names follow FireRed's conventions and that Psychic is על-חושי. 28 of the 34 differences below now follow FireRed. The allowlist's `fr_sync` section keeps seven entries with new reasons: SLASH, CHESTO BERRY, IAPAPA BERRY, POKéBLOCK CASE, EXEGGUTOR and ELITE FOUR, which an H&S limit or a FireRed slip keeps apart, and PSYCHO BOOST, which FireRed left on פסיכי. The analysis below is kept as it was.
+
 **Question.** Many glossary names were inherited from the FireRed translation or follow its pattern, and FireRed has changed some of its own names since. Comparing the glossary with FireRed's names as they are now gives 34 differences. Which should follow FireRed?
 
 *Source:* HANDOFF section 3.5 (the proposed names were never checked for consistency); `tools/hebrew/namecheck.py --fr-sync`.
@@ -1811,6 +1817,93 @@ The English and the Japanese (ノーマル, スーパー, ハイパー, マス�
 | C. Publish only after the owner confirms each update | Ask before each builds-repository commit. | Slower; the same evidence either way. |
 
 **Chosen:** B. The rule's intent, no claim of play that did not happen, is met by the declaration, and the repository stays private. Recorded so the practice is explicit.
+
+## Q139
+
+**Question.** Psychic is פסיכי in H&S: the type, the PSYCHIC and PSYCHO move names, PSYCHIC SURGE, the Psychic items, and (since Q134) 'psychic power' in prose. FireRed has since renamed its type to על-חושי. Should H&S follow?
+
+*Source:* the owner, round 20: "Psychic is על חושי"; FireRed PR #2 (`ofir286/pokefirered-heb`, head `df2ee712e`), which renamed the type in `src/battle_main.c` gTypeNames (commit `f5d0c2116`).
+
+**Analysis.** The tree had 110 uses of פסיכ in 26 files, plus the two type plates drawn in the art.
+- FireRed now writes the type על-חושי, the move PSYCHIC כוחעל חושי (the space dropped only for its 57 px slot), Sabrina's gym כוח על-חושי and בכוח העל-חושי (`data/maps/SaffronCity_Gym/text.inc`), and the sign ביתו של מר על חושי. The trainer class PSYCHIC, a person, stays טלפת (`src/data/text/trainer_class_names.h`). FireRed still has פסיכי in PSYCHO BOOST, its Easy Chat word, gText_APsychicMove (מהלך פסיכי), two more lines of Sabrina's gym (פוקימוני פסיכי, `SaffronCity_Gym/text.inc:66,139`), the Three Island house (`ThreeIsland_House2/text.inc:7,13`), the Pokédude (`data/text/pokedude.inc:86`), the TWISTED SPOON description (`src/data/items.json:3433`), the FUTURE SIGHT and SKILL SWAP descriptions (`src/move_descriptions.c:251,288`), its help system and its fame checker: leftovers of the rename, not a rule.
+- The PSY- names already used the family: PSYBEAM קרן על-חוש, PSYWAVE על-חוש, PSYSHOCK הלם על-חושי, PSYSTRIKE מכת על-חוש, ESPER WING כנף על-חושית, PSYBLADE להב על-חוש.
+- What was not a straight swap, and what was done instead:
+  - The generic phrase מהלך מסוג על-חושי is 17 bytes; `u8 generic[17]` (`include/data.h`) holds 16 and gcc rejects it. It is מהלך על-חושי, FireRed's own pattern (gText_APsychicMove מהלך פסיכי).
+  - PSYCHIC FANGS ניבים על-חושיים is 62 px in the 59 px contest list: ניב על-חושי, singular like ניב אש, ניב קרח, ניב רעם and ניב רעל.
+  - PSYSHIELD BASH: מכת מגן על-חושי is 65 px in the 64 px battle cell and מכת מגן על-חוש 62 px in the 59 px list: חבטת על-חוש.
+  - PSYCHO SHIFT הסטה על-חושית is 77 px. It is not a field move (`include/constants/field_move.h`), so the party menu's 72 px field-move list never shows it, though `audit.py` applies that budget to every move name and reports an error. It would fit the FIGHT menu (69 px of 64), the summary and the relearner (77 of 72) and the contest list only in the narrower font. הסטת על-חוש, the noun as in PSYBEAM and PSYSTRIKE, fits all of them but the contest list (60 of 59).
+  - PSYCHIC TERA SHARD שבר טרה על-חושי is 68 px in the 66 px PC storage field: שבר טרה על-חוש, the noun as שבר טרה חשמל.
+  - PSYCHIC SURGE and PSYCHIC SEED would fit as נחשול על-חושי and זרע על-חושי; they take the noun by choice, as their siblings do: נחשול על-חוש beside נחשול חשמל, נחשול ערפל, נחשול עשב; זרע על-חוש beside זרע חשמל. FireRed's own PSYBEAM קרן על-חוש and PSYWAVE על-חוש use the same noun.
+  - Seven descriptions, two Pokédex entries (Gothitelle, Rellor) and the Saffron gym guide's page were re-wrapped or shortened to stay inside their lines.
+  - The type plate (`graphics/types/psychic.png`) has 30 px of ink; על-חושי is 36 px in FONT_SMALL. It is drawn in FONT_SMALL_NARROWER glyphs with the hyphen cut to two columns (30 px), and the menu plate in `graphics/interface/menu_info.png` the same way (30 px of 32, 1 px to spare on each side).
+- The PSYCHO moves: 'Psycho' here is the Psychic word (all three are Psychic-type moves), and חיתוך פסיכי reads as "a crazy cut", which is what the owner's decision removes. FireRed's דחף פסיכי is one of its leftovers, so H&S takes דחף על-חושי and allowlists the difference.
+- Not changed: the trainer classes PSYCHIC טלפת and טלפתית and their Battle Tower lines (a person, as in FireRed); EXTRASENSORY חוש נוסף; PSYCH UP עידוד עצמי; SHATTERED PSYCHE נפש מנופצת; the Psychic Terrain battle lines, which say 'weird' in English (שדה הקרב נהיה מוזר!); the Pokédex category PSI פסי; Kadabra's extrasensory תפיסה על-חושית.
+
+| Option | How | Risk |
+|---|---|---|
+| A. The על-חושי family everywhere | The type, every name, description, Pokédex entry, dialogue line, menu row and Easy Chat word that says Psychic or psychic; the over-budget names and lines as above; both plates redrawn. | 108 strings and two graphics change; four names fit some lists only in the narrower fallback font (six FIT warnings). |
+| B. Only the type and the move, as FireRed's tables | Type and MOVE_PSYCHIC; prose stays פסיכי (Q134). | The prose and the type disagree again, the problem Q134 fixed the other way. |
+| C. Keep פסיכי | No change. | Against the owner's decision. |
+
+**Chosen:** A, the owner's decision. Supersedes Q134 (prose is now כוח על-חושי and its forms; TERM_PSYCHIC_POWER) and the Q136 rows that kept the type PSYCHIC and the move PSYCHIC אשליה. Mr. Psychic's sign reads מר על-חושי: FireRed's sign (ביתו של מר על חושי) with the project's hyphen, and a new name row. Static checks: `audit.py --baseline ../pokehns-en` 0 errors on the changed files (six new FIT warnings: PSYCHIC GEM in the summary and PC storage held-item fields, PSYCHIC TERA SHARD in PC storage, PSYCHO SHIFT in the contest list, PSYCHO CUT in the contest list and the bag TM row, the last audit-only because PSYCHO CUT is not a TM in H&S, `include/constants/tms_hms.h`); `namecheck.py --all --warnings` 0 problems; the Easy Chat lists regenerated. Not yet seen on screen.
+
+*Changed:* `src/data/types_info.h`, `src/data/moves_info.h`, `src/data/abilities.h`, `src/data/items.h`, `src/battle_message.c`, `src/strings.c`, `src/data/script_menu.h`, `src/data/easy_chat/easy_chat_group_status.h`, `src/data/pokemon/species_info/gen_{1,2,3,5,6,7,8,9}_families.h`, 12 map scripts (Saffron City, its gym, house and dojo; Cianwood; Will's room; the Frontier lounge, factory and pyramid), `src/data/easy_chat/easy_chat_order_rtl.h`, `src/data/easy_chat/easy_chat_words_by_letter_rtl.h`, `graphics/types/psychic.png`, `graphics/interface/menu_info.png`, `tools/hebrew/graphics/types/make_types.py`, `tools/hebrew/graphics/coreui/make_coreui.py`, `tools/hebrew/data/namecheck_allow.json`
+
+*Glossary:* `TYPE_PSYCHIC`, `TYPE_PSYCHIC` (type_generic), `MOVE_PSYCHIC`, `MOVE_PSYCHO_BOOST`, `MOVE_PSYCHO_SHIFT`, `MOVE_PSYCHO_CUT`, `MOVE_PSYCHIC_TERRAIN`, `MOVE_PSYCHIC_FANGS`, `MOVE_PSYSHIELD_BASH`, `MOVE_PSYCHIC_NOISE`, `ABILITY_PSYCHIC_SURGE`, `ITEM_PSYCHIC_MEMORY`, `ITEM_PSYCHIC_GEM`, `ITEM_PSYCHIUM_Z`, `ITEM_PSYCHIC_SEED`, `ITEM_PSYCHIC_TERA_SHARD` (and their plurals), `TERM_PSYCHIC_POWER`, `NAME_MR_PSYCHIC`
+
+## Q140
+
+**Question.** The owner's own FireRed translation settled a set of naming and wording conventions in its PR #2 ("Fix Hebrew RTL rendering bugs and translate …"). Which of them should H&S follow, and where does H&S keep its own form?
+
+*Source:* the owner, round 20: "Check in this PR the conventions made for Pokémon names/moves/stuff in Hebrew" (https://github.com/ofir286/pokefirered-heb/pull/2; head `df2ee712e`, base `4325a4f01`).
+
+**Analysis.** Every FireRed name table (species, moves, abilities, items, natures, trainer classes, types, map sections, Pokédex categories) was compared with the glossary by constant and by English name, and FireRed's changed battle lines were paired with H&S's. 69 rows differed; `namecheck.py --fr-sync` had shown 33 of them, because it compares only identical constants and ignores spaces and hyphens. Natures, map sections and the 235 Johto and Hoenn species were already the same.
+
+FireRed's conventions and what H&S does with each:
+
+| Convention (FireRed) | H&S |
+|---|---|
+| Move names keep the space between words; the four fixed names נשיקה מתוקה, בעיטה נמוכה, זעם דרקון, סופת אש; Thunderbolt מכת ברק | Already so. FireRed squashes 19 names again only for its 64 px cell; H&S keeps them spaced and fits them with the narrower font. |
+| Its own wording for moves, abilities, items and classes | Taken: PAY DAY גשם מטבע, JUMP KICK בעיטת קפיצה, ROLLING KICK בעיטת סיבוב, COUNTER מתקפת נגד, SELF-DESTRUCT פיצוץ עצמי, SWIFT מטר כוכבים, CONSTRICT כיווץ, KINESIS כיפוף כפית, SOFT-BOILED ביצה רכה, TRIPLE KICK תלת בעיטה, SCARY FACE פני אימה, MAGNITUDE עוצמת רעש, SKILL SWAP חילוף יכולת, GRASS WHISTLE שריקת עשב, SKY UPPERCUT אגרוף שמים; CLOUD NINE ביטול מזג, TRACE שעתוק, EARLY BIRD משכימת קום, HUSTLE חריצות; BERRY JUICE מיץ פירות, BERRY POUCH נרתיק פירות; KINDLER מבעיר, CUE BALL בריון, TUBER ילד גלגל ים (the female class ילדת גלגל ים, 12 bytes, which also ends the clash of TUBER שחיין with SWIMMER♂ שחיין♂). |
+| Type names as gTypeNames | GHOST רפאים, with its generic phrase, items (GHOST MEMORY, GEM and TERA SHARD, GHOSTIUM Z רפאיום Z), the plates, Kurt's ball list and the 27 lines that name the type; רוח meaning a ghost, a spirit or the wind stays. PSYCHIC על-חושי is Q139. |
+| The unidentified Ghost is רוח רפאים; the battle lines call it הרוח | Taken (`gText_Ghost`); the lines already say הרוח. |
+| Full spelling ניסיון, עילית | ניסיון in all 56 uses and in EXP. SHARE, EXP. CANDY and EXP. CHARM; STYLE §3's fixed term follows. עילית does not fit (below). |
+| Hyphenated מאמן-על | Taken in the four COOLTRAINER classes, the Battle Tower lines (מאמן-על, מאמנת-על) and the Bug-Catching Contest results (מאמנת-העל בלינדה). |
+| Berries are פרי X | Already so (K6). |
+| Text uses the table's name | The Saffron gym's TM line says חילוף יכולת, the Mr. Psychic TM line כוח על-חושי, MAGNITUDE's battle line עוצמת רעש, DAMP's description פיצוץ עצמי, AERODACTYLITE's description אירודקטייל, and the Battle Tower partners their new class names. |
+| AERODACTYL אירודקטייל | Taken: 47 px in the 50 px lists and the 48 px healthbox; AERODACTYLITE was already אירודקטייליט. The nicknames that equal the name follow; the alphabetical order does not change. |
+| Stat-change adverb after the verb | H&S already has it after the verb, and the masculine הנתון makes the verb agree for every stat, so no engine change. FireRed's words are taken: sharply מאוד, harshly באופן חמור. H&S's extra level severely becomes בצורה קיצונית, so it no longer says the same as harshly. The widest line is 170 px of 208. |
+| The won't-go-higher/lower lines agree with masculine stat names | Already agree through הנתון; kept. |
+| מאמן, not מאמין | Nothing to do: all 53 uses of מאמין mean "believe". |
+| Natural weather and ability lines | Already natural, several word for word as FireRed's. The Encore and Liquid Ooze lines keep the move and ability names (עוד הופעה, רפש נוזלי), where FireRed's new lines drift from its own names. |
+| Trainer card: label first, then the name | Already so (a placeholder after the label). |
+
+Deliberate keeps, each with its reason (the six that still differ from FireRed's tables are in `namecheck_allow.json`):
+- SLASH שיסוף: FireRed's חיתוך is already MOVE_CUT in H&S (FireRed has the same duplicate), and two moves cannot share a name.
+- CHESTO BERRY פרי צ'סטו: FireRed's צ'סטרו adds an R the English does not have (K6).
+- IAPAPA BERRY פרי יאפאפה: the berry tag holds 6 bytes, so its stem is יאפאפה in both trees; K6 made the bag name match the tag, and FireRed's bag name differs from its own tag.
+- POKéBLOCK CASE קופסת פוקיבלוק: FireRed writes the {POKEBLOCK} token first for its renderer.
+- EXEGGUTOR אקזגקיוטר: the Alolan form must be the base name + -א (Q129), and FireRed's spelling makes it 52 px in the 50 px lists and the 48 px healthbox.
+- ELITE FOUR רביעיית עלית: עילית is 13 bytes and a class name holds 12 (`include/data.h`); FireRed widened its array, which in H&S is an engine change.
+- SMELLING SALTS מלחי הרחה, {PKMN} TRAINER (PLAYER_FRLG), ROCKET (TEAM_ROCKET_HNS): different English names from FireRed's rows (SMELLINGSALT, PLAYER, TEAM ROCKET).
+- The H&S-only female classes EXPERT מומחית and PSYCHIC טלפתית: FireRed has no female row.
+- The Pokédex categories DRILL מקדחה and MUSHROOM פטרייה: FireRed itself writes both forms.
+- The 16 spaced move names FireRed squashed for its cell (BLAZE KICK, DRAGON BREATH, DRAGON DANCE, DYNAMIC PUNCH, EARTHQUAKE, HEAL BELL, LOW KICK, MIND READER, MIRROR MOVE, OCTAZOOKA, ROLE PLAY, SKY ATTACK, SONIC BOOM, SWEET KISS, TEETER DANCE, WILL-O-WISP): spaced is the convention; they fit.
+- drastically בצורה דרסטית: an H&S-only level FireRed has no word for.
+
+Not copied, because they belong to FireRed's renderer, not to its naming: digits stored reversed (TM01 as "מ”מ 10"; STYLE §4 writes digits in reading order), the help-system renderer (H&S has none), the RTL anchors and column swaps, the {POKEBLOCK} token first, names squashed into its 64 px cell, and the widened gTrainerClassNames.
+
+| Option | How | Risk |
+|---|---|---|
+| A. Follow every FireRed name | Also SLASH, CHESTO, IAPAPA, POKéBLOCK CASE, EXEGGUTOR, ELITE FOUR. | A duplicate move name, a misspelt berry, a bag name that differs from its tag, two names over their field. |
+| B. Follow the conventions, keep only where an H&S limit or a FireRed slip stands in the way | The changes above; each keep listed with its reason. | Low: names and text only; every changed string checked against its budget. |
+| C. Keep Q136 | No change. | Against the owner's decision. |
+
+**Chosen:** B. It replaces Q136's outcome: of Q136's 34 differences, 28 now follow FireRed (with Q139), and the allowlist's `fr_sync` section holds seven entries, the six keeps above and PSYCHO BOOST (Q139). Static checks: `namecheck.py --all --warnings` prints `warnings 0, allowlisted 34`; `audit.py` 0 errors on the changed files; `plurals.py` 0 problems; `gen_dex_alpha.py --check` up to date; the Easy Chat lists regenerated. Not yet seen on screen.
+
+*Changed:* `src/data/types_info.h`, `src/data/moves_info.h`, `src/field_specials.c`, `src/data/abilities.h`, `src/data/items.h`, `src/battle_debug.c`, `src/data/pokemon/species_info/gen_1_families.h`, `src/data/pokemon/species_info/gen_8_families.h`, `src/pokedex_plus_hgss.c`, `src/data/battle_frontier/trainer_hill.h`, `src/trainer_tower_sets.c`, `src/battle_main.c`, `src/battle_message.c`, `src/strings.c`, `src/challenge_menu.c`, `src/data/easy_chat/easy_chat_group_status.h`, 18 map and text scripts, `src/data/easy_chat/easy_chat_order_rtl.h`, `src/data/easy_chat/easy_chat_words_by_letter_rtl.h`, `graphics/types/ghost.png`, `graphics/interface/menu_info.png`, `tools/hebrew/graphics/types/make_types.py`, `tools/hebrew/graphics/coreui/make_coreui.py`, `tools/hebrew/data/namecheck_allow.json`, `translation/hebrew/STYLE.md`
+
+*Glossary:* the 15 moves, 4 abilities, BERRY JUICE, BERRY POUCH (and plurals), the EXP. items and `TERM_EXP_POINTS`, `TYPE_GHOST` (and type_generic), the Ghost items and plurals, `SPECIES_AERODACTYL`, `SPECIES_AERODACTYL_MEGA`, `TRAINER_CLASS_KINDLER`, `TRAINER_CLASS_CUE_BALL_FRLG`, the three TUBER and four COOLTRAINER classes
 
 ## Proposed names
 

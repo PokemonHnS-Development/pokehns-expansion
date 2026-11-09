@@ -4404,7 +4404,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .weight = 1600,
         .description = COMPOUND_STRING(
             "עכשיו, כשגלי המוח של הראש ושל הזנב\n"
-            "מתואמים, הכוח הפסיכי של הפוקימון הזה חזק\n"
+            "מתואמים, הכוח העל-חושי של הפוקימון הזה חזק\n"
             "פי 10 מזה של ג'ירפאריג."),
         .pokemonScale = 356,
         .pokemonOffset = 17,

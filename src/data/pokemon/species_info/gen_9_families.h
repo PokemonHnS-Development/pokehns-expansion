@@ -3427,8 +3427,8 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .weight = 10,
         .description = COMPOUND_STRING(
             "הפוקימון הזה יוצר כדור בוץ כשהוא מערבב\n"
-            "חול ועפר עם אנרגיה פסיכית. כדור הבוץ יקר לו\n"
-            "יותר מחייו."),
+            "חול ועפר עם אנרגיה על-חושית. כדור הבוץ\n"
+            "יקר לו יותר מחייו."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -3555,7 +3555,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .weight = 15,
         .description = COMPOUND_STRING(
             "בהונותיו של פליטל מרחפות כחצי אינץ' מעל\n"
-            "הקרקע, בזכות הכוח הפסיכי שנפלט מהציציות\n"
+            "הקרקע, בזכות הכוח העל-חושי שנפלט מהציציות\n"
             "שעל בטנו."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
@@ -3619,7 +3619,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .weight = 900,
         .description = COMPOUND_STRING(
             "הוא משתק יריבים כשהוא מציף אותם\n"
-            "בכוח פסיכי מעיניו הגדולות.\n"
+            "בכוח על-חושי מעיניו הגדולות.\n"
             "למרות המראה שלו, יש לו מזג אכזרי."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
@@ -7757,7 +7757,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .description = COMPOUND_STRING(
             "השרשרת עשויה מרעלנים שמגבירים יכולות. היא\n"
             "גירתה את מוחו של מאנקידורי וגרמה לכוחות\n"
-            "הפסיכיים שלו לפרוח."),
+            "העל-חושיים שלו לפרוח."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,

@@ -1,0 +1,130 @@
+# Round 20 renamed items and changed descriptions in the bag (run with scripts/r4_bag/bag.py tour): each item
+# alone in its pocket (fillpocket START 1; the index is the item's place in the pocket's id-ordered list, the
+# same list on every build of 2.0.6), its row and its description. Berries also with the context menu; TM29
+# (PSYCHIC) and TM30 (SHADOW BALL) with the move panel, whose type plate is graphics/interface/menu_info.png.
+# ITEMS: MIND/SPOOKY PLATE, PSYCHIC/GHOST MEMORY, AERODACTYLITE, PSYCHIC/GHOST GEM, PSYCHIUM/GHOSTIUM/MEWNIUM Z,
+# SOUL DEW, GRISEOUS ORB, ODD INCENSE, TWISTED SPOON, SPELL TAG, PSYCHIC SEED, LUCKY EGG, GHOST/PSYCHIC TERA
+# SHARD, EXP. SHARE (small); MEDICINE: BERRY JUICE, EXP. CANDY XS-XL; BALLS: MOON, LOVE; BERRIES: PAYAPA, KASIB;
+# KEY ITEMS: EXP. SHARE, EXP. CHARM, BERRY POUCH.
+start saves/menuA_base_copy.sav
+include ../../scripts/continue.txt
+fillpocket ITEMS 1 159 1
+bagopen ITEMS
+bagrows it list 3
+bagclose
+fillpocket ITEMS 1 162 1
+bagopen ITEMS
+bagrows it list 3
+bagclose
+fillpocket ITEMS 1 180 1
+bagopen ITEMS
+bagrows it list 3
+bagclose
+fillpocket ITEMS 1 183 1
+bagopen ITEMS
+bagrows it list 3
+bagclose
+fillpocket ITEMS 1 204 1
+bagopen ITEMS
+bagrows it list 3
+bagclose
+fillpocket ITEMS 1 249 1
+bagopen ITEMS
+bagrows it list 3
+bagclose
+fillpocket ITEMS 1 252 1
+bagopen ITEMS
+bagrows it list 3
+bagclose
+fillpocket ITEMS 1 267 1
+bagopen ITEMS
+bagrows it list 3
+bagclose
+fillpocket ITEMS 1 270 1
+bagopen ITEMS
+bagrows it list 3
+bagclose
+fillpocket ITEMS 1 278 1
+bagopen ITEMS
+bagrows it list 3
+bagclose
+fillpocket ITEMS 1 300 1
+bagopen ITEMS
+bagrows it list 3
+bagclose
+fillpocket ITEMS 1 303 1
+bagopen ITEMS
+bagrows it list 3
+bagclose
+fillpocket ITEMS 1 306 1
+bagopen ITEMS
+bagrows it list 3
+bagclose
+fillpocket ITEMS 1 335 1
+bagopen ITEMS
+bagrows it list 3
+bagclose
+fillpocket ITEMS 1 338 1
+bagopen ITEMS
+bagrows it list 3
+bagclose
+fillpocket ITEMS 1 352 1
+bagopen ITEMS
+bagrows it list 3
+bagclose
+fillpocket ITEMS 1 369 1
+bagopen ITEMS
+bagrows it list 3
+bagclose
+fillpocket ITEMS 1 434 1
+bagopen ITEMS
+bagrows it list 3
+bagclose
+fillpocket ITEMS 1 440 1
+bagopen ITEMS
+bagrows it list 3
+bagclose
+fillpocket ITEMS 1 521 1
+bagopen ITEMS
+bagrows it list 3
+bagclose
+fillpocket MEDICINE 1 25 1
+bagopen MEDICINE
+bagrows med list 3
+bagclose
+fillpocket MEDICINE 1 46 5
+bagopen MEDICINE
+bagrows med list 7
+bagclose
+fillpocket POKE_BALLS 1 16 1
+bagopen POKE_BALLS
+bagrows ball list 3
+bagclose
+fillpocket POKE_BALLS 1 18 1
+bagopen POKE_BALLS
+bagrows ball list 3
+bagclose
+fillpocket BERRIES 1 45 1
+bagopen BERRIES
+bagrows ber ctx 3
+bagclose
+fillpocket BERRIES 1 48 1
+bagopen BERRIES
+bagrows ber ctx 3
+bagclose
+fillpocket KEY_ITEMS 1 5 1
+bagopen KEY_ITEMS
+bagrows key list 3
+bagclose
+fillpocket KEY_ITEMS 1 9 1
+bagopen KEY_ITEMS
+bagrows key list 3
+bagclose
+fillpocket KEY_ITEMS 1 32 1
+bagopen KEY_ITEMS
+bagrows key list 3
+bagclose
+fillpocket TM_HM 1 28 2
+bagopen TM_HM
+bagrows tm ctx 4
+bagclose

@@ -977,10 +977,10 @@ static const u8 *const sDesc_LevelCap[] = {
     COMPOUND_STRING("הרמה המרבית נקבעת לפי הפוקימון\nברמה הנמוכה ביותר במכון הבא."),
 };
 static const u8 *const sDesc_ExpMult[] = {
-    COMPOUND_STRING("הפוקימונים מקבלים נקודות נסיון\nכרגיל. מצטבר עם הנסיון במצב קשה."),
-    COMPOUND_STRING("הפוקימונים מקבלים 50% יותר נסיון!\nמצטבר עם הנסיון במצב קשה."),
-    COMPOUND_STRING("הפוקימונים מקבלים נקודות נסיון\nכפולות! מצטבר עם הנסיון במצב קשה."),
-    COMPOUND_STRING("הפוקימונים מקבלים אפס נסיון!!!\nחל גם על הנסיון במצב קשה."),
+    COMPOUND_STRING("הפוקימונים מקבלים נקודות ניסיון\nכרגיל. מצטבר עם הניסיון במצב קשה."),
+    COMPOUND_STRING("הפוקימונים מקבלים 50% יותר ניסיון!\nמצטבר עם הניסיון במצב קשה."),
+    COMPOUND_STRING("הפוקימונים מקבלים נקודות ניסיון\nכפולות! מצטבר עם הניסיון במצב קשה."),
+    COMPOUND_STRING("הפוקימונים מקבלים אפס ניסיון!!!\nחל גם על הניסיון במצב קשה."),
 };
 static const u8 *const sDesc_ItemPlayer[] = {
     COMPOUND_STRING("השחקן יכול להשתמש בפריטי קרב."),
@@ -1036,7 +1036,7 @@ static const struct ChallengeMenuItem sTabItems_Difficulty[] = {
         .choiceNames  = sChoices_LevelCap,
     },
     [ITEM_DIFFICULTY_EXP_MULTIPLIER] = {
-        .name         = COMPOUND_STRING("מכפיל נסיון"),
+        .name         = COMPOUND_STRING("מכפיל ניסיון"),
         .descriptions = sDesc_ExpMult,
         .numChoices   = 4,
         .choiceNames  = sChoices_ExpMult,

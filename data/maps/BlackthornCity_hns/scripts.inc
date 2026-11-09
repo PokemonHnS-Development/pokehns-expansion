@@ -229,7 +229,7 @@ BlackthornCity_SantosGivesGiftText:
 BlackthornCity_SantosGaveGiftText:
 	.string "סנטוס: …\p"
 	.string "קמע רוח…\p"
-	.string "מהלכים מסוג רוח מתחזקים…\p"
+	.string "מהלכים מסוג רפאים מתחזקים…\p"
 	.string "הוא יפחיד אותך…$"
 
 BlackthornCity_SantosSaturdayText:

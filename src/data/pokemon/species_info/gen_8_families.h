@@ -1256,7 +1256,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .description = COMPOUND_STRING(
             "הוא כמעט לא זז, אבל הוא עדיין חי.\n"
             "נראה שההסתתרות בשריונו בלי מזון\n"
-            "או מים עוררה את כוחותיו הפסיכיים."),
+            "או מים עוררה את כוחותיו העל-חושיים."),
         .pokemonScale = 491,
         .pokemonOffset = 12,
         .trainerScale = 256,
@@ -1319,7 +1319,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .weight = 408,
         .description = COMPOUND_STRING(
             "הוא מפורסם בתבונתו הרבה, והמוח הגדול\n"
-            "שלו מוכיח שיש לו גם כוח פסיכי עצום."),
+            "שלו מוכיח שיש לו גם כוח על-חושי עצום."),
         .pokemonScale = 491,
         .pokemonOffset = 12,
         .trainerScale = 256,
@@ -1385,7 +1385,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .weight = 0,
         .description = COMPOUND_STRING(
             "המוח שלו גדל לממדים עצומים, וכך גם\n"
-            "שאר גופו. לתבונה ולכוחות הפסיכיים\n"
+            "שאר גופו. לתבונה ולכוחות העל-חושיים\n"
             "של הפוקימון הזה יש עוצמה מכרעת."),
         .pokemonScale = 491,
         .pokemonOffset = 12,
@@ -4376,7 +4376,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .height = 21,
         .weight = 51,
         .description = COMPOUND_STRING(
-            "הוא פולט כוח פסיכי חזק מספיק כדי לגרום\n"
+            "הוא פולט כוח על-חושי חזק מספיק כדי לגרום\n"
             "לכאבי ראש, וכך מרתיע אחרים מלהתקרב."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
@@ -6597,7 +6597,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .height = 5,
         .weight = 20,
         .description = COMPOUND_STRING(
-            "אחרי שנולד מחדש כפוקימון רוח, דריפי\n"
+            "אחרי שנולד מחדש כפוקימון רפאים, דריפי\n"
             "משוטט באזורים שבהם חי כשהיה בחיים,\n"
             "באוקיינוסים הפרהיסטוריים."),
         .pokemonScale = 432,

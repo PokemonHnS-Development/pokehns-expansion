@@ -1,0 +1,13 @@
+# Round 20 names in the move relearner (run with scripts/r10_names/r10names.py tour): the list (names), and under
+# the cursor the battle-move window, whose type is gTypesInfo[].name as text (src/menu_specialized.c:794), and the
+# description. relpoke takes move ids; these are, in order: PSYCHIC, PSYCHO_CUT, PSYSHIELD_BASH, PSYCHO_SHIFT, PSYCHO_BOOST, PSYCHIC_TERRAIN, PSYCHIC_FANGS, PSYCHIC_NOISE,
+# SHADOW_BALL, JUMP_KICK, ROLLING_KICK, SKY_UPPERCUT, SKILL_SWAP, KINESIS, CONFUSION, EERIE_SPELL (include/constants/moves.h, the same on every 2.0.6 tree).
+start saves/ladder6_postgame.sav
+include ../../scripts/continue.txt
+ev .set ROM_SIZE, 0; createmon 0, 0, SPECIES_MEW, 100; special CalculatePlayerPartyCount; end
+evstart setvar VAR_0x8004, 0; special TeachMoveRelearnerMove; waitstate; release; end
+waitcb2x CB2_MoveRelearnerMain 900
+waitpmem 8 move_relearner:sMoveRelearnerStruct 0 4 900
+waitquiet
+relpoke 94,427,756,375,354,641,660,845,247,26,27,327,285,134,93,754
+relwalk n20_rel 16

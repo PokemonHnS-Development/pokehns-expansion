@@ -1,0 +1,30 @@
+# Round 20 Psychic and Ghost moves in the FIGHT menu with the Gen 4 battle UI (run with
+# scripts/r4_battle_options/r4opt.py tour): the type field is the same text window as in the H&S UI
+# (UseGen4BattleUI changes only the healthboxes, src/battle_interface.c), so this shows that the type
+# name reads the same there. Save: ladder1_newgame.sav.
+start saves/ladder1_newgame.sav
+include ../_battle_base.txt
+opt newBattleUI=1
+ev givemon SPECIES_SMEARGLE, 50, move1=MOVE_PSYCHIC, move2=MOVE_SHADOW_BALL, move3=MOVE_PSYCHO_CUT, move4=MOVE_PSYSHIELD_BASH; end
+pinrng
+evstart setwildbattle SPECIES_GEODUDE, 10; dowildbattle; end
+waitbattle
+bwalk g4f_intro input:HandleInputChooseAction
+snap g4f_action
+baction FIGHT
+waitbinput HandleInputChooseMove
+waitquiet
+snap g4f_fight_0
+bmove 1 nopress
+waitquiet
+snap g4f_fight_1
+bmove 2 nopress
+waitquiet
+snap g4f_fight_2
+bmove 3 nopress
+waitquiet
+snap g4f_fight_3
+tap B 4
+waitbinput HandleInputChooseAction
+baction RUN
+bwalk g4f_run free

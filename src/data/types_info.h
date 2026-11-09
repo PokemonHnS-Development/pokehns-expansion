@@ -214,8 +214,8 @@ const struct TypeInfo gTypesInfo[NUMBER_OF_MON_TYPES] =
     },
     [TYPE_GHOST] =
     {
-        .name = _("רוח"),
-        .generic = _("מהלך מסוג רוח"),
+        .name = _("רפאים"),
+        .generic = _("מהלך מסוג רפאים"),
         .palette = 14,
         .zMove = MOVE_NEVER_ENDING_NIGHTMARE,
         .maxMove = MOVE_MAX_PHANTASM,
@@ -357,8 +357,8 @@ const struct TypeInfo gTypesInfo[NUMBER_OF_MON_TYPES] =
     },
     [TYPE_PSYCHIC] =
     {
-        .name = _("פסיכי"),
-        .generic = _("מהלך מסוג פסיכי"),
+        .name = _("על-חושי"),
+        .generic = _("מהלך על-חושי"),
         .palette = 14,
         .zMove = MOVE_SHATTERED_PSYCHE,
         .maxMove = MOVE_MAX_MINDSTORM,

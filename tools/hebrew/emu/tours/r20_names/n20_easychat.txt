@@ -1,0 +1,29 @@
+# Round 20 Easy Chat words (run with scripts/r18_easy_chat/ec18.py tour): the STATUS group (the type and
+# ability words GHOST, PSYCHIC, TRACE, CLOUD NINE, EARLY BIRD, HUSTLE, in the regenerated Hebrew order),
+# the two MOVE groups (the renamed moves), and every alphabet list paged to its end (the regenerated ABC
+# lists). Screen: BATTLE_START through Common_ShowEasyChatScreen, as ec18_types does. Save:
+# ladder6_postgame.sav with the game cleared (the MOVE groups need FLAG_SYS_GAME_CLEAR).
+start saves/ladder6_postgame.sav
+include ../../scripts/continue.txt
+ev setflag FLAG_SYS_GAME_CLEAR; setvar VAR_HAS_ENTERED_BATTLE_FRONTIER, 1; end
+evstart setvar VAR_0x8004, EASY_CHAT_TYPE_BATTLE_START; call Common_ShowEasyChatScreen; end
+waitcb2x CB2_EasyChatScreen 900
+ecwait
+ec A
+ecstate
+snap n20_ec_groups
+ecgroup EC_GROUP_STATUS
+ec A
+eclist n20_ec_status 80
+ec B
+ecgroup EC_GROUP_MOVE_1
+ec A
+eclist n20_ec_move1 80
+ec B
+ecgroup EC_GROUP_MOVE_2
+ec A
+eclist n20_ec_move2 80
+ec B
+ec SELECT
+ecstate
+ecabclists n20_ec_abc 80

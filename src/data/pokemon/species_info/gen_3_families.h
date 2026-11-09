@@ -2781,7 +2781,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .height = 8,
         .weight = 202,
         .description = COMPOUND_STRING(
-            "לקירליה יש כוח פסיכי שמאפשר לו לפתוח קרע\n"
+            "לקירליה יש כוח על-חושי שמאפשר לו לפתוח קרע\n"
             "בממדים ולראות את העתיד. אומרים שהוא רוקד\n"
             "בהנאה בבקרים שמשיים."),
         .pokemonScale = 354,
@@ -2859,7 +2859,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .weight = 484,
         .description = COMPOUND_STRING(
             "נראה שהוא לא מרגיש את כוח המשיכה, כי הוא\n"
-            "מחזיק את עצמו באוויר בכוח פסיכי. הוא ייתן\n"
+            "מחזיק את עצמו באוויר בכוח על-חושי. הוא ייתן\n"
             "את חייו כדי להגן על המאמן שלו."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
@@ -2932,7 +2932,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .weight = 484,
         .description = COMPOUND_STRING(
             "כשמגה גרדוואר פותח את ליבו, הוא נעשה\n"
-            "מסוגל להשתמש בכוח פסיכי אדיר. אומרים\n"
+            "מסוגל להשתמש בכוח על-חושי אדיר. אומרים\n"
             "שהלוח האדום שבחזהו הוא ביטוי גשמי של ליבו."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
@@ -3083,7 +3083,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .height = 16,
         .weight = 564,
         .description = COMPOUND_STRING(
-            "למגה גלייד יש מראה של אביר. בכוחו הפסיכי\n"
+            "למגה גלייד יש מראה של אביר. בכוחו העל-חושי\n"
             "הוא יכול להפוך את שתי זרועותיו ללהבים\n"
             "בבת אחת ולהילחם בשתי חרבות."),
         .pokemonScale = 259,
@@ -7085,7 +7085,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .height = 7,
         .weight = 306,
         .description = COMPOUND_STRING(
-            "פוקימון ששולט בכוח פסיכי כרצונו. הוא לא\n"
+            "פוקימון ששולט בכוח על-חושי כרצונו. הוא לא\n"
             "מפסיק לקפץ אפילו כשהוא ישן. הוא אוהב\n"
             "לאכול פטריות שגדלות מתחת לאדמה."),
         .pokemonScale = 423,
@@ -7162,7 +7162,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .weight = 715,
         .description = COMPOUND_STRING(
             "הוא אוגר כוח בפנינים השחורות שעל מצחו.\n"
-            "כשהוא משתמש בכוח פסיכי, הוא מבצע צעד\n"
+            "כשהוא משתמש בכוח על-חושי, הוא מבצע צעד\n"
             "ריקוד משונה. סגנון הריקוד שלו הפך ללהיט ענק\n"
             "מעבר לים."),
         .pokemonScale = 358,
@@ -8617,7 +8617,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .description = COMPOUND_STRING(
             "קליידול ישן בזמן שהוא מרחף באוויר. זרועותיו\n"
             "נפרדות מגופו. הן נשארות באוויר בזכות\n"
-            "השליטה של הפוקימון בכוח פסיכי."),
+            "השליטה של הפוקימון בכוח על-חושי."),
         .pokemonScale = 256,
         .pokemonOffset = 3,
         .trainerScale = 280,

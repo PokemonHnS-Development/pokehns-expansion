@@ -5891,7 +5891,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .description = COMPOUND_STRING(
             "הם שומרי עיר עתיקה, ותמיד עפים באותו\n"
             "מסלול ועומדים על המשמר מפני פולשים. הם\n"
-            "תוקפים אויבים בכוח הפסיכי שלהם."),
+            "תוקפים אויבים בכוח העל-חושי שלהם."),
         .pokemonScale = 265,
         .pokemonOffset = 2,
         .trainerScale = 262,
@@ -7333,8 +7333,8 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 15,
         .weight = 440,
         .description = COMPOUND_STRING(
-            "במרחב שמתעוות מכוחו הפסיכי העז נראים שמי\n"
-            "כוכבים במרחק אלפי שנות אור. כשהוא מגלה\n"
+            "במרחב שמתעוות מכוחו העל-חושי העז נראים\n"
+            "שמי כוכבים במרחק אלפי שנות אור. כשהוא מגלה\n"
             "כמה זמן יחיה המאמן שלו, הוא בוכה בעצב."),
         .pokemonScale = 268,
         .pokemonOffset = 2,
@@ -7474,7 +7474,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .weight = 80,
         .description = COMPOUND_STRING(
             "כששני חלקי מוחו המפוצל חושבים את אותן\n"
-            "מחשבות, הפוקימון הזה מפגין כוח פסיכי\n"
+            "מחשבות, הפוקימון הזה מפגין כוח על-חושי\n"
             "במלוא עוצמתו."),
         .pokemonScale = 422,
         .pokemonOffset = 12,
@@ -7542,7 +7542,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 10,
         .weight = 201,
         .description = COMPOUND_STRING(
-            "הוא שולט בכוח פסיכי בזרועותיו, שעשויות\n"
+            "הוא שולט בכוח על-חושי בזרועותיו, שעשויות\n"
             "מנוזל מיוחד. כשריוניקלוס לוחצים ידיים, נוצרת\n"
             "רשת בין המוחות שלהם."),
         .pokemonScale = 305,
@@ -9879,7 +9879,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 5,
         .weight = 90,
         .description = COMPOUND_STRING(
-            "הוא סוחט בכוח פסיכי את מוח היריב וגורם\n"
+            "הוא סוחט בכוח על-חושי את מוח היריב וגורם\n"
             "לכאבי ראש בלתי נסבלים. לפי השמועות, מוצאו\n"
             "קשור להתרסקות עב”ם במדבר לפני 50 שנה."),
         .pokemonScale = 432,

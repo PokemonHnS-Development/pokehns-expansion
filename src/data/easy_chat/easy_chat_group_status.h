@@ -85,7 +85,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Status[] = {
     },
     [EC_INDEX(EC_WORD_PSYCHIC)] =
     {
-        .text = COMPOUND_STRING("פסיכי"),
+        .text = COMPOUND_STRING("על-חושי"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_COOL),
         .enabled = TRUE,
     },
@@ -187,7 +187,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Status[] = {
     },
     [EC_INDEX(EC_WORD_GHOST)] =
     {
-        .text = COMPOUND_STRING("רוח"),
+        .text = COMPOUND_STRING("רפאים"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_FLYING),
         .enabled = TRUE,
     },
@@ -379,7 +379,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Status[] = {
     },
     [EC_INDEX(EC_WORD_TRACE)] =
     {
-        .text = COMPOUND_STRING("עקבות"),
+        .text = COMPOUND_STRING("שעתוק"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_PLUS),
         .enabled = TRUE,
     },
@@ -409,7 +409,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Status[] = {
     },
     [EC_INDEX(EC_WORD_CLOUD_NINE)] =
     {
-        .text = COMPOUND_STRING("ענן תשע"),
+        .text = COMPOUND_STRING("ביטול מזג"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_PURE_POWER),
         .enabled = TRUE,
     },
@@ -433,13 +433,13 @@ const struct EasyChatWordInfo gEasyChatGroup_Status[] = {
     },
     [EC_INDEX(EC_WORD_EARLY_BIRD)] =
     {
-        .text = COMPOUND_STRING("ציפור מקדימה"),
+        .text = COMPOUND_STRING("משכימת קום"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_ROUGH_SKIN),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_HUSTLE)] =
     {
-        .text = COMPOUND_STRING("המולה"),
+        .text = COMPOUND_STRING("חריצות"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_RUN_AWAY),
         .enabled = TRUE,
     },

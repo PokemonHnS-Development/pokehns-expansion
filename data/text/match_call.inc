@@ -2396,7 +2396,7 @@ MatchCall_Text_May8::
 	.string "הר PYRE הוא אתר הנצחה\n"
 	.string "לפוקימונים שחייהם הסתיימו.\p"
 	.string "אולי בגלל זה הוא שורץ\n"
-	.string "פוקימונים מסוג רוח!$"
+	.string "פוקימונים מסוג רפאים!$"
 
 MatchCall_Text_May9::
 	.string "מיי: היי, {PLAYER}{KUN}!\p"
@@ -2518,7 +2518,7 @@ MatchCall_Text_Brendan8::
 	.string "הר PYRE הוא אתר הנצחה\n"
 	.string "לפוקימונים שחייהם הסתיימו.\p"
 	.string "כנראה בגלל זה הוא שורץ\n"
-	.string "פוקימונים מסוג רוח!$"
+	.string "פוקימונים מסוג רפאים!$"
 
 MatchCall_Text_Brendan9::
 	.string "ברנדן: היי, {PLAYER}.\p"

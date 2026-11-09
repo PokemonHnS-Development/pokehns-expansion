@@ -363,7 +363,7 @@ TrainerHill_Entrance_hns_Text_ExplainTrainerHill:
 	.string "הזמנים המהירים ביותר מוצגים\n"
 	.string "בלוח השיאים. כדאי להתחרות בחברים!\p"
 	.string "בקרבות מול מאמנים לאורך הדרך\n"
-	.string "לא מוענקות נקודות נסיון וגם לא כסף.$"
+	.string "לא מוענקות נקודות ניסיון וגם לא כסף.$"
 
 TrainerHill_Entrance_hns_Text_WhatSortOfTrainersAreAhead:
 	.string "מי יודע אילו שילובים של מאמנים\n"

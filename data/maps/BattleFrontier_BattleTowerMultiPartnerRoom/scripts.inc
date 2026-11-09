@@ -1007,7 +1007,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_BlackBeltReject::
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_TuberFIntro::
 	.string "היי!\n"
-	.string "אני {STR_VAR_1}, ואני שחיינית!$"
+	.string "אני {STR_VAR_1}, ואני ילדת גלגל ים!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_TuberFMon1::
 	.string "אספר לך מה יש לי.\n"
@@ -1155,7 +1155,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_CyclingTriathleteMReject::
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_TuberMIntro::
 	.string "אני?\n"
-	.string "אני השחיין {STR_VAR_1}!$"
+	.string "אני ילד גלגל הים {STR_VAR_1}!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_TuberMMon1::
 	.string "מה יש לי איתי?\n"
@@ -1514,7 +1514,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_RuinManiacReject::
 	.string "אני חושב שהפוקימונים שלי חזקים…$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_CoolTrainerMIntro::
-	.string "אני {STR_VAR_1}, מאמן על!$"
+	.string "אני {STR_VAR_1}, מאמן-על!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_CoolTrainerMMon1::
 	.string "הפוקימונים שיש לי כרגע הם\n"
@@ -1535,7 +1535,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_CoolTrainerMReject::
 	.string "הצוות הטוב ביותר אי פעם.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_CoolTrainerFIntro::
-	.string "אני {STR_VAR_1}, מאמנת על!$"
+	.string "אני {STR_VAR_1}, מאמנת-על!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_CoolTrainerFMon1::
 	.string "בצוות שגידלתי יש\n"
@@ -1578,7 +1578,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_PokemaniacReject::
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_KindlerIntro::
 	.string "יו!\n"
-	.string "אני המציתן {STR_VAR_1}!$"
+	.string "אני המבעיר {STR_VAR_1}!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_KindlerMon1::
 	.string "רוצה לדעת מה בישלתי באימונים?\n"

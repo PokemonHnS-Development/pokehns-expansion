@@ -197,7 +197,7 @@ SaffronCity_Text_FightingDojo::
 SaffronCity_Text_GymSign::
 	.string "מכון הפוקימון של העיר סאפרון\n"
 	.string "מנהיגה: סברינה\p"
-	.string "המומחית לפוקימונים מסוג פסיכי!$"
+	.string "המומחית לפוקימונים מסוג על-חושי!$"
 
 SaffronCity_Text_FullHealCuresStatus::
 	.string "TRAINER TIPS\p"

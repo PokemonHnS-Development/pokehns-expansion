@@ -97,7 +97,7 @@ SaffronCity_Gym_EventScript_GymStatuePostVictory::
 
 SaffronCity_Gym_Text_SabrinaIntro::
 	.string "ראיתי בחזון את הגעתך.\p"
-	.string "יש לי כוחות פסיכיים מאז\n"
+	.string "יש לי כוחות על-חושיים מאז\n"
 	.string "שהייתי ילדה.\p"
 	.string "זה התחיל כשכפית שזרקתי\n"
 	.string "בלי לחשוב, התכופפה.\p"
@@ -113,9 +113,9 @@ SaffronCity_Gym_Text_SabrinaDefeat::
 	.string "את תג ביצה.$"
 
 SaffronCity_Gym_Text_SabrinaPostBattle::
-	.string "כוח פסיכי הוא לא משהו שיש\n"
+	.string "כוח על-חושי הוא לא משהו שיש\n"
 	.string "רק לאנשים מעטים.\p"
-	.string "לכל אחד יש כוח פסיכי.\n"
+	.string "לכל אחד יש כוח על-חושי.\n"
 	.string "אנשים פשוט לא מודעים לזה.$"
 
 SaffronCity_Gym_Text_ExplainMarshBadgeTakeThis::
@@ -232,14 +232,14 @@ SaffronCity_Gym_Text_GymGuyAdvice::
 	.string "יו!\n"
 	.string "אלוף לעתיד!\p"
 	.string "הפוקימונים של סברינה משתמשים\n"
-	.string "בכוח פסיכי במקום בכוח פיזי.\p"
+	.string "בכוח על-חושי במקום בכוח פיזי.\p"
 	.string "פוקימונים מסוג קרב חלשים במיוחד\n"
-	.string "מול פוקימונים מסוג פסיכי.\p"
+	.string "מול פוקימונים מסוג על-חושי.\p"
 	.string "הם יושמדו עוד לפני שיספיקו\n"
 	.string "לכוון אגרוף!$"
 
 SaffronCity_Gym_Text_GymGuyPostVictory::
-	.string "כוח פסיכי, אה?\p"
+	.string "כוח על-חושי, אה?\p"
 	.string "אם היה לי כזה, הייתי עושה הון\n"
 	.string "במכונות המזל!$"
 

@@ -67,7 +67,7 @@ SaffronCity_Gym_Text_SabrinaIntro:
 	.string "אני לא נהנית מקרבות, אבל חובתי כמנהיגה\n"
 	.string "להעניק תגים לכל מי שהוכיח שהוא ראוי.\p"
 	.string "מכיוון שזה רצונך, אראה לך\n"
-	.string "את הכוחות הפסיכיים שלי!$"
+	.string "את הכוחות העל-חושיים שלי!$"
 
 SaffronCity_Gym_Text_SabrinaWinLoss:
 	.string "סברינה: הכוח שלך…\p"
@@ -91,16 +91,16 @@ SaffronCity_Gym_Text_Sabrina_GiveTM:
 	.string "הנה, קח גם את זה.$"
 
 SaffronCity_Gym_Text_Sabrina_ExplainTM:
-	.string "הוא מכיל את חילוף סגולה.\p"
+	.string "הוא מכיל את חילוף יכולת.\p"
 	.string "הוא יכול לקחת מהיריבים\n"
 	.string "את היכולות שלהם ולתת להם את שלך.\p"
 	.string "השתמש בו בתבונה…$"
 
 SaffronCity_Gym_Text_SabrinaPostBattle:
 	.string "סברינה: אהבתך לפוקימונים שלך\n"
-	.string "גברה על כוחי הפסיכי…\p"
+	.string "גברה על כוחי העל-חושי…\p"
 	.string "כוח האהבה, לדעתי, הוא\n"
-	.string "גם סוג של כוח פסיכי…$"
+	.string "גם סוג של כוח על-חושי…$"
 
 SaffronCity_Gym_Text_SabrinaRematch:
 	.string "SABRINA: Ah, the KANTO CHAMPION.\p"
@@ -125,7 +125,7 @@ SaffronCity_Gym_Text_MediumRebeccaAfter:
 	.string "מה מקור הכוח שלך?$"
 
 SaffronCity_Gym_Text_PsychicFranklinSeen:
-	.string "כוח פסיכי הוא הכוח\n"
+	.string "כוח על-חושי הוא הכוח\n"
 	.string "של הנשמה שלך.$"
 
 SaffronCity_Gym_Text_PsychicFranklinBeaten:
@@ -160,8 +160,9 @@ SaffronCity_Gym_Text_PsychicJaredAfter:
 
 SaffronCity_Gym_Text_GymGuideIntro:
 	.string "יו, אלוף לעתיד!\p"
-	.string "מאמן מיומן כמוך לא צריך שיסבירו לו איך\n"
-	.string "להתמודד עם פוקימונים מסוג פסיכי, נכון?\p"
+	.string "מאמן מיומן כמוך לא צריך שיסבירו\n"
+	.string "לו איך להתמודד עם פוקימונים\l"
+	.string "מסוג על-חושי, נכון?\p"
 	.string "אני מצפה ממך לדברים גדולים!\p"
 	.string "בהצלחה!$"
 

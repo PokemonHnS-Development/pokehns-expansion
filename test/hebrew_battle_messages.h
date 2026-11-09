@@ -20,7 +20,7 @@
     { _("It's super effective!"), _("זה יעיל במיוחד!") },
     { _("Light Screen made your team stronger against special moves!"), _("מסך אור חיזק את הקבוצה שלך מול מהלכים מיוחדים!") },
     { _("Magic Room wore off, and held items' effects returned to normal!"), _("השפעת חדר קסמים פגה, והשפעות הפריטים המוחזקים חזרו לקדמותן!") },
-    { _("Magnitude 10!"), _("עוצמת רעידה 10!") },
+    { _("Magnitude 10!"), _("עוצמת רעש 10!") },
     { _("Mist swirled around the battlefield!"), _("ערפל הסתחרר סביב שדה הקרב!") },
     { _("Mist swirls around the battlefield!"), _("ערפל מסתחרר סביב שדה הקרב!") },
     { _("Mysterious strong winds are protecting Flying-type Pokémon!"), _("רוחות עזות ומסתוריות מגינות על פוקימונים מסוג תעופה!") },

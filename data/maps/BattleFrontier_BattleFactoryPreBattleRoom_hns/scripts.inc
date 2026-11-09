@@ -540,7 +540,7 @@ BattleFrontier_BattleFactoryPreBattleRoom_Text_TrainerSkilledInFlyingType_hns:
 
 BattleFrontier_BattleFactoryPreBattleRoom_Text_TrainerSkilledInPsychicType_hns:
 	.string "נראה שהמאמן מתמחה\n"
-	.string "בפוקימונים מסוג פסיכי.$"
+	.string "בפוקימונים מסוג על-חושי.$"
 
 BattleFrontier_BattleFactoryPreBattleRoom_Text_TrainerSkilledInBugType_hns:
 	.string "נראה שהמאמן מתמחה\n"
@@ -552,7 +552,7 @@ BattleFrontier_BattleFactoryPreBattleRoom_Text_TrainerSkilledInRockType_hns:
 
 BattleFrontier_BattleFactoryPreBattleRoom_Text_TrainerSkilledInGhostType_hns:
 	.string "נראה שהמאמן מתמחה\n"
-	.string "בפוקימונים מסוג רוח.$"
+	.string "בפוקימונים מסוג רפאים.$"
 
 BattleFrontier_BattleFactoryPreBattleRoom_Text_TrainerSkilledInDragonType_hns:
 	.string "נראה שהמאמן מתמחה\n"

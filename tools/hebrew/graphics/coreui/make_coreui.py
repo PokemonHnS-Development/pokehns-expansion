@@ -338,21 +338,40 @@ def _(p):
 # ------------------------------------------------------------------ menu_info: type plates and labels
 HEB_CODES = {ch: 0x3A + i for i, ch in enumerate('אבגדהוזחטיכלמנסעפצקרשת')}
 HEB_CODES.update({'ך': 0x50, 'ם': 0x5E, 'ן': 0x5F, 'ף': 0x60, 'ץ': 0x61})
+HEB_CODES['-'] = 0xAE
 _SMALL = {}
+SMALL_FONTS = {     # FONT_SMALL, and FONT_SMALL_NARROWER for a word too wide for its plate
+    False: ('latin_small', 'gFontSmallLatinGlyphWidths'),
+    True: ('latin_small_narrower', 'gFontSmallNarrowerLatinGlyphWidths'),
+}
 
 
-def small_font():
-    if not _SMALL:
+TYPES_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'types')
+
+
+def small_font(narrower=False):
+    """(font, widths) for FONT_SMALL, or for FONT_SMALL_NARROWER with the short hyphen of
+    types/make_types.py, so a narrower menu plate draws the same word as its types plate."""
+    if narrower not in _SMALL:
         import inspect_fonts as F
-        _SMALL['font'] = F.FontPng.load(os.path.join(TREE, 'graphics/fonts/latin_small.png'))
-        _SMALL['widths'] = F.parse_width_tables(os.path.join(TREE, 'src/fonts.c'))['gFontSmallLatinGlyphWidths']
-    return _SMALL['font'], _SMALL['widths']
+        png, table = SMALL_FONTS[narrower]
+        font = F.FontPng.load(os.path.join(TREE, 'graphics/fonts/%s.png' % png))
+        widths = F.parse_width_tables(os.path.join(TREE, 'src/fonts.c'))[table]
+        if narrower:
+            if TYPES_DIR not in sys.path:
+                sys.path.insert(0, TYPES_DIR)
+            from make_types import SHORT_HYPHEN, ShortHyphenFont
+            font, widths = ShortHyphenFont(font), list(widths)
+            widths[HEB_CODES['-']] = SHORT_HYPHEN
+        _SMALL[narrower] = (font, widths)
+    return _SMALL[narrower]
 
 
-def small_word(w):
-    """16-row grid of font indices (1 ink, 2 shadow) for `w` in FONT_SMALL, first letter at the right.
-    The same composition graphics/types/*.png uses, so the plates match the summary type icons."""
-    font, widths = small_font()
+def small_word(w, narrower=False):
+    """16-row grid of font indices (1 ink, 2 shadow) for `w` in FONT_SMALL (or FONT_SMALL_NARROWER),
+    first letter at the right. The same composition graphics/types/*.png uses, so the plates match
+    the summary type icons."""
+    font, widths = small_font(narrower)
     glyphs = [(font.glyph(HEB_CODES[ch]), widths[HEB_CODES[ch]]) for ch in reversed(w)]
     grid = [[0] * sum(gw for _, gw in glyphs) for _ in range(16)]
     x = 0
@@ -368,9 +387,10 @@ def small_word(w):
 
 MENU_PLATES = {     # sMenuInfoIcons offsets (src/menu.c), glossary type names
     0x20: 'רגיל', 0x24: 'אש', 0x28: 'מים', 0x2C: 'עשב', 0x40: 'חשמל', 0x44: 'סלע', 0x48: 'אדמה',
-    0x4C: 'קרח', 0x60: 'תעופה', 0x64: 'קרב', 0x68: 'רוח', 0x6C: 'חרק', 0x80: 'רעל', 0x84: 'פסיכי',
+    0x4C: 'קרח', 0x60: 'תעופה', 0x64: 'קרב', 0x68: 'רפאים', 0x6C: 'חרק', 0x80: 'רעל', 0x84: 'על-חושי',
     0x88: 'פלדה', 0x8C: 'אפל', 0xA0: 'דרקון', 0x04: 'פיה',
 }
+NARROWER_PLATES = {0x84}    # על-חושי: 36 px in FONT_SMALL runs off the 32 px plate; 30 px in FONT_SMALL_NARROWER
 MENU_LABELS = {0xA8: 'סוג', 0xC0: 'עוצמה', 0xC8: 'דיוק', 0xE0: 'נ”כ', 0xE8: 'השפעה'}
 
 
@@ -387,7 +407,7 @@ def menu_plate(p, off, w):
         for x in range(x0, x0 + 32):
             if p.get(x, y) in (14, 15):
                 p.put(x, y, bg)
-    grid = small_word(w)
+    grid = small_word(w, off in NARROWER_PLATES)
     gw = len(grid[0])
     left = x0 + (32 - gw + 1) // 2
     for cy in range(3, 14):                  # font cell rows 3..13 -> plate rows 1..11

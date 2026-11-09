@@ -49,7 +49,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_DAMP] =
     {
         .name = _("לחות"),
-        .description = COMPOUND_STRING("מונע השמדה עצמית."),
+        .description = COMPOUND_STRING("מונע פיצוץ עצמי."),
         .aiRating = 2,
         .breakable = TRUE,
     },
@@ -103,7 +103,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
 
     [ABILITY_CLOUD_NINE] =
     {
-        .name = _("ענן תשע"),
+        .name = _("ביטול מזג"),
         .description = COMPOUND_STRING("מבטל השפעות מזג אוויר."),
         .aiRating = 5,
     },
@@ -277,7 +277,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
 
     [ABILITY_TRACE] =
     {
-        .name = _("עקבות"),
+        .name = _("שעתוק"),
         .description = COMPOUND_STRING("מעתיק יכולת מיוחדת."),
         .aiRating = 6,
         .cantBeCopied = TRUE,
@@ -368,7 +368,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
 
     [ABILITY_EARLY_BIRD] =
     {
-        .name = _("ציפור מקדימה"),
+        .name = _("משכימת קום"),
         .description = COMPOUND_STRING("מתעורר מהר משינה."),
         .aiRating = 4,
     },
@@ -420,7 +420,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
 
     [ABILITY_HUSTLE] =
     {
-        .name = _("המולה"),
+        .name = _("חריצות"),
         .description = COMPOUND_STRING("מחליף דיוק בעוצמה."),
         .aiRating = 7,
     },
@@ -844,7 +844,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_SCRAPPY] =
     {
         .name = _("לוחמני"),
-        .description = COMPOUND_STRING("פוגע בפוקימונים מסוג רוח."),
+        .description = COMPOUND_STRING("פוגע בפוקימונים מסוג רפאים."),
         .aiRating = 6,
     },
 
@@ -1743,8 +1743,8 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
 
     [ABILITY_PSYCHIC_SURGE] =
     {
-        .name = _("נחשול פסיכי"),
-        .description = COMPOUND_STRING("השטח הופך לפסיכי."),
+        .name = _("נחשול על-חוש"),
+        .description = COMPOUND_STRING("השטח הופך לעל-חושי."),
         .aiRating = 8,
     },
 

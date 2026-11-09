@@ -18,7 +18,7 @@ CherrygroveCity_House3_EventScript_Girl::
 	end
 
 CherrygroveCity_EvolutionHouse_Text_Youngster:
-	.string "פוקימונים צוברים נסיון\n"
+	.string "פוקימונים צוברים ניסיון\n"
 	.string "בקרב ומשנים את צורתם.$"
 
 CherrygroveCity_EvolutionHouse_Text_Lass:
