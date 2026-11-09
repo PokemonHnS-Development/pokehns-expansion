@@ -23,9 +23,10 @@ Label selection (default: every live script text label in HNS_UNITS/*/*.json (--
     --translated (the unit file has a Hebrew text) | --hebrew-only (the string in THIS ROM has
     Hebrew letters; run only) | --sample N [--seed S]
     --offset N | --limit N
-With no --label or --labels-file and no unit files, run and list exit 2. selftest takes no
-selection option but --label; with no --label it tries every unit label, and exits 2 when there
-are no unit files.
+With no --label or --labels-file and no unit files, run and list exit 2; so does --translated
+when no unit has a Hebrew text (units fresh from make_chunks.py have none: use --hebrew-only).
+selftest takes no selection option but --label; with no --label it tries every unit label, and
+exits 2 when there are no unit files.
 
 How one label runs:
   1. Once per run: boot with the save, CONTINUE, walk out if the save stands in a Pokemon
@@ -97,7 +98,8 @@ def load_units(units_dir=UNITS_DIR):
     [{label, files, batch, translated}]; 'X#2' variants fold into X."""
     out, idx = [], {}
     for path in sorted(glob.glob(os.path.join(units_dir, "*", "*.json"))):
-        d = json.load(open(path, encoding="utf-8"))
+        with open(path, encoding="utf-8") as fh:
+            d = json.load(fh)
         items = d if isinstance(d, list) else d.get("units", [])
         batch = os.path.splitext(os.path.basename(path))[0]
         for u in items:
@@ -119,6 +121,15 @@ def no_units(a):
     (A filter that matches nothing in existing units is not one; that selection is just empty.)"""
     sys.stderr.write("sweep: no script units in %s (make_chunks.py writes them there; "
                      "--units or HNS_UNITS points elsewhere)\n" % a.units)
+    raise SystemExit(2)
+
+
+def no_hebrew_units(a):
+    """--translated when no unit holds a Hebrew text (make_chunks.py writes its units from the
+    English baseline, without one): the selection would be empty for a reason the user cannot
+    see, so stop with exit 2 and name the option that reads the Hebrew of the ROM instead."""
+    sys.stderr.write("sweep: no unit has Hebrew; use --hebrew-only (--translated keeps the units in %s "
+                     "that hold a Hebrew text)\n" % a.units)
     raise SystemExit(2)
 
 
@@ -144,6 +155,8 @@ def select_labels(a):
     if a.batch:
         sel = [u for u in sel if re.search(a.batch, u["batch"])]
     if a.translated:
+        if not any(u["translated"] for u in units):
+            no_hebrew_units(a)
         sel = [u for u in sel if u["translated"]]
     if a.sample and a.sample < len(sel):
         keep = set(id(u) for u in random.Random(a.seed).sample(sel, a.sample))

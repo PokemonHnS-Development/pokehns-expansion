@@ -123,13 +123,15 @@ To make one rung by hand, run
 from `ladder4_league.sav` in `HNS_SAVES` unless `--save` is given):
 
 ```bash
-python3 $E/sweep.py run pokehns-clip.gba OUT [--batch B20] [--translated] [--limit N] [--resume]
+python3 $E/sweep.py run pokehns-clip.gba OUT [--batch B20] [--hebrew-only] [--limit N] [--resume]
 python3 $E/sweep.py report OUT          # rebuild OUT/sweep.json and OUT/report.txt
 python3 $E/sweep.py list --batch B20    # which labels a selection holds
 python3 $E/sweep.py selftest pokehns-clip.gba OUT   # proves the clip detector on a patched copy
 ```
 
 A clip build reports CLIP. Any other build is still checked for CRASH, HANG and ABNORMAL.
+`--hebrew-only` keeps the labels whose string in the ROM has Hebrew. `--translated` keeps the
+units that hold a Hebrew text; units from `make_chunks.py` hold none, so it exits 2 on them.
 
 **The map walk** (crash test over every H&S map, from the post-game save). There are two forms:
 
