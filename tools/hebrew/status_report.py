@@ -23,8 +23,6 @@ KEPT_LATIN = {
     'src/data/credits_hns.h': 'the names of people, teams and organisations, and the game titles',
     'src/data/help_window.h': 'the game title Heart & Soul and the abbreviation IV',
     'src/save_failed_screen.c': 'the emulator save type (Flash 1Mb/128K), its name for the memory, and ROM',
-    'data/text/match_call.inc': "PokéNav match calls H&S never enables: their flags are defined as 0",
-    'data/text/tv.inc': 'TV shows behind FLAG_SYS_TV_START, which H&S defines as 0',
     'src/data/battle_frontier/apprentice.h': "the other languages' name columns; the English column is Hebrew",
     'src/scrcmd.c': "the Odd Egg name list, which the game compares with the player's typed name",
     'src/text_input_strings.c': 'the Latin keyboard layouts, and the English rows of the Easy Chat keyboard, which the Hebrew build does not print',

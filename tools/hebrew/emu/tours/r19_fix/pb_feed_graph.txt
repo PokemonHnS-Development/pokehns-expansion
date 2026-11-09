@@ -1,0 +1,60 @@
+# The condition graph of the Pokeblock feeding screen (src/use_pokeblock.c; the panel's tiles are
+# graphics/pokeblock/use_screen/graph.png, the same panel as graphics/pokenav/condition/graph.png): the five
+# condition labels around the pentagon outline. Party slot 0 becomes a level-50 ADAMANT Bronzong with every
+# condition 0. The case holds a block of 255 in every flavour and a flavourless one (pokeblocks: color,
+# spicy, dry, sweet, bitter, sour, feel). The feeding screen is shot with the conditions at 0, the first
+# block is fed (each condition rises to 255, MAX_CONDITION, src/use_pokeblock.c:1013-1026), and the
+# feeding screen is shot again with the graph filled to the outline; B then leaves it. The case list
+# (pbg_list) shows the first block at level 255, the highest flavour of this fixture.
+# Save: ladder6_postgame.sav (HNS_SAVES). Run with scripts/r16_contests/con16.py tour (pokeblocks).
+start saves/ladder6_postgame.sav
+include ../../scripts/continue.txt
+ev createmon 0, 0, SPECIES_BRONZONG, 50, nature=NATURE_ADAMANT; additem ITEM_POKEBLOCK_CASE, 1; end
+pokeblocks 14:255,255,255,255,255,1 5:0,0,0,0,0,1
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+bagpocket 5
+waitquiet
+bagseek ITEM_POKEBLOCK_CASE
+waitquiet
+tap A 4
+waitquiet
+tap A 4
+waittaskx pokeblock:Task_HandlePokeblockMenuInput 900
+waitquiet
+snap pbg_list
+# USE on the first block: the feeding screen, conditions 0
+tap A 4
+waitquiet
+tap A 4
+waitcb2x CB2_UsePokeblockMenu 900
+waitquiet
+40 -
+snap pbg_feed_zero
+tap A 4
+40 -
+waitquiet
+snap pbg_ask
+tap A 4
+textwatch pbg_eat CB2_ShowUsePokeblockMenuForResults 3000 A
+burst pbg_results 30 12
+tap A 4
+scenewatch pbg_rose CB2_PokeblockMenu 1500 112 160 A 90
+waitcb2x CB2_PokeblockMenu 900
+waittaskx pokeblock:Task_HandlePokeblockMenuInput 900
+waitquiet
+# USE on the second block: the feeding screen with every condition at 255
+tap A 4
+waitquiet
+tap A 4
+waitcb2x CB2_UsePokeblockMenu 900
+waitquiet
+40 -
+snap pbg_feed_max
+tap B 4
+waitcb2x CB2_PokeblockMenu 900
+waittaskx pokeblock:Task_HandlePokeblockMenuInput 900
+waitquiet
+snap pbg_back

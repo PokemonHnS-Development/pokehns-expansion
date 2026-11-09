@@ -54,7 +54,9 @@ The scripts have only been run on macOS. The cross-core step loads `.dylib` core
 4. **The sweep's labels.** Run `python3 tools/hebrew/make_chunks.py all`, which writes
    `build/hebrew/units`. This command gives 6,611 labels: the 7,209 that release 0.2 was swept
    with, less the 451 match-call, TV and PokéNews lines behind flags defined as 0 and the 147
-   labels that are not assembled into the build (`tools/hebrew/flag_gates.py`).
+   labels that are not assembled into the build (`tools/hebrew/flag_gates.py`). Run it again
+   before each candidate, because the sweep reads whatever units are there: rc21's sweep read
+   units made before `flag_gates.py` and selected 7,209 labels, 147 of them skipped.
 5. **Cross-core.** `run_release_tests.sh` builds the frontend from `tools/hebrew/emu/crosscore.c`
    with `cc -O2` into `RCDIR/tests/bin` on every run, so nothing is installed for it. Put `vbam`,
    `vba_next`, `gpsp`, `mednafen_gba` and `skyemu` `_libretro.dylib` in `build/hebrew/cores`. The
@@ -103,8 +105,9 @@ Then:
 The 0.2 `make_check.log` ends in `make: *** [check] Segmentation fault: 11`, and
 `check_tests.py` still read 5,074 results from it. The cause: the hydra runner's summary lists
 hold 1,600 rows but were written at the running failure count, so with 15 runners the later ones
-wrote past them. The guard is on branch `he/fix-upstream-hydra` (from `he/upstream-fixes`); with it,
-`make check BUILD=hns -j8` printed the whole summary and no segfault. `make` still exits 2,
+wrote past them. The guard (`8d52b4cccf`, branch `he/fix-upstream-hydra`, from `he/upstream-fixes`)
+is merged into `he/main` since `08027d9879`; with it, `make check BUILD=hns -j8` printed the whole
+summary and no segfault, and so did rc21's `make_check.log`. `make` still exits 2,
 because upstream fails its own tests. What counts is the comparison with
 `../data/known_test_failures.txt`, not the exit status of `make`. Plain `make check` (without
 `BUILD=hns`) builds the Emerald tests and stops at a compile error in `src/braille_puzzles.c`. On a runner with little
