@@ -42,13 +42,14 @@ fresh clone.
 
 | Item | Value | Check |
 | --- | --- | --- |
-| `he/main` | `fe509e0043` (on GitHub too), before the merge of round 19's fixes and this documentation pass (`he/wip-r19`) | `git rev-parse --short he/main` |
+| `he/main` | `c1cfd8a30b` (on GitHub too): the merges of round 19 (`he/fix-r19`, `b32c6f117c`) and round 20 (`he/fix-r20`, `c1cfd8a30b`) | `git rev-parse --short he/main` |
+| `he/renderer` | `8cfd524776` (on GitHub too): `384104fb15` plus the four graphics and Easy Chat commits of rounds 19 and 20 (section 1.2) | `git rev-parse --short he/renderer` |
 | Release | One release, 1.0, replaced in place on each update (ROM, `SHA1SUMS`, `TESTING.md`); the builds repo's commit history keeps the older builds. Current 1.0: built from `he/main` `08027d9879` | `<builds>/README.md` |
 | 1.0 ROM | `pokehns-he-2.0.6-1.0.gba`: 33554432 bytes, SHA-1 `d1fd03270572d00e06762fe6c27e1408ed2f323e`, CRC32 `A3648409` | `<builds>/SHA1SUMS` |
 | Releasing | Build a candidate with `tools/hebrew/release/`, then replace the three files in the builds repo and say in the commit message which `he/main` commit it was built from; keep `tools/hebrew/release/notes.json` at `"release": "1.0"`. A candidate is published with hand play declared as not tested (`DECISIONS.md` Q138) | section 5 |
-| CI | the last three runs on `he/main` are green: 41918360015 at `85705e4bc9`, 41929345455 at `08027d9879` and 41933578987 at `fe509e0043` | `gh run list -R ronyeh2/pokehns-expansion-heb --workflow hebrew.yml --branch he/main` |
-| Static checks | drift 0 FAIL (708 files); audit 0 errors and 48 warnings; namecheck 0 problems and 0 warnings (60 allowlisted); plurals 0 problems; the Pokédex A–Z, Easy Chat and live-label generators up to date; 137 tool tests OK on Python 3.9.6, 3.11.9 and 3.14.7 (`he/wip-r19`) | section 4.2 |
-| Translation status | every live file is translated: 650 files, 525 seen on screen, 125 translated, none blocked | `translation/hebrew/STATUS.md:5` |
+| CI | run 42721195219 at `c1cfd8a30b`: the `audit` job is green; `build` and `check` were still running when this was written. The three runs before it on `he/main` are green: 41918360015 at `85705e4bc9`, 41929345455 at `08027d9879` and 41933578987 at `fe509e0043` | `gh run list -R ronyeh2/pokehns-expansion-heb --workflow hebrew.yml --branch he/main` |
+| Static checks | drift 0 FAIL (708 files); audit 0 errors and 54 warnings; namecheck 0 problems and 0 warnings (34 allowlisted); plurals 0 problems; the Pokédex A–Z, Easy Chat and live-label generators up to date; 137 tool tests OK on Python 3.9.6 and 3.11.9 (`c1cfd8a30b`, baseline `he/renderer` `8cfd524776`) | section 4.2 |
+| Translation status | every live file is translated: 650 files, 525 seen on screen, 125 translated, none blocked (rc21's sweep) | `translation/hebrew/STATUS.md:5` |
 
 **What remains** (details in section 8):
 
@@ -56,14 +57,12 @@ fresh clone.
    person), real hardware (a 32 MiB flash cart with FLASH 128 KB and an RTC), and a read of the
    shipped wording by a native speaker. All three are in `notes.json` `not_tested`, so every
    `TESTING.md` says so; section 8.5 lists the lines reviewers flagged for a native read.
-2. **Integrate round 19:**
-   - merge `he/wip-r19` into `he/main` with `--no-ff`;
-   - cherry-pick the Pokéblock graph commit `946ae2f132` onto `he/renderer`, and push
-     `he/renderer` before `he/main` (section 8.1);
-   - fast-forward `he/upstream-fixes` to `8d52b4cccf`, the hydra summary guard. `he/main` already
-     has it, merged in `08027d9879` (section 4.3).
-3. **Replace 1.0 with a new candidate.** The graph fix changes the ROM. A build of `he/wip-r19`
-   `59d5bc76ce` with devkitARM r68 gives `pokehns.gba` SHA-1
+2. **Build and test the candidate from `c1cfd8a30b` and replace 1.0 (in progress).** Rounds 19
+   and 20 change the ROM: round 19's Pokéblock graph and round 20's names, lines and type plates.
+   The integration itself is done: both rounds are merged, their graphics and Easy Chat commits
+   are on `he/renderer`, `he/upstream-fixes` is at `8d52b4cccf`, and all of it is pushed
+   (section 1.2). For round 19 alone, a build of `he/wip-r19`
+   `59d5bc76ce` with devkitARM r68 gave `pokehns.gba` SHA-1
    `243df47e01332faed3262167d69464f554da194f` (CRC32 `94674527`) and `pokehns-clip.gba`
    `d08b8262a656634980d351d09db243ccb247d74e` (CRC32 `61FBC99A`). Only graphics data changed:
    the compressed graph is 20 bytes larger, so the data from `gUsePokeblockGraph_Pal` up to
@@ -72,8 +71,10 @@ fresh clone.
    - Run `make_chunks.py all` before the candidate's sweep (section 5).
    - Add rc21's row and the new candidate's row to `<builds>/records/README.md`. rc21's records
      are in `records/rc21/`, but the index stops at rc20.
-4. The open rows of section 8.1: two small tool rows, and the Pokéblock case list's
-   three-digit level, which play most likely never makes (by code reading and a frame model).
+   - Then regenerate `STATUS.md` from the candidate's sweep (section 5, step 9).
+3. The open rows of section 8.1: three small rows (two tools, and three graphics commits missing
+   from `he/renderer`), and the Pokéblock case list's three-digit level, which play most likely
+   never makes (by code reading and a frame model).
 
 ---
 
@@ -108,13 +109,33 @@ as a cross-check, never as source text (`STYLE.md` §1).
 | `master` | identical to upstream `167aa6d537` | never commit to it |
 | `he/main` | the translation; the release branch | feature branches merge into it with `--no-ff` |
 | `he/renderer` | the Hebrew engine with the **English** strings. It is the drift baseline (`HNS_BASELINE`) and the chunk source | every engine or graphics commit is cherry-picked onto it; text commits never are |
-| `he/upstream-fixes` | upstream bug fixes, kept apart from text and engine work | `he/fix-upstream-hydra` (`8d52b4cccf`, branched from it) is merged into `he/main` (`08027d9879`); fast-forward `he/upstream-fixes` to it |
+| `he/upstream-fixes` | upstream bug fixes, kept apart from text and engine work | branch each fix from it, merge the fix into `he/main`, then fast-forward `he/upstream-fixes` to it. It is at `8d52b4cccf`, the hydra guard of `he/fix-upstream-hydra`, merged into `he/main` in `08027d9879` |
 | `he/fonts`, `he/graphics`, `he/naming-keyboard`, `he/preview` | feature branches, already merged | kept for history |
-| `he/fix-*` | one fix topic each (for example `he/fix-k5-cosmetics`, `he/fix-vr-dex`), already merged | merge title `Merge he/<branch>: <what it brings>` |
+| `he/fix-*` | one fix topic each (for example `he/fix-k5-cosmetics`, `he/fix-vr-dex`, and the rounds' `he/fix-r19` and `he/fix-r20`), already merged | merge title `Merge he/<branch>: <what it brings>` |
 
-On GitHub (2026-11-10): `master` `167aa6d537`, `he/main` `fe509e0043`, `he/renderer` `384104fb15`,
-`he/upstream-fixes` `f96cb7a4f9`, `he/fix-upstream-hydra` `8d52b4cccf`, and 40 other `he/*`
-branches.
+On GitHub (2026-11-10): `master` `167aa6d537`, `he/main` `c1cfd8a30b`, `he/renderer` `8cfd524776`,
+`he/upstream-fixes` and `he/fix-upstream-hydra` `8d52b4cccf`, `he/fix-r19` `f1d0f9a843`,
+`he/fix-r20` `ffdc529fc7`, and 40 other `he/*` branches (46 `he/*` branches in all).
+
+`he/renderer` is `384104fb15` plus one pick per graphics or Easy Chat commit of rounds 19 and 20,
+in this order: `2f46bee8be` (the Pokéblock graph, from `946ae2f132`), `1057b2f08a` (the Easy Chat
+headers, from `81f9b905db`), `784e76146d` (the GHOST and PSYCHIC plates and `menu_info.png`, from
+`04d59a585c`) and `8cfd524776` (the `menu_info.png` Psychic plate with the short hyphen, from
+`3f2c255dce`). Each pick has the same patch as its source commit (`git patch-id --stable`).
+
+**Checking a pick with an English build.** Build `he/renderer` before and after the picks with
+`TEXT_RTL` set to FALSE (`include/config/text.h:20`, in a scratch worktree) and `make hns`, and
+compare the two English ROMs. When a picked graphic is compressed and its size changes, every
+later ROM object moves, so a raw `cmp` differs almost everywhere. Compare by symbol instead: pair
+the ROM symbols of the two ELFs by name (`arm-none-eabi-nm -S --defined-only`), report symbols
+added, removed or resized, and compare the bytes of the rest, mapping each aligned 32-bit word
+that points into ROM through the symbol-to-symbol relocation before calling it a difference. For
+the picks `384104fb15..8cfd524776` this gave: no symbol added or removed; only
+`gUsePokeblockGraph_Gfx` (1748 → 1768 B) and `gMoveTypes_Gfx` (2372 → 2468 B) resized; content
+changed only in `gMenuInfoElements_Gfx` (194 bytes, the menu plate) and in one literal of
+`rfu_MBOOT_CHILD_inheritanceLinkStatus` in librfu, a constant derived from an address
+(`0x057a2b38` → `0x057a2bac`) that grows by `0x74`, the two graphics' growth (20 + 96 bytes). The script and the builds are in
+`<private>/scratch/screens/r20/engproof/` (`symdiff.py`, `PROOF.md`).
 
 The branch `he/fix-screens` is merged into `he/main`. Nine local-only branches
 (`he/wip-screens-r6` to `-r9`, `-r11`, `-r13`, `-r14`, `-r14b` and `-r17`) and the pushed
@@ -868,7 +889,7 @@ python3 tools/hebrew/check_tests.py make_check.log
   12-14 starting past row 1,600; `check_tests.py` found 1,903 failing tests, all known. Only the
   test tool changes, not the ROM. It is merged into `he/main` (`08027d9879`, the commit 1.0 is
   built from): rc21's `make_check.log` ends with the whole summary (`FAILED 1920`, `TOTAL 5135`)
-  and no segfault. `he/upstream-fixes` gets it by a fast-forward to `8d52b4cccf`.
+  and no segfault. `he/upstream-fixes` was fast-forwarded to `8d52b4cccf`.
 - `check_tests.py` parses the `[NN] NAME: RESULT` lines. It counts FAIL, ERROR, TIMEOUT and CRASH
   as failing, prints `NEW FAILURE: <name>` for any name missing from
   `tools/hebrew/data/known_test_failures.txt` (1,903 names), and exits 1 then.
@@ -1015,7 +1036,7 @@ python3 <repo>/tools/hebrew/emu/sweep.py selftest CLIP.gba st   # proves the det
 
 ```bash
 python3 tools/hebrew/status_report.py --sweep RC/tests/sweep/sweep.json
-# 650 files -> ...: {'seen on screen': 525, 'translated': 125}   (rc20's sweep, after flag_gates.py)
+# 650 files -> ...: {'seen on screen': 525, 'translated': 125}   (rc21's sweep, on c1cfd8a30b)
 ```
 
 - Without `--sweep`, every "seen on screen" row falls back to "translated".
@@ -1459,7 +1480,7 @@ Ask the owner before you:
 | Item | Evidence | What to do |
 | --- | --- | --- |
 | **The Pokéblock case list would cut the first digit of a three-digit level.** English shows `Lv255` in full; play most likely never makes such a level | `PutPokeblockListMenuString` (`src/pokeblock.c:750-761`) skips to x 87 and prints `Lv` and the level in the 112 px list window (`WIN_LIST`, 14 tiles, `:322-330`), in the narrow font. Mirrored, the first digit of a three-digit level starts 3 px past the left edge: the clip ROM logs the `2` of a level-255 test block cut on the case list of `tours/r19_fix/pb_feed_graph.txt` (window 1, 112 px, font 7). By code reading, play needs a top speed of about 230 RPM to get there. Only the Berry Blender makes Pokéblocks (`AddPokeblock`, `src/berry_blender.c:3586`), and every H&S blend is with NPCs: the link blender runs only from Emerald's `LilycoveCity_ContestLobby` (`data/maps/LilycoveCity_ContestLobby/map.json:391`, `game_version` emerald), which this build leaves out. The level is the highest flavour (`src/pokeblock.c:1335-1348`), and a repeated berry gives a black block (`src/berry_blender.c:2274-2282`). With the NPCs' berries (`SetOpponentsBerryData`, `:1531-1569`; the Blend Master's for one opponent, since his hide flag is 0, `include/constants/flags_hns.h:1927`) the best blend is an Enigma Berry against the Blend Master: 59 before the speed factor of (max RPM / 333 + 100) % (`:2428`), so level 100 needs 229.77 RPM. A frame model of a perfect two-player blend (a BEST hit at every chance; `:1983-1997`, `:2028-2055`, `:2096-2115`, `:3287-3295`) peaks at 197.64 RPM, level 94 (`<private>/scratch/screens/r19/review/pbspeed.py`, `pbbound.py`). A real blend was not measured (**unverified**) | measure a perfect blend against the Blend Master with an Enigma Berry (`sBerryBlender->maxRPM`). If it can pass 229.77 RPM, place the level so `Lv` and three digits fit inside the window, check it with the tour's level-255 block, and cherry-pick the fix onto `he/renderer` if it is engine code |
-| **`he/renderer` still has the old Pokéblock condition graph.** `946ae2f132` (on `he/wip-r19`) re-ran `tools/hebrew/graphics/side/do_graph.py` on `graphics/pokeblock/use_screen/graph.png` (blob `5e88e5b3` → `398c66e3`, 449 pixels in the label rows). The panel now equals the Pokégear one cell for cell | on the feeding screen, rc21's ק of קשיחות and left י of יופי are 1 px from the pentagon outline; with the new art 3 px and 4 px, at conditions 0 and 255. Only those label rows change on screen (`tours/r19_fix/pb_feed_graph.txt`, run with `scripts/r16_contests/con16.py`) | cherry-pick `946ae2f132` onto `he/renderer`. It has the same old blob `5e88e5b3` and the same Pokégear graph (`884f98a9`), so it should apply cleanly. Push `he/renderer` before `he/main` |
+| **`he/renderer` lacks three graphics commits of `he/main`,** against the rule of section 1.2. drift reads only `data/` and `src/`, so no check fails; an English build of `he/renderer` still shows the older art | `git diff --stat he/renderer he/main -- graphics/` lists three files: `graphics/interface/status_icons.png` (`d3b59b94fe`, the paralysis tag, merged with `he/fix-screens-r4b`), `graphics/contest/results_screen/tiles.png` (`d41a67ebdf`, the NORMAL rank title, `he/fix-screens-r10`) and `graphics/easy_chat/mode.png` (`9164440ab9`, the alphabet mode tab, `he/fix-screens-r18b`) | cherry-pick the three onto `he/renderer` in that order, compare English builds as in section 1.2, and push `he/renderer` |
 | The harness shoots the battle debug menu's AI party page before its tilemap reaches the screen, so later six-Pokémon pages look blank (section 8.5) | `scripts/r16_debug_menu/dbgmenu.py` `view()` (`:95-103`) shoots 8 frames after the page's task starts and closes it at once; the page's tilemap copy lands about 22 frames late | wait until `sDma3Requests` has no pending entry, or at least 30 frames, before the shot and before B; then drop the one-page-per-run note in its docstring (`:18-21`) |
 | `audit.py` on a built tree counts 2,480 more strings than CI (section 4.2) | `walk_tree` (`audit.py:448-464`) also reads the six generated headers | skip `src/data/trainers*.h`, `battle_partners.h`, `debug_trainers.h` and `region_map/region_map_entries.h` in `walk_tree`; the local count should then equal CI's (39,059 at `fe509e0043`) |
 
@@ -1605,7 +1626,7 @@ and the round screenshots. Freeing that disk is the owner's call.
   ("Notes from the fresh-clone test"). CI builds and tests on Linux (ubuntu-26.04, Ubuntu's
   toolchain).
 - The hydra segfault's cause, and the guard `8d52b4cccf` (section 4.3), now merged into `he/main`
-  (`08027d9879`). The 0.2 and rc20 `make_check.log` came from `make check BUILD=hns -j12` (the
+  (`08027d9879`); `he/upstream-fixes` is fast-forwarded to it. The 0.2 and rc20 `make_check.log` came from `make check BUILD=hns -j12` (the
   release README), with 15 hydra runners, in about 4 min.
 - Every libretro core loads the 131088-byte `.sav` at the frontend level (section 4.6); copies of
   the cores are in `<builds>/reference/cores/`, whose source is inferred, not recorded.
@@ -1645,8 +1666,8 @@ and screenshots that are not in the fork are under `<private>/scratch/screens/r1
   section 2.6.
 - **The Pokéblock feeding screen's condition graph:** on rc21 two labels are 1 px from the pentagon
   outline; the art of `946ae2f132` moves them to 3 px and 4 px, and nothing else on screen changes
-  (section 8.1; `tours/r19_fix/pb_feed_graph.txt`, run on rc21, on a build with the new art and on
-  English).
+  (`tours/r19_fix/pb_feed_graph.txt`, run on rc21, on a build with the new art and on English).
+  The art is in `he/main` since `b32c6f117c` and on `he/renderer` as `2f46bee8be`.
 - **Why the local audit counts more strings than CI:** six generated headers in a built tree; the
   findings are the same (section 4.2).
 - **The official English binary:** no build type made with devkitARM r68 matches it (section 2.5),
