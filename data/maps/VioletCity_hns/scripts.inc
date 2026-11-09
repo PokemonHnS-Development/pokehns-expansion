@@ -416,7 +416,7 @@ VioletCity_Text_HereTeacherIAm:
 VioletCity_Text_Lass:
 	.string "לפי השמועות, רוחות רפאים\n"
 	.string "מופיעות במגדל הנבט.\p"
-	.string "אומרים שמהלכים מסוג רוח יכולים לעקוף\n"
+	.string "אומרים שמהלכים מסוג רפאים יכולים לעקוף\n"
 	.string "את ההגנות של פוקימונים קשוחים\p"
 	.string "כמו אוניקס וג'יאודוד.$"
 

@@ -752,7 +752,7 @@ SaffronCity_FightingDojoVIP_Text_Morty_Rematch:
 	.string "הפגנת כוח ומיומנות, אבל האם\n"
 	.string "השתפרת מאז הקרב האחרון שלנו?\p"
 	.string "התאמנתי עם הפוקימונים שלי\n"
-	.string "מסוג רוח.\p"
+	.string "מסוג רפאים.\p"
 	.string "נראה אם תצליח לגבור\n"
 	.string "שוב על הצללים.\p"
 	.string "רוצה קרב חוזר איתי?$"
@@ -870,7 +870,7 @@ SaffronCity_FightingDojoVIP_Text_Sabrina_Rematch:
 
 SaffronCity_FightingDojoVIP_Text_Sabrina_RematchDefeat:
 	.string "סברינה: אהבתך לפוקימונים שלך\n"
-	.string "שוב גברה על כוחי הפסיכי…$"
+	.string "שוב גברה על כוחי העל-חושי…$"
 
 SaffronCity_FightingDojoVIP_Text_Janine_Rematch:
 	.string "פופופופו…\p"

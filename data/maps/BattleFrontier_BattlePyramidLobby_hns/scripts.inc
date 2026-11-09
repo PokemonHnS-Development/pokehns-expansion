@@ -759,9 +759,9 @@ BattleFrontier_BattlePyramidLobby_Text_HintExplosion_hns:
 	.string "נופלים מולם…$"
 
 BattleFrontier_BattlePyramidLobby_Text_HintPsychic_hns:
-	.string "אני רואה פוקימונים מסוג פסיכי…\p"
+	.string "אני רואה פוקימונים מסוג על-חושי…\p"
 	.string "…ואני רואה את הפוקימונים שלך\n"
-	.string "מתייסרים ממהלכים מסוג פסיכי…$"
+	.string "מתייסרים ממהלכים מסוג על-חושי…$"
 
 BattleFrontier_BattlePyramidLobby_Text_HintRock_hns:
 	.string "אני רואה פוקימונים מסוג סלע…\p"
@@ -797,9 +797,9 @@ BattleFrontier_BattlePyramidLobby_Text_HintWater_hns:
 	.string "סובלים ממהלכים מסוג מים…$"
 
 BattleFrontier_BattlePyramidLobby_Text_HintGhost_hns:
-	.string "אני רואה פוקימונים מסוג רוח…\p"
+	.string "אני רואה פוקימונים מסוג רפאים…\p"
 	.string "…ואני רואה את הפוקימונים שלך\n"
-	.string "סובלים ממהלכים מסוג רוח…$"
+	.string "סובלים ממהלכים מסוג רפאים…$"
 
 BattleFrontier_BattlePyramidLobby_Text_HintSteel_hns:
 	.string "אני רואה פוקימונים מסוג פלדה…\p"

@@ -24,6 +24,6 @@ MrPsychic_Text_1:
 	.string "זה מה שרצית!$"
 
 MrPsychic_Text_2:
-	.string "מ”מ 29 מכיל את אשליה.\p"
+	.string "מ”מ 29 מכיל את כוח על-חושי.\p"
 	.string "הוא עשוי להוריד את\n"
 	.string "ההגנה המיוחדת של היעד.$"

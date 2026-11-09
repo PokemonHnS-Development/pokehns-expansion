@@ -235,7 +235,7 @@ MrPokemonHouse_Text_GimmeTheScale:
 	.string "זה נדיר! אני… אני רוצה אותו…\p"
 	.string "{PLAYER}, תסכים להחליף\n"
 	.string "אותו?\p"
-	.string "אני יכול להציע את חולק הנסיון\n"
+	.string "אני יכול להציע את חולק הניסיון\n"
 	.string "הקטן הזה, שקיבלתי מפרופ' אוק.$"
 
 MrPokemonHouse_Text_Disappointed:

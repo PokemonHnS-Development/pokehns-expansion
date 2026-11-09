@@ -153,7 +153,7 @@ BattleFrontier_Lounge2_Text_SalonMaidenSilverMons::
 	.string "כבר התמודדת מול עלמת הסלון?\p"
 	.string "כשהיא בוחנת את היריב שלה, כנראה\n"
 	.string "שהיא משתמשת בפוקימונים האלה:\p"
-	.string "פוקימון פסי מסוג פסיכי,\n"
+	.string "פוקימון פסי מסוג על-חושי,\n"
 	.string "פוקימון הר געש מסוג אש,\p"
 	.string "ופוקימון ישנוני מסוג רגיל.$"
 
@@ -162,7 +162,7 @@ BattleFrontier_Lounge2_Text_SalonMaidenGoldMons::
 	.string "כשהיא רצינית?\p"
 	.string "כשהיא נלחמת במלוא הכוח, כנראה\n"
 	.string "שהיא משתמשת בפוקימונים האלה:\p"
-	.string "פוקימון איאון מסוג דרקון ופסיכי,\n"
+	.string "פוקימון איאון מסוג דרקון ועל-חושי,\n"
 	.string "פוקימון רעם מסוג חשמל,\p"
 	.string "ופוקימון ישנוני מסוג רגיל.$"
 
@@ -188,7 +188,7 @@ BattleFrontier_Lounge2_Text_DomeAceGoldMons::
 	.string "הוא משתמש בשלושת הפוקימונים האלה:\p"
 	.string "פוקימון איאון מסוג דרקון ותעופה,\n"
 	.string "פוקימון דג בוץ מסוג מים ואדמה,\p"
-	.string "ופוקימון רגל ברזל מסוג פלדה ופסיכי.$"
+	.string "ופוקימון רגל ברזל מסוג פלדה ועל-חושי.$"
 
 BattleFrontier_Lounge2_Text_FactoryHeadIsThere::
 	.string "בטוח שלא ידעת את זה!\p"
@@ -249,7 +249,7 @@ BattleFrontier_Lounge2_Text_ArenaTycoonSilverMons::
 	.string "שמעתי שהיא משתמשת בפוקימונים האלה:\p"
 	.string "פוקימון קרן יחידה מסוג חרק וקרב,\n"
 	.string "פוקימון אור ירח מסוג אפל,\p"
-	.string "ופוקימון שלכת מסוג חרק ורוח.$"
+	.string "ופוקימון שלכת מסוג חרק ורפאים.$"
 
 BattleFrontier_Lounge2_Text_ArenaTycoonGoldMons::
 	.string "כבר התמודדת מול גבירת הזירה\n"
@@ -257,7 +257,7 @@ BattleFrontier_Lounge2_Text_ArenaTycoonGoldMons::
 	.string "כשהיא נלחמת ברצינות גמורה,\n"
 	.string "שמעתי שהיא משתמשת בפוקימונים האלה:\p"
 	.string "פוקימון אור ירח מסוג אפל,\n"
-	.string "פוקימון צל מסוג רוח ורעל,\p"
+	.string "פוקימון צל מסוג רפאים ורעל,\p"
 	.string "ופוקימון פטרייה מסוג עשב וקרב.$"
 
 BattleFrontier_Lounge2_Text_PalaceMavenIsThere::

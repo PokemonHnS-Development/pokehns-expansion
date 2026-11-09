@@ -164,7 +164,7 @@ SaffronCity_Text_Sign:
 SaffronCity_Text_GymSign:
 	.string "מכון הפוקימון של העיר סאפרון\n"
 	.string "מנהיגה: סברינה\p"
-	.string "המומחית לפוקימונים מסוג פסיכי!$"
+	.string "המומחית לפוקימונים מסוג על-חושי!$"
 
 SaffronCity_Text_FightingDojoSign:
 	.string "כולם מוזמנים!\n"
@@ -176,7 +176,7 @@ SaffronCity_Text_SilphCoSign:
 
 SaffronCity_Text_MrPsychicHouseSign:
 	.string "הבית של\n"
-	.string "מר טלפת$"
+	.string "מר על-חושי$"
 
 SaffronCity_Text_MagnetTrainStationSign:
 	.string "העיר סאפרון\n"

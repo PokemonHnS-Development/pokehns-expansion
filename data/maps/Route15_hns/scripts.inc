@@ -180,7 +180,7 @@ Route15_Text_BillyRematchDefeat:
 
 Route15_Text_BillyPostRematch:
 	.string "ידע מהספרים זה לא הכול.\n"
-	.string "אני צריך גם נסיון בקרבות!$"
+	.string "אני צריך גם ניסיון בקרבות!$"
 
 Route15_Text_Sign:
 	.string "דרך 15\p"

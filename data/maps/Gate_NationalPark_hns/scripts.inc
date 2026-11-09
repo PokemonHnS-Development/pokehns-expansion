@@ -215,7 +215,7 @@ Route35NationalParkGate_Text_OfficerAskToParticipate:
 	.string "רוצה לנסות?$"
 
 Route35NationalParkGate_Text_OfficerGiveSportBalls:
-	.string "נקודות הנסיון שהפוקימון שלך יצבור\n"
+	.string "נקודות הניסיון שהפוקימון שלך יצבור\n"
 	.string "במהלך התחרות יבוטלו כשתצא.\p"
 	.string "הנה כדורי התחרות שלך.$"
 

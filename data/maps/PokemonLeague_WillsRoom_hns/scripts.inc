@@ -110,7 +110,7 @@ PokemonLeague_WillsRoom_Text_Before:
     .string "הרשה לי להציג את עצמי.\n"
     .string "שמי ויל.\p"
     .string "התאמנתי בכל רחבי העולם, וחיזקתי\n"
-    .string "את הפוקימונים מסוג פסיכי שלי.\p"
+    .string "את הפוקימונים מסוג על-חושי שלי.\p"
     .string "ולבסוף, התקבלתי לרביעייה העילית.\p"
     .string "מכאן אני רק אמשיך להשתפר!\p"
     .string "הפסד הוא לא אפשרות!$"
@@ -128,7 +128,7 @@ PokemonLeague_WillsRoom_Text_Defeat:
 PokemonLeague_WillsRoom_Text_RematchBefore:
     .string "ויל: אה, ברוך שובך.\p"
     .string "חזיתי מראש את המפגש הזה.\p"
-    .string "אני והפוקימונים מסוג פסיכי שלי\n"
+    .string "אני והפוקימונים מסוג על-חושי שלי\n"
     .string "התפתחנו וגיבשנו טקטיקות חדשות.\p"
     .string "התכונן לקרב של אסטרטגיה\n"
     .string "וכוח משופרים.\p"

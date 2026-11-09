@@ -215,7 +215,7 @@ CianwoodGym_Text_BlackbeltLaoBeaten:
 
 CianwoodGym_Text_BlackbeltLaoAfter:
 	.string "פוקימונים מסוג קרב מפחדים\n"
-	.string "מפוקימונים מסוג פסיכי…$"
+	.string "מפוקימונים מסוג על-חושי…$"
 
 
 CianwoodGym_EventScript_Nob::
