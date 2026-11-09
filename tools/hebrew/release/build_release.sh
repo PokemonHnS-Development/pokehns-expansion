@@ -5,7 +5,7 @@
 #   build_release.sh --check COMMIT OUTDIR   check the inputs only; change nothing
 #   build_release.sh --help
 #
-# OUTDIR gets pokehns.gba/.elf/.map, pokehns-clip.gba/.elf, build.log, build_clip.log, gbafix.log
+# OUTDIR gets pokehns.gba/.elf/.map, pokehns-clip.gba/.elf/.map, build.log, build_clip.log, gbafix.log
 # and build_info.json (the commit, and size, SHA-1 and CRC32 of both ROMs).
 #
 # Environment (an empty variable counts as unset):
@@ -81,7 +81,7 @@ cp pokehns.gba "$OUT/gbafix_check.gba"; tools/gbafix/gbafix "$OUT/gbafix_check.g
 cmp -s pokehns.gba "$OUT/gbafix_check.gba" && echo "gbafix: header already valid" >> "$OUT/gbafix.log" || echo "gbafix: HEADER CHANGED" >> "$OUT/gbafix.log"
 rm -f "$OUT/gbafix_check.gba"
 make hns RTL_CLIP_REPORT=1 -j"$JOBS" > "$OUT/build_clip.log" 2>&1
-cp pokehns-clip.gba pokehns-clip.elf "$OUT/" 2>/dev/null || cp build/hns-clip/*.gba "$OUT/"
+cp pokehns-clip.gba pokehns-clip.elf pokehns-clip.map "$OUT/" 2>/dev/null || cp build/hns-clip/*.gba "$OUT/"
 python3 - "$OUT" "$COMMIT" "$(git rev-parse HEAD)" <<'PY'
 import hashlib, zlib, os, sys, json
 out, ref, sha = sys.argv[1:4]
