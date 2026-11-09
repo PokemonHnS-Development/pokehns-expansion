@@ -34,8 +34,8 @@ Where they disagree, the glossary wins for names and this file wins for everythi
   your report; do not guess.
 - Fixed terms (glossary kind `term`): פוקימון / פוקימונים, מאמן, פוקדקס, פוקיבול, מרכז פוקימון,
   מכון (gym), מחשב (PC), מהלך (move), יכולת, אופי, סוג (type), נ”ח (HP), נ”כ (PP), מ”מ (TM), מ”נ (HM),
-  רמה (level), נקודות נסיון (EXP). Hebrew uses the definite article and prefixes on these normally:
-  `הפוקימון שלך`, `לפוקדקס`, `במרכז הפוקימון`.
+  רמה (level), נקודות ניסיון (EXP; the full spelling ניסיון, as FireRed now writes it). Hebrew uses the
+  definite article and prefixes on these normally: `הפוקימון שלך`, `לפוקדקס`, `במרכז הפוקימון`.
 - Upper-case English names (NEW BARK TOWN, PROF. ELM) are just names: Hebrew has no case.
   `PROF. ELM` = `פרופ' אלם` (abbreviation with a geresh), unless the glossary says otherwise.
 - Generic place words are translated, proper parts transliterated: `העיירה ניו בארק`,
