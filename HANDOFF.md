@@ -68,13 +68,12 @@ fresh clone.
    `d08b8262a656634980d351d09db243ccb247d74e` (CRC32 `61FBC99A`). Only graphics data changed:
    the compressed graph is 20 bytes larger, so the data from `gUsePokeblockGraph_Pal` up to
    `0x09103C88` moves by 16 to 24 bytes (alignment); code, the later data and every RAM symbol
-   stay where they were (rc21's `.map` against the new one). A fix for the Pokéblock case list
-   (section 8.1) would change the ROM again.
+   stay where they were (rc21's `.map` against the new one).
    - Run `make_chunks.py all` before the candidate's sweep (section 5).
    - Add rc21's row and the new candidate's row to `<builds>/records/README.md`. rc21's records
      are in `records/rc21/`, but the index stops at rc20.
-4. The open rows of section 8.1: the Pokéblock case list's three-digit level, and three small
-   tool rows.
+4. The open rows of section 8.1: three small tool rows, and the Pokéblock case list's
+   three-digit level, which play most likely never makes (by code reading and a frame model).
 
 ---
 
@@ -1459,7 +1458,7 @@ Ask the owner before you:
 
 | Item | Evidence | What to do |
 | --- | --- | --- |
-| **The Pokéblock case list cuts the first digit of a three-digit level.** English shows `Lv255` in full | `PutPokeblockListMenuString` (`src/pokeblock.c:750-761`) skips to x 87 and prints `Lv` and the level in the 112 px list window (`WIN_LIST`, 14 tiles, `:322-330`), in the narrow font. Mirrored, the first digit of a three-digit level starts 3 px past the left edge: the clip ROM logs the `2` of a level-255 test block cut on the case list of `tours/r19_fix/pb_feed_graph.txt` (window 1, 112 px, font 7). Whether a blend reaches level 100 in play is **unverified**: a berry gives at most 40 of one flavour, four blenders add up, the blend speed multiplies the flavours by (max RPM / 333 + 100) %, about ×1.45 at top speed (`src/berry_blender.c:2427-2439`), and the cap is 255 (`:2461-2465`) | measure the row; place the level so `Lv` and three digits fit inside the window, as in English; check it on the case list with a level-255 block, then cherry-pick the fix onto `he/renderer` if it is engine code. If a candidate ships without the fix, list it in `notes.json` `known_issues` |
+| **The Pokéblock case list would cut the first digit of a three-digit level.** English shows `Lv255` in full; play most likely never makes such a level | `PutPokeblockListMenuString` (`src/pokeblock.c:750-761`) skips to x 87 and prints `Lv` and the level in the 112 px list window (`WIN_LIST`, 14 tiles, `:322-330`), in the narrow font. Mirrored, the first digit of a three-digit level starts 3 px past the left edge: the clip ROM logs the `2` of a level-255 test block cut on the case list of `tours/r19_fix/pb_feed_graph.txt` (window 1, 112 px, font 7). By code reading, play needs a top speed of about 230 RPM to get there. Only the Berry Blender makes Pokéblocks (`AddPokeblock`, `src/berry_blender.c:3586`), and every H&S blend is with NPCs: the link blender runs only from Emerald's `LilycoveCity_ContestLobby` (`data/maps/LilycoveCity_ContestLobby/map.json:391`, `game_version` emerald), which this build leaves out. The level is the highest flavour (`src/pokeblock.c:1335-1348`), and a repeated berry gives a black block (`src/berry_blender.c:2274-2282`). With the NPCs' berries (`SetOpponentsBerryData`, `:1531-1569`; the Blend Master's for one opponent, since his hide flag is 0, `include/constants/flags_hns.h:1927`) the best blend is an Enigma Berry against the Blend Master: 59 before the speed factor of (max RPM / 333 + 100) % (`:2428`), so level 100 needs 229.77 RPM. A frame model of a perfect two-player blend (a BEST hit at every chance; `:1983-1997`, `:2028-2055`, `:2096-2115`, `:3287-3295`) peaks at 197.64 RPM, level 94 (`<private>/scratch/screens/r19/review/pbspeed.py`, `pbbound.py`). A real blend was not measured (**unverified**) | measure a perfect blend against the Blend Master with an Enigma Berry (`sBerryBlender->maxRPM`). If it can pass 229.77 RPM, place the level so `Lv` and three digits fit inside the window, check it with the tour's level-255 block, and cherry-pick the fix onto `he/renderer` if it is engine code |
 | **`he/renderer` still has the old Pokéblock condition graph.** `946ae2f132` (on `he/wip-r19`) re-ran `tools/hebrew/graphics/side/do_graph.py` on `graphics/pokeblock/use_screen/graph.png` (blob `5e88e5b3` → `398c66e3`, 449 pixels in the label rows). The panel now equals the Pokégear one cell for cell | on the feeding screen, rc21's ק of קשיחות and left י of יופי are 1 px from the pentagon outline; with the new art 3 px and 4 px, at conditions 0 and 255. Only those label rows change on screen (`tours/r19_fix/pb_feed_graph.txt`, run with `scripts/r16_contests/con16.py`) | cherry-pick `946ae2f132` onto `he/renderer`. It has the same old blob `5e88e5b3` and the same Pokégear graph (`884f98a9`), so it should apply cleanly. Push `he/renderer` before `he/main` |
 | A candidate folder has no `pokehns-clip.map` | `build_release.sh:84` copies only `pokehns-clip.gba` and `.elf`; `hns.py` reads `FILE:NAME` symbols from the `.map` next to the ELF (`hns.py:176-209`), so a tour that names one fails on `RC/pokehns-clip.gba` (seen on rc21 in round 19). The release tests run in the worktree and are not affected | copy `pokehns-clip.map` too, and update the script's header (line 8) and section 5 |
 | The harness shoots the battle debug menu's AI party page before its tilemap reaches the screen, so later six-Pokémon pages look blank (section 8.5) | `scripts/r16_debug_menu/dbgmenu.py` `view()` (`:95-103`) shoots 8 frames after the page's task starts and closes it at once; the page's tilemap copy lands about 22 frames late | wait until `sDma3Requests` has no pending entry, or at least 30 frames, before the shot and before B; then drop the one-page-per-run note in its docstring (`:18-21`) |
@@ -1685,7 +1684,9 @@ and screenshots that are not in the fork are under `<private>/scratch/screens/r1
 - A Hebrew-written save made outside a Pokémon Center, for example on a Battle Pyramid or Trainer
   Hill floor, loaded in the English ROM (section 4.6).
 - Pre-2.0 (1.2.1) saves: they do not load, by a code trace only (section 6.6).
-- Whether a Pokéblock of level 100 or more can be made in play (section 8.1).
+- Whether a real blend can make a Pokéblock of level 100 or more. It needs about 230 RPM against
+  the Blend Master with an Enigma Berry; a frame model of a perfect blend peaks at 198 RPM, level
+  94 (section 8.1).
 - The out-of-bounds read behind Scott's shields could write through a stray pointer after a link
   Dodrio Berry Picking game (needs a link).
 - A native speaker's read. Reviewers asked for one on: the radio's adjective pairs
