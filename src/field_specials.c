@@ -2655,14 +2655,14 @@ static const u8 *const sScrollableMultichoiceOptions[][MAX_SCROLL_MULTI_LENGTH] 
     },
     [SCROLL_MULTI_BF_MOVE_TUTOR_1] =
     {
-        COMPOUND_STRING("הטלת ביצה{CLEAR_TO 0x4E}16BP"),
+        COMPOUND_STRING("ביצה רכה{CLEAR_TO 0x4E}16BP"),
         COMPOUND_STRING("מכה ססמית{CLEAR_TO 0x4E}24BP"),
         COMPOUND_STRING("זלילת חלום{CLEAR_TO 0x4E}24BP"),
         COMPOUND_STRING("אגרוף על{CLEAR_TO 0x4E}24BP"),
         COMPOUND_STRING("בעיטת על{CLEAR_TO 0x4E}48BP"),
         COMPOUND_STRING("חבטת גוף{CLEAR_TO 0x4E}48BP"),
         COMPOUND_STRING("מפולת סלע{CLEAR_TO 0x4E}48BP"),
-        COMPOUND_STRING("נגידה{CLEAR_TO 0x4E}48BP"),
+        COMPOUND_STRING("מתקפת נגד{CLEAR_TO 0x4E}48BP"),
         COMPOUND_STRING("גל רעם{CLEAR_TO 0x4E}48BP"),
         COMPOUND_STRING("מחול חרבות{CLEAR_TO 0x4E}48BP"),
         gText_Exit
@@ -2672,7 +2672,7 @@ static const u8 *const sScrollableMultichoiceOptions[][MAX_SCROLL_MULTI_LENGTH] 
         COMPOUND_STRING("עמדת הגנה{CLEAR_TO 0x4E}16BP"),
         COMPOUND_STRING("נחירה{CLEAR_TO 0x4E}24BP"),
         COMPOUND_STRING("סטירת בוץ{CLEAR_TO 0x4E}24BP"),
-        COMPOUND_STRING("חיש קל{CLEAR_TO 0x4E}24BP"),
+        COMPOUND_STRING("מטר כוכבים{CLEAR_TO 0x4E}24BP"),
         COMPOUND_STRING("רוח קרה{CLEAR_TO 0x4E}24BP"),
         COMPOUND_STRING("עמידה{CLEAR_TO 0x4E}48BP"),
         COMPOUND_STRING("עידוד עצמי{CLEAR_TO 0x4E}48BP"),

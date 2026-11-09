@@ -75,7 +75,7 @@ static const u8 sHeavySlamDescription[] = _(
     "כבד יותר מהיריב.");
 
 static const u8 sPsyshockDescription[] = _(
-    "תוקף בגל פסיכי\n"
+    "תוקף בגל על-חושי\n"
     "שגורם נזק פיזי.");
 
 static const u8 sLavaPlumeDescription[] = _(
@@ -260,7 +260,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
 
     [MOVE_PAY_DAY] =
     {
-        .name = COMPOUND_STRING("לוטו"),
+        .name = COMPOUND_STRING("גשם מטבע"),
         .description = COMPOUND_STRING(
             "זורק מטבעות על היריב.\n"
             "הכסף נאסף אחרי הקרב."),
@@ -797,7 +797,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
 
     [MOVE_JUMP_KICK] =
     {
-        .name = COMPOUND_STRING("קפוץ בעיטה"),
+        .name = COMPOUND_STRING("בעיטת קפיצה"),
         .description = COMPOUND_STRING(
             "בעיטת זינוק חזקה.\n"
             "בהחטאה, הבועט נפגע."),
@@ -827,7 +827,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
 
     [MOVE_ROLLING_KICK] =
     {
-        .name = COMPOUND_STRING("בעיטת גלגל"),
+        .name = COMPOUND_STRING("בעיטת סיבוב"),
         .description = COMPOUND_STRING(
             "בעיטה מהירה מתוך סחרור.\n"
             "עלולה לגרום לרתיעה."),
@@ -1902,7 +1902,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
 
     [MOVE_COUNTER] =
     {
-        .name = COMPOUND_STRING("נגידה"),
+        .name = COMPOUND_STRING("מתקפת נגד"),
         .description = COMPOUND_STRING(
             "מחזיר כל פגיעה פיזית\n"
             "בעוצמה כפולה."),
@@ -2558,7 +2558,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("אנדרלמוסיה"),
         .description = COMPOUND_STRING(
-            "התקפה פסיכית\n"
+            "התקפה על-חושית\n"
             "שעלולה לגרום לבלבול."),
         .effect = EFFECT_HIT,
         .power = 50,
@@ -2581,10 +2581,10 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
 
     [MOVE_PSYCHIC] =
     {
-        .name = COMPOUND_STRING("אשליה"),
+        .name = COMPOUND_STRING("כוח על-חושי"),
         .description = COMPOUND_STRING(
-            "התקפה פסיכית חזקה. עלולה\n"
-            "להוריד את ההגנה המיוחדת."),
+            "התקפה על-חושית חזקה.\n"
+            "עלולה להוריד הגנה מיוחדת."),
         .effect = EFFECT_HIT,
         .power = 90,
         .type = TYPE_PSYCHIC,
@@ -2739,7 +2739,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "פוקימון פראי בורח בעזרתו."),
         #else
         .description = COMPOUND_STRING(
-            "מהלך פסיכי לבריחה\n"
+            "מהלך על-חושי לבריחה\n"
             "מיידית מהקרב."),
         #endif
         .effect = EFFECT_TELEPORT,
@@ -3283,7 +3283,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
 
     [MOVE_SELF_DESTRUCT] =
     {
-        .name = COMPOUND_STRING("השמדה עצמית"),
+        .name = COMPOUND_STRING("פיצוץ עצמי"),
         .description = COMPOUND_STRING(
             "גורם נזק חמור, אך\n"
             "המשתמש מתעלף."),
@@ -3516,7 +3516,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
 
     [MOVE_SWIFT] =
     {
-        .name = COMPOUND_STRING("חיש קל"),
+        .name = COMPOUND_STRING("מטר כוכבים"),
         .description = COMPOUND_STRING(
             "מפזר קרניים בצורת כוכב\n"
             "שלעולם לא מחטיאות."),
@@ -3593,7 +3593,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
 
     [MOVE_CONSTRICT] =
     {
-        .name = COMPOUND_STRING("הגבלה"),
+        .name = COMPOUND_STRING("כיווץ"),
         .description = COMPOUND_STRING(
             "לופת בחוזקה כדי להכאיב.\n"
             "עלול להוריד מהירות."),
@@ -3645,7 +3645,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
 
     [MOVE_KINESIS] =
     {
-        .name = COMPOUND_STRING("זיע"),
+        .name = COMPOUND_STRING("כיפוף כפית"),
         .description = COMPOUND_STRING(
             "מסיח את דעת היריב.\n"
             "עלול להוריד דיוק."),
@@ -3669,7 +3669,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
 
     [MOVE_SOFT_BOILED] =
     {
-        .name = COMPOUND_STRING("הטלת ביצה"),
+        .name = COMPOUND_STRING("ביצה רכה"),
         .description = COMPOUND_STRING(
             "מרפא את המשתמש עד חצי\n"
             "מהנ”ח המרבי שלו."),
@@ -4065,7 +4065,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("על-חוש"),
         .description = COMPOUND_STRING(
-            "תוקף בגל פסיכי\n"
+            "תוקף בגל על-חושי\n"
             "בעוצמה משתנה."),
         .effect = EFFECT_PSYWAVE,
         .power = 1,
@@ -4572,7 +4572,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
 
     [MOVE_TRIPLE_KICK] =
     {
-        .name = COMPOUND_STRING("משולש בעיטה"),
+        .name = COMPOUND_STRING("תלת בעיטה"),
         .description = COMPOUND_STRING(
             "בועט ביריב 3 פעמים ברצף\n"
             "בעוצמה עולה."),
@@ -4755,7 +4755,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("קללה"),
         .description = COMPOUND_STRING(
             "מהלך שפועל באופן שונה\n"
-            "עבור פוקימוני רוח."),
+            "עבור פוקימוני רפאים."),
         .effect = EFFECT_CURSE,
         .power = 0,
         .type = B_UPDATED_MOVE_TYPES >= GEN_5 ? TYPE_GHOST : TYPE_MYSTERY,
@@ -5018,7 +5018,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
 
     [MOVE_SCARY_FACE] =
     {
-        .name = COMPOUND_STRING("פרצוף מפחיד"),
+        .name = COMPOUND_STRING("פני אימה"),
         .description = COMPOUND_STRING(
             "מפחיד בפרצוף מבהיל כדי\n"
             "להוריד בחדות את המהירות."),
@@ -6013,7 +6013,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
 
     [MOVE_MAGNITUDE] =
     {
-        .name = COMPOUND_STRING("עוצמת רעידה"),
+        .name = COMPOUND_STRING("עוצמת רעש"),
         .description = COMPOUND_STRING(
             "התקפה שמרעידה את האדמה\n"
             "בעוצמה אקראית."),
@@ -7698,7 +7698,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
 
     [MOVE_SKILL_SWAP] =
     {
-        .name = COMPOUND_STRING("חילוף סגולה"),
+        .name = COMPOUND_STRING("חילוף יכולת"),
         .description = COMPOUND_STRING(
             "המשתמש מחליף יכולות\n"
             "עם המטרה."),
@@ -8520,7 +8520,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("חוקר ריח"),
         .description = COMPOUND_STRING(
             "מבטל את ההתחמקות ואת\n"
-            "החסינות של סוג רוח."),
+            "החסינות של סוג רפאים."),
         .effect = EFFECT_FORESIGHT,
         .power = 0,
         .type = TYPE_NORMAL,
@@ -8622,7 +8622,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
 
     [MOVE_GRASS_WHISTLE] =
     {
-        .name = COMPOUND_STRING("משרוקית עשב"),
+        .name = COMPOUND_STRING("שריקת עשב"),
         .description = COMPOUND_STRING(
             "מרדים את היריב\n"
             "בעזרת מנגינה נעימה."),
@@ -8799,7 +8799,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
 
     [MOVE_SKY_UPPERCUT] =
     {
-        .name = COMPOUND_STRING("אפרקט שמים"),
+        .name = COMPOUND_STRING("אגרוף שמים"),
         .description = COMPOUND_STRING(
             "אפרקאט שנזרק כמו\n"
             "זינוק אל השמיים."),
@@ -9495,7 +9495,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
 
     [MOVE_PSYCHO_BOOST] =
     {
-        .name = COMPOUND_STRING("דחף פסיכי"),
+        .name = COMPOUND_STRING("דחף על-חושי"),
         .description = COMPOUND_STRING(
             "תוקף במלוא הכוח, אך מוריד\n"
             "בחדות את התקפתו המיוחדת."),
@@ -10002,7 +10002,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
 
     [MOVE_PSYCHO_SHIFT] =
     {
-        .name = COMPOUND_STRING("הסטה פסיכית"),
+        .name = COMPOUND_STRING("הסטת על-חוש"),
         .description = COMPOUND_STRING(
             "מעביר את בעיות המצב\n"
             "אל היריב."),
@@ -11279,9 +11279,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
 
     [MOVE_PSYCHO_CUT] =
     {
-        .name = COMPOUND_STRING("חיתוך פסיכי"),
+        .name = COMPOUND_STRING("חיתוך על-חושי"),
         .description = COMPOUND_STRING(
-            "קורע בלהבים פסיכיים.\n"
+            "קורע בלהבים על-חושיים.\n"
             "יחס פגיעה קריטית גבוה."),
         .effect = EFFECT_HIT,
         .power = 70,
@@ -14698,7 +14698,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("ממתק או תעלול"),
         .description = COMPOUND_STRING(
             "יוצא ל”ממתק או תעלול”\n"
-            "ומוסיף ליריב סוג רוח."),
+            "ומוסיף ליריב סוג רפאים."),
         .effect = EFFECT_THIRD_TYPE,
         .power = 0,
         .type = TYPE_GHOST,
@@ -16533,7 +16533,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
 
     [MOVE_PSYCHIC_TERRAIN] =
     {
-        .name = COMPOUND_STRING("שטח פסיכי"),
+        .name = COMPOUND_STRING("שטח על-חושי"),
         .description = COMPOUND_STRING(
             "הקרקע מתעוותת ל-5 תורים.\n"
             "חוסמת מהלכי עדיפות."),
@@ -17017,9 +17017,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
 
     [MOVE_PSYCHIC_FANGS] =
     {
-        .name = COMPOUND_STRING("ניבים פסיכיים"),
+        .name = COMPOUND_STRING("ניב על-חושי"),
         .description = COMPOUND_STRING(
-            "נושך בניבים פסיכיים.\n"
+            "נושך בניבים על-חושיים.\n"
             "הורס כל מחסום."),
         .effect = EFFECT_HIT,
         .power = 85,
@@ -17887,7 +17887,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("אבקת קסם"),
         .description = COMPOUND_STRING(
             "אבקת קסם הופכת את\n"
-            "המטרה לסוג פסיכי."),
+            "המטרה לסוג על-חושי."),
         .effect = EFFECT_SOAK,
         .power = 0,
         .type = TYPE_PSYCHIC,
@@ -18612,7 +18612,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("כוח מתרחב"),
         .description = COMPOUND_STRING(
-            "בשטח פסיכי, חזק יותר\n"
+            "בשטח על-חושי, חזק יותר\n"
             "ופוגע בכל היריבים."),
         .effect = EFFECT_TERRAIN_BOOST,
         .power = 80,
@@ -19200,7 +19200,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("מבט מקפיא"),
         .description = COMPOUND_STRING(
-            "יורה כוח פסיכי מהעיניים.\n"
+            "יורה כוח על-חושי מהעיניים.\n"
         #if B_USE_FROSTBITE == TRUE
             "עלול לגרום לכוויית קור."),
         #else
@@ -19327,7 +19327,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("כישוף מצמרר"),
         .description = COMPOUND_STRING(
-            "תוקף בכוח פסיכי. מוריד\n"
+            "תוקף בכוח על-חושי. מוריד\n"
             "3 נ”כ ממהלך היריב האחרון."),
         .effect = EFFECT_HIT,
         .power = 80,
@@ -19374,9 +19374,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
 
     [MOVE_PSYSHIELD_BASH] =
     {
-        .name = COMPOUND_STRING("מכת מגן פסיכי"),
+        .name = COMPOUND_STRING("חבטת על-חוש"),
         .description = COMPOUND_STRING(
-            "פוגע ביריב באנרגיה פסיכית.\n"
+            "פוגע באנרגיה על-חושית.\n"
             "עשוי להעלות הגנה."),
         .effect = EFFECT_HIT,
         .power = 70,
@@ -21344,7 +21344,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
 
     [MOVE_PSYCHIC_NOISE] =
     {
-        .name = COMPOUND_STRING("רעש פסיכי"),
+        .name = COMPOUND_STRING("רעש על-חושי"),
         .description = COMPOUND_STRING(
             "גלי קול שפוגעים ומונעים\n"
             "ריפוי למשך 2 תורים."),
@@ -21788,7 +21788,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("נובת בראשית"),
         .description = COMPOUND_STRING(
             "מיו תוקף בכל הכוח.\n"
-            "הופך את השטח לפסיכי."),
+            "הופך את השטח לעל-חושי."),
         .effect = EFFECT_HIT,
         .power = 185,
         .type = TYPE_PSYCHIC,
@@ -22112,7 +22112,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("רפאים מקס"),
         .description = COMPOUND_STRING(
-            "התקפת דיינמקס מסוג רוח.\n"
+            "התקפת דיינמקס מסוג רפאים.\n"
             "מוריד ליריב הגנה."),
         .effect = EFFECT_MAX_MOVE,
         .power = 1,
@@ -22252,8 +22252,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("סערת מוח מקס"),
         .description = COMPOUND_STRING(
-            "התקפת דיינמקס מסוג פסיכי.\n"
-            "הופך את השטח לפסיכי."),
+            "התקפת דיינמקס על-חושית.\n"
+            "הופך את השטח לעל-חושי."),
         .effect = EFFECT_MAX_MOVE,
         .power = 1,
         .type = TYPE_PSYCHIC,

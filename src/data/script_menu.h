@@ -286,7 +286,7 @@ static const struct MenuAction MultichoiceList_PrizeMons[] =
 static const struct MenuAction MultichoiceList_GameCornerTMs[] =
 {
     {COMPOUND_STRING("רואה כפול{CLEAR_TO 0x58}1,500")},
-    {COMPOUND_STRING("אשליה{CLEAR_TO 0x58}3,500")},
+    {COMPOUND_STRING("כוח על-חושי{CLEAR_TO 0x58}3,500")},
     {COMPOUND_STRING("קרן קרח{CLEAR_TO 0x58}4,000")},
     {COMPOUND_STRING("מכת ברק{CLEAR_TO 0x58}4,000")},
     {COMPOUND_STRING("להביור{CLEAR_TO 0x58}4,000")},
