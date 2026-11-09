@@ -66,8 +66,10 @@ fresh clone.
    `59d5bc76ce` with devkitARM r68 gives `pokehns.gba` SHA-1
    `243df47e01332faed3262167d69464f554da194f` (CRC32 `94674527`) and `pokehns-clip.gba`
    `d08b8262a656634980d351d09db243ccb247d74e` (CRC32 `61FBC99A`). Only graphics data changed:
-   the compressed graph is 20 bytes larger, so the data after `gUsePokeblockGraph_Gfx` moves by
-   20 bytes. A fix for the Pokéblock case list (section 8.1) would change the ROM again.
+   the compressed graph is 20 bytes larger, so the data from `gUsePokeblockGraph_Pal` up to
+   `0x09103C88` moves by 16 to 24 bytes (alignment); code, the later data and every RAM symbol
+   stay where they were (rc21's `.map` against the new one). A fix for the Pokéblock case list
+   (section 8.1) would change the ROM again.
    - Run `make_chunks.py all` before the candidate's sweep (section 5).
    - Add rc21's row and the new candidate's row to `<builds>/records/README.md`. rc21's records
      are in `records/rc21/`, but the index stops at rc20.
@@ -360,7 +362,8 @@ printf '60 -\nshot boot\nquit\n' | "${HNS_RUNNER:-tools/hebrew/emu/hnsrun}" poke
   - Under `TZ=UTC`, rung 2 built from the stored rung 1 is still byte-identical. Rungs 3-6 also
     start from a stored save with a footer, so by the same mechanism they should not depend on
     the zone either; only rung 2 was measured.
-  - A new rung 1 under `TZ=UTC` differs in one footer byte, the hour (0x14 against 0x12).
+  - A new rung 1 under `TZ=UTC` differs in one footer byte, the hour: 0x12, against the stored
+    0x14 (`cmp` byte 131077).
   - Rung 2 built from that rung 1 differs a lot: the encryption key and 1,804 bytes of
     SaveBlock1, among them the party's personality values and IVs.
   - So a new rung 1, and any tour that starts a new game (`start empty`), match the stored
@@ -828,7 +831,7 @@ python3 tools/hebrew/plurals.py                   # items 902, stackable 693, pr
     the source line.
   - CI counts fewer strings (run 41933578987 at `fe509e0043`: `39059 strings (24836
     translated)`), with the same 0 errors, 48 warnings and 85 suppressed. The difference is the
-    build. `walk_tree` (`audit.py:446-464`) reads every `.c` and `.h` under `src/`, and a built tree
+    build. `walk_tree` (`audit.py:448-464`) reads every `.c` and `.h` under `src/`, and a built tree
     has six git-ignored headers that `make` generates:
     - `src/data/trainers.h`, `trainers_hns.h`, `trainers_frlg.h`, `battle_partners.h` and
       `debug_trainers.h`, made from the `.party` files (`trainer_rules.mk:3-12`);
@@ -1018,7 +1021,7 @@ python3 tools/hebrew/status_report.py --sweep RC/tests/sweep/sweep.json
 
 - Without `--sweep`, every "seen on screen" row falls back to "translated".
 - "Seen on screen" means **the harness rendered the label**, not that a person read it.
-- STATUS counts a string as Hebrew if it holds any Hebrew letter (`status_report.py:81`), so mixed
+- STATUS counts a string as Hebrew if it holds any Hebrew letter (`status_report.py:82`), so mixed
   Latin-and-Hebrew lines pass (section 8.2).
 
 ### 4.6 Map walk, save ladder, cross-core, ROM sweep
@@ -1064,7 +1067,7 @@ python3 tools/hebrew/rom_sweep.py pokehns.gba --json OUT.json
   - Byte for byte, the two saves differ only in a sub-second play-time counter (SaveBlock2
     `0x12`) and in the `script` pointers of SaveBlock1's object event templates. Each pair of
     pointers names the same label in the two ELFs, and the English ROM rewrites them on CONTINUE
-    (`src/overworld.c:2200` calls `LoadSaveblockObjEventScripts`, `:590-599`).
+    (`src/overworld.c:2200` calls `LoadSaveblockObjEventScripts`, `:592-600`).
   - Saving after leaving the Center and walking back in also validates.
   - Not tried (**unverified**): a save made outside a Pokémon Center, such as on a Battle Pyramid
     or Trainer Hill floor. Those floors load their object scripts their own way
@@ -1319,7 +1322,7 @@ EOF
 | `no runner at ...: build emu/hnsrun.c (emu/README.md) or set HNS_RUNNER` | `ls tools/hebrew/emu/hnsrun` | the runner is git-ignored and not built | build it, or set `HNS_RUNNER` |
 | `the save ladder is not set (HNS_SAVES)` | `python3 tools/hebrew/paths.py` | no default for the saves | set `HNS_SAVES` to `<builds>/saves` (section 2.6) |
 | tour `ERROR ... constant SPECIES_TYPHLOSION not found in <dir>/include` | where the ROM is | the ROM was copied out of its source tree | set `HNS_SRC=<tree>`, or use the in-tree ROM (the release script does) |
-| `path too long for hnsrun (N chars)` | the length of OUTDIR | hnsrun keeps 127 characters (`hnsrun.c:200`); `sweep.py:367-373` guards at 120 | `cd` to a short folder; the sweep passes relative paths when shorter |
+| `path too long for hnsrun (N chars)` | the length of OUTDIR | hnsrun keeps 127 characters (`hnsrun.c:200`); `sweep.py:391-396` guards at 120 | `cd` to a short folder; the sweep passes relative paths when shorter |
 | `sweep: no script units in .../build/hebrew/units`, exit 2 | `ls $HNS_UNITS` | no units | `python3 tools/hebrew/make_chunks.py all` |
 | `selftest: no label with Hebrew letters and a long enough two-row page` | | the ROM is not the Hebrew build, or `--label` names a label with no two-row Hebrew page | use the Hebrew clip ROM; pick another label |
 | `sweep: no unit has Hebrew; use --hebrew-only`, exit 2 | | `--translated` keeps units that hold Hebrew, and `make_chunks.py` units come from the English baseline and hold none | use `--hebrew-only` |
@@ -1460,7 +1463,7 @@ Ask the owner before you:
 | **`he/renderer` still has the old Pokéblock condition graph.** `946ae2f132` (on `he/wip-r19`) re-ran `tools/hebrew/graphics/side/do_graph.py` on `graphics/pokeblock/use_screen/graph.png` (blob `5e88e5b3` → `398c66e3`, 449 pixels in the label rows). The panel now equals the Pokégear one cell for cell | on the feeding screen, rc21's ק of קשיחות and left י of יופי are 1 px from the pentagon outline; with the new art 3 px and 4 px, at conditions 0 and 255. Only those label rows change on screen (`tours/r19_fix/pb_feed_graph.txt`, run with `scripts/r16_contests/con16.py`) | cherry-pick `946ae2f132` onto `he/renderer`. It has the same old blob `5e88e5b3` and the same Pokégear graph (`884f98a9`), so it should apply cleanly. Push `he/renderer` before `he/main` |
 | A candidate folder has no `pokehns-clip.map` | `build_release.sh:84` copies only `pokehns-clip.gba` and `.elf`; `hns.py` reads `FILE:NAME` symbols from the `.map` next to the ELF (`hns.py:176-209`), so a tour that names one fails on `RC/pokehns-clip.gba` (seen on rc21 in round 19). The release tests run in the worktree and are not affected | copy `pokehns-clip.map` too, and update the script's header (line 8) and section 5 |
 | The harness shoots the battle debug menu's AI party page before its tilemap reaches the screen, so later six-Pokémon pages look blank (section 8.5) | `scripts/r16_debug_menu/dbgmenu.py` `view()` (`:95-103`) shoots 8 frames after the page's task starts and closes it at once; the page's tilemap copy lands about 22 frames late | wait until `sDma3Requests` has no pending entry, or at least 30 frames, before the shot and before B; then drop the one-page-per-run note in its docstring (`:18-21`) |
-| `audit.py` on a built tree counts 2,480 more strings than CI (section 4.2) | `walk_tree` (`audit.py:446-464`) also reads the six generated headers | skip `src/data/trainers*.h`, `battle_partners.h`, `debug_trainers.h` and `region_map/region_map_entries.h` in `walk_tree`; the local count should then equal CI's (39,059 at `fe509e0043`) |
+| `audit.py` on a built tree counts 2,480 more strings than CI (section 4.2) | `walk_tree` (`audit.py:448-464`) also reads the six generated headers | skip `src/data/trainers*.h`, `battle_partners.h`, `debug_trainers.h` and `region_map/region_map_entries.h` in `walk_tree`; the local count should then equal CI's (39,059 at `fe509e0043`) |
 
 ### 8.2 Content gaps and decisions
 
@@ -1572,11 +1575,13 @@ Ask the owner before you:
 
 ### 8.3 Stale documentation
 
-None known at the end of round 19. Round 19 fixed two stale line references (`RELEASE ?= 0` is at
-`Makefile:69`, `KEPT_LATIN` at `status_report.py:22-48`). Every text tool has tests: 137 tests in
-21 files under `tools/hebrew/tests`, with small committed fixtures in
-`tools/hebrew/tests/data/`. Add a row here when a document and the tree disagree, and fix it in a
-docs-only commit.
+None known at the end of round 19. Round 19 corrected six line references: `RELEASE ?= 0` is at
+`Makefile:69`, `KEPT_LATIN` at `status_report.py:22-48`, the Hebrew count at
+`status_report.py:82`, the sweep's path guard at `sweep.py:391-396`, `walk_tree` at
+`audit.py:448-464` and `LoadSaveblockObjEventScripts` at `src/overworld.c:592-600`. Every text
+tool has tests: 137 tests in 21 files under `tools/hebrew/tests`, with small committed fixtures
+in `tools/hebrew/tests/data/`. Add a row here when a document and the tree disagree, and fix it
+in a docs-only commit.
 
 ### 8.4 Things only on the reference machine
 
