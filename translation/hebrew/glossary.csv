@@ -2675,7 +2675,7 @@ move,MOVE_PAYBACK,PAYBACK,,סגירת חשבון,proposed,meaning: settling a sc
 move,MOVE_ASSURANCE,ASSURANCE,,וידוא פגיעה,proposed,meaning: making sure (of the hit); הבטחה reads as promise; reviewed
 move,MOVE_EMBARGO,EMBARGO,,אמברגו,proposed,the Hebrew word is the loanword; reviewed
 move,MOVE_FLING,FLING,,השלכה,proposed,reviewed
-move,MOVE_PSYCHO_SHIFT,PSYCHO SHIFT,,הסטת על-חוש,proposed,"chunk PSYCHO = the noun על-חוש (PSYBEAM קרן על-חוש, PSYSTRIKE מכת על-חוש); SHIFT = הסטה; הסטה על-חושית is 77 px > 72; DECISIONS Q139 (Psychic is על-חושי)"
+move,MOVE_PSYCHO_SHIFT,PSYCHO SHIFT,,הסטת על-חוש,proposed,"chunk PSYCHO = the noun על-חוש (PSYBEAM קרן על-חוש, PSYSTRIKE מכת על-חוש); SHIFT = הסטה; הסטה על-חושית is 77 px: not a field move, but it fits the FIGHT menu, summary, relearner and contest list only in the narrower font, and the audit applies the party field-move budget (72) to every move; DECISIONS Q139 (Psychic is על-חושי)"
 move,MOVE_TRUMP_CARD,TRUMP CARD,,קלף מנצח,proposed,meaning: the Hebrew idiom for a trump card; reviewed
 move,MOVE_HEAL_BLOCK,HEAL BLOCK,,חסימת ריפוי,proposed,"chunk BLOCK=חסימה (MOVE_BLOCK), HEAL=ריפוי; reviewed"
 move,MOVE_WRING_OUT,WRING OUT,,סחיטה,proposed,reviewed
@@ -3459,7 +3459,7 @@ ability,ABILITY_SOUL_HEART,SOUL-HEART,,לב-נשמה,proposed,meaning; hyphen ke
 ability,ABILITY_TANGLING_HAIR,TANGLING HAIR,,שיער סבוך,proposed,"meaning: tangled hair; TANGLED FEET (ability_01) may also use סבוך, different English so no clash; reviewed"
 ability,ABILITY_RECEIVER,RECEIVER,,קולט,proposed,"meaning: receiver (takes over a fainted ally's ability); not מקבל, which reads as a person receiving a gift; reviewed"
 ability,ABILITY_POWER_OF_ALCHEMY,POWER OF ALCHEMY,,כוח האלכימיה,proposed,meaning; POWER = כוח; reviewed
-ability,ABILITY_BEAST_BOOST,BEAST BOOST,,דחף חיה,proposed,"meaning; BEAST = חיה as ITEM_BEAST_BALL כדור חיה; BOOST = חיזוק, check vs TOXIC/FLARE BOOST (ability_01); reviewed: BOOST = דחף as ABILITY_TOXIC_BOOST דחף הרעלה, ABILITY_FLARE_BOOST דחף להבה (ability_01), MOVE_PSYCHO_BOOST דחף פסיכי, ITEM_BOOSTER_ENERGY אנרגיית דחף; was חיזוק חיה"
+ability,ABILITY_BEAST_BOOST,BEAST BOOST,,דחף חיה,proposed,"meaning; BEAST = חיה as ITEM_BEAST_BALL כדור חיה; BOOST = חיזוק, check vs TOXIC/FLARE BOOST (ability_01); reviewed: BOOST = דחף as ABILITY_TOXIC_BOOST דחף הרעלה, ABILITY_FLARE_BOOST דחף להבה (ability_01), MOVE_PSYCHO_BOOST דחף על-חושי, ITEM_BOOSTER_ENERGY אנרגיית דחף; was חיזוק חיה"
 ability,ABILITY_RKS_SYSTEM,RKS SYSTEM,,מערכת RKS,proposed,meaning; RKS kept Latin as ITEM_GS_BALL כדור GS; reviewed
 ability,ABILITY_ELECTRIC_SURGE,ELECTRIC SURGE,,נחשול חשמל,proposed,"meaning; SURGE = נחשול; ELECTRIC = TYPE_ELECTRIC חשמל, parallel to ITEM_ELECTRIC_SEED זרע חשמל; reviewed"
 ability,ABILITY_PSYCHIC_SURGE,PSYCHIC SURGE,,נחשול על-חוש,proposed,SURGE = נחשול; the noun like נחשול חשמל / נחשול ערפל / נחשול עשב and ITEM_PSYCHIC_SEED זרע על-חוש; DECISIONS Q139 (Psychic is על-חושי)
