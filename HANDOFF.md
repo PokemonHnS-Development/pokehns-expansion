@@ -62,7 +62,7 @@ fresh clone.
    The integration itself is done: both rounds are merged, their graphics and Easy Chat commits
    are on `he/renderer`, `he/upstream-fixes` is at `8d52b4cccf`, and all of it is pushed
    (section 1.2). For round 19 alone, a build of `he/wip-r19`
-   `59d5bc76ce` with devkitARM r68 gave `pokehns.gba` SHA-1
+   `59d5bc76ce` with devkitARM r68 gives `pokehns.gba` SHA-1
    `243df47e01332faed3262167d69464f554da194f` (CRC32 `94674527`) and `pokehns-clip.gba`
    `d08b8262a656634980d351d09db243ccb247d74e` (CRC32 `61FBC99A`). Only graphics data changed:
    the compressed graph is 20 bytes larger, so the data from `gUsePokeblockGraph_Pal` up to
@@ -72,7 +72,7 @@ fresh clone.
    - Add rc21's row and the new candidate's row to `<builds>/records/README.md`. rc21's records
      are in `records/rc21/`, but the index stops at rc20.
    - Then regenerate `STATUS.md` from the candidate's sweep (section 5, step 9).
-3. The open rows of section 8.1: three small rows (two tools, and three graphics commits missing
+3. The open rows of section 8.1: four small rows (three tools, and three graphics commits missing
    from `he/renderer`), and the Pokéblock case list's three-digit level, which play most likely
    never makes (by code reading and a frame model).
 
@@ -132,10 +132,11 @@ added, removed or resized, and compare the bytes of the rest, mapping each align
 that points into ROM through the symbol-to-symbol relocation before calling it a difference. For
 the picks `384104fb15..8cfd524776` this gave: no symbol added or removed; only
 `gUsePokeblockGraph_Gfx` (1748 → 1768 B) and `gMoveTypes_Gfx` (2372 → 2468 B) resized; content
-changed only in `gMenuInfoElements_Gfx` (194 bytes, the menu plate) and in one literal of
-`rfu_MBOOT_CHILD_inheritanceLinkStatus` in librfu, a constant derived from an address
-(`0x057a2b38` → `0x057a2bac`) that grows by `0x74`, the two graphics' growth (20 + 96 bytes). The script and the builds are in
-`<private>/scratch/screens/r20/engproof/` (`symdiff.py`, `PROOF.md`).
+changed only in `gMenuInfoElements_Gfx` (194 bytes, the `menu_info.png` plates) and in one
+literal of `rfu_MBOOT_CHILD_inheritanceLinkStatus` in librfu, a constant derived from an address
+(`0x057a2b38` → `0x057a2bac`) that grows by `0x74`, the two graphics' growth (20 + 96 bytes).
+The script and the builds are in `<private>/scratch/screens/r20/engproof/` (`symdiff.py`,
+`PROOF.md`).
 
 The branch `he/fix-screens` is merged into `he/main`. Nine local-only branches
 (`he/wip-screens-r6` to `-r9`, `-r11`, `-r13`, `-r14`, `-r14b` and `-r17`) and the pushed
@@ -867,8 +868,9 @@ python3 tools/hebrew/plurals.py                   # items 902, stackable 693, pr
     the source line.
   - CI counts fewer strings. At `fe509e0043` (run 41933578987) it printed `39059 strings (24836
     translated)` with the same findings as the local run of that commit (0 errors, 48 warnings,
-    85 suppressed, before round 20). The difference is the build. `walk_tree` (`audit.py:448-464`) reads every `.c` and `.h` under `src/`, and a built tree
-    has six git-ignored headers that `make` generates:
+    85 suppressed, before round 20). The difference is the build. `walk_tree`
+    (`audit.py:448-464`) reads every `.c` and `.h` under `src/`, and a built tree has six
+    git-ignored headers that `make` generates:
     - `src/data/trainers.h`, `trainers_hns.h`, `trainers_frlg.h`, `battle_partners.h` and
       `debug_trainers.h`, made from the `.party` files (`trainer_rules.mk:3-12`);
     - `src/data/region_map/region_map_entries.h`, made from the JSON (`json_data_rules.mk:4-6`).
@@ -970,9 +972,10 @@ includes); its subfolders hold the review rounds' tours, which the release does 
 `naming_*` 2, `bfm_*` 2, `dex_forms`, `field_*`.
 
 `menu_00_setup` builds the base save that the menu tours start from. Each file's header says what
-it covers. Many round tours need a driver from `scripts/` rather than `hns.py tour`;
+it covers. Many round tours need a driver from `$E/scripts/` rather than `hns.py tour`;
 `tours/r20_names/_runs.txt` names the driver and the command for each of its files, and
-`scripts/fight_moves.py --moves MOVE_A,MOVE_B,...` shows only the listed moves in the FIGHT menu. The release tours start from saves at the top of `<builds>/saves`. A round tour
+`$E/scripts/fight_moves.py --moves MOVE_A,MOVE_B,...` shows only the listed moves in the FIGHT
+menu. The release tours start from saves at the top of `<builds>/saves`. A round tour
 (`tours/<round>/`) that names a save found only in a subfolder needs `HNS_SAVES` set to the folder
 that holds it: `saves/r8` for round 8, a folder under `saves/r10/` or `saves/r11/` for those
 rounds, and `saves/r7/saves_aug` for rounds 3-7 and `verify_ctxdpad` (`<builds>/README.md`).
@@ -1435,8 +1438,8 @@ EOF
   Check with `git cherry -v he/main he/renderer`.
 - **Messages** say what and why, never ticket IDs or history. Code comments say what and why.
   Anything not seen on screen is marked unverified, in the commit, the docs and the release notes.
-- **No AI attribution**: no `Co-Authored-By` trailer, no "Generated with" line. All 1,407 commits
-  on `he/main` follow this.
+- **No AI attribution**: no `Co-Authored-By` trailer, no "Generated with" line. All 1,473 commits
+  on `he/main` (at `c1cfd8a30b`, `git rev-list --count he/main ^master`) follow this.
 
 ### 7.2 Identity
 
@@ -1481,7 +1484,7 @@ Ask the owner before you:
 
 - One topic per branch (`he/fix-<topic>`), in its own worktree (`../pokehns-heb-<topic>`).
 - Merge into `he/main` with `git merge --no-ff he/fix-<topic> -m "Merge he/fix-<topic>: <what>"`.
-  `he/main` has 39 such merges.
+  `he/main` has 43 such merges (at `c1cfd8a30b`).
 - Keep `master` identical to upstream. Keep upstream bug fixes on `he/upstream-fixes`, separate
   from text and engine work (`00dd646cc1`, `4d5d2b9ada`).
 - Before touching an engine function, `git log -S` it upstream to see why it looks the way it
@@ -1500,6 +1503,7 @@ Ask the owner before you:
 | **The Pokéblock case list would cut the first digit of a three-digit level.** English shows `Lv255` in full; play most likely never makes such a level | `PutPokeblockListMenuString` (`src/pokeblock.c:750-761`) skips to x 87 and prints `Lv` and the level in the 112 px list window (`WIN_LIST`, 14 tiles, `:322-330`), in the narrow font. Mirrored, the first digit of a three-digit level starts 3 px past the left edge: the clip ROM logs the `2` of a level-255 test block cut on the case list of `tours/r19_fix/pb_feed_graph.txt` (window 1, 112 px, font 7). By code reading, play needs a top speed of about 230 RPM to get there. Only the Berry Blender makes Pokéblocks (`AddPokeblock`, `src/berry_blender.c:3586`), and every H&S blend is with NPCs: the link blender runs only from Emerald's `LilycoveCity_ContestLobby` (`data/maps/LilycoveCity_ContestLobby/map.json:391`, `game_version` emerald), which this build leaves out. The level is the highest flavour (`src/pokeblock.c:1335-1348`), and a repeated berry gives a black block (`src/berry_blender.c:2274-2282`). With the NPCs' berries (`SetOpponentsBerryData`, `:1531-1569`; the Blend Master's for one opponent, since his hide flag is 0, `include/constants/flags_hns.h:1927`) the best blend is an Enigma Berry against the Blend Master: 59 before the speed factor of (max RPM / 333 + 100) % (`:2428`), so level 100 needs 229.77 RPM. A frame model of a perfect two-player blend (a BEST hit at every chance; `:1983-1997`, `:2028-2055`, `:2096-2115`, `:3287-3295`) peaks at 197.64 RPM, level 94 (`<private>/scratch/screens/r19/review/pbspeed.py`, `pbbound.py`). A real blend was not measured (**unverified**) | measure a perfect blend against the Blend Master with an Enigma Berry (`sBerryBlender->maxRPM`). If it can pass 229.77 RPM, place the level so `Lv` and three digits fit inside the window, check it with the tour's level-255 block, and cherry-pick the fix onto `he/renderer` if it is engine code |
 | **`he/renderer` lacks three graphics commits of `he/main`,** against the rule of section 1.2. drift reads only `data/` and `src/`, so no check fails; an English build of `he/renderer` still shows the older art | `git diff --stat he/renderer he/main -- graphics/` lists three files: `graphics/interface/status_icons.png` (`d3b59b94fe`, the paralysis tag, merged with `he/fix-screens-r4b`), `graphics/contest/results_screen/tiles.png` (`d41a67ebdf`, the NORMAL rank title, `he/fix-screens-r10`) and `graphics/easy_chat/mode.png` (`9164440ab9`, the alphabet mode tab, `he/fix-screens-r18b`) | cherry-pick the three onto `he/renderer` in that order, compare English builds as in section 1.2, and push `he/renderer` |
 | The harness shoots the battle debug menu's AI party page before its tilemap reaches the screen, so later six-Pokémon pages look blank (section 8.5) | `scripts/r16_debug_menu/dbgmenu.py` `view()` (`:95-103`) shoots 8 frames after the page's task starts and closes it at once; the page's tilemap copy lands about 22 frames late | wait until `sDma3Requests` has no pending entry, or at least 30 frames, before the shot and before B; then drop the one-page-per-run note in its docstring (`:18-21`) |
+| `status_report.py` marks C literals live by line number, from the English source's lines | `units.py` `c_live_index` (`:208-219`) keys `tools/hebrew/data/c_strings.json` by line, and those lines are `../pokehns-en`'s (`src/data/items.h:11160` there is an English description, `c_strings.json` marks it dead). In the Hebrew tree the lines differ (339 items have a plural name under `#if TEXT_RTL`), so a C file's live count in `STATUS.md` is approximate: round 20 added one line to `items.h` (MEWNIUM Z's description), and STICKY BARB's plural name, now on line 11160, stopped counting (2,224 to 2,223 units) | match the tree's literals to `c_strings.json` by designator and field, not by line, then regenerate `STATUS.md` |
 | `audit.py` on a built tree counts 2,480 more strings than CI (section 4.2) | `walk_tree` (`audit.py:448-464`) also reads the six generated headers | skip `src/data/trainers*.h`, `battle_partners.h`, `debug_trainers.h` and `region_map/region_map_entries.h` in `walk_tree`; the local count should then equal CI's (39,059 at `fe509e0043`) |
 
 ### 8.2 Content gaps and decisions
@@ -1630,7 +1634,9 @@ Ask the owner before you:
 
 ### 8.3 Stale documentation
 
-None known at the end of round 19. Round 19 corrected six line references: `RELEASE ?= 0` is at
+None known after the documentation pass of round 20, which corrected the audit's example
+finding (section 4.2: `src/data/items.h:3402`, where it had a line no finding names) and the
+commit and merge counts of section 7. Round 19 corrected six line references: `RELEASE ?= 0` is at
 `Makefile:69`, `KEPT_LATIN` at `status_report.py:22-48`, the Hebrew count at
 `status_report.py:82`, the sweep's path guard at `sweep.py:391-396`, `walk_tree` at
 `audit.py:448-464` and `LoadSaveblockObjEventScripts` at `src/overworld.c:592-600`. Every text
@@ -1662,8 +1668,9 @@ and the round screenshots. Freeing that disk is the owner's call.
   ("Notes from the fresh-clone test"). CI builds and tests on Linux (ubuntu-26.04, Ubuntu's
   toolchain).
 - The hydra segfault's cause, and the guard `8d52b4cccf` (section 4.3), now merged into `he/main`
-  (`08027d9879`); `he/upstream-fixes` is fast-forwarded to it. The 0.2 and rc20 `make_check.log` came from `make check BUILD=hns -j12` (the
-  release README), with 15 hydra runners, in about 4 min.
+  (`08027d9879`); `he/upstream-fixes` is fast-forwarded to it. The 0.2 and rc20 `make_check.log`
+  came from `make check BUILD=hns -j12` (the release README), with 15 hydra runners, in about
+  4 min.
 - Every libretro core loads the 131088-byte `.sav` at the frontend level (section 4.6); copies of
   the cores are in `<builds>/reference/cores/`, whose source is inferred, not recorded.
 - 69 of the 71 tours run on the English ROM; the two `naming_*` tours are Hebrew-only.
@@ -1746,9 +1753,9 @@ release tours and sweep cover the screens the release tests reach. The round's t
   - Kurt's ball list and the Game Corner TM list, each drawn by a RAM script as a stand-in: no
     H&S script calls `MULTI_KURT_BALLS` or `MULTI_GAME_CORNER_TMS`;
   - the stat-change lines with מאוד, באופן חמור and בצורה קיצונית;
-  - the type name in every place it is drawn: the summary and Pokédex INFO plates, the bag's TM
-    panel plate (`menu_info.png`), the FIGHT menu's type field, the relearner, the Pokédex type
-    search and the challenge menu's ONE TYPE values;
+  - the type name on the summary and Pokédex INFO plates, the bag's TM panel plate
+    (`menu_info.png`), the FIGHT menu's type field, the relearner, the Pokédex type search and the
+    challenge menu's ONE TYPE values;
   - the renamed abilities (also in battle pop-ups and the Trace line, and EARLY BIRD משכימת קום on
     the summary INFO page), items with their descriptions, trainer classes in battle and Pokédex
     entries;
@@ -1766,7 +1773,7 @@ release tours and sweep cover the screens the release tests reach. The round's t
     every frame (`hns.py:1930-1934`), and the round changed strings only. Each tour is
     deterministic per ROM: a second run is pixel-identical on both builds.
   - In `bv_catch_fail`, the `fail_norun_after` shot is 16 frames apart (@7290 against @7306,
-    `alltours_*.log:746`); the shift grows from 4 frames over the seven turns.
+    `alltours_*.log:746`); the shift grows over the seven turns, from 4 frames to 16.
 - **Five changed FRLG Saffron labels are in no H&S ROM:** they are assembled only under
   `.if IS_FRLG` (`data/event_scripts.s:605-1052`).
 - **The engine tests a rename can affect** passed on the round's test ELF: every `* fit *` test
