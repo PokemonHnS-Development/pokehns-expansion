@@ -174,9 +174,11 @@ for example `python3 tools/hebrew/translit_stats.py 'EON$'`.
 - POKéDEX: `פוקדקס` in menus and most dialogue (42 strings), `פוקידקס` in 12.
 - Berries: `גרגר צ'רי` (CHERI BERRY) and `פירות אורן` (ORAN BERRY); BERRY POUCH is `נרתיק פירות`.
 - TM CASE: the item is `תיק מ”מ` and the menu is `קופסת מ”מ`.
-- COOLTRAINER: `מאמן על` and `מאמן-על`. The glossary takes the constant-matched form, `מאמן על`.
+- COOLTRAINER: was `מאמן על` and `מאמן-על`. FireRed now writes `מאמן-על` in both class rows, and the glossary
+  and the game text follow it (`מאמן-על`, `מאמנת-על`, `מאמנת-העל`; DECISIONS.md Q140).
 - Pokédex categories: `מקדחה`/`מקדח` (Drill). The Mushroom split (`פטריה`/`פטרייה`) is resolved: the
   category is `פטרייה`, as every other use of the word in the game.
-- SAFARI ZONE: the map uses `אזור הספארי` and dialogue uses `איזור ספארי`. EXP: `נסיון` and `ניסיון`.
+- SAFARI ZONE: the map uses `אזור הספארי` and dialogue uses `איזור ספארי`. EXP: `נסיון` and `ניסיון`
+  (the glossary and the game text take `ניסיון` everywhere; DECISIONS.md Q140).
 - Initial W, medial V and ow /oʊ/ (§2, §3) vary between the Gen 1 and Gen 2–3 batches, which had
   different authors.
