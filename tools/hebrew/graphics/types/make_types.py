@@ -6,6 +6,9 @@ index 15, shadow index 14, on the plate's own background index, in rows 4-11 (th
 16x16 font cell uses). This script clears those text pixels, then stamps Hebrew glyphs taken
 from graphics/fonts/latin_small.png (font index 1 -> 15, 2 -> 14; 0 and 3 stay background),
 advancing by gFontSmallLatinGlyphWidths, laid out right to left, centred like the English.
+A word too wide for the plate in FONT_SMALL (NARROW_PLATES) takes its glyphs from
+latin_small_narrower.png and gFontSmallNarrowerLatinGlyphWidths instead, with the hyphen cut
+to two columns of ink.
 Only pixel indices change; the PLTE and every other chunk are written back unchanged.
 
 Usage: make_types.py [--write]
@@ -30,6 +33,16 @@ WIDTHS = 'gFontSmallLatinGlyphWidths'
 HEB = 'אבגדהוזחטיכלמנסעפצקרשת'
 CODES = {c: 0x3A + i for i, c in enumerate(HEB)}
 CODES.update({'ך': 0x50, 'ם': 0x5E, 'ן': 0x5F, 'ף': 0x60, 'ץ': 0x61})
+HYPHEN = 0xAE
+CODES['-'] = HYPHEN
+
+# Plates whose word is wider than the plate's 30 px of ink in FONT_SMALL (על-חושי is 36 px):
+# drawn in FONT_SMALL_NARROWER glyphs, with the hyphen kept to its first SHORT_HYPHEN columns
+# (two of ink, one of shadow), which is also its advance.
+NARROW_PLATES = {'psychic'}
+NARROW_FONT = 'latin_small_narrower'
+NARROW_WIDTHS = 'gFontSmallNarrowerLatinGlyphWidths'
+SHORT_HYPHEN = 3
 
 # file -> (English on the plate, Hebrew)
 PLATES = {
@@ -40,13 +53,13 @@ PLATES = {
     'ground': ('GROUND', 'אדמה'),
     'rock': ('ROCK', 'סלע'),
     'bug': ('BUG', 'חרק'),
-    'ghost': ('GHOST', 'רוח'),
+    'ghost': ('GHOST', 'רפאים'),
     'steel': ('STEEL', 'פלדה'),
     'fire': ('FIRE', 'אש'),
     'water': ('WATER', 'מים'),
     'grass': ('GRASS', 'עשב'),
     'electric': ('ELECTR', 'חשמל'),
-    'psychic': ('PSYCHC', 'פסיכי'),
+    'psychic': ('PSYCHC', 'על-חושי'),
     'ice': ('ICE', 'קרח'),
     'dragon': ('DRAGON', 'דרקון'),
     'dark': ('DARK', 'אפל'),
@@ -124,6 +137,29 @@ def redraw(path, word, font, widths):
     return p, bw, left
 
 
+class ShortHyphenFont:
+    """A font whose hyphen keeps only its first SHORT_HYPHEN columns."""
+
+    def __init__(self, font):
+        self.font = font
+
+    def glyph(self, code):
+        g = self.font.glyph(code)
+        if code != HYPHEN:
+            return g
+        return [[v if x < SHORT_HYPHEN else 0 for x, v in enumerate(row)] for row in g]
+
+
+def fonts():
+    """(font, widths) per plate kind: 'small' for every plate, 'narrow' for NARROW_PLATES."""
+    tables = F.parse_width_tables(os.path.join(REPO, 'src/fonts.c'))
+    small = (F.FontPng.load(os.path.join(REPO, 'graphics/fonts/%s.png' % FONT)), tables[WIDTHS])
+    nwidths = list(tables[NARROW_WIDTHS])
+    nwidths[HYPHEN] = SHORT_HYPHEN
+    narrow = (ShortHyphenFont(F.FontPng.load(os.path.join(REPO, 'graphics/fonts/%s.png' % NARROW_FONT))), nwidths)
+    return {'small': small, 'narrow': narrow}
+
+
 def to_image(p, zoom=4):
     pal = p.palette
     im = Image.new('RGB', (p.width, p.height))
@@ -138,8 +174,7 @@ def chunks_of(path):
 
 def main():
     write = '--write' in sys.argv
-    font = F.FontPng.load(os.path.join(REPO, 'graphics/fonts/%s.png' % FONT))
-    widths = F.parse_width_tables(os.path.join(REPO, 'src/fonts.c'))[WIDTHS]
+    font_sets = fonts()
     os.makedirs(OUT, exist_ok=True)
     orig_dir = os.path.join(OUT, 'english')
     os.makedirs(orig_dir, exist_ok=True)
@@ -150,6 +185,7 @@ def main():
         # the English original from the release, not whatever is on disk
         with open(orig, 'wb') as fh:
             fh.write(gpaths.english('graphics/types/%s.png' % name))
+        font, widths = font_sets['narrow' if name in NARROW_PLATES else 'small']
         p, bw, left = redraw(orig, he, font, widths)
         dest = path if write else os.path.join(OUT, 'dry_%s.png' % name)
         p.save(dest)
