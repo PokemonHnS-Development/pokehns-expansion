@@ -970,7 +970,9 @@ includes); its subfolders hold the review rounds' tours, which the release does 
 `naming_*` 2, `bfm_*` 2, `dex_forms`, `field_*`.
 
 `menu_00_setup` builds the base save that the menu tours start from. Each file's header says what
-it covers. The release tours start from saves at the top of `<builds>/saves`. A round tour
+it covers. Many round tours need a driver from `scripts/` rather than `hns.py tour`;
+`tours/r20_names/_runs.txt` names the driver and the command for each of its files, and
+`scripts/fight_moves.py --moves MOVE_A,MOVE_B,...` shows only the listed moves in the FIGHT menu. The release tours start from saves at the top of `<builds>/saves`. A round tour
 (`tours/<round>/`) that names a save found only in a subfolder needs `HNS_SAVES` set to the folder
 that holds it: `saves/r8` for round 8, a folder under `saves/r10/` or `saves/r11/` for those
 rounds, and `saves/r7/saves_aug` for rounds 3-7 and `verify_ctxdpad` (`<builds>/README.md`).
@@ -1695,7 +1697,8 @@ and screenshots that are not in the fork are under `<private>/scratch/screens/r1
   - SONIC BOOM is `בום על-קולי`, in full, in the battle fight menu, its START move-info window and
     the summary's BATTLE MOVES page, with its description;
   - EARLY BIRD is `ציפור מקדימה`, with `מתעורר מהר משינה.`, in the ABILITY box of the summary's
-    INFO page. In H&S the SKILLS page shows stats only.
+    INFO page. In H&S the SKILLS page shows stats only. Round 20 renamed it `משכימת קום` (Q140),
+    seen in the same box (below).
 - **`make_ladder.sh` rebuilds the stored ladder byte for byte,** with the time-zone condition of
   section 2.6.
 - **The Pokéblock feeding screen's condition graph:** on rc21 two labels are 1 px from the pentagon
@@ -1724,6 +1727,56 @@ and screenshots that are not in the fork are under `<private>/scratch/screens/r1
 - All 242 scripts under `tools/hebrew` compile with every warning turned into an error on Python
   3.9.6 and 3.14.7, and the 137 tool tests pass on 3.9.6, 3.11.9 and 3.14.7 (`he/wip-r19`).
 
+**Verified in round 20** (the Psychic and FireRed names of Q139 and Q140). Each changed screen was
+shot on three builds: rc21's clip ROM (the current 1.0), the clip ROM of `he/wip-r20`
+`a9ebeeb278`, and English 2.0.6. The two checks after the review fixes ran on a build that equals
+`he/fix-r20` `ffdc529fc7`. None of this ran on the candidate built from `c1cfd8a30b`; its own
+release tours and sweep cover the screens the release tests reach. The round's tours are in
+`tools/hebrew/emu/tours/r20_names/`; scripts, logs, shots and sheets are under
+`<private>/scratch/screens/r20/` (`render/render.md`, `fixup/r20_fix.md`).
+
+- **Every changed string that the H&S ROM can draw was drawn and compared** with rc21 and English,
+  with 0 clip records on the round's clip build in every run and in all 71 release tours, except
+  the places listed under "Not verified". Seen:
+  - the renamed moves in the FIGHT menu, also under the Gen 4 battle interface, with their START
+    move-info windows, and in the move relearner;
+  - all 42 changed dialogue labels that the H&S ROM assembles (the sweep: OK 42, no CLIP);
+  - the Battle Tower partners' self-introductions with the new class names;
+  - the Easy Chat STATUS and MOVE lists and all 23 ABC lists;
+  - Kurt's ball list and the Game Corner TM list, each drawn by a RAM script as a stand-in: no
+    H&S script calls `MULTI_KURT_BALLS` or `MULTI_GAME_CORNER_TMS`;
+  - the stat-change lines with מאוד, באופן חמור and בצורה קיצונית;
+  - the type name in every place it is drawn: the summary and Pokédex INFO plates, the bag's TM
+    panel plate (`menu_info.png`), the FIGHT menu's type field, the relearner, the Pokédex type
+    search and the challenge menu's ONE TYPE values;
+  - the renamed abilities (also in battle pop-ups and the Trace line, and EARLY BIRD משכימת קום on
+    the summary INFO page), items with their descriptions, trainer classes in battle and Pokédex
+    entries;
+  - after the review fixes, the TM29 panel's על-חושי plate with 1 px to spare on each side, as on
+    the summary and Pokédex plates, and the three Bug-Catching Contest results lines with
+    מאמנת-העל (OK 3, no clip).
+- **The 71 release tours:** 71 OK on rc21 and on the round's build. `hns.py tourdiff` gives 1898
+  identical, 157 differ and 1 shot only on the round's build. 144 of the 157 show changed text.
+  The other 13, and the extra shot, come from a longer battle message that shifts later frames:
+  12 pages of `bv_double` turn 2 (plus `bv_double_turn2_13`) and one animation frame of
+  `bv_catch_fail`.
+  - In `bv_double`, turn 1 ends 4 frames later (@2824 against @2828, `alltours_*.log:881`), and on
+    turn 2 the foe uses Quick Attack first, which adds a page; the battle ends the same way. Why a
+    few frames change the foe's choice is **unverified**: the tour pins only `gRngValue` before
+    every frame (`hns.py:1930-1934`), and the round changed strings only. Each tour is
+    deterministic per ROM: a second run is pixel-identical on both builds.
+  - In `bv_catch_fail`, the `fail_norun_after` shot is 16 frames apart (@7290 against @7306,
+    `alltours_*.log:746`); the shift grows from 4 frames over the seven turns.
+- **Five changed FRLG Saffron labels are in no H&S ROM:** they are assembled only under
+  `.if IS_FRLG` (`data/event_scripts.s:605-1052`).
+- **The engine tests a rename can affect** passed on the round's test ELF: every `* fit *` test
+  in `test/text.c`, the Magnitude test and the bag sort tests (41 results; the one failure is a
+  known upstream one). The full `make check` was not run on `he/fix-r20`; the candidate's
+  `make check` of `c1cfd8a30b` covers it (section 5, step 3).
+- **The English proof of the `he/renderer` picks** (section 1.2): only the three picked graphics
+  change the English ROM.
+- The 137 tool tests pass at `c1cfd8a30b` on Python 3.9.6 and 3.11.9.
+
 **Not verified:**
 
 - A Linux build with devkitPro pacman; another machine with devkitARM r68 reproducing the 0.2
@@ -1743,6 +1796,14 @@ and screenshots that are not in the fork are under `<private>/scratch/screens/r1
   94 (section 8.1).
 - The out-of-bounds read behind Scott's shields could write through a stray pointer after a link
   Dodrio Berry Picking game (needs a link).
+- Round 20's names in the places no test reached: the generic phrase מהלך על-חושי (printed only
+  for a move id at or above `MOVES_COUNT`, `src/battle_message.c:2770-2773`); the Z-move panel's
+  type (`src/battle_z_move.c:430`); the descriptions of GENESIS SUPERNOVA, MAX PHANTASM and MAX
+  MINDSTORM; the Union Room trade board's type plate (needs a link, `src/union_room.c:4124`);
+  `gText_Ghost` רוח רפאים, the Kanto Pokémon Tower ghost, whose reachability in H&S was not
+  checked; the AERODACTYL nicknames of the Trainer Hill and Trainer Tower data; the battle debug
+  menu's hold-effect name חולק ניסיון; and PSYCHIC GEM and PSYCHIC TERA SHARD in the PC storage
+  held-item field (PSYCHIC GEM was seen in the summary's).
 - A native speaker's read. Reviewers asked for one on: the radio's adjective pairs
   (`src/data/text/radio_strings.h:54-69`), the Ultra Beast Pokédex entries
   (`src/data/pokemon/species_info/gen_7_families.h`), the Day Care take-back question
