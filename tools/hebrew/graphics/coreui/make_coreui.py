@@ -346,12 +346,24 @@ SMALL_FONTS = {     # FONT_SMALL, and FONT_SMALL_NARROWER for a word too wide fo
 }
 
 
+TYPES_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'types')
+
+
 def small_font(narrower=False):
+    """(font, widths) for FONT_SMALL, or for FONT_SMALL_NARROWER with the short hyphen of
+    types/make_types.py, so a narrower menu plate draws the same word as its types plate."""
     if narrower not in _SMALL:
         import inspect_fonts as F
         png, table = SMALL_FONTS[narrower]
-        _SMALL[narrower] = (F.FontPng.load(os.path.join(TREE, 'graphics/fonts/%s.png' % png)),
-                            F.parse_width_tables(os.path.join(TREE, 'src/fonts.c'))[table])
+        font = F.FontPng.load(os.path.join(TREE, 'graphics/fonts/%s.png' % png))
+        widths = F.parse_width_tables(os.path.join(TREE, 'src/fonts.c'))[table]
+        if narrower:
+            if TYPES_DIR not in sys.path:
+                sys.path.insert(0, TYPES_DIR)
+            from make_types import SHORT_HYPHEN, ShortHyphenFont
+            font, widths = ShortHyphenFont(font), list(widths)
+            widths[HEB_CODES['-']] = SHORT_HYPHEN
+        _SMALL[narrower] = (font, widths)
     return _SMALL[narrower]
 
 
@@ -378,7 +390,7 @@ MENU_PLATES = {     # sMenuInfoIcons offsets (src/menu.c), glossary type names
     0x4C: 'קרח', 0x60: 'תעופה', 0x64: 'קרב', 0x68: 'רפאים', 0x6C: 'חרק', 0x80: 'רעל', 0x84: 'על-חושי',
     0x88: 'פלדה', 0x8C: 'אפל', 0xA0: 'דרקון', 0x04: 'פיה',
 }
-NARROWER_PLATES = {0x84}    # על-חושי: 36 px in FONT_SMALL runs off the 32 px plate; 31 px in FONT_SMALL_NARROWER fits
+NARROWER_PLATES = {0x84}    # על-חושי: 36 px in FONT_SMALL runs off the 32 px plate; 30 px in FONT_SMALL_NARROWER
 MENU_LABELS = {0xA8: 'סוג', 0xC0: 'עוצמה', 0xC8: 'דיוק', 0xE0: 'נ”כ', 0xE8: 'השפעה'}
 
 
