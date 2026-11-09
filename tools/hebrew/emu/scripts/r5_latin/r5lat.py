@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""hns.py plus the ops the r5 Latin-leftover NPC tours (tours/r5_latin/*.txt) use:
+r"""hns.py plus the ops the r5 Latin-leftover NPC tours (tours/r5_latin/*.txt) use:
 
     rc.py      fieldwatch, copyrom, ... and through r3bf.py / r2sf.py: drive, pick, vars, textwatch,
                scenewatch, scrollshots, warpraw, ss/sl, loc, ...
