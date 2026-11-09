@@ -111,7 +111,7 @@ static const u8 sSeaIncenseDesc[]     = _("פריט להחזקה\n"
 
 static const u8 sOddIncenseDesc[]     = _("פריט להחזקה\n"
                                           "שמחזק מהלכים\n"
-                                          "מסוג פסיכי.");
+                                          "מסוג על-חושי.");
 
 static const u8 sRockIncenseDesc[]    = _("פריט להחזקה\n"
                                           "שמגביר את עוצמת\n"
@@ -524,7 +524,7 @@ const struct ItemInfo gItemsInfo[] =
         .price = 1000,
         .description = COMPOUND_STRING(
             "טוב לסוג אפל,\n"
-            "רוח, רעל ולמי\n"
+            "רפאים, רעל ולמי\n"
             "שמתפתח באבן ירח."),
         .pocket = POCKET_POKE_BALLS,
         .type = ITEM_USE_PARTY_MENU,
@@ -565,7 +565,7 @@ const struct ItemInfo gItemsInfo[] =
         //.price = (I_PRICE >= GEN_7) ? 0 : 300,
         .price = 1000,
         .description = COMPOUND_STRING(
-            "טוב לסוג פסיכי,\n"
+            "טוב לסוג על-חושי,\n"
             "פיה ולפוקימונים\n"
             "מהמין הנגדי."),
         .pocket = POCKET_POKE_BALLS,
@@ -1334,9 +1334,9 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_BERRY_JUICE] =
     {
-        .name = ITEM_NAME("מיץ ברי"),
+        .name = ITEM_NAME("מיץ פירות"),
     #if TEXT_RTL
-        .pluralName = ITEM_PLURAL_NAME("מיצי ברי"),
+        .pluralName = ITEM_PLURAL_NAME("מיצי פירות"),
     #endif
         .price = 100,
         .holdEffect = HOLD_EFFECT_RESTORE_HP,
@@ -2283,13 +2283,13 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_EXP_CANDY_XS] =
     {
-        .name = ITEM_NAME("ממתק נסיון XS"),
-        .pluralName = ITEM_PLURAL_NAME("ממתקי נסיון XS"),
+        .name = ITEM_NAME("ממתק ניסיון XS"),
+        .pluralName = ITEM_PLURAL_NAME("ממתקי ניסיון XS"),
         .price = 20,
         .holdEffectParam = EXP_100,
         .description = COMPOUND_STRING(
             "נותן מעט מאוד\n"
-            "נקודות נסיון\n"
+            "נקודות ניסיון\n"
             "לפוקימון אחד."),
         .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_LEVEL_UP_ITEM,
@@ -2303,13 +2303,13 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_EXP_CANDY_S] =
     {
-        .name = ITEM_NAME("ממתק נסיון S"),
-        .pluralName = ITEM_PLURAL_NAME("ממתקי נסיון S"),
+        .name = ITEM_NAME("ממתק ניסיון S"),
+        .pluralName = ITEM_PLURAL_NAME("ממתקי ניסיון S"),
         .price = 240,
         .holdEffectParam = EXP_800,
         .description = COMPOUND_STRING(
             "נותן מעט\n"
-            "נקודות נסיון\n"
+            "נקודות ניסיון\n"
             "לפוקימון אחד."),
         .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_LEVEL_UP_ITEM,
@@ -2323,13 +2323,13 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_EXP_CANDY_M] =
     {
-        .name = ITEM_NAME("ממתק נסיון M"),
-        .pluralName = ITEM_PLURAL_NAME("ממתקי נסיון M"),
+        .name = ITEM_NAME("ממתק ניסיון M"),
+        .pluralName = ITEM_PLURAL_NAME("ממתקי ניסיון M"),
         .price = 1000,
         .holdEffectParam = EXP_3000,
         .description = COMPOUND_STRING(
             "נותן כמות בינונית\n"
-            "של נקודות נסיון\n"
+            "של נקודות ניסיון\n"
             "לפוקימון אחד."),
         .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_LEVEL_UP_ITEM,
@@ -2343,13 +2343,13 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_EXP_CANDY_L] =
     {
-        .name = ITEM_NAME("ממתק נסיון L"),
-        .pluralName = ITEM_PLURAL_NAME("ממתקי נסיון L"),
+        .name = ITEM_NAME("ממתק ניסיון L"),
+        .pluralName = ITEM_PLURAL_NAME("ממתקי ניסיון L"),
         .price = 3000,
         .holdEffectParam = EXP_10000,
         .description = COMPOUND_STRING(
             "נותן הרבה\n"
-            "נקודות נסיון\n"
+            "נקודות ניסיון\n"
             "לפוקימון אחד."),
         .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_LEVEL_UP_ITEM,
@@ -2363,13 +2363,13 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_EXP_CANDY_XL] =
     {
-        .name = ITEM_NAME("ממתק נסיון XL"),
-        .pluralName = ITEM_PLURAL_NAME("ממתקי נסיון XL"),
+        .name = ITEM_NAME("ממתק ניסיון XL"),
+        .pluralName = ITEM_PLURAL_NAME("ממתקי ניסיון XL"),
         .price = 10000,
         .holdEffectParam = EXP_30000,
         .description = COMPOUND_STRING(
             "נותן הרבה מאוד\n"
-            "נקודות נסיון\n"
+            "נקודות ניסיון\n"
             "לפוקימון אחד."),
         .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_LEVEL_UP_ITEM,
@@ -5472,7 +5472,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = COMPOUND_STRING(
             "לוח שמגביר את\n"
             "עוצמת המהלכים\n"
-            "מסוג פסיכי."),
+            "מסוג על-חושי."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_PLATE,
         .type = ITEM_USE_BAG_MENU,
@@ -5541,7 +5541,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = COMPOUND_STRING(
             "לוח שמגביר את\n"
             "עוצמת המהלכים\n"
-            "מסוג רוח."),
+            "מסוג רפאים."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_PLATE,
         .type = ITEM_USE_BAG_MENU,
@@ -5927,14 +5927,14 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_PSYCHIC_MEMORY] =
     {
-        .name = ITEM_NAME("זיכרון פסיכי"),
-        .pluralName = ITEM_PLURAL_NAME("זיכרונות פסיכיים"),
+        .name = ITEM_NAME("זיכרון על-חושי"),
+        .pluralName = ITEM_PLURAL_NAME("זיכרונות על-חושיים"),
         .price = 1000,
         .holdEffect = HOLD_EFFECT_MEMORY,
         .holdEffectParam = 0,
         .description = COMPOUND_STRING(
-            "דיסק עם נתוני\n"
-            "סוג פסיכי. משנה את\n"
+            "דיסק עם נתוני סוג\n"
+            "על-חושי. משנה את\n"
             "הסוג של סילבאלי."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_MEMORY,
@@ -5990,14 +5990,14 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_GHOST_MEMORY] =
     {
-        .name = ITEM_NAME("זיכרון רוח"),
-        .pluralName = ITEM_PLURAL_NAME("זיכרונות רוח"),
+        .name = ITEM_NAME("זיכרון רפאים"),
+        .pluralName = ITEM_PLURAL_NAME("זיכרונות רפאים"),
         .price = 1000,
         .holdEffect = HOLD_EFFECT_MEMORY,
         .holdEffectParam = 0,
         .description = COMPOUND_STRING(
             "דיסק עם נתוני\n"
-            "סוג רוח. משנה את\n"
+            "סוג רפאים. משנה את\n"
             "הסוג של סילבאלי."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_MEMORY,
@@ -6392,7 +6392,7 @@ const struct ItemInfo gItemsInfo[] =
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
         .description = COMPOUND_STRING(
             "אבן זו מאפשרת\n"
-            "לאירודקטיל להתפתח\n"
+            "לאירודקטייל להתפתח\n"
             "למגה בקרב."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_MEGA_STONE,
@@ -8043,9 +8043,9 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_PSYCHIC_GEM] =
     {
-        .name = ITEM_NAME("אבן חן פסיכית"),
+        .name = ITEM_NAME("אבן חן על-חושית"),
     #if TEXT_RTL
-        .pluralName = ITEM_PLURAL_NAME("אבני חן פסיכיות"),
+        .pluralName = ITEM_PLURAL_NAME("אבני חן על-חושיות"),
     #endif
         .price = GEM_PRICE,
         .holdEffect = HOLD_EFFECT_GEMS,
@@ -8053,7 +8053,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = COMPOUND_STRING(
             "מגבירה את\n"
             "עוצמת המהלכים\n"
-            "מסוג פסיכי."),
+            "מסוג על-חושי."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_GEM,
         .type = ITEM_USE_BAG_MENU,
@@ -8109,9 +8109,9 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_GHOST_GEM] =
     {
-        .name = ITEM_NAME("אבן חן רוח"),
+        .name = ITEM_NAME("אבן חן רפאים"),
     #if TEXT_RTL
-        .pluralName = ITEM_PLURAL_NAME("אבני חן רוח"),
+        .pluralName = ITEM_PLURAL_NAME("אבני חן רפאים"),
     #endif
         .price = GEM_PRICE,
         .holdEffect = HOLD_EFFECT_GEMS,
@@ -8119,7 +8119,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = COMPOUND_STRING(
             "מגבירה את\n"
             "עוצמת המהלכים\n"
-            "מסוג רוח."),
+            "מסוג רפאים."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_GEM,
         .type = ITEM_USE_BAG_MENU,
@@ -8401,12 +8401,12 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_PSYCHIUM_Z] =
     {
-        .name = ITEM_NAME("פסיכיום Z"),
+        .name = ITEM_NAME("על-חושיום Z"),
         .price = 0,
         .holdEffect = HOLD_EFFECT_Z_CRYSTAL,
         .description = COMPOUND_STRING(
             "משדרג מהלכים\n"
-            "מסוג פסיכי\n"
+            "מסוג על-חושי\n"
             "למהלכי Z."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_Z_CRYSTAL,
@@ -8455,12 +8455,12 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_GHOSTIUM_Z] =
     {
-        .name = ITEM_NAME("רוחיום Z"),
+        .name = ITEM_NAME("רפאיום Z"),
         .price = 0,
         .holdEffect = HOLD_EFFECT_Z_CRYSTAL,
         .description = COMPOUND_STRING(
             "משדרג מהלכים\n"
-            "מסוג רוח\n"
+            "מסוג רפאים\n"
             "למהלכי Z."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_Z_CRYSTAL,
@@ -8603,8 +8603,9 @@ const struct ItemInfo gItemsInfo[] =
         .price = 0,
         .holdEffect = HOLD_EFFECT_Z_CRYSTAL,
         .description = COMPOUND_STRING(
-            "משדרג את ”אשליה”\n"
-            "של מיו למהלך Z."),
+            "משדרג את\n"
+            "”כוח על-חושי” של\n"
+            "מיו למהלך Z."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_Z_CRYSTAL,
         .type = ITEM_USE_BAG_MENU,
@@ -9024,7 +9025,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = COMPOUND_STRING(
         #if B_SOUL_DEW_BOOST >= GEN_7
             "מחזק את המהלכים\n"
-            "מסוג פסיכי ודרקון\n"
+            "מסוג על-חושי ודרקון\n"
             "של לטיוס ולטיאס."),
         #else
             "מעלה התקפה והגנה\n"
@@ -9095,7 +9096,7 @@ const struct ItemInfo gItemsInfo[] =
         .holdEffectParam = 20,
         .description = COMPOUND_STRING(
             "מגבירה את המהלכים\n"
-            "מסוג דרקון ורוח\n"
+            "מסוג דרקון ורפאים\n"
             "של גירטינה."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_SPECIAL_HELD_ITEM,
@@ -9820,7 +9821,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = COMPOUND_STRING(
             "פריט להחזקה שמעלה\n"
             "את עוצמת המהלכים\n"
-            "מסוג רוח."),
+            "מסוג רפאים."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_TYPE_BOOST_HELD_ITEM,
         .type = ITEM_USE_BAG_MENU,
@@ -10189,16 +10190,16 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_PSYCHIC_SEED] =
     {
-        .name = ITEM_NAME("זרע פסיכי"),
+        .name = ITEM_NAME("זרע על-חוש"),
     #if TEXT_RTL
-        .pluralName = ITEM_PLURAL_NAME("זרעים פסיכיים"),
+        .pluralName = ITEM_PLURAL_NAME("זרעי על-חוש"),
     #endif
         .price = (I_PRICE >= GEN_9) ? 20000 : 4000,
         .holdEffect = HOLD_EFFECT_TERRAIN_SEED,
         .holdEffectParam = HOLD_EFFECT_PARAM_PSYCHIC_TERRAIN,
         .description = COMPOUND_STRING(
             "מגביר הגנה מיוחדת\n"
-            "ב”שטח פסיכי”,\n"
+            "ב”שטח על-חושי”,\n"
             "אך רק פעם אחת."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_HELD_ITEM,
@@ -10422,14 +10423,14 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_EXP_SHARE] =
     {
-        .name = ITEM_NAME("חולק נסיון"),
+        .name = ITEM_NAME("חולק ניסיון"),
         .holdEffect = HOLD_EFFECT_EXP_SHARE,
     #if I_EXP_SHARE_ITEM >= GEN_6
         .price = 0,
         .importance = 1,
         .description = COMPOUND_STRING(
             "מכשיר שמעניק\n"
-            "נקודות נסיון\n"
+            "נקודות ניסיון\n"
             "לשאר חברי הקבוצה."),
         .pocket = POCKET_KEY_ITEMS,
     #else
@@ -10437,7 +10438,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = COMPOUND_STRING(
             "פריט להחזקה\n"
             "שמזכה בנקודות\n"
-            "נסיון מקרבות."),
+            "ניסיון מקרבות."),
         .pocket = POCKET_ITEMS,
     #endif
         .sortType = ITEM_TYPE_HELD_ITEM,
@@ -10670,7 +10671,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = COMPOUND_STRING(
             "פריט להחזקה\n"
             "שמגדיל את נקודות\n"
-            "הנסיון בקרב."),
+            "הניסיון בקרב."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_HELD_ITEM,
         .type = ITEM_USE_BAG_MENU,
@@ -12602,9 +12603,9 @@ const struct ItemInfo gItemsInfo[] =
         .holdEffect = HOLD_EFFECT_RESIST_BERRY,
         .holdEffectParam = TYPE_PSYCHIC,
         .description = COMPOUND_STRING(
-            "פריט להחזקה\n"
-            "שמחליש מהלך פסיכי\n"
-            "אם המחזיק פגיע לו."),
+            "פריט שמחליש מהלך\n"
+            "מסוג על-חושי אם\n"
+            "המחזיק פגיע לו."),
         .pocket = POCKET_BERRIES,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -12660,7 +12661,7 @@ const struct ItemInfo gItemsInfo[] =
         .holdEffectParam = TYPE_GHOST,
         .description = COMPOUND_STRING(
             "פריט להחזקה\n"
-            "שמחליש מהלך רוח\n"
+            "שמחליש מהלך רפאים\n"
             "אם המחזיק פגיע לו."),
         .pocket = POCKET_BERRIES,
         .type = ITEM_USE_BAG_MENU,
@@ -13438,8 +13439,8 @@ const struct ItemInfo gItemsInfo[] =
         .name = ITEM_NAME("מ”מ 29"),
         .price = 2000,
         .description = COMPOUND_STRING(
-            "התקפה פסיכית חזקה\n"
-            "שעשויה להוריד\n"
+            "התקפה על-חושית\n"
+            "חזקה שעשויה להוריד\n"
             "הגנה מיוחדת."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
@@ -14599,12 +14600,12 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_EXP_CHARM] =
     {
-        .name = ITEM_NAME("קמע נסיון"),
+        .name = ITEM_NAME("קמע ניסיון"),
         .price = 0,
         .importance = 1,
         .description = COMPOUND_STRING(
             "קמע שמגדיל את\n"
-            "נקודות הנסיון\n"
+            "נקודות הניסיון\n"
             "שמרוויחים בקרב."),
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_BAG_MENU,
@@ -14981,8 +14982,8 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_BERRY_POUCH] =
     {
-        .name = ITEM_NAME("פאוץ' פירות"),
-        .pluralName = ITEM_PLURAL_NAME("פאוצ'י פירות"),
+        .name = ITEM_NAME("נרתיק פירות"),
+        .pluralName = ITEM_PLURAL_NAME("נרתיקי פירות"),
         .price = 0,
         .description = COMPOUND_STRING(
             "מיכל נוח שמחזיק\n"
@@ -16105,9 +16106,9 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_GHOST_TERA_SHARD] =
     {
-        .name = ITEM_NAME("שבר טרה רוח"),
+        .name = ITEM_NAME("שבר טרה רפאים"),
     #if TEXT_RTL
-        .pluralName = ITEM_PLURAL_NAME("שברי טרה רוח"),
+        .pluralName = ITEM_PLURAL_NAME("שברי טרה רפאים"),
     #endif
         .price = 0,
         .description = sTeraShardDesc,
@@ -16201,9 +16202,9 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_PSYCHIC_TERA_SHARD] =
     {
-        .name = ITEM_NAME("שבר טרה פסיכי"),
+        .name = ITEM_NAME("שבר טרה על-חוש"),
     #if TEXT_RTL
-        .pluralName = ITEM_PLURAL_NAME("שברי טרה פסיכיים"),
+        .pluralName = ITEM_PLURAL_NAME("שברי טרה על-חוש"),
     #endif
         .price = 0,
         .description = sTeraShardDesc,
@@ -17019,16 +17020,16 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_EXP_SHARE_SMALL] =
     {
-        .name = ITEM_NAME("חולק נסיון קטן"),
+        .name = ITEM_NAME("חולק ניסיון קטן"),
     #if TEXT_RTL
-        .pluralName = ITEM_PLURAL_NAME("חולקי נסיון קטנים"),
+        .pluralName = ITEM_PLURAL_NAME("חולקי ניסיון קטנים"),
     #endif
         .price = 6000,
         .holdEffect = HOLD_EFFECT_EXP_SHARE,
         .description = COMPOUND_STRING(
             "פריט להחזקה\n"
             "שמזכה בנקודות\n"
-            "נסיון מקרבות."),
+            "ניסיון מקרבות."),
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
