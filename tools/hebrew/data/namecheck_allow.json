@@ -4,167 +4,37 @@
   "species:SPECIES_EXEGGUTOR": {
    "hs": "אקזגקיוטר",
    "firered": "אקזגקיוטור",
-   "why": "-tor is an unstressed /tər/, written without vav (rules: /ər/ unwritten); FireRed added a vav"
-  },
-  "species:SPECIES_AERODACTYL": {
-   "hs": "אירודקטיל",
-   "firered": "אירודקטייל",
-   "why": "-tyl is /tɪl/, one yod; FireRed's טייל reads /tajl/"
-  },
-  "move:MOVE_PAY_DAY": {
-   "hs": "לוטו",
-   "firered": "גשם מטבע",
-   "why": "a wording choice, not a misspelling: H&S keeps its name; FireRed changed its own wording"
-  },
-  "move:MOVE_JUMP_KICK": {
-   "hs": "קפוץ בעיטה",
-   "firered": "בעיטתקפיצה",
-   "why": "a wording choice, not a misspelling: H&S keeps its name; FireRed changed its own wording; the H&S form is a word-for-word calque; open for a native read (DECISIONS Q136 candidate)"
-  },
-  "move:MOVE_ROLLING_KICK": {
-   "hs": "בעיטת גלגל",
-   "firered": "בעיטתסיבוב",
-   "why": "a wording choice, not a misspelling: H&S keeps its name; FireRed changed its own wording"
-  },
-  "move:MOVE_COUNTER": {
-   "hs": "נגידה",
-   "firered": "מתקפת נגד",
-   "why": "a wording choice, not a misspelling: H&S keeps its name; FireRed changed its own wording; נגידה is a coined noun; open for a native read (DECISIONS Q136 candidate)"
-  },
-  "move:MOVE_PSYCHIC": {
-   "hs": "אשליה",
-   "firered": "כוחעל חושי",
-   "why": "a wording choice, not a misspelling: H&S keeps its name; FireRed changed its own wording"
-  },
-  "move:MOVE_SELF_DESTRUCT": {
-   "hs": "השמדה עצמית",
-   "firered": "פיצוץ עצמי",
-   "why": "a wording choice, not a misspelling: H&S keeps its name; FireRed changed its own wording"
-  },
-  "move:MOVE_SWIFT": {
-   "hs": "חיש קל",
-   "firered": "מטר כוכבים",
-   "why": "a wording choice, not a misspelling: H&S keeps its name; FireRed changed its own wording"
-  },
-  "move:MOVE_CONSTRICT": {
-   "hs": "הגבלה",
-   "firered": "כיווץ",
-   "why": "a wording choice, not a misspelling: H&S keeps its name; FireRed changed its own wording"
-  },
-  "move:MOVE_KINESIS": {
-   "hs": "זיע",
-   "firered": "כיפוף כפית",
-   "why": "a wording choice, not a misspelling: H&S keeps its name; FireRed changed its own wording"
-  },
-  "move:MOVE_SOFT_BOILED": {
-   "hs": "הטלת ביצה",
-   "firered": "ביצה רכה",
-   "why": "a wording choice, not a misspelling: H&S keeps its name; FireRed changed its own wording"
+   "why": "names follow FireRed (DECISIONS Q140), but FireRed's spelling does not fit: the Alolan form must be the base name + -א (Q129), and אקזגקיוטור-א is 52 px in the 50 px party and Pokédex lists and the 48 px healthbox (English 44 px)"
   },
   "move:MOVE_SLASH": {
    "hs": "שיסוף",
    "firered": "חיתוך",
-   "why": "a wording choice, not a misspelling: H&S keeps its name; FireRed changed its own wording"
-  },
-  "move:MOVE_TRIPLE_KICK": {
-   "hs": "משולש בעיטה",
-   "firered": "תלת בעיטה",
-   "why": "a wording choice, not a misspelling: H&S keeps its name; FireRed changed its own wording; the H&S form is a word-for-word calque; open for a native read (DECISIONS Q136 candidate)"
-  },
-  "move:MOVE_SCARY_FACE": {
-   "hs": "פרצוף מפחיד",
-   "firered": "פני אימה",
-   "why": "a wording choice, not a misspelling: H&S keeps its name; FireRed changed its own wording"
-  },
-  "move:MOVE_MAGNITUDE": {
-   "hs": "עוצמת רעידה",
-   "firered": "עוצמת רעש",
-   "why": "a wording choice, not a misspelling: H&S keeps its name; FireRed changed its own wording"
-  },
-  "move:MOVE_SKILL_SWAP": {
-   "hs": "חילוף סגולה",
-   "firered": "חילוףיכולת",
-   "why": "a wording choice, not a misspelling: H&S keeps its name; FireRed changed its own wording; סגולה vs יכולת for \"ability\"; open for a native read (DECISIONS Q136 candidate)"
-  },
-  "move:MOVE_GRASS_WHISTLE": {
-   "hs": "משרוקית עשב",
-   "firered": "שריקת עשב",
-   "why": "a wording choice, not a misspelling: H&S keeps its name; FireRed changed its own wording"
-  },
-  "move:MOVE_SKY_UPPERCUT": {
-   "hs": "אפרקט שמים",
-   "firered": "אגרוף שמים",
-   "why": "a wording choice, not a misspelling: H&S keeps its name; FireRed changed its own wording"
-  },
-  "ability:ABILITY_CLOUD_NINE": {
-   "hs": "ענן תשע",
-   "firered": "ביטול מזג",
-   "why": "a wording choice, not a misspelling: H&S keeps its name; FireRed changed its own wording"
-  },
-  "ability:ABILITY_TRACE": {
-   "hs": "עקבות",
-   "firered": "שעתוק",
-   "why": "a wording choice, not a misspelling: H&S keeps its name; FireRed changed its own wording"
-  },
-  "ability:ABILITY_EARLY_BIRD": {
-   "hs": "ציפור מקדימה",
-   "firered": "משכימת קום",
-   "why": "H&S keeps its wording with the agreement fixed (ציפור מקדימה); FireRed now uses the idiom משכימת קום"
-  },
-  "ability:ABILITY_HUSTLE": {
-   "hs": "המולה",
-   "firered": "חריצות",
-   "why": "a wording choice, not a misspelling: H&S keeps its name; FireRed changed its own wording; המולה (commotion) is not the sense of the ability; open for a native read (DECISIONS Q136 candidate)"
-  },
-  "item:ITEM_BERRY_JUICE": {
-   "hs": "מיץ ברי",
-   "firered": "מיץ פירות",
-   "why": "a wording choice, not a misspelling: H&S keeps its name; FireRed changed its own wording"
-  },
-  "item:ITEM_EXP_SHARE": {
-   "hs": "חולק נסיון",
-   "firered": "חולק ניסיון",
-   "why": "spelling policy, not one name: the H&S text writes נסיון 66 times and ניסיון 17 times; FireRed moved to ניסיון; open for a native read (DECISIONS Q136 candidate)"
+   "why": "FireRed's חיתוך is already MOVE_CUT in H&S (FireRed has the same duplicate), and two moves cannot share a name; שיסוף also matches NIGHT SLASH שיסוף לילי and AIR SLASH שיסוף אוויר (DECISIONS Q140)"
   },
   "item:ITEM_CHESTO_BERRY": {
    "hs": "פרי צ'סטו",
    "firered": "פרי צ'סטרו",
-   "why": "H&S matches the English Chesto; FireRed's צ'סטרו adds an R"
+   "why": "a slip in FireRed: the English CHESTO has no R, and FireRed's צ'סטרו adds one (DECISIONS K6, Q140)"
   },
   "item:ITEM_IAPAPA_BERRY": {
    "hs": "פרי יאפאפה",
    "firered": "פרי יאיפאפה",
-   "why": "a transliteration choice; FireRed added a yod"
-  },
-  "item:ITEM_BERRY_POUCH": {
-   "hs": "פאוץ' פירות",
-   "firered": "נרתיק פירות",
-   "why": "a wording choice, not a misspelling: H&S keeps its name; FireRed changed its own wording"
+   "why": "the berry tag holds 6 bytes, so the stem is יאפאפה in both trees (FireRed src/berry.c too); H&S writes the bag name with the tag's stem so the two match (DECISIONS K6); FireRed's bag name differs from its own tag (Q140)"
   },
   "item:ITEM_POKEBLOCK_CASE": {
    "hs": "קופסת פוקיבלוק",
    "firered": "{POKEBLOCK} קופסת",
-   "why": "FireRed puts the {POKEBLOCK} token first for its own renderer; H&S keeps the reading order"
-  },
-  "type:TYPE_GHOST": {
-   "hs": "רוח",
-   "firered": "רפאים",
-   "why": "type names stay: an inherited row whose label is also drawn in graphics/types/*.png; H&S does not follow FireRed f5d0c2116"
-  },
-  "type:TYPE_PSYCHIC": {
-   "hs": "פסיכי",
-   "firered": "על-חושי",
-   "why": "type names stay: an inherited row whose label is also drawn in graphics/types/*.png; H&S does not follow FireRed f5d0c2116"
-  },
-  "trainer_class:TRAINER_CLASS_KINDLER": {
-   "hs": "מציתן",
-   "firered": "מבעיר",
-   "why": "a wording choice, not a misspelling: H&S keeps its name; FireRed changed its own wording"
+   "why": "FireRed writes the {POKEBLOCK} token first for its own renderer; H&S keeps the reading order (STYLE §5, DECISIONS Q140)"
   },
   "trainer_class:TRAINER_CLASS_ELITE_FOUR": {
    "hs": "רביעיית עלית",
    "firered": "רביעיית עילית",
-   "why": "spelling policy: עלית is the defective spelling of עילית, used in all 7 H&S uses; FireRed moved to עילית; open for a native read (DECISIONS Q136 candidate)"
+   "why": "FireRed's full spelling עילית is 13 bytes; a trainer class name holds 12 (include/data.h u8 name[13]); FireRed widened its array for it, which in H&S is an engine change (DECISIONS Q140)"
+  },
+  "move:MOVE_PSYCHO_BOOST": {
+   "hs": "דחף על-חושי",
+   "firered": "דחף פסיכי",
+   "why": "Psychic is על-חושי in every name (DECISIONS Q139), the PSYCHO moves too; FireRed renamed its type and its PSYCHIC move but left this name on the old word"
   }
  },
  "translit": {

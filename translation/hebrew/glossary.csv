@@ -259,8 +259,8 @@ species,SPECIES_OMANYTE,OMANYTE,אומנייט,אומנייט,inherited,FR match
 species,SPECIES_OMASTAR,OMASTAR,אומסטאר,אומסטאר,inherited,FR match: constant
 species,SPECIES_KABUTO,KABUTO,קאבוטו,קאבוטו,inherited,FR match: constant
 species,SPECIES_KABUTOPS,KABUTOPS,קאבוטופס,קאבוטופס,inherited,FR match: constant
-species,SPECIES_AERODACTYL,AERODACTYL,אירודקטייל,אירודקטיל,inherited,"FR match: constant; width: shortened from אירודקטייל (-tyl is /tɪl/, one yod (rules §3); changes inherited FireRed canon, unavoidable at 51 px > 50 in the dex list)"
-species,SPECIES_AERODACTYL_MEGA,AERODACTYL,אירודקטייל,אירודקטיל,inherited,NOT IN BUILD: entry compiled out of the hns ROM (all-zero/absent in gSpeciesInfo etc.); FR match: English via SPECIES_AERODACTYL; width: shortened from אירודקטייל (same as SPECIES_AERODACTYL; changes inherited FireRed canon)
+species,SPECIES_AERODACTYL,AERODACTYL,אירודקטייל,אירודקטייל,inherited,"FR match: constant; FireRed spelling (-tyl as טייל, as ITEM_AERODACTYLITE אירודקטייליט); 47 px in the 50 px lists and the 48 px healthbox; DECISIONS Q140 (FireRed naming conventions)"
+species,SPECIES_AERODACTYL_MEGA,AERODACTYL,אירודקטייל,אירודקטייל,inherited,NOT IN BUILD: entry compiled out of the hns ROM (all-zero/absent in gSpeciesInfo etc.); FR match: English via SPECIES_AERODACTYL; same as SPECIES_AERODACTYL (DECISIONS Q140 (FireRed naming conventions))
 species,SPECIES_MUNCHLAX,MUNCHLAX,,מאנצ'לקס,proposed,"Gen 4+ / form: take from pokemon-il.co.il Pokédex, else transliterate (naming rules); proposed: LAX chunk shared with SPECIES_SNORLAX (סנורלקס); munch: stressed /ʌ/ = א, ch = צ'; reviewed"
 species,SPECIES_SNORLAX,SNORLAX,סנורלקס,סנורלקס,inherited,FR match: constant
 species,SPECIES_SNORLAX_GMAX,SNORLAX,סנורלקס,סנורלקס,inherited,NOT IN BUILD: entry compiled out of the hns ROM (all-zero/absent in gSpeciesInfo etc.); FR match: English via SPECIES_SNORLAX
@@ -2306,7 +2306,7 @@ move,MOVE_KARATE_CHOP,KARATE CHOP,מכת קראטה,מכת קראטה,inherited,
 move,MOVE_DOUBLE_SLAP,DOUBLE SLAP,כפל סטירה,כפל סטירה,inherited,FR match: constant
 move,MOVE_COMET_PUNCH,COMET PUNCH,אגרוףשביט,אגרוף שביט,proposed,"spacing restored (FR removed the space for its 64 px cell, FR commit 9908ae109); 52 px FONT_NARROW, fits battle 64 / contest 59 (px = textwidth.py model on draft Hebrew widths, not seen on screen); reviewed (the join dates from FR 091d397f4; 9908ae109 kept it)"
 move,MOVE_MEGA_PUNCH,MEGA PUNCH,אגרוף על,אגרוף על,inherited,FR match: constant
-move,MOVE_PAY_DAY,PAY DAY,לוטו,לוטו,inherited,FR match: constant
+move,MOVE_PAY_DAY,PAY DAY,לוטו,גשם מטבע,proposed,FR match: constant; FireRed now גשם מטבע (DECISIONS Q140 (FireRed naming conventions))
 move,MOVE_FIRE_PUNCH,FIRE PUNCH,אגרוף אש,אגרוף אש,inherited,FR match: constant
 move,MOVE_ICE_PUNCH,ICE PUNCH,אגרוף קרח,אגרוף קרח,inherited,FR match: constant
 move,MOVE_THUNDER_PUNCH,THUNDER PUNCH,אגרוף רעם,אגרוף רעם,inherited,FR match: constant
@@ -2326,8 +2326,8 @@ move,MOVE_VINE_WHIP,VINE WHIP,שוט גפן,שוט גפן,inherited,FR match: co
 move,MOVE_STOMP,STOMP,רקיעה,רקיעה,inherited,FR match: constant
 move,MOVE_DOUBLE_KICK,DOUBLE KICK,כפל בעיטה,כפל בעיטה,inherited,FR match: constant
 move,MOVE_MEGA_KICK,MEGA KICK,בעיטת על,בעיטת על,inherited,FR match: constant
-move,MOVE_JUMP_KICK,JUMP KICK,קפוץבעיטה,קפוץ בעיטה,proposed,"spacing restored (FR removed the space for its 64 px cell, FR commit 9908ae109); FR wording kept although it reads imperative + noun (as HIGH JUMP KICK זנק בעיטה); alternative בעיטת קפיצה (59 px) for review; 53 px narrow; reviewed (the join dates from FR 091d397f4; 9908ae109 kept it)"
-move,MOVE_ROLLING_KICK,ROLLING KICK,בעיטתגלגל,בעיטת גלגל,proposed,"spacing restored; reviewed: row added in review, namecheck does not see this join because the first word ends in a non-final letter; the join dates from FR 091d397f4 and 9908ae109 kept it for its 64 px cell; 53 px narrow, fits battle 64 (textwidth.py draft widths, not seen on screen)"
+move,MOVE_JUMP_KICK,JUMP KICK,קפוץבעיטה,בעיטת קפיצה,proposed,FireRed בעיטתקפיצה with its space restored (FR drops it only for its 64 px cell); DECISIONS Q140 (FireRed naming conventions)
+move,MOVE_ROLLING_KICK,ROLLING KICK,בעיטתגלגל,בעיטת סיבוב,proposed,FireRed בעיטתסיבוב with its space restored (FR drops it only for its 64 px cell); DECISIONS Q140 (FireRed naming conventions)
 move,MOVE_SAND_ATTACK,SAND ATTACK,מתקפת חול,מתקפת חול,inherited,FR match: constant
 move,MOVE_HEADBUTT,HEADBUTT,נגיחה,נגיחה,inherited,FR match: constant
 move,MOVE_HORN_ATTACK,HORN ATTACK,מתקפת קרן,מתקפת קרן,inherited,FR match: constant
@@ -2368,7 +2368,7 @@ move,MOVE_PECK,PECK,ניקור,ניקור,inherited,FR match: constant
 move,MOVE_DRILL_PECK,DRILL PECK,ניקור קדח,ניקור קדח,inherited,FR match: constant
 move,MOVE_SUBMISSION,SUBMISSION,כניעה,כניעה,inherited,FR match: constant
 move,MOVE_LOW_KICK,LOW KICK,בעיטה נמוכה,בעיטה נמוכה,inherited,FR match: constant
-move,MOVE_COUNTER,COUNTER,נגידה,נגידה,inherited,FR match: constant
+move,MOVE_COUNTER,COUNTER,נגידה,מתקפת נגד,proposed,FR match: constant; FireRed now מתקפת נגד (DECISIONS Q140 (FireRed naming conventions))
 move,MOVE_SEISMIC_TOSS,SEISMIC TOSS,מכה ססמית,מכה ססמית,inherited,FR match: constant
 move,MOVE_STRENGTH,STRENGTH,עוצמה,עוצמה,inherited,FR match: constant
 move,MOVE_ABSORB,ABSORB,יניקה,יניקה,inherited,FR match: constant
@@ -2394,7 +2394,7 @@ move,MOVE_FISSURE,FISSURE,בולען,בולען,inherited,FR match: constant
 move,MOVE_DIG,DIG,התחפרות,התחפרות,inherited,FR match: constant
 move,MOVE_TOXIC,TOXIC,הרעלה,הרעלה,inherited,FR match: constant
 move,MOVE_CONFUSION,CONFUSION,אנדרלמוסיה,אנדרלמוסיה,inherited,FR match: constant
-move,MOVE_PSYCHIC,PSYCHIC,אשליה,אשליה,inherited,FR match: constant
+move,MOVE_PSYCHIC,PSYCHIC,אשליה,כוח על-חושי,proposed,FR match: constant; FireRed now כוחעל חושי (space dropped for its cell); DECISIONS Q139 (Psychic is על-חושי)
 move,MOVE_HYPNOSIS,HYPNOSIS,היפנוזה,היפנוזה,inherited,FR match: constant
 move,MOVE_MEDITATE,MEDITATE,מדיטציה,מדיטציה,inherited,FR match: constant
 move,MOVE_AGILITY,AGILITY,זריזות,זריזות,inherited,FR match: constant
@@ -2420,7 +2420,7 @@ move,MOVE_FOCUS_ENERGY,FOCUS ENERGY,רכזאנרגיה,רכז אנרגיה,propo
 move,MOVE_BIDE,BIDE,סבלנות,סבלנות,inherited,FR match: constant
 move,MOVE_METRONOME,METRONOME,פעמן,פעמן,inherited,FR match: constant
 move,MOVE_MIRROR_MOVE,MIRROR MOVE,העתקתמהלך,העתקת מהלך,proposed,"spacing restored; reviewed: row added in review, namecheck does not see this join because the first word ends in a non-final letter; the join dates from FR 091d397f4 and 9908ae109 kept it for its 64 px cell; 56 px narrow, fits battle 64 (textwidth.py draft widths, not seen on screen)"
-move,MOVE_SELF_DESTRUCT,SELF-DESTRUCT,השמדעצמית,השמדה עצמית,proposed,"spacing restored; reviewed: row added in review, namecheck does not see this join because the first word ends in a non-final letter; the join dates from FR 091d397f4 and 9908ae109 kept it for its 64 px cell; 62 px narrow, fits battle 64; contest 59 and bag TM 61 fall back to FONT_NARROWER (53 px) (textwidth.py draft widths, not seen on screen); also restores the ה: FR השמד עצמית drops a letter and breaks gender agreement, the same fix FR 9908ae109 made for נשיקה מתוקה"
+move,MOVE_SELF_DESTRUCT,SELF-DESTRUCT,השמדעצמית,פיצוץ עצמי,proposed,FireRed now פיצוץ עצמי (DECISIONS Q140 (FireRed naming conventions))
 move,MOVE_EGG_BOMB,EGG BOMB,פצצת ביצה,פצצת ביצה,inherited,FR match: constant
 move,MOVE_LICK,LICK,ליקוק,ליקוק,inherited,FR match: constant
 move,MOVE_SMOG,SMOG,ערפיח,ערפיח,inherited,FR match: constant
@@ -2429,13 +2429,13 @@ move,MOVE_BONE_CLUB,BONE CLUB,מחבט עצם,מחבט עצם,inherited,FR match
 move,MOVE_FIRE_BLAST,FIRE BLAST,אש מתפרצת,אש מתפרצת,inherited,FR match: constant
 move,MOVE_WATERFALL,WATERFALL,מפל מים,מפל מים,inherited,FR match: constant
 move,MOVE_CLAMP,CLAMP,הידוק,הידוק,inherited,FR match: constant
-move,MOVE_SWIFT,SWIFT,חיש קל,חיש קל,inherited,FR match: constant
+move,MOVE_SWIFT,SWIFT,חיש קל,מטר כוכבים,proposed,FR match: constant; FireRed now מטר כוכבים (DECISIONS Q140 (FireRed naming conventions))
 move,MOVE_SKULL_BASH,SKULL BASH,רצץ גולגלת,רצץ גולגלת,inherited,FR match: constant
 move,MOVE_SPIKE_CANNON,SPIKE CANNON,ירי דורבן,ירי דורבן,inherited,FR match: constant
-move,MOVE_CONSTRICT,CONSTRICT,הגבלה,הגבלה,inherited,FR match: constant
+move,MOVE_CONSTRICT,CONSTRICT,הגבלה,כיווץ,proposed,FR match: constant; FireRed now כיווץ (DECISIONS Q140 (FireRed naming conventions))
 move,MOVE_AMNESIA,AMNESIA,שיכחון,שיכחון,inherited,FR match: constant
-move,MOVE_KINESIS,KINESIS,זיע,זיע,inherited,FR match: constant
-move,MOVE_SOFT_BOILED,SOFT-BOILED,הטלת ביצה,הטלת ביצה,inherited,FR match: constant
+move,MOVE_KINESIS,KINESIS,זיע,כיפוף כפית,proposed,FR match: constant; FireRed now כיפוף כפית (DECISIONS Q140 (FireRed naming conventions))
+move,MOVE_SOFT_BOILED,SOFT-BOILED,הטלת ביצה,ביצה רכה,proposed,FR match: constant; FireRed now ביצה רכה (DECISIONS Q140 (FireRed naming conventions))
 move,MOVE_HIGH_JUMP_KICK,HIGH JUMP KICK,זנק בעיטה,זנק בעיטה,inherited,FR match: constant MOVE_HI_JUMP_KICK; English renamed since Gen 3 (FR 'HI JUMP KICK')
 move,MOVE_GLARE,GLARE,נעיצת מבט,נעיצת מבט,inherited,FR match: constant
 move,MOVE_DREAM_EATER,DREAM EATER,זלילתחלום,זלילת חלום,proposed,"spacing restored; reviewed: row added in review, namecheck does not see this join because the first word ends in a non-final letter; the join dates from FR 091d397f4 and 9908ae109 kept it for its 64 px cell; 52 px narrow, fits battle 64 (textwidth.py draft widths, not seen on screen)"
@@ -2467,7 +2467,7 @@ move,MOVE_SLASH,SLASH,חיתוך,שיסוף,proposed,"renamed: FR gave CUT and S
 move,MOVE_SUBSTITUTE,SUBSTITUTE,ממלא מקום,ממלא מקום,inherited,FR match: constant
 move,MOVE_STRUGGLE,STRUGGLE,מאבק,מאבק,inherited,FR match: constant
 move,MOVE_SKETCH,SKETCH,שרטוט,שרטוט,inherited,FR match: constant
-move,MOVE_TRIPLE_KICK,TRIPLE KICK,משולשבעיטה,משולש בעיטה,proposed,"spacing restored; reviewed: row added in review, namecheck does not see this join because the first word ends in a non-final letter; the join dates from FR 091d397f4 and 9908ae109 kept it for its 64 px cell; 61 px narrow, fits battle 64; contest 59 and bag TM 61 fall back to FONT_NARROWER (53 px) (textwidth.py draft widths, not seen on screen); FR wording kept although it reads noun + noun (a triangle of kick); alternative בעיטה משולשת (12 bytes, 67 px narrow, 58 narrower) for review"
+move,MOVE_TRIPLE_KICK,TRIPLE KICK,משולשבעיטה,תלת בעיטה,proposed,FireRed now תלת בעיטה (DECISIONS Q140 (FireRed naming conventions))
 move,MOVE_THIEF,THIEF,גניבה,גניבה,inherited,FR match: constant
 move,MOVE_SPIDER_WEB,SPIDER WEB,קוריעכביש,קורי עכביש,proposed,"spacing restored; reviewed: row added in review, namecheck does not see this join because the first word ends in a non-final letter; the join dates from FR 091d397f4 and 9908ae109 kept it for its 64 px cell; 50 px narrow, fits battle 64 (textwidth.py draft widths, not seen on screen)"
 move,MOVE_MIND_READER,MIND READER,קוראמחשבה,קורא מחשבה,proposed,"spacing restored; reviewed: row added in review, namecheck does not see this join because the first word ends in a non-final letter; the join dates from FR 091d397f4 and 9908ae109 kept it for its 64 px cell; 55 px narrow, fits battle 64 (textwidth.py draft widths, not seen on screen); FR wording kept; alternative קורא מחשבות (59 px narrow)"
@@ -2484,7 +2484,7 @@ move,MOVE_SPITE,SPITE,נקמנות,נקמנות,inherited,FR match: constant
 move,MOVE_POWDER_SNOW,POWDER SNOW,אבק שלג,אבק שלג,inherited,FR match: constant
 move,MOVE_PROTECT,PROTECT,הגנה,הגנה,inherited,FR match: constant
 move,MOVE_MACH_PUNCH,MACH PUNCH,אגרוף מאך,אגרוף מאך,inherited,FR match: constant
-move,MOVE_SCARY_FACE,SCARY FACE,פרצוףמפחיד,פרצוף מפחיד,proposed,"spacing restored (FR removed the space for its 64 px cell, FR commit 9908ae109); 58 px narrow; reviewed (the join dates from FR 091d397f4; 9908ae109 kept it)"
+move,MOVE_SCARY_FACE,SCARY FACE,פרצוףמפחיד,פני אימה,proposed,FireRed now פני אימה (DECISIONS Q140 (FireRed naming conventions))
 move,MOVE_FEINT_ATTACK,FEINT ATTACK,התקף צל,התקף צל,inherited,FR match: constant MOVE_FAINT_ATTACK; English renamed since Gen 3 (FR 'FAINT ATTACK')
 move,MOVE_SWEET_KISS,SWEET KISS,נשיקה מתוקה,נשיקה מתוקה,inherited,FR match: constant
 move,MOVE_BELLY_DRUM,BELLY DRUM,תוף בטן,תוף בטן,inherited,FR match: constant
@@ -2522,7 +2522,7 @@ move,MOVE_FRUSTRATION,FRUSTRATION,תסכול,תסכול,inherited,FR match: cons
 move,MOVE_SAFEGUARD,SAFEGUARD,שמירה,שמירה,inherited,FR match: constant
 move,MOVE_PAIN_SPLIT,PAIN SPLIT,חלוקת כאב,חלוקת כאב,inherited,FR match: constant
 move,MOVE_SACRED_FIRE,SACRED FIRE,אש קדושה,אש קדושה,inherited,FR match: constant
-move,MOVE_MAGNITUDE,MAGNITUDE,עוצמה,עוצמת רעידה,proposed,"renamed: FR gave STRENGTH and MAGNITUDE the same name; STRENGTH keeps עוצמה; MAGNITUDE keeps FR's word and adds ""quake"" (Hebrew reports quakes as רעידה בעוצמה 5), chunk רעידה as EARTHQUAKE רעידת אדמה (spaced in this file) and done MAX QUAKE רעידת מקס; 58 px narrow; alternative מגניטודה (41 px); reviewed"
+move,MOVE_MAGNITUDE,MAGNITUDE,עוצמה,עוצמת רעש,proposed,FireRed now עוצמת רעש (DECISIONS Q140 (FireRed naming conventions)); STRENGTH keeps עוצמה
 move,MOVE_DYNAMIC_PUNCH,DYNAMIC PUNCH,אגרוףדינמי,אגרוף דינמי,proposed,"spacing restored (FR removed the space for its 64 px cell, FR commit 9908ae109); 53 px narrow; reviewed (the join dates from FR 091d397f4; 9908ae109 kept it)"
 move,MOVE_MEGAHORN,MEGAHORN,קרן ענק,קרן ענק,inherited,FR match: constant
 move,MOVE_DRAGON_BREATH,DRAGON BREATH,נשימתדרקון,נשימת דרקון,proposed,"spacing restored; reviewed: row added in review, namecheck does not see this join because the first word ends in a non-final letter; the join dates from FR 091d397f4 and 9908ae109 kept it for its 64 px cell; 55 px narrow, fits battle 64 (textwidth.py draft widths, not seen on screen)"
@@ -2585,7 +2585,7 @@ move,MOVE_YAWN,YAWN,פיהוק,פיהוק,inherited,FR match: constant
 move,MOVE_KNOCK_OFF,KNOCK OFF,הפלה,הפלה,inherited,FR match: constant
 move,MOVE_ENDEAVOR,ENDEAVOR,מאמץ,מאמץ,inherited,FR match: constant
 move,MOVE_ERUPTION,ERUPTION,התפרצות,התפרצות,inherited,FR match: constant
-move,MOVE_SKILL_SWAP,SKILL SWAP,חילוףסגולה,חילוף סגולה,proposed,"spacing restored (FR removed the space for its 64 px cell, FR commit 9908ae109); 56 px narrow; reviewed (the join dates from FR 091d397f4; 9908ae109 kept it)"
+move,MOVE_SKILL_SWAP,SKILL SWAP,חילוףסגולה,חילוף יכולת,proposed,FireRed חילוףיכולת with its space restored; יכולת is the ability term (STYLE §3); DECISIONS Q140 (FireRed naming conventions)
 move,MOVE_IMPRISON,IMPRISON,כליאה,כליאה,inherited,FR match: constant
 move,MOVE_REFRESH,REFRESH,רענון,רענון,inherited,FR match: constant
 move,MOVE_GRUDGE,GRUDGE,טינה,טינה,inherited,FR match: constant
@@ -2620,14 +2620,14 @@ move,MOVE_ODOR_SLEUTH,ODOR SLEUTH,חוקר ריח,חוקר ריח,inherited,FR m
 move,MOVE_ROCK_TOMB,ROCK TOMB,קבר סלע,קבר סלע,inherited,FR match: constant
 move,MOVE_SILVER_WIND,SILVER WIND,רוח כסף,רוח כסף,inherited,FR match: constant
 move,MOVE_METAL_SOUND,METAL SOUND,צליל מתכת,צליל מתכת,inherited,FR match: constant
-move,MOVE_GRASS_WHISTLE,GRASS WHISTLE,משרוקיתעשב,משרוקית עשב,proposed,"spacing restored; reviewed: row added in review, namecheck does not see this join because the first word ends in a non-final letter; the join dates from FR 091d397f4 and 9908ae109 kept it for its 64 px cell; 60 px narrow, fits battle 64; contest 59 and bag TM 61 fall back to FONT_NARROWER (53 px) (textwidth.py draft widths, not seen on screen)"
+move,MOVE_GRASS_WHISTLE,GRASS WHISTLE,משרוקיתעשב,שריקת עשב,proposed,FireRed now שריקת עשב (DECISIONS Q140 (FireRed naming conventions))
 move,MOVE_TICKLE,TICKLE,דגדוג,דגדוג,inherited,FR match: constant
 move,MOVE_COSMIC_POWER,COSMIC POWER,כוח קוסמי,כוח קוסמי,inherited,FR match: constant
 move,MOVE_WATER_SPOUT,WATER SPOUT,סילון מים,סילון מים,inherited,FR match: constant
 move,MOVE_SIGNAL_BEAM,SIGNAL BEAM,קרן איתות,קרן איתות,inherited,FR match: constant
 move,MOVE_SHADOW_PUNCH,SHADOW PUNCH,אגרוף צל,אגרוף צל,inherited,FR match: constant
 move,MOVE_EXTRASENSORY,EXTRASENSORY,חוש נוסף,חוש נוסף,inherited,FR match: constant
-move,MOVE_SKY_UPPERCUT,SKY UPPERCUT,אפרקטשמים,אפרקט שמים,proposed,"spacing restored; reviewed: row added in review, namecheck does not see this join because the first word ends in a non-final letter; the join dates from FR 091d397f4 and 9908ae109 kept it for its 64 px cell; 55 px narrow, fits battle 64 (textwidth.py draft widths, not seen on screen)"
+move,MOVE_SKY_UPPERCUT,SKY UPPERCUT,אפרקטשמים,אגרוף שמים,proposed,FireRed now אגרוף שמים (DECISIONS Q140 (FireRed naming conventions))
 move,MOVE_SAND_TOMB,SAND TOMB,קבר חול,קבר חול,inherited,FR match: constant
 move,MOVE_SHEER_COLD,SHEER COLD,קור מוחלט,קור מוחלט,inherited,FR match: constant
 move,MOVE_MUDDY_WATER,MUDDY WATER,מיםעכורים,מים עכורים,proposed,"spacing restored (FR removed the space for its 64 px cell, FR commit 9908ae109); 49 px narrow; reviewed (the join dates from FR 091d397f4; 9908ae109 kept it)"
@@ -2654,7 +2654,7 @@ move,MOVE_ROCK_BLAST,ROCK BLAST,פיצוץ סלע,פיצוץ סלע,inherited,FR
 move,MOVE_SHOCK_WAVE,SHOCK WAVE,גל הלם,גל הלם,inherited,FR match: constant
 move,MOVE_WATER_PULSE,WATER PULSE,דופק מים,דופק מים,inherited,FR match: constant
 move,MOVE_DOOM_DESIRE,DOOM DESIRE,חשק אבדון,חשק אבדון,inherited,FR match: constant
-move,MOVE_PSYCHO_BOOST,PSYCHO BOOST,דחף פסיכי,דחף פסיכי,inherited,FR match: constant
+move,MOVE_PSYCHO_BOOST,PSYCHO BOOST,דחף פסיכי,דחף על-חושי,proposed,"FR match: constant; FireRed still דחף פסיכי; the Psychic word here too, as every PSYCHO move (DECISIONS Q139 (Psychic is על-חושי)); allowlisted"
 move,MOVE_ROOST,ROOST,,מנוחת כנף,proposed,"meaning: a bird landing to rest; REST is מנוחה, WING is כנף (WING ATTACK); reviewed"
 move,MOVE_GRAVITY,GRAVITY,,כבידה,proposed,reviewed
 move,MOVE_MIRACLE_EYE,MIRACLE EYE,,עין פלא,proposed,chunk MIRACLE=פלא shared with ITEM_MIRACLE_SEED; reviewed
@@ -2675,7 +2675,7 @@ move,MOVE_PAYBACK,PAYBACK,,סגירת חשבון,proposed,meaning: settling a sc
 move,MOVE_ASSURANCE,ASSURANCE,,וידוא פגיעה,proposed,meaning: making sure (of the hit); הבטחה reads as promise; reviewed
 move,MOVE_EMBARGO,EMBARGO,,אמברגו,proposed,the Hebrew word is the loanword; reviewed
 move,MOVE_FLING,FLING,,השלכה,proposed,reviewed
-move,MOVE_PSYCHO_SHIFT,PSYCHO SHIFT,,הסטה פסיכית,proposed,chunk PSYCHO=פסיכי (PSYCHO BOOST); SHIFT=הסטה; reviewed
+move,MOVE_PSYCHO_SHIFT,PSYCHO SHIFT,,הסטת על-חוש,proposed,"chunk PSYCHO = the noun על-חוש (PSYBEAM קרן על-חוש, PSYSTRIKE מכת על-חוש); SHIFT = הסטה; הסטה על-חושית is 77 px > 72; DECISIONS Q139 (Psychic is על-חושי)"
 move,MOVE_TRUMP_CARD,TRUMP CARD,,קלף מנצח,proposed,meaning: the Hebrew idiom for a trump card; reviewed
 move,MOVE_HEAL_BLOCK,HEAL BLOCK,,חסימת ריפוי,proposed,"chunk BLOCK=חסימה (MOVE_BLOCK), HEAL=ריפוי; reviewed"
 move,MOVE_WRING_OUT,WRING OUT,,סחיטה,proposed,reviewed
@@ -2727,7 +2727,7 @@ move,MOVE_ICE_FANG,ICE FANG,,ניב קרח,proposed,"chunk FANG=ניב, ICE=קר
 move,MOVE_FIRE_FANG,FIRE FANG,,ניב אש,proposed,"chunk FANG=ניב, FIRE=אש; reviewed"
 move,MOVE_SHADOW_SNEAK,SHADOW SNEAK,,התגנבות צל,proposed,chunk SHADOW=צל; reviewed
 move,MOVE_MUD_BOMB,MUD BOMB,,פצצת בוץ,proposed,"chunk BOMB=פצצת, MUD=בוץ; reviewed"
-move,MOVE_PSYCHO_CUT,PSYCHO CUT,,חיתוך פסיכי,proposed,"chunk CUT=חיתוך (MOVE_CUT), PSYCHO=פסיכי; reviewed"
+move,MOVE_PSYCHO_CUT,PSYCHO CUT,,חיתוך על-חושי,proposed,"chunk CUT = חיתוך (MOVE_CUT), PSYCHO = על-חושי (TYPE_PSYCHIC); DECISIONS Q139 (Psychic is על-חושי)"
 move,MOVE_ZEN_HEADBUTT,ZEN HEADBUTT,,נגיחת זן,proposed,chunk HEADBUTT=נגיחה; reviewed
 move,MOVE_MIRROR_SHOT,MIRROR SHOT,,ירי מראה,proposed,"chunk SHOT=ירי (MUD SHOT), MIRROR=מראה (MIRROR COAT); reviewed"
 move,MOVE_FLASH_CANNON,FLASH CANNON,,תותח הבזק,proposed,"chunk CANNON=תותח (ZAP/HYDRO CANNON), FLASH=הבזק; reviewed"
@@ -2880,7 +2880,7 @@ move,MOVE_TOPSY_TURVY,TOPSY-TURVY,,הפוך על הפוך,proposed,Hebrew idiom 
 move,MOVE_DRAINING_KISS,DRAINING KISS,,נשיקה שואבת,proposed,chunk KISS=נשיקה (MOVE_SWEET_KISS); שואבת not יונקת (hickey connotation); reviewed
 move,MOVE_CRAFTY_SHIELD,CRAFTY SHIELD,,מגן ערמומי,proposed,SHIELD=מגן (ITEM_RUSTED_SHIELD); reviewed
 move,MOVE_FLOWER_SHIELD,FLOWER SHIELD,,מגן פרחים,proposed,SHIELD=מגן; reviewed
-move,MOVE_GRASSY_TERRAIN,GRASSY TERRAIN,,שטח עשבוני,proposed,TERRAIN=שטח (ITEM_TERRAIN_EXTENDER); terrain set: חשמלי/עשבוני/ערפילי/פסיכי; reviewed
+move,MOVE_GRASSY_TERRAIN,GRASSY TERRAIN,,שטח עשבוני,proposed,TERRAIN=שטח (ITEM_TERRAIN_EXTENDER); terrain set: חשמלי/עשבוני/ערפילי/על-חושי; reviewed
 move,MOVE_MISTY_TERRAIN,MISTY TERRAIN,,שטח ערפילי,proposed,TERRAIN=שטח; MIST=ערפל (MOVE_MIST); reviewed
 move,MOVE_ELECTRIFY,ELECTRIFY,,חישמול,proposed,meaning; reviewed
 move,MOVE_PLAY_ROUGH,PLAY ROUGH,,משחק גס,proposed,PLAY=משחק (MOVE_WATER_SPORT); pairs with MOVE_PLAY_NICE; reviewed
@@ -2941,7 +2941,7 @@ move,MOVE_GEAR_UP,GEAR UP,,העלאת הילוך,proposed,Hebrew idiom stepping 
 move,MOVE_THROAT_CHOP,THROAT CHOP,,מכת גרון,proposed,CHOP=מכה as MOVE_KARATE_CHOP מכת קראטה; reviewed
 move,MOVE_POLLEN_PUFF,POLLEN PUFF,,נשיפת אבקה,proposed,meaning: puff of pollen (pollen=אבקה); reviewed
 move,MOVE_ANCHOR_SHOT,ANCHOR SHOT,,ירי עוגן,proposed,chunk SHOT=ירי (MOVE_MUD_SHOT); reviewed
-move,MOVE_PSYCHIC_TERRAIN,PSYCHIC TERRAIN,,שטח פסיכי,proposed,TERRAIN=שטח; PSYCHIC=פסיכי (type); reviewed
+move,MOVE_PSYCHIC_TERRAIN,PSYCHIC TERRAIN,,שטח על-חושי,proposed,"TERRAIN = שטח; PSYCHIC = על-חושי (TYPE_PSYCHIC), terrain set חשמלי/עשבוני/ערפילי/על-חושי; DECISIONS Q139 (Psychic is על-חושי)"
 move,MOVE_LUNGE,LUNGE,,זינוק,proposed,meaning; reviewed
 move,MOVE_FIRE_LASH,FIRE LASH,,שוט אש,proposed,LASH=whip=שוט (MOVE_VINE_WHIP); FIRE=אש; reviewed
 move,MOVE_POWER_TRIP,POWER TRIP,,שכרון כוח,proposed,Hebrew idiom for power trip; reviewed
@@ -2960,7 +2960,7 @@ move,MOVE_BRUTAL_SWING,BRUTAL SWING,,תנופה אכזרית,proposed,meaning; r
 move,MOVE_AURORA_VEIL,AURORA VEIL,,צעיף זוהר,proposed,"meaning; AURORA = זוהר (MOVE_AURORA_BEAM, ITEM_AURORA_TICKET); VEIL = צעיף (ABILITY_WATER_VEIL); reviewed"
 move,MOVE_SHELL_TRAP,SHELL TRAP,,מלכודת קונכיה,proposed,meaning; SHELL = קונכיה (ABILITY_SHELL_ARMOR); TRAP = מלכודת (ABILITY_ARENA_TRAP); reviewed
 move,MOVE_FLEUR_CANNON,FLEUR CANNON,,תותח פרחים,proposed,"meaning (fleur = flower); CANNON = תותח (MOVE_HYDRO_CANNON, MOVE_ZAP_CANNON); reviewed"
-move,MOVE_PSYCHIC_FANGS,PSYCHIC FANGS,,ניבים פסיכיים,proposed,"meaning; FANG = ניב (MOVE_POISON_FANG, MOVE_HYPER_FANG); PSYCHIC = פסיכי (TYPE_PSYCHIC); align MOVE_FIRE/ICE/THUNDER_FANG; reviewed"
+move,MOVE_PSYCHIC_FANGS,PSYCHIC FANGS,,ניב על-חושי,proposed,singular like ניב אש / ניב קרח / ניב רעם / ניב רעל; ניבים על-חושיים is 62 px > 59 contest list; DECISIONS Q139 (Psychic is על-חושי)
 move,MOVE_STOMPING_TANTRUM,STOMPING TANTRUM,,רקיעת זעם,proposed,meaning; STOMP = רקיעה (MOVE_STOMP); tantrum = fit of rage; reviewed
 move,MOVE_SHADOW_BONE,SHADOW BONE,,עצם צל,proposed,meaning; SHADOW = צל (MOVE_SHADOW_BALL); BONE = עצם (MOVE_BONE_CLUB); reviewed
 move,MOVE_ACCELEROCK,ACCELEROCK,,סלע מואץ,proposed,meaning (accelerate + rock); reviewed
@@ -3056,8 +3056,8 @@ move,MOVE_GLACIAL_LANCE,GLACIAL LANCE,,רומח קרחוני,proposed,meaning; l
 move,MOVE_ASTRAL_BARRAGE,ASTRAL BARRAGE,,מטח אסטרלי,proposed,meaning; barrage = מטח (FR BARRAGE ידוי אבן is a stone volley); reviewed
 move,MOVE_EERIE_SPELL,EERIE SPELL,,כישוף מצמרר,proposed,meaning; reviewed
 move,MOVE_DIRE_CLAW,DIRE CLAW,,טופר אימה,proposed,"meaning; CLAW = טופר (MOVE_METAL_CLAW, ITEM_QUICK_CLAW); dire = אימה (ITEM_DREAD_PLATE); reviewed"
-move,MOVE_PSYSHIELD_BASH,PSYSHIELD BASH,,מכת מגן פסיכי,proposed,"meaning; PSY = פסיכי (TYPE_PSYCHIC); BASH = מכה; 58 px; reviewed; the PSY- prefix is על-חוש elsewhere (MOVE_PSYSHOCK, MOVE_PSYBLADE) but מכת מגן על-חוש is 64 px > 59"
-move,MOVE_POWER_SHIFT,POWER SHIFT,,הסטת כוח,proposed,"meaning; SHIFT = הסטה (MOVE_PSYCHO_SHIFT הסטה פסיכית); POWER SWAP is חילוף כוח, POWER TRICK תעלול כוח; reviewed: note corrected"
+move,MOVE_PSYSHIELD_BASH,PSYSHIELD BASH,,חבטת על-חוש,proposed,"PSY = the noun על-חוש (PSYSHOCK, PSYBLADE); BASH = חבטה; מכת מגן על-חוש is 62 px > 59 contest list, מכת מגן על-חושי 65 px > 64 battle; DECISIONS Q139 (Psychic is על-חושי)"
+move,MOVE_POWER_SHIFT,POWER SHIFT,,הסטת כוח,proposed,"meaning; SHIFT = הסטה (MOVE_PSYCHO_SHIFT הסטת על-חוש); POWER SWAP is חילוף כוח, POWER TRICK תעלול כוח; reviewed: note corrected"
 move,MOVE_STONE_AXE,STONE AXE,,גרזן אבן,proposed,meaning; reviewed
 move,MOVE_SPRINGTIDE_STORM,SPRINGTIDE STORM,,סופת אביב,proposed,"meaning; STORM = סופה (MOVE_SANDSTORM, MOVE_BLIZZARD); spring = אביב (MOVE_PETAL_DANCE מחול אביב); reviewed"
 move,MOVE_MYSTICAL_POWER,MYSTICAL POWER,,כוח מיסטי,proposed,meaning; POWER = כוח (MOVE_HIDDEN_POWER); reviewed
@@ -3145,7 +3145,7 @@ move,MOVE_DRAGON_CHEER,DRAGON CHEER,,עידוד דרקון,proposed,"meaning; CH
 move,MOVE_ALLURING_VOICE,ALLURING VOICE,,קול מפתה,proposed,meaning; VOICE = קול as MOVE_HYPER_VOICE קול על; reviewed
 move,MOVE_TEMPER_FLARE,TEMPER FLARE,,התפרצות זעם,proposed,meaning: the idiom for a flare of temper; distinct from MOVE_STOMPING_TANTRUM רקיעת זעם and MOVE_RAGING_FURY זעם משתולל; reviewed
 move,MOVE_SUPERCELL_SLAM,SUPERCELL SLAM,,מהלומת סופה,proposed,"meaning, shortened: supercell (thunderstorm cell) -> סופה, SLAM = מהלומה as MOVE_SLAM; סופת-על was 65 px; reviewed"
-move,MOVE_PSYCHIC_NOISE,PSYCHIC NOISE,,רעש פסיכי,proposed,meaning; PSYCHIC = פסיכי (TYPE_PSYCHIC) as MOVE_PSYCHO_BOOST דחף פסיכי; NOISE = רעש as DEXCAT_LOUDNOISE; reviewed
+move,MOVE_PSYCHIC_NOISE,PSYCHIC NOISE,,רעש על-חושי,proposed,PSYCHIC = על-חושי (TYPE_PSYCHIC); NOISE = רעש as DEXCAT_LOUDNOISE; DECISIONS Q139 (Psychic is על-חושי)
 move,MOVE_UPPER_HAND,UPPER HAND,,יד עליונה,proposed,meaning: the Hebrew idiom for the upper hand; reviewed
 move,MOVE_MALIGNANT_CHAIN,MALIGNANT CHAIN,,שרשרת ממאירה,proposed,"meaning; reviewed; 59 px, exactly at the contest budget"
 move,MOVE_BREAKNECK_BLITZ,BREAKNECK BLITZ,,הסתערות בזק,proposed,"Z-move, meaning: blitz at breakneck (dizzying) speed; reviewed; width: shortened from הסתערות מסחררת (BLITZ = הסתערות; breakneck speed = בזק, as in מלחמת בזק (blitzkrieg))"
@@ -3248,7 +3248,7 @@ ability,ABILITY_STATIC,STATIC,סטטי,סטטי,inherited,FR match: constant
 ability,ABILITY_VOLT_ABSORB,VOLT ABSORB,ספיגת וולט,ספיגת וולט,inherited,FR match: constant
 ability,ABILITY_WATER_ABSORB,WATER ABSORB,ספיגת מים,ספיגת מים,inherited,FR match: constant
 ability,ABILITY_OBLIVIOUS,OBLIVIOUS,תמים,תמים,inherited,FR match: constant
-ability,ABILITY_CLOUD_NINE,CLOUD NINE,ענן תשע,ענן תשע,inherited,FR match: constant
+ability,ABILITY_CLOUD_NINE,CLOUD NINE,ענן תשע,ביטול מזג,proposed,FR match: constant; FireRed now ביטול מזג (DECISIONS Q140 (FireRed naming conventions))
 ability,ABILITY_COMPOUND_EYES,COMPOUND EYES,עין מורכבת,עין מורכבת,inherited,FR match: constant
 ability,ABILITY_INSOMNIA,INSOMNIA,נדודי שינה,נדודי שינה,inherited,FR match: constant
 ability,ABILITY_COLOR_CHANGE,COLOR CHANGE,שינוי צבע,שינוי צבע,inherited,FR match: constant
@@ -3271,7 +3271,7 @@ ability,ABILITY_SERENE_GRACE,SERENE GRACE,חסד שליו,חסד שליו,inheri
 ability,ABILITY_SWIFT_SWIM,SWIFT SWIM,שחייה מהירה,שחייה מהירה,inherited,FR match: constant
 ability,ABILITY_CHLOROPHYLL,CHLOROPHYLL,כלורופיל,כלורופיל,inherited,FR match: constant
 ability,ABILITY_ILLUMINATE,ILLUMINATE,הארה,הארה,inherited,FR match: constant
-ability,ABILITY_TRACE,TRACE,עקבות,עקבות,inherited,FR match: constant
+ability,ABILITY_TRACE,TRACE,עקבות,שעתוק,proposed,FR match: constant; FireRed now שעתוק (DECISIONS Q140 (FireRed naming conventions))
 ability,ABILITY_HUGE_POWER,HUGE POWER,כוח עצום,כוח עצום,inherited,FR match: constant
 ability,ABILITY_POISON_POINT,POISON POINT,נקודת רעל,נקודת רעל,inherited,FR match: constant
 ability,ABILITY_INNER_FOCUS,INNER FOCUS,מיקוד פנימי,מיקוד פנימי,inherited,FR match: constant
@@ -3283,14 +3283,14 @@ ability,ABILITY_RAIN_DISH,RAIN DISH,צלחת גשם,צלחת גשם,inherited,FR
 ability,ABILITY_SAND_STREAM,SAND STREAM,זרם חול,זרם חול,inherited,FR match: constant
 ability,ABILITY_PRESSURE,PRESSURE,לחץ,לחץ,inherited,FR match: constant
 ability,ABILITY_THICK_FAT,THICK FAT,שומן עבה,שומן עבה,inherited,FR match: constant
-ability,ABILITY_EARLY_BIRD,EARLY BIRD,ציפור מקדים,ציפור מקדימה,proposed,"FR match: constant; ציפור is feminine, so the inherited מקדים lost the ה of מקדימה. FireRed now uses the idiom משכימת קום; H&S keeps its wording"
+ability,ABILITY_EARLY_BIRD,EARLY BIRD,ציפור מקדים,משכימת קום,proposed,FR match: constant; FireRed now משכימת קום (DECISIONS Q140 (FireRed naming conventions)); replaces ציפור מקדימה (Q136)
 ability,ABILITY_FLAME_BODY,FLAME BODY,גוף להבה,גוף להבה,inherited,FR match: constant
 ability,ABILITY_RUN_AWAY,RUN AWAY,בריחה,בריחה,inherited,FR match: constant
 ability,ABILITY_KEEN_EYE,KEEN EYE,עין חדה,עין חדה,inherited,FR match: constant
 ability,ABILITY_HYPER_CUTTER,HYPER CUTTER,על חותך,על חותך,inherited,FR match: constant
 ability,ABILITY_PICKUP,PICKUP,איסוף,איסוף,inherited,FR match: constant
 ability,ABILITY_TRUANT,TRUANT,עצלן,עצלן,inherited,FR match: constant
-ability,ABILITY_HUSTLE,HUSTLE,המולה,המולה,inherited,FR match: constant
+ability,ABILITY_HUSTLE,HUSTLE,המולה,חריצות,proposed,FR match: constant; FireRed now חריצות (DECISIONS Q140 (FireRed naming conventions))
 ability,ABILITY_CUTE_CHARM,CUTE CHARM,קסם חמוד,קסם חמוד,inherited,FR match: constant
 ability,ABILITY_PLUS,PLUS,פלוס,פלוס,inherited,FR match: constant
 ability,ABILITY_MINUS,MINUS,מינוס,מינוס,inherited,FR match: constant
@@ -3327,7 +3327,7 @@ ability,ABILITY_DOWNLOAD,DOWNLOAD,,הורדה,proposed,meaning; reviewed
 ability,ABILITY_IRON_FIST,IRON FIST,,אגרוף ברזל,proposed,"meaning; FIST/PUNCH = אגרוף (punch moves, FIST PLATE), IRON = ברזל (IRON TAIL); reviewed"
 ability,ABILITY_POISON_HEAL,POISON HEAL,,ריפוי ברעל,proposed,"meaning (heals by poison, not of poison); HEAL = ריפוי (FULL HEAL), POISON = רעל; reviewed"
 ability,ABILITY_ADAPTABILITY,ADAPTABILITY,,הסתגלות,proposed,meaning; reviewed
-ability,ABILITY_SKILL_LINK,SKILL LINK,,שרשרת מיומנות,proposed,"meaning (multi-hit moves always chain the maximum); SKILL SWAP חילוף סגולה uses סגולה for ability, not skill; reviewed: note updated (SKILL SWAP is now two words)"
+ability,ABILITY_SKILL_LINK,SKILL LINK,,שרשרת מיומנות,proposed,"meaning (multi-hit moves always chain the maximum); SKILL SWAP is חילוף יכולת (ability), so SKILL is מיומנות here; reviewed"
 ability,ABILITY_HYDRATION,HYDRATION,,הרוויה,proposed,meaning; DAMP already = לחות; reviewed
 ability,ABILITY_SOLAR_POWER,SOLAR POWER,,כוח שמש,proposed,"meaning; SOLAR = שמש (SOLAR BEAM קרן שמש), POWER = כוח; reviewed"
 ability,ABILITY_QUICK_FEET,QUICK FEET,,רגליים מהירות,proposed,"meaning; QUICK = מהיר (QUICK CLAW, QUICK BALL), FEET = רגליים (TANGLED FEET); reviewed"
@@ -3372,7 +3372,7 @@ ability,ABILITY_WEAK_ARMOR,WEAK ARMOR,,שריון חלש,proposed,meaning; ARMOR
 ability,ABILITY_HEAVY_METAL,HEAVY METAL,,מתכת כבדה,proposed,"meaning; METAL = מתכת (METAL CLAW, METAL COAT), HEAVY = כבד (HEAVY BALL); reviewed"
 ability,ABILITY_LIGHT_METAL,LIGHT METAL,,מתכת קלה,proposed,meaning; METAL = מתכת; reviewed
 ability,ABILITY_MULTISCALE,MULTISCALE,,ריבוי קשקשים,proposed,"meaning; SCALE = קשקש (MARVEL SCALE קשקשת פלא, items קשקש X), MULTI = ריבוי (MULTITYPE); reviewed"
-ability,ABILITY_TOXIC_BOOST,TOXIC BOOST,,דחף הרעלה,proposed,"meaning; TOXIC = הרעלה (MOVE_TOXIC, TOXIC ORB), BOOST = דחף (MOVE_PSYCHO_BOOST דחף פסיכי); מאיץ (SPEED BOOST) means accelerator, wrong for a power boost; reviewed"
+ability,ABILITY_TOXIC_BOOST,TOXIC BOOST,,דחף הרעלה,proposed,"meaning; TOXIC = הרעלה (MOVE_TOXIC, TOXIC ORB), BOOST = דחף (MOVE_PSYCHO_BOOST דחף על-חושי); מאיץ (SPEED BOOST) means accelerator, wrong for a power boost; reviewed"
 ability,ABILITY_FLARE_BOOST,FLARE BOOST,,דחף להבה,proposed,"meaning; BOOST = דחף (PSYCHO BOOST, TOXIC BOOST); flare = להבה (BLAZE/EMBER); reviewed"
 ability,ABILITY_HARVEST,HARVEST,,קציר,proposed,meaning; reviewed
 ability,ABILITY_TELEPATHY,TELEPATHY,,טלפתיה,proposed,meaning (Hebrew word); reviewed
@@ -3384,7 +3384,7 @@ ability,ABILITY_BIG_PECKS,BIG PECKS,,חזה מנופח,proposed,meaning (the pec
 ability,ABILITY_SAND_RUSH,SAND RUSH,,דהירת חול,proposed,"meaning; SAND = חול (SAND VEIL, SAND STREAM); RUSH = דהירה, matched by SLUSH RUSH דהירת שלג (ability_02); reviewed: note updated"
 ability,ABILITY_WONDER_SKIN,WONDER SKIN,,עור פלא,proposed,"meaning; WONDER = פלא (WONDER GUARD משמר פלא), SKIN = עור; reviewed"
 ability,ABILITY_ANALYTIC,ANALYTIC,,אנליטי,proposed,"meaning (Hebrew loan adjective, like the inherited סטטי); reviewed"
-ability,ABILITY_ILLUSION,ILLUSION,,אחיזת עיניים,proposed,"meaning; not אשליה, which is MOVE_PSYCHIC; reviewed"
+ability,ABILITY_ILLUSION,ILLUSION,,אחיזת עיניים,proposed,meaning; reviewed (אשליה was MOVE_PSYCHIC until DECISIONS Q139 (Psychic is על-חושי))
 ability,ABILITY_IMPOSTER,IMPOSTER,,מתחזה,proposed,meaning; reviewed
 ability,ABILITY_INFILTRATOR,INFILTRATOR,,מסתנן,proposed,meaning; reviewed
 ability,ABILITY_MUMMY,MUMMY,,מומיה,proposed,meaning; reviewed
@@ -3462,7 +3462,7 @@ ability,ABILITY_POWER_OF_ALCHEMY,POWER OF ALCHEMY,,כוח האלכימיה,propo
 ability,ABILITY_BEAST_BOOST,BEAST BOOST,,דחף חיה,proposed,"meaning; BEAST = חיה as ITEM_BEAST_BALL כדור חיה; BOOST = חיזוק, check vs TOXIC/FLARE BOOST (ability_01); reviewed: BOOST = דחף as ABILITY_TOXIC_BOOST דחף הרעלה, ABILITY_FLARE_BOOST דחף להבה (ability_01), MOVE_PSYCHO_BOOST דחף פסיכי, ITEM_BOOSTER_ENERGY אנרגיית דחף; was חיזוק חיה"
 ability,ABILITY_RKS_SYSTEM,RKS SYSTEM,,מערכת RKS,proposed,meaning; RKS kept Latin as ITEM_GS_BALL כדור GS; reviewed
 ability,ABILITY_ELECTRIC_SURGE,ELECTRIC SURGE,,נחשול חשמל,proposed,"meaning; SURGE = נחשול; ELECTRIC = TYPE_ELECTRIC חשמל, parallel to ITEM_ELECTRIC_SEED זרע חשמל; reviewed"
-ability,ABILITY_PSYCHIC_SURGE,PSYCHIC SURGE,,נחשול פסיכי,proposed,"meaning; SURGE = נחשול; PSYCHIC = TYPE_PSYCHIC פסיכי, parallel to ITEM_PSYCHIC_SEED זרע פסיכי; reviewed"
+ability,ABILITY_PSYCHIC_SURGE,PSYCHIC SURGE,,נחשול על-חוש,proposed,SURGE = נחשול; the noun like נחשול חשמל / נחשול ערפל / נחשול עשב and ITEM_PSYCHIC_SEED זרע על-חוש; DECISIONS Q139 (Psychic is על-חושי)
 ability,ABILITY_MISTY_SURGE,MISTY SURGE,,נחשול ערפל,proposed,"meaning; SURGE = נחשול; MIST = ערפל as MOVE_MIST, parallel to ITEM_MISTY_SEED זרע ערפל; reviewed"
 ability,ABILITY_GRASSY_SURGE,GRASSY SURGE,,נחשול עשב,proposed,"meaning; SURGE = נחשול; GRASS = TYPE_GRASS עשב, parallel to ITEM_GRASSY_SEED זרע עשב; reviewed"
 ability,ABILITY_FULL_METAL_BODY,FULL METAL BODY,,גוף מתכת מלא,proposed,meaning; BODY = גוף as ABILITY_CLEAR_BODY; METAL = מתכת as ITEM_METAL_COAT; reviewed
@@ -3599,7 +3599,7 @@ item,ITEM_ETHER,ETHER,אתר,אתר,inherited,FR match: constant
 item,ITEM_MAX_ETHER,MAX ETHER,אתר מקס,אתר מקס,inherited,FR match: constant
 item,ITEM_ELIXIR,ELIXIR,שיקוי,אליקסיר,proposed,renamed: FR gave POTION and ELIXIR the same name; POTION keeps שיקוי; chunk from FR MAX ELIXIR אליקסיר מרבי; reviewed
 item,ITEM_MAX_ELIXIR,MAX ELIXIR,אליקסיר מרבי,אליקסיר מרבי,inherited,FR match: constant
-item,ITEM_BERRY_JUICE,BERRY JUICE,מיץ ברי,מיץ ברי,inherited,FR match: constant
+item,ITEM_BERRY_JUICE,BERRY JUICE,מיץ ברי,מיץ פירות,proposed,FR match: constant; FireRed now מיץ פירות (DECISIONS Q140 (FireRed naming conventions))
 item,ITEM_SACRED_ASH,SACRED ASH,אפר קדוש,אפר קדוש,inherited,FR match: constant
 item,ITEM_SWEET_HEART,SWEET HEART,,לב מתוק,proposed,chunk SWEET (adj.) = מתוק (SWEET KISS נשיקה מתוקה); reviewed
 item,ITEM_MAX_HONEY,MAX HONEY,,דבש מקסימום,proposed,chunk MAX as in MAX POTION שיקוי מקסימום; HONEY = דבש; reviewed
@@ -3649,11 +3649,11 @@ item,ITEM_JOLLY_MINT,JOLLY MINT,,נענע עליז,proposed,nature canon; review
 item,ITEM_NAIVE_MINT,NAIVE MINT,,נענע תמים,proposed,nature canon; reviewed
 item,ITEM_SERIOUS_MINT,SERIOUS MINT,,נענע רציני,proposed,nature canon; reviewed
 item,ITEM_RARE_CANDY,RARE CANDY,ממתק נדיר,ממתק נדיר,inherited,FR match: constant
-item,ITEM_EXP_CANDY_XS,EXP. CANDY XS,,ממתק נסיון XS,proposed,"CANDY = ממתק (RARE CANDY), EXP = נסיון (TERM_EXP_POINTS, EXP. SHARE); size letters kept in Latin like X in התקפת X; reviewed"
-item,ITEM_EXP_CANDY_S,EXP. CANDY S,,ממתק נסיון S,proposed,as EXP. CANDY XS; reviewed
-item,ITEM_EXP_CANDY_M,EXP. CANDY M,,ממתק נסיון M,proposed,as EXP. CANDY XS; reviewed
-item,ITEM_EXP_CANDY_L,EXP. CANDY L,,ממתק נסיון L,proposed,as EXP. CANDY XS; reviewed
-item,ITEM_EXP_CANDY_XL,EXP. CANDY XL,,ממתק נסיון XL,proposed,as EXP. CANDY XS; reviewed
+item,ITEM_EXP_CANDY_XS,EXP. CANDY XS,,ממתק ניסיון XS,proposed,"CANDY = ממתק (RARE CANDY), EXP = ניסיון (TERM_EXP_POINTS, EXP. SHARE); size letters kept in Latin like X in התקפת X; reviewed"
+item,ITEM_EXP_CANDY_S,EXP. CANDY S,,ממתק ניסיון S,proposed,as EXP. CANDY XS; reviewed
+item,ITEM_EXP_CANDY_M,EXP. CANDY M,,ממתק ניסיון M,proposed,as EXP. CANDY XS; reviewed
+item,ITEM_EXP_CANDY_L,EXP. CANDY L,,ממתק ניסיון L,proposed,as EXP. CANDY XS; reviewed
+item,ITEM_EXP_CANDY_XL,EXP. CANDY XL,,ממתק ניסיון XL,proposed,as EXP. CANDY XS; reviewed
 item,ITEM_DYNAMAX_CANDY,DYNAMAX CANDY,,ממתק דיינמקס,proposed,translit DYNAMAX (y /aɪ/ = יי); reviewed
 item,ITEM_BLUE_FLUTE,BLUE FLUTE,חליל כחול,חליל כחול,inherited,FR match: constant
 item,ITEM_YELLOW_FLUTE,YELLOW FLUTE,חליל צהוב,חליל צהוב,inherited,FR match: constant
@@ -3826,10 +3826,10 @@ item,ITEM_FIGHTING_MEMORY,FIGHTING MEMORY,,זיכרון קרב,proposed,meaning;
 item,ITEM_POISON_MEMORY,POISON MEMORY,,זיכרון רעל,proposed,meaning; chunk MEMORY = זיכרון + TYPE_POISON; reviewed
 item,ITEM_GROUND_MEMORY,GROUND MEMORY,,זיכרון אדמה,proposed,meaning; chunk MEMORY = זיכרון + TYPE_GROUND; reviewed
 item,ITEM_FLYING_MEMORY,FLYING MEMORY,,זיכרון תעופה,proposed,meaning; chunk MEMORY = זיכרון + TYPE_FLYING; reviewed
-item,ITEM_PSYCHIC_MEMORY,PSYCHIC MEMORY,,זיכרון פסיכי,proposed,meaning; chunk MEMORY = זיכרון + TYPE_PSYCHIC; reviewed
+item,ITEM_PSYCHIC_MEMORY,PSYCHIC MEMORY,,זיכרון על-חושי,proposed,meaning; chunk MEMORY = זיכרון + TYPE_PSYCHIC; DECISIONS Q139 (Psychic is על-חושי)
 item,ITEM_BUG_MEMORY,BUG MEMORY,,זיכרון חרק,proposed,meaning; chunk MEMORY = זיכרון + TYPE_BUG; reviewed
 item,ITEM_ROCK_MEMORY,ROCK MEMORY,,זיכרון סלע,proposed,meaning; chunk MEMORY = זיכרון + TYPE_ROCK; reviewed
-item,ITEM_GHOST_MEMORY,GHOST MEMORY,,זיכרון רוח,proposed,meaning; chunk MEMORY = זיכרון + TYPE_GHOST; reviewed
+item,ITEM_GHOST_MEMORY,GHOST MEMORY,,זיכרון רפאים,proposed,meaning; chunk MEMORY = זיכרון + TYPE_GHOST; DECISIONS Q140 (FireRed naming conventions)
 item,ITEM_DRAGON_MEMORY,DRAGON MEMORY,,זיכרון דרקון,proposed,meaning; chunk MEMORY = זיכרון + TYPE_DRAGON; reviewed
 item,ITEM_DARK_MEMORY,DARK MEMORY,,זיכרון אפל,proposed,meaning; chunk MEMORY = זיכרון + TYPE_DARK; reviewed
 item,ITEM_STEEL_MEMORY,STEEL MEMORY,,זיכרון פלדה,proposed,meaning; chunk MEMORY = זיכרון + TYPE_STEEL; reviewed
@@ -3941,10 +3941,10 @@ item,ITEM_FIGHTING_GEM,FIGHTING GEM,,אבן חן קרב,proposed,meaning; chunk 
 item,ITEM_POISON_GEM,POISON GEM,,אבן חן רעל,proposed,meaning; chunk GEM = אבן חן + TYPE_POISON; reviewed
 item,ITEM_GROUND_GEM,GROUND GEM,,אבן חן אדמה,proposed,meaning; chunk GEM = אבן חן + TYPE_GROUND; reviewed
 item,ITEM_FLYING_GEM,FLYING GEM,,אבן חן תעופה,proposed,meaning; chunk GEM = אבן חן + TYPE_FLYING; reviewed
-item,ITEM_PSYCHIC_GEM,PSYCHIC GEM,,אבן חן פסיכית,proposed,"meaning; chunk GEM = אבן חן + TYPE_PSYCHIC, adjective made feminine to agree with אבן; reviewed"
+item,ITEM_PSYCHIC_GEM,PSYCHIC GEM,,אבן חן על-חושית,proposed,"meaning; chunk GEM = אבן חן + TYPE_PSYCHIC, adjective made feminine to agree with אבן; DECISIONS Q139 (Psychic is על-חושי)"
 item,ITEM_BUG_GEM,BUG GEM,,אבן חן חרק,proposed,meaning; chunk GEM = אבן חן + TYPE_BUG; reviewed
 item,ITEM_ROCK_GEM,ROCK GEM,,אבן חן סלע,proposed,meaning; chunk GEM = אבן חן + TYPE_ROCK; reviewed
-item,ITEM_GHOST_GEM,GHOST GEM,,אבן חן רוח,proposed,meaning; chunk GEM = אבן חן + TYPE_GHOST; reviewed
+item,ITEM_GHOST_GEM,GHOST GEM,,אבן חן רפאים,proposed,meaning; chunk GEM = אבן חן + TYPE_GHOST; DECISIONS Q140 (FireRed naming conventions)
 item,ITEM_DRAGON_GEM,DRAGON GEM,,אבן חן דרקון,proposed,meaning; chunk GEM = אבן חן + TYPE_DRAGON; reviewed
 item,ITEM_DARK_GEM,DARK GEM,,אבן חן אפלה,proposed,"meaning; chunk GEM = אבן חן + TYPE_DARK, adjective made feminine to agree with אבן; reviewed"
 item,ITEM_STEEL_GEM,STEEL GEM,,אבן חן פלדה,proposed,meaning; chunk GEM = אבן חן + TYPE_STEEL; reviewed
@@ -3959,10 +3959,10 @@ item,ITEM_FIGHTINIUM_Z,FIGHTINIUM Z,,קרביום Z,proposed,"meaning: TYPE_FIGH
 item,ITEM_POISONIUM_Z,POISONIUM Z,,רעליום Z,proposed,"meaning: TYPE_POISON רעל + element suffix יום (-ium) + Z, item_02's NORMALIUM..ICIUM Z scheme; reviewed"
 item,ITEM_GROUNDIUM_Z,GROUNDIUM Z,,אדמיום Z,proposed,"meaning: TYPE_GROUND אדמה + element suffix יום (-ium) + Z, item_02's NORMALIUM..ICIUM Z scheme (final ה dropped before the suffix); reviewed"
 item,ITEM_FLYINIUM_Z,FLYINIUM Z,,תעופיום Z,proposed,"meaning: TYPE_FLYING תעופה + element suffix יום (-ium) + Z, item_02's NORMALIUM..ICIUM Z scheme (final ה dropped before the suffix); reviewed"
-item,ITEM_PSYCHIUM_Z,PSYCHIUM Z,,פסיכיום Z,proposed,"meaning: TYPE_PSYCHIC פסיכי + element suffix יום (-ium) + Z, item_02's NORMALIUM..ICIUM Z scheme (stem פסיכ, as English PSYCH-IUM); reviewed"
+item,ITEM_PSYCHIUM_Z,PSYCHIUM Z,,על-חושיום Z,proposed,"meaning: TYPE_PSYCHIC על-חושי + element suffix יום (-ium) + Z, item_02's NORMALIUM..ICIUM Z scheme; DECISIONS Q139 (Psychic is על-חושי)"
 item,ITEM_BUGINIUM_Z,BUGINIUM Z,,חרקיום Z,proposed,"meaning: TYPE_BUG חרק + element suffix יום (-ium) + Z, item_02's NORMALIUM..ICIUM Z scheme; reviewed"
 item,ITEM_ROCKIUM_Z,ROCKIUM Z,,סלעיום Z,proposed,"meaning: TYPE_ROCK סלע + element suffix יום (-ium) + Z, item_02's NORMALIUM..ICIUM Z scheme; reviewed"
-item,ITEM_GHOSTIUM_Z,GHOSTIUM Z,,רוחיום Z,proposed,"meaning: TYPE_GHOST רוח + element suffix יום (-ium) + Z, item_02's NORMALIUM..ICIUM Z scheme; reviewed"
+item,ITEM_GHOSTIUM_Z,GHOSTIUM Z,,רפאיום Z,proposed,"meaning: TYPE_GHOST רפאים + element suffix יום (-ium) + Z, item_02's NORMALIUM..ICIUM Z scheme (stem רפא); DECISIONS Q140 (FireRed naming conventions)"
 item,ITEM_DRAGONIUM_Z,DRAGONIUM Z,,דרקוניום Z,proposed,"meaning: TYPE_DRAGON דרקון + element suffix יום (-ium) + Z, item_02's NORMALIUM..ICIUM Z scheme; reviewed"
 item,ITEM_DARKINIUM_Z,DARKINIUM Z,,אפליום Z,proposed,"meaning: TYPE_DARK אפל + element suffix יום (-ium) + Z, item_02's NORMALIUM..ICIUM Z scheme; reviewed"
 item,ITEM_STEELIUM_Z,STEELIUM Z,,פלדיום Z,proposed,"meaning: TYPE_STEEL פלדה + element suffix יום (-ium) + Z, item_02's NORMALIUM..ICIUM Z scheme (final ה dropped; coincides with the Hebrew for palladium, harmless); reviewed"
@@ -4044,7 +4044,7 @@ item,ITEM_HEAT_ROCK,HEAT ROCK,,סלע חם,proposed,meaning (JP あついいわ 
 item,ITEM_SMOOTH_ROCK,SMOOTH ROCK,,סלע חלק,proposed,meaning; ROCK סלע; reviewed
 item,ITEM_ICY_ROCK,ICY ROCK,,סלע קר,proposed,meaning; ICY chunk from MOVE_ICY_WIND רוח קרה; ROCK סלע; reviewed
 item,ITEM_ELECTRIC_SEED,ELECTRIC SEED,,זרע חשמל,proposed,meaning; SEED chunk from ITEM_MIRACLE_SEED זרע פלא; ELECTRIC = TYPE_ELECTRIC חשמל; reviewed
-item,ITEM_PSYCHIC_SEED,PSYCHIC SEED,,זרע פסיכי,proposed,meaning; SEED זרע; PSYCHIC = TYPE_PSYCHIC פסיכי; reviewed
+item,ITEM_PSYCHIC_SEED,PSYCHIC SEED,,זרע על-חוש,proposed,meaning; SEED זרע; the noun על-חוש like זרע חשמל / זרע ערפל / זרע עשב; DECISIONS Q139 (Psychic is על-חושי)
 item,ITEM_MISTY_SEED,MISTY SEED,,זרע ערפל,proposed,meaning; SEED זרע; MIST chunk from MOVE_MIST ערפל; reviewed
 item,ITEM_GRASSY_SEED,GRASSY SEED,,זרע עשב,proposed,meaning; SEED זרע; GRASS = TYPE_GRASS עשב; reviewed
 item,ITEM_ABSORB_BULB,ABSORB BULB,,פקעת ספיגה,proposed,"meaning; ABSORB chunk from MOVE_ABSORB יניקה; bulb = פקעת; reviewed: the bulb soaks up a Water hit, so ABSORB = ספיגה as inherited ABILITY_WATER_ABSORB ספיגת מים / ABILITY_VOLT_ABSORB; יניקה (MOVE_ABSORB) reads as sucking, was פקעת יניקה"
@@ -4053,7 +4053,7 @@ item,ITEM_LUMINOUS_MOSS,LUMINOUS MOSS,,טחב זוהר,proposed,meaning; reviewe
 item,ITEM_SNOWBALL,SNOWBALL,,כדור שלג,proposed,"meaning; BALL כדור, SNOW שלג (MOVE_POWDER_SNOW אבק שלג); reviewed"
 item,ITEM_BRIGHT_POWDER,BRIGHT POWDER,אבקה מבריקה,אבקה מבריקה,inherited,FR match: constant
 item,ITEM_WHITE_HERB,WHITE HERB,עשב לבן,עשב לבן,inherited,FR match: constant
-item,ITEM_EXP_SHARE,EXP. SHARE,חולק נסיון,חולק נסיון,inherited,FR match: constant
+item,ITEM_EXP_SHARE,EXP. SHARE,חולק נסיון,חולק ניסיון,proposed,"FR match: constant; FireRed now חולק ניסיון (DECISIONS Q140 (FireRed naming conventions)), the full spelling"
 item,ITEM_QUICK_CLAW,QUICK CLAW,טופר מהיר,טופר מהיר,inherited,FR match: constant
 item,ITEM_SOOTHE_BELL,SOOTHE BELL,פעמון מרגיע,פעמון מרגיע,inherited,FR match: constant
 item,ITEM_MENTAL_HERB,MENTAL HERB,עשב נפשי,עשב נפשי,inherited,FR match: constant
@@ -4286,7 +4286,7 @@ item,ITEM_HM_DIVE,HM08,מ”נ 80,מ”נ 08,inherited,NOT IN BUILD: entry compi
 item,ITEM_OVAL_CHARM,OVAL CHARM,,קמע סגלגל,proposed,"meaning; CHARM = קמע (FR AMULET COIN = מטבע קמע); OVAL shared with ITEM_OVAL_STONE (item_01), align; reviewed"
 item,ITEM_SHINY_CHARM,SHINY CHARM,,קמע נוצץ,proposed,"meaning; SHINY shared with ITEM_SHINY_STONE (item_01), align; reviewed"
 item,ITEM_CATCHING_CHARM,CATCHING CHARM,,קמע לכידה,proposed,meaning; reviewed
-item,ITEM_EXP_CHARM,EXP. CHARM,,קמע נסיון,proposed,meaning; EXP = נסיון as FR EXP. SHARE חולק נסיון (FR spelling); reviewed
+item,ITEM_EXP_CHARM,EXP. CHARM,,קמע ניסיון,proposed,meaning; EXP = ניסיון as FR EXP. SHARE חולק ניסיון; reviewed
 item,ITEM_ROTOM_CATALOG,ROTOM CATALOG,,קטלוג רוטום,proposed,"translit ROTOM; chunk shared with SPECIES_ROTOM (todo), align; reviewed: matches SPECIES_ROTOM רוטום (species_02)"
 item,ITEM_GRACIDEA,GRACIDEA,,גרסידיה,proposed,"translit (invented flower name; c soft = ס, -dea = דיה as LUGIA לוגיה); reviewed"
 item,ITEM_REVEAL_GLASS,REVEAL GLASS,,מראת גילוי,proposed,meaning (the item is a mirror); reviewed
@@ -4309,7 +4309,7 @@ item,ITEM_DOWSING_MACHINE,DOWSING MACHINE,גלאי פריטים,גלאי פרי�
 item,ITEM_TOWN_MAP,TOWN MAP,מפת העיר,מפת העיר,inherited,FR match: constant
 item,ITEM_VS_SEEKER,VS. SEEKER,גלאי קרב,גלאי קרב,inherited,FR match: constant
 item,ITEM_TM_CASE,TM CASE,תיק מ”מ,תיק מ”מ,inherited,FR match: constant
-item,ITEM_BERRY_POUCH,BERRY POUCH,פאוץ' פירות,פאוץ' פירות,inherited,FR match: constant
+item,ITEM_BERRY_POUCH,BERRY POUCH,פאוץ' פירות,נרתיק פירות,proposed,FR match: constant; FireRed now נרתיק פירות (DECISIONS Q140 (FireRed naming conventions))
 item,ITEM_POKEMON_BOX_LINK,{PKMN} BOX LINK,,קישור לתיבות,proposed,"meaning; BOX = תיבה (FR gText_Box); {PKMN} dropped (STYLE §5 allows it), keeps the name short; reviewed"
 item,ITEM_COIN_CASE,COIN CASE,ארנק מטבעות,ארנק מטבעות,inherited,FR match: constant
 item,ITEM_POWDER_JAR,POWDER JAR,צנצנת אבקה,צנצנת אבקה,inherited,FR match: constant
@@ -4375,13 +4375,13 @@ item,ITEM_FAIRY_TERA_SHARD,FAIRY TERA SHARD,,שבר טרה פיה,proposed,"SHAR
 item,ITEM_FIGHTING_TERA_SHARD,FIGHTING TERA SHARD,,שבר טרה קרב,proposed,SHARD = שבר as FR RED SHARD שבר אדום; type word = TYPE_FIGHTING (FR); reviewed
 item,ITEM_FIRE_TERA_SHARD,FIRE TERA SHARD,,שבר טרה אש,proposed,SHARD = שבר as FR RED SHARD שבר אדום; type word = TYPE_FIRE (FR); reviewed
 item,ITEM_FLYING_TERA_SHARD,FLYING TERA SHARD,,שבר טרה תעופה,proposed,SHARD = שבר as FR RED SHARD שבר אדום; type word = TYPE_FLYING (FR); reviewed
-item,ITEM_GHOST_TERA_SHARD,GHOST TERA SHARD,,שבר טרה רוח,proposed,SHARD = שבר as FR RED SHARD שבר אדום; type word = TYPE_GHOST (FR); reviewed
+item,ITEM_GHOST_TERA_SHARD,GHOST TERA SHARD,,שבר טרה רפאים,proposed,SHARD = שבר as FR RED SHARD שבר אדום; type word = TYPE_GHOST (FR); DECISIONS Q140 (FireRed naming conventions)
 item,ITEM_GRASS_TERA_SHARD,GRASS TERA SHARD,,שבר טרה עשב,proposed,SHARD = שבר as FR RED SHARD שבר אדום; type word = TYPE_GRASS (FR); reviewed
 item,ITEM_GROUND_TERA_SHARD,GROUND TERA SHARD,,שבר טרה אדמה,proposed,SHARD = שבר as FR RED SHARD שבר אדום; type word = TYPE_GROUND (FR); reviewed
 item,ITEM_ICE_TERA_SHARD,ICE TERA SHARD,,שבר טרה קרח,proposed,SHARD = שבר as FR RED SHARD שבר אדום; type word = TYPE_ICE (FR); reviewed
 item,ITEM_NORMAL_TERA_SHARD,NORMAL TERA SHARD,,שבר טרה רגיל,proposed,SHARD = שבר as FR RED SHARD שבר אדום; type word = TYPE_NORMAL (FR); reviewed
 item,ITEM_POISON_TERA_SHARD,POISON TERA SHARD,,שבר טרה רעל,proposed,SHARD = שבר as FR RED SHARD שבר אדום; type word = TYPE_POISON (FR); reviewed
-item,ITEM_PSYCHIC_TERA_SHARD,PSYCHIC TERA SHARD,,שבר טרה פסיכי,proposed,SHARD = שבר as FR RED SHARD שבר אדום; type word = TYPE_PSYCHIC (FR); reviewed
+item,ITEM_PSYCHIC_TERA_SHARD,PSYCHIC TERA SHARD,,שבר טרה על-חוש,proposed,SHARD = שבר as FR RED SHARD שבר אדום; the noun על-חוש as שבר טרה חשמל; שבר טרה על-חושי is 68 px > 66 in the PC storage held item; DECISIONS Q139 (Psychic is על-חושי)
 item,ITEM_ROCK_TERA_SHARD,ROCK TERA SHARD,,שבר טרה סלע,proposed,SHARD = שבר as FR RED SHARD שבר אדום; type word = TYPE_ROCK (FR); reviewed
 item,ITEM_STEEL_TERA_SHARD,STEEL TERA SHARD,,שבר טרה פלדה,proposed,SHARD = שבר as FR RED SHARD שבר אדום; type word = TYPE_STEEL (FR); reviewed
 item,ITEM_WATER_TERA_SHARD,WATER TERA SHARD,,שבר טרה מים,proposed,SHARD = שבר as FR RED SHARD שבר אדום; type word = TYPE_WATER (FR); reviewed
@@ -4423,7 +4423,7 @@ item,ITEM_TWICE_SPICED_RADISH,TWICE-SPICED RADISH,,צנון בתיבול כפו�
 item,ITEM_POKESHI_DOLL,POKéSHI DOLL,,בובת פוקישי,proposed,"DOLL = בובת as FR POKé DOLL; POKéSHI is a kokeshi pun, transliterated (POKé = פוקי); reviewed"
 item,ITEM_GS_BALL,GS BALL,,כדור GS,proposed,BALL = כדור as FR GREAT BALL כדור מעולה; GS kept Latin (Gold/Silver); reviewed
 item,ITEM_FERTILIZER,GROWTH MULCH,,דשן צמיחה,proposed,"meaning (its description calls it a fertilizer); same English as ITEM_GROWTH_MULCH (item_01): the two must get the same Hebrew; reviewed: identical to ITEM_GROWTH_MULCH דשן צמיחה (item_01), same English"
-item,ITEM_EXP_SHARE_SMALL,EXP. SHARE S,,חולק נסיון קטן,proposed,FR EXP. SHARE חולק נסיון + S spelled out as קטן; reviewed
+item,ITEM_EXP_SHARE_SMALL,EXP. SHARE S,,חולק ניסיון קטן,proposed,FR EXP. SHARE חולק ניסיון + S spelled out as קטן; reviewed
 item,ITEM_HEALING_HEART,HEALING HEART,,לב מרפא,proposed,"meaning; reviewed: מרפא as adjective, as inherited MOVE_HEAL_BELL פעמוןמרפא"
 item,ITEM_INFINITE_REPEL,INFIN. REPEL,,דוחה אינסופי,proposed,REPEL = דוחה as FR; reviewed
 item,ITEM_INFINITE_RARE_CANDIES,RARECANDY BOX,,קופסת ממתק נדיר,proposed,RARE CANDY = ממתק נדיר as FR; reviewed
@@ -4455,11 +4455,11 @@ item_plural,ITEM_CARBOS,Carbos,,פחמימות,proposed,same as singular; singul
 item_plural,ITEM_PP_MAX,PP Maxes,,מקסימום נ”כ,proposed,same as singular; name not count-inflected (מקסימום is invariant); singular: מקסימום נ”כ (inherited); reviewed
 item_plural,ITEM_ABILITY_PATCH,Ability Patches,,טלאי יכולת,proposed,same as singular; construct plural טלאי is spelled like the singular; singular: טלאי יכולת (item_01); reviewed
 item_plural,ITEM_RARE_CANDY,Rare Candies,,ממתקים נדירים,proposed,noun + adjective plural; singular: ממתק נדיר (inherited); reviewed
-item_plural,ITEM_EXP_CANDY_XS,Exp. Candies XS,,ממתקי נסיון XS,proposed,construct plural ממתקי; size letters kept; singular: ממתק נסיון XS (item_01); reviewed
-item_plural,ITEM_EXP_CANDY_S,Exp. Candies S,,ממתקי נסיון S,proposed,as EXP. CANDIES XS; singular: ממתק נסיון S (item_01); reviewed
-item_plural,ITEM_EXP_CANDY_M,Exp. Candies M,,ממתקי נסיון M,proposed,as EXP. CANDIES XS; singular: ממתק נסיון M (item_01); reviewed
-item_plural,ITEM_EXP_CANDY_L,Exp. Candies L,,ממתקי נסיון L,proposed,as EXP. CANDIES XS; singular: ממתק נסיון L (item_01); reviewed
-item_plural,ITEM_EXP_CANDY_XL,Exp. Candies XL,,ממתקי נסיון XL,proposed,as EXP. CANDIES XS; singular: ממתק נסיון XL (item_01); reviewed
+item_plural,ITEM_EXP_CANDY_XS,Exp. Candies XS,,ממתקי ניסיון XS,proposed,construct plural ממתקי; size letters kept; singular: ממתק ניסיון XS (item_01); reviewed
+item_plural,ITEM_EXP_CANDY_S,Exp. Candies S,,ממתקי ניסיון S,proposed,as EXP. CANDIES XS; singular: ממתק ניסיון S (item_01); reviewed
+item_plural,ITEM_EXP_CANDY_M,Exp. Candies M,,ממתקי ניסיון M,proposed,as EXP. CANDIES XS; singular: ממתק ניסיון M (item_01); reviewed
+item_plural,ITEM_EXP_CANDY_L,Exp. Candies L,,ממתקי ניסיון L,proposed,as EXP. CANDIES XS; singular: ממתק ניסיון L (item_01); reviewed
+item_plural,ITEM_EXP_CANDY_XL,Exp. Candies XL,,ממתקי ניסיון XL,proposed,as EXP. CANDIES XS; singular: ממתק ניסיון XL (item_01); reviewed
 item_plural,ITEM_DYNAMAX_CANDY,Dynamax Candies,,ממתקי דיינמקס,proposed,"construct plural ממתקי, as EXP. CANDIES; singular: ממתק דיינמקס (item_01); reviewed"
 item_plural,ITEM_X_ACCURACY,X Accuracies,,דיוק X,proposed,"same as singular; abstract noun, not inflected (X-item family); singular: דיוק X (inherited); reviewed"
 item_plural,ITEM_GUARD_SPEC,Guard Specs.,,הגנות מיוחדות,proposed,noun + adjective plural; singular: הגנה מיוחדת (inherited); reviewed
@@ -4497,12 +4497,12 @@ item_plural,ITEM_FIGHTING_MEMORY,Fighting Memories,,זיכרונות קרב,prop
 item_plural,ITEM_POISON_MEMORY,Poison Memories,,זיכרונות רעל,proposed,construct plural זיכרונות + type name; singular: זיכרון רעל (item_02); reviewed
 item_plural,ITEM_GROUND_MEMORY,Ground Memories,,זיכרונות אדמה,proposed,construct plural זיכרונות + type name; singular: זיכרון אדמה (item_02); reviewed
 item_plural,ITEM_FLYING_MEMORY,Flying Memories,,זיכרונות תעופה,proposed,construct plural זיכרונות + type name; singular: זיכרון תעופה (item_02); reviewed
-item_plural,ITEM_PSYCHIC_MEMORY,Psychic Memories,,זיכרונות פסיכיים,proposed,"construct plural זיכרונות + type adjective in the plural, as PSYCHIC/DARK GEM agree (אבן חן פסיכית/אפלה); singular: זיכרון פסיכי (item_02); reviewed"
+item_plural,ITEM_PSYCHIC_MEMORY,Psychic Memories,,זיכרונות על-חושיים,proposed,"construct plural זיכרונות + type adjective in the plural, as PSYCHIC/DARK GEM agree (אבן חן על-חושית/אפלה); singular: זיכרון על-חושי; DECISIONS Q139 (Psychic is על-חושי)"
 item_plural,ITEM_BUG_MEMORY,Bug Memories,,זיכרונות חרק,proposed,construct plural זיכרונות + type name; singular: זיכרון חרק (item_02); reviewed
 item_plural,ITEM_ROCK_MEMORY,Rock Memories,,זיכרונות סלע,proposed,construct plural זיכרונות + type name; singular: זיכרון סלע (item_02); reviewed
-item_plural,ITEM_GHOST_MEMORY,Ghost Memories,,זיכרונות רוח,proposed,construct plural זיכרונות + type name; singular: זיכרון רוח (item_02); reviewed
+item_plural,ITEM_GHOST_MEMORY,Ghost Memories,,זיכרונות רפאים,proposed,construct plural זיכרונות + type name; singular: זיכרון רפאים; DECISIONS Q140 (FireRed naming conventions)
 item_plural,ITEM_DRAGON_MEMORY,Dragon Memories,,זיכרונות דרקון,proposed,construct plural זיכרונות + type name; singular: זיכרון דרקון (item_02); reviewed
-item_plural,ITEM_DARK_MEMORY,Dark Memories,,זיכרונות אפלים,proposed,"construct plural זיכרונות + type adjective in the plural, as PSYCHIC/DARK GEM agree (אבן חן פסיכית/אפלה); singular: זיכרון אפל (item_02); reviewed"
+item_plural,ITEM_DARK_MEMORY,Dark Memories,,זיכרונות אפלים,proposed,"construct plural זיכרונות + type adjective in the plural, as PSYCHIC/DARK GEM agree (אבן חן על-חושית/אפלה); singular: זיכרון אפל (item_02); reviewed"
 item_plural,ITEM_STEEL_MEMORY,Steel Memories,,זיכרונות פלדה,proposed,construct plural זיכרונות + type name; singular: זיכרון פלדה (item_02); reviewed
 item_plural,ITEM_FAIRY_MEMORY,Fairy Memories,,זיכרונות פיה,proposed,construct plural זיכרונות + type name; singular: זיכרון פיה (item_02); reviewed
 item_plural,ITEM_LUCKY_PUNCH,Lucky Punches,,כפפות מזל,proposed,construct plural; singular: כפפת מזל (inherited); reviewed
@@ -4602,7 +4602,7 @@ item_plural,ITEM_ENIGMA_BERRY_E_READER,Enigma Berries,,פירות אניגמה,p
 item_plural,ITEM_REVEAL_GLASS,Reveal Glasses,,מראות גילוי,proposed,construct plural; singular: מראת גילוי (item_04); reviewed
 item_plural,ITEM_DNA_SPLICERS,DNA Splicers,,מחברי דנ”א,proposed,construct plural (English SPLICERS is plural in both forms); singular: מחבר דנ”א (item_04); reviewed
 item_plural,ITEM_REINS_OF_UNITY,Reins of Unity,,מושכות האחדות,proposed,same as singular; singular is already plural; singular: מושכות האחדות (item_04); reviewed
-item_plural,ITEM_BERRY_POUCH,Berry Pouches,,פאוצ'י פירות,proposed,"construct plural of the FR loanword פאוץ'; alt פאוצ'ים לפירות; singular: פאוץ' פירות (inherited); reviewed; reviewer: key item, a plural is never shown in play; פאוצ'י is a rare construct of the loanword, alt פאוצ'ים לפירות"
+item_plural,ITEM_BERRY_POUCH,Berry Pouches,,נרתיקי פירות,proposed,"construct plural; singular: נרתיק פירות; key item, a plural is never shown in play"
 item_plural,ITEM_DEVON_PARTS,Devon Parts,,מוצרי דבון,proposed,same as singular; singular is already plural; singular: מוצרי דבון (inherited); reviewed
 item_plural,ITEM_GO_GOGGLES,Go-Goggles,,משקפי חול,proposed,same as singular; singular is already plural; singular: משקפי חול (inherited); reviewed
 item_plural,ITEM_KEY_TO_ROOM_1,Keys to Room 1,,מפתחות לחדר 1,proposed,plural head noun; digits in reading order; singular: מפתח לחדר 1 (item_04); reviewed
@@ -4683,7 +4683,7 @@ item_plural,ITEM_ETHER,ETHERs,,מנות אתר,proposed,"counter מנות, as RE
 item_plural,ITEM_MAX_ETHER,MAX ETHERs,,מנות אתר מקס,proposed,as ETHERS מנות אתר; English adds s (no pluralName); singular: אתר מקס; Q125
 item_plural,ITEM_ELIXIR,ELIXIRs,,אליקסירים,proposed,plural head noun; English adds s (no pluralName); singular: אליקסיר; Q125
 item_plural,ITEM_MAX_ELIXIR,MAX ELIXIRs,,אליקסירים מרביים,proposed,noun + adjective plural; English adds s (no pluralName); singular: אליקסיר מרבי; Q125
-item_plural,ITEM_BERRY_JUICE,BERRY JUICEs,,מיצי ברי,proposed,construct plural of the head noun; English adds s (no pluralName); singular: מיץ ברי; Q125
+item_plural,ITEM_BERRY_JUICE,BERRY JUICEs,,מיצי פירות,proposed,construct plural of the head noun; English adds s (no pluralName); singular: מיץ פירות; Q125
 item_plural,ITEM_SWEET_HEART,SWEET HEARTs,,לבבות מתוקים,proposed,noun + adjective plural; English adds s (no pluralName); singular: לב מתוק; Q125
 item_plural,ITEM_RAGE_CANDY_BAR,RAGE CANDY BARs,,חטיפי זעם,proposed,construct plural of the head noun; English adds s (no pluralName); singular: חטיף זעם; Q125
 item_plural,ITEM_LAVA_COOKIE,LAVA COOKIEs,,עוגיות לבה,proposed,construct plural of the head noun; English adds s (no pluralName); singular: עוגיית לבה; Q125
@@ -4960,10 +4960,10 @@ item_plural,ITEM_FIGHTING_GEM,FIGHTING GEMs,,אבני חן קרב,proposed,const
 item_plural,ITEM_POISON_GEM,POISON GEMs,,אבני חן רעל,proposed,construct plural of the head noun; English adds s (no pluralName); singular: אבן חן רעל; Q125
 item_plural,ITEM_GROUND_GEM,GROUND GEMs,,אבני חן אדמה,proposed,construct plural of the head noun; English adds s (no pluralName); singular: אבן חן אדמה; Q125
 item_plural,ITEM_FLYING_GEM,FLYING GEMs,,אבני חן תעופה,proposed,construct plural of the head noun; English adds s (no pluralName); singular: אבן חן תעופה; Q125
-item_plural,ITEM_PSYCHIC_GEM,PSYCHIC GEMs,,אבני חן פסיכיות,proposed,"construct plural, adjective in the plural; English adds s (no pluralName); singular: אבן חן פסיכית; Q125"
+item_plural,ITEM_PSYCHIC_GEM,PSYCHIC GEMs,,אבני חן על-חושיות,proposed,"construct plural, adjective in the plural; English adds s (no pluralName); singular: אבן חן על-חושית; Q125; DECISIONS Q139 (Psychic is על-חושי)"
 item_plural,ITEM_BUG_GEM,BUG GEMs,,אבני חן חרק,proposed,construct plural of the head noun; English adds s (no pluralName); singular: אבן חן חרק; Q125
 item_plural,ITEM_ROCK_GEM,ROCK GEMs,,אבני חן סלע,proposed,construct plural of the head noun; English adds s (no pluralName); singular: אבן חן סלע; Q125
-item_plural,ITEM_GHOST_GEM,GHOST GEMs,,אבני חן רוח,proposed,construct plural of the head noun; English adds s (no pluralName); singular: אבן חן רוח; Q125
+item_plural,ITEM_GHOST_GEM,GHOST GEMs,,אבני חן רפאים,proposed,construct plural of the head noun; English adds s (no pluralName); singular: אבן חן רפאים; Q125
 item_plural,ITEM_DRAGON_GEM,DRAGON GEMs,,אבני חן דרקון,proposed,construct plural of the head noun; English adds s (no pluralName); singular: אבן חן דרקון; Q125
 item_plural,ITEM_DARK_GEM,DARK GEMs,,אבני חן אפלות,proposed,"construct plural, adjective in the plural; English adds s (no pluralName); singular: אבן חן אפלה; Q125"
 item_plural,ITEM_STEEL_GEM,STEEL GEMs,,אבני חן פלדה,proposed,construct plural of the head noun; English adds s (no pluralName); singular: אבן חן פלדה; Q125
@@ -4978,10 +4978,10 @@ item_plural,ITEM_FIGHTINIUM_Z,FIGHTINIUM Zs,,קרביום Z,proposed,"same as si
 item_plural,ITEM_POISONIUM_Z,POISONIUM Zs,,רעליום Z,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: רעליום Z; Q125"
 item_plural,ITEM_GROUNDIUM_Z,GROUNDIUM Zs,,אדמיום Z,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: אדמיום Z; Q125"
 item_plural,ITEM_FLYINIUM_Z,FLYINIUM Zs,,תעופיום Z,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: תעופיום Z; Q125"
-item_plural,ITEM_PSYCHIUM_Z,PSYCHIUM Zs,,פסיכיום Z,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: פסיכיום Z; Q125"
+item_plural,ITEM_PSYCHIUM_Z,PSYCHIUM Zs,,על-חושיום Z,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: על-חושיום Z; Q125"
 item_plural,ITEM_BUGINIUM_Z,BUGINIUM Zs,,חרקיום Z,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: חרקיום Z; Q125"
 item_plural,ITEM_ROCKIUM_Z,ROCKIUM Zs,,סלעיום Z,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: סלעיום Z; Q125"
-item_plural,ITEM_GHOSTIUM_Z,GHOSTIUM Zs,,רוחיום Z,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: רוחיום Z; Q125"
+item_plural,ITEM_GHOSTIUM_Z,GHOSTIUM Zs,,רפאיום Z,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: רפאיום Z; Q125"
 item_plural,ITEM_DRAGONIUM_Z,DRAGONIUM Zs,,דרקוניום Z,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: דרקוניום Z; Q125"
 item_plural,ITEM_DARKINIUM_Z,DARKINIUM Zs,,אפליום Z,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: אפליום Z; Q125"
 item_plural,ITEM_STEELIUM_Z,STEELIUM Zs,,פלדיום Z,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: פלדיום Z; Q125"
@@ -5050,7 +5050,7 @@ item_plural,ITEM_HEAT_ROCK,HEAT ROCKs,,סלעים חמים,proposed,noun + adjec
 item_plural,ITEM_SMOOTH_ROCK,SMOOTH ROCKs,,סלעים חלקים,proposed,noun + adjective plural; English adds s (no pluralName); singular: סלע חלק; Q125
 item_plural,ITEM_ICY_ROCK,ICY ROCKs,,סלעים קרים,proposed,noun + adjective plural; English adds s (no pluralName); singular: סלע קר; Q125
 item_plural,ITEM_ELECTRIC_SEED,ELECTRIC SEEDs,,זרעי חשמל,proposed,construct plural of the head noun; English adds s (no pluralName); singular: זרע חשמל; Q125
-item_plural,ITEM_PSYCHIC_SEED,PSYCHIC SEEDs,,זרעים פסיכיים,proposed,noun + adjective plural; English adds s (no pluralName); singular: זרע פסיכי; Q125
+item_plural,ITEM_PSYCHIC_SEED,PSYCHIC SEEDs,,זרעי על-חוש,proposed,construct plural like זרעי חשמל; English adds s (no pluralName); singular: זרע על-חוש; Q125; DECISIONS Q139 (Psychic is על-חושי)
 item_plural,ITEM_MISTY_SEED,MISTY SEEDs,,זרעי ערפל,proposed,construct plural of the head noun; English adds s (no pluralName); singular: זרע ערפל; Q125
 item_plural,ITEM_GRASSY_SEED,GRASSY SEEDs,,זרעי עשב,proposed,construct plural of the head noun; English adds s (no pluralName); singular: זרע עשב; Q125
 item_plural,ITEM_ABSORB_BULB,ABSORB BULBs,,פקעות ספיגה,proposed,construct plural of the head noun; English adds s (no pluralName); singular: פקעת ספיגה; Q125
@@ -5117,13 +5117,13 @@ item_plural,ITEM_FAIRY_TERA_SHARD,FAIRY TERA SHARDs,,שברי טרה פיה,prop
 item_plural,ITEM_FIGHTING_TERA_SHARD,FIGHTING TERA SHARDs,,שברי טרה קרב,proposed,construct plural of the head noun; English adds s (no pluralName); singular: שבר טרה קרב; Q125
 item_plural,ITEM_FIRE_TERA_SHARD,FIRE TERA SHARDs,,שברי טרה אש,proposed,construct plural of the head noun; English adds s (no pluralName); singular: שבר טרה אש; Q125
 item_plural,ITEM_FLYING_TERA_SHARD,FLYING TERA SHARDs,,שברי טרה תעופה,proposed,construct plural of the head noun; English adds s (no pluralName); singular: שבר טרה תעופה; Q125
-item_plural,ITEM_GHOST_TERA_SHARD,GHOST TERA SHARDs,,שברי טרה רוח,proposed,construct plural of the head noun; English adds s (no pluralName); singular: שבר טרה רוח; Q125
+item_plural,ITEM_GHOST_TERA_SHARD,GHOST TERA SHARDs,,שברי טרה רפאים,proposed,construct plural of the head noun; English adds s (no pluralName); singular: שבר טרה רפאים; Q125
 item_plural,ITEM_GRASS_TERA_SHARD,GRASS TERA SHARDs,,שברי טרה עשב,proposed,construct plural of the head noun; English adds s (no pluralName); singular: שבר טרה עשב; Q125
 item_plural,ITEM_GROUND_TERA_SHARD,GROUND TERA SHARDs,,שברי טרה אדמה,proposed,construct plural of the head noun; English adds s (no pluralName); singular: שבר טרה אדמה; Q125
 item_plural,ITEM_ICE_TERA_SHARD,ICE TERA SHARDs,,שברי טרה קרח,proposed,construct plural of the head noun; English adds s (no pluralName); singular: שבר טרה קרח; Q125
 item_plural,ITEM_NORMAL_TERA_SHARD,NORMAL TERA SHARDs,,שברי טרה רגילים,proposed,"construct plural, adjective in the plural; English adds s (no pluralName); singular: שבר טרה רגיל; Q125"
 item_plural,ITEM_POISON_TERA_SHARD,POISON TERA SHARDs,,שברי טרה רעל,proposed,construct plural of the head noun; English adds s (no pluralName); singular: שבר טרה רעל; Q125
-item_plural,ITEM_PSYCHIC_TERA_SHARD,PSYCHIC TERA SHARDs,,שברי טרה פסיכיים,proposed,"construct plural, adjective in the plural; English adds s (no pluralName); singular: שבר טרה פסיכי; Q125"
+item_plural,ITEM_PSYCHIC_TERA_SHARD,PSYCHIC TERA SHARDs,,שברי טרה על-חוש,proposed,construct plural of the head noun; English adds s (no pluralName); singular: שבר טרה על-חוש; Q125; DECISIONS Q139 (Psychic is על-חושי)
 item_plural,ITEM_ROCK_TERA_SHARD,ROCK TERA SHARDs,,שברי טרה סלע,proposed,construct plural of the head noun; English adds s (no pluralName); singular: שבר טרה סלע; Q125
 item_plural,ITEM_STEEL_TERA_SHARD,STEEL TERA SHARDs,,שברי טרה פלדה,proposed,construct plural of the head noun; English adds s (no pluralName); singular: שבר טרה פלדה; Q125
 item_plural,ITEM_WATER_TERA_SHARD,WATER TERA SHARDs,,שברי טרה מים,proposed,construct plural of the head noun; English adds s (no pluralName); singular: שבר טרה מים; Q125
@@ -5153,7 +5153,7 @@ item_plural,ITEM_SWAP_SNACK,SWAP SNACKs,,חטיפי החלפה,proposed,construc
 item_plural,ITEM_POKESHI_DOLL,POKéSHI DOLLs,,בובות פוקישי,proposed,construct plural of the head noun; English adds s (no pluralName); singular: בובת פוקישי; Q125
 item_plural,ITEM_GS_BALL,GS BALLs,,כדורי GS,proposed,construct plural of the head noun; English adds s (no pluralName); singular: כדור GS; Q125
 item_plural,ITEM_FERTILIZER,GROWTH MULCHs,,דשן צמיחה,proposed,same as singular; mass noun; English adds s (no pluralName); singular: דשן צמיחה; Q125
-item_plural,ITEM_EXP_SHARE_SMALL,EXP. SHARE Ss,,חולקי נסיון קטנים,proposed,"construct plural, adjective in the plural; English adds s (no pluralName); singular: חולק נסיון קטן; Q125"
+item_plural,ITEM_EXP_SHARE_SMALL,EXP. SHARE Ss,,חולקי ניסיון קטנים,proposed,"construct plural, adjective in the plural; English adds s (no pluralName); singular: חולק ניסיון קטן; Q125"
 item_plural,ITEM_UNUSED_BERRY_1,SITRUS BERRYs,,פירות סיטרוס,proposed,construct plural of the head noun; English adds s (no pluralName); singular: פרי סיטרוס; Q125
 item_plural,ITEM_UNUSED_BERRY_2,????????s,,????????,proposed,same as singular; placeholder name of an unused item; English adds s (no pluralName); singular: ????????; Q125
 item_plural,ITEM_UNUSED_BERRY_3,????????s,,????????,proposed,same as singular; placeholder name of an unused item; English adds s (no pluralName); singular: ????????; Q125
@@ -5190,19 +5190,19 @@ type,TYPE_POISON,POISON,רעל,רעל,inherited,FR match: constant
 type,TYPE_GROUND,GROUND,אדמה,אדמה,inherited,FR match: constant
 type,TYPE_ROCK,ROCK,סלע,סלע,inherited,FR match: constant
 type,TYPE_BUG,BUG,חרק,חרק,inherited,FR match: constant
-type,TYPE_GHOST,GHOST,רוח,רוח,inherited,FR match: constant
+type,TYPE_GHOST,GHOST,רוח,רפאים,proposed,"FR match: constant; FireRed now רפאים (gTypeNames, src/battle_main.c); DECISIONS Q140 (FireRed naming conventions); plate graphics/types/ghost.png and menu_info.png redrawn"
 type,TYPE_STEEL,STEEL,פלדה,פלדה,inherited,FR match: constant
 type,TYPE_MYSTERY,???,,???,proposed,kept as in English (types_info.h:261); placeholder type; reviewed
 type,TYPE_FIRE,FIRE,אש,אש,inherited,FR match: constant
 type,TYPE_WATER,WATER,מים,מים,inherited,FR match: constant
 type,TYPE_GRASS,GRASS,עשב,עשב,inherited,FR match: constant
 type,TYPE_ELECTRIC,ELECTRIC,חשמל,חשמל,inherited,FR match: constant TYPE_ELECTRIC; English renamed since Gen 3 (FR 'ELECTR')
-type,TYPE_PSYCHIC,PSYCHIC,פסיכי,פסיכי,inherited,FR match: constant TYPE_PSYCHIC; English renamed since Gen 3 (FR 'PSYCHC')
+type,TYPE_PSYCHIC,PSYCHIC,פסיכי,על-חושי,proposed,FR match: constant TYPE_PSYCHIC; English renamed since Gen 3 (FR 'PSYCHC'); FireRed now על-חושי (gTypeNames); DECISIONS Q139 (Psychic is על-חושי); plates drawn in FONT_SMALL_NARROWER glyphs
 type,TYPE_ICE,ICE,קרח,קרח,inherited,FR match: constant
 type,TYPE_DRAGON,DRAGON,דרקון,דרקון,inherited,FR match: constant
 type,TYPE_DARK,DARK,אפל,אפל,inherited,FR match: constant
 type,TYPE_FAIRY,FAIRY,,פיה,proposed,"meaning; singular like חרק/דרקון; already assumed by done rows FAIRY GEM/MEMORY/FEATHER/TERA SHARD, FAIRY AURA, FAIRIUM Z (moves use plural פיות, MOVE_FAIRY_WIND); reviewed"
-type,TYPE_STELLAR,STELLAR,,כוכבי,proposed,"meaning; adjective like פסיכי/אפל; matches done ITEM_STELLAR_TERA_SHARD שבר טרה כוכבי; 23 px narrower, type cell 39; reviewed"
+type,TYPE_STELLAR,STELLAR,,כוכבי,proposed,"meaning; adjective like על-חושי/אפל; matches done ITEM_STELLAR_TERA_SHARD שבר טרה כוכבי; 23 px narrower, type cell 39; reviewed"
 type_generic,TYPE_NONE,a move,,מהלך,proposed,"plain ""a move""; stands in for a move name in battle text (""used {B_BUFF3}"", battle_message.c:2773; {B_CURRENT_MOVE}/{B_LAST_MOVE}, :3269/:3277); FR writes ב{move} and ה{move} של (FR battle_message.c:424, :260) and מהלך מסוג X takes both prefixes; gBattleTextBuff3 is >= 29 bytes (battle.h:959); reviewed"
 type_generic,TYPE_NORMAL,a NORMAL move,,מהלך מסוג רגיל,proposed,"type word = the TYPE_NORMAL row; stands in for a move name in battle text (""used {B_BUFF3}"", battle_message.c:2773; {B_CURRENT_MOVE}/{B_LAST_MOVE}, :3269/:3277); FR writes ב{move} and ה{move} של (FR battle_message.c:424, :260) and מהלך מסוג X takes both prefixes; gBattleTextBuff3 is >= 29 bytes (battle.h:959); reviewed"
 type_generic,TYPE_FIGHTING,a FIGHTING move,,מהלך מסוג קרב,proposed,type word = the TYPE_FIGHTING row; pattern as TYPE_NORMAL; reviewed
@@ -5211,14 +5211,14 @@ type_generic,TYPE_POISON,a POISON move,,מהלך מסוג רעל,proposed,type w
 type_generic,TYPE_GROUND,a GROUND move,,מהלך מסוג אדמה,proposed,type word = the TYPE_GROUND row; pattern as TYPE_NORMAL; reviewed
 type_generic,TYPE_ROCK,a ROCK move,,מהלך מסוג סלע,proposed,type word = the TYPE_ROCK row; pattern as TYPE_NORMAL; reviewed
 type_generic,TYPE_BUG,a BUG move,,מהלך מסוג חרק,proposed,type word = the TYPE_BUG row; pattern as TYPE_NORMAL; reviewed
-type_generic,TYPE_GHOST,a GHOST move,,מהלך מסוג רוח,proposed,type word = the TYPE_GHOST row; pattern as TYPE_NORMAL; reviewed
+type_generic,TYPE_GHOST,a GHOST move,,מהלך מסוג רפאים,proposed,type word = the TYPE_GHOST row; pattern as TYPE_NORMAL; DECISIONS Q140 (FireRed naming conventions)
 type_generic,TYPE_STEEL,a STEEL move,,מהלך מסוג פלדה,proposed,type word = the TYPE_STEEL row; pattern as TYPE_NORMAL; reviewed
 type_generic,TYPE_MYSTERY,a ??? move,,מהלך מסוג ???,proposed,type word = the TYPE_MYSTERY row; pattern as TYPE_NORMAL; reviewed
 type_generic,TYPE_FIRE,a FIRE move,,מהלך מסוג אש,proposed,type word = the TYPE_FIRE row; pattern as TYPE_NORMAL; reviewed
 type_generic,TYPE_WATER,a WATER move,,מהלך מסוג מים,proposed,type word = the TYPE_WATER row; pattern as TYPE_NORMAL; reviewed
 type_generic,TYPE_GRASS,a GRASS move,,מהלך מסוג עשב,proposed,type word = the TYPE_GRASS row; pattern as TYPE_NORMAL; reviewed
 type_generic,TYPE_ELECTRIC,an ELECTRIC move,,מהלך מסוג חשמל,proposed,type word = the TYPE_ELECTRIC row; pattern as TYPE_NORMAL; reviewed
-type_generic,TYPE_PSYCHIC,a PSYCHIC move,,מהלך מסוג פסיכי,proposed,type word = the TYPE_PSYCHIC row; pattern as TYPE_NORMAL; reviewed
+type_generic,TYPE_PSYCHIC,a PSYCHIC move,,מהלך על-חושי,proposed,"מהלך + the adjective, as FireRed gText_APsychicMove (מהלך פסיכי); מהלך מסוג על-חושי is 17 bytes and overflows u8 generic[17] (include/data.h); DECISIONS Q139 (Psychic is על-חושי)"
 type_generic,TYPE_ICE,an ICE move,,מהלך מסוג קרח,proposed,type word = the TYPE_ICE row; pattern as TYPE_NORMAL; reviewed
 type_generic,TYPE_DRAGON,a DRAGON move,,מהלך מסוג דרקון,proposed,type word = the TYPE_DRAGON row; pattern as TYPE_NORMAL; reviewed
 type_generic,TYPE_DARK,a DARK move,,מהלך מסוג אפל,proposed,type word = the TYPE_DARK row; pattern as TYPE_NORMAL; reviewed
@@ -5297,7 +5297,7 @@ trainer_class,TRAINER_CLASS_PKMN_TRAINER_2,{PKMN} TRAINER,מאמן פוקימו�
 trainer_class,TRAINER_CLASS_HIKER,HIKER,מטייל,מטייל,inherited,FR match: constant
 trainer_class,TRAINER_CLASS_TEAM_AQUA,TEAM AQUA,צוות אקווה,צוות אקווה,inherited,FR match: constant
 trainer_class,TRAINER_CLASS_PKMN_BREEDER,{PKMN} BREEDER,מגדל פוקימון,מגדל פוקימון,inherited,FR match: constant
-trainer_class,TRAINER_CLASS_COOLTRAINER,COOLTRAINER,מאמן על,מאמן על,inherited,FR match: constant
+trainer_class,TRAINER_CLASS_COOLTRAINER,COOLTRAINER,מאמן על,מאמן-על,proposed,"FR match: constant; FireRed now writes the hyphen, מאמן-על (DECISIONS Q140 (FireRed naming conventions))"
 trainer_class,TRAINER_CLASS_BIRD_KEEPER,BIRD KEEPER,מגדל ציפורים,מגדל ציפורים,inherited,FR match: constant
 trainer_class,TRAINER_CLASS_COLLECTOR,COLLECTOR,אספן,אספן,inherited,FR match: constant
 trainer_class,TRAINER_CLASS_SWIMMER_M,SWIMMER♂,שחיין♂,שחיין♂,inherited,FR match: constant
@@ -5310,14 +5310,14 @@ trainer_class,TRAINER_CLASS_HEX_MANIAC,HEX MANIAC,מטורפת כישוף,מטו
 trainer_class,TRAINER_CLASS_AROMA_LADY,AROMA LADY,גברת ניחוח,גברת ניחוח,inherited,FR match: constant
 trainer_class,TRAINER_CLASS_RUIN_MANIAC,RUIN MANIAC,מטורף חורבות,מטורף חורבות,inherited,FR match: constant
 trainer_class,TRAINER_CLASS_INTERVIEWER,INTERVIEWER,מראיין,מראיין,inherited,FR match: constant
-trainer_class,TRAINER_CLASS_TUBER_F,TUBER,שחיין,שחיינית,proposed,"female only (Tuber F pic; every Tuber F trainer is female, frontier ANN, EILEEN, CARLIE, REGINA, ALISON); the FR row is the unused mixed RS class, so the class takes its own gender (STYLE §2) as SWIMMER_F שחיינית♀; TUBER_M and TUBER_FRLG (male) keep שחיין"
-trainer_class,TRAINER_CLASS_TUBER_M,TUBER,שחיין,שחיין,inherited,FR match: English via TRAINER_CLASS_RS_TUBER_F
+trainer_class,TRAINER_CLASS_TUBER_F,TUBER,שחיין,ילדת גלגל ים,proposed,"female only (Tuber F pic; every Tuber F trainer is female, frontier ANN, EILEEN, CARLIE, REGINA, ALISON); FireRed's TUBER ילד גלגל ים in the class's own gender (STYLE §2); 12 bytes, the limit; DECISIONS Q140 (FireRed naming conventions)"
+trainer_class,TRAINER_CLASS_TUBER_M,TUBER,שחיין,ילד גלגל ים,proposed,FR match: English via TRAINER_CLASS_RS_TUBER_F; FireRed's TUBER ילד גלגל ים (DECISIONS Q140 (FireRed naming conventions))
 trainer_class,TRAINER_CLASS_LADY,LADY,גברת,גברת,inherited,FR match: constant
 trainer_class,TRAINER_CLASS_BEAUTY,BEAUTY,יפהפייה,יפהפייה,inherited,FR match: constant
 trainer_class,TRAINER_CLASS_RICH_BOY,RICH BOY,ילד עשיר,ילד עשיר,inherited,FR match: constant
 trainer_class,TRAINER_CLASS_POKEMANIAC,POKéMANIAC,פוקימאניאק,פוקימאניאק,inherited,FR match: constant
 trainer_class,TRAINER_CLASS_GUITARIST,GUITARIST,גיטריסט,גיטריסט,inherited,FR match: constant
-trainer_class,TRAINER_CLASS_KINDLER,KINDLER,מציתן,מציתן,inherited,FR match: constant
+trainer_class,TRAINER_CLASS_KINDLER,KINDLER,מציתן,מבעיר,proposed,FR match: constant; FireRed now מבעיר (DECISIONS Q140 (FireRed naming conventions))
 trainer_class,TRAINER_CLASS_CAMPER,CAMPER,מחנאי,מחנאי,inherited,FR match: constant
 trainer_class,TRAINER_CLASS_PICNICKER,PICNICKER,מטיילת,מטיילת,inherited,FR match: constant
 trainer_class,TRAINER_CLASS_BUG_MANIAC,BUG MANIAC,מטורף חרקים,מטורף חרקים,inherited,FR match: constant
@@ -5340,7 +5340,7 @@ trainer_class,TRAINER_CLASS_PARASOL_LADY,PARASOL LADY,גברת שמשייה,גב
 trainer_class,TRAINER_CLASS_SWIMMER_F,SWIMMER♀,שחיינית♀,שחיינית♀,inherited,FR match: constant
 trainer_class,TRAINER_CLASS_TWINS,TWINS,תאומים,תאומים,inherited,FR match: constant
 trainer_class,TRAINER_CLASS_SAILOR,SAILOR,מלח,מלח,inherited,FR match: constant
-trainer_class,TRAINER_CLASS_COOLTRAINER_2,COOLTRAINER,מאמן על,מאמן על,inherited,FR match: English via TRAINER_CLASS_COOLTRAINER; FR has several renderings: מאמן-על / מאמן על (picked the one H&S already inherits by constant)
+trainer_class,TRAINER_CLASS_COOLTRAINER_2,COOLTRAINER,מאמן על,מאמן-על,proposed,FR match: English via TRAINER_CLASS_COOLTRAINER; FireRed now writes מאמן-על in both rows (DECISIONS Q140 (FireRed naming conventions))
 trainer_class,TRAINER_CLASS_MAGMA_ADMIN,MAGMA ADMIN,מנהל מגמה,מנהל מגמה,inherited,FR match: constant
 trainer_class,TRAINER_CLASS_RIVAL,{PKMN} TRAINER,מאמן פוקימון,מאמן פוקימון,inherited,FR match: English via TRAINER_CLASS_NONE
 trainer_class,TRAINER_CLASS_BUG_CATCHER,BUG CATCHER,לוכד חרקים,לוכד חרקים,inherited,FR match: constant
@@ -5372,7 +5372,7 @@ trainer_class,TRAINER_CLASS_BURGLAR_FRLG,BURGLAR,פורץ,פורץ,inherited,FR 
 trainer_class,TRAINER_CLASS_ENGINEER_FRLG,ENGINEER,מהנדס,מהנדס,inherited,FR match: English via TRAINER_CLASS_ENGINEER
 trainer_class,TRAINER_CLASS_FISHERMAN_FRLG,FISHERMAN,דייג,דייג,inherited,FR match: English via TRAINER_CLASS_RS_FISHERMAN
 trainer_class,TRAINER_CLASS_SWIMMER_M_FRLG,SWIMMER♂,שחיין♂,שחיין♂,inherited,FR match: English via TRAINER_CLASS_RS_SWIMMER_M
-trainer_class,TRAINER_CLASS_CUE_BALL_FRLG,CUE BALL,כדור משחק,כדור משחק,inherited,FR match: English via TRAINER_CLASS_CUE_BALL
+trainer_class,TRAINER_CLASS_CUE_BALL_FRLG,CUE BALL,כדור משחק,בריון,proposed,"FR match: English via TRAINER_CLASS_CUE_BALL; FireRed now בריון (DECISIONS Q140 (FireRed naming conventions)), not the calque כדור משחק"
 trainer_class,TRAINER_CLASS_GAMER_FRLG,GAMER,גיימר,גיימר,inherited,FR match: English via TRAINER_CLASS_GAMER
 trainer_class,TRAINER_CLASS_BEAUTY_FRLG,BEAUTY,יפהפייה,יפהפייה,inherited,FR match: English via TRAINER_CLASS_RS_BEAUTY
 trainer_class,TRAINER_CLASS_SWIMMER_F_FRLG,SWIMMER♀,שחיינית♀,שחיינית♀,inherited,FR match: English via TRAINER_CLASS_RS_SWIMMER_F
@@ -5387,7 +5387,7 @@ trainer_class,TRAINER_CLASS_SCIENTIST_FRLG,SCIENTIST,מדען,מדען,inherited
 trainer_class,TRAINER_CLASS_BOSS_FRLG,BOSS,בוס,בוס,inherited,FR match: English via TRAINER_CLASS_BOSS
 trainer_class,TRAINER_CLASS_LEADER_FRLG,LEADER,מנהיג,מנהיג,inherited,FR match: English via TRAINER_CLASS_RS_LEADER
 trainer_class,TRAINER_CLASS_TEAM_ROCKET_FRLG,TEAM ROCKET,צוות רוקט,צוות רוקט,inherited,FR match: English via TRAINER_CLASS_TEAM_ROCKET
-trainer_class,TRAINER_CLASS_COOLTRAINER_FRLG,COOLTRAINER,מאמן על,מאמן על,inherited,FR match: English via TRAINER_CLASS_COOLTRAINER; FR has several renderings: מאמן-על / מאמן על (picked the one H&S already inherits by constant)
+trainer_class,TRAINER_CLASS_COOLTRAINER_FRLG,COOLTRAINER,מאמן על,מאמן-על,proposed,FR match: English via TRAINER_CLASS_COOLTRAINER; FireRed now writes מאמן-על in both rows (DECISIONS Q140 (FireRed naming conventions))
 trainer_class,TRAINER_CLASS_ELITE_FOUR_FRLG,ELITE FOUR,רביעיית עלית,רביעיית עלית,inherited,FR match: English via TRAINER_CLASS_RS_ELITE_FOUR
 trainer_class,TRAINER_CLASS_GENTLEMAN_FRLG,GENTLEMAN,ג'נטלמן,ג'נטלמן,inherited,FR match: English via TRAINER_CLASS_RS_GENTLEMAN
 trainer_class,TRAINER_CLASS_RIVAL_LATE_FRLG,RIVAL,יריב,יריב,inherited,FR match: English via TRAINER_CLASS_RIVAL_EARLY
@@ -5401,7 +5401,7 @@ trainer_class,TRAINER_CLASS_SIS_AND_BRO_FRLG,SIS AND BRO,אחות ואח,אחו�
 trainer_class,TRAINER_CLASS_PKMN_PROF_FRLG,{PKMN} PROF.,פרו' פוקימון,פרו' פוקימון,inherited,FR match: English via TRAINER_CLASS_PKMN_PROF
 trainer_class,TRAINER_CLASS_PLAYER_FRLG,{PKMN} TRAINER,מאמן פוקימון,מאמן פוקימון,inherited,FR match: English via TRAINER_CLASS_NONE
 trainer_class,TRAINER_CLASS_CRUSH_GIRL_FRLG,CRUSH GIRL,נערת מחץ,נערת מחץ,inherited,FR match: English via TRAINER_CLASS_CRUSH_GIRL
-trainer_class,TRAINER_CLASS_TUBER_FRLG,TUBER,שחיין,שחיין,inherited,FR match: English via TRAINER_CLASS_RS_TUBER_F
+trainer_class,TRAINER_CLASS_TUBER_FRLG,TUBER,שחיין,ילד גלגל ים,proposed,FR match: English via TRAINER_CLASS_RS_TUBER_F; FireRed now ילד גלגל ים (DECISIONS Q140 (FireRed naming conventions)); no longer the SWIMMER word
 trainer_class,TRAINER_CLASS_PKMN_BREEDER_FRLG,{PKMN} BREEDER,מגדל פוקימון,מגדל פוקימון,inherited,FR match: English via TRAINER_CLASS_RS_PKMN_BREEDER
 trainer_class,TRAINER_CLASS_PKMN_RANGER_FRLG,{PKMN} RANGER,שומר פוקימון,שומר פוקימון,inherited,FR match: English via TRAINER_CLASS_RS_PKMN_RANGER
 trainer_class,TRAINER_CLASS_AROMA_LADY_FRLG,AROMA LADY,גברת ניחוח,גברת ניחוח,inherited,FR match: English via TRAINER_CLASS_RS_AROMA_LADY
@@ -5419,13 +5419,13 @@ trainer_class,TRAINER_CLASS_BURGLAR_HNS,BURGLAR,פורץ,פורץ,inherited,FR m
 trainer_class,TRAINER_CLASS_CAMPER_HNS,CAMPER,מחנאי,מחנאי,inherited,FR match: English via TRAINER_CLASS_RS_CAMPER
 trainer_class,TRAINER_CLASS_CHAMPION_HNS,CHAMPION,אלוף,אלוף,inherited,FR match: English via TRAINER_CLASS_RS_CHAMPION
 trainer_class,TRAINER_CLASS_COLLECTOR_HNS,COLLECTOR,אספן,אספן,inherited,FR match: English via TRAINER_CLASS_COLLECTOR
-trainer_class,TRAINER_CLASS_COOLTRAINER_HNS,COOLTRAINER,מאמן על,מאמן על,inherited,FR match: English via TRAINER_CLASS_COOLTRAINER; FR has several renderings: מאמן-על / מאמן על (picked the one H&S already inherits by constant)
+trainer_class,TRAINER_CLASS_COOLTRAINER_HNS,COOLTRAINER,מאמן על,מאמן-על,proposed,FR match: English via TRAINER_CLASS_COOLTRAINER; FireRed now writes מאמן-על in both rows (DECISIONS Q140 (FireRed naming conventions))
 trainer_class,TRAINER_CLASS_DOME_ACE_HNS,DOME ACE,,אס הכיפה,proposed,same as TRAINER_CLASS_DOME_ACE; meaning; male (Tucker); ACE = אס as MOVE_AERIAL_ACE אס אווירי; DOME = כיפה as ITEM_DOME_FOSSIL מאובן כיפה; reviewed
 trainer_class,TRAINER_CLASS_DRAGON_TAMER_HNS,DRAGON TAMER,מאלף דרקונים,מאלף דרקונים,inherited,FR match: English via TRAINER_CLASS_DRAGON_TAMER
 trainer_class,TRAINER_CLASS_ELITE_FOUR_HNS,ELITE FOUR,רביעיית עלית,רביעיית עלית,inherited,FR match: English via TRAINER_CLASS_RS_ELITE_FOUR
 trainer_class,TRAINER_CLASS_EXPERT_HNS,EXPERT,מומחה,מומחית,proposed,"female only (Pic: Expert F; its only trainers are COLETTE and SHIRLEY, HGSS Teachers who speak of themselves in the feminine); the FR row is the mixed RS EXPERT class, so the class takes its own gender (STYLE §2), as TUBER_F שחיינית; TRAINER_CLASS_EXPERT keeps מומחה"
 trainer_class,TRAINER_CLASS_FACTORY_HEAD_HNS,FACTORY HEAD,,ראש המפעל,proposed,"same as TRAINER_CLASS_FACTORY_HEAD; meaning; male (Noland); FACTORY = מפעל as MAPSEC_POWER_PLANT מפעל החשמל; ראש, not מנהל, because ADMIN = מנהל; reviewed"
-trainer_class,TRAINER_CLASS_FIREBREATHER_HNS,FIREBREATHER,,יורק אש,proposed,meaning (circus fire-breather); male (10 trainers); FIRE = אש; distinct from KINDLER מציתן; reviewed
+trainer_class,TRAINER_CLASS_FIREBREATHER_HNS,FIREBREATHER,,יורק אש,proposed,meaning (circus fire-breather); male (10 trainers); FIRE = אש; distinct from KINDLER מבעיר; reviewed
 trainer_class,TRAINER_CLASS_FISHERMAN_HNS,FISHERMAN,דייג,דייג,inherited,FR match: English via TRAINER_CLASS_RS_FISHERMAN
 trainer_class,TRAINER_CLASS_GENTLEMAN_HNS,GENTLEMAN,ג'נטלמן,ג'נטלמן,inherited,FR match: English via TRAINER_CLASS_RS_GENTLEMAN
 trainer_class,TRAINER_CLASS_GUITARIST_HNS,GUITARIST,גיטריסט,גיטריסט,inherited,FR match: English via TRAINER_CLASS_GUITARIST
@@ -6030,7 +6030,7 @@ term,TERM_HM,HM,מ”נ,מ”נ,inherited,FR text uses מ”נ in 23 strings
 term,TERM_HP,HP,נ”ח,נ”ח,inherited,FR gText_ItemEffect_HP = נ”ח
 term,TERM_PP,PP,נ”כ,נ”כ,inherited,FR ITEM_PP_UP = הגדלת נ”כ; נ”כ = נקודות כוח; FireRed help text spells it out
 term,TERM_LV,Lv.,רמה,רמה,inherited,FR text uses רמה in 48 strings; FireRed writes ברמה N in prose; H&S draws Lv. as a glyph ({LV} in charmap) — decide whether the glyph needs a Hebrew tile
-term,TERM_EXP_POINTS,EXP. POINTS,נקודות נסיון,נקודות נסיון,inherited,FR gText_PokeSum_ExpPoints = נקודות נסיון; FireRed spells נסיון (also ניסיון once); EXP. SHARE item is חולק נסיון
+term,TERM_EXP_POINTS,EXP. POINTS,נקודות נסיון,נקודות ניסיון,proposed,"FR gText_PokeSum_ExpPoints; FireRed now spells ניסיון (battle_message.c, EXP. SHARE חולק ניסיון); the full spelling everywhere (DECISIONS Q140 (FireRed naming conventions))"
 term,TERM_MOVE,MOVE (a Pokémon's move),מהלך,מהלך,inherited,FR text uses מהלך in 193 strings; FireRed calls a Pokémon move מהלך (KNOWN MOVES = מהלכים ידועים); the PC verb MOVE is הזז
 term,TERM_ABILITY,ABILITY,יכולת,יכולת,inherited,FR Help_Text_Ability = יכולת$
 term,TERM_NATURE,NATURE,אופי,אופי,inherited,FR Help_Text_Nature = אופי$; FireRed help/summary use אופי; the move NATURE POWER uses טבע
@@ -7075,6 +7075,7 @@ term,TERM_POKERUS,POKéRUS,,פוקרוס,proposed,"the nurse's Pokérus explanat
 name,NAME_SURF_MAIL,SURF MAIL,,דואר גלישה,proposed,"CeladonCity_DepartmentStore_4F_hns/scripts.inc:16, a GSC mail that is not an item in this build; X MAIL = דואר X as the FR mail items (ITEM_WAVE_MAIL דואר גלים); SURF = גלישה (MOVE_SURF)"
 name,NAME_LOVELY_MAIL,LOVELY MAIL,,דואר מקסים,proposed,"CeladonCity_DepartmentStore_4F_hns/scripts.inc:22, a GSC mail that is not an item in this build; X MAIL = דואר X with an adjective as FR ITEM_FAB_MAIL דואר מפואר, ITEM_DREAM_MAIL דואר חלומי"
 name,NAME_FUJI,FUJI,,פוג'י,proposed,"MR. FUJI = מר פוג'י as in FireRed (pokefirered-heb data/maps/LavenderTown_VolunteerPokemonHouse/text.inc:3, :31; PokemonTower_7F/text.inc:38); LavenderTown_House1_hns, LavenderTown_SoulHouse_hns; j = ג'"
+name,NAME_MR_PSYCHIC,MR. PSYCHIC,מר על חושי,מר על-חושי,proposed,"MR. PSYCHIC'S HOUSE sign (SaffronCity_hns); FireRed ביתו של מר על חושי (data/maps/SaffronCity/text.inc), hyphen as TYPE_PSYCHIC; DECISIONS Q139 (Psychic is על-חושי)"
 name,NAME_DAISY,DAISY,,דייזי,proposed,"Blue's sister, PalletTown_House2_hns speaker prefix (8 lines); as in FireRed (pokefirered-heb data/maps/PalletTown_RivalsHouse/text.inc:2, PalletTown_ProfessorOaksLab/text.inc:262); ai /eɪ/ = יי, s /z/ = ז, final y = י"
 name,NAME_AMPHY,AMPHY,,אמפי,proposed,"Jasmine's Ampharos, OlivineCity_Lighthouse_hns (8 lines, also a speaker prefix); AMPH as in אמפרוס (SPECIES_AMPHAROS) + final y = י, built like NAME_ZIGG זיג from זיגזגון"
 name,NAME_SPEARY,SPEARY,כידי,כידי,proposed,"FireRed Hebrew ViridianCity_House/text.inc:11, :15 (the Spearow nickname, a play on כידון); H&S ViridianCity_House1_hns/scripts.inc:40, :44"
@@ -7087,7 +7088,7 @@ name,NAME_HISUI,HISUI,,היסואי,proposed,"region name in four Pokédex entri
 place,PLACE_ULTRA_WORMHOLE,Ultra Wormhole,,חור תולעת אולטרה,proposed,"Ultra Beast Pokédex entries (gen_7_families.h:6574, :6640, :7528); wormhole = חור תולעת; Ultra as in TERM_ULTRA_BEASTS חיות אולטרה (glossary.csv:6567) and ITEM_ULTRA_BALL אולטרה בול; definite חור תולעת האולטרה, as חיות האולטרה; decided Q133"
 term,TERM_TEAM_PLASMA,TEAM PLASMA,,צוות פלזמה,proposed,"Genesect Pokédex entry (shared_dex_text.h:61); TEAM = צוות as TERM_TEAM_ROCKET צוות רוקט (glossary.csv:6046; צוות מגמה, צוות אקווה in the tree); plasma = פלזמה as DEXCAT_PLASMA (:1932) and MOVE_PLASMA_FISTS אגרופי פלזמה (:2977); masculine: צוות פלזמה שינה; decided Q133"
 name,NAME_ROSE,ROSE,,רוז,proposed,"Chairman Rose, Eternamax Pokédex entry (gen_8_families.h:7134); s as /z/ = ז, silent final e dropped (transliteration_rules.md:66, :97); ROSE chunk רוז as SPECIES_ROSERADE (glossary.csv:502); decided Q133"
-term,TERM_PSYCHIC_POWER,psychic power,,כוח פסיכי,proposed,"prose: psychic power(s), energy and abilities are כוח/כוחות/אנרגיה/יכולות פסיכי(ים/ת/ות), the TYPE_PSYCHIC word, as most Pokédex entries, the three move descriptions (Freezing Glare, Eerie Spell, Psyshield Bash) and the Saffron gym and dojo dialogue already had; על-חושי stays in Kadabra's extrasensory powers (תפיסה על-חושית) and in the move names that already have it (PSYBEAM, PSYWAVE, PSYSHOCK, PSYSTRIKE, ESPER WING, PSYBLADE); move names are not changed here (the move EXTRASENSORY is חוש נוסף); see DECISIONS.md Q134"
+term,TERM_PSYCHIC_POWER,psychic power,,כוח על-חושי,proposed,"prose: psychic power(s), energy and abilities are כוח/כוחות/אנרגיה/יכולות על-חושי(ים/ת/ות), the TYPE_PSYCHIC word, as FireRed's Saffron gym (בכוח העל-חושי); Kadabra's extrasensory stays תפיסה על-חושית; DECISIONS Q139 (Psychic is על-חושי), which supersedes Q134"
 place,PLACE_SEVII_ISLANDS,SEVII ISLANDS,איי סבי,איי סבי,inherited,"Tri-Pass and Rainbow Pass descriptions (src/data/items.h); FireRed's wording: pokefirered-heb src/data/items.json:5955 (Rainbow Pass, לאיי סבי) and data/maps/SixIsland_RuinValley/text.inc:46 (באיי סבי); the Tri-Pass names the islands אחד, שתיים ושלוש as FireRed's items.json:5939"
 term,TERM_POKENAV,POKéNAV,פוקהנווט,פוקינאב,proposed,"the Easy Chat word (src/data/easy_chat/easy_chat_group_trainer.h); POKé = פוקי as in NAME_POKÉGEAR פוקיגיר and ITEM_POKEBLOCK_CASE פוקיבלוק, nav /næv/ = נאב (final v = ב); FireRed's Easy Chat word פוקהנווט is not used in H&S"
 name,NAME_ALOLA,ALOLA,,אלולה,proposed,"region name in Pokédex prose (gen_1_families.h:3837, :7559, :12232, :13985) and MOVE_GUARDIAN_OF_ALOLA שומר אלולה; transliterated like the other regions"
