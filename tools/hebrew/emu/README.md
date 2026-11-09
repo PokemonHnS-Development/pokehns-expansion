@@ -57,7 +57,7 @@ printf '60 -\nshot boot\nquit\n' | tools/hebrew/emu/hnsrun pokehns.gba build/heb
 | `HNS_UNITS` | the unit chunks `sweep.py` takes its labels from | `$HNS_WORK/units` |
 | `HNS_EN_ROM` | the ROM `make_ladder.sh` builds the ladder on | `$HNS_UPSTREAM/pokehns.gba` |
 | `DEVKITARM` | `arm-none-eabi-readelf`/`nm`/`as`/`ld`/`cpp` for symbols and `evasm.py` | `/opt/devkitpro/devkitARM` |
-| `HNS_RTC` | fake RTC start, Unix seconds (`--rtc` sets it) | 2026-01-01 12:00 UTC |
+| `HNS_RTC` | fake RTC start, Unix seconds (`--rtc` sets it); mGBA hands it to the game in the host's time zone | 2026-01-01 12:00 UTC |
 | `HNS_LOG` | `1` echoes every mGBA log line | off |
 | `HNS_MAX_FRAMES` | frame limit per runner process (one tour): a command that would step past it ends the tour as TIMEOUT | none |
 
@@ -118,6 +118,14 @@ $E/scripts/make_ladder.sh [WORKDIR]                          # default WORKDIR: 
 
 To make one rung by hand, run
 `python3 $E/ladder.py run $E/scripts/ladder2_badge1.txt OUT --save "$HNS_SAVES/ladder1_newgame.sav" --save-out ...`.
+
+The runs repeat byte for byte: the clock starts at `HNS_RTC` and moves with the emulated frames.
+But mGBA converts it to the host's local time (`localtime_r` in mGBA's `src/gba/cart/gpio.c`),
+and a save's 16-byte footer carries its clock into the next run. So `make_ladder.sh` should rebuild
+rungs 2-6 from the stored rung 1 in any time zone; rung 2 was checked under `TZ=UTC`. A new
+rung 1, and any tour that starts a new game (`start empty`), match the stored saves only in a
+UTC+2 zone on 2026-01-01, for example `TZ=Asia/Jerusalem`: under `TZ=UTC` rung 1's footer hour
+differs, and the rungs built from it differ widely.
 
 **The label sweep** (every live script text label from the unit chunks in `HNS_UNITS`, booted
 from `ladder4_league.sav` in `HNS_SAVES` unless `--save` is given):
