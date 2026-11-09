@@ -576,7 +576,7 @@ seen on screen: 525 | translated: 125
 | `src/data/easy_chat/easy_chat_group_voices.h` | 54 | 54 | translated |
 | `src/data/easy_chat/easy_chat_groups.h` | 22 | 22 | translated |
 | `src/data/help_window.h` | 24 | 24 | translated |
-| `src/data/items.h` | 2224 | 2217 | translated (7 kept in Latin: description branches this build does not compile) |
+| `src/data/items.h` | 2223 | 2216 | translated (7 kept in Latin: description branches this build does not compile) |
 | `src/data/lilycove_lady.h` | 16 | 16 | translated |
 | `src/data/moves_info.h` | 1807 | 1807 | translated |
 | `src/data/party_menu.h` | 29 | 29 | translated |

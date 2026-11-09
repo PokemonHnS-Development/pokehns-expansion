@@ -30,7 +30,7 @@ fresh clone.
 | [`tools/hebrew/release/README.md`](tools/hebrew/release/README.md) | the release scripts; [`REVIEW.md`](tools/hebrew/release/REVIEW.md) there is the screenshot review |
 | [`tools/hebrew/testmsgs/README.md`](tools/hebrew/testmsgs/README.md) | the Hebrew battle-test message table |
 | [`translation/hebrew/STYLE.md`](translation/hebrew/STYLE.md) | the binding style rules |
-| [`translation/hebrew/DECISIONS.md`](translation/hebrew/DECISIONS.md) | 74 recorded decisions, up to Q138, and the names review |
+| [`translation/hebrew/DECISIONS.md`](translation/hebrew/DECISIONS.md) | 76 recorded decisions, up to Q140, and the names review |
 | [`translation/hebrew/transliteration_rules.md`](translation/hebrew/transliteration_rules.md) | how names are transliterated |
 | [`translation/hebrew/STATUS.md`](translation/hebrew/STATUS.md) | per-file state (generated) |
 | [`translation/hebrew/glossary.csv`](translation/hebrew/glossary.csv) | every name and fixed term |
@@ -42,13 +42,14 @@ fresh clone.
 
 | Item | Value | Check |
 | --- | --- | --- |
-| `he/main` | `fe509e0043` (on GitHub too), before the merge of round 19's fixes and this documentation pass (`he/wip-r19`) | `git rev-parse --short he/main` |
+| `he/main` | `c1cfd8a30b` (on GitHub too): the merges of round 19 (`he/fix-r19`, `b32c6f117c`) and round 20 (`he/fix-r20`, `c1cfd8a30b`) | `git rev-parse --short he/main` |
+| `he/renderer` | `67df13ff43` (on GitHub too): `384104fb15` plus the four graphics and Easy Chat commits of rounds 19 and 20 and three older graphics commits (section 1.2) | `git rev-parse --short he/renderer` |
 | Release | One release, 1.0, replaced in place on each update (ROM, `SHA1SUMS`, `TESTING.md`); the builds repo's commit history keeps the older builds. Current 1.0: built from `he/main` `08027d9879` | `<builds>/README.md` |
 | 1.0 ROM | `pokehns-he-2.0.6-1.0.gba`: 33554432 bytes, SHA-1 `d1fd03270572d00e06762fe6c27e1408ed2f323e`, CRC32 `A3648409` | `<builds>/SHA1SUMS` |
 | Releasing | Build a candidate with `tools/hebrew/release/`, then replace the three files in the builds repo and say in the commit message which `he/main` commit it was built from; keep `tools/hebrew/release/notes.json` at `"release": "1.0"`. A candidate is published with hand play declared as not tested (`DECISIONS.md` Q138) | section 5 |
-| CI | the last three runs on `he/main` are green: 41918360015 at `85705e4bc9`, 41929345455 at `08027d9879` and 41933578987 at `fe509e0043` | `gh run list -R ronyeh2/pokehns-expansion-heb --workflow hebrew.yml --branch he/main` |
-| Static checks | drift 0 FAIL (708 files); audit 0 errors and 48 warnings; namecheck 0 problems and 0 warnings (60 allowlisted); plurals 0 problems; the Pokédex A–Z, Easy Chat and live-label generators up to date; 137 tool tests OK on Python 3.9.6, 3.11.9 and 3.14.7 (`he/wip-r19`) | section 4.2 |
-| Translation status | every live file is translated: 650 files, 525 seen on screen, 125 translated, none blocked | `translation/hebrew/STATUS.md:5` |
+| CI | run 42721195219 at `c1cfd8a30b`: the `audit` job is green; `build` and `check` were still running when this was written. The three runs before it on `he/main` are green: 41918360015 at `85705e4bc9`, 41929345455 at `08027d9879` and 41933578987 at `fe509e0043` | `gh run list -R ronyeh2/pokehns-expansion-heb --workflow hebrew.yml --branch he/main` |
+| Static checks | drift 0 FAIL (708 files); audit 0 errors and 54 warnings; namecheck 0 problems and 0 warnings (34 allowlisted); plurals 0 problems; the Pokédex A–Z, Easy Chat and live-label generators up to date; 137 tool tests OK on Python 3.9.6 and 3.11.9 (`c1cfd8a30b`, baseline `he/renderer` `8cfd524776`) | section 4.2 |
+| Translation status | every live file is translated: 650 files, 525 seen on screen, 125 translated, none blocked (rc21's sweep) | `translation/hebrew/STATUS.md:5` |
 
 **What remains** (details in section 8):
 
@@ -56,13 +57,11 @@ fresh clone.
    person), real hardware (a 32 MiB flash cart with FLASH 128 KB and an RTC), and a read of the
    shipped wording by a native speaker. All three are in `notes.json` `not_tested`, so every
    `TESTING.md` says so; section 8.5 lists the lines reviewers flagged for a native read.
-2. **Integrate round 19:**
-   - merge `he/wip-r19` into `he/main` with `--no-ff`;
-   - cherry-pick the Pokéblock graph commit `946ae2f132` onto `he/renderer`, and push
-     `he/renderer` before `he/main` (section 8.1);
-   - fast-forward `he/upstream-fixes` to `8d52b4cccf`, the hydra summary guard. `he/main` already
-     has it, merged in `08027d9879` (section 4.3).
-3. **Replace 1.0 with a new candidate.** The graph fix changes the ROM. A build of `he/wip-r19`
+2. **Build and test the candidate from `c1cfd8a30b` and replace 1.0 (in progress).** Rounds 19
+   and 20 change the ROM: round 19's Pokéblock graph and round 20's names, lines and type plates.
+   The integration itself is done: both rounds are merged, their graphics and Easy Chat commits
+   are on `he/renderer`, `he/upstream-fixes` is at `8d52b4cccf`, and all of it is pushed
+   (section 1.2). For round 19 alone, a build of `he/wip-r19`
    `59d5bc76ce` with devkitARM r68 gives `pokehns.gba` SHA-1
    `243df47e01332faed3262167d69464f554da194f` (CRC32 `94674527`) and `pokehns-clip.gba`
    `d08b8262a656634980d351d09db243ccb247d74e` (CRC32 `61FBC99A`). Only graphics data changed:
@@ -72,8 +71,9 @@ fresh clone.
    - Run `make_chunks.py all` before the candidate's sweep (section 5).
    - Add rc21's row and the new candidate's row to `<builds>/records/README.md`. rc21's records
      are in `records/rc21/`, but the index stops at rc20.
-4. The open rows of section 8.1: two small tool rows, and the Pokéblock case list's
-   three-digit level, which play most likely never makes (by code reading and a frame model).
+   - Then regenerate `STATUS.md` from the candidate's sweep (section 5, step 9).
+3. The open rows of section 8.1: three small tool rows, and the Pokéblock case list's three-digit level, which play most likely
+   never makes (by code reading and a frame model).
 
 ---
 
@@ -108,13 +108,40 @@ as a cross-check, never as source text (`STYLE.md` §1).
 | `master` | identical to upstream `167aa6d537` | never commit to it |
 | `he/main` | the translation; the release branch | feature branches merge into it with `--no-ff` |
 | `he/renderer` | the Hebrew engine with the **English** strings. It is the drift baseline (`HNS_BASELINE`) and the chunk source | every engine or graphics commit is cherry-picked onto it; text commits never are |
-| `he/upstream-fixes` | upstream bug fixes, kept apart from text and engine work | `he/fix-upstream-hydra` (`8d52b4cccf`, branched from it) is merged into `he/main` (`08027d9879`); fast-forward `he/upstream-fixes` to it |
+| `he/upstream-fixes` | upstream bug fixes, kept apart from text and engine work | branch each fix from it, merge the fix into `he/main`, then fast-forward `he/upstream-fixes` to it. It is at `8d52b4cccf`, the hydra guard of `he/fix-upstream-hydra`, merged into `he/main` in `08027d9879` |
 | `he/fonts`, `he/graphics`, `he/naming-keyboard`, `he/preview` | feature branches, already merged | kept for history |
-| `he/fix-*` | one fix topic each (for example `he/fix-k5-cosmetics`, `he/fix-vr-dex`), already merged | merge title `Merge he/<branch>: <what it brings>` |
+| `he/fix-*` | one fix topic each (for example `he/fix-k5-cosmetics`, `he/fix-vr-dex`, and the rounds' `he/fix-r19` and `he/fix-r20`), already merged | merge title `Merge he/<branch>: <what it brings>` |
 
-On GitHub (2026-11-10): `master` `167aa6d537`, `he/main` `fe509e0043`, `he/renderer` `384104fb15`,
-`he/upstream-fixes` `f96cb7a4f9`, `he/fix-upstream-hydra` `8d52b4cccf`, and 40 other `he/*`
-branches.
+On GitHub (2026-11-10): `master` `167aa6d537`, `he/main` `c1cfd8a30b`, `he/renderer` `67df13ff43`,
+`he/upstream-fixes` and `he/fix-upstream-hydra` `8d52b4cccf`, `he/fix-r19` `f1d0f9a843`,
+`he/fix-r20` `ffdc529fc7`, and 40 other `he/*` branches (46 `he/*` branches in all).
+
+`he/renderer` is `384104fb15` plus one pick per graphics or Easy Chat commit of rounds 19 and 20,
+in this order: `2f46bee8be` (the Pokéblock graph, from `946ae2f132`), `1057b2f08a` (the Easy Chat
+headers, from `81f9b905db`), `784e76146d` (the GHOST and PSYCHIC plates and `menu_info.png`, from
+`04d59a585c`) and `8cfd524776` (the `menu_info.png` Psychic plate with the short hyphen, from
+`3f2c255dce`). Then the three graphics commits of earlier rounds that had not been picked:
+`8c5e324a40` (the paralysis tag, from `d3b59b94fe`), `0b3ccf4430` (the NORMAL rank title, from
+`d41a67ebdf`) and `67df13ff43` (the alphabet mode tab, from `9164440ab9`). Each pick has the same
+patch as its source commit (`git patch-id --stable`), and `graphics/` on `he/renderer` now equals
+`he/main`'s (`git diff --stat he/renderer he/main -- graphics/` prints nothing).
+
+**Checking a pick with an English build.** Build `he/renderer` before and after the picks with
+`TEXT_RTL` set to FALSE (`include/config/text.h:20`, in a scratch worktree) and `make hns`, and
+compare the two English ROMs. When a picked graphic is compressed and its size changes, every
+later ROM object moves, so a raw `cmp` differs almost everywhere. Compare by symbol instead: pair
+the ROM symbols of the two ELFs by name (`arm-none-eabi-nm -S --defined-only`), report symbols
+added, removed or resized, and compare the bytes of the rest, mapping each aligned 32-bit word
+that points into ROM through the symbol-to-symbol relocation before calling it a difference. For
+the picks `384104fb15..8cfd524776` this gave: no symbol added or removed; only
+`gUsePokeblockGraph_Gfx` (1748 → 1768 B) and `gMoveTypes_Gfx` (2372 → 2468 B) resized; content
+changed only in `gMenuInfoElements_Gfx` (194 bytes, the `menu_info.png` plates) and in one
+literal of `rfu_MBOOT_CHILD_inheritanceLinkStatus` in librfu, a constant derived from an address
+(`0x057a2b38` → `0x057a2bac`) that grows by `0x74`, the two graphics' growth (20 + 96 bytes).
+For the three older picks (`8cfd524776..67df13ff43`) no symbol was added, removed or resized, and
+content changed only in `gEasyChatMode_Gfx`, `gStatusGfx_Icons` and `gContestResults_Gfx`.
+The script and the builds are in `<private>/scratch/screens/r20/engproof/` (`symdiff.py`,
+`PROOF.md`).
 
 The branch `he/fix-screens` is merged into `he/main`. Nine local-only branches
 (`he/wip-screens-r6` to `-r9`, `-r11`, `-r13`, `-r14`, `-r14b` and `-r17`) and the pushed
@@ -488,9 +515,10 @@ The glossary wins for names, STYLE.md for everything else (`STYLE.md:3-4`). In s
   - the battle debug menu translated and the R+START menu English (Q118, Q120);
   - the link battle lines without the player's gender (Q132);
   - the five Pokédex terms היסואי, הר הנזר, חור תולעת אולטרה, צוות פלזמה, רוז (Q133);
-  - 'psychic power' as כוח פסיכי in Pokédex prose (Q134);
+  - Psychic is על-חושי in every name, line and plate (Q139, which supersedes Q134);
   - Easy Chat in Hebrew, with the Hebrew-letter keyboard (Q135);
-  - only errors in a name follow FireRed's later changes (Q136).
+  - names follow the FireRed translation's PR #2 conventions; each name kept apart is listed
+    with its reason (Q140, which supersedes Q136).
 
 ### 3.3 Width: what the renderer does and how to measure
 
@@ -671,9 +699,11 @@ git -C <main worktree> merge --no-ff he/fix-<topic> -m "Merge he/fix-<topic>: <w
 **Files**
 
 - `translation/hebrew/glossary.csv`: columns `kind,constant,english,firered_hebrew,proposed_hebrew,status,notes`;
-  7,092 rows, with CRLF line ends. The tools read `proposed_hebrew`.
-  - Status `inherited` (1,940) comes from the FireRed fork.
-  - Status `proposed` (5,152) is new and has not been checked against an official Hebrew source.
+  7,093 rows, with CRLF line ends. The tools read `proposed_hebrew`.
+  - Status `inherited` (1,915) comes from the FireRed fork.
+  - Status `proposed` (5,178) is new and has not been checked against an official Hebrew source.
+    It includes the 25 inherited rows that round 20 renamed after FireRed's newer names (Q139,
+    Q140); their `firered_hebrew` column still holds the form they were first taken from.
 - `translation/hebrew/glossary_sources.csv`: `kind,constant,english,source,pattern` (5,529 rows).
   `make_chunks.py` uses it to pre-fill name fields.
 
@@ -688,8 +718,8 @@ Keep families together; `python3 tools/hebrew/translit_stats.py 'EON$'` lists th
 **Renaming or adding a name** is a checklist; no tool propagates a rename:
 
 1. Commit `glossary.csv` alone, **before** any text that uses the name.
-2. `python3 tools/hebrew/namecheck.py --all --warnings` should print `rows 7092, still empty 0,
-   problems 0` and `warnings 0, allowlisted 60`; then run `python3 tools/hebrew/glossary_widths.py`
+2. `python3 tools/hebrew/namecheck.py --all --warnings` should print `rows 7093, still empty 0,
+   problems 0` and `warnings 0, allowlisted 34`; then run `python3 tools/hebrew/glossary_widths.py`
    (today `1 over budget`: the EXEGGUTOR-A healthbox name, 49 px against 48, decided in Q129).
 3. Change every dialogue use (`git grep` the old Hebrew and the English), one file per commit.
 4. For trainer or map names, run `python3 tools/hebrew/apply_names.py --dry-run`, then without
@@ -697,7 +727,16 @@ Keep families together; `python3 tools/hebrew/translit_stats.py 'EON$'` lists th
 5. For species, run `python3 tools/hebrew/gen_dex_alpha.py` and commit `pokedex_orders.h` alone.
    Its `TEXT_RTL` list is engine data, so cherry-pick that commit onto `he/renderer` too
    (`f47c725548` there); drift fails until the baseline has it. For a species, move or Easy Chat
-   word, run `gen_ec_order.py` and `gen_ec_letters.py` (CI runs all three with `--check`).
+   word, run `gen_ec_order.py` and `gen_ec_letters.py` (CI runs all three with `--check`). Their
+   two headers (`src/data/easy_chat/easy_chat_order_rtl.h`, `easy_chat_words_by_letter_rtl.h`)
+   are engine data too, picked the same way: drift fails on those two files until the baseline
+   has them. A renamed type also needs its plates redrawn (`graphics/types/<type>.png` and
+   `graphics/interface/menu_info.png`, with `tools/hebrew/graphics/`), in a graphics commit of its
+   own that is picked as well. Round 20's three picks, in order: `81f9b905db` (the Easy Chat
+   headers), `04d59a585c` (the GHOST and PSYCHIC plates and `menu_info.png`) and `3f2c255dce`
+   (`menu_info.png` again, the Psychic plate with the short hyphen; it applies only after
+   `04d59a585c`). They are `1057b2f08a`, `784e76146d` and `8cfd524776` on `he/renderer`
+   (section 1.2).
 6. Update test expectations where order or text changes. For example, `4c6ba54599` updated
    `test/bag.c` for the berry names.
 7. After a bulk glossary edit, diff the row **keys** between revisions (section 6.2): a rewrite
@@ -706,8 +745,10 @@ Keep families together; `python3 tools/hebrew/translit_stats.py 'EON$'` lists th
 **Consistency warnings** (`namecheck.py --warnings`; they never change the exit status):
 
 - `--fr-sync` compares each name with the FireRed Hebrew tree as it is now (`HNS_FIRERED`, default
-  `../pokefirered-heb`), within the same kind. Take FireRed's name only when it fixes an error in
-  ours (`DECISIONS.md` Q136); type names stay.
+  `../pokefirered-heb`), within the same kind. Follow FireRed's current name unless an H&S limit
+  (bytes, width, a duplicate) or a FireRed slip stands in the way (`DECISIONS.md` Q140); every
+  kept difference is in `namecheck_allow.json` with its reason. The type names follow FireRed
+  too (GHOST רפאים, PSYCHIC על-חושי).
 - `--translit` flags transliteration slips in `proposed` rows; `--dupes` flags one English person
   name with two Hebrew spellings.
 - `tools/hebrew/data/namecheck_allow.json` lists every difference kept on purpose, with the reason.
@@ -788,7 +829,8 @@ Two rules from the original brief:
 
 CI creates the two worktrees from `origin/he/renderer` and `origin/master` (`hebrew.yml:43-48`).
 Locally, the tag `Release-v2.0.6` (fetched in section 2.3) stands in for CI's `origin/master`. The
-expected output below is a local run on `he/wip-r19` (2026-11-09).
+expected output below is a local run on `he/main` `c1cfd8a30b` (2026-11-10), with
+`../pokehns-heb-engine` at `he/renderer` `8cfd524776`.
 
 ```bash
 set -o pipefail
@@ -797,13 +839,13 @@ git diff --name-only Release-v2.0.6...HEAD -- data src | grep -E '\.(inc|s|c|h|p
 #    last line: drift: 708 files, 0 FAIL, 336 with warnings only   (exit 0)
 # 2. layout audit (hebrew.yml:56-57); creates build/hebrew; prints the report's two == lines
 python3 tools/hebrew/audit.py --baseline ../pokehns-en --report build/hebrew/audit.txt
-#    == translated strings: 0 errors, 48 warnings, 85 suppressed by baseline ../pokehns-en
+#    == translated strings: 0 errors, 54 warnings, 88 suppressed by baseline ../pokehns-en
 #    == English (untranslated) strings, baseline only: 448 errors, 0 warnings   <- informational
 #    line 1 of the report: audit ...: 41539 strings (25592 translated)
 # 3. glossary (hebrew.yml:59-60)
 python3 tools/hebrew/namecheck.py --all --warnings
-#    rows 7092, still empty 0, problems 0
-#    warnings 0, allowlisted 60
+#    rows 7093, still empty 0, problems 0
+#    warnings 0, allowlisted 34
 # 4. generated data (hebrew.yml:62-71)
 python3 tools/hebrew/gen_dex_alpha.py --check     # gen_dex_alpha: 1080 entries, the TEXT_RTL list is up to date
 python3 tools/hebrew/gen_ec_order.py --check      # gen_ec_order: 18 groups, the header is up to date
@@ -823,15 +865,17 @@ python3 tools/hebrew/plurals.py                   # items 902, stackable 693, pr
   Section 6.2 lists every kind. `.party` and `.json` files are checked too: a renamed `Name:` line
   counts as a string.
 - **audit:** the exit status is 1 only for a Hebrew error that the baseline does not suppress.
-  - The 48 warnings are `FIT`: 13 item names, 30 move names and 5 EXEGGUTOR-A rows (Q129) that
-    fit only after the game falls back to a narrower font.
-  - A finding reads `w item_name FIT 79 > 72 p1 r1 [summary held item FONT_NORMAL] (...)
-    src/data/items.h:3095`: kind, check, measured > budget, page and row, where it is drawn, and
+  - The 54 warnings are `FIT`: 16 item names, 33 move names and 5 EXEGGUTOR-A rows (Q129) that
+    fit only after the game falls back to a narrower font. Six of them came with round 20's
+    Psychic names; Q139 lists them.
+  - A finding reads `w item_name FIT 80 > 72 p1 r1 [summary held item FONT_NORMAL] (...)
+    src/data/items.h:3402`: kind, check, measured > budget, page and row, where it is drawn, and
     the source line.
-  - CI counts fewer strings (run 41933578987 at `fe509e0043`: `39059 strings (24836
-    translated)`), with the same 0 errors, 48 warnings and 85 suppressed. The difference is the
-    build. `walk_tree` (`audit.py:448-464`) reads every `.c` and `.h` under `src/`, and a built tree
-    has six git-ignored headers that `make` generates:
+  - CI counts fewer strings. At `fe509e0043` (run 41933578987) it printed `39059 strings (24836
+    translated)` with the same findings as the local run of that commit (0 errors, 48 warnings,
+    85 suppressed, before round 20). The difference is the build. `walk_tree`
+    (`audit.py:448-464`) reads every `.c` and `.h` under `src/`, and a built tree has six
+    git-ignored headers that `make` generates:
     - `src/data/trainers.h`, `trainers_hns.h`, `trainers_frlg.h`, `battle_partners.h` and
       `debug_trainers.h`, made from the `.party` files (`trainer_rules.mk:3-12`);
     - `src/data/region_map/region_map_entries.h`, made from the JSON (`json_data_rules.mk:4-6`).
@@ -840,7 +884,7 @@ python3 tools/hebrew/plurals.py                   # items 902, stackable 693, pr
     finding. A clean `git archive` of the commit gives CI's count exactly, with the same findings
     (round 19). Section 8.1 has the fix.
 - **tool tests in CI:** `Ran 132 tests ... OK (skipped=2)` at `fe509e0043` (no built
-  `tools/preproc`, no English ROM); `he/wip-r19` adds 5.
+  `tools/preproc`, no English ROM); round 19 added 5, so `he/main` has 137.
 
 ### 4.3 The test suite
 
@@ -868,7 +912,7 @@ python3 tools/hebrew/check_tests.py make_check.log
   12-14 starting past row 1,600; `check_tests.py` found 1,903 failing tests, all known. Only the
   test tool changes, not the ROM. It is merged into `he/main` (`08027d9879`, the commit 1.0 is
   built from): rc21's `make_check.log` ends with the whole summary (`FAILED 1920`, `TOTAL 5135`)
-  and no segfault. `he/upstream-fixes` gets it by a fast-forward to `8d52b4cccf`.
+  and no segfault. `he/upstream-fixes` was fast-forwarded to `8d52b4cccf`.
 - `check_tests.py` parses the `[NN] NAME: RESULT` lines. It counts FAIL, ERROR, TIMEOUT and CRASH
   as failing, prints `NEW FAILURE: <name>` for any name missing from
   `tools/hebrew/data/known_test_failures.txt` (1,903 names), and exits 1 then.
@@ -933,7 +977,10 @@ includes); its subfolders hold the review rounds' tours, which the release does 
 `naming_*` 2, `bfm_*` 2, `dex_forms`, `field_*`.
 
 `menu_00_setup` builds the base save that the menu tours start from. Each file's header says what
-it covers. The release tours start from saves at the top of `<builds>/saves`. A round tour
+it covers. Many round tours need a driver from `$E/scripts/` rather than `hns.py tour`;
+`tours/r20_names/_runs.txt` names the driver and the command for each of its files, and
+`$E/scripts/fight_moves.py --moves MOVE_A,MOVE_B,...` shows only the listed moves in the FIGHT
+menu. The release tours start from saves at the top of `<builds>/saves`. A round tour
 (`tours/<round>/`) that names a save found only in a subfolder needs `HNS_SAVES` set to the folder
 that holds it: `saves/r8` for round 8, a folder under `saves/r10/` or `saves/r11/` for those
 rounds, and `saves/r7/saves_aug` for rounds 3-7 and `verify_ctxdpad` (`<builds>/README.md`).
@@ -1015,7 +1062,7 @@ python3 <repo>/tools/hebrew/emu/sweep.py selftest CLIP.gba st   # proves the det
 
 ```bash
 python3 tools/hebrew/status_report.py --sweep RC/tests/sweep/sweep.json
-# 650 files -> ...: {'seen on screen': 525, 'translated': 125}   (rc20's sweep, after flag_gates.py)
+# 650 files -> ...: {'seen on screen': 525, 'translated': 125}   (rc21's sweep, on c1cfd8a30b)
 ```
 
 - Without `--sweep`, every "seen on screen" row falls back to "translated".
@@ -1280,7 +1327,7 @@ there is one). Engine fixes exist twice: the commit merged into `he/main`, and i
 | audit or checkunits `BYTES` | `namecheck.py --all` | a hard field limit; for example the Frontier trainer name field is 7 bytes, not 8 | a shorter form for that copy | `ca1e85587c` |
 | audit `FIT` warning | | fits only in the narrower fallback font | allowed; look at it on screen | — |
 | checkunits `w DIGITS ['20'] -> ['02']` | | a number reversed or lost | write digits in reading order | — |
-| namecheck `WARN FRSYNC`, `TRANSLIT`, `SAMENAME` or `STALE` | `namecheck.py --warnings` | a name differs from FireRed's current one, a transliteration slip, one person with two spellings, or an allow entry that no longer matches | fix the name if it is an error (Q136); otherwise add or update its entry, with the reason, in `tools/hebrew/data/namecheck_allow.json` | `49394ba1ad` |
+| namecheck `WARN FRSYNC`, `TRANSLIT`, `SAMENAME` or `STALE` | `namecheck.py --warnings` | a name differs from FireRed's current one, a transliteration slip, one person with two spellings, or an allow entry that no longer matches | follow FireRed's name unless an H&S limit or a FireRed slip stands in the way (Q140); otherwise add or update its entry, with the reason, in `tools/hebrew/data/namecheck_allow.json` | `49394ba1ad` |
 | `gen_dex_alpha`, `gen_ec_order`, `gen_ec_letters` or `flag_gates` `--check` exits 1 | the entries it lists | a rename or a script change without regenerating | run the tool without `--check` and commit its output alone | `c022422009` |
 | A glossary name went back to Latin; a row vanished | diff the row keys (below) | a bulk rewrite of `glossary.csv` dropped rows: `bb8db5c703` lost 5 (four radio DJs and `TERM_NURSE_JOY`) | restore the rows; review every bulk glossary edit with the key diff | `d8de0c8fd0` |
 | 8 multi-word names held only the first word | read the row | truncation during a rewrite (which commit is unknown) | restored in the names review | `DECISIONS.md:1361-1382` |
@@ -1396,8 +1443,8 @@ EOF
   Check with `git cherry -v he/main he/renderer`.
 - **Messages** say what and why, never ticket IDs or history. Code comments say what and why.
   Anything not seen on screen is marked unverified, in the commit, the docs and the release notes.
-- **No AI attribution**: no `Co-Authored-By` trailer, no "Generated with" line. All 1,407 commits
-  on `he/main` follow this.
+- **No AI attribution**: no `Co-Authored-By` trailer, no "Generated with" line. All 1,473 commits
+  on `he/main` (at `c1cfd8a30b`, `git rev-list --count he/main ^master`) follow this.
 
 ### 7.2 Identity
 
@@ -1442,7 +1489,7 @@ Ask the owner before you:
 
 - One topic per branch (`he/fix-<topic>`), in its own worktree (`../pokehns-heb-<topic>`).
 - Merge into `he/main` with `git merge --no-ff he/fix-<topic> -m "Merge he/fix-<topic>: <what>"`.
-  `he/main` has 39 such merges.
+  `he/main` has 43 such merges (at `c1cfd8a30b`).
 - Keep `master` identical to upstream. Keep upstream bug fixes on `he/upstream-fixes`, separate
   from text and engine work (`00dd646cc1`, `4d5d2b9ada`).
 - Before touching an engine function, `git log -S` it upstream to see why it looks the way it
@@ -1459,8 +1506,8 @@ Ask the owner before you:
 | Item | Evidence | What to do |
 | --- | --- | --- |
 | **The Pokéblock case list would cut the first digit of a three-digit level.** English shows `Lv255` in full; play most likely never makes such a level | `PutPokeblockListMenuString` (`src/pokeblock.c:750-761`) skips to x 87 and prints `Lv` and the level in the 112 px list window (`WIN_LIST`, 14 tiles, `:322-330`), in the narrow font. Mirrored, the first digit of a three-digit level starts 3 px past the left edge: the clip ROM logs the `2` of a level-255 test block cut on the case list of `tours/r19_fix/pb_feed_graph.txt` (window 1, 112 px, font 7). By code reading, play needs a top speed of about 230 RPM to get there. Only the Berry Blender makes Pokéblocks (`AddPokeblock`, `src/berry_blender.c:3586`), and every H&S blend is with NPCs: the link blender runs only from Emerald's `LilycoveCity_ContestLobby` (`data/maps/LilycoveCity_ContestLobby/map.json:391`, `game_version` emerald), which this build leaves out. The level is the highest flavour (`src/pokeblock.c:1335-1348`), and a repeated berry gives a black block (`src/berry_blender.c:2274-2282`). With the NPCs' berries (`SetOpponentsBerryData`, `:1531-1569`; the Blend Master's for one opponent, since his hide flag is 0, `include/constants/flags_hns.h:1927`) the best blend is an Enigma Berry against the Blend Master: 59 before the speed factor of (max RPM / 333 + 100) % (`:2428`), so level 100 needs 229.77 RPM. A frame model of a perfect two-player blend (a BEST hit at every chance; `:1983-1997`, `:2028-2055`, `:2096-2115`, `:3287-3295`) peaks at 197.64 RPM, level 94 (`<private>/scratch/screens/r19/review/pbspeed.py`, `pbbound.py`). A real blend was not measured (**unverified**) | measure a perfect blend against the Blend Master with an Enigma Berry (`sBerryBlender->maxRPM`). If it can pass 229.77 RPM, place the level so `Lv` and three digits fit inside the window, check it with the tour's level-255 block, and cherry-pick the fix onto `he/renderer` if it is engine code |
-| **`he/renderer` still has the old Pokéblock condition graph.** `946ae2f132` (on `he/wip-r19`) re-ran `tools/hebrew/graphics/side/do_graph.py` on `graphics/pokeblock/use_screen/graph.png` (blob `5e88e5b3` → `398c66e3`, 449 pixels in the label rows). The panel now equals the Pokégear one cell for cell | on the feeding screen, rc21's ק of קשיחות and left י of יופי are 1 px from the pentagon outline; with the new art 3 px and 4 px, at conditions 0 and 255. Only those label rows change on screen (`tours/r19_fix/pb_feed_graph.txt`, run with `scripts/r16_contests/con16.py`) | cherry-pick `946ae2f132` onto `he/renderer`. It has the same old blob `5e88e5b3` and the same Pokégear graph (`884f98a9`), so it should apply cleanly. Push `he/renderer` before `he/main` |
 | The harness shoots the battle debug menu's AI party page before its tilemap reaches the screen, so later six-Pokémon pages look blank (section 8.5) | `scripts/r16_debug_menu/dbgmenu.py` `view()` (`:95-103`) shoots 8 frames after the page's task starts and closes it at once; the page's tilemap copy lands about 22 frames late | wait until `sDma3Requests` has no pending entry, or at least 30 frames, before the shot and before B; then drop the one-page-per-run note in its docstring (`:18-21`) |
+| `status_report.py` marks C literals live by line number, from the English source's lines | `units.py` `c_live_index` (`:208-219`) keys `tools/hebrew/data/c_strings.json` by line, and those lines are `../pokehns-en`'s (`src/data/items.h:11160` there is an English description, `c_strings.json` marks it dead). In the Hebrew tree the lines differ (339 items have a plural name under `#if TEXT_RTL`), so a C file's live count in `STATUS.md` is approximate: round 20 added one line to `items.h` (MEWNIUM Z's description), and STICKY BARB's plural name, now on line 11160, stopped counting (2,224 to 2,223 units) | match the tree's literals to `c_strings.json` by designator and field, not by line, then regenerate `STATUS.md` |
 | `audit.py` on a built tree counts 2,480 more strings than CI (section 4.2) | `walk_tree` (`audit.py:448-464`) also reads the six generated headers | skip `src/data/trainers*.h`, `battle_partners.h`, `debug_trainers.h` and `region_map/region_map_entries.h` in `walk_tree`; the local count should then equal CI's (39,059 at `fe509e0043`) |
 
 ### 8.2 Content gaps and decisions
@@ -1487,8 +1534,26 @@ Ask the owner before you:
   the phrase). Only phrases from a linked game were not seen.
 - **Decided in round 18:** the battle debug menu's stat rows and label (Q131), the link battle lines
   without the player's gender (Q132), the five Pokédex terms (Q133; their rows stay `proposed`),
-  'psychic power' as כוח פסיכי (Q134), the Gen 4 FROSTBITE tag redrawn as קור (Q137), the names
-  compared with FireRed's (Q136) and publishing without hand play (Q138).
+  'psychic power' as כוח פסיכי (Q134, superseded by Q139), the Gen 4 FROSTBITE tag redrawn as קור
+  (Q137), the names compared with FireRed's (Q136, superseded by Q139 and Q140) and publishing
+  without hand play (Q138).
+- **Decided in round 20:** Psychic is על-חושי (Q139) and names follow FireRed's PR #2 conventions
+  (Q140).
+  - Three Psychic names keep the noun על-חוש where an adjective was possible; the owner left the
+    round's open choices to the project, and these are decided, not open. PSYCHIC SURGE נחשול
+    על-חוש and PSYCHIC SEED זרע על-חוש take the noun as their siblings do (נחשול חשמל, נחשול
+    ערפל, נחשול עשב, זרע חשמל) and as FireRed's PSYBEAM קרן על-חוש; the adjective forms would fit
+    too. PSYCHO SHIFT הסטת על-חוש fits the FIGHT menu, the summary and the relearner in their own
+    fonts and needs the narrower font only in the contest list (60 px of 59, one of the six FIT
+    warnings of Q139). הסטה על-חושית (77 px) would need the narrower font in all four, and
+    `audit.py`, which applies the party field-move budget to every move, would report an error.
+  - Both Psychic plates, `graphics/types/psychic.png` and the plate in
+    `graphics/interface/menu_info.png`, are drawn in FONT_SMALL_NARROWER glyphs with a 2 px hyphen:
+    the word is 30 px wide, with 1 px to spare on each side (`tools/hebrew/graphics/README.md`,
+    Q139).
+  - Kept on purpose and listed with reasons in Q140 and `namecheck_allow.json`: SLASH, CHESTO
+    BERRY, IAPAPA BERRY, POKéBLOCK CASE, EXEGGUTOR and ELITE FOUR differ from FireRed's names
+    because of an H&S limit or a FireRed slip, and PSYCHO BOOST because FireRed left it on פסיכי.
 - **Faults of H&S 2.0.6 itself, the same in English, listed as known issues** in `notes.json`,
   because any fix changes gameplay or belongs upstream (section 7.4):
   - **Battle Dome style scoring** assigns instead of adding, so a trainer card shows only three of
@@ -1544,9 +1609,9 @@ Ask the owner before you:
 - **The radio's Pokédex Show** wraps two place names across its lines (הר / הנזר in the
   Typhlosion-H entry, נהרות / היסואי in Basculegion's). Accepted: the ticker breaks between words,
   nothing clips, and 1.0 and English split at the same places.
-- **Proposed names.** The 5,152 `proposed` glossary rows were never checked against an official
+- **Proposed names.** The 5,178 `proposed` glossary rows were never checked against an official
   Hebrew source. `namecheck.py --warnings` checks them for consistency with FireRed and for
-  transliteration slips (Q136); the roughly 3,000 rows translated by meaning stay `proposed` until
+  transliteration slips (Q140); the roughly 3,000 rows translated by meaning stay `proposed` until
   a native speaker reads them.
 - **Not seen by a person:**
   - nobody has played from a new game to the first badge;
@@ -1573,7 +1638,9 @@ Ask the owner before you:
 
 ### 8.3 Stale documentation
 
-None known at the end of round 19. Round 19 corrected six line references: `RELEASE ?= 0` is at
+None known after the documentation pass of round 20, which corrected the audit's example
+finding (section 4.2: `src/data/items.h:3402`, where it had a line no finding names) and the
+commit and merge counts of section 7. Round 19 corrected six line references: `RELEASE ?= 0` is at
 `Makefile:69`, `KEPT_LATIN` at `status_report.py:22-48`, the Hebrew count at
 `status_report.py:82`, the sweep's path guard at `sweep.py:391-396`, `walk_tree` at
 `audit.py:448-464` and `LoadSaveblockObjEventScripts` at `src/overworld.c:592-600`. Every text
@@ -1605,8 +1672,9 @@ and the round screenshots. Freeing that disk is the owner's call.
   ("Notes from the fresh-clone test"). CI builds and tests on Linux (ubuntu-26.04, Ubuntu's
   toolchain).
 - The hydra segfault's cause, and the guard `8d52b4cccf` (section 4.3), now merged into `he/main`
-  (`08027d9879`). The 0.2 and rc20 `make_check.log` came from `make check BUILD=hns -j12` (the
-  release README), with 15 hydra runners, in about 4 min.
+  (`08027d9879`); `he/upstream-fixes` is fast-forwarded to it. The 0.2 and rc20 `make_check.log`
+  came from `make check BUILD=hns -j12` (the release README), with 15 hydra runners, in about
+  4 min.
 - Every libretro core loads the 131088-byte `.sav` at the frontend level (section 4.6); copies of
   the cores are in `<builds>/reference/cores/`, whose source is inferred, not recorded.
 - 69 of the 71 tours run on the English ROM; the two `naming_*` tours are Hebrew-only.
@@ -1640,13 +1708,14 @@ and screenshots that are not in the fork are under `<private>/scratch/screens/r1
   - SONIC BOOM is `בום על-קולי`, in full, in the battle fight menu, its START move-info window and
     the summary's BATTLE MOVES page, with its description;
   - EARLY BIRD is `ציפור מקדימה`, with `מתעורר מהר משינה.`, in the ABILITY box of the summary's
-    INFO page. In H&S the SKILLS page shows stats only.
+    INFO page. In H&S the SKILLS page shows stats only. Round 20 renamed it `משכימת קום` (Q140),
+    seen in the same box (below).
 - **`make_ladder.sh` rebuilds the stored ladder byte for byte,** with the time-zone condition of
   section 2.6.
 - **The Pokéblock feeding screen's condition graph:** on rc21 two labels are 1 px from the pentagon
   outline; the art of `946ae2f132` moves them to 3 px and 4 px, and nothing else on screen changes
-  (section 8.1; `tours/r19_fix/pb_feed_graph.txt`, run on rc21, on a build with the new art and on
-  English).
+  (`tours/r19_fix/pb_feed_graph.txt`, run on rc21, on a build with the new art and on English).
+  The art is in `he/main` since `b32c6f117c` and on `he/renderer` as `2f46bee8be`.
 - **Why the local audit counts more strings than CI:** six generated headers in a built tree; the
   findings are the same (section 4.2).
 - **The official English binary:** no build type made with devkitARM r68 matches it (section 2.5),
@@ -1669,6 +1738,56 @@ and screenshots that are not in the fork are under `<private>/scratch/screens/r1
 - All 242 scripts under `tools/hebrew` compile with every warning turned into an error on Python
   3.9.6 and 3.14.7, and the 137 tool tests pass on 3.9.6, 3.11.9 and 3.14.7 (`he/wip-r19`).
 
+**Verified in round 20** (the Psychic and FireRed names of Q139 and Q140). Each changed screen was
+shot on three builds: rc21's clip ROM (the current 1.0), the clip ROM of `he/wip-r20`
+`a9ebeeb278`, and English 2.0.6. The two checks after the review fixes ran on a build that equals
+`he/fix-r20` `ffdc529fc7`. None of this ran on the candidate built from `c1cfd8a30b`; its own
+release tours and sweep cover the screens the release tests reach. The round's tours are in
+`tools/hebrew/emu/tours/r20_names/`; scripts, logs, shots and sheets are under
+`<private>/scratch/screens/r20/` (`render/render.md`, `fixup/r20_fix.md`).
+
+- **Every changed string that the H&S ROM can draw was drawn and compared** with rc21 and English,
+  with 0 clip records on the round's clip build in every run and in all 71 release tours, except
+  the places listed under "Not verified". Seen:
+  - the renamed moves in the FIGHT menu, also under the Gen 4 battle interface, with their START
+    move-info windows, and in the move relearner;
+  - all 42 changed dialogue labels that the H&S ROM assembles (the sweep: OK 42, no CLIP);
+  - the Battle Tower partners' self-introductions with the new class names;
+  - the Easy Chat STATUS and MOVE lists and all 23 ABC lists;
+  - Kurt's ball list and the Game Corner TM list, each drawn by a RAM script as a stand-in: no
+    H&S script calls `MULTI_KURT_BALLS` or `MULTI_GAME_CORNER_TMS`;
+  - the stat-change lines with מאוד, באופן חמור and בצורה קיצונית;
+  - the type name on the summary and Pokédex INFO plates, the bag's TM panel plate
+    (`menu_info.png`), the FIGHT menu's type field, the relearner, the Pokédex type search and the
+    challenge menu's ONE TYPE values;
+  - the renamed abilities (also in battle pop-ups and the Trace line, and EARLY BIRD משכימת קום on
+    the summary INFO page), items with their descriptions, trainer classes in battle and Pokédex
+    entries;
+  - after the review fixes, the TM29 panel's על-חושי plate with 1 px to spare on each side, as on
+    the summary and Pokédex plates, and the three Bug-Catching Contest results lines with
+    מאמנת-העל (OK 3, no clip).
+- **The 71 release tours:** 71 OK on rc21 and on the round's build. `hns.py tourdiff` gives 1898
+  identical, 157 differ and 1 shot only on the round's build. 144 of the 157 show changed text.
+  The other 13, and the extra shot, come from a longer battle message that shifts later frames:
+  12 pages of `bv_double` turn 2 (plus `bv_double_turn2_13`) and one animation frame of
+  `bv_catch_fail`.
+  - In `bv_double`, turn 1 ends 4 frames later (@2824 against @2828, `alltours_*.log:881`), and on
+    turn 2 the foe uses Quick Attack first, which adds a page; the battle ends the same way. Why a
+    few frames change the foe's choice is **unverified**: the tour pins only `gRngValue` before
+    every frame (`hns.py:1930-1934`), and the round changed strings only. Each tour is
+    deterministic per ROM: a second run is pixel-identical on both builds.
+  - In `bv_catch_fail`, the `fail_norun_after` shot is 16 frames apart (@7290 against @7306,
+    `alltours_*.log:746`); the shift grows over the seven turns, from 4 frames to 16.
+- **Five changed FRLG Saffron labels are in no H&S ROM:** they are assembled only under
+  `.if IS_FRLG` (`data/event_scripts.s:605-1052`).
+- **The engine tests a rename can affect** passed on the round's test ELF: every `* fit *` test
+  in `test/text.c`, the Magnitude test and the bag sort tests (41 results; the one failure is a
+  known upstream one). The full `make check` was not run on `he/fix-r20`; the candidate's
+  `make check` of `c1cfd8a30b` covers it (section 5, step 3).
+- **The English proof of the `he/renderer` picks** (section 1.2): only the three picked graphics
+  change the English ROM.
+- The 137 tool tests pass at `c1cfd8a30b` on Python 3.9.6 and 3.11.9.
+
 **Not verified:**
 
 - A Linux build with devkitPro pacman; another machine with devkitARM r68 reproducing the 0.2
@@ -1688,6 +1807,14 @@ and screenshots that are not in the fork are under `<private>/scratch/screens/r1
   94 (section 8.1).
 - The out-of-bounds read behind Scott's shields could write through a stray pointer after a link
   Dodrio Berry Picking game (needs a link).
+- Round 20's names in the places no test reached: the generic phrase מהלך על-חושי (printed only
+  for a move id at or above `MOVES_COUNT`, `src/battle_message.c:2770-2773`); the Z-move panel's
+  type (`src/battle_z_move.c:430`); the descriptions of GENESIS SUPERNOVA, MAX PHANTASM and MAX
+  MINDSTORM; the Union Room trade board's type plate (needs a link, `src/union_room.c:4124`);
+  `gText_Ghost` רוח רפאים, the Kanto Pokémon Tower ghost, whose reachability in H&S was not
+  checked; the AERODACTYL nicknames of the Trainer Hill and Trainer Tower data; the battle debug
+  menu's hold-effect name חולק ניסיון; and PSYCHIC GEM and PSYCHIC TERA SHARD in the PC storage
+  held-item field (PSYCHIC GEM was seen in the summary's).
 - A native speaker's read. Reviewers asked for one on: the radio's adjective pairs
   (`src/data/text/radio_strings.h:54-69`), the Ultra Beast Pokédex entries
   (`src/data/pokemon/species_info/gen_7_families.h`), the Day Care take-back question
