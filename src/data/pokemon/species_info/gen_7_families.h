@@ -1697,7 +1697,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .description = COMPOUND_STRING(
             "אוריקוריו בצורה הזו לגם צוף ורוד. הוא מרומם\n"
             "את רוחו בצעדי הריקוד העדינים שלו, ואז\n"
-            "משחרר את האנרגיה הפסיכית שלו."),
+            "משחרר את האנרגיה העל-חושית שלו."),
         .pokemonScale = 422,
         .pokemonOffset = 12,
         .trainerScale = 256,
@@ -5206,7 +5206,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .height = 9,
         .weight = 190,
         .description = COMPOUND_STRING(
-            "הוא מהמם את טרפו בכוחות פסיכיים ואז\n"
+            "הוא מהמם את טרפו בכוחות על-חושיים ואז\n"
             "טוחן אותו לעיסה בשיניו החזקות. אפילו\n"
             "הקונכייה של שלדר לא עומדת בפניו."),
         .pokemonScale = 338,

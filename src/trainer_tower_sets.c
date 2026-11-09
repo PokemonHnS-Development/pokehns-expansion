@@ -773,7 +773,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Double_5 = {
                     .spDefenseIV = 31,
                     .abilityNum = 1,
                     .personality = PERSONALITY_MALE_LONELY,
-                    .nickname = _("אירודקטיל"),
+                    .nickname = _("אירודקטייל"),
                     .friendship = MAX_FRIENDSHIP
                 },
                 {

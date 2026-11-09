@@ -4297,7 +4297,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .weight = 210,
         .description = COMPOUND_STRING(
             "הוא שולט בחשמל בעזרת טלקינזיס.\n"
-            "הוא מרכז אנרגיה פסיכית בזנבו\n"
+            "הוא מרכז אנרגיה על-חושית בזנבו\n"
             "ורוכב עליו כמו על גלשן. כינוי נוסף\n"
             "לפוקימון הזה הוא ”גולש יבשה”."),
         .pokemonScale = 426,
@@ -7985,7 +7985,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .description = COMPOUND_STRING(
             "גולדאק הוא שחיין מיומן. לפעמים הוא מצטרף\n"
             "לאימונים של שחיינים תחרותיים. כשמצחו\n"
-            "מנצנץ באור, הוא משתמש בכוחות פסיכיים."),
+            "מנצנץ באור, הוא משתמש בכוחות על-חושיים."),
         .pokemonScale = 256,
         .pokemonOffset = 1,
         .trainerScale = 273,
@@ -8969,7 +8969,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .height = 13,
         .weight = 565,
         .description = COMPOUND_STRING(
-            "לפי השמועה, ילד בעל כוחות פסיכיים\n"
+            "לפי השמועה, ילד בעל כוחות על-חושיים\n"
             "הפך לפתע לקדברה בזמן שעזר במחקר\n"
             "על תפיסה על-חושית."),
         .pokemonScale = 256,
@@ -9067,9 +9067,9 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .height = 15,
         .weight = 480,
         .description = COMPOUND_STRING(
-            "לאלקזם יש כוחות פסיכיים חזקים\n"
+            "לאלקזם יש כוחות על-חושיים חזקים\n"
             "ואינטליגנציה גבוהה, אבל השרירים שלו חלשים\n"
-            "מאוד. הוא מזיז את גופו בעזרת כוח פסיכי."),
+            "מאוד. הוא מזיז את גופו בעזרת כוח על-חושי."),
         .pokemonScale = 256,
         .pokemonOffset = 3,
         .trainerScale = 256,
@@ -9161,7 +9161,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .weight = 480,
         .description = COMPOUND_STRING(
             "אלקזם ויתר על שריריו, ובתמורה השתחרר\n"
-            "כוחו האמיתי. בעזרת כוחותיו הפסיכיים\n"
+            "כוחו האמיתי. בעזרת כוחותיו העל-חושיים\n"
             "הוא יכול לחזות הכול מראש."),
         .pokemonScale = 256,
         .pokemonOffset = 3,
@@ -10677,7 +10677,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .height = 17,
         .weight = 800,
         .description = COMPOUND_STRING(
-            "קשה לעמוד בפני ”חיתוך פסיכי”\n"
+            "קשה לעמוד בפני ”חיתוך על-חושי”\n"
             "של הפוקימון הזה. כשהמהלך משתחרר מקרנו,\n"
             "הוא פוער חור אפילו בלוח מתכת עבה."),
         .pokemonScale = 256,
@@ -19933,14 +19933,14 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FLYING),
         .abilities = { ABILITY_ROCK_HEAD, ABILITY_PRESSURE, ABILITY_UNNERVE },
         .bodyColor = BODY_COLOR_PURPLE,
-        .speciesName = _("אירודקטיל"),
+        .speciesName = _("אירודקטייל"),
         .cryId = CRY_AERODACTYL,
         .natDexNum = NATIONAL_DEX_AERODACTYL,
         .categoryName = _("מאובן"),
         .height = 18,
         .weight = 590,
         .description = COMPOUND_STRING(
-            "אירודקטיל הוא פוקימון מתקופת הדינוזאורים.\n"
+            "אירודקטייל הוא פוקימון מתקופת הדינוזאורים.\n"
             "הוא הוחייה מדנ”א שהופק מענבר. משערים\n"
             "שהוא היה מלך השמיים."),
         .pokemonScale = 256,
@@ -20005,7 +20005,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FLYING),
         .abilities = { ABILITY_TOUGH_CLAWS, ABILITY_TOUGH_CLAWS, ABILITY_TOUGH_CLAWS },
         .bodyColor = BODY_COLOR_PURPLE,
-        .speciesName = _("אירודקטיל"),
+        .speciesName = _("אירודקטייל"),
     #if P_MODIFIED_MEGA_CRIES
         .cryId = CRY_AERODACTYL_MEGA,
     #else
@@ -20383,7 +20383,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .weight = 509,
         .description = COMPOUND_STRING(
             "הוא יורה קרניים שמשתקות יריבים כאילו קפאו\n"
-            "לגמרי. להבי האנרגיה הפסיכית דמויי הנוצות\n"
+            "לגמרי. להבי האנרגיה העל-חושית דמויי הנוצות\n"
             "שלו קורעים לוחות ברזל עבים כמו נייר."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
@@ -21174,7 +21174,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .height = 23,
         .weight = 1270,
         .description = COMPOUND_STRING(
-            "כוח פסיכי חיזק את שריריו. כוח האחיזה\n"
+            "כוח על-חושי חיזק את שריריו. כוח האחיזה\n"
             "שלו הוא טון אחד, והוא יכול לרוץ\n"
             "מאה מטרים בשתי שניות בדיוק!"),
         .pokemonScale = 256,
