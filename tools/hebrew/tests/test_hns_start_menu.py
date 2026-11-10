@@ -128,6 +128,7 @@ class StartMenuCursorTest(unittest.TestCase):
         with self.assertRaises(hns.HnsError):
             g.open_start_menu(maxframes=40)
         self.assertEqual(g.keys, [])
+        self.assertGreaterEqual(g.now, 40)          # it waited for a menu the game redraws
 
 
 if __name__ == '__main__':
