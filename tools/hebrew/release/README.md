@@ -69,7 +69,8 @@ The scripts have only been run on macOS. The cross-core step loads `.dylib` core
    `python3 tools/hebrew/emu/mapwalk.py "$HNS_EN_ROM" "$HNS_SAVES/ladder6_postgame.sav" build/hebrew/mapwalk_en`.
    The builds repository keeps one as `reference/mapwalk_en.json`; point `HNS_EN_MAPWALK` at it.
    That file is stale: an older `mapwalk.py`, which answered with A and B in turn, made it, and
-   it holds only 34 of the 36 maps the current walker holds in both languages. Replace it with a
+   of the 36 maps the current walker holds in both languages it holds 32 and is not `OK` on 2 more
+   (a false CRASH and an ERROR), so it passes the two Battle Arena rooms. Replace it with a
    walk made by the command above, and in the same change set `map_walk.hebrew_only_held` in
    `notes.json` to `[]`; `make_testing_md.py` checks that list against the two walks.
 

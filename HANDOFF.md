@@ -900,7 +900,7 @@ python3 tools/hebrew/plurals.py                   # items 902, stackable 693, pr
     counted their 2,480 strings (756 translated) twice and printed `41539 strings (25592
     translated)`, with the same findings. Now the built tree's report equals a clean `git archive`
     copy's apart from line 1 (the tree path), and the clean copy prints what CI prints
-    (`<private>/scratch/screens/r21/fixes/t4/audit_clean.txt`, `audit_final.txt`).
+    (`<private>/scratch/screens/r21/fixes/t4/audit_clean.txt` and `fixes/audit_final.txt`).
 - **tool tests in CI:** run 42725640966 at `0514c9b57b` printed `Ran 137 tests ... OK (skipped=2)`
   (no built `tools/preproc`, no English ROM). Round 21 adds 10 (8 in `test_units.py`, 2 in
   `test_audit.py`), so `he/wip-r21` has 147; CI has not run them yet.
@@ -1123,7 +1123,10 @@ python3 tools/hebrew/rom_sweep.py pokehns.gba --json OUT.json
     the next-opponent menu): an English walk of 2026-11-10 gives `543 maps in 361 s: {'OK': 507,
     'HELD': 36}`, the same 36 maps, and 539 of the 543 records are identical
     (`<private>/scratch/screens/r21/static/mw_en_full/mapwalk.json`). The stored English walk
-    (`HNS_EN_MAPWALK`) is older and holds only 34 of them (section 8.1).
+    (`HNS_EN_MAPWALK`) is older. Of those 36 it holds 32, has the Dome pre-battle room's false
+    `CRASH` (below) and an `ERROR` in the Battle Pike's normal room (cause not checked), and passes
+    the two Battle Arena rooms; `make_testing_md.py` counts every map not `OK` as held in English,
+    so it finds 34 (section 8.1).
   - Treat any `CRASH` as real until the English ROM with the same save crashes the same way, but
     first look at the PC. **A PC in `0x0A000000`-`0x0DFFFFFF` is a false alarm of the harness.**
     pokeemerald-expansion stores every script command that "requests effects" as its address
@@ -1760,6 +1763,10 @@ below wrong or stale, and each is corrected where it stands; the evidence is in
   6.6); a Trainer Hill floor does not rewrite its object scripts on CONTINUE (section 4.6).
 - **Also:** section 4.3 called `08027d9879` the commit 1.0 is built from, and 8.5 called rc21 the
   current 1.0; both were true before rc22.
+- **Found by the round's review:** the stored English walk holds 32 of the 36 maps, not 34 (the
+  other two are a false `CRASH` and an `ERROR`; `make_testing_md.py` counts both as held), corrected
+  in section 4.6 and the emu and release READMEs; and `audit_final.txt` is in `fixes/`, not
+  `fixes/t4/` (section 4.2).
 - **Not changed in place:** `notes.json` `map_walk` and the shipped 1.0 `TESTING.md:48` still say
   the two Battle Arena rooms hold only in Hebrew. They change together with the English reference
   walk (section 8.1).

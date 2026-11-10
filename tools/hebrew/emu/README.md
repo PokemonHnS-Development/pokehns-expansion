@@ -156,7 +156,8 @@ entry (the Battle Arena battle room).
 Compare a Hebrew walk only with an English walk made by the same `mapwalk.py`. With the current
 walker the English ROM holds the same 36 maps as the Hebrew one. The builds repository's
 `reference/mapwalk_en.json` was made by an older walker that answered with A and B in turn; it
-holds 34 of them and has a false CRASH in the Dome pre-battle room (below).
+holds 32 of them, has a false CRASH in the Dome pre-battle room (below) and an ERROR in the Battle
+Pike's normal room, and passes the two Battle Arena rooms.
 
 **Cross-core** (`crosscore.c`, a minimal libretro frontend; `run_release_tests.sh` builds it on
 every run). It answers every core option with the core's own default, with one override
