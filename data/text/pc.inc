@@ -14,7 +14,7 @@ gText_AccessedPlayersPC::
 	.string "נפתח המחשב של {PLAYER}.$"
 
 gText_AccessedLanettesPC::
-	.string "נפתח המחשב של LANETTE.$"
+	.string "נפתח המחשב של לאנט.$"
 
 gText_AccessedBillsPC::
 	.string "נפתח המחשב של ביל.$"

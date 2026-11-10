@@ -1547,7 +1547,7 @@ gText_RegisteredTrainerinPokeNav::
 	.string "{STR_VAR_1} {STR_VAR_2}.$"
 #else
 gText_RegisteredTrainerinPokeNav::
-	.string "רשמת ב-POKéNAV את\n"
+	.string "רשמת בפוקינאב את\n"
 	.string "{STR_VAR_1} {STR_VAR_2}.$"
 #endif
 
