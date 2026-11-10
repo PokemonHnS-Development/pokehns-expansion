@@ -190,7 +190,7 @@ static const struct MatchCallStructNPC sMrStoneMatchCallHeader =
     .mapSec = MAPSEC_CHERRYGROVE_CITY,
     .flag = FLAG_ENABLE_NORMAN_MATCH_CALL,
     .desc = COMPOUND_STRING("נשיא דבון"),
-    .name = COMPOUND_STRING("MR. STONE"),
+    .name = COMPOUND_STRING("מר סטון"),
     .textData = sMrStoneTextScripts
 };
 

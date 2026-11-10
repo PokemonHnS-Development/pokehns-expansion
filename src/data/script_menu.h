@@ -1,8 +1,8 @@
 // multichoice lists
 static const struct MenuAction MultichoiceList_BrineyOnDewford[] =
 {
-    {COMPOUND_STRING("PETALBURG")},
-    {COMPOUND_STRING("SLATEPORT")},
+    {COMPOUND_STRING("פטלבורג")},
+    {COMPOUND_STRING("סלייטפורט")},
     {gText_Exit},
 };
 
@@ -72,7 +72,7 @@ static const struct MenuAction MultichoiceList_StatusInfo[] =
 
 static const struct MenuAction MultichoiceList_BrineyOffDewford[] =
 {
-    {COMPOUND_STRING("DEWFORD")},
+    {COMPOUND_STRING("דיופורד")},
     {gText_Exit},
 };
 
@@ -768,7 +768,7 @@ static const struct MenuAction MultichoiceList_BattleTowerFeelings[] =
 static const struct MenuAction MultichoiceList_WheresRayquaza[] =
 {
     {COMPOUND_STRING("מערת הבראשית")},
-    {COMPOUND_STRING("הר PYRE")},
+    {COMPOUND_STRING("הר המוקד")},
     {COMPOUND_STRING("עמוד השמיים")},
     {COMPOUND_STRING("שכחתי")},
 };

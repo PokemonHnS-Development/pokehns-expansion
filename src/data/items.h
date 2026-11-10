@@ -15418,7 +15418,7 @@ const struct ItemInfo gItemsInfo[] =
 #else
         .description = COMPOUND_STRING(
             "מטאוריט שנמצא\n"
-            "ב-Meteor Falls."),
+            "במפלי המטאור."),
 #endif
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,

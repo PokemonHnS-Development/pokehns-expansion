@@ -1,6 +1,6 @@
 #include "global.h"
 
-const u8 gText_MysteryEventBerry[] = _("קיבלת פרי {STR_VAR_2}!\nהוא אצל אבא, במכון של PETALBURG.");
+const u8 gText_MysteryEventBerry[] = _("קיבלת פרי {STR_VAR_2}!\nהוא אצל אבא, במכון של פטלבורג.");
 const u8 gText_MysteryEventBerryTransform[] = _("פרי {STR_VAR_1} הפך\nלפרי {STR_VAR_2} אחד.");
 const u8 gText_MysteryEventBerryObtained[] = _("פרי {STR_VAR_1} כבר\nהתקבל.");
 const u8 gText_MysteryEventSpecialRibbon[] = _("סרט מיוחד הוענק\nלפוקימונים בקבוצה שלך.");
