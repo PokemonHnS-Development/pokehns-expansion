@@ -14,9 +14,9 @@ option ops of scripts/r4_battle_options/r4opt.py (opt, optexpect), and:
 
     mapwarp MAP X Y       hns.py's own warpto by map constant (ladder.py's warpto, loaded here,
                           takes GROUP NUM X Y)
-    menupick ACTION       hns.py's own startmenu (ladder.py replaces it with one that needs a
-                          controllable player): pick POKEDEX, POKEMON, BAG, ... in a start menu
-                          that is already open (as after leaving the Pokedex), or open it first
+    menupick ACTION       hns.py's own startmenu (ladder.py, loaded here, replaces it with its
+                          own): pick POKEDEX, POKEMON, BAG, ... in a start menu that is already
+                          open (as after leaving the Pokedex), or open it first
 
     r14fixb.py tour ROM OUTDIR --tours <this folder>/tours [--clip] [--only RE]
 """

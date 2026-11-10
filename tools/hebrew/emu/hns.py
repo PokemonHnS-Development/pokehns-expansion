@@ -616,14 +616,30 @@ class Emu:
 
     MENU_ACTION_SAVE = 5        # enum in src/start_menu.c:58 (POKEDEX, POKEMON, BAG, POKENAV, PLAYER, SAVE)
 
-    def open_start_menu(self):
-        """START from a controllable overworld; returns once HandleStartMenuInput is the
-        active gMenuCallback (the menu is drawn and reads input)."""
+    def start_menu_ready(self):
+        """True when the start menu is drawn and reads input: a Task_ShowStartMenu task is
+        in its input state (data[0] == 1) and gMenuCallback is HandleStartMenuInput
+        (src/start_menu.c:694-712). gMenuCallback alone does not tell: closing the menu
+        with B or START ends the task (:767-772) and nothing clears the pointer, so it
+        still names HandleStartMenuInput on the field afterwards, on every map."""
+        return (self.r32(self.sym("gMenuCallback")) == self.sym("HandleStartMenuInput")
+                and any(d[0] == 1 for d in self.task_data("Task_ShowStartMenu")))
+
+    def open_start_menu(self, maxframes=600):
+        """Make the start menu ready for input (start_menu_ready). A menu that is open is
+        used as it is; one the game is drawing again is waited for (a screen opened from
+        the menu returns through CB2_ReturnToFieldWithOpenMenu, src/overworld.c:2147-2152,
+        which reopens it with the player locked); otherwise START from a controllable
+        overworld."""
+        if self.start_menu_ready():
+            return
         if not self.controllable():
-            raise HnsError("start menu: player is not controllable (callback2 %s)" % self.cb2_name())
-        handler = self.sym("HandleStartMenuInput")
+            self.poll(lambda: self.start_menu_ready() or self.controllable(), maxframes,
+                      what="the start menu or a controllable player")
+            if self.start_menu_ready():
+                return
         self.tap("START", 0)
-        self.poll(lambda: self.r32(self.sym("gMenuCallback")) == handler, 120, what="start menu")
+        self.poll(self.start_menu_ready, 120, what="start menu")
 
     def start_menu_seek(self, want, n, what):
         """Press DOWN until sStartMenuCursorPos == WANT, checking after every press (the
@@ -922,12 +938,12 @@ class Emu:
                           "PLAYER": 4, "SAVE": 5, "OPTION": 6, "EXIT": 7, "DEXNAV": 14}
 
     def start_menu_cursor(self, action, press=True):
-        """Open the start menu (if it is not open) and move its cursor to ACTION (a name in
-        START_MENU_ACTIONS; enum in src/start_menu.c:58) by reading sCurrentStartMenuActions,
-        so the entry order of this save does not matter. With PRESS, also press A."""
+        """Open the start menu (if it is not ready, see open_start_menu) and move its cursor
+        to ACTION (a name in START_MENU_ACTIONS; enum in src/start_menu.c:58) by reading
+        sCurrentStartMenuActions, so the entry order of this save does not matter. With
+        PRESS, also press A."""
         want_act = self.START_MENU_ACTIONS[action] if isinstance(action, str) else action
-        if self.r32(self.sym("gMenuCallback")) != self.sym("HandleStartMenuInput"):
-            self.open_start_menu()
+        self.open_start_menu()
         n = self.r8(self.sym("sNumStartMenuActions"))
         acts = list(self.read(self.sym("sCurrentStartMenuActions"), n))
         if want_act not in acts:

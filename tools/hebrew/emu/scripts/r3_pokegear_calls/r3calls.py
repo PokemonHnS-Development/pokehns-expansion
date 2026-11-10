@@ -473,8 +473,9 @@ def waitnav(emu):
 @script_op("mclistopen")
 def _op_mclistopen(emu, f, path):
     if emu.controllable():
-        # gMenuCallback can still hold HandleStartMenuInput from an earlier menu: clear it so
-        # open_start_menu waits for the menu this START opens
+        # gMenuCallback can still hold HandleStartMenuInput from an earlier menu. Clearing it
+        # changes nothing: open_start_menu also reads the menu task, and the game sets the
+        # pointer before it calls it
         emu.w32(emu.sym("gMenuCallback"), 0)
         emu.open_start_menu()
     emu.start_menu_cursor("POKEGEAR")

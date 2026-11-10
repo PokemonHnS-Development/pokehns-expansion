@@ -102,6 +102,13 @@ needs `HNS_SAVES` set to the folder that holds it: `saves/r8` for round 8, a fol
 `saves/r10/` or `saves/r11/` for those rounds, and `saves/r7/saves_aug` for rounds 3-7 and
 `verify_ctxdpad` (the builds repository's README).
 
+`startmenu NAME`, `savegame` and `ladder.py`'s `startmenu` press START only when the start menu is
+not drawn and reading input, which `Emu.start_menu_ready` reads as a `Task_ShowStartMenu` task in
+its input state (`data[0]` = 1) with `gMenuCallback` = `HandleStartMenuInput`. `gMenuCallback`
+alone does not tell: it keeps naming `HandleStartMenuInput` after B or START closes the menu, on
+every map. A menu the game draws again on the way back from the party, bag or card is waited for
+and used, not closed by a second START.
+
 **On the English ROM** (`hns.py tour "$HNS_EN_ROM" OUT`, for side-by-side review): 70 of the 71
 tours report OK and `naming_nickname` stops with ERROR at its first check of the typed Hebrew
 bytes. Both `naming_*` tours type on the Hebrew keyboard, so they are Hebrew-only by design:
@@ -193,9 +200,6 @@ lines. The region list is compiled into the runner, so rebuild `hnsrun` after a 
 
 - In a `ladder.py` script `warpto` takes `GROUP NUM X Y` (`ladder.py:224-228`), not `hns.py`'s
   `warpto MAP_NAME X Y`; `hns.py map NAME` prints the numbers.
-- On a Trainer Hill or Battle Pyramid floor the second `startmenu NAME` of a run can fail with
-  "start menu cursor did not reach ..." while the menu is closed. `tap START 30` before it works;
-  the cause is not established.
 
 **Other**
 
