@@ -206,6 +206,14 @@ FIELD_RE = re.compile(r'\.([A-Za-z0-9_]+)\s*=\s*$')
 VAR_RE = re.compile(r'(?:const\s+)?u8\s+([A-Za-z0-9_]+)\s*\[[^\]]*\]\s*=\s*$')
 
 
+def c_record_live(rec):
+    """Whether a C_STRINGS record is in one of the inventory's two builds of the English tree
+    (release and std): the build's preprocessor keeps its line (pp_*) and the build's ROM holds
+    its longest plain run (rom_*). None in either field means not decided (a run too short to
+    search for; a record from before pp_* was recorded) and does not rule the build out."""
+    return any(rec.get('pp_' + b) is not False and rec.get('rom_' + b) is not False for b in ('release', 'std'))
+
+
 def c_live_index(rel):
     """{c_key: live} for the C literals of REL that C_STRINGS records.
 
@@ -222,9 +230,7 @@ def c_live_index(rel):
         return {}
     live = {}
     for l in lits:
-        # None means the inventory could not search for it (too short to be unique): live.
-        r, st = l.get('rom_release'), l.get('rom_std')
-        live[(l['line'], l['text'])] = not (r is False and st is False)
+        live[(l['line'], l['text'])] = c_record_live(l)
     text = None
     if UPSTREAM:
         try:

@@ -307,6 +307,31 @@ class CLivenessTest(unittest.TestCase):
         lines = text.split('\n')
         self.assertEqual(sorted(lines[i - 1] for i in units.rtl_only_lines(text)), ['b', 'e', 'f'])
 
+    def test_a_line_the_preprocessor_drops_is_dead_though_a_rom_holds_its_text(self):
+        # Both ROMs hold every text (another line compiles the same), but neither build's
+        # preprocessor keeps the B_HAIL branch or SECOND's line.
+        recs = [{'line': line, 'text': text, 'rom_release': True, 'rom_std': True,
+                 'pp_release': text not in DEAD, 'pp_std': text not in DEAD}
+                for _, line, text, _, _, _ in units.c_literals(EN_ITEMS)]
+        with open(self.c_strings, 'w', encoding='utf-8') as f:
+            json.dump({ITEMS: recs}, f, ensure_ascii=False)
+        self.assertEqual([(text, live) for _, text, live in self.live(self.en)],
+                         [(text, text not in DEAD) for _, _, text, _, _, _ in units.c_literals(EN_ITEMS)])
+
+    def test_c_record_live(self):
+        cases = [
+            ({'rom_release': True, 'rom_std': True}, True),                      # recorded before pp_*
+            ({'rom_release': False, 'rom_std': False}, False),
+            ({'rom_release': None, 'rom_std': None}, True),                      # too short to search for
+            ({'rom_release': None, 'rom_std': None, 'pp_release': False, 'pp_std': False}, False),
+            ({'rom_release': True, 'rom_std': True, 'pp_release': False, 'pp_std': False}, False),
+            ({'rom_release': False, 'rom_std': True, 'pp_release': True, 'pp_std': True}, True),  # linker drops it in one
+            ({'rom_release': True, 'rom_std': False, 'pp_release': False, 'pp_std': True}, False),  # no build has both
+            ({'rom_release': True, 'rom_std': True, 'pp_release': None, 'pp_std': None}, True),
+        ]
+        for rec, live in cases:
+            self.assertEqual(units.c_record_live(rec), live, rec)
+
     def test_without_an_english_tree_every_literal_is_live(self):
         # HNS_UPSTREAM unset and no ../pokehns-en: paths.UPSTREAM is None.
         units.UPSTREAM = None
