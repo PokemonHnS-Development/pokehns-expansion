@@ -32,6 +32,9 @@ LINE_DIRECTIVE_RE = re.compile(r'^[ \t]*#[ \t]*line\b', re.M)
 COND_DIRECTIVE_RE = re.compile(r'^[ \t]*#[ \t]*(?:if|ifdef|ifndef|elif|else)\b', re.M)
 COND_RE = re.compile(r'^\s*(ifeq|ifneq|ifdef|ifndef)\b(.*)$')
 ASSIGN_RE = re.compile(r'^\s*(?:override\s+)?CPPFLAGS\s*(:=|\+=|=)\s*(.*?)\s*$')
+# Any assignment to a variable the flags are made of, in every form make accepts (for one target,
+# exported, ?=, !=, ::=): makefile_cppflags stops on one it does not read.
+FLAG_VAR_ASSIGN_RE = re.compile(r'(?<!\w)(?:CPPFLAGS|INCLUDE_DIRS|INCLUDE_CPP_ARGS)\s*(?:\+|\?|!|:{1,3})?=')
 # The values an `hns` build of the English tree gives the Makefile variables CPPFLAGS uses.
 HNS_VARS = {'TEST': '0', 'GAME_VERSION': 'POKEMON_HNS'}
 INCLUDE_ARGS_RULE = '$(INCLUDE_DIRS:%=-iquote %)'
@@ -54,7 +57,8 @@ def makefile_cppflags(makefile, release):
     """The preprocessor flags the Makefile text MAKEFILE gives an `hns` build's C sources, as a list:
     the CPPFLAGS assignment, plus the additions under `ifeq ($(RELEASE),1)` when RELEASE (none under
     OFF_CONDS). Stops on anything it cannot resolve, rather than guess: a variable other than
-    INCLUDE_CPP_ARGS and those of HNS_VARS, or a CPPFLAGS change under another condition."""
+    INCLUDE_CPP_ARGS and those of HNS_VARS, a CPPFLAGS change under another condition, or any other
+    assignment to CPPFLAGS, INCLUDE_DIRS or INCLUDE_CPP_ARGS (for one target, exported, ?=)."""
     values = dict(HNS_VARS)
     flags, added, stack, dirs = None, [], [], None
     for n, line in enumerate(makefile.split('\n'), 1):
@@ -81,6 +85,9 @@ def makefile_cppflags(makefile, release):
             continue
         m = ASSIGN_RE.match(line)
         if not m:
+            if FLAG_VAR_ASSIGN_RE.search(line):
+                raise SystemExit('cpp_lines: Makefile:%d: cannot read %r; teach makefile_cppflags '
+                                 'what it does' % (n, line.strip()))
             continue
         resolved = re.sub(r'\$\((\w+)\)', lambda v: values.get(v.group(1), v.group(0)), m.group(2))
         if '$' in resolved:

@@ -57,6 +57,16 @@ class MakefileTest(unittest.TestCase):
             with self.assertRaises(SystemExit):
                 cpp_lines.makefile_cppflags(mk, False)
 
+    def test_stops_on_a_change_it_does_not_read(self):
+        # A change for one target, in another form of assignment, or to the include folders.
+        for extra in ('$(C_BUILDDIR)/x.o: CPPFLAGS += -DX\n',
+                      'export CPPFLAGS += -DX\n',
+                      'CPPFLAGS ?= -DX\n',
+                      'INCLUDE_DIRS += extra\n',
+                      'ifeq ($(MODERN),1)\nINCLUDE_DIRS := include extra\nendif\n'):
+            with self.subTest(extra=extra), self.assertRaises(SystemExit):
+                cpp_lines.makefile_cppflags(MAKEFILE + extra, False)
+
     @unittest.skipUnless(paths.UPSTREAM and os.path.isfile(os.path.join(paths.UPSTREAM, 'Makefile')),
                          'no English tree')
     def test_the_english_and_the_fork_makefiles_give_the_same_flags(self):
