@@ -30,7 +30,7 @@ fresh clone.
 | [`tools/hebrew/release/README.md`](tools/hebrew/release/README.md) | the release scripts; [`REVIEW.md`](tools/hebrew/release/REVIEW.md) there is the screenshot review |
 | [`tools/hebrew/testmsgs/README.md`](tools/hebrew/testmsgs/README.md) | the Hebrew battle-test message table |
 | [`translation/hebrew/STYLE.md`](translation/hebrew/STYLE.md) | the binding style rules |
-| [`translation/hebrew/DECISIONS.md`](translation/hebrew/DECISIONS.md) | 76 recorded decisions, up to Q140, and the names review |
+| [`translation/hebrew/DECISIONS.md`](translation/hebrew/DECISIONS.md) | 77 recorded decisions, up to Q141, and the names review |
 | [`translation/hebrew/transliteration_rules.md`](translation/hebrew/transliteration_rules.md) | how names are transliterated |
 | [`translation/hebrew/STATUS.md`](translation/hebrew/STATUS.md) | per-file state (generated) |
 | [`translation/hebrew/glossary.csv`](translation/hebrew/glossary.csv) | every name and fixed term |
@@ -42,14 +42,14 @@ fresh clone.
 
 | Item | Value | Check |
 | --- | --- | --- |
-| `he/main` | the merge of round 21 (`he/fix-r21`, `8aeb3a0f2b`, the build of 1.0; on GitHub too), then the commits that point the documents and `notes.json` at the new 1.0 | `git rev-parse --short he/main` |
+| `he/main` | `47669d9f06` and the documents after it (on GitHub too): round 21's merge `8aeb3a0f2b` (the build of rc23), round 22's tool fixes (`he/fix-r22a`, `-b`, `-c`), and round 23's merges `9283527322` (`he/fix-r23`: the Hoenn names and Q141's answered questions) and `47669d9f06` (`he/fix-r23t`: `make_chunks.py --supplement`), the build of 1.0 | `git rev-parse --short he/main` |
 | `he/renderer` | `ec407862cd` (on GitHub too): `67df13ff43` plus round 21's engine commit `cd5fb48abe` (the Pokéblock case list's level column). Built in English (`TEXT_RTL` FALSE) before and after the pick, the ROM differs in 2 bytes, an assert's line number (`<private>/scratch/screens/r21/engproof/PROOF.md`) | `git rev-parse --short he/renderer` |
-| Release | One release, 1.0, replaced in place on each update (ROM, `SHA1SUMS`, `TESTING.md`); the builds repo's commit history keeps the older builds. Current 1.0: built from `he/main` `8aeb3a0f2b` (rc23) | `git -C <builds> log` (`f438012` "Update 1.0 to the build of he/main 8aeb3a0f2b"); `<builds>/records/README.md:44` |
-| 1.0 ROM | `pokehns-he-2.0.6-1.0.gba`: 33554432 bytes, SHA-1 `383e16ba227ae4c62ae1c1ff01bfaa0c0793eedf`, CRC32 `A6214055` (clip build `66be59802683abf1b1d69be586e38d04dc03c4bb`, CRC32 `08A267D5`) | `<builds>/SHA1SUMS` |
+| Release | One release, 1.0, replaced in place on each update (ROM, `SHA1SUMS`, `TESTING.md`); the builds repo's commit history keeps the older builds. Current 1.0: built from `he/main` `47669d9f06` (rc24) | `git -C <builds> log` (`f27cd37` "Update 1.0 to the build of he/main 47669d9f06"); `<builds>/records/README.md:45` |
+| 1.0 ROM | `pokehns-he-2.0.6-1.0.gba`: 33554432 bytes, SHA-1 `28e6b2e739049c6378dbd0b947a3436894602db6`, CRC32 `A134671D` (clip build `8fed22572fd4eb714a752cd9e9face1f2dd91d0d`, CRC32 `024BE1BB`) | `<builds>/SHA1SUMS` |
 | Releasing | Build a candidate with `tools/hebrew/release/`, then replace the three files in the builds repo and say in the commit message which `he/main` commit it was built from; keep `tools/hebrew/release/notes.json` at `"release": "1.0"`. A candidate is published with hand play declared as not tested (`DECISIONS.md` Q138) | section 5 |
-| CI | green in all three jobs at `8aeb3a0f2b` (run 42802955754) and at `c1cfd8a30b` (run 42721195219: `build` 4m46s, `audit` 1m22s, `check` 20m42s), at `dd6d82f504` (42724124742) and at `0514c9b57b` (42725640966); so were the runs before them on `he/main` (41918360015 at `85705e4bc9`, 41929345455 at `08027d9879`, 41933578987 at `fe509e0043`) | `gh run list -R ronyeh2/pokehns-expansion-heb --workflow hebrew.yml --branch he/main` |
-| Static checks | at `he/main` `8aeb3a0f2b`, baseline `he/renderer` `ec407862cd`: drift 708 files, 0 FAIL, 336 with warnings only; audit 0 errors and 54 warnings, 39,059 strings as in CI; namecheck 0 problems and 0 warnings (34 allowlisted); plurals 0 problems; the Pokédex A–Z, Easy Chat and live-label generators up to date; 182 tool tests OK on Python 3.9.6 and 3.11.9 (147 at `8aeb3a0f2b`) | section 4.2 |
-| Translation status | every live file is translated: 650 files, 525 seen on screen, 125 translated, none blocked (rc22's sweep, regenerated after round 21's C-liveness fix, with the same totals) | `translation/hebrew/STATUS.md:5` |
+| CI | green in all three jobs at `47669d9f06` (run 42889868670), at `8aeb3a0f2b` (run 42802955754) and at `c1cfd8a30b` (run 42721195219: `build` 4m46s, `audit` 1m22s, `check` 20m42s), at `dd6d82f504` (42724124742) and at `0514c9b57b` (42725640966); so were the runs before them on `he/main` (41918360015 at `85705e4bc9`, 41929345455 at `08027d9879`, 41933578987 at `fe509e0043`) | `gh run list -R ronyeh2/pokehns-expansion-heb --workflow hebrew.yml --branch he/main` |
+| Static checks | at `he/main` `47669d9f06`, baseline `he/renderer` `ec407862cd`: drift 708 files, 0 FAIL, 334 with warnings only (8 `w LATIN`, all kept: Q141); audit 0 errors and 54 warnings, 39,059 strings (24,841 translated) as in CI; namecheck 7,128 rows, 0 problems and 0 warnings (34 allowlisted); plurals 0 problems; the Pokédex A–Z, Easy Chat and live-label generators up to date; 186 tool tests OK on Python 3.9.6 and 3.11.9 | section 4.2 |
+| Translation status | every live file is translated: 650 files, 525 seen on screen, 125 translated, none blocked (rc23's sweep, regenerated after round 23, with the same totals; rc24's sweep gives the same file) | `translation/hebrew/STATUS.md:5` |
 
 **What remains** (details in section 8):
 
@@ -57,7 +57,7 @@ fresh clone.
    person), real hardware (a 32 MiB flash cart with FLASH 128 KB and an RTC), and a read of the
    shipped wording by a native speaker. All three are in `notes.json` `not_tested`, so every
    `TESTING.md` says so; section 8.5 lists the lines reviewers flagged for a native read.
-2. **Done: 1.0 is rc23, built from `8aeb3a0f2b`** (round 21 merged, its engine commit on
+2. **rc23, built from `8aeb3a0f2b`** (1.0 until rc24) (round 21 merged, its engine commit on
    `he/renderer`, all pushed; CI green). Its ROM is the one round 21 built twice, from the
    worktree and from a clean archive (SHA-1 `383e16ba…`). Against rc22: `make check` the same
    (5074 results, 1899 failing, all known upstream failures); all 2,056 tour shots and all 2,056
@@ -74,8 +74,20 @@ fresh clone.
    skipped; it now prints 0.
 3. **Done: round 22**, merged on `he/main` (`he/fix-r22a`, `he/fix-r22b`, `he/fix-r22c`, pushed): the
    remaining tool rows of section 8.1. None changes the ROM, so 1.0 stays rc23.
-4. The two open rows of section 8.1: `MR. STONE` in the H&S PokéNav contact data (a text change,
-   so a release), and `make_chunks.py --supplement` numbering (a tool).
+4. **Done: round 23**, the two rows of section 8.1, shipped as rc24. The Hoenn names are Hebrew
+   (DECISIONS.md Q141: 35 glossary rows, 195 string edits in 21 files), and MR. STONE is מר סטון in
+   the PokéGear contact data. The other cartridges' titles are in Hebrew letters (רובי, ספיר,
+   אמרלד), with GLACIA גלסיה, the e-Reader אי-רידר and Ash-Greninja אש-גרנינג'ה. A second
+   `make_chunks.py --supplement` numbers its chunks after the last one. The ROM's code is rc23's
+   (section 8.5). A player sees three changes: a narrower Pokémon Center PC menu for short names,
+   the berry-fix program's messages (B+SELECT on the title screen) and the credits' page 38.
+   **1.0 is rc24**, built from `47669d9f06` (SHA-1 `28e6b2e7…`, the ROM round 23 built three times).
+   Against rc23: `make check` the same (5074 results, 1899 failing, all known upstream failures);
+   12 of the 2,056 tour shots and the same 12 clip-tour shots differ, all the Pokémon Center PC
+   menu, every row whole; the sweep OK for all 6,611 labels; the self-check, save ladder and map
+   walk (the same 36 HELD) pass; the ROM sweep finds the same labels (6,275 text runs, one fewer:
+   a Latin title is gone); the cross-core table differs only in the start menu's clock. Records
+   are in `<builds>/records/rc24/`, indexed in `<builds>/records/README.md`.
 
 ---
 
@@ -98,7 +110,7 @@ pokeemerald-expansion 1.15.2. Upstream is `PokemonHnS-Development/pokehns-expans
 | `ronyeh2/pokehns-expansion-heb` (this repo) | public | engine, text, graphics, tools, docs | default branch `master`; **no tags** (`git ls-remote` on 2026-11-10) |
 | `PokemonHnS-Development/pokehns-expansion` | public | upstream | `Release-v2.0.6` = its `master` = `167aa6d537` |
 | `ronyeh2/pokehns-hebrew-builds` | **private** | the one release 1.0 (ROM, `SHA1SUMS`, `TESTING.md`), replaced in place; `saves/`, `reference/` (libretro cores, English map walk), `records/rcNN/` (each candidate's logs and review JSON), `archive/` (history only) | `.gitattributes` has `*.gba`, `*.sav`, `*.zip`, `*.tar.gz` binary; git history keeps the older builds |
-| `<private>` (no remote) | local only | the mGBA 0.10.5 build (`mgba/`), `emu/hnsrun`, the candidates' ROMs, ELFs and screenshots (`release/rc1..rc23`, 8.7 GB), the round screenshots (`scratch/`, about 140 GB) | everything the release needs is in the fork or `<builds>` (section 8.4); the rest is rebuilt (section 2.6) |
+| `<private>` (no remote) | local only | the mGBA 0.10.5 build (`mgba/`), `emu/hnsrun`, the candidates' ROMs, ELFs and screenshots (`release/rc1..rc24`, 9.1 GB), the round screenshots (`scratch/`, about 140 GB) | everything the release needs is in the fork or `<builds>` (section 8.4); the rest is rebuilt (section 2.6) |
 
 The Spanish (`SergioBonet/hns_es`) and French (`nhykola/HeartAndSoul-FR`) forks were used only
 as a cross-check, never as source text (`STYLE.md` §1).
@@ -460,7 +472,7 @@ Every live file is already in Hebrew. New work is therefore one of three things:
 - braille;
 - Latin literals that code compares (the Odd Egg names, the mystery-gift sample code).
 
-`status_report.py:22-48` (`KEPT_LATIN`) lists the deliberate Latin per file.
+`status_report.py:22-45` (`KEPT_LATIN`) lists the deliberate Latin per file.
 
 **Find which file prints a line:** search the English in the baseline worktree. The label is the
 same in both trees; the line number can differ.
@@ -524,6 +536,9 @@ The glossary wins for names, STYLE.md for everything else (`STYLE.md:3-4`). In s
   - Easy Chat in Hebrew, with the Hebrew-letter keyboard (Q135);
   - names follow the FireRed translation's PR #2 conventions; each name kept apart is listed
     with its reason (Q140, which supersedes Q136).
+  - the Hoenn names, FireRed's form first and the rules otherwise (MT. PYRE הר המוקד, GLACIA גלסיה),
+    and the other games' titles in Hebrew letters, רובי, ספיר, אמרלד; the gem words אודם, ספיר, ברקת
+    stay for the gems and Easy Chat (Q141);
 
 ### 3.3 Width: what the renderer does and how to measure
 
@@ -704,9 +719,9 @@ git -C <main worktree> merge --no-ff he/fix-<topic> -m "Merge he/fix-<topic>: <w
 **Files**
 
 - `translation/hebrew/glossary.csv`: columns `kind,constant,english,firered_hebrew,proposed_hebrew,status,notes`;
-  7,093 rows, with CRLF line ends. The tools read `proposed_hebrew`.
+  7,128 rows, with CRLF line ends. The tools read `proposed_hebrew`.
   - Status `inherited` (1,915) comes from the FireRed fork.
-  - Status `proposed` (5,178) is new and has not been checked against an official Hebrew source.
+  - Status `proposed` (5,213) is new and has not been checked against an official Hebrew source.
     It includes the 25 inherited rows that round 20 renamed after FireRed's newer names (Q139,
     Q140); their `firered_hebrew` column still holds the form they were first taken from.
 - `translation/hebrew/glossary_sources.csv`: `kind,constant,english,source,pattern` (5,529 rows).
@@ -723,7 +738,7 @@ Keep families together; `python3 tools/hebrew/translit_stats.py 'EON$'` lists th
 **Renaming or adding a name** is a checklist; no tool propagates a rename:
 
 1. Commit `glossary.csv` alone, **before** any text that uses the name.
-2. `python3 tools/hebrew/namecheck.py --all --warnings` should print `rows 7093, still empty 0,
+2. `python3 tools/hebrew/namecheck.py --all --warnings` should print `rows 7128, still empty 0,
    problems 0` and `warnings 0, allowlisted 34`; then run `python3 tools/hebrew/glossary_widths.py`
    (today `1 over budget`: the EXEGGUTOR-A healthbox name, 49 px against 48, decided in Q129).
 3. Change every dialogue use (`git grep` the old Hebrew and the English), one file per commit.
@@ -815,7 +830,7 @@ Apply a decision in this order:
 | whole tree | `audit.py --baseline ../pokehns-en` | WIDTH, LINES, BUFFER, BYTES, TERMINATOR, CHARSET | 28 s |
 | glossary | `namecheck.py --all --warnings` | byte limits, final letters, duplicates; warnings for FireRed differences, transliteration slips, two-way names | instant |
 | generated data | `gen_dex_alpha.py`, `gen_ec_order.py`, `gen_ec_letters.py`, `flag_gates.py`, each `--check` | a stale A–Z order, Easy Chat list or live-label list | instant |
-| tool tests | `python3 -m unittest discover -s tools/hebrew/tests` | the tools themselves (147 tests) | 10 s |
+| tool tests | `python3 -m unittest discover -s tools/hebrew/tests` | the tools themselves (186 tests) | 10 s |
 | game logic | `make check BUILD=hns` + `check_tests.py` | a test that passes upstream but fails in Hebrew | about 4 min at `-j12` in the release worktree (rc5, rc20: `make_check.log` created to last written; 15 hydra runners), 13 to 20 min in CI |
 | screens | `hns.py tour` (71 tours) | crashes, timeouts, wrong typed bytes; screenshots for review | about 3 min |
 | glyphs outside windows | `hns.py tour --clip`, `sweep.py` on the clip ROM | every glyph drawn outside its window | about 2.5 min: 6,611 labels in 150 s on rc21's clip ROM (191 s with a cold cache) |
@@ -834,26 +849,22 @@ Two rules from the original brief:
 
 CI creates the two worktrees from `origin/he/renderer` and `origin/master` (`hebrew.yml:43-48`).
 Locally, the tag `Release-v2.0.6` (fetched in section 2.3) stands in for CI's `origin/master`. The
-expected output below is a local run on `he/wip-r21` `34fee0e811` (2026-11-10), with
-`../pokehns-heb-engine` at `he/renderer` `67df13ff43`, on a built tree. There drift prints
-`708 files, 1 FAIL`: the FAIL is `src/pokeblock.c`, the engine commit `cd5fb48abe` that is not on
-`he/renderer` yet. Against `67df13ff43` plus that commit the file is `ok` with no warning
-(`drift.py --en <that tree> src/pokeblock.c`: `drift: 1 file, 0 FAIL, 0 with warnings only`), so
-once it is picked the run prints the line below. The other steps printed exactly what is shown.
+expected output below is a local run on `he/main` `47669d9f06` (2026-11-10), with `../pokehns-heb-engine` at
+`he/renderer` `ec407862cd`, on a built tree.
 
 ```bash
 set -o pipefail
 # 1. drift (hebrew.yml:50-54): only strings may differ from he/renderer
 git diff --name-only Release-v2.0.6...HEAD -- data src | grep -E '\.(inc|s|c|h|party|json)$' | xargs python3 tools/hebrew/drift.py --quiet
-#    last line: drift: 708 files, 0 FAIL, 336 with warnings only   (exit 0)
+#    last line: drift: 708 files, 0 FAIL, 334 with warnings only   (exit 0)
 # 2. layout audit (hebrew.yml:56-57); creates build/hebrew; prints the report's two == lines
 python3 tools/hebrew/audit.py --baseline ../pokehns-en --report build/hebrew/audit.txt
 #    == translated strings: 0 errors, 54 warnings, 88 suppressed by baseline ../pokehns-en
 #    == English (untranslated) strings, baseline only: 448 errors, 0 warnings   <- informational
-#    line 1 of the report: audit ...: 39059 strings (24836 translated)   (the same as CI)
+#    line 1 of the report: audit ...: 39059 strings (24841 translated)   (the same as CI)
 # 3. glossary (hebrew.yml:59-60)
 python3 tools/hebrew/namecheck.py --all --warnings
-#    rows 7093, still empty 0, problems 0
+#    rows 7128, still empty 0, problems 0
 #    warnings 0, allowlisted 34
 # 4. generated data (hebrew.yml:62-71)
 python3 tools/hebrew/gen_dex_alpha.py --check     # gen_dex_alpha: 1080 entries, the TEXT_RTL list is up to date
@@ -862,7 +873,7 @@ python3 tools/hebrew/gen_ec_letters.py --check    # gen_ec_letters: 23 lists, th
 python3 tools/hebrew/flag_gates.py --check        # total: live 6585, flag_off 451, not_built 147 / no change
 # 5. tool tests (hebrew.yml:73-74)
 python3 -m unittest discover -s tools/hebrew/tests
-#    Ran 147 tests ... OK   (no skip with tools/preproc built and ../pokehns-en/pokehns.gba present)
+#    Ran 186 tests ... OK   (no skip with tools/preproc built and ../pokehns-en/pokehns.gba present)
 # not in CI: item plurals
 python3 tools/hebrew/plurals.py                   # items 902, stackable 693, problems 0
 ```
@@ -1077,7 +1088,7 @@ python3 <repo>/tools/hebrew/emu/sweep.py selftest CLIP.gba st   # proves the det
 
 ```bash
 python3 tools/hebrew/status_report.py --sweep RC/tests/sweep/sweep.json
-# 650 files -> ...: {'seen on screen': 525, 'translated': 125}   (rc22's sweep, on he/wip-r21 d886483f5c)
+# 650 files -> ...: {'seen on screen': 525, 'translated': 125}   (rc23's sweep, on he/main 47669d9f06)
 ```
 
 - Without `--sweep`, every "seen on screen" row falls back to "translated".
@@ -1385,7 +1396,7 @@ there is one). Engine fixes exist twice: the commit merged into `he/main`, and i
 | drift `STRUCTURE label order A vs B` | | blocks moved or merged | restore the English block order | — |
 | drift `E TOKENS <label>: ['{PLAYER}'] -> []` | | a placeholder was dropped or reordered | keep English order. Droppable: `{POKE} {PKMN} {POKEBLOCK} {ID} {NO} {PK}`; `{B_BUFF1..3}` may swap with each other | `43e43941b4`, `dbf3d07e01`, `43acd4d4e3` |
 | drift `E TERMINATOR`, `E CHARSET <label>: €`, `SHRUNK` | | `$` lost or added; a character the charmap cannot encode; the file is under 60% of the English bytes | restore the `$`; use the charmap form; restore the file | — |
-| drift `w PAGES 2 -> 1`, `w LATIN`, `w UNTRANSLATED` | | warnings only | `\p` changes only when a page would not fit; translate the Latin or confirm it is on `LATIN_OK` (`drift.py:52-62`) | — |
+| drift `w PAGES 2 -> 1`, `w LATIN`, `w UNTRANSLATED` | | warnings only | `\p` changes only when a page would not fit; translate the Latin or confirm it is on `LATIN_OK` (`drift.py:52-64`) | — |
 | drift flattened `#if/#else` string branches | | an old drift could not parse literals split by preprocessor lines | translate every branch; drift parses them now | `98e5af4a55` (parser), `c3aa635b6a` (text restored) |
 | drift `STRUCTURE` on `src/data/pokemon/pokedex_orders.h` only | `git log he/renderer -- src/data/pokemon/pokedex_orders.h` | the regenerated A–Z order is engine data and is not on `he/renderer` yet | cherry-pick the `pokedex_orders.h` commit onto `he/renderer` | `f47c725548` (on `he/renderer`) |
 | audit `E ... WIDTH 278 > 200 ... (prompt line)` | `textwidth.py` | the line is too wide; a line ending in `\l`/`\p` gets 200 px | `wrap.py`, or shorter wording | `57ba9f052e` (prompt budget) |
@@ -1594,26 +1605,32 @@ after `dd1a8caae8`; section 8.5, round 22): C-literal liveness now follows the p
 harness accepts the ROM's wait-state mirrors `0A`-`0D` (the reference runner `<private>/emu/hnsrun`
 was rebuilt with it; the old one is `hnsrun.pre-r22`), `make_chunks.py` removes a batch's old chunk
 files, `startmenu` opens the menu every time on Frontier floors, and the two leftovers are gone.
-These are open:
-
-| Item | Evidence | What to do |
-| --- | --- | --- |
-| `MR. STONE` is still English in the H&S PokéNav contact list's data | `src/pokenav_match_call_data.c:193`, the `.name` of `sMrStoneMatchCallHeader` in the `#if IS_HNS` branch (`:169`); every other `.name` there is Hebrew and its `.desc` is נשיא דבון; rc22's ROM holds `MR. STONE` once, in `pokenav_match_call_data.o`'s `.rodata`; `c_strings.json` has it live. `STATUS.md` hides it behind the `KEPT_LATIN` reason "Emerald PokéNav contacts" (`status_report.py:36`), written for the 24 Emerald contacts that are now dead. Whether a player sees the name is **unverified** | translate it with the glossary's name for Mr. Stone and show it on screen, or keep it with its own reason in `DECISIONS.md`; either way fix the reason. A translation changes the ROM, so it goes with a release |
-| `make_chunks.py --supplement` run twice writes the second supplement over the first one's `s01` file | reproduced on the test fixture: 6 units go down to 4 (`<private>/scratch/screens/r22/harness/review/supp`); the same line is in `8aeb3a0f2b`, so it is older than round 22 | number a new supplement after the last one, with a test |
+Round 23 fixed the last two (section 8.5, round 23): MR. STONE is מר סטון (Q141), and a second
+`make_chunks.py --supplement` numbers its chunks after the batch's last one and adds to its names
+file. No defect is open.
 
 ### 8.2 Content gaps and decisions
 
-- **Latin left inside Hebrew strings.** The live ones have glossary rows and Hebrew text. drift
-  prints 127 `w LATIN` lines, and each is either kept on purpose or in text H&S does not reach:
-  - kept: button names, game titles, the credits' team names, the abbreviation IV in the help
-    windows (`src/data/help_window.h`), the Odd Egg name list the game compares with the player's
-    name, and the save-type name on the no-flash screen; the reasons are in
-    `tools/hebrew/status_report.py` (KEPT_LATIN) and `tools/hebrew/drift.py` (LATIN_OK);
-  - unreachable: Emerald maps and names, the Battle Tents, the TV shows and their PokéNews
-    (`FLAG_SYS_TV_START` is defined as 0, `data/scripts/tv.inc:8`), the PokéNav match calls (their
-    `FLAG_ENABLE_*_MATCH_CALL` and `FLAG_REGISTERED_*` flags are defined as 0 in
-    `include/constants/flags_hns.h`, and `FlagGet(0)` is false), the Ruby/Sapphire berry fix,
-    and the item descriptions this build does not compile.
+- **Latin left inside Hebrew strings.** drift prints 8 `w LATIN` lines (127 before round 23), all
+  kept on purpose: the credits' team name Johto Redrawn, and XS, XL and GB, which the glossary keeps
+  in the EXP. CANDY and GB PLAYER names. Also kept:
+  - the words of `LATIN_OK` (`tools/hebrew/drift.py:52-64`): button names, the game's own title, the
+    credits' NOA;
+  - IV in the help windows (`src/data/help_window.h`);
+  - the Odd Egg name list the game compares with the player's name;
+  - the save-type name on the no-flash screen;
+  - the berry-fix program's two console labels, which print left to right (`KEPT_LATIN`,
+    `tools/hebrew/status_report.py:22-45`).
+  The Hoenn names, the other games' titles, the e-Reader and Ash-Greninja have glossary rows and
+  Hebrew text (Q141). Most of those strings are in text H&S does not reach: Emerald maps and the
+  Battle Tents; the TV shows and PokéNews (`FLAG_SYS_TV_START` is defined as 0,
+  `data/scripts/tv.inc:8`); the PokéNav match calls (their `FLAG_ENABLE_*_MATCH_CALL` and
+  `FLAG_REGISTERED_*` flags are 0 in `include/constants/flags_hns.h`, and `FlagGet(0)` is false);
+  the record-mix error, the e-Reader screen and the Ash-Greninja line, for the reasons Q141 gives.
+  The berry-fix program (B+SELECT on the title screen) and the credits' page 38 are reached.
+  - The e-Reader screen's header prints the untranslated Japanese `gJPText_MysteryGift` and
+    `gJPText_DecideStop` (`src/mystery_gift_menu.c:498-499`) as other glyphs; the screen cannot be
+    opened in this build (Q141), and rc23 is the same.
   - `tools/hebrew/flag_gates.py` keeps these out of `tools/hebrew/data/live_labels.json`: it moves
     the match calls (all but Mom and Baoba), the TV shows and PokéNews to `flag_off` (451 labels)
     and the 147 labels that are not built to `not_built`; 6,585 stay live. CI runs `--check`.
@@ -1700,7 +1717,7 @@ These are open:
 - **The radio's Pokédex Show** wraps two place names across its lines (הר / הנזר in the
   Typhlosion-H entry, נהרות / היסואי in Basculegion's). Accepted: the ticker breaks between words,
   nothing clips, and 1.0 and English split at the same places.
-- **Proposed names.** The 5,178 `proposed` glossary rows were never checked against an official
+- **Proposed names.** The 5,213 `proposed` glossary rows were never checked against an official
   Hebrew source. `namecheck.py --warnings` checks them for consistency with FireRed and for
   transliteration slips (Q140); the roughly 3,000 rows translated by meaning stay `proposed` until
   a native speaker reads them.
@@ -1768,7 +1785,7 @@ Earlier passes: round 20 corrected the audit's example finding (section 4.2:
 section 7. Round 19 corrected six line references: `RELEASE ?= 0` is at `Makefile:69`, `KEPT_LATIN`
 at `status_report.py:22-48`, the Hebrew count at `status_report.py:82`, the sweep's path guard at
 `sweep.py:391-396`, `walk_tree` (now at `audit.py:461-481`) and `LoadSaveblockObjEventScripts` at
-`src/overworld.c:592-600`. Every text tool has tests: 147 tests in 21 files under
+`src/overworld.c:592-600`. Every text tool has tests: 186 tests in 25 files under
 `tools/hebrew/tests`, with small committed fixtures in `tools/hebrew/tests/data/`. Add a row here
 when a document and the tree disagree, and fix it in a docs-only commit.
 
@@ -2061,8 +2078,39 @@ adversarial reviewer; scratch in `<private>/scratch/screens/r22/`):
 - 182 tool tests OK on Python 3.11.9 and 3.9.6; drift 0 FAIL, audit 0 errors and 54 warnings
   (39,059 strings), namecheck 0 problems, generators and `flag_gates.py` up to date.
 
+**Verified in round 23** (`he/wip-r23` `7494e18d43`, `he/wip-r23t` `0729fea38d`; each pass re-checked by an adversarial reviewer; scratch in `<private>/scratch/screens/r23/` and `r23b/`):
+
+- **The Hoenn names and MR. STONE (Q141).**
+  - 30 glossary rows and 169 string edits in 17 files, FireRed's form wherever FireRed prints the name.
+  - None of these strings is reached in H&S play; Q141 gives the flag or `#if` behind each.
+  - Forced on the clip ROM, the PokéGear CALL row reads נשיא דבון | מר סטון and the calls show in the CALL window.
+  - The 78 changed dialogue labels the ROM assembles are OK in the sweep (OK 78, no CLIP), shown beside English.
+- **The one visible change of that pass.** The Pokémon Center PC menu measures `gText_LanettesPC` for its width, so it is a tile or two narrower when המחשב של and the player's name measure under 95 px. Of the 2,056 release-tour shots, the 12 that differ from rc23 are this menu, every row whole. A 7-letter name leaves it as before.
+- **Q141's five answered questions.**
+  - 5 new rows: TERM_TITLE_RUBY רובי, TERM_TITLE_SAPPHIRE ספיר, TERM_TITLE_EMERALD אמרלד, TERM_E_READER אי-רידר, NAME_ASH_GRENINJA אש-גרנינג'ה. GLACIA is גלסיה. 26 string edits in 8 files; every changed line is narrower than before, except an unused placeholder.
+  - Reached the player's way and seen beside rc23: the berry-fix program from the title screen, with רובי/ספיר in reading order (its console labels stay Latin, in a left-to-right window); and the credits after the Hall of Fame, where only page 38 changed (פוקימון גרסת אמרלד).
+  - These cannot print in this build even with a link or the debug menu (Q141 gives the code): the record-mix error, the e-Reader screen, the Ash-Greninja line, GLACIA's call and the version placeholders.
+  - Forced and shown: those strings, the berry fix's last message and the link-contest INFO lines.
+- **The ROMs keep rc23's code.**
+  - The release and clip builds (SHA-1 `28e6b2e7…`, `8fed2257…`) were reproduced twice from a clean `git archive`.
+  - The same 14,547 functions (14,548 in the clip build) at the same addresses and sizes; no differing code byte.
+  - Of the 10,639 differing literal-pool words, 10,631 point at the same place. The other 8 are the same symbol plus the same constant in both builds.
+  - The 71 release tours: 71 OK on both builds, 0 clip records. Against rc23, only the 12 PC-menu shots differ.
+- **`make_chunks.py --supplement`.** A second supplement numbers its chunks after the batch's last `_sNN.json` and adds to `_snames.json`; a full run still removes the supplements. Four new tests, each failing on the old code.
+- **Static checks.**
+  - drift: 708 files, 0 FAIL, 334 with warnings only, 8 `w LATIN`.
+  - audit: 0 errors, 54 warnings, 39,059 strings (24,841 translated).
+  - namecheck: 7,128 rows, 0 problems, 0 warnings, 34 allowlisted.
+  - plurals, the generators and `flag_gates.py` unchanged.
+  - `STATUS.md` regenerated from rc23's sweep with the same totals (650, 525, 125).
+  - 182 tool tests on `he/wip-r23` and 186 on `he/wip-r23t`, OK on Python 3.11.9 and 3.9.6; the
+    merged tree (`47669d9f06`): 186 OK on both.
+
 **Not verified:**
 
+- Of round 23: the berry-fix transfer to a real second GBA (its last message was forced); whether
+  the debug menu's collision switch lets a player walk behind the contest lobby counter to the
+  invisible link receptionist.
 - A Linux build with devkitPro pacman; another machine with devkitARM r68 reproducing the 0.2
   SHA-1.
 - Whether the official English 2.0.6 binary (CRC32 `01713508`) is a `RELEASE=1` build. The
