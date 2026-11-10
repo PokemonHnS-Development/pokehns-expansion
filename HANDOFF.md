@@ -1923,6 +1923,41 @@ under `<private>/scratch/screens/r21/`, in `fixes/` for the fixes):
 - **Why 1.2.1 saves do not load, and what the player sees,** on both ROMs with a synthetic save
   (section 6.6, in `static/`).
 
+- **Round 20's names in the places no test had reached** (in `emu/`, `facts.md` section 1; every
+  Hebrew run on rc22's clip ROM, with 0 clip records):
+  - PSYCHIC GEM and PSYCHIC TERA SHARD in the PC storage held-item field, in both PC modes, beside
+    English. In the 78 px panel the GEM spans x 9..71 and the SHARD x 7..71; English cuts its own
+    name to `PSYCHIC TERA SHAR`. A player gets the GEM from the field-item randomizer
+    (`src/data/randomizer/item_whitelist.h:383`, `src/randomizer.c:70-75`) and the SHARD only from
+    the overworld debug menu (`emu/sheets/a_pc_*.png`).
+  - The battle debug menu's hold-effect name חולק ניסיון: in full on AI INFO in a trainer battle
+    once OMNISCIENT is set on the foe in the menu (`src/battle_debug.c:910-938`,
+    `src/battle_ai_util.c:139-156`), and as `חולק ני` on AI PARTY, the 7-byte cut of
+    `src/battle_debug.c:976` (English `Exp Sha`), after FRISK revealed a wild GYARADOS's EXP. SHARE
+    (`emu/sheets/b_dbg_*.png`).
+  - **Unreachable, in English too:** the Z-move panel's type and the GENESIS SUPERNOVA, MAX
+    PHANTASM and MAX MINDSTORM descriptions. The only gimmick toggle is the START branch of
+    `HandleInputChooseMove` (`src/battle_controller_player.c:913-924`), and START is
+    `B_MOVE_DESCRIPTION_BUTTON` (`include/config/battle.h:343`), whose branch comes first
+    (`:907-911`). With the Z-POWER RING, MEWNIUM Z, MEW and PSYCHIC in place the Z icon shows, but
+    START only opens the move description, on both ROMs (`emu/sheets/c_zmove.png`). Dynamax is off
+    (`B_FLAG_DYNAMAX_BATTLE` is 0, `src/battle_dynamax.c:86-89`; no Dynamax line in
+    `trainers_hns.party`), and no move source gives an id at or above `MOVES_COUNT`, the first
+    Z-move (`include/constants/moves.h:910-913`).
+  - **Unreachable:** `gText_Ghost` רוח רפאים and the Trainer Tower AERODACTYL. The Pokémon Tower
+    (map group 66) and the Trainer Tower (group 67) have NULL map headers in both ROMs, and their
+    scripts are assembled only under `IS_FRLG` (`data/event_scripts.s:605-1052`, `:1027`). Forced
+    from RAM, רוח רפאים fits its healthbox (`emu/sheets/d_ghost*.png`).
+  - **Unreachable:** the Trainer Hill AERODACTYLs, HENRY's `mons[3]` and ENRIQUE's `mons[0]` on
+    the Variety set's floor 4 (`src/data/battle_frontier/trainer_hill.h:2426`, `:2498`). The
+    floor loads slots {0,1,2} for the first trainer and {3,4,5} for the second
+    (`src/trainer_hill.c:404-408`, `:1083-1088`); on rc22 and English both send out UNOWN
+    (`emu/sheets/d_hill_v4.png`).
+  - **Unreachable, confirmed:** the generic phrase מהלך על-חושי, printed only for a move id at or
+    above `MOVES_COUNT` that is neither a Z-move nor a Max Move (`src/battle_message.c:2769-2775`,
+    `:3299-3305`). Those two kinds fill the whole range up to `MOVES_COUNT_ALL`
+    (`include/constants/moves.h:913-1011`), and no string uses `{B_LAST_MOVE}`.
+
 **Not verified:**
 
 - A Linux build with devkitPro pacman; another machine with devkitARM r68 reproducing the 0.2
@@ -1936,14 +1971,9 @@ under `<private>/scratch/screens/r21/`, in `fixes/` for the fixes):
 - A real pre-2.0 (1.2.1) save: only a synthetic one in its layout was loaded (section 6.6).
 - The out-of-bounds read behind Scott's shields could write through a stray pointer after a link
   Dodrio Berry Picking game (needs a link).
-- Round 20's names in the places no test reached: the generic phrase מהלך על-חושי (printed only
-  for a move id at or above `MOVES_COUNT`, `src/battle_message.c:2770-2773`); the Z-move panel's
-  type (`src/battle_z_move.c:430`); the descriptions of GENESIS SUPERNOVA, MAX PHANTASM and MAX
-  MINDSTORM; the Union Room trade board's type plate (needs a link, `src/union_room.c:4124`);
-  `gText_Ghost` רוח רפאים, the Kanto Pokémon Tower ghost, whose reachability in H&S was not
-  checked; the AERODACTYL nicknames of the Trainer Hill and Trainer Tower data; the battle debug
-  menu's hold-effect name חולק ניסיון; and PSYCHIC GEM and PSYCHIC TERA SHARD in the PC storage
-  held-item field (PSYCHIC GEM was seen in the summary's).
+- Of round 20's names, the Union Room trade board's type plate (needs a link,
+  `src/union_room.c:4124`). Every other place no test had reached was shown on screen or proved
+  unreachable in round 21 (above).
 - A native speaker's read. Reviewers asked for one on: the radio's adjective pairs
   (`src/data/text/radio_strings.h:54-69`), the Ultra Beast Pokédex entries
   (`src/data/pokemon/species_info/gen_7_families.h`), the Day Care take-back question
