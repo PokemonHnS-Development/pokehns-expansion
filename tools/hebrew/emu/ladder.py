@@ -14,7 +14,7 @@ Extra script commands:
                                   meanwhile (for scripts that show messages).
     rungoto LABEL [MAX] [KEYS]    run one of the ROM's own scripts (`goto LABEL`), e.g. a
                                   town's first-visit "flagheap" trigger that ends in `end`.
-    startmenu ACTION              START, move the cursor to ACTION, A. ACTION is the enum in
+    startmenu ACTION              START unless the menu is open, cursor to ACTION, A. ACTION:
                                   src/start_menu.c:58 (0 POKEDEX, 1 POKEMON, 2 BAG,
                                   3 POKENAV, 4 PLAYER, 5 SAVE, 6 OPTION, 7 EXIT).
     leavecenter [MAX]             walk DOWN out of the Pokemon Center the player stands in
