@@ -130,5 +130,191 @@ class UnitsTest(unittest.TestCase):
         self.assertIn('"מה שלומך?$"', self.read(INC))
 
 
+EN_ITEMS = """const struct Item gItemsInfo[] =
+{
+    [ITEM_POTION] =
+    {
+        .name = ITEM_NAME("POTION"),
+        .description = COMPOUND_STRING(
+            "Restores the HP of\\n"
+            "a Pokémon."),
+    },
+
+    [ITEM_ICY_ROCK] =
+    {
+        .name = ITEM_NAME("ICY ROCK"),
+    #if B_HAIL
+        .description = COMPOUND_STRING("Extends Hail."),
+    #else
+        .description = COMPOUND_STRING("Extends Snow."),
+    #endif
+    },
+};
+
+static const u8 *const sNames[] =
+{
+    COMPOUND_STRING("FIRST"),
+    COMPOUND_STRING("SECOND"),
+    COMPOUND_STRING("THIRD"),
+};
+"""
+
+# The same file translated: a TEXT_RTL plural name and a shorter description move every later
+# literal up or down, the dead Hail branch keeps its English, and the dead SECOND stays English.
+HE_ITEMS = """const struct Item gItemsInfo[] =
+{
+    [ITEM_POTION] =
+    {
+        .name = ITEM_NAME("שיקוי"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("שיקויים"),
+    #endif
+        .description = COMPOUND_STRING("משקם נ”ח."),
+    },
+
+    [ITEM_ICY_ROCK] =
+    {
+        .name = ITEM_NAME("סלע קרח"),
+    #if B_HAIL
+        .description = COMPOUND_STRING("Extends Hail."),
+    #else
+        .description = COMPOUND_STRING("מאריך שלג."),
+    #endif
+    },
+};
+
+static const u8 *const sNames[] =
+{
+    COMPOUND_STRING("ראשון"),
+    COMPOUND_STRING("SECOND"),
+    COMPOUND_STRING("שלישי"),
+};
+"""
+
+DEAD = {'Extends Hail.', 'SECOND'}
+
+
+class CLivenessTest(unittest.TestCase):
+    """c_strings.json records a C literal by its line in the English tree; units.py finds it in the
+    translated tree by designator, field and place, whatever line it moved to."""
+
+    def setUp(self):
+        self.dir = tempfile.mkdtemp(prefix='hns_units_live_')
+        self.en = os.path.join(self.dir, 'en')
+        self.tree = os.path.join(self.dir, 'tree')
+        for root, text in ((self.en, EN_ITEMS), (self.tree, HE_ITEMS)):
+            os.makedirs(os.path.join(root, 'src/data'))
+            with open(os.path.join(root, ITEMS), 'w', encoding='utf-8') as f:
+                f.write(text)
+        # The inventory's record of every English literal: line, text and whether a ROM holds it.
+        recs = [{'line': line, 'text': text, 'rom_release': text not in DEAD, 'rom_std': text not in DEAD}
+                for _, line, text, _, _, _ in units.c_literals(EN_ITEMS)]
+        self.c_strings = os.path.join(self.dir, 'c_strings.json')
+        with open(self.c_strings, 'w', encoding='utf-8') as f:
+            json.dump({ITEMS: recs}, f, ensure_ascii=False)
+        self.saved = units.C_STRINGS, units.UPSTREAM
+        units.C_STRINGS, units.UPSTREAM = self.c_strings, self.en
+
+    def tearDown(self):
+        units.C_STRINGS, units.UPSTREAM = self.saved
+        shutil.rmtree(self.dir, ignore_errors=True)
+
+    def live(self, tree):
+        return [(u['key'], u['en'], u['live']) for u in units.extract([ITEMS], tree, True)]
+
+    def test_translated_tree_matches_by_designator_and_field(self):
+        self.assertEqual(self.live(self.tree), [
+            ('ITEM_POTION.name', 'שיקוי', True),
+            ('ITEM_POTION.pluralName', 'שיקויים', True),       # not in the English tree: live
+            ('ITEM_POTION.description', 'משקם נ”ח.', True),
+            ('ITEM_ICY_ROCK.name', 'סלע קרח', True),
+            ('ITEM_ICY_ROCK.description', 'Extends Hail.', False),
+            ('ITEM_ICY_ROCK.description', 'מאריך שלג.', True),
+            ('ITEM_ICY_ROCK', 'ראשון', True),
+            ('ITEM_ICY_ROCK', 'SECOND', False),
+            ('ITEM_ICY_ROCK', 'שלישי', True)])
+        self.assertEqual([u['en'] for u in units.extract([ITEMS], self.tree, False)],
+                         ['שיקוי', 'שיקויים', 'משקם נ”ח.', 'סלע קרח', 'מאריך שלג.', 'ראשון', 'שלישי'])
+
+    def test_line_numbers_would_be_wrong_here(self):
+        # The plural name moves the list one line down, onto the English lines of other literals:
+        # a key by line would mark the live first name dead and the dead SECOND live.
+        en_lines = {text: line for _, line, text, _, _, _ in units.c_literals(EN_ITEMS)}
+        he_lines = {text: line for _, line, text, _, _, _ in units.c_literals(HE_ITEMS)}
+        self.assertEqual(he_lines['ראשון'], en_lines['SECOND'])
+        self.assertEqual(he_lines['SECOND'], en_lines['THIRD'])
+
+    def test_english_tree_gives_the_records_verdicts(self):
+        self.assertEqual([(text, live) for _, text, live in self.live(self.en)],
+                         [(text, text not in DEAD) for _, _, text, _, _, _ in units.c_literals(EN_ITEMS)])
+
+    def test_without_the_english_file_every_literal_is_live(self):
+        units.UPSTREAM = os.path.join(self.dir, 'absent')
+        err = io.StringIO()
+        with contextlib.redirect_stderr(err):
+            self.assertTrue(all(live for _, _, live in self.live(self.tree)))
+        self.assertIn('%s is not in the English tree' % ITEMS, err.getvalue())
+
+    def keyed_live(self, rel, en_text, he_text, dead):
+        """extract_c's (text, live) for HE_TEXT, with C_STRINGS marking DEAD of EN_TEXT dead."""
+        for root, text in ((self.en, en_text), (self.tree, he_text)):
+            with open(os.path.join(root, rel), 'w', encoding='utf-8') as f:
+                f.write(text)
+        recs = [{'line': line, 'text': text, 'rom_release': text not in dead, 'rom_std': text not in dead}
+                for _, line, text, _, _, _ in units.c_literals(en_text)]
+        with open(self.c_strings, 'w', encoding='utf-8') as f:
+            json.dump({rel: recs}, f, ensure_ascii=False)
+        return [(u['en'], u['live']) for u in units.extract_c(os.path.join(self.tree, rel), rel, True)]
+
+    def test_a_text_rtl_only_literal_moves_no_other_literal(self):
+        # The TEXT_RTL branch adds a literal before the list's: keyed by place alone, ALPHA would
+        # take BETA's dead verdict and BETA GAMMA's live one.
+        en = ('static const struct MenuAction sList[] = {\n'
+              '    { COMPOUND_STRING("ALPHA") },\n'
+              '    { COMPOUND_STRING("BETA") },\n'
+              '    { COMPOUND_STRING("GAMMA") }\n'
+              '};\n')
+        he = ('static const struct MenuAction sList[] = {\n'
+              '#if TEXT_RTL\n'
+              '    { COMPOUND_STRING("רגיל") },\n'
+              '#else\n'
+              '    { gText_Normal },\n'
+              '#endif\n'
+              '    { COMPOUND_STRING("אלפא") },\n'
+              '    { COMPOUND_STRING("BETA") },\n'
+              '    { COMPOUND_STRING("גמא") }\n'
+              '};\n')
+        self.assertEqual(self.keyed_live(ITEMS, en, he, {'BETA'}),
+                         [('רגיל', True), ('אלפא', True), ('BETA', False), ('גמא', True)])
+
+    def test_a_variable_keeps_its_verdict_whatever_designator_is_near(self):
+        # c_literals takes the designator from up to 4000 characters back: the long English name
+        # hides NAME_LONG from sText_Unused, the short Hebrew one does not.
+        en = ('static const u8 *const sNames[] =\n{\n'
+              '    [NAME_LONG] = COMPOUND_STRING("%s"),\n};\n\n'
+              'static const u8 sText_Unused[] = _("Never printed.");\n'
+              'static const u8 sText_Used[] = _("Printed.");\n') % ('LONG NAME ' * 410)
+        he = ('static const u8 *const sNames[] =\n{\n'
+              '    [NAME_LONG] = COMPOUND_STRING("שם ארוך"),\n};\n\n'
+              'static const u8 sText_Unused[] = _("Never printed.");\n'
+              'static const u8 sText_Used[] = _("מודפס.");\n')
+        self.assertEqual(self.keyed_live(ITEMS, en, he, {'Never printed.'}),
+                         [('שם ארוך', True), ('Never printed.', False), ('מודפס.', True)])
+
+    def test_rtl_only_lines(self):
+        text = ('a\n#if TEXT_RTL\nb\n#else\nc\n#endif\n#if !TEXT_RTL\nd\n#else\ne\n#endif\n'
+                '#if TEXT_RTL && IS_HNS\n#if X\nf\n#endif\n#elif Y\ng\n#endif\n#ifdef TEXT_RTL\nh\n#endif\n')
+        lines = text.split('\n')
+        self.assertEqual(sorted(lines[i - 1] for i in units.rtl_only_lines(text)), ['b', 'e', 'f'])
+
+    def test_without_an_english_tree_every_literal_is_live(self):
+        # HNS_UPSTREAM unset and no ../pokehns-en: paths.UPSTREAM is None.
+        units.UPSTREAM = None
+        err = io.StringIO()
+        with contextlib.redirect_stderr(err):
+            self.assertTrue(all(live for _, _, live in self.live(self.tree)))
+        self.assertIn('%s is not in the English tree' % ITEMS, err.getvalue())
+
+
 if __name__ == '__main__':
     unittest.main()

@@ -1,9 +1,9 @@
 # Hebrew translation tools
 
 Python 3 tools for translating Heart & Soul into Hebrew and checking the result. They need Python
-3.9 or newer: the tool tests pass on 3.9.6, 3.11.9 and 3.14.7, and every script compiles on 3.9.6
-and 3.14.7; the other scripts have only been run on 3.11.9. They use only the standard library,
-except the ones that draw pictures, which need Pillow: `fontcells.py`, the font scripts in `fonts/`
+3.9 or newer: the tool tests pass on 3.9.6, 3.11.9 and 3.14.7, and every script compiles with
+warnings as errors on those three; the other scripts have only been run on 3.11.9. They use only
+the standard library, except the ones that draw pictures, which need Pillow: `fontcells.py`, the font scripts in `fonts/`
 that draw, everything in `graphics/` and the review-sheet scripts in `emu/scripts/`. `inventory/`
 needs numpy. The tools that read an ELF (`rom_sweep.py`, the harness
 in `emu/`, `inventory/`) need devkitARM (`DEVKITARM`, default `/opt/devkitpro/devkitARM`). Every
@@ -35,7 +35,8 @@ tool runs from any working directory. The style guide and glossary are in `trans
    as JSON units. `units.py status FILE...` counts how many of them are already in Hebrew.
 2. **Chunk.** `make_chunks.py B10 [B20 ...|all] [--out DIR]` cuts each named inventory batch
    (`data/inventory.json`) into chunk files in `$HNS_UNITS/<batch>/` (or `DIR/<batch>/`). It extracts the units from
-   `HNS_BASELINE` and fills in names from the glossary.
+   `HNS_BASELINE` and fills in names from the glossary. It never removes an old chunk file, and
+   the sweep reads every file there, so write into an empty folder.
 3. **Translate.** Fill each unit's `"he"` by following `translation/hebrew/STYLE.md` and the
    glossary. `merge_he.py CHUNK.json TRANSLATIONS.json` merges an `{id: hebrew}` file into a chunk.
 4. **Check.** `checkunits.py CHUNK.json...` checks tokens, terminators, escapes, the charset,
@@ -50,7 +51,9 @@ tool runs from any working directory. The style guide and glossary are in `trans
 6. **Drift.** `drift.py FILE...` checks that a translated file differs from `HNS_BASELINE` only
    inside its strings.
 7. **Audit.** `audit.py [PATH...] [--baseline "$HNS_UPSTREAM"]` runs a static layout audit of
-   every string. For the glossary, `namecheck.py --all` checks bytes, the charset, final letters
+   every string. It skips the headers `make` generates from the `.party` files and the region-map
+   JSON, whose strings it reads from those sources, so a built tree and a clean checkout give the
+   same report. For the glossary, `namecheck.py --all` checks bytes, the charset, final letters
    and duplicates; `--warnings` adds three consistency checks that only warn (`--fr-sync`: a name
    that differs from the FireRed translation's current one; `--translit`: a transliteration slip;
    `--dupes`: one English person name with two Hebrew spellings), with the explained cases in
@@ -111,5 +114,5 @@ at run time: `budgets.json` (pixel budgets per string kind), `live_labels.json` 
 and batches), `namecheck_allow.json` (the name differences kept on purpose, each with its reason)
 and `font_drafts/` (draft Hebrew widths for `--hebrew-widths draft`).
 
-Tests: `python3 -m unittest discover -s tools/hebrew/tests` (137 tests in 21 files). The test for
+Tests: `python3 -m unittest discover -s tools/hebrew/tests` (147 tests in 21 files). The test for
 the English ROM runs only when `HNS_EN_ROM` exists, and one test needs the built `tools/preproc`.

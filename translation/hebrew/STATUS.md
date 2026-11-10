@@ -576,20 +576,20 @@ seen on screen: 525 | translated: 125
 | `src/data/easy_chat/easy_chat_group_voices.h` | 54 | 54 | translated |
 | `src/data/easy_chat/easy_chat_groups.h` | 22 | 22 | translated |
 | `src/data/help_window.h` | 24 | 24 | translated |
-| `src/data/items.h` | 2223 | 2216 | translated (7 kept in Latin: description branches this build does not compile) |
+| `src/data/items.h` | 2218 | 2218 | translated |
 | `src/data/lilycove_lady.h` | 16 | 16 | translated |
 | `src/data/moves_info.h` | 1807 | 1807 | translated |
 | `src/data/party_menu.h` | 29 | 29 | translated |
 | `src/data/pokemon/species_info.h` | 3 | 3 | translated |
-| `src/data/pokemon/species_info/gen_1_families.h` | 860 | 860 | translated |
-| `src/data/pokemon/species_info/gen_2_families.h` | 349 | 349 | translated |
-| `src/data/pokemon/species_info/gen_3_families.h` | 527 | 527 | translated |
-| `src/data/pokemon/species_info/gen_4_families.h` | 306 | 306 | translated |
-| `src/data/pokemon/species_info/gen_5_families.h` | 594 | 594 | translated |
-| `src/data/pokemon/species_info/gen_6_families.h` | 332 | 332 | translated |
-| `src/data/pokemon/species_info/gen_7_families.h` | 331 | 331 | translated |
-| `src/data/pokemon/species_info/gen_8_families.h` | 367 | 367 | translated |
-| `src/data/pokemon/species_info/gen_9_families.h` | 392 | 392 | translated |
+| `src/data/pokemon/species_info/gen_1_families.h` | 825 | 825 | translated |
+| `src/data/pokemon/species_info/gen_2_families.h` | 341 | 341 | translated |
+| `src/data/pokemon/species_info/gen_3_families.h` | 501 | 501 | translated |
+| `src/data/pokemon/species_info/gen_4_families.h` | 298 | 298 | translated |
+| `src/data/pokemon/species_info/gen_5_families.h` | 583 | 583 | translated |
+| `src/data/pokemon/species_info/gen_6_families.h` | 319 | 319 | translated |
+| `src/data/pokemon/species_info/gen_7_families.h` | 321 | 321 | translated |
+| `src/data/pokemon/species_info/gen_8_families.h` | 346 | 346 | translated |
+| `src/data/pokemon/species_info/gen_9_families.h` | 386 | 386 | translated |
 | `src/data/pokemon/species_info/shared_dex_text.h` | 46 | 46 | translated |
 | `src/data/script_menu.h` | 224 | 218 | translated (6 kept in Latin: Emerald ferry destinations and BP amounts) |
 | `src/data/speaker_names.h` | 1 | 1 | translated |
@@ -597,9 +597,9 @@ seen on screen: 525 | translated: 125
 | `src/data/text/gift_ribbon_descriptions.h` | 46 | 46 | translated |
 | `src/data/text/radio_strings.h` | 213 | 213 | translated |
 | `src/data/text/ribbon_descriptions.h` | 19 | 19 | translated |
-| `src/data/trade.h` | 69 | 69 | translated |
+| `src/data/trade.h` | 68 | 68 | translated |
 | `src/data/types_info.h` | 41 | 41 | translated |
-| `src/data/union_room.h` | 195 | 195 | translated |
+| `src/data/union_room.h` | 194 | 194 | translated |
 | `src/dexnav.c` | 4 | 4 | translated |
 | `src/field_region_map.c` | 1 | 1 | translated |
 | `src/field_screen_effect.c` | 5 | 5 | translated |
@@ -625,7 +625,7 @@ seen on screen: 525 | translated: 125
 | `src/player_pc.c` | 17 | 17 | translated |
 | `src/pokeblock.c` | 22 | 22 | translated |
 | `src/pokeblock_feed.c` | 3 | 3 | translated |
-| `src/pokedex_area_screen.c` | 5 | 5 | translated |
+| `src/pokedex_area_screen.c` | 4 | 4 | translated |
 | `src/pokedex_plus_hgss.c` | 120 | 120 | translated |
 | `src/pokemon.c` | 25 | 25 | translated |
 | `src/pokemon_storage_system.c` | 82 | 82 | translated |
@@ -636,7 +636,7 @@ seen on screen: 525 | translated: 125
 | `src/pokenav_match_call_data.c` | 66 | 41 | translated (25 kept in Latin: Emerald PokéNav contacts, replaced by the PokéGear in Heart & Soul) |
 | `src/pokenav_match_call_gfx.c` | 7 | 7 | translated |
 | `src/pokenav_match_call_list.c` | 1 | 1 | translated |
-| `src/pokenav_menu_handler_gfx.c` | 19 | 17 | translated (2 kept in Latin: Emerald PokéNav strings, replaced by the PokéGear in Heart & Soul) |
+| `src/pokenav_menu_handler_gfx.c` | 18 | 18 | translated |
 | `src/pokenav_ribbons_summary.c` | 1 | 1 | translated |
 | `src/region_map.c` | 119 | 119 | translated |
 | `src/roulette.c` | 12 | 12 | translated |
@@ -647,7 +647,7 @@ seen on screen: 525 | translated: 125
 | `src/sliding_puzzle.c` | 6 | 6 | translated |
 | `src/slot_machine.c` | 5 | 5 | translated |
 | `src/start_menu.c` | 3 | 0 | translated (3 kept in Latin: the debug entry and AM/PM (the clock is 24-hour)) |
-| `src/strings.c` | 1142 | 1116 | translated (26 kept in Latin: button names, abbreviations (BP), unit placeholders and Emerald-only names) |
+| `src/strings.c` | 1139 | 1117 | translated (22 kept in Latin: button names, abbreviations (BP), unit placeholders and Emerald-only names) |
 | `src/text_input_strings.c` | 23 | 2 | translated (21 kept in Latin: the Latin keyboard layouts, and the English rows of the Easy Chat keyboard, which the Hebrew build does not print) |
 | `src/trader.c` | 4 | 4 | translated |
 | `src/trainer_fan_club.c` | 2 | 2 | translated |

@@ -754,7 +754,13 @@ static void PutPokeblockListMenuString(u8 *dst, u16 pkblId)
 
     *(txtPtr++) = EXT_CTRL_CODE_BEGIN;
     *(txtPtr++) = EXT_CTRL_CODE_SKIP;
+#if TEXT_RTL
+    // The narrow font's level glyph is 4 px wider than the English one: start the level column 4 px
+    // earlier, so a three-digit level keeps English's 1 px margin once mirrored in the 112 px window.
+    *(txtPtr++) = CHAR_BLOCK_1 - 4;
+#else
     *(txtPtr++) = CHAR_BLOCK_1;
+#endif
 
     ConvertIntToDecimalStringN(gStringVar1, GetHighestPokeblocksFlavorLevel(pkblock), STR_CONV_MODE_LEFT_ALIGN, 3);
     StringExpandPlaceholders(txtPtr, sText_LvVar1);

@@ -16,9 +16,12 @@ Main list rows (src/battle_debug.c): 12 AI points, 13 AI info, 14 AI party.
   party   row 14, six hold effects per page: gAiPartyData->mons[side][0..5].heldEffect and
           count[side] = 6 for both sides; PutAiPartyText prints the first 7 bytes of each name with
           FONT_SMALL_NARROW in 41 px columns (opened once as is first: its first drawing is
-          garbled in both builds). Only the first page with six Pokemon in a battle draws its
-          text (both builds; the icons still come up on the later ones), so --party-pages K
-          draws only page K (effects 6K+1 .. 6K+6): one run per page shows each page's text.
+          garbled in both builds). --party-pages K,K draws only those pages (effects 6K+1 .. 6K+6).
+Each page is shot, and closed, only once the DMA3 queue has no pending copy (src/dma3_manager.c
+sDma3Requests): every string is printed at speed 0, which queues a copy of the whole window, and
+the queue moves at most 40 KiB a frame, so a six-Pokemon party page reaches the screen about 22
+frames after its task starts. Closed earlier, the page clears its tilemap under copies still
+queued, and the next page comes up blank.
 Struct offsets (tools/hebrew/emu/probe style probe, the Hebrew and English trees agree):
 AiLogicData holdEffects +0x10 (u8 each), mostSuitableMonId +0x378, shouldSwitch bits 0-3 of
 +0x3C5; AiPartyData mons +0 (AiPartyMon 0x1C bytes, heldEffect +4), count +0x150.
@@ -40,6 +43,8 @@ AI_HOLD = 0x10
 AI_SUITABLE = 0x378
 AI_FLAGS_SWITCH = 0x3C5
 PARTY_MON, PARTY_MON_HELD, PARTY_COUNT = 0x1C, 4, 0x150
+DMA_REQUEST, DMA_REQUEST_SIZE = 16, 8   # struct Dma3Request: src, dest, u16 size (0 = free), mode, value
+PAGE_FRAMES, SETTLE_FRAMES = 8, 240
 
 
 def hold_effects(src):
@@ -92,13 +97,30 @@ def main():
         if not e.wait_task("Task_DebugMenuProcessInput", 240):
             raise hns.HnsError("debug menu list did not come back")
 
+    dma = e.sym("sDma3Requests")
+    dma_len = e.elf.size("sDma3Requests")
+
+    def dma_pending():
+        raw = e.read(dma, dma_len)
+        return sum(1 for i in range(DMA_REQUEST_SIZE, dma_len, DMA_REQUEST) if raw[i] | raw[i + 1])
+
+    def settle(what):
+        waited = 0
+        while dma_pending():
+            if waited >= SETTLE_FRAMES:
+                raise hns.HnsError("%s: the DMA3 queue still holds copies after %d frames" % (what, waited))
+            e.frames(2)
+            waited += 2
+
     def view(task, shot, rows):
         press("A")
         if not e.wait_task(task, 240):
             raise hns.HnsError("%s did not start" % task)
-        e.frames(8)                     # the page is drawn a few frames after its task starts
+        e.frames(PAGE_FRAMES)           # the page queues its copies in the first frames of its task
+        settle(shot)
         e.snap(shot)
         shown[shot] = rows
+        settle(shot)
         press("B")
         menu()
 

@@ -33,6 +33,7 @@ import paths
 from drift import DROPPABLE_TOKENS, same_tokens  # the CI gate's token rule
 
 TREE = paths.TREE
+UPSTREAM = paths.UPSTREAM
 LIVE_LABELS = paths.LIVE_LABELS
 C_STRINGS = paths.C_STRINGS
 GLOSSARY = paths.GLOSSARY
@@ -205,18 +206,84 @@ FIELD_RE = re.compile(r'\.([A-Za-z0-9_]+)\s*=\s*$')
 VAR_RE = re.compile(r'(?:const\s+)?u8\s+([A-Za-z0-9_]+)\s*\[[^\]]*\]\s*=\s*$')
 
 
-def c_live_index():
+def c_live_index(rel):
+    """{c_key: live} for the C literals of REL that C_STRINGS records.
+
+    C_STRINGS records each literal by its line in the English tree (UPSTREAM), and lines differ in
+    this tree (Hebrew wraps differently, TEXT_RTL adds plural names). So each record is found in the
+    English file by line and text, and keyed by what the literal initialises there (c_key); the
+    tree's literals are looked up by the same key. Without the English file every literal of REL
+    counts as live."""
     try:
-        data = json.load(open(C_STRINGS))
+        lits = json.load(open(C_STRINGS)).get(rel)
     except Exception:
         return {}
-    idx = {}
-    for f, lits in data.items():
-        for l in lits:
-            # None means the inventory could not search for it (too short to be unique): live.
-            r, st = l.get('rom_release'), l.get('rom_std')
-            idx[(f, l['line'])] = not (r is False and st is False)
+    if not lits:
+        return {}
+    live = {}
+    for l in lits:
+        # None means the inventory could not search for it (too short to be unique): live.
+        r, st = l.get('rom_release'), l.get('rom_std')
+        live[(l['line'], l['text'])] = not (r is False and st is False)
+    text = None
+    if UPSTREAM:
+        try:
+            text = open(os.path.join(UPSTREAM, rel), encoding='utf-8').read()
+        except OSError:
+            pass
+    if text is None:
+        print('units: %s is not in the English tree %s; every literal of it counts as live'
+              % (rel, UPSTREAM or '(none: HNS_UPSTREAM is unset and ../pokehns-en is missing)'), file=sys.stderr)
+        return {}
+    idx, seen = {}, {}
+    rtl = rtl_only_lines(text)
+    for m, line_no, joined, desig, field, var in c_literals(text):
+        key = c_key(m, desig, field, var, seen, line_no in rtl)
+        if (line_no, joined) in live:
+            idx[key] = live[(line_no, joined)]
     return idx
+
+
+def c_key(m, desig, field, var, seen, rtl_only=False):
+    """A C literal's key that does not depend on its line: the variable it initialises, or else the
+    designator and field, and its macro, plus n, its place among the file's literals with the same.
+    SEEN counts the keys of the literals before it; call this for every literal of c_literals, in
+    order. A variable's name places it, so its key leaves out the designator, which c_literals takes
+    from up to 4000 characters back and which can then differ between the trees. RTL_ONLY marks a
+    literal of a branch only a TEXT_RTL build compiles (rtl_only_lines): the English file has no
+    such literal, so it gets a key of its own and does not move the place of the literals after it."""
+    base = (None if var else desig, field, var, m.group(1)) + (('rtl',) if rtl_only else ())
+    n = seen.get(base, 0)
+    seen[base] = n + 1
+    return base + (n,)
+
+
+PP_RE = re.compile(r'^[ \t]*#[ \t]*(if|ifdef|ifndef|elif|else|endif)\b(.*)$')
+
+
+def rtl_only_lines(text):
+    """The line numbers (1-based) inside a branch that only a TEXT_RTL build compiles: the first
+    branch of `#if TEXT_RTL` (or `#if TEXT_RTL && ...`) and the later branches of `#if !TEXT_RTL`."""
+    out, stack = set(), []         # per open #if: [kind, branch]; kind 'rtl', 'not_rtl' or None
+    for i, line in enumerate(text.split('\n'), 1):
+        m = PP_RE.match(line)
+        if m:
+            d, cond = m.group(1), m.group(2).strip()
+            if d in ('if', 'ifdef', 'ifndef'):
+                kind = None
+                if d == 'if' and re.match(r'TEXT_RTL\b(?!\s*==\s*0)', cond):
+                    kind = 'rtl'
+                elif d == 'if' and re.match(r'!\s*TEXT_RTL\b', cond):
+                    kind = 'not_rtl'
+                stack.append([kind, 0])
+            elif d in ('elif', 'else') and stack:
+                stack[-1][1] += 1
+            elif d == 'endif' and stack:
+                stack.pop()
+            continue
+        if any((k == 'rtl' and b == 0) or (k == 'not_rtl' and b > 0) for k, b in stack):
+            out.add(i)
+    return out
 
 
 def c_literals(text):
@@ -236,15 +303,18 @@ def c_literals(text):
 
 def extract_c(path, rel, all_labels):
     text = open(path, encoding='utf-8').read()
-    live_idx = c_live_index()
+    live_idx = c_live_index(rel)
     units = []
     n = 0
+    seen = {}
+    rtl = rtl_only_lines(text)
     for m, line_no, joined, desig, field, var in c_literals(text):
         idx = n
         n += 1
+        ckey = c_key(m, desig, field, var, seen, line_no in rtl)
         if not re.search(r'[A-Za-z\u05d0-\u05ea]', TOKEN_RE.sub('', joined)):
             continue
-        is_live = live_idx.get((rel, line_no), True)
+        is_live = live_idx.get(ckey, True)
         if not is_live and not all_labels:
             continue
         key = var or ('%s.%s' % (desig, field) if desig and field else (desig or field or '?'))

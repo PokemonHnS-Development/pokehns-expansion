@@ -1,16 +1,18 @@
 # The condition graph of the Pokeblock feeding screen (src/use_pokeblock.c; the panel's tiles are
 # graphics/pokeblock/use_screen/graph.png, the same panel as graphics/pokenav/condition/graph.png): the five
 # condition labels around the pentagon outline. Party slot 0 becomes a level-50 ADAMANT Bronzong with every
-# condition 0. The case holds a block of 255 in every flavour and a flavourless one (pokeblocks: color,
-# spicy, dry, sweet, bitter, sour, feel). The feeding screen is shot with the conditions at 0, the first
-# block is fed (each condition rises to 255, MAX_CONDITION, src/use_pokeblock.c:1013-1026), and the
-# feeding screen is shot again with the graph filled to the outline; B then leaves it. The case list
-# (pbg_list) shows the first block at level 255, the highest flavour of this fixture.
+# condition 0. The case holds a block of 255 in every flavour, a flavourless one, an INDIGO block of 99
+# bitter (the widest name) and a RED block of 7 spicy (pokeblocks: color, spicy, dry, sweet, bitter, sour,
+# feel). The feeding screen is shot with the conditions at 0, the first block is fed (each condition rises
+# to 255, MAX_CONDITION, src/use_pokeblock.c:1013-1026), and the feeding screen is shot again with the
+# graph filled to the outline; B then leaves it. The case list (pbg_list) shows the levels 255, 0, 99 and
+# 7 (a level is the block's highest flavour, GetHighestPokeblocksFlavorLevel in src/pokeblock.c): three,
+# one, two and one digits beside the names.
 # Save: ladder6_postgame.sav (HNS_SAVES). Run with scripts/r16_contests/con16.py tour (pokeblocks).
 start saves/ladder6_postgame.sav
 include ../../scripts/continue.txt
 ev createmon 0, 0, SPECIES_BRONZONG, 50, nature=NATURE_ADAMANT; additem ITEM_POKEBLOCK_CASE, 1; end
-pokeblocks 14:255,255,255,255,255,1 5:0,0,0,0,0,1
+pokeblocks 14:255,255,255,255,255,1 5:0,0,0,0,0,1 7:0,0,0,99,0,1 1:7,0,0,0,0,1
 startmenu BAG
 waitcb2x CB2_BagMenuRun 600
 waittaskx Task_BagMenu_HandleInput 600
