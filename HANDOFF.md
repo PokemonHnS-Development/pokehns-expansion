@@ -187,7 +187,7 @@ Reference machine: Apple Silicon, macOS.
 | libpng, pkg-config | Homebrew libpng 1.6.58 | `brew install libpng pkg-config`; Linux: `libpng-dev` |
 | GNU make | macOS ships 3.81 | 3.81 builds fine but has no `-O` (section 6.1) |
 | git | any | the build refuses to run without git history (section 6.1) |
-| Python 3 | 3.9 or newer: the 137 tool tests pass on 3.9.6, 3.11.9 and 3.14.7, and all 242 scripts under `tools/hebrew` compile with every warning turned into an error on 3.9.6 and 3.14.7 (CI: Ubuntu 26.04's python3) | standard library only, except the picture tools |
+| Python 3 | 3.9 or newer: the 143 tool tests pass on 3.9.6 and 3.11.9 (the 137 of round 19 also on 3.14.7), and all 242 scripts under `tools/hebrew` compile with every warning turned into an error on 3.9.6, 3.11.9 and 3.14.7 (CI: Ubuntu 26.04's python3) | standard library only, except the picture tools |
 | Pillow | 12.2.0 | `python3 -m pip install Pillow`. Needed by `fontcells.py`, `tools/hebrew/graphics/`, the font previews and the review-sheet scripts; the harness writes PNGs itself |
 | numpy | any recent | only `tools/hebrew/inventory/` |
 | cmake | 4.4.3 | only for building mGBA for the harness |
@@ -804,7 +804,7 @@ Apply a decision in this order:
 | whole tree | `audit.py --baseline ../pokehns-en` | WIDTH, LINES, BUFFER, BYTES, TERMINATOR, CHARSET | 28 s |
 | glossary | `namecheck.py --all --warnings` | byte limits, final letters, duplicates; warnings for FireRed differences, transliteration slips, two-way names | instant |
 | generated data | `gen_dex_alpha.py`, `gen_ec_order.py`, `gen_ec_letters.py`, `flag_gates.py`, each `--check` | a stale A–Z order, Easy Chat list or live-label list | instant |
-| tool tests | `python3 -m unittest discover -s tools/hebrew/tests` | the tools themselves (137 tests) | 10 s |
+| tool tests | `python3 -m unittest discover -s tools/hebrew/tests` | the tools themselves (143 tests) | 10 s |
 | game logic | `make check BUILD=hns` + `check_tests.py` | a test that passes upstream but fails in Hebrew | about 4 min at `-j12` in the release worktree (rc5, rc20: `make_check.log` created to last written; 15 hydra runners), 13 to 20 min in CI |
 | screens | `hns.py tour` (71 tours) | crashes, timeouts, wrong typed bytes; screenshots for review | about 3 min |
 | glyphs outside windows | `hns.py tour --clip`, `sweep.py` on the clip ROM | every glyph drawn outside its window | about 2.5 min: 6,611 labels in 150 s on rc21's clip ROM (191 s with a cold cache) |
@@ -823,8 +823,12 @@ Two rules from the original brief:
 
 CI creates the two worktrees from `origin/he/renderer` and `origin/master` (`hebrew.yml:43-48`).
 Locally, the tag `Release-v2.0.6` (fetched in section 2.3) stands in for CI's `origin/master`. The
-expected output below is a local run on `he/main` `c1cfd8a30b` (2026-11-10), with
-`../pokehns-heb-engine` at `he/renderer` `8cfd524776`.
+expected output below is a local run on `he/wip-r21` `34fee0e811` (2026-11-10), with
+`../pokehns-heb-engine` at `he/renderer` `67df13ff43`, on a built tree. There drift prints
+`708 files, 1 FAIL`: the FAIL is `src/pokeblock.c`, the engine commit `cd5fb48abe` that is not on
+`he/renderer` yet. Against `67df13ff43` plus that commit the file is `ok` with no warning
+(`drift.py --en <that tree> src/pokeblock.c`: `drift: 1 file, 0 FAIL, 0 with warnings only`), so
+once it is picked the run prints the line below. The other steps printed exactly what is shown.
 
 ```bash
 set -o pipefail
@@ -835,7 +839,7 @@ git diff --name-only Release-v2.0.6...HEAD -- data src | grep -E '\.(inc|s|c|h|p
 python3 tools/hebrew/audit.py --baseline ../pokehns-en --report build/hebrew/audit.txt
 #    == translated strings: 0 errors, 54 warnings, 88 suppressed by baseline ../pokehns-en
 #    == English (untranslated) strings, baseline only: 448 errors, 0 warnings   <- informational
-#    line 1 of the report: audit ...: 41539 strings (25592 translated)
+#    line 1 of the report: audit ...: 39059 strings (24836 translated)   (the same as CI)
 # 3. glossary (hebrew.yml:59-60)
 python3 tools/hebrew/namecheck.py --all --warnings
 #    rows 7093, still empty 0, problems 0
@@ -847,7 +851,7 @@ python3 tools/hebrew/gen_ec_letters.py --check    # gen_ec_letters: 23 lists, th
 python3 tools/hebrew/flag_gates.py --check        # total: live 6585, flag_off 451, not_built 147 / no change
 # 5. tool tests (hebrew.yml:73-74)
 python3 -m unittest discover -s tools/hebrew/tests
-#    Ran 137 tests ... OK   (no skip with tools/preproc built and ../pokehns-en/pokehns.gba present)
+#    Ran 143 tests ... OK   (no skip with tools/preproc built and ../pokehns-en/pokehns.gba present)
 # not in CI: item plurals
 python3 tools/hebrew/plurals.py                   # items 902, stackable 693, problems 0
 ```
@@ -865,20 +869,22 @@ python3 tools/hebrew/plurals.py                   # items 902, stackable 693, pr
   - A finding reads `w item_name FIT 80 > 72 p1 r1 [summary held item FONT_NORMAL] (...)
     src/data/items.h:3402`: kind, check, measured > budget, page and row, where it is drawn, and
     the source line.
-  - CI counts fewer strings. At `fe509e0043` (run 41933578987) it printed `39059 strings (24836
-    translated)` with the same findings as the local run of that commit (0 errors, 48 warnings,
-    85 suppressed, before round 20). The difference is the build. `walk_tree`
-    (`audit.py:448-464`) reads every `.c` and `.h` under `src/`, and a built tree has six
-    git-ignored headers that `make` generates:
+  - A built tree and CI's clean checkout give the same report. `walk_tree` (`audit.py:461-481`)
+    reads every `.c` and `.h` under `src/` but leaves out the six git-ignored headers that `make`
+    generates (`is_generated_header`, `audit.py:451-458`), because the audit already reads their
+    sources:
     - `src/data/trainers.h`, `trainers_hns.h`, `trainers_frlg.h`, `battle_partners.h` and
       `debug_trainers.h`, made from the `.party` files (`trainer_rules.mk:3-12`);
     - `src/data/region_map/region_map_entries.h`, made from the JSON (`json_data_rules.mk:4-6`).
 
-    They add 2,480 strings (756 translated), all repeats of the `.party` and JSON names, and no
-    finding. A clean `git archive` of the commit gives CI's count exactly, with the same findings
-    (round 19). Section 8.1 has the fix.
-- **tool tests in CI:** `Ran 132 tests ... OK (skipped=2)` at `fe509e0043` (no built
-  `tools/preproc`, no English ROM); round 19 added 5, so `he/main` has 137.
+    A header without its `.party` or JSON source is still read. Before `34fee0e811` a built tree
+    counted their 2,480 strings (756 translated) twice and printed `41539 strings (25592
+    translated)`, with the same findings. Now the built tree's report equals a clean `git archive`
+    copy's apart from line 1 (the tree path), and the clean copy prints what CI prints
+    (`<private>/scratch/screens/r21/fixes/t4/audit_clean.txt`, `audit_final.txt`).
+- **tool tests in CI:** run 42725640966 at `0514c9b57b` printed `Ran 137 tests ... OK (skipped=2)`
+  (no built `tools/preproc`, no English ROM). Round 21 adds 6 (4 in `test_units.py`, 2 in
+  `test_audit.py`), so `he/wip-r21` has 143; CI has not run them yet.
 
 ### 4.3 The test suite
 
@@ -1056,10 +1062,17 @@ python3 <repo>/tools/hebrew/emu/sweep.py selftest CLIP.gba st   # proves the det
 
 ```bash
 python3 tools/hebrew/status_report.py --sweep RC/tests/sweep/sweep.json
-# 650 files -> ...: {'seen on screen': 525, 'translated': 125}   (rc21's sweep, on c1cfd8a30b)
+# 650 files -> ...: {'seen on screen': 525, 'translated': 125}   (rc22's sweep, on he/wip-r21 d886483f5c)
 ```
 
 - Without `--sweep`, every "seen on screen" row falls back to "translated".
+- A C literal takes its liveness from `tools/hebrew/data/c_strings.json`, which records it by its
+  line in the English tree. `units.py` finds each record in `../pokehns-en` by line and text and
+  matches the tree's literals by what they initialise: designator, field or variable, macro, and
+  place among the file's literals with those four (`c_live_index`, `units.py:209-239`; `c_key`,
+  `:242-249`). So Hebrew lines that moved no longer take another literal's verdict, and a literal
+  the English file lacks (a `TEXT_RTL` plural name) counts as live. `src/data/items.h` counts
+  2,218 live strings, all Hebrew; the build compiles 2,204 of them (section 8.1).
 - "Seen on screen" means **the harness rendered the label**, not that a person read it.
 - STATUS counts a string as Hebrew if it holds any Hebrew letter (`status_report.py:82`), so mixed
   Latin-and-Hebrew lines pass (section 8.2).
@@ -1497,12 +1510,14 @@ Ask the owner before you:
 
 ### 8.1 Open defects in the repository
 
+The four rows of round 20 (the Pokéblock case list's three-digit level, `dbgmenu.py`'s early
+shots, the C-literal liveness by line, and the audit's count on a built tree) are fixed on
+`he/wip-r21` (section 8.5, round 21). These are open:
+
 | Item | Evidence | What to do |
 | --- | --- | --- |
-| **The Pokéblock case list would cut the first digit of a three-digit level.** English shows `Lv255` in full; play most likely never makes such a level | `PutPokeblockListMenuString` (`src/pokeblock.c:750-761`) skips to x 87 and prints `Lv` and the level in the 112 px list window (`WIN_LIST`, 14 tiles, `:322-330`), in the narrow font. Mirrored, the first digit of a three-digit level starts 3 px past the left edge: the clip ROM logs the `2` of a level-255 test block cut on the case list of `tours/r19_fix/pb_feed_graph.txt` (window 1, 112 px, font 7). By code reading, play needs a top speed of about 230 RPM to get there. Only the Berry Blender makes Pokéblocks (`AddPokeblock`, `src/berry_blender.c:3586`), and every H&S blend is with NPCs: the link blender runs only from Emerald's `LilycoveCity_ContestLobby` (`data/maps/LilycoveCity_ContestLobby/map.json:391`, `game_version` emerald), which this build leaves out. The level is the highest flavour (`src/pokeblock.c:1335-1348`), and a repeated berry gives a black block (`src/berry_blender.c:2274-2282`). With the NPCs' berries (`SetOpponentsBerryData`, `:1531-1569`; the Blend Master's for one opponent, since his hide flag is 0, `include/constants/flags_hns.h:1927`) the best blend is an Enigma Berry against the Blend Master: 59 before the speed factor of (max RPM / 333 + 100) % (`:2428`), so level 100 needs 229.77 RPM. A frame model of a perfect two-player blend (a BEST hit at every chance; `:1983-1997`, `:2028-2055`, `:2096-2115`, `:3287-3295`) peaks at 197.64 RPM, level 94 (`<private>/scratch/screens/r19/review/pbspeed.py`, `pbbound.py`). A real blend was not measured (**unverified**) | measure a perfect blend against the Blend Master with an Enigma Berry (`sBerryBlender->maxRPM`). If it can pass 229.77 RPM, place the level so `Lv` and three digits fit inside the window, check it with the tour's level-255 block, and cherry-pick the fix onto `he/renderer` if it is engine code |
-| The harness shoots the battle debug menu's AI party page before its tilemap reaches the screen, so later six-Pokémon pages look blank (section 8.5) | `scripts/r16_debug_menu/dbgmenu.py` `view()` (`:95-103`) shoots 8 frames after the page's task starts and closes it at once; the page's tilemap copy lands about 22 frames late | wait until `sDma3Requests` has no pending entry, or at least 30 frames, before the shot and before B; then drop the one-page-per-run note in its docstring (`:18-21`) |
-| `status_report.py` marks C literals live by line number, from the English source's lines | `units.py` `c_live_index` (`:208-219`) keys `tools/hebrew/data/c_strings.json` by line, and those lines are `../pokehns-en`'s (`src/data/items.h:11160` there is an English description, `c_strings.json` marks it dead). In the Hebrew tree the lines differ (339 items have a plural name under `#if TEXT_RTL`), so a C file's live count in `STATUS.md` is approximate: round 20 added one line to `items.h` (MEWNIUM Z's description), and STICKY BARB's plural name, now on line 11160, stopped counting (2,224 to 2,223 units) | match the tree's literals to `c_strings.json` by designator and field, not by line, then regenerate `STATUS.md` |
-| `audit.py` on a built tree counts 2,480 more strings than CI (section 4.2) | `walk_tree` (`audit.py:448-464`) also reads the six generated headers | skip `src/data/trainers*.h`, `battle_partners.h`, `debug_trainers.h` and `region_map/region_map_entries.h` in `walk_tree`; the local count should then equal CI's (39,059 at `fe509e0043`) |
+| `tools/hebrew/data/c_strings.json` marks 14 English literals of `src/data/items.h` live that the build does not compile, so `STATUS.md` counts 2,218 live strings in `items.h` where the build has 2,204 | `arm-none-eabi-gcc -E` of `src/item.c` keeps 2,204 literals of `items.h`, all Hebrew. The 14 are in `#if` branches the build leaves out: the GROWTH, DAMP, STABLE, SURPRISE and BOOST MULCH descriptions, the two ICY ROCK descriptions, EXP. SHARE's and TM HAIL's descriptions, TM70's and HM DIVE's names and descriptions, and METEORITE's description. The inventory searches the ROM for each literal's longest plain run (`inventory/README.md`, "C literals"): 11 of these runs are found in the ROM, and the other 3 texts are compiled from another line. `units.py` takes the verdicts as recorded (`<private>/scratch/screens/r21/fixes/t3/why14.py`) | decide C liveness by what the preprocessor keeps, in `tools/hebrew/inventory/extract.py`, then rebuild `c_strings.json` and regenerate `STATUS.md`. Text only; nothing in the ROM changes |
+| Two small leftovers of round 21's tool fixes | `status_report.py` `KEPT_LATIN` (`:22-48`) still lists `src/data/items.h` and `src/pokenav_menu_handler_gfx.c`, which no longer keep any Latin string (`STATUS.md`: 2218/2218 and 18/18). `strcov.py:222-241` has its own copy of the generated-header rule that `audit.py:451-458` now uses | drop the two entries; let `strcov.py` import `audit.is_generated_header`. Harmless as they are |
 
 ### 8.2 Content gaps and decisions
 
@@ -1636,9 +1651,9 @@ None known after the documentation pass of round 20, which corrected the audit's
 finding (section 4.2: `src/data/items.h:3402`, where it had a line no finding names) and the
 commit and merge counts of section 7. Round 19 corrected six line references: `RELEASE ?= 0` is at
 `Makefile:69`, `KEPT_LATIN` at `status_report.py:22-48`, the Hebrew count at
-`status_report.py:82`, the sweep's path guard at `sweep.py:391-396`, `walk_tree` at
-`audit.py:448-464` and `LoadSaveblockObjEventScripts` at `src/overworld.c:592-600`. Every text
-tool has tests: 137 tests in 21 files under `tools/hebrew/tests`, with small committed fixtures
+`status_report.py:82`, the sweep's path guard at `sweep.py:391-396`, `walk_tree` (now at
+`audit.py:461-481`) and `LoadSaveblockObjEventScripts` at `src/overworld.c:592-600`. Every text
+tool has tests: 143 tests in 21 files under `tools/hebrew/tests`, with small committed fixtures
 in `tools/hebrew/tests/data/`. Add a row here when a document and the tree disagree, and fix it
 in a docs-only commit.
 
@@ -1711,7 +1726,7 @@ and screenshots that are not in the fork are under `<private>/scratch/screens/r1
   (`tours/r19_fix/pb_feed_graph.txt`, run on rc21, on a build with the new art and on English).
   The art is in `he/main` since `b32c6f117c` and on `he/renderer` as `2f46bee8be`.
 - **Why the local audit counts more strings than CI:** six generated headers in a built tree; the
-  findings are the same (section 4.2).
+  findings are the same. Round 21 made the audit leave them out (below).
 - **The official English binary:** no build type made with devkitARM r68 matches it (section 2.5),
   and a `RELEASE=1` build hides the assert screens but keeps the debug menus (section 8.2).
 - **The battle debug menu's AI party page** draws its text about 22 frames after it opens. This
@@ -1724,8 +1739,8 @@ and screenshots that are not in the fork are under `<private>/scratch/screens/r1
   - The harness shoots the page about 14 frames after it opens and closes it at once.
     `ClearWindowTilemap` (`src/battle_debug.c:1159`) then runs while the copies are still
     queued, and the queued tilemap copy writes a blank map for the next page.
-  - A page held 30 frames shows its full text, and pages held 60 frames each all draw. The
-    harness fix is in section 8.1. A one-line ROM change (`TEXT_SKIP_DRAW` in those prints)
+  - A page held 30 frames shows its full text, and pages held 60 frames each all draw. Round 21
+    fixed the harness (below). A one-line ROM change (`TEXT_SKIP_DRAW` in those prints)
     would make one copy, but the menu is debug-only and upstream, so it stays.
 - **The branches whose commits `git cherry` does not find are contained in `he/main`** (section
   1.2).
@@ -1782,6 +1797,59 @@ release tours and sweep cover the screens the release tests reach. The round's t
   change the English ROM.
 - The 137 tool tests pass at `c1cfd8a30b` on Python 3.9.6 and 3.11.9.
 
+**Verified in round 21** (on `he/wip-r21`; scripts, logs and screenshots that are not in the fork are
+under `<private>/scratch/screens/r21/`, in `fixes/` for the fixes):
+
+- **The Pokéblock case list shows a three-digit level whole** (`cd5fb48abe`). The narrow font's
+  level glyph is 12 px wide against English's 8 (`textwidth.py --font FONT_NARROW "{LV}255"`:
+  27 px in the tree, 23 px in `../pokehns-en`), so `Lv` and three digits ended at x 115 of the
+  112 px window and, mirrored, the first digit started at x -3. Under `TEXT_RTL` the level column
+  now starts at x 83, not 87 (`src/pokeblock.c:757-763`; the English `#else` is unchanged).
+  - `tours/r19_fix/pb_feed_graph.txt` now holds a level-99 INDIGO block (the widest name) and a
+    level-7 RED block as well (`a931270aa5`). On rc22's clip ROM it logs one clip (the `2` of
+    level 255, window 1, font 7, x -3); on the clip ROM of `34fee0e811` it logs
+    `clip total 0 lost 0` (`fixes/t1/final_clip/pb_feed_graph/clip.json`).
+  - Level 255 starts at x 1 of the window, English's 1 px margin; INDIGO's name keeps 11 px
+    before the level glyph (15 px before); the one- and two-digit levels move 4 px with it
+    (`fixes/t1/pbg_list_en_before_after.png`, `pbg_list_crop_en_before_after.png`).
+  - Only the tour's `pbg_list` and `pbg_back` shots change (`tourdiff`: 16 identical, 2 differ).
+  - So whether play can make such a level (a frame model of a perfect blend against the Blend
+    Master peaks at level 94; a real blend was not measured) no longer matters.
+- **The ROM of `34fee0e811` differs from rc22 in 3 bytes:** `0x81A9EB6` in `UpdatePokeblockList`
+  (`adds r3,#0x45` to `#0x41`, the skip 87 to 83) and two digits of an assert's file:line string
+  (`src/pokeblock.c:858` to `:864`). No other code or data changes, so gameplay is unchanged. A
+  clean build: `pokehns.gba` 33554432 bytes, SHA-1 `383e16ba227ae4c62ae1c1ff01bfaa0c0793eedf`,
+  CRC32 `A6214055`; clip build SHA-1 `66be59802683abf1b1d69be586e38d04dc03c4bb`, CRC32 `08A267D5`
+  (`fixes/rom/build_info.json`). It is not a release: 1.0 is still rc22.
+- **`dbgmenu.py` shoots each debug page once its copies are in VRAM** (`9df09379ab`). `view()`
+  waits 8 frames, then until `sDma3Requests` has no entry with a size, before the shot and again
+  before B, and fails after 240 frames (`dbgmenu.py:47`, `:100-125`). One `--only party` run now
+  shows text on all 22 party pages, on rc22 and on the ROM of `34fee0e811`, and the 23 shots are
+  identical between the two (`fixes/t2/after_sheet.png`, `final_sheet.png`); before, only the
+  first page and the three-Pokémon page had text (`fixes/t2/before_sheet.png`). A probe saw the
+  queue drain 8 to 10 frames after the old shot point on every six-Pokémon page. The full run
+  (switch, info and party) gives 154 shots.
+- **C literals keep their own liveness in `STATUS.md`** (`9519215de4`, `d886483f5c`; section 4.5).
+  On the English tree the new key gives every record of `c_strings.json` its own verdict: 0
+  mismatches in 156 files. Regenerated from rc22's sweep, `STATUS.md` changes in 15 C rows and
+  keeps its totals (650 files, 525 seen on screen, 125 translated): `items.h` is 2218/2218 (STICKY
+  BARB's plural and SKULL FOSSIL's description now count, 7 English descriptions of uncompiled
+  branches no longer do), the species files lose the Mega and Gigantamax descriptions
+  (`P_MEGA_EVOLUTIONS` and `P_GIGANTAMAX_FORMS` are FALSE, `include/config/species_enabled.h:23`,
+  `:26`), `strings.c` is 1139/1117 and `pokenav_menu_handler_gfx.c` 18/18.
+- **The audit counts what CI counts** (`34fee0e811`; section 4.2). The six skipped headers are
+  git-ignored, untracked, and byte for byte what trainerproc and jsonproc make from the tracked
+  `.party` and JSON files; no tracked file is skipped. A clean `git archive` copy of `34fee0e811`
+  gives `39059 strings (24836 translated)`, 0 errors, 54 warnings, 88 suppressed, and the built
+  tree now gives the same report (`fixes/t4/audit_clean.txt`, `fixes/audit_final.txt`).
+- **The static checks at `34fee0e811`** (section 4.2): audit as above, the 54 warnings the same
+  `FIT` list as before (16 item, 33 move, 5 species names); namecheck `rows 7093`, 0 problems,
+  0 warnings, 34 allowlisted; plurals 0 problems (items 902, stackable 693); the three generators
+  and `flag_gates.py` (`live 6585, flag_off 451, not_built 147`) up to date; drift 708 files with
+  one FAIL, `src/pokeblock.c`, which passes against `he/renderer` plus `cd5fb48abe`.
+- The 143 tool tests pass on Python 3.9.6 and 3.11.9 with no skip, and all 242 scripts under
+  `tools/hebrew` compile with every warning turned into an error on 3.9.6, 3.11.9 and 3.14.7.
+
 **Not verified:**
 
 - A Linux build with devkitPro pacman; another machine with devkitARM r68 reproducing the 0.2
@@ -1796,9 +1864,6 @@ release tours and sweep cover the screens the release tests reach. The round's t
 - A Hebrew-written save made outside a Pokémon Center, for example on a Battle Pyramid or Trainer
   Hill floor, loaded in the English ROM (section 4.6).
 - Pre-2.0 (1.2.1) saves: they do not load, by a code trace only (section 6.6).
-- Whether a real blend can make a Pokéblock of level 100 or more. It needs about 230 RPM against
-  the Blend Master with an Enigma Berry; a frame model of a perfect blend peaks at 198 RPM, level
-  94 (section 8.1).
 - The out-of-bounds read behind Scott's shields could write through a stray pointer after a link
   Dodrio Berry Picking game (needs a link).
 - Round 20's names in the places no test reached: the generic phrase מהלך על-חושי (printed only
