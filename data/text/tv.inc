@@ -1217,15 +1217,15 @@ gTVTodaysRivalTrainerText06::
 	.string "ולעקוף את היריבים שלנו!$"
 
 TrendWatcher_Text_Intro::
-	.string "רשת צופי הטרנדים של DEWFORD!\p"
+	.string "רשת צופי הטרנדים של דיופורד!\p"
 	.string "מנחה: מה קורה? אנחנו פה עם כל מה\n"
-	.string "שחם ומתרחש עכשיו ב-DEWFORD.\p"
+	.string "שחם ומתרחש עכשיו בדיופורד.\p"
 	.string "האורח שלנו היום הוא זקן מגניב, שידוע\n"
-	.string "כסמכות בכל מה שקשור ל-DEWFORD.\p"
+	.string "כסמכות בכל מה שקשור לדיופורד.\p"
 	.string "זקן: שמח להיות כאן.\p"
 	.string "מנחה: בוא נדבר תכל'ס, אחי.\p"
 	.string "מה הדבר שמזיז עכשיו את\n"
-	.string "האנשים הטובים של DEWFORD?\p"
+	.string "האנשים הטובים של דיופורד?\p"
 	.string "זקן: {STR_VAR_1} {STR_VAR_2}.\p"
 	.string "מנחה: {STR_VAR_1} {STR_VAR_2},\n"
 	.string "אתה אומר?\p"
@@ -1239,12 +1239,12 @@ TrendWatcher_Text_Intro::
 @ Identical to below, may have been different in other languages
 TrendWatcher_Text_MaleTaughtMePhrase::
 	.string "זקן: {STR_VAR_1} {STR_VAR_2}…\n"
-	.string "זה מה ש{STR_VAR_3} מ-LITTLEROOT\p"
+	.string "זה מה ש{STR_VAR_3} מליטלרוט\p"
 	.string "לימד אותי שזה טרנדי…$"
 
 TrendWatcher_Text_FemaleTaughtMePhrase::
 	.string "זקן: {STR_VAR_1} {STR_VAR_2}…\n"
-	.string "זה מה ש{STR_VAR_3} מ-LITTLEROOT\p"
+	.string "זה מה ש{STR_VAR_3} מליטלרוט\p"
 	.string "לימדה אותי שזה טרנדי…$"
 
 TrendWatcher_Text_PhraseWasHopeless::
@@ -1275,7 +1275,7 @@ TrendWatcher_Text_Outro::
 	.string "מנחה: …אה… אז הנה לכם,\n"
 	.string "כל החבר'ה הטרנדיים שם בחוץ!\p"
 	.string "{STR_VAR_1} {STR_VAR_2}…אה…\n"
-	.string "לא הפך ללהיט ב-DEWFORD!\p"
+	.string "לא הפך ללהיט בדיופורד!\p"
 	.string "נגמר לי הזמן. נתראה בסיבוב הבא!\p"
 	.string "זקן: {STR_VAR_1} {STR_VAR_2}!$"
 
@@ -2718,7 +2718,7 @@ GabbyAndTy_Text_TyDefeat:
 
 gTVInSearchOfTrainersText00::
 	.string "בחיפוש אחר מאמנים…\p"
-	.string "GABBY: שלום! היום אני מבקרת\n"
+	.string "גאבי: שלום! היום אני מבקרת\n"
 	.string "באזור שליד {STR_VAR_1}.\p"
 	.string "אנחנו מנסים לאתר כישרונות\n"
 	.string "חדשים ומבטיחים בשטח.\p"

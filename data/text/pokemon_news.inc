@@ -2,7 +2,7 @@
 gPokeNewsTextSlateport_Upcoming::
 	.string "שלום לכולם!\n"
 	.string "הגיע הזמן לחדשות פוקימון.\p"
-	.string "הבחור הכי אהוד בעיר SLATEPORT,\n"
+	.string "הבחור הכי אהוד בעיר סלייטפורט,\n"
 	.string "גורו האנרגיה, שוב בחדשות!\p"
 	.string "הוא מבטיח: ”אני הולך על זה בענק\n"
 	.string "בעוד מספר ימים: {STR_VAR_1}!”\p"
@@ -10,7 +10,7 @@ gPokeNewsTextSlateport_Upcoming::
 	.string "על מה בדיוק הוא ילך בענק,\p"
 	.string "אבל המליץ: ”תחסכו את הכסף שלכם.\n"
 	.string "זה יהיה טוב…”\p"
-	.string "נשמע שביקור בעיר SLATEPORT\n"
+	.string "נשמע שביקור בעיר סלייטפורט\n"
 	.string "באותו יום בהחלט ישתלם!\p"
 	.string "ואלה היו חדשות פוקימון.$"
 
@@ -19,11 +19,11 @@ gPokeNewsTextSlateport_Ongoing::
 	.string "הגיע הזמן לחדשות פוקימון.\p"
 	.string "אלה החדשות שכולכם\n"
 	.string "חיכיתם להן!\p"
-	.string "גורו האנרגיה של SLATEPORT\n"
+	.string "גורו האנרגיה של סלייטפורט\n"
 	.string "הולך על זה בענק בשוק!\p"
 	.string "הוא מבטיח מחירי מציאה\n"
 	.string "שאין להם מתחרים על סידן וחלבון!\p"
-	.string "ביקור בעיר SLATEPORT נשמע משתלם.\n"
+	.string "ביקור בעיר סלייטפורט נשמע משתלם.\n"
 	.string "למה שלא תקפצו לקנות כאוות נפשכם?\p"
 	.string "ואלה היו חדשות פוקימון.$"
 
@@ -32,13 +32,13 @@ gPokeNewsTextSlateport_Ending::
 	.string "הגיע הזמן לחדשות פוקימון.\p"
 	.string "אלה החדשות שכולכם\n"
 	.string "חיכיתם להן!\p"
-	.string "גורו האנרגיה של SLATEPORT\n"
+	.string "גורו האנרגיה של סלייטפורט\n"
 	.string "הולך על זה בענק בשוק!\p"
 	.string "הוא מבטיח מחירי מציאה\n"
 	.string "שאין להם מתחרים על סידן וחלבון!\p"
 	.string "לדברי גורו האנרגיה, עדיין\n"
 	.string "נשארה לו סחורה בשפע.\p"
-	.string "למה שלא תקפצו לעיר SLATEPORT\n"
+	.string "למה שלא תקפצו לעיר סלייטפורט\n"
 	.string "למסע קניות מהנה במיוחד?\p"
 	.string "ואלה היו חדשות פוקימון.$"
 
@@ -62,7 +62,7 @@ gPokeNewsTextGameCorner_Ongoing::
 	.string "הגיע סוף סוף!\p"
 	.string "האם תזכו במכונות המזל\n"
 	.string "וברולטה?\p"
-	.string "המיקום: העיר MAUVILLE.\n"
+	.string "המיקום: העיר מוביל.\n"
 	.string "לשם צריך להגיע!\p"
 	.string "ואלה היו חדשות פוקימון.$"
 
@@ -76,7 +76,7 @@ gPokeNewsTextGameCorner_Ending::
 	.string "האם תזכו במכונות המזל\n"
 	.string "וברולטה?\p"
 	.string "הזמן מוגבל וכמעט אזל.\n"
-	.string "המיקום: העיר MAUVILLE.\p"
+	.string "המיקום: העיר מוביל.\p"
 	.string "ואלה היו חדשות פוקימון.$"
 
 gPokeNewsTextLilycove_Upcoming::
