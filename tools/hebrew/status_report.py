@@ -34,7 +34,7 @@ KEPT_LATIN = {
     'src/challenge_menu.c': 'multipliers (x1.5) and numbers',
     'src/trainer_tower_sets.c': 'Trainer Tower data, which Heart & Soul cannot reach',
     'src/data/script_menu.h': 'BP amounts and the link-contest modes E and G',
-    'src/berry_fix_program.c': 'the Ruby/Sapphire berry-fix program',
+    'src/berry_fix_program.c': 'the game names under the console picture, printed left to right',
     'data/scripts/config.inc': 'a developer configuration message',
     'data/scripts/debug.inc': 'the R+START debug menu',
     'src/field_weather.c': 'a debug message',
