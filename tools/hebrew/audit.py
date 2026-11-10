@@ -445,8 +445,23 @@ def extract_party(path, rel):
     return entries
 
 
+# Headers the build generates from a source the audit reads itself: trainerproc makes X.h from
+# X.party (trainer_rules.mk), jsonproc makes the region map entries from the sections JSON
+# (json_data_rules.mk). They are git-ignored, so only a built tree has them.
+GENERATED_FROM_JSON = {'src/data/region_map/region_map_entries.h': 'src/data/region_map/region_map_sections.json'}
+
+
+def is_generated_header(tree, rel):
+    """Whether REL is a header the build generated from a .party or JSON file of TREE."""
+    if rel in GENERATED_FROM_JSON:
+        return os.path.exists(os.path.join(tree, GENERATED_FROM_JSON[rel]))
+    return rel.endswith('.h') and os.path.exists(os.path.join(tree, rel[:-2] + '.party'))
+
+
 def walk_tree(tree, only=None):
-    """Yields (abs path, rel path) of every file the audit reads, limited to ONLY (rel paths/globs)."""
+    """Yields (abs path, rel path) of every file the audit reads, limited to ONLY (rel paths/globs).
+    Generated headers are left out: their strings are read once, from the .party or JSON source,
+    so a built tree gives the same strings as a clean checkout."""
     roots = [('data', ('.inc', '.s')), ('src', ('.c', '.h', '.json', '.party'))]
     for top, exts in roots:
         for dp, dn, fn in os.walk(os.path.join(tree, top)):
@@ -458,6 +473,8 @@ def walk_tree(tree, only=None):
                     continue
                 p = os.path.join(dp, f)
                 rel = os.path.relpath(p, tree)
+                if is_generated_header(tree, rel):
+                    continue
                 if only and not any(rel == o or rel.startswith(o.rstrip('/') + '/') or fnmatch.fnmatch(rel, o)
                                     for o in only):
                     continue

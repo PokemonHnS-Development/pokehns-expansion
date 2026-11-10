@@ -1,5 +1,6 @@
 import json
 import os
+import shutil
 import subprocess
 import sys
 import tempfile
@@ -8,7 +9,7 @@ import unittest
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import audit  # noqa: E402
-from fixtures import TempTree, TOOLS  # noqa: E402
+from fixtures import TempTree, TOOLS, write  # noqa: E402
 
 
 def run_audit(tree, *extra):
@@ -114,6 +115,61 @@ class AuditTest(unittest.TestCase):
         summary = [l for l in text.splitlines() if l.startswith('== ')]
         self.assertEqual(len(summary), 2)
         self.assertEqual(out.stdout.splitlines(), summary)
+
+
+# What make writes next to the sources (trainer_rules.mk, json_data_rules.mk), shortened.
+TRAINERS_H = """//
+// DO NOT MODIFY THIS FILE! It is auto-generated from src/data/trainers.party
+//
+    [DIFFICULTY_NORMAL][TRAINER_JOEY] =
+    {
+        .trainerName = _("יואי"),
+    },
+"""
+ENTRIES_H = """const struct RegionMapLocation gRegionMapEntries[] = {
+    [MAPSEC_NEW_BARK_TOWN] = {
+        .name = COMPOUND_STRING("עיירת ניו בארק"),
+    },
+};
+"""
+
+
+class GeneratedHeaderTest(unittest.TestCase):
+    """A built tree has the headers the build makes from the .party and JSON sources; the audit reads
+    the sources only, so a built tree and a clean checkout give the same strings."""
+
+    def setUp(self):
+        self.dir = tempfile.mkdtemp(prefix='hns_audit_gen_')
+        write(self.dir, 'src/data/trainers.party', '=== TRAINER_JOEY ===\nName: יואי\nClass: Youngster\n')
+        write(self.dir, 'src/data/region_map/region_map_sections.json', json.dumps(
+            {'map_sections': [{'id': 'MAPSEC_NEW_BARK_TOWN', 'name': 'עיירת ניו בארק'}]}, ensure_ascii=False))
+        write(self.dir, 'src/data/text/hello.h', 'static const u8 sText_Hello[] = _("שלום");\n')
+
+    def tearDown(self):
+        shutil.rmtree(self.dir, ignore_errors=True)
+
+    def strings(self):
+        return sorted((e.file, e.text) for e in audit.extract_tree(self.dir))
+
+    def test_built_tree_gives_the_clean_trees_strings(self):
+        clean = self.strings()
+        self.assertEqual(clean, [('src/data/region_map/region_map_sections.json', 'עיירת ניו בארק'),
+                                 ('src/data/text/hello.h', 'שלום'),
+                                 ('src/data/trainers.party', 'יואי')])
+        write(self.dir, 'src/data/trainers.h', TRAINERS_H)
+        write(self.dir, 'src/data/region_map/region_map_entries.h', ENTRIES_H)
+        self.assertEqual(self.strings(), clean)
+        self.assertNotIn('src/data/trainers.h', [rel for _, rel in audit.walk_tree(self.dir)])
+
+    def test_a_header_without_its_source_is_read(self):
+        # Not generated here: no .party beside it, no sections JSON.
+        os.remove(os.path.join(self.dir, 'src/data/trainers.party'))
+        os.remove(os.path.join(self.dir, 'src/data/region_map/region_map_sections.json'))
+        write(self.dir, 'src/data/trainers.h', TRAINERS_H)
+        write(self.dir, 'src/data/region_map/region_map_entries.h', ENTRIES_H)
+        self.assertEqual(self.strings(), [('src/data/region_map/region_map_entries.h', 'עיירת ניו בארק'),
+                                          ('src/data/text/hello.h', 'שלום'),
+                                          ('src/data/trainers.h', 'יואי')])
 
 
 if __name__ == '__main__':
