@@ -171,18 +171,23 @@ RGB555, the GBA's own colour depth. Whether RetroArch's own `.srm` loader accept
 file was not tried.
 
 **The CRASH check.** `hnsrun` checks the PC every 60 frames (`pcIsSane`), and `hns.py`
-(`pc_is_sane`) and `sweep.py` check it after a tour or a label. Both accept the regions the game
-runs code from: BIOS `00`, EWRAM `02`, IWRAM `03`, ROM `08`-`09`, and the ROM's wait-state mirrors
-`0A`-`0D`. The mirrors are normal: the game runs most script commands from `0x0A` on purpose,
+(`pc_is_sane`) and `sweep.py` check it after a tour or a label. All three accept the regions the
+game runs code from: BIOS `00`, EWRAM `02`, IWRAM `03`, ROM `08`-`09`, and the ROM's wait-state
+mirrors `0A`-`0D`. The mirrors are normal: the game runs most script commands from `0x0A` on purpose,
 because the command table stores every command that requests effects as its address plus
 `ROM_SIZE` (`data/script_cmd_table.inc:6-12`) and `RunScriptCommand` calls it there
 (`src/script.c:130-138`). `hns.py where` and the CRASH details name a mirror address by the ROM
 address it mirrors (`where 0A0E8ECC` prints `FillBitmapRect4Bit+0xA0`, like `080E8ECC`). Any other
 region is a crash; so is a run of more than 1000 mGBA log lines about invalid code (`Illegal
 opcode`, `Jumped to invalid address`), which `hns.py` reports as `CRASH: the CPU runs invalid code`
-because the PC may then sit in the BIOS. `sweep.py run ... --fault crash:LABEL` proves the path: it
-points `gMain.callback2` at `0x0E000000` (cartridge SRAM, where mGBA runs no code). The region list
-is compiled into the runner, so rebuild `hnsrun` after a change to `hnsrun.c`.
+because the PC may then sit in the BIOS. The runner reads the PC only at the end of every 60th frame,
+so a crash that keeps passing through the BIOS (a jump to cartridge SRAM at `0x0E000000`, where
+mGBA runs no code, goes on through the BIOS's undefined-instruction handler) can pass its check and
+is then reported by that log rule only. `sweep.py run ... --fault crash:LABEL` proves the runner's
+check: it writes a loop that masks IRQs into the last tile of OBJ VRAM (`0x06017FF0`) and points
+`gMain.callback2` at it, so the run stops with `CRASH: pc=06017FF8` at the next check and no log
+lines. The region list is compiled into the runner, so rebuild `hnsrun` after a change to
+`hnsrun.c`.
 
 **Known limits**
 

@@ -8,6 +8,7 @@ import shutil
 import subprocess
 import sys
 import tempfile
+import types
 import unittest
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -42,6 +43,26 @@ class PcIsSaneTest(unittest.TestCase):
     def test_the_sweep_fault_is_a_crash(self):
         # sweep.py --fault crash must put the PC where the check stops the run.
         self.assertFalse(hns.pc_is_sane(sweep.FAULT_PC))
+
+
+class SweepFaultTest(unittest.TestCase):
+    """sweep.py --fault crash writes a loop that masks IRQs into VRAM and points gMain.callback2 at
+    it, so the PC stays outside the code regions until hnsrun's next 60-frame check."""
+
+    def test_crash_writes_an_irq_off_loop_and_jumps_there(self):
+        sw = types.SimpleNamespace(faults={'L': 'crash'}, gmain=0x03005BD0)
+        self.assertEqual(sweep.Sweeper._fault(sw, 'L'),
+                         ['w32 06017FF0 E321F09F', 'w32 06017FF4 EAFFFFFE', 'w32 03005BD4 06017FF0'])
+        self.assertEqual(sweep.Sweeper._fault(sw, 'other'), [])
+
+    def test_the_loop(self):
+        msr, branch = sweep.FAULT_CODE
+        self.assertEqual(msr & 0xFFFFFF00, 0xE321F000)     # msr cpsr_c, #imm
+        self.assertEqual(msr & 0xFF, 0x9F)                 # System mode 0x1F, I bit 0x80 (IRQs masked), ARM
+        self.assertEqual(branch, 0xEAFFFFFE)               # b .
+        self.assertEqual(sweep.FAULT_PC & 3, 0)            # ARM: callback2 is called with bx
+        for pc in range(sweep.FAULT_PC, sweep.FAULT_PC + 4 * len(sweep.FAULT_CODE) + 8, 4):
+            self.assertFalse(hns.pc_is_sane(pc), '%08X' % pc)
 
 
 @unittest.skipUnless(shutil.which('cc'), 'needs a C compiler')

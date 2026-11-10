@@ -2180,8 +2180,8 @@ def rom_unmirror(addr):
 def pc_is_sane(pc):
     """PC check for CRASH: code runs from BIOS (0x00), EWRAM/IWRAM (0x02/0x03), ROM (0x08/0x09)
     or the ROM's wait-state mirrors (0x0A-0x0D, CODE_REGIONS). Anything else means the game
-    jumped through a bad pointer (hnsrun stops by itself in that case: pcIsSane in hnsrun.c,
-    the same regions). A release build has no assert screen."""
+    jumped through a bad pointer (hnsrun stops by itself when its 60-frame check reads such a PC:
+    pcIsSane in hnsrun.c, the same regions). A release build has no assert screen."""
     return (pc >> 24) in CODE_REGIONS
 
 
