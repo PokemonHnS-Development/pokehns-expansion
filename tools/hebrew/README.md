@@ -35,8 +35,11 @@ tool runs from any working directory. The style guide and glossary are in `trans
    as JSON units. `units.py status FILE...` counts how many of them are already in Hebrew.
 2. **Chunk.** `make_chunks.py B10 [B20 ...|all] [--out DIR]` cuts each named inventory batch
    (`data/inventory.json`) into chunk files in `$HNS_UNITS/<batch>/` (or `DIR/<batch>/`). It extracts the units from
-   `HNS_BASELINE` and fills in names from the glossary. It never removes an old chunk file, and
-   the sweep reads every file there, so write into an empty folder.
+   `HNS_BASELINE` and fills in names from the glossary. The sweep reads every file there, so each
+   run first removes the named batches' chunk files of an earlier run (`<batch>_NN.json`,
+   `_names.json`, `_sNN.json`, `_snames.json`; no other file) and prints any it did not write
+   again; with `all` it also warns about a folder of a batch the inventory no longer has.
+   `--supplement` only adds files.
 3. **Translate.** Fill each unit's `"he"` by following `translation/hebrew/STYLE.md` and the
    glossary. `merge_he.py CHUNK.json TRANSLATIONS.json` merges an `{id: hebrew}` file into a chunk.
 4. **Check.** `checkunits.py CHUNK.json...` checks tokens, terminators, escapes, the charset,
