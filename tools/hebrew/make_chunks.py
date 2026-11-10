@@ -15,7 +15,8 @@ A run rewrites each batch it names: it first removes that batch's chunk files fr
 (OUT/<BATCH>/<BATCH>_NN.json, _names.json, and the --supplement ones _sNN.json, _snames.json), so
 the folder holds this run's chunks only; the sweep reads every file there. It removes no other
 file. With 'all' it also warns about a folder of chunk files of a batch the inventory no longer has.
---supplement adds to the files already written and removes nothing.
+--supplement removes nothing, but every supplement run numbers its files from s01, so a second one
+writes over the first one's files of the same names (_s01.json, _snames.json).
 """
 import argparse, csv, json, os, re, sys
 
