@@ -153,6 +153,11 @@ that starts, and writes `OUT/mapwalk.json`. The scripted tour warps, waits and t
 per map. It does not fight, so it stops with TIMEOUT at the first map that starts a battle on
 entry (the Battle Arena battle room).
 
+Compare a Hebrew walk only with an English walk made by the same `mapwalk.py`. With the current
+walker the English ROM holds the same 36 maps as the Hebrew one. The builds repository's
+`reference/mapwalk_en.json` was made by an older walker that answered with A and B in turn; it
+holds 34 of them and has a false CRASH in the Dome pre-battle room (below).
+
 **Cross-core** (`crosscore.c`, a minimal libretro frontend; `run_release_tests.sh` builds it on
 every run). It answers every core option with the core's own default, with one override
 (`gba_use_mednafen_save_method=libretro`, so that Mednafen-GBA exposes its save RAM), and it
@@ -161,6 +166,20 @@ SkyEmu load 131072 of 131072 bytes (the 16-byte RTC footer is dropped), Mednafen
 VBA-Next 131088 of 139264. `../release/ccdiff.py` compares the frames after reducing each pixel to
 RGB555, the GBA's own colour depth. Whether RetroArch's own `.srm` loader accepts the 131088-byte
 file was not tried.
+
+**Known limits**
+
+- A `CRASH` whose PC is in `0x0A000000`-`0x0DFFFFFF` (for example `pc=0A0E8ECC`) is a false alarm.
+  The game runs most script commands from the ROM's wait-state mirror on purpose: the command
+  table stores them as their address plus `ROM_SIZE` (`data/script_cmd_table.inc:6-12`). `hnsrun`
+  and `hns.py` accept only regions 00, 02, 03, 08 and 09 (`hnsrun.c:129-132`, `hns.py:2160-2164`),
+  so a 60-frame check that lands inside such a command stops the run. Subtract `0x2000000` before
+  `hns.py where`.
+- In a `ladder.py` script `warpto` takes `GROUP NUM X Y` (`ladder.py:224-228`), not `hns.py`'s
+  `warpto MAP_NAME X Y`; `hns.py map NAME` prints the numbers.
+- On a Trainer Hill or Battle Pyramid floor the second `startmenu NAME` of a run can fail with
+  "start menu cursor did not reach ..." while the menu is closed. `tap START 30` before it works;
+  the cause is not established.
 
 **Other**
 
