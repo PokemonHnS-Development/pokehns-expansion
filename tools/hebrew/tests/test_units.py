@@ -255,6 +255,58 @@ class CLivenessTest(unittest.TestCase):
             self.assertTrue(all(live for _, _, live in self.live(self.tree)))
         self.assertIn('%s is not in the English tree' % ITEMS, err.getvalue())
 
+    def keyed_live(self, rel, en_text, he_text, dead):
+        """extract_c's (text, live) for HE_TEXT, with C_STRINGS marking DEAD of EN_TEXT dead."""
+        for root, text in ((self.en, en_text), (self.tree, he_text)):
+            with open(os.path.join(root, rel), 'w', encoding='utf-8') as f:
+                f.write(text)
+        recs = [{'line': line, 'text': text, 'rom_release': text not in dead, 'rom_std': text not in dead}
+                for _, line, text, _, _, _ in units.c_literals(en_text)]
+        with open(self.c_strings, 'w', encoding='utf-8') as f:
+            json.dump({rel: recs}, f, ensure_ascii=False)
+        return [(u['en'], u['live']) for u in units.extract_c(os.path.join(self.tree, rel), rel, True)]
+
+    def test_a_text_rtl_only_literal_moves_no_other_literal(self):
+        # The TEXT_RTL branch adds a literal before the list's: keyed by place alone, ALPHA would
+        # take BETA's dead verdict and BETA GAMMA's live one.
+        en = ('static const struct MenuAction sList[] = {\n'
+              '    { COMPOUND_STRING("ALPHA") },\n'
+              '    { COMPOUND_STRING("BETA") },\n'
+              '    { COMPOUND_STRING("GAMMA") }\n'
+              '};\n')
+        he = ('static const struct MenuAction sList[] = {\n'
+              '#if TEXT_RTL\n'
+              '    { COMPOUND_STRING("רגיל") },\n'
+              '#else\n'
+              '    { gText_Normal },\n'
+              '#endif\n'
+              '    { COMPOUND_STRING("אלפא") },\n'
+              '    { COMPOUND_STRING("BETA") },\n'
+              '    { COMPOUND_STRING("גמא") }\n'
+              '};\n')
+        self.assertEqual(self.keyed_live(ITEMS, en, he, {'BETA'}),
+                         [('רגיל', True), ('אלפא', True), ('BETA', False), ('גמא', True)])
+
+    def test_a_variable_keeps_its_verdict_whatever_designator_is_near(self):
+        # c_literals takes the designator from up to 4000 characters back: the long English name
+        # hides NAME_LONG from sText_Unused, the short Hebrew one does not.
+        en = ('static const u8 *const sNames[] =\n{\n'
+              '    [NAME_LONG] = COMPOUND_STRING("%s"),\n};\n\n'
+              'static const u8 sText_Unused[] = _("Never printed.");\n'
+              'static const u8 sText_Used[] = _("Printed.");\n') % ('LONG NAME ' * 410)
+        he = ('static const u8 *const sNames[] =\n{\n'
+              '    [NAME_LONG] = COMPOUND_STRING("שם ארוך"),\n};\n\n'
+              'static const u8 sText_Unused[] = _("Never printed.");\n'
+              'static const u8 sText_Used[] = _("מודפס.");\n')
+        self.assertEqual(self.keyed_live(ITEMS, en, he, {'Never printed.'}),
+                         [('שם ארוך', True), ('Never printed.', False), ('מודפס.', True)])
+
+    def test_rtl_only_lines(self):
+        text = ('a\n#if TEXT_RTL\nb\n#else\nc\n#endif\n#if !TEXT_RTL\nd\n#else\ne\n#endif\n'
+                '#if TEXT_RTL && IS_HNS\n#if X\nf\n#endif\n#elif Y\ng\n#endif\n#ifdef TEXT_RTL\nh\n#endif\n')
+        lines = text.split('\n')
+        self.assertEqual(sorted(lines[i - 1] for i in units.rtl_only_lines(text)), ['b', 'e', 'f'])
+
     def test_without_an_english_tree_every_literal_is_live(self):
         # HNS_UPSTREAM unset and no ../pokehns-en: paths.UPSTREAM is None.
         units.UPSTREAM = None
