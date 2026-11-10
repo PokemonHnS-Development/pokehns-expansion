@@ -26,7 +26,7 @@ map (r11_tents/r11sym.py), plus:
                           before pos moves every field of include/global.h:1205 by 4)
     partyexit [MAX]       leave the party menu for the field: B until callback2 is CB2_Overworld, then B
                           until the player can walk (the start menu the game reopens); clears the stale
-                          gMenuCallback so the next 'startmenu' opens the menu again
+                          gMenuCallback, which 'startmenu' no longer needs (it reads the menu task)
 
 Run:  odds16.py tour ROM OUT --tours tools/hebrew/emu/tours/r16_field_odds [--clip] [--only RE]
 with HNS_SRC = the ROM's tree and HNS_SAVES = hns-tools/emu/saves_all; HNS_MAX_FRAMES caps a tour.
