@@ -56,7 +56,7 @@ Each entry is one open question from the review of the first release candidate: 
 | [Q93](#q93) | "demake" is translated as גרסת רטרו. | (a) Keep 'גרסת רטרו' | no change |
 | [Q95](#q95) | Hiker battle intro "You must be tough to handle this rough terrain!" is kept impersonal (צריך להיות קשוח...), … | (c) Keep the impersonal wording | no change |
 | [Q101](#q101) | The GREETINGS menu item (sText_Greetings) is 'ברכות', and sText_ShowTrainerCardMale quotes it ('בתור ”ברכות”'). | A: Keep 'ברכות' in all three | no change |
-| [Q106](#q106) | Several names are missing from glossary.csv, so they stay in English as STYLE §3 requires: BRINEY ('קפטן BRINE… | B: BRINEY everywhere it appears in Hebrew, plus the existing MAXIE row… | changed |
+| [Q106](#q106) | Several names are missing from glossary.csv, so they stay in English as STYLE §3 requires: BRINEY ('קפטן BRINE… | B: BRINEY everywhere it appears in Hebrew, plus the existing MAXIE row… | changed; its Hoenn-names pass is [Q141](#q141) |
 | [Q111](#q111) | Several sibling strings in src/battle_debug.c are in no unit chunk, so they stay in English inside the Hebrew … | A. Translate the 14 labels with the glossary and in-game forms | changed |
 | [Q112](#q112) | This chunk abbreviates AI as ב”מ (בינה מלאכותית), but the main-list item 'AI' stays Latin, so 'AI' sits next t… | A. Use ב”מ at :326 | changed |
 | [Q118](#q118) | STYLE.md section 5 says not to translate debug-menu strings, but it names only src/debug.c. | A. Keep the battle debug menu in Hebrew and finish it | changed |
@@ -80,6 +80,7 @@ Each entry is one open question from the review of the first release candidate: 
 | [Q138](#q138) | The brief says a ROM nobody has played by hand is not committed, but 0.1, 0.2 and every 1.0 update were committed with hand play declared as not tested. | B. Publish to the private builds repository, with hand play always declared in the release notes | no change |
 | [Q139](#q139) | Psychic is פסיכי in the type, the PSYCHIC and PSYCHO names, the items and the prose; FireRed now writes על-חושי. | A. The על-חושי family everywhere (owner's decision); names too wide for their lists are shortened, and PSYCHIC SURGE and SEED take the noun על-חוש as their siblings do; the plates redrawn in narrower glyphs | changed |
 | [Q140](#q140) | Which naming and wording conventions of the owner's FireRed translation (PR #2) should H&S follow? | B. Follow them; keep H&S's form only where an H&S limit or a FireRed slip stands in the way, each keep listed | changed |
+| [Q141](#q141) | Hoenn names left in Latin inside Hebrew strings until a Hoenn-names pass (Q106), and MR. STONE in the H&S PokéGear contact data | B. Rows for every Hoenn name a Hebrew string uses, FireRed's form first, a common word translated (MT. PYRE הר המוקד); the cartridge titles, e-Reader and Ash-Greninja kept | changed |
 
 ## K1
 
@@ -1161,6 +1162,8 @@ The 'congratulations' reading came only from gText_LeagueChamp (src/strings.c:12
 
 ## Q106
 
+*The Hoenn-names pass this entry deferred is [Q141](#q141); the choice below stands.*
+
 **Question.** Several names are missing from glossary.csv, so they stay in English as STYLE §3 requires: BRINEY ('קפטן BRINEY'), PETALBURG ('במכון של PETALBURG'), RUSTBORO ('בעיר RUSTBORO') and MAXIE (the 'MAXIE:' speaker prefix, twice). They need glossary rows; MAXIE is the most visible because it is a speaker name.
 
 *Source:* reviewer question (chunk B39_03; merged, checkunits: 116 units, 0 errors))
@@ -1904,6 +1907,64 @@ Not copied, because they belong to FireRed's renderer, not to its naming: digits
 *Changed:* `src/data/types_info.h`, `src/data/moves_info.h`, `src/field_specials.c`, `src/data/abilities.h`, `src/data/items.h`, `src/battle_debug.c`, `src/data/pokemon/species_info/gen_1_families.h`, `src/data/pokemon/species_info/gen_8_families.h`, `src/pokedex_plus_hgss.c`, `src/data/battle_frontier/trainer_hill.h`, `src/trainer_tower_sets.c`, `src/battle_main.c`, `src/battle_message.c`, `src/strings.c`, `src/challenge_menu.c`, `src/data/easy_chat/easy_chat_group_status.h`, 18 map and text scripts, `src/data/easy_chat/easy_chat_order_rtl.h`, `src/data/easy_chat/easy_chat_words_by_letter_rtl.h`, `graphics/types/ghost.png`, `graphics/interface/menu_info.png`, `tools/hebrew/graphics/types/make_types.py`, `tools/hebrew/graphics/coreui/make_coreui.py`, `tools/hebrew/data/namecheck_allow.json`, `translation/hebrew/STYLE.md`
 
 *Glossary:* the 15 moves, 4 abilities, BERRY JUICE, BERRY POUCH (and plurals), the EXP. items and `TERM_EXP_POINTS`, `TYPE_GHOST` (and type_generic), the Ghost items and plurals, `SPECIES_AERODACTYL`, `SPECIES_AERODACTYL_MEGA`, `TRAINER_CLASS_KINDLER`, `TRAINER_CLASS_CUE_BALL_FRLG`, the three TUBER and four COOLTRAINER classes
+
+## Q141
+
+**Question.** Q106 left the Hoenn names in Latin inside Hebrew strings "until a Hoenn-names pass is decided": PETALBURG, RUSTBORO, DEWFORD, SLATEPORT, the Hoenn gym leaders and the rest. HANDOFF section 8.1 left the name of the H&S PokéGear contact MR. STONE (`src/pokenav_match_call_data.c:193`) in Latin, behind the `KEPT_LATIN` reason "Emerald PokéNav contacts". drift printed 127 `w LATIN` lines. Should the Hoenn names get glossary rows and Hebrew text, and in which forms?
+
+*Source:* Q106 option C and HANDOFF section 8.1. The owner delegated the decision to the project; the plan was reviewed adversarially before it was applied, and the review changed one name (MT. PYRE).
+
+**Analysis.**
+- **Where the Latin was.** 169 string edits in 17 files: `data/text/match_call.inc` 119, `data/text/tv.inc` 8, `data/text/pokemon_news.inc` 8, `data/text/battle_tent.inc` 7, `src/landmark.c` 6, `src/strings.c` 6, `src/data/script_menu.h` 4, `data/text/pc_transfer.inc` 2, and one each in `data/text/pc.inc`, `data/event_scripts.s`, `data/maps/MossdeepCity_SpaceCenter_2F/scripts.inc`, `src/battle_message.c`, `src/field_screen_effect.c`, `src/field_specials.c`, `src/mystery_event_msg.c`, `src/pokenav_match_call_data.c` and `src/data/items.h`.
+- **Reach.** No edited string can be reached in normal H&S play:
+  - the Hoenn match calls and the MR. STONE contact: their header flags are defined as 0, for example `FLAG_ENABLE_NORMAN_MATCH_CALL` (`include/constants/flags_hns.h:1541`), which `sMrStoneMatchCallHeader` uses (`src/pokenav_match_call_data.c:191`). `MatchCall_GetEnabled_NPC` returns `FlagGet(flag)` (`:1283-1288`), and `FlagGet(0)` is FALSE because `GetFlagPointer(0)` is NULL (`src/event_data.c:234-237`, `:272-277`). In the rc23 ROM the header holds flag 0, the desc נשיא דבון and the name `MR. STONE` (decoded with the ELF's symbol `sMrStoneMatchCallHeader`), so the contact was checked in the ROM, never on screen;
+  - the TV shows and PokéNews: `FLAG_SYS_TV_START` is 0 (`flags_hns.h:2266`, read at `data/scripts/tv.inc:8`);
+  - the Battle Tent welcomes, Lanette's PC transfer lines, the POKéNAV registration line (`data/event_scripts.s:1550`) and the METEORITE description in `src/data/items.h` are `#else` branches of `#if IS_HNS` or `#if IS_FRLG || IS_HNS`, not built. `gText_AccessedLanettesPC` is assembled, but only `data/scripts/pc.inc:141`, the `#else` of `:138-142`, prints it;
+  - the Mossdeep Space Center line is in a debug-only map, and the Briney and Rayquaza menus of `src/data/script_menu.h` are used only by `DewfordTown`, `Route104_MrBrineysHouse`, `Route109` and `CaveOfOrigin_B1F`, which are `dead` (`tools/hebrew/data/inventory.json`);
+  - the landmarks, Prof. Birch's lines, the S.S. Tidal destination, the fan club's BRAWLY and the diploma are on Emerald paths H&S does not take. The Mystery Event berry line needs a Mystery Event card (`src/mystery_event_script.c:242`); whether one can be loaded is unverified.
+- **The one visible effect.** The Pokémon Center PC menu measures `gText_LanettesPC` with the other PC names for its width (`src/script_menu.c:768-779`; `sPCNameStrings`, `src/data/script_menu.h:1511-1518`), although H&S draws `gText_BillsPc` in its place (`src/script_menu.c:800-806`). The string goes from 96 to 78 px (FONT_NORMAL), so with a player name narrower than 81 px the menu is 12 tiles wide instead of 14 (`(w+9)/8+1`, `:1254-1257`). Every drawn row still fits by the model: המחשב של מישהו (81 px) is in the measured set and המחשב של ביל is 70 px. Not yet seen on screen.
+- **Names: 30 new rows, all `proposed`.**
+  - FireRed's form wherever FireRed prints the name (Q140): PETALBURG פטלבורג (FireRed `src/mystery_event_msg.c:3`), MAUVILLE מוביל and NEW MAUVILLE ניו מוביל (`src/data/items.json:4345`), BRAWLY ברולי, TATE טייט, LIZA ליזה, WATTSON ווטסון, FLANNERY פלנרי and DRAKE דרייק (`src/data/trainers.h:279`, `:289`, `:819`, `:829`, `:879`), LANETTE לאנט (`data/maps/OneIsland_PokemonCenter_1F/text.inc:263`) and GAME FREAK גיים פריק (`src/strings.c:974`, as Q85 noted).
+  - The transliteration rules for the rest: LITTLEROOT ליטלרוט, RUSTBORO ראסטבורו (the RUS of RUSTY ראסטי; it replaces Q106's unchecked רסטבורו), DEWFORD דיופורד, SLATEPORT סלייטפורט, VERDANTURF ורדנטרף, FALLARBOR פלארבור, LAVARIDGE לאבריג', FORTREE פורטרי, MOSSDEEP מוסדיפ, SOOTOPOLIS סוטופוליס, RUSTURF TUNNEL מנהרת ראסטרף, JUAN חואן (a Spanish J is ח, as JOSE חוזה; allowlisted in `tools/hebrew/data/namecheck_allow.json`), PEEKO פיקו, STERN סטרן, WANDA וונדה, BIRCH בירץ' (IR = יר, as FireRed's KIRK קירק and SHIRLEY שירלי) and MR. STONE מר סטון.
+  - Common English words are translated (rules §5): METEOR FALLS מפלי המטאור, as `src/landmark.c:35` already wrote it, and MT. PYRE הר המוקד.
+  - Each row's note gives its source. Town and city rows hold the full name (העיר ראסטבורו); dialogue uses the proper part with the prefix attached (בראסטבורו, לדיופורד), and a speaker prefix is the bare name (ברולי:, מר סטון:).
+- **MT. PYRE הר המוקד.** The transliteration הר פייר was dropped in review:
+  - rules §5 translate an ordinary word after MT. (MT. MOON הר הירח), and so do H&S's own mountains: הר המכתש, הר הכסף, and הר הנזר in Q133, which called FireRed's transliterated MT. EMBER הר אמבר the minority pattern;
+  - `src/landmark.c` already gives the Hoenn landmarks their meaning: מפלי המטאור (`:35`), מערת השרטון (`:41`), מערת הגרניט (`:43`);
+  - פייר is also the slang for "fair" and, in both trees, the word for FIRE (FireRed's פוקימון פייר רד, `src/strings.c:1072` there; H&S's GOUGING FIRE גג'ינג פייר, `src/data/pokemon/species_info/gen_9_families.h:7965`);
+  - a pyre is מוקד, and the match calls already call the mountain אתר הנצחה. No official Hebrew source was checked;
+  - הר המוקד is 46 px in FONT_NORMAL and 41 px in FONT_NARROW. The landmark (`src/landmark.c:40`) goes from 33 to 41 px, where other landmarks reach 93 px; the Rayquaza menu line (`src/data/script_menu.h:771`) from 40 to 46 px, in a menu sized by מערת הבראשית (74 px).
+- **Existing rows applied.** WALLACE וולאס, WINONA וינונה and PHOEBE פיבי (all as FireRed), GLACIA גלייסיה, WALLY וולי, GABBY גאבי. POKéGEAR פוקיגיר for the three compiled match-call lines that name the POKéNAV, as K3 did for the Battle Pike lines: the H&S player carries a PokéGear. POKéNAV פוקינאב only in the Emerald `#else` line. Q106's MAY: and BRENDAN: prefixes were already Hebrew (`fd5c1a07ec`); the two left are in English dead labels.
+- **Differences kept and logged.**
+  - GLACIA: FireRed has גלסיה (`src/data/trainers.h:869`). Under Q140 FireRed's form is the default unless an H&S limit or a FireRed slip stands in the way; no limit applies, and the slip rests on the pronunciation GLAY-see-uh, which was not checked against an official source. The row stays גלייסיה until the owner answers (question 2). `namecheck.py --fr-sync` does not compare the `name` kind, so no allowlist entry pins it.
+  - MAUVILLE מוביל is FireRed's form, but מוביל is also the everyday word for "leading" (H&S itself: `data/scripts/mauville_man.inc:304` המאמן מוביל הטרנדים, `src/data/credits_hns.h:73` מפתח מוביל), so העיר מוביל can read "the leading city". FireRed wins (rules §0, Q140); the clash is logged here, as rules §7 asks, not fixed.
+- **Kept in Latin**, the 23 `w LATIN` lines drift still prints:
+  - the cartridge titles Ruby, Sapphire and Emerald (`data/scripts/contest_hall.inc`, `data/text/cable_club.inc`, `src/berry_fix_program.c`, the credits). Q85 is not the reason: it put Game Boy Advance into Hebrew. FireRed writes titles in Hebrew letters (רובי, ספיר; פייר רד, ליף גרין), and H&S's own words for them are the gem names (Q135; `src/strings.c:10-12`). The contest lobby text is reachable, so the owner decides (question 1);
+  - e-Reader (`src/strings.c`, the Mystery Events screen), only because it has no row (STYLE §3). GBA and NES are acronyms on drift's allow-list, while the full name Game Boy Advance is Hebrew (Q85) and the same screen says גיים בוי אדוונס (`src/strings.c:952`). The owner decides (question 4);
+  - Ash-Greninja (`src/battle_message.c`): no row, and only the R+START debug menu can give a Greninja;
+  - XS, XL and GB, which their glossary rows keep, and the credits' Johto Redrawn, EMERALD and NOA (`KEPT_LATIN`).
+- **Checks** on `he/wip-r23` with the edits, against `he/main` `73701833a4`; baseline `he/renderer` `ec407862cd`:
+  - drift: 708 files, 0 FAIL, 334 with warnings only (336 before); `w LATIN` 23 (127 before);
+  - `audit.py --baseline ../pokehns-en`: 0 errors, the same 54 warnings and 88 suppressed; 39059 strings, 24841 translated (24836 before);
+  - `namecheck.py --all --warnings`: rows 7123, still empty 0, problems 0; warnings 0, allowlisted 35; `glossary_widths.py` the same one name over budget (Q129);
+  - plurals, `flag_gates.py --check` and the three generators unchanged; 182 tool tests OK on Python 3.11.9 and 3.9.6.
+
+| Option | How | Risk |
+|---|---|---|
+| A. Keep the Latin | No text change; give MR. STONE a `KEPT_LATIN` reason of its own. | The glossary rule stays unapplied in 169 strings, and MR. STONE stays the only Latin name in the H&S contact data. |
+| B. Rows for every Hoenn name that a Hebrew string or a compiled name-only literal uses: FireRed's form where FireRed prints it, the transliteration rules otherwise, a common English word translated; the cartridge titles, e-Reader and Ash-Greninja kept | 30 rows, 169 edits in 17 files, one allowlist entry, `KEPT_LATIN` fixed. | Low: text only, no string over its budget, nothing reachable changes except the PC menu's width. The names are `proposed`, with no official Hebrew source. |
+| C. B plus Hebrew cartridge titles and rows for the e-Reader and Ash-Greninja | Also edit the contest, cable club, berry-fix and credits lines. | Needs a choice the owner has not made: FireRed's transliterations (רובי, ספיר) or H&S's gem words (אודם, ספיר, ברקת). |
+
+**Chosen:** B. Once a row exists, STYLE §3 makes the glossary win everywhere, so a Hoenn name should not be Hebrew in one string and Latin in the next, and the H&S contact data no longer holds Latin. This supersedes Q106's "until a Hoenn-names pass is decided"; Q106's own choice stands. Open for the owner, none of them blocking:
+1. the cartridge titles: Latin, FireRed's transliterations, or the gem words?
+2. GLACIA: FireRed's גלסיה (the Q140 default) or גלייסיה?
+3. NEW MAUVILLE: FireRed's ניו מוביל or מוביל החדשה (the NEW SINJOH סינג'ו החדשה pattern)?
+4. rows for Ash-Greninja and the e-Reader (for example אי-רידר, after Q85), or both Latin?
+5. MT. PYRE: הר המוקד or הר המדורה?
+
+*Changed:* `data/text/match_call.inc`, `data/text/tv.inc`, `data/text/pokemon_news.inc`, `data/text/battle_tent.inc`, `data/text/pc.inc`, `data/text/pc_transfer.inc`, `data/event_scripts.s`, `data/maps/MossdeepCity_SpaceCenter_2F/scripts.inc`, `src/landmark.c`, `src/strings.c`, `src/data/script_menu.h`, `src/battle_message.c`, `src/field_screen_effect.c`, `src/field_specials.c`, `src/mystery_event_msg.c`, `src/pokenav_match_call_data.c`, `src/data/items.h`, `tools/hebrew/status_report.py` (`KEPT_LATIN`: the PokéNav contact data entry dropped; `script_menu.h`'s reason is now BP amounts and the link-contest modes E and G), `tools/hebrew/data/namecheck_allow.json`, `translation/hebrew/STYLE.md`
+
+*Glossary:* new `PLACE_LITTLEROOT_TOWN`, `PLACE_PETALBURG_CITY`, `PLACE_RUSTBORO_CITY`, `PLACE_DEWFORD_TOWN`, `PLACE_SLATEPORT_CITY`, `PLACE_MAUVILLE_CITY`, `PLACE_NEW_MAUVILLE`, `PLACE_VERDANTURF_TOWN`, `PLACE_FALLARBOR_TOWN`, `PLACE_LAVARIDGE_TOWN`, `PLACE_FORTREE_CITY`, `PLACE_MOSSDEEP_CITY`, `PLACE_SOOTOPOLIS_CITY`, `PLACE_RUSTURF_TUNNEL`, `PLACE_MT_PYRE`, `PLACE_METEOR_FALLS`, `NAME_BRAWLY`, `NAME_WATTSON`, `NAME_FLANNERY`, `NAME_TATE`, `NAME_LIZA`, `NAME_JUAN`, `NAME_DRAKE`, `NAME_PEEKO`, `NAME_STERN`, `NAME_WANDA`, `NAME_MR_STONE`, `NAME_LANETTE`, `NAME_BIRCH`, `TERM_GAME_FREAK`; applied `NAME_WALLACE`, `NAME_WINONA`, `NAME_PHOEBE`, `NAME_GLACIA`, `NAME_WALLY`, `NAME_GABBY`, `NAME_POKÉGEAR`, `TERM_POKENAV`
 
 ## Proposed names
 
