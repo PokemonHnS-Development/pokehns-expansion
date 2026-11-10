@@ -1138,10 +1138,31 @@ python3 tools/hebrew/rom_sweep.py pokehns.gba --json OUT.json
     pointers names the same label in the two ELFs, and the English ROM rewrites them on CONTINUE
     (`src/overworld.c:2200` calls `LoadSaveblockObjEventScripts`, `:592-600`).
   - Saving after leaving the Center and walking back in also validates.
-  - Not tried (**unverified**): a save made outside a Pokémon Center, such as on a Battle Pyramid
-    or Trainer Hill floor. Those floors load their object scripts their own way
-    (`src/overworld.c:2195-2198`).
   - The scripts and logs are in `<private>/scratch/screens/r19/emu-facts/t1/`.
+  - **Saves made outside a Pokémon Center** (round 21, rc22's release ROM): in Ecruteak City
+    outdoors, on Route 37, in Ecruteak House 1, on Trainer Hill 1F during a NORMAL challenge, and
+    on Battle Pyramid floor 1 after REST. Each loads in the English ROM with no crash, and the
+    English screenshots match those of an English-written save of the same moment: 12 validation
+    and 11 PC shots each for the town, the route and the house; 7, then 56 through the Hill's tag
+    battle, both trainers' after-battle lines and the stairs to 2F; 6 of 7 on the Pyramid floor.
+  - The one visible difference is the Pyramid's party screen. Pokémon the Hebrew ROM created keep
+    Hebrew nickname bytes, which English shows blank (PIDGEOT shows only `'`, the geresh of
+    פידג'וט), as with the player name.
+  - The save bytes differ only in the play time (SaveBlock2 `0x11`-`0x12`); on the Hill, the
+    encryption key (788 values re-encrypted to the same plain values) and the Hill timer
+    (SaveBlock1 `0x3D64`, 322 against 345 frames); the Pyramid party's nicknames; and 28 object
+    template `script` pointers, each pair naming the same label in the two ELFs.
+  - On CONTINUE (`src/overworld.c:2192-2200`) the English ROM rewrites those pointers in town and
+    on the Pyramid floor (`LoadBattlePyramidFloorObjectEventScripts`,
+    `src/battle_pyramid.c:1878-1897`). On a Hill floor the loader is an empty function
+    (`LoadTrainerHillFloorObjectEventScripts`, `src/trainer_hill.c:845-851`), so the Hebrew ROM's
+    pointer stays in the template. Nothing reads it there: talking to a hill trainer and being
+    seen look the script up live (`GetTrainerHillTrainerScript`,
+    `src/field_control_avatar.c:442-443`, `src/trainer_see.c:561-563`), and a floor change
+    rebuilds the templates (`src/trainer_hill.c:812-843`). The 56 identical Hill shots cover all
+    three.
+  - Scripts, logs and sheets: `<private>/scratch/screens/r21/emu/` (`facts.md` section 2, `t2/`,
+    `sheets/t2_*.png`).
 - **ROM sweep:** do not gate on its exit status. Of the 6,255 runs, 0 are on live labels, 3,265
   on dead Emerald labels, 16 debug-only, and 2,974 untracked (mostly `data/event_scripts.o` and
   `src/credits_hns.o`). Compare its `--json` with the previous candidate's.
@@ -1439,12 +1460,29 @@ EOF
 - **2.0.x English saves load in the Hebrew ROM.** The translation changes no saved struct:
   SaveBlock1 is 0x3D90 and SaveBlock2 0xF34 in both ELFs (`hns.py selfcheck`). Keep it that way:
   never widen a `*_NAME_LENGTH` or any buffer in a saved struct.
-- **Hebrew-written saves load in the English ROM** (section 4.6): a new-game save in the bedroom,
-  and mid-game and post-game saves made in a Pokémon Center. A Hebrew player name shows blank
-  there. A save made on a Battle Pyramid or Trainer Hill floor was not tried (**unverified**).
-- **Pre-2.0 (1.2.1) saves do not load.** The sector layout differs (SaveBlock3), and 2.0.6
-  migrates only 2.0.x saves (`src/save.c:930-980`). This comes from a code trace in
-  `<builds>/archive/rounds/save12/REPORT.md`; no 1.2.1 save was ever loaded (**unverified**).
+- **Hebrew-written saves load in the English ROM** (section 4.6): a new-game save in the bedroom;
+  mid-game and post-game saves made in a Pokémon Center; and saves made in a town, on a route, in
+  a house, on a Trainer Hill floor during a challenge and on a Battle Pyramid floor. A Hebrew
+  player name, and the nickname of a Pokémon the Hebrew game created, shows blank there.
+- **Pre-2.0 (1.2.1) saves do not load**, in English 2.0.6 or in Hebrew 1.0, and the game says so.
+  - The sector checksums reject them. 2.0.6 sums each sector over its own chunk sizes
+    (`sSaveSlotLayout`, `src/save.c:60-78`), and 1.2.1 wrote others: SaveBlock2 3920 bytes
+    against 3892, SaveBlock1 4084 × 3 + 3548 against 3968 × 3 + 3856, the PC 4084 × 8 + 3484
+    against 3968 × 8 + 2400 (read from each ROM's `sSaveSlotLayout`). The footer is at byte 4084 in
+    both, so each written slot counts as present, not empty.
+  - Sector 13 always fails: 1.2.1's box names lie in its bytes 3332-3466, which 2.0.6 no longer
+    sums. Every written slot is then `SAVE_STATUS_ERROR`, the load is `SAVE_STATUS_CORRUPT`
+    (`src/save.c:658`), and `src/intro.c:1151-1156` resets the save blocks.
+  - The main menu says "The save file has been erased / due to corruption or damage." (Hebrew
+    `קובץ השמירה נמחק / בגלל שיבוש או נזק.`, `src/main_menu.c:260`, `:669-673`), then offers NEW
+    GAME and OPTION only. Loading writes nothing: the flash changes only at the first save
+    (`src/new_game.c:228`, `src/start_menu.c:1294-1297`, `src/save.c:775-783`).
+  - The migration (`src/save.c:930-980`) runs on any loaded save; it is not what stops them.
+  - Seen on both ROMs with a synthetic save in 1.2.1's layout, not a real one
+    (`<private>/scratch/screens/r21/static/tools/make_save121.py`, `save121/sheet_121.png`:
+    `gSaveFileStatus` 2 and the file unchanged after the run). Upstream says the same: saves from
+    before 2.0 are not compatible (`../pokehns-en/README.md:16`). A real 1.2.1 save was never
+    loaded (**unverified**).
 - **Leave the Pokémon Center first** after loading a save from another build. This is the
   official upgrade step; see `tools/hebrew/emu/scripts/continue.txt:5-7`.
 
@@ -1647,7 +1685,7 @@ shots, the C-literal liveness by line, and the audit's count on a built tree) ar
 - **Not seen by a person:**
   - nobody has played from a new game to the first badge;
   - nothing has run on real hardware (needs a 32 MiB cart, FLASH 128 KB save and an RTC);
-  - no real 2.0.x save from a long playthrough, and no 1.2.1 save, has been loaded;
+  - no real 2.0.x save from a long playthrough, and no real 1.2.1 save, has been loaded;
   - a real link with a second GBA was never tried; the trade screen, link battles, the cable
     club, record mixing and Mystery Gift were seen with the partner faked in memory
     (`tours/r14_link`, `tours/r16_link`);
@@ -1880,6 +1918,11 @@ under `<private>/scratch/screens/r21/`, in `fixes/` for the fixes):
 - **rc22's sweep read 210 stale labels on top of the 6,611 live ones,** from chunk files that
   `make_chunks.py all` does not remove (section 4.5); all 6,821 were OK.
 
+- **Hebrew-written saves made outside a Pokémon Center load in the English ROM** (section 4.6, in
+  `emu/`): a town, a route, a house, a Trainer Hill floor and a Battle Pyramid floor.
+- **Why 1.2.1 saves do not load, and what the player sees,** on both ROMs with a synthetic save
+  (section 6.6, in `static/`).
+
 **Not verified:**
 
 - A Linux build with devkitPro pacman; another machine with devkitARM r68 reproducing the 0.2
@@ -1890,9 +1933,7 @@ under `<private>/scratch/screens/r21/`, in `fixes/` for the fixes):
 - RetroArch's own `.srm` loader with the 131088-byte save.
 - The harness and the ladder on Linux; how the clock's hour reaches the game's random numbers
   (section 2.6).
-- A Hebrew-written save made outside a Pokémon Center, for example on a Battle Pyramid or Trainer
-  Hill floor, loaded in the English ROM (section 4.6).
-- Pre-2.0 (1.2.1) saves: they do not load, by a code trace only (section 6.6).
+- A real pre-2.0 (1.2.1) save: only a synthetic one in its layout was loaded (section 6.6).
 - The out-of-bounds read behind Scott's shields could write through a stray pointer after a link
   Dodrio Berry Picking game (needs a link).
 - Round 20's names in the places no test reached: the generic phrase מהלך על-חושי (printed only
