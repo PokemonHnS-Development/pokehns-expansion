@@ -15,8 +15,8 @@ Main list rows (src/battle_debug.c): 12 AI points, 13 AI info, 14 AI party.
           before the page opens; PutAiInfoText prints it with FONT_SMALL at x 83.
   party   row 14, six hold effects per page: gAiPartyData->mons[side][0..5].heldEffect and
           count[side] = 6 for both sides; PutAiPartyText prints the first 7 bytes of each name with
-          FONT_SMALL_NARROW in 41 px columns (opened once as is first: its first drawing is
-          garbled in both builds). --party-pages K,K draws only those pages (effects 6K+1 .. 6K+6).
+          FONT_SMALL_NARROW in 41 px columns. It is opened once as is first; its first drawing
+          equals a later one. --party-pages K,K draws only those pages (effects 6K+1 .. 6K+6).
 Each page is shot, and closed, only once the DMA3 queue has no pending copy (src/dma3_manager.c
 sDma3Requests): every string is printed at speed 0, which queues a copy of the whole window, and
 the queue moves at most 40 KiB a frame, so a six-Pokemon party page reaches the screen about 22
@@ -148,8 +148,8 @@ def main():
             e.w8(ai + AI_HOLD, old)
         press("DOWN")
         if "party" in only:
-            # the first opening of the page draws over the AI-info page left in the window (both
-            # builds), so it is opened once as is before the pokes
+            # once as the battle left it. The page shows the menu battler's side: the foes once
+            # row 12 has moved the menu to a battler with AI, else battler 0 (the player's side)
             view("Task_ShowAiParty", "dbg_p14_party_asis", [])
             pages = {int(x) for x in a.party_pages.split(",") if x}
             for k in range(0, len(effects), 6):
