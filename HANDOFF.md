@@ -48,7 +48,7 @@ fresh clone.
 | 1.0 ROM | `pokehns-he-2.0.6-1.0.gba`: 33554432 bytes, SHA-1 `383e16ba227ae4c62ae1c1ff01bfaa0c0793eedf`, CRC32 `A6214055` (clip build `66be59802683abf1b1d69be586e38d04dc03c4bb`, CRC32 `08A267D5`) | `<builds>/SHA1SUMS` |
 | Releasing | Build a candidate with `tools/hebrew/release/`, then replace the three files in the builds repo and say in the commit message which `he/main` commit it was built from; keep `tools/hebrew/release/notes.json` at `"release": "1.0"`. A candidate is published with hand play declared as not tested (`DECISIONS.md` Q138) | section 5 |
 | CI | green in all three jobs at `8aeb3a0f2b` (run 42802955754) and at `c1cfd8a30b` (run 42721195219: `build` 4m46s, `audit` 1m22s, `check` 20m42s), at `dd6d82f504` (42724124742) and at `0514c9b57b` (42725640966); so were the runs before them on `he/main` (41918360015 at `85705e4bc9`, 41929345455 at `08027d9879`, 41933578987 at `fe509e0043`) | `gh run list -R ronyeh2/pokehns-expansion-heb --workflow hebrew.yml --branch he/main` |
-| Static checks | at `he/main` `8aeb3a0f2b`, baseline `he/renderer` `ec407862cd`: drift 708 files, 0 FAIL, 336 with warnings only; audit 0 errors and 54 warnings, 39,059 strings as in CI; namecheck 0 problems and 0 warnings (34 allowlisted); plurals 0 problems; the Pokédex A–Z, Easy Chat and live-label generators up to date; 147 tool tests OK on Python 3.9.6, 3.11.9 and 3.14.7 at the tip | section 4.2 |
+| Static checks | at `he/main` `8aeb3a0f2b`, baseline `he/renderer` `ec407862cd`: drift 708 files, 0 FAIL, 336 with warnings only; audit 0 errors and 54 warnings, 39,059 strings as in CI; namecheck 0 problems and 0 warnings (34 allowlisted); plurals 0 problems; the Pokédex A–Z, Easy Chat and live-label generators up to date; 182 tool tests OK on Python 3.9.6 and 3.11.9 (147 at `8aeb3a0f2b`) | section 4.2 |
 | Translation status | every live file is translated: 650 files, 525 seen on screen, 125 translated, none blocked (rc22's sweep, regenerated after round 21's C-liveness fix, with the same totals) | `translation/hebrew/STATUS.md:5` |
 
 **What remains** (details in section 8):
@@ -72,12 +72,10 @@ fresh clone.
    `map_walk.hebrew_only_held` set to `[]`, so `TESTING.md` now says all 36 held maps also hold
    in English. `make_testing_md.py` printed "None skipped" in the sweep row when nothing was
    skipped; it now prints 0.
-3. **Round 22** (local branches `he/wip-r22a`, `he/wip-r22b`, `he/wip-r22c`, not merged): the
-   remaining tool rows of section 8.1. None of them changes the ROM.
-4. The open rows of section 8.1: tool and data rows only (the inventory's C liveness for
-   uncompiled `items.h` branches, the harness's mirror check,
-   `make_chunks.py`'s old files, `startmenu` on Frontier floors, two leftovers). None changes the
-   ROM.
+3. **Done: round 22**, merged on `he/main` (`he/fix-r22a`, `he/fix-r22b`, `he/fix-r22c`, pushed): the
+   remaining tool rows of section 8.1. None changes the ROM, so 1.0 stays rc23.
+4. The two open rows of section 8.1: `MR. STONE` in the H&S PokéNav contact data (a text change,
+   so a release), and `make_chunks.py --supplement` numbering (a tool).
 
 ---
 
@@ -1590,18 +1588,18 @@ Ask the owner before you:
 
 ### 8.1 Open defects in the repository
 
-The four rows of round 20 (the Pokéblock case list's three-digit level, `dbgmenu.py`'s early
-shots, the C-literal liveness by line, and the audit's count on a built tree) were fixed in
-round 21, merged in `8aeb3a0f2b` (section 8.5, round 21), and the stale English reference walk was
-replaced before rc23 (section 0, item 2). These are open:
+Round 21 fixed the four rows of round 20 (merged in `8aeb3a0f2b`), and the stale English reference
+walk was replaced before rc23 (section 0, item 2). Round 22 fixed the rest (merged on `he/main`
+after `dd1a8caae8`; section 8.5, round 22): C-literal liveness now follows the preprocessor, the
+harness accepts the ROM's wait-state mirrors `0A`-`0D` (the reference runner `<private>/emu/hnsrun`
+was rebuilt with it; the old one is `hnsrun.pre-r22`), `make_chunks.py` removes a batch's old chunk
+files, `startmenu` opens the menu every time on Frontier floors, and the two leftovers are gone.
+These are open:
 
 | Item | Evidence | What to do |
 | --- | --- | --- |
-| `tools/hebrew/data/c_strings.json` marks 14 English literals of `src/data/items.h` live that the build does not compile, so `STATUS.md` counts 2,218 live strings in `items.h` where the build has 2,204 | `arm-none-eabi-gcc -E` of `src/item.c` keeps 2,204 literals of `items.h`, all Hebrew. The 14 are in `#if` branches the build leaves out: the GROWTH, DAMP, STABLE, SURPRISE and BOOST MULCH descriptions, the two ICY ROCK descriptions, EXP. SHARE's and TM HAIL's descriptions, TM70's and HM DIVE's names and descriptions, and METEORITE's description. The inventory searches the ROM for each literal's longest plain run (`inventory/README.md`, "C literals"): 11 of these runs are found in the ROM, and the other 3 texts are compiled from another line. `units.py` takes the verdicts as recorded (`<private>/scratch/screens/r21/fixes/t3/why14.py`) | decide C liveness by what the preprocessor keeps, in `tools/hebrew/inventory/extract.py`, then rebuild `c_strings.json` and regenerate `STATUS.md`. Text only; nothing in the ROM changes |
-| The harness calls a PC in the ROM's wait-state mirrors a crash | `pcIsSane` (`hnsrun.c:129-132`) and `pc_is_sane` (`hns.py:2160-2164`) accept only regions 00, 02, 03, 08 and 09, but the game runs most script commands from `0x0A` by design (section 4.6); `sweep.py:887` names a symbol only for 2, 3, 8 and 9 | accept `0x0A`-`0x0D` in both checks and map them to `0x08` for symbol names. Tools only |
-| `make_chunks.py` never removes an old chunk file, so a sweep can read labels that are no longer live | it only creates the batch folders (`make_chunks.py:115`, `os.makedirs(..., exist_ok=True)`); `build/hebrew/units` kept three chunk files of 2026-10-22, and rc22's sweep read 6,821 labels instead of 6,611 (section 4.5) | remove the batch's old chunk files before writing, or refuse a folder that is not empty; until then empty the folder first (sections 2.6 and 5) |
-| `hns.py` `startmenu NAME` fails on its second use in a run on a Trainer Hill or Battle Pyramid floor | seen in round 21 on the English ROM, the same with a Hebrew-written and an English-written save (`<private>/scratch/screens/r21/emu/t2/val/`): "start menu cursor did not reach BAG (at 1)", the menu closed on screen. The likely cause, a stale `gMenuCallback` (`hns.py:927-929`), is **unverified** | find the cause and open the menu whenever it is not on screen; until then tap START first (section 6.4) |
-| Two small leftovers of round 21's tool fixes | `status_report.py` `KEPT_LATIN` (`:22-48`) still lists `src/data/items.h` and `src/pokenav_menu_handler_gfx.c`, which no longer keep any Latin string (`STATUS.md`: 2218/2218 and 18/18). `strcov.py:222-241` has its own copy of the generated-header rule that `audit.py:451-458` now uses | drop the two entries; let `strcov.py` import `audit.is_generated_header`. Harmless as they are |
+| `MR. STONE` is still English in the H&S PokéNav contact list's data | `src/pokenav_match_call_data.c:193`, the `.name` of `sMrStoneMatchCallHeader` in the `#if IS_HNS` branch (`:169`); every other `.name` there is Hebrew and its `.desc` is נשיא דבון; rc22's ROM holds `MR. STONE` once, in `pokenav_match_call_data.o`'s `.rodata`; `c_strings.json` has it live. `STATUS.md` hides it behind the `KEPT_LATIN` reason "Emerald PokéNav contacts" (`status_report.py:36`), written for the 24 Emerald contacts that are now dead. Whether a player sees the name is **unverified** | translate it with the glossary's name for Mr. Stone and show it on screen, or keep it with its own reason in `DECISIONS.md`; either way fix the reason. A translation changes the ROM, so it goes with a release |
+| `make_chunks.py --supplement` run twice writes the second supplement over the first one's `s01` file | reproduced on the test fixture: 6 units go down to 4 (`<private>/scratch/screens/r22/harness/review/supp`); the same line is in `8aeb3a0f2b`, so it is older than round 22 | number a new supplement after the last one, with a test |
 
 ### 8.2 Content gaps and decisions
 
@@ -1916,7 +1914,7 @@ release tours and sweep cover the screens the release tests reach. The round's t
 - The 137 tool tests pass at `c1cfd8a30b` on Python 3.9.6 and 3.11.9.
 
 **Verified in round 21** (the fixes on `he/wip-r21` and a clean build of `34fee0e811`, the rest on
-rc22, the current 1.0, and English 2.0.6; scripts, logs and screenshots that are not in the fork
+rc22 (then the current 1.0) and English 2.0.6; scripts, logs and screenshots that are not in the fork
 are under `<private>/scratch/screens/r21/`, in `fixes/`, `emu/` and `static/`):
 
 - **The Pokéblock case list shows a three-digit level whole** (`cd5fb48abe`). The narrow font's
@@ -2036,6 +2034,33 @@ are under `<private>/scratch/screens/r21/`, in `fixes/`, `emu/` and `static/`):
   regenerated from rc22's sweep was byte for byte the committed one (before `d886483f5c`). The
   stale statements it found are listed in section 8.3.
 
+**Verified in round 22** (`he/fix-r22a`, `he/fix-r22b`, `he/fix-r22c`; each fix re-run by an
+adversarial reviewer; scratch in `<private>/scratch/screens/r22/`):
+
+- **C-literal liveness by the preprocessor** (`tools/hebrew/inventory/cpp_lines.py`): every
+  compiled source of the English tree runs through `arm-none-eabi-gcc -E -fdirectives-only` with
+  the Makefile's CPPFLAGS; a literal is live only where a unit keeps its line and its text is in
+  the ROM. 1,919 of 21,200 records go from live to dead, none the other way: 1,157 in files no unit
+  includes (`trainers.h`, `trainers_frlg.h`, `credits.h`) and 762 in inactive `#if` branches. A
+  full macro-expanding `cpp` of all 390 units keeps none of the dropped lines. `items.h` is
+  2204/2204; `POCKET_BATTLE_ITEMS` is dead. `STATUS.md` totals unchanged (650, 525, 125); 6,611
+  labels and `flag_gates.py` unchanged. `STATUS.md` regenerated from rc23's sweep is unchanged.
+- **ROM-mirror PCs:** `hnsrun.c`, `hns.py` and `sweep.py` accept `0A`-`0D`; `hns.py where` maps a
+  mirror to the ROM. The old A/B walker's record 18 on English is `HELD` instead of
+  `CRASH: pc=0A0E8ECC`, records 0-17 and their shots identical; a forced VRAM PC still stops with
+  `CRASH`. `sweep.py --fault crash` now writes an IRQ-masking loop to OBJ VRAM, which the runner
+  stops on (the first version, a jump to `0x0E000000`, passed the check through the BIOS).
+- **`make_chunks.py`** removes a batch's own chunk files of an earlier run before it writes.
+- **`startmenu` on Frontier floors:** `gMenuCallback` keeps `HandleStartMenuInput` after the menu
+  closes (`src/start_menu.c:708`, `:767-772`), so a check on it alone saw an open menu; `hns.py`
+  now opens the menu whenever the start menu task is not reading input. 22 round tours re-run with
+  identical shots.
+- **`dbgmenu.py`:** the AI party page's first drawing is not garbled; the docstring says so.
+- **Union Room trade board:** forced render on rc22's clip ROM, 0 clip records, the plates whole.
+  Not seen in play: it needs a Wireless Adapter.
+- 182 tool tests OK on Python 3.11.9 and 3.9.6; drift 0 FAIL, audit 0 errors and 54 warnings
+  (39,059 strings), namecheck 0 problems, generators and `flag_gates.py` up to date.
+
 **Not verified:**
 
 - A Linux build with devkitPro pacman; another machine with devkitARM r68 reproducing the 0.2
@@ -2052,8 +2077,8 @@ are under `<private>/scratch/screens/r21/`, in `fixes/`, `emu/` and `static/`):
   fix.
 - The out-of-bounds read behind Scott's shields could write through a stray pointer after a link
   Dodrio Berry Picking game (needs a link).
-- Of round 20's names, the Union Room trade board's type plate (needs a link,
-  `src/union_room.c:4124`). Every other place no test had reached was shown on screen or proved
+- Of round 20's names, the Union Room trade board's type plate in play (needs a Wireless Adapter,
+  `src/union_room.c:4124`; round 22 drew it only by forcing the state). Every other place no test had reached was shown on screen or proved
   unreachable in round 21 (above).
 - A native speaker's read. Reviewers asked for one on: the radio's adjective pairs
   (`src/data/text/radio_strings.h:54-69`), the Ultra Beast Pokédex entries
