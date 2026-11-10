@@ -140,6 +140,60 @@ class OldChunksTest(unittest.TestCase):
         run_make_chunks(self.out, 2, 'BX', '--supplement')
         self.assertEqual(self.files(), before)          # every unit is in a file already: nothing new
 
+    def ids(self, rel):
+        with open(os.path.join(self.out, rel), encoding='utf-8') as f:
+            d = json.load(f)
+        return [u['id'] for u in (d['units'] if isinstance(d, dict) else d)]
+
+    def all_ids(self):
+        return sorted(i for rel in self.files() for i in self.ids(rel))
+
+    def test_two_supplements_in_a_row_keep_both(self):
+        run_make_chunks(self.out, 2)
+        every = self.all_ids()
+        first, second = self.ids('BX/BX_01.json'), self.ids('BX/BX_02.json')
+        os.remove(os.path.join(self.out, 'BX', 'BX_01.json'))
+        run_make_chunks(self.out, 2, 'BX', '--supplement')
+        os.remove(os.path.join(self.out, 'BX', 'BX_02.json'))
+        run = run_make_chunks(self.out, 2, 'BX', '--supplement')
+        self.assertEqual(self.files(), ['BX/BX_03.json', 'BX/BX_names.json', 'BX/BX_s01.json', 'BX/BX_s02.json'])
+        self.assertEqual((self.ids('BX/BX_s01.json'), self.ids('BX/BX_s02.json')), (first, second))
+        self.assertEqual(read_chunks(self.out)['BX_s02.json']['chunk'], 'BX_s02')
+        self.assertEqual(self.all_ids(), every)
+        self.assertIn('BX: supplement: wrote BX_s02.json', run.stdout)
+
+    def test_a_supplement_numbers_after_the_last_one(self):
+        run_make_chunks(self.out, 2)
+        os.remove(os.path.join(self.out, 'BX', 'BX_01.json'))
+        plant(self.out, 'BX/BX_s03.json')                 # s01 and s02 were applied and moved away
+        run_make_chunks(self.out, 2, 'BX', '--supplement')
+        self.assertEqual([f for f in self.files() if '_s' in f], ['BX/BX_s03.json', 'BX/BX_s04.json'])
+
+    def test_a_supplement_adds_its_names_to_the_earlier_ones(self):
+        run_make_chunks(self.out, 2)
+        pikachu = self.ids('BX/BX_names.json')
+        os.remove(os.path.join(self.out, 'BX', 'BX_names.json'))
+        earlier = [{'id': 'earlier::NAME', 'en': 'EARLIER', 'he': 'קודם', 'fixed': 'species SPECIES_EARLIER'}]
+        plant(self.out, 'BX/BX_snames.json', json.dumps(earlier, ensure_ascii=False))
+        run = run_make_chunks(self.out, 2, 'BX', '--supplement')
+        self.assertEqual(self.ids('BX/BX_snames.json'), ['earlier::NAME'] + pikachu)
+        self.assertIn('BX: supplement: added 1 pre-filled name(s) to BX_snames.json', run.stdout)
+
+    def test_a_full_run_after_supplements_removes_them(self):
+        # A full run cuts every live unit of the batch again, the supplements' units among them, so
+        # it removes the supplement files and names them; the folder ends as a fresh run's.
+        _, fresh = make_chunks(os.path.join(self.dir, 'fresh'), 2)
+        run_make_chunks(self.out, 2)
+        os.remove(os.path.join(self.out, 'BX', 'BX_01.json'))
+        os.remove(os.path.join(self.out, 'BX', 'BX_names.json'))
+        run_make_chunks(self.out, 2, 'BX', '--supplement')
+        os.remove(os.path.join(self.out, 'BX', 'BX_02.json'))
+        run_make_chunks(self.out, 2, 'BX', '--supplement')
+        run = run_make_chunks(self.out, 2)
+        self.assertEqual(read_chunks(self.out), fresh)
+        self.assertIn('BX: removed 3 chunk file(s) of an earlier run that this run does not write: '
+                      'BX_s01.json, BX_s02.json, BX_snames.json', run.stdout)
+
     def test_all_warns_about_a_batch_the_inventory_has_no_longer(self):
         data = os.path.join(self.dir, 'data')
         os.makedirs(data)
