@@ -6,7 +6,7 @@ FallarborTown_BattleTentLobby_Text_WelcomeToBattleTent:
 #else
 FallarborTown_BattleTentLobby_Text_WelcomeToBattleTent:
 	.string "ברוך הבא לאוהל הקרב,\n"
-	.string "סניף FALLARBOR!\p"
+	.string "סניף פלארבור!\p"
 	.string "אני המדריך שלך בטורניר הנוקאאוט!$"
 #endif
 
@@ -22,7 +22,7 @@ FallarborTown_BattleTentLobby_Text_ExplainFallarborTent:
 #if IS_HNS
 	.string "באוהל הקרב של הזירה,\n"
 #else
-	.string "באוהל הקרב של FALLARBOR,\n"
+	.string "באוהל הקרב של פלארבור,\n"
 #endif
 	.string "אנחנו עורכים את טורניר הנוקאאוט.\p"
 	.string "כל המשתתפים נכנסים עם קבוצה\n"
@@ -134,7 +134,7 @@ VerdanturfTown_BattleTentLobby_Text_WelcomeToBattleTent:
 #else
 VerdanturfTown_BattleTentLobby_Text_WelcomeToBattleTent:
 	.string "ברוך הבא לאוהל הקרב,\n"
-	.string "סניף VERDANTURF!\p"
+	.string "סניף ורדנטרף!\p"
 	.string "כאן נבחן האמון של המאמן\n"
 	.string "בפוקימונים שלו.$"
 #endif
@@ -142,7 +142,7 @@ VerdanturfTown_BattleTentLobby_Text_TakeChallenge:
 #if IS_HNS
 	.string "האם תרצה לקבל את אתגר הארמון\n"
 #else
-	.string "האם תרצה לקבל את אתגר VERDANTURF\n"
+	.string "האם תרצה לקבל את אתגר ורדנטרף\n"
 #endif
 	.string "באוהל הקרב?$"
 
@@ -150,7 +150,7 @@ VerdanturfTown_BattleTentLobby_Text_ExplainVerdanturfTent:
 #if IS_HNS
 	.string "באוהל הקרב של הארמון,\n"
 #else
-	.string "באוהל הקרב של VERDANTURF,\n"
+	.string "באוהל הקרב של ורדנטרף,\n"
 #endif
 	.string "יש כלל חשוב אחד שחובה לציית לו.\p"
 	.string "למאמנים מותר רק להכניס\n"
@@ -242,7 +242,7 @@ SlateportCity_BattleTentLobby_Text_WelcomeToBattleTent:
 #else
 SlateportCity_BattleTentLobby_Text_WelcomeToBattleTent:
 	.string "ברוך הבא לאוהל הקרב,\n"
-	.string "סניף SLATEPORT!\p"
+	.string "סניף סלייטפורט!\p"
 	.string "אני המדריך שלך לטורניר\n"
 	.string "החלפת הקרב.$"
 #endif
@@ -256,7 +256,7 @@ SlateportCity_BattleTentLobby_Text_ExplainSlateportTent:
 #if IS_HNS
 	.string "כאן, באוהל הקרב של המפעל,\n"
 #else
-	.string "כאן, באוהל הקרב של SLATEPORT,\n"
+	.string "כאן, באוהל הקרב של סלייטפורט,\n"
 #endif
 	.string "אנחנו עורכים אירועי החלפת קרב\l"
 	.string "עם פוקימונים שכורים.\p"

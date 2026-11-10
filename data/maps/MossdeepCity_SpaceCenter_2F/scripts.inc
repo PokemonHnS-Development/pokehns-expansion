@@ -487,5 +487,5 @@ MossdeepCity_SpaceCenter_2F_Text_StevenThankYouComeSeeMeAtHome:
 	.string "על העזרה שלך.\p"
 	.string "בוא לבקר אותי בבית\n"
 	.string "אחרי זה, בבקשה.\p"
-	.string "אה, נכון, אני לא גר בעיר RUSTBORO.\n"
+	.string "אה, נכון, אני לא גר בעיר ראסטבורו.\n"
 	.string "אני גר ממש כאן, על האי הזה.$"

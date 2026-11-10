@@ -540,7 +540,7 @@ seen on screen: 525 | translated: 125
 | `src/battle_z_move.c` | 8 | 8 | translated |
 | `src/berry.c` | 204 | 204 | translated |
 | `src/berry_blender.c` | 27 | 27 | translated |
-| `src/berry_fix_program.c` | 9 | 7 | translated (2 kept in Latin: the Ruby/Sapphire berry-fix program) |
+| `src/berry_fix_program.c` | 9 | 7 | translated (2 kept in Latin: the game names under the console picture, printed left to right) |
 | `src/berry_tag_screen.c` | 11 | 11 | translated |
 | `src/challenge_menu.c` | 265 | 265 | translated |
 | `src/contest.c` | 48 | 48 | translated |
@@ -591,7 +591,7 @@ seen on screen: 525 | translated: 125
 | `src/data/pokemon/species_info/gen_8_families.h` | 302 | 302 | translated |
 | `src/data/pokemon/species_info/gen_9_families.h` | 374 | 374 | translated |
 | `src/data/pokemon/species_info/shared_dex_text.h` | 46 | 46 | translated |
-| `src/data/script_menu.h` | 222 | 216 | translated (6 kept in Latin: Emerald ferry destinations and BP amounts) |
+| `src/data/script_menu.h` | 222 | 219 | translated (3 kept in Latin: BP amounts and the link-contest modes E and G) |
 | `src/data/speaker_names.h` | 1 | 1 | translated |
 | `src/data/text/follower_messages.h` | 138 | 138 | translated |
 | `src/data/text/gift_ribbon_descriptions.h` | 46 | 46 | translated |
@@ -633,7 +633,7 @@ seen on screen: 525 | translated: 125
 | `src/pokenav_conditions_search_results.c` | 1 | 1 | translated |
 | `src/pokenav_list.c` | 3 | 3 | translated |
 | `src/pokenav_main_menu.c` | 13 | 13 | translated |
-| `src/pokenav_match_call_data.c` | 39 | 38 | translated (1 kept in Latin: Emerald PokéNav contacts, replaced by the PokéGear in Heart & Soul) |
+| `src/pokenav_match_call_data.c` | 39 | 39 | translated |
 | `src/pokenav_match_call_gfx.c` | 7 | 7 | translated |
 | `src/pokenav_match_call_list.c` | 1 | 1 | translated |
 | `src/pokenav_menu_handler_gfx.c` | 18 | 18 | translated |

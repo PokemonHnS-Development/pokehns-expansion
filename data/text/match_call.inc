@@ -2069,15 +2069,15 @@ MatchCall_Text_Roxanne2::
 MatchCall_Text_Roxanne3::
 	.string "רוקסן: {PLAYER}!\n"
 	.string "המכון שלי מוכן!\p"
-	.string "בוא בבקשה לבקר ב-RUSTBORO\n"
+	.string "בוא בבקשה לבקר בראסטבורו\n"
 	.string "מתי שתוכל!$"
 
 MatchCall_Text_Roxanne4::
 	.string "רוקסן: הקרב שלנו, {PLAYER},\n"
-	.string "הוא מקור לגאווה במכון של RUSTBORO.$"
+	.string "הוא מקור לגאווה במכון של ראסטבורו.$"
 
 MatchCall_Text_Brawly1::
-	.string "BRAWLY: היי, {PLAYER}{KUN}!\p"
+	.string "ברולי: היי, {PLAYER}{KUN}!\p"
 	.string "למדתי הרבה מהקרב\n"
 	.string "שהיה בינינו.\p"
 	.string "אני מתכוון להתאמן מההתחלה,\n"
@@ -2088,7 +2088,7 @@ MatchCall_Text_Brawly1::
 	.string "אני רוצה שתאתגר אותנו שוב.$"
 
 MatchCall_Text_Brawly2::
-	.string "BRAWLY: היי, {PLAYER}{KUN}!\n"
+	.string "ברולי: היי, {PLAYER}{KUN}!\n"
 	.string "מזל טוב!\p"
 	.string "השמועות על ההישגים שלך\n"
 	.string "הגיעו אליי עם רוחות הגאות!\p"
@@ -2100,17 +2100,17 @@ MatchCall_Text_Brawly2::
 	.string "אני רוצה שתאתגר אותנו שוב.$"
 
 MatchCall_Text_Brawly3::
-	.string "BRAWLY: היי, {PLAYER}{KUN}!\n"
+	.string "ברולי: היי, {PLAYER}{KUN}!\n"
 	.string "המכון שלי מוכן לפעולה!\p"
-	.string "בוא ל-DEWFORD מתי שתרצה\n"
+	.string "בוא לדיופורד מתי שתרצה\n"
 	.string "לאתגר נוסף!$"
 
 MatchCall_Text_Brawly4::
-	.string "BRAWLY: {PLAYER}{KUN}, אני לא חושב\n"
+	.string "ברולי: {PLAYER}{KUN}, אני לא חושב\n"
 	.string "שאי פעם יימאס לי להילחם בך!$"
 
 MatchCall_Text_Wattson1::
-	.string "WATTSON: אה, זה אתה!\p"
+	.string "ווטסון: אה, זה אתה!\p"
 	.string "אחרי שעזבת, התחלתי את\n"
 	.string "האימונים שלי מאפס.\p"
 	.string "נראה לי שאני צריך עוד טיפ-טיפה\n"
@@ -2119,7 +2119,7 @@ MatchCall_Text_Wattson1::
 	.string "וואהאהאהאהא!$"
 
 MatchCall_Text_Wattson2::
-	.string "WATTSON: וואהאהאהאהא!\p"
+	.string "ווטסון: וואהאהאהאהא!\p"
 	.string "באמת עשית את זה, מה?\n"
 	.string "השמועות עליך הגיעו אליי!\p"
 	.string "נראה שאני צריך להתאמן\n"
@@ -2130,18 +2130,18 @@ MatchCall_Text_Wattson2::
 	.string "וואהאהאהאהא!$"
 
 MatchCall_Text_Wattson3::
-	.string "WATTSON: אה, זה אתה!\n"
+	.string "ווטסון: אה, זה אתה!\n"
 	.string "המכון שלי מוכן!\p"
-	.string "בוא לבקר ב-MAUVILLE מתי שתרצה!\n"
+	.string "בוא לבקר במוביל מתי שתרצה!\n"
 	.string "וואהאהאהאהא!$"
 
 MatchCall_Text_Wattson4::
-	.string "WATTSON: וואהאהאהא!\p"
+	.string "ווטסון: וואהאהאהא!\p"
 	.string "קרב איתך תמיד טעון\n"
 	.string "בכוח מחשמל!$"
 
 MatchCall_Text_Flannery1::
-	.string "FLANNERY: {PLAYER}…\p"
+	.string "פלנרי: {PLAYER}…\p"
 	.string "כשנלחמנו, הבנתי בדיוק\n"
 	.string "כמה לא בשלה הייתי.\p"
 	.string "אבל אני עוד לא גמרתי!\p"
@@ -2151,7 +2151,7 @@ MatchCall_Text_Flannery1::
 	.string "בבקשה תאתגר אותנו שוב.$"
 
 MatchCall_Text_Flannery2::
-	.string "FLANNERY: הלו, {PLAYER}?\n"
+	.string "פלנרי: הלו, {PLAYER}?\n"
 	.string "מזל טוב!\p"
 	.string "השמועה על ההצלחה שלך הגיעה\n"
 	.string "אלינו כמו חום של הר געש!\p"
@@ -2161,86 +2161,86 @@ MatchCall_Text_Flannery2::
 	.string "השם שלי ברשימת שיחות המאמנים.$"
 
 MatchCall_Text_Flannery3::
-	.string "FLANNERY: אה, {PLAYER}?\n"
+	.string "פלנרי: אה, {PLAYER}?\n"
 	.string "המכון שלנו מוכן!\p"
-	.string "בוא ל-LAVARIDGE לטבילה\n"
+	.string "בוא ללאבריג' לטבילה\n"
 	.string "במעיין החם ולאתגר!$"
 
 MatchCall_Text_Flannery4::
-	.string "FLANNERY: {PLAYER}…\p"
+	.string "פלנרי: {PLAYER}…\p"
 	.string "אני בטוחה שבכל פעם אתה\n"
 	.string "נעשה מאמן טוב יותר.$"
 
 MatchCall_Text_Winona1::
-	.string "WINONA: שלום, {PLAYER}!\p"
+	.string "וינונה: שלום, {PLAYER}!\p"
 	.string "בזכות הקרב שלנו, הבנתי\n"
 	.string "מהן נקודות התורפה שלי!\p"
 	.string "כשאפתח מחדש את המכון,\n"
 	.string "לא אנחל עוד תבוסה!$"
 
 MatchCall_Text_Winona2::
-	.string "WINONA: עשית את זה, {PLAYER}!\p"
+	.string "וינונה: עשית את זה, {PLAYER}!\p"
 	.string "החדשות על האלוף החדש\n"
-	.string "הגיעו אלינו ל-FORTREE!\p"
+	.string "הגיעו אלינו לפורטרי!\p"
 	.string "אבל… בפעם הבאה שנילחם,\n"
 	.string "זה לא ייגמר באותה הדרך.$"
 
 MatchCall_Text_Winona3::
-	.string "WINONA: זה {PLAYER}?\n"
+	.string "וינונה: זה {PLAYER}?\n"
 	.string "המכון שלנו חזר לפעול!\p"
-	.string "אנחנו מחכים לך ב-FORTREE!$"
+	.string "אנחנו מחכים לך בפורטרי!$"
 
 MatchCall_Text_Winona4::
-	.string "WINONA: {PLAYER}…\p"
+	.string "וינונה: {PLAYER}…\p"
 	.string "אף שהפסדתי, הכנפיים שלי\n"
 	.string "לעולם לא יישברו.\p"
 	.string "כן, בדיוק כמו שאתה אף פעם\n"
 	.string "לא הסרת את עיניך מהחלום שלך.$"
 
 MatchCall_Text_TateLiza1::
-	.string "TATE: אה! אתה…\n"
-	.string "LIZA: {PLAYER}!\p"
-	.string "TATE: אנחנו שוב מתאמנים…\n"
-	.string "LIZA: כדי לפתוח מחדש את המכון!\p"
-	.string "TATE: כשהמכון שלנו יהיה מוכן…\n"
-	.string "LIZA: כשהמכון שלנו יהיה מוכן…\p"
-	.string "TATE: יופיע סימן ליד השם שלנו…\n"
-	.string "LIZA: ברשימת שיחות המאמנים.$"
+	.string "טייט: אה! אתה…\n"
+	.string "ליזה: {PLAYER}!\p"
+	.string "טייט: אנחנו שוב מתאמנים…\n"
+	.string "ליזה: כדי לפתוח מחדש את המכון!\p"
+	.string "טייט: כשהמכון שלנו יהיה מוכן…\n"
+	.string "ליזה: כשהמכון שלנו יהיה מוכן…\p"
+	.string "טייט: יופיע סימן ליד השם שלנו…\n"
+	.string "ליזה: ברשימת שיחות המאמנים.$"
 
 MatchCall_Text_TateLiza2::
-	.string "TATE: {PLAYER}, מזל טוב!\n"
-	.string "LIZA: {PLAYER}, מזל טוב!\p"
-	.string "TATE: שנינו…\n"
-	.string "LIZA: עדיין מתאמנים!\p"
-	.string "TATE: אנחנו צריכים עוד זמן, אבל…\n"
-	.string "LIZA: כשהמכון שלנו יהיה מוכן…\p"
-	.string "TATE: יופיע סימן ליד השם שלנו…\n"
-	.string "LIZA: ברשימת שיחות המאמנים.$"
+	.string "טייט: {PLAYER}, מזל טוב!\n"
+	.string "ליזה: {PLAYER}, מזל טוב!\p"
+	.string "טייט: שנינו…\n"
+	.string "ליזה: עדיין מתאמנים!\p"
+	.string "טייט: אנחנו צריכים עוד זמן, אבל…\n"
+	.string "ליזה: כשהמכון שלנו יהיה מוכן…\p"
+	.string "טייט: יופיע סימן ליד השם שלנו…\n"
+	.string "ליזה: ברשימת שיחות המאמנים.$"
 
 MatchCall_Text_TateLiza3::
-	.string "TATE: {PLAYER}!\n"
-	.string "LIZA: {PLAYER}!\p"
-	.string "TATE: המכון שלנו מוכן!\n"
-	.string "LIZA: המכון שלנו מוכן!\p"
-	.string "TATE: בוא בבקשה לבקר…\n"
-	.string "LIZA: ב-MOSSDEEP מתי שתרצה!$"
+	.string "טייט: {PLAYER}!\n"
+	.string "ליזה: {PLAYER}!\p"
+	.string "טייט: המכון שלנו מוכן!\n"
+	.string "ליזה: המכון שלנו מוכן!\p"
+	.string "טייט: בוא בבקשה לבקר…\n"
+	.string "ליזה: במוסדיפ מתי שתרצה!$"
 
 MatchCall_Text_TateLiza4::
-	.string "TATE: {PLAYER}, הקרב שלנו…\n"
-	.string "LIZA: היה חוויה שלא תסולא בפז.\p"
-	.string "TATE: יהיה נחמד אם…\n"
-	.string "LIZA: נוכל כולנו להילחם שוב!$"
+	.string "טייט: {PLAYER}, הקרב שלנו…\n"
+	.string "ליזה: היה חוויה שלא תסולא בפז.\p"
+	.string "טייט: יהיה נחמד אם…\n"
+	.string "ליזה: נוכל כולנו להילחם שוב!$"
 
 MatchCall_Text_Juan1::
-	.string "JUAN: הממ…\n"
+	.string "חואן: הממ…\n"
 	.string "{PLAYER}{KUN}… נכון?\p"
 	.string "הקרב שלנו הזכיר לי את הפעם\n"
-	.string "הראשונה שפגשתי את WALLACE.\p"
+	.string "הראשונה שפגשתי את וולאס.\p"
 	.string "אולי אתה גאון שעוד\n"
-	.string "יעלה על WALLACE!$"
+	.string "יעלה על וולאס!$"
 
 MatchCall_Text_Juan2::
-	.string "JUAN: פופו… {PLAYER}{KUN}…\n"
+	.string "חואן: פופו… {PLAYER}{KUN}…\n"
 	.string "סוף סוף השגת את מטרתך.\p"
 	.string "העין שלי לזיהוי כישרון\n"
 	.string "לא טעתה…\p"
@@ -2248,14 +2248,14 @@ MatchCall_Text_Juan2::
 	.string "כי טיפסת אל פסגת העוצמה והיוקרה.$"
 
 MatchCall_Text_Juan3::
-	.string "JUAN: הוהו… {PLAYER}{KUN}…\p"
-	.string "המכון שלנו ב-SOOTOPOLIS\n"
+	.string "חואן: הוהו… {PLAYER}{KUN}…\p"
+	.string "המכון שלנו בסוטופוליס\n"
 	.string "נפתח סוף סוף מחדש.\p"
 	.string "אם תרצה לראות אותי, אתה\n"
 	.string "מוזמן לבקר בכל עת.$"
 
 MatchCall_Text_Juan4::
-	.string "JUAN: {PLAYER}{KUN}…\p"
+	.string "חואן: {PLAYER}{KUN}…\p"
 	.string "כמו מוזיקה משובחת, הקרבות שלנו\n"
 	.string "פורטים בליבי על מיתרי ההשראה…\p"
 	.string "כשאני עוצם את עיניי, אני רואה\n"
@@ -2269,21 +2269,21 @@ MatchCall_Text_Sidney::
 	.string "אחכה לך!$"
 
 MatchCall_Text_Phoebe::
-	.string "PHOEBE: היי, {PLAYER}!\p"
+	.string "פיבי: היי, {PLAYER}!\p"
 	.string "מה דעתך לחזור לכאן\n"
 	.string "מתישהו?\p"
 	.string "הייתי רוצה לראות כמה התחזק\n"
 	.string "הקשר בינך לבין הפוקימונים שלך.$"
 
 MatchCall_Text_Glacia::
-	.string "GLACIA: שלום, {PLAYER}.\p"
+	.string "גלסיה: שלום, {PLAYER}.\p"
 	.string "אני מקווה שלא נעשית\n"
 	.string "שאנן בגלל הכוח שלך?\p"
 	.string "אם תרגיש צורך לצנן מעט את הרגשות\n"
 	.string "הלוהטים שלך, בוא לליגת הפוקימון…$"
 
 MatchCall_Text_Drake::
-	.string "DRAKE: הקול הזה… {PLAYER}, נכון?\n"
+	.string "דרייק: הקול הזה… {PLAYER}, נכון?\n"
 	.string "אתה נשמע טוב…\p"
 	.string "הבנתי שנפתח מתקן בשם חזית הקרב,\n"
 	.string "שבוחן את כישורי המאמנים.\p"
@@ -2292,7 +2292,7 @@ MatchCall_Text_Drake::
 	.string "אתה לא מסכים, {PLAYER}?$"
 
 MatchCall_Text_Wallace::
-	.string "WALLACE: שלום, {PLAYER}{KUN}.\n"
+	.string "וולאס: שלום, {PLAYER}{KUN}.\n"
 	.string "פגשת את סטיבן?\p"
 	.string "הוא…\n"
 	.string "למעשה מיומן להפליא.\p"
@@ -2338,25 +2338,25 @@ MatchCall_Text_May1::
 	.string "מיי: היי, {PLAYER}{KUN}!\n"
 	.string "מר ברייני פרש מעבודתו כמלח.\p"
 	.string "אבל לפעמים אני עדיין רואה אותו\n"
-	.string "בים עם PEEKO, חיית המחמד שלו.\p"
+	.string "בים עם פיקו, חיית המחמד שלו.\p"
 	.string "הוא בטח עדיין אוהב את הים.$"
 
 MatchCall_Text_May2::
 	.string "מיי: היי, {PLAYER}{KUN}!\p"
 	.string "שמת לב שלעיירות קטנות כמו\n"
-	.string "PETALBURG ו-DEWFORD יש מכונים?\p"
+	.string "פטלבורג ודיופורד יש מכונים?\p"
 	.string "משום מה, בעיר הנמל הגדולה\n"
-	.string "SLATEPORT אין מכון.\p"
+	.string "סלייטפורט אין מכון.\p"
 	.string "כשיבנו שם סוף סוף מכון, כדאי\n"
 	.string "שאגיש מועמדות לתפקיד המנהיגה.$"
 
 MatchCall_Text_May3::
 	.string "מיי: היי, {PLAYER}{KUN}!\p"
-	.string "אתה זוכר איש ב-RUSTBORO\n"
+	.string "אתה זוכר איש בראסטבורו\n"
 	.string "שקראו לו ”החותך”?\p"
 	.string "היה לו שם בית, זוכר?\p"
 	.string "אז גיליתי שאחיו הצעיר\n"
-	.string "גר ב-MAUVILLE.\p"
+	.string "גר במוביל.\p"
 	.string "אתה יכול לנחש איך קוראים לו?\p"
 	.string "… … … … … …\n"
 	.string "… … … … … …\p"
@@ -2364,9 +2364,9 @@ MatchCall_Text_May3::
 
 MatchCall_Text_May4::
 	.string "מיי: {PLAYER}{KUN}?\n"
-	.string "מנהרת RUSTURF…\p"
+	.string "מנהרת ראסטרף…\p"
 	.string "קראו לה כך כי היא מחברת\n"
-	.string "בין RUSTBORO ל-VERDANTURF.$"
+	.string "בין ראסטבורו לורדנטרף.$"
 
 MatchCall_Text_May5::
 	.string "מיי: {PLAYER}{KUN}, מה שלומך?\p"
@@ -2393,7 +2393,7 @@ MatchCall_Text_May7::
 
 MatchCall_Text_May8::
 	.string "מיי: {PLAYER}{KUN}, היי.\p"
-	.string "הר PYRE הוא אתר הנצחה\n"
+	.string "הר המוקד הוא אתר הנצחה\n"
 	.string "לפוקימונים שחייהם הסתיימו.\p"
 	.string "אולי בגלל זה הוא שורץ\n"
 	.string "פוקימונים מסוג רפאים!$"
@@ -2401,7 +2401,7 @@ MatchCall_Text_May8::
 MatchCall_Text_May9::
 	.string "מיי: היי, {PLAYER}{KUN}!\p"
 	.string "חשבתי ללכת למעיין החם\n"
-	.string "ב-LAVARIDGE.\p"
+	.string "בלאבריג'.\p"
 	.string "אבל בדרך, ליד המעבר המשונן,\n"
 	.string "נתקלתי בכמה טיפוסים מפוקפקים.\p"
 	.string "האווירה הייתה מאיימת!$"
@@ -2409,7 +2409,7 @@ MatchCall_Text_May9::
 MatchCall_Text_May10::
 	.string "מיי: היי, {PLAYER}{KUN}!\n"
 	.string "ראית את החדשות?\p"
-	.string "אומרים שקפטן STERN יצא\n"
+	.string "אומרים שקפטן סטרן יצא\n"
 	.string "למשלחת בצוללת שלו,\p"
 	.string "וגילה את מערת קרקעית הים.$"
 
@@ -2445,7 +2445,7 @@ MatchCall_Text_May14::
 	.string "מיי: {PLAYER}{KUN}!\n"
 	.string "שמעתי את השמועות!\p"
 	.string "ניצחת את מנהיג המכון\n"
-	.string "של SOOTOPOLIS?\p"
+	.string "של סוטופוליס?\p"
 	.string "זה אומר שלא נשאר לך\n"
 	.string "עוד הרבה, נכון?$"
 
@@ -2459,26 +2459,26 @@ MatchCall_Text_Brendan1::
 	.string "ברנדן: היי, {PLAYER}!\n"
 	.string "מר ברייני פרש מעבודתו כמלח.\p"
 	.string "אבל לפעמים אני עדיין רואה אותו\n"
-	.string "בים עם PEEKO, חיית המחמד שלו.\p"
+	.string "בים עם פיקו, חיית המחמד שלו.\p"
 	.string "כנראה שהוא עדיין\n"
 	.string "אוהב את הים.$"
 
 MatchCall_Text_Brendan2::
 	.string "ברנדן: היי, {PLAYER}!\p"
 	.string "אני לא מבין איך לעיירות קטנות כמו\n"
-	.string "PETALBURG ו-DEWFORD יש מכונים.\p"
+	.string "פטלבורג ודיופורד יש מכונים.\p"
 	.string "כלומר, לעיר הנמל הגדולה\n"
-	.string "SLATEPORT אין אפילו מכון!\p"
+	.string "סלייטפורט אין אפילו מכון!\p"
 	.string "כשיבנו שם סוף סוף מכון, כדאי\n"
 	.string "שאגיש מועמדות לתפקיד המנהיג.$"
 
 MatchCall_Text_Brendan3::
 	.string "ברנדן: יו, {PLAYER}!\p"
-	.string "אתה זוכר בחור ב-RUSTBORO\n"
+	.string "אתה זוכר בחור בראסטבורו\n"
 	.string "שקראו לו ”החותך”?\p"
 	.string "היה לו שם בית, נכון?\p"
 	.string "אז מסתבר שאחיו הקטן\n"
-	.string "גר ב-MAUVILLE.\p"
+	.string "גר במוביל.\p"
 	.string "אתה יכול לנחש איך קוראים לו?\p"
 	.string "… … … … … …\n"
 	.string "… … … … … …\p"
@@ -2486,8 +2486,8 @@ MatchCall_Text_Brendan3::
 
 MatchCall_Text_Brendan4::
 	.string "ברנדן: הקול הזה… {PLAYER}?\p"
-	.string "מנהרת RUSTURF נקראת כך כי היא\n"
-	.string "מחברת בין RUSTBORO ל-VERDANTURF.\p"
+	.string "מנהרת ראסטרף נקראת כך כי היא\n"
+	.string "מחברת בין ראסטבורו לורדנטרף.\p"
 	.string "ידעת את זה?$"
 
 MatchCall_Text_Brendan5::
@@ -2515,7 +2515,7 @@ MatchCall_Text_Brendan7::
 
 MatchCall_Text_Brendan8::
 	.string "ברנדן: {PLAYER}!\p"
-	.string "הר PYRE הוא אתר הנצחה\n"
+	.string "הר המוקד הוא אתר הנצחה\n"
 	.string "לפוקימונים שחייהם הסתיימו.\p"
 	.string "כנראה בגלל זה הוא שורץ\n"
 	.string "פוקימונים מסוג רפאים!$"
@@ -2523,7 +2523,7 @@ MatchCall_Text_Brendan8::
 MatchCall_Text_Brendan9::
 	.string "ברנדן: היי, {PLAYER}.\p"
 	.string "הייתי בדרך חזרה למעיין החם\n"
-	.string "ב-LAVARIDGE.\p"
+	.string "בלאבריג'.\p"
 	.string "אבל ליד המעבר המשונן, נתקלתי\n"
 	.string "בכמה טיפוסים מגעילים למראה.\p"
 	.string "הנבלות האלה…\n"
@@ -2532,7 +2532,7 @@ MatchCall_Text_Brendan9::
 MatchCall_Text_Brendan10::
 	.string "ברנדן: היי, {PLAYER}!\n"
 	.string "שמעת את החדשות?\p"
-	.string "אומרים שקפטן STERN יצא\n"
+	.string "אומרים שקפטן סטרן יצא\n"
 	.string "למשלחת בצוללת שלו,\p"
 	.string "וגילה את מערת קרקעית הים.$"
 
@@ -2568,7 +2568,7 @@ MatchCall_Text_Brendan14::
 	.string "ברנדן: {PLAYER}!\n"
 	.string "שמעתי את השמועות!\p"
 	.string "ניצחת את מנהיג המכון של\n"
-	.string "SOOTOPOLIS? מדהים!\p"
+	.string "סוטופוליס? מדהים!\p"
 	.string "אתה ממש קרוב עכשיו!$"
 
 MatchCall_Text_Brendan15::
@@ -2578,28 +2578,28 @@ MatchCall_Text_Brendan15::
 	.string "חברים, {PLAYER}, הם די מקנאים!$"
 
 MatchCall_Text_Wally1::
-	.string "WALLY: אה, {PLAYER}!\p"
+	.string "וולי: אה, {PLAYER}!\p"
 	.string "אני נעשה בריא יותר\n"
 	.string "ובכושר טוב יותר.\p"
 	.string "אני מקווה שבקרוב אהיה\n"
 	.string "מאמן כמוך, {PLAYER}!$"
 
 MatchCall_Text_Wally2::
-	.string "WALLY: {PLAYER}, שלום!\p"
-	.string "מאז שמנהרת RUSTURF נפרצה\n"
-	.string "עד הסוף, WANDA מאושרת מאוד!$"
+	.string "וולי: {PLAYER}, שלום!\p"
+	.string "מאז שמנהרת ראסטרף נפרצה\n"
+	.string "עד הסוף, וונדה מאושרת מאוד!$"
 
 MatchCall_Text_Wally3::
-	.string "WALLY: אה, {PLAYER}!\p"
+	.string "וולי: אה, {PLAYER}!\p"
 	.string "אני… עזבתי את הבית של דוד שלי\n"
-	.string "ב-VERDANTURF בלי לספר לאף אחד.\p"
+	.string "בורדנטרף בלי לספר לאף אחד.\p"
 	.string "אני תוהה אם הוא זועם עליי…\p"
 	.string "{PLAYER}, אתה מבין איך\n"
 	.string "אני מרגיש, נכון?$"
 
 MatchCall_Text_Wally4::
-	.string "WALLY: {PLAYER}?\n"
-	.string "זה אני, WALLY!\p"
+	.string "וולי: {PLAYER}?\n"
+	.string "זה אני, וולי!\p"
 	.string "עולם המאמנים מדהים!\p"
 	.string "כשהפוקימונים שלי איתי,\n"
 	.string "כל מיני אנשים אומרים לי שלום!\p"
@@ -2607,7 +2607,7 @@ MatchCall_Text_Wally4::
 	.string "דרך הפוקימונים!$"
 
 MatchCall_Text_Wally5::
-	.string "WALLY: {PLAYER}? זה מדהים!\p"
+	.string "וולי: {PLAYER}? זה מדהים!\p"
 	.string "הרלטס שתפסנו ביחד?\n"
 	.string "הוא התפתח, {PLAYER}!\p"
 	.string "אולי יש לי כישרון…\p"
@@ -2619,11 +2619,11 @@ MatchCall_Text_Wally5::
 MatchCall_Text_Wally6::
 	.string "… … … … … …\n"
 	.string "… … … … … …\p"
-	.string "נראה ש-WALLY נמצא מחוץ\n"
-	.string "לאזור הכיסוי של ה-POKéNAV…$"
+	.string "נראה שוולי נמצא מחוץ\n"
+	.string "לאזור הכיסוי של הפוקיגיר…$"
 
 MatchCall_Text_Wally7::
-	.string "WALLY: אה, {PLAYER}!\p"
+	.string "וולי: אה, {PLAYER}!\p"
 	.string "לפני שפגשתי אותך, כמעט\n"
 	.string "לא יצאתי מהבית…\p"
 	.string "אבל עכשיו אני בהרפתקה\n"
@@ -2653,7 +2653,7 @@ MatchCall_Text_Scott2::
 MatchCall_Text_Scott3::
 	.string "סקוט: היי, היי, {PLAYER}{KUN}!\p"
 	.string "יצא לך לטפס על\n"
-	.string "הר PYRE?\p"
+	.string "הר המוקד?\p"
 	.string "המקום הוא אתר הנצחה\n"
 	.string "לפוקימונים שהלכו לעולמם.\p"
 	.string "כל מאמן צריך לטפס לפסגה\n"
@@ -2696,10 +2696,10 @@ MatchCall_Text_Scott7::
 	.string "… … … … … …\n"
 	.string "… … … … … …\p"
 	.string "נראה שסקוט נמצא מחוץ\n"
-	.string "לאזור הכיסוי של ה-POKéNAV…$"
+	.string "לאזור הכיסוי של הפוקיגיר…$"
 
 MatchCall_Text_Norman1::
-	.string "אבא: ב-RUSTBORO יש איש שנקרא\n"
+	.string "אבא: בראסטבורו יש איש שנקרא\n"
 	.string "בשם המוזר ”החותך”.\p"
 	.string "אם אתה באזור, כדאי\n"
 	.string "שתבקר אצלו.$"
@@ -2752,7 +2752,7 @@ MatchCall_Text_Norman8::
 	.string "איזה תזמון טוב!\p"
 	.string "הפעם, אני זה שמאתגר\n"
 	.string "אותך לקרב.\p"
-	.string "אני מחכה במכון של PETALBURG.\n"
+	.string "אני מחכה במכון של פטלבורג.\n"
 	.string "קבל את האתגר שלי מתי שתרצה!$"
 
 MatchCall_Text_Norman9::
@@ -2761,7 +2761,7 @@ MatchCall_Text_Norman9::
 
 MatchCall_Text_Steven1::
 	.string "סטיבן: היי, {PLAYER}{KUN}!\p"
-	.string "כבר היית ב-MAUVILLE?\p"
+	.string "כבר היית במוביל?\p"
 	.string "כדאי לך לבקר בחנות האופניים\n"
 	.string "ולקבל אופני מהירות.\p"
 	.string "אחר כך, נסה לחקור היטב\n"
@@ -2837,8 +2837,8 @@ MatchCall_Text_UnusedProfBirch:
 	.string "POKéMON becomes more fun, eh?$"
 
 MatchCall_Text_MrStone1::
-	.string "מר STONE: אה? {PLAYER}{KUN}!\p"
-	.string "אם התקשרת אליי, ה-POKéNAV\n"
+	.string "מר סטון: אה? {PLAYER}{KUN}!\p"
+	.string "אם התקשרת אליי, הפוקיגיר\n"
 	.string "כנראה עובד כמו שצריך!\p"
 	.string "אנשים אחרים יירשמו בו,\n"
 	.string "אז נסה להתקשר גם אליהם!\p"
@@ -2852,29 +2852,29 @@ MatchCall_Text_MrStone1::
 	.string "להתראות!$"
 
 MatchCall_Text_MrStone2::
-	.string "מר STONE: אה? {PLAYER}{KUN}!\p"
+	.string "מר סטון: אה? {PLAYER}{KUN}!\p"
 	.string "מה קרה? שכחת את\n"
 	.string "השליחות הקטנה שלי?\p"
 	.string "אני צריך שתמסור את המכתב שלי\n"
-	.string "לסטיבן ב-DEWFORD.\p"
+	.string "לסטיבן בדיופורד.\p"
 	.string "אחר כך, תמסור את החבילה שלנו\n"
-	.string "לקפטן STERN ב-SLATEPORT.\p"
+	.string "לקפטן סטרן בסלייטפורט.\p"
 	.string "אתה זוכר, נכון?\p"
 	.string "ועכשיו, בתור נשיא עסוק,\n"
 	.string "אני חייב ללכת! ביי-ביי!$"
 
 MatchCall_Text_MrStone3::
-	.string "מר STONE: אה! {PLAYER}{KUN}!\p"
+	.string "מר סטון: אה! {PLAYER}{KUN}!\p"
 	.string "אה, אז פגשת את סטיבן!\n"
 	.string "אם כך, כדאי שאתגמל אותך!\p"
-	.string "כשתבקר שוב ב-RUSTBORO,\n"
+	.string "כשתבקר שוב בראסטבורו,\n"
 	.string "בוא אליי למשרד.\p"
 	.string "אני אחכה לך!$"
 
 MatchCall_Text_MrStone4::
-	.string "מר STONE: אה! {PLAYER}{KUN}!\p"
+	.string "מר סטון: אה! {PLAYER}{KUN}!\p"
 	.string "ידעת שחברת דבון חפרה\n"
-	.string "את מנהרת RUSTURF?\p"
+	.string "את מנהרת ראסטרף?\p"
 	.string "אבל עצרנו את העבודות כדי\n"
 	.string "להגן על הפוקימונים באזור.\p"
 	.string "זה בעצם מובן מאליו.\p"
@@ -2882,14 +2882,14 @@ MatchCall_Text_MrStone4::
 	.string "בשלום מאשר לדאוג לנוחות שלנו.$"
 
 MatchCall_Text_MrStone5::
-	.string "מר STONE: שלום, שלום, {PLAYER}{KUN}!\p"
-	.string "שמעתי ממישהו בעיר PETALBURG\n"
+	.string "מר סטון: שלום, שלום, {PLAYER}{KUN}!\p"
+	.string "שמעתי ממישהו בעיר פטלבורג\n"
 	.string "שנורמן הוא אבא שלך!\p"
 	.string "אין פלא שיש לך\n"
 	.string "כל כך הרבה כישרון!$"
 
 MatchCall_Text_MrStone6::
-	.string "מר STONE: מה אני שומע?\p"
+	.string "מר סטון: מה אני שומע?\p"
 	.string "נלחמת באבא שלך\n"
 	.string "וניצחת אותו?\p"
 	.string "זה מדהים!\p"
@@ -2919,7 +2919,7 @@ MatchCall_Text_MrStone9::
 	.string "בזזזז…$"
 
 MatchCall_Text_MrStone10::
-	.string "מר STONE: {PLAYER}{KUN}! זה אני!\p"
+	.string "מר סטון: {PLAYER}{KUN}! זה אני!\p"
 	.string "כנראה לקחת חלק בכל מיני דברים,\n"
 	.string "אבל מרוב עיסוקים, אין לי מושג במה!\p"
 	.string "בכל זאת, אני מפציר בך לבחור\n"
@@ -2928,7 +2928,7 @@ MatchCall_Text_MrStone10::
 	.string "כל טוב!$"
 
 MatchCall_Text_MrStone11::
-	.string "מר STONE: … … … … … …\n"
+	.string "מר סטון: … … … … … …\n"
 	.string "זה במקרה {PLAYER}{KUN}?\p"
 	.string "הקול שלך כל כך מלא ביטחון,\n"
 	.string "שלא זיהיתי אותך מיד!\p"

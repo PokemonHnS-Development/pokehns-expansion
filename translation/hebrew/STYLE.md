@@ -40,6 +40,8 @@ Where they disagree, the glossary wins for names and this file wins for everythi
   `PROF. ELM` = `פרופ' אלם` (abbreviation with a geresh), unless the glossary says otherwise.
 - Generic place words are translated, proper parts transliterated: `העיירה ניו בארק`,
   `העיר ויולט`, `דרך 29` (glossary `mapsec` rows are authoritative).
+- Hoenn places have `place` rows (`העיר ראסטבורו`); dialogue uses the proper part with the prefix
+  attached (`בראסטבורו`), as for Johto. A common English word after MT. is translated (`הר המוקד`).
 - Move names in running dialogue are bare, as in FireRed: `להשתמש בגלישה`, `להשתמש במאבק`.
   In dialogue, quote with `”…”` only where the English quotes the word: a menu option to pick
   (`לבחור ב”מנוחה”`) or a name being explained (`התקצר ל”מנוחה”`). Descriptions and menus

@@ -9,7 +9,7 @@ gText_PkmnTransferredLanettesPC::
 #if IS_FRLG || IS_HNS
 	.string "למחשב של ביל.\p"
 #else
-	.string "למחשב של LANETTE.\p"
+	.string "למחשב של לאנט.\p"
 #endif
 	.string "הוא הונח בתיבה\n"
 	.string "”{STR_VAR_1}”.$"
@@ -25,7 +25,7 @@ gText_PkmnTransferredLanettesPCBoxFull::
 #if IS_FRLG || IS_HNS
 	.string "במחשב של ביל מלאה.\p"
 #else
-	.string "במחשב של LANETTE מלאה.\p"
+	.string "במחשב של לאנט מלאה.\p"
 #endif
 	.string "{STR_VAR_2} הועבר\n"
 	.string "לתיבה ”{STR_VAR_1}”.$"
