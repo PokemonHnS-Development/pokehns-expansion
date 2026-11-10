@@ -217,23 +217,13 @@ def _key_symbol(key):
     return m.group(1)
 
 
-# headers the build generates from a source audit.py also reads: their strings are counted once,
-# under the source file, and located in the objects that include the generated header
-GENERATED = {'src/data/region_map/region_map_entries.h': 'src/data/region_map/region_map_sections.json'}
-
-
-def generated_from(tree, rel):
-    """The source a generated header is made from (X.h <- X.party, region_map_entries.h <- the json)."""
-    if rel in GENERATED:
-        return GENERATED[rel] if os.path.exists(os.path.join(tree, GENERATED[rel])) else None
-    if rel.endswith('.h') and os.path.exists(os.path.join(tree, rel[:-2] + '.party')):
-        return rel[:-2] + '.party'
-    return None
-
-
+# Headers the build generates from a source audit.py also reads (audit.is_generated_header): their
+# strings are counted once, under the source file, and located in the objects that include the
+# generated header.
 def generated_header(tree, rel):
     """The generated header of a .party / .json source, or None."""
-    for h, src in GENERATED.items():
+    import audit
+    for h, src in audit.GENERATED_FROM_JSON.items():
         if src == rel:
             return h
     if rel.endswith('.party'):
@@ -246,7 +236,7 @@ def translated_entries(tree):
     hebrew = audit.HEBREW_RE
     out = []
     for e in audit.extract_tree(tree, only=['src']):
-        if e.source in ('c', 'json', 'party') and e.text and not generated_from(tree, e.file):
+        if e.source in ('c', 'json', 'party') and e.text and not audit.is_generated_header(tree, e.file):
             out.append(e)
     out += macro_if_entries(tree)
     inc = os.path.join(tree, 'include')
