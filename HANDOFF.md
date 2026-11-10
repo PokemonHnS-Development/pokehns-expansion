@@ -44,8 +44,8 @@ fresh clone.
 | --- | --- | --- |
 | `he/main` | `c1cfd8a30b` (on GitHub too): the merges of round 19 (`he/fix-r19`, `b32c6f117c`) and round 20 (`he/fix-r20`, `c1cfd8a30b`) | `git rev-parse --short he/main` |
 | `he/renderer` | `67df13ff43` (on GitHub too): `384104fb15` plus the four graphics and Easy Chat commits of rounds 19 and 20 and three older graphics commits (section 1.2) | `git rev-parse --short he/renderer` |
-| Release | One release, 1.0, replaced in place on each update (ROM, `SHA1SUMS`, `TESTING.md`); the builds repo's commit history keeps the older builds. Current 1.0: built from `he/main` `08027d9879` | `<builds>/README.md` |
-| 1.0 ROM | `pokehns-he-2.0.6-1.0.gba`: 33554432 bytes, SHA-1 `d1fd03270572d00e06762fe6c27e1408ed2f323e`, CRC32 `A3648409` | `<builds>/SHA1SUMS` |
+| Release | One release, 1.0, replaced in place on each update (ROM, `SHA1SUMS`, `TESTING.md`); the builds repo's commit history keeps the older builds. Current 1.0: built from `he/main` `c1cfd8a30b` (rc22) | `<builds>/README.md` |
+| 1.0 ROM | `pokehns-he-2.0.6-1.0.gba`: 33554432 bytes, SHA-1 `47695df1151d3296d378df0ade42bb89ade2954b`, CRC32 `36B0B4AA` (clip build `e1b25bcfe5d911753c6df0a5cea68b094b06d96a`, CRC32 `99652CF5`) | `<builds>/SHA1SUMS` |
 | Releasing | Build a candidate with `tools/hebrew/release/`, then replace the three files in the builds repo and say in the commit message which `he/main` commit it was built from; keep `tools/hebrew/release/notes.json` at `"release": "1.0"`. A candidate is published with hand play declared as not tested (`DECISIONS.md` Q138) | section 5 |
 | CI | run 42721195219 at `c1cfd8a30b`: the `audit` job is green; `build` and `check` were still running when this was written. The three runs before it on `he/main` are green: 41918360015 at `85705e4bc9`, 41929345455 at `08027d9879` and 41933578987 at `fe509e0043` | `gh run list -R ronyeh2/pokehns-expansion-heb --workflow hebrew.yml --branch he/main` |
 | Static checks | drift 0 FAIL (708 files); audit 0 errors and 54 warnings; namecheck 0 problems and 0 warnings (34 allowlisted); plurals 0 problems; the Pokédex A–Z, Easy Chat and live-label generators up to date; 137 tool tests OK on Python 3.9.6 and 3.11.9 (`c1cfd8a30b`, baseline `he/renderer` `8cfd524776`) | section 4.2 |
@@ -57,23 +57,17 @@ fresh clone.
    person), real hardware (a 32 MiB flash cart with FLASH 128 KB and an RTC), and a read of the
    shipped wording by a native speaker. All three are in `notes.json` `not_tested`, so every
    `TESTING.md` says so; section 8.5 lists the lines reviewers flagged for a native read.
-2. **Build and test the candidate from `c1cfd8a30b` and replace 1.0 (in progress).** Rounds 19
-   and 20 change the ROM: round 19's Pokéblock graph and round 20's names, lines and type plates.
-   The integration itself is done: both rounds are merged, their graphics and Easy Chat commits
-   are on `he/renderer`, `he/upstream-fixes` is at `8d52b4cccf`, and all of it is pushed
-   (section 1.2). For round 19 alone, a build of `he/wip-r19`
-   `59d5bc76ce` with devkitARM r68 gives `pokehns.gba` SHA-1
-   `243df47e01332faed3262167d69464f554da194f` (CRC32 `94674527`) and `pokehns-clip.gba`
-   `d08b8262a656634980d351d09db243ccb247d74e` (CRC32 `61FBC99A`). Only graphics data changed:
-   the compressed graph is 20 bytes larger, so the data from `gUsePokeblockGraph_Pal` up to
-   `0x09103C88` moves by 16 to 24 bytes (alignment); code, the later data and every RAM symbol
-   stay where they were (rc21's `.map` against the new one).
-   - Run `make_chunks.py all` before the candidate's sweep (section 5).
-   - Add rc21's row and the new candidate's row to `<builds>/records/README.md`. rc21's records
-     are in `records/rc21/`, but the index stops at rc20.
-   - Then regenerate `STATUS.md` from the candidate's sweep (section 5, step 9).
-3. The open rows of section 8.1: three small tool rows, and the Pokéblock case list's three-digit level, which play most likely
-   never makes (by code reading and a frame model).
+2. **Done: 1.0 is rc22, built from `c1cfd8a30b`** (rounds 19 and 20 merged, their graphics and
+   Easy Chat commits on `he/renderer`, `he/upstream-fixes` at `8d52b4cccf`, all pushed). Against
+   rc21: `make check` the same (5074 results, 1899 failing, all known upstream failures); 71 of 71
+   tours OK and clip tours OK; the sweep OK for all 6,821 labels (`make_chunks.py all` run first);
+   the self-check, save ladder and map walk (507 OK, the same 36 HELD) pass; the ROM sweep finds
+   the same labels; 158 tour shots differ, and against round 20's reviewed AFTER build only one
+   more does (`pbi_pp_10_bag_elixir`, the bag sprite's wiggle frame; the text is identical).
+   Records are in `<builds>/records/rc22/`, indexed with rc21 in `<builds>/records/README.md`.
+   `STATUS.md` regenerated from rc22's sweep is unchanged.
+3. The open rows of section 8.1: three small tool rows, and the Pokéblock case list's
+   three-digit level, which play most likely never makes (by code reading and a frame model).
 
 ---
 
