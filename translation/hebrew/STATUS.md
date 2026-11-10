@@ -536,7 +536,7 @@ seen on screen: 525 | translated: 125
 | `src/battle_controller_oak_old_man.c` | 8 | 8 | translated |
 | `src/battle_dome.c` | 114 | 114 | translated |
 | `src/battle_main.c` | 174 | 173 | translated (1 kept in Latin: a code comment) |
-| `src/battle_message.c` | 840 | 840 | translated |
+| `src/battle_message.c` | 838 | 838 | translated |
 | `src/battle_z_move.c` | 8 | 8 | translated |
 | `src/berry.c` | 204 | 204 | translated |
 | `src/berry_blender.c` | 27 | 27 | translated |
@@ -549,8 +549,8 @@ seen on screen: 525 | translated: 125
 | `src/data/battle_frontier/apprentice.h` | 80 | 16 | translated (64 kept in Latin: the other languages' name columns; the English column is Hebrew) |
 | `src/data/battle_frontier/battle_frontier_trainers.h` | 320 | 320 | translated |
 | `src/data/battle_frontier/battle_tent.h` | 90 | 90 | translated |
-| `src/data/battle_frontier/trainer_hill.h` | 426 | 426 | translated |
-| `src/data/contest_moves.h` | 51 | 51 | translated |
+| `src/data/battle_frontier/trainer_hill.h` | 224 | 224 | translated |
+| `src/data/contest_moves.h` | 48 | 48 | translated |
 | `src/data/contest_opponents.h` | 208 | 208 | translated |
 | `src/data/contest_text_tables.h` | 58 | 58 | translated |
 | `src/data/credits_hns.h` | 194 | 29 | translated (165 kept in Latin: the names of people, teams and organisations, and the game titles) |
@@ -576,28 +576,28 @@ seen on screen: 525 | translated: 125
 | `src/data/easy_chat/easy_chat_group_voices.h` | 54 | 54 | translated |
 | `src/data/easy_chat/easy_chat_groups.h` | 22 | 22 | translated |
 | `src/data/help_window.h` | 24 | 24 | translated |
-| `src/data/items.h` | 2218 | 2218 | translated |
+| `src/data/items.h` | 2204 | 2204 | translated |
 | `src/data/lilycove_lady.h` | 16 | 16 | translated |
-| `src/data/moves_info.h` | 1807 | 1807 | translated |
+| `src/data/moves_info.h` | 1804 | 1804 | translated |
 | `src/data/party_menu.h` | 29 | 29 | translated |
 | `src/data/pokemon/species_info.h` | 3 | 3 | translated |
-| `src/data/pokemon/species_info/gen_1_families.h` | 825 | 825 | translated |
-| `src/data/pokemon/species_info/gen_2_families.h` | 341 | 341 | translated |
-| `src/data/pokemon/species_info/gen_3_families.h` | 501 | 501 | translated |
-| `src/data/pokemon/species_info/gen_4_families.h` | 298 | 298 | translated |
-| `src/data/pokemon/species_info/gen_5_families.h` | 583 | 583 | translated |
-| `src/data/pokemon/species_info/gen_6_families.h` | 319 | 319 | translated |
-| `src/data/pokemon/species_info/gen_7_families.h` | 321 | 321 | translated |
-| `src/data/pokemon/species_info/gen_8_families.h` | 346 | 346 | translated |
-| `src/data/pokemon/species_info/gen_9_families.h` | 386 | 386 | translated |
+| `src/data/pokemon/species_info/gen_1_families.h` | 716 | 716 | translated |
+| `src/data/pokemon/species_info/gen_2_families.h` | 323 | 323 | translated |
+| `src/data/pokemon/species_info/gen_3_families.h` | 447 | 447 | translated |
+| `src/data/pokemon/species_info/gen_4_families.h` | 280 | 280 | translated |
+| `src/data/pokemon/species_info/gen_5_families.h` | 551 | 551 | translated |
+| `src/data/pokemon/species_info/gen_6_families.h` | 290 | 290 | translated |
+| `src/data/pokemon/species_info/gen_7_families.h` | 300 | 300 | translated |
+| `src/data/pokemon/species_info/gen_8_families.h` | 302 | 302 | translated |
+| `src/data/pokemon/species_info/gen_9_families.h` | 374 | 374 | translated |
 | `src/data/pokemon/species_info/shared_dex_text.h` | 46 | 46 | translated |
-| `src/data/script_menu.h` | 224 | 218 | translated (6 kept in Latin: Emerald ferry destinations and BP amounts) |
+| `src/data/script_menu.h` | 222 | 216 | translated (6 kept in Latin: Emerald ferry destinations and BP amounts) |
 | `src/data/speaker_names.h` | 1 | 1 | translated |
 | `src/data/text/follower_messages.h` | 138 | 138 | translated |
 | `src/data/text/gift_ribbon_descriptions.h` | 46 | 46 | translated |
 | `src/data/text/radio_strings.h` | 213 | 213 | translated |
 | `src/data/text/ribbon_descriptions.h` | 19 | 19 | translated |
-| `src/data/trade.h` | 68 | 68 | translated |
+| `src/data/trade.h` | 65 | 65 | translated |
 | `src/data/types_info.h` | 41 | 41 | translated |
 | `src/data/union_room.h` | 194 | 194 | translated |
 | `src/dexnav.c` | 4 | 4 | translated |
@@ -632,8 +632,8 @@ seen on screen: 525 | translated: 125
 | `src/pokenav_conditions_gfx.c` | 1 | 1 | translated |
 | `src/pokenav_conditions_search_results.c` | 1 | 1 | translated |
 | `src/pokenav_list.c` | 3 | 3 | translated |
-| `src/pokenav_main_menu.c` | 17 | 17 | translated |
-| `src/pokenav_match_call_data.c` | 66 | 41 | translated (25 kept in Latin: Emerald PokéNav contacts, replaced by the PokéGear in Heart & Soul) |
+| `src/pokenav_main_menu.c` | 13 | 13 | translated |
+| `src/pokenav_match_call_data.c` | 39 | 38 | translated (1 kept in Latin: Emerald PokéNav contacts, replaced by the PokéGear in Heart & Soul) |
 | `src/pokenav_match_call_gfx.c` | 7 | 7 | translated |
 | `src/pokenav_match_call_list.c` | 1 | 1 | translated |
 | `src/pokenav_menu_handler_gfx.c` | 18 | 18 | translated |
@@ -647,7 +647,7 @@ seen on screen: 525 | translated: 125
 | `src/sliding_puzzle.c` | 6 | 6 | translated |
 | `src/slot_machine.c` | 5 | 5 | translated |
 | `src/start_menu.c` | 3 | 0 | translated (3 kept in Latin: the debug entry and AM/PM (the clock is 24-hour)) |
-| `src/strings.c` | 1139 | 1117 | translated (22 kept in Latin: button names, abbreviations (BP), unit placeholders and Emerald-only names) |
+| `src/strings.c` | 1134 | 1114 | translated (20 kept in Latin: button names, abbreviations (BP), unit placeholders and Emerald-only names) |
 | `src/text_input_strings.c` | 23 | 2 | translated (21 kept in Latin: the Latin keyboard layouts, and the English rows of the Easy Chat keyboard, which the Hebrew build does not print) |
 | `src/trader.c` | 4 | 4 | translated |
 | `src/trainer_fan_club.c` | 2 | 2 | translated |
