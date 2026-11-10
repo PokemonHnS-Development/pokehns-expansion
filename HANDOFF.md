@@ -343,10 +343,10 @@ fresh-clone test" at the end); a fresh machine was never tried (**unverified**).
 | --- | --- | --- |
 | `hnsrun` (headless libmgba runner) | build mGBA 0.10.5 in a **permanent** folder, then the runner (`tools/hebrew/emu/README.md:21-45`); set `HNS_RUNNER` if you keep it outside `tools/hebrew/emu/` | rebuilt; on the reference machine `<private>/emu/hnsrun`, rpath to `<private>/mgba/build` |
 | save ladder `ladder1_newgame.sav` … `ladder6_postgame.sav` and the tour base saves | the ladder on the **English** ROM: `hns.py --rom "$HNS_EN_ROM" run $E/scripts/ladder1_newgame.txt OUT --save OUT/none.sav --save-out "$HNS_SAVES/ladder1_newgame.sav"`, then `$E/scripts/make_ladder.sh` (`emu/README.md`); no script in the fork makes `pif2_base` or `r1field_menuA_base` | `<builds>/saves` (`HNS_SAVES`): at the top the ladder and every save a release tour starts from (`menuA_base`, `pif2_base`, `r1field_menuA_base` and others); the round tours' saves in subfolders (section 4.5). Each is 131088 B = 128 KiB flash + 16-byte RTC footer |
-| unit chunks (the sweep's labels) | `python3 tools/hebrew/make_chunks.py all` → `build/hebrew/units`, 6,611 labels (the 7,209 that 0.2 was swept with, less the 451 flag-gated and 147 unbuilt labels that `flag_gates.py` takes out). Make them again whenever `live_labels.json` changes: the sweep reads whatever units are there | rebuilt; never stored |
+| unit chunks (the sweep's labels) | `python3 tools/hebrew/make_chunks.py all` → `build/hebrew/units`, 6,611 labels (the 7,209 that 0.2 was swept with, less the 451 flag-gated and 147 unbuilt labels that `flag_gates.py` takes out). Make them again whenever `live_labels.json` changes, **into an empty folder** (`rm -rf build/hebrew/units` first): the sweep reads whatever units are there, and `make_chunks.py` never removes an old chunk file (section 8.1) | rebuilt; never stored |
 | `crosscore` (libretro frontend) | nothing to install: `run_release_tests.sh` builds `tools/hebrew/emu/crosscore.c` with `cc -O2` into `RCDIR/tests/bin` on every run | |
 | libretro cores | `vbam`, `vba_next`, `gpsp`, `mednafen_gba`, `skyemu` `_libretro.dylib` in `HNS_CORES` (`build/hebrew/cores`); the mGBA core is RetroArch's own (`$HOME/Library/Application Support/RetroArch/cores/mgba_libretro.dylib`) | `<builds>/reference/cores/`: copies of the five, with their SHA-1 and inferred source (the libretro buildbot's macOS arm64 nightlies, files dated 2026-10-17; `SOURCE.md`). RetroArch's mGBA core is not stored |
-| English map walk | `python3 tools/hebrew/emu/mapwalk.py "$HNS_EN_ROM" "$HNS_SAVES/ladder6_postgame.sav" build/hebrew/mapwalk_en` | `<builds>/reference/mapwalk_en.json` (`HNS_EN_MAPWALK`) |
+| English map walk | `python3 tools/hebrew/emu/mapwalk.py "$HNS_EN_ROM" "$HNS_SAVES/ladder6_postgame.sav" build/hebrew/mapwalk_en` (507 OK, 36 HELD, the same 36 maps as rc22's Hebrew walk) | `<builds>/reference/mapwalk_en.json` (`HNS_EN_MAPWALK`). **Stale:** an older `mapwalk.py` made it, which tapped A and B in turn; replace it with a walk by the current one (section 8.1) |
 | English tour run (for side-by-side review) | `python3 tools/hebrew/emu/hns.py tour "$HNS_EN_ROM" build/hebrew/tour_en`: 70 of the 71 tours report OK in 2:37; the two `naming_*` tours are Hebrew-only by design (section 4.5) | regenerated; not stored |
 | graphics drawing scripts | `tools/hebrew/graphics/` (its README; `gpaths.LATER_EDITS` protects the 17 files fixed by hand later) | — |
 | Hebrew glyph designs and installer | `tools/hebrew/fonts/` | — |
@@ -1040,8 +1040,12 @@ python3 <repo>/tools/hebrew/emu/sweep.py selftest CLIP.gba st   # proves the det
   `not_built` in `live_labels.json`. With units made again by `make_chunks.py all`, the sweep of
   rc21's clip ROM selected 6,611 labels: 6,611 OK, 0 SKIP, 0 CLIP (round 19). rc21's own release
   sweep still read older units: 7,209 labels, 7,062 OK, 147 SKIP. The 6,611 are a subset of those
-  7,209, so every live label was OK there too. Make the units again before a candidate's sweep
-  (section 5).
+  7,209, so every live label was OK there too. rc22's sweep read 6,821 labels, all OK: the 6,611
+  live ones plus 210 flag-off TV and Route 10 labels from three chunk files of 2026-10-22
+  (`B25/B25_04.json`, `B25/B25_05.json`, `B31/B31_06.json`) that `make_chunks.py all` had left in
+  `build/hebrew/units`. A fresh `--out` gives 6,611 labels, batch for batch the same output as
+  `rc22/make_chunks.log` (`<private>/scratch/screens/r21/static/make_chunks.txt`). Make the units
+  again, into an empty folder, before a candidate's sweep (section 5).
 - **Selections:** `--label`, `--labels-file`, `--match`, `--file`, `--batch`, `--translated` (the
   unit file has Hebrew), `--hebrew-only` (the string in this ROM has Hebrew), `--sample`,
   `--offset/--limit`; add `--resume` to continue a run. `make_chunks.py` writes its units from the
@@ -1092,16 +1096,28 @@ python3 tools/hebrew/rom_sweep.py pokehns.gba --json OUT.json
 
 - **Map walk:**
   - `HELD` means the game never gave control back within the frame budget. Compare with an
-    English walk before calling it a bug: 34 of the 36 HELD maps also hold in English (Frontier
-    rooms, Pyramid, Tents, Union Room). The other 2 are Battle Arena rooms, where the Hebrew run
-    won the first battle.
-  - Treat any `CRASH` as real until the English ROM with the same save crashes the same way.
-  - The English walk of 0.2 crashed in the Dome pre-battle room (`pc=0A0E8ECC`, the ROM's
-    wait-state mirror of `0x080E8ECC`, `FillBitmapRect4Bit+0xA0`: valid code reached through a
-    pointer with bit 25 set). Walked alone (`--only DOME_PRE_BATTLE`), the English map is HELD at the
-    room's own "Your 1st-round match is next" text and does not crash, so the crash needs state
-    from earlier in the full walk. Which state is **unverified**; the Hebrew walk holds the map
-    too. No release note.
+    English walk before calling it a bug. With the current walker all 36 HELD maps of rc22 also
+    hold in English (Frontier rooms, Pyramid, Tents, Union Room, and the two Battle Arena rooms at
+    the next-opponent menu): an English walk of 2026-11-10 gives `543 maps in 361 s: {'OK': 507,
+    'HELD': 36}`, the same 36 maps, and 539 of the 543 records are identical
+    (`<private>/scratch/screens/r21/static/mw_en_full/mapwalk.json`). The stored English walk
+    (`HNS_EN_MAPWALK`) is older and holds only 34 of them (section 8.1).
+  - Treat any `CRASH` as real until the English ROM with the same save crashes the same way, but
+    first look at the PC. **A PC in `0x0A000000`-`0x0DFFFFFF` is a false alarm of the harness.**
+    pokeemerald-expansion stores every script command that "requests effects" as its address
+    plus `ROM_SIZE` (`data/script_cmd_table.inc:6-12`, `ROM_SIZE` `0x2000000` at
+    `constants/gba_constants.inc:33`; tested by `src/script.c:561-565`), and `RunScriptCommand`
+    calls it there (`src/script.c:130-138`), so those commands run from the ROM's wait-state
+    mirror: 232 of the 247 table entries, in English and in rc22. `hnsrun` and `hns.py` accept
+    only regions 00, 02, 03, 08 and 09 (`hnsrun.c:129-132`, `hns.py:2160-2164`; section 8.1).
+  - That is what the stored English walk's `CRASH pc=0A0E8ECC @21720` in the Dome pre-battle room
+    was. Its older walker answered with A and B in turn, so it reached the room's menu; a copy of
+    `mapwalk.py` with that one change reproduces its records 0-18 exactly, crash included. The PC
+    was in `FillBitmapRect4Bit` under `ScrCmd_multichoice`, run from the mirror; with the check
+    off the next frame is back in the BIOS halt and the menu is drawn
+    (`<private>/scratch/screens/r21/static/`, `tools/mapwalk_v5.py`, `trace18r/trace.log`,
+    `trace18a/after_crash_frame.png`). The current walker presses only B and holds the room.
+    Nothing is wrong in the game; no release note.
 - **Save ladder:** six saves made **on the English ROM**, then loaded in the Hebrew one. Rung 1 is
   in the bedroom, not a Center, so it is validated with its own script
   (`ladder_validate_newgame.txt`); `run_release_tests.sh` records each rung's exit code and
@@ -1207,11 +1223,13 @@ Ported from `<private>/scratch/release/`, the new `make_testing_md.py` reproduce
 - the English tree built;
 - `hnsrun`;
 - `HNS_SAVES` pointed at `<builds>/saves`;
-- `make_chunks.py all`, run again before each candidate (rc21's sweep read units older than
-  `flag_gates.py`: 7,209 labels, 147 skipped, instead of 6,611; section 4.5);
+- `make_chunks.py all` into an empty `build/hebrew/units`, run again before each candidate (rc21's
+  sweep read units older than `flag_gates.py`: 7,209 labels, 147 skipped, instead of 6,611; rc22's
+  read 210 flag-off labels from old chunk files on top of the 6,611; section 4.5);
 - the cores from `<builds>/reference/cores/` unzipped into `HNS_CORES` (`crosscore` is built by the
   test script);
-- `HNS_EN_MAPWALK` pointed at `<builds>/reference/mapwalk_en.json`.
+- `HNS_EN_MAPWALK` pointed at `<builds>/reference/mapwalk_en.json` (stale until it is replaced,
+  section 8.1).
 
 **Steps**
 
@@ -1389,6 +1407,7 @@ EOF
 | values read from the save block are wrong after a warp | | the save block moves on every map load and battle | use `@SB1@`/`@SB2@`/`@POS@`, which are re-read per line; never cache them |
 | a battle differs between runs | | input timing moves `Random()` | `pinrng` (`hns.py:1500-1539`) |
 | map walk `HELD` | the same map on the English ROM | a scripted sequence the B-only walker cannot finish | a harness limit unless English behaves differently |
+| `CRASH` with a PC in `0x0A`-`0x0D` (for example `pc=0A0E8ECC`), the game fine a frame later | `hns.py where` on the PC less `0x2000000` | a script command that runs from the ROM's wait-state mirror by design (`data/script_cmd_table.inc:6-12`); the harness accepts only regions 00, 02, 03, 08, 09 (`hnsrun.c:129-132`, `hns.py:2160-2164`) | a false alarm (section 4.6); the check should accept the mirrors (section 8.1) |
 | ladder1 validation exits 1 (`leavecenter: blocked inside 1.4`) | which script ran | `ladder_validate.txt` leaves a Center; rung 1 is the bedroom | validate rung 1 with `ladder_validate_newgame.txt` (`run_release_tests.sh` does) |
 | `rom_sweep.py` exits 1 with about 6,255 runs | | dead Emerald text compiled in | informational; diff against the previous candidate |
 | cross-core: VBA-Next differs on whole frames (no RTC); SkyEmu exit 139 | `crosscore` log | an old frontend that answered core options with NULL | use the frontend `run_release_tests.sh` builds from `crosscore.c` (it answers with the defaults) |
@@ -1517,6 +1536,9 @@ shots, the C-literal liveness by line, and the audit's count on a built tree) ar
 | Item | Evidence | What to do |
 | --- | --- | --- |
 | `tools/hebrew/data/c_strings.json` marks 14 English literals of `src/data/items.h` live that the build does not compile, so `STATUS.md` counts 2,218 live strings in `items.h` where the build has 2,204 | `arm-none-eabi-gcc -E` of `src/item.c` keeps 2,204 literals of `items.h`, all Hebrew. The 14 are in `#if` branches the build leaves out: the GROWTH, DAMP, STABLE, SURPRISE and BOOST MULCH descriptions, the two ICY ROCK descriptions, EXP. SHARE's and TM HAIL's descriptions, TM70's and HM DIVE's names and descriptions, and METEORITE's description. The inventory searches the ROM for each literal's longest plain run (`inventory/README.md`, "C literals"): 11 of these runs are found in the ROM, and the other 3 texts are compiled from another line. `units.py` takes the verdicts as recorded (`<private>/scratch/screens/r21/fixes/t3/why14.py`) | decide C liveness by what the preprocessor keeps, in `tools/hebrew/inventory/extract.py`, then rebuild `c_strings.json` and regenerate `STATUS.md`. Text only; nothing in the ROM changes |
+| The stored English map walk is stale, so `notes.json` and the shipped `TESTING.md` say two Battle Arena rooms hold only in Hebrew | `<builds>/reference/mapwalk_en.json` (`HNS_EN_MAPWALK`) is `<private>/runs/mapwalk_en`, written 2026-10-12 22:04-22:10 by a `mapwalk.py` that tapped A and B in turn; the walker was changed at 22:15 to the fork's B-only one. With the current walker English holds the same 36 maps as rc22 (section 4.6). `make_testing_md.py:151-153` compares `notes.json` `map_walk.hebrew_only_held` with the walks, so the 1.0 `TESTING.md:48` repeats the two Arena rooms and their reason | in one change: replace `<builds>/reference/mapwalk_en.json` with a walk of the English ROM by the current walker (`<private>/scratch/screens/r21/static/mw_en_full/mapwalk.json`, made from `../pokehns-en/pokehns.gba` SHA-1 `2fc84dcb…`), set `hebrew_only_held` to `[]` and drop `hebrew_only_reason`. Not before: with the old reference, `make_testing_md.py` refuses an empty list |
+| The harness calls a PC in the ROM's wait-state mirrors a crash | `pcIsSane` (`hnsrun.c:129-132`) and `pc_is_sane` (`hns.py:2160-2164`) accept only regions 00, 02, 03, 08 and 09, but the game runs most script commands from `0x0A` by design (section 4.6); `sweep.py:887` names a symbol only for 2, 3, 8 and 9 | accept `0x0A`-`0x0D` in both checks and map them to `0x08` for symbol names. Tools only |
+| `make_chunks.py` never removes an old chunk file, so a sweep can read labels that are no longer live | it only creates the batch folders (`make_chunks.py:115`, `os.makedirs(..., exist_ok=True)`); `build/hebrew/units` kept three chunk files of 2026-10-22, and rc22's sweep read 6,821 labels instead of 6,611 (section 4.5) | remove the batch's old chunk files before writing, or refuse a folder that is not empty; until then empty the folder first (sections 2.6 and 5) |
 | Two small leftovers of round 21's tool fixes | `status_report.py` `KEPT_LATIN` (`:22-48`) still lists `src/data/items.h` and `src/pokenav_menu_handler_gfx.c`, which no longer keep any Latin string (`STATUS.md`: 2218/2218 and 18/18). `strcov.py:222-241` has its own copy of the generated-header rule that `audit.py:451-458` now uses | drop the two entries; let `strcov.py` import `audit.is_generated_header`. Harmless as they are |
 
 ### 8.2 Content gaps and decisions
@@ -1701,7 +1723,8 @@ and the round screenshots. Freeing that disk is the owner's call.
   above at 3 pixel columns, where English touches at 2 with the same spacing: the game's layout,
   not a translation defect.
 - Leaving Birth Island with Fly works on both ROMs (section 8.2).
-- `make_chunks.py all` on this tree gives the sweep 6,611 labels (section 2.6), and the static steps
+- `make_chunks.py all` on this tree gives the sweep 6,611 labels when its folder starts empty
+  (section 2.6), and the static steps
   of the worked example in section 3.4 (`textwidth.py`, `wrap.py`, `make_chunks.py B21`,
   `checkunits.py`, `drift.py`, `audit.py`) print the outputs shown there.
 
@@ -1850,6 +1873,13 @@ under `<private>/scratch/screens/r21/`, in `fixes/` for the fixes):
 - The 143 tool tests pass on Python 3.9.6 and 3.11.9 with no skip, and all 242 scripts under
   `tools/hebrew` compile with every warning turned into an error on 3.9.6, 3.11.9 and 3.14.7.
 
+- **The English map walk's Dome "crash" is a false alarm of the harness** (section 4.6, in
+  `static/`): reproduced exactly with the older walker, traced to a script command run from the
+  ROM mirror, and the game goes on to draw the menu. With the current walker English holds the
+  same 36 maps as rc22 (`static/mw_en_full/mapwalk.json`).
+- **rc22's sweep read 210 stale labels on top of the 6,611 live ones,** from chunk files that
+  `make_chunks.py all` does not remove (section 4.5); all 6,821 were OK.
+
 **Not verified:**
 
 - A Linux build with devkitPro pacman; another machine with devkitARM r68 reproducing the 0.2
@@ -1860,7 +1890,6 @@ under `<private>/scratch/screens/r21/`, in `fixes/` for the fixes):
 - RetroArch's own `.srm` loader with the 131088-byte save.
 - The harness and the ladder on Linux; how the clock's hour reaches the game's random numbers
   (section 2.6).
-- The state that makes the English full map walk crash in the Dome pre-battle room (section 4.6).
 - A Hebrew-written save made outside a Pokémon Center, for example on a Battle Pyramid or Trainer
   Hill floor, loaded in the English ROM (section 4.6).
 - Pre-2.0 (1.2.1) saves: they do not load, by a code trace only (section 6.6).
