@@ -286,7 +286,7 @@ static const struct CreditsEntry sCreditsEntry_Zero = {11, FALSE, sCreditsText_Z
 
 
 
-static const u8 sCreditsText_PkmnEmeraldVersion[]             = _("פוקימון גרסת EMERALD");
+static const u8 sCreditsText_PkmnEmeraldVersion[]             = _("פוקימון גרסת אמרלד");
 static const u8 sCreditsText_Credits[]                        = _("קרדיטים");
 static const u8 sCreditsText_ExecutiveDirector[]              = _("מנהל פיתוח ראשי");
 static const u8 sCreditsText_Director[]                       = _("במאי");

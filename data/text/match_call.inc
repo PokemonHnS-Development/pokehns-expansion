@@ -2276,7 +2276,7 @@ MatchCall_Text_Phoebe::
 	.string "הקשר בינך לבין הפוקימונים שלך.$"
 
 MatchCall_Text_Glacia::
-	.string "גלייסיה: שלום, {PLAYER}.\p"
+	.string "גלסיה: שלום, {PLAYER}.\p"
 	.string "אני מקווה שלא נעשית\n"
 	.string "שאנן בגלל הכוח שלך?\p"
 	.string "אם תרגיש צורך לצנן מעט את הרגשות\n"

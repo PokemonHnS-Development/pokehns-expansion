@@ -160,9 +160,9 @@ RecordCorner_Text_PlayerSentOverOneX:
 CableClub_Text_CantMixWithJapaneseGame:
 	.string "סליחה, אירעה שגיאת שידור.\p"
 	.string "אי אפשר לערבב רשומות עם\n"
-	.string "משחקי Ruby או Sapphire יפניים.\p"
-	.string "גם אי אפשר לערבב בו-זמנית עם Emerald\n"
-	.string "יפני ועם Ruby או Sapphire לא יפניים.$"
+	.string "משחקי רובי או ספיר יפניים.\p"
+	.string "גם אי אפשר לערבב בו-זמנית עם אמרלד\n"
+	.string "יפני ועם רובי או ספיר לא יפניים.$"
 
 CableClub_Text_AdapterNotConnected:
 	.string "מתאם האלחוט אינו\n"

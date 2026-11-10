@@ -59,6 +59,8 @@ LATIN_OK = {
     # The emulator save type as its menus print it (Flash 1Mb/128K), the same name for the memory,
     # and ROM, on the flash-not-detected screen.
     'Flash', 'Mb', 'ROM',
+    # A company's acronym in the credits (Nintendo of America).
+    'NOA',
 }
 
 
