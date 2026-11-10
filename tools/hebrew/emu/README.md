@@ -3,7 +3,8 @@
 `hnsrun` is a small headless GBA runner on top of libmgba. It boots a ROM with an optional
 battery save and reads commands from stdin: hold or tap keys, take screenshots, read and write
 memory, wait for a value, pin bytes, save and load states. It stops with `CRASH` when the PC leaves
-BIOS, ROM or RAM. The Python files drive it with addresses taken from the build's ELF.
+BIOS, RAM, ROM and the ROM's wait-state mirrors. The Python files drive it with addresses taken from
+the build's ELF.
 
 | File | What it is |
 | --- | --- |
@@ -156,8 +157,9 @@ entry (the Battle Arena battle room).
 Compare a Hebrew walk only with an English walk made by the same `mapwalk.py`. With the current
 walker the English ROM holds the same 36 maps as the Hebrew one. The builds repository's
 `reference/mapwalk_en.json` was made by an older walker that answered with A and B in turn; it
-holds 32 of them, has a false CRASH in the Dome pre-battle room (below) and an ERROR in the Battle
-Pike's normal room, and passes the two Battle Arena rooms.
+holds 32 of them, has a false CRASH in the Dome pre-battle room (a PC in the ROM's mirror, which
+the CRASH check below now accepts) and an ERROR in the Battle Pike's normal room, and passes the
+two Battle Arena rooms.
 
 **Cross-core** (`crosscore.c`, a minimal libretro frontend; `run_release_tests.sh` builds it on
 every run). It answers every core option with the core's own default, with one override
@@ -168,14 +170,22 @@ VBA-Next 131088 of 139264. `../release/ccdiff.py` compares the frames after redu
 RGB555, the GBA's own colour depth. Whether RetroArch's own `.srm` loader accepts the 131088-byte
 file was not tried.
 
+**The CRASH check.** `hnsrun` checks the PC every 60 frames (`pcIsSane`), and `hns.py`
+(`pc_is_sane`) and `sweep.py` check it after a tour or a label. Both accept the regions the game
+runs code from: BIOS `00`, EWRAM `02`, IWRAM `03`, ROM `08`-`09`, and the ROM's wait-state mirrors
+`0A`-`0D`. The mirrors are normal: the game runs most script commands from `0x0A` on purpose,
+because the command table stores every command that requests effects as its address plus
+`ROM_SIZE` (`data/script_cmd_table.inc:6-12`) and `RunScriptCommand` calls it there
+(`src/script.c:130-138`). `hns.py where` and the CRASH details name a mirror address by the ROM
+address it mirrors (`where 0A0E8ECC` prints `FillBitmapRect4Bit+0xA0`, like `080E8ECC`). Any other
+region is a crash; so is a run of more than 1000 mGBA log lines about invalid code (`Illegal
+opcode`, `Jumped to invalid address`), which `hns.py` reports as `CRASH: the CPU runs invalid code`
+because the PC may then sit in the BIOS. `sweep.py run ... --fault crash:LABEL` proves the path: it
+points `gMain.callback2` at `0x0E000000` (cartridge SRAM, where mGBA runs no code). The region list
+is compiled into the runner, so rebuild `hnsrun` after a change to `hnsrun.c`.
+
 **Known limits**
 
-- A `CRASH` whose PC is in `0x0A000000`-`0x0DFFFFFF` (for example `pc=0A0E8ECC`) is a false alarm.
-  The game runs most script commands from the ROM's wait-state mirror on purpose: the command
-  table stores them as their address plus `ROM_SIZE` (`data/script_cmd_table.inc:6-12`). `hnsrun`
-  and `hns.py` accept only regions 00, 02, 03, 08 and 09 (`hnsrun.c:129-132`, `hns.py:2160-2164`),
-  so a 60-frame check that lands inside such a command stops the run. Subtract `0x2000000` before
-  `hns.py where`.
 - In a `ladder.py` script `warpto` takes `GROUP NUM X Y` (`ladder.py:224-228`), not `hns.py`'s
   `warpto MAP_NAME X Y`; `hns.py map NAME` prints the numbers.
 - On a Trainer Hill or Battle Pyramid floor the second `startmenu NAME` of a run can fail with

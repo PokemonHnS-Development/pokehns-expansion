@@ -227,6 +227,7 @@ class Elf:
 
     def where(self, addr):
         import bisect
+        addr = rom_unmirror(addr)            # the ELF names a ROM mirror address by its ROM address
         if self._sorted is None:
             self._sorted = sorted((r[0] & ~1, n, r[1]) for n, recs in self.byname.items()
                                   for r in recs if r[2] in ("FUNC", "OBJECT"))
@@ -2157,11 +2158,31 @@ def tour_exports(path):
     return out
 
 
+# Memory regions (address >> 24). The game runs code from the BIOS, EWRAM, IWRAM, the ROM and the
+# ROM's wait-state mirrors (0A-0B wait state 1, 0C-0D wait state 2). The mirrors are normal: the
+# script command table stores every command that requests effects as its address plus ROM_SIZE
+# (data/script_cmd_table.inc), and RunScriptCommand calls it there (src/script.c). The ELF names
+# ROM addresses only, so a mirror address is named by the ROM address it mirrors.
+ROM_REGIONS = (0x08, 0x09)
+ROM_MIRROR_REGIONS = (0x0A, 0x0B, 0x0C, 0x0D)
+CODE_REGIONS = (0x00, 0x02, 0x03) + ROM_REGIONS + ROM_MIRROR_REGIONS   # hnsrun.c pcIsSane
+SYMBOL_REGIONS = (0x02, 0x03) + ROM_REGIONS + ROM_MIRROR_REGIONS       # where the ELF has symbols
+
+
+def rom_unmirror(addr):
+    """ADDR folded from a ROM wait-state mirror (0x0A000000-0x0DFFFFFF) onto the ROM
+    (0x08000000-0x09FFFFFF); any other address unchanged."""
+    if (addr >> 24) in ROM_MIRROR_REGIONS:
+        return 0x08000000 | (addr & 0x01FFFFFF)
+    return addr
+
+
 def pc_is_sane(pc):
-    """PC check for CRASH: code runs from BIOS (0x00), EWRAM/IWRAM (0x02/0x03) or ROM
-    (0x08/0x09). Anything else means the game jumped through a bad pointer (hnsrun
-    stops by itself in that case, hnsrun.c:24). A release build has no assert screen."""
-    return (pc >> 24) in (0x00, 0x02, 0x03, 0x08, 0x09)
+    """PC check for CRASH: code runs from BIOS (0x00), EWRAM/IWRAM (0x02/0x03), ROM (0x08/0x09)
+    or the ROM's wait-state mirrors (0x0A-0x0D, CODE_REGIONS). Anything else means the game
+    jumped through a bad pointer (hnsrun stops by itself in that case: pcIsSane in hnsrun.c,
+    the same regions). A release build has no assert screen."""
+    return (pc >> 24) in CODE_REGIONS
 
 
 def clip_hook(emu, outdir):
