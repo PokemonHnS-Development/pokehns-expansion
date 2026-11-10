@@ -73,7 +73,16 @@ macros), and the fall-through to the next label when a block does not end in `en
 `charmap.txt` and searched in the release ROM outside the script region. LTO and
 `--gc-sections` drop unreferenced data, so "absent" means compiled out or garbage-collected. Only
 literals that are unique across the C files decide; short or repeated ones take the file's
-verdict. One limit: a literal inside a live struct is present even if only debug code prints it.
+verdict. Two limits: a literal inside a live struct is present even if only debug code prints it;
+and a literal in an `#if` branch the build leaves out counts as live when its run is found in the
+ROM anyway, or its text is compiled from another line. In `src/data/items.h` that marks 14
+uncompiled English literals live (the mulch, ICY ROCK, EXP. SHARE, TM HAIL, TM70, HM DIVE and
+METEORITE texts), so `STATUS.md` counts 2,218 live strings there where `arm-none-eabi-gcc -E` of
+`src/item.c` keeps 2,204. Deciding C liveness by what the preprocessor keeps would fix it.
+
+`units.py` reads `c_strings.json` by line and text in the English tree, then matches the
+translated tree's literals by designator, field or variable, macro and place, so a line that moved
+in the Hebrew tree keeps its own verdict.
 
 **What the graph cannot see**, which is why step 5 exists: it ignores flags, so a match call
 whose contact is never registered, or a TV show that never airs, looks live; and a label in a
