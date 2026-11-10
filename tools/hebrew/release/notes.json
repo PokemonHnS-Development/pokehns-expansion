@@ -8,11 +8,7 @@
  "crosscore_notes": "All six cores load the save and draw every screen like mGBA. What is left: the title frame differs on every core because the intro animation runs at a different point when the save loads; on the main menu, the two buttons the game darkens with the GBA's brightness effect come out one step of the GBA's 5-bit colour apart; the start menu shows the time, and each core's clock started at a different second; and the bag's pocket arrows (VBA-M, VBA-Next, SkyEmu) and Mednafen-GBA's party icons are caught on another frame of their animation.",
  "map_walk": {
   "held_reason": "because the map starts a scripted Frontier or multi-battle sequence that the walker (which answers every prompt with B) cannot finish",
-  "hebrew_only_held": [
-   "MAP_BATTLE_FRONTIER_BATTLE_ARENA_BATTLE_ROOM_HNS",
-   "MAP_BATTLE_FRONTIER_BATTLE_ARENA_CORRIDOR_HNS"
-  ],
-  "hebrew_only_reason": "hold because the first Battle Arena battle was won in this run and the walker stopped at the next-opponent menu, which is drawn correctly; in the English run that battle ended back in the lobby"
+  "hebrew_only_held": []
  },
  "known_issues_intro": "The decisions behind the translation are in `translation/hebrew/DECISIONS.md` of the source fork.",
  "known_issues": [
