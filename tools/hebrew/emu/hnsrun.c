@@ -22,8 +22,8 @@
 //   unpin [hexaddr]             drop one pin, or all
 //   ss <file> / sl <file>       save / load a savestate (same build only)
 //   quit
-// Every 60 frames the runner checks that the PC is in BIOS, ROM, EWRAM or IWRAM. A PC anywhere
-// else means the game jumped through a bad pointer, and the run stops with "CRASH".
+// Every 60 frames the runner checks that the PC is in BIOS, EWRAM, IWRAM, ROM or a ROM mirror
+// (pcIsSane). Anywhere else the game jumped through a bad pointer, and the run stops with "CRASH".
 #include <mgba/core/core.h>
 #include <mgba/core/config.h>
 #include <mgba/core/log.h>
@@ -126,9 +126,12 @@ static uint32_t getPc(struct mCore* core) {
     return (uint32_t) cpu->gprs[ARM_PC];
 }
 
+// Regions the game runs code from: BIOS 00, EWRAM 02, IWRAM 03, ROM 08-09 and the ROM's wait-state
+// mirrors 0A-0D, where it runs every script command that requests effects (the command table stores
+// those as address + ROM_SIZE, data/script_cmd_table.inc). hns.py pc_is_sane accepts the same.
 static int pcIsSane(uint32_t pc) {
     uint32_t region = pc >> 24;
-    return region == 0x00 || region == 0x02 || region == 0x03 || region == 0x08 || region == 0x09;
+    return region == 0x00 || region == 0x02 || region == 0x03 || (region >= 0x08 && region <= 0x0D);
 }
 
 static int sCrashed;

@@ -7,6 +7,7 @@ import unittest
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.dirname(HERE))
+import audit  # noqa: E402
 import strcov  # noqa: E402
 
 TREE = os.path.dirname(os.path.dirname(os.path.dirname(HERE)))
@@ -285,6 +286,27 @@ class EncodeTest(unittest.TestCase):
         self.assertEqual(enc[0], bytes([0xBB, 0xBC]))
         self.assertIsNone(enc[1])
         self.assertEqual(enc[2], b'')
+
+
+
+class GeneratedHeaderTest(unittest.TestCase):
+    """strcov takes the generated-header rule from audit.py, which leaves those headers out and
+    reads their .party / JSON source instead; there is no second copy of the rule to drift."""
+
+    def test_the_header_of_a_source(self):
+        self.assertEqual(strcov.generated_header(TREE, 'src/data/trainers.party'), 'src/data/trainers.h')
+        self.assertEqual(strcov.generated_header(TREE, 'src/data/region_map/region_map_sections.json'),
+                         'src/data/region_map/region_map_entries.h')
+        self.assertIsNone(strcov.generated_header(TREE, 'src/data/items.h'))
+
+    def test_follows_audit(self):
+        saved = dict(audit.GENERATED_FROM_JSON)
+        try:
+            audit.GENERATED_FROM_JSON['src/data/x_entries.h'] = 'src/data/x.json'
+            self.assertEqual(strcov.generated_header(TREE, 'src/data/x.json'), 'src/data/x_entries.h')
+        finally:
+            audit.GENERATED_FROM_JSON.clear()
+            audit.GENERATED_FROM_JSON.update(saved)
 
 
 if __name__ == '__main__':

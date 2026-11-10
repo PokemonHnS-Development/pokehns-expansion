@@ -35,8 +35,12 @@ tool runs from any working directory. The style guide and glossary are in `trans
    as JSON units. `units.py status FILE...` counts how many of them are already in Hebrew.
 2. **Chunk.** `make_chunks.py B10 [B20 ...|all] [--out DIR]` cuts each named inventory batch
    (`data/inventory.json`) into chunk files in `$HNS_UNITS/<batch>/` (or `DIR/<batch>/`). It extracts the units from
-   `HNS_BASELINE` and fills in names from the glossary. It never removes an old chunk file, and
-   the sweep reads every file there, so write into an empty folder.
+   `HNS_BASELINE` and fills in names from the glossary. The sweep reads every file there, so each
+   run first removes the named batches' chunk files of an earlier run (`<batch>_NN.json`,
+   `_names.json`, `_sNN.json`, `_snames.json`; no other file) and prints any it did not write
+   again; with `all` it also warns about a folder of a batch the inventory no longer has.
+   `--supplement` removes nothing, but every supplement run numbers its files from `_s01`, so a
+   second one writes over the first one's files of the same names (`_s01.json`, `_snames.json`).
 3. **Translate.** Fill each unit's `"he"` by following `translation/hebrew/STYLE.md` and the
    glossary. `merge_he.py CHUNK.json TRANSLATIONS.json` merges an `{id: hebrew}` file into a chunk.
 4. **Check.** `checkunits.py CHUNK.json...` checks tokens, terminators, escapes, the charset,
@@ -114,6 +118,8 @@ at run time: `budgets.json` (pixel budgets per string kind), `live_labels.json` 
 and batches), `namecheck_allow.json` (the name differences kept on purpose, each with its reason)
 and `font_drafts/` (draft Hebrew widths for `--hebrew-widths draft`).
 
-Tests: `python3 -m unittest discover -s tools/hebrew/tests` (161 tests in 22 files). The test for
-the English ROM runs only when `HNS_EN_ROM` exists, one test needs the built `tools/preproc`, one
-needs the English tree's `Makefile`, and two need devkitARM's `arm-none-eabi-gcc`.
+Tests: `python3 -m unittest discover -s tools/hebrew/tests` (NTESTS tests in NFILES files). The test for
+the English ROM runs only when `HNS_EN_ROM` exists, the `KEPT_LATIN` test only with the English tree
+(`HNS_UPSTREAM`), the runner's PC-region test only with a C compiler (`cc`), one test needs the
+built `tools/preproc`, one needs the English tree's `Makefile`, and two need devkitARM's
+`arm-none-eabi-gcc`.

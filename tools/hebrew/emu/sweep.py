@@ -540,12 +540,13 @@ class Sweeper(object):
                 "w8 %08X 0" % self.status]                       # CONTEXT_RUNNING
 
     def _fault(self, label):
-        """--fault KIND:LABEL, to prove the CRASH/HANG paths: 'crash' points gMain.callback2
-        at 0C000001 (open bus; hnsrun stops on the PC), 'hang' points the template's sentinel
-        write elsewhere so the script ends but the sentinel never comes."""
+        """--fault KIND:LABEL, to prove the CRASH/HANG paths: 'crash' writes FAULT_CODE at
+        FAULT_PC and points gMain.callback2 there, 'hang' points the template's sentinel write
+        elsewhere so the script ends but the sentinel never comes."""
         kind = self.faults.get(label)
         if kind == "crash":
-            return ["w32 %08X 0C000001" % (self.gmain + hns.OFF["Main.callback2"])]
+            return (["w32 %08X %08X" % (FAULT_PC + 4 * i, op) for i, op in enumerate(FAULT_CODE)] +
+                    ["w32 %08X %08X" % (self.gmain + hns.OFF["Main.callback2"], FAULT_PC)])
         if kind == "hang":
             return ["w32 %08X %08X" % (self.sentinel_operand, self.sentinel + 4)]
         return []
@@ -797,6 +798,25 @@ def shot_name(label):
     return re.sub(r"[^A-Za-z0-9_]", "_", label)[:100]
 
 
+# --fault crash: gMain.callback2 jumps to FAULT_CODE, written into the last tile of OBJ VRAM. It
+# masks IRQs (msr cpsr_c, #0x9F: System mode, IRQ off) and loops (b .), so the PC stays in VRAM,
+# outside hns.CODE_REGIONS, and hnsrun's 60-frame PC check stops the run with CRASH, with no mGBA
+# log lines. The check reads the PC only at a frame's end: a loop with IRQs on can be read inside
+# the BIOS's IRQ handler, and an address mGBA runs no code from (cartridge SRAM, 0x0E) bounces
+# through the BIOS's undefined-instruction handler, which leaves only hns.py's invalid-code log
+# rule to report it. A ROM mirror address (0x0A-0x0D) runs as code by design.
+FAULT_PC = 0x06017FF0
+FAULT_CODE = (0xE321F09F, 0xEAFFFFFE)         # msr cpsr_c, #0x9F ; b .
+
+
+def crash_detail(msg, elf):
+    """MSG, with the symbol of its 'pc=XXXXXXXX' added when the PC is in RAM, ROM or a ROM
+    mirror (a mirror address is named by the ROM address it mirrors)."""
+    m = re.search(r"pc=([0-9A-F]{8})", msg)
+    pc = int(m.group(1), 16) if m else None
+    return msg + (" (%s)" % elf.where(pc) if pc and pc >> 24 in hns.SYMBOL_REGIONS else "")
+
+
 # ---------------------------------------------------------------------------- driver
 
 def run(a):
@@ -878,13 +898,8 @@ def run(a):
                     res.update(sw.run_fast(lab))
                 except HnsError as ex:
                     msg = str(ex).splitlines()[0]
-                    pc = None
-                    m = re.search(r"pc=([0-9A-F]{8})", msg)
-                    if m:
-                        pc = int(m.group(1), 16)
                     if msg.startswith("CRASH") or "runner exited" in msg or "not running" in msg:
-                        res.update(status="CRASH", detail=msg + (" (%s)" % target.elf.where(pc)
-                                                                 if pc and pc >> 24 in (2, 3, 8, 9) else ""))
+                        res.update(status="CRASH", detail=crash_detail(msg, target.elf))
                     elif "did not answer" in msg:
                         res.update(status="HANG", detail="the runner stopped answering: " + msg)
                     else:
@@ -1112,7 +1127,8 @@ def add_common(p):
     p.add_argument("--text-speed", choices=("instant", "save"), default="instant")
     p.add_argument("--player", help="player name for {PLAYER} (plain text, up to 7 bytes; default: the save's)")
     p.add_argument("--fault", action="append", metavar="KIND:LABEL",
-                   help="test the harness: make LABEL 'crash' (callback2 -> 0C000001) or 'hang' (no sentinel)")
+                   help="test the harness: make LABEL 'crash' (callback2 -> an IRQ-off loop at %08X) or "
+                        "'hang' (no sentinel)" % FAULT_PC)
     p.add_argument("--leave-center", choices=("auto", "yes", "no"), default="auto")
     p.add_argument("--shots", choices=("none", "clip", "all"), default="clip",
                    help="screenshot every page: never, for CLIP/ABNORMAL labels (default), or always")

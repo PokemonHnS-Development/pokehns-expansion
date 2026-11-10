@@ -10,6 +10,13 @@ from the glossary (those units are marked "fixed": translators leave them alone)
 each holding {"batch", "chunk", "files", "names": {english: hebrew}, "units": [...]}.
 "names" lists the glossary entries whose English appears in the chunk's text, so the translator
 uses exactly those spellings.
+
+A run rewrites each batch it names: it first removes that batch's chunk files from an earlier run
+(OUT/<BATCH>/<BATCH>_NN.json, _names.json, and the --supplement ones _sNN.json, _snames.json), so
+the folder holds this run's chunks only; the sweep reads every file there. It removes no other
+file. With 'all' it also warns about a folder of chunk files of a batch the inventory no longer has.
+--supplement removes nothing, but every supplement run numbers its files from s01, so a second one
+writes over the first one's files of the same names (_s01.json, _snames.json).
 """
 import argparse, csv, json, os, re, sys
 
@@ -77,6 +84,33 @@ def names_in(text, rows):
     return found
 
 
+def own_chunk_files(folder, batch):
+    """The chunk files of BATCH in FOLDER that this script writes: BATCH_NN.json, BATCH_names.json,
+    and with --supplement BATCH_sNN.json and BATCH_snames.json. Nothing else matches."""
+    if not os.path.isdir(folder):
+        return []
+    rx = re.compile(r'^%s_s?(\d+|names)\.json$' % re.escape(batch))
+    return sorted(f for f in os.listdir(folder) if rx.match(f) and os.path.isfile(os.path.join(folder, f)))
+
+
+def remove_old_chunks(out, batch):
+    """Removes BATCH's chunk files from an earlier run before a full run writes it again. Returns
+    the names removed."""
+    folder = os.path.join(out, batch)
+    old = own_chunk_files(folder, batch)
+    for f in old:
+        os.remove(os.path.join(folder, f))
+    return old
+
+
+def foreign_batch_dirs(out, batches):
+    """Folders of OUT that hold chunk files of a batch not in BATCHES (OUT/B99/B99_01.json): left
+    from an inventory that had that batch."""
+    if not os.path.isdir(out):
+        return []
+    return sorted(d for d in os.listdir(out) if d not in batches and own_chunk_files(os.path.join(out, d), d))
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('batches', nargs='+')
@@ -90,6 +124,10 @@ def main():
     inv = json.load(open(INVENTORY))
     rows, by_key, by_src = load_glossary()
     batches = sorted({i['batch'] for i in inv if i.get('batch')}) if a.batches == ['all'] else a.batches
+    if a.batches == ['all']:
+        for d in foreign_batch_dirs(out, batches):
+            print('make_chunks: %s holds chunk files of %s, which %s has no longer; the sweep reads '
+                  'them too: remove the folder' % (os.path.join(out, d), d, INVENTORY), file=sys.stderr)
     have = set()
     if a.supplement:
         import glob
@@ -112,6 +150,9 @@ def main():
                     fixed += 1
                     break
         todo = [u for u in us if not u.get('fixed')]
+        # The sweep reads every file in the batch folder, so chunk files of an earlier run (labels
+        # that may no longer be live) must not stay next to this run's.
+        removed = [] if a.supplement else remove_old_chunks(out, b)
         os.makedirs(os.path.join(out, b), exist_ok=True)
         # Fixed (name) units go in their own file, applied without a translator.
         if fixed:
@@ -139,6 +180,10 @@ def main():
             prev_file = u['file']
         flush()
         print('%s: %d files, %d units (%d names pre-filled), %d chunks' % (b, len(files), len(us), fixed, n))
+        stale = sorted(set(removed) - set(own_chunk_files(os.path.join(out, b), b)))
+        if stale:
+            print('%s: removed %d chunk file(s) of an earlier run that this run does not write: %s'
+                  % (b, len(stale), ', '.join(stale)))
 
 
 if __name__ == '__main__':
