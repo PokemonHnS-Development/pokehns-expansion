@@ -56,11 +56,12 @@ The scripts have only been run on macOS. The cross-core step loads `.dylib` core
    with, less the 451 match-call, TV and PokéNews lines behind flags defined as 0 and the 147
    labels that are not assembled into the build (`tools/hebrew/flag_gates.py`). Run it again
    before each candidate. The sweep reads whatever units are there, so `make_chunks.py` first
-   removes each batch's chunk files of an earlier run and names the ones it did not write again
-   (`B25: removed 2 chunk file(s) ...`); it removes no other file, and with `all` it warns about a
-   folder of a batch that `inventory.json` no longer has. rc21's sweep read units made before
-   `flag_gates.py` and selected 7,209 labels, 147 of them skipped; rc22's read three old chunk
-   files besides the fresh ones, 6,821 labels, which a `make_chunks.py` older than this one left.
+   removes each batch's chunk files of an earlier run, `--supplement` ones included, and names the
+   ones it did not write again (`B25: removed 2 chunk file(s) ...`); it removes no other file, and
+   with `all` it warns about a folder of a batch that `inventory.json` no longer has. rc21's sweep
+   read units made before `flag_gates.py` and selected 7,209 labels, 147 of them skipped; rc22's
+   read three old chunk files besides the fresh ones, 6,821 labels, which a `make_chunks.py` older
+   than this one left.
 5. **Cross-core.** `run_release_tests.sh` builds the frontend from `tools/hebrew/emu/crosscore.c`
    with `cc -O2` into `RCDIR/tests/bin` on every run, so nothing is installed for it. Put `vbam`,
    `vba_next`, `gpsp`, `mednafen_gba` and `skyemu` `_libretro.dylib` in `build/hebrew/cores`. The

@@ -15,8 +15,13 @@ A run rewrites each batch it names: it first removes that batch's chunk files fr
 (OUT/<BATCH>/<BATCH>_NN.json, _names.json, and the --supplement ones _sNN.json, _snames.json), so
 the folder holds this run's chunks only; the sweep reads every file there. It removes no other
 file. With 'all' it also warns about a folder of chunk files of a batch the inventory no longer has.
---supplement removes nothing, but every supplement run numbers its files from s01, so a second one
-writes over the first one's files of the same names (_s01.json, _snames.json).
+A full run cuts every live unit of the batch again, the ones its supplements held among them, so it
+removes the supplements too and names them; apply a chunk's translations, or copy the chunk out of
+OUT, before a full run of its batch.
+
+--supplement takes only the units that no chunk file in OUT holds yet. It removes nothing and writes
+over nothing: its chunk files are numbered after the batch's last _sNN.json (s01 when there is none),
+and its pre-filled names are added to the batch's _snames.json.
 """
 import argparse, csv, json, os, re, sys
 
@@ -93,6 +98,19 @@ def own_chunk_files(folder, batch):
     return sorted(f for f in os.listdir(folder) if rx.match(f) and os.path.isfile(os.path.join(folder, f)))
 
 
+def last_supplement(folder, batch):
+    """The NN of the highest BATCH_sNN.json in FOLDER, or 0: a supplement numbers its chunks after it."""
+    rx = re.compile(r'^%s_s(\d+)\.json$' % re.escape(batch))
+    return max([int(m.group(1)) for m in map(rx.match, own_chunk_files(folder, batch)) if m] or [0])
+
+
+def units_of(path):
+    """The units of a chunk file: its "units", or the file itself for a names file (a plain list)."""
+    with open(path, encoding='utf-8') as f:
+        d = json.load(f)
+    return d['units'] if isinstance(d, dict) else d
+
+
 def remove_old_chunks(out, batch):
     """Removes BATCH's chunk files from an earlier run before a full run writes it again. Returns
     the names removed."""
@@ -116,7 +134,8 @@ def main():
     ap.add_argument('batches', nargs='+')
     ap.add_argument('--size', type=int, default=150)
     ap.add_argument('--supplement', action='store_true',
-                    help='only units missing from the chunk files already written; new files are B##_sNN.json')
+                    help='only units missing from the chunk files already written; new files are B##_sNN.json, '
+                         'numbered after the last one, and pre-filled names are added to B##_snames.json')
     ap.add_argument('--out', default=OUT, help='output folder (default HNS_UNITS)')
     a = ap.parse_args()
     base = paths.need('BASELINE')
@@ -132,8 +151,7 @@ def main():
     if a.supplement:
         import glob
         for f in glob.glob(os.path.join(out, '*', '*.json')):
-            d = json.load(open(f, encoding='utf-8'))
-            have.update(u['id'] for u in (d['units'] if isinstance(d, dict) else d))
+            have.update(u['id'] for u in units_of(f))
     for b in batches:
         files = [i['file'] for i in inv if i.get('batch') == b]
         files = [f for f in files if f.endswith(('.inc', '.s', '.c', '.h')) and not any(x in f for x in SKIP_FILES)]
@@ -154,9 +172,13 @@ def main():
         # that may no longer be live) must not stay next to this run's.
         removed = [] if a.supplement else remove_old_chunks(out, b)
         os.makedirs(os.path.join(out, b), exist_ok=True)
+        # A supplement writes over no earlier one: its chunks come after the last, its names are added.
+        first = last_supplement(os.path.join(out, b), b) if a.supplement else 0
         # Fixed (name) units go in their own file, applied without a translator.
         if fixed:
-            json.dump([u for u in us if u.get('fixed')], open(os.path.join(out, b, '%s_%snames.json' % (b, 's' if a.supplement else '')), 'w', encoding='utf-8'),
+            names_file = os.path.join(out, b, '%s_%snames.json' % (b, 's' if a.supplement else ''))
+            earlier = units_of(names_file) if a.supplement and os.path.isfile(names_file) else []
+            json.dump(earlier + [u for u in us if u.get('fixed')], open(names_file, 'w', encoding='utf-8'),
                       ensure_ascii=False, indent=1)
         n = 0
         chunk = []
@@ -166,7 +188,7 @@ def main():
                 return
             n += 1
             text = ' '.join(u['en'] for u in chunk)
-            tag = ('s%02d' if a.supplement else '%02d') % n
+            tag = ('s%02d' % (first + n)) if a.supplement else '%02d' % n
             doc = {'batch': b, 'chunk': '%s_%s' % (b, tag), 'files': sorted({u['file'] for u in chunk}),
                    'names': names_in(text, rows), 'units': chunk}
             json.dump(doc, open(os.path.join(out, b, '%s_%s.json' % (b, tag)), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
@@ -180,6 +202,11 @@ def main():
             prev_file = u['file']
         flush()
         print('%s: %d files, %d units (%d names pre-filled), %d chunks' % (b, len(files), len(us), fixed, n))
+        if a.supplement and (n or fixed):
+            said = ['wrote ' + ', '.join('%s_s%02d.json' % (b, i) for i in range(first + 1, first + n + 1))] if n else []
+            if fixed:
+                said.append('added %d pre-filled name(s) to %s_snames.json' % (fixed, b))
+            print('%s: supplement: %s' % (b, '; '.join(said)))
         stale = sorted(set(removed) - set(own_chunk_files(os.path.join(out, b), b)))
         if stale:
             print('%s: removed %d chunk file(s) of an earlier run that this run does not write: %s'
