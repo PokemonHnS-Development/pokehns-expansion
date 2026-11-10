@@ -43,13 +43,13 @@ fresh clone.
 | Item | Value | Check |
 | --- | --- | --- |
 | `he/main` | `0514c9b57b` (on GitHub too): the merges of round 19 (`he/fix-r19`, `b32c6f117c`) and round 20 (`he/fix-r20`, `c1cfd8a30b`, the build of 1.0), then 11 commits that touch only `HANDOFF.md`, `notes.json`, `DECISIONS.md` and `STATUS.md` | `git rev-parse --short he/main` |
-| `he/wip-r21` | round 21, local and not merged: from `0514c9b57b`, one engine commit (`cd5fb48abe`, the Pokéblock case list's level column), one tour, three tool fixes (two with new tests), `STATUS.md` regenerated, and these documents | `git log --oneline he/main..he/wip-r21` |
+| `he/wip-r21` | round 21, local and not merged: from `0514c9b57b`, one engine commit (`cd5fb48abe`, the Pokéblock case list's level column), one tour, three tool fixes (two with new tests), `STATUS.md` regenerated, these documents, and two `units.py` fixes from the round's review (with tests; `STATUS.md` unchanged by them) | `git log --oneline he/main..he/wip-r21` |
 | `he/renderer` | `67df13ff43` (on GitHub too): `384104fb15` plus the four graphics and Easy Chat commits of rounds 19 and 20 and three older graphics commits (section 1.2). Round 21's engine commit `cd5fb48abe` is not picked yet (item 3 below) | `git rev-parse --short he/renderer` |
 | Release | One release, 1.0, replaced in place on each update (ROM, `SHA1SUMS`, `TESTING.md`); the builds repo's commit history keeps the older builds. Current 1.0: built from `he/main` `c1cfd8a30b` (rc22) | `git -C <builds> log` (`8bae7a0` "Update 1.0 to the build of he/main c1cfd8a30b"); `<builds>/records/README.md:43` |
 | 1.0 ROM | `pokehns-he-2.0.6-1.0.gba`: 33554432 bytes, SHA-1 `47695df1151d3296d378df0ade42bb89ade2954b`, CRC32 `36B0B4AA` (clip build `e1b25bcfe5d911753c6df0a5cea68b094b06d96a`, CRC32 `99652CF5`) | `<builds>/SHA1SUMS` |
 | Releasing | Build a candidate with `tools/hebrew/release/`, then replace the three files in the builds repo and say in the commit message which `he/main` commit it was built from; keep `tools/hebrew/release/notes.json` at `"release": "1.0"`. A candidate is published with hand play declared as not tested (`DECISIONS.md` Q138) | section 5 |
 | CI | green in all three jobs at `c1cfd8a30b` (run 42721195219: `build` 4m46s, `audit` 1m22s, `check` 20m42s), at `dd6d82f504` (42724124742) and at `0514c9b57b` (42725640966); so were the runs before them on `he/main` (41918360015 at `85705e4bc9`, 41929345455 at `08027d9879`, 41933578987 at `fe509e0043`) | `gh run list -R ronyeh2/pokehns-expansion-heb --workflow hebrew.yml --branch he/main` |
-| Static checks | at `he/wip-r21` `34fee0e811`, baseline `he/renderer` `67df13ff43`: drift 708 files, 1 FAIL, `src/pokeblock.c`, which passes once `cd5fb48abe` is picked; audit 0 errors and 54 warnings, 39,059 strings as in CI; namecheck 0 problems and 0 warnings (34 allowlisted); plurals 0 problems; the Pokédex A–Z, Easy Chat and live-label generators up to date; 143 tool tests OK on Python 3.9.6, 3.11.9 and 3.14.7 | section 4.2 |
+| Static checks | at `he/wip-r21` `34fee0e811`, and the same again at `0f345f05b7` in the review, baseline `he/renderer` `67df13ff43`: drift 708 files, 1 FAIL, `src/pokeblock.c`, which passes once `cd5fb48abe` is picked; audit 0 errors and 54 warnings, 39,059 strings as in CI; namecheck 0 problems and 0 warnings (34 allowlisted); plurals 0 problems; the Pokédex A–Z, Easy Chat and live-label generators up to date; 147 tool tests OK on Python 3.9.6, 3.11.9 and 3.14.7 at the tip | section 4.2 |
 | Translation status | every live file is translated: 650 files, 525 seen on screen, 125 translated, none blocked (rc22's sweep; regenerated on `he/wip-r21` after the C-liveness fix, with the same totals) | `translation/hebrew/STATUS.md:5` |
 
 **What remains** (details in section 8):
@@ -206,7 +206,7 @@ Reference machine: Apple Silicon, macOS.
 | libpng, pkg-config | Homebrew libpng 1.6.58 | `brew install libpng pkg-config`; Linux: `libpng-dev` |
 | GNU make | macOS ships 3.81 | 3.81 builds fine but has no `-O` (section 6.1) |
 | git | any | the build refuses to run without git history (section 6.1) |
-| Python 3 | 3.9 or newer: the 143 tool tests pass on 3.9.6, 3.11.9 and 3.14.7, and all 242 scripts under `tools/hebrew` compile with every warning turned into an error on 3.9.6, 3.11.9 and 3.14.7 (CI: Ubuntu 26.04's python3) | standard library only, except the picture tools |
+| Python 3 | 3.9 or newer: the 147 tool tests pass on 3.9.6, 3.11.9 and 3.14.7, and all 242 scripts under `tools/hebrew` compile with every warning turned into an error on 3.9.6, 3.11.9 and 3.14.7 (CI: Ubuntu 26.04's python3) | standard library only, except the picture tools |
 | Pillow | 12.2.0 | `python3 -m pip install Pillow`. Needed by `fontcells.py`, `tools/hebrew/graphics/`, the font previews and the review-sheet scripts; the harness writes PNGs itself |
 | numpy | any recent | only `tools/hebrew/inventory/` |
 | cmake | 4.4.3 | only for building mGBA for the harness |
@@ -823,7 +823,7 @@ Apply a decision in this order:
 | whole tree | `audit.py --baseline ../pokehns-en` | WIDTH, LINES, BUFFER, BYTES, TERMINATOR, CHARSET | 28 s |
 | glossary | `namecheck.py --all --warnings` | byte limits, final letters, duplicates; warnings for FireRed differences, transliteration slips, two-way names | instant |
 | generated data | `gen_dex_alpha.py`, `gen_ec_order.py`, `gen_ec_letters.py`, `flag_gates.py`, each `--check` | a stale A–Z order, Easy Chat list or live-label list | instant |
-| tool tests | `python3 -m unittest discover -s tools/hebrew/tests` | the tools themselves (143 tests) | 10 s |
+| tool tests | `python3 -m unittest discover -s tools/hebrew/tests` | the tools themselves (147 tests) | 10 s |
 | game logic | `make check BUILD=hns` + `check_tests.py` | a test that passes upstream but fails in Hebrew | about 4 min at `-j12` in the release worktree (rc5, rc20: `make_check.log` created to last written; 15 hydra runners), 13 to 20 min in CI |
 | screens | `hns.py tour` (71 tours) | crashes, timeouts, wrong typed bytes; screenshots for review | about 3 min |
 | glyphs outside windows | `hns.py tour --clip`, `sweep.py` on the clip ROM | every glyph drawn outside its window | about 2.5 min: 6,611 labels in 150 s on rc21's clip ROM (191 s with a cold cache) |
@@ -870,7 +870,7 @@ python3 tools/hebrew/gen_ec_letters.py --check    # gen_ec_letters: 23 lists, th
 python3 tools/hebrew/flag_gates.py --check        # total: live 6585, flag_off 451, not_built 147 / no change
 # 5. tool tests (hebrew.yml:73-74)
 python3 -m unittest discover -s tools/hebrew/tests
-#    Ran 143 tests ... OK   (no skip with tools/preproc built and ../pokehns-en/pokehns.gba present)
+#    Ran 147 tests ... OK   (no skip with tools/preproc built and ../pokehns-en/pokehns.gba present)
 # not in CI: item plurals
 python3 tools/hebrew/plurals.py                   # items 902, stackable 693, problems 0
 ```
@@ -902,8 +902,8 @@ python3 tools/hebrew/plurals.py                   # items 902, stackable 693, pr
     copy's apart from line 1 (the tree path), and the clean copy prints what CI prints
     (`<private>/scratch/screens/r21/fixes/t4/audit_clean.txt`, `audit_final.txt`).
 - **tool tests in CI:** run 42725640966 at `0514c9b57b` printed `Ran 137 tests ... OK (skipped=2)`
-  (no built `tools/preproc`, no English ROM). Round 21 adds 6 (4 in `test_units.py`, 2 in
-  `test_audit.py`), so `he/wip-r21` has 143; CI has not run them yet.
+  (no built `tools/preproc`, no English ROM). Round 21 adds 10 (8 in `test_units.py`, 2 in
+  `test_audit.py`), so `he/wip-r21` has 147; CI has not run them yet.
 
 ### 4.3 The test suite
 
@@ -1091,11 +1091,14 @@ python3 tools/hebrew/status_report.py --sweep RC/tests/sweep/sweep.json
 - Without `--sweep`, every "seen on screen" row falls back to "translated".
 - A C literal takes its liveness from `tools/hebrew/data/c_strings.json`, which records it by its
   line in the English tree. `units.py` finds each record in `../pokehns-en` by line and text and
-  matches the tree's literals by what they initialise: designator, field or variable, macro, and
-  place among the file's literals with those four (`c_live_index`, `units.py:209-239`; `c_key`,
-  `:242-249`). So Hebrew lines that moved no longer take another literal's verdict, and a literal
-  the English file lacks (a `TEXT_RTL` plural name) counts as live. `src/data/items.h` counts
-  2,218 live strings, all Hebrew; the build compiles 2,204 of them (section 8.1).
+  matches the tree's literals by what they initialise: the variable, or else the designator and
+  field, the macro, and the place among the file's literals with the same (`c_live_index`,
+  `units.py:209-244`; `c_key`, `:247-258`). A literal on a line only a `TEXT_RTL` build compiles
+  (`rtl_only_lines`, `:264-286`), such as a plural name, has no English record: it counts as live
+  and takes no place. So Hebrew lines that moved no longer take another literal's verdict, and both
+  trees have the same literals under every key. Without an English tree (`HNS_UPSTREAM` unset and
+  no `../pokehns-en`) every C literal counts as live, with a line on stderr. `src/data/items.h`
+  counts 2,218 live strings, all Hebrew; the build compiles 2,204 of them (section 8.1).
 - "Seen on screen" means **the harness rendered the label**, not that a person read it.
 - STATUS counts a string as Hebrew if it holds any Hebrew letter (`status_report.py:82`), so mixed
   Latin-and-Hebrew lines pass (section 8.2).
@@ -1766,7 +1769,7 @@ Earlier passes: round 20 corrected the audit's example finding (section 4.2:
 section 7. Round 19 corrected six line references: `RELEASE ?= 0` is at `Makefile:69`, `KEPT_LATIN`
 at `status_report.py:22-48`, the Hebrew count at `status_report.py:82`, the sweep's path guard at
 `sweep.py:391-396`, `walk_tree` (now at `audit.py:461-481`) and `LoadSaveblockObjEventScripts` at
-`src/overworld.c:592-600`. Every text tool has tests: 143 tests in 21 files under
+`src/overworld.c:592-600`. Every text tool has tests: 147 tests in 21 files under
 `tools/hebrew/tests`, with small committed fixtures in `tools/hebrew/tests/data/`. Add a row here
 when a document and the tree disagree, and fix it in a docs-only commit.
 
@@ -1952,6 +1955,23 @@ are under `<private>/scratch/screens/r21/`, in `fixes/`, `emu/` and `static/`):
   branches no longer do), the species files lose the Mega and Gigantamax descriptions
   (`P_MEGA_EVOLUTIONS` and `P_GIGANTAMAX_FORMS` are FALSE, `include/config/species_enabled.h:23`,
   `:26`), `strings.c` is 1139/1117 and `pokenav_menu_handler_gfx.c` 18/18.
+  - The round's review found the key could still misplace literals of the Hebrew tree, although no
+    verdict was wrong yet: 365 keys had a different number of literals in the two trees. A
+    variable took a designator from up to 4000 characters back, which translated text moves, and
+    a `TEXT_RTL`-only literal took a place, so in `src/data/script_menu.h` the last five literals
+    each took the next one's record. `e1e91ea1c0` keys a variable by its name alone and gives a
+    `TEXT_RTL`-only literal a key of its own: 0 keys then differ, all 21,034 verdicts of the tree
+    and `STATUS.md` are unchanged, and the English tree still gives 0 mismatches.
+  - `9519215de4` changed the verdict of 183 literals of the tree. Each whole literal, looked up in
+    rc22's clip ROM, agrees with its new verdict except one; for the variables among them, rc22's
+    symbol table confirms 20 corrections, and its 3 disagreements are 2 uncompiled `#else` copies
+    of a compiled variable and 1 `c_strings.json` verdict. The verdicts still wrong come from
+    `c_strings.json` itself (section 8.1), such as the one: the BATTLE pocket name is live there,
+    although `I_COMBINE_BAG_POCKETS` is TRUE (`include/config/item.h:55`), because the inventory
+    found the run `BATTLE` in the ROM.
+  - `363b85706a`: without an English tree (`HNS_UPSTREAM` unset, no `../pokehns-en`), `units.py`,
+    `status_report.py` and `make_chunks.py` stopped with a `TypeError` on the first C file; every
+    C literal now counts as live there, as the commit message of `9519215de4` meant.
 - **The audit counts what CI counts** (`34fee0e811`; section 4.2). The six skipped headers are
   git-ignored, untracked, and byte for byte what trainerproc and jsonproc make from the tracked
   `.party` and JSON files; no tracked file is skipped. A clean `git archive` copy of `34fee0e811`
@@ -1962,7 +1982,7 @@ are under `<private>/scratch/screens/r21/`, in `fixes/`, `emu/` and `static/`):
   0 warnings, 34 allowlisted; plurals 0 problems (items 902, stackable 693); the three generators
   and `flag_gates.py` (`live 6585, flag_off 451, not_built 147`) up to date; drift 708 files with
   one FAIL, `src/pokeblock.c`, which passes against `he/renderer` plus `cd5fb48abe`.
-- The 143 tool tests pass on Python 3.9.6, 3.11.9 and 3.14.7 with no skip, and all 242 scripts under
+- The 147 tool tests pass on Python 3.9.6, 3.11.9 and 3.14.7 with no skip, and all 242 scripts under
   `tools/hebrew` compile with every warning turned into an error on 3.9.6, 3.11.9 and 3.14.7.
 - **The English map walk's Dome "crash" is a false alarm of the harness** (section 4.6, in
   `static/`): reproduced exactly with the older walker, traced to a script command run from the

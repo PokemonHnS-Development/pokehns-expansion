@@ -114,5 +114,5 @@ at run time: `budgets.json` (pixel budgets per string kind), `live_labels.json` 
 and batches), `namecheck_allow.json` (the name differences kept on purpose, each with its reason)
 and `font_drafts/` (draft Hebrew widths for `--hebrew-widths draft`).
 
-Tests: `python3 -m unittest discover -s tools/hebrew/tests` (143 tests in 21 files). The test for
+Tests: `python3 -m unittest discover -s tools/hebrew/tests` (147 tests in 21 files). The test for
 the English ROM runs only when `HNS_EN_ROM` exists, and one test needs the built `tools/preproc`.

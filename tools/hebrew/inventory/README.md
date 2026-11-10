@@ -81,8 +81,9 @@ METEORITE texts), so `STATUS.md` counts 2,218 live strings there where `arm-none
 `src/item.c` keeps 2,204. Deciding C liveness by what the preprocessor keeps would fix it.
 
 `units.py` reads `c_strings.json` by line and text in the English tree, then matches the
-translated tree's literals by designator, field or variable, macro and place, so a line that moved
-in the Hebrew tree keeps its own verdict.
+translated tree's literals by variable, or else designator and field, macro and place, so a line
+that moved in the Hebrew tree keeps its own verdict. A literal in a branch only the `TEXT_RTL`
+build compiles has no record: it counts as live and takes no place among the others.
 
 **What the graph cannot see**, which is why step 5 exists: it ignores flags, so a match call
 whose contact is never registered, or a TV show that never airs, looks live; and a label in a
