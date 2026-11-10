@@ -20,8 +20,8 @@ It needs:
   default `TREE/pokehns.gba`). Each ROM needs its `.elf` and `.map` next to it. The standard
   build also leaves in TREE the headers the build generates, which the preprocessor step reads
   (below).
-- devkitARM's `arm-none-eabi-nm` and `arm-none-eabi-gcc` (`DEVKITARM`), numpy, and about 70
-  seconds (the preprocessor step is about 30 of them).
+- devkitARM's `arm-none-eabi-nm` and `arm-none-eabi-gcc` (`DEVKITARM`), numpy, and about 50
+  seconds (the preprocessor step is about 20 of them).
 
 Everything goes to `--out` (default `$HNS_WORK/inventory`); nothing in the tree changes. Copy the
 three files into `tools/hebrew/data/` after reading their diff. `--compare` says whether they
@@ -79,16 +79,19 @@ macros), and the fall-through to the next label when a block does not end in `en
   C source the tree's Makefile compiles (`src/*.c`, `src/*/*.c`, `src/*/*/*.c`, not `*.inc.c`)
   through `arm-none-eabi-gcc -E -fdirectives-only` with the Makefile's own `CPPFLAGS` for `hns`
   (`-iquote include -Wno-trigraphs -DMODERN=1 -DTESTING=0 -DPOKEMON_HNS -std=gnu17`, plus
-  `-DRELEASE` for the release build). That mode evaluates `#if`, `#include` and `#define` as the
-  build does but expands no macro, so every kept line comes out as written under its line marker;
-  a line counts as kept if any unit that includes its file keeps it. A header is found from
-  whichever units include it, so no includer has to be named. A literal inside a `#define` over
-  several lines counts on the `#define`'s first line, which the preprocessor prints when the
-  `#define` is in a kept branch. A file no unit includes keeps nothing. A generated header with
-  `#line` directives (`src/data/trainers_hns.h` and the other `.party` outputs) names its
-  `.party` file in the line markers, so all its lines count as kept when a unit includes it and
-  it has no `#if`, and as unknown (`null`) otherwise. Each kept line is checked against the
-  source text at its number, so a misread line marker stops the run.
+  `-DRELEASE` for the release build); a change to those flags it cannot place, such as one under
+  another condition or for one target, stops the run. That mode evaluates `#if`, `#include` and
+  `#define` as the build does but expands no macro, so every kept line comes out as written under
+  its line marker; a line counts as kept if any unit that includes its file keeps it. A header is
+  found from whichever units include it, so no includer has to be named. A literal inside a
+  `#define` over several lines counts on the `#define`'s first line, which the preprocessor prints
+  when the `#define` is in a kept branch. A file no unit includes keeps nothing. A generated
+  header with `#line` directives (`src/data/trainers_hns.h` and the other `.party` outputs) names
+  its `.party` file in the line markers, so when a unit includes it, all its lines count as kept
+  if it has no `#if` and as unknown (`null`) if it has one; when no unit includes it, they count
+  as dropped, as in any other file. Each kept line that is not a directive, in a file without
+  `#line`, is checked against the source text at its number, so a misread line marker stops the
+  run.
 - **The build's ROM holds its text** (`rom_release`, `rom_std`): the longest plain run (6 or more
   characters) is encoded with `charmap.txt` and searched in that ROM outside the script region;
   `null` when no run is long enough. This catches what the preprocessor keeps but the linker
@@ -106,9 +109,10 @@ that does not preprocess stops the run with gcc's message. `python3
 tools/hebrew/inventory/cpp_lines.py src/strings.c` prints the lines a build keeps of a file.
 
 Limits: a literal inside a live struct is in the ROM even if only debug code prints it; and a
-literal the preprocessor keeps in a function the linker drops still counts as live when its run
-is in the ROM from another line or from script text. `inventory.json` takes its per-file counts
-from the release ROM search alone.
+literal the preprocessor keeps in a function the linker drops, or in a `#define` nothing expands,
+still counts as live when its run is in the ROM from another line or from script text, or is too
+short to search for (`null`). `inventory.json` takes its per-file counts from the release ROM
+search alone.
 
 `units.py` reads `c_strings.json` by line and text in the English tree, then matches the
 translated tree's literals by variable, or else designator and field, macro and place, so a line
