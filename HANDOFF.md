@@ -1130,10 +1130,12 @@ python3 tools/hebrew/rom_sweep.py pokehns.gba --json OUT.json
     mirror: 232 of the 247 table entries, in English and in rc22. `hnsrun` and `hns.py` accept
     only regions 00, 02, 03, 08 and 09 (`hnsrun.c:129-132`, `hns.py:2160-2164`; section 8.1).
   - That is what the stored English walk's `CRASH pc=0A0E8ECC @21720` in the Dome pre-battle room
-    was. Its older walker answered with A and B in turn, so it reached the room's menu; a copy of
-    `mapwalk.py` with that one change reproduces its records 0-18 exactly, crash included. The PC
-    was in `FillBitmapRect4Bit` under `ScrCmd_multichoice`, run from the mirror; with the check
-    off the next frame is back in the BIOS halt and the menu is drawn
+    was. Its older walker answered with A and B in turn, so it kept cycling through the room's
+    menu (A shows the opponent's card, B closes it), and one 60-frame check fell while the menu
+    was being drawn; a copy of `mapwalk.py` with that one change reproduces its records 0-18
+    exactly, crash included. The PC was in `FillBitmapRect4Bit` under `ScrCmd_multichoice`, run
+    from the mirror; with the check off the next frame is back in the BIOS halt and the menu is
+    drawn
     (`<private>/scratch/screens/r21/static/`, `tools/mapwalk_v5.py`, `trace18r/trace.log`,
     `trace18a/after_crash_frame.png`). The current walker presses only B and holds the room.
     Nothing is wrong in the game; no release note.
