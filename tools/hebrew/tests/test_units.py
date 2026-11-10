@@ -255,6 +255,14 @@ class CLivenessTest(unittest.TestCase):
             self.assertTrue(all(live for _, _, live in self.live(self.tree)))
         self.assertIn('%s is not in the English tree' % ITEMS, err.getvalue())
 
+    def test_without_an_english_tree_every_literal_is_live(self):
+        # HNS_UPSTREAM unset and no ../pokehns-en: paths.UPSTREAM is None.
+        units.UPSTREAM = None
+        err = io.StringIO()
+        with contextlib.redirect_stderr(err):
+            self.assertTrue(all(live for _, _, live in self.live(self.tree)))
+        self.assertIn('%s is not in the English tree' % ITEMS, err.getvalue())
+
 
 if __name__ == '__main__':
     unittest.main()

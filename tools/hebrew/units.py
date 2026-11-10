@@ -225,11 +225,15 @@ def c_live_index(rel):
         # None means the inventory could not search for it (too short to be unique): live.
         r, st = l.get('rom_release'), l.get('rom_std')
         live[(l['line'], l['text'])] = not (r is False and st is False)
-    try:
-        text = open(os.path.join(UPSTREAM, rel), encoding='utf-8').read()
-    except OSError:
-        print('units: %s is not in the English tree %s; every literal of it counts as live' % (rel, UPSTREAM),
-              file=sys.stderr)
+    text = None
+    if UPSTREAM:
+        try:
+            text = open(os.path.join(UPSTREAM, rel), encoding='utf-8').read()
+        except OSError:
+            pass
+    if text is None:
+        print('units: %s is not in the English tree %s; every literal of it counts as live'
+              % (rel, UPSTREAM or '(none: HNS_UPSTREAM is unset and ../pokehns-en is missing)'), file=sys.stderr)
         return {}
     idx, seen = {}, {}
     for m, line_no, joined, desig, field, var in c_literals(text):
