@@ -155,11 +155,11 @@ per map. It does not fight, so it stops with TIMEOUT at the first map that start
 entry (the Battle Arena battle room).
 
 Compare a Hebrew walk only with an English walk made by the same `mapwalk.py`. With the current
-walker the English ROM holds the same 36 maps as the Hebrew one. The builds repository's
-`reference/mapwalk_en.json` was made by an older walker that answered with A and B in turn; it
-holds 32 of them, has a false CRASH in the Dome pre-battle room (a PC in the ROM's mirror, which
-the CRASH check below now accepts) and an ERROR in the Battle Pike's normal room, and passes the
-two Battle Arena rooms.
+walker the English ROM holds the same 36 maps as the Hebrew one; the builds repository's
+`reference/mapwalk_en.json` is such a walk (543 maps: 507 OK, 36 HELD). The walk it replaced was
+made by an older walker that answered with A and B in turn: it held 32 of them, had a false CRASH
+in the Dome pre-battle room (a PC in the ROM's mirror, which the CRASH check below now accepts) and
+an ERROR in the Battle Pike's normal room, and passed the two Battle Arena rooms.
 
 **Cross-core** (`crosscore.c`, a minimal libretro frontend; `run_release_tests.sh` builds it on
 every run). It answers every core option with the core's own default, with one override
