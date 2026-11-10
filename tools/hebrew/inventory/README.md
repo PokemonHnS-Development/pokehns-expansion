@@ -3,9 +3,9 @@
 `build.py` makes the three data files that say which strings the H&S build can show:
 `tools/hebrew/data/live_labels.json` (live, debug-only and dead script labels per file),
 `inventory.json` (every file with text, its counts and its translation batch) and
-`c_strings.json` (every C literal and whether the release ROM holds it). `units.py`,
-`make_chunks.py`, the sweep and `status_report.py` read them. Rebuild them after an upstream
-update, or after anything that changes which scripts or strings are built.
+`c_strings.json` (every C literal, and whether each build's preprocessor keeps it and its ROM
+holds it). `units.py`, `make_chunks.py`, the sweep and `status_report.py` read them. Rebuild them
+after an upstream update, or after anything that changes which scripts or strings are built.
 
 ```bash
 python3 tools/hebrew/inventory/build.py --release PATH/pokehns-release.gba --compare
@@ -17,8 +17,11 @@ It needs:
   so a label keeps its verdict whatever language it holds now.
 - **Two builds of that tree**: a release build (`make release`: LTO and `--gc-sections`, so an
   unreferenced string is really gone), given with `--release`, and a standard build (`--std`,
-  default `TREE/pokehns.gba`). Each ROM needs its `.elf` and `.map` next to it.
-- devkitARM's `arm-none-eabi-nm` (`DEVKITARM`), numpy, and about 40 seconds.
+  default `TREE/pokehns.gba`). Each ROM needs its `.elf` and `.map` next to it. The standard
+  build also leaves in TREE the headers the build generates, which the preprocessor step reads
+  (below).
+- devkitARM's `arm-none-eabi-nm` and `arm-none-eabi-gcc` (`DEVKITARM`), numpy, and about 50
+  seconds (the preprocessor step is about 20 of them).
 
 Everything goes to `--out` (default `$HNS_WORK/inventory`); nothing in the tree changes. Copy the
 three files into `tools/hebrew/data/` after reading their diff. `--compare` says whether they
@@ -27,7 +30,8 @@ equal the shipped ones.
 ## Steps
 
 1. `extract.py` counts the strings and decides liveness (below). It writes `asm_strings.json`,
-   `asm_roots.json`, `asm_reach.json`, `asm_parents.json` and `c_strings.json`.
+   `asm_roots.json`, `asm_reach.json`, `asm_parents.json` and `c_strings.json`. Its C step runs
+   `cpp_lines.py`.
 2. `fr_style_graph.py` repeats the French fork's map traversal (warps and connections from the
    player's room, ignoring flags) for comparison; `inventory.json` records its verdict as
    `fr_status` for the maps H&S inherited.
@@ -69,16 +73,46 @@ macros), and the fall-through to the next label when a block does not end in `en
 - Debug-only means reachable only from roots inside debug code (`Debug*`, the battle debug
   menu, the sprite visualizer).
 
-**C literals.** The longest plain run (6 or more characters) of each literal is encoded with
-`charmap.txt` and searched in the release ROM outside the script region. LTO and
-`--gc-sections` drop unreferenced data, so "absent" means compiled out or garbage-collected. Only
-literals that are unique across the C files decide; short or repeated ones take the file's
-verdict. Two limits: a literal inside a live struct is present even if only debug code prints it;
-and a literal in an `#if` branch the build leaves out counts as live when its run is found in the
-ROM anyway, or its text is compiled from another line. In `src/data/items.h` that marks 14
-uncompiled English literals live (the mulch, ICY ROCK, EXP. SHARE, TM HAIL, TM70, HM DIVE and
-METEORITE texts), so `STATUS.md` counts 2,218 live strings there where `arm-none-eabi-gcc -E` of
-`src/item.c` keeps 2,204. Deciding C liveness by what the preprocessor keeps would fix it.
+**C literals.** A literal is in a build when both hold:
+
+- **The build's preprocessor keeps its line** (`pp_release`, `pp_std`). `cpp_lines.py` runs every
+  C source the tree's Makefile compiles (`src/*.c`, `src/*/*.c`, `src/*/*/*.c`, not `*.inc.c`)
+  through `arm-none-eabi-gcc -E -fdirectives-only` with the Makefile's own `CPPFLAGS` for `hns`
+  (`-iquote include -Wno-trigraphs -DMODERN=1 -DTESTING=0 -DPOKEMON_HNS -std=gnu17`, plus
+  `-DRELEASE` for the release build); a change to those flags it cannot place, such as one under
+  another condition or for one target, stops the run. That mode evaluates `#if`, `#include` and
+  `#define` as the build does but expands no macro, so every kept line comes out as written under
+  its line marker; a line counts as kept if any unit that includes its file keeps it. A header is
+  found from whichever units include it, so no includer has to be named. A literal inside a
+  `#define` over several lines counts on the `#define`'s first line, which the preprocessor prints
+  when the `#define` is in a kept branch. A file no unit includes keeps nothing. A generated
+  header with `#line` directives (`src/data/trainers_hns.h` and the other `.party` outputs) names
+  its `.party` file in the line markers, so when a unit includes it, all its lines count as kept
+  if it has no `#if` and as unknown (`null`) if it has one; when no unit includes it, they count
+  as dropped, as in any other file. Each kept line that is not a directive, in a file without
+  `#line`, is checked against the source text at its number, so a misread line marker stops the
+  run.
+- **The build's ROM holds its text** (`rom_release`, `rom_std`): the longest plain run (6 or more
+  characters) is encoded with `charmap.txt` and searched in that ROM outside the script region;
+  `null` when no run is long enough. This catches what the preprocessor keeps but the linker
+  drops: a literal in a function or table nothing references is not in the ROM. Only literals
+  that are unique across the C files decide `inventory.json`'s per-file counts; short or repeated
+  ones take the file's verdict there.
+
+`units.py` (`c_record_live`) counts a literal live when one of the two builds has both, `null`
+counting as not ruled out. The preprocessor needs the headers the build generates: a built tree
+has them (`make hns`; CI never runs the inventory). They are
+`include/constants/{heal_locations,layouts,map_event_ids,map_groups,region_map_sections,script_commands}.h`
+and `src/data/{battle_partners,debug_trainers,heal_locations,map_group_count,trainers_hns,tutor_moves,wild_encounters}.h`,
+`src/data/pokemon/teachable_learnsets.h` and `src/data/region_map/region_map_entries.h`; a unit
+that does not preprocess stops the run with gcc's message. `python3
+tools/hebrew/inventory/cpp_lines.py src/strings.c` prints the lines a build keeps of a file.
+
+Limits: a literal inside a live struct is in the ROM even if only debug code prints it; and a
+literal the preprocessor keeps in a function the linker drops, or in a `#define` nothing expands,
+still counts as live when its run is in the ROM from another line or from script text, or is too
+short to search for (`null`). `inventory.json` takes its per-file counts from the release ROM
+search alone.
 
 `units.py` reads `c_strings.json` by line and text in the English tree, then matches the
 translated tree's literals by variable, or else designator and field, macro and place, so a line

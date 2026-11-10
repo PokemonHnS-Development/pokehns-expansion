@@ -3,5 +3,6 @@ the scripts; nothing here has a default."""
 SRC = None        # the English source tree the strings are counted in
 OUT = None        # the folder every script reads its inputs from and writes its outputs to
 NM = None         # arm-none-eabi-nm
+GCC = None        # arm-none-eabi-gcc, for the preprocessor (cpp_lines.py)
 BUILDS = {}       # 'release' and 'std' -> (ROM, ELF, linker map) of two builds of SRC
 ES_FILES = set()  # files the Spanish fork changed (inventory.json es_touched); empty if unknown

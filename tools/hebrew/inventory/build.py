@@ -9,7 +9,8 @@ liveness is read from two builds of that tree: a release build (ROM, with its .e
 to it; `make release`) and a standard build (default TREE/pokehns.gba). Steps, all writing to DIR
 (default $HNS_WORK/inventory):
 
-  1. extract.py        script labels and C literals, reachability from the ROM words
+  1. extract.py        script labels and C literals, reachability from the ROM words, the
+                       lines each build's preprocessor keeps (cpp_lines.py)
                        (asm_strings.json, asm_roots.json, asm_reach.json, asm_parents.json,
                        c_strings.json)
   2. fr_style_graph.py the French fork's map traversal, for comparison (fr_style_graph.json)
@@ -23,8 +24,9 @@ es_touched in inventory.json marks the files the Spanish fork changed: `git diff
 inventory). Without that commit every file is marked untouched.
 
 --no-gates stops after step 4 (the reference graph alone). --compare reports whether the three
-outputs equal tools/hebrew/data's. Needs numpy and
-devkitARM's arm-none-eabi-nm (DEVKITARM, default /opt/devkitpro/devkitARM).
+outputs equal tools/hebrew/data's. Needs numpy and devkitARM's arm-none-eabi-nm and
+arm-none-eabi-gcc (DEVKITARM, default /opt/devkitpro/devkitARM); the preprocessor step reads the
+headers a build of TREE generates (inventory/README.md, "C literals").
 """
 import argparse
 import os
@@ -78,6 +80,7 @@ def main(argv=None):
     invconfig.SRC = os.path.abspath(a.src)
     invconfig.OUT = os.path.abspath(a.out)
     invconfig.NM = os.path.join(devkit, 'bin', 'arm-none-eabi-nm')
+    invconfig.GCC = os.path.join(devkit, 'bin', 'arm-none-eabi-gcc')
     invconfig.BUILDS = {'release': build_triple(a.release),
                         'std': build_triple(a.std or os.path.join(a.src, 'pokehns.gba'))}
     invconfig.ES_FILES = es_files(a.es_ref)

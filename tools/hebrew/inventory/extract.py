@@ -17,18 +17,23 @@ Method
 - C text (src/**/*.c, src/**/*.h): one "string" = one _( ), __( ),
   COMPOUND_STRING( ), COMPOUND_STRING_SIZE_LIMIT( ), ITEM_NAME( ),
   ITEM_PLURAL_NAME( ) invocation whose literal has an ASCII letter outside
-  {...}. Liveness: the longest plain run (>= 6 chars) of the literal is encoded
-  with charmap.txt and searched in the release ROM outside the script region.
+  {...}. Liveness, per build (release and std): the build's preprocessor keeps
+  the literal's line (cpp_lines.py: pp_release, pp_std), and the longest plain
+  run (>= 6 chars) of the literal, encoded with charmap.txt, is found in that
+  build's ROM outside the script region (rom_release, rom_std; None when no run
+  is long enough to search for).
 """
 import json, os, re, struct, subprocess, sys, glob, bisect
 import numpy as np
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import invconfig as C  # noqa: E402
+import cpp_lines  # noqa: E402
 
 SRC = C.SRC
 OUT = C.OUT
 NM = C.NM
+GCC = C.GCC
 BUILDS = C.BUILDS
 
 # ---------------------------------------------------------------- charmap
@@ -480,6 +485,15 @@ def main():
                 if r['var']:
                     r[f'sym_{bname}'] = r['var'] in symnames
         del v, v6, pos, keep
+    # A literal is in a build only if the build's preprocessor keeps its line: the ROM search alone
+    # also finds the text of a branch the build leaves out when another line compiles the same run.
+    for bname in ('release', 'std'):
+        kept = cpp_lines.preprocess(SRC, release=bname == 'release', gcc=GCC, files=set(parsed))
+        for rel, recs in parsed.items():
+            text = open(f'{SRC}/{rel}', encoding='utf-8', errors='replace').read()
+            verdict = cpp_lines.verdicts(text, [r['line'] for r in recs], kept.get(rel))
+            for r in recs:
+                r[f'pp_{bname}'] = verdict[r['line']]
     c_out = {}
     for rel, recs in parsed.items():
         for r in recs:
