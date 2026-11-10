@@ -43,13 +43,14 @@ fresh clone.
 | Item | Value | Check |
 | --- | --- | --- |
 | `he/main` | `0514c9b57b` (on GitHub too): the merges of round 19 (`he/fix-r19`, `b32c6f117c`) and round 20 (`he/fix-r20`, `c1cfd8a30b`, the build of 1.0), then 11 commits that touch only `HANDOFF.md`, `notes.json`, `DECISIONS.md` and `STATUS.md` | `git rev-parse --short he/main` |
-| `he/renderer` | `67df13ff43` (on GitHub too): `384104fb15` plus the four graphics and Easy Chat commits of rounds 19 and 20 and three older graphics commits (section 1.2) | `git rev-parse --short he/renderer` |
+| `he/wip-r21` | round 21, local and not merged: from `0514c9b57b`, one engine commit (`cd5fb48abe`, the Pokéblock case list's level column), one tour, three tool fixes (two with new tests), `STATUS.md` regenerated, and these documents | `git log --oneline he/main..he/wip-r21` |
+| `he/renderer` | `67df13ff43` (on GitHub too): `384104fb15` plus the four graphics and Easy Chat commits of rounds 19 and 20 and three older graphics commits (section 1.2). Round 21's engine commit `cd5fb48abe` is not picked yet (item 3 below) | `git rev-parse --short he/renderer` |
 | Release | One release, 1.0, replaced in place on each update (ROM, `SHA1SUMS`, `TESTING.md`); the builds repo's commit history keeps the older builds. Current 1.0: built from `he/main` `c1cfd8a30b` (rc22) | `git -C <builds> log` (`8bae7a0` "Update 1.0 to the build of he/main c1cfd8a30b"); `<builds>/records/README.md:43` |
 | 1.0 ROM | `pokehns-he-2.0.6-1.0.gba`: 33554432 bytes, SHA-1 `47695df1151d3296d378df0ade42bb89ade2954b`, CRC32 `36B0B4AA` (clip build `e1b25bcfe5d911753c6df0a5cea68b094b06d96a`, CRC32 `99652CF5`) | `<builds>/SHA1SUMS` |
 | Releasing | Build a candidate with `tools/hebrew/release/`, then replace the three files in the builds repo and say in the commit message which `he/main` commit it was built from; keep `tools/hebrew/release/notes.json` at `"release": "1.0"`. A candidate is published with hand play declared as not tested (`DECISIONS.md` Q138) | section 5 |
 | CI | green in all three jobs at `c1cfd8a30b` (run 42721195219: `build` 4m46s, `audit` 1m22s, `check` 20m42s), at `dd6d82f504` (42724124742) and at `0514c9b57b` (42725640966); so were the runs before them on `he/main` (41918360015 at `85705e4bc9`, 41929345455 at `08027d9879`, 41933578987 at `fe509e0043`) | `gh run list -R ronyeh2/pokehns-expansion-heb --workflow hebrew.yml --branch he/main` |
-| Static checks | drift 0 FAIL (708 files); audit 0 errors and 54 warnings; namecheck 0 problems and 0 warnings (34 allowlisted); plurals 0 problems; the Pokédex A–Z, Easy Chat and live-label generators up to date; 137 tool tests OK on Python 3.9.6 and 3.11.9 (`c1cfd8a30b`, baseline `he/renderer` `8cfd524776`) | section 4.2 |
-| Translation status | every live file is translated: 650 files, 525 seen on screen, 125 translated, none blocked (rc21's sweep) | `translation/hebrew/STATUS.md:5` |
+| Static checks | at `he/wip-r21` `34fee0e811`, baseline `he/renderer` `67df13ff43`: drift 708 files, 1 FAIL, `src/pokeblock.c`, which passes once `cd5fb48abe` is picked; audit 0 errors and 54 warnings, 39,059 strings as in CI; namecheck 0 problems and 0 warnings (34 allowlisted); plurals 0 problems; the Pokédex A–Z, Easy Chat and live-label generators up to date; 143 tool tests OK on Python 3.9.6, 3.11.9 and 3.14.7 | section 4.2 |
+| Translation status | every live file is translated: 650 files, 525 seen on screen, 125 translated, none blocked (rc22's sweep; regenerated on `he/wip-r21` after the C-liveness fix, with the same totals) | `translation/hebrew/STATUS.md:5` |
 
 **What remains** (details in section 8):
 
@@ -60,14 +61,29 @@ fresh clone.
 2. **Done: 1.0 is rc22, built from `c1cfd8a30b`** (rounds 19 and 20 merged, their graphics and
    Easy Chat commits on `he/renderer`, `he/upstream-fixes` at `8d52b4cccf`, all pushed). Against
    rc21: `make check` the same (5074 results, 1899 failing, all known upstream failures); 71 of 71
-   tours OK and clip tours OK; the sweep OK for all 6,821 labels (`make_chunks.py all` run first);
-   the self-check, save ladder and map walk (507 OK, the same 36 HELD) pass; the ROM sweep finds
-   the same labels; 158 tour shots differ, and against round 20's reviewed AFTER build only one
-   more does (`pbi_pp_10_bag_elixir`, the bag sprite's wiggle frame; the text is identical).
-   Records are in `<builds>/records/rc22/`, indexed with rc21 in `<builds>/records/README.md`.
-   `STATUS.md` regenerated from rc22's sweep is unchanged.
-3. The open rows of section 8.1: three small tool rows, and the Pokéblock case list's
-   three-digit level, which play most likely never makes (by code reading and a frame model).
+   tours OK and clip tours OK; the sweep OK for all 6,821 labels it read (the 6,611 live ones and
+   210 flag-off labels from old chunk files, section 4.5); the self-check, save ladder and map
+   walk (507 OK, the same 36 HELD) pass; the ROM sweep finds the same labels; 158 tour shots
+   differ, and against round 20's reviewed AFTER build only one more does
+   (`pbi_pp_10_bag_elixir`, the bag sprite's wiggle frame; the text is identical). Records are in
+   `<builds>/records/rc22/`, indexed with rc21 in `<builds>/records/README.md`. `STATUS.md`
+   regenerated from rc22's sweep was unchanged; round 21 regenerated it again after the
+   C-liveness fix (15 C rows change, the totals do not).
+3. **Integrate round 21** (`he/wip-r21`; section 8.5, "Verified in round 21"):
+   1. Cherry-pick `cd5fb48abe` onto `he/renderer` (it applies to `67df13ff43`, and drift on
+      `src/pokeblock.c` then prints `ok`), and push `he/renderer` before `he/main` (section 4.7).
+   2. Merge `he/wip-r21` into `he/main` with `--no-ff`, check that CI is green, and push.
+   3. The ROM changed: 3 bytes against rc22, the Pokéblock level column and an assert's line
+      number; no gameplay change. So build a new 1.0 candidate from the merge and run section 5
+      on it. Before its sweep, make the units into an empty folder. Before its `TESTING.md`,
+      replace `<builds>/reference/mapwalk_en.json` with a walk by the current walker and set
+      `notes.json` `map_walk.hebrew_only_held` to `[]` in the same change (section 8.1).
+      `notes.json` already describes the Pokéblock fix. Replace 1.0 only when the candidate passes.
+   4. Then point sections 0, 1.2 and 4.2 at the new commits, the new 1.0 and its records.
+4. The open rows of section 8.1: tool and data rows only (the inventory's C liveness for
+   uncompiled `items.h` branches, the stale English reference walk, the harness's mirror check,
+   `make_chunks.py`'s old files, `startmenu` on Frontier floors, two leftovers). None changes the
+   ROM.
 
 ---
 
@@ -117,7 +133,9 @@ headers, from `81f9b905db`), `784e76146d` (the GHOST and PSYCHIC plates and `men
 `04d59a585c`) and `8cfd524776` (the `menu_info.png` Psychic plate with the short hyphen, from
 `3f2c255dce`). Then the three graphics commits of earlier rounds that had not been picked:
 `8c5e324a40` (the paralysis tag, from `d3b59b94fe`), `0b3ccf4430` (the NORMAL rank title, from
-`d41a67ebdf`) and `67df13ff43` (the alphabet mode tab, from `9164440ab9`). Each pick has the same
+`d41a67ebdf`) and `67df13ff43` (the alphabet mode tab, from `9164440ab9`). Round 21 adds one engine
+commit to pick, `cd5fb48abe` (the Pokéblock case list's level column); it is not on `he/renderer`
+yet (section 0). Each pick has the same
 patch as its source commit (`git patch-id --stable`), and `graphics/` on `he/renderer` now equals
 `he/main`'s (`git diff --stat he/renderer he/main -- graphics/` prints nothing).
 
@@ -188,7 +206,7 @@ Reference machine: Apple Silicon, macOS.
 | libpng, pkg-config | Homebrew libpng 1.6.58 | `brew install libpng pkg-config`; Linux: `libpng-dev` |
 | GNU make | macOS ships 3.81 | 3.81 builds fine but has no `-O` (section 6.1) |
 | git | any | the build refuses to run without git history (section 6.1) |
-| Python 3 | 3.9 or newer: the 143 tool tests pass on 3.9.6 and 3.11.9 (the 137 of round 19 also on 3.14.7), and all 242 scripts under `tools/hebrew` compile with every warning turned into an error on 3.9.6, 3.11.9 and 3.14.7 (CI: Ubuntu 26.04's python3) | standard library only, except the picture tools |
+| Python 3 | 3.9 or newer: the 143 tool tests pass on 3.9.6, 3.11.9 and 3.14.7, and all 242 scripts under `tools/hebrew` compile with every warning turned into an error on 3.9.6, 3.11.9 and 3.14.7 (CI: Ubuntu 26.04's python3) | standard library only, except the picture tools |
 | Pillow | 12.2.0 | `python3 -m pip install Pillow`. Needed by `fontcells.py`, `tools/hebrew/graphics/`, the font previews and the review-sheet scripts; the harness writes PNGs itself |
 | numpy | any recent | only `tools/hebrew/inventory/` |
 | cmake | 4.4.3 | only for building mGBA for the harness |
@@ -911,7 +929,7 @@ python3 tools/hebrew/check_tests.py make_check.log
   and the printed lists are unchanged. With it, `make check BUILD=hns -j8` (12 min 18 s in a fresh
   worktree) printed the whole summary (`FAILED 1924`, `TOTAL 5135`) and no segfault, with runners
   12-14 starting past row 1,600; `check_tests.py` found 1,903 failing tests, all known. Only the
-  test tool changes, not the ROM. It is merged into `he/main` (`08027d9879`, the commit 1.0 is
+  test tool changes, not the ROM. It is merged into `he/main` (`08027d9879`, the commit rc21 was
   built from): rc21's `make_check.log` ends with the whole summary (`FAILED 1920`, `TOTAL 5135`)
   and no segfault. `he/upstream-fixes` was fast-forwarded to `8d52b4cccf`.
 - `check_tests.py` parses the `[NN] NAME: RESULT` lines. It counts FAIL, ERROR, TIMEOUT and CRASH
@@ -1735,6 +1753,8 @@ below wrong or stale, and each is corrected where it stands; the evidence is in
   older than the walker (section 4.6); `make_chunks.py all` gives 6,611 labels only into an empty
   folder (section 2.6); 1.2.1 saves fail on the sector checksums, not on the migration (section
   6.6); a Trainer Hill floor does not rewrite its object scripts on CONTINUE (section 4.6).
+- **Also:** section 4.3 called `08027d9879` the commit 1.0 is built from, and 8.5 called rc21 the
+  current 1.0; both were true before rc22.
 - **Not changed in place:** `notes.json` `map_walk` and the shipped 1.0 `TESTING.md:48` still say
   the two Battle Arena rooms hold only in Hebrew. They change together with the English reference
   walk (section 8.1).
@@ -1797,7 +1817,7 @@ and the round screenshots. Freeing that disk is the owner's call.
   of the worked example in section 3.4 (`textwidth.py`, `wrap.py`, `make_chunks.py B21`,
   `checkunits.py`, `drift.py`, `audit.py`) print the outputs shown there.
 
-**Verified in round 19** (on rc21, the current 1.0, unless a line says otherwise; scripts, logs
+**Verified in round 19** (on rc21, then 1.0, unless a line says otherwise; scripts, logs
 and screenshots that are not in the fork are under `<private>/scratch/screens/r19/`):
 
 - **Hebrew-written mid-game and post-game saves load in the English ROM** and show the same
@@ -1840,7 +1860,7 @@ and screenshots that are not in the fork are under `<private>/scratch/screens/r1
   3.9.6 and 3.14.7, and the 137 tool tests pass on 3.9.6, 3.11.9 and 3.14.7 (`he/wip-r19`).
 
 **Verified in round 20** (the Psychic and FireRed names of Q139 and Q140). Each changed screen was
-shot on three builds: rc21's clip ROM (the current 1.0), the clip ROM of `he/wip-r20`
+shot on three builds: rc21's clip ROM (then 1.0), the clip ROM of `he/wip-r20`
 `a9ebeeb278`, and English 2.0.6. The two checks after the review fixes ran on a build that equals
 `he/fix-r20` `ffdc529fc7`. None of this ran on the candidate built from `c1cfd8a30b`; its own
 release tours and sweep cover the screens the release tests reach. The round's tours are in
@@ -1889,8 +1909,9 @@ release tours and sweep cover the screens the release tests reach. The round's t
   change the English ROM.
 - The 137 tool tests pass at `c1cfd8a30b` on Python 3.9.6 and 3.11.9.
 
-**Verified in round 21** (on `he/wip-r21`; scripts, logs and screenshots that are not in the fork are
-under `<private>/scratch/screens/r21/`, in `fixes/` for the fixes):
+**Verified in round 21** (the fixes on `he/wip-r21` and a clean build of `34fee0e811`, the rest on
+rc22, the current 1.0, and English 2.0.6; scripts, logs and screenshots that are not in the fork
+are under `<private>/scratch/screens/r21/`, in `fixes/`, `emu/` and `static/`):
 
 - **The Pokéblock case list shows a three-digit level whole** (`cd5fb48abe`). The narrow font's
   level glyph is 12 px wide against English's 8 (`textwidth.py --font FONT_NARROW "{LV}255"`:
@@ -1939,21 +1960,18 @@ under `<private>/scratch/screens/r21/`, in `fixes/` for the fixes):
   0 warnings, 34 allowlisted; plurals 0 problems (items 902, stackable 693); the three generators
   and `flag_gates.py` (`live 6585, flag_off 451, not_built 147`) up to date; drift 708 files with
   one FAIL, `src/pokeblock.c`, which passes against `he/renderer` plus `cd5fb48abe`.
-- The 143 tool tests pass on Python 3.9.6 and 3.11.9 with no skip, and all 242 scripts under
+- The 143 tool tests pass on Python 3.9.6, 3.11.9 and 3.14.7 with no skip, and all 242 scripts under
   `tools/hebrew` compile with every warning turned into an error on 3.9.6, 3.11.9 and 3.14.7.
-
 - **The English map walk's Dome "crash" is a false alarm of the harness** (section 4.6, in
   `static/`): reproduced exactly with the older walker, traced to a script command run from the
   ROM mirror, and the game goes on to draw the menu. With the current walker English holds the
   same 36 maps as rc22 (`static/mw_en_full/mapwalk.json`).
 - **rc22's sweep read 210 stale labels on top of the 6,611 live ones,** from chunk files that
   `make_chunks.py all` does not remove (section 4.5); all 6,821 were OK.
-
 - **Hebrew-written saves made outside a Pokémon Center load in the English ROM** (section 4.6, in
   `emu/`): a town, a route, a house, a Trainer Hill floor and a Battle Pyramid floor.
 - **Why 1.2.1 saves do not load, and what the player sees,** on both ROMs with a synthetic save
   (section 6.6, in `static/`).
-
 - **Round 20's names in the places no test had reached** (in `emu/`, `facts.md` section 1; every
   Hebrew run on rc22's clip ROM, with 0 clip records):
   - PSYCHIC GEM and PSYCHIC TERA SHARD in the PC storage held-item field, in both PC modes, beside
@@ -1988,7 +2006,6 @@ under `<private>/scratch/screens/r21/`, in `fixes/` for the fixes):
     above `MOVES_COUNT` that is neither a Z-move nor a Max Move (`src/battle_message.c:2769-2775`,
     `:3299-3305`). Those two kinds fill the whole range up to `MOVES_COUNT_ALL`
     (`include/constants/moves.h:913-1011`), and no string uses `{B_LAST_MOVE}`.
-
 - **The documents against the tree** (in `static/`): every command block of section 4.2 printed
   the documented output at `he/main` `0514c9b57b` on Python 3.11.9 and 3.9.6 (`static/s42/`); the
   examples of section 3.4 print what is shown; the seven `he/renderer` picks have the same
@@ -2007,6 +2024,9 @@ under `<private>/scratch/screens/r21/`, in `fixes/` for the fixes):
 - The harness and the ladder on Linux; how the clock's hour reaches the game's random numbers
   (section 2.6).
 - A real pre-2.0 (1.2.1) save: only a synthetic one in its layout was loaded (section 6.6).
+- Whether the battle debug menu's AI party page still comes up garbled the first time it opens,
+  as `dbgmenu.py`'s docstring says (`:18-19`); it was not checked again after round 21's harness
+  fix.
 - The out-of-bounds read behind Scott's shields could write through a stray pointer after a link
   Dodrio Berry Picking game (needs a link).
 - Of round 20's names, the Union Room trade board's type plate (needs a link,
