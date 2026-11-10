@@ -33,6 +33,7 @@ import paths
 from drift import DROPPABLE_TOKENS, same_tokens  # the CI gate's token rule
 
 TREE = paths.TREE
+UPSTREAM = paths.UPSTREAM
 LIVE_LABELS = paths.LIVE_LABELS
 C_STRINGS = paths.C_STRINGS
 GLOSSARY = paths.GLOSSARY
@@ -205,18 +206,47 @@ FIELD_RE = re.compile(r'\.([A-Za-z0-9_]+)\s*=\s*$')
 VAR_RE = re.compile(r'(?:const\s+)?u8\s+([A-Za-z0-9_]+)\s*\[[^\]]*\]\s*=\s*$')
 
 
-def c_live_index():
+def c_live_index(rel):
+    """{c_key: live} for the C literals of REL that C_STRINGS records.
+
+    C_STRINGS records each literal by its line in the English tree (UPSTREAM), and lines differ in
+    this tree (Hebrew wraps differently, TEXT_RTL adds plural names). So each record is found in the
+    English file by line and text, and keyed by what the literal initialises there (c_key); the
+    tree's literals are looked up by the same key. Without the English file every literal of REL
+    counts as live."""
     try:
-        data = json.load(open(C_STRINGS))
+        lits = json.load(open(C_STRINGS)).get(rel)
     except Exception:
         return {}
-    idx = {}
-    for f, lits in data.items():
-        for l in lits:
-            # None means the inventory could not search for it (too short to be unique): live.
-            r, st = l.get('rom_release'), l.get('rom_std')
-            idx[(f, l['line'])] = not (r is False and st is False)
+    if not lits:
+        return {}
+    live = {}
+    for l in lits:
+        # None means the inventory could not search for it (too short to be unique): live.
+        r, st = l.get('rom_release'), l.get('rom_std')
+        live[(l['line'], l['text'])] = not (r is False and st is False)
+    try:
+        text = open(os.path.join(UPSTREAM, rel), encoding='utf-8').read()
+    except OSError:
+        print('units: %s is not in the English tree %s; every literal of it counts as live' % (rel, UPSTREAM),
+              file=sys.stderr)
+        return {}
+    idx, seen = {}, {}
+    for m, line_no, joined, desig, field, var in c_literals(text):
+        key = c_key(m, desig, field, var, seen)
+        if (line_no, joined) in live:
+            idx[key] = live[(line_no, joined)]
     return idx
+
+
+def c_key(m, desig, field, var, seen):
+    """A C literal's key that does not depend on its line: the designator, field or variable it
+    initialises and its macro, plus n, its place among the file's literals with those four. SEEN
+    counts the keys of the literals before it; call this for every literal of c_literals, in order."""
+    base = (desig, field, var, m.group(1))
+    n = seen.get(base, 0)
+    seen[base] = n + 1
+    return base + (n,)
 
 
 def c_literals(text):
@@ -236,15 +266,17 @@ def c_literals(text):
 
 def extract_c(path, rel, all_labels):
     text = open(path, encoding='utf-8').read()
-    live_idx = c_live_index()
+    live_idx = c_live_index(rel)
     units = []
     n = 0
+    seen = {}
     for m, line_no, joined, desig, field, var in c_literals(text):
         idx = n
         n += 1
+        ckey = c_key(m, desig, field, var, seen)
         if not re.search(r'[A-Za-z\u05d0-\u05ea]', TOKEN_RE.sub('', joined)):
             continue
-        is_live = live_idx.get((rel, line_no), True)
+        is_live = live_idx.get(ckey, True)
         if not is_live and not all_labels:
             continue
         key = var or ('%s.%s' % (desig, field) if desig and field else (desig or field or '?'))
