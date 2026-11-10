@@ -42,15 +42,14 @@ fresh clone.
 
 | Item | Value | Check |
 | --- | --- | --- |
-| `he/main` | `0514c9b57b` (on GitHub too): the merges of round 19 (`he/fix-r19`, `b32c6f117c`) and round 20 (`he/fix-r20`, `c1cfd8a30b`, the build of 1.0), then 11 commits that touch only `HANDOFF.md`, `notes.json`, `DECISIONS.md` and `STATUS.md` | `git rev-parse --short he/main` |
-| `he/wip-r21` | round 21, local and not merged: from `0514c9b57b`, one engine commit (`cd5fb48abe`, the Pokéblock case list's level column), one tour, three tool fixes (two with new tests), `STATUS.md` regenerated, these documents, and two `units.py` fixes from the round's review (with tests; `STATUS.md` unchanged by them) | `git log --oneline he/main..he/wip-r21` |
-| `he/renderer` | `67df13ff43` (on GitHub too): `384104fb15` plus the four graphics and Easy Chat commits of rounds 19 and 20 and three older graphics commits (section 1.2). Round 21's engine commit `cd5fb48abe` is not picked yet (item 3 below) | `git rev-parse --short he/renderer` |
-| Release | One release, 1.0, replaced in place on each update (ROM, `SHA1SUMS`, `TESTING.md`); the builds repo's commit history keeps the older builds. Current 1.0: built from `he/main` `c1cfd8a30b` (rc22) | `git -C <builds> log` (`8bae7a0` "Update 1.0 to the build of he/main c1cfd8a30b"); `<builds>/records/README.md:43` |
-| 1.0 ROM | `pokehns-he-2.0.6-1.0.gba`: 33554432 bytes, SHA-1 `47695df1151d3296d378df0ade42bb89ade2954b`, CRC32 `36B0B4AA` (clip build `e1b25bcfe5d911753c6df0a5cea68b094b06d96a`, CRC32 `99652CF5`) | `<builds>/SHA1SUMS` |
+| `he/main` | the merge of round 21 (`he/fix-r21`, `8aeb3a0f2b`, the build of 1.0; on GitHub too), then the commits that point the documents and `notes.json` at the new 1.0 | `git rev-parse --short he/main` |
+| `he/renderer` | `ec407862cd` (on GitHub too): `67df13ff43` plus round 21's engine commit `cd5fb48abe` (the Pokéblock case list's level column). Built in English (`TEXT_RTL` FALSE) before and after the pick, the ROM differs in 2 bytes, an assert's line number (`<private>/scratch/screens/r21/engproof/PROOF.md`) | `git rev-parse --short he/renderer` |
+| Release | One release, 1.0, replaced in place on each update (ROM, `SHA1SUMS`, `TESTING.md`); the builds repo's commit history keeps the older builds. Current 1.0: built from `he/main` `8aeb3a0f2b` (rc23) | `git -C <builds> log` (`f438012` "Update 1.0 to the build of he/main 8aeb3a0f2b"); `<builds>/records/README.md:44` |
+| 1.0 ROM | `pokehns-he-2.0.6-1.0.gba`: 33554432 bytes, SHA-1 `383e16ba227ae4c62ae1c1ff01bfaa0c0793eedf`, CRC32 `A6214055` (clip build `66be59802683abf1b1d69be586e38d04dc03c4bb`, CRC32 `08A267D5`) | `<builds>/SHA1SUMS` |
 | Releasing | Build a candidate with `tools/hebrew/release/`, then replace the three files in the builds repo and say in the commit message which `he/main` commit it was built from; keep `tools/hebrew/release/notes.json` at `"release": "1.0"`. A candidate is published with hand play declared as not tested (`DECISIONS.md` Q138) | section 5 |
-| CI | green in all three jobs at `c1cfd8a30b` (run 42721195219: `build` 4m46s, `audit` 1m22s, `check` 20m42s), at `dd6d82f504` (42724124742) and at `0514c9b57b` (42725640966); so were the runs before them on `he/main` (41918360015 at `85705e4bc9`, 41929345455 at `08027d9879`, 41933578987 at `fe509e0043`) | `gh run list -R ronyeh2/pokehns-expansion-heb --workflow hebrew.yml --branch he/main` |
-| Static checks | at `he/wip-r21` `34fee0e811`, and the same again at `0f345f05b7` in the review, baseline `he/renderer` `67df13ff43`: drift 708 files, 1 FAIL, `src/pokeblock.c`, which passes once `cd5fb48abe` is picked; audit 0 errors and 54 warnings, 39,059 strings as in CI; namecheck 0 problems and 0 warnings (34 allowlisted); plurals 0 problems; the Pokédex A–Z, Easy Chat and live-label generators up to date; 147 tool tests OK on Python 3.9.6, 3.11.9 and 3.14.7 at the tip | section 4.2 |
-| Translation status | every live file is translated: 650 files, 525 seen on screen, 125 translated, none blocked (rc22's sweep; regenerated on `he/wip-r21` after the C-liveness fix, with the same totals) | `translation/hebrew/STATUS.md:5` |
+| CI | green in all three jobs at `8aeb3a0f2b` (run 42802955754) and at `c1cfd8a30b` (run 42721195219: `build` 4m46s, `audit` 1m22s, `check` 20m42s), at `dd6d82f504` (42724124742) and at `0514c9b57b` (42725640966); so were the runs before them on `he/main` (41918360015 at `85705e4bc9`, 41929345455 at `08027d9879`, 41933578987 at `fe509e0043`) | `gh run list -R ronyeh2/pokehns-expansion-heb --workflow hebrew.yml --branch he/main` |
+| Static checks | at `he/main` `8aeb3a0f2b`, baseline `he/renderer` `ec407862cd`: drift 708 files, 0 FAIL, 336 with warnings only; audit 0 errors and 54 warnings, 39,059 strings as in CI; namecheck 0 problems and 0 warnings (34 allowlisted); plurals 0 problems; the Pokédex A–Z, Easy Chat and live-label generators up to date; 147 tool tests OK on Python 3.9.6, 3.11.9 and 3.14.7 at the tip | section 4.2 |
+| Translation status | every live file is translated: 650 files, 525 seen on screen, 125 translated, none blocked (rc22's sweep, regenerated after round 21's C-liveness fix, with the same totals) | `translation/hebrew/STATUS.md:5` |
 
 **What remains** (details in section 8):
 
@@ -58,30 +57,25 @@ fresh clone.
    person), real hardware (a 32 MiB flash cart with FLASH 128 KB and an RTC), and a read of the
    shipped wording by a native speaker. All three are in `notes.json` `not_tested`, so every
    `TESTING.md` says so; section 8.5 lists the lines reviewers flagged for a native read.
-2. **Done: 1.0 is rc22, built from `c1cfd8a30b`** (rounds 19 and 20 merged, their graphics and
-   Easy Chat commits on `he/renderer`, `he/upstream-fixes` at `8d52b4cccf`, all pushed). Against
-   rc21: `make check` the same (5074 results, 1899 failing, all known upstream failures); 71 of 71
-   tours OK and clip tours OK; the sweep OK for all 6,821 labels it read (the 6,611 live ones and
-   210 flag-off labels from old chunk files, section 4.5); the self-check, save ladder and map
-   walk (507 OK, the same 36 HELD) pass; the ROM sweep finds the same labels; 158 tour shots
-   differ, and against round 20's reviewed AFTER build only one more does
-   (`pbi_pp_10_bag_elixir`, the bag sprite's wiggle frame; the text is identical). Records are in
-   `<builds>/records/rc22/`, indexed with rc21 in `<builds>/records/README.md`. `STATUS.md`
-   regenerated from rc22's sweep was unchanged; round 21 regenerated it again after the
-   C-liveness fix (15 C rows change, the totals do not).
-3. **Integrate round 21** (`he/wip-r21`; section 8.5, "Verified in round 21"):
-   1. Cherry-pick `cd5fb48abe` onto `he/renderer` (it applies to `67df13ff43`, and drift on
-      `src/pokeblock.c` then prints `ok`), and push `he/renderer` before `he/main` (section 4.7).
-   2. Merge `he/wip-r21` into `he/main` with `--no-ff`, check that CI is green, and push.
-   3. The ROM changed: 3 bytes against rc22, the Pokéblock level column and an assert's line
-      number; no gameplay change. So build a new 1.0 candidate from the merge and run section 5
-      on it. Before its sweep, make the units into an empty folder. Before its `TESTING.md`,
-      replace `<builds>/reference/mapwalk_en.json` with a walk by the current walker and set
-      `notes.json` `map_walk.hebrew_only_held` to `[]` in the same change (section 8.1).
-      `notes.json` already describes the Pokéblock fix. Replace 1.0 only when the candidate passes.
-   4. Then point sections 0, 1.2 and 4.2 at the new commits, the new 1.0 and its records.
+2. **Done: 1.0 is rc23, built from `8aeb3a0f2b`** (round 21 merged, its engine commit on
+   `he/renderer`, all pushed; CI green). Its ROM is the one round 21 built twice, from the
+   worktree and from a clean archive (SHA-1 `383e16ba…`). Against rc22: `make check` the same
+   (5074 results, 1899 failing, all known upstream failures); all 2,056 tour shots and all 2,056
+   clip-tour shots identical (`tourdiff`); the sweep OK for all 6,611 labels, read from units made
+   into an empty folder (rc22 read 6,821 with 210 stale flag-off labels, section 4.5); the
+   self-check, save ladder and map walk (507 OK, the same 36 HELD) pass; the ROM sweep finds the
+   same labels; the cross-core table differs only in the start menu's clock. Records are in
+   `<builds>/records/rc23/`, indexed in `<builds>/records/README.md`. Before its `TESTING.md` the
+   English reference walk was replaced (`<builds>` `c10184c`: a walk of 2026-11-10 by the current
+   walker, 507 OK and the same 36 HELD; command in `<private>/runs/mapwalk_en/COMMAND.txt`, the
+   old walk kept as `<private>/runs/mapwalk_en_2026-10-12`) and `notes.json`
+   `map_walk.hebrew_only_held` set to `[]`, so `TESTING.md` now says all 36 held maps also hold
+   in English. `make_testing_md.py` printed "None skipped" in the sweep row when nothing was
+   skipped; it now prints 0.
+3. **Round 22** (local branches `he/wip-r22a`, `he/wip-r22b`, `he/wip-r22c`, not merged): the
+   remaining tool rows of section 8.1. None of them changes the ROM.
 4. The open rows of section 8.1: tool and data rows only (the inventory's C liveness for
-   uncompiled `items.h` branches, the stale English reference walk, the harness's mirror check,
+   uncompiled `items.h` branches, the harness's mirror check,
    `make_chunks.py`'s old files, `startmenu` on Frontier floors, two leftovers). None changes the
    ROM.
 
@@ -106,7 +100,7 @@ pokeemerald-expansion 1.15.2. Upstream is `PokemonHnS-Development/pokehns-expans
 | `ronyeh2/pokehns-expansion-heb` (this repo) | public | engine, text, graphics, tools, docs | default branch `master`; **no tags** (`git ls-remote` on 2026-11-10) |
 | `PokemonHnS-Development/pokehns-expansion` | public | upstream | `Release-v2.0.6` = its `master` = `167aa6d537` |
 | `ronyeh2/pokehns-hebrew-builds` | **private** | the one release 1.0 (ROM, `SHA1SUMS`, `TESTING.md`), replaced in place; `saves/`, `reference/` (libretro cores, English map walk), `records/rcNN/` (each candidate's logs and review JSON), `archive/` (history only) | `.gitattributes` has `*.gba`, `*.sav`, `*.zip`, `*.tar.gz` binary; git history keeps the older builds |
-| `<private>` (no remote) | local only | the mGBA 0.10.5 build (`mgba/`), `emu/hnsrun`, the candidates' ROMs, ELFs and screenshots (`release/rc1..rc22`, 8.3 GB), the round screenshots (`scratch/`, about 140 GB) | everything the release needs is in the fork or `<builds>` (section 8.4); the rest is rebuilt (section 2.6) |
+| `<private>` (no remote) | local only | the mGBA 0.10.5 build (`mgba/`), `emu/hnsrun`, the candidates' ROMs, ELFs and screenshots (`release/rc1..rc23`, 8.7 GB), the round screenshots (`scratch/`, about 140 GB) | everything the release needs is in the fork or `<builds>` (section 8.4); the rest is rebuilt (section 2.6) |
 
 The Spanish (`SergioBonet/hns_es`) and French (`nhykola/HeartAndSoul-FR`) forks were used only
 as a cross-check, never as source text (`STYLE.md` §1).
@@ -365,7 +359,7 @@ fresh-clone test" at the end); a fresh machine was never tried (**unverified**).
 | unit chunks (the sweep's labels) | `python3 tools/hebrew/make_chunks.py all` → `build/hebrew/units`, 6,611 labels (the 7,209 that 0.2 was swept with, less the 451 flag-gated and 147 unbuilt labels that `flag_gates.py` takes out). Make them again whenever `live_labels.json` changes, **into an empty folder** (`rm -rf build/hebrew/units` first): the sweep reads whatever units are there, and `make_chunks.py` never removes an old chunk file (section 8.1) | rebuilt; never stored |
 | `crosscore` (libretro frontend) | nothing to install: `run_release_tests.sh` builds `tools/hebrew/emu/crosscore.c` with `cc -O2` into `RCDIR/tests/bin` on every run | |
 | libretro cores | `vbam`, `vba_next`, `gpsp`, `mednafen_gba`, `skyemu` `_libretro.dylib` in `HNS_CORES` (`build/hebrew/cores`); the mGBA core is RetroArch's own (`$HOME/Library/Application Support/RetroArch/cores/mgba_libretro.dylib`) | `<builds>/reference/cores/`: copies of the five, with their SHA-1 and inferred source (the libretro buildbot's macOS arm64 nightlies, files dated 2026-10-17; `SOURCE.md`). RetroArch's mGBA core is not stored |
-| English map walk | `python3 tools/hebrew/emu/mapwalk.py "$HNS_EN_ROM" "$HNS_SAVES/ladder6_postgame.sav" build/hebrew/mapwalk_en` (507 OK, 36 HELD, the same 36 maps as rc22's Hebrew walk) | `<builds>/reference/mapwalk_en.json` (`HNS_EN_MAPWALK`). **Stale:** an older `mapwalk.py` made it, which tapped A and B in turn; replace it with a walk by the current one (section 8.1) |
+| English map walk | `python3 tools/hebrew/emu/mapwalk.py "$HNS_EN_ROM" "$HNS_SAVES/ladder6_postgame.sav" build/hebrew/mapwalk_en` (507 OK, 36 HELD, the same 36 maps as rc22's and rc23's Hebrew walks; made 2026-11-10 into `<private>/runs/mapwalk_en`, 373 s) | `<builds>/reference/mapwalk_en.json` (`HNS_EN_MAPWALK`), replaced in `<builds>` `c10184c`; the walk it replaced was made by an older `mapwalk.py` that tapped A and B in turn |
 | English tour run (for side-by-side review) | `python3 tools/hebrew/emu/hns.py tour "$HNS_EN_ROM" build/hebrew/tour_en`: 70 of the 71 tours report OK in 2:37; the two `naming_*` tours are Hebrew-only by design (section 4.5) | regenerated; not stored |
 | graphics drawing scripts | `tools/hebrew/graphics/` (its README; `gpaths.LATER_EDITS` protects the 17 files fixed by hand later) | — |
 | Hebrew glyph designs and installer | `tools/hebrew/fonts/` | — |
@@ -1597,13 +1591,13 @@ Ask the owner before you:
 ### 8.1 Open defects in the repository
 
 The four rows of round 20 (the Pokéblock case list's three-digit level, `dbgmenu.py`'s early
-shots, the C-literal liveness by line, and the audit's count on a built tree) are fixed on
-`he/wip-r21` (section 8.5, round 21). These are open:
+shots, the C-literal liveness by line, and the audit's count on a built tree) were fixed in
+round 21, merged in `8aeb3a0f2b` (section 8.5, round 21), and the stale English reference walk was
+replaced before rc23 (section 0, item 2). These are open:
 
 | Item | Evidence | What to do |
 | --- | --- | --- |
 | `tools/hebrew/data/c_strings.json` marks 14 English literals of `src/data/items.h` live that the build does not compile, so `STATUS.md` counts 2,218 live strings in `items.h` where the build has 2,204 | `arm-none-eabi-gcc -E` of `src/item.c` keeps 2,204 literals of `items.h`, all Hebrew. The 14 are in `#if` branches the build leaves out: the GROWTH, DAMP, STABLE, SURPRISE and BOOST MULCH descriptions, the two ICY ROCK descriptions, EXP. SHARE's and TM HAIL's descriptions, TM70's and HM DIVE's names and descriptions, and METEORITE's description. The inventory searches the ROM for each literal's longest plain run (`inventory/README.md`, "C literals"): 11 of these runs are found in the ROM, and the other 3 texts are compiled from another line. `units.py` takes the verdicts as recorded (`<private>/scratch/screens/r21/fixes/t3/why14.py`) | decide C liveness by what the preprocessor keeps, in `tools/hebrew/inventory/extract.py`, then rebuild `c_strings.json` and regenerate `STATUS.md`. Text only; nothing in the ROM changes |
-| The stored English map walk is stale, so `notes.json` and the shipped `TESTING.md` say two Battle Arena rooms hold only in Hebrew | `<builds>/reference/mapwalk_en.json` (`HNS_EN_MAPWALK`) is `<private>/runs/mapwalk_en`, written 2026-10-12 22:04-22:10 by a `mapwalk.py` that tapped A and B in turn; the walker was changed at 22:15 to the fork's B-only one. With the current walker English holds the same 36 maps as rc22 (section 4.6). `make_testing_md.py:151-153` compares `notes.json` `map_walk.hebrew_only_held` with the walks, so the 1.0 `TESTING.md:48` repeats the two Arena rooms and their reason | in one change: replace `<builds>/reference/mapwalk_en.json` with a walk of the English ROM by the current walker (`<private>/scratch/screens/r21/static/mw_en_full/mapwalk.json`, made from `../pokehns-en/pokehns.gba` SHA-1 `2fc84dcb…`), set `hebrew_only_held` to `[]` and drop `hebrew_only_reason`. Not before: with the old reference, `make_testing_md.py` refuses an empty list |
 | The harness calls a PC in the ROM's wait-state mirrors a crash | `pcIsSane` (`hnsrun.c:129-132`) and `pc_is_sane` (`hns.py:2160-2164`) accept only regions 00, 02, 03, 08 and 09, but the game runs most script commands from `0x0A` by design (section 4.6); `sweep.py:887` names a symbol only for 2, 3, 8 and 9 | accept `0x0A`-`0x0D` in both checks and map them to `0x08` for symbol names. Tools only |
 | `make_chunks.py` never removes an old chunk file, so a sweep can read labels that are no longer live | it only creates the batch folders (`make_chunks.py:115`, `os.makedirs(..., exist_ok=True)`); `build/hebrew/units` kept three chunk files of 2026-10-22, and rc22's sweep read 6,821 labels instead of 6,611 (section 4.5) | remove the batch's old chunk files before writing, or refuse a folder that is not empty; until then empty the folder first (sections 2.6 and 5) |
 | `hns.py` `startmenu NAME` fails on its second use in a run on a Trainer Hill or Battle Pyramid floor | seen in round 21 on the English ROM, the same with a Hebrew-written and an English-written save (`<private>/scratch/screens/r21/emu/t2/val/`): "start menu cursor did not reach BAG (at 1)", the menu closed on screen. The likely cause, a stale `gMenuCallback` (`hns.py:927-929`), is **unverified** | find the cause and open the menu whenever it is not on screen; until then tap START first (section 6.4) |
@@ -1945,7 +1939,7 @@ are under `<private>/scratch/screens/r21/`, in `fixes/`, `emu/` and `static/`):
   (`src/pokeblock.c:858` to `:864`). No other code or data changes, so gameplay is unchanged. A
   clean build: `pokehns.gba` 33554432 bytes, SHA-1 `383e16ba227ae4c62ae1c1ff01bfaa0c0793eedf`,
   CRC32 `A6214055`; clip build SHA-1 `66be59802683abf1b1d69be586e38d04dc03c4bb`, CRC32 `08A267D5`
-  (`fixes/rom/build_info.json`). It is not a release: 1.0 is still rc22.
+  (`fixes/rom/build_info.json`). The merge `8aeb3a0f2b` built the same ROM again as rc23, the current 1.0.
 - **`dbgmenu.py` shoots each debug page once its copies are in VRAM** (`9df09379ab`). `view()`
   waits 8 frames, then until `sDma3Requests` has no entry with a size, before the shot and again
   before B, and fails after 240 frames (`dbgmenu.py:47`, `:100-125`). One `--only party` run now
