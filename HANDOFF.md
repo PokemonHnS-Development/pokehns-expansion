@@ -1464,7 +1464,7 @@ EOF
 | `start menu cursor did not reach BAG (at 1)` on the second `startmenu` of a run on a Trainer Hill or Battle Pyramid floor | `_error.png` shows the menu closed | **unverified**: `start_menu_cursor` opens the menu only when `gMenuCallback` is not `HandleStartMenuInput` (`hns.py:927-929`), and the callback may still hold it after the menu closed | `tap START 30` before the second `startmenu` (section 8.1) |
 | `rom_sweep.py` exits 1 with about 6,252 runs | | dead Emerald text compiled in | informational; diff against the previous candidate |
 | cross-core: VBA-Next differs on whole frames (no RTC); SkyEmu exit 139 | `crosscore` log | an old frontend that answered core options with NULL | use the frontend `run_release_tests.sh` builds from `crosscore.c` (it answers with the defaults) |
-| a tester reports a "crash" | does the screen show an assert message? | `make hns` keeps asserts (`RELEASE ?= 0`, `Makefile:69`); the ROM contains `AssertfCrashScreen` | read the assert. R+START (the debug menu) is compiled in (`include/config/debug.h`); R is also the DexNav button |
+| a tester reports a "crash" | does the screen show an assert message? | `make hns` keeps asserts (`RELEASE ?= 0`, `Makefile:69`); the ROM contains `AssertfCrashScreen` | read the assert. R+START opens the debug menu, which is compiled in (`include/config/debug.h:5-7`); R alone switches between the Mach and Acro bikes while riding (`src/field_control_avatar.c:256-272`). DexNav is off in this build (`include/config/dexnav.h:4`) |
 
 ### 6.5 On screen: clipped, misplaced or misordered text
 
