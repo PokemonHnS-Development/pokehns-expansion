@@ -99,8 +99,9 @@ with `start save:NAME`, a save that an earlier tour exported with `keepsave NAME
 `start empty`. The release tours (`tours/*.txt`) start from saves at the top of the builds
 repository's `saves/`. A round tour (`tours/<round>/`) that names a save found only in a subfolder
 needs `HNS_SAVES` set to the folder that holds it: `saves/r8` for round 8, a folder under
-`saves/r10/` or `saves/r11/` for those rounds, and `saves/r7/saves_aug` for rounds 3-7 and
-`verify_ctxdpad` (the builds repository's README).
+`saves/r10/` or `saves/r11/` for those rounds, `saves/r4_bag` for `r20_names`' `n20_bag` and
+`n20_dexsearch` (both start from `menuA_base_copy.sav`), and `saves/r7/saves_aug` for rounds 3-7
+and `verify_ctxdpad` (the builds repository's README).
 
 `startmenu NAME`, `savegame` and `ladder.py`'s `startmenu` press START only when the start menu is
 not drawn and reading input, which `Emu.start_menu_ready` reads as a `Task_ShowStartMenu` task in

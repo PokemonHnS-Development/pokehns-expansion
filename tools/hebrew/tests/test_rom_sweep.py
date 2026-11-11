@@ -1,3 +1,5 @@
+import contextlib
+import io
 import json
 import os
 import subprocess
@@ -84,6 +86,61 @@ class SyntheticTest(unittest.TestCase):
             # ' and the typographic apostrophe share a byte: either spelling finds the source
             self.assertEqual(rs.normalizer(CM)("don't"), rs.normalizer(CM)('don’t'))
 
+    def test_weather_object_is_swept(self):
+        # src/field_weather.o holds the weather names that the Pokédex prints
+        data, sections, objs, syms = synthetic_rom()
+        objs = objs + [(B + 0x380, B + 0x3A0, '.rodata', 'src/field_weather.o')]
+        got = {r['addr'] - B: r['text'] for r in rom_text(data, sections, objs, syms).runs}
+        self.assertEqual(got.get(0x384), 'It is not very effective…$')
+
+
+def one_word_rom():
+    """synthetic_rom() plus the one-word string CANCEL at 0x3C1 and, at 0x3E1, struct bytes that
+    decode as letters and symbols (GIªËÌÁÁ) before the two-word string at 0x3E8."""
+    data, sections, objs, syms = synthetic_rom()
+    d = bytearray(data)
+    for off, text in ((0x3C0, 'CANCEL$'), (0x3E0, 'GIªËÌÁÁFar away$')):
+        d[off:off + 1 + len(enc(text))] = b'\xff' + enc(text)
+    return bytes(d), sections, objs, syms
+
+
+class MinWordsTest(unittest.TestCase):
+    def runs(self, min_words):
+        data, sections, objs, syms = one_word_rom()
+        rt = rs.RomText(None, 'x.elf', None, CM, min_words=min_words, data=data, sections=sections, objs=objs,
+                        syms=syms).scan()
+        return rt, {r['addr'] - B: r['text'] for r in rt.runs}
+
+    def test_one_word_runs_with_min_words_1(self):
+        # 1 adds the one-word runs and keeps every run of the default, where it starts
+        _, two = self.runs(2)
+        _, one = self.runs(1)
+        self.assertNotIn(0x3C1, two)
+        self.assertEqual(two.get(0x3E8), 'Far away$')
+        two[0x3C1] = 'CANCEL$'
+        self.assertEqual(one, two)
+
+    def test_one_word_english_is_reported(self):
+        en, _ = self.runs(1)
+        he, _ = self.runs(1)
+        found, _ = rs.compare(he, en, None)
+        self.assertIn('CANCEL$', [r['text'] for r in found])
+        en, _ = self.runs(2)
+        he, _ = self.runs(2)
+        found, _ = rs.compare(he, en, None)
+        self.assertNotIn('CANCEL$', [r['text'] for r in found])
+
+    def test_min_words_below_1_is_refused(self):
+        data, sections, objs, syms = one_word_rom()
+        for n in (0, -1):
+            with self.assertRaises(ValueError):
+                rs.RomText(None, 'x.elf', None, CM, min_words=n, data=data, sections=sections, objs=objs, syms=syms)
+        err = io.StringIO()
+        with contextlib.redirect_stderr(err), self.assertRaises(SystemExit) as cm:
+            rs.main(['missing_he.gba', '--en', 'missing_en.gba', '--min-words', '0'])
+        self.assertEqual(cm.exception.code, 2)
+        self.assertIn('--min-words', err.getvalue())
+
 
 @unittest.skipUnless(os.path.exists(EN_ROM), 'English reference ROM not built')
 class EnglishRomTest(unittest.TestCase):
@@ -102,6 +159,8 @@ class EnglishRomTest(unittest.TestCase):
         self.assertTrue(r['text'].startswith('Call your mom on your POKéGEAR'))
         self.assertTrue(any('NewBarkTown_hns/scripts.inc' in s for s in r['source']))
         self.assertIn('gText_RegisteredTrainerinPokeNav', by_sym)
+        # the weather names of src/field_weather.o (the Pokédex's evolution page prints them)
+        self.assertIn('SUNNY CLOUDS$', [r['text'] for r in runs if (r['object'] or '').endswith('src/field_weather.o')])
         located = sum(1 for r in runs if r['source'])
         self.assertGreater(located / float(len(runs)), 0.98)
         # code and the debug menu are not swept

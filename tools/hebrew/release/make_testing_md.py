@@ -5,7 +5,8 @@
 
 RCDIR       the folder build_release.sh and run_release_tests.sh filled. It must also hold
             make_check.log (the output of `make check BUILD=hns`) and, for the visual-review
-            row, visual_findings.json.
+            row, visual_findings.json: this candidate's review, {"commit": <the commit in
+            build_info.json>, "findings": [...]} (REVIEW.md).
 ROMNAME     the file name the ROM is published under, e.g. pokehns-he-2.0.6-0.2.gba.
 --notes     the text that belongs to one release (known issues, visual review, static checks,
             what was not tested); default: notes.json next to this script. Its "release" must
@@ -17,9 +18,11 @@ Environment:
                   (HNS_WORK: tools/hebrew/paths.py, default build/hebrew).
 
 Exit status 2 when an input is missing, 1 when the inputs contradict a sentence of the report
-(a tour or clip tour that is not OK, a failing self-check, a clipped or crashed label, a crashed map, a changed header, held maps
-that notes.json does not explain, a save-ladder rung whose validation did not exit 0, a cross-core
-table with a missing core or a cell that is not a pixel count), 0 when OUT.md was written.
+(a changed header, a failing self-check, a tour or clip tour that is not OK, a save-ladder rung
+whose validation did not exit 0, a clipped, crashed, hung or abnormal label, a crashed map, held
+maps that notes.json does not explain, a cross-core table with a missing core or a cell that is
+not a pixel count, a visual_findings.json that is not {"commit", "findings"} with this
+candidate's commit, or one with no visual_review text in the notes), 0 when OUT.md was written.
 """
 import argparse
 import collections
@@ -50,6 +53,29 @@ def fail(code, problems):
 def last_line(p):
     lines = open(p, errors='replace').read().strip().split('\n')
     return lines[-1].strip()
+
+
+def visual_findings_problem(path, commit):
+    """Why PATH is not the review of the candidate built from COMMIT, or None. The file must be
+    {"commit": COMMIT, "findings": [object, ...]}: a file copied from an earlier candidate is not
+    a review of this one."""
+    form = '{"commit": "%s", "findings": [...]}' % commit
+    try:
+        with open(path, encoding='utf-8') as f:
+            d = json.load(f)
+    except ValueError as e:
+        return '%s is not JSON (%s); it must be %s' % (path, e, form)
+    if not isinstance(d, dict):
+        return ('%s is a JSON %s, not %s: a file copied from an earlier candidate is not a review of this '
+                'one (REVIEW.md)' % (path, type(d).__name__, form))
+    if sorted(d) != ['commit', 'findings']:
+        return '%s has the keys %s; it must have exactly "commit" and "findings": %s' % (path, sorted(d), form)
+    if d['commit'] != commit:
+        return ('%s is the review of commit %r, but build_info.json says this candidate is %s: a file copied '
+                'from an earlier candidate is not a review of this one (REVIEW.md)' % (path, d['commit'], commit))
+    if not isinstance(d['findings'], list) or not all(isinstance(x, dict) for x in d['findings']):
+        return '%s: "findings" must be a list of finding objects (REVIEW.md, Finding format)' % path
+    return None
 
 
 def main():
@@ -120,7 +146,8 @@ def main():
             shots = len([x for x in os.listdir(os.path.join(T, 'ladder', m.group(1))) if x.endswith('.png')]) if os.path.isdir(os.path.join(T, 'ladder', m.group(1))) else 0
             ladder[m.group(1)] = shots
             ladder_exit[m.group(1)] = last_line(os.path.join(T, f))
-    vis = os.path.exists(os.path.join(RC, 'visual_findings.json'))
+    vis_path = os.path.join(RC, 'visual_findings.json')
+    vis = os.path.exists(vis_path)
     rom = info['pokehns.gba']; clip = info.get('pokehns-clip.gba', {})
     en_held = {r['map'] for r in json.load(open(EN_MAPWALK)) if r['status'] != 'OK'}
     both = [m for m in held if m in en_held]
@@ -157,8 +184,12 @@ def main():
     elif cc_bad:
         wrong.append('crosscore.txt has cells that are not pixel counts (%s): a core wrote no frame or one of '
                      'another size, and the report describes every core' % '; '.join(cc_bad))
-    if vis and not notes['visual_review']:
-        wrong.append('%s exists but the notes have no visual_review text' % os.path.join(RC, 'visual_findings.json'))
+    if vis:
+        problem = visual_findings_problem(vis_path, info['commit'])
+        if problem:
+            wrong.append(problem)
+        if not notes['visual_review']:
+            wrong.append('%s exists but the notes have no visual_review text' % vis_path)
     if wrong:
         fail(1, wrong)
 

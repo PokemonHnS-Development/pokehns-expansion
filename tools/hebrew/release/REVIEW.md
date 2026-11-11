@@ -45,9 +45,12 @@ Two rules apply to every lens:
 
 ## Finding format
 
-A candidate's findings go to `RC/visual_findings.json`, a list of objects. `make_testing_md.py`
-writes the visual-review row only when this file exists, with its text from `notes.json`
-(`visual_review`).
+A candidate's findings go to `RC/visual_findings.json`, an object `{"commit": "<the commit in
+RC/build_info.json>", "findings": [...]}` whose `findings` is a list of objects (empty when the
+review found nothing). `make_testing_md.py` writes the visual-review row only when this file
+exists, with its text from `notes.json` (`visual_review`), and refuses a file of another commit
+or form.
+A file copied from an earlier candidate is not a review: each candidate's file records its own.
 
 | Field | What |
 | --- | --- |

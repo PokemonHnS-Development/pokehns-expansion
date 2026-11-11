@@ -9,7 +9,10 @@ Usage:
   --en EN.gba       English reference ROM (default HNS_EN_ROM, pokehns.gba in HNS_UPSTREAM)
   --charmap FILE    charmap used to decode (default <HE tree>/charmap.txt, else HNS_FONTS_TREE's)
   --src TREE        source tree searched for the decoded text (default: the tree of HE.gba)
-  --min-words N     a run must hold at least N Latin words of 2+ letters (default 2)
+  --min-words N     a run must hold at least N Latin words of 2+ letters (default 2, at least 1).
+                    The default skips one-word strings (a menu item, a name, CANCEL) and strings
+                    with no two such words in a row (MOM: Wait, {PLAYER}!); 1 reports them too,
+                    besides every run of the default (step 2)
   --include-debug   also report strings of the R+START debug menu (src/debug.o)
   --all             also list Latin strings that are not in the English ROM (new or changed text)
   --json OUT        machine-readable output ('-' = stdout)
@@ -25,9 +28,12 @@ How it works:
      layout objects (from the linker map, SKIP_OBJ) and OBJECT symbols whose names say graphics or
      sound (SKIP_SYM) are blanked.
   2. Candidates: two runs of 2+ Latin letter bytes separated by space/newline/prompt bytes
-     (one C regex over the whole ROM). Each candidate is widened to its 0xFF-terminated run; the
-     start is pulled forward to the enclosing symbol (asm labels and C objects carry sizes in the
-     ELF), past alignment padding and past any byte the charmap cannot decode.
+     (one C regex over the whole ROM). With --min-words 1, a run of 2+ Latin letter bytes is
+     then a candidate too, in a 0xFF-delimited segment that has no two-word candidate, so a
+     one-word string is checked and no run of the default moves. Each candidate is widened to its
+     0xFF-terminated run; the start is pulled forward to the enclosing symbol (asm labels and C
+     objects carry sizes in the ELF), past alignment padding and past any byte the charmap cannot
+     decode.
   3. The run is decoded with the charmap and kept when it holds >= N Latin words, no undecodable
      bytes and mostly text characters.
   4. A Hebrew-ROM run is reported when the same bytes are a text run of the English ROM.
@@ -59,7 +65,7 @@ ROM_BASE = 0x08000000
 SKIP_OBJ = re.compile(r'(^|/)(sound/|data/sound_data\.o|src/graphics\.o|src/tilesets\.o|src/tileset_anims\.o'
                       r'|src/surfable\.o|src/fonts\.o|data/multiboot_|src/bard_music\.o|data/maps\.o'
                       r'|data/map_events\.o|data/battle_anim_scripts\.o|src/event_object_movement\.o'
-                      r'|src/field_effect\.o|src/battle_transition\.o|src/field_weather\.o|src/m4a)')
+                      r'|src/field_effect\.o|src/battle_transition\.o|src/m4a)')
 DEBUG_OBJ = re.compile(r'(^|/)src/debug\.o$')
 # OBJECT symbols that are graphics/sound blobs even inside objects that also hold text.
 SKIP_SYM = re.compile(r'Gfx|Tiles|Tilemap|Palette|Pal(s|_|\d|$)|Pic(s|_|\d|$)|Icon|Image|Sprite|Anim|Footprint'
@@ -70,6 +76,7 @@ GFX_SYM = re.compile(r'Gfx|Tiles|Tilemap|Palette|Pal(s|_|\d|$)')
 
 LETTER = rb'[\xBB-\xEE]'                       # A-Z, a-z in the charmap (charmap.txt 0xBB-0xEE)
 CAND_RE = re.compile(LETTER + rb'{2,}[\x00\xFE\xFA\xFB]+' + LETTER + rb'{2,}')
+CAND_RE_ONE_WORD = re.compile(LETTER + rb'{2,}')
 WORD_RE = re.compile(r'[A-Za-z]{2,}')
 TEXTCH_RE = re.compile(r'[A-Za-z0-9 .,!?\'"…:;\-/()&+%$#*=éÉ♂♀“”‘’~\[\]]')
 PLAIN_SPLIT = re.compile(r'\\[nlp]|\{[^}]*\}|\$')
@@ -165,6 +172,8 @@ class RomText(object):
     def __init__(self, rom, elf=None, mapfile=None, charmap=None, min_words=2, include_debug=False,
                  data=None, sections=None, objs=None, syms=None):
         """DATA/SECTIONS/OBJS/SYMS replace what would be read from ROM/ELF/map (tests)."""
+        if min_words < 1:
+            raise ValueError('min_words must be at least 1, not %r' % min_words)
         self.rom = rom
         self.elf = elf or (os.path.splitext(rom)[0] + '.elf' if rom else None)
         self.mapfile = mapfile or (os.path.splitext(self.elf)[0] + '.map' if self.elf else None)
@@ -236,8 +245,8 @@ class RomText(object):
 
     def trim_prefix(self, buf, start, word):
         """Moves START past struct bytes that precede a string: past the last byte the charmap
-        cannot decode, the last non-text character, or the last double space before WORD (the
-        first two-word match). Control codes are kept: a string may begin with {PLAYER} etc."""
+        cannot decode, the last non-text character, or the last double space before WORD (where the
+        first candidate match starts). Control codes are kept: a string may begin with {PLAYER} etc."""
         dec = self.charmap.decode_char
         cut, k, prev_space = start, start, False
         while k < word:
@@ -263,12 +272,22 @@ class RomText(object):
                 cut += 1
         return cut
 
+    def candidates(self, buf):
+        """Two-word matches; with min_words 1, then one-word matches. scan() takes the first match of
+        each 0xFF-delimited segment, so a segment with a two-word match starts its run where the
+        default does, and one-word matches only add segments that have none."""
+        for m in CAND_RE.finditer(buf):
+            yield m
+        if self.min_words == 1:
+            for m in CAND_RE_ONE_WORD.finditer(buf):
+                yield m
+
     def scan(self):
         t0 = time.time()
         buf = self.build_buffer()
         seen = set()
         cands = 0
-        for m in CAND_RE.finditer(buf):
+        for m in self.candidates(buf):
             seg_start = buf.rfind(b'\xff', 0, m.start()) + 1
             if seg_start in seen:
                 continue
@@ -285,9 +304,10 @@ class RomText(object):
             text = self.charmap.decode(raw)
             if not self.is_text(text):
                 continue
-            rec = {'addr': ROM_BASE + start, 'len': len(raw), 'raw': raw, 'text': text}
-            self.runs.append(rec)
-            self.by_bytes.setdefault(raw, rec['addr'])
+            self.runs.append({'addr': ROM_BASE + start, 'len': len(raw), 'raw': raw, 'text': text})
+        self.runs.sort(key=lambda r: r['addr'])
+        for rec in self.runs:
+            self.by_bytes.setdefault(rec['raw'], rec['addr'])
         self.stats.update(candidates=cands, runs=len(self.runs), secs=round(time.time() - t0, 1))
         return self
 
@@ -426,6 +446,8 @@ def main(argv=None):
     ap.add_argument('--json')
     ap.add_argument('--limit', type=int, default=300)
     a = ap.parse_args(argv)
+    if a.min_words < 1:
+        ap.error('--min-words must be at least 1, not %d' % a.min_words)
     if not a.en:
         sys.stderr.write('rom_sweep: no English ROM: set HNS_EN_ROM or pass --en\n')
         return 2
