@@ -405,6 +405,24 @@ enum {
 #define RTL_WORD_SELECT_MIRROR_WIDTH (RTL_WORD_SELECT_INSIDE_LEFT + RTL_WORD_SELECT_INSIDE_RIGHT - 2 * RTL_INPUT_SELECT_LEFT)
 #define RTL_KEYBOARD_SPRITE_X(x)     (RTL_KEYBOARD_INSIDE_LEFT + RTL_KEYBOARD_INSIDE_RIGHT - (x))
 #define RTL_WORD_SELECT_SPRITE_X(x)  (RTL_WORD_SELECT_INSIDE_LEFT + RTL_WORD_SELECT_INSIDE_RIGHT - (x))
+// The footer (AddMainScreenButtonWindow: screen tiles 1-28 of rows 11-12) is mirrored too, so its
+// DEL ALL stands at the right end. The keyboard frame covers the footer's rows up to tile 23 and
+// leaves tiles 24-27 open under the mode tab. English shows a few pixels of OK there; the mirrored
+// footer would show pieces of DEL ALL, so those tiles (the window's tiles 23-26) are blanked while
+// the frame covers the rows, and put back before it uncovers them.
+#define RTL_FOOTER_GAP_TILE          (1 + 23 - 1)
+#define RTL_FOOTER_GAP_TILES         4
+
+// Allocated right after the screen's EasyChatScreenControl, in the same block, and freed with it.
+struct RtlFooterGap
+{
+    u8 windowId;
+    bool8 blank;
+    u8 tiles[2][RTL_FOOTER_GAP_TILES * TILE_SIZE_4BPP]; // The gap's pixels while it is blank
+};
+#define sFooterGap ((struct RtlFooterGap *)(sScreenControl + 1))
+
+static void ShowFooterGap(bool32 show);
 #endif
 
 // Values for text frame tilemap
@@ -3975,7 +3993,11 @@ static bool8 ShowCantExitMsg(void)
 
 static bool8 InitEasyChatScreenControl_(void)
 {
+#if TEXT_RTL
+    sScreenControl = Alloc(sizeof(*sScreenControl) + sizeof(struct RtlFooterGap));
+#else
     sScreenControl = Alloc(sizeof(*sScreenControl));
+#endif
     if (!sScreenControl)
         return FALSE;
 
@@ -4649,6 +4671,10 @@ static void DrawLowerWindowFrame(u8 type)
         break;
     }
 
+#if TEXT_RTL
+    // States 10-18 have the frame's top edge on row 10, above the footer's rows.
+    ShowFooterGap(type < 10 || type > 18);
+#endif
     CopyBgTilemapBufferToVram(1);
 }
 
@@ -5257,12 +5283,44 @@ static int GetFooterOptionXOffset(int option)
         return 0;
 }
 
+#if TEXT_RTL
+// Blanks the footer's tiles beside the keyboard frame (show FALSE), keeping their pixels, or puts
+// them back (show TRUE).
+static void ShowFooterGap(bool32 show)
+{
+    u32 row, windowId = sFooterGap->windowId;
+
+    if (windowId == WINDOW_NONE || sFooterGap->blank == !show)
+        return;
+    sFooterGap->blank = !show;
+    for (row = 0; row < ARRAY_COUNT(sFooterGap->tiles); row++)
+    {
+        u8 *tiles = gWindows[windowId].tileData
+                  + (row * gWindows[windowId].window.width + RTL_FOOTER_GAP_TILE) * TILE_SIZE_4BPP;
+        if (show)
+        {
+            memcpy(tiles, sFooterGap->tiles[row], sizeof(sFooterGap->tiles[row]));
+        }
+        else
+        {
+            memcpy(sFooterGap->tiles[row], tiles, sizeof(sFooterGap->tiles[row]));
+            memset(tiles, PIXEL_FILL(1), sizeof(sFooterGap->tiles[row]));
+        }
+    }
+    CopyWindowToVram(windowId, COPYWIN_GFX);
+}
+#endif
+
 static void AddMainScreenButtonWindow(void)
 {
     int i;
     u16 windowId;
     struct WindowTemplate template;
     int footerIndex = GetFooterIndex();
+#if TEXT_RTL
+    sFooterGap->windowId = WINDOW_NONE;
+    sFooterGap->blank = FALSE;
+#endif
     if (footerIndex == NUM_FOOTER_TYPES)
         return;
 
@@ -5274,6 +5332,9 @@ static void AddMainScreenButtonWindow(void)
     template.paletteNum = 11;
     template.baseBlock = 0x34;
     windowId = AddWindow(&template);
+#if TEXT_RTL
+    sFooterGap->windowId = windowId;
+#endif
     FillWindowPixelBuffer(windowId, PIXEL_FILL(1));
     for (i = 0; i < (int)ARRAY_COUNT(sFooterTextOptions[0]); i++)
     {
