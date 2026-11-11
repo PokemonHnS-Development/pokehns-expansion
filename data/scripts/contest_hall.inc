@@ -1419,9 +1419,9 @@ LilycoveCity_ContestLobby_Text_ExplainContests:
 	.string "ראשוני ומשני.\p"
 	.string "השיפוט הראשוני הוא סקר פופולריות\n"
 	.string "שבו משתתף הקהל.\p"
-	.string "בשיפוט המשני, הפוקימונים עושים\n"
-	.string "רושם בעזרת המהלכים שלהם.\p"
-	.string "כדאי לתכנן היטב את הרושם כדי\n"
+	.string "בשיפוט המשני, הפוקימונים מופיעים\n"
+	.string "עם המהלכים שלהם.\p"
+	.string "כדאי לתכנן היטב את ההופעות כדי\n"
 	.string "למשוך את מירב תשומת הלב של השופט\p"
 	.string "ולהלהיב את הקהל. חשוב לבלוט\n"
 	.string "ככל האפשר.\p"
@@ -1536,19 +1536,19 @@ ContestHall_Text_VotingCompleteLetsAppeal:
 	.string "ההצבעה הסתיימה!\p"
 	.string "בזמן שהקולות נספרים, נעבור\n"
 	.string "לשיפוט המשני!\p"
-	.string "השלב השני של השיפוט הוא שלב\n"
-	.string "הרושם המיוחל!\p"
-	.string "שהמתחרים ידהימו אותנו ברושם\n"
-	.string "מעולה של מהלכים מסנוורים!\p"
+	.string "השלב השני של השיפוט הוא\n"
+	.string "זמן ההופעות המיוחל!\p"
+	.string "שהמתחרים ידהימו אותנו בהופעות\n"
+	.string "מעולות של מהלכים מסנוורים!\p"
 	.string "בואו נראה קצת התלהבות!\n"
-	.string "בואו נעשה רושם!$"
+	.string "שיתחילו ההופעות!$"
 
 ContestHall_Text_ThatsItForJudging:
 	.string "מנחה: זהו, השיפוט הסתיים!$"
 
 ContestHall_Text_ThankYouForAppeals:
 	.string "תודה לכולם על תצוגה נהדרת\n"
-	.string "של רושם איכותי!\p"
+	.string "של הופעות איכותיות!\p"
 	.string "בזה מסתיים כל השיפוט!\n"
 	.string "תודה על המאמץ המצוין!$"
 
@@ -1782,11 +1782,11 @@ ContestHall_Text_VotingComplete:
 	.string "לשיפוט המשני!$"
 
 ContestHall_Text_SecondStageOfJudging:
-	.string "השלב השני של השיפוט הוא שלב\n"
-	.string "הרושם המיוחל!\p"
-	.string "שהמתחרים ידהימו אותנו ברושם\n"
-	.string "מעולה של מהלכים מסנוורים!$"
+	.string "השלב השני של השיפוט הוא\n"
+	.string "זמן ההופעות המיוחל!\p"
+	.string "שהמתחרים ידהימו אותנו בהופעות\n"
+	.string "מעולות של מהלכים מסנוורים!$"
 
 ContestHall_Text_LetsAppeal:
 	.string "בואו נראה קצת התלהבות!\n"
-	.string "בואו נעשה רושם!$"
+	.string "שיתחילו ההופעות!$"
