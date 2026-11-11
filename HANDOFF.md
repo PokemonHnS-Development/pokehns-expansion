@@ -838,7 +838,7 @@ Apply a decision in this order:
 | every map | `mapwalk.py` | CRASH, maps that never give control back | 329 s for 543 maps |
 | saves | `ladder.py run scripts/ladder_validate.txt` | English 2.0.x saves still load and work | about 1.5 s per save |
 | other emulators | `crosscore` + libretro cores + `ccdiff.py` | renderer differences between cores | about 2 s per core |
-| English left in ROM | `rom_sweep.py` | English runs in the binary | 4 s |
+| English left in ROM | `rom_sweep.py` | English runs of two or more words in the binary; `--min-words 1` adds one-word strings | 4 s |
 | eyes | `pairsheets.py`, `hns.py tourdiff`, reviewers plus refuters (`tools/hebrew/release/REVIEW.md`) | overlap, mirroring, digit order, glyph shapes, wrong translation | per release |
 
 Two rules from the original brief:
@@ -1122,7 +1122,8 @@ python3 $E/ladder.py --rom pokehns.gba run $E/scripts/ladder_validate.txt OUT --
 python3 $E/ladder.py --rom pokehns.gba run $E/scripts/ladder_validate_newgame.txt OUT --save "$HNS_SAVES/ladder1_newgame.sav"
 # rung 1 (the bedroom): continue, bag, trainer card
 python3 tools/hebrew/rom_sweep.py pokehns.gba --json OUT.json
-# 6276 text runs (6341 candidates), 6252 still English, 4.0s   exit 1 (always, on this build; rc22)
+# 6276 text runs (6341 candidates), 6253 still English, 4.0s   exit 1 (always; rc24 with this rom_sweep.py)
+# rc24's own run, before src/field_weather.o was swept: 6275 (6340), 6252; the one more is NOT DEFINED!!!
 ```
 
 - **Map walk:**
