@@ -1105,8 +1105,11 @@ static u32 RtlClassAt(const u8 *str, u32 *length)
             return RTL_CLASS_RTL;
         case CHAR_PP:
         case CHAR_ID:
-        case CHAR_NO:
             return RTL_CLASS_LTR;
+        case CHAR_NO:
+            // Not part of its number's run, so it stands on the number's right and is read
+            // first, where Unicode puts it in right-to-left text: "01№" like the dex's "006№".
+            return RTL_CLASS_NEUTRAL;
         default:
             return RTL_CLASS_NEUTRAL;
         }
