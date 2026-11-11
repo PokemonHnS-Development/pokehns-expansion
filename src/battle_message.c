@@ -1423,7 +1423,13 @@ const u8 gText_WhatWillPkmnDo2[] = _("מה יעשה\n{B_PLAYER_NAME}?");
 const u8 gText_WhatWillWallyDo[] = _("מה יעשה\nוולי?");
 const u8 gText_LinkStandby[] = _("{PAUSE 16}המתנה לקישור…");
 const u8 gText_BattleMenu[] = _("קרב{CLEAR_TO 56}תיק\nפוקימון{CLEAR_TO 56}בריחה");
-const u8 gText_SafariZoneMenu[] = _("כדור{CLEAR_TO 56}{POKEBLOCK}\nהתקרבות{CLEAR_TO 56}בריחה");
+#if TEXT_RTL
+// The second item's Hebrew word is 41 px in FONT_NORMAL, 1 px more than the 40 px from CLEAR_TO 56
+// to the edge of the 96-px window: that item is drawn in FONT_NARROW (39 px).
+const u8 gText_SafariZoneMenu[] = _("כדור{CLEAR_TO 56}{FONT_NARROW}פוקיבלוק{FONT_NORMAL}\nהתקרבות{CLEAR_TO 56}בריחה");
+#else
+const u8 gText_SafariZoneMenu[] = _("BALL{CLEAR_TO 56}{POKEBLOCK}\nGO NEAR{CLEAR_TO 56}RUN");
+#endif
 const u8 gText_SafariZoneMenuFrlg[] = _("{PALETTE 5}{COLOR_HIGHLIGHT_SHADOW 13 14 15}כדור{CLEAR_TO 56}פיתיון\nסלע{CLEAR_TO 56}בריחה");
 const u8 gText_MoveInterfacePP[] = _("נ”כ ");
 const u8 gText_MoveInterfaceType[] = _("סוג/");

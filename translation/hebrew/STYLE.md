@@ -85,7 +85,8 @@ Only characters in `charmap.txt`. In particular:
   `{POKEBLOCK}`, the `{ID}{NO}` pair and the `{PK}` of the Easy Chat word `{PK}RS`), so dropping
   them is the one allowed token change besides the battle buffers' swap. `drift.py`
   (`DROPPABLE_TOKENS`, `REORDERABLE_TOKENS`, `same_tokens`) defines this rule, and `units.py` and
-  `checkunits.py` use the same one.
+  `checkunits.py` use the same one. A translated string that keeps one of them gets a `GLYPHPAIR`
+  warning from `drift.py`; `{POKEBLOCK}` is `פוקיבלוק` (glossary `TERM_POKEBLOCK`).
 - Do not translate: braille text (`.braille`), the R+START debug menu (`src/debug.c`, and `data/scripts/debug.inc` except `Debug_Text_ArianaDefeat` and `Debug_Text_Grunt23Defeat`, which the Rocket Hideout story battle uses), Latin literals
   compared by code (the "SampleCode" check, Walda's phrase, the Odd Egg name list), and anything
   in an `#if 0` / unused block. The battle debug menu (`src/battle_debug.c`, opened with SELECT in any battle) is translated and uses the glossary's terms.

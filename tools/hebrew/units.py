@@ -292,6 +292,33 @@ def rtl_only_lines(text):
     return out
 
 
+def non_rtl_lines(text):
+    """The line numbers (1-based) that a TEXT_RTL build never compiles: the later branches of
+    `#if TEXT_RTL` and the first branch of `#if !TEXT_RTL`, each with no other condition. The
+    Hebrew build defines TEXT_RTL as TRUE (include/config/text.h), so a literal there is never
+    shown; such a branch keeps the English line of the English build."""
+    out, stack = set(), []         # per open #if: [kind, branch]; kind 'rtl', 'not_rtl' or None
+    for i, line in enumerate(text.split('\n'), 1):
+        m = PP_RE.match(line)
+        if m:
+            d, cond = m.group(1), re.sub(r'/[/*].*$', '', m.group(2)).strip()
+            if d in ('if', 'ifdef', 'ifndef'):
+                kind = None
+                if d == 'if' and re.fullmatch(r'\(?\s*TEXT_RTL\s*\)?', cond):
+                    kind = 'rtl'
+                elif d == 'if' and re.fullmatch(r'!\s*\(?\s*TEXT_RTL\s*\)?', cond):
+                    kind = 'not_rtl'
+                stack.append([kind, 0])
+            elif d in ('elif', 'else') and stack:
+                stack[-1][1] += 1
+            elif d == 'endif' and stack:
+                stack.pop()
+            continue
+        if any((k == 'rtl' and b > 0) or (k == 'not_rtl' and b == 0) for k, b in stack):
+            out.add(i)
+    return out
+
+
 def c_literals(text):
     """Yields (match, line_no, joined_text, designator, field, var)."""
     for m in C_CALL_RE.finditer(text):
@@ -314,13 +341,15 @@ def extract_c(path, rel, all_labels):
     n = 0
     seen = {}
     rtl = rtl_only_lines(text)
+    not_built = non_rtl_lines(text)
     for m, line_no, joined, desig, field, var in c_literals(text):
         idx = n
         n += 1
         ckey = c_key(m, desig, field, var, seen, line_no in rtl)
         if not re.search(r'[A-Za-z\u05d0-\u05ea]', TOKEN_RE.sub('', joined)):
             continue
-        is_live = live_idx.get(ckey, True)
+        # A literal the Hebrew build never compiles still takes its English place (c_key above).
+        is_live = live_idx.get(ckey, True) and line_no not in not_built
         if not is_live and not all_labels:
             continue
         key = var or ('%s.%s' % (desig, field) if desig and field else (desig or field or '?'))
