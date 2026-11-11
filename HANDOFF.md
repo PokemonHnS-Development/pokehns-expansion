@@ -875,7 +875,8 @@ python3 tools/hebrew/gen_ec_letters.py --check    # gen_ec_letters: 23 lists, th
 python3 tools/hebrew/flag_gates.py --check        # total: live 6585, flag_off 451, not_built 147 / no change
 # 5. tool tests (hebrew.yml:73-74)
 python3 -m unittest discover -s tools/hebrew/tests
-#    Ran 186 tests ... OK   (no skip with tools/preproc built and ../pokehns-en/pokehns.gba present)
+#    Ran 186 tests ... OK   (no skip with tools/preproc built, ../pokehns-en/pokehns.gba present,
+#                            devkitARM's arm-none-eabi-gcc and a host cc; tools/hebrew/README.md)
 # not in CI: item plurals
 python3 tools/hebrew/plurals.py                   # items 902, stackable 693, problems 0
 ```
@@ -906,9 +907,9 @@ python3 tools/hebrew/plurals.py                   # items 902, stackable 693, pr
     translated)`, with the same findings. Now the built tree's report equals a clean `git archive`
     copy's apart from line 1 (the tree path), and the clean copy prints what CI prints
     (`<private>/scratch/screens/r21/fixes/t4/audit_clean.txt` and `fixes/audit_final.txt`).
-- **tool tests in CI:** run 42725640966 at `0514c9b57b` printed `Ran 137 tests ... OK (skipped=2)`
-  (no built `tools/preproc`, no English ROM). Round 21 adds 10 (8 in `test_units.py`, 2 in
-  `test_audit.py`), so `he/wip-r21` has 147; CI has not run them yet.
+- **tool tests in CI:** run 42889868670 at `47669d9f06` printed `Ran 186 tests ... OK
+  (skipped=4)`: no English ROM (1 test), no built `tools/preproc` (1), and no
+  `arm-none-eabi-gcc` for the two preprocessor tests (the `audit` job installs no toolchain).
 
 ### 4.3 The test suite
 
