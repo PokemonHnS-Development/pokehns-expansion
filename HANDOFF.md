@@ -88,6 +88,49 @@ fresh clone.
    walk (the same 36 HELD) pass; the ROM sweep finds the same labels (6,275 text runs, one fewer:
    a Latin title is gone); the cross-core table differs only in the start menu's clock. Records
    are in `<builds>/records/rc24/`, indexed in `<builds>/records/README.md`.
+5. **Round 25: fixed on three branches, not merged and not pushed.** `he/wip-r25`,
+   `he/wip-r25e` and `he/wip-r25t` each start from `b70d4d33b6` and are local only; no file is
+   changed on two of them (`git diff --name-only`). They fix round 24's 19 confirmed findings
+   (`<private>/scratch/screens/r24/confirmed.md`); section 8.5 has the evidence.
+   - `he/wip-r25` (text, `7191e0b54f`, 14 commits): the contest APPEAL is הופעה everywhere
+     (Q142); the radio upgrade's gift line says שדרוג הרדיו (Q143); the Safari battle menu says
+     פוקיבלוק instead of the Latin POKéBLOCK glyphs, in the narrow font under `TEXT_RTL` (engine
+     commit `333588640e`, text `a233fe427a`); `units.py` does not count a literal of an
+     English-only `#else` as live; `drift.py` warns (`GLYPHPAIR`) on a glyph-pair token kept in a
+     translated string.
+   - `he/wip-r25e` (engine, `4dccdfb235`, 3 commits): the Easy Chat keyboard no longer shows
+     pieces of מחק הכל beside its frame (`f9290010d3`); a name from a Japanese game reads in order
+     inside a Hebrew line (`0829b9805f`); mail from a Japanese sender keeps the Japanese font
+     (`4dccdfb235`).
+   - `he/wip-r25t` (tools and documents, this branch): `rom_sweep.py --min-words 1` checks
+     one-word strings and `src/field_weather.o` is swept; `make_testing_md.py` takes the visual
+     review only as `{"commit", "findings"}` of the candidate; round 24's documentation findings
+     (section 8.3).
+
+   What remains, in this order:
+   1. **Pick the four engine commits onto `he/renderer`.** `f9290010d3`, `0829b9805f` and
+      `4dccdfb235` apply cleanly to `ec407862cd`. `333588640e` does not, because its line is
+      Hebrew on `he/main` and English on `he/renderer`: apply
+      `<private>/scratch/screens/r25/text/renderer_pick/he_renderer_safari_menu.diff` instead, so
+      its patch-id differs from its source. Build `he/renderer` in English before and after
+      (section 1.2).
+   2. **Merge the three branches into `he/main`** (section 7.5) and push `he/renderer` before
+      `he/main` (section 4.7). Against today's `he/renderer` the merged tree's drift has 6 FAIL,
+      the files of the four engine commits; against `he/renderer` with the picks it has 0 FAIL
+      (708 files, 334 with warnings only).
+   3. **Update the counts this file gives for `he/main`.** A scratch copy of the merged tree has
+      199 tool tests (OK on Python 3.9.6 and 3.11.9; one skipped there only because
+      `tools/preproc` was not built), 79 decisions up to Q143, audit 0 errors and 54 warnings in
+      39,060 strings (24,841 translated), namecheck 7,133 rows with 0 problems and 0 warnings (34
+      allowlisted), plurals, the generators and `flag_gates.py` unchanged
+      (`<private>/scratch/screens/r25/docs/merged_*.txt`).
+   4. **Build rc25 from the merge and run section 5 in full.** It needs its own
+      `visual_findings.json`: `make_testing_md.py` now refuses the copied list (section 8.1).
+      From the round's builds (not yet seen on rc25), expect against rc24: the contest APPEAL
+      label in two release-tour shots (`menu_summary_contest_desc`,
+      `menu_pokedex_entry_stats_moves`) and no other release-tour change; with the new
+      `rom_sweep.py`, the debug menu's NOT DEFINED!!! is one more English run. Add what rc25's
+      tour diff shows to `notes.json` `visual_review` after its review.
 
 ---
 
@@ -142,7 +185,7 @@ headers, from `81f9b905db`), `784e76146d` (the GHOST and PSYCHIC plates and `men
 commit `cd5fb48abe` (the Pokéblock case list's level column) is picked as `ec407862cd` (section 0).
 Each pick has the same patch as its source commit (`git patch-id --stable`), and `graphics/` on
 `he/renderer` now equals `he/main`'s (`git diff --stat he/renderer he/main -- graphics/` prints
-nothing).
+nothing). Round 25's four engine commits are not picked yet (section 0, item 5).
 
 **Checking a pick with an English build.** Build `he/renderer` before and after the picks with
 `TEXT_RTL` set to FALSE (`include/config/text.h:20`, in a scratch worktree) and `make hns`, and
@@ -1631,7 +1674,11 @@ was rebuilt with it; the old one is `hnsrun.pre-r22`), `make_chunks.py` removes 
 files, `startmenu` opens the menu every time on Frontier floors, and the two leftovers are gone.
 Round 23 fixed the last two (section 8.5, round 23): MR. STONE is מר סטון (Q141), and a second
 `make_chunks.py --supplement` numbers its chunks after the batch's last one and adds to its names
-file. No defect is open.
+file. Round 25 fixed round 24's findings on its branches (section 0, item 5). One is open:
+
+| Defect | Where | Why open |
+| --- | --- | --- |
+| rc24's `visual_findings.json` is the 49-finding list of an early review (SHA-1 `17392e9277…`, the same file in 22 candidate folders from rc1 on; `DECISIONS.md:120` cites it as rc3's), not rc24's review; `make_testing_md.py` now refuses it, so `TESTING.md` cannot be made again from rc24's folder as it is | `<private>/release/rc24/visual_findings.json`, `<builds>/records/rc24/visual_findings.json` (paths rewritten, the same 49 entries) | a records change, the owner's call: write rc24's own review there (the 12 PC-menu shots of `tourdiff_rc23_rc24.txt`; a candidate file is `<private>/scratch/screens/r25/tools/rc24_copy/visual_findings.json`, with which a copy of rc24 gives the shipped `TESTING.md` byte for byte), or delete the copy. The next candidate writes its own file in either case |
 
 ### 8.2 Content gaps and decisions
 
@@ -1686,6 +1733,13 @@ file. No defect is open.
   - Kept on purpose and listed with reasons in Q140 and `namecheck_allow.json`: SLASH, CHESTO
     BERRY, IAPAPA BERRY, POKéBLOCK CASE, EXEGGUTOR and ELITE FOUR differ from FireRed's names
     because of an H&S limit or a FireRed slip, and PSYCHO BOOST because FireRed left it on פסיכי.
+- **Decided in round 25** (on `he/wip-r25`, not merged; section 0, item 5): the contest APPEAL is
+  הופעה in the hearts' label, the judge's results, the MC and the contest hall's people, as it
+  already was in the turn lines, the move descriptions and the Easy Chat word (Q142); the Kanto
+  radio upgrade's gift line names the RADIO UPGRADE, שדרוג הרדיו, and the music director keeps his
+  EXPN CARD, כרטיס הרחבה (Q143); the Safari battle menu writes פוקיבלוק instead of keeping the
+  `{POKEBLOCK}` glyph pair (STYLE §5, glossary `TERM_POKEBLOCK`), and `drift.py` now warns on a
+  glyph-pair token kept in a translated string.
 - **Faults of H&S 2.0.6 itself, the same in English, listed as known issues** in `notes.json`,
   because any fix changes gameplay or belongs upstream (section 7.4):
   - **Battle Dome style scoring** assigns instead of adding, so a trainer card shows only three of
@@ -1767,6 +1821,15 @@ file. No defect is open.
   232 px window and its 7-byte hold-effect copies run past the edge: Hebrew loses the מ' of
   התק' מ' and the מ of רצועת מ, English shows 'Sp Att' for 'Sp Atta'. The clip build records these
   glyphs. Debug-only; no change.
+- **A name from a Japanese game** (round 25, on `he/wip-r25e`, not merged). A traded Pokémon's
+  nickname or a link partner's name from a Japanese cartridge carries `{JPN}`…`{ENG}`. In a Hebrew
+  line such a span is now one left-to-right run at its mirrored place (`0829b9805f`), and the
+  read-mail screen, the PC mailbox list and the PC's mail prompt give a short sender name with a
+  Japanese letter the Japanese font, as English does (`4dccdfb235`). Left as it is: a kana name
+  made only of the bytes that are Hebrew letters in the normal font (hiragana げ-っ, `0x3A`-`0x50`;
+  katakana セ-チ, `0x5E`-`0x61`; for example セタ) is not found by `IsStringJapanese`
+  (`src/string_util.c:849-860`) and prints as Hebrew letters on those mail screens. Seen only by
+  forcing the state: whether H&S 2.0.6 links with a Japanese cartridge at all was never tried.
 
 ### 8.3 Stale documentation
 
@@ -2164,8 +2227,95 @@ adversarial reviewer; scratch in `<private>/scratch/screens/r22/`):
   - 182 tool tests on `he/wip-r23` and 186 on `he/wip-r23t`, OK on Python 3.11.9 and 3.9.6; the
     merged tree (`47669d9f06`): 186 OK on both.
 
+**Verified in round 25** (`he/wip-r25` `7191e0b54f`, whose ROMs were built from `9e27347605`
+because the two commits after it change only `STYLE.md` and `DECISIONS.md`; `he/wip-r25e`
+`4dccdfb235`; `he/wip-r25t`; none merged. Scratch in `<private>/scratch/screens/r25/`, in
+`text/`, `engine/`, `tools/` and `docs/`):
+
+- **The contest APPEAL is הופעה (Q142).** Shown on the text branch's clip ROM beside rc24's and
+  English, with 0 clip records in every run:
+  - the MC's lines in round 9's Normal COOL contest;
+  - every changed result line, forced through `effplan` in a Normal SMART contest; HOT_STATUS
+    and NOT_VERY_WELL also with a 12-letter nickname of 7-px letters
+    (`text/sheets/con_appeal3_long_he.png`);
+  - the label in the summary, the Pokédex and the relearner (round 6's relearner tour);
+  - the 12 changed dialogue labels and Q143's gift line in the sweep: OK 13.
+- **The radio upgrade (Q143):** the gift line {PLAYER} קיבל את / שדרוג הרדיו! is 91 and 61 px;
+  the sweep drew it (above).
+- **The Safari battle menu's פוקיבלוק.**
+  - In FONT_NARROW it is 56 + 39 = 95 px of the 96-px window. Its ink is at x 192-229, where
+    rc24's POKéBLOCK glyphs stood, and the cursor is unchanged; 0 clip records
+    (`text/runs/safari_new`, `text/sheets/safari_menu.png`).
+  - FONT_NORMAL, tried by patching one font byte in a copy of the clip ROM, clips: the report
+    records פ at x 90. An inline `{FONT_NARROW}` in the text alone fails drift (`TOKENS`), so the
+    font switch is an engine commit under `TEXT_RTL`.
+  - Built with `TEXT_RTL` FALSE, `he/renderer`'s `battle_message.c` before and after the pick
+    differs in one `.text` word, an assert's line number (`text/engproof/PROOF.md`; that one file
+    was compiled, not a whole ROM).
+- **The text branch against rc24.**
+  - Release tours and clip tours: 71 OK each, 0 clipped. `tourdiff`: 2,054 identical and 2 differ
+    in each, `menu_summary_contest_desc` and `menu_pokedex_entry_stats_moves`, the new label.
+  - Round 9's contest tour: 6 shots differ, 5 with the MC's new text and 1 a blink frame of the
+    opponent's Pokémon, because the new lines print in another number of frames. The relearner
+    tour: every shot shows the new label; in 5 the scroll arrows also sit 1 px off (below).
+  - drift against `he/renderer` with the Safari pick: 708 files, 0 FAIL, 334 with warnings only,
+    0 `GLYPHPAIR`; on rc24's tree the new warning finds exactly the Safari menu. audit 0 errors,
+    54 warnings, 39,060 strings (the English `#else` adds one); namecheck 7,133 rows, 0 problems,
+    0 warnings; 189 tool tests OK on Python 3.11.9 and 3.9.6, the new ones failing on the old
+    code. `STATUS.md` regenerated from rc24's sweep is byte-identical.
+- **The Easy Chat keyboard (`f9290010d3`).**
+  - The round 18 tours `ec_tower` and `ec_daycare`: 45 of 390 shots differ from rc24, each only
+    inside (192,93)-(216,102), now white (`engine/ec/`).
+  - Shot every frame for 40 frames after A, SELECT, SELECT and B: each frame equals rc24's or
+    differs only inside that strip, where it is white. Opening, frames 0-11 are the same and the
+    strip is white from frame 12, when the frame is fully open; closing, every frame from 13 on is
+    the same again.
+  - English shows a few pixels of OK in the same place (`engine/ec/v_ecgap_rc24_final_en_4x.png`).
+    EWRAM stays 248,324 B: the saved tiles live in the screen's heap block.
+- **Names from a Japanese game (`0829b9805f`, `4dccdfb235`),** forced on the release ROM beside
+  rc24 and English (`engine/jp/jp_name_rc24_final_en.png`, `jp_mailbox_rc24_final_en.png`):
+  - the field message, the send-out line, the action prompt and the summary name read in order,
+    and the summary's OT line no longer overlaps the slash; the party menu and the healthbox are
+    unchanged;
+  - the read-mail signature, the PC mailbox list and the PC's prompt show タロウ in the Japanese
+    font, where rc24 showed ף←ᴾᴷ;
+  - round 11's `m1_mailbox` (Kenya, short and long Hebrew senders, Latin senders): every mailbox
+    text and read-mail screen is the same as rc24's.
+- **The engine branch against rc24.**
+  - Release tours and clip tours: 71 OK each, all 2,056 shots identical, 0 clipped, every
+    `clip.json` the same. The sweep of the clip ROM, with units made into an empty folder
+    (`make_chunks.log` the same as rc24's): 6,611 labels, OK 6,611. The self-check passes.
+  - Built with `TEXT_RTL` FALSE, `b70d4d33b6` and `4dccdfb235` differ in 13 bytes, all assert
+    line numbers; neither English ELF has an `Rtl*` symbol (`engine/ENGPROOF.txt`).
+  - The three commits apply onto `he/renderer` `ec407862cd`. Against `he/renderer` with them,
+    drift has 0 FAIL; 186 tool tests OK.
+  - Two round tours shift by a frame, with no release-tour shot changed: in `ec_daycare` the
+    waits from `ec_abc_26_01` on end one frame earlier (a build without `0829b9805f` keeps rc24's
+    frames); in `m1_mailbox` one read-mail screen opens a frame later, so 43 PC-room shots catch a
+    wandering NPC elsewhere, at (145,20)-(159,39) (a build with only the mail commit keeps rc24's
+    frames, one with the Easy Chat and mail commits shifts the same way).
+- **`rom_sweep.py`** (`e909ff0b8a`, `a51118f8a7`): with `--min-words 1`, rc24 gives 6,914 runs and
+  6,812 still English, every run of the default among them. The default on rc24 adds one run,
+  NOT DEFINED!!! of the debug menu (6,276 runs, 6,253 still English; run again in
+  `docs/rs_rc24_new.txt`). The English self-sweep adds the 7 weather names and NOT DEFINED!!!
+  (21,895 runs). The new tests fail on the old code.
+- **`make_testing_md.py` (`53cf5c504c`):** on rc24 it refuses the copied `visual_findings.json`
+  (exit 1, no file written). A copy of rc24 with a review naming `47669d9f06…` (the 12 PC-menu
+  shots) gives exit 0 and the shipped `TESTING.md` byte for byte (`cmp`); the same file naming
+  rc23's commit gives exit 1.
+- **This branch's documents** (section 8.3): each statement was checked against the tree, GitHub
+  (`git ls-remote` on 2026-11-11), CI run 42889868670's log and the builds repository. 196 tool
+  tests OK on Python 3.9.6, 3.11.9 and 3.14.7; all 248 scripts compile with every warning an error
+  on the three. The three branches merged in a scratch copy: section 0, item 5.
+
 **Not verified:**
 
+- Of round 25: nothing of it has run on rc25, which is not built yet. Why the engine commits move
+  frames in two round tours (`ec_daycare` a frame earlier, `m1_mailbox` a frame later), and why
+  the relearner tour's scroll arrows are at another point of their bob on the text branch, with
+  the same shot frames. Whether H&S 2.0.6 links with a Japanese cartridge at all: the Japanese
+  names and mail were forced in memory. The whole `he/renderer` ROM built in English before and
+  after the four picks (section 0, item 5).
 - Of round 23: the berry-fix transfer to a real second GBA (its last message was forced); whether
   the debug menu's collision switch lets a player walk behind the contest lobby counter to the
   invisible link receptionist.
