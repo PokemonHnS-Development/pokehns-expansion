@@ -4672,8 +4672,8 @@ static void DrawLowerWindowFrame(u8 type)
     }
 
 #if TEXT_RTL
-    // States 10-18 have the frame's top edge on row 10, above the footer's rows.
-    ShowFooterGap(type < 10 || type > 18);
+    // States 9-19 have the frame's top edge on row 10 or 11; only the footer's gap shows.
+    ShowFooterGap(type < 9 || type > 19);
 #endif
     CopyBgTilemapBufferToVram(1);
 }
