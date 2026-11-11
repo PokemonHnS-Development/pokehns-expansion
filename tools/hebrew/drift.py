@@ -12,6 +12,8 @@ reference tree and reports:
   CHARSET    a character that the charmap cannot encode
   SHRUNK     the file is much smaller than English (truncation guard)
   LATIN      a translated string still holds a Latin word (warning; ignores tokens and known terms)
+  GLYPHPAIR  a translated string still holds a Latin glyph-pair token ({POKE}, {PKMN}, {POKEBLOCK},
+             {ID}, {NO}, {PK}) that Hebrew replaces with the Hebrew word (warning)
   UNTRANSLATED a string identical to English that contains English words (warning)
 
 Usage: drift.py [--en EN_ROOT] [--tree TREE_ROOT] [--strict] [--quiet] FILE...
@@ -288,6 +290,9 @@ def check(path, en_root, tree_root, charmap, strict):
         if bad and not path.endswith('.json'):
             errors.append('CHARSET %s: %s' % (where, ''.join(bad)))
         has_heb = re.search(r'[֐-׿]', s_tr)
+        kept = [t for t in TOKEN_RE.findall(s_tr) if t in DROPPABLE_TOKENS]
+        if has_heb and kept:
+            warnings.append('GLYPHPAIR %s: %s' % (where, ' '.join(dict.fromkeys(kept))))
         words = [w for w in LATIN_WORD_RE.findall(TOKEN_RE.sub(' ', s_tr).replace('\\n', ' ').replace('\\p', ' ').replace('\\l', ' '))
                  if w not in LATIN_OK]
         if s_tr == s_en and LATIN_WORD_RE.search(TOKEN_RE.sub('', s_en)):

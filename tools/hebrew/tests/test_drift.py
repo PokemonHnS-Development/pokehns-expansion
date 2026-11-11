@@ -78,6 +78,26 @@ class DriftTest(unittest.TestCase):
             found.setdefault(where.rstrip(':'), set()).add(kind)
         self.assertEqual(found, expected)
 
+    def test_a_kept_glyph_pair_in_a_translated_string(self):
+        rel = 'data/maps/Glyphs/scripts.inc'
+        cases = [('BALL {POKEBLOCK}$', 'כדור {POKEBLOCK}$', '{POKEBLOCK}'),
+                 ('{POKE} BALL, {PKMN}, {ID}{NO}$', 'פוקיבול, {PKMN} {ID}{NO}$', '{PKMN} {ID} {NO}'),
+                 ('BALL {POKEBLOCK}$', 'כדור פוקיבלוק$', None),       # the Hebrew word replaces it
+                 ('{PK}RS$', '{PK}RS$', None)]                        # untranslated: not this check
+        en, he = [], []
+        for i, (s_en, s_he, _) in enumerate(cases):
+            en += ['Glyphs_Text_%d:' % i, '\t.string "%s"' % s_en, '']
+            he += ['Glyphs_Text_%d:' % i, '\t.string "%s"' % s_he, '']
+        self.write(self.en, rel, '\n'.join(en))
+        self.write(self.he, rel, '\n'.join(he))
+        errors, warnings = self.check(rel)
+        self.assertEqual(errors, [])
+        self.assertEqual([w for w in warnings if w.startswith('GLYPHPAIR')],
+                         ['GLYPHPAIR Glyphs_Text_%d: %s' % (i, kept) for i, (_, _, kept) in enumerate(cases) if kept])
+        # A warning only: --strict makes it an error.
+        errors, _ = self.check(rel, strict=True)
+        self.assertIn('GLYPHPAIR Glyphs_Text_0: {POKEBLOCK}', errors)
+
     def test_if_else_inside_a_description(self):
         self.assertEqual(self.check(ITEMS), ([], []))
         # Both branches collapsed into one: the #if/#else/#endif lines are structure.
