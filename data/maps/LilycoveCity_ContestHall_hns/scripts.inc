@@ -321,9 +321,9 @@ LilycoveCity_ContestHall_Text_EnteredBunchOfContests_hns:
 	.string "השתתפתי בהמון תחרויות,\n"
 	.string "אז אני מתחיל להבין איך זה עובד.\p"
 	.string "בתחרות מגניבות, מהלכים מגניבים\n"
-	.string "עושים רושם טוב.\p"
+	.string "מתקבלים היטב כהופעה.\p"
 	.string "אבל מהלכים חכמים ומהלכים חמודים,\n"
-	.string "למשל, לא עושים רושם.$"
+	.string "למשל, לא מתקבלים היטב.$"
 
 LilycoveCity_ContestHall_Text_ManWhoWonEarlierHadPokeblocks_hns:
 	.string "לבחור הצעיר שניצח קודם היו\n"
@@ -339,8 +339,8 @@ LilycoveCity_ContestHall_Text_IsntThisPlaceHumongous_hns:
 LilycoveCity_ContestHall_Text_GiveItBestSmartAppeal_hns:
 	.string "מנחה: ובכן, פוקימונים חכמים\n"
 	.string "ומאמניהם, אתם מוכנים?!\p"
-	.string "תנו את ההופעה הכי טובה שלכם!\n"
-	.string "בואו נעשה רושם!$"
+	.string "תנו את המיטב שלכם!\n"
+	.string "שיתחילו ההופעות!$"
 
 LilycoveCity_ContestHall_Text_AreYouEnjoyingThisContest_hns:
 	.string "שופט: נהנים מהתחרות?\p"
@@ -379,7 +379,7 @@ LilycoveCity_ContestHall_Text_YoureBeautifulGrandpa_hns:
 
 LilycoveCity_ContestHall_Text_AllSeemToUseDifferentMoves_hns:
 	.string "גם כשמאמנים רושמים אותו סוג פוקימון,\n"
-	.string "כל אחד עושה רושם עם מהלכים אחרים.\p"
+	.string "כל אחד מופיע עם מהלכים אחרים.\p"
 	.string "בדיוק כמו שלאנשים יש סגנונות\n"
 	.string "שונים בקרב.$"
 
@@ -452,9 +452,9 @@ LilycoveCity_ContestHall_Text_InTheMiddleOfContest_hns:
 	.string "ולעלות לבמה, בסדר?$"
 
 LilycoveCity_ContestHall_Text_SuchCharmingCuteAppeals_hns:
-	.string "שופט: אה, איזה רושם מקסים\n"
-	.string "וחמוד!\p"
-	.string "אלוהים אדירים! איזה רושם מתוק\n"
+	.string "שופט: אה, אילו הופעות מקסימות\n"
+	.string "וחמודות!\p"
+	.string "אלוהים אדירים! איזו הופעה מתוקה\n"
 	.string "להפליא עם משחק מים!$"
 
 LilycoveCity_ContestHall_Text_MyAzurillWasDistracted_hns:
@@ -473,8 +473,8 @@ LilycoveCity_ContestHall_Text_PetalDanceIsMarvel_hns:
 
 LilycoveCity_ContestHall_Text_MyMonAppealSoMuchCuter_hns:
 	.string "הפוקימונים של כולם חמודים מאוד.\p"
-	.string "אבל אם הפוקימון שלי היה עושה\n"
-	.string "רושם חמוד…\p"
+	.string "אבל אם הפוקימון שלי היה מציג\n"
+	.string "הופעה חמודה…\p"
 	.string "אני בטוחה שהוא היה הרבה\n"
 	.string "יותר חמוד מהאחרים.$"
 
