@@ -1798,6 +1798,9 @@ each where it stands on `he/wip-r25t`. The evidence is in `<private>/scratch/scr
 - **Section 5:** `make_testing_md.py` reproduced the 0.2 `TESTING.md` byte for byte only when it
   was ported; step 5 did not give the review file's form, and step 7's list of exit-1 conditions
   left out four of them.
+- **The shipped `TESTING.md` (rc24):** it says the Union Room's strings passed the width audit
+  only, though round 22 drew its trade board and type list by forcing the state, with 0 clip
+  records. `notes.json` `not_tested` now says so; it takes effect with the next `TESTING.md`.
 
 A read of every document at `he/main` `0514c9b57b` (round 21) found the statements below wrong
 or stale, and each is corrected where it stands; the evidence is in
