@@ -1162,7 +1162,7 @@ python3 <repo>/tools/hebrew/emu/sweep.py selftest CLIP.gba st   # proves the det
 
 ```bash
 python3 tools/hebrew/status_report.py --sweep RC/tests/sweep/sweep.json
-# 650 files -> ...: {'seen on screen': 525, 'translated': 125}   (rc25's sweep, on he/main 1124d9661d)
+# 650 files -> ...: {'seen on screen': 525, 'translated': 125}   (rc25's sweep, he/main 1124d9661d)
 ```
 
 - Without `--sweep`, every "seen on screen" row falls back to "translated".
@@ -1194,7 +1194,8 @@ python3 $E/ladder.py --rom pokehns.gba run $E/scripts/ladder_validate.txt OUT --
 python3 $E/ladder.py --rom pokehns.gba run $E/scripts/ladder_validate_newgame.txt OUT --save "$HNS_SAVES/ladder1_newgame.sav"
 # rung 1 (the bedroom): continue, bag, trainer card
 python3 tools/hebrew/rom_sweep.py pokehns.gba --json OUT.json
-# 6276 text runs (6341 candidates), 6253 still English, 3.8s   exit 1 (always; rc25, and rc24 with this rom_sweep.py)
+# 6276 text runs (6341 candidates), 6253 still English, 3.8s   exit 1 (always)
+# the same on rc25 and, with this rom_sweep.py, on rc24
 # rc24's own run, before src/field_weather.o was swept: 6275 (6340), 6252; the one more is NOT DEFINED!!!
 ```
 
@@ -1705,19 +1706,26 @@ Ask the owner before you:
 
 ### 8.1 Open defects in the repository
 
-Round 21 fixed the four rows of round 20 (merged in `8aeb3a0f2b`), and the stale English reference
-walk was replaced before rc23 (section 0, item 2). Round 22 fixed the rest (merged on `he/main`
-after `dd1a8caae8`; section 8.5, round 22): C-literal liveness now follows the preprocessor, the
-harness accepts the ROM's wait-state mirrors `0A`-`0D` (the reference runner `<private>/emu/hnsrun`
-was rebuilt with it; the old one is `hnsrun.pre-r22`), `make_chunks.py` removes a batch's old chunk
-files, `startmenu` opens the menu every time on Frontier floors, and the two leftovers are gone.
-Round 23 fixed the last two (section 8.5, round 23): MR. STONE is מר סטון (Q141), and a second
-`make_chunks.py --supplement` numbers its chunks after the batch's last one and adds to its names
-file. Round 25 fixed round 24's findings on its branches (section 0, item 5). One is open:
+None. Round 21 fixed the four rows of round 20 (merged in `8aeb3a0f2b`), and the stale English
+reference walk was replaced before rc23 (section 0, rc23). Round 22 fixed the rest (merged on
+`he/main` after `dd1a8caae8`; section 8.5, round 22): C-literal liveness now follows the
+preprocessor, the harness accepts the ROM's wait-state mirrors `0A`-`0D` (the reference runner
+`<private>/emu/hnsrun` was rebuilt with it; the old one is `hnsrun.pre-r22`), `make_chunks.py`
+removes a batch's old chunk files, `startmenu` opens the menu every time on Frontier floors, and
+the two leftovers are gone. Round 23 fixed the last two (section 8.5, round 23): MR. STONE is
+מר סטון (Q141), and a second `make_chunks.py --supplement` numbers its chunks after the batch's
+last one and adds to its names file. Round 25 fixed round 24's findings (merged in `e3f3ad4cce`,
+`9d6e7abb91` and `1124d9661d`; section 0, round 25).
 
-| Defect | Where | Why open |
-| --- | --- | --- |
-| rc24's `visual_findings.json` is the 49-finding list of an early review (SHA-1 `17392e9277…`, the same file in 22 candidate folders from rc1 on; `DECISIONS.md:120` cites it as rc3's), not rc24's review; `make_testing_md.py` now refuses it, so `TESTING.md` cannot be made again from rc24's folder as it is | `<private>/release/rc24/visual_findings.json`, `<builds>/records/rc24/visual_findings.json` (paths rewritten, the same 49 entries) | a records change, the owner's call: write rc24's own review there, or delete the copy. The 12 changed shots of `tourdiff_rc23_rc24.txt` are the narrower PC menu of section 0, item 4, every row whole, not defects, so by `REVIEW.md` that review is `{"commit": "47669d9f061a673abcc8a513440b624d84b81f07", "findings": []}`; with it, or with `<private>/scratch/screens/r25/tools/rc24_copy/visual_findings.json` (the 12 shots as entries with an `outcome` field, which the finding format does not have), a copy of rc24 gives the shipped `TESTING.md` byte for byte. The next candidate writes its own file in either case |
+The last row was rc24's `visual_findings.json`: the 49-finding list of an early review (SHA-1
+`17392e9277…`, the same file in 22 candidate folders from rc1 on), not rc24's review, which
+`make_testing_md.py` now refuses. It is replaced by rc24's own review, `{"commit":
+"47669d9f061a673abcc8a513440b624d84b81f07", "findings": []}`: the 12 tour shots that differ from
+rc23 are the narrower Pokémon Center PC menu, every row whole. The file is in
+`<private>/release/rc24/` and in `<builds>/records/rc24/` (`<builds>` `44225b4`, not pushed yet;
+section 0). With it, `make_testing_md.py` of `he/main` and the `notes.json` of `b70d4d33b6` give
+rc24's shipped `TESTING.md` byte for byte, and the old list still exits 1
+(`<private>/scratch/screens/r26/docs/rc24_review_check.txt`).
 
 ### 8.2 Content gaps and decisions
 
@@ -1772,8 +1780,8 @@ file. Round 25 fixed round 24's findings on its branches (section 0, item 5). On
   - Kept on purpose and listed with reasons in Q140 and `namecheck_allow.json`: SLASH, CHESTO
     BERRY, IAPAPA BERRY, POKéBLOCK CASE, EXEGGUTOR and ELITE FOUR differ from FireRed's names
     because of an H&S limit or a FireRed slip, and PSYCHO BOOST because FireRed left it on פסיכי.
-- **Decided in round 25** (on `he/wip-r25`, not merged; section 0, item 5): the contest APPEAL is
-  הופעה in the hearts' label, the judge's results, the MC and the contest hall's people, as it
+- **Decided in round 25** (merged in `9d6e7abb91`, in 1.0; section 0, round 25): the contest APPEAL
+  is הופעה in the hearts' label, the judge's results, the MC and the contest hall's people, as it
   already was in the turn lines, the move descriptions and the Easy Chat word (Q142); the Kanto
   radio upgrade's gift line names the RADIO UPGRADE, שדרוג הרדיו, and the music director keeps his
   EXPN CARD, כרטיס הרחבה (Q143); the Safari battle menu writes פוקיבלוק instead of keeping the
@@ -1825,7 +1833,7 @@ file. Round 25 fixed round 24's findings on its branches (section 0, item 5). On
     but only the VS Seeker reads it (`src/vs_seeker.c:417`), and the VS Seeker is off
     (`item.h:40`). This is from reading the code.
   - **Why plain:** the official build type is not established and leans plain (section 2.5). A
-    release build would void every test of rc24, which all ran on plain builds. And testers
+    release build would void every test of rc25, which all ran on plain builds. And testers
     benefit from the assert screens (section 6.4). Revisit only if the decisive test of section
     2.5 finds no assert strings in the official ROM. Then build with `make hns RELEASE=1` (LTO on,
     as upstream's `release` target) and run every release test again.
@@ -1834,7 +1842,7 @@ file. Round 25 fixed round 24's findings on its branches (section 0, item 5). On
 - **The radio's Pokédex Show** wraps two place names across its lines (הר / הנזר in the
   Typhlosion-H entry, נהרות / היסואי in Basculegion's). Accepted: the ticker breaks between words,
   nothing clips, and 1.0 and English split at the same places.
-- **Proposed names.** The 5,213 `proposed` glossary rows were never checked against an official
+- **Proposed names.** The 5,218 `proposed` glossary rows were never checked against an official
   Hebrew source. `namecheck.py --warnings` checks them for consistency with FireRed and for
   transliteration slips (Q140); the roughly 3,000 rows translated by meaning stay `proposed` until
   a native speaker reads them.
@@ -1860,7 +1868,7 @@ file. Round 25 fixed round 24's findings on its branches (section 0, item 5). On
   232 px window and its 7-byte hold-effect copies run past the edge: Hebrew loses the מ' of
   התק' מ' and the מ of רצועת מ, English shows 'Sp Att' for 'Sp Atta'. The clip build records these
   glyphs. Debug-only; no change.
-- **A name from a Japanese game** (round 25, on `he/wip-r25e`, not merged). A traded Pokémon's
+- **A name from a Japanese game** (round 25, merged in `e3f3ad4cce`, in 1.0). A traded Pokémon's
   nickname or a link partner's name from a Japanese cartridge carries `{JPN}`…`{ENG}`. In a Hebrew
   line such a span is now one left-to-right run at its mirrored place (`0829b9805f`), and the
   read-mail screen, the PC mailbox list and the PC's mail prompt give a short sender name with a
@@ -1872,23 +1880,32 @@ file. Round 25 fixed round 24's findings on its branches (section 0, item 5). On
 
 ### 8.3 Stale documentation
 
-None known in the fork after round 25; one is open in the builds repository (Saves, below). A
-read of every document at `he/main` `47669d9f06` (round 24, with the documents of `b70d4d33b6`)
-found the statements below wrong or stale, and round 25 corrects each where it stands on
-`he/wip-r25t`. The evidence is in `<private>/scratch/screens/r24/` (`confirmed.md`,
-`result.json`), checked again in `<private>/scratch/screens/r25/docs/`.
+None known. After round 25 was merged, this file still described it as three local branches
+with steps to go, gave the counts from before the merge and listed rc24's copied review as open;
+the documents pass of round 26 (`he/wip-r26d`) corrected sections 0, 1.1, 1.2, 2.1, 3.2, 3.5,
+4.1, 4.2, 4.5 to 4.7, 5, 6.2, 8.1 to 8.3 and 8.5 and `tools/hebrew/README.md`, each number checked
+against the tree, the release folders and GitHub (`<private>/scratch/screens/r26/docs/`). It also
+applied what round 25's text review had proposed and nobody had written in: the moved line
+numbers of `drift.py` and `units.py` (sections 3.2, 4.5, 6.2 and 8.2) and the `GLYPHPAIR`
+warning (sections 4.2 and 6.2).
+
+A read of every document at `he/main` `47669d9f06` (round 24, with the documents of `b70d4d33b6`)
+found the statements below wrong or stale, and round 25 corrected each (merged in `1124d9661d`).
+The evidence is in `<private>/scratch/screens/r24/` (`confirmed.md`, `result.json`), checked
+again in `<private>/scratch/screens/r25/docs/`.
 
 - **Section 6.4:** R is not the DexNav button. In H&S it switches between the Mach and Acro bikes
   while riding (`src/field_control_avatar.c:256-272`), and DexNav is off
   (`include/config/dexnav.h:4`).
 - **Saves:** the round-tour save rule (section 4.5, the emu README, `<builds>/README.md`) did not
   name `saves/r4_bag`, which two `r20_names` tours need. Section 4.5 and the emu README name it
-  now. `<builds>/README.md` is in the builds repository, which this branch does not change: it
-  still counts 51 of 75 round-tour folders, where 53 of 78 need no subfolder and 25 need one,
-  and still leaves out `saves/r4_bag` (section 0, item 5).
+  now, and so does `<builds>/README.md` since `<builds>` `092617f` (not pushed yet; section 0),
+  which also counts 53 of the 78 round-tour folders that need no subfolder and 25 that need one,
+  where it said 51 of 75 and 24 (`<private>/scratch/screens/r26/docs/savecount.txt`).
 - **Static checks:** `static_checks` is typed from section 4.2 run locally with the FireRed tree,
   not from CI, whose namecheck prints `warnings 1, allowlisted 27` (sections 4.2 and 5, the release
-  README); CI's tool tests are 186 with 4 skipped, not 137 with 2 (section 4.2).
+  README); CI's tool tests were 186 with 4 skipped at `47669d9f06`, not 137 with 2 (section 4.2
+  now gives run 43102206527: 199 with 4 skipped).
 - **The English map walk:** the stored walk is the current walker's, not an older one (sections
   4.6 and 5, and the round-21 list below).
 - **Present-tense statements that had gone stale:** GitHub's branches and the `he/renderer` pick
@@ -1907,7 +1924,8 @@ found the statements below wrong or stale, and round 25 corrects each where it s
   left out four of them.
 - **The shipped `TESTING.md` (rc24):** it says the Union Room's strings passed the width audit
   only, though round 22 drew its trade board and type list by forcing the state, with 0 clip
-  records. `notes.json` `not_tested` now says so; it takes effect with the next `TESTING.md`.
+  records. `notes.json` `not_tested` now says so, and so does rc25's `TESTING.md`
+  (`<builds>/TESTING.md:70`, `:78`).
 
 A read of every document at `he/main` `0514c9b57b` (round 21) found the statements below wrong
 or stale, and each is corrected where it stands; the evidence is in
@@ -1951,7 +1969,7 @@ Earlier passes: round 20 corrected the audit's example finding (section 4.2:
 section 7. Round 19 corrected six line references: `RELEASE ?= 0` is at `Makefile:69`, `KEPT_LATIN`
 at `status_report.py:22-48`, the Hebrew count at `status_report.py:82`, the sweep's path guard at
 `sweep.py:391-396`, `walk_tree` (now at `audit.py:461-481`) and `LoadSaveblockObjEventScripts` at
-`src/overworld.c:592-600`. Every text tool has tests: 196 tests in 26 files under
+`src/overworld.c:592-600`. Every text tool has tests: 199 tests in 26 files under
 `tools/hebrew/tests`, with small committed fixtures in `tools/hebrew/tests/data/`. Add a row here
 when a document and the tree disagree, and fix it in a docs-only commit.
 
@@ -2274,8 +2292,11 @@ adversarial reviewer; scratch in `<private>/scratch/screens/r22/`):
 
 **Verified in round 25** (`he/wip-r25` `7191e0b54f`, whose ROMs were built from `9e27347605`
 because the two commits after it change only `STYLE.md` and `DECISIONS.md`; `he/wip-r25e`
-`4dccdfb235`; `he/wip-r25t`; none merged. Scratch in `<private>/scratch/screens/r25/`, in
-`text/`, `engine/`, `tools/` and `docs/`):
+`4dccdfb235`, then its review's `252656f5de`; `he/wip-r25t`. Pushed as `he/fix-r25`,
+`he/fix-r25e` and `he/fix-r25t` and merged in `9d6e7abb91`, `e3f3ad4cce` and `1124d9661d`; rc25
+is the build of the merge (below). Scratch in `<private>/scratch/screens/r25/`, in `text/`,
+`engine/`, `tools/`, `docs/` and the reviews' `review-text/`, `review-engine/` and
+`review-tools-docs/`):
 
 - **The contest APPEAL is הופעה (Q142).** Shown on the text branch's clip ROM beside rc24's and
   English, with 0 clip records in every run:
@@ -2317,6 +2338,13 @@ because the two commits after it change only `STYLE.md` and `DECISIONS.md`; `he/
     the same again.
   - English shows a few pixels of OK in the same place (`engine/ec/v_ecgap_rc24_final_en_4x.png`).
     EWRAM stays 248,324 B: the saved tiles live in the screen's heap block.
+  - The review found the gap still showing מחק for one frame in the frame states 9 and 19: once
+    while the keyboard opens and once each way on a mode switch. `252656f5de` blanks it from
+    state 9 to 19 and puts it back in state 8 or 20. Shot frame by frame, only those frames
+    change, only inside the strip, which is white there, and every frame equals rc24's or differs
+    only by white in the strip (`review-engine/ec/ecanim_head_fix.txt`, `ecanim_rc24_fix.txt`:
+    `bad 0`). The Hebrew ROM changes in 3 bytes, all in `DrawLowerWindowFrame`; the English build
+    is unchanged.
 - **Names from a Japanese game (`0829b9805f`, `4dccdfb235`),** forced on the release ROM beside
   rc24 and English (`engine/jp/jp_name_rc24_final_en.png`, `jp_mailbox_rc24_final_en.png`):
   - the field message, the send-out line, the action prompt and the summary name read in order,
@@ -2332,8 +2360,10 @@ because the two commits after it change only `STYLE.md` and `DECISIONS.md`; `he/
     (`make_chunks.log` the same as rc24's): 6,611 labels, OK 6,611. The self-check passes.
   - Built with `TEXT_RTL` FALSE, `b70d4d33b6` and `4dccdfb235` differ in 13 bytes, all assert
     line numbers; neither English ELF has an `Rtl*` symbol (`engine/ENGPROOF.txt`).
-  - The three commits apply onto `he/renderer` `ec407862cd`. Against `he/renderer` with them,
-    drift has 0 FAIL; 186 tool tests OK.
+  - The three commits apply onto `he/renderer` `ec407862cd`, and so does the fourth,
+    `252656f5de`. Against `he/renderer` with them, drift has 0 FAIL; 186 tool tests OK. With
+    `252656f5de` the release tours and clip tours are still all 2,056 shots identical to rc24's
+    (`review-engine/final_tourdiff.txt`, `final_tourdiff_clip.txt`).
   - Two round tours shift by a frame, with no release-tour shot changed: in `ec_daycare` the
     waits from `ec_abc_26_01` on end one frame earlier (a build without `0829b9805f` keeps rc24's
     frames); in `m1_mailbox` one read-mail screen opens a frame later, so 43 PC-room shots catch a
@@ -2348,19 +2378,57 @@ because the two commits after it change only `STYLE.md` and `DECISIONS.md`; `he/
   (exit 1, no file written). A copy of rc24 with a review naming `47669d9f06…` (the 12 PC-menu
   shots) gives exit 0 and the shipped `TESTING.md` byte for byte (`cmp`); the same file naming
   rc23's commit gives exit 1.
-- **This branch's documents** (section 8.3): each statement was checked against the tree, GitHub
-  (`git ls-remote` on 2026-11-11), CI run 42889868670's log and the builds repository. 196 tool
-  tests OK on Python 3.9.6, 3.11.9 and 3.14.7; all 248 scripts compile with every warning an error
-  on the three. The three branches merged in a scratch copy: section 0, item 5.
+- **The documents of `he/wip-r25t`** (section 8.3): each statement was checked against the tree,
+  GitHub (`git ls-remote` on 2026-11-11), CI run 42889868670's log and the builds repository. 196
+  tool tests OK on Python 3.9.6, 3.11.9 and 3.14.7; all 248 scripts compile with every warning an
+  error on the three.
+
+**Verified on the merge and on rc25** (round 26's documents pass, 2026-11-12, on `he/main`
+`be01ca8215`, the tree of `1124d9661d`; outputs in `<private>/scratch/screens/r26/docs/`):
+
+- **rc25 against rc24** (`<private>/release/rc24/` and `rc25/`; `rc24_rc25_compare.txt`):
+  `check_tests.txt` and `selfcheck.log` identical; the sweep OK 6,611 in both; all six ladder
+  rungs end in `exit 0` in both; both map walks 507 OK and 36 HELD, the same 36 maps; the
+  cross-core tables differ only in the `cc04_startmenu` row. `hns.py tourdiff` gives 2,054
+  identical and 2 differ for the tours and for the clip tours, the same two shots
+  (`tourdiff_rc24_rc25_tours.txt`, `_tours_clip.txt`). Their changed pixels lie in
+  (8,125)-(39,134) and (205,87)-(228,95), the contest label רושם, now הופעה
+  (`menu_summary_contest_desc_rc24_rc25.png`, `menu_pokedex_entry_stats_moves_rc24_rc25.png`).
+- **The ROM sweep of both, with today's `rom_sweep.py`** (`rs_rc24.json`, `rs_rc25.json`): 6,276
+  runs and 6,253 still English each, the same symbols and text; the run rc24's own record lacks
+  is `sDebugText_WeatherNotDefined` (`src/field_weather.o`), NOT DEFINED!!!.
+- **The merged tree's static checks** (`drift.txt`, `audit.txt`, `namecheck.txt`): as section
+  4.2 shows; `STATUS.md` regenerated from rc25's sweep is byte-identical (`STATUS_rc25.md`). 199
+  tool tests OK on Python 3.9.6, 3.11.9 and 3.14.7 with no skip (`tests_Python*.txt`); all 248
+  scripts compile with every warning an error on the three. DECISIONS.md has 79 decisions (K1-K6
+  and 73 Q entries, the last Q143); the glossary 7,133 rows (1,915 inherited, 5,218 proposed).
+- **`he/renderer`:** `git patch-id --stable` of `c6332664d1`, `5c5f38a498`, `7e96283738` and
+  `cc36b06423` equals that of their sources; `62b7fccf8b` adds and removes the lines of the diff
+  file it was applied from; `graphics/` is the same on both branches. The comparison of section
+  1.2's two English builds (14 bytes, the same symbols) was run again on their stored ROMs and
+  ELFs (`engproof_cmp.txt`, `nm_before.txt`, `nm_after.txt`); they were not rebuilt.
+- **`make_testing_md.py`:** a copy of rc25 gives `<builds>/TESTING.md` byte for byte
+  (`rc25_reproduced_TESTING.md`); rc24 with its own review gives its shipped `TESTING.md`, and the
+  old list exits 1 (`rc24_review_check.txt`; section 8.1).
+- **The round-tour save rule** of `<builds>/README.md` (`savecount.py`, `savecount.txt`): of the
+  78 folders under `tools/hebrew/emu/tours/`, 53 find every save they name at the top of
+  `<builds>/saves` and 25 need a subfolder; `r20_names` needs `menuA_base_copy.sav`, which is in
+  `saves/r4_bag` (and `saves/r4_fixes/r4_bag`).
+- **GitHub** (`lsremote.txt`, `gh_release_1.0.txt`, `gh_pr39.txt`, `gh_runs.txt`,
+  `ci_43102206527.log`): the branches of section 1.2; the GitHub Release `1.0` of the builds
+  repository, its three assets with the SHA-256 of the files in `<builds>` `20a8d79`; PR #39 open
+  with head `he/main`; CI as in section 0.
 
 **Not verified:**
 
-- Of round 25: nothing of it has run on rc25, which is not built yet. Why the engine commits move
-  frames in two round tours (`ec_daycare` a frame earlier, `m1_mailbox` a frame later), and why
-  the relearner tour's scroll arrows are at another point of their bob on the text branch, with
-  the same shot frames. Whether H&S 2.0.6 links with a Japanese cartridge at all: the Japanese
-  names and mail were forced in memory. The whole `he/renderer` ROM built in English before and
-  after the four picks (section 0, item 5).
+- Of round 25: its round tours (the contests, the relearner, Easy Chat, the Japanese names and
+  mail, the Safari menu) ran on the branches' builds, not on rc25; rc25 ran the release tests
+  (section 0, round 25). Why the engine commits move frames in two round tours (`ec_daycare` a
+  frame earlier, `m1_mailbox` a frame later), and why the relearner tour's scroll arrows are at
+  another point of their bob on the text branch, with the same shot frames. Whether H&S 2.0.6
+  links with a Japanese cartridge at all: the Japanese names and mail were forced in memory.
+- The GitHub Release's asset upload of section 5, step 8: no command for it is recorded in the
+  fork, the builds repository or the round folders, and none was run for this handoff.
 - Of round 23: the berry-fix transfer to a real second GBA (its last message was forced); whether
   the debug menu's collision switch lets a player walk behind the contest lobby counter to the
   invisible link receptionist.
