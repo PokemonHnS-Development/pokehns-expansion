@@ -30,7 +30,7 @@ fresh clone.
 | [`tools/hebrew/release/README.md`](tools/hebrew/release/README.md) | the release scripts; [`REVIEW.md`](tools/hebrew/release/REVIEW.md) there is the screenshot review |
 | [`tools/hebrew/testmsgs/README.md`](tools/hebrew/testmsgs/README.md) | the Hebrew battle-test message table |
 | [`translation/hebrew/STYLE.md`](translation/hebrew/STYLE.md) | the binding style rules |
-| [`translation/hebrew/DECISIONS.md`](translation/hebrew/DECISIONS.md) | 77 recorded decisions, up to Q141, and the names review |
+| [`translation/hebrew/DECISIONS.md`](translation/hebrew/DECISIONS.md) | 79 recorded decisions, up to Q143, and the names review |
 | [`translation/hebrew/transliteration_rules.md`](translation/hebrew/transliteration_rules.md) | how names are transliterated |
 | [`translation/hebrew/STATUS.md`](translation/hebrew/STATUS.md) | per-file state (generated) |
 | [`translation/hebrew/glossary.csv`](translation/hebrew/glossary.csv) | every name and fixed term |
@@ -38,18 +38,19 @@ fresh clone.
 
 ---
 
-## 0. State at handoff (2026-11-11)
+## 0. State at handoff (2026-11-12)
 
 | Item | Value | Check |
 | --- | --- | --- |
-| `he/main` | `47669d9f06` and the documents after it (on GitHub too): round 21's merge `8aeb3a0f2b` (the build of rc23), round 22's tool fixes (`he/fix-r22a`, `-b`, `-c`), and round 23's merges `9283527322` (`he/fix-r23`: the Hoenn names and Q141's answered questions) and `47669d9f06` (`he/fix-r23t`: `make_chunks.py --supplement`), the build of 1.0 | `git rev-parse --short he/main` |
-| `he/renderer` | `ec407862cd` (on GitHub too): `67df13ff43` plus round 21's engine commit `cd5fb48abe` (the Pokéblock case list's level column). Built in English (`TEXT_RTL` FALSE) before and after the pick, the ROM differs in 2 bytes, an assert's line number (`<private>/scratch/screens/r21/engproof/PROOF.md`) | `git rev-parse --short he/renderer` |
-| Release | One release, 1.0, replaced in place on each update (ROM, `SHA1SUMS`, `TESTING.md`); the builds repo's commit history keeps the older builds. Current 1.0: built from `he/main` `47669d9f06` (rc24) | `git -C <builds> log` (`f27cd37` "Update 1.0 to the build of he/main 47669d9f06"); `<builds>/records/README.md:45` |
-| 1.0 ROM | `pokehns-he-2.0.6-1.0.gba`: 33554432 bytes, SHA-1 `28e6b2e739049c6378dbd0b947a3436894602db6`, CRC32 `A134671D` (clip build `8fed22572fd4eb714a752cd9e9face1f2dd91d0d`, CRC32 `024BE1BB`) | `<builds>/SHA1SUMS` |
-| Releasing | Build a candidate with `tools/hebrew/release/`, then replace the three files in the builds repo and say in the commit message which `he/main` commit it was built from; keep `tools/hebrew/release/notes.json` at `"release": "1.0"`. A candidate is published with hand play declared as not tested (`DECISIONS.md` Q138) | section 5 |
-| CI | green in all three jobs at `47669d9f06` (run 42889868670), at `8aeb3a0f2b` (run 42802955754) and at `c1cfd8a30b` (run 42721195219: `build` 4m46s, `audit` 1m22s, `check` 20m42s), at `dd6d82f504` (42724124742) and at `0514c9b57b` (42725640966); so were the runs before them on `he/main` (41918360015 at `85705e4bc9`, 41929345455 at `08027d9879`, 41933578987 at `fe509e0043`) | `gh run list -R ronyeh2/pokehns-expansion-heb --workflow hebrew.yml --branch he/main` |
-| Static checks | at `he/main` `47669d9f06`, baseline `he/renderer` `ec407862cd`: drift 708 files, 0 FAIL, 334 with warnings only (8 `w LATIN`, all kept: Q141); audit 0 errors and 54 warnings, 39,059 strings (24,841 translated) as in CI; namecheck 7,128 rows, 0 problems and 0 warnings (34 allowlisted); plurals 0 problems; the Pokédex A–Z, Easy Chat and live-label generators up to date; 186 tool tests OK on Python 3.9.6 and 3.11.9 | section 4.2 |
-| Translation status | every live file is translated: 650 files, 525 seen on screen, 125 translated, none blocked (rc23's sweep, regenerated after round 23, with the same totals; rc24's sweep gives the same file) | `translation/hebrew/STATUS.md:5` |
+| `he/main` | `1124d9661d` and the documents after it (on GitHub too). Round 25's merges are `e3f3ad4cce` (`he/fix-r25e`, the engine), `9d6e7abb91` (`he/fix-r25`, the text) and `1124d9661d` (`he/fix-r25t`, tools and documents), the build of 1.0. Before them: round 23's merges `9283527322` and `47669d9f06` (the build of rc24) and the documents up to `b70d4d33b6` | `git rev-parse --short he/main`; `git log --first-parent --oneline b70d4d33b6..he/main` |
+| `he/renderer` | `62b7fccf8b` (on GitHub too): `ec407862cd` plus round 25's five engine commits (section 1.2). Built in English (`TEXT_RTL` FALSE) before and after the picks, the ROM differs in 14 bytes, all line numbers, and the symbol tables are identical (`<private>/scratch/screens/r25/engproof/PROOF.md`) | `git log --oneline ec407862cd..he/renderer` |
+| Release | One release, 1.0, replaced in place on each update (ROM, `SHA1SUMS`, `TESTING.md`); the builds repo's commit history keeps the older builds. The same three files are the assets of the builds repo's GitHub Release `1.0` (tag `1.0` at `<builds>` `90e1f99`). Current 1.0: built from `he/main` `1124d9661d` (rc25) | `git -C <builds> log` (`20a8d79` "Update 1.0 to the build of he/main 1124d9661d"); `<builds>/records/README.md:46`; `gh release view 1.0 -R ronyeh2/pokehns-hebrew-builds` (each asset's SHA-256 is that of the file in `20a8d79`) |
+| 1.0 ROM | `pokehns-he-2.0.6-1.0.gba`: 33554432 bytes, SHA-1 `6ce5d1ed725b2cc7edd55095a2506f3e846b46e9`, CRC32 `462B037C` (clip build `088e65d8f96635295930ee7f4ee9076eaf3874bb`, CRC32 `C43B9F75`) | `<builds>/SHA1SUMS`; `<builds>/records/rc25/build_info.json` |
+| Upstream | offered as `PokemonHnS-Development/pokehns-expansion#39` ("Hebrew localization - complete (2.0.6)", opened 2026-11-11, open). Its head is `ronyeh2:he/main` and its base `master`, so every push to `he/main` updates it. No checks are reported on it | `gh pr view 39 -R PokemonHnS-Development/pokehns-expansion`; `gh pr checks 39 -R ...` |
+| Releasing | Build a candidate with `tools/hebrew/release/`. Then replace the three files in the builds repo, say in the commit message which `he/main` commit it was built from, and replace the GitHub Release's assets. Keep `tools/hebrew/release/notes.json` at `"release": "1.0"`. A candidate is published with hand play declared as not tested (`DECISIONS.md` Q138) | section 5 |
+| CI | green in all three jobs at `be01ca8215` (run 43113468009), at `1124d9661d` (run 43102206527: `build` 5m48s, `audit` 1m11s, `check` 19m47s), at `b70d4d33b6` (42895047715), at `47669d9f06` (42889868670), at `8aeb3a0f2b` (42802955754) and at `c1cfd8a30b` (42721195219), and so were the runs before them on `he/main`. Round 25's three branches failed only `audit`: CI's drift compares with `origin/he/renderer`, which holds every branch's engine picks, so each branch failed on the files of the engine commits it does not carry (`he/fix-r25` 5 FAIL, `he/fix-r25e` 1, `he/fix-r25t` 6; runs 43102190874, 43102195638, 43102200540); their merge passes | `gh run list -R ronyeh2/pokehns-expansion-heb --workflow hebrew.yml --branch he/main` |
+| Static checks | at `he/main` `1124d9661d`, baseline `he/renderer` `62b7fccf8b`: drift 708 files, 0 FAIL, 334 with warnings only (8 `w LATIN`, all kept: Q141; no `w GLYPHPAIR`); audit 0 errors and 54 warnings, 39,060 strings (24,841 translated) as in CI; namecheck 7,133 rows, 0 problems and 0 warnings (34 allowlisted); plurals 0 problems; the Pokédex A–Z, Easy Chat and live-label generators up to date; 199 tool tests OK on Python 3.9.6, 3.11.9 and 3.14.7, none skipped | section 4.2 |
+| Translation status | every live file is translated: 650 files, 525 seen on screen, 125 translated, none blocked. Regenerated from rc25's sweep, `STATUS.md` is byte for byte the committed one | `translation/hebrew/STATUS.md:5` |
 
 **What remains** (details in section 8):
 
@@ -57,7 +58,71 @@ fresh clone.
    person), real hardware (a 32 MiB flash cart with FLASH 128 KB and an RTC), and a read of the
    shipped wording by a native speaker. All three are in `notes.json` `not_tested`, so every
    `TESTING.md` says so; section 8.5 lists the lines reviewers flagged for a native read.
-2. **rc23, built from `8aeb3a0f2b`** (1.0 until rc24) (round 21 merged, its engine commit on
+2. **Push two commits of the builds repository** (section 7.3). Both are records changes and are
+   committed in `<builds>` but not pushed: `092617f` corrects `<builds>/README.md`'s round-tour
+   save rule (53 of the 78 round-tour folders need no subfolder, the other 25 need one, and
+   `r20_names`' `n20_bag` and `n20_dexsearch` need `saves/r4_bag`), and `44225b4` replaces rc24's
+   copied `visual_findings.json` with rc24's own review (section 8.1). No release file changes.
+
+**Done** (newest first):
+
+1. **Round 25, merged and pushed; 1.0 is its build, rc25.** Three branches, each from
+   `b70d4d33b6`, fix round 24's 19 confirmed findings (`<private>/scratch/screens/r24/confirmed.md`;
+   section 8.5 has the evidence):
+   - `he/fix-r25e` (engine, `252656f5de`, 4 commits; merged in `e3f3ad4cce`): the Easy Chat
+     keyboard no longer shows pieces of מחק הכל beside its frame (`f9290010d3`, and `252656f5de`
+     for the frame states 9 and 19); a name from a Japanese game reads in order inside a Hebrew
+     line (`0829b9805f`); mail from a Japanese sender keeps the Japanese font (`4dccdfb235`).
+   - `he/fix-r25` (text, `68d493f7f0`, 15 commits; merged in `9d6e7abb91`): the contest APPEAL
+     is הופעה everywhere (Q142); the radio upgrade's gift line says שדרוג הרדיו (Q143); the Safari
+     battle menu says פוקיבלוק instead of the Latin POKéBLOCK glyphs, in the narrow font under
+     `TEXT_RTL` (engine commit `333588640e`, text `a233fe427a`); `units.py` does not count a
+     literal of an English-only `#else` as live; `drift.py` warns (`GLYPHPAIR`) on a glyph-pair
+     token kept in a translated string.
+   - `he/fix-r25t` (tools and documents, `f73d01b9c1`, 18 commits; merged in `1124d9661d`):
+     `rom_sweep.py --min-words 1` checks one-word strings and `src/field_weather.o` is swept;
+     `make_testing_md.py` takes the visual review only as `{"commit", "findings"}` of the
+     candidate; round 24's documentation findings (section 8.3).
+   - The five engine commits are on `he/renderer` (section 1.2), pushed with `he/main`.
+
+   **1.0 is rc25**, built from `1124d9661d` (SHA-1 `6ce5d1ed…`, CRC32 `462B037C`): `<builds>`
+   `20a8d79`, its records in `<builds>/records/rc25/` (`9040c7d`, indexed in `90e1f99`), and the
+   GitHub Release `1.0` of the builds repository with the ROM, `SHA1SUMS` and `TESTING.md`
+   attached (replace its assets on each new 1.0). Against rc24:
+   - `make check` the same (5074 results, 1899 failing, all known upstream failures);
+   - 2 of the 2,056 tour shots differ, `menu_summary_contest_desc` and
+     `menu_pokedex_entry_stats_moves`, both the contest label (רושם is now הופעה); the clip tours
+     differ in the same 2 shots, 0 glyphs outside a window;
+   - the sweep OK for all 6,611 labels; the self-check, the six save-ladder rungs (exit 0) and
+     the map walk (507 OK, the same 36 HELD) pass; the cross-core table differs only in the start
+     menu's clock;
+   - the ROM sweep finds the same labels: 6,276 text runs, 6,253 still English. rc24's record has
+     one fewer (6,275 and 6,252), because it ran before `src/field_weather.o` was swept; today's
+     `rom_sweep.py` gives rc24 and rc25 the same 6,253 runs, and the one more is the debug menu's
+     NOT DEFINED!!! (`sDebugText_WeatherNotDefined`, `src/field_weather.o`).
+
+   rc25's review is `{"commit": "1124d966…", "findings": []}`: both changed shots are the new
+   label. The translation is offered upstream as `PokemonHnS-Development/pokehns-expansion#39`
+   (the table above). Evidence: `<private>/release/rc25/` (`tourdiff_rc24_rc25.txt`,
+   `tests/`) and the comparisons in `<private>/scratch/screens/r26/docs/` (`rc24_rc25_compare.txt`,
+   `tourdiff_rc24_rc25_tours*.txt`, `rs_rc24.json`, `rs_rc25.json`, the two `*_rc24_rc25.png`).
+2. **Round 23**, the two rows of section 8.1 then, shipped as rc24 (1.0 until rc25). The Hoenn
+   names are Hebrew (DECISIONS.md Q141: 35 glossary rows, 195 string edits in 21 files), and MR.
+   STONE is מר סטון in the PokéGear contact data. The other cartridges' titles are in Hebrew
+   letters (רובי, ספיר, אמרלד), with GLACIA גלסיה, the e-Reader אי-רידר and Ash-Greninja
+   אש-גרנינג'ה. A second `make_chunks.py --supplement` numbers its chunks after the last one. The
+   ROM's code is rc23's (section 8.5). A player sees three changes: a narrower Pokémon Center PC
+   menu for short names, the berry-fix program's messages (B+SELECT on the title screen) and the
+   credits' page 38. rc24 was built from `47669d9f06` (SHA-1 `28e6b2e7…`, the ROM round 23 built
+   three times). Against rc23: `make check` the same (5074 results, 1899 failing, all known
+   upstream failures); 12 of the 2,056 tour shots and the same 12 clip-tour shots differ, all the
+   Pokémon Center PC menu, every row whole; the sweep OK for all 6,611 labels; the self-check,
+   save ladder and map walk (the same 36 HELD) pass; the ROM sweep finds the same labels (6,275
+   text runs, one fewer: a Latin title is gone); the cross-core table differs only in the start
+   menu's clock. Records are in `<builds>/records/rc24/`, indexed in `<builds>/records/README.md`.
+3. **Round 22**, merged on `he/main` (`he/fix-r22a`, `he/fix-r22b`, `he/fix-r22c`, pushed): the
+   remaining tool rows of section 8.1 then. None changes the ROM, so 1.0 stayed rc23.
+4. **rc23, built from `8aeb3a0f2b`** (1.0 until rc24) (round 21 merged, its engine commit on
    `he/renderer`, all pushed; CI green). Its ROM is the one round 21 built twice, from the
    worktree and from a clean archive (SHA-1 `383e16ba…`). Against rc22: `make check` the same
    (5074 results, 1899 failing, all known upstream failures); all 2,056 tour shots and all 2,056
@@ -72,73 +137,6 @@ fresh clone.
    `map_walk.hebrew_only_held` set to `[]`, so `TESTING.md` now says all 36 held maps also hold
    in English. `make_testing_md.py` printed "None skipped" in the sweep row when nothing was
    skipped; it now prints 0.
-3. **Done: round 22**, merged on `he/main` (`he/fix-r22a`, `he/fix-r22b`, `he/fix-r22c`, pushed): the
-   remaining tool rows of section 8.1. None changes the ROM, so 1.0 stays rc23.
-4. **Done: round 23**, the two rows of section 8.1, shipped as rc24. The Hoenn names are Hebrew
-   (DECISIONS.md Q141: 35 glossary rows, 195 string edits in 21 files), and MR. STONE is מר סטון in
-   the PokéGear contact data. The other cartridges' titles are in Hebrew letters (רובי, ספיר,
-   אמרלד), with GLACIA גלסיה, the e-Reader אי-רידר and Ash-Greninja אש-גרנינג'ה. A second
-   `make_chunks.py --supplement` numbers its chunks after the last one. The ROM's code is rc23's
-   (section 8.5). A player sees three changes: a narrower Pokémon Center PC menu for short names,
-   the berry-fix program's messages (B+SELECT on the title screen) and the credits' page 38.
-   **1.0 is rc24**, built from `47669d9f06` (SHA-1 `28e6b2e7…`, the ROM round 23 built three times).
-   Against rc23: `make check` the same (5074 results, 1899 failing, all known upstream failures);
-   12 of the 2,056 tour shots and the same 12 clip-tour shots differ, all the Pokémon Center PC
-   menu, every row whole; the sweep OK for all 6,611 labels; the self-check, save ladder and map
-   walk (the same 36 HELD) pass; the ROM sweep finds the same labels (6,275 text runs, one fewer:
-   a Latin title is gone); the cross-core table differs only in the start menu's clock. Records
-   are in `<builds>/records/rc24/`, indexed in `<builds>/records/README.md`.
-5. **Round 25: fixed on three branches, not merged and not pushed.** `he/wip-r25`,
-   `he/wip-r25e` and `he/wip-r25t` each start from `b70d4d33b6` and are local only; no file is
-   changed on two of them (`git diff --name-only`). They fix round 24's 19 confirmed findings
-   (`<private>/scratch/screens/r24/confirmed.md`); section 8.5 has the evidence. Two record
-   changes outside the fork stay open: rc24's copied `visual_findings.json` (section 8.1) and the
-   save rule of `<builds>/README.md` (step 5 below).
-   - `he/wip-r25` (text, `7191e0b54f`, 14 commits): the contest APPEAL is הופעה everywhere
-     (Q142); the radio upgrade's gift line says שדרוג הרדיו (Q143); the Safari battle menu says
-     פוקיבלוק instead of the Latin POKéBLOCK glyphs, in the narrow font under `TEXT_RTL` (engine
-     commit `333588640e`, text `a233fe427a`); `units.py` does not count a literal of an
-     English-only `#else` as live; `drift.py` warns (`GLYPHPAIR`) on a glyph-pair token kept in a
-     translated string.
-   - `he/wip-r25e` (engine, `4dccdfb235`, 3 commits): the Easy Chat keyboard no longer shows
-     pieces of מחק הכל beside its frame (`f9290010d3`); a name from a Japanese game reads in order
-     inside a Hebrew line (`0829b9805f`); mail from a Japanese sender keeps the Japanese font
-     (`4dccdfb235`).
-   - `he/wip-r25t` (tools and documents, this branch): `rom_sweep.py --min-words 1` checks
-     one-word strings and `src/field_weather.o` is swept; `make_testing_md.py` takes the visual
-     review only as `{"commit", "findings"}` of the candidate; round 24's documentation findings
-     (section 8.3).
-
-   What remains, in this order:
-   1. **Pick the four engine commits onto `he/renderer`.** `f9290010d3`, `0829b9805f` and
-      `4dccdfb235` apply cleanly to `ec407862cd`. `333588640e` does not, because its line is
-      Hebrew on `he/main` and English on `he/renderer`: apply
-      `<private>/scratch/screens/r25/text/renderer_pick/he_renderer_safari_menu.diff` instead, so
-      its patch-id differs from its source. Build `he/renderer` in English before and after
-      (section 1.2).
-   2. **Merge the three branches into `he/main`** (section 7.5) and push `he/renderer` before
-      `he/main` (section 4.7). Against today's `he/renderer` the merged tree's drift has 6 FAIL,
-      the files of the four engine commits; against `he/renderer` with the picks it has 0 FAIL
-      (708 files, 334 with warnings only).
-   3. **Update the counts this file gives for `he/main`.** A scratch copy of the merged tree has
-      199 tool tests (OK on Python 3.9.6 and 3.11.9; one skipped there only because
-      `tools/preproc` was not built), 79 decisions up to Q143, audit 0 errors and 54 warnings in
-      39,060 strings (24,841 translated), namecheck 7,133 rows with 0 problems and 0 warnings (34
-      allowlisted), plurals, the generators and `flag_gates.py` unchanged
-      (`<private>/scratch/screens/r25/docs/merged_*.txt`).
-   4. **Build rc25 from the merge and run section 5 in full.** It needs its own
-      `visual_findings.json`: `make_testing_md.py` now refuses the copied list (section 8.1).
-      From the round's builds (not yet seen on rc25), expect against rc24: the contest APPEAL
-      label in two release-tour shots (`menu_summary_contest_desc`,
-      `menu_pokedex_entry_stats_moves`) and no other release-tour change; with the new
-      `rom_sweep.py`, the debug menu's NOT DEFINED!!! is one more English run. Add what rc25's
-      tour diff shows to `notes.json` `visual_review` after its review.
-   5. **Correct `<builds>/README.md`'s save rule** in the builds repository, which no branch here
-      changes: it still counts 51 of 75 round-tour folders and does not name `saves/r4_bag`
-      (section 8.3).
-
-
-**1.0 is the build of `1124d9661d`** (round 25 merged; SHA-1 `6ce5d1ed725b2cc7edd55095a2506f3e846b46e9`, CRC32 `462B037C`): `<builds>` `20a8d79`, records `rc25`, and a GitHub Release `1.0` in the private builds repo with the ROM attached (replace its assets on each new 1.0). Against rc24: the same `make check`, sweep (6,611 OK), ladder, map walk and ROM-sweep labels; 2 of 2,056 tour shots differ, both the contest label הופעה. The translation is offered upstream as PokemonHnS-Development/pokehns-expansion#39 (head `ronyeh2:he/main`, base `master`).
 
 ---
 
