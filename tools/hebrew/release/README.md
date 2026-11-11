@@ -93,9 +93,10 @@ Then:
 
 1. **Review the screenshots.** Compare the tour screenshots of `RC/tests` with the English build
    (`../pairsheets.py` makes side-by-side sheets), and record the findings in
-   `RC/visual_findings.json`. `REVIEW.md` gives the lenses, the finding format, the refuting step
-   and the prompts. `TESTING.md` gets a visual-review row only when that file exists.
-   The row's text comes from `notes.json`.
+   `RC/visual_findings.json` as `{"commit": "<the commit in RC/build_info.json>", "findings": [...]}`.
+   `REVIEW.md` gives the lenses, the finding format, the refuting step and the prompts.
+   `TESTING.md` gets a visual-review row only when that file exists, and `make_testing_md.py`
+   refuses a file of another commit or form. The row's text comes from `notes.json`.
 2. **Edit `notes.json`** for the new release (see the table below). The static-check result comes
    from the CI run of the release commit (`.github/workflows/hebrew.yml`: drift, layout audit,
    `namecheck.py --all --warnings`, the generator `--check`s and `flag_gates.py --check`), because
@@ -139,7 +140,16 @@ status 1 when:
 
 - `gbafix.log` does not end in `gbafix: header already valid`.
 - `selfcheck.log` does not end in `all checks passed`.
+- A tour or clip tour (`tests/tours/tour_report.json`, `tests/tours_clip/tour_report.json`) is
+  not OK.
 - A save-ladder log (`tests/ladder_*.log`) does not end in `exit 0`.
-- The sweep has a CLIP, CRASH, HANG or ABNORMAL label.
+- The sweep has a label whose status is not OK or SKIP (CLIP, CRASH, HANG or ABNORMAL).
 - A map in the map walk ends in a status other than OK or HELD.
 - The maps held only in Hebrew differ from `map_walk.hebrew_only_held`.
+- `tests/crosscore.txt` is not a `ccdiff.py` table with one column for each of `vbam`,
+  `vba_next`, `gpsp`, `mednafen_gba` and `skyemu`, in that order, and at least one shot; or a
+  cell is not a pixel count (`missing`, `size WxH`).
+- `RC/visual_findings.json` is not this candidate's review: not JSON, not an object with exactly
+  the keys `commit` and `findings`, a `commit` other than the one in `build_info.json`, or
+  `findings` not a list of objects.
+- `RC/visual_findings.json` exists and `notes.json` has no `visual_review` text.
