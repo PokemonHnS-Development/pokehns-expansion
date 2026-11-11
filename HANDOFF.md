@@ -1005,7 +1005,9 @@ it covers. Many round tours need a driver from `$E/scripts/` rather than `hns.py
 menu. The release tours start from saves at the top of `<builds>/saves`. A round tour
 (`tours/<round>/`) that names a save found only in a subfolder needs `HNS_SAVES` set to the folder
 that holds it: `saves/r8` for round 8, a folder under `saves/r10/` or `saves/r11/` for those
-rounds, and `saves/r7/saves_aug` for rounds 3-7 and `verify_ctxdpad` (`<builds>/README.md`).
+rounds, `saves/r4_bag` for `r20_names`' `n20_bag` and `n20_dexsearch` (both start from
+`menuA_base_copy.sav`), and `saves/r7/saves_aug` for rounds 3-7 and `verify_ctxdpad`
+(`<builds>/README.md`). Of the 78 round-tour folders, 53 need no subfolder and 25 need one.
 
 On the English ROM, 70 of the 71 tours report OK. `naming_nickname` stops with ERROR at its first
 check of the typed Hebrew bytes (`tours/naming_nickname.txt:71`), and `naming_player` reports OK
