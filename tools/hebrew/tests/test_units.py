@@ -301,6 +301,39 @@ class CLivenessTest(unittest.TestCase):
         self.assertEqual(self.keyed_live(ITEMS, en, he, {'Never printed.'}),
                          [('שם ארוך', True), ('Never printed.', False), ('מודפס.', True)])
 
+    def test_a_branch_the_hebrew_build_never_compiles_is_dead_and_keeps_its_place(self):
+        # The #else of TEXT_RTL keeps the English build's line: never shown in Hebrew, so not
+        # live, but it is the English literal and takes its place, so the last literal keeps
+        # GAMMA's dead verdict instead of taking BETA's.
+        en = ('static const struct MenuAction sList[] = {\n'
+              '    { COMPOUND_STRING("ALPHA") },\n'
+              '    { COMPOUND_STRING("BETA") },\n'
+              '    { COMPOUND_STRING("GAMMA") }\n'
+              '};\n')
+        he = ('static const struct MenuAction sList[] = {\n'
+              '#if TEXT_RTL\n'
+              '    { COMPOUND_STRING("{FONT_NARROW}אלפא{FONT_NORMAL}") },\n'
+              '#else\n'
+              '    { COMPOUND_STRING("ALPHA") },\n'
+              '#endif\n'
+              '#if !TEXT_RTL\n'
+              '    { COMPOUND_STRING("BETA") },\n'
+              '#else\n'
+              '    { COMPOUND_STRING("בטא") },\n'
+              '#endif\n'
+              '    { COMPOUND_STRING("גמא") }\n'
+              '};\n')
+        self.assertEqual(self.keyed_live(ITEMS, en, he, {'GAMMA'}),
+                         [('{FONT_NARROW}אלפא{FONT_NORMAL}', True), ('ALPHA', False), ('BETA', False),
+                          ('בטא', True), ('גמא', False)])
+
+    def test_non_rtl_lines(self):
+        text = ('a\n#if TEXT_RTL\nb\n#else\nc\n#endif\n#if !TEXT_RTL\nd\n#else\ne\n#endif\n'
+                '#if TEXT_RTL && IS_HNS\nf\n#else\ng\n#endif\n#if TEXT_RTL // why\nh\n#elif Y\ni\n#else\nj\n#endif\n'
+                '#if !TEXT_RTL\n#if X\nk\n#endif\n#elif Z\nl\n#endif\n')
+        lines = text.split('\n')
+        self.assertEqual(sorted(lines[i - 1] for i in units.non_rtl_lines(text)), ['c', 'd', 'i', 'j', 'k'])
+
     def test_rtl_only_lines(self):
         text = ('a\n#if TEXT_RTL\nb\n#else\nc\n#endif\n#if !TEXT_RTL\nd\n#else\ne\n#endif\n'
                 '#if TEXT_RTL && IS_HNS\n#if X\nf\n#endif\n#elif Y\ng\n#endif\n#ifdef TEXT_RTL\nh\n#endif\n')
