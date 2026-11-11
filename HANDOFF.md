@@ -1275,8 +1275,11 @@ The scripts are in `tools/hebrew/release/` (see its [README](tools/hebrew/releas
 Each prints usage with `--help`. The two shell scripts also take `--check`, which checks every
 input, prints the resolved values and changes nothing. They have only run on macOS.
 
-Ported from `<private>/scratch/release/`, the new `make_testing_md.py` reproduces the 0.2
-`TESTING.md` byte for byte from rc5 (SHA-1 `6ec054019a3418c5293a8fb13625c8f49b3acbae`).
+When it was ported from `<private>/scratch/release/` (`601a13e888`), `make_testing_md.py`
+reproduced the 0.2 `TESTING.md` byte for byte from rc5 (SHA-1
+`6ec054019a3418c5293a8fb13625c8f49b3acbae`). Its later checks make it refuse rc5's older records:
+the save-ladder logs that do not end in `exit 0`, the cross-core table without SkyEmu, and the
+copied `visual_findings.json` (`<private>/scratch/screens/r25/docs/rc5_refusal.txt`).
 
 **One-time setup** (section 2.6):
 
@@ -1333,7 +1336,10 @@ Ported from `<private>/scratch/release/`, the new `make_testing_md.py` reproduce
    - A failing step does not stop the later ones: read the logs.
 
 5. **Visual review** (section 4.8, `tools/hebrew/release/REVIEW.md`). Record the findings in
-   `RC/visual_findings.json`. A finding that needs a fix means a new candidate, `rcN+1`.
+   `RC/visual_findings.json` as `{"commit": "<the commit in RC/build_info.json>", "findings":
+   [...]}`; an empty list is a clean review. A file copied from an earlier candidate is not a
+   review, and `make_testing_md.py` refuses it. A finding that needs a fix means a new candidate,
+   `rcN+1`.
 
 6. **Edit `tools/hebrew/release/notes.json`** for the new release.
    - `release` must match the ROM name.
@@ -1349,12 +1355,18 @@ Ported from `<private>/scratch/release/`, the new `make_testing_md.py` reproduce
    ```bash
    python3 tools/hebrew/release/make_testing_md.py "$RC" pokehns-he-2.0.6-1.0.gba "$RC/TESTING.md"
    ```
-   It exits 1 instead of writing a sentence that its inputs contradict:
+   It exits 1 instead of writing a sentence that its inputs contradict
+   (`make_testing_md.py:158-194`):
    - a changed header;
    - a failing selfcheck;
+   - a tour or clip tour that is not OK;
+   - a save-ladder log that does not end in `exit 0`;
    - a clipped, crashed, hung or abnormal label;
    - a crashed map;
-   - held maps that `notes.json` does not explain.
+   - held maps that `notes.json` does not explain;
+   - a cross-core table with a missing core or a cell that is not a pixel count;
+   - a `visual_findings.json` that is not this candidate's review (step 5);
+   - a `visual_findings.json` with no `visual_review` text in `notes.json`.
 
    Check every number against the logs anyway.
 
@@ -1783,6 +1795,9 @@ each where it stands on `he/wip-r25t`. The evidence is in `<private>/scratch/scr
 - **Section 8.5:** a "Not verified" bullet still asked whether the battle debug menu's AI party
   page comes up garbled the first time it opens; round 22 checked it (it does not, and
   `dbgmenu.py:18-19` says so).
+- **Section 5:** `make_testing_md.py` reproduced the 0.2 `TESTING.md` byte for byte only when it
+  was ported; step 5 did not give the review file's form, and step 7's list of exit-1 conditions
+  left out four of them.
 
 A read of every document at `he/main` `0514c9b57b` (round 21) found the statements below wrong
 or stale, and each is corrected where it stands; the evidence is in
