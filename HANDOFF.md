@@ -156,10 +156,10 @@ pokeemerald-expansion 1.15.2. Upstream is `PokemonHnS-Development/pokehns-expans
 
 | Repository | Visibility | Holds | Notes |
 | --- | --- | --- | --- |
-| `ronyeh2/pokehns-expansion-heb` (this repo) | public | engine, text, graphics, tools, docs | default branch `master`; **no tags** (`git ls-remote` on 2026-11-10) |
+| `ronyeh2/pokehns-expansion-heb` (this repo) | public | engine, text, graphics, tools, docs | default branch `master`; **no tags** (`git ls-remote` on 2026-11-12) |
 | `PokemonHnS-Development/pokehns-expansion` | public | upstream | `Release-v2.0.6` = its `master` = `167aa6d537` |
-| `ronyeh2/pokehns-hebrew-builds` | **private** | the one release 1.0 (ROM, `SHA1SUMS`, `TESTING.md`), replaced in place; `saves/`, `reference/` (libretro cores, English map walk), `records/rcNN/` (each candidate's logs and review JSON), `archive/` (history only) | `.gitattributes` has `*.gba`, `*.sav`, `*.zip`, `*.tar.gz` binary; git history keeps the older builds |
-| `<private>` (no remote) | local only | the mGBA 0.10.5 build (`mgba/`), `emu/hnsrun`, the candidates' ROMs, ELFs and screenshots (`release/rc1..rc24`, 9.1 GB), the round screenshots (`scratch/`, about 140 GB) | everything the release needs is in the fork or `<builds>` (section 8.4); the rest is rebuilt (section 2.6) |
+| `ronyeh2/pokehns-hebrew-builds` | **private** | the one release 1.0 (ROM, `SHA1SUMS`, `TESTING.md`), replaced in place, and the same three files as the assets of its GitHub Release `1.0`; `saves/`, `reference/` (libretro cores, English map walk), `records/rcNN/` (each candidate's logs and review JSON), `archive/` (history only) | `.gitattributes` has `*.gba`, `*.sav`, `*.zip`, `*.tar.gz` binary; git history keeps the older builds |
+| `<private>` (no remote) | local only | the mGBA 0.10.5 build (`mgba/`), `emu/hnsrun`, the candidates' ROMs, ELFs and screenshots (`release/rc1..rc25`, 9.6 GB), the round screenshots (`scratch/`, about 167 GB) | everything the release needs is in the fork or `<builds>` (section 8.4); the rest is rebuilt (section 2.6) |
 
 The Spanish (`SergioBonet/hns_es`) and French (`nhykola/HeartAndSoul-FR`) forks were used only
 as a cross-check, never as source text (`STYLE.md` §1).
@@ -175,10 +175,11 @@ as a cross-check, never as source text (`STYLE.md` §1).
 | `he/fonts`, `he/graphics`, `he/naming-keyboard`, `he/preview` | feature branches, already merged | kept for history |
 | `he/fix-*` | one fix topic each (for example `he/fix-k5-cosmetics`, `he/fix-vr-dex`, and the rounds' `he/fix-r19` and `he/fix-r20`), already merged | merge title `Merge he/<branch>: <what it brings>` |
 
-On GitHub (2026-11-11): `master` `167aa6d537`, `he/main` `b70d4d33b6`, `he/renderer` `ec407862cd`,
+On GitHub (2026-11-12): `master` `167aa6d537`, `he/main` `be01ca8215`, `he/renderer` `62b7fccf8b`,
 `he/upstream-fixes` and `he/fix-upstream-hydra` `8d52b4cccf`, `he/fix-r19` `f1d0f9a843`,
-`he/fix-r20` `ffdc529fc7`, `he/fix-r20docs` `078bec4671`, and 46 other `he/*` branches, among them
-`he/fix-r21`, `he/fix-r22a`, `-b`, `-c`, `he/fix-r23` and `he/fix-r23t` (53 `he/*` branches in all;
+`he/fix-r20` `ffdc529fc7`, `he/fix-r20docs` `078bec4671`, round 25's `he/fix-r25` `68d493f7f0`,
+`he/fix-r25e` `252656f5de` and `he/fix-r25t` `f73d01b9c1`, and 46 other `he/*` branches, among them
+`he/fix-r21`, `he/fix-r22a`, `-b`, `-c`, `he/fix-r23` and `he/fix-r23t` (56 `he/*` branches in all;
 still no tags). The `he/wip-r*` branches are local only.
 
 `he/renderer` is `384104fb15` plus one pick per graphics or Easy Chat commit of rounds 19 and 20,
@@ -188,10 +189,24 @@ headers, from `81f9b905db`), `784e76146d` (the GHOST and PSYCHIC plates and `men
 `3f2c255dce`). Then the three graphics commits of earlier rounds that had not been picked:
 `8c5e324a40` (the paralysis tag, from `d3b59b94fe`), `0b3ccf4430` (the NORMAL rank title, from
 `d41a67ebdf`) and `67df13ff43` (the alphabet mode tab, from `9164440ab9`). Round 21's engine
-commit `cd5fb48abe` (the Pokéblock case list's level column) is picked as `ec407862cd` (section 0).
-Each pick has the same patch as its source commit (`git patch-id --stable`), and `graphics/` on
+commit `cd5fb48abe` (the Pokéblock case list's level column) is picked as `ec407862cd`. Each pick
+so far has the same patch as its source commit (`git patch-id --stable`), and `graphics/` on
 `he/renderer` now equals `he/main`'s (`git diff --stat he/renderer he/main -- graphics/` prints
-nothing). Round 25's four engine commits are not picked yet (section 0, item 5).
+nothing).
+
+Round 25's five engine commits follow (section 0, round 25), up to `62b7fccf8b`:
+`c6332664d1` (from `f9290010d3`, the Easy Chat footer's gap), `5c5f38a498` (from `0829b9805f`, a
+Japanese-font name as one left-to-right run), `7e96283738` (from `4dccdfb235`, a Japanese mail
+sender's font) and `cc36b06423` (from `252656f5de`, the gap in frame states 9 and 19), each with
+its source's patch-id; then `62b7fccf8b`, the Safari battle menu's narrow font from `333588640e`.
+That one is applied from `<private>/scratch/screens/r25/text/renderer_pick/he_renderer_safari_menu.diff`,
+not cherry-picked: its line in `src/battle_message.c` is Hebrew on `he/main` and English on
+`he/renderer`, so its patch-id differs from its source's. Built in English (`TEXT_RTL` FALSE)
+before (`ec407862cd`, SHA-1 `a484361e…`) and after (`62b7fccf8b`, `22c32f38…`), the two ROMs differ
+in 14 bytes, all line numbers: 11 digits of assert strings, the `battle_message.c` assert literal
+(3048 to 3054) and the `AddTextPrinter` literal (3475 to 3599); `nm -S` gives the same symbols and
+sizes, and none is an `Rtl*` symbol (`<private>/scratch/screens/r25/engproof/PROOF.md`; run again
+in `<private>/scratch/screens/r26/docs/`: `engproof_cmp.txt`, `nm_before.txt`, `nm_after.txt`).
 
 **Checking a pick with an English build.** Build `he/renderer` before and after the picks with
 `TEXT_RTL` set to FALSE (`include/config/text.h:20`, in a scratch worktree) and `make hns`, and
