@@ -3166,6 +3166,11 @@ u32 BattleStringExpandPlaceholders(const u8 *src, u8 *dst, u32 dstSize)
     u8 *textStart = &text[0];
     u8 multiplayerId;
     u8 fontId = FONT_NORMAL;
+#if TEXT_RTL
+    const u8 *template = src;
+    const u8 *placeholder;
+    u32 expansionID;
+#endif
 
     if (gBattleTypeFlags & BATTLE_TYPE_RECORDED_LINK)
         multiplayerId = gRecordedBattleMultiplayerId;
@@ -3189,6 +3194,10 @@ u32 BattleStringExpandPlaceholders(const u8 *src, u8 *dst, u32 dstSize)
 
         if (*src == PLACEHOLDER_BEGIN)
         {
+#if TEXT_RTL
+            placeholder = src;
+            expansionID = dstID;
+#endif
             src++;
             u32 classLength = 0;
             u32 nameLength = 0;
@@ -3777,6 +3786,15 @@ u32 BattleStringExpandPlaceholders(const u8 *src, u8 *dst, u32 dstSize)
                     toCpy++;
                 }
             }
+#if TEXT_RTL
+            // The rest of dst is still EOS from the clearing above, so the expansion ends there.
+            if (dstID + 1 < dstSize && RtlNeedsPrefixMaqaf(template, placeholder, &dst[expansionID]))
+            {
+                memmove(&dst[expansionID + 1], &dst[expansionID], dstID - expansionID);
+                dst[expansionID] = CHAR_HYPHEN;
+                dstID++;
+            }
+#endif
 
             if (*src == B_TXT_TRAINER1_LOSE_TEXT || *src == B_TXT_TRAINER2_LOSE_TEXT
                 || *src == B_TXT_TRAINER1_WIN_TEXT || *src == B_TXT_TRAINER2_WIN_TEXT)

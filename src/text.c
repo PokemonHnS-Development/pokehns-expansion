@@ -1136,6 +1136,72 @@ static bool32 RtlStartsRun(const u8 *str, bool32 afterRtl)
     return class == RTL_CLASS_NUM_PREFIX && RtlClassAt(str + length, &nextLength) == RTL_CLASS_DIGIT;
 }
 
+// The one-letter Hebrew words that are written joined to the next word: ו "and", ה "the",
+// ב "in", כ "as", ל "to", מ "from", ש "that".
+static bool32 RtlIsPrefixLetter(u32 c)
+{
+    switch (c)
+    {
+    case CHAR_HEB_VAV:
+    case CHAR_HEB_HE:
+    case CHAR_HEB_BET:
+    case CHAR_HEB_KAF:
+    case CHAR_HEB_LAMED:
+    case CHAR_HEB_MEM:
+    case CHAR_HEB_SHIN:
+        return TRUE;
+    }
+    return FALSE;
+}
+
+#define RTL_MAX_PREFIX_LETTERS 3
+
+// A Hebrew prefix is joined to Latin letters and digits with a maqaf ("ל-PC", "ב-20") and to
+// Hebrew directly, and the static text is written so. A placeholder is filled in only when the
+// text is expanded, so the expanders ask this after each one, to write "ל-GOLD" but "לגולד":
+// TRUE when the template has a prefix right before the placeholder (one to three prefix letters
+// after a space, punctuation, a control code or the start of the template) and the placeholder's
+// text, after any control codes, starts with a Latin letter or a digit. template: the string being
+// expanded; placeholder: the placeholder's first byte in it; expansion: what the placeholder gave,
+// EOS-terminated.
+bool32 RtlNeedsPrefixMaqaf(const u8 *template, const u8 *placeholder, const u8 *expansion)
+{
+    u32 length, class;
+    u32 letters = 0; // Prefix letters since the last word boundary; above the limit inside a word
+    const u8 *str;
+
+    while (*expansion == EXT_CTRL_CODE_BEGIN)
+        expansion += 1 + GetExtCtrlCodeLength(expansion[1]);
+    class = RtlClassAt(expansion, &length);
+    if (class != RTL_CLASS_LTR && class != RTL_CLASS_DIGIT)
+        return FALSE;
+
+    for (str = template; str < placeholder; str += length)
+    {
+        switch (*str)
+        {
+        case EXT_CTRL_CODE_BEGIN:
+            length = 1 + GetExtCtrlCodeLength(str[1]);
+            letters = 0;
+            continue;
+        case PLACEHOLDER_BEGIN:
+        case CHAR_DYNAMIC:
+        case CHAR_KEYPAD_ICON:
+            length = 2;
+            letters = RTL_MAX_PREFIX_LETTERS + 1;
+            continue;
+        }
+        class = RtlClassAt(str, &length);
+        if (RtlIsPrefixLetter(*str))
+            letters = (letters < RTL_MAX_PREFIX_LETTERS) ? letters + 1 : RTL_MAX_PREFIX_LETTERS + 1;
+        else if (class == RTL_CLASS_RTL || class == RTL_CLASS_LTR || class == RTL_CLASS_DIGIT)
+            letters = RTL_MAX_PREFIX_LETTERS + 1;
+        else
+            letters = 0;
+    }
+    return str == placeholder && letters != 0 && letters <= RTL_MAX_PREFIX_LETTERS;
+}
+
 // Length of a control code at str that can sit inside a run because it draws nothing and does not
 // move the pen (colours, pauses, sounds, and placeholder bytes a window printer skips), or 0 for
 // any code that ends a run.
