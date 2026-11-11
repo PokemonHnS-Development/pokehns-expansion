@@ -137,6 +137,9 @@ fresh clone.
       changes: it still counts 51 of 75 round-tour folders and does not name `saves/r4_bag`
       (section 8.3).
 
+
+**1.0 is the build of `1124d9661d`** (round 25 merged; SHA-1 `6ce5d1ed725b2cc7edd55095a2506f3e846b46e9`, CRC32 `462B037C`): `<builds>` `20a8d79`, records `rc25`, and a GitHub Release `1.0` in the private builds repo with the ROM attached (replace its assets on each new 1.0). Against rc24: the same `make check`, sweep (6,611 OK), ladder, map walk and ROM-sweep labels; 2 of 2,056 tour shots differ, both the contest label הופעה. The translation is offered upstream as PokemonHnS-Development/pokehns-expansion#39 (head `ronyeh2:he/main`, base `master`).
+
 ---
 
 ## 1. What this is and where everything lives
