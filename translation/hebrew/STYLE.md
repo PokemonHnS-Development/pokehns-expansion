@@ -9,7 +9,7 @@ Where they disagree, the glossary wins for names and this file wins for everythi
   `tools/hebrew/README.md`). The Spanish and
   French forks are only a cross-check for an ambiguous line, never a source.
 - Voice: natural, modern, friendly Hebrew, the way the FireRed fork reads
-  (`data/maps/*/text.inc` in the Hebrew FireRed fork). Short sentences. Spoken register for
+  (`data/maps/*/text.inc` in the Hebrew FireRed fork, ofir286's `pokefirered-heb`; see `CREDITS.md`). Short sentences. Spoken register for
   NPCs, neutral register for UI. No nikud. No slang that will date.
 - Keep each character's voice: a gruff sailor, a child, a rival who sneers, a professor who
   lectures. Keep jokes as jokes; a pun that cannot survive gets a Hebrew joke of similar weight.

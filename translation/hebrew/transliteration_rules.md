@@ -1,6 +1,6 @@
 # Hebrew transliteration rules for Heart & Soul names
 
-Derived from the names the FireRed Hebrew fork (`pokefirered-heb`) already uses, so that new
+Derived from the names the FireRed Hebrew fork (`pokefirered-heb`, ofir286's translation; see `CREDITS.md`) already uses, so that new
 Heart & Soul names read as if the same hand wrote them. Every example below is a real FireRed name
 unless it is marked **(proposed)**.
 
