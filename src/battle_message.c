@@ -1426,7 +1426,7 @@ const u8 gText_BattleMenu[] = _("קרב{CLEAR_TO 56}תיק\nפוקימון{CLEAR
 #if TEXT_RTL
 // The second item's Hebrew word is 41 px in FONT_NORMAL, 1 px more than the 40 px from CLEAR_TO 56
 // to the edge of the 96-px window: that item is drawn in FONT_NARROW (39 px).
-const u8 gText_SafariZoneMenu[] = _("BALL{CLEAR_TO 56}{FONT_NARROW}{POKEBLOCK}{FONT_NORMAL}\nGO NEAR{CLEAR_TO 56}RUN");
+const u8 gText_SafariZoneMenu[] = _("כדור{CLEAR_TO 56}{FONT_NARROW}פוקיבלוק{FONT_NORMAL}\nהתקרבות{CLEAR_TO 56}בריחה");
 #else
 const u8 gText_SafariZoneMenu[] = _("BALL{CLEAR_TO 56}{POKEBLOCK}\nGO NEAR{CLEAR_TO 56}RUN");
 #endif
