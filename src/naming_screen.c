@@ -204,9 +204,9 @@ static const u16 sRival_Pal[] = INCBIN_U16("graphics/naming_screen/rival.gbapal"
 #endif
 #if TEXT_RTL
 // Page tabs of the Hebrew build: "עברית" (blue) for the Hebrew page, "ABC" (orange) for the
-// Latin page, "סמלים" (green) for the symbols page. Drawn with hns-tools/fonts/make_naming_tabs.py.
-// The tab has no row above its 7 letter rows, so the ל of "סמלים" is drawn 7 rows tall with its
-// ascender on the top row; without the ascender it does not read as ל.
+// Latin page, "סמלים" (green) for the symbols page. tools/hebrew/fonts/make_naming_tabs.py draws
+// the first two; the symbols tab is edited by hand. It has no row above its 7 letter rows, so the
+// ל of "סמלים" is 7 rows tall with its ascender on the top row, or it would not read as ל.
 static const u32 sPageSwapHebrew_Gfx[] = INCBIN_U32("graphics/naming_screen/page_swap_hebrew.4bpp");
 static const u32 sPageSwapLatin_Gfx[] = INCBIN_U32("graphics/naming_screen/page_swap_latin.4bpp");
 static const u32 sPageSwapSymbols_Gfx[] = INCBIN_U32("graphics/naming_screen/page_swap_symbols.4bpp");
