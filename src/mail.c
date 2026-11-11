@@ -663,9 +663,14 @@ static void BufferMailText(void)
     else
     {
 #if TEXT_RTL
-        // A name shorter than 6 letters would switch to the Japanese font, which has no Hebrew
-        // letters; it stays in the normal font.
-        StripExtCtrlCodes(sMailRead->playerName);
+        // A name shorter than 6 letters switches to the Japanese font. That font has no Hebrew
+        // letters, so only a name with Japanese letters switches; a short Hebrew sender (Kenya's
+        // mail) stays in the normal font. IsStringJapanese cannot tell a kana name whose bytes are
+        // all Hebrew letters in the normal font (hiragana げ-っ, katakana セ-チ) from a Hebrew one.
+        if (IsStringJapanese(sMailRead->playerName))
+            ConvertInternationalPlayerName(sMailRead->playerName);
+        else
+            StripExtCtrlCodes(sMailRead->playerName);
 #else
         ConvertInternationalPlayerName(sMailRead->playerName);
 #endif

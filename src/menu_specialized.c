@@ -257,9 +257,18 @@ static void MailboxMenu_ItemPrintFunc(u8 windowId, u32 itemId, u8 y)
 
     StringCopy(buffer, gSaveBlock1Ptr->mail[PARTY_SIZE + itemId].playerName);
 #if TEXT_RTL
-    // A sender name shorter than 6 letters would switch to the Japanese font, which has no Hebrew
-    // letters; it stays in the normal font, as on the read-mail screen.
-    StripExtCtrlCodes(buffer);
+    // As on the read-mail screen, only a short name with Japanese letters switches to the Japanese
+    // font, which has no Hebrew letters.
+    if (IsStringJapanese(buffer))
+    {
+        ConvertInternationalPlayerName(buffer);
+        if (StringLength(buffer) < PLAYER_NAME_LENGTH - 1)
+            ConvertInternationalString(buffer, LANGUAGE_JAPANESE);
+    }
+    else
+    {
+        StripExtCtrlCodes(buffer);
+    }
 #else
     ConvertInternationalPlayerName(buffer);
     length = StringLength(buffer);
