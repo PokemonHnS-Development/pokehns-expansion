@@ -275,7 +275,7 @@ Reference machine: Apple Silicon, macOS.
 | libpng, pkg-config | Homebrew libpng 1.6.58 | `brew install libpng pkg-config`; Linux: `libpng-dev` |
 | GNU make | macOS ships 3.81 | 3.81 builds fine but has no `-O` (section 6.1) |
 | git | any | the build refuses to run without git history (section 6.1) |
-| Python 3 | 3.9 or newer: the 196 tool tests pass on 3.9.6, 3.11.9 and 3.14.7, and all 248 scripts under `tools/hebrew` compile with every warning turned into an error on 3.9.6, 3.11.9 and 3.14.7 (`he/wip-r25t`; CI: Ubuntu 26.04's python3) | standard library only, except the picture tools |
+| Python 3 | 3.9 or newer: the 199 tool tests pass on 3.9.6, 3.11.9 and 3.14.7, and all 248 scripts under `tools/hebrew` compile with every warning turned into an error on 3.9.6, 3.11.9 and 3.14.7 (`he/main` `1124d9661d`; CI: Ubuntu 26.04's python3) | standard library only, except the picture tools |
 | Pillow | 12.2.0 | `python3 -m pip install Pillow`. Needed by `fontcells.py`, `tools/hebrew/graphics/`, the font previews and the review-sheet scripts; the harness writes PNGs itself |
 | numpy | any recent | only `tools/hebrew/inventory/` |
 | cmake | 4.4.3 | only for building mGBA for the harness |
@@ -581,7 +581,7 @@ The glossary wins for names, STYLE.md for everything else (`STYLE.md:3-4`). In s
   - You may move `\n`/`\l`. Add or remove `\p` only when a page would not fit otherwise.
   - Placeholders keep the English order. Hebrew may drop only `{POKE} {PKMN} {POKEBLOCK} {ID}
     {NO}` and the `{PK}` of the Easy Chat word `{PK}RS`, and `{B_BUFF1..3}` may swap places with
-    each other (`drift.py:32-47`; `units.py` and `checkunits.py` import the same rule).
+    each other (`drift.py:34-49`; `units.py` and `checkunits.py` import the same rule).
 - **Battle grammar:** "wild" and "opposing" are definite suffixes (` הפראי`, ` היריב`), and verbs
   are masculine.
 - **Engine-coupled strings** (STYLE §9): the battle prefixes, the Pokédex search letter groups
@@ -784,9 +784,9 @@ git -C <main worktree> merge --no-ff he/fix-<topic> -m "Merge he/fix-<topic>: <w
 **Files**
 
 - `translation/hebrew/glossary.csv`: columns `kind,constant,english,firered_hebrew,proposed_hebrew,status,notes`;
-  7,128 rows, with CRLF line ends. The tools read `proposed_hebrew`.
+  7,133 rows, with CRLF line ends. The tools read `proposed_hebrew`.
   - Status `inherited` (1,915) comes from the FireRed fork.
-  - Status `proposed` (5,213) is new and has not been checked against an official Hebrew source.
+  - Status `proposed` (5,218) is new and has not been checked against an official Hebrew source.
     It includes the 25 inherited rows that round 20 renamed after FireRed's newer names (Q139,
     Q140); their `firered_hebrew` column still holds the form they were first taken from.
 - `translation/hebrew/glossary_sources.csv`: `kind,constant,english,source,pattern` (5,529 rows).
@@ -803,7 +803,7 @@ Keep families together; `python3 tools/hebrew/translit_stats.py 'EON$'` lists th
 **Renaming or adding a name** is a checklist; no tool propagates a rename:
 
 1. Commit `glossary.csv` alone, **before** any text that uses the name.
-2. `python3 tools/hebrew/namecheck.py --all --warnings` should print `rows 7128, still empty 0,
+2. `python3 tools/hebrew/namecheck.py --all --warnings` should print `rows 7133, still empty 0,
    problems 0` and `warnings 0, allowlisted 34`; then run `python3 tools/hebrew/glossary_widths.py`
    (today `1 over budget`: the EXEGGUTOR-A healthbox name, 49 px against 48, decided in Q129).
 3. Change every dialogue use (`git grep` the old Hebrew and the English), one file per commit.
@@ -895,7 +895,7 @@ Apply a decision in this order:
 | whole tree | `audit.py --baseline ../pokehns-en` | WIDTH, LINES, BUFFER, BYTES, TERMINATOR, CHARSET | 28 s |
 | glossary | `namecheck.py --all --warnings` | byte limits, final letters, duplicates; warnings for FireRed differences, transliteration slips, two-way names | instant |
 | generated data | `gen_dex_alpha.py`, `gen_ec_order.py`, `gen_ec_letters.py`, `flag_gates.py`, each `--check` | a stale A–Z order, Easy Chat list or live-label list | instant |
-| tool tests | `python3 -m unittest discover -s tools/hebrew/tests` | the tools themselves (196 tests) | 15 s |
+| tool tests | `python3 -m unittest discover -s tools/hebrew/tests` | the tools themselves (199 tests) | 16 s |
 | game logic | `make check BUILD=hns` + `check_tests.py` | a test that passes upstream but fails in Hebrew | about 4 min at `-j12` in the release worktree (rc5, rc20: `make_check.log` created to last written; 15 hydra runners), 13 to 20 min in CI |
 | screens | `hns.py tour` (71 tours) | crashes, timeouts, wrong typed bytes; screenshots for review | about 3 min |
 | glyphs outside windows | `hns.py tour --clip`, `sweep.py` on the clip ROM | every glyph drawn outside its window | about 2.5 min: 6,611 labels in 150 s on rc21's clip ROM (191 s with a cold cache) |
@@ -914,8 +914,9 @@ Two rules from the original brief:
 
 CI creates the two worktrees from `origin/he/renderer` and `origin/master` (`hebrew.yml:43-48`).
 Locally, the tag `Release-v2.0.6` (fetched in section 2.3) stands in for CI's `origin/master`. The
-expected output below is a local run on `he/main` `47669d9f06` (2026-11-10), with `../pokehns-heb-engine` at
-`he/renderer` `ec407862cd`, on a built tree.
+expected output below is a local run on `he/main` `be01ca8215` (the tree of `1124d9661d` and its
+`HANDOFF.md`; 2026-11-12), with `../pokehns-heb-engine` at `he/renderer` `62b7fccf8b`, on a built
+tree.
 
 ```bash
 set -o pipefail
@@ -926,13 +927,13 @@ git diff --name-only Release-v2.0.6...HEAD -- data src | grep -E '\.(inc|s|c|h|p
 python3 tools/hebrew/audit.py --baseline ../pokehns-en --report build/hebrew/audit.txt
 #    == translated strings: 0 errors, 54 warnings, 88 suppressed by baseline ../pokehns-en
 #    == English (untranslated) strings, baseline only: 448 errors, 0 warnings   <- informational
-#    line 1 of the report: audit ...: 39059 strings (24841 translated)   (the same as CI)
+#    line 1 of the report: audit ...: 39060 strings (24841 translated)   (the same as CI)
 # 3. glossary (hebrew.yml:59-60), here with ../pokefirered-heb present (HNS_FIRERED, section 1.3)
 python3 tools/hebrew/namecheck.py --all --warnings
-#    rows 7128, still empty 0, problems 0
+#    rows 7133, still empty 0, problems 0
 #    warnings 0, allowlisted 34
-#    CI checks out no FireRed tree, so it prints the skipped variant (run 42889868670):
-#    rows 7128, still empty 0, problems 0 / WARN FRSYNC skipped: ... / warnings 1, allowlisted 27
+#    CI checks out no FireRed tree, so it prints the skipped variant (run 43102206527):
+#    rows 7133, still empty 0, problems 0 / WARN FRSYNC skipped: ... / warnings 1, allowlisted 27
 # 4. generated data (hebrew.yml:62-71)
 python3 tools/hebrew/gen_dex_alpha.py --check     # gen_dex_alpha: 1080 entries, the TEXT_RTL list is up to date
 python3 tools/hebrew/gen_ec_order.py --check      # gen_ec_order: 18 groups, the header is up to date
@@ -940,7 +941,7 @@ python3 tools/hebrew/gen_ec_letters.py --check    # gen_ec_letters: 23 lists, th
 python3 tools/hebrew/flag_gates.py --check        # total: live 6585, flag_off 451, not_built 147 / no change
 # 5. tool tests (hebrew.yml:73-74)
 python3 -m unittest discover -s tools/hebrew/tests
-#    Ran 196 tests ... OK   (no skip with tools/preproc built, ../pokehns-en/pokehns.gba present,
+#    Ran 199 tests ... OK   (no skip with tools/preproc built, ../pokehns-en/pokehns.gba present,
 #                            devkitARM's arm-none-eabi-gcc and a host cc; tools/hebrew/README.md)
 # not in CI: item plurals
 python3 tools/hebrew/plurals.py                   # items 902, stackable 693, problems 0
@@ -949,7 +950,10 @@ python3 tools/hebrew/plurals.py                   # items 902, stackable 693, pr
 **How to read the results**
 
 - **drift errors** (exit 1) are `STRUCTURE`, `TOKENS`, `TERMINATOR`, `CHARSET` and `SHRUNK`.
-  Warnings (`PAGES`, `LATIN`, `UNTRANSLATED`) never fail the run unless you pass `--strict`.
+  Warnings (`PAGES`, `LATIN`, `GLYPHPAIR`, `UNTRANSLATED`) never fail the run unless you pass
+  `--strict`. `GLYPHPAIR` is a translated string that keeps a Latin glyph-pair token (`{POKE}`,
+  `{PKMN}`, `{POKEBLOCK}`, `{ID}`, `{NO}`, `{PK}`): write the Hebrew word (`STYLE.md` §5; the
+  tree has none).
   Section 6.2 lists every kind. `.party` and `.json` files are checked too: a renamed `Name:` line
   counts as a string.
 - **audit:** the exit status is 1 only for a Hebrew error that the baseline does not suppress.
@@ -972,7 +976,7 @@ python3 tools/hebrew/plurals.py                   # items 902, stackable 693, pr
     translated)`, with the same findings. Now the built tree's report equals a clean `git archive`
     copy's apart from line 1 (the tree path), and the clean copy prints what CI prints
     (`<private>/scratch/screens/r21/fixes/t4/audit_clean.txt` and `fixes/audit_final.txt`).
-- **tool tests in CI:** run 42889868670 at `47669d9f06` printed `Ran 186 tests ... OK
+- **tool tests in CI:** run 43102206527 at `1124d9661d` printed `Ran 199 tests ... OK
   (skipped=4)`: no English ROM (1 test), no built `tools/preproc` (1), and no
   `arm-none-eabi-gcc` for the two preprocessor tests (the `audit` job installs no toolchain).
 
@@ -1158,7 +1162,7 @@ python3 <repo>/tools/hebrew/emu/sweep.py selftest CLIP.gba st   # proves the det
 
 ```bash
 python3 tools/hebrew/status_report.py --sweep RC/tests/sweep/sweep.json
-# 650 files -> ...: {'seen on screen': 525, 'translated': 125}   (rc23's sweep, on he/main 47669d9f06)
+# 650 files -> ...: {'seen on screen': 525, 'translated': 125}   (rc25's sweep, on he/main 1124d9661d)
 ```
 
 - Without `--sweep`, every "seen on screen" row falls back to "translated".
@@ -1166,13 +1170,16 @@ python3 tools/hebrew/status_report.py --sweep RC/tests/sweep/sweep.json
   line in the English tree. `units.py` finds each record in `../pokehns-en` by line and text and
   matches the tree's literals by what they initialise: the variable, or else the designator and
   field, the macro, and the place among the file's literals with the same (`c_live_index`,
-  `units.py:209-244`; `c_key`, `:247-258`). A literal on a line only a `TEXT_RTL` build compiles
-  (`rtl_only_lines`, `:264-286`), such as a plural name, has no English record: it counts as live
-  and takes no place. So Hebrew lines that moved no longer take another literal's verdict, and both
-  trees have the same literals under every key. Without an English tree (`HNS_UPSTREAM` unset and
-  no `../pokehns-en`) every C literal counts as live, with a line on stderr. `src/data/items.h`
-  counts 2,204 live strings, all Hebrew (`STATUS.md`), the ones the build compiles: liveness
-  follows the preprocessor since round 22 (section 8.5).
+  `units.py:217-250`; `c_key`, `:253-264`). A literal on a line only a `TEXT_RTL` build compiles
+  (`rtl_only_lines`, `:270-292`), such as a plural name, has no English record: it counts as live
+  and takes no place. A literal on a line a `TEXT_RTL` build never compiles (`non_rtl_lines`,
+  `:295-319`: the later branches of `#if TEXT_RTL`, the first branch of `#if !TEXT_RTL`), such as
+  the English `#else` of `gText_SafariZoneMenu`, is not live but keeps its English place. So Hebrew
+  lines that moved no longer take another literal's verdict, and both trees have the same literals
+  under every key. Without an English tree (`HNS_UPSTREAM` unset and no `../pokehns-en`) every C
+  literal counts as live, with a line on stderr. `src/data/items.h` counts 2,204 live strings, all
+  Hebrew (`STATUS.md`), the ones the build compiles: liveness follows the preprocessor since round
+  22 (section 8.5).
 - "Seen on screen" means **the harness rendered the label**, not that a person read it.
 - STATUS counts a string as Hebrew if it holds any Hebrew letter (`status_report.py:82`), so mixed
   Latin-and-Hebrew lines pass (section 8.2).
@@ -1187,7 +1194,7 @@ python3 $E/ladder.py --rom pokehns.gba run $E/scripts/ladder_validate.txt OUT --
 python3 $E/ladder.py --rom pokehns.gba run $E/scripts/ladder_validate_newgame.txt OUT --save "$HNS_SAVES/ladder1_newgame.sav"
 # rung 1 (the bedroom): continue, bag, trainer card
 python3 tools/hebrew/rom_sweep.py pokehns.gba --json OUT.json
-# 6276 text runs (6341 candidates), 6253 still English, 4.0s   exit 1 (always; rc24 with this rom_sweep.py)
+# 6276 text runs (6341 candidates), 6253 still English, 3.8s   exit 1 (always; rc25, and rc24 with this rom_sweep.py)
 # rc24's own run, before src/field_weather.o was swept: 6275 (6340), 6252; the one more is NOT DEFINED!!!
 ```
 
@@ -1199,10 +1206,11 @@ python3 tools/hebrew/rom_sweep.py pokehns.gba --json OUT.json
     'HELD': 36}`, the same 36 maps, and 539 of the 543 records are identical
     (`<private>/scratch/screens/r21/static/mw_en_full/mapwalk.json`). The stored English walk
     (`HNS_EN_MAPWALK`, `<builds>/reference/mapwalk_en.json` since `<builds>` `c10184c`) equals
-    this walk byte for byte, and rc24's walk holds the same 36 maps, so `make_testing_md.py` finds all
-    36 in English. The walk it replaced (`<private>/runs/mapwalk_en_2026-10-12`, an older walker)
-    held 32 of them, had the Dome pre-battle room's false `CRASH` (below) and an `ERROR` in the
-    Battle Pike's normal room (cause not checked), and passed the two Battle Arena rooms;
+    this walk byte for byte, and rc24's and rc25's walks hold the same 36 maps, so
+    `make_testing_md.py` finds all 36 in English. The walk it replaced
+    (`<private>/runs/mapwalk_en_2026-10-12`, an older walker) held 32 of them, had the Dome
+    pre-battle room's false `CRASH` (below) and an `ERROR` in the Battle Pike's normal room (cause
+    not checked), and passed the two Battle Arena rooms;
     `make_testing_md.py` counts every map not `OK` as held in English, so with it it found 34.
   - Treat any `CRASH` as real until the English ROM with the same save crashes the same way, but
     first look at the PC. **A PC in `0x0A000000`-`0x0DFFFFFF` is a false alarm of the harness.**
@@ -1299,7 +1307,10 @@ gh run view <id> -R ronyeh2/pokehns-expansion-heb --log | grep -E 'results,|NEW 
 ```
 
 - **Push `he/renderer` before `he/main`** when an engine commit is involved. CI's drift
-  compares with `origin/he/renderer`, so a missing cherry-pick fails it.
+  compares with `origin/he/renderer`, so a missing cherry-pick fails it. The other way round, a
+  feature branch pushed when `he/renderer` already holds another branch's engine picks fails
+  `audit` on the files of the picks it does not carry; round 25's three branches did (section 0),
+  and their merge passed.
 - **A new runner image** brings a new gcc-arm-none-eabi. Move to it by changing the three
   `runs-on:` lines in one commit and checking that run.
 - The upstream workflow `.github/workflows/build.yml` runs only on pushes and pull requests to
@@ -1485,7 +1496,7 @@ there is one). Engine fixes exist twice: the commit merged into `he/main`, and i
 | drift `STRUCTURE label order A vs B` | | blocks moved or merged | restore the English block order | — |
 | drift `E TOKENS <label>: ['{PLAYER}'] -> []` | | a placeholder was dropped or reordered | keep English order. Droppable: `{POKE} {PKMN} {POKEBLOCK} {ID} {NO} {PK}`; `{B_BUFF1..3}` may swap with each other | `43e43941b4`, `dbf3d07e01`, `43acd4d4e3` |
 | drift `E TERMINATOR`, `E CHARSET <label>: €`, `SHRUNK` | | `$` lost or added; a character the charmap cannot encode; the file is under 60% of the English bytes | restore the `$`; use the charmap form; restore the file | — |
-| drift `w PAGES 2 -> 1`, `w LATIN`, `w UNTRANSLATED` | | warnings only | `\p` changes only when a page would not fit; translate the Latin or confirm it is on `LATIN_OK` (`drift.py:52-64`) | — |
+| drift `w PAGES 2 -> 1`, `w LATIN`, `w GLYPHPAIR`, `w UNTRANSLATED` | | warnings only | `\p` changes only when a page would not fit; translate the Latin or confirm it is on `LATIN_OK` (`drift.py:54-66`); for `GLYPHPAIR`, write the Hebrew word for the token (`{POKEBLOCK}` is פוקיבלוק, glossary `TERM_POKEBLOCK`) | `9e27347605` (the `GLYPHPAIR` warning), `a233fe427a` (the Safari menu) |
 | drift flattened `#if/#else` string branches | | an old drift could not parse literals split by preprocessor lines | translate every branch; drift parses them now | `98e5af4a55` (parser), `c3aa635b6a` (text restored) |
 | drift `STRUCTURE` on `src/data/pokemon/pokedex_orders.h` only | `git log he/renderer -- src/data/pokemon/pokedex_orders.h` | the regenerated A–Z order is engine data and is not on `he/renderer` yet | cherry-pick the `pokedex_orders.h` commit onto `he/renderer` | `f47c725548` (on `he/renderer`) |
 | audit `E ... WIDTH 278 > 200 ... (prompt line)` | `textwidth.py` | the line is too wide; a line ending in `\l`/`\p` gets 200 px | `wrap.py`, or shorter wording | `57ba9f052e` (prompt budget) |
@@ -1707,7 +1718,7 @@ file. Round 25 fixed round 24's findings on its branches (section 0, item 5). On
 - **Latin left inside Hebrew strings.** drift prints 8 `w LATIN` lines (127 before round 23), all
   kept on purpose: the credits' team name Johto Redrawn, and XS, XL and GB, which the glossary keeps
   in the EXP. CANDY and GB PLAYER names. Also kept:
-  - the words of `LATIN_OK` (`tools/hebrew/drift.py:52-64`): button names, the game's own title, the
+  - the words of `LATIN_OK` (`tools/hebrew/drift.py:54-66`): button names, the game's own title, the
     credits' NOA;
   - IV in the help windows (`src/data/help_window.h`);
   - the Odd Egg name list the game compares with the player's name;
