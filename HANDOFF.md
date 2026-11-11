@@ -1457,6 +1457,12 @@ copied `visual_findings.json` (`<private>/scratch/screens/r25/docs/rc5_refusal.t
    - Copy the candidate's small records into `records/rcNN/` and add its row to
      `records/README.md`.
    - Push as in section 7.3.
+   - Replace the three assets of the builds repository's GitHub Release `1.0` with the new files,
+     for example `gh release upload 1.0 pokehns-he-2.0.6-1.0.gba SHA1SUMS TESTING.md --clobber
+     -R ronyeh2/pokehns-hebrew-builds` with the fork owner's token (section 7.3; this command is
+     **unverified**: it was not run for this handoff). Check that each asset's SHA-256 is the
+     file's (`gh release view 1.0 -R ronyeh2/pokehns-hebrew-builds --json assets`). The release
+     was created for rc25; its tag `1.0` is at `<builds>` `90e1f99`, rc25's records index.
 
 9. **Back in the fork,** in separate commits:
    - regenerate `STATUS.md` from `RC/tests/sweep/sweep.json`;
