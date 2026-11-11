@@ -982,8 +982,8 @@ LilycoveCity_ContestLobby_Text_YourPokemonSpurredMeToPaint_hns:
 	.string "מזל טוב!\p"
 	.string "ציירתי את הפוקימון שלך כדי\n"
 	.string "להנציח את הניצחון שלו…\p"
-	.string "הרושם שהפוקימון שלך עשה היה\n"
-	.string "כל כך מדהים, שזה דרבן אותי\p"
+	.string "ההופעות של הפוקימון שלך היו\n"
+	.string "כל כך מדהימות, שהן דרבנו אותי\p"
 	.string "לצייר טוב יותר מבדרך כלל.\n"
 	.string "הנה, רואה?$"
 
@@ -1054,7 +1054,7 @@ LilycoveCity_ContestLobby_Text_ContestFeastForEyes_hns:
 LilycoveCity_ContestLobby_Text_ToughContestIsExtreme_hns:
 	.string "תחרות הקשיחות היא, כאילו,\n"
 	.string "אקסטרים, אחי!\p"
-	.string "הרושם השרירי הזה…\n"
+	.string "ההופעות השריריות האלה…\n"
 	.string "הזיעה הניגרת… אני מתעלף!$"
 
 LilycoveCity_ContestLobby_Text_LavishedCareOnMon_hns:
