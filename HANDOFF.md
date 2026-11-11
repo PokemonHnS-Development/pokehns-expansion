@@ -38,7 +38,7 @@ fresh clone.
 
 ---
 
-## 0. State at handoff (2026-11-10)
+## 0. State at handoff (2026-11-11)
 
 | Item | Value | Check |
 | --- | --- | --- |
@@ -91,7 +91,9 @@ fresh clone.
 5. **Round 25: fixed on three branches, not merged and not pushed.** `he/wip-r25`,
    `he/wip-r25e` and `he/wip-r25t` each start from `b70d4d33b6` and are local only; no file is
    changed on two of them (`git diff --name-only`). They fix round 24's 19 confirmed findings
-   (`<private>/scratch/screens/r24/confirmed.md`); section 8.5 has the evidence.
+   (`<private>/scratch/screens/r24/confirmed.md`); section 8.5 has the evidence. Two record
+   changes outside the fork stay open: rc24's copied `visual_findings.json` (section 8.1) and the
+   save rule of `<builds>/README.md` (step 5 below).
    - `he/wip-r25` (text, `7191e0b54f`, 14 commits): the contest APPEAL is הופעה everywhere
      (Q142); the radio upgrade's gift line says שדרוג הרדיו (Q143); the Safari battle menu says
      פוקיבלוק instead of the Latin POKéBLOCK glyphs, in the narrow font under `TEXT_RTL` (engine
@@ -131,6 +133,9 @@ fresh clone.
       `menu_pokedex_entry_stats_moves`) and no other release-tour change; with the new
       `rom_sweep.py`, the debug menu's NOT DEFINED!!! is one more English run. Add what rc25's
       tour diff shows to `notes.json` `visual_review` after its review.
+   5. **Correct `<builds>/README.md`'s save rule** in the builds repository, which no branch here
+      changes: it still counts 51 of 75 round-tour folders and does not name `saves/r4_bag`
+      (section 8.3).
 
 ---
 
@@ -919,7 +924,7 @@ python3 tools/hebrew/gen_ec_letters.py --check    # gen_ec_letters: 23 lists, th
 python3 tools/hebrew/flag_gates.py --check        # total: live 6585, flag_off 451, not_built 147 / no change
 # 5. tool tests (hebrew.yml:73-74)
 python3 -m unittest discover -s tools/hebrew/tests
-#    Ran 186 tests ... OK   (no skip with tools/preproc built, ../pokehns-en/pokehns.gba present,
+#    Ran 196 tests ... OK   (no skip with tools/preproc built, ../pokehns-en/pokehns.gba present,
 #                            devkitARM's arm-none-eabi-gcc and a host cc; tools/hebrew/README.md)
 # not in CI: item plurals
 python3 tools/hebrew/plurals.py                   # items 902, stackable 693, problems 0
@@ -1150,7 +1155,8 @@ python3 tools/hebrew/status_report.py --sweep RC/tests/sweep/sweep.json
   and takes no place. So Hebrew lines that moved no longer take another literal's verdict, and both
   trees have the same literals under every key. Without an English tree (`HNS_UPSTREAM` unset and
   no `../pokehns-en`) every C literal counts as live, with a line on stderr. `src/data/items.h`
-  counts 2,204 live strings, all Hebrew (`STATUS.md`), the ones the build compiles: liveness follows the preprocessor since round 22 (section 8.5).
+  counts 2,204 live strings, all Hebrew (`STATUS.md`), the ones the build compiles: liveness
+  follows the preprocessor since round 22 (section 8.5).
 - "Seen on screen" means **the harness rendered the label**, not that a person read it.
 - STATUS counts a string as Hebrew if it holds any Hebrew letter (`status_report.py:82`), so mixed
   Latin-and-Hebrew lines pass (section 8.2).
@@ -1678,7 +1684,7 @@ file. Round 25 fixed round 24's findings on its branches (section 0, item 5). On
 
 | Defect | Where | Why open |
 | --- | --- | --- |
-| rc24's `visual_findings.json` is the 49-finding list of an early review (SHA-1 `17392e9277…`, the same file in 22 candidate folders from rc1 on; `DECISIONS.md:120` cites it as rc3's), not rc24's review; `make_testing_md.py` now refuses it, so `TESTING.md` cannot be made again from rc24's folder as it is | `<private>/release/rc24/visual_findings.json`, `<builds>/records/rc24/visual_findings.json` (paths rewritten, the same 49 entries) | a records change, the owner's call: write rc24's own review there (the 12 PC-menu shots of `tourdiff_rc23_rc24.txt`; a candidate file is `<private>/scratch/screens/r25/tools/rc24_copy/visual_findings.json`, with which a copy of rc24 gives the shipped `TESTING.md` byte for byte), or delete the copy. The next candidate writes its own file in either case |
+| rc24's `visual_findings.json` is the 49-finding list of an early review (SHA-1 `17392e9277…`, the same file in 22 candidate folders from rc1 on; `DECISIONS.md:120` cites it as rc3's), not rc24's review; `make_testing_md.py` now refuses it, so `TESTING.md` cannot be made again from rc24's folder as it is | `<private>/release/rc24/visual_findings.json`, `<builds>/records/rc24/visual_findings.json` (paths rewritten, the same 49 entries) | a records change, the owner's call: write rc24's own review there, or delete the copy. The 12 changed shots of `tourdiff_rc23_rc24.txt` are the narrower PC menu of section 0, item 4, every row whole, not defects, so by `REVIEW.md` that review is `{"commit": "47669d9f061a673abcc8a513440b624d84b81f07", "findings": []}`; with it, or with `<private>/scratch/screens/r25/tools/rc24_copy/visual_findings.json` (the 12 shots as entries with an `outcome` field, which the finding format does not have), a copy of rc24 gives the shipped `TESTING.md` byte for byte. The next candidate writes its own file in either case |
 
 ### 8.2 Content gaps and decisions
 
@@ -1828,22 +1834,25 @@ file. Round 25 fixed round 24's findings on its branches (section 0, item 5). On
   Japanese letter the Japanese font, as English does (`4dccdfb235`). Left as it is: a kana name
   made only of the bytes that are Hebrew letters in the normal font (hiragana げ-っ, `0x3A`-`0x50`;
   katakana セ-チ, `0x5E`-`0x61`; for example セタ) is not found by `IsStringJapanese`
-  (`src/string_util.c:849-860`) and prints as Hebrew letters on those mail screens. Seen only by
+  (`src/string_util.c:849-861`) and prints as Hebrew letters on those mail screens. Seen only by
   forcing the state: whether H&S 2.0.6 links with a Japanese cartridge at all was never tried.
 
 ### 8.3 Stale documentation
 
-None known after round 25. A read of every document at `he/main` `47669d9f06` (round 24, with
-the documents of `b70d4d33b6`) found the statements below wrong or stale, and round 25 corrects
-each where it stands on `he/wip-r25t`. The evidence is in `<private>/scratch/screens/r24/`
-(`confirmed.md`, `result.json`), checked again in `<private>/scratch/screens/r25/docs/`.
+None known in the fork after round 25; one is open in the builds repository (Saves, below). A
+read of every document at `he/main` `47669d9f06` (round 24, with the documents of `b70d4d33b6`)
+found the statements below wrong or stale, and round 25 corrects each where it stands on
+`he/wip-r25t`. The evidence is in `<private>/scratch/screens/r24/` (`confirmed.md`,
+`result.json`), checked again in `<private>/scratch/screens/r25/docs/`.
 
 - **Section 6.4:** R is not the DexNav button. In H&S it switches between the Mach and Acro bikes
-  while riding (`src/field_control_avatar.c:256-272`), and DexNav is off (`include/config/dexnav.h:4`).
+  while riding (`src/field_control_avatar.c:256-272`), and DexNav is off
+  (`include/config/dexnav.h:4`).
 - **Saves:** the round-tour save rule (section 4.5, the emu README, `<builds>/README.md`) did not
-  name `saves/r4_bag`, which two `r20_names` tours need; `<builds>/README.md` counts 51 of 75
-  round-tour folders, where 53 of 78 need no subfolder (that file is fixed in the builds
-  repository, not on this branch).
+  name `saves/r4_bag`, which two `r20_names` tours need. Section 4.5 and the emu README name it
+  now. `<builds>/README.md` is in the builds repository, which this branch does not change: it
+  still counts 51 of 75 round-tour folders, where 53 of 78 need no subfolder and 25 need one,
+  and still leaves out `saves/r4_bag` (section 0, item 5).
 - **Static checks:** `static_checks` is typed from section 4.2 run locally with the FireRed tree,
   not from CI, whose namecheck prints `warnings 1, allowlisted 27` (sections 4.2 and 5, the release
   README); CI's tool tests are 186 with 4 skipped, not 137 with 2 (section 4.2).
@@ -1881,22 +1890,24 @@ or stale, and each is corrected where it stands; the evidence is in
   `DECISIONS.md:255-273`, the test rule at `docs/hebrew_translation.md:131-138`, the "60 tour
   frames" at `DECISIONS.md:1942`, the eight truncated names at `DECISIONS.md:1917-1927`, and
   `pinrng` at `hns.py:1930-1934`.
-- **Counts** (as of that read): 108 `src/*.c` files differ from `master` (88 was right on 2026-10-22, `git diff
-  --name-only master he/main -- 'src/*.c'`); `SetWindowRtlMode` has 48 calls in 23 files (`git grep
-  -n SetWindowRtlMode -- src`, without its definition); the private release folder holds `rc1..rc22`
-  in 8.3 GB (`du -sh`); GitHub has 47 `he/*` branches (`he/fix-r20docs` is pushed too); the ROM
-  sweep on 1.0 finds 6,276 runs (6,341 candidates), 6,252 still English (`<private>/release/rc22/tests/rom_sweep.txt` line 1), 2,971 of them
-  untracked (`rom_sweep_rc22.json` split by `live_labels.json`).
+- **Counts** (as of that read): 108 `src/*.c` files differ from `master` (88 was right on
+  2026-10-22, `git diff --name-only master he/main -- 'src/*.c'`); `SetWindowRtlMode` has 48 calls
+  in 23 files (`git grep -n SetWindowRtlMode -- src`, without its definition); the private release
+  folder holds `rc1..rc22` in 8.3 GB (`du -sh`); GitHub has 47 `he/*` branches (`he/fix-r20docs`
+  is pushed too); the ROM sweep on 1.0 finds 6,276 runs (6,341 candidates), 6,252 still English
+  (`<private>/release/rc22/tests/rom_sweep.txt` line 1), 2,971 of them untracked
+  (`rom_sweep_rc22.json` split by `live_labels.json`).
 - **Facts:** the English map walk's Dome crash was the harness, and the stored English walk was
-  older than the walker (replaced before rc23, section 4.6); `make_chunks.py all` gives 6,611 labels only into an empty
-  folder (section 2.6); 1.2.1 saves fail on the sector checksums, not on the migration (section
-  6.6); a Trainer Hill floor does not rewrite its object scripts on CONTINUE (section 4.6).
+  older than the walker (replaced before rc23, section 4.6); `make_chunks.py all` gives 6,611
+  labels only into an empty folder (section 2.6); 1.2.1 saves fail on the sector checksums, not on
+  the migration (section 6.6); a Trainer Hill floor does not rewrite its object scripts on
+  CONTINUE (section 4.6).
 - **Also:** section 4.3 called `08027d9879` the commit 1.0 is built from, and 8.5 called rc21 the
   current 1.0; both were true before rc22.
 - **Found by the round's review:** the stored English walk of then held 32 of the 36 maps, not 34
-  (the other two were a false `CRASH` and an `ERROR`; `make_testing_md.py` counts both as held), corrected
-  in section 4.6 and the emu and release READMEs; and `audit_final.txt` is in `fixes/`, not
-  `fixes/t4/` (section 4.2).
+  (the other two were a false `CRASH` and an `ERROR`; `make_testing_md.py` counts both as held),
+  corrected in section 4.6 and the emu and release READMEs; and `audit_final.txt` is in `fixes/`,
+  not `fixes/t4/` (section 4.2).
 - **Not changed in place then:** `notes.json` `map_walk` and the shipped `TESTING.md:48` said the
   two Battle Arena rooms hold only in Hebrew. Both changed with the English reference walk before
   rc23: `map_walk.hebrew_only_held` is `[]`, and rc24's `TESTING.md:48` says 36 of the 36 also
