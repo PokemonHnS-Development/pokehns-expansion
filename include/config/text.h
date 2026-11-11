@@ -28,9 +28,11 @@
 #define RTL_STRING_REPORT            FALSE
 #endif
 
-// Battle text names a foe's Pokémon as nickname + suffix ("{nickname} פראי") instead of
-// prefix + nickname ("The wild {nickname}"), as Hebrew word order needs.
-#define TEXT_NAME_SUFFIX_IN_BATTLE   TRUE
+// Battle text names a foe's Pokémon as nickname + suffix ("{nickname} הפראי") instead of
+// prefix + nickname ("The wild {nickname}"), as Hebrew word order needs. The Pokédex category
+// ("פוקימון זרע") and the ability pop-up follow the same switch. It is on exactly when TEXT_RTL
+// is, so a build with TEXT_RTL FALSE prints the English prefixes as upstream does.
+#define TEXT_NAME_SUFFIX_IN_BATTLE   TEXT_RTL
 
 // Text speed flag:
 #define FLAG_TEXT_SPEED_INSTANT      0       // Use this if you want to toggle instant text speed
