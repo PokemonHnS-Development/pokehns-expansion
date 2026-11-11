@@ -862,10 +862,12 @@ python3 tools/hebrew/audit.py --baseline ../pokehns-en --report build/hebrew/aud
 #    == translated strings: 0 errors, 54 warnings, 88 suppressed by baseline ../pokehns-en
 #    == English (untranslated) strings, baseline only: 448 errors, 0 warnings   <- informational
 #    line 1 of the report: audit ...: 39059 strings (24841 translated)   (the same as CI)
-# 3. glossary (hebrew.yml:59-60)
+# 3. glossary (hebrew.yml:59-60), here with ../pokefirered-heb present (HNS_FIRERED, section 1.3)
 python3 tools/hebrew/namecheck.py --all --warnings
 #    rows 7128, still empty 0, problems 0
 #    warnings 0, allowlisted 34
+#    CI checks out no FireRed tree, so it prints the skipped variant (run 42889868670):
+#    rows 7128, still empty 0, problems 0 / WARN FRSYNC skipped: ... / warnings 1, allowlisted 27
 # 4. generated data (hebrew.yml:62-71)
 python3 tools/hebrew/gen_dex_alpha.py --check     # gen_dex_alpha: 1080 entries, the TEXT_RTL list is up to date
 python3 tools/hebrew/gen_ec_order.py --check      # gen_ec_order: 18 groups, the header is up to date
@@ -1331,9 +1333,11 @@ Ported from `<private>/scratch/release/`, the new `make_testing_md.py` reproduce
 6. **Edit `tools/hebrew/release/notes.json`** for the new release.
    - `release` must match the ROM name.
    - Also edit `known_issues`, `not_tested` (never empty), `visual_review` and `crosscore_notes`.
-   - `static_checks` is typed from the CI run of the release commit (drift, audit,
-     `namecheck.py --all --warnings`, the generator and `flag_gates.py` checks), because the
-     scripts do not run those checks.
+   - `static_checks` is typed from section 4.2 run locally on the release commit with the
+     FireRed tree (`HNS_FIRERED` or `../pokefirered-heb`), because the scripts do not run those
+     checks. CI has no FireRed tree: its namecheck skips the FireRed comparison and prints
+     `warnings 1, allowlisted 27`, not the `0` / `34` the text reports. Drift, audit, the
+     generators and `flag_gates.py` print the same in CI.
    - Update `map_walk.hebrew_only_held` to what the data shows.
 
 7. **Write the report:**

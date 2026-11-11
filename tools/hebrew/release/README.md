@@ -98,9 +98,12 @@ Then:
    `TESTING.md` gets a visual-review row only when that file exists, and `make_testing_md.py`
    refuses a file of another commit or form. The row's text comes from `notes.json`.
 2. **Edit `notes.json`** for the new release (see the table below). The static-check result comes
-   from the CI run of the release commit (`.github/workflows/hebrew.yml`: drift, layout audit,
-   `namecheck.py --all --warnings`, the generator `--check`s and `flag_gates.py --check`), because
-   these scripts do not run those checks.
+   from the checks of `.github/workflows/hebrew.yml` (drift, layout audit,
+   `namecheck.py --all --warnings`, the generator `--check`s and `flag_gates.py --check`) run
+   locally on the release commit with the FireRed tree (`HNS_FIRERED` or `../pokefirered-heb`),
+   because these scripts do not run those checks. CI has no FireRed tree, so its namecheck skips
+   the FireRed comparison and prints `warnings 1, allowlisted 27` instead of `warnings 0,
+   allowlisted 34`; the other checks print the same in CI.
 3. **Write the report** with
    `HNS_EN_MAPWALK=... python3 tools/hebrew/release/make_testing_md.py "$RC" pokehns-he-2.0.6-1.0.gba "$RC/TESTING.md"`.
 4. **Publish in the private builds repository.** There is one release, 1.0, replaced in place:
