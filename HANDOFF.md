@@ -1131,10 +1131,12 @@ python3 tools/hebrew/rom_sweep.py pokehns.gba --json OUT.json
     the next-opponent menu): an English walk of 2026-11-10 gives `543 maps in 361 s: {'OK': 507,
     'HELD': 36}`, the same 36 maps, and 539 of the 543 records are identical
     (`<private>/scratch/screens/r21/static/mw_en_full/mapwalk.json`). The stored English walk
-    (`HNS_EN_MAPWALK`) is older. Of those 36 it holds 32, has the Dome pre-battle room's false
-    `CRASH` (below) and an `ERROR` in the Battle Pike's normal room (cause not checked), and passes
-    the two Battle Arena rooms; `make_testing_md.py` counts every map not `OK` as held in English,
-    so it finds 34 (section 8.1).
+    (`HNS_EN_MAPWALK`, `<builds>/reference/mapwalk_en.json` since `<builds>` `c10184c`) equals
+    this walk byte for byte, and rc24's walk holds the same 36 maps, so `make_testing_md.py` finds all
+    36 in English. The walk it replaced (`<private>/runs/mapwalk_en_2026-10-12`, an older walker)
+    held 32 of them, had the Dome pre-battle room's false `CRASH` (below) and an `ERROR` in the
+    Battle Pike's normal room (cause not checked), and passed the two Battle Arena rooms;
+    `make_testing_md.py` counts every map not `OK` as held in English, so with it it found 34.
   - Treat any `CRASH` as real until the English ROM with the same save crashes the same way, but
     first look at the PC. **A PC in `0x0A000000`-`0x0DFFFFFF` is a false alarm of the harness.**
     pokeemerald-expansion stores every script command that "requests effects" as its address
@@ -1143,7 +1145,7 @@ python3 tools/hebrew/rom_sweep.py pokehns.gba --json OUT.json
     calls it there (`src/script.c:130-138`), so those commands run from the ROM's wait-state
     mirror: 232 of the 247 table entries, in English and in rc22. `hnsrun` and `hns.py` accept
     only regions 00, 02, 03, 08 and 09 (`hnsrun.c:129-132`, `hns.py:2160-2164`; section 8.1).
-  - That is what the stored English walk's `CRASH pc=0A0E8ECC @21720` in the Dome pre-battle room
+  - That is what the replaced English walk's `CRASH pc=0A0E8ECC @21720` in the Dome pre-battle room
     was. Its older walker answered with A and B in turn, so it kept cycling through the room's
     menu (A shows the opponent's card, B closes it), and one 60-frame check fell while the menu
     was being drawn; a copy of `mapwalk.py` with that one change reproduces its records 0-18
@@ -1284,8 +1286,8 @@ Ported from `<private>/scratch/release/`, the new `make_testing_md.py` reproduce
   read 210 flag-off labels from old chunk files on top of the 6,611; section 4.5);
 - the cores from `<builds>/reference/cores/` unzipped into `HNS_CORES` (`crosscore` is built by the
   test script);
-- `HNS_EN_MAPWALK` pointed at `<builds>/reference/mapwalk_en.json` (stale until it is replaced,
-  section 8.1).
+- `HNS_EN_MAPWALK` pointed at `<builds>/reference/mapwalk_en.json` (made by the current walker,
+  `<builds>` `c10184c`: 543 maps, 507 OK, 36 HELD).
 
 **Steps**
 
@@ -1773,19 +1775,20 @@ below wrong or stale, and each is corrected where it stands; the evidence is in
   in 8.3 GB (`du -sh`); GitHub has 47 `he/*` branches (`he/fix-r20docs` is pushed too); the ROM
   sweep on 1.0 finds 6,276 runs (6,341 candidates), 6,252 still English (`<private>/release/rc22/tests/rom_sweep.txt` line 1), 2,971 of them
   untracked (`rom_sweep_rc22.json` split by `live_labels.json`).
-- **Facts:** the English map walk's Dome crash was the harness, and the stored English walk is
-  older than the walker (section 4.6); `make_chunks.py all` gives 6,611 labels only into an empty
+- **Facts:** the English map walk's Dome crash was the harness, and the stored English walk was
+  older than the walker (replaced before rc23, section 4.6); `make_chunks.py all` gives 6,611 labels only into an empty
   folder (section 2.6); 1.2.1 saves fail on the sector checksums, not on the migration (section
   6.6); a Trainer Hill floor does not rewrite its object scripts on CONTINUE (section 4.6).
 - **Also:** section 4.3 called `08027d9879` the commit 1.0 is built from, and 8.5 called rc21 the
   current 1.0; both were true before rc22.
-- **Found by the round's review:** the stored English walk holds 32 of the 36 maps, not 34 (the
-  other two are a false `CRASH` and an `ERROR`; `make_testing_md.py` counts both as held), corrected
+- **Found by the round's review:** the stored English walk of then held 32 of the 36 maps, not 34
+  (the other two were a false `CRASH` and an `ERROR`; `make_testing_md.py` counts both as held), corrected
   in section 4.6 and the emu and release READMEs; and `audit_final.txt` is in `fixes/`, not
   `fixes/t4/` (section 4.2).
-- **Not changed in place:** `notes.json` `map_walk` and the shipped 1.0 `TESTING.md:48` still say
-  the two Battle Arena rooms hold only in Hebrew. They change together with the English reference
-  walk (section 8.1).
+- **Not changed in place then:** `notes.json` `map_walk` and the shipped `TESTING.md:48` said the
+  two Battle Arena rooms hold only in Hebrew. Both changed with the English reference walk before
+  rc23: `map_walk.hebrew_only_held` is `[]`, and rc24's `TESTING.md:48` says 36 of the 36 also
+  hold on the English ROM.
 
 Earlier passes: round 20 corrected the audit's example finding (section 4.2:
 `src/data/items.h:3402`, where it had a line no finding names) and the commit and merge counts of
