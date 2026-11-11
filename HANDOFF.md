@@ -881,7 +881,7 @@ Apply a decision in this order:
 | every map | `mapwalk.py` | CRASH, maps that never give control back | 329 s for 543 maps |
 | saves | `ladder.py run scripts/ladder_validate.txt` | English 2.0.x saves still load and work | about 1.5 s per save |
 | other emulators | `crosscore` + libretro cores + `ccdiff.py` | renderer differences between cores | about 2 s per core |
-| English left in ROM | `rom_sweep.py` | English runs of two or more words in the binary; `--min-words 1` adds one-word strings | 4 s |
+| English left in ROM | `rom_sweep.py` | English runs in the binary that hold two words of 2+ letters with only a space or line break between them; `--min-words 1` adds one-word strings and the other multi-word ones (`MOM: Wait, {PLAYER}!`) | 4 s |
 | eyes | `pairsheets.py`, `hns.py tourdiff`, reviewers plus refuters (`tools/hebrew/release/REVIEW.md`) | overlap, mirroring, digit order, glyph shapes, wrong translation | per release |
 
 Two rules from the original brief:

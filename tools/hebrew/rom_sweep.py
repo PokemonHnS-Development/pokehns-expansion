@@ -10,8 +10,9 @@ Usage:
   --charmap FILE    charmap used to decode (default <HE tree>/charmap.txt, else HNS_FONTS_TREE's)
   --src TREE        source tree searched for the decoded text (default: the tree of HE.gba)
   --min-words N     a run must hold at least N Latin words of 2+ letters (default 2, at least 1).
-                    The default skips one-word strings (a menu item, a name, CANCEL); 1 reports
-                    them too, besides every run of the default (step 2)
+                    The default skips one-word strings (a menu item, a name, CANCEL) and strings
+                    with no two such words in a row (MOM: Wait, {PLAYER}!); 1 reports them too,
+                    besides every run of the default (step 2)
   --include-debug   also report strings of the R+START debug menu (src/debug.o)
   --all             also list Latin strings that are not in the English ROM (new or changed text)
   --json OUT        machine-readable output ('-' = stdout)
