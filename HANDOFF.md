@@ -1780,6 +1780,9 @@ each where it stands on `he/wip-r25t`. The evidence is in `<private>/scratch/scr
   regions 00, 02, 03, 08 and 09 and that `startmenu` may fail on Frontier floors, and section 2.6
   that `make_chunks.py` never removes a chunk file; round 22 fixed all three. Section 4.5 gave
   `items.h` 2,218 live strings; since round 22 it has 2,204, all compiled.
+- **Section 8.5:** a "Not verified" bullet still asked whether the battle debug menu's AI party
+  page comes up garbled the first time it opens; round 22 checked it (it does not, and
+  `dbgmenu.py:18-19` says so).
 
 A read of every document at `he/main` `0514c9b57b` (round 21) found the statements below wrong
 or stale, and each is corrected where it stands; the evidence is in
@@ -2156,9 +2159,6 @@ adversarial reviewer; scratch in `<private>/scratch/screens/r22/`):
 - The harness and the ladder on Linux; how the clock's hour reaches the game's random numbers
   (section 2.6).
 - A real pre-2.0 (1.2.1) save: only a synthetic one in its layout was loaded (section 6.6).
-- Whether the battle debug menu's AI party page still comes up garbled the first time it opens,
-  as `dbgmenu.py`'s docstring says (`:18-19`); it was not checked again after round 21's harness
-  fix.
 - The out-of-bounds read behind Scott's shields could write through a stray pointer after a link
   Dodrio Berry Picking game (needs a link).
 - Of round 20's names, the Union Room trade board's type plate in play (needs a Wireless Adapter,
