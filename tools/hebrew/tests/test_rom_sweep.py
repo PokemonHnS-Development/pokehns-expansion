@@ -86,6 +86,13 @@ class SyntheticTest(unittest.TestCase):
             # ' and the typographic apostrophe share a byte: either spelling finds the source
             self.assertEqual(rs.normalizer(CM)("don't"), rs.normalizer(CM)('don’t'))
 
+    def test_weather_object_is_swept(self):
+        # src/field_weather.o holds the weather names that the Pokédex prints
+        data, sections, objs, syms = synthetic_rom()
+        objs = objs + [(B + 0x380, B + 0x3A0, '.rodata', 'src/field_weather.o')]
+        got = {r['addr'] - B: r['text'] for r in rom_text(data, sections, objs, syms).runs}
+        self.assertEqual(got.get(0x384), 'It is not very effective…$')
+
 
 def one_word_rom():
     """synthetic_rom() plus the one-word string CANCEL at 0x3C1 and, at 0x3E1, struct bytes that
@@ -152,6 +159,8 @@ class EnglishRomTest(unittest.TestCase):
         self.assertTrue(r['text'].startswith('Call your mom on your POKéGEAR'))
         self.assertTrue(any('NewBarkTown_hns/scripts.inc' in s for s in r['source']))
         self.assertIn('gText_RegisteredTrainerinPokeNav', by_sym)
+        # the weather names of src/field_weather.o (the Pokédex's evolution page prints them)
+        self.assertIn('SUNNY CLOUDS$', [r['text'] for r in runs if (r['object'] or '').endswith('src/field_weather.o')])
         located = sum(1 for r in runs if r['source'])
         self.assertGreater(located / float(len(runs)), 0.98)
         # code and the debug menu are not swept

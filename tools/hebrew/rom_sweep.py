@@ -64,7 +64,7 @@ ROM_BASE = 0x08000000
 SKIP_OBJ = re.compile(r'(^|/)(sound/|data/sound_data\.o|src/graphics\.o|src/tilesets\.o|src/tileset_anims\.o'
                       r'|src/surfable\.o|src/fonts\.o|data/multiboot_|src/bard_music\.o|data/maps\.o'
                       r'|data/map_events\.o|data/battle_anim_scripts\.o|src/event_object_movement\.o'
-                      r'|src/field_effect\.o|src/battle_transition\.o|src/field_weather\.o|src/m4a)')
+                      r'|src/field_effect\.o|src/battle_transition\.o|src/m4a)')
 DEBUG_OBJ = re.compile(r'(^|/)src/debug\.o$')
 # OBJECT symbols that are graphics/sound blobs even inside objects that also hold text.
 SKIP_SYM = re.compile(r'Gfx|Tiles|Tilemap|Palette|Pal(s|_|\d|$)|Pic(s|_|\d|$)|Icon|Image|Sprite|Anim|Footprint'
