@@ -1841,8 +1841,9 @@ each where it stands on `he/wip-r25t`. The evidence is in `<private>/scratch/scr
 - **Section 6.4:** R is not the DexNav button. In H&S it switches between the Mach and Acro bikes
   while riding (`src/field_control_avatar.c:256-272`), and DexNav is off (`include/config/dexnav.h:4`).
 - **Saves:** the round-tour save rule (section 4.5, the emu README, `<builds>/README.md`) did not
-  name `saves/r4_bag`, which two `r20_names` tours need; `<builds>/README.md` counted 51 of 75
-  round-tour folders, where 53 of 78 need no subfolder.
+  name `saves/r4_bag`, which two `r20_names` tours need; `<builds>/README.md` counts 51 of 75
+  round-tour folders, where 53 of 78 need no subfolder (that file is fixed in the builds
+  repository, not on this branch).
 - **Static checks:** `static_checks` is typed from section 4.2 run locally with the FireRed tree,
   not from CI, whose namecheck prints `warnings 1, allowlisted 27` (sections 4.2 and 5, the release
   README); CI's tool tests are 186 with 4 skipped, not 137 with 2 (section 4.2).
