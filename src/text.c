@@ -1005,7 +1005,8 @@ u32 CopyGlyphToVRAM(struct TextPrinter *textPrinter)
 //
 // A run of Latin letters or digits, with the punctuation between them, is measured when it starts
 // and drawn left to right as one block at the run's mirrored position, so "32", "10:30" and "PP"
-// are stored and read in their normal order.
+// are stored and read in their normal order. A {JPN}...{ENG} span (a name from a Japanese game)
+// is placed as one such run too, in the Japanese font (RtlBeginJapanese).
 //
 // Sprite printers (the healthbox) print immediately; they reorder the string into visual order and
 // print it left to right, which keeps their English position.
@@ -1248,10 +1249,73 @@ static void RtlBeginRun(struct TextPrinter *textPrinter, const u8 *str)
     textPrinter->rtlRunGlyphs = runGlyphs;
 }
 
+// Scans the Japanese glyphs from str up to {ENG} or a code that ends a run, and returns where they
+// stop. *width is their width, each advancing the pen as PrintGlyph advances it in the Japanese
+// font. Their bytes are kana, whatever the same bytes are in the Latin font.
+static const u8 *RtlScanJapanese(const struct TextPrinter *textPrinter, u32 fontId, const u8 *str, u32 *width)
+{
+    *width = 0;
+    while (TRUE)
+    {
+        u16 glyphId;
+
+        if (str[0] == EXT_CTRL_CODE_BEGIN && str[1] == EXT_CTRL_CODE_ESCAPE)
+        {
+            glyphId = str[2] | 0x100;
+            str += 3;
+        }
+        else if (*str == EXT_CTRL_CODE_BEGIN || *str == PLACEHOLDER_BEGIN)
+        {
+            u32 codeLength = RtlRunTransparentCodeLength(str);
+            if (codeLength == 0)
+                break;
+            str += codeLength;
+            continue;
+        }
+        else if (*str == CHAR_EXTRA_SYMBOL)
+        {
+            glyphId = str[1] | 0x100;
+            str += 2;
+        }
+        else if (sRtlCharClass[*str] == RTL_CLASS_CONTROL)
+        {
+            break;
+        }
+        else
+        {
+            glyphId = *str++;
+        }
+
+        if (textPrinter->minLetterSpacing)
+            *width += textPrinter->minLetterSpacing;
+        else
+            *width += GetGlyphWidth(glyphId, TRUE, fontId) + textPrinter->printerTemplate.letterSpacing;
+    }
+    return str;
+}
+
+// The width of the Japanese glyphs from str (RtlScanJapanese).
+static NOINLINE u32 RtlJapaneseWidth(const struct TextPrinter *textPrinter, u32 fontId, const u8 *str)
+{
+    u32 width;
+
+    RtlScanJapanese(textPrinter, fontId, str, &width);
+    return width;
+}
+
+// Where the Japanese glyphs from str stop (RtlScanJapanese).
+static NOINLINE const u8 *RtlJapaneseEnd(const struct TextPrinter *textPrinter, u32 fontId, const u8 *str)
+{
+    u32 width;
+
+    return RtlScanJapanese(textPrinter, fontId, str, &width);
+}
+
 // In-place mode: the width of the segment that starts at str, up to a newline, the end, or a code
 // that moves the pen, and whether it holds any Hebrew. Codes that only change colour, font, pace or
-// sound do not end it.
-static u32 RtlMeasureSegment(const struct TextPrinter *textPrinter, const u8 *str, bool32 *hasRtl)
+// sound do not end it. Inlined into both callers, so RtlPrepareGlyph, which runs for every glyph,
+// keeps it inline.
+static ALWAYS_INLINE u32 RtlMeasureSegment(const struct TextPrinter *textPrinter, const u8 *str, bool32 *hasRtl)
 {
     u32 width = 0;
     u32 fontId = textPrinter->fontId;
@@ -1301,6 +1365,10 @@ static u32 RtlMeasureSegment(const struct TextPrinter *textPrinter, const u8 *st
             case EXT_CTRL_CODE_SPEAKER:
                 str += 1;
                 break;
+            case EXT_CTRL_CODE_JPN:
+                width += RtlJapaneseWidth(textPrinter, fontId, str + 2);
+                str = RtlJapaneseEnd(textPrinter, fontId, str + 2);
+                continue;
             }
             str += 1 + GetExtCtrlCodeLength(str[1]);
             continue;
@@ -1378,6 +1446,56 @@ static s32 RtlPhysicalX(const struct TextPrinter *textPrinter, u32 x, u32 width,
     if (inRun)
         return axis - textPrinter->rtlRunStart - textPrinter->rtlRunWidth + ((s32)x - textPrinter->rtlRunStart);
     return axis - (s32)x - (s32)width;
+}
+
+// {JPN}, before the printer switches to the Japanese font. Japanese glyphs print through PrintGlyph,
+// left to right from the pen, as in English. In a right-to-left window the pen moves here to the
+// mirrored place of the whole span, and RtlEndJapanese moves it back to the logical place after
+// it, so the span reads as one left-to-right run. rtlRunStart and rtlRunWidth keep the span's
+// logical x and width, and rtlRunGlyphs is 1 while the pen is moved; a code that starts a new
+// segment (a newline) clears it, and then {ENG} leaves the pen where it is.
+static NOINLINE void RtlBeginJapanese(struct TextPrinter *textPrinter)
+{
+    u32 x = textPrinter->printerTemplate.currentX;
+    u32 width;
+    s32 physX;
+
+    if (textPrinter->japanese || textPrinter->rtlRunGlyphs != 0)
+        return;
+    if (textPrinter->rtlNeedAxis)
+    {
+        // The span starts a segment: place the axis as RtlPrepareGlyph does, measuring from the
+        // {JPN} code.
+        textPrinter->rtlNeedAxis = FALSE;
+        textPrinter->rtlSegmentLtr = FALSE;
+        if (textPrinter->rtlMode == WINDOW_RTL_IN_PLACE)
+        {
+            bool32 hasRtl;
+            width = RtlMeasureSegment(textPrinter, textPrinter->printerTemplate.currentChar - 2, &hasRtl);
+            textPrinter->rtlAxis = 2 * x + width;
+            textPrinter->rtlSegmentLtr = !hasRtl;
+        }
+    }
+    if (!RtlIsActive(textPrinter))
+        return;
+
+    width = RtlJapaneseWidth(textPrinter, textPrinter->fontId, textPrinter->printerTemplate.currentChar);
+    physX = RtlPhysicalX(textPrinter, x, width, FALSE);
+    textPrinter->rtlRunStart = x;
+    textPrinter->rtlRunWidth = min(width, 255);
+    textPrinter->rtlRunGlyphs = 1;
+    textPrinter->printerTemplate.currentX = physX < 0 ? 0 : physX;
+}
+
+// {ENG}, while the printer is still in the Japanese font: the pen goes back to its logical place
+// after the span that RtlBeginJapanese moved.
+static NOINLINE void RtlEndJapanese(struct TextPrinter *textPrinter)
+{
+    if (!textPrinter->japanese || textPrinter->rtlRunGlyphs == 0)
+        return;
+    textPrinter->printerTemplate.currentX = textPrinter->rtlRunStart + textPrinter->rtlRunWidth;
+    textPrinter->rtlRunGlyphs = 0;
+    textPrinter->rtlAfterRtl = FALSE;
 }
 
 static void RtlFillSpan(struct TextPrinter *textPrinter, s32 physX, s32 width)
@@ -2276,9 +2394,15 @@ static u16 RenderText(struct TextPrinter *textPrinter)
                 textPrinter->minLetterSpacing = *textPrinter->printerTemplate.currentChar++;
                 return RENDER_REPEAT;
             case EXT_CTRL_CODE_JPN:
+#if TEXT_RTL
+                RtlBeginJapanese(textPrinter);
+#endif
                 textPrinter->japanese = TRUE;
                 return RENDER_REPEAT;
             case EXT_CTRL_CODE_ENG:
+#if TEXT_RTL
+                RtlEndJapanese(textPrinter);
+#endif
                 textPrinter->japanese = FALSE;
                 return RENDER_REPEAT;
             case EXT_CTRL_CODE_SPEAKER:
