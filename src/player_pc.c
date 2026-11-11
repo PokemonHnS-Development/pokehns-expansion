@@ -743,8 +743,13 @@ static void Mailbox_PrintWhatToDoWithPlayerMailText(u8 taskId)
 {
     StringCopy(gStringVar1, gSaveBlock1Ptr->mail[gPlayerPCItemPageInfo.itemsAbove + PARTY_SIZE + gPlayerPCItemPageInfo.cursorPos].playerName);
 #if TEXT_RTL
-    // As in the mailbox list, a short sender name keeps the normal font instead of the Japanese
-    // one; the padding of a full-length name is trimmed as before.
+    // As in the mailbox list, only a short name with Japanese letters switches to the Japanese
+    // font; any other keeps the normal font, with the padding of a full-length name trimmed.
+    if (IsStringJapanese(gStringVar1))
+    {
+        ConvertInternationalPlayerNameStripChar(gStringVar1, CHAR_SPACE);
+    }
+    else
     {
         u8 *end;
 
