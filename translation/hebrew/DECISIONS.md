@@ -81,6 +81,8 @@ Each entry is one open question from the review of the first release candidate: 
 | [Q139](#q139) | Psychic is פסיכי in the type, the PSYCHIC and PSYCHO names, the items and the prose; FireRed now writes על-חושי. | A. The על-חושי family everywhere (owner's decision); names too wide for their lists are shortened, and PSYCHIC SURGE and SEED take the noun על-חוש as their siblings do; the plates redrawn in narrower glyphs | changed |
 | [Q140](#q140) | Which naming and wording conventions of the owner's FireRed translation (PR #2) should H&S follow? | B. Follow them; keep H&S's form only where an H&S limit or a FireRed slip stands in the way, each keep listed | changed |
 | [Q141](#q141) | Hoenn names left in Latin inside Hebrew strings until a Hoenn-names pass (Q106), MR. STONE in the H&S PokéGear contact data, and the Latin left after them | C. Rows for every Hoenn name a Hebrew string uses, FireRed's form first, a common word translated (MT. PYRE הר המוקד); the cartridge titles in Hebrew letters (רובי, ספיר, אמרלד), rows for the e-Reader and Ash-Greninja, GLACIA גלסיה | changed |
+| [Q142](#q142) | The contest APPEAL is רושם on the hearts' label, in the judge's results and from the MC, but הופעה in the turn lines, the move descriptions and the Easy Chat word; one English sentence was translated both ways. | A. הופעה everywhere the game names the contest appeal | changed |
+| [Q143](#q143) | The Kanto radio upgrade is שדרוג רדיו in the Lavender hint, כרטיס ההרחבה in the gift line and שדרוג כרטיס הרחבה from the music director. | A. The gift line as its English, שדרוג הרדיו; the music director keeps his EXPN CARD, כרטיס הרחבה | changed |
 
 ## K1
 
@@ -1979,6 +1981,56 @@ Not copied, because they belong to FireRed's renderer, not to its naming: digits
 *Changed:* `data/text/match_call.inc`, `data/text/tv.inc`, `data/text/pokemon_news.inc`, `data/text/battle_tent.inc`, `data/text/pc.inc`, `data/text/pc_transfer.inc`, `data/event_scripts.s`, `data/maps/MossdeepCity_SpaceCenter_2F/scripts.inc`, `src/landmark.c`, `src/strings.c`, `src/data/script_menu.h`, `src/battle_message.c`, `src/field_screen_effect.c`, `src/field_specials.c`, `src/mystery_event_msg.c`, `src/pokenav_match_call_data.c`, `src/data/items.h`, `tools/hebrew/status_report.py` (`KEPT_LATIN`: the PokéNav contact data entry dropped; `script_menu.h`'s reason is now BP amounts and the link-contest modes E and G), `tools/hebrew/data/namecheck_allow.json`, `translation/hebrew/STYLE.md`; for the answered questions also `data/scripts/contest_hall.inc`, `data/text/cable_club.inc`, `src/berry_fix_program.c`, `src/data/credits_hns.h`, `tools/hebrew/drift.py` (`LATIN_OK`: NOA), `tools/hebrew/status_report.py` (`KEPT_LATIN`: the berry-fix reason is the console labels) and `tools/hebrew/data/namecheck_allow.json` (the `translit` entry of `NAME_EMERALD_(VERSION_PLACEHOLDER)` dropped)
 
 *Glossary:* new `PLACE_LITTLEROOT_TOWN`, `PLACE_PETALBURG_CITY`, `PLACE_RUSTBORO_CITY`, `PLACE_DEWFORD_TOWN`, `PLACE_SLATEPORT_CITY`, `PLACE_MAUVILLE_CITY`, `PLACE_NEW_MAUVILLE`, `PLACE_VERDANTURF_TOWN`, `PLACE_FALLARBOR_TOWN`, `PLACE_LAVARIDGE_TOWN`, `PLACE_FORTREE_CITY`, `PLACE_MOSSDEEP_CITY`, `PLACE_SOOTOPOLIS_CITY`, `PLACE_RUSTURF_TUNNEL`, `PLACE_MT_PYRE`, `PLACE_METEOR_FALLS`, `NAME_BRAWLY`, `NAME_WATTSON`, `NAME_FLANNERY`, `NAME_TATE`, `NAME_LIZA`, `NAME_JUAN`, `NAME_DRAKE`, `NAME_PEEKO`, `NAME_STERN`, `NAME_WANDA`, `NAME_MR_STONE`, `NAME_LANETTE`, `NAME_BIRCH`, `TERM_GAME_FREAK`, `TERM_TITLE_RUBY`, `TERM_TITLE_SAPPHIRE`, `TERM_TITLE_EMERALD`, `TERM_E_READER`, `NAME_ASH_GRENINJA`; changed `NAME_GLACIA` (גלסיה) and `NAME_EMERALD_(VERSION_PLACEHOLDER)` (אמרלד); applied `NAME_WALLACE`, `NAME_WINONA`, `NAME_PHOEBE`, `NAME_GLACIA`, `NAME_WALLY`, `NAME_GABBY`, `NAME_POKÉGEAR`, `TERM_POKENAV`
+
+## Q142
+
+**Question.** The contest term APPEAL is two Hebrew words. The appeal hearts' label on the summary, move relearner and Pokédex screens (`gText_Appeal`, `gText_MoveRelearnerAppeal`, `src/strings.c`), the judge's results (`src/data/contest_text_tables.h`), the MC (`data/scripts/contest_hall.inc`) and the people of the contest hall and lobby said רושם; the turn lines (`src/contest.c`), the move descriptions (`src/data/contest_moves.h`), the rest of the results table, the Easy Chat word and the TV contest reports say הופעה. One English sentence, 'Its bad condition resulted in a weak appeal', had both: הרושם היה חלש in `src/contest.c`, להופעה חלשה in `contest_text_tables.h`. Which word is the term?
+
+*Source:* screen review, round 24 (consistency), confirmed by a second reviewer. No glossary row, STYLE rule or earlier decision covered it.
+
+**Analysis.**
+- English uses APPEAL for one Pokémon's turn on stage ('Appeal no. {STR_VAR_1}!', '{STR_VAR_1} appealed with {STR_VAR_2}!', 'can't appeal next turn', 'the order of appeals', 'Appeal Time') and for how that turn went ('{STR_VAR_1}'s appeal went well', 'a weak appeal', the APPEAL hearts). The two Hebrew words followed those senses only roughly: the label and the results were רושם, the turns and the descriptions הופעה.
+- Before the change: רושם in the 2 labels, the 12 result lines `CONTEST_STRING_APPEAL_*` and `CONTEST_STRING_HOT_STATUS`, the unread duplicate `gText_BadConditionResultedInWeakAppeal` (the contest prints the table's line, `src/contest_effect.c:752`) and 12 dialogue labels (5 of the MC, 5 in `LilycoveCity_ContestHall_hns`, 2 in `LilycoveCity_ContestLobby_hns`); הופעה in 6 lines of `src/contest.c`, 22 of `src/data/contest_moves.h`, 6 more of `contest_text_tables.h`, the Easy Chat word (`src/data/easy_chat/easy_chat_group_events.h`) and the TV contest reports (`data/text/tv.inc`, which H&S does not reach: `FLAG_SYS_TV_START` is 0).
+- רושם ('impression') reads well for the result but not for the turn: רושם מס' 3 as the turn counter, הרושם ניסה להלחיץ for 'The appeal tried to unnerve', סדר הרשמים, and 'X עשה רושם עם Y' says the move impressed before the judge says whether it did. Making it the term would reword 34 strings and leave the Easy Chat word apart, unless the RTL order files are regenerated.
+- הופעה ('performance', on a stage) reads well in both senses: הופעה מס' 3, הופיע עם, זמן ההופעות, סדר ההופעות, הופעת X לא הצליחה, הוביל להופעה חלשה; as the hearts' label it says performance, beside הפרעה for JAM. The ordinary 'make an impression' keeps its word where the English says something else: 'X's Y went over great' הרשים (`src/contest.c`), the move FIRST IMPRESSION רושם ראשוני.
+- FireRed has no contests. Its only APPEAL is the Easy Chat word קסם, the charm of trainers' phrases (`src/data/easy_chat/easy_chat_group_events.h:1` there), so it sets no convention for the contest term (Q140). No official Hebrew source was checked.
+- Widths. The label הופעה is 31 px in FONT_NORMAL: in the summary's 40-px label window (`src/pokemon_summary_screen.c:582-590`) and right-aligned at 92 px in the relearner (`src/menu_specialized.c:836-838`); 27 px in FONT_SMALL in the Pokédex, at x 8 with the value at x 53 (`src/pokedex_plus_hgss.c:5607`, `:5663`). In the 136-px contest text window the results' first line הופעת {STR_VAR_1} is 118 px with a 12-letter name (ההופעה של {STR_VAR_1} would be 141 px), and the widest changed line, הלהט של {STR_VAR_1}, 130 px.
+
+| Option | How | Risk |
+|---|---|---|
+| A. הופעה everywhere the game names the contest appeal | The two labels, the 12 result lines (הופעת X הצליחה / לא הצליחה / הייתה כישלון; the hot status הוביל להופעה אדירה, beside the weak appeal's הוביל להופעה חלשה), the unread duplicate, the MC (זמן ההופעות המיוחל, שיתחילו ההופעות!) and the hall's and lobby's people | Low: 15 C strings and 12 dialogue labels, each measured; the turn lines, the descriptions and the Easy Chat word already say it. |
+| B. רושם everywhere | Reword the turn lines, 22 descriptions and 6 result lines; the turn counter becomes תור {STR_VAR_1}! | 34 strings; עשה רושם says the move impressed before the judge does; the Easy Chat word differs or the RTL order files are regenerated. |
+| C. Keep both, split by sense | Record הופעה for the turn and רושם for the result and the label | The summary page keeps רושם over descriptions that say ההופעה; a player still sees two words for one English term, and the weak-appeal sentence still needs one of them. |
+
+**Chosen:** A. One word for the term, the one that already named most of it and fits both senses. The COOLNESS visitor's 'cool moves go over as appeals… don't go over well' takes the contest screen's verb for 'go over well' (מתקבלים היטב, as gText_AppealComboWentOverWell's התקבל היטב). The Easy Chat word stays הופעה, as Q135 made it. Seen on screen on the clip ROM beside rc24 and English, with no clip record: the MC's changed lines in a Normal COOL contest (`tours/r9_contests/r9c_cool_normal.txt`); every changed result line, forced through `effplan` in a Normal SMART contest as `tours/r16_contests/con_effects.txt` does, HOT_STATUS and NOT_VERY_WELL also with a 12-letter nickname of 7-px letters; the label in the summary and the Pokédex (release tours `menu_party`, `menu_pokedex`) and in the relearner (`tours/r6_summary/r6sum_relc.txt`); the 12 dialogue labels in the sweep. The unread `src/contest.c` line has no screen.
+
+*Changed:* `src/strings.c`, `src/data/contest_text_tables.h`, `src/contest.c`, `data/scripts/contest_hall.inc`, `data/maps/LilycoveCity_ContestHall_hns/scripts.inc`, `data/maps/LilycoveCity_ContestLobby_hns/scripts.inc`
+
+*Glossary:* `TERM_CONTEST_APPEAL`
+
+## Q143
+
+**Question.** The Kanto radio upgrade has three Hebrew names: the Lavender Pokémon Center hint says שדרוג רדיו, the Radio Station gift line said כרטיס ההרחבה, and the music director says שדרוג כרטיס הרחבה. Which is its name?
+
+*Source:* screen review, round 24 (consistency), confirmed by a second reviewer, who found that English itself has two names.
+
+**Analysis.**
+- English: 'your radio needs a RADIO UPGRADE' in the hint (`data/maps/LavenderTown_PokemonCenter_hns/scripts.inc:34-35` in the English tree), '{PLAYER} obtained the RADIO UPGRADE!' in the gift line (`data/maps/LavenderTown_RadioStation_hns/scripts.inc:92-93` there) and 'If you get an EXPN CARD upgrade, you can tune in' from the music director (`:105` there). EXPN CARD is the Gold and Silver name of the Kanto radio card; its sibling RADIO CARD, the Goldenrod quiz prize, is כרטיס רדיו (`data/maps/GoldenrodCity_RadioTower_1F_hns/scripts.inc:52`, `:174`, `:211`).
+- The hint and the director translate their English. The gift line did not: it named the expansion card where the English names the radio upgrade, so the hint promised one thing and the gift gave another, a link the English keeps.
+- All three labels are live (`tools/hebrew/data/live_labels.json`). No glossary row covered the names.
+- The new gift line, {PLAYER} קיבל את / שדרוג הרדיו!, is 91 and 61 px in the 208-px box with a 7-letter name.
+
+| Option | How | Risk |
+|---|---|---|
+| A. The gift line as its English, שדרוג הרדיו; the director keeps his EXPN CARD, כרטיס הרחבה | One line | Low. English's two names stay two, and 'upgrade' (שדרוג) links all three lines as in English. |
+| B. One name, שדרוג רדיו, in all three | Also reword the director: עם שדרוג רדיו תוכל לקלוט אותן | Drops the EXPN CARD name that the English gives the director. |
+| C. One name, כרטיס הרחבה, in all three | Reword the hint too | Departs from two English lines instead of fixing one. |
+
+**Chosen:** A. The gift line now says what its English says, and the glossary records the three names. Seen on screen: the sweep drew it on the clip ROM beside rc24 and English, with no clip record.
+
+*Changed:* `data/maps/LavenderTown_RadioStation_hns/scripts.inc`
+
+*Glossary:* `TERM_RADIO_UPGRADE`, `TERM_EXPN_CARD`, `TERM_RADIO_CARD`
 
 ## Proposed names
 
