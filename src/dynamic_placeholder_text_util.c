@@ -30,6 +30,9 @@ void DynamicPlaceholderTextUtil_SetPlaceholderPtr(u8 idx, const u8 *ptr)
 
 u8 *DynamicPlaceholderTextUtil_ExpandPlaceholders(u8 *dest, const u8 *src)
 {
+#if TEXT_RTL
+    const u8 *template = src;
+#endif
 #if RTL_STRING_REPORT
     RtlStringReport(src);
 #endif
@@ -44,7 +47,19 @@ u8 *DynamicPlaceholderTextUtil_ExpandPlaceholders(u8 *dest, const u8 *src)
             src++;
             if (sStringPointers[*src] != NULL)
             {
+#if TEXT_RTL
+                u8 *expansion = dest;
+
                 dest = StringCopy(dest, sStringPointers[*src]);
+                if (RtlNeedsPrefixMaqaf(template, src - 1, expansion))
+                {
+                    memmove(expansion + 1, expansion, dest - expansion);
+                    *expansion = CHAR_HYPHEN;
+                    dest++;
+                }
+#else
+                dest = StringCopy(dest, sStringPointers[*src]);
+#endif
             }
             src++;
         }

@@ -514,6 +514,9 @@ u8 *ConvertIntToHexStringN(u8 *dest, s32 value, enum StringConvertMode mode, u8 
 
 u8 *StringExpandPlaceholders(u8 *dest, const u8 *src)
 {
+#if TEXT_RTL
+    const u8 *template = src;
+#endif
 #if RTL_STRING_REPORT
     RtlStringReport(src);
 #endif
@@ -528,7 +531,21 @@ u8 *StringExpandPlaceholders(u8 *dest, const u8 *src)
         case PLACEHOLDER_BEGIN:
             placeholderId = *src++;
             expandedString = GetExpandedPlaceholder(placeholderId);
+#if TEXT_RTL
+        {
+            u8 *expansion = dest;
+
             dest = StringExpandPlaceholders(dest, expandedString);
+            if (RtlNeedsPrefixMaqaf(template, src - 2, expansion))
+            {
+                memmove(expansion + 1, expansion, dest - expansion);
+                *expansion = CHAR_HYPHEN;
+                dest++;
+            }
+        }
+#else
+            dest = StringExpandPlaceholders(dest, expandedString);
+#endif
             break;
         case EXT_CTRL_CODE_BEGIN:
             *dest++ = c;

@@ -1105,8 +1105,11 @@ static u32 RtlClassAt(const u8 *str, u32 *length)
             return RTL_CLASS_RTL;
         case CHAR_PP:
         case CHAR_ID:
-        case CHAR_NO:
             return RTL_CLASS_LTR;
+        case CHAR_NO:
+            // Not part of its number's run, so it stands on the number's right and is read
+            // first, where Unicode puts it in right-to-left text: "01№" like the dex's "006№".
+            return RTL_CLASS_NEUTRAL;
         default:
             return RTL_CLASS_NEUTRAL;
         }
@@ -1131,6 +1134,76 @@ static bool32 RtlStartsRun(const u8 *str, bool32 afterRtl)
     if (afterRtl && str[0] == CHAR_HYPHEN)
         return FALSE;
     return class == RTL_CLASS_NUM_PREFIX && RtlClassAt(str + length, &nextLength) == RTL_CLASS_DIGIT;
+}
+
+// The one-letter Hebrew words that are written joined to the next word: ו "and", ה "the",
+// ב "in", כ "as", ל "to", מ "from", ש "that".
+static bool32 RtlIsPrefixLetter(u32 c)
+{
+    switch (c)
+    {
+    case CHAR_HEB_VAV:
+    case CHAR_HEB_HE:
+    case CHAR_HEB_BET:
+    case CHAR_HEB_KAF:
+    case CHAR_HEB_LAMED:
+    case CHAR_HEB_MEM:
+    case CHAR_HEB_SHIN:
+        return TRUE;
+    }
+    return FALSE;
+}
+
+#define RTL_MAX_PREFIX_LETTERS 3
+
+// A Hebrew prefix is joined to Latin letters and digits with a maqaf ("ל-PC", "ב-20") and to
+// Hebrew directly, and the static text is written so. A placeholder is filled in only when the
+// text is expanded, so the expanders ask this after each one, to write "ל-GOLD" but "לגולד":
+// TRUE when the template has a prefix right before the placeholder (one to three prefix letters
+// after a space, punctuation, a control code or the start of the template) and the placeholder's
+// text, after any control codes, starts with a Latin letter or a digit or is a name from a Japanese
+// game ({JPN}...{ENG}). template: the string being expanded; placeholder: the placeholder's first
+// byte in it; expansion: what the placeholder gave, EOS-terminated.
+bool32 RtlNeedsPrefixMaqaf(const u8 *template, const u8 *placeholder, const u8 *expansion)
+{
+    u32 length, class;
+    u32 letters = 0; // Prefix letters since the last word boundary; above the limit inside a word
+    const u8 *str;
+
+    while (*expansion == EXT_CTRL_CODE_BEGIN && expansion[1] != EXT_CTRL_CODE_JPN)
+        expansion += 1 + GetExtCtrlCodeLength(expansion[1]);
+    // A Japanese name is foreign letters too, whatever its first byte means in the Latin charset.
+    if (*expansion != EXT_CTRL_CODE_BEGIN)
+    {
+        class = RtlClassAt(expansion, &length);
+        if (class != RTL_CLASS_LTR && class != RTL_CLASS_DIGIT)
+            return FALSE;
+    }
+
+    for (str = template; str < placeholder; str += length)
+    {
+        switch (*str)
+        {
+        case EXT_CTRL_CODE_BEGIN:
+            length = 1 + GetExtCtrlCodeLength(str[1]);
+            letters = 0;
+            continue;
+        case PLACEHOLDER_BEGIN:
+        case CHAR_DYNAMIC:
+        case CHAR_KEYPAD_ICON:
+            length = 2;
+            letters = RTL_MAX_PREFIX_LETTERS + 1;
+            continue;
+        }
+        class = RtlClassAt(str, &length);
+        if (RtlIsPrefixLetter(*str))
+            letters = (letters < RTL_MAX_PREFIX_LETTERS) ? letters + 1 : RTL_MAX_PREFIX_LETTERS + 1;
+        else if (class == RTL_CLASS_RTL || class == RTL_CLASS_LTR || class == RTL_CLASS_DIGIT)
+            letters = RTL_MAX_PREFIX_LETTERS + 1;
+        else
+            letters = 0;
+    }
+    return str == placeholder && letters != 0 && letters <= RTL_MAX_PREFIX_LETTERS;
 }
 
 // Length of a control code at str that can sit inside a run because it draws nothing and does not
