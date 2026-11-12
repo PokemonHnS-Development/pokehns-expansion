@@ -313,6 +313,14 @@ static const struct BgTemplate sBgTemplates[] =
     }
 };
 
+#if TEXT_RTL
+// The name windows (x 56-151) reach the star meter, which starts at x 152. English fills them
+// from the left: the nickname at 0 and '/trainer' at 50, at most 42 px wide (a seven-letter
+// Latin name), so its text ends 5 px before the stars at the most. Mirrored around those 92 px,
+// the Hebrew nickname ends where the English trainer column ends, instead of touching the stars.
+#define RESULTS_NAME_RTL_WIDTH 92
+#endif
+
 // Window IDs are implicitly shared with contestant IDs in LoadContestMonName
 static const struct WindowTemplate sWindowTemplates[CONTESTANT_COUNT + 1] =
 {
@@ -401,6 +409,10 @@ static void InitContestResultsDisplay(void)
         SetBgTilemapBuffer(i, sContestResults->tilemapBuffers[i]);
 
     InitWindows(sWindowTemplates);
+#if TEXT_RTL
+    for (i = 0; i < CONTESTANT_COUNT; i++)
+        SetWindowRtlMirrorWidth(i, RESULTS_NAME_RTL_WIDTH);
+#endif
     DeactivateAllTextPrinters();
     SetGpuReg(REG_OFFSET_MOSAIC, 0);
     SetGpuReg(REG_OFFSET_WININ, WININ_WIN0_BG_ALL | WININ_WIN0_OBJ | WININ_WIN0_CLR | WININ_WIN1_BG_ALL | WININ_WIN1_OBJ | WININ_WIN1_CLR);
@@ -1935,7 +1947,13 @@ static void AddContestTextPrinterFitWidth(int windowId, u8 *str, int x, int widt
 
 static void AddContestTextPrinter(int windowId, u8 *str, int x)
 {
+#if TEXT_RTL
+    // Mirrored, text wider than the room from x to the mirror's edge would lose letters at the
+    // window's left edge; it takes a narrower font instead, as the nickname does.
+    AddContestTextPrinterFitWidth(windowId, str, x, GetWindowRtlMirrorWidth(windowId) - x);
+#else
     AddContestTextPrinterFitWidth(windowId, str, x, DISPLAY_WIDTH);
+#endif
 }
 
 void TryEnterContestMon(void)
