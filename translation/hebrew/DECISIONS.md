@@ -79,7 +79,7 @@ Each entry is one open question from the review of the first release candidate: 
 | [Q137](#q137) | In the Gen 4 battle interface the frostbite tag is a copy of the burn tag and reads כויה, as in English. | B. Redraw it as קור, the word of the H&S sheets | changed |
 | [Q138](#q138) | The brief says a ROM nobody has played by hand is not committed, but 0.1, 0.2 and every 1.0 update were committed with hand play declared as not tested. | B. Publish to the private builds repository, with hand play always declared in the release notes | no change |
 | [Q139](#q139) | Psychic is פסיכי in the type, the PSYCHIC and PSYCHO names, the items and the prose; FireRed now writes על-חושי. | A. The על-חושי family everywhere (owner's decision); names too wide for their lists are shortened, and PSYCHIC SURGE and SEED take the noun על-חוש as their siblings do; the plates redrawn in narrower glyphs | changed |
-| [Q140](#q140) | Which naming and wording conventions of the owner's FireRed translation (PR #2) should H&S follow? | B. Follow them; keep H&S's form only where an H&S limit or a FireRed slip stands in the way, each keep listed | changed |
+| [Q140](#q140) | Which naming and wording conventions of the FireRed Hebrew translation (ofir286/pokefirered-heb) and the open PR #2 to it should H&S follow? | B. Follow them; keep H&S's form only where an H&S limit or a FireRed slip stands in the way, each keep listed | changed |
 | [Q141](#q141) | Hoenn names left in Latin inside Hebrew strings until a Hoenn-names pass (Q106), MR. STONE in the H&S PokéGear contact data, and the Latin left after them | C. Rows for every Hoenn name a Hebrew string uses, FireRed's form first, a common word translated (MT. PYRE הר המוקד); the cartridge titles in Hebrew letters (רובי, ספיר, אמרלד), rows for the e-Reader and Ash-Greninja, GLACIA גלסיה | changed |
 | [Q142](#q142) | The contest APPEAL is רושם on the hearts' label, in the judge's results and from the MC, but הופעה in the turn lines, the move descriptions and the Easy Chat word; one English sentence was translated both ways. | A. הופעה everywhere the game names the contest appeal | changed |
 | [Q143](#q143) | The Kanto radio upgrade is שדרוג רדיו in the Lavender hint, כרטיס ההרחבה in the gift line and שדרוג כרטיס הרחבה from the music director. | A. The gift line as its English, שדרוג הרדיו; the music director keeps his EXPN CARD, כרטיס הרחבה | changed |
@@ -1864,7 +1864,7 @@ The English and the Japanese (ノーマル, スーパー, ハイパー, マス�
 
 ## Q140
 
-**Question.** The owner's own FireRed translation settled a set of naming and wording conventions in its PR #2 ("Fix Hebrew RTL rendering bugs and translate …"). Which of them should H&S follow, and where does H&S keep its own form?
+**Question.** The FireRed Hebrew translation is ofir286's (`ofir286/pokefirered-heb`, credited in `CREDITS.md`). Its PR #2 ("Fix Hebrew RTL rendering bugs and translate …"), the owner's contribution to it, open and not merged, settled a set of naming and wording conventions. Which of them should H&S follow, and where does H&S keep its own form?
 
 *Source:* the owner, round 20: "Check in this PR the conventions made for Pokémon names/moves/stuff in Hebrew" (https://github.com/ofir286/pokefirered-heb/pull/2; head `df2ee712e`, base `4325a4f01`).
 
