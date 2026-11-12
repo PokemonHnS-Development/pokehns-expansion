@@ -1435,8 +1435,8 @@ Related rows already use 'תעלול': MOVE_TRICK 'תעלול' (glossary.csv:257
 - Already worded so the count does not govern the name:
   - Kurt's balls ('{PLAYER} קיבל {STR_VAR_2}\nיחידות של {STR_VAR_1}!', AzaleaTown_KurtsHouse_hns:308, with bufferitemname);
   - hidden items in a count (gText_FoundXItems 'מצא N פריטים מסוג X');
-  - the mart: 'X? ורצית N?' (src/strings.c gText_Var1AndYouWantedVar2) and 'X?\nכמה ברצונך למכור?' (gText_HowManyToSell), both with CopyItemName;
-  - the Premier Ball bonus ('N כדורי פרמייר').
+  - the mart: 'X? ורצית N?' (src/strings.c gText_Var1AndYouWantedVar2) and 'X?\nכמה ברצונך למכור?' (gText_HowManyToSell), both with CopyItemName.
+- A singular and a plural string chosen by count: the Premier Ball bonus. src/shop.c:2123 prints gText_ThrowInPremierBall ('אוסיף לך גם כדור פרמייר.') for one ball and gText_ThrowInPremierBalls ('אוסיף לך גם {STR_VAR_1} כדורי פרמייר.') from two on, so 'N כדורי פרמייר' never shows a count of 1.
 - The items. 525 stackable items had no Hebrew plural: every item outside the key-item and TM/HM pockets that has no importance. TMs are stackable too (I_REUSABLE_TMS is FALSE), but a TM's name is the abbreviation מ”מ plus a number, which Hebrew does not inflect ('2 מ”מ 01').
 - Widths. The bag's description window is 14 tiles (112 px), the PC's message window 13 tiles (104 px) and the Pyramid's 14 tiles. In all three strings the name has a line to itself. The bag and the PC wrap a name wider than the window minus 16 px (WrapFontIdToFit); the Pyramid does not wrap. The widest plural is 'דינוזאורים מאובנים' (89 px, 18 bytes), so every plural fits on one line in every window. The widest counts are 999 in the bag and the PC (MAX_BAG_ITEM_CAPACITY, MAX_PC_ITEM_CAPACITY) and 99 in the Pyramid.
 
