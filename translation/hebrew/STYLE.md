@@ -14,11 +14,12 @@ Where they disagree, the glossary wins for names and this file wins for everythi
 - Keep each character's voice: a gruff sailor, a child, a rival who sneers, a professor who
   lectures. Keep jokes as jokes; a pun that cannot survive gets a Hebrew joke of similar weight.
 - Do not add or drop information. Hints, prices, directions, numbers and conditions must survive.
-- A count that a placeholder fills can be 1, and `1 פוקימונים` is wrong. Where the English hedges
-  (`point(s)`, `{STR_VAR_1} PLATES so far`), write a form that reads right for every value: a label
-  and a colon (`פוקימונים שתפסת: {STR_VAR_2}`, `לוחות שנמצאו עד עכשיו: {STR_VAR_1}.`) or a sentence
-  the number does not govern (`הנ”ח של {STR_VAR_1} עלו ב-{STR_VAR_2}.`). An item name after a count
-  takes the item's plural name, which the game picks by the count (`DECISIONS.md` Q125, Q144).
+- A count that a placeholder fills can be 1, and `1 פוקימונים` is wrong, whether the English hedges
+  (`point(s)`) or has the same flaw (`{STR_VAR_1} PLATES so far`). Write a form that reads right for
+  every value: a label and a colon (`פוקימונים שתפסת: {STR_VAR_2}`, `לוחות שנמצאו עד עכשיו: {STR_VAR_1}.`)
+  or a sentence the number does not govern (`הנ”ח של {STR_VAR_1} עלו ב-{STR_VAR_2}.`). An item name
+  after a count takes the item's plural name, which the game picks by the count. The EXP lines keep
+  `נקודות ניסיון` (`DECISIONS.md` Q125, Q144).
 
 ## 2. Gender (settled, do not reopen)
 
@@ -133,11 +134,13 @@ Only characters in `charmap.txt`. In particular:
   (` הפראי`, ` היריב`, see §9): a name is definite, so its adjective takes ה in every position, after `את` too. A literal "wild" written in a string follows the English article: `{B_BUFF1} הפראי ברח!` for "The wild X fled!", but `פראי` in the encounter intros ("a wild X", "Wild X appeared!").
 - Verbs agree in the masculine: `{B_DEF_NAME_WITH_PREFIX} התעלף!`, `… נפגע!`.
 - A stat change names the stat through the masculine `הנתון`, so the verb agrees for every stat
-  (Q140), and the second line starts with `הנתון`: `ל{B_DEF_NAME_WITH_PREFIX} עלה\nהנתון {B_BUFF1}{B_BUFF2}!`,
+  (Q140). A stat-change line that names no ability starts its second line with `הנתון`:
+  `ל{B_DEF_NAME_WITH_PREFIX} עלה\nהנתון {B_BUFF1}{B_BUFF2}!`,
   `ל{B_DEF_NAME_WITH_PREFIX}\nהנתון {B_BUFF1} לא יעלה יותר!`. At the end of a line after a name
   `הנתון` reads as 'the given' (`לפורט היריב הנתון`), and a line that starts with the stat
   (`הגנה עלה!`) pairs a feminine noun with a masculine verb. The auto-wrap could break at either
-  place, so these lines keep the manual break (Q145).
+  place, so these lines keep the manual break. The lines that name an ability never put the name
+  just before `הנתון` (Q145).
 - `{B_DEF_PARTNER_NAME}` is a bare name on either side, so the line ties it to the first target with
   `שלצידו`: `נגד {B_DEF_NAME_WITH_PREFIX2} ו{B_DEF_PARTNER_NAME} שלצידו!`. A second foe then does not
   read as the player's Pokémon, and the line still reads right when the targets are the player's (Q146).
