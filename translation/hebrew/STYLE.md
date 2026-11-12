@@ -14,6 +14,12 @@ Where they disagree, the glossary wins for names and this file wins for everythi
 - Keep each character's voice: a gruff sailor, a child, a rival who sneers, a professor who
   lectures. Keep jokes as jokes; a pun that cannot survive gets a Hebrew joke of similar weight.
 - Do not add or drop information. Hints, prices, directions, numbers and conditions must survive.
+- A count that a placeholder fills can be 1, and `1 פוקימונים` is wrong, whether the English hedges
+  (`point(s)`) or has the same flaw (`{STR_VAR_1} PLATES so far`). Write a form that reads right for
+  every value: a label and a colon (`פוקימונים שתפסת: {STR_VAR_2}`, `לוחות שנמצאו עד עכשיו: {STR_VAR_1}.`)
+  or a sentence the number does not govern (`הנ”ח של {STR_VAR_1} עלו ב-{STR_VAR_2}.`). An item name
+  after a count takes the item's plural name, which the game picks by the count. The EXP lines keep
+  `נקודות ניסיון` (`DECISIONS.md` Q125, Q144).
 
 ## 2. Gender (settled, do not reopen)
 
@@ -62,6 +68,8 @@ Only characters in `charmap.txt`. In particular:
 | Dash | `-` | Also for maqaf: `ה-פוקדקס` only where FireRed does it; normally just attach the prefix |
 | Prefix before Latin or digits | a maqaf: `ב-20`, `ה-2`, `ל-PC` | One to three prefix letters (ו ה ב כ ל מ ש) before Latin letters or digits always take the hyphen. Before a placeholder write the prefix bare, `ל{PLAYER}`, `ב{STR_VAR_1}`: the engine adds the hyphen when the name or number comes out in Latin letters or digits (or is a name from a Japanese game) and leaves a Hebrew name joined (`ל-GOLD`, `לגולד`; DECISIONS.md Q149). Keep a written hyphen (`ב-{STR_VAR_1}`) only where the placeholder is always a number |
 | Digits | normal reading order: `דרך 32`, `500¥`, `10:30` | The renderer handles direction. **Never reverse digits** (FireRed did; we do not) |
+| Two numbers in a row | a Hebrew word between them: `יומן מחקר 9, מיום 20 בספטמבר 1975` | Digits joined only by spaces or punctuation are drawn as one left-to-right block. That is right for one number (`10:30`, `1/2`), but two numbers then read in the wrong order: `יומן מחקר 9: 20 בספטמבר` shows the 20 first (Q147) |
+| Arrows typed with `-`, `<`, `>` | the arrow mirrored: `<-` for an arrow that points right, `->` for one that points left | Outside a digit or Latin run `<` and `>` swap. `<- כיכר הר הירח` shows `כיכר הר הירח ->`, the arrow at the right edge as on the English sign (Q147) |
 | Currency | keep `¥` where the English has it, in the same position relative to the number | |
 | ♂ ♀ … ! ? . , : ; ( ) | as in English | Punctuation goes at the logical end of the Hebrew sentence |
 
@@ -80,7 +88,7 @@ Only characters in `charmap.txt`. In particular:
 - Line breaks: `\n` = next line, `\l` = scroll one line, `\p` = new page. You may move `\n`/`\l` to
   re-wrap Hebrew, and add or remove `\p` only when a page would otherwise not fit; keep the number of
   pages close to the English. Battle strings without any manual break in English are auto-wrapped:
-  keep them without breaks.
+  keep them without breaks, except the stat-change lines (§7).
 - `{POKE}` / `{PKMN}` render the Latin "POKé"/"PKMN" glyph pairs. In Hebrew text replace them with the
   Hebrew word (`פוקי`, `פוקימון`). `drift.py` ignores these glyph-pair tokens (`{POKE}`, `{PKMN}`,
   `{POKEBLOCK}`, the `{ID}{NO}` pair and the `{PK}` of the Easy Chat word `{PK}RS`), so dropping
@@ -126,6 +134,17 @@ Only characters in `charmap.txt`. In particular:
   friends). Hebrew puts the adjective after the noun, so they are suffixes, and they are definite
   (` הפראי`, ` היריב`, see §9): a name is definite, so its adjective takes ה in every position, after `את` too. A literal "wild" written in a string follows the English article: `{B_BUFF1} הפראי ברח!` for "The wild X fled!", but `פראי` in the encounter intros ("a wild X", "Wild X appeared!").
 - Verbs agree in the masculine: `{B_DEF_NAME_WITH_PREFIX} התעלף!`, `… נפגע!`.
+- A stat change names the stat through the masculine `הנתון`, so the verb agrees for every stat
+  (Q140). A stat-change line that names no ability starts its second line with `הנתון`:
+  `ל{B_DEF_NAME_WITH_PREFIX} עלה\nהנתון {B_BUFF1}{B_BUFF2}!`,
+  `ל{B_DEF_NAME_WITH_PREFIX}\nהנתון {B_BUFF1} לא יעלה יותר!`. At the end of a line after a name
+  `הנתון` reads as 'the given' (`לפורט היריב הנתון`), and a line that starts with the stat
+  (`הגנה עלה!`) pairs a feminine noun with a masculine verb. The auto-wrap could break at either
+  place, so these lines keep the manual break. The lines that name an ability never put the name
+  just before `הנתון` (Q145).
+- `{B_DEF_PARTNER_NAME}` is a bare name on either side, so the line ties it to the first target with
+  `שלצידו`: `נגד {B_DEF_NAME_WITH_PREFIX2} ו{B_DEF_PARTNER_NAME} שלצידו!`. A second foe then does not
+  read as the player's Pokémon, and the line still reads right when the targets are the player's (Q146).
 
 ## 8. Process for a batch
 

@@ -324,7 +324,7 @@ SinjohRuins_Lab_EventScript_StevenAfterAllPlates::
 
 SinjohRuins_Lab_Text_StevenFindPlates:
 	.string "סטיבן: אה, {PLAYER}.\p"
-	.string "{STR_VAR_1} לוחות עד עכשיו.\n"
+	.string "לוחות שנמצאו עד עכשיו: {STR_VAR_1}.\n"
 	.string "לא רע בכלל.\p"
 	.string "אני חייב להודות,\n"
 	.string "אני סקרן לדעת מה יקרה כשכולם ייאספו.\p"
@@ -332,14 +332,14 @@ SinjohRuins_Lab_Text_StevenFindPlates:
 
 SinjohRuins_Lab_Text_StevenFindPlates3:
 	.string "סטיבן: אה, {PLAYER}.\p"
-	.string "{STR_VAR_1} לוחות עד עכשיו.\n"
+	.string "לוחות שנמצאו עד עכשיו: {STR_VAR_1}.\n"
 	.string "לא רע בכלל.\p"
 	.string "כבר בדקת את החדר ההוא?\n"
 	.string "הכול מאוד מסתורי.$"
 
 SinjohRuins_Lab_Text_StevenFindPlates9:
 	.string "סטיבן: אה, {PLAYER}.\p"
-	.string "{STR_VAR_1} לוחות עד עכשיו.\n"
+	.string "לוחות שנמצאו עד עכשיו: {STR_VAR_1}.\n"
 	.string "התקדמות יפה מאוד.\p"
 	.string "החדרים שנפתחו דומים להפליא\n"
 	.string "לסדרת חדרים באזור הואן.\p"

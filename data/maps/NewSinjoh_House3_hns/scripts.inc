@@ -150,7 +150,7 @@ NewSinjoh_HauntedHouse_EventScript_Log3::
     end
 
 NewSinjoh_HauntedHouse_Text_Log1:
-  	.string "יומן מחקר 9: 20 בספטמבר 1975\p"
+  	.string "יומן מחקר 9, מיום 20 בספטמבר 1975\p"
   	.string "הימים מתקצרים עכשיו\n"
   	.string "והרוח נעשית עזה.\p"
   	.string "תושבי הכפר קיבלו אותי בחום רב.\p"
@@ -162,7 +162,7 @@ NewSinjoh_HauntedHouse_Text_Log1:
   	.string "לחזור אליהם.$"
 
 NewSinjoh_HauntedHouse_Text_Log2:
-    .string "יומן מחקר 10: 20 באוקטובר 1975\p"
+    .string "יומן מחקר 10, מיום 20 באוקטובר 1975\p"
     .string "המחשבות שלי נעשו קודרות.\p"
     .string "אולי זה בגלל חילופי העונות.\p"
     .string "תושבי הכפר ממשיכים לקבל אותי\n"
@@ -181,7 +181,7 @@ NewSinjoh_HauntedHouse_Text_Log2:
     .string "באביב יהיה טוב יותר.$"
 
 NewSinjoh_HauntedHouse_Text_Log3:
-    .string "יומן מחקר 10: 1 בנובמבר 1975\p"
+    .string "יומן מחקר 10, מיום 1 בנובמבר 1975\p"
     .string "אני לא לבד כאן.\n"
     .string "אולי מעולם לא הייתי לבד.\p"
     .string "הפוקימונים איתי…\p"

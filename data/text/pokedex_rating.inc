@@ -9,8 +9,8 @@ gBirchDexRatingText_Cancel::
 
 gBirchDexRatingText_SoYouveSeenAndCaught::
 	.string "הממ…\p"
-	.string "אז ראית {STR_VAR_1} פוקימונים,\n"
-	.string "ותפסת {STR_VAR_2} פוקימונים…$"
+	.string "פוקימונים שראית: {STR_VAR_1},\n"
+	.string "פוקימונים שתפסת: {STR_VAR_2}…$"
 
 gBirchDexRatingText_LessThan10::
 	.string "Go into grassy areas more and look\n"
@@ -111,8 +111,8 @@ gBirchDexRatingText_DexCompleted::
 gBirchDexRatingText_OnANationwideBasis::
 	.string "הממ…\n"
 	.string "בקנה מידה ארצי…\p"
-	.string "ראית {STR_VAR_1} פוקימונים,\n"
-	.string "ותפסת {STR_VAR_2} פוקימונים…$"
+	.string "פוקימונים שראית: {STR_VAR_1},\n"
+	.string "פוקימונים שתפסת: {STR_VAR_2}…$"
 
 @ FRLG
 
