@@ -165,3 +165,25 @@ Only characters in `charmap.txt`. In particular:
 | `sText_FoePkmnPrefix2/3/4`, `sText_AllyPkmnPrefix/2/3` | `יריב` / `ידיד` (no space) | Stand-alone words; check how each is used before translating |
 | `gText_DexSearchAlphaABC` … `gText_DexSearchAlphaYZ` (`src/strings.c`) | `אבג`, `דהו`, `זחט`, `יכל`, `מנס`, `עפצ`, `קרש`, `ת`, `A-Z` (in that order: ABC, DEF, GHI, JKL, MNO, PQR, STU, VWX, YZ) | The Pokédex name search now groups Hebrew letters that way |
 | `sText_AM`, `sText_PM` (`src/start_menu.c`) | leave as is | The start-menu clock is now 24-hour and no longer prints them |
+
+## 10. Layout on screen (engine work under `TEXT_RTL`)
+
+The translator never moves text; these rules are for layout changes in the Hebrew build. A window
+keeps upstream's pen and mirrors what it draws (`docs/hebrew_translation.md`, window modes).
+
+- A mirrored line ends as far inside the box drawn behind it as English starts inside it. The
+  margin is measured against the art (frame, cell, the meter beside it), not the window:
+  - where the window runs past what its English text uses on the side that becomes the right one,
+    mirror around that extent with `SetWindowRtlMirrorWidth`: the dialogue box (208 px), the
+    contest results names (92 px, `DECISIONS.md` Q153);
+  - where the art starts inside the window (a frame drawn in it), print from a smaller x so the
+    line ends as far inside the art as English starts: the summary's EXP labels (Q151).
+- Numbers that English right-aligns with leading spaces keep the English layout
+  (`WINDOW_RTL_LTR`): the summary's stat columns and its EXP box (Q151).
+- Where a mirrored column meets a column laid out differently from English (the summary's PP
+  text, 2 px wider), keep at least the blank columns English leaves in its worst case, taken from
+  the mirrored side, its text fitted to the room left (Q150).
+- A box drawn over a mirrored list covers what the English box covers (the quantity column) and
+  leaves the names at least the room English leaves them (Q152).
+- A column the mirror makes narrower fits its text with the fallback fonts, so no letter falls
+  past the window edge (Q153).
