@@ -47,8 +47,9 @@ W6 is FireRed's normal Hebrew and W5 its small Hebrew (ofir286/pokefirered-heb; 
 `translation/hebrew/CREDITS.md`), with the ink moved to column 0; `_8` adds
 one body row (rows 4-11, baseline 11); the W4 sets were drawn by hand. The `S` sets give ל its
 ascender on rows 2-3 so it keeps its height when a string falls back to a narrower font, and
-`W5_7SN` shortens the finals to small_narrow's 12-row blit. Normal and short use the 13 px
-FireRed רמה; the other seven use a compact 12 px form.
+`W5_7SN` shortens the finals to small_narrow's 12-row blit. Normal and short use FireRed's
+רמה (its `{LV_2}`) with one pixel added to ה, 13 px with the shadow; the other seven use a
+compact 12 px form.
 
 Decisions behind these choices:
 
