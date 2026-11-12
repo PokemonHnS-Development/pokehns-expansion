@@ -8663,9 +8663,9 @@
     "FONT_NARROWER"
    ],
    "window": "PSS_DATA_WINDOW_MOVE_NAMES 9x10 tiles = 72 px",
-   "x": 0,
+   "x": 2,
    "y": "16*i+1",
-   "max_px_per_line": 72,
+   "max_px_per_line": 70,
    "max_lines": 1,
    "align": "left",
    "mode": "mirror",
@@ -8675,7 +8675,7 @@
     "src/pokemon_summary_screen.c:3402-3405 fit to window width",
     "test/text.c:20-30 FONT_NARROWER <= 72"
    ],
-   "notes": ""
+   "notes": "Under TEXT_RTL the names are printed from x 2 and fitted to the 70 px left, so that the mirrored names keep 4 blank columns before the PP text (DECISIONS.md Q150); English prints them from x 0 in 72 px."
   },
   "summary_move_description": {
    "group": "Party / Summary",
@@ -8886,7 +8886,7 @@
    "group": "Bag / Shop / PC",
    "label": "Bag context menu (USE, GIVE, TOSS, REGISTER, CANCEL...)",
    "font": "FONT_NARROW",
-   "window": "ITEMWIN_1x1/1x2 7 tiles (56 px); 2x2/2x3 14 tiles with columns 56 px apart",
+   "window": "ITEMWIN_1x1/1x2 7 tiles (56 px), 5 tiles (40 px) under TEXT_RTL; 2x2/2x3 14 tiles with columns 56 px apart",
    "x": 8,
    "y": "16*i+1",
    "max_px_per_line": 48,
@@ -8897,7 +8897,7 @@
     "src/item_menu.c:517-552",
     "src/item_menu.c:1803-1812 FONT_NARROW, x=8, column step 56"
    ],
-   "notes": ""
+   "notes": "Under TEXT_RTL the one-column boxes (USE/CANCEL in battle, GIVE/CANCEL, the SELECT registration, CANCEL alone) leave 32 px from x 8; their labels are 23-29 px in FONT_NARROW (DECISIONS.md Q152). The 48 px here is the grid column."
   },
   "bag_pocket_name": {
    "group": "Bag / Shop / PC",
@@ -9468,7 +9468,7 @@
    {
     "where": "summary moves",
     "font": "FONT_NORMAL->NARROWER",
-    "px": 72,
+    "px": 70,
     "ref": "summary_move_name"
    },
    {

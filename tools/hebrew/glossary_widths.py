@@ -13,7 +13,7 @@ GLOSSARY = paths.GLOSSARY
 B = {
     'species': [('party_nickname', 'FONT_SMALL', 50, 'FONT_SMALL_NARROWER'), ('dex_species_name', 'FONT_NARROW', 50, 'FONT_NARROWER'),
                 ('healthbox_name', 'FONT_SMALL', 48, 'FONT_SMALL_NARROWER'), ('summary', 'FONT_NORMAL', 63, None)],
-    'move': [('battle_move_name', 'FONT_NARROW', 64, 'FONT_NARROWER'), ('summary_move_name', 'FONT_NORMAL', 72, None)],
+    'move': [('battle_move_name', 'FONT_NARROW', 64, 'FONT_NARROWER'), ('summary_move_name', 'FONT_NORMAL', 70, None)],
     'item': [('bag_item_name', 'FONT_NARROW', 88, None), ('shop_item_name', 'FONT_NARROW', 84, None)],
     'ability': [('ability_popup', 'FONT_SMALL', 76, 'FONT_SMALL_NARROWER'), ('summary_ability', 'FONT_NORMAL', 144, None)],
     'mapsec': [('map_name_popup', 'FONT_NARROW', 80, None), ('region_map', 'FONT_NORMAL', 96, None)],
