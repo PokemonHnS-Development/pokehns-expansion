@@ -60,7 +60,7 @@ Only characters in `charmap.txt`. In particular:
 | Quotation marks | `”…”` on both sides | FireRed's convention |
 | Ellipsis | `…` (one character) | Not three periods |
 | Dash | `-` | Also for maqaf: `ה-פוקדקס` only where FireRed does it; normally just attach the prefix |
-| Prefix before Latin or digits | a maqaf: `ב-20`, `ה-2`, `ל-PC` | One to three prefix letters (ו ה ב כ ל מ ש) before Latin letters or digits always take the hyphen. Before a placeholder write the prefix bare, `ל{PLAYER}`, `ב{STR_VAR_1}`: the engine adds the hyphen when the name or number comes out in Latin letters or digits and leaves a Hebrew name joined (`ל-GOLD`, `לגולד`; DECISIONS.md Q149). Keep a written hyphen (`ב-{STR_VAR_1}`) only where the placeholder is always a number |
+| Prefix before Latin or digits | a maqaf: `ב-20`, `ה-2`, `ל-PC` | One to three prefix letters (ו ה ב כ ל מ ש) before Latin letters or digits always take the hyphen. Before a placeholder write the prefix bare, `ל{PLAYER}`, `ב{STR_VAR_1}`: the engine adds the hyphen when the name or number comes out in Latin letters or digits (or is a name from a Japanese game) and leaves a Hebrew name joined (`ל-GOLD`, `לגולד`; DECISIONS.md Q149). Keep a written hyphen (`ב-{STR_VAR_1}`) only where the placeholder is always a number |
 | Digits | normal reading order: `דרך 32`, `500¥`, `10:30` | The renderer handles direction. **Never reverse digits** (FireRed did; we do not) |
 | Currency | keep `¥` where the English has it, in the same position relative to the number | |
 | ♂ ♀ … ! ? . , : ; ( ) | as in English | Punctuation goes at the logical end of the Hebrew sentence |

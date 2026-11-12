@@ -46,9 +46,9 @@ Hebrew directly (`ב-20`, `לגולד`). For a name or number filled in at run t
 placeholder expanders (`StringExpandPlaceholders`, `BattleStringExpandPlaceholders`,
 `DynamicPlaceholderTextUtil_ExpandPlaceholders`) ask `RtlNeedsPrefixMaqaf`: when the template
 has one to three of ו ה ב כ ל מ ש right before the placeholder, after a space, punctuation, a
-code or the start, and the placeholder's text starts with a Latin letter or a digit, a hyphen is
-put before it (`ל-GOLD`; DECISIONS.md Q149). The renderer already keeps a hyphen right after a
-Hebrew letter with that letter.
+code or the start, and the placeholder's text starts with a Latin letter or a digit or is a name
+from a Japanese game (`{JPN}`), a hyphen is put before it (`ל-GOLD`; DECISIONS.md Q149). The
+renderer already keeps a hyphen right after a Hebrew letter with that letter.
 
 **Mirrored glyphs.** Outside a run, `( ) < >` swap with their partners and the menu cursor `▶`
 becomes `◀`. Arrow characters are left alone: they show physical directions.
