@@ -83,6 +83,8 @@ Each entry is one open question from the review of the first release candidate: 
 | [Q141](#q141) | Hoenn names left in Latin inside Hebrew strings until a Hoenn-names pass (Q106), MR. STONE in the H&S PokéGear contact data, and the Latin left after them | C. Rows for every Hoenn name a Hebrew string uses, FireRed's form first, a common word translated (MT. PYRE הר המוקד); the cartridge titles in Hebrew letters (רובי, ספיר, אמרלד), rows for the e-Reader and Ash-Greninja, GLACIA גלסיה | changed |
 | [Q142](#q142) | The contest APPEAL is רושם on the hearts' label, in the judge's results and from the MC, but הופעה in the turn lines, the move descriptions and the Easy Chat word; one English sentence was translated both ways. | A. הופעה everywhere the game names the contest appeal | changed |
 | [Q143](#q143) | The Kanto radio upgrade is שדרוג רדיו in the Lavender hint, כרטיס ההרחבה in the gift line and שדרוג כרטיס הרחבה from the music director. | A. The gift line as its English, שדרוג הרדיו; the music director keeps his EXPN CARD, כרטיס הרחבה | changed |
+| [Q148](#q148) | The numero sign stands left of its number in the bag's TM and berry rows, the Pyramid bag and the berry tag (№01) but right of it on the summary and the Pokédex pages (006№). | A. Right of the number everywhere (01№), as Unicode and Hebrew reading order put it: the renderer treats {NO} as a neutral | changed |
+| [Q149](#q149) | A prefix letter before a name placeholder prints without the maqaf when the name is Latin (לGOLD נגמרו), though every static prefix before Latin letters or digits takes one (ב-20). | A. The engine adds the maqaf when the placeholder's text starts with a Latin letter or a digit | changed |
 
 ## K1
 
@@ -2031,6 +2033,52 @@ Not copied, because they belong to FireRed's renderer, not to its naming: digits
 *Changed:* `data/maps/LavenderTown_RadioStation_hns/scripts.inc`
 
 *Glossary:* `TERM_RADIO_UPGRADE`, `TERM_EXPN_CARD`, `TERM_RADIO_CARD`
+
+## Q148
+
+**Question.** The numero sign stands on different sides of its number on different screens. The bag's TM and berry rows, the Battle Pyramid bag and the berry tag show №01, the sign left of the digits; the summary's portrait and the Pokédex's info and stats pages show 006№ and 0004№, the sign right of them. Which side?
+
+*Source:* screen review, round 26 (punctuation), confirmed by a second reviewer.
+
+**Analysis.**
+- Hebrew reads the number sign before the number, as it reads מס' 5: in a right-to-left line the sign stands right of the digits. Unicode classes № (U+2116) as a neutral, and a neutral before European digits in a right-to-left paragraph takes the paragraph's direction, so a bidi renderer draws the logical №01 as 01№. STYLE.md §4 keeps digits in reading order and lets the renderer place them; it says nothing about №.
+- The strings are the English layout strings, with no word in them: `gText_NumberItem_TMBerry` `{NO}{STR_VAR_1}{CLEAR 0x03}{STR_VAR_2}` (`src/strings.c`; the bag, `src/item_menu.c`, and the Pyramid bag, `src/battle_pyramid_bag.c`), `sText_NumberVar1Var2` `{NO}{STR_VAR_1} {STR_VAR_2}` (`src/berry_tag_screen.c`) and `gText_NumberClear01` `{NO}{CLEAR 0x01}` before the digits (`src/pokemon_summary_screen.c`, `src/pokedex_plus_hgss.c`).
+- The renderer counted {NO} as a Latin letter, with {PP} and {ID} (`RtlClassAt`, `src/text.c`), so in the first two strings the sign and the digits made one left-to-right run, №01. In the third the {CLEAR} ends the run, each part is mirrored on its own and the sign lands right of the digits; the first review chose that side for the Pokédex stats page, from No0004 to 0004№, to match the info page.
+- The DexNav chain counter (`src/dexnav.c`) and the old Pokédex's list (`src/pokedex.c`) also print {NO}, but H&S builds neither: `DEXNAV_ENABLED` is FALSE and `POKEDEX_PLUS_HGSS` is TRUE.
+
+| Option | How | Risk |
+|---|---|---|
+| A. Right of the number everywhere: 01№, 006№ | Under TEXT_RTL the renderer treats {NO} as a neutral, as Unicode does: it no longer joins the digits' run, is mirrored on its own and stands right of them. The summary and the Pokédex do not change | Low. The sign and the digits trade places inside the same extent, so no width or layout changes; English is untouched |
+| B. Left of the number everywhere: №01, №006 | Join the sign to the digits on the summary and the Pokédex too | Against Unicode and Hebrew reading order, and changes the two screens the first review chose |
+| C. Keep both and record the split | Nothing in the ROM | The same glyph keeps changing sides between screens |
+| D. Reorder the strings to `{STR_VAR_1}{NO}` | A text change in the layout strings | Writes visual order into the text, which STYLE.md §4 forbids for digits; the strings are shared with English |
+
+**Chosen:** A. The sign now stands right of its number on every screen that shows it. Seen on screen against rc25: the release tours' bag and berry tag shots (27 shots of `menu_bag`, `pbi_tm`, `pbi_berrytag`, `pbi_stats`, `pbi_learn_no`), each changed only in the number column; the Pyramid bag with two berries (`<private>/scratch/screens/r27/engine/numero/`); the summary and Pokédex shots are unchanged.
+
+*Changed:* `src/text.c`
+
+## Q149
+
+**Question.** A prefix letter joined to a name placeholder prints without the maqaf when the name is Latin: לGOLD נגמרו הפוקימונים, הניצחון לGOLD!, שמעתי שמועות שGOLD. Every static prefix before Latin letters or digits takes one (ב-20, ה-2). Fix it in the engine or in the text?
+
+*Source:* screen review, round 26 (grammar), confirmed by a second reviewer.
+
+**Analysis.**
+- Hebrew joins a one-letter prefix (ו ה ב כ ל מ ש) to a Hebrew word directly and to Latin letters or digits with a maqaf. The static text does so in all 142 places where a prefix meets Latin letters or digits, and in none without the hyphen.
+- Names and numbers come in through placeholders. In the tree, 454 templates put one to three prefix letters right before one: 9 before {PLAYER} or {RIVAL}, 342 before {STR_VAR_1}..{STR_VAR_3}, 101 before battle names and buffers, 2 before {DYNAMIC}. A Latin name reaches them from a 2.0.x English save (supported: its player name and its Pokémon's names stay Latin), from the naming screen's Latin page, from a link partner, or as a nickname; a number reaches them through the same variables.
+- The text cannot fix it: a hyphen written into the template would also stand before a Hebrew name, ל-גולד, which Hebrew does not write; rewording the lines to keep names out of prefix position would touch hundreds of lines and make them stiffer. Thirteen templates already write the hyphen before a placeholder that holds a count (ב-{STR_VAR_1} מטבעות); they stay as they are.
+- The renderer already keeps a hyphen right after a Hebrew letter with that letter, so ל-GOLD reads in the right order.
+- Width: the hyphen adds one glyph. In every font the widest Latin letter or digit is at least one pixel narrower than the widest Hebrew letter, so a 7-letter Latin name plus the hyphen is no wider than the 7 widest Hebrew letters the layout audit already allows for {PLAYER} (48 against 49 px in the normal font), and a 12-letter one plus the hyphen no wider than the nickname budget (78 against 84 px). Battle messages are wrapped by `BreakStringAutomatic`.
+
+| Option | How | Risk |
+|---|---|---|
+| A. The engine adds the maqaf | Under TEXT_RTL, `RtlNeedsPrefixMaqaf` (`src/text.c`) tells the three placeholder expanders (`StringExpandPlaceholders`, `BattleStringExpandPlaceholders`, `DynamicPlaceholderTextUtil_ExpandPlaceholders`) to put a hyphen before a placeholder's text when the template has one to three prefix letters right before it, after a space, punctuation, a code or the start, and the text starts with a Latin letter or a digit. The template is read from its start, so a code's argument byte is never taken for a letter. The battle expander inserts only while its buffer has room | Low. One more glyph, only in the cases the static text already hyphenates; a Hebrew name and a placeholder after a whole word or an existing hyphen are untouched |
+| B. Reword the lines | Move names out of prefix position (של {PLAYER}, אל {PLAYER}) | Hundreds of lines, stiffer Hebrew, and numbers still bare |
+| C. Known issue | One line in `notes.json` | The inconsistency stays for every player who brings an English save |
+
+**Chosen:** A. Measured on the clip ROM against rc25: the full sweep (player GOLD) changes exactly the 8 labels with a prefix before {PLAYER} (ל-GOLD, ש-GOLD), each one byte longer, the same pages, no clip; a stress sweep with the player MMMMMMM and three 12-letter Latin variables changes 192 labels by one or two bytes, all OK, no page added, no clip; the release and clip tours show no change from it (no tour shows a Latin name after a prefix). Seen on screen: seven of those labels, a battle line with a Pokémon named on the English ROM (ל-TYPHLOSION הנתון הגנה עלה!, while לג'יאודוד הפראי stays joined), and the PC's בחרת ב-GOLDY. (`<private>/scratch/screens/r27/engine/maqaf/`).
+
+*Changed:* `src/text.c`, `include/text.h`, `src/string_util.c`, `src/battle_message.c`, `src/dynamic_placeholder_text_util.c`; STYLE.md §4
 
 ## Proposed names
 

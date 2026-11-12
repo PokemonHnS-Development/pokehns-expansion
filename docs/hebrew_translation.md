@@ -37,7 +37,18 @@ in English fits in Hebrew, and no call site needs an "RTL anchor".
 before a digit), it measures the run up to the last Latin letter or digit before the next Hebrew
 letter or pen-moving code, and draws the run left to right as one block at its mirrored place.
 Neutrals between two run characters belong to the run; neutrals after it take the paragraph's
-direction. Colour codes, pauses, sounds and leftover placeholder bytes do not end a run.
+direction. Colour codes, pauses, sounds and leftover placeholder bytes do not end a run. The
+numero sign `{NO}` is a neutral, not part of its number's run, so it stands right of the number
+and is read first, as Unicode places it: `01№`, `006№` (DECISIONS.md Q148).
+
+**The prefix maqaf.** A Hebrew prefix is joined to Latin letters and digits with a hyphen and to
+Hebrew directly (`ב-20`, `לגולד`). For a name or number filled in at run time, the three
+placeholder expanders (`StringExpandPlaceholders`, `BattleStringExpandPlaceholders`,
+`DynamicPlaceholderTextUtil_ExpandPlaceholders`) ask `RtlNeedsPrefixMaqaf`: when the template
+has one to three of ו ה ב כ ל מ ש right before the placeholder, after a space, punctuation, a
+code or the start, and the placeholder's text starts with a Latin letter or a digit, a hyphen is
+put before it (`ל-GOLD`; DECISIONS.md Q149). The renderer already keeps a hyphen right after a
+Hebrew letter with that letter.
 
 **Mirrored glyphs.** Outside a run, `( ) < >` swap with their partners and the menu cursor `▶`
 becomes `◀`. Arrow characters are left alone: they show physical directions.
@@ -63,7 +74,9 @@ order and printed left to right in its English position.
 
 - `IsStringJapanese` does not count Hebrew letters as kana.
 - Battle text puts "wild"/"opposing" after the name (`TEXT_NAME_SUFFIX_IN_BATTLE`), so the
-  prefix strings hold the definite `" הפראי"` and `" היריב"`. The ability pop-up drops the English possessive.
+  prefix strings hold the definite `" הפראי"` and `" היריב"`. The ability pop-up drops the English
+  possessive, and the Pokédex category puts פוקימון first. The switch is defined as `TEXT_RTL`
+  (`include/config/text.h`), so a build with `TEXT_RTL` FALSE keeps upstream's English prefixes.
 - The speaker name box sits at the right end of the dialogue box.
 - The start-menu clock is one 24-hour string.
 - Grid menus swap LEFT and RIGHT in mirrored windows.
