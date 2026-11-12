@@ -9,8 +9,9 @@ they can be measured again.
 The Hebrew build is a translation of **Pokémon Heart & Soul 2.0.6**,
 [PokemonHnS-Development/pokehns-expansion](https://github.com/PokemonHnS-Development/pokehns-expansion),
 tag `Release-v2.0.6` (`167aa6d537`). Heart & Soul is built on resetes12's Modern Emerald, RHH's
-[pokeemerald-expansion](https://github.com/rh-hideout/pokeemerald-expansion) 1.15.1 and pret's
-[pokeemerald](https://github.com/pret/pokeemerald) (the repository's `README.md`). Apart from the
+[pokeemerald-expansion](https://github.com/rh-hideout/pokeemerald-expansion) and pret's
+[pokeemerald](https://github.com/pret/pokeemerald) (the repository's `README.md`, which names
+expansion 1.15.1; `include/constants/expansion.h` says 1.15.2). Apart from the
 Hebrew text, glyphs and art labels, the right-to-left drawing, the tools in `tools/hebrew/` and the
 fixes listed at the end, the game is theirs; their contributors are credited in the repository's
 `README.md` and `CREDITS.md`.
@@ -32,7 +33,7 @@ by `tools/hebrew/fonts/derive_hebrew_drafts.py`.
 
 | Font (`graphics/fonts/`) | Letter set | Where the letters come from |
 | --- | --- | --- |
-| `latin_short.png` | `W6_7` | FireRed `graphics/fonts/latin_normal.png`, cells `0x01`-`0x1B`, with the ink moved to column 0; 24 of the 27 letters are pixel for pixel FireRed's, ב ן ף were redrawn |
+| `latin_short.png` | `W6_7` | FireRed `graphics/fonts/latin_normal.png`, cells `0x01`-`0x1B`, with the ink moved to column 0; 25 of the 27 letters are pixel for pixel FireRed's, and ן and ף end one row higher |
 | `latin_normal.png` | `W6_8` | `W6_7` with one body row added |
 | `latin_small.png` | `W5_7` | FireRed `graphics/fonts/latin_small.png`; all 27 letters are pixel for pixel FireRed's |
 | `latin_narrow.png` | `W5_8` | `W5_7` with one body row added |
@@ -40,8 +41,10 @@ by `tools/hebrew/fonts/derive_hebrew_drafts.py`.
 | `latin_small_narrow.png` | `W5_7SN` | `W5_7`, the final letters shortened |
 | `latin_narrower.png`, `latin_short_narrower.png`, `latin_small_narrower.png` | `W4_8`, `W4_7S`, `W4_7` | drawn for this translation |
 
-- The level glyph רמה of the normal and short fonts is FireRed's 13 px drawing with its shadow
-  (`6fa10945bb`, `tools/hebrew/fonts/README.md`); the other seven fonts use a compact 12 px form.
+- The level glyph רמה of the normal and short fonts is FireRed's (its `{LV_2}` glyph, cell `0x105`
+  of `latin_normal.png`, drawn in `1d2e4edb8`) with one pixel added to the left leg of ה, plus
+  the shadow: 13 px (`6fa10945bb`). The other seven fonts use a compact 12 px form made for this
+  translation.
 - FireRed's Hebrew font work is in its commits `60ea5108f` (2023-12-12, the alphabet in
   `latin_normal.png`), `f756bcc31` (2023-12-14, `latin_small.png`), `1d2e4edb8` (2023-12-18, רמה
   for Lv), `14c630eb2` (2025-05-04) and `23c3a599f` (2025-05-05), all by ofir286. Pull request #2
@@ -54,12 +57,16 @@ by `tools/hebrew/fonts/derive_hebrew_drafts.py`.
 constant or English name, filled in 2,001 rows.
 
 - 1,915 rows have the status `inherited`: their name is FireRed's. 1,814 of them print FireRed's
-  spelling exactly; of the other 101, 68 hold digits, which FireRed stores reversed and this build
-  stores in reading order. By kind: 502 species, 308 moves, 305 items, 271 Pokédex categories, 193
-  trainer names, 137 trainer classes, 72 abilities, 48 map sections, 37 terms, 25 natures, 15
-  types, 1 speaker and 1 place.
-- Of the 1,915 inherited names, 1,539 are in ofir286's `master`, and 375 only in pull request #2
-  (250 species, 91 moves, 33 items, 1 term). One, SWEET KISS, is written differently in both.
+  spelling exactly. Of the other 101, 68 hold digits, which FireRed stores reversed and this build
+  stores in reading order; 32 are berries, all named פרי here (`DECISIONS.md` K6); and EXEGGUTOR
+  is one letter shorter, to fit the Pokédex list. By kind: 502 species, 308 moves, 305 items, 271
+  Pokédex categories, 193 trainer names, 137 trainer classes, 72 abilities, 48 map sections, 37
+  terms, 25 natures, 15 types, 1 speaker and 1 place.
+- Of the 1,915 inherited names, 1,526 occur in ofir286's `master` and 388 only in pull request #2
+  (261 species, 93 moves, 33 items and 1 term). The species table of `master` names the 151
+  species of Gen 1, and the pull request adds the other 235 (`6086bad15`); `master` names some of
+  those only in its text, for example in a Pokédex entry. One name, SWEET KISS, is written
+  differently in both.
 - 13 `proposed` rows also print FireRed's name, and the `notes` of many others name the FireRed
   form or pattern they follow (for example `FR canon`, `FR's TM/HM pattern`, a `pokefirered-heb`
   path).
@@ -77,8 +84,9 @@ FireRed's, זמן and שונות.
 ### Wording
 
 `translation/hebrew/STYLE.md` takes FireRed's dialogue as the model for the voice. Where both games
-have the same line, some lines read as FireRed's do: 127 distinct strings of four or more Hebrew
-words are identical to a string in ofir286's `master`.
+have the same line, some lines read as FireRed's do: 127 distinct string literals of four or more
+Hebrew words (a dialogue line or a whole short text each) are identical to a literal in
+ofir286's `master`.
 
 ### Further back
 
@@ -90,13 +98,14 @@ translation through FireRed.
 ## Licence and permission
 
 - ofir286/pokefirered-heb has no licence file: GitHub reports no licence for it, and its README
-  grants none (checked on 2026-11-12). The same is true of Nog-Frog/pokered, and also of Heart &
-  Soul, pokeemerald-expansion and pret's decompilations.
+  grants none (checked on 2026-11-12). GitHub reports no licence for Nog-Frog/pokered either, nor
+  for Heart & Soul, pokeemerald-expansion and pret's decompilations.
 - Permission from ofir286 to use the letter shapes, names and words listed above in this
   translation is not recorded anywhere in this repository. This file credits the work; it does not
   claim a licence to it.
 - If permission is refused, the `W6` and `W5` letter sets and the 13 px רמה can be redrawn, as the
-  `W4` sets were, and the inherited names derived again.
+  `W4` sets were, and the inherited names, the Easy Chat words and the identical lines written
+  again.
 
 ## Fixes from other translations and pull requests
 
@@ -105,7 +114,7 @@ found or fixed first:
 
 - `560f5e8bdb` (the map-name pop-up tinted by the time of day) is the change of SkeletonKey36's
   pull request [#24](https://github.com/PokemonHnS-Development/pokehns-expansion/pull/24), and the
-  same fix as their pull request 78 on the 1.x line
+  fix their pull request 78 made on the 1.x line
   ([PokemonHnS-Development/pokemonHnS](https://github.com/PokemonHnS-Development/pokemonHnS)).
 - `1a0a649f68` (the PokéGear TOUGH label in yellow) and `8852402949` (the condition search results'
   header) were found in Si-Gon's Spanish translation,
@@ -123,11 +132,19 @@ From the repository root, with ofir286's repository cloned next to it as `../pok
 (remote `origin`) and pull request #2 fetched with
 `git -C ../pokefirered-heb fetch origin pull/2/head:refs/remotes/pr2/head`:
 
-- The letters: compare each `@glyph` block of the designs file with the foreground pixels (palette
-  index 1) of the same letter's cell in FireRed's PNG, both trimmed to their ink;
-  `tools/hebrew/fonts/inspect_fonts.py` reads FireRed's `latin_small.png` with `--layout frlg_small`.
+- The letters: compare each `@glyph` block of the designs file with the foreground pixels of the
+  same letter's cell in FireRed's PNG, both trimmed to their ink. A pixel is foreground when its
+  palette index modulo 4 is 1, as gbagfx converts the PNG (FireRed's ב has one pixel of index 5).
+  `tools/hebrew/fonts/inspect_fonts.py` reads FireRed's `latin_small.png` with
+  `--layout frlg_small`.
 - The names: for each `inherited` row, look for its `firered_hebrew` text in
   `git -C ../pokefirered-heb grep -h -I -e . origin/master -- src data include`, then in the same
-  output for `pr2/head` (the pull request's head, `df2ee712e`).
+  output for `pr2/head` (the pull request's head, `df2ee712e`). Count a match only as a word: no
+  Hebrew letter or geresh glued on either side, except a one-letter prefix of the name itself
+  (בקבר חול). The matches that are not a whole string literal were checked by hand. A plain
+  substring search counts 1,539 in `master`; 13 of them are parts of other words or names, such
+  as פורט inside ספורט, וינגול inside ווינגול and נומל in the berry תות נומל.
 - The Easy Chat words: pair each `EC_INDEX` entry of a group file with the entry at the same
-  position in FireRed's group array and compare their texts.
+  position in FireRed's group array and compare their texts. The two lists hold the same words in
+  the same order, except FRONTIER and EMERALD, Emerald's last words of two groups, which FireRed
+  does not have.
