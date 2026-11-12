@@ -1,0 +1,90 @@
+# Mid-game play from ladder save 3: gyms. The Ecruteak Gym after the badge (the guide, a
+# statue, Morty), the Olivine Gym while Jasmine is away (the guide, a statue), then the
+# Cianwood Gym: Chuck's intro (he smashes the rocks), the leader battle, the badge with its
+# fanfare, the badge speech, the TM and its speech. The battle is shortened by setting the
+# foe's HP low before each attack (sethp), with the RNG pinned so both ROMs see the same
+# battle. sethp writes the party and only battler 0's gBattleMons copy, so the active foe's
+# HP is written directly (struct BattlePokemon 0x88 bytes, hp at +0x2A).
+start saves/ladder3_ecruteak.sav
+include ../../scripts/continue.txt
+
+# --- Ecruteak Gym (beaten): the guide at (12,44), a statue at (13,44), Morty at (4,4)
+warpto MAP_ECRUTEAK_CITY_GYM_HNS 12 45
+face UP
+talk pmf_ecru_guide 10
+warpto MAP_ECRUTEAK_CITY_GYM_HNS 13 45
+face UP
+talk pmf_ecru_statue 10
+warpto MAP_ECRUTEAK_CITY_GYM_HNS 4 5
+face UP
+talk pmf_ecru_morty 10
+
+# --- Olivine Gym: the guide at (10,18) faces down, a statue at (11,18)
+warpto MAP_OLIVINE_CITY_HNS 11 28
+snap pmf_popup_olivine
+warpto MAP_OLIVINE_CITY_GYM_HNS 10 19
+face UP
+talk pmf_oliv_guide 20
+warpto MAP_OLIVINE_CITY_GYM_HNS 11 19
+face UP
+talk pmf_oliv_statue 10
+
+# --- Cianwood Gym: Chuck at (10,2) between two rocks
+warpto MAP_CIANWOOD_CITY_HNS 15 45
+snap pmf_popup_cianwood
+warpto MAP_CIANWOOD_GYM_HNS 7 15
+face UP
+talk pmf_cian_statue 10
+fastbattles off
+warpto MAP_CIANWOOD_GYM_HNS 10 3
+face UP
+pinrng
+talk pmf_chuck_intro 20 A
+waitbattle 1800
+sethp enemy 0 1
+sethp enemy 1 1
+sethp enemy 2 1
+sethp enemy 3 1
+bwalk pmf_chuck_b1 input:HandleInputChooseAction
+snap pmf_chuck_action
+baction FIGHT
+waitbinput HandleInputChooseMove
+snap pmf_chuck_moves
+bmove 3                                   # Swift (moves: Mud-Slap, Defense Curl, Rollout, Swift)
+bwalk pmf_chuck_t1 input:HandleInputChooseAction
+w16 @gBattleMons+B2@ 1                  # the active foe (gBattleMons[1].hp) at 1 HP
+sethp player 0 79
+baction FIGHT
+bmove 3
+bwalk pmf_chuck_t2 prompt:Cmd_yesnobox
+snap pmf_chuck_switch_q
+tap B 4                                   # NO: keep Quilava in
+bwalk pmf_chuck_t2b input:HandleInputChooseAction
+w16 @gBattleMons+B2@ 1                  # the active foe (gBattleMons[1].hp) at 1 HP
+sethp player 0 79
+baction FIGHT
+bmove 3
+bwalk pmf_chuck_t3 input:HandleInputChooseAction
+w16 @gBattleMons+B2@ 1                  # the active foe (gBattleMons[1].hp) at 1 HP
+sethp player 0 79
+baction FIGHT
+bmove 3
+bwalk pmf_chuck_t4 prompt:Cmd_yesnobox
+tap B 4
+bwalk pmf_chuck_t4b input:HandleInputChooseAction
+w16 @gBattleMons+B2@ 1                  # the active foe (gBattleMons[1].hp) at 1 HP
+sethp player 0 79
+baction FIGHT
+bmove 3
+bwalk pmf_chuck_t5 prompt:Cmd_yesnoboxlearnmove
+snap pmf_chuck_learn_q                    # Togepi (Exp. Share) grew a level: forget a move?
+tap B 4                                   # NO: it does not learn the move
+bwalk pmf_chuck_t5b prompt:Cmd_yesnobox
+tap B 4                                   # NO: no switch
+bwalk pmf_chuck_t5c input:HandleInputChooseAction
+w16 @gBattleMons+B2@ 1                  # the active foe (gBattleMons[1].hp) at 1 HP
+sethp player 0 79
+baction FIGHT
+bmove 3
+bwalk pmf_chuck_win
+

@@ -1,0 +1,52 @@
+# The summary SKILLS, BATTLE MOVES (and move select) and CONTEST MOVES pages for
+# party slots 1 and 2 of menuA_base (same save for both ROMs, so the same Pokemon data).
+start saves/menuA_base.sav
+include ../../scripts/continue.txt
+
+startmenu POKEMON
+waitcb2x CB2_UpdatePartyMenu 600
+waittaskx Task_HandleChooseMonInput 600
+snap v_party
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+tap A 4
+waittaskx pokemon_summary_screen:Task_HandleInput 900
+waitnotask Task_PrintInfoPage 120
+snap v1_info
+tap RIGHT 4
+waittaskx pokemon_summary_screen:Task_HandleInput 300
+waitnotask Task_PrintSkillsPage 120
+snap v1_skills
+tap RIGHT 4
+waittaskx pokemon_summary_screen:Task_HandleInput 300
+waitnotask Task_PrintBattleMoves 120
+snap v1_moves
+tap A 4
+waittaskx Task_HandleInput_MoveSelect 300
+waitnotask Task_SlidePowerAccWindow 120
+snap v1_moves_sel
+tap B 4
+waittaskx pokemon_summary_screen:Task_HandleInput 300
+tap RIGHT 4
+waittaskx pokemon_summary_screen:Task_HandleInput 300
+waitnotask Task_PrintContestMoves 120
+snap v1_contest
+# next Pokemon (DOWN on the summary): the same pages
+tap DOWN 4
+waitquiet
+snap v2_contest
+tap LEFT 4
+waittaskx pokemon_summary_screen:Task_HandleInput 300
+waitnotask Task_PrintBattleMoves 120
+snap v2_moves
+tap LEFT 4
+waittaskx pokemon_summary_screen:Task_HandleInput 300
+waitnotask Task_PrintSkillsPage 120
+snap v2_skills
+tap DOWN 4
+waitquiet
+snap v3_skills
+tap RIGHT 4
+waittaskx pokemon_summary_screen:Task_HandleInput 300
+waitnotask Task_PrintBattleMoves 120
+snap v3_moves

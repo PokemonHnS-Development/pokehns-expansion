@@ -1,0 +1,20 @@
+# Battle Frontier lounges 1-8: every NPC (the Frontier maniac, the gambler, the nature girl,
+# the move tutors and their menus, the trader).
+start saves/ladder6_postgame.sav
+include ../../scripts/continue.txt
+arrive MAP_BATTLE_FRONTIER_LOUNGE1_HNS 1 6 lo1
+visit lo1
+arrive MAP_BATTLE_FRONTIER_LOUNGE2_HNS 4 8 lo2
+visit lo2
+arrive MAP_BATTLE_FRONTIER_LOUNGE3_HNS 4 8 lo3
+visit lo3
+arrive MAP_BATTLE_FRONTIER_LOUNGE4_HNS 4 8 lo4
+visit lo4
+arrive MAP_BATTLE_FRONTIER_LOUNGE5_HNS 1 6 lo5
+visit lo5
+arrive MAP_BATTLE_FRONTIER_LOUNGE6_HNS 4 8 lo6
+visit lo6
+arrive MAP_BATTLE_FRONTIER_LOUNGE7_HNS 4 8 lo7
+visit lo7
+arrive MAP_BATTLE_FRONTIER_LOUNGE8_HNS 4 8 lo8
+visit lo8

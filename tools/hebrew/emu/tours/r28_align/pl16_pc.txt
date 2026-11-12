@@ -1,0 +1,48 @@
+# A Kanto Pokemon Center PC after the League: the PC menu (with HALL OF FAME), the Hall of Fame
+# record (first panels), GOLD's PC menu and its MAILBOX, then LOG OFF.
+start saves/ladder6_postgame.sav
+include ../../scripts/continue.txt
+
+arrive MAP_LAVENDER_TOWN_POKEMON_CENTER_HNS 7 7 lpc
+walkto 11 2
+face UP
+talk pc_boot 10
+press DOWN
+press DOWN
+snap pc_menu_hof
+tap A 0
+waitcb2x CB2_HallOfFame 900
+waittaskx hall_of_fame:Task_HofPC_HandleInput 1200
+waitquiet
+snap pc_hof_01
+tap A 30
+waittaskx hall_of_fame:Task_HofPC_HandleInput 600
+waitquiet
+snap pc_hof_02
+tap A 30
+waittaskx hall_of_fame:Task_HofPC_HandleInput 600
+waitquiet
+snap pc_hof_03
+tap B 10
+waitcb2x CB2_Overworld 1200
+talk pc_hof_back 10 -
+snap pc_menu_again
+press DOWN
+snap pc_menu_gold
+tap A 0
+talk pc_gold 6 - PlayerPCProcessMenuInput
+waittaskx PlayerPCProcessMenuInput 600
+waitquiet
+snap pc_gold_menu
+press DOWN
+snap pc_gold_menu_mail
+tap A 0
+pages pc_mail 6
+waittaskx PlayerPCProcessMenuInput 600
+waitquiet
+snap pc_gold_menu_back
+tap B 10
+talk pc_gold_back 6 -
+snap pc_menu_last
+tap B 10
+waitctl 600 B
