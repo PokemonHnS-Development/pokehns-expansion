@@ -247,9 +247,10 @@ Checked on 1.0's release tours (rc26) against English 2.0.6:
   PokéGear hint bar, two windows on one bar).
 - The Pokéblock case's three-digit level of rc22 (round 21's evidence): EDGE on the one shot
   that shows it; nothing after the fix. The Easy Chat footer seen beside the keyboard in rc24
-  (round 25's frame-by-frame shots): EDGE on 91 of the 110 frames that show it, none on the
-  fixed build; the 19 missed are frames where English shows its own OK in the same gap. One
-  frame of the keyboard opening is EDGE in both builds.
+  (round 25's frame-by-frame shots): 110 frames show it, 108 of them with an English shot of the
+  same moment. EDGE on 91 of those 108; the 17 missed are frames where English shows its own OK
+  in the same gap. One frame of the keyboard opening is EDGE in both builds, a false finding,
+  and it is the only EDGE at the gap on the fixed build.
 - rc1's unmirrored PC mark menu, Pokédex START menu and naming hint bar: IN-PLACE in rc1, OK (or
   not measurable: the START menu box runs off the screen) in 1.0.
 
