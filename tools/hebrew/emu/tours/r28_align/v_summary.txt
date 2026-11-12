@@ -33,7 +33,8 @@ waitnotask Task_PrintContestMoves 120
 snap v1_contest
 # next Pokemon (DOWN on the summary): the same pages
 tap DOWN 4
-waitquiet
+waitnotask Task_ChangeSummaryMon 600
+waittaskx pokemon_summary_screen:Task_HandleInput 300
 snap v2_contest
 tap LEFT 4
 waittaskx pokemon_summary_screen:Task_HandleInput 300
@@ -44,7 +45,8 @@ waittaskx pokemon_summary_screen:Task_HandleInput 300
 waitnotask Task_PrintSkillsPage 120
 snap v2_skills
 tap DOWN 4
-waitquiet
+waitnotask Task_ChangeSummaryMon 600
+waittaskx pokemon_summary_screen:Task_HandleInput 300
 snap v3_skills
 tap RIGHT 4
 waittaskx pokemon_summary_screen:Task_HandleInput 300
