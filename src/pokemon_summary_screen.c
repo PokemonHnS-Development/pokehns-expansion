@@ -826,6 +826,10 @@ static const u8 sMovesPPLayout[] = _("{FONT_NARROW}נ”כ {DYNAMIC 0}/{DYNAMIC 
 // sit between them and the label. At x 3 the 43-px text fills the 44-px white column except its
 // rightmost pixel, which the move selector's right edge covers.
 #define MOVES_PP_X 3
+// Mirrored, every move name ends at the name window's edge, and the PP text beside it starts 2 px
+// nearer to that edge than the English one. Printed 2 px in, the names leave the 4 blank columns
+// that English leaves after its widest name; a name wider than the 70 px left takes the narrow font.
+#define MOVES_NAME_X 2
 #else
 static const u8 sMovesPPLayout[] = _("{PP}{DYNAMIC 0}/{DYNAMIC 1}");
 #endif
@@ -3527,7 +3531,13 @@ static void PrintTextOnWindowToFitPx(u8 windowId, const u8 *string, u8 x, u8 y, 
 
 static void PrintTextOnWindowToFit(u8 windowId, const u8 *string, u8 x, u8 y, u8 lineSpacing, u8 colorId)
 {
+#if TEXT_RTL
+    // Fitted to the room from x to the window's edge: mirrored, a wider line would lose letters
+    // at the window's left edge.
+    PrintTextOnWindowToFitPx(windowId, string, x, y, lineSpacing, colorId, WindowWidthPx(windowId) - x);
+#else
     PrintTextOnWindowToFitPx(windowId, string, x, y, lineSpacing, colorId, WindowWidthPx(windowId));
+#endif
 }
 
 static void PrintMonInfo(void)
@@ -4460,10 +4470,11 @@ static void PrintMoveNameAndPP(u8 moveIndex)
     if (move != 0)
     {
         pp = CalculatePPWithBonus(move, summary->ppBonuses, moveIndex);
-        PrintTextOnWindowToFit(moveNameWindowId, GetMoveName(move), 0, moveIndex * 16 + 1, 0, 1);
 #if TEXT_RTL
+        PrintTextOnWindowToFit(moveNameWindowId, GetMoveName(move), MOVES_NAME_X, moveIndex * 16 + 1, 0, 1);
         ConvertIntToDecimalStringN(gStringVar1, summary->pp[moveIndex], STR_CONV_MODE_LEFT_ALIGN, 2);
 #else
+        PrintTextOnWindowToFit(moveNameWindowId, GetMoveName(move), 0, moveIndex * 16 + 1, 0, 1);
         ConvertIntToDecimalStringN(gStringVar1, summary->pp[moveIndex], STR_CONV_MODE_RIGHT_ALIGN, 2);
 #endif
         ConvertIntToDecimalStringN(gStringVar2, pp, STR_CONV_MODE_RIGHT_ALIGN, 2);
@@ -4481,7 +4492,11 @@ static void PrintMoveNameAndPP(u8 moveIndex)
     }
     else
     {
+#if TEXT_RTL
+        PrintTextOnWindow(moveNameWindowId, gText_OneDash, MOVES_NAME_X, moveIndex * 16 + 1, 0, 1);
+#else
         PrintTextOnWindow(moveNameWindowId, gText_OneDash, 0, moveIndex * 16 + 1, 0, 1);
+#endif
         text = gText_TwoDashes;
         ppState = 12;
         x = GetStringCenterAlignXOffset(FONT_NORMAL, text, 44);
@@ -4625,18 +4640,22 @@ static void PrintNewMoveDetailsOrCancelText(void)
 
     if (sMonSummaryScreen->newMove == MOVE_NONE)
     {
+#if TEXT_RTL
+        PrintTextOnWindow(windowId1, gText_Cancel, MOVES_NAME_X, 65, 0, 1);
+#else
         PrintTextOnWindow(windowId1, gText_Cancel, 0, 65, 0, 1);
+#endif
     }
     else
     {
         enum Move move = sMonSummaryScreen->newMove;
 
-        if (sMonSummaryScreen->currPageIndex == PSS_PAGE_BATTLE_MOVES)
-            PrintTextOnWindowToFit(windowId1, GetMoveName(move), 0, 65, 0, 6);
-        else
-            PrintTextOnWindowToFit(windowId1, GetMoveName(move), 0, 65, 0, 5);
-
 #if TEXT_RTL
+        if (sMonSummaryScreen->currPageIndex == PSS_PAGE_BATTLE_MOVES)
+            PrintTextOnWindowToFit(windowId1, GetMoveName(move), MOVES_NAME_X, 65, 0, 6);
+        else
+            PrintTextOnWindowToFit(windowId1, GetMoveName(move), MOVES_NAME_X, 65, 0, 5);
+
         ConvertIntToDecimalStringN(gStringVar1, GetMovePP(move), STR_CONV_MODE_LEFT_ALIGN, 2);
         ConvertIntToDecimalStringN(gStringVar2, GetMovePP(move), STR_CONV_MODE_RIGHT_ALIGN, 2);
         DynamicPlaceholderTextUtil_Reset();
@@ -4645,6 +4664,11 @@ static void PrintNewMoveDetailsOrCancelText(void)
         DynamicPlaceholderTextUtil_ExpandPlaceholders(gStringVar4, sMovesPPLayout);
         PrintTextOnWindow(windowId2, gStringVar4, MOVES_PP_X, 65, 0, 12);
 #else
+        if (sMonSummaryScreen->currPageIndex == PSS_PAGE_BATTLE_MOVES)
+            PrintTextOnWindowToFit(windowId1, GetMoveName(move), 0, 65, 0, 6);
+        else
+            PrintTextOnWindowToFit(windowId1, GetMoveName(move), 0, 65, 0, 5);
+
         ConvertIntToDecimalStringN(gStringVar1, GetMovePP(move), STR_CONV_MODE_RIGHT_ALIGN, 2);
         DynamicPlaceholderTextUtil_Reset();
         DynamicPlaceholderTextUtil_SetPlaceholderPtr(0, gStringVar1);
