@@ -3485,9 +3485,11 @@ static void LowerNicknameQuoteMarks(u8 *dest, const u8 *src, struct Pokemon *mon
 static void SetSummaryDataWindowRtl(const struct WindowTemplate *template, u8 templateId, u32 windowId)
 {
     // Columns of numbers right-aligned with leading spaces: mirroring would move the spaces to
-    // the right and leave the numbers ragged against the labels.
+    // the right and leave the numbers ragged against the labels. The EXP box holds the same kind
+    // of numbers, so it keeps its English layout too.
     if (template == sPageSkillsTemplate
-     && (templateId == PSS_DATA_WINDOW_SKILLS_STATS_LEFT || templateId == PSS_DATA_WINDOW_SKILLS_STATS_RIGHT))
+     && (templateId == PSS_DATA_WINDOW_SKILLS_STATS_LEFT || templateId == PSS_DATA_WINDOW_SKILLS_STATS_RIGHT
+      || templateId == PSS_DATA_WINDOW_EXP))
         SetWindowRtlMode(windowId, WINDOW_RTL_LTR);
 }
 #endif
