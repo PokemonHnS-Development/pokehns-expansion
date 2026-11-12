@@ -1161,20 +1161,24 @@ static bool32 RtlIsPrefixLetter(u32 c)
 // text is expanded, so the expanders ask this after each one, to write "ל-GOLD" but "לגולד":
 // TRUE when the template has a prefix right before the placeholder (one to three prefix letters
 // after a space, punctuation, a control code or the start of the template) and the placeholder's
-// text, after any control codes, starts with a Latin letter or a digit. template: the string being
-// expanded; placeholder: the placeholder's first byte in it; expansion: what the placeholder gave,
-// EOS-terminated.
+// text, after any control codes, starts with a Latin letter or a digit or is a name from a Japanese
+// game ({JPN}...{ENG}). template: the string being expanded; placeholder: the placeholder's first
+// byte in it; expansion: what the placeholder gave, EOS-terminated.
 bool32 RtlNeedsPrefixMaqaf(const u8 *template, const u8 *placeholder, const u8 *expansion)
 {
     u32 length, class;
     u32 letters = 0; // Prefix letters since the last word boundary; above the limit inside a word
     const u8 *str;
 
-    while (*expansion == EXT_CTRL_CODE_BEGIN)
+    while (*expansion == EXT_CTRL_CODE_BEGIN && expansion[1] != EXT_CTRL_CODE_JPN)
         expansion += 1 + GetExtCtrlCodeLength(expansion[1]);
-    class = RtlClassAt(expansion, &length);
-    if (class != RTL_CLASS_LTR && class != RTL_CLASS_DIGIT)
-        return FALSE;
+    // A Japanese name is foreign letters too, whatever its first byte means in the Latin charset.
+    if (*expansion != EXT_CTRL_CODE_BEGIN)
+    {
+        class = RtlClassAt(expansion, &length);
+        if (class != RTL_CLASS_LTR && class != RTL_CLASS_DIGIT)
+            return FALSE;
+    }
 
     for (str = template; str < placeholder; str += length)
     {
