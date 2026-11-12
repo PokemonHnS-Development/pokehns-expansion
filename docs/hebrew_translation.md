@@ -1,8 +1,8 @@
 # Hebrew translation guide (Heart & Soul)
 
 Everything here is about the Hebrew build, with `TEXT_RTL` set in `include/config/text.h`. The
-tools named here live in `tools/hebrew/` (see its `README.md`); the glossary, the style guide, the
-transliteration rules and the credits (`CREDITS.md`) live in `translation/hebrew/`.
+tools named here live in `tools/hebrew/` (see its `README.md`); the glossary, the style guide and
+the transliteration rules live in `translation/hebrew/`.
 
 ## How Hebrew is stored
 
@@ -96,7 +96,7 @@ order and printed left to right in its English position.
 
 ## Fonts
 
-All nine Latin fonts carry the Hebrew letters (six of them FireRed's, see [Credits](#credits)), the
+All nine Latin fonts carry the Hebrew letters, the
 left cursor `◀` and a Hebrew level glyph (`רמה`, replacing `Lv` at `0x34` and `0x105`). Widths are
 in the tables in `src/fonts.c`; the advance is the table value, nothing else. `tools/hebrew/textwidth.py` reads them.
 
@@ -192,12 +192,3 @@ Each build's `TESTING.md` lists what was tested on that exact ROM and what was n
   files were changed by hand afterwards).
 - **Female address.** The player is addressed in the masculine.
 
-## Credits
-
-The game is Pokémon Heart & Soul 2.0.6 (`PokemonHnS-Development/pokehns-expansion`, tag
-`Release-v2.0.6`), built on pokeemerald-expansion, Modern Emerald and pret's pokeemerald; see the
-repository's `README.md` and `CREDITS.md`. The Hebrew letter shapes of six of the nine fonts, the
-level glyph רמה of two, most inherited glossary names and many Easy Chat words come from ofir286's
-Hebrew translation of FireRed, [ofir286/pokefirered-heb](https://github.com/ofir286/pokefirered-heb).
-`translation/hebrew/CREDITS.md` lists what came from where, with commits, and the open licence
-question.

@@ -46,7 +46,7 @@ fresh clone.
 | `he/renderer` | `a2c7009987` (on GitHub too): `62b7fccf8b` plus round 27's five engine commits (`06c51691a4`, `38a85d5a26`, `a0089221a7`, `2fc9af5f52`, `72b0ce65b4`, cherry-picked). `TEXT_NAME_SUFFIX_IN_BATTLE` now follows `TEXT_RTL`, so the English build (`TEXT_RTL` FALSE, SHA-1 `769e4c058e…`) takes upstream's battle-name code: `BattleStringExpandPlaceholders`, `ExpandBattleTextBuffPlaceholders`, `CopyMonCategoryText` and `CreateAbilityPopUp` have upstream's sizes and the English battle message boxes equal upstream's; no `Rtl*` symbol (`<private>/scratch/screens/r27/engproof/PROOF.md`) | `git rev-parse --short he/renderer` |
 | Release | One release, 1.0, replaced in place on each update (ROM, `SHA1SUMS`, `TESTING.md`); the builds repo's commit history keeps the older builds. The same three files are the assets of the builds repo's GitHub Release `1.0` (tag `1.0` at `<builds>` `90e1f99`). Current 1.0: built from `he/main` `1124d9661d` (rc25) | `git -C <builds> log` (`20a8d79` "Update 1.0 to the build of he/main 1124d9661d"); `<builds>/records/README.md:46`; `gh release view 1.0 -R ronyeh2/pokehns-hebrew-builds` (each asset's SHA-256 is that of the file in `20a8d79`) |
 | 1.0 ROM | `pokehns-he-2.0.6-1.0.gba`: 33554432 bytes, SHA-1 `d578edd1b275610fd27e5c4c03266f91aa134e8e`, CRC32 `0B113E25` (clip build `582aed735cfe2bf9bb75b70daa2664b56fd8f23d`, CRC32 `2B99B061`), built from `c423645e48` as rc26 | `<builds>/SHA1SUMS`; `<builds>/records/rc26/build_info.json`; `<builds>` `a6999ad` |
-| Upstream | offered as `PokemonHnS-Development/pokehns-expansion#39` ("Hebrew localization - complete (2.0.6)", opened 2026-11-11, open). Its head is `ronyeh2:he/main` and its base `master`, so every push to `he/main` updates it. No checks are reported on it. Its description was rewritten on 2026-11-12 to match the tree at `c423645e48` (credits, the switches, the six upstream fixes, the English build, CI, the files a merge can leave out, what is kept in English, what was tested) | `gh pr view 39 -R PokemonHnS-Development/pokehns-expansion`; `gh pr checks 39 -R ...` |
+| Upstream | offered as `PokemonHnS-Development/pokehns-expansion#39` ("Hebrew localization - complete (2.0.6)", opened 2026-11-11, open). Its head is `ronyeh2:he/main` and its base `master`, so every push to `he/main` updates it. No checks are reported on it. Its description was rewritten on 2026-11-12 to match the tree at `c423645e48` (the switches, the six upstream fixes, the English build, CI, the files a merge can leave out, what is kept in English, what was tested) | `gh pr view 39 -R PokemonHnS-Development/pokehns-expansion`; `gh pr checks 39 -R ...` |
 | Releasing | Build a candidate with `tools/hebrew/release/`. Then replace the three files in the builds repo, say in the commit message which `he/main` commit it was built from, and replace the GitHub Release's assets. Keep `tools/hebrew/release/notes.json` at `"release": "1.0"`. A candidate is published with hand play declared as not tested (`DECISIONS.md` Q138) | section 5 |
 | CI | green in all three jobs at `c423645e48` (run 43134335865), at `a5d6c1a101` (run 43120151292), at `be01ca8215` (run 43113468009), at `1124d9661d` (run 43102206527: `build` 5m48s, `audit` 1m11s, `check` 19m47s), at `b70d4d33b6` (42895047715), at `47669d9f06` (42889868670), at `8aeb3a0f2b` (42802955754) and at `c1cfd8a30b` (42721195219), and so were the runs before them on `he/main`. Round 25's three branches failed only `audit`: CI's drift compares with `origin/he/renderer`, which holds every branch's engine picks, so each branch failed on the files of the engine commits it does not carry (`he/fix-r25` 5 FAIL, `he/fix-r25e` 1, `he/fix-r25t` 6; runs 43102190874, 43102195638, 43102200540); their merge passes | `gh run list -R ronyeh2/pokehns-expansion-heb --workflow hebrew.yml --branch he/main` |
 | Static checks | at `he/main` `1124d9661d`, baseline `he/renderer` `62b7fccf8b`: drift 708 files, 0 FAIL, 334 with warnings only (8 `w LATIN`, all kept: Q141; no `w GLYPHPAIR`); audit 0 errors and 54 warnings, 39,060 strings (24,841 translated) as in CI; namecheck 7,133 rows, 0 problems and 0 warnings (34 allowlisted); plurals 0 problems; the Pokédex A–Z, Easy Chat and live-label generators up to date; 199 tool tests OK on Python 3.9.6, 3.11.9 and 3.14.7, none skipped | section 4.2 |
@@ -58,10 +58,8 @@ fresh clone.
    person), real hardware (a 32 MiB flash cart with FLASH 128 KB and an RTC), and a read of the
    shipped wording by a native speaker. All three are in `notes.json` `not_tested`, so every
    `TESTING.md` says so; section 8.5 lists the lines reviewers flagged for a native read.
-2. **Owner decisions** (section 8.2): ask ofir286 for permission to reuse the FireRed letters,
-   the level glyph, the inherited names, the Easy Chat words and the identical lines
-   (`translation/hebrew/CREDITS.md`, "Licence and permission"); whether to fill in upstream's pull
-   request template section on AI use; whether `hebrew.yml` should also run `plurals.py`.
+2. **Owner decisions** (section 8.2): whether to fill in upstream's pull request template section
+   on AI use; whether `hebrew.yml` should also run `plurals.py`.
 
 **Done** (newest first):
 
@@ -70,7 +68,7 @@ fresh clone.
    punctuation direction, battle-message combinations, the upstream pull request); 23 findings
    survived an adversarial check (`<private>/scratch/screens/r26/result.json`). Round 27 fixed all
    of them (`<private>/scratch/screens/r27/result.json`; DECISIONS Q144-Q149, STYLE §1, §4, §5,
-   §7; `translation/hebrew/CREDITS.md`). Against rc25: `make check`, the sweep (6,611 OK), the
+   §7). Against rc25: `make check`, the sweep (6,611 OK), the
    ladder, the map walk (the same 36 HELD) and the ROM-sweep labels are the same; 68 of the 2,056
    tour shots and 88 clip-tour shots differ: 38 the reworded text (20 stat-change lines, 3 two-foe
    lines, Elm's call, 8 HP-restored lines, 6 party icons one frame apart), 27 the numero sign's side,
