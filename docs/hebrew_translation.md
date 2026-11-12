@@ -1,8 +1,8 @@
 # Hebrew translation guide (Heart & Soul)
 
-Everything here is about the Hebrew build, `TEXT_RTL` in `include/config/text.h`; the English build
-does not use it. The tools named here live in `tools/hebrew/` (see its `README.md`); the glossary,
-the style guide and the transliteration rules live in `translation/hebrew/`, and the credits in [`translation/hebrew/CREDITS.md`](../translation/hebrew/CREDITS.md).
+Everything here is about the Hebrew build, with `TEXT_RTL` set in `include/config/text.h`. The
+tools named here live in `tools/hebrew/` (see its `README.md`); the glossary, the style guide, the
+transliteration rules and the credits (`CREDITS.md`) live in `translation/hebrew/`.
 
 ## How Hebrew is stored
 
@@ -21,7 +21,7 @@ the style guide and the transliteration rules live in `translation/hebrew/`, and
 gershayim is `”` (`0xB2`). There is no straight double quote.
 
 **Write Hebrew in logical order, and write numbers the way you read them.** Unlike the FireRed
-Hebrew translation ([ofir286/pokefirered-heb](https://github.com/ofir286/pokefirered-heb)), digits are never reversed: the renderer draws Latin and digit runs left to right.
+Hebrew translation, digits are never reversed: the renderer draws Latin and digit runs left to right.
 
 ## How right-to-left works
 
@@ -83,9 +83,9 @@ order and printed left to right in its English position.
 
 ## Fonts
 
-All nine Latin fonts carry the Hebrew letters, the left cursor `◀` and a Hebrew level glyph
-(`רמה`, replacing `Lv` at `0x34` and `0x105`). Widths are in the tables in `src/fonts.c`; the
-advance is the table value, nothing else. `tools/hebrew/textwidth.py` reads those tables. The letter shapes of six of the fonts come from the FireRed Hebrew translation (see [Credits](#credits)).
+All nine Latin fonts carry the Hebrew letters (six of them FireRed's, see [Credits](#credits)), the
+left cursor `◀` and a Hebrew level glyph (`רמה`, replacing `Lv` at `0x34` and `0x105`). Widths are
+in the tables in `src/fonts.c`; the advance is the table value, nothing else. `tools/hebrew/textwidth.py` reads them.
 
 ## Budgets
 
@@ -164,12 +164,12 @@ Each build's `TESTING.md` lists what was tested on that exact ROM and what was n
   (K3), move names without quotation marks in dialogue (Q2), 'מזל טוב' for "Congratulations" (Q6) and the
   apprentices' English name column (Q50). The summary's PP label is נ”כ.
 - **Easy Chat.** All 999 Easy Chat words are Hebrew: 517 from the first translation and 482 added
-  later, FireRed's word for 354 of them, the glossary's for 30 and a new word for 98 (Q135; the other 9 entries of the lists are punctuation). Where
-  Hebrew has one word for several English ones, they print the same text (I and I AM אני, NOT
-  and DON'T לא); the words the game compares (the Odd Egg passwords, the Mystery Gift phrase)
-  each have a text of their own. Trainer phrases put the words in English order, one word after
-  another. The ABC keyboard shows the 22
-  Hebrew letters and files every word, species and move under the first letter of its Hebrew text
+  later, FireRed's word for 354 of them, the glossary's for 30 and a new word for 98 (Q135; the
+  other 9 entries of the lists are punctuation). Where Hebrew has one word for several English
+  ones, they print the same text (I and I AM אני, NOT and DON'T לא); the words the game compares
+  (the Odd Egg passwords, the Mystery Gift phrase) each have a text of their own. Trainer phrases
+  put the words in English order, one word after another. The ABC keyboard shows the 22 Hebrew
+  letters and files every word, species and move under the first letter of its Hebrew text
   (`DECISIONS.md` Q135).
 - **Kept in English on purpose:** the overworld debug menu (`src/debug.c`, `data/scripts/debug.inc`;
   DECISIONS.md Q120; the battle debug menu is Hebrew, Q118), the names of people, teams and games in the
@@ -186,5 +186,5 @@ The game is Pokémon Heart & Soul 2.0.6 (`PokemonHnS-Development/pokehns-expansi
 repository's `README.md` and `CREDITS.md`. The Hebrew letter shapes of six of the nine fonts, the
 level glyph רמה of two, most inherited glossary names and many Easy Chat words come from ofir286's
 Hebrew translation of FireRed, [ofir286/pokefirered-heb](https://github.com/ofir286/pokefirered-heb).
-[`translation/hebrew/CREDITS.md`](../translation/hebrew/CREDITS.md) lists what came from where,
-with commits, and the open licence question.
+`translation/hebrew/CREDITS.md` lists what came from where, with commits, and the open licence
+question.
