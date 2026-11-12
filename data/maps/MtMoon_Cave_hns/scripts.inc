@@ -117,4 +117,4 @@ MtMoon_Cave_Text_Rival_Loss:
 	.string "trainer.$"
 
 MtMoon_Cave_Text_Sign:
-	.string ">- כיכר הר הירח$"
+	.string "<- כיכר הר הירח$"
