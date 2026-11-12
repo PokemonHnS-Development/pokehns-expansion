@@ -250,6 +250,97 @@ class TextAlignTest(unittest.TestCase):
         self.assertTrue(res.get('identical'))
         self.assertEqual(res['windows'], [])
 
+    def test_text_on_art_with_no_dominant_colour_has_no_paper(self):
+        en, he = blank(), blank()
+        art = (0x30A030, 0x208020, 0x60C060, 0x40B0A0)  # four colours, none half of the ring
+        for y in range(90, 150):
+            for x in range(10, 230):
+                en.rows[y][x] = he.rows[y][x] = art[(x // 2 + y // 3) % 4]
+        line(en, 40, 110, 9, 'E')
+        line(he, 120, 110, 7, 'H')
+        res = ta.analyse_pair(en, he)
+        self.assertEqual(res['windows'], [])
+        self.assertTrue(res['unknown'])
+        self.assertTrue(all('no paper' in w['notes'][0] for w in res['unknown']))
+
+    def test_box_cut_by_the_screen_edge_is_soft(self):
+        en, he = blank(), blank()
+        for s in (en, he):                              # a box that runs off the right edge
+            for y in range(97, 155):
+                for x in range(97, W):
+                    s.rows[y][x] = FRAME
+            for y in range(100, 152):
+                for x in range(100, W):
+                    s.rows[y][x] = PAPER
+        line(en, 108, 108, 6, 'E')
+        line(he, W - 1 - 20 - span(5) + 1, 108, 5, 'H')   # 20 px from the screen edge, not 8
+        res = ta.analyse_pair(en, he)
+        self.assertEqual(classes(res), ['UNKNOWN'])
+        self.assertIn('right', res['windows'][0]['soft'])
+
+    def test_cursor_left_in_place_beside_a_blank_row(self):
+        en, he = pair()
+        line(en, BOX[0] + 11, 108, 6, 'E')
+        rline(he, 11, 108, 6, 'H')                      # the text is mirrored
+        triangle(en, BOX[0] + 3, 126)
+        line(en, BOX[0] + 11, 126, 6, 'E')
+        triangle(he, BOX[0] + 3, 126)                   # the cursor stays, on a row Hebrew leaves blank
+        res = ta.analyse_pair(en, he)
+        self.assertEqual(classes(res), ['MIRROR-MISMATCH'])
+        self.assertTrue(any('in the same place as in English' in n for n in res['windows'][0]['notes']))
+
+    def test_cursor_that_does_not_end_its_line(self):
+        en, he = pair()
+        triangle(en, BOX[0] + 3, 108)
+        line(en, BOX[0] + 11, 108, 6, 'E')
+        rline(he, 3, 108, 6, 'H')                       # the line itself is mirrored
+        triangle(he, BOX[2] - 3 - span(6) + 1 - 10, 108, right=False)   # but its cursor stands before it
+        res = ta.analyse_pair(en, he)
+        self.assertEqual(classes(res), ['MIRROR-MISMATCH'])
+        self.assertTrue(any('does not end its line' in n for n in res['windows'][0]['notes']))
+
+    def test_right_aligned_column_mirrored(self):
+        en, he = pair()
+        line(en, BOX[2] - 6 - span(4) + 1, 108, 4, 'E')   # English right-aligned, 6 px from the edge
+        line(he, BOX[0] + 6, 108, 8, 'H')               # Hebrew 6 px from the left edge, longer
+        res = ta.analyse_pair(en, he)
+        self.assertEqual(classes(res), ['OK'])
+        self.assertEqual(res['windows'][0]['lines'][0]['anchors'], ['mirror-right'])
+
+    def test_line_much_wider_in_one_shot_is_not_compared(self):
+        en, he = pair()
+        line(en, BOX[0] + 8, 108, 9, 'E')
+        rline(he, 8, 108, 8, 'H')
+        line(en, BOX[0] + 8, 126, 1, 'E')               # English draws one letter (a blank name)
+        rline(he, 3, 126, 25, 'H')
+        res = ta.analyse_pair(en, he)
+        self.assertEqual(classes(res), ['OK'])
+        self.assertEqual([ln['status'] for ln in res['windows'][0]['lines']], ['OK', 'UNPAIRED'])
+
+    def test_line_english_starts_elsewhere_keeps_the_window_start(self):
+        en, he = pair()
+        line(en, BOX[0] + 8, 106, 9, 'E')
+        line(en, BOX[0] + 8, 122, 9, 'E')
+        line(en, BOX[0] + 38, 138, 5, 'E')              # English starts this line 30 px further in
+        rline(he, 8, 106, 8, 'H')
+        rline(he, 8, 122, 8, 'H')
+        rline(he, 8, 138, 6, 'H')                       # Hebrew starts it with the others
+        res = ta.analyse_pair(en, he)
+        self.assertEqual(classes(res), ['OK'])
+        self.assertEqual(res['windows'][0]['lines'][2]['anchors'], ['mirror'])
+
+    def test_text_seen_through_a_narrow_gap(self):
+        en, he = blank(), blank()
+        for s in (en, he):
+            window(s, (20, 20, 120, 60))
+            window(s, (130, 30, 140, 70))               # 11 px wide: too narrow to be a window
+        line(en, 28, 26, 9, 'E')
+        rline(he, 8, 26, 8, 'H', box=(20, 20, 120, 60))
+        glyph(he, 132, 40, 'H')                         # Hebrew ink in the gap, none in English
+        res = ta.analyse_pair(en, he)
+        self.assertEqual(classes(res), ['OK', 'EDGE'])
+        self.assertEqual(res['windows'][1]['rect'], [130, 30, 140, 70])
+
 
 class PngTest(unittest.TestCase):
 
