@@ -83,6 +83,10 @@ Each entry is one open question from the review of the first release candidate: 
 | [Q141](#q141) | Hoenn names left in Latin inside Hebrew strings until a Hoenn-names pass (Q106), MR. STONE in the H&S PokéGear contact data, and the Latin left after them | C. Rows for every Hoenn name a Hebrew string uses, FireRed's form first, a common word translated (MT. PYRE הר המוקד); the cartridge titles in Hebrew letters (רובי, ספיר, אמרלד), rows for the e-Reader and Ash-Greninja, GLACIA גלסיה | changed |
 | [Q142](#q142) | The contest APPEAL is רושם on the hearts' label, in the judge's results and from the MC, but הופעה in the turn lines, the move descriptions and the Easy Chat word; one English sentence was translated both ways. | A. הופעה everywhere the game names the contest appeal | changed |
 | [Q143](#q143) | The Kanto radio upgrade is שדרוג רדיו in the Lavender hint, כרטיס ההרחבה in the gift line and שדרוג כרטיס הרחבה from the music director. | A. The gift line as its English, שדרוג הרדיו; the music director keeps his EXPN CARD, כרטיס הרחבה | changed |
+| [Q144](#q144) | A count from a placeholder reads '1 פוקימונים' at 1: Elm's Pokédex rating, the field healing line ('ב-1 נקודות') and Steven's plate count. | A. A label and a colon, or a sentence the count does not govern | changed |
+| [Q145](#q145) | The stat-change lines broke after הנתון: 'לפורט היריב הנתון' reads 'to the given opposing Furret', and 'הגנה עלה!' pairs a feminine noun with a masculine verb. | B. The verb on the first line for rise and fall ('ל{X} עלה\nהנתון …'); the other lines break before הנתון | changed |
+| [Q146](#q146) | The two-foe effectiveness lines name the second target bare, the form of the player's Pokémon. | A. 'ו{B_DEF_PARTNER_NAME} שלצידו' | changed |
+| [Q147](#q147) | Two numbers joined by neutrals are drawn as one block in the wrong order, and a typed arrow is mirrored (research logs 9 and 10, the Mt. Moon sign). | A. A Hebrew word between two numbers; an arrow typed mirrored | changed |
 
 ## K1
 
@@ -2031,6 +2035,99 @@ Not copied, because they belong to FireRed's renderer, not to its naming: digits
 *Changed:* `data/maps/LavenderTown_RadioStation_hns/scripts.inc`
 
 *Glossary:* `TERM_RADIO_UPGRADE`, `TERM_EXPN_CARD`, `TERM_RADIO_CARD`
+
+## Q144
+
+**Question.** A count from a placeholder before a counted noun reads '1 פוקימונים' when the count is 1. Three lines a player can see did this: Prof. Elm's Pokédex rating on the PokéGear ('ותפסת 1 פוקימונים…'), the field healing line ('הנ”ח של X שוקמו ב-1 נקודות.') and Steven's plate count in the Sinjoh Ruins lab ('1 לוחות עד עכשיו.'). Which form reads right for every value?
+
+*Source:* screen review, round 26 (grammar), each confirmed by a second reviewer.
+
+**Analysis.**
+- Elm's rating: `gBirchDexRatingText_SoYouveSeenAndCaught` (`data/text/pokedex_rating.inc:10-13`), filled by `BufferPokedexRatingForMatchCall` with counts of three digits at most (`src/match_call.c:2309-2344`). From the aide's five Poké Balls (`VAR_NEWBARKTOWN_LABSTATE` 6, `data/maps/NewBarkTown_Lab_hns/scripts.inc:500-503`) to the first catch, the caught count is the starter alone (`GiveMonToPlayer` sets it caught, `src/pokemon.c:9757-9760`). The national rating, `gBirchDexRatingText_OnANationwideBasis` (`:111-115`), has the same two lines. English: 'So, you've seen {STR_VAR_1} POKéMON, and you've caught {STR_VAR_2} POKéMON…', where POKéMON takes no plural.
+- Field healing: `gText_PkmnHPRestoredByVar2` (`src/strings.c:310`). STR_VAR_2 is the HP actually restored (`src/party_menu.c:2114-2116`), after a Potion, a berry, Sacred Ash (`src/party_menu.c:5316`, `:6304`), Softboiled or Milk Drink (`src/fldeff_softboiled.c:77`), so a Pokémon missing one HP prints 1. English hedges: 'by {STR_VAR_2} point(s)'.
+- Steven: `SinjohRuins_Lab_Text_StevenFindPlates` (`data/maps/SinjohRuins_House1_hns/scripts.inc:325-331`) prints while `VAR_PLATECOUNTER` is 0 to 2 (`:281-293`), so it says 1 after the first plate. English has the same flaw, '{STR_VAR_1} PLATES so far'. `StevenFindPlates3` and `StevenFindPlates9` say the same English sentence for 3 to 8 and 9 to 16 plates.
+- FireRed sets no convention here: its rating says '{STR_VAR_2} פוקימונים בבעלותך' and its healing line 'ב-{STR_VAR_2} נקודות' (PR #2 head `df2ee712e`, `data/text/pokedex_rating.inc:10`, `src/strings.c:291`), the same flaw.
+- An item name after a count already reads right: it takes the item's plural name, which the game picks by the count (Q125).
+- Not changed: the EXP lines ('{STR_VAR_1} קיבל {STR_VAR_2}\nנקודות ניסיון!', `src/strings.c:322-323`, and `STRINGID_PKMNGAINEDEXP`, `src/battle_message.c:196`). They print after every knock-out, so a label form would make the most frequent line a list for a value that is rare at most: the gain is the species' yield × level / 7 (`B_SCALED_EXP` is `GEN_3`, `include/config/battle.h:17`; `src/battle_script_commands.c:4199-4203`), and whether any reachable battle gives 1 is unverified. English has the same flaw ('gained 1 Exp. Points!'), and נקודות ניסיון is the glossary term.
+- Widths: the rating's lines are 106 and 114 px with three-digit counts and 169 and 177 px with the audit's 12-glyph fill, in the 192-px call text (`budgets.json` `phone_call_text`); the healing line 146 and 37 px; Steven's line 132 px with two digits and 202 px with the audit's fill (208).
+
+| Option | How | Risk |
+| --- | --- | --- |
+| A. A label and a colon, or a sentence the count does not govern | 'פוקימונים שראית: {STR_VAR_1}, / פוקימונים שתפסת: {STR_VAR_2}…'; 'הנ”ח של X עלו ב-{STR_VAR_2}.'; 'לוחות שנמצאו עד עכשיו: {STR_VAR_1}.' | Low: text only, token order kept. The rating reads as a list, which suits a report of two numbers. |
+| B. Keep each sentence and fix the noun | 'ותפסת {STR_VAR_2} מהם…'; the abbreviation נק' for נקודות | 'מהם' leaves 'ראית 1 פוקימונים' for the seen count; an abbreviation is a new form of a term. |
+| C. A singular and a plural string chosen by count, as the Premier Ball bonus (Q125) | Engine code at the four call sites under `TEXT_RTL` | Engine work for three lines of text. |
+
+**Chosen:** A. Each form reads right for every value, as the English hedges do, and STYLE §1 says so. The healing line says עלו, the verb Hebrew uses with an amount (עלו ב-20); the unit went with the plural. Steven's three texts take the same sentence. Seen on screen on the clip ROM beside rc25 and English, with no clip record: Elm's call in the PokéGear with one Pokémon caught (a forced tour that clears every caught flag but the starter's), the healing line for one HP (a Potion on a Pokémon missing 1 HP), and all five labels in the sweep with every STR_VAR at 1 and at four digits (`<private>/scratch/screens/r27/text/`, `tours/` and `sweep/`).
+
+*Changed:* `data/text/pokedex_rating.inc`, `src/strings.c`, `data/maps/SinjohRuins_House1_hns/scripts.inc`, `translation/hebrew/STYLE.md`
+
+## Q145
+
+**Question.** The stat-change lines broke after הנתון: 'ל{B_DEF_NAME_WITH_PREFIX} הנתון\n{B_BUFF1} עלה{B_BUFF2}!'. The first line prints alone first and reads 'לפורט היריב הנתון', 'to the given opposing Furret'; the second, 'הגנה עלה!', pairs a feminine noun with a masculine verb. Where should these lines break?
+
+*Source:* screen review, round 26 (battle), confirmed by a second reviewer. Seen on rc25 in the release tours `bv_double` ('לפורט היריב הנתון / הגנה עלה!') and `bv_spread_eff`.
+
+**Analysis.**
+- Seven strings broke after הנתון: `gText_DefendersStatRose` and `STRINGID_ATTACKERSSTATROSE`, `SCRIPTINGSTATROSE`, `ATTACKERSSTATFELL`, `DEFENDERSSTATFELL`, `TARGETSTATWONTGOHIGHER` and `STATWASHEIGHTENED` (`src/battle_message.c:79`, `:383`, `:385-387`, `:627`, `:771`). The first five print on most stat changes in every battle. `STATSWONTINCREASE` and `STATSWONTDECREASE` (`:242-243`) already broke before הנתון and read right.
+- The English strings have no manual break, and STYLE §5 keeps such strings auto-wrapped. `BreakStringAutomatic` (`src/line_break.c`) splits only at the template's own spaces, because a placeholder's spaces become NBSP (`src/battle_message.c:3770-3778`), and it balances the lines, so with a long name it can break after הנתון again. Only a manual break keeps הנתון off the end of a line.
+- Q140 keeps the masculine הנתון and the intensity word after the verb. Moving the break, 'ל{X}\nהנתון {B_BUFF1} עלה{B_BUFF2}!', puts הנתון, both buffers and the verb on one line: 198 px with the widest real values (התקפה מיוחדת, בצורה דרסטית), but 223 px with the audit's 12-glyph buffers, an audit error against 208.
+- With the verb on the first line, 'ל{X} עלה\nהנתון {B_BUFF1}{B_BUFF2}!', the line has the order the ability lines already use ('…, עלה הנתון {B_BUFF1}{B_BUFF2}!', `:595`, `:597`, `:684`). The first line is 146 px with a 12-letter name and the suffix, the second 200 px with 12-glyph buffers and 175 px with the widest real values. The intensity word still follows the verb's clause, at its end: 'עלה הנתון הגנה מאוד'.
+- The lines without an intensity word keep the stat before the verb and break before הנתון, as `:242-243` do: 'ל{X}\nהנתון {B_BUFF1} לא יעלה יותר!', 'ל{X}\nהנתון {B_BUFF1} התחזק!'. `TARGETSTATWONTGOHIGHER` said לא יכול לעלות יותר for the English of `STATSWONTINCREASE`; it now says the same לא יעלה יותר.
+- The ability lines (`:595`, `:626`, `:684` auto-wrapped, `:597` broken by hand) were laid out with typical names and with the widest (רגליים מסתבכות, a 12-letter nickname). Their breaks fall after בזכות, after the ability, after עלה or after עלה הנתון, never between a name and הנתון, and the verb stays on the line of הנתון. They are unchanged.
+- FireRed writes these lines 'ה{B_BUFF1} של {X}\n{B_BUFF2}!' with feminine verbs, and its engine puts the verb before the intensity word (PR #2 head `df2ee712e`, `src/battle_message.c:305-313`, `:2241-2259`). H&S keeps its token order (STYLE §5) and Q140's הנתון.
+
+| Option | How | Risk |
+| --- | --- | --- |
+| A. 'ל{X}\nהנתון {B_BUFF1} עלה{B_BUFF2}!' | Move the break before הנתון | Fails the audit with 12-glyph buffers (223 px against 208), though right with the real values. |
+| B. 'ל{X} עלה\nהנתון {B_BUFF1}{B_BUFF2}!' for rise and fall; A for the lines without an intensity word | The verb before the stat, as in the ability lines | Low: every line fits the worst case; the first line ends on the verb, as `:597` does. |
+| C. No manual break | As the English | The auto-wrap can still break after הנתון. |
+
+**Chosen:** B. Every changed line starts its second line with הנתון, so הנתון never follows a name, and the verb agrees with הנתון on the line they share. STYLE §5 and §7 record the exception and the rule. Seen on screen on the clip ROM beside rc25 and English, with no clip record, forced with `scripts/r16_battle_sweep/bsweep.py` in a trainer battle (היריב), a wild battle (הפראי) and on the player's side, with species names and with 12-letter nicknames, each changed string with התקפה מיוחדת and the widest intensity word (`<private>/scratch/screens/r27/text/battle/`), and in the release tours.
+
+*Changed:* `src/battle_message.c`, `translation/hebrew/STYLE.md`
+
+## Q146
+
+**Question.** The two-foe effectiveness lines give the first target its suffix and the second none: 'זה יעיל במיוחד נגד ארבוק היריב וגולבאט!'. A bare name in battle text is the player's Pokémon (STYLE §7), and with two foes of one species the line ends in a bare טורקואל. How should the second target read?
+
+*Source:* screen review, round 26 (battle), confirmed by a second reviewer.
+
+**Analysis.**
+- `STRINGID_SUPEREFFECTIVETWOFOES`, `NOTVERYEFFECTIVETWOFOES` and `ITDOESNTAFFECTTWOFOES` (`src/battle_message.c:863-865`) print '{B_DEF_NAME_WITH_PREFIX2} and {B_DEF_PARTNER_NAME}'. `B_TXT_DEF_PARTNER_NAME` is the partner's nickname with no prefix in both languages (`:3295-3297`), and no other string uses it. English has the same gap: 'the opposing Torkoal and Torkoal!' (`test/battle/spread_moves.c:461`).
+- `ShouldPrintTwoFoesMessage` (`src/battle_script_commands.c:1973-1978`) prints these lines when the targets are the player's too, so a wording such as 'שני היריבים' would be wrong there.
+- The engine could give the partner the suffix (`HANDLE_NICKNAME_STRING_LOWERCASE`) under `TEXT_NAME_SUFFIX_IN_BATTLE`. That is engine code in a file whose strings are Hebrew, picked onto `he/renderer` by hand, and the line would say היריב twice.
+- 'שלצידו' ('beside it') after the second name ties it to the first target's side, whichever side that is: 'נגד ארבוק היריב וגולבאט שלצידו', 'נגד טורקואל היריב וטורקואל שלצידו', 'נגד סנדסלאש-א ודרגונייט שלצידו'. The second target is `BATTLE_PARTNER(gBattlerTarget)`, the Pokémon beside the first, so the word says what the English leaves implicit.
+- Widths: the lines stay auto-wrapped. With two 12-glyph names and the suffix they take three rows with one scroll, as before; with species names two ('זה יעיל במיוחד נגד ארבוק היריב / וגולבאט שלצידו!', 151 and 77 px).
+
+| Option | How | Risk |
+| --- | --- | --- |
+| A. 'ו{B_DEF_PARTNER_NAME} שלצידו' | Text only, three strings | Low: one word the English does not have. |
+| B. The suffix on the partner | Engine code under `TEXT_NAME_SUFFIX_IN_BATTLE`, picked onto `he/renderer` | An engine change for three lines; היריב twice in one line. |
+| C. 'שני היריבים' | Text only | Wrong when the targets are the player's. |
+
+**Chosen:** A. Seen on screen on the clip ROM beside rc25 and English, with no clip record, in the Rocket Hideout multi battle on both sides, with species names and with a 12-letter nickname (`<private>/scratch/screens/r27/text/battle/`), and in the release tour `bv_spread_eff`, a wild double battle.
+
+*Changed:* `src/battle_message.c`, `translation/hebrew/STYLE.md`
+
+## Q147
+
+**Question.** The renderer draws a run of digits, with the neutrals between its digits, left to right as one block, and swaps `<` and `>` outside a run. Two signs read wrong because of it: the New Sinjoh research logs 9 and 10 ('יומן מחקר 9: 20 בספטמבר 1975' showed the 20 first, so the log number and the day traded places) and the Mt. Moon cave sign ('>- כיכר הר הירח' showed '-<'). How should such text be typed?
+
+*Source:* screen review, round 26 (punctuation), confirmed by a second reviewer. The lab's logs 1 to 8 had been fixed the same way (`6135c427ae`), with no rule written down.
+
+**Analysis.**
+- 'Neutrals between two run characters belong to the run' (`docs/hebrew_translation.md:36-40`, `RtlBeginRun` in `src/text.c`). That keeps '10:30', '1,000' and '1-3' whole, but two separate numbers with only a space or punctuation between them become one block in the wrong order. A scan of the Hebrew strings in `data/` and `src/` for two digits joined only by spaces and punctuation finds 68 places after this change, all of them thousands separators or ranges (`<private>/scratch/screens/r27/text/logs/numpair_scan.txt`).
+- Outside a run `<` and `>` swap (`src/text.c:1427-1428`). The English sign, 'MT MOON SQUARE ->', has its arrow at the right edge pointing right. Typed '<-' at the start of the Hebrew line, the arrow shows in the same place and direction: 'כיכר הר הירח ->'. `{RIGHT_ARROW}` is not mirrored, but it is another glyph than the English '->'.
+- Widths: the three log headers are 174, 178 and 167 px in the 200-px prompt line of a sign (log 8 ships at 174 px); the sign's line stays 78 px.
+
+| Option | How | Risk |
+| --- | --- | --- |
+| A. A Hebrew word between two numbers; an arrow typed mirrored | 'יומן מחקר 9, מיום 20 בספטמבר 1975', as logs 1 to 8; '<- כיכר הר הירח' | Low: text only. |
+| B. 'ה-20' | 'יומן מחקר 9: ה-20 בספטמבר 1975' | Reads right, but unlike logs 1 to 8. |
+
+**Chosen:** A; STYLE §4 has both rules. Seen in the sweep on the clip ROM beside rc25 and English, with no clip record (`<private>/scratch/screens/r27/text/sweep/`).
+
+*Changed:* `data/maps/NewSinjoh_House3_hns/scripts.inc`, `data/maps/MtMoon_Cave_hns/scripts.inc`, `translation/hebrew/STYLE.md`
 
 ## Proposed names
 
