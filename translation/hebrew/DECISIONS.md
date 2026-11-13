@@ -93,6 +93,11 @@ Each entry is one open question from the review of the first release candidate: 
 | [Q151](#q151) | The summary's EXP numbers start at the box's left edge and end ragged, and their labels end 6 px before their cell's edge. | A. The EXP window left to right, as the stat columns; the labels printed from x 2 | changed |
 | [Q152](#q152) | The battle bag's USE/CANCEL box hides the end of סגירת התיק in the bottom row. | A. The one-column action boxes five tiles wide under TEXT_RTL, the YES/NO box's footprint | changed |
 | [Q153](#q153) | On the contest results screen every Hebrew nickname touches the star meter. | A. The name windows mirror around the 92 px English uses; the trainer column fits its 42 px | changed |
+| [Q154](#q154) | The status tags: שינה sits one column right of the English SLP (4 and 2 columns of tag colour where English keeps 3 and 3), and the qof of קפוא cuts through the tag's bottom edge. | A. שינה on the English SLP's columns; every qof in the tags stops on the last letter row | changed |
+| [Q155](#q155) | On the Pokédex stats page the catch rate קשה מאוד and the hatch-step eggs touch the red bar on the box's left. | A. Under TEXT_RTL both print 1 px further in, at x 8 like the growth rate | changed |
+| [Q156](#q156) | The text-alignment checker reports עוצמה (POWER) touching the right edge of the Pokédex move box. | A. Keep: it ends 2 px inside the box, the mirror of POWER; the checker measured to the category icon | no change |
+| [Q157](#q157) | The checker reports החלפה (SHIFT) filling its Pokédex search button, with its lamed on the top row. | A. Keep: the same columns as SHIFT, and the lamed two rows inside the button | no change |
+| [Q158](#q158) | The checker reports נ”כ touching the PP column's right edge on the forget-move page. | A. Keep Q150's PP layout: 1 blank column on the right, 0 or 1 on the left; the reported 0 is the column's rounded corner | no change |
 
 ## K1
 
@@ -2268,6 +2273,107 @@ Not copied, because they belong to FireRed's renderer, not to its naming: digits
 **Chosen:** A. Seen on screen on the clip ROM beside English and rc26, with no clip record: the round's `tours/r28_align/pl18_contest.txt` (the nicknames end at x 147 on all four rows, 5 px before the first star's ink at x 153; the final phase the same) and `pl18_long.txt` ('/אלכסנדר' at x 60-97 in the narrower font, 4 px from the nickname). The release tours show no contest results, and none of their shots changed from it (`<private>/scratch/screens/r28/fix/verify/`).
 
 *Changed:* `src/contest_util.c`, `translation/hebrew/STYLE.md` §10
+
+## Q154
+
+**Question.** In the healthboxes and the party, the SLP tag שינה sits one column right of the English SLP: 4 columns of tag colour on its left and 2 on its right, where English keeps 3 and 3, so the he's top bar comes within a pixel of the rounded corner. In the FRZ tag קפוא the qof's tail cuts through the tag's bottom edge.
+
+*Source:* the text-alignment checker (`tools/hebrew/emu/textalign.py`) on the release tours, round 28; reviewed in round 29.
+
+**Analysis.**
+- The tags are art, not text: `graphics/battle_interface/{hns,gen4}/status{,2,3,4}.png` (one sheet per battler, for the H&S and the Gen 4 interfaces) and `graphics/interface/status_icons.png` (party and summary). A tag is 20 px wide; between its outline rows six rows hold the letters, which are holes in the tag colour.
+- `status_tags()` in `tools/hebrew/graphics/coreui/make_coreui.py` centres each word, then takes, of the centred x and one column either side, the one that loses fewest ink pixels to the outline, ties going right. The tie rule was meant for שיתוק, as wide as the tag, but it pushes every word that loses nothing one column right. שינה (14 px) landed at x 4-17 of the healthbox tags and x 10-23 of the icon; the English SLP has x 3-16 and x 9-22.
+- קפוא is 15 px and cannot be centred in 20: it has 3 and 2 columns. Its ק comes from the tags' glyph set with the tail on the tag's bottom row, where no English letter goes; it opens a notch in the tag's outline, light against the healthbox below it. The same ק is in FRB קור (the debug menus only) and in the icon sheet's PAR. `aedb9c43e3` already stopped the healthbox PAR tag's qof above the bottom row. `072ad4c245` kept the lamed's ascender and the final pe's stem of the FNT icon on the outline rows: without them those letters read as kaf and pe. The qof keeps its shape on six rows: its left stem stays apart from the top bar, which tells it from he.
+- The checker reported 'R0' for both tags. Its line band takes the tag's rounded corners for ink; measured from the pixels, the tags had 4 and 2 (SLP) and 3 and 2 with the notch (FRZ).
+- The other tags keep at least English's 3 columns on the right: PSN רעל x 5-16, BRN כוויה x 4-16. The party's PAR keeps x 8-24 of its icon, 2 and 1 columns, as `d3b59b94fe` left it; once its tail is gone the checker can measure that tag and reports it as an EDGE (L0 R0, the corners again).
+
+| Option | How | Risk |
+|---|---|---|
+| A. SLP on the English columns; every qof above the bottom row | Edit the nine sheets: שינה one column left; the qof's tail pixel in FRZ and FRB of every sheet and in PAR of the icon sheet gets the tag colour. `gpaths.LATER_EDITS` keeps `make_coreui.py` from redrawing them | Low. 68 pixels in each healthbox sheet, 69 in the icon sheet; art only, and the English build shows the same art |
+| B. A, and the FRZ tag one column wider | 3 and 3 columns in a 21-px tag | The only 21-px tag; 2 columns are already the healthbox PAR tag's margin on both sides |
+| C. No change | | The SLP tag off centre, a notch in FRZ |
+
+**Chosen:** A; STYLE §10 has the rule. Seen on screen on the clip ROM beside English and rc26, with no clip record: the release tours `bv_status` (the healthboxes of both sides and the party in and out of battle) and `pbi_heal` (the party). SLP now has English's 3 and 3 everywhere; FRZ keeps its bottom row; 27 shots changed, only in those pixels. Frostbite, the Gen 4 interface and the party's frostbite, freeze, paralysis and sleep icons together are in no release tour; four scratch tours show them on the clip ROM, each shot changed only in the expected pixels (`<private>/scratch/screens/r29/verify/`).
+
+*Changed:* `graphics/battle_interface/hns/status{,2,3,4}.png`, `graphics/battle_interface/gen4/status{,2,3,4}.png`, `graphics/interface/status_icons.png`, `tools/hebrew/graphics/gpaths.py`, `tools/hebrew/graphics/README.md`, `translation/hebrew/STYLE.md` §10
+
+## Q155
+
+**Question.** On the Pokédex stats page the catch rate קשה מאוד touches the red bar on the box's left, where English keeps a blank column; so do the hatch-step eggs on the page's second view.
+
+*Source:* the text-alignment checker, round 28 (the two shots of `menu_pokedex`); reviewed in round 29.
+
+**Analysis.**
+- `WIN_STATS_LEFT` mirrors around 101 px, its text area x 8-92 (`ResetStatsWindows`, `src/pokedex_plus_hgss.c`). The box's paper is x 7-94; x 2-6 are the red bar with a pink highlight at x 6. Every English line starts at x 8.
+- English left-aligns the catch rate at x 51. VERY HARD is 42 px; קשה מאוד is 43 (`textwidth.py`, FONT_SMALL), so mirrored it ran to x 7. The other catch rates are 12 to 24 px.
+- English places the eggs by hand to end at x 93; mirrored they started at x 7. The growth rate, right-aligned to x 93 in English, starts at x 8.
+
+| Option | How | Risk |
+|---|---|---|
+| A. Both 1 px further in | Under TEXT_RTL the catch rate and the eggs print 1 px further in (`STATS_LEFT_VALUE_INSET`) and start at x 8, as the growth rate does | Low. The catch rate keeps 4 blank columns before its label (English 7); the space inside קשה מאוד is 3 |
+| B. Mirror the box around 102 px | The exact mirror of its paper | Every line moves; the labels end 1 px from the black frame, where English starts 1 px and the pink column away from the red one |
+| C. 'קשה מאד' (40 px) | A text change | The tree spells מאוד 261 times and מאד nowhere |
+| D. No change | | Two lines joined to the bar |
+
+**Chosen:** A. Seen on screen on the clip ROM beside English and rc26, with no clip record, in the release tour `menu_pokedex`: the catch rate at x 8-50 (rc26 7-49), the eggs at x 8-16 (rc26 7-15); only those pixels changed. Built in English, the change moves only four assert line numbers (`<private>/scratch/screens/r29/engproof/`).
+
+*Changed:* `src/pokedex_plus_hgss.c`, `translation/hebrew/STYLE.md` §10
+
+## Q156
+
+**Question.** The text-alignment checker reports that on the Pokédex stats page עוצמה (POWER) touches the right edge of the move box (English 2 px, Hebrew 0).
+
+*Source:* the text-alignment checker, round 28; reviewed in round 29.
+
+**Analysis.**
+- The box's paper is x 102-233. POWER starts at x 104 and עוצמה ends at x 231: 2 blank columns each, the mirror. The checker's window for the Hebrew line ends at the category icon (x 191-202), so its 0 is the gap to the icon.
+- What differs is that gap: עוצמה is 27 px and POWER 25, and the icon sits at the mirror of its English x (`DexRtlSpriteX`), so 2 blank columns separate it from עוצמה where English has 4. Nothing touches.
+- On the icon's other side the power value prints right-aligned in three characters. Worked out from the layout, a three-digit power ends 4 columns before the icon, as in English (UNVERIFIED on screen: no tour shows one); moving the icon left would take the 2 px from that side.
+
+| Option | How | Risk |
+|---|---|---|
+| A. No change | | 2 blank columns between the label and the icon |
+| B. The icon 2 px left | Under TEXT_RTL | 4 columns to the label, 2 to a three-digit power |
+| C. A shorter word for POWER | `gText_Power` | Shared with the summary's move page, which would change too |
+
+**Chosen:** A. Seen on the release tour shot `menu_pokedex_entry_stats` beside English (`<private>/scratch/screens/r29/verify/crops/dex_power_en_rc26_new_4x.png`).
+
+## Q157
+
+**Question.** The checker reports החלפה (SHIFT) filling its button on the Pokédex search screen (English 1 px each side, Hebrew 0), with its lamed on the top row.
+
+*Source:* the text-alignment checker, round 28 (8 shots of `menu_pokedex`); reviewed in round 29.
+
+**Analysis.**
+- The button is art, `graphics/pokedex/hgss/tileset_menu_search.png`, drawn by `tools/hebrew/graphics/pokedex/make_pokedex.py`, which centres each word in the button (x 53-82 of the screen).
+- Measured in all 8 shots: the button is x 52-83, rows 1-13. SHIFT's ink is x 53-82, rows 4-11; החלפה's is x 53-82, rows 3-11. The columns are the same; the lamed's ascender takes row 3, with 2 rows of the button above it.
+- The checker's line band reached the button's rounded bottom corners (rows 12-13) and counted them as ink.
+
+| Option | How | Risk |
+|---|---|---|
+| A. No change | | |
+| B. A narrower word | Redraw the button | No defect to fix |
+
+**Chosen:** A. Seen on the 8 release tour shots beside English (`<private>/scratch/screens/r29/verify/crops/search_shift_en_rc26_new_8x.png`).
+
+## Q158
+
+**Question.** The checker reports נ”כ touching the PP column's right edge on the forget-move page (English 2 px, Hebrew 0), also on the forget-move pages after a TM and an Exp. Candy.
+
+*Source:* the text-alignment checker, round 28 (`pbi_learn_no`, `pbi_tm`, `pbi_xcandy_evo`); reviewed in round 29.
+
+**Analysis.**
+- Q150 kept the PP layout: 'נ”כ 35/35' is 43 px in the 44-px white column, x 194-237.
+- Measured on the three forget pages, every row, the new move's fifth row included, ends at x 236: 1 blank column before the column's edge, where English keeps 2. The column's bottom-right corner (x 237, row 110) is rounded; the fifth row's band reached it and the checker counted it as ink.
+- On the left, a row starts at x 195 or at x 194, the column's first, depending on its first digit (a 1, or a 2 as in 20/20): 1 or 0 blank columns where English keeps 2. This is the '0-1 px' Q150 recorded.
+- 2 blank columns on each side need the text 3 px narrower: a narrower font than the rest of the page, or no space between the label and the digits, which Q150 turned down.
+
+| Option | How | Risk |
+|---|---|---|
+| A. No change | Q150's layout | 0 or 1 column where English has 2 |
+| B. The PP text in FONT_NARROWER | | A different face from the names beside it |
+
+**Chosen:** A. Seen on the release tour shots `pbi_learn_no_07_forget_page`, `pbi_tm_14_forget` and `pbi_xce_08_forget` (`<private>/scratch/screens/r29/tours/`).
 
 ## Proposed names
 
