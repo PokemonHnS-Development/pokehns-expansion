@@ -94,7 +94,7 @@ Each entry is one open question from the review of the first release candidate: 
 | [Q152](#q152) | The battle bag's USE/CANCEL box hides the end of סגירת התיק in the bottom row. | A. The one-column action boxes five tiles wide under TEXT_RTL, the YES/NO box's footprint | changed |
 | [Q153](#q153) | On the contest results screen every Hebrew nickname touches the star meter. | A. The name windows mirror around the 92 px English uses; the trainer column fits its 42 px | changed |
 | [Q154](#q154) | The status tags: שינה sits one column right of the English SLP (4 and 2 columns of tag colour where English keeps 3 and 3), and the qof of קפוא cuts through the tag's bottom edge. | A. שינה on the English SLP's columns; every qof in the tags stops on the last letter row | changed |
-| [Q155](#q155) | On the Pokédex stats page the catch rate קשה מאוד and the hatch-step eggs touch the red bar on the box's left. | A. Under TEXT_RTL both print 1 px further in, at x 8 like the growth rate | changed |
+| [Q155](#q155) | On the Pokédex stats page the catch rate קשה מאוד and the hatch-step eggs touch the red bar on the box's left, and a three-yield EV row can run into it. | A. Under TEXT_RTL the catch rate and the eggs print 1 px further in, at x 8 like the growth rate; an EV row that would pass x 93 is placed by its labels' widths | changed |
 | [Q156](#q156) | The text-alignment checker reports עוצמה (POWER) touching the right edge of the Pokédex move box. | A. Keep: it ends 2 px inside the box, the mirror of POWER; the checker measured to the category icon | no change |
 | [Q157](#q157) | The checker reports החלפה (SHIFT) filling its Pokédex search button, with its lamed on the top row. | A. Keep: the same columns as SHIFT, and the lamed two rows inside the button | no change |
 | [Q158](#q158) | The checker reports נ”כ touching the PP column's right edge on the forget-move page. | A. Keep Q150's PP layout: 1 blank column on the right, 0 or 1 on the left; the reported 0 is the column's rounded corner | no change |
@@ -2282,8 +2282,8 @@ Not copied, because they belong to FireRed's renderer, not to its naming: digits
 
 **Analysis.**
 - The tags are art, not text: `graphics/battle_interface/{hns,gen4}/status{,2,3,4}.png` (one sheet per battler, for the H&S and the Gen 4 interfaces) and `graphics/interface/status_icons.png` (party and summary). A tag is 20 px wide; between its outline rows six rows hold the letters, which are holes in the tag colour.
-- `status_tags()` in `tools/hebrew/graphics/coreui/make_coreui.py` centres each word, then takes, of the centred x and one column either side, the one that loses fewest ink pixels to the outline, ties going right. The tie rule was meant for שיתוק, as wide as the tag, but it pushes every word that loses nothing one column right. שינה (14 px) landed at x 4-17 of the healthbox tags and x 10-23 of the icon; the English SLP has x 3-16 and x 9-22.
-- קפוא is 15 px and cannot be centred in 20: it has 3 and 2 columns. Its ק comes from the tags' glyph set with the tail on the tag's bottom row, where no English letter goes; it opens a notch in the tag's outline, light against the healthbox below it. The same ק is in FRB קור (the debug menus only) and in the icon sheet's PAR. `aedb9c43e3` already stopped the healthbox PAR tag's qof above the bottom row. `072ad4c245` kept the lamed's ascender and the final pe's stem of the FNT icon on the outline rows: without them those letters read as kaf and pe. The qof keeps its shape on six rows: its left stem stays apart from the top bar, which tells it from he.
+- `status_tags()` in `tools/hebrew/graphics/coreui/make_coreui.py` centres each word, then takes, of the centred x and one column either side, the one that loses fewest ink pixels to the outline, ties going right. The tie rule was meant for שיתוק, as wide as the tag, but it pushes every word that loses nothing one column right. שינה (14 px) landed at x 4-17 of the healthbox tags and x 10-23 of the icon; the English SLP has x 3-16 and x 9-22. The same push moved רעל, כוויה, קור and קפוא one column right of the script's centre too.
+- קפוא is 15 px and cannot be centred in 20: it has 3 and 2 columns, where the script's centre (x 2-16 of the healthbox tags, x 8-22 of the icon) gives 2 and 3. Its ק comes from the tags' glyph set with the tail on the tag's bottom row, where no English letter goes; it opens a notch in the tag's outline, light against the healthbox below it. The same ק is in FRB קור (the debug menus only) and in the icon sheet's PAR. `aedb9c43e3` already stopped the healthbox PAR tag's qof above the bottom row. `072ad4c245` kept the lamed's ascender and the final pe's stem of the FNT icon on the outline rows: without them those letters read as kaf and pe. The qof keeps its shape on six rows: its left stem stays apart from the top bar, which tells it from he.
 - The checker reported 'R0' for both tags. Its line band takes the tag's rounded corners for ink; measured from the pixels, the tags had 4 and 2 (SLP) and 3 and 2 with the notch (FRZ).
 - The other tags keep at least English's 3 columns on the right: PSN רעל x 5-16, BRN כוויה x 4-16. The party's PAR keeps x 8-24 of its icon, 2 and 1 columns, as `d3b59b94fe` left it; once its tail is gone the checker can measure that tag and reports it as an EDGE (L0 R0, the corners again).
 
@@ -2292,6 +2292,7 @@ Not copied, because they belong to FireRed's renderer, not to its naming: digits
 | A. SLP on the English columns; every qof above the bottom row | Edit the nine sheets: שינה one column left; the qof's tail pixel in FRZ and FRB of every sheet and in PAR of the icon sheet gets the tag colour. `gpaths.LATER_EDITS` keeps `make_coreui.py` from redrawing them | Low. 68 pixels in each healthbox sheet, 69 in the icon sheet; art only, and the English build shows the same art |
 | B. A, and the FRZ tag one column wider | 3 and 3 columns in a 21-px tag | The only 21-px tag; 2 columns are already the healthbox PAR tag's margin on both sides |
 | C. No change | | The SLP tag off centre, a notch in FRZ |
+| D. A, and קפוא one column left | x 2-16 and x 8-22, the script's centre: English's 3 columns on the right, where the Hebrew word starts, and 2 on the left | One more column in the nine sheets. The checker then reads the left corner as ink (L0 instead of R0, on a mock of the foe's tag), so it flags the tag either way |
 
 **Chosen:** A; STYLE §10 has the rule. Seen on screen on the clip ROM beside English and rc26, with no clip record: the release tours `bv_status` (the healthboxes of both sides and the party in and out of battle) and `pbi_heal` (the party). SLP now has English's 3 and 3 everywhere; FRZ keeps its bottom row; 27 shots changed, only in those pixels. Frostbite, the Gen 4 interface and the party's frostbite, freeze, paralysis and sleep icons together are in no release tour; four scratch tours show them on the clip ROM, each shot changed only in the expected pixels (`<private>/scratch/screens/r29/verify/`).
 
@@ -2299,23 +2300,24 @@ Not copied, because they belong to FireRed's renderer, not to its naming: digits
 
 ## Q155
 
-**Question.** On the Pokédex stats page the catch rate קשה מאוד touches the red bar on the box's left, where English keeps a blank column; so do the hatch-step eggs on the page's second view.
+**Question.** On the Pokédex stats page the catch rate קשה מאוד touches the red bar on the box's left, where English keeps a blank column; so do the hatch-step eggs on the page's second view. On the second view of a Pokémon with three different EV yields, the first row's last label can run into the bar.
 
-*Source:* the text-alignment checker, round 28 (the two shots of `menu_pokedex`); reviewed in round 29.
+*Source:* the text-alignment checker, round 28 (the two shots of `menu_pokedex`); reviewed in round 29, whose review found the EV row on KINGDRA's page.
 
 **Analysis.**
 - `WIN_STATS_LEFT` mirrors around 101 px, its text area x 8-92 (`ResetStatsWindows`, `src/pokedex_plus_hgss.c`). The box's paper is x 7-94; x 2-6 are the red bar with a pink highlight at x 6. Every English line starts at x 8.
 - English left-aligns the catch rate at x 51. VERY HARD is 42 px; קשה מאוד is 43 (`textwidth.py`, FONT_SMALL), so mirrored it ran to x 7. The other catch rates are 12 to 24 px.
 - English places the eggs by hand to end at x 93; mirrored they started at x 7. The growth rate, right-aligned to x 93 in English, starts at x 8.
+- With three different EV yields the second view's first row puts a label every 29 px from x 8. With one arrow an English label is at most 28 px (SP.A, SP.D), so the third ends by x 93. The Hebrew labels are 23 to 30 px (הג”מ and an arrow is 30), so a third label wider than 27 px starts left of x 8 mirrored: on KINGDRA's page (ATK, SP.A, SP.D) הג”מ starts at x 5 and its arrow is drawn over the bar. By the same arithmetic MELOETTA's starts at x 5 and CELESTEELA's at x 7 (UNVERIFIED on screen: the harness could not open the National Pokédex with either one seen, in English either). DEOXYS's and KYUREM's rows fit. A row of four yields runs past the box in English as well.
 
 | Option | How | Risk |
 |---|---|---|
-| A. Both 1 px further in | Under TEXT_RTL the catch rate and the eggs print 1 px further in (`STATS_LEFT_VALUE_INSET`) and start at x 8, as the growth rate does | Low. The catch rate keeps 4 blank columns before its label (English 7); the space inside קשה מאוד is 3 |
+| A. Both 1 px further in | Under TEXT_RTL the catch rate and the eggs print 1 px further in (`STATS_LEFT_VALUE_INSET`) and start at x 8, as the growth rate does. A three-yield EV row whose last label would pass x 93 is placed by its labels' widths and shares the room left between them, so it starts at x 8 (`PrintStatsLeftEvRow`) | Low. The catch rate keeps 4 blank columns before its label (English 7); the space inside קשה מאוד is 3. KINGDRA's row keeps 2 and 3 blank columns between its labels; a row that fits at the English places does not move |
 | B. Mirror the box around 102 px | The exact mirror of its paper | Every line moves; the labels end 1 px from the black frame, where English starts 1 px and the pink column away from the red one |
-| C. 'קשה מאד' (40 px) | A text change | The tree spells מאוד 261 times and מאד nowhere |
-| D. No change | | Two lines joined to the bar |
+| C. 'קשה מאד' (40 px) | A text change | The tree's strings spell מאוד 269 times and מאד nowhere |
+| D. No change | | Two lines joined to the bar, and an arrow drawn over it |
 
-**Chosen:** A. Seen on screen on the clip ROM beside English and rc26, with no clip record, in the release tour `menu_pokedex`: the catch rate at x 8-50 (rc26 7-49), the eggs at x 8-16 (rc26 7-15); only those pixels changed. Built in English, the change moves only four assert line numbers (`<private>/scratch/screens/r29/engproof/`).
+**Chosen:** A. Seen on screen on the clip ROM beside English and rc26, with no clip record, in the release tour `menu_pokedex`: the catch rate at x 8-50 (rc26 7-49), the eggs at x 8-16 (rc26 7-15); only those pixels changed. Built in English, the change moves only four assert line numbers (`<private>/scratch/screens/r29/engproof/`). The EV row was seen on the clip ROM beside English, with no clip record, in a review tour of KINGDRA's page: the row now runs from x 8 to x 92 (from x 5 before) and the bar is as in English; DEOXYS's row, which fits, did not change, and no release-tour shot changed. With TEXT_RTL FALSE the preprocessed file differs only in four allocation line numbers (`<private>/scratch/screens/r29/review/`).
 
 *Changed:* `src/pokedex_plus_hgss.c`, `translation/hebrew/STYLE.md` §10
 
@@ -2328,7 +2330,7 @@ Not copied, because they belong to FireRed's renderer, not to its naming: digits
 **Analysis.**
 - The box's paper is x 102-233. POWER starts at x 104 and עוצמה ends at x 231: 2 blank columns each, the mirror. The checker's window for the Hebrew line ends at the category icon (x 191-202), so its 0 is the gap to the icon.
 - What differs is that gap: עוצמה is 27 px and POWER 25, and the icon sits at the mirror of its English x (`DexRtlSpriteX`), so 2 blank columns separate it from עוצמה where English has 4. Nothing touches.
-- On the icon's other side the power value prints right-aligned in three characters. Worked out from the layout, a three-digit power ends 4 columns before the icon, as in English (UNVERIFIED on screen: no tour shows one); moving the icon left would take the 2 px from that side.
+- On the icon's other side the power value prints right-aligned in three characters. A three-digit power ends 4 columns before the icon: seen on KINGDRA's page (HYDRO PUMP, 110) in a review tour, where English's 110 starts 5 columns after it, its leading 1 being narrow. Moving the icon left would take the 2 px from that side.
 
 | Option | How | Risk |
 |---|---|---|

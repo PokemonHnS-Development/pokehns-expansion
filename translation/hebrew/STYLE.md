@@ -179,7 +179,8 @@ keeps upstream's pen and mirrors what it draws (`docs/hebrew_translation.md`, wi
   - where the art starts inside the window (a frame drawn in it), print from a smaller x so the
     line ends as far inside the art as English starts: the summary's EXP labels (Q151);
   - a print that the mirror carries onto the art's first column is moved in to where the box's
-    other lines start: the Pokédex stats box's catch rate and hatch-step eggs (Q155).
+    other lines start: the Pokédex stats box's catch rate, hatch-step eggs and three-yield EV
+    row (Q155).
 - Numbers that English right-aligns with leading spaces keep the English layout
   (`WINDOW_RTL_LTR`): the summary's stat columns and its EXP box (Q151).
 - Where a mirrored column meets a column laid out differently from English (the summary's PP
