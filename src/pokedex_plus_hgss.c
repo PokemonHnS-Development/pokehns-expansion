@@ -5775,6 +5775,13 @@ static u8* PrintMonStatsToggle_EV_Arrows(u8 *dest, u8 value)
     return dest;
 }
 
+#if TEXT_RTL
+// The stats box mirrors around its text area (x 8-92), but its paper starts at x 7, beside the
+// red bar. Mirrored, two prints reach x 7 and read as joined to the bar: the widest catch rate,
+// 1 px wider than its English, and the hatch-step eggs, which English ends at x 93. They are
+// printed 1 px further in, where the growth rate below them starts.
+#define STATS_LEFT_VALUE_INSET 1
+#endif
 static void PrintStatsScreen_Left(u8 taskId)
 {
     u8 base_x = 8;
@@ -5965,6 +5972,9 @@ static void PrintStatsScreen_Left(u8 taskId)
 
         //Catch rate
         PrintStatsScreenTextSmall(WIN_STATS_LEFT, sText_Stats_CatchRate, base_x, base_y + base_y_offset*base_i);
+#if TEXT_RTL
+        x_offset_column -= STATS_LEFT_VALUE_INSET;
+#endif
         if (catchRate <= 10)
             PrintStatsScreenTextSmall(WIN_STATS_LEFT, sText_Stats_CatchRate_Legend, base_x + x_offset_column, base_y + base_y_offset*base_i);
         else if (catchRate <= 70)
@@ -6071,7 +6081,11 @@ static void PrintStatsScreen_Left(u8 taskId)
                 StringCopy(strEV, sText_Stats_EggCycles_Slow);
                 align_x = 67;
             }
+#if TEXT_RTL
+            PrintStatsScreenTextSmall(WIN_STATS_LEFT, strEV, align_x - STATS_LEFT_VALUE_INSET, base_y + base_y_offset*base_i);
+#else
             PrintStatsScreenTextSmall(WIN_STATS_LEFT, strEV, align_x, base_y + base_y_offset*base_i);
+#endif
         }
         base_i++;
 
