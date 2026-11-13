@@ -5781,6 +5781,54 @@ static u8* PrintMonStatsToggle_EV_Arrows(u8 *dest, u8 value)
 // 1 px wider than its English, and the hatch-step eggs, which English ends at x 93. They are
 // printed 1 px further in, where the growth rate below them starts.
 #define STATS_LEFT_VALUE_INSET 1
+
+// With three or more different EV yields the first row puts a label every 29 px from x 8. With one
+// arrow an English label is at most 28 px, so the third ends by x 93; a Hebrew one is up to 30 px
+// (הג”מ and an arrow), and mirrored it would start inside the red bar. When the last label would
+// pass x 93, the labels are placed by their widths instead and share the room left between them,
+// so the row ends at x 93 and, mirrored, starts at x 8 like the other lines. A row that does not
+// fit even then (four different yields) keeps the English places.
+#define STATS_LEFT_TEXT_END 93
+#define STATS_LEFT_EV_PITCH 29
+
+static void PrintStatsLeftEvRow(const u8 *EVs, u8 left, u8 top)
+{
+    static const u8 *const sStatNames[NUM_STATS] =
+    {
+        sText_Stats_HP, sText_Stats_Speed, sText_Stats_Attack,
+        sText_Stats_SpAttack, sText_Stats_Defense, sText_Stats_SpDefense,
+    };
+    u8 labels[NUM_STATS][16];
+    u8 widths[NUM_STATS];
+    u32 i, room, count = 0, total = 0;
+    u32 x = left;
+
+    for (i = 0; i < NUM_STATS; i++)
+    {
+        if (EVs[i] == 0)
+            continue;
+        StringCopy(gStringVar1, sStatNames[i]);
+        PrintMonStatsToggle_EV_Arrows(gStringVar2, EVs[i]);
+        StringExpandPlaceholders(labels[count], sText_Stats_EvStr1Str2);
+        widths[count] = GetStringWidth(FONT_SMALL, labels[count], 0);
+        total += widths[count];
+        count++;
+    }
+    if (count < 2
+     || left + STATS_LEFT_EV_PITCH * (count - 1) + widths[count - 1] <= STATS_LEFT_TEXT_END
+     || left + total + count - 1 > STATS_LEFT_TEXT_END)
+    {
+        for (i = 0; i < count; i++)
+            PrintStatsScreenTextSmall(WIN_STATS_LEFT, labels[i], left + STATS_LEFT_EV_PITCH * i, top);
+        return;
+    }
+    room = STATS_LEFT_TEXT_END - left - total;
+    for (i = 0; i < count; i++)
+    {
+        PrintStatsScreenTextSmall(WIN_STATS_LEFT, labels[i], x, top);
+        x += widths[i] + room / (count - 1) + (i < room % (count - 1));
+    }
+}
 #endif
 static void PrintStatsScreen_Left(u8 taskId)
 {
@@ -5905,6 +5953,9 @@ static void PrintStatsScreen_Left(u8 taskId)
         }
         else //3 different EVs in 1 row
         {
+#if TEXT_RTL
+            PrintStatsLeftEvRow(EVs, base_x, base_y + base_y_offset*base_i);
+#else
             column = 0;
             //HP
             if (EVs[0] > 0)
@@ -5960,6 +6011,7 @@ static void PrintStatsScreen_Left(u8 taskId)
                 PrintStatsScreenTextSmall(WIN_STATS_LEFT, gStringVar3, base_x + 29*column, base_y + base_y_offset*base_i);
                 column++;
             }
+#endif
         }
         base_i++;
     }
