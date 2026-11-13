@@ -1,0 +1,82 @@
+# From the Cherrygrove save: Route 30 north (trainers met on the way are fought), Mr. Pokemon's
+# house (the Mystery Egg, Prof. Oak, the Pokedex), Elm's call on the way out, back to
+# Cherrygrove for the first rival battle, then Route 29 east to New Bark. Ends saved in the
+# Players house: keepsave pe_rival.
+# Driver: pe_ops.py (hns.py + the story-tour ops + talkw / fight / walkfight / walkw / scenea / pocket).
+start save:pe_cherry
+include ../../scripts/continue.txt
+fastbattles off
+ev setflag FLAG_DISABLE_ENCOUNTERS; end
+walkto 7 7
+go DOWN 2
+walkto 34 0
+go UP
+snap pe03_route30
+objs
+walkfight 31 30 pe03_r30a
+face UP
+talk pe03_sign 5
+walkfight 32 5 pe03_r30c
+face UP
+talk pe03_mailbox 5
+walkfight 35 5 pe03_r30d
+stepto UP
+waitcb2x CB2_Overworld 900
+scene pe03_mrp 90000 40
+snap pe03_mrp_end
+approach 1
+talk pe03_mrp_again 10
+walkto 1 2 UP
+talk pe03_magazine 10
+walkto 5 8
+stepto DOWN
+waitcb2x CB2_Overworld 900
+
+# --- Elm's call as soon as the player is outside, then south to Cherrygrove
+scenea pe03_call 4 600
+snap pe03_call_end
+walkfight 25 57 pe03_south
+go DOWN
+snap pe03_cherry_back
+
+# --- the first rival battle (coord trigger at the east exit)
+walkfight 60 10 pe03_rival
+snap pe03_rival_end
+
+# --- east along Route 29 to New Bark: the lab's police scene (NO, then YES; the rival's name
+# kept as offered on the naming screen), the aide's Poke Balls, Mom's good luck
+walkfight 64 10 pe03_e1
+go RIGHT
+walkfight 69 18 pe03_e2
+go RIGHT
+snap pe03_newbark_back
+walkfight 10 10 pe03_e3
+stepto UP
+waitcb2x CB2_Overworld 900
+scene pe03_police 30000
+yesno pe03_police_yn NO
+scene pe03_police_no 10000
+yesno pe03_police_no_yn YES
+waitcb2x CB2_NamingScreen 900
+waitnaming
+snap pe03_rivalname
+tap START 30
+snap pe03_rivalname_ok
+tap A 30
+waitcb2x CB2_Overworld 900
+scene pe03_police_named 10000
+yesno pe03_police_named_yn YES
+scene pe03_police_end 60000
+snap pe03_police_free
+walkto 6 12
+scene pe03_aide_balls 20000
+snap pe03_aide_balls_end
+go DOWN
+walkfight 20 12 pe03_e4
+go UP
+snap pe03_home
+objs
+approach 1
+talk pe03_mom_goodluck 10
+savegame
+keepsave pe_rival

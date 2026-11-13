@@ -1,0 +1,21 @@
+# Safari Zone (Fuchsia): the entrance NPCs and charts, the counter (play? YES, the fee, the balls),
+# the Safari Zone's arrival, START in Safari mode (balls and steps window), a Safari battle (the
+# BALL / POKEBLOCK / GO NEAR / RUN menu, RUN). Then the Johto Safari Zone gate's attendants.
+start saves/ladder6_postgame.sav
+include ../../scripts/continue.txt
+
+ev additem ITEM_POKEBLOCK_CASE, 1; end
+arrive MAP_FUCHSIA_CITY_SAFARI_ZONE_ENTRANCE_HNS 5 12 sfe
+visit sfe
+arrive MAP_FUCHSIA_CITY_SAFARI_ZONE_ENTRANCE_HNS 5 7 sfe2
+face UP
+go UP 2
+converse sfe_play yes
+press START 2
+waitptr gMenuCallback HandleStartMenuInput
+snap sfz_start
+tap B 4
+waitctl 300 B
+wild sfz_wild
+arrive MAP_SAFARI_ZONE_GATE_SAFARI_ZONE_ENTRANCE_HNS 9 12 szg
+visit szg

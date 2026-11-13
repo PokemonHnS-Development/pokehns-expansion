@@ -89,6 +89,10 @@ Each entry is one open question from the review of the first release candidate: 
 | [Q147](#q147) | Two numbers joined by neutrals are drawn as one block in the wrong order, and a typed arrow is mirrored (research logs 9 and 10, the Mt. Moon sign). | A. A Hebrew word between two numbers; an arrow typed mirrored | changed |
 | [Q148](#q148) | The numero sign stands left of its number in the bag's TM and berry rows, the Pyramid bag and the berry tag (№01) but right of it on the summary and the Pokédex pages (006№). | A. Right of the number everywhere (01№), as Unicode and Hebrew reading order put it: the renderer treats {NO} as a neutral | changed |
 | [Q149](#q149) | A prefix letter before a name placeholder prints without the maqaf when the name is Latin (לGOLD נגמרו), though every static prefix before Latin letters or digits takes one (ב-20). | A. The engine adds the maqaf when the placeholder's text starts with a Latin letter or a digit, or is a name from a Japanese game | changed |
+| [Q150](#q150) | On the summary move pages every mirrored move name ends 2 px from its PP text ('התנפלות35/35'). | A. The names 2 px in from the window edge, fitted to the 70 px left: the 4 blank columns English keeps after its widest name | changed |
+| [Q151](#q151) | The summary's EXP numbers start at the box's left edge and end ragged, and their labels end 6 px before their cell's edge. | A. The EXP window left to right, as the stat columns; the labels printed from x 2 | changed |
+| [Q152](#q152) | The battle bag's USE/CANCEL box hides the end of סגירת התיק in the bottom row. | A. The one-column action boxes five tiles wide under TEXT_RTL, the YES/NO box's footprint | changed |
+| [Q153](#q153) | On the contest results screen every Hebrew nickname touches the star meter. | A. The name windows mirror around the 92 px English uses; the trainer column fits its 42 px | changed |
 
 ## K1
 
@@ -2177,6 +2181,93 @@ Not copied, because they belong to FireRed's renderer, not to its naming: digits
 **Chosen:** A. Measured on the clip ROM against rc25: the full sweep (player GOLD) changes exactly the 8 labels with a prefix before {PLAYER} (ל-GOLD, ש-GOLD), each one byte longer, the same pages, no clip; a stress sweep with the player MMMMMMM and three 12-letter Latin variables changes 192 labels by one or two bytes, all OK, no page added, no clip; the release and clip tours show no change from it (no tour shows a Latin name after a prefix). Seen on screen: seven of those labels, a battle line with a Pokémon named on the English ROM (ל-TYPHLOSION הנתון הגנה עלה!, while לג'יאודוד הפראי stays joined), and the PC's בחרת ב-GOLDY. (`<private>/scratch/screens/r27/engine/maqaf/`). Two Japanese nicknames in the same battle line both print with the hyphen, ל-あいうえ and ל-ござじず (`<private>/scratch/screens/r27/review-engine/jpn/`).
 
 *Changed:* `src/text.c`, `include/text.h`, `src/string_util.c`, `src/battle_message.c`, `src/dynamic_placeholder_text_util.c`; STYLE.md §4
+
+## Q150
+
+**Question.** On the summary move pages every Hebrew move name ends 2 px from its PP text, so a row reads as one word ('התנפלות35/35'). How should the mirrored name column meet the PP column?
+
+*Source:* play-through review, round 28 (early game), confirmed by a second reviewer.
+
+**Analysis.**
+- The name window `PSS_DATA_WINDOW_MOVE_NAMES` is x 120-191 (`src/pokemon_summary_screen.c`, `sPageMovesTemplate`). English starts each name at x 120; mirrored, every Hebrew name ends at x 191, the exact mirror. The window itself is right.
+- The PP window starts at x 192. The Hebrew PP text, 'נ”כ 35/35' in the narrow font, is 43 px at x 3 (`MOVES_PP_X`), so it starts at x 194; the English 'PP35/35' starts at x 196. That layout is deliberate: the label reads first at the column's right end, and 43 px leaves no room for a margin (the comment at `sMovesPPLayout`). Only columns 192-193 stay blank between a Hebrew name and its numbers, against 4 in English after its widest possible name (72 px, ending at x 191) and 7 after the widest name the review's party showed.
+- The same window holds the dash of an empty slot, CANCEL and the new move on the forget-move page (`PrintMoveNameAndPP`, `PrintNewMoveDetailsOrCancelText`). The pages: BATTLE MOVES, CONTEST MOVES, move select, the forget-move page, the summary opened in battle.
+- Widths of the 935 move names in FONT_NORMAL (`textwidth.py`): 15 are wider than 72 px and already take the narrow font; 8 are 71-72 px (ממתק או תעלול, קבלת פנים קרה, מטר כוכבי טרה, מכות בכל הכוח, ניפוץ שמש צורב, צמיחת יתר מקס, קוצי פלדה מקס, זעם רוח ג'ימקס); 15 more are 69-70 px.
+
+| Option | How | Risk |
+|---|---|---|
+| A. The names 2 px in | Under TEXT_RTL print the names, the dash, CANCEL and the new move at x 2 and fit them to the 70 px left (`MOVES_NAME_X`; `PrintTextOnWindowToFit` fits to the room after x). They end at x 189: 4 blank columns, English's worst case | Low. The 8 names of 71-72 px take the narrow font |
+| B. The names 4 px in | x 4, 68 px | 23 more names take the narrow font, for 2 more blank columns |
+| C. Move or shrink the PP text | Start it at x 196 | It needs 43 px; without the space between label and digits it would crowd the other way |
+| D. No change | | Every row keeps reading as one word |
+
+**Chosen:** A. Seen on screen on the clip ROM beside English and rc26, with no clip record: the round's `tours/r28_align/v_summary.txt` (names end at x 189 on every row, the PP ink starts at x 194: 4 blank columns instead of 2) and the 12 release-tour shots of the move pages and the forget-move page, each changed only inside the name window (`<private>/scratch/screens/r28/fix/verify/`, `fix/tours/`). The PP column keeps its layout; checked on its own it shows Hebrew ink 0-1 px from the white column's edges where English keeps 2, by design.
+
+*Changed:* `src/pokemon_summary_screen.c`, `tools/hebrew/data/budgets.json`, `tools/hebrew/glossary_widths.py`, `translation/hebrew/STYLE.md` §10
+
+## Q151
+
+**Question.** On the summary SKILLS page the EXP total and the points to the next level start 4 px from their box's left edge and end ragged (40007 at x 196-225, 3801 at x 196-218), while the stat columns above them are flush right as in English. The two labels beside them end 6 px before their cell's right edge, where English starts them 2 px inside it.
+
+*Source:* play-through review, round 28 (early and middle game), two findings, each confirmed by a second reviewer.
+
+**Analysis.**
+- `PrintExpPointsNextLevel` right-aligns both numbers with leading spaces (`STR_CONV_MODE_RIGHT_ALIGN`, `GetStringRightAlignXOffset(..., 42) + 2`) in `PSS_DATA_WINDOW_EXP` (x 192-239). Mirrored, the spaces go to the right, so both numbers start at x 196 whatever their length.
+- `SetSummaryDataWindowRtl` keeps the two stat value windows `WINDOW_RTL_LTR` for exactly that reason and left the EXP window out. Only these digits print in it.
+- The label window `PSS_LABEL_WINDOW_POKEMON_SKILLS_EXP` is x 80-167, but its green cell starts at x 84: the frame takes x 80-83. English prints the labels at x 6, 2 px inside the cell; mirrored from x 6 they end at x 161, 6 px from the cell's right edge (x 167).
+
+| Option | How | Risk |
+|---|---|---|
+| A. The EXP window left to right, the labels from x 2 | Under TEXT_RTL add `PSS_DATA_WINDOW_EXP` to the windows `SetSummaryDataWindowRtl` keeps `WINDOW_RTL_LTR`; print the two labels at x 2 | Low. The numbers print exactly as English, flush right with the stat column; the labels end at x 165, 2 px inside the cell |
+| B. `WINDOW_RTL_IN_PLACE` for the EXP window | The same picture for text without Hebrew | A different mode from the stat columns for the same kind of text |
+| C. No change | | The only ragged column on the page |
+
+**Chosen:** A. Seen on screen on the clip ROM beside English and rc26, with no clip record: in six shots (`tours/r28_align/v_summary.txt`, `v_skills_exp.txt`) the EXP box x 192-239, y 112-145 is pixel for pixel the English one; the labels end at x 165; the 8 release-tour SKILLS shots (`menu_party`, `pbi_vitamins`) change only in the numbers and the labels (`<private>/scratch/screens/r28/fix/verify/`, `fix/tours/`).
+
+*Changed:* `src/pokemon_summary_screen.c`, `translation/hebrew/STYLE.md` §10
+
+## Q152
+
+**Question.** In the battle bag the USE/CANCEL box hides the end of סגירת התיק (CLOSE BAG) in the bottom row; English keeps CLOSE BAG 7 px clear of its box.
+
+*Source:* play-through review, round 28 (middle game), confirmed by a second reviewer.
+
+**Analysis.**
+- Under TEXT_RTL the one-column boxes `ITEMWIN_1x1` and `ITEMWIN_1x2` (`src/item_menu.c`) sit mirrored over the item list's quantity column at `tilemapLeft` 15, one tile right of the exact mirror, with English's 7 tiles: their frame runs to x 183. The Hebrew names are right-aligned at x 222 and grow toward the box, so a bottom-row name kept 39 px (x 184-222) where English keeps 48 (x 120-167). סגירת התיק is 48 px (x 175-222).
+- The exact mirror (`tilemapLeft` 14) would put the frame on the description box's edge, which is why the YES/NO and quantity boxes stay one tile in.
+- These boxes show one column: USE/CANCEL in battle, CANCEL alone, the SELECT registration's two options, and in link, Union Room, Apprentice, Favor Lady and Quiz Lady bags GIVE, SHOW or CONFIRM with CANCEL. The widest label, החזקה, is 29 px in FONT_NARROW at x 8: 37 px.
+- English too hides the ends of long names in the rows its box covers (HYPER POTIO, REVIVAL HER): the box covers the quantity column and whatever reaches it.
+
+| Option | How | Risk |
+|---|---|---|
+| A. Five tiles wide | Under TEXT_RTL both boxes are 5 tiles at `tilemapLeft` 15, the YES/NO box's footprint: the frame ends at x 167 and a covered row keeps x 168-222 (55 px) | Low. The labels fit (37 of 40 px); English and gameplay do not change |
+| B. The exact mirror | `tilemapLeft` 14, 7 tiles | The frame on the description box; the covered rows keep 47 px |
+| C. No change | | CLOSE BAG and names of 40-48 px lose their end |
+
+**Chosen:** A. Seen on screen on the clip ROM beside English and rc26, with no clip record: the round's `tours/r28_align/v_bbag.txt` (the frame ends at x 166, סגירת התיק is whole at x 175-222, 8 px clear) and `v_bag_box.txt` (a long medicine pocket at three scroll positions, CANCEL alone, the registration's options); the 5 release-tour shots of the battle bag change only inside the box (`<private>/scratch/screens/r28/fix/verify/`, `fix/tours/`).
+
+*Changed:* `src/item_menu.c`, `tools/hebrew/data/budgets.json`, `translation/hebrew/STYLE.md` §10
+
+## Q153
+
+**Question.** On the contest results screen every Hebrew nickname ends 1 px from the star meter, in both phases and on all four rows.
+
+*Source:* play-through review, round 28 (late game), confirmed by a second reviewer.
+
+**Analysis.**
+- The four name windows are x 56-151 (`sWindowTemplates`, `src/contest_util.c`) and the star meter starts at x 152 (tile column 19). `LoadContestMonName` prints the nickname at x 0, fitted to 49 px, and '/trainer' at x 50. English fills the windows from the left: its widest line, a seven-letter Latin trainer name ('/MMMMMMM', 41 px from x 106), stays inside the first 92 px (x 56-147).
+- Mirrored around the whole window, every Hebrew nickname ended at x 151. Like the dialogue box, the window is wider than what its text uses on the side that becomes the right one (`docs/hebrew_translation.md`, window modes).
+- Mirrored around 92 px, the nickname ends at x 147, but the trainer column shrinks from 46 to 42 px: '/אלכסנדר', a seven-letter player name, is 44 px in FONT_NARROW and lost its last letter at the window's left edge (a clip record, round 9's long-name case). The appeal screen fits the same text to its column (`PrintContestantTrainerNameWithColor`, `src/contest.c`).
+
+| Option | How | Risk |
+|---|---|---|
+| A. Mirror around 92 px and fit the trainer column | Under TEXT_RTL `SetWindowRtlMirrorWidth(i, 92)` for the four windows; `AddContestTextPrinter` fits its text to the room from x to the mirror's edge (42 px), falling back to FONT_NARROWER | Low. The nickname ends where the English trainer column ends; a long '/name' takes a narrower font (38 px for '/אלכסנדר') |
+| B. Mirror around 92 px only | | A seven-letter player name loses a letter |
+| C. No change | | Every name touches the stars |
+
+**Chosen:** A. Seen on screen on the clip ROM beside English and rc26, with no clip record: the round's `tours/r28_align/pl18_contest.txt` (the nicknames end at x 147 on all four rows, 5 px before the first star's ink at x 153; the final phase the same) and `pl18_long.txt` ('/אלכסנדר' at x 60-97 in the narrower font, 4 px from the nickname). The release tours show no contest results, and none of their shots changed from it (`<private>/scratch/screens/r28/fix/verify/`).
+
+*Changed:* `src/contest_util.c`, `translation/hebrew/STYLE.md` §10
 
 ## Proposed names
 

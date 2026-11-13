@@ -1,0 +1,290 @@
+# From the save after Mom's good luck (Cyndaquil, the Pokedex, five Poke Balls): Mom's
+# savings menu; every page of the start menu (Pokedex list and entry pages, party and
+# summary, each bag pocket, the PokeGear map and phone with a call, the trainer card front
+# and back, saving, the options pages); then Route 29: the old man's catching tutorial and a
+# wild Pokemon caught with a Poke Ball (throw, caught, Pokedex page, nickname NO).
+# Driver: pe_ops.py (hns.py + the story-tour ops + talkw / fight / walkfight / walkw / scenea / pocket).
+start save:pe_rival
+include ../../scripts/continue.txt
+fastbattles off
+ev setflag FLAG_DISABLE_ENCOUNTERS; end
+
+# --- Mom: rest, then the savings menu (CHECK, DEPOSIT with the amount box, EXIT)
+objs
+approach 1
+talk pe04_mom 20
+snap pe04_mom_menu
+tap A 4
+talk pe04_mom_check 10 -
+snap pe04_mom_menu2
+press DOWN
+tap A 4
+waitquiet
+snap pe04_mom_deposit
+press UP
+snap pe04_mom_deposit_up
+tap A 4
+talk pe04_mom_deposited 10 -
+snap pe04_mom_menu3
+closeall
+
+# --- the start menu and the Pokedex
+press START 2
+waitptr gMenuCallback HandleStartMenuInput
+snap pe04_start_menu
+tap B 4
+waitctl 600
+startmenu POKEDEX
+waitcb2x CB2_Pokedex 600
+waittaskx pokedex_plus_hgss:Task_HandlePokedexInput 600
+snap pe04_dex_list
+tap START 4
+waittaskx pokedex_plus_hgss:Task_HandlePokedexStartMenuInput 120
+16 -
+snap pe04_dex_list_menu
+tap B 4
+waittaskx pokedex_plus_hgss:Task_HandlePokedexInput 120
+16 -
+dexfind 155
+16 -
+snap pe04_dex_list_cynda
+tap A 4
+waittaskx pokedex_plus_hgss:Task_HandleInfoScreenInput 600
+snap pe04_dex_info
+tap RIGHT 4
+waittaskdata Task_HandlePokedexAreaScreenInput 0 1 600
+snap pe04_dex_area
+tap RIGHT 4
+waittaskx pokedex_plus_hgss:Task_HandleStatsScreenInput 600
+snap pe04_dex_stats
+tap RIGHT 4
+waittaskx pokedex_plus_hgss:Task_HandleEvolutionScreenInput 600
+snap pe04_dex_evo
+tap RIGHT 4
+waittaskx pokedex_plus_hgss:Task_HandleCryScreenInput 600
+snap pe04_dex_cry
+tap RIGHT 4
+waittaskx pokedex_plus_hgss:Task_HandleSizeScreenInput 600
+snap pe04_dex_size
+tap B 4
+waittaskx pokedex_plus_hgss:Task_HandleInfoScreenInput 600
+waitquiet
+tap B 4
+waittaskx pokedex_plus_hgss:Task_HandlePokedexInput 600
+16 -
+tap B 4
+waitcb2x CB2_Overworld 900
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600
+
+# --- the party and the summary
+startmenu POKEMON
+waitcb2x CB2_UpdatePartyMenu 600
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap pe04_party
+tap A 4
+waittaskx Task_HandleSelectionMenuInput 600
+waitquiet
+snap pe04_party_actions
+tap A 4
+waittaskx pokemon_summary_screen:Task_HandleInput 900
+waitnotask Task_PrintInfoPage 120
+snap pe04_summary_info
+tap RIGHT 4
+waittaskx pokemon_summary_screen:Task_HandleInput 300
+waitnotask Task_PrintSkillsPage 120
+snap pe04_summary_skills
+tap RIGHT 4
+waittaskx pokemon_summary_screen:Task_HandleInput 300
+waitnotask Task_PrintBattleMoves 120
+snap pe04_summary_moves
+tap A 4
+waittaskx Task_HandleInput_MoveSelect 300
+waitnotask Task_SlidePowerAccWindow 120
+snap pe04_summary_moves_desc
+tap DOWN 4
+waitquiet
+snap pe04_summary_moves_desc2
+tap B 4
+waittaskx pokemon_summary_screen:Task_HandleInput 300
+tap RIGHT 4
+waittaskx pokemon_summary_screen:Task_HandleInput 300
+waitquiet
+snap pe04_summary_page4
+tap B 4
+waittaskx Task_HandleSelectionMenuInput 900
+waitquiet
+press DOWN
+snap pe04_party_actions_2
+press DOWN
+snap pe04_party_actions_3
+tap B 4
+waittaskx Task_HandleChooseMonInput 600
+tap B 4
+waitcb2x CB2_Overworld 900
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600
+
+# --- the bag: every pocket
+startmenu BAG
+waitcb2x CB2_BagMenuRun 600
+waittaskx Task_BagMenu_HandleInput 600
+waitquiet
+pocket 0
+snap pe04_bag_0
+pocket 1
+snap pe04_bag_1
+pocket 2
+snap pe04_bag_2
+tap A 4
+waitquiet
+snap pe04_bag_2_context
+tap B 4
+waitquiet
+pocket 3
+snap pe04_bag_3
+pocket 4
+snap pe04_bag_4
+pocket 5
+snap pe04_bag_5
+tap A 4
+waitquiet
+snap pe04_bag_5_context
+tap B 4
+waitquiet
+tap B 4
+waitcb2x CB2_Overworld 900
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600
+
+# --- the trainer card
+startmenu PLAYER
+waitcb2x CB2_TrainerCard 900
+waitpmem 8 trainer_card:sData 0 10 900
+snap pe04_card_front
+press A
+waitpmem 8 trainer_card:sData 0 11 900
+snap pe04_card_back
+press B
+waitpmem 8 trainer_card:sData 0 10 900
+press B
+waitcb2x CB2_Overworld 900
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600
+
+# --- the options
+startmenu OPTION
+waitcb2x option_menu:MainCB2 900
+waittaskx option_menu:Task_ProcessInput 900
+snap pe04_options_1
+press DOWN
+press DOWN
+press DOWN
+snap pe04_options_1b
+press R
+waittaskx option_menu:Task_ProcessInput 300
+snap pe04_options_2
+press R
+waittaskx option_menu:Task_ProcessInput 300
+snap pe04_options_3
+press B
+waitcb2x CB2_Overworld 900
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600
+
+# --- saving
+startmenu SAVE
+waitptr sSaveDialogCallback SaveConfirmInputCallback 900
+snap pe04_save_confirm
+tap A 0
+waitptr sSaveDialogCallback SaveDoSaveCallback 900
+snap pe04_save_saving
+waitptr sSaveDialogCallback SaveReturnSuccessCallback 900
+snap pe04_save_saved
+waitctl 900 B
+
+# --- the PokeGear: main menu, the map, the phone list and a call to Mom
+startmenu POKEGEAR
+waitcb2x CB2_Pokenav 600
+waitnav
+snap pe04_gear_main_1
+press DOWN
+waitnav
+snap pe04_gear_main_2
+press DOWN
+waitnav
+snap pe04_gear_main_3
+press DOWN
+waitnav
+snap pe04_gear_main_4
+press DOWN
+waitnav
+snap pe04_gear_main_5
+press A
+waitnav
+snap pe04_gear_map
+press B
+waitnav
+press DOWN
+waitnav
+press DOWN
+waitnav
+press A
+waitnav
+snap pe04_gear_call_list
+press A
+waitnav
+snap pe04_gear_call_menu
+press A
+pages pe04_gear_call 30
+snap pe04_gear_call_end
+press A
+waitnav
+snap pe04_gear_call_list_after
+press DOWN
+waitnav
+snap pe04_gear_call_list_2
+press B
+waitnav
+press B
+waitcb2x CB2_Overworld 900
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600
+
+# --- Route 29: the old man's catching tutorial, then a wild Pokemon caught with a Poke Ball
+walkw 9 8
+go DOWN
+walkfight 0 13 pe04_e1
+go LEFT
+walkfight 61 17 pe04_e2
+face UP
+talk pe04_oldman 10
+yesno pe04_oldman_yn YES
+talk pe04_oldman_explain 20 -
+walkfight 52 13 pe04_e3
+pinrng
+evstart setwildbattle SPECIES_PIDGEY, 3; dowildbattle; end
+waitbattle
+bwalk pe04_catch_intro input:HandleInputChooseAction
+bcatch pe04_catch ITEM_POKE_BALL
+unpinrng
+snap pe04_catch_end
+startmenu POKEMON
+waitcb2x CB2_UpdatePartyMenu 600
+waittaskx Task_HandleChooseMonInput 600
+waitquiet
+snap pe04_party_two
+tap B 4
+waitcb2x CB2_Overworld 900
+waitptr gMenuCallback HandleStartMenuInput 600
+tap B 4
+waitctl 600
+savegame
+keepsave pe_caught

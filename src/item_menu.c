@@ -524,7 +524,14 @@ static const struct WindowTemplate sContextMenuWindowTemplates[] =
         .tilemapLeft = 22,
 #endif
         .tilemapTop = 17,
+#if TEXT_RTL
+        // Five tiles, the YES/NO box's footprint: the right-aligned names of the bottom rows
+        // grow toward the box, and a name up to 55 px stays clear of its frame. The widest
+        // label, החזקה, needs 8 + 29 px in the narrow font.
+        .width = 5,
+#else
         .width = 7,
+#endif
         .height = 2,
         .paletteNum = 15,
         .baseBlock = 0x21D,
@@ -537,7 +544,11 @@ static const struct WindowTemplate sContextMenuWindowTemplates[] =
         .tilemapLeft = 22,
 #endif
         .tilemapTop = 15,
+#if TEXT_RTL
+        .width = 5, // As ITEMWIN_1x1
+#else
         .width = 7,
+#endif
         .height = 4,
         .paletteNum = 15,
         .baseBlock = 0x21D,

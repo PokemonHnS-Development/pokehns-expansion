@@ -1,0 +1,31 @@
+# The in-battle bag's USE/CANCEL box over the medicine pocket, from ladder save 3 (as pm_h_water).
+start saves/ladder3_ecruteak.sav
+include ../../scripts/continue.txt
+fastbattles off
+warpto MAP_CHERRYGROVE_CITY_HNS 25 9
+face LEFT
+w8 @gBagPosition+5@ 5
+w16 @gBagPosition+12@ 2
+w16 @gBagPosition+1E@ 0
+pinrng 12345678123456781234567812345678    # this cast hooks a Pokemon
+w16 @SB1+49A@ 2C5
+tap SELECT 0
+waitkey 1500
+tap A 0
+waitbattle 1800
+bwalk v2_wild_intro input:HandleInputChooseAction
+sethp player 0 30
+w8 @gBagPosition+5@ 1
+w16 @gBagPosition+A@ 0
+w16 @gBagPosition+16@ 0
+baction BAG
+waitcb2x CB2_BagMenuRun 900
+waittaskx Task_BagMenu_HandleInput 900
+waitquiet
+snap v2_bbag_medicine
+tap A 4
+waitquiet
+snap v2_bbag_context
+press DOWN
+waitquiet
+snap v2_bbag_context_cancel

@@ -14,6 +14,7 @@ the build's ELF.
 | `evasm.py` | assembles an event script with the source tree's own macros, to run it in RAM |
 | `sweep.py` | shows every live script text label in the message box and reports CLIP / CRASH / HANG / ABNORMAL |
 | `mapwalk.py` | warps into every H&S map, fights or reads through whatever starts, takes a screenshot of each |
+| `textalign.py` | compares each text window of a Hebrew screenshot with the English one of the same moment: margins mirrored, centring, ink on the window edge, rows, cursor side (below, "Text alignment") |
 | `tours/` | the 71 release tours (`pbi_*` 17, `menu_*` 12, `bv_*` 11, `chr_*` 10, `battle_*` 6, `cardgear_*`, `ncm_*`, `btw_*` 3 each, `naming_*`, `bfm_*` 2 each, `dex_forms`, `field_*`); `_*.txt` are includes; the subfolders hold the review rounds' tours, which the release does not run |
 | `tours_mapwalk/` | the map walk as one scripted tour (warp, wait, snap per map) |
 | `scripts/` | boot, new game, continue, the save-ladder scripts (`ladder*.txt`, `ladder/*.inc`), `make_ladder.sh` |
@@ -196,6 +197,74 @@ check: it writes a loop that masks IRQs into the last tile of OBJ VRAM (`0x06017
 `gMain.callback2` at it, so the run stops with `CRASH: pc=06017FF8` at the next check and no log
 lines. The region list is compiled into the runner, so rebuild `hnsrun` after a change to
 `hnsrun.c`.
+
+**Text alignment** (`textalign.py`): checks that each Hebrew line sits in its window the way
+`docs/hebrew_translation.md` says it should: flush right with the margin English has on the left,
+centred where English is centred, the cursor on the right. It reads only the two PNGs. Run the
+same tours on both ROMs (the release tours are deterministic, so a shot shows the same moment in
+both builds), then:
+
+```bash
+python3 $E/hns.py tour "$HNS_EN_ROM" EN_OUT           # English shots, same names
+python3 $E/textalign.py tours EN_OUT OUT TA --jobs 6  # all pairs: about 13 s for the 2,030 of 1.0
+python3 $E/textalign.py pair EN.png HE.png --out DIR  # one pair; -v prints every line, --json all
+```
+
+`TA/summary.txt` gives the counts per class and lists every window that is not OK, grouped by
+tour and place; `TA/windows.txt` lists them one by one; `TA/report.json` has every window with its
+lines, margins and rows; `TA/crops/` has an English | Hebrew crop pair (3x, each shot's window
+outlined in magenta, flagged lines marked red at the left) for every window that is not OK.
+
+How it finds windows: the text is where the two shots differ. The paper under a group of
+differing pixels is the colour the shots share around it; the window is the paper rectangle
+grown from there until a frame (a column or row with no paper) stops it, in each shot, so its
+edges are the visible box the margins are measured against. A line is a band of rows with text
+that moves between the shots; icons and numbers drawn in the same place in both do not count.
+The module docstring gives the rules in full.
+
+| Class | Meaning |
+| --- | --- |
+| `OK` | every line mirrored (Hebrew right margin = English left margin), mirrored as a right-aligned column, or centred |
+| `IN-PLACE` | every line keeps English's left or right margin: by design for the windows `docs/hebrew_translation.md` lists under `WINDOW_RTL_IN_PLACE` (party slots, battle menus, healthboxes, bag pocket title...), a defect anywhere else (a menu that was not mirrored is reported this way) |
+| `MIRROR-MISMATCH` | a line neither mirrored nor in place, a window whose lines mix the two, or a cursor that was not mirrored |
+| `CENTRE-OFF` | an English line centred in its window that is neither centred nor mirrored in Hebrew |
+| `EDGE` | Hebrew ink on the window's outermost column where English keeps a gap, or Hebrew text seen through a gap outside its window |
+| `ROW-SHIFT` | a line whose top and bottom both moved more than 3 px the same way |
+| `UNKNOWN` | cannot measure: text over art (no paper), a window cut by the screen edge or open art on the side a margin needs, or text in one shot only |
+
+The tolerance is 2 px (`--tol`). On 1.0's tours the mirrored lines' Hebrew right margin minus
+English left margin is 0 on 6,026 lines, -1 on 683, +1 on 206, -2 on 1,100 (1,008 of them the
+battle healthboxes' names, sprites 2 px off the mirror) and +2 on 242, and falls to 86 and 46
+paired lines at -3 and +3. One pixel is the font: Hebrew's outer column at the start of a line
+is the glyph's shadow, English's is the ink.
+
+Checked on 1.0's release tours (rc26) against English 2.0.6:
+
+- 20 shots across window types, looked at by hand and all correct (dialogue, signs, menus, the
+  mart list and quantity box, the bag, options, battle text, the battle and fight menus, the PC,
+  yes/no, the save box, the start menu, the PokéGear call screen): 52 windows OK, 2 IN-PLACE (the
+  battle and fight menus, by design), 9 UNKNOWN (art labels, a sprite), 1 MIRROR-MISMATCH (the
+  PokéGear hint bar, two windows on one bar).
+- The Pokéblock case's three-digit level of rc22 (round 21's evidence): EDGE on the one shot
+  that shows it; nothing after the fix. The Easy Chat footer seen beside the keyboard in rc24
+  (round 25's frame-by-frame shots): 110 frames show it, 108 of them with an English shot of the
+  same moment. EDGE on 91 of those 108; the 17 missed are frames where English shows its own OK
+  in the same gap. One frame of the keyboard opening is EDGE in both builds, a false finding,
+  and it is the only EDGE at the gap on the fixed build.
+- rc1's unmirrored PC mark menu, Pokédex START menu and naming hint bar: IN-PLACE in rc1, OK (or
+  not measurable: the START menu box runs off the screen) in 1.0.
+
+What it cannot see or gets wrong:
+
+- It compares geometry, not text: a wrong word in the right place is OK.
+- A shot where English shows another moment (another page of a message), or draws blank a name
+  the Hebrew game wrote into the save, gives MIRROR-MISMATCH or EDGE on that window.
+- Animation frames that differ (a bobbing pocket arrow, a sprite) can look like text.
+- Two windows on one unbroken paper (the battle debug menu, the PokéGear hint bar) are measured
+  as one; a window drawn in another place in Hebrew (a moved YES/NO box) is not paired and counts
+  only in "differing regions that are not text".
+- Letters drawn as holes in a badge, and art labels with no plain paper around them, are UNKNOWN.
+- A row shift of 3 px or less is not seen.
 
 **Known limits**
 
