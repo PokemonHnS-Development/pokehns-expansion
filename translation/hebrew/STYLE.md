@@ -177,7 +177,10 @@ keeps upstream's pen and mirrors what it draws (`docs/hebrew_translation.md`, wi
     mirror around that extent with `SetWindowRtlMirrorWidth`: the dialogue box (208 px), the
     contest results names (92 px, `DECISIONS.md` Q153);
   - where the art starts inside the window (a frame drawn in it), print from a smaller x so the
-    line ends as far inside the art as English starts: the summary's EXP labels (Q151).
+    line ends as far inside the art as English starts: the summary's EXP labels (Q151);
+  - a print that the mirror carries onto the art's first column is moved in to where the box's
+    other lines start: the Pokédex stats box's catch rate, hatch-step eggs and three-yield EV
+    row (Q155).
 - Numbers that English right-aligns with leading spaces keep the English layout
   (`WINDOW_RTL_LTR`): the summary's stat columns and its EXP box (Q151).
 - Where a mirrored column meets a column laid out differently from English (the summary's PP
@@ -187,3 +190,7 @@ keeps upstream's pen and mirrors what it draws (`docs/hebrew_translation.md`, wi
   leaves the names at least the room English leaves them (Q152).
 - A column the mirror makes narrower fits its text with the fallback fonts, so no letter falls
   past the window edge (Q153).
+- A word drawn into a status tag keeps the English word's columns of tag colour on each side, or
+  as close as its width allows, and stays off the tag's outline rows: ק stops on the last letter
+  row. Only the lamed's ascender and the final pe's stem use an outline row, because those letters
+  need them to be read (Q154).
