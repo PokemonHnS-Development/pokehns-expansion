@@ -42,9 +42,9 @@ says so. `HNS_GFX_OVERWRITE=1` writes them anyway; the later fix must then be ma
 
 | File | Changed later by |
 | --- | --- |
-| `battle_interface/hns/status{,2,3,4}.png` | `aedb9c43e3` (paralysis tag widened) |
-| `battle_interface/gen4/status{,2,3,4}.png` | `aedb9c43e3`, then `f09b0a6923` (frostbite tag drawn as קור) |
-| `interface/status_icons.png` | `d3b59b94fe` (paralysis letters kept inside the pill) |
+| `battle_interface/hns/status{,2,3,4}.png` | `aedb9c43e3` (paralysis tag widened), then `e2bf92a4e9` (sleep tag one column left, to the English columns; the qof of the freeze and frostbite tags above the bottom row) |
+| `battle_interface/gen4/status{,2,3,4}.png` | `aedb9c43e3`, then `f09b0a6923` (frostbite tag drawn as קור), then `e2bf92a4e9` (as the H&S sheets) |
+| `interface/status_icons.png` | `d3b59b94fe` (paralysis letters kept inside the pill), then `e2bf92a4e9` (sleep tag one column left; the qof of the paralysis, freeze and frostbite tags above the bottom row) |
 | `pokedex/hgss/tileset_menu{1,2,3}.png` | `d93afb1f02` (page tabs spaced evenly; the tab tilemaps changed with them) |
 | `pokedex/hgss/tileset_menu_list.png`, `tilemap_start_menu.bin`, `tilemap_start_menu_search_results.bin` | `066d60d2ad` (list START menu mirrored) |
 | `pokenav/condition/graph.png` | `9e489b46a5` (two labels moved clear of the pentagon outline) |

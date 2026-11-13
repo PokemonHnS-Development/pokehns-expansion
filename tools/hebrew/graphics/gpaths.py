@@ -46,16 +46,17 @@ def english(path):
 # $HNS_WORK/graphics/kept/ instead. HNS_GFX_OVERWRITE=1 writes them anyway; the later change must
 # then be made again by hand. README.md says which commit made each change.
 _PAR = 'paralysis tag widened'
+_SLP_QOF = 'sleep tag on the English columns; qof above the bottom row'
 LATER_EDITS = {
-    'graphics/battle_interface/hns/status.png': _PAR,
-    'graphics/battle_interface/hns/status2.png': _PAR,
-    'graphics/battle_interface/hns/status3.png': _PAR,
-    'graphics/battle_interface/hns/status4.png': _PAR,
-    'graphics/battle_interface/gen4/status.png': _PAR + '; frostbite tag drawn as קור',
-    'graphics/battle_interface/gen4/status2.png': _PAR + '; frostbite tag drawn as קור',
-    'graphics/battle_interface/gen4/status3.png': _PAR + '; frostbite tag drawn as קור',
-    'graphics/battle_interface/gen4/status4.png': _PAR + '; frostbite tag drawn as קור',
-    'graphics/interface/status_icons.png': 'paralysis letters kept inside the pill',
+    'graphics/battle_interface/hns/status.png': _PAR + '; ' + _SLP_QOF,
+    'graphics/battle_interface/hns/status2.png': _PAR + '; ' + _SLP_QOF,
+    'graphics/battle_interface/hns/status3.png': _PAR + '; ' + _SLP_QOF,
+    'graphics/battle_interface/hns/status4.png': _PAR + '; ' + _SLP_QOF,
+    'graphics/battle_interface/gen4/status.png': _PAR + '; frostbite tag drawn as קור; ' + _SLP_QOF,
+    'graphics/battle_interface/gen4/status2.png': _PAR + '; frostbite tag drawn as קור; ' + _SLP_QOF,
+    'graphics/battle_interface/gen4/status3.png': _PAR + '; frostbite tag drawn as קור; ' + _SLP_QOF,
+    'graphics/battle_interface/gen4/status4.png': _PAR + '; frostbite tag drawn as קור; ' + _SLP_QOF,
+    'graphics/interface/status_icons.png': 'paralysis letters kept inside the pill; ' + _SLP_QOF,
     'graphics/pokedex/hgss/tileset_menu1.png': 'page tabs spaced evenly',
     'graphics/pokedex/hgss/tileset_menu2.png': 'page tabs spaced evenly',
     'graphics/pokedex/hgss/tileset_menu3.png': 'page tabs spaced evenly',
