@@ -225,18 +225,19 @@ same patch-id as its source) and built with `TEXT_RTL` FALSE, the English ROM is
 same before and after (SHA-1 `1c6d1d7c…`), and every one of the 391 units that defines the option
 sees `TEXT_RTL` (`<private>/scratch/screens/r35/engproof/PROOF.md`).
 
-**To be picked (round 37).** On `he/fix-r37`: the engine commit `c6c94a3e4b` (the Berry Tag's
-metric size line as a `TEXT_RTL` string, with the English `cm` in it; `DECISIONS.md` Q175) and the
-nine graphics commits `ce81325c94`, `7b897df642`, `50c69512af`, `4040e4479b`, `4f5f0d331e`,
-`3035655bfa`, `a4106b6a7b`, `255697d2b2` and `648fc81bd0` (the art labels, Q176) are to be picked
-onto `he/renderer` `fe0cfa4be9`. Until the engine commit is there, CI's drift step fails on
-`src/berry_tag_screen.c` (`STRUCTURE`: a new `#if TEXT_RTL`, string count 14 to 15); against a
-clone with the pick, drift prints `708 files, 0 FAIL`. In that clone every commit picks cleanly:
-the graphics picks keep their sources' patch-ids, and the engine pick's differs only in two context
-lines that are Hebrew on `he/main` and English on `he/renderer`. Built with `TEXT_RTL` FALSE before
-and after the engine pick, the English ROMs differ in 3 bytes, the line number of the
-allocation-site string `src/berry_tag_screen.c:196` (now `:201`), and `nm -S` lists the same
-symbols and sizes (`<private>/scratch/screens/r37/fix/integrate/engproof/PROOF.md`).
+**Picked (round 37).** The engine commit `c6c94a3e4b` (the Berry Tag's metric size line as a
+`TEXT_RTL` string, with the English `cm` in it; `DECISIONS.md` Q175) is on `he/renderer` as
+`062dd444d1`, and the nine graphics commits (the art labels, Q176) follow it: `5b03b3f3ef` (from
+`ce81325c94`), `928ce7036f` (`7b897df642`), `4acc9c1198` (`50c69512af`), `46dd69d841`
+(`4040e4479b`), `57e7230c62` (`4f5f0d331e`), `6e118e9781` (`3035655bfa`), `4ddf0ffc84`
+(`a4106b6a7b`), `6c18cc8f52` (`255697d2b2`) and `b5dc6b7b1b` (`648fc81bd0`). `he/renderer` at
+`b5dc6b7b1b` has the same tree as the clone the picks were proven in. The graphics picks keep their
+sources' patch-ids; the engine pick's differs only in two context lines that are Hebrew on
+`he/main` and English on `he/renderer`. Built with `TEXT_RTL` FALSE before and after the engine
+pick, the English ROMs differ in 3 bytes, the line number of the allocation-site string
+`src/berry_tag_screen.c:196` (now `:201`), and `nm -S` lists the same symbols and sizes
+(`<private>/scratch/screens/r37/fix/integrate/engproof/PROOF.md`). Against it, drift prints
+`708 files, 0 FAIL`.
 
 **Checking a pick with an English build.** Build `he/renderer` before and after the picks with
 `TEXT_RTL` set to FALSE (`include/config/text.h:20`, in a scratch worktree) and `make hns`, and
