@@ -171,7 +171,7 @@ Route30_Text_BugCatcherDonBeaten:
 	.string "ארג! אתה חזק מדי!$"
 
 Route30_Text_BugCatcherDonAfter:
-	.string "נגמרו לי הפוקיבולים\n"
+	.string "נגמרו לי הפוכדורים\n"
 	.string "בזמן שתפסתי פוקימונים.\p"
 	.string "הייתי צריך לקנות עוד…$"
 
@@ -204,7 +204,7 @@ Route30_Text_TrainerTips:
 	.string "טיפים למאמנים\p"
 	.string "אסור לגנוב פוקימונים של\n"
 	.string "אנשים אחרים!\p"
-	.string "יש לזרוק פוקיבולים\n"
+	.string "יש לזרוק פוכדורים\n"
 	.string "רק על פוקימונים פראיים!$"
 
 Route30_Text_JoeyRegister:

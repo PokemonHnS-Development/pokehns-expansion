@@ -50,11 +50,11 @@ Cherrygrove_Pokemart_Pokemart:
 	end
 
 Cherrygrove_Pokemart_Text_CooltrainerM:
-	.string "נגמרו להם הפוקיבולים!\p"
+	.string "נגמרו להם הפוכדורים!\p"
 	.string "מתי הם יביאו עוד?$"
 
 Cherrygrove_Pokemart_Text_CooltrainerM_PokeBallsInStock:
-	.string "יש פוקיבולים במלאי!\n"
+	.string "יש פוכדורים במלאי!\n"
 	.string "עכשיו אני יכול לתפוס פוקימונים!$"
 
 Cherrygrove_Pokemart_Text_Youngster:

@@ -461,7 +461,7 @@ SinjohRuins_Lab_EventScript_GrowlithePokeball::
 	end
 
 SinjohRuins_Lab_Text_GrowlitheBall:
-    .string "נראה שזה הפוקיבול של גראולית'…\n"
+    .string "נראה שזה הפוכדור של גראולית'…\n"
     .string "עדיף לא לגעת בו.$"
 
 SinjohRuins_Lab_EventScript_Biologist::
