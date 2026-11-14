@@ -2435,11 +2435,12 @@ is the build of the merge (below). Scratch in `<private>/scratch/screens/r25/`, 
 - **Stat-change lines without הנתון (Q160, supersedes Q145).** A stat in `{B_BUFF1}` now prints with its article (`sStatNamesWithArticle`, ההתקפה המיוחדת, הדיוק), and a masculine stat takes its verb from `sMasculineStatStrings`, both in `src/battle_message.c` under `TEXT_RTL`. A stat-change line lives twice there: the feminine form in `gBattleStringsTable` and the masculine one (for הדיוק) in `sMasculineStatStrings`; change both, and put no prefix letter before `{B_BUFF1}`. The Z-move and debug menus still print the bare names.
 - **On screen.** All 19 lines × 7 stats × every intensity (287 entries per run) on the clip ROM with 12-letter nicknames and in a wild battle, beside rc28 and English: 0 clip records, no line needs more pages than in rc28. The sweep (6,611 OK) and the 71 release tours (0 clipped). Of the tour shots that differ from rc28, 39 show the new ball word, 20 the new stat lines, 8 an animation frame, and 12 in `bv_double` follow a 4-frame shift that changes the foe's random move pick (proved by a ROM with the old line length, which matches rc28).
 - **Clean build.** Both ROMs reproduced byte for byte from a clean `git archive` (an archive needs `touch .histignore`).
+- **rc29's release run** (`d5da0e8609`): `make check` gives the same results as rc28 (5,074, 1,899 failing, all known upstream failures); ladders, mapwalk (the same 36 held), the sweep (6,611 OK) and the six cores as before.
 
 **Not verified:**
 
 - Of round 30: the BALL POSTER and BALL CUSHION decorations, the five Pokédex entries with פוכדור, the Ball Fetch and GS Ball
-  descriptions, and the Z-move menu's stat names with the new code (its path is unchanged); `make check` on the round's tree.
+  descriptions, and the Z-move menu's stat names with the new code (its path is unchanged).
   Open for the owner: פוכדור no longer shares a stem with the bag pocket כדורי פוקי or with אולטרה בול and מאסטר בול;
   keep them as they are, or align them.
 - Of round 25: its round tours (the contests, the relearner, Easy Chat, the Japanese names and
