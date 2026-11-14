@@ -76,7 +76,7 @@ const u8 gText_PkmnsXPreventsSwitching[] = _("{B_BUFF1} מונע החלפה\nב�
 const u8 gText_StatSharply[] = _(" מאוד");
 const u8 gText_StatRose[] = _("עלה!");
 const u8 gText_StatFell[] = _("ירד!");
-const u8 gText_DefendersStatRose[] = _("ל{B_DEF_NAME_WITH_PREFIX} עלה\nהנתון {B_BUFF1}{B_BUFF2}!");
+const u8 gText_DefendersStatRose[] = _("ל{B_DEF_NAME_WITH_PREFIX}\n{B_BUFF1} עלתה{B_BUFF2}!");
 static const u8 sText_GotAwaySafely[] = _("{PLAY_SE SE_FLEE}ברחת בשלום!\p");
 static const u8 sText_PlayerDefeatedLinkTrainer[] = _("ניצחת את {B_LINK_OPPONENT1_NAME}!");
 static const u8 sText_TwoLinkTrainersDefeated[] = _("ניצחת את {B_LINK_OPPONENT1_NAME} ואת {B_LINK_OPPONENT2_NAME}!");
@@ -239,8 +239,8 @@ const u8 *const gBattleStringsTable[STRINGID_COUNT] =
     [STRINGID_PKMNISPARALYZED]                      = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX}\nלא הצליח לזוז כי הוא משותק!"),
     [STRINGID_PKMNISALREADYPARALYZED]               = COMPOUND_STRING("{B_DEF_NAME_WITH_PREFIX}\nכבר משותק!"),
     [STRINGID_PKMNHEALEDPARALYSIS]                  = COMPOUND_STRING("{B_DEF_NAME_WITH_PREFIX}\nהחלים מהשיתוק!"),
-    [STRINGID_STATSWONTINCREASE]                    = COMPOUND_STRING("ל{B_ATK_NAME_WITH_PREFIX}\nהנתון {B_BUFF1} לא יעלה יותר!"),
-    [STRINGID_STATSWONTDECREASE]                    = COMPOUND_STRING("ל{B_DEF_NAME_WITH_PREFIX}\nהנתון {B_BUFF1} לא ירד יותר!"),
+    [STRINGID_STATSWONTINCREASE]                    = COMPOUND_STRING("ל{B_ATK_NAME_WITH_PREFIX}\n{B_BUFF1} לא תעלה יותר!"),
+    [STRINGID_STATSWONTDECREASE]                    = COMPOUND_STRING("ל{B_DEF_NAME_WITH_PREFIX}\n{B_BUFF1} לא תרד יותר!"),
     [STRINGID_PKMNISCONFUSED]                       = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} מבולבל!"),
     [STRINGID_PKMNHEALEDCONFUSION]                  = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX}\nהתאושש מהבלבול!"),
     [STRINGID_PKMNWASCONFUSED]                      = COMPOUND_STRING("{B_EFF_NAME_WITH_PREFIX} התבלבל!"),
@@ -380,11 +380,11 @@ const u8 *const gBattleStringsTable[STRINGID_COUNT] =
     [STRINGID_PKMNTRACED]                           = COMPOUND_STRING("הוא העתיק מ{B_BUFF1}\nאת {B_BUFF2}!"),
     [STRINGID_STATSHARPLY]                          = gText_StatSharply,
     [STRINGID_STATHARSHLY]                          = COMPOUND_STRING(" באופן חמור"),
-    [STRINGID_ATTACKERSSTATROSE]                    = COMPOUND_STRING("ל{B_ATK_NAME_WITH_PREFIX} עלה\nהנתון {B_BUFF1}{B_BUFF2}!"),
+    [STRINGID_ATTACKERSSTATROSE]                    = COMPOUND_STRING("ל{B_ATK_NAME_WITH_PREFIX}\n{B_BUFF1} עלתה{B_BUFF2}!"),
     [STRINGID_DEFENDERSSTATROSE]                    = gText_DefendersStatRose,
-    [STRINGID_SCRIPTINGSTATROSE]                    = COMPOUND_STRING("ל{B_SCR_NAME_WITH_PREFIX} עלה\nהנתון {B_BUFF1}{B_BUFF2}!"),
-    [STRINGID_ATTACKERSSTATFELL]                    = COMPOUND_STRING("ל{B_ATK_NAME_WITH_PREFIX} ירד\nהנתון {B_BUFF1}{B_BUFF2}!"),
-    [STRINGID_DEFENDERSSTATFELL]                    = COMPOUND_STRING("ל{B_DEF_NAME_WITH_PREFIX} ירד\nהנתון {B_BUFF1}{B_BUFF2}!"),
+    [STRINGID_SCRIPTINGSTATROSE]                    = COMPOUND_STRING("ל{B_SCR_NAME_WITH_PREFIX}\n{B_BUFF1} עלתה{B_BUFF2}!"),
+    [STRINGID_ATTACKERSSTATFELL]                    = COMPOUND_STRING("ל{B_ATK_NAME_WITH_PREFIX}\n{B_BUFF1} ירדה{B_BUFF2}!"),
+    [STRINGID_DEFENDERSSTATFELL]                    = COMPOUND_STRING("ל{B_DEF_NAME_WITH_PREFIX}\n{B_BUFF1} ירדה{B_BUFF2}!"),
     [STRINGID_CRITICALHIT]                          = COMPOUND_STRING("פגיעה קריטית!"),
     [STRINGID_ONEHITKO]                             = COMPOUND_STRING("חיסול במכה אחת!"),
     [STRINGID_123POOF]                              = COMPOUND_STRING("אחת…{PAUSE 10}שתיים…{PAUSE 10}ו…{PAUSE 10}{PAUSE 20}{PLAY_SE SE_BALL_BOUNCE_1}טה-דה!\p"),
@@ -474,7 +474,7 @@ const u8 *const gBattleStringsTable[STRINGID_COUNT] =
     [STRINGID_EMPTYSTRING3]                         = gText_EmptyString3,
     [STRINGID_PKMNSXRESTOREDHPALITTLE2]             = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} שיקם\nמעט נ”ח בזכות {B_ATK_ABILITY}!"), //not in gen 5+, ability popup
     [STRINGID_PKMNSXWHIPPEDUPSANDSTORM]             = COMPOUND_STRING("{B_SCR_NAME_WITH_PREFIX} חולל\nסופת חול בזכות {B_SCR_ABILITY}!"), //not in gen 5+, ability popup
-    [STRINGID_PKMNSXPREVENTSYLOSS]                  = COMPOUND_STRING("{B_SCR_NAME_WITH_PREFIX} מוגן בזכות {B_SCR_ABILITY} מפני ירידה ב{B_BUFF1}!"), //not in gen 5+, ability popup
+    [STRINGID_PKMNSXPREVENTSYLOSS]                  = COMPOUND_STRING("{B_SCR_NAME_WITH_PREFIX} מוגן בזכות {B_SCR_ABILITY} מפני הורדת {B_BUFF1}!"), //not in gen 5+, ability popup
     [STRINGID_PKMNSXINFATUATEDY]                    = COMPOUND_STRING("{B_DEF_NAME_WITH_PREFIX} גרם בזכות {B_DEF_ABILITY} ל{B_ATK_NAME_WITH_PREFIX2} להתאהב!"), //not in gen 5+, ability popup
     [STRINGID_PKMNSXMADEYINEFFECTIVE]               = COMPOUND_STRING("{B_SCR_NAME_WITH_PREFIX} ניטרל בזכות {B_SCR_ABILITY} את {B_CURRENT_MOVE}!"), //not in gen 5+, ability popup
     [STRINGID_PKMNSXCUREDYPROBLEM]                  = COMPOUND_STRING("{B_SCR_NAME_WITH_PREFIX} נרפא בזכות {B_SCR_ABILITY} מבעיית {B_BUFF1}!"), //not in gen 5+, ability popup
@@ -489,8 +489,8 @@ const u8 *const gBattleStringsTable[STRINGID_COUNT] =
     [STRINGID_PLAYERDEFEATEDTRAINER1]               = sText_PlayerDefeatedLinkTrainerTrainer1,
     [STRINGID_SOOTHINGAROMA]                        = COMPOUND_STRING("ניחוח מרגיע התפשט באזור!"),
     [STRINGID_ITEMSCANTBEUSEDNOW]                   = COMPOUND_STRING("אי אפשר להשתמש בפריטים עכשיו.{PAUSE 64}"), //not in gen 5+, i think
-    [STRINGID_USINGITEMSTATOFPKMNROSE]              = COMPOUND_STRING("בעזרת {B_LAST_ITEM}, רמת {B_BUFF1} של {B_SCR_NAME_WITH_PREFIX2} עלתה{B_BUFF2}!"), //todo: update this, will require code changes
-    [STRINGID_USINGITEMSTATOFPKMNFELL]              = COMPOUND_STRING("בעקבות {B_LAST_ITEM}, רמת {B_BUFF1} של {B_SCR_NAME_WITH_PREFIX2} ירדה{B_BUFF2}!"),
+    [STRINGID_USINGITEMSTATOFPKMNROSE]              = COMPOUND_STRING("בעזרת {B_LAST_ITEM}, {B_BUFF1} של {B_SCR_NAME_WITH_PREFIX2} עלתה{B_BUFF2}!"), //todo: update this, will require code changes
+    [STRINGID_USINGITEMSTATOFPKMNFELL]              = COMPOUND_STRING("בעקבות {B_LAST_ITEM}, {B_BUFF1} של {B_SCR_NAME_WITH_PREFIX2} ירדה{B_BUFF2}!"),
     [STRINGID_PKMNUSEDXTOGETPUMPED]                 = COMPOUND_STRING("{B_SCR_NAME_WITH_PREFIX} השתמש\nב{B_LAST_ITEM} והתמלא מרץ!"),
     [STRINGID_PKMNSXMADEYUSELESS]                   = COMPOUND_STRING("{B_SCR_NAME_WITH_PREFIX} ביטל בזכות {B_SCR_ABILITY} את השפעת {B_CURRENT_MOVE}!"), //not in gen 5+, ability popup
     [STRINGID_PKMNTRAPPEDBYSANDTOMB]                = COMPOUND_STRING("{B_DEF_NAME_WITH_PREFIX} נלכד\nבחול הטובעני!"),
@@ -592,9 +592,9 @@ const u8 *const gBattleStringsTable[STRINGID_COUNT] =
     [STRINGID_MISTYTERRAINENDS]                     = COMPOUND_STRING("הערפל נעלם משדה הקרב."),
     [STRINGID_PSYCHICTERRAINENDS]                   = COMPOUND_STRING("המוזרות נעלמה משדה הקרב!"),
     [STRINGID_GRASSYTERRAINENDS]                    = COMPOUND_STRING("הדשא נעלם משדה הקרב."),
-    [STRINGID_TARGETABILITYSTATRAISE]               = COMPOUND_STRING("ל{B_DEF_NAME_WITH_PREFIX}, בזכות {B_DEF_ABILITY}, עלה הנתון {B_BUFF1}{B_BUFF2}!"),
-    [STRINGID_TARGETSSTATWASMAXEDOUT]               = COMPOUND_STRING("{B_DEF_NAME_WITH_PREFIX}, בזכות {B_DEF_ABILITY}, העלה את ה{B_BUFF1} שלו למקסימום!"),
-    [STRINGID_ATTACKERABILITYSTATRAISE]             = COMPOUND_STRING("ל{B_ATK_NAME_WITH_PREFIX}, בזכות\n{B_ATK_ABILITY}, עלה\lהנתון {B_BUFF1}{B_BUFF2}!"),
+    [STRINGID_TARGETABILITYSTATRAISE]               = COMPOUND_STRING("ל{B_DEF_NAME_WITH_PREFIX}, בזכות {B_DEF_ABILITY}, {B_BUFF1} עלתה{B_BUFF2}!"),
+    [STRINGID_TARGETSSTATWASMAXEDOUT]               = COMPOUND_STRING("{B_DEF_NAME_WITH_PREFIX}, בזכות {B_DEF_ABILITY}, העלה את {B_BUFF1} שלו למקסימום!"),
+    [STRINGID_ATTACKERABILITYSTATRAISE]             = COMPOUND_STRING("ל{B_ATK_NAME_WITH_PREFIX}, בזכות {B_ATK_ABILITY}, {B_BUFF1} עלתה{B_BUFF2}!"),
     [STRINGID_POISONHEALHPUP]                       = COMPOUND_STRING("ההרעלה ריפאה קצת את\n{B_ATK_NAME_WITH_PREFIX2}!"), //don't think this message is displayed anymore
     [STRINGID_BADDREAMSDMG]                         = COMPOUND_STRING("{B_DEF_NAME_WITH_PREFIX} מתייסר!"),
     [STRINGID_MOLDBREAKERENTERS]                    = COMPOUND_STRING("{B_SCR_NAME_WITH_PREFIX}\nשובר את התבניות!"),
@@ -623,8 +623,8 @@ const u8 *const gBattleStringsTable[STRINGID_COUNT] =
     [STRINGID_LUNARDANCECAMETRUE]                   = COMPOUND_STRING("{B_SCR_NAME_WITH_PREFIX}\nהתעטף באור ירח מיסטי!"),
     [STRINGID_CURSEDBODYDISABLED]                   = COMPOUND_STRING("ל{B_ATK_NAME_WITH_PREFIX} הושבת המהלך {B_BUFF1} בידי {B_DEF_NAME_WITH_PREFIX2} בעזרת {B_DEF_ABILITY}!"),
     [STRINGID_ATTACKERACQUIREDABILITY]              = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} קיבל\nאת היכולת {B_ATK_ABILITY}!"),
-    [STRINGID_TARGETABILITYSTATLOWER]               = COMPOUND_STRING("ל{B_DEF_NAME_WITH_PREFIX}, בגלל {B_DEF_ABILITY}, ירד הנתון {B_BUFF1}{B_BUFF2}!"),
-    [STRINGID_TARGETSTATWONTGOHIGHER]               = COMPOUND_STRING("ל{B_DEF_NAME_WITH_PREFIX}\nהנתון {B_BUFF1} לא יעלה יותר!"),
+    [STRINGID_TARGETABILITYSTATLOWER]               = COMPOUND_STRING("ל{B_DEF_NAME_WITH_PREFIX}, בגלל {B_DEF_ABILITY}, {B_BUFF1} ירדה{B_BUFF2}!"),
+    [STRINGID_TARGETSTATWONTGOHIGHER]               = COMPOUND_STRING("ל{B_DEF_NAME_WITH_PREFIX}\n{B_BUFF1} לא תעלה יותר!"),
     [STRINGID_PKMNMOVEBOUNCEDABILITY]               = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} השתמש ב{B_CURRENT_MOVE}, אבל {B_DEF_NAME_WITH_PREFIX2} החזיר אותו בעזרת {B_DEF_ABILITY}!"),
     [STRINGID_IMPOSTERTRANSFORM]                    = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} הפך ל{B_DEF_NAME_WITH_PREFIX2} בעזרת {B_LAST_ABILITY}!"),
     [STRINGID_ASSAULTVESTDOESNTALLOW]               = COMPOUND_STRING("השפעת {B_LAST_ITEM}\nמונעת שימוש במהלכי סטטוס!\p"),
@@ -681,7 +681,7 @@ const u8 *const gBattleStringsTable[STRINGID_COUNT] =
     [STRINGID_ATTACKERCUREDTARGETSTATUS]            = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} ריפא\nאת {B_DEF_NAME_WITH_PREFIX2}!"),
     [STRINGID_ATTACKERLOSTFIRETYPE]                 = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX}\nכילה את כל האש שבו!"),
     [STRINGID_HEALERCURE]                           = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} ריפא בעזרת {B_LAST_ABILITY} את הבעיה של {B_SCR_NAME_WITH_PREFIX2}!"),
-    [STRINGID_SCRIPTINGABILITYSTATRAISE]            = COMPOUND_STRING("ל{B_SCR_NAME_WITH_PREFIX}, בזכות {B_SCR_ABILITY}, עלה הנתון {B_BUFF1}{B_BUFF2}!"),
+    [STRINGID_SCRIPTINGABILITYSTATRAISE]            = COMPOUND_STRING("ל{B_SCR_NAME_WITH_PREFIX}, בזכות {B_SCR_ABILITY}, {B_BUFF1} עלתה{B_BUFF2}!"),
     [STRINGID_RECEIVERABILITYTAKEOVER]              = COMPOUND_STRING("מ{B_SCR_NAME_WITH_PREFIX}\nנלקחה היכולת {B_SCR_ABILITY}!"),
     [STRINGID_PKNMABSORBINGPOWER]                   = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} סופג כוח!"),
     [STRINGID_NOONEWILLBEABLETORUNAWAY]             = COMPOUND_STRING("אף אחד לא יוכל לברוח בתור הבא!"),
@@ -765,12 +765,12 @@ const u8 *const gBattleStringsTable[STRINGID_COUNT] =
     [STRINGID_ATTACKERMELTEDTHEICE]                 = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} המיס את\nהקרח בנחישות לוהטת\lכדי לא להדאיג אותך!"),
     [STRINGID_TARGETTOUGHEDITOUT]                   = COMPOUND_STRING("{B_DEF_NAME_WITH_PREFIX}\nהחזיק מעמד כדי לא לצער אותך!"),
     [STRINGID_ATTACKERLOSTELECTRICTYPE]             = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} רוקן את\nכל החשמל שלו!"),
-    [STRINGID_ATTACKERSWITCHEDSTATWITHTARGET]       = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} החליף את\nה{B_BUFF1} שלו עם המטרה!"),
+    [STRINGID_ATTACKERSWITCHEDSTATWITHTARGET]       = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} החליף את\n{B_BUFF1} שלו עם המטרה!"),
     [STRINGID_BEINGHITCHARGEDPKMNWITHPOWER]         = COMPOUND_STRING("הפגיעה מ{B_CURRENT_MOVE} טענה את\n{B_DEF_NAME_WITH_PREFIX2} באנרגיה!"),
     [STRINGID_SUNLIGHTACTIVATEDABILITY]             = COMPOUND_STRING("אור השמש העז הפעיל את הפרוטוסינתזה\nשל {B_SCR_NAME_WITH_PREFIX2}!"),
-    [STRINGID_STATWASHEIGHTENED]                    = COMPOUND_STRING("ל{B_SCR_NAME_WITH_PREFIX}\nהנתון {B_BUFF1} התחזק!"),
+    [STRINGID_STATWASHEIGHTENED]                    = COMPOUND_STRING("ל{B_SCR_NAME_WITH_PREFIX}\n{B_BUFF1} התחזקה!"),
     [STRINGID_ELECTRICTERRAINACTIVATEDABILITY]      = COMPOUND_STRING("השטח החשמלי הפעיל את הנעת הקווארק\nשל {B_SCR_NAME_WITH_PREFIX2}!"),
-    [STRINGID_ABILITYWEAKENEDSURROUNDINGMONSSTAT]   = COMPOUND_STRING("{B_SCR_NAME_WITH_PREFIX} החליש\nבעזרת {B_SCR_ABILITY} את הנתון\l{B_BUFF1} של כל מי שסביבו!\p"),
+    [STRINGID_ABILITYWEAKENEDSURROUNDINGMONSSTAT]   = COMPOUND_STRING("{B_SCR_NAME_WITH_PREFIX} החליש\nבעזרת {B_SCR_ABILITY}\lאת {B_BUFF1} של כל מי שסביבו!\p"),
     [STRINGID_ATTACKERGAINEDSTRENGTHFROMTHEFALLEN]  = COMPOUND_STRING("{B_SCR_NAME_WITH_PREFIX} שאב כוח\nמהנופלים!"),
     [STRINGID_PKMNSABILITYPREVENTSABILITY]          = COMPOUND_STRING("{B_SCR_NAME_WITH_PREFIX} מונע בעזרת {B_SCR_ABILITY} מ{B_DEF_NAME_WITH_PREFIX2} להפעיל את {B_DEF_ABILITY}!"), //not in gen 5+, ability popup
     [STRINGID_PREPARESHELLTRAP]                     = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} הציב\nמלכודת קונכיה!"),
@@ -2371,14 +2371,14 @@ static const u8 sRecordedBattleTextSpeeds[] = {8, 4, 1, 0};
 // two-word stat name too, so the message cannot write it as a prefix of {B_BUFF1}.
 static const u8 *const sStatNamesWithArticle[NUM_BATTLE_STATS] =
 {
-    [STAT_HP]      = COMPOUND_STRING("HP"),
-    [STAT_ATK]     = COMPOUND_STRING("ATTACK"),
-    [STAT_DEF]     = COMPOUND_STRING("DEFENSE"),
-    [STAT_SPEED]   = COMPOUND_STRING("SPEED"),
-    [STAT_SPATK]   = COMPOUND_STRING("SP. ATK"),
-    [STAT_SPDEF]   = COMPOUND_STRING("SP. DEF"),
-    [STAT_ACC]     = COMPOUND_STRING("accuracy"),
-    [STAT_EVASION] = COMPOUND_STRING("evasiveness"),
+    [STAT_HP]      = COMPOUND_STRING("הנ”ח"),
+    [STAT_ATK]     = COMPOUND_STRING("ההתקפה"),
+    [STAT_DEF]     = COMPOUND_STRING("ההגנה"),
+    [STAT_SPEED]   = COMPOUND_STRING("המהירות"),
+    [STAT_SPATK]   = COMPOUND_STRING("ההתקפה המיוחדת"),
+    [STAT_SPDEF]   = COMPOUND_STRING("ההגנה המיוחדת"),
+    [STAT_ACC]     = COMPOUND_STRING("הדיוק"),
+    [STAT_EVASION] = COMPOUND_STRING("ההתחמקות"),
 };
 
 // The verb of a stat-change line agrees with the stat it names. gBattleStringsTable holds each
@@ -2396,21 +2396,21 @@ struct MasculineStatString
 
 static const struct MasculineStatString sMasculineStatStrings[] =
 {
-    {STRINGID_DEFENDERSSTATROSE,         COMPOUND_STRING("{B_DEF_NAME_WITH_PREFIX}'s {B_BUFF1} {B_BUFF2}rose!")},
-    {STRINGID_ATTACKERSSTATROSE,         COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX}'s {B_BUFF1} {B_BUFF2}rose!")},
-    {STRINGID_SCRIPTINGSTATROSE,         COMPOUND_STRING("{B_SCR_NAME_WITH_PREFIX}'s {B_BUFF1} {B_BUFF2}rose!")},
-    {STRINGID_ATTACKERSSTATFELL,         COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX}'s {B_BUFF1} {B_BUFF2}fell!")},
-    {STRINGID_DEFENDERSSTATFELL,         COMPOUND_STRING("{B_DEF_NAME_WITH_PREFIX}'s {B_BUFF1} {B_BUFF2}fell!")},
-    {STRINGID_STATSWONTINCREASE,         COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX}'s {B_BUFF1} won't go any higher!")},
-    {STRINGID_STATSWONTDECREASE,         COMPOUND_STRING("{B_DEF_NAME_WITH_PREFIX}'s {B_BUFF1} won't go any lower!")},
-    {STRINGID_TARGETSTATWONTGOHIGHER,    COMPOUND_STRING("{B_DEF_NAME_WITH_PREFIX}'s {B_BUFF1} won't go any higher!")},
-    {STRINGID_TARGETABILITYSTATRAISE,    COMPOUND_STRING("{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY} {B_BUFF2}raised its {B_BUFF1}!")},
-    {STRINGID_ATTACKERABILITYSTATRAISE,  COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX}'s {B_ATK_ABILITY} {B_BUFF2}raised its {B_BUFF1}!")},
-    {STRINGID_TARGETABILITYSTATLOWER,    COMPOUND_STRING("{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY} {B_BUFF2}lowered its {B_BUFF1}!")},
-    {STRINGID_SCRIPTINGABILITYSTATRAISE, COMPOUND_STRING("{B_SCR_NAME_WITH_PREFIX}'s {B_SCR_ABILITY} {B_BUFF2}raised its {B_BUFF1}!")},
-    {STRINGID_STATWASHEIGHTENED,         COMPOUND_STRING("{B_SCR_NAME_WITH_PREFIX}'s {B_BUFF1} was heightened!")},
-    {STRINGID_USINGITEMSTATOFPKMNROSE,   COMPOUND_STRING("Using {B_LAST_ITEM}, the {B_BUFF1} of {B_SCR_NAME_WITH_PREFIX2} {B_BUFF2}rose!")},
-    {STRINGID_USINGITEMSTATOFPKMNFELL,   COMPOUND_STRING("Using {B_LAST_ITEM}, the {B_BUFF1} of {B_SCR_NAME_WITH_PREFIX2} {B_BUFF2}fell!")},
+    {STRINGID_DEFENDERSSTATROSE,         COMPOUND_STRING("ל{B_DEF_NAME_WITH_PREFIX}\n{B_BUFF1} עלה{B_BUFF2}!")},
+    {STRINGID_ATTACKERSSTATROSE,         COMPOUND_STRING("ל{B_ATK_NAME_WITH_PREFIX}\n{B_BUFF1} עלה{B_BUFF2}!")},
+    {STRINGID_SCRIPTINGSTATROSE,         COMPOUND_STRING("ל{B_SCR_NAME_WITH_PREFIX}\n{B_BUFF1} עלה{B_BUFF2}!")},
+    {STRINGID_ATTACKERSSTATFELL,         COMPOUND_STRING("ל{B_ATK_NAME_WITH_PREFIX}\n{B_BUFF1} ירד{B_BUFF2}!")},
+    {STRINGID_DEFENDERSSTATFELL,         COMPOUND_STRING("ל{B_DEF_NAME_WITH_PREFIX}\n{B_BUFF1} ירד{B_BUFF2}!")},
+    {STRINGID_STATSWONTINCREASE,         COMPOUND_STRING("ל{B_ATK_NAME_WITH_PREFIX}\n{B_BUFF1} לא יעלה יותר!")},
+    {STRINGID_STATSWONTDECREASE,         COMPOUND_STRING("ל{B_DEF_NAME_WITH_PREFIX}\n{B_BUFF1} לא ירד יותר!")},
+    {STRINGID_TARGETSTATWONTGOHIGHER,    COMPOUND_STRING("ל{B_DEF_NAME_WITH_PREFIX}\n{B_BUFF1} לא יעלה יותר!")},
+    {STRINGID_TARGETABILITYSTATRAISE,    COMPOUND_STRING("ל{B_DEF_NAME_WITH_PREFIX}, בזכות {B_DEF_ABILITY}, {B_BUFF1} עלה{B_BUFF2}!")},
+    {STRINGID_ATTACKERABILITYSTATRAISE,  COMPOUND_STRING("ל{B_ATK_NAME_WITH_PREFIX}, בזכות {B_ATK_ABILITY}, {B_BUFF1} עלה{B_BUFF2}!")},
+    {STRINGID_TARGETABILITYSTATLOWER,    COMPOUND_STRING("ל{B_DEF_NAME_WITH_PREFIX}, בגלל {B_DEF_ABILITY}, {B_BUFF1} ירד{B_BUFF2}!")},
+    {STRINGID_SCRIPTINGABILITYSTATRAISE, COMPOUND_STRING("ל{B_SCR_NAME_WITH_PREFIX}, בזכות {B_SCR_ABILITY}, {B_BUFF1} עלה{B_BUFF2}!")},
+    {STRINGID_STATWASHEIGHTENED,         COMPOUND_STRING("ל{B_SCR_NAME_WITH_PREFIX}\n{B_BUFF1} התחזק!")},
+    {STRINGID_USINGITEMSTATOFPKMNROSE,   COMPOUND_STRING("בעזרת {B_LAST_ITEM}, {B_BUFF1} של {B_SCR_NAME_WITH_PREFIX2} עלה{B_BUFF2}!")},
+    {STRINGID_USINGITEMSTATOFPKMNFELL,   COMPOUND_STRING("בעקבות {B_LAST_ITEM}, {B_BUFF1} של {B_SCR_NAME_WITH_PREFIX2} ירד{B_BUFF2}!")},
 };
 
 // The buffer PREPARE_STAT_BUFFER makes: one stat and nothing else.
