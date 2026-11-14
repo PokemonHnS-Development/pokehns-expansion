@@ -15,6 +15,15 @@ FILES = [
     'graphics/battle_frontier/tourney_buttons.png',
     'graphics/easy_chat/button_window.png', 'graphics/easy_chat/mode.png',
     'graphics/union_room_chat/background.png', 'graphics/union_room_chat/r_button_labels.png',
+    'graphics/interface/status_icons.png', 'graphics/trade/menu.png', 'graphics/title_screen/hns/press_start.png',
+    'graphics/voltorb_flip/gameboard.png', 'graphics/voltorb_flip/coins.png',
+    'graphics/slot_machine/reel_symbols/7.png',
+    'graphics/berry_blender/start.png', 'graphics/link/321start.png', 'graphics/link/321start_static.png',
+    'graphics/pokemon_jump/bonuses.png',
+] + ['data/tilesets/primary/%s/tiles.png' % t for t in (
+    'johto_general_hns', 'johto_north_east_hns', 'johto_north_west_hns', 'johto_south_hns', 'kanto_general_hns',
+    'alola_island', 'mt_silver_exp_hns', 'general')] + [
+    'data/tilesets/secondary/department_store_hns/tiles.png', 'data/tilesets/secondary/battle_dome/tiles.png',
 ]
 bad = 0
 pairs = []

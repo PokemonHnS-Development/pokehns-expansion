@@ -56,7 +56,8 @@ LATER_EDITS = {
     'graphics/battle_interface/gen4/status2.png': _PAR + '; frostbite tag drawn as קור; ' + _SLP_QOF,
     'graphics/battle_interface/gen4/status3.png': _PAR + '; frostbite tag drawn as קור; ' + _SLP_QOF,
     'graphics/battle_interface/gen4/status4.png': _PAR + '; frostbite tag drawn as קור; ' + _SLP_QOF,
-    'graphics/interface/status_icons.png': 'paralysis letters kept inside the pill; ' + _SLP_QOF,
+    'graphics/interface/status_icons.png': 'paralysis letters kept inside the pill; ' + _SLP_QOF
+                                           + '; Pokérus tag drawn as פוקרוס by side/do_pkrs.py',
     'graphics/pokedex/hgss/tileset_menu1.png': 'page tabs spaced evenly',
     'graphics/pokedex/hgss/tileset_menu2.png': 'page tabs spaced evenly',
     'graphics/pokedex/hgss/tileset_menu3.png': 'page tabs spaced evenly',

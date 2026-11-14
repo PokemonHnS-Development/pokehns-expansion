@@ -94,6 +94,8 @@ def _(p):
 TAGS_BATTLE = ['רעל', 'שיתוק', 'שינה', 'קפוא', 'כוויה', 'קור']      # PSN PAR SLP FRZ BRN FRB
 TAGS_GEN4 = ['רעל', 'שיתוק', 'שינה', 'קפוא', 'כוויה', 'כוויה']      # PSN PAR SLP FRZ BRN BRN
 TAGS_ICONS = ['רעל', 'שיתוק', 'שינה', 'קפוא', 'כוויה', None, 'מעולף', 'קור']  # ... PkRS FNT FRB
+# PkRS (None) is drawn as פוקרוס by side/do_pkrs.py, on the committed file: re-run it after this
+# script overwrites status_icons.png.
 TEXT = 2
 
 # T6N: T6 with 3-px ayin and mem (ayin: two arms joining into a tail at the bottom left; mem: the
