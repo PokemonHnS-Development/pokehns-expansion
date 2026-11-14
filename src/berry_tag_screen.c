@@ -183,7 +183,12 @@ static const u8 sText_Var1DotVar2[] = _("{STR_VAR_1}.{STR_VAR_2} אינץ'");
 #else
 static const u8 sText_Var1DotVar2[] = {PLACEHOLDER_BEGIN, 0x02, CHAR_PERIOD, PLACEHOLDER_BEGIN, 0x03, CHAR_DBL_QUOTE_RIGHT, EOS};
 #endif
+#if TEXT_RTL
+// A string in the Hebrew build, so the unit can be translated; the English build keeps the bytes.
+static const u8 sText_Var1DotVar2_Metric[] = _("{STR_VAR_1}.{STR_VAR_2} cm");
+#else
 static const u8 sText_Var1DotVar2_Metric[] = {PLACEHOLDER_BEGIN, 0x02, CHAR_PERIOD, PLACEHOLDER_BEGIN, 0x03, CHAR_c, CHAR_m, EOS};
+#endif
 static const u8 sText_NumberVar1Var2[] = _("{NO}{STR_VAR_1} {STR_VAR_2}");
 static const u8 sText_BerryTag[] = _("תווית פרי");
 static const u8 sText_ThreeMarks[] = _("???");
