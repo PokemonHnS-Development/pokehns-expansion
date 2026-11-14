@@ -140,12 +140,13 @@ Only characters in `charmap.txt`. In particular:
   `לפורט היריב` / `ההתקפה המיוחדת עלתה מאוד!`, and for accuracy `הדיוק ירד באופן חמור!`. In a battle message a
   `{B_BUFF1}` that holds a stat already has its article (ההתקפה, ההתקפה המיוחדת, הדיוק: `sStatNamesWithArticle`
   in `src/battle_message.c`, under `TEXT_RTL`), so a line never puts ה or another prefix letter right before it:
-  `את {B_BUFF1} שלו`, `מפני הורדת {B_BUFF1}`. Every stat name but דיוק is feminine. A line in
-  `gBattleStringsTable` takes the feminine verb (עלתה, ירדה, לא תעלה, לא תרד, התחזקה); its masculine form (עלה,
-  ירד, לא יעלה, לא ירד, התחזק) is in `sMasculineStatStrings` in the same file, and the game prints that one
-  for הדיוק. Change a stat-change line in both places. A line that names no ability or item breaks after the name,
-  so the stat starts the second line; the ability and item lines are auto-wrapped. `הנתונים` stays where a line
-  speaks of stats in general (`שינויי הנתונים`), with no stat name after it.
+  `את {B_BUFF1} שלו`, `מפני הורדת {B_BUFF1}`. Every stat name but דיוק is feminine (the table's הנ”ח is plural,
+  but no stat change names HP). A line in `gBattleStringsTable` takes the feminine verb (עלתה, ירדה, לא תעלה,
+  לא תרד, התחזקה); its masculine form (עלה, ירד, לא יעלה, לא ירד, התחזק) is in `sMasculineStatStrings` in the
+  same file, and the game prints that one for הדיוק. Change a stat-change line in both places. A line that names
+  no ability or item breaks after the name, so the stat starts the second line; the ability and item lines are
+  auto-wrapped. `הנתונים` stays where a line speaks of stats in general (`שינויי הנתונים`), with no stat name
+  after it.
 - `{B_DEF_PARTNER_NAME}` is a bare name on either side, so the line ties it to the first target with
   `שלצידו`: `נגד {B_DEF_NAME_WITH_PREFIX2} ו{B_DEF_PARTNER_NAME} שלצידו!`. A second foe then does not
   read as the player's Pokémon, and the line still reads right when the targets are the player's (Q146).
